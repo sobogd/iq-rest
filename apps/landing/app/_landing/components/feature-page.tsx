@@ -75,7 +75,7 @@ export function FeaturePage({ texts, chrome, locale, featureId, currency }: Feat
       <section
         id="pricing"
         data-section="pricing"
-        className="scroll-mt-16 py-8 sm:border-t sm:border-border sm:py-16"
+        className="scroll-mt-16 py-8 sm:py-16"
       >
         <LandingPricing
           texts={pricingTexts}
@@ -89,7 +89,7 @@ export function FeaturePage({ texts, chrome, locale, featureId, currency }: Feat
       <section
         id="faq"
         data-section="faq"
-        className="scroll-mt-16 py-8 sm:border-t sm:border-border sm:py-16"
+        className="scroll-mt-16 py-8 sm:py-16"
       >
         <Faq texts={faqTexts} />
       </section>

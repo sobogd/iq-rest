@@ -30,9 +30,9 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Restauracje", "Kawiarnie", "Bary", "Hotele", "Pizzerie"],
-    qr: { headline: "Menu QR w 5 minut.", sub: "Zamówienia stolikowe, rezerwacje i 35 języków. Bez prowizji i programistów." },
-    web: { headline: "Strona restauracji w 5 min.", sub: "Zamówienia stolikowe, rezerwacje i 35 języków. Bez prowizji i programistów." },
-    dynamicHeadlines: ["0% prowizji.", "35 języków (AI).", "Zamówienia online.", "Rezerwacje 24/7.", "Design premium."],
+    qr: { headline: "Menu QR w 5 minut.", sub: "Gotowa strona dla Twojej restauracji — bez programistów i podwykonawców. Bezpośrednie zamówienia, rezerwacje i analityka gości w jednej subskrypcji." },
+    web: { headline: "Strona restauracji w 5 min.", sub: "Gotowa strona dla Twojej restauracji — bez programistów i podwykonawców. Bezpośrednie zamówienia, rezerwacje i analityka gości w jednej subskrypcji." },
+    dynamicHeadlines: ["0% prowizji.", "35 języków z AI.", "Zamówienia online.", "Rezerwacje 24/7.", "Design premium."],
     painBullets: ["0% prowizji: Wszystkie zamówienia trafiają bezpośrednio do Ciebie.", "Tłumaczenie AI: 35 języków dla wyższych rachunków od turystów.", "Rezerwacje 24/7: Pełna sala bez zbędnych telefonów.", "Elastyczne ceny: Aktualizuj menu w kilka sekund."],
     rating: "4,9 · ponad 500 restauracji w 30+ krajach",
   },

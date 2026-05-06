@@ -21,7 +21,7 @@ export function FeatureSeoBlock({
   return (
     <section
       data-section="feature-seo"
-      className="container mx-auto px-4 py-8 sm:border-t sm:border-border sm:py-16"
+      className="container mx-auto px-4 py-8 sm:py-16"
     >
       <div className="max-w-3xl mx-auto">
         <p className="text-base sm:text-lg text-foreground leading-relaxed mb-5">

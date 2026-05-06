@@ -15,9 +15,9 @@ export const TEXTS: LandingTexts = {
   header: { navFeatures: "Funkcijas", navHow: "Kā tas darbojas", navPricing: "Cenas", navFaq: "FAQ", signIn: "Pieslēgties", cta: "Izmēģināt bez maksas" },
   hero: {
     verticals: ["Restorāni", "Kafejnīcas", "Bāri", "Viesnīcas", "Picērijas"],
-    qr: { headline: "QR ēdienkarte 5 minūtēs.", sub: "Tiešie pasūtījumi, rezervācijas un 35 valodas. Bez komisijas un programmētājiem." },
-    web: { headline: "Restorāna lapa 5 minūtēs.", sub: "Tiešie pasūtījumi, rezervācijas un 35 valodas. Bez komisijas un programmētājiem." },
-    dynamicHeadlines: ["0% komisija.", "35 valodas (AI).", "Tiešsaistes pasūtījumi.", "Rezervācijas 24/7.", "Premium dizains."],
+    qr: { headline: "QR ēdienkarte 5 minūtēs.", sub: "Gatava jūsu restorāna mājaslapa — bez programmētājiem un apakšuzņēmējiem. Tieši pasūtījumi, rezervācijas un viesu analītika vienā abonementā." },
+    web: { headline: "Restorāna lapa 5 minūtēs.", sub: "Gatava jūsu restorāna mājaslapa — bez programmētājiem un apakšuzņēmējiem. Tieši pasūtījumi, rezervācijas un viesu analītika vienā abonementā." },
+    dynamicHeadlines: ["0% komisija.", "35 valodas ar MI.", "Tiešsaistes pasūtījumi.", "Rezervācijas 24/7.", "Premium dizains."],
     painBullets: ["0% komisija: Visi pasūtījumi nonāk tieši pie jums.", "AI tulkojums: 35 valodas tūristu pirkumu palielināšanai.", "Rezervācijas 24/7: Pilna zāle bez liekiem zvaniem.", "Elastīgas cenas: Atjauniniet ēdienkarti dažu sekunžu laikā."],
     rating: "4,9 · vairāk nekā 500 restorānu 30+ valstīs",
   },

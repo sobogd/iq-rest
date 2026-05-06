@@ -31,9 +31,9 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Restaurantes", "Cafés", "Bares", "Hotéis", "Pizzarias"],
-    qr: { headline: "Menu QR em 5 minutos.", sub: "Pedidos diretos, reservas e 35 idiomas. Sem comissões ou programadores." },
-    web: { headline: "Site de restaurante em 5 min.", sub: "Pedidos diretos, reservas e 35 idiomas. Sem comissões ou programadores." },
-    dynamicHeadlines: ["0% comissão.", "35 idiomas (IA).", "Pedidos online.", "Reservas 24/7.", "Design premium."],
+    qr: { headline: "Menu QR em 5 minutos.", sub: "Site pronto para o seu restaurante — sem programadores nem prestadores. Pedidos diretos, reservas e análise de clientes numa única assinatura." },
+    web: { headline: "Site de restaurante em 5 min.", sub: "Site pronto para o seu restaurante — sem programadores nem prestadores. Pedidos diretos, reservas e análise de clientes numa única assinatura." },
+    dynamicHeadlines: ["0% comissão.", "35 idiomas com IA.", "Pedidos online.", "Reservas 24/7.", "Design premium."],
     painBullets: ["0% Comissão: Todos os pedidos vão diretamente para si.", "Tradução IA: 35 idiomas para aumentar o gasto de turistas.", "Reservas 24/7: Casa cheia sem chamadas extras.", "Preços flexíveis: Atualize o menu em segundos."],
     rating: "4,9 · mais de 500 restaurantes em 30+ países",
   },

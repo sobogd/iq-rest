@@ -15,9 +15,9 @@ export const TEXTS: LandingTexts = {
   header: { navFeatures: "Funktioner", navHow: "Sådan virker det", navPricing: "Priser", navFaq: "FAQ", signIn: "Log ind", cta: "Prøv gratis" },
   hero: {
     verticals: ["Restauranter", "Caféer", "Barer", "Hoteller", "Pizzeriaer"],
-    qr: { headline: "QR-menu på 5 minutter.", sub: "Direkte bestillinger, reservationer og 35 sprog. Ingen provision eller programmører." },
-    web: { headline: "Restaurant-site på 5 min.", sub: "Direkte bestillinger, reservationer og 35 sprog. Ingen provision eller programmører." },
-    dynamicHeadlines: ["0% provision.", "35 sprog (AI).", "Online bestilling.", "Booking 24/7.", "Premium design."],
+    qr: { headline: "QR-menu på 5 minutter.", sub: "Færdig restaurantwebsite — uden udviklere og underleverandører. Direkte bestillinger, reservationer og gæsteanalyse i ét abonnement." },
+    web: { headline: "Restaurant-site på 5 min.", sub: "Færdig restaurantwebsite — uden udviklere og underleverandører. Direkte bestillinger, reservationer og gæsteanalyse i ét abonnement." },
+    dynamicHeadlines: ["0% provision.", "35 sprog med AI.", "Online bestilling.", "Booking 24/7.", "Premium design."],
     painBullets: ["0% provision: Alle bestillinger går direkte til dig.", "AI-oversættelse: 35 sprog øger salget til turister.", "Booking 24/7: Fuld belægning uden ekstra opkald.", "Fleksible priser: Opdater menuen på få sekunder."],
     rating: "4,9 · over 500 restauranter i 30+ lande",
   },

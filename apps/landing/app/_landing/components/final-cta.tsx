@@ -12,7 +12,7 @@ interface FinalCtaProps {
 
 export function FinalCta({ texts, ctaText, demoText, microcopy, locale }: FinalCtaProps) {
   return (
-    <section data-section="final_cta" className="py-8 sm:border-t sm:border-border sm:py-16">
+    <section data-section="final_cta" className="py-8 sm:py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="text-center lg:text-start">

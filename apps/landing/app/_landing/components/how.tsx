@@ -6,7 +6,7 @@ interface HowProps {
 
 export function How({ texts }: HowProps) {
   return (
-    <section id="how" data-section="how" className="scroll-mt-16 py-8 sm:border-t sm:border-border sm:py-16">
+    <section id="how" data-section="how" className="scroll-mt-16 py-8 sm:py-16">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-3 text-center lg:text-start">
           {texts.heading}

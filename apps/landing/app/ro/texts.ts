@@ -15,9 +15,9 @@ export const TEXTS: LandingTexts = {
   header: { navFeatures: "Funcții", navHow: "Cum funcționează", navPricing: "Prețuri", navFaq: "Întrebări", signIn: "Conectare", cta: "Încearcă gratuit" },
   hero: {
     verticals: ["Restaurante", "Cafenele", "Baruri", "Hoteluri", "Pizzerii"],
-    qr: { headline: "Meniu QR în 5 minute.", sub: "Comenzi directe, rezervări și 35 de limbi. Fără comisioane sau programatori." },
-    web: { headline: "Site restaurant în 5 minute.", sub: "Comenzi directe, rezervări și 35 de limbi. Fără comisioane sau programatori." },
-    dynamicHeadlines: ["0% comision.", "35 limbi (AI).", "Comenzi online.", "Rezervări 24/7.", "Design premium."],
+    qr: { headline: "Meniu QR în 5 minute.", sub: "Site web gata pentru restaurantul tău — fără programatori și contractori. Comenzi directe, rezervări și analiza clienților într-un singur abonament." },
+    web: { headline: "Site restaurant în 5 minute.", sub: "Site web gata pentru restaurantul tău — fără programatori și contractori. Comenzi directe, rezervări și analiza clienților într-un singur abonament." },
+    dynamicHeadlines: ["0% comision.", "35 de limbi cu AI.", "Comenzi online.", "Rezervări 24/7.", "Design premium."],
     painBullets: ["0% comision: Toate comenzile ajung direct la tine.", "Traducere AI: 35 de limbi pentru a crește consumul turiștilor.", "Rezervări 24/7: Sală plină fără apeluri inutile.", "Prețuri flexibile: Actualizează meniul în câteva secunde."],
     rating: "4,9 · peste 500 de restaurante în 30+ țări",
   },

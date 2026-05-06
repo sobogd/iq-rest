@@ -7,7 +7,7 @@ interface FounderProps {
 
 export function Founder({ texts }: FounderProps) {
   return (
-    <section data-section="founder" className="py-8 sm:border-t sm:border-border sm:py-16">
+    <section data-section="founder" className="py-8 sm:py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-8 lg:gap-12 items-center max-w-4xl mx-auto">
           <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden flex-shrink-0 mx-auto lg:mx-0">

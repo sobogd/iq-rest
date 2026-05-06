@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Check } from "lucide-react";
 import { CtaButton } from "./cta-button";
 import { DemoButton } from "./demo-button";
 import { RotatingAccent } from "./rotating-accent";
@@ -21,8 +20,8 @@ export function Hero({ texts, variant, ctaText, demoText, microcopy, locale }: H
   const active = variant === "WEB" ? texts.web : texts.qr;
   return (
     <section data-section="hero" className="container mx-auto px-4 pt-8 pb-16 lg:pt-12">
-      <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.3fr_0.85fr] lg:gap-x-16 lg:gap-y-8 lg:items-center lg:[grid-template-areas:'header_images''bullets_images']">
-        {/* Header — verticals + headline + sub + CTA */}
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.3fr_0.85fr] lg:gap-x-16 lg:gap-y-8 lg:items-center lg:[grid-template-areas:'header_images']">
+        {/* Header — verticals + headline + sub + CTA + rating */}
         <div className="flex flex-col items-center text-center lg:items-start lg:text-start lg:[grid-area:header]">
           <div className="flex flex-col sm:flex-row sm:flex-wrap items-center sm:justify-center lg:justify-start gap-1 sm:gap-1.5 mb-5 w-full">
             <div className="flex justify-center gap-1 sm:contents">
@@ -48,8 +47,8 @@ export function Hero({ texts, variant, ctaText, demoText, microcopy, locale }: H
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.1] mb-4">
-            {active.headline}{" "}
-            <RotatingAccent items={texts.dynamicHeadlines} />
+            <span className="block">{active.headline}</span>
+            <RotatingAccent items={texts.dynamicHeadlines} className="block" />
           </h1>
 
           <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-xl mb-7 leading-snug">
@@ -66,9 +65,15 @@ export function Hero({ texts, variant, ctaText, demoText, microcopy, locale }: H
               extra={<DemoButton text={demoText} locale={locale} trackEvent="land_hero_demo_open" />}
             />
           </div>
+
+          {/* Rating — desktop only (mobile rating sits under image) */}
+          <div className="mt-6 hidden lg:flex flex-row items-center gap-2 text-sm font-medium text-muted-foreground">
+            <span className="text-amber-400">★★★★★</span>
+            <span>{texts.rating}</span>
+          </div>
         </div>
 
-        {/* Images */}
+        {/* Images + mobile rating */}
         <div className="w-full max-w-[480px] lg:max-w-[500px] mx-auto px-8 sm:px-6 lg:px-0 lg:[grid-area:images]">
           <div className="relative w-full aspect-[5/4]">
             <Image
@@ -96,20 +101,7 @@ export function Hero({ texts, variant, ctaText, demoText, microcopy, locale }: H
               className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[44%] h-auto rounded-[2rem] overflow-hidden z-10"
             />
           </div>
-        </div>
-
-        {/* Bullets + rating */}
-        <div className="flex flex-col items-center text-center lg:items-start lg:text-start lg:[grid-area:bullets]">
-          <ul className="grid grid-cols-1 sm:inline-grid sm:grid-cols-2 gap-x-6 gap-y-2.5 text-sm sm:text-base text-foreground/90 max-w-xl w-full sm:w-auto sm:text-start sm:mx-auto lg:mx-0">
-            {texts.painBullets.map((b) => (
-              <li key={b} className="flex items-center justify-center gap-2 sm:items-start sm:justify-start">
-                <Check className="h-4 w-4 flex-shrink-0 text-primary sm:mt-0.5" />
-                <span>{b}</span>
-              </li>
-            ))}
-          </ul>
-
-          <div className="mt-8 flex flex-col items-center gap-1 lg:flex-row lg:items-center lg:gap-2 text-sm font-medium text-muted-foreground">
+          <div className="mt-4 flex lg:hidden flex-col items-center gap-1 text-sm font-medium text-muted-foreground">
             <span className="text-amber-400">★★★★★</span>
             <span>{texts.rating}</span>
           </div>
