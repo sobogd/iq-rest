@@ -52,6 +52,7 @@ export default async function LandingPage({ searchParams }: { searchParams: Prom
     <main className="relative">
       <PageTracker variantIndex={variantIndex} />
       <LandingHeader texts={TEXTS.header} locale={LOCALE} />
+      <div className="space-y-6 sm:space-y-0">
       <Hero
         texts={TEXTS.hero}
         variant={variant}
@@ -83,6 +84,7 @@ export default async function LandingPage({ searchParams }: { searchParams: Prom
         microcopy={TEXTS.microcopy}
         locale={LOCALE}
       />
+      </div>
       <LandingFooter texts={TEXTS.footer} headerTexts={TEXTS.header} locale="no" />
     </main>
   );
