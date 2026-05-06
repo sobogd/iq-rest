@@ -2,7 +2,7 @@
 
 import { useRef, useEffect, useState, useMemo, useCallback } from "react";
 import { Plus, Minus, ShoppingCart } from "lucide-react";
-import { getAllergenIcon } from "@/lib/allergens";
+import { AllergenIcon } from "@/components/allergen-icon";
 import { formatPrice } from "@/lib/currencies";
 import { MenuImage } from "./menu-image";
 import { Link } from "@/i18n/routing";
@@ -282,7 +282,8 @@ export function MenuFeed({ categories, accentColor, currency = "EUR", allergenNa
                           <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1">
                             {item.allergens.map((code) => (
                               <span key={code} className="text-sm text-gray-500 inline-flex items-center gap-1">
-                                <span className="text-xs" role="img" aria-label={allergenNames[code] || code}>{getAllergenIcon(code)}</span> {allergenNames[code] || code}
+                                <AllergenIcon code={code} className="w-4 h-4" />
+                                <span>{allergenNames[code] || code}</span>
                               </span>
                             ))}
                           </div>
