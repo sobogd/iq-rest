@@ -41,6 +41,7 @@ export async function GET(request: NextRequest) {
         reservationSlotMinutes: true,
         workingHoursStart: true,
         workingHoursEnd: true,
+        reservationSchedule: true,
       },
     });
 
@@ -100,42 +101,45 @@ export async function GET(request: NextRequest) {
       },
     });
 
-    // Generate time slots based on working hours (every 30 minutes)
-    const timeSlots: TimeSlot[] = [];
-    const [startHour, startMin] = restaurant.workingHoursStart.split(":").map(Number);
-    const [endHour, endMin] = restaurant.workingHoursEnd.split(":").map(Number);
+    // Resolve open windows for the requested weekday from the per-day schedule
+    // (reservationSchedule). Falls back to the legacy single workingHoursStart/End
+    // window if reservationSchedule is null.
     const slotDuration = restaurant.reservationSlotMinutes;
+    const day = getScheduleDay(
+      restaurant.reservationSchedule,
+      reservationDate,
+      restaurant.workingHoursStart,
+      restaurant.workingHoursEnd,
+    );
 
-    const startMinutes = startHour * 60 + startMin;
-    const endMinutes = endHour * 60 + endMin;
+    const timeSlots: TimeSlot[] = [];
 
-    // Check if the date is today - if so, filter out past times
-    const now = new Date();
-    const todayStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
-    const isToday = dateStr === todayStr;
-    const currentMinutes = now.getHours() * 60 + now.getMinutes();
+    if (day) {
+      // Check if the date is today - if so, filter out past times
+      const now = new Date();
+      const todayStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+      const isToday = dateStr === todayStr;
+      const currentMinutes = now.getHours() * 60 + now.getMinutes();
 
-    // Generate slots every 30 minutes
-    for (let minutes = startMinutes; minutes < endMinutes; minutes += 30) {
-      const hour = Math.floor(minutes / 60);
-      const min = minutes % 60;
-      const timeStr = `${hour.toString().padStart(2, "0")}:${min.toString().padStart(2, "0")}`;
+      for (const window of day.openWindows) {
+        for (let minutes = window.start; minutes < window.end; minutes += 30) {
+          const hour = Math.floor(minutes / 60);
+          const min = minutes % 60;
+          const timeStr = `${hour.toString().padStart(2, "0")}:${min.toString().padStart(2, "0")}`;
 
-      // Skip past times for today
-      if (isToday && minutes <= currentMinutes) {
-        continue;
+          if (isToday && minutes <= currentMinutes) continue;
+
+          const availableTablesAtTime = suitableTables.filter(
+            (table) => !isTableBooked(table.id, timeStr, slotDuration, existingReservations)
+          );
+
+          timeSlots.push({
+            time: timeStr,
+            available: availableTablesAtTime.length > 0,
+            availableTables: availableTablesAtTime.length,
+          });
+        }
       }
-
-      // Count how many suitable tables are available at this time
-      const availableTablesAtTime = suitableTables.filter((table) => {
-        return !isTableBooked(table.id, timeStr, slotDuration, existingReservations);
-      });
-
-      timeSlots.push({
-        time: timeStr,
-        available: availableTablesAtTime.length > 0,
-        availableTables: availableTablesAtTime.length,
-      });
     }
 
     // If time is specified, return available tables for that time
@@ -191,4 +195,49 @@ function isTableBooked(
 function timeToMinutes(time: string): number {
   const [hours, minutes] = time.split(":").map(Number);
   return hours * 60 + minutes;
+}
+
+interface ScheduleDayShape {
+  closed: boolean;
+  from: string;
+  to: string;
+  lunchFrom: string | null;
+  lunchTo: string | null;
+}
+
+interface ResolvedDay {
+  openWindows: { start: number; end: number }[];
+}
+
+// Returns null if the day is closed. Otherwise an array of [start, end) windows
+// in minutes-from-midnight, with the lunch break (if any) carved out.
+function getScheduleDay(
+  raw: unknown,
+  date: Date,
+  fallbackFrom: string,
+  fallbackTo: string,
+): ResolvedDay | null {
+  // ISO weekday: Mon=0 ... Sun=6 (matches schedule array index).
+  const weekday = (date.getUTCDay() + 6) % 7;
+
+  let day: ScheduleDayShape;
+  if (Array.isArray(raw) && raw.length === 7 && raw[weekday] && typeof raw[weekday] === "object") {
+    day = raw[weekday] as ScheduleDayShape;
+  } else {
+    day = { closed: false, from: fallbackFrom, to: fallbackTo, lunchFrom: null, lunchTo: null };
+  }
+
+  if (day.closed) return null;
+  const start = timeToMinutes(day.from);
+  const end = timeToMinutes(day.to);
+  if (!(start < end)) return null;
+
+  if (day.lunchFrom && day.lunchTo) {
+    const lStart = timeToMinutes(day.lunchFrom);
+    const lEnd = timeToMinutes(day.lunchTo);
+    if (lStart > start && lEnd < end && lStart < lEnd) {
+      return { openWindows: [{ start, end: lStart }, { start: lEnd, end }] };
+    }
+  }
+  return { openWindows: [{ start, end }] };
 }
