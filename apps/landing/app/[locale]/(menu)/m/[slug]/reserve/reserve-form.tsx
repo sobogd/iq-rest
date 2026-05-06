@@ -24,6 +24,14 @@ interface TableInfo {
   available: boolean;
 }
 
+export interface ScheduleDay {
+  closed: boolean;
+  from: string;
+  to: string;
+  lunchFrom: string | null;
+  lunchTo: string | null;
+}
+
 interface ReserveFormProps {
   restaurantId: string;
   slotMinutes: number;
@@ -31,6 +39,7 @@ interface ReserveFormProps {
   slug: string;
   locale: string;
   accentColor?: string;
+  schedule?: ScheduleDay[] | null;
   translations: {
     title: string;
     selectDate: string;
@@ -79,8 +88,15 @@ export function ReserveForm({
   slug,
   locale,
   accentColor = "#000000",
+  schedule,
   translations: t,
 }: ReserveFormProps) {
+  // Map JS getDay() (0=Sun) → schedule index (0=Mon).
+  const dayIsClosed = (date: Date) => {
+    if (!Array.isArray(schedule) || schedule.length !== 7) return false;
+    const idx = (date.getDay() + 6) % 7;
+    return !!schedule[idx]?.closed;
+  };
   const [guestsCount, setGuestsCount] = useState(0);
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [selectedTime, setSelectedTime] = useState("");
@@ -382,7 +398,8 @@ export function ReserveForm({
               const isLoading = isSelected && loadingSlots;
               const isPast = isBefore(date, today) && !isSameDay(date, today);
               const isFuture = isAfter(date, maxDate);
-              const isDisabled = isPast || isFuture || loadingSlots;
+              const isClosed = dayIsClosed(date);
+              const isDisabled = isPast || isFuture || isClosed || loadingSlots;
 
               // Format: "Пт, 6 дек" or "Fri, Dec 6" depending on user's locale
               const dateLabel = date.toLocaleDateString(undefined, {
@@ -399,13 +416,13 @@ export function ReserveForm({
                   onClick={() => handleDateSelect(date)}
                   className={cn(
                     "h-11 rounded-lg border-2 text-sm font-semibold transition-colors flex items-center justify-center px-4 capitalize",
-                    isPast || isFuture ? "cursor-not-allowed" : "",
-                    loadingSlots && !isSelected && !isPast && !isFuture && "opacity-50 cursor-not-allowed"
+                    isPast || isFuture || isClosed ? "cursor-not-allowed" : "",
+                    loadingSlots && !isSelected && !isPast && !isFuture && !isClosed && "opacity-50 cursor-not-allowed"
                   )}
                   style={
                     isSelected
                       ? { borderColor: accentColor, backgroundColor: accentColor, color: "#fff" }
-                      : isPast || isFuture
+                      : isPast || isFuture || isClosed
                       ? { borderColor: "#f3f4f6", backgroundColor: "#f9fafb", color: "#d1d5db" }
                       : { borderColor: "#e5e7eb", backgroundColor: "#fff", color: "#000" }
                   }

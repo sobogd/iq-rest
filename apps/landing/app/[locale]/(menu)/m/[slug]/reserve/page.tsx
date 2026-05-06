@@ -1,7 +1,7 @@
 import { notFound, redirect } from "next/navigation";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { ReserveForm } from "./reserve-form";
+import { ReserveForm, type ScheduleDay } from "./reserve-form";
 import { MenuHeader, MenuPageWrapper } from "../_components";
 import { getRestaurantBySlug } from "../_lib/get-restaurant";
 
@@ -101,6 +101,7 @@ export default async function ReservePage({ params, searchParams }: ReservePageP
             translations={translations}
             slug={slug}
             locale={locale}
+            schedule={restaurant.reservationSchedule as ScheduleDay[] | null}
           />
         </div>
       </main>

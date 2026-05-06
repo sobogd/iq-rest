@@ -31,6 +31,7 @@ export const getRestaurantBySlug = cache(async (slug: string) => {
       y: true,
       reservationMode: true,
       reservationSlotMinutes: true,
+      reservationSchedule: true,
       company: {
         select: {
           id: true,
