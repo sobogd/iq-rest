@@ -32,7 +32,7 @@ export const TEXTS: LandingTexts = {
   hero: {
     verticals: ["Restaurants", "Cafés", "Bars", "Hotels", "Pizzerias"],
     qr: { headline: "QR Menu in 5 minutes.", sub: "Ready-made restaurant website — no developers, no contractors. Direct orders, bookings, and guest analytics in one subscription." },
-    web: { headline: "Restaurant website in 5 min.", sub: "Ready-made restaurant website — no developers, no contractors. Direct orders, bookings, and guest analytics in one subscription." },
+    web: { headline: "Restaurant website\nin 5 min.", sub: "Ready-made restaurant website — no developers, no contractors. Direct orders, bookings, and guest analytics in one subscription." },
     dynamicHeadlines: ["0% commission.", "35 languages with AI.", "Online ordering.", "24/7 Bookings.", "Premium design."],
     painBullets: ["0% Commission: All orders go directly to you.", "AI Translation: 35 languages to boost tourist checks.", "24/7 Bookings: Full house without extra calls.", "Flexible Prices: Update your menu in seconds."],
     rating: "4.9 · 500+ restaurants in 30+ countries",
