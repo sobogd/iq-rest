@@ -36,7 +36,7 @@ export function LandingFooter({ texts, headerTexts: _headerTexts, locale, exclud
   return (
     <>
     <footer className="bg-muted/20" data-section="footer">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8 sm:py-16">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10 md:gap-6">
           <nav className="flex flex-wrap items-center justify-center md:justify-start gap-x-5 gap-y-2 text-sm md:max-w-[50%]">
             {featureLinks.map((link) => (
