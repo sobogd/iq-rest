@@ -1322,7 +1322,10 @@
     "today": "Danes",
     "tomorrow": "Jutri",
     "otherReservations": "Druge rezervacije",
-    "sort": "Razvrsti"
+    "sort": "Razvrsti",
+    "movedTitle": "Rezervacije premaknjene na novo nadzorno ploščo",
+    "movedBody": "Vse upravljanje rezervacij zdaj poteka v novi nadzorni plošči. Kliknite spodaj, da jo odprete.",
+    "movedCta": "Odpri novo nadzorno ploščo"
   },
   "publicReserve": {
     "title": "Rezervirajte Mizo",

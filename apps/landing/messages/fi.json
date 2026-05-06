@@ -1322,7 +1322,10 @@
     "today": "Tänään",
     "tomorrow": "Huomenna",
     "otherReservations": "Muut varaukset",
-    "sort": "Lajittele"
+    "sort": "Lajittele",
+    "movedTitle": "Varaukset siirrettiin uuteen kojelautaan",
+    "movedBody": "Kaikki varausten hallinta tapahtuu nyt uudessa kojelaudassa. Napsauta alla avataksesi.",
+    "movedCta": "Avaa uusi kojelauta"
   },
   "publicReserve": {
     "title": "Varaa Pöytä",

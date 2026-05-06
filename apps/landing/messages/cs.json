@@ -1322,7 +1322,10 @@
     "today": "Dnes",
     "tomorrow": "Zítra",
     "otherReservations": "Další rezervace",
-    "sort": "Třídit"
+    "sort": "Třídit",
+    "movedTitle": "Rezervace přesunuty do nového dashboardu",
+    "movedBody": "Veškerá správa rezervací nyní probíhá v novém dashboardu. Klikněte níže pro přístup.",
+    "movedCta": "Otevřít nový dashboard"
   },
   "publicReserve": {
     "title": "Rezervujte stůl",

@@ -1322,7 +1322,10 @@
     "today": "今日",
     "tomorrow": "明日",
     "otherReservations": "その他の予約",
-    "sort": "並べ替え"
+    "sort": "並べ替え",
+    "movedTitle": "予約は新しいダッシュボードへ移行しました",
+    "movedBody": "予約管理はすべて新しいダッシュボードで行われます。下のボタンから開いてください。",
+    "movedCta": "新しいダッシュボードを開く"
   },
   "publicReserve": {
     "title": "テーブルを予約",

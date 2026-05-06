@@ -1322,7 +1322,10 @@
     "today": "Avui",
     "tomorrow": "Demà",
     "otherReservations": "Altres Reserves",
-    "sort": "Ordenar"
+    "sort": "Ordenar",
+    "movedTitle": "Les reserves s'han mogut al nou tauler",
+    "movedBody": "Tota la gestió de reserves ara es fa al nou tauler. Fes clic a sota per accedir-hi.",
+    "movedCta": "Obrir el nou tauler"
   },
   "publicReserve": {
     "title": "Reserva una Taula",

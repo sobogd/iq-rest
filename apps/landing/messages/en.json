@@ -1322,7 +1322,10 @@
     "today": "Today",
     "tomorrow": "Tomorrow",
     "otherReservations": "Other Reservations",
-    "sort": "Sort"
+    "sort": "Sort",
+    "movedTitle": "Bookings moved to the new dashboard",
+    "movedBody": "All booking management now happens in the new dashboard. Click below to open it.",
+    "movedCta": "Open new dashboard"
   },
   "publicReserve": {
     "title": "Book a Table",

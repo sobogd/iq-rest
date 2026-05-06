@@ -1322,7 +1322,10 @@
     "today": "今天",
     "tomorrow": "明天",
     "otherReservations": "其他预订",
-    "sort": "排序"
+    "sort": "排序",
+    "movedTitle": "预订已迁移至新仪表板",
+    "movedBody": "所有预订管理现在在新仪表板中进行。点击下方打开。",
+    "movedCta": "打开新仪表板"
   },
   "publicReserve": {
     "title": "预订餐桌",

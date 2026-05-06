@@ -1322,7 +1322,10 @@
     "today": "Danas",
     "tomorrow": "Sutra",
     "otherReservations": "Ostale Rezervacije",
-    "sort": "Sortiraj"
+    "sort": "Sortiraj",
+    "movedTitle": "Резервације премештене на нову контролну таблу",
+    "movedBody": "Целокупно управљање резервацијама сада се одвија у новој контролној табли. Кликните доле за приступ.",
+    "movedCta": "Отвори нову контролну таблу"
   },
   "publicReserve": {
     "title": "Rezervišite Sto",

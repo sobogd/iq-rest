@@ -1322,7 +1322,10 @@
     "today": "Oggi",
     "tomorrow": "Domani",
     "otherReservations": "Altre Prenotazioni",
-    "sort": "Ordina"
+    "sort": "Ordina",
+    "movedTitle": "Le prenotazioni sono state spostate nel nuovo pannello",
+    "movedBody": "Tutta la gestione delle prenotazioni avviene ora nel nuovo pannello. Clicca qui sotto per accedervi.",
+    "movedCta": "Apri il nuovo pannello"
   },
   "publicReserve": {
     "title": "Prenota un Tavolo",

@@ -1322,7 +1322,10 @@
     "today": "Vandaag",
     "tomorrow": "Morgen",
     "otherReservations": "Andere Reserveringen",
-    "sort": "Sorteren"
+    "sort": "Sorteren",
+    "movedTitle": "Reserveringen verplaatst naar het nieuwe dashboard",
+    "movedBody": "Al het reserveringsbeheer vindt nu plaats in het nieuwe dashboard. Klik hieronder om te openen.",
+    "movedCta": "Open nieuw dashboard"
   },
   "publicReserve": {
     "title": "Boek een Tafel",

@@ -1322,7 +1322,10 @@
     "today": "I dag",
     "tomorrow": "I morgen",
     "otherReservations": "Andre reservasjoner",
-    "sort": "Sorter"
+    "sort": "Sorter",
+    "movedTitle": "Reservasjoner flyttet til det nye dashbordet",
+    "movedBody": "All reservasjonshåndtering skjer nå i det nye dashbordet. Klikk under for å åpne.",
+    "movedCta": "Åpne nytt dashbord"
   },
   "publicReserve": {
     "title": "Bestill et Bord",

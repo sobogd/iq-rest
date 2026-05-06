@@ -1322,7 +1322,10 @@
     "today": "오늘",
     "tomorrow": "내일",
     "otherReservations": "기타 예약",
-    "sort": "정렬"
+    "sort": "정렬",
+    "movedTitle": "예약이 새 대시보드로 이전되었습니다",
+    "movedBody": "모든 예약 관리는 이제 새 대시보드에서 진행됩니다. 아래 버튼을 눌러 열어주세요.",
+    "movedCta": "새 대시보드 열기"
   },
   "publicReserve": {
     "title": "테이블 예약",

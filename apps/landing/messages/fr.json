@@ -1322,7 +1322,10 @@
     "today": "Aujourd'hui",
     "tomorrow": "Demain",
     "otherReservations": "Autres Réservations",
-    "sort": "Trier"
+    "sort": "Trier",
+    "movedTitle": "Les réservations ont été déplacées vers le nouveau tableau de bord",
+    "movedBody": "Toute la gestion des réservations se fait désormais dans le nouveau tableau de bord. Cliquez ci-dessous pour y accéder.",
+    "movedCta": "Ouvrir le nouveau tableau de bord"
   },
   "publicReserve": {
     "title": "Réserver une Table",

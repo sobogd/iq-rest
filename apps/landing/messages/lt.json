@@ -1322,7 +1322,10 @@
     "today": "Šiandien",
     "tomorrow": "Rytoj",
     "otherReservations": "Kitos rezervacijos",
-    "sort": "Rūšiuoti"
+    "sort": "Rūšiuoti",
+    "movedTitle": "Rezervacijos perkeltos į naują skydelį",
+    "movedBody": "Visas rezervacijų valdymas dabar vyksta naujame skydelyje. Spustelėkite žemiau, kad atidarytumėte.",
+    "movedCta": "Atidaryti naują skydelį"
   },
   "publicReserve": {
     "title": "Užsakyti stalą",

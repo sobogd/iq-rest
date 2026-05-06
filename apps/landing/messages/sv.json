@@ -1322,7 +1322,10 @@
     "today": "Idag",
     "tomorrow": "Imorgon",
     "otherReservations": "Andra bokningar",
-    "sort": "Sortera"
+    "sort": "Sortera",
+    "movedTitle": "Bokningar flyttade till den nya panelen",
+    "movedBody": "All bokningshantering sker nu i den nya panelen. Klicka nedan för att öppna.",
+    "movedCta": "Öppna ny panel"
   },
   "publicReserve": {
     "title": "Boka ett Bord",

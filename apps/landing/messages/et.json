@@ -1322,7 +1322,10 @@
     "today": "Täna",
     "tomorrow": "Homme",
     "otherReservations": "Teised broneeringud",
-    "sort": "Sorteeri"
+    "sort": "Sorteeri",
+    "movedTitle": "Broneeringud kolisid uude juhtpaneeli",
+    "movedBody": "Kogu broneeringute haldus toimub nüüd uues juhtpaneelis. Klõpsake all, et avada.",
+    "movedCta": "Ava uus juhtpaneel"
   },
   "publicReserve": {
     "title": "Broneeri laud",

@@ -1322,7 +1322,10 @@
     "today": "I dag",
     "tomorrow": "I morgen",
     "otherReservations": "Andre Reservationer",
-    "sort": "Sorter"
+    "sort": "Sorter",
+    "movedTitle": "Reservationer flyttet til det nye dashboard",
+    "movedBody": "Al reservationsstyring foregår nu i det nye dashboard. Klik nedenfor for at få adgang.",
+    "movedCta": "Åbn det nye dashboard"
   },
   "publicReserve": {
     "title": "Book et Bord",

@@ -1322,7 +1322,10 @@
     "today": "Hoje",
     "tomorrow": "Amanhã",
     "otherReservations": "Outras Reservas",
-    "sort": "Ordenar"
+    "sort": "Ordenar",
+    "movedTitle": "As reservas foram movidas para o novo painel",
+    "movedBody": "Toda a gestão de reservas agora é feita no novo painel. Clique abaixo para abrir.",
+    "movedCta": "Abrir novo painel"
   },
   "publicReserve": {
     "title": "Reservar uma Mesa",

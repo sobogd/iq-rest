@@ -1322,7 +1322,10 @@
     "today": "Ma",
     "tomorrow": "Holnap",
     "otherReservations": "Egyéb foglalások",
-    "sort": "Rendezés"
+    "sort": "Rendezés",
+    "movedTitle": "A foglalások átkerültek az új vezérlőpultba",
+    "movedBody": "Minden foglaláskezelés most az új vezérlőpultban történik. Kattintson alább a megnyitáshoz.",
+    "movedCta": "Új vezérlőpult megnyitása"
   },
   "publicReserve": {
     "title": "Asztalfoglalás",

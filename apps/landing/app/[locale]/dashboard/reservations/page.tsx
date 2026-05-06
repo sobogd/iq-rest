@@ -1,21 +1,15 @@
+import { getTranslations } from "next-intl/server";
 import { requireAuth } from "../_lib/require-auth";
-import { getReservations, getRestaurant, getTables } from "../_lib/queries";
-import { ReservationsPage } from "../_pages/reservations";
+import { MigratedNotice } from "../_components/migrated-notice";
 
 export default async function Page() {
-  const companyId = await requireAuth();
-
-  const [reservations, restaurant, tables] = await Promise.all([
-    getReservations(companyId),
-    getRestaurant(companyId),
-    getTables(companyId),
-  ]);
-
+  await requireAuth();
+  const t = await getTranslations("reservations");
   return (
-    <ReservationsPage
-      initialReservations={reservations}
-      reservationsEnabled={restaurant?.reservationsEnabled ?? false}
-      hasTables={tables.length > 0}
+    <MigratedNotice
+      title={t("movedTitle")}
+      body={t("movedBody")}
+      cta={t("movedCta")}
     />
   );
 }

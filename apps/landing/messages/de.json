@@ -1322,7 +1322,10 @@
     "today": "Heute",
     "tomorrow": "Morgen",
     "otherReservations": "Andere Reservierungen",
-    "sort": "Sortieren"
+    "sort": "Sortieren",
+    "movedTitle": "Reservierungen ins neue Dashboard verschoben",
+    "movedBody": "Die gesamte Reservierungsverwaltung erfolgt jetzt im neuen Dashboard. Klicken Sie unten, um darauf zuzugreifen.",
+    "movedCta": "Neues Dashboard öffnen"
   },
   "publicReserve": {
     "title": "Tisch reservieren",

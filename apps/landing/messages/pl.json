@@ -1322,7 +1322,10 @@
     "today": "Dziś",
     "tomorrow": "Jutro",
     "otherReservations": "Inne Rezerwacje",
-    "sort": "Sortuj"
+    "sort": "Sortuj",
+    "movedTitle": "Rezerwacje przeniesione do nowego panelu",
+    "movedBody": "Całe zarządzanie rezerwacjami odbywa się teraz w nowym panelu. Kliknij poniżej, aby je otworzyć.",
+    "movedCta": "Otwórz nowy panel"
   },
   "publicReserve": {
     "title": "Zarezerwuj Stół",

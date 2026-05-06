@@ -1322,7 +1322,10 @@
     "today": "Astăzi",
     "tomorrow": "Mâine",
     "otherReservations": "Alte Rezerve",
-    "sort": "Sortează"
+    "sort": "Sortează",
+    "movedTitle": "Rezervările au fost mutate în noul panou",
+    "movedBody": "Toată gestionarea rezervărilor are loc acum în noul panou. Faceți clic mai jos pentru a deschide.",
+    "movedCta": "Deschide noul panou"
   },
   "publicReserve": {
     "title": "Rezervă o Masă",

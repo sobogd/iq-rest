@@ -82,30 +82,6 @@ export async function getTables(companyId: string) {
   }));
 }
 
-// ---- Reservations ----
-export async function getReservations(companyId: string) {
-  const restaurant = await prisma.restaurant.findFirst({
-    where: { companyId },
-    select: { id: true },
-  });
-  if (!restaurant) return [];
-
-  const reservations = await prisma.reservation.findMany({
-    where: { restaurantId: restaurant.id },
-    include: {
-      table: {
-        select: { number: true, zone: true },
-      },
-    },
-    orderBy: [{ date: "desc" }, { startTime: "desc" }],
-  });
-  return reservations.map((r) => ({
-    ...r,
-    date: r.date.toISOString(),
-    createdAt: r.createdAt.toISOString(),
-    updatedAt: r.updatedAt.toISOString(),
-  }));
-}
 
 // ---- Support Messages ----
 export async function getSupportMessages(companyId: string) {

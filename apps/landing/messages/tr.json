@@ -1322,7 +1322,10 @@
     "today": "Bugün",
     "tomorrow": "Yarın",
     "otherReservations": "Diğer Rezervasyonlar",
-    "sort": "Sırala"
+    "sort": "Sırala",
+    "movedTitle": "Rezervasyonlar yeni panele taşındı",
+    "movedBody": "Tüm rezervasyon yönetimi artık yeni panelde gerçekleşir. Açmak için aşağı tıklayın.",
+    "movedCta": "Yeni paneli aç"
   },
   "publicReserve": {
     "title": "Masa Ayırt",

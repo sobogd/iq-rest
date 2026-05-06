@@ -1322,7 +1322,10 @@
     "today": "Danas",
     "tomorrow": "Sutra",
     "otherReservations": "Ostale Rezervacije",
-    "sort": "Sortiraj"
+    "sort": "Sortiraj",
+    "movedTitle": "Rezervacije premještene na novu nadzornu ploču",
+    "movedBody": "Cjelokupno upravljanje rezervacijama sada se odvija u novoj nadzornoj ploči. Kliknite ispod za pristup.",
+    "movedCta": "Otvori novu nadzornu ploču"
   },
   "publicReserve": {
     "title": "Rezervirajte Stol",

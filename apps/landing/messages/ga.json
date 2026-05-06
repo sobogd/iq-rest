@@ -1322,7 +1322,10 @@
     "today": "Inniu",
     "tomorrow": "Amárach",
     "otherReservations": "Conarthaí Eile",
-    "sort": "Cuir in Ord"
+    "sort": "Cuir in Ord",
+    "movedTitle": "Áirithintí bogtha go dtí an deais nua",
+    "movedBody": "Tarlaíonn bainistíocht áirithintí go léir anois sa deais nua. Cliceáil thíos chun é a oscailt.",
+    "movedCta": "Oscail an deais nua"
   },
   "publicReserve": {
     "title": "Cuir Tábla in Áirithe",

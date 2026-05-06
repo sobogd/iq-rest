@@ -1322,7 +1322,10 @@
     "today": "Dnes",
     "tomorrow": "Zajtra",
     "otherReservations": "Iné rezervácie",
-    "sort": "Zoradiť"
+    "sort": "Zoradiť",
+    "movedTitle": "Rezervácie presunuté do nového panela",
+    "movedBody": "Celá správa rezervácií prebieha teraz v novom paneli. Kliknite nižšie pre otvorenie.",
+    "movedCta": "Otvoriť nový panel"
   },
   "publicReserve": {
     "title": "Rezervujte stôl",

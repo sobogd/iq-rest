@@ -1322,7 +1322,10 @@
     "today": "Í dag",
     "tomorrow": "Á morgun",
     "otherReservations": "Aðrar bókanir",
-    "sort": "Skrá"
+    "sort": "Skrá",
+    "movedTitle": "Bókanir fluttar yfir í nýja stjórnborðið",
+    "movedBody": "Öll bókanastjórnun fer nú fram í nýja stjórnborðinu. Smelltu hér að neðan til að opna það.",
+    "movedCta": "Opna nýja stjórnborðið"
   },
   "publicReserve": {
     "title": "Bóka Borð",

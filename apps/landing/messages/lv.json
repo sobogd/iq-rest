@@ -1322,7 +1322,10 @@
     "today": "Šodien",
     "tomorrow": "Rīt",
     "otherReservations": "Citas rezervācijas",
-    "sort": "Kārtot"
+    "sort": "Kārtot",
+    "movedTitle": "Rezervācijas pārceltas uz jauno paneli",
+    "movedBody": "Visa rezervāciju pārvaldība tagad notiek jaunajā panelī. Noklikšķiniet zemāk, lai atvērtu.",
+    "movedCta": "Atvērt jauno paneli"
   },
   "publicReserve": {
     "title": "Rezervēt Galdu",
