@@ -52,7 +52,7 @@ export default async function LandingPage({ searchParams }: { searchParams: Prom
     <main className="relative">
       <PageTracker variantIndex={variantIndex} />
       <LandingHeader texts={TEXTS.header} locale={LOCALE} />
-      <div className="space-y-6 sm:space-y-0">
+      <div className="space-y-10 sm:space-y-0">
       <Hero
         texts={TEXTS.hero}
         variant={variant}
