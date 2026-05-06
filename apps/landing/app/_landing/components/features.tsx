@@ -38,7 +38,7 @@ export function Features({ texts }: FeaturesProps) {
         </h2>
         <p className="text-base sm:text-lg text-muted-foreground mb-10 text-center lg:text-start">{texts.sub}</p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 sm:gap-y-6 items-start">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10 items-start">
           {texts.items.map(({ Icon, title, desc, tag }, i) => {
             const image = FEATURE_IMAGES[i];
             const variant = FEATURE_TAG_VARIANT[i] ?? "default";
@@ -54,7 +54,7 @@ export function Features({ texts }: FeaturesProps) {
               return (
                 <div
                   key={title}
-                  className="bg-card border border-border rounded-2xl p-5 sm:p-6 flex flex-col items-center text-center gap-3 sm:grid sm:grid-cols-[30%_1fr] sm:items-center sm:text-start sm:gap-x-5 sm:gap-y-1 sm:[grid-template-areas:'image_tag''image_title''image_desc']"
+                  className="flex flex-col items-center text-center gap-3 sm:grid sm:grid-cols-[30%_1fr] sm:items-center sm:text-start sm:gap-x-5 sm:gap-y-1 sm:[grid-template-areas:'image_tag''image_title''image_desc']"
                 >
                   <div className="w-full max-w-[200px] mb-3 sm:mb-0 sm:max-w-none sm:[grid-area:image] relative aspect-square rounded-3xl overflow-hidden border-[6px] border-[hsl(0_0%_8%)] bg-background">
                     <Image
@@ -77,7 +77,7 @@ export function Features({ texts }: FeaturesProps) {
               );
             }
             return (
-              <div key={title} className="bg-card border border-border rounded-2xl p-5 sm:p-6 flex flex-row gap-4 sm:gap-5 items-start">
+              <div key={title} className="flex flex-row gap-4 sm:gap-5 items-start">
                 <div className="shrink-0 h-10 w-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
                   <Icon className="h-5 w-5" strokeWidth={2} />
                 </div>
