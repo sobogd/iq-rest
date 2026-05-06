@@ -73,6 +73,7 @@ export default async function ReservePage({ params, searchParams }: ReservePageP
     successAuto: t("successAuto"),
     successManual: t("successManual"),
     error: t("error"),
+    fillRequired: t("fillRequired"),
     guests: t("guests"),
     table: t("table"),
     capacity: t("capacity"),

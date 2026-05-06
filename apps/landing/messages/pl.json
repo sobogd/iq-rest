@@ -1344,6 +1344,7 @@
     "successAuto": "Twoja rezerwacja została potwierdzona. Wkrótce otrzymasz email z potwierdzeniem.",
     "successManual": "Twoja prośba o rezerwację została złożona. Otrzymasz email, gdy zostanie potwierdzona.",
     "error": "Błąd",
+    "fillRequired": "Proszę wypełnić wszystkie wymagane pola",
     "guests": "gości",
     "table": "Stół",
     "capacity": "pojemność",

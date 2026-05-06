@@ -1344,6 +1344,7 @@
     "successAuto": "Rezervasyonunuz onaylandı. Kısa süre içinde bir onay e-postası alacaksınız.",
     "successManual": "Rezervasyon talebiniz gönderildi. Onaylandığında bir e-posta alacaksınız.",
     "error": "Hata",
+    "fillRequired": "Lütfen tüm zorunlu alanları doldurun",
     "guests": "misafir",
     "table": "Masa",
     "capacity": "kapasite",

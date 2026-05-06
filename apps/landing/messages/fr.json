@@ -1344,6 +1344,7 @@
     "successAuto": "Votre réservation est confirmée. Vous recevrez un email de confirmation sous peu.",
     "successManual": "Votre demande de réservation a été soumise. Vous recevrez un email une fois confirmée.",
     "error": "Erreur",
+    "fillRequired": "Veuillez remplir tous les champs obligatoires",
     "guests": "convives",
     "table": "Table",
     "capacity": "capacité",

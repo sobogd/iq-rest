@@ -24,7 +24,6 @@ const reservationSchema = z.object({
   tableId: z.string().optional(),
   date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Invalid date format"),
   startTime: z.string().regex(/^\d{2}:\d{2}$/, "Invalid time format"),
-  duration: z.number().int().min(15).max(480).optional(),
   guestName: z.string().trim().min(1).max(100),
   guestEmail: z.string().trim().email().max(200),
   guestsCount: z.number().int().min(1).max(50),
@@ -198,9 +197,12 @@ async function sendOwnerEmail(params: {
     rows += detailRow(t.notes, params.notes);
   }
 
+  // BCC instead of To, otherwise co-owners see each other's email addresses.
+  const [primary, ...rest] = params.ownerEmails;
   await transporter.sendMail({
     from: process.env.FROM_EMAIL,
-    to: params.ownerEmails.join(","),
+    to: primary,
+    bcc: rest.length > 0 ? rest : undefined,
     subject,
     html: `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 520px; margin: 0 auto; padding: 32px 20px; color: #1a1a1a;">
@@ -234,7 +236,7 @@ export async function POST(request: NextRequest) {
       "unknown";
     if (isRateLimited(ip)) {
       return NextResponse.json(
-        { error: "Too many requests. Please try again later." },
+        { error: "Too many requests. Please try again later.", code: "rate_limited" },
         { status: 429 }
       );
     }
@@ -243,7 +245,7 @@ export async function POST(request: NextRequest) {
     const parsed = reservationSchema.safeParse(body);
     if (!parsed.success) {
       return NextResponse.json(
-        { error: parsed.error.issues[0]?.message || "Invalid input" },
+        { error: parsed.error.issues[0]?.message || "Invalid input", code: "invalid_input" },
         { status: 400 }
       );
     }
@@ -253,7 +255,6 @@ export async function POST(request: NextRequest) {
       tableId,
       date,
       startTime,
-      duration,
       guestName,
       guestEmail,
       guestsCount,
@@ -287,14 +288,14 @@ export async function POST(request: NextRequest) {
 
     if (!restaurant) {
       return NextResponse.json(
-        { error: "Restaurant not found" },
+        { error: "Restaurant not found", code: "not_found" },
         { status: 404 }
       );
     }
 
     if (!restaurant.reservationsEnabled) {
       return NextResponse.json(
-        { error: "Reservations are not enabled" },
+        { error: "Reservations are not enabled", code: "reservations_disabled" },
         { status: 400 }
       );
     }
@@ -303,7 +304,7 @@ export async function POST(request: NextRequest) {
     const reservationDate = new Date(date);
     if (isNaN(reservationDate.getTime())) {
       return NextResponse.json(
-        { error: "Invalid date" },
+        { error: "Invalid date", code: "invalid_date" },
         { status: 400 }
       );
     }
@@ -312,12 +313,14 @@ export async function POST(request: NextRequest) {
     today.setHours(0, 0, 0, 0);
     if (reservationDate < today) {
       return NextResponse.json(
-        { error: "Cannot create reservation in the past" },
+        { error: "Cannot create reservation in the past", code: "past_date" },
         { status: 400 }
       );
     }
 
-    const slotDuration = duration || restaurant.reservationSlotMinutes;
+    // Always use server-side slot duration. Client-supplied value is ignored
+    // to prevent abuse (would let a guest occupy a table for hours).
+    const slotDuration = restaurant.reservationSlotMinutes;
 
     // Get suitable tables (outside transaction — read-only, stable)
     const suitableTables = await prisma.table.findMany({
@@ -334,73 +337,93 @@ export async function POST(request: NextRequest) {
 
     if (suitableTables.length === 0) {
       return NextResponse.json(
-        { error: "No tables available for this number of guests" },
+        { error: "No tables available for this number of guests", code: "no_tables_for_guests" },
         { status: 400 }
       );
     }
 
-    // Use Serializable transaction to prevent race conditions
+    // Use Serializable transaction to prevent race conditions.
+    // SSI in Postgres can throw 40001 / P2034 — retry up to MAX_ATTEMPTS times.
     const status = restaurant.reservationMode === "auto" ? "confirmed" : "pending";
+    const MAX_ATTEMPTS = 3;
 
-    const txResult = await prisma.$transaction(async (tx) => {
-      // Check existing reservations within the transaction
-      const existingReservations = await tx.reservation.findMany({
-        where: {
-          restaurantId,
-          date: reservationDate,
-          status: { in: ["pending", "confirmed"] },
-        },
-        select: {
-          tableId: true,
-          startTime: true,
-          duration: true,
-        },
-      });
+    type TxResult =
+      | { reservation: Awaited<ReturnType<typeof prisma.reservation.create>>; selectedTable: (typeof suitableTables)[number] }
+      | { error: string; code: string };
 
-      let selectedTable;
+    let txResult: TxResult | null = null;
+    let lastTxError: unknown = null;
 
-      if (tableId) {
-        selectedTable = suitableTables.find((t) => t.id === tableId);
-        if (!selectedTable) {
-          return { error: "Requested table not found or not suitable for this number of guests" };
-        }
-        if (isTableBooked(tableId, startTime, slotDuration, existingReservations)) {
-          return { error: "Requested table is not available at this time" };
-        }
-      } else {
-        selectedTable = suitableTables.find((table) => {
-          return !isTableBooked(table.id, startTime, slotDuration, existingReservations);
-        });
+    for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
+      try {
+        txResult = await prisma.$transaction(async (tx) => {
+          const existingReservations = await tx.reservation.findMany({
+            where: {
+              restaurantId,
+              date: reservationDate,
+              status: { in: ["pending", "confirmed"] },
+            },
+            select: { tableId: true, startTime: true, duration: true },
+          });
+
+          let selectedTable;
+          if (tableId) {
+            selectedTable = suitableTables.find((t) => t.id === tableId);
+            if (!selectedTable) {
+              return { error: "Requested table not found or not suitable for this number of guests", code: "table_unsuitable" };
+            }
+            if (isTableBooked(tableId, startTime, slotDuration, existingReservations)) {
+              return { error: "Requested table is not available at this time", code: "table_taken" };
+            }
+          } else {
+            selectedTable = suitableTables.find(
+              (table) => !isTableBooked(table.id, startTime, slotDuration, existingReservations)
+            );
+          }
+
+          if (!selectedTable) {
+            return { error: "No tables available at this time", code: "no_tables_at_time" };
+          }
+
+          const reservation = await tx.reservation.create({
+            data: {
+              restaurantId,
+              tableId: selectedTable.id,
+              date: reservationDate,
+              startTime,
+              duration: slotDuration,
+              guestName,
+              guestEmail,
+              guestPhone: null,
+              guestsCount,
+              notes: notes || null,
+              status,
+            },
+          });
+
+          return { reservation, selectedTable };
+        }, { isolationLevel: "Serializable" });
+        break;
+      } catch (err) {
+        lastTxError = err;
+        const code = (err as { code?: string }).code;
+        const message = (err as { message?: string }).message || "";
+        const isSerialization =
+          code === "P2034" ||
+          code === "40001" ||
+          message.includes("could not serialize") ||
+          message.includes("write conflict");
+        if (!isSerialization || attempt === MAX_ATTEMPTS - 1) throw err;
       }
+    }
 
-      if (!selectedTable) {
-        return { error: "No tables available at this time" };
-      }
-
-      const reservation = await tx.reservation.create({
-        data: {
-          restaurantId,
-          tableId: selectedTable.id,
-          date: reservationDate,
-          startTime,
-          duration: slotDuration,
-          guestName,
-          guestEmail,
-          guestPhone: null,
-          guestsCount,
-          notes: notes || null,
-          status,
-        },
-      });
-
-      return { reservation, selectedTable };
-    }, {
-      isolationLevel: "Serializable",
-    });
+    if (!txResult) {
+      throw lastTxError ?? new Error("Transaction failed");
+    }
 
     if ("error" in txResult) {
       return NextResponse.json(
-        { error: txResult.error },
+        { error: txResult.error, code: txResult.code },
         { status: 400 }
       );
     }
@@ -442,7 +465,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error("Error creating reservation:", error);
     return NextResponse.json(
-      { error: "Failed to create reservation" },
+      { error: "Failed to create reservation", code: "internal_error" },
       { status: 500 }
     );
   }

@@ -50,6 +50,7 @@ interface ReserveFormProps {
     successAuto: string;
     successManual: string;
     error: string;
+    fillRequired: string;
     guests: string;
     table: string;
     capacity: string;
@@ -247,7 +248,7 @@ export function ReserveForm({
     setError("");
 
     if (!selectedDate || !selectedTime || !selectedTableId || !name.trim() || !email.trim()) {
-      setError("Please fill in all required fields");
+      setError(t.fillRequired);
       return;
     }
 

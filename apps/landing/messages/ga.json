@@ -1344,6 +1344,7 @@
     "successAuto": "Tá do áirithint deimhnithe. Gheobhaidh tú ríomhphost deimhnithe go luath.",
     "successManual": "Tá d'iarratas áirithinte curtha isteach. Gheobhaidh tú ríomhphost nuair a bheidh sé deimhnithe.",
     "error": "Earráid",
+    "fillRequired": "Líon isteach na réimsí riachtanacha go léir",
     "guests": "aíonna",
     "table": "Tábla",
     "capacity": "cumas",

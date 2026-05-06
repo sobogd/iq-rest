@@ -1344,6 +1344,7 @@
     "successAuto": "Vaša rezervacija je potrjena. Kmalu boste prejeli potrditveni email.",
     "successManual": "Vaša zahteva za rezervacijo je bila poslana. Prejeli boste email, ko bo potrjena.",
     "error": "Napaka",
+    "fillRequired": "Izpolnite vsa obvezna polja",
     "guests": "gostje",
     "table": "Miza",
     "capacity": "kapaciteta",

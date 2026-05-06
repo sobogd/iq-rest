@@ -1344,6 +1344,7 @@
     "successAuto": "Jūsų rezervacija patvirtinta. Greitai gausite patvirtinimo el. laišką.",
     "successManual": "Jūsų rezervacijos prašymas buvo pateiktas. Gausite el. laišką, kai jis bus patvirtintas.",
     "error": "Klaida",
+    "fillRequired": "Užpildykite visus privalomus laukus",
     "guests": "svečiai",
     "table": "Stalas",
     "capacity": "talpa",

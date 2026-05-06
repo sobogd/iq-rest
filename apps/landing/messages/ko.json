@@ -1344,6 +1344,7 @@
     "successAuto": "예약이 확정되었습니다. 곧 확인 이메일을 받게 됩니다.",
     "successManual": "예약 요청이 제출되었습니다. 확정되면 이메일을 받게 됩니다.",
     "error": "오류",
+    "fillRequired": "모든 필수 항목을 입력해 주세요",
     "guests": "손님",
     "table": "테이블",
     "capacity": "수용 인원",

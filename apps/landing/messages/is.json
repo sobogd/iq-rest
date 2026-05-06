@@ -1344,6 +1344,7 @@
     "successAuto": "Bókun þín er staðfest. Þú munt fá staðfestingarpóst fljótlega.",
     "successManual": "Bókunarbeiðni þín hefur verið send. Þú munt fá tölvupóst þegar hún er staðfest.",
     "error": "Villa",
+    "fillRequired": "Vinsamlegast fylltu út alla skyldureiti",
     "guests": "gestir",
     "table": "Borð",
     "capacity": "getu",

@@ -1344,6 +1344,7 @@
     "successAuto": "Jūsu rezervācija ir apstiprināta. Drīz saņemsiet apstiprinājuma e-pastu.",
     "successManual": "Jūsu rezervācijas pieprasījums ir iesniegts. Jūs saņemsiet e-pastu, kad tas tiks apstiprināts.",
     "error": "Kļūda",
+    "fillRequired": "Lūdzu, aizpildiet visus obligātos laukus",
     "guests": "viesi",
     "table": "Galds",
     "capacity": "jauda",

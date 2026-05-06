@@ -1344,6 +1344,7 @@
     "successAuto": "La teva reserva està confirmada. Rebràs un correu electrònic de confirmació aviat.",
     "successManual": "La teva sol·licitud de reserva ha estat enviada. Rebràs un correu electrònic un cop confirmada.",
     "error": "Error",
+    "fillRequired": "Si us plau, omple tots els camps obligatoris",
     "guests": "convidats",
     "table": "Taula",
     "capacity": "capacitat",

@@ -1344,6 +1344,7 @@
     "successAuto": "Teie broneering on kinnitatud. Saate peagi kinnituse e-kirja.",
     "successManual": "Teie broneeringu taotlus on esitatud. Saate e-kirja, kui see on kinnitatud.",
     "error": "Viga",
+    "fillRequired": "Palun täida kõik kohustuslikud väljad",
     "guests": "külastajat",
     "table": "Laud",
     "capacity": "maht",

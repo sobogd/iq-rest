@@ -1344,6 +1344,7 @@
     "successAuto": "Rezervarea ta este confirmată. Vei primi un email de confirmare în curând.",
     "successManual": "Cererea ta de rezervare a fost trimisă. Vei primi un email odată ce este confirmată.",
     "error": "Eroare",
+    "fillRequired": "Vă rugăm să completați toate câmpurile obligatorii",
     "guests": "oaspeți",
     "table": "Masă",
     "capacity": "capacitate",

@@ -1344,6 +1344,7 @@
     "successAuto": "Varaus on vahvistettu. Saat vahvistussähköpostin pian.",
     "successManual": "Varauspyyntösi on lähetetty. Saat sähköpostin, kun se on vahvistettu.",
     "error": "Virhe",
+    "fillRequired": "Täytä kaikki pakolliset kentät",
     "guests": "vierasta",
     "table": "Pöytä",
     "capacity": "kapasiteetti",

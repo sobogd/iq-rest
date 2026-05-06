@@ -14,17 +14,18 @@ export async function PATCH(
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const restaurant = await prisma.restaurant.findFirst({
+    const restaurants = await prisma.restaurant.findMany({
       where: { companyId },
       select: { id: true },
+      orderBy: { createdAt: "asc" },
     });
 
-    if (!restaurant) {
+    if (restaurants.length === 0) {
       return NextResponse.json({ error: "Restaurant not found" }, { status: 404 });
     }
 
     const existingReservation = await prisma.reservation.findFirst({
-      where: { id, restaurantId: restaurant.id },
+      where: { id, restaurantId: { in: restaurants.map((r) => r.id) } },
     });
 
     if (!existingReservation) {
@@ -75,17 +76,18 @@ export async function DELETE(
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const restaurant = await prisma.restaurant.findFirst({
+    const restaurants = await prisma.restaurant.findMany({
       where: { companyId },
       select: { id: true },
+      orderBy: { createdAt: "asc" },
     });
 
-    if (!restaurant) {
+    if (restaurants.length === 0) {
       return NextResponse.json({ error: "Restaurant not found" }, { status: 404 });
     }
 
     const existingReservation = await prisma.reservation.findFirst({
-      where: { id, restaurantId: restaurant.id },
+      where: { id, restaurantId: { in: restaurants.map((r) => r.id) } },
     });
 
     if (!existingReservation) {

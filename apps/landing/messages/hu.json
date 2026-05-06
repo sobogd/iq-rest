@@ -1344,6 +1344,7 @@
     "successAuto": "A foglalása megerősítve. Hamarosan kap egy megerősítő emailt.",
     "successManual": "A foglalási kérelme elküldve. Emailt kap, amint megerősítik.",
     "error": "Hiba",
+    "fillRequired": "Kérjük, töltse ki az összes kötelező mezőt",
     "guests": "vendég",
     "table": "Asztal",
     "capacity": "kapacitás",

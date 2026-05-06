@@ -9,17 +9,18 @@ export async function GET() {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const restaurant = await prisma.restaurant.findFirst({
+    const restaurants = await prisma.restaurant.findMany({
       where: { companyId },
       select: { id: true },
+      orderBy: { createdAt: "asc" },
     });
 
-    if (!restaurant) {
+    if (restaurants.length === 0) {
       return NextResponse.json([]);
     }
 
     const reservations = await prisma.reservation.findMany({
-      where: { restaurantId: restaurant.id },
+      where: { restaurantId: { in: restaurants.map((r) => r.id) } },
       include: {
         table: {
           select: { number: true, zone: true },

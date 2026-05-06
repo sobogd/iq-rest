@@ -1344,6 +1344,7 @@
     "successAuto": "Vaša rezervacija je potvrđena. Uskoro ćete primiti potvrdu putem emaila.",
     "successManual": "Vaš zahtev za rezervaciju je poslat. Dobijaćete email kada bude potvrđen.",
     "error": "Greška",
+    "fillRequired": "Попуните сва обавезна поља",
     "guests": "gostiju",
     "table": "Sto",
     "capacity": "kapacitet",

@@ -1344,6 +1344,7 @@
     "successAuto": "Din bokning är bekräftad. Du kommer att få ett bekräftelsemail inom kort.",
     "successManual": "Din bokningsförfrågan har skickats. Du kommer att få ett mail när den är bekräftad.",
     "error": "Fel",
+    "fillRequired": "Fyll i alla obligatoriska fält",
     "guests": "gäster",
     "table": "Bord",
     "capacity": "kapacitet",

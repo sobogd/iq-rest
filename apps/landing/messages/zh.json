@@ -1344,6 +1344,7 @@
     "successAuto": "您的预订已确认。您将很快收到确认邮件。",
     "successManual": "您的预订请求已提交。确认后您将收到电子邮件。",
     "error": "错误",
+    "fillRequired": "请填写所有必填字段",
     "guests": "客人",
     "table": "餐桌",
     "capacity": "容量",

@@ -1344,6 +1344,7 @@
     "successAuto": "Din reservation er bekræftet. Du vil modtage en bekræftelsesemail snart.",
     "successManual": "Din reservationsanmodning er blevet indsendt. Du vil modtage en email, når den er bekræftet.",
     "error": "Fejl",
+    "fillRequired": "Udfyld venligst alle obligatoriske felter",
     "guests": "gæster",
     "table": "Bord",
     "capacity": "kapacitet",

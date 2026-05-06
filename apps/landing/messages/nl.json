@@ -1344,6 +1344,7 @@
     "successAuto": "Uw reservering is bevestigd. U ontvangt binnenkort een bevestigingsmail.",
     "successManual": "Uw reserveringsverzoek is verzonden. U ontvangt een e-mail zodra het is bevestigd.",
     "error": "Fout",
+    "fillRequired": "Vul alle verplichte velden in",
     "guests": "gasten",
     "table": "Tafel",
     "capacity": "capaciteit",

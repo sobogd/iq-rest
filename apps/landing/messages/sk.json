@@ -1344,6 +1344,7 @@
     "successAuto": "Vaša rezervácia bola potvrdená. Čoskoro obdržíte potvrdzovací email.",
     "successManual": "Vaša žiadosť o rezerváciu bola odoslaná. Obdržíte email, akonáhle bude potvrdená.",
     "error": "Chyba",
+    "fillRequired": "Vyplňte všetky povinné polia",
     "guests": "hostia",
     "table": "Stôl",
     "capacity": "kapacita",
