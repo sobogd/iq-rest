@@ -19,7 +19,7 @@ interface HeroProps {
 export function Hero({ texts, variant, ctaText, demoText, microcopy, locale }: HeroProps) {
   const active = variant === "WEB" ? texts.web : texts.qr;
   return (
-    <section data-section="hero" className="container mx-auto px-4 pt-8 pb-16 lg:pt-12">
+    <section data-section="hero" className="container mx-auto px-4 pt-8 pb-16 lg:pt-24">
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.3fr_0.85fr] lg:gap-x-16 lg:gap-y-8 lg:items-center lg:[grid-template-areas:'header_images']">
         {/* Header — verticals + headline + sub + CTA + rating */}
         <div className="flex flex-col items-center text-center lg:items-start lg:text-start lg:[grid-area:header]">
