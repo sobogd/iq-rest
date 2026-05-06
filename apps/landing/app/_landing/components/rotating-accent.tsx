@@ -8,7 +8,7 @@ interface RotatingAccentProps {
   className?: string;
 }
 
-export function RotatingAccent({ items, intervalMs = 2000, className = "" }: RotatingAccentProps) {
+export function RotatingAccent({ items, intervalMs = 1500, className = "" }: RotatingAccentProps) {
   const [i, setI] = useState(0);
 
   useEffect(() => {
