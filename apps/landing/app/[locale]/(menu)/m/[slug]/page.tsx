@@ -85,8 +85,9 @@ export default async function MenuPage({ params, searchParams }: MenuPageProps) 
         {/* Dark overlay and title - hidden if hideTitle is true */}
         {!restaurant.hideTitle && (
           <>
-            {/* Dark overlay for text readability */}
-            <div className="absolute inset-0 bg-black/40 z-[2]" />
+            {/* Dark overlay for text readability — only over media; on a flat
+                accent-colour fallback the overlay would just dull the colour. */}
+            {restaurant.source ? <div className="absolute inset-0 bg-black/40 z-[2]" /> : null}
             {/* Restaurant name at 30% from top */}
             <div className="absolute inset-x-0 top-[30%] z-10 flex justify-center px-[8%]">
               <div className="max-w-[440px] w-full">
