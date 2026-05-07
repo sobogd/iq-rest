@@ -38,7 +38,6 @@ interface MenuFeedProps {
 
 export function MenuFeed({ categories, accentColor, currency = "EUR", allergenNames, slug, ordersEnabled, addLabel, isPreview, tableNumber, initialCart }: MenuFeedProps) {
   const [activeCategory, setActiveCategory] = useState(categories[0]?.id || "");
-  const [loadedImageIndex, setLoadedImageIndex] = useState(0);
   const categoryRefs = useRef<Record<string, HTMLDivElement | null>>({});
   const tabsRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -83,27 +82,9 @@ export function MenuFeed({ categories, accentColor, currency = "EUR", allergenNa
     });
   }, []);
 
-  // Build ordered list of item IDs with images for concurrent loading
-  const MAX_CONCURRENT = 4;
-  const imageOrder = useMemo(() => {
-    const order: string[] = [];
-    for (const category of categories) {
-      for (const item of category.items) {
-        if (item.imageUrl) {
-          order.push(item.id);
-        }
-      }
-    }
-    return order;
-  }, [categories]);
-
-  // Get index of an item in the loading queue
-  const getImageIndex = (itemId: string) => imageOrder.indexOf(itemId);
-
-  // Handle image loaded - advance the window for concurrent loading
-  const handleImageLoaded = () => {
-    setLoadedImageIndex((prev) => prev + 1);
-  };
+  // Image loading: MenuImage uses an IntersectionObserver alone; the
+  // browser handles concurrency. The previous hand-rolled per-index queue
+  // blocked images deep in the menu when the user scrolled past them.
 
   // Scroll to category when clicking tab
   const scrollToCategory = (categoryId: string) => {
@@ -236,7 +217,7 @@ export function MenuFeed({ categories, accentColor, currency = "EUR", allergenNa
       <div ref={containerRef} className="flex-1 overflow-auto min-h-0 hide-scrollbar" style={{ backgroundColor: "#fff" }}>
         <div className="flex justify-center px-0 min-[440px]:px-5">
           <div className={`max-w-[440px] w-full ${categories.length <= 1 ? "pt-5" : "pt-0 min-[440px]:pt-5"} ${categories.length > 1 ? "pb-[60vh]" : "pb-5"} space-y-5`}>
-            {categories.map((category) => (
+            {categories.map((category, categoryIdx) => (
               <div
                 key={category.id}
                 id={`category-${category.id}`}
@@ -252,18 +233,15 @@ export function MenuFeed({ categories, accentColor, currency = "EUR", allergenNa
                     </span>
                   </h2>
                 )}
-                {category.items.map((item) => {
+                {category.items.map((item, itemIdx) => {
                   const qty = cart.get(item.id) || 0;
-                  const imgIdx = item.imageUrl ? getImageIndex(item.id) : -1;
                   return (
                     <article key={item.id}>
                       {item.imageUrl && (
                         <MenuImage
                           src={item.imageUrl}
                           alt={item.name}
-                          canLoad={imgIdx < loadedImageIndex + MAX_CONCURRENT}
-                          onLoaded={handleImageLoaded}
-                          priority={imgIdx === 0}
+                          priority={categoryIdx === 0 && itemIdx === 0}
                         />
                       )}
                       <div className={item.imageUrl ? "p-5" : "px-5 pb-5"}>

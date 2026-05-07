@@ -6,19 +6,20 @@ import Image from "next/image";
 interface MenuImageProps {
   src: string;
   alt: string;
-  canLoad: boolean;
-  onLoaded: () => void;
   priority?: boolean;
 }
 
-export function MenuImage({ src, alt, canLoad, onLoaded, priority }: MenuImageProps) {
+export function MenuImage({ src, alt, priority }: MenuImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
-  const [hasStartedLoading, setHasStartedLoading] = useState(false);
+  const [isInView, setIsInView] = useState(!!priority);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Intersection Observer to detect when image is in viewport
+  // Start fetching as soon as the card is within ~400px of the viewport.
+  // Browser-level HTTP/2 multiplexing handles concurrency — the previous
+  // hand-rolled sequential queue blocked images deep in the menu when the
+  // user scrolled fast.
   useEffect(() => {
+    if (priority) return;
     const element = containerRef.current;
     if (!element) return;
 
@@ -29,28 +30,12 @@ export function MenuImage({ src, alt, canLoad, onLoaded, priority }: MenuImagePr
           observer.disconnect();
         }
       },
-      { rootMargin: "200px" } // Start loading 200px before visible
+      { rootMargin: "400px" },
     );
 
     observer.observe(element);
     return () => observer.disconnect();
-  }, []);
-
-  // Start loading when in view AND canLoad is true
-  useEffect(() => {
-    if (isInView && canLoad && !hasStartedLoading) {
-      setHasStartedLoading(true);
-    }
-  }, [isInView, canLoad, hasStartedLoading]);
-
-  const handleLoad = () => {
-    setIsLoaded(true);
-    onLoaded();
-  };
-
-  const handleError = () => {
-    onLoaded(); // Advance queue even on error
-  };
+  }, [priority]);
 
   return (
     <div
@@ -66,8 +51,8 @@ export function MenuImage({ src, alt, canLoad, onLoaded, priority }: MenuImagePr
         <div className="absolute inset-0 skeleton-shimmer" />
       </div>
 
-      {/* Actual image - only render when should load */}
-      {hasStartedLoading && (
+      {/* Actual image — only render once near the viewport. */}
+      {isInView && (
         <Image
           src={src}
           alt={alt}
@@ -78,8 +63,8 @@ export function MenuImage({ src, alt, canLoad, onLoaded, priority }: MenuImagePr
           style={{ objectFit: "cover" }}
           sizes="(max-width: 440px) 100vw, 440px"
           priority={priority}
-          onLoad={handleLoad}
-          onError={handleError}
+          onLoad={() => setIsLoaded(true)}
+          onError={() => setIsLoaded(true)}
         />
       )}
     </div>
