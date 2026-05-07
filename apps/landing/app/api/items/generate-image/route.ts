@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
     const [company, restaurant] = await Promise.all([
       prisma.company.findUnique({
         where: { id: companyId },
-        select: { plan: true, subscriptionStatus: true, trialEndsAt: true, scanLimit: true },
+        select: { plan: true, subscriptionStatus: true, trialEndsAt: true },
       }),
       prisma.restaurant.findFirst({
         where: { companyId },

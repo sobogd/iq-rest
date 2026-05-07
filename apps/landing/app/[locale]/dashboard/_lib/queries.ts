@@ -1,6 +1,5 @@
 import { prisma } from "@/lib/prisma";
 import { UAParser } from "ua-parser-js";
-import { getCompanyAccess } from "@/lib/access";
 
 // ---- Restaurant ----
 export async function getRestaurant(companyId: string) {
@@ -118,12 +117,6 @@ export async function getOrders(companyId: string) {
 
 // ---- Scan Usage (lightweight) ----
 export async function getScanUsage(companyId: string) {
-  const company = await prisma.company.findUnique({
-    where: { id: companyId },
-    select: { plan: true, subscriptionStatus: true, trialEndsAt: true, scanLimit: true },
-  });
-  if (!company) return null;
-
   const now = new Date();
   const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
 
@@ -132,12 +125,9 @@ export async function getScanUsage(companyId: string) {
     where: { companyId, createdAt: { gte: startOfMonth } },
   });
 
-  const access = getCompanyAccess(company);
-  const limit = access.hasScanLimit ? access.scanLimit : Infinity;
-
   return {
     used: monthlyScans.length,
-    limit: limit === Infinity ? null : limit,
+    limit: null,
   };
 }
 
@@ -190,7 +180,7 @@ function getLast7Days(viewsByDay: { date: string; count: bigint }[], tz: string)
 export async function getDashboardAnalytics(companyId: string, tz = "UTC") {
   const company = await prisma.company.findUnique({
     where: { id: companyId },
-    select: { plan: true, subscriptionStatus: true, trialEndsAt: true, scanLimit: true },
+    select: { plan: true },
   });
   if (!company) return null;
 
@@ -269,12 +259,9 @@ export async function getDashboardAnalytics(companyId: string, tz = "UTC") {
       .sort((a, b) => b.count - a.count)
       .slice(0, 10);
 
-  const access = getCompanyAccess(company);
-  const limit = access.hasScanLimit ? access.scanLimit : Infinity;
-
   return {
     plan: company.plan,
-    limit: limit === Infinity ? null : limit,
+    limit: null,
     monthlyViews: monthlyScans.length,
     weeklyViews,
     todayViews,

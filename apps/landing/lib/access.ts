@@ -2,11 +2,10 @@ export function getCompanyAccess(company: {
   plan: string;
   subscriptionStatus: string;
   trialEndsAt: Date | null;
-  scanLimit: number;
 }) {
   const isPaid =
     company.plan !== "FREE" && company.subscriptionStatus === "ACTIVE";
-  const isOldFreeUser =
+  const isLegacyFreeUser =
     company.plan === "FREE" && company.trialEndsAt === null;
   const isTrialing =
     company.plan === "FREE" &&
@@ -18,11 +17,9 @@ export function getCompanyAccess(company: {
     company.trialEndsAt <= new Date();
 
   return {
-    hasFullAccess: isPaid || isOldFreeUser || isTrialing,
+    hasFullAccess: isPaid || isLegacyFreeUser || isTrialing,
     isPaid,
     isTrialing,
     trialExpired,
-    hasScanLimit: isOldFreeUser,
-    scanLimit: company.scanLimit,
   };
 }

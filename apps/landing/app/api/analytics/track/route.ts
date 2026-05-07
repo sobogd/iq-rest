@@ -29,19 +29,7 @@ export async function POST(request: NextRequest) {
     // Find restaurant and company by slug
     const restaurant = await prisma.restaurant.findFirst({
       where: { slug },
-      select: {
-        companyId: true,
-        defaultLanguage: true,
-        company: {
-          select: {
-            id: true,
-            plan: true,
-            subscriptionStatus: true,
-            trialEndsAt: true,
-            scanLimit: true,
-          },
-        },
-      },
+      select: { companyId: true },
     });
 
     if (!restaurant) {
@@ -51,34 +39,12 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const { company } = restaurant;
-    const { getCompanyAccess } = await import("@/lib/access");
-    const access = getCompanyAccess(company);
-    const limit = access.hasScanLimit ? access.scanLimit : Infinity;
-
-    // Get current month's unique session count (scans)
-    const startOfMonth = new Date();
-    startOfMonth.setDate(1);
-    startOfMonth.setHours(0, 0, 0, 0);
-
-    const scanResult = await prisma.$queryRaw<[{ count: bigint }]>`
-      SELECT COUNT(DISTINCT "sessionId") as count
-      FROM "page_views"
-      WHERE "companyId" = ${company.id}
-        AND "createdAt" >= ${startOfMonth}
-    `;
-    const scanCount = Number(scanResult[0]?.count ?? 0);
-
-    const showAd = scanCount >= limit;
-    const remaining = Math.max(0, limit - scanCount);
-
-    // Always record the view (even if limit exceeded)
     const userAgent = request.headers.get("user-agent") || null;
     const ip = request.cookies.get("geo_ip")?.value || null;
 
     await prisma.pageView.create({
       data: {
-        companyId: company.id,
+        companyId: restaurant.companyId,
         sessionId,
         page,
         language,
@@ -88,12 +54,7 @@ export async function POST(request: NextRequest) {
       },
     });
 
-
-    const response = NextResponse.json({
-      success: true,
-      showAd,
-      remaining: limit === Infinity ? null : remaining,
-    });
+    const response = NextResponse.json({ success: true });
 
     // Set session cookie (no maxAge = dies when browser closes)
     if (isNew) {

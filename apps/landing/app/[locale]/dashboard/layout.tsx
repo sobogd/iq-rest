@@ -36,7 +36,7 @@ export default async function DashboardLayout({
     }),
     prisma.company.findUnique({
       where: { id: companyId },
-      select: { plan: true, subscriptionStatus: true, trialEndsAt: true, scanLimit: true, onboardingStep: true },
+      select: { plan: true, subscriptionStatus: true, trialEndsAt: true, onboardingStep: true },
     }),
   ]);
 

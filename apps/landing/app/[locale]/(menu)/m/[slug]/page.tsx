@@ -88,9 +88,9 @@ export default async function MenuPage({ params, searchParams }: MenuPageProps) 
             <div className="absolute inset-x-0 top-[30%] z-10 flex justify-center px-[8%]">
               <div className="max-w-[440px] w-full">
                 <h1 className="text-6xl font-black text-white break-words">{restaurant.title}</h1>
-                {restaurant.description && (
+                {restaurant.description ? (
                   <p className="text-xl text-white/90 mt-3">{restaurant.description}</p>
-                )}
+                ) : null}
               </div>
             </div>
           </>
