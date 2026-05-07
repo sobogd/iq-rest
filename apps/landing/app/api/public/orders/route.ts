@@ -39,7 +39,7 @@ const MAX_TOTAL = 999999.99;
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { slug, items, total, customerName, customerPhone, customerAddress, comment, tableNumber } = body;
+    const { slug, items, total, customerName, customerPhone, customerAddress, comment, tableNumber, isPreview } = body;
 
     if (!slug || typeof slug !== "string") {
       return NextResponse.json({ error: "slug required" }, { status: 400 });
@@ -51,7 +51,7 @@ export async function POST(request: NextRequest) {
       request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
       "unknown";
 
-    if (isRateLimited(ip, slug)) {
+    if (!isPreview && isRateLimited(ip, slug)) {
       return NextResponse.json(
         { error: "Too many orders. Please try again later." },
         { status: 429 }

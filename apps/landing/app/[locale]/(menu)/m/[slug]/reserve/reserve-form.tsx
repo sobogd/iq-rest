@@ -40,6 +40,7 @@ interface ReserveFormProps {
   locale: string;
   accentColor?: string;
   schedule?: ScheduleDay[] | null;
+  isPreview?: boolean;
   translations: {
     title: string;
     selectDate: string;
@@ -89,6 +90,7 @@ export function ReserveForm({
   locale,
   accentColor = "#000000",
   schedule,
+  isPreview = false,
   translations: t,
 }: ReserveFormProps) {
   // Map JS getDay() (0=Sun) → schedule index (0=Mon).
@@ -290,6 +292,7 @@ export function ReserveForm({
           guestsCount,
           notes: notes.trim() || null,
           locale,
+          isPreview,
         }),
       });
 

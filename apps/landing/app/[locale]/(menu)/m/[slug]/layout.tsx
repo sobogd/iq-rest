@@ -3,21 +3,34 @@ import { prisma } from "@/lib/prisma";
 import { MenuLayoutClient } from "./menu-layout-client";
 import { getRestaurantBySlug } from "./_lib/get-restaurant";
 import { getCompanyAccess } from "@/lib/access";
+import { TrialExpiredOverlay } from "./_components";
+
+const DEMO_SLUG = "love-eatery";
 
 export const revalidate = 300; // 5 minutes
 
-async function getMenuLayoutData(slug: string): Promise<{ showAd: boolean; accentColor: string }> {
+interface MenuLayoutData {
+  showAd: boolean;
+  accentColor: string;
+  trialExpired: boolean;
+  defaultLanguage: string;
+}
+
+async function getMenuLayoutData(slug: string): Promise<MenuLayoutData> {
+  const fallback: MenuLayoutData = { showAd: false, accentColor: "#000000", trialExpired: false, defaultLanguage: "en" };
   try {
     const restaurant = await getRestaurantBySlug(slug);
 
-    if (!restaurant) return { showAd: false, accentColor: "#000000" };
+    if (!restaurant) return fallback;
 
     const { company } = restaurant;
     const access = getCompanyAccess(company);
     const limit = access.hasScanLimit ? access.scanLimit : Infinity;
     const accentColor = restaurant.accentColor || "#000000";
+    const defaultLanguage = restaurant.defaultLanguage || "en";
+    const trialExpired = slug !== DEMO_SLUG && access.trialExpired;
 
-    if (limit === Infinity) return { showAd: false, accentColor };
+    if (limit === Infinity) return { showAd: false, accentColor, trialExpired, defaultLanguage };
 
     const startOfMonth = new Date();
     startOfMonth.setDate(1);
@@ -31,9 +44,9 @@ async function getMenuLayoutData(slug: string): Promise<{ showAd: boolean; accen
     `;
     const scanCount = Number(result[0]?.count ?? 0);
 
-    return { showAd: scanCount >= limit, accentColor };
+    return { showAd: scanCount >= limit, accentColor, trialExpired, defaultLanguage };
   } catch {
-    return { showAd: false, accentColor: "#000000" };
+    return fallback;
   }
 }
 
@@ -67,7 +80,7 @@ interface MenuLayoutProps {
 
 export default async function MenuLayout({ children, params }: MenuLayoutProps) {
   const { slug } = await params;
-  const { showAd, accentColor } = await getMenuLayoutData(slug);
+  const { showAd, accentColor, trialExpired, defaultLanguage } = await getMenuLayoutData(slug);
   const s3Host = process.env.S3_HOST;
 
   return (
@@ -81,6 +94,7 @@ export default async function MenuLayout({ children, params }: MenuLayoutProps) 
       <MenuLayoutClient showAd={showAd}>
         {children}
       </MenuLayoutClient>
+      {trialExpired && <TrialExpiredOverlay defaultLanguage={defaultLanguage} />}
     </div>
   );
 }

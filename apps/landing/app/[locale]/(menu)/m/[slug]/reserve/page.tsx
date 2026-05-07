@@ -102,6 +102,7 @@ export default async function ReservePage({ params, searchParams }: ReservePageP
             slug={slug}
             locale={locale}
             schedule={restaurant.reservationSchedule as ScheduleDay[] | null}
+            isPreview={isPreview}
           />
         </div>
       </main>

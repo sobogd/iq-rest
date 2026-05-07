@@ -166,45 +166,42 @@ export function OrderForm({
     setSending(true);
 
     try {
-      if (!isPreview) {
-        const orderPayload = {
-          slug,
-          items: cartItems.map((item) => ({
-            id: item.id,
-            name: item.name,
-            qty: item.qty,
-            price: item.price,
-          })),
-          total,
-          customerName: name.trim() || null,
-          customerPhone: phone.trim() || null,
-          customerAddress: address.trim() || null,
-          comment: comment.trim() || null,
-          tableNumber: tableNumber ?? null,
-        };
+      const orderPayload = {
+        slug,
+        items: cartItems.map((item) => ({
+          id: item.id,
+          name: item.name,
+          qty: item.qty,
+          price: item.price,
+        })),
+        total,
+        customerName: name.trim() || null,
+        customerPhone: phone.trim() || null,
+        customerAddress: address.trim() || null,
+        comment: comment.trim() || null,
+        tableNumber: tableNumber ?? null,
+        isPreview,
+      };
 
-        const res = await fetch("/api/public/orders", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(orderPayload),
-        });
+      const res = await fetch("/api/public/orders", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(orderPayload),
+      });
 
-        const data = await res.json();
+      const data = await res.json();
 
-        if (!res.ok) {
-          if (data.error === "limit_reached") {
-            setLimitReached(true);
-            setSending(false);
-            return;
-          }
+      if (!res.ok) {
+        if (data.error === "limit_reached") {
+          setLimitReached(true);
           setSending(false);
           return;
         }
+        setSending(false);
+        return;
+      }
 
-        if (data.mode === "whatsapp" || data.mode === "both") {
-          openWhatsApp();
-        }
-      } else if (showWhatsApp) {
+      if (data.mode === "whatsapp" || data.mode === "both") {
         openWhatsApp();
       }
 

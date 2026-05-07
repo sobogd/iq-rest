@@ -30,6 +30,7 @@ const reservationSchema = z.object({
   guestsCount: z.number().int().min(1).max(50),
   notes: z.string().max(500).nullable().optional(),
   locale: z.string().min(2).max(5).optional(),
+  isPreview: z.boolean().optional(),
 });
 
 // Convert time string "HH:MM" to minutes from midnight
@@ -278,6 +279,7 @@ export async function POST(request: NextRequest) {
       guestsCount,
       notes,
       locale,
+      isPreview,
     } = parsed.data;
 
     const guestLocale = locale || "en";
@@ -448,36 +450,39 @@ export async function POST(request: NextRequest) {
 
     const { reservation, selectedTable } = txResult;
 
-    // Send notification emails (fire-and-forget)
-    const emailParams = {
-      guestName,
-      restaurantTitle: restaurant.title,
-      date,
-      startTime,
-      guestsCount,
-      tableNumber: selectedTable.number,
-      notes: notes || null,
-      status,
-    };
+    // Send notification emails (fire-and-forget). Skip when preview — admins
+    // testing the flow shouldn't trigger guest/owner notifications.
+    if (!isPreview) {
+      const emailParams = {
+        guestName,
+        restaurantTitle: restaurant.title,
+        date,
+        startTime,
+        guestsCount,
+        tableNumber: selectedTable.number,
+        notes: notes || null,
+        status,
+      };
 
-    sendGuestEmail({
-      ...emailParams,
-      email: guestEmail,
-      locale: guestLocale,
-    }).catch((err) => console.error("Failed to send guest reservation email:", err));
-
-    const ownerEmails = restaurant.company.users
-      .map((uc) => uc.user.email)
-      .filter(Boolean);
-
-    if (ownerEmails.length > 0) {
-      sendOwnerEmail({
+      sendGuestEmail({
         ...emailParams,
-        ownerEmails,
-        guestEmail,
-        guestPhone: guestPhone || null,
-        locale: restaurant.defaultLanguage,
-      }).catch((err) => console.error("Failed to send owner reservation email:", err));
+        email: guestEmail,
+        locale: guestLocale,
+      }).catch((err) => console.error("Failed to send guest reservation email:", err));
+
+      const ownerEmails = restaurant.company.users
+        .map((uc) => uc.user.email)
+        .filter(Boolean);
+
+      if (ownerEmails.length > 0) {
+        sendOwnerEmail({
+          ...emailParams,
+          ownerEmails,
+          guestEmail,
+          guestPhone: guestPhone || null,
+          locale: restaurant.defaultLanguage,
+        }).catch((err) => console.error("Failed to send owner reservation email:", err));
+      }
     }
 
     return NextResponse.json(reservation, { status: 201 });

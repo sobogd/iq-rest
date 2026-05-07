@@ -3,9 +3,6 @@ import { ArrowRight, Phone, Globe, CalendarDays } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { MenuNavLink, HeroMedia } from "./_components";
 import { getRestaurantBySlug } from "./_lib/get-restaurant";
-import { getCompanyAccess } from "@/lib/access";
-
-const DEMO_SLUG = "love-eatery";
 
 export const revalidate = 300;
 
@@ -37,15 +34,6 @@ export default async function MenuPage({ params, searchParams }: MenuPageProps) 
 
   if (!restaurant) {
     notFound();
-  }
-
-  if (slug !== DEMO_SLUG && !isPreview && getCompanyAccess(restaurant.company).trialExpired) {
-    return (
-      <div className="h-dvh flex flex-col items-center justify-center gap-4 bg-black px-8 text-center">
-        <h1 className="text-2xl font-bold text-white">{t("menuUnavailableTitle")}</h1>
-        <p className="text-white/60 text-sm max-w-xs">{t("menuUnavailableText")}</p>
-      </div>
-    );
   }
 
   const jsonLd = {
