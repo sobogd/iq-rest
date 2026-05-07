@@ -3,7 +3,7 @@ import { prisma } from "@/lib/prisma";
 import { MenuLayoutClient } from "./menu-layout-client";
 import { getRestaurantBySlug } from "./_lib/get-restaurant";
 import { getCompanyAccess } from "@/lib/access";
-import { TrialExpiredOverlay } from "./_components";
+import { TrialExpiredOverlay, MenuPageTracker } from "./_components";
 
 const DEMO_SLUG = "love-eatery";
 
@@ -79,7 +79,7 @@ interface MenuLayoutProps {
 }
 
 export default async function MenuLayout({ children, params }: MenuLayoutProps) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const { showAd, accentColor, trialExpired, defaultLanguage } = await getMenuLayoutData(slug);
   const s3Host = process.env.S3_HOST;
 
@@ -91,6 +91,7 @@ export default async function MenuLayout({ children, params }: MenuLayoutProps) 
       {s3Host && (
         <link rel="preconnect" href={s3Host} crossOrigin="anonymous" />
       )}
+      <MenuPageTracker slug={slug} locale={locale} />
       <MenuLayoutClient showAd={showAd}>
         {children}
       </MenuLayoutClient>
