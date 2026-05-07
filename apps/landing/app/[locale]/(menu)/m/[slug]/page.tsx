@@ -66,7 +66,10 @@ export default async function MenuPage({ params, searchParams }: MenuPageProps) 
             accentColor={restaurant.accentColor || "#000000"}
           />
         ) : (
-          <div className="absolute inset-0 bg-black" />
+          <div
+            className="absolute inset-0"
+            style={{ backgroundColor: restaurant.accentColor || "#000000" }}
+          />
         )}
         {/* Powered by IQ Rest - only when trial expired */}
         {restaurant.company.plan === "FREE" && restaurant.company.trialEndsAt !== null && restaurant.company.trialEndsAt <= new Date() && (
