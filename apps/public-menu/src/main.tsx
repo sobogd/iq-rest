@@ -14,8 +14,8 @@ const queryClient = new QueryClient({
   },
 });
 
-// Bootloader (defined inline in index.html) is dropped once React mounts.
-document.getElementById("boot")?.remove();
+// Bootloader (defined inline in index.html) is removed by RootLayout once
+// real content is ready to paint — keeping it visible across mount + fetch.
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

@@ -22,22 +22,22 @@ const ReserveRoute = ReserveRouteImport.update({
   id: "/reserve",
   path: "/reserve",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any).lazy(() => import("./routes/reserve.lazy").then((d) => d.Route))
 const MenuRoute = MenuRouteImport.update({
   id: "/menu",
   path: "/menu",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any).lazy(() => import("./routes/menu.lazy").then((d) => d.Route))
 const LanguageRoute = LanguageRouteImport.update({
   id: "/language",
   path: "/language",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any).lazy(() => import("./routes/language.lazy").then((d) => d.Route))
 const ContactsRoute = ContactsRouteImport.update({
   id: "/contacts",
   path: "/contacts",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any).lazy(() => import("./routes/contacts.lazy").then((d) => d.Route))
 const IndexRoute = IndexRouteImport.update({
   id: "/",
   path: "/",
@@ -47,17 +47,17 @@ const OrderIndexRoute = OrderIndexRouteImport.update({
   id: "/order/",
   path: "/order/",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any).lazy(() => import("./routes/order.index.lazy").then((d) => d.Route))
 const OrderTableRoute = OrderTableRouteImport.update({
   id: "/order/table",
   path: "/order/table",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any).lazy(() => import("./routes/order.table.lazy").then((d) => d.Route))
 const OrderSuccessRoute = OrderSuccessRouteImport.update({
   id: "/order/success",
   path: "/order/success",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any).lazy(() => import("./routes/order.success.lazy").then((d) => d.Route))
 
 export interface FileRoutesByFullPath {
   "/": typeof IndexRoute

@@ -17,12 +17,18 @@ export function MenuFeed() {
   const ordersEnabled = restaurant.ordersEnabled;
   const lang = i18n.language;
 
-  // Group items by category.
+  // Group items by category — bucket once, then map each cat in O(1).
   const groups = useMemo(() => {
+    const byCat = new Map<string, typeof items>();
+    for (const it of items) {
+      const arr = byCat.get(it.categoryId);
+      if (arr) arr.push(it);
+      else byCat.set(it.categoryId, [it]);
+    }
     return categories.map((c) => ({
       id: c.id,
       name: tField(c.name, c.translations, "name", lang),
-      items: items.filter((it) => it.categoryId === c.id),
+      items: byCat.get(c.id) ?? [],
     }));
   }, [categories, items, lang]);
 
@@ -40,24 +46,15 @@ export function MenuFeed() {
     setActiveCategory(id);
     const top = el.getBoundingClientRect().top - c.getBoundingClientRect().top + c.scrollTop;
     c.scrollTo({ top, behavior: "smooth" });
-    let last = c.scrollTop;
-    let stable = 0;
-    const tick = setInterval(() => {
-      if (c.scrollTop === last) {
-        stable++;
-        if (stable >= 2) {
-          programmatic.current = false;
-          clearInterval(tick);
-        }
-      } else {
-        stable = 0;
-        last = c.scrollTop;
-      }
-    }, 100);
-    setTimeout(() => {
+    // `scrollend` fires when the smooth-scroll animation finishes (Chrome 114+,
+    // Firefox 109+, Safari 18.2+). Safety timeout for older browsers.
+    const release = () => {
       programmatic.current = false;
-      clearInterval(tick);
-    }, 5000);
+      c.removeEventListener("scrollend", release);
+      clearTimeout(safety);
+    };
+    const safety = setTimeout(release, 1500);
+    c.addEventListener("scrollend", release, { once: true });
   }, []);
 
   // Intersection observer to update active tab on scroll.

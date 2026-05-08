@@ -1,4 +1,4 @@
-import { createRootRoute, Outlet } from "@tanstack/react-router";
+import { createRootRoute, Outlet, useRouter } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
@@ -11,9 +11,22 @@ import type { MenuPayload } from "../lib/types";
 
 export const Route = createRootRoute({ component: RootLayout });
 
+const PREFETCH_ROUTES = ["/menu", "/reserve", "/contacts", "/order", "/order/table", "/order/success", "/language"] as const;
+
 function RootLayout() {
   const slug = resolveSlug();
   const { i18n } = useTranslation();
+  const router = useRouter();
+
+  useEffect(() => {
+    const idle = (window as unknown as { requestIdleCallback?: (cb: () => void) => number }).requestIdleCallback
+      || ((cb: () => void) => setTimeout(cb, 200));
+    idle(() => {
+      for (const to of PREFETCH_ROUTES) {
+        void router.preloadRoute({ to });
+      }
+    });
+  }, [router]);
 
   const { data, isLoading, error } = useQuery<MenuPayload>({
     enabled: !!slug,
@@ -34,6 +47,11 @@ function RootLayout() {
     }
   }, [data?.restaurant.defaultLanguage, i18n]);
 
+  // Drop the inline bootloader once real content is ready to render.
+  useEffect(() => {
+    if (data || error) document.getElementById("boot")?.remove();
+  }, [data, error]);
+
   if (!slug) {
     return (
       <div className="p-8 text-sm">
@@ -42,11 +60,9 @@ function RootLayout() {
     );
   }
   if (isLoading) {
-    return (
-      <div className="h-dvh flex items-center justify-center bg-black">
-        <div className="w-10 h-10 border-4 border-white/20 border-t-white rounded-full animate-spin" />
-      </div>
-    );
+    // Same look as the inline bootloader (index.html) — keeps a single visual
+    // state from first paint through fetch completion.
+    return <div className="h-dvh bg-black" />;
   }
   if (error || !data) {
     return (

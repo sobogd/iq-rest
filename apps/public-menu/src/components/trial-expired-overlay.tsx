@@ -46,10 +46,6 @@ interface Props {
 }
 
 export function TrialExpiredOverlay({ defaultLanguage }: Props) {
-  const params = new URLSearchParams(window.location.search);
-  if (params.get("preview") === "1") return null;
-  const copy = COPY[defaultLanguage] || COPY.en;
-
   // Lock body scroll while overlay is mounted.
   useEffect(() => {
     const prev = document.body.style.overflow;
@@ -58,6 +54,10 @@ export function TrialExpiredOverlay({ defaultLanguage }: Props) {
       document.body.style.overflow = prev;
     };
   }, []);
+
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("preview") === "1") return null;
+  const copy = COPY[defaultLanguage] || COPY.en;
 
   return (
     <div

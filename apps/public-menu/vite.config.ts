@@ -18,4 +18,14 @@ export default defineConfig({
       },
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ["react", "react-dom", "@tanstack/react-router", "@tanstack/react-query"],
+          i18n: ["i18next", "react-i18next"],
+        },
+      },
+    },
+  },
 });
