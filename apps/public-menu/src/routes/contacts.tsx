@@ -14,15 +14,38 @@ function instagramUrl(handle: string): string {
 function ContactsPage() {
   const { restaurant } = useMenu();
   const { t } = useTranslation();
-  const mapUrl =
-    restaurant.x && restaurant.y ? `https://www.google.com/maps?q=${restaurant.y},${restaurant.x}` : null;
+  const lat = restaurant.y ? parseFloat(restaurant.y) : null;
+  const lng = restaurant.x ? parseFloat(restaurant.x) : null;
+  const hasCoords = lat !== null && lng !== null && Number.isFinite(lat) && Number.isFinite(lng);
+  const mapUrl = hasCoords ? `https://www.google.com/maps?q=${lat},${lng}` : null;
+  const mapsKey = import.meta.env.VITE_GOOGLE_MAPS_KEY;
+  const embedUrl =
+    hasCoords && mapsKey
+      ? `https://www.google.com/maps/embed/v1/place?key=${mapsKey}&q=${lat},${lng}&zoom=15`
+      : null;
 
   return (
     <div className="h-dvh flex flex-col bg-white">
       <MenuHeader title={t("publicMenu.contacts")} accentColor={restaurant.accentColor} sticky />
-      <div className="flex-1 flex flex-col items-center justify-center px-5 gap-6 text-center">
-        {restaurant.address ? <p className="text-base text-gray-700 max-w-xs">{restaurant.address}</p> : null}
-        <div className="flex items-center gap-4">
+      <div className="flex-1 relative">
+        {embedUrl ? (
+          <iframe
+            title="map"
+            src={embedUrl}
+            className="absolute inset-0 w-full h-full border-0"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
+        ) : (
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-center px-5">
+            {restaurant.address ? (
+              <p className="text-base text-gray-700 max-w-xs">{restaurant.address}</p>
+            ) : null}
+          </div>
+        )}
+        <nav className="absolute bottom-0 inset-x-0 flex justify-center pb-8 z-10">
+          <div className="flex items-center gap-4">
           {restaurant.whatsapp ? (
             <a
               href={`https://wa.me/${restaurant.whatsapp.replace(/[^0-9]/g, "")}`}
@@ -85,7 +108,8 @@ function ContactsPage() {
               </svg>
             </a>
           ) : null}
-        </div>
+          </div>
+        </nav>
       </div>
     </div>
   );
