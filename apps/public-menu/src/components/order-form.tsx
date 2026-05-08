@@ -30,12 +30,24 @@ export function OrderForm() {
   const cartItems = useMemo(() => {
     return items
       .filter((it) => (cart[it.id] || 0) > 0)
-      .map((it) => ({
-        id: it.id,
-        name: tField(it.name, it.translations, "name", lang),
-        price: it.price,
-        qty: cart[it.id] || 0,
-      }));
+      .map((it) => {
+        // Multi-locale snapshot for dashboard rendering. Includes default
+        // (en) plus any translated names so the dashboard can show the dish
+        // name in the owner's language.
+        const snapshot: Record<string, string> = { en: it.name };
+        if (it.translations) {
+          for (const [lc, fields] of Object.entries(it.translations)) {
+            if (fields?.name) snapshot[lc] = fields.name;
+          }
+        }
+        return {
+          id: it.id,
+          name: tField(it.name, it.translations, "name", lang),
+          price: it.price,
+          qty: cart[it.id] || 0,
+          snapshot,
+        };
+      });
   }, [items, cart, lang]);
 
   const total = cartItems.reduce((s, it) => s + it.price * it.qty, 0);
@@ -75,12 +87,33 @@ export function OrderForm() {
     if (sending || !canSubmit) return;
     setSending(true);
     try {
+      // Expand cart entries with qty>1 into individual item rows that match
+      // the dashboard's expected shape (one entry per ordered unit, with
+      // dishId / multi-locale name snapshot / base price / options / notes /
+      // per-unit status). This is what the dashboard kitchen + orders pages
+      // render off of.
+      const nowIso = new Date().toISOString();
+      const orderItems: Array<Record<string, unknown>> = [];
+      for (const ci of cartItems) {
+        for (let i = 0; i < ci.qty; i++) {
+          orderItems.push({
+            id: "id_" + Math.random().toString(36).slice(2, 9),
+            dishId: ci.id,
+            dishNameSnapshot: ci.snapshot,
+            basePriceSnapshot: String(ci.price),
+            options: [],
+            notes: comment.trim() || "",
+            status: "pending",
+            createdAt: nowIso,
+          });
+        }
+      }
       const res = await fetch("/api/public/orders", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           slug: restaurant.slug,
-          items: cartItems.map((it) => ({ id: it.id, name: it.name, qty: it.qty, price: it.price })),
+          items: orderItems,
           total,
           customerName: name.trim() || null,
           customerPhone: phone.trim() || null,
