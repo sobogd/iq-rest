@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useMenu } from "../lib/menu-context";
 import { MenuHeader } from "../components/menu-header";
 import { getCountryCenter } from "../lib/country-centers";
-import { PageTitle } from "../components/page-title";
+import { RouteSeo } from "../components/route-seo";
 
 export const Route = createLazyFileRoute("/contacts")({ component: ContactsPage });
 
@@ -32,7 +32,7 @@ function ContactsPage() {
   const label = t("publicMenu.contacts");
   return (
     <div className="h-dvh flex flex-col bg-white">
-      <PageTitle routeLabel={label} />
+      <RouteSeo routeLabel={label} description={restaurant.address || null} />
       <MenuHeader title={label} accentColor={restaurant.accentColor} sticky />
       <div className="flex-1 relative">
         {embedUrl ? (

@@ -6,6 +6,7 @@ import { resolveSlug } from "../lib/slug";
 import { MenuProvider } from "../lib/menu-context";
 import { TrialExpiredOverlay } from "../components/trial-expired-overlay";
 import { MenuPageTracker } from "../components/menu-page-tracker";
+import { NotFoundScreen } from "../components/not-found-screen";
 import type { MenuPayload } from "../lib/types";
 
 export const Route = createRootRoute({ component: RootLayout });
@@ -53,9 +54,10 @@ function RootLayout() {
 
   if (!slug) {
     return (
-      <div className="p-8 text-sm">
-        Open as <code>&lt;slug&gt;.iq-rest.com</code> or pass <code>?slug=&lt;name&gt;</code>.
-      </div>
+      <NotFoundScreen
+        title="No restaurant selected"
+        body={`Open this app at <slug>.iq-rest.com or pass ?slug=<name> in the URL.`}
+      />
     );
   }
   if (isLoading) {
@@ -64,11 +66,7 @@ function RootLayout() {
     return <div className="h-dvh bg-black" />;
   }
   if (error || !data) {
-    return (
-      <div className="h-dvh flex items-center justify-center bg-black text-white/80 px-6 text-center">
-        Restaurant not found.
-      </div>
-    );
+    return <NotFoundScreen />;
   }
 
   const trialExpired =

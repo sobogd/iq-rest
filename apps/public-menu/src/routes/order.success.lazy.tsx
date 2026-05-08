@@ -2,7 +2,7 @@ import { createLazyFileRoute, Link } from "@tanstack/react-router";
 import { Check } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useMenu } from "../lib/menu-context";
-import { PageTitle } from "../components/page-title";
+import { RouteSeo } from "../components/route-seo";
 
 export const Route = createLazyFileRoute("/order/success")({ component: OrderSuccessPage });
 
@@ -12,7 +12,7 @@ function OrderSuccessPage() {
   const label = t("publicMenu.order.successTitle", { defaultValue: "Order placed" });
   return (
     <div className="h-dvh flex flex-col items-center justify-center px-6 text-center gap-6 bg-white">
-      <PageTitle routeLabel={label} />
+      <RouteSeo routeLabel={label} />
       <div className="w-20 h-20 rounded-full flex items-center justify-center" style={{ backgroundColor: restaurant.accentColor }}>
         <Check className="h-10 w-10 text-white" />
       </div>

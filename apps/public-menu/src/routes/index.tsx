@@ -4,7 +4,7 @@ import { ArrowRight, CalendarDays, Globe, Phone } from "lucide-react";
 import { useMenu } from "../lib/menu-context";
 import { HeroMedia } from "../components/hero-media";
 import { MenuNavLink } from "../components/menu-nav-link";
-import { PageTitle } from "../components/page-title";
+import { RouteSeo } from "../components/route-seo";
 
 export const Route = createFileRoute("/")({ component: HomePage });
 
@@ -13,9 +13,23 @@ function HomePage() {
   const { t } = useTranslation();
   const accentColor = restaurant.accentColor || "#000000";
 
+  const jsonLd: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    name: restaurant.title,
+    url: window.location.origin + "/",
+    ...(restaurant.description && { description: restaurant.description }),
+    ...(restaurant.source && !/\.(mp4|webm|mov)$/i.test(restaurant.source) && { image: restaurant.source }),
+    ...(restaurant.address && { address: { "@type": "PostalAddress", streetAddress: restaurant.address } }),
+    ...(restaurant.phone && { telephone: restaurant.phone }),
+    ...(restaurant.x && restaurant.y && {
+      geo: { "@type": "GeoCoordinates", latitude: restaurant.y, longitude: restaurant.x },
+    }),
+  };
+
   return (
     <div className="h-dvh flex flex-col">
-      <PageTitle />
+      <RouteSeo jsonLd={jsonLd} />
       <div className="flex-1 relative overflow-hidden min-h-[50vh]">
         {restaurant.source ? (
           <HeroMedia src={restaurant.source} alt={restaurant.title} accentColor={accentColor} />

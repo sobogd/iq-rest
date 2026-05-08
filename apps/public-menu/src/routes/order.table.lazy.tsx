@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useMenu } from "../lib/menu-context";
 import { MenuHeader } from "../components/menu-header";
 import { tField } from "../lib/translations";
-import { PageTitle } from "../components/page-title";
+import { RouteSeo } from "../components/route-seo";
 
 export const Route = createLazyFileRoute("/order/table")({ component: OrderTablePage });
 
@@ -24,7 +24,7 @@ function OrderTablePage() {
   const label = t("publicReserve.selectTable", { defaultValue: "Select a table" });
   return (
     <div className="h-dvh flex flex-col bg-white">
-      <PageTitle routeLabel={label} />
+      <RouteSeo routeLabel={label} />
       <MenuHeader
         title={label}
         accentColor={accentColor}
