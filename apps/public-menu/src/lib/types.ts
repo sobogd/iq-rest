@@ -14,6 +14,9 @@ export interface RestaurantPayload {
   languages: string[];
   defaultLanguage: string;
   reservationsEnabled: boolean;
+  reservationMode: string;
+  reservationSlotMinutes: number;
+  reservationSchedule: Array<{ closed: boolean; from: string; to: string; lunchFrom: string | null; lunchTo: string | null }> | null;
   ordersEnabled: boolean;
   orderMode: string;
   orderNameEnabled: boolean;

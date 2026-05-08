@@ -35,15 +35,19 @@ export function ReserveForm() {
   const accentColor = restaurant.accentColor || "#000000";
   const slug = restaurant.slug;
   const restaurantId = restaurant.id;
-  const slotMinutes = 60; // default — backend reads from restaurant
-  const mode = "auto";
+  const slotMinutes = restaurant.reservationSlotMinutes;
+  const mode = restaurant.reservationMode;
   const locale = i18n.language;
   const isPreview = new URLSearchParams(window.location.search).get("preview") === "1";
 
-  // Schedule comes from /api/public/menu — but our payload doesn't include it.
-  // For now, treat all days as open. Closed-day filter happens server-side
-  // when fetching slots (server returns empty timeSlots for closed days).
-  const dayIsClosed = (_date: Date) => false;
+  // Schedule from restaurant payload: schedule[0] = Monday … schedule[6] = Sunday.
+  // Map JS getDay() (0=Sun) → schedule index (0=Mon).
+  const schedule = restaurant.reservationSchedule;
+  const dayIsClosed = (date: Date) => {
+    if (!Array.isArray(schedule) || schedule.length !== 7) return false;
+    const idx = (date.getDay() + 6) % 7;
+    return !!schedule[idx]?.closed;
+  };
 
   const [guestsCount, setGuestsCount] = useState(0);
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);

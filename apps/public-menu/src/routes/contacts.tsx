@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import { useMenu } from "../lib/menu-context";
 import { MenuHeader } from "../components/menu-header";
+import { getCountryCenter } from "../lib/country-centers";
 
 export const Route = createFileRoute("/contacts")({ component: ContactsPage });
 
@@ -13,16 +14,19 @@ function instagramUrl(handle: string): string {
 
 function ContactsPage() {
   const { restaurant } = useMenu();
-  const { t } = useTranslation();
-  const lat = restaurant.y ? parseFloat(restaurant.y) : null;
-  const lng = restaurant.x ? parseFloat(restaurant.x) : null;
-  const hasCoords = lat !== null && lng !== null && Number.isFinite(lat) && Number.isFinite(lng);
+  const { t, i18n } = useTranslation();
+  const latRaw = restaurant.y ? parseFloat(restaurant.y) : null;
+  const lngRaw = restaurant.x ? parseFloat(restaurant.x) : null;
+  const hasCoords =
+    latRaw !== null && lngRaw !== null && Number.isFinite(latRaw) && Number.isFinite(lngRaw);
+  const fallback = getCountryCenter(i18n.language);
+  const lat = hasCoords ? latRaw : fallback.lat;
+  const lng = hasCoords ? lngRaw : fallback.lng;
   const mapUrl = hasCoords ? `https://www.google.com/maps?q=${lat},${lng}` : null;
   const mapsKey = import.meta.env.VITE_GOOGLE_MAPS_KEY;
-  const embedUrl =
-    hasCoords && mapsKey
-      ? `https://www.google.com/maps/embed/v1/place?key=${mapsKey}&q=${lat},${lng}&zoom=15`
-      : null;
+  const embedUrl = mapsKey
+    ? `https://www.google.com/maps/embed/v1/place?key=${mapsKey}&q=${lat},${lng}&zoom=${hasCoords ? 15 : fallback.zoom}`
+    : null;
 
   return (
     <div className="h-dvh flex flex-col bg-white">
