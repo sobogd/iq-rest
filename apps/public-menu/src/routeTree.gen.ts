@@ -10,20 +10,16 @@
 
 import { Route as rootRouteImport } from "./routes/__root"
 import { Route as ReserveRouteImport } from "./routes/reserve"
-import { Route as OrderRouteImport } from "./routes/order"
 import { Route as MenuRouteImport } from "./routes/menu"
 import { Route as LanguageRouteImport } from "./routes/language"
 import { Route as ContactsRouteImport } from "./routes/contacts"
 import { Route as IndexRouteImport } from "./routes/index"
+import { Route as OrderIndexRouteImport } from "./routes/order.index"
+import { Route as OrderSuccessRouteImport } from "./routes/order.success"
 
 const ReserveRoute = ReserveRouteImport.update({
   id: "/reserve",
   path: "/reserve",
-  getParentRoute: () => rootRouteImport,
-} as any)
-const OrderRoute = OrderRouteImport.update({
-  id: "/order",
-  path: "/order",
   getParentRoute: () => rootRouteImport,
 } as any)
 const MenuRoute = MenuRouteImport.update({
@@ -46,22 +42,34 @@ const IndexRoute = IndexRouteImport.update({
   path: "/",
   getParentRoute: () => rootRouteImport,
 } as any)
+const OrderIndexRoute = OrderIndexRouteImport.update({
+  id: "/order/",
+  path: "/order/",
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OrderSuccessRoute = OrderSuccessRouteImport.update({
+  id: "/order/success",
+  path: "/order/success",
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   "/": typeof IndexRoute
   "/contacts": typeof ContactsRoute
   "/language": typeof LanguageRoute
   "/menu": typeof MenuRoute
-  "/order": typeof OrderRoute
   "/reserve": typeof ReserveRoute
+  "/order/success": typeof OrderSuccessRoute
+  "/order/": typeof OrderIndexRoute
 }
 export interface FileRoutesByTo {
   "/": typeof IndexRoute
   "/contacts": typeof ContactsRoute
   "/language": typeof LanguageRoute
   "/menu": typeof MenuRoute
-  "/order": typeof OrderRoute
   "/reserve": typeof ReserveRoute
+  "/order/success": typeof OrderSuccessRoute
+  "/order": typeof OrderIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -69,22 +77,38 @@ export interface FileRoutesById {
   "/contacts": typeof ContactsRoute
   "/language": typeof LanguageRoute
   "/menu": typeof MenuRoute
-  "/order": typeof OrderRoute
   "/reserve": typeof ReserveRoute
+  "/order/success": typeof OrderSuccessRoute
+  "/order/": typeof OrderIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: "/" | "/contacts" | "/language" | "/menu" | "/order" | "/reserve"
+  fullPaths:
+    | "/"
+    | "/contacts"
+    | "/language"
+    | "/menu"
+    | "/reserve"
+    | "/order/success"
+    | "/order/"
   fileRoutesByTo: FileRoutesByTo
-  to: "/" | "/contacts" | "/language" | "/menu" | "/order" | "/reserve"
+  to:
+    | "/"
+    | "/contacts"
+    | "/language"
+    | "/menu"
+    | "/reserve"
+    | "/order/success"
+    | "/order"
   id:
     | "__root__"
     | "/"
     | "/contacts"
     | "/language"
     | "/menu"
-    | "/order"
     | "/reserve"
+    | "/order/success"
+    | "/order/"
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -92,8 +116,9 @@ export interface RootRouteChildren {
   ContactsRoute: typeof ContactsRoute
   LanguageRoute: typeof LanguageRoute
   MenuRoute: typeof MenuRoute
-  OrderRoute: typeof OrderRoute
   ReserveRoute: typeof ReserveRoute
+  OrderSuccessRoute: typeof OrderSuccessRoute
+  OrderIndexRoute: typeof OrderIndexRoute
 }
 
 declare module "@tanstack/react-router" {
@@ -103,13 +128,6 @@ declare module "@tanstack/react-router" {
       path: "/reserve"
       fullPath: "/reserve"
       preLoaderRoute: typeof ReserveRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    "/order": {
-      id: "/order"
-      path: "/order"
-      fullPath: "/order"
-      preLoaderRoute: typeof OrderRouteImport
       parentRoute: typeof rootRouteImport
     }
     "/menu": {
@@ -140,6 +158,20 @@ declare module "@tanstack/react-router" {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    "/order/": {
+      id: "/order/"
+      path: "/order"
+      fullPath: "/order/"
+      preLoaderRoute: typeof OrderIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    "/order/success": {
+      id: "/order/success"
+      path: "/order/success"
+      fullPath: "/order/success"
+      preLoaderRoute: typeof OrderSuccessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -148,8 +180,9 @@ const rootRouteChildren: RootRouteChildren = {
   ContactsRoute: ContactsRoute,
   LanguageRoute: LanguageRoute,
   MenuRoute: MenuRoute,
-  OrderRoute: OrderRoute,
   ReserveRoute: ReserveRoute,
+  OrderSuccessRoute: OrderSuccessRoute,
+  OrderIndexRoute: OrderIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

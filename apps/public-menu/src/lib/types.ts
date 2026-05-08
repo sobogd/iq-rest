@@ -16,6 +16,9 @@ export interface RestaurantPayload {
   reservationsEnabled: boolean;
   ordersEnabled: boolean;
   orderMode: string;
+  orderNameEnabled: boolean;
+  orderPhoneEnabled: boolean;
+  orderAddressEnabled: boolean;
   x: string | null;
   y: string | null;
   company: {

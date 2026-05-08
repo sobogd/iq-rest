@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { resolveSlug } from "../lib/slug";
 import { MenuProvider } from "../lib/menu-context";
 import { TrialExpiredOverlay } from "../components/trial-expired-overlay";
+import { MenuPageTracker } from "../components/menu-page-tracker";
 import type { MenuPayload } from "../lib/types";
 
 export const Route = createRootRoute({ component: RootLayout });
@@ -47,6 +48,7 @@ function RootLayout() {
 
   return (
     <MenuProvider menu={data}>
+      <MenuPageTracker slug={slug} />
       <Outlet />
       {trialExpired ? <TrialExpiredOverlay defaultLanguage={data.restaurant.defaultLanguage} /> : null}
     </MenuProvider>
