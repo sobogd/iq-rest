@@ -14,6 +14,9 @@ const queryClient = new QueryClient({
   },
 });
 
+// Bootloader (defined inline in index.html) is dropped once React mounts.
+document.getElementById("boot")?.remove();
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
