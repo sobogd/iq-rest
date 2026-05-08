@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from "./routes/__root"
 import { Route as ReserveRouteImport } from "./routes/reserve"
+import { Route as OrderRouteImport } from "./routes/order"
 import { Route as MenuRouteImport } from "./routes/menu"
 import { Route as LanguageRouteImport } from "./routes/language"
 import { Route as ContactsRouteImport } from "./routes/contacts"
@@ -18,6 +19,11 @@ import { Route as IndexRouteImport } from "./routes/index"
 const ReserveRoute = ReserveRouteImport.update({
   id: "/reserve",
   path: "/reserve",
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OrderRoute = OrderRouteImport.update({
+  id: "/order",
+  path: "/order",
   getParentRoute: () => rootRouteImport,
 } as any)
 const MenuRoute = MenuRouteImport.update({
@@ -46,6 +52,7 @@ export interface FileRoutesByFullPath {
   "/contacts": typeof ContactsRoute
   "/language": typeof LanguageRoute
   "/menu": typeof MenuRoute
+  "/order": typeof OrderRoute
   "/reserve": typeof ReserveRoute
 }
 export interface FileRoutesByTo {
@@ -53,6 +60,7 @@ export interface FileRoutesByTo {
   "/contacts": typeof ContactsRoute
   "/language": typeof LanguageRoute
   "/menu": typeof MenuRoute
+  "/order": typeof OrderRoute
   "/reserve": typeof ReserveRoute
 }
 export interface FileRoutesById {
@@ -61,14 +69,22 @@ export interface FileRoutesById {
   "/contacts": typeof ContactsRoute
   "/language": typeof LanguageRoute
   "/menu": typeof MenuRoute
+  "/order": typeof OrderRoute
   "/reserve": typeof ReserveRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: "/" | "/contacts" | "/language" | "/menu" | "/reserve"
+  fullPaths: "/" | "/contacts" | "/language" | "/menu" | "/order" | "/reserve"
   fileRoutesByTo: FileRoutesByTo
-  to: "/" | "/contacts" | "/language" | "/menu" | "/reserve"
-  id: "__root__" | "/" | "/contacts" | "/language" | "/menu" | "/reserve"
+  to: "/" | "/contacts" | "/language" | "/menu" | "/order" | "/reserve"
+  id:
+    | "__root__"
+    | "/"
+    | "/contacts"
+    | "/language"
+    | "/menu"
+    | "/order"
+    | "/reserve"
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -76,6 +92,7 @@ export interface RootRouteChildren {
   ContactsRoute: typeof ContactsRoute
   LanguageRoute: typeof LanguageRoute
   MenuRoute: typeof MenuRoute
+  OrderRoute: typeof OrderRoute
   ReserveRoute: typeof ReserveRoute
 }
 
@@ -86,6 +103,13 @@ declare module "@tanstack/react-router" {
       path: "/reserve"
       fullPath: "/reserve"
       preLoaderRoute: typeof ReserveRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    "/order": {
+      id: "/order"
+      path: "/order"
+      fullPath: "/order"
+      preLoaderRoute: typeof OrderRouteImport
       parentRoute: typeof rootRouteImport
     }
     "/menu": {
@@ -124,6 +148,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactsRoute: ContactsRoute,
   LanguageRoute: LanguageRoute,
   MenuRoute: MenuRoute,
+  OrderRoute: OrderRoute,
   ReserveRoute: ReserveRoute,
 }
 export const routeTree = rootRouteImport

@@ -1,12 +1,18 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
+import { useTranslation } from "react-i18next";
+import { useMenu } from "../lib/menu-context";
+import { MenuFeed } from "../components/menu-feed";
+import { MenuHeader } from "../components/menu-header";
 
-export const Route = createFileRoute("/menu")({ component: Page });
+export const Route = createFileRoute("/menu")({ component: MenuPage });
 
-function Page() {
+function MenuPage() {
+  const { restaurant } = useMenu();
+  const { t } = useTranslation();
   return (
-    <div className="p-8 text-sm">
-      <Link to="/" className="text-blue-600 underline">← back</Link>
-      <p className="mt-4">menu page — coming next stage.</p>
+    <div className="h-dvh flex flex-col">
+      <MenuHeader title={t("publicMenu.onlineMenu")} accentColor={restaurant.accentColor} sticky />
+      <MenuFeed />
     </div>
   );
 }
