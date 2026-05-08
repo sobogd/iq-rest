@@ -8,22 +8,32 @@ interface Props {
   sticky?: boolean;
 }
 
-export function MenuHeader({ title, accentColor = "#000", backTo = "/", sticky }: Props) {
+export function MenuHeader({ title, accentColor, backTo = "/", sticky }: Props) {
+  const bg = accentColor || "#000000";
   return (
-    <div
+    <header
       className={
-        "shrink-0 px-5 py-3 flex items-center gap-3 bg-white border-b border-gray-200 " +
-        (sticky ? "sticky top-0 z-30" : "")
+        "shrink-0 flex flex-col justify-end px-5 z-10 " +
+        (sticky ? "sticky top-0" : "")
       }
+      style={{
+        minHeight: 56,
+        paddingTop: "env(safe-area-inset-top, 0px)",
+        backgroundColor: bg,
+      }}
     >
-      <Link
-        to={backTo}
-        className="h-9 w-9 inline-flex items-center justify-center rounded-full text-black active:bg-gray-100"
-        style={{ color: accentColor }}
-      >
-        <ArrowLeft className="h-5 w-5" />
-      </Link>
-      <h1 className="text-base font-semibold text-black truncate">{title}</h1>
-    </div>
+      <div className="h-14 max-w-[440px] w-full flex items-center relative mx-auto">
+        <Link
+          to={backTo}
+          className="p-2 -ml-2 text-white z-10"
+          aria-label="Back"
+        >
+          <ArrowLeft className="h-6 w-6" />
+        </Link>
+        <h1 className="absolute inset-0 flex items-center justify-center text-lg font-semibold text-white">
+          {title}
+        </h1>
+      </div>
+    </header>
   );
 }
