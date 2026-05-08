@@ -1,6 +1,8 @@
 // Blocking overlay when the restaurant's trial has expired. Renders text in
 // the restaurant's default language. Hidden when ?preview=1.
 
+import { useEffect } from "react";
+
 const COPY: Record<string, { title: string; body: string }> = {
   ar: { title: "المطعم غير متاح حاليًا", body: "هذا المطعم غير متاح في الوقت الحالي. يرجى المحاولة لاحقًا." },
   bg: { title: "Ресторантът е недостъпен", body: "Този ресторант временно не е достъпен. Моля, опитайте по-късно." },
@@ -47,9 +49,23 @@ export function TrialExpiredOverlay({ defaultLanguage }: Props) {
   const params = new URLSearchParams(window.location.search);
   if (params.get("preview") === "1") return null;
   const copy = COPY[defaultLanguage] || COPY.en;
+
+  // Lock body scroll while overlay is mounted.
+  useEffect(() => {
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, []);
+
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center px-6 bg-black/40 backdrop-blur-md">
-      <div className="max-w-sm w-full text-center bg-white/90 rounded-2xl shadow-xl p-6">
+    <div
+      className="fixed inset-0 z-[9999] flex items-center justify-center px-6 bg-black/60 backdrop-blur-xl"
+      style={{ pointerEvents: "auto" }}
+      onClick={(e) => e.stopPropagation()}
+    >
+      <div className="max-w-sm w-full text-center bg-white/95 rounded-2xl shadow-2xl p-6 select-none">
         <h1 className="text-xl font-bold text-black">{copy.title}</h1>
         <p className="mt-3 text-sm text-gray-700">{copy.body}</p>
       </div>

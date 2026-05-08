@@ -12,11 +12,6 @@ function HomePage() {
   const { t } = useTranslation();
   const accentColor = restaurant.accentColor || "#000000";
 
-  const trialExpired =
-    restaurant.company.plan === "FREE"
-    && restaurant.company.trialEndsAt !== null
-    && new Date(restaurant.company.trialEndsAt) <= new Date();
-
   return (
     <div className="h-dvh flex flex-col">
       <div className="flex-1 relative overflow-hidden min-h-[50vh]">
@@ -25,17 +20,6 @@ function HomePage() {
         ) : (
           <div className="absolute inset-0" style={{ backgroundColor: accentColor }} />
         )}
-
-        {trialExpired ? (
-          <a
-            href={`https://iq-rest.com?from=qrmenu&slug=${restaurant.slug}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="absolute bottom-4 left-4 z-20 flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-black/50 backdrop-blur-sm hover:bg-black/70 transition-colors"
-          >
-            <span className="text-white/70 text-sm">Powered by IQ Rest</span>
-          </a>
-        ) : null}
 
         {!restaurant.hideTitle ? (
           <>

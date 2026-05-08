@@ -48,8 +48,18 @@ export interface ItemPayload {
   sortOrder: number;
 }
 
+export interface TablePayload {
+  id: string;
+  number: number;
+  capacity: number;
+  zone: string | null;
+  translations: Record<string, { zone?: string }> | null;
+  imageUrl: string | null;
+}
+
 export interface MenuPayload {
   restaurant: RestaurantPayload;
   categories: CategoryPayload[];
   items: ItemPayload[];
+  tables: TablePayload[];
 }
