@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useMenu } from "../lib/menu-context";
 import { MenuHeader } from "../components/menu-header";
 import { OrderForm } from "../components/order-form";
+import { PageTitle } from "../components/page-title";
 
 export const Route = createLazyFileRoute("/order/")({ component: OrderPage });
 
@@ -14,9 +15,11 @@ function OrderPage() {
   if (tables.length > 0 && !tableQ) {
     return <Navigate to="/order/table" search={Object.fromEntries(params.entries())} replace />;
   }
+  const label = t("publicMenu.order.yourOrder");
   return (
     <div className="h-dvh flex flex-col bg-white">
-      <MenuHeader title={t("publicMenu.order.yourOrder")} accentColor={restaurant.accentColor} backTo="/menu" sticky />
+      <PageTitle routeLabel={label} />
+      <MenuHeader title={label} accentColor={restaurant.accentColor} backTo="/menu" sticky />
       <div className="flex-1 overflow-auto px-5 py-6">
         <div className="max-w-[440px] mx-auto">
           <OrderForm />

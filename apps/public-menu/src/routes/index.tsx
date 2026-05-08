@@ -4,6 +4,7 @@ import { ArrowRight, CalendarDays, Globe, Phone } from "lucide-react";
 import { useMenu } from "../lib/menu-context";
 import { HeroMedia } from "../components/hero-media";
 import { MenuNavLink } from "../components/menu-nav-link";
+import { PageTitle } from "../components/page-title";
 
 export const Route = createFileRoute("/")({ component: HomePage });
 
@@ -14,6 +15,7 @@ function HomePage() {
 
   return (
     <div className="h-dvh flex flex-col">
+      <PageTitle />
       <div className="flex-1 relative overflow-hidden min-h-[50vh]">
         {restaurant.source ? (
           <HeroMedia src={restaurant.source} alt={restaurant.title} accentColor={accentColor} />

@@ -4,6 +4,7 @@ import { Check } from "lucide-react";
 import { useMenu } from "../lib/menu-context";
 import { MenuHeader } from "../components/menu-header";
 import { AVAILABLE_LANGUAGES } from "../lib/languages";
+import { PageTitle } from "../components/page-title";
 
 export const Route = createLazyFileRoute("/language")({ component: LanguagePage });
 
@@ -13,9 +14,11 @@ function LanguagePage() {
   const navigate = useNavigate();
   const enabled = AVAILABLE_LANGUAGES.filter((l) => restaurant.languages.includes(l.code));
 
+  const label = t("publicMenu.language");
   return (
     <div className="h-dvh flex flex-col bg-white">
-      <MenuHeader title={t("publicMenu.language")} accentColor={restaurant.accentColor} sticky />
+      <PageTitle routeLabel={label} />
+      <MenuHeader title={label} accentColor={restaurant.accentColor} sticky />
       <div className="flex-1 overflow-auto px-5 py-4">
         <div className="max-w-md mx-auto divide-y divide-gray-200">
           {enabled.map((l) => {

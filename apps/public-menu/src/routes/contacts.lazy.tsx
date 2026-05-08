@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useMenu } from "../lib/menu-context";
 import { MenuHeader } from "../components/menu-header";
 import { getCountryCenter } from "../lib/country-centers";
+import { PageTitle } from "../components/page-title";
 
 export const Route = createLazyFileRoute("/contacts")({ component: ContactsPage });
 
@@ -28,9 +29,11 @@ function ContactsPage() {
     ? `https://www.google.com/maps/embed/v1/place?key=${mapsKey}&q=${lat},${lng}&zoom=${hasCoords ? 15 : fallback.zoom}`
     : null;
 
+  const label = t("publicMenu.contacts");
   return (
     <div className="h-dvh flex flex-col bg-white">
-      <MenuHeader title={t("publicMenu.contacts")} accentColor={restaurant.accentColor} sticky />
+      <PageTitle routeLabel={label} />
+      <MenuHeader title={label} accentColor={restaurant.accentColor} sticky />
       <div className="flex-1 relative">
         {embedUrl ? (
           <iframe

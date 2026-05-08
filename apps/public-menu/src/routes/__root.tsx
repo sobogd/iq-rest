@@ -6,7 +6,6 @@ import { resolveSlug } from "../lib/slug";
 import { MenuProvider } from "../lib/menu-context";
 import { TrialExpiredOverlay } from "../components/trial-expired-overlay";
 import { MenuPageTracker } from "../components/menu-page-tracker";
-import { PageTitle } from "../components/page-title";
 import type { MenuPayload } from "../lib/types";
 
 export const Route = createRootRoute({ component: RootLayout });
@@ -80,7 +79,6 @@ function RootLayout() {
 
   return (
     <MenuProvider menu={data}>
-      <PageTitle title={data.restaurant.title} description={data.restaurant.description} />
       <MenuPageTracker slug={slug} />
       <Outlet />
       {trialExpired ? <TrialExpiredOverlay defaultLanguage={data.restaurant.defaultLanguage} /> : null}
