@@ -118,6 +118,13 @@ export async function POST(request: NextRequest) {
         sessionToken: tokenHash,
       },
     });
+    await prisma.session.create({
+      data: {
+        userId: user.id,
+        tokenHash,
+        expiresAt: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000),
+      },
+    });
 
     // Set session cookies
     const cookieStore = await cookies();

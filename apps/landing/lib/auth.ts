@@ -25,7 +25,16 @@ const getAuthUser = cache(async () => {
   }
 
   const tokenHash = hashSessionToken(session.value);
-  if (!user.sessionToken || !safeCompare(user.sessionToken, tokenHash)) {
+  // Phase A dual-read: accept multi-device sessions row OR the legacy
+  // User.sessionToken column (which is dropped in phase B on 2026-05-13).
+  const sessionRow = await prisma.session.findUnique({ where: { tokenHash } });
+  const sessionRowValid =
+    sessionRow !== null
+    && sessionRow.userId === user.id
+    && (sessionRow.expiresAt === null || sessionRow.expiresAt > new Date());
+  const legacyValid =
+    user.sessionToken !== null && safeCompare(user.sessionToken, tokenHash);
+  if (!sessionRowValid && !legacyValid) {
     return null;
   }
 

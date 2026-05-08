@@ -78,6 +78,13 @@ export async function POST(request: NextRequest) {
           sessionToken: tokenHash,
         },
       });
+      await tx.session.create({
+        data: {
+          userId: user.id,
+          tokenHash,
+          expiresAt: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000),
+        },
+      });
 
       const company = await tx.company.create({
         data: {
