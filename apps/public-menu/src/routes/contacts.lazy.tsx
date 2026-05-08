@@ -1,5 +1,7 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
+import { useEffect, useRef } from "react";
+import { setOptions, importLibrary } from "@googlemaps/js-api-loader";
 import { useMenu } from "../lib/menu-context";
 import { MenuHeader } from "../components/menu-header";
 import { getCountryCenter } from "../lib/country-centers";
@@ -21,13 +23,34 @@ function ContactsPage() {
   const hasCoords =
     latRaw !== null && lngRaw !== null && Number.isFinite(latRaw) && Number.isFinite(lngRaw);
   const fallback = getCountryCenter(i18n.language);
-  const lat = hasCoords ? latRaw : fallback.lat;
-  const lng = hasCoords ? lngRaw : fallback.lng;
+  const lat = hasCoords ? (latRaw as number) : fallback.lat;
+  const lng = hasCoords ? (lngRaw as number) : fallback.lng;
+  const zoom = hasCoords ? 15 : fallback.zoom;
   const mapUrl = hasCoords ? `https://www.google.com/maps?q=${lat},${lng}` : null;
-  const mapsKey = import.meta.env.VITE_GOOGLE_MAPS_KEY;
-  const embedUrl = mapsKey
-    ? `https://www.google.com/maps/embed/v1/place?key=${mapsKey}&q=${lat},${lng}&zoom=${hasCoords ? 15 : fallback.zoom}`
-    : null;
+  const mapsKey = import.meta.env.VITE_GOOGLE_MAPS_KEY as string | undefined;
+  const mapRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!mapsKey || !mapRef.current) return;
+    let cancelled = false;
+    setOptions({ key: mapsKey, v: "weekly" });
+    Promise.all([importLibrary("maps"), importLibrary("core")]).then(([maps, _core]) => {
+      if (cancelled || !mapRef.current) return;
+      const map = new maps.Map(mapRef.current, {
+        center: { lat, lng },
+        zoom,
+        disableDefaultUI: true,
+        gestureHandling: "greedy",
+        clickableIcons: false,
+      });
+      if (hasCoords) {
+        new google.maps.Marker({ map, position: { lat, lng } });
+      }
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [mapsKey, lat, lng, zoom, hasCoords]);
 
   const label = t("publicMenu.contacts");
   return (
@@ -35,15 +58,8 @@ function ContactsPage() {
       <RouteSeo routeLabel={label} description={restaurant.address || null} />
       <MenuHeader title={label} accentColor={restaurant.accentColor} sticky />
       <div className="flex-1 relative">
-        {embedUrl ? (
-          <iframe
-            title="map"
-            src={embedUrl}
-            className="absolute inset-0 w-full h-full border-0"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            allowFullScreen
-          />
+        {mapsKey ? (
+          <div ref={mapRef} className="absolute inset-0" />
         ) : (
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-center px-5">
             {restaurant.address ? (
