@@ -12,7 +12,7 @@ import type { MenuPayload } from "../lib/types";
 
 export const Route = createRootRoute({ component: RootLayout });
 
-const PREFETCH_ROUTES = ["/menu", "/reserve", "/contacts", "/order", "/order/table", "/order/success", "/language"] as const;
+const PREFETCH_ROUTES = ["/menu", "/reserve", "/contacts", "/order", "/order/success", "/language"] as const;
 
 function RootLayout() {
   const slug = resolveSlug();

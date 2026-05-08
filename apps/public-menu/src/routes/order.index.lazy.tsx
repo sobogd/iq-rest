@@ -1,4 +1,4 @@
-import { createLazyFileRoute, Navigate } from "@tanstack/react-router";
+import { createLazyFileRoute } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import { useMenu } from "../lib/menu-context";
 import { MenuHeader } from "../components/menu-header";
@@ -8,13 +8,8 @@ import { RouteSeo } from "../components/route-seo";
 export const Route = createLazyFileRoute("/order/")({ component: OrderPage });
 
 function OrderPage() {
-  const { restaurant, tables } = useMenu();
+  const { restaurant } = useMenu();
   const { t } = useTranslation();
-  const params = new URLSearchParams(window.location.search);
-  const tableQ = params.get("table");
-  if (tables.length > 0 && !tableQ) {
-    return <Navigate to="/order/table" search={Object.fromEntries(params.entries())} replace />;
-  }
   const label = t("publicMenu.order.yourOrder");
   return (
     <div className="h-dvh flex flex-col bg-white">
