@@ -1,1 +1,1 @@
-{"root":["./src/app.tsx","./src/main.tsx"],"version":"5.9.3"}
+{"root":["./src/app.tsx","./src/main.tsx","./src/routetree.gen.ts","./src/components/hero-media.tsx","./src/components/menu-nav-link.tsx","./src/components/trial-expired-overlay.tsx","./src/lib/i18n.ts","./src/lib/menu-context.tsx","./src/lib/slug.ts","./src/lib/types.ts","./src/routes/__root.tsx","./src/routes/contacts.tsx","./src/routes/index.tsx","./src/routes/language.tsx","./src/routes/menu.tsx","./src/routes/reserve.tsx"],"version":"5.9.3"}
