@@ -7,6 +7,7 @@ import { MenuProvider } from "../lib/menu-context";
 import { TrialExpiredOverlay } from "../components/trial-expired-overlay";
 import { MenuPageTracker } from "../components/menu-page-tracker";
 import { NotFoundScreen } from "../components/not-found-screen";
+import { preloadMaps } from "../lib/maps-preload";
 import type { MenuPayload } from "../lib/types";
 
 export const Route = createRootRoute({ component: RootLayout });
@@ -25,6 +26,7 @@ function RootLayout() {
       for (const to of PREFETCH_ROUTES) {
         void router.preloadRoute({ to });
       }
+      preloadMaps();
     });
   }, [router]);
 
