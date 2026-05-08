@@ -71,17 +71,6 @@ export default async function MenuPage({ params, searchParams }: MenuPageProps) 
             style={{ backgroundColor: restaurant.accentColor || "#000000" }}
           />
         )}
-        {/* Powered by IQ Rest - only when trial expired */}
-        {restaurant.company.plan === "FREE" && restaurant.company.trialEndsAt !== null && restaurant.company.trialEndsAt <= new Date() && (
-          <a
-            href={`https://iq-rest.com?from=qrmenu&slug=${slug}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="absolute bottom-4 left-4 z-20 flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-black/50 backdrop-blur-sm hover:bg-black/70 transition-colors"
-          >
-            <span className="text-white/70 text-sm">Powered by IQ Rest</span>
-          </a>
-        )}
         {/* Dark overlay and title - hidden if hideTitle is true */}
         {!restaurant.hideTitle && (
           <>
