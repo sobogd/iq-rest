@@ -47,7 +47,7 @@ export default async function MenuPage({ params, searchParams }: MenuPageProps) 
     ...(restaurant.x && restaurant.y && {
       geo: { "@type": "GeoCoordinates", latitude: restaurant.y, longitude: restaurant.x },
     }),
-    url: `https://iq-rest.com/m/${slug}`,
+    url: `https://${slug}.iq-rest.com`,
   };
 
   return (

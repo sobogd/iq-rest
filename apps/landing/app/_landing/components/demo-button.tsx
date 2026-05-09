@@ -11,12 +11,12 @@ interface DemoButtonProps {
   className?: string;
 }
 
-const DEMO_BASE = "https://iq-rest.com";
 const DEMO_SLUG = "love-eatery";
 
-function demoUrl(locale: string): string {
-  const lang = locale === "es" ? "es" : "en";
-  return `${DEMO_BASE}/${lang}/m/${DEMO_SLUG}?preview=1`;
+function demoUrl(_locale: string): string {
+  // New public-menu SPA picks the locale automatically from the restaurant
+  // record + browser language; no /<lang>/ prefix needed.
+  return `https://${DEMO_SLUG}.iq-rest.com?preview=1`;
 }
 
 export function DemoButton({
