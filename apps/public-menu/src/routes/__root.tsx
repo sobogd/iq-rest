@@ -44,10 +44,18 @@ function RootLayout() {
   });
 
   useEffect(() => {
-    if (data?.restaurant.defaultLanguage) {
-      void i18n.changeLanguage(data.restaurant.defaultLanguage);
-    }
-  }, [data?.restaurant.defaultLanguage, i18n]);
+    if (!data?.restaurant) return;
+    // ?lang=<code> from the URL wins over restaurant default — used by the
+    // landing demo to open the iframe in the visitor's landing locale, when
+    // that locale is enabled on the demo restaurant.
+    const langParam = new URLSearchParams(window.location.search).get("lang");
+    const enabled = data.restaurant.languages || [];
+    const target =
+      langParam && enabled.includes(langParam)
+        ? langParam
+        : data.restaurant.defaultLanguage;
+    if (target) void i18n.changeLanguage(target);
+  }, [data?.restaurant, i18n]);
 
   // Drop the inline bootloader once real content is ready to render.
   useEffect(() => {
