@@ -27,11 +27,13 @@ export function MenuFeed() {
       if (arr) arr.push(it);
       else byCat.set(it.categoryId, [it]);
     }
-    return categories.map((c) => ({
-      id: c.id,
-      name: tField(c.name, c.translations, "name", lang),
-      items: byCat.get(c.id) ?? [],
-    }));
+    return categories
+      .map((c) => ({
+        id: c.id,
+        name: tField(c.name, c.translations, "name", lang),
+        items: byCat.get(c.id) ?? [],
+      }))
+      .filter((g) => g.items.length > 0);
   }, [categories, items, lang]);
 
   const [activeCategory, setActiveCategory] = useState(groups[0]?.id ?? "");
