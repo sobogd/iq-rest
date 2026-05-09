@@ -6,7 +6,7 @@ import { useMenu } from "../lib/menu-context";
 import { useCart } from "../lib/cart";
 import { tField } from "../lib/translations";
 import { formatPrice } from "../lib/currencies";
-import { getTableNumber, getPreview } from "../lib/forward-search";
+import { getTableNumber, getPreview, useForwardedSearch } from "../lib/forward-search";
 
 export function OrderForm() {
   const { restaurant, items } = useMenu();
@@ -17,6 +17,7 @@ export function OrderForm() {
   const isPreview = getPreview() === "1";
   const tableQ = getTableNumber();
   const tableNumber = tableQ ? parseInt(tableQ, 10) : undefined;
+  const search = useForwardedSearch();
 
   const [name, setName] = useState(isPreview && restaurant.orderNameEnabled ? "John" : "");
   const [phone, setPhone] = useState(isPreview && restaurant.orderPhoneEnabled ? "+1 234 567 890" : "");
@@ -135,13 +136,7 @@ export function OrderForm() {
       }
       if (data.mode === "whatsapp" || data.mode === "both") openWhatsApp();
       clear();
-      navigate({
-        to: "/order/success",
-        search: {
-          ...(isPreview ? { preview: "1" } : {}),
-          ...(tableQ ? { table: tableQ } : {}),
-        },
-      });
+      navigate({ to: "/order/success", search });
     } catch {
       setSending(false);
     }
