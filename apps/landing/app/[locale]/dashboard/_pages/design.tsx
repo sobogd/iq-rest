@@ -444,7 +444,7 @@ export function DesignPage({ initialRestaurant, plan }: DesignPageProps) {
                     className="flex items-center justify-center w-8 h-8 -mr-1 rounded-lg text-primary hover:bg-muted/50 transition-colors"
                     onClick={() => {
                       track(DashboardEvent.CLICKED_COPY_URL);
-                      navigator.clipboard.writeText(`https://iq-rest.com/m/${slug}`);
+                      navigator.clipboard.writeText(`https://${slug}.iq-rest.com`);
                       setCopied(true);
                       setTimeout(() => setCopied(false), 2000);
                     }}

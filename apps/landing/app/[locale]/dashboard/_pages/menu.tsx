@@ -251,7 +251,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
           <div className="flex-1 min-w-0 flex flex-col gap-4 min-h-full">
           {/* View menu */}
           {!sortMode && slug && items.length > 0 && (
-            <MenuPreviewModal menuUrl={`/m/${slug}`}>
+            <MenuPreviewModal menuUrl={`https://${slug}.iq-rest.com`}>
               <button
                 className="flex items-center justify-center gap-2 w-full h-11 rounded-xl border border-green-500/30 bg-green-500/10 text-green-600 dark:text-green-400 text-sm font-medium hover:bg-green-500/15 transition-colors"
                 onClick={() => track(DashboardEvent.CLICKED_VIEW_MENU)}

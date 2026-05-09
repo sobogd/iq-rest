@@ -49,8 +49,8 @@ export function QrMenuPage({ initialSlug, tableNumbers }: QrMenuPageProps) {
 
   const menuUrl = slug
     ? selectedTable !== "none"
-      ? `iq-rest.com/m/${slug}?table=${selectedTable}`
-      : `iq-rest.com/m/${slug}`
+      ? `${slug}.iq-rest.com?table=${selectedTable}`
+      : `${slug}.iq-rest.com`
     : "";
   const paper = PAPER_FORMATS[paperFormat];
 
