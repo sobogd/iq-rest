@@ -155,6 +155,24 @@ export default function middleware(request: NextRequest) {
     return response;
   }
 
+  // Redirect /[locale]/m/[slug](/...) → https://[slug].iq-rest.com(/...). The
+  // public menu now lives on its own SPA per slug subdomain. Old code is kept
+  // around for the time being but no longer serves users.
+  const menuMatch = pathname.match(/^\/[a-z]{2}\/m\/([a-z0-9-]+)(\/.*)?$/);
+  if (menuMatch) {
+    const slug = menuMatch[1];
+    const sub = menuMatch[2] || "/";
+    const RESERVED_SUBDOMAINS = new Set([
+      "admin", "back", "dashboard", "dashboard-api", "menu", "moneyboss",
+      "my-history", "www", "mail", "support", "api", "app", "staff",
+      "test", "dev", "staging", "root", "ftp",
+    ]);
+    if (!RESERVED_SUBDOMAINS.has(slug)) {
+      const target = `https://${slug}.iq-rest.com${sub}${request.nextUrl.search}`;
+      return NextResponse.redirect(target, 302);
+    }
+  }
+
   // Strip ?from= param → save to cookie for client-side referral tracking
   const fromParam = request.nextUrl.searchParams.get("from");
   if (fromParam) {
