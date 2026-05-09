@@ -13,15 +13,12 @@ interface DemoButtonProps {
 
 const DEMO_SLUG = "love-eatery";
 
-// Languages currently enabled on the demo restaurant. If the visitor's
-// landing locale is one of these, pass it through so the demo iframe opens
-// in that language; otherwise the public-menu falls back to the
-// restaurant's default language.
-const DEMO_LANGS = new Set(["es", "ca", "it", "pt", "en"]);
-
+// Always forward the landing's locale. The public-menu SPA matches it
+// against the demo restaurant's enabled languages and falls back to the
+// restaurant's default language if it's not configured.
 function demoUrl(locale: string): string {
   const params = new URLSearchParams({ preview: "1" });
-  if (DEMO_LANGS.has(locale)) params.set("lang", locale);
+  if (locale) params.set("lang", locale);
   return `https://${DEMO_SLUG}.iq-rest.com?${params.toString()}`;
 }
 
