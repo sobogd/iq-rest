@@ -50,7 +50,10 @@
       "selectTable": "テーブルを選択",
       "continue": "続ける",
       "clearCart": "カートをクリア",
-      "orderLimitReached": "月間注文上限に達しました。来月再度お試しください。"
+      "orderLimitReached": "月間注文上限に達しました。来月再度お試しください。",
+      "successTitle": "注文を受け付けました",
+      "successBody": "ありがとうございます！レストランからまもなくご連絡します。",
+      "backHome": "ホームに戻る"
     },
     "menuUnavailableTitle": "メニューは一時的に利用できません",
     "menuUnavailableText": "このレストランのメニューは現在ご利用いただけません。レストランに直接お問い合わせください。"

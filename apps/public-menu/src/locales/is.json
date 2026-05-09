@@ -50,7 +50,10 @@
       "selectTable": "Veldu borð",
       "continue": "Halda áfram",
       "clearCart": "Tæma verslun",
-      "orderLimitReached": "Mánaðarlegri pöntunarmörkum er náð. Vinsamlegast reyndu aftur næsta mánuð."
+      "orderLimitReached": "Mánaðarlegri pöntunarmörkum er náð. Vinsamlegast reyndu aftur næsta mánuð.",
+      "successTitle": "Pöntun móttekin",
+      "successBody": "Takk! Veitingastaðurinn hefur samband fljótlega.",
+      "backHome": "Til baka á forsíðu"
     },
     "menuUnavailableTitle": "Matseðillinn Er Tímabundið Ekki Tiltækur",
     "menuUnavailableText": "Matseðill þessa veitingastaðar er ekki tiltækur eins og er. Vinsamlegast hafðu samband við veitingastaðinn beint."

@@ -50,7 +50,10 @@
       "selectTable": "选择桌号",
       "continue": "继续",
       "clearCart": "清空购物车",
-      "orderLimitReached": "每月订单限制已达到。请下个月再试。"
+      "orderLimitReached": "每月订单限制已达到。请下个月再试。",
+      "successTitle": "订单已提交",
+      "successBody": "感谢！餐厅会尽快与您联系。",
+      "backHome": "返回首页"
     },
     "menuUnavailableTitle": "菜单暂时不可用",
     "menuUnavailableText": "此餐厅的菜单目前不可用。请直接联系餐厅。"

@@ -50,7 +50,10 @@
       "selectTable": "Izberite mizo",
       "continue": "Nadaljuj",
       "clearCart": "Počisti košarico",
-      "orderLimitReached": "Dosežen mesečni limit naročil. Poskusite znova naslednji mesec."
+      "orderLimitReached": "Dosežen mesečni limit naročil. Poskusite znova naslednji mesec.",
+      "successTitle": "Naročilo oddano",
+      "successBody": "Hvala! Restavracija se vam bo kmalu oglasila.",
+      "backHome": "Nazaj na začetno stran"
     },
     "menuUnavailableTitle": "Meni Je Začasno Nedostopen",
     "menuUnavailableText": "Meni te restavracije trenutno ni na voljo. Prosimo, kontaktirajte restavracijo neposredno."

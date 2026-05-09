@@ -52,7 +52,10 @@
       "selectTable": "Select table",
       "continue": "Continue",
       "clearCart": "Clear cart",
-      "orderLimitReached": "Monthly order limit reached. Please try again next month."
+      "orderLimitReached": "Monthly order limit reached. Please try again next month.",
+      "successTitle": "Order placed",
+      "successBody": "Thanks! The restaurant will get back to you shortly.",
+      "backHome": "Back to home"
     }
   },
   "publicReserve": {

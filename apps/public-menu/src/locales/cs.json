@@ -50,7 +50,10 @@
       "selectTable": "Vyberte stůl",
       "continue": "Pokračovat",
       "clearCart": "Vymazat košík",
-      "orderLimitReached": "Měsíční limit objednávek byl dosažen. Zkuste to prosím znovu příští měsíc."
+      "orderLimitReached": "Měsíční limit objednávek byl dosažen. Zkuste to prosím znovu příští měsíc.",
+      "successTitle": "Objednávka přijata",
+      "successBody": "Děkujeme! Restaurace se vám brzy ozve.",
+      "backHome": "Zpět na úvod"
     },
     "menuUnavailableTitle": "Nabídka Je Dočasně Nedostupná",
     "menuUnavailableText": "Nabídka tohoto restaurantu není momentálně dostupná. Kontaktujte prosím restauraci přímo."

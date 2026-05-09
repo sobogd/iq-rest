@@ -50,7 +50,10 @@
       "selectTable": "Изаберите сто",
       "continue": "Настави",
       "clearCart": "Očistite korpu",
-      "orderLimitReached": "Mesečni limit narudžbina je dostignut. Molimo pokušajte ponovo sledećeg meseca."
+      "orderLimitReached": "Mesečni limit narudžbina je dostignut. Molimo pokušajte ponovo sledećeg meseca.",
+      "successTitle": "Поруџбина послата",
+      "successBody": "Хвала! Ресторан ће вам се ускоро јавити.",
+      "backHome": "Назад на почетну"
     },
     "menuUnavailableTitle": "Jelovnik Je Privremeno Nedostupan",
     "menuUnavailableText": "Jelovnik ovog restorana trenutno nije dostupan. Kontaktirajte restoran direktno."

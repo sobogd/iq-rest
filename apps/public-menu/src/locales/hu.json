@@ -50,7 +50,10 @@
       "selectTable": "Válasszon asztalt",
       "continue": "Tovább",
       "clearCart": "Kosár ürítése",
-      "orderLimitReached": "A havi rendelési limit elérve. Kérjük, próbálja meg a következő hónapban."
+      "orderLimitReached": "A havi rendelési limit elérve. Kérjük, próbálja meg a következő hónapban.",
+      "successTitle": "Rendelés elküldve",
+      "successBody": "Köszönjük! Az étterem hamarosan jelentkezik.",
+      "backHome": "Vissza a kezdőlapra"
     },
     "menuUnavailableTitle": "A Menü Átmenetileg Nem Elérhető",
     "menuUnavailableText": "Ennek az étteremnek az étlapja jelenleg nem elérhető. Kérjük, lépjen kapcsolatba az étteremmel közvetlenül."

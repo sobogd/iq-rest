@@ -50,7 +50,10 @@
       "selectTable": "Choisir une table",
       "continue": "Continuer",
       "clearCart": "Vider le panier",
-      "orderLimitReached": "Limite de commandes mensuelles atteinte. Veuillez réessayer le mois prochain."
+      "orderLimitReached": "Limite de commandes mensuelles atteinte. Veuillez réessayer le mois prochain.",
+      "successTitle": "Commande envoyée",
+      "successBody": "Merci ! Le restaurant vous recontactera sous peu.",
+      "backHome": "Retour à l'accueil"
     },
     "menuUnavailableTitle": "Menu Temporairement Indisponible",
     "menuUnavailableText": "Le menu de ce restaurant est actuellement indisponible. Veuillez contacter le restaurant directement."

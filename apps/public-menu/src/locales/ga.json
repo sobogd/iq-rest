@@ -50,7 +50,10 @@
       "selectTable": "Roghnaigh bord",
       "continue": "Lean ar aghaidh",
       "clearCart": "Glan an chiseal",
-      "orderLimitReached": "Teorainn ordaithe míosúil bainte amach. Bain triail as arís an mhí seo chugainn."
+      "orderLimitReached": "Teorainn ordaithe míosúil bainte amach. Bain triail as arís an mhí seo chugainn.",
+      "successTitle": "Ordú curtha",
+      "successBody": "Go raibh maith agat! Beidh an bhialann i dteagmháil leat go luath.",
+      "backHome": "Ar ais go dtí an leathanach baile"
     },
     "menuUnavailableTitle": "Tá An Roghchlár As Feidhm Go Sealadach",
     "menuUnavailableText": "Níl roghchlár an bhialainne seo ar fáil faoi láthair. Déan teagmháil leis an mbialann go díreach."

@@ -50,7 +50,10 @@
       "selectTable": "Wybierz stolik",
       "continue": "Kontynuuj",
       "clearCart": "Wyczyść koszyk",
-      "orderLimitReached": "Osiągnięto miesięczny limit zamówień. Proszę spróbować ponownie w przyszłym miesiącu."
+      "orderLimitReached": "Osiągnięto miesięczny limit zamówień. Proszę spróbować ponownie w przyszłym miesiącu.",
+      "successTitle": "Zamówienie złożone",
+      "successBody": "Dziękujemy! Restauracja wkrótce się skontaktuje.",
+      "backHome": "Wróć do strony głównej"
     },
     "menuUnavailableTitle": "Menu Tymczasowo Niedostępne",
     "menuUnavailableText": "Menu tej restauracji jest obecnie niedostępne. Skontaktuj się bezpośrednio z restauracją."

@@ -50,7 +50,10 @@
       "selectTable": "Masa seçin",
       "continue": "Devam et",
       "clearCart": "Sepeti temizle",
-      "orderLimitReached": "Aylık sipariş limiti aşıldı. Lütfen gelecek ay tekrar deneyin."
+      "orderLimitReached": "Aylık sipariş limiti aşıldı. Lütfen gelecek ay tekrar deneyin.",
+      "successTitle": "Sipariş alındı",
+      "successBody": "Teşekkürler! Restoran kısa süre içinde ulaşacak.",
+      "backHome": "Ana sayfaya dön"
     },
     "menuUnavailableTitle": "Menü Geçici Olarak Kullanılamıyor",
     "menuUnavailableText": "Bu restoranın menüsü şu anda mevcut değil. Lütfen restoranla doğrudan iletişime geçin."

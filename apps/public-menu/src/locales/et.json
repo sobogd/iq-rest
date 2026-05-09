@@ -50,7 +50,10 @@
       "selectTable": "Vali laud",
       "continue": "Jätka",
       "clearCart": "Tühjenda ostukorv",
-      "orderLimitReached": "Kuu tellimuste piir on saavutatud. Palun proovige uuesti järgmisel kuul."
+      "orderLimitReached": "Kuu tellimuste piir on saavutatud. Palun proovige uuesti järgmisel kuul.",
+      "successTitle": "Tellimus saadetud",
+      "successBody": "Aitäh! Restoran võtab peagi ühendust.",
+      "backHome": "Tagasi avalehele"
     },
     "menuUnavailableTitle": "Menüü On Ajutiselt Kättesaamatu",
     "menuUnavailableText": "Selle restorani menüü ei ole praegu kättesaadav. Palun võtke ühendust restoraniga otse."

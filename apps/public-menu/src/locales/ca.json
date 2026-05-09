@@ -50,7 +50,10 @@
       "selectTable": "Selecciona taula",
       "continue": "Continuar",
       "clearCart": "Netejar el carret",
-      "orderLimitReached": "S'ha assolit el límit de comandes mensual. Si us plau, torneu-ho a provar el proper mes."
+      "orderLimitReached": "S'ha assolit el límit de comandes mensual. Si us plau, torneu-ho a provar el proper mes.",
+      "successTitle": "Comanda enviada",
+      "successBody": "Gràcies! El restaurant es posarà en contacte aviat.",
+      "backHome": "Tornar a l'inici"
     },
     "menuUnavailableTitle": "El Menú No Està Disponible Temporalment",
     "menuUnavailableText": "El menú d'aquest restaurant no està disponible en aquest moment. Contacteu directament amb el restaurant."

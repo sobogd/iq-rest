@@ -50,7 +50,10 @@
       "selectTable": "Pasirinkite stalą",
       "continue": "Tęsti",
       "clearCart": "Išvalyti krepšelį",
-      "orderLimitReached": "Mėnesio užsakymų limitas pasiektas. Prašome bandyti vėl kitą mėnesį."
+      "orderLimitReached": "Mėnesio užsakymų limitas pasiektas. Prašome bandyti vėl kitą mėnesį.",
+      "successTitle": "Užsakymas pateiktas",
+      "successBody": "Ačiū! Restoranas netrukus susisieks.",
+      "backHome": "Grįžti į pradžią"
     },
     "menuUnavailableTitle": "Meniu Laikinai Nepasiekiamas",
     "menuUnavailableText": "Šio restorano meniu šiuo metu nepasiekiamas. Susisiekite su restoranu tiesiogiai."

@@ -50,7 +50,10 @@
       "selectTable": "Selectează masa",
       "continue": "Continuă",
       "clearCart": "Șterge coșul",
-      "orderLimitReached": "Limita lunară de comenzi a fost atinsă. Vă rugăm să încercați din nou luna viitoare."
+      "orderLimitReached": "Limita lunară de comenzi a fost atinsă. Vă rugăm să încercați din nou luna viitoare.",
+      "successTitle": "Comandă plasată",
+      "successBody": "Mulțumim! Restaurantul te va contacta în scurt timp.",
+      "backHome": "Înapoi la pagina principală"
     },
     "menuUnavailableTitle": "Meniul Este Temporar Indisponibil",
     "menuUnavailableText": "Meniul acestui restaurant nu este disponibil momentan. Vă rugăm contactați restaurantul direct."

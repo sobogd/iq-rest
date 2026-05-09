@@ -50,7 +50,10 @@
       "selectTable": "Kies tafel",
       "continue": "Doorgaan",
       "clearCart": "Winkelwagentje leegmaken",
-      "orderLimitReached": "Maandelijkse bestelgrens bereikt. Probeer het volgende maand opnieuw."
+      "orderLimitReached": "Maandelijkse bestelgrens bereikt. Probeer het volgende maand opnieuw.",
+      "successTitle": "Bestelling geplaatst",
+      "successBody": "Bedankt! Het restaurant neemt zo contact op.",
+      "backHome": "Terug naar home"
     },
     "menuUnavailableTitle": "Menu Tijdelijk Niet Beschikbaar",
     "menuUnavailableText": "Het menu van dit restaurant is momenteel niet beschikbaar. Neem rechtstreeks contact op met het restaurant."

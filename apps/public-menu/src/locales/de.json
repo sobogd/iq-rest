@@ -50,7 +50,10 @@
       "selectTable": "Tisch wählen",
       "continue": "Weiter",
       "clearCart": "Warenkorb leeren",
-      "orderLimitReached": "Monatliches Bestelllimit erreicht. Bitte versuchen Sie es nächsten Monat erneut."
+      "orderLimitReached": "Monatliches Bestelllimit erreicht. Bitte versuchen Sie es nächsten Monat erneut.",
+      "successTitle": "Bestellung aufgegeben",
+      "successBody": "Danke! Das Restaurant meldet sich gleich bei dir.",
+      "backHome": "Zur Startseite"
     },
     "menuUnavailableTitle": "Speisekarte Vorübergehend Nicht Verfügbar",
     "menuUnavailableText": "Die Speisekarte dieses Restaurants ist derzeit nicht verfügbar. Bitte kontaktieren Sie das Restaurant direkt."

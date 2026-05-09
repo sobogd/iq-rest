@@ -50,7 +50,10 @@
       "selectTable": "Izvēlieties galdu",
       "continue": "Turpināt",
       "clearCart": "Notīrīt grozu",
-      "orderLimitReached": "Mēneša pasūtījumu limits ir sasniegts. Lūdzu, mēģiniet vēlreiz nākamajā mēnesī."
+      "orderLimitReached": "Mēneša pasūtījumu limits ir sasniegts. Lūdzu, mēģiniet vēlreiz nākamajā mēnesī.",
+      "successTitle": "Pasūtījums pieņemts",
+      "successBody": "Paldies! Restorāns drīz sazināsies.",
+      "backHome": "Atpakaļ uz sākumu"
     },
     "menuUnavailableTitle": "Ēdienkarte Īslaicīgi Nav Pieejama",
     "menuUnavailableText": "Šī restorāna ēdienkarte pašlaik nav pieejama. Lūdzu, sazinieties ar restorānu tieši."

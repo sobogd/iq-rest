@@ -50,7 +50,10 @@
       "selectTable": "테이블 선택",
       "continue": "계속",
       "clearCart": "장바구니 비우기",
-      "orderLimitReached": "월 주문 한도에 도달했습니다. 다음 달에 다시 시도해 주세요."
+      "orderLimitReached": "월 주문 한도에 도달했습니다. 다음 달에 다시 시도해 주세요.",
+      "successTitle": "주문이 접수되었습니다",
+      "successBody": "감사합니다! 곧 레스토랑에서 연락드립니다.",
+      "backHome": "홈으로 돌아가기"
     },
     "menuUnavailableTitle": "메뉴를 일시적으로 이용할 수 없습니다",
     "menuUnavailableText": "이 레스토랑의 메뉴는 현재 이용할 수 없습니다. 레스토랑에 직접 문의하세요."

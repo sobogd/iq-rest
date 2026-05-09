@@ -50,7 +50,10 @@
       "selectTable": "Välj bord",
       "continue": "Fortsätt",
       "clearCart": "Rensa kundvagn",
-      "orderLimitReached": "Månatlig beställningsgräns nådd. Vänligen försök igen nästa månad."
+      "orderLimitReached": "Månatlig beställningsgräns nådd. Vänligen försök igen nästa månad.",
+      "successTitle": "Beställning mottagen",
+      "successBody": "Tack! Restaurangen hör av sig inom kort.",
+      "backHome": "Tillbaka till startsidan"
     },
     "menuUnavailableTitle": "Menyn Är Tillfälligt Otillgänglig",
     "menuUnavailableText": "Den här restaurangens meny är för tillfället inte tillgänglig. Kontakta restaurangen direkt."

@@ -50,7 +50,10 @@
       "selectTable": "Velg bord",
       "continue": "Fortsett",
       "clearCart": "Tøm handlekurv",
-      "orderLimitReached": "Månedlig bestillingsgrense nådd. Vennligst prøv igjen neste måned."
+      "orderLimitReached": "Månedlig bestillingsgrense nådd. Vennligst prøv igjen neste måned.",
+      "successTitle": "Bestilling mottatt",
+      "successBody": "Takk! Restauranten kontakter deg snart.",
+      "backHome": "Tilbake til forsiden"
     },
     "menuUnavailableTitle": "Menyen Er Midlertidig Utilgjengelig",
     "menuUnavailableText": "Denne restaurantens meny er for øyeblikket ikke tilgjengelig. Kontakt restauranten direkte."

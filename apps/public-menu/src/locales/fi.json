@@ -50,7 +50,10 @@
       "selectTable": "Valitse pöytä",
       "continue": "Jatka",
       "clearCart": "Tyhjennä ostoskori",
-      "orderLimitReached": "Kuukausittainen tilausten raja on saavutettu. Yritä uudelleen ensi kuussa."
+      "orderLimitReached": "Kuukausittainen tilausten raja on saavutettu. Yritä uudelleen ensi kuussa.",
+      "successTitle": "Tilaus lähetetty",
+      "successBody": "Kiitos! Ravintola ottaa pian yhteyttä.",
+      "backHome": "Takaisin etusivulle"
     },
     "menuUnavailableTitle": "Valikko On Tilapäisesti Poissa Käytöstä",
     "menuUnavailableText": "Tämän ravintolan valikko ei ole tällä hetkellä saatavilla. Ota yhteyttä ravintolaan suoraan."
