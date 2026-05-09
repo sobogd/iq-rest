@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useMenu } from "../lib/menu-context";
 import { RouteSeo } from "../components/route-seo";
-import { getPreview } from "../lib/forward-search";
+import { getPreview, useForwardedSearch } from "../lib/forward-search";
 
 export const Route = createLazyFileRoute("/order/success")({ component: OrderSuccessPage });
 
@@ -12,6 +12,7 @@ function OrderSuccessPage() {
   const { t } = useTranslation();
   const label = t("publicMenu.order.successTitle", { defaultValue: "Order placed" });
   const isPreview = getPreview() === "1";
+  const search = useForwardedSearch();
   return (
     <div className="h-dvh flex flex-col bg-white">
       <RouteSeo routeLabel={label} />
@@ -28,7 +29,7 @@ function OrderSuccessPage() {
       <p className="text-gray-600 max-w-xs">
         {t("publicMenu.order.successBody", { defaultValue: "Thanks! The restaurant will get back to you shortly." })}
       </p>
-      <Link to="/" className="px-5 py-3 rounded-lg text-white font-semibold" style={{ backgroundColor: restaurant.accentColor }}>
+      <Link to="/" search={search} className="px-5 py-3 rounded-lg text-white font-semibold" style={{ backgroundColor: restaurant.accentColor }}>
         {t("publicMenu.order.backHome", { defaultValue: "Back to home" })}
       </Link>
       </div>

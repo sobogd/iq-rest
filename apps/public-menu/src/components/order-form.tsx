@@ -135,7 +135,13 @@ export function OrderForm() {
       }
       if (data.mode === "whatsapp" || data.mode === "both") openWhatsApp();
       clear();
-      navigate({ to: "/order/success", search: isPreview ? { preview: "1" } : {} });
+      navigate({
+        to: "/order/success",
+        search: {
+          ...(isPreview ? { preview: "1" } : {}),
+          ...(tableQ ? { table: tableQ } : {}),
+        },
+      });
     } catch {
       setSending(false);
     }

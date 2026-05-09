@@ -5,6 +5,7 @@ import { useMenu } from "../lib/menu-context";
 import { MenuHeader } from "../components/menu-header";
 import { AVAILABLE_LANGUAGES } from "../lib/languages";
 import { RouteSeo } from "../components/route-seo";
+import { useForwardedSearch } from "../lib/forward-search";
 
 export const Route = createLazyFileRoute("/language")({ component: LanguagePage });
 
@@ -12,6 +13,7 @@ function LanguagePage() {
   const { restaurant } = useMenu();
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
+  const search = useForwardedSearch();
   const enabled = AVAILABLE_LANGUAGES.filter((l) => restaurant.languages.includes(l.code));
 
   const label = t("publicMenu.language");
@@ -28,7 +30,7 @@ function LanguagePage() {
                 key={l.code}
                 onClick={async () => {
                   await i18n.changeLanguage(l.code);
-                  navigate({ to: "/" });
+                  navigate({ to: "/", search });
                 }}
                 className="w-full flex items-center gap-3 py-4 text-left"
               >

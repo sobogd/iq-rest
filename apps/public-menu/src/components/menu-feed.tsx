@@ -8,6 +8,7 @@ import { tField } from "../lib/translations";
 import { formatPrice } from "../lib/currencies";
 import { AllergenIcon } from "./allergen-icon";
 import { MenuImage } from "./menu-image";
+import { useForwardedSearch } from "../lib/forward-search";
 
 export function MenuFeed() {
   const { restaurant, categories, items } = useMenu();
@@ -16,6 +17,7 @@ export function MenuFeed() {
   const accent = restaurant.accentColor || "#000";
   const ordersEnabled = restaurant.ordersEnabled;
   const lang = i18n.language;
+  const cartSearch = useForwardedSearch();
 
   // Group items by category — bucket once, then map each cat in O(1).
   const groups = useMemo(() => {
@@ -243,6 +245,7 @@ export function MenuFeed() {
       {ordersEnabled && totalQty > 0 ? (
         <Link
           to="/order"
+          search={cartSearch}
           className="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-xl shadow-lg flex items-center justify-center text-white active:opacity-80"
           style={{ backgroundColor: accent }}
         >
