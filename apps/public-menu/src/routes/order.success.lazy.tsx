@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useMenu } from "../lib/menu-context";
 import { RouteSeo } from "../components/route-seo";
-import { getPreview, useForwardedSearch } from "../lib/forward-search";
+import { getPreview } from "../lib/forward-search";
 
 export const Route = createLazyFileRoute("/order/success")({ component: OrderSuccessPage });
 

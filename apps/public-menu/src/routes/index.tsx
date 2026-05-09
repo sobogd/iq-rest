@@ -5,7 +5,6 @@ import { useMenu } from "../lib/menu-context";
 import { HeroMedia } from "../components/hero-media";
 import { MenuNavLink } from "../components/menu-nav-link";
 import { RouteSeo } from "../components/route-seo";
-import { getPreview } from "../lib/forward-search";
 
 export const Route = createFileRoute("/")({ component: HomePage });
 
@@ -13,7 +12,6 @@ function HomePage() {
   const { restaurant } = useMenu();
   const { t } = useTranslation();
   const accentColor = restaurant.accentColor || "#000000";
-  const isPreview = getPreview() === "1";
 
   const jsonLd: Record<string, unknown> = {
     "@context": "https://schema.org",
@@ -32,9 +30,6 @@ function HomePage() {
   return (
     <div className="h-dvh flex flex-col">
       <RouteSeo jsonLd={jsonLd} />
-      {isPreview ? (
-        <div className="shrink-0" style={{ height: 37, backgroundColor: accentColor }} />
-      ) : null}
       <div className="flex-1 relative overflow-hidden min-h-[50vh]">
         {restaurant.source ? (
           <HeroMedia src={restaurant.source} alt={restaurant.title} accentColor={accentColor} />

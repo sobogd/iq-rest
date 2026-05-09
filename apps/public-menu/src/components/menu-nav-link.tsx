@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { ReactNode, CSSProperties } from "react";
-import { useForwardedSearch } from "../lib/forward-search";
 
 interface Props {
   to: string;
@@ -11,9 +10,8 @@ interface Props {
 }
 
 export function MenuNavLink({ to, className, style, children }: Props) {
-  const search = useForwardedSearch();
   return (
-    <Link to={to} search={search} className={className} style={style}>
+    <Link to={to} className={className} style={style}>
       {children}
     </Link>
   );

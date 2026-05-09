@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
-import { useForwardedSearch } from "../lib/forward-search";
+import { getPreview } from "../lib/forward-search";
 
 interface Props {
   title: string;
@@ -11,11 +11,10 @@ interface Props {
 
 export function MenuHeader({ title, accentColor, backTo = "/", sticky }: Props) {
   const bg = accentColor || "#000000";
-  const search = useForwardedSearch();
   // ?preview=1 means rendered inside the dashboard's iPhone-simulating iframe,
   // which doesn't have a real safe-area inset — fake the notch space so the
   // header looks right next to the simulated camera cutout.
-  const isPreview = search.preview === "1";
+  const isPreview = getPreview() === "1";
   return (
     <header
       className={
@@ -31,7 +30,6 @@ export function MenuHeader({ title, accentColor, backTo = "/", sticky }: Props) 
       <div className="h-14 max-w-[440px] w-full flex items-center relative mx-auto">
         <Link
           to={backTo}
-          search={search}
           className="p-2 -ml-2 text-white z-10"
           aria-label="Back"
         >
