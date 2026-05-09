@@ -6,6 +6,7 @@ import { useMenu } from "../lib/menu-context";
 import { useCart } from "../lib/cart";
 import { tField } from "../lib/translations";
 import { formatPrice } from "../lib/currencies";
+import { getTableNumber, getPreview } from "../lib/forward-search";
 
 export function OrderForm() {
   const { restaurant, items } = useMenu();
@@ -13,9 +14,8 @@ export function OrderForm() {
   const { cart, add, remove, clear } = useCart();
   const navigate = useNavigate();
   const accentColor = restaurant.accentColor || "#000";
-  const params = new URLSearchParams(window.location.search);
-  const isPreview = params.get("preview") === "1";
-  const tableQ = params.get("table");
+  const isPreview = getPreview() === "1";
+  const tableQ = getTableNumber();
   const tableNumber = tableQ ? parseInt(tableQ, 10) : undefined;
 
   const [name, setName] = useState(isPreview && restaurant.orderNameEnabled ? "John" : "");
