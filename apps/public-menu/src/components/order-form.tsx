@@ -97,6 +97,11 @@ export function OrderForm() {
       for (const ci of cartItems) {
         for (let i = 0; i < ci.qty; i++) {
           orderItems.push({
+            // Flat shape — read by the legacy soqrmenuweb dashboard.
+            name: ci.name,
+            qty: 1,
+            price: ci.price,
+            // Fat shape — read by the new dashboard's kitchen + orders pages.
             id: "id_" + Math.random().toString(36).slice(2, 9),
             dishId: ci.id,
             dishNameSnapshot: ci.snapshot,
