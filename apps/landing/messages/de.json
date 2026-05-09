@@ -1889,7 +1889,7 @@
       "ordersAddressOff": "Adresse",
       "orderModeHint": "Interne Bestellungen werden im Dashboard gespeichert. WhatsApp-Bestellungen werden direkt an Ihr WhatsApp gesendet. Sie können beide gleichzeitig aktivieren.",
       "ordersFieldsDescription": "Aktivierte Felder müssen vom Kunden bei der Bestellung ausgefüllt werden.",
-      "slugHint": "Dies ist Ihre einzigartige URL-Adresse, unter der Kunden Ihre Speisekarte ansehen können. Teilen Sie diesen Link oder verwenden Sie ihn in Ihrem QR-Code. Er erscheint als: ihr-slug.iq-rest.com"
+      "slugHint": "Dies ist Ihre einzigartige URL-Adresse, unter der Kunden Ihre Speisekarte ansehen können. Teilen Sie diesen Link oder verwenden Sie ihn in Ihrem QR-Code. Er erscheint als: {slug}.iq-rest.com"
     },
     "general": {
       "save": "Speichern",

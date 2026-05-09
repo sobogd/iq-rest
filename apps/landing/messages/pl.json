@@ -1889,7 +1889,7 @@
       "ordersAddressOff": "Adres",
       "orderModeHint": "Zamówienia wewnętrzne są zapisywane w panelu. Zamówienia WhatsApp są wysyłane bezpośrednio na Twój WhatsApp. Możesz włączyć oba jednocześnie.",
       "ordersFieldsDescription": "Włączone pola będą wymagane od klienta przy składaniu zamówienia.",
-      "slugHint": "To jest Twój unikalny adres URL, pod którym klienci mogą zobaczyć Twoje menu. Udostępnij ten link lub użyj go w kodzie QR. Pojawi się jako: twój-slug.iq-rest.com"
+      "slugHint": "To jest Twój unikalny adres URL, pod którym klienci mogą zobaczyć Twoje menu. Udostępnij ten link lub użyj go w kodzie QR. Pojawi się jako: {slug}.iq-rest.com"
     },
     "general": {
       "save": "Zapisz",

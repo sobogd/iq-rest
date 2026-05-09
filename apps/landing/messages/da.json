@@ -1889,7 +1889,7 @@
       "ordersAddressOff": "Adresse",
       "orderModeHint": "Interne bestillinger gemmes i panelet. WhatsApp-bestillinger sendes direkte til din WhatsApp. Du kan aktivere begge samtidigt.",
       "ordersFieldsDescription": "Aktiverede felter vil være påkrævede for kunden ved bestilling.",
-      "slugHint": "Dette er din unikke URL-adresse, hvor kunder kan se din menu. Del dette link eller brug det i din QR-kode. Det vises som: din-slug.iq-rest.com"
+      "slugHint": "Dette er din unikke URL-adresse, hvor kunder kan se din menu. Del dette link eller brug det i din QR-kode. Det vises som: {slug}.iq-rest.com"
     },
     "general": {
       "save": "Gem",

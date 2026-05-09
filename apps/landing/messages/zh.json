@@ -1889,7 +1889,7 @@
       "ordersAddressOff": "地址",
       "orderModeHint": "内部订单保存在控制面板中。WhatsApp订单直接发送到您的WhatsApp。您可以同时启用两者。",
       "ordersFieldsDescription": "启用的字段将在客户下单时为必填项。",
-      "slugHint": "这是您的唯一URL地址，客户可以在此查看您的菜单。分享此链接或在QR码中使用。显示为：您的slug.iq-rest.com"
+      "slugHint": "这是您的唯一URL地址，客户可以在此查看您的菜单。分享此链接或在QR码中使用。显示为：{slug}.iq-rest.com"
     },
     "general": {
       "save": "保存",

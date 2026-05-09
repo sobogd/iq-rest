@@ -1889,7 +1889,7 @@
       "ordersAddressOff": "Adres",
       "orderModeHint": "Dahili siparişler panelde kaydedilir. WhatsApp siparişleri doğrudan WhatsApp'ınıza gönderilir. İkisini aynı anda etkinleştirebilirsiniz.",
       "ordersFieldsDescription": "Etkinleştirilen alanlar müşteri sipariş verirken zorunlu olacaktır.",
-      "slugHint": "Bu, müşterilerin menünüzü görüntüleyebileceği benzersiz URL adresinizdir. Bu bağlantıyı paylaşın veya QR kodunuzda kullanın. Şu şekilde görünecektir: slug-unuz.iq-rest.com"
+      "slugHint": "Bu, müşterilerin menünüzü görüntüleyebileceği benzersiz URL adresinizdir. Bu bağlantıyı paylaşın veya QR kodunuzda kullanın. Şu şekilde görünecektir: {slug}.iq-rest.com"
     },
     "general": {
       "save": "Kaydet",

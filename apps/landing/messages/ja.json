@@ -1889,7 +1889,7 @@
       "ordersAddressOff": "住所",
       "orderModeHint": "内部注文はダッシュボードに保存されます。WhatsApp注文はWhatsAppに直接送信されます。両方同時に有効にできます。",
       "ordersFieldsDescription": "有効なフィールドは注文時にお客様の入力が必須になります。",
-      "slugHint": "これはお客様がメニューを閲覧できる固有のURLアドレスです。このリンクを共有するか、QRコードで使用してください。次のように表示されます：あなたのslug.iq-rest.com"
+      "slugHint": "これはお客様がメニューを閲覧できる固有のURLアドレスです。このリンクを共有するか、QRコードで使用してください。次のように表示されます：{slug}.iq-rest.com"
     },
     "general": {
       "save": "保存",

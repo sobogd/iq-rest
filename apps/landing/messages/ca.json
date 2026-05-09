@@ -1889,7 +1889,7 @@
       "ordersAddressOff": "Adreça",
       "orderModeHint": "Les comandes internes es guarden al panell. Les comandes de WhatsApp s'envien directament al vostre WhatsApp. Podeu activar ambdós alhora.",
       "ordersFieldsDescription": "Els camps activats seran obligatoris per al client en fer una comanda.",
-      "slugHint": "Aquesta és la vostra adreça URL única on els clients poden veure el vostre menú. Compartiu aquest enllaç o utilitzeu-lo al vostre codi QR. Apareixerà com: el-vostre-slug.iq-rest.com"
+      "slugHint": "Aquesta és la vostra adreça URL única on els clients poden veure el vostre menú. Compartiu aquest enllaç o utilitzeu-lo al vostre codi QR. Apareixerà com: {slug}.iq-rest.com"
     },
     "general": {
       "save": "Desa",

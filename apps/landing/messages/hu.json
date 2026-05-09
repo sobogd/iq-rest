@@ -1889,7 +1889,7 @@
       "ordersAddressOff": "Cím",
       "orderModeHint": "A belső rendelések a panelen kerülnek mentésre. A WhatsApp rendelések közvetlenül a WhatsApp-jára érkeznek. Mindkettőt egyszerre is engedélyezheti.",
       "ordersFieldsDescription": "A bekapcsolt mezők kitöltése kötelező lesz a vásárló számára rendeléskor.",
-      "slugHint": "Ez az Ön egyedi URL-címe, ahol az ügyfelek megtekinthetik az étlapját. Ossza meg ezt a linket vagy használja a QR-kódjában. Így jelenik meg: az-ön-slug.iq-rest.com"
+      "slugHint": "Ez az Ön egyedi URL-címe, ahol az ügyfelek megtekinthetik az étlapját. Ossza meg ezt a linket vagy használja a QR-kódjában. Így jelenik meg: {slug}.iq-rest.com"
     },
     "general": {
       "save": "Mentés",

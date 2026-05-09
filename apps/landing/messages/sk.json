@@ -1889,7 +1889,7 @@
       "ordersAddressOff": "Adresa",
       "orderModeHint": "Interné objednávky sa ukladajú v paneli. WhatsApp objednávky sa odosielajú priamo na váš WhatsApp. Môžete aktivovať obe súčasne.",
       "ordersFieldsDescription": "Aktivované polia budú pre zákazníka povinné pri zadávaní objednávky.",
-      "slugHint": "Toto je vaša jedinečná URL adresa, kde si zákazníci môžu prezrieť vaše menu. Zdieľajte tento odkaz alebo ho použite vo svojom QR kóde. Zobrazí sa ako: váš-slug.iq-rest.com"
+      "slugHint": "Toto je vaša jedinečná URL adresa, kde si zákazníci môžu prezrieť vaše menu. Zdieľajte tento odkaz alebo ho použite vo svojom QR kóde. Zobrazí sa ako: {slug}.iq-rest.com"
     },
     "general": {
       "save": "Uložiť",

@@ -1889,7 +1889,7 @@
       "ordersAddressOff": "Osoite",
       "orderModeHint": "Sisäiset tilaukset tallennetaan hallintapaneeliin. WhatsApp-tilaukset lähetetään suoraan WhatsAppiisi. Voit ottaa molemmat käyttöön samanaikaisesti.",
       "ordersFieldsDescription": "Käytössä olevat kentät ovat pakollisia asiakkaalle tilauksen yhteydessä.",
-      "slugHint": "Tämä on ainutlaatuinen URL-osoitteesi, jossa asiakkaat voivat tarkastella menuasi. Jaa tämä linkki tai käytä sitä QR-koodissasi. Se näkyy muodossa: sinun-slug.iq-rest.com"
+      "slugHint": "Tämä on ainutlaatuinen URL-osoitteesi, jossa asiakkaat voivat tarkastella menuasi. Jaa tämä linkki tai käytä sitä QR-koodissasi. Se näkyy muodossa: {slug}.iq-rest.com"
     },
     "general": {
       "save": "Tallenna",

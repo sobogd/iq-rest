@@ -1889,7 +1889,7 @@
       "ordersAddressOff": "Adrese",
       "orderModeHint": "Iekšējie pasūtījumi tiek saglabāti panelī. WhatsApp pasūtījumi tiek nosūtīti tieši uz jūsu WhatsApp. Varat aktivizēt abus vienlaicīgi.",
       "ordersFieldsDescription": "Aktivizētie lauki būs obligāti klientam, veicot pasūtījumu.",
-      "slugHint": "Šī ir jūsu unikālā URL adrese, kur klienti var apskatīt jūsu ēdienkarti. Dalieties ar šo saiti vai izmantojiet to savā QR kodā. Tā parādīsies kā: jūsu-slug.iq-rest.com"
+      "slugHint": "Šī ir jūsu unikālā URL adrese, kur klienti var apskatīt jūsu ēdienkarti. Dalieties ar šo saiti vai izmantojiet to savā QR kodā. Tā parādīsies kā: {slug}.iq-rest.com"
     },
     "general": {
       "save": "Saglabāt",

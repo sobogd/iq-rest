@@ -1889,7 +1889,7 @@
       "ordersAddressOff": "Adresse",
       "orderModeHint": "Les commandes internes sont enregistrées dans le tableau de bord. Les commandes WhatsApp sont envoyées directement sur votre WhatsApp. Vous pouvez activer les deux en même temps.",
       "ordersFieldsDescription": "Les champs activés seront obligatoires pour le client lors de la commande.",
-      "slugHint": "Ceci est votre adresse URL unique où les clients peuvent consulter votre menu. Partagez ce lien ou utilisez-le dans votre code QR. Il apparaîtra comme : votre-slug.iq-rest.com"
+      "slugHint": "Ceci est votre adresse URL unique où les clients peuvent consulter votre menu. Partagez ce lien ou utilisez-le dans votre code QR. Il apparaîtra comme : {slug}.iq-rest.com"
     },
     "general": {
       "save": "Enregistrer",

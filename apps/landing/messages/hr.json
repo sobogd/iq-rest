@@ -1889,7 +1889,7 @@
       "ordersAddressOff": "Adresa",
       "orderModeHint": "Interne narudžbe se spremaju u panel. WhatsApp narudžbe se šalju izravno na vaš WhatsApp. Možete aktivirati oboje istovremeno.",
       "ordersFieldsDescription": "Aktivirana polja bit će obavezna za kupca prilikom narudžbe.",
-      "slugHint": "Ovo je vaša jedinstvena URL adresa na kojoj kupci mogu vidjeti vaš jelovnik. Podijelite ovu poveznicu ili je koristite u QR kodu. Prikazat će se kao: vaš-slug.iq-rest.com"
+      "slugHint": "Ovo je vaša jedinstvena URL adresa na kojoj kupci mogu vidjeti vaš jelovnik. Podijelite ovu poveznicu ili je koristite u QR kodu. Prikazat će se kao: {slug}.iq-rest.com"
     },
     "general": {
       "save": "Spremi",

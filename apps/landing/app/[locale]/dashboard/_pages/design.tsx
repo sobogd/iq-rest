@@ -474,7 +474,7 @@ export function DesignPage({ initialRestaurant, plan }: DesignPageProps) {
                 </div>
               </div>
             </div>
-            <p className="text-xs text-muted-foreground/60 px-4 mt-1.5">{t("slugHint")}</p>
+            <p className="text-xs text-muted-foreground/60 px-4 mt-1.5">{t("slugHint", { slug: slug || t("slugPlaceholder") })}</p>
           </div>
 
           {/* Logout */}
