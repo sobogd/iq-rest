@@ -1852,7 +1852,7 @@
       "hideTitleOn": "Visible",
       "hideTitleOff": "Hidden",
       "slug": "Website Address",
-      "slugPrefix": "iq-rest.com/m/",
+      "slugPrefix": ".iq-rest.com",
       "slugPlaceholder": "my-restaurant",
       "currency": "Currency",
       "currencyPlaceholder": "Select currency",
@@ -1889,7 +1889,7 @@
       "ordersAddressOff": "Seoladh",
       "orderModeHint": "Sábháiltear orduithe inmheánacha sa phainéal. Seoltar orduithe WhatsApp go díreach chuig do WhatsApp. Is féidir leat an dá cheann a chur ar siúl ag an am céanna.",
       "ordersFieldsDescription": "Beidh réimsí cumasaithe riachtanach don chustaiméir agus ordú á dhéanamh.",
-      "slugHint": "Seo do sheoladh URL uathúil inar féidir le custaiméirí do bhiachlár a fheiceáil. Roinn an nasc seo nó úsáid é i do chód QR. Taispeánfar é mar: iq-rest.com/m/do-slug"
+      "slugHint": "Seo do sheoladh URL uathúil inar féidir le custaiméirí do bhiachlár a fheiceáil. Roinn an nasc seo nó úsáid é i do chód QR. Taispeánfar é mar: do-slug.iq-rest.com"
     },
     "general": {
       "save": "Sábháil",

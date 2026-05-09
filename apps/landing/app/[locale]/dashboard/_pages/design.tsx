@@ -428,7 +428,6 @@ export function DesignPage({ initialRestaurant, plan }: DesignPageProps) {
             <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
               {/* Slug */}
               <div className="flex items-center h-11 px-4">
-                <span className="text-sm text-muted-foreground shrink-0">{t("slugPrefix")}</span>
                 <input
                   id="slug"
                   type="text"
@@ -438,6 +437,7 @@ export function DesignPage({ initialRestaurant, plan }: DesignPageProps) {
                   placeholder={t("slugPlaceholder")}
                   className="flex-1 text-sm bg-transparent focus:outline-none placeholder:text-muted-foreground/30 min-w-0"
                 />
+                <span className="text-sm text-muted-foreground shrink-0">{t("slugPrefix")}</span>
                 {slug && (
                   <button
                     type="button"

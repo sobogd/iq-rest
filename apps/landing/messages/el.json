@@ -1852,7 +1852,7 @@
       "hideTitleOn": "Visible",
       "hideTitleOff": "Hidden",
       "slug": "Website Address",
-      "slugPrefix": "iq-rest.com/m/",
+      "slugPrefix": ".iq-rest.com",
       "slugPlaceholder": "my-restaurant",
       "currency": "Currency",
       "currencyPlaceholder": "Select currency",
@@ -1889,7 +1889,7 @@
       "ordersAddressOff": "Διεύθυνση",
       "orderModeHint": "Οι εσωτερικές παραγγελίες αποθηκεύονται στον πίνακα. Οι παραγγελίες WhatsApp αποστέλλονται απευθείας στο WhatsApp σας. Μπορείτε να ενεργοποιήσετε και τα δύο ταυτόχρονα.",
       "ordersFieldsDescription": "Τα ενεργοποιημένα πεδία θα είναι υποχρεωτικά για τον πελάτη κατά την παραγγελία.",
-      "slugHint": "Αυτή είναι η μοναδική σας διεύθυνση URL όπου οι πελάτες μπορούν να δουν το μενού σας. Μοιραστείτε αυτό το σύνδεσμο ή χρησιμοποιήστε τον στον κωδικό QR σας. Θα εμφανίζεται ως: iq-rest.com/m/το-slug-σας"
+      "slugHint": "Αυτή είναι η μοναδική σας διεύθυνση URL όπου οι πελάτες μπορούν να δουν το μενού σας. Μοιραστείτε αυτό το σύνδεσμο ή χρησιμοποιήστε τον στον κωδικό QR σας. Θα εμφανίζεται ως: το-slug-σας.iq-rest.com"
     },
     "general": {
       "save": "Αποθήκευση",

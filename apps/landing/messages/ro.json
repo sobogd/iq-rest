@@ -1852,7 +1852,7 @@
       "hideTitleOn": "Visible",
       "hideTitleOff": "Hidden",
       "slug": "Website Address",
-      "slugPrefix": "iq-rest.com/m/",
+      "slugPrefix": ".iq-rest.com",
       "slugPlaceholder": "my-restaurant",
       "currency": "Currency",
       "currencyPlaceholder": "Select currency",
@@ -1889,7 +1889,7 @@
       "ordersAddressOff": "Adresă",
       "orderModeHint": "Comenzile interne sunt salvate în panou. Comenzile WhatsApp sunt trimise direct pe WhatsApp-ul dvs. Puteți activa ambele simultan.",
       "ordersFieldsDescription": "Câmpurile activate vor fi obligatorii pentru client la plasarea comenzii.",
-      "slugHint": "Aceasta este adresa URL unică unde clienții pot vizualiza meniul dvs. Distribuiți acest link sau folosiți-l în codul QR. Va apărea ca: iq-rest.com/m/slug-ul-dvs"
+      "slugHint": "Aceasta este adresa URL unică unde clienții pot vizualiza meniul dvs. Distribuiți acest link sau folosiți-l în codul QR. Va apărea ca: slug-ul-dvs.iq-rest.com"
     },
     "general": {
       "save": "Salvează",

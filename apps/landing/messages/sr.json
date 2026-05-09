@@ -1852,7 +1852,7 @@
       "hideTitleOn": "Visible",
       "hideTitleOff": "Hidden",
       "slug": "Website Address",
-      "slugPrefix": "iq-rest.com/m/",
+      "slugPrefix": ".iq-rest.com",
       "slugPlaceholder": "my-restaurant",
       "currency": "Currency",
       "currencyPlaceholder": "Select currency",
@@ -1889,7 +1889,7 @@
       "ordersAddressOff": "Адреса",
       "orderModeHint": "Интерне поруџбине се чувају у панелу. WhatsApp поруџбине се шаљу директно на ваш WhatsApp. Можете активирати оба истовремено.",
       "ordersFieldsDescription": "Активирана поља биће обавезна за купца приликом поруџбине.",
-      "slugHint": "Ово је ваша јединствена URL адреса где купци могу да виде ваш мени. Поделите овај линк или га користите у QR коду. Приказаће се као: iq-rest.com/m/ваш-slug"
+      "slugHint": "Ово је ваша јединствена URL адреса где купци могу да виде ваш мени. Поделите овај линк или га користите у QR коду. Приказаће се као: ваш-slug.iq-rest.com"
     },
     "general": {
       "save": "Sačuvaj",

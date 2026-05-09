@@ -1852,7 +1852,7 @@
       "hideTitleOn": "Visibile",
       "hideTitleOff": "Nascosto",
       "slug": "Indirizzo web",
-      "slugPrefix": "iq-rest.com/m/",
+      "slugPrefix": ".iq-rest.com",
       "slugPlaceholder": "my-restaurant",
       "currency": "Valuta",
       "currencyPlaceholder": "Seleziona valuta",
@@ -1889,7 +1889,7 @@
       "ordersAddressOff": "Indirizzo",
       "orderModeHint": "Gli ordini interni vengono salvati nella dashboard. Gli ordini WhatsApp vengono inviati direttamente al tuo WhatsApp. Puoi attivare entrambi contemporaneamente.",
       "ordersFieldsDescription": "I campi attivati saranno obbligatori per il cliente durante l'ordine.",
-      "slugHint": "Questo è il tuo indirizzo URL unico dove i clienti possono visualizzare il tuo menu. Condividi questo link o usalo nel tuo codice QR. Apparirà come: iq-rest.com/m/tuo-slug"
+      "slugHint": "Questo è il tuo indirizzo URL unico dove i clienti possono visualizzare il tuo menu. Condividi questo link o usalo nel tuo codice QR. Apparirà come: tuo-slug.iq-rest.com"
     },
     "general": {
       "save": "Salva",

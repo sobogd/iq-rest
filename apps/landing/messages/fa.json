@@ -1852,7 +1852,7 @@
       "hideTitleOn": "Visible",
       "hideTitleOff": "Hidden",
       "slug": "Website Address",
-      "slugPrefix": "iq-rest.com/m/",
+      "slugPrefix": ".iq-rest.com",
       "slugPlaceholder": "my-restaurant",
       "currency": "Currency",
       "currencyPlaceholder": "Select currency",
@@ -1889,7 +1889,7 @@
       "ordersAddressOff": "آدرس",
       "orderModeHint": "سفارشات داخلی در پنل ذخیره می‌شوند. سفارشات واتساپ مستقیماً به واتساپ شما ارسال می‌شوند. می‌توانید هر دو را همزمان فعال کنید.",
       "ordersFieldsDescription": "فیلدهای فعال برای مشتری هنگام ثبت سفارش اجباری خواهند بود.",
-      "slugHint": "این آدرس URL منحصر به فرد شماست که مشتریان می‌توانند منوی شما را مشاهده کنند. این لینک را به اشتراک بگذارید یا در کد QR خود استفاده کنید. به صورت زیر نمایش داده می‌شود: iq-rest.com/m/slug-شما"
+      "slugHint": "این آدرس URL منحصر به فرد شماست که مشتریان می‌توانند منوی شما را مشاهده کنند. این لینک را به اشتراک بگذارید یا در کد QR خود استفاده کنید. به صورت زیر نمایش داده می‌شود: slug-شما.iq-rest.com"
     },
     "general": {
       "save": "ذخیره",

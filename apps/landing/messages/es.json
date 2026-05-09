@@ -1852,7 +1852,7 @@
       "hideTitleOn": "Visible",
       "hideTitleOff": "Oculto",
       "slug": "Dirección web",
-      "slugPrefix": "iq-rest.com/m/",
+      "slugPrefix": ".iq-rest.com",
       "slugPlaceholder": "my-restaurant",
       "currency": "Moneda",
       "currencyPlaceholder": "Seleccionar moneda",
@@ -1889,7 +1889,7 @@
       "ordersAddressOff": "Dirección",
       "orderModeHint": "Los pedidos internos se guardan en el panel. Los pedidos de WhatsApp se envían directamente a tu WhatsApp. Puedes activar ambos a la vez.",
       "ordersFieldsDescription": "Los campos activados serán obligatorios para el cliente al realizar un pedido.",
-      "slugHint": "Esta es la dirección URL única donde los clientes pueden ver tu menú. Comparte este enlace o úsalo en tu código QR. Aparecerá como: iq-rest.com/m/tu-slug"
+      "slugHint": "Esta es la dirección URL única donde los clientes pueden ver tu menú. Comparte este enlace o úsalo en tu código QR. Aparecerá como: tu-slug.iq-rest.com"
     },
     "general": {
       "save": "Guardar",

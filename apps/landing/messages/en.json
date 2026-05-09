@@ -1883,7 +1883,7 @@
       "preview": "Preview",
       "previewButton": "Book a Table",
       "slug": "Website Address",
-      "slugPrefix": "iq-rest.com/m/",
+      "slugPrefix": ".iq-rest.com",
       "slugPlaceholder": "my-restaurant",
       "currency": "Currency",
       "currencyPlaceholder": "Select currency",
@@ -1927,7 +1927,7 @@
       "ordersAddressOff": "Address",
       "orderModeHint": "Internal orders are saved in the dashboard. WhatsApp orders are sent directly to your WhatsApp. You can enable both at the same time.",
       "ordersFieldsDescription": "Enabled fields will be required for the customer to fill in when placing an order.",
-      "slugHint": "This is your unique URL address where customers can view your menu. Share this link or use it in your QR code. It will appear as: iq-rest.com/m/your-slug"
+      "slugHint": "This is your unique URL address where customers can view your menu. Share this link or use it in your QR code. It will appear as: your-slug.iq-rest.com"
     },
     "general": {
       "save": "Save",

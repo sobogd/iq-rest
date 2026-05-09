@@ -1852,7 +1852,7 @@
       "hideTitleOn": "Visible",
       "hideTitleOff": "Hidden",
       "slug": "Website Address",
-      "slugPrefix": "iq-rest.com/m/",
+      "slugPrefix": ".iq-rest.com",
       "slugPlaceholder": "my-restaurant",
       "currency": "Currency",
       "currencyPlaceholder": "Select currency",
@@ -1889,7 +1889,7 @@
       "ordersAddressOff": "Adrese",
       "orderModeHint": "Iekšējie pasūtījumi tiek saglabāti panelī. WhatsApp pasūtījumi tiek nosūtīti tieši uz jūsu WhatsApp. Varat aktivizēt abus vienlaicīgi.",
       "ordersFieldsDescription": "Aktivizētie lauki būs obligāti klientam, veicot pasūtījumu.",
-      "slugHint": "Šī ir jūsu unikālā URL adrese, kur klienti var apskatīt jūsu ēdienkarti. Dalieties ar šo saiti vai izmantojiet to savā QR kodā. Tā parādīsies kā: iq-rest.com/m/jūsu-slug"
+      "slugHint": "Šī ir jūsu unikālā URL adrese, kur klienti var apskatīt jūsu ēdienkarti. Dalieties ar šo saiti vai izmantojiet to savā QR kodā. Tā parādīsies kā: jūsu-slug.iq-rest.com"
     },
     "general": {
       "save": "Saglabāt",

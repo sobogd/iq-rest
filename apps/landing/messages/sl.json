@@ -1852,7 +1852,7 @@
       "hideTitleOn": "Visible",
       "hideTitleOff": "Hidden",
       "slug": "Website Address",
-      "slugPrefix": "iq-rest.com/m/",
+      "slugPrefix": ".iq-rest.com",
       "slugPlaceholder": "my-restaurant",
       "currency": "Currency",
       "currencyPlaceholder": "Select currency",
@@ -1889,7 +1889,7 @@
       "ordersAddressOff": "Naslov",
       "orderModeHint": "Interna naročila se shranjujejo v nadzorni plošči. WhatsApp naročila se pošiljajo neposredno na vaš WhatsApp. Lahko aktivirate oboje hkrati.",
       "ordersFieldsDescription": "Aktivirana polja bodo za stranko obvezna pri oddaji naročila.",
-      "slugHint": "To je vaš edinstven URL naslov, kjer si lahko stranke ogledajo vaš meni. Delite to povezavo ali jo uporabite v QR kodi. Prikazal se bo kot: iq-rest.com/m/vaš-slug"
+      "slugHint": "To je vaš edinstven URL naslov, kjer si lahko stranke ogledajo vaš meni. Delite to povezavo ali jo uporabite v QR kodi. Prikazal se bo kot: vaš-slug.iq-rest.com"
     },
     "general": {
       "save": "Shrani",

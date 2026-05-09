@@ -1852,7 +1852,7 @@
       "hideTitleOn": "Visible",
       "hideTitleOff": "Hidden",
       "slug": "Website Address",
-      "slugPrefix": "iq-rest.com/m/",
+      "slugPrefix": ".iq-rest.com",
       "slugPlaceholder": "my-restaurant",
       "currency": "Currency",
       "currencyPlaceholder": "Select currency",
@@ -1889,7 +1889,7 @@
       "ordersAddressOff": "Adresas",
       "orderModeHint": "Vidiniai užsakymai saugomi skydelyje. WhatsApp užsakymai siunčiami tiesiai į jūsų WhatsApp. Galite aktyvuoti abu vienu metu.",
       "ordersFieldsDescription": "Aktyvuoti laukai bus privalomi klientui pateikiant užsakymą.",
-      "slugHint": "Tai yra jūsų unikalus URL adresas, kuriuo klientai gali peržiūrėti jūsų meniu. Dalinkitės šia nuoroda arba naudokite ją savo QR kode. Ji bus rodoma kaip: iq-rest.com/m/jūsų-slug"
+      "slugHint": "Tai yra jūsų unikalus URL adresas, kuriuo klientai gali peržiūrėti jūsų meniu. Dalinkitės šia nuoroda arba naudokite ją savo QR kode. Ji bus rodoma kaip: jūsų-slug.iq-rest.com"
     },
     "general": {
       "save": "Išsaugoti",

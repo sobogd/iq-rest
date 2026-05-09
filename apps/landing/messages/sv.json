@@ -1852,7 +1852,7 @@
       "hideTitleOn": "Visible",
       "hideTitleOff": "Hidden",
       "slug": "Website Address",
-      "slugPrefix": "iq-rest.com/m/",
+      "slugPrefix": ".iq-rest.com",
       "slugPlaceholder": "my-restaurant",
       "currency": "Currency",
       "currencyPlaceholder": "Select currency",
@@ -1889,7 +1889,7 @@
       "ordersAddressOff": "Adress",
       "orderModeHint": "Interna beställningar sparas i panelen. WhatsApp-beställningar skickas direkt till din WhatsApp. Du kan aktivera båda samtidigt.",
       "ordersFieldsDescription": "Aktiverade fält kommer att vara obligatoriska för kunden vid beställning.",
-      "slugHint": "Detta är din unika URL-adress där kunder kan se din meny. Dela denna länk eller använd den i din QR-kod. Den visas som: iq-rest.com/m/din-slug"
+      "slugHint": "Detta är din unika URL-adress där kunder kan se din meny. Dela denna länk eller använd den i din QR-kod. Den visas som: din-slug.iq-rest.com"
     },
     "general": {
       "save": "Spara",
