@@ -24,6 +24,7 @@ export interface RestaurantPayload {
   orderAddressEnabled: boolean;
   x: string | null;
   y: string | null;
+  googlePlaceId: string | null;
   company: {
     id: string;
     plan: string;

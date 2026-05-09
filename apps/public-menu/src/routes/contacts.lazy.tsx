@@ -26,7 +26,13 @@ function ContactsPage() {
   const lat = hasCoords ? (latRaw as number) : fallback.lat;
   const lng = hasCoords ? (lngRaw as number) : fallback.lng;
   const zoom = hasCoords ? 15 : fallback.zoom;
-  const mapUrl = hasCoords ? `https://www.google.com/maps?q=${lat},${lng}` : null;
+  // When the dashboard captured a Google Place ID, append `query_place_id` so
+  // the maps app opens the exact business — disambiguates POIs that share an
+  // address (e.g. multiple restaurants in one mall).
+  const placeId = restaurant.googlePlaceId;
+  const mapUrl = hasCoords
+    ? `https://www.google.com/maps/search/?api=1&query=${lat},${lng}${placeId ? `&query_place_id=${encodeURIComponent(placeId)}` : ""}`
+    : null;
   const mapsKey = import.meta.env.VITE_GOOGLE_MAPS_KEY as string | undefined;
   const mapRef = useRef<HTMLDivElement>(null);
 
