@@ -173,7 +173,7 @@ export function MenuFeed() {
                       <div className={item.imageUrl ? "p-5" : "px-5 pb-5"}>
                         <div className="flex justify-between items-start gap-4">
                           <h3 className="font-semibold text-lg text-black">{name}</h3>
-                          {!ordersEnabled ? (
+                          {!ordersEnabled && Number(item.price) > 0 ? (
                             <span className="font-bold text-lg shrink-0 text-black">
                               {formatPrice(item.price, restaurant.currency)}
                             </span>
@@ -200,9 +200,13 @@ export function MenuFeed() {
                         ) : null}
                         {ordersEnabled ? (
                           <div className="mt-3 flex items-center justify-between">
-                            <span className="font-bold text-lg text-black">
-                              {formatPrice(item.price, restaurant.currency)}
-                            </span>
+                            {Number(item.price) > 0 ? (
+                              <span className="font-bold text-lg text-black">
+                                {formatPrice(item.price, restaurant.currency)}
+                              </span>
+                            ) : (
+                              <span />
+                            )}
                             {qty === 0 ? (
                               <button
                                 onClick={() => add(item.id)}
