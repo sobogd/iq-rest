@@ -49,8 +49,8 @@ export function QrMenuPage({ initialSlug, tableNumbers }: QrMenuPageProps) {
 
   const menuUrl = slug
     ? selectedTable !== "none"
-      ? `${slug}.iq-rest.com?table=${selectedTable}`
-      : `${slug}.iq-rest.com`
+      ? `https://${slug}.iq-rest.com?table=${selectedTable}`
+      : `https://${slug}.iq-rest.com`
     : "";
   const paper = PAPER_FORMATS[paperFormat];
 
@@ -245,8 +245,7 @@ export function QrMenuPage({ initialSlug, tableNumbers }: QrMenuPageProps) {
   }
 
   const handleCopyLink = () => {
-    const fullUrl = `https://${menuUrl}`;
-    navigator.clipboard.writeText(fullUrl);
+    navigator.clipboard.writeText(menuUrl);
     toast.success(t("copyUrl"));
   };
 
