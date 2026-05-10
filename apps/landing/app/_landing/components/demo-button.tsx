@@ -105,7 +105,7 @@ export function DemoButton({
                     className="absolute border-0 origin-top-left"
                     style={{ width: "125%", height: "125%", transform: "scale(0.8)" }}
                     title="Menu Preview"
-                    onLoad={() => setTimeout(() => setLoading(false), 500)}
+                    onLoad={() => setLoading(false)}
                   />
                 </div>
               </div>
