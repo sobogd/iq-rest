@@ -14,11 +14,9 @@ export const THEME: LandingTexts = {
   },
   hero: {
     ...DEFAULT.hero,
-    qr: {
-      headline: "Código QR para tu Menú de Restaurante",
-      sub:
-        "Genera tu código QR profesional en 5 minutos. Imprimible para las mesas, los clientes escanean con la cámara y el menú se abre al instante. Sin apps, sin comisiones.",
-    },
+    headline: "Código QR para tu Menú de Restaurante",
+    sub:
+      "Genera tu código QR profesional en 5 minutos. Imprimible para las mesas, los clientes escanean con la cámara y el menú se abre al instante. Sin apps, sin comisiones.",
   },
   scan: {
     ...DEFAULT.scan,

@@ -53,18 +53,16 @@ export default async function LandingPage({ searchParams }: { searchParams: Sear
   const sp = await searchParams;
   await trackGclidArrival(sp, LOCALE);
   const TEXTS = pickTheme(sp.theme);
-  const heroVariant = (typeof sp.type === "string" && sp.type.toUpperCase() === "WEB") ? "WEB" : "QR";
   const currency = await getCurrency();
 
   return (
     <main className="relative">
-      <PageTracker variant={heroVariant} />
+      <PageTracker />
       <LandingHeader texts={TEXTS.header} locale={LOCALE} />
       <div className="space-y-10 sm:space-y-0">
       <Hero
         texts={TEXTS.hero}
-        variant={heroVariant}
-        ctaText={heroVariant === "WEB" ? TEXTS.ctaSite : TEXTS.ctaText}
+        ctaText={TEXTS.ctaText}
         demoText={TEXTS.demoText}
         microcopy={TEXTS.microcopy}
         locale={LOCALE}

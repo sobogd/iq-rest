@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "QR menukaart, directe bestellingen, reserveringen en AI-vertaling. Klaar in 5 minuten. 14 dagen gratis — geen creditcard.",
   },
 
-  ctaText: "Gratis proberen", ctaSite: "Website maken",
+  ctaText: "Gratis proberen",
   demoText: "Live demo bekijken",
   microcopy: "14 dagen gratis · Geen creditcard · Stop wanneer je wilt",
 
@@ -31,8 +31,8 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Restaurants", "Cafés", "Bars", "Hotels", "Pizzeria's"],
-    qr: { headline: "QR-menu in 5 minuten.", sub: "Kant-en-klare restaurantwebsite — zonder ontwikkelaars of aannemers. Directe bestellingen, reserveringen en gastanalyses in één abonnement." },
-    web: { headline: "Restaurant-site in 5 min.", sub: "Kant-en-klare restaurantwebsite — zonder ontwikkelaars of aannemers. Directe bestellingen, reserveringen en gastanalyses in één abonnement." },
+    headline: "QR-menu in 5 minuten.",
+    sub: "Kant-en-klare restaurantwebsite — zonder ontwikkelaars of aannemers. Directe bestellingen, reserveringen en gastanalyses in één abonnement.",
     dynamicHeadlines: ["0% commissie.", "35 talen met AI.", "Online bestellen.", "Reserveren 24/7.", "Premium design."],
     painBullets: ["0% commissie: Alle bestellingen gaan direct naar jou.", "AI-vertaling: 35 talen om de omzet van toeristen te verhogen.", "Reserveren 24/7: Volle bak zonder extra telefoontjes.", "Flexibele prijzen: Update je menu in een paar seconden."],
     rating: "4,9 · meer dan 500 restaurants in 30+ landen",

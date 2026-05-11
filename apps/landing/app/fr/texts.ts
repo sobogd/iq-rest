@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "Carte QR, commandes directes, réservations et traduction IA. Prêt en 5 minutes. 14 jours gratuits — sans carte.",
   },
 
-  ctaText: "Essai gratuit", ctaSite: "Créer mon site",
+  ctaText: "Essai gratuit",
   demoText: "Voir la démo",
   microcopy: "14 jours gratuits · Sans carte · Annulez quand vous voulez",
 
@@ -31,8 +31,8 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Restaurants", "Cafés", "Bars", "Hôtels", "Pizzerias"],
-    qr: { headline: "Menu QR en 5 minutes.", sub: "Site web prêt à l'emploi pour votre restaurant — sans développeurs ni prestataires. Commandes directes, réservations et analyse client dans un seul abonnement." },
-    web: { headline: "Site restaurant en 5 minutes.", sub: "Site web prêt à l'emploi pour votre restaurant — sans développeurs ni prestataires. Commandes directes, réservations et analyse client dans un seul abonnement." },
+    headline: "Menu QR en 5 minutes.",
+    sub: "Site web prêt à l'emploi pour votre restaurant — sans développeurs ni prestataires. Commandes directes, réservations et analyse client dans un seul abonnement.",
     dynamicHeadlines: ["0% commission.", "35 langues avec IA.", "Commandes en ligne.", "Réservations 24/7.", "Design premium."],
     painBullets: ["0% commission : Toutes les commandes vous parviennent directement.", "Traduction IA : 35 langues pour booster le ticket moyen des touristes.", "Réservations 24/7 : Salle comble sans appels incessants.", "Prix flexibles : Mettez à jour votre carte en quelques secondes."],
     rating: "4,9 · plus de 500 restaurants dans 30+ pays",

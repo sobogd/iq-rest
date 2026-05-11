@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "QR-Speisekarte, Direktbestellungen, Reservierungen & KI-Übersetzung. In 5 Minuten startklar. 14 Tage gratis — ohne Kreditkarte.",
   },
 
-  ctaText: "Kostenlos testen", ctaSite: "Website erstellen",
+  ctaText: "Kostenlos testen",
   demoText: "Live-Demo ansehen",
   microcopy: "14 Tage gratis · Keine Kreditkarte · Jederzeit kündbar",
 
@@ -31,8 +31,8 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Restaurants", "Cafés", "Bars", "Hotels", "Pizzerien"],
-    qr: { headline: "QR-Karte in 5 Minuten.", sub: "Fertige Restaurant-Website — ohne Entwickler und Auftragnehmer. Direktbestellungen, Reservierungen und Gast-Analysen in einem Abo." },
-    web: { headline: "Restaurant-Webseite\nin 5 Min.", sub: "Fertige Restaurant-Website — ohne Entwickler und Auftragnehmer. Direktbestellungen, Reservierungen und Gast-Analysen in einem Abo." },
+    headline: "QR-Karte in 5 Minuten.",
+    sub: "Fertige Restaurant-Website — ohne Entwickler und Auftragnehmer. Direktbestellungen, Reservierungen und Gast-Analysen in einem Abo.",
     dynamicHeadlines: ["0% Provision.", "35 Sprachen mit KI.", "Online-Bestellung.", "Reservierung 24/7.", "Premium-Design."],
     painBullets: ["0% Provision: Alle Bestellungen gehen direkt an Sie.", "KI-Übersetzung: 35 Sprachen für mehr Umsatz durch Touristen.", "Reservierung 24/7: Volle Auslastung ohne Telefonstress.", "Flexible Preise: Menü in Sekundenschnelle aktualisieren."],
     rating: "4,9 · über 500 Restaurants in 30+ Ländern",

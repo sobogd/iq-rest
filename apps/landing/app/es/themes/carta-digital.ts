@@ -14,10 +14,8 @@ export const THEME: LandingTexts = {
   },
   hero: {
     ...DEFAULT.hero,
-    qr: {
-      headline: "Carta Digital para Restaurantes",
-      sub:
-        "Crea tu carta digital interactiva en 5 minutos. Sin agencias ni diseñadores. Editor móvil, pedidos directos sin comisiones, reservas 24/7. Lista hoy.",
-    },
+    headline: "Carta Digital para Restaurantes",
+    sub:
+      "Crea tu carta digital interactiva en 5 minutos. Sin agencias ni diseñadores. Editor móvil, pedidos directos sin comisiones, reservas 24/7. Lista hoy.",
   },
 };

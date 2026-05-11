@@ -2,22 +2,20 @@ import Image from "next/image";
 import { CtaButton } from "./cta-button";
 import { DemoButton } from "./demo-button";
 import { RotatingAccent } from "./rotating-accent";
-import type { HeroFlavor, LandingTexts } from "../types";
+import type { LandingTexts } from "../types";
 import sampleMain from "@/public/samples/sample-main.webp";
 import sampleMainPage from "@/public/samples/sample-main-page.webp";
 import sampleContacts from "@/public/samples/sample-contacts.webp";
 
 interface HeroProps {
   texts: LandingTexts["hero"];
-  variant: HeroFlavor;
   ctaText: string;
   demoText: string;
   microcopy: string;
   locale: string;
 }
 
-export function Hero({ texts, variant, ctaText, demoText, microcopy, locale }: HeroProps) {
-  const active = variant === "WEB" ? texts.web : texts.qr;
+export function Hero({ texts, ctaText, demoText, microcopy, locale }: HeroProps) {
   return (
     <section data-section="hero" className="container mx-auto px-4 pt-8 pb-4 lg:pt-16 lg:pb-16">
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.3fr_0.85fr] lg:gap-x-16 lg:gap-y-8 lg:items-center lg:[grid-template-areas:'header_images']">
@@ -47,12 +45,12 @@ export function Hero({ texts, variant, ctaText, demoText, microcopy, locale }: H
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.1] mb-4">
-            <span className="block whitespace-pre-line sm:whitespace-normal">{active.headline}</span>
+            <span className="block whitespace-pre-line sm:whitespace-normal">{texts.headline}</span>
             <RotatingAccent items={texts.dynamicHeadlines} className="block" />
           </h1>
 
           <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-xl mb-7 leading-snug">
-            {active.sub}
+            {texts.sub}
           </p>
 
           <div className="w-full">

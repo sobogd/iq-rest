@@ -14,10 +14,8 @@ export const THEME: LandingTexts = {
   },
   hero: {
     ...DEFAULT.hero,
-    qr: {
-      headline: "Menú Digital para Restaurantes",
-      sub:
-        "Tu menú digital con código QR listo en 5 minutos. Editor móvil, pedidos directos sin comisiones, reservas 24/7, traducción IA a 35 idiomas. Una sola suscripción.",
-    },
+    headline: "Menú Digital para Restaurantes",
+    sub:
+      "Tu menú digital con código QR listo en 5 minutos. Editor móvil, pedidos directos sin comisiones, reservas 24/7, traducción IA a 35 idiomas. Una sola suscripción.",
   },
 };
