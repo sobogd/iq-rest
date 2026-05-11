@@ -11,39 +11,47 @@ import { ScanSection } from "@/app/_landing/components/scan-section";
 import { How } from "@/app/_landing/components/how";
 import { getCurrency } from "@/app/_landing/lib/get-currency";
 import { PageTracker } from "@/app/_landing/components/page-tracker";
-import { TEXTS } from "./texts";
+import { TEXTS as DEFAULT_TEXTS } from "./texts";
+import { pickTheme } from "./themes";
 import { trackGclidArrival } from "@/app/_landing/lib/track-gclid-arrival";
 
 const LOCALE = "it";
 
 export const dynamic = "force-dynamic";
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://iq-rest.com"),
-  title: TEXTS.meta.title,
-  description: TEXTS.meta.description,
-  alternates: { canonical: TEXTS.meta.canonical },
-  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
-  openGraph: {
-    title: TEXTS.meta.ogTitle,
-    description: TEXTS.meta.ogDescription,
-    url: TEXTS.meta.canonical,
-    siteName: "IQ Rest",
-    locale: TEXTS.meta.ogLocale,
-    type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "IQ Rest QR menu" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: TEXTS.meta.ogTitle,
-    description: TEXTS.meta.ogDescription,
-    images: ["/og-image.png"],
-  },
-};
+type SearchParamsP = Promise<Record<string, string | string[] | undefined>>;
 
-export default async function LandingPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
+export async function generateMetadata({ searchParams }: { searchParams: SearchParamsP }): Promise<Metadata> {
+  const sp = await searchParams;
+  const TEXTS = pickTheme(sp.theme);
+  return {
+    metadataBase: new URL("https://iq-rest.com"),
+    title: TEXTS.meta.title,
+    description: TEXTS.meta.description,
+    alternates: { canonical: DEFAULT_TEXTS.meta.canonical },
+    robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+    openGraph: {
+      title: TEXTS.meta.ogTitle,
+      description: TEXTS.meta.ogDescription,
+      url: DEFAULT_TEXTS.meta.canonical,
+      siteName: "IQ Rest",
+      locale: TEXTS.meta.ogLocale,
+      type: "website",
+      images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "IQ Rest QR menu" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: TEXTS.meta.ogTitle,
+      description: TEXTS.meta.ogDescription,
+      images: ["/og-image.png"],
+    },
+  };
+}
+
+export default async function LandingPage({ searchParams }: { searchParams: SearchParamsP }) {
   const sp = await searchParams;
   await trackGclidArrival(sp, LOCALE);
+  const TEXTS = pickTheme(sp.theme);
   const currency = await getCurrency();
 
   return (
@@ -59,9 +67,15 @@ export default async function LandingPage({ searchParams }: { searchParams: Prom
         locale={LOCALE}
       />
       <ScanSection texts={TEXTS.scan} locale={LOCALE} />
-      <Features texts={TEXTS.features} />
-      <Founder texts={TEXTS.founder} />
-      <How texts={TEXTS.how} />
+      <section id="features" data-section="features" className="scroll-mt-16">
+        <Features texts={TEXTS.features} />
+      </section>
+      <section id="founder" data-section="founder" className="scroll-mt-16">
+        <Founder texts={TEXTS.founder} />
+      </section>
+      <section id="how" data-section="how" className="scroll-mt-16">
+        <How texts={TEXTS.how} />
+      </section>
       <section id="pricing" data-section="pricing" className="scroll-mt-16 py-8 sm:py-16">
         <LandingPricing
           texts={TEXTS.pricing}
