@@ -62,6 +62,20 @@ function decodeCfHeader(raw: string | null): string | null {
   try { return decodeURIComponent(raw); } catch { return raw; }
 }
 
+/** Anonymize client IP: IPv4 last octet → 0, IPv6 keep first 4 groups → /64. */
+function anonymizeIp(raw: string | null): string | null {
+  if (!raw) return null;
+  const ip = raw.trim().split(",")[0]?.trim();
+  if (!ip) return null;
+  if (ip.includes(":")) {
+    const parts = ip.split(":").filter((p) => p.length > 0);
+    return parts.slice(0, 4).join(":") + "::";
+  }
+  const oct = ip.split(".");
+  if (oct.length !== 4) return null;
+  return `${oct[0]}.${oct[1]}.${oct[2]}.0`;
+}
+
 /** When ?gclid=... arrives, write the event to usage_events using the
  *  visitor's CF headers (not the SSR's own geo) and redirect to a clean URL. */
 export async function trackGclidArrival(
@@ -75,6 +89,7 @@ export async function trackGclidArrival(
   const country = (h.get("cf-ipcountry") || "").toUpperCase().slice(0, 2) || "XX";
   const region = (decodeCfHeader(h.get("cf-region")) || "").slice(0, 100);
   const userAgent = h.get("user-agent");
+  const ip = anonymizeIp(h.get("cf-connecting-ip") || h.get("x-forwarded-for"));
 
   const kw = pickStr(searchParams, "kw");
   const term = pickStr(searchParams, "term");
@@ -95,8 +110,8 @@ export async function trackGclidArrival(
 
   try {
     await prisma.$executeRaw`
-      INSERT INTO usage_events (id, at, event, country, region, device, platform, gclid, ad_params, "companyId")
-      VALUES (${id}, ${at}, ${eventName}, ${country}, ${region}, ${device}, ${platform}, ${gclid}, ${adParams}, NULL)
+      INSERT INTO usage_events (id, at, event, country, region, device, platform, gclid, ad_params, "companyId", ip)
+      VALUES (${id}, ${at}, ${eventName}, ${country}, ${region}, ${device}, ${platform}, ${gclid}, ${adParams}, NULL, ${ip})
     `;
   } catch {
     // ignore — event capture is best-effort
