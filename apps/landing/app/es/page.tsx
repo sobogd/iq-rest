@@ -61,9 +61,15 @@ export default async function LandingPage({ searchParams }: { searchParams: Prom
         locale={LOCALE}
       />
       <ScanSection texts={TEXTS.scan} locale={LOCALE} />
-      <Features texts={TEXTS.features} />
-      <Founder texts={TEXTS.founder} />
-      <How texts={TEXTS.how} />
+      <section id="features" data-section="features" className="scroll-mt-16">
+        <Features texts={TEXTS.features} />
+      </section>
+      <section id="founder" data-section="founder" className="scroll-mt-16">
+        <Founder texts={TEXTS.founder} />
+      </section>
+      <section id="how" data-section="how" className="scroll-mt-16">
+        <How texts={TEXTS.how} />
+      </section>
       <section id="pricing" data-section="pricing" className="scroll-mt-16 py-8 sm:py-16">
         <LandingPricing
           texts={TEXTS.pricing}
