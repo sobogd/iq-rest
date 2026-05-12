@@ -1,11 +1,10 @@
-import Image from "next/image";
 import { CtaButton } from "./cta-button";
 import { DemoButton } from "./demo-button";
 import { RotatingAccent } from "./rotating-accent";
 import type { LandingTexts } from "../types";
-import sampleMain from "@/public/samples/sample-main.webp";
-import sampleMainPage from "@/public/samples/sample-main-page.webp";
-import sampleContacts from "@/public/samples/sample-contacts.webp";
+import { MockHome } from "./menu-mockup/mock-home";
+import { MockMenu } from "./menu-mockup/mock-menu";
+import { MockMenuText } from "./menu-mockup/mock-menu-text";
 
 interface HeroProps {
   texts: LandingTexts["hero"];
@@ -72,32 +71,11 @@ export function Hero({ texts, ctaText, demoText, microcopy, locale }: HeroProps)
         </div>
 
         {/* Images + mobile rating */}
-        <div className="w-full max-w-[480px] lg:max-w-[500px] mx-auto px-8 sm:px-6 lg:px-0 lg:[grid-area:images]">
+        <div className="w-full max-w-[540px] lg:max-w-[600px] mx-auto px-4 sm:px-2 lg:px-0 lg:[grid-area:images] py-6 lg:py-0 -translate-y-[10px]">
           <div className="relative w-full aspect-[5/4]">
-            <Image
-              src={sampleMain}
-              alt=""
-              priority
-              placeholder="blur"
-              sizes="(min-width: 1024px) 18vw, 30vw"
-              className="absolute left-0 top-0 w-[36%] h-auto rounded-[2rem] overflow-hidden z-0"
-            />
-            <Image
-              src={sampleContacts}
-              alt=""
-              priority
-              placeholder="blur"
-              sizes="(min-width: 1024px) 18vw, 30vw"
-              className="absolute right-0 bottom-0 w-[36%] h-auto rounded-[2rem] overflow-hidden z-0"
-            />
-            <Image
-              src={sampleMainPage}
-              alt=""
-              priority
-              placeholder="blur"
-              sizes="(min-width: 1024px) 22vw, 38vw"
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[44%] h-auto rounded-[2rem] overflow-hidden z-10"
-            />
+            <MockHome locale={locale} className="absolute left-0 bottom-[13%] w-[36%] z-0" />
+            <MockMenuText locale={locale} className="absolute right-0 top-[13%] w-[36%] z-0" />
+            <MockMenu locale={locale} className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[46%] z-10" />
           </div>
           <div className="mt-10 flex lg:hidden flex-col items-center gap-1 text-sm font-medium text-muted-foreground">
             <span className="text-amber-400">★★★★★</span>

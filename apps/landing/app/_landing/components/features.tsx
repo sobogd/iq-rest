@@ -38,8 +38,8 @@ export function Features({ texts }: FeaturesProps) {
                 ? "[grid-template-areas:'title_image''desc_image'] sm:[grid-template-areas:'image_title''image_desc']"
                 : "[grid-template-areas:'image_title''image_desc']";
               const imageEdge = mirror
-                ? "-mr-4 sm:mr-0 rounded-r-none rounded-l-3xl sm:rounded-3xl border-y-[6px] border-l-[6px] sm:border-r-[6px] border-[hsl(0_0%_8%)]"
-                : "-ml-4 sm:ml-0 rounded-l-none rounded-r-3xl sm:rounded-3xl border-y-[6px] border-r-[6px] sm:border-l-[6px] border-[hsl(0_0%_8%)]";
+                ? "-mr-4 sm:mr-0 rounded-r-none rounded-l-3xl sm:rounded-3xl border-y-[6px] border-l-[6px] sm:border-r-[6px] border-foreground/10"
+                : "-ml-4 sm:ml-0 rounded-l-none rounded-r-3xl sm:rounded-3xl border-y-[6px] border-r-[6px] sm:border-l-[6px] border-foreground/10";
               return (
                 <div
                   key={title}

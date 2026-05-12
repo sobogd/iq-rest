@@ -18,7 +18,7 @@ export function RotatingAccent({ items, intervalMs = 1500, className = "" }: Rot
   }, [items.length, intervalMs]);
 
   return (
-    <span className={"bg-gradient-to-br from-primary to-amber-400 bg-clip-text text-transparent " + className}>
+    <span className={"bg-gradient-to-br from-primary to-amber-400 bg-clip-text text-transparent leading-[1.25] pb-1 " + className}>
       {items[i] ?? ""}
     </span>
   );
