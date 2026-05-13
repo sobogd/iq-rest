@@ -37,6 +37,27 @@ export function LandingFooter({ texts, headerTexts: _headerTexts, locale, exclud
     <>
     <footer className="bg-muted/20" data-section="footer">
       <div className="container mx-auto px-4 py-8 sm:py-16">
+        {texts.keywordLinks && texts.keywordLinks.length > 0 ? (
+          <div className="mb-8 sm:mb-10">
+            {texts.keywordLinksHeading ? (
+              <p className="text-xs font-medium uppercase tracking-widest text-muted-foreground mb-3 text-center md:text-start">
+                {texts.keywordLinksHeading}
+              </p>
+            ) : null}
+            <nav className="flex flex-wrap items-center justify-center md:justify-start gap-x-5 gap-y-2 text-sm">
+              {texts.keywordLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => analytics.track(`land_footer_keyword_${slugify(link.href)}_click`)}
+                  className="text-foreground hover:text-primary transition-colors font-medium"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+          </div>
+        ) : null}
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10 md:gap-6">
           <nav className="flex flex-wrap items-center justify-center md:justify-start gap-x-5 gap-y-2 text-sm md:max-w-[50%]">
             {featureLinks.map((link) => (

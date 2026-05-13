@@ -142,6 +142,23 @@ html {
     @apply bg-background text-foreground;
   }
 
+  /* Section-stripe — slightly darker than the default bg-muted/20 (which
+   * renders nearly white over the page background). Light theme only;
+   * dark theme keeps Tailwind's default. Targets <section>/<footer>
+   * wrappers; cards inside <div>s unaffected. */
+  html:not(.dark) section.bg-muted\/20,
+  html:not(.dark) footer.bg-muted\/20 {
+    background-color: hsl(0 0% 97%);
+  }
+
+  /* Cards inside a darkened section-stripe (above) need contrast to stay
+   * visible. Force them to the page background colour so they read as
+   * white cards on the muted stripe. Light theme only. */
+  html:not(.dark) section.bg-muted\/20 .bg-muted\/20 {
+    background-color: hsl(var(--background));
+  }
+
+
   /* Suppress the default browser focus ring on mouse / touch / programmatic focus.
    * `:focus-visible` (keyboard navigation) keeps a subtle outline for accessibility. */
   *:focus { outline: none; }

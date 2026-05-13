@@ -11,47 +11,41 @@ import { ScanSection } from "@/app/_landing/components/scan-section";
 import { How } from "@/app/_landing/components/how";
 import { getCurrency } from "@/app/_landing/lib/get-currency";
 import { PageTracker } from "@/app/_landing/components/page-tracker";
-import { TEXTS as DEFAULT_TEXTS } from "./texts";
-import { pickTheme } from "./themes";
+import { TEXTS } from "./texts";
 import { trackGclidArrival } from "@/app/_landing/lib/track-gclid-arrival";
 
 const LOCALE = "pt";
 
 export const dynamic = "force-dynamic";
 
-type SearchParamsP = Promise<Record<string, string | string[] | undefined>>;
+export const metadata: Metadata = {
+  metadataBase: new URL("https://iq-rest.com"),
+  title: TEXTS.meta.title,
+  description: TEXTS.meta.description,
+  alternates: { canonical: TEXTS.meta.canonical },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  openGraph: {
+    title: TEXTS.meta.ogTitle,
+    description: TEXTS.meta.ogDescription,
+    url: TEXTS.meta.canonical,
+    siteName: "IQ Rest",
+    locale: TEXTS.meta.ogLocale,
+    type: "website",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "IQ Rest QR menu" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TEXTS.meta.ogTitle,
+    description: TEXTS.meta.ogDescription,
+    images: ["/og-image.png"],
+  },
+};
 
-export async function generateMetadata({ searchParams }: { searchParams: SearchParamsP }): Promise<Metadata> {
-  const sp = await searchParams;
-  const TEXTS = pickTheme(sp.theme);
-  return {
-    metadataBase: new URL("https://iq-rest.com"),
-    title: TEXTS.meta.title,
-    description: TEXTS.meta.description,
-    alternates: { canonical: DEFAULT_TEXTS.meta.canonical },
-    robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
-    openGraph: {
-      title: TEXTS.meta.ogTitle,
-      description: TEXTS.meta.ogDescription,
-      url: DEFAULT_TEXTS.meta.canonical,
-      siteName: "IQ Rest",
-      locale: TEXTS.meta.ogLocale,
-      type: "website",
-      images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "IQ Rest QR menu" }],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: TEXTS.meta.ogTitle,
-      description: TEXTS.meta.ogDescription,
-      images: ["/og-image.png"],
-    },
-  };
-}
+type SearchParamsP = Promise<Record<string, string | string[] | undefined>>;
 
 export default async function LandingPage({ searchParams }: { searchParams: SearchParamsP }) {
   const sp = await searchParams;
   await trackGclidArrival(sp, LOCALE);
-  const TEXTS = pickTheme(sp.theme);
   const currency = await getCurrency();
 
   return (

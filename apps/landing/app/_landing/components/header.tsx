@@ -9,9 +9,15 @@ import type { LandingTexts } from "../types";
 interface HeaderProps {
   texts: LandingTexts["header"];
   locale: string;
+  /** Force anchor links to point to the current page (e.g. on KW landing
+   *  pages that replicate the homepage section structure with #features,
+   *  #how, #pricing, #faq). Default false — feature pages keep the
+   *  cross-page `/locale#section` behaviour so clicks navigate back to the
+   *  homepage and scroll into view. */
+  useLocalAnchors?: boolean;
 }
 
-export function LandingHeader({ texts, locale }: HeaderProps) {
+export function LandingHeader({ texts, locale, useLocalAnchors = false }: HeaderProps) {
   const createHref = `${createUrl(locale)}&from=landing`;
   const signinHref = `${loginUrl(locale)}?from=landing`;
 
@@ -19,12 +25,15 @@ export function LandingHeader({ texts, locale }: HeaderProps) {
   const searchParams = useSearchParams();
   const showSignIn = !searchParams?.get("gclid");
 
-  // Anchor links only work on the landing root. On nested pages
-  // (feature pages, etc.) prefix them with the locale root so the
-  // click navigates to the homepage and then scrolls to the section.
+  // Anchor links resolve in two modes:
+  //  - homepage / KW landing page (`useLocalAnchors` true OR pathname is
+  //    `/{locale}`): local `#section` — browser scrolls within current page
+  //  - everywhere else (feature pages): `/{locale}#section` — full
+  //    navigation back to homepage, then scroll on arrival
   const pathname = usePathname() || "";
   const onHome = pathname === `/${locale}` || pathname === `/${locale}/`;
-  const anchor = (id: string) => (onHome ? `#${id}` : `/${locale}#${id}`);
+  const useLocal = useLocalAnchors || onHome;
+  const anchor = (id: string) => (useLocal ? `#${id}` : `/${locale}#${id}`);
   const homeHref = onHome ? "#top" : `/${locale}`;
 
   return (

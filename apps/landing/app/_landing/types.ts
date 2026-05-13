@@ -172,5 +172,7 @@ export type LandingTexts = {
     featureLinks: FooterLink[];
     navLinks: FooterLink[];
     copyrightTemplate: string;
+    keywordLinks?: FooterLink[];
+    keywordLinksHeading?: string;
   };
 };

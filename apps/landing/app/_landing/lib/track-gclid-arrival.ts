@@ -94,12 +94,10 @@ export async function trackGclidArrival(
   const kw = pickStr(searchParams, "kw");
   const term = pickStr(searchParams, "term");
   const campaign = pickStr(searchParams, "campaign");
-  const theme = pickStr(searchParams, "theme", 50);
   const adParamsObj: Record<string, string> = {};
   if (kw) adParamsObj.kw = kw;
   if (term) adParamsObj.term = term;
   if (campaign) adParamsObj.campaign = campaign;
-  if (theme) adParamsObj.theme = theme;
   const adParams = Object.keys(adParamsObj).length ? JSON.stringify(adParamsObj) : null;
 
   const safeLocale = /^[a-z]{2}$/.test(locale) ? locale : "xx";

@@ -62,5 +62,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   })
 
+  // Italian keyword-targeted landings (single-locale, no hreflang alternates).
+  const italianKwPages: RouteConfig[] = [
+    { path: '/it/menu-digitale', lastModified: '2026-05-13', changeFrequency: 'monthly', priority: 0.9 },
+    { path: '/it/menu-qr-code', lastModified: '2026-05-13', changeFrequency: 'monthly', priority: 0.9 },
+    { path: '/it/creare-menu-digitale', lastModified: '2026-05-13', changeFrequency: 'monthly', priority: 0.9 },
+  ]
+  italianKwPages.forEach(route => {
+    sitemapEntries.push({
+      url: `${baseUrl}${route.path}`,
+      lastModified: new Date(route.lastModified),
+      changeFrequency: route.changeFrequency,
+      priority: route.priority,
+    })
+  })
+
   return sitemapEntries
 }
