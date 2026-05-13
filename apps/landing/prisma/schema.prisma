@@ -164,6 +164,11 @@ model Restaurant {
   // [{ closed, from, to, lunchFrom, lunchTo }]. Null = legacy single-window
   // mode driven by workingHoursStart/End.
   reservationSchedule    Json?
+  // IANA timezone identifier (e.g. "Europe/Rome"). Mirrored from
+  // dashboard-api; migration created there. Used by reservation logic to
+  // interpret workingHours/reservationSchedule in the restaurant's local
+  // clock instead of the server's UTC clock.
+  timezone               String  @default("UTC")
 
   // WhatsApp orders
   ordersEnabled          Boolean @default(false)
