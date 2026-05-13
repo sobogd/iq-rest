@@ -89,7 +89,9 @@ export default async function MenuQrCodeLanding({
           locale={LOCALE}
         />
         <MobileAnchorNav texts={TEXTS.header} />
-        <ScanSection texts={TEXTS.scan} locale={LOCALE} />
+        <section id="scan" data-section="scan" className="scroll-mt-16">
+          <ScanSection texts={TEXTS.scan} locale={LOCALE} />
+        </section>
         <SeoContent />
         <section id="features" data-section="features" className="scroll-mt-16">
           <Features texts={TEXTS.features} />
