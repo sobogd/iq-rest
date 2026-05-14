@@ -130,12 +130,11 @@ function trackLandingFromRequest(request: NextRequest, locale: string): void {
   let region = request.headers.get("cf-region") || "";
   try { region = decodeURIComponent(region); } catch { /* ignore */ }
   region = region.slice(0, 100);
-  // Try every header nginx might be setting; the prod config explicitly
-  // populates cf-connecting-ip = $remote_addr but a wider fallback chain
-  // protects against future config drift.
+  // Identical chain to dashboard-api's UsageController.event so a visit
+  // tracked through both write paths yields the same anonymized IP and can
+  // be JOINed across the two event sources.
   const ip =
     request.headers.get("cf-connecting-ip") ||
-    request.headers.get("x-real-ip") ||
     request.headers.get("x-forwarded-for");
   const gclid = pickGclid(request.nextUrl.searchParams);
 
