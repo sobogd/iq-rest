@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Prestanite propuštati rezervacije dok kuhate.",
     subtitle:
       "Prihvaćajte rezervacije stolova restorana 24/7 — izravno s vašeg QR jelovnika, web stranice i Instagrama. Gosti biraju datum, vrijeme i veličinu društva, vi potvrđujete jednim dodirom, email podsjetnici se šalju automatski. Manje telefonskih poziva, manje no-shows, više pokrivenosti po večeri.",
-    trustLine: "4.9 · 500+ restorana u 30+ zemalja",
+    trustLine: "500+ restorana u 30+ zemalja",
   },
 
   seo: {

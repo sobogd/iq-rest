@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Karte in Minuten bauen. Für immer bearbeiten.",
     subtitle:
       "Tippe, um eine Kategorie hinzuzufügen, tippe, um ein Gericht hinzuzufügen, ziehe zum Sortieren, mach ein Foto vom Handy. Der einfachste Speisekarten-Editor am Markt — und jede Änderung geht in Sekunden für Gäste live.",
-    trustLine: "4,9 · 500+ Restaurants in 30+ Ländern",
+    trustLine: "500+ Restaurants in 30+ Ländern",
   },
 
   seo: {

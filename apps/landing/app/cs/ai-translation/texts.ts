@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Turisté nepřečtou vaše menu? Vyřešte to jedním ťuknutím.",
     subtitle:
       "Přeložte celé své restaurační menu do 35 jazyků s AI vyškolenou na kulinářský kontext. Názvy pokrmů zůstanou autentické, popisy znějí přirozeně — a turisté objednávají víc, když skutečně chápou, co dostávají.",
-    trustLine: "4.9 · 500+ restaurací ve 30+ zemích",
+    trustLine: "500+ restaurací ve 30+ zemích",
   },
 
   seo: {

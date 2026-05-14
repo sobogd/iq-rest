@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Ruokalistasi puhuu jokaisen turistin kieltä.",
     subtitle:
       "Monikielisen ravintolaruokalistan ei pitäisi olla projekti. IQ Restillä QR-ruokalistasi tunnistaa automaattisesti jokaisen vieraan puhelimen kielen ja tarjoaa sen millä tahansa 35 kielestä — mukaan lukien arabia ja persia oikeanlaisella oikealta vasemmalle -renderöinnillä.",
-    trustLine: "4,9 · yli 500 ravintolaa yli 30 maassa",
+    trustLine: "Yli 500 ravintolaa yli 30 maassa",
   },
 
   seo: {

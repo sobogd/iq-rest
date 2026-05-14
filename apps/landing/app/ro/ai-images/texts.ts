@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Poze de telefon. Meniu cu aspect pro.",
     subtitle:
       "Faci o poză unui preparat din orice unghi, încarci, iar AI-ul nostru o auto-încadrează, îi corectează culoarea și o comprimă într-o imagine de meniu cu încărcare rapidă — fără să piardă mâncarea. Calitate uluitoare pe orice dispozitiv, fără Lightroom sau designer.",
-    trustLine: "4.9 · 500+ restaurante în 30+ țări",
+    trustLine: "500+ restaurante în 30+ țări",
   },
 
   seo: {

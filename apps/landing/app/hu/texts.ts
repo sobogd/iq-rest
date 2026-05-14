@@ -19,7 +19,7 @@ export const TEXTS: LandingTexts = {
     sub: "Kész éttermi weboldal — fejlesztők és alvállalkozók nélkül. Közvetlen rendelések, foglalások és vendéganalitika egyetlen előfizetésben.",
     dynamicHeadlines: ["0% jutalék.", "35 nyelv MI-vel.", "Online rendelés.", "Foglalás 24/7.", "Premium design."],
     painBullets: ["0% jutalék: Minden rendelés közvetlenül Önhöz érkezik.", "AI fordítás: 35 nyelv a turisták fogyasztásának növelésére.", "Foglalás 24/7: Teltház felesleges telefonhívások nélkül.", "Rugalmas árak: Frissítse az étlapot pár másodperc alatt."],
-    rating: "4,9 · több mint 500 étterem 30+ országban",
+    rating: "Több mint 500 étterem 30+ országban",
   },
   features: {
     heading: "Minden, ami kell.", headingAccent: "Semmi, ami nem.",

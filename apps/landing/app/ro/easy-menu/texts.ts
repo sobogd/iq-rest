@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Construiește-ți meniul în câteva minute. Editează-l pentru totdeauna.",
     subtitle:
       "Atinge pentru a adăuga o categorie, atinge pentru a adăuga un preparat, trage pentru a reordona, fă o poză cu telefonul. Cel mai simplu editor de meniu pentru restaurant de pe piață — și fiecare modificare intră live pentru oaspeți în secunde.",
-    trustLine: "4.9 · 500+ restaurante în 30+ țări",
+    trustLine: "500+ restaurante în 30+ țări",
   },
 
   seo: {

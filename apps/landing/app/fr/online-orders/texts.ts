@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Commandes directes. Zéro commission. Direct en cuisine.",
     subtitle:
       "Arrêtez de payer 30 % à Uber Eats, Glovo et Wolt. Avec IQ Rest, vos clients scannent le QR, construisent leur commande sur leur téléphone et le ticket arrive dans votre cuisine — chaque centime reste chez vous.",
-    trustLine: "4.9 · 500+ restaurants dans 30+ pays",
+    trustLine: "500+ restaurants dans 30+ pays",
   },
 
   seo: {

@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Direkta beställningar. Noll provision. Rakt in i köket.",
     subtitle:
       "Sluta betala 30 % till Uber Eats, Glovo och Wolt. Med IQ Rest skannar gästerna QR-koden, bygger sin beställning på mobilen, och beställningen landar i ditt kök — varje krona stannar hos dig.",
-    trustLine: "4,9 · 500+ restauranger i 30+ länder",
+    trustLine: "500+ restauranger i 30+ länder",
   },
 
   seo: {

@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Ekte mennesker. Raske svar. Ingen chatbots.",
     subtitle:
       "Restaurant­programvare med restaurant­tilpasset støtte — send oss en melding på WhatsApp, e-post eller i appen, og et ekte menneske som faktisk forstår restauranter svarer på minutter, ikke dager. På hver plan, inkludert gratis prøveperiode.",
-    trustLine: "4,9 · 500+ restauranter i 30+ land",
+    trustLine: "500+ restauranter i 30+ land",
   },
 
   seo: {

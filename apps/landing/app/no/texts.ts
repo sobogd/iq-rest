@@ -19,7 +19,7 @@ export const TEXTS: LandingTexts = {
     sub: "Ferdig restaurantnettside — uten utviklere eller underleverandører. Direkte bestillinger, reservasjoner og gjesteanalyser i ett abonnement.",
     dynamicHeadlines: ["0% provisjon.", "35 språk med AI.", "Online-bestilling.", "Booking 24/7.", "Premium design."],
     painBullets: ["0% provisjon: Alle bestillinger går direkte til deg.", "AI-oversettelse: 35 språk øker salget til turister.", "Booking 24/7: Full restaurant uten ekstra telefoner.", "Fleksible priser: Oppdater menyen på sekunder."],
-    rating: "4,9 · over 500 restauranter i 30+ land",
+    rating: "Over 500 restauranter i 30+ land",
   },
   features: {
     heading: "Alt du trenger.", headingAccent: "Ingenting du ikke trenger.",

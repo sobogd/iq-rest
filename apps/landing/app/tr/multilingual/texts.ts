@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Menünüz her turistin dilini konuşur.",
     subtitle:
       "Çok dilli bir restoran menüsü bir proje olmamalı. IQ Rest ile QR menünüz her misafirin telefon dilini otomatik algılar ve 35 dilden herhangi birinde sunar — Arapça ve Farsça için doğru sağdan sola işleme dahil.",
-    trustLine: "4.9 · 30+ ülkede 500+ restoran",
+    trustLine: "30+ ülkede 500+ restoran",
   },
 
   seo: {

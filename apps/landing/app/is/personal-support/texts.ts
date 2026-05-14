@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Alvöru fólk. Hröð svör. Engin spjallmenni.",
     subtitle:
       "Veitingahúsahugbúnaður með veitingahúsa-stuðningi — sendu okkur skilaboð á WhatsApp, tölvupósti eða í-appi, og alvöru manneskja sem skilur raunverulega veitingahús svarar á mínútum, ekki dögum. Á hverri áskrift, þar á meðal ókeypis prufu.",
-    trustLine: "4.9 · 500+ veitingahús í 30+ löndum",
+    trustLine: "500+ veitingahús í 30+ löndum",
   },
 
   seo: {

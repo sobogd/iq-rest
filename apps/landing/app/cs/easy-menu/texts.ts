@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Postavte si menu během minut. Editujte ho navždy.",
     subtitle:
       "Ťuknutím přidáte kategorii, ťuknutím přidáte pokrm, přetáhnutím přeřadíte, vyfotíte z telefonu. Nejjednodušší editor restauračního menu na trhu — a každá změna je živá pro hosty během sekund.",
-    trustLine: "4.9 · 500+ restaurací ve 30+ zemích",
+    trustLine: "500+ restaurací ve 30+ zemích",
   },
 
   seo: {

@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Build your menu in minutes. Edit it forever.",
     subtitle:
       "Tap to add a category, tap to add a dish, drag to reorder, snap a photo from your phone. The simplest restaurant menu editor on the market — and every change goes live for guests in seconds.",
-    trustLine: "4.9 · 500+ restaurants in 30+ countries",
+    trustLine: "500+ restaurants in 30+ countries",
   },
 
   seo: {

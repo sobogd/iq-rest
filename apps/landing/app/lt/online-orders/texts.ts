@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Tiesioginiai užsakymai. Jokių komisinių. Tiesiai į virtuvę.",
     subtitle:
       "Liaukitės mokėti 30 % Uber Eats, Glovo ir Wolt. Su IQ Rest jūsų svečiai skanuoja QR kodą, susikraus užsakymą telefone, o užsakymas atsiduria jūsų virtuvėje — kiekvienas centas lieka jums.",
-    trustLine: "4,9 · 500+ restoranų 30+ šalių",
+    trustLine: "500+ restoranų 30+ šalių",
   },
 
   seo: {

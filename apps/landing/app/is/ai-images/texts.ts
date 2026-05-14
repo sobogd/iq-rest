@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Símamyndir. Faglegur matseðill.",
     subtitle:
       "Smelltu af rétti úr hvaða sjónarhorni sem er, hladdu upp, og AI-ið okkar klippir sjálfkrafa, leiðréttir liti, og þjappar í hraðhlæðanlega matseðlamynd — án þess að missa matinn. Glæsileg gæði á hvaða tæki sem er, engin Lightroom eða hönnuður þarf.",
-    trustLine: "4.9 · 500+ veitingahús í 30+ löndum",
+    trustLine: "500+ veitingahús í 30+ löndum",
   },
 
   seo: {

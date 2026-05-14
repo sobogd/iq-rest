@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Telefono nuotraukos. Profesionali meniu išvaizda.",
     subtitle:
       "Nufotografuokite patiekalą iš bet kurio kampo, įkelkite, ir mūsų DI automatiškai apkarpo, koreguoja spalvas ir suspaudžia į greitai užkraunamą meniu vaizdą — neprarasdamas maisto. Stulbinanti kokybė bet kuriame įrenginyje, be Lightroom ar dizainerio.",
-    trustLine: "4,9 · 500+ restoranų 30+ šalių",
+    trustLine: "500+ restoranų 30+ šalių",
   },
 
   seo: {

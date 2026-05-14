@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Beinar pantanir. Núll þóknun. Beint í eldhúsið.",
     subtitle:
       "Hættu að borga 30% til Uber Eats, Glovo og Wolt. Með IQ Rest skanna gestirnir QR-kóðann, búa til pöntunina í símanum, og miðinn lendir í eldhúsinu þínu — hver króna verður eftir hjá þér.",
-    trustLine: "4.9 · 500+ veitingahús í 30+ löndum",
+    trustLine: "500+ veitingahús í 30+ löndum",
   },
 
   seo: {

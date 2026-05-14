@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Valódi emberek. Gyors válaszok. Nincsenek chatbotok.",
     subtitle:
       "Étterem szoftver étterem-szintű támogatással — üzenjen nekünk WhatsApp-on, e-mailben vagy alkalmazáson belül, és egy valódi ember, aki valóban érti az éttermeket, percek alatt válaszol, nem napok alatt. Minden csomagban, beleértve az ingyenes próbát is.",
-    trustLine: "4.9 · 500+ étterem 30+ országban",
+    trustLine: "500+ étterem 30+ országban",
   },
 
   seo: {

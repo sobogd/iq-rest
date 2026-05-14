@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "在手机上运营餐厅。在桌子之间。",
     subtitle:
       "整个 IQ Rest 仪表盘都是移动优先打造的——添加菜品、换照片、改价、读取实时订单都在围裙口袋里那部手机上完成。无笔记本、无后台电脑、没有借口。",
-    trustLine: "4.9 · 30+ 国家的 500+ 餐厅",
+    trustLine: "30+ 国家的 500+ 餐厅",
   },
 
   seo: {

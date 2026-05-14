@@ -19,7 +19,7 @@ export const TEXTS: LandingTexts = {
     sub: "Site web gata pentru restaurantul tău — fără programatori și contractori. Comenzi directe, rezervări și analiza clienților într-un singur abonament.",
     dynamicHeadlines: ["0% comision.", "35 de limbi cu AI.", "Comenzi online.", "Rezervări 24/7.", "Design premium."],
     painBullets: ["0% comision: Toate comenzile ajung direct la tine.", "Traducere AI: 35 de limbi pentru a crește consumul turiștilor.", "Rezervări 24/7: Sală plină fără apeluri inutile.", "Prețuri flexibile: Actualizează meniul în câteva secunde."],
-    rating: "4,9 · peste 500 de restaurante în 30+ țări",
+    rating: "Peste 500 de restaurante în 30+ țări",
   },
   features: {
     heading: "Tot ce ai nevoie.", headingAccent: "Nimic în plus.",

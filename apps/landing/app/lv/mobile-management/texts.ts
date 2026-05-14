@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Vadi savu restorānu no telefona. Starp galdiem.",
     subtitle:
       "Visa IQ Rest panele ir veidota mobile-first — pievieno ēdienus, nomaini foto, maini cenas un lasi tiešraides pasūtījumus no tā paša telefona priekšauta kabatā. Bez klēpjdatora, bez biroja datora, bez attaisnojumiem.",
-    trustLine: "4.9 · 500+ restorāni vairāk nekā 30 valstīs",
+    trustLine: "500+ restorāni vairāk nekā 30 valstīs",
   },
 
   seo: {

@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Nu mai ghici. Află ce fac oaspeții de fapt.",
     subtitle:
       "Vezi analize ale meniului restaurantului în timp real — scanări QR pe oră, preparatele la care zăbovesc oaspeții, limbile pe care le folosesc turiștii, cea mai lentă zi a săptămânii — și folosește acele date ca să printezi mai puține meniuri, să programezi mai inteligent, să împingi specialitățile potrivite.",
-    trustLine: "4.9 · 500+ restaurante în 30+ țări",
+    trustLine: "500+ restaurante în 30+ țări",
   },
 
   seo: {

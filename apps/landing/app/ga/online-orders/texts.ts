@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Orduithe díreacha. Coimisiún náid. Díreach chuig do chistin.",
     subtitle:
       "Stop ag íoc 30% le Uber Eats, Glovo agus Wolt. Le IQ Rest scanann d'aíonna an QR, tógann siad a n-ordú ar a nguthán, agus tagann an ticéad chuig do chistin — fanann gach cent leatsa.",
-    trustLine: "4.9 · 500+ bialann i 30+ tír",
+    trustLine: "500+ bialann i 30+ tír",
   },
 
   seo: {

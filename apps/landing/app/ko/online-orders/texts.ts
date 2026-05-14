@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "직접 주문. 수수료 0%. 주방으로 바로.",
     subtitle:
       "Uber Eats, Glovo, Wolt에 30%를 더 이상 지불하지 마세요. IQ Rest로 손님이 QR을 스캔하고, 휴대폰에서 주문을 만들면, 티켓이 주방에 떨어집니다 — 모든 한 푼이 당신에게 남습니다.",
-    trustLine: "4.9 · 30개국 이상 500+ 레스토랑",
+    trustLine: "30개국 이상 500+ 레스토랑",
   },
 
   seo: {

@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Veitingahúsavefurinn þinn. Í loftið á 5 mínútum.",
     subtitle:
       "Slepptu forritaranum, slepptu hýsingu, slepptu höfuðverknum. Sláðu inn netfangið og QR-matseðillinn, veitingahúsavefurinn og hafa-samband-síðan eru tilbúin áður en kaffið þitt kólnar.",
-    trustLine: "4.9 · 500+ veitingahús í 30+ löndum",
+    trustLine: "500+ veitingahús í 30+ löndum",
   },
 
   seo: {

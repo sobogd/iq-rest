@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Geta ferðamenn ekki lesið matseðilinn? Lagaðu það með einni snertingu.",
     subtitle:
       "Þýddu allan veitingahúsamatseðilinn á 35 tungumál með AI sem þjálfað er á matreiðslusamhengi. Réttaheiti haldast ekta, lýsingar lesast eðlilega — og ferðamenn panta meira þegar þeir skilja í raun hvað þeir fá.",
-    trustLine: "4.9 · 500+ veitingahús í 30+ löndum",
+    trustLine: "500+ veitingahús í 30+ löndum",
   },
 
   seo: {

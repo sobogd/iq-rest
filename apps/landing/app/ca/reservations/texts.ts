@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Deixa de perdre reserves mentre cuines.",
     subtitle:
       "Accepta reserves de taula per a restaurant 24/7 — directament des del teu menú QR, web i Instagram. Els clients trien data, hora i nombre de comensals, tu confirmes amb un toc, els recordatoris per correu surten automàticament. Menys trucades, menys absències, més clients per nit.",
-    trustLine: "4,9 · més de 500 restaurants en més de 30 països",
+    trustLine: "Més de 500 restaurants en més de 30 països",
   },
 
   seo: {

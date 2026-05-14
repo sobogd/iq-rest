@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Restoranınızı telefonunuzdan yönetin. Masalar arasında.",
     subtitle:
       "Tüm IQ Rest paneli mobil-first tasarlandı — yemek ekleyin, fotoğraf değiştirin, fiyat güncelleyin ve önlük cebinizdeki aynı telefondan canlı siparişleri okuyun. Dizüstü yok, arka ofis bilgisayarı yok, mazeret yok.",
-    trustLine: "4.9 · 30+ ülkede 500+ restoran",
+    trustLine: "30+ ülkede 500+ restoran",
   },
 
   seo: {

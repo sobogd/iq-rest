@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Phone photos. Pro-looking menu.",
     subtitle:
       "Snap a dish from any angle, upload, and our AI auto-crops, color-corrects, and compresses it into a fast-loading menu image — without losing the food. Stunning quality on any device, no Lightroom or designer required.",
-    trustLine: "4.9 · 500+ restaurants in 30+ countries",
+    trustLine: "500+ restaurants in 30+ countries",
   },
 
   seo: {

@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Labhraíonn do bhiachlár teanga gach turasóra.",
     subtitle:
       "Níor chóir go mbeadh biachlár bialainne ilteangach ina thionscadal. Le IQ Rest, aimsíonn do bhiachlár QR teanga gutháin gach aoi go huathoibríoch agus freastalaíonn é in aon cheann de 35 teanga — lena n-áirítear Araibis agus Peirsis le rindreáil cuí ó dheis-go-clé.",
-    trustLine: "4.9 · 500+ bialann i 30+ tír",
+    trustLine: "500+ bialann i 30+ tír",
   },
 
   seo: {

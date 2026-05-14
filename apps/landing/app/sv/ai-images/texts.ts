@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Telefonfoton. Proffsig meny.",
     subtitle:
       "Knäpp en rätt från vilken vinkel som helst, ladda upp, och vår AI auto-beskär, färgkorrigerar och komprimerar den till en snabbladdande menybild — utan att förlora maten. Fantastisk kvalitet på vilken enhet som helst, ingen Lightroom eller designer behövs.",
-    trustLine: "4,9 · 500+ restauranger i 30+ länder",
+    trustLine: "500+ restauranger i 30+ länder",
   },
 
   seo: {

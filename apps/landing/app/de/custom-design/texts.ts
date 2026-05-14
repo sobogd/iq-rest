@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Sei in einer Sekunde unvergesslich.",
     subtitle:
       "Setze ein Video deiner Küche, ein Hero-Food-Shot oder einen stimmungsvollen Speiseraum-Clip als Hintergrund deiner QR-Karte ein. Gäste hören auf zu scrollen, deine Marke bleibt hängen, und die Karte darunter bleibt sauber und lesbar.",
-    trustLine: "4,9 · 500+ Restaurants in 30+ Ländern",
+    trustLine: "500+ Restaurants in 30+ Ländern",
   },
 
   seo: {

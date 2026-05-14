@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Comenzi directe. Zero comision. Direct la bucătăria ta.",
     subtitle:
       "Nu mai plăti 30% către Uber Eats, Glovo și Wolt. Cu IQ Rest, oaspeții scanează codul QR, își construiesc comanda pe telefon, iar bonul ajunge în bucătăria ta — fiecare ban rămâne la tine.",
-    trustLine: "4.9 · 500+ restaurante în 30+ țări",
+    trustLine: "500+ restaurante în 30+ țări",
   },
 
   seo: {

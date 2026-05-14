@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Telefonos fotók. Profi kinézetű étlap.",
     subtitle:
       "Fotózzon le egy ételt bármilyen szögből, töltse fel, és AI-nk automatikusan vágja, színkorrigálja és gyorsan betölthető étlap képpé tömöríti — étel veszteség nélkül. Lenyűgöző minőség minden eszközön, Lightroom vagy dizájner nélkül.",
-    trustLine: "4.9 · 500+ étterem 30+ országban",
+    trustLine: "500+ étterem 30+ országban",
   },
 
   seo: {

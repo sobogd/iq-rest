@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Pyöritä ravintolaasi puhelimellasi. Pöytien välissä.",
     subtitle:
       "Koko IQ Restin hallintapaneeli on rakennettu mobiili ensisijaisesti — lisää ruokia, vaihda kuvia, muuta hintoja ja lue live-tilauksia samalla puhelimella, joka on essun taskussa. Ei läppäriä, ei back-office-tietokonetta, ei tekosyitä.",
-    trustLine: "4,9 · yli 500 ravintolaa yli 30 maassa",
+    trustLine: "Yli 500 ravintolaa yli 30 maassa",
   },
 
   seo: {

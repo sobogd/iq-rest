@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Grianghraif ghutháin. Biachlár cuma-pho.",
     subtitle:
       "Glac mias ó aon uillinn, uaslódáil, agus gearrann ár AI go huathoibríoch í, ceartaíonn dath agus comhbhrúíonn í i n-íomhá bhiachlár tapa-lódála — gan an bia a chailleadh. Cáilíocht iontach ar aon ghléas, gan Lightroom ná dearthóir de dhíth.",
-    trustLine: "4.9 · 500+ bialann i 30+ tír",
+    trustLine: "500+ bialann i 30+ tír",
   },
 
   seo: {

@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Wyglądaj niezapomnianie w jedną sekundę.",
     subtitle:
       "Wgraj wideo z kuchni, bohaterskie zdjęcie potrawy albo nastrojowy klip z sali jako tło menu QR. Goście przestają przewijać, marka zostaje, a menu pod spodem pozostaje czyste i czytelne.",
-    trustLine: "4,9 · ponad 500 restauracji w 30+ krajach",
+    trustLine: "Ponad 500 restauracji w 30+ krajach",
   },
 
   seo: {

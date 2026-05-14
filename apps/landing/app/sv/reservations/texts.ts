@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Sluta missa bokningar medan du lagar mat.",
     subtitle:
       "Ta emot restaurangbordsbokningar dygnet runt — direkt från din QR-meny, hemsida och Instagram. Gäster väljer datum, tid och sällskapsstorlek, du bekräftar med en knapptryckning, e-postpåminnelser skickas automatiskt. Färre telefonsamtal, färre uteblivna besök, fler kuvert per kväll.",
-    trustLine: "4,9 · 500+ restauranger i 30+ länder",
+    trustLine: "500+ restauranger i 30+ länder",
   },
 
   seo: {

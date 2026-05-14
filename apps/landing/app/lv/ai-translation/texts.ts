@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Tūristi nesaprot tavu ēdienkarti? Salabo to vienā pieskārienā.",
     subtitle:
       "Tulko visu restorāna ēdienkarti 35 valodās ar AI, kas apmācīts kulinārijas kontekstā. Ēdienu nosaukumi paliek autentiski, apraksti skan dabiski — un tūristi pasūta vairāk, kad saprot, ko saņems.",
-    trustLine: "4.9 · 500+ restorāni vairāk nekā 30 valstīs",
+    trustLine: "500+ restorāni vairāk nekā 30 valstīs",
   },
 
   seo: {

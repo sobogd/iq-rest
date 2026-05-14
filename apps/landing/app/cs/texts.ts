@@ -19,7 +19,7 @@ export const TEXTS: LandingTexts = {
     sub: "Hotová webová stránka pro vaši restauraci — bez programátorů a dodavatelů. Přímé objednávky, rezervace a analytika hostů v jednom předplatném.",
     dynamicHeadlines: ["0% provize.", "35 jazyků s AI.", "Online objednávky.", "Rezervace 24/7.", "Prémiový design."],
     painBullets: ["Provize 0%: Všechny objednávky jdou přímo vám.", "AI překlad: 35 jazyků pro vyšší útraty od turistů.", "Rezervace 24/7: Plná obsazenost bez zbytečných hovorů.", "Flexibilní ceny: Aktualizujte menu během pár sekund."],
-    rating: "4,9 · přes 500 restaurací ve 30+ zemích",
+    rating: "Přes 500 restaurací ve 30+ zemích",
   },
   features: {
     heading: "Vše co potřebuješ.", headingAccent: "Nic navíc.",

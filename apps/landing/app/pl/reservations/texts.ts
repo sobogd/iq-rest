@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Przestań tracić rezerwacje, gdy gotujesz.",
     subtitle:
       "Przyjmuj rezerwacje stolików 24/7 — bezpośrednio z menu QR, strony restauracji i Instagrama. Goście wybierają datę, godzinę i liczbę osób, Ty potwierdzasz jednym kliknięciem, przypomnienia mailowe wychodzą automatycznie. Mniej telefonów, mniej no-show, więcej kuwert na zmianę.",
-    trustLine: "4,9 · ponad 500 restauracji w 30+ krajach",
+    trustLine: "Ponad 500 restauracji w 30+ krajach",
   },
 
   seo: {

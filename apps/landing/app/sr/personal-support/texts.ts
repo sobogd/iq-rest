@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Pravi ljudi. Brzi odgovori. Bez četbotova.",
     subtitle:
       "Restoranski softver sa podrškom restoranskog kvaliteta — pošaljite nam poruku na WhatsApp, email ili u aplikaciji, i pravi čovek koji zaista razume restorane odgovara za minute, ne dane. Na svakom paketu, uključujući besplatnu probu.",
-    trustLine: "4.9 · 500+ restorana u 30+ zemalja",
+    trustLine: "500+ restorana u 30+ zemalja",
   },
 
   seo: {

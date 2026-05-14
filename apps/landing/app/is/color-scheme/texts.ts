@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Þinn matseðill. Þínir litir. Þitt vörumerki.",
     subtitle:
       "Veldu áherslulit, settu inn lógó, og QR-matseðillinn lítur strax út eins og alvöru vörumerki í stað sniðmáts. Ljós og dökk þema skipta sjálfkrafa með síma hvers gestar — matseðillinn lítur alltaf út fyrir að vera ásetningur.",
-    trustLine: "4.9 · 500+ veitingahús í 30+ löndum",
+    trustLine: "500+ veitingahús í 30+ löndum",
   },
 
   seo: {

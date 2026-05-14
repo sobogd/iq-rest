@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Hættu að missa af pöntunum á meðan þú eldar.",
     subtitle:
       "Taktu við borðapöntunum veitingahúss 24/7 — beint frá QR-matseðlinum, vefnum og Instagram. Gestir velja dagsetningu, tíma og hópastærð, þú staðfestir með einni snertingu, tölvupóstaminningar fara út sjálfkrafa. Færri símtöl, færri afþakkanir, fleiri sæti á kvöldi.",
-    trustLine: "4.9 · 500+ veitingahús í 30+ löndum",
+    trustLine: "500+ veitingahús í 30+ löndum",
   },
 
   seo: {

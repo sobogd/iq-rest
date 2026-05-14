@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Liaukitės spėlioti. Žinokite, ką svečiai iš tikrųjų daro.",
     subtitle:
       "Stebėkite restorano meniu analitiką realiu laiku — QR nuskaitymai per valandą, patiekalai, ant kurių svečiai užsibūna, kalbos, kurias naudoja turistai, lėčiausia savaitės diena — ir naudokite šiuos duomenis, kad spausdintumėte mažiau meniu, planuotumėte išmaniau, akcentuotumėte tinkamus pasiūlymus.",
-    trustLine: "4,9 · 500+ restoranų 30+ šalių",
+    trustLine: "500+ restoranų 30+ šalių",
   },
 
   seo: {

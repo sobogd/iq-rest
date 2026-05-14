@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Beidz minēt. Zini, ko viesi patiesi dara.",
     subtitle:
       "Skaties restorāna ēdienkartes analītiku reālajā laikā — QR skenējumi stundā, ēdieni, pie kuriem viesi kavējas, valodas, ko izmanto tūristi, lēnākā darba diena — un izmanto šos datus, lai drukātu mazāk ēdienkaršu, plānotu gudrāk, virzītu pareizos īpašos piedāvājumus.",
-    trustLine: "4.9 · 500+ restorāni vairāk nekā 30 valstīs",
+    trustLine: "500+ restorāni vairāk nekā 30 valstīs",
   },
 
   seo: {

@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Az étlapja. Az ön színei. Az ön márkája.",
     subtitle:
       "Válasszon egy kiemelő színt, dobja be a logóját, és a QR étlapja azonnal valódi márkának néz ki sablon helyett. A világos és sötét téma automatikusan vált minden vendég telefonjával — az étlapja mindig szándékosnak tűnik.",
-    trustLine: "4.9 · 500+ étterem 30+ országban",
+    trustLine: "500+ étterem 30+ országban",
   },
 
   seo: {

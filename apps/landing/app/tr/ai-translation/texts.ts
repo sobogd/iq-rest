@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Turistler menünüzü okuyamıyor mu? Tek dokunuşla çözün.",
     subtitle:
       "Tüm restoran menünüzü mutfak bağlamı üzerine eğitilmiş yapay zekâ ile 35 dile çevirin. Yemek isimleri özgün kalır, açıklamalar doğal okunur — turistler ne aldıklarını gerçekten anladıklarında daha çok sipariş verir.",
-    trustLine: "4.9 · 30+ ülkede 500+ restoran",
+    trustLine: "30+ ülkede 500+ restoran",
   },
 
   seo: {

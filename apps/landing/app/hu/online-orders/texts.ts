@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Közvetlen rendelések. Nulla jutalék. Egyenesen a konyhába.",
     subtitle:
       "Hagyjon fel a 30%-os jutalék fizetésével az Uber Eats-nek, Glovonak és Woltnak. Az IQ Rest-tel a vendégek beolvassák a QR-t, telefonon összeállítják a rendelést, és a tikett a konyhájában landol — minden fillér Önnél marad.",
-    trustLine: "4.9 · 500+ étterem 30+ országban",
+    trustLine: "500+ étterem 30+ országban",
   },
 
   seo: {

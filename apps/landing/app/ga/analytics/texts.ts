@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Stop ag tomhas. Bí ar an eolas faoi a dhéanann aíonna i ndáiríre.",
     subtitle:
       "Féach anailísíocht biachlár bialainne i bhfíor-am — scananna QR in aghaidh na huaire, na miasa a luigh aíonna orthu, na teangacha a úsáideann turasóirí, an lá oibre is moille — agus úsáid an sonraí sin chun níos lú biachláir a phriontáil, sceidealú níos cliste, na speisialtóireachtaí cearta a bhrú.",
-    trustLine: "4.9 · 500+ bialann i 30+ tír",
+    trustLine: "500+ bialann i 30+ tír",
   },
 
   seo: {

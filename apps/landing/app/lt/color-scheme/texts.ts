@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Jūsų meniu. Jūsų spalvos. Jūsų prekės ženklas.",
     subtitle:
       "Pasirinkite akcentinę spalvą, įdėkite logotipą, ir QR meniu iškart atrodo kaip tikras prekės ženklas, o ne šablonas. Šviesi ir tamsi temos automatiškai keičiasi pagal kiekvieno svečio telefoną — meniu visada atrodo apgalvotai.",
-    trustLine: "4,9 · 500+ restoranų 30+ šalių",
+    trustLine: "500+ restoranų 30+ šalių",
   },
 
   seo: {

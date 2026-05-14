@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Se uforglemmelig ud på ét sekund.",
     subtitle:
       "Drop en video af dit køkken, et flot madbillede eller et stemningsfuldt klip fra spisesalen ind som baggrund for din QR-menu. Gæster stopper med at scrolle, dit brand sidder fast, og menuen nedenunder forbliver ren og læselig.",
-    trustLine: "4.9 · 500+ restauranter i 30+ lande",
+    trustLine: "500+ restauranter i 30+ lande",
   },
 
   seo: {

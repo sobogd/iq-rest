@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Touristen verstehen deine Karte nicht? Mit einem Tipp gelöst.",
     subtitle:
       "Übersetze deine ganze Speisekarte in 35 Sprachen mit einer KI, die auf kulinarischen Kontext trainiert wurde. Gerichtsnamen bleiben authentisch, Beschreibungen lesen sich natürlich — und Touristen bestellen mehr, wenn sie tatsächlich verstehen, was sie bekommen.",
-    trustLine: "4,9 · 500+ Restaurants in 30+ Ländern",
+    trustLine: "500+ Restaurants in 30+ Ländern",
   },
 
   seo: {

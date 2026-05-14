@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Az étlapja minden turista nyelvén beszél.",
     subtitle:
       "Egy többnyelvű étterem étlap nem lehet projekt. Az IQ Rest-tel a QR étlapja automatikusan érzékeli minden vendég telefonjának nyelvét, és a 35 nyelv bármelyikén szolgálja ki — beleértve az arab és perzsa nyelvet is megfelelő jobbról-balra megjelenítéssel.",
-    trustLine: "4.9 · 500+ étterem 30+ országban",
+    trustLine: "500+ étterem 30+ országban",
   },
 
   seo: {

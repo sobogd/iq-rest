@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Jouw menu. Jouw kleuren. Jouw merk.",
     subtitle:
       "Kies een accentkleur, plaats je logo, en je QR menu ziet er direct uit als een echt merk in plaats van een template. Lichte en donkere thema's wisselen automatisch met elke gast's telefoon — je menu ziet er altijd doelbewust uit.",
-    trustLine: "4.9 · 500+ restaurants in 30+ landen",
+    trustLine: "500+ restaurants in 30+ landen",
   },
 
   seo: {

@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Se oförglömlig ut på en sekund.",
     subtitle:
       "Släpp in en video från ditt kök, en hjältebild av maten eller ett stämningsfullt klipp från matsalen som QR-menyns bakgrund. Gäster slutar scrolla, ditt varumärke fastnar, och menyn under förblir ren och läsbar.",
-    trustLine: "4,9 · 500+ restauranger i 30+ länder",
+    trustLine: "500+ restauranger i 30+ länder",
   },
 
   seo: {

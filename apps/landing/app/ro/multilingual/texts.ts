@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Meniul tău vorbește limba fiecărui turist.",
     subtitle:
       "Un meniu de restaurant multilingv nu trebuie să fie un proiect. Cu IQ Rest, meniul tău QR detectează automat limba telefonului fiecărui oaspete și îl servește în oricare dintre cele 35 de limbi — inclusiv arabă și persană cu randare corectă de la dreapta la stânga.",
-    trustLine: "4.9 · 500+ restaurante în 30+ țări",
+    trustLine: "500+ restaurante în 30+ țări",
   },
 
   seo: {

@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Stop ag cailleadh áirithintí agus tú ag cócaireacht.",
     subtitle:
       "Glac áirithintí boird bialainne 24/7 — go díreach ó do bhiachlár QR, do shuíomh agus Instagram. Roghnaíonn aíonna dáta, am agus méid grúpa, deimhníonn tú le tap amháin, seoltar meabhrúcháin ríomhphoist go huathoibríoch. Níos lú glaonna gutháin, níos lú no-shows, níos mó cumhdaigh in aghaidh na hoíche.",
-    trustLine: "4.9 · 500+ bialann i 30+ tír",
+    trustLine: "500+ bialann i 30+ tír",
   },
 
   seo: {

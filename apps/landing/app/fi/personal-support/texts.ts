@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Oikeita ihmisiä. Nopeita vastauksia. Ei chatbotteja.",
     subtitle:
       "Ravintolaohjelmistoa ravintolatason tuella — viestitä meille WhatsAppissa, sähköpostissa tai sovelluksessa, ja oikea ihminen, joka todella ymmärtää ravintoloita, vastaa minuuteissa, ei päivissä. Jokaisessa paketissa, mukaan lukien ilmainen kokeilu.",
-    trustLine: "4,9 · yli 500 ravintolaa yli 30 maassa",
+    trustLine: "Yli 500 ravintolaa yli 30 maassa",
   },
 
   seo: {

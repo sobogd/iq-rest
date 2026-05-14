@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Deja de adivinar. Sabe qué hacen los clientes.",
     subtitle:
       "Mira analíticas de la carta del restaurante en tiempo real — escaneos QR por hora, los platos en los que se detienen los clientes, los idiomas que usan los turistas, el día más flojo de la semana — y úsalo para imprimir menos cartas, programar mejor y empujar los especiales correctos.",
-    trustLine: "4,9 · más de 500 restaurantes en más de 30 países",
+    trustLine: "Más de 500 restaurantes en más de 30 países",
   },
 
   seo: {

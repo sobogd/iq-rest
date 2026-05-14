@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Hagyjon fel a foglalások elszalasztásával főzés közben.",
     subtitle:
       "Fogadjon étterem asztal foglalásokat 24/7 — közvetlenül a QR étlapjáról, weboldaláról és Instagramról. A vendégek dátumot, időt és létszámot választanak, Ön egy koppintással megerősíti, az e-mail emlékeztetők automatikusan mennek ki. Kevesebb telefon, kevesebb meg-nem-jelenés, több vendég esténként.",
-    trustLine: "4.9 · 500+ étterem 30+ országban",
+    trustLine: "500+ étterem 30+ országban",
   },
 
   seo: {

@@ -19,7 +19,7 @@ export const TEXTS: LandingTexts = {
     sub: "Lloc web llest per al teu restaurant — sense programadors ni contractistes. Comandes directes, reserves i analítica de clients en una sola subscripció.",
     dynamicHeadlines: ["0% comissions.", "35 idiomes amb IA.", "Comandes online.", "Reserves 24/7.", "Disseny premium."],
     painBullets: ["0% comissions: Totes les comandes van directament a tu.", "Traducció IA: 35 idiomes per augmentar el tiquet dels turistes.", "Reserves 24/7: Sala plena sense trucades innecessàries.", "Preus flexibles: Actualitza la carta en segons."],
-    rating: "4,9 · més de 500 restaurants en 30+ països",
+    rating: "Més de 500 restaurants en 30+ països",
   },
   features: {
     heading: "Tot el que cal.", headingAccent: "Res que no.",

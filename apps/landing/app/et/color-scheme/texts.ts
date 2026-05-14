@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Sinu menüü. Sinu värvid. Sinu bränd.",
     subtitle:
       "Vali aktsentvärv, lisa logo ja sinu QR-menüü näeb kohe välja nagu päris bränd, mitte mall. Hele ja tume teema vahetuvad automaatselt iga külalise telefoniga — sinu menüü näeb alati välja kavatsuslik.",
-    trustLine: "4.9 · 500+ restorani 30+ riigis",
+    trustLine: "500+ restorani 30+ riigis",
   },
 
   seo: {

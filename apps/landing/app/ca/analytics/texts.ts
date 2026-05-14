@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Deixa d'endevinar. Sàpigues què fan realment els clients.",
     subtitle:
       "Veu analítica del menú del restaurant en temps real — escaneigs QR per hora, plats on els clients s'aturen, idiomes que fan servir els turistes, el dia més fluix de la setmana — i fes servir aquestes dades per imprimir menys menús, planificar millor els torns, empènyer els plats del dia adequats.",
-    trustLine: "4,9 · més de 500 restaurants en més de 30 països",
+    trustLine: "Més de 500 restaurants en més de 30 països",
   },
 
   seo: {

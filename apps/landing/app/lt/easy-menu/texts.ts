@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Sukurkite meniu per kelias minutes. Redaguokite amžinai.",
     subtitle:
       "Bakstelėkite, kad pridėtumėte kategoriją, bakstelėkite, kad pridėtumėte patiekalą, vilkite, kad pertvarkytumėte, padarykite nuotrauką telefonu. Paprasčiausias restorano meniu redaktorius rinkoje — ir kiekvienas pakeitimas tampa gyvu svečiams per kelias sekundes.",
-    trustLine: "4,9 · 500+ restoranų 30+ šalių",
+    trustLine: "500+ restoranų 30+ šalių",
   },
 
   seo: {

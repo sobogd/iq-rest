@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Vertu ógleymanlegur á einni sekúndu.",
     subtitle:
       "Settu vídeó af eldhúsinu þínu, flotta matarmynd, eða dimmt klipp úr matsalnum sem bakgrunn QR-matseðilsins. Gestir hætta að fletta, vörumerkið festist, og matseðillinn fyrir neðan helst hreinn og læsilegur.",
-    trustLine: "4.9 · 500+ veitingahús í 30+ löndum",
+    trustLine: "500+ veitingahús í 30+ löndum",
   },
 
   seo: {

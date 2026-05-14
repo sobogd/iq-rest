@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Izgledajte nezaboravno u jednoj sekundi.",
     subtitle:
       "Ubacite video svoje kuhinje, herojski snimak hrane ili moodom obojenu sekvencu blagovaonice kao pozadinu vašeg QR jelovnika. Gosti prestaju skrolati, vaš brend se zalijepi, a jelovnik ispod ostaje čist i čitljiv.",
-    trustLine: "4.9 · 500+ restorana u 30+ zemalja",
+    trustLine: "500+ restorana u 30+ zemalja",
   },
 
   seo: {

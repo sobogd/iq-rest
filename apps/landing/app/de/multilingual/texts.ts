@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Deine Karte spricht jede Touristensprache.",
     subtitle:
       "Eine mehrsprachige Restaurantkarte sollte kein Projekt sein. Mit IQ Rest erkennt deine QR-Karte automatisch die Handysprache jedes Gastes und liefert sie in einer von 35 Sprachen — inklusive Arabisch und Persisch mit korrektem Rechts-nach-Links-Rendering.",
-    trustLine: "4,9 · 500+ Restaurants in 30+ Ländern",
+    trustLine: "500+ Restaurants in 30+ Ländern",
   },
 
   seo: {

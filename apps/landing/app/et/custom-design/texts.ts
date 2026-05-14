@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Näe ühe sekundiga unustamatu välja.",
     subtitle:
       "Pane oma köögi video, uhke toidufoto või melanhoolne söögitoa klipp QR-menüü taustaks. Külalised lõpetavad kerimise, sinu bränd jääb meelde ja menüü selle all jääb puhtaks ja loetavaks.",
-    trustLine: "4.9 · 500+ restorani 30+ riigis",
+    trustLine: "500+ restorani 30+ riigis",
   },
 
   seo: {

@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Porta el restaurant des del mòbil. Entre taules.",
     subtitle:
       "Tot el panell d'IQ Rest està construït mobile-first — afegeix plats, canvia fotos, modifica preus i llegeix comandes en directe des del mateix mòbil que portes a la butxaca del davantal. Sense portàtil, sense ordinador a la rebotiga, sense excuses.",
-    trustLine: "4,9 · més de 500 restaurants en més de 30 països",
+    trustLine: "Més de 500 restaurants en més de 30 països",
   },
 
   seo: {

@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Arată inconfundabil într-o secundă.",
     subtitle:
       "Pune un video al bucătăriei tale, o poză eroică de mâncare sau un clip atmosferic din sala de mese ca fundal pentru meniul QR. Oaspeții se opresc din scroll, brandul tău rămâne, iar meniul de dedesubt rămâne curat și lizibil.",
-    trustLine: "4.9 · 500+ restaurante în 30+ țări",
+    trustLine: "500+ restaurante în 30+ țări",
   },
 
   seo: {

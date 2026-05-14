@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Päris inimesed. Kiired vastused. Pole vestlusroboteid.",
     subtitle:
       "Restorani tarkvara restorani-kvaliteediga toega — saada meile sõnum WhatsAppis, e-kirjas või rakenduses ja päris inimene, kes restorane tegelikult mõistab, vastab minutitega, mitte päevadega. Igal plaanil, sealhulgas tasuta prooviperioodil.",
-    trustLine: "4.9 · 500+ restorani 30+ riigis",
+    trustLine: "500+ restorani 30+ riigis",
   },
 
   seo: {

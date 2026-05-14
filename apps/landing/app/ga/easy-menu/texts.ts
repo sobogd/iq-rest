@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Tóg do bhiachlár i nóiméid. Cuir in eagar é go deo.",
     subtitle:
       "Tap chun catagóir a chur leis, tap chun mias a chur leis, tarraing chun athordú, glac grianghraf ó do ghuthán. An eagarthóir biachlár bialainne is simplí ar an margadh — agus téann gach athrú beo do aíonna i soicindí.",
-    trustLine: "4.9 · 500+ bialann i 30+ tír",
+    trustLine: "500+ bialann i 30+ tír",
   },
 
   seo: {

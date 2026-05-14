@@ -19,7 +19,7 @@ export const TEXTS: LandingTexts = {
     sub: "Paruošta jūsų restorano svetainė — be programuotojų ir rangovų. Tiesioginiai užsakymai, rezervacijos ir svečių analitika vienoje prenumeratoje.",
     dynamicHeadlines: ["0% komisinių.", "35 kalbos su DI.", "Užsakymai internetu.", "Rezervacijos 24/7.", "Premium dizainas."],
     painBullets: ["0% komisinių: Visi užsakymai keliauja tiesiai jums.", "AI vertimas: 35 kalbos didesnėms turistų sąskaitoms.", "Rezervacijos 24/7: Pilna salė be papildomų skambučių.", "Lanksčios kainos: Atnaujinkite meniu per kelias sekundes."],
-    rating: "4,9 · daugiau nei 500 restoranų 30+ šalių",
+    rating: "Daugiau nei 500 restoranų 30+ šalių",
   },
   features: {
     heading: "Viskas, ko reikia.", headingAccent: "Nieko nereikalingo.",

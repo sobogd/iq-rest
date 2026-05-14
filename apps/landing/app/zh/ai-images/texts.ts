@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "手机照片。专业外观的菜单。",
     subtitle:
       "从任何角度拍一道菜,上传,我们的 AI 自动裁剪、调色、压缩,变成一张快速加载的菜单图片——同时不失食物本身。任何设备上的惊艳质量,无需 Lightroom 或设计师。",
-    trustLine: "4.9 · 30+ 国家的 500+ 餐厅",
+    trustLine: "30+ 国家的 500+ 餐厅",
   },
 
   seo: {

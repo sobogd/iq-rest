@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Legyen felejthetetlen egy másodperc alatt.",
     subtitle:
       "Adjon hozzá egy videót a konyhájáról, egy hero étel fotót, vagy egy hangulatos étterem klipet QR étlapja háttereként. A vendégek megállnak a görgetésben, a márkája megragad, és az étlap alatta tiszta és olvasható marad.",
-    trustLine: "4.9 · 500+ étterem 30+ országban",
+    trustLine: "500+ étterem 30+ országban",
   },
 
   seo: {

@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "直接订单。零佣金。直达您的厨房。",
     subtitle:
       "停止向 Uber Eats、Glovo 和 Wolt 支付 30%。使用 IQ Rest,客人扫描二维码,在手机上构建订单,小票直达您的厨房——每一分钱都留在您手里。",
-    trustLine: "4.9 · 30+ 国家的 500+ 餐厅",
+    trustLine: "30+ 国家的 500+ 餐厅",
   },
 
   seo: {

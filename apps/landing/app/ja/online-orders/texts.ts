@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "直接注文。手数料ゼロ。そのまま厨房へ。",
     subtitle:
       "Uber Eats、Glovo、Wolt に30%払うのをやめよう。IQ Rest なら、お客様がQRをスキャンしてスマホで注文を組み立て、伝票はそのまま厨房へ — 1円残らずあなたの手元に。",
-    trustLine: "4.9 · 30か国以上で500軒超のレストラン",
+    trustLine: "30か国以上で500軒超のレストラン",
   },
 
   seo: {

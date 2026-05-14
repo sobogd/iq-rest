@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "一秒,让人难忘。",
     subtitle:
       "把厨房视频、主打菜照片或情绪感十足的餐厅片段作为二维码菜单的背景。客人停下滑动,您的品牌深深印入,而下面的菜单依然干净易读。",
-    trustLine: "4.9 · 30+ 国家的 500+ 餐厅",
+    trustLine: "30+ 国家的 500+ 餐厅",
   },
 
   seo: {

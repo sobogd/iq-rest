@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Lleva tu restaurante desde el móvil. Entre mesas.",
     subtitle:
       "Todo el panel de IQ Rest está hecho mobile-first — añade platos, cambia fotos, modifica precios y lee pedidos en vivo desde el mismo móvil que llevas en el bolsillo del delantal. Sin portátil, sin ordenador en la trastienda, sin excusas.",
-    trustLine: "4,9 · más de 500 restaurantes en más de 30 países",
+    trustLine: "Más de 500 restaurantes en más de 30 países",
   },
 
   seo: {

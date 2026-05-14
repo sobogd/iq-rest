@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Zgradite svoj meni v nekaj minutah. Urejajte ga večno.",
     subtitle:
       "Tap za dodajanje kategorije, tap za dodajanje jedi, povleci za prerazporeditev, posnemite fotografijo s telefonom. Najpreprostejši urejevalnik restavracijskih menijev na trgu — in vsaka sprememba gre v živo za goste v sekundah.",
-    trustLine: "4.9 · 500+ restavracij v 30+ državah",
+    trustLine: "500+ restavracij v 30+ državah",
   },
 
   seo: {

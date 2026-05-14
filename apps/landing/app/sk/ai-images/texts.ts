@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Fotky z telefónu. Profesionálne menu.",
     subtitle:
       "Odfoťte jedlo z akéhokoľvek uhla, nahrajte a naša AI auto-oreže, opraví farby a skomprimuje do rýchlo načítateľného obrázku menu — bez straty jedla. Ohromujúca kvalita na akomkoľvek zariadení, žiadny Lightroom ani dizajnér potrebný.",
-    trustLine: "4.9 · 500+ reštaurácií v 30+ krajinách",
+    trustLine: "500+ reštaurácií v 30+ krajinách",
   },
 
   seo: {

@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Vaš jelovnik. Vaše boje. Vaš brend.",
     subtitle:
       "Odaberite akcentnu boju, ubacite svoj logo, i vaš QR jelovnik odmah izgleda kao pravi brend umjesto šablone. Svjetla i tamna tema automatski se mijenjaju s telefonom svakog gosta — vaš jelovnik uvijek izgleda namjerno.",
-    trustLine: "4.9 · 500+ restorana u 30+ zemalja",
+    trustLine: "500+ restorana u 30+ zemalja",
   },
 
   seo: {

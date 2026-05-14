@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Bir saniyede unutulmaz görünün.",
     subtitle:
       "Mutfağınızın bir videosunu, kahraman bir yemek karesini veya hayli yumuşak bir yemek salonu klibini QR menü arka planınız olarak yerleştirin. Misafirler kaydırmayı bırakır, markanız akılda kalır ve altındaki menü temiz ve okunaklı kalır.",
-    trustLine: "4.9 · 30+ ülkede 500+ restoran",
+    trustLine: "30+ ülkede 500+ restoran",
   },
 
   seo: {

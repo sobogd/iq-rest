@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Telefonske fotografije. Profesionalno zgleden meni.",
     subtitle:
       "Posnemite jed iz katerega koli kota, naložite, naš AI pa jo samodejno obreže, popravi barve in stisne v hitro nalagajočo se sliko menija — ne da bi izgubili hrano. Čudovita kakovost na vsaki napravi, brez Lightrooma ali oblikovalca.",
-    trustLine: "4.9 · 500+ restavracij v 30+ državah",
+    trustLine: "500+ restavracij v 30+ državah",
   },
 
   seo: {

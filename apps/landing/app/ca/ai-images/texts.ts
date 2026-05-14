@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Fotos de mòbil. Menú amb aspecte pro.",
     subtitle:
       "Fes una foto a un plat des de qualsevol angle, puja-la, i la nostra IA retalla automàticament, corregeix el color i comprimeix per obtenir una imatge de menú de càrrega ràpida — sense perdre el menjar. Qualitat impactant a qualsevol dispositiu, sense Lightroom ni dissenyador.",
-    trustLine: "4,9 · més de 500 restaurants en més de 30 països",
+    trustLine: "Més de 500 restaurants en més de 30 països",
   },
 
   seo: {

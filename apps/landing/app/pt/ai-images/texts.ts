@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Fotos de telemóvel. Menu com look profissional.",
     subtitle:
       "Tira foto a um prato de qualquer ângulo, carrega, e a nossa IA recorta automaticamente, corrige a cor e comprime para uma imagem de menu de carregamento rápido — sem perder a comida. Qualidade impactante em qualquer dispositivo, sem Lightroom nem designer.",
-    trustLine: "4,9 · mais de 500 restaurantes em mais de 30 países",
+    trustLine: "Mais de 500 restaurantes em mais de 30 países",
   },
 
   seo: {

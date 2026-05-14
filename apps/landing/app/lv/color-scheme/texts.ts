@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Tava ēdienkarte. Tavas krāsas. Tavs zīmols.",
     subtitle:
       "Izvēlies akcenta krāsu, ievieto savu logo, un tava QR ēdienkarte uzreiz izskatās pēc īsta zīmola, ne veidnes. Gaišā un tumšā tēma automātiski pārslēdzas ar katra viesa telefonu — tava ēdienkarte vienmēr izskatās apzināta.",
-    trustLine: "4.9 · 500+ restorāni vairāk nekā 30 valstīs",
+    trustLine: "500+ restorāni vairāk nekā 30 valstīs",
   },
 
   seo: {

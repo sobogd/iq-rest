@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Drift din restaurant fra din telefon. Mellem borde.",
     subtitle:
       "Hele IQ Rest-dashboardet er bygget mobile-first — tilføj retter, skift billeder, ændr priser og læs live-ordrer fra den samme telefon i forklædelommen. Ingen bærbar, ingen computer på bagkontoret, ingen undskyldning.",
-    trustLine: "4.9 · 500+ restauranter i 30+ lande",
+    trustLine: "500+ restauranter i 30+ lande",
   },
 
   seo: {

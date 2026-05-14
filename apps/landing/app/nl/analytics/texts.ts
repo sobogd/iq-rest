@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Stop met gokken. Weet wat gasten echt doen.",
     subtitle:
       "Bekijk restaurantmenu analytics in real-time — QR scans per uur, de gerechten waar gasten bij blijven hangen, de talen die toeristen gebruiken, de traagste weekdag — en gebruik die data om minder menu's te printen, slimmer te plannen, de juiste specials te pushen.",
-    trustLine: "4.9 · 500+ restaurants in 30+ landen",
+    trustLine: "500+ restaurants in 30+ landen",
   },
 
   seo: {

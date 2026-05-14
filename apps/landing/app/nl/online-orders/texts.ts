@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Directe bestellingen. Nul commissie. Rechtstreeks naar je keuken.",
     subtitle:
       "Stop met 30% betalen aan Uber Eats, Glovo en Wolt. Met IQ Rest scannen je gasten de QR, bouwen hun bestelling op hun telefoon, en het ticket landt in je keuken — elke cent blijft bij jou.",
-    trustLine: "4.9 · 500+ restaurants in 30+ landen",
+    trustLine: "500+ restaurants in 30+ landen",
   },
 
   seo: {

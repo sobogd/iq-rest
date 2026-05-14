@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Site-ul restaurantului tău. Online în 5 minute.",
     subtitle:
       "Sari peste dezvoltator, sari peste hosting, sari peste bătaia de cap. Introdu emailul și meniul QR, site-ul restaurantului și pagina de contact sunt gata înainte să ți se răcească cafeaua.",
-    trustLine: "4.9 · 500+ restaurante în 30+ țări",
+    trustLine: "500+ restaurante în 30+ țări",
   },
 
   seo: {

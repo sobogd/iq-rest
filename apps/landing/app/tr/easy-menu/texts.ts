@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Menünüzü dakikalarda oluşturun. Sonsuza kadar düzenleyin.",
     subtitle:
       "Kategori eklemek için dokunun, yemek eklemek için dokunun, sıralamak için sürükleyin, telefonunuzdan fotoğraf çekin. Piyasadaki en basit restoran menü düzenleyicisi — ve her değişiklik saniyeler içinde misafirler için yayına girer.",
-    trustLine: "4.9 · 30+ ülkede 500+ restoran",
+    trustLine: "30+ ülkede 500+ restoran",
   },
 
   seo: {

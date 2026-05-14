@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Deja de perder reservas mientras cocinas.",
     subtitle:
       "Acepta reservas de mesa 24/7 — directamente desde tu menú QR, web e Instagram. Los clientes eligen fecha, hora y comensales, tú confirmas con un toque y los recordatorios por email salen automáticamente. Menos llamadas, menos no-shows, más cubiertos por noche.",
-    trustLine: "4,9 · más de 500 restaurantes en más de 30 países",
+    trustLine: "Más de 500 restaurantes en más de 30 países",
   },
 
   seo: {

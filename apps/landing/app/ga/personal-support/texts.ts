@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Fíordhaoine. Freagraí tapa. Gan chatbots.",
     subtitle:
       "Bogearraí bialainne le tacaíocht ar leibhéal bialainne — cuir teachtaireacht chugainn ar WhatsApp, ríomhphost nó in-app, agus freagraíonn fíordhuine a thuigeann bialanna i ndáiríre i nóiméid, ní laethanta. Ar gach plean, lena n-áirítear an triail saor in aisce.",
-    trustLine: "4.9 · 500+ bialann i 30+ tír",
+    trustLine: "500+ bialann i 30+ tír",
   },
 
   seo: {

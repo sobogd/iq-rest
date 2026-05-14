@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Lopeta varausten menettäminen, kun olet kokkaamassa.",
     subtitle:
       "Ota vastaan ravintolan pöytävarauksia 24/7 — suoraan QR-ruokalistastasi, verkkosivuiltasi ja Instagramista. Vieraat valitsevat päivämäärän, ajan ja seurueen koon, sinä vahvistat yhdellä napautuksella, sähköpostimuistutukset lähtevät automaattisesti. Vähemmän puheluita, vähemmän peruuttamatta jättämisiä, enemmän asiakkaita iltaa kohden.",
-    trustLine: "4,9 · yli 500 ravintolaa yli 30 maassa",
+    trustLine: "Yli 500 ravintolaa yli 30 maassa",
   },
 
   seo: {

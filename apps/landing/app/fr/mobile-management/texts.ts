@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Pilotez votre restaurant depuis votre téléphone. Entre les tables.",
     subtitle:
       "Tout le tableau de bord IQ Rest est conçu mobile-first — ajoutez des plats, changez les photos, modifiez les prix et lisez les commandes en direct depuis le même téléphone dans la poche de votre tablier. Pas d'ordinateur portable, pas d'ordi de back-office, pas d'excuses.",
-    trustLine: "4.9 · 500+ restaurants dans 30+ pays",
+    trustLine: "500+ restaurants dans 30+ pays",
   },
 
   seo: {

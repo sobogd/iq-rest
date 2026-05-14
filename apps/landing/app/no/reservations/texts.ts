@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Slutt å gå glipp av bestillinger mens du lager mat.",
     subtitle:
       "Ta imot restaurant­bordbestillinger 24/7 — direkte fra QR-menyen, nettsiden og Instagram. Gjester velger dato, tid og antall personer, du bekrefter med ett trykk, e-postpåminnelser sendes automatisk. Færre telefonsamtaler, færre no-shows, flere gjester per kveld.",
-    trustLine: "4,9 · 500+ restauranter i 30+ land",
+    trustLine: "500+ restauranter i 30+ land",
   },
 
   seo: {

@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Prowadź restaurację z telefonu. Między stolikami.",
     subtitle:
       "Cały panel IQ Rest został zbudowany mobilnie — dodawaj dania, zmieniaj zdjęcia, edytuj ceny i czytaj zamówienia z tego samego telefonu, który masz w kieszeni fartucha. Bez laptopa, bez komputera w zapleczu, bez wymówek.",
-    trustLine: "4,9 · ponad 500 restauracji w 30+ krajach",
+    trustLine: "Ponad 500 restauracji w 30+ krajach",
   },
 
   seo: {

@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Stop missing bookings while you cook.",
     subtitle:
       "Accept restaurant table reservations 24/7 — directly from your QR menu, website and Instagram. Guests pick a date, time and party size, you confirm in one tap, email reminders go out automatically. Fewer phone calls, fewer no-shows, more covers per night.",
-    trustLine: "4.9 · 500+ restaurants in 30+ countries",
+    trustLine: "500+ restaurants in 30+ countries",
   },
 
   seo: {

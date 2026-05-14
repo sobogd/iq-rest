@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Soyez inoubliable en une seconde.",
     subtitle:
       "Mettez une vidéo de votre cuisine, un cliché phare de plat ou un clip d'ambiance de salle en fond pour votre menu QR. Les clients arrêtent de scroller, votre marque s'imprime, et le menu en dessous reste propre et lisible.",
-    trustLine: "4.9 · 500+ restaurants dans 30+ pays",
+    trustLine: "500+ restaurants dans 30+ pays",
   },
 
   seo: {

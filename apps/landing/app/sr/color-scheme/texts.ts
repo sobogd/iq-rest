@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Vaš meni. Vaše boje. Vaš brend.",
     subtitle:
       "Izaberite akcent boju, ubacite svoj logo, i vaš QR meni odmah izgleda kao pravi brend umesto šablona. Svetla i tamna tema se automatski prebacuju sa telefonom svakog gosta — vaš meni uvek izgleda namerno.",
-    trustLine: "4.9 · 500+ restorana u 30+ zemalja",
+    trustLine: "500+ restorana u 30+ zemalja",
   },
 
   seo: {

@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Zbuduj menu w minuty. Edytuj wiecznie.",
     subtitle:
       "Stuknij, żeby dodać kategorię, stuknij, żeby dodać danie, przeciągnij, żeby zmienić kolejność, zrób zdjęcie telefonem. Najprostszy edytor menu restauracji na rynku — a każda zmiana jest na żywo dla gości w kilka sekund.",
-    trustLine: "4,9 · ponad 500 restauracji w 30+ krajach",
+    trustLine: "Ponad 500 restauracji w 30+ krajach",
   },
 
   seo: {

@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Az étterem weboldala. Élesben 5 perc alatt.",
     subtitle:
       "Hagyja ki a fejlesztőt, hagyja ki a tárhelyet, hagyja ki a fejfájást. Adja meg az e-mail címét, és a QR étlap, étterem weboldal és kapcsolati oldal elkészül, mielőtt kihűlne a kávéja.",
-    trustLine: "4.9 · 500+ étterem 30+ országban",
+    trustLine: "500+ étterem 30+ országban",
   },
 
   seo: {

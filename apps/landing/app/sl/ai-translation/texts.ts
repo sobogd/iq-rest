@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Turisti ne znajo brati vašega menija? Popravite z enim tapom.",
     subtitle:
       "Prevedite celoten restavracijski meni v 35 jezikov z AI, naučenim na kulinaričnem kontekstu. Imena jedi ostanejo pristna, opisi se berejo naravno — turisti pa naročijo več, ko dejansko razumejo, kaj dobivajo.",
-    trustLine: "4.9 · 500+ restavracij v 30+ državah",
+    trustLine: "500+ restavracij v 30+ državah",
   },
 
   seo: {

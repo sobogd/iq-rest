@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Zamówienia bezpośrednie. Zero prowizji. Prosto do kuchni.",
     subtitle:
       "Przestań oddawać 30% Uber Eats, Glovo i Wolt. Z IQ Rest goście skanują kod QR, składają zamówienie z telefonu, a bonik trafia prosto do Twojej kuchni — każdy grosz zostaje u Ciebie.",
-    trustLine: "4,9 · ponad 500 restauracji w 30+ krajach",
+    trustLine: "Ponad 500 restauracji w 30+ krajach",
   },
 
   seo: {

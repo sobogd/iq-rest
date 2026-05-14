@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Atrodykite nepamirštamai per sekundę.",
     subtitle:
       "Įdėkite vaizdo įrašą iš virtuvės, pagrindinio patiekalo nuotrauką ar nuotaikingą salės klipą kaip QR meniu foną. Svečiai sustoja slinkti, jūsų prekės ženklas įsimena, o meniu po juo lieka švarus ir įskaitomas.",
-    trustLine: "4,9 · 500+ restoranų 30+ šalių",
+    trustLine: "500+ restoranų 30+ šalių",
   },
 
   seo: {

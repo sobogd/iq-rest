@@ -19,7 +19,7 @@ export const TEXTS: LandingTexts = {
     sub: "Suíomh gréasáin réamhdhéanta dod' bhialann — gan forbróirí ná conraitheoirí. Orduithe díreacha, áitithe agus anailís aíonna in aon síntiús amháin.",
     dynamicHeadlines: ["0% coimisiún.", "35 teanga le AI.", "Orduithe ar líne.", "Áitithe 24/7.", "Dearadh iontach."],
     painBullets: ["0% Coimisiún: Téann gach ordú go díreach chugat.", "Aistriúchán AI: 35 teanga chun caiteachas turasóirí a mhéadú.", "Áitithe 24/7: Bialann lán gan glaonna feles.", "Praghsanna solúbtha: Nuashonraigh an rochlár i soicindí."],
-    rating: "4,9 · níos mó ná 500 bialann i 30+ tír",
+    rating: "Níos mó ná 500 bialann i 30+ tír",
   },
   features: {
     heading: "Gach rud a theastaíonn uait.", headingAccent: "Aon rud nach dteastaíonn.",

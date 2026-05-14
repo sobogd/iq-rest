@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "做菜时别再错过预订。",
     subtitle:
       "24/7 接受餐厅桌位预订——直接来自您的二维码菜单、餐厅网站和 Instagram。客人选择日期、时间和人数,您一键确认,邮件提醒自动发送。更少电话,更少爽约,每晚更多桌次。",
-    trustLine: "4.9 · 30+ 国家的 500+ 餐厅",
+    trustLine: "30+ 国家的 500+ 餐厅",
   },
 
   seo: {

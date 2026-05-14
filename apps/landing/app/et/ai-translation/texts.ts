@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Turistid ei saa sinu menüüd lugeda? Paranda see ühe puudutusega.",
     subtitle:
       "Tõlgi kogu oma restoranimenüü 35 keelde tehisintellektiga, mis on treenitud kulinaarsel kontekstil. Roogade nimed jäävad autentseteks, kirjeldused loevad loomulikult — ja turistid tellivad rohkem, kui nad tegelikult mõistavad, mida nad saavad.",
-    trustLine: "4.9 · 500+ restorani 30+ riigis",
+    trustLine: "500+ restorani 30+ riigis",
   },
 
   seo: {

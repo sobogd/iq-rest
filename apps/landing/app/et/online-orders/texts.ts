@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Otsetellimused. Nullvahendustasu. Otse köögi.",
     subtitle:
       "Lõpeta 30 % maksmine Uber Eatsile, Glovole ja Woltile. IQ Restiga skannivad sinu külalised QR-koodi, koostavad oma tellimuse telefonis ja tellimus jõuab sinu kööki — iga sent jääb sulle.",
-    trustLine: "4,9 · 500+ restorani 30+ riigis",
+    trustLine: "500+ restorani 30+ riigis",
   },
 
   seo: {

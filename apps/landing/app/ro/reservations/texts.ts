@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Nu mai pierde rezervări în timp ce gătești.",
     subtitle:
       "Acceptă rezervări de masă 24/7 — direct din meniul QR, site și Instagram. Oaspeții aleg data, ora și numărul de persoane, tu confirmi într-o singură atingere, mementourile pe email sunt trimise automat. Mai puține apeluri telefonice, mai puține neprezentări, mai mulți oaspeți pe seară.",
-    trustLine: "4.9 · 500+ restaurante în 30+ țări",
+    trustLine: "500+ restaurante în 30+ țări",
   },
 
   seo: {

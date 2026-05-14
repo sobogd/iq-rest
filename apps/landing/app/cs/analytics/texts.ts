@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Přestaňte hádat. Vězte, co hosté skutečně dělají.",
     subtitle:
       "Sledujte analytiku restauračního menu v reálném čase — QR skeny za hodinu, pokrmy, na kterých hosté zůstávají, jazyky turistů, nejpomalejší den v týdnu — a použijte ta data k tisku méně menu, chytřejšímu plánování, propagaci správných specialit.",
-    trustLine: "4.9 · 500+ restaurací ve 30+ zemích",
+    trustLine: "500+ restaurací ve 30+ zemích",
   },
 
   seo: {

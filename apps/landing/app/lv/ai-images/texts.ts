@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Telefona foto. Profesionāli izskatīga ēdienkarte.",
     subtitle:
       "Uzņem ēdienu no jebkura leņķa, augšupielādē, un mūsu AI automātiski apgriež, koriģē krāsu un saspiež to ātri ielādējamā ēdienkartes attēlā — nezaudējot ēdienu. Satriecoša kvalitāte uz jebkuras ierīces, bez Lightroom vai dizainera.",
-    trustLine: "4.9 · 500+ restorāni vairāk nekā 30 valstīs",
+    trustLine: "500+ restorāni vairāk nekā 30 valstīs",
   },
 
   seo: {

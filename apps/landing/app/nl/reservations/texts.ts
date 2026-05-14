@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Stop met reserveringen mislopen tijdens het koken.",
     subtitle:
       "Accepteer 24/7 tafelreserveringen — direct vanuit je QR menu, website en Instagram. Gasten kiezen datum, tijd en aantal personen, jij bevestigt met één tap, e-mailherinneringen worden automatisch verstuurd. Minder telefoontjes, minder no-shows, meer covers per avond.",
-    trustLine: "4.9 · 500+ restaurants in 30+ landen",
+    trustLine: "500+ restaurants in 30+ landen",
   },
 
   seo: {

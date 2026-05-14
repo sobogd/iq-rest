@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Suíomh do bhialainne. Beo i 5 nóiméad.",
     subtitle:
       "Léim thar an forbróir, léim thar óstáil, léim thar an tinneas cinn. Cuir do ríomhphost isteach agus tá do bhiachlár QR, suíomh bialainne agus leathanach teagmhála réidh sula bhfuaraíonn do chaife.",
-    trustLine: "4.9 · 500+ bialann i 30+ tír",
+    trustLine: "500+ bialann i 30+ tír",
   },
 
   seo: {

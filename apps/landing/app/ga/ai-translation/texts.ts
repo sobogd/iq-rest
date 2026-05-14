@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Ní féidir le turasóirí do bhiachlár a léamh? Deisigh é le tap amháin.",
     subtitle:
       "Aistrigh do bhiachlár bialainne ar fad isteach in 35 teanga le AI atá oilte ar chomhthéacs cócaireachta. Fanann ainmneacha miasa barántúil, léann cur síos go nádúrtha — agus ordaíonn turasóirí níos mó nuair a thuigeann siad cad atá á fháil acu i ndáiríre.",
-    trustLine: "4.9 · 500+ bialann i 30+ tír",
+    trustLine: "500+ bialann i 30+ tír",
   },
 
   seo: {

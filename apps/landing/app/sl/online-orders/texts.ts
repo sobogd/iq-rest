@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Neposredna naročila. Brez provizije. Naravnost v vašo kuhinjo.",
     subtitle:
       "Nehajte plačevati 30 % Uber Eatsu, Glovu in Woltu. Z IQ Restom vaši gostje skenirajo QR, sestavijo naročilo na svojem telefonu in listek pristane v vaši kuhinji — vsak cent ostane pri vas.",
-    trustLine: "4.9 · 500+ restavracij v 30+ državah",
+    trustLine: "500+ restavracij v 30+ državah",
   },
 
   seo: {

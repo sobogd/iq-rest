@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Stop guessing. Know what guests actually do.",
     subtitle:
       "See restaurant menu analytics in real time — QR scans per hour, the dishes guests linger on, the languages tourists use, the slowest weekday — and use that data to print fewer menus, schedule smarter, push the right specials.",
-    trustLine: "4.9 · 500+ restaurants in 30+ countries",
+    trustLine: "500+ restaurants in 30+ countries",
   },
 
   seo: {

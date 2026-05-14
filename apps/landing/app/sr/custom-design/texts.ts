@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Izgledajte nezaboravno za jednu sekundu.",
     subtitle:
       "Ubacite video svoje kuhinje, herojski snimak hrane ili moody snimak trpezarije kao pozadinu QR menija. Gosti zaustavljaju skrolovanje, vaš brend ostaje, a meni ispod ostaje čist i čitljiv.",
-    trustLine: "4.9 · 500+ restorana u 30+ zemalja",
+    trustLine: "500+ restorana u 30+ zemalja",
   },
 
   seo: {

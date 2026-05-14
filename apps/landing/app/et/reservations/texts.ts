@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Lõpeta broneeringutest ilmajäämine, kui sa süüa teed.",
     subtitle:
       "Võta vastu restorani lauabroneeringuid 24/7 — otse oma QR-menüüst, veebisaidilt ja Instagramist. Külalised valivad kuupäeva, kellaaja ja seltskonna suuruse, sa kinnitad ühe puudutusega, e-kirja meeldetuletused saadetakse automaatselt. Vähem telefonikõnesid, vähem kohale tulemata jätmisi, rohkem kohti õhtus.",
-    trustLine: "4.9 · 500+ restorani 30+ riigis",
+    trustLine: "500+ restorani 30+ riigis",
   },
 
   seo: {

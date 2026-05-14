@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Vaš meni govori jezik svakog turiste.",
     subtitle:
       "Višejezični restoranski meni ne bi trebalo da bude projekat. Sa IQ Rest-om, vaš QR meni automatski prepoznaje jezik telefona svakog gosta i služi ga na bilo kom od 35 jezika — uključujući arapski i persijski sa pravilnim s-desne-ulevo renderovanjem.",
-    trustLine: "4.9 · 500+ restorana u 30+ zemalja",
+    trustLine: "500+ restorana u 30+ zemalja",
   },
 
   seo: {

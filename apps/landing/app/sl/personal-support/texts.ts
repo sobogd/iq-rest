@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Pravi ljudje. Hitri odgovori. Brez klepetalnikov.",
     subtitle:
       "Restavracijska programska oprema s podporo restavracijske kakovosti — pišite nam na WhatsApp, e-pošto ali v aplikaciji, in pravi človek, ki dejansko razume restavracije, odgovori v minutah, ne dnevih. V vsakem paketu, vključno z brezplačnim preizkusnim obdobjem.",
-    trustLine: "4.9 · 500+ restavracij v 30+ državah",
+    trustLine: "500+ restavracij v 30+ državah",
   },
 
   seo: {

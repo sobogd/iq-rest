@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "游客看不懂菜单?一键解决。",
     subtitle:
       "用基于餐饮语境训练的 AI,把整份餐厅菜单翻译成 35 种语言。菜名保持地道,描述读起来自然——游客真正看懂菜后,点得更多。",
-    trustLine: "4.9 · 30+ 国家的 500+ 餐厅",
+    trustLine: "30+ 国家的 500+ 餐厅",
   },
 
   seo: {

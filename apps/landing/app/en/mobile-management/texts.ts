@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Run your restaurant from your phone. Between tables.",
     subtitle:
       "The entire IQ Rest dashboard is built mobile-first — add dishes, swap photos, change prices and read live orders from the same phone in your apron pocket. No laptop, no back-office computer, no excuse.",
-    trustLine: "4.9 · 500+ restaurants in 30+ countries",
+    trustLine: "500+ restaurants in 30+ countries",
   },
 
   seo: {

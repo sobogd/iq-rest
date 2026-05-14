@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Hættu að giska. Veistu hvað gestir gera raunverulega.",
     subtitle:
       "Sjáðu tölfræði veitingahúsamatseðils í rauntíma — QR-skannanir á klukkustund, réttir sem gestir staldra við, tungumál sem ferðamenn nota, hægasti virki dagurinn — og notaðu þau gögn til að prenta færri matseðla, skipuleggja klárari, ýta réttum tilboðum.",
-    trustLine: "4.9 · 500+ veitingahús í 30+ löndum",
+    trustLine: "500+ veitingahús í 30+ löndum",
   },
 
   seo: {

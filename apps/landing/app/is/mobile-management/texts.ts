@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Reka veitingahúsið úr símanum. Milli borða.",
     subtitle:
       "Allt IQ Rest stjórnborðið er byggt farsíma-fyrst — bættu við réttum, skiptu um myndir, breyttu verðum og lestu pantanir í beinni úr sama síma og er í svuntuvasanum. Engin fartölva, engin bakhliðartölva, engin afsökun.",
-    trustLine: "4.9 · 500+ veitingahús í 30+ löndum",
+    trustLine: "500+ veitingahús í 30+ löndum",
   },
 
   seo: {

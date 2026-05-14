@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Gerçek insanlar. Hızlı yanıtlar. Chatbot yok.",
     subtitle:
       "Restoran kalitesinde destekle restoran yazılımı — bize WhatsApp, e-posta veya uygulama içi yazın; restoranları gerçekten anlayan gerçek bir insan günler değil dakikalar içinde yanıtlar. Ücretsiz deneme dahil her planda.",
-    trustLine: "4.9 · 30+ ülkede 500+ restoran",
+    trustLine: "30+ ülkede 500+ restoran",
   },
 
   seo: {

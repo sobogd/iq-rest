@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Vaše menu hovorí jazykom každého turistu.",
     subtitle:
       "Viacjazyčné reštauračné menu by nemalo byť projekt. S IQ Rest vaše QR menu auto-deteguje jazyk telefónu každého hosťa a obslúži ho v ktoromkoľvek z 35 jazykov — vrátane arabčiny a perzštiny so správnym vykreslením sprava doľava.",
-    trustLine: "4.9 · 500+ reštaurácií v 30+ krajinách",
+    trustLine: "500+ reštaurácií v 30+ krajinách",
   },
 
   seo: {

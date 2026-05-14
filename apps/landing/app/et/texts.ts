@@ -19,7 +19,7 @@ export const TEXTS: LandingTexts = {
     sub: "Valmis veebisait teie restoranile — ilma arendajate ja alltöövõtjateta. Otsetellimused, broneeringud ja külaliste analüütika ühes tellimuses.",
     dynamicHeadlines: ["0% vahendustasu.", "35 keelt tehisintellektiga.", "Online tellimused.", "Broneeringud 24/7.", "Premium disain."],
     painBullets: ["0% vahendustasu: Kõik tellimused lähevad otse teile.", "AI-tõlge: 35 keelt turistide keskmise arve suurendamiseks.", "Broneeringud 24/7: Täis saal ilma liigsete kõnedeta.", "Paindlikud hinnad: Uuendage menüüd sekunditega."],
-    rating: "4,9 · üle 500 restorani 30+ riigis",
+    rating: "Üle 500 restorani 30+ riigis",
   },
   features: {
     heading: "Kõik mida vajad.", headingAccent: "Mitte midagi muud.",

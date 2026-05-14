@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Hagyjon fel a találgatással. Tudja, mit csinálnak valóban a vendégek.",
     subtitle:
       "Lássa az étterem étlap analitikát valós időben — óránkénti QR beolvasások, ételek, amelyeknél a vendégek időznek, nyelvek, amelyeket a turisták használnak, a leglassabb hétköznap — és használja ezeket az adatokat, hogy kevesebb étlapot nyomtasson, okosabban tervezzen, és a megfelelő különlegességeket promoválja.",
-    trustLine: "4.9 · 500+ étterem 30+ országban",
+    trustLine: "500+ étterem 30+ országban",
   },
 
   seo: {

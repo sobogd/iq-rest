@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "几分钟构建菜单。永远可编辑。",
     subtitle:
       "点击添加分类,点击添加菜品,拖动重排序,从手机拍照。市场上最简单的餐厅菜单编辑器——每次更改都在几秒内对客人上线。",
-    trustLine: "4.9 · 30+ 国家的 500+ 餐厅",
+    trustLine: "30+ 国家的 500+ 餐厅",
   },
 
   seo: {

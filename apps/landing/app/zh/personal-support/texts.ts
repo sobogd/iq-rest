@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "真实的人。快速回复。无聊天机器人。",
     subtitle:
       "餐厅级支持的餐厅软件——通过 WhatsApp、邮件或应用内联系我们,真懂餐厅的真人会在几分钟内回复,而非几天。每个套餐都有,免费试用也算。",
-    trustLine: "4.9 · 30+ 国家的 500+ 餐厅",
+    trustLine: "30+ 国家的 500+ 餐厅",
   },
 
   seo: {

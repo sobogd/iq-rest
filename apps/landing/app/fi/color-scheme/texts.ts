@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Sinun ruokalistasi. Sinun värisi. Sinun brändisi.",
     subtitle:
       "Valitse korostusväri, pudota logosi sisään, ja QR-ruokalistasi näyttää välittömästi oikealta brändiltä eikä mallipohjalta. Vaalea ja tumma teema vaihtuvat automaattisesti jokaisen vieraan puhelimen mukaan — ruokalistasi näyttää aina tarkoituksenmukaiselta.",
-    trustLine: "4,9 · yli 500 ravintolaa yli 30 maassa",
+    trustLine: "Yli 500 ravintolaa yli 30 maassa",
   },
 
   seo: {

@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Verpasse keine Buchungen mehr, während du kochst.",
     subtitle:
       "Nimm Tischreservierungen 24/7 entgegen — direkt über QR-Karte, Webseite und Instagram. Gäste wählen Datum, Uhrzeit und Personenanzahl, du bestätigst mit einem Tipp, E-Mail-Erinnerungen gehen automatisch raus. Weniger Anrufe, weniger No-Shows, mehr Gedecke pro Abend.",
-    trustLine: "4,9 · 500+ Restaurants in 30+ Ländern",
+    trustLine: "500+ Restaurants in 30+ Ländern",
   },
 
   seo: {

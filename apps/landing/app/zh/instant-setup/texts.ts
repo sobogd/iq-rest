@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "您的餐厅网站。5分钟上线。",
     subtitle:
       "无需开发者、无需托管、无需头疼。输入邮箱,您的二维码菜单、餐厅网站和联系页将在咖啡变凉之前就绪。",
-    trustLine: "4.9 · 30+ 国家的 500+ 餐厅",
+    trustLine: "30+ 国家的 500+ 餐厅",
   },
 
   seo: {

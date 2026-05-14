@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Sinu menüü räägib iga turisti keelt.",
     subtitle:
       "Mitmekeelne restoranimenüü ei peaks olema projekt. IQ Restiga tuvastab sinu QR-menüü automaatselt iga külalise telefoni keele ja serveerib seda mistahes 35 keeles — sealhulgas araabia ja pärsia korralike paremalt-vasakule renderdusega.",
-    trustLine: "4.9 · 500+ restorani 30+ riigis",
+    trustLine: "500+ restorani 30+ riigis",
   },
 
   seo: {

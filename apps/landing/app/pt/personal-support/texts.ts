@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Pessoas reais. Respostas rápidas. Sem chatbots.",
     subtitle:
       "Software de restaurante com apoio à altura — manda-nos mensagem no WhatsApp, email ou na app, e uma pessoa real que percebe mesmo de restaurantes responde em minutos, não em dias. Em todos os planos, incluindo no teste gratuito.",
-    trustLine: "4,9 · mais de 500 restaurantes em mais de 30 países",
+    trustLine: "Mais de 500 restaurantes em mais de 30 países",
   },
 
   seo: {

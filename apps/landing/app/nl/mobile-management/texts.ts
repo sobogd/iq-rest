@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Run je restaurant vanaf je telefoon. Tussen de tafels door.",
     subtitle:
       "Het hele IQ Rest dashboard is mobile-first gebouwd — voeg gerechten toe, wissel foto's, verander prijzen en lees live bestellingen vanaf dezelfde telefoon in je schortzak. Geen laptop, geen back-office computer, geen excuus.",
-    trustLine: "4.9 · 500+ restaurants in 30+ landen",
+    trustLine: "500+ restaurants in 30+ landen",
   },
 
   seo: {

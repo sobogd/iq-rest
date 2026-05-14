@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Telefonifotod. Pro välimusega menüü.",
     subtitle:
       "Klõpsa roa mistahes nurgast, lae üles ja meie AI kärbib automaatselt, korrigeerib värvi ja surub kokku selle kiire-laadimisega menüü pildiks — toitu kaotamata. Vapustav kvaliteet igal seadmel, Lightroomi ega disainerit pole vaja.",
-    trustLine: "4.9 · 500+ restorani 30+ riigis",
+    trustLine: "500+ restorani 30+ riigis",
   },
 
   seo: {

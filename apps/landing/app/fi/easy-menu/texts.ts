@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Rakenna ruokalistasi minuuteissa. Muokkaa sitä ikuisesti.",
     subtitle:
       "Napauta lisätäksesi kategorian, napauta lisätäksesi ruoan, raahaa järjestääksesi uudelleen, ota kuva puhelimellasi. Yksinkertaisin ravintolan ruokalistaeditori markkinoilla — ja jokainen muutos menee liveksi vieraille sekunneissa.",
-    trustLine: "4,9 · yli 500 ravintolaa yli 30 maassa",
+    trustLine: "Yli 500 ravintolaa yli 30 maassa",
   },
 
   seo: {

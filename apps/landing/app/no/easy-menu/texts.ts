@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Bygg menyen på minutter. Rediger den for alltid.",
     subtitle:
       "Trykk for å legge til en kategori, trykk for å legge til en rett, dra for å omorganisere, ta et bilde med telefonen. Den enkleste restaurantmeny-editoren på markedet — og hver endring går live for gjester på sekunder.",
-    trustLine: "4,9 · 500+ restauranter i 30+ land",
+    trustLine: "500+ restauranter i 30+ land",
   },
 
   seo: {

@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Bouw je menu in minuten. Bewerk het voor altijd.",
     subtitle:
       "Tik om een categorie toe te voegen, tik om een gerecht toe te voegen, sleep om te herordenen, snap een foto vanaf je telefoon. De eenvoudigste restaurantmenu-editor op de markt — en elke wijziging gaat live voor gasten in seconden.",
-    trustLine: "4.9 · 500+ restaurants in 30+ landen",
+    trustLine: "500+ restaurants in 30+ landen",
   },
 
   seo: {

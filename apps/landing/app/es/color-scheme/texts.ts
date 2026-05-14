@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Tu carta. Tus colores. Tu marca.",
     subtitle:
       "Elige un color de acento, sube tu logo, y tu menú QR parece al instante una marca real en lugar de una plantilla. Los modos claro y oscuro se cambian automáticamente con el móvil de cada cliente — tu carta siempre se ve intencional.",
-    trustLine: "4,9 · más de 500 restaurantes en más de 30 países",
+    trustLine: "Más de 500 restaurantes en más de 30 países",
   },
 
   seo: {

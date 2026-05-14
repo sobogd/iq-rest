@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Telefon fotoğrafları. Pro görünümlü menü.",
     subtitle:
       "Bir yemeği herhangi bir açıdan çekin, yükleyin ve yapay zekâmız onu — yemeği kaybetmeden — hızlı yüklenen bir menü görseline otomatik kırpar, renk düzeltir ve sıkıştırır. Herhangi bir cihazda çarpıcı kalite, Lightroom veya tasarımcı gerekmez.",
-    trustLine: "4.9 · 30+ ülkede 500+ restoran",
+    trustLine: "30+ ülkede 500+ restoran",
   },
 
   seo: {

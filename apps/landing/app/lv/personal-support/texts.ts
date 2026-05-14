@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Īsti cilvēki. Ātras atbildes. Bez čatbotiem.",
     subtitle:
       "Restorāna programmatūra ar restorāna līmeņa atbalstu — raksti mums WhatsApp, e-pastā vai aplikācijā, un īsts cilvēks, kas patiesi saprot restorānus, atbild minūtēs, nevis dienās. Katrā plānā, ieskaitot bezmaksas izmēģinājumu.",
-    trustLine: "4.9 · 500+ restorāni vairāk nekā 30 valstīs",
+    trustLine: "500+ restorāni vairāk nekā 30 valstīs",
   },
 
   seo: {

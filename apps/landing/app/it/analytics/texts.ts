@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Smetti di indovinare. Sappi cosa fanno davvero gli ospiti.",
     subtitle:
       "Vedi le analytics del menu del ristorante in tempo reale — scansioni QR per ora, i piatti su cui gli ospiti si soffermano, le lingue che usano i turisti, il giorno feriale più lento — e usa quei dati per stampare meno menu, programmare più intelligentemente, spingere le specialità giuste.",
-    trustLine: "4.9 · 500+ ristoranti in 30+ paesi",
+    trustLine: "500+ ristoranti in 30+ paesi",
   },
 
   seo: {

@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Suorat tilaukset. Nollakomissio. Suoraan keittiöön.",
     subtitle:
       "Lopeta 30 prosentin maksaminen Uber Eatsille, Glovolle ja Woltille. IQ Restin avulla vieraasi skannaavat QR-koodin, kasaavat tilauksensa puhelimellaan, ja tilauslappu lentää keittiöösi — joka sentti jää sinulle.",
-    trustLine: "4,9 · yli 500 ravintolaa yli 30 maassa",
+    trustLine: "Yli 500 ravintolaa yli 30 maassa",
   },
 
   seo: {

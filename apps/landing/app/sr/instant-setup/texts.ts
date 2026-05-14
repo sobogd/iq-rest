@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Vaš sajt restorana. Uživo za 5 minuta.",
     subtitle:
       "Preskočite programera, hosting, glavobolju. Unesite svoj email i vaš QR meni, sajt restorana i kontakt strana su spremni pre nego što vam se kafa ohladi.",
-    trustLine: "4.9 · 500+ restorana u 30+ zemalja",
+    trustLine: "500+ restorana u 30+ zemalja",
   },
 
   seo: {

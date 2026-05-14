@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Fotografije s telefona. Pro-izgled jelovnik.",
     subtitle:
       "Slikajte jelo iz bilo kojeg kuta, učitajte, i naš AI automatski kadrira, korigira boje i komprimira u sliku jelovnika koja se brzo učitava — bez gubljenja hrane. Zapanjujuća kvaliteta na bilo kojem uređaju, bez potrebnog Lightrooma ili dizajnera.",
-    trustLine: "4.9 · 500+ restorana u 30+ zemalja",
+    trustLine: "500+ restorana u 30+ zemalja",
   },
 
   seo: {

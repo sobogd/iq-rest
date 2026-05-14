@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Liaukitės praleidę rezervacijas, kol gaminate.",
     subtitle:
       "Priimkite restorano staliukų rezervacijas 24/7 — tiesiai iš QR meniu, svetainės ir Instagram. Svečiai pasirenka datą, laiką ir kompanijos dydį, jūs patvirtinate vienu bakstelėjimu, el. laiškų priminimai siunčiami automatiškai. Mažiau telefono skambučių, mažiau neatvykusių, daugiau vakaro užimtumo.",
-    trustLine: "4,9 · 500+ restoranų 30+ šalių",
+    trustLine: "500+ restoranų 30+ šalių",
   },
 
   seo: {

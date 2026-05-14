@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Izskaties neaizmirstami vienā sekundē.",
     subtitle:
       "Pievieno video no virtuves, pievilcīgu ēdiena kadru vai noskaņas pilnu ēdamtelpas klipu kā QR ēdienkartes fonu. Viesi pārstāj ritināt, tavs zīmols paliek atmiņā, un ēdienkarte zem tā paliek tīra un lasāma.",
-    trustLine: "4.9 · 500+ restorāni vairāk nekā 30 valstīs",
+    trustLine: "500+ restorāni vairāk nekā 30 valstīs",
   },
 
   seo: {

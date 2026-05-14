@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Telefonfotos. Pro-udseende menu.",
     subtitle:
       "Snap en ret fra enhver vinkel, upload, og vores AI auto-beskærer, farvekorrigerer og komprimerer den til et hurtig-indlæsende menubillede — uden at miste maden. Fantastisk kvalitet på enhver enhed, ingen Lightroom eller designer påkrævet.",
-    trustLine: "4.9 · 500+ restauranter i 30+ lande",
+    trustLine: "500+ restauranter i 30+ lande",
   },
 
   seo: {

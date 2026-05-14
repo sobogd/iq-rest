@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Izveido ēdienkarti minūtēs. Rediģē mūžīgi.",
     subtitle:
       "Piesit, lai pievienotu kategoriju, piesit, lai pievienotu ēdienu, velc, lai pārkārtotu, uzņem foto no telefona. Vienkāršākais restorāna ēdienkartes redaktors tirgū — un katra izmaiņa kļūst aktīva viesiem sekundēs.",
-    trustLine: "4.9 · 500+ restorāni vairāk nekā 30 valstīs",
+    trustLine: "500+ restorāni vairāk nekā 30 valstīs",
   },
 
   seo: {

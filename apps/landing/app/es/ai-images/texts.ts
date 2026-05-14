@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Fotos del móvil. Carta con look pro.",
     subtitle:
       "Haz una foto al plato desde cualquier ángulo, súbela, y nuestra IA la recorta, corrige el color y la comprime en una imagen de carta de carga rápida — sin perder la comida. Calidad espectacular en cualquier dispositivo, sin Lightroom ni diseñador.",
-    trustLine: "4,9 · más de 500 restaurantes en más de 30 países",
+    trustLine: "Más de 500 restaurantes en más de 30 países",
   },
 
   seo: {

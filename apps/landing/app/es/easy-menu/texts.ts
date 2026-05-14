@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Monta tu carta en minutos. Edítala para siempre.",
     subtitle:
       "Toca para añadir una categoría, toca para añadir un plato, arrastra para reordenar, haz una foto desde el móvil. El editor de carta de restaurante más simple del mercado — y cada cambio entra online para los clientes en segundos.",
-    trustLine: "4,9 · más de 500 restaurantes en más de 30 países",
+    trustLine: "Más de 500 restaurantes en más de 30 países",
   },
 
   seo: {

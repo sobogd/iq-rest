@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Turisti ne mogu pročitati vaš jelovnik? Popravite to jednim dodirom.",
     subtitle:
       "Prevedite cijeli jelovnik restorana na 35 jezika s AI-em treniranim na kulinarskom kontekstu. Nazivi jela ostaju autentični, opisi se prirodno čitaju — i turisti naručuju više kad zapravo razumiju što dobivaju.",
-    trustLine: "4.9 · 500+ restorana u 30+ zemalja",
+    trustLine: "500+ restorana u 30+ zemalja",
   },
 
   seo: {

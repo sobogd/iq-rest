@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Direktne narudžbine. Nula provizije. Pravo u vašu kuhinju.",
     subtitle:
       "Prestanite plaćati 30% Uber Eats-u, Glovu i Wolt-u. Sa IQ Rest-om vaši gosti skeniraju QR, prave narudžbinu na svom telefonu, a ceduljica stiže u vašu kuhinju — svaka para ostaje kod vas.",
-    trustLine: "4.9 · 500+ restorana u 30+ zemalja",
+    trustLine: "500+ restorana u 30+ zemalja",
   },
 
   seo: {

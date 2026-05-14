@@ -19,7 +19,7 @@ export const TEXTS: LandingTexts = {
     sub: "Tilbúinn vefur fyrir veitingastaðinn — án forritara og verktaka. Beinar pantanir, bókanir og gestagreining í einum áskriftarpakka.",
     dynamicHeadlines: ["0% þóknun.", "35 tungumál með gervigreind.", "Netpantanir.", "Bókanir 24/7.", "Flott hönnun."],
     painBullets: ["0% þóknun: Allar pantanir fara beint til þín.", "AI þýðing: 35 tungumál til að auka sölu til ferðamanna.", "Bókanir 24/7: Fullt hús án auka símtala.", "Sveigjanlegt verð: Uppfærðu matseðilinn á nokkrum sekúndum."],
-    rating: "4,9 · meira en 500 veitingastaðir í 30+ löndum",
+    rating: "Meira en 500 veitingastaðir í 30+ löndum",
   },
   features: {
     heading: "Allt sem þú þarft.", headingAccent: "Ekkert sem þú þarft ekki.",

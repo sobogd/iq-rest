@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Bí dosheachanta i soicind amháin.",
     subtitle:
       "Cuir físeán de do chistin, pictiúr laoch bia, nó gearrthóg álainn den seomra dinnéir mar chúlra do bhiachlár QR. Stopann aíonna ag scrollú, greamaíonn do bhranda, agus fanann an biachlár faoina bhun glan agus inléite.",
-    trustLine: "4.9 · 500+ bialann i 30+ tír",
+    trustLine: "500+ bialann i 30+ tír",
   },
 
   seo: {

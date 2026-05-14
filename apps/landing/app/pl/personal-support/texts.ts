@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Prawdziwi ludzie. Szybkie odpowiedzi. Bez chatbotów.",
     subtitle:
       "Oprogramowanie restauracyjne z restauracyjnej klasy wsparciem — napisz na WhatsApp, e-mail albo w aplikacji, a prawdziwy człowiek, który naprawdę rozumie restauracje, odpowie w minuty, nie w dni. W każdym planie, łącznie z darmowym okresem próbnym.",
-    trustLine: "4,9 · ponad 500 restauracji w 30+ krajach",
+    trustLine: "Ponad 500 restauracji w 30+ krajach",
   },
 
   seo: {

@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Menünüz. Renkleriniz. Markanız.",
     subtitle:
       "Bir aksan rengi seçin, logonuzu yerleştirin ve QR menünüz şablon yerine anında gerçek bir marka gibi görünür. Açık ve koyu temalar her misafirin telefonuyla otomatik geçiş yapar — menünüz her zaman özenle tasarlanmış görünür.",
-    trustLine: "4.9 · 30+ ülkede 500+ restoran",
+    trustLine: "30+ ülkede 500+ restoran",
   },
 
   seo: {

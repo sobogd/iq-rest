@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Els turistes no entenen el teu menú? Arregla-ho amb un toc.",
     subtitle:
       "Tradueix tot el menú del teu restaurant a 35 idiomes amb una IA entrenada en context culinari. Els noms dels plats es mantenen autèntics, les descripcions es llegeixen amb naturalitat — i els turistes demanen més quan entenen de debò què es trobaran.",
-    trustLine: "4,9 · més de 500 restaurants en més de 30 països",
+    trustLine: "Més de 500 restaurants en més de 30 països",
   },
 
   seo: {

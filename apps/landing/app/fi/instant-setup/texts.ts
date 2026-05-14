@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Ravintolasivustosi. Pystyssä 5 minuutissa.",
     subtitle:
       "Unohda kehittäjä, unohda webhotelli, unohda päänsärky. Syötä sähköpostiosoitteesi ja QR-ruokalistasi, ravintolasivustosi ja yhteystietosivusi ovat valmiina ennen kuin kahvisi ehtii jäähtyä.",
-    trustLine: "4,9 · yli 500 ravintolaa yli 30 maassa",
+    trustLine: "Yli 500 ravintolaa yli 30 maassa",
   },
 
   seo: {

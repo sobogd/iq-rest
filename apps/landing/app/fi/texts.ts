@@ -19,7 +19,7 @@ export const TEXTS: LandingTexts = {
     sub: "Valmis ravintolan verkkosivusto — ilman kehittäjiä ja alihankkijoita. Suorat tilaukset, varaukset ja asiakasanalytiikka yhdellä tilauksella.",
     dynamicHeadlines: ["0% provisio.", "35 kieltä tekoälyllä.", "Online-tilaukset.", "Varaukset 24/7.", "Premium-muotoilu."],
     painBullets: ["0 % provisio: Kaikki tilaukset tulevat suoraan sinulle.", "AI-käännös: 35 kieltä kasvattamaan turistien tilauksia.", "Varaukset 24/7: Täysi tupa ilman puhelurumbaa.", "Joustavat hinnat: Päivitä menu sekunneissa."],
-    rating: "4,9 · yli 500 ravintolaa 30+ maassa",
+    rating: "Yli 500 ravintolaa 30+ maassa",
   },
   features: {
     heading: "Kaikki mitä tarvitset.", headingAccent: "Ei mitään turhaa.",

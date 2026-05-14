@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Vodite restoran s telefona. Između stolova.",
     subtitle:
       "Cijela IQ Rest kontrolna ploča izgrađena je mobile-first — dodajte jela, mijenjajte fotografije, mijenjajte cijene i čitajte narudžbe uživo s istog telefona u džepu pregače. Bez laptopa, bez računala u back-officeu, bez izgovora.",
-    trustLine: "4.9 · 500+ restorana u 30+ zemalja",
+    trustLine: "500+ restorana u 30+ zemalja",
   },
 
   seo: {

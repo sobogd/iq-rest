@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Meniul tău. Culorile tale. Brandul tău.",
     subtitle:
       "Alege o culoare de accent, pune-ți logo-ul, iar meniul tău QR arată instant ca un brand real în loc de un șablon. Temele light și dark se schimbă automat cu telefonul fiecărui oaspete — meniul tău arată întotdeauna intenționat.",
-    trustLine: "4.9 · 500+ restaurante în 30+ țări",
+    trustLine: "500+ restaurante în 30+ țări",
   },
 
   seo: {

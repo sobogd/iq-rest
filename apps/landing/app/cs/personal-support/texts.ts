@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Skuteční lidé. Rychlé odpovědi. Žádní chatboti.",
     subtitle:
       "Restaurační software s podporou na restaurační úrovni — napište nám na WhatsApp, e-mail nebo v aplikaci a skutečný člověk, který opravdu rozumí restauracím, odpovídá v minutách, ne dnech. V každém plánu, včetně bezplatné zkušební verze.",
-    trustLine: "4.9 · 500+ restaurací ve 30+ zemích",
+    trustLine: "500+ restaurací ve 30+ zemích",
   },
 
   seo: {

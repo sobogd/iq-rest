@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Din menu. Dine farver. Dit brand.",
     subtitle:
       "Vælg en accentfarve, drop dit logo ind, og din QR-menu ser øjeblikkeligt ud som et rigtigt brand i stedet for en skabelon. Lyse og mørke temaer skifter automatisk med hver gæsts telefon — din menu ser altid intentionel ud.",
-    trustLine: "4.9 · 500+ restauranter i 30+ lande",
+    trustLine: "500+ restauranter i 30+ lande",
   },
 
   seo: {

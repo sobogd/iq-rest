@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Hör auf zu raten. Wisse, was Gäste wirklich tun.",
     subtitle:
       "Sieh Restaurant-Karten-Analytics in Echtzeit — QR-Scans pro Stunde, Gerichte, bei denen Gäste verweilen, Sprachen, die Touristen nutzen, der schwächste Wochentag — und nutze diese Daten, um weniger Karten zu drucken, smarter zu planen und die richtigen Specials zu pushen.",
-    trustLine: "4,9 · 500+ Restaurants in 30+ Ländern",
+    trustLine: "500+ Restaurants in 30+ Ländern",
   },
 
   seo: {

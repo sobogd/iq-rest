@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Matseðillinn talar tungumál hvers ferðamanns.",
     subtitle:
       "Fjöltyngdur veitingahúsamatseðill á ekki að vera verkefni. Með IQ Rest greinir QR-matseðillinn sjálfkrafa tungumál síma hvers gests og þjónar honum á eitthvert af 35 tungumálum — þar á meðal arabísku og persnesku með réttri hægri-til-vinstri framsetningu.",
-    trustLine: "4.9 · 500+ veitingahús í 30+ löndum",
+    trustLine: "500+ veitingahús í 30+ löndum",
   },
 
   seo: {

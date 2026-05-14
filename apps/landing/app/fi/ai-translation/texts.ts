@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Eivätkö turistit osaa lukea ruokalistaasi? Korjaa se yhdellä napautuksella.",
     subtitle:
       "Käännä koko ravintolasi ruokalista 35 kielelle AI:llä, joka on koulutettu keittiökontekstiin. Ruokien nimet pysyvät aitoina, kuvaukset luettavina — ja turistit tilaavat enemmän, kun he todella ymmärtävät, mitä saavat.",
-    trustLine: "4,9 · yli 500 ravintolaa yli 30 maassa",
+    trustLine: "Yli 500 ravintolaa yli 30 maassa",
   },
 
   seo: {

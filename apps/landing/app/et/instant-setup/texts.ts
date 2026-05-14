@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Sinu restoranisait. Töös 5 minutiga.",
     subtitle:
       "Jäta arendaja vahele, jäta majutus vahele, jäta peavalu vahele. Sisesta oma e-post ja sinu QR-menüü, restoranisait ja kontaktileht on valmis enne, kui kohv jõuab jahtuda.",
-    trustLine: "4,9 · 500+ restorani 30+ riigis",
+    trustLine: "500+ restorani 30+ riigis",
   },
 
   seo: {

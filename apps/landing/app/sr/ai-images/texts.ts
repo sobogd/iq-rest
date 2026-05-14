@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Telefonske fotografije. Profesionalno izgledan meni.",
     subtitle:
       "Snimite jelo iz bilo kog ugla, otpremite, a naša AI automatski iseca, ispravlja boje i kompresuje u brzo učitavajuću sliku menija — bez gubitka hrane. Zapanjujući kvalitet na bilo kom uređaju, bez Lightroom-a ili dizajnera.",
-    trustLine: "4.9 · 500+ restorana u 30+ zemalja",
+    trustLine: "500+ restorana u 30+ zemalja",
   },
 
   seo: {

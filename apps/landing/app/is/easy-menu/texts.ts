@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Byggðu matseðilinn á mínútum. Breyttu honum að eilífu.",
     subtitle:
       "Snertu til að bæta við flokki, snertu til að bæta við rétti, dragðu til að endurraða, smelltu mynd úr símanum. Einfaldasta veitingahúsamatseðlaforritið á markaðnum — og hver breyting fer í loftið fyrir gesti á sekúndum.",
-    trustLine: "4.9 · 500+ veitingahús í 30+ löndum",
+    trustLine: "500+ veitingahús í 30+ löndum",
   },
 
   seo: {

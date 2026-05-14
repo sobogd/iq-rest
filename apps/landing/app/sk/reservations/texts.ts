@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Prestaňte zmeškávať rezervácie, keď varíte.",
     subtitle:
       "Prijímajte rezervácie stolov 24/7 — priamo z vášho QR menu, webu a Instagramu. Hostia zvolia dátum, čas a počet osôb, vy potvrdíte jedným ťuknutím, e-mailové pripomienky odchádzajú automaticky. Menej telefonátov, menej no-show, viac krytov za večer.",
-    trustLine: "4.9 · 500+ reštaurácií v 30+ krajinách",
+    trustLine: "500+ reštaurácií v 30+ krajinách",
   },
 
   seo: {

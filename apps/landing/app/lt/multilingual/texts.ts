@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Jūsų meniu kalba kiekvieno turisto kalba.",
     subtitle:
       "Daugiakalbis restorano meniu neturėtų būti projektas. Su IQ Rest jūsų QR meniu automatiškai aptinka kiekvieno svečio telefono kalbą ir pateikia ją bet kuria iš 35 kalbų — įskaitant arabų ir persų su tinkamu rašymu iš dešinės į kairę.",
-    trustLine: "4,9 · 500+ restoranų 30+ šalių",
+    trustLine: "500+ restoranų 30+ šalių",
   },
 
   seo: {

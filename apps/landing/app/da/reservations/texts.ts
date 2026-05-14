@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Stop med at miste bookinger, mens du laver mad.",
     subtitle:
       "Modtag bordreservationer døgnet rundt — direkte fra din QR-menu, hjemmeside og Instagram. Gæster vælger dato, tidspunkt og selskabsstørrelse, du bekræfter med ét tryk, e-mailpåmindelser sendes automatisk. Færre telefonopkald, færre udeblivelser, flere kuverter per aften.",
-    trustLine: "4.9 · 500+ restauranter i 30+ lande",
+    trustLine: "500+ restauranter i 30+ lande",
   },
 
   seo: {

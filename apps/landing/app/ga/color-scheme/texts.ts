@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Do bhiachlár. Do dhathanna. Do bhranda.",
     subtitle:
       "Pioc dath accent, scaoil isteach do logo, agus breathnaíonn do bhiachlár QR cosúil le branda fíor láithreach in ionad teimpléid. Athraíonn téamaí solas agus dorcha go huathoibríoch le guthán gach aoi — breathnaíonn do bhiachlár d'aon ghnó i gcónaí.",
-    trustLine: "4.9 · 500+ bialann i 30+ tír",
+    trustLine: "500+ bialann i 30+ tír",
   },
 
   seo: {

@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Halda oma restorani telefonist. Laudade vahel.",
     subtitle:
       "Kogu IQ Resti töölaud on ehitatud mobile-first — lisa roogi, vaheta fotosid, muuda hindu ja loe reaalajas tellimusi samalt telefonilt põllaltaskus. Pole sülearvutit, pole tagatoa arvutit, pole vabandust.",
-    trustLine: "4.9 · 500+ restorani 30+ riigis",
+    trustLine: "500+ restorani 30+ riigis",
   },
 
   seo: {

@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Tourists can't read your menu? Fix it in one tap.",
     subtitle:
       "Translate your entire restaurant menu into 35 languages with AI trained on culinary context. Dish names stay authentic, descriptions read naturally — and tourists order more when they actually understand what they're getting.",
-    trustLine: "4.9 · 500+ restaurants in 30+ countries",
+    trustLine: "500+ restaurants in 30+ countries",
   },
 
   seo: {

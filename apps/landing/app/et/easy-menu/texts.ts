@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Ehita oma menüü minutitega. Redigeeri seda igavesti.",
     subtitle:
       "Puuduta kategooria lisamiseks, puuduta roa lisamiseks, lohista ümber järjestamiseks, klõpsa foto oma telefonist. Kõige lihtsam restoranimenüü redaktor turul — ja iga muutus läheb külalistele reaalajas sekunditega.",
-    trustLine: "4.9 · 500+ restorani 30+ riigis",
+    trustLine: "500+ restorani 30+ riigis",
   },
 
   seo: {

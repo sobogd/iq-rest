@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Foto da telefono. Menu dall'aspetto pro.",
     subtitle:
       "Scatta un piatto da qualsiasi angolazione, carica, e la nostra AI auto-ritaglia, corregge i colori e comprime in un'immagine di menu a caricamento veloce — senza perdere il cibo. Qualità mozzafiato su qualsiasi dispositivo, niente Lightroom o designer richiesti.",
-    trustLine: "4.9 · 500+ ristoranti in 30+ paesi",
+    trustLine: "500+ ristoranti in 30+ paesi",
   },
 
   seo: {

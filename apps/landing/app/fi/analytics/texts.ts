@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Lopeta arvailu. Tiedä, mitä vieraat oikeasti tekevät.",
     subtitle:
       "Näe ravintolaruokalistan analytiikkaa reaaliajassa — QR-skannaukset tunnissa, ruoat joiden parissa vieraat viipyvät, kielet joita turistit käyttävät, hitain arkipäivä — ja käytä dataa tulostaaksesi vähemmän ruokalistoja, aikatauluttaaksesi älykkäämmin, työntääksesi oikeat erikoisuudet.",
-    trustLine: "4,9 · yli 500 ravintolaa yli 30 maassa",
+    trustLine: "Yli 500 ravintolaa yli 30 maassa",
   },
 
   seo: {

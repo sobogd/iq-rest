@@ -19,7 +19,7 @@ export const TEXTS: LandingTexts = {
     sub: "Готов сајт вашег ресторана — без програмера и извођача. Директне поруџбине, резервације и аналитика гостију у једној претплати.",
     dynamicHeadlines: ["0% provizije.", "35 jezika uz AI.", "Online porudžbine.", "Rezervacije 24/7.", "Premium dizajn."],
     painBullets: ["0% provizije: Sve porudžbine idu direktno vama.", "AI prevod: 35 jezika za veću potrošnju turista.", "Rezervacije 24/7: Puna sala bez suvišnih poziva.", "Fleksibilne cene: Ažurirajte jelovnik u par sekundi."],
-    rating: "4,9 · preko 500 restorana u 30+ zemalja",
+    rating: "Preko 500 restorana u 30+ zemalja",
   },
   features: {
     heading: "Sve što ti treba.", headingAccent: "Ništa što ne treba.",

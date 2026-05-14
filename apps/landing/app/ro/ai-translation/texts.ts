@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Turiștii nu îți pot citi meniul? Rezolvă într-o atingere.",
     subtitle:
       "Tradu întregul meniu al restaurantului în 35 de limbi cu AI antrenat pe context culinar. Numele preparatelor rămân autentice, descrierile sună natural — iar turiștii comandă mai mult când chiar înțeleg ce primesc.",
-    trustLine: "4.9 · 500+ restaurante în 30+ țări",
+    trustLine: "500+ restaurante în 30+ țări",
   },
 
   seo: {

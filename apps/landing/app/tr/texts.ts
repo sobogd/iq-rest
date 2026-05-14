@@ -19,7 +19,7 @@ export const TEXTS: LandingTexts = {
     sub: "Restoranınız için hazır web sitesi — geliştirici ve yüklenici gerekmez. Doğrudan siparişler, rezervasyonlar ve misafir analizleri tek abonelikte.",
     dynamicHeadlines: ["%0 Komisyon.", "35 Dil YZ ile.", "Online sipariş.", "24/7 Rezervasyon.", "Premium Tasarım."],
     painBullets: ["0% Komisyon: Tüm siparişler doğrudan size gelir.", "AI Çeviri: Turist satışlarını artıracak 35 dil desteği.", "24/7 Rezervasyon: Telefon trafiği olmadan tam doluluk.", "Esnek Fiyatlar: Menünüzü saniyeler içinde güncelleyin."],
-    rating: "4,9 · 30+ ülkede 500'den fazla restoran",
+    rating: "30+ ülkede 500'den fazla restoran",
   },
   features: {
     heading: "İhtiyacın olan her şey.", headingAccent: "Olmayan hiçbir şey.",

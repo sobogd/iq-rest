@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Web vašej reštaurácie. Spustený za 5 minút.",
     subtitle:
       "Preskočte vývojára, preskočte hosting, preskočte trápenie. Zadajte e-mail a vaše QR menu, web reštaurácie a kontaktná stránka sú hotové, kým vám vychladne káva.",
-    trustLine: "4.9 · 500+ reštaurácií v 30+ krajinách",
+    trustLine: "500+ reštaurácií v 30+ krajinách",
   },
 
   seo: {

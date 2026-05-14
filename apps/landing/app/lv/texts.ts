@@ -19,7 +19,7 @@ export const TEXTS: LandingTexts = {
     sub: "Gatava jūsu restorāna mājaslapa — bez programmētājiem un apakšuzņēmējiem. Tieši pasūtījumi, rezervācijas un viesu analītika vienā abonementā.",
     dynamicHeadlines: ["0% komisija.", "35 valodas ar MI.", "Tiešsaistes pasūtījumi.", "Rezervācijas 24/7.", "Premium dizains."],
     painBullets: ["0% komisija: Visi pasūtījumi nonāk tieši pie jums.", "AI tulkojums: 35 valodas tūristu pirkumu palielināšanai.", "Rezervācijas 24/7: Pilna zāle bez liekiem zvaniem.", "Elastīgas cenas: Atjauniniet ēdienkarti dažu sekunžu laikā."],
-    rating: "4,9 · vairāk nekā 500 restorānu 30+ valstīs",
+    rating: "Vairāk nekā 500 restorānu 30+ valstīs",
   },
   features: {
     heading: "Viss, kas tev vajadzīgs.", headingAccent: "Nekā lieka.",

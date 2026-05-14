@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Nehajte zamujati rezervacije, medtem ko kuhate.",
     subtitle:
       "Sprejemajte rezervacije miz v restavraciji 24/7 — neposredno iz QR menija, spletne strani in Instagrama. Gostje izberejo datum, čas in število oseb, vi potrdite z enim tapom, e-poštni opomniki gredo samodejno. Manj telefonskih klicev, manj nepojavov, več pokritih miz na večer.",
-    trustLine: "4.9 · 500+ restavracij v 30+ državah",
+    trustLine: "500+ restavracij v 30+ državah",
   },
 
   seo: {

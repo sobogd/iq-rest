@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Vaše menu. Vaše farby. Vaša značka.",
     subtitle:
       "Vyberte akcentovú farbu, pridajte logo a vaše QR menu okamžite vyzerá ako skutočná značka namiesto šablóny. Svetlý a tmavý režim sa automaticky prepínajú s telefónom každého hosťa — vaše menu vždy vyzerá zámerne.",
-    trustLine: "4.9 · 500+ reštaurácií v 30+ krajinách",
+    trustLine: "500+ reštaurácií v 30+ krajinách",
   },
 
   seo: {

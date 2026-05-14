@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Riaďte reštauráciu z telefónu. Medzi stolmi.",
     subtitle:
       "Celý dashboard IQ Rest je postavený mobile-first — pridávajte jedlá, meňte fotky, ceny a čítajte živé objednávky z toho istého telefónu vo vrecku zástery. Žiadny laptop, žiadny počítač v kancelárii, žiadne výhovorky.",
-    trustLine: "4.9 · 500+ reštaurácií v 30+ krajinách",
+    trustLine: "500+ reštaurácií v 30+ krajinách",
   },
 
   seo: {

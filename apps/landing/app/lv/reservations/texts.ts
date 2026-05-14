@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Pārtrauc palaist garām rezervācijas, kamēr gatavo.",
     subtitle:
       "Pieņem restorāna galdu rezervācijas 24/7 — tieši no QR ēdienkartes, mājaslapas un Instagram. Viesi izvēlas datumu, laiku un viesu skaitu, tu apstiprini ar vienu pieskārienu, e-pasta atgādinājumi tiek nosūtīti automātiski. Mazāk telefona zvanu, mazāk neierašanos, vairāk vietu vakarā.",
-    trustLine: "4.9 · 500+ restorāni vairāk nekā 30 valstīs",
+    trustLine: "500+ restorāni vairāk nekā 30 valstīs",
   },
 
   seo: {

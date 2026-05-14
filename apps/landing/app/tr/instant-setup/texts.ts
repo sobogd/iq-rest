@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Restoran web siteniz. 5 dakikada yayında.",
     subtitle:
       "Geliştiriciye, hosting ayarlarına, baş ağrısına gerek yok. E-postanızı girin; QR menünüz, restoran için web sitesi ve iletişim sayfanız kahveniz soğumadan hazır olsun.",
-    trustLine: "4.9 · 30+ ülkede 500+ restoran",
+    trustLine: "30+ ülkede 500+ restoran",
   },
 
   seo: {

@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Építse fel az étlapját percek alatt. Szerkessze örökké.",
     subtitle:
       "Koppintson egy kategória hozzáadásához, koppintson egy étel hozzáadásához, húzza át az átrendezéshez, készítsen fotót a telefonjáról. A piacon elérhető legegyszerűbb étterem étlap szerkesztő — és minden változás élő a vendégeknek másodpercek alatt.",
-    trustLine: "4.9 · 500+ étterem 30+ országban",
+    trustLine: "500+ étterem 30+ országban",
   },
 
   seo: {

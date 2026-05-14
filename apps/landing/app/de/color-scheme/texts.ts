@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Deine Karte. Deine Farben. Deine Marke.",
     subtitle:
       "Wähle eine Akzentfarbe, lade dein Logo hoch, und deine QR-Karte sieht sofort wie eine echte Marke aus statt wie eine Vorlage. Hell- und Dunkelmodus wechseln automatisch mit dem Handy jedes Gastes — deine Karte wirkt immer gewollt.",
-    trustLine: "4,9 · 500+ Restaurants in 30+ Ländern",
+    trustLine: "500+ Restaurants in 30+ Ländern",
   },
 
   seo: {

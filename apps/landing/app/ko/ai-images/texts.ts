@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "휴대폰 사진. 프로처럼 보이는 메뉴.",
     subtitle:
       "어떤 각도에서든 요리 사진을 찍고, 업로드하면, AI가 빠르게 로딩되는 메뉴 이미지로 자동 자르기, 색 보정, 압축합니다 — 음식을 잃지 않고. 어떤 기기에서든 멋진 품질, Lightroom이나 디자이너 불필요.",
-    trustLine: "4.9 · 30개국 이상 500+ 레스토랑",
+    trustLine: "30개국 이상 500+ 레스토랑",
   },
 
   seo: {

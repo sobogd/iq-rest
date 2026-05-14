@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Direct orders. Zero commission. Straight to your kitchen.",
     subtitle:
       "Stop paying 30% to Uber Eats, Glovo and Wolt. With IQ Rest your guests scan the QR, build their order on their phone, and the ticket lands in your kitchen — every cent stays with you.",
-    trustLine: "4.9 · 500+ restaurants in 30+ countries",
+    trustLine: "500+ restaurants in 30+ countries",
   },
 
   seo: {

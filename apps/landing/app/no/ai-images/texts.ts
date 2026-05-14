@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Telefonbilder. Profesjonell meny.",
     subtitle:
       "Knips en rett fra hvilken som helst vinkel, last opp, og AI-en vår auto-beskjærer, fargekorrigerer og komprimerer den til et raskt­lastende menybilde — uten å miste maten. Fantastisk kvalitet på enhver enhet, ingen Lightroom eller designer kreves.",
-    trustLine: "4,9 · 500+ restauranter i 30+ land",
+    trustLine: "500+ restauranter i 30+ land",
   },
 
   seo: {

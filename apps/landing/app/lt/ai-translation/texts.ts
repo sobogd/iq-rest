@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Turistai negali perskaityti jūsų meniu? Sutvarkykite tai vienu bakstelėjimu.",
     subtitle:
       "Išverskite visą restorano meniu į 35 kalbas su DI, apmokytu kulinariniame kontekste. Patiekalų pavadinimai išlieka autentiški, aprašymai skamba natūraliai — o turistai užsako daugiau, kai iš tikrųjų supranta, ką gauna.",
-    trustLine: "4,9 · 500+ restoranų 30+ šalių",
+    trustLine: "500+ restoranų 30+ šalių",
   },
 
   seo: {

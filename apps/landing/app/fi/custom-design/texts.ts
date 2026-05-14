@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Näytä unohtumattomalta sekunnissa.",
     subtitle:
       "Pudota videoklippi keittiöstäsi, pääruoan kuva tai tunnelmallinen ruokasaliklippi QR-ruokalistasi taustaksi. Vieraat pysähtyvät, brändisi jää mieleen, ja alla oleva ruokalista pysyy puhtaana ja luettavana.",
-    trustLine: "4,9 · yli 500 ravintolaa yli 30 maassa",
+    trustLine: "Yli 500 ravintolaa yli 30 maassa",
   },
 
   seo: {

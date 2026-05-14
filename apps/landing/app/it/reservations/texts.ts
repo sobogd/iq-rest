@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Smetti di perdere prenotazioni mentre cucini.",
     subtitle:
       "Accetta prenotazioni di tavolo 24/7 — direttamente dal tuo menu QR, sito web e Instagram. Gli ospiti scelgono data, ora e numero di persone, tu confermi con un tap, i promemoria via email partono automaticamente. Meno telefonate, meno no-show, più coperti per serata.",
-    trustLine: "4.9 · 500+ ristoranti in 30+ paesi",
+    trustLine: "500+ ristoranti in 30+ paesi",
   },
 
   seo: {

@@ -34,7 +34,7 @@ export const TEXTS: LandingTexts = {
     sub: "Gotowa strona dla Twojej restauracji — bez programistów i podwykonawców. Bezpośrednie zamówienia, rezerwacje i analityka gości w jednej subskrypcji.",
     dynamicHeadlines: ["0% prowizji.", "35 języków z AI.", "Zamówienia online.", "Rezerwacje 24/7.", "Design premium."],
     painBullets: ["0% prowizji: Wszystkie zamówienia trafiają bezpośrednio do Ciebie.", "Tłumaczenie AI: 35 języków dla wyższych rachunków od turystów.", "Rezerwacje 24/7: Pełna sala bez zbędnych telefonów.", "Elastyczne ceny: Aktualizuj menu w kilka sekund."],
-    rating: "4,9 · ponad 500 restauracji w 30+ krajach",
+    rating: "Ponad 500 restauracji w 30+ krajach",
   },
 
   features: {

@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Tieši pasūtījumi. Nulle komisijas. Tieši uz virtuvi.",
     subtitle:
       "Pārtrauc maksāt 30% Uber Eats, Glovo un Wolt. Ar IQ Rest tavi viesi skenē QR, izveido pasūtījumu telefonā, un biļete nonāk virtuvē — katrs cents paliek pie tevis.",
-    trustLine: "4.9 · 500+ restorāni vairāk nekā 30 valstīs",
+    trustLine: "500+ restorāni vairāk nekā 30 valstīs",
   },
 
   seo: {

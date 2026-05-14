@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Oameni reali. Răspunsuri rapide. Fără chatboți.",
     subtitle:
       "Software de restaurant cu suport de calitate de restaurant — ne scrii pe WhatsApp, email sau in-app, iar un om real care chiar înțelege restaurantele răspunde în câteva minute, nu zile. În fiecare plan, inclusiv în perioada de probă gratuită.",
-    trustLine: "4.9 · 500+ restaurante în 30+ țări",
+    trustLine: "500+ restaurante în 30+ țări",
   },
 
   seo: {

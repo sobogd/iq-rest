@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Pilota il tuo ristorante dal telefono. Tra un tavolo e l'altro.",
     subtitle:
       "Tutta la dashboard IQ Rest è costruita mobile-first — aggiungi piatti, cambi foto, modifichi prezzi e leggi gli ordini live dallo stesso telefono nella tasca del grembiule. Niente laptop, niente computer di back-office, nessuna scusa.",
-    trustLine: "4.9 · 500+ ristoranti in 30+ paesi",
+    trustLine: "500+ ristoranti in 30+ paesi",
   },
 
   seo: {

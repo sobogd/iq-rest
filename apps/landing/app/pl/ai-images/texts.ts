@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Zdjęcia z telefonu. Menu jak od profesjonalisty.",
     subtitle:
       "Zrób zdjęcie dania pod dowolnym kątem, wgraj, a nasza AI auto-kadruje, koryguje kolory i kompresuje je w szybko ładujący się obraz menu — bez utraty smaku jedzenia. Oszałamiająca jakość na każdym urządzeniu, bez Lightroom i bez projektanta.",
-    trustLine: "4,9 · ponad 500 restauracji w 30+ krajach",
+    trustLine: "Ponad 500 restauracji w 30+ krajach",
   },
 
   seo: {

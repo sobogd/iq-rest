@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Telefoonfoto's. Pro-uitziend menu.",
     subtitle:
       "Snap een gerecht vanuit elke hoek, upload, en onze AI snijdt automatisch uit, kleurcorrigeert en comprimeert het in een snel-ladende menuafbeelding — zonder het eten te verliezen. Prachtige kwaliteit op elk apparaat, geen Lightroom of ontwerper vereist.",
-    trustLine: "4.9 · 500+ restaurants in 30+ landen",
+    trustLine: "500+ restaurants in 30+ landen",
   },
 
   seo: {

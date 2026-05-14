@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Tava restorāna mājaslapa. Tiešsaistē 5 minūtēs.",
     subtitle:
       "Aizmirsti par izstrādātāju, mitināšanu un galvassāpēm. Ievadi e-pastu, un tava QR ēdienkarte, restorāna mājaslapa un kontaktu lapa būs gatavas, pirms tava kafija paspēs atdzist.",
-    trustLine: "4.9 · 500+ restorāni vairāk nekā 30 valstīs",
+    trustLine: "500+ restorāni vairāk nekā 30 valstīs",
   },
 
   seo: {

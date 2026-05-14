@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Tikri žmonės. Greiti atsakymai. Jokių pokalbių robotų.",
     subtitle:
       "Restorano programinė įranga su restoranų lygio pagalba — parašykite mums per WhatsApp, el. paštu ar programėlėje, ir tikras žmogus, kuris iš tikrųjų supranta restoranus, atsakys per kelias minutes, ne dienas. Kiekviename plane, įskaitant nemokamą bandymą.",
-    trustLine: "4,9 · 500+ restoranų 30+ šalių",
+    trustLine: "500+ restoranų 30+ šalių",
   },
 
   seo: {

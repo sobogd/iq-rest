@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Puhelinkuvat. Ammattimainen ruokalista.",
     subtitle:
       "Ota kuva ruoasta mistä tahansa kulmasta, lataa, ja AI:mme rajaa, värikorjaa ja pakkaa sen nopeasti latautuvaksi ruokalistakuvaksi — menettämättä ruokaa. Upea laatu millä tahansa laitteella, ei Lightroomia tai suunnittelijaa tarvita.",
-    trustLine: "4,9 · yli 500 ravintolaa yli 30 maassa",
+    trustLine: "Yli 500 ravintolaa yli 30 maassa",
   },
 
   seo: {

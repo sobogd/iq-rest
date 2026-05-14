@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Construisez votre menu en quelques minutes. Modifiez-le pour toujours.",
     subtitle:
       "Tap pour ajouter une catégorie, tap pour ajouter un plat, glissez pour réorganiser, photo depuis votre téléphone. L'éditeur de menu de restaurant le plus simple du marché — et chaque modification est en ligne pour les clients en quelques secondes.",
-    trustLine: "4.9 · 500+ restaurants dans 30+ pays",
+    trustLine: "500+ restaurants dans 30+ pays",
   },
 
   seo: {

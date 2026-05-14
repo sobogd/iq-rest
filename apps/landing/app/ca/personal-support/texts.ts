@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Persones reals. Respostes ràpides. Sense chatbots.",
     subtitle:
       "Programari de restaurant amb suport a la mida — escriu-nos per WhatsApp, correu o dins l'app, i una persona real que entén realment els restaurants respon en minuts, no en dies. A tots els plans, incloent-hi la prova gratuïta.",
-    trustLine: "4,9 · més de 500 restaurants en més de 30 països",
+    trustLine: "Més de 500 restaurants en més de 30 països",
   },
 
   seo: {

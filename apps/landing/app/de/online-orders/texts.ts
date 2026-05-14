@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Direktbestellungen. Null Provision. Direkt in deine Küche.",
     subtitle:
       "Hör auf, 30 % an Uber Eats, Glovo und Wolt zu zahlen. Mit IQ Rest scannen deine Gäste den QR, bauen ihre Bestellung am Handy und der Bon landet in deiner Küche — jeder Cent bleibt bei dir.",
-    trustLine: "4,9 · 500+ Restaurants in 30+ Ländern",
+    trustLine: "500+ Restaurants in 30+ Ländern",
   },
 
   seo: {

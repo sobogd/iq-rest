@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Your menu speaks every tourist's language.",
     subtitle:
       "A multilingual restaurant menu shouldn't be a project. With IQ Rest, your QR menu auto-detects each guest's phone language and serves it in any of 35 languages — including Arabic and Persian with proper right-to-left rendering.",
-    trustLine: "4.9 · 500+ restaurants in 30+ countries",
+    trustLine: "500+ restaurants in 30+ countries",
   },
 
   seo: {

@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Vaš jelovnik govori jezik svakog turista.",
     subtitle:
       "Višejezični jelovnik restorana ne bi trebao biti projekt. S IQ Rest, vaš QR jelovnik automatski otkriva jezik telefona svakog gosta i poslužuje ga na bilo kojem od 35 jezika — uključujući arapski i perzijski s pravilnim prikazom s desna na lijevo.",
-    trustLine: "4.9 · 500+ restorana u 30+ zemalja",
+    trustLine: "500+ restorana u 30+ zemalja",
   },
 
   seo: {

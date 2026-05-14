@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Lõpeta arvamine. Tea, mida külalised tegelikult teevad.",
     subtitle:
       "Vaata restoranimenüü analüütikat reaalajas — QR-skaneeringud tunnis, road, mille juures külalised pikemalt peatuvad, keeled, mida turistid kasutavad, kõige aeglasem nädalapäev — ja kasuta neid andmeid, et trükkida vähem menüüsid, planeerida targemalt, esile tõsta õigeid eripakkumisi.",
-    trustLine: "4.9 · 500+ restorani 30+ riigis",
+    trustLine: "500+ restorani 30+ riigis",
   },
 
   seo: {

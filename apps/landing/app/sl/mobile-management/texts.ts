@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Vodite svojo restavracijo s telefona. Med mizami.",
     subtitle:
       "Celotna nadzorna plošča IQ Rest je narejena za mobilne naprave — dodajte jedi, zamenjajte fotografije, spremenite cene in berite žive naročila iz istega telefona v žepu predpasnika. Brez prenosnika, brez računalnika v pisarni, brez izgovorov.",
-    trustLine: "4.9 · 500+ restavracij v 30+ državah",
+    trustLine: "500+ restavracij v 30+ državah",
   },
 
   seo: {

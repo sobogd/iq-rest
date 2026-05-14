@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Valdykite restoraną iš telefono. Tarp staliukų.",
     subtitle:
       "Visas IQ Rest valdymo skydelis sukurtas mobiliesiems pirma — pridėkite patiekalus, keiskite nuotraukas, koreguokite kainas ir skaitykite gyvus užsakymus iš to paties telefono prijuostės kišenėje. Be nešiojamojo kompiuterio, be biuro kompiuterio, be pasiteisinimų.",
-    trustLine: "4,9 · 500+ restoranų 30+ šalių",
+    trustLine: "500+ restoranų 30+ šalių",
   },
 
   seo: {

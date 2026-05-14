@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Doğrudan siparişler. Sıfır komisyon. Doğruca mutfağınıza.",
     subtitle:
       "Uber Eats, Glovo ve Wolt'a %30 ödemeyi bırakın. IQ Rest ile misafirleriniz QR'yi tarar, siparişlerini telefonlarında oluşturur ve fiş doğrudan mutfağınıza düşer — her kuruş sizde kalır.",
-    trustLine: "4.9 · 30+ ülkede 500+ restoran",
+    trustLine: "30+ ülkede 500+ restoran",
   },
 
   seo: {

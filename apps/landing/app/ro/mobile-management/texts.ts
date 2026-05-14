@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Rulează-ți restaurantul de pe telefon. Între mese.",
     subtitle:
       "Întregul dashboard IQ Rest este construit mobile-first — adaugi preparate, schimbi poze, modifici prețuri și citești comenzi live de pe același telefon din buzunarul șorțului. Fără laptop, fără calculator de back-office, fără scuze.",
-    trustLine: "4.9 · 500+ restaurante în 30+ țări",
+    trustLine: "500+ restaurante în 30+ țări",
   },
 
   seo: {

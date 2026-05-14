@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Rith do bhialann ó do ghuthán. Idir boird.",
     subtitle:
       "Tá deais iomlán IQ Rest tógtha soghluaiste-ar-dtús — cuir miasa leis, malartaigh grianghraif, athraigh praghsanna agus léigh orduithe beo ón nguthán céanna i bpóca do naprúin. Gan ríomhaire glúine, gan ríomhaire siar-oifige, gan leithscéal.",
-    trustLine: "4.9 · 500+ bialann i 30+ tír",
+    trustLine: "500+ bialann i 30+ tír",
   },
 
   seo: {

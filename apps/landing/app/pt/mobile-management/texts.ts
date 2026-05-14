@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Gere o teu restaurante a partir do telemóvel. Entre mesas.",
     subtitle:
       "Todo o painel IQ Rest foi construído mobile-first — adiciona pratos, troca fotos, muda preços e lê pedidos ao vivo a partir do mesmo telemóvel que tens no bolso do avental. Sem portátil, sem computador no escritório, sem desculpas.",
-    trustLine: "4,9 · mais de 500 restaurantes em mais de 30 países",
+    trustLine: "Mais de 500 restaurantes em mais de 30 países",
   },
 
   seo: {

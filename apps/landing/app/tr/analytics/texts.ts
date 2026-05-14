@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Tahmin etmeyi bırakın. Misafirlerin gerçekte ne yaptığını öğrenin.",
     subtitle:
       "Restoran menü analitiğini gerçek zamanlı görün — saatlik QR taramaları, misafirlerin oyalandığı yemekler, turistlerin kullandığı diller, en yavaş hafta günü — ve bu verilerle daha az menü basın, daha akıllı planlama yapın, doğru özelleri öne çıkarın.",
-    trustLine: "4.9 · 30+ ülkede 500+ restoran",
+    trustLine: "30+ ülkede 500+ restoran",
   },
 
   seo: {

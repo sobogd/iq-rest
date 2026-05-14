@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Tava ēdienkarte runā katra tūrista valodā.",
     subtitle:
       "Daudzvalodu restorāna ēdienkartei nevajadzētu būt projektam. Ar IQ Rest tava QR ēdienkarte automātiski nosaka katra viesa telefona valodu un apkalpo to jebkurā no 35 valodām — ieskaitot arābu un persiešu ar pareizu no labās uz kreiso atveidošanu.",
-    trustLine: "4.9 · 500+ restorāni vairāk nekā 30 valstīs",
+    trustLine: "500+ restorāni vairāk nekā 30 valstīs",
   },
 
   seo: {

@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Wees onvergetelijk in één seconde.",
     subtitle:
       "Plaats een video van je keuken, een hero food shot of een sfeervolle eetzaalclip als achtergrond van je QR menu. Gasten stoppen met scrollen, je merk blijft hangen, en het menu eronder blijft schoon en leesbaar.",
-    trustLine: "4.9 · 500+ restaurants in 30+ landen",
+    trustLine: "500+ restaurants in 30+ landen",
   },
 
   seo: {

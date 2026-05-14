@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Izgradite jelovnik u minutama. Uređujte ga zauvijek.",
     subtitle:
       "Dodirnite za dodavanje kategorije, dodirnite za dodavanje jela, povucite za promjenu redoslijeda, slikajte fotografiju s telefona. Najjednostavniji uređivač jelovnika restorana na tržištu — i svaka promjena ide uživo za goste za sekunde.",
-    trustLine: "4.9 · 500+ restorana u 30+ zemalja",
+    trustLine: "500+ restorana u 30+ zemalja",
   },
 
   seo: {

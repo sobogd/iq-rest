@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Il sito web del tuo ristorante. Online in 5 minuti.",
     subtitle:
       "Salta lo sviluppatore, salta l'hosting, salta il mal di testa. Inserisci la tua email e il tuo menu QR, il sito web del ristorante e la pagina contatti sono pronti prima che si raffreddi il caffè.",
-    trustLine: "4.9 · 500+ ristoranti in 30+ paesi",
+    trustLine: "500+ ristoranti in 30+ paesi",
   },
 
   seo: {

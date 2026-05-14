@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Prestanite nagađati. Saznajte šta gosti zaista rade.",
     subtitle:
       "Vidite analitiku restoranskog menija u realnom vremenu — QR skeniranja po satu, jela na kojima se gosti zadržavaju, jezike koje turisti koriste, najsporiji radni dan — i koristite te podatke da štampate manje menija, pametnije rasporedite, gurnete prave specijalitete.",
-    trustLine: "4.9 · 500+ restorana u 30+ zemalja",
+    trustLine: "500+ restorana u 30+ zemalja",
   },
 
   seo: {

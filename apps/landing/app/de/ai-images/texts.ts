@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Handy-Fotos. Karte mit Profi-Look.",
     subtitle:
       "Mach ein Gerichtsfoto aus jedem Winkel, lade es hoch, und unsere KI schneidet automatisch zu, korrigiert Farben und komprimiert es zu einem schnell ladenden Karten-Bild — ohne das Essen zu verlieren. Atemberaubende Qualität auf jedem Gerät, kein Lightroom oder Designer nötig.",
-    trustLine: "4,9 · 500+ Restaurants in 30+ Ländern",
+    trustLine: "500+ Restaurants in 30+ Ländern",
   },
 
   seo: {

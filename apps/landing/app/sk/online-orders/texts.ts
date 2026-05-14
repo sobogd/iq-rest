@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Priame objednávky. Nulová provízia. Rovno do kuchyne.",
     subtitle:
       "Prestaňte platiť 30 % Uber Eats, Glovu a Woltu. S IQ Rest hostia naskenujú QR, zostavia objednávku v telefóne a tiket dorazí do vašej kuchyne — každý cent zostáva u vás.",
-    trustLine: "4.9 · 500+ reštaurácií v 30+ krajinách",
+    trustLine: "500+ reštaurácií v 30+ krajinách",
   },
 
   seo: {

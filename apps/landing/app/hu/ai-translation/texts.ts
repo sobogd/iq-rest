@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "A turisták nem tudják olvasni az étlapját? Oldja meg egy koppintással.",
     subtitle:
       "Fordítsa le a teljes éttermi étlapját 35 nyelvre kulináris kontextusra tanított AI-val. Az ételnevek autentikusak maradnak, a leírások természetesen olvashatók — és a turisták többet rendelnek, ha valóban értik, mit kapnak.",
-    trustLine: "4.9 · 500+ étterem 30+ országban",
+    trustLine: "500+ étterem 30+ országban",
   },
 
   seo: {

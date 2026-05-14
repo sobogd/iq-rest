@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Vypadejte nezapomenutelně za jednu sekundu.",
     subtitle:
       "Přidejte video kuchyně, hero fotku jídla nebo náladový klip z jídelny jako pozadí QR menu. Hosté zastaví scrollování, vaše značka utkví a menu pod tím zůstává čisté a čitelné.",
-    trustLine: "4.9 · 500+ restaurací ve 30+ zemích",
+    trustLine: "500+ restaurací ve 30+ zemích",
   },
 
   seo: {

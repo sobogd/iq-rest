@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "您的菜单,会说每位游客的语言。",
     subtitle:
       "多语言餐厅菜单不该是个项目。在 IQ Rest 中,二维码菜单自动检测每位客人手机的语言,并以 35 种语言中的任何一种呈现——包括阿拉伯语和波斯语,带正确的从右到左渲染。",
-    trustLine: "4.9 · 30+ 国家的 500+ 餐厅",
+    trustLine: "30+ 国家的 500+ 餐厅",
   },
 
   seo: {

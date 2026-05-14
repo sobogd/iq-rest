@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Yemek pişirirken rezervasyonları kaçırmayı bırakın.",
     subtitle:
       "Restoran masa rezervasyonlarını 7/24 kabul edin — doğrudan QR menünüzden, restoran için web sitenizden ve Instagram'dan. Misafirler tarih, saat ve kişi sayısı seçer, siz tek dokunuşla onaylarsınız, e-posta hatırlatmaları otomatik gider. Daha az telefon, daha az gelmeme, gece başına daha çok masa.",
-    trustLine: "4.9 · 30+ ülkede 500+ restoran",
+    trustLine: "30+ ülkede 500+ restoran",
   },
 
   seo: {

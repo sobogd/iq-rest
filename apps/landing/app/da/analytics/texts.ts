@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Stop med at gætte. Vid hvad gæster faktisk gør.",
     subtitle:
       "Se restaurantmenu-analyse i realtid — QR-scanninger per time, retter gæster dvæler ved, sprog turister bruger, den langsomste hverdag — og brug de data til at trykke færre menuer, planlægge smartere, skubbe de rigtige specialiteter.",
-    trustLine: "4.9 · 500+ restauranter i 30+ lande",
+    trustLine: "500+ restauranter i 30+ lande",
   },
 
   seo: {

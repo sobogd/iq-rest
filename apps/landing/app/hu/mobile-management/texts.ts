@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Vezesse az éttermét a telefonjáról. Az asztalok között.",
     subtitle:
       "Az egész IQ Rest vezérlőpult mobil-első alapokon épült — adjon hozzá ételeket, cseréljen fotókat, módosítson árakat és olvassa el az élő rendeléseket ugyanabból a telefonból a kötény zsebében. Laptop, hátsó irodai számítógép, kifogások nélkül.",
-    trustLine: "4.9 · 500+ étterem 30+ országban",
+    trustLine: "500+ étterem 30+ országban",
   },
 
   seo: {

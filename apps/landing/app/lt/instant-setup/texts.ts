@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Jūsų restorano svetainė. Veikia per 5 minutes.",
     subtitle:
       "Pamirškite programuotoją, pamirškite serverį, pamirškite galvos skausmą. Įveskite el. paštą ir jūsų QR meniu, restorano svetainė bei kontaktų puslapis bus paruošti dar prieš atvėsstant kavai.",
-    trustLine: "4,9 · 500+ restoranų 30+ šalių",
+    trustLine: "500+ restoranų 30+ šalių",
   },
 
   seo: {

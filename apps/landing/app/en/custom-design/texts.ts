@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Look unforgettable in one second.",
     subtitle:
       "Drop in a video of your kitchen, a hero food shot, or a moody dining-room clip as your QR menu background. Guests stop scrolling, your brand sticks, and the menu underneath stays clean and readable.",
-    trustLine: "4.9 · 500+ restaurants in 30+ countries",
+    trustLine: "500+ restaurants in 30+ countries",
   },
 
   seo: {

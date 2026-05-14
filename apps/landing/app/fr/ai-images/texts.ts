@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Photos de téléphone. Menu d'allure pro.",
     subtitle:
       "Photographiez un plat sous n'importe quel angle, uploadez, et notre IA recadre, corrige les couleurs et compresse en une image de menu à chargement rapide — sans perdre la nourriture. Qualité superbe sur n'importe quel appareil, pas de Lightroom ni de designer requis.",
-    trustLine: "4.9 · 500+ restaurants dans 30+ pays",
+    trustLine: "500+ restaurants dans 30+ pays",
   },
 
   seo: {

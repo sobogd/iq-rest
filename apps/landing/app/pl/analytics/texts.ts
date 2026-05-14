@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Przestań zgadywać. Wiedz, co robią goście.",
     subtitle:
       "Zobacz analitykę menu restauracji w czasie rzeczywistym — skany QR na godzinę, dania, na których goście się zatrzymują, języki turystów, najwolniejszy dzień tygodnia — i użyj tych danych, żeby drukować mniej menu, lepiej grafikować, pchać właściwe specjalne pozycje.",
-    trustLine: "4,9 · ponad 500 restauracji w 30+ krajach",
+    trustLine: "Ponad 500 restauracji w 30+ krajach",
   },
 
   seo: {

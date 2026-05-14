@@ -16,7 +16,7 @@ export const TEXTS: FeatureTexts = {
     title: "Bygg din meny på minuter. Redigera den för alltid.",
     subtitle:
       "Tryck för att lägga till en kategori, tryck för att lägga till en rätt, dra för att ordna om, knäpp ett foto från telefonen. Den enklaste restaurangmeny-redigeraren på marknaden — och varje ändring går live för gäster på sekunder.",
-    trustLine: "4,9 · 500+ restauranger i 30+ länder",
+    trustLine: "500+ restauranger i 30+ länder",
   },
 
   seo: {
