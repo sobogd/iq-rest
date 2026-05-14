@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Faq } from "@/app/_landing/components/faq";
+import { PageTracker } from "@/app/_landing/components/page-tracker";
 import { Features } from "@/app/_landing/components/features";
 import { FinalCta } from "@/app/_landing/components/final-cta";
 import { Founder } from "@/app/_landing/components/founder";
@@ -41,6 +42,7 @@ export default async function LandingPage() {
 
   return (
     <main className="relative">
+      <PageTracker />
       <LandingHeader texts={TEXTS.header} locale={LOCALE} />
       <div className="space-y-10 sm:space-y-0">
       <Hero

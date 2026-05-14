@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Faq } from "@/app/_landing/components/faq";
+import { PageTracker } from "@/app/_landing/components/page-tracker";
 import { Features } from "@/app/_landing/components/features";
 import { FinalCta } from "@/app/_landing/components/final-cta";
 import { Founder } from "@/app/_landing/components/founder";
@@ -55,6 +56,7 @@ export default async function MenuDigitaleLanding() {
 
   return (
     <main className="relative">
+      <PageTracker />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON_LD_HTML }}
