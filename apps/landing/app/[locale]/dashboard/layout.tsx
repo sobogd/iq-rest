@@ -4,7 +4,7 @@ import { getTranslations, getLocale } from "next-intl/server";
 import { prisma } from "@/lib/prisma";
 import { getUserWithCompany } from "@/lib/auth";
 import { getCompanyAccess } from "@/lib/access";
-import { isAnonymousEmail } from "@/lib/anonymous";
+import { dashboardUrl } from "@/lib/dashboard-url";
 import { generateUniqueSlug } from "@/lib/slug";
 import { getPublicUrl, s3Key } from "@/lib/s3";
 import { getCoordinatesByCountry, COUNTRY_CENTERS } from "@/lib/country-centers";
@@ -23,7 +23,7 @@ export default async function DashboardLayout({
 
   if (!auth) {
     const locale = await getLocale();
-    redirect(`/${locale}/login`);
+    redirect(dashboardUrl(`/${locale}/login`));
   }
 
   const companyId = auth.companyId;
@@ -82,13 +82,7 @@ export default async function DashboardLayout({
     });
   }
 
-  const cookieStore = await cookies();
-  const currentEmail = cookieStore.get("user_email")?.value;
-  const isAnon = currentEmail ? isAnonymousEmail(currentEmail) : false;
-
-  const trialExpired = company && !isAnon
-    ? getCompanyAccess(company).trialExpired
-    : false;
+  const trialExpired = company ? getCompanyAccess(company).trialExpired : false;
 
   const [t, scanUsage] = await Promise.all([
     getTranslations("dashboard"),
@@ -240,7 +234,7 @@ export default async function DashboardLayout({
   };
 
   return (
-    <DashboardShell translations={translations} userId={auth.userId} scanUsage={scanUsage} isAnonymous={isAnon} trialExpired={trialExpired}>
+    <DashboardShell translations={translations} userId={auth.userId} scanUsage={scanUsage} trialExpired={trialExpired}>
       {children}
     </DashboardShell>
   );

@@ -1610,37 +1610,6 @@
       "limitReachedDescription": "Du har brugt alle 5 gratis AI-oversættelser. Opgrader til Growth eller Pro for ubegrænsede oversættelser.",
       "upgrade": "Opgrader"
     },
-    "auth": {
-      "title": "Velkommen til",
-      "titleAccent": "IQ Rest",
-      "subtitle": "Indtast din e-mail for at fortsætte",
-      "consent": {
-        "text": "Ved at fortsætte accepterer du vores",
-        "terms": "Vilkår",
-        "and": "og",
-        "privacy": "Privatlivspolitik"
-      },
-      "emailPlaceholder": "your@email.com",
-      "continue": "Fortsæt",
-      "verifyTitle": "Tjek din e-mail",
-      "verifySubtitle": "Vi har sendt en kode til {email}",
-      "checkSpam": "Kan du ikke finde den? Tjek din spam-mappe",
-      "verify": "Bekræft",
-      "changeEmail": "Brug en anden e-mail",
-      "resendCode": "Send igen",
-      "resendSent": "Kode sendt!",
-      "errors": {
-        "sendFailed": "Kunne ikke sende koden. Prøv igen.",
-        "verifyFailed": "Ugyldig kode. Prøv igen.",
-        "codeExpired": "Koden er udløbet. Anmod venligst om en ny.",
-        "noCode": "Ingen bekræftelseskode fundet. Anmod venligst om en ny.",
-        "invalidCode": "Ugyldig kode. Prøv venligst igen.",
-        "emailRequired": "Indtast din e-mail.",
-        "emailInvalid": "Indtast en gyldig e-mail."
-      },
-      "or": "eller",
-      "continueGoogle": "Fortsæt med Google"
-    },
     "analytics": {
       "monthlyUsage": "Månedligt forbrug",
       "scansThisMonth": "scanninger denne måned",
@@ -1936,16 +1905,6 @@
       "scansUnlimited": "{used} scanninger",
       "myOrders": "Mine ordrer",
       "saveMenu": "Gem dine fremskridt"
-    },
-    "claim": {
-      "title": "Gem din menu",
-      "subtitle": "Indtast din e-mail for at beholde adgang til din menu",
-      "emailPlaceholder": "din@email.com",
-      "sendCode": "Send kode",
-      "verifyCode": "Bekræft",
-      "emailTaken": "Denne e-mail er allerede i brug. Log ind eller brug en anden.",
-      "success": "E-mail bekræftet! Din menu er gemt.",
-      "backToMenu": "Tilbage til menuen"
     }
   },
   "reservationSettings": {

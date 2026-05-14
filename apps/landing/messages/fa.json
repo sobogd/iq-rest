@@ -1610,37 +1610,6 @@
       "limitReachedDescription": "شما از هر ۵ ترجمه رایگان هوش مصنوعی استفاده کرده‌اید. برای ترجمه‌های نامحدود به Growth یا Pro ارتقا دهید.",
       "upgrade": "ارتقا"
     },
-    "auth": {
-      "title": "خوش آمدید به",
-      "titleAccent": "IQ Rest",
-      "subtitle": "ایمیل خود را برای ادامه وارد کنید",
-      "consent": {
-        "text": "با ادامه دادن، شما موافقت می‌کنید با",
-        "terms": "شرایط",
-        "and": "و",
-        "privacy": "سیاست حریم خصوصی"
-      },
-      "emailPlaceholder": "your@email.com",
-      "continue": "ادامه",
-      "verifyTitle": "ایمیل خود را بررسی کنید",
-      "verifySubtitle": "کدی به {email} ارسال کردیم",
-      "checkSpam": "پیدا نمی‌کنید؟ پوشه هرزنامه را بررسی کنید",
-      "verify": "تأیید",
-      "changeEmail": "استفاده از ایمیل دیگر",
-      "resendCode": "ارسال مجدد کد",
-      "resendSent": "کد ارسال شد!",
-      "errors": {
-        "sendFailed": "ارسال کد ناموفق بود. لطفاً دوباره تلاش کنید.",
-        "verifyFailed": "کد نامعتبر. لطفاً دوباره تلاش کنید.",
-        "codeExpired": "کد منقضی شده است. لطفاً کد جدیدی درخواست کنید.",
-        "noCode": "کد تأیید یافت نشد. لطفاً کد جدیدی درخواست کنید.",
-        "invalidCode": "کد نامعتبر. لطفاً دوباره تلاش کنید.",
-        "emailRequired": "لطفاً ایمیل خود را وارد کنید.",
-        "emailInvalid": "لطفاً یک ایمیل معتبر وارد کنید."
-      },
-      "or": "یا",
-      "continueGoogle": "ادامه با Google"
-    },
     "analytics": {
       "monthlyUsage": "مصرف ماهانه",
       "scansThisMonth": "اسکن این ماه",
@@ -1936,16 +1905,6 @@
       "scansUnlimited": "{used} اسکن",
       "myOrders": "سفارش‌های من",
       "saveMenu": "پیشرفت خود را ذخیره کنید"
-    },
-    "claim": {
-      "title": "منوی خود را ذخیره کنید",
-      "subtitle": "ایمیل خود را وارد کنید تا دسترسی به منوی خود را حفظ کنید",
-      "emailPlaceholder": "your@email.com",
-      "sendCode": "ارسال کد",
-      "verifyCode": "تأیید",
-      "emailTaken": "این ایمیل قبلاً استفاده شده است. وارد شوید یا ایمیل دیگری استفاده کنید.",
-      "success": "ایمیل تأیید شد! منوی شما ذخیره شد.",
-      "backToMenu": "بازگشت به منو"
     }
   },
   "reservationSettings": {

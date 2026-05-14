@@ -1610,37 +1610,6 @@
       "limitReachedDescription": "Þú hefur notað allar 5 ókeypis AI-þýðingarnar. Uppfærðu í Growth eða Pro fyrir ótakmarkaðar þýðingar.",
       "upgrade": "Uppfæra"
     },
-    "auth": {
-      "title": "Velkomin í",
-      "titleAccent": "IQ Rest",
-      "subtitle": "Sláðu inn netfangið þitt til að halda áfram",
-      "consent": {
-        "text": "Með því að halda áfram samþykkir þú okkar",
-        "terms": "Skilmála",
-        "and": "og",
-        "privacy": "Persónuverndarstefnu"
-      },
-      "emailPlaceholder": "your@email.com",
-      "continue": "Áfram",
-      "verifyTitle": "Athugaðu tölvupóstinn þinn",
-      "verifySubtitle": "Við sendum kóða á {email}",
-      "checkSpam": "Finnur þú hann ekki? Athugaðu ruslpóstmöppuna",
-      "verify": "Staðfesta",
-      "changeEmail": "Nota annað netfang",
-      "resendCode": "Endursenda",
-      "resendSent": "Kóði sendur!",
-      "errors": {
-        "sendFailed": "Ekki tókst að senda kóða. Reyndu aftur.",
-        "verifyFailed": "Ógildur kóði. Reyndu aftur.",
-        "codeExpired": "Kóðinn er útrunninn. Vinsamlegast biðjið um nýjan.",
-        "noCode": "Enginn staðfestingarkóði fannst. Vinsamlegast biðjið um nýjan.",
-        "invalidCode": "Ógildur kóði. Vinsamlegast reyndu aftur.",
-        "emailRequired": "Sláðu inn netfangið þitt.",
-        "emailInvalid": "Sláðu inn gilt netfang."
-      },
-      "or": "eða",
-      "continueGoogle": "Halda áfram með Google"
-    },
     "analytics": {
       "monthlyUsage": "Mánaðarleg notkun",
       "scansThisMonth": "skönnunir þennan mánuð",
@@ -1936,16 +1905,6 @@
       "scansUnlimited": "{used} skannanir",
       "myOrders": "Pantanir mínar",
       "saveMenu": "Vistaðu framvinduna þína"
-    },
-    "claim": {
-      "title": "Vistaðu matseðilinn þinn",
-      "subtitle": "Sláðu inn netfangið þitt til að halda aðgangi að matseðlinum",
-      "emailPlaceholder": "thitt@email.com",
-      "sendCode": "Senda kóða",
-      "verifyCode": "Staðfesta",
-      "emailTaken": "Þetta netfang er þegar í notkun. Skráðu þig inn eða notaðu annað.",
-      "success": "Netfang staðfest! Matseðillinn þinn er vistaður.",
-      "backToMenu": "Til baka í matseðil"
     }
   },
   "reservationSettings": {

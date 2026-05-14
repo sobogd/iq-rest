@@ -1607,48 +1607,6 @@
       "limitReachedDescription": "You've used all 5 free AI translations. Upgrade to Growth or Pro for unlimited translations.",
       "upgrade": "Upgrade"
     },
-    "auth": {
-      "title": "Welcome to",
-      "titleAccent": "IQ Rest",
-      "subtitle": "Enter your email to continue",
-      "consent": {
-        "text": "By continuing, you agree to our",
-        "terms": "Terms",
-        "and": "and",
-        "privacy": "Privacy Policy"
-      },
-      "emailPlaceholder": "your@email.com",
-      "continue": "Continue",
-      "or": "or",
-      "continueGoogle": "Continue with Google",
-      "verifyTitle": "Check your email",
-      "verifySubtitle": "We sent a code to {email}",
-      "checkSpam": "Can't find it? Check your spam folder",
-      "verify": "Verify",
-      "changeEmail": "Use a different email",
-      "resendCode": "Resend code",
-      "resendSent": "Code sent!",
-      "errors": {
-        "sendFailed": "Failed to send code. Please try again.",
-        "verifyFailed": "Invalid code. Please try again.",
-        "codeExpired": "Code has expired. Please request a new one.",
-        "noCode": "No verification code found. Please request a new one.",
-        "invalidCode": "Invalid code. Please try again.",
-        "tooManyAttempts": "Too many attempts. Please request a new code.",
-        "emailRequired": "Please enter your email.",
-        "emailInvalid": "Please enter a valid email."
-      }
-    },
-    "claim": {
-      "title": "Save your menu",
-      "subtitle": "Enter your email to keep access to your menu",
-      "emailPlaceholder": "your@email.com",
-      "sendCode": "Send code",
-      "verifyCode": "Verify",
-      "emailTaken": "This email is already in use. Log in or use a different email.",
-      "success": "Email verified! Your menu is saved.",
-      "backToMenu": "Back to menu"
-    },
     "analytics": {
       "monthlyUsage": "Monthly Usage",
       "scansThisMonth": "scans this month",

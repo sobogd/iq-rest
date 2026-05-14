@@ -1610,37 +1610,6 @@
       "limitReachedDescription": "Você usou todas as 5 traduções de IA gratuitas. Atualize para Growth ou Pro para traduções ilimitadas.",
       "upgrade": "Atualizar"
     },
-    "auth": {
-      "title": "Bem-vindo ao",
-      "titleAccent": "IQ Rest",
-      "subtitle": "Insira seu e-mail para continuar",
-      "consent": {
-        "text": "Ao continuar, você concorda com nossos",
-        "terms": "Termos",
-        "and": "e",
-        "privacy": "Política de Privacidade"
-      },
-      "emailPlaceholder": "your@email.com",
-      "continue": "Continuar",
-      "verifyTitle": "Verifique seu e-mail",
-      "verifySubtitle": "Enviamos um código para {email}",
-      "checkSpam": "Não encontrou? Verifique a pasta de spam",
-      "verify": "Verificar",
-      "changeEmail": "Usar outro e-mail",
-      "resendCode": "Reenviar código",
-      "resendSent": "Código enviado!",
-      "errors": {
-        "sendFailed": "Falha ao enviar o código. Tente novamente.",
-        "verifyFailed": "Código inválido. Tente novamente.",
-        "codeExpired": "O código expirou. Por favor, solicite um novo.",
-        "noCode": "Código de verificação não encontrado. Por favor, solicite um novo.",
-        "invalidCode": "Código inválido. Por favor, tente novamente.",
-        "emailRequired": "Por favor, insira o seu email.",
-        "emailInvalid": "Por favor, insira um email válido."
-      },
-      "or": "ou",
-      "continueGoogle": "Continuar com o Google"
-    },
     "analytics": {
       "monthlyUsage": "Uso Mensal",
       "scansThisMonth": "digitalizações este mês",
@@ -1936,16 +1905,6 @@
       "scansUnlimited": "{used} leituras",
       "myOrders": "Meus pedidos",
       "saveMenu": "Salve seu progresso"
-    },
-    "claim": {
-      "title": "Salve seu menu",
-      "subtitle": "Insira seu email para manter o acesso ao seu menu",
-      "emailPlaceholder": "seu@email.com",
-      "sendCode": "Enviar código",
-      "verifyCode": "Verificar",
-      "emailTaken": "Este email já está em uso. Entre ou use outro email.",
-      "success": "Email verificado! Seu menu está salvo.",
-      "backToMenu": "Voltar ao menu"
     }
   },
   "reservationSettings": {

@@ -1610,37 +1610,6 @@
       "limitReachedDescription": "Sie haben alle 5 kostenlosen KI-Übersetzungen verbraucht. Upgraden Sie auf Growth oder Pro für unbegrenzte Übersetzungen.",
       "upgrade": "Upgraden"
     },
-    "auth": {
-      "title": "Willkommen bei",
-      "titleAccent": "IQ Rest",
-      "subtitle": "Gib deine E-Mail ein, um fortzufahren",
-      "consent": {
-        "text": "Durch Fortfahren stimmen Sie unseren",
-        "terms": "AGB",
-        "and": "und",
-        "privacy": "Datenschutzrichtlinien"
-      },
-      "emailPlaceholder": "your@email.com",
-      "continue": "Weiter",
-      "verifyTitle": "Prüfen Sie Ihre E-Mail",
-      "verifySubtitle": "Wir haben einen Code an {email} gesendet",
-      "checkSpam": "Nicht gefunden? Überprüfen Sie Ihren Spam-Ordner",
-      "verify": "Bestätigen",
-      "changeEmail": "Andere E-Mail verwenden",
-      "resendCode": "Erneut senden",
-      "resendSent": "Code gesendet!",
-      "errors": {
-        "sendFailed": "Code konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
-        "verifyFailed": "Ungültiger Code. Bitte versuchen Sie es erneut.",
-        "codeExpired": "Der Code ist abgelaufen. Bitte fordern Sie einen neuen an.",
-        "noCode": "Kein Bestätigungscode gefunden. Bitte fordern Sie einen neuen an.",
-        "invalidCode": "Ungültiger Code. Bitte versuchen Sie es erneut.",
-        "emailRequired": "Bitte gib deine E-Mail ein.",
-        "emailInvalid": "Bitte gib eine gültige E-Mail ein."
-      },
-      "or": "oder",
-      "continueGoogle": "Weiter mit Google"
-    },
     "analytics": {
       "monthlyUsage": "Monatliche Nutzung",
       "scansThisMonth": "Scans in diesem Monat",
@@ -1936,16 +1905,6 @@
       "scansUnlimited": "{used} Scans",
       "myOrders": "Meine Bestellungen",
       "saveMenu": "Fortschritt speichern"
-    },
-    "claim": {
-      "title": "Speichere dein Menü",
-      "subtitle": "Gib deine E-Mail ein, um den Zugang zu deinem Menü zu behalten",
-      "emailPlaceholder": "deine@email.com",
-      "sendCode": "Code senden",
-      "verifyCode": "Bestätigen",
-      "emailTaken": "Diese E-Mail wird bereits verwendet. Melde dich an oder verwende eine andere.",
-      "success": "E-Mail bestätigt! Dein Menü ist gespeichert.",
-      "backToMenu": "Zurück zum Menü"
     }
   },
   "reservationSettings": {

@@ -1610,37 +1610,6 @@
       "limitReachedDescription": "Panaudojote visus 5 nemokamus AI vertimus. Atnaujinkite iki Growth arba Pro neribotiems vertimams.",
       "upgrade": "Atnaujinti"
     },
-    "auth": {
-      "title": "Sveiki atvykę į",
-      "titleAccent": "IQ Rest",
-      "subtitle": "Įveskite savo el. paštą, kad tęstumėte",
-      "consent": {
-        "text": "Tęsdami sutinkate su mūsų",
-        "terms": "Sąlygomis",
-        "and": "ir",
-        "privacy": "Privatumo politika"
-      },
-      "emailPlaceholder": "your@email.com",
-      "continue": "Tęsti",
-      "verifyTitle": "Patikrinkite savo el. paštą",
-      "verifySubtitle": "Išsiuntėme kodą adresu {email}",
-      "checkSpam": "Nerandate? Patikrinkite šlamšto aplanką",
-      "verify": "Patvirtinti",
-      "changeEmail": "Naudoti kitą el. paštą",
-      "resendCode": "Siųsti iš naujo",
-      "resendSent": "Kodas išsiųstas!",
-      "errors": {
-        "sendFailed": "Nepavyko išsiųsti kodo. Bandykite dar kartą.",
-        "verifyFailed": "Neteisingas kodas. Bandykite dar kartą.",
-        "codeExpired": "Kodo galiojimas baigėsi. Prašome užsisakyti naują.",
-        "noCode": "Patvirtinimo kodas nerastas. Prašome užsisakyti naują.",
-        "invalidCode": "Neteisingas kodas. Bandykite dar kartą.",
-        "emailRequired": "Įveskite savo el. paštą.",
-        "emailInvalid": "Įveskite galiojantį el. paštą."
-      },
-      "or": "arba",
-      "continueGoogle": "Tęsti su Google"
-    },
     "analytics": {
       "monthlyUsage": "Mėnesio naudojimas",
       "scansThisMonth": "skanavimai šį mėnesį",
@@ -1936,16 +1905,6 @@
       "scansUnlimited": "{used} nuskaitymų",
       "myOrders": "Mano užsakymai",
       "saveMenu": "Išsaugokite savo pažangą"
-    },
-    "claim": {
-      "title": "Išsaugokite savo meniu",
-      "subtitle": "Įveskite el. paštą, kad išsaugotumėte prieigą prie meniu",
-      "emailPlaceholder": "jusu@email.com",
-      "sendCode": "Siųsti kodą",
-      "verifyCode": "Patvirtinti",
-      "emailTaken": "Šis el. paštas jau naudojamas. Prisijunkite arba naudokite kitą.",
-      "success": "El. paštas patvirtintas! Jūsų meniu išsaugotas.",
-      "backToMenu": "Grįžti į meniu"
     }
   },
   "reservationSettings": {

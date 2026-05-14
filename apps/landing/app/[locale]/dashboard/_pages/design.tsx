@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter } from "@/i18n/routing";
+import { dashboardUrl } from "@/lib/dashboard-url";
 import { ACCENT_COLORS } from "../_lib/constants";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageHeader } from "../_ui/page-header";
@@ -481,7 +482,7 @@ export function DesignPage({ initialRestaurant, plan }: DesignPageProps) {
           <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
             <button
               type="button"
-              onClick={() => { track(DashboardEvent.CLICKED_LOGOUT); router.push("/logout"); }}
+              onClick={() => { track(DashboardEvent.CLICKED_LOGOUT); window.location.assign(dashboardUrl(`/${locale}/logout`)); }}
               className="flex items-center gap-3 w-full h-11 px-4 hover:bg-muted/50 transition-colors"
             >
               <LogOut className="h-4 w-4 text-red-400" />

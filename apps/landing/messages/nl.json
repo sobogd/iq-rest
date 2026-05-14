@@ -1610,37 +1610,6 @@
       "limitReachedDescription": "Je hebt alle 5 gratis AI-vertalingen gebruikt. Upgrade naar Growth of Pro voor onbeperkte vertalingen.",
       "upgrade": "Upgraden"
     },
-    "auth": {
-      "title": "Welkom bij",
-      "titleAccent": "IQ Rest",
-      "subtitle": "Voer je e-mail in om door te gaan",
-      "consent": {
-        "text": "Door verder te gaan ga je akkoord met onze",
-        "terms": "Voorwaarden",
-        "and": "en",
-        "privacy": "Privacybeleid"
-      },
-      "emailPlaceholder": "your@email.com",
-      "continue": "Doorgaan",
-      "verifyTitle": "Controleer je e-mail",
-      "verifySubtitle": "We hebben een code gestuurd naar {email}",
-      "checkSpam": "Niet gevonden? Controleer je spammap",
-      "verify": "Verifiëren",
-      "changeEmail": "Ander e-mailadres gebruiken",
-      "resendCode": "Opnieuw verzenden",
-      "resendSent": "Code verzonden!",
-      "errors": {
-        "sendFailed": "Kon de code niet verzenden. Probeer het opnieuw.",
-        "verifyFailed": "Ongeldige code. Probeer het opnieuw.",
-        "codeExpired": "De code is verlopen. Vraag een nieuwe aan.",
-        "noCode": "Geen verificatiecode gevonden. Vraag een nieuwe aan.",
-        "invalidCode": "Ongeldige code. Probeer het opnieuw.",
-        "emailRequired": "Voer je e-mailadres in.",
-        "emailInvalid": "Voer een geldig e-mailadres in."
-      },
-      "or": "of",
-      "continueGoogle": "Doorgaan met Google"
-    },
     "analytics": {
       "monthlyUsage": "Maandelijks Gebruik",
       "scansThisMonth": "scans deze maand",
@@ -1936,16 +1905,6 @@
       "scansUnlimited": "{used} scans",
       "myOrders": "Mijn bestellingen",
       "saveMenu": "Sla je voortgang op"
-    },
-    "claim": {
-      "title": "Sla je menu op",
-      "subtitle": "Voer je e-mail in om toegang tot je menu te behouden",
-      "emailPlaceholder": "jouw@email.com",
-      "sendCode": "Code versturen",
-      "verifyCode": "Verifiëren",
-      "emailTaken": "Dit e-mailadres is al in gebruik. Log in of gebruik een ander e-mailadres.",
-      "success": "E-mail geverifieerd! Je menu is opgeslagen.",
-      "backToMenu": "Terug naar menu"
     }
   },
   "reservationSettings": {

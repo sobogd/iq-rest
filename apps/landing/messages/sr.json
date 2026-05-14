@@ -1610,37 +1610,6 @@
       "limitReachedDescription": "Искористили сте свих 5 бесплатних AI превода. Надоградите на Growth или Pro за неограничене преводе.",
       "upgrade": "Надогради"
     },
-    "auth": {
-      "title": "Добродошли у",
-      "titleAccent": "IQ Rest",
-      "subtitle": "Унесите свој имејл за наставак",
-      "consent": {
-        "text": "Настављајући, прихватате наше",
-        "terms": "Услове",
-        "and": "и",
-        "privacy": "Политику приватности"
-      },
-      "emailPlaceholder": "your@email.com",
-      "continue": "Настави",
-      "verifyTitle": "Проверите свој е-маил",
-      "verifySubtitle": "Послали смо код на {email}",
-      "checkSpam": "Не можете да пронађете? Проверите фасциклу нежељене поште",
-      "verify": "Потврди",
-      "changeEmail": "Користите други е-маил",
-      "resendCode": "Пошаљи поново",
-      "resendSent": "Код послат!",
-      "errors": {
-        "sendFailed": "Слање кода није успело. Покушајте поново.",
-        "verifyFailed": "Неважећи код. Покушајте поново.",
-        "codeExpired": "Код је истекао. Затражите нови.",
-        "noCode": "Верификациони код није пронађен. Затражите нови.",
-        "invalidCode": "Неважећи код. Покушајте поново.",
-        "emailRequired": "Унесите ваш имејл.",
-        "emailInvalid": "Унесите исправан имејл."
-      },
-      "or": "ili",
-      "continueGoogle": "Nastavi sa Google-om"
-    },
     "analytics": {
       "monthlyUsage": "Mesečna upotreba",
       "scansThisMonth": "skeniranja ovog meseca",
@@ -1936,16 +1905,6 @@
       "scansUnlimited": "{used} скенирања",
       "myOrders": "Моје наруџбе",
       "saveMenu": "Сачувајте свој напредак"
-    },
-    "claim": {
-      "title": "Сачувајте свој мени",
-      "subtitle": "Унесите имејл да бисте сачували приступ менију",
-      "emailPlaceholder": "ваш@email.com",
-      "sendCode": "Пошаљи код",
-      "verifyCode": "Потврди",
-      "emailTaken": "Овај имејл се већ користи. Пријавите се или користите други.",
-      "success": "Имејл потврђен! Ваш мени је сачуван.",
-      "backToMenu": "Назад на мени"
     }
   },
   "reservationSettings": {

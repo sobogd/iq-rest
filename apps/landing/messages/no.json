@@ -1610,37 +1610,6 @@
       "limitReachedDescription": "Du har brukt alle 5 gratis AI-oversettelser. Oppgrader til Growth eller Pro for ubegrensede oversettelser.",
       "upgrade": "Oppgrader"
     },
-    "auth": {
-      "title": "Velkommen til",
-      "titleAccent": "IQ Rest",
-      "subtitle": "Skriv inn e-posten din for å fortsette",
-      "consent": {
-        "text": "Ved å fortsette godtar du våre",
-        "terms": "Vilkår",
-        "and": "og",
-        "privacy": "Personvernregler"
-      },
-      "emailPlaceholder": "your@email.com",
-      "continue": "Fortsett",
-      "verifyTitle": "Sjekk e-posten din",
-      "verifySubtitle": "Vi sendte en kode til {email}",
-      "checkSpam": "Finner du den ikke? Sjekk spam-mappen",
-      "verify": "Bekreft",
-      "changeEmail": "Bruk en annen e-post",
-      "resendCode": "Send på nytt",
-      "resendSent": "Kode sendt!",
-      "errors": {
-        "sendFailed": "Kunne ikke sende koden. Prøv igjen.",
-        "verifyFailed": "Ugyldig kode. Prøv igjen.",
-        "codeExpired": "Koden har utløpt. Vennligst be om en ny.",
-        "noCode": "Ingen bekreftelseskode funnet. Vennligst be om en ny.",
-        "invalidCode": "Ugyldig kode. Vennligst prøv igjen.",
-        "emailRequired": "Skriv inn e-posten din.",
-        "emailInvalid": "Skriv inn en gyldig e-post."
-      },
-      "or": "eller",
-      "continueGoogle": "Fortsett med Google"
-    },
     "analytics": {
       "monthlyUsage": "Månedlig bruk",
       "scansThisMonth": "skanninger denne måneden",
@@ -1936,16 +1905,6 @@
       "scansUnlimited": "{used} skanninger",
       "myOrders": "Mine bestillinger",
       "saveMenu": "Lagre fremgangen din"
-    },
-    "claim": {
-      "title": "Lagre menyen din",
-      "subtitle": "Skriv inn e-posten din for å beholde tilgang til menyen",
-      "emailPlaceholder": "din@email.com",
-      "sendCode": "Send kode",
-      "verifyCode": "Bekreft",
-      "emailTaken": "Denne e-posten er allerede i bruk. Logg inn eller bruk en annen.",
-      "success": "E-post bekreftet! Menyen din er lagret.",
-      "backToMenu": "Tilbake til menyen"
     }
   },
   "reservationSettings": {

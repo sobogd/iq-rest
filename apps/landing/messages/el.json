@@ -1610,37 +1610,6 @@
       "limitReachedDescription": "Χρησιμοποιήσατε και τις 5 δωρεάν μεταφράσεις AI. Αναβαθμίστε σε Growth ή Pro για απεριόριστες μεταφράσεις.",
       "upgrade": "Αναβάθμιση"
     },
-    "auth": {
-      "title": "Καλώς ήρθατε στο",
-      "titleAccent": "IQ Rest",
-      "subtitle": "Εισάγετε το email σας για να συνεχίσετε",
-      "consent": {
-        "text": "Συνεχίζοντας, αποδέχεστε τους",
-        "terms": "Όρους",
-        "and": "και",
-        "privacy": "Πολιτική Απορρήτου"
-      },
-      "emailPlaceholder": "your@email.com",
-      "continue": "Συνέχεια",
-      "verifyTitle": "Ελέγξτε το email σας",
-      "verifySubtitle": "Στείλαμε κωδικό στο {email}",
-      "checkSpam": "Δεν το βρίσκετε; Ελέγξτε τον φάκελο ανεπιθύμητης αλληλογραφίας",
-      "verify": "Επαλήθευση",
-      "changeEmail": "Χρήση διαφορετικού email",
-      "resendCode": "Αποστολή ξανά",
-      "resendSent": "Ο κωδικός εστάλη!",
-      "errors": {
-        "sendFailed": "Αποτυχία αποστολής κωδικού. Δοκιμάστε ξανά.",
-        "verifyFailed": "Μη έγκυρος κωδικός. Δοκιμάστε ξανά.",
-        "codeExpired": "Ο κωδικός έχει λήξει. Παρακαλώ ζητήστε νέο.",
-        "noCode": "Δεν βρέθηκε κωδικός επαλήθευσης. Παρακαλώ ζητήστε νέο.",
-        "invalidCode": "Μη έγκυρος κωδικός. Παρακαλώ δοκιμάστε ξανά.",
-        "emailRequired": "Εισάγετε το email σας.",
-        "emailInvalid": "Εισάγετε ένα έγκυρο email."
-      },
-      "or": "ή",
-      "continueGoogle": "Συνέχεια με Google"
-    },
     "analytics": {
       "monthlyUsage": "Μηνιαία Χρήση",
       "scansThisMonth": "σκανάρισμα αυτόν τον μήνα",
@@ -1936,16 +1905,6 @@
       "scansUnlimited": "{used} σαρώσεις",
       "myOrders": "Οι παραγγελίες μου",
       "saveMenu": "Αποθηκεύστε την πρόοδό σας"
-    },
-    "claim": {
-      "title": "Αποθηκεύστε το μενού σας",
-      "subtitle": "Εισάγετε το email σας για να διατηρήσετε πρόσβαση στο μενού σας",
-      "emailPlaceholder": "to@email.com",
-      "sendCode": "Αποστολή κωδικού",
-      "verifyCode": "Επαλήθευση",
-      "emailTaken": "Αυτό το email χρησιμοποιείται ήδη. Συνδεθείτε ή χρησιμοποιήστε άλλο.",
-      "success": "Email επαληθεύτηκε! Το μενού σας αποθηκεύτηκε.",
-      "backToMenu": "Πίσω στο μενού"
     }
   },
   "reservationSettings": {

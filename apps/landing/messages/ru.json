@@ -1610,37 +1610,6 @@
       "limitReachedDescription": "Вы использовали все 5 бесплатных AI-переводов. Перейдите на Growth или Pro для неограниченных переводов.",
       "upgrade": "Улучшить"
     },
-    "auth": {
-      "title": "Добро пожаловать в",
-      "titleAccent": "IQ Rest",
-      "subtitle": "Введите свой email, чтобы продолжить",
-      "consent": {
-        "text": "Продолжая, вы соглашаетесь с нашими",
-        "terms": "Условиями",
-        "and": "и",
-        "privacy": "Политикой конфиденциальности"
-      },
-      "emailPlaceholder": "your@email.com",
-      "continue": "Продолжить",
-      "verifyTitle": "Проверьте вашу почту",
-      "verifySubtitle": "Мы отправили код на {email}",
-      "checkSpam": "Не нашли? Проверьте папку «Спам»",
-      "verify": "Подтвердить",
-      "changeEmail": "Использовать другой e-mail",
-      "resendCode": "Отправить ещё раз",
-      "resendSent": "Код отправлен!",
-      "errors": {
-        "sendFailed": "Не удалось отправить код. Попробуйте ещё раз.",
-        "verifyFailed": "Неверный код. Попробуйте ещё раз.",
-        "codeExpired": "Срок действия кода истёк. Запросите новый.",
-        "noCode": "Код подтверждения не найден. Запросите новый.",
-        "invalidCode": "Неверный код. Попробуйте ещё раз.",
-        "emailRequired": "Введите ваш email.",
-        "emailInvalid": "Введите корректный email."
-      },
-      "or": "или",
-      "continueGoogle": "Продолжить через Google"
-    },
     "analytics": {
       "monthlyUsage": "Ежемесячное использование",
       "scansThisMonth": "сканирований в этом месяце",
@@ -1936,16 +1905,6 @@
       "scansUnlimited": "{used} сканирований",
       "myOrders": "Мои заказы",
       "saveMenu": "Сохраните прогресс"
-    },
-    "claim": {
-      "title": "Сохраните ваше меню",
-      "subtitle": "Введите email, чтобы сохранить доступ к вашему меню",
-      "emailPlaceholder": "ваш@email.com",
-      "sendCode": "Отправить код",
-      "verifyCode": "Подтвердить",
-      "emailTaken": "Этот email уже используется. Войдите или используйте другой.",
-      "success": "Email подтверждён! Ваше меню сохранено.",
-      "backToMenu": "Назад к меню"
     }
   },
   "reservationSettings": {

@@ -1610,37 +1610,6 @@
       "limitReachedDescription": "Wykorzystałeś wszystkie 5 darmowych tłumaczeń AI. Przejdź na Growth lub Pro, aby uzyskać nieograniczone tłumaczenia.",
       "upgrade": "Ulepsz"
     },
-    "auth": {
-      "title": "Witamy w",
-      "titleAccent": "IQ Rest",
-      "subtitle": "Wpisz swój e-mail, aby kontynuować",
-      "consent": {
-        "text": "Kontynuując, akceptujesz nasze",
-        "terms": "Regulamin",
-        "and": "i",
-        "privacy": "Politykę prywatności"
-      },
-      "emailPlaceholder": "your@email.com",
-      "continue": "Dalej",
-      "verifyTitle": "Sprawdź swój e-mail",
-      "verifySubtitle": "Wysłaliśmy kod na {email}",
-      "checkSpam": "Nie możesz znaleźć? Sprawdź folder spam",
-      "verify": "Potwierdź",
-      "changeEmail": "Użyj innego e-maila",
-      "resendCode": "Wyślij ponownie",
-      "resendSent": "Kod wysłany!",
-      "errors": {
-        "sendFailed": "Nie udało się wysłać kodu. Spróbuj ponownie.",
-        "verifyFailed": "Nieprawidłowy kod. Spróbuj ponownie.",
-        "codeExpired": "Kod wygasł. Poproś o nowy.",
-        "noCode": "Nie znaleziono kodu weryfikacyjnego. Poproś o nowy.",
-        "invalidCode": "Nieprawidłowy kod. Spróbuj ponownie.",
-        "emailRequired": "Wprowadź swój email.",
-        "emailInvalid": "Wprowadź prawidłowy email."
-      },
-      "or": "lub",
-      "continueGoogle": "Kontynuuj przez Google"
-    },
     "analytics": {
       "monthlyUsage": "Miesięczne użycie",
       "scansThisMonth": "skanów w tym miesiącu",
@@ -1936,16 +1905,6 @@
       "scansUnlimited": "{used} skanów",
       "myOrders": "Moje zamówienia",
       "saveMenu": "Zapisz swój postęp"
-    },
-    "claim": {
-      "title": "Zapisz swoje menu",
-      "subtitle": "Podaj email, aby zachować dostęp do swojego menu",
-      "emailPlaceholder": "twoj@email.com",
-      "sendCode": "Wyślij kod",
-      "verifyCode": "Zweryfikuj",
-      "emailTaken": "Ten email jest już zajęty. Zaloguj się lub użyj innego.",
-      "success": "Email zweryfikowany! Twoje menu jest zapisane.",
-      "backToMenu": "Wróć do menu"
     }
   },
   "reservationSettings": {

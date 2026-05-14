@@ -1610,37 +1610,6 @@
       "limitReachedDescription": "Jūs esat izmantojis visus 5 bezmaksas AI tulkojumus. Jauniniet uz Growth vai Pro neierobežotiem tulkojumiem.",
       "upgrade": "Jaunināt"
     },
-    "auth": {
-      "title": "Laipni lūdzam",
-      "titleAccent": "IQ Rest",
-      "subtitle": "Ievadiet savu e-pastu, lai turpinātu",
-      "consent": {
-        "text": "Turpinot jūs piekrītat mūsu",
-        "terms": "Noteikumiem",
-        "and": "un",
-        "privacy": "Privātuma politikai"
-      },
-      "emailPlaceholder": "your@email.com",
-      "continue": "Turpināt",
-      "verifyTitle": "Pārbaudiet savu e-pastu",
-      "verifySubtitle": "Mēs nosūtījām kodu uz {email}",
-      "checkSpam": "Nevarat atrast? Pārbaudiet surogātpasta mapi",
-      "verify": "Apstiprināt",
-      "changeEmail": "Izmantot citu e-pastu",
-      "resendCode": "Sūtīt vēlreiz",
-      "resendSent": "Kods nosūtīts!",
-      "errors": {
-        "sendFailed": "Neizdevās nosūtīt kodu. Lūdzu, mēģiniet vēlreiz.",
-        "verifyFailed": "Nederīgs kods. Lūdzu, mēģiniet vēlreiz.",
-        "codeExpired": "Kods ir beidzies. Lūdzu, pieprasiet jaunu.",
-        "noCode": "Verifikācijas kods nav atrasts. Lūdzu, pieprasiet jaunu.",
-        "invalidCode": "Nederīgs kods. Lūdzu, mēģiniet vēlreiz.",
-        "emailRequired": "Ievadiet savu e-pastu.",
-        "emailInvalid": "Ievadiet derīgu e-pasta adresi."
-      },
-      "or": "vai",
-      "continueGoogle": "Turpināt ar Google"
-    },
     "analytics": {
       "monthlyUsage": "Mēneša lietojums",
       "scansThisMonth": "skanējumi šajā mēnesī",
@@ -1936,16 +1905,6 @@
       "scansUnlimited": "{used} skenējumi",
       "myOrders": "Mani pasūtījumi",
       "saveMenu": "Saglabājiet savu progresu"
-    },
-    "claim": {
-      "title": "Saglabājiet savu ēdienkarti",
-      "subtitle": "Ievadiet e-pastu, lai saglabātu piekļuvi savai ēdienkartei",
-      "emailPlaceholder": "tavs@email.com",
-      "sendCode": "Sūtīt kodu",
-      "verifyCode": "Apstiprināt",
-      "emailTaken": "Šis e-pasts jau tiek izmantots. Piesakieties vai izmantojiet citu.",
-      "success": "E-pasts apstiprināts! Jūsu ēdienkarte ir saglabāta.",
-      "backToMenu": "Atpakaļ uz ēdienkarti"
     }
   },
   "reservationSettings": {

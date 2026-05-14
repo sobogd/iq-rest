@@ -1610,37 +1610,6 @@
       "limitReachedDescription": "Has utilitzat les 5 traduccions IA gratuïtes. Actualitza a Growth o Pro per traduccions il·limitades.",
       "upgrade": "Actualitza"
     },
-    "auth": {
-      "title": "Benvingut a",
-      "titleAccent": "IQ Rest",
-      "subtitle": "Introdueix el teu correu per continuar",
-      "consent": {
-        "text": "En continuar, acceptes els nostres",
-        "terms": "Termes",
-        "and": "i",
-        "privacy": "Política de privadesa"
-      },
-      "emailPlaceholder": "your@email.com",
-      "continue": "Continuar",
-      "verifyTitle": "Comprova el teu correu",
-      "verifySubtitle": "Hem enviat un codi a {email}",
-      "checkSpam": "No el trobes? Comprova la carpeta de correu brossa",
-      "verify": "Verificar",
-      "changeEmail": "Utilitza un altre correu",
-      "resendCode": "Reenviar codi",
-      "resendSent": "Codi enviat!",
-      "errors": {
-        "sendFailed": "Error en enviar el codi. Torna-ho a provar.",
-        "verifyFailed": "Codi no vàlid. Torna-ho a provar.",
-        "codeExpired": "El codi ha caducat. Si us plau, sol·liciteu-ne un de nou.",
-        "noCode": "No s'ha trobat cap codi de verificació. Si us plau, sol·liciteu-ne un de nou.",
-        "invalidCode": "Codi no vàlid. Si us plau, torneu-ho a provar.",
-        "emailRequired": "Introduïu el vostre email.",
-        "emailInvalid": "Introduïu un email vàlid."
-      },
-      "or": "o",
-      "continueGoogle": "Continua amb Google"
-    },
     "analytics": {
       "monthlyUsage": "Ús mensual",
       "scansThisMonth": "escans aquest mes",
@@ -1936,16 +1905,6 @@
       "scansUnlimited": "{used} escanejos",
       "myOrders": "Les meves comandes",
       "saveMenu": "Desa el teu progrés"
-    },
-    "claim": {
-      "title": "Desa el teu menú",
-      "subtitle": "Introdueix el teu email per conservar l'accés al teu menú",
-      "emailPlaceholder": "teu@email.com",
-      "sendCode": "Envia el codi",
-      "verifyCode": "Verifica",
-      "emailTaken": "Aquest email ja està en ús. Inicia sessió o utilitza'n un altre.",
-      "success": "Email verificat! El teu menú està desat.",
-      "backToMenu": "Torna al menú"
     }
   },
   "reservationSettings": {

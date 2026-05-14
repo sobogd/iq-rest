@@ -1610,37 +1610,6 @@
       "limitReachedDescription": "5 ücretsiz AI çevirinizin tamamını kullandınız. Sınırsız çeviri için Growth veya Pro'ya yükseltin.",
       "upgrade": "Yükselt"
     },
-    "auth": {
-      "title": "Hoş geldiniz",
-      "titleAccent": "IQ Rest",
-      "subtitle": "Devam etmek için e-postanızı girin",
-      "consent": {
-        "text": "Devam ederek kabul etmiş olursunuz",
-        "terms": "Şartlar",
-        "and": "ve",
-        "privacy": "Gizlilik Politikası"
-      },
-      "emailPlaceholder": "your@email.com",
-      "continue": "Devam",
-      "verifyTitle": "E-postanızı kontrol edin",
-      "verifySubtitle": "{email} adresine bir kod gönderdik",
-      "checkSpam": "Bulamıyor musunuz? Spam klasörünüzü kontrol edin",
-      "verify": "Doğrula",
-      "changeEmail": "Başka e-posta kullan",
-      "resendCode": "Tekrar gönder",
-      "resendSent": "Kod gönderildi!",
-      "errors": {
-        "sendFailed": "Kod gönderilemedi. Lütfen tekrar deneyin.",
-        "verifyFailed": "Geçersiz kod. Lütfen tekrar deneyin.",
-        "codeExpired": "Kodun süresi doldu. Lütfen yeni bir tane isteyin.",
-        "noCode": "Doğrulama kodu bulunamadı. Lütfen yeni bir tane isteyin.",
-        "invalidCode": "Geçersiz kod. Lütfen tekrar deneyin.",
-        "emailRequired": "E-postanızı girin.",
-        "emailInvalid": "Geçerli bir e-posta girin."
-      },
-      "or": "veya",
-      "continueGoogle": "Google ile devam et"
-    },
     "analytics": {
       "monthlyUsage": "Aylık Kullanım",
       "scansThisMonth": "bu ay tarama",
@@ -1936,16 +1905,6 @@
       "scansUnlimited": "{used} tarama",
       "myOrders": "Siparişlerim",
       "saveMenu": "İlerlemenizi kaydedin"
-    },
-    "claim": {
-      "title": "Menünüzü kaydedin",
-      "subtitle": "Menünüze erişimi korumak için e-postanızı girin",
-      "emailPlaceholder": "sizin@email.com",
-      "sendCode": "Kod gönder",
-      "verifyCode": "Doğrula",
-      "emailTaken": "Bu e-posta zaten kullanılıyor. Giriş yapın veya başka bir e-posta kullanın.",
-      "success": "E-posta doğrulandı! Menünüz kaydedildi.",
-      "backToMenu": "Menüye dön"
     }
   },
   "reservationSettings": {

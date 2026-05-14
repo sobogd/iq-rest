@@ -1610,37 +1610,6 @@
       "limitReachedDescription": "D'úsáid tú na 5 aistriúchán AI saor in aisce go léir. Uasghrádaigh go Growth nó Pro le haghaidh aistriúcháin gan teorainn.",
       "upgrade": "Uasghrádaigh"
     },
-    "auth": {
-      "title": "Fáilte go",
-      "titleAccent": "IQ Rest",
-      "subtitle": "Cuir isteach do ríomhphost chun leanúint ar aghaidh",
-      "consent": {
-        "text": "Trí leanúint ar aghaidh, aontaíonn tú lenár",
-        "terms": "Téarmaí",
-        "and": "agus",
-        "privacy": "Polasaí Príobháideachta"
-      },
-      "emailPlaceholder": "your@email.com",
-      "continue": "Lean ar aghaidh",
-      "verifyTitle": "Seiceáil do ríomhphost",
-      "verifySubtitle": "Sheol muid cód chuig {email}",
-      "checkSpam": "Ní féidir é a aimsiú? Seiceáil do fhillteán turscair",
-      "verify": "Deimhnigh",
-      "changeEmail": "Úsáid ríomhphost eile",
-      "resendCode": "Seol arís",
-      "resendSent": "Cód seolta!",
-      "errors": {
-        "sendFailed": "Theip ar sheoladh an chóid. Bain triail eile as.",
-        "verifyFailed": "Cód neamhbhailí. Bain triail eile as.",
-        "codeExpired": "Tá an cód imithe in éag. Iarr ceann nua le do thoil.",
-        "noCode": "Níor aimsíodh aon chód fíoraithe. Iarr ceann nua le do thoil.",
-        "invalidCode": "Cód neamhbhailí. Bain triail eile as le do thoil.",
-        "emailRequired": "Cuir isteach do ríomhphost.",
-        "emailInvalid": "Cuir isteach ríomhphost bailí."
-      },
-      "or": "nó",
-      "continueGoogle": "Lean ar aghaidh le Google"
-    },
     "analytics": {
       "monthlyUsage": "Úsáid Mhíosúil",
       "scansThisMonth": "scananna an mhí seo",
@@ -1936,16 +1905,6 @@
       "scansUnlimited": "{used} scanadh",
       "myOrders": "Mo chuid orduithe",
       "saveMenu": "Sábháil do dhul chun cinn"
-    },
-    "claim": {
-      "title": "Sábháil do bhiachlár",
-      "subtitle": "Cuir isteach do ríomhphost chun rochtain ar do bhiachlár a choinneáil",
-      "emailPlaceholder": "do@email.com",
-      "sendCode": "Seol cód",
-      "verifyCode": "Deimhnigh",
-      "emailTaken": "Tá an ríomhphost seo in úsáid cheana. Logáil isteach nó úsáid ceann eile.",
-      "success": "Ríomhphost deimhnithe! Tá do bhiachlár sábháilte.",
-      "backToMenu": "Ar ais go dtí an biachlár"
     }
   },
   "reservationSettings": {

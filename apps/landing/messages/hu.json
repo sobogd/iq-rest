@@ -1610,37 +1610,6 @@
       "limitReachedDescription": "Felhasználta mind az 5 ingyenes AI-fordítást. Váltson Growth vagy Pro csomagra korlátlan fordításokért.",
       "upgrade": "Frissítés"
     },
-    "auth": {
-      "title": "Üdvözöljük az",
-      "titleAccent": "IQ Rest",
-      "subtitle": "Add meg az e-mail címed a folytatáshoz",
-      "consent": {
-        "text": "A folytatással elfogadja a",
-        "terms": "Feltételeket",
-        "and": "és",
-        "privacy": "Adatvédelmi szabályzatot"
-      },
-      "emailPlaceholder": "your@email.com",
-      "continue": "Tovább",
-      "verifyTitle": "Ellenőrizze e-mailjét",
-      "verifySubtitle": "Kódot küldtünk a {email} címre",
-      "checkSpam": "Nem találja? Ellenőrizze a spam mappát",
-      "verify": "Megerősítés",
-      "changeEmail": "Másik e-mail használata",
-      "resendCode": "Újraküldés",
-      "resendSent": "Kód elküldve!",
-      "errors": {
-        "sendFailed": "A kód küldése sikertelen. Próbálja újra.",
-        "verifyFailed": "Érvénytelen kód. Próbálja újra.",
-        "codeExpired": "A kód lejárt. Kérjen újat.",
-        "noCode": "Nem található ellenőrző kód. Kérjen újat.",
-        "invalidCode": "Érvénytelen kód. Próbálja újra.",
-        "emailRequired": "Adja meg az email címét.",
-        "emailInvalid": "Adjon meg egy érvényes email címet."
-      },
-      "or": "vagy",
-      "continueGoogle": "Folytatás a Google-lal"
-    },
     "analytics": {
       "monthlyUsage": "Havi Használat",
       "scansThisMonth": "beolvasás ebben a hónapban",
@@ -1936,16 +1905,6 @@
       "scansUnlimited": "{used} szkennelés",
       "myOrders": "Rendeléseim",
       "saveMenu": "Mentsd el a haladásod"
-    },
-    "claim": {
-      "title": "Mentsd el a menüdet",
-      "subtitle": "Add meg az e-mail címed, hogy megőrizd a hozzáférést a menüdhöz",
-      "emailPlaceholder": "te@email.com",
-      "sendCode": "Kód küldése",
-      "verifyCode": "Ellenőrzés",
-      "emailTaken": "Ez az e-mail már használatban van. Jelentkezz be vagy használj másikat.",
-      "success": "E-mail megerősítve! A menüd mentve van.",
-      "backToMenu": "Vissza a menühöz"
     }
   },
   "reservationSettings": {

@@ -1610,37 +1610,6 @@
       "limitReachedDescription": "Použili ste všetkých 5 bezplatných AI prekladov. Prejdite na Growth alebo Pro pre neobmedzené preklady.",
       "upgrade": "Upgradovať"
     },
-    "auth": {
-      "title": "Vitajte v",
-      "titleAccent": "IQ Rest",
-      "subtitle": "Zadajte svoj e-mail pre pokračovanie",
-      "consent": {
-        "text": "Pokračovaním súhlasíte s našimi",
-        "terms": "Podmienkami",
-        "and": "a",
-        "privacy": "Zásadami ochrany súkromia"
-      },
-      "emailPlaceholder": "your@email.com",
-      "continue": "Pokračovať",
-      "verifyTitle": "Skontrolujte svoj e-mail",
-      "verifySubtitle": "Poslali sme kód na {email}",
-      "checkSpam": "Nenašli ste ho? Skontrolujte priečinok so spamom",
-      "verify": "Overiť",
-      "changeEmail": "Použiť iný e-mail",
-      "resendCode": "Odoslať znova",
-      "resendSent": "Kód odoslaný!",
-      "errors": {
-        "sendFailed": "Nepodarilo sa odoslať kód. Skúste to znova.",
-        "verifyFailed": "Neplatný kód. Skúste to znova.",
-        "codeExpired": "Platnosť kódu vypršala. Vyžiadajte si nový.",
-        "noCode": "Overovací kód nebol nájdený. Vyžiadajte si nový.",
-        "invalidCode": "Neplatný kód. Skúste to znova.",
-        "emailRequired": "Zadajte svoj email.",
-        "emailInvalid": "Zadajte platný email."
-      },
-      "or": "alebo",
-      "continueGoogle": "Pokračovať cez Google"
-    },
     "analytics": {
       "monthlyUsage": "Mesačné používanie",
       "scansThisMonth": "skany tento mesiac",
@@ -1936,16 +1905,6 @@
       "scansUnlimited": "{used} skenov",
       "myOrders": "Moje objednávky",
       "saveMenu": "Uložte svoj pokrok"
-    },
-    "claim": {
-      "title": "Uložte si menu",
-      "subtitle": "Zadajte email pre zachovanie prístupu k vášmu menu",
-      "emailPlaceholder": "vas@email.com",
-      "sendCode": "Odoslať kód",
-      "verifyCode": "Overiť",
-      "emailTaken": "Tento email sa už používa. Prihláste sa alebo použite iný.",
-      "success": "Email overený! Vaše menu je uložené.",
-      "backToMenu": "Späť do menu"
     }
   },
   "reservationSettings": {

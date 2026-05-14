@@ -1610,37 +1610,6 @@
       "limitReachedDescription": "Iskoristili ste svih 5 besplatnih AI prijevoda. Nadogradite na Growth ili Pro za neograničene prijevode.",
       "upgrade": "Nadogradi"
     },
-    "auth": {
-      "title": "Dobrodošli u",
-      "titleAccent": "IQ Rest",
-      "subtitle": "Unesite svoj e-mail za nastavak",
-      "consent": {
-        "text": "Nastavkom prihvaćate naše",
-        "terms": "Uvjete",
-        "and": "i",
-        "privacy": "Pravila privatnosti"
-      },
-      "emailPlaceholder": "your@email.com",
-      "continue": "Nastavi",
-      "verifyTitle": "Provjerite svoj e-mail",
-      "verifySubtitle": "Poslali smo kod na {email}",
-      "checkSpam": "Ne možete pronaći? Provjerite mapu neželjene pošte",
-      "verify": "Potvrdi",
-      "changeEmail": "Koristi drugi e-mail",
-      "resendCode": "Pošalji ponovo",
-      "resendSent": "Kod poslan!",
-      "errors": {
-        "sendFailed": "Slanje koda nije uspjelo. Pokušajte ponovo.",
-        "verifyFailed": "Nevažeći kod. Pokušajte ponovo.",
-        "codeExpired": "Kod je istekao. Zatražite novi.",
-        "noCode": "Verifikacijski kod nije pronađen. Zatražite novi.",
-        "invalidCode": "Nevažeći kod. Pokušajte ponovo.",
-        "emailRequired": "Unesite svoju e-mail adresu.",
-        "emailInvalid": "Unesite valjanu e-mail adresu."
-      },
-      "or": "ili",
-      "continueGoogle": "Nastavi s Googleom"
-    },
     "analytics": {
       "monthlyUsage": "Mjesečna upotreba",
       "scansThisMonth": "skeniranja ovog mjeseca",
@@ -1936,16 +1905,6 @@
       "scansUnlimited": "{used} skeniranja",
       "myOrders": "Moje narudžbe",
       "saveMenu": "Spremite svoj napredak"
-    },
-    "claim": {
-      "title": "Spremite svoj jelovnik",
-      "subtitle": "Unesite email za očuvanje pristupa vašem jelovniku",
-      "emailPlaceholder": "vas@email.com",
-      "sendCode": "Pošalji kod",
-      "verifyCode": "Potvrdi",
-      "emailTaken": "Ovaj email je već u upotrebi. Prijavite se ili koristite drugi.",
-      "success": "Email potvrđen! Vaš jelovnik je spremljen.",
-      "backToMenu": "Natrag na jelovnik"
     }
   },
   "reservationSettings": {

@@ -1610,37 +1610,6 @@
       "limitReachedDescription": "لقد استخدمت جميع الترجمات المجانية الخمس بالذكاء الاصطناعي. قم بالترقية إلى Growth أو Pro للحصول على ترجمات غير محدودة.",
       "upgrade": "ترقية"
     },
-    "auth": {
-      "title": "مرحبًا في",
-      "titleAccent": "IQ Rest",
-      "subtitle": "أدخل بريدك الإلكتروني للمتابعة",
-      "consent": {
-        "text": "بالمتابعة، فإنك توافق على",
-        "terms": "الشروط",
-        "and": "و",
-        "privacy": "سياسة الخصوصية"
-      },
-      "emailPlaceholder": "your@email.com",
-      "continue": "متابعة",
-      "verifyTitle": "تحقق من بريدك الإلكتروني",
-      "verifySubtitle": "أرسلنا رمزًا إلى {email}",
-      "checkSpam": "لا تجده؟ تحقق من مجلد الرسائل غير المرغوب فيها",
-      "verify": "تحقق",
-      "changeEmail": "استخدام بريد إلكتروني آخر",
-      "resendCode": "إعادة إرسال الرمز",
-      "resendSent": "تم إرسال الرمز!",
-      "errors": {
-        "sendFailed": "فشل إرسال الرمز. يرجى المحاولة مرة أخرى.",
-        "verifyFailed": "رمز غير صالح. يرجى المحاولة مرة أخرى.",
-        "codeExpired": "انتهت صلاحية الرمز. يرجى طلب رمز جديد.",
-        "noCode": "لم يتم العثور على رمز التحقق. يرجى طلب رمز جديد.",
-        "invalidCode": "رمز غير صالح. يرجى المحاولة مرة أخرى.",
-        "emailRequired": "يرجى إدخال بريدك الإلكتروني.",
-        "emailInvalid": "يرجى إدخال بريد إلكتروني صالح."
-      },
-      "or": "أو",
-      "continueGoogle": "المتابعة مع Google"
-    },
     "analytics": {
       "monthlyUsage": "الاستخدام الشهري",
       "scansThisMonth": "مسح هذا الشهر",
@@ -1936,16 +1905,6 @@
       "scansUnlimited": "{used} مسح",
       "myOrders": "طلباتي",
       "saveMenu": "احفظ تقدمك"
-    },
-    "claim": {
-      "title": "احفظ قائمتك",
-      "subtitle": "أدخل بريدك الإلكتروني للحفاظ على الوصول إلى قائمتك",
-      "emailPlaceholder": "your@email.com",
-      "sendCode": "إرسال الرمز",
-      "verifyCode": "تحقق",
-      "emailTaken": "هذا البريد مستخدم بالفعل. سجّل الدخول أو استخدم بريداً آخر.",
-      "success": "تم التحقق من البريد! قائمتك محفوظة.",
-      "backToMenu": "العودة إلى القائمة"
     }
   },
   "reservationSettings": {

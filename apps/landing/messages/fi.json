@@ -1610,37 +1610,6 @@
       "limitReachedDescription": "Olet käyttänyt kaikki 5 ilmaista AI-käännöstä. Päivitä Growth- tai Pro-tilaukseen rajattomia käännöksiä varten.",
       "upgrade": "Päivitä"
     },
-    "auth": {
-      "title": "Tervetuloa",
-      "titleAccent": "IQ Rest",
-      "subtitle": "Syötä sähköpostisi jatkaaksesi",
-      "consent": {
-        "text": "Jatkamalla hyväksyt meidän",
-        "terms": "Ehdot",
-        "and": "ja",
-        "privacy": "Tietosuojakäytännön"
-      },
-      "emailPlaceholder": "your@email.com",
-      "continue": "Jatka",
-      "verifyTitle": "Tarkista sähköpostisi",
-      "verifySubtitle": "Lähetimme koodin osoitteeseen {email}",
-      "checkSpam": "Etkö löydä sitä? Tarkista roskapostikansio",
-      "verify": "Vahvista",
-      "changeEmail": "Käytä toista sähköpostia",
-      "resendCode": "Lähetä uudelleen",
-      "resendSent": "Koodi lähetetty!",
-      "errors": {
-        "sendFailed": "Koodin lähetys epäonnistui. Yritä uudelleen.",
-        "verifyFailed": "Virheellinen koodi. Yritä uudelleen.",
-        "codeExpired": "Koodi on vanhentunut. Pyydä uusi.",
-        "noCode": "Vahvistuskoodia ei löytynyt. Pyydä uusi.",
-        "invalidCode": "Virheellinen koodi. Yritä uudelleen.",
-        "emailRequired": "Syötä sähköpostiosoitteesi.",
-        "emailInvalid": "Syötä kelvollinen sähköpostiosoite."
-      },
-      "or": "tai",
-      "continueGoogle": "Jatka Googlella"
-    },
     "analytics": {
       "monthlyUsage": "Kuukausittainen käyttö",
       "scansThisMonth": "skannausta tänä kuukautena",
@@ -1936,16 +1905,6 @@
       "scansUnlimited": "{used} skannausta",
       "myOrders": "Omat tilaukset",
       "saveMenu": "Tallenna edistymisesi"
-    },
-    "claim": {
-      "title": "Tallenna menusi",
-      "subtitle": "Syötä sähköpostisi säilyttääksesi pääsyn menuusi",
-      "emailPlaceholder": "sinun@email.com",
-      "sendCode": "Lähetä koodi",
-      "verifyCode": "Vahvista",
-      "emailTaken": "Tämä sähköposti on jo käytössä. Kirjaudu tai käytä toista.",
-      "success": "Sähköposti vahvistettu! Menusi on tallennettu.",
-      "backToMenu": "Takaisin menuun"
     }
   },
   "reservationSettings": {

@@ -3,14 +3,14 @@
 import { useState, useMemo, useEffect } from "react";
 import { useBlockBack } from "../_hooks/use-back-intercept";
 import { useTranslations } from "next-intl";
-import { ArrowUp, ArrowDown, Plus, ArrowUpDown, Loader2, Check, ChevronRight, Menu as MenuIcon, Eye, Save, UtensilsCrossed, Wand2 } from "lucide-react";
+import { ArrowUp, ArrowDown, Plus, ArrowUpDown, Loader2, Check, ChevronRight, Menu as MenuIcon, Eye, UtensilsCrossed, Wand2 } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
 import { toast } from "sonner";
 import { useDashboard } from "../_context/dashboard-context";
 import { DashboardNavHeader, DashboardNavSidebar, DashboardNavItems } from "../_components/dashboard-nav";
-import { Link, useRouter } from "@/i18n/routing";
+import { useRouter } from "@/i18n/routing";
 import type { Category } from "@/types";
 import { formatPrice } from "@/lib/currencies";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
@@ -38,7 +38,7 @@ interface MenuPageProps {
 
 export function MenuPage({ initialItems, initialCategories, initialCurrency, restaurantName, slug }: MenuPageProps) {
   useBlockBack();
-  const { translations, scanUsage, isAnonymous } = useDashboard();
+  const { translations, scanUsage } = useDashboard();
   const tHome = useTranslations("dashboard.home");
   const router = useRouter();
   const tItems = translations.items;
@@ -260,19 +260,6 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                 {tHome("viewMenu")}
               </button>
             </MenuPreviewModal>
-          )}
-
-          {/* Save (anonymous) */}
-          {!sortMode && isAnonymous && items.length > 0 && (
-            <Link href="/dashboard/save" onClick={() => track(DashboardEvent.CLICKED_SAVE_MENU)}>
-              <button
-                className="flex items-center justify-center gap-2 w-full h-11 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
-                style={{ background: "linear-gradient(135deg, #22c55e, #16a34a)" }}
-              >
-                <Save className="h-4 w-4" />
-                {tHome("saveMenu")}
-              </button>
-            </Link>
           )}
 
         {(categories.length === 0 || (categories.length === 1 && items.length === 0)) ? (

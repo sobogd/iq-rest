@@ -1610,37 +1610,6 @@
       "limitReachedDescription": "Hai usato tutte le 5 traduzioni IA gratuite. Passa a Growth o Pro per traduzioni illimitate.",
       "upgrade": "Aggiorna"
     },
-    "auth": {
-      "title": "Benvenuto su",
-      "titleAccent": "IQ Rest",
-      "subtitle": "Inserisci la tua email per continuare",
-      "consent": {
-        "text": "Continuando, accetti i nostri",
-        "terms": "Termini",
-        "and": "e",
-        "privacy": "Informativa sulla privacy"
-      },
-      "emailPlaceholder": "your@email.com",
-      "continue": "Continua",
-      "verifyTitle": "Controlla la tua email",
-      "verifySubtitle": "Abbiamo inviato un codice a {email}",
-      "checkSpam": "Non lo trovi? Controlla la cartella spam",
-      "verify": "Verifica",
-      "changeEmail": "Usa un'altra email",
-      "resendCode": "Invia di nuovo",
-      "resendSent": "Codice inviato!",
-      "errors": {
-        "sendFailed": "Invio del codice fallito. Riprova.",
-        "verifyFailed": "Codice non valido. Riprova.",
-        "codeExpired": "Il codice è scaduto. Richiedine uno nuovo.",
-        "noCode": "Nessun codice di verifica trovato. Richiedine uno nuovo.",
-        "invalidCode": "Codice non valido. Riprova.",
-        "emailRequired": "Inserisci la tua email.",
-        "emailInvalid": "Inserisci un'email valida."
-      },
-      "or": "o",
-      "continueGoogle": "Continua con Google"
-    },
     "analytics": {
       "monthlyUsage": "Utilizzo Mensile",
       "scansThisMonth": "scansioni questo mese",
@@ -1936,16 +1905,6 @@
       "scansUnlimited": "{used} scansioni",
       "myOrders": "I miei ordini",
       "saveMenu": "Salva i tuoi progressi"
-    },
-    "claim": {
-      "title": "Salva il tuo menu",
-      "subtitle": "Inserisci la tua email per mantenere l'accesso al tuo menu",
-      "emailPlaceholder": "tua@email.com",
-      "sendCode": "Invia codice",
-      "verifyCode": "Verifica",
-      "emailTaken": "Questa email è già in uso. Accedi o usa un'altra email.",
-      "success": "Email verificata! Il tuo menu è salvato.",
-      "backToMenu": "Torna al menu"
     }
   },
   "reservationSettings": {

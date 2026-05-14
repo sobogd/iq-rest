@@ -1610,37 +1610,6 @@
       "limitReachedDescription": "Použili jste všech 5 bezplatných AI překladů. Přejděte na Growth nebo Pro pro neomezené překlady.",
       "upgrade": "Upgradovat"
     },
-    "auth": {
-      "title": "Vítejte v",
-      "titleAccent": "IQ Rest",
-      "subtitle": "Zadejte svůj e-mail pro pokračování",
-      "consent": {
-        "text": "Pokračováním souhlasíte s našimi",
-        "terms": "Podmínkami",
-        "and": "a",
-        "privacy": "Zásadami ochrany soukromí"
-      },
-      "emailPlaceholder": "your@email.com",
-      "continue": "Pokračovat",
-      "verifyTitle": "Zkontrolujte svůj e-mail",
-      "verifySubtitle": "Poslali jsme kód na {email}",
-      "checkSpam": "Nenašli jste ho? Zkontrolujte složku se spamem",
-      "verify": "Ověřit",
-      "changeEmail": "Použít jiný e-mail",
-      "resendCode": "Odeslat znovu",
-      "resendSent": "Kód odeslán!",
-      "errors": {
-        "sendFailed": "Nepodařilo se odeslat kód. Zkuste to znovu.",
-        "verifyFailed": "Neplatný kód. Zkuste to znovu.",
-        "codeExpired": "Platnost kódu vypršela. Vyžádejte si prosím nový.",
-        "noCode": "Ověřovací kód nebyl nalezen. Vyžádejte si prosím nový.",
-        "invalidCode": "Neplatný kód. Zkuste to prosím znovu.",
-        "emailRequired": "Zadejte svůj email.",
-        "emailInvalid": "Zadejte platný email."
-      },
-      "or": "nebo",
-      "continueGoogle": "Pokračovat přes Google"
-    },
     "analytics": {
       "monthlyUsage": "Měsíční použití",
       "scansThisMonth": "skany tento měsíc",
@@ -1936,16 +1905,6 @@
       "scansUnlimited": "{used} skenů",
       "myOrders": "Moje objednávky",
       "saveMenu": "Uložte svůj pokrok"
-    },
-    "claim": {
-      "title": "Uložte své menu",
-      "subtitle": "Zadejte email pro zachování přístupu k vašemu menu",
-      "emailPlaceholder": "vas@email.com",
-      "sendCode": "Odeslat kód",
-      "verifyCode": "Ověřit",
-      "emailTaken": "Tento email je již používán. Přihlaste se nebo použijte jiný.",
-      "success": "Email ověřen! Vaše menu je uloženo.",
-      "backToMenu": "Zpět do menu"
     }
   },
   "reservationSettings": {

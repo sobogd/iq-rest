@@ -2,17 +2,6 @@
 // Naming: showed_* (page view), clicked_* (button), focused_* (input), changed_* (select), toggled_* (switch)
 
 export enum DashboardEvent {
-  // Auth
-  SHOWED_LOGIN = "showed_login",
-  FOCUSED_LOGIN_EMAIL = "focused_login_email",
-  CLICKED_LOGIN_CONTINUE = "clicked_login_continue",
-  AUTH_SIGNUP = "auth_signup",
-  AUTH_GOOGLE_LOGIN = "auth_google_login",
-  SHOWED_OTP = "showed_otp",
-  FOCUSED_OTP_INPUT = "focused_otp_input",
-  CLICKED_VERIFY_OTP = "clicked_verify_otp",
-  CLICKED_CHANGE_EMAIL = "clicked_change_email",
-
   // Home
   SHOWED_HOME = "showed_home",
   CLICKED_VIEW_MENU = "clicked_view_menu",
@@ -190,18 +179,6 @@ export enum DashboardEvent {
   PRICING_SWIPE_BASIC = "pricing_swipe_basic",
   PRICING_SWIPE_PRO = "pricing_swipe_pro",
 
-  // Save Menu (claim)
-  CLICKED_SAVE_MENU = "clicked_save_menu",
-  SHOWED_SAVE_MENU = "showed_save_menu",
-  FOCUSED_CLAIM_EMAIL = "focused_claim_email",
-  CLICKED_CLAIM_SEND_CODE = "clicked_claim_send_code",
-  CLAIM_CODE_SENT = "claim_code_sent",
-  CLICKED_CLAIM_CHANGE_EMAIL = "clicked_claim_change_email",
-  CLAIM_VERIFY_SUCCESS = "claim_verify_success",
-  ERROR_CLAIM_EMAIL_TAKEN = "error_claim_email_taken",
-  ERROR_CLAIM_SEND = "error_claim_send",
-  ERROR_CLAIM_VERIFY = "error_claim_verify",
-
   // Errors
   ERROR_VALIDATION = "error_validation",
   ERROR_SAVE = "error_save",
@@ -212,23 +189,10 @@ export enum DashboardEvent {
   ERROR_CHECKOUT = "error_checkout",
   ERROR_PORTAL = "error_portal",
   ERROR_UPLOAD = "error_upload",
-  ERROR_OTP_SEND = "error_otp_send",
-  ERROR_OTP_VERIFY = "error_otp_verify",
 }
 
 // Human-readable labels for admin analytics display
 export const EVENT_LABELS: Record<string, string> = {
-  // Auth
-  [DashboardEvent.SHOWED_LOGIN]: "Showed Login",
-  [DashboardEvent.FOCUSED_LOGIN_EMAIL]: "Focused Email Input",
-  [DashboardEvent.CLICKED_LOGIN_CONTINUE]: "Clicked Continue",
-  [DashboardEvent.AUTH_SIGNUP]: "New Signup",
-  [DashboardEvent.AUTH_GOOGLE_LOGIN]: "Google Login",
-  [DashboardEvent.SHOWED_OTP]: "Showed OTP",
-  [DashboardEvent.FOCUSED_OTP_INPUT]: "Focused OTP Input",
-  [DashboardEvent.CLICKED_VERIFY_OTP]: "Clicked Verify OTP",
-  [DashboardEvent.CLICKED_CHANGE_EMAIL]: "Clicked Change Email",
-
   // Home
   [DashboardEvent.SHOWED_HOME]: "Showed Dashboard",
   [DashboardEvent.CLICKED_VIEW_MENU]: "Clicked View Menu",
@@ -406,18 +370,6 @@ export const EVENT_LABELS: Record<string, string> = {
   [DashboardEvent.PRICING_SWIPE_BASIC]: "Pricing Swipe: Growth",
   [DashboardEvent.PRICING_SWIPE_PRO]: "Pricing Swipe: Pro",
 
-  // Save Menu (claim)
-  [DashboardEvent.CLICKED_SAVE_MENU]: "Clicked Save Menu",
-  [DashboardEvent.SHOWED_SAVE_MENU]: "Showed Save Menu",
-  [DashboardEvent.FOCUSED_CLAIM_EMAIL]: "Focused Claim Email",
-  [DashboardEvent.CLICKED_CLAIM_SEND_CODE]: "Clicked Claim Send Code",
-  [DashboardEvent.CLAIM_CODE_SENT]: "Claim Code Sent",
-  [DashboardEvent.CLICKED_CLAIM_CHANGE_EMAIL]: "Clicked Claim Change Email",
-  [DashboardEvent.CLAIM_VERIFY_SUCCESS]: "Claim Verify Success",
-  [DashboardEvent.ERROR_CLAIM_EMAIL_TAKEN]: "Error: Claim Email Taken",
-  [DashboardEvent.ERROR_CLAIM_SEND]: "Error: Claim Send",
-  [DashboardEvent.ERROR_CLAIM_VERIFY]: "Error: Claim Verify",
-
   // Errors
   [DashboardEvent.ERROR_VALIDATION]: "Error: Validation",
   [DashboardEvent.ERROR_SAVE]: "Error: Save",
@@ -428,8 +380,6 @@ export const EVENT_LABELS: Record<string, string> = {
   [DashboardEvent.ERROR_CHECKOUT]: "Error: Checkout",
   [DashboardEvent.ERROR_PORTAL]: "Error: Portal",
   [DashboardEvent.ERROR_UPLOAD]: "Error: Upload",
-  [DashboardEvent.ERROR_OTP_SEND]: "Error: OTP Send",
-  [DashboardEvent.ERROR_OTP_VERIFY]: "Error: OTP Verify",
 };
 
 

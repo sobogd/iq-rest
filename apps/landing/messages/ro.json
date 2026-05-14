@@ -1610,37 +1610,6 @@
       "limitReachedDescription": "Ați folosit toate cele 5 traduceri AI gratuite. Treceți la Growth sau Pro pentru traduceri nelimitate.",
       "upgrade": "Actualizare"
     },
-    "auth": {
-      "title": "Bine ați venit la",
-      "titleAccent": "IQ Rest",
-      "subtitle": "Introduceți e-mailul pentru a continua",
-      "consent": {
-        "text": "Continuând, acceptați",
-        "terms": "Termenii",
-        "and": "și",
-        "privacy": "Politica de confidențialitate"
-      },
-      "emailPlaceholder": "your@email.com",
-      "continue": "Continuă",
-      "verifyTitle": "Verificați e-mailul",
-      "verifySubtitle": "Am trimis un cod la {email}",
-      "checkSpam": "Nu-l găsești? Verifică folderul de spam",
-      "verify": "Verifică",
-      "changeEmail": "Folosește alt e-mail",
-      "resendCode": "Retrimite codul",
-      "resendSent": "Cod trimis!",
-      "errors": {
-        "sendFailed": "Trimiterea codului a eșuat. Încercați din nou.",
-        "verifyFailed": "Cod invalid. Încercați din nou.",
-        "codeExpired": "Codul a expirat. Vă rugăm să solicitați unul nou.",
-        "noCode": "Nu a fost găsit niciun cod de verificare. Vă rugăm să solicitați unul nou.",
-        "invalidCode": "Cod invalid. Vă rugăm să încercați din nou.",
-        "emailRequired": "Introduceți adresa de email.",
-        "emailInvalid": "Introduceți o adresă de email validă."
-      },
-      "or": "sau",
-      "continueGoogle": "Continuă cu Google"
-    },
     "analytics": {
       "monthlyUsage": "Utilizare lunar",
       "scansThisMonth": "scanări în această lună",
@@ -1936,16 +1905,6 @@
       "scansUnlimited": "{used} scanări",
       "myOrders": "Comenzile mele",
       "saveMenu": "Salvează-ți progresul"
-    },
-    "claim": {
-      "title": "Salvează-ți meniul",
-      "subtitle": "Introdu emailul pentru a păstra accesul la meniul tău",
-      "emailPlaceholder": "al-tau@email.com",
-      "sendCode": "Trimite cod",
-      "verifyCode": "Verifică",
-      "emailTaken": "Acest email este deja utilizat. Conectează-te sau folosește altul.",
-      "success": "Email verificat! Meniul tău este salvat.",
-      "backToMenu": "Înapoi la meniu"
     }
   },
   "reservationSettings": {

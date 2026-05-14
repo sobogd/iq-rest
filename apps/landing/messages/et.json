@@ -1610,37 +1610,6 @@
       "limitReachedDescription": "Olete kasutanud kõik 5 tasuta AI-tõlget. Minge üle Growth või Pro paketile piiramatute tõlgete jaoks.",
       "upgrade": "Uuenda"
     },
-    "auth": {
-      "title": "Tere tulemast",
-      "titleAccent": "IQ Rest",
-      "subtitle": "Sisestage oma e-post jätkamiseks",
-      "consent": {
-        "text": "Jätkates nõustute meie",
-        "terms": "Tingimustega",
-        "and": "ja",
-        "privacy": "Privaatsuspoliitikaga"
-      },
-      "emailPlaceholder": "your@email.com",
-      "continue": "Jätka",
-      "verifyTitle": "Kontrollige oma e-posti",
-      "verifySubtitle": "Saatsime koodi aadressile {email}",
-      "checkSpam": "Ei leia? Kontrolli rämpsposti kausta",
-      "verify": "Kinnita",
-      "changeEmail": "Kasuta teist e-posti",
-      "resendCode": "Saada uuesti",
-      "resendSent": "Kood saadetud!",
-      "errors": {
-        "sendFailed": "Koodi saatmine ebaõnnestus. Proovige uuesti.",
-        "verifyFailed": "Vale kood. Proovige uuesti.",
-        "codeExpired": "Kood on aegunud. Palun küsi uus.",
-        "noCode": "Kinnituskoodi ei leitud. Palun küsi uus.",
-        "invalidCode": "Vigane kood. Palun proovi uuesti.",
-        "emailRequired": "Sisestage oma e-post.",
-        "emailInvalid": "Sisestage kehtiv e-posti aadress."
-      },
-      "or": "või",
-      "continueGoogle": "Jätka Google'iga"
-    },
     "analytics": {
       "monthlyUsage": "Kuu kasutus",
       "scansThisMonth": "skaneeringud sel kuul",
@@ -1936,16 +1905,6 @@
       "scansUnlimited": "{used} skannimist",
       "myOrders": "Minu tellimused",
       "saveMenu": "Salvesta oma edenemine"
-    },
-    "claim": {
-      "title": "Salvesta oma menüü",
-      "subtitle": "Sisesta oma e-post, et säilitada juurdepääs menüüle",
-      "emailPlaceholder": "sinu@email.com",
-      "sendCode": "Saada kood",
-      "verifyCode": "Kinnita",
-      "emailTaken": "See e-post on juba kasutusel. Logi sisse või kasuta teist.",
-      "success": "E-post kinnitatud! Sinu menüü on salvestatud.",
-      "backToMenu": "Tagasi menüüsse"
     }
   },
   "reservationSettings": {

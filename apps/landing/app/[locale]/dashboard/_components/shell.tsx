@@ -33,26 +33,21 @@ export function DashboardShell({
   translations,
   userId,
   scanUsage,
-  isAnonymous,
   trialExpired,
   children,
 }: {
   translations: DashboardTranslations;
   userId: string;
   scanUsage: ScanUsage | null;
-  isAnonymous: boolean;
   trialExpired?: boolean;
   children?: React.ReactNode;
 }) {
   useEffect(() => {
     setDashboardUserId(userId);
-    // No client-side identify — pulse events sent from the dashboard
-    // include credentials, so the API attaches userId server-side from
-    // the auth cookie.
   }, [userId]);
 
   return (
-    <DashboardProvider translations={translations} scanUsage={scanUsage} isAnonymous={isAnonymous}>
+    <DashboardProvider translations={translations} scanUsage={scanUsage}>
       <DashboardLayout trialExpired={trialExpired}>
         {children}
       </DashboardLayout>

@@ -1610,37 +1610,6 @@
       "limitReachedDescription": "Du har använt alla 5 gratis AI-översättningar. Uppgradera till Growth eller Pro för obegränsade översättningar.",
       "upgrade": "Uppgradera"
     },
-    "auth": {
-      "title": "Välkommen till",
-      "titleAccent": "IQ Rest",
-      "subtitle": "Ange din e-post för att fortsätta",
-      "consent": {
-        "text": "Genom att fortsätta godkänner du våra",
-        "terms": "Villkor",
-        "and": "och",
-        "privacy": "Integritetspolicy"
-      },
-      "emailPlaceholder": "your@email.com",
-      "continue": "Fortsätt",
-      "verifyTitle": "Kolla din e-post",
-      "verifySubtitle": "Vi skickade en kod till {email}",
-      "checkSpam": "Hittar du det inte? Kolla skräppostmappen",
-      "verify": "Verifiera",
-      "changeEmail": "Använd en annan e-post",
-      "resendCode": "Skicka igen",
-      "resendSent": "Kod skickad!",
-      "errors": {
-        "sendFailed": "Kunde inte skicka koden. Försök igen.",
-        "verifyFailed": "Ogiltig kod. Försök igen.",
-        "codeExpired": "Koden har gått ut. Begär en ny.",
-        "noCode": "Ingen verifieringskod hittades. Begär en ny.",
-        "invalidCode": "Ogiltig kod. Försök igen.",
-        "emailRequired": "Ange din e-post.",
-        "emailInvalid": "Ange en giltig e-post."
-      },
-      "or": "eller",
-      "continueGoogle": "Fortsätt med Google"
-    },
     "analytics": {
       "monthlyUsage": "Månatlig användning",
       "scansThisMonth": "skanningar denna månad",
@@ -1936,16 +1905,6 @@
       "scansUnlimited": "{used} skanningar",
       "myOrders": "Mina beställningar",
       "saveMenu": "Spara dina framsteg"
-    },
-    "claim": {
-      "title": "Spara din meny",
-      "subtitle": "Ange din e-post för att behålla åtkomst till din meny",
-      "emailPlaceholder": "din@email.com",
-      "sendCode": "Skicka kod",
-      "verifyCode": "Verifiera",
-      "emailTaken": "Denna e-post används redan. Logga in eller använd en annan.",
-      "success": "E-post verifierad! Din meny är sparad.",
-      "backToMenu": "Tillbaka till menyn"
     }
   },
   "reservationSettings": {

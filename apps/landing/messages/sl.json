@@ -1610,37 +1610,6 @@
       "limitReachedDescription": "Uporabili ste vseh 5 brezplačnih AI prevodov. Nadgradite na Growth ali Pro za neomejene prevode.",
       "upgrade": "Nadgradi"
     },
-    "auth": {
-      "title": "Dobrodošli v",
-      "titleAccent": "IQ Rest",
-      "subtitle": "Vnesite svoj e-mail za nadaljevanje",
-      "consent": {
-        "text": "Z nadaljevanjem se strinjate z našimi",
-        "terms": "Pogoji",
-        "and": "in",
-        "privacy": "Pravilnikom o zasebnosti"
-      },
-      "emailPlaceholder": "your@email.com",
-      "continue": "Nadaljuj",
-      "verifyTitle": "Preverite svojo e-pošto",
-      "verifySubtitle": "Kodo smo poslali na {email}",
-      "checkSpam": "Ga ne najdete? Preverite mapo z neželeno pošto",
-      "verify": "Potrdi",
-      "changeEmail": "Uporabi drug e-mail",
-      "resendCode": "Pošlji znova",
-      "resendSent": "Koda poslana!",
-      "errors": {
-        "sendFailed": "Pošiljanje kode ni uspelo. Poskusite znova.",
-        "verifyFailed": "Neveljavna koda. Poskusite znova.",
-        "codeExpired": "Koda je potekla. Prosimo, zahtevajte novo.",
-        "noCode": "Potrditvena koda ni bila najdena. Prosimo, zahtevajte novo.",
-        "invalidCode": "Neveljavna koda. Prosimo, poskusite znova.",
-        "emailRequired": "Vnesite svoj email.",
-        "emailInvalid": "Vnesite veljaven email."
-      },
-      "or": "ali",
-      "continueGoogle": "Nadaljuj z Googlom"
-    },
     "analytics": {
       "monthlyUsage": "Mesečna uporaba",
       "scansThisMonth": "skeni ta mesec",
@@ -1936,16 +1905,6 @@
       "scansUnlimited": "{used} skeniranj",
       "myOrders": "Moja naročila",
       "saveMenu": "Shranite svoj napredek"
-    },
-    "claim": {
-      "title": "Shranite svoj meni",
-      "subtitle": "Vnesite email za ohranitev dostopa do menija",
-      "emailPlaceholder": "vas@email.com",
-      "sendCode": "Pošlji kodo",
-      "verifyCode": "Preveri",
-      "emailTaken": "Ta email je že v uporabi. Prijavite se ali uporabite drugega.",
-      "success": "Email potrjen! Vaš meni je shranjen.",
-      "backToMenu": "Nazaj na meni"
     }
   },
   "reservationSettings": {
