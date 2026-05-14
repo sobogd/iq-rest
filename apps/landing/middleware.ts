@@ -1,5 +1,6 @@
 import createMiddleware from "next-intl/middleware";
 import { NextRequest, NextResponse } from "next/server";
+import { isbot } from "isbot";
 import { routing, locales, Locale } from "./i18n/routing";
 import { getLocaleByCountry, getLocaleByCountryAndRegion } from "./lib/country-locale-map";
 import { getCurrencyByCountry } from "./lib/country-currency-map";
@@ -38,10 +39,19 @@ const CURRENCY_COOKIE = "currency";
 
 const GCLID_REGEX = /^[A-Za-z0-9_-]{1,256}$/;
 
-/** Bot User-Agent patterns. UA itself is read from header in edge memory and
- *  NEVER persisted (GDPR). Only the derived boolean is sent to the tracking API. */
-const BOT_UA_REGEX =
-  /AdsBot-Google|Mediapartners-Google|Googlebot|Google-InspectionTool|GoogleOther|APIs-Google|FeedFetcher-Google|bingbot|BingPreview|YandexBot|DuckDuckBot|Baiduspider|Slurp|facebookexternalhit|Twitterbot|LinkedInBot|WhatsApp|TelegramBot|Discordbot|Applebot|PetalBot|SemrushBot|AhrefsBot|MJ12bot|DotBot|HeadlessChrome|PhantomJS|Screaming Frog|Sitebulb|python-requests|curl\/|wget\/|Go-http-client/i;
+/** Custom bot signatures layered on top of the `isbot` library — covers
+ *  cases isbot might miss (e.g. self-identified scrapers, ad QA crawlers
+ *  with unusual UA strings). UA itself stays in edge memory and is never
+ *  persisted; only the derived boolean reaches the DB. */
+const EXTRA_BOT_UA_REGEX =
+  /AdsBot|Google-InspectionTool|GoogleOther|APIs-Google|FeedFetcher-Google|Storebot-Google|GoogleProducer|ChromeOS-Default-Bot|HeadlessChrome|PhantomJS|Screaming Frog|Sitebulb|axios\/|node-fetch|got\/|http_request|httpclient|java\/|okhttp|libwww|lwp-trivial|HttpClient|Apache-HttpClient/i;
+
+function detectBot(ua: string): boolean {
+  if (!ua) return true; // empty UA = almost always non-human
+  if (isbot(ua)) return true;
+  if (EXTRA_BOT_UA_REGEX.test(ua)) return true;
+  return false;
+}
 
 /** Same categorical classifier as dashboard-api's UsageController.classifyDevice.
  *  Raw UA never leaves the edge runtime — only the derived categories below
@@ -119,7 +129,8 @@ function fireTrackEvent(
   });
 }
 
-/** Fire land_page_<locale>_<page> for every visit and land_google_ads when ?gclid= present. */
+/** Fire a single land_page_<locale>_<page> event per visit. gclid (when
+ *  present on the URL) attaches to the same row in the gclid column. */
 function trackLandingFromRequest(request: NextRequest, locale: string): void {
   // Skip RSC payload re-fetches triggered by client-side navigation.
   if (request.headers.get("RSC") === "1" || request.headers.get("Next-Router-Prefetch") === "1") return;
@@ -140,8 +151,12 @@ function trackLandingFromRequest(request: NextRequest, locale: string): void {
 
   // UA stays in edge memory only — never sent to the tracking API or DB.
   const ua = request.headers.get("user-agent") || "";
-  const isBot = BOT_UA_REGEX.test(ua);
+  const isBot = detectBot(ua);
   const { device, platform } = classifyDeviceFromUa(ua);
+  // Temporary diagnostic — logs UA + bot verdict to stdout (server logs only,
+  // not the DB). Remove once we have confirmation Google bots are classified
+  // correctly. UA is not PII when held only in transient access logs.
+  console.log("[track-landing] ua", JSON.stringify({ ua, isBot, device, platform }));
 
   const pageName = pageNameFromPath(request.nextUrl.pathname, locale);
   const pageEvent = `land_page_${locale}_${pageName}`;
