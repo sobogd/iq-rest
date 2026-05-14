@@ -35,7 +35,7 @@ export const TEXTS: LandingTexts = {
     sub: "Sito web pronto per il tuo ristorante — senza sviluppatori né appaltatori. Ordini diretti, prenotazioni e analisi degli ospiti in un unico abbonamento.",
     dynamicHeadlines: ["0% commissioni.", "35 lingue con IA.", "Ordini online.", "Prenotazioni 24/7.", "Design premium."],
     painBullets: ["0% Commissioni: Tutti gli ordini arrivano direttamente a te.", "Traduzione IA: 35 lingue per aumentare lo scontrino dei turisti.", "Prenotazioni 24/7: Sala piena senza chiamate inutili.", "Prezzi flessibili: Aggiorna il menu in pochi secondi."],
-    rating: "4,9 · oltre 500 ristoranti in 30+ paesi",
+    rating: "Oltre 500 ristoranti in 30+ paesi",
   },
 
   features: {

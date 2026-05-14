@@ -12,12 +12,7 @@ import { How } from "@/app/_landing/components/how";
 import { getCurrency } from "@/app/_landing/lib/get-currency";
 import { PageTracker } from "@/app/_landing/components/page-tracker";
 import { TEXTS } from "./texts";
-import { trackGclidArrival } from "@/app/_landing/lib/track-gclid-arrival";
-
 const LOCALE = "ar";
-
-export const dynamic = "force-dynamic";
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://iq-rest.com"),
   title: TEXTS.meta.title,
@@ -41,9 +36,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function LandingPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
-  const sp = await searchParams;
-  await trackGclidArrival(sp, LOCALE);
+export default async function LandingPage() {
   const currency = await getCurrency();
 
   return (

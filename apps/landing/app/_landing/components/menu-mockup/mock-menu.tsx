@@ -68,10 +68,11 @@ export function MockMenu({ locale, className }: Props) {
                       </span>
                     </h2>
                   ) : null}
-                  {g.items.map((item) => {
+                  {g.items.map((item, itemIndex) => {
                     const texts = i18n.items[item.id];
                     const name = texts?.name ?? item.id;
                     const description = texts?.description;
+                    const isLcpImage = gi === 0 && itemIndex === 0;
                     return (
                       <article key={item.id}>
                         {item.imageUrl ? (
@@ -83,6 +84,8 @@ export function MockMenu({ locale, className }: Props) {
                               sizes="440px"
                               className="object-cover"
                               unoptimized
+                              priority={isLcpImage}
+                              fetchPriority={isLcpImage ? "high" : "auto"}
                             />
                           </div>
                         ) : null}

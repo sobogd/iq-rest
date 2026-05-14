@@ -36,6 +36,77 @@ const GEO_IP_COOKIE = "geo_ip";
 const GEO_UA_COOKIE = "geo_ua";
 const CURRENCY_COOKIE = "currency";
 
+const GCLID_REGEX = /^[A-Za-z0-9_-]{1,256}$/;
+
+/** Bot User-Agent patterns. UA itself is read from header in edge memory and
+ *  NEVER persisted (GDPR). Only the derived boolean is sent to the tracking API. */
+const BOT_UA_REGEX =
+  /AdsBot-Google|Mediapartners-Google|Googlebot|Google-InspectionTool|GoogleOther|APIs-Google|FeedFetcher-Google|bingbot|BingPreview|YandexBot|DuckDuckBot|Baiduspider|Slurp|facebookexternalhit|Twitterbot|LinkedInBot|WhatsApp|TelegramBot|Discordbot|Applebot|PetalBot|SemrushBot|AhrefsBot|MJ12bot|DotBot|HeadlessChrome|PhantomJS|Screaming Frog|Sitebulb|python-requests|curl\/|wget\/|Go-http-client/i;
+
+function pickGclid(sp: URLSearchParams): string | null {
+  for (const key of ["gclid", "gbraid", "wbraid"]) {
+    const v = sp.get(key);
+    if (v && GCLID_REGEX.test(v)) return v;
+  }
+  return null;
+}
+
+/** Path after locale prefix → snake_case page name. "/" → "home". */
+function pageNameFromPath(pathname: string, locale: string): string {
+  const prefix = `/${locale}`;
+  let rest = pathname.startsWith(prefix) ? pathname.slice(prefix.length) : pathname;
+  if (rest.startsWith("/")) rest = rest.slice(1);
+  if (!rest) return "home";
+  return rest.replace(/\//g, "_").replace(/-/g, "_").toLowerCase();
+}
+
+/** Fire-and-forget POST to /api/track-landing. Edge fetch with keepalive
+ *  guarantees the request completes after the middleware returns. */
+function fireTrackEvent(
+  origin: string,
+  event: string,
+  country: string,
+  region: string,
+  ip: string | null,
+  gclid: string | null,
+  isBot: boolean,
+): void {
+  // No await — fire-and-forget. keepalive ensures completion post-response.
+  void fetch(`${origin}/api/track-landing`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ event, country, region, ip, gclid, isBot }),
+    keepalive: true,
+  }).catch(() => {
+    // ignore — analytics is best-effort
+  });
+}
+
+/** Fire land_page_<locale>_<page> for every visit and land_google_ads when ?gclid= present. */
+function trackLandingFromRequest(request: NextRequest, locale: string): void {
+  // Skip RSC payload re-fetches triggered by client-side navigation.
+  if (request.headers.get("RSC") === "1" || request.headers.get("Next-Router-Prefetch") === "1") return;
+  if (request.method !== "GET") return;
+
+  const origin = request.nextUrl.origin;
+  const country = (request.headers.get("cf-ipcountry") || "XX").toUpperCase().slice(0, 2);
+  let region = request.headers.get("cf-region") || "";
+  try { region = decodeURIComponent(region); } catch { /* ignore */ }
+  region = region.slice(0, 100);
+  const ip = request.headers.get("cf-connecting-ip") || request.headers.get("x-forwarded-for");
+  const gclid = pickGclid(request.nextUrl.searchParams);
+
+  // UA stays in edge memory only — never sent to the tracking API or DB.
+  const ua = request.headers.get("user-agent") || "";
+  const isBot = BOT_UA_REGEX.test(ua);
+
+  const pageName = pageNameFromPath(request.nextUrl.pathname, locale);
+  const pageEvent = `land_page_${locale}_${pageName}`;
+  // Single event per visit. gclid (when present) is attached to the page event
+  // instead of fired as a separate land_google_ads row.
+  fireTrackEvent(origin, pageEvent, country, region, ip, gclid, isBot);
+}
+
 /**
  * Получить страну: приоритет URL param ?country= > Cloudflare header
  */
@@ -152,6 +223,7 @@ export default function middleware(request: NextRequest) {
     const response = NextResponse.next();
     response.headers.set("Last-Modified", new Date(PAGE_LAST_MODIFIED["/"]).toUTCString());
     response.headers.set("Content-Language", onlyLocaleMatch[1]);
+    trackLandingFromRequest(request, onlyLocaleMatch[1]);
     return response;
   }
 
@@ -282,6 +354,17 @@ export default function middleware(request: NextRequest) {
 
   // Add pathname to headers for SSR components
   response.headers.set("x-pathname", request.nextUrl.pathname);
+
+  // Landing analytics: track final (post-redirect) page hit + gclid arrival.
+  // Skip dashboard — internal user area, not part of marketing funnel.
+  const localeMatchForTrack = pathname.match(localeRegex);
+  if (localeMatchForTrack) {
+    const trackedLocale = localeMatchForTrack[1];
+    const isDashboard = pathname.startsWith(`/${trackedLocale}/dashboard`);
+    if (!isDashboard) {
+      trackLandingFromRequest(request, trackedLocale);
+    }
+  }
 
   // Set Last-Modified for marketing pages
   const pagePath = pathname.replace(localeRegex, "/");

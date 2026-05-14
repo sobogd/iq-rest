@@ -12,15 +12,11 @@ import { MobileAnchorNav } from "@/app/_landing/components/mobile-anchor-nav";
 import { How } from "@/app/_landing/components/how";
 import { getCurrency } from "@/app/_landing/lib/get-currency";
 import { PageTracker } from "@/app/_landing/components/page-tracker";
-import { trackGclidArrival } from "@/app/_landing/lib/track-gclid-arrival";
 import { TEXTS } from "./texts";
 import { SeoContent } from "./seo-content";
-import { buildJsonLd } from "./jsonld";
+import { JSON_LD_HTML } from "./jsonld";
 
 const LOCALE = "it";
-
-export const dynamic = "force-dynamic";
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://iq-rest.com"),
   title: TEXTS.meta.title,
@@ -55,29 +51,15 @@ export const metadata: Metadata = {
   },
 };
 
-type SearchParamsP = Promise<Record<string, string | string[] | undefined>>;
-
-export default async function MenuQrCodeLanding({
-  searchParams,
-}: {
-  searchParams: SearchParamsP;
-}) {
-  const sp = await searchParams;
-  await trackGclidArrival(sp, LOCALE);
+export default async function MenuQrCodeLanding() {
   const currency = await getCurrency();
-  const jsonLd = buildJsonLd(TEXTS);
 
   return (
     <main className="relative">
-      {jsonLd.map((obj, i) => (
-        <script
-          key={i}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(obj).replace(/</g, "\\u003c"),
-          }}
-        />
-      ))}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON_LD_HTML }}
+      />
       <PageTracker />
       <LandingHeader texts={TEXTS.header} locale={LOCALE} useLocalAnchors />
       <div className="space-y-10 sm:space-y-0">

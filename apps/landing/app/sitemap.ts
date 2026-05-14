@@ -64,9 +64,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Italian keyword-targeted landings (single-locale, no hreflang alternates).
   const italianKwPages: RouteConfig[] = [
-    { path: '/it/menu-digitale', lastModified: '2026-05-13', changeFrequency: 'monthly', priority: 0.9 },
-    { path: '/it/menu-qr-code', lastModified: '2026-05-13', changeFrequency: 'monthly', priority: 0.9 },
-    { path: '/it/creare-menu-digitale', lastModified: '2026-05-13', changeFrequency: 'monthly', priority: 0.9 },
+    { path: '/it/menu-digitale', lastModified: '2026-05-13', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/it/menu-qr-code', lastModified: '2026-05-13', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/it/creare-menu-digitale', lastModified: '2026-05-13', changeFrequency: 'monthly', priority: 0.8 },
   ]
   italianKwPages.forEach(route => {
     sitemapEntries.push({

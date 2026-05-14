@@ -1,10 +1,10 @@
 import type { LandingTexts } from "@/app/_landing/types";
+import { TEXTS } from "./texts";
 
 const URL_SELF = "https://iq-rest.com/it/menu-digitale";
 
 export function buildJsonLd(texts: LandingTexts) {
   const softwareApp = {
-    "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: "IQ Rest — Menu Digitale per Ristoranti",
     applicationCategory: "BusinessApplication",
@@ -21,7 +21,6 @@ export function buildJsonLd(texts: LandingTexts) {
   };
 
   const faqPage = {
-    "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: texts.faq.items.map((item) => ({
       "@type": "Question",
@@ -34,7 +33,6 @@ export function buildJsonLd(texts: LandingTexts) {
   };
 
   const breadcrumb = {
-    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
       {
@@ -54,7 +52,6 @@ export function buildJsonLd(texts: LandingTexts) {
 
   // Real product onboarding flow. Steps mirror texts.how.steps in /it/texts.ts.
   const howTo = {
-    "@context": "https://schema.org",
     "@type": "HowTo",
     name: "Come creare un menu digitale per ristoranti",
     description:
@@ -93,5 +90,14 @@ export function buildJsonLd(texts: LandingTexts) {
     ],
   };
 
-  return [softwareApp, faqPage, breadcrumb, howTo];
+  return {
+    "@context": "https://schema.org",
+    "@graph": [softwareApp, faqPage, breadcrumb, howTo],
+  };
 }
+
+/** Precomputed at module load — no per-request stringify cost. */
+export const JSON_LD_HTML = JSON.stringify(buildJsonLd(TEXTS)).replace(
+  /</g,
+  "\\u003c",
+);

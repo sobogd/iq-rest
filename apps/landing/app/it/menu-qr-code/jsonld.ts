@@ -1,11 +1,11 @@
 import type { LandingTexts } from "@/app/_landing/types";
+import { TEXTS } from "./texts";
 
 const URL_SELF = "https://iq-rest.com/it/menu-qr-code";
 
 export function buildJsonLd(texts: LandingTexts) {
   const softwareApp = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+        "@type": "SoftwareApplication",
     name: "IQ Rest — Menu QR Code per Ristoranti",
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web, iOS, Android",
@@ -21,8 +21,7 @@ export function buildJsonLd(texts: LandingTexts) {
   };
 
   const faqPage = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
+        "@type": "FAQPage",
     mainEntity: texts.faq.items.map((item) => ({
       "@type": "Question",
       name: item.q,
@@ -34,8 +33,7 @@ export function buildJsonLd(texts: LandingTexts) {
   };
 
   const breadcrumb = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
+        "@type": "BreadcrumbList",
     itemListElement: [
       {
         "@type": "ListItem",
@@ -54,8 +52,7 @@ export function buildJsonLd(texts: LandingTexts) {
 
   // Real product onboarding flow. Steps mirror texts.how.steps in /it/texts.ts.
   const howTo = {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
+        "@type": "HowTo",
     name: "Come generare un menu QR Code per il ristorante",
     description:
       "Genera il menu con QR Code per il tuo ristorante in 4 passi, stampabile per i tavoli, senza app per i clienti.",
@@ -93,5 +90,14 @@ export function buildJsonLd(texts: LandingTexts) {
     ],
   };
 
-  return [softwareApp, faqPage, breadcrumb, howTo];
+  return {
+    "@context": "https://schema.org",
+    "@graph": [softwareApp, faqPage, breadcrumb, howTo],
+  };
 }
+
+/** Precomputed at module load — no per-request stringify cost. */
+export const JSON_LD_HTML = JSON.stringify(buildJsonLd(TEXTS)).replace(
+  /</g,
+  "\\u003c",
+);
