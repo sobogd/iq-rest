@@ -50,6 +50,7 @@ export function LandingFooter({ texts, headerTexts: _headerTexts, locale, exclud
                 <LinkForward
                   key={link.href}
                   href={link.href}
+                  prefetch={false}
                   trackEvent={`land_footer_keyword_${slugify(link.href)}_click`}
                   className="text-foreground hover:text-primary transition-colors font-medium"
                 >
@@ -65,6 +66,7 @@ export function LandingFooter({ texts, headerTexts: _headerTexts, locale, exclud
               <LinkForward
                 key={link.href}
                 href={link.href}
+                prefetch={false}
                 trackEvent={`land_footer_feature_${slugify(link.href)}_click`}
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >

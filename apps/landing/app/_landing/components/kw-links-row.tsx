@@ -27,6 +27,7 @@ export function KwLinksRow({ heading, links }: KwLinksRowProps) {
             <LinkForward
               key={link.href}
               href={link.href}
+              prefetch={false}
               className="inline-flex items-center px-4 py-2 rounded-full border border-border bg-background hover:border-primary hover:text-primary transition-colors text-sm font-medium"
             >
               {link.label} →

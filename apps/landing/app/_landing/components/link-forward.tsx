@@ -62,7 +62,7 @@ export function LinkForward({
   children,
   trackEvent,
   onClick,
-  prefetch,
+  prefetch = false,
   ...rest
 }: LinkForwardProps) {
   const sp = useSearchParams();
@@ -140,7 +140,7 @@ export function LinkForward({
     <NextLink
       href={finalHref}
       onClick={handleClick}
-      {...(prefetch === false ? { prefetch: false } : prefetch !== undefined ? { prefetch } : {})}
+      prefetch={prefetch}
       {...rest}
     >
       {children}

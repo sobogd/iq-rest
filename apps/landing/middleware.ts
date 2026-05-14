@@ -178,8 +178,17 @@ function fireTrackEvent(
 /** Fire a single land_page_<locale>_<page> event per visit. gclid (when
  *  present on the URL) attaches to the same row in the gclid column. */
 function trackLandingFromRequest(request: NextRequest, locale: string): void {
-  // Skip RSC payload re-fetches triggered by client-side navigation.
-  if (request.headers.get("RSC") === "1" || request.headers.get("Next-Router-Prefetch") === "1") return;
+  // Skip RSC payload re-fetches triggered by client-side navigation and
+  // browser / Next.js prefetches. Cloudflare / nginx in front of the Node
+  // process can strip Next's custom headers on some routes, so we also
+  // honor the browser-level Purpose / Sec-Purpose markers as a fallback.
+  const h = request.headers;
+  if (h.get("RSC") === "1" || h.get("Next-Router-Prefetch") === "1") return;
+  if (h.get("Next-Router-State-Tree")) return;
+  if (h.get("purpose") === "prefetch") return;
+  const secPurpose = h.get("sec-purpose") || "";
+  if (secPurpose.includes("prefetch")) return;
+  if ((h.get("accept") || "").includes("text/x-component")) return;
   if (request.method !== "GET") return;
 
   const origin = request.nextUrl.origin;
