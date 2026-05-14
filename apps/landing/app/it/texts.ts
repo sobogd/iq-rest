@@ -167,12 +167,6 @@ export const TEXTS: LandingTexts = {
     cta: "Scansiona il menù →",
   },
   footer: {
-    keywordLinksHeading: "Soluzioni per ristoranti",
-    keywordLinks: [
-      { href: "/it/menu-digitale", label: "Menu digitale per ristoranti" },
-      { href: "/it/menu-qr-code", label: "Menu QR Code per ristoranti" },
-      { href: "/it/creare-menu-digitale", label: "Creare menu digitale" },
-    ],
     featureLinks: [
       { href: "/it/online-orders", label: "Ordini online" },
       { href: "/it/ai-translation", label: "Traduzione AI" },
