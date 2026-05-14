@@ -71,14 +71,16 @@ function fireTrackEvent(
   gclid: string | null,
   isBot: boolean,
 ): void {
+  const payload = { event, country, region, ip, gclid, isBot };
+  console.log("[track-landing] outbound", JSON.stringify(payload));
   // No await — fire-and-forget. keepalive ensures completion post-response.
   void fetch(`${origin}/api/track-landing`, {
     method: "POST",
     headers: { "content-type": "application/json" },
-    body: JSON.stringify({ event, country, region, ip, gclid, isBot }),
+    body: JSON.stringify(payload),
     keepalive: true,
-  }).catch(() => {
-    // ignore — analytics is best-effort
+  }).catch((e) => {
+    console.error("[track-landing] fetch error", e);
   });
 }
 

@@ -29,13 +29,17 @@ export async function POST(req: NextRequest) {
   let body: unknown;
   try {
     body = await req.json();
-  } catch {
+  } catch (e) {
+    console.error("[track-landing] body parse error", e);
     return NextResponse.json({ ok: false }, { status: 400 });
   }
+
+  console.log("[track-landing] inbound", JSON.stringify(body));
 
   const b = body as Record<string, unknown>;
   const event = typeof b.event === "string" ? b.event : "";
   if (!isValidEvent(event)) {
+    console.warn("[track-landing] invalid event", event);
     return NextResponse.json({ ok: false }, { status: 400 });
   }
 
@@ -46,6 +50,7 @@ export async function POST(req: NextRequest) {
   const gclid =
     typeof b.gclid === "string" && GCLID_REGEX.test(b.gclid) ? b.gclid : null;
   const isBot = b.isBot === true;
+  console.log("[track-landing] resolved", { event, country, region, ip, gclid, isBot });
 
   try {
     await prisma.$executeRaw`
