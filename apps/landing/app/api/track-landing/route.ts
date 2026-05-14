@@ -63,12 +63,13 @@ export async function POST(req: NextRequest) {
     typeof b.platform === "string" && ALLOWED_PLATFORMS.has(b.platform) ? b.platform : null;
   const referrerSource =
     typeof b.referrerSource === "string" && ALLOWED_REFERRER_SOURCES.has(b.referrerSource) ? b.referrerSource : null;
-  console.log("[track-landing] resolved", { event, country, region, ip, gclid, isBot, device, platform, referrerSource });
+  const isGoogleAds = b.isGoogleAds === true;
+  console.log("[track-landing] resolved", { event, country, region, ip, gclid, isBot, device, platform, referrerSource, isGoogleAds });
 
   try {
     await prisma.$executeRaw`
-      INSERT INTO usage_events (id, at, event, country, region, device, platform, gclid, ad_params, "companyId", ip, is_bot, referrer_source)
-      VALUES (${randomUUID()}, ${new Date()}, ${event}, ${country}, ${region}, ${device}, ${platform}, ${gclid}, NULL, NULL, ${ip}, ${isBot}, ${referrerSource})
+      INSERT INTO usage_events (id, at, event, country, region, device, platform, gclid, ad_params, "companyId", ip, is_bot, referrer_source, is_google_ads)
+      VALUES (${randomUUID()}, ${new Date()}, ${event}, ${country}, ${region}, ${device}, ${platform}, ${gclid}, NULL, NULL, ${ip}, ${isBot}, ${referrerSource}, ${isGoogleAds})
     `;
   } catch {
     // best-effort

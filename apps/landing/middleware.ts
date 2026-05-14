@@ -160,8 +160,9 @@ function fireTrackEvent(
   device: string | null,
   platform: string | null,
   referrerSource: string | null,
+  isGoogleAds: boolean,
 ): void {
-  const payload = { event, country, region, ip, gclid, isBot, device, platform, referrerSource };
+  const payload = { event, country, region, ip, gclid, isBot, device, platform, referrerSource, isGoogleAds };
   const base = INTERNAL_TRACK_BASE || origin;
   // No await — fire-and-forget. keepalive ensures completion post-response.
   void fetch(`${base}/api/track-landing`, {
@@ -209,9 +210,12 @@ function trackLandingFromRequest(request: NextRequest, locale: string): void {
 
   const pageName = pageNameFromPath(request.nextUrl.pathname, locale);
   const pageEvent = `land_page_${locale}_${pageName}`;
-  // Single event per visit. gclid (when present) is attached to the page event
-  // instead of fired as a separate land_google_ads row.
-  fireTrackEvent(origin, pageEvent, country, region, ip, gclid, isBot, device, platform, referrerSource);
+  // gclid presence on the URL marks the visit as a Google Ads landing. The
+  // boolean column is what category filters use — gclid itself stays in the
+  // row for attribution but no longer doubles as the gads signal (since JS
+  // events on later page views can't read URL-only state).
+  const isGoogleAds = gclid !== null;
+  fireTrackEvent(origin, pageEvent, country, region, ip, gclid, isBot, device, platform, referrerSource, isGoogleAds);
 }
 
 /**
