@@ -43,6 +43,31 @@ const GCLID_REGEX = /^[A-Za-z0-9_-]{1,256}$/;
 const BOT_UA_REGEX =
   /AdsBot-Google|Mediapartners-Google|Googlebot|Google-InspectionTool|GoogleOther|APIs-Google|FeedFetcher-Google|bingbot|BingPreview|YandexBot|DuckDuckBot|Baiduspider|Slurp|facebookexternalhit|Twitterbot|LinkedInBot|WhatsApp|TelegramBot|Discordbot|Applebot|PetalBot|SemrushBot|AhrefsBot|MJ12bot|DotBot|HeadlessChrome|PhantomJS|Screaming Frog|Sitebulb|python-requests|curl\/|wget\/|Go-http-client/i;
 
+/** Same categorical classifier as dashboard-api's UsageController.classifyDevice.
+ *  Raw UA never leaves the edge runtime — only the derived categories below
+ *  (device kind + OS family) get persisted, matching what /api/usage/event
+ *  already stores. Both write paths therefore produce comparable rows. */
+function classifyDeviceFromUa(ua: string): {
+  device: string | null;
+  platform: string | null;
+} {
+  if (!ua) return { device: null, platform: null };
+  const lower = ua.toLowerCase();
+  let device: string = "desktop";
+  if (/ipad|tablet|playbook|silk/.test(lower) || (/android/.test(lower) && !/mobile/.test(lower))) {
+    device = "tablet";
+  } else if (/mobi|iphone|ipod|android.*mobile|blackberry|iemobile|opera mini|fennec/.test(lower)) {
+    device = "mobile";
+  }
+  let platform: string = "other";
+  if (/iphone|ipad|ipod|ios/.test(lower)) platform = "ios";
+  else if (/android/.test(lower)) platform = "android";
+  else if (/windows/.test(lower)) platform = "windows";
+  else if (/mac os x|macintosh/.test(lower)) platform = "macos";
+  else if (/linux|ubuntu|fedora|debian/.test(lower)) platform = "linux";
+  return { device, platform };
+}
+
 function pickGclid(sp: URLSearchParams): string | null {
   for (const key of ["gclid", "gbraid", "wbraid"]) {
     const v = sp.get(key);
@@ -78,8 +103,10 @@ function fireTrackEvent(
   ip: string | null,
   gclid: string | null,
   isBot: boolean,
+  device: string | null,
+  platform: string | null,
 ): void {
-  const payload = { event, country, region, ip, gclid, isBot };
+  const payload = { event, country, region, ip, gclid, isBot, device, platform };
   const base = INTERNAL_TRACK_BASE || origin;
   // No await — fire-and-forget. keepalive ensures completion post-response.
   void fetch(`${base}/api/track-landing`, {
@@ -103,18 +130,25 @@ function trackLandingFromRequest(request: NextRequest, locale: string): void {
   let region = request.headers.get("cf-region") || "";
   try { region = decodeURIComponent(region); } catch { /* ignore */ }
   region = region.slice(0, 100);
-  const ip = request.headers.get("cf-connecting-ip") || request.headers.get("x-forwarded-for");
+  // Try every header nginx might be setting; the prod config explicitly
+  // populates cf-connecting-ip = $remote_addr but a wider fallback chain
+  // protects against future config drift.
+  const ip =
+    request.headers.get("cf-connecting-ip") ||
+    request.headers.get("x-real-ip") ||
+    request.headers.get("x-forwarded-for");
   const gclid = pickGclid(request.nextUrl.searchParams);
 
   // UA stays in edge memory only — never sent to the tracking API or DB.
   const ua = request.headers.get("user-agent") || "";
   const isBot = BOT_UA_REGEX.test(ua);
+  const { device, platform } = classifyDeviceFromUa(ua);
 
   const pageName = pageNameFromPath(request.nextUrl.pathname, locale);
   const pageEvent = `land_page_${locale}_${pageName}`;
   // Single event per visit. gclid (when present) is attached to the page event
   // instead of fired as a separate land_google_ads row.
-  fireTrackEvent(origin, pageEvent, country, region, ip, gclid, isBot);
+  fireTrackEvent(origin, pageEvent, country, region, ip, gclid, isBot, device, platform);
 }
 
 /**
