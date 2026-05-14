@@ -11,7 +11,6 @@ import { ScanSection } from "@/app/_landing/components/scan-section";
 import { MobileAnchorNav } from "@/app/_landing/components/mobile-anchor-nav";
 import { How } from "@/app/_landing/components/how";
 import { getCurrency } from "@/app/_landing/lib/get-currency";
-import { PageTracker } from "@/app/_landing/components/page-tracker";
 import { TEXTS } from "./texts";
 import { SeoContent } from "./seo-content";
 import { JSON_LD_HTML } from "./jsonld";
@@ -60,7 +59,6 @@ export default async function CreareMenuDigitaleLanding() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON_LD_HTML }}
       />
-      <PageTracker />
       <LandingHeader texts={TEXTS.header} locale={LOCALE} useLocalAnchors />
       <div className="space-y-10 sm:space-y-0">
         <Hero

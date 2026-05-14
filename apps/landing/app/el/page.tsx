@@ -10,7 +10,6 @@ import { Hero } from "@/app/_landing/components/hero";
 import { ScanSection } from "@/app/_landing/components/scan-section";
 import { How } from "@/app/_landing/components/how";
 import { getCurrency } from "@/app/_landing/lib/get-currency";
-import { PageTracker } from "@/app/_landing/components/page-tracker";
 import { TEXTS } from "./texts";
 const LOCALE = "el";
 export const metadata: Metadata = {
@@ -41,7 +40,6 @@ export default async function LandingPage() {
 
   return (
     <main className="relative">
-      <PageTracker />
       <LandingHeader texts={TEXTS.header} locale={LOCALE} />
       <div className="space-y-10 sm:space-y-0">
       <Hero
