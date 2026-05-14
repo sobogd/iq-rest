@@ -10,6 +10,7 @@ import { LandingPricing } from "@/app/_landing/components/pricing";
 import { Hero } from "@/app/_landing/components/hero";
 import { ScanSection } from "@/app/_landing/components/scan-section";
 import { MobileAnchorNav } from "@/app/_landing/components/mobile-anchor-nav";
+import { KwLinksRow } from "@/app/_landing/components/kw-links-row";
 import { How } from "@/app/_landing/components/how";
 import { getCurrency } from "@/app/_landing/lib/get-currency";
 import { TEXTS } from "./texts";
@@ -104,6 +105,13 @@ export default async function MenuDigitalLanding() {
         >
           <Faq texts={TEXTS.faq} />
         </section>
+        <KwLinksRow
+          heading="Soluciones para restaurantes"
+          links={[
+            { href: "/es/carta-digital", label: "Carta digital para restaurantes" },
+            { href: "/es/qr-carta", label: "QR carta para restaurantes" },
+          ]}
+        />
         <FinalCta
           texts={TEXTS.finalCta}
           ctaText={TEXTS.ctaText}

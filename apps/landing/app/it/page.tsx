@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { KwLinksRow } from "@/app/_landing/components/kw-links-row";
 import { Faq } from "@/app/_landing/components/faq";
 import { PageTracker } from "@/app/_landing/components/page-tracker";
 import { Features } from "@/app/_landing/components/features";
@@ -74,33 +74,14 @@ export default async function LandingPage() {
       <section id="faq" data-section="faq" className="scroll-mt-16 py-16 bg-muted/20">
         <Faq texts={TEXTS.faq} />
       </section>
-      <section data-section="kw-links" className="bg-muted/20 pb-16 -mt-10">
-        <div className="container mx-auto px-4">
-          <p className="text-xs font-medium uppercase tracking-widest text-primary mb-3 text-center lg:text-start">
-            Soluzioni per ristoranti
-          </p>
-          <div className="flex flex-wrap gap-2 sm:gap-3 justify-center lg:justify-start">
-            <Link
-              href="/it/menu-digitale"
-              className="inline-flex items-center px-4 py-2 rounded-full border border-border bg-background hover:border-primary hover:text-primary transition-colors text-sm font-medium"
-            >
-              Menu digitale per ristoranti →
-            </Link>
-            <Link
-              href="/it/menu-qr-code"
-              className="inline-flex items-center px-4 py-2 rounded-full border border-border bg-background hover:border-primary hover:text-primary transition-colors text-sm font-medium"
-            >
-              Menu QR Code per ristoranti →
-            </Link>
-            <Link
-              href="/it/creare-menu-digitale"
-              className="inline-flex items-center px-4 py-2 rounded-full border border-border bg-background hover:border-primary hover:text-primary transition-colors text-sm font-medium"
-            >
-              Creare menu digitale →
-            </Link>
-          </div>
-        </div>
-      </section>
+      <KwLinksRow
+        heading="Soluzioni per ristoranti"
+        links={[
+          { href: "/it/menu-digitale", label: "Menu digitale per ristoranti" },
+          { href: "/it/menu-qr-code", label: "Menu QR Code per ristoranti" },
+          { href: "/it/creare-menu-digitale", label: "Creare menu digitale" },
+        ]}
+      />
       <FinalCta
         texts={TEXTS.finalCta}
         ctaText={TEXTS.ctaText}

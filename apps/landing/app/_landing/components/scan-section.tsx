@@ -2,7 +2,7 @@
 
 import { Sparkles } from "lucide-react";
 import { createUrl } from "@/lib/dashboard-url";
-import { analytics } from "@/lib/analytics";
+import { LinkForward } from "./link-forward";
 import type { LandingTexts } from "../types";
 
 interface ScanSectionProps {
@@ -26,13 +26,13 @@ export function ScanSection({ texts, locale }: ScanSectionProps) {
             </h3>
             <p className="text-sm text-muted-foreground mt-0.5">{texts.sub}</p>
           </div>
-          <a
+          <LinkForward
             href={target}
-            onClick={() => analytics.track("land_scan_cta_click")}
-            className="inline-flex items-center justify-center h-10 px-5 text-sm font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 active:scale-[0.99] transition-all whitespace-nowrap shrink-0 w-full sm:w-auto"
+            trackEvent="land_scan_cta_click"
+            className="inline-flex items-center justify-center min-h-10 py-2 px-5 text-sm font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 active:scale-[0.99] transition-all shrink-0 w-full sm:w-auto text-center leading-tight"
           >
             {texts.cta}
-          </a>
+          </LinkForward>
         </div>
       </div>
     </section>

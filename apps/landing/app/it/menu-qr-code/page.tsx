@@ -10,6 +10,7 @@ import { LandingPricing } from "@/app/_landing/components/pricing";
 import { Hero } from "@/app/_landing/components/hero";
 import { ScanSection } from "@/app/_landing/components/scan-section";
 import { MobileAnchorNav } from "@/app/_landing/components/mobile-anchor-nav";
+import { KwLinksRow } from "@/app/_landing/components/kw-links-row";
 import { How } from "@/app/_landing/components/how";
 import { getCurrency } from "@/app/_landing/lib/get-currency";
 import { TEXTS } from "./texts";
@@ -104,6 +105,13 @@ export default async function MenuQrCodeLanding() {
         >
           <Faq texts={TEXTS.faq} />
         </section>
+        <KwLinksRow
+          heading="Soluzioni per ristoranti"
+          links={[
+            { href: "/it/menu-digitale", label: "Menu digitale per ristoranti" },
+            { href: "/it/creare-menu-digitale", label: "Creare menu digitale" },
+          ]}
+        />
         <FinalCta
           texts={TEXTS.finalCta}
           ctaText={TEXTS.ctaText}

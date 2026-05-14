@@ -2,6 +2,7 @@
 
 import { ChevronDown, MessageCircle } from "lucide-react";
 import { analytics } from "@/lib/analytics";
+import { LinkForward } from "./link-forward";
 import type { LandingTexts } from "../types";
 
 const WHATSAPP_NUMBER = "34637621754";
@@ -29,16 +30,16 @@ export function Faq({ texts }: FaqProps) {
           <p className="text-base sm:text-lg text-muted-foreground max-w-md mx-auto lg:mx-0 leading-snug mb-5">
             {texts.sub}
           </p>
-          <a
+          <LinkForward
             href={wa}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => analytics.track("land_faq_whatsapp_click")}
+            trackEvent="land_faq_whatsapp_click"
             className="inline-flex items-center gap-2 h-10 px-5 rounded-lg bg-[#25D366] text-white text-sm font-medium hover:opacity-90 active:scale-[0.99] transition-all"
           >
             <MessageCircle className="h-4 w-4" />
             {texts.whatsappCta}
-          </a>
+          </LinkForward>
         </div>
 
         <div className="flex flex-col gap-3">

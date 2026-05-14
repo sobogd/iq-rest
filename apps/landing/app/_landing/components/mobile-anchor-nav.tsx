@@ -1,6 +1,6 @@
 "use client";
 
-import { analytics } from "@/lib/analytics";
+import { LinkForward } from "./link-forward";
 import type { LandingTexts } from "../types";
 
 interface MobileAnchorNavProps {
@@ -26,14 +26,14 @@ export function MobileAnchorNav({ texts }: MobileAnchorNavProps) {
     >
       <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm font-medium text-muted-foreground">
         {links.map((l) => (
-          <a
+          <LinkForward
             key={l.href}
             href={l.href}
-            onClick={() => analytics.track(l.event)}
+            trackEvent={l.event}
             className="hover:text-foreground transition-colors"
           >
             {l.label}
-          </a>
+          </LinkForward>
         ))}
       </div>
     </nav>

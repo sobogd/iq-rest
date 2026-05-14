@@ -212,9 +212,12 @@ function trackLandingFromRequest(request: NextRequest, locale: string): void {
   const pageEvent = `land_page_${locale}_${pageName}`;
   // gclid presence on the URL marks the visit as a Google Ads landing. The
   // boolean column is what category filters use — gclid itself stays in the
-  // row for attribution but no longer doubles as the gads signal (since JS
-  // events on later page views can't read URL-only state).
-  const isGoogleAds = gclid !== null;
+  // row for attribution but no longer doubles as the gads signal. ?gads=1
+  // is the carrier we propagate across internal navigation via the
+  // <LinkForward> wrapper, so later page hits stay flagged even after the
+  // gclid has been pruned from the URL.
+  const isGoogleAds =
+    gclid !== null || request.nextUrl.searchParams.get("gads") === "1";
   fireTrackEvent(origin, pageEvent, country, region, ip, gclid, isBot, device, platform, referrerSource, isGoogleAds);
 }
 

@@ -7,60 +7,25 @@
 
 import { dashboardApi } from "./dashboard-url";
 
-const GADS_FLAG_KEY = "iqr_gads";
-// 30 days mirrors Google Ads' default click-conversion attribution window.
-// After that the original gclid no longer attributes a conversion anyway,
-// so keeping the flag alive longer would only mislabel later organic visits.
-const GADS_FLAG_TTL_MS = 30 * 24 * 60 * 60 * 1000;
-
-/** Persists a boolean Google-Ads-origin marker in localStorage when the
- *  landing URL carries gclid / gbraid / wbraid. Only the boolean and the
- *  set-time are stored — never the gclid value itself — so the marker is
- *  GDPR-friendly even without a consent banner. The flag expires after
- *  GADS_FLAG_TTL_MS so JS events fired months later don't keep tagging
- *  themselves as Ads-origin. */
-function captureGoogleAdsFlag(): void {
-  if (typeof window === "undefined") return;
-  try {
-    const sp = new URLSearchParams(window.location.search);
-    if (sp.get("gclid") || sp.get("gbraid") || sp.get("wbraid")) {
-      window.localStorage.setItem(GADS_FLAG_KEY, String(Date.now()));
-    }
-  } catch {
-    // localStorage unavailable (private mode, quota) — silently skip; the
-    // middleware-side SSR row still captures is_google_ads correctly.
-  }
-}
-
-function readGoogleAdsFlag(): boolean {
+/** Read the Google-Ads-origin flag from the current URL's query string.
+ *  The flag travels page-to-page via the `<LinkForward>` wrapper, which
+ *  copies an allowlisted set of params (gads / gclid / gbraid / wbraid /
+ *  utm_*) onto every internal navigation. Storing nothing on the device
+ *  keeps the marker entirely outside ePrivacy / GDPR scope — it lives
+ *  only as URL state for the duration of the visit. */
+function readGoogleAdsFromUrl(): boolean {
   if (typeof window === "undefined") return false;
   try {
-    const raw = window.localStorage.getItem(GADS_FLAG_KEY);
-    if (!raw) return false;
-    // Backward-compat: pre-TTL entries stored the literal "1". Treat them as
-    // fresh once on read and rewrite with a real timestamp so they'll age out
-    // normally from that point forward.
-    if (raw === "1") {
-      window.localStorage.setItem(GADS_FLAG_KEY, String(Date.now()));
-      return true;
-    }
-    const at = Number(raw);
-    if (!Number.isFinite(at)) {
-      window.localStorage.removeItem(GADS_FLAG_KEY);
-      return false;
-    }
-    if (Date.now() - at > GADS_FLAG_TTL_MS) {
-      window.localStorage.removeItem(GADS_FLAG_KEY);
-      return false;
-    }
-    return true;
+    const sp = new URLSearchParams(window.location.search);
+    return (
+      sp.get("gads") === "1" ||
+      !!sp.get("gclid") ||
+      !!sp.get("gbraid") ||
+      !!sp.get("wbraid")
+    );
   } catch {
     return false;
   }
-}
-
-if (typeof window !== "undefined") {
-  captureGoogleAdsFlag();
 }
 
 function track(event: string): void {
@@ -71,7 +36,7 @@ function track(event: string): void {
   // (google_search / bing / social / …) and only stores the bucket, not the
   // raw URL.
   const referrer = typeof document !== "undefined" ? document.referrer || null : null;
-  const isGoogleAds = readGoogleAdsFlag();
+  const isGoogleAds = readGoogleAdsFromUrl();
   fetch(dashboardApi("/api/usage/event"), {
     method: "POST",
     credentials: "include",

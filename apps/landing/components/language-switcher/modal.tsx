@@ -2,6 +2,7 @@
 
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { LANGUAGE_NAMES, LANGUAGE_CODES } from "@/app/_landing/lib/language-names";
+import { LinkForward } from "@/app/_landing/components/link-forward";
 
 interface LanguageSwitcherModalProps {
   open: boolean;
@@ -25,7 +26,7 @@ export function LanguageSwitcherModal({ open, onClose, currentLocale, title }: L
             {LANGUAGE_CODES.map((code) => {
               const isActive = code === currentLocale;
               return (
-                <a
+                <LinkForward
                   key={code}
                   href={`/${code}`}
                   className={
@@ -37,7 +38,7 @@ export function LanguageSwitcherModal({ open, onClose, currentLocale, title }: L
                 >
                   <span className="text-xs uppercase tabular-nums text-muted-foreground shrink-0 w-7">{code}</span>
                   <span className="truncate">{LANGUAGE_NAMES[code]}</span>
-                </a>
+                </LinkForward>
               );
             })}
           </div>

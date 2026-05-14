@@ -64,7 +64,7 @@ export function DemoButton({
       <button
         type="button"
         onClick={handleOpen}
-        className={`inline-flex items-center justify-center h-11 px-6 text-sm font-medium text-foreground bg-transparent border border-border rounded-lg hover:bg-muted active:scale-[0.99] transition-all whitespace-nowrap ${className}`}
+        className={`inline-flex items-center justify-center min-h-11 py-2 px-6 text-sm font-medium text-foreground bg-transparent border border-border rounded-lg hover:bg-muted active:scale-[0.99] transition-all text-center leading-tight ${className}`}
       >
         {text}
       </button>

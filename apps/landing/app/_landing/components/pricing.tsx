@@ -4,7 +4,7 @@ import { Lock, Ban, Zap, Globe } from "lucide-react";
 import { createUrl } from "@/lib/dashboard-url";
 import { pricing } from "@/lib/pricing";
 import { currencyInfo, type SupportedCurrency } from "@/lib/country-currency-map";
-import { analytics } from "@/lib/analytics";
+import { LinkForward } from "./link-forward";
 import type { LandingTexts } from "../types";
 
 interface LandingPricingProps {
@@ -90,13 +90,13 @@ export function LandingPricing({ texts, ctaText, microcopy, locale, currency }: 
           </p>
 
           <div className="flex flex-col items-center lg:items-start">
-            <a
+            <LinkForward
               href={trialHref}
-              onClick={() => analytics.track("land_pricing_cta_click")}
-              className="inline-flex w-full max-w-[14rem] items-center justify-center h-11 px-6 text-sm font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 active:scale-[0.99] transition-all"
+              trackEvent="land_pricing_cta_click"
+              className="inline-flex w-full max-w-[14rem] items-center justify-center min-h-11 py-2 px-6 text-sm font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 active:scale-[0.99] transition-all text-center leading-tight"
             >
               {ctaText}
-            </a>
+            </LinkForward>
             <p className="text-sm text-muted-foreground/60 mt-3">{microcopy}</p>
           </div>
 

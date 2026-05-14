@@ -1,4 +1,5 @@
 import { ChevronRight } from "lucide-react";
+import { LinkForward } from "./link-forward";
 
 interface BreadcrumbItem {
   label: string;
@@ -22,12 +23,12 @@ export function Breadcrumb({ items, className = "" }: BreadcrumbProps) {
           return (
             <li key={`${item.label}-${i}`} className="flex items-center gap-1">
               {item.href && !isLast ? (
-                <a
+                <LinkForward
                   href={item.href}
                   className="hover:text-foreground transition-colors"
                 >
                   {item.label}
-                </a>
+                </LinkForward>
               ) : (
                 <span
                   aria-current={isLast ? "page" : undefined}
