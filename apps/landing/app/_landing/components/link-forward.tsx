@@ -31,6 +31,10 @@ interface LinkForwardProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>,
   /** Called *after* the analytics track, before navigation. Use for state side
    *  effects only — don't try to cancel navigation from here. */
   onClick?: (e: MouseEvent<HTMLAnchorElement>) => void;
+  /** Forwarded to next/link. Set to `false` for lists with many internal
+   *  destinations (e.g. the 35-tile language switcher) to avoid the
+   *  middleware-tracked SSR roundtrip that prefetching would trigger. */
+  prefetch?: boolean;
 }
 
 function isOpaqueProtocol(href: string): boolean {
@@ -58,6 +62,7 @@ export function LinkForward({
   children,
   trackEvent,
   onClick,
+  prefetch,
   ...rest
 }: LinkForwardProps) {
   const sp = useSearchParams();
@@ -132,7 +137,12 @@ export function LinkForward({
   }
 
   return (
-    <NextLink href={finalHref} onClick={handleClick} {...rest}>
+    <NextLink
+      href={finalHref}
+      onClick={handleClick}
+      {...(prefetch === false ? { prefetch: false } : prefetch !== undefined ? { prefetch } : {})}
+      {...rest}
+    >
       {children}
     </NextLink>
   );

@@ -29,6 +29,7 @@ export function LanguageSwitcherModal({ open, onClose, currentLocale, title }: L
                 <LinkForward
                   key={code}
                   href={`/${code}`}
+                  prefetch={false}
                   className={
                     "flex items-center gap-2 px-3 py-2 rounded-md text-sm transition-colors " +
                     (isActive
