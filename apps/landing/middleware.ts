@@ -60,8 +60,16 @@ function pageNameFromPath(pathname: string, locale: string): string {
   return rest.replace(/\//g, "_").replace(/-/g, "_").toLowerCase();
 }
 
-/** Fire-and-forget POST to /api/track-landing. Edge fetch with keepalive
- *  guarantees the request completes after the middleware returns. */
+/** Internal base URL used to call our own /api/track-landing route from the
+ *  edge middleware. The Next.js edge sandbox can't loop through the public
+ *  hostname back to itself (nginx → next → fetch → nginx fails inside the
+ *  sandbox), so in production we have to point straight at the local Node
+ *  process. Port is fixed by the `next start -p 8123` invocation on the
+ *  server (see package.json scripts). */
+const INTERNAL_TRACK_BASE =
+  process.env.NODE_ENV === "production" ? "http://127.0.0.1:8123" : "";
+
+/** Fire-and-forget POST to /api/track-landing. */
 function fireTrackEvent(
   origin: string,
   event: string,
@@ -72,15 +80,15 @@ function fireTrackEvent(
   isBot: boolean,
 ): void {
   const payload = { event, country, region, ip, gclid, isBot };
-  console.log("[track-landing] outbound", JSON.stringify(payload));
+  const base = INTERNAL_TRACK_BASE || origin;
   // No await — fire-and-forget. keepalive ensures completion post-response.
-  void fetch(`${origin}/api/track-landing`, {
+  void fetch(`${base}/api/track-landing`, {
     method: "POST",
     headers: { "content-type": "application/json" },
     body: JSON.stringify(payload),
     keepalive: true,
   }).catch((e) => {
-    console.error("[track-landing] fetch error", e);
+    console.error("[track-landing] fetch error", base, e);
   });
 }
 
