@@ -5,6 +5,7 @@ import { FinalCta } from "@/app/_landing/components/final-cta";
 import { LandingFooter } from "@/app/_landing/components/footer";
 import { LandingHeader } from "@/app/_landing/components/header";
 import { LandingPricing } from "@/app/_landing/components/pricing";
+import { PageTracker } from "@/app/_landing/components/page-tracker";
 import { JsonLd, createBreadcrumbSchema } from "@/app/_landing/lib/schemas";
 import type { SupportedCurrency } from "@/lib/country-currency-map";
 import type { FeatureTexts, LandingTexts } from "@/app/_landing/types";
@@ -52,6 +53,8 @@ export function FeaturePage({ texts, chrome, locale, featureId, currency }: Feat
     <main className="relative">
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={softwareAppSchema} />
+
+      <PageTracker eventPrefix="land_feature_section_show_" />
 
       <LandingHeader texts={chrome.header} locale={locale} />
 
