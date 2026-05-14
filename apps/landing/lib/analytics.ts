@@ -8,18 +8,23 @@
 import { dashboardApi } from "./dashboard-url";
 
 const GADS_FLAG_KEY = "iqr_gads";
+// 30 days mirrors Google Ads' default click-conversion attribution window.
+// After that the original gclid no longer attributes a conversion anyway,
+// so keeping the flag alive longer would only mislabel later organic visits.
+const GADS_FLAG_TTL_MS = 30 * 24 * 60 * 60 * 1000;
 
 /** Persists a boolean Google-Ads-origin marker in localStorage when the
- *  landing URL carries gclid / gbraid / wbraid. The value itself is never
- *  stored — only the flag — so the marker is GDPR-friendly even without a
- *  consent banner. Subsequent JS-fired events on later pages of the same
- *  visit read the flag and tag themselves accordingly. */
+ *  landing URL carries gclid / gbraid / wbraid. Only the boolean and the
+ *  set-time are stored — never the gclid value itself — so the marker is
+ *  GDPR-friendly even without a consent banner. The flag expires after
+ *  GADS_FLAG_TTL_MS so JS events fired months later don't keep tagging
+ *  themselves as Ads-origin. */
 function captureGoogleAdsFlag(): void {
   if (typeof window === "undefined") return;
   try {
     const sp = new URLSearchParams(window.location.search);
     if (sp.get("gclid") || sp.get("gbraid") || sp.get("wbraid")) {
-      window.localStorage.setItem(GADS_FLAG_KEY, "1");
+      window.localStorage.setItem(GADS_FLAG_KEY, String(Date.now()));
     }
   } catch {
     // localStorage unavailable (private mode, quota) — silently skip; the
@@ -30,7 +35,25 @@ function captureGoogleAdsFlag(): void {
 function readGoogleAdsFlag(): boolean {
   if (typeof window === "undefined") return false;
   try {
-    return window.localStorage.getItem(GADS_FLAG_KEY) === "1";
+    const raw = window.localStorage.getItem(GADS_FLAG_KEY);
+    if (!raw) return false;
+    // Backward-compat: pre-TTL entries stored the literal "1". Treat them as
+    // fresh once on read and rewrite with a real timestamp so they'll age out
+    // normally from that point forward.
+    if (raw === "1") {
+      window.localStorage.setItem(GADS_FLAG_KEY, String(Date.now()));
+      return true;
+    }
+    const at = Number(raw);
+    if (!Number.isFinite(at)) {
+      window.localStorage.removeItem(GADS_FLAG_KEY);
+      return false;
+    }
+    if (Date.now() - at > GADS_FLAG_TTL_MS) {
+      window.localStorage.removeItem(GADS_FLAG_KEY);
+      return false;
+    }
+    return true;
   } catch {
     return false;
   }
