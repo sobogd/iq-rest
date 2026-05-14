@@ -53,16 +53,22 @@ export async function POST(req: NextRequest) {
   // Categorical UA derivations only — raw UA stays in middleware edge memory.
   const ALLOWED_DEVICES = new Set(["mobile", "tablet", "desktop"]);
   const ALLOWED_PLATFORMS = new Set(["ios", "android", "windows", "macos", "linux", "other"]);
+  const ALLOWED_REFERRER_SOURCES = new Set([
+    "google_search", "bing", "yandex", "duckduckgo", "yahoo",
+    "other_search", "social", "internal", "other",
+  ]);
   const device =
     typeof b.device === "string" && ALLOWED_DEVICES.has(b.device) ? b.device : null;
   const platform =
     typeof b.platform === "string" && ALLOWED_PLATFORMS.has(b.platform) ? b.platform : null;
-  console.log("[track-landing] resolved", { event, country, region, ip, gclid, isBot, device, platform });
+  const referrerSource =
+    typeof b.referrerSource === "string" && ALLOWED_REFERRER_SOURCES.has(b.referrerSource) ? b.referrerSource : null;
+  console.log("[track-landing] resolved", { event, country, region, ip, gclid, isBot, device, platform, referrerSource });
 
   try {
     await prisma.$executeRaw`
-      INSERT INTO usage_events (id, at, event, country, region, device, platform, gclid, ad_params, "companyId", ip, is_bot)
-      VALUES (${randomUUID()}, ${new Date()}, ${event}, ${country}, ${region}, ${device}, ${platform}, ${gclid}, NULL, NULL, ${ip}, ${isBot})
+      INSERT INTO usage_events (id, at, event, country, region, device, platform, gclid, ad_params, "companyId", ip, is_bot, referrer_source)
+      VALUES (${randomUUID()}, ${new Date()}, ${event}, ${country}, ${region}, ${device}, ${platform}, ${gclid}, NULL, NULL, ${ip}, ${isBot}, ${referrerSource})
     `;
   } catch {
     // best-effort
