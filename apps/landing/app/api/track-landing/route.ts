@@ -53,23 +53,18 @@ export async function POST(req: NextRequest) {
   // Categorical UA derivations only — raw UA stays in middleware edge memory.
   const ALLOWED_DEVICES = new Set(["mobile", "tablet", "desktop"]);
   const ALLOWED_PLATFORMS = new Set(["ios", "android", "windows", "macos", "linux", "other"]);
-  const ALLOWED_REFERRER_SOURCES = new Set([
-    "google_search", "bing", "yandex", "duckduckgo", "yahoo",
-    "other_search", "social", "internal", "other",
-  ]);
   const device =
     typeof b.device === "string" && ALLOWED_DEVICES.has(b.device) ? b.device : null;
   const platform =
     typeof b.platform === "string" && ALLOWED_PLATFORMS.has(b.platform) ? b.platform : null;
-  const referrerSource =
-    typeof b.referrerSource === "string" && ALLOWED_REFERRER_SOURCES.has(b.referrerSource) ? b.referrerSource : null;
+  const isSearch = b.isSearch === true;
   const isGoogleAds = b.isGoogleAds === true;
-  console.log("[track-landing] resolved", { event, country, region, ip, gclid, isBot, device, platform, referrerSource, isGoogleAds });
+  console.log("[track-landing] resolved", { event, country, region, ip, gclid, isBot, device, platform, isSearch, isGoogleAds });
 
   try {
     await prisma.$executeRaw`
-      INSERT INTO usage_events (id, at, event, country, region, device, platform, gclid, ad_params, "companyId", ip, is_bot, referrer_source, is_google_ads)
-      VALUES (${randomUUID()}, ${new Date()}, ${event}, ${country}, ${region}, ${device}, ${platform}, ${gclid}, NULL, NULL, ${ip}, ${isBot}, ${referrerSource}, ${isGoogleAds})
+      INSERT INTO usage_events (id, at, event, country, region, device, platform, gclid, ad_params, "companyId", ip, is_bot, is_search, is_google_ads)
+      VALUES (${randomUUID()}, ${new Date()}, ${event}, ${country}, ${region}, ${device}, ${platform}, ${gclid}, NULL, NULL, ${ip}, ${isBot}, ${isSearch}, ${isGoogleAds})
     `;
   } catch {
     // best-effort

@@ -405,7 +405,7 @@ export function track(event: DashboardEvent, _meta?: Record<string, string>) {
     method: "POST",
     credentials: "include",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ event, occurredAt: now }),
+    body: JSON.stringify({ event }),
     keepalive: true,
   }).catch(() => {});
 }

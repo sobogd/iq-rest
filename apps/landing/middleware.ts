@@ -78,48 +78,26 @@ function classifyDeviceFromUa(ua: string): {
   return { device, platform };
 }
 
-/** Coarse classifier for the inbound Referer header. Hostname-only — query
- *  strings and paths stay private. Mirrors dashboard-api's classifyReferrer
- *  in src/usage/usage.controller.ts; both must agree so SSR rows and the
- *  JS-fired rows from the same visit produce identical referrer_source
- *  values. Returns null for missing/malformed referrers (treated as direct). */
-function classifyReferrer(referer: string | null, ownHost: string | null): string | null {
-  if (!referer) return null;
+/** True when the inbound Referer host is a known search engine. Hostname-only
+ *  — query strings and paths stay private; the raw Referer never reaches the
+ *  DB. Used to set `is_search` on the SSR first-visit row. */
+function isSearchReferrer(referer: string | null): boolean {
+  if (!referer) return false;
   let host: string;
-  let path: string;
   try {
-    const u = new URL(referer);
-    host = u.hostname.toLowerCase();
-    path = u.pathname || "/";
+    host = new URL(referer).hostname.toLowerCase();
   } catch {
-    return null;
+    return false;
   }
-  if (!host) return null;
-  if (ownHost && (host === ownHost || host.endsWith(`.${ownHost}`))) return "internal";
-  if (host === "iq-rest.com" || host.endsWith(".iq-rest.com")) return "internal";
-  // Google: hostname google.<tld> or google.co.<tld>, with /search or /url path
-  if (/^(www\.)?google\.[a-z.]{2,6}$/.test(host)) {
-    if (path.startsWith("/search") || path.startsWith("/url") || path === "/") return "google_search";
-    return "google_search";
-  }
-  if (host === "bing.com" || host.endsWith(".bing.com")) return "bing";
-  if (/^(www\.)?yandex\.[a-z.]{2,6}$/.test(host) || host.endsWith(".yandex.ru") || host.endsWith(".yandex.com")) return "yandex";
-  if (host === "duckduckgo.com" || host.endsWith(".duckduckgo.com")) return "duckduckgo";
-  if (host.endsWith("search.yahoo.com") || host === "yahoo.com" || host.endsWith(".yahoo.com")) return "yahoo";
-  if (host === "baidu.com" || host.endsWith(".baidu.com")) return "other_search";
-  if (host.endsWith("ecosia.org") || host.endsWith("qwant.com") || host.endsWith("startpage.com") || host.endsWith("mojeek.com") || host.endsWith("brave.com")) return "other_search";
-  if (
-    host === "facebook.com" || host.endsWith(".facebook.com") || host === "fb.com" || host.endsWith(".fb.com") ||
-    host === "instagram.com" || host.endsWith(".instagram.com") ||
-    host === "x.com" || host.endsWith(".x.com") || host === "twitter.com" || host.endsWith(".twitter.com") || host === "t.co" ||
-    host === "linkedin.com" || host.endsWith(".linkedin.com") ||
-    host === "tiktok.com" || host.endsWith(".tiktok.com") ||
-    host === "reddit.com" || host.endsWith(".reddit.com") ||
-    host === "pinterest.com" || host.endsWith(".pinterest.com") ||
-    host === "t.me" || host === "telegram.org" || host.endsWith(".telegram.org") ||
-    host.endsWith("whatsapp.com") || host.endsWith("youtube.com") || host === "youtu.be"
-  ) return "social";
-  return "other";
+  if (!host) return false;
+  if (/^(www\.)?google\.[a-z.]{2,6}$/.test(host)) return true;
+  if (host === "bing.com" || host.endsWith(".bing.com")) return true;
+  if (/^(www\.)?yandex\.[a-z.]{2,6}$/.test(host) || host.endsWith(".yandex.ru") || host.endsWith(".yandex.com")) return true;
+  if (host === "duckduckgo.com" || host.endsWith(".duckduckgo.com")) return true;
+  if (host.endsWith("search.yahoo.com") || host === "yahoo.com" || host.endsWith(".yahoo.com")) return true;
+  if (host === "baidu.com" || host.endsWith(".baidu.com")) return true;
+  if (host.endsWith("ecosia.org") || host.endsWith("qwant.com") || host.endsWith("startpage.com") || host.endsWith("mojeek.com") || host.endsWith("brave.com")) return true;
+  return false;
 }
 
 function pickGclid(sp: URLSearchParams): string | null {
@@ -159,10 +137,10 @@ function fireTrackEvent(
   isBot: boolean,
   device: string | null,
   platform: string | null,
-  referrerSource: string | null,
+  isSearch: boolean,
   isGoogleAds: boolean,
 ): void {
-  const payload = { event, country, region, ip, gclid, isBot, device, platform, referrerSource, isGoogleAds };
+  const payload = { event, country, region, ip, gclid, isBot, device, platform, isSearch, isGoogleAds };
   const base = INTERNAL_TRACK_BASE || origin;
   // No await — fire-and-forget. keepalive ensures completion post-response.
   void fetch(`${base}/api/track-landing`, {
@@ -208,26 +186,17 @@ function trackLandingFromRequest(request: NextRequest, locale: string): void {
   const ua = request.headers.get("user-agent") || "";
   const isBot = detectBot(ua);
   const { device, platform } = classifyDeviceFromUa(ua);
-  const referrerSource = classifyReferrer(
-    request.headers.get("referer"),
-    request.nextUrl.hostname.toLowerCase(),
-  );
+  const isSearch = isSearchReferrer(request.headers.get("referer"));
   // Temporary diagnostic — logs UA + bot verdict to stdout (server logs only,
   // not the DB). Remove once we have confirmation Google bots are classified
   // correctly. UA is not PII when held only in transient access logs.
-  console.log("[track-landing] ua", JSON.stringify({ ua, isBot, device, platform, referrerSource }));
+  console.log("[track-landing] ua", JSON.stringify({ ua, isBot, device, platform, isSearch }));
 
   const pageName = pageNameFromPath(request.nextUrl.pathname, locale);
   const pageEvent = `land_page_${locale}_${pageName}`;
-  // gclid presence on the URL marks the visit as a Google Ads landing. The
-  // boolean column is what category filters use — gclid itself stays in the
-  // row for attribution but no longer doubles as the gads signal. ?gads=1
-  // is the carrier we propagate across internal navigation via the
-  // <LinkForward> wrapper, so later page hits stay flagged even after the
-  // gclid has been pruned from the URL.
-  const isGoogleAds =
-    gclid !== null || request.nextUrl.searchParams.get("gads") === "1";
-  fireTrackEvent(origin, pageEvent, country, region, ip, gclid, isBot, device, platform, referrerSource, isGoogleAds);
+  // gclid presence on the URL marks the visit as a Google Ads landing.
+  const isGoogleAds = gclid !== null;
+  fireTrackEvent(origin, pageEvent, country, region, ip, gclid, isBot, device, platform, isSearch, isGoogleAds);
 }
 
 /**
