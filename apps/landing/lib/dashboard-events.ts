@@ -383,7 +383,7 @@ export const EVENT_LABELS: Record<string, string> = {
 };
 
 
-// ────────── Tracking — single sink: POST /api/usage/event ──────────
+// ────────── Tracking — single sink: POST /api/track/{event} ──────────
 //
 // Server attaches companyId from the iqr_session cookie (credentials:include).
 // No analytics-specific cookie or storage is set on the client.
@@ -401,11 +401,9 @@ export function track(event: DashboardEvent, _meta?: Record<string, string>) {
   if (last && now - last < 1000) return;
   lastFired.set(event, now);
 
-  fetch(`${API_BASE}/api/usage/event`, {
+  fetch(`${API_BASE}/api/track/${encodeURIComponent(event)}`, {
     method: "POST",
     credentials: "include",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ event }),
     keepalive: true,
   }).catch(() => {});
 }

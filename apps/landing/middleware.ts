@@ -1,6 +1,5 @@
 import createMiddleware from "next-intl/middleware";
 import { NextRequest, NextResponse } from "next/server";
-import { isbot } from "isbot";
 import { routing, locales, Locale } from "./i18n/routing";
 import { getLocaleByCountry, getLocaleByCountryAndRegion } from "./lib/country-locale-map";
 import { getCurrencyByCountry } from "./lib/country-currency-map";
@@ -33,171 +32,7 @@ const localeRegex = new RegExp(`^/(${localePattern})(/|$)`);
 const GEO_COUNTRY_COOKIE = "geo_country";
 const GEO_REGION_COOKIE = "geo_region";
 const GEO_CITY_COOKIE = "geo_city";
-const GEO_IP_COOKIE = "geo_ip";
-const GEO_UA_COOKIE = "geo_ua";
 const CURRENCY_COOKIE = "currency";
-
-const GCLID_REGEX = /^[A-Za-z0-9_-]{1,256}$/;
-
-/** Custom bot signatures layered on top of the `isbot` library — covers
- *  cases isbot might miss (e.g. self-identified scrapers, ad QA crawlers
- *  with unusual UA strings). UA itself stays in edge memory and is never
- *  persisted; only the derived boolean reaches the DB. */
-const EXTRA_BOT_UA_REGEX =
-  /AdsBot|Google-InspectionTool|GoogleOther|APIs-Google|FeedFetcher-Google|Storebot-Google|GoogleProducer|ChromeOS-Default-Bot|HeadlessChrome|PhantomJS|Screaming Frog|Sitebulb|axios\/|node-fetch|got\/|http_request|httpclient|java\/|okhttp|libwww|lwp-trivial|HttpClient|Apache-HttpClient/i;
-
-function detectBot(ua: string): boolean {
-  if (!ua) return true; // empty UA = almost always non-human
-  if (isbot(ua)) return true;
-  if (EXTRA_BOT_UA_REGEX.test(ua)) return true;
-  return false;
-}
-
-/** Same categorical classifier as dashboard-api's UsageController.classifyDevice.
- *  Raw UA never leaves the edge runtime — only the derived categories below
- *  (device kind + OS family) get persisted, matching what /api/usage/event
- *  already stores. Both write paths therefore produce comparable rows. */
-function classifyDeviceFromUa(ua: string): {
-  device: string | null;
-  platform: string | null;
-} {
-  if (!ua) return { device: null, platform: null };
-  const lower = ua.toLowerCase();
-  let device: string = "desktop";
-  if (/ipad|tablet|playbook|silk/.test(lower) || (/android/.test(lower) && !/mobile/.test(lower))) {
-    device = "tablet";
-  } else if (/mobi|iphone|ipod|android.*mobile|blackberry|iemobile|opera mini|fennec/.test(lower)) {
-    device = "mobile";
-  }
-  let platform: string = "other";
-  if (/iphone|ipad|ipod|ios/.test(lower)) platform = "ios";
-  else if (/android/.test(lower)) platform = "android";
-  else if (/windows/.test(lower)) platform = "windows";
-  else if (/mac os x|macintosh/.test(lower)) platform = "macos";
-  else if (/linux|ubuntu|fedora|debian/.test(lower)) platform = "linux";
-  return { device, platform };
-}
-
-/** True when the inbound Referer host is a known search engine. Hostname-only
- *  — query strings and paths stay private; the raw Referer never reaches the
- *  DB. Used to set `is_search` on the SSR first-visit row. */
-function isSearchReferrer(referer: string | null): boolean {
-  if (!referer) return false;
-  let host: string;
-  try {
-    host = new URL(referer).hostname.toLowerCase();
-  } catch {
-    return false;
-  }
-  if (!host) return false;
-  if (/^(www\.)?google\.[a-z.]{2,6}$/.test(host)) return true;
-  if (host === "bing.com" || host.endsWith(".bing.com")) return true;
-  if (/^(www\.)?yandex\.[a-z.]{2,6}$/.test(host) || host.endsWith(".yandex.ru") || host.endsWith(".yandex.com")) return true;
-  if (host === "duckduckgo.com" || host.endsWith(".duckduckgo.com")) return true;
-  if (host.endsWith("search.yahoo.com") || host === "yahoo.com" || host.endsWith(".yahoo.com")) return true;
-  if (host === "baidu.com" || host.endsWith(".baidu.com")) return true;
-  if (host.endsWith("ecosia.org") || host.endsWith("qwant.com") || host.endsWith("startpage.com") || host.endsWith("mojeek.com") || host.endsWith("brave.com")) return true;
-  return false;
-}
-
-function pickGclid(sp: URLSearchParams): string | null {
-  for (const key of ["gclid", "gbraid", "wbraid"]) {
-    const v = sp.get(key);
-    if (v && GCLID_REGEX.test(v)) return v;
-  }
-  return null;
-}
-
-/** Path after locale prefix → snake_case page name. "/" → "home". */
-function pageNameFromPath(pathname: string, locale: string): string {
-  const prefix = `/${locale}`;
-  let rest = pathname.startsWith(prefix) ? pathname.slice(prefix.length) : pathname;
-  if (rest.startsWith("/")) rest = rest.slice(1);
-  if (!rest) return "home";
-  return rest.replace(/\//g, "_").replace(/-/g, "_").toLowerCase();
-}
-
-/** Internal base URL used to call our own /api/track-landing route from the
- *  edge middleware. The Next.js edge sandbox can't loop through the public
- *  hostname back to itself (nginx → next → fetch → nginx fails inside the
- *  sandbox), so in production we have to point straight at the local Node
- *  process. Port is fixed by the `next start -p 8123` invocation on the
- *  server (see package.json scripts). */
-const INTERNAL_TRACK_BASE =
-  process.env.NODE_ENV === "production" ? "http://127.0.0.1:8123" : "";
-
-/** Fire-and-forget POST to /api/track-landing. */
-function fireTrackEvent(
-  origin: string,
-  event: string,
-  country: string,
-  region: string,
-  ip: string | null,
-  gclid: string | null,
-  isBot: boolean,
-  device: string | null,
-  platform: string | null,
-  isSearch: boolean,
-  isGoogleAds: boolean,
-): void {
-  const payload = { event, country, region, ip, gclid, isBot, device, platform, isSearch, isGoogleAds };
-  const base = INTERNAL_TRACK_BASE || origin;
-  // No await — fire-and-forget. keepalive ensures completion post-response.
-  void fetch(`${base}/api/track-landing`, {
-    method: "POST",
-    headers: { "content-type": "application/json" },
-    body: JSON.stringify(payload),
-    keepalive: true,
-  }).catch((e) => {
-    console.error("[track-landing] fetch error", base, e);
-  });
-}
-
-/** Fire a single land_page_<locale>_<page> event per visit. gclid (when
- *  present on the URL) attaches to the same row in the gclid column. */
-function trackLandingFromRequest(request: NextRequest, locale: string): void {
-  // Skip RSC payload re-fetches triggered by client-side navigation and
-  // browser / Next.js prefetches. Cloudflare / nginx in front of the Node
-  // process can strip Next's custom headers on some routes, so we also
-  // honor the browser-level Purpose / Sec-Purpose markers as a fallback.
-  const h = request.headers;
-  if (h.get("RSC") === "1" || h.get("Next-Router-Prefetch") === "1") return;
-  if (h.get("Next-Router-State-Tree")) return;
-  if (h.get("purpose") === "prefetch") return;
-  const secPurpose = h.get("sec-purpose") || "";
-  if (secPurpose.includes("prefetch")) return;
-  if ((h.get("accept") || "").includes("text/x-component")) return;
-  if (request.method !== "GET") return;
-
-  const origin = request.nextUrl.origin;
-  const country = (request.headers.get("cf-ipcountry") || "XX").toUpperCase().slice(0, 2);
-  let region = request.headers.get("cf-region") || "";
-  try { region = decodeURIComponent(region); } catch { /* ignore */ }
-  region = region.slice(0, 100);
-  // Identical chain to dashboard-api's UsageController.event so a visit
-  // tracked through both write paths yields the same anonymized IP and can
-  // be JOINed across the two event sources.
-  const ip =
-    request.headers.get("cf-connecting-ip") ||
-    request.headers.get("x-forwarded-for");
-  const gclid = pickGclid(request.nextUrl.searchParams);
-
-  // UA stays in edge memory only — never sent to the tracking API or DB.
-  const ua = request.headers.get("user-agent") || "";
-  const isBot = detectBot(ua);
-  const { device, platform } = classifyDeviceFromUa(ua);
-  const isSearch = isSearchReferrer(request.headers.get("referer"));
-  // Temporary diagnostic — logs UA + bot verdict to stdout (server logs only,
-  // not the DB). Remove once we have confirmation Google bots are classified
-  // correctly. UA is not PII when held only in transient access logs.
-  console.log("[track-landing] ua", JSON.stringify({ ua, isBot, device, platform, isSearch }));
-
-  const pageName = pageNameFromPath(request.nextUrl.pathname, locale);
-  const pageEvent = `land_page_${locale}_${pageName}`;
-  // gclid presence on the URL marks the visit as a Google Ads landing.
-  const isGoogleAds = gclid !== null;
-  fireTrackEvent(origin, pageEvent, country, region, ip, gclid, isBot, device, platform, isSearch, isGoogleAds);
-}
 
 /**
  * Получить страну: приоритет URL param ?country= > Cloudflare header
@@ -291,18 +126,6 @@ function setGeoCookies(request: NextRequest, response: NextResponse): void {
       sameSite: "lax",
     });
   }
-
-  // IP из Cloudflare или x-forwarded-for
-  const ip =
-    request.headers.get("cf-connecting-ip") ||
-    request.headers.get("x-forwarded-for")?.split(",")[0].trim();
-  if (ip) {
-    response.cookies.set(GEO_IP_COOKIE, ip, {
-      path: "/",
-      maxAge: 60 * 60 * 24 * 7, // 1 week
-      sameSite: "lax",
-    });
-  }
 }
 
 export default function middleware(request: NextRequest) {
@@ -315,7 +138,6 @@ export default function middleware(request: NextRequest) {
     const response = NextResponse.next();
     response.headers.set("Last-Modified", new Date(PAGE_LAST_MODIFIED["/"]).toUTCString());
     response.headers.set("Content-Language", onlyLocaleMatch[1]);
-    trackLandingFromRequest(request, onlyLocaleMatch[1]);
     return response;
   }
 
@@ -446,17 +268,6 @@ export default function middleware(request: NextRequest) {
 
   // Add pathname to headers for SSR components
   response.headers.set("x-pathname", request.nextUrl.pathname);
-
-  // Landing analytics: track final (post-redirect) page hit + gclid arrival.
-  // Skip dashboard — internal user area, not part of marketing funnel.
-  const localeMatchForTrack = pathname.match(localeRegex);
-  if (localeMatchForTrack) {
-    const trackedLocale = localeMatchForTrack[1];
-    const isDashboard = pathname.startsWith(`/${trackedLocale}/dashboard`);
-    if (!isDashboard) {
-      trackLandingFromRequest(request, trackedLocale);
-    }
-  }
 
   // Set Last-Modified for marketing pages
   const pagePath = pathname.replace(localeRegex, "/");

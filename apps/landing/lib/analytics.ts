@@ -1,22 +1,26 @@
-// Thin wrapper around the unified usage analytics API in dashboard-api.
-//
-// Single sink: POST /api/usage/event — anonymous by default. Server attaches
-// companyId from auth cookie when the user is logged in. Server derives geo
-// (CF headers) and device/platform (User-Agent). The client sends nothing
-// identifiable about itself beyond the event name.
-//
-// Visit-origin enrichment (gclid, is_google_ads, is_search) lives on the
-// first-visit SSR row written by middleware; JS-fired events are plain.
-
 import { dashboardApi } from "./dashboard-url";
+
+const SEARCH_HOST_REGEX =
+  /(?:^|\.)(google|bing|yandex|duckduckgo|yahoo|baidu|ecosia|qwant|startpage|mojeek|brave)\.[a-z.]+$/i;
+
+function searchReferrerHost(): string | null {
+  try {
+    const ref = document.referrer;
+    if (!ref) return null;
+    const host = new URL(ref).hostname;
+    return SEARCH_HOST_REGEX.test(host) ? host : null;
+  } catch {
+    return null;
+  }
+}
 
 function track(event: string): void {
   if (typeof window === "undefined") return;
-  fetch(dashboardApi("/api/usage/event"), {
+  const host = searchReferrerHost();
+  const qs = host ? `?r=${encodeURIComponent(host)}` : "";
+  fetch(dashboardApi(`/api/track/${encodeURIComponent(event)}${qs}`), {
     method: "POST",
     credentials: "include",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ event }),
     keepalive: true,
   }).catch(() => {});
 }
