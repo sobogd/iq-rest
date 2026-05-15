@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
 import { stripe, PRICE_LOOKUP_KEYS, getLookupKeyWithCurrency } from "@/lib/stripe";
-import { SupportedCurrency } from "@/lib/country-currency-map";
 import { getAuthCompany } from "@/lib/auth";
 
 export async function POST(request: NextRequest) {
@@ -13,7 +11,6 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const cookieStore = await cookies();
     const { priceLookupKey, locale = "en" } = await request.json();
 
     // Only allow BASIC lookup keys (single plan model)
@@ -33,11 +30,10 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Get currency from cookie (set by middleware based on geo)
-    const currency = (cookieStore.get("currency")?.value || "EUR") as SupportedCurrency;
-
-    // Build full lookup key with currency (e.g., basic_monthly_eur)
-    const fullLookupKey = getLookupKeyWithCurrency(priceLookupKey, currency);
+    // EU-only billing — always use the EUR price lookup key. Removing the
+    // geo-based currency switch keeps the checkout deterministic and avoids
+    // mid-funnel currency surprises for restaurants outside the EU geo.
+    const fullLookupKey = getLookupKeyWithCurrency(priceLookupKey, "EUR");
 
     // Get or create Stripe customer
     let customerId = company.stripeCustomerId;

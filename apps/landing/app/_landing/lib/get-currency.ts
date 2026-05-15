@@ -1,17 +1,10 @@
-import { cookies } from "next/headers";
-import {
-  supportedCurrencies,
-  type SupportedCurrency,
-} from "@/lib/country-currency-map";
+import type { SupportedCurrency } from "@/lib/country-currency-map";
 
-/** Currency comes from the `currency` cookie set by middleware (geo-derived).
- *  Reading only cookies — no headers() — keeps pages eligible for static caching
- *  beyond the first request. Falls back to EUR when the cookie is missing. */
+/** All marketing pages now price in EUR regardless of visitor origin.
+ *  Kept as `async` returning a Promise<SupportedCurrency> so every existing
+ *  `const currency = await getCurrency()` callsite stays valid without
+ *  touching dozens of locale pages. Crucially, no `cookies()`/`headers()`
+ *  call → callers stay eligible for static prerender. */
 export async function getCurrency(): Promise<SupportedCurrency> {
-  const cookieStore = await cookies();
-  const fromCookie = cookieStore.get("currency")?.value;
-  if (fromCookie && (supportedCurrencies as readonly string[]).includes(fromCookie)) {
-    return fromCookie as SupportedCurrency;
-  }
   return "EUR";
 }
