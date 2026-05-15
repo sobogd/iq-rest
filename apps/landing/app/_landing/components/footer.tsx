@@ -44,7 +44,7 @@ export function LandingFooter({ texts, headerTexts: _headerTexts, locale, exclud
         <footer className="bg-muted/20" data-section="footer">
           <div className="container mx-auto px-4 py-5 max-w-3xl">
             <div className="flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-3">
-              <p className="text-sm text-muted-foreground/60 text-center sm:text-start">
+              <p className="text-sm text-muted-foreground/80 text-center sm:text-start">
                 {copyright}
               </p>
               <nav className="flex flex-wrap items-center justify-center sm:justify-end gap-x-4 gap-y-2 text-sm text-muted-foreground">
@@ -187,7 +187,7 @@ export function LandingFooter({ texts, headerTexts: _headerTexts, locale, exclud
                 {cookieTexts.termsLink}
               </button>
             </nav>
-            <p className="text-sm text-muted-foreground/60 pt-2 md:mt-1">
+            <p className="text-sm text-muted-foreground/80 pt-2 md:mt-1">
               {copyright}
             </p>
           </div>

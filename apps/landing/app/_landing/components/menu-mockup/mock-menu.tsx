@@ -45,7 +45,7 @@ export function MockMenu({ locale, className }: Props) {
               <div
                 key={g.id}
                 className="relative px-4 py-3 text-sm font-semibold whitespace-nowrap shrink-0 min-h-[44px]"
-                style={{ color: activeCategoryId === g.id ? "#000" : "#9ca3af" }}
+                style={{ color: activeCategoryId === g.id ? "#000" : "#6b7280" }}
               >
                 {g.name}
                 {activeCategoryId === g.id ? (

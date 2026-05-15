@@ -20,10 +20,10 @@ export function ScanSection({ texts, locale }: ScanSectionProps) {
             <Sparkles className="h-6 w-6" strokeWidth={2} />
           </div>
           <div className="flex-1 min-w-0 text-center sm:text-start">
-            <h3 className="text-base sm:text-lg font-semibold tracking-tight">
+            <h2 className="text-base sm:text-lg font-semibold tracking-tight">
               {texts.heading}{" "}
               <span className="text-muted-foreground">{texts.headingAccent}</span>
-            </h3>
+            </h2>
             <p className="text-sm text-muted-foreground mt-0.5">{texts.sub}</p>
           </div>
           <LinkForward

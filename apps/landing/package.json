@@ -73,6 +73,14 @@
     "ua-parser-js": "^2.0.9",
     "vaul": "^1.1.2"
   },
+  "browserslist": [
+    "chrome >= 90",
+    "edge >= 90",
+    "firefox >= 90",
+    "safari >= 15",
+    "ios_saf >= 15",
+    "samsung >= 14"
+  ],
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^19",

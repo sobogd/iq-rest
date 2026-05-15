@@ -71,7 +71,7 @@ export function LandingPricing({ texts, ctaText, microcopy, locale }: LandingPri
             >
               {ctaText}
             </LinkForward>
-            <p className="text-sm text-muted-foreground/60 mt-3">{microcopy}</p>
+            <p className="text-sm text-muted-foreground/80 mt-3">{microcopy}</p>
           </div>
 
           <div className="hidden lg:flex flex-wrap gap-x-6 gap-y-2 mt-10 max-w-md">
