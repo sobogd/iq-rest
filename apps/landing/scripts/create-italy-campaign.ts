@@ -23,6 +23,10 @@ const DAILY_BUDGET_EUR = 12;
 const ITALY_GEO = "geoTargetConstants/2380";
 const ITALIAN_LANG = "languageConstants/1004";
 const LANDING_URL = "https://iq-rest.com/it";
+// PPC landing tuned for the PHRASE keyword "menu digitale per ristoranti"
+// — noindex, simplified footer, hero/H1/FAQ all carry the phrase verbatim
+// for ad-relevance scoring.
+const LANDING_URL_MENU_DIGITALE = "https://iq-rest.com/it/lp/menu-digitale-per-ristoranti";
 
 // Final-URL paths (display URL only, click goes to LANDING_URL or anchor variant).
 const PATH1 = "menu-digitale";
@@ -63,12 +67,14 @@ const GROUPS: Group[] = [
   {
     name: "B — Menu Digitale B2B",
     cpcEur: 2.0,
-    finalUrl: LANDING_URL,
+    finalUrl: LANDING_URL_MENU_DIGITALE,
     keywords: [
-      { text: "menu digitale ristorante", match: "EXACT" },
+      // Swapped EXACT "menu digitale ristorante" for PHRASE "menu digitale
+      // per ristoranti" — the exact-match was too narrow and the phrase
+      // form catches the same intent with more headroom.
+      { text: "menu digitale per ristoranti", match: "PHRASE" },
       { text: "menu digitale ristorante", match: "PHRASE" },
       { text: "menu digitale ristoranti", match: "PHRASE" },
-      { text: "menu digitale per ristoranti", match: "PHRASE" },
       { text: "menu ristorante digitale", match: "PHRASE" },
       { text: "carta menu digitale", match: "PHRASE" },
       { text: "menu digitale qr code", match: "PHRASE" },
