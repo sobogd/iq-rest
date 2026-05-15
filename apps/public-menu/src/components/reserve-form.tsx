@@ -4,7 +4,7 @@ import { format, addDays, startOfWeek, isBefore, isAfter, isSameDay, addWeeks } 
 import { Check, Loader2, ChevronLeft, ChevronRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useMenu } from "../lib/menu-context";
-import { getPreview, useForwardedSearch } from "../lib/forward-search";
+import { useForwardedSearch } from "../lib/forward-search";
 
 interface TimeSlot {
   time: string;
@@ -40,7 +40,6 @@ export function ReserveForm() {
   const slotMinutes = restaurant.reservationSlotMinutes;
   const mode = restaurant.reservationMode;
   const locale = i18n.language;
-  const isPreview = getPreview() === "1";
   const search = useForwardedSearch();
 
   // Schedule from restaurant payload: schedule[0] = Monday … schedule[6] = Sunday.
@@ -209,7 +208,6 @@ export function ReserveForm() {
           guestsCount,
           notes: notes.trim() || null,
           locale,
-          isPreview,
         }),
       });
       if (res.ok) {

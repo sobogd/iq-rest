@@ -6,7 +6,7 @@ import { useMenu } from "../lib/menu-context";
 import { useCart } from "../lib/cart";
 import { tField } from "../lib/translations";
 import { formatPrice } from "../lib/currencies";
-import { getTableNumber, getPreview, useForwardedSearch } from "../lib/forward-search";
+import { getTableNumber, useForwardedSearch } from "../lib/forward-search";
 
 export function OrderForm() {
   const { restaurant, items } = useMenu();
@@ -14,16 +14,15 @@ export function OrderForm() {
   const { cart, add, remove, clear } = useCart();
   const navigate = useNavigate();
   const accentColor = restaurant.accentColor || "#000";
-  const isPreview = getPreview() === "1";
   const tableQ = getTableNumber();
   const qrTableNumber = tableQ ? parseInt(tableQ, 10) : undefined;
   const search = useForwardedSearch();
   const tableNumber = qrTableNumber ?? undefined;
 
-  const [name, setName] = useState(isPreview && restaurant.orderNameEnabled ? "John" : "");
-  const [phone, setPhone] = useState(isPreview && restaurant.orderPhoneEnabled ? "+1 234 567 890" : "");
-  const [address, setAddress] = useState(isPreview && restaurant.orderAddressEnabled ? "123 Main St" : "");
-  const [comment, setComment] = useState(isPreview ? "No onions please" : "");
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
+  const [comment, setComment] = useState("");
   const [sending, setSending] = useState(false);
 
   const showWhatsApp = restaurant.orderMode === "whatsapp" || restaurant.orderMode === "both";
@@ -139,7 +138,6 @@ export function OrderForm() {
           customerAddress: address.trim() || null,
           comment: comment.trim() || null,
           tableNumber: tableNumber ?? null,
-          isPreview,
         }),
       });
       const data = await res.json().catch(() => ({}));
@@ -216,7 +214,7 @@ export function OrderForm() {
           <label htmlFor="order-name" className="text-base font-semibold text-black">
             {t("publicMenu.order.yourName")}: *
           </label>
-          <input id="order-name" value={name} onChange={(e) => setName(e.target.value)} placeholder={t("publicMenu.order.namePlaceholder")} required readOnly={isPreview} autoComplete="off" className={inputCls} style={{ borderColor: name ? accentColor : undefined }} />
+          <input id="order-name" value={name} onChange={(e) => setName(e.target.value)} placeholder={t("publicMenu.order.namePlaceholder")} required autoComplete="off" className={inputCls} style={{ borderColor: name ? accentColor : undefined }} />
         </div>
       ) : null}
 
@@ -225,7 +223,7 @@ export function OrderForm() {
           <label htmlFor="order-phone" className="text-base font-semibold text-black">
             {t("publicMenu.order.yourPhone")}: *
           </label>
-          <input id="order-phone" type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder={t("publicMenu.order.phonePlaceholder")} required readOnly={isPreview} autoComplete="off" className={inputCls} style={{ borderColor: phone ? accentColor : undefined }} />
+          <input id="order-phone" type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder={t("publicMenu.order.phonePlaceholder")} required autoComplete="off" className={inputCls} style={{ borderColor: phone ? accentColor : undefined }} />
         </div>
       ) : null}
 
@@ -234,13 +232,13 @@ export function OrderForm() {
           <label htmlFor="order-address" className="text-base font-semibold text-black">
             {t("publicMenu.order.yourAddress")}: *
           </label>
-          <input id="order-address" value={address} onChange={(e) => setAddress(e.target.value)} placeholder={t("publicMenu.order.addressPlaceholder")} required readOnly={isPreview} autoComplete="off" className={inputCls} style={{ borderColor: address ? accentColor : undefined }} />
+          <input id="order-address" value={address} onChange={(e) => setAddress(e.target.value)} placeholder={t("publicMenu.order.addressPlaceholder")} required autoComplete="off" className={inputCls} style={{ borderColor: address ? accentColor : undefined }} />
         </div>
       ) : null}
 
       <div className="space-y-2">
         <label htmlFor="order-comment" className="text-base font-semibold text-black">{t("publicMenu.order.comment")}:</label>
-        <textarea id="order-comment" value={comment} onChange={(e) => setComment(e.target.value)} placeholder={t("publicMenu.order.commentPlaceholder")} rows={3} readOnly={isPreview} autoComplete="off" className={textareaCls} style={{ borderColor: comment ? accentColor : undefined }} />
+        <textarea id="order-comment" value={comment} onChange={(e) => setComment(e.target.value)} placeholder={t("publicMenu.order.commentPlaceholder")} rows={3} autoComplete="off" className={textareaCls} style={{ borderColor: comment ? accentColor : undefined }} />
       </div>
 
       <button
