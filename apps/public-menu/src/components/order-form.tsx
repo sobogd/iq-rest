@@ -9,7 +9,7 @@ import { formatPrice } from "../lib/currencies";
 import { getTableNumber, getPreview, useForwardedSearch } from "../lib/forward-search";
 
 export function OrderForm() {
-  const { restaurant, items, tables } = useMenu();
+  const { restaurant, items } = useMenu();
   const { t, i18n } = useTranslation();
   const { cart, add, remove, clear } = useCart();
   const navigate = useNavigate();
@@ -18,11 +18,7 @@ export function OrderForm() {
   const tableQ = getTableNumber();
   const qrTableNumber = tableQ ? parseInt(tableQ, 10) : undefined;
   const search = useForwardedSearch();
-  const [pickedTableNumber, setPickedTableNumber] = useState<number | null>(null);
-  const showTablePicker = qrTableNumber == null && tables.length > 0;
-  const tableNumber = qrTableNumber ?? pickedTableNumber ?? undefined;
-  const tableLocale = i18n.language;
-  const getZone = (tbl: typeof tables[number]) => tbl.translations?.[tableLocale]?.zone || tbl.zone;
+  const tableNumber = qrTableNumber ?? undefined;
 
   const [name, setName] = useState(isPreview && restaurant.orderNameEnabled ? "John" : "");
   const [phone, setPhone] = useState(isPreview && restaurant.orderPhoneEnabled ? "+1 234 567 890" : "");
@@ -202,41 +198,6 @@ export function OrderForm() {
         <span className="text-xl font-bold text-black">{formatPrice(total, restaurant.currency)}</span>
       </div>
 
-      {showTablePicker ? (
-        <div className="space-y-2">
-          <label className="text-base font-semibold text-black">
-            {t("publicMenu.order.selectTable")}:
-          </label>
-          <div className="flex flex-col gap-2">
-            {tables.map((tbl) => {
-              const selected = pickedTableNumber === tbl.number;
-              return (
-                <button
-                  key={tbl.id}
-                  type="button"
-                  onClick={() => setPickedTableNumber(tbl.number)}
-                  className="w-full flex items-center gap-3 rounded-lg border-2 px-3 py-2 text-left transition-colors"
-                  style={selected
-                    ? { borderColor: accentColor, backgroundColor: accentColor, color: "#fff" }
-                    : { borderColor: "#e5e7eb", backgroundColor: "#fff", color: "#000" }}
-                >
-                  {tbl.imageUrl ? (
-                    <img src={tbl.imageUrl} alt="" className="w-12 h-12 rounded-md object-cover flex-shrink-0 bg-gray-100" />
-                  ) : null}
-                  <div className="flex flex-col min-w-0">
-                    <span className="text-sm font-semibold">
-                      {getZone(tbl) || `${t("publicMenu.order.tableLabel")} ${tbl.number}`}
-                    </span>
-                    <span className="text-xs" style={{ color: selected ? "rgba(255,255,255,0.75)" : "#6b7280" }}>
-                      {t("publicMenu.order.tableLabel")} {tbl.number} · {tbl.capacity} {t("publicReserve.guests", { defaultValue: "guests" })}
-                    </span>
-                  </div>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-      ) : null}
 
       {restaurant.orderNameEnabled ? (
         <div className="space-y-2">
