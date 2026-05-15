@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { Globe, LogIn } from "lucide-react";
 import { usePathname, useSearchParams } from "next/navigation";
 import { createUrl, loginUrl } from "@/lib/dashboard-url";
@@ -22,15 +22,31 @@ interface HeaderProps {
   useLocalAnchors?: boolean;
 }
 
+// Hide Sign in for Google Ads visitors (focus them on the create CTA).
+// Isolated so its useSearchParams() bailout doesn't push the whole page
+// off static rendering — only this slot suspends.
+function SignInSlot({ signinHref, label }: { signinHref: string; label: string }) {
+  const searchParams = useSearchParams();
+  const showSignIn = !searchParams?.get("gclid");
+  if (!showSignIn) return null;
+  return (
+    <LinkForward
+      href={signinHref}
+      trackEvent="land_header_signin_click"
+      className="inline-flex items-center justify-center h-9 w-9 border border-border rounded-lg text-muted-foreground hover:text-foreground hover:border-foreground/40 transition-colors"
+      aria-label={label}
+      title={label}
+    >
+      <LogIn className="h-4 w-4" />
+    </LinkForward>
+  );
+}
+
 export function LandingHeader({ texts, locale, useLocalAnchors = false }: HeaderProps) {
   const createHref = `${createUrl(locale)}&from=landing`;
   const signinHref = `${loginUrl(locale)}?from=landing`;
   const cookieTexts = getCookieTexts(locale);
   const [langOpen, setLangOpen] = useState(false);
-
-  // Hide Sign in for Google Ads visitors (focus them on the create CTA).
-  const searchParams = useSearchParams();
-  const showSignIn = !searchParams?.get("gclid");
 
   // Anchor links resolve in two modes:
   //  - homepage / KW landing page (`useLocalAnchors` true OR pathname is
@@ -73,17 +89,9 @@ export function LandingHeader({ texts, locale, useLocalAnchors = false }: Header
           >
             <Globe className="h-4 w-4" />
           </button>
-          {showSignIn && (
-            <LinkForward
-              href={signinHref}
-              trackEvent="land_header_signin_click"
-              className="inline-flex items-center justify-center h-9 w-9 border border-border rounded-lg text-muted-foreground hover:text-foreground hover:border-foreground/40 transition-colors"
-              aria-label={texts.signIn}
-              title={texts.signIn}
-            >
-              <LogIn className="h-4 w-4" />
-            </LinkForward>
-          )}
+          <Suspense fallback={<div className="h-9 w-9" aria-hidden />}>
+            <SignInSlot signinHref={signinHref} label={texts.signIn} />
+          </Suspense>
           <LinkForward
             href={createHref}
             trackEvent="land_header_cta_click"

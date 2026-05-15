@@ -115,7 +115,7 @@ export default async function MenuQrCodeLanding({
           <KwLinksRow
             heading="Soluzioni per ristoranti"
             links={[
-              { href: "/it/menu-digitale", label: "Menu digitale per ristoranti" },
+              { href: "/it", label: "Menu digitale per ristoranti" },
               { href: "/it/creare-menu-digitale", label: "Creare menu digitale" },
             ]}
           />

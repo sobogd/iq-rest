@@ -1,5 +1,4 @@
 import { Check } from "lucide-react";
-import { Breadcrumb } from "@/app/_landing/components/breadcrumb";
 
 const BENEFITS = [
   "Zero costi di stampa e ristampa",
@@ -24,13 +23,6 @@ export function SeoContent() {
   return (
     <section data-section="seo-content" className="scroll-mt-16 pt-4 sm:pt-6 pb-16">
       <div className="container mx-auto px-4">
-        <Breadcrumb
-          className="mb-6 justify-center lg:justify-start flex"
-          items={[
-            { label: "IQ Rest", href: "/it" },
-            { label: "Menu Digitale per Ristoranti" },
-          ]}
-        />
         <p className="text-xs font-medium uppercase tracking-widest text-primary mb-3 text-center lg:text-start">
           Approfondimento
         </p>

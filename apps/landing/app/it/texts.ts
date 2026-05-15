@@ -6,17 +6,17 @@ export const TEXTS: LandingTexts = {
   htmlDir: "ltr",
 
   meta: {
-    title: "Menu QR per Ristoranti — Ordini Diretti, Zero Commissioni | IQ Rest",
+    title: "Menu Digitale per Ristoranti — Online in 5 Minuti | IQ Rest",
     description:
-      "Basta menu di carta e commissioni delle app di delivery. Menu QR, ordini diretti, prenotazioni e sito multilingue. 14 giorni gratis, senza carta.",
+      "Crea il tuo menu digitale per ristorante online in 5 minuti. QR Code stampabile per i tavoli, ordini diretti senza commissioni, 35 lingue con IA. 14 giorni gratis, senza carta.",
     canonical: "https://iq-rest.com/it",
     ogLocale: "it_IT",
-    ogTitle: "Menu QR per Ristoranti — Ordini Diretti, Zero Commissioni",
+    ogTitle: "Menu Digitale per Ristoranti — Online in 5 Minuti",
     ogDescription:
-      "Menu QR, ordini diretti, prenotazioni e traduzione AI. Pronto in 5 minuti. 14 giorni gratis — senza carta.",
+      "Menu digitale online per il tuo ristorante. QR Code, ordini diretti, 35 lingue con IA. Pronto in 5 minuti — 14 giorni gratis, senza carta.",
   },
 
-  ctaText: "Prova gratis",
+  ctaText: "Crea il mio menu digitale",
   demoText: "Vedi la demo",
   microcopy: "14 giorni gratis · Senza carta · Cancelli quando vuoi",
 
@@ -26,34 +26,50 @@ export const TEXTS: LandingTexts = {
     navPricing: "Prezzi",
     navFaq: "FAQ",
     signIn: "Accedi",
-    cta: "Prova gratis",
+    cta: "Crea il menu digitale",
   },
 
   hero: {
-    verticals: ["Ristoranti", "Caffè", "Bar", "Hotel", "Pizzerie"],
-    headline: "Menu QR in 5 minuti.",
-    sub: "Sito web pronto per il tuo ristorante — senza sviluppatori né appaltatori. Ordini diretti, prenotazioni e analisi degli ospiti in un unico abbonamento.",
-    dynamicHeadlines: ["0% commissioni.", "35 lingue con IA.", "Ordini online.", "Prenotazioni 24/7.", "Design premium."],
-    painBullets: ["0% Commissioni: Tutti gli ordini arrivano direttamente a te.", "Traduzione IA: 35 lingue per aumentare lo scontrino dei turisti.", "Prenotazioni 24/7: Sala piena senza chiamate inutili.", "Prezzi flessibili: Aggiorna il menu in pochi secondi."],
-    rating: "Oltre 500 ristoranti in 30+ paesi",
+    verticals: ["Ristoranti", "Trattorie", "Pizzerie", "Osterie", "Caffè"],
+    headline: "Menu digitale per ristoranti.",
+    sub: "Il tuo menu digitale online per il ristorante, pronto in 5 minuti. QR Code stampabile per i tavoli, ordini diretti senza commissioni, prenotazioni 24/7 e traduzione IA in 35 lingue.",
+    dynamicHeadlines: [
+      "Menu digitale completo.",
+      "QR Code per i tavoli.",
+      "Ordini diretti, zero commissioni.",
+      "35 lingue con IA.",
+      "Prenotazioni 24/7.",
+    ],
+    painBullets: [
+      "Menu digitale online: aggiorni prezzi e piatti in tempo reale.",
+      "Zero commissioni: ogni ordine dal menu digitale arriva direttamente a te.",
+      "Traduzione IA: 35 lingue per turisti che ordinano di più.",
+      "Pronto in 5 minuti: niente agenzie, niente sviluppatori.",
+    ],
+    rating: "Usato da 500+ ristoranti — menu digitale pronto in 5 minuti",
   },
 
   features: {
-    heading: "Tutto ciò che serve.",
-    headingAccent: "Niente di superfluo.",
-    sub: "Pensato per i ristoranti. Usato a tavola.",
+    heading: "Cosa include un menu digitale",
+    headingAccent: "completo.",
+    sub: "Tutto quello che serve al tuo ristorante in un'unica piattaforma.",
     items: [
-      
       {
         Icon: ScanLine,
-        title: "Ordini dal tavolo",
-        desc: "Gli ordini arrivano istantaneamente su WhatsApp o nel pannello con il numero del tavolo. Servizio più rapido.",
-        tag: "Ordini diretti",
+        title: "Menu digitale completo",
+        desc: "Foto, allergeni, prezzi, varianti e descrizioni in un menu digitale che vive online e si aggiorna in tempo reale.",
+        tag: "Menu digitale",
+      },
+      {
+        Icon: Smartphone,
+        title: "Editor mobile in tempo reale",
+        desc: "Gestisci il menu digitale dallo smartphone: aggiungi un piatto, cambia un prezzo, attiva la stop-list — visibile ai clienti in pochi secondi.",
+        tag: "Editor menù",
       },
       {
         Icon: Languages,
-        title: "Traduttore IA (35 lingue)",
-        desc: "La nostra IA capisce la gastronomia. I turisti ordinano il 20% in più quando comprendono i piatti.",
+        title: "Traduzione IA (35 lingue)",
+        desc: "Il tuo menu digitale parla la lingua degli ospiti. L'IA capisce la gastronomia: i turisti ordinano il 20% in più quando comprendono i piatti.",
         tag: "Traduzione IA",
       },
       {
@@ -69,18 +85,11 @@ export const TEXTS: LandingTexts = {
         tag: "Design personalizzato",
       },
       {
-        Icon: Smartphone,
-        title: "Editor rapido",
-        desc: "Gestisci stop-list e prezzi direttamente dallo smartphone. Modifiche subito visibili agli ospiti.",
-        tag: "Editor menù",
-      },
-      {
         Icon: ChefHat,
         title: "Prossimamente: Display cucina",
         desc: "Dimentica le comande cartacee. Gli ordini dalla sala vanno direttamente sullo schermo dello chef.",
         tag: "In arrivo",
       },
-    
     ],
   },
 
@@ -94,7 +103,7 @@ export const TEXTS: LandingTexts = {
   },
 
   how: {
-    heading: "Pronto in meno di 5 minuti",
+    heading: "Crea il tuo menu digitale in meno di 5 minuti",
     sub: "Quattro passi brevi. Niente installazioni, niente configurazioni tecniche.",
     steps: [
       { n: "1", t: "Tipo e nome", d: "Scegli il tipo e inserisci il nome." },
@@ -105,10 +114,10 @@ export const TEXTS: LandingTexts = {
   },
 
   pricing: {
-    badge: "Zero commissioni · Zero contratti",
-    heading: "Un piano.",
+    badge: "Menu digitale completo · Zero commissioni",
+    heading: "Un piano per il tuo menu digitale.",
     headingAccent: "Tutto incluso.",
-    sub: "Menu QR, ordini, traduzione AI, sito ristorante e prenotazioni. Un prezzo semplice.",
+    sub: "Menu digitale, QR Code, ordini diretti, traduzione IA e prenotazioni. Un prezzo semplice, fatturato al mese o all'anno.",
     monthlyLabel: "Mensile",
     yearlyLabel: "Annuale",
     saveBadge: "Risparmi 25%",
@@ -125,45 +134,61 @@ export const TEXTS: LandingTexts = {
 
   faq: {
     eyebrow: "Domande?",
-    heading: "Domande",
-    headingAccent: "frequenti.",
-    sub: "Quello che i ristoratori chiedono prima di iscriversi. Non vedi la tua? Scrivici su WhatsApp — rispondiamo davvero noi.",
+    heading: "Domande sul",
+    headingAccent: "menu digitale.",
+    sub: "Quello che i ristoratori chiedono prima di passare al menu digitale. Non vedi la tua? Scrivici su WhatsApp — rispondiamo davvero noi.",
     whatsappCta: "Chiedi su WhatsApp",
     whatsappPrefill: "Ciao, ho una domanda su IQ Rest",
     items: [
       {
-        q: "Cosa include la prova gratuita e cosa succede dopo?",
-        a: "14 giorni, accesso completo, senza carta. Dopo 14 giorni il tuo account si mette in pausa se non aggiungi un metodo di pagamento — non addebitiamo mai automaticamente. Aggiungi i dati di pagamento più tardi per riattivare. Cancelli con un clic.",
+        q: "Come creare un menu digitale per il ristorante?",
+        a: "In 5 minuti. Registri l'account, scegli il tipo di attività, aggiungi i piatti (a mano o scansionando il menu cartaceo: l'IA lo digitalizza in 60 secondi), personalizzi colori e foto, e ricevi il QR Code da stampare per i tavoli. Niente sviluppatori, niente agenzie — tutto dal telefono.",
       },
       {
-        q: "Prendete commissioni sugli ordini?",
-        a: "Zero. Ogni ordine dal tuo menu QR va direttamente a te — niente quota nostra, niente commissioni Glovo / Just Eat. Un prezzo mensile fisso, fine.",
+        q: "Quanto costa un menu digitale online?",
+        a: "Un piano unico: 6,90€/mese (o sconto annuale). Include menu digitale completo, QR Code illimitato, ordini diretti senza commissioni, traduzione IA in 35 lingue, prenotazioni e analytics. 14 giorni di prova gratuita, senza carta.",
       },
       {
-        q: "I miei clienti hanno bisogno di un'app? Io devo essere bravo col PC?",
-        a: "Zero app per i clienti — scansionano il QR con la fotocamera, il menu si apre nel browser. Zero competenze tecniche per te — tutta la dashboard funziona dal telefono, tocca per aggiungere, trascina per riordinare, fine.",
+        q: "Posso aggiornare il menu digitale in tempo reale?",
+        a: "Sì. Cambi un prezzo dal telefono, i clienti lo vedono in pochi secondi. Aggiungi un piatto, attivi la stop-list, modifichi una descrizione — tutto live, senza ristampe e senza attese.",
       },
       {
-        q: "Quanto velocemente posso cambiare prezzi e aggiungere piatti?",
-        a: "All'istante. Cambi un prezzo dal telefono, i clienti lo vedono in pochi secondi. Piatto nuovo? Tocca, scrivi, foto, fatto — niente ristampe, niente attesa del grafico.",
+        q: "Il menu digitale supporta più lingue?",
+        a: "35 lingue con traduzione IA integrata. Un tocco traduce tutto il menu digitale e l'IA capisce il contesto culinario: nomi e descrizioni suonano naturali in ogni lingua. I turisti ordinano di più quando capiscono davvero i piatti.",
       },
       {
-        q: "Quante lingue supportate?",
-        a: "35 lingue con traduzione AI integrata. Un tocco traduce tutto il menu, e l'AI capisce il contesto culinario — nomi e descrizioni suonano naturali in ogni lingua. I turisti ordinano di più quando capiscono davvero.",
+        q: "I clienti devono scaricare un'app per il menu digitale?",
+        a: "Zero app. Il cliente inquadra il QR Code con la fotocamera del telefono, il menu digitale si apre nel browser immediatamente. Compatibile con iPhone, Android e qualsiasi smartphone moderno.",
+      },
+      {
+        q: "Come stampare il QR Code del menu digitale per i tavoli?",
+        a: "Dalla dashboard scarichi il QR Code in PDF o PNG pronto per la stampa. Funziona su carta, PVC, vetrofania o stand da tavolo. Se cambi il menu, il QR Code resta lo stesso — non serve ristampare nulla.",
+      },
+      {
+        q: "Posso accettare ordini direttamente dal menu digitale?",
+        a: "Sì. I clienti ordinano dal tavolo direttamente nel menu digitale, l'ordine arriva istantaneamente su WhatsApp o nel pannello con il numero del tavolo. Servizio più rapido, meno errori, niente commissioni di Glovo / Just Eat / Deliveroo.",
+      },
+      {
+        q: "Prendete commissioni sugli ordini dal menu digitale?",
+        a: "Zero. Ogni ordine che arriva dal tuo menu digitale va direttamente a te — niente quota nostra, niente commissioni di terzi. Paghi solo l'abbonamento mensile fisso.",
+      },
+      {
+        q: "Cosa succede al menu digitale dopo i 14 giorni gratis?",
+        a: "Se non aggiungi un metodo di pagamento, l'account si mette in pausa — non addebitiamo mai automaticamente. Il menu digitale rimane salvato; aggiungi i dati di pagamento più tardi per riattivarlo. Cancelli con un clic.",
       },
     ],
   },
 
   finalCta: {
-    heading: "Pronto in 5 minuti.",
+    heading: "Crea il tuo menu digitale oggi.",
     headingAccent: "Gratis per 14 giorni.",
-    sub: "Senza carta. Cancelli quando vuoi. Unisciti a 500+ ristoranti già su IQ Rest.",
+    sub: "Senza carta. Cancelli quando vuoi. Unisciti a 500+ ristoranti che usano il menu digitale di IQ Rest.",
   },
 
   scan: {
-    heading: "Menù cartaceo o PDF?",
-    headingAccent: "L'IA lo digitalizza in 60 secondi.",
-    sub: "Carica — l'IA estrae categorie, piatti e prezzi.",
+    heading: "Hai già un menu cartaceo o PDF?",
+    headingAccent: "L'IA lo trasforma in menu digitale in 60 secondi.",
+    sub: "Carica una foto — l'IA estrae categorie, piatti e prezzi e li importa nel tuo menu digitale.",
     cta: "Scansiona il menù →",
   },
   footer: {

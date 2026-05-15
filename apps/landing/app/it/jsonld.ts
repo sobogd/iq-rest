@@ -1,7 +1,7 @@
 import type { LandingTexts } from "@/app/_landing/types";
 import { TEXTS } from "./texts";
 
-const URL_SELF = "https://iq-rest.com/it/menu-digitale";
+const URL_SELF = "https://iq-rest.com/it";
 
 export function buildJsonLd(texts: LandingTexts) {
   const softwareApp = {
@@ -32,25 +32,6 @@ export function buildJsonLd(texts: LandingTexts) {
     })),
   };
 
-  const breadcrumb = {
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "IQ Rest",
-        item: "https://iq-rest.com/it",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Menu Digitale per Ristoranti",
-        item: URL_SELF,
-      },
-    ],
-  };
-
-  // Real product onboarding flow. Steps mirror texts.how.steps in /it/texts.ts.
   const howTo = {
     "@type": "HowTo",
     name: "Come creare un menu digitale per ristoranti",
@@ -92,11 +73,10 @@ export function buildJsonLd(texts: LandingTexts) {
 
   return {
     "@context": "https://schema.org",
-    "@graph": [softwareApp, faqPage, breadcrumb, howTo],
+    "@graph": [softwareApp, faqPage, howTo],
   };
 }
 
-/** Precomputed at module load — no per-request stringify cost. */
 export const JSON_LD_HTML = JSON.stringify(buildJsonLd(TEXTS)).replace(
   /</g,
   "\\u003c",

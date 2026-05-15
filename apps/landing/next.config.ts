@@ -57,6 +57,9 @@ const nextConfig: NextConfig = {
       { source: "/:locale/changelog/:entry*", destination: "/:locale", permanent: true },
       { source: "/changelog", destination: "/", permanent: true },
       { source: "/changelog/:entry*", destination: "/", permanent: true },
+      // Old KW landing /it/menu-digitale folded into /it (organic). The PPC
+      // variant moved to /it/lp/menu-digitale and is noindex from day one.
+      { source: "/it/menu-digitale", destination: "/it", permanent: true },
     ];
   },
 

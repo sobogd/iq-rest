@@ -3,30 +3,27 @@ import { Faq } from "@/app/_landing/components/faq";
 import { PageTracker } from "@/app/_landing/components/page-tracker";
 import { Features } from "@/app/_landing/components/features";
 import { FinalCta } from "@/app/_landing/components/final-cta";
-import { Founder } from "@/app/_landing/components/founder";
 import { LandingFooter } from "@/app/_landing/components/footer";
 import { LandingHeader } from "@/app/_landing/components/header";
 import { LandingPricing } from "@/app/_landing/components/pricing";
 import { Hero } from "@/app/_landing/components/hero";
-import { ScanSection } from "@/app/_landing/components/scan-section";
-import { MobileAnchorNav } from "@/app/_landing/components/mobile-anchor-nav";
-import { KwLinksRow } from "@/app/_landing/components/kw-links-row";
-import { How } from "@/app/_landing/components/how";
-import { getCurrency } from "@/app/_landing/lib/get-currency";
 import { TEXTS } from "./texts";
-import { SeoContent } from "./seo-content";
 import { JSON_LD_HTML } from "./jsonld";
 
 const LOCALE = "it";
+const CURRENCY = "EUR" as const;
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://iq-rest.com"),
   title: TEXTS.meta.title,
   description: TEXTS.meta.description,
   alternates: { canonical: TEXTS.meta.canonical },
+  // Noindex: /it carries the organic SEO; this URL exists purely as a
+  // dedicated, conversion-optimized PPC landing for Google Ads.
   robots: {
-    index: true,
+    index: false,
     follow: true,
-    googleBot: { index: true, follow: true },
+    googleBot: { index: false, follow: true },
   },
   openGraph: {
     title: TEXTS.meta.ogTitle,
@@ -52,15 +49,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function MenuDigitaleLanding({
-  searchParams,
-}: {
-  searchParams: Promise<{ gclid?: string | string[]; gbraid?: string | string[]; wbraid?: string | string[] }>;
-}) {
-  const currency = await getCurrency();
-  const sp = await searchParams;
-  const hasGclid = Boolean(sp?.gclid || sp?.gbraid || sp?.wbraid);
-
+export default function MenuDigitaleLpLanding() {
   return (
     <main className="relative">
       <PageTracker />
@@ -77,19 +66,8 @@ export default async function MenuDigitaleLanding({
           microcopy={TEXTS.microcopy}
           locale={LOCALE}
         />
-        <MobileAnchorNav texts={TEXTS.header} />
-        <section id="scan" data-section="scan" className="scroll-mt-16">
-          <ScanSection texts={TEXTS.scan} locale={LOCALE} />
-        </section>
-        {!hasGclid && <SeoContent />}
         <section id="features" data-section="features" className="scroll-mt-16">
           <Features texts={TEXTS.features} />
-        </section>
-        <section id="founder" data-section="founder" className="scroll-mt-16">
-          <Founder texts={TEXTS.founder} />
-        </section>
-        <section id="how" data-section="how" className="scroll-mt-16">
-          <How texts={TEXTS.how} />
         </section>
         <section
           id="pricing"
@@ -101,7 +79,7 @@ export default async function MenuDigitaleLanding({
             ctaText={TEXTS.ctaText}
             microcopy={TEXTS.microcopy}
             locale={LOCALE}
-            currency={currency}
+            currency={CURRENCY}
           />
         </section>
         <section
@@ -111,15 +89,6 @@ export default async function MenuDigitaleLanding({
         >
           <Faq texts={TEXTS.faq} />
         </section>
-        {!hasGclid && (
-          <KwLinksRow
-            heading="Soluzioni per ristoranti"
-            links={[
-              { href: "/it/menu-qr-code", label: "Menu QR Code per ristoranti" },
-              { href: "/it/creare-menu-digitale", label: "Creare menu digitale" },
-            ]}
-          />
-        )}
         <FinalCta
           texts={TEXTS.finalCta}
           ctaText={TEXTS.ctaText}
@@ -127,7 +96,6 @@ export default async function MenuDigitaleLanding({
           microcopy={TEXTS.microcopy}
           locale={LOCALE}
         />
-        {hasGclid && <SeoContent />}
       </div>
       <LandingFooter
         texts={TEXTS.footer}
