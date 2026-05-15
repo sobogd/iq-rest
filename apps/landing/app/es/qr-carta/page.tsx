@@ -12,7 +12,6 @@ import { ScanSection } from "@/app/_landing/components/scan-section";
 import { MobileAnchorNav } from "@/app/_landing/components/mobile-anchor-nav";
 import { KwLinksRow } from "@/app/_landing/components/kw-links-row";
 import { How } from "@/app/_landing/components/how";
-import { getCurrency } from "@/app/_landing/lib/get-currency";
 import { TEXTS } from "./texts";
 import { SeoContent } from "./seo-content";
 import { JSON_LD_HTML } from "./jsonld";
@@ -57,7 +56,6 @@ export default async function QrCartaLanding({
 }: {
   searchParams: Promise<{ gclid?: string | string[]; gbraid?: string | string[]; wbraid?: string | string[] }>;
 }) {
-  const currency = await getCurrency();
   const sp = await searchParams;
   const hasGclid = Boolean(sp?.gclid || sp?.gbraid || sp?.wbraid);
 
@@ -101,7 +99,7 @@ export default async function QrCartaLanding({
             ctaText={TEXTS.ctaText}
             microcopy={TEXTS.microcopy}
             locale={LOCALE}
-            currency={currency}
+
           />
         </section>
         <section

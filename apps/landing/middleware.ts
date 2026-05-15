@@ -2,35 +2,15 @@ import createMiddleware from "next-intl/middleware";
 import { NextRequest, NextResponse } from "next/server";
 import { routing, locales, Locale } from "./i18n/routing";
 import { getLocaleByCountryAndRegion } from "./lib/country-locale-map";
+import { HOME_META, lastModifiedFor } from "./lib/page-meta";
 
 const intlMiddleware = createMiddleware(routing);
-
-// Last-Modified dates for marketing pages (shared source of truth with sitemap.ts)
-const PAGE_LAST_MODIFIED: Record<string, string> = {
-  "/": "2026-04-30",
-  "/pricing": "2026-02-24",
-  "/instant-setup": "2026-02-24",
-  "/mobile-management": "2026-02-24",
-  "/ai-translation": "2026-02-24",
-  "/multilingual": "2026-02-24",
-  "/ai-images": "2026-02-24",
-  "/easy-menu": "2026-02-24",
-  "/analytics": "2026-02-24",
-  "/reservations": "2026-02-24",
-  "/custom-design": "2026-02-24",
-  "/color-scheme": "2026-02-24",
-  "/personal-support": "2026-02-24",
-  "/online-orders": "2026-02-24",
-  "/changelog": "2026-02-20",
-};
 
 // Create regex pattern for all locales
 const localePattern = locales.join("|");
 const localeRegex = new RegExp(`^/(${localePattern})(/|$)`);
 
 const GEO_COUNTRY_COOKIE = "geo_country";
-const GEO_REGION_COOKIE = "geo_region";
-const GEO_CITY_COOKIE = "geo_city";
 
 /**
  * Получить страну из Cloudflare header.
@@ -59,53 +39,23 @@ function detectLocaleByCountry(request: NextRequest): Locale {
 }
 
 /**
- * Устанавливает geo cookies (страна из Cloudflare)
- * Не перезаписывает если кука уже установлена через ?country= параметр
+ * Записывает geo_country cookie (страна из Cloudflare). Используется
+ * dashboard-ом и map-picker для подсказок по стране. Не перезаписывает
+ * cookie если она отличается от cf-ipcountry — пользователь мог выставить
+ * её вручную через `?country=`.
  */
 function setGeoCookies(request: NextRequest, response: NextResponse): void {
   const cfCountry = request.headers.get("cf-ipcountry");
-  const region = request.headers.get("cf-region");
-  const city = request.headers.get("cf-ipcity");
+  if (!cfCountry) return;
 
-  // Проверяем есть ли уже кука geo_country (могла быть установлена через ?country=)
-  const existingCountryCookie = request.cookies.get(GEO_COUNTRY_COOKIE)?.value;
+  const existing = request.cookies.get(GEO_COUNTRY_COOKIE)?.value;
+  if (existing && existing !== cfCountry) return;
 
-  // Если кука есть и она отличается от Cloudflare — значит установлена вручную, не трогаем
-  if (existingCountryCookie && existingCountryCookie !== cfCountry) {
-    return;
-  }
-
-  if (cfCountry) {
-    response.cookies.set(GEO_COUNTRY_COOKIE, cfCountry, {
-      path: "/",
-      maxAge: 60 * 60 * 24 * 7, // 1 week
-      sameSite: "lax",
-    });
-  }
-
-  if (region) {
-    let decodedRegion = region;
-    try {
-      decodedRegion = decodeURIComponent(region);
-    } catch {
-      // ignore
-    }
-    response.cookies.set(GEO_REGION_COOKIE, decodedRegion, {
-      path: "/",
-      maxAge: 60 * 60 * 24 * 7, // 1 week
-      sameSite: "lax",
-    });
-  }
-
-  if (city) {
-    // Cloudflare может отправлять город в URL-encoded формате
-    const decodedCity = decodeURIComponent(city);
-    response.cookies.set(GEO_CITY_COOKIE, decodedCity, {
-      path: "/",
-      maxAge: 60 * 60 * 24 * 7, // 1 week
-      sameSite: "lax",
-    });
-  }
+  response.cookies.set(GEO_COUNTRY_COOKIE, cfCountry, {
+    path: "/",
+    maxAge: 60 * 60 * 24 * 7, // 1 week
+    sameSite: "lax",
+  });
 }
 
 export default function middleware(request: NextRequest) {
@@ -116,27 +66,9 @@ export default function middleware(request: NextRequest) {
   const onlyLocaleMatch = pathname.match(/^\/([a-z]{2})$/);
   if (onlyLocaleMatch && (locales as readonly string[]).includes(onlyLocaleMatch[1])) {
     const response = NextResponse.next();
-    response.headers.set("Last-Modified", new Date(PAGE_LAST_MODIFIED["/"]).toUTCString());
+    response.headers.set("Last-Modified", new Date(HOME_META.lastModified).toUTCString());
     response.headers.set("Content-Language", onlyLocaleMatch[1]);
     return response;
-  }
-
-  // Redirect /[locale]/m/[slug](/...) → https://[slug].iq-rest.com(/...). The
-  // public menu now lives on its own SPA per slug subdomain. Old code is kept
-  // around for the time being but no longer serves users.
-  const menuMatch = pathname.match(/^\/[a-z]{2}\/m\/([a-z0-9-]+)(\/.*)?$/);
-  if (menuMatch) {
-    const slug = menuMatch[1];
-    const sub = menuMatch[2] || "/";
-    const RESERVED_SUBDOMAINS = new Set([
-      "admin", "back", "dashboard", "dashboard-api", "menu", "moneyboss",
-      "my-history", "www", "mail", "support", "api", "app", "staff",
-      "test", "dev", "staging", "root", "ftp",
-    ]);
-    if (!RESERVED_SUBDOMAINS.has(slug)) {
-      const target = `https://${slug}.iq-rest.com${sub}${request.nextUrl.search}`;
-      return NextResponse.redirect(target, 302);
-    }
   }
 
   // Strip ?from= param → save to cookie for client-side referral tracking
@@ -189,16 +121,10 @@ export default function middleware(request: NextRequest) {
     return response;
   }
 
-  // Redirect /demo to demo menu
+  // Redirect /[locale]/demo → demo public-menu subdomain directly.
   const demoMatch = pathname.match(new RegExp(`^/(${localePattern})/demo$`));
   if (demoMatch) {
-    const locale = demoMatch[1];
-    const response = NextResponse.redirect(
-      new URL(`/${locale}/m/love-eatery`, request.url),
-      301
-    );
-    setGeoCookies(request, response);
-    return response;
+    return NextResponse.redirect("https://love-eatery.iq-rest.com", 301);
   }
 
   // Use next-intl middleware for locale handling
@@ -209,7 +135,7 @@ export default function middleware(request: NextRequest) {
 
   // Set Last-Modified for marketing pages
   const pagePath = pathname.replace(localeRegex, "/");
-  const lastModified = PAGE_LAST_MODIFIED[pagePath];
+  const lastModified = lastModifiedFor(pagePath);
   if (lastModified) {
     response.headers.set("Last-Modified", new Date(lastModified).toUTCString());
   }
@@ -222,19 +148,6 @@ export default function middleware(request: NextRequest) {
 
   // Set geo cookies from Cloudflare headers
   setGeoCookies(request, response);
-
-  // Set session cookie for menu pages (no maxAge = session cookie, dies when browser closes)
-  if (pathname.match(new RegExp(`^/(${localePattern})/m/`))) {
-    if (!request.cookies.get("sqr_session_id")?.value) {
-      const sessionId = crypto.randomUUID();
-      response.cookies.set("sqr_session_id", sessionId, {
-        path: "/",
-        httpOnly: true,
-        secure: process.env.NODE_ENV === "production",
-        sameSite: "lax",
-      });
-    }
-  }
 
   return response;
 }

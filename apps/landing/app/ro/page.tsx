@@ -10,7 +10,6 @@ import { LandingPricing } from "@/app/_landing/components/pricing";
 import { Hero } from "@/app/_landing/components/hero";
 import { ScanSection } from "@/app/_landing/components/scan-section";
 import { How } from "@/app/_landing/components/how";
-import { getCurrency } from "@/app/_landing/lib/get-currency";
 import { TEXTS } from "./texts";
 const LOCALE = "ro";
 export const metadata: Metadata = {
@@ -37,7 +36,6 @@ export const metadata: Metadata = {
 };
 
 export default async function LandingPage() {
-  const currency = await getCurrency();
 
   return (
     <main className="relative">
@@ -61,7 +59,7 @@ export default async function LandingPage() {
           ctaText={TEXTS.ctaText}
           microcopy={TEXTS.microcopy}
           locale={LOCALE}
-          currency={currency}
+
         />
       </section>
       <section id="faq" data-section="faq" className="scroll-mt-16 py-16 bg-muted/20">

@@ -60,6 +60,17 @@ const nextConfig: NextConfig = {
       // Old KW landing /it/menu-digitale folded into /it (organic). The PPC
       // variant moved to /it/lp/menu-digitale and is noindex from day one.
       { source: "/it/menu-digitale", destination: "/it", permanent: true },
+      // Public menu lives on <slug>.iq-rest.com now. Legacy short links and
+      // locale-prefixed /m/<slug> URLs (printed QR codes, old crawl) 301 to
+      // the subdomain. Locale routing happens on the public-menu service.
+      { source: "/m/:slug", destination: "https://:slug.iq-rest.com", permanent: true },
+      { source: "/:locale/m/:slug", destination: "https://:slug.iq-rest.com", permanent: true },
+      // Auth migrated to dashboard.iq-rest.com — keep link equity on any
+      // login/signup URLs that might still be indexed.
+      { source: "/:locale/login", destination: "https://dashboard.iq-rest.com/:locale/login", permanent: true },
+      { source: "/:locale/signup", destination: "https://dashboard.iq-rest.com/:locale/login?create=true", permanent: true },
+      { source: "/:locale/otp", destination: "https://dashboard.iq-rest.com/:locale/login", permanent: true },
+      { source: "/:locale/logout", destination: "https://dashboard.iq-rest.com/:locale/logout", permanent: true },
     ];
   },
 

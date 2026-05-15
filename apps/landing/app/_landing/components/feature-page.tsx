@@ -7,7 +7,6 @@ import { LandingHeader } from "@/app/_landing/components/header";
 import { LandingPricing } from "@/app/_landing/components/pricing";
 import { PageTracker } from "@/app/_landing/components/page-tracker";
 import { JsonLd, createBreadcrumbSchema } from "@/app/_landing/lib/schemas";
-import type { SupportedCurrency } from "@/lib/country-currency-map";
 import type { FeatureTexts, LandingTexts } from "@/app/_landing/types";
 
 interface FeaturePageProps {
@@ -15,10 +14,9 @@ interface FeaturePageProps {
   chrome: LandingTexts;
   locale: string;
   featureId: string;
-  currency: SupportedCurrency;
 }
 
-export function FeaturePage({ texts, chrome, locale, featureId, currency }: FeaturePageProps) {
+export function FeaturePage({ texts, chrome, locale, featureId }: FeaturePageProps) {
   const currentHref = `/${locale}/${featureId}`;
 
   const breadcrumbSchema = createBreadcrumbSchema(locale, [
@@ -85,7 +83,6 @@ export function FeaturePage({ texts, chrome, locale, featureId, currency }: Feat
           ctaText={chrome.ctaText}
           microcopy={chrome.microcopy}
           locale={locale}
-          currency={currency}
         />
       </section>
 

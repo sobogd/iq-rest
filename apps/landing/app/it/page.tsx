@@ -21,7 +21,6 @@ const LOCALE = "it";
 // Italy is always EUR — hardcoded so the page stays statically rendered.
 // LandingHeader isolates its useSearchParams() into a Suspense slot so this
 // page doesn't get pulled into client-side rendering.
-const CURRENCY = "EUR" as const;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://iq-rest.com"),
@@ -83,7 +82,6 @@ export default function LandingPage() {
             ctaText={TEXTS.ctaText}
             microcopy={TEXTS.microcopy}
             locale={LOCALE}
-            currency={CURRENCY}
           />
         </section>
         <section id="faq" data-section="faq" className="scroll-mt-16 py-16 bg-muted/20">

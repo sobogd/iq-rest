@@ -3,7 +3,6 @@
 import { Lock, Ban, Zap, Globe } from "lucide-react";
 import { createUrl } from "@/lib/dashboard-url";
 import { pricing } from "@/lib/pricing";
-import { currencyInfo, type SupportedCurrency } from "@/lib/country-currency-map";
 import { LinkForward } from "./link-forward";
 import type { LandingTexts } from "../types";
 
@@ -12,57 +11,32 @@ interface LandingPricingProps {
   ctaText: string;
   microcopy: string;
   locale: string;
-  currency: SupportedCurrency;
 }
 
-function formatPrice(amount: number, currency: SupportedCurrency): string {
-  const info = currencyInfo[currency];
-  const formatted = amount
-    .toLocaleString("en-US", {
-      minimumFractionDigits: info.zeroDecimal ? 0 : Number.isInteger(amount) ? 0 : 2,
-      maximumFractionDigits: info.zeroDecimal ? 0 : 2,
-    })
-    .replace(/,/g, " ");
-  return info.symbolPosition === "before"
-    ? `${info.symbol}${formatted}`
-    : `${formatted} ${info.symbol}`;
+function formatEur(amount: number): string {
+  return amount.toLocaleString("en-US", {
+    minimumFractionDigits: Number.isInteger(amount) ? 0 : 2,
+    maximumFractionDigits: 2,
+  });
 }
 
-function formatPriceParts(amount: number, currency: SupportedCurrency) {
-  const info = currencyInfo[currency];
-  const formatted = amount
-    .toLocaleString("en-US", {
-      minimumFractionDigits: info.zeroDecimal ? 0 : Number.isInteger(amount) ? 0 : 2,
-      maximumFractionDigits: info.zeroDecimal ? 0 : 2,
-    })
-    .replace(/,/g, " ");
-  return { symbol: info.symbol, amount: formatted, position: info.symbolPosition };
-}
-
-function PriceDisplay({ parts, perMonth }: { parts: ReturnType<typeof formatPriceParts>; perMonth: string }) {
-  const len = parts.amount.length;
-  const sizeClass = len > 5 ? "text-2xl md:text-3xl" : "text-3xl md:text-4xl";
+function PriceDisplay({ amount, perMonth }: { amount: number; perMonth: string }) {
+  const formatted = formatEur(amount);
+  const sizeClass = formatted.length > 5 ? "text-2xl md:text-3xl" : "text-3xl md:text-4xl";
   return (
     <div className="leading-none">
       <div className="flex items-baseline gap-1">
-        {parts.position === "before" && (
-          <span className="text-base font-medium text-muted-foreground">{parts.symbol}</span>
-        )}
-        <span className={`${sizeClass} font-medium tracking-tight leading-none`}>{parts.amount}</span>
-        {parts.position === "after" && (
-          <span className="text-base font-medium text-muted-foreground">{parts.symbol}</span>
-        )}
+        <span className="text-base font-medium text-muted-foreground">€</span>
+        <span className={`${sizeClass} font-medium tracking-tight leading-none`}>{formatted}</span>
       </div>
       <span className="text-sm text-muted-foreground mt-1.5 inline-block">{perMonth}</span>
     </div>
   );
 }
 
-export function LandingPricing({ texts, ctaText, microcopy, locale, currency }: LandingPricingProps) {
-  const plan = pricing[currency].basic;
-  const monthlyParts = formatPriceParts(plan.monthly, currency);
-  const yearlyParts = formatPriceParts(plan.yearly, currency);
-  const savings = formatPrice(plan.monthly * 12 - plan.yearlyTotal, currency);
+export function LandingPricing({ texts, ctaText, microcopy, locale }: LandingPricingProps) {
+  const plan = pricing.EUR.basic;
+  const savings = formatEur(plan.monthly * 12 - plan.yearlyTotal);
   const trialHref = `${createUrl(locale)}&from=landing`;
 
   const trustItems = [
@@ -115,7 +89,7 @@ export function LandingPricing({ texts, ctaText, microcopy, locale, currency }: 
             <p className="text-[10px] font-medium uppercase tracking-widest text-muted-foreground mb-3">
               {texts.monthlyLabel}
             </p>
-            <PriceDisplay parts={monthlyParts} perMonth={texts.perMonth} />
+            <PriceDisplay amount={plan.monthly} perMonth={texts.perMonth} />
           </div>
 
           <div className="relative flex flex-col justify-center text-start rounded-2xl border border-primary/60 bg-primary/5 p-5">
@@ -125,12 +99,12 @@ export function LandingPricing({ texts, ctaText, microcopy, locale, currency }: 
             <p className="text-[10px] font-medium uppercase tracking-widest text-primary mb-3">
               {texts.yearlyLabel}
             </p>
-            <PriceDisplay parts={yearlyParts} perMonth={texts.perMonth} />
+            <PriceDisplay amount={plan.yearly} perMonth={texts.perMonth} />
             <p className="text-xs text-muted-foreground mt-3">
-              {texts.billedAnnually.replace("{total}", formatPrice(plan.yearlyTotal, currency))}
+              {texts.billedAnnually.replace("{total}", `€${formatEur(plan.yearlyTotal)}`)}
             </p>
             <p className="text-xs text-emerald-500 font-medium mt-0.5">
-              {texts.youSave.replace("{amount}", savings)}
+              {texts.youSave.replace("{amount}", `€${savings}`)}
             </p>
           </div>
         </div>

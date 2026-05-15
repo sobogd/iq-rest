@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { FeaturePage } from "@/app/_landing/components/feature-page";
-import { getCurrency } from "@/app/_landing/lib/get-currency";
 import { buildAlternates } from "@/app/_landing/lib/metadata";
 import { TEXTS as CHROME } from "../texts";
 import { TEXTS } from "./texts";
@@ -8,7 +7,6 @@ import { TEXTS } from "./texts";
 const LOCALE = "fi";
 const FEATURE_ID = "multilingual";
 
-export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://iq-rest.com"),
@@ -37,14 +35,13 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  const currency = await getCurrency();
   return (
     <FeaturePage
       texts={TEXTS}
       chrome={CHROME}
       locale={LOCALE}
       featureId={FEATURE_ID}
-      currency={currency}
+
     />
   );
 }

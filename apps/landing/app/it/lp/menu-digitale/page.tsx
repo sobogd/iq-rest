@@ -15,7 +15,6 @@ import { TEXTS } from "./texts";
 import { JSON_LD_HTML } from "./jsonld";
 
 const LOCALE = "it";
-const CURRENCY = "EUR" as const;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://iq-rest.com"),
@@ -93,7 +92,6 @@ export default function MenuDigitaleLpLanding() {
             ctaText={TEXTS.ctaText}
             microcopy={TEXTS.microcopy}
             locale={LOCALE}
-            currency={CURRENCY}
           />
         </section>
         <section
