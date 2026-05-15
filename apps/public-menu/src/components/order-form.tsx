@@ -30,13 +30,17 @@ export function OrderForm() {
   const lang = i18n.language;
 
   const cartItems = useMemo(() => {
+    const defaultLang = restaurant.defaultLanguage;
     return items
       .filter((it) => (cart[it.id] || 0) > 0)
       .map((it) => {
-        // Multi-locale snapshot for dashboard rendering. Includes default
-        // (en) plus any translated names so the dashboard can show the dish
-        // name in the owner's language.
-        const snapshot: Record<string, string> = { en: it.name };
+        // Snapshot the dish name in every locale the menu has. The legacy
+        // `name` column is the restaurant's default-language value, so we
+        // key it under defaultLanguage (NOT `en` — assuming English here
+        // tagged Russian-default restaurants as English in the snapshot,
+        // which made the dashboard pick the visitor's locale as a fallback
+        // instead of the owner's working language).
+        const snapshot: Record<string, string> = { [defaultLang]: it.name };
         if (it.translations) {
           for (const [lc, fields] of Object.entries(it.translations)) {
             if (fields?.name) snapshot[lc] = fields.name;
@@ -44,13 +48,18 @@ export function OrderForm() {
         }
         return {
           id: it.id,
+          // Visitor-facing label for the cart + WhatsApp summary — visitor's
+          // current i18next locale.
           name: tField(it.name, it.translations, "name", lang),
+          // Owner-facing label for the dashboard legacy flat `name` field —
+          // always the restaurant's default-language string.
+          dashName: it.name,
           price: it.price,
           qty: cart[it.id] || 0,
           snapshot,
         };
       });
-  }, [items, cart, lang]);
+  }, [items, cart, lang, restaurant.defaultLanguage]);
 
   const total = cartItems.reduce((s, it) => s + it.price * it.qty, 0);
 
@@ -100,7 +109,10 @@ export function OrderForm() {
         for (let i = 0; i < ci.qty; i++) {
           orderItems.push({
             // Flat shape — read by the legacy soqrmenuweb dashboard.
-            name: ci.name,
+            // Restaurant default-language name so staff sees the order in
+            // their working language regardless of which locale the diner
+            // browsed the menu in.
+            name: ci.dashName,
             qty: 1,
             price: ci.price,
             // Fat shape — read by the new dashboard's kitchen + orders pages.
