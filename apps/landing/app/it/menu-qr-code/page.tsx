@@ -52,8 +52,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function MenuQrCodeLanding() {
+export default async function MenuQrCodeLanding({
+  searchParams,
+}: {
+  searchParams: Promise<{ gclid?: string | string[]; gbraid?: string | string[]; wbraid?: string | string[] }>;
+}) {
   const currency = await getCurrency();
+  const sp = await searchParams;
+  const hasGclid = Boolean(sp?.gclid || sp?.gbraid || sp?.wbraid);
 
   return (
     <main className="relative">
@@ -75,7 +81,7 @@ export default async function MenuQrCodeLanding() {
         <section id="scan" data-section="scan" className="scroll-mt-16">
           <ScanSection texts={TEXTS.scan} locale={LOCALE} />
         </section>
-        <SeoContent />
+        {!hasGclid && <SeoContent />}
         <section id="features" data-section="features" className="scroll-mt-16">
           <Features texts={TEXTS.features} />
         </section>
@@ -119,6 +125,7 @@ export default async function MenuQrCodeLanding() {
           microcopy={TEXTS.microcopy}
           locale={LOCALE}
         />
+        {hasGclid && <SeoContent />}
       </div>
       <LandingFooter
         texts={TEXTS.footer}
