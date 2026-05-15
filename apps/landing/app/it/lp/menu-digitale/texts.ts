@@ -12,9 +12,6 @@ export const TEXTS: LandingTexts = {
   hero: {
     ...DEFAULT.hero,
     sub: "Menu digitale = la carta del tuo ristorante online, accessibile dal QR sul tavolo senza app. Pronto in 5 minuti, ordini diretti senza commissioni, traduzione IA in 35 lingue.",
-    dynamicHeadlines: DEFAULT.hero.dynamicHeadlines.map((h) =>
-      h === "Ordini diretti, zero commissioni." ? "Ordini diretti." : h,
-    ),
   },
 
   founder: {

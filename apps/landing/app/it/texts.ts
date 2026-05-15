@@ -36,7 +36,7 @@ export const TEXTS: LandingTexts = {
     dynamicHeadlines: [
       "Menu digitale completo.",
       "QR Code per i tavoli.",
-      "Ordini diretti, zero commissioni.",
+      "Ordini diretti.",
       "35 lingue con IA.",
       "Prenotazioni 24/7.",
     ],
