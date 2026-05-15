@@ -1,7 +1,8 @@
 import createMiddleware from "next-intl/middleware";
 import { NextRequest, NextResponse } from "next/server";
 import { routing, locales, Locale } from "./i18n/routing";
-import { getLocaleByCountryAndRegion } from "./lib/country-locale-map";
+import { getLocaleByCountry, getLocaleByCountryAndRegion } from "./lib/country-locale-map";
+import { getCurrencyByCountry } from "./lib/country-currency-map";
 
 const intlMiddleware = createMiddleware(routing);
 
@@ -31,11 +32,16 @@ const localeRegex = new RegExp(`^/(${localePattern})(/|$)`);
 const GEO_COUNTRY_COOKIE = "geo_country";
 const GEO_REGION_COOKIE = "geo_region";
 const GEO_CITY_COOKIE = "geo_city";
+const CURRENCY_COOKIE = "currency";
 
 /**
- * Получить страну из Cloudflare header.
+ * Получить страну: приоритет URL param ?country= > Cloudflare header
  */
 function getCountry(request: NextRequest): string | null {
+  const urlCountry = request.nextUrl.searchParams.get("country")?.toUpperCase();
+  if (urlCountry && urlCountry.length === 2) {
+    return urlCountry;
+  }
   return request.headers.get("cf-ipcountry");
 }
 
@@ -77,6 +83,20 @@ function setGeoCookies(request: NextRequest, response: NextResponse): void {
 
   if (cfCountry) {
     response.cookies.set(GEO_COUNTRY_COOKIE, cfCountry, {
+      path: "/",
+      maxAge: 60 * 60 * 24 * 7, // 1 week
+      sameSite: "lax",
+    });
+
+    // Валюта по стране
+    const currency = getCurrencyByCountry(cfCountry);
+    response.cookies.set(CURRENCY_COOKIE, currency, {
+      path: "/",
+      maxAge: 60 * 60 * 24 * 7, // 1 week
+      sameSite: "lax",
+    });
+  } else {
+    response.cookies.set(CURRENCY_COOKIE, "EUR", {
       path: "/",
       maxAge: 60 * 60 * 24 * 7, // 1 week
       sameSite: "lax",
@@ -159,6 +179,48 @@ export default function middleware(request: NextRequest) {
         sameSite: "lax",
       });
     }
+    return response;
+  }
+
+  // Проверяем есть ли тестовый параметр ?country=
+  const testCountry = request.nextUrl.searchParams.get("country")?.toUpperCase();
+  const hasTestCountry = testCountry && testCountry.length === 2;
+
+  // Если есть тестовый параметр, редиректим на нужную локаль и ставим куки
+  if (hasTestCountry) {
+    const targetLocale = getLocaleByCountry(testCountry) || "en";
+    const currency = getCurrencyByCountry(testCountry);
+
+    // Убираем ?country= из URL после обработки
+    const cleanUrl = new URL(request.url);
+    cleanUrl.searchParams.delete("country");
+
+    // Определяем куда редиректить
+    let targetPath: string;
+    if (pathname === "/") {
+      targetPath = `/${targetLocale}`;
+    } else if (!localeRegex.test(pathname)) {
+      targetPath = `/${targetLocale}${pathname}`;
+    } else {
+      // Заменяем текущую локаль на нужную
+      targetPath = pathname.replace(localeRegex, `/${targetLocale}/`);
+    }
+
+    cleanUrl.pathname = targetPath;
+    const response = NextResponse.redirect(cleanUrl, 302);
+
+    // Ставим куки
+    response.cookies.set(GEO_COUNTRY_COOKIE, testCountry, {
+      path: "/",
+      maxAge: 60 * 60 * 24 * 7,
+      sameSite: "lax",
+    });
+    response.cookies.set(CURRENCY_COOKIE, currency, {
+      path: "/",
+      maxAge: 60 * 60 * 24 * 7,
+      sameSite: "lax",
+    });
+
     return response;
   }
 
