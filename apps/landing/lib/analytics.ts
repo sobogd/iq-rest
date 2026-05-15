@@ -3,6 +3,12 @@ import { dashboardApi } from "./dashboard-url";
 const SEARCH_HOST_REGEX =
   /(?:^|\.)(google|bing|yandex|duckduckgo|yahoo|baidu|ecosia|qwant|startpage|mojeek|brave)\.[a-z.]+$/i;
 
+// Stamp the search-engine referrer onto the first event of a tab's session
+// only. Subsequent track() calls (section observers, SPA navigations to other
+// landing pages) skip the lookup so we don't fan out the same is_search row
+// across an entire visit. Resets on full page reload — acceptable.
+let referrerConsumed = false;
+
 function searchReferrerHost(): string | null {
   try {
     const ref = document.referrer;
@@ -16,8 +22,12 @@ function searchReferrerHost(): string | null {
 
 function track(event: string): void {
   if (typeof window === "undefined") return;
-  const host = searchReferrerHost();
-  const qs = host ? `?r=${encodeURIComponent(host)}` : "";
+  let qs = "";
+  if (!referrerConsumed) {
+    referrerConsumed = true;
+    const host = searchReferrerHost();
+    if (host) qs = `?r=${encodeURIComponent(host)}`;
+  }
   fetch(dashboardApi(`/api/track/${encodeURIComponent(event)}${qs}`), {
     method: "POST",
     credentials: "include",
