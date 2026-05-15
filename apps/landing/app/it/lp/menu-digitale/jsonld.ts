@@ -2,8 +2,18 @@ import type { LandingTexts } from "@/app/_landing/types";
 import { TEXTS } from "./texts";
 
 const URL_SELF = "https://iq-rest.com/it/lp/menu-digitale";
+const URL_HOME_IT = "https://iq-rest.com/it";
+const ORG_ID = "https://iq-rest.com/#organization";
 
 export function buildJsonLd(texts: LandingTexts) {
+  const organization = {
+    "@type": "Organization",
+    "@id": ORG_ID,
+    name: "IQ Rest",
+    url: "https://iq-rest.com",
+    logo: "https://iq-rest.com/logo.png",
+  };
+
   const softwareApp = {
     "@type": "SoftwareApplication",
     name: "IQ Rest — Menu Digitale per Ristoranti",
@@ -11,6 +21,7 @@ export function buildJsonLd(texts: LandingTexts) {
     operatingSystem: "Web, iOS, Android",
     url: URL_SELF,
     inLanguage: "it",
+    publisher: { "@id": ORG_ID },
     offers: {
       "@type": "Offer",
       price: "6.90",
@@ -18,6 +29,24 @@ export function buildJsonLd(texts: LandingTexts) {
       availability: "https://schema.org/InStock",
       url: URL_SELF,
     },
+  };
+
+  const breadcrumb = {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: URL_HOME_IT,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Menu Digitale per Ristoranti",
+        item: URL_SELF,
+      },
+    ],
   };
 
   const faqPage = {
@@ -34,7 +63,7 @@ export function buildJsonLd(texts: LandingTexts) {
 
   return {
     "@context": "https://schema.org",
-    "@graph": [softwareApp, faqPage],
+    "@graph": [organization, softwareApp, breadcrumb, faqPage],
   };
 }
 

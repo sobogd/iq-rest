@@ -13,6 +13,10 @@ interface FooterProps {
   headerTexts: LandingTexts["header"];
   locale: string;
   excludeFeatureHref?: string;
+  /** When "lp": single-row layout with copyright on the left and the
+   *  legal/lang buttons on the right. Hides feature/keyword nav rows.
+   *  Used on PPC landing pages to remove conversion leak. */
+  variant?: "default" | "lp";
 }
 
 function slugify(href: string): string {
@@ -24,7 +28,7 @@ function slugify(href: string): string {
     .toLowerCase();
 }
 
-export function LandingFooter({ texts, headerTexts: _headerTexts, locale, excludeFeatureHref }: FooterProps) {
+export function LandingFooter({ texts, headerTexts: _headerTexts, locale, excludeFeatureHref, variant = "default" }: FooterProps) {
   const year = new Date().getFullYear();
   const copyright = texts.copyrightTemplate.replace("{year}", String(year));
   const cookieTexts = getCookieTexts(locale);
@@ -33,6 +37,71 @@ export function LandingFooter({ texts, headerTexts: _headerTexts, locale, exclud
   const featureLinks = excludeFeatureHref
     ? texts.featureLinks.filter((link) => link.href !== excludeFeatureHref)
     : texts.featureLinks;
+
+  if (variant === "lp") {
+    return (
+      <>
+        <footer className="bg-muted/20" data-section="footer">
+          <div className="container mx-auto px-4 py-5 max-w-3xl">
+            <div className="flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-3">
+              <p className="text-sm text-muted-foreground/60 text-center sm:text-start">
+                {copyright}
+              </p>
+              <nav className="flex flex-wrap items-center justify-center sm:justify-end gap-x-4 gap-y-2 text-sm text-muted-foreground">
+                <button
+                  type="button"
+                  onClick={() => {
+                    analytics.track("land_footer_language_click");
+                    setLangOpen(true);
+                  }}
+                  className="hover:text-foreground transition-colors"
+                >
+                  {cookieTexts.languageSwitcher}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    analytics.track("land_footer_privacy_policy_click");
+                    setLegalView("privacy");
+                  }}
+                  className="hover:text-foreground transition-colors"
+                >
+                  {cookieTexts.privacyPolicyLink}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    analytics.track("land_footer_cookie_policy_click");
+                    setLegalView("policy");
+                  }}
+                  className="hover:text-foreground transition-colors"
+                >
+                  {cookieTexts.cookiePolicyLink}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    analytics.track("land_footer_terms_click");
+                    setLegalView("terms");
+                  }}
+                  className="hover:text-foreground transition-colors"
+                >
+                  {cookieTexts.termsLink}
+                </button>
+              </nav>
+            </div>
+          </div>
+        </footer>
+        <LanguageSwitcherModal
+          open={langOpen}
+          onClose={() => setLangOpen(false)}
+          currentLocale={locale}
+          title={cookieTexts.languageSwitcher}
+        />
+        <LegalModal view={legalView} onClose={() => setLegalView(null)} />
+      </>
+    );
+  }
 
   return (
     <>

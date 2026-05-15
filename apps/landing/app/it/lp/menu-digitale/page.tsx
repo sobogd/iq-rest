@@ -3,10 +3,14 @@ import { Faq } from "@/app/_landing/components/faq";
 import { PageTracker } from "@/app/_landing/components/page-tracker";
 import { Features } from "@/app/_landing/components/features";
 import { FinalCta } from "@/app/_landing/components/final-cta";
+import { Founder } from "@/app/_landing/components/founder";
 import { LandingFooter } from "@/app/_landing/components/footer";
 import { LandingHeader } from "@/app/_landing/components/header";
 import { LandingPricing } from "@/app/_landing/components/pricing";
 import { Hero } from "@/app/_landing/components/hero";
+import { How } from "@/app/_landing/components/how";
+import { MobileAnchorNav } from "@/app/_landing/components/mobile-anchor-nav";
+import { ScanSection } from "@/app/_landing/components/scan-section";
 import { TEXTS } from "./texts";
 import { JSON_LD_HTML } from "./jsonld";
 
@@ -57,7 +61,7 @@ export default function MenuDigitaleLpLanding() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON_LD_HTML }}
       />
-      <LandingHeader texts={TEXTS.header} locale={LOCALE} useLocalAnchors />
+      <LandingHeader texts={TEXTS.header} locale={LOCALE} useLocalAnchors hideSignIn />
       <div className="space-y-10 sm:space-y-0">
         <Hero
           texts={TEXTS.hero}
@@ -66,8 +70,18 @@ export default function MenuDigitaleLpLanding() {
           microcopy={TEXTS.microcopy}
           locale={LOCALE}
         />
+        <MobileAnchorNav texts={TEXTS.header} />
+        <section id="scan" data-section="scan" className="scroll-mt-16">
+          <ScanSection texts={TEXTS.scan} locale={LOCALE} />
+        </section>
         <section id="features" data-section="features" className="scroll-mt-16">
           <Features texts={TEXTS.features} />
+        </section>
+        <section id="founder" data-section="founder" className="scroll-mt-16">
+          <Founder texts={TEXTS.founder} />
+        </section>
+        <section id="how" data-section="how" className="scroll-mt-16">
+          <How texts={TEXTS.how} />
         </section>
         <section
           id="pricing"
@@ -101,6 +115,7 @@ export default function MenuDigitaleLpLanding() {
         texts={TEXTS.footer}
         headerTexts={TEXTS.header}
         locale={LOCALE}
+        variant="lp"
       />
     </main>
   );

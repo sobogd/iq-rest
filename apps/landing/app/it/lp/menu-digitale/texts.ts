@@ -9,6 +9,38 @@ export const TEXTS: LandingTexts = {
 
   microcopy: "Da 6,90€/mese · 14 giorni gratis · Cancelli quando vuoi",
 
+  hero: {
+    ...DEFAULT.hero,
+    sub: "Menu digitale = la carta del tuo ristorante online, accessibile dal QR sul tavolo senza app. Pronto in 5 minuti, ordini diretti senza commissioni, traduzione IA in 35 lingue.",
+    dynamicHeadlines: DEFAULT.hero.dynamicHeadlines.map((h) =>
+      h === "Ordini diretti, zero commissioni." ? "Ordini diretti." : h,
+    ),
+  },
+
+  founder: {
+    ...DEFAULT.founder,
+    quoteStart:
+      "Io e mia moglie abbiamo aperto un caffè e abbiamo passato settimane a cercare un menu digitale che gestisse anche ordini al tavolo e prenotazioni, senza essere pesante o brutto —",
+    quoteAccent: "così abbiamo costruito il menu digitale che avremmo voluto.",
+  },
+
+  footer: {
+    ...DEFAULT.footer,
+    featureLinks: [],
+    navLinks: [],
+  },
+
+  faq: {
+    ...DEFAULT.faq,
+    items: [
+      {
+        q: "Cos'è un menu digitale per ristorante?",
+        a: "Il menu digitale è la versione online della carta del ristorante: il cliente inquadra un QR Code sul tavolo con la fotocamera e accede subito a piatti, foto, allergeni e prezzi nel browser, senza scaricare app. Con IQ Rest il menu digitale include anche ordini diretti al tavolo, prenotazioni 24/7 e traduzione IA in 35 lingue — aggiorni tutto dal telefono in tempo reale.",
+      },
+      ...DEFAULT.faq.items,
+    ],
+  },
+
   meta: {
     title: "Menu Digitale per Ristoranti — Online in 5 Min | IQ Rest",
     description:

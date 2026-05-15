@@ -20,6 +20,10 @@ interface HeaderProps {
    *  cross-page `/locale#section` behaviour so clicks navigate back to the
    *  homepage and scroll into view. */
   useLocalAnchors?: boolean;
+  /** Hide the Sign-in button entirely (e.g. on PPC landing pages). When
+   *  false, sign-in is still hidden for visitors arriving via Google Ads
+   *  (?gclid) to keep them focused on the create CTA. */
+  hideSignIn?: boolean;
 }
 
 // Hide Sign in for Google Ads visitors (focus them on the create CTA).
@@ -42,7 +46,7 @@ function SignInSlot({ signinHref, label }: { signinHref: string; label: string }
   );
 }
 
-export function LandingHeader({ texts, locale, useLocalAnchors = false }: HeaderProps) {
+export function LandingHeader({ texts, locale, useLocalAnchors = false, hideSignIn = false }: HeaderProps) {
   const createHref = `${createUrl(locale)}&from=landing`;
   const signinHref = `${loginUrl(locale)}?from=landing`;
   const cookieTexts = getCookieTexts(locale);
@@ -89,9 +93,11 @@ export function LandingHeader({ texts, locale, useLocalAnchors = false }: Header
           >
             <Globe className="h-4 w-4" />
           </button>
-          <Suspense fallback={<div className="h-9 w-9" aria-hidden />}>
-            <SignInSlot signinHref={signinHref} label={texts.signIn} />
-          </Suspense>
+          {hideSignIn ? null : (
+            <Suspense fallback={<div className="h-9 w-9" aria-hidden />}>
+              <SignInSlot signinHref={signinHref} label={texts.signIn} />
+            </Suspense>
+          )}
           <LinkForward
             href={createHref}
             trackEvent="land_header_cta_click"
