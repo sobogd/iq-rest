@@ -190,8 +190,8 @@ export function MenuFeed() {
                                 className="text-sm text-gray-500 inline-flex items-center gap-1"
                                 title={t(`publicMenu.allergenNames.${code}`, { defaultValue: code })}
                               >
-                                <AllergenIcon code={code} className="w-4 h-4" />
-                                <span>
+                                <AllergenIcon code={code} className="w-4 h-4 shrink-0" />
+                                <span className="leading-none">
                                   {t(`publicMenu.allergenNames.${code}`, { defaultValue: code })}
                                 </span>
                               </span>
