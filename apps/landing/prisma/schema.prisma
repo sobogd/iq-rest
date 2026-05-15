@@ -199,6 +199,7 @@ model Table {
   // Owner-only color override used by the dashboard floor map / table grid.
   // Public menu reads imageUrl, never color.
   color        String?
+  deletedAt    DateTime?
   isActive     Boolean  @default(true)
   sortOrder    Int      @default(0)
   isExample    Boolean  @default(false)
@@ -269,6 +270,7 @@ model Item {
   sortOrder    Int      @default(0)
   isActive     Boolean  @default(true)
   isExample    Boolean  @default(false)
+  deletedAt    DateTime?
   categoryId   String
   companyId    String
   createdAt    DateTime @default(now())
@@ -361,6 +363,7 @@ model Order {
   tableNumber     Int?
   status          String   @default("new") // new | in_progress | completed | cancelled
   isExample       Boolean  @default(false)
+  deletedAt       DateTime?
   orderDate       DateTime @db.Date
   dailyNumber     Int
   createdAt       DateTime @default(now())
