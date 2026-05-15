@@ -111,13 +111,15 @@ export default async function QrCartaLanding({
         >
           <Faq texts={TEXTS.faq} />
         </section>
-        <KwLinksRow
-          heading="Soluciones para restaurantes"
-          links={[
-            { href: "/es/menu-digital", label: "Menú digital para restaurantes" },
-            { href: "/es/carta-digital", label: "Carta digital para restaurantes" },
-          ]}
-        />
+        {!hasGclid && (
+          <KwLinksRow
+            heading="Soluciones para restaurantes"
+            links={[
+              { href: "/es/menu-digital", label: "Menú digital para restaurantes" },
+              { href: "/es/carta-digital", label: "Carta digital para restaurantes" },
+            ]}
+          />
+        )}
         <FinalCta
           texts={TEXTS.finalCta}
           ctaText={TEXTS.ctaText}

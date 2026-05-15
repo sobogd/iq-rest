@@ -111,13 +111,15 @@ export default async function MenuDigitalLanding({
         >
           <Faq texts={TEXTS.faq} />
         </section>
-        <KwLinksRow
-          heading="Soluciones para restaurantes"
-          links={[
-            { href: "/es/carta-digital", label: "Carta digital para restaurantes" },
-            { href: "/es/qr-carta", label: "QR carta para restaurantes" },
-          ]}
-        />
+        {!hasGclid && (
+          <KwLinksRow
+            heading="Soluciones para restaurantes"
+            links={[
+              { href: "/es/carta-digital", label: "Carta digital para restaurantes" },
+              { href: "/es/qr-carta", label: "QR carta para restaurantes" },
+            ]}
+          />
+        )}
         <FinalCta
           texts={TEXTS.finalCta}
           ctaText={TEXTS.ctaText}
