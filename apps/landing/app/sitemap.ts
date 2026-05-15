@@ -63,20 +63,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   })
 
-  // Spanish keyword-targeted landings (single-locale, no hreflang alternates).
-  const spanishKwPages: RouteConfig[] = [
-    { path: '/es/menu-digital', lastModified: '2026-05-14', changeFrequency: 'monthly', priority: 0.8 },
-    { path: '/es/carta-digital', lastModified: '2026-05-14', changeFrequency: 'monthly', priority: 0.8 },
-    { path: '/es/qr-carta', lastModified: '2026-05-14', changeFrequency: 'monthly', priority: 0.8 },
-  ]
-  spanishKwPages.forEach(route => {
-    sitemapEntries.push({
-      url: `${baseUrl}${route.path}`,
-      lastModified: new Date(route.lastModified),
-      changeFrequency: route.changeFrequency,
-      priority: route.priority,
-    })
-  })
+  // /es absorbed the carta-digital KW page (canonical /es). The PPC variant
+  // at /es/lp/carta-digital stays noindex; the old /es/menu-digital and
+  // /es/qr-carta KW landings were dropped and 301 to /es (see next.config).
 
   return sitemapEntries
 }

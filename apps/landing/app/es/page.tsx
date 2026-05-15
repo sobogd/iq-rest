@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { KwLinksRow } from "@/app/_landing/components/kw-links-row";
 import { Faq } from "@/app/_landing/components/faq";
 import { PageTracker } from "@/app/_landing/components/page-tracker";
 import { Features } from "@/app/_landing/components/features";
@@ -10,9 +9,19 @@ import { LandingHeader } from "@/app/_landing/components/header";
 import { LandingPricing } from "@/app/_landing/components/pricing";
 import { Hero } from "@/app/_landing/components/hero";
 import { ScanSection } from "@/app/_landing/components/scan-section";
+import { MobileAnchorNav } from "@/app/_landing/components/mobile-anchor-nav";
 import { How } from "@/app/_landing/components/how";
 import { TEXTS } from "./texts";
+import { SeoContent } from "./seo-content";
+import { JSON_LD_HTML } from "./jsonld";
+
 const LOCALE = "es";
+
+// Spain is always EUR — hardcoded so the page stays statically rendered.
+// The previous /es/carta-digital page was folded in here (SEO weight
+// consolidated on /es), with a 301 in next.config keeping the old URL alive.
+// The PPC variant lives at /es/lp/carta-digital and is noindex from day one.
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://iq-rest.com"),
   title: TEXTS.meta.title,
@@ -26,7 +35,7 @@ export const metadata: Metadata = {
     siteName: "IQ Rest",
     locale: TEXTS.meta.ogLocale,
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "IQ Rest carta QR" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "IQ Rest — Carta Digital para Restaurantes" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -36,59 +45,57 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function LandingPage() {
-
+export default function LandingPage() {
   return (
     <main className="relative">
       <PageTracker />
-      <LandingHeader texts={TEXTS.header} locale={LOCALE} />
-      <div className="space-y-10 sm:space-y-0">
-      <Hero
-        texts={TEXTS.hero}
-        ctaText={TEXTS.ctaText}
-        demoText={TEXTS.demoText}
-        microcopy={TEXTS.microcopy}
-        locale={LOCALE}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON_LD_HTML }}
       />
-      <ScanSection texts={TEXTS.scan} locale={LOCALE} />
-      <section id="features" data-section="features" className="scroll-mt-16">
-        <Features texts={TEXTS.features} />
-      </section>
-      <section id="founder" data-section="founder" className="scroll-mt-16">
-        <Founder texts={TEXTS.founder} />
-      </section>
-      <section id="how" data-section="how" className="scroll-mt-16">
-        <How texts={TEXTS.how} />
-      </section>
-      <section id="pricing" data-section="pricing" className="scroll-mt-16 py-8 sm:py-16">
-        <LandingPricing
-          texts={TEXTS.pricing}
+      <LandingHeader texts={TEXTS.header} locale={LOCALE} useLocalAnchors />
+      <div className="space-y-10 sm:space-y-0">
+        <Hero
+          texts={TEXTS.hero}
           ctaText={TEXTS.ctaText}
+          demoText={TEXTS.demoText}
           microcopy={TEXTS.microcopy}
           locale={LOCALE}
-
         />
-      </section>
-      <section id="faq" data-section="faq" className="scroll-mt-16 py-16 bg-muted/20">
-        <Faq texts={TEXTS.faq} />
-      </section>
-      <KwLinksRow
-        heading="Soluciones para restaurantes"
-        links={[
-          { href: "/es/menu-digital", label: "Menú digital para restaurantes" },
-          { href: "/es/carta-digital", label: "Carta digital para restaurantes" },
-          { href: "/es/qr-carta", label: "QR carta para restaurantes" },
-        ]}
-      />
-      <FinalCta
-        texts={TEXTS.finalCta}
-        ctaText={TEXTS.ctaText}
-        demoText={TEXTS.demoText}
-        microcopy={TEXTS.microcopy}
-        locale={LOCALE}
-      />
+        <MobileAnchorNav texts={TEXTS.header} />
+        <section id="scan" data-section="scan" className="scroll-mt-16">
+          <ScanSection texts={TEXTS.scan} locale={LOCALE} />
+        </section>
+        <SeoContent />
+        <section id="features" data-section="features" className="scroll-mt-16">
+          <Features texts={TEXTS.features} />
+        </section>
+        <section id="founder" data-section="founder" className="scroll-mt-16">
+          <Founder texts={TEXTS.founder} />
+        </section>
+        <section id="how" data-section="how" className="scroll-mt-16">
+          <How texts={TEXTS.how} />
+        </section>
+        <section id="pricing" data-section="pricing" className="scroll-mt-16 py-8 sm:py-16">
+          <LandingPricing
+            texts={TEXTS.pricing}
+            ctaText={TEXTS.ctaText}
+            microcopy={TEXTS.microcopy}
+            locale={LOCALE}
+          />
+        </section>
+        <section id="faq" data-section="faq" className="scroll-mt-16 py-16 bg-muted/20">
+          <Faq texts={TEXTS.faq} />
+        </section>
+        <FinalCta
+          texts={TEXTS.finalCta}
+          ctaText={TEXTS.ctaText}
+          demoText={TEXTS.demoText}
+          microcopy={TEXTS.microcopy}
+          locale={LOCALE}
+        />
       </div>
-      <LandingFooter texts={TEXTS.footer} headerTexts={TEXTS.header} locale="es" />
+      <LandingFooter texts={TEXTS.footer} headerTexts={TEXTS.header} locale={LOCALE} />
     </main>
   );
 }

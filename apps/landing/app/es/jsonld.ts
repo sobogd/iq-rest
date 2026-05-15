@@ -1,12 +1,12 @@
 import type { LandingTexts } from "@/app/_landing/types";
 import { TEXTS } from "./texts";
 
-const URL_SELF = "https://iq-rest.com/es/menu-digital";
+const URL_SELF = "https://iq-rest.com/es";
 
 export function buildJsonLd(texts: LandingTexts) {
   const softwareApp = {
     "@type": "SoftwareApplication",
-    name: "IQ Rest — Menú Digital para Restaurantes",
+    name: "IQ Rest — Editor de Carta Digital para Restaurantes",
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web, iOS, Android",
     url: URL_SELF,
@@ -32,29 +32,11 @@ export function buildJsonLd(texts: LandingTexts) {
     })),
   };
 
-  const breadcrumb = {
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "IQ Rest",
-        item: "https://iq-rest.com/es",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Menú Digital para Restaurantes",
-        item: URL_SELF,
-      },
-    ],
-  };
-
   const howTo = {
     "@type": "HowTo",
-    name: "Cómo crear un menú digital para restaurantes",
+    name: "Cómo crear una carta digital y un código QR para restaurantes",
     description:
-      "Crea el menú digital de tu restaurante en 4 pasos, sin programadores y sin agencias.",
+      "Crea la carta digital y el código QR para tu restaurante en 4 pasos, desde el móvil, sin programadores y sin agencias.",
     totalTime: "PT5M",
     estimatedCost: {
       "@type": "MonetaryAmount",
@@ -65,33 +47,33 @@ export function buildJsonLd(texts: LandingTexts) {
       {
         "@type": "HowToStep",
         position: 1,
-        name: "Tipo y nombre",
-        text: "Elige el tipo de negocio e introduce el nombre del restaurante.",
+        name: "Regístrate y elige el tipo de local",
+        text: "Crea la cuenta en 30 segundos: nombre del restaurante, email o acceso con Google.",
       },
       {
         "@type": "HowToStep",
         position: 2,
-        name: "Guarda la cuenta",
-        text: "Introduce el email o accede con Google.",
+        name: "Importa o crea la carta",
+        text: "Sube una foto de la carta en papel (la IA la digitaliza en 60 segundos) o añade los platos uno a uno desde el editor móvil.",
       },
       {
         "@type": "HowToStep",
         position: 3,
-        name: "Crea el menú",
-        text: "Créalo desde cero o escanea el menú en papel: la IA lo digitaliza en 60 segundos.",
+        name: "Personaliza fotos, colores e idiomas",
+        text: "Añade las fotos de los platos, elige los colores de la marca y activa la traducción automática a los idiomas de tus clientes.",
       },
       {
         "@type": "HowToStep",
         position: 4,
-        name: "Listo",
-        text: "Visualiza el menú digital, comparte el código QR para las mesas y recibe los pedidos.",
+        name: "Publica e imprime el código QR",
+        text: "Descarga el código QR en PDF o PNG, imprímelo para las mesas y empieza a recibir pedidos directos desde la carta digital.",
       },
     ],
   };
 
   return {
     "@context": "https://schema.org",
-    "@graph": [softwareApp, faqPage, breadcrumb, howTo],
+    "@graph": [softwareApp, faqPage, howTo],
   };
 }
 

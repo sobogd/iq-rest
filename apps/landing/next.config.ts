@@ -60,6 +60,12 @@ const nextConfig: NextConfig = {
       // Old KW landing /it/menu-digitale folded into /it (organic). The PPC
       // variant moved to /it/lp/menu-digitale and is noindex from day one.
       { source: "/it/menu-digitale", destination: "/it", permanent: true },
+      // Spanish KW landings: /es absorbed /es/carta-digital (SEO weight).
+      // /es/menu-digital and /es/qr-carta were dropped — collapse all three
+      // into /es. PPC lives at /es/lp/carta-digital (noindex).
+      { source: "/es/carta-digital", destination: "/es", permanent: true },
+      { source: "/es/menu-digital", destination: "/es", permanent: true },
+      { source: "/es/qr-carta", destination: "/es", permanent: true },
       // Public menu lives on <slug>.iq-rest.com now. Legacy short links and
       // locale-prefixed /m/<slug> URLs (printed QR codes, old crawl) 301 to
       // the subdomain. Locale routing happens on the public-menu service.

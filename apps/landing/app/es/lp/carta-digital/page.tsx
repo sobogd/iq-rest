@@ -8,24 +8,25 @@ import { LandingFooter } from "@/app/_landing/components/footer";
 import { LandingHeader } from "@/app/_landing/components/header";
 import { LandingPricing } from "@/app/_landing/components/pricing";
 import { Hero } from "@/app/_landing/components/hero";
-import { ScanSection } from "@/app/_landing/components/scan-section";
-import { MobileAnchorNav } from "@/app/_landing/components/mobile-anchor-nav";
-import { KwLinksRow } from "@/app/_landing/components/kw-links-row";
 import { How } from "@/app/_landing/components/how";
+import { MobileAnchorNav } from "@/app/_landing/components/mobile-anchor-nav";
+import { ScanSection } from "@/app/_landing/components/scan-section";
 import { TEXTS } from "./texts";
-import { SeoContent } from "./seo-content";
 import { JSON_LD_HTML } from "./jsonld";
 
 const LOCALE = "es";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://iq-rest.com"),
   title: TEXTS.meta.title,
   description: TEXTS.meta.description,
   alternates: { canonical: TEXTS.meta.canonical },
+  // Noindex: /es carries the organic SEO; this URL exists purely as a
+  // dedicated, conversion-optimized PPC landing for Google Ads.
   robots: {
-    index: true,
+    index: false,
     follow: true,
-    googleBot: { index: true, follow: true },
+    googleBot: { index: false, follow: true },
   },
   openGraph: {
     title: TEXTS.meta.ogTitle,
@@ -36,10 +37,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og/menu-digital.png",
+        url: "/og/carta-digital.png",
         width: 1200,
         height: 630,
-        alt: "Menú Digital para Restaurantes — IQ Rest",
+        alt: "Carta Digital para Restaurantes — IQ Rest",
       },
     ],
   },
@@ -47,18 +48,11 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: TEXTS.meta.ogTitle,
     description: TEXTS.meta.ogDescription,
-    images: ["/og/menu-digital.png"],
+    images: ["/og/carta-digital.png"],
   },
 };
 
-export default async function MenuDigitalLanding({
-  searchParams,
-}: {
-  searchParams: Promise<{ gclid?: string | string[]; gbraid?: string | string[]; wbraid?: string | string[] }>;
-}) {
-  const sp = await searchParams;
-  const hasGclid = Boolean(sp?.gclid || sp?.gbraid || sp?.wbraid);
-
+export default function CartaDigitalLpLanding() {
   return (
     <main className="relative">
       <PageTracker />
@@ -66,7 +60,7 @@ export default async function MenuDigitalLanding({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON_LD_HTML }}
       />
-      <LandingHeader texts={TEXTS.header} locale={LOCALE} useLocalAnchors />
+      <LandingHeader texts={TEXTS.header} locale={LOCALE} useLocalAnchors hideSignIn />
       <div className="space-y-10 sm:space-y-0">
         <Hero
           texts={TEXTS.hero}
@@ -79,7 +73,6 @@ export default async function MenuDigitalLanding({
         <section id="scan" data-section="scan" className="scroll-mt-16">
           <ScanSection texts={TEXTS.scan} locale={LOCALE} />
         </section>
-        {!hasGclid && <SeoContent />}
         <section id="features" data-section="features" className="scroll-mt-16">
           <Features texts={TEXTS.features} />
         </section>
@@ -99,7 +92,6 @@ export default async function MenuDigitalLanding({
             ctaText={TEXTS.ctaText}
             microcopy={TEXTS.microcopy}
             locale={LOCALE}
-
           />
         </section>
         <section
@@ -109,15 +101,6 @@ export default async function MenuDigitalLanding({
         >
           <Faq texts={TEXTS.faq} />
         </section>
-        {!hasGclid && (
-          <KwLinksRow
-            heading="Soluciones para restaurantes"
-            links={[
-              { href: "/es/carta-digital", label: "Carta digital para restaurantes" },
-              { href: "/es/qr-carta", label: "QR carta para restaurantes" },
-            ]}
-          />
-        )}
         <FinalCta
           texts={TEXTS.finalCta}
           ctaText={TEXTS.ctaText}
@@ -125,12 +108,12 @@ export default async function MenuDigitalLanding({
           microcopy={TEXTS.microcopy}
           locale={LOCALE}
         />
-        {hasGclid && <SeoContent />}
       </div>
       <LandingFooter
         texts={TEXTS.footer}
         headerTexts={TEXTS.header}
         locale={LOCALE}
+        variant="lp"
       />
     </main>
   );
