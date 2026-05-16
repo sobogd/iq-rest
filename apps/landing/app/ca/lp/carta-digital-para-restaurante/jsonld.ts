@@ -1,7 +1,7 @@
 import type { LandingTexts } from "@/app/_landing/types";
 import { TEXTS } from "./texts";
 
-const URL_SELF = "https://iq-rest.com/ca/lp/carta-digital-per-a-restaurant";
+const URL_SELF = "https://iq-rest.com/ca/lp/carta-digital-para-restaurante";
 const URL_HOME_CA = "https://iq-rest.com/ca";
 const ORG_ID = "https://iq-rest.com/#organization";
 

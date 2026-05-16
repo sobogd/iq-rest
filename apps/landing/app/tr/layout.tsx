@@ -1,6 +1,7 @@
 import type { Viewport } from "next";
 import "../globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { RegionPromptModal } from "@/app/_landing/components/region-prompt-modal";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -19,6 +20,7 @@ export default function LandingLayout({ children }: { children: React.ReactNode 
       <body className="min-h-dvh bg-background text-foreground antialiased tracking-tight">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}
+          <RegionPromptModal />
         </ThemeProvider>
       </body>
     </html>

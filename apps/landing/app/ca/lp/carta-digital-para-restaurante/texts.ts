@@ -89,7 +89,7 @@ export const TEXTS: LandingTexts = {
     title: "Carta Digital per a Restaurant — Llesta en 5 Min | IQ Rest",
     description:
       "Carta digital per a restaurant: codi QR imprimible, comandes directes sense comissions, traducció IA a 35 idiomes. Llesta en 5 minuts, 14 dies gratis.",
-    canonical: "https://iq-rest.com/ca/lp/carta-digital-per-a-restaurant",
+    canonical: "https://iq-rest.com/ca/lp/carta-digital-para-restaurante",
     ogLocale: "ca_ES",
     ogTitle: "Carta Digital per a Restaurant — Llesta en 5 Minuts",
     ogDescription:

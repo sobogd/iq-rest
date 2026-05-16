@@ -127,6 +127,34 @@ export default function middleware(request: NextRequest) {
     return NextResponse.redirect("https://love-eatery.iq-rest.com", 301);
   }
 
+  // Region-prompt redirect — if the URL locale doesn't match what the
+  // visitor's region suggests (e.g. Catalan visitor on /es) we add an
+  // ?askregion=urlLocale,geoLocale param so the client-side modal can
+  // ask which language they want. The modal handles its own
+  // already-dismissed state via localStorage (no cookies on this path).
+  // We skip:
+  //   - if the param is already in the URL (avoid loops)
+  //   - if the URL carries gclid/gbraid/wbraid — Google Ads traffic
+  //     stays on the paid landing for conversion attribution
+  const urlLocaleMatch = pathname.match(localeRegex);
+  const urlLocale = urlLocaleMatch ? (urlLocaleMatch[1] as Locale) : null;
+  const hasAdsClick =
+    request.nextUrl.searchParams.has("gclid") ||
+    request.nextUrl.searchParams.has("gbraid") ||
+    request.nextUrl.searchParams.has("wbraid");
+  if (
+    urlLocale &&
+    !request.nextUrl.searchParams.has("askregion") &&
+    !hasAdsClick
+  ) {
+    const geoLocale = detectLocaleByCountry(request);
+    if (geoLocale && geoLocale !== urlLocale) {
+      const url = request.nextUrl.clone();
+      url.searchParams.set("askregion", `${urlLocale},${geoLocale}`);
+      return NextResponse.redirect(url, 302);
+    }
+  }
+
   // Use next-intl middleware for locale handling
   const response = intlMiddleware(request);
 
