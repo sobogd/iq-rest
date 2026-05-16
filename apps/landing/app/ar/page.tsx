@@ -1,17 +1,9 @@
 import type { Metadata } from "next";
-import { Faq } from "@/app/_landing/components/faq";
-import { PageTracker } from "@/app/_landing/components/page-tracker";
-import { Features } from "@/app/_landing/components/features";
-import { FinalCta } from "@/app/_landing/components/final-cta";
-import { Founder } from "@/app/_landing/components/founder";
-import { LandingFooter } from "@/app/_landing/components/footer";
-import { LandingHeader } from "@/app/_landing/components/header";
-import { LandingPricing } from "@/app/_landing/components/pricing";
-import { Hero } from "@/app/_landing/components/hero";
-import { ScanSection } from "@/app/_landing/components/scan-section";
-import { How } from "@/app/_landing/components/how";
+import { LandingPageBody } from "@/app/_landing/components/landing-page-body";
 import { TEXTS } from "./texts";
+
 const LOCALE = "ar";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://iq-rest.com"),
   title: TEXTS.meta.title,
@@ -35,45 +27,6 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function LandingPage() {
-
-  return (
-    <main className="relative">
-      <PageTracker />
-      <LandingHeader texts={TEXTS.header} locale={LOCALE} />
-      <div className="space-y-10 sm:space-y-0">
-      <Hero
-        texts={TEXTS.hero}
-        ctaText={TEXTS.ctaText}
-        demoText={TEXTS.demoText}
-        microcopy={TEXTS.microcopy}
-        locale={LOCALE}
-      />
-      <ScanSection texts={TEXTS.scan} locale={LOCALE} />
-      <Features texts={TEXTS.features} />
-      <Founder texts={TEXTS.founder} />
-      <How texts={TEXTS.how} />
-      <section id="pricing" data-section="pricing" className="scroll-mt-16 py-8 sm:py-16">
-        <LandingPricing
-          texts={TEXTS.pricing}
-          ctaText={TEXTS.ctaText}
-          microcopy={TEXTS.microcopy}
-          locale={LOCALE}
-
-        />
-      </section>
-      <section id="faq" data-section="faq" className="scroll-mt-16 py-16 bg-muted/20">
-        <Faq texts={TEXTS.faq} />
-      </section>
-      <FinalCta
-        texts={TEXTS.finalCta}
-        ctaText={TEXTS.ctaText}
-        demoText={TEXTS.demoText}
-        microcopy={TEXTS.microcopy}
-        locale={LOCALE}
-      />
-      </div>
-      <LandingFooter texts={TEXTS.footer} headerTexts={TEXTS.header} locale="ar" />
-    </main>
-  );
+export default function LandingPage() {
+  return <LandingPageBody locale={LOCALE} texts={TEXTS} />;
 }

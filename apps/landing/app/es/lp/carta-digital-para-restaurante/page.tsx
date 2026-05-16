@@ -101,13 +101,15 @@ export default function CartaDigitalLpLanding() {
             locale={LOCALE}
           />
         </Section>
+        <Section as="footer" dataSection="footer">
+          <LandingFooterLp
+            texts={TEXTS.footer}
+            headerTexts={TEXTS.header}
+            locale={LOCALE}
+            variant="lp"
+          />
+        </Section>
       </SectionGroup>
-      <LandingFooterLp
-        texts={TEXTS.footer}
-        headerTexts={TEXTS.header}
-        locale={LOCALE}
-        variant="lp"
-      />
     </main>
   );
 }

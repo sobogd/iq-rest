@@ -37,25 +37,20 @@ export function LandingFooterLp({
 
   if (variant === "lp") {
     return (
-      <footer className="scroll-mt-16 py-12 sm:py-16" data-section="footer">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-3">
-            <p className="text-sm text-muted-foreground/80 text-center sm:text-start">
-              {copyright}
-            </p>
-            <FooterToolbar
-              locale={locale}
-              navClassName="justify-center sm:justify-end gap-x-4"
-            />
-          </div>
-        </div>
-      </footer>
+      <div className="max-w-4xl mx-auto flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-3">
+        <p className="text-sm text-muted-foreground/80 text-center sm:text-start">
+          {copyright}
+        </p>
+        <FooterToolbar
+          locale={locale}
+          navClassName="justify-center sm:justify-end gap-x-4"
+        />
+      </div>
     );
   }
 
   return (
-    <footer className="scroll-mt-16 py-12 sm:py-16" data-section="footer">
-      <div className="container mx-auto px-4">
+    <div className="max-w-4xl mx-auto">
         {texts.keywordLinks && texts.keywordLinks.length > 0 ? (
           <div className="mb-8 sm:mb-10">
             {texts.keywordLinksHeading ? (
@@ -100,7 +95,6 @@ export function LandingFooterLp({
             </p>
           </div>
         </div>
-      </div>
-    </footer>
+    </div>
   );
 }

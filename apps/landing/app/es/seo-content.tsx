@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { Section } from "@/app/_landing/components/section";
 
 const BENEFITS = [
   "Lista en 5 minutos, no en semanas",
@@ -44,39 +45,43 @@ const COMPARISON_ROWS = [
 export function SeoContent() {
   return (
     <>
-      <p className="text-xs font-medium uppercase tracking-widest text-primary mb-3 text-center lg:text-start">
-          En profundidad
-        </p>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-3 text-center lg:text-start">
-          {"Cómo crear una carta digital "}
-          <span className="text-muted-foreground">para tu restaurante</span>
-        </h2>
-        <p className="text-base sm:text-lg text-muted-foreground mb-10 text-center lg:text-start">
-          Editor móvil, importación IA desde el papel, código QR automático
-          — todo en 5 minutos, sin agencias.
-        </p>
-
-        <div className="space-y-4 text-base sm:text-lg text-foreground/90 leading-relaxed mb-20">
-          <p>
-            <strong>Crear una carta digital</strong> para un restaurante hoy
-            no significa contactar con una agencia, recibir un presupuesto de
-            1.500€ y esperar cuatro semanas. Significa abrir el panel desde
-            el móvil, importar la carta en papel existente (la IA la
-            digitaliza en un minuto) y recibir el código QR imprimible para
-            las mesas antes del siguiente servicio.
+      <Section dataSection="seo-intro">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-xs font-medium uppercase tracking-widest text-primary mb-3 text-center">
+            En profundidad
           </p>
-          <p>
-            El mismo proceso vale para <strong>crear el QR de la carta</strong>:
-            no es una operación aparte. Cuando creas la carta digital, la
-            plataforma genera automáticamente el código QR único, listo para
-            descargar en PDF o PNG de alta resolución. Lo imprimes, lo pegas
-            en las mesas y listo. El hostelero nunca tiene que abrir un
-            programa de diseño.
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-3 text-center">
+            {"Cómo crear una carta digital "}
+            <span className="text-muted-foreground">para tu restaurante</span>
+          </h2>
+          <p className="text-base sm:text-lg text-muted-foreground mb-10 text-center">
+            Editor móvil, importación IA desde el papel, código QR automático
+            — todo en 5 minutos, sin agencias.
           </p>
+          <div className="space-y-4 text-base sm:text-lg text-foreground/90 leading-relaxed">
+            <p>
+              <strong>Crear una carta digital</strong> para un restaurante hoy
+              no significa contactar con una agencia, recibir un presupuesto de
+              1.500€ y esperar cuatro semanas. Significa abrir el panel desde
+              el móvil, importar la carta en papel existente (la IA la
+              digitaliza en un minuto) y recibir el código QR imprimible para
+              las mesas antes del siguiente servicio.
+            </p>
+            <p>
+              El mismo proceso vale para <strong>crear el QR de la carta</strong>:
+              no es una operación aparte. Cuando creas la carta digital, la
+              plataforma genera automáticamente el código QR único, listo para
+              descargar en PDF o PNG de alta resolución. Lo imprimes, lo pegas
+              en las mesas y listo. El hostelero nunca tiene que abrir un
+              programa de diseño.
+            </p>
+          </div>
         </div>
+      </Section>
 
-        <div className="mb-20">
-          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-center lg:text-start">
+      <Section dataSection="seo-benefits">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-center">
             Ventajas de crear la carta digital tú mismo
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
@@ -95,12 +100,14 @@ export function SeoContent() {
             ))}
           </div>
         </div>
+      </Section>
 
-        <div className="mb-20">
-          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-center lg:text-start">
+      <Section dataSection="seo-steps">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-center">
             Los 4 pasos para crear la carta digital (y el código QR)
           </h3>
-          <p className="text-base sm:text-lg text-foreground/90 leading-relaxed mb-6 text-center lg:text-start">
+          <p className="text-base sm:text-lg text-foreground/90 leading-relaxed mb-6 text-center">
             El mismo flujo permite crear tanto la carta digital como el QR
             de la carta del restaurante. Tiempo total: menos de 5 minutos
             desde el móvil.
@@ -126,9 +133,11 @@ export function SeoContent() {
             ))}
           </div>
         </div>
+      </Section>
 
-        <div>
-          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-center lg:text-start">
+      <Section dataSection="seo-table">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-center">
             Crear con agencia, plantilla genérica o IQ Rest: qué cambia
           </h3>
           <div className="bg-muted/20 border border-border rounded-2xl p-4 sm:p-6 overflow-x-auto">
@@ -168,13 +177,14 @@ export function SeoContent() {
               </tbody>
             </table>
           </div>
-          <p className="text-sm text-muted-foreground leading-relaxed mt-6 text-center lg:text-start">
+          <p className="text-sm text-muted-foreground leading-relaxed mt-6 text-center">
             Crear la carta digital con un editor especializado para
             restaurantes cuesta menos que una agencia, es más rápido que una
             plantilla genérica (que además no gestiona pedidos ni código QR)
             y deja al hostelero completamente autónomo.
           </p>
         </div>
+      </Section>
     </>
   );
 }

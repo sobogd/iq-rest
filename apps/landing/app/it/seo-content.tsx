@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { Section } from "@/app/_landing/components/section";
 
 const BENEFITS = [
   "Zero costi di stampa e ristampa",
@@ -22,40 +23,44 @@ const COMPARISON_ROWS = [
 export function SeoContent() {
   return (
     <>
-      <p className="text-xs font-medium uppercase tracking-widest text-primary mb-3 text-center lg:text-start">
-          Approfondimento
-        </p>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-3 text-center lg:text-start">
-          {"Cos'è un menu digitale "}
-          <span className="text-muted-foreground">per ristoranti?</span>
-        </h2>
-        <p className="text-base sm:text-lg text-muted-foreground mb-10 text-center lg:text-start">
-          La versione online del menu cartaceo — più veloce, multilingue e con
-          ordini integrati.
-        </p>
-
-        <div className="space-y-4 text-base sm:text-lg text-foreground/90 leading-relaxed mb-20">
-          <p>
-            Un <strong>menu digitale per ristoranti</strong> è la versione online
-            del menu cartaceo, accessibile dal telefono del cliente tramite un{" "}
-            <strong>QR Code</strong> stampato sul tavolo o tramite un link
-            diretto. Il cliente inquadra il codice con la fotocamera, il menu
-            digitale si apre nel browser e mostra piatti, foto, prezzi, allergeni
-            e descrizioni tradotte nella sua lingua. Niente app da scaricare,
-            niente PDF pesanti.
+      <Section dataSection="seo-intro">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-xs font-medium uppercase tracking-widest text-primary mb-3 text-center">
+            Approfondimento
           </p>
-          <p>
-            A differenza di un PDF, il menu digitale online si aggiorna in tempo
-            reale: cambi un prezzo, attivi una stop-list o aggiungi un piatto dal
-            telefono, e i clienti vedono la modifica immediatamente. Per il
-            ristorante significa zero ristampe, controllo totale e — con la
-            piattaforma giusta — anche ordini diretti senza commissioni di
-            delivery.
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-3 text-center">
+            {"Cos'è un menu digitale "}
+            <span className="text-muted-foreground">per ristoranti?</span>
+          </h2>
+          <p className="text-base sm:text-lg text-muted-foreground mb-10 text-center">
+            La versione online del menu cartaceo — più veloce, multilingue e con
+            ordini integrati.
           </p>
+          <div className="space-y-4 text-base sm:text-lg text-foreground/90 leading-relaxed">
+            <p>
+              Un <strong>menu digitale per ristoranti</strong> è la versione online
+              del menu cartaceo, accessibile dal telefono del cliente tramite un{" "}
+              <strong>QR Code</strong> stampato sul tavolo o tramite un link
+              diretto. Il cliente inquadra il codice con la fotocamera, il menu
+              digitale si apre nel browser e mostra piatti, foto, prezzi, allergeni
+              e descrizioni tradotte nella sua lingua. Niente app da scaricare,
+              niente PDF pesanti.
+            </p>
+            <p>
+              A differenza di un PDF, il menu digitale online si aggiorna in tempo
+              reale: cambi un prezzo, attivi una stop-list o aggiungi un piatto dal
+              telefono, e i clienti vedono la modifica immediatamente. Per il
+              ristorante significa zero ristampe, controllo totale e — con la
+              piattaforma giusta — anche ordini diretti senza commissioni di
+              delivery.
+            </p>
+          </div>
         </div>
+      </Section>
 
-        <div className="mb-20">
-          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-center lg:text-start">
+      <Section dataSection="seo-benefits">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-center">
             Vantaggi del menu digitale online
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
@@ -74,9 +79,11 @@ export function SeoContent() {
             ))}
           </div>
         </div>
+      </Section>
 
-        <div className="mb-20">
-          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-center lg:text-start">
+      <Section dataSection="seo-how">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-center">
             Come funziona il menu digitale del ristorante
           </h3>
           <div className="space-y-4 text-base sm:text-lg text-foreground/90 leading-relaxed">
@@ -97,9 +104,11 @@ export function SeoContent() {
             </p>
           </div>
         </div>
+      </Section>
 
-        <div>
-          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-center lg:text-start">
+      <Section dataSection="seo-table">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-center">
             Differenza tra menu digitale, menu QR e menu PDF
           </h3>
           <div className="bg-muted/20 border border-border rounded-2xl p-4 sm:p-6 overflow-x-auto">
@@ -139,12 +148,13 @@ export function SeoContent() {
               </tbody>
             </table>
           </div>
-          <p className="text-sm text-muted-foreground leading-relaxed mt-6 text-center lg:text-start">
+          <p className="text-sm text-muted-foreground leading-relaxed mt-6 text-center">
             Un menu digitale vero non è un PDF dietro un QR Code: è un sito web
             intelligente, pensato per il ristorante, che riduce i costi operativi
             e aumenta lo scontrino medio — soprattutto con i turisti.
           </p>
         </div>
+      </Section>
     </>
   );
 }

@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { ElementType, ReactNode } from "react";
 
 // Single source of truth for landing section chrome — same vertical padding
 // and container width across every section on every landing page (organic
@@ -18,13 +18,15 @@ const ACCENT_CLASSES =
   "bg-gradient-to-br from-primary/10 via-primary/[0.03] to-primary/[0.03] " +
   "border-y border-border/40";
 
+// Alternate every other direct child — applies to <section> and <footer>
+// so the footer participates in the alternating accent bg.
 const ACCENT_BG =
-  `[&>section:nth-child(even)]:bg-gradient-to-br ` +
-  `[&>section:nth-child(even)]:from-primary/10 ` +
-  `[&>section:nth-child(even)]:via-primary/[0.03] ` +
-  `[&>section:nth-child(even)]:to-primary/[0.03] ` +
-  `[&>section:nth-child(even)]:border-y ` +
-  `[&>section:nth-child(even)]:border-border/40`;
+  `[&>*:nth-child(even)]:bg-gradient-to-br ` +
+  `[&>*:nth-child(even)]:from-primary/10 ` +
+  `[&>*:nth-child(even)]:via-primary/[0.03] ` +
+  `[&>*:nth-child(even)]:to-primary/[0.03] ` +
+  `[&>*:nth-child(even)]:border-y ` +
+  `[&>*:nth-child(even)]:border-border/40`;
 
 interface SectionProps {
   id?: string;
@@ -34,18 +36,28 @@ interface SectionProps {
    *  alternation. Used for sections that always carry the accent treatment
    *  (e.g. the scan banner sitting above the alternating group). */
   accent?: boolean;
+  /** Render as a different element (e.g. `footer`) while keeping all
+   *  Section chrome — padding, container, accent alternation. */
+  as?: ElementType;
   children: ReactNode;
 }
 
-export function Section({ id, dataSection, className = "", accent, children }: SectionProps) {
+export function Section({
+  id,
+  dataSection,
+  className = "",
+  accent,
+  as: Tag = "section",
+  children,
+}: SectionProps) {
   return (
-    <section
+    <Tag
       id={id}
       data-section={dataSection}
       className={`${SCROLL_MARGIN} ${PADDING} ${accent ? ACCENT_CLASSES : ""} ${className}`}
     >
       <div className={CONTAINER}>{children}</div>
-    </section>
+    </Tag>
   );
 }
 

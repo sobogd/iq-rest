@@ -1,14 +1,39 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { Globe, Moon, Sun } from "lucide-react";
+import { Suspense, useEffect, useState } from "react";
+import { Globe, LogIn, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
+import { useSearchParams } from "next/navigation";
 import { analytics } from "@/lib/analytics";
 import { getCookieTexts } from "@/app/_landing/lib/cookie-texts";
 import { LanguageSwitcherModal } from "@/components/language-switcher/modal";
+import { LinkForward } from "./link-forward";
 
 interface HeroBrandBarControlsProps {
   locale: string;
+  /** When provided, renders a Sign-in icon button. Visitors arriving via
+   *  Google Ads (?gclid) still don't see it — keeps PPC focused on the
+   *  primary CTA. */
+  signinHref?: string;
+  signinLabel?: string;
+}
+
+// Hide sign-in for Google Ads visitors. Isolated so the useSearchParams
+// bailout suspends only this slot, not the whole hero.
+function SignInSlot({ href, label }: { href: string; label: string }) {
+  const searchParams = useSearchParams();
+  if (searchParams?.get("gclid")) return null;
+  return (
+    <LinkForward
+      href={href}
+      trackEvent="land_hero_signin_click"
+      className={CONTROL_CLASS}
+      aria-label={label}
+      title={label}
+    >
+      <LogIn className="h-4 w-4" />
+    </LinkForward>
+  );
 }
 
 const CONTROL_CLASS =
@@ -52,7 +77,7 @@ function ThemeCycleButton() {
 // Theme + language pair. Isolated from the rest of the hero brand bar so
 // the parent (logo + layout chrome) stays in SSR — only this small
 // island ships JS for the modal + theme state.
-export function HeroBrandBarControls({ locale }: HeroBrandBarControlsProps) {
+export function HeroBrandBarControls({ locale, signinHref, signinLabel }: HeroBrandBarControlsProps) {
   const cookieTexts = getCookieTexts(locale);
   const [langOpen, setLangOpen] = useState(false);
 
@@ -71,6 +96,11 @@ export function HeroBrandBarControls({ locale }: HeroBrandBarControlsProps) {
       >
         <Globe className="h-4 w-4" />
       </button>
+      {signinHref ? (
+        <Suspense fallback={<div className="h-9 w-9" aria-hidden />}>
+          <SignInSlot href={signinHref} label={signinLabel ?? "Sign in"} />
+        </Suspense>
+      ) : null}
       <LanguageSwitcherModal
         open={langOpen}
         onClose={() => setLangOpen(false)}

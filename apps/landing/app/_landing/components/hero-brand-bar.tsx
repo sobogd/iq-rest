@@ -4,16 +4,15 @@ import { HeroBrandBarControls } from "./hero-brand-bar-controls";
 
 interface HeroBrandBarProps {
   locale: string;
+  signinHref?: string;
+  signinLabel?: string;
 }
 
-// PPC LP only — a plain logo + theme + language-switcher row at the top
-// of the hero. Not a header, not sticky, no border. Pairs with the real
-// sticky header that slides in once the visitor scrolls past the hero.
-//
-// SSR-friendly: this component itself ships as server-rendered HTML.
-// Only the small theme/language island in HeroBrandBarControls is
-// hydrated as a client component.
-export function HeroBrandBar({ locale }: HeroBrandBarProps) {
+// Top-of-hero brand row: logo + theme + language-switcher (+ optional
+// sign-in icon when caller passes signinHref). Used by both organic
+// landings and PPC LPs. SSR for the logo/layout; the controls island is
+// hydrated client-side.
+export function HeroBrandBar({ locale, signinHref, signinLabel }: HeroBrandBarProps) {
   const homeHref = `/${locale}`;
   return (
     <div className="flex items-center justify-between gap-3 mb-6 sm:mb-8">
@@ -25,7 +24,7 @@ export function HeroBrandBar({ locale }: HeroBrandBarProps) {
         <LogoIcon className="h-8 w-8 sm:h-9 sm:w-9" />
         Rest
       </LinkForward>
-      <HeroBrandBarControls locale={locale} />
+      <HeroBrandBarControls locale={locale} signinHref={signinHref} signinLabel={signinLabel} />
     </div>
   );
 }

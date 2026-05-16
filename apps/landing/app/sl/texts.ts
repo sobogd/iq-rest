@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
   hero: {
     verticals: ["Restavracije", "Kavarne", "Bari", "Hoteli", "Picerije"],
     headline: "QR meni v 5 minutah.",
-    sub: "Pripravljena spletna stran za vašo restavracijo — brez programerjev in izvajalcev. Neposredna naročila, rezervacije in analitika gostov v eni naročnini.",
+    sub: "Pripravljena spletna stran za vašo restavracijo — brez programerjev. Neposredna naročila, rezervacije in analitika gostov v eni naročnini.",
     dynamicHeadlines: ["0% provizija.", "35 jezikov z UI.", "Spletna naročila.", "Rezervacije 24/7.", "Premium dizajn."],
     painBullets: ["0% provizija: Vsa naročila gredo neposredno vam.", "AI prevod: 35 jezikov za višjo porabo turistov.", "Rezervacije 24/7: Polna zasedenost brez odvečnih klicev.", "Prilagodljive cene: Posodobite meni v nekaj sekundah."],
     rating: "Več kot 500 restavracij v 30+ državah",

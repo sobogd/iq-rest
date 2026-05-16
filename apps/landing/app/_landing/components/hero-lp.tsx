@@ -13,13 +13,16 @@ interface HeroProps {
   demoText: string;
   microcopy: string;
   locale: string;
+  /** When provided, renders a sign-in icon in the brand-bar controls. */
+  signinHref?: string;
+  signinLabel?: string;
 }
 
-export function HeroLp({ texts, ctaText, demoText, microcopy, locale }: HeroProps) {
+export function HeroLp({ texts, ctaText, demoText, microcopy, locale, signinHref, signinLabel }: HeroProps) {
   return (
     <section data-section="hero" className="container mx-auto px-4 pt-4 pb-12 sm:pb-16 lg:pt-6 min-h-svh flex flex-col">
       <div className="max-w-4xl mx-auto w-full flex flex-col flex-1">
-      <HeroBrandBar locale={locale} />
+      <HeroBrandBar locale={locale} signinHref={signinHref} signinLabel={signinLabel} />
       <div className="grid grid-cols-1 gap-10 flex-1 content-center">
         {/* Header — verticals + headline + sub + CTA + rating */}
         <div className="flex flex-col items-center text-center">
