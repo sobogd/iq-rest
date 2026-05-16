@@ -23,7 +23,7 @@ export function How({ texts }: HowProps) {
       {/* Mobile — vertical timeline. Numbered dots are connected by a thin
           line so the four steps read as a sequence rather than a stack of
           unrelated cards. No card chrome → much more compact. */}
-      <ol className="lg:hidden flex flex-col max-w-[260px] mx-auto">
+      <ol className="lg:hidden flex flex-col w-fit max-w-full mx-auto">
         {texts.steps.map((s, i) => {
           const isLast = i === texts.steps.length - 1;
           return (

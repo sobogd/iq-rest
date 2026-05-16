@@ -54,7 +54,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // PPC lives at /it/lp/menu-digitale-per-ristoranti (noindex).
   //
   // /es absorbed the carta-digital KW page (canonical /es). The PPC variant
-  // at /es/lp/carta-digital stays noindex; the old /es/menu-digital and
+  // at /es/lp/carta-digital-para-restaurante stays noindex; the old
+  // /es/lp/carta-digital slug 301s to it. /es/menu-digital and
   // /es/qr-carta KW landings were dropped and 301 to /es (see next.config).
 
   return sitemapEntries

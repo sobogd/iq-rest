@@ -20,7 +20,8 @@ const LOCALE = "es";
 // Spain is always EUR — hardcoded so the page stays statically rendered.
 // The previous /es/carta-digital page was folded in here (SEO weight
 // consolidated on /es), with a 301 in next.config keeping the old URL alive.
-// The PPC variant lives at /es/lp/carta-digital and is noindex from day one.
+// The PPC variant lives at /es/lp/carta-digital-para-restaurante and is
+// noindex from day one. The old /es/lp/carta-digital slug 301s to it.
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://iq-rest.com"),

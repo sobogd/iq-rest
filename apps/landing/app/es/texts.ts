@@ -2,9 +2,11 @@ import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from
 import type { LandingTexts } from "@/app/_landing/types";
 
 // /es targets the broad-match keyword "carta digital para restaurante".
-// The PPC variant for Google Ads lives at /es/lp/carta-digital with the
-// same content + simplified footer; /es/menu-digital, /es/qr-carta and
-// the old /es/carta-digital 301 here to consolidate SEO weight.
+// The PPC variant for Google Ads lives at
+// /es/lp/carta-digital-para-restaurante with the same content + simplified
+// footer (the older /es/lp/carta-digital 301s into it). /es/menu-digital,
+// /es/qr-carta and the old /es/carta-digital 301 here to consolidate SEO
+// weight.
 export const TEXTS: LandingTexts = {
   htmlLang: "es",
   htmlDir: "ltr",

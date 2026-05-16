@@ -69,10 +69,13 @@ const nextConfig: NextConfig = {
       { source: "/it/lp/menu-digitale", destination: "/it/lp/menu-digitale-per-ristoranti", permanent: true },
       // Spanish KW landings: /es absorbed /es/carta-digital (SEO weight).
       // /es/menu-digital and /es/qr-carta were dropped — collapse all three
-      // into /es. PPC lives at /es/lp/carta-digital (noindex).
+      // into /es. PPC lives at /es/lp/carta-digital-para-restaurante
+      // (noindex); the older /es/lp/carta-digital slug 301s to the new
+      // phrase-keyword URL so existing Google Ads clicks keep landing.
       { source: "/es/carta-digital", destination: "/es", permanent: true },
       { source: "/es/menu-digital", destination: "/es", permanent: true },
       { source: "/es/qr-carta", destination: "/es", permanent: true },
+      { source: "/es/lp/carta-digital", destination: "/es/lp/carta-digital-para-restaurante", permanent: true },
       // Public menu lives on <slug>.iq-rest.com now. Legacy short links and
       // locale-prefixed /m/<slug> URLs (printed QR codes, old crawl) 301 to
       // the subdomain. Locale routing happens on the public-menu service.
