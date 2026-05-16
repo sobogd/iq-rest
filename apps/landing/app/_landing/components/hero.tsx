@@ -25,7 +25,7 @@ export function Hero({ texts, ctaText, demoText, microcopy, locale }: HeroProps)
               {texts.verticals.slice(0, 3).map((v) => (
                 <span
                   key={v}
-                  className="text-[11px] sm:text-[10px] uppercase tracking-wider text-muted-foreground border border-border rounded-full px-2.5 py-1 sm:py-0.5"
+                  className="inline-flex items-center h-7 sm:h-6 leading-none text-[11px] sm:text-[10px] uppercase tracking-wider text-muted-foreground border border-border rounded-full px-2.5"
                 >
                   {v}
                 </span>
@@ -35,7 +35,7 @@ export function Hero({ texts, ctaText, demoText, microcopy, locale }: HeroProps)
               {texts.verticals.slice(3).map((v) => (
                 <span
                   key={v}
-                  className="text-[11px] sm:text-[10px] uppercase tracking-wider text-muted-foreground border border-border rounded-full px-2.5 py-1 sm:py-0.5"
+                  className="inline-flex items-center h-7 sm:h-6 leading-none text-[11px] sm:text-[10px] uppercase tracking-wider text-muted-foreground border border-border rounded-full px-2.5"
                 >
                   {v}
                 </span>
