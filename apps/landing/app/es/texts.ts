@@ -57,7 +57,7 @@ export const TEXTS: LandingTexts = {
   },
 
   features: {
-    heading: "Todo lo que necesitas para",
+    heading: "Todo lo necesario para",
     headingAccent: "crear la carta digital.",
     sub: "Una plataforma pensada para hosteleros, no para programadores.",
     items: [

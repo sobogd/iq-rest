@@ -12,7 +12,7 @@ interface CtaButtonProps {
   microcopy?: string;
   locale: string;
   layout?: "default" | "sticky";
-  align?: "start" | "end" | "center-mobile";
+  align?: "start" | "end" | "center-mobile" | "center";
   trackEvent?: string;
   extra?: React.ReactNode;
   /** On mobile, stack the primary CTA and `extra` button vertically. */
@@ -37,14 +37,18 @@ export function CtaButton({
       ? "items-center text-center lg:items-end lg:text-end"
       : align === "center-mobile"
         ? "items-center text-center lg:items-start lg:text-start"
-        : "items-start text-start";
+        : align === "center"
+          ? "items-center text-center"
+          : "items-start text-start";
 
   const rowJustify =
     align === "end"
       ? "justify-center lg:justify-end"
       : align === "center-mobile"
         ? "justify-center lg:justify-start"
-        : "justify-start";
+        : align === "center"
+          ? "justify-center"
+          : "justify-start";
 
   return (
     <div className={`flex flex-col w-full ${alignClass}`}>

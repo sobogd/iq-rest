@@ -13,15 +13,15 @@ export function FaqLp({ texts }: FaqProps) {
   const wa = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(texts.whatsappPrefill)}`;
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-      <div className="text-center lg:text-start">
+    <div className="flex flex-col gap-10 items-stretch max-w-4xl mx-auto">
+      <div className="text-center flex flex-col items-center">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-3 leading-[1.15]">
           {texts.heading}{" "}
           <span className="bg-gradient-to-br from-primary to-amber-400 bg-clip-text text-transparent">
             {texts.headingAccent}
           </span>
         </h2>
-        <p className="text-base sm:text-lg text-muted-foreground max-w-md mx-auto lg:mx-0 leading-snug mb-5">
+        <p className="text-base sm:text-lg text-muted-foreground max-w-md lg:max-w-2xl mx-auto leading-snug mb-5">
           {texts.sub}
         </p>
         <LinkForward
@@ -36,7 +36,7 @@ export function FaqLp({ texts }: FaqProps) {
         </LinkForward>
       </div>
 
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-3 max-w-2xl mx-auto w-full">
         {texts.items.map(({ q, a }, idx) => (
           <FaqItem key={q} q={q} a={a} position={idx + 1} />
         ))}

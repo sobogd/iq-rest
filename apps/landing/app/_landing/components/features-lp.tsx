@@ -6,14 +6,14 @@ interface FeaturesProps {
 
 export function FeaturesLp({ texts }: FeaturesProps) {
   return (
-    <>
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-3 text-center lg:text-start">
+    <div className="max-w-4xl mx-auto">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-3 text-center">
         {texts.heading}{" "}
         <span className="bg-gradient-to-br from-primary to-amber-400 bg-clip-text text-transparent">
           {texts.headingAccent}
         </span>
       </h2>
-      <p className="text-base sm:text-lg text-muted-foreground mb-10 text-center lg:text-start">{texts.sub}</p>
+      <p className="text-base sm:text-lg text-muted-foreground mb-10 text-center">{texts.sub}</p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-12 items-start">
         {texts.items.map(({ Icon, title, desc }) => (
@@ -28,6 +28,6 @@ export function FeaturesLp({ texts }: FeaturesProps) {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }

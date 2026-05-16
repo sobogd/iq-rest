@@ -17,11 +17,12 @@ interface HeroProps {
 
 export function HeroLp({ texts, ctaText, demoText, microcopy, locale }: HeroProps) {
   return (
-    <section data-section="hero" className="container mx-auto px-4 pt-4 pb-12 sm:pb-16 lg:pt-6">
+    <section data-section="hero" className="container mx-auto px-4 pt-4 pb-12 sm:pb-16 lg:pt-6 min-h-svh flex flex-col">
+      <div className="max-w-4xl mx-auto w-full flex flex-col flex-1">
       <HeroBrandBar locale={locale} />
-      <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.3fr_0.85fr] lg:gap-x-16 lg:gap-y-8 lg:items-center lg:[grid-template-areas:'header_images']">
+      <div className="grid grid-cols-1 gap-10 flex-1 content-center">
         {/* Header — verticals + headline + sub + CTA + rating */}
-        <div className="flex flex-col items-center text-center lg:items-start lg:text-start lg:[grid-area:header]">
+        <div className="flex flex-col items-center text-center">
           {/* Mobile — infinite CSS marquee. The verticals list is rendered
               twice in a row so the translateX(-50%) animation produces a
               seamless loop without JS. mask-image fades the edges so chips
@@ -40,7 +41,7 @@ export function HeroLp({ texts, ctaText, demoText, microcopy, locale }: HeroProp
           </div>
 
           {/* Desktop — static chips grid (unchanged). */}
-          <div className="hidden sm:flex flex-row flex-wrap items-center justify-center lg:justify-start gap-1.5 mb-5 w-full">
+          <div className="hidden sm:flex flex-row flex-wrap items-center justify-center gap-1.5 mb-5 w-full">
             {texts.verticals.map((v) => (
               <span
                 key={v}
@@ -76,7 +77,7 @@ export function HeroLp({ texts, ctaText, demoText, microcopy, locale }: HeroProp
             <CtaButton
               text={ctaText}
               locale={locale}
-              align="center-mobile"
+              align="center"
               trackEvent="land_hero_cta_click"
               stackMobile
               extra={<DemoButton text={demoText} locale={locale} trackEvent="land_hero_demo_open" />}
@@ -88,13 +89,14 @@ export function HeroLp({ texts, ctaText, demoText, microcopy, locale }: HeroProp
         {/* Images — PPC LP drops the under-trio rating row; the `500+
             ristoranti italiani` social proof already lives in the hero
             sub, so a second rating block here is just clutter. */}
-        <div className="order-first lg:order-none w-4/5 sm:w-full max-w-[432px] lg:max-w-[600px] mx-auto px-4 sm:px-2 lg:px-0 lg:[grid-area:images] pt-2 pb-0 lg:py-0 -translate-y-[10px]">
+        <div className="order-first w-4/5 sm:w-full max-w-[432px] lg:max-w-[min(520px,55svh)] mx-auto px-4 sm:px-2 pb-0 -translate-y-[10px] mt-4 lg:-mt-4">
           <div className="relative w-full aspect-[5/4]">
             <MockHome locale={locale} brandName="IQ Rest" className="absolute left-0 bottom-[13%] w-[36%] z-0" />
             <MockMenuText locale={locale} className="absolute right-0 top-[13%] w-[36%] z-0" />
             <MockMenu locale={locale} className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[46%] z-10" />
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

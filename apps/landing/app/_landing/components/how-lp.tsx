@@ -6,8 +6,8 @@ interface HowProps {
 
 export function HowLp({ texts }: HowProps) {
   return (
-    <>
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-3 text-center lg:text-start">
+    <div className="max-w-4xl mx-auto">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-3 text-center">
         {texts.heading}
         {texts.headingAccent ? (
           <>
@@ -18,11 +18,8 @@ export function HowLp({ texts }: HowProps) {
           </>
         ) : null}
       </h2>
-      <p className="text-base sm:text-lg text-muted-foreground mb-10 text-center lg:text-start">{texts.sub}</p>
+      <p className="text-base sm:text-lg text-muted-foreground mb-10 text-center">{texts.sub}</p>
 
-      {/* Mobile — vertical timeline. Numbered dots are connected by a thin
-          line so the four steps read as a sequence rather than a stack of
-          unrelated cards. No card chrome → much more compact. */}
       <ol className="lg:hidden flex flex-col w-fit max-w-full mx-auto">
         {texts.steps.map((s, i) => {
           const isLast = i === texts.steps.length - 1;
@@ -46,21 +43,19 @@ export function HowLp({ texts }: HowProps) {
         })}
       </ol>
 
-      {/* Desktop — original 4-col card grid. */}
-      <div className="hidden lg:grid lg:grid-cols-4 lg:gap-8">
+      <ol className="hidden lg:grid lg:grid-cols-4 lg:gap-6">
         {texts.steps.map((s) => (
-          <div
-            key={s.n}
-            className="bg-muted/20 border border-border rounded-2xl p-6 flex flex-col gap-1.5"
-          >
-            <div className="text-lg font-semibold tracking-tight">
-              <span className="text-primary mr-2">{s.n}.</span>
-              {s.t}
+          <li key={s.n} className="flex gap-3 items-center">
+            <span className="shrink-0 h-8 w-8 rounded-full bg-primary/10 text-primary text-sm font-semibold flex items-center justify-center">
+              {s.n}
+            </span>
+            <div className="min-w-0 flex-1">
+              <div className="text-base font-semibold tracking-tight mb-1">{s.t}</div>
+              <div className="text-sm text-muted-foreground leading-relaxed">{s.d}</div>
             </div>
-            <div className="text-base text-muted-foreground leading-relaxed">{s.d}</div>
-          </div>
+          </li>
         ))}
-      </div>
-    </>
+      </ol>
+    </div>
   );
 }
