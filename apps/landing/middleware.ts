@@ -61,6 +61,35 @@ function setGeoCookies(request: NextRequest, response: NextResponse): void {
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
+  // Region-prompt redirect runs BEFORE every other branch so it covers
+  // bare-locale landings (/it, /es, /ru …), feature pages, and PPC LPs
+  // alike. If the URL locale doesn't match what the visitor's Cloudflare
+  // region suggests we add ?askregion=urlLocale,geoLocale and bounce — the
+  // client-side modal handles dismissal via localStorage. Skip on:
+  //   - param already present (avoid loops)
+  //   - any Google Ads click id present (gclid/gbraid/wbraid) so paid
+  //     landings keep their conversion attribution clean
+  {
+    const urlLocaleMatch = pathname.match(localeRegex);
+    const urlLocale = urlLocaleMatch ? (urlLocaleMatch[1] as Locale) : null;
+    const hasAdsClick =
+      request.nextUrl.searchParams.has("gclid") ||
+      request.nextUrl.searchParams.has("gbraid") ||
+      request.nextUrl.searchParams.has("wbraid");
+    if (
+      urlLocale &&
+      !request.nextUrl.searchParams.has("askregion") &&
+      !hasAdsClick
+    ) {
+      const geoLocale = detectLocaleByCountry(request);
+      if (geoLocale && geoLocale !== urlLocale) {
+        const url = request.nextUrl.clone();
+        url.searchParams.set("askregion", `${urlLocale},${geoLocale}`);
+        return NextResponse.redirect(url, 302);
+      }
+    }
+  }
+
   // Per-locale custom landings replace the locale-routed main page (e.g. /en, /es).
   // Match ONLY the bare locale path so sub-routes like /en/contacts keep going through next-intl.
   const onlyLocaleMatch = pathname.match(/^\/([a-z]{2})$/);
@@ -125,34 +154,6 @@ export default function middleware(request: NextRequest) {
   const demoMatch = pathname.match(new RegExp(`^/(${localePattern})/demo$`));
   if (demoMatch) {
     return NextResponse.redirect("https://love-eatery.iq-rest.com", 301);
-  }
-
-  // Region-prompt redirect — if the URL locale doesn't match what the
-  // visitor's region suggests (e.g. Catalan visitor on /es) we add an
-  // ?askregion=urlLocale,geoLocale param so the client-side modal can
-  // ask which language they want. The modal handles its own
-  // already-dismissed state via localStorage (no cookies on this path).
-  // We skip:
-  //   - if the param is already in the URL (avoid loops)
-  //   - if the URL carries gclid/gbraid/wbraid — Google Ads traffic
-  //     stays on the paid landing for conversion attribution
-  const urlLocaleMatch = pathname.match(localeRegex);
-  const urlLocale = urlLocaleMatch ? (urlLocaleMatch[1] as Locale) : null;
-  const hasAdsClick =
-    request.nextUrl.searchParams.has("gclid") ||
-    request.nextUrl.searchParams.has("gbraid") ||
-    request.nextUrl.searchParams.has("wbraid");
-  if (
-    urlLocale &&
-    !request.nextUrl.searchParams.has("askregion") &&
-    !hasAdsClick
-  ) {
-    const geoLocale = detectLocaleByCountry(request);
-    if (geoLocale && geoLocale !== urlLocale) {
-      const url = request.nextUrl.clone();
-      url.searchParams.set("askregion", `${urlLocale},${geoLocale}`);
-      return NextResponse.redirect(url, 302);
-    }
   }
 
   // Use next-intl middleware for locale handling
