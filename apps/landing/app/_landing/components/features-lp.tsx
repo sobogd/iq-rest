@@ -4,7 +4,7 @@ interface FeaturesProps {
   texts: LandingTexts["features"];
 }
 
-export function Features({ texts }: FeaturesProps) {
+export function FeaturesLp({ texts }: FeaturesProps) {
   return (
     <>
       <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-3 text-center lg:text-start">

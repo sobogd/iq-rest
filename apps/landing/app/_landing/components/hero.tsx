@@ -43,7 +43,7 @@ export function Hero({ texts, ctaText, demoText, microcopy, locale }: HeroProps)
             </div>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.1] mb-4">
+          <h1 className="text-[2rem] sm:text-[2.625rem] lg:text-[3.375rem] font-medium tracking-tight leading-[1.1] mb-4">
             <span className="block whitespace-pre-line sm:whitespace-normal">{texts.headline}</span>
             <RotatingAccent items={texts.dynamicHeadlines} className="block" />
           </h1>

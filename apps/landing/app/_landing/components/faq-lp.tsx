@@ -9,7 +9,7 @@ interface FaqProps {
   texts: LandingTexts["faq"];
 }
 
-export function Faq({ texts }: FaqProps) {
+export function FaqLp({ texts }: FaqProps) {
   const wa = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(texts.whatsappPrefill)}`;
 
   return (

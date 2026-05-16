@@ -59,7 +59,12 @@ export function MockMenu({ locale, className }: Props) {
         <div className="flex-1 overflow-hidden bg-white">
           <div className="flex justify-center px-0">
             <div className="max-w-[440px] w-full space-y-5 pt-0">
-              {groups.map((g, gi) => (
+              {/* Only the first item of the first group is ever visible in
+                  the phone mock — the container is clipped (no scroll), so
+                  rendering every dish forced the browser to fetch ~9 images
+                  for zero visual gain. Slicing to one keeps the mock honest
+                  and drops the network cost. */}
+              {groups.slice(0, 1).map((g, gi) => (
                 <div key={g.id} className="space-y-5">
                   {gi > 0 ? (
                     <h2 className="px-5 pt-8 pb-3">
@@ -68,7 +73,7 @@ export function MockMenu({ locale, className }: Props) {
                       </span>
                     </h2>
                   ) : null}
-                  {g.items.map((item, itemIndex) => {
+                  {g.items.slice(0, 1).map((item, itemIndex) => {
                     const texts = i18n.items[item.id];
                     const name = texts?.name ?? item.id;
                     const description = texts?.description;

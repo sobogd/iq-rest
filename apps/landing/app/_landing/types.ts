@@ -103,6 +103,17 @@ export type LandingTexts = {
     dynamicHeadlines: string[];
     painBullets: string[];
     rating: string;
+    /**
+     * Optional in-headline word swap (PPC LP only). When all four fields
+     * are set, hero-lp renders the H1 as `${prefix}${accentWord}${suffix}`
+     * and after hydration cycles `accentWord` through `accentWordRotation`.
+     * SSR HTML keeps the keyword phrase intact so the Ads crawler scores
+     * landing-page relevance against the original word.
+     */
+    headlinePrefix?: string;
+    accentWord?: string;
+    accentWordRotation?: string[];
+    headlineSuffix?: string;
   };
 
   features: {
@@ -122,6 +133,10 @@ export type LandingTexts = {
 
   how: {
     heading: string;
+    /** Optional accent fragment shown after `heading` with the gradient
+     *  treatment (same as final-cta / pricing / faq). Locales that don't
+     *  set it render a plain single-colour heading. */
+    headingAccent?: string;
     sub: string;
     steps: StepItem[];
   };

@@ -10,7 +10,7 @@ interface FinalCtaProps {
   locale: string;
 }
 
-export function FinalCta({ texts, ctaText, demoText, microcopy, locale }: FinalCtaProps) {
+export function FinalCtaLp({ texts, ctaText, demoText, microcopy, locale }: FinalCtaProps) {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
       <div className="text-center lg:text-start">

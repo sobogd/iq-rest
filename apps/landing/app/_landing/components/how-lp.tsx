@@ -4,7 +4,7 @@ interface HowProps {
   texts: LandingTexts["how"];
 }
 
-export function How({ texts }: HowProps) {
+export function HowLp({ texts }: HowProps) {
   return (
     <>
       <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-3 text-center lg:text-start">

@@ -22,7 +22,7 @@ function slugify(href: string): string {
     .toLowerCase();
 }
 
-export function LandingFooter({
+export function LandingFooterLp({
   texts,
   headerTexts: _headerTexts,
   locale,

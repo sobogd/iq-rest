@@ -3,7 +3,11 @@ export const RESTAURANT = {
   description: "Cocktail bar & cocina",
   accentColor: "#000000",
   currency: "EUR",
-  videoSrc: "https://nbg1.your-objectstorage.com/sobogd/files/restaurants/cmi5yzq5v0000vx0hbjmbks82/1771406329199-k748qy.mp4",
+  /** Local, transcoded preview loop for the phone mockup. webm (vp9) +
+   *  mp4 (h264) fallback — both ~330KB vs the 2.4MB external master. See
+   *  scripts/optimize-mock-video.ts for the encode recipe. */
+  videoWebm: "/landing/mock-bg.webm",
+  videoMp4: "/landing/mock-bg.mp4",
   phone: "+34637621754",
   whatsapp: "+34637621754",
   instagram: "instagram",

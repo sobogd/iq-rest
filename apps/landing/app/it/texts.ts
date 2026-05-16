@@ -50,8 +50,8 @@ export const TEXTS: LandingTexts = {
   },
 
   features: {
-    heading: "Cosa include un menu digitale",
-    headingAccent: "completo.",
+    heading: "Cosa include un menu",
+    headingAccent: "digitale completo.",
     sub: "Tutto quello che serve al tuo ristorante in un'unica piattaforma.",
     items: [
       {
@@ -103,7 +103,8 @@ export const TEXTS: LandingTexts = {
   },
 
   how: {
-    heading: "Crea il tuo menu digitale in meno di 5 minuti",
+    heading: "Crea il tuo menu digitale",
+    headingAccent: "in meno di 5 minuti",
     sub: "Quattro passi brevi. Niente installazioni, niente configurazioni tecniche.",
     steps: [
       { n: "1", t: "Tipo e nome", d: "Scegli il tipo e inserisci il nome." },
@@ -186,8 +187,8 @@ export const TEXTS: LandingTexts = {
   },
 
   scan: {
-    heading: "Hai già un menu cartaceo o PDF?",
-    headingAccent: "L'IA lo trasforma in menu digitale in 60 secondi.",
+    heading: "Da carta a digitale",
+    headingAccent: "in 60 secondi",
     sub: "Carica una foto — l'IA estrae categorie, piatti e prezzi e li importa nel tuo menu digitale.",
     cta: "Scansiona il menù →",
   },

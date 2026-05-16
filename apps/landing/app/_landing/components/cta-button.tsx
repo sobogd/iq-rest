@@ -1,5 +1,3 @@
-"use client";
-
 import { createUrl } from "@/lib/dashboard-url";
 import { LinkForward } from "./link-forward";
 
@@ -8,22 +6,28 @@ const baseClass =
 
 interface CtaButtonProps {
   text: string;
-  microcopy: string;
+  /** Trust line shown under the button (e.g. "14 days free · No card").
+   *  Omit on sections where prices/details above already make it
+   *  redundant — e.g. the pricing block CTA. */
+  microcopy?: string;
   locale: string;
   layout?: "default" | "sticky";
   align?: "start" | "end" | "center-mobile";
   trackEvent?: string;
   extra?: React.ReactNode;
+  /** On mobile, stack the primary CTA and `extra` button vertically. */
+  stackMobile?: boolean;
 }
 
 export function CtaButton({
   text,
-  microcopy,
+  microcopy = "",
   locale,
   layout = "default",
   align = "start",
   trackEvent = "land_cta_click",
   extra,
+  stackMobile = false,
 }: CtaButtonProps) {
   const isSticky = layout === "sticky";
   const target = `${createUrl(locale)}&from=landing`;
@@ -44,17 +48,17 @@ export function CtaButton({
 
   return (
     <div className={`flex flex-col w-full ${alignClass}`}>
-      <div className={`flex flex-row flex-wrap items-center gap-3 ${rowJustify}`}>
+      <div className={`flex ${stackMobile ? "flex-col sm:flex-row items-center" : "flex-row flex-wrap items-center"} gap-3 ${rowJustify}`}>
         <LinkForward
           href={target}
           trackEvent={trackEvent}
-          className={`${baseClass} ${isSticky ? "w-full" : "max-w-[14rem]"}`}
+          className={`${baseClass} ${isSticky ? "w-full" : "w-auto"}`}
         >
           {text}
         </LinkForward>
         {extra}
       </div>
-      {!isSticky && <p className="mt-3 text-sm text-muted-foreground/80">{microcopy}</p>}
+      {!isSticky && microcopy && <p className="mt-3 text-sm text-muted-foreground/80">{microcopy}</p>}
     </div>
   );
 }

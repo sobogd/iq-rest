@@ -65,6 +65,10 @@ const config: Config = {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		keyframes: {
+  			marquee: {
+  				from: { transform: 'translateX(0)' },
+  				to: { transform: 'translateX(-50%)' }
+  			},
   			'accordion-down': {
   				from: {
   					height: '0'
@@ -119,6 +123,7 @@ const config: Config = {
   			}
   		},
   		animation: {
+  			marquee: 'marquee 20s linear infinite',
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out',
   			'orbit-center': 'orbit-center 45s ease-in-out infinite',

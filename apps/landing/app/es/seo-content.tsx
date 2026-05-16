@@ -43,9 +43,8 @@ const COMPARISON_ROWS = [
 
 export function SeoContent() {
   return (
-    <section data-section="seo-content" className="scroll-mt-16 pt-4 sm:pt-6 pb-16">
-      <div className="container mx-auto px-4">
-        <p className="text-xs font-medium uppercase tracking-widest text-primary mb-3 text-center lg:text-start">
+    <>
+      <p className="text-xs font-medium uppercase tracking-widest text-primary mb-3 text-center lg:text-start">
           En profundidad
         </p>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-3 text-center lg:text-start">
@@ -176,7 +175,6 @@ export function SeoContent() {
             y deja al hostelero completamente autónomo.
           </p>
         </div>
-      </div>
-    </section>
+    </>
   );
 }

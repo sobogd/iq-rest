@@ -6,6 +6,7 @@ import { LandingFooter } from "@/app/_landing/components/footer";
 import { LandingHeader } from "@/app/_landing/components/header";
 import { LandingPricing } from "@/app/_landing/components/pricing";
 import { PageTracker } from "@/app/_landing/components/page-tracker";
+import { Section, SectionGroup } from "@/app/_landing/components/section";
 import { JsonLd, createBreadcrumbSchema } from "@/app/_landing/lib/schemas";
 import type { FeatureTexts, LandingTexts } from "@/app/_landing/types";
 
@@ -66,41 +67,36 @@ export function FeaturePage({ texts, chrome, locale, featureId }: FeaturePagePro
         trustLine={texts.hero.trustLine}
       />
 
-      <FeatureSeoBlock
-        description={texts.seo.description}
-        fullDescription={texts.seo.fullDescription}
-        benefits={texts.seo.benefits}
-        benefitsHeading={texts.seo.benefitsHeading}
-      />
-
-      <section
-        id="pricing"
-        data-section="pricing"
-        className="scroll-mt-16 py-8 sm:py-16"
-      >
-        <LandingPricing
-          texts={pricingTexts}
-          ctaText={chrome.ctaText}
-          microcopy={chrome.microcopy}
-          locale={locale}
-        />
-      </section>
-
-      <section
-        id="faq"
-        data-section="faq"
-        className="scroll-mt-16 py-8 sm:py-16"
-      >
-        <Faq texts={faqTexts} />
-      </section>
-
-      <FinalCta
-        texts={texts.finalCta}
-        ctaText={chrome.ctaText}
-        demoText={chrome.demoText}
-        microcopy={chrome.microcopy}
-        locale={locale}
-      />
+      <SectionGroup>
+        <Section dataSection="feature-seo">
+          <FeatureSeoBlock
+            description={texts.seo.description}
+            fullDescription={texts.seo.fullDescription}
+            benefits={texts.seo.benefits}
+            benefitsHeading={texts.seo.benefitsHeading}
+          />
+        </Section>
+        <Section id="pricing" dataSection="pricing">
+          <LandingPricing
+            texts={pricingTexts}
+            ctaText={chrome.ctaText}
+            microcopy={chrome.microcopy}
+            locale={locale}
+          />
+        </Section>
+        <Section id="faq" dataSection="faq">
+          <Faq texts={faqTexts} />
+        </Section>
+        <Section dataSection="final_cta">
+          <FinalCta
+            texts={texts.finalCta}
+            ctaText={chrome.ctaText}
+            demoText={chrome.demoText}
+            microcopy={chrome.microcopy}
+            locale={locale}
+          />
+        </Section>
+      </SectionGroup>
 
       <LandingFooter
         texts={chrome.footer}

@@ -13,16 +13,39 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     ...DEFAULT.hero,
-    // H1 carries the exact phrase keyword for ad-relevance scoring.
-    headline: "Menu digitale per ristoranti.",
-    sub: "Il menu digitale per ristoranti pronto in 5 minuti: QR Code stampabile per i tavoli, ordini diretti senza commissioni e traduzione IA in 35 lingue. Pensato per ristoratori, non per sviluppatori.",
-    dynamicHeadlines: [
-      "Online in 5 minuti.",
-      "QR Code per i tavoli.",
-      "Ordini diretti.",
-      "35 lingue con IA.",
-      "Prenotazioni 24/7.",
+    // SSR fallback — the Ads crawler reads `headline` as the keyword phrase.
+    // Browsers also see this for one frame before the rotator boots, so
+    // hydration matches and there is no flicker on the keyword form.
+    headline: "Menu digitale per ristoranti",
+    sub: "500+ ristoranti italiani servono più tavoli, vendono di più ai turisti e tagliano le commissioni a zero. Online in 5 minuti — 14 giorni gratis.",
+    // Mobile renders these as an infinite-scroll marquee, desktop as a
+    // static row. They advertise what ships with the system, not venue
+    // types — the H1 already covers verticals via the accent-word rotator.
+    verticals: [
+      "Ordini online",
+      "Prenotazioni",
+      "Traduzioni IA",
+      "Scanner menu",
+      "Allergeni",
+      "Design premium",
+      "Analytics",
     ],
+    // Second-line accent disabled — the H1 already swaps the last word.
+    dynamicHeadlines: [],
+    // After hydration the H1 last word cycles through these in order. Order
+    // matches venue popularity in Italy. The first item must equal
+    // `accentWord` so the initial frame keeps the keyword phrase intact.
+    headlinePrefix: "Menu digitale per ",
+    accentWord: "ristoranti",
+    accentWordRotation: [
+      "ristoranti",
+      "pizzerie",
+      "bar",
+      "caffè",
+      "trattorie",
+      "osterie",
+    ],
+    headlineSuffix: "",
   },
 
   founder: {

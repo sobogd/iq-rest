@@ -8,11 +8,16 @@ import { getChrome } from "./chrome-i18n";
 interface Props {
   locale: string;
   className?: string;
+  /** Override the brand title rendered as the hero H1 inside the mockup
+   *  (defaults to RESTAURANT.title). PPC LPs pass "IQ Rest" here to show
+   *  our brand instead of the generic placeholder restaurant name. */
+  brandName?: string;
 }
 
-export function MockHome({ locale, className }: Props) {
+export function MockHome({ locale, className, brandName }: Props) {
   const chrome = getChrome(locale);
   const accent = RESTAURANT.accentColor;
+  const title = brandName ?? RESTAURANT.title;
 
   return (
     <PhoneFrame className={className} notch>
@@ -20,18 +25,20 @@ export function MockHome({ locale, className }: Props) {
         <div className="flex-1 relative overflow-hidden min-h-[50%]">
           <div className="absolute inset-0" style={{ backgroundColor: accent }} />
           <video
-            src={RESTAURANT.videoSrc}
             autoPlay
             muted
             loop
             playsInline
             preload="metadata"
             className="absolute inset-0 w-full h-full object-cover"
-          />
+          >
+            <source src={RESTAURANT.videoWebm} type="video/webm" />
+            <source src={RESTAURANT.videoMp4} type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-black/40 z-[2]" />
           <div className="absolute inset-x-0 top-[30%] z-10 flex justify-center px-[8%]">
             <div className="max-w-[440px] w-full">
-              <h1 className="text-6xl font-black text-white break-words">{RESTAURANT.title}</h1>
+              <h1 className="text-6xl font-black text-white break-words">{title}</h1>
               <p className="text-xl text-white/90 mt-3">{RESTAURANT.description}</p>
             </div>
           </div>

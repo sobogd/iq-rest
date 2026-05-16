@@ -3,10 +3,14 @@
 import { useEffect } from "react";
 import { analytics } from "@/lib/analytics";
 
-const SKIP_SECTIONS = new Set(["scan"]);
-
 const GCLID_REGEX = /^[A-Za-z0-9_-]{1,256}$/;
 const LOCALE_REGEX = /^\/([a-z]{2})(?=\/|$)/;
+
+// Minimum gap between two consecutive view events for the same section.
+// Stops a single slow scroll near the section's edge from firing dozens
+// of events while a real re-visit (scroll away, scroll back) still fires
+// a new one.
+const SECTION_THROTTLE_MS = 1500;
 
 function pageNameFromPathname(pathname: string, locale: string): string {
   const prefix = `/${locale}`;
@@ -38,35 +42,42 @@ function firePageEvent(): void {
 }
 
 interface PageTrackerProps {
+  /** Kept for backwards compatibility with feature pages, no longer used —
+   *  every section view now fires `land_section_view_<name>` so the server
+   *  can reconstruct the full scroll journey via event timestamps. */
   eventPrefix?: string;
 }
 
-export function PageTracker({ eventPrefix = "land_home_section_show_" }: PageTrackerProps = {}) {
+export function PageTracker(_props: PageTrackerProps = {}) {
   useEffect(() => {
     fireGclidAndCleanUrl();
     firePageEvent();
 
-    const seen = new Set<string>();
+    // Re-fires on every viewport (re-)entry so the server timeline shows
+    // the full scroll path — `hero → features → footer → features → ...`.
+    // Throttle per section prevents a slow drag at the boundary from
+    // spamming the same name.
+    const lastFiredAt = new Map<string, number>();
     const observer = new IntersectionObserver(
       (entries) => {
+        const now = Date.now();
         for (const entry of entries) {
           if (!entry.isIntersecting) continue;
           const name = (entry.target as HTMLElement).dataset.section;
-          if (!name || seen.has(name)) continue;
-          seen.add(name);
-          if (!SKIP_SECTIONS.has(name)) {
-            analytics.track(`${eventPrefix}${name}`);
-          }
-          observer.unobserve(entry.target);
+          if (!name) continue;
+          const last = lastFiredAt.get(name) ?? 0;
+          if (now - last < SECTION_THROTTLE_MS) continue;
+          lastFiredAt.set(name, now);
+          analytics.track(`land_section_view_${name}`);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.5 },
     );
 
     document.querySelectorAll("[data-section]").forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
-  }, [eventPrefix]);
+  }, []);
 
   return null;
 }

@@ -31,7 +31,7 @@ function PriceDisplay({ amount, perMonth }: { amount: number; perMonth: string }
   );
 }
 
-export function LandingPricing({ texts, ctaText, microcopy, locale }: LandingPricingProps) {
+export function LandingPricingLp({ texts, ctaText, microcopy, locale }: LandingPricingProps) {
   const plan = pricing.EUR.basic;
   const savings = formatEur(plan.monthly * 12 - plan.yearlyTotal);
   const trialHref = `${createUrl(locale)}&from=landing`;
@@ -49,6 +49,8 @@ export function LandingPricing({ texts, ctaText, microcopy, locale }: LandingPri
             {texts.sub}
           </p>
 
+          {/* Desktop CTA — sits next to the text on lg+. On mobile it moves
+              below the prices (rendered again with lg:hidden further down). */}
           <div className="hidden lg:flex flex-col items-start">
             <LinkForward
               href={trialHref}
@@ -85,6 +87,8 @@ export function LandingPricing({ texts, ctaText, microcopy, locale }: LandingPri
           </div>
         </div>
 
+      {/* Mobile CTA — lives after the prices block so the visitor scans
+          headline → prices → CTA. */}
       <div className="flex lg:hidden flex-col items-center mt-4">
         <LinkForward
           href={trialHref}

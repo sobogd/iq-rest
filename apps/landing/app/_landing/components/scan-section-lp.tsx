@@ -7,7 +7,7 @@ interface ScanSectionProps {
   locale: string;
 }
 
-export function ScanSection({ texts, locale }: ScanSectionProps) {
+export function ScanSectionLp({ texts, locale }: ScanSectionProps) {
   const target = `${createUrl(locale)}&from=landing`;
   return (
     <>

@@ -9,8 +9,8 @@ import { LandingHeader } from "@/app/_landing/components/header";
 import { LandingPricing } from "@/app/_landing/components/pricing";
 import { Hero } from "@/app/_landing/components/hero";
 import { ScanSection } from "@/app/_landing/components/scan-section";
-import { MobileAnchorNav } from "@/app/_landing/components/mobile-anchor-nav";
 import { How } from "@/app/_landing/components/how";
+import { Section, SectionGroup } from "@/app/_landing/components/section";
 import { TEXTS } from "./texts";
 import { SeoContent } from "./seo-content";
 import { JSON_LD_HTML } from "./jsonld";
@@ -54,47 +54,50 @@ export default function LandingPage() {
         dangerouslySetInnerHTML={{ __html: JSON_LD_HTML }}
       />
       <LandingHeader texts={TEXTS.header} locale={LOCALE} useLocalAnchors />
-      <div className="space-y-10 sm:space-y-0">
-        <Hero
-          texts={TEXTS.hero}
-          ctaText={TEXTS.ctaText}
-          demoText={TEXTS.demoText}
-          microcopy={TEXTS.microcopy}
-          locale={LOCALE}
-        />
-        <MobileAnchorNav texts={TEXTS.header} />
-        <section id="scan" data-section="scan" className="scroll-mt-16">
-          <ScanSection texts={TEXTS.scan} locale={LOCALE} />
-        </section>
-        <SeoContent />
-        <section id="features" data-section="features" className="scroll-mt-16">
+      <Hero
+        texts={TEXTS.hero}
+        ctaText={TEXTS.ctaText}
+        demoText={TEXTS.demoText}
+        microcopy={TEXTS.microcopy}
+        locale={LOCALE}
+      />
+      <Section id="scan" dataSection="scan" accent>
+        <ScanSection texts={TEXTS.scan} locale={LOCALE} />
+      </Section>
+      <SectionGroup>
+        <Section dataSection="seo-content">
+          <SeoContent />
+        </Section>
+        <Section id="features" dataSection="features">
           <Features texts={TEXTS.features} />
-        </section>
-        <section id="founder" data-section="founder" className="scroll-mt-16">
+        </Section>
+        <Section id="founder" dataSection="founder">
           <Founder texts={TEXTS.founder} />
-        </section>
-        <section id="how" data-section="how" className="scroll-mt-16">
+        </Section>
+        <Section id="how" dataSection="how">
           <How texts={TEXTS.how} />
-        </section>
-        <section id="pricing" data-section="pricing" className="scroll-mt-16 py-8 sm:py-16">
+        </Section>
+        <Section id="pricing" dataSection="pricing">
           <LandingPricing
             texts={TEXTS.pricing}
             ctaText={TEXTS.ctaText}
             microcopy={TEXTS.microcopy}
             locale={LOCALE}
           />
-        </section>
-        <section id="faq" data-section="faq" className="scroll-mt-16 py-16 bg-muted/20">
+        </Section>
+        <Section id="faq" dataSection="faq">
           <Faq texts={TEXTS.faq} />
-        </section>
-        <FinalCta
-          texts={TEXTS.finalCta}
-          ctaText={TEXTS.ctaText}
-          demoText={TEXTS.demoText}
-          microcopy={TEXTS.microcopy}
-          locale={LOCALE}
-        />
-      </div>
+        </Section>
+        <Section dataSection="final_cta">
+          <FinalCta
+            texts={TEXTS.finalCta}
+            ctaText={TEXTS.ctaText}
+            demoText={TEXTS.demoText}
+            microcopy={TEXTS.microcopy}
+            locale={LOCALE}
+          />
+        </Section>
+      </SectionGroup>
       <LandingFooter texts={TEXTS.footer} headerTexts={TEXTS.header} locale={LOCALE} />
     </main>
   );

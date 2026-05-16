@@ -108,7 +108,8 @@ export const TEXTS: LandingTexts = {
   },
 
   how: {
-    heading: "Crear tu carta digital en 4 pasos",
+    heading: "Crear tu carta digital",
+    headingAccent: "en 4 pasos",
     sub: "Cuatro pasos cortos. Sin instalaciones, sin configuraciones técnicas.",
     steps: [
       { n: "1", t: "Tipo y nombre", d: "Elige el tipo y escribe el nombre." },
@@ -191,8 +192,8 @@ export const TEXTS: LandingTexts = {
   },
 
   scan: {
-    heading: "¿Ya tienes una carta en papel o PDF?",
-    headingAccent: "La IA la convierte en carta digital en 60 segundos.",
+    heading: "De papel a digital",
+    headingAccent: "en 60 segundos",
     sub: "Sube una foto — la IA extrae categorías, platos y precios y los importa directamente al editor.",
     cta: "Escanear mi carta →",
   },

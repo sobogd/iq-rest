@@ -5,7 +5,7 @@ interface FounderProps {
   texts: LandingTexts["founder"];
 }
 
-export function Founder({ texts }: FounderProps) {
+export function FounderLp({ texts }: FounderProps) {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-8 lg:gap-12 items-center max-w-4xl mx-auto">
           <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden flex-shrink-0 mx-auto lg:mx-0">

@@ -20,8 +20,25 @@ function searchReferrerHost(): string | null {
   }
 }
 
+// In dev we do not want clicks/section views from `npm run dev` polluting
+// the prod analytics endpoint. Skip entirely unless either:
+//   - the build is production (deployed), OR
+//   - the developer has explicitly opted into tracking by setting
+//     NEXT_PUBLIC_DASHBOARD_API_BASE (e.g. pointing at a local
+//     dashboard-api on http://localhost:3000) — in which case events go
+//     to that override host instead.
+const TRACKING_ENABLED =
+  process.env.NODE_ENV === "production" ||
+  Boolean(process.env.NEXT_PUBLIC_DASHBOARD_API_BASE);
+
 function track(event: string): void {
   if (typeof window === "undefined") return;
+  if (!TRACKING_ENABLED) {
+    if (typeof console !== "undefined") {
+      console.debug(`[analytics:disabled] ${event}`);
+    }
+    return;
+  }
   let qs = "";
   if (!referrerConsumed) {
     referrerConsumed = true;

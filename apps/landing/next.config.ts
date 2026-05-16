@@ -57,11 +57,15 @@ const nextConfig: NextConfig = {
       { source: "/:locale/changelog/:entry*", destination: "/:locale", permanent: true },
       { source: "/changelog", destination: "/", permanent: true },
       { source: "/changelog/:entry*", destination: "/", permanent: true },
-      // Old KW landing /it/menu-digitale folded into /it (organic). The PPC
-      // variant moved to /it/lp/menu-digitale-per-ristoranti and is noindex
-      // from day one. The old /it/lp/menu-digitale slug 301s to the new
-      // phrase-keyword URL so existing Google Ads clicks keep landing.
+      // Old KW landings /it/menu-digitale, /it/menu-qr-code and
+      // /it/creare-menu-digitale all 301 to /it — SEO weight consolidated on
+      // the locale home. The PPC variant lives at
+      // /it/lp/menu-digitale-per-ristoranti (noindex); the old
+      // /it/lp/menu-digitale slug 301s to the new phrase-keyword URL so
+      // existing Google Ads clicks keep landing.
       { source: "/it/menu-digitale", destination: "/it", permanent: true },
+      { source: "/it/menu-qr-code", destination: "/it", permanent: true },
+      { source: "/it/creare-menu-digitale", destination: "/it", permanent: true },
       { source: "/it/lp/menu-digitale", destination: "/it/lp/menu-digitale-per-ristoranti", permanent: true },
       // Spanish KW landings: /es absorbed /es/carta-digital (SEO weight).
       // /es/menu-digital and /es/qr-carta were dropped — collapse all three
