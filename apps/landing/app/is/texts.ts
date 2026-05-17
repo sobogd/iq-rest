@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     sub: "Smíðað fyrir veitingastaði. Notað við borðið.",
     items: [
       
-      { Icon: ScanLine, title: "Pöntun við borðið", desc: "Pantanir berast samstundis í WhatsApp eða stjórnborðið með borðnúmeri. Hraðari þjónusta.", tag: "Beinar pantanir" },
+      { Icon: QrCode, title: "Pöntun við borðið", desc: "Pantanir berast samstundis í WhatsApp eða stjórnborðið með borðnúmeri. Hraðari þjónusta.", tag: "Beinar pantanir", href: "/is/netpontunarkerfi-veitingastadar" },
       { Icon: Languages, title: "AI þýðandi (35 tungumál)", desc: "Gervigreindin okkar skilur matargerð. Ferðamenn panta 20% meira þegar þeir skilja matseðilinn.", tag: "AI þýðing" },
       { Icon: CalendarCheck, title: "Borðabókanir", desc: "Kerfið tekur við bókunum á meðan þú ert upptekinn í eldhúsinu. Enginn viðskiptavinur tapast.", tag: "Borðapantanir" },
       { Icon: Palette, title: "Nútímaleg hönnun", desc: "Myndbandsbakgrunnar og girnilegar myndir. Matseðillinn lítur út fyrir að vera dýr.", tag: "Eigin hönnun" },
@@ -81,7 +81,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/is/online-orders", label: "Netpantanir" }, { href: "/is/ai-translation", label: "AI þýðing" },
+      { href: "/is/netpontunarkerfi-veitingastadar", label: "Netpöntunarkerfi" }, { href: "/is/ai-translation", label: "AI þýðing" },
       { href: "/is/reservations", label: "Bókanir" }, { href: "/is/mobile-management", label: "Stjórn úr síma" },
       { href: "/is/easy-menu", label: "Matseðilritstjóri" }, { href: "/is/custom-design", label: "Mynd- og myndbandsbakgrunnar" },
       { href: "/is/color-scheme", label: "Vörumerkjalitir" }, { href: "/is/multilingual", label: "Fjöltyngd vefsíða" },
