@@ -68,6 +68,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       fi: "/online-tilausjarjestelma-ravintolalle",
       ga: "/coras-orduithe-ar-line-bialann",
       hr: "/online-sustav-narudzbi-restoran",
+      hu: "/online-rendelesi-rendszer-etterem",
     },
   }
 

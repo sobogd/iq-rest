@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     sub: "Éttermeknek építve. Asztalnál használva.",
     items: [
       
-      { Icon: ScanLine, title: "Rendelés az asztaltól", desc: "A rendelések azonnal megérkeznek WhatsAppon vagy a panelre asztalszámmal együtt. Gyorsabb kiszolgálás.", tag: "Közvetlen rendelések" },
+      { Icon: QrCode, title: "Rendelés az asztaltól", desc: "A rendelések azonnal megérkeznek WhatsAppon vagy a panelre asztalszámmal együtt. Gyorsabb kiszolgálás.", tag: "Közvetlen rendelések", href: "/hu/online-rendelesi-rendszer-etterem" },
       { Icon: Languages, title: "AI fordító (35 nyelv)", desc: "Az AI-nk ért a gasztronómiához. A turisták 20%-kal többet rendelnek, ha értik az ételeket.", tag: "AI fordítás" },
       { Icon: CalendarCheck, title: "Asztalfoglalás", desc: "A rendszer fogadja a foglalásokat, amíg Ön a konyhában van. Nincs több elveszített vendég.", tag: "Foglalások" },
       { Icon: Palette, title: "Modern design", desc: "Videó hátterek és étvágygerjesztő fotók. Az étlapja prémium megjelenést kap.", tag: "Egyedi design" },
@@ -81,7 +81,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/hu/online-orders", label: "Online rendelések" }, { href: "/hu/ai-translation", label: "AI fordítás" },
+      { href: "/hu/online-rendelesi-rendszer-etterem", label: "Online rendelési rendszer" }, { href: "/hu/ai-translation", label: "AI fordítás" },
       { href: "/hu/reservations", label: "Foglalások" }, { href: "/hu/mobile-management", label: "Mobil kezelés" },
       { href: "/hu/easy-menu", label: "Étlap szerkesztő" }, { href: "/hu/custom-design", label: "Videó és fotó hátterek" },
       { href: "/hu/color-scheme", label: "Márka színek" }, { href: "/hu/multilingual", label: "Többnyelvű weboldal" },
