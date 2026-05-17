@@ -19,6 +19,18 @@ function getCountry(request: NextRequest): string | null {
   return request.headers.get("cf-ipcountry");
 }
 
+// Search-engine and social-preview crawlers. We skip the askregion
+// redirect for these so they index the actual URL they requested instead
+// of bouncing through ?askregion=… (which would burn crawl budget and
+// also render a full-screen modal overlay on top of the SSR content
+// when Googlebot executes JS — looks like soft cloaking).
+const BOT_UA_RE = /bot|crawl|spider|slurp|bingpreview|facebookexternalhit|whatsapp|telegrambot|linkedinbot|embedly|quora link preview|outbrain|pinterest|slackbot|vkshare|w3c_validator|baiduspider|yandex|duckduckbot|applebot|petalbot|semrushbot|ahrefsbot|mj12bot|dotbot/i;
+
+function isBot(request: NextRequest): boolean {
+  const ua = request.headers.get("user-agent") || "";
+  return BOT_UA_RE.test(ua);
+}
+
 /**
  * Определяет язык по стране
  * Fallback на английский если страна не определена
@@ -79,7 +91,8 @@ export default function middleware(request: NextRequest) {
     if (
       urlLocale &&
       !request.nextUrl.searchParams.has("askregion") &&
-      !hasAdsClick
+      !hasAdsClick &&
+      !isBot(request)
     ) {
       const geoLocale = detectLocaleByCountry(request);
       if (geoLocale && geoLocale !== urlLocale) {
