@@ -61,6 +61,48 @@ export const LOCALE_SLUG_OVERRIDES: Record<string, Record<string, string>> = {
   // only used by swapLocale to translate between per-locale LP slugs.
   // Locales without an override fall back to /<target> home via the
   // /lp/* branch in swapLocale.
+  // PPC landings for the "QR menu" theme — separate ad groups / keyword
+  // (qr menu) targeting users with higher purchase intent. Same SoftwareApplication
+  // schema, distinct copy that hammers "QR menu" instead of "digital menu" for ad
+  // relevance scoring.
+  "/lp/qr-menu": {
+    en: "/lp/qr-menu-for-restaurants",
+    es: "/lp/menu-qr-para-restaurantes",
+    it: "/lp/menu-qr-per-ristoranti",
+    fr: "/lp/menu-qr-pour-restaurants",
+    de: "/lp/qr-speisekarte-fuer-restaurants",
+    pt: "/lp/menu-qr-para-restaurantes",
+    ru: "/lp/qr-menyu-dlya-restoranov",
+    pl: "/lp/menu-qr-dla-restauracji",
+    nl: "/lp/qr-menu-voor-restaurants",
+    tr: "/lp/restoranlar-icin-qr-menu",
+    ar: "/lp/qaimat-qr-lilmataem",
+    ja: "/lp/restoran-qr-menu",
+    zh: "/lp/restaurant-qr-menu-chinese",
+    ko: "/lp/restaurant-qr-menu-korean",
+    uk: "/lp/qr-menyu-dlya-restoraniv",
+    bg: "/lp/qr-menyu-za-restoranti",
+    ca: "/lp/menu-qr-per-restaurants",
+    cs: "/lp/qr-menu-pro-restaurace",
+    da: "/lp/qr-menu-til-restauranter",
+    el: "/lp/qr-menu-gia-estiatoria",
+    et: "/lp/qr-menuu-restoranidele",
+    fa: "/lp/menooye-qr-baraye-restoranha",
+    fi: "/lp/qr-ruokalista-ravintoloille",
+    ga: "/lp/biachlar-qr-do-bhialanna",
+    hr: "/lp/qr-jelovnik-za-restorane",
+    hu: "/lp/qr-etlap-ettermeknek",
+    is: "/lp/qr-matsedill-fyrir-veitingastadi",
+    lt: "/lp/qr-meniu-restoranams",
+    lv: "/lp/qr-edienkarte-restoraniem",
+    no: "/lp/qr-meny-for-restauranter",
+    ro: "/lp/meniu-qr-pentru-restaurante",
+    sk: "/lp/qr-menu-pre-restauracie",
+    sl: "/lp/qr-jedilnik-za-restavracije",
+    sr: "/lp/qr-meni-za-restorane",
+    sv: "/lp/qr-meny-for-restauranger",
+  },
+
   "/lp/digital-menu": {
     de: "/lp/digitale-speisekarte-fuer-restaurants",
     fr: "/lp/menu-digital-pour-restaurants",
