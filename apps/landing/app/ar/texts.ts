@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     sub: "مصمم للمطاعم. يُستخدم على الطاولة.",
     items: [
       
-      { Icon: ScanLine, title: "الطلب من الطاولة", desc: "تصل الطلبات فوراً إلى WhatsApp أو لوحة التحكم برقم الطاولة. الخدمة أسرع والعملاء يطلبون أكثر.", tag: "طلبات مباشرة" },
+      { Icon: QrCode, title: "نظام طلبات أونلاين على الطاولة", desc: "يمسح الزبون QR الطاولة، يبني الطلب، ويصل إلى لوحي المطبخ أو WhatsApp المطعم. صفر عمولات، مع رقم الطاولة.", tag: "طلبات QR", href: "/ar/nizam-talabat-online-matam" },
       { Icon: Languages, title: "مترجم ذكاء اصطناعي (35 لغة)", desc: "ذكاؤنا الاصطناعي يفهم فن الطهي. يطلب السياح أكثر بنسبة 20% عندما يفهمون محتوى الأطباق.", tag: "ترجمة بالذكاء الاصطناعي" },
       { Icon: CalendarCheck, title: "حجز الطاولات", desc: "النظام يستقبل الحجوزات تلقائياً أثناء انشغالك في المطبخ. لن تفقد أي عميل بعد الآن.", tag: "الحجوزات" },
       { Icon: Palette, title: "تصميم عصري", desc: "خلفيات فيديو وصور جذابة. قائمتك تبدو فاخرة وتفتح الشهية من الشاشة الأولى.", tag: "تصميم مخصص" },
@@ -81,7 +81,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/ar/online-orders", label: "طلبات أونلاين" }, { href: "/ar/ai-translation", label: "ترجمة AI" },
+      { href: "/ar/nizam-talabat-online-matam", label: "نظام طلبات أونلاين" }, { href: "/ar/ai-translation", label: "ترجمة AI" },
       { href: "/ar/reservations", label: "حجوزات" }, { href: "/ar/mobile-management", label: "إدارة من الجوال" },
       { href: "/ar/easy-menu", label: "محرر القائمة" }, { href: "/ar/custom-design", label: "خلفيات فيديو وصور" },
       { href: "/ar/color-scheme", label: "ألوان العلامة" }, { href: "/ar/multilingual", label: "موقع متعدد اللغات" },
