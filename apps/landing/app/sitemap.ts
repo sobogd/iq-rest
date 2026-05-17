@@ -62,6 +62,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ca: "/sistema-de-comandes-online-restaurant",
       cs: "/online-objednavkovy-system-restaurace",
       da: "/online-bestillingssystem-restaurant",
+      el: "/online-systima-paragelion-estiatorio",
     },
   }
 

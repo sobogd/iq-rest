@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     sub: "Φτιαγμένο για εστιατόρια. Χρησιμοποιείται στο τραπέζι.",
     items: [
       
-      { Icon: ScanLine, title: "Παραγγελία από το τραπέζι", desc: "Οι παραγγελίες φτάνουν αμέσως στο WhatsApp ή στο πάνελ με τον αριθμό τραπεζιού. Ταχύτερη εξυπηρέτηση.", tag: "Άμεσες παραγγελίες" },
+      { Icon: QrCode, title: "Παραγγελία από το τραπέζι", desc: "Οι παραγγελίες φτάνουν αμέσως στο WhatsApp ή στο πάνελ με τον αριθμό τραπεζιού. Ταχύτερη εξυπηρέτηση.", tag: "Άμεσες παραγγελίες", href: "/el/online-systima-paragelion-estiatorio" },
       { Icon: Languages, title: "Μετάφραση AI (35 γλώσσες)", desc: "Η AI μας καταλαβαίνει τη γαστρονομία. Οι τουρίστες παραγγέλνουν 20% περισσότερο όταν καταλαβαίνουν το πιάτο.", tag: "Μετάφραση AI" },
       { Icon: CalendarCheck, title: "Κρατήσεις τραπεζιών", desc: "Το σύστημα δέχεται κρατήσεις ενώ είστε στην κουζίνα. Κανένας πελάτης χαμένος.", tag: "Κρατήσεις" },
       { Icon: Palette, title: "Μοντέρνος σχεδιασμός", desc: "Φόντο με βίντεο και ελκυστικές φωτογραφίες. Το μενού σας φαίνεται premium.", tag: "Προσαρμοσμένος σχεδιασμός" },
@@ -81,7 +81,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/el/online-orders", label: "Online παραγγελίες" }, { href: "/el/ai-translation", label: "AI μετάφραση" },
+      { href: "/el/online-systima-paragelion-estiatorio", label: "Online σύστημα παραγγελιών" }, { href: "/el/ai-translation", label: "AI μετάφραση" },
       { href: "/el/reservations", label: "Κρατήσεις" }, { href: "/el/mobile-management", label: "Διαχείριση από κινητό" },
       { href: "/el/easy-menu", label: "Editor μενού" }, { href: "/el/custom-design", label: "Φόντα βίντεο και φωτογραφίες" },
       { href: "/el/color-scheme", label: "Χρώματα brand" }, { href: "/el/multilingual", label: "Πολύγλωσση ιστοσελίδα" },
