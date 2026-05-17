@@ -74,6 +74,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lv: "/tiessaistes-pasutijumu-sistema-restoranam",
       no: "/online-bestillingssystem-restaurant",
       ro: "/sistem-comenzi-online-restaurant",
+      sk: "/online-objednavkovy-system-restauracia",
     },
   }
 

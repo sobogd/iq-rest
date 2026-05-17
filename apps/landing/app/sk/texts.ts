@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     sub: "Postavené pre reštaurácie. Používa sa pri stole.",
     items: [
       
-      { Icon: ScanLine, title: "Objednávky od stola", desc: "Objednávky okamžite prichádzajú do WhatsAppu alebo panelu s číslom stola. Obsluha je rýchlejšia.", tag: "Priame objednávky" },
+      { Icon: QrCode, title: "Objednávky od stola", desc: "Objednávky okamžite prichádzajú do WhatsAppu alebo panelu s číslom stola. Obsluha je rýchlejšia.", tag: "Priame objednávky", href: "/sk/online-objednavkovy-system-restauracia" },
       { Icon: Languages, title: "AI prekladač (35 jazykov)", desc: "Naša AI rozumie gastronómii. Turisti objednávajú o 20 % viac, keď rozumejú zloženiu jedál.", tag: "AI preklad" },
       { Icon: CalendarCheck, title: "Rezervácia stolov", desc: "Systém sám prijíma rezervácie, kým ste v kuchyni. Žiaden stratený zákazník.", tag: "Rezervácie" },
       { Icon: Palette, title: "Moderný dizajn", desc: "Video pozadia a lákavé fotky. Vaše menu vyzerá luxusne a vzbudzuje chuť do jedla.", tag: "Vlastný dizajn" },
@@ -81,7 +81,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/sk/online-orders", label: "Online objednávky" }, { href: "/sk/ai-translation", label: "AI preklad" },
+      { href: "/sk/online-objednavkovy-system-restauracia", label: "Online objednávkový systém" }, { href: "/sk/ai-translation", label: "AI preklad" },
       { href: "/sk/reservations", label: "Rezervácie" }, { href: "/sk/mobile-management", label: "Správa z mobilu" },
       { href: "/sk/easy-menu", label: "Editor lístka" }, { href: "/sk/custom-design", label: "Video a foto pozadia" },
       { href: "/sk/color-scheme", label: "Farby značky" }, { href: "/sk/multilingual", label: "Viacjazyčný web" },
