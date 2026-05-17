@@ -12,7 +12,7 @@ export const TEXTS: LandingTexts = {
   },
   ctaText: "Kokeile ilmaiseksi",
   demoText: "Katso demo", microcopy: "14 päivää ilmaiseksi · Ei korttia · Peruuta milloin haluat",
-  header: { navFeatures: "Ominaisuudet", navHow: "Näin se toimii", navPricing: "Hinnat", navFaq: "FAQ", signIn: "Kirjaudu", cta: "Kokeile ilmaiseksi" },
+  header: { navFeatures: "Ominaisuudet", navHow: "Näin se toimii", navPricing: "Hinnat", navFaq: "FAQ", signIn: "Kirjaudu", cta: "Aloita" },
   hero: {
     verticals: ["Ravintolat", "Kahvilat", "Baarit", "Hotellit", "Pizzeriat"],
     headline: "QR-menu 5 minuutissa.",

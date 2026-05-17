@@ -12,7 +12,7 @@ export const TEXTS: LandingTexts = {
   },
   ctaText: "Proovi tasuta",
   demoText: "Vaata demo", microcopy: "14 päeva tasuta · Ilma kaardita · Tühista millal soovid",
-  header: { navFeatures: "Funktsioonid", navHow: "Kuidas töötab", navPricing: "Hinnad", navFaq: "FAQ", signIn: "Logi sisse", cta: "Proovi tasuta" },
+  header: { navFeatures: "Funktsioonid", navHow: "Kuidas töötab", navPricing: "Hinnad", navFaq: "FAQ", signIn: "Logi sisse", cta: "Alusta" },
   hero: {
     verticals: ["Restoranid", "Kohvikud", "Baarid", "Hotellid", "Pitsabaarid"],
     headline: "QR-menüü 5 minutiga.",

@@ -13,7 +13,7 @@ export const TEXTS: LandingTexts = {
   ctaText: "Prova gratis",
   demoText: "Se live-demo",
   microcopy: "14 dagar gratis · Inget kort · Avsluta när du vill",
-  header: { navFeatures: "Funktioner", navHow: "Så funkar det", navPricing: "Priser", navFaq: "FAQ", signIn: "Logga in", cta: "Prova gratis" },
+  header: { navFeatures: "Funktioner", navHow: "Så funkar det", navPricing: "Priser", navFaq: "FAQ", signIn: "Logga in", cta: "Starta" },
   hero: {
     verticals: ["Restauranger", "Caféer", "Barer", "Hotell", "Pizzerior"],
     headline: "QR-meny på 5 minuter.",

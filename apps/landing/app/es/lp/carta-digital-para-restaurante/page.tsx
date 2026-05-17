@@ -60,7 +60,7 @@ export default function CartaDigitalLpLanding() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON_LD_HTML }}
       />
-      <LandingHeaderLp texts={TEXTS.header} locale={LOCALE} useLocalAnchors hideSignIn />
+      <LandingHeaderLp texts={TEXTS.header} locale={LOCALE} useLocalAnchors />
       <HeroLp
         texts={TEXTS.hero}
         ctaText={TEXTS.ctaText}

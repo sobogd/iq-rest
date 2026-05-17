@@ -18,7 +18,7 @@ export const TEXTS: LandingTexts = {
   demoText: "Подивитися демо",
   microcopy: "14 днів безкоштовно · Без картки · Скасування в один клік",
 
-  header: { navFeatures: "Функції", navHow: "Як це працює", navPricing: "Ціни", navFaq: "FAQ", signIn: "Увійти", cta: "Спробувати безкоштовно" },
+  header: { navFeatures: "Функції", navHow: "Як це працює", navPricing: "Ціни", navFaq: "FAQ", signIn: "Увійти", cta: "Почати" },
 
   hero: {
     verticals: ["Ресторани", "Кав'ярні", "Бари", "Готелі", "Піцерії"],

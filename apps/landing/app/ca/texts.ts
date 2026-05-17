@@ -12,7 +12,7 @@ export const TEXTS: LandingTexts = {
   },
   ctaText: "Prova-ho gratis",
   demoText: "Veure demo en directe", microcopy: "14 dies gratis · Sense targeta · Cancel·la quan vulguis",
-  header: { navFeatures: "Funcions", navHow: "Com funciona", navPricing: "Preus", navFaq: "FAQ", signIn: "Entrar", cta: "Prova-ho gratis" },
+  header: { navFeatures: "Funcions", navHow: "Com funciona", navPricing: "Preus", navFaq: "FAQ", signIn: "Entrar", cta: "Comença" },
   hero: {
     verticals: ["Restaurants", "Cafeteries", "Bars", "Hotels", "Pizzeries"],
     headline: "Carta QR en 5 minuts.",

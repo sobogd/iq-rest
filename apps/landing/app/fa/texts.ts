@@ -12,7 +12,7 @@ export const TEXTS: LandingTexts = {
   },
   ctaText: "رایگان امتحان کنید",
   demoText: "دیدن دموی زنده", microcopy: "۱۴ روز رایگان · بدون کارت · هر زمان لغو کن",
-  header: { navFeatures: "امکانات", navHow: "چطور کار می‌کند", navPricing: "قیمت", navFaq: "سوالات", signIn: "ورود", cta: "رایگان امتحان کنید" },
+  header: { navFeatures: "امکانات", navHow: "چطور کار می‌کند", navPricing: "قیمت", navFaq: "سوالات", signIn: "ورود", cta: "شروع" },
   hero: {
     verticals: ["رستوران‌ها", "کافه‌ها", "بارها", "هتل‌ها", "پیتزافروشی‌ها"],
     headline: "منوی QR در ۵ دقیقه.",

@@ -12,7 +12,7 @@ export const TEXTS: LandingTexts = {
   },
   ctaText: "Skúsiť zadarmo",
   demoText: "Pozri si live demo", microcopy: "14 dní zadarmo · Bez karty · Zruš kedykoľvek",
-  header: { navFeatures: "Funkcie", navHow: "Ako to funguje", navPricing: "Ceny", navFaq: "FAQ", signIn: "Prihlásiť", cta: "Skúsiť zadarmo" },
+  header: { navFeatures: "Funkcie", navHow: "Ako to funguje", navPricing: "Ceny", navFaq: "FAQ", signIn: "Prihlásiť", cta: "Začať" },
   hero: {
     verticals: ["Reštaurácie", "Kaviarne", "Bary", "Hotely", "Pizzerie"],
     headline: "QR menu za 5 minút.",

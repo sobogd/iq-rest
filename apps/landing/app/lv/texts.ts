@@ -12,7 +12,7 @@ export const TEXTS: LandingTexts = {
   },
   ctaText: "Izmēģināt bez maksas",
   demoText: "Skatīt demo", microcopy: "14 dienas bez maksas · Bez kartes · Atcelties jebkurā brīdī",
-  header: { navFeatures: "Funkcijas", navHow: "Kā tas darbojas", navPricing: "Cenas", navFaq: "FAQ", signIn: "Pieslēgties", cta: "Izmēģināt bez maksas" },
+  header: { navFeatures: "Funkcijas", navHow: "Kā tas darbojas", navPricing: "Cenas", navFaq: "FAQ", signIn: "Pieslēgties", cta: "Sākt" },
   hero: {
     verticals: ["Restorāni", "Kafejnīcas", "Bāri", "Viesnīcas", "Picērijas"],
     headline: "QR ēdienkarte 5 minūtēs.",

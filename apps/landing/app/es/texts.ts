@@ -32,7 +32,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "Precios",
     navFaq: "FAQ",
     signIn: "Entrar",
-    cta: "Prueba gratis",
+    cta: "Empezar",
   },
 
   hero: {

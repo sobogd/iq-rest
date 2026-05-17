@@ -12,7 +12,7 @@ export const TEXTS: LandingTexts = {
   },
   ctaText: "Prófa frítt",
   demoText: "Sjá kynningu", microcopy: "14 dagar ókeypis · Ekkert kort · Hættu hvenær sem er",
-  header: { navFeatures: "Eiginleikar", navHow: "Hvernig það virkar", navPricing: "Verð", navFaq: "FAQ", signIn: "Innskráning", cta: "Prófa frítt" },
+  header: { navFeatures: "Eiginleikar", navHow: "Hvernig það virkar", navPricing: "Verð", navFaq: "FAQ", signIn: "Innskráning", cta: "Byrja" },
   hero: {
     verticals: ["Veitingastaðir", "Kaffihús", "Barir", "Hótel", "Pizzustaðir"],
     headline: "QR matseðill á 5 mínútum.",

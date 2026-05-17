@@ -12,7 +12,7 @@ export const TEXTS: LandingTexts = {
   },
   ctaText: "Încearcă gratuit",
   demoText: "Vezi demo live", microcopy: "14 zile gratis · Fără card · Anulezi când vrei",
-  header: { navFeatures: "Funcții", navHow: "Cum funcționează", navPricing: "Prețuri", navFaq: "Întrebări", signIn: "Conectare", cta: "Încearcă gratuit" },
+  header: { navFeatures: "Funcții", navHow: "Cum funcționează", navPricing: "Prețuri", navFaq: "Întrebări", signIn: "Conectare", cta: "Începe" },
   hero: {
     verticals: ["Restaurante", "Cafenele", "Baruri", "Hoteluri", "Pizzerii"],
     headline: "Meniu QR în 5 minute.",

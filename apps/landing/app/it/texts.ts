@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "Prezzi",
     navFaq: "FAQ",
     signIn: "Accedi",
-    cta: "Crea il menu digitale",
+    cta: "Inizia",
   },
 
   hero: {

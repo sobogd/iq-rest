@@ -12,7 +12,7 @@ export const TEXTS: LandingTexts = {
   },
   ctaText: "Δωρεάν δοκιμή",
   demoText: "Δες live demo", microcopy: "14 ημέρες δωρεάν · Χωρίς κάρτα · Ακύρωση όποτε θέλεις",
-  header: { navFeatures: "Λειτουργίες", navHow: "Πώς λειτουργεί", navPricing: "Τιμές", navFaq: "FAQ", signIn: "Σύνδεση", cta: "Δωρεάν δοκιμή" },
+  header: { navFeatures: "Λειτουργίες", navHow: "Πώς λειτουργεί", navPricing: "Τιμές", navFaq: "FAQ", signIn: "Σύνδεση", cta: "Έναρξη" },
   hero: {
     verticals: ["Εστιατόρια", "Καφέ", "Μπαρ", "Ξενοδοχεία", "Πιτσαρίες"],
     headline: "QR μενού σε 5 λεπτά.",

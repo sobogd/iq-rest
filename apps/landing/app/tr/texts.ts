@@ -12,7 +12,7 @@ export const TEXTS: LandingTexts = {
   },
   ctaText: "Ücretsiz dene",
   demoText: "Canlı demoyu gör", microcopy: "14 gün ücretsiz · Kart gerekmez · İstediğin zaman iptal",
-  header: { navFeatures: "Özellikler", navHow: "Nasıl çalışır", navPricing: "Fiyatlar", navFaq: "SSS", signIn: "Giriş", cta: "Ücretsiz dene" },
+  header: { navFeatures: "Özellikler", navHow: "Nasıl çalışır", navPricing: "Fiyatlar", navFaq: "SSS", signIn: "Giriş", cta: "Başla" },
   hero: {
     verticals: ["Restoranlar", "Kafeler", "Barlar", "Oteller", "Pizzacılar"],
     headline: "5 dakikada QR Menü.",

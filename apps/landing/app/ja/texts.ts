@@ -12,7 +12,7 @@ export const TEXTS: LandingTexts = {
   },
   ctaText: "無料で試す",
   demoText: "ライブデモを見る", microcopy: "14日間無料 · カード不要 · いつでも解約",
-  header: { navFeatures: "機能", navHow: "使い方", navPricing: "料金", navFaq: "FAQ", signIn: "ログイン", cta: "無料で試す" },
+  header: { navFeatures: "機能", navHow: "使い方", navPricing: "料金", navFaq: "FAQ", signIn: "ログイン", cta: "始める" },
   hero: {
     verticals: ["レストラン", "カフェ", "バー", "ホテル", "ピザ店"],
     headline: "5分でQRメニュー作成。",

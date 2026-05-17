@@ -12,7 +12,7 @@ export const TEXTS: LandingTexts = {
   },
   ctaText: "Probaj besplatno",
   demoText: "Pogledaj demo", microcopy: "14 dana besplatno · Bez kartice · Otkaži kad god želiš",
-  header: { navFeatures: "Funkcije", navHow: "Kako radi", navPricing: "Cene", navFaq: "FAQ", signIn: "Prijava", cta: "Probaj besplatno" },
+  header: { navFeatures: "Funkcije", navHow: "Kako radi", navPricing: "Cene", navFaq: "FAQ", signIn: "Prijava", cta: "Počni" },
   hero: {
     verticals: ["Restorani", "Kafići", "Barovi", "Hoteli", "Picerije"],
     headline: "QR jelovnik za 5 minuta.",

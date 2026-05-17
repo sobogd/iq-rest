@@ -12,7 +12,7 @@ export const TEXTS: LandingTexts = {
   },
   ctaText: "Išbandyti nemokamai",
   demoText: "Žiūrėti demo", microcopy: "14 dienų nemokamai · Be kortelės · Atšauk bet kada",
-  header: { navFeatures: "Funkcijos", navHow: "Kaip tai veikia", navPricing: "Kainos", navFaq: "FAQ", signIn: "Prisijungti", cta: "Išbandyti nemokamai" },
+  header: { navFeatures: "Funkcijos", navHow: "Kaip tai veikia", navPricing: "Kainos", navFaq: "FAQ", signIn: "Prisijungti", cta: "Pradėti" },
   hero: {
     verticals: ["Restoranai", "Kavinės", "Barai", "Viešbučiai", "Picerijos"],
     headline: "QR meniu per 5 minutes.",

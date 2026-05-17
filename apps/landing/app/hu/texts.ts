@@ -12,7 +12,7 @@ export const TEXTS: LandingTexts = {
   },
   ctaText: "Próbálja ki ingyen",
   demoText: "Élő demó", microcopy: "14 nap ingyen · Kártya nélkül · Bármikor lemondod",
-  header: { navFeatures: "Funkciók", navHow: "Hogy működik", navPricing: "Árak", navFaq: "GYIK", signIn: "Belépés", cta: "Próbálja ki ingyen" },
+  header: { navFeatures: "Funkciók", navHow: "Hogy működik", navPricing: "Árak", navFaq: "GYIK", signIn: "Belépés", cta: "Kezdjük" },
   hero: {
     verticals: ["Éttermek", "Kávézók", "Bárok", "Hotelek", "Pizzériák"],
     headline: "QR étlap 5 perc alatt.",

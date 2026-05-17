@@ -12,7 +12,7 @@ export const TEXTS: LandingTexts = {
   },
   ctaText: "무료 체험하기",
   demoText: "라이브 데모 보기", microcopy: "14일 무료 · 카드 불필요 · 언제든 취소",
-  header: { navFeatures: "기능", navHow: "사용법", navPricing: "가격", navFaq: "FAQ", signIn: "로그인", cta: "무료 체험하기" },
+  header: { navFeatures: "기능", navHow: "사용법", navPricing: "가격", navFaq: "FAQ", signIn: "로그인", cta: "시작" },
   hero: {
     verticals: ["레스토랑", "카페", "바", "호텔", "피자집"],
     headline: "5분 만에 QR 메뉴 완성.",

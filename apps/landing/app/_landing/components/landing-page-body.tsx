@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import { loginUrl } from "@/lib/dashboard-url";
 import type { LandingTexts } from "../types";
 import { FaqLp } from "./faq-lp";
 import { FeaturesLp } from "./features-lp";
@@ -30,7 +29,6 @@ interface LandingPageBodyProps {
 // only metadata, locale + texts, and optional SEO/JSON-LD slots live in
 // the page file.
 export function LandingPageBody({ texts, locale, seoContent, jsonLdHtml }: LandingPageBodyProps) {
-  const signinHref = `${loginUrl(locale)}?from=landing`;
   return (
     <main className="relative">
       <PageTracker />
@@ -44,8 +42,6 @@ export function LandingPageBody({ texts, locale, seoContent, jsonLdHtml }: Landi
         demoText={texts.demoText}
         microcopy={texts.microcopy}
         locale={locale}
-        signinHref={signinHref}
-        signinLabel={texts.header.signIn}
       />
       <Section id="scan" dataSection="scan" accent>
         <ScanSectionLp texts={texts.scan} locale={locale} />

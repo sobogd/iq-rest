@@ -12,7 +12,7 @@ export const TEXTS: LandingTexts = {
   },
   ctaText: "Bain triail as",
   demoText: "Féach ar an taispeántas", microcopy: "14 lá saor in aisce · Gan chárta · Cealaigh am ar bith",
-  header: { navFeatures: "Gnéithe", navHow: "Conas a oibríonn sé", navPricing: "Praghsanna", navFaq: "FAQ", signIn: "Logáil isteach", cta: "Bain triail as" },
+  header: { navFeatures: "Gnéithe", navHow: "Conas a oibríonn sé", navPricing: "Praghsanna", navFaq: "FAQ", signIn: "Logáil isteach", cta: "Tosaigh" },
   hero: {
     verticals: ["Bialanna", "Caiféanna", "Beáir", "Óstáin", "Pizzerias"],
     headline: "Rochlár QR i 5 nóiméad.",
