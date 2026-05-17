@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     sub: "Restoranlar için yapıldı. Masada kullanılır.",
     items: [
       
-      { Icon: ScanLine, title: "Masadan Sipariş", desc: "Siparişler masa numarasıyla birlikte anında WhatsApp'a veya panele düşer. Daha hızlı servis.", tag: "Doğrudan sipariş" },
+      { Icon: QrCode, title: "Masada QR sipariş sistemi", desc: "Misafir masanın QR'ını okuyor, siparişi hazırlıyor, mutfak tabletinize veya WhatsApp'a doğrudan geliyor. Sıfır komisyon, masa numarası dahil.", tag: "QR sipariş", href: "/tr/restoran-online-siparis-sistemi" },
       { Icon: Languages, title: "AI Çevirmen (35 Dil)", desc: "Yapay zekamız gastronomiden anlar. Turistler menüyü anladıklarında %20 daha fazla sipariş verir.", tag: "AI çevirisi" },
       { Icon: CalendarCheck, title: "Masa Rezervasyonu", desc: "Siz mutfakta meşgulken sistem rezervasyonları kabul eder. Hiçbir müşteriyi kaçırmazsınız.", tag: "Rezervasyonlar" },
       { Icon: Palette, title: "Modern Tasarım", desc: "Video arka planlar ve iştah açıcı görseller. Menünüz premium görünür ve siparişi tetikler.", tag: "Özel tasarım" },
@@ -81,7 +81,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/tr/online-orders", label: "Online siparişler" }, { href: "/tr/ai-translation", label: "AI çeviri" },
+      { href: "/tr/restoran-online-siparis-sistemi", label: "Online sipariş sistemi" }, { href: "/tr/ai-translation", label: "AI çeviri" },
       { href: "/tr/reservations", label: "Rezervasyonlar" }, { href: "/tr/mobile-management", label: "Mobil yönetim" },
       { href: "/tr/easy-menu", label: "Menü editörü" }, { href: "/tr/custom-design", label: "Video ve foto arka planlar" },
       { href: "/tr/color-scheme", label: "Marka renkleri" }, { href: "/tr/multilingual", label: "Çok dilli site" },

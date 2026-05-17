@@ -54,6 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       nl: "/online-bestelsysteem-voor-restaurants",
       ja: "/qr-order-system-restaurant",
       zh: "/qr-ordering-system-restaurant",
+      tr: "/restoran-online-siparis-sistemi",
     },
   }
 
