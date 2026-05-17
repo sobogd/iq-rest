@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     sub: "Veidots restorāniem. Lietots pie galda.",
     items: [
       
-      { Icon: ScanLine, title: "Pasūtīšana no galdiņa", desc: "Pasūtījumi uzreiz nonāk WhatsApp vai panelī ar galdiņa numuru. Ātrāka apkalpošana.", tag: "Tiešie pasūtījumi" },
+      { Icon: QrCode, title: "Pasūtīšana no galdiņa", desc: "Pasūtījumi uzreiz nonāk WhatsApp vai panelī ar galdiņa numuru. Ātrāka apkalpošana.", tag: "Tiešie pasūtījumi", href: "/lv/tiessaistes-pasutijumu-sistema-restoranam" },
       { Icon: Languages, title: "AI tulkotājs (35 valodas)", desc: "Mūsu AI pārzina gastronomiju. Tūristi pasūta par 20% vairāk, kad saprot ēdienu sastāvu.", tag: "AI tulkojums" },
       { Icon: CalendarCheck, title: "Galdiņu rezervēšana", desc: "Sistēma pati pieņem rezervācijas, kamēr jūs esat virtuvē. Neviens pazaudēts klients.", tag: "Rezervācijas" },
       { Icon: Palette, title: "Moderns dizains", desc: "Video foni un kārdinošas foto. Jūsu ēdienkarte izskatās dārgi un rosina apetīti.", tag: "Pielāgots dizains" },
@@ -81,7 +81,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/lv/online-orders", label: "Tiešsaistes pasūtījumi" }, { href: "/lv/ai-translation", label: "AI tulkojums" },
+      { href: "/lv/tiessaistes-pasutijumu-sistema-restoranam", label: "Tiešsaistes pasūtījumu sistēma" }, { href: "/lv/ai-translation", label: "AI tulkojums" },
       { href: "/lv/reservations", label: "Rezervācijas" }, { href: "/lv/mobile-management", label: "Mobilā pārvaldība" },
       { href: "/lv/easy-menu", label: "Ēdienkartes redaktors" }, { href: "/lv/custom-design", label: "Video un foto foni" },
       { href: "/lv/color-scheme", label: "Zīmola krāsas" }, { href: "/lv/multilingual", label: "Daudzvalodu vietne" },

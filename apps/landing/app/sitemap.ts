@@ -71,6 +71,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       hu: "/online-rendelesi-rendszer-etterem",
       is: "/netpontunarkerfi-veitingastadar",
       lt: "/internetine-uzsakymu-sistema-restoranui",
+      lv: "/tiessaistes-pasutijumu-sistema-restoranam",
     },
   }
 
