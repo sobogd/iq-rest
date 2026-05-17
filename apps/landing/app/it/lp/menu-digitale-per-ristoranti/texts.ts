@@ -1,11 +1,13 @@
 import type { LandingTexts } from "@/app/_landing/types";
 import { TEXTS as DEFAULT } from "../../texts";
 
-// PPC variant of /it, tuned for the PHRASE keyword "menu digitale per
-// ristoranti". Inherits content from the indexed /it page and only
-// overrides what should differ for the Google Ads landing: meta
-// (canonical + og), microcopy with entry price, and hero/founder/faq
-// copy that hammers the exact phrase for ad relevance scoring.
+// PPC variant of /it, tuned for the PHRASE keyword cluster
+// "menu digitale / menu digitale per ristoranti / menu digitale
+// ristorante / menu digitale ristoranti". Inherits content from the
+// indexed /it page and only overrides what should differ for the
+// Google Ads landing: meta (canonical + og), microcopy with entry
+// price, and hero/founder/faq copy that hammers "menu digitale"
+// (both singular and plural ristorante form) for ad relevance scoring.
 export const TEXTS: LandingTexts = {
   ...DEFAULT,
 
@@ -17,7 +19,7 @@ export const TEXTS: LandingTexts = {
     // Browsers also see this for one frame before the rotator boots, so
     // hydration matches and there is no flicker on the keyword form.
     headline: "Menu digitale per ristoranti",
-    sub: "500+ ristoranti italiani servono più tavoli, vendono di più ai turisti e tagliano le commissioni a zero. Online in 5 minuti — 14 giorni gratis.",
+    sub: "500+ ristoranti italiani usano il menu digitale di IQ Rest per servire più tavoli, vendere di più ai turisti e tagliare le commissioni a zero. Online in 5 minuti — 14 giorni gratis.",
     // Mobile renders these as an infinite-scroll marquee, desktop as a
     // static row. They advertise what ships with the system, not venue
     // types — the H1 already covers verticals via the accent-word rotator.
@@ -39,6 +41,7 @@ export const TEXTS: LandingTexts = {
     accentWord: "ristoranti",
     accentWordRotation: [
       "ristoranti",
+      "il tuo ristorante",
       "pizzerie",
       "bar",
       "caffè",
@@ -66,11 +69,15 @@ export const TEXTS: LandingTexts = {
     items: [
       {
         q: "Cos'è un menu digitale per ristoranti?",
-        a: "Un menu digitale per ristoranti è la versione online della carta cartacea: il cliente inquadra un QR Code sul tavolo con la fotocamera e accede subito a piatti, foto, allergeni e prezzi nel browser, senza scaricare app. Con IQ Rest il menu digitale per ristoranti include anche ordini diretti al tavolo, prenotazioni 24/7 e traduzione IA in 35 lingue — aggiorni tutto dal telefono in tempo reale.",
+        a: "Un menu digitale per ristoranti è la versione online della carta cartacea: il cliente inquadra un QR Code sul tavolo con la fotocamera e accede subito a piatti, foto, allergeni e prezzi nel browser, senza scaricare app. Con IQ Rest il menu digitale ristorante include anche ordini diretti al tavolo, prenotazioni 24/7 e traduzione IA in 35 lingue — aggiorni tutto dal telefono in tempo reale.",
       },
       {
-        q: "Quanto costa un menu digitale per ristoranti?",
-        a: "6,90€/mese tutto incluso (sconto sul piano annuale). Editor completo, QR Code illimitato, ordini diretti senza commissioni, traduzione IA in 35 lingue, prenotazioni e analytics. 14 giorni di prova gratuita, senza carta.",
+        q: "Quanto costa un menu digitale per il ristorante?",
+        a: "6,90€/mese tutto incluso (sconto sul piano annuale). Editor completo del menu digitale, QR Code illimitato, ordini diretti senza commissioni, traduzione IA in 35 lingue, prenotazioni e analytics. 14 giorni di prova gratuita, senza carta.",
+      },
+      {
+        q: "Come creo il menu digitale del mio ristorante?",
+        a: "Apri l'editor dal telefono, incolli i piatti (o scansioni il menu cartaceo con l'OCR), scegli un design e stampi i QR Code per i tavoli. Pronto in 5 minuti, senza sviluppatori. Il menu digitale è subito online e si aggiorna in tempo reale.",
       },
       ...DEFAULT.faq.items,
     ],
@@ -86,7 +93,7 @@ export const TEXTS: LandingTexts = {
   meta: {
     title: "Menu Digitale per Ristoranti — Pronto in 5 Min | IQ Rest",
     description:
-      "Menu digitale per ristoranti: QR Code stampabile, ordini diretti senza commissioni, traduzione IA in 35 lingue. Pronto in 5 minuti, 14 giorni gratis.",
+      "Menu digitale per il tuo ristorante: QR Code stampabile, ordini diretti senza commissioni, traduzione IA in 35 lingue. Pronto in 5 minuti, 14 giorni gratis.",
     canonical: "https://iq-rest.com/it/lp/menu-digitale-per-ristoranti",
     ogLocale: "it_IT",
     ogTitle: "Menu Digitale per Ristoranti — Pronto in 5 Minuti",
