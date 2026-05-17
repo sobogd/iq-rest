@@ -92,7 +92,7 @@ export function HeroLp({ texts, ctaText, demoText, microcopy, locale, signinHref
         {/* Images — PPC LP drops the under-trio rating row; the `500+
             ristoranti italiani` social proof already lives in the hero
             sub, so a second rating block here is just clutter. */}
-        <div className="order-first w-4/5 sm:w-full max-w-[432px] lg:max-w-[min(520px,55svh)] mx-auto px-4 sm:px-2 pb-0 -translate-y-[10px] mt-4 lg:-mt-4">
+        <div className="w-4/5 sm:w-full max-w-[432px] lg:max-w-[min(520px,55svh)] mx-auto px-4 sm:px-2 pb-0 -translate-y-[10px] mt-4 lg:-mt-4">
           <div className="relative w-full aspect-[5/4]">
             <MockHome locale={locale} brandName="IQ Rest" className="absolute left-0 bottom-[13%] w-[36%] z-0" />
             <MockMenuText locale={locale} className="absolute right-0 top-[13%] w-[36%] z-0" />
