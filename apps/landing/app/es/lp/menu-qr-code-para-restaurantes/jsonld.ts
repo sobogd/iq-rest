@@ -5,7 +5,7 @@ const data = {
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      name: `IQ Rest — Menú QR para restaurantes`,
+      name: `IQ Rest — Menú QR code para restaurantes`,
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
       description: TEXTS.meta.description,

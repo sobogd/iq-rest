@@ -120,20 +120,20 @@ const IT_KEYWORDS: CampaignPlan["keywords"] = [
 ];
 
 const ES_RSA: RSA = {
-  finalUrl: "https://iq-rest.com/es/lp/menu-qr-para-restaurantes",
-  path1: "menu-qr",
+  finalUrl: "https://iq-rest.com/es/lp/menu-qr-code-para-restaurantes",
+  path1: "menu-qr-code",
   path2: "restaurantes",
   headlines: [
-    { text: "Menú QR para Restaurantes" },
+    { text: "Menú QR Code para Restaurantes" },
     { text: "Desde 6,90€/mes, Todo Incluido" },
     { text: "14 Días Gratis, Sin Tarjeta" },
-    { text: "Menú QR Listo en 5 Min" },
-    { text: "QR Imprimible para Mesas" },
+    { text: "Menú QR Code en 5 Minutos" },
+    { text: "QR Code Imprimible" },
     { text: "Escanea Sin App" },
     { text: "Pedidos Directos, 0% Comisión" },
     { text: "Actualiza desde el Móvil" },
     { text: "35 Idiomas con IA" },
-    { text: "QR Ilimitados por Mesa" },
+    { text: "QR Code Ilimitados" },
     { text: "PDF y PNG Listos" },
     { text: "iPhone y Android" },
     { text: "Reservas 24/7" },
@@ -141,19 +141,19 @@ const ES_RSA: RSA = {
     { text: "Pruébalo Gratis Ahora" },
   ],
   descriptions: [
-    "Menú QR para restaurantes. QR imprimible en cada mesa, sin app que instalar.",
+    "Menú QR code para restaurantes. Código QR imprimible en cada mesa, sin app.",
     "Los clientes escanean con la cámara. Pedidos directos, cero comisiones.",
-    "Actualiza el menú desde el móvil, el QR sigue valido. PDF/PNG para imprenta.",
+    "Actualiza el menú desde el móvil, el QR code sigue válido. PDF/PNG listos.",
     "Desde 6,90€/mes, todo incluido. 14 días gratis, sin tarjeta de crédito.",
   ],
 };
 
 const ES_KEYWORDS: CampaignPlan["keywords"] = [
-  { text: "menu qr", match: "EXACT" },
-  { text: "menu qr", match: "PHRASE" },
-  { text: "menu qr restaurante", match: "PHRASE" },
-  { text: "menu qr para restaurantes", match: "PHRASE" },
-  { text: "qr menu restaurante", match: "PHRASE" },
+  { text: "qr menu", match: "PHRASE" },
+  { text: "qr meny", match: "PHRASE" },
+  { text: "qr code menu", match: "PHRASE" },
+  { text: "qr code restaurant", match: "PHRASE" },
+  { text: "qr menu restaurant", match: "PHRASE" },
 ];
 
 function plansEN(): CampaignPlan[] {

@@ -67,7 +67,7 @@ export const LOCALE_SLUG_OVERRIDES: Record<string, Record<string, string>> = {
   // relevance scoring.
   "/lp/qr-menu": {
     en: "/lp/qr-menu-for-restaurants",
-    es: "/lp/menu-qr-para-restaurantes",
+    es: "/lp/menu-qr-code-para-restaurantes",
     it: "/lp/menu-qr-code-per-ristoranti",
     fr: "/lp/menu-qr-pour-restaurants",
     de: "/lp/qr-speisekarte-fuer-restaurants",
@@ -82,7 +82,7 @@ export const LOCALE_SLUG_OVERRIDES: Record<string, Record<string, string>> = {
     ko: "/lp/restaurant-qr-menu-korean",
     uk: "/lp/qr-menyu-dlya-restoraniv",
     bg: "/lp/qr-menyu-za-restoranti",
-    ca: "/lp/menu-qr-per-restaurants",
+    ca: "/lp/menu-qr-code-per-restaurants",
     cs: "/lp/qr-menu-pro-restaurace",
     da: "/lp/qr-menu-til-restauranter",
     el: "/lp/qr-menu-gia-estiatoria",

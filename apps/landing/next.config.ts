@@ -70,6 +70,8 @@ const nextConfig: NextConfig = {
       // PPC QR-cluster: keyword shifted from "menu qr" to "qr code menu / menu qr code".
       // Old slug 301s so existing Google Ads clicks (and any indexed/cached URL) keep landing.
       { source: "/it/lp/menu-qr-per-ristoranti", destination: "/it/lp/menu-qr-code-per-ristoranti", permanent: true },
+      { source: "/es/lp/menu-qr-para-restaurantes", destination: "/es/lp/menu-qr-code-para-restaurantes", permanent: true },
+      { source: "/ca/lp/menu-qr-per-restaurants", destination: "/ca/lp/menu-qr-code-per-restaurants", permanent: true },
       // Spanish KW landings: /es absorbed /es/carta-digital (SEO weight).
       // /es/menu-digital and /es/qr-carta were dropped — collapse all three
       // into /es. PPC lives at /es/lp/carta-digital-para-restaurante
