@@ -82,17 +82,21 @@ export function swapLocale(pathname: string, target: string): string {
   // of some shared route, we know what the canonical route is and can ask
   // for target's override.
   for (const [sharedRoute, byLocale] of Object.entries(LOCALE_SLUG_OVERRIDES)) {
-    if (byLocale[currentLocale] === rest) {
-      // Found mapping. Target may or may not have its own override.
-      const targetSlug = byLocale[target] ?? sharedRoute;
-      return `/${target}${targetSlug}`;
-    }
-    // Edge case: current path equals the shared route itself (i.e. the
-    // locale didn't override it). Still translate via target's override.
-    if (rest === sharedRoute && !byLocale[currentLocale]) {
-      const targetSlug = byLocale[target] ?? sharedRoute;
-      return `/${target}${targetSlug}`;
-    }
+    const matchedAsOverride = byLocale[currentLocale] === rest;
+    const matchedAsShared = rest === sharedRoute && !byLocale[currentLocale];
+    if (!matchedAsOverride && !matchedAsShared) continue;
+
+    // Target has its own slug for this shared route → translate.
+    if (byLocale[target]) return `/${target}${byLocale[target]}`;
+
+    // Shared routes starting with /lp/ are PPC landings that don't have
+    // a "real" shared URL — only per-locale overrides. If the target
+    // doesn't ship that LP, send the visitor to their locale home rather
+    // than 404'ing on a slug that doesn't exist.
+    if (sharedRoute.startsWith("/lp/")) return `/${target}`;
+
+    // Regular shared route → fall back to it for the target locale.
+    return `/${target}${sharedRoute}`;
   }
 
   // Not a known override route — assume the slug is shared across locales
