@@ -5,6 +5,7 @@ import { analytics } from "@/lib/analytics";
 
 const GCLID_REGEX = /^[A-Za-z0-9_-]{1,256}$/;
 const LOCALE_REGEX = /^\/([a-z]{2})(?=\/|$)/;
+const FROM_REGEX = /^[a-z0-9_]{1,32}$/;
 
 // Minimum gap between two consecutive view events for the same section.
 // Stops a single slow scroll near the section's edge from firing dozens
@@ -18,6 +19,41 @@ function pageNameFromPathname(pathname: string, locale: string): string {
   if (rest.startsWith("/")) rest = rest.slice(1);
   if (!rest) return "home";
   return rest.replace(/\//g, "_").replace(/-/g, "_").toLowerCase();
+}
+
+function readFromSource(): string | null {
+  // First, look at the URL — direct hit before middleware-stripped cookie kicks in
+  // (e.g. SPA-style nav added by an external linker, or middleware bypass for some path).
+  const sp = new URLSearchParams(window.location.search);
+  const fromParam = sp.get("from");
+  if (fromParam && FROM_REGEX.test(fromParam.toLowerCase())) {
+    return fromParam.toLowerCase();
+  }
+  // Otherwise read the cookie middleware set on the initial /?from=… hit
+  // (5-minute TTL — only covers the first navigation after the click).
+  const m = document.cookie.match(/(?:^|; )ref_from=([^;]*)/);
+  if (!m) return null;
+  const raw = decodeURIComponent(m[1]).toLowerCase();
+  return FROM_REGEX.test(raw) ? raw : null;
+}
+
+function fireFromAndClean(): void {
+  const source = readFromSource();
+  if (!source) return;
+
+  analytics.track(`land_from_${source}`);
+
+  // Clear cookie so we don't re-fire on subsequent page loads in the same session.
+  document.cookie = "ref_from=; path=/; max-age=0";
+
+  // Strip ?from= from the URL if it survived (middleware normally redirects it away,
+  // but a same-origin SPA push could leave it).
+  const sp = new URLSearchParams(window.location.search);
+  if (!sp.has("from")) return;
+  sp.delete("from");
+  const qs = sp.toString();
+  const newUrl = window.location.pathname + (qs ? `?${qs}` : "") + window.location.hash;
+  window.history.replaceState({}, "", newUrl);
 }
 
 function fireGclidAndCleanUrl(): void {
@@ -51,6 +87,7 @@ interface PageTrackerProps {
 export function PageTracker(_props: PageTrackerProps = {}) {
   useEffect(() => {
     fireGclidAndCleanUrl();
+    fireFromAndClean();
     firePageEvent();
 
     // Re-fires on every viewport (re-)entry so the server timeline shows

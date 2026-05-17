@@ -29,7 +29,7 @@ async function sendNewMessageToAdmin(clientEmail: string, messageText: string) {
           ${messageText}
         </p>
         <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">
-          <a href="https://iq-rest.com/dashboard?page=admin" style="color: #0066cc;">Open Admin Panel</a>
+          <a href="https://iq-rest.com/dashboard?page=admin&from=email" style="color: #0066cc;">Open Admin Panel</a>
         </p>
       </div>
     `,
@@ -37,7 +37,7 @@ async function sendNewMessageToAdmin(clientEmail: string, messageText: string) {
 
 ${messageText}
 
-Open Admin Panel: https://iq-rest.com/dashboard?page=admin`,
+Open Admin Panel: https://iq-rest.com/dashboard?page=admin&from=email`,
   };
 
   await transporter.sendMail(mailOptions);
