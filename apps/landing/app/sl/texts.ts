@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     sub: "Narejeno za restavracije. Uporabljeno za mizo.",
     items: [
       
-      { Icon: ScanLine, title: "Naročanje z mize", desc: "Naročila takoj prispejo v WhatsApp ali nadzorno ploščo s številko mize. Hitrejša postrežba.", tag: "Neposredna naročila" },
+      { Icon: QrCode, title: "Naročanje z mize", desc: "Naročila takoj prispejo v WhatsApp ali nadzorno ploščo s številko mize. Hitrejša postrežba.", tag: "Neposredna naročila", href: "/sl/spletni-sistem-narocanja-restavracija" },
       { Icon: Languages, title: "AI prevajalnik (35 jezikov)", desc: "Naš AI razume gastronomijo. Turisti naročijo 20 % več, ko razumejo sestavine jedi.", tag: "Prevod AI" },
       { Icon: CalendarCheck, title: "Rezervacija miz", desc: "Sistem sam sprejema rezervacije, ko ste v kuhinji. Nobena stranka ne bo izgubljena.", tag: "Rezervacije" },
       { Icon: Palette, title: "Modern dizajn", desc: "Video ozadja in privlačne fotografije. Vaš meni izgleda prestižno in vzbuja apetit.", tag: "Lasten dizajn" },
@@ -81,7 +81,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/sl/online-orders", label: "Spletna naročila" }, { href: "/sl/ai-translation", label: "AI prevod" },
+      { href: "/sl/spletni-sistem-narocanja-restavracija", label: "Spletni sistem naročanja" }, { href: "/sl/ai-translation", label: "AI prevod" },
       { href: "/sl/reservations", label: "Rezervacije" }, { href: "/sl/mobile-management", label: "Mobilno upravljanje" },
       { href: "/sl/easy-menu", label: "Urejevalnik jedilnika" }, { href: "/sl/custom-design", label: "Video in foto ozadja" },
       { href: "/sl/color-scheme", label: "Barve znamke" }, { href: "/sl/multilingual", label: "Večjezična stran" },
