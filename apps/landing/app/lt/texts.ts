@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     sub: "Sukurta restoranams. Naudojama prie stalo.",
     items: [
       
-      { Icon: ScanLine, title: "Užsakymai nuo stalelio", desc: "Užsakymai akimirksniu ateina į WhatsApp arba pultą su stalo numeriu. Greitesnis aptarnavimas.", tag: "Tiesioginiai užsakymai" },
+      { Icon: QrCode, title: "Užsakymai nuo stalelio", desc: "Užsakymai akimirksniu ateina į WhatsApp arba pultą su stalo numeriu. Greitesnis aptarnavimas.", tag: "Tiesioginiai užsakymai", href: "/lt/internetine-uzsakymu-sistema-restoranui" },
       { Icon: Languages, title: "AI vertėjas (35 kalbos)", desc: "Mūsų AI supranta gastronomiją. Turistai užsisako 20% daugiau, kai supranta meniu sudėtį.", tag: "DI vertimas" },
       { Icon: CalendarCheck, title: "Stalų rezervacija", desc: "Sistemos priima rezervacijas, kol jūs virtuvėje. Nė vieno prarasto kliento.", tag: "Rezervacijos" },
       { Icon: Palette, title: "Modernus dizainas", desc: "Video fonai ir skanios nuotraukos. Jūsų meniu atrodo prabangiai ir žadina apetitą.", tag: "Pritaikytas dizainas" },
@@ -81,7 +81,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/lt/online-orders", label: "Internetiniai užsakymai" }, { href: "/lt/ai-translation", label: "AI vertimas" },
+      { href: "/lt/internetine-uzsakymu-sistema-restoranui", label: "Internetinė užsakymų sistema" }, { href: "/lt/ai-translation", label: "AI vertimas" },
       { href: "/lt/reservations", label: "Rezervacijos" }, { href: "/lt/mobile-management", label: "Mobilus valdymas" },
       { href: "/lt/easy-menu", label: "Meniu redaktorius" }, { href: "/lt/custom-design", label: "Video ir foto fonai" },
       { href: "/lt/color-scheme", label: "Prekės ženklo spalvos" }, { href: "/lt/multilingual", label: "Daugiakalbis tinklalapis" },

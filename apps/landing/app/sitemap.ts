@@ -70,6 +70,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       hr: "/online-sustav-narudzbi-restoran",
       hu: "/online-rendelesi-rendszer-etterem",
       is: "/netpontunarkerfi-veitingastadar",
+      lt: "/internetine-uzsakymu-sistema-restoranui",
     },
   }
 
