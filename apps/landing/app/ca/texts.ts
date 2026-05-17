@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     sub: "Fet per a restaurants. Usat a taula.",
     items: [
       
-      { Icon: ScanLine, title: "Comandes des de la taula", desc: "Les comandes arriben a l'instant per WhatsApp o al taulell amb el número de taula. Servei més ràpid.", tag: "Comandes directes" },
+      { Icon: QrCode, title: "Comandes des de la taula", desc: "Les comandes arriben a l'instant per WhatsApp o al taulell amb el número de taula. Servei més ràpid.", tag: "Comandes directes", href: "/ca/sistema-de-comandes-online-restaurant" },
       { Icon: Languages, title: "Traductor IA (35 idiomes)", desc: "La nostra IA entén la gastronomia. Els turistes demanen un 20% més quan entenen el plat.", tag: "Traducció IA" },
       { Icon: CalendarCheck, title: "Reserva de taules", desc: "El sistema accepta reserves mentre ets a la cuina. Cap client perdut.", tag: "Reserves" },
       { Icon: Palette, title: "Disseny modern", desc: "Fons de vídeo i fotos atractives. La teva carta sembla premium i fa venir gana al moment.", tag: "Disseny personalitzat" },
@@ -81,7 +81,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/ca/online-orders", label: "Comandes online" }, { href: "/ca/ai-translation", label: "Traducció IA" },
+      { href: "/ca/sistema-de-comandes-online-restaurant", label: "Sistema de comandes online" }, { href: "/ca/ai-translation", label: "Traducció IA" },
       { href: "/ca/reservations", label: "Reserves" }, { href: "/ca/mobile-management", label: "Gestió des del mòbil" },
       { href: "/ca/easy-menu", label: "Editor de carta" }, { href: "/ca/custom-design", label: "Fons en vídeo i foto" },
       { href: "/ca/color-scheme", label: "Colors de marca" }, { href: "/ca/multilingual", label: "Web multilingüe" },
