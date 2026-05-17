@@ -62,6 +62,7 @@ export const LOCALE_SLUG_OVERRIDES: Record<string, Record<string, string>> = {
   // Locales without an override fall back to /<target> home via the
   // /lp/* branch in swapLocale.
   "/lp/digital-menu": {
+    en: "/lp/digital-menu-for-restaurants",
     it: "/lp/menu-digitale-per-ristoranti",
     es: "/lp/carta-digital-para-restaurante",
     ca: "/lp/carta-digital-para-restaurante",
