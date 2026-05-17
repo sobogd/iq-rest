@@ -90,7 +90,7 @@ export function RegionPromptModal() {
 
     if (!shownRef.current) {
       shownRef.current = true;
-      analytics.track(`land_region_prompt_show_${url}`);
+      analytics.track(`land_region_prompt_show_${opts.join("_")}`);
     }
   }, [pathname]);
 

@@ -1,4 +1,3 @@
-import { loginUrl } from "@/lib/dashboard-url";
 import { FaqLp } from "@/app/_landing/components/faq-lp";
 import { FeatureHero } from "@/app/_landing/components/feature-hero";
 import { FeatureSeoBlock } from "@/app/_landing/components/feature-seo-block";
@@ -19,8 +18,6 @@ interface FeaturePageProps {
 }
 
 export function FeaturePage({ texts, chrome, locale, featureId }: FeaturePageProps) {
-  const signinHref = `${loginUrl(locale)}?from=landing`;
-
   const breadcrumbSchema = createBreadcrumbSchema(locale, [
     { name: "Home" },
     { name: texts.meta.title, path: `/${featureId}` },
@@ -66,8 +63,6 @@ export function FeaturePage({ texts, chrome, locale, featureId }: FeaturePagePro
         microcopy={chrome.microcopy}
         locale={locale}
         trustLine={texts.hero.trustLine}
-        signinHref={signinHref}
-        signinLabel={chrome.header.signIn}
       />
 
       <SectionGroup>

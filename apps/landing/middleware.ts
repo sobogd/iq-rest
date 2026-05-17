@@ -106,16 +106,32 @@ export default function middleware(request: NextRequest) {
     return response;
   }
 
-  // Redirect root to detected locale
+  // Redirect root to a locale.
+  //
+  // SEO note: this used to be a blanket 302 to a geo-detected locale. That
+  // made `/` indeterminate for crawlers (Googlebot in EU saw /es, in US saw
+  // /en) and triggered "Duplicate without user-selected canonical" warnings
+  // on locale homes.
+  //
+  // New behaviour:
+  //   - User has NEXT_LOCALE cookie (picked locale in switcher) → 302 to it.
+  //     Stays a 302 because the destination depends on a cookie.
+  //   - No cookie (first-time visitor, every crawler) → 301 to /en.
+  //     Deterministic, cacheable. Client-side RegionPromptModal still
+  //     offers the geo-suggested locale once on /en.
   if (pathname === "/") {
-    // User's chosen locale (from language selector) takes priority over geo
     const preferredLocale = request.cookies.get("NEXT_LOCALE")?.value as Locale | undefined;
-    const targetLocale = (preferredLocale && locales.includes(preferredLocale))
-      ? preferredLocale
-      : detectLocaleByCountry(request);
-    const redirectUrl = new URL(`/${targetLocale}`, request.url);
+    if (preferredLocale && locales.includes(preferredLocale)) {
+      const redirectUrl = new URL(`/${preferredLocale}`, request.url);
+      redirectUrl.search = request.nextUrl.search;
+      const response = NextResponse.redirect(redirectUrl, 302);
+      response.headers.set("Vary", "Cookie");
+      setGeoCookies(request, response);
+      return response;
+    }
+    const redirectUrl = new URL(`/en`, request.url);
     redirectUrl.search = request.nextUrl.search;
-    const response = NextResponse.redirect(redirectUrl, 302);
+    const response = NextResponse.redirect(redirectUrl, 301);
     setGeoCookies(request, response);
     return response;
   }
