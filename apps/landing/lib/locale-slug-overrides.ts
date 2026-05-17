@@ -68,7 +68,7 @@ export const LOCALE_SLUG_OVERRIDES: Record<string, Record<string, string>> = {
   "/lp/qr-menu": {
     en: "/lp/qr-menu-for-restaurants",
     es: "/lp/menu-qr-code-para-restaurantes",
-    it: "/lp/menu-qr-code-per-ristoranti",
+    it: "/lp/menu-qr-code-online-per-ristoranti",
     fr: "/lp/menu-qr-pour-restaurants",
     de: "/lp/qr-speisekarte-fuer-restaurants",
     pt: "/lp/menu-qr-para-restaurantes",

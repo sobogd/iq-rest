@@ -79,9 +79,9 @@ const EN_REGIONAL_CAMPAIGNS = [
 ];
 
 const IT_RSA: RSA = {
-  finalUrl: "https://iq-rest.com/it/lp/menu-qr-code-per-ristoranti",
+  finalUrl: "https://iq-rest.com/it/lp/menu-qr-code-online-per-ristoranti",
   path1: "menu-qr-code",
-  path2: "ristoranti",
+  path2: "online-ristoranti",
   headlines: [
     { text: "Menu QR Code per Ristoranti" },
     { text: "Da €6,90/mese, Tutto Incluso" },

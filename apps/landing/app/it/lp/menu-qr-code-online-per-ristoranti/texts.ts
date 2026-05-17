@@ -14,10 +14,10 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     ...DEFAULT.hero,
-    headline: "Menu QR Code per ristoranti",
-    sub: "Oltre 500 ristoranti in 30+ paesi sostituiscono il menu cartaceo con un menu QR code, vendono di più ai turisti e azzerano le commissioni del delivery. Online in 5 minuti — 14 giorni gratis.",
+    headline: "Menu QR Code online per ristoranti",
+    sub: "Oltre 500 ristoranti in 30+ paesi sostituiscono il menu cartaceo con un menu QR code online, vendono di più ai turisti e azzerano le commissioni del delivery. Online in 5 minuti — 14 giorni gratis.",
     dynamicHeadlines: [],
-    headlinePrefix: "Menu QR Code per ",
+    headlinePrefix: "Menu QR Code online per ",
     accentWord: "ristoranti",
     accentWordRotation: DEFAULT.hero.accentWordRotation ?? [],
     headlineSuffix: "",
@@ -58,11 +58,11 @@ export const TEXTS: LandingTexts = {
   },
 
   meta: {
-    title: "Menu QR Code per Ristoranti — Pronto in 5 Min | IQ Rest",
-    description: "Menu QR code per ristoranti: codice QR su ogni tavolo, ordini diretti senza commissioni, traduzione AI in 35 lingue. Online in 5 minuti, 14 giorni gratis.",
-    canonical: "https://iq-rest.com/it/lp/menu-qr-code-per-ristoranti",
+    title: "Menu QR Code Online per Ristoranti — 5 Min | IQ Rest",
+    description: "Menu QR code online per ristoranti: codice QR su ogni tavolo, ordini diretti senza commissioni, traduzione AI in 35 lingue. Pronto in 5 minuti, 14 giorni gratis.",
+    canonical: "https://iq-rest.com/it/lp/menu-qr-code-online-per-ristoranti",
     ogLocale: "it_IT",
-    ogTitle: "Menu QR Code per Ristoranti — Pronto in 5 Minuti",
-    ogDescription: "Menu QR code con ordini diretti, 35 lingue AI e prenotazioni. Online in 5 minuti — 14 giorni gratis.",
+    ogTitle: "Menu QR Code Online per Ristoranti — 5 Minuti",
+    ogDescription: "Menu QR code online con ordini diretti, 35 lingue AI e prenotazioni. Pronto in 5 minuti — 14 giorni gratis.",
   },
 };

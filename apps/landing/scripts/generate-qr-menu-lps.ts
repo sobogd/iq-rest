@@ -71,7 +71,7 @@ const SPECS: LocaleSpec[] = [
     ogDescription: "Menú QR code con pedidos directos, 35 idiomas IA y reservas. Listo en 5 minutos — 14 días gratis.",
   },
   {
-    code: "it", slug: "menu-qr-code-per-ristoranti", ogLocale: "it_IT",
+    code: "it", slug: "menu-qr-code-online-per-ristoranti", ogLocale: "it_IT",
     headlinePrefix: "Menu QR Code per ", accentWord: "ristoranti", headlineSuffix: "",
     fullPhrase: "Menu QR Code per ristoranti",
     heroSub: "Oltre 500 ristoranti in 30+ paesi sostituiscono il menu cartaceo con un menu QR code, vendono di più ai turisti e azzerano le commissioni del delivery. Online in 5 minuti — 14 giorni gratis.",
