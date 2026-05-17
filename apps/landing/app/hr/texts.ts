@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     sub: "Napravljeno za restorane. Korišteno za stolom.",
     items: [
       
-      { Icon: ScanLine, title: "Naručivanje sa stola", desc: "Narudžbe odmah stižu na WhatsApp ili panel s brojem stola. Brža usluga, veća prodaja.", tag: "Izravne narudžbe" },
+      { Icon: QrCode, title: "Naručivanje sa stola", desc: "Narudžbe odmah stižu na WhatsApp ili panel s brojem stola. Brža usluga, veća prodaja.", tag: "Izravne narudžbe", href: "/hr/online-sustav-narudzbi-restoran" },
       { Icon: Languages, title: "AI prevoditelj (35 jezika)", desc: "Naš AI razumije gastronomiju. Turisti naručuju 20% više kada razumiju sastav jela.", tag: "AI prijevod" },
       { Icon: CalendarCheck, title: "Rezervacija stolova", desc: "Sustav sam prima rezervacije dok ste vi u kuhinji. Nijedan izgubljeni gost.", tag: "Rezervacije" },
       { Icon: Palette, title: "Moderni dizajn", desc: "Video pozadine i privlačne fotografije. Vaš jelovnik izgleda luksuzno i budi apetit.", tag: "Vlastiti dizajn" },
@@ -81,7 +81,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/hr/online-orders", label: "Online narudžbe" }, { href: "/hr/ai-translation", label: "AI prijevod" },
+      { href: "/hr/online-sustav-narudzbi-restoran", label: "Online sustav narudžbi" }, { href: "/hr/ai-translation", label: "AI prijevod" },
       { href: "/hr/reservations", label: "Rezervacije" }, { href: "/hr/mobile-management", label: "Mobilno upravljanje" },
       { href: "/hr/easy-menu", label: "Editor jelovnika" }, { href: "/hr/custom-design", label: "Video i foto pozadine" },
       { href: "/hr/color-scheme", label: "Boje brenda" }, { href: "/hr/multilingual", label: "Višejezična stranica" },
