@@ -53,6 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       pl: "/system-zamowien-online-dla-restauracji",
       nl: "/online-bestelsysteem-voor-restaurants",
       ja: "/qr-order-system-restaurant",
+      zh: "/qr-ordering-system-restaurant",
     },
   }
 

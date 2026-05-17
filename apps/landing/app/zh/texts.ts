@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     sub: "为餐厅打造。在桌边使用。",
     items: [
       
-      { Icon: ScanLine, title: "桌边下单", desc: "订单通过桌号立即发送到 WhatsApp 或您的管理面板。服务更快，销量更高。", tag: "直接下单" },
+      { Icon: QrCode, title: "桌边 QR 点餐系统", desc: "客人扫描桌面二维码下单，订单直达您的厨房平板或 WhatsApp。零佣金、含桌号。", tag: "QR 点餐", href: "/zh/qr-ordering-system-restaurant" },
       { Icon: Languages, title: "AI 翻译（35 种语言）", desc: "我们的 AI 懂美食。当游客真正看懂菜单时，下单量会增加 20%。", tag: "AI 翻译" },
       { Icon: CalendarCheck, title: "桌位预订", desc: "当您在厨房忙碌时，系统会自动接受预订。不再错过任何客户。", tag: "预订" },
       { Icon: Palette, title: "现代设计", desc: "视频背景和精美照片。您的菜单看起来高档且瞬间勾起食欲。", tag: "自定义设计" },
@@ -81,7 +81,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/zh/online-orders", label: "在线下单" }, { href: "/zh/ai-translation", label: "AI翻译" },
+      { href: "/zh/qr-ordering-system-restaurant", label: "在线点餐系统" }, { href: "/zh/ai-translation", label: "AI翻译" },
       { href: "/zh/reservations", label: "预订" }, { href: "/zh/mobile-management", label: "手机管理" },
       { href: "/zh/easy-menu", label: "菜单编辑器" }, { href: "/zh/custom-design", label: "视频和照片背景" },
       { href: "/zh/color-scheme", label: "品牌色彩" }, { href: "/zh/multilingual", label: "多语言网站" },
