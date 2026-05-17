@@ -73,6 +73,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lt: "/internetine-uzsakymu-sistema-restoranui",
       lv: "/tiessaistes-pasutijumu-sistema-restoranam",
       no: "/online-bestillingssystem-restaurant",
+      ro: "/sistem-comenzi-online-restaurant",
     },
   }
 

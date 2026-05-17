@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     sub: "Făcut pentru restaurante. Folosit la masă.",
     items: [
       
-      { Icon: ScanLine, title: "Comenzi de la masă", desc: "Comenzile ajung instant pe WhatsApp sau în panou cu numărul mesei. Servire mai rapidă.", tag: "Comenzi directe" },
+      { Icon: QrCode, title: "Comenzi de la masă", desc: "Comenzile ajung instant pe WhatsApp sau în panou cu numărul mesei. Servire mai rapidă.", tag: "Comenzi directe", href: "/ro/sistem-comenzi-online-restaurant" },
       { Icon: Languages, title: "Traducător AI (35 de limbi)", desc: "AI-ul nostru înțelege gastronomia. Turiștii comandă cu 20% mai mult când înțeleg meniul.", tag: "Traducere AI" },
       { Icon: CalendarCheck, title: "Rezervare mese", desc: "Sistemul preia rezervările în timp ce ești în bucătărie. Niciun client pierdut.", tag: "Rezervări" },
       { Icon: Palette, title: "Design modern", desc: "Fundaluri video și fotografii apetisante. Meniul tău arată premium și atrage clienții.", tag: "Design personalizat" },
@@ -81,7 +81,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/ro/online-orders", label: "Comenzi online" }, { href: "/ro/ai-translation", label: "Traducere AI" },
+      { href: "/ro/sistem-comenzi-online-restaurant", label: "Sistem comenzi online" }, { href: "/ro/ai-translation", label: "Traducere AI" },
       { href: "/ro/reservations", label: "Rezervări" }, { href: "/ro/mobile-management", label: "Gestiune mobilă" },
       { href: "/ro/easy-menu", label: "Editor de meniu" }, { href: "/ro/custom-design", label: "Fundal video și foto" },
       { href: "/ro/color-scheme", label: "Culori brand" }, { href: "/ro/multilingual", label: "Site multilingv" },
