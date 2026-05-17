@@ -64,6 +64,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       da: "/online-bestillingssystem-restaurant",
       el: "/online-systima-paragelion-estiatorio",
       et: "/online-tellimissusteem-restoranile",
+      fa: "/sistem-sefaresh-online-restoran",
     },
   }
 

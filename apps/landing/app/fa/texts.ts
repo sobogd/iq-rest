@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     sub: "ساخته‌شده برای رستوران. استفاده‌شده سر میز.",
     items: [
       
-      { Icon: ScanLine, title: "سفارش از روی میز", desc: "سفارش‌ها فوراً با شماره میز به واتس‌اپ یا پنل شما می‌رسند. سرویس‌دهی سریع‌تر و فروش بیشتر.", tag: "سفارش مستقیم" },
+      { Icon: QrCode, title: "سفارش از روی میز", desc: "سفارش‌ها فوراً با شماره میز به واتس‌اپ یا پنل شما می‌رسند. سرویس‌دهی سریع‌تر و فروش بیشتر.", tag: "سفارش مستقیم", href: "/fa/sistem-sefaresh-online-restoran" },
       { Icon: Languages, title: "مترجم هوش مصنوعی (۳۵ زبان)", desc: "هوش مصنوعی ما غذاشناسی را می‌فهمد. گردشگران وقتی محتوای غذا را درک کنند ۲۰٪ بیشتر سفارش می‌دهند.", tag: "ترجمه با هوش مصنوعی" },
       { Icon: CalendarCheck, title: "رزرو میز", desc: "سیستم به طور خودکار رزروها را می‌پذیرد در حالی که شما در آشپزخانه مشغول هستید.", tag: "رزرو میز" },
       { Icon: Palette, title: "طراحی مدرن", desc: "پس‌زمینه‌های ویدئویی و عکس‌های جذاب. منوی شما لوکس به نظر می‌رسد و اشتها را تحریک می‌کند.", tag: "طراحی اختصاصی" },
@@ -81,7 +81,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/fa/online-orders", label: "سفارش آنلاین" }, { href: "/fa/ai-translation", label: "ترجمهٔ هوش مصنوعی" },
+      { href: "/fa/sistem-sefaresh-online-restoran", label: "سیستم سفارش آنلاین" }, { href: "/fa/ai-translation", label: "ترجمهٔ هوش مصنوعی" },
       { href: "/fa/reservations", label: "رزرو" }, { href: "/fa/mobile-management", label: "مدیریت با گوشی" },
       { href: "/fa/easy-menu", label: "ویرایشگر منو" }, { href: "/fa/custom-design", label: "پس‌زمینه ویدیو و عکس" },
       { href: "/fa/color-scheme", label: "رنگ‌های برند" }, { href: "/fa/multilingual", label: "سایت چندزبانه" },
