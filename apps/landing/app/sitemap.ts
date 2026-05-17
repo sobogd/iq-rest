@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import { locales } from '@/i18n/routing'
 import { FEATURE_PAGES, HOME_META, type PageMeta } from '@/lib/page-meta'
+import { LOCALE_SLUG_OVERRIDES } from '@/lib/locale-slug-overrides'
 
 type RouteConfig = PageMeta & { path: string }
 
@@ -37,49 +38,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   })
 
-  // Per-locale slug overrides: feature pages migrated to a keyword-rich
-  // slug for SEO. The old shared slug is dropped for that locale only and
-  // the new slug is emitted with its own alternates row. Keys are the old
-  // shared `route.path`; values map locale → new slug for the same feature.
-  const LOCALE_SLUG_OVERRIDES: Record<string, Record<string, string>> = {
-    "/online-orders": {
-      en: "/restaurant-online-ordering-system",
-      es: "/sistema-de-pedidos-para-restaurantes",
-      it: "/tablet-per-ordinazioni-ristorante",
-      fr: "/logiciel-prise-de-commande-restaurant",
-      de: "/restaurant-bestellsystem",
-      pt: "/sistema-de-pedidos-online-restaurante",
-      ru: "/sistema-onlayn-zakazov-restorana",
-      pl: "/system-zamowien-online-dla-restauracji",
-      nl: "/online-bestelsysteem-voor-restaurants",
-      ja: "/qr-order-system-restaurant",
-      zh: "/qr-ordering-system-restaurant",
-      tr: "/restoran-online-siparis-sistemi",
-      ar: "/nizam-talabat-online-matam",
-      ko: "/restaurant-online-order-system",
-      uk: "/onlayn-systema-zamovlen-restoran",
-      bg: "/sistema-za-onlayn-porachki-restorant",
-      ca: "/sistema-de-comandes-online-restaurant",
-      cs: "/online-objednavkovy-system-restaurace",
-      da: "/online-bestillingssystem-restaurant",
-      el: "/online-systima-paragelion-estiatorio",
-      et: "/online-tellimissusteem-restoranile",
-      fa: "/sistem-sefaresh-online-restoran",
-      fi: "/online-tilausjarjestelma-ravintolalle",
-      ga: "/coras-orduithe-ar-line-bialann",
-      hr: "/online-sustav-narudzbi-restoran",
-      hu: "/online-rendelesi-rendszer-etterem",
-      is: "/netpontunarkerfi-veitingastadar",
-      lt: "/internetine-uzsakymu-sistema-restoranui",
-      lv: "/tiessaistes-pasutijumu-sistema-restoranam",
-      no: "/online-bestillingssystem-restaurant",
-      ro: "/sistem-comenzi-online-restaurant",
-      sk: "/online-objednavkovy-system-restauracia",
-      sl: "/spletni-sistem-narocanja-restavracija",
-      sr: "/online-sistem-porudzbina-restoran",
-      sv: "/online-bestallningssystem-restaurang",
-    },
-  }
+  // Per-locale slug overrides live in lib/locale-slug-overrides.ts so the
+  // sitemap, the next.config redirects, and the client-side region-prompt
+  // modal all agree on the same translation table.
 
   locales.forEach(locale => {
     routes.forEach(route => {

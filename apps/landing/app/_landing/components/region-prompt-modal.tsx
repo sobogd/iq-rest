@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { LANGUAGE_NAMES } from "@/app/_landing/lib/language-names";
 import { analytics } from "@/lib/analytics";
 import { getRegionPromptTexts } from "@/lib/region-prompt-texts";
+import { swapLocale } from "@/lib/locale-slug-overrides";
 
 // localStorage key marking that the visitor has already engaged with the
 // modal on this device. Set on either pick or explicit dismiss — we
@@ -116,20 +117,11 @@ export function RegionPromptModal() {
       return;
     }
 
-    // Different locale — swap the first path segment. HEAD-probe so that
-    // if the target locale doesn't have that route we fall back to its
-    // home instead of 404'ing the visitor.
-    const segments = pathname.split("/").filter(Boolean);
-    const swapped = "/" + [target, ...segments.slice(1)].join("/");
-    let destination = swapped;
-    try {
-      const probe = await fetch(swapped, { method: "HEAD", redirect: "manual" });
-      const ok = probe.ok || probe.type === "opaqueredirect" || (probe.status >= 300 && probe.status < 400);
-      if (!ok) destination = `/${target}`;
-    } catch {
-      destination = `/${target}`;
-    }
-
+    // Different locale — translate the path via the shared override table.
+    // swapLocale knows that e.g. /tr/restoran-online-siparis-sistemi maps
+    // to /es/sistema-de-pedidos-para-restaurantes, falls back to a plain
+    // first-segment swap for routes that aren't in the table.
+    const destination = swapLocale(pathname, target);
     window.location.href = destination + window.location.search + window.location.hash;
   }
 
