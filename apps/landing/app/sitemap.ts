@@ -57,6 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       tr: "/restoran-online-siparis-sistemi",
       ar: "/nizam-talabat-online-matam",
       ko: "/restaurant-online-order-system",
+      uk: "/onlayn-systema-zamovlen-restoran",
     },
   }
 
