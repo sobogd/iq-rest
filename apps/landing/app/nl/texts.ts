@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -45,10 +45,11 @@ export const TEXTS: LandingTexts = {
     items: [
       
       {
-        Icon: ScanLine,
-        title: "Bestellen aan tafel",
-        desc: "Bestellingen komen direct binnen via WhatsApp of het dashboard met tafelnummer. Snellere service.",
-        tag: "Directe bestellingen",
+        Icon: QrCode,
+        title: "Online bestelsysteem aan tafel",
+        desc: "De gast scant de QR aan de tafel, bouwt de bestelling en die landt op je keuken-tablet of WhatsApp. Nul commissie, met tafelnummer.",
+        tag: "QR-bestellingen",
+        href: "/nl/online-bestelsysteem-voor-restaurants",
       },
       {
         Icon: Languages,
@@ -168,7 +169,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/nl/online-orders", label: "Online bestellingen" },
+      { href: "/nl/online-bestelsysteem-voor-restaurants", label: "Online bestelsysteem" },
       { href: "/nl/ai-translation", label: "AI-vertaling" },
       { href: "/nl/reservations", label: "Reserveringen" },
       { href: "/nl/mobile-management", label: "Beheer op mobiel" },

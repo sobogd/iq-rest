@@ -50,6 +50,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       de: "/restaurant-bestellsystem",
       pt: "/sistema-de-pedidos-online-restaurante",
       ru: "/sistema-onlayn-zakazov-restorana",
+      pl: "/system-zamowien-online-dla-restauracji",
+      nl: "/online-bestelsysteem-voor-restaurants",
     },
   }
 

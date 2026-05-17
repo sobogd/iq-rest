@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -43,7 +43,7 @@ export const TEXTS: LandingTexts = {
     sub: "Stworzone dla restauracji. Używane przy stoliku.",
     items: [
       
-      { Icon: ScanLine, title: "Zamówienia ze stolika", desc: "Zamówienia błyskawicznie trafiają na WhatsApp lub do panelu z numerem stolika. Szybsza obsługa.", tag: "Bezpośrednie zamówienia" },
+      { Icon: QrCode, title: "System zamówień online ze stolika", desc: "Gość skanuje QR stolika, składa zamówienie — trafia na tablet kuchni lub WhatsApp lokalu. Zero prowizji, z numerem stolika.", tag: "Zamówienia QR", href: "/pl/system-zamowien-online-dla-restauracji" },
       { Icon: Languages, title: "Tłumacz AI (35 języków)", desc: "Nasze AI zna się na gastronomii. Turyści zamawiają o 20% więcej, gdy rozumieją skład dań.", tag: "Tłumaczenie AI" },
       { Icon: CalendarCheck, title: "Rezerwacja stolików", desc: "System sam przyjmuje rezerwacje, gdy Ty pracujesz w kuchni. Żaden klient Ci nie ucieknie.", tag: "Rezerwacje" },
       { Icon: Palette, title: "Nowoczesny design", desc: "Tła wideo i soczyste zdjęcia. Twoje menu wygląda prestiżowo i budzi apetyt od razu.", tag: "Własny design" },
@@ -116,7 +116,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/pl/online-orders", label: "Zamówienia online" },
+      { href: "/pl/system-zamowien-online-dla-restauracji", label: "System zamówień online" },
       { href: "/pl/ai-translation", label: "Tłumaczenie AI" },
       { href: "/pl/reservations", label: "Rezerwacje" },
       { href: "/pl/mobile-management", label: "Zarządzanie z telefonu" },
