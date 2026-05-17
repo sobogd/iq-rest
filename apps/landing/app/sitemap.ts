@@ -65,6 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       el: "/online-systima-paragelion-estiatorio",
       et: "/online-tellimissusteem-restoranile",
       fa: "/sistem-sefaresh-online-restoran",
+      fi: "/online-tilausjarjestelma-ravintolalle",
     },
   }
 
