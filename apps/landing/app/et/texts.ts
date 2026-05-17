@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     sub: "Restoranidele tehtud. Lauas kasutatud.",
     items: [
       
-      { Icon: ScanLine, title: "Tellimine lauast", desc: "Tellimused saabuvad kohe WhatsAppi või paneeli koos lauanumbriga. Kiirem teenindus.", tag: "Otsetellimused" },
+      { Icon: QrCode, title: "Tellimine lauast", desc: "Tellimused saabuvad kohe WhatsAppi või paneeli koos lauanumbriga. Kiirem teenindus.", tag: "Otsetellimused", href: "/et/online-tellimissusteem-restoranile" },
       { Icon: Languages, title: "AI-tõlkija (35 keelt)", desc: "Meie AI tunneb gastronoomiat. Turistid tellivad 20% rohkem, kui nad saavad menüüst aru.", tag: "AI-tõlge" },
       { Icon: CalendarCheck, title: "Laudade broneerimine", desc: "Süsteem võtab broneeringuid vastu, kui olete köögis ametis. Mitte ühtegi kaotatud klienti.", tag: "Broneeringud" },
       { Icon: Palette, title: "Moodne disain", desc: "Videotaustad ja isuäratavad fotod. Teie menüü näeb välja kallis ja kutsub tellima.", tag: "Oma kujundus" },
@@ -81,7 +81,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/et/online-orders", label: "Online tellimused" }, { href: "/et/ai-translation", label: "AI tõlge" },
+      { href: "/et/online-tellimissusteem-restoranile", label: "Online tellimissüsteem" }, { href: "/et/ai-translation", label: "AI tõlge" },
       { href: "/et/reservations", label: "Broneeringud" }, { href: "/et/mobile-management", label: "Mobiilihaldus" },
       { href: "/et/easy-menu", label: "Menüü redaktor" }, { href: "/et/custom-design", label: "Video- ja fototaustad" },
       { href: "/et/color-scheme", label: "Brändivärvid" }, { href: "/et/multilingual", label: "Mitmekeelne veebileht" },
