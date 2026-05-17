@@ -11,24 +11,13 @@ const localePattern = locales.join("|");
 const localeRegex = new RegExp(`^/(${localePattern})(/|$)`);
 
 const GEO_COUNTRY_COOKIE = "geo_country";
+const GEO_LOCALE_COOKIE = "geo_locale";
 
 /**
  * Получить страну из Cloudflare header.
  */
 function getCountry(request: NextRequest): string | null {
   return request.headers.get("cf-ipcountry");
-}
-
-// Search-engine and social-preview crawlers. We skip the askregion
-// redirect for these so they index the actual URL they requested instead
-// of bouncing through ?askregion=… (which would burn crawl budget and
-// also render a full-screen modal overlay on top of the SSR content
-// when Googlebot executes JS — looks like soft cloaking).
-const BOT_UA_RE = /bot|crawl|spider|slurp|bingpreview|facebookexternalhit|whatsapp|telegrambot|linkedinbot|embedly|quora link preview|outbrain|pinterest|slackbot|vkshare|w3c_validator|baiduspider|yandex|duckduckbot|applebot|petalbot|semrushbot|ahrefsbot|mj12bot|dotbot/i;
-
-function isBot(request: NextRequest): boolean {
-  const ua = request.headers.get("user-agent") || "";
-  return BOT_UA_RE.test(ua);
 }
 
 /**
@@ -51,57 +40,37 @@ function detectLocaleByCountry(request: NextRequest): Locale {
 }
 
 /**
- * Записывает geo_country cookie (страна из Cloudflare). Используется
- * dashboard-ом и map-picker для подсказок по стране. Не перезаписывает
- * cookie если она отличается от cf-ipcountry — пользователь мог выставить
- * её вручную через `?country=`.
+ * Записывает geo-куки:
+ *   geo_country — страна из Cloudflare (используется dashboard и map-picker).
+ *   geo_locale  — вычисленный locale (используется client-side
+ *                 RegionPromptModal чтобы решить, показывать ли prompt).
+ *
+ * Никаких 302/URL-params для prompt'а — клиент сам решает по cookie +
+ * navigator.language. Это убирает crawl-budget waste для ботов и
+ * любой риск soft-cloaking от оверлея поверх SSR-контента.
  */
 function setGeoCookies(request: NextRequest, response: NextResponse): void {
   const cfCountry = request.headers.get("cf-ipcountry");
   if (!cfCountry) return;
 
   const existing = request.cookies.get(GEO_COUNTRY_COOKIE)?.value;
-  if (existing && existing !== cfCountry) return;
+  if (!existing || existing === cfCountry) {
+    response.cookies.set(GEO_COUNTRY_COOKIE, cfCountry, {
+      path: "/",
+      maxAge: 60 * 60 * 24 * 7, // 1 week
+      sameSite: "lax",
+    });
+  }
 
-  response.cookies.set(GEO_COUNTRY_COOKIE, cfCountry, {
+  response.cookies.set(GEO_LOCALE_COOKIE, detectLocaleByCountry(request), {
     path: "/",
-    maxAge: 60 * 60 * 24 * 7, // 1 week
+    maxAge: 60 * 60 * 24 * 7,
     sameSite: "lax",
   });
 }
 
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-
-  // Region-prompt redirect runs BEFORE every other branch so it covers
-  // bare-locale landings (/it, /es, /ru …), feature pages, and PPC LPs
-  // alike. If the URL locale doesn't match what the visitor's Cloudflare
-  // region suggests we add ?askregion=urlLocale,geoLocale and bounce — the
-  // client-side modal handles dismissal via localStorage. Skip on:
-  //   - param already present (avoid loops)
-  //   - any Google Ads click id present (gclid/gbraid/wbraid) so paid
-  //     landings keep their conversion attribution clean
-  {
-    const urlLocaleMatch = pathname.match(localeRegex);
-    const urlLocale = urlLocaleMatch ? (urlLocaleMatch[1] as Locale) : null;
-    const hasAdsClick =
-      request.nextUrl.searchParams.has("gclid") ||
-      request.nextUrl.searchParams.has("gbraid") ||
-      request.nextUrl.searchParams.has("wbraid");
-    if (
-      urlLocale &&
-      !request.nextUrl.searchParams.has("askregion") &&
-      !hasAdsClick &&
-      !isBot(request)
-    ) {
-      const geoLocale = detectLocaleByCountry(request);
-      if (geoLocale && geoLocale !== urlLocale) {
-        const url = request.nextUrl.clone();
-        url.searchParams.set("askregion", `${urlLocale},${geoLocale}`);
-        return NextResponse.redirect(url, 302);
-      }
-    }
-  }
 
   // Per-locale custom landings replace the locale-routed main page (e.g. /en, /es).
   // Match ONLY the bare locale path so sub-routes like /en/contacts keep going through next-intl.
@@ -110,6 +79,7 @@ export default function middleware(request: NextRequest) {
     const response = NextResponse.next();
     response.headers.set("Last-Modified", new Date(HOME_META.lastModified).toUTCString());
     response.headers.set("Content-Language", onlyLocaleMatch[1]);
+    setGeoCookies(request, response);
     return response;
   }
 

@@ -1,132 +1,136 @@
 "use client";
 
-import { Suspense, useEffect, useRef, useState } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { LANGUAGE_NAMES } from "@/app/_landing/lib/language-names";
 import { analytics } from "@/lib/analytics";
 import { getRegionPromptTexts } from "@/lib/region-prompt-texts";
 
 // localStorage key marking that the visitor has already engaged with the
-// modal. Once set we never ask again on this device — even though the
-// middleware will keep adding ?askregion on every nav (it can't read
-// client storage), the modal silently strips the param on mount.
-const PROMPT_DISMISSED_KEY = "iq_region_prompt_dismissed";
+// modal on this device. Set on either pick or explicit dismiss — we
+// never show the prompt again until cleared.
+const DISMISSED_KEY = "iq_region_prompt_dismissed";
 
-function stripAskRegionFromUrl(): void {
-  if (typeof window === "undefined") return;
-  const url = new URL(window.location.href);
-  if (!url.searchParams.has("askregion")) return;
-  url.searchParams.delete("askregion");
-  const qs = url.searchParams.toString();
-  window.history.replaceState(
-    {},
-    "",
-    url.pathname + (qs ? `?${qs}` : "") + url.hash,
-  );
+function readCookie(name: string): string | null {
+  if (typeof document === "undefined") return null;
+  const m = document.cookie.match(new RegExp("(?:^|; )" + name + "=([^;]*)"));
+  return m ? decodeURIComponent(m[1]) : null;
 }
 
-interface PromptInnerProps {
-  /** Comma-separated list parsed from `?askregion=` — the first entry is
-   *  the URL locale (already on screen), the second is the geo-detected
-   *  suggestion. Validated against the LANGUAGE_NAMES registry so a
-   *  malformed param doesn't crash render. */
-  raw: string;
-  pathname: string;
+function readBrowserLocale(): string | null {
+  if (typeof navigator === "undefined") return null;
+  const lang = navigator.language || (navigator.languages && navigator.languages[0]);
+  if (!lang) return null;
+  const short = lang.toLowerCase().split("-")[0];
+  return short in LANGUAGE_NAMES ? short : null;
 }
 
-function PromptInner({ raw, pathname }: PromptInnerProps) {
-  const [hidden, setHidden] = useState(true); // start hidden; flipped after the mount-time LS check
+/**
+ * Region prompt is a pure client-side decision now — no middleware redirect,
+ * no ?askregion= param, no overlay on SSR HTML. We read:
+ *
+ *   - URL locale from pathname (what the visitor is reading)
+ *   - geo_locale cookie set by middleware (what Cloudflare's country header
+ *     resolved to)
+ *   - navigator.language (the OS/browser's preference)
+ *
+ * If at least two distinct supported locales appear and the visitor hasn't
+ * dismissed the prompt before, we surface a modal listing them so e.g. a
+ * Chinese visitor landing on /es from a Spanish IP can switch to /zh in
+ * one tap. Bots never render the modal — they don't execute the hydration
+ * effect (and even if they did, the prompt is purely additive, the SSR
+ * page underneath is the canonical content).
+ */
+export function RegionPromptModal() {
+  const pathname = usePathname() ?? "/";
+  const [hidden, setHidden] = useState(true);
+  const [options, setOptions] = useState<string[]>([]);
+  const [urlLocale, setUrlLocale] = useState("en");
   const [busy, setBusy] = useState(false);
   const shownRef = useRef(false);
 
-  const options = Array.from(
-    new Set(
-      raw
-        .split(",")
-        .map((s) => s.trim().toLowerCase())
-        .filter((s) => s in LANGUAGE_NAMES),
-    ),
-  );
-
-  // URL locale is whatever the current pathname starts with — that's also
-  // the locale we render the modal copy in (the visitor reads it in the
-  // language they arrived at).
-  const segments = pathname.split("/").filter(Boolean);
-  const urlLocale = segments[0] && segments[0] in LANGUAGE_NAMES ? segments[0] : "en";
-  const texts = getRegionPromptTexts(urlLocale);
-
-  // On mount: if the visitor already engaged with the prompt on this
-  // device, hide and strip the param so the URL stays clean across
-  // navigations. Otherwise reveal and fire the show event.
   useEffect(() => {
     if (typeof window === "undefined") return;
-    let prior: string | null = null;
+
+    // Paid-traffic landings: respect the locale we targeted the ad at,
+    // don't push the visitor toward a different one.
+    const sp = new URLSearchParams(window.location.search);
+    if (sp.has("gclid") || sp.has("gbraid") || sp.has("wbraid")) return;
+
+    let dismissed: string | null = null;
     try {
-      prior = window.localStorage.getItem(PROMPT_DISMISSED_KEY);
+      dismissed = window.localStorage.getItem(DISMISSED_KEY);
     } catch {
-      // localStorage blocked (Safari private, embedded contexts) —
-      // treat as fresh visit so the modal still works.
+      // localStorage blocked (Safari private, embedded contexts) — treat
+      // as fresh visit so the prompt still works.
     }
-    if (prior) {
-      stripAskRegionFromUrl();
-      return;
-    }
+    if (dismissed) return;
+
+    const segments = pathname.split("/").filter(Boolean);
+    const url = segments[0] && segments[0] in LANGUAGE_NAMES ? segments[0] : "en";
+
+    const geo = readCookie("geo_locale");
+    const browser = readBrowserLocale();
+
+    // Dedup and validate. Order matters for which tile shows first: URL
+    // locale (the one being read) goes top, then geo, then browser.
+    const opts = Array.from(
+      new Set(
+        [url, geo, browser].filter(
+          (v): v is string => !!v && v in LANGUAGE_NAMES,
+        ),
+      ),
+    );
+    if (opts.length < 2) return;
+
+    setUrlLocale(url);
+    setOptions(opts);
     setHidden(false);
-    if (shownRef.current) return;
-    shownRef.current = true;
-    analytics.track(`land_region_prompt_show_${urlLocale}`);
-  }, [urlLocale]);
+
+    if (!shownRef.current) {
+      shownRef.current = true;
+      analytics.track(`land_region_prompt_show_${url}`);
+    }
+  }, [pathname]);
 
   if (hidden || options.length < 2) return null;
+
+  const texts = getRegionPromptTexts(urlLocale);
 
   async function pick(target: string): Promise<void> {
     if (busy) return;
     setBusy(true);
     analytics.track(`land_region_prompt_pick_${target}`);
 
-    // Mark dismissed so future navs don't re-show even when middleware
-    // re-adds askregion.
     try {
-      window.localStorage.setItem(PROMPT_DISMISSED_KEY, "1");
+      window.localStorage.setItem(DISMISSED_KEY, "1");
     } catch {
-      // Best effort — if storage is blocked the visitor will see the
+      // Best-effort — if storage is blocked the visitor will see the
       // prompt again on next nav, which is acceptable.
     }
 
-    // Preserve every existing param except askregion. Critical for
-    // gclid/gbraid/wbraid so the Google Ads conversion chain survives
-    // the locale switch.
-    const params = new URLSearchParams(window.location.search);
-    params.delete("askregion");
-    const qs = params.toString();
-
-    // Picked the locale we're already on — strip askregion from the URL
-    // in place (no full navigation, no flash). Modal disappears because
-    // the param is gone.
+    // Same locale picked — close in place, no nav.
     if (target === urlLocale) {
-      const cleanUrl = window.location.pathname + (qs ? `?${qs}` : "") + window.location.hash;
-      window.history.replaceState({}, "", cleanUrl);
+      setHidden(true);
       setBusy(false);
       return;
     }
 
-    // Different locale — swap the first path segment. HEAD-probe the
-    // resulting URL: if it's live we route there so the visitor stays
-    // on the same content, otherwise fall back to the locale's home so
-    // we don't dump them onto a 404.
+    // Different locale — swap the first path segment. HEAD-probe so that
+    // if the target locale doesn't have that route we fall back to its
+    // home instead of 404'ing the visitor.
+    const segments = pathname.split("/").filter(Boolean);
     const swapped = "/" + [target, ...segments.slice(1)].join("/");
     let destination = swapped;
     try {
       const probe = await fetch(swapped, { method: "HEAD", redirect: "manual" });
-      // `opaqueredirect` happens when redirect:manual hits a 3xx — still
-      // treat as "this URL is live", the browser will follow on nav.
       const ok = probe.ok || probe.type === "opaqueredirect" || (probe.status >= 300 && probe.status < 400);
       if (!ok) destination = `/${target}`;
     } catch {
       destination = `/${target}`;
     }
 
-    window.location.href = qs ? `${destination}?${qs}` : destination;
+    window.location.href = destination + window.location.search + window.location.hash;
   }
 
   return (
@@ -161,25 +165,5 @@ function PromptInner({ raw, pathname }: PromptInnerProps) {
         </div>
       </div>
     </div>
-  );
-}
-
-function PromptResolver() {
-  const params = useSearchParams();
-  const pathname = usePathname() ?? "/";
-  const raw = params?.get("askregion");
-  if (!raw) return null;
-  return <PromptInner raw={raw} pathname={pathname} />;
-}
-
-// `useSearchParams()` opts a page into client-side rendering unless it's
-// inside a Suspense boundary. Wrapping the resolver keeps the surrounding
-// landing page eligible for static rendering — the modal is rendered only
-// after hydration, hidden from the static HTML payload.
-export function RegionPromptModal() {
-  return (
-    <Suspense fallback={null}>
-      <PromptResolver />
-    </Suspense>
   );
 }
