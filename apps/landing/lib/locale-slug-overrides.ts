@@ -54,6 +54,18 @@ export const LOCALE_SLUG_OVERRIDES: Record<string, Record<string, string>> = {
     sr: "/online-sistem-porudzbina-restoran",
     sv: "/online-bestallningssystem-restaurang",
   },
+
+  // PPC landing pages for the "digital menu" theme. Only shipped for the
+  // locales we run paid Google Ads campaigns in. The shared route key
+  // (/lp/digital-menu) doesn't resolve to a real URL on its own — it's
+  // only used by swapLocale to translate between per-locale LP slugs.
+  // Locales without an override fall back to /<target> home via the
+  // /lp/* branch in swapLocale.
+  "/lp/digital-menu": {
+    it: "/lp/menu-digitale-per-ristoranti",
+    es: "/lp/carta-digital-para-restaurante",
+    ca: "/lp/carta-digital-para-restaurante",
+  },
 };
 
 /**
