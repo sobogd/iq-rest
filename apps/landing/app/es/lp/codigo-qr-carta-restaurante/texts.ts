@@ -21,7 +21,7 @@ export const TEXTS: LandingTexts = {
     dynamicHeadlines: [],
     headlinePrefix: "Código QR y carta digital para ",
     accentWord: "restaurantes",
-    accentWordRotation: DEFAULT.hero.accentWordRotation ?? [],
+    accentWordRotation: ["tabernas", "pizzerías", "cafeterías", "bares de tapas", "asadores", "restaurantes"],
     headlineSuffix: "",
   },
 

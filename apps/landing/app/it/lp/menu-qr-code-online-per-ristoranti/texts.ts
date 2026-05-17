@@ -19,7 +19,7 @@ export const TEXTS: LandingTexts = {
     dynamicHeadlines: [],
     headlinePrefix: "Menu QR Code online per ",
     accentWord: "ristoranti",
-    accentWordRotation: DEFAULT.hero.accentWordRotation ?? [],
+    accentWordRotation: ["trattorie", "pizzerie", "osterie", "caffè", "bar", "ristoranti"],
     headlineSuffix: "",
   },
 

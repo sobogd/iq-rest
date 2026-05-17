@@ -58,7 +58,7 @@ export function HeroLp({ texts, ctaText, demoText, microcopy, locale }: HeroProp
                   initial={texts.accentWord}
                   items={texts.accentWordRotation}
                   intervalMs={1000}
-                  className="text-primary block sm:inline"
+                  className="text-primary block"
                 />
                 {texts.headlineSuffix}
               </span>
