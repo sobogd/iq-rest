@@ -60,6 +60,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       uk: "/onlayn-systema-zamovlen-restoran",
       bg: "/sistema-za-onlayn-porachki-restorant",
       ca: "/sistema-de-comandes-online-restaurant",
+      cs: "/online-objednavkovy-system-restaurace",
     },
   }
 

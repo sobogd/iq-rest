@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     sub: "Postaveno pro restaurace. Používá se u stolu.",
     items: [
       
-      { Icon: ScanLine, title: "Objednávky od stolu", desc: "Objednávky okamžitě přicházejí do WhatsAppu nebo panelu s číslem stolu. Obsluha je rychlejší.", tag: "Přímé objednávky" },
+      { Icon: QrCode, title: "Objednávky od stolu", desc: "Objednávky okamžitě přicházejí do WhatsAppu nebo panelu s číslem stolu. Obsluha je rychlejší.", tag: "Přímé objednávky", href: "/cs/online-objednavkovy-system-restaurace" },
       { Icon: Languages, title: "AI překladač (35 jazyků)", desc: "Naše AI rozumí gastronomii. Turisté objednávají o 20 % více, když rozumí složení jídel.", tag: "Překlad AI" },
       { Icon: CalendarCheck, title: "Rezervace stolů", desc: "Systém sám přijímá rezervace, zatímco jste v kuchyni. Žádný ztracený zákazník.", tag: "Rezervace" },
       { Icon: Palette, title: "Moderní design", desc: "Video pozadí a lákavé fotky. Vaše menu vypadá luxusně a vzbuzuje chuť k jídlu.", tag: "Vlastní design" },
@@ -81,7 +81,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/cs/online-orders", label: "Online objednávky" }, { href: "/cs/ai-translation", label: "AI překlad" },
+      { href: "/cs/online-objednavkovy-system-restaurace", label: "Online objednávkový systém" }, { href: "/cs/ai-translation", label: "AI překlad" },
       { href: "/cs/reservations", label: "Rezervace" }, { href: "/cs/mobile-management", label: "Správa z mobilu" },
       { href: "/cs/easy-menu", label: "Editor lístku" }, { href: "/cs/custom-design", label: "Video a foto pozadí" },
       { href: "/cs/color-scheme", label: "Barvy značky" }, { href: "/cs/multilingual", label: "Vícejazyčný web" },
