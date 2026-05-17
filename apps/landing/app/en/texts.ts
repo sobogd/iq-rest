@@ -49,30 +49,35 @@ export const TEXTS: LandingTexts = {
         title: "Table Ordering",
         desc: "Orders fly instantly to WhatsApp or your dashboard with table numbers. Faster service, higher spend.",
         tag: "Direct ordering",
+        href: "/en/restaurant-online-ordering-system",
       },
       {
         Icon: Languages,
         title: "AI Translator (35 Languages)",
         desc: "Our AI knows gastronomy. Tourists order 20% more when they actually understand the menu.",
         tag: "AI translation",
+        href: "/en/ai-translation",
       },
       {
         Icon: CalendarCheck,
         title: "Table Reservations",
         desc: "The system takes bookings while you're busy in the kitchen. Never miss a customer again.",
         tag: "Reservations",
+        href: "/en/reservations",
       },
       {
         Icon: Palette,
         title: "Modern Design",
         desc: "Video backgrounds and juicy photos. Your menu looks premium and triggers appetite instantly.",
         tag: "Custom design",
+        href: "/en/custom-design",
       },
       {
         Icon: Smartphone,
         title: "Instant Editor",
         desc: "Manage stop-lists and prices right from your smartphone. Changes are live for guests instantly.",
         tag: "Menu editor",
+        href: "/en/easy-menu",
       },
       {
         Icon: ChefHat,
@@ -168,7 +173,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/en/online-orders", label: "Online Ordering" },
+      { href: "/en/restaurant-online-ordering-system", label: "Restaurant Online Ordering System" },
       { href: "/en/ai-translation", label: "AI Menu Translation" },
       { href: "/en/reservations", label: "Reservations" },
       { href: "/en/mobile-management", label: "Mobile Management" },

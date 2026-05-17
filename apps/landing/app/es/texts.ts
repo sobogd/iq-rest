@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 // /es targets the broad-match keyword "carta digital para restaurante".
@@ -67,10 +67,11 @@ export const TEXTS: LandingTexts = {
         tag: "Editor móvil",
       },
       {
-        Icon: ScanLine,
-        title: "Escaneo IA del menú en papel",
-        desc: "Subes una foto o un PDF de tu carta y la IA extrae categorías, platos y precios en 60 segundos. Te ahorras horas de transcripción.",
-        tag: "Importación IA",
+        Icon: QrCode,
+        title: "Sistema de pedidos en la mesa",
+        desc: "El cliente escanea el QR de la mesa, monta el pedido y la comanda llega a tu tableta de cocina o al WhatsApp del local. Sin comisiones, con número de mesa.",
+        tag: "Pedidos QR",
+        href: "/es/sistema-de-pedidos-para-restaurantes",
       },
       {
         Icon: Languages,
@@ -201,7 +202,7 @@ export const TEXTS: LandingTexts = {
 
   footer: {
     featureLinks: [
-      { href: "/es/online-orders", label: "Pedidos online" },
+      { href: "/es/sistema-de-pedidos-para-restaurantes", label: "Sistema de pedidos" },
       { href: "/es/ai-translation", label: "Traducción con IA" },
       { href: "/es/reservations", label: "Reservas" },
       { href: "/es/mobile-management", label: "Gestión desde el móvil" },

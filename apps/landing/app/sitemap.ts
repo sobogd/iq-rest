@@ -37,14 +37,41 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   })
 
+  // Per-locale slug overrides: feature pages migrated to a keyword-rich
+  // slug for SEO. The old shared slug is dropped for that locale only and
+  // the new slug is emitted with its own alternates row. Keys are the old
+  // shared `route.path`; values map locale → new slug for the same feature.
+  const LOCALE_SLUG_OVERRIDES: Record<string, Record<string, string>> = {
+    "/online-orders": {
+      en: "/restaurant-online-ordering-system",
+      es: "/sistema-de-pedidos-para-restaurantes",
+      it: "/tablet-per-ordinazioni-ristorante",
+      fr: "/logiciel-prise-de-commande-restaurant",
+      de: "/restaurant-bestellsystem",
+      pt: "/sistema-de-pedidos-online-restaurante",
+      ru: "/sistema-onlayn-zakazov-restorana",
+    },
+  }
+
   locales.forEach(locale => {
     routes.forEach(route => {
+      const override = LOCALE_SLUG_OVERRIDES[route.path]?.[locale]
+      const path = override ?? route.path
+      // Build alternates that point each locale at its own slug — falling
+      // back to the shared route.path when no override exists.
+      const overrideMap = LOCALE_SLUG_OVERRIDES[route.path]
+      const languages: Record<string, string> = {}
+      locales.forEach((other) => {
+        languages[other] = `${baseUrl}/${other}${overrideMap?.[other] ?? route.path}`
+      })
+      languages["x-default"] = `${baseUrl}/en${overrideMap?.en ?? route.path}`
+
       sitemapEntries.push({
-        url: `${baseUrl}/${locale}${route.path}`,
+        url: `${baseUrl}/${locale}${path}`,
         lastModified: new Date(route.lastModified),
         changeFrequency: route.changeFrequency,
         priority: route.priority,
-        alternates: buildAlternates(route.path)
+        alternates: { languages },
       })
     })
   })

@@ -1,22 +1,17 @@
 import type { Metadata } from "next";
-import { FeaturePage } from "@/app/_landing/components/feature-page";
-import { buildAlternates } from "@/app/_landing/lib/metadata";
-import { TEXTS as CHROME } from "../texts";
+import { LandingPageBody } from "@/app/_landing/components/landing-page-body";
 import { TEXTS } from "./texts";
+import { SeoContent } from "./seo-content";
+import { JSON_LD_HTML } from "./jsonld";
 
 const LOCALE = "fr";
-const FEATURE_ID = "online-orders";
-
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://iq-rest.com"),
   title: TEXTS.meta.title,
   description: TEXTS.meta.description,
-  robots: { index: true, follow: true },
-  alternates: {
-    canonical: TEXTS.meta.canonical,
-    languages: buildAlternates(`/${FEATURE_ID}`),
-  },
+  alternates: { canonical: TEXTS.meta.canonical },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   openGraph: {
     title: TEXTS.meta.ogTitle,
     description: TEXTS.meta.ogDescription,
@@ -24,7 +19,14 @@ export const metadata: Metadata = {
     siteName: "IQ Rest",
     locale: TEXTS.meta.ogLocale,
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "IQ Rest — QR Menu for Restaurants" }],
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "IQ Rest — Logiciel de Prise de Commande Restaurant",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -34,14 +36,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function Page() {
+export default function Page() {
   return (
-    <FeaturePage
-      texts={TEXTS}
-      chrome={CHROME}
+    <LandingPageBody
       locale={LOCALE}
-      featureId={FEATURE_ID}
-
+      texts={TEXTS}
+      seoContent={<SeoContent />}
+      jsonLdHtml={JSON_LD_HTML}
     />
   );
 }

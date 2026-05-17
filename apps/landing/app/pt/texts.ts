@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -45,10 +45,11 @@ export const TEXTS: LandingTexts = {
     items: [
       
       {
-        Icon: ScanLine,
-        title: "Pedidos da mesa",
-        desc: "Os pedidos chegam instantaneamente ao WhatsApp ou painel com o número da mesa. Serviço mais rápido.",
-        tag: "Pedidos diretos",
+        Icon: QrCode,
+        title: "Sistema de pedidos online à mesa",
+        desc: "O cliente lê o QR da mesa, monta o pedido e a comanda chega ao tablet da cozinha ou ao WhatsApp do local. Zero comissões, com número da mesa.",
+        tag: "Pedidos QR",
+        href: "/pt/sistema-de-pedidos-online-restaurante",
       },
       {
         Icon: Languages,
@@ -168,7 +169,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/pt/online-orders", label: "Pedidos online" },
+      { href: "/pt/sistema-de-pedidos-online-restaurante", label: "Sistema de pedidos online" },
       { href: "/pt/ai-translation", label: "Tradução com IA" },
       { href: "/pt/reservations", label: "Reservas" },
       { href: "/pt/mobile-management", label: "Gestão pelo telemóvel" },

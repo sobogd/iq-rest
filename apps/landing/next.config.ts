@@ -76,6 +76,17 @@ const nextConfig: NextConfig = {
       { source: "/es/menu-digital", destination: "/es", permanent: true },
       { source: "/es/qr-carta", destination: "/es", permanent: true },
       { source: "/es/lp/carta-digital", destination: "/es/lp/carta-digital-para-restaurante", permanent: true },
+      // English online-ordering feature page renamed to its target keyword:
+      // "restaurant online ordering system" (1000/mo, low competition).
+      // /en/online-orders 301s to the new slug; SEO weight (Bing + internal
+      // links from /en footer) carries over.
+      { source: "/en/online-orders", destination: "/en/restaurant-online-ordering-system", permanent: true },
+      { source: "/es/online-orders", destination: "/es/sistema-de-pedidos-para-restaurantes", permanent: true },
+      { source: "/it/online-orders", destination: "/it/tablet-per-ordinazioni-ristorante", permanent: true },
+      { source: "/fr/online-orders", destination: "/fr/logiciel-prise-de-commande-restaurant", permanent: true },
+      { source: "/de/online-orders", destination: "/de/restaurant-bestellsystem", permanent: true },
+      { source: "/pt/online-orders", destination: "/pt/sistema-de-pedidos-online-restaurante", permanent: true },
+      { source: "/ru/online-orders", destination: "/ru/sistema-onlayn-zakazov-restorana", permanent: true },
       // Public menu lives on <slug>.iq-rest.com now. Legacy short links and
       // locale-prefixed /m/<slug> URLs (printed QR codes, old crawl) 301 to
       // the subdomain. Locale routing happens on the public-menu service.

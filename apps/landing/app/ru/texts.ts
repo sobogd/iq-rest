@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -43,7 +43,7 @@ export const TEXTS: LandingTexts = {
     sub: "Создано для ресторанов. Используется за столом.",
     items: [
       
-      { Icon: ScanLine, title: "Заказы со столика", desc: "Заказы мгновенно прилетают в WhatsApp или панель с номером стола. Официанты быстрее обслуживают.", tag: "Прямые заказы" },
+      { Icon: QrCode, title: "Система онлайн-заказов со столика", desc: "Гость сканирует QR стола, собирает заказ — и он приходит на ваш планшет кухни или WhatsApp. Без комиссий, с номером стола.", tag: "QR-заказы", href: "/ru/sistema-onlayn-zakazov-restorana" },
       { Icon: Languages, title: "ИИ-переводчик (35 языков)", desc: "Наш ИИ понимает гастрономию. Туристы заказывают на 20% больше, когда понимают состав блюд.", tag: "ИИ-перевод" },
       { Icon: CalendarCheck, title: "Бронирование столов", desc: "Система сама принимает брони, пока вы заняты на кухне. Ни одного упущенного клиента.", tag: "Бронирование" },
       { Icon: Palette, title: "Современный дизайн", desc: "Видео-фоны и сочные фото. Ваше меню выглядит дорого и вызывает аппетит с первого экрана.", tag: "Свой дизайн" },
@@ -116,7 +116,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/ru/online-orders", label: "Онлайн-заказы" },
+      { href: "/ru/sistema-onlayn-zakazov-restorana", label: "Система онлайн-заказов" },
       { href: "/ru/ai-translation", label: "AI-перевод меню" },
       { href: "/ru/reservations", label: "Бронирование столов" },
       { href: "/ru/mobile-management", label: "Управление с телефона" },

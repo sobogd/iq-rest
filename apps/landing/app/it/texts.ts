@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -55,10 +55,11 @@ export const TEXTS: LandingTexts = {
     sub: "Tutto quello che serve al tuo ristorante in un'unica piattaforma.",
     items: [
       {
-        Icon: ScanLine,
-        title: "Menu digitale completo",
-        desc: "Foto, allergeni, prezzi, varianti e descrizioni in un menu digitale che vive online e si aggiorna in tempo reale.",
-        tag: "Menu digitale",
+        Icon: QrCode,
+        title: "Tablet per ordinazioni al tavolo",
+        desc: "Il cliente scansiona il QR del tavolo, compone l'ordine e la comanda arriva al tuo tablet di cucina o al WhatsApp del locale. Zero commissioni, numero del tavolo incluso.",
+        tag: "Ordini QR",
+        href: "/it/tablet-per-ordinazioni-ristorante",
       },
       {
         Icon: Smartphone,
@@ -194,7 +195,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/it/online-orders", label: "Ordini online" },
+      { href: "/it/tablet-per-ordinazioni-ristorante", label: "Tablet per ordinazioni" },
       { href: "/it/ai-translation", label: "Traduzione AI" },
       { href: "/it/reservations", label: "Prenotazioni" },
       { href: "/it/mobile-management", label: "Gestione da mobile" },

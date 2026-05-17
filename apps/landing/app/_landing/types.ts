@@ -5,6 +5,10 @@ export type FeatureItem = {
   title: string;
   desc: string;
   tag?: string;
+  /** Optional deep-link target for this feature card. When set, the card
+   *  title becomes a clickable anchor pointing at the corresponding
+   *  feature landing page. */
+  href?: string;
 };
 
 export type StepItem = {

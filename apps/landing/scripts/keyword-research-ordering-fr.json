@@ -1,0 +1,620 @@
+[
+  {
+    "keyword": "borne de commande",
+    "avgMonthlySearches": 880,
+    "competition": "HIGH",
+    "competitionIndex": 93,
+    "lowTopBidMicros": 2633227,
+    "highTopBidMicros": 13592637
+  },
+  {
+    "keyword": "borne mcdo",
+    "avgMonthlySearches": 590,
+    "competition": "LOW",
+    "competitionIndex": 0,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "borne de commande restaurant",
+    "avgMonthlySearches": 480,
+    "competition": "HIGH",
+    "competitionIndex": 95,
+    "lowTopBidMicros": 2482982,
+    "highTopBidMicros": 13848616
+  },
+  {
+    "keyword": "logiciel prise de commande restaurant",
+    "avgMonthlySearches": 170,
+    "competition": "LOW",
+    "competitionIndex": 16,
+    "lowTopBidMicros": 3584230,
+    "highTopBidMicros": 12776959
+  },
+  {
+    "keyword": "logiciel de prise de commande restaurant",
+    "avgMonthlySearches": 170,
+    "competition": "LOW",
+    "competitionIndex": 16,
+    "lowTopBidMicros": 3584230,
+    "highTopBidMicros": 12776959
+  },
+  {
+    "keyword": "borne de commande restaurant prix",
+    "avgMonthlySearches": 140,
+    "competition": "HIGH",
+    "competitionIndex": 99,
+    "lowTopBidMicros": 2319734,
+    "highTopBidMicros": 10758007
+  },
+  {
+    "keyword": "borne commande restaurant",
+    "avgMonthlySearches": 140,
+    "competition": "HIGH",
+    "competitionIndex": 100,
+    "lowTopBidMicros": 2470012,
+    "highTopBidMicros": 12813614
+  },
+  {
+    "keyword": "table de préparation de commande",
+    "avgMonthlySearches": 140,
+    "competition": "HIGH",
+    "competitionIndex": 100,
+    "lowTopBidMicros": 1594607,
+    "highTopBidMicros": 4939987
+  },
+  {
+    "keyword": "borne de commande mcdo",
+    "avgMonthlySearches": 140,
+    "competition": "LOW",
+    "competitionIndex": 4,
+    "lowTopBidMicros": 2872252,
+    "highTopBidMicros": 19966764
+  },
+  {
+    "keyword": "borne de commande fast food",
+    "avgMonthlySearches": 110,
+    "competition": "HIGH",
+    "competitionIndex": 90,
+    "lowTopBidMicros": 2368133,
+    "highTopBidMicros": 11372667
+  },
+  {
+    "keyword": "tablette prise de commande restaurant",
+    "avgMonthlySearches": 90,
+    "competition": "HIGH",
+    "competitionIndex": 83,
+    "lowTopBidMicros": 1743310,
+    "highTopBidMicros": 4760213
+  },
+  {
+    "keyword": "table preparation de commande",
+    "avgMonthlySearches": 90,
+    "competition": "HIGH",
+    "competitionIndex": 100,
+    "lowTopBidMicros": 1253541,
+    "highTopBidMicros": 4054460
+  },
+  {
+    "keyword": "bornes mcdo",
+    "avgMonthlySearches": 90,
+    "competition": "LOW",
+    "competitionIndex": 0,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "application prise de commande gratuit",
+    "avgMonthlySearches": 70,
+    "competition": "MEDIUM",
+    "competitionIndex": 62,
+    "lowTopBidMicros": 1142833,
+    "highTopBidMicros": 3690462
+  },
+  {
+    "keyword": "borne fast food",
+    "avgMonthlySearches": 70,
+    "competition": "MEDIUM",
+    "competitionIndex": 47,
+    "lowTopBidMicros": 1302052,
+    "highTopBidMicros": 10850512
+  },
+  {
+    "keyword": "table préparation commande",
+    "avgMonthlySearches": 70,
+    "competition": "HIGH",
+    "competitionIndex": 100,
+    "lowTopBidMicros": 1089430,
+    "highTopBidMicros": 4993904
+  },
+  {
+    "keyword": "écran cuisine",
+    "avgMonthlySearches": 70,
+    "competition": "HIGH",
+    "competitionIndex": 69,
+    "lowTopBidMicros": 886238,
+    "highTopBidMicros": 4760463
+  },
+  {
+    "keyword": "tablette commande restaurant",
+    "avgMonthlySearches": 50,
+    "competition": "HIGH",
+    "competitionIndex": 79,
+    "lowTopBidMicros": 1550440,
+    "highTopBidMicros": 5245997
+  },
+  {
+    "keyword": "tablette de commande restaurant",
+    "avgMonthlySearches": 50,
+    "competition": "HIGH",
+    "competitionIndex": 91,
+    "lowTopBidMicros": 2342381,
+    "highTopBidMicros": 8948652
+  },
+  {
+    "keyword": "table de preparation commande",
+    "avgMonthlySearches": 50,
+    "competition": "HIGH",
+    "competitionIndex": 100,
+    "lowTopBidMicros": 1331628,
+    "highTopBidMicros": 4663490
+  },
+  {
+    "keyword": "table preparation commande",
+    "avgMonthlySearches": 40,
+    "competition": "HIGH",
+    "competitionIndex": 100,
+    "lowTopBidMicros": 1791685,
+    "highTopBidMicros": 3691928
+  },
+  {
+    "keyword": "borne commande mcdo",
+    "avgMonthlySearches": 40,
+    "competition": "LOW",
+    "competitionIndex": 3,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "logiciel commande restaurant",
+    "avgMonthlySearches": 30,
+    "competition": "MEDIUM",
+    "competitionIndex": 35,
+    "lowTopBidMicros": 2137575,
+    "highTopBidMicros": 11357032
+  },
+  {
+    "keyword": "borne de commande fast food prix",
+    "avgMonthlySearches": 30,
+    "competition": "MEDIUM",
+    "competitionIndex": 66,
+    "lowTopBidMicros": 1509097,
+    "highTopBidMicros": 10207215
+  },
+  {
+    "keyword": "borne de commande fast food pas cher",
+    "avgMonthlySearches": 30,
+    "competition": "HIGH",
+    "competitionIndex": 94,
+    "lowTopBidMicros": 1123599,
+    "highTopBidMicros": 5816619
+  },
+  {
+    "keyword": "borne commande restaurant prix",
+    "avgMonthlySearches": 30,
+    "competition": "HIGH",
+    "competitionIndex": 86,
+    "lowTopBidMicros": 2090279,
+    "highTopBidMicros": 11347029
+  },
+  {
+    "keyword": "logiciel de commande restaurant",
+    "avgMonthlySearches": 30,
+    "competition": "LOW",
+    "competitionIndex": 30,
+    "lowTopBidMicros": 2954638,
+    "highTopBidMicros": 14930572
+  },
+  {
+    "keyword": "borne de commande pour restaurant",
+    "avgMonthlySearches": 30,
+    "competition": "MEDIUM",
+    "competitionIndex": 37,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "borne de commande restauration rapide",
+    "avgMonthlySearches": 30,
+    "competition": "LOW",
+    "competitionIndex": 30,
+    "lowTopBidMicros": 1829001,
+    "highTopBidMicros": 15303441
+  },
+  {
+    "keyword": "borne de paiement restaurant",
+    "avgMonthlySearches": 30,
+    "competition": "HIGH",
+    "competitionIndex": 68,
+    "lowTopBidMicros": 3542297,
+    "highTopBidMicros": 18712401
+  },
+  {
+    "keyword": "borne tabesto",
+    "avgMonthlySearches": 30,
+    "competition": "MEDIUM",
+    "competitionIndex": 41,
+    "lowTopBidMicros": 2933114,
+    "highTopBidMicros": 7730915
+  },
+  {
+    "keyword": "borne commande fast food",
+    "avgMonthlySearches": 30,
+    "competition": "MEDIUM",
+    "competitionIndex": 58,
+    "lowTopBidMicros": 1419071,
+    "highTopBidMicros": 12744278
+  },
+  {
+    "keyword": "kds restaurant",
+    "avgMonthlySearches": 20,
+    "competition": "LOW",
+    "competitionIndex": 15,
+    "lowTopBidMicros": 2076704,
+    "highTopBidMicros": 13400426
+  },
+  {
+    "keyword": "caisse enregistreuse restaurant avec prise de commande",
+    "avgMonthlySearches": 20,
+    "competition": "LOW",
+    "competitionIndex": 21,
+    "lowTopBidMicros": 1790579,
+    "highTopBidMicros": 16144087
+  },
+  {
+    "keyword": "prix borne de commande fast food",
+    "avgMonthlySearches": 20,
+    "competition": "MEDIUM",
+    "competitionIndex": 59,
+    "lowTopBidMicros": 1132898,
+    "highTopBidMicros": 5584553
+  },
+  {
+    "keyword": "prix tablette prise de commande restaurant",
+    "avgMonthlySearches": 20,
+    "competition": "HIGH",
+    "competitionIndex": 75,
+    "lowTopBidMicros": 1650070,
+    "highTopBidMicros": 4553282
+  },
+  {
+    "keyword": "borne tactile restaurant",
+    "avgMonthlySearches": 20,
+    "competition": "HIGH",
+    "competitionIndex": 83,
+    "lowTopBidMicros": 2290937,
+    "highTopBidMicros": 16832796
+  },
+  {
+    "keyword": "tablette pour commande restaurant",
+    "avgMonthlySearches": 20,
+    "competition": "HIGH",
+    "competitionIndex": 90,
+    "lowTopBidMicros": 2178849,
+    "highTopBidMicros": 6713304
+  },
+  {
+    "keyword": "borne tactile restaurant prix",
+    "avgMonthlySearches": 20,
+    "competition": "HIGH",
+    "competitionIndex": 84,
+    "lowTopBidMicros": 1864880,
+    "highTopBidMicros": 9530251
+  },
+  {
+    "keyword": "borne de commande burger king",
+    "avgMonthlySearches": 20,
+    "competition": "LOW",
+    "competitionIndex": 1,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "mcdo borne de commande",
+    "avgMonthlySearches": 20,
+    "competition": "LOW",
+    "competitionIndex": 0,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "borne commande burger king",
+    "avgMonthlySearches": 20,
+    "competition": "LOW",
+    "competitionIndex": 1,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "systeme de commande en ligne restaurant",
+    "avgMonthlySearches": 10,
+    "competition": "MEDIUM",
+    "competitionIndex": 43,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "ecran cuisine restaurant",
+    "avgMonthlySearches": 10,
+    "competition": "HIGH",
+    "competitionIndex": 100,
+    "lowTopBidMicros": 1543505,
+    "highTopBidMicros": 5120117
+  },
+  {
+    "keyword": "prix d une borne de commande fast food",
+    "avgMonthlySearches": 10,
+    "competition": "HIGH",
+    "competitionIndex": 83,
+    "lowTopBidMicros": 930108,
+    "highTopBidMicros": 4483644
+  },
+  {
+    "keyword": "écran tactile commande restaurant",
+    "avgMonthlySearches": 10,
+    "competition": "MEDIUM",
+    "competitionIndex": 36,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "logiciel prise de commande restaurant gratuit",
+    "avgMonthlySearches": 10,
+    "competition": "MEDIUM",
+    "competitionIndex": 53,
+    "lowTopBidMicros": 1566244,
+    "highTopBidMicros": 5278099
+  },
+  {
+    "keyword": "logiciel commande restaurant gratuit",
+    "avgMonthlySearches": 10,
+    "competition": "HIGH",
+    "competitionIndex": 73,
+    "lowTopBidMicros": 1091199,
+    "highTopBidMicros": 6433066
+  },
+  {
+    "keyword": "plateforme de commande en ligne restaurant gratuit",
+    "avgMonthlySearches": 10,
+    "competition": "MEDIUM",
+    "competitionIndex": 64,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "borne restauration rapide",
+    "avgMonthlySearches": 10,
+    "competition": "MEDIUM",
+    "competitionIndex": 37,
+    "lowTopBidMicros": 1972311,
+    "highTopBidMicros": 6500906
+  },
+  {
+    "keyword": "prise de commande restaurant gratuit",
+    "avgMonthlySearches": 10,
+    "competition": "MEDIUM",
+    "competitionIndex": 65,
+    "lowTopBidMicros": 535284,
+    "highTopBidMicros": 1922448
+  },
+  {
+    "keyword": "application gestion commande restaurant",
+    "avgMonthlySearches": 10,
+    "competition": "MEDIUM",
+    "competitionIndex": 43,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "tablette restaurant prise de commande delyss",
+    "avgMonthlySearches": 10,
+    "competition": "LOW",
+    "competitionIndex": 0,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "logiciel prise de commande fast food",
+    "avgMonthlySearches": 10,
+    "competition": "LOW",
+    "competitionIndex": 0,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "logiciel commande en ligne restaurant",
+    "avgMonthlySearches": 10,
+    "competition": "LOW",
+    "competitionIndex": 9,
+    "lowTopBidMicros": 3846484,
+    "highTopBidMicros": 13663031
+  },
+  {
+    "keyword": "application pour prise de commande restaurant",
+    "avgMonthlySearches": 10,
+    "competition": "HIGH",
+    "competitionIndex": 86,
+    "lowTopBidMicros": 3607714,
+    "highTopBidMicros": 23874348
+  },
+  {
+    "keyword": "borne de commande tactile restaurant",
+    "avgMonthlySearches": 10,
+    "competition": "HIGH",
+    "competitionIndex": 71,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "burger king borne commande",
+    "avgMonthlySearches": 10,
+    "competition": "LOW",
+    "competitionIndex": 0,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "commande borne mcdo",
+    "avgMonthlySearches": 10,
+    "competition": "LOW",
+    "competitionIndex": 0,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "ecran affichage cuisine",
+    "avgMonthlySearches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIndex": 0,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "kfc borne de commande",
+    "avgMonthlySearches": 10,
+    "competition": "LOW",
+    "competitionIndex": 6,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "logiciel commande repas",
+    "avgMonthlySearches": 10,
+    "competition": "HIGH",
+    "competitionIndex": 86,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "mcdonald borne commande",
+    "avgMonthlySearches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIndex": 0,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "tabesto bornes de commande restaurants",
+    "avgMonthlySearches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIndex": 0,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "écran borne mcdo",
+    "avgMonthlySearches": 10,
+    "competition": "LOW",
+    "competitionIndex": 0,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "commande en ligne restaurant sans commission",
+    "avgMonthlySearches": 0,
+    "competitionIndex": 0,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "commande qr restaurant",
+    "avgMonthlySearches": 0,
+    "competitionIndex": 0,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "commande a table qr",
+    "avgMonthlySearches": 0,
+    "competitionIndex": 0,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "carte digitale commande",
+    "avgMonthlySearches": 0,
+    "competitionIndex": 0,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "qr menu commande",
+    "avgMonthlySearches": 0,
+    "competitionIndex": 0,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "commande whatsapp restaurant",
+    "avgMonthlySearches": 0,
+    "competitionIndex": 0,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "menu numerique commande",
+    "avgMonthlySearches": 0,
+    "competitionIndex": 0,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "commande a table",
+    "avgMonthlySearches": 0,
+    "competitionIndex": 0,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "comptoir digital restaurant",
+    "avgMonthlySearches": 0,
+    "competitionIndex": 0,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "self commande restaurant",
+    "avgMonthlySearches": 0,
+    "competitionIndex": 0,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "commande digitale restaurant",
+    "avgMonthlySearches": 0,
+    "competitionIndex": 0,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "logiciel commande table",
+    "avgMonthlySearches": 0,
+    "competitionIndex": 0,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "commande directe restaurant",
+    "avgMonthlySearches": 0,
+    "competitionIndex": 0,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  },
+  {
+    "keyword": "menu qr code commande",
+    "avgMonthlySearches": 0,
+    "competitionIndex": 0,
+    "lowTopBidMicros": 0,
+    "highTopBidMicros": 0
+  }
+]

@@ -1,10 +1,11 @@
-import { Faq } from "@/app/_landing/components/faq";
+import { loginUrl } from "@/lib/dashboard-url";
+import { FaqLp } from "@/app/_landing/components/faq-lp";
 import { FeatureHero } from "@/app/_landing/components/feature-hero";
 import { FeatureSeoBlock } from "@/app/_landing/components/feature-seo-block";
-import { FinalCta } from "@/app/_landing/components/final-cta";
-import { LandingFooter } from "@/app/_landing/components/footer";
-import { LandingHeader } from "@/app/_landing/components/header";
-import { LandingPricing } from "@/app/_landing/components/pricing";
+import { FinalCtaLp } from "@/app/_landing/components/final-cta-lp";
+import { LandingFooterLp } from "@/app/_landing/components/footer-lp";
+import { LandingHeaderLp } from "@/app/_landing/components/header-lp";
+import { LandingPricingLp } from "@/app/_landing/components/pricing-lp";
 import { PageTracker } from "@/app/_landing/components/page-tracker";
 import { Section, SectionGroup } from "@/app/_landing/components/section";
 import { JsonLd, createBreadcrumbSchema } from "@/app/_landing/lib/schemas";
@@ -18,7 +19,7 @@ interface FeaturePageProps {
 }
 
 export function FeaturePage({ texts, chrome, locale, featureId }: FeaturePageProps) {
-  const currentHref = `/${locale}/${featureId}`;
+  const signinHref = `${loginUrl(locale)}?from=landing`;
 
   const breadcrumbSchema = createBreadcrumbSchema(locale, [
     { name: "Home" },
@@ -55,7 +56,7 @@ export function FeaturePage({ texts, chrome, locale, featureId }: FeaturePagePro
 
       <PageTracker eventPrefix="land_feature_section_show_" />
 
-      <LandingHeader texts={chrome.header} locale={locale} />
+      <LandingHeaderLp texts={chrome.header} locale={locale} />
 
       <FeatureHero
         title={texts.hero.title}
@@ -65,6 +66,8 @@ export function FeaturePage({ texts, chrome, locale, featureId }: FeaturePagePro
         microcopy={chrome.microcopy}
         locale={locale}
         trustLine={texts.hero.trustLine}
+        signinHref={signinHref}
+        signinLabel={chrome.header.signIn}
       />
 
       <SectionGroup>
@@ -77,7 +80,7 @@ export function FeaturePage({ texts, chrome, locale, featureId }: FeaturePagePro
           />
         </Section>
         <Section id="pricing" dataSection="pricing">
-          <LandingPricing
+          <LandingPricingLp
             texts={pricingTexts}
             ctaText={chrome.ctaText}
             microcopy={chrome.microcopy}
@@ -85,10 +88,10 @@ export function FeaturePage({ texts, chrome, locale, featureId }: FeaturePagePro
           />
         </Section>
         <Section id="faq" dataSection="faq">
-          <Faq texts={faqTexts} />
+          <FaqLp texts={faqTexts} />
         </Section>
         <Section dataSection="final_cta">
-          <FinalCta
+          <FinalCtaLp
             texts={texts.finalCta}
             ctaText={chrome.ctaText}
             demoText={chrome.demoText}
@@ -96,14 +99,15 @@ export function FeaturePage({ texts, chrome, locale, featureId }: FeaturePagePro
             locale={locale}
           />
         </Section>
+        <Section as="footer" dataSection="footer">
+          <LandingFooterLp
+            texts={chrome.footer}
+            headerTexts={chrome.header}
+            locale={locale}
+            excludeFeatureHref={`/${locale}/${featureId}`}
+          />
+        </Section>
       </SectionGroup>
-
-      <LandingFooter
-        texts={chrome.footer}
-        headerTexts={chrome.header}
-        locale={locale}
-        excludeFeatureHref={currentHref}
-      />
     </main>
   );
 }

@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -45,10 +45,11 @@ export const TEXTS: LandingTexts = {
     items: [
       
       {
-        Icon: ScanLine,
-        title: "Commande à table",
-        desc: "Les commandes arrivent instantanément sur WhatsApp ou votre panel avec le numéro de table. Service plus fluide.",
-        tag: "Commandes directes",
+        Icon: QrCode,
+        title: "Logiciel de prise de commande à table",
+        desc: "Le client scanne le QR de la table, monte la commande et le ticket arrive sur votre tablette cuisine ou votre WhatsApp. Zéro commission, numéro de table inclus.",
+        tag: "Commandes QR",
+        href: "/fr/logiciel-prise-de-commande-restaurant",
       },
       {
         Icon: Languages,
@@ -168,7 +169,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/fr/online-orders", label: "Commandes en ligne" },
+      { href: "/fr/logiciel-prise-de-commande-restaurant", label: "Logiciel de prise de commande" },
       { href: "/fr/ai-translation", label: "Traduction IA" },
       { href: "/fr/reservations", label: "Réservations" },
       { href: "/fr/mobile-management", label: "Gestion mobile" },
