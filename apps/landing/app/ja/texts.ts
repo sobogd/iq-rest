@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     sub: "レストランのために。テーブルで使う。",
     items: [
       
-      { Icon: ScanLine, title: "テーブル注文", desc: "注文はテーブル番号と共にWhatsAppや管理画面に即座に届きます。接客を効率化し、売上アップ。", tag: "直接注文" },
+      { Icon: QrCode, title: "テーブルから QR オーダーシステム", desc: "お客様がテーブルの QR を読み取り、注文を作成。あなたのキッチンタブレットや WhatsApp に直接届きます。手数料ゼロ、テーブル番号付き。", tag: "QR 注文", href: "/ja/qr-order-system-restaurant" },
       { Icon: Languages, title: "AI翻訳（35言語）", desc: "食の文脈を理解するAI。メニューの内容が伝わると、観光客の注文数は20%増加します。", tag: "AI翻訳" },
       { Icon: CalendarCheck, title: "テーブル予約", desc: "忙しい調理中でもシステムが自動で予約受付。顧客を逃しません。", tag: "予約" },
       { Icon: Palette, title: "モダンなデザイン", desc: "動画背景とシズル感のある写真。一目で食欲をそそる高級感のあるメニューを。", tag: "カスタムデザイン" },
@@ -81,7 +81,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/ja/online-orders", label: "オンライン注文" }, { href: "/ja/ai-translation", label: "AI翻訳" },
+      { href: "/ja/qr-order-system-restaurant", label: "QR オーダーシステム" }, { href: "/ja/ai-translation", label: "AI翻訳" },
       { href: "/ja/reservations", label: "予約" }, { href: "/ja/mobile-management", label: "スマホ管理" },
       { href: "/ja/easy-menu", label: "メニューエディタ" }, { href: "/ja/custom-design", label: "動画・写真背景" },
       { href: "/ja/color-scheme", label: "ブランドカラー" }, { href: "/ja/multilingual", label: "多言語サイト" },
