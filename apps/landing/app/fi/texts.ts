@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     sub: "Tehty ravintoloille. Käytetty pöydässä.",
     items: [
       
-      { Icon: ScanLine, title: "Tilaus pöydästä", desc: "Tilaukset saapuvat heti WhatsAppiin tai hallintapaneeliin pöytänumeron kera. Nopeampi palvelu.", tag: "Suorat tilaukset" },
+      { Icon: QrCode, title: "Tilaus pöydästä", desc: "Tilaukset saapuvat heti WhatsAppiin tai hallintapaneeliin pöytänumeron kera. Nopeampi palvelu.", tag: "Suorat tilaukset", href: "/fi/online-tilausjarjestelma-ravintolalle" },
       { Icon: Languages, title: "AI-kääntäjä (35 kieltä)", desc: "Tekoälymme ymmärtää gastronomiaa. Turistit tilaavat 20 % enemmän, kun he ymmärtävät menun.", tag: "Tekoälykäännös" },
       { Icon: CalendarCheck, title: "Pöytävaraukset", desc: "Järjestelmä ottaa varaukset vastaan, kun olet keittiössä. Ei enää menetettyjä asiakkaita.", tag: "Varaukset" },
       { Icon: Palette, title: "Moderni muotoilu", desc: "Videotaustat ja herkulliset kuvat. Menusi näyttää arvokkaalta ja herättää ruokahalun heti.", tag: "Oma ulkoasu" },
@@ -81,7 +81,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/fi/online-orders", label: "Online-tilaukset" },
+      { href: "/fi/online-tilausjarjestelma-ravintolalle", label: "Online-tilausjärjestelmä" },
       { href: "/fi/ai-translation", label: "AI-käännös" },
       { href: "/fi/reservations", label: "Varaukset" },
       { href: "/fi/mobile-management", label: "Mobiilihallinta" },
