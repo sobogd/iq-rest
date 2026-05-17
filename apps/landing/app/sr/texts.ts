@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     sub: "Napravljeno za restorane. Korišćeno za stolom.",
     items: [
       
-      { Icon: ScanLine, title: "Naručivanje sa stola", desc: "Porudžbine odmah stižu na WhatsApp ili panel sa brojem stola. Brža usluga, veća prodaja.", tag: "Директне поруџбине" },
+      { Icon: QrCode, title: "Naručivanje sa stola", desc: "Porudžbine odmah stižu na WhatsApp ili panel sa brojem stola. Brža usluga, veća prodaja.", tag: "Директне поруџбине", href: "/sr/online-sistem-porudzbina-restoran" },
       { Icon: Languages, title: "AI prevodilac (35 jezika)", desc: "Naš AI razume gastronomiju. Turisti naručuju 20% više kada razumeju sastav jela.", tag: "AI превод" },
       { Icon: CalendarCheck, title: "Rezervacija stolova", desc: "Sistem sam prima rezervacije dok ste vi u kuhinji. Nijedan izgubljeni gost.", tag: "Резервације" },
       { Icon: Palette, title: "Moderni dizajn", desc: "Video pozadine i privlačne fotografije. Vaš jelovnik izgleda luksuzno i budi apetit.", tag: "Сопствени дизајн" },
@@ -81,7 +81,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/sr/online-orders", label: "Online porudžbine" }, { href: "/sr/ai-translation", label: "AI prevod" },
+      { href: "/sr/online-sistem-porudzbina-restoran", label: "Online sistem porudžbina" }, { href: "/sr/ai-translation", label: "AI prevod" },
       { href: "/sr/reservations", label: "Rezervacije" }, { href: "/sr/mobile-management", label: "Mobilno upravljanje" },
       { href: "/sr/easy-menu", label: "Editor menija" }, { href: "/sr/custom-design", label: "Video i foto pozadine" },
       { href: "/sr/color-scheme", label: "Boje brenda" }, { href: "/sr/multilingual", label: "Višejezični sajt" },
