@@ -72,6 +72,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       is: "/netpontunarkerfi-veitingastadar",
       lt: "/internetine-uzsakymu-sistema-restoranui",
       lv: "/tiessaistes-pasutijumu-sistema-restoranam",
+      no: "/online-bestillingssystem-restaurant",
     },
   }
 

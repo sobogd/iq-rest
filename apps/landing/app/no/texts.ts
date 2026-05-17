@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     sub: "Bygget for restauranter. Brukt ved bordet.",
     items: [
       
-      { Icon: ScanLine, title: "Bestilling ved bordet", desc: "Bestillinger havner rett i WhatsApp eller kontrollpanelet med bordnummer. Raskere service.", tag: "Direkte bestillinger" },
+      { Icon: QrCode, title: "Bestilling ved bordet", desc: "Bestillinger havner rett i WhatsApp eller kontrollpanelet med bordnummer. Raskere service.", tag: "Direkte bestillinger", href: "/no/online-bestillingssystem-restaurant" },
       { Icon: Languages, title: "AI-oversetter (35 språk)", desc: "Vår AI forstår gastronomi. Turister bestiller 20% mer når de forstår menyen.", tag: "AI-oversettelse" },
       { Icon: CalendarCheck, title: "Bordreservasjon", desc: "Systemet tar imot bookinger mens du er travel på kjøkkenet. Ingen tapte kunder.", tag: "Reservasjoner" },
       { Icon: Palette, title: "Moderne design", desc: "Videobakgrunner og fristende bilder. Menyen din ser eksklusiv ut og vekker appetitten.", tag: "Eget design" },
@@ -81,7 +81,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/no/online-orders", label: "Onlinebestillinger" },
+      { href: "/no/online-bestillingssystem-restaurant", label: "Online bestillingssystem" },
       { href: "/no/ai-translation", label: "AI-oversettelse" },
       { href: "/no/reservations", label: "Reservasjoner" },
       { href: "/no/mobile-management", label: "Mobilstyring" },
