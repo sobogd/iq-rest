@@ -114,6 +114,7 @@ const nextConfig: NextConfig = {
       { source: "/sk/online-orders", destination: "/sk/online-objednavkovy-system-restauracia", permanent: true },
       { source: "/sl/online-orders", destination: "/sl/spletni-sistem-narocanja-restavracija", permanent: true },
       { source: "/sr/online-orders", destination: "/sr/online-sistem-porudzbina-restoran", permanent: true },
+      { source: "/sv/online-orders", destination: "/sv/online-bestallningssystem-restaurang", permanent: true },
       // Public menu lives on <slug>.iq-rest.com now. Legacy short links and
       // locale-prefixed /m/<slug> URLs (printed QR codes, old crawl) 301 to
       // the subdomain. Locale routing happens on the public-menu service.
