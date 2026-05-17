@@ -77,6 +77,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       sk: "/online-objednavkovy-system-restauracia",
       sl: "/spletni-sistem-narocanja-restavracija",
       sr: "/online-sistem-porudzbina-restoran",
+      sv: "/online-bestallningssystem-restaurang",
     },
   }
 
