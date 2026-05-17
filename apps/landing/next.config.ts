@@ -71,8 +71,10 @@ const nextConfig: NextConfig = {
       // Old slug 301s so existing Google Ads clicks (and any indexed/cached URL) keep landing.
       { source: "/it/lp/menu-qr-per-ristoranti", destination: "/it/lp/menu-qr-code-online-per-ristoranti", permanent: true },
       { source: "/it/lp/menu-qr-code-per-ristoranti", destination: "/it/lp/menu-qr-code-online-per-ristoranti", permanent: true },
-      { source: "/es/lp/menu-qr-para-restaurantes", destination: "/es/lp/menu-qr-code-para-restaurantes", permanent: true },
-      { source: "/ca/lp/menu-qr-per-restaurants", destination: "/ca/lp/menu-qr-code-per-restaurants", permanent: true },
+      { source: "/es/lp/menu-qr-para-restaurantes", destination: "/es/lp/codigo-qr-carta-restaurante", permanent: true },
+      { source: "/es/lp/menu-qr-code-para-restaurantes", destination: "/es/lp/codigo-qr-carta-restaurante", permanent: true },
+      { source: "/ca/lp/menu-qr-per-restaurants", destination: "/ca/lp/codi-qr-carta-restaurant", permanent: true },
+      { source: "/ca/lp/menu-qr-code-per-restaurants", destination: "/ca/lp/codi-qr-carta-restaurant", permanent: true },
       // Spanish KW landings: /es absorbed /es/carta-digital (SEO weight).
       // /es/menu-digital and /es/qr-carta were dropped — collapse all three
       // into /es. PPC lives at /es/lp/carta-digital-para-restaurante

@@ -5,11 +5,11 @@ const data = {
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      name: `IQ Rest — Menú QR code para restaurantes`,
+      name: `IQ Rest — Codi QR i carta digital per a restaurants`,
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
       description: TEXTS.meta.description,
-      inLanguage: "es",
+      inLanguage: "ca",
       offers: { "@type": "Offer", price: "6.90", priceCurrency: "EUR" },
     },
     {
