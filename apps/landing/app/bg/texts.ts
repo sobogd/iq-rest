@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     sub: "Направено за ресторанти. Използвано на масата.",
     items: [
       
-      { Icon: ScanLine, title: "Поръчки от масата", desc: "Поръчките пристигат незабавно в WhatsApp или панела с номер на маса. По-бързо обслужване, повече продажби.", tag: "Директни поръчки" },
+      { Icon: QrCode, title: "Поръчки от масата", desc: "Поръчките пристигат незабавно в WhatsApp или панела с номер на маса. По-бързо обслужване, повече продажби.", tag: "Директни поръчки", href: "/bg/sistema-za-onlayn-porachki-restorant" },
       { Icon: Languages, title: "AI преводач (35 езика)", desc: "Нашият AI разбира от кулинария. Туристите поръчват с 20% повече, когато разбират съставките.", tag: "AI превод" },
       { Icon: CalendarCheck, title: "Резервация на маси", desc: "Системата сама приема резервации, докато сте в кухнята. Нито един изпуснат клиент.", tag: "Резервации" },
       { Icon: Palette, title: "Модерен дизайн", desc: "Видео фонове и апетитни снимки. Вашето меню изглежда скъпо и предизвиква апетит веднага.", tag: "Персонален дизайн" },
@@ -81,7 +81,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/bg/online-orders", label: "Онлайн поръчки" }, { href: "/bg/ai-translation", label: "AI превод" },
+      { href: "/bg/sistema-za-onlayn-porachki-restorant", label: "Система за онлайн поръчки" }, { href: "/bg/ai-translation", label: "AI превод" },
       { href: "/bg/reservations", label: "Резервации" }, { href: "/bg/mobile-management", label: "Управление от мобилно" },
       { href: "/bg/easy-menu", label: "Редактор на менюто" }, { href: "/bg/custom-design", label: "Видео и фото фонове" },
       { href: "/bg/color-scheme", label: "Цветове на бранда" }, { href: "/bg/multilingual", label: "Многоезичен сайт" },

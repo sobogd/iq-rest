@@ -58,6 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ar: "/nizam-talabat-online-matam",
       ko: "/restaurant-online-order-system",
       uk: "/onlayn-systema-zamovlen-restoran",
+      bg: "/sistema-za-onlayn-porachki-restorant",
     },
   }
 
