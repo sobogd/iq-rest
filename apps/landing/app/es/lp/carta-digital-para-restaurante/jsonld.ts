@@ -16,7 +16,7 @@ export function buildJsonLd(texts: LandingTexts) {
 
   const softwareApp = {
     "@type": "SoftwareApplication",
-    name: "IQ Rest — Carta Digital para Restaurantes",
+    name: "IQ Rest — Carta Digital QR para Restaurantes",
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web, iOS, Android",
     url: URL_SELF,
@@ -43,7 +43,7 @@ export function buildJsonLd(texts: LandingTexts) {
       {
         "@type": "ListItem",
         position: 2,
-        name: "Carta Digital para Restaurantes",
+        name: "Carta Digital QR para Restaurantes",
         item: URL_SELF,
       },
     ],
