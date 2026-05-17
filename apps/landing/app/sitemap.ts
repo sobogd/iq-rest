@@ -56,6 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       zh: "/qr-ordering-system-restaurant",
       tr: "/restoran-online-siparis-sistemi",
       ar: "/nizam-talabat-online-matam",
+      ko: "/restaurant-online-order-system",
     },
   }
 

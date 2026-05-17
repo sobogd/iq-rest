@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     sub: "레스토랑을 위해 만들었습니다. 테이블에서 사용합니다.",
     items: [
       
-      { Icon: ScanLine, title: "테이블 주문", desc: "테이블 번호와 함께 WhatsApp이나 관리창으로 즉시 주문 접수. 더 빠른 서비스와 매출 증대.", tag: "직접 주문" },
+      { Icon: QrCode, title: "테이블 온라인 주문 시스템", desc: "손님이 테이블 QR을 스캔하고 주문을 작성하면 주방 태블릿이나 WhatsApp으로 직접 도착. 수수료 0%, 테이블 번호 포함.", tag: "QR 주문", href: "/ko/restaurant-online-order-system" },
       { Icon: Languages, title: "AI 번역기 (35개국어)", desc: "미식의 문맥을 이해하는 AI. 메뉴를 정확히 이해할 때 관광객의 주문이 20% 늘어납니다.", tag: "AI 번역" },
       { Icon: CalendarCheck, title: "테이블 예약", desc: "주방에서 바쁜 시간에도 시스템이 예약을 대신 받습니다. 단 한 명의 고객도 놓치지 마세요.", tag: "예약" },
       { Icon: Palette, title: "세련된 디자인", desc: "동영상 배경과 먹음직스러운 사진. 첫 화면부터 식욕을 자극하는 프리미엄 디자인.", tag: "맞춤 디자인" },
@@ -81,7 +81,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/ko/online-orders", label: "온라인 주문" }, { href: "/ko/ai-translation", label: "AI 번역" },
+      { href: "/ko/restaurant-online-order-system", label: "온라인 주문 시스템" }, { href: "/ko/ai-translation", label: "AI 번역" },
       { href: "/ko/reservations", label: "예약" }, { href: "/ko/mobile-management", label: "모바일 관리" },
       { href: "/ko/easy-menu", label: "메뉴 편집기" }, { href: "/ko/custom-design", label: "동영상·사진 배경" },
       { href: "/ko/color-scheme", label: "브랜드 색상" }, { href: "/ko/multilingual", label: "다국어 사이트" },
