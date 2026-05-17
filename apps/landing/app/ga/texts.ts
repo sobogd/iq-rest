@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     sub: "Tógtha do bhialanna. Úsáidte ag an mbord.",
     items: [
       
-      { Icon: ScanLine, title: "Ordú ag an mbord", desc: "Tagann orduithe láithreach ar WhatsApp nó ar an bpainéal le huimhir an bhoird. Seirbhís níos gasta.", tag: "Orduithe díreach" },
+      { Icon: QrCode, title: "Ordú ag an mbord", desc: "Tagann orduithe láithreach ar WhatsApp nó ar an bpainéal le huimhir an bhoird. Seirbhís níos gasta.", tag: "Orduithe díreach", href: "/ga/coras-orduithe-ar-line-bialann" },
       { Icon: Languages, title: "Aistritheoir AI (35 Teanga)", desc: "Tuigeann ár n-AI an ghasstnamaíocht. Ordaíonn turasóirí 20% níos mó nuair a thuigeann siad an bia.", tag: "Aistriúchán AI" },
       { Icon: CalendarCheck, title: "Áitithe Táblaí", desc: "Glacann an córas le háitithe agus tú gnóthach sa chistin. Ná caill custaiméir arís.", tag: "Áirithintí" },
       { Icon: Palette, title: "Dearadh Nua-aimseartha", desc: "Cúlraí físeáin agus grianghraif áille. Breathnaíonn do rochlár go hiontach.", tag: "Dearadh saincheaptha" },
@@ -81,7 +81,7 @@ export const TEXTS: LandingTexts = {
   },
   footer: {
     featureLinks: [
-      { href: "/ga/online-orders", label: "Orduithe ar líne" }, { href: "/ga/ai-translation", label: "Aistriúchán AI" },
+      { href: "/ga/coras-orduithe-ar-line-bialann", label: "Córas orduithe ar líne" }, { href: "/ga/ai-translation", label: "Aistriúchán AI" },
       { href: "/ga/reservations", label: "Áirithintí" }, { href: "/ga/mobile-management", label: "Bainistíocht ar fhón" },
       { href: "/ga/easy-menu", label: "Eagarthóir biachláir" }, { href: "/ga/custom-design", label: "Cúlraí físe agus grianghraif" },
       { href: "/ga/color-scheme", label: "Dathanna brandála" }, { href: "/ga/multilingual", label: "Suíomh ilteangach" },

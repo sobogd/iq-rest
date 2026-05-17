@@ -66,6 +66,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       et: "/online-tellimissusteem-restoranile",
       fa: "/sistem-sefaresh-online-restoran",
       fi: "/online-tilausjarjestelma-ravintolalle",
+      ga: "/coras-orduithe-ar-line-bialann",
     },
   }
 
