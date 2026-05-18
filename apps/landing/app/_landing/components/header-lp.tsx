@@ -38,8 +38,8 @@ export function LandingHeaderLp({ texts, locale, useLocalAnchors = false }: Head
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur">
-      <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
-        <div className="h-16 flex items-center justify-between gap-3 relative">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto h-16 flex items-center justify-between gap-3 relative">
           <LinkForward
             href={homeHref}
             trackEvent="land_header_logo_click"
