@@ -32,14 +32,14 @@ const COMPARISON_ROWS = [
 export function SeoContent() {
   return (
     <>
-      <Section dataSection="seo-intro">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-xs font-medium uppercase tracking-widest text-primary mb-3 text-center">Подробнее</p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-3 text-center">
+      <Section noContainer dataSection="seo-intro">
+        <div className="w-full">
+          <p className="text-xs font-medium uppercase tracking-widest text-primary mb-3 text-start">Подробнее</p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-3 text-start">
             Что такое система онлайн-заказов для ресторана{" "}
             <span className="text-muted-foreground">по-настоящему</span>
           </h2>
-          <p className="text-base sm:text-lg text-muted-foreground mb-10 text-center">
+          <p className="text-base sm:text-lg text-muted-foreground mb-10 text-start">
             Не marketplace. Не агрегатор доставки. Прямая линия от телефона гостя за вашим столом к планшету кухни — или в WhatsApp.
           </p>
           <div className="space-y-4 text-base sm:text-lg text-foreground/90 leading-relaxed">
@@ -53,9 +53,9 @@ export function SeoContent() {
         </div>
       </Section>
 
-      <Section dataSection="seo-benefits">
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-center">Что вы реально получаете</h3>
+      <Section noContainer dataSection="seo-benefits">
+        <div className="w-full">
+          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-start">Что вы реально получаете</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
             {BENEFITS.map((b) => (
               <div key={b} className="bg-muted/20 border border-border rounded-2xl p-4 sm:p-5 flex flex-row items-center gap-3">
@@ -67,10 +67,10 @@ export function SeoContent() {
         </div>
       </Section>
 
-      <Section dataSection="seo-how">
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-center">Как работает поток заказов IQ Rest</h3>
-          <p className="text-base sm:text-lg text-foreground/90 leading-relaxed mb-6 text-center">Четыре переключателя в панели — и вы в эфире. Без установщика, без POS-железа, без проекта интеграции.</p>
+      <Section noContainer dataSection="seo-how">
+        <div className="w-full">
+          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-start">Как работает поток заказов IQ Rest</h3>
+          <p className="text-base sm:text-lg text-foreground/90 leading-relaxed mb-6 text-start">Четыре переключателя в панели — и вы в эфире. Без установщика, без POS-железа, без проекта интеграции.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             {HOW_STEPS.map((s, i) => (
               <div key={s.title} className="bg-muted/20 border border-border rounded-2xl p-5 flex flex-row items-start gap-4">
@@ -85,9 +85,9 @@ export function SeoContent() {
         </div>
       </Section>
 
-      <Section dataSection="seo-table">
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-center">Агрегатор, классический POS или система заказов</h3>
+      <Section noContainer dataSection="seo-table">
+        <div className="w-full">
+          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-start">Агрегатор, классический POS или система заказов</h3>
           <div className="bg-muted/20 border border-border rounded-2xl p-4 sm:p-6 overflow-x-auto">
             <table className="w-full text-sm sm:text-base border-collapse">
               <thead>
@@ -110,7 +110,7 @@ export function SeoContent() {
               </tbody>
             </table>
           </div>
-          <p className="text-sm text-muted-foreground leading-relaxed mt-6 text-center">
+          <p className="text-sm text-muted-foreground leading-relaxed mt-6 text-start">
             Система онлайн-заказов, которой владеет сам ресторан, окупается с первого уикенда — каждый рубль, что гость тратит в зале, остаётся в зале, а тикет у раздачи всегда с реальным номером стола.
           </p>
         </div>

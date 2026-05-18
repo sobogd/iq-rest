@@ -44,16 +44,16 @@ const COMPARISON_ROWS = [
 export function SeoContent() {
   return (
     <>
-      <Section dataSection="seo-intro">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-xs font-medium uppercase tracking-widest text-primary mb-3 text-center">
+      <Section noContainer dataSection="seo-intro">
+        <div className="w-full">
+          <p className="text-xs font-medium uppercase tracking-widest text-primary mb-3 text-start">
             In depth
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-3 text-center">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-3 text-start">
             What a restaurant online ordering system{" "}
             <span className="text-muted-foreground">really is</span>
           </h2>
-          <p className="text-base sm:text-lg text-muted-foreground mb-10 text-center">
+          <p className="text-base sm:text-lg text-muted-foreground mb-10 text-start">
             Not a marketplace. Not a delivery aggregator. A direct line from
             the guest's phone at your table to your kitchen tablet — or your
             WhatsApp.
@@ -84,9 +84,9 @@ export function SeoContent() {
         </div>
       </Section>
 
-      <Section dataSection="seo-benefits">
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-center">
+      <Section noContainer dataSection="seo-benefits">
+        <div className="w-full">
+          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-start">
             What you actually get
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
@@ -107,12 +107,12 @@ export function SeoContent() {
         </div>
       </Section>
 
-      <Section dataSection="seo-how">
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-center">
+      <Section noContainer dataSection="seo-how">
+        <div className="w-full">
+          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-start">
             How the IQ Rest ordering flow works
           </h3>
-          <p className="text-base sm:text-lg text-foreground/90 leading-relaxed mb-6 text-center">
+          <p className="text-base sm:text-lg text-foreground/90 leading-relaxed mb-6 text-start">
             Four switches inside the dashboard and you're live. No installer,
             no POS hardware, no integration project.
           </p>
@@ -139,9 +139,9 @@ export function SeoContent() {
         </div>
       </Section>
 
-      <Section dataSection="seo-table">
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-center">
+      <Section noContainer dataSection="seo-table">
+        <div className="w-full">
+          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-start">
             Aggregator, classic POS, or a restaurant online ordering system
           </h3>
           <div className="bg-muted/20 border border-border rounded-2xl p-4 sm:p-6 overflow-x-auto">
@@ -181,7 +181,7 @@ export function SeoContent() {
               </tbody>
             </table>
           </div>
-          <p className="text-sm text-muted-foreground leading-relaxed mt-6 text-center">
+          <p className="text-sm text-muted-foreground leading-relaxed mt-6 text-start">
             A restaurant online ordering system you actually own pays itself
             back the first weekend — every euro a guest spends in your venue
             stays in your venue, and the ticket on the pass always shows the

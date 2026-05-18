@@ -6,7 +6,7 @@ import { LandingFooterLp } from "@/app/_landing/components/footer-lp";
 import { LandingHeaderLp } from "@/app/_landing/components/header-lp";
 import { LandingPricingLp } from "@/app/_landing/components/pricing-lp";
 import { PageTracker } from "@/app/_landing/components/page-tracker";
-import { Section, SectionGroup } from "@/app/_landing/components/section";
+import { Section } from "@/app/_landing/components/section";
 import { JsonLd, createBreadcrumbSchema } from "@/app/_landing/lib/schemas";
 import type { FeatureTexts, LandingTexts } from "@/app/_landing/types";
 
@@ -65,44 +65,43 @@ export function FeaturePage({ texts, chrome, locale, featureId }: FeaturePagePro
         trustLine={texts.hero.trustLine}
       />
 
-      <SectionGroup>
-        <Section dataSection="feature-seo">
-          <FeatureSeoBlock
-            description={texts.seo.description}
-            fullDescription={texts.seo.fullDescription}
-            benefits={texts.seo.benefits}
-            benefitsHeading={texts.seo.benefitsHeading}
-          />
-        </Section>
-        <Section id="pricing" dataSection="pricing">
-          <LandingPricingLp
-            texts={pricingTexts}
-            ctaText={chrome.ctaText}
-            microcopy={chrome.microcopy}
-            locale={locale}
-          />
-        </Section>
-        <Section id="faq" dataSection="faq">
-          <FaqLp texts={faqTexts} />
-        </Section>
-        <Section dataSection="final_cta">
-          <FinalCtaLp
-            texts={texts.finalCta}
-            ctaText={chrome.ctaText}
-            demoText={chrome.demoText}
-            microcopy={chrome.microcopy}
-            locale={locale}
-          />
-        </Section>
-        <Section as="footer" dataSection="footer">
-          <LandingFooterLp
-            texts={chrome.footer}
-            headerTexts={chrome.header}
-            locale={locale}
-            excludeFeatureHref={`/${locale}/${featureId}`}
-          />
-        </Section>
-      </SectionGroup>
+      <Section dataSection="feature-seo" noContainer>
+        <FeatureSeoBlock
+          description={texts.seo.description}
+          fullDescription={texts.seo.fullDescription}
+          benefits={texts.seo.benefits}
+          benefitsHeading={texts.seo.benefitsHeading}
+        />
+      </Section>
+      <Section id="pricing" dataSection="pricing" accent noContainer>
+        <LandingPricingLp
+          texts={pricingTexts}
+          ctaText={chrome.ctaText}
+          demoText={chrome.demoText}
+          microcopy={chrome.microcopy}
+          locale={locale}
+        />
+      </Section>
+      <Section id="faq" dataSection="faq" noContainer>
+        <FaqLp texts={faqTexts} />
+      </Section>
+      <Section dataSection="final_cta" accent noContainer>
+        <FinalCtaLp
+          texts={texts.finalCta}
+          ctaText={chrome.ctaText}
+          demoText={chrome.demoText}
+          microcopy={chrome.microcopy}
+          locale={locale}
+        />
+      </Section>
+      <Section as="footer" dataSection="footer" noContainer>
+        <LandingFooterLp
+          texts={chrome.footer}
+          headerTexts={chrome.header}
+          locale={locale}
+          excludeFeatureHref={`/${locale}/${featureId}`}
+        />
+      </Section>
     </main>
   );
 }

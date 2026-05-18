@@ -15,14 +15,9 @@ export const TEXTS: LandingTexts = {
   hero: {
     ...DEFAULT.hero,
     // SSR fallback — Ads crawler reads `headline` as the keyword phrase.
-    headline: "Digitaalinen ruokalista ravintoloille",
-    sub: "500+ ravintolaa 30+ maassa palvelevat enemmän pöytiä, myyvät enemmän turisteille ja unohtavat toimitusprovisiot. Käytössä 5 minuutissa — 14 päivää ilmaiseksi.",
-    verticals: ["Verkkotilaukset", "Varaukset", "AI-käännös", "Listan skanneri", "Allergeenit", "Premium-design", "Analytiikka"],
+    headline: "Digitaalinen ruokalista ravintoloille. Valmis 5 minuutissa.",
+    sub: "Digitaalinen ruokalista ravintolallesi 5 minuutissa. Kaikki sisältyy: mobiili koodaamaton editori, AI-ruokalistan skannaus, QR-koodit pöytiin ja suorat tilaukset ilman provisioita.",
     dynamicHeadlines: [],
-    headlinePrefix: "Digitaalinen ruokalista ",
-    accentWord: "ravintoloille",
-    accentWordRotation: ["ravintoloille", "kahviloille", "baareille", "pizzerioille", "bistroille", "pubeille"],
-    headlineSuffix: "",
   },
 
   founder: {

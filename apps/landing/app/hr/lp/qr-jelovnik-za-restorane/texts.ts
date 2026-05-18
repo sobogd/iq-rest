@@ -13,13 +13,10 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     ...DEFAULT.hero,
-    headline: "QR jelovnik za restorane",
-    sub: "Više od 500 restorana u 30+ zemalja zamjenjuje tiskani jelovnik QR jelovnikom, više prodaje turistima i ukida provizije dostave. Spreman za 5 minuta — 14 dana besplatno.",
+    headline: "QR jelovnik za restorane. Spreman za 5 minuta.",
+    sub: "QR jelovnik za vaš restoran za 5 minuta. Sve uključeno: mobilni uređivač bez koda, AI skeniranje jelovnika, QR kodovi za stolove i izravne narudžbe bez provizija.",
     dynamicHeadlines: [],
-    headlinePrefix: "QR jelovnik za ",
-    accentWord: "restorane",
     accentWordRotation: DEFAULT.hero.accentWordRotation ?? [],
-    headlineSuffix: "",
   },
 
   founder: {

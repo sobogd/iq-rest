@@ -10,25 +10,33 @@ interface ScanSectionProps {
 export function ScanSectionLp({ texts, locale }: ScanSectionProps) {
   const target = `${createUrl(locale)}&from=landing`;
   return (
-    <div className="max-w-4xl mx-auto">
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-3 text-center">
-        {texts.heading}{" "}
-        <span className="bg-gradient-to-br from-primary to-amber-400 bg-clip-text text-transparent">
-          {texts.headingAccent}
-        </span>
-      </h2>
-      <p className="text-base sm:text-lg text-muted-foreground mb-5 text-center">
-        {texts.sub}
-      </p>
-      <div className="flex justify-center">
-        <LinkForward
-          href={target}
-          trackEvent="land_scan_cta_click"
-          className="inline-flex items-center justify-center min-h-11 py-2 px-6 text-sm font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 active:scale-[0.99] transition-all text-center leading-tight"
-        >
-          {texts.cta}
-        </LinkForward>
+    <section
+      id="scan"
+      data-section="scan"
+      className="scroll-mt-16 w-full px-4 sm:px-6 lg:px-10 xl:px-14 py-10 sm:py-12 bg-gradient-to-br from-primary/10 via-primary/[0.03] to-primary/[0.03] border-y border-border/40"
+    >
+      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 lg:gap-10 text-center lg:text-start">
+        <div className="flex-1 min-w-0">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium tracking-tight mb-2">
+            {texts.heading}{" "}
+            <span className="bg-gradient-to-br from-[hsl(9,100%,58%)] to-[hsl(35,95%,55%)] bg-clip-text text-transparent">
+              {texts.headingAccent}
+            </span>
+          </h2>
+          <p className="text-base sm:text-lg text-muted-foreground">
+            {texts.sub}
+          </p>
+        </div>
+        <div className="shrink-0 flex justify-center lg:justify-end">
+          <LinkForward
+            href={target}
+            trackEvent="land_scan_cta_click"
+            className="inline-flex items-center justify-center min-h-11 py-2 px-6 text-sm font-semibold text-white bg-gradient-to-br from-[hsl(9,100%,58%)] to-[hsl(35,95%,55%)] rounded-lg hover:opacity-90 active:scale-[0.99] transition-all text-center leading-tight whitespace-nowrap"
+          >
+            {texts.cta}
+          </LinkForward>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

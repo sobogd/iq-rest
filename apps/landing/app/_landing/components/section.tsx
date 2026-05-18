@@ -7,6 +7,7 @@ import type { ElementType, ReactNode } from "react";
 // modifier.
 const PADDING = "py-12 sm:py-16";
 const CONTAINER = "container mx-auto px-4";
+const FULL_BLEED = "w-full px-4 sm:px-6 lg:px-10 xl:px-14";
 const SCROLL_MARGIN = "scroll-mt-16";
 
 // Accent treatment — same gradient as the historical scan-banner card,
@@ -36,6 +37,9 @@ interface SectionProps {
    *  alternation. Used for sections that always carry the accent treatment
    *  (e.g. the scan banner sitting above the alternating group). */
   accent?: boolean;
+  /** Drop the centered max-width container — section content stretches
+   *  full-width with only edge padding (same hero stylistic). */
+  noContainer?: boolean;
   /** Render as a different element (e.g. `footer`) while keeping all
    *  Section chrome — padding, container, accent alternation. */
   as?: ElementType;
@@ -47,6 +51,7 @@ export function Section({
   dataSection,
   className = "",
   accent,
+  noContainer,
   as: Tag = "section",
   children,
 }: SectionProps) {
@@ -56,7 +61,7 @@ export function Section({
       data-section={dataSection}
       className={`${SCROLL_MARGIN} ${PADDING} ${accent ? ACCENT_CLASSES : ""} ${className}`}
     >
-      <div className={CONTAINER}>{children}</div>
+      <div className={noContainer ? FULL_BLEED : CONTAINER}>{children}</div>
     </Tag>
   );
 }

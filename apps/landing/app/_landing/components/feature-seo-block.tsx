@@ -17,17 +17,17 @@ export function FeatureSeoBlock({
   benefitsHeading,
 }: FeatureSeoBlockProps) {
   return (
-    <div className="max-w-4xl mx-auto">
-      <p className="text-base sm:text-lg text-foreground leading-relaxed mb-5 text-center">
+    <div className="w-full">
+      <p className="text-base sm:text-lg text-foreground leading-relaxed mb-5 text-start">
         {description}
       </p>
-      <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-8 whitespace-pre-line text-center">
+      <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-8 whitespace-pre-line text-start">
         {fullDescription}
       </p>
       {benefits.length > 0 ? (
         <>
           {benefitsHeading ? (
-            <h2 className="text-xl sm:text-2xl font-medium tracking-tight mb-6 text-foreground text-center">
+            <h2 className="text-xl sm:text-2xl font-medium tracking-tight mb-6 text-foreground text-start">
               {benefitsHeading}
             </h2>
           ) : null}

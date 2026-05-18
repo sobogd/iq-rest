@@ -13,13 +13,10 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     ...DEFAULT.hero,
-    headline: "QR jedilnik za restavracije",
-    sub: "Več kot 500 restavracij v 30+ državah nadomešča tiskan jedilnik z QR jedilnikom, več prodaja turistom in odpravlja provizije za dostavo. Pripravljen v 5 minutah — 14 dni brezplačno.",
+    headline: "QR jedilnik za restavracije. Pripravljen v 5 minutah.",
+    sub: "QR jedilnik za vašo restavracijo v 5 minutah. Vse vključeno: mobilni urejevalnik brez kode, AI skeniranje jedilnika, QR kode za mize in neposredna naročila brez provizij.",
     dynamicHeadlines: [],
-    headlinePrefix: "QR jedilnik za ",
-    accentWord: "restavracije",
     accentWordRotation: DEFAULT.hero.accentWordRotation ?? [],
-    headlineSuffix: "",
   },
 
   founder: {

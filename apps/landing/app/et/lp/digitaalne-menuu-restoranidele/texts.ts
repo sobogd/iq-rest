@@ -15,14 +15,9 @@ export const TEXTS: LandingTexts = {
   hero: {
     ...DEFAULT.hero,
     // SSR fallback — Ads crawler reads `headline` as the keyword phrase.
-    headline: "Digitaalne menüü restoranidele",
-    sub: "500+ restorani 30+ riigis teenindavad rohkem laudu, müüvad rohkem turistidele ja kaotavad kohaletoimetuskomisjonid. Töös 5 minutiga — 14 päeva tasuta.",
-    verticals: ["Veebitellimused", "Broneeringud", "AI tõlge", "Menüü skanner", "Allergeenid", "Premium disain", "Analüütika"],
+    headline: "Digitaalne menüü restoranidele. Valmis 5 minutiga.",
+    sub: "Digitaalne menüü teie restoranile 5 minutiga. Kõik sisaldub: mobiilne kooditu redaktor, AI menüü skannimine, QR-koodid laudadele ja otsetellimused ilma komisjonita.",
     dynamicHeadlines: [],
-    headlinePrefix: "Digitaalne menüü ",
-    accentWord: "restoranidele",
-    accentWordRotation: ["restoranidele", "kohvikutele", "baaridele", "pitsabaaridele", "bistroodele", "kõrtsidele"],
-    headlineSuffix: "",
   },
 
   founder: {

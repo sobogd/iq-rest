@@ -13,13 +13,10 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     ...DEFAULT.hero,
-    headline: "QR étlap éttermeknek",
-    sub: "Több mint 500 étterem 30+ országban cseréli a nyomtatott étlapot QR étlapra, többet ad el a turistáknak és nullára csökkenti a kiszállítási jutalékot. Kész 5 perc alatt — 14 nap ingyenes.",
+    headline: "QR-étlap éttermeknek. 5 perc alatt kész.",
+    sub: "QR-étlap az éttermednek 5 perc alatt. Minden benne: mobil szerkesztő kódolás nélkül, AI étlap-szkennelés, QR-kódok az asztalokhoz és közvetlen rendelések jutalék nélkül.",
     dynamicHeadlines: [],
-    headlinePrefix: "QR étlap ",
-    accentWord: "éttermeknek",
     accentWordRotation: DEFAULT.hero.accentWordRotation ?? [],
-    headlineSuffix: "",
   },
 
   founder: {

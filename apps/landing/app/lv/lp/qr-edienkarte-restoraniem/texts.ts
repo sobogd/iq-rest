@@ -13,13 +13,10 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     ...DEFAULT.hero,
-    headline: "QR ēdienkarte restorāniem",
-    sub: "Vairāk nekā 500 restorānu 30+ valstīs nomaina drukāto ēdienkarti ar QR ēdienkarti, vairāk pārdod tūristiem un atceļ piegādes komisijas. Gatava 5 minūtēs — 14 dienas bez maksas.",
+    headline: "QR ēdienkarte restorāniem. Gatava 5 minūtēs.",
+    sub: "QR ēdienkarte jūsu restorānam 5 minūtēs. Viss iekļauts: mobilais redaktors bez koda, AI ēdienkartes skenēšana, QR kodi galdiem un tiešie pasūtījumi bez komisijām.",
     dynamicHeadlines: [],
-    headlinePrefix: "QR ēdienkarte ",
-    accentWord: "restorāniem",
     accentWordRotation: DEFAULT.hero.accentWordRotation ?? [],
-    headlineSuffix: "",
   },
 
   founder: {

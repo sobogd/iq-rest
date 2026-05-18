@@ -15,14 +15,9 @@ export const TEXTS: LandingTexts = {
   hero: {
     ...DEFAULT.hero,
     // SSR fallback — Ads crawler reads `headline` as the keyword phrase.
-    headline: "Cyfrowe menu dla restauracji",
-    sub: "500+ restauracji w 30+ krajach obsługuje więcej stolików, sprzedaje więcej turystom i tnie prowizje za dostawy. Online w 5 minut — 14 dni za darmo.",
-    verticals: ["Zamówienia online", "Rezerwacje", "Tłumaczenie AI", "Skaner menu", "Alergeny", "Design premium", "Analityka"],
+    headline: "Cyfrowe menu dla restauracji. Gotowe w 5 minut.",
+    sub: "Cyfrowe menu dla Twojej restauracji w 5 minut. Wszystko w cenie: mobilny edytor bez kodu, skanowanie menu AI, kody QR dla stolików i bezpośrednie zamówienia bez prowizji.",
     dynamicHeadlines: [],
-    headlinePrefix: "Cyfrowe menu dla ",
-    accentWord: "restauracji",
-    accentWordRotation: ["restauracji", "kawiarni", "barów", "pizzerii", "bistro", "pubów"],
-    headlineSuffix: "",
   },
 
   founder: {

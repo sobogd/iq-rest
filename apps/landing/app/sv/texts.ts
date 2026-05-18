@@ -16,8 +16,8 @@ export const TEXTS: LandingTexts = {
   header: { navFeatures: "Funktioner", navHow: "Så funkar det", navPricing: "Priser", navFaq: "FAQ", signIn: "Logga in", cta: "Starta" },
   hero: {
     verticals: ["Restauranger", "Caféer", "Barer", "Hotell", "Pizzerior"],
-    headline: "QR-meny på 5 minuter.",
-    sub: "Färdig restaurangwebbplats — utan utvecklare och underleverantörer. Direkta beställningar, bokningar och gästanalys i en prenumeration.",
+    headline: "Digital meny för restauranger. Klar på 5 minuter.",
+    sub: "Digital meny för din restaurang på 5 minuter. Allt inkluderat: mobil editor utan kod, AI-menyskanning, QR-koder för bord och direkta beställningar utan provisioner.",
     dynamicHeadlines: ["0% provision.", "35 språk med AI.", "Onlinebeställning.", "Bokning 24/7.", "Premium design."],
     painBullets: ["0% provision: Alla beställningar går direkt till dig.", "AI-översättning: 35 språk ökar försäljningen till turister.", "Bokning 24/7: Fullsatt utan extra samtal.", "Flexibla priser: Uppdatera menyn på några sekunder."],
     rating: "Över 500 restauranger i 30+ länder",

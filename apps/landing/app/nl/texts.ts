@@ -31,8 +31,8 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Restaurants", "Cafés", "Bars", "Hotels", "Pizzeria's"],
-    headline: "QR-menu in 5 minuten.",
-    sub: "Kant-en-klare restaurantwebsite — zonder ontwikkelaars of aannemers. Directe bestellingen, reserveringen en gastanalyses in één abonnement.",
+    headline: "Digitale menukaart voor restaurants. Klaar in 5 minuten.",
+    sub: "Digitale menukaart voor jouw restaurant in 5 minuten. Alles inbegrepen: mobiele editor zonder code, AI menu-scan, QR-codes voor tafels en directe bestellingen zonder commissies.",
     dynamicHeadlines: ["0% commissie.", "35 talen met AI.", "Online bestellen.", "Reserveren 24/7.", "Premium design."],
     painBullets: ["0% commissie: Alle bestellingen gaan direct naar jou.", "AI-vertaling: 35 talen om de omzet van toeristen te verhogen.", "Reserveren 24/7: Volle bak zonder extra telefoontjes.", "Flexibele prijzen: Update je menu in een paar seconden."],
     rating: "Meer dan 500 restaurants in 30+ landen",

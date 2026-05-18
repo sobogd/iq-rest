@@ -15,8 +15,8 @@ export const TEXTS: LandingTexts = {
   header: { navFeatures: "Ominaisuudet", navHow: "Näin se toimii", navPricing: "Hinnat", navFaq: "FAQ", signIn: "Kirjaudu", cta: "Aloita" },
   hero: {
     verticals: ["Ravintolat", "Kahvilat", "Baarit", "Hotellit", "Pizzeriat"],
-    headline: "QR-menu 5 minuutissa.",
-    sub: "Valmis ravintolan verkkosivusto — ilman kehittäjiä ja alihankkijoita. Suorat tilaukset, varaukset ja asiakasanalytiikka yhdellä tilauksella.",
+    headline: "Digitaalinen ruokalista ravintoloille. Valmis 5 minuutissa.",
+    sub: "Digitaalinen ruokalista ravintolallesi 5 minuutissa. Kaikki sisältyy: mobiili koodaamaton editori, AI-ruokalistan skannaus, QR-koodit pöytiin ja suorat tilaukset ilman provisioita.",
     dynamicHeadlines: ["0% provisio.", "35 kieltä tekoälyllä.", "Online-tilaukset.", "Varaukset 24/7.", "Premium-muotoilu."],
     painBullets: ["0 % provisio: Kaikki tilaukset tulevat suoraan sinulle.", "AI-käännös: 35 kieltä kasvattamaan turistien tilauksia.", "Varaukset 24/7: Täysi tupa ilman puhelurumbaa.", "Joustavat hinnat: Päivitä menu sekunneissa."],
     rating: "Yli 500 ravintolaa 30+ maassa",

@@ -15,14 +15,9 @@ export const TEXTS: LandingTexts = {
   hero: {
     ...DEFAULT.hero,
     // SSR fallback — Ads crawler reads `headline` as the keyword phrase.
-    headline: "Skaitmeninis meniu restoranams",
-    sub: "500+ restoranų 30+ šalių aptarnauja daugiau staliukų, parduoda daugiau turistams ir panaikina pristatymo komisinius. Veikia per 5 minutes — 14 dienų nemokamai.",
-    verticals: ["Užsakymai internetu", "Rezervacijos", "AI vertimas", "Meniu skeneris", "Alergenai", "Premium dizainas", "Analitika"],
+    headline: "Skaitmeninis meniu restoranams. Paruošta per 5 minutes.",
+    sub: "Skaitmeninis meniu jūsų restoranui per 5 minutes. Viskas įskaičiuota: mobilus redaktorius be kodo, AI meniu skenavimas, QR kodai stalams ir tiesioginiai užsakymai be komisinių.",
     dynamicHeadlines: [],
-    headlinePrefix: "Skaitmeninis meniu ",
-    accentWord: "restoranams",
-    accentWordRotation: ["restoranams", "kavinėms", "barams", "picerijoms", "bistro", "aludėms"],
-    headlineSuffix: "",
   },
 
   founder: {

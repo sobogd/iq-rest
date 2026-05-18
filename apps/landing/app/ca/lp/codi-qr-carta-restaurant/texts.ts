@@ -16,13 +16,9 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     ...DEFAULT.hero,
-    headline: "Codi QR i carta digital per a restaurants",
-    sub: "Més de 500 restaurants a 30+ països enganxen un codi QR a cada taula: el client l'escaneja, obre la carta al mòbil i demana sense esperar el cambrer. Sense app, sense comissions de delivery. Llest en 5 minuts — 14 dies gratis.",
+    headline: "Carta QR per a Restaurants. Llesta en 5 minuts.",
+    sub: "Carta QR per al teu restaurant en 5 minuts. Tot inclòs: editor mòbil sense codi, escaneig IA del menú, codi QR per a taules i comandes directes sense comissions.",
     dynamicHeadlines: [],
-    headlinePrefix: "Codi QR i carta digital per a ",
-    accentWord: "restaurants",
-    accentWordRotation: ["cafeteries", "bars", "hotels", "pizzeries", "restaurants"],
-    headlineSuffix: "",
   },
 
   founder: {

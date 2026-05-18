@@ -37,8 +37,8 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Restaurantes", "Tabernas", "Pizzerías", "Cafeterías", "Bares de tapas", "Asadores"],
-    headline: "Carta Digital para Restaurantes.",
-    sub: "Carta digital para tu restaurante en 5 minutos. Editor móvil sin código, escaneo IA del menú, código QR para mesas y pedidos directos sin comisiones.",
+    headline: "Carta Digital para Restaurantes. Lista en 5 minutos.",
+    sub: "Carta digital para tu restaurante en 5 minutos. Todo incluido: editor móvil sin código, escaneo IA del menú, código QR para mesas y pedidos directos sin comisiones.",
     dynamicHeadlines: [
       "Carta digital en 5 minutos.",
       "Editor desde el móvil.",

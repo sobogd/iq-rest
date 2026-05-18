@@ -29,5 +29,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <LandingPageBody locale={LOCALE} texts={TEXTS} jsonLdHtml={JSON_LD_HTML} />;
+  return <LandingPageBody locale={LOCALE} texts={TEXTS} jsonLdHtml={JSON_LD_HTML} footerVariant="lp" />;
 }

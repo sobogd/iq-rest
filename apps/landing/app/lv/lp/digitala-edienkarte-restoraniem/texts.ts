@@ -15,14 +15,9 @@ export const TEXTS: LandingTexts = {
   hero: {
     ...DEFAULT.hero,
     // SSR fallback — Ads crawler reads `headline` as the keyword phrase.
-    headline: "Digitālā ēdienkarte restorāniem",
-    sub: "500+ restorāni 30+ valstīs apkalpo vairāk galdiņu, pārdod vairāk tūristiem un atsakās no piegādes komisijas. Tiešsaistē 5 minūtēs — 14 dienas bez maksas.",
-    verticals: ["Tiešsaistes pasūtījumi", "Rezervācijas", "AI tulkojums", "Ēdienkartes skeneris", "Alergēni", "Premium dizains", "Analītika"],
+    headline: "Digitālā ēdienkarte restorāniem. Gatava 5 minūtēs.",
+    sub: "Digitālā ēdienkarte jūsu restorānam 5 minūtēs. Viss iekļauts: mobilais redaktors bez koda, AI ēdienkartes skenēšana, QR kodi galdiem un tiešie pasūtījumi bez komisijām.",
     dynamicHeadlines: [],
-    headlinePrefix: "Digitālā ēdienkarte ",
-    accentWord: "restorāniem",
-    accentWordRotation: ["restorāniem", "kafejnīcām", "bāriem", "picērijām", "bistro", "krodziņiem"],
-    headlineSuffix: "",
   },
 
   founder: {

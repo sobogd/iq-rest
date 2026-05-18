@@ -15,14 +15,9 @@ export const TEXTS: LandingTexts = {
   hero: {
     ...DEFAULT.hero,
     // SSR fallback — Ads crawler reads `headline` as the keyword phrase.
-    headline: "Biachlár digiteach do bhialanna",
-    sub: "500+ bialann i 30+ tír ag freastal ar níos mó boird, ag díol níos mó le turasóirí agus ag gearradh coimisiún seachadta. Beo i 5 nóiméad — 14 lá saor in aisce.",
-    verticals: ["Orduithe ar líne", "Áirithintí", "Aistriúchán AI", "Scanóir biachláir", "Ailléirginí", "Dearadh préimhe", "Anailísíocht"],
+    headline: "Biachlár Digiteach do Bhialanna. Réidh i 5 nóiméad.",
+    sub: "Biachlár digiteach do bhialann i 5 nóiméad. Gach rud san áireamh: eagarthóir soghluaiste gan chód, scanadh biachláir le AI, cóid QR do bhoird agus orduithe díreacha gan choimisiún.",
     dynamicHeadlines: [],
-    headlinePrefix: "Biachlár digiteach ",
-    accentWord: "do bhialanna",
-    accentWordRotation: ["do bhialanna", "do chaiféanna", "do bheáir", "do phizzerias", "do bhistros", "do thithe tábhairne"],
-    headlineSuffix: "",
   },
 
   founder: {

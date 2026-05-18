@@ -16,13 +16,9 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     ...DEFAULT.hero,
-    headline: "Código QR y carta digital para restaurantes",
-    sub: "Más de 500 restaurantes en 30+ países pegan un código QR en cada mesa: el cliente escanea, abre la carta en el móvil y pide sin esperar al camarero. Sin app, sin comisiones de delivery. Listo en 5 minutos — 14 días gratis.",
+    headline: "Carta QR para Restaurantes. Lista en 5 minutos.",
+    sub: "Carta QR para tu restaurante en 5 minutos. Todo incluido: editor móvil sin código, escaneo IA del menú, código QR para mesas y pedidos directos sin comisiones.",
     dynamicHeadlines: [],
-    headlinePrefix: "Código QR y carta digital para ",
-    accentWord: "restaurantes",
-    accentWordRotation: ["tabernas", "pizzerías", "cafeterías", "bares de tapas", "asadores", "restaurantes"],
-    headlineSuffix: "",
   },
 
   founder: {

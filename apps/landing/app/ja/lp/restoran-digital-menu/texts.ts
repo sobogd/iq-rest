@@ -15,14 +15,9 @@ export const TEXTS: LandingTexts = {
   hero: {
     ...DEFAULT.hero,
     // SSR fallback — Ads crawler reads `headline` as the keyword phrase.
-    headline: "レストラン向けデジタルメニュー",
-    sub: "30か国以上の500以上のレストランがより多くのテーブルを接客し、観光客により多く販売し、配達手数料をゼロにしています。5分で公開 — 14日間無料。",
-    verticals: ["オンライン注文", "予約", "AI翻訳", "メニュースキャナー", "アレルゲン", "プレミアムデザイン", "分析"],
+    headline: "レストラン向けデジタルメニュー。5分で完成。",
+    sub: "5分でできる、あなたのレストランのデジタルメニュー。すべて込み：ノーコードのモバイルエディタ、AIメニュースキャン、テーブル用QRコード、手数料なしの直接注文。",
     dynamicHeadlines: [],
-    headlinePrefix: "レストラン向けデジタル",
-    accentWord: "メニュー",
-    accentWordRotation: ["メニュー", "カフェメニュー", "バーメニュー", "ピザメニュー", "ビストロメニュー", "パブメニュー"],
-    headlineSuffix: "",
   },
 
   founder: {

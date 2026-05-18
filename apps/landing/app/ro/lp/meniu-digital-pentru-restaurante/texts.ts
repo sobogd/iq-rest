@@ -15,14 +15,9 @@ export const TEXTS: LandingTexts = {
   hero: {
     ...DEFAULT.hero,
     // SSR fallback — Ads crawler reads `headline` as the keyword phrase.
-    headline: "Meniu digital pentru restaurante",
-    sub: "500+ restaurante din 30+ țări servesc mai multe mese, vând mai mult turiștilor și taie comisioanele de livrare. Live în 5 minute — 14 zile gratuit.",
-    verticals: ["Comenzi online", "Rezervări", "Traducere AI", "Scaner meniu", "Alergeni", "Design premium", "Analitică"],
+    headline: "Meniu digital pentru restaurante. Gata în 5 minute.",
+    sub: "Meniu digital pentru restaurantul tău în 5 minute. Totul inclus: editor mobil fără cod, scanare AI a meniului, coduri QR pentru mese și comenzi directe fără comisioane.",
     dynamicHeadlines: [],
-    headlinePrefix: "Meniu digital pentru ",
-    accentWord: "restaurante",
-    accentWordRotation: ["restaurante", "cafenele", "baruri", "pizzerii", "bistrouri", "cârciumi"],
-    headlineSuffix: "",
   },
 
   founder: {

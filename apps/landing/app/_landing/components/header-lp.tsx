@@ -4,7 +4,6 @@ import { usePathname } from "next/navigation";
 import { loginUrl } from "@/lib/dashboard-url";
 import { LogoIcon } from "./logo-icon";
 import { LinkForward } from "./link-forward";
-import { HeroBrandBarControls } from "./hero-brand-bar-controls";
 import type { LandingTexts } from "../types";
 
 interface HeaderProps {
@@ -38,28 +37,34 @@ export function LandingHeaderLp({ texts, locale, useLocalAnchors = false }: Head
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto h-16 flex items-center justify-between gap-3 relative">
+      <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
+        <div className="h-16 flex items-center justify-between gap-3 relative">
           <LinkForward
             href={homeHref}
             trackEvent="land_header_logo_click"
-            className="flex items-center gap-1.5 text-[18px] sm:text-[22px] font-semibold tracking-tight shrink-0 text-foreground"
+            className="flex items-center gap-1.5 text-lg sm:text-xl font-semibold tracking-tight shrink-0 text-foreground"
           >
             <LogoIcon className="h-8 w-8 sm:h-9 sm:w-9" />
             Rest
           </LinkForward>
-          <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-muted-foreground absolute left-1/2 -translate-x-1/2">
-            <LinkForward href={anchor("features")} trackEvent="land_header_nav_features_click" className="hover:text-foreground transition-colors">{texts.navFeatures}</LinkForward>
-            <LinkForward href={anchor("how")} trackEvent="land_header_nav_how_click" className="hover:text-foreground transition-colors">{texts.navHow}</LinkForward>
-            <LinkForward href={anchor("pricing")} trackEvent="land_header_nav_pricing_click" className="hover:text-foreground transition-colors">{texts.navPricing}</LinkForward>
-            <LinkForward href={anchor("faq")} trackEvent="land_header_nav_faq_click" className="hover:text-foreground transition-colors">{texts.navFaq}</LinkForward>
+          <nav className="hidden md:flex items-center gap-7 text-base font-semibold text-foreground mr-auto ml-8">
+            <LinkForward href={anchor("features")} trackEvent="land_header_nav_features_click" className="border-b-2 border-transparent hover:border-foreground transition-colors">{texts.navFeatures}</LinkForward>
+            <LinkForward href={anchor("how")} trackEvent="land_header_nav_how_click" className="border-b-2 border-transparent hover:border-foreground transition-colors">{texts.navHow}</LinkForward>
+            <LinkForward href={anchor("pricing")} trackEvent="land_header_nav_pricing_click" className="border-b-2 border-transparent hover:border-foreground transition-colors">{texts.navPricing}</LinkForward>
+            <LinkForward href={anchor("faq")} trackEvent="land_header_nav_faq_click" className="border-b-2 border-transparent hover:border-foreground transition-colors">{texts.navFaq}</LinkForward>
           </nav>
-          <div className="flex items-center gap-2 shrink-0">
-            <HeroBrandBarControls locale={locale} />
+          <div className="flex items-center gap-5 shrink-0">
+            <LinkForward
+              href={signinHref}
+              trackEvent="land_header_signin_click"
+              className="hidden sm:inline-flex text-sm font-semibold text-foreground border-b-2 border-transparent hover:border-foreground transition-colors"
+            >
+              {texts.signIn}
+            </LinkForward>
             <LinkForward
               href={signinHref}
               trackEvent="land_header_cta_click"
-              className="inline-flex items-center justify-center h-9 px-4 text-sm font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 active:scale-[0.99] transition-all whitespace-nowrap"
+              className="inline-flex items-center justify-center h-9 px-4 text-sm font-semibold text-white bg-gradient-to-br from-[hsl(9,100%,58%)] to-[hsl(35,95%,55%)] rounded-lg hover:opacity-90 active:scale-[0.99] transition-all whitespace-nowrap"
             >
               {texts.cta}
             </LinkForward>

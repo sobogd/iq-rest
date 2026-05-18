@@ -13,13 +13,10 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     ...DEFAULT.hero,
-    headline: "منوی QR برای رستوران‌ها",
-    sub: "بیش از 500 رستوران در 30+ کشور منوی کاغذی را با منوی QR جایگزین کرده‌اند، فروش بیشتری به گردشگران دارند و کارمزد تحویل را صفر کرده‌اند. در 5 دقیقه آماده — 14 روز رایگان.",
+    headline: "منوی QR برای رستوران‌ها. آماده در ۵ دقیقه.",
+    sub: "منوی QR برای رستوران شما در ۵ دقیقه. همه چیز شامل است: ویرایشگر موبایل بدون کد، اسکن منو با هوش مصنوعی، کد QR برای میزها و سفارش‌های مستقیم بدون کمیسیون.",
     dynamicHeadlines: [],
-    headlinePrefix: "منوی QR برای ",
-    accentWord: "رستوران‌ها",
     accentWordRotation: DEFAULT.hero.accentWordRotation ?? [],
-    headlineSuffix: "",
   },
 
   founder: {

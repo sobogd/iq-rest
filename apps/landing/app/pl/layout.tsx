@@ -18,7 +18,7 @@ export default function LandingLayout({ children }: { children: React.ReactNode 
   return (
     <html lang="pl" dir="ltr" translate="no" suppressHydrationWarning>
       <body className="min-h-dvh bg-background text-foreground antialiased tracking-tight">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange storageKey="iq-rest-theme-v2">
           {children}
           <RegionPromptModal />
         </ThemeProvider>

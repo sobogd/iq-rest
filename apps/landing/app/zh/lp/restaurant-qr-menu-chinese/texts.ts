@@ -13,13 +13,10 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     ...DEFAULT.hero,
-    headline: "餐厅QR菜单",
-    sub: "30多个国家的500多家餐厅用QR菜单取代纸质菜单，提高对游客的销售并取消外卖佣金。5分钟内上线 — 14天免费。",
+    headline: "餐厅二维码菜单。5分钟就绪。",
+    sub: "5分钟为你的餐厅打造二维码菜单。全部包含：无代码移动端编辑器、AI 菜单扫描、桌台二维码以及零佣金直接下单。",
     dynamicHeadlines: [],
-    headlinePrefix: "餐厅 ",
-    accentWord: "QR菜单",
     accentWordRotation: DEFAULT.hero.accentWordRotation ?? [],
-    headlineSuffix: "",
   },
 
   founder: {

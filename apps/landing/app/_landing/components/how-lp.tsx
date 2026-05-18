@@ -6,8 +6,8 @@ interface HowProps {
 
 export function HowLp({ texts }: HowProps) {
   return (
-    <div className="max-w-4xl mx-auto">
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-3 text-center">
+    <div className="w-full">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-3 text-center lg:text-start">
         {texts.heading}
         {texts.headingAccent ? (
           <>
@@ -18,7 +18,7 @@ export function HowLp({ texts }: HowProps) {
           </>
         ) : null}
       </h2>
-      <p className="text-base sm:text-lg text-muted-foreground mb-10 text-center">{texts.sub}</p>
+      <p className="text-base sm:text-lg text-muted-foreground mb-10 text-center lg:text-start">{texts.sub}</p>
 
       <ol className="lg:hidden flex flex-col w-fit max-w-full mx-auto">
         {texts.steps.map((s, i) => {

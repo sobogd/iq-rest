@@ -31,8 +31,8 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Ristoranti", "Trattorie", "Pizzerie", "Osterie", "Caffè"],
-    headline: "Menu digitale per ristoranti.",
-    sub: "Menu digitale online per il tuo ristorante in 5 minuti. QR Code, ordini diretti senza commissioni, prenotazioni e traduzione IA in 35 lingue.",
+    headline: "Menu Digitale per Ristoranti. Pronto in 5 minuti.",
+    sub: "Menu digitale per il tuo ristorante in 5 minuti. Tutto incluso: editor mobile senza codice, scansione IA del menu, codici QR per i tavoli e ordini diretti senza commissioni.",
     dynamicHeadlines: [
       "Menu digitale completo.",
       "QR Code per i tavoli.",

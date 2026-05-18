@@ -13,13 +13,10 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     ...DEFAULT.hero,
-    headline: "Meniu QR pentru restaurante",
-    sub: "Peste 500 de restaurante din 30+ țări înlocuiesc meniul tipărit cu un meniu QR, vând mai mult turiștilor și elimină comisioanele de livrare. Gata în 5 minute — 14 zile gratis.",
+    headline: "Meniu QR pentru restaurante. Gata în 5 minute.",
+    sub: "Meniu QR pentru restaurantul tău în 5 minute. Totul inclus: editor mobil fără cod, scanare AI a meniului, coduri QR pentru mese și comenzi directe fără comisioane.",
     dynamicHeadlines: [],
-    headlinePrefix: "Meniu QR pentru ",
-    accentWord: "restaurante",
     accentWordRotation: DEFAULT.hero.accentWordRotation ?? [],
-    headlineSuffix: "",
   },
 
   founder: {

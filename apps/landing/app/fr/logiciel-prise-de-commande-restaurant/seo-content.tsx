@@ -44,16 +44,16 @@ const COMPARISON_ROWS = [
 export function SeoContent() {
   return (
     <>
-      <Section dataSection="seo-intro">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-xs font-medium uppercase tracking-widest text-primary mb-3 text-center">
+      <Section noContainer dataSection="seo-intro">
+        <div className="w-full">
+          <p className="text-xs font-medium uppercase tracking-widest text-primary mb-3 text-start">
             En détail
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-3 text-center">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-3 text-start">
             Ce qu'est vraiment un logiciel de prise de commande{" "}
             <span className="text-muted-foreground">pour restaurant</span>
           </h2>
-          <p className="text-base sm:text-lg text-muted-foreground mb-10 text-center">
+          <p className="text-base sm:text-lg text-muted-foreground mb-10 text-start">
             Pas un marketplace. Pas un agrégateur de livraison. Une ligne
             directe du téléphone du client assis à votre table à votre
             tablette cuisine — ou votre WhatsApp.
@@ -87,9 +87,9 @@ export function SeoContent() {
         </div>
       </Section>
 
-      <Section dataSection="seo-benefits">
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-center">
+      <Section noContainer dataSection="seo-benefits">
+        <div className="w-full">
+          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-start">
             Ce que vous obtenez vraiment
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
@@ -110,12 +110,12 @@ export function SeoContent() {
         </div>
       </Section>
 
-      <Section dataSection="seo-how">
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-center">
+      <Section noContainer dataSection="seo-how">
+        <div className="w-full">
+          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-start">
             Comment fonctionne le flux de commande IQ Rest
           </h3>
-          <p className="text-base sm:text-lg text-foreground/90 leading-relaxed mb-6 text-center">
+          <p className="text-base sm:text-lg text-foreground/90 leading-relaxed mb-6 text-start">
             Quatre interrupteurs dans le tableau de bord et vous êtes live.
             Pas d'installateur, pas de matériel TPV, pas de projet
             d'intégration.
@@ -143,9 +143,9 @@ export function SeoContent() {
         </div>
       </Section>
 
-      <Section dataSection="seo-table">
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-center">
+      <Section noContainer dataSection="seo-table">
+        <div className="w-full">
+          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-start">
             Agrégateur, TPV classique ou logiciel de prise de commande
           </h3>
           <div className="bg-muted/20 border border-border rounded-2xl p-4 sm:p-6 overflow-x-auto">
@@ -185,7 +185,7 @@ export function SeoContent() {
               </tbody>
             </table>
           </div>
-          <p className="text-sm text-muted-foreground leading-relaxed mt-6 text-center">
+          <p className="text-sm text-muted-foreground leading-relaxed mt-6 text-start">
             Un logiciel de prise de commande que le restaurant possède
             vraiment se rembourse dès le premier week-end — chaque euro qu'un
             client dépense chez vous reste chez vous, et le ticket au pass

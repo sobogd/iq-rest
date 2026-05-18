@@ -16,36 +16,16 @@ export const TEXTS: LandingTexts = {
     // SSR fallback — Ads crawler reads `headline` as the keyword phrase.
     // Browsers also see this for one frame before the rotator boots, so
     // hydration matches and there is no flicker on the keyword form.
-    headline: "Digital menu for restaurants",
-    sub: "500+ restaurants in 30+ countries serve more tables, sell more to tourists, and cut delivery commissions to zero. Live in 5 minutes — 14 days free.",
+    headline: "Digital Menu for Restaurants. Ready in 5 minutes.",
+    sub: "Digital menu for your restaurant in 5 minutes. Everything included: no-code mobile editor, AI menu scan, QR codes for tables and direct orders without commissions.",
     // Mobile renders these as an infinite-scroll marquee, desktop as a
     // static row. They advertise what ships with the system, not venue
     // types — the H1 already covers verticals via the accent-word rotator.
-    verticals: [
-      "Online orders",
-      "Reservations",
-      "AI translation",
-      "Menu scanner",
-      "Allergens",
-      "Premium design",
-      "Analytics",
-    ],
     // Second-line accent disabled — the H1 already swaps the last word.
     dynamicHeadlines: [],
     // After hydration the H1 last word cycles through these in order. The
     // first item must equal `accentWord` so the initial frame keeps the
     // keyword phrase intact for the Ads crawler.
-    headlinePrefix: "Digital menu for ",
-    accentWord: "restaurants",
-    accentWordRotation: [
-      "restaurants",
-      "cafés",
-      "bars",
-      "pizzerias",
-      "bistros",
-      "pubs",
-    ],
-    headlineSuffix: "",
   },
 
   founder: {

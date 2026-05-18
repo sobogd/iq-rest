@@ -1,16 +1,5 @@
 import type { Metadata } from "next";
-import { FaqLp } from "@/app/_landing/components/faq-lp";
-import { PageTracker } from "@/app/_landing/components/page-tracker";
-import { FeaturesLp } from "@/app/_landing/components/features-lp";
-import { FinalCtaLp } from "@/app/_landing/components/final-cta-lp";
-import { FounderLp } from "@/app/_landing/components/founder-lp";
-import { LandingFooterLp } from "@/app/_landing/components/footer-lp";
-import { LandingHeaderLp } from "@/app/_landing/components/header-lp";
-import { LandingPricingLp } from "@/app/_landing/components/pricing-lp";
-import { HeroLp } from "@/app/_landing/components/hero-lp";
-import { HowLp } from "@/app/_landing/components/how-lp";
-import { ScanSectionLp } from "@/app/_landing/components/scan-section-lp";
-import { Section, SectionGroup } from "@/app/_landing/components/section";
+import { LandingPageBody } from "@/app/_landing/components/landing-page-body";
 import { TEXTS } from "./texts";
 import { JSON_LD_HTML } from "./jsonld";
 
@@ -54,62 +43,11 @@ export const metadata: Metadata = {
 
 export default function MenuDigitalePerRistorantiLpLanding() {
   return (
-    <main className="relative">
-      <PageTracker />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON_LD_HTML }}
-      />
-      <LandingHeaderLp texts={TEXTS.header} locale={LOCALE} useLocalAnchors />
-      <HeroLp
-        texts={TEXTS.hero}
-        ctaText={TEXTS.ctaText}
-        demoText={TEXTS.demoText}
-        microcopy={TEXTS.microcopy}
-        locale={LOCALE}
-      />
-      <Section id="scan" dataSection="scan" accent>
-        <ScanSectionLp texts={TEXTS.scan} locale={LOCALE} />
-      </Section>
-      <SectionGroup>
-        <Section id="features" dataSection="features">
-          <FeaturesLp texts={TEXTS.features} />
-        </Section>
-        <Section id="founder" dataSection="founder">
-          <FounderLp texts={TEXTS.founder} />
-        </Section>
-        <Section id="how" dataSection="how">
-          <HowLp texts={TEXTS.how} />
-        </Section>
-        <Section id="pricing" dataSection="pricing">
-          <LandingPricingLp
-            texts={TEXTS.pricing}
-            ctaText={TEXTS.ctaText}
-            microcopy={TEXTS.microcopy}
-            locale={LOCALE}
-          />
-        </Section>
-        <Section id="faq" dataSection="faq">
-          <FaqLp texts={TEXTS.faq} />
-        </Section>
-        <Section dataSection="final_cta">
-          <FinalCtaLp
-            texts={TEXTS.finalCta}
-            ctaText={TEXTS.ctaText}
-            demoText={TEXTS.demoText}
-            microcopy={TEXTS.microcopy}
-            locale={LOCALE}
-          />
-        </Section>
-        <Section as="footer" dataSection="footer">
-          <LandingFooterLp
-            texts={TEXTS.footer}
-            headerTexts={TEXTS.header}
-            locale={LOCALE}
-            variant="lp"
-          />
-        </Section>
-      </SectionGroup>
-    </main>
+    <LandingPageBody
+      texts={TEXTS}
+      locale={LOCALE}
+      jsonLdHtml={JSON_LD_HTML}
+      footerVariant="lp"
+    />
   );
 }

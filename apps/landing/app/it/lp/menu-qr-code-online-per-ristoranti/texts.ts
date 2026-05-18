@@ -14,13 +14,9 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     ...DEFAULT.hero,
-    headline: "Menu QR Code online per ristoranti",
-    sub: "Oltre 500 ristoranti in 30+ paesi sostituiscono il menu cartaceo con un menu QR code online, vendono di più ai turisti e azzerano le commissioni del delivery. Online in 5 minuti — 14 giorni gratis.",
+    headline: "Menu QR per Ristoranti. Pronto in 5 minuti.",
+    sub: "Menu QR per il tuo ristorante in 5 minuti. Tutto incluso: editor mobile senza codice, scansione IA del menu, codici QR per i tavoli e ordini diretti senza commissioni.",
     dynamicHeadlines: [],
-    headlinePrefix: "Menu QR Code online per ",
-    accentWord: "ristoranti",
-    accentWordRotation: ["trattorie", "pizzerie", "osterie", "caffè", "bar", "ristoranti"],
-    headlineSuffix: "",
   },
 
   founder: {

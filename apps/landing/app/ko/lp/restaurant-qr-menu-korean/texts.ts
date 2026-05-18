@@ -13,13 +13,10 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     ...DEFAULT.hero,
-    headline: "레스토랑 QR 메뉴",
-    sub: "30개국 이상의 500개 이상의 레스토랑이 종이 메뉴를 QR 메뉴로 대체하고, 관광객에 더 많이 판매하며 배달 수수료를 없애고 있습니다. 5분 만에 시작 — 14일 무료.",
+    headline: "레스토랑을 위한 QR 메뉴. 5분이면 완성.",
+    sub: "5분 안에 레스토랑의 QR 메뉴 완성. 모두 포함: 노코드 모바일 에디터, AI 메뉴 스캔, 테이블 QR 코드, 수수료 없는 직접 주문.",
     dynamicHeadlines: [],
-    headlinePrefix: "레스토랑 ",
-    accentWord: "QR 메뉴",
     accentWordRotation: DEFAULT.hero.accentWordRotation ?? [],
-    headlineSuffix: "",
   },
 
   founder: {

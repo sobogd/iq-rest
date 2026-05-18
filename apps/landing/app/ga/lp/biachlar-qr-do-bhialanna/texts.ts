@@ -13,13 +13,10 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     ...DEFAULT.hero,
-    headline: "Biachlár QR do bhialanna",
-    sub: "Tá níos mó ná 500 bialann i 30+ tír ag malartú an bhiachláir phriontáilte le biachlár QR, ag díol níos mó le turasóirí agus ag baint coimisiún seachadta. Réidh i 5 nóiméad — 14 lá saor in aisce.",
+    headline: "Biachlár QR do Bhialanna. Réidh i 5 nóiméad.",
+    sub: "Biachlár QR do bhialann i 5 nóiméad. Gach rud san áireamh: eagarthóir soghluaiste gan chód, scanadh biachláir le AI, cóid QR do bhoird agus orduithe díreacha gan choimisiún.",
     dynamicHeadlines: [],
-    headlinePrefix: "Biachlár QR do ",
-    accentWord: "bhialanna",
     accentWordRotation: DEFAULT.hero.accentWordRotation ?? [],
-    headlineSuffix: "",
   },
 
   founder: {
