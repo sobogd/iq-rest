@@ -15,8 +15,8 @@ export const TEXTS: LandingTexts = {
   header: { navFeatures: "Funcții", navHow: "Cum funcționează", navPricing: "Prețuri", navFaq: "Întrebări", signIn: "Conectare", cta: "Începe" },
   hero: {
     verticals: ["Restaurante", "Cafenele", "Baruri", "Hoteluri", "Pizzerii"],
-    headline: "Meniu QR în 5 minute.",
-    sub: "Site web gata pentru restaurantul tău — fără programatori și contractori. Comenzi directe, rezervări și analiza clienților într-un singur abonament.",
+    headline: "Meniu digital pentru restaurante. Gata în 5 minute.",
+    sub: "Meniu digital pentru restaurantul tău în 5 minute. Totul inclus: editor mobil fără cod, scanare AI a meniului, coduri QR pentru mese și comenzi directe fără comisioane.",
     dynamicHeadlines: ["0% comision.", "35 de limbi cu AI.", "Comenzi online.", "Rezervări 24/7.", "Design premium."],
     painBullets: ["0% comision: Toate comenzile ajung direct la tine.", "Traducere AI: 35 de limbi pentru a crește consumul turiștilor.", "Rezervări 24/7: Sală plină fără apeluri inutile.", "Prețuri flexibile: Actualizează meniul în câteva secunde."],
     rating: "Peste 500 de restaurante în 30+ țări",

@@ -13,13 +13,10 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     ...DEFAULT.hero,
-    headline: "QR-Speisekarte für Restaurants",
-    sub: "Über 500 Restaurants in 30+ Ländern ersetzen die Papierspeisekarte durch eine QR-Speisekarte, verkaufen mehr an Touristen und sparen Lieferprovisionen. Live in 5 Minuten — 14 Tage kostenlos.",
+    headline: "QR-Speisekarte für Restaurants. In 5 Minuten startklar.",
+    sub: "QR-Speisekarte für Ihr Restaurant in 5 Minuten. Alles inklusive: mobiler Editor ohne Code, KI-Menüscan, QR-Codes für Tische und Direktbestellungen ohne Provisionen.",
     dynamicHeadlines: [],
-    headlinePrefix: "QR-Speisekarte für ",
-    accentWord: "Restaurants",
     accentWordRotation: DEFAULT.hero.accentWordRotation ?? [],
-    headlineSuffix: "",
   },
 
   founder: {

@@ -18,37 +18,16 @@ export const TEXTS: LandingTexts = {
     // SSR fallback — the Ads crawler reads `headline` as the keyword phrase.
     // Browsers also see this for one frame before the rotator boots, so
     // hydration matches and there is no flicker on the keyword form.
-    headline: "Menu digitale per ristoranti",
-    sub: "500+ ristoranti italiani usano il menu digitale di IQ Rest per servire più tavoli, vendere di più ai turisti e tagliare le commissioni a zero. Online in 5 minuti — 14 giorni gratis.",
+    headline: "Menu Digitale per Ristoranti. Pronto in 5 minuti.",
+    sub: "Menu digitale per il tuo ristorante in 5 minuti. Tutto incluso: editor mobile senza codice, scansione IA del menu, codici QR per i tavoli e ordini diretti senza commissioni.",
     // Mobile renders these as an infinite-scroll marquee, desktop as a
     // static row. They advertise what ships with the system, not venue
     // types — the H1 already covers verticals via the accent-word rotator.
-    verticals: [
-      "Ordini online",
-      "Prenotazioni",
-      "Traduzioni IA",
-      "Scanner menu",
-      "Allergeni",
-      "Design premium",
-      "Analytics",
-    ],
     // Second-line accent disabled — the H1 already swaps the last word.
     dynamicHeadlines: [],
     // After hydration the H1 last word cycles through these in order. Order
     // matches venue popularity in Italy. The first item must equal
     // `accentWord` so the initial frame keeps the keyword phrase intact.
-    headlinePrefix: "Menu digitale per ",
-    accentWord: "ristoranti",
-    accentWordRotation: [
-      "ristoranti",
-      "il tuo ristorante",
-      "pizzerie",
-      "bar",
-      "caffè",
-      "trattorie",
-      "osterie",
-    ],
-    headlineSuffix: "",
   },
 
   founder: {

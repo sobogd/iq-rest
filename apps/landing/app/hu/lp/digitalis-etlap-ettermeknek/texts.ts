@@ -15,14 +15,9 @@ export const TEXTS: LandingTexts = {
   hero: {
     ...DEFAULT.hero,
     // SSR fallback — Ads crawler reads `headline` as the keyword phrase.
-    headline: "Digitális étlap éttermeknek",
-    sub: "30+ ország 500+ étterme több asztalt szolgál ki, többet ad el turistáknak és kivágja a kiszállítási jutalékokat. 5 perc alatt élesben — 14 nap ingyen.",
-    verticals: ["Online rendelés", "Foglalások", "AI fordítás", "Étlap szkenner", "Allergének", "Prémium dizájn", "Analitika"],
+    headline: "Digitális étlap éttermeknek. 5 perc alatt kész.",
+    sub: "Digitális étlap az éttermednek 5 perc alatt. Minden benne: mobil szerkesztő kódolás nélkül, AI étlap-szkennelés, QR-kódok az asztalokhoz és közvetlen rendelések jutalék nélkül.",
     dynamicHeadlines: [],
-    headlinePrefix: "Digitális étlap ",
-    accentWord: "éttermeknek",
-    accentWordRotation: ["éttermeknek", "kávézóknak", "bároknak", "pizzériáknak", "bisztróknak", "kocsmáknak"],
-    headlineSuffix: "",
   },
 
   founder: {

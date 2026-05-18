@@ -15,8 +15,8 @@ export const TEXTS: LandingTexts = {
   header: { navFeatures: "Funkcie", navHow: "Ako to funguje", navPricing: "Ceny", navFaq: "FAQ", signIn: "Prihlásiť", cta: "Začať" },
   hero: {
     verticals: ["Reštaurácie", "Kaviarne", "Bary", "Hotely", "Pizzerie"],
-    headline: "QR menu za 5 minút.",
-    sub: "Hotová webová stránka pre vašu reštauráciu — bez programátorov a dodávateľov. Priame objednávky, rezervácie a analytika hostí v jednom predplatnom.",
+    headline: "Digitálne menu pre reštaurácie. Hotové za 5 minút.",
+    sub: "Digitálne menu pre vašu reštauráciu za 5 minút. Všetko v cene: mobilný editor bez kódu, AI skenovanie menu, QR kódy pre stoly a priame objednávky bez provízií.",
     dynamicHeadlines: ["0% provízia.", "35 jazykov s AI.", "Online objednávky.", "Rezervácie 24/7.", "Premium dizajn."],
     painBullets: ["Provízia 0%: Všetky objednávky idú priamo vám.", "AI preklad: 35 jazykov pre vyššie tržby od turistov.", "Rezervácie 24/7: Plná obsadenosť bez zbytočných hovorov.", "Flexibilné ceny: Aktualizujte menu za pár sekúnd."],
     rating: "Viac ako 500 reštaurácií v 30+ krajinách",

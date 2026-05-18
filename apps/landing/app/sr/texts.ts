@@ -15,8 +15,8 @@ export const TEXTS: LandingTexts = {
   header: { navFeatures: "Funkcije", navHow: "Kako radi", navPricing: "Cene", navFaq: "FAQ", signIn: "Prijava", cta: "Počni" },
   hero: {
     verticals: ["Restorani", "Kafići", "Barovi", "Hoteli", "Picerije"],
-    headline: "QR jelovnik za 5 minuta.",
-    sub: "Готов сајт вашег ресторана — без програмера и извођача. Директне поруџбине, резервације и аналитика гостију у једној претплати.",
+    headline: "Digitalni meni za restorane. Spreman za 5 minuta.",
+    sub: "Digitalni meni za vaš restoran za 5 minuta. Sve uključeno: mobilni uređivač bez koda, AI skeniranje menija, QR kodovi za stolove i direktne porudžbine bez provizija.",
     dynamicHeadlines: ["0% provizije.", "35 jezika uz AI.", "Online porudžbine.", "Rezervacije 24/7.", "Premium dizajn."],
     painBullets: ["0% provizije: Sve porudžbine idu direktno vama.", "AI prevod: 35 jezika za veću potrošnju turista.", "Rezervacije 24/7: Puna sala bez suvišnih poziva.", "Fleksibilne cene: Ažurirajte jelovnik u par sekundi."],
     rating: "Preko 500 restorana u 30+ zemalja",

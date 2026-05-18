@@ -16,37 +16,17 @@ export const TEXTS: LandingTexts = {
     // SSR fallback — the Ads crawler reads `headline` as the keyword phrase.
     // Browsers also see this for one frame before the rotator boots, so
     // hydration matches and there is no flicker on the keyword form.
-    headline: "Carta digital per a restaurant",
-    sub: "500+ restaurants serveixen més taules, venen més a turistes i eliminen comissions. En línia en 5 minuts — 14 dies gratis.",
+    headline: "Carta Digital per a Restaurants. Llesta en 5 minuts.",
+    sub: "Carta digital per al teu restaurant en 5 minuts. Tot inclòs: editor mòbil sense codi, escaneig IA del menú, codi QR per a taules i comandes directes sense comissions.",
     // Mobile renders these as an infinite-scroll marquee, desktop as a
     // static row. They advertise what ships with the system, not venue
     // types — the H1 already covers verticals via the accent-word rotator.
-    verticals: [
-      "Comandes online",
-      "Reserves",
-      "Traducció IA",
-      "Escàner carta",
-      "Al·lèrgens",
-      "Disseny premium",
-      "Analytics",
-    ],
     // Second-line accent disabled — the H1 already swaps the last word.
     dynamicHeadlines: [],
     // After hydration the H1 last word cycles through these in order. Order
     // matches venue popularity in Catalan-speaking regions. The first item
     // must equal `accentWord` so the initial frame keeps the keyword
     // phrase intact.
-    headlinePrefix: "Carta digital per a ",
-    accentWord: "restaurant",
-    accentWordRotation: [
-      "restaurant",
-      "bar",
-      "cafeteria",
-      "pizzeria",
-      "taverna",
-      "marisqueria",
-    ],
-    headlineSuffix: "",
   },
 
   founder: {

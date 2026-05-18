@@ -15,14 +15,9 @@ export const TEXTS: LandingTexts = {
   hero: {
     ...DEFAULT.hero,
     // SSR fallback — Ads crawler reads `headline` as the keyword phrase.
-    headline: "Digitale Speisekarte für Restaurants",
-    sub: "500+ Restaurants in 30+ Ländern bedienen mehr Tische, verkaufen mehr an Touristen und sparen Liefer-Provisionen. In 5 Minuten live — 14 Tage gratis.",
-    verticals: ["Online-Bestellung", "Reservierungen", "KI-Übersetzung", "Menü-Scanner", "Allergene", "Premium-Design", "Analytics"],
+    headline: "Digitale Speisekarte für Restaurants. In 5 Minuten startklar.",
+    sub: "Digitale Speisekarte für Ihr Restaurant in 5 Minuten. Alles inklusive: mobiler Editor ohne Code, KI-Menüscan, QR-Codes für Tische und Direktbestellungen ohne Provisionen.",
     dynamicHeadlines: [],
-    headlinePrefix: "Digitale Speisekarte für ",
-    accentWord: "Restaurants",
-    accentWordRotation: ["Restaurants", "Cafés", "Bars", "Pizzerien", "Bistros", "Kneipen"],
-    headlineSuffix: "",
   },
 
   founder: {

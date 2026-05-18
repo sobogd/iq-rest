@@ -13,13 +13,10 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     ...DEFAULT.hero,
-    headline: "QR-ruokalista ravintoloille",
-    sub: "Yli 500 ravintolaa 30+ maassa korvaa painetun ruokalistan QR-ruokalistalla, myy enemmän turisteille ja poistaa toimituspalkkiot. Valmis 5 minuutissa — 14 päivää ilmaiseksi.",
+    headline: "QR-ruokalista ravintoloille. Valmis 5 minuutissa.",
+    sub: "QR-ruokalista ravintolallesi 5 minuutissa. Kaikki sisältyy: mobiili koodaamaton editori, AI-ruokalistan skannaus, QR-koodit pöytiin ja suorat tilaukset ilman provisioita.",
     dynamicHeadlines: [],
-    headlinePrefix: "QR-ruokalista ",
-    accentWord: "ravintoloille",
     accentWordRotation: DEFAULT.hero.accentWordRotation ?? [],
-    headlineSuffix: "",
   },
 
   founder: {

@@ -13,13 +13,10 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     ...DEFAULT.hero,
-    headline: "قائمة QR للمطاعم",
-    sub: "أكثر من 500 مطعم في 30+ دولة يستبدلون القائمة الورقية بقائمة QR ويبيعون أكثر للسياح وبدون عمولات توصيل. جاهزة خلال 5 دقائق — 14 يومًا مجانًا.",
+    headline: "قائمة QR للمطاعم. جاهزة في 5 دقائق.",
+    sub: "قائمة QR لمطعمك في 5 دقائق. كل شيء مشمول: محرر للموبايل بدون كود، مسح القائمة بالذكاء الاصطناعي، رمز QR للطاولات وطلبات مباشرة بدون عمولات.",
     dynamicHeadlines: [],
-    headlinePrefix: "قائمة QR لـ ",
-    accentWord: "المطاعم",
     accentWordRotation: DEFAULT.hero.accentWordRotation ?? [],
-    headlineSuffix: "",
   },
 
   founder: {

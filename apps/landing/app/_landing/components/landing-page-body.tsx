@@ -1,7 +1,8 @@
 import type { ReactNode } from "react";
 import type { LandingTexts } from "../types";
+import { getFeatureRows } from "../data/feature-rows";
 import { FaqLp } from "./faq-lp";
-import { FeaturesLp } from "./features-lp";
+import { FeatureRow } from "./feature-row";
 import { FinalCtaLp } from "./final-cta-lp";
 import { FounderLp } from "./founder-lp";
 import { HeroLp } from "./hero-lp";
@@ -11,24 +12,31 @@ import { LandingHeaderLp } from "./header-lp";
 import { LandingPricingLp } from "./pricing-lp";
 import { PageTracker } from "./page-tracker";
 import { ScanSectionLp } from "./scan-section-lp";
-import { Section, SectionGroup } from "./section";
+import { Section } from "./section";
 
 interface LandingPageBodyProps {
   texts: LandingTexts;
   locale: string;
-  /** Optional SEO content block rendered above features in the alternating
-   *  section group. Provided per-locale by pages that ship organic SEO
-   *  copy; omitted on PPC LPs. */
+  /** Optional SEO content block rendered above features. Used by feature
+   *  pages that ship organic SEO copy; omitted on PPC LPs and home. */
   seoContent?: ReactNode;
   /** JSON-LD payload injected as raw HTML in a <script> tag. */
   jsonLdHtml?: string;
+  /** Footer variant — "lp" hides keyword links + extra nav (PPC focus). */
+  footerVariant?: "lp" | "default";
 }
 
-// Single source-of-truth body for every organic locale landing page. All
-// sections use the centered, single-column LP design. Pages stay thin —
-// only metadata, locale + texts, and optional SEO/JSON-LD slots live in
-// the page file.
-export function LandingPageBody({ texts, locale, seoContent, jsonLdHtml }: LandingPageBodyProps) {
+// Single source-of-truth body for every landing page. Sections rely on
+// hero stylistics: full-bleed edge padding, no centered container.
+// Founder / pricing / final-cta / footer alternate accent backgrounds.
+export function LandingPageBody({
+  texts,
+  locale,
+  seoContent,
+  jsonLdHtml,
+  footerVariant = "default",
+}: LandingPageBodyProps) {
+  const featureRows = getFeatureRows(locale);
   return (
     <main className="relative">
       <PageTracker />
@@ -43,44 +51,57 @@ export function LandingPageBody({ texts, locale, seoContent, jsonLdHtml }: Landi
         microcopy={texts.microcopy}
         locale={locale}
       />
-      <Section id="scan" dataSection="scan" accent>
-        <ScanSectionLp texts={texts.scan} locale={locale} />
+      <ScanSectionLp texts={texts.scan} locale={locale} />
+      <div className="lg:py-12 xl:py-16">
+        {featureRows.map((row, i) => (
+          <FeatureRow
+            key={row.eyebrow}
+            id={i === 0 ? "features" : undefined}
+            image={row.image}
+            eyebrow={row.eyebrow}
+            heading={row.heading}
+            body={row.body}
+            bullets={[...row.bullets]}
+            reverse={i % 2 === 1}
+          />
+        ))}
+      </div>
+      {seoContent}
+      <Section id="founder" dataSection="founder" accent noContainer>
+        <FounderLp texts={texts.founder} />
       </Section>
-      <SectionGroup>
-        {seoContent}
-        <Section id="features" dataSection="features">
-          <FeaturesLp texts={texts.features} />
-        </Section>
-        <Section id="founder" dataSection="founder">
-          <FounderLp texts={texts.founder} />
-        </Section>
-        <Section id="how" dataSection="how">
-          <HowLp texts={texts.how} />
-        </Section>
-        <Section id="pricing" dataSection="pricing">
-          <LandingPricingLp
-            texts={texts.pricing}
-            ctaText={texts.ctaText}
-            microcopy={texts.microcopy}
-            locale={locale}
-          />
-        </Section>
-        <Section id="faq" dataSection="faq">
-          <FaqLp texts={texts.faq} />
-        </Section>
-        <Section dataSection="final_cta">
-          <FinalCtaLp
-            texts={texts.finalCta}
-            ctaText={texts.ctaText}
-            demoText={texts.demoText}
-            microcopy={texts.microcopy}
-            locale={locale}
-          />
-        </Section>
-        <Section as="footer" dataSection="footer">
-          <LandingFooterLp texts={texts.footer} headerTexts={texts.header} locale={locale} />
-        </Section>
-      </SectionGroup>
+      <Section id="how" dataSection="how" noContainer>
+        <HowLp texts={texts.how} />
+      </Section>
+      <Section id="pricing" dataSection="pricing" accent noContainer>
+        <LandingPricingLp
+          texts={texts.pricing}
+          ctaText={texts.ctaText}
+          demoText={texts.demoText}
+          microcopy={texts.microcopy}
+          locale={locale}
+        />
+      </Section>
+      <Section id="faq" dataSection="faq" noContainer>
+        <FaqLp texts={texts.faq} />
+      </Section>
+      <Section dataSection="final_cta" accent noContainer>
+        <FinalCtaLp
+          texts={texts.finalCta}
+          ctaText={texts.ctaText}
+          demoText={texts.demoText}
+          microcopy={texts.microcopy}
+          locale={locale}
+        />
+      </Section>
+      <Section as="footer" dataSection="footer" noContainer>
+        <LandingFooterLp
+          texts={texts.footer}
+          headerTexts={texts.header}
+          locale={locale}
+          variant={footerVariant}
+        />
+      </Section>
     </main>
   );
 }

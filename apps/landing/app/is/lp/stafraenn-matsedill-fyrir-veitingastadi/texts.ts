@@ -15,14 +15,9 @@ export const TEXTS: LandingTexts = {
   hero: {
     ...DEFAULT.hero,
     // SSR fallback — Ads crawler reads `headline` as the keyword phrase.
-    headline: "Stafrænn matseðill fyrir veitingastaði",
-    sub: "500+ veitingastaðir í 30+ löndum afgreiða fleiri borð, selja meira til ferðamanna og fella niður sendingarþóknun. Í loftinu á 5 mínútum — 14 dagar ókeypis.",
-    verticals: ["Netpantanir", "Bókanir", "AI þýðing", "Matseðils-skanni", "Ofnæmisvaldar", "Premium hönnun", "Mælingar"],
+    headline: "Stafrænn matseðill fyrir veitingastaði. Tilbúinn á 5 mínútum.",
+    sub: "Stafrænn matseðill fyrir veitingastaðinn þinn á 5 mínútum. Allt innifalið: farsímaritstjóri án kóða, AI matseðils-skönnun, QR-kóðar fyrir borð og beinar pantanir án þóknunar.",
     dynamicHeadlines: [],
-    headlinePrefix: "Stafrænn matseðill ",
-    accentWord: "fyrir veitingastaði",
-    accentWordRotation: ["fyrir veitingastaði", "fyrir kaffihús", "fyrir bari", "fyrir pizzustaði", "fyrir bistros", "fyrir krár"],
-    headlineSuffix: "",
   },
 
   founder: {

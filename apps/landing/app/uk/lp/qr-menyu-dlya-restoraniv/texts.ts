@@ -13,13 +13,10 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     ...DEFAULT.hero,
-    headline: "QR-меню для ресторанів",
-    sub: "Понад 500 ресторанів у 30+ країнах замінили паперове меню QR-меню, більше продають туристам і скасували комісії доставок. Готово за 5 хвилин — 14 днів безкоштовно.",
+    headline: "QR-меню для ресторанів. Готове за 5 хвилин.",
+    sub: "QR-меню для твого ресторану за 5 хвилин. Все включено: мобільний редактор без коду, AI-сканування меню, QR-коди для столиків і прямі замовлення без комісій.",
     dynamicHeadlines: [],
-    headlinePrefix: "QR-меню для ",
-    accentWord: "ресторанів",
     accentWordRotation: DEFAULT.hero.accentWordRotation ?? [],
-    headlineSuffix: "",
   },
 
   founder: {

@@ -15,14 +15,9 @@ export const TEXTS: LandingTexts = {
   hero: {
     ...DEFAULT.hero,
     // SSR fallback — Ads crawler reads `headline` as the keyword phrase.
-    headline: "레스토랑용 디지털 메뉴",
-    sub: "30개국 이상 500개 이상의 레스토랑이 더 많은 테이블을 서비스하고, 관광객에게 더 많이 판매하며, 배달 수수료를 없앱니다. 5분 만에 가동 — 14일 무료.",
-    verticals: ["온라인 주문", "예약", "AI 번역", "메뉴 스캐너", "알레르겐", "프리미엄 디자인", "분석"],
+    headline: "레스토랑을 위한 디지털 메뉴. 5분이면 완성.",
+    sub: "5분 안에 레스토랑의 디지털 메뉴 완성. 모두 포함: 노코드 모바일 에디터, AI 메뉴 스캔, 테이블 QR 코드, 수수료 없는 직접 주문.",
     dynamicHeadlines: [],
-    headlinePrefix: "레스토랑용 디지털 ",
-    accentWord: "메뉴",
-    accentWordRotation: ["메뉴", "카페 메뉴", "바 메뉴", "피자 메뉴", "비스트로 메뉴", "펍 메뉴"],
-    headlineSuffix: "",
   },
 
   founder: {

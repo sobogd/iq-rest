@@ -15,14 +15,9 @@ export const TEXTS: LandingTexts = {
   hero: {
     ...DEFAULT.hero,
     // SSR fallback — Ads crawler reads `headline` as the keyword phrase.
-    headline: "餐厅数字菜单",
-    sub: "30多个国家的500多家餐厅服务更多餐桌，向游客销售更多，并削减外卖佣金。5分钟上线 — 14天免费。",
-    verticals: ["在线订单", "预订", "AI翻译", "菜单扫描器", "过敏原", "高端设计", "数据分析"],
+    headline: "餐厅数字菜单。5分钟就绪。",
+    sub: "5分钟为你的餐厅打造数字菜单。全部包含：无代码移动端编辑器、AI 菜单扫描、桌台二维码以及零佣金直接下单。",
     dynamicHeadlines: [],
-    headlinePrefix: "餐厅数字",
-    accentWord: "菜单",
-    accentWordRotation: ["菜单", "咖啡馆菜单", "酒吧菜单", "披萨店菜单", "小酒馆菜单", "酒馆菜单"],
-    headlineSuffix: "",
   },
 
   founder: {

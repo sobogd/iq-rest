@@ -32,14 +32,14 @@ const COMPARISON_ROWS = [
 export function SeoContent() {
   return (
     <>
-      <Section dataSection="seo-intro">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-xs font-medium uppercase tracking-widest text-primary mb-3 text-center">Em detalhe</p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-3 text-center">
+      <Section noContainer dataSection="seo-intro">
+        <div className="w-full">
+          <p className="text-xs font-medium uppercase tracking-widest text-primary mb-3 text-start">Em detalhe</p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-3 text-start">
             O que é um sistema de pedidos online para restaurante{" "}
             <span className="text-muted-foreground">de verdade</span>
           </h2>
-          <p className="text-base sm:text-lg text-muted-foreground mb-10 text-center">
+          <p className="text-base sm:text-lg text-muted-foreground mb-10 text-start">
             Não um marketplace. Não um agregador de entregas. Uma linha direta
             do telemóvel do cliente sentado na tua mesa ao teu tablet de
             cozinha — ou ao teu WhatsApp.
@@ -55,9 +55,9 @@ export function SeoContent() {
         </div>
       </Section>
 
-      <Section dataSection="seo-benefits">
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-center">O que recebes</h3>
+      <Section noContainer dataSection="seo-benefits">
+        <div className="w-full">
+          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-start">O que recebes</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
             {BENEFITS.map((b) => (
               <div key={b} className="bg-muted/20 border border-border rounded-2xl p-4 sm:p-5 flex flex-row items-center gap-3">
@@ -71,10 +71,10 @@ export function SeoContent() {
         </div>
       </Section>
 
-      <Section dataSection="seo-how">
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-center">Como funciona o fluxo de pedidos IQ Rest</h3>
-          <p className="text-base sm:text-lg text-foreground/90 leading-relaxed mb-6 text-center">Quatro interruptores no painel e estás ao vivo. Sem instalador, sem hardware POS, sem projeto de integração.</p>
+      <Section noContainer dataSection="seo-how">
+        <div className="w-full">
+          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-start">Como funciona o fluxo de pedidos IQ Rest</h3>
+          <p className="text-base sm:text-lg text-foreground/90 leading-relaxed mb-6 text-start">Quatro interruptores no painel e estás ao vivo. Sem instalador, sem hardware POS, sem projeto de integração.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             {HOW_STEPS.map((s, i) => (
               <div key={s.title} className="bg-muted/20 border border-border rounded-2xl p-5 flex flex-row items-start gap-4">
@@ -89,9 +89,9 @@ export function SeoContent() {
         </div>
       </Section>
 
-      <Section dataSection="seo-table">
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-center">Agregador, POS clássico ou sistema de pedidos</h3>
+      <Section noContainer dataSection="seo-table">
+        <div className="w-full">
+          <h3 className="text-2xl sm:text-3xl font-medium tracking-tight mb-6 text-start">Agregador, POS clássico ou sistema de pedidos</h3>
           <div className="bg-muted/20 border border-border rounded-2xl p-4 sm:p-6 overflow-x-auto">
             <table className="w-full text-sm sm:text-base border-collapse">
               <thead>
@@ -114,7 +114,7 @@ export function SeoContent() {
               </tbody>
             </table>
           </div>
-          <p className="text-sm text-muted-foreground leading-relaxed mt-6 text-center">
+          <p className="text-sm text-muted-foreground leading-relaxed mt-6 text-start">
             Um sistema de pedidos online que o restaurante controla paga-se no primeiro fim de semana — cada euro que o cliente gasta no local fica no local, e a comanda ao pass leva sempre o número da mesa real.
           </p>
         </div>

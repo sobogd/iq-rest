@@ -1,8 +1,7 @@
 "use client";
 
-import { Suspense, useEffect, useState } from "react";
-import { Globe, LogIn, Moon, Sun } from "lucide-react";
-import { useTheme } from "next-themes";
+import { Suspense, useState } from "react";
+import { Globe, LogIn } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 import { analytics } from "@/lib/analytics";
 import { getCookieTexts } from "@/app/_landing/lib/cookie-texts";
@@ -17,6 +16,9 @@ interface HeroBrandBarControlsProps {
   signinHref?: string;
   signinLabel?: string;
 }
+
+const CONTROL_CLASS =
+  "inline-flex items-center justify-center h-9 w-9 border border-border rounded-lg bg-muted/60 text-foreground/80 sm:hover:bg-muted sm:hover:text-foreground sm:hover:border-foreground/40 transition-colors";
 
 // Hide sign-in for Google Ads visitors. Isolated so the useSearchParams
 // bailout suspends only this slot, not the whole hero.
@@ -36,54 +38,16 @@ function SignInSlot({ href, label }: { href: string; label: string }) {
   );
 }
 
-const CONTROL_CLASS =
-  "inline-flex items-center justify-center h-9 w-9 border border-border rounded-lg text-muted-foreground sm:hover:text-foreground sm:hover:border-foreground/40 transition-colors";
-
-// Light/dark toggle. NextThemesProvider's defaultTheme is "system", so on
-// first mount we promote that to the actual resolved scheme (light or
-// dark) and drop the system mode entirely — visitor lands on the variant
-// that matches their OS, the button then just flips light ↔ dark.
-function ThemeCycleButton() {
-  const { theme, resolvedTheme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
-  useEffect(() => {
-    if (mounted && theme === "system") {
-      setTheme(resolvedTheme === "dark" ? "dark" : "light");
-    }
-  }, [mounted, theme, resolvedTheme, setTheme]);
-
-  const current = mounted ? resolvedTheme ?? "light" : "light";
-  const next = current === "dark" ? "light" : "dark";
-  const Icon = current === "dark" ? Sun : Moon;
-  const label = current === "dark" ? "Switch to light theme" : "Switch to dark theme";
-
-  return (
-    <button
-      type="button"
-      onClick={() => {
-        analytics.track(`land_hero_theme_click_${current}_to_${next}`);
-        setTheme(next);
-      }}
-      className={CONTROL_CLASS}
-      aria-label={label}
-      title={label}
-    >
-      <Icon className="h-4 w-4" />
-    </button>
-  );
-}
-
-// Theme + language pair. Isolated from the rest of the hero brand bar so
-// the parent (logo + layout chrome) stays in SSR — only this small
-// island ships JS for the modal + theme state.
+// Language switcher + optional sign-in. Theme toggle was removed — the
+// landing always renders in light mode for first-time visitors. Returning
+// visitors with a previously stored theme preference (set elsewhere in
+// the app, e.g. the dashboard) keep their value.
 export function HeroBrandBarControls({ locale, signinHref, signinLabel }: HeroBrandBarControlsProps) {
   const cookieTexts = getCookieTexts(locale);
   const [langOpen, setLangOpen] = useState(false);
 
   return (
     <div className="flex items-center gap-2">
-      <ThemeCycleButton />
       <button
         type="button"
         onClick={() => {

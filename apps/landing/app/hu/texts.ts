@@ -15,8 +15,8 @@ export const TEXTS: LandingTexts = {
   header: { navFeatures: "Funkciók", navHow: "Hogy működik", navPricing: "Árak", navFaq: "GYIK", signIn: "Belépés", cta: "Kezdjük" },
   hero: {
     verticals: ["Éttermek", "Kávézók", "Bárok", "Hotelek", "Pizzériák"],
-    headline: "QR étlap 5 perc alatt.",
-    sub: "Kész éttermi weboldal — fejlesztők és alvállalkozók nélkül. Közvetlen rendelések, foglalások és vendéganalitika egyetlen előfizetésben.",
+    headline: "Digitális étlap éttermeknek. 5 perc alatt kész.",
+    sub: "Digitális étlap az éttermednek 5 perc alatt. Minden benne: mobil szerkesztő kódolás nélkül, AI étlap-szkennelés, QR-kódok az asztalokhoz és közvetlen rendelések jutalék nélkül.",
     dynamicHeadlines: ["0% jutalék.", "35 nyelv MI-vel.", "Online rendelés.", "Foglalás 24/7.", "Premium design."],
     painBullets: ["0% jutalék: Minden rendelés közvetlenül Önhöz érkezik.", "AI fordítás: 35 nyelv a turisták fogyasztásának növelésére.", "Foglalás 24/7: Teltház felesleges telefonhívások nélkül.", "Rugalmas árak: Frissítse az étlapot pár másodperc alatt."],
     rating: "Több mint 500 étterem 30+ országban",

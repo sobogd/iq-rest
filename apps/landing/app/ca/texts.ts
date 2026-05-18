@@ -15,8 +15,8 @@ export const TEXTS: LandingTexts = {
   header: { navFeatures: "Funcions", navHow: "Com funciona", navPricing: "Preus", navFaq: "FAQ", signIn: "Entrar", cta: "Comença" },
   hero: {
     verticals: ["Restaurants", "Cafeteries", "Bars", "Hotels", "Pizzeries"],
-    headline: "Carta QR en 5 minuts.",
-    sub: "Lloc web llest per al teu restaurant — sense programadors. Comandes directes, reserves i analítica de clients en una sola subscripció.",
+    headline: "Carta Digital per a Restaurants. Llesta en 5 minuts.",
+    sub: "Carta digital per al teu restaurant en 5 minuts. Tot inclòs: editor mòbil sense codi, escaneig IA del menú, codi QR per a taules i comandes directes sense comissions.",
     dynamicHeadlines: ["0% comissions.", "35 idiomes amb IA.", "Comandes online.", "Reserves 24/7.", "Disseny premium."],
     painBullets: ["0% comissions: Totes les comandes van directament a tu.", "Traducció IA: 35 idiomes per augmentar el tiquet dels turistes.", "Reserves 24/7: Sala plena sense trucades innecessàries.", "Preus flexibles: Actualitza la carta en segons."],
     rating: "Més de 500 restaurants en 30+ països",

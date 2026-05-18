@@ -37,7 +37,7 @@ export function LandingFooterLp({
 
   if (variant === "lp") {
     return (
-      <div className="max-w-4xl mx-auto flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-3">
+      <div className="w-full flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-3">
         <p className="text-sm text-muted-foreground/80 text-center sm:text-start">
           {copyright}
         </p>
@@ -50,15 +50,15 @@ export function LandingFooterLp({
   }
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="w-full">
         {texts.keywordLinks && texts.keywordLinks.length > 0 ? (
           <div className="mb-8 sm:mb-10">
             {texts.keywordLinksHeading ? (
-              <p className="text-xs font-medium uppercase tracking-widest text-muted-foreground mb-3 text-center md:text-start">
+              <p className="text-xs font-medium uppercase tracking-widest text-muted-foreground mb-3 text-start">
                 {texts.keywordLinksHeading}
               </p>
             ) : null}
-            <nav className="flex flex-wrap items-center justify-center md:justify-start gap-x-5 gap-y-2 text-sm">
+            <nav className="flex flex-wrap items-center justify-start gap-x-5 gap-y-2 text-sm">
               {texts.keywordLinks.map((link) => (
                 <LinkForward
                   key={link.href}
@@ -74,7 +74,7 @@ export function LandingFooterLp({
           </div>
         ) : null}
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10 md:gap-6">
-          <nav className="flex flex-wrap items-center justify-center md:justify-start gap-x-5 gap-y-2 text-sm md:max-w-[50%]">
+          <nav className="flex flex-wrap items-center justify-start gap-x-5 gap-y-2 text-sm md:max-w-[50%]">
             {featureLinks.map((link) => (
               <LinkForward
                 key={link.href}
@@ -88,8 +88,8 @@ export function LandingFooterLp({
             ))}
           </nav>
 
-          <div className="flex flex-col items-center md:items-end gap-6 md:gap-2 text-center md:text-end">
-            <FooterToolbar locale={locale} navClassName="justify-center md:justify-end" />
+          <div className="flex flex-col items-start md:items-end gap-6 md:gap-2 text-start md:text-end">
+            <FooterToolbar locale={locale} navClassName="justify-start md:justify-end" />
             <p className="text-sm text-muted-foreground/80 pt-2 md:mt-1">
               {copyright}
             </p>

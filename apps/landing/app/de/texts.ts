@@ -31,8 +31,8 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Restaurants", "Cafés", "Bars", "Hotels", "Pizzerien"],
-    headline: "QR-Karte in 5 Minuten.",
-    sub: "Fertige Restaurant-Website — ohne Entwickler und Auftragnehmer. Direktbestellungen, Reservierungen und Gast-Analysen in einem Abo.",
+    headline: "Digitale Speisekarte für Restaurants. In 5 Minuten startklar.",
+    sub: "Digitale Speisekarte für Ihr Restaurant in 5 Minuten. Alles inklusive: mobiler Editor ohne Code, KI-Menüscan, QR-Codes für Tische und Direktbestellungen ohne Provisionen.",
     dynamicHeadlines: ["0% Provision.", "35 Sprachen mit KI.", "Online-Bestellung.", "Reservierung 24/7.", "Premium-Design."],
     painBullets: ["0% Provision: Alle Bestellungen gehen direkt an Sie.", "KI-Übersetzung: 35 Sprachen für mehr Umsatz durch Touristen.", "Reservierung 24/7: Volle Auslastung ohne Telefonstress.", "Flexible Preise: Menü in Sekundenschnelle aktualisieren."],
     rating: "Über 500 Restaurants in 30+ Ländern",

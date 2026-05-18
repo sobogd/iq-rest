@@ -13,13 +13,10 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     ...DEFAULT.hero,
-    headline: "QR matseðill fyrir veitingastaði",
-    sub: "Yfir 500 veitingastaðir í 30+ löndum skipta út prentuðum matseðli fyrir QR matseðil, selja meira til ferðamanna og fjarlægja afhendingargjöld. Tilbúinn á 5 mínútum — 14 dagar ókeypis.",
+    headline: "QR-matseðill fyrir veitingastaði. Tilbúinn á 5 mínútum.",
+    sub: "QR-matseðill fyrir veitingastaðinn þinn á 5 mínútum. Allt innifalið: farsímaritstjóri án kóða, AI matseðils-skönnun, QR-kóðar fyrir borð og beinar pantanir án þóknunar.",
     dynamicHeadlines: [],
-    headlinePrefix: "QR matseðill fyrir ",
-    accentWord: "veitingastaði",
     accentWordRotation: DEFAULT.hero.accentWordRotation ?? [],
-    headlineSuffix: "",
   },
 
   founder: {
