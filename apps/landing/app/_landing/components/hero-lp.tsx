@@ -1,10 +1,8 @@
+import Image from "next/image";
 import { CtaButton } from "./cta-button";
 import { DemoButton } from "./demo-button";
 import { AccentWordRotator } from "./accent-word-rotator";
 import type { LandingTexts } from "../types";
-import { MockHome } from "./menu-mockup/mock-home";
-import { MockMenu } from "./menu-mockup/mock-menu";
-import { MockMenuText } from "./menu-mockup/mock-menu-text";
 
 interface HeroProps {
   texts: LandingTexts["hero"];
@@ -16,15 +14,28 @@ interface HeroProps {
 
 export function HeroLp({ texts, ctaText, demoText, microcopy, locale }: HeroProps) {
   return (
-    <section data-section="hero" className="container mx-auto px-4 pt-6 pb-12 sm:pb-16 lg:pt-10">
-      <div className="w-full">
-      <div className="grid grid-cols-1 gap-8 lg:gap-20">
-        {/* Header — verticals + headline + sub + CTA + rating */}
-        <div className="flex flex-col items-center text-center">
-          {/* Mobile — infinite CSS marquee. The verticals list is rendered
-              twice in a row so the translateX(-50%) animation produces a
-              seamless loop without JS. mask-image fades the edges so chips
-              don't pop in/out abruptly. */}
+    <section
+      data-section="hero"
+      className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 pt-6 pb-12 sm:pb-16 lg:pt-10 lg:pb-20"
+    >
+      <div className="grid grid-cols-1 gap-8 lg:gap-14 xl:gap-20 lg:grid-cols-[1.05fr_1fr] lg:items-center">
+        {/* Cafe photo — full-bleed inside its column, no container constraint. */}
+        <div className="order-1 w-full">
+          <div className="relative w-full aspect-[4/3] overflow-hidden rounded-2xl lg:rounded-3xl shadow-2xl ring-1 ring-black/5 dark:ring-white/5">
+            <Image
+              src="/landing/hero-cafe.webp"
+              alt="Two guests at a sunlit cafe table holding phones with the IQ Rest QR menu on screen"
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 55vw"
+              className="object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Content — verticals + headline + sub + CTA. Centered on mobile,
+            left-aligned from lg up. */}
+        <div className="order-2 flex flex-col items-center text-center lg:items-start lg:text-start">
           <div className="sm:hidden w-full mb-5 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
             <div className="flex w-max animate-marquee gap-1.5">
               {[...texts.verticals, ...texts.verticals].map((v, i) => (
@@ -38,8 +49,7 @@ export function HeroLp({ texts, ctaText, demoText, microcopy, locale }: HeroProp
             </div>
           </div>
 
-          {/* Desktop — static chips grid (unchanged). */}
-          <div className="hidden sm:flex flex-row flex-wrap items-center justify-center gap-1.5 mb-5 w-full">
+          <div className="hidden sm:flex flex-row flex-wrap items-center justify-center lg:justify-start gap-1.5 mb-5 w-full">
             {texts.verticals.map((v) => (
               <span
                 key={v}
@@ -50,7 +60,7 @@ export function HeroLp({ texts, ctaText, demoText, microcopy, locale }: HeroProp
             ))}
           </div>
 
-          <h1 className="text-4xl sm:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.1] mb-4">
+          <h1 className="text-4xl sm:text-[2.625rem] lg:text-[3.25rem] xl:text-[3.5rem] font-medium tracking-tight leading-[1.05] mb-4">
             {texts.accentWord && texts.accentWordRotation && texts.accentWordRotation.length > 0 ? (
               <span className="block whitespace-pre-line sm:whitespace-normal">
                 {texts.headlinePrefix}
@@ -74,27 +84,15 @@ export function HeroLp({ texts, ctaText, demoText, microcopy, locale }: HeroProp
           <div className="w-full">
             <CtaButton
               text={ctaText}
+              microcopy={microcopy}
               locale={locale}
-              align="center"
+              align="center-mobile"
               trackEvent="land_hero_cta_click"
               stackMobile
               extra={<DemoButton text={demoText} locale={locale} trackEvent="land_hero_demo_open" />}
             />
           </div>
-
         </div>
-
-        {/* Images — PPC LP drops the under-trio rating row; the `500+
-            ristoranti italiani` social proof already lives in the hero
-            sub, so a second rating block here is just clutter. */}
-        <div className="w-full max-w-[560px] lg:max-w-[640px] mx-auto px-4 sm:px-2">
-          <div className="relative w-full aspect-[5/4]">
-            <MockHome locale={locale} brandName="IQ Rest" className="absolute left-0 bottom-[13%] w-[36%] z-0" />
-            <MockMenuText locale={locale} className="absolute right-0 top-[13%] w-[36%] z-0" />
-            <MockMenu locale={locale} className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[46%] z-10" />
-          </div>
-        </div>
-      </div>
       </div>
     </section>
   );
