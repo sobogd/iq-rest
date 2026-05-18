@@ -77,9 +77,9 @@ export const TEXTS: LandingTexts = {
       },
       {
         Icon: ChefHat,
-        title: "Demnächst: Küchendisplay",
+        title: "Küchendisplay",
         desc: "Schluss mit Zettelwirtschaft. Bestellungen gehen direkt auf den Bildschirm des Kochs.",
-        tag: "Demnächst",
+        tag: "Küchendisplay",
       },
     
     ],

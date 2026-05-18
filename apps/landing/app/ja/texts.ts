@@ -31,7 +31,7 @@ export const TEXTS: LandingTexts = {
       { Icon: CalendarCheck, title: "テーブル予約", desc: "忙しい調理中でもシステムが自動で予約受付。顧客を逃しません。", tag: "予約" },
       { Icon: Palette, title: "モダンなデザイン", desc: "動画背景とシズル感のある写真。一目で食欲をそそる高級感のあるメニューを。", tag: "カスタムデザイン" },
       { Icon: Smartphone, title: "クイック編集", desc: "売り切れ設定や価格改定もスマホで完結。変更は即座に反映されます。", tag: "メニューエディタ" },
-      { Icon: ChefHat, title: "近日公開：キッチンディスプレイ", desc: "紙の伝票は不要。ホールの注文が即座に調理場の画面に表示されます。", tag: "近日公開" },
+      { Icon: ChefHat, title: "キッチンディスプレイ", desc: "紙の伝票は不要。ホールの注文が即座に調理場の画面に表示されます。", tag: "キッチンディスプレイ" },
     
     ],
   },

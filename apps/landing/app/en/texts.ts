@@ -81,9 +81,9 @@ export const TEXTS: LandingTexts = {
       },
       {
         Icon: ChefHat,
-        title: "Coming Soon: Kitchen Display",
+        title: "Kitchen Display",
         desc: "Forget paper tickets. Orders from the floor go straight to the chef's screen. Pure efficiency.",
-        tag: "Coming soon",
+        tag: "Kitchen display",
       },
     
     ],

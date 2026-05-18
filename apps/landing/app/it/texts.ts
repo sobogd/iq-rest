@@ -87,9 +87,9 @@ export const TEXTS: LandingTexts = {
       },
       {
         Icon: ChefHat,
-        title: "Prossimamente: Display cucina",
+        title: "Display cucina",
         desc: "Dimentica le comande cartacee. Gli ordini dalla sala vanno direttamente sullo schermo dello chef.",
-        tag: "In arrivo",
+        tag: "Display cucina",
       },
     ],
   },

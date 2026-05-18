@@ -93,9 +93,9 @@ export const TEXTS: LandingTexts = {
       },
       {
         Icon: ChefHat,
-        title: "Próximamente: Pantalla de cocina",
+        title: "Pantalla de cocina",
         desc: "Olvida los tiquets de papel. Los pedidos de la sala van directo a la pantalla del chef.",
-        tag: "Próximamente",
+        tag: "Pantalla de cocina",
       },
     ],
   },

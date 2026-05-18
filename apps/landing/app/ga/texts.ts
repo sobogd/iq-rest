@@ -31,7 +31,7 @@ export const TEXTS: LandingTexts = {
       { Icon: CalendarCheck, title: "Áitithe Táblaí", desc: "Glacann an córas le háitithe agus tú gnóthach sa chistin. Ná caill custaiméir arís.", tag: "Áirithintí" },
       { Icon: Palette, title: "Dearadh Nua-aimseartha", desc: "Cúlraí físeáin agus grianghraif áille. Breathnaíonn do rochlár go hiontach.", tag: "Dearadh saincheaptha" },
       { Icon: Smartphone, title: "Eagarthóir Tapa", desc: "Bainistigh praghsanna agus stoc go díreach ó do ghuthán. Athruithe beo láithreach.", tag: "Eagarthóir biachláir" },
-      { Icon: ChefHat, title: "Ag teacht go luath: Scáileán Cistine", desc: "Déan dearmad ar thicéid pháipéir. Téann orduithe díreach chuig an gcócaire.", tag: "Ag teacht go luath" },
+      { Icon: ChefHat, title: "Scáileán Cistine", desc: "Déan dearmad ar thicéid pháipéir. Téann orduithe díreach chuig an gcócaire.", tag: "Scáileán Cistine" },
     
     ],
   },

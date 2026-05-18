@@ -31,7 +31,7 @@ export const TEXTS: LandingTexts = {
       { Icon: CalendarCheck, title: "Rezervácia stolov", desc: "Systém sám prijíma rezervácie, kým ste v kuchyni. Žiaden stratený zákazník.", tag: "Rezervácie" },
       { Icon: Palette, title: "Moderný dizajn", desc: "Video pozadia a lákavé fotky. Vaše menu vyzerá luxusne a vzbudzuje chuť do jedla.", tag: "Vlastný dizajn" },
       { Icon: Smartphone, title: "Rýchly editor", desc: "Spravujte stop-list a ceny priamo z mobilu. Zmeny sú hosťom viditeľné okamžite.", tag: "Editor menu" },
-      { Icon: ChefHat, title: "Už čoskoro: Kuchynský displej", desc: "Zabudnite na papierové lístky. Objednávky zo sály idú rovno na obrazovku kuchárovi.", tag: "Čoskoro" },
+      { Icon: ChefHat, title: "Kuchynský displej", desc: "Zabudnite na papierové lístky. Objednávky zo sály idú rovno na obrazovku kuchárovi.", tag: "Kuchynský displej" },
     
     ],
   },

@@ -31,7 +31,7 @@ export const TEXTS: LandingTexts = {
       { Icon: CalendarCheck, title: "Asztalfoglalás", desc: "A rendszer fogadja a foglalásokat, amíg Ön a konyhában van. Nincs több elveszített vendég.", tag: "Foglalások" },
       { Icon: Palette, title: "Modern design", desc: "Videó hátterek és étvágygerjesztő fotók. Az étlapja prémium megjelenést kap.", tag: "Egyedi design" },
       { Icon: Smartphone, title: "Gyors szerkesztő", desc: "Kezelje a stop-listát és az árakat közvetlenül a telefonjáról. A változások azonnal élnek.", tag: "Menüszerkesztő" },
-      { Icon: ChefHat, title: "Hamarosan: Konyhai kijelző", desc: "Felejtse el a papírblokkokat. A rendelések egyenesen a szakács kijelzőjére mennek.", tag: "Hamarosan" },
+      { Icon: ChefHat, title: "Konyhai kijelző", desc: "Felejtse el a papírblokkokat. A rendelések egyenesen a szakács kijelzőjére mennek.", tag: "Konyhai kijelző" },
     
     ],
   },

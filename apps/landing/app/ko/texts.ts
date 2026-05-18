@@ -31,7 +31,7 @@ export const TEXTS: LandingTexts = {
       { Icon: CalendarCheck, title: "테이블 예약", desc: "주방에서 바쁜 시간에도 시스템이 예약을 대신 받습니다. 단 한 명의 고객도 놓치지 마세요.", tag: "예약" },
       { Icon: Palette, title: "세련된 디자인", desc: "동영상 배경과 먹음직스러운 사진. 첫 화면부터 식욕을 자극하는 프리미엄 디자인.", tag: "맞춤 디자인" },
       { Icon: Smartphone, title: "간편 편집", desc: "품절 설정과 가격 관리를 스마트폰에서 바로. 변경 사항은 손님에게 실시간으로 반영됩니다.", tag: "메뉴 편집기" },
-      { Icon: ChefHat, title: "출시 예정: 주방 디스플레이", desc: "종이 영수증은 이제 그만. 홀의 주문이 주방 화면에 즉시 나타납니다.", tag: "곧 출시" },
+      { Icon: ChefHat, title: "주방 디스플레이", desc: "종이 영수증은 이제 그만. 홀의 주문이 주방 화면에 즉시 나타납니다.", tag: "주방 디스플레이" },
     
     ],
   },

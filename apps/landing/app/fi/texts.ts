@@ -31,7 +31,7 @@ export const TEXTS: LandingTexts = {
       { Icon: CalendarCheck, title: "Pöytävaraukset", desc: "Järjestelmä ottaa varaukset vastaan, kun olet keittiössä. Ei enää menetettyjä asiakkaita.", tag: "Varaukset" },
       { Icon: Palette, title: "Moderni muotoilu", desc: "Videotaustat ja herkulliset kuvat. Menusi näyttää arvokkaalta ja herättää ruokahalun heti.", tag: "Oma ulkoasu" },
       { Icon: Smartphone, title: "Nopea muokkaus", desc: "Hallitse stop-listaa ja hintoja suoraan puhelimesta. Muutokset näkyvät vieraille heti.", tag: "Ruokalistaeditori" },
-      { Icon: ChefHat, title: "Tulossa: Keittiönäyttö", desc: "Unohda paperilaput. Tilaukset salista menevät suoraan kokin näytölle.", tag: "Tulossa pian" },
+      { Icon: ChefHat, title: "Keittiönäyttö", desc: "Unohda paperilaput. Tilaukset salista menevät suoraan kokin näytölle.", tag: "Keittiönäyttö" },
     
     ],
   },

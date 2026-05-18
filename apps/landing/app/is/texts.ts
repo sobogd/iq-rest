@@ -31,7 +31,7 @@ export const TEXTS: LandingTexts = {
       { Icon: CalendarCheck, title: "Borðabókanir", desc: "Kerfið tekur við bókunum á meðan þú ert upptekinn í eldhúsinu. Enginn viðskiptavinur tapast.", tag: "Borðapantanir" },
       { Icon: Palette, title: "Nútímaleg hönnun", desc: "Myndbandsbakgrunnar og girnilegar myndir. Matseðillinn lítur út fyrir að vera dýr.", tag: "Eigin hönnun" },
       { Icon: Smartphone, title: "Hraðvirkur ritill", desc: "Stýrðu verðum og framboði beint úr símanum. Breytingar sjást strax.", tag: "Matseðilsritill" },
-      { Icon: ChefHat, title: "Væntanlegt: Eldhússkjár", desc: "Gleymdu pappírsmiðum. Pantanir fara beint á skjáinn hjá kokkinum.", tag: "Kemur bráðum" },
+      { Icon: ChefHat, title: "Eldhússkjár", desc: "Gleymdu pappírsmiðum. Pantanir fara beint á skjáinn hjá kokkinum.", tag: "Eldhússkjár" },
     
     ],
   },

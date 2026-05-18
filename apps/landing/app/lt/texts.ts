@@ -31,7 +31,7 @@ export const TEXTS: LandingTexts = {
       { Icon: CalendarCheck, title: "Stalų rezervacija", desc: "Sistemos priima rezervacijas, kol jūs virtuvėje. Nė vieno prarasto kliento.", tag: "Rezervacijos" },
       { Icon: Palette, title: "Modernus dizainas", desc: "Video fonai ir skanios nuotraukos. Jūsų meniu atrodo prabangiai ir žadina apetitą.", tag: "Pritaikytas dizainas" },
       { Icon: Smartphone, title: "Greitas redaktorius", desc: "Valdykite stop-sąrašą ir kainas tiesiai iš telefono. Pakeitimai svečiams matomi iškart.", tag: "Meniu redaktorius" },
-      { Icon: ChefHat, title: "Greitai: Virtuvės ekranas", desc: "Pamirškite popierinius čekius. Užsakymai iš salės eina tiesiai į virėjo ekraną.", tag: "Netrukus" },
+      { Icon: ChefHat, title: "Virtuvės ekranas", desc: "Pamirškite popierinius čekius. Užsakymai iš salės eina tiesiai į virėjo ekraną.", tag: "Virtuvės ekranas" },
     
     ],
   },

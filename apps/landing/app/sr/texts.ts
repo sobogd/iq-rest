@@ -31,7 +31,7 @@ export const TEXTS: LandingTexts = {
       { Icon: CalendarCheck, title: "Rezervacija stolova", desc: "Sistem sam prima rezervacije dok ste vi u kuhinji. Nijedan izgubljeni gost.", tag: "Резервације" },
       { Icon: Palette, title: "Moderni dizajn", desc: "Video pozadine i privlačne fotografije. Vaš jelovnik izgleda luksuzno i budi apetit.", tag: "Сопствени дизајн" },
       { Icon: Smartphone, title: "Brzi urednik", desc: "Upravljajte stop-listom i cenama direktno sa mobilnog. Promene su odmah vidljive.", tag: "Уређивач менија" },
-      { Icon: ChefHat, title: "Uskoro: Kuhinjski ekran", desc: "Zaboravite na papirne narudžbine. Porudžbine iz sale idu direktno na kuvarov ekran.", tag: "Ускоро" },
+      { Icon: ChefHat, title: "Kuhinjski ekran", desc: "Zaboravite na papirne narudžbine. Porudžbine iz sale idu direktno na kuvarov ekran.", tag: "Kuhinjski ekran" },
     
     ],
   },

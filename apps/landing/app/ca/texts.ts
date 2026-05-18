@@ -31,7 +31,7 @@ export const TEXTS: LandingTexts = {
       { Icon: CalendarCheck, title: "Reserva de taules", desc: "El sistema accepta reserves mentre ets a la cuina. Cap client perdut.", tag: "Reserves" },
       { Icon: Palette, title: "Disseny modern", desc: "Fons de vídeo i fotos atractives. La teva carta sembla premium i fa venir gana al moment.", tag: "Disseny personalitzat" },
       { Icon: Smartphone, title: "Editor ràpid", desc: "Gestiona la llista d'esgotats i preus des del mòbil. Canvis instantanis per als clients.", tag: "Editor de carta" },
-      { Icon: ChefHat, title: "Properament: Pantalla de cuina", desc: "Oblida els tiquets de paper. Les comandes de la sala van directe a la pantalla del xef.", tag: "Aviat" },
+      { Icon: ChefHat, title: "Pantalla de cuina", desc: "Oblida els tiquets de paper. Les comandes de la sala van directe a la pantalla del xef.", tag: "Pantalla de cuina" },
     
     ],
   },

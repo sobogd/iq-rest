@@ -31,7 +31,7 @@ export const TEXTS: LandingTexts = {
       { Icon: CalendarCheck, title: "桌位预订", desc: "当您在厨房忙碌时，系统会自动接受预订。不再错过任何客户。", tag: "预订" },
       { Icon: Palette, title: "现代设计", desc: "视频背景和精美照片。您的菜单看起来高档且瞬间勾起食欲。", tag: "自定义设计" },
       { Icon: Smartphone, title: "即时编辑器", desc: "直接通过智能手机管理沽清列表和价格。更改立即对顾客生效。", tag: "菜单编辑器" },
-      { Icon: ChefHat, title: "即将推出：厨房显示屏", desc: "告别纸质小票。前厅订单直接显示在厨师的屏幕上。", tag: "即将上线" },
+      { Icon: ChefHat, title: "厨房显示屏", desc: "告别纸质小票。前厅订单直接显示在厨师的屏幕上。", tag: "厨房显示屏" },
     
     ],
   },

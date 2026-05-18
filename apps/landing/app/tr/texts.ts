@@ -31,7 +31,7 @@ export const TEXTS: LandingTexts = {
       { Icon: CalendarCheck, title: "Masa Rezervasyonu", desc: "Siz mutfakta meşgulken sistem rezervasyonları kabul eder. Hiçbir müşteriyi kaçırmazsınız.", tag: "Rezervasyonlar" },
       { Icon: Palette, title: "Modern Tasarım", desc: "Video arka planlar ve iştah açıcı görseller. Menünüz premium görünür ve siparişi tetikler.", tag: "Özel tasarım" },
       { Icon: Smartphone, title: "Hızlı Editör", desc: "Stok listesini ve fiyatları akıllı telefonunuzdan yönetin. Değişiklikler anında yayına girer.", tag: "Menü editörü" },
-      { Icon: ChefHat, title: "Yakında: Mutfak Ekranı", desc: "Kağıt adisyonları unutun. Siparişler doğrudan mutfaktaki ekrana iletilir.", tag: "Yakında" },
+      { Icon: ChefHat, title: "Mutfak Ekranı", desc: "Kağıt adisyonları unutun. Siparişler doğrudan mutfaktaki ekrana iletilir.", tag: "Mutfak Ekranı" },
     
     ],
   },

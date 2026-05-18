@@ -31,7 +31,7 @@ export const TEXTS: LandingTexts = {
       { Icon: CalendarCheck, title: "Rezervare mese", desc: "Sistemul preia rezervările în timp ce ești în bucătărie. Niciun client pierdut.", tag: "Rezervări" },
       { Icon: Palette, title: "Design modern", desc: "Fundaluri video și fotografii apetisante. Meniul tău arată premium și atrage clienții.", tag: "Design personalizat" },
       { Icon: Smartphone, title: "Editor rapid", desc: "Gestionează stocurile și prețurile direct de pe telefon. Schimbările sunt live imediat.", tag: "Editor meniu" },
-      { Icon: ChefHat, title: "În curând: Ecran bucătărie", desc: "Uită de bonurile de hârtie. Comenzile din sală merg direct pe ecranul bucătarului.", tag: "În curând" },
+      { Icon: ChefHat, title: "Ecran bucătărie", desc: "Uită de bonurile de hârtie. Comenzile din sală merg direct pe ecranul bucătarului.", tag: "Ecran bucătărie" },
     
     ],
   },

@@ -31,7 +31,7 @@ export const TEXTS: LandingTexts = {
       { Icon: CalendarCheck, title: "Laudade broneerimine", desc: "Süsteem võtab broneeringuid vastu, kui olete köögis ametis. Mitte ühtegi kaotatud klienti.", tag: "Broneeringud" },
       { Icon: Palette, title: "Moodne disain", desc: "Videotaustad ja isuäratavad fotod. Teie menüü näeb välja kallis ja kutsub tellima.", tag: "Oma kujundus" },
       { Icon: Smartphone, title: "Kiire redaktor", desc: "Hallake stop-listi ja hindu otse nutitelefonist. Muudatused on kohe nähtavad.", tag: "Menüü-redaktor" },
-      { Icon: ChefHat, title: "Varsti: Köögiekrann", desc: "Unustage paberšekid. Saalist tulevad tellimused lähevad otse koka ekraanile.", tag: "Tulekul" },
+      { Icon: ChefHat, title: "Köögiekrann", desc: "Unustage paberšekid. Saalist tulevad tellimused lähevad otse koka ekraanile.", tag: "Köögiekrann" },
     
     ],
   },

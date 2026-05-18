@@ -32,7 +32,7 @@ export const TEXTS: LandingTexts = {
       { Icon: CalendarCheck, title: "Bordsreservation", desc: "Systemet tar emot bokningar medan du jobbar i köket. Ingen missad gäst.", tag: "Bokningar" },
       { Icon: Palette, title: "Modern design", desc: "Videobakgrunder och läckra bilder. Din meny ser exklusiv ut och väcker aptit direkt.", tag: "Egen design" },
       { Icon: Smartphone, title: "Snabb-editor", desc: "Hantera stop-listor och priser direkt från mobilen. Ändringar är synliga för gäster direkt.", tag: "Meny-editor" },
-      { Icon: ChefHat, title: "Snart: Köksskärm", desc: "Glöm papperslappar. Beställningar från salen går direkt till kockens skärm.", tag: "Kommer snart" },
+      { Icon: ChefHat, title: "Köksskärm", desc: "Glöm papperslappar. Beställningar från salen går direkt till kockens skärm.", tag: "Köksskärm" },
     
     ],
   },

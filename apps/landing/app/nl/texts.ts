@@ -77,9 +77,9 @@ export const TEXTS: LandingTexts = {
       },
       {
         Icon: ChefHat,
-        title: "Binnenkort: Keukendisplay",
+        title: "Keukendisplay",
         desc: "Vergeet papieren bonnetjes. Bestellingen van de vloer gaan direct naar het scherm van de chef.",
-        tag: "Binnenkort",
+        tag: "Keukendisplay",
       },
     
     ],

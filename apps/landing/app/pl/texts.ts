@@ -48,7 +48,7 @@ export const TEXTS: LandingTexts = {
       { Icon: CalendarCheck, title: "Rezerwacja stolików", desc: "System sam przyjmuje rezerwacje, gdy Ty pracujesz w kuchni. Żaden klient Ci nie ucieknie.", tag: "Rezerwacje" },
       { Icon: Palette, title: "Nowoczesny design", desc: "Tła wideo i soczyste zdjęcia. Twoje menu wygląda prestiżowo i budzi apetyt od razu.", tag: "Własny design" },
       { Icon: Smartphone, title: "Szybki edytor", desc: "Zarządzaj stop-listą i cenami prosto ze smartfona. Zmiany są widoczne dla gości natychmiast.", tag: "Edytor menu" },
-      { Icon: ChefHat, title: "Wkrótce: Wyświetlacz kuchenny", desc: "Zapomnij o papierowych bonach. Zamówienia z sali trafiają prosto na ekran kucharza.", tag: "Wkrótce" },
+      { Icon: ChefHat, title: "Wyświetlacz kuchenny", desc: "Zapomnij o papierowych bonach. Zamówienia z sali trafiają prosto na ekran kucharza.", tag: "Wyświetlacz kuchenny" },
     
     ],
   },

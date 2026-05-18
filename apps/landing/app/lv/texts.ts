@@ -31,7 +31,7 @@ export const TEXTS: LandingTexts = {
       { Icon: CalendarCheck, title: "Galdiņu rezervēšana", desc: "Sistēma pati pieņem rezervācijas, kamēr jūs esat virtuvē. Neviens pazaudēts klients.", tag: "Rezervācijas" },
       { Icon: Palette, title: "Moderns dizains", desc: "Video foni un kārdinošas foto. Jūsu ēdienkarte izskatās dārgi un rosina apetīti.", tag: "Pielāgots dizains" },
       { Icon: Smartphone, title: "Ātrais redaktors", desc: "Pārvaldiet stop-listi un cenas tieši no viedtālruņa. Izmaiņas viesiem redzamas uzreiz.", tag: "Ēdienkartes redaktors" },
-      { Icon: ChefHat, title: "Drīzumā: Virtuves displejs", desc: "Aizmirstiet par papīra čekiem. Pasūtījumi no zāles nonāk tieši pie pavāra ekrānā.", tag: "Drīzumā" },
+      { Icon: ChefHat, title: "Virtuves displejs", desc: "Aizmirstiet par papīra čekiem. Pasūtījumi no zāles nonāk tieši pie pavāra ekrānā.", tag: "Virtuves displejs" },
     
     ],
   },
