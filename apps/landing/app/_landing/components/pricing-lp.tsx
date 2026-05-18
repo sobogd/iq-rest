@@ -53,7 +53,7 @@ export function LandingPricingLp({ texts, ctaText, demoText, microcopy, locale }
             text={ctaText}
             microcopy={microcopy}
             locale={locale}
-            align="start"
+            align="center-mobile"
             trackEvent="land_pricing_cta_click"
             stackMobile
             extra={<DemoButton text={demoText} locale={locale} trackEvent="land_pricing_demo_open" />}
