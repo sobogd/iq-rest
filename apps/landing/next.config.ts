@@ -38,19 +38,13 @@ const nextConfig: NextConfig = {
     ];
   },
 
-  // 301-redirect old standalone legal pages to the locale home — content moved into modals
-  // accessible from the cookie banner / footer / signup microcopy. Search engines drop the
-  // old URLs after one crawl cycle.
+  // Legal pages live at /:locale/{privacy,terms,cookies} again — they were
+  // briefly merged into modals and got 301'd here. Keep just /languages and
+  // /changelog redirects below.
   async redirects() {
     return [
-      { source: "/:locale/cookies", destination: "/:locale", permanent: true },
-      { source: "/:locale/privacy", destination: "/:locale", permanent: true },
-      { source: "/:locale/terms", destination: "/:locale", permanent: true },
       { source: "/:locale/languages", destination: "/:locale", permanent: true },
-      // Locale-less variants too in case anyone bookmarked.
-      { source: "/cookies", destination: "/", permanent: true },
-      { source: "/privacy", destination: "/", permanent: true },
-      { source: "/terms", destination: "/", permanent: true },
+      // Locale-less variants kept as 301s to the home for SEO continuity.
       { source: "/languages", destination: "/", permanent: true },
       // Changelog removed — redirect listing and any entry to the locale home.
       { source: "/:locale/changelog", destination: "/:locale", permanent: true },

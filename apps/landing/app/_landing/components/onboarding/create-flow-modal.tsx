@@ -1,20 +1,15 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState, lazy, Suspense } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Check } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { analytics } from "@/lib/analytics";
 import { dashboardApi, dashboardUrl } from "@/lib/dashboard-url";
-import type { LegalView } from "@/components/legal-modal";
 import { CuisineStep } from "./cuisine-step";
 import { NameStep } from "./name-step";
 import { AuthStep } from "./auth-step";
 import type { CuisineKey } from "./cuisine";
-
-const LegalModal = lazy(() =>
-  import("@/components/legal-modal").then((m) => ({ default: m.LegalModal })),
-);
 
 const TOTAL_STEPS = 3;
 
@@ -30,7 +25,6 @@ export function CreateFlowModal({
   const [step, setStep] = useState(1);
   const [cuisine, setCuisine] = useState<CuisineKey | null>(null);
   const [restaurantName, setRestaurantName] = useState("");
-  const [legalView, setLegalView] = useState<LegalView>(null);
   const isSignIn = mode === "signin";
   // Records why the dialog is closing so onOpenChange can fire the right event.
   // Set by outside-click / ESC handlers; otherwise defaults to "x" (Close button).
@@ -71,7 +65,6 @@ export function CreateFlowModal({
     if (open) return;
     const reset = setTimeout(() => {
       setStep(1);
-      setLegalView(null);
     }, 200);
     return () => clearTimeout(reset);
   }, [open]);
@@ -131,13 +124,7 @@ export function CreateFlowModal({
             )}
 
             {isSignIn ? (
-              <AuthStep
-                signupContext={null}
-                onOpenLegal={(v) => {
-                  analytics.track(`land_onb_open_${v}`);
-                  setLegalView(v);
-                }}
-              />
+              <AuthStep signupContext={null} />
             ) : (
               <>
                 {step === 1 && (
@@ -171,24 +158,13 @@ export function CreateFlowModal({
                 )}
 
                 {step === 3 && signupContext && (
-                  <AuthStep
-                    signupContext={signupContext}
-                    onOpenLegal={(v) => {
-                      analytics.track(`land_onb_open_${v}`);
-                      setLegalView(v);
-                    }}
-                  />
+                  <AuthStep signupContext={signupContext} />
                 )}
               </>
             )}
           </div>
         </DialogContent>
       </Dialog>
-      {legalView ? (
-        <Suspense fallback={null}>
-          <LegalModal view={legalView} onClose={() => setLegalView(null)} />
-        </Suspense>
-      ) : null}
     </>
   );
 }

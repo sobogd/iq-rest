@@ -1,33 +1,16 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Loader2 } from "lucide-react";
-import { dashboardApi, dashboardUrl } from "@/lib/dashboard-url";
+import { dashboardApi, dashboardApiBase, dashboardUrl } from "@/lib/dashboard-url";
 import { analytics } from "@/lib/analytics";
 import type { CuisineKey } from "./cuisine";
 
-type GoogleCodeClient = {
-  requestCode: () => void;
-};
-type GoogleCodeResponse = { code?: string; error?: string };
-
-declare global {
-  interface Window {
-    google?: {
-      accounts: {
-        oauth2: {
-          initCodeClient: (config: {
-            client_id: string;
-            scope: string;
-            ux_mode: "popup" | "redirect";
-            callback: (response: GoogleCodeResponse) => void;
-          }) => GoogleCodeClient;
-        };
-      };
-    };
-  }
-}
+// localStorage flag that gates the Google sign-in button while the OAuth app
+// is still pending verification. Set via DevTools to test:
+//   localStorage.setItem("iqr_show_google", "1")
+const GOOGLE_FLAG_KEY = "iqr_show_google";
 
 const GOOGLE_CLIENT_ID =
   process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID ||
@@ -60,10 +43,8 @@ function redirectAfterAuth(locale: string, legacyDashboard: boolean) {
 
 export function AuthStep({
   signupContext,
-  onOpenLegal,
 }: {
   signupContext: SignupContext | null;
-  onOpenLegal: (view: "terms" | "privacy") => void;
 }) {
   const t = useTranslations("auth");
   const locale = useLocale();
@@ -75,8 +56,7 @@ export function AuthStep({
   const [errorMessage, setErrorMessage] = useState("");
   const [cooldown, setCooldown] = useState(0);
   const [resendStatus, setResendStatus] = useState<"idle" | "loading" | "sent">("idle");
-  const [googleReady, setGoogleReady] = useState(false);
-  const codeClientRef = useRef<GoogleCodeClient | null>(null);
+  const [showGoogle, setShowGoogle] = useState(false);
 
   useEffect(() => {
     if (cooldown <= 0) return;
@@ -84,75 +64,36 @@ export function AuthStep({
     return () => clearTimeout(timer);
   }, [cooldown]);
 
-  // Submit the OAuth authorization code to the backend, which exchanges it
-  // for an id_token server-side (using the client secret) before issuing
-  // our session.
-  const submitGoogleCode = useCallback(
-    async (code: string) => {
-      setStatus("loading");
-      setErrorMessage("");
-      try {
-        const res = await fetch(dashboardApi("/api/auth/google"), {
-          credentials: "include",
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ code, locale, signupContext: signupContext ?? undefined }),
-        });
-        const data = await res.json();
-        if (res.ok) {
-          analytics.track("land_onb_google_success");
-          redirectAfterAuth(locale, !!data.legacyDashboard);
-        } else {
-          setErrorMessage(data.error || t("errors.sendFailed"));
-          setStatus("error");
-        }
-      } catch {
-        setErrorMessage(t("errors.sendFailed"));
-        setStatus("error");
-      }
-    },
-    [locale, t, signupContext],
-  );
-
-  // Lazy-load the GIS script + init a code-only OAuth client. Using
-  // initCodeClient (not renderButton) means we render our own button, so
-  // Google can't inject the "Continue as <name>" personalised label.
+  // Reveal the Google button only when the dev flag is set. Will be removed
+  // once Google OAuth verification is approved.
   useEffect(() => {
-    if (!GOOGLE_CLIENT_ID) return;
-    const initClient = () => {
-      if (!window.google?.accounts?.oauth2) return;
-      codeClientRef.current = window.google.accounts.oauth2.initCodeClient({
-        client_id: GOOGLE_CLIENT_ID,
-        scope: "openid email profile",
-        ux_mode: "popup",
-        callback: (resp) => {
-          if (resp.code) submitGoogleCode(resp.code);
-          else if (resp.error) {
-            analytics.track("land_onb_google_cancel");
-          }
-        },
-      });
-      setGoogleReady(true);
-    };
-
-    if (window.google?.accounts?.oauth2) {
-      initClient();
-      return;
+    try {
+      setShowGoogle(localStorage.getItem(GOOGLE_FLAG_KEY) === "1");
+    } catch {
+      // ignore (Safari private mode, etc.)
     }
-    const script = document.createElement("script");
-    script.src = "https://accounts.google.com/gsi/client";
-    script.async = true;
-    script.defer = true;
-    script.onload = initClient;
-    document.head.appendChild(script);
-    return () => {
-      if (script.parentNode) script.parentNode.removeChild(script);
-    };
-  }, [submitGoogleCode]);
+  }, []);
 
   const handleGoogleClick = () => {
+    if (!GOOGLE_CLIENT_ID) return;
     analytics.track("land_onb_google_click");
-    codeClientRef.current?.requestCode();
+    const state = btoa(
+      JSON.stringify({
+        locale,
+        signupContext: signupContext ?? undefined,
+      }),
+    );
+    const params = new URLSearchParams({
+      client_id: GOOGLE_CLIENT_ID,
+      redirect_uri: `${dashboardApiBase()}/api/auth/google/callback`,
+      response_type: "code",
+      scope: "openid email profile",
+      access_type: "online",
+      prompt: "select_account",
+      include_granted_scopes: "true",
+      state,
+    });
+    window.location.assign(`https://accounts.google.com/o/oauth2/v2/auth?${params.toString()}`);
   };
 
   const handleContinue = async () => {
@@ -325,45 +266,47 @@ export function AuthStep({
         </button>
       </form>
 
-      {/* Google sign-in hidden until OAuth consent screen is verified — the
-          custom-button flow triggers Google's "unverified app" warning even
-          for non-sensitive scopes while the app is in Testing. Email-only
-          for now. */}
-      <div className="hidden">
-        <div className="flex items-center gap-3 my-3">
-          <div className="flex-1 h-px bg-border" />
-          <span className="text-xs uppercase tracking-wider text-muted-foreground">{t("or")}</span>
-          <div className="flex-1 h-px bg-border" />
-        </div>
+      {showGoogle && (
+        <>
+          <div className="flex items-center gap-3 my-3">
+            <div className="flex-1 h-px bg-border" />
+            <span className="text-xs uppercase tracking-wider text-muted-foreground">{t("or")}</span>
+            <div className="flex-1 h-px bg-border" />
+          </div>
 
-        <button
-          type="button"
-          disabled={!googleReady || status === "loading"}
-          onClick={handleGoogleClick}
-          className="w-full h-12 text-base font-medium text-foreground bg-background border border-border rounded-xl hover:border-foreground active:scale-[0.99] transition-all flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          <GoogleIcon />
-          {t("continueGoogle")}
-        </button>
-      </div>
+          <button
+            type="button"
+            disabled={status === "loading"}
+            onClick={handleGoogleClick}
+            className="w-full h-12 text-base font-medium text-foreground bg-background border border-border rounded-xl hover:border-foreground active:scale-[0.99] transition-all flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <GoogleIcon />
+            {t("continueGoogle")}
+          </button>
+        </>
+      )}
 
       <p className="text-xs text-muted-foreground leading-snug text-center mt-5">
         {t("consent.text")}{" "}
-        <button
-          type="button"
-          onClick={() => onOpenLegal("terms")}
+        <a
+          href={`/${locale}/terms`}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => analytics.track("land_onb_open_terms")}
           className="text-foreground/80 hover:text-foreground underline underline-offset-2 transition-colors"
         >
           {t("consent.terms")}
-        </button>{" "}
+        </a>{" "}
         {t("consent.and")}{" "}
-        <button
-          type="button"
-          onClick={() => onOpenLegal("privacy")}
+        <a
+          href={`/${locale}/privacy`}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => analytics.track("land_onb_open_privacy")}
           className="text-foreground/80 hover:text-foreground underline underline-offset-2 transition-colors"
         >
           {t("consent.privacy")}
-        </button>
+        </a>
       </p>
     </div>
   );
