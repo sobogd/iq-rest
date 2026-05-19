@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { loginUrl } from "@/lib/dashboard-url";
+import { createUrl, loginUrl } from "@/lib/dashboard-url";
 import { LogoIcon } from "./logo-icon";
 import { LinkForward } from "./link-forward";
 import type { LandingTexts } from "../types";
@@ -23,6 +23,7 @@ interface HeaderProps {
 // covers both in a single entry point).
 export function LandingHeaderLp({ texts, locale, useLocalAnchors = false }: HeaderProps) {
   const signinHref = `${loginUrl(locale)}?from=landing`;
+  const createHref = `${createUrl(locale)}&from=landing`;
 
   // Anchor links resolve in two modes:
   //  - homepage / KW landing page (`useLocalAnchors` true OR pathname is
@@ -62,7 +63,7 @@ export function LandingHeaderLp({ texts, locale, useLocalAnchors = false }: Head
               {texts.signIn}
             </LinkForward>
             <LinkForward
-              href={signinHref}
+              href={createHref}
               trackEvent="land_header_cta_click"
               className="inline-flex items-center justify-center h-9 px-4 text-sm font-semibold text-white bg-gradient-to-br from-[hsl(9,100%,58%)] to-[hsl(35,95%,55%)] rounded-lg hover:opacity-90 active:scale-[0.99] transition-all whitespace-nowrap"
             >
