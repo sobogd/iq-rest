@@ -104,6 +104,9 @@ export function AuthStep({
 
   useEffect(() => {
     if (!GOOGLE_CLIENT_ID) return;
+    const isDark =
+      typeof document !== "undefined" &&
+      document.documentElement.classList.contains("dark");
     const initGoogle = () => {
       if (!window.google || !googleHiddenRef.current) return;
       window.google.accounts.id.initialize({
@@ -115,7 +118,10 @@ export function AuthStep({
       window.google.accounts.id.renderButton(googleHiddenRef.current, {
         type: "standard",
         shape: "rectangular",
-        theme: "outline",
+        // Google only offers outline (white) / filled_blue / filled_black.
+        // Match the landing's current theme so the button doesn't look like a
+        // dropped-in foreign element.
+        theme: isDark ? "filled_black" : "outline",
         size: "large",
         width: 320,
         text: "continue_with",
