@@ -7,10 +7,6 @@ import { dashboardApi, dashboardApiBase, dashboardUrl } from "@/lib/dashboard-ur
 import { analytics } from "@/lib/analytics";
 import type { CuisineKey } from "./cuisine";
 
-// localStorage flag that gates the Google sign-in button while the OAuth app
-// is still pending verification. Set via DevTools to test:
-//   localStorage.setItem("iqr_show_google", "1")
-const GOOGLE_FLAG_KEY = "iqr_show_google";
 
 const GOOGLE_CLIENT_ID =
   process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID ||
@@ -56,23 +52,11 @@ export function AuthStep({
   const [errorMessage, setErrorMessage] = useState("");
   const [cooldown, setCooldown] = useState(0);
   const [resendStatus, setResendStatus] = useState<"idle" | "loading" | "sent">("idle");
-  const [showGoogle, setShowGoogle] = useState(false);
-
   useEffect(() => {
     if (cooldown <= 0) return;
     const timer = setTimeout(() => setCooldown((c) => c - 1), 1000);
     return () => clearTimeout(timer);
   }, [cooldown]);
-
-  // Reveal the Google button only when the dev flag is set. Will be removed
-  // once Google OAuth verification is approved.
-  useEffect(() => {
-    try {
-      setShowGoogle(localStorage.getItem(GOOGLE_FLAG_KEY) === "1");
-    } catch {
-      // ignore (Safari private mode, etc.)
-    }
-  }, []);
 
   const handleGoogleClick = () => {
     if (!GOOGLE_CLIENT_ID) return;
@@ -266,25 +250,21 @@ export function AuthStep({
         </button>
       </form>
 
-      {showGoogle && (
-        <>
-          <div className="flex items-center gap-3 my-3">
-            <div className="flex-1 h-px bg-border" />
-            <span className="text-xs uppercase tracking-wider text-muted-foreground">{t("or")}</span>
-            <div className="flex-1 h-px bg-border" />
-          </div>
+      <div className="flex items-center gap-3 my-3">
+        <div className="flex-1 h-px bg-border" />
+        <span className="text-xs uppercase tracking-wider text-muted-foreground">{t("or")}</span>
+        <div className="flex-1 h-px bg-border" />
+      </div>
 
-          <button
-            type="button"
-            disabled={status === "loading"}
-            onClick={handleGoogleClick}
-            className="w-full h-12 text-base font-medium text-foreground bg-background border border-border rounded-xl hover:border-foreground active:scale-[0.99] transition-all flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            <GoogleIcon />
-            {t("continueGoogle")}
-          </button>
-        </>
-      )}
+      <button
+        type="button"
+        disabled={status === "loading"}
+        onClick={handleGoogleClick}
+        className="w-full h-12 text-base font-medium text-foreground bg-background border border-border rounded-xl hover:border-foreground active:scale-[0.99] transition-all flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        <GoogleIcon />
+        {t("continueGoogle")}
+      </button>
 
       <p className="text-xs text-muted-foreground leading-snug text-center mt-5">
         {t("consent.text")}{" "}

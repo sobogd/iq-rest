@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1408 512" role="img" aria-label="IQ Rest">
+  <defs>
+    <linearGradient id="iq-logo-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="hsl(9, 100%, 58%)"/>
+      <stop offset="100%" stop-color="hsl(35, 95%, 55%)"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="url(#iq-logo-bg)"/>
+  <text
+    x="256"
+    y="256"
+    text-anchor="middle"
+    dominant-baseline="central"
+    font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif"
+    font-weight="800"
+    font-size="280"
+    letter-spacing="-12"
+    fill="#ffffff"
+  >IQ</text>
+  <text
+    x="576"
+    y="256"
+    text-anchor="start"
+    dominant-baseline="central"
+    font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif"
+    font-weight="600"
+    font-size="320"
+    letter-spacing="-14"
+    fill="#1a1a1a"
+  >Rest</text>
+</svg>
