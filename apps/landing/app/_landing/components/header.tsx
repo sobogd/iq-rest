@@ -3,8 +3,11 @@
 import { Suspense, useState } from "react";
 import { Globe, LogIn } from "lucide-react";
 import { usePathname, useSearchParams } from "next/navigation";
-import { createUrl, loginUrl } from "@/lib/dashboard-url";
+import { useTranslations } from "next-intl";
 import { analytics } from "@/lib/analytics";
+import { useOnboardingModal } from "./onboarding/onboarding-modal-provider";
+import { useLandingAuth } from "./onboarding/use-landing-auth";
+import { dashboardUrl } from "@/lib/dashboard-url";
 import { getCookieTexts } from "@/app/_landing/lib/cookie-texts";
 import { LanguageSwitcherModal } from "@/components/language-switcher/modal";
 import { LogoIcon } from "./logo-icon";
@@ -29,28 +32,30 @@ interface HeaderProps {
 // Hide Sign in for Google Ads visitors (focus them on the create CTA).
 // Isolated so its useSearchParams() bailout doesn't push the whole page
 // off static rendering — only this slot suspends.
-function SignInSlot({ signinHref, label }: { signinHref: string; label: string }) {
+function SignInSlot({ onClick, label }: { onClick: () => void; label: string }) {
   const searchParams = useSearchParams();
   const showSignIn = !searchParams?.get("gclid");
   if (!showSignIn) return null;
   return (
-    <LinkForward
-      href={signinHref}
-      trackEvent="land_header_signin_click"
+    <button
+      type="button"
+      onClick={onClick}
       className="inline-flex items-center justify-center h-9 w-9 border border-border rounded-lg text-muted-foreground hover:text-foreground hover:border-foreground/40 transition-colors"
       aria-label={label}
       title={label}
     >
       <LogIn className="h-4 w-4" />
-    </LinkForward>
+    </button>
   );
 }
 
 export function LandingHeader({ texts, locale, useLocalAnchors = false, hideSignIn = false }: HeaderProps) {
-  const createHref = `${createUrl(locale)}&from=landing`;
-  const signinHref = `${loginUrl(locale)}?from=landing`;
   const cookieTexts = getCookieTexts(locale);
   const [langOpen, setLangOpen] = useState(false);
+  const modal = useOnboardingModal();
+  const auth = useLandingAuth();
+  const tAuth = useTranslations("auth");
+  const dashHref = auth.legacyDashboard ? `/${locale}/dashboard` : `${dashboardUrl()}/${locale}/dashboard`;
 
   // Anchor links resolve in two modes:
   //  - homepage / KW landing page (`useLocalAnchors` true OR pathname is
@@ -93,18 +98,39 @@ export function LandingHeader({ texts, locale, useLocalAnchors = false, hideSign
           >
             <Globe className="h-4 w-4" />
           </button>
-          {hideSignIn ? null : (
-            <Suspense fallback={<div className="h-9 w-9" aria-hidden />}>
-              <SignInSlot signinHref={signinHref} label={texts.signIn} />
-            </Suspense>
+          {auth.authenticated ? (
+            <a
+              href={dashHref}
+              onClick={() => analytics.track("land_header_dashboard_click")}
+              className="inline-flex items-center justify-center h-9 px-4 text-sm font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 active:scale-[0.99] transition-all whitespace-nowrap"
+            >
+              {tAuth("goToDashboard")}
+            </a>
+          ) : (
+            <>
+              {hideSignIn ? null : (
+                <Suspense fallback={<div className="h-9 w-9" aria-hidden />}>
+                  <SignInSlot
+                    onClick={() => {
+                      analytics.track("land_header_signin_click");
+                      modal.open("signin");
+                    }}
+                    label={texts.signIn}
+                  />
+                </Suspense>
+              )}
+              <button
+                type="button"
+                onClick={() => {
+                  analytics.track("land_header_cta_click");
+                  modal.open();
+                }}
+                className="inline-flex items-center justify-center h-9 px-4 text-sm font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 active:scale-[0.99] transition-all whitespace-nowrap"
+              >
+                {texts.cta}
+              </button>
+            </>
           )}
-          <LinkForward
-            href={createHref}
-            trackEvent="land_header_cta_click"
-            className="inline-flex items-center justify-center h-9 px-4 text-sm font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 active:scale-[0.99] transition-all whitespace-nowrap"
-          >
-            {texts.cta}
-          </LinkForward>
         </div>
       </div>
       <LanguageSwitcherModal

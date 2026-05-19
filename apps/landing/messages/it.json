@@ -2038,5 +2038,71 @@
     "ownerBody": "È stata effettuata una nuova prenotazione nel tuo ristorante.",
     "ownerCta": "Visualizza prenotazioni",
     "ownerSignature": "Cordiali saluti,<br>Team IQ Rest"
+  },
+  "createFlow": {
+    "step1": {
+      "title": "Che tipo di locale è?",
+      "subtitle": "Scegli uno stile e precaricheremo un menù di esempio così potrai modificare invece di partire da zero.",
+      "label": "Tipo"
+    },
+    "step2": {
+      "title": "Come si chiama?",
+      "subtitle": "È quello che gli ospiti vedono in cima al menù. Puoi cambiarlo in qualsiasi momento.",
+      "nameLabel": "Nome del ristorante",
+      "namePlaceholder": "Pizzeria Mario",
+      "label": "Nome"
+    },
+    "back": "Indietro",
+    "continue": "Continua",
+    "cuisines": {
+      "pizza": "Pizzeria",
+      "sushi": "Sushi / Giapponese",
+      "asian": "Asiatica",
+      "burger": "Hamburgeria / Fast food",
+      "coffee": "Caffetteria",
+      "bar": "Bar / Pub",
+      "bakery": "Panetteria / Pasticceria",
+      "restaurant": "Ristorante"
+    },
+    "stepOf": "Passo {step} di {total}",
+    "step3": {
+      "label": "Accesso"
+    }
+  },
+  "auth": {
+    "titleWithName": "Un'ultima cosa per {name}",
+    "subtitle": "Lascia la tua email per salvare il menù — potrai modificarlo quando vuoi.",
+    "emailLabel": "Email",
+    "emailPlaceholder": "tu@ristorante.com",
+    "continueEmail": "Salva il mio menù",
+    "or": "o",
+    "continueGoogle": "Continua con Google",
+    "changeRestaurant": "Cambia ristorante",
+    "consent": {
+      "text": "Continuando accetti i nostri",
+      "terms": "Termini",
+      "and": "e",
+      "privacy": "Informativa sulla privacy"
+    },
+    "verifyTitle": "Controlla la tua casella",
+    "verifySubtitle": "Abbiamo inviato un codice di 6 cifre a {email}.",
+    "verifyCodeLabel": "Codice di verifica",
+    "checkSpam": "Non lo vedi? Controlla nella cartella spam.",
+    "verifyButton": "Verifica e apri il pannello",
+    "resendCode": "Invia di nuovo",
+    "resendSent": "Codice inviato",
+    "changeEmail": "Usa un'altra email",
+    "errors": {
+      "emailInvalid": "Inserisci un'email valida.",
+      "sendFailed": "Impossibile inviare il codice. Riprova.",
+      "verifyFailed": "Impossibile verificare il codice. Riprova.",
+      "codeExpired": "Questo codice è scaduto. Richiedine uno nuovo.",
+      "noCode": "Nessun codice registrato. Richiedine uno nuovo.",
+      "invalidCode": "Codice errato. Riprova.",
+      "tooManyAttempts": "Troppi tentativi. Attendi e riprova."
+    },
+    "signInTitle": "Bentornato",
+    "signInSubtitle": "Inserisci la tua email e ti invieremo un codice veloce per entrare.",
+    "goToDashboard": "Vai al pannello"
   }
 }

@@ -1,9 +1,13 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { createUrl, loginUrl } from "@/lib/dashboard-url";
+import { useTranslations } from "next-intl";
 import { LogoIcon } from "./logo-icon";
 import { LinkForward } from "./link-forward";
+import { useOnboardingModal } from "./onboarding/onboarding-modal-provider";
+import { useLandingAuth } from "./onboarding/use-landing-auth";
+import { dashboardUrl } from "@/lib/dashboard-url";
+import { analytics } from "@/lib/analytics";
 import type { LandingTexts } from "../types";
 
 interface HeaderProps {
@@ -22,8 +26,10 @@ interface HeaderProps {
 // and one short Start CTA that doubles as login and signup (OTP flow
 // covers both in a single entry point).
 export function LandingHeaderLp({ texts, locale, useLocalAnchors = false }: HeaderProps) {
-  const signinHref = `${loginUrl(locale)}?from=landing`;
-  const createHref = `${createUrl(locale)}&from=landing`;
+  const modal = useOnboardingModal();
+  const auth = useLandingAuth();
+  const tAuth = useTranslations("auth");
+  const dashHref = auth.legacyDashboard ? `/${locale}/dashboard` : `${dashboardUrl()}/${locale}/dashboard`;
 
   // Anchor links resolve in two modes:
   //  - homepage / KW landing page (`useLocalAnchors` true OR pathname is
@@ -55,20 +61,38 @@ export function LandingHeaderLp({ texts, locale, useLocalAnchors = false }: Head
             <LinkForward href={anchor("faq")} trackEvent="land_header_nav_faq_click" className="border-b-2 border-transparent hover:border-foreground transition-colors">{texts.navFaq}</LinkForward>
           </nav>
           <div className="flex items-center gap-5 shrink-0">
-            <LinkForward
-              href={signinHref}
-              trackEvent="land_header_signin_click"
-              className="hidden sm:inline-flex text-sm font-semibold text-foreground border-b-2 border-transparent hover:border-foreground transition-colors"
-            >
-              {texts.signIn}
-            </LinkForward>
-            <LinkForward
-              href={createHref}
-              trackEvent="land_header_cta_click"
-              className="inline-flex items-center justify-center h-9 px-4 text-sm font-semibold text-white bg-gradient-to-br from-[hsl(9,100%,58%)] to-[hsl(35,95%,55%)] rounded-lg hover:opacity-90 active:scale-[0.99] transition-all whitespace-nowrap"
-            >
-              {texts.cta}
-            </LinkForward>
+            {auth.authenticated ? (
+              <a
+                href={dashHref}
+                onClick={() => analytics.track("land_header_dashboard_click")}
+                className="inline-flex items-center justify-center h-9 px-4 text-sm font-semibold text-white bg-gradient-to-br from-[hsl(9,100%,58%)] to-[hsl(35,95%,55%)] rounded-lg hover:opacity-90 active:scale-[0.99] transition-all whitespace-nowrap"
+              >
+                {tAuth("goToDashboard")}
+              </a>
+            ) : (
+              <>
+                <button
+                  type="button"
+                  onClick={() => {
+                    analytics.track("land_header_signin_click");
+                    modal.open("signin");
+                  }}
+                  className="hidden sm:inline-flex text-sm font-semibold text-foreground border-b-2 border-transparent hover:border-foreground transition-colors"
+                >
+                  {texts.signIn}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    analytics.track("land_header_cta_click");
+                    modal.open();
+                  }}
+                  className="inline-flex items-center justify-center h-9 px-4 text-sm font-semibold text-white bg-gradient-to-br from-[hsl(9,100%,58%)] to-[hsl(35,95%,55%)] rounded-lg hover:opacity-90 active:scale-[0.99] transition-all whitespace-nowrap"
+                >
+                  {texts.cta}
+                </button>
+              </>
+            )}
           </div>
         </div>
       </div>

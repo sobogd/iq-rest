@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { routing, rtlLocales } from "@/i18n/routing";
 import "../globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { OnboardingModalProvider } from "@/app/_landing/components/onboarding/onboarding-modal-provider";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -52,7 +53,9 @@ export default async function LocaleLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider messages={messages}>
-            {children}
+            <OnboardingModalProvider>
+              {children}
+            </OnboardingModalProvider>
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

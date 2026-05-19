@@ -1,0 +1,496 @@
+"use client";
+
+import { useCallback, useEffect, useRef, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
+import { Loader2 } from "lucide-react";
+import { dashboardApi, dashboardUrl } from "@/lib/dashboard-url";
+import { analytics } from "@/lib/analytics";
+import type { CuisineKey } from "./cuisine";
+
+declare global {
+  interface Window {
+    google?: {
+      accounts: {
+        id: {
+          initialize: (config: Record<string, unknown>) => void;
+          renderButton: (element: HTMLElement, config: Record<string, unknown>) => void;
+        };
+      };
+    };
+  }
+}
+
+const GOOGLE_CLIENT_ID =
+  process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID ||
+  "576149678945-vjqlc4sce6bsne3p0n63bqdvf33k43s0.apps.googleusercontent.com";
+
+const CODE_LENGTH = 6;
+const RESEND_COOLDOWN = 60;
+
+const ERROR_MAP: Record<string, string> = {
+  CODE_EXPIRED: "errors.codeExpired",
+  NO_CODE: "errors.noCode",
+  INVALID_CODE: "errors.invalidCode",
+  TOO_MANY_ATTEMPTS: "errors.tooManyAttempts",
+};
+
+const isValidEmail = (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
+
+type SignupContext = { cuisine: CuisineKey; restaurantName: string };
+
+type Screen = "email" | "verify";
+
+function redirectAfterAuth(locale: string, legacyDashboard: boolean) {
+  if (legacyDashboard) {
+    // Legacy users land on the old monolith dashboard, which lives on iq-rest.com.
+    window.location.assign(`/${locale}/dashboard`);
+    return;
+  }
+  window.location.assign(`${dashboardUrl()}/${locale}/dashboard`);
+}
+
+export function AuthStep({
+  signupContext,
+  onOpenLegal,
+}: {
+  signupContext: SignupContext | null;
+  onOpenLegal: (view: "terms" | "privacy") => void;
+}) {
+  const t = useTranslations("auth");
+  const locale = useLocale();
+
+  const [screen, setScreen] = useState<Screen>("email");
+  const [email, setEmail] = useState("");
+  const [code, setCode] = useState<string[]>(Array(CODE_LENGTH).fill(""));
+  const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+  const [cooldown, setCooldown] = useState(0);
+  const [resendStatus, setResendStatus] = useState<"idle" | "loading" | "sent">("idle");
+  const [googleReady, setGoogleReady] = useState(false);
+  const googleHiddenRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (cooldown <= 0) return;
+    const timer = setTimeout(() => setCooldown((c) => c - 1), 1000);
+    return () => clearTimeout(timer);
+  }, [cooldown]);
+
+  const handleGoogleResponse = useCallback(
+    async (response: { credential: string }) => {
+      setStatus("loading");
+      setErrorMessage("");
+      try {
+        const res = await fetch(dashboardApi("/api/auth/google"), {
+          credentials: "include",
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ credential: response.credential, locale, signupContext: signupContext ?? undefined }),
+        });
+        const data = await res.json();
+        if (res.ok) {
+          analytics.track("land_onb_google_success");
+          redirectAfterAuth(locale, !!data.legacyDashboard);
+        } else {
+          setErrorMessage(data.error || t("errors.sendFailed"));
+          setStatus("error");
+        }
+      } catch {
+        setErrorMessage(t("errors.sendFailed"));
+        setStatus("error");
+      }
+    },
+    [locale, t, signupContext],
+  );
+
+  useEffect(() => {
+    if (!GOOGLE_CLIENT_ID) return;
+    const initGoogle = () => {
+      if (!window.google || !googleHiddenRef.current) return;
+      window.google.accounts.id.initialize({
+        client_id: GOOGLE_CLIENT_ID,
+        callback: handleGoogleResponse,
+        ux_mode: "popup",
+        auto_select: false,
+      });
+      window.google.accounts.id.renderButton(googleHiddenRef.current, {
+        type: "standard",
+        shape: "rectangular",
+        theme: "outline",
+        size: "large",
+        width: 320,
+        text: "continue_with",
+        logo_alignment: "left",
+      });
+      setGoogleReady(true);
+    };
+
+    if (window.google) {
+      initGoogle();
+      return;
+    }
+    const script = document.createElement("script");
+    script.src = "https://accounts.google.com/gsi/client";
+    script.async = true;
+    script.defer = true;
+    script.onload = initGoogle;
+    document.head.appendChild(script);
+    return () => {
+      if (script.parentNode) script.parentNode.removeChild(script);
+    };
+  }, [handleGoogleResponse]);
+
+  const handleContinue = async () => {
+    analytics.track("land_onb_email_submit");
+    const trimmed = email.trim().toLowerCase();
+    if (!isValidEmail(trimmed)) {
+      analytics.track("land_onb_email_invalid");
+      setErrorMessage(t("errors.emailInvalid"));
+      setStatus("error");
+      return;
+    }
+    setStatus("loading");
+    setErrorMessage("");
+    try {
+      const res = await fetch(dashboardApi("/api/auth/send-otp"), {
+        credentials: "include",
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: trimmed, locale, signupContext: signupContext ?? undefined }),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        analytics.track("land_onb_otp_sent");
+        setCode(Array(CODE_LENGTH).fill(""));
+        setCooldown(RESEND_COOLDOWN);
+        setStatus("idle");
+        setScreen("verify");
+      } else {
+        setErrorMessage(data.error || t("errors.sendFailed"));
+        setStatus("error");
+      }
+    } catch {
+      setErrorMessage(t("errors.sendFailed"));
+      setStatus("error");
+    }
+  };
+
+  const handleVerify = async () => {
+    analytics.track("land_onb_verify_submit");
+    const otp = code.join("");
+    if (otp.length !== CODE_LENGTH) return;
+    setStatus("loading");
+    setErrorMessage("");
+    try {
+      const res = await fetch(dashboardApi("/api/auth/verify-otp"), {
+        credentials: "include",
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email.trim().toLowerCase(), code: otp }),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        analytics.track("land_onb_verify_success");
+        redirectAfterAuth(locale, !!data.legacyDashboard);
+      } else {
+        const key = ERROR_MAP[data.error];
+        setErrorMessage(key ? t(key) : t("errors.verifyFailed"));
+        setStatus("error");
+        setCode(Array(CODE_LENGTH).fill(""));
+      }
+    } catch {
+      setErrorMessage(t("errors.verifyFailed"));
+      setStatus("error");
+      setCode(Array(CODE_LENGTH).fill(""));
+    }
+  };
+
+  const handleResend = async () => {
+    analytics.track("land_onb_resend_click");
+    if (cooldown > 0 || resendStatus === "loading") return;
+    setResendStatus("loading");
+    setErrorMessage("");
+    try {
+      const res = await fetch(dashboardApi("/api/auth/send-otp"), {
+        credentials: "include",
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email.trim().toLowerCase(), locale, signupContext }),
+      });
+      if (res.ok) {
+        setResendStatus("sent");
+        setCooldown(RESEND_COOLDOWN);
+        setCode(Array(CODE_LENGTH).fill(""));
+        setTimeout(() => setResendStatus("idle"), 3000);
+      } else {
+        setResendStatus("idle");
+        setErrorMessage(t("errors.sendFailed"));
+        setStatus("error");
+      }
+    } catch {
+      setResendStatus("idle");
+      setErrorMessage(t("errors.sendFailed"));
+      setStatus("error");
+    }
+  };
+
+  const handleChangeEmail = () => {
+    analytics.track("land_onb_change_email_click");
+    setCode(Array(CODE_LENGTH).fill(""));
+    setScreen("email");
+    setStatus("idle");
+    setErrorMessage("");
+  };
+
+  if (screen === "verify") {
+    return (
+      <VerifyScreen
+        email={email}
+        code={code}
+        setCode={setCode}
+        onVerify={handleVerify}
+        onResend={handleResend}
+        onChangeEmail={handleChangeEmail}
+        status={status}
+        errorMessage={errorMessage}
+        cooldown={cooldown}
+        resendStatus={resendStatus}
+      />
+    );
+  }
+
+  return (
+    <div>
+      <h2 className="text-2xl sm:text-3xl font-medium tracking-tight leading-tight mb-2">
+        {signupContext
+          ? t("titleWithName", { name: signupContext.restaurantName })
+          : t("signInTitle")}
+      </h2>
+      <p className="text-sm sm:text-base text-muted-foreground leading-snug mb-6">
+        {signupContext ? t("subtitle") : t("signInSubtitle")}
+      </p>
+
+      {status === "error" && errorMessage && (
+        <div className="mb-4 p-3 bg-red-500/10 border border-red-500/40 rounded-xl text-red-400 text-sm leading-snug">
+          {errorMessage}
+        </div>
+      )}
+
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleContinue();
+        }}
+      >
+        <label htmlFor="onboarding-email" className="block text-sm font-medium text-foreground mb-2 tracking-tight">
+          {t("emailLabel")}
+        </label>
+        <input
+          id="onboarding-email"
+          type="email"
+          inputMode="email"
+          autoComplete="email"
+          required
+          autoFocus
+          placeholder={t("emailPlaceholder")}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          onFocus={() => analytics.track("land_onb_email_focus")}
+          disabled={status === "loading"}
+          className="w-full h-12 px-4 text-base text-foreground bg-background border border-border rounded-xl placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors"
+        />
+
+        <button
+          type="submit"
+          disabled={status === "loading"}
+          className="mt-4 h-12 w-full text-base font-semibold text-white bg-gradient-to-br from-[hsl(9,100%,58%)] to-[hsl(35,95%,55%)] rounded-xl hover:opacity-90 active:scale-[0.99] transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+        >
+          {status === "loading" && <Loader2 className="h-4 w-4 animate-spin" />}
+          {t("continueEmail")}
+        </button>
+      </form>
+
+      <div className="flex items-center gap-3 my-3">
+        <div className="flex-1 h-px bg-border" />
+        <span className="text-xs uppercase tracking-wider text-muted-foreground">{t("or")}</span>
+        <div className="flex-1 h-px bg-border" />
+      </div>
+
+      <div
+        className="relative h-12"
+        onPointerDown={() => analytics.track("land_onb_google_click")}
+      >
+        {!googleReady && (
+          <div className="w-full h-12 rounded-xl bg-border/50 animate-pulse" />
+        )}
+        <button
+          type="button"
+          className={`absolute inset-0 h-12 w-full text-base font-medium text-foreground bg-background border border-border rounded-xl hover:border-foreground transition-colors flex items-center justify-center gap-2 ${!googleReady ? "invisible" : ""}`}
+          aria-hidden
+          tabIndex={-1}
+        >
+          <GoogleIcon />
+          {t("continueGoogle")}
+        </button>
+        <div
+          ref={googleHiddenRef}
+          className="absolute inset-0 opacity-0 overflow-hidden [&_iframe]:!w-full [&_iframe]:!h-full [&>div]:!w-full [&>div]:!h-full"
+        />
+      </div>
+
+      <p className="text-xs text-muted-foreground leading-snug text-center mt-5">
+        {t("consent.text")}{" "}
+        <button
+          type="button"
+          onClick={() => onOpenLegal("terms")}
+          className="text-foreground/80 hover:text-foreground underline underline-offset-2 transition-colors"
+        >
+          {t("consent.terms")}
+        </button>{" "}
+        {t("consent.and")}{" "}
+        <button
+          type="button"
+          onClick={() => onOpenLegal("privacy")}
+          className="text-foreground/80 hover:text-foreground underline underline-offset-2 transition-colors"
+        >
+          {t("consent.privacy")}
+        </button>
+      </p>
+    </div>
+  );
+}
+
+function VerifyScreen({
+  email,
+  code,
+  setCode,
+  onVerify,
+  onResend,
+  onChangeEmail,
+  status,
+  errorMessage,
+  cooldown,
+  resendStatus,
+}: {
+  email: string;
+  code: string[];
+  setCode: (c: string[]) => void;
+  onVerify: () => void;
+  onResend: () => void;
+  onChangeEmail: () => void;
+  status: "idle" | "loading" | "error";
+  errorMessage: string;
+  cooldown: number;
+  resendStatus: "idle" | "loading" | "sent";
+}) {
+  const t = useTranslations("auth");
+  const joined = code.join("");
+  const canVerify = joined.length === CODE_LENGTH;
+
+  const setFromString = (raw: string) => {
+    const digits = raw.replace(/\D/g, "").slice(0, CODE_LENGTH);
+    const next = Array(CODE_LENGTH).fill("") as string[];
+    digits.split("").forEach((c, i) => (next[i] = c));
+    setCode(next);
+    if (digits.length === CODE_LENGTH) {
+      setTimeout(onVerify, 50);
+    }
+  };
+
+  const parts = t("verifySubtitle", { email }).split(email);
+
+  return (
+    <div>
+      <h2 className="text-2xl sm:text-3xl font-medium tracking-tight leading-tight mb-2">
+        {t("verifyTitle")}
+      </h2>
+      <p className="text-sm sm:text-base text-muted-foreground leading-snug mb-6">
+        {parts.map((part, i) =>
+          i < parts.length - 1 ? (
+            <span key={i}>
+              {part}
+              <span className="text-foreground font-medium">{email}</span>
+            </span>
+          ) : (
+            <span key={i}>{part}</span>
+          ),
+        )}
+      </p>
+
+      {status === "error" && errorMessage && (
+        <div className="mb-4 p-3 bg-red-500/10 border border-red-500/40 rounded-xl text-red-400 text-sm leading-snug">
+          {errorMessage}
+        </div>
+      )}
+
+      <label htmlFor="onboarding-otp" className="block text-sm font-medium text-foreground mb-2 tracking-tight">
+        {t("verifyCodeLabel")}
+      </label>
+      <input
+        id="onboarding-otp"
+        type="text"
+        inputMode="numeric"
+        autoComplete="one-time-code"
+        autoFocus
+        maxLength={CODE_LENGTH}
+        value={joined}
+        onChange={(e) => setFromString(e.target.value)}
+        onFocus={() => analytics.track("land_onb_otp_focus")}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" && canVerify) onVerify();
+        }}
+        disabled={status === "loading"}
+        placeholder="••••••"
+        className="w-full h-14 px-4 text-center text-2xl font-semibold text-foreground bg-background border border-border rounded-xl focus:outline-none focus:border-foreground transition-colors tabular-nums tracking-[0.4em] placeholder:tracking-[0.4em] placeholder:text-muted-foreground/40 disabled:opacity-50"
+      />
+
+      <p className="text-xs text-muted-foreground mt-3">{t("checkSpam")}</p>
+
+      <button
+        type="button"
+        onClick={onVerify}
+        disabled={!canVerify || status === "loading"}
+        className="mt-6 h-12 w-full text-base font-semibold text-white bg-gradient-to-br from-[hsl(9,100%,58%)] to-[hsl(35,95%,55%)] rounded-xl hover:opacity-90 active:scale-[0.99] transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:active:scale-100 flex items-center justify-center gap-2"
+      >
+        {status === "loading" && <Loader2 className="h-4 w-4 animate-spin" />}
+        {t("verifyButton")}
+      </button>
+
+      <div className="flex items-center justify-between mt-5">
+        <button
+          type="button"
+          onClick={onChangeEmail}
+          className="text-xs font-medium text-muted-foreground hover:text-foreground tracking-tight transition-colors flex items-center gap-1"
+        >
+          ← {t("changeEmail")}
+        </button>
+        <button
+          type="button"
+          onClick={onResend}
+          disabled={cooldown > 0 || resendStatus === "loading"}
+          className="text-xs font-medium text-foreground hover:text-foreground/70 tracking-tight transition-colors disabled:text-muted-foreground disabled:cursor-not-allowed flex items-center gap-1"
+        >
+          {resendStatus === "loading" ? (
+            <Loader2 className="h-3 w-3 animate-spin" />
+          ) : resendStatus === "sent" ? (
+            t("resendSent")
+          ) : cooldown > 0 ? (
+            `${t("resendCode")} (${cooldown}s)`
+          ) : (
+            t("resendCode")
+          )}
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function GoogleIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true">
+      <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+      <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+      <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+      <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+    </svg>
+  );
+}

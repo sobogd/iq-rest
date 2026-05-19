@@ -2038,5 +2038,71 @@
     "ownerBody": "Une nouvelle réservation a été effectuée dans votre restaurant.",
     "ownerCta": "Voir les réservations",
     "ownerSignature": "Cordialement,<br>L'équipe IQ Rest"
+  },
+  "createFlow": {
+    "step1": {
+      "title": "Quel type d'établissement ?",
+      "subtitle": "Choisis un style et nous préchargerons un menu exemple à éditer, plutôt qu'une page blanche.",
+      "label": "Type"
+    },
+    "step2": {
+      "title": "Comment s'appelle-t-il ?",
+      "subtitle": "C'est ce que les clients voient en haut du menu. Tu peux le changer à tout moment.",
+      "nameLabel": "Nom du restaurant",
+      "namePlaceholder": "Pizzeria Mario",
+      "label": "Nom"
+    },
+    "back": "Retour",
+    "continue": "Continuer",
+    "cuisines": {
+      "pizza": "Pizzeria",
+      "sushi": "Sushi / Japonais",
+      "asian": "Asiatique",
+      "burger": "Burger / Fast food",
+      "coffee": "Café",
+      "bar": "Bar / Pub",
+      "bakery": "Boulangerie / Pâtisserie",
+      "restaurant": "Restaurant"
+    },
+    "stepOf": "Étape {step} sur {total}",
+    "step3": {
+      "label": "Connexion"
+    }
+  },
+  "auth": {
+    "titleWithName": "Une dernière chose pour {name}",
+    "subtitle": "Laisse-nous juste ton e-mail pour qu'on sauvegarde ton menu — tu pourras le modifier quand tu veux.",
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "toi@restaurant.com",
+    "continueEmail": "Sauvegarder mon menu",
+    "or": "ou",
+    "continueGoogle": "Continuer avec Google",
+    "changeRestaurant": "Changer de restaurant",
+    "consent": {
+      "text": "En continuant tu acceptes nos",
+      "terms": "Conditions",
+      "and": "et",
+      "privacy": "Politique de confidentialité"
+    },
+    "verifyTitle": "Vérifie ta boîte",
+    "verifySubtitle": "Nous avons envoyé un code à 6 chiffres à {email}.",
+    "verifyCodeLabel": "Code de vérification",
+    "checkSpam": "Pas de mail ? Vérifie le dossier spam.",
+    "verifyButton": "Vérifier et ouvrir le tableau de bord",
+    "resendCode": "Renvoyer le code",
+    "resendSent": "Code envoyé",
+    "changeEmail": "Utiliser une autre adresse",
+    "errors": {
+      "emailInvalid": "Saisis une adresse e-mail valide.",
+      "sendFailed": "Impossible d'envoyer le code. Réessaie.",
+      "verifyFailed": "Impossible de vérifier le code. Réessaie.",
+      "codeExpired": "Ce code a expiré. Demandes-en un nouveau.",
+      "noCode": "Aucun code enregistré. Demandes-en un nouveau.",
+      "invalidCode": "Code incorrect. Réessaie.",
+      "tooManyAttempts": "Trop de tentatives. Attends et réessaie."
+    },
+    "signInTitle": "Content de te revoir",
+    "signInSubtitle": "Saisis ton e-mail et on t'envoie un code rapide pour te connecter.",
+    "goToDashboard": "Ouvrir le tableau"
   }
 }

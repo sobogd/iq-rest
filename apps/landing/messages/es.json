@@ -2038,5 +2038,71 @@
     "ownerBody": "Se ha realizado una nueva reserva en tu restaurante.",
     "ownerCta": "Ver reservas",
     "ownerSignature": "Un saludo,<br>Equipo IQ Rest"
+  },
+  "createFlow": {
+    "step1": {
+      "title": "¿Qué tipo de lugar es?",
+      "subtitle": "Elige un estilo y precargaremos un menú de muestra para que edites, no para que empieces desde cero.",
+      "label": "Tipo"
+    },
+    "step2": {
+      "title": "¿Cómo se llama?",
+      "subtitle": "Es lo que verán los comensales en la parte superior del menú. Puedes cambiarlo cuando quieras.",
+      "nameLabel": "Nombre del restaurante",
+      "namePlaceholder": "Pizzería Mario",
+      "label": "Nombre"
+    },
+    "back": "Atrás",
+    "continue": "Continuar",
+    "cuisines": {
+      "pizza": "Pizzería",
+      "sushi": "Sushi / Japonés",
+      "asian": "Asiática",
+      "burger": "Hamburguesería / Comida rápida",
+      "coffee": "Cafetería",
+      "bar": "Bar / Pub",
+      "bakery": "Panadería / Pastelería",
+      "restaurant": "Restaurante"
+    },
+    "stepOf": "Paso {step} de {total}",
+    "step3": {
+      "label": "Registro"
+    }
+  },
+  "auth": {
+    "titleWithName": "Un último paso para {name}",
+    "subtitle": "Solo déjanos tu email para guardar tu menú — podrás editarlo cuando quieras.",
+    "emailLabel": "Email",
+    "emailPlaceholder": "tu@restaurante.com",
+    "continueEmail": "Guardar mi menú",
+    "or": "o",
+    "continueGoogle": "Continuar con Google",
+    "changeRestaurant": "Cambiar restaurante",
+    "consent": {
+      "text": "Al continuar aceptas nuestros",
+      "terms": "Términos",
+      "and": "y",
+      "privacy": "Política de Privacidad"
+    },
+    "verifyTitle": "Revisa tu correo",
+    "verifySubtitle": "Enviamos un código de 6 dígitos a {email}.",
+    "verifyCodeLabel": "Código de verificación",
+    "checkSpam": "¿No lo ves? Revisa la carpeta de spam.",
+    "verifyButton": "Verificar y abrir el panel",
+    "resendCode": "Reenviar código",
+    "resendSent": "Código enviado",
+    "changeEmail": "Usar otro correo",
+    "errors": {
+      "emailInvalid": "Introduce un email válido.",
+      "sendFailed": "No pudimos enviar el código. Inténtalo de nuevo.",
+      "verifyFailed": "No pudimos verificar el código. Inténtalo de nuevo.",
+      "codeExpired": "Este código ha expirado. Solicita uno nuevo.",
+      "noCode": "No hay código registrado. Solicita uno nuevo.",
+      "invalidCode": "Código incorrecto. Inténtalo de nuevo.",
+      "tooManyAttempts": "Demasiados intentos. Espera y vuelve a intentarlo."
+    },
+    "signInTitle": "Bienvenido de nuevo",
+    "signInSubtitle": "Introduce tu email y te enviaremos un código rápido para entrar.",
+    "goToDashboard": "Ir al panel"
   }
 }

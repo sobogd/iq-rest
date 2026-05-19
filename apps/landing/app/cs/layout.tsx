@@ -1,6 +1,7 @@
 import type { Viewport } from "next";
 import "../globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { LandingI18nWrap } from "@/app/_landing/components/landing-i18n-wrap";
 import { RegionPromptModal } from "@/app/_landing/components/region-prompt-modal";
 
 export const viewport: Viewport = {
@@ -14,12 +15,12 @@ export const viewport: Viewport = {
   ],
 };
 
-export default function LandingLayout({ children }: { children: React.ReactNode }) {
+export default async function LandingLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="cs" dir="ltr" translate="no" suppressHydrationWarning>
       <body className="min-h-dvh bg-background text-foreground antialiased tracking-tight">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange storageKey="iq-rest-theme-v2">
-          {children}
+          <LandingI18nWrap locale="cs">{children}</LandingI18nWrap>
           <RegionPromptModal />
         </ThemeProvider>
       </body>

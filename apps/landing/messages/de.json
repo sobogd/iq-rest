@@ -2038,5 +2038,71 @@
     "ownerBody": "Eine neue Reservierung wurde in Ihrem Restaurant vorgenommen.",
     "ownerCta": "Reservierungen ansehen",
     "ownerSignature": "Mit freundlichen Grüßen,<br>IQ Rest Team"
+  },
+  "createFlow": {
+    "step1": {
+      "title": "Was für ein Lokal ist das?",
+      "subtitle": "Wähle einen Stil und wir laden eine Beispielkarte vor, damit du bearbeitest statt bei Null anfängst.",
+      "label": "Typ"
+    },
+    "step2": {
+      "title": "Wie heißt es?",
+      "subtitle": "Das sehen die Gäste oben in deiner Karte. Du kannst es jederzeit ändern.",
+      "nameLabel": "Name des Restaurants",
+      "namePlaceholder": "Marios Pizza",
+      "label": "Name"
+    },
+    "back": "Zurück",
+    "continue": "Weiter",
+    "cuisines": {
+      "pizza": "Pizzeria",
+      "sushi": "Sushi / Japanisch",
+      "asian": "Asiatisch",
+      "burger": "Burger / Fastfood",
+      "coffee": "Café",
+      "bar": "Bar / Pub",
+      "bakery": "Bäckerei / Konditorei",
+      "restaurant": "Restaurant"
+    },
+    "stepOf": "Schritt {step} von {total}",
+    "step3": {
+      "label": "Anmelden"
+    }
+  },
+  "auth": {
+    "titleWithName": "Noch eine Sache für {name}",
+    "subtitle": "Lass uns nur deine E-Mail, damit wir dein Menü speichern — du kannst es jederzeit bearbeiten.",
+    "emailLabel": "E-Mail",
+    "emailPlaceholder": "du@restaurant.com",
+    "continueEmail": "Mein Menü speichern",
+    "or": "oder",
+    "continueGoogle": "Mit Google fortfahren",
+    "changeRestaurant": "Restaurant ändern",
+    "consent": {
+      "text": "Mit Fortfahren akzeptierst du unsere",
+      "terms": "Bedingungen",
+      "and": "und",
+      "privacy": "Datenschutzerklärung"
+    },
+    "verifyTitle": "Schau in dein Postfach",
+    "verifySubtitle": "Wir haben einen 6-stelligen Code an {email} geschickt.",
+    "verifyCodeLabel": "Bestätigungscode",
+    "checkSpam": "Nicht da? Schau im Spam-Ordner nach.",
+    "verifyButton": "Bestätigen und Dashboard öffnen",
+    "resendCode": "Code erneut senden",
+    "resendSent": "Code gesendet",
+    "changeEmail": "Andere E-Mail verwenden",
+    "errors": {
+      "emailInvalid": "Bitte gib eine gültige E-Mail-Adresse ein.",
+      "sendFailed": "Code konnte nicht gesendet werden. Versuche es erneut.",
+      "verifyFailed": "Code konnte nicht verifiziert werden. Versuche es erneut.",
+      "codeExpired": "Dieser Code ist abgelaufen. Fordere einen neuen an.",
+      "noCode": "Kein Code hinterlegt. Fordere einen neuen an.",
+      "invalidCode": "Falscher Code. Versuche es erneut.",
+      "tooManyAttempts": "Zu viele Versuche. Warte und versuche es später."
+    },
+    "signInTitle": "Willkommen zurück",
+    "signInSubtitle": "Gib deine E-Mail ein, wir schicken dir einen kurzen Code zum Anmelden.",
+    "goToDashboard": "Zum Dashboard"
   }
 }

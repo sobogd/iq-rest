@@ -1,5 +1,6 @@
-import { createUrl } from "@/lib/dashboard-url";
-import { LinkForward } from "./link-forward";
+"use client";
+
+import { usePrimaryCta } from "./onboarding/use-primary-cta";
 import type { LandingTexts } from "../types";
 
 interface ScanSectionProps {
@@ -7,8 +8,8 @@ interface ScanSectionProps {
   locale: string;
 }
 
-export function ScanSectionLp({ texts, locale }: ScanSectionProps) {
-  const target = `${createUrl(locale)}&from=landing`;
+export function ScanSectionLp({ texts }: ScanSectionProps) {
+  const cta = usePrimaryCta(texts.cta);
   return (
     <section
       id="scan"
@@ -28,13 +29,13 @@ export function ScanSectionLp({ texts, locale }: ScanSectionProps) {
           </p>
         </div>
         <div className="shrink-0 flex justify-center lg:justify-end">
-          <LinkForward
-            href={target}
-            trackEvent="land_scan_cta_click"
+          <button
+            type="button"
+            onClick={() => cta.onClick("land_scan_cta_click")}
             className="inline-flex items-center justify-center min-h-11 py-2 px-6 text-sm font-semibold text-white bg-gradient-to-br from-[hsl(9,100%,58%)] to-[hsl(35,95%,55%)] rounded-lg hover:opacity-90 active:scale-[0.99] transition-all text-center leading-tight whitespace-nowrap"
           >
-            {texts.cta}
-          </LinkForward>
+            {cta.label}
+          </button>
         </div>
       </div>
     </section>

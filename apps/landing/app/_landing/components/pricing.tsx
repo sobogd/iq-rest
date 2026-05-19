@@ -1,13 +1,16 @@
-import { createUrl } from "@/lib/dashboard-url";
+"use client";
+
 import { pricing } from "@/lib/pricing";
-import { LinkForward } from "./link-forward";
+import { usePrimaryCta } from "./onboarding/use-primary-cta";
 import type { LandingTexts } from "../types";
 
 interface LandingPricingProps {
   texts: LandingTexts["pricing"];
   ctaText: string;
-  microcopy: string;
-  locale: string;
+  /** Kept for backwards compatibility; not rendered. */
+  microcopy?: string;
+  /** Kept for backwards compatibility; modal handles locale via NextIntl. */
+  locale?: string;
 }
 
 function formatEur(amount: number): string {
@@ -31,10 +34,10 @@ function PriceDisplay({ amount, perMonth }: { amount: number; perMonth: string }
   );
 }
 
-export function LandingPricing({ texts, ctaText, microcopy, locale }: LandingPricingProps) {
+export function LandingPricing({ texts, ctaText }: LandingPricingProps) {
   const plan = pricing.EUR.basic;
   const savings = formatEur(plan.monthly * 12 - plan.yearlyTotal);
-  const trialHref = `${createUrl(locale)}&from=landing`;
+  const cta = usePrimaryCta(ctaText);
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-16 items-center">
@@ -50,13 +53,13 @@ export function LandingPricing({ texts, ctaText, microcopy, locale }: LandingPri
           </p>
 
           <div className="hidden lg:flex flex-col items-start">
-            <LinkForward
-              href={trialHref}
-              trackEvent="land_pricing_cta_click_desktop"
+            <button
+              type="button"
+              onClick={() => cta.onClick("land_pricing_cta_click_desktop")}
               className="inline-flex w-full max-w-[14rem] items-center justify-center min-h-11 py-2 px-6 text-sm font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 active:scale-[0.99] transition-all text-center leading-tight"
             >
-              {ctaText}
-            </LinkForward>
+              {cta.label}
+            </button>
           </div>
         </div>
 
@@ -86,13 +89,13 @@ export function LandingPricing({ texts, ctaText, microcopy, locale }: LandingPri
         </div>
 
       <div className="flex lg:hidden flex-col items-center mt-4">
-        <LinkForward
-          href={trialHref}
-          trackEvent="land_pricing_cta_click_mobile"
+        <button
+          type="button"
+          onClick={() => cta.onClick("land_pricing_cta_click_mobile")}
           className="inline-flex w-full max-w-[14rem] items-center justify-center min-h-11 py-2 px-6 text-sm font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 active:scale-[0.99] transition-all text-center leading-tight"
         >
-          {ctaText}
-        </LinkForward>
+          {cta.label}
+        </button>
       </div>
     </div>
   );
