@@ -7,13 +7,22 @@ import { dashboardApi, dashboardUrl } from "@/lib/dashboard-url";
 import { analytics } from "@/lib/analytics";
 import type { CuisineKey } from "./cuisine";
 
+type GoogleCodeClient = {
+  requestCode: () => void;
+};
+type GoogleCodeResponse = { code?: string; error?: string };
+
 declare global {
   interface Window {
     google?: {
       accounts: {
-        id: {
-          initialize: (config: Record<string, unknown>) => void;
-          renderButton: (element: HTMLElement, config: Record<string, unknown>) => void;
+        oauth2: {
+          initCodeClient: (config: {
+            client_id: string;
+            scope: string;
+            ux_mode: "popup" | "redirect";
+            callback: (response: GoogleCodeResponse) => void;
+          }) => GoogleCodeClient;
         };
       };
     };
@@ -67,7 +76,7 @@ export function AuthStep({
   const [cooldown, setCooldown] = useState(0);
   const [resendStatus, setResendStatus] = useState<"idle" | "loading" | "sent">("idle");
   const [googleReady, setGoogleReady] = useState(false);
-  const googleHiddenRef = useRef<HTMLDivElement>(null);
+  const codeClientRef = useRef<GoogleCodeClient | null>(null);
 
   useEffect(() => {
     if (cooldown <= 0) return;
@@ -75,8 +84,11 @@ export function AuthStep({
     return () => clearTimeout(timer);
   }, [cooldown]);
 
-  const handleGoogleResponse = useCallback(
-    async (response: { credential: string }) => {
+  // Submit the OAuth authorization code to the backend, which exchanges it
+  // for an id_token server-side (using the client secret) before issuing
+  // our session.
+  const submitGoogleCode = useCallback(
+    async (code: string) => {
       setStatus("loading");
       setErrorMessage("");
       try {
@@ -84,7 +96,7 @@ export function AuthStep({
           credentials: "include",
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ credential: response.credential, locale, signupContext: signupContext ?? undefined }),
+          body: JSON.stringify({ code, locale, signupContext: signupContext ?? undefined }),
         });
         const data = await res.json();
         if (res.ok) {
@@ -102,48 +114,46 @@ export function AuthStep({
     [locale, t, signupContext],
   );
 
+  // Lazy-load the GIS script + init a code-only OAuth client. Using
+  // initCodeClient (not renderButton) means we render our own button, so
+  // Google can't inject the "Continue as <name>" personalised label.
   useEffect(() => {
     if (!GOOGLE_CLIENT_ID) return;
-    const isDark =
-      typeof document !== "undefined" &&
-      document.documentElement.classList.contains("dark");
-    const initGoogle = () => {
-      if (!window.google || !googleHiddenRef.current) return;
-      window.google.accounts.id.initialize({
+    const initClient = () => {
+      if (!window.google?.accounts?.oauth2) return;
+      codeClientRef.current = window.google.accounts.oauth2.initCodeClient({
         client_id: GOOGLE_CLIENT_ID,
-        callback: handleGoogleResponse,
+        scope: "openid email profile",
         ux_mode: "popup",
-        auto_select: false,
-      });
-      window.google.accounts.id.renderButton(googleHiddenRef.current, {
-        type: "standard",
-        shape: "rectangular",
-        // Google only offers outline (white) / filled_blue / filled_black.
-        // Match the landing's current theme so the button doesn't look like a
-        // dropped-in foreign element.
-        theme: isDark ? "filled_black" : "outline",
-        size: "large",
-        width: 320,
-        text: "continue_with",
-        logo_alignment: "left",
+        callback: (resp) => {
+          if (resp.code) submitGoogleCode(resp.code);
+          else if (resp.error) {
+            analytics.track("land_onb_google_cancel");
+          }
+        },
       });
       setGoogleReady(true);
     };
 
-    if (window.google) {
-      initGoogle();
+    if (window.google?.accounts?.oauth2) {
+      initClient();
       return;
     }
     const script = document.createElement("script");
     script.src = "https://accounts.google.com/gsi/client";
     script.async = true;
     script.defer = true;
-    script.onload = initGoogle;
+    script.onload = initClient;
     document.head.appendChild(script);
     return () => {
       if (script.parentNode) script.parentNode.removeChild(script);
     };
-  }, [handleGoogleResponse]);
+  }, [submitGoogleCode]);
+
+  const handleGoogleClick = () => {
+    analytics.track("land_onb_google_click");
+    codeClientRef.current?.requestCode();
+  };
 
   const handleContinue = async () => {
     analytics.track("land_onb_email_submit");
@@ -321,19 +331,15 @@ export function AuthStep({
         <div className="flex-1 h-px bg-border" />
       </div>
 
-      <div
-        data-iframe-host
-        className="relative h-12 flex justify-center overflow-hidden"
-        onPointerDown={() => analytics.track("land_onb_google_click")}
+      <button
+        type="button"
+        disabled={!googleReady || status === "loading"}
+        onClick={handleGoogleClick}
+        className="w-full h-12 text-base font-medium text-foreground bg-background border border-border rounded-xl hover:border-foreground active:scale-[0.99] transition-all flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {!googleReady && (
-          <div className="absolute inset-0 w-full h-12 rounded-xl bg-border/50 animate-pulse" />
-        )}
-        <div
-          ref={googleHiddenRef}
-          className={`[&_iframe]:!rounded-xl transition-opacity ${googleReady ? "opacity-100" : "opacity-0"}`}
-        />
-      </div>
+        <GoogleIcon />
+        {t("continueGoogle")}
+      </button>
 
       <p className="text-xs text-muted-foreground leading-snug text-center mt-5">
         {t("consent.text")}{" "}
@@ -482,3 +488,13 @@ function VerifyScreen({
   );
 }
 
+function GoogleIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true">
+      <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+      <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+      <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+      <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+    </svg>
+  );
+}
