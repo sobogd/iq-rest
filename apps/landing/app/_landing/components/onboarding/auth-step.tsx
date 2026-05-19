@@ -117,11 +117,9 @@ export function AuthStep({
         shape: "rectangular",
         theme: "outline",
         size: "large",
-        // Google enforces max 400px. CSS override below stretches the iframe
-        // to the container width regardless of this hint.
-        width: 400,
+        width: 320,
         text: "continue_with",
-        logo_alignment: "center",
+        logo_alignment: "left",
       });
       setGoogleReady(true);
     };
@@ -319,7 +317,7 @@ export function AuthStep({
 
       <div
         data-iframe-host
-        className="relative h-12"
+        className="relative h-12 flex justify-center overflow-hidden"
         onPointerDown={() => analytics.track("land_onb_google_click")}
       >
         {!googleReady && (
@@ -327,9 +325,7 @@ export function AuthStep({
         )}
         <div
           ref={googleHiddenRef}
-          className={`w-full [&_iframe]:!w-full [&_iframe]:!h-12 [&>div]:!w-full [&>div]:max-w-full transition-opacity ${
-            googleReady ? "opacity-100" : "opacity-0"
-          }`}
+          className={`transition-opacity ${googleReady ? "opacity-100" : "opacity-0"}`}
         />
       </div>
 
