@@ -325,7 +325,7 @@ export function AuthStep({
         )}
         <div
           ref={googleHiddenRef}
-          className={`transition-opacity ${googleReady ? "opacity-100" : "opacity-0"}`}
+          className={`[&_iframe]:!rounded-xl transition-opacity ${googleReady ? "opacity-100" : "opacity-0"}`}
         />
       </div>
 
