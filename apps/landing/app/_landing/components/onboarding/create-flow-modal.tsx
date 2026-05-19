@@ -95,8 +95,21 @@ export function CreateFlowModal({
         }}
       >
         <DialogContent
-          onPointerDownOutside={() => {
+          onPointerDownOutside={(e) => {
+            // Cross-origin iframes (Google sign-in popup) report clicks
+            // as "outside" because their events don't bubble. Don't close.
+            const target = e.target as HTMLElement | null;
+            if (target?.tagName === "IFRAME" || target?.closest("[data-iframe-host]")) {
+              e.preventDefault();
+              return;
+            }
             closeReasonRef.current = "backdrop";
+          }}
+          onInteractOutside={(e) => {
+            const target = e.target as HTMLElement | null;
+            if (target?.tagName === "IFRAME" || target?.closest("[data-iframe-host]")) {
+              e.preventDefault();
+            }
           }}
           onEscapeKeyDown={() => {
             closeReasonRef.current = "esc";
