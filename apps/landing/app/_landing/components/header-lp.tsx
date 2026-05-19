@@ -40,7 +40,7 @@ export function LandingHeaderLp({ texts, locale, useLocalAnchors = false }: Head
   const onHome = pathname === `/${locale}` || pathname === `/${locale}/`;
   const useLocal = useLocalAnchors || onHome;
   const anchor = (id: string) => (useLocal ? `#${id}` : `/${locale}#${id}`);
-  const homeHref = onHome ? "#top" : `/${locale}`;
+  const homeHref = `/${locale}`;
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur">
