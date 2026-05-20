@@ -52,7 +52,12 @@ export function CategoryDishes({ category, dietFilter = [] }: Props) {
   return (
     <div className="flex-1 overflow-auto min-h-0 hide-scrollbar bg-white">
       <div className="flex justify-center px-0 min-[440px]:px-5">
-        <div className="max-w-[440px] w-full pb-[20vh] space-y-5">
+        <div
+          className={
+            "max-w-[440px] w-full pb-[20vh] space-y-5 " +
+            (filteredDishes[0]?.imageUrl ? "" : "pt-5")
+          }
+        >
           {filteredDishes.map((item, ii) => {
             const qty = cart[item.id] || 0;
             const name = tField(item.name, item.translations, "name", lang);

@@ -168,7 +168,13 @@ export function MenuFeed({ dietFilter = [], categoryIds }: MenuFeedProps) {
           <div
             className={
               "max-w-[440px] w-full space-y-5 " +
-              (groups.length <= 1 ? "" : "pt-0 min-[440px]:pt-5") +
+              // Single-group view: only flush against header when the first
+              // dish has an image (so the image visually anchors the page).
+              // When the first dish has no image, restore top padding so the
+              // dish text isn't glued to the header bar.
+              (groups.length <= 1
+                ? (groups[0]?.items?.[0]?.imageUrl ? "" : "pt-5")
+                : "pt-0 min-[440px]:pt-5") +
               " " +
               (groups.length > 1 ? "pb-[60vh]" : "pb-5")
             }
