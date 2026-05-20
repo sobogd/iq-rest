@@ -38,85 +38,136 @@ const nextConfig: NextConfig = {
     ];
   },
 
-  // Legal pages live at /:locale/{privacy,terms,cookies} again — they were
-  // briefly merged into modals and got 301'd here. Keep just /languages and
-  // /changelog redirects below.
+  // Redirect strategy after the May-2026 4-feature rollout:
+  //   * Each locale now ships exactly four feature pages + pricing + home.
+  //     All other historical feature dirs (ai-translation, easy-menu,
+  //     reservations, etc.) are gone — generic 301s collapse them onto the
+  //     locale home so old Google snippets and inbound links don't 404.
+  //   * The previous SEO order-taking landings were renamed in every locale
+  //     (e.g. EN `restaurant-online-ordering-system` → `restaurant-ordering-
+  //     system`). One redirect per locale preserves the link equity.
+  //   * PPC landing pages (`/:locale/lp/*`) were deleted entirely — single
+  //     catch-all sends anything under /lp to the locale home.
   async redirects() {
     return [
+      // Legacy /languages and /changelog pages — fold to locale home.
       { source: "/:locale/languages", destination: "/:locale", permanent: true },
-      // Locale-less variants kept as 301s to the home for SEO continuity.
       { source: "/languages", destination: "/", permanent: true },
-      // Changelog removed — redirect listing and any entry to the locale home.
       { source: "/:locale/changelog", destination: "/:locale", permanent: true },
       { source: "/:locale/changelog/:entry*", destination: "/:locale", permanent: true },
       { source: "/changelog", destination: "/", permanent: true },
       { source: "/changelog/:entry*", destination: "/", permanent: true },
-      // Old KW landings /it/menu-digitale, /it/menu-qr-code and
-      // /it/creare-menu-digitale all 301 to /it — SEO weight consolidated on
-      // the locale home. The PPC variant lives at
-      // /it/lp/menu-digitale-per-ristoranti (noindex); the old
-      // /it/lp/menu-digitale slug 301s to the new phrase-keyword URL so
-      // existing Google Ads clicks keep landing.
+
+      // All PPC landings deleted — catch every /lp/<slug> and dump on home.
+      { source: "/:locale/lp/:slug*", destination: "/:locale", permanent: true },
+
+      // Generic feature dirs that existed across every locale and got
+      // deleted. One redirect each (uses :locale path-pattern, no need to
+      // duplicate per locale).
+      { source: "/:locale/ai-translation", destination: "/:locale", permanent: true },
+      { source: "/:locale/multilingual", destination: "/:locale", permanent: true },
+      { source: "/:locale/ai-images", destination: "/:locale", permanent: true },
+      { source: "/:locale/easy-menu", destination: "/:locale", permanent: true },
+      { source: "/:locale/custom-design", destination: "/:locale", permanent: true },
+      { source: "/:locale/color-scheme", destination: "/:locale", permanent: true },
+      { source: "/:locale/mobile-management", destination: "/:locale", permanent: true },
+      { source: "/:locale/personal-support", destination: "/:locale", permanent: true },
+      { source: "/:locale/instant-setup", destination: "/:locale", permanent: true },
+      { source: "/:locale/analytics", destination: "/:locale", permanent: true },
+      { source: "/:locale/reservations", destination: "/:locale", permanent: true },
+
+      // Legacy keyword landings collapsed onto the locale home for SEO
+      // equity (these slugs were indexed before the May-2026 rollout).
       { source: "/it/menu-digitale", destination: "/it", permanent: true },
       { source: "/it/menu-qr-code", destination: "/it", permanent: true },
       { source: "/it/creare-menu-digitale", destination: "/it", permanent: true },
-      { source: "/it/lp/menu-digitale", destination: "/it/lp/menu-digitale-per-ristoranti", permanent: true },
-      // PPC QR-cluster: keyword shifted from "menu qr" to "qr code menu / menu qr code".
-      // Old slug 301s so existing Google Ads clicks (and any indexed/cached URL) keep landing.
-      { source: "/it/lp/menu-qr-per-ristoranti", destination: "/it/lp/menu-qr-code-online-per-ristoranti", permanent: true },
-      { source: "/it/lp/menu-qr-code-per-ristoranti", destination: "/it/lp/menu-qr-code-online-per-ristoranti", permanent: true },
-      { source: "/es/lp/menu-qr-para-restaurantes", destination: "/es/lp/codigo-qr-carta-restaurante", permanent: true },
-      { source: "/es/lp/menu-qr-code-para-restaurantes", destination: "/es/lp/codigo-qr-carta-restaurante", permanent: true },
-      { source: "/ca/lp/menu-qr-per-restaurants", destination: "/ca/lp/codi-qr-carta-restaurant", permanent: true },
-      { source: "/ca/lp/menu-qr-code-per-restaurants", destination: "/ca/lp/codi-qr-carta-restaurant", permanent: true },
-      // Spanish KW landings: /es absorbed /es/carta-digital (SEO weight).
-      // /es/menu-digital and /es/qr-carta were dropped — collapse all three
-      // into /es. PPC lives at /es/lp/carta-digital-para-restaurante
-      // (noindex); the older /es/lp/carta-digital slug 301s to the new
-      // phrase-keyword URL so existing Google Ads clicks keep landing.
       { source: "/es/carta-digital", destination: "/es", permanent: true },
       { source: "/es/menu-digital", destination: "/es", permanent: true },
       { source: "/es/qr-carta", destination: "/es", permanent: true },
-      { source: "/es/lp/carta-digital", destination: "/es/lp/carta-digital-para-restaurante", permanent: true },
-      // English online-ordering feature page renamed to its target keyword:
-      // "restaurant online ordering system" (1000/mo, low competition).
-      // /en/online-orders 301s to the new slug; SEO weight (Bing + internal
-      // links from /en footer) carries over.
-      { source: "/en/online-orders", destination: "/en/restaurant-online-ordering-system", permanent: true },
-      { source: "/es/online-orders", destination: "/es/sistema-de-pedidos-para-restaurantes", permanent: true },
-      { source: "/it/online-orders", destination: "/it/tablet-per-ordinazioni-ristorante", permanent: true },
-      { source: "/fr/online-orders", destination: "/fr/logiciel-prise-de-commande-restaurant", permanent: true },
+
+      // /:locale/online-orders was the original shared order-taking URL;
+      // 301 each to the new per-locale slug.
+      { source: "/ru/online-orders", destination: "/ru/priem-zakazov-restoran", permanent: true },
+      { source: "/en/online-orders", destination: "/en/restaurant-ordering-system", permanent: true },
+      { source: "/es/online-orders", destination: "/es/sistema-pedidos-restaurante", permanent: true },
+      { source: "/it/online-orders", destination: "/it/sistema-ordinazioni-ristorante", permanent: true },
+      { source: "/fr/online-orders", destination: "/fr/systeme-commandes-restaurant", permanent: true },
       { source: "/de/online-orders", destination: "/de/restaurant-bestellsystem", permanent: true },
-      { source: "/pt/online-orders", destination: "/pt/sistema-de-pedidos-online-restaurante", permanent: true },
-      { source: "/ru/online-orders", destination: "/ru/sistema-onlayn-zakazov-restorana", permanent: true },
-      { source: "/pl/online-orders", destination: "/pl/system-zamowien-online-dla-restauracji", permanent: true },
-      { source: "/nl/online-orders", destination: "/nl/online-bestelsysteem-voor-restaurants", permanent: true },
-      { source: "/ja/online-orders", destination: "/ja/qr-order-system-restaurant", permanent: true },
-      { source: "/zh/online-orders", destination: "/zh/qr-ordering-system-restaurant", permanent: true },
-      { source: "/tr/online-orders", destination: "/tr/restoran-online-siparis-sistemi", permanent: true },
-      { source: "/ar/online-orders", destination: "/ar/nizam-talabat-online-matam", permanent: true },
-      { source: "/ko/online-orders", destination: "/ko/restaurant-online-order-system", permanent: true },
-      { source: "/uk/online-orders", destination: "/uk/onlayn-systema-zamovlen-restoran", permanent: true },
-      { source: "/bg/online-orders", destination: "/bg/sistema-za-onlayn-porachki-restorant", permanent: true },
-      { source: "/ca/online-orders", destination: "/ca/sistema-de-comandes-online-restaurant", permanent: true },
-      { source: "/cs/online-orders", destination: "/cs/online-objednavkovy-system-restaurace", permanent: true },
-      { source: "/da/online-orders", destination: "/da/online-bestillingssystem-restaurant", permanent: true },
-      { source: "/el/online-orders", destination: "/el/online-systima-paragelion-estiatorio", permanent: true },
-      { source: "/et/online-orders", destination: "/et/online-tellimissusteem-restoranile", permanent: true },
-      { source: "/fa/online-orders", destination: "/fa/sistem-sefaresh-online-restoran", permanent: true },
-      { source: "/fi/online-orders", destination: "/fi/online-tilausjarjestelma-ravintolalle", permanent: true },
-      { source: "/ga/online-orders", destination: "/ga/coras-orduithe-ar-line-bialann", permanent: true },
-      { source: "/hr/online-orders", destination: "/hr/online-sustav-narudzbi-restoran", permanent: true },
-      { source: "/hu/online-orders", destination: "/hu/online-rendelesi-rendszer-etterem", permanent: true },
-      { source: "/is/online-orders", destination: "/is/netpontunarkerfi-veitingastadar", permanent: true },
-      { source: "/lt/online-orders", destination: "/lt/internetine-uzsakymu-sistema-restoranui", permanent: true },
-      { source: "/lv/online-orders", destination: "/lv/tiessaistes-pasutijumu-sistema-restoranam", permanent: true },
-      { source: "/no/online-orders", destination: "/no/online-bestillingssystem-restaurant", permanent: true },
-      { source: "/ro/online-orders", destination: "/ro/sistem-comenzi-online-restaurant", permanent: true },
-      { source: "/sk/online-orders", destination: "/sk/online-objednavkovy-system-restauracia", permanent: true },
-      { source: "/sl/online-orders", destination: "/sl/spletni-sistem-narocanja-restavracija", permanent: true },
-      { source: "/sr/online-orders", destination: "/sr/online-sistem-porudzbina-restoran", permanent: true },
-      { source: "/sv/online-orders", destination: "/sv/online-bestallningssystem-restaurang", permanent: true },
+      { source: "/pt/online-orders", destination: "/pt/sistema-de-pedidos-restaurante", permanent: true },
+      { source: "/nl/online-orders", destination: "/nl/bestelsysteem-restaurant", permanent: true },
+      { source: "/pl/online-orders", destination: "/pl/system-zamowien-restauracja", permanent: true },
+      { source: "/tr/online-orders", destination: "/tr/restoran-siparis-sistemi", permanent: true },
+      { source: "/uk/online-orders", destination: "/uk/pryjom-zamovlen-restoran", permanent: true },
+      { source: "/ja/online-orders", destination: "/ja/chumon-shisutemu-resutoran", permanent: true },
+      { source: "/ko/online-orders", destination: "/ko/juneun-shiseutem-resutorang", permanent: true },
+      { source: "/zh/online-orders", destination: "/zh/dian-can-xi-tong-can-ting", permanent: true },
+      { source: "/ar/online-orders", destination: "/ar/nizam-talabat-matam", permanent: true },
+      { source: "/fa/online-orders", destination: "/fa/sistem-sefaresh-restoran", permanent: true },
+      { source: "/cs/online-orders", destination: "/cs/objednavkovy-system-restaurace", permanent: true },
+      { source: "/sk/online-orders", destination: "/sk/objednavkovy-system-restauracia", permanent: true },
+      { source: "/hu/online-orders", destination: "/hu/rendelesi-rendszer-etterem", permanent: true },
+      { source: "/ro/online-orders", destination: "/ro/sistem-comenzi-restaurant", permanent: true },
+      { source: "/el/online-orders", destination: "/el/systima-paragelion-estiatorio", permanent: true },
+      { source: "/bg/online-orders", destination: "/bg/sistema-porachki-restorant", permanent: true },
+      { source: "/hr/online-orders", destination: "/hr/sustav-narudzbi-restoran", permanent: true },
+      { source: "/sr/online-orders", destination: "/sr/sistem-porudzbina-restoran", permanent: true },
+      { source: "/sl/online-orders", destination: "/sl/sistem-narocanja-restavracija", permanent: true },
+      { source: "/ca/online-orders", destination: "/ca/sistema-comandes-restaurant", permanent: true },
+      { source: "/da/online-orders", destination: "/da/bestillingssystem-restaurant", permanent: true },
+      { source: "/no/online-orders", destination: "/no/bestillingssystem-restaurant", permanent: true },
+      { source: "/sv/online-orders", destination: "/sv/bestallningssystem-restaurang", permanent: true },
+      { source: "/fi/online-orders", destination: "/fi/tilausjarjestelma-ravintola", permanent: true },
+      { source: "/et/online-orders", destination: "/et/tellimissusteem-restoran", permanent: true },
+      { source: "/lt/online-orders", destination: "/lt/uzsakymu-sistema-restoranas", permanent: true },
+      { source: "/lv/online-orders", destination: "/lv/pasutijumu-sistema-restorans", permanent: true },
+      { source: "/ga/online-orders", destination: "/ga/coras-orduithe-bialann", permanent: true },
+      { source: "/is/online-orders", destination: "/is/pontunarkerfi-veitingastaur", permanent: true },
+
+      // Old per-locale SEO order-taking slugs renamed in the May-2026
+      // rollout — 301 to the new slug to preserve link equity.
+      { source: "/ru/sistema-onlayn-zakazov-restorana", destination: "/ru/priem-zakazov-restoran", permanent: true },
+      { source: "/en/restaurant-online-ordering-system", destination: "/en/restaurant-ordering-system", permanent: true },
+      { source: "/es/sistema-de-pedidos-para-restaurantes", destination: "/es/sistema-pedidos-restaurante", permanent: true },
+      { source: "/it/tablet-per-ordinazioni-ristorante", destination: "/it/sistema-ordinazioni-ristorante", permanent: true },
+      { source: "/fr/logiciel-prise-de-commande-restaurant", destination: "/fr/systeme-commandes-restaurant", permanent: true },
+      { source: "/pt/sistema-de-pedidos-online-restaurante", destination: "/pt/sistema-de-pedidos-restaurante", permanent: true },
+      { source: "/nl/online-bestelsysteem-voor-restaurants", destination: "/nl/bestelsysteem-restaurant", permanent: true },
+      { source: "/pl/system-zamowien-online-dla-restauracji", destination: "/pl/system-zamowien-restauracja", permanent: true },
+      { source: "/tr/restoran-online-siparis-sistemi", destination: "/tr/restoran-siparis-sistemi", permanent: true },
+      { source: "/uk/onlayn-systema-zamovlen-restoran", destination: "/uk/pryjom-zamovlen-restoran", permanent: true },
+      { source: "/ja/qr-order-system-restaurant", destination: "/ja/chumon-shisutemu-resutoran", permanent: true },
+      { source: "/ko/restaurant-online-order-system", destination: "/ko/juneun-shiseutem-resutorang", permanent: true },
+      { source: "/zh/qr-ordering-system-restaurant", destination: "/zh/dian-can-xi-tong-can-ting", permanent: true },
+      { source: "/ar/nizam-talabat-online-matam", destination: "/ar/nizam-talabat-matam", permanent: true },
+      { source: "/fa/sistem-sefaresh-online-restoran", destination: "/fa/sistem-sefaresh-restoran", permanent: true },
+      { source: "/cs/online-objednavkovy-system-restaurace", destination: "/cs/objednavkovy-system-restaurace", permanent: true },
+      { source: "/sk/online-objednavkovy-system-restauracia", destination: "/sk/objednavkovy-system-restauracia", permanent: true },
+      { source: "/hu/online-rendelesi-rendszer-etterem", destination: "/hu/rendelesi-rendszer-etterem", permanent: true },
+      { source: "/ro/sistem-comenzi-online-restaurant", destination: "/ro/sistem-comenzi-restaurant", permanent: true },
+      { source: "/el/online-systima-paragelion-estiatorio", destination: "/el/systima-paragelion-estiatorio", permanent: true },
+      { source: "/bg/sistema-za-onlayn-porachki-restorant", destination: "/bg/sistema-porachki-restorant", permanent: true },
+      { source: "/hr/online-sustav-narudzbi-restoran", destination: "/hr/sustav-narudzbi-restoran", permanent: true },
+      { source: "/sr/online-sistem-porudzbina-restoran", destination: "/sr/sistem-porudzbina-restoran", permanent: true },
+      { source: "/sl/spletni-sistem-narocanja-restavracija", destination: "/sl/sistem-narocanja-restavracija", permanent: true },
+      { source: "/ca/sistema-de-comandes-online-restaurant", destination: "/ca/sistema-comandes-restaurant", permanent: true },
+      { source: "/da/online-bestillingssystem-restaurant", destination: "/da/bestillingssystem-restaurant", permanent: true },
+      { source: "/no/online-bestillingssystem-restaurant", destination: "/no/bestillingssystem-restaurant", permanent: true },
+      { source: "/sv/online-bestallningssystem-restaurang", destination: "/sv/bestallningssystem-restaurang", permanent: true },
+      { source: "/fi/online-tilausjarjestelma-ravintolalle", destination: "/fi/tilausjarjestelma-ravintola", permanent: true },
+      { source: "/et/online-tellimissusteem-restoranile", destination: "/et/tellimissusteem-restoran", permanent: true },
+      { source: "/lt/internetine-uzsakymu-sistema-restoranui", destination: "/lt/uzsakymu-sistema-restoranas", permanent: true },
+      { source: "/lv/tiessaistes-pasutijumu-sistema-restoranam", destination: "/lv/pasutijumu-sistema-restorans", permanent: true },
+      { source: "/ga/coras-orduithe-ar-line-bialann", destination: "/ga/coras-orduithe-bialann", permanent: true },
+      { source: "/is/netpontunarkerfi-veitingastadar", destination: "/is/pontunarkerfi-veitingastaur", permanent: true },
+
+      // RU-specific: previous prototype slugs from the first rollout were
+      // dropped when the locale narrowed to 4 features. Send them home so
+      // any indexed/cached URL doesn't 404.
+      { source: "/ru/qr-menyu", destination: "/ru", permanent: true },
+      { source: "/ru/ai-perevod-menyu", destination: "/ru", permanent: true },
+      { source: "/ru/ai-generatsiya-foto-blyud", destination: "/ru", permanent: true },
+      { source: "/ru/upravlenie-s-telefona", destination: "/ru", permanent: true },
+
       // Public menu lives on <slug>.iq-rest.com now. Legacy short links and
       // locale-prefixed /m/<slug> URLs (printed QR codes, old crawl) 301 to
       // the subdomain. Locale routing happens on the public-menu service.

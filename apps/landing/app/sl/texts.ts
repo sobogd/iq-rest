@@ -1,95 +1,169 @@
-import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { CalendarCheck, ChefHat, Receipt, Monitor } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
-  htmlLang: "sl", htmlDir: "ltr",
+  htmlLang: "sl",
+  htmlDir: "ltr",
+
   meta: {
-    title: "QR Jedilnik za Restavracije — Direktna Naročila, Brez Provizije | IQ Rest",
-    description: "Konec papirnatih jedilnikov in provizij dostavnih aplikacij. QR jedilnik, direktna naročila, rezervacije in večjezična stran. 14 dni brezplačno, brez kartice.",
-    canonical: "https://iq-rest.com/sl", ogLocale: "sl_SI",
-    ogTitle: "QR Jedilnik za Restavracije — Direktna Naročila, Brez Provizije",
-    ogDescription: "QR jedilnik, direktna naročila, rezervacije in AI prevod. Pripravljeno v 5 minutah. 14 dni brezplačno — brez kartice.",
+    title: "QR jedilnik za restavracije — Neposredna naročila brez provizije | IQ Rest",
+    description:
+      "Vse-v-enem platforma za restavracije: digitalni jedilnik, QR naročila, rezervacija miz in kuhinjski zaslon. Zagon v 5 minutah. 14 dni brezplačno, brez kartice.",
+    canonical: "https://iq-rest.com/sl",
+    ogLocale: "sl_SI",
+    ogTitle: "QR jedilnik za restavracije — Neposredna naročila brez provizije",
+    ogDescription:
+      "Digitalni jedilnik, QR naročila, rezervacija miz in AI prevod. Zagon v 5 minutah. 14 dni brezplačno.",
   },
-  ctaText: "Poskusi brezplačno",
-  demoText: "Poglej demo", microcopy: "14 dni brezplačno · Brez kartice · Prekliči kadar koli",
-  header: { navFeatures: "Funkcije", navHow: "Kako deluje", navPricing: "Cene", navFaq: "FAQ", signIn: "Prijava", cta: "Začni" },
+
+  ctaText: "Preizkusite brezplačno",
+  demoText: "Oglejte si demo",
+  microcopy: "14 dni brezplačno · Brez kartice · Prekličete kadar koli",
+
+  header: {
+    navFeatures: "Funkcije",
+    navHow: "Kako deluje",
+    navPricing: "Cene",
+    navFaq: "Pogosta vprašanja",
+    signIn: "Prijava",
+    cta: "Začnite",
+  },
+
   hero: {
     verticals: ["Restavracije", "Kavarne", "Bari", "Hoteli", "Picerije"],
-    headline: "Digitalni jedilnik za restavracije. Pripravljen v 5 minutah.",
-    sub: "Digitalni jedilnik za vašo restavracijo v 5 minutah. Vse vključeno: mobilni urejevalnik brez kode, AI skeniranje jedilnika, QR kode za mize in neposredna naročila brez provizij.",
-    dynamicHeadlines: ["0% provizija.", "35 jezikov z UI.", "Spletna naročila.", "Rezervacije 24/7.", "Premium dizajn."],
-    painBullets: ["0% provizija: Vsa naročila gredo neposredno vam.", "AI prevod: 35 jezikov za višjo porabo turistov.", "Rezervacije 24/7: Polna zasedenost brez odvečnih klicev.", "Prilagodljive cene: Posodobite meni v nekaj sekundah."],
-    rating: "Več kot 500 restavracij v 30+ državah",
+    headline: "Digitalni jedilnik za restavracijo. Na spletu v 5 minutah.",
+    sub: "Digitalni jedilnik za vašo restavracijo v 5 minutah. Vse vključeno: urejevalnik brez kode, AI prepoznavanje natisnjenega jedilnika, QR kode za mize in neposredna naročila brez provizije.",
+    dynamicHeadlines: ["0 % provizije.", "35 AI jezikov.", "Spletna naročila.", "Rezervacije 24/7.", "Premium oblika."],
+    painBullets: [
+      "0 % provizije: vsako naročilo gre neposredno v vašo restavracijo.",
+      "AI prevod v 35 jezikov — turisti razumejo jedilnik in naročajo več.",
+      "Rezervacija 24/7: gostje sami rezervirajo mize, brez klicev v konicah.",
+      "Prilagodljive cene: spremembe jedilnika so na spletu v nekaj sekundah.",
+    ],
+    rating: "Več kot 500 restavracij v več kot 30 državah",
   },
+
   features: {
-    heading: "Vse kar potrebuješ.", headingAccent: "Nič odvečnega.",
-    sub: "Narejeno za restavracije. Uporabljeno za mizo.",
+    heading: "Vse, kar potrebujete.",
+    headingAccent: "Nič odvečnega.",
+    sub: "Zgrajeno za restavracije. Uporablja se vsak dan pri mizi, v kuhinji in v dvorani.",
     items: [
-      
-      { Icon: QrCode, title: "Naročanje z mize", desc: "Naročila takoj prispejo v WhatsApp ali nadzorno ploščo s številko mize. Hitrejša postrežba.", tag: "Neposredna naročila", href: "/sl/spletni-sistem-narocanja-restavracija" },
-      { Icon: Languages, title: "AI prevajalnik (35 jezikov)", desc: "Naš AI razume gastronomijo. Turisti naročijo 20 % več, ko razumejo sestavine jedi.", tag: "Prevod AI" },
-      { Icon: CalendarCheck, title: "Rezervacija miz", desc: "Sistem sam sprejema rezervacije, ko ste v kuhinji. Nobena stranka ne bo izgubljena.", tag: "Rezervacije" },
-      { Icon: Palette, title: "Modern dizajn", desc: "Video ozadja in privlačne fotografije. Vaš meni izgleda prestižno in vzbuja apetit.", tag: "Lasten dizajn" },
-      { Icon: Smartphone, title: "Hitri urejevalnik", desc: "Upravljajte stop-listo in cene neposredno s telefona. Spremembe so gostom vidne takoj.", tag: "Urejevalnik menija" },
-      { Icon: ChefHat, title: "Kuhinjski zaslon", desc: "Pozabite na papirnate lističe. Naročila iz dvorane gredo neposredno na kuharjev zaslon.", tag: "Kuhinjski zaslon" },
-    
+      { Icon: Monitor, title: "Digitalni jedilnik", desc: "Jedilnik v brskalniku s fotografijami, cenami, alergeni in opisi. Posodablja se v realnem času s telefona. Gostje vidijo jedilnik v svojem jeziku; restavracija prihrani pri tisku.", tag: "Digitalni jedilnik", href: "/sl/digitalni-jedilnik-restavracija" },
+      { Icon: Receipt, title: "Sprejemanje naročil: gost in natakar", desc: "QR koda na mizi za gosta ali natakar sprejme naročilo s telefona — oba gresta neposredno v kuhinjo ali na WhatsApp. Brez provizije, s številko mize na vsakem računu.", tag: "Naročila", href: "/sl/sistem-narocanja-restavracija" },
+      { Icon: CalendarCheck, title: "Rezervacija miz 24/7", desc: "Gostje sami rezervirajo mize prek spletne strani ali QR jedilnika, medtem ko ste zasedeni v dvorani. Koledar po mizi, samodejne potrditve in opomniki. Niti enega izgubljenega gosta.", tag: "Rezervacija", href: "/sl/rezervacija-miz" },
+      { Icon: ChefHat, title: "Kuhinjski zaslon (KDS)", desc: "Papirnati listki niso več potrebni. Naročila iz dvorane gredo neposredno na zaslon kuharja — stolpci „pripravlja se / pripravljeno / postreženo“, alergeni in opombe poudarjene z barvo. Na tablici ali telefonu.", tag: "KDS", href: "/sl/kuhinjski-zaslon" },
     ],
   },
+
   founder: {
-    eyebrow: "Naredil gostinec",
-    quoteStart: "Z ženo sva odprla kavarno in tedne iskala sistem, ki sprejema spletna naročila, rezervacije in zraven izgleda moderno. Vse, kar sva preizkusila, je bilo okorno, grdo ali pa je manjkala polovica funkcij —",
-    quoteAccent: "zato sva zgradila tisto, kar bi sama hotela imeti.",
+    eyebrow: "Zgradili gostinci",
+    quoteStart:
+      "Z ženo sva vodila svojo lastno kavarno in iz prve roke vemo, kako v resnici poteka dan v restavraciji — sprejemanje naročil, rezervacije, pretok dvorane in kuhinje. Želela sva eno orodje: sodobno, enostavno za zagon in jasno na prvi pogled —",
+    quoteAccent: "tako sva začela graditi platformo, ki jo zdaj razvijamo za druge gostince.",
     sign: "Bogdan Sokolov · ustanovitelj, nekdanji lastnik kavarne",
-    photoAlt: "Bogdan, ustanovitelj IQ Rest",
+    photoAlt: "Bogdan Sokolov, ustanovitelj IQ Rest",
   },
+
   how: {
-    heading: "V manj kot 5 minutah",
-    sub: "Štirje kratki koraki. Brez namestitev, brez tehnične nastavitve.",
+    heading: "Na spletu v 5 minutah",
+    sub: "Štirje kratki koraki. Brez namestitev, brez tehničnih nastavitev.",
     steps: [
-      { n: "1", t: "Tip in ime", d: "Izberi tip in vnesi ime." },
-      { n: "2", t: "Shranjevanje", d: "Email ali prijava prek Googla." },
-      { n: "3", t: "Meni", d: "Ustvari sam ali skeniraj papirnatega." },
-      { n: "4", t: "Pripravljeno", d: "Oglej si, deli in sprejemaj naročila." },
+      { n: "1", t: "Tip in ime", d: "Izberite vrsto lokala in vnesite ime." },
+      { n: "2", t: "Shrani", d: "Vnesite e-poštni naslov ali se prijavite z Googlom." },
+      { n: "3", t: "Jedilnik", d: "Dodajte izdelke ročno ali naložite natisnjen jedilnik za AI skeniranje." },
+      { n: "4", t: "Končano", d: "Delite povezavo ali QR kodo in začnite sprejemati naročila." },
     ],
   },
+
   pricing: {
     badge: "Brez provizije · Brez pogodb",
-    heading: "En načrt.", headingAccent: "Vse vključeno.",
-    sub: "QR jedilnik, naročila, AI prevod, spletna stran in rezervacije. Ena enostavna cena.",
-    monthlyLabel: "Mesečno", yearlyLabel: "Letno", saveBadge: "Prihrani 25%", perMonth: "mesečno",
-    billedAnnually: "Letno zaračunavanje {total}", youSave: "Prihraniš {amount}",
-    trust: { secure: "Varno plačilo s Stripe", noCommitment: "Brez obveznosti", quick: "Aktivno v minutah", restaurants: "500+ restavracij" },
+    heading: "En paket.",
+    headingAccent: "Vse vključeno.",
+    sub: "QR jedilnik, sprejemanje naročil, AI prevod, spletna stran restavracije in rezervacija. Ena pregledna mesečna naročnina.",
+    monthlyLabel: "Mesečno",
+    yearlyLabel: "Letno",
+    saveBadge: "Prihranite 25 %",
+    perMonth: "na mesec",
+    billedAnnually: "Letno zaračunavanje: {total}",
+    youSave: "Prihranite {amount}",
+    trust: { secure: "Varno plačilo prek Stripe", noCommitment: "Brez obveznosti", quick: "Aktivno v minutah", restaurants: "500+ restavracij" },
   },
+
   faq: {
-    eyebrow: "Vprašanja?", heading: "Pogosta", headingAccent: "vprašanja.",
-    sub: "Kaj gostinci sprašujejo pred registracijo. Ne vidiš svojega? Piši na WhatsApp — odgovarjajo pravi ljudje.",
-    whatsappCta: "Vprašaj na WhatsApp", whatsappPrefill: "Pozdravljeni, imam vprašanje o IQ Rest",
+    eyebrow: "Imate vprašanja?",
+    heading: "Pogosto zastavljena",
+    headingAccent: "vprašanja.",
+    sub: "Kaj gostinci vprašajo pred registracijo. Ne najdete svojega vprašanja? Pišite nam na WhatsApp — odgovarjajo pravi ljudje, ne bot.",
+    whatsappCta: "Vprašajte na WhatsApp",
+    whatsappPrefill: "Pozdravljeni, imam vprašanje glede IQ Rest",
     items: [
-      { q: "Kaj vključuje preizkusno obdobje in kaj potem?", a: "14 dni polnega dostopa, brez kartice. Po 14 dneh se račun pavzira, če ne dodaš plačilne metode — nikoli ne zaračunamo samodejno. Dodaj plačilo kasneje za reaktivacijo. Prekliči z enim klikom." },
-      { q: "Ali jemljete provizijo na naročila?", a: "Nič. Vsako naročilo iz tvojega QR jedilnika gre direktno tebi — brez našega deleža, brez Wolt / Glovo provizij. Ena fiksna mesečna cena, to je to." },
-      { q: "Ali gostje potrebujejo aplikacijo? Potrebujem tehnično znanje?", a: "Brez aplikacij za goste — skenirajo QR s kamero, jedilnik se odpre v brskalniku. Brez tehničnih veščin za tebe — ves panel deluje na mobilcu, dotakni se za dodajanje, povleci za preurejanje, to je vsa krivulja." },
-      { q: "Kako hitro spreminjam cene in dodajam jedi?", a: "Takoj. Spremeni ceno na telefonu, gostje vidijo v sekundah. Nova jed? Dotakni se, napiši, fotografija, končano — brez ponovnega tiskanja, brez čakanja na oblikovalca." },
-      { q: "Koliko jezikov podpirate?", a: "35 jezikov z vgrajenim AI prevodom. En dotik prevede ves jedilnik in AI razume kulinarski kontekst — imena in opisi zvenijo naravno v vsakem jeziku. Turisti naročijo več, ko res razumejo." },
+      { q: "Kaj vključuje preizkusno obdobje in kaj se zgodi po njem?", a: "Polni dostop do vseh funkcij 14 dni, brez kartice. Po 14 dneh se račun zaustavi, če ni dodanega načina plačila — nikoli ne zaračunamo samodejno. Plačilo lahko dodate pozneje in nadaljujete tam, kjer ste končali. Prekličete kadar koli z enim klikom." },
+      { q: "Ali pobirate provizijo od naročil?", a: "Ne. Vsako naročilo iz QR jedilnika gre neposredno v restavracijo — brez odstotkov z naše strani, brez provizij agregatorjev. Ena fiksna mesečna naročnina in nič drugega." },
+      { q: "Ali gostje potrebujejo aplikacijo, ali mi potrebujemo tehnične veščine?", a: "Gostje ne potrebujejo aplikacije — kamero telefona usmerijo v QR kodo in jedilnik se odpre v brskalniku. Tudi restavracije ne potrebujejo tehničnih veščin: skrbniška plošča deluje v vsakem sodobnem brskalniku na telefonu, tablici ali prenosniku. Vsako dejanje je s klikom in povleci-in-spusti, brez kode." },
+      { q: "Kako hitro se spreminjajo cene in pojavljajo nove jedi?", a: "Takoj. Spremenite ceno s telefona — gostje jo vidijo v nekaj sekundah. Nova jed traja nekaj dotikov: ime, cena, fotografija. Brez ponovnega tiskanja, brez čakanja na oblikovalca." },
+      { q: "Koliko jezikov je podprtih?", a: "35 jezikov z vgrajenim AI prevodom. En dotik in celoten jedilnik je preveden; AI razume kulinarični kontekst — imena in opisi zvenijo naravno v vsakem jeziku. Turisti naročajo z večjo gotovostjo, ko resnično razumejo jedilnik." },
     ],
   },
-  finalCta: { heading: "Pripravljeno v 5 minutah.", headingAccent: "Brezplačno 14 dni.", sub: "Brez kartice. Prekliči kadar koli. Pridruži se 500+ restavracijam že na IQ Rest." },
-  scan: {
-    heading: "Papirnati meni ali PDF?",
-    headingAccent: "UI ga digitalizira v 60 sekundah.",
-    sub: "Naloži — UI prepozna kategorije, jedi in cene.",
-    cta: "Skeniraj meni →",
+
+  finalCta: {
+    heading: "Na spletu v 5 minutah.",
+    headingAccent: "14 dni brezplačno.",
+    sub: "Brez kartice, prekličete kadar koli. Pridružite se 500+ restavracijam, ki že uporabljajo IQ Rest.",
   },
+
+  scan: {
+    heading: "Imate papirnati jedilnik ali PDF?",
+    headingAccent: "AI ga digitalizira v 60 sekundah.",
+    sub: "Naložite fotografijo ali dokument — AI samodejno prepozna kategorije, jedi in cene.",
+    cta: "Skeniraj jedilnik →",
+  },
+
+  pricingHero: {
+    chips: ["Brez provizije", "Brez pogodb", "14 dni brezplačno"],
+    heading: "Cene.",
+    headingAccent: "Brez skritih stroškov.",
+    sub: "Ena pregledna mesečna naročnina. Brez odstotka od naročil in brez provizij agregatorjev. Prekličete naročnino kadar koli.",
+    popularBadge: "Priljubljeno",
+    perMonthSuffix: "/mes.",
+    whenAnnualTemplate: "letno zaračunavanje · {total} € letno",
+    orMonthlyTemplate: "ali {price} €/mes.",
+    savingsTemplate: "prihranite {amount} € letno",
+    plans: {
+      basic: {
+        name: "Basic",
+        tagline: "Jedilnik, QR naročila in AI prevod. Na spletu v 5 minutah.",
+        features: [
+          "QR jedilnik za vsako mizo",
+          "Digitalni jedilnik s fotografijami in alergeni",
+          "AI prevod v 35 jezikov",
+          "Naročila iz jedilnika (izbirno)",
+          "AI generiranje fotografij jedi",
+          "Upravljanje s katerega koli telefona ali tablice",
+        ],
+      },
+      pro: {
+        name: "Pro",
+        tagline: "Popoln nadzor restavracije: kuhinjski zaslon in rezervacije.",
+        features: [
+          "Vse iz Basic",
+          "Kuhinjski zaslon (KDS)",
+          "Spletna rezervacija miz 24/7",
+          "Prednostna WhatsApp podpora",
+        ],
+      },
+    },
+  },
+
   footer: {
     featureLinks: [
-      { href: "/sl/spletni-sistem-narocanja-restavracija", label: "Spletni sistem naročanja" }, { href: "/sl/ai-translation", label: "AI prevod" },
-      { href: "/sl/reservations", label: "Rezervacije" }, { href: "/sl/mobile-management", label: "Mobilno upravljanje" },
-      { href: "/sl/easy-menu", label: "Urejevalnik jedilnika" }, { href: "/sl/custom-design", label: "Video in foto ozadja" },
-      { href: "/sl/color-scheme", label: "Barve znamke" }, { href: "/sl/multilingual", label: "Večjezična stran" },
-      { href: "/sl/ai-images", label: "AI optimizacija fotografij" }, { href: "/sl/analytics", label: "Analitika" },
-      { href: "/sl/instant-setup", label: "Takojšnja namestitev" }, { href: "/sl/personal-support", label: "Osebna podpora" },
+      { href: "/sl/digitalni-jedilnik-restavracija", label: "Digitalni jedilnik" },
+      { href: "/sl/sistem-narocanja-restavracija", label: "Naročila" },
+      { href: "/sl/rezervacija-miz", label: "Rezervacija" },
+      { href: "/sl/kuhinjski-zaslon", label: "Kuhinjski zaslon" },
     ],
     navLinks: [
-      { href: "#pricing", label: "Cene" }, { href: "#faq", label: "Vprašanja" },
+      { href: "/sl/cene", label: "Cene" },
+      { href: "#faq", label: "Pogosta vprašanja" },
       { href: "/sl/languages", label: "Spremeni jezik" },
     ],
     copyrightTemplate: "© {year} IQ Rest. Vse pravice pridržane.",

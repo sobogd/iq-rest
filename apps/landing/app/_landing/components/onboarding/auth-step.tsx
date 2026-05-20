@@ -60,7 +60,7 @@ export function AuthStep({
 
   const handleGoogleClick = () => {
     if (!GOOGLE_CLIENT_ID) return;
-    analytics.track("land_onb_google_click");
+    analytics.track("l_onb_google_click");
     const state = btoa(
       JSON.stringify({
         locale,
@@ -81,10 +81,10 @@ export function AuthStep({
   };
 
   const handleContinue = async () => {
-    analytics.track("land_onb_email_submit");
+    analytics.track("l_onb_email_submit");
     const trimmed = email.trim().toLowerCase();
     if (!isValidEmail(trimmed)) {
-      analytics.track("land_onb_email_invalid");
+      analytics.track("l_onb_email_invalid");
       setErrorMessage(t("errors.emailInvalid"));
       setStatus("error");
       return;
@@ -100,7 +100,7 @@ export function AuthStep({
       });
       const data = await res.json();
       if (res.ok) {
-        analytics.track("land_onb_otp_sent");
+        analytics.track("l_onb_otp_sent");
         setCode(Array(CODE_LENGTH).fill(""));
         setCooldown(RESEND_COOLDOWN);
         setStatus("idle");
@@ -116,7 +116,7 @@ export function AuthStep({
   };
 
   const handleVerify = async () => {
-    analytics.track("land_onb_verify_submit");
+    analytics.track("l_onb_verify_submit");
     const otp = code.join("");
     if (otp.length !== CODE_LENGTH) return;
     setStatus("loading");
@@ -130,7 +130,7 @@ export function AuthStep({
       });
       const data = await res.json();
       if (res.ok) {
-        analytics.track("land_onb_verify_success");
+        analytics.track("l_onb_verify_success");
         redirectAfterAuth(locale, !!data.legacyDashboard);
       } else {
         const key = ERROR_MAP[data.error];
@@ -146,7 +146,7 @@ export function AuthStep({
   };
 
   const handleResend = async () => {
-    analytics.track("land_onb_resend_click");
+    analytics.track("l_onb_resend_click");
     if (cooldown > 0 || resendStatus === "loading") return;
     setResendStatus("loading");
     setErrorMessage("");
@@ -175,7 +175,7 @@ export function AuthStep({
   };
 
   const handleChangeEmail = () => {
-    analytics.track("land_onb_change_email_click");
+    analytics.track("l_onb_change_email_click");
     setCode(Array(CODE_LENGTH).fill(""));
     setScreen("email");
     setStatus("idle");
@@ -235,7 +235,7 @@ export function AuthStep({
           placeholder={t("emailPlaceholder")}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          onFocus={() => analytics.track("land_onb_email_focus")}
+          onFocus={() => analytics.track("l_onb_email_focus")}
           disabled={status === "loading"}
           className="w-full h-12 px-4 text-base text-foreground bg-background border border-border rounded-xl placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors"
         />
@@ -272,7 +272,7 @@ export function AuthStep({
           href={`/${locale}/terms`}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => analytics.track("land_onb_open_terms")}
+          onClick={() => analytics.track("l_onb_open_terms")}
           className="text-foreground/80 hover:text-foreground underline underline-offset-2 transition-colors"
         >
           {t("consent.terms")}
@@ -282,7 +282,7 @@ export function AuthStep({
           href={`/${locale}/privacy`}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => analytics.track("land_onb_open_privacy")}
+          onClick={() => analytics.track("l_onb_open_privacy")}
           className="text-foreground/80 hover:text-foreground underline underline-offset-2 transition-colors"
         >
           {t("consent.privacy")}
@@ -367,7 +367,7 @@ function VerifyScreen({
         maxLength={CODE_LENGTH}
         value={joined}
         onChange={(e) => setFromString(e.target.value)}
-        onFocus={() => analytics.track("land_onb_otp_focus")}
+        onFocus={() => analytics.track("l_onb_otp_focus")}
         onKeyDown={(e) => {
           if (e.key === "Enter" && canVerify) onVerify();
         }}

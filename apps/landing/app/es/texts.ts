@@ -1,224 +1,169 @@
-import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { CalendarCheck, ChefHat, Receipt, Monitor } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
-// /es targets the broad-match keyword "carta digital para restaurante".
-// The PPC variant for Google Ads lives at
-// /es/lp/carta-digital-para-restaurante with the same content + simplified
-// footer (the older /es/lp/carta-digital 301s into it). /es/menu-digital,
-// /es/qr-carta and the old /es/carta-digital 301 here to consolidate SEO
-// weight.
 export const TEXTS: LandingTexts = {
   htmlLang: "es",
   htmlDir: "ltr",
 
   meta: {
-    title: "Carta Digital para Restaurantes — Crear en 5 Min | IQ Rest",
+    title: "Carta QR para restaurantes — Pedidos directos, sin comisiones | IQ Rest",
     description:
-      "Crear carta digital para restaurante en 5 minutos. Editor móvil, código QR para las mesas, pedidos directos sin comisiones, 35 idiomas. 14 días gratis, sin tarjeta.",
+      "Plataforma todo en uno para restaurantes: carta digital, pedidos QR, reservas de mesas y pantalla de cocina. Listo en 5 minutos. 14 días gratis, sin tarjeta.",
     canonical: "https://iq-rest.com/es",
     ogLocale: "es_ES",
-    ogTitle: "Carta Digital para Restaurantes — Crear en 5 Min",
+    ogTitle: "Carta QR para restaurantes — Pedidos directos, sin comisiones",
     ogDescription:
-      "Carta digital para tu restaurante: edita desde el móvil, código QR para las mesas, pedidos directos. Lista en 5 minutos.",
+      "Carta digital, pedidos QR, reservas y traducción con IA. Listo en 5 minutos. 14 días gratis.",
   },
 
-  ctaText: "Crear mi carta digital",
-  demoText: "Ver demo en vivo",
-  microcopy: "Desde 6,90€/mes · 14 días gratis · Cancela cuando quieras",
+  ctaText: "Probar gratis",
+  demoText: "Ver demo",
+  microcopy: "14 días gratis · Sin tarjeta · Cancelas cuando quieras",
 
   header: {
     navFeatures: "Funciones",
     navHow: "Cómo funciona",
     navPricing: "Precios",
     navFaq: "FAQ",
-    signIn: "Entrar",
+    signIn: "Iniciar sesión",
     cta: "Empezar",
   },
 
   hero: {
-    verticals: ["Restaurantes", "Tabernas", "Pizzerías", "Cafeterías", "Bares de tapas", "Asadores"],
-    headline: "Carta Digital para Restaurantes. Lista en 5 minutos.",
-    sub: "Carta digital para tu restaurante en 5 minutos. Todo incluido: editor móvil sin código, escaneo IA del menú, código QR para mesas y pedidos directos sin comisiones.",
-    dynamicHeadlines: [
-      "Carta digital en 5 minutos.",
-      "Editor desde el móvil.",
-      "Código QR para las mesas.",
-      "Pedidos directos.",
-      "35 idiomas con IA.",
-    ],
+    verticals: ["Restaurantes", "Cafeterías", "Bares", "Hoteles", "Pizzerías"],
+    headline: "Carta digital para restaurantes. Lista en 5 minutos.",
+    sub: "Carta digital para tu restaurante en 5 minutos. Todo incluido: editor sin código, escaneo de la carta con IA, códigos QR para las mesas y pedidos directos sin comisiones.",
+    dynamicHeadlines: ["0 % de comisión.", "35 idiomas con IA.", "Pedidos online.", "Reservas 24/7.", "Diseño premium."],
     painBullets: [
-      "Crear carta digital sin programadores: editor móvil con drag-and-drop.",
-      "Escanea tu carta en papel: la IA digitaliza platos, precios y categorías en 60 segundos.",
-      "Carta digital para restaurante con código QR único o uno por mesa.",
-      "Pedidos directos sin comisiones de delivery: cada euro entra en caja.",
+      "0 % de comisión: cada pedido llega directamente a tu restaurante.",
+      "Traducción con IA en 35 idiomas — los turistas entienden la carta y piden más.",
+      "Reservas 24/7: los comensales reservan ellos mismos, sin llamadas en horas punta.",
+      "Precios flexibles: los cambios de la carta se publican al instante.",
     ],
-    rating: "Más de 500 restaurantes en 30 países",
+    rating: "Más de 500 restaurantes en más de 30 países",
   },
 
   features: {
-    heading: "Todo lo necesario para",
-    headingAccent: "crear la carta digital.",
-    sub: "Una plataforma pensada para hosteleros, no para programadores.",
+    heading: "Todo lo que necesitas.",
+    headingAccent: "Nada de sobra.",
+    sub: "Creado para restaurantes. Se usa cada día en la mesa, en la cocina y en sala.",
     items: [
-      {
-        Icon: Smartphone,
-        title: "Crear carta digital desde el móvil",
-        desc: "Editor con drag-and-drop: añades platos con un toque, reordenas con arrastre, publicas con un swipe. Sin HTML, sin instalaciones.",
-        tag: "Editor móvil",
-      },
-      {
-        Icon: QrCode,
-        title: "Sistema de pedidos en la mesa",
-        desc: "El cliente escanea el QR de la mesa, monta el pedido y la comanda llega a tu tableta de cocina o al WhatsApp del local. Sin comisiones, con número de mesa.",
-        tag: "Pedidos QR",
-        href: "/es/sistema-de-pedidos-para-restaurantes",
-      },
-      {
-        Icon: Languages,
-        title: "Carta digital multilingüe",
-        desc: "Tu carta digital traducida a 35 idiomas con IA gastronómica. Los turistas leen los platos en su idioma y comprenden lo que piden.",
-        tag: "35 idiomas",
-      },
-      {
-        Icon: Palette,
-        title: "Diseño moderno",
-        desc: "Fondos de vídeo y fotos increíbles. Tu carta parece premium y despierta el apetito al momento.",
-        tag: "Diseño a medida",
-      },
-      {
-        Icon: CalendarCheck,
-        title: "Reserva de mesas",
-        desc: "El sistema acepta reservas mientras estás en la cocina. Ni un cliente perdido.",
-        tag: "Reservas",
-      },
-      {
-        Icon: ChefHat,
-        title: "Pantalla de cocina",
-        desc: "Olvida los tiquets de papel. Los pedidos de la sala van directo a la pantalla del chef.",
-        tag: "Pantalla de cocina",
-      },
+      { Icon: Monitor, title: "Carta digital", desc: "Carta en el navegador con fotos, precios, alérgenos y descripciones. Se actualiza en tiempo real desde el móvil. Los comensales ven la carta en su idioma; el restaurante ahorra en impresión.", tag: "Carta digital", href: "/es/menu-digital-restaurantes" },
+      { Icon: Receipt, title: "Pedidos: comensal y camarero", desc: "Código QR en la mesa para el comensal o el camarero toma la comanda desde el móvil — ambas van directas a la cocina o a WhatsApp. Sin comisiones y con el número de mesa en cada ticket.", tag: "Pedidos", href: "/es/sistema-pedidos-restaurante" },
+      { Icon: CalendarCheck, title: "Reservas de mesa 24/7", desc: "Los comensales reservan ellos mismos desde la web o la carta QR mientras tú estás en sala. Calendario por mesa, confirmaciones y recordatorios automáticos. Ni un solo cliente perdido.", tag: "Reservas", href: "/es/reservas-de-mesas" },
+      { Icon: ChefHat, title: "Pantalla de cocina (KDS)", desc: "Adiós a los tickets de papel. Los pedidos de sala llegan directos a la pantalla del chef — columnas «en cocción / listo / servido», alérgenos y notas resaltados. En tableta o móvil.", tag: "KDS", href: "/es/pantalla-de-cocina" },
     ],
   },
 
   founder: {
-    eyebrow: "Editor de carta digital creado por un hostelero",
+    eyebrow: "Creado por restauradores",
     quoteStart:
-      "Mi mujer y yo abrimos una cafetería y pasamos semanas buscando un sistema que aceptara pedidos online, reservas y que encima pareciera moderno. Todo lo que probamos era torpe, feo o le faltaba la mitad de las funciones —",
-    quoteAccent: "así que construimos el que nos hubiera gustado tener.",
-    sign: "Bogdan Sokolov · fundador, ex dueño de cafetería",
-    photoAlt: "Bogdan, fundador de IQ Rest",
+      "Mi mujer y yo llevamos nuestra propia cafetería y conocemos de primera mano cómo es el día a día de un restaurante por dentro: pedidos, reservas, sala y cocina. Buscábamos una única herramienta — moderna, sencilla de poner en marcha y clara a primera vista —",
+    quoteAccent: "así nació la idea de la plataforma que desarrollamos para otros restauradores.",
+    sign: "Bogdan Sokolov · fundador, antes propietario de una cafetería",
+    photoAlt: "Bogdan Sokolov, fundador de IQ Rest",
   },
 
   how: {
-    heading: "Crear tu carta digital",
-    headingAccent: "en 4 pasos",
-    sub: "Cuatro pasos cortos. Sin instalaciones, sin configuraciones técnicas.",
+    heading: "Listo en 5 minutos",
+    sub: "Cuatro pasos cortos. Sin instalaciones ni configuración técnica.",
     steps: [
-      { n: "1", t: "Tipo y nombre", d: "Elige el tipo y escribe el nombre." },
-      { n: "2", t: "Guardar", d: "Introduce tu email o entra con Google." },
-      { n: "3", t: "Carta", d: "Créala tú o escanea una en papel." },
-      { n: "4", t: "Listo", d: "Mira, comparte y empieza a recibir pedidos." },
+      { n: "1", t: "Tipo y nombre", d: "Selecciona el tipo de local e introduce el nombre." },
+      { n: "2", t: "Guardar", d: "Introduce tu correo o inicia sesión con Google." },
+      { n: "3", t: "Carta", d: "Añade los platos manualmente o sube tu carta impresa para escanear con IA." },
+      { n: "4", t: "Listo", d: "Comparte el enlace o el código QR y empieza a recibir pedidos." },
     ],
   },
 
   pricing: {
-    badge: "Carta digital sin límites · Cero comisiones",
-    heading: "Un plan para crear",
-    headingAccent: "tu carta digital.",
-    sub: "Crea la carta digital, genera código QR, recibe pedidos directos, traduce con IA y gestiona reservas. Precio simple, factura mensual o anual.",
+    badge: "Sin comisiones · Sin contratos",
+    heading: "Un único plan.",
+    headingAccent: "Todo incluido.",
+    sub: "Carta QR, pedidos, traducción con IA, web del restaurante y reservas. Un único precio mensual transparente.",
     monthlyLabel: "Mensual",
     yearlyLabel: "Anual",
-    saveBadge: "Ahorra 25%",
+    saveBadge: "Ahorras un 25 %",
     perMonth: "al mes",
-    billedAnnually: "Facturado anualmente {total}",
+    billedAnnually: "Facturación anual: {total}",
     youSave: "Ahorras {amount}",
-    trust: {
-      secure: "Pago seguro con Stripe",
-      noCommitment: "Sin permanencia",
-      quick: "Activo en minutos",
-      restaurants: "+500 restaurantes",
-    },
+    trust: { secure: "Pago seguro con Stripe", noCommitment: "Sin compromiso", quick: "Activo en minutos", restaurants: "Más de 500 restaurantes" },
   },
 
   faq: {
-    eyebrow: "¿Tienes dudas?",
-    heading: "Preguntas sobre la",
-    headingAccent: "carta digital.",
-    sub: "Lo que los hosteleros preguntan antes de crear la carta digital. ¿No ves la tuya? Escríbenos por WhatsApp — contestan personas reales.",
-    whatsappCta: "Escríbenos por WhatsApp",
+    eyebrow: "¿Tienes preguntas?",
+    heading: "Preguntas",
+    headingAccent: "frecuentes.",
+    sub: "Lo que los restauradores preguntan antes de registrarse. ¿No encuentras tu pregunta? Escríbenos por WhatsApp — responden personas, no un bot.",
+    whatsappCta: "Preguntar por WhatsApp",
     whatsappPrefill: "Hola, tengo una pregunta sobre IQ Rest",
     items: [
-      {
-        q: "¿Cómo crear una carta digital para un restaurante?",
-        a: "En 5 minutos. Registras la cuenta, eliges el tipo de local, importas la carta en papel con escaneo IA (60 segundos) o añades los platos manualmente, personalizas colores y fotos y descargas el código QR para imprimir en las mesas. Todo desde el móvil, sin programadores ni agencias.",
-      },
-      {
-        q: "¿Cuánto cuesta crear una carta digital?",
-        a: "6,90€/mes con todo incluido (o descuento al pagar anual). Editor completo, código QR ilimitado, pedidos directos sin comisiones, traducción IA a 35 idiomas, reservas y analítica. 14 días de prueba gratis, sin tarjeta.",
-      },
-      {
-        q: "¿Cuál es la diferencia entre carta digital y menú digital?",
-        a: "Son lo mismo conceptualmente: la versión online de la carta del restaurante, accesible mediante código QR o enlace. En España \"carta\" es el término tradicional para la lista de platos y bebidas, mientras que \"menú\" suele referirse al menú del día o al menú degustación. IQ Rest gestiona ambos formatos en la misma plataforma.",
-      },
-      {
-        q: "¿Puedo crear varias cartas digitales (comida, bebidas, postres)?",
-        a: "Sí. Puedes crear cartas separadas con horarios distintos (carta de comidas, carta de noches, carta de vinos, menú del día solo de 13:00 a 16:00) o cartas distintas para terraza, sala interior, eventos o delivery. Los clientes ven automáticamente la carta correcta según la hora y el QR escaneado.",
-      },
-      {
-        q: "¿Necesito conocimientos técnicos para crear la carta digital?",
-        a: "Cero. El editor funciona como una app de redes sociales: tocas para añadir un plato, arrastras para reordenar, deslizas para publicar. Si sabes usar WhatsApp e Instagram, ya sabes crear tu carta digital con IQ Rest.",
-      },
-      {
-        q: "¿Cómo modifico la carta digital después de crearla?",
-        a: "En tiempo real, desde el móvil. Cambias un precio y los clientes lo ven en segundos. Activas la stop-list de un plato agotado y desaparece de la carta inmediatamente. Sin reimpresiones, sin esperas, sin depender de nadie.",
-      },
-      {
-        q: "¿La carta digital se puede traducir automáticamente?",
-        a: "Sí, a 35 idiomas con IA gastronómica. Creas la carta en español, activas las traducciones con un toque y la IA genera nombres y descripciones culturalmente correctos en cada idioma. Nada de traducciones literales: \"tortilla\" se traduce con contexto, igual que \"jamón ibérico\" o \"pulpo a la gallega\".",
-      },
-      {
-        q: "¿Puedo crear la carta digital para varios restaurantes a la vez?",
-        a: "Sí. Desde un único panel gestionas varios locales (grupos, cadenas, restaurantes de temporada). Cada restaurante tiene su propia carta digital, su código QR, sus reservas y su analítica. Plan dedicado para grupos bajo consulta.",
-      },
-      {
-        q: "¿Qué pasa con mi carta digital después de los 14 días gratis?",
-        a: "Si no añades método de pago, la cuenta se pausa — nunca cobramos automáticamente. La carta digital queda guardada; añade los datos de pago cuando quieras para reactivarla. Cancelas con un clic, sin permanencia.",
-      },
+      { q: "¿Qué incluye el periodo de prueba y qué pasa después?", a: "Acceso completo a todas las funciones durante 14 días, sin tarjeta. Pasados los 14 días la cuenta se pone en pausa si no se ha añadido método de pago — nunca cargamos automáticamente. Puedes añadir el pago más tarde y continuar desde donde lo dejaste. Cancelación en un clic." },
+      { q: "¿Cobráis comisión por los pedidos?", a: "No. Cada pedido de la carta QR va directo al restaurante — sin porcentaje por nuestra parte, sin comisiones de agregadores. Una única tarifa mensual fija y nada más." },
+      { q: "¿Los comensales necesitan una app y nosotros conocimientos técnicos?", a: "Los comensales no necesitan ninguna app: enfocan la cámara del móvil al QR y la carta se abre en el navegador. El restaurante tampoco necesita conocimientos técnicos: el panel de administración funciona en cualquier navegador moderno — móvil, tableta o portátil. Todo es a base de toques y arrastrar y soltar, sin código." },
+      { q: "¿Con qué rapidez se actualizan los precios y se añaden los platos?", a: "Al instante. Cambias un precio desde el móvil — los comensales lo ven en segundos. ¿Un plato nuevo? Unos toques: nombre, precio, foto. Sin reimpresiones, sin esperar al diseñador." },
+      { q: "¿Cuántos idiomas se soportan?", a: "35 idiomas con traducción con IA integrada. Un solo toque y toda la carta queda traducida; la IA entiende el contexto gastronómico — nombres y descripciones suenan naturales en cualquier idioma. Los turistas piden con más confianza cuando comprenden de verdad la carta." },
     ],
   },
 
   finalCta: {
-    heading: "Empieza a crear tu carta digital.",
-    headingAccent: "Lista en 5 minutos.",
-    sub: "14 días gratis, sin tarjeta. Cancela cuando quieras. Únete a más de 500 hosteleros que crearon su carta digital con IQ Rest.",
+    heading: "Listo en 5 minutos.",
+    headingAccent: "14 días gratis.",
+    sub: "Sin tarjeta, cancelas cuando quieras. Únete a más de 500 restaurantes que ya funcionan con IQ Rest.",
   },
 
   scan: {
-    heading: "De papel a digital",
-    headingAccent: "en 60 segundos",
-    sub: "Sube una foto — la IA extrae categorías, platos y precios y los importa directamente al editor.",
-    cta: "Escanear mi carta →",
+    heading: "¿Tienes la carta en papel o en PDF?",
+    headingAccent: "La IA la digitaliza en 60 segundos.",
+    sub: "Sube una foto o un documento — la IA reconoce categorías, platos y precios automáticamente.",
+    cta: "Escanear carta →",
+  },
+
+  pricingHero: {
+    chips: ["Sin comisiones", "Sin contratos", "14 días gratis"],
+    heading: "Precios.",
+    headingAccent: "Sin costes ocultos.",
+    sub: "Una única cuota mensual transparente. Sin porcentaje sobre los pedidos ni comisiones de agregadores. Puedes cancelar la suscripción en cualquier momento.",
+    popularBadge: "Más popular",
+    perMonthSuffix: "/mes",
+    whenAnnualTemplate: "con pago anual · {total} € al año",
+    orMonthlyTemplate: "o {price} €/mes",
+    savingsTemplate: "ahorras {amount} € al año",
+    plans: {
+      basic: {
+        name: "Basic",
+        tagline: "Carta, pedidos QR y traducción con IA. En marcha en 5 minutos.",
+        features: [
+          "Carta QR en cada mesa",
+          "Carta digital con fotos y alérgenos",
+          "Traducción con IA en 35 idiomas",
+          "Pedidos desde la carta (opcional)",
+          "Generación de fotos de platos con IA",
+          "Gestiona desde cualquier móvil o tableta",
+        ],
+      },
+      pro: {
+        name: "Pro",
+        tagline: "Gestión completa del restaurante: pantalla de cocina y reservas.",
+        features: [
+          "Todo lo incluido en Basic",
+          "Pantalla de cocina (KDS)",
+          "Reserva online de mesas 24/7",
+          "Soporte prioritario por WhatsApp",
+        ],
+      },
+    },
   },
 
   footer: {
     featureLinks: [
-      { href: "/es/sistema-de-pedidos-para-restaurantes", label: "Sistema de pedidos" },
-      { href: "/es/ai-translation", label: "Traducción con IA" },
-      { href: "/es/reservations", label: "Reservas" },
-      { href: "/es/mobile-management", label: "Gestión desde el móvil" },
-      { href: "/es/easy-menu", label: "Editor de carta" },
-      { href: "/es/custom-design", label: "Fondos en vídeo y foto" },
-      { href: "/es/color-scheme", label: "Colores de marca" },
-      { href: "/es/multilingual", label: "Web multilingüe" },
-      { href: "/es/ai-images", label: "Optimización de fotos con IA" },
-      { href: "/es/analytics", label: "Analíticas" },
-      { href: "/es/instant-setup", label: "Configuración al instante" },
-      { href: "/es/personal-support", label: "Soporte personal" },
+      { href: "/es/menu-digital-restaurantes", label: "Carta digital" },
+      { href: "/es/sistema-pedidos-restaurante", label: "Pedidos" },
+      { href: "/es/reservas-de-mesas", label: "Reservas" },
+      { href: "/es/pantalla-de-cocina", label: "Pantalla de cocina" },
     ],
     navLinks: [
-      { href: "#pricing", label: "Precios" },
-      { href: "#faq", label: "Preguntas" },
-      { href: "/es/changelog", label: "Novedades" },
+      { href: "/es/precios", label: "Precios" },
+      { href: "#faq", label: "FAQ" },
       { href: "/es/languages", label: "Cambiar idioma" },
     ],
     copyrightTemplate: "© {year} IQ Rest. Todos los derechos reservados.",

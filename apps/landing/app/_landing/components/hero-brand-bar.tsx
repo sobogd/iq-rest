@@ -18,7 +18,7 @@ export function HeroBrandBar({ locale, signinHref, signinLabel }: HeroBrandBarPr
     <div className="flex items-center justify-between gap-3 mb-6 sm:mb-8">
       <LinkForward
         href={homeHref}
-        trackEvent="land_hero_logo_click"
+        trackEvent="l_hero_logo_click"
         className="flex items-center gap-1.5 text-[18px] sm:text-[22px] font-semibold tracking-tight shrink-0 text-foreground"
       >
         <LogoIcon className="h-8 w-8 sm:h-9 sm:w-9" />

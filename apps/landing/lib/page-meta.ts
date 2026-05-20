@@ -10,25 +10,19 @@ export type PageMeta = {
 
 // Home page meta (per-locale `/`).
 export const HOME_META: PageMeta = {
-  lastModified: "2026-04-30",
+  lastModified: "2026-05-20",
   changeFrequency: "weekly",
   priority: 1.0,
 };
 
-// Per-feature pages — path is the feature segment under `/[locale]`.
+// Per-feature pages — path is the SHARED route under `/[locale]`, translated
+// into a per-locale slug by `LOCALE_SLUG_OVERRIDES` for sitemap/redirects.
 export const FEATURE_PAGES: Record<string, PageMeta> = {
-  "/instant-setup": { lastModified: "2026-05-04", changeFrequency: "monthly", priority: 0.8 },
-  "/mobile-management": { lastModified: "2026-05-04", changeFrequency: "monthly", priority: 0.8 },
-  "/ai-translation": { lastModified: "2026-05-04", changeFrequency: "monthly", priority: 0.8 },
-  "/multilingual": { lastModified: "2026-05-04", changeFrequency: "monthly", priority: 0.8 },
-  "/ai-images": { lastModified: "2026-05-04", changeFrequency: "monthly", priority: 0.8 },
-  "/easy-menu": { lastModified: "2026-05-04", changeFrequency: "monthly", priority: 0.8 },
-  "/analytics": { lastModified: "2026-05-04", changeFrequency: "monthly", priority: 0.8 },
-  "/reservations": { lastModified: "2026-05-04", changeFrequency: "monthly", priority: 0.8 },
-  "/custom-design": { lastModified: "2026-05-04", changeFrequency: "monthly", priority: 0.8 },
-  "/color-scheme": { lastModified: "2026-05-04", changeFrequency: "monthly", priority: 0.8 },
-  "/personal-support": { lastModified: "2026-05-04", changeFrequency: "monthly", priority: 0.8 },
-  "/online-orders": { lastModified: "2026-05-04", changeFrequency: "monthly", priority: 0.9 },
+  "/digital-menu": { lastModified: "2026-05-20", changeFrequency: "monthly", priority: 0.8 },
+  "/order-taking": { lastModified: "2026-05-20", changeFrequency: "monthly", priority: 0.8 },
+  "/bookings": { lastModified: "2026-05-20", changeFrequency: "monthly", priority: 0.8 },
+  "/kitchen-display": { lastModified: "2026-05-20", changeFrequency: "monthly", priority: 0.8 },
+  "/pricing": { lastModified: "2026-05-20", changeFrequency: "monthly", priority: 0.9 },
 };
 
 // Last-Modified lookup keyed on path (`/` or `/<feature>`).

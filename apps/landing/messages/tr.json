@@ -2041,68 +2041,68 @@
   },
   "createFlow": {
     "step1": {
-      "title": "What kind of place is this?",
-      "subtitle": "Pick a vibe and we will preload a sample menu so you can edit, not start from scratch.",
-      "label": "Type"
+      "title": "Bu ne tür bir mekan?",
+      "subtitle": "Bir stil seçin, örnek bir menüyü önceden yükleyelim, böylece sıfırdan başlamak yerine düzenleyebilirsiniz.",
+      "label": "Tür"
     },
     "step2": {
-      "title": "What is its name?",
-      "subtitle": "This is what guests see at the top of your menu. You can change it any time.",
-      "nameLabel": "Restaurant name",
-      "namePlaceholder": "Mario's Pizza",
-      "label": "Name"
+      "title": "Adı ne?",
+      "subtitle": "Misafirler bunu menünüzün üst kısmında görür. İstediğiniz zaman değiştirebilirsiniz.",
+      "nameLabel": "Restoran adı",
+      "namePlaceholder": "Mario Pizza",
+      "label": "Ad"
     },
-    "back": "Back",
-    "continue": "Continue",
+    "back": "Geri",
+    "continue": "Devam",
     "cuisines": {
-      "pizza": "Pizzeria",
-      "sushi": "Sushi / Japanese",
-      "asian": "Asian",
+      "pizza": "Pizzacı",
+      "sushi": "Suşi / Japon",
+      "asian": "Asya",
       "burger": "Burger / Fast food",
-      "coffee": "Coffee / Cafe",
+      "coffee": "Kahve / Kafe",
       "bar": "Bar / Pub",
-      "bakery": "Bakery / Pastry",
-      "restaurant": "Restaurant"
+      "bakery": "Fırın / Pastane",
+      "restaurant": "Restoran"
     },
-    "stepOf": "Step {step} of {total}",
+    "stepOf": "{total} adımdan {step}. adım",
     "step3": {
-      "label": "Sign in"
+      "label": "Giriş"
     }
   },
   "auth": {
-    "titleWithName": "One more thing for {name}",
-    "subtitle": "Just leave your email so we can save your menu — you'll be able to edit it any time.",
-    "emailLabel": "Email",
-    "emailPlaceholder": "you@restaurant.com",
-    "continueEmail": "Save my menu",
-    "or": "or",
-    "continueGoogle": "Continue with Google",
-    "changeRestaurant": "Change restaurant",
+    "titleWithName": "{name} için son bir şey",
+    "subtitle": "Menünüzü kaydedebilmemiz için e-postanızı bırakın — istediğiniz zaman düzenleyebilirsiniz.",
+    "emailLabel": "E-posta",
+    "emailPlaceholder": "siz@restoran.com.tr",
+    "continueEmail": "Menümü kaydet",
+    "or": "veya",
+    "continueGoogle": "Google ile devam et",
+    "changeRestaurant": "Restoranı değiştir",
     "consent": {
-      "text": "By continuing you agree to our",
-      "terms": "Terms",
-      "and": "and",
-      "privacy": "Privacy Policy"
+      "text": "Devam ederek",
+      "terms": "Şartları",
+      "and": "ve",
+      "privacy": "Gizlilik Politikasını kabul etmiş olursunuz"
     },
-    "verifyTitle": "Check your inbox",
-    "verifySubtitle": "We sent a 6-digit code to {email}.",
-    "verifyCodeLabel": "Verification code",
-    "checkSpam": "Don't see it? Check your spam folder.",
-    "verifyButton": "Verify and open dashboard",
-    "resendCode": "Resend code",
-    "resendSent": "Code sent",
-    "changeEmail": "Use a different email",
+    "verifyTitle": "Gelen kutunuzu kontrol edin",
+    "verifySubtitle": "{email} adresine 6 haneli bir kod gönderdik.",
+    "verifyCodeLabel": "Doğrulama kodu",
+    "checkSpam": "Göremiyor musunuz? Spam klasörünü kontrol edin.",
+    "verifyButton": "Doğrula ve panele git",
+    "resendCode": "Kodu yeniden gönder",
+    "resendSent": "Kod gönderildi",
+    "changeEmail": "Farklı e-posta kullan",
     "errors": {
-      "emailInvalid": "Please enter a valid email address.",
-      "sendFailed": "Couldn't send the code. Try again.",
-      "verifyFailed": "Couldn't verify the code. Try again.",
-      "codeExpired": "This code expired. Request a new one.",
-      "noCode": "No code on file. Request a new one.",
-      "invalidCode": "Wrong code. Try again.",
-      "tooManyAttempts": "Too many attempts. Wait and try again later."
+      "emailInvalid": "Lütfen geçerli bir e-posta adresi girin.",
+      "sendFailed": "Kod gönderilemedi. Tekrar deneyin.",
+      "verifyFailed": "Kod doğrulanamadı. Tekrar deneyin.",
+      "codeExpired": "Bu kodun süresi doldu. Yenisini isteyin.",
+      "noCode": "Kayıtlı kod yok. Yenisini isteyin.",
+      "invalidCode": "Yanlış kod. Tekrar deneyin.",
+      "tooManyAttempts": "Çok fazla deneme. Bekleyin ve daha sonra tekrar deneyin."
     },
-    "signInTitle": "Welcome back",
-    "signInSubtitle": "Enter your email and we'll send a quick code to sign you in.",
-    "goToDashboard": "Go to dashboard"
+    "signInTitle": "Tekrar hoş geldiniz",
+    "signInSubtitle": "E-postanızı girin, hızlı bir giriş kodu gönderelim.",
+    "goToDashboard": "Panele git"
   }
 }

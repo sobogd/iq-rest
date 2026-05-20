@@ -2041,68 +2041,68 @@
   },
   "createFlow": {
     "step1": {
-      "title": "What kind of place is this?",
-      "subtitle": "Pick a vibe and we will preload a sample menu so you can edit, not start from scratch.",
-      "label": "Type"
+      "title": "Ce fel de local este?",
+      "subtitle": "Alege un stil și vom preîncărca un meniu exemplu ca să poți edita, nu să începi de la zero.",
+      "label": "Tip"
     },
     "step2": {
-      "title": "What is its name?",
-      "subtitle": "This is what guests see at the top of your menu. You can change it any time.",
-      "nameLabel": "Restaurant name",
-      "namePlaceholder": "Mario's Pizza",
-      "label": "Name"
+      "title": "Cum se numește?",
+      "subtitle": "Asta văd oaspeții în partea de sus a meniului. Poți schimba oricând.",
+      "nameLabel": "Numele restaurantului",
+      "namePlaceholder": "Pizza Mario",
+      "label": "Nume"
     },
-    "back": "Back",
-    "continue": "Continue",
+    "back": "Înapoi",
+    "continue": "Continuă",
     "cuisines": {
-      "pizza": "Pizzeria",
-      "sushi": "Sushi / Japanese",
-      "asian": "Asian",
+      "pizza": "Pizzerie",
+      "sushi": "Sushi / Japonez",
+      "asian": "Asiatic",
       "burger": "Burger / Fast food",
-      "coffee": "Coffee / Cafe",
+      "coffee": "Cafea / Cafenea",
       "bar": "Bar / Pub",
-      "bakery": "Bakery / Pastry",
+      "bakery": "Brutărie / Cofetărie",
       "restaurant": "Restaurant"
     },
-    "stepOf": "Step {step} of {total}",
+    "stepOf": "Pasul {step} din {total}",
     "step3": {
-      "label": "Sign in"
+      "label": "Autentificare"
     }
   },
   "auth": {
-    "titleWithName": "One more thing for {name}",
-    "subtitle": "Just leave your email so we can save your menu — you'll be able to edit it any time.",
-    "emailLabel": "Email",
-    "emailPlaceholder": "you@restaurant.com",
-    "continueEmail": "Save my menu",
-    "or": "or",
-    "continueGoogle": "Continue with Google",
-    "changeRestaurant": "Change restaurant",
+    "titleWithName": "Încă un lucru pentru {name}",
+    "subtitle": "Lasă-ne doar e-mailul tău ca să-ți putem salva meniul — îl vei putea edita oricând.",
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "tu@restaurant.ro",
+    "continueEmail": "Salvează meniul meu",
+    "or": "sau",
+    "continueGoogle": "Continuă cu Google",
+    "changeRestaurant": "Schimbă restaurantul",
     "consent": {
-      "text": "By continuing you agree to our",
-      "terms": "Terms",
-      "and": "and",
-      "privacy": "Privacy Policy"
+      "text": "Continuând, accepți",
+      "terms": "Termenii",
+      "and": "și",
+      "privacy": "Politica de Confidențialitate"
     },
-    "verifyTitle": "Check your inbox",
-    "verifySubtitle": "We sent a 6-digit code to {email}.",
-    "verifyCodeLabel": "Verification code",
-    "checkSpam": "Don't see it? Check your spam folder.",
-    "verifyButton": "Verify and open dashboard",
-    "resendCode": "Resend code",
-    "resendSent": "Code sent",
-    "changeEmail": "Use a different email",
+    "verifyTitle": "Verifică inbox-ul",
+    "verifySubtitle": "Am trimis un cod de 6 cifre la {email}.",
+    "verifyCodeLabel": "Cod de verificare",
+    "checkSpam": "Nu îl vezi? Verifică folderul spam.",
+    "verifyButton": "Verifică și deschide panoul",
+    "resendCode": "Retrimite codul",
+    "resendSent": "Cod trimis",
+    "changeEmail": "Folosește alt e-mail",
     "errors": {
-      "emailInvalid": "Please enter a valid email address.",
-      "sendFailed": "Couldn't send the code. Try again.",
-      "verifyFailed": "Couldn't verify the code. Try again.",
-      "codeExpired": "This code expired. Request a new one.",
-      "noCode": "No code on file. Request a new one.",
-      "invalidCode": "Wrong code. Try again.",
-      "tooManyAttempts": "Too many attempts. Wait and try again later."
+      "emailInvalid": "Introdu o adresă de e-mail validă.",
+      "sendFailed": "Codul nu a putut fi trimis. Încearcă din nou.",
+      "verifyFailed": "Codul nu a putut fi verificat. Încearcă din nou.",
+      "codeExpired": "Acest cod a expirat. Solicită unul nou.",
+      "noCode": "Niciun cod înregistrat. Solicită unul nou.",
+      "invalidCode": "Cod greșit. Încearcă din nou.",
+      "tooManyAttempts": "Prea multe încercări. Așteaptă și încearcă mai târziu."
     },
-    "signInTitle": "Welcome back",
-    "signInSubtitle": "Enter your email and we'll send a quick code to sign you in.",
-    "goToDashboard": "Go to dashboard"
+    "signInTitle": "Bun venit înapoi",
+    "signInSubtitle": "Introdu e-mailul și îți vom trimite un cod rapid pentru autentificare.",
+    "goToDashboard": "Mergi la panou"
   }
 }

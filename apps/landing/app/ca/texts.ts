@@ -1,96 +1,170 @@
-import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { CalendarCheck, ChefHat, Receipt, Monitor } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
-  htmlLang: "ca", htmlDir: "ltr",
+  htmlLang: "ca",
+  htmlDir: "ltr",
+
   meta: {
-    title: "Carta QR per a Restaurants — Comandes Directes, Zero Comissions | IQ Rest",
-    description: "S'acabaren les cartes de paper i les comissions de les apps de delivery. Carta QR, comandes directes, reserves i web multilingüe. 14 dies gratis, sense targeta.",
-    canonical: "https://iq-rest.com/ca", ogLocale: "ca_ES",
-    ogTitle: "Carta QR per a Restaurants — Comandes Directes, Zero Comissions",
-    ogDescription: "Carta QR, comandes directes, reserves i traducció IA. Llesta en 5 minuts. 14 dies gratis — sense targeta.",
+    title: "Carta QR per a restaurants — Comandes directes, zero comissions | IQ Rest",
+    description:
+      "Plataforma tot-en-un per a restaurants: carta digital, comandes QR, reserva de taules i pantalla de cuina. Engega en 5 minuts. 14 dies gratis, sense targeta.",
+    canonical: "https://iq-rest.com/ca",
+    ogLocale: "ca_ES",
+    ogTitle: "Carta QR per a restaurants — Comandes directes, zero comissions",
+    ogDescription:
+      "Carta digital, comandes QR, reserva de taules i traducció IA. Engega en 5 minuts. 14 dies gratis.",
   },
-  ctaText: "Prova-ho gratis",
-  demoText: "Veure demo en directe", microcopy: "14 dies gratis · Sense targeta · Cancel·la quan vulguis",
-  header: { navFeatures: "Funcions", navHow: "Com funciona", navPricing: "Preus", navFaq: "FAQ", signIn: "Entrar", cta: "Comença" },
+
+  ctaText: "Prova'l gratis",
+  demoText: "Mira la demo",
+  microcopy: "14 dies gratis · Sense targeta · Cancel·la quan vulguis",
+
+  header: {
+    navFeatures: "Funcionalitats",
+    navHow: "Com funciona",
+    navPricing: "Preus",
+    navFaq: "Preguntes",
+    signIn: "Inicia sessió",
+    cta: "Comença",
+  },
+
   hero: {
     verticals: ["Restaurants", "Cafeteries", "Bars", "Hotels", "Pizzeries"],
-    headline: "Carta Digital per a Restaurants. Llesta en 5 minuts.",
-    sub: "Carta digital per al teu restaurant en 5 minuts. Tot inclòs: editor mòbil sense codi, escaneig IA del menú, codi QR per a taules i comandes directes sense comissions.",
-    dynamicHeadlines: ["0% comissions.", "35 idiomes amb IA.", "Comandes online.", "Reserves 24/7.", "Disseny premium."],
-    painBullets: ["0% comissions: Totes les comandes van directament a tu.", "Traducció IA: 35 idiomes per augmentar el tiquet dels turistes.", "Reserves 24/7: Sala plena sense trucades innecessàries.", "Preus flexibles: Actualitza la carta en segons."],
-    rating: "Més de 500 restaurants en 30+ països",
+    headline: "Carta digital per a restaurants. En línia en 5 minuts.",
+    sub: "Carta digital per al teu restaurant en 5 minuts. Tot inclòs: editor sense codi, escaneig IA de la carta, codis QR per a les taules i comandes directes sense comissions.",
+    dynamicHeadlines: ["0 % de comissió.", "35 idiomes IA.", "Comandes en línia.", "Reserves 24/7.", "Disseny premium."],
+    painBullets: [
+      "0 % de comissió: cada comanda va directament al teu restaurant.",
+      "Traducció IA en 35 idiomes — els turistes entenen la carta i demanen més.",
+      "Reserva 24/7: els clients reserven taules sols, sense trucades en hores punta.",
+      "Preus flexibles: les actualitzacions de la carta es publiquen en segons.",
+    ],
+    rating: "Més de 500 restaurants en més de 30 països",
   },
+
   features: {
-    heading: "Tot el que cal.", headingAccent: "Res que no.",
-    sub: "Fet per a restaurants. Usat a taula.",
+    heading: "Tot el que necessites.",
+    headingAccent: "Res de més.",
+    sub: "Fet per a restaurants. S'usa cada dia a la taula, a la cuina i a la sala.",
     items: [
-      
-      { Icon: QrCode, title: "Comandes des de la taula", desc: "Les comandes arriben a l'instant per WhatsApp o al taulell amb el número de taula. Servei més ràpid.", tag: "Comandes directes", href: "/ca/sistema-de-comandes-online-restaurant" },
-      { Icon: Languages, title: "Traductor IA (35 idiomes)", desc: "La nostra IA entén la gastronomia. Els turistes demanen un 20% més quan entenen el plat.", tag: "Traducció IA" },
-      { Icon: CalendarCheck, title: "Reserva de taules", desc: "El sistema accepta reserves mentre ets a la cuina. Cap client perdut.", tag: "Reserves" },
-      { Icon: Palette, title: "Disseny modern", desc: "Fons de vídeo i fotos atractives. La teva carta sembla premium i fa venir gana al moment.", tag: "Disseny personalitzat" },
-      { Icon: Smartphone, title: "Editor ràpid", desc: "Gestiona la llista d'esgotats i preus des del mòbil. Canvis instantanis per als clients.", tag: "Editor de carta" },
-      { Icon: ChefHat, title: "Pantalla de cuina", desc: "Oblida els tiquets de paper. Les comandes de la sala van directe a la pantalla del xef.", tag: "Pantalla de cuina" },
-    
+      { Icon: Monitor, title: "Carta digital", desc: "Carta al navegador amb fotos, preus, al·lèrgens i descripcions. S'actualitza en temps real des del mòbil. Els clients veuen la carta en la seva llengua; el restaurant estalvia en impressió.", tag: "Carta digital", href: "/ca/carta-digital-restaurant" },
+      { Icon: Receipt, title: "Recepció de comandes: client i cambrer", desc: "Un codi QR a la taula per al client, o el cambrer pren la comanda des del mòbil — totes dues van directament a la cuina o a WhatsApp. Sense comissions, amb el número de taula a cada tiquet.", tag: "Comandes", href: "/ca/sistema-comandes-restaurant" },
+      { Icon: CalendarCheck, title: "Reserva de taules 24/7", desc: "Els clients reserven taules ells mateixos a través del web o de la carta QR mentre tu estàs ocupat a la sala. Calendari per taula, confirmacions i recordatoris automàtics. Cap client perdut.", tag: "Reserves", href: "/ca/reserva-de-taules" },
+      { Icon: ChefHat, title: "Pantalla de cuina (KDS)", desc: "Els tiquets de paper ja no calen. Les comandes de la sala van directament a la pantalla del xef — columnes «en preparació / a punt / servit», al·lèrgens i notes destacats en color. A tauleta o mòbil.", tag: "KDS", href: "/ca/pantalla-de-cuina" },
     ],
   },
+
   founder: {
-    eyebrow: "Fet per un propietari de restaurant",
-    quoteStart: "La meva dona i jo vam obrir una cafeteria i vam passar setmanes buscant un sistema que acceptés comandes online, reserves i que a sobre semblés modern. Tot el que vam provar era pesat, lleig o li faltaven la meitat de funcions —",
-    quoteAccent: "així que vam construir el que ens hauria agradat tenir.",
-    sign: "Bogdan Sokolov · fundador, ex propietari de cafeteria",
-    photoAlt: "Bogdan, fundador d'IQ Rest",
+    eyebrow: "Fet per restauradors",
+    quoteStart:
+      "La meva dona i jo portàvem una cafeteria pròpia i sabem de primera mà com funciona realment un dia de restaurant — recepció de comandes, reserves, flux de sala i de cuina. Volíem una única eina: moderna, fàcil d'engegar i clara a primer cop d'ull —",
+    quoteAccent: "així vam començar a construir la plataforma que ara desenvolupem per a altres restauradors.",
+    sign: "Bogdan Sokolov · fundador, ex-propietari de cafeteria",
+    photoAlt: "Bogdan Sokolov, fundador d'IQ Rest",
   },
+
   how: {
-    heading: "En menys de 5 minuts",
+    heading: "En línia en 5 minuts",
     sub: "Quatre passos curts. Sense instal·lacions, sense configuració tècnica.",
     steps: [
-      { n: "1", t: "Tipus i nom", d: "Tria el tipus i escriu el nom." },
-      { n: "2", t: "Desar", d: "Email o accés amb Google." },
-      { n: "3", t: "Carta", d: "Crea-la o escaneja una en paper." },
-      { n: "4", t: "Llest", d: "Mira, comparteix i rep comandes." },
+      { n: "1", t: "Tipus i nom", d: "Tria el tipus d'establiment i introdueix el nom." },
+      { n: "2", t: "Desa", d: "Introdueix el teu correu o entra amb Google." },
+      { n: "3", t: "Carta", d: "Afegeix els articles manualment o puja una carta impresa per a l'escaneig IA." },
+      { n: "4", t: "Fet", d: "Comparteix un enllaç o codi QR i comença a rebre comandes." },
     ],
   },
+
   pricing: {
     badge: "Sense comissions · Sense contractes",
-    heading: "Un únic pla.", headingAccent: "Tot inclòs.",
-    sub: "Carta QR, comandes, traducció IA, web del restaurant i reserves. Un preu simple.",
-    monthlyLabel: "Mensual", yearlyLabel: "Anual", saveBadge: "Estalvia 25%", perMonth: "al mes",
-    billedAnnually: "Facturat anualment {total}", youSave: "Estalvies {amount}",
+    heading: "Un sol pla.",
+    headingAccent: "Tot inclòs.",
+    sub: "Carta QR, recepció de comandes, traducció IA, web del restaurant i reserva. Una sola tarifa mensual transparent.",
+    monthlyLabel: "Mensual",
+    yearlyLabel: "Anual",
+    saveBadge: "Estalvia 25 %",
+    perMonth: "al mes",
+    billedAnnually: "Facturació anual: {total}",
+    youSave: "Estalvies {amount}",
     trust: { secure: "Pagament segur amb Stripe", noCommitment: "Sense compromís", quick: "Actiu en minuts", restaurants: "500+ restaurants" },
   },
+
   faq: {
-    eyebrow: "Tens dubtes?", heading: "Preguntes", headingAccent: "freqüents.",
-    sub: "El que els propietaris de restaurants pregunten abans de registrar-se. No veus la teva? Escriu-nos per WhatsApp — responen persones reals.",
-    whatsappCta: "Pregunta per WhatsApp", whatsappPrefill: "Hola, tinc una pregunta sobre IQ Rest",
+    eyebrow: "Tens preguntes?",
+    heading: "Preguntes",
+    headingAccent: "freqüents.",
+    sub: "El que els restauradors demanen abans de registrar-se. No trobes la teva pregunta? Escriu-nos per WhatsApp — responen persones reals, no un bot.",
+    whatsappCta: "Pregunta per WhatsApp",
+    whatsappPrefill: "Hola, tinc una pregunta sobre IQ Rest",
     items: [
-      { q: "Què inclou la prova gratis i què passa després?", a: "14 dies, accés complet, sense targeta. Passats els 14 dies, si no afegeixes mètode de pagament, el compte es pausa — mai cobrem automàticament. Afegeix les dades quan vulguis per reactivar. La cancel·les amb un clic." },
-      { q: "Us emporteu comissió per les comandes?", a: "Zero. Cada comanda de la teva carta QR arriba directe a tu — sense la nostra part, sense taxes tipus Glovo o Uber Eats. Un sol preu mensual, ja està." },
-      { q: "Els meus clients necessiten una app? Jo necessito coneixements tècnics?", a: "Zero apps per als clients — escanegen el QR amb la càmera del mòbil i la carta s'obre al navegador. Zero coneixements tècnics per a tu — tot el panell funciona al mòbil, toques per afegir un plat, arrossegues per reordenar, això és tot." },
-      { q: "Com de ràpid canvio preus o afegeixo plats?", a: "A l'instant. Canvies un preu al mòbil i els clients ho veuen en segons. Plat nou? Toques, escrius, puges foto, fet — sense reimpressions, sense esperar al dissenyador." },
-      { q: "Quants idiomes traduïu?", a: "35 idiomes amb traducció IA integrada. Un toc tradueix tota la carta i l'IA entén el context culinari — els noms i descripcions sonen naturals en cada idioma. Els turistes demanen més quan entenen de veritat." },
+      { q: "Què inclou la prova i què passa després?", a: "Accés complet a totes les funcionalitats durant 14 dies, sense targeta. Passats 14 dies el compte es pausa si no s'ha afegit un mètode de pagament — mai no cobrem automàticament. Pots afegir el pagament més tard i continuar on ho havies deixat. Cancel·la quan vulguis amb un sol clic." },
+      { q: "Cobreu comissió sobre les comandes?", a: "No. Cada comanda des de la carta QR va directament al restaurant — sense percentatges del nostre costat, sense comissions d'agregadors. Una tarifa mensual fixa i res més." },
+      { q: "Els clients necessiten una app? Necessitem coneixements tècnics?", a: "Els clients no necessiten cap app — apunten la càmera del mòbil al codi QR i la carta s'obre al navegador. Els restaurants tampoc necessiten coneixements tècnics: el panell d'administració funciona a qualsevol navegador modern al mòbil, tauleta o portàtil. Cada acció és per clic i arrossegar, sense codi." },
+      { q: "Com de ràpid canvien els preus i apareixen nous plats?", a: "A l'instant. Canvia un preu des del mòbil — els clients el veuen en segons. Un plat nou només requereix uns tocs: nom, preu, foto. Sense reimpressions, sense esperar un dissenyador." },
+      { q: "Quants idiomes hi ha disponibles?", a: "35 idiomes amb traducció IA integrada. Un toc i tota la carta es tradueix; la IA entén el context culinari — noms i descripcions sonen naturals en qualsevol idioma. Els turistes demanen amb més confiança quan entenen realment la carta." },
     ],
   },
-  finalCta: { heading: "Llesta en 5 minuts.", headingAccent: "Gratis 14 dies.", sub: "Sense targeta. Cancel·la quan vulguis. Uneix-te a 500+ restaurants ja a IQ Rest." },
-  scan: {
-    heading: "Tens una carta en paper o PDF?",
-    headingAccent: "La IA la digitalitza en 60 segons.",
-    sub: "Puja-la — la IA n'extreu categories, plats i preus.",
-    cta: "Escanejar la carta →",
+
+  finalCta: {
+    heading: "En línia en 5 minuts.",
+    headingAccent: "14 dies gratis.",
+    sub: "Sense targeta, cancel·la quan vulguis. Uneix-te a més de 500 restaurants que ja treballen amb IQ Rest.",
   },
+
+  scan: {
+    heading: "Tens una carta en paper o un PDF?",
+    headingAccent: "La IA la digitalitza en 60 segons.",
+    sub: "Puja una foto o un document — la IA reconeix categories, plats i preus automàticament.",
+    cta: "Escaneja la carta →",
+  },
+
+  pricingHero: {
+    chips: ["Sense comissions", "Sense contractes", "14 dies gratis"],
+    heading: "Preus.",
+    headingAccent: "Sense costos amagats.",
+    sub: "Una sola tarifa mensual transparent. Sense percentatges sobre comandes ni comissions d'agregadors. Cancel·la la subscripció quan vulguis.",
+    popularBadge: "Popular",
+    perMonthSuffix: "/mes",
+    whenAnnualTemplate: "facturació anual · {total} € l'any",
+    orMonthlyTemplate: "o {price} €/mes",
+    savingsTemplate: "estalvia {amount} € l'any",
+    plans: {
+      basic: {
+        name: "Basic",
+        tagline: "Carta, comandes QR i traducció IA. En línia en 5 minuts.",
+        features: [
+          "Carta QR per a cada taula",
+          "Carta digital amb fotos i al·lèrgens",
+          "Traducció IA en 35 idiomes",
+          "Comandes des de la carta (opcional)",
+          "Generació IA de fotos de plats",
+          "Gestió des de qualsevol mòbil o tauleta",
+        ],
+      },
+      pro: {
+        name: "Pro",
+        tagline: "Control total del restaurant: pantalla de cuina i reserves.",
+        features: [
+          "Tot el del Basic",
+          "Pantalla de cuina (KDS)",
+          "Reserva de taules en línia 24/7",
+          "Suport prioritari per WhatsApp",
+        ],
+      },
+    },
+  },
+
   footer: {
     featureLinks: [
-      { href: "/ca/sistema-de-comandes-online-restaurant", label: "Sistema de comandes online" }, { href: "/ca/ai-translation", label: "Traducció IA" },
-      { href: "/ca/reservations", label: "Reserves" }, { href: "/ca/mobile-management", label: "Gestió des del mòbil" },
-      { href: "/ca/easy-menu", label: "Editor de carta" }, { href: "/ca/custom-design", label: "Fons en vídeo i foto" },
-      { href: "/ca/color-scheme", label: "Colors de marca" }, { href: "/ca/multilingual", label: "Web multilingüe" },
-      { href: "/ca/ai-images", label: "Optimització de fotos amb IA" }, { href: "/ca/analytics", label: "Analítiques" },
-      { href: "/ca/instant-setup", label: "Configuració a l'instant" }, { href: "/ca/personal-support", label: "Suport personal" },
+      { href: "/ca/carta-digital-restaurant", label: "Carta digital" },
+      { href: "/ca/sistema-comandes-restaurant", label: "Comandes" },
+      { href: "/ca/reserva-de-taules", label: "Reserves" },
+      { href: "/ca/pantalla-de-cuina", label: "Pantalla de cuina" },
     ],
     navLinks: [
-      { href: "#pricing", label: "Preus" }, { href: "#faq", label: "Preguntes" },
-      { href: "/ca/languages", label: "Canvia d'idioma" },
+      { href: "/ca/preus", label: "Preus" },
+      { href: "#faq", label: "Preguntes" },
+      { href: "/ca/languages", label: "Canvia l'idioma" },
     ],
     copyrightTemplate: "© {year} IQ Rest. Tots els drets reservats.",
   },

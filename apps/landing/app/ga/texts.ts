@@ -1,95 +1,169 @@
-import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { CalendarCheck, ChefHat, Receipt, Monitor } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
-  htmlLang: "ga", htmlDir: "ltr",
+  htmlLang: "ga",
+  htmlDir: "ltr",
+
   meta: {
-    title: "Biachlár QR do Bhialanna — Orduithe Díreacha, Gan Coimisiún | IQ Rest",
-    description: "Deireadh le biachláir pháipéir agus coimisiúin aipeanna seachadta. Biachlár QR, orduithe díreacha, áirithintí agus suíomh ilteangach. 14 lá saor in aisce, gan chárta.",
-    canonical: "https://iq-rest.com/ga", ogLocale: "ga_IE",
-    ogTitle: "Biachlár QR do Bhialanna — Orduithe Díreacha, Gan Coimisiún",
-    ogDescription: "Biachlár QR, orduithe díreacha, áirithintí agus aistriúchán AI. Réidh i 5 nóiméad. 14 lá saor in aisce — gan chárta.",
+    title: "Biachlár QR do bhialanna — Orduithe Díreacha, gan Coimisiún | IQ Rest",
+    description:
+      "Ardán uile-in-aon do bhialanna: biachlár digiteach, orduithe QR, curfha bord agus scáileán cistine. Ar líne i 5 nóiméad. 14 lá saor in aisce, gan cárta.",
+    canonical: "https://iq-rest.com/ga",
+    ogLocale: "ga_IE",
+    ogTitle: "Biachlár QR do bhialanna — Orduithe Díreacha, gan Coimisiún",
+    ogDescription:
+      "Biachlár digiteach, orduithe QR, curfha bord agus aistriúchán IS. Ar líne i 5 nóiméad. 14 lá saor in aisce.",
   },
-  ctaText: "Bain triail as",
-  demoText: "Féach ar an taispeántas", microcopy: "14 lá saor in aisce · Gan chárta · Cealaigh am ar bith",
-  header: { navFeatures: "Gnéithe", navHow: "Conas a oibríonn sé", navPricing: "Praghsanna", navFaq: "FAQ", signIn: "Logáil isteach", cta: "Tosaigh" },
+
+  ctaText: "Bain triail as saor in aisce",
+  demoText: "Féach an taispeántas",
+  microcopy: "14 lá saor in aisce · Gan cárta · Cealaigh aon uair",
+
+  header: {
+    navFeatures: "Gnéithe",
+    navHow: "Conas a oibríonn sé",
+    navPricing: "Praghsanna",
+    navFaq: "Ceisteanna Coitianta",
+    signIn: "Sínigh isteach",
+    cta: "Tosaigh",
+  },
+
   hero: {
-    verticals: ["Bialanna", "Caiféanna", "Beáir", "Óstáin", "Pizzerias"],
-    headline: "Biachlár Digiteach do Bhialanna. Réidh i 5 nóiméad.",
-    sub: "Biachlár digiteach do bhialann i 5 nóiméad. Gach rud san áireamh: eagarthóir soghluaiste gan chód, scanadh biachláir le AI, cóid QR do bhoird agus orduithe díreacha gan choimisiún.",
-    dynamicHeadlines: ["0% coimisiún.", "35 teanga le AI.", "Orduithe ar líne.", "Áitithe 24/7.", "Dearadh iontach."],
-    painBullets: ["0% Coimisiún: Téann gach ordú go díreach chugat.", "Aistriúchán AI: 35 teanga chun caiteachas turasóirí a mhéadú.", "Áitithe 24/7: Bialann lán gan glaonna feles.", "Praghsanna solúbtha: Nuashonraigh an rochlár i soicindí."],
-    rating: "Níos mó ná 500 bialann i 30+ tír",
+    verticals: ["Bialanna", "Caifeanna", "Beáir", "Óstáin", "Pizzeríos"],
+    headline: "Biachlár digiteach do bhialann. Beo i 5 nóiméad.",
+    sub: "Biachlár digiteach do do bhialann i 5 nóiméad. Gach rud san áireamh: eagarthóir gan chód, aithint IS ar bhiachlár clóite, cóid QR do na boird agus orduithe díreacha gan choimisiún.",
+    dynamicHeadlines: ["0% coimisiún.", "35 teanga le IS.", "Orduithe ar líne.", "Curfha 24/7.", "Dearadh préimhe."],
+    painBullets: [
+      "0% coimisiún: téann gach ordú díreach chuig do bhialann.",
+      "Aistriúchán IS i 35 teanga — tuigeann turasóirí an biachlár agus ordaíonn níos mó.",
+      "Curfha 24/7: cuireann aíonna boird in áirithe iad féin, gan ghlaonna le linn buaicuaireanta.",
+      "Praghsáil sholúbtha: téann nuashonruithe biachláir ar líne i soicindí.",
+    ],
+    rating: "Níos mó ná 500 bialann i níos mó ná 30 tír",
   },
+
   features: {
-    heading: "Gach rud a theastaíonn uait.", headingAccent: "Aon rud nach dteastaíonn.",
-    sub: "Tógtha do bhialanna. Úsáidte ag an mbord.",
+    heading: "Gach rud a theastaíonn uait.",
+    headingAccent: "Tada breise.",
+    sub: "Tógtha do bhialanna. Á úsáid gach lá ag an mbord, sa chistin agus san urlár.",
     items: [
-      
-      { Icon: QrCode, title: "Ordú ag an mbord", desc: "Tagann orduithe láithreach ar WhatsApp nó ar an bpainéal le huimhir an bhoird. Seirbhís níos gasta.", tag: "Orduithe díreach", href: "/ga/coras-orduithe-ar-line-bialann" },
-      { Icon: Languages, title: "Aistritheoir AI (35 Teanga)", desc: "Tuigeann ár n-AI an ghasstnamaíocht. Ordaíonn turasóirí 20% níos mó nuair a thuigeann siad an bia.", tag: "Aistriúchán AI" },
-      { Icon: CalendarCheck, title: "Áitithe Táblaí", desc: "Glacann an córas le háitithe agus tú gnóthach sa chistin. Ná caill custaiméir arís.", tag: "Áirithintí" },
-      { Icon: Palette, title: "Dearadh Nua-aimseartha", desc: "Cúlraí físeáin agus grianghraif áille. Breathnaíonn do rochlár go hiontach.", tag: "Dearadh saincheaptha" },
-      { Icon: Smartphone, title: "Eagarthóir Tapa", desc: "Bainistigh praghsanna agus stoc go díreach ó do ghuthán. Athruithe beo láithreach.", tag: "Eagarthóir biachláir" },
-      { Icon: ChefHat, title: "Scáileán Cistine", desc: "Déan dearmad ar thicéid pháipéir. Téann orduithe díreach chuig an gcócaire.", tag: "Scáileán Cistine" },
-    
+      { Icon: Monitor, title: "Biachlár digiteach", desc: "Biachlár sa bhrabhsálaí le grianghraif, praghsanna, ailléirginí agus tuairiscí. Nuashonraítear i bhfíor-am ón nguthán. Feiceann aíonna an biachlár ina dteanga féin; sábhálann an bhialann ar phriontáil.", tag: "Biachlár digiteach", href: "/ga/biachlar-digiteach-bialann" },
+      { Icon: Receipt, title: "Glacadh orduithe: aoi agus freastalaí", desc: "Cód QR ag an mbord don aoi, nó glacann an freastalaí an t-ordú ón nguthán — téann an dá rud go díreach chuig an gcistin nó WhatsApp. Gan choimisiún, le huimhir an bhoird ar gach ticéad.", tag: "Orduithe", href: "/ga/coras-orduithe-bialann" },
+      { Icon: CalendarCheck, title: "Curfha bord 24/7", desc: "Cuireann aíonna boird in áirithe iad féin tríd an suíomh nó an biachlár QR fad atá tú gnóthach san urlár. Féilire de réir boird, deimhnithe uathoibríocha agus meabhrúcháin. Gan aon aoi caillte.", tag: "Curfha", href: "/ga/curfha-bord" },
+      { Icon: ChefHat, title: "Scáileán cistine (KDS)", desc: "Níl ticéid pháipéir ag teastáil a thuilleadh. Téann orduithe ón urlár go díreach chuig scáileán an chócaire — colúin „á gcócaireacht / réidh / freastalaithe“, ailléirginí agus nótaí aibhsithe le dath. Ar tháibléad nó guthán.", tag: "KDS", href: "/ga/scailean-cistine" },
     ],
   },
+
   founder: {
-    eyebrow: "Tógtha ag úinéir bialainne",
-    quoteStart: "D'oscail mé féin agus mo bhean caifé agus chaitheamar seachtainí ag lorg córais a ghlacann orduithe ar líne, áirithintí agus a bhfuil cuma nua-aimseartha air. Bhí gach rud a thrialaíomar trom, gránna nó ar iarraidh leath de na gnéithe —",
-    quoteAccent: "mar sin thógamar an ceann a theastaigh uainn féin.",
+    eyebrow: "Tógtha ag bialannóirí",
+    quoteStart:
+      "Rinne mé féin agus mo bhean ár gcaifé féin a reáchtáil agus tá a fhios againn ó thaithí phearsanta conas a oibríonn lá bialainne i ndáiríre — glacadh orduithe, curfha, sreabhadh urláir agus cistine. Theastaigh uirlis amháin uainn: nua-aimseartha, éasca le tosú agus soiléir ar an gcéad fhéachaint —",
+    quoteAccent: "mar sin chuireamar tús leis an ardán a fhorbraímid anois do bhialannóirí eile.",
     sign: "Bogdan Sokolov · bunaitheoir, iar-úinéir caifé",
-    photoAlt: "Bogdan, bunaitheoir IQ Rest",
+    photoAlt: "Bogdan Sokolov, bunaitheoir IQ Rest",
   },
+
   how: {
-    heading: "Beo i níos lú ná 5 nóiméad",
+    heading: "Beo i 5 nóiméad",
     sub: "Ceithre chéim ghairide. Gan suiteáil, gan socrú teicniúil.",
     steps: [
-      { n: "1", t: "Cineál agus ainm", d: "Roghnaigh cineál agus cuir an t-ainm isteach." },
-      { n: "2", t: "Sábháil", d: "Ríomhphost nó logáil isteach le Google." },
-      { n: "3", t: "Roghchlár", d: "Cruthaigh é féin nó scan ceann páipéir." },
-      { n: "4", t: "Réidh", d: "Féach, comhroinn agus glac orduithe." },
+      { n: "1", t: "Cineál agus ainm", d: "Roghnaigh cineál an áit agus cuir isteach an t-ainm." },
+      { n: "2", t: "Sábháil", d: "Cuir isteach do ríomhphost nó sínigh isteach le Google." },
+      { n: "3", t: "Biachlár", d: "Cuir míreanna leis de láimh nó uaslódáil biachlár priontáilte le haghaidh scanadh IS." },
+      { n: "4", t: "Críochnaithe", d: "Roinn nasc nó cód QR agus tosaigh orduithe a ghlacadh." },
     ],
   },
+
   pricing: {
     badge: "Gan choimisiún · Gan chonarthaí",
-    heading: "Plean amháin.", headingAccent: "Gach rud san áireamh.",
-    sub: "Biachlár QR, orduithe, aistriúchán AI, suíomh bialainne agus áirithintí. Praghas simplí amháin.",
-    monthlyLabel: "Míosúil", yearlyLabel: "Bliantúil", saveBadge: "Sábháil 25%", perMonth: "in aghaidh na míosa",
-    billedAnnually: "Billáilte go bliantúil {total}", youSave: "Sábhálann tú {amount}",
-    trust: { secure: "Íocaíocht slán le Stripe", noCommitment: "Gan tiomantas", quick: "Gníomhach i nóiméid", restaurants: "500+ bialann" },
+    heading: "Plean amháin.",
+    headingAccent: "Gach rud san áireamh.",
+    sub: "Biachlár QR, glacadh orduithe, aistriúchán IS, suíomh bialainne agus curfha. Táille mhíosúil shoiléir amháin.",
+    monthlyLabel: "Míosúil",
+    yearlyLabel: "Bliantúil",
+    saveBadge: "Sábháil 25%",
+    perMonth: "sa mhí",
+    billedAnnually: "Bille bliantúil: {total}",
+    youSave: "Sábhálann tú {amount}",
+    trust: { secure: "Íocaíocht shlán Stripe", noCommitment: "Gan ghealltanas", quick: "Gníomhach i nóiméid", restaurants: "500+ bialann" },
   },
+
   faq: {
-    eyebrow: "Ceisteanna?", heading: "Ceisteanna", headingAccent: "coitianta.",
-    sub: "An rud a fhiafraíonn úinéirí bialainne sula gcláraíonn siad. Nach bhfeiceann tú do cheann féin? Scríobh chugainn ar WhatsApp — freagraíonn fíordhaoine.",
-    whatsappCta: "Cuir ceist ar WhatsApp", whatsappPrefill: "Dia duit, tá ceist agam faoi IQ Rest",
+    eyebrow: "An bhfuil ceisteanna agat?",
+    heading: "Ceisteanna",
+    headingAccent: "coitianta.",
+    sub: "Cad a fhiafraíonn bialannóirí roimh chlárú. Nach féidir leat do cheist a fháil? Cuir teachtaireacht chugainn ar WhatsApp — freagraíonn fíordhaoine, ní bot.",
+    whatsappCta: "Cuir ceist ar WhatsApp",
+    whatsappPrefill: "Dia duit, tá ceist agam faoi IQ Rest",
     items: [
-      { q: "Cad atá san áireamh sa thriail saor in aisce agus cad a tharlaíonn ina dhiaidh?", a: "14 lá rochtain iomlán, gan chárta. Tar éis 14 lá, sosann do chuntas mura gcuireann tú modh íocaíochta isteach — ní ghearrann muid go huathoibríoch riamh. Cuir sonraí íocaíochta isteach níos déanaí chun é a athghníomhachtú. Cealaigh le cliceáil amháin." },
-      { q: "An nglacann sibh coimisiún ar orduithe?", a: "Gan ceann ar bith. Téann gach ordú ó do bhiachlár QR díreach chugat — gan sciar ar bith dúinn, gan táillí Deliveroo / Just Eat. Praghas míosúil socair amháin, sin é." },
-      { q: "An gá d'aíonna app? An gá scileanna teicniúla domsa?", a: "Gan apps d'aíonna — scanann siad an QR leis an gceamara, osclaíonn an biachlár sa bhrabhsálaí. Gan scileanna teicniúla duitse — oibríonn an painéal go léir ar an bhfón, tap chun cur leis, tarraing chun athordú, sin é an cuar ar fad." },
-      { q: "Cé chomh tapa is féidir liom praghsanna a athrú agus miasa nua a chur leis?", a: "Láithreach. Athraigh praghas ar an bhfón, feiceann aíonna i soicindí. Mias nua? Tap, scríobh, grianghraf, déanta — gan athchló, gan fanacht ar an dearthóir." },
-      { q: "Cé mhéad teanga a thacaíonn sibh leis?", a: "35 teanga le haistriúchán AI ionsuite. Aistríonn tap amháin an biachlár iomlán, agus tuigeann an AI comhthéacs cócaireachta — fuaimníonn ainmneacha agus cur síos go nádúrtha i ngach teanga. Ordaíonn turasóirí níos mó nuair a thuigeann siad i ndáiríre." },
+      { q: "Cad atá san áireamh sa tréimhse trialach agus céard a tharlóidh ina dhiaidh?", a: "Rochtain iomlán ar gach gné ar feadh 14 lá, gan cárta. Tar éis 14 lá cuirfear an cuntas ar shos mura gcuirfear modh íocaíochta leis — ní ghearrfaimid go huathoibríoch riamh. Is féidir leat íocaíocht a chur leis níos déanaí agus leanúint ar aghaidh ón áit ar fhág tú. Cealaigh aon uair le cliceáil amháin." },
+      { q: "An nglacann sibh coimisiún ar orduithe?", a: "Ní ghlacaimid. Téann gach ordú ón mbiachlár QR díreach chuig an mbialann — gan céatadán uainn, gan táillí comhthiomsóra. Táille mhíosúil sheasta amháin agus tada eile." },
+      { q: "An gá d'aíonna aip a bheith acu, an gá scileanna teicniúla againne?", a: "Ní gá aip ag aíonna — díríonn siad ceamara an ghutháin ar an gcód QR agus osclaíonn an biachlár sa bhrabhsálaí. Ní gá scileanna teicniúla ag bialanna ach an oiread: ritheann an painéal riaracháin in aon bhrabhsálaí nua-aimseartha ar ghuthán, táibléad nó ríomhaire glúine. Tá gach gníomh trí chliceáil agus tarraingt-agus-scaoileadh, gan chód." },
+      { q: "Cé chomh tapa is a athraíonn praghsanna agus a thagann miasa nua?", a: "Láithreach. Athraigh praghas ón nguthán — feiceann aíonna é i soicindí. Tógann mias nua cúpla tapáil: ainm, praghas, grianghraf. Gan athphriontáil, gan fhanacht ar dhearthóir." },
+      { q: "Cé mhéad teanga atá tacaithe?", a: "35 teanga le haistriúchán IS ionsuite. Tapáil amháin agus tá an biachlár ar fad aistrithe; tuigeann an IS comhthéacs cócaireachta — fuaimíonn ainmneacha agus tuairiscí nádúrtha in aon teanga. Ordaíonn turasóirí le níos mó muiníne nuair a thuigeann siad an biachlár i ndáiríre." },
     ],
   },
-  finalCta: { heading: "Réidh i 5 nóiméad.", headingAccent: "Saor ar feadh 14 lá.", sub: "Gan chárta. Cealaigh am ar bith. Bí leis na 500+ bialann atá ar IQ Rest cheana." },
-  scan: {
-    heading: "Biachlár páipéir nó PDF?",
-    headingAccent: "Déanann an IS digitiú air i 60 soicind.",
-    sub: "Uaslódáil — aithníonn an IS catagóirí, miasa agus praghsanna.",
-    cta: "Scan an biachlár →",
+
+  finalCta: {
+    heading: "Beo i 5 nóiméad.",
+    headingAccent: "14 lá saor in aisce.",
+    sub: "Gan cárta, cealaigh aon uair. Bí mar chuid de 500+ bialann atá ag úsáid IQ Rest cheana féin.",
   },
+
+  scan: {
+    heading: "An bhfuil biachlár páipéir nó PDF agat?",
+    headingAccent: "Digitíonn an IS é i 60 soicind.",
+    sub: "Uaslódáil grianghraf nó doiciméad — aithníonn an IS catagóirí, miasa agus praghsanna go huathoibríoch.",
+    cta: "Scan biachlár →",
+  },
+
+  pricingHero: {
+    chips: ["Gan choimisiún", "Gan chonarthaí", "14 lá saor in aisce"],
+    heading: "Praghsanna.",
+    headingAccent: "Gan táillí folaithe.",
+    sub: "Táille mhíosúil shoiléir amháin. Gan céatadán ar orduithe ná coimisiúin comhthiomsóra. Cealaigh an síntiús aon uair.",
+    popularBadge: "Coitianta",
+    perMonthSuffix: "/mí",
+    whenAnnualTemplate: "bille bliantúil · {total} € sa bhliain",
+    orMonthlyTemplate: "nó {price} €/mí",
+    savingsTemplate: "sábháil {amount} € sa bhliain",
+    plans: {
+      basic: {
+        name: "Basic",
+        tagline: "Biachlár, orduithe QR agus aistriúchán IS. Beo i 5 nóiméad.",
+        features: [
+          "Biachlár QR do gach bord",
+          "Biachlár digiteach le grianghraif agus ailléirginí",
+          "Aistriúchán IS i 35 teanga",
+          "Orduithe ón mbiachlár (roghnach)",
+          "Cruthú grianghraf miasa le IS",
+          "Bainistigh ó aon ghuthán nó táibléad",
+        ],
+      },
+      pro: {
+        name: "Pro",
+        tagline: "Smacht iomlán bialainne: scáileán cistine agus curfhaí.",
+        features: [
+          "Gach rud sa Basic",
+          "Scáileán cistine (KDS)",
+          "Curfha bord ar líne 24/7",
+          "Tacaíocht WhatsApp tosaíochta",
+        ],
+      },
+    },
+  },
+
   footer: {
     featureLinks: [
-      { href: "/ga/coras-orduithe-ar-line-bialann", label: "Córas orduithe ar líne" }, { href: "/ga/ai-translation", label: "Aistriúchán AI" },
-      { href: "/ga/reservations", label: "Áirithintí" }, { href: "/ga/mobile-management", label: "Bainistíocht ar fhón" },
-      { href: "/ga/easy-menu", label: "Eagarthóir biachláir" }, { href: "/ga/custom-design", label: "Cúlraí físe agus grianghraif" },
-      { href: "/ga/color-scheme", label: "Dathanna brandála" }, { href: "/ga/multilingual", label: "Suíomh ilteangach" },
-      { href: "/ga/ai-images", label: "Optamú íomhá AI" }, { href: "/ga/analytics", label: "Anailís" },
-      { href: "/ga/instant-setup", label: "Socrú láithreach" }, { href: "/ga/personal-support", label: "Tacaíocht phearsanta" },
+      { href: "/ga/biachlar-digiteach-bialann", label: "Biachlár digiteach" },
+      { href: "/ga/coras-orduithe-bialann", label: "Orduithe" },
+      { href: "/ga/curfha-bord", label: "Curfha" },
+      { href: "/ga/scailean-cistine", label: "Scáileán cistine" },
     ],
     navLinks: [
-      { href: "#pricing", label: "Praghsanna" }, { href: "#faq", label: "Ceisteanna" },
+      { href: "/ga/praghsanna", label: "Praghsanna" },
+      { href: "#faq", label: "Ceisteanna Coitianta" },
       { href: "/ga/languages", label: "Athraigh teanga" },
     ],
     copyrightTemplate: "© {year} IQ Rest. Gach ceart ar cosaint.",

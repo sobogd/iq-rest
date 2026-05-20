@@ -2041,68 +2041,68 @@
   },
   "createFlow": {
     "step1": {
-      "title": "What kind of place is this?",
-      "subtitle": "Pick a vibe and we will preload a sample menu so you can edit, not start from scratch.",
-      "label": "Type"
+      "title": "Jaki to rodzaj lokalu?",
+      "subtitle": "Wybierz styl, a my wczytamy przykładowe menu, żebyś mógł edytować zamiast zaczynać od zera.",
+      "label": "Typ"
     },
     "step2": {
-      "title": "What is its name?",
-      "subtitle": "This is what guests see at the top of your menu. You can change it any time.",
-      "nameLabel": "Restaurant name",
-      "namePlaceholder": "Mario's Pizza",
-      "label": "Name"
+      "title": "Jak się nazywa?",
+      "subtitle": "To widzą goście u góry menu. Możesz to zmienić w każdej chwili.",
+      "nameLabel": "Nazwa restauracji",
+      "namePlaceholder": "Pizza Mario",
+      "label": "Nazwa"
     },
-    "back": "Back",
-    "continue": "Continue",
+    "back": "Wstecz",
+    "continue": "Dalej",
     "cuisines": {
       "pizza": "Pizzeria",
-      "sushi": "Sushi / Japanese",
-      "asian": "Asian",
+      "sushi": "Sushi / Japońska",
+      "asian": "Azjatycka",
       "burger": "Burger / Fast food",
-      "coffee": "Coffee / Cafe",
+      "coffee": "Kawa / Kawiarnia",
       "bar": "Bar / Pub",
-      "bakery": "Bakery / Pastry",
-      "restaurant": "Restaurant"
+      "bakery": "Piekarnia / Cukiernia",
+      "restaurant": "Restauracja"
     },
-    "stepOf": "Step {step} of {total}",
+    "stepOf": "Krok {step} z {total}",
     "step3": {
-      "label": "Sign in"
+      "label": "Zaloguj"
     }
   },
   "auth": {
-    "titleWithName": "One more thing for {name}",
-    "subtitle": "Just leave your email so we can save your menu — you'll be able to edit it any time.",
-    "emailLabel": "Email",
-    "emailPlaceholder": "you@restaurant.com",
-    "continueEmail": "Save my menu",
-    "or": "or",
-    "continueGoogle": "Continue with Google",
-    "changeRestaurant": "Change restaurant",
+    "titleWithName": "Jeszcze jedna rzecz dla {name}",
+    "subtitle": "Po prostu zostaw swój e-mail, abyśmy mogli zapisać Twoje menu — będziesz mógł je edytować w każdej chwili.",
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "ty@restauracja.pl",
+    "continueEmail": "Zapisz moje menu",
+    "or": "lub",
+    "continueGoogle": "Kontynuuj z Google",
+    "changeRestaurant": "Zmień restaurację",
     "consent": {
-      "text": "By continuing you agree to our",
-      "terms": "Terms",
-      "and": "and",
-      "privacy": "Privacy Policy"
+      "text": "Kontynuując, akceptujesz nasze",
+      "terms": "Warunki",
+      "and": "i",
+      "privacy": "Politykę prywatności"
     },
-    "verifyTitle": "Check your inbox",
-    "verifySubtitle": "We sent a 6-digit code to {email}.",
-    "verifyCodeLabel": "Verification code",
-    "checkSpam": "Don't see it? Check your spam folder.",
-    "verifyButton": "Verify and open dashboard",
-    "resendCode": "Resend code",
-    "resendSent": "Code sent",
-    "changeEmail": "Use a different email",
+    "verifyTitle": "Sprawdź skrzynkę odbiorczą",
+    "verifySubtitle": "Wysłaliśmy 6-cyfrowy kod na {email}.",
+    "verifyCodeLabel": "Kod weryfikacyjny",
+    "checkSpam": "Nie widzisz? Sprawdź folder spam.",
+    "verifyButton": "Zweryfikuj i otwórz panel",
+    "resendCode": "Wyślij kod ponownie",
+    "resendSent": "Kod wysłany",
+    "changeEmail": "Użyj innego e-maila",
     "errors": {
-      "emailInvalid": "Please enter a valid email address.",
-      "sendFailed": "Couldn't send the code. Try again.",
-      "verifyFailed": "Couldn't verify the code. Try again.",
-      "codeExpired": "This code expired. Request a new one.",
-      "noCode": "No code on file. Request a new one.",
-      "invalidCode": "Wrong code. Try again.",
-      "tooManyAttempts": "Too many attempts. Wait and try again later."
+      "emailInvalid": "Wprowadź prawidłowy adres e-mail.",
+      "sendFailed": "Nie udało się wysłać kodu. Spróbuj ponownie.",
+      "verifyFailed": "Nie udało się zweryfikować kodu. Spróbuj ponownie.",
+      "codeExpired": "Kod wygasł. Poproś o nowy.",
+      "noCode": "Brak zapisanego kodu. Poproś o nowy.",
+      "invalidCode": "Nieprawidłowy kod. Spróbuj ponownie.",
+      "tooManyAttempts": "Zbyt wiele prób. Poczekaj i spróbuj później."
     },
-    "signInTitle": "Welcome back",
-    "signInSubtitle": "Enter your email and we'll send a quick code to sign you in.",
-    "goToDashboard": "Go to dashboard"
+    "signInTitle": "Witaj ponownie",
+    "signInSubtitle": "Wpisz swój e-mail, a wyślemy szybki kod do zalogowania.",
+    "goToDashboard": "Przejdź do panelu"
   }
 }

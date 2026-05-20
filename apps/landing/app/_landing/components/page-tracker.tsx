@@ -41,7 +41,7 @@ function fireFromAndClean(): void {
   const source = readFromSource();
   if (!source) return;
 
-  analytics.track(`land_from_${source}`);
+  analytics.track(`l_from_${source}`);
 
   // Clear cookie so we don't re-fire on subsequent page loads in the same session.
   document.cookie = "ref_from=; path=/; max-age=0";
@@ -56,17 +56,12 @@ function fireFromAndClean(): void {
   window.history.replaceState({}, "", newUrl);
 }
 
-function fireGclidAndCleanUrl(): void {
+function fireGclidEvent(): void {
   const sp = new URLSearchParams(window.location.search);
   const gclid = sp.get("gclid") || sp.get("gbraid") || sp.get("wbraid");
   if (!gclid || !GCLID_REGEX.test(gclid)) return;
 
-  analytics.track(`land_gclid_${gclid}`);
-
-  ["gclid", "gbraid", "wbraid"].forEach((k) => sp.delete(k));
-  const qs = sp.toString();
-  const newUrl = window.location.pathname + (qs ? `?${qs}` : "") + window.location.hash;
-  window.history.replaceState({}, "", newUrl);
+  analytics.track(`l_gclid_${gclid}`);
 }
 
 function firePageEvent(): void {
@@ -74,21 +69,27 @@ function firePageEvent(): void {
   const localeMatch = pathname.match(LOCALE_REGEX);
   const locale = localeMatch ? localeMatch[1] : "en";
   const page = pageNameFromPathname(pathname, locale);
-  analytics.track(`land_page_${locale}_${page}`);
+  analytics.track(`l_page_${locale}_${page}`);
+}
+
+function fireThemeEvent(): void {
+  const isDark = document.documentElement.classList.contains("dark");
+  analytics.track(`l_theme_${isDark ? "black" : "white"}`);
 }
 
 interface PageTrackerProps {
   /** Kept for backwards compatibility with feature pages, no longer used —
-   *  every section view now fires `land_section_view_<name>` so the server
+   *  every section view now fires `l_section_view_<name>` so the server
    *  can reconstruct the full scroll journey via event timestamps. */
   eventPrefix?: string;
 }
 
 export function PageTracker(_props: PageTrackerProps = {}) {
   useEffect(() => {
-    fireGclidAndCleanUrl();
+    fireGclidEvent();
     fireFromAndClean();
     firePageEvent();
+    fireThemeEvent();
 
     // Re-fires on every viewport (re-)entry so the server timeline shows
     // the full scroll path — `hero → features → footer → features → ...`.
@@ -105,7 +106,7 @@ export function PageTracker(_props: PageTrackerProps = {}) {
           const last = lastFiredAt.get(name) ?? 0;
           if (now - last < SECTION_THROTTLE_MS) continue;
           lastFiredAt.set(name, now);
-          analytics.track(`land_section_view_${name}`);
+          analytics.track(`l_section_view_${name}`);
         }
       },
       { threshold: 0.5 },

@@ -37,7 +37,7 @@ export function CuisineStep({
               key={key}
               type="button"
               onClick={() => onSelect(key)}
-              onFocus={() => analytics.track(`land_onb_cuisine_focus_${key}`)}
+              onFocus={() => analytics.track(`l_onb_cuisine_focus_${key}`)}
               className={`flex items-center gap-3 h-14 px-4 rounded-xl border text-left transition-all ${
                 isActive
                   ? "border-foreground bg-foreground/5"

@@ -65,14 +65,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   })
 
-  // /it absorbed all the KW landings; /it/menu-qr-code and
-  // /it/creare-menu-digitale were dropped and 301 to /it (see next.config).
-  // PPC lives at /it/lp/menu-digitale-per-ristoranti (noindex).
-  //
-  // /es absorbed the carta-digital KW page (canonical /es). The PPC variant
-  // at /es/lp/carta-digital-para-restaurante stays noindex; the old
-  // /es/lp/carta-digital slug 301s to it. /es/menu-digital and
-  // /es/qr-carta KW landings were dropped and 301 to /es (see next.config).
+  // Sitemap emits exactly 6 URLs per locale (home + 4 features + pricing) ×
+  // 35 locales = 210 entries. All legacy slugs (KW landings, PPC pages,
+  // /languages, /changelog, /online-orders, /m/*) are 301'd in next.config.
 
   return sitemapEntries
 }

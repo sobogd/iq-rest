@@ -2041,68 +2041,68 @@
   },
   "createFlow": {
     "step1": {
-      "title": "What kind of place is this?",
-      "subtitle": "Pick a vibe and we will preload a sample menu so you can edit, not start from scratch.",
-      "label": "Type"
+      "title": "Що це за заклад?",
+      "subtitle": "Оберіть стиль, і ми попередньо завантажимо приклад меню, щоб ви могли редагувати, а не починати з нуля.",
+      "label": "Тип"
     },
     "step2": {
-      "title": "What is its name?",
-      "subtitle": "This is what guests see at the top of your menu. You can change it any time.",
-      "nameLabel": "Restaurant name",
-      "namePlaceholder": "Mario's Pizza",
-      "label": "Name"
+      "title": "Як він називається?",
+      "subtitle": "Це бачать гості у верхній частині меню. Ви можете змінити будь-коли.",
+      "nameLabel": "Назва ресторану",
+      "namePlaceholder": "Піца Маріо",
+      "label": "Назва"
     },
-    "back": "Back",
-    "continue": "Continue",
+    "back": "Назад",
+    "continue": "Продовжити",
     "cuisines": {
-      "pizza": "Pizzeria",
-      "sushi": "Sushi / Japanese",
-      "asian": "Asian",
-      "burger": "Burger / Fast food",
-      "coffee": "Coffee / Cafe",
-      "bar": "Bar / Pub",
-      "bakery": "Bakery / Pastry",
-      "restaurant": "Restaurant"
+      "pizza": "Піцерія",
+      "sushi": "Суші / Японська",
+      "asian": "Азійська",
+      "burger": "Бургер / Фастфуд",
+      "coffee": "Кава / Кав'ярня",
+      "bar": "Бар / Паб",
+      "bakery": "Пекарня / Кондитерська",
+      "restaurant": "Ресторан"
     },
-    "stepOf": "Step {step} of {total}",
+    "stepOf": "Крок {step} з {total}",
     "step3": {
-      "label": "Sign in"
+      "label": "Увійти"
     }
   },
   "auth": {
-    "titleWithName": "One more thing for {name}",
-    "subtitle": "Just leave your email so we can save your menu — you'll be able to edit it any time.",
-    "emailLabel": "Email",
-    "emailPlaceholder": "you@restaurant.com",
-    "continueEmail": "Save my menu",
-    "or": "or",
-    "continueGoogle": "Continue with Google",
-    "changeRestaurant": "Change restaurant",
+    "titleWithName": "Ще одна річ для {name}",
+    "subtitle": "Просто залиште свою електронну пошту, щоб ми зберегли ваше меню — ви зможете редагувати його будь-коли.",
+    "emailLabel": "Електронна пошта",
+    "emailPlaceholder": "vi@restoran.ua",
+    "continueEmail": "Зберегти моє меню",
+    "or": "або",
+    "continueGoogle": "Продовжити з Google",
+    "changeRestaurant": "Змінити ресторан",
     "consent": {
-      "text": "By continuing you agree to our",
-      "terms": "Terms",
-      "and": "and",
-      "privacy": "Privacy Policy"
+      "text": "Продовжуючи, ви погоджуєтеся з нашими",
+      "terms": "Умовами",
+      "and": "та",
+      "privacy": "Політикою конфіденційності"
     },
-    "verifyTitle": "Check your inbox",
-    "verifySubtitle": "We sent a 6-digit code to {email}.",
-    "verifyCodeLabel": "Verification code",
-    "checkSpam": "Don't see it? Check your spam folder.",
-    "verifyButton": "Verify and open dashboard",
-    "resendCode": "Resend code",
-    "resendSent": "Code sent",
-    "changeEmail": "Use a different email",
+    "verifyTitle": "Перевірте вхідні",
+    "verifySubtitle": "Ми надіслали 6-значний код на {email}.",
+    "verifyCodeLabel": "Код підтвердження",
+    "checkSpam": "Не бачите? Перевірте папку спам.",
+    "verifyButton": "Підтвердити і відкрити панель",
+    "resendCode": "Надіслати код знову",
+    "resendSent": "Код надіслано",
+    "changeEmail": "Використати іншу пошту",
     "errors": {
-      "emailInvalid": "Please enter a valid email address.",
-      "sendFailed": "Couldn't send the code. Try again.",
-      "verifyFailed": "Couldn't verify the code. Try again.",
-      "codeExpired": "This code expired. Request a new one.",
-      "noCode": "No code on file. Request a new one.",
-      "invalidCode": "Wrong code. Try again.",
-      "tooManyAttempts": "Too many attempts. Wait and try again later."
+      "emailInvalid": "Введіть дійсну адресу електронної пошти.",
+      "sendFailed": "Не вдалося надіслати код. Спробуйте ще раз.",
+      "verifyFailed": "Не вдалося підтвердити код. Спробуйте ще раз.",
+      "codeExpired": "Цей код прострочено. Запитайте новий.",
+      "noCode": "Немає збереженого коду. Запитайте новий.",
+      "invalidCode": "Неправильний код. Спробуйте ще раз.",
+      "tooManyAttempts": "Забагато спроб. Зачекайте і спробуйте пізніше."
     },
-    "signInTitle": "Welcome back",
-    "signInSubtitle": "Enter your email and we'll send a quick code to sign you in.",
-    "goToDashboard": "Go to dashboard"
+    "signInTitle": "Ласкаво просимо знову",
+    "signInSubtitle": "Введіть пошту, і ми надішлемо швидкий код для входу.",
+    "goToDashboard": "Перейти до панелі"
   }
 }

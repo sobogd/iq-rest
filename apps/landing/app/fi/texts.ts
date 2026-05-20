@@ -1,101 +1,169 @@
-import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { CalendarCheck, ChefHat, Receipt, Monitor } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
-  htmlLang: "fi", htmlDir: "ltr",
+  htmlLang: "fi",
+  htmlDir: "ltr",
+
   meta: {
-    title: "QR-ruokalista Ravintoloille — Suorat Tilaukset, Nolla Provisio | IQ Rest",
-    description: "Ei enää paperisia ruokalistoja eikä toimitussovellusten provisioita. QR-ruokalista, suorat tilaukset, varaukset ja monikielinen sivusto. 14 päivää ilmaiseksi, ilman korttia.",
-    canonical: "https://iq-rest.com/fi", ogLocale: "fi_FI",
-    ogTitle: "QR-ruokalista Ravintoloille — Suorat Tilaukset, Nolla Provisio",
-    ogDescription: "QR-ruokalista, suorat tilaukset, varaukset ja AI-käännös. Valmis 5 minuutissa. 14 päivää ilmaiseksi — ilman korttia.",
+    title: "QR-ruokalista ravintoloille — Suorat tilaukset, nolla komissiota | IQ Rest",
+    description:
+      "Kaikki yhdessä -alusta ravintoloille: digitaalinen ruokalista, QR-tilaukset, pöytävaraus ja keittiön näyttö. Käyntiin 5 minuutissa. 14 päivää ilmaiseksi, ilman korttia.",
+    canonical: "https://iq-rest.com/fi",
+    ogLocale: "fi_FI",
+    ogTitle: "QR-ruokalista ravintoloille — Suorat tilaukset, nolla komissiota",
+    ogDescription:
+      "Digitaalinen ruokalista, QR-tilaukset, pöytävaraus ja tekoälykäännös. Käyntiin 5 minuutissa. 14 päivää ilmaiseksi.",
   },
+
   ctaText: "Kokeile ilmaiseksi",
-  demoText: "Katso demo", microcopy: "14 päivää ilmaiseksi · Ei korttia · Peruuta milloin haluat",
-  header: { navFeatures: "Ominaisuudet", navHow: "Näin se toimii", navPricing: "Hinnat", navFaq: "FAQ", signIn: "Kirjaudu", cta: "Aloita" },
+  demoText: "Katso demo",
+  microcopy: "14 päivää ilmaiseksi · Ilman korttia · Peruutus koska tahansa",
+
+  header: {
+    navFeatures: "Ominaisuudet",
+    navHow: "Miten se toimii",
+    navPricing: "Hinnat",
+    navFaq: "UKK",
+    signIn: "Kirjaudu sisään",
+    cta: "Aloita",
+  },
+
   hero: {
     verticals: ["Ravintolat", "Kahvilat", "Baarit", "Hotellit", "Pizzeriat"],
-    headline: "Digitaalinen ruokalista ravintoloille. Valmis 5 minuutissa.",
-    sub: "Digitaalinen ruokalista ravintolallesi 5 minuutissa. Kaikki sisältyy: mobiili koodaamaton editori, AI-ruokalistan skannaus, QR-koodit pöytiin ja suorat tilaukset ilman provisioita.",
-    dynamicHeadlines: ["0% provisio.", "35 kieltä tekoälyllä.", "Online-tilaukset.", "Varaukset 24/7.", "Premium-muotoilu."],
-    painBullets: ["0 % provisio: Kaikki tilaukset tulevat suoraan sinulle.", "AI-käännös: 35 kieltä kasvattamaan turistien tilauksia.", "Varaukset 24/7: Täysi tupa ilman puhelurumbaa.", "Joustavat hinnat: Päivitä menu sekunneissa."],
-    rating: "Yli 500 ravintolaa 30+ maassa",
+    headline: "Digitaalinen ruokalista ravintoloille. Käytössä 5 minuutissa.",
+    sub: "Digitaalinen ruokalista ravintoloosi 5 minuutissa. Kaikki mukana: koodaamaton editori, ruokalistan AI-tunnistus, QR-koodit pöytiin ja suorat tilaukset ilman komissiota.",
+    dynamicHeadlines: ["0 % komissiota.", "35 tekoälykieltä.", "Verkkotilaukset.", "Varaukset 24/7.", "Premium-suunnittelu."],
+    painBullets: [
+      "0 % komissiota: jokainen tilaus menee suoraan ravintolaasi.",
+      "Tekoälykäännös 35 kielelle — turistit ymmärtävät ruokalistan ja tilaavat enemmän.",
+      "Varaus 24/7: vieraat varaavat pöydät itse, ilman puheluita ruuhka-aikoina.",
+      "Joustava hinnoittelu: muutokset ruokalistaan tulevat näkyviin sekunneissa.",
+    ],
+    rating: "Yli 500 ravintolaa yli 30 maassa",
   },
+
   features: {
-    heading: "Kaikki mitä tarvitset.", headingAccent: "Ei mitään turhaa.",
-    sub: "Tehty ravintoloille. Käytetty pöydässä.",
+    heading: "Kaikki mitä tarvitset.",
+    headingAccent: "Ei mitään ylimääräistä.",
+    sub: "Tehty ravintoloille. Käytössä joka päivä pöydässä, keittiössä ja salissa.",
     items: [
-      
-      { Icon: QrCode, title: "Tilaus pöydästä", desc: "Tilaukset saapuvat heti WhatsAppiin tai hallintapaneeliin pöytänumeron kera. Nopeampi palvelu.", tag: "Suorat tilaukset", href: "/fi/online-tilausjarjestelma-ravintolalle" },
-      { Icon: Languages, title: "AI-kääntäjä (35 kieltä)", desc: "Tekoälymme ymmärtää gastronomiaa. Turistit tilaavat 20 % enemmän, kun he ymmärtävät menun.", tag: "Tekoälykäännös" },
-      { Icon: CalendarCheck, title: "Pöytävaraukset", desc: "Järjestelmä ottaa varaukset vastaan, kun olet keittiössä. Ei enää menetettyjä asiakkaita.", tag: "Varaukset" },
-      { Icon: Palette, title: "Moderni muotoilu", desc: "Videotaustat ja herkulliset kuvat. Menusi näyttää arvokkaalta ja herättää ruokahalun heti.", tag: "Oma ulkoasu" },
-      { Icon: Smartphone, title: "Nopea muokkaus", desc: "Hallitse stop-listaa ja hintoja suoraan puhelimesta. Muutokset näkyvät vieraille heti.", tag: "Ruokalistaeditori" },
-      { Icon: ChefHat, title: "Keittiönäyttö", desc: "Unohda paperilaput. Tilaukset salista menevät suoraan kokin näytölle.", tag: "Keittiönäyttö" },
-    
+      { Icon: Monitor, title: "Digitaalinen ruokalista", desc: "Ruokalista selaimessa kuvilla, hinnoilla, allergeeneilla ja kuvauksilla. Päivittyy reaaliajassa puhelimesta. Vieraat näkevät ruokalistan omalla kielellään; ravintola säästää tulostuksessa.", tag: "Digitaalinen ruokalista", href: "/fi/digitaalinen-ruokalista-ravintola" },
+      { Icon: Receipt, title: "Tilausten vastaanotto: vieras ja tarjoilija", desc: "QR-koodi pöydässä vieraalle tai tarjoilija ottaa tilauksen puhelimesta — molemmat menevät suoraan keittiöön tai WhatsAppiin. Ilman komissiota, pöytänumero jokaisessa tositteessa.", tag: "Tilaukset", href: "/fi/tilausjarjestelma-ravintola" },
+      { Icon: CalendarCheck, title: "Pöytävaraus 24/7", desc: "Vieraat varaavat pöydät itse sivuston tai QR-ruokalistan kautta, kun olet kiireinen salissa. Pöytäkalenteri, automaattiset vahvistukset ja muistutukset. Ei yhtään menetettyä vierasta.", tag: "Varaus", href: "/fi/poytavaraus" },
+      { Icon: ChefHat, title: "Keittiön näyttö (KDS)", desc: "Paperilappuja ei enää tarvita. Tilaukset salista menevät suoraan kokin näyttöön — sarakkeet ”valmistuksessa / valmis / tarjoiltu”, allergeenit ja muistiinpanot korostetaan värillä. Tabletilla tai puhelimella.", tag: "KDS", href: "/fi/keittion-naytto" },
     ],
   },
+
   founder: {
-    eyebrow: "Rakentaa ravintoloitsija",
-    quoteStart: "Vaimoni ja minä avasimme kahvilan ja vietimme viikkoja etsien järjestelmää, joka hoitaa online-tilaukset, varaukset ja näyttää modernilta. Kaikki mitä kokeilimme oli kömpelöä, rumaa tai siitä puuttui puolet ominaisuuksista —",
-    quoteAccent: "joten rakensimme sen, jonka olisimme itse halunneet.",
-    sign: "Bogdan Sokolov · perustaja, ent. kahvilanomistaja",
-    photoAlt: "Bogdan, IQ Rest perustaja",
+    eyebrow: "Ravintoloitsijoiden rakentama",
+    quoteStart:
+      "Vaimoni kanssa pyöritimme omaa kahvilaamme ja tiedämme omakohtaisesti, miltä ravintolapäivä todella näyttää — tilausten otto, varaukset, salin ja keittiön virtaus. Halusimme yhden ainoan työkalun: modernin, helposti käyntiin saatavan ja heti ymmärrettävän —",
+    quoteAccent: "niin aloimme rakentaa alustaa, jota nyt kehitämme muille ravintoloitsijoille.",
+    sign: "Bogdan Sokolov · perustaja, entinen kahvilanomistaja",
+    photoAlt: "Bogdan Sokolov, IQ Restin perustaja",
   },
+
   how: {
-    heading: "Live alle 5 minuutissa",
-    sub: "Neljä lyhyttä askelta. Ei asennusta, ei teknistä konfigurointia.",
+    heading: "Käytössä 5 minuutissa",
+    sub: "Neljä lyhyttä vaihetta. Ei asennuksia, ei teknistä asetusta.",
     steps: [
-      { n: "1", t: "Tyyppi ja nimi", d: "Valitse tyyppi ja anna nimi." },
-      { n: "2", t: "Tallenna", d: "Sähköposti tai kirjautuminen Googlella." },
-      { n: "3", t: "Menu", d: "Luo itse tai skannaa paperinen." },
-      { n: "4", t: "Valmis", d: "Katso, jaa ja ota tilauksia vastaan." },
+      { n: "1", t: "Tyyppi ja nimi", d: "Valitse paikan tyyppi ja syötä nimi." },
+      { n: "2", t: "Tallenna", d: "Syötä sähköpostisi tai kirjaudu Googlella." },
+      { n: "3", t: "Ruokalista", d: "Lisää tuotteet käsin tai lataa painettu ruokalista AI-skannaukseen." },
+      { n: "4", t: "Valmis", d: "Jaa linkki tai QR-koodi ja aloita tilausten vastaanotto." },
     ],
   },
+
   pricing: {
-    badge: "Nolla provisiota · Ei sopimuksia",
-    heading: "Yksi suunnitelma.", headingAccent: "Kaikki sisältyy.",
-    sub: "QR-ruokalista, tilaukset, AI-käännös, ravintolan sivusto ja varaukset. Yksi yksinkertainen hinta.",
-    monthlyLabel: "Kuukausittain", yearlyLabel: "Vuosittain", saveBadge: "Säästä 25%", perMonth: "kuukaudessa",
-    billedAnnually: "Veloitetaan vuosittain {total}", youSave: "Säästät {amount}",
-    trust: { secure: "Turvallinen Stripe-maksu", noCommitment: "Ei sitoutumista", quick: "Aktiivinen minuuteissa", restaurants: "500+ ravintolaa" },
+    badge: "Ei komissiota · Ei sopimuksia",
+    heading: "Yksi paketti.",
+    headingAccent: "Kaikki mukana.",
+    sub: "QR-ruokalista, tilausten vastaanotto, AI-käännös, ravintolan verkkosivu ja varaus. Yksi läpinäkyvä kuukausimaksu.",
+    monthlyLabel: "Kuukausittain",
+    yearlyLabel: "Vuosittain",
+    saveBadge: "Säästä 25 %",
+    perMonth: "kuukaudessa",
+    billedAnnually: "Vuosilaskutus: {total}",
+    youSave: "Säästät {amount}",
+    trust: { secure: "Turvallinen Stripe-maksu", noCommitment: "Ei sitoutumista", quick: "Aktiivinen muutamassa minuutissa", restaurants: "500+ ravintolaa" },
   },
+
   faq: {
-    eyebrow: "Kysymyksiä?", heading: "Usein kysytyt", headingAccent: "kysymykset.",
-    sub: "Mitä ravintoloitsijat kysyvät ennen rekisteröitymistä. Etkö näe omaasi? Kirjoita WhatsAppiin — oikeat ihmiset vastaavat.",
-    whatsappCta: "Kysy WhatsAppissa", whatsappPrefill: "Hei, minulla on kysymys IQ Restistä",
+    eyebrow: "Onko kysyttävää?",
+    heading: "Usein kysytyt",
+    headingAccent: "kysymykset.",
+    sub: "Mitä ravintoloitsijat kysyvät ennen rekisteröitymistä. Etkö löydä omaa kysymystäsi? Kirjoita meille WhatsAppissa — vastaa oikeat ihmiset, ei botti.",
+    whatsappCta: "Kysy WhatsAppissa",
+    whatsappPrefill: "Hei, minulla on kysymys IQ Restistä",
     items: [
-      { q: "Mitä ilmaiskokeilu sisältää ja mitä sen jälkeen?", a: "14 päivää täysi pääsy, ei korttia. 14 päivän jälkeen tili pysähtyy, jos et lisää maksutapaa — emme veloita koskaan automaattisesti. Lisää maksutiedot myöhemmin aktivoidaksesi. Peruuta yhdellä napsautuksella." },
-      { q: "Otatteko provisiota tilauksista?", a: "Nolla. Jokainen tilaus QR-listastasi tulee suoraan sinulle — ei osuutta meille, ei Wolt / Foodora-maksuja. Yksi kiinteä kuukausihinta, siinä se." },
-      { q: "Tarvitsevatko asiakkaat sovelluksen? Tarvitsenko tekniset taidot?", a: "Ei sovelluksia asiakkaille — he skannaavat QR:n kameralla, lista avautuu selaimessa. Ei teknisiä taitoja sinulle — koko paneeli toimii puhelimessa, napauta lisätäksesi, vedä järjestääksesi, siinä koko oppimiskäyrä." },
-      { q: "Kuinka nopeasti muutan hintoja ja lisään annoksia?", a: "Heti. Vaihda hinta puhelimessa, asiakkaat näkevät sekunneissa. Uusi annos? Napauta, kirjoita, kuva, valmis — ei tulosteita, ei suunnittelijan odotusta." },
-      { q: "Kuinka monta kieltä tuetaan?", a: "35 kieltä sisäänrakennetulla AI-käännöksellä. Yksi napsautus kääntää koko listan, AI ymmärtää kulinaarisen kontekstin — nimet ja kuvaukset kuulostavat luonnollisilta jokaisella kielellä. Turistit tilaavat enemmän kun ymmärtävät." },
+      { q: "Mitä kokeilujakso sisältää ja mitä tapahtuu sen jälkeen?", a: "Täysi pääsy kaikkiin ominaisuuksiin 14 päivän ajan, ilman korttia. 14 päivän jälkeen tili keskeytetään, jos maksutapaa ei lisätä — emme veloita koskaan automaattisesti. Voit lisätä maksun myöhemmin ja jatkaa siitä mihin jäit. Peruutus koska tahansa yhdellä klikkauksella." },
+      { q: "Otatteko provisiota tilauksista?", a: "Emme. Jokainen tilaus QR-ruokalistalta menee suoraan ravintolalle — ei prosenttia meidän puolelta, ei välityspalkkioita. Yksi kiinteä kuukausimaksu ja ei muuta." },
+      { q: "Tarvitsevatko vieraat sovelluksen, tarvitsemmeko teknisiä taitoja?", a: "Vieraat eivät tarvitse sovellusta — he osoittavat puhelimen kameraa QR-koodia kohti ja ruokalista aukeaa selaimessa. Ravintolat eivät myöskään tarvitse teknisiä taitoja: hallintapaneeli toimii missä tahansa modernissa selaimessa puhelimessa, tabletissa tai läppärillä. Jokainen toiminto on klikkaamalla ja raahaamalla, ilman koodia." },
+      { q: "Kuinka nopeasti hinnat muuttuvat ja uudet ruoat ilmestyvät?", a: "Heti. Vaihda hintaa puhelimesta — vieraat näkevät sen sekunneissa. Uusi ruoka vie muutaman näpäytyksen: nimi, hinta, kuva. Ei uudelleenpainatusta, ei suunnittelijan odottelua." },
+      { q: "Kuinka monta kieltä tuetaan?", a: "35 kieltä sisäänrakennetulla AI-käännöksellä. Yksi näpäytys ja koko ruokalista on käännetty; AI ymmärtää kulinaarisen kontekstin — nimet ja kuvaukset kuulostavat luonnollisilta kaikilla kielillä. Turistit tilaavat varmemmin, kun he todella ymmärtävät ruokalistan." },
     ],
   },
-  finalCta: { heading: "Valmis 5 minuutissa.", headingAccent: "Ilmaiseksi 14 päivää.", sub: "Ei korttia. Peruuta milloin haluat. Liity 500+ ravintolaan jo IQ Restissä." },
+
+  finalCta: {
+    heading: "Käytössä 5 minuutissa.",
+    headingAccent: "14 päivää ilmaiseksi.",
+    sub: "Ilman korttia, peruutus koska tahansa. Liity 500+ ravintolaan, jotka jo käyttävät IQ Restiä.",
+  },
+
   scan: {
-    heading: "Paperinen ruokalista tai PDF?",
-    headingAccent: "Tekoäly digitoi sen 60 sekunnissa.",
-    sub: "Lataa — tekoäly löytää luokat, annokset ja hinnat.",
+    heading: "Onko sinulla paperinen ruokalista tai PDF?",
+    headingAccent: "AI digitoi sen 60 sekunnissa.",
+    sub: "Lataa kuva tai dokumentti — AI tunnistaa kategoriat, ruoat ja hinnat automaattisesti.",
     cta: "Skannaa ruokalista →",
   },
+
+  pricingHero: {
+    chips: ["Ei komissiota", "Ei sopimuksia", "14 päivää ilmaiseksi"],
+    heading: "Hinnat.",
+    headingAccent: "Ei piilokuluja.",
+    sub: "Yksi läpinäkyvä kuukausimaksu. Ei prosenttia tilauksista eikä välityspalkkioita. Peruuta tilaus koska tahansa.",
+    popularBadge: "Suosittu",
+    perMonthSuffix: "/kk",
+    whenAnnualTemplate: "vuosilaskutus · {total} € vuodessa",
+    orMonthlyTemplate: "tai {price} €/kk",
+    savingsTemplate: "säästä {amount} € vuodessa",
+    plans: {
+      basic: {
+        name: "Basic",
+        tagline: "Ruokalista, QR-tilaukset ja AI-käännös. Käytössä 5 minuutissa.",
+        features: [
+          "QR-ruokalista jokaiseen pöytään",
+          "Digitaalinen ruokalista kuvilla ja allergeeneilla",
+          "AI-käännös 35 kielelle",
+          "Tilaukset ruokalistalta (valinnainen)",
+          "AI-ruokakuvien generointi",
+          "Hallinta mistä tahansa puhelimesta tai tabletista",
+        ],
+      },
+      pro: {
+        name: "Pro",
+        tagline: "Täysi hallinta ravintolasta: keittiön näyttö ja varaukset.",
+        features: [
+          "Kaikki Basicista",
+          "Keittiön näyttö (KDS)",
+          "Verkkopöytävaraus 24/7",
+          "Prioriteetti-WhatsApp-tuki",
+        ],
+      },
+    },
+  },
+
   footer: {
     featureLinks: [
-      { href: "/fi/online-tilausjarjestelma-ravintolalle", label: "Online-tilausjärjestelmä" },
-      { href: "/fi/ai-translation", label: "AI-käännös" },
-      { href: "/fi/reservations", label: "Varaukset" },
-      { href: "/fi/mobile-management", label: "Mobiilihallinta" },
-      { href: "/fi/easy-menu", label: "Listan editori" },
-      { href: "/fi/custom-design", label: "Video- ja kuvataustat" },
-      { href: "/fi/color-scheme", label: "Brändivärit" },
-      { href: "/fi/multilingual", label: "Monikielinen sivusto" },
-      { href: "/fi/ai-images", label: "AI-kuvaoptimointi" },
-      { href: "/fi/analytics", label: "Analytiikka" },
-      { href: "/fi/instant-setup", label: "Välitön asennus" },
-      { href: "/fi/personal-support", label: "Henkilökohtainen tuki" },
+      { href: "/fi/digitaalinen-ruokalista-ravintola", label: "Digitaalinen ruokalista" },
+      { href: "/fi/tilausjarjestelma-ravintola", label: "Tilaukset" },
+      { href: "/fi/poytavaraus", label: "Varaus" },
+      { href: "/fi/keittion-naytto", label: "Keittiön näyttö" },
     ],
     navLinks: [
-      { href: "#pricing", label: "Hinnat" }, { href: "#faq", label: "Kysymykset" },
+      { href: "/fi/hinnat", label: "Hinnat" },
+      { href: "#faq", label: "UKK" },
       { href: "/fi/languages", label: "Vaihda kieli" },
     ],
     copyrightTemplate: "© {year} IQ Rest. Kaikki oikeudet pidätetään.",

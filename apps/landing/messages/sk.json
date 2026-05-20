@@ -2041,68 +2041,68 @@
   },
   "createFlow": {
     "step1": {
-      "title": "What kind of place is this?",
-      "subtitle": "Pick a vibe and we will preload a sample menu so you can edit, not start from scratch.",
-      "label": "Type"
+      "title": "Aký druh podniku to je?",
+      "subtitle": "Vyberte typ a my vopred načítame vzorové menu, takže môžete len upravovať namiesto začínania od nuly.",
+      "label": "Typ"
     },
     "step2": {
-      "title": "What is its name?",
-      "subtitle": "This is what guests see at the top of your menu. You can change it any time.",
-      "nameLabel": "Restaurant name",
-      "namePlaceholder": "Mario's Pizza",
-      "label": "Name"
+      "title": "Ako sa volá?",
+      "subtitle": "Toto vidia hostia v hornej časti menu. Môžete to kedykoľvek zmeniť.",
+      "nameLabel": "Názov reštaurácie",
+      "namePlaceholder": "Pizza Mario",
+      "label": "Názov"
     },
-    "back": "Back",
-    "continue": "Continue",
+    "back": "Späť",
+    "continue": "Pokračovať",
     "cuisines": {
       "pizza": "Pizzeria",
-      "sushi": "Sushi / Japanese",
-      "asian": "Asian",
-      "burger": "Burger / Fast food",
-      "coffee": "Coffee / Cafe",
-      "bar": "Bar / Pub",
-      "bakery": "Bakery / Pastry",
-      "restaurant": "Restaurant"
+      "sushi": "Sushi / Japonská",
+      "asian": "Ázijská",
+      "burger": "Burger / Rýchle občerstvenie",
+      "coffee": "Káva / Kaviareň",
+      "bar": "Bar / Krčma",
+      "bakery": "Pekáreň / Cukráreň",
+      "restaurant": "Reštaurácia"
     },
-    "stepOf": "Step {step} of {total}",
+    "stepOf": "Krok {step} z {total}",
     "step3": {
-      "label": "Sign in"
+      "label": "Prihlásiť sa"
     }
   },
   "auth": {
-    "titleWithName": "One more thing for {name}",
-    "subtitle": "Just leave your email so we can save your menu — you'll be able to edit it any time.",
-    "emailLabel": "Email",
-    "emailPlaceholder": "you@restaurant.com",
-    "continueEmail": "Save my menu",
-    "or": "or",
-    "continueGoogle": "Continue with Google",
-    "changeRestaurant": "Change restaurant",
+    "titleWithName": "Ešte jedna vec pre {name}",
+    "subtitle": "Stačí zanechať e-mail, aby sme mohli uložiť vaše menu — môžete ho kedykoľvek upraviť.",
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "vy@restauracia.sk",
+    "continueEmail": "Uložiť moje menu",
+    "or": "alebo",
+    "continueGoogle": "Pokračovať s Google",
+    "changeRestaurant": "Zmeniť reštauráciu",
     "consent": {
-      "text": "By continuing you agree to our",
-      "terms": "Terms",
-      "and": "and",
-      "privacy": "Privacy Policy"
+      "text": "Pokračovaním súhlasíte s našimi",
+      "terms": "Podmienkami",
+      "and": "a",
+      "privacy": "Zásadami ochrany súkromia"
     },
-    "verifyTitle": "Check your inbox",
-    "verifySubtitle": "We sent a 6-digit code to {email}.",
-    "verifyCodeLabel": "Verification code",
-    "checkSpam": "Don't see it? Check your spam folder.",
-    "verifyButton": "Verify and open dashboard",
-    "resendCode": "Resend code",
-    "resendSent": "Code sent",
-    "changeEmail": "Use a different email",
+    "verifyTitle": "Skontrolujte schránku",
+    "verifySubtitle": "Poslali sme 6-miestny kód na {email}.",
+    "verifyCodeLabel": "Overovací kód",
+    "checkSpam": "Nevidíte? Skontrolujte priečinok spam.",
+    "verifyButton": "Overiť a otvoriť panel",
+    "resendCode": "Poslať kód znovu",
+    "resendSent": "Kód odoslaný",
+    "changeEmail": "Použiť iný e-mail",
     "errors": {
-      "emailInvalid": "Please enter a valid email address.",
-      "sendFailed": "Couldn't send the code. Try again.",
-      "verifyFailed": "Couldn't verify the code. Try again.",
-      "codeExpired": "This code expired. Request a new one.",
-      "noCode": "No code on file. Request a new one.",
-      "invalidCode": "Wrong code. Try again.",
-      "tooManyAttempts": "Too many attempts. Wait and try again later."
+      "emailInvalid": "Zadajte platnú e-mailovú adresu.",
+      "sendFailed": "Kód sa nepodarilo odoslať. Skúste znova.",
+      "verifyFailed": "Kód sa nepodarilo overiť. Skúste znova.",
+      "codeExpired": "Tento kód vypršal. Vyžiadajte si nový.",
+      "noCode": "Žiadny kód nie je evidovaný. Vyžiadajte si nový.",
+      "invalidCode": "Nesprávny kód. Skúste znova.",
+      "tooManyAttempts": "Príliš veľa pokusov. Počkajte a skúste neskôr."
     },
-    "signInTitle": "Welcome back",
-    "signInSubtitle": "Enter your email and we'll send a quick code to sign you in.",
-    "goToDashboard": "Go to dashboard"
+    "signInTitle": "Vitajte späť",
+    "signInSubtitle": "Zadajte e-mail a my pošleme rýchly kód na prihlásenie.",
+    "goToDashboard": "Prejsť na panel"
   }
 }

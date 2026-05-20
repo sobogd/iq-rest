@@ -23,11 +23,11 @@ export function FooterToolbar({ locale, navClassName = "" }: FooterToolbarProps)
 
   return (
     <>
-      <nav className={`flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted-foreground ${navClassName}`}>
+      <nav className={`flex flex-wrap items-center gap-x-5 gap-y-2 text-base text-muted-foreground ${navClassName}`}>
         <button
           type="button"
           onClick={() => {
-            analytics.track("land_footer_language_click");
+            analytics.track("l_footer_language_click");
             setLangOpen(true);
           }}
           className="hover:text-foreground transition-colors"
@@ -38,7 +38,7 @@ export function FooterToolbar({ locale, navClassName = "" }: FooterToolbarProps)
           href={`/${locale}/privacy`}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => analytics.track("land_footer_privacy_policy_click")}
+          onClick={() => analytics.track("l_footer_privacy_policy_click")}
           className="hover:text-foreground transition-colors"
         >
           {cookieTexts.privacyPolicyLink}
@@ -47,7 +47,7 @@ export function FooterToolbar({ locale, navClassName = "" }: FooterToolbarProps)
           href={`/${locale}/cookies`}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => analytics.track("land_footer_cookie_policy_click")}
+          onClick={() => analytics.track("l_footer_cookie_policy_click")}
           className="hover:text-foreground transition-colors"
         >
           {cookieTexts.cookiePolicyLink}
@@ -56,7 +56,7 @@ export function FooterToolbar({ locale, navClassName = "" }: FooterToolbarProps)
           href={`/${locale}/terms`}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => analytics.track("land_footer_terms_click")}
+          onClick={() => analytics.track("l_footer_terms_click")}
           className="hover:text-foreground transition-colors"
         >
           {cookieTexts.termsLink}

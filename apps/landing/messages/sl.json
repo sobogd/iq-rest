@@ -2041,68 +2041,68 @@
   },
   "createFlow": {
     "step1": {
-      "title": "What kind of place is this?",
-      "subtitle": "Pick a vibe and we will preload a sample menu so you can edit, not start from scratch.",
-      "label": "Type"
+      "title": "Kakšen lokal je to?",
+      "subtitle": "Izberite slog in vnaprej bomo naložili vzorčni jedilnik, da boste lahko urejali namesto začenjati iz nič.",
+      "label": "Vrsta"
     },
     "step2": {
-      "title": "What is its name?",
-      "subtitle": "This is what guests see at the top of your menu. You can change it any time.",
-      "nameLabel": "Restaurant name",
-      "namePlaceholder": "Mario's Pizza",
-      "label": "Name"
+      "title": "Kako se imenuje?",
+      "subtitle": "To gostje vidijo na vrhu jedilnika. Lahko spremenite kadar koli.",
+      "nameLabel": "Ime restavracije",
+      "namePlaceholder": "Pizza Mario",
+      "label": "Ime"
     },
-    "back": "Back",
-    "continue": "Continue",
+    "back": "Nazaj",
+    "continue": "Nadaljuj",
     "cuisines": {
-      "pizza": "Pizzeria",
-      "sushi": "Sushi / Japanese",
-      "asian": "Asian",
-      "burger": "Burger / Fast food",
-      "coffee": "Coffee / Cafe",
+      "pizza": "Picerija",
+      "sushi": "Suši / Japonska",
+      "asian": "Azijska",
+      "burger": "Burger / Hitra hrana",
+      "coffee": "Kava / Kavarna",
       "bar": "Bar / Pub",
-      "bakery": "Bakery / Pastry",
-      "restaurant": "Restaurant"
+      "bakery": "Pekarna / Slaščičarna",
+      "restaurant": "Restavracija"
     },
-    "stepOf": "Step {step} of {total}",
+    "stepOf": "Korak {step} od {total}",
     "step3": {
-      "label": "Sign in"
+      "label": "Prijava"
     }
   },
   "auth": {
-    "titleWithName": "One more thing for {name}",
-    "subtitle": "Just leave your email so we can save your menu — you'll be able to edit it any time.",
-    "emailLabel": "Email",
-    "emailPlaceholder": "you@restaurant.com",
-    "continueEmail": "Save my menu",
-    "or": "or",
-    "continueGoogle": "Continue with Google",
-    "changeRestaurant": "Change restaurant",
+    "titleWithName": "Še ena stvar za {name}",
+    "subtitle": "Samo pustite svoj e-poštni naslov, da shranimo vaš jedilnik — urejali ga boste lahko kadar koli.",
+    "emailLabel": "E-pošta",
+    "emailPlaceholder": "vi@restavracija.si",
+    "continueEmail": "Shrani moj jedilnik",
+    "or": "ali",
+    "continueGoogle": "Nadaljuj z Googlom",
+    "changeRestaurant": "Zamenjaj restavracijo",
     "consent": {
-      "text": "By continuing you agree to our",
-      "terms": "Terms",
-      "and": "and",
-      "privacy": "Privacy Policy"
+      "text": "Z nadaljevanjem se strinjate z našimi",
+      "terms": "Pogoji",
+      "and": "in",
+      "privacy": "Pravilnikom o zasebnosti"
     },
-    "verifyTitle": "Check your inbox",
-    "verifySubtitle": "We sent a 6-digit code to {email}.",
-    "verifyCodeLabel": "Verification code",
-    "checkSpam": "Don't see it? Check your spam folder.",
-    "verifyButton": "Verify and open dashboard",
-    "resendCode": "Resend code",
-    "resendSent": "Code sent",
-    "changeEmail": "Use a different email",
+    "verifyTitle": "Preverite mapo prejeto",
+    "verifySubtitle": "Poslali smo 6-mestno kodo na {email}.",
+    "verifyCodeLabel": "Koda za potrditev",
+    "checkSpam": "Ne vidite? Preverite mapo neželene pošte.",
+    "verifyButton": "Potrdi in odpri nadzorno ploščo",
+    "resendCode": "Ponovno pošlji kodo",
+    "resendSent": "Koda poslana",
+    "changeEmail": "Uporabi drug e-poštni naslov",
     "errors": {
-      "emailInvalid": "Please enter a valid email address.",
-      "sendFailed": "Couldn't send the code. Try again.",
-      "verifyFailed": "Couldn't verify the code. Try again.",
-      "codeExpired": "This code expired. Request a new one.",
-      "noCode": "No code on file. Request a new one.",
-      "invalidCode": "Wrong code. Try again.",
-      "tooManyAttempts": "Too many attempts. Wait and try again later."
+      "emailInvalid": "Vnesite veljaven e-poštni naslov.",
+      "sendFailed": "Kode ni bilo mogoče poslati. Poskusite znova.",
+      "verifyFailed": "Kode ni bilo mogoče potrditi. Poskusite znova.",
+      "codeExpired": "Ta koda je potekla. Zahtevajte novo.",
+      "noCode": "Ni zabeležene kode. Zahtevajte novo.",
+      "invalidCode": "Napačna koda. Poskusite znova.",
+      "tooManyAttempts": "Preveč poskusov. Počakajte in poskusite kasneje."
     },
-    "signInTitle": "Welcome back",
-    "signInSubtitle": "Enter your email and we'll send a quick code to sign you in.",
-    "goToDashboard": "Go to dashboard"
+    "signInTitle": "Dobrodošli nazaj",
+    "signInSubtitle": "Vnesite e-pošto in poslali bomo hitro kodo za prijavo.",
+    "goToDashboard": "Pojdi na nadzorno ploščo"
   }
 }

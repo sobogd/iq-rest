@@ -1,96 +1,170 @@
-import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { CalendarCheck, ChefHat, Receipt, Monitor } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
-  htmlLang: "hu", htmlDir: "ltr",
+  htmlLang: "hu",
+  htmlDir: "ltr",
+
   meta: {
-    title: "QR Étlap Éttermeknek — Közvetlen Rendelések, Nulla Jutalék | IQ Rest",
-    description: "Vége a papír étlapoknak és a kiszállító appok jutalékainak. QR étlap, közvetlen rendelések, foglalások és többnyelvű weboldal. 14 nap ingyen, kártya nélkül.",
-    canonical: "https://iq-rest.com/hu", ogLocale: "hu_HU",
-    ogTitle: "QR Étlap Éttermeknek — Közvetlen Rendelések, Nulla Jutalék",
-    ogDescription: "QR étlap, közvetlen rendelések, foglalások és AI fordítás. 5 perc alatt kész. 14 nap ingyen — kártya nélkül.",
+    title: "QR étlap éttermeknek — Közvetlen rendelések, nulla jutalék | IQ Rest",
+    description:
+      "Mindent-egyben platform éttermeknek: digitális étlap, QR rendelések, asztalfoglalás és konyhai kijelző. Indítás 5 perc alatt. 14 nap ingyenes, kártya nélkül.",
+    canonical: "https://iq-rest.com/hu",
+    ogLocale: "hu_HU",
+    ogTitle: "QR étlap éttermeknek — Közvetlen rendelések, nulla jutalék",
+    ogDescription:
+      "Digitális étlap, QR rendelések, asztalfoglalás és AI fordítás. Indítás 5 perc alatt. 14 nap ingyenes.",
   },
+
   ctaText: "Próbálja ki ingyen",
-  demoText: "Élő demó", microcopy: "14 nap ingyen · Kártya nélkül · Bármikor lemondod",
-  header: { navFeatures: "Funkciók", navHow: "Hogy működik", navPricing: "Árak", navFaq: "GYIK", signIn: "Belépés", cta: "Kezdjük" },
+  demoText: "Nézze meg a demót",
+  microcopy: "14 nap ingyenes · Kártya nélkül · Lemondás bármikor",
+
+  header: {
+    navFeatures: "Funkciók",
+    navHow: "Hogyan működik",
+    navPricing: "Árak",
+    navFaq: "GYIK",
+    signIn: "Bejelentkezés",
+    cta: "Kezdés",
+  },
+
   hero: {
-    verticals: ["Éttermek", "Kávézók", "Bárok", "Hotelek", "Pizzériák"],
-    headline: "Digitális étlap éttermeknek. 5 perc alatt kész.",
-    sub: "Digitális étlap az éttermednek 5 perc alatt. Minden benne: mobil szerkesztő kódolás nélkül, AI étlap-szkennelés, QR-kódok az asztalokhoz és közvetlen rendelések jutalék nélkül.",
-    dynamicHeadlines: ["0% jutalék.", "35 nyelv MI-vel.", "Online rendelés.", "Foglalás 24/7.", "Premium design."],
-    painBullets: ["0% jutalék: Minden rendelés közvetlenül Önhöz érkezik.", "AI fordítás: 35 nyelv a turisták fogyasztásának növelésére.", "Foglalás 24/7: Teltház felesleges telefonhívások nélkül.", "Rugalmas árak: Frissítse az étlapot pár másodperc alatt."],
-    rating: "Több mint 500 étterem 30+ országban",
+    verticals: ["Éttermek", "Kávézók", "Bárok", "Szállodák", "Pizzériák"],
+    headline: "Digitális étlap éttermeknek. Élesben 5 perc alatt.",
+    sub: "Digitális étlap az Ön éttermének 5 perc alatt. Minden benne van: kód nélküli szerkesztő, nyomtatott étlap AI felismerés, QR kódok az asztalokra és közvetlen rendelések jutalék nélkül.",
+    dynamicHeadlines: ["0% jutalék.", "35 AI nyelv.", "Online rendelések.", "Foglalás 24/7.", "Prémium dizájn."],
+    painBullets: [
+      "0% jutalék: minden rendelés közvetlenül az Ön éttermébe érkezik.",
+      "AI fordítás 35 nyelvre — a turisták megértik az étlapot és többet rendelnek.",
+      "Foglalás 24/7: a vendégek maguk foglalnak asztalt, telefonhívások nélkül a csúcsidőszakban.",
+      "Rugalmas árak: az étlap változások másodpercek alatt élesben.",
+    ],
+    rating: "Több mint 500 étterem több mint 30 országban",
   },
+
   features: {
-    heading: "Minden, ami kell.", headingAccent: "Semmi, ami nem.",
-    sub: "Éttermeknek építve. Asztalnál használva.",
+    heading: "Minden, amire szüksége van.",
+    headingAccent: "Semmi felesleges.",
+    sub: "Éttermekhez készült. Minden nap használják az asztalnál, a konyhában és az étteremben.",
     items: [
-      
-      { Icon: QrCode, title: "Rendelés az asztaltól", desc: "A rendelések azonnal megérkeznek WhatsAppon vagy a panelre asztalszámmal együtt. Gyorsabb kiszolgálás.", tag: "Közvetlen rendelések", href: "/hu/online-rendelesi-rendszer-etterem" },
-      { Icon: Languages, title: "AI fordító (35 nyelv)", desc: "Az AI-nk ért a gasztronómiához. A turisták 20%-kal többet rendelnek, ha értik az ételeket.", tag: "AI fordítás" },
-      { Icon: CalendarCheck, title: "Asztalfoglalás", desc: "A rendszer fogadja a foglalásokat, amíg Ön a konyhában van. Nincs több elveszített vendég.", tag: "Foglalások" },
-      { Icon: Palette, title: "Modern design", desc: "Videó hátterek és étvágygerjesztő fotók. Az étlapja prémium megjelenést kap.", tag: "Egyedi design" },
-      { Icon: Smartphone, title: "Gyors szerkesztő", desc: "Kezelje a stop-listát és az árakat közvetlenül a telefonjáról. A változások azonnal élnek.", tag: "Menüszerkesztő" },
-      { Icon: ChefHat, title: "Konyhai kijelző", desc: "Felejtse el a papírblokkokat. A rendelések egyenesen a szakács kijelzőjére mennek.", tag: "Konyhai kijelző" },
-    
+      { Icon: Monitor, title: "Digitális étlap", desc: "Étlap a böngészőben fotókkal, árakkal, allergénekkel és leírásokkal. Valós időben frissül a telefonról. A vendégek a saját nyelvükön látják az étlapot; az étterem spórol a nyomtatáson.", tag: "Digitális étlap", href: "/hu/digitalis-etlap-etterem" },
+      { Icon: Receipt, title: "Rendelésfelvétel: vendég és pincér", desc: "QR kód az asztalon a vendégnek, vagy a pincér felveszi a rendelést a telefonjáról — mindkettő közvetlenül a konyhába vagy a WhatsAppba kerül. Jutalék nélkül, asztalszámmal minden nyugtán.", tag: "Rendelések", href: "/hu/rendelesi-rendszer-etterem" },
+      { Icon: CalendarCheck, title: "Asztalfoglalás 24/7", desc: "A vendégek maguk foglalnak asztalt a weboldalon vagy a QR étlapon keresztül, miközben Ön a teremben elfoglalt. Asztali naptár, automatikus visszaigazolások és emlékeztetők. Egyetlen elveszített vendég sem.", tag: "Foglalás", href: "/hu/asztalfoglalas" },
+      { Icon: ChefHat, title: "Konyhai kijelző (KDS)", desc: "A papír blokkok már nem szükségesek. A teremből a rendelések közvetlenül a séf képernyőjére kerülnek — oszlopok „készül / kész / felszolgálva“, allergének és megjegyzések színnel kiemelve. Táblagépen vagy telefonon.", tag: "KDS", href: "/hu/konyhai-kijelzo" },
     ],
   },
+
   founder: {
-    eyebrow: "Egy étterem-tulajdonos építette",
-    quoteStart: "A feleségemmel kávézót nyitottunk és heteket kerestünk olyan rendszert, ami online rendeléseket, foglalásokat kezel és modernen néz ki. Minden, amit kipróbáltunk, otromba, csúnya volt vagy hiányzott a fél funkciója —",
-    quoteAccent: "így megépítettük azt, amit mi magunk akartunk volna.",
-    sign: "Bogdan Sokolov · alapító, ex-kávézó tulajdonos",
-    photoAlt: "Bogdan, az IQ Rest alapítója",
+    eyebrow: "Vendéglátósok építették",
+    quoteStart:
+      "A feleségemmel a saját kávézónkat vezettük és személyes tapasztalatból tudjuk, milyen valójában egy étteremnap — rendelésfelvétel, foglalások, terem és konyha munkafolyamata. Egy egyetlen eszközt akartunk: modernet, könnyen elindíthatót és első pillantásra érthetőt —",
+    quoteAccent: "így kezdtük el építeni a platformot, amelyet most más vendéglátósoknak fejlesztünk.",
+    sign: "Bogdan Sokolov · alapító, korábbi kávézó tulajdonos",
+    photoAlt: "Bogdan Sokolov, az IQ Rest alapítója",
   },
+
   how: {
-    heading: "Élőben kevesebb mint 5 perc alatt",
-    sub: "Négy rövid lépés. Nincs telepítés, nincs technikai beállítás.",
+    heading: "Élesben 5 perc alatt",
+    sub: "Négy rövid lépés. Telepítés nélkül, technikai beállítás nélkül.",
     steps: [
-      { n: "1", t: "Típus és név", d: "Válaszd ki a típust és add meg a nevet." },
-      { n: "2", t: "Mentés", d: "E-mail vagy belépés Google-fiókkal." },
-      { n: "3", t: "Étlap", d: "Készítsd el vagy szkennelj papírosat." },
-      { n: "4", t: "Kész", d: "Nézd, oszd meg és fogadj rendeléseket." },
+      { n: "1", t: "Típus és név", d: "Válassza ki a hely típusát és adja meg a nevet." },
+      { n: "2", t: "Mentés", d: "Adja meg e-mail címét vagy jelentkezzen be Google fiókkal." },
+      { n: "3", t: "Étlap", d: "Adjon hozzá tételeket kézzel vagy töltsön fel nyomtatott étlapot AI felismeréshez." },
+      { n: "4", t: "Kész", d: "Ossza meg a linket vagy QR kódot és kezdje fogadni a rendeléseket." },
     ],
   },
+
   pricing: {
-    badge: "Nulla jutalék · Nincs szerződés",
-    heading: "Egy csomag.", headingAccent: "Minden benne.",
-    sub: "QR étlap, rendelések, AI fordítás, étterem weboldal és foglalások. Egy egyszerű ár.",
-    monthlyLabel: "Havi", yearlyLabel: "Éves", saveBadge: "Spórolj 25%", perMonth: "havonta",
-    billedAnnually: "Éves számlázás {total}", youSave: "Spórolsz {amount}",
-    trust: { secure: "Biztonságos fizetés Stripe-pal", noCommitment: "Nincs elköteleződés", quick: "Aktív percek alatt", restaurants: "500+ étterem" },
+    badge: "Jutalék nélkül · Szerződés nélkül",
+    heading: "Egy csomag.",
+    headingAccent: "Minden benne.",
+    sub: "QR étlap, rendelésfelvétel, AI fordítás, étterem weboldal és foglalás. Egyetlen átlátható havi díj.",
+    monthlyLabel: "Havi",
+    yearlyLabel: "Éves",
+    saveBadge: "25% megtakarítás",
+    perMonth: "havonta",
+    billedAnnually: "Éves számlázás: {total}",
+    youSave: "Megtakarít {amount}",
+    trust: { secure: "Biztonságos fizetés Stripe-on keresztül", noCommitment: "Kötelezettség nélkül", quick: "Percek alatt aktív", restaurants: "500+ étterem" },
   },
+
   faq: {
-    eyebrow: "Kérdés?", heading: "Gyakori", headingAccent: "kérdések.",
-    sub: "Amit éttermesek megkérdeznek regisztráció előtt. Nem látod a tiédet? Írj WhatsApp-on — igazi emberek válaszolnak.",
-    whatsappCta: "Kérdezz WhatsApp-on", whatsappPrefill: "Szia, kérdésem van az IQ Rest-ről",
+    eyebrow: "Vannak kérdései?",
+    heading: "Gyakran ismételt",
+    headingAccent: "kérdések.",
+    sub: "Amit a vendéglátósok kérdeznek regisztráció előtt. Nem találja a kérdését? Írjon nekünk WhatsAppon — valódi emberek válaszolnak, nem bot.",
+    whatsappCta: "Kérdezzen WhatsAppon",
+    whatsappPrefill: "Üdvözlöm, kérdésem van az IQ Rest-tel kapcsolatban",
     items: [
-      { q: "Mit tartalmaz a próbaidő és mi van utána?", a: "14 nap teljes hozzáférés, kártya nélkül. 14 nap után a fiók szünetel, ha nem adsz meg fizetési módot — soha nem terhelünk automatikusan. Add meg később a fizetési adatokat újraaktiváláshoz. Egy kattintással lemondod." },
-      { q: "Veszitek jutalékot a rendelésekből?", a: "Nullát. Minden rendelés a QR étlapodról egyenesen hozzád megy — nincs részünk, nincs Wolt / Foodpanda díj. Egy fix havi ár, ennyi." },
-      { q: "Kell app a vendégeknek? Kell technikai tudás?", a: "Nincs app a vendégeknek — kamerával beolvassák a QR-t, az étlap megnyílik a böngészőben. Nincs technikai tudás neked — az egész panel a telefonon megy, érintsd meg hozzáadáshoz, húzd átrendezéshez, ennyi a görbe." },
-      { q: "Milyen gyorsan változtatok árakat és adok hozzá fogásokat?", a: "Azonnal. Változtass árat a telefonon, a vendégek másodpercek alatt látják. Új fogás? Érintsd meg, írd be, fotó, kész — nincs újranyomtatás, nincs tervező-várakozás." },
-      { q: "Hány nyelvet támogattok?", a: "35 nyelvet beépített AI fordítással. Egy érintés lefordítja az egész étlapot, az AI érti a kulináris kontextust — a nevek és leírások természetesen hangoznak minden nyelven. A turisták többet rendelnek, ha tényleg értik." },
+      { q: "Mit tartalmaz a próbaidőszak és mi történik utána?", a: "Teljes hozzáférés minden funkcióhoz 14 napig, kártya nélkül. 14 nap után a fiók szünetel, ha nem ad meg fizetési módot — soha nem terhelünk automatikusan. Később hozzáadhatja a fizetést és onnan folytathatja, ahol abbahagyta. Lemondás bármikor egy kattintással." },
+      { q: "Felszámítanak jutalékot a rendelésekre?", a: "Nem. Minden rendelés a QR étlapról közvetlenül az étterembe érkezik — nincs százalék a mi oldalunkról, nincsenek aggregátor díjak. Egyetlen fix havi díj és semmi más." },
+      { q: "Szükségük van a vendégeknek alkalmazásra, nekünk technikai tudásra?", a: "A vendégeknek nincs szükségük alkalmazásra — a telefon kameráját a QR kódra irányítják és az étlap megnyílik a böngészőben. Az éttermeknek sincs szükségük technikai tudásra: az adminisztrációs panel minden modern böngészőben működik telefonon, táblagépen vagy laptopon. Minden művelet kattintással és húzással történik, kód nélkül." },
+      { q: "Milyen gyorsan változnak az árak és jelennek meg új ételek?", a: "Azonnal. Változtassa meg az árat a telefonjáról — a vendégek másodperceken belül látják. Egy új étel néhány érintést igényel: név, ár, fotó. Nyomtatás nélkül, designer várakozás nélkül." },
+      { q: "Hány nyelv támogatott?", a: "35 nyelv beépített AI fordítással. Egy érintés és az egész étlap lefordításra kerül; az AI érti a kulináris kontextust — a nevek és leírások természetesen hangzanak minden nyelven. A turisták magabiztosabban rendelnek, ha valóban megértik az étlapot." },
     ],
   },
-  finalCta: { heading: "5 perc alatt kész.", headingAccent: "14 napig ingyen.", sub: "Kártya nélkül. Bármikor lemondod. Csatlakozz az 500+ étteremhez, ami már IQ Rest-en van." },
-  scan: {
-    heading: "Papír étlap vagy PDF?",
-    headingAccent: "Az AI 60 másodperc alatt digitalizálja.",
-    sub: "Töltsd fel — az AI felismeri a kategóriákat, ételeket és árakat.",
-    cta: "Étlap beolvasása →",
+
+  finalCta: {
+    heading: "Élesben 5 perc alatt.",
+    headingAccent: "14 nap ingyenes.",
+    sub: "Kártya nélkül, lemondás bármikor. Csatlakozzon 500+ étteremhez, amelyek már az IQ Rest-et használják.",
   },
+
+  scan: {
+    heading: "Van papír étlapja vagy PDF-je?",
+    headingAccent: "Az AI 60 másodperc alatt digitalizálja.",
+    sub: "Töltsön fel fotót vagy dokumentumot — az AI automatikusan felismeri a kategóriákat, ételeket és árakat.",
+    cta: "Étlap szkennelése →",
+  },
+
+  pricingHero: {
+    chips: ["Jutalék nélkül", "Szerződés nélkül", "14 nap ingyenes"],
+    heading: "Árak.",
+    headingAccent: "Rejtett díjak nélkül.",
+    sub: "Egyetlen átlátható havi díj. Nincs százalék a rendelésekre és nincs aggregátor jutalék. Lemondja az előfizetést bármikor.",
+    popularBadge: "Népszerű",
+    perMonthSuffix: "/hó",
+    whenAnnualTemplate: "éves számlázás · {total} € évente",
+    orMonthlyTemplate: "vagy {price} €/hó",
+    savingsTemplate: "megtakarít {amount} € évente",
+    plans: {
+      basic: {
+        name: "Basic",
+        tagline: "Étlap, QR rendelések és AI fordítás. Élesben 5 perc alatt.",
+        features: [
+          "QR étlap minden asztalra",
+          "Digitális étlap fotókkal és allergénekkel",
+          "AI fordítás 35 nyelvre",
+          "Rendelések az étlapról (opcionális)",
+          "AI étel fotó generálás",
+          "Kezelés bármelyik telefonról vagy táblagépről",
+        ],
+      },
+      pro: {
+        name: "Pro",
+        tagline: "Teljes étterem irányítás: konyhai kijelző és foglalások.",
+        features: [
+          "Minden a Basic-ből",
+          "Konyhai kijelző (KDS)",
+          "Online asztalfoglalás 24/7",
+          "Prioritásos WhatsApp támogatás",
+        ],
+      },
+    },
+  },
+
   footer: {
     featureLinks: [
-      { href: "/hu/online-rendelesi-rendszer-etterem", label: "Online rendelési rendszer" }, { href: "/hu/ai-translation", label: "AI fordítás" },
-      { href: "/hu/reservations", label: "Foglalások" }, { href: "/hu/mobile-management", label: "Mobil kezelés" },
-      { href: "/hu/easy-menu", label: "Étlap szerkesztő" }, { href: "/hu/custom-design", label: "Videó és fotó hátterek" },
-      { href: "/hu/color-scheme", label: "Márka színek" }, { href: "/hu/multilingual", label: "Többnyelvű weboldal" },
-      { href: "/hu/ai-images", label: "AI fotó optimalizálás" }, { href: "/hu/analytics", label: "Analitika" },
-      { href: "/hu/instant-setup", label: "Azonnali telepítés" }, { href: "/hu/personal-support", label: "Személyes támogatás" },
+      { href: "/hu/digitalis-etlap-etterem", label: "Digitális étlap" },
+      { href: "/hu/rendelesi-rendszer-etterem", label: "Rendelések" },
+      { href: "/hu/asztalfoglalas", label: "Foglalás" },
+      { href: "/hu/konyhai-kijelzo", label: "Konyhai kijelző" },
     ],
     navLinks: [
-      { href: "#pricing", label: "Árak" }, { href: "#faq", label: "Kérdések" },
-      { href: "/hu/languages", label: "Nyelvváltás" },
+      { href: "/hu/arak", label: "Árak" },
+      { href: "#faq", label: "GYIK" },
+      { href: "/hu/languages", label: "Nyelv váltás" },
     ],
     copyrightTemplate: "© {year} IQ Rest. Minden jog fenntartva.",
   },

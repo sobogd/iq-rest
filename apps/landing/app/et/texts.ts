@@ -1,96 +1,170 @@
-import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { CalendarCheck, ChefHat, Receipt, Monitor } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
-  htmlLang: "et", htmlDir: "ltr",
+  htmlLang: "et",
+  htmlDir: "ltr",
+
   meta: {
-    title: "QR-menüü Restoranidele — Otsetellimused, Null Vahendustasu | IQ Rest",
-    description: "Lõpp paberist menüüdele ja kullerirakenduste vahendustasudele. QR-menüü, otsetellimused, broneeringud ja mitmekeelne veebileht. 14 päeva tasuta, kaardita.",
-    canonical: "https://iq-rest.com/et", ogLocale: "et_EE",
-    ogTitle: "QR-menüü Restoranidele — Otsetellimused, Null Vahendustasu",
-    ogDescription: "QR-menüü, otsetellimused, broneeringud ja AI tõlge. Valmis 5 minutiga. 14 päeva tasuta — kaardita.",
+    title: "QR-menüü restoranidele — Otse tellimused, null komisjoni | IQ Rest",
+    description:
+      "Kõik-ühes platvorm restoranidele: digitaalne menüü, QR-tellimused, laudade broneerimine ja köögiekraan. Käivitub 5 minutiga. 14 päeva tasuta, ilma kaardita.",
+    canonical: "https://iq-rest.com/et",
+    ogLocale: "et_EE",
+    ogTitle: "QR-menüü restoranidele — Otse tellimused, null komisjoni",
+    ogDescription:
+      "Digitaalne menüü, QR-tellimused, laudade broneerimine ja AI-tõlge. Käivitub 5 minutiga. 14 päeva tasuta.",
   },
+
   ctaText: "Proovi tasuta",
-  demoText: "Vaata demo", microcopy: "14 päeva tasuta · Ilma kaardita · Tühista millal soovid",
-  header: { navFeatures: "Funktsioonid", navHow: "Kuidas töötab", navPricing: "Hinnad", navFaq: "FAQ", signIn: "Logi sisse", cta: "Alusta" },
+  demoText: "Vaata demo",
+  microcopy: "14 päeva tasuta · Ilma kaardita · Tühista igal ajal",
+
+  header: {
+    navFeatures: "Funktsioonid",
+    navHow: "Kuidas töötab",
+    navPricing: "Hinnad",
+    navFaq: "KKK",
+    signIn: "Logi sisse",
+    cta: "Alusta",
+  },
+
   hero: {
     verticals: ["Restoranid", "Kohvikud", "Baarid", "Hotellid", "Pitsabaarid"],
-    headline: "Digitaalne menüü restoranidele. Valmis 5 minutiga.",
-    sub: "Digitaalne menüü teie restoranile 5 minutiga. Kõik sisaldub: mobiilne kooditu redaktor, AI menüü skannimine, QR-koodid laudadele ja otsetellimused ilma komisjonita.",
-    dynamicHeadlines: ["0% vahendustasu.", "35 keelt tehisintellektiga.", "Online tellimused.", "Broneeringud 24/7.", "Premium disain."],
-    painBullets: ["0% vahendustasu: Kõik tellimused lähevad otse teile.", "AI-tõlge: 35 keelt turistide keskmise arve suurendamiseks.", "Broneeringud 24/7: Täis saal ilma liigsete kõnedeta.", "Paindlikud hinnad: Uuendage menüüd sekunditega."],
-    rating: "Üle 500 restorani 30+ riigis",
+    headline: "Digitaalne menüü restoranidele. Veebis 5 minutiga.",
+    sub: "Digitaalne menüü sinu restoranile 5 minutiga. Kõik kaasas: koodita redaktor, AI-tuvastus trükimenüüst, QR-koodid laudadele ja otsetellimused ilma komisjonita.",
+    dynamicHeadlines: ["0% komisjon.", "35 AI-keelt.", "Veebitellimused.", "Broneerimine 24/7.", "Premium-disain."],
+    painBullets: [
+      "0% komisjon: iga tellimus läheb otse sinu restorani.",
+      "AI-tõlge 35 keeles — turistid mõistavad menüüd ja tellivad rohkem.",
+      "Broneerimine 24/7: külalised broneerivad lauad ise, ilma kõnedeta tipptundidel.",
+      "Paindlikud hinnad: menüü uuendused jõuavad veebi sekunditega.",
+    ],
+    rating: "Üle 500 restorani enam kui 30 riigis",
   },
+
   features: {
-    heading: "Kõik mida vajad.", headingAccent: "Mitte midagi muud.",
-    sub: "Restoranidele tehtud. Lauas kasutatud.",
+    heading: "Kõik, mida vajad.",
+    headingAccent: "Mitte midagi liigset.",
+    sub: "Loodud restoranide jaoks. Kasutatakse iga päev lauas, köögis ja saalis.",
     items: [
-      
-      { Icon: QrCode, title: "Tellimine lauast", desc: "Tellimused saabuvad kohe WhatsAppi või paneeli koos lauanumbriga. Kiirem teenindus.", tag: "Otsetellimused", href: "/et/online-tellimissusteem-restoranile" },
-      { Icon: Languages, title: "AI-tõlkija (35 keelt)", desc: "Meie AI tunneb gastronoomiat. Turistid tellivad 20% rohkem, kui nad saavad menüüst aru.", tag: "AI-tõlge" },
-      { Icon: CalendarCheck, title: "Laudade broneerimine", desc: "Süsteem võtab broneeringuid vastu, kui olete köögis ametis. Mitte ühtegi kaotatud klienti.", tag: "Broneeringud" },
-      { Icon: Palette, title: "Moodne disain", desc: "Videotaustad ja isuäratavad fotod. Teie menüü näeb välja kallis ja kutsub tellima.", tag: "Oma kujundus" },
-      { Icon: Smartphone, title: "Kiire redaktor", desc: "Hallake stop-listi ja hindu otse nutitelefonist. Muudatused on kohe nähtavad.", tag: "Menüü-redaktor" },
-      { Icon: ChefHat, title: "Köögiekrann", desc: "Unustage paberšekid. Saalist tulevad tellimused lähevad otse koka ekraanile.", tag: "Köögiekrann" },
-    
+      { Icon: Monitor, title: "Digitaalne menüü", desc: "Menüü brauseris fotode, hindade, allergeenide ja kirjeldustega. Uueneb reaalajas telefonist. Külalised näevad menüüd oma keeles; restoran hoiab kokku trükikuludelt.", tag: "Digitaalne menüü", href: "/et/digitaalne-menuu-restoran" },
+      { Icon: Receipt, title: "Tellimuste vastuvõtmine: külaline ja kelner", desc: "QR-kood lauas külalisele või kelner võtab tellimuse telefonist — mõlemad jõuavad otse kööki või WhatsAppi. Ilma komisjonita, lauanumbriga igal tellimisel.", tag: "Tellimused", href: "/et/tellimissusteem-restoran" },
+      { Icon: CalendarCheck, title: "Laudade broneerimine 24/7", desc: "Külalised broneerivad lauad ise veebilehe või QR-menüü kaudu, samal ajal kui sa oled saalis hõivatud. Lauakalender, automaatsed kinnitused ja meeldetuletused. Mitte ühtegi kaotsi läinud külalist.", tag: "Broneerimine", href: "/et/laudade-broneerimine" },
+      { Icon: ChefHat, title: "Köögiekraan (KDS)", desc: "Paberitellimusi pole enam vaja. Saali tellimused jõuavad otse koka ekraanile — veerud „valmistatakse / valmis / serveeritud“, allergeenid ja märkused värviga esile tõstetud. Tahvlil või telefonis.", tag: "KDS", href: "/et/kook-ekraan" },
     ],
   },
+
   founder: {
-    eyebrow: "Tehtud restoranipidaja poolt",
-    quoteStart: "Mu naine ja mina avasime kohviku ja otsisime nädalaid süsteemi, mis tegeleks online tellimustega, broneeringutega ja näeks ka kaasaegne välja. Kõik mida proovisime, oli kohmakas, kole või puudusid pooled funktsioonid —",
-    quoteAccent: "nii et ehitasime selle, mida ise oleksime tahtnud.",
+    eyebrow: "Ehitatud restoranipidajate poolt",
+    quoteStart:
+      "Mu naine ja mina pidasime omaenda kohvikut ja teame omast käest, kuidas restoranipäev tegelikult kulgeb — tellimuste vastuvõtmine, broneeringud, saali ja köögi voog. Tahtsime ühte tööriista: kaasaegset, kergesti käivitatavat ja esmapilgul arusaadavat —",
+    quoteAccent: "nii hakkasime ehitama platvormi, mida nüüd arendame teiste restoranipidajate jaoks.",
     sign: "Bogdan Sokolov · asutaja, endine kohviku omanik",
-    photoAlt: "Bogdan, IQ Resti asutaja",
+    photoAlt: "Bogdan Sokolov, IQ Resti asutaja",
   },
+
   how: {
-    heading: "Live alla 5 minutiga",
-    sub: "Neli lühikest sammu. Ilma paigalduseta, ilma tehnilise seadistuseta.",
+    heading: "Veebis 5 minutiga",
+    sub: "Neli lühikest sammu. Ilma installideta, ilma tehnilise seadistuseta.",
     steps: [
-      { n: "1", t: "Tüüp ja nimi", d: "Vali tüüp ja sisesta nimi." },
-      { n: "2", t: "Salvestamine", d: "E-post või sisselogimine Google'iga." },
-      { n: "3", t: "Menüü", d: "Loo ise või skanni paberkandjal." },
-      { n: "4", t: "Valmis", d: "Vaata, jaga ja võta tellimusi vastu." },
+      { n: "1", t: "Tüüp ja nimi", d: "Vali asutuse tüüp ja sisesta nimi." },
+      { n: "2", t: "Salvesta", d: "Sisesta oma e-post või logi sisse Google'iga." },
+      { n: "3", t: "Menüü", d: "Lisa tooted käsitsi või laadi üles trükitud menüü AI-skannimiseks." },
+      { n: "4", t: "Valmis", d: "Jaga linki või QR-koodi ja alusta tellimuste vastuvõtmist." },
     ],
   },
+
   pricing: {
-    badge: "Null vahendustasu · Ilma lepinguteta",
-    heading: "Üks pakett.", headingAccent: "Kõik sees.",
-    sub: "QR-menüü, tellimused, AI tõlge, restorani veebileht ja broneeringud. Üks lihtne hind.",
-    monthlyLabel: "Kuu", yearlyLabel: "Aasta", saveBadge: "Säästa 25%", perMonth: "kuus",
-    billedAnnually: "Aastane arveldus {total}", youSave: "Säästad {amount}",
-    trust: { secure: "Turvaline makse Stripe'ga", noCommitment: "Ilma kohustuseta", quick: "Aktiivne minutitega", restaurants: "500+ restorani" },
+    badge: "Ilma komisjonita · Ilma lepinguteta",
+    heading: "Üks plaan.",
+    headingAccent: "Kõik kaasas.",
+    sub: "QR-menüü, tellimuste vastuvõtmine, AI-tõlge, restorani veebileht ja broneerimine. Üks läbipaistev kuutasu.",
+    monthlyLabel: "Kuus",
+    yearlyLabel: "Aastas",
+    saveBadge: "Säästa 25%",
+    perMonth: "kuus",
+    billedAnnually: "Aastane arve: {total}",
+    youSave: "Säästad {amount}",
+    trust: { secure: "Turvaline Stripe'i makse", noCommitment: "Ilma kohustuseta", quick: "Aktiveerub minutitega", restaurants: "500+ restorani" },
   },
+
   faq: {
-    eyebrow: "Küsimused?", heading: "Korduma kippuvad", headingAccent: "küsimused.",
-    sub: "Mida restoranipidajad küsivad enne registreerumist. Ei näe oma? Kirjuta WhatsAppis — vastavad päris inimesed.",
-    whatsappCta: "Küsi WhatsAppist", whatsappPrefill: "Tere, mul on küsimus IQ Resti kohta",
+    eyebrow: "Kas sul on küsimusi?",
+    heading: "Korduma kippuvad",
+    headingAccent: "küsimused.",
+    sub: "Mida restoranipidajad enne registreerumist küsivad. Ei leia oma küsimust? Kirjuta meile WhatsAppi — vastavad päris inimesed, mitte bot.",
+    whatsappCta: "Küsi WhatsAppis",
+    whatsappPrefill: "Tere, mul on küsimus IQ Resti kohta",
     items: [
-      { q: "Mida sisaldab tasuta prooviperiood ja mis juhtub pärast?", a: "14 päeva täielik juurdepääs, kaardita. Pärast 14 päeva konto peatub, kui ei lisa makseviisi — me ei võta kunagi automaatselt. Lisa hiljem makseandmed, et taasaktiveerida. Tühista ühe klõpsuga." },
-      { q: "Kas võtate tellimuste pealt vahendustasu?", a: "Null. Iga tellimus sinu QR-menüüst läheb otse sulle — meie osa pole, Wolt / Bolt Food tasud puuduvad. Üks fikseeritud kuumakse, ongi kõik." },
-      { q: "Kas külalistel on rakendust vaja? Kas mul on tehnilisi oskusi vaja?", a: "Külalistele rakendust pole — skannivad QR-i kaameraga, menüü avaneb brauseris. Sulle tehnilisi oskusi pole — kogu paneel töötab telefonis, puuduta lisamiseks, lohista ümberkorraldamiseks, ongi kogu kõver." },
-      { q: "Kui kiiresti muudan hindu ja lisan roogasid?", a: "Kohe. Muuda hinda telefonis, külalised näevad sekunditega. Uus roog? Puuduta, kirjuta, foto, valmis — ilma uuesti printimata, ilma disainerit ootamata." },
-      { q: "Mitut keelt toetate?", a: "35 keelt sisseehitatud AI tõlkega. Üks puudutus tõlgib kogu menüü ja AI mõistab kulinaarset konteksti — nimed ja kirjeldused kõlavad iga keeles loomulikult. Turistid tellivad rohkem, kui nad tegelikult mõistavad." },
+      { q: "Mida sisaldab prooviperiood ja mis juhtub pärast?", a: "Täielik juurdepääs kõigile funktsioonidele 14 päeva, ilma kaardita. Pärast 14 päeva pannakse konto pausile, kui makseviisi pole lisatud — me ei nõua kunagi automaatselt. Sa võid makse hiljem lisada ja jätkata sealt, kus pooleli jäi. Tühista igal ajal ühe klikiga." },
+      { q: "Kas võtate tellimustelt komisjoni?", a: "Ei. Iga tellimus QR-menüüst läheb otse restorani — meie poolt ei mingit protsenti, ei mingeid agregaatorite tasusid. Üks kindel kuutasu ja muud midagi." },
+      { q: "Kas külalised vajavad rakendust, kas meil on vaja tehnilisi oskusi?", a: "Külalised ei vaja rakendust — nad suunavad telefoni kaamera QR-koodile ja menüü avaneb brauseris. Restoranid ei vaja samuti tehnilisi oskusi: halduspaneel töötab igas kaasaegses brauseris telefonis, tahvelarvutis või sülearvutis. Iga toiming on klikiga ja lohistamisega, ilma koodita." },
+      { q: "Kui kiiresti muutuvad hinnad ja ilmuvad uued road?", a: "Kohe. Muuda hinda telefonist — külalised näevad seda sekundite jooksul. Uus roog võtab paar puudutust: nimi, hind, foto. Ilma uue trükita, ilma disaineri ootamist." },
+      { q: "Mitut keelt toetatakse?", a: "35 keelt sisseehitatud AI-tõlkega. Üks puudutus ja kogu menüü on tõlgitud; AI mõistab kulinaarset konteksti — nimed ja kirjeldused kõlavad loomulikult igas keeles. Turistid tellivad enesekindlamalt, kui nad menüüd tõeliselt mõistavad." },
     ],
   },
-  finalCta: { heading: "Valmis 5 minutiga.", headingAccent: "Tasuta 14 päeva.", sub: "Kaardita. Tühista millal soovid. Liitu 500+ restoraniga juba IQ Restis." },
+
+  finalCta: {
+    heading: "Veebis 5 minutiga.",
+    headingAccent: "14 päeva tasuta.",
+    sub: "Ilma kaardita, tühista igal ajal. Liitu 500+ restoraniga, kes juba kasutavad IQ Resti.",
+  },
+
   scan: {
-    heading: "Paber-menüü või PDF?",
-    headingAccent: "Tehisintellekt digiteerib 60 sekundiga.",
-    sub: "Lae üles — AI tunneb ära kategooriad, road ja hinnad.",
+    heading: "On sul paberil menüü või PDF?",
+    headingAccent: "AI digiteerib selle 60 sekundiga.",
+    sub: "Lae üles foto või dokument — AI tuvastab kategooriad, road ja hinnad automaatselt.",
     cta: "Skanni menüü →",
   },
+
+  pricingHero: {
+    chips: ["Ilma komisjonita", "Ilma lepinguteta", "14 päeva tasuta"],
+    heading: "Hinnad.",
+    headingAccent: "Mitte mingeid varjatud tasusid.",
+    sub: "Üks läbipaistev kuutasu. Mitte mingit protsenti tellimustelt ega agregaatorite komisjoni. Tühista tellimus igal ajal.",
+    popularBadge: "Populaarne",
+    perMonthSuffix: "/k",
+    whenAnnualTemplate: "aastane arve · {total} € aastas",
+    orMonthlyTemplate: "või {price} €/k",
+    savingsTemplate: "säästad {amount} € aastas",
+    plans: {
+      basic: {
+        name: "Basic",
+        tagline: "Menüü, QR-tellimused ja AI-tõlge. Veebis 5 minutiga.",
+        features: [
+          "QR-menüü igale lauale",
+          "Digitaalne menüü fotode ja allergeenidega",
+          "AI-tõlge 35 keelde",
+          "Tellimused menüüst (valikuline)",
+          "AI roogade fotode genereerimine",
+          "Halda igast telefonist või tahvelarvutist",
+        ],
+      },
+      pro: {
+        name: "Pro",
+        tagline: "Täielik kontroll restorani üle: köögiekraan ja broneeringud.",
+        features: [
+          "Kõik Basicust",
+          "Köögiekraan (KDS)",
+          "Veebipõhine laudade broneerimine 24/7",
+          "Eelistatud WhatsAppi tugi",
+        ],
+      },
+    },
+  },
+
   footer: {
     featureLinks: [
-      { href: "/et/online-tellimissusteem-restoranile", label: "Online tellimissüsteem" }, { href: "/et/ai-translation", label: "AI tõlge" },
-      { href: "/et/reservations", label: "Broneeringud" }, { href: "/et/mobile-management", label: "Mobiilihaldus" },
-      { href: "/et/easy-menu", label: "Menüü redaktor" }, { href: "/et/custom-design", label: "Video- ja fototaustad" },
-      { href: "/et/color-scheme", label: "Brändivärvid" }, { href: "/et/multilingual", label: "Mitmekeelne veebileht" },
-      { href: "/et/ai-images", label: "AI fotooptimeerimine" }, { href: "/et/analytics", label: "Statistika" },
-      { href: "/et/instant-setup", label: "Kohene seadistus" }, { href: "/et/personal-support", label: "Isiklik tugi" },
+      { href: "/et/digitaalne-menuu-restoran", label: "Digitaalne menüü" },
+      { href: "/et/tellimissusteem-restoran", label: "Tellimused" },
+      { href: "/et/laudade-broneerimine", label: "Broneerimine" },
+      { href: "/et/kook-ekraan", label: "Köögiekraan" },
     ],
     navLinks: [
-      { href: "#pricing", label: "Hinnad" }, { href: "#faq", label: "Küsimused" },
-      { href: "/et/languages", label: "Vaheta keelt" },
+      { href: "/et/hinnad", label: "Hinnad" },
+      { href: "#faq", label: "KKK" },
+      { href: "/et/languages", label: "Muuda keelt" },
     ],
     copyrightTemplate: "© {year} IQ Rest. Kõik õigused kaitstud.",
   },

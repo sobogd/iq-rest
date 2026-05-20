@@ -2041,68 +2041,68 @@
   },
   "createFlow": {
     "step1": {
-      "title": "What kind of place is this?",
-      "subtitle": "Pick a vibe and we will preload a sample menu so you can edit, not start from scratch.",
-      "label": "Type"
+      "title": "Kāda veida iestāde tā ir?",
+      "subtitle": "Izvēlieties stilu, un mēs ielādēsim parauga ēdienkarti, lai jūs varētu rediģēt, nevis sākt no nulles.",
+      "label": "Veids"
     },
     "step2": {
-      "title": "What is its name?",
-      "subtitle": "This is what guests see at the top of your menu. You can change it any time.",
-      "nameLabel": "Restaurant name",
-      "namePlaceholder": "Mario's Pizza",
-      "label": "Name"
+      "title": "Kā to sauc?",
+      "subtitle": "To viesi redz ēdienkartes augšpusē. Varat mainīt jebkurā laikā.",
+      "nameLabel": "Restorāna nosaukums",
+      "namePlaceholder": "Mario Pica",
+      "label": "Nosaukums"
     },
-    "back": "Back",
-    "continue": "Continue",
+    "back": "Atpakaļ",
+    "continue": "Turpināt",
     "cuisines": {
-      "pizza": "Pizzeria",
-      "sushi": "Sushi / Japanese",
-      "asian": "Asian",
-      "burger": "Burger / Fast food",
-      "coffee": "Coffee / Cafe",
-      "bar": "Bar / Pub",
-      "bakery": "Bakery / Pastry",
-      "restaurant": "Restaurant"
+      "pizza": "Picērija",
+      "sushi": "Suši / Japāņu",
+      "asian": "Āzijas",
+      "burger": "Burgeri / Ātrā ēdināšana",
+      "coffee": "Kafija / Kafejnīca",
+      "bar": "Bārs / Krogs",
+      "bakery": "Maizes ceptuve / Konditoreja",
+      "restaurant": "Restorāns"
     },
-    "stepOf": "Step {step} of {total}",
+    "stepOf": "{step}. solis no {total}",
     "step3": {
-      "label": "Sign in"
+      "label": "Pieteikties"
     }
   },
   "auth": {
-    "titleWithName": "One more thing for {name}",
-    "subtitle": "Just leave your email so we can save your menu — you'll be able to edit it any time.",
-    "emailLabel": "Email",
-    "emailPlaceholder": "you@restaurant.com",
-    "continueEmail": "Save my menu",
-    "or": "or",
-    "continueGoogle": "Continue with Google",
-    "changeRestaurant": "Change restaurant",
+    "titleWithName": "Vēl viena lieta {name}",
+    "subtitle": "Atstājiet savu e-pastu, lai mēs varētu saglabāt jūsu ēdienkarti — varēsiet rediģēt jebkurā laikā.",
+    "emailLabel": "E-pasts",
+    "emailPlaceholder": "jus@restorans.lv",
+    "continueEmail": "Saglabāt manu ēdienkarti",
+    "or": "vai",
+    "continueGoogle": "Turpināt ar Google",
+    "changeRestaurant": "Mainīt restorānu",
     "consent": {
-      "text": "By continuing you agree to our",
-      "terms": "Terms",
-      "and": "and",
-      "privacy": "Privacy Policy"
+      "text": "Turpinot, jūs piekrītat mūsu",
+      "terms": "Noteikumiem",
+      "and": "un",
+      "privacy": "Privātuma politikai"
     },
-    "verifyTitle": "Check your inbox",
-    "verifySubtitle": "We sent a 6-digit code to {email}.",
-    "verifyCodeLabel": "Verification code",
-    "checkSpam": "Don't see it? Check your spam folder.",
-    "verifyButton": "Verify and open dashboard",
-    "resendCode": "Resend code",
-    "resendSent": "Code sent",
-    "changeEmail": "Use a different email",
+    "verifyTitle": "Pārbaudiet iesūtni",
+    "verifySubtitle": "Mēs nosūtījām 6 ciparu kodu uz {email}.",
+    "verifyCodeLabel": "Apstiprinājuma kods",
+    "checkSpam": "Neredzat? Pārbaudiet surogātpasta mapi.",
+    "verifyButton": "Apstiprināt un atvērt paneli",
+    "resendCode": "Nosūtīt kodu vēlreiz",
+    "resendSent": "Kods nosūtīts",
+    "changeEmail": "Izmantot citu e-pastu",
     "errors": {
-      "emailInvalid": "Please enter a valid email address.",
-      "sendFailed": "Couldn't send the code. Try again.",
-      "verifyFailed": "Couldn't verify the code. Try again.",
-      "codeExpired": "This code expired. Request a new one.",
-      "noCode": "No code on file. Request a new one.",
-      "invalidCode": "Wrong code. Try again.",
-      "tooManyAttempts": "Too many attempts. Wait and try again later."
+      "emailInvalid": "Ievadiet derīgu e-pasta adresi.",
+      "sendFailed": "Neizdevās nosūtīt kodu. Mēģiniet vēlreiz.",
+      "verifyFailed": "Neizdevās apstiprināt kodu. Mēģiniet vēlreiz.",
+      "codeExpired": "Šis kods ir beidzies. Pieprasiet jaunu.",
+      "noCode": "Kods nav reģistrēts. Pieprasiet jaunu.",
+      "invalidCode": "Nepareizs kods. Mēģiniet vēlreiz.",
+      "tooManyAttempts": "Pārāk daudz mēģinājumu. Uzgaidiet un mēģiniet vēlāk."
     },
-    "signInTitle": "Welcome back",
-    "signInSubtitle": "Enter your email and we'll send a quick code to sign you in.",
-    "goToDashboard": "Go to dashboard"
+    "signInTitle": "Laipni lūdzam atpakaļ",
+    "signInSubtitle": "Ievadiet e-pastu, un mēs nosūtīsim ātru pieteikšanās kodu.",
+    "goToDashboard": "Doties uz paneli"
   }
 }

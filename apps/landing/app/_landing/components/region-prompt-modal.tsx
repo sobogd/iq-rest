@@ -7,9 +7,6 @@ import { analytics } from "@/lib/analytics";
 import { getRegionPromptTexts } from "@/lib/region-prompt-texts";
 import { swapLocale } from "@/lib/locale-slug-overrides";
 
-// localStorage key marking that the visitor has already engaged with the
-// modal on this device. Set on either pick or explicit dismiss — we
-// never show the prompt again until cleared.
 const DISMISSED_KEY = "iq_region_prompt_dismissed";
 
 function readCookie(name: string): string | null {
@@ -53,19 +50,12 @@ export function RegionPromptModal() {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    // Paid-traffic landings: respect the locale we targeted the ad at,
-    // don't push the visitor toward a different one.
-    const sp = new URLSearchParams(window.location.search);
-    if (sp.has("gclid") || sp.has("gbraid") || sp.has("wbraid")) return;
-
-    let dismissed: string | null = null;
     try {
-      dismissed = window.localStorage.getItem(DISMISSED_KEY);
+      if (window.localStorage.getItem(DISMISSED_KEY)) return;
     } catch {
-      // localStorage blocked (Safari private, embedded contexts) — treat
-      // as fresh visit so the prompt still works.
+      // localStorage blocked (Safari private, embedded contexts) — fall
+      // through and show the prompt; this visit gets one impression.
     }
-    if (dismissed) return;
 
     const segments = pathname.split("/").filter(Boolean);
     const url = segments[0] && segments[0] in LANGUAGE_NAMES ? segments[0] : "en";
@@ -90,7 +80,7 @@ export function RegionPromptModal() {
 
     if (!shownRef.current) {
       shownRef.current = true;
-      analytics.track(`land_region_prompt_show_${opts.join("_")}`);
+      analytics.track(`l_region_prompt_show_${opts.join("_")}`);
     }
   }, [pathname]);
 
@@ -101,13 +91,13 @@ export function RegionPromptModal() {
   async function pick(target: string): Promise<void> {
     if (busy) return;
     setBusy(true);
-    analytics.track(`land_region_prompt_pick_${target}`);
+    analytics.track(`l_region_prompt_pick_${target}`);
 
     try {
       window.localStorage.setItem(DISMISSED_KEY, "1");
     } catch {
-      // Best-effort — if storage is blocked the visitor will see the
-      // prompt again on next nav, which is acceptable.
+      // Best-effort — if storage is blocked the prompt will reappear on
+      // next nav, which is acceptable degradation.
     }
 
     // Same locale picked — close in place, no nav.

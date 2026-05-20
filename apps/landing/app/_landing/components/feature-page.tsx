@@ -51,9 +51,9 @@ export function FeaturePage({ texts, chrome, locale, featureId }: FeaturePagePro
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={softwareAppSchema} />
 
-      <PageTracker eventPrefix="land_feature_section_show_" />
+      <PageTracker eventPrefix="l_feature_section_show_" />
 
-      <LandingHeaderLp texts={chrome.header} locale={locale} />
+      <LandingHeaderLp texts={chrome.header} locale={locale} featureLinks={chrome.footer.featureLinks} />
 
       <FeatureHero
         title={texts.hero.title}

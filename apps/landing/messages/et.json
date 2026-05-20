@@ -2041,68 +2041,68 @@
   },
   "createFlow": {
     "step1": {
-      "title": "What kind of place is this?",
-      "subtitle": "Pick a vibe and we will preload a sample menu so you can edit, not start from scratch.",
-      "label": "Type"
+      "title": "Mis tüüpi koht see on?",
+      "subtitle": "Vali stiil ja me laeme näidismenüü, et saaksid muuta, mitte algusest peale alustada.",
+      "label": "Tüüp"
     },
     "step2": {
-      "title": "What is its name?",
-      "subtitle": "This is what guests see at the top of your menu. You can change it any time.",
-      "nameLabel": "Restaurant name",
-      "namePlaceholder": "Mario's Pizza",
-      "label": "Name"
+      "title": "Mis on selle nimi?",
+      "subtitle": "Seda näevad külalised menüü tipus. Saad selle igal ajal muuta.",
+      "nameLabel": "Restorani nimi",
+      "namePlaceholder": "Mario Pitsa",
+      "label": "Nimi"
     },
-    "back": "Back",
-    "continue": "Continue",
+    "back": "Tagasi",
+    "continue": "Jätka",
     "cuisines": {
-      "pizza": "Pizzeria",
-      "sushi": "Sushi / Japanese",
-      "asian": "Asian",
-      "burger": "Burger / Fast food",
-      "coffee": "Coffee / Cafe",
-      "bar": "Bar / Pub",
-      "bakery": "Bakery / Pastry",
-      "restaurant": "Restaurant"
+      "pizza": "Pitsarestoran",
+      "sushi": "Sushi / Jaapani",
+      "asian": "Aasia",
+      "burger": "Burger / Kiirtoit",
+      "coffee": "Kohv / Kohvik",
+      "bar": "Baar / Pubi",
+      "bakery": "Pagaritöö / Kondiitritöö",
+      "restaurant": "Restoran"
     },
-    "stepOf": "Step {step} of {total}",
+    "stepOf": "Samm {step} / {total}",
     "step3": {
-      "label": "Sign in"
+      "label": "Logi sisse"
     }
   },
   "auth": {
-    "titleWithName": "One more thing for {name}",
-    "subtitle": "Just leave your email so we can save your menu — you'll be able to edit it any time.",
-    "emailLabel": "Email",
-    "emailPlaceholder": "you@restaurant.com",
-    "continueEmail": "Save my menu",
-    "or": "or",
-    "continueGoogle": "Continue with Google",
-    "changeRestaurant": "Change restaurant",
+    "titleWithName": "Veel üks asi {name} jaoks",
+    "subtitle": "Jäta meile lihtsalt oma e-post, et saaksime menüü salvestada — saad seda igal ajal muuta.",
+    "emailLabel": "E-post",
+    "emailPlaceholder": "sina@restoran.ee",
+    "continueEmail": "Salvesta minu menüü",
+    "or": "või",
+    "continueGoogle": "Jätka Google'iga",
+    "changeRestaurant": "Vaheta restorani",
     "consent": {
-      "text": "By continuing you agree to our",
-      "terms": "Terms",
-      "and": "and",
-      "privacy": "Privacy Policy"
+      "text": "Jätkates nõustud meie",
+      "terms": "Tingimustega",
+      "and": "ja",
+      "privacy": "Privaatsuspoliitikaga"
     },
-    "verifyTitle": "Check your inbox",
-    "verifySubtitle": "We sent a 6-digit code to {email}.",
-    "verifyCodeLabel": "Verification code",
-    "checkSpam": "Don't see it? Check your spam folder.",
-    "verifyButton": "Verify and open dashboard",
-    "resendCode": "Resend code",
-    "resendSent": "Code sent",
-    "changeEmail": "Use a different email",
+    "verifyTitle": "Vaata oma postkasti",
+    "verifySubtitle": "Saatsime 6-kohalise koodi aadressile {email}.",
+    "verifyCodeLabel": "Kinnituskood",
+    "checkSpam": "Ei näe seda? Vaata rämpsposti kausta.",
+    "verifyButton": "Kinnita ja ava töölaud",
+    "resendCode": "Saada kood uuesti",
+    "resendSent": "Kood saadetud",
+    "changeEmail": "Kasuta teist e-posti",
     "errors": {
-      "emailInvalid": "Please enter a valid email address.",
-      "sendFailed": "Couldn't send the code. Try again.",
-      "verifyFailed": "Couldn't verify the code. Try again.",
-      "codeExpired": "This code expired. Request a new one.",
-      "noCode": "No code on file. Request a new one.",
-      "invalidCode": "Wrong code. Try again.",
-      "tooManyAttempts": "Too many attempts. Wait and try again later."
+      "emailInvalid": "Sisesta kehtiv e-posti aadress.",
+      "sendFailed": "Koodi saatmine ebaõnnestus. Proovi uuesti.",
+      "verifyFailed": "Koodi kinnitamine ebaõnnestus. Proovi uuesti.",
+      "codeExpired": "See kood on aegunud. Telli uus.",
+      "noCode": "Koodi pole salvestatud. Telli uus.",
+      "invalidCode": "Vale kood. Proovi uuesti.",
+      "tooManyAttempts": "Liiga palju katseid. Oota ja proovi hiljem."
     },
-    "signInTitle": "Welcome back",
-    "signInSubtitle": "Enter your email and we'll send a quick code to sign you in.",
-    "goToDashboard": "Go to dashboard"
+    "signInTitle": "Tere tulemast tagasi",
+    "signInSubtitle": "Sisesta oma e-post ja saadame kiire sisselogimiskoodi.",
+    "goToDashboard": "Mine töölauale"
   }
 }

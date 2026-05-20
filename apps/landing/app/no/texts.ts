@@ -1,101 +1,169 @@
-import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { CalendarCheck, ChefHat, Receipt, Monitor } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
-  htmlLang: "no", htmlDir: "ltr",
+  htmlLang: "no",
+  htmlDir: "ltr",
+
   meta: {
-    title: "QR-meny for Restauranter — Direkte Bestillinger, Null Provisjon | IQ Rest",
-    description: "Slutt med papirmenyer og leveringsapp-provisjoner. QR-meny, direkte bestillinger, reservasjoner og flerspråklig nettsted. 14 dager gratis, uten kort.",
-    canonical: "https://iq-rest.com/no", ogLocale: "no_NO",
-    ogTitle: "QR-meny for Restauranter — Direkte Bestillinger, Null Provisjon",
-    ogDescription: "QR-meny, direkte bestillinger, reservasjoner og AI-oversettelse. Klart på 5 minutter. 14 dager gratis — uten kort.",
+    title: "QR-meny for restauranter — Direkte bestillinger, null provisjon | IQ Rest",
+    description:
+      "Alt-i-ett-plattform for restauranter: digital meny, QR-bestillinger, bordreservasjon og kjøkkenskjerm. Live på 5 minutter. 14 dager gratis, ingen kort kreves.",
+    canonical: "https://iq-rest.com/no",
+    ogLocale: "no_NO",
+    ogTitle: "QR-meny for restauranter — Direkte bestillinger, null provisjon",
+    ogDescription:
+      "Digital meny, QR-bestillinger, bordreservasjon og AI-oversettelse. Live på 5 minutter. 14 dager gratis.",
   },
+
   ctaText: "Prøv gratis",
-  demoText: "Se live-demo", microcopy: "14 dager gratis · Ingen kort · Avslutt når du vil",
-  header: { navFeatures: "Funksjoner", navHow: "Slik virker det", navPricing: "Priser", navFaq: "FAQ", signIn: "Logg inn", cta: "Start" },
+  demoText: "Se demo",
+  microcopy: "14 dager gratis · Ingen kort · Avslutt når som helst",
+
+  header: {
+    navFeatures: "Funksjoner",
+    navHow: "Slik fungerer det",
+    navPricing: "Priser",
+    navFaq: "FAQ",
+    signIn: "Logg inn",
+    cta: "Kom i gang",
+  },
+
   hero: {
-    verticals: ["Restauranter", "Kafeer", "Barer", "Hoteller", "Pizzeriaer"],
-    headline: "Digital meny for restauranter. Klar på 5 minutter.",
-    sub: "Digital meny for restauranten din på 5 minutter. Alt inkludert: mobil redigerer uten kode, AI meny-skanning, QR-koder for bord og direkte bestillinger uten provisjoner.",
-    dynamicHeadlines: ["0% provisjon.", "35 språk med AI.", "Online-bestilling.", "Booking 24/7.", "Premium design."],
-    painBullets: ["0% provisjon: Alle bestillinger går direkte til deg.", "AI-oversettelse: 35 språk øker salget til turister.", "Booking 24/7: Full restaurant uten ekstra telefoner.", "Fleksible priser: Oppdater menyen på sekunder."],
-    rating: "Over 500 restauranter i 30+ land",
+    verticals: ["Restauranter", "Kaféer", "Barer", "Hoteller", "Pizzeriaer"],
+    headline: "Digital meny for restaurant. Live på 5 minutter.",
+    sub: "Digital meny for din restaurant på 5 minutter. Alt inkludert: redaktør uten kode, AI-gjenkjenning av trykt meny, QR-koder for bord og direkte bestillinger uten provisjon.",
+    dynamicHeadlines: ["0 % provisjon.", "35 AI-språk.", "Online bestillinger.", "Reservasjoner 24/7.", "Premium design."],
+    painBullets: [
+      "0 % provisjon: hver bestilling går direkte til din restaurant.",
+      "AI-oversettelse til 35 språk — turister forstår menyen og bestiller mer.",
+      "Reservasjon 24/7: gjester reserverer bord selv, uten samtaler i rushtidene.",
+      "Fleksible priser: menyoppdateringer er online i løpet av sekunder.",
+    ],
+    rating: "Mer enn 500 restauranter i mer enn 30 land",
   },
+
   features: {
-    heading: "Alt du trenger.", headingAccent: "Ingenting du ikke trenger.",
-    sub: "Bygget for restauranter. Brukt ved bordet.",
+    heading: "Alt du trenger.",
+    headingAccent: "Ingenting overflødig.",
+    sub: "Bygget for restauranter. Brukes hver dag ved bordet, på kjøkkenet og i salongen.",
     items: [
-      
-      { Icon: QrCode, title: "Bestilling ved bordet", desc: "Bestillinger havner rett i WhatsApp eller kontrollpanelet med bordnummer. Raskere service.", tag: "Direkte bestillinger", href: "/no/online-bestillingssystem-restaurant" },
-      { Icon: Languages, title: "AI-oversetter (35 språk)", desc: "Vår AI forstår gastronomi. Turister bestiller 20% mer når de forstår menyen.", tag: "AI-oversettelse" },
-      { Icon: CalendarCheck, title: "Bordreservasjon", desc: "Systemet tar imot bookinger mens du er travel på kjøkkenet. Ingen tapte kunder.", tag: "Reservasjoner" },
-      { Icon: Palette, title: "Moderne design", desc: "Videobakgrunner og fristende bilder. Menyen din ser eksklusiv ut og vekker appetitten.", tag: "Eget design" },
-      { Icon: Smartphone, title: "Hurtigredigering", desc: "Styr utsolgt-liste og priser rett fra mobilen. Endringer er synlige umiddelbart.", tag: "Menyredigerer" },
-      { Icon: ChefHat, title: "Kjøkkenskjerm", desc: "Glem papirlapper. Bestillinger fra salen går rett til kokkens skjerm.", tag: "Kjøkkenskjerm" },
-    
+      { Icon: Monitor, title: "Digital meny", desc: "Meny i nettleseren med bilder, priser, allergener og beskrivelser. Oppdateres i sanntid fra telefonen. Gjester ser menyen på sitt eget språk; restauranten sparer på trykking.", tag: "Digital meny", href: "/no/digital-meny-restaurant" },
+      { Icon: Receipt, title: "Bestillingsmottak: gjest og kelner", desc: "En QR-kode ved bordet for gjesten, eller kelneren tar bestillingen fra telefonen — begge går direkte til kjøkkenet eller WhatsApp. Uten provisjon, med bordnummer på hver kvittering.", tag: "Bestillinger", href: "/no/bestillingssystem-restaurant" },
+      { Icon: CalendarCheck, title: "Bordreservasjon 24/7", desc: "Gjester reserverer bord selv via nettstedet eller QR-menyen mens du er opptatt i salongen. Kalender per bord, automatiske bekreftelser og påminnelser. Ikke en eneste tapt gjest.", tag: "Reservasjon", href: "/no/bordreservasjon" },
+      { Icon: ChefHat, title: "Kjøkkenskjerm (KDS)", desc: "Papirkvitteringer er ikke lenger nødvendige. Bestillinger fra salongen går direkte til kokkens skjerm — kolonner „tilberedes / klar / servert“, allergener og notater fremhevet med farge. På nettbrett eller telefon.", tag: "KDS", href: "/no/kjokken-skjerm" },
     ],
   },
+
   founder: {
-    eyebrow: "Bygget av en restauratør",
-    quoteStart: "Min kone og jeg åpnet en kafé og brukte uker på å lete etter et system som håndterer onlinebestillinger, reservasjoner og samtidig ser moderne ut. Alt vi prøvde var klumpete, stygt eller manglet halvparten av funksjonene —",
-    quoteAccent: "så vi bygget det vi selv ville hatt.",
-    sign: "Bogdan Sokolov · grunnlegger, eks-kafeeier",
-    photoAlt: "Bogdan, grunnlegger av IQ Rest",
+    eyebrow: "Bygget av restauratører",
+    quoteStart:
+      "Min kone og jeg drev vår egen kafé og vet av egen erfaring hvordan en restaurantdag faktisk forløper — bestillingsmottak, reservasjoner, salong- og kjøkkenflyt. Vi ville ha ett enkelt verktøy: moderne, lett å sette i gang og klart ved første øyekast —",
+    quoteAccent: "så vi begynte å bygge plattformen vi nå utvikler for andre restauratører.",
+    sign: "Bogdan Sokolov · grunnlegger, tidligere kaféeier",
+    photoAlt: "Bogdan Sokolov, grunnlegger av IQ Rest",
   },
+
   how: {
-    heading: "Live på under 5 minutter",
-    sub: "Fire korte steg. Ingen installasjon, ingen teknisk oppsett.",
+    heading: "Live på 5 minutter",
+    sub: "Fire korte trinn. Ingen installasjoner, ingen teknisk oppsett.",
     steps: [
-      { n: "1", t: "Type og navn", d: "Velg type og skriv navnet." },
-      { n: "2", t: "Lagre", d: "E-post eller logg inn med Google." },
-      { n: "3", t: "Meny", d: "Lag selv eller skann en papirmeny." },
-      { n: "4", t: "Klar", d: "Se, del og ta imot bestillinger." },
+      { n: "1", t: "Type og navn", d: "Velg type sted og skriv inn navnet." },
+      { n: "2", t: "Lagre", d: "Skriv inn e-posten din eller logg inn med Google." },
+      { n: "3", t: "Meny", d: "Legg til varer manuelt eller last opp en trykt meny for AI-skanning." },
+      { n: "4", t: "Ferdig", d: "Del en lenke eller QR-kode og begynn å ta imot bestillinger." },
     ],
   },
+
   pricing: {
-    badge: "Null provisjon · Ingen kontrakter",
-    heading: "Én plan.", headingAccent: "Alt inkludert.",
-    sub: "QR-meny, bestillinger, AI-oversettelse, restaurantnettsted og reservasjoner. Én enkel pris.",
-    monthlyLabel: "Månedlig", yearlyLabel: "Årlig", saveBadge: "Spar 25%", perMonth: "per måned",
-    billedAnnually: "Fakturert årlig {total}", youSave: "Du sparer {amount}",
+    badge: "Ingen provisjon · Ingen kontrakter",
+    heading: "Ett abonnement.",
+    headingAccent: "Alt inkludert.",
+    sub: "QR-meny, bestillingsmottak, AI-oversettelse, restaurantens nettsted og reservasjon. Ett gjennomsiktig månedlig gebyr.",
+    monthlyLabel: "Månedlig",
+    yearlyLabel: "Årlig",
+    saveBadge: "Spar 25 %",
+    perMonth: "per måned",
+    billedAnnually: "Årlig fakturering: {total}",
+    youSave: "Du sparer {amount}",
     trust: { secure: "Sikker betaling med Stripe", noCommitment: "Ingen binding", quick: "Aktiv på minutter", restaurants: "500+ restauranter" },
   },
+
   faq: {
-    eyebrow: "Spørsmål?", heading: "Vanlige", headingAccent: "spørsmål.",
-    sub: "Det restauratører spør om før påmelding. Mangler ditt? Skriv på WhatsApp — ekte folk svarer.",
-    whatsappCta: "Spør på WhatsApp", whatsappPrefill: "Hei, jeg har et spørsmål om IQ Rest",
+    eyebrow: "Har du spørsmål?",
+    heading: "Ofte stilte",
+    headingAccent: "spørsmål.",
+    sub: "Hva restauratører spør om før registrering. Finner du ikke spørsmålet ditt? Send oss en melding på WhatsApp — ekte mennesker svarer, ikke en bot.",
+    whatsappCta: "Spør på WhatsApp",
+    whatsappPrefill: "Hei, jeg har et spørsmål om IQ Rest",
     items: [
-      { q: "Hva inkluderer prøveperioden og hva skjer etterpå?", a: "14 dager full tilgang, ingen kort. Etter 14 dager pauses kontoen hvis du ikke legger til betalingsmetode — vi trekker aldri automatisk. Legg til betaling senere for å reaktivere. Avslutt med ett klikk." },
-      { q: "Tar dere provisjon på bestillinger?", a: "Null. Hver bestilling fra QR-menyen din går rett til deg — ingen del til oss, ingen Foodora / Wolt-gebyrer. Én fast månedspris, det er det." },
-      { q: "Trenger gjestene en app? Trenger jeg tekniske kunnskaper?", a: "Ingen apper for gjester — de skanner QR med kameraet, menyen åpnes i nettleseren. Ingen tekniske kunnskaper for deg — hele panelet virker i mobilen, trykk for å legge til, dra for å omsortere, det er hele kurven." },
-      { q: "Hvor raskt endrer jeg priser og legger til retter?", a: "Med en gang. Endre pris på telefonen, gjestene ser det på sekunder. Ny rett? Trykk, skriv, bilde, ferdig — ingen utskrifter, ingen designer å vente på." },
-      { q: "Hvor mange språk støttes?", a: "35 språk med innebygd AI-oversettelse. Ett trykk oversetter hele menyen, AI forstår kulinarisk kontekst — navn og beskrivelser høres naturlig ut på hvert språk. Turister bestiller mer når de virkelig forstår." },
+      { q: "Hva inkluderer prøveperioden og hva skjer etterpå?", a: "Full tilgang til alle funksjoner i 14 dager, ingen kort kreves. Etter 14 dager settes kontoen på pause hvis ingen betalingsmetode er lagt til — vi belaster aldri automatisk. Du kan legge til betaling senere og fortsette der du slapp. Avslutt når som helst med ett klikk." },
+      { q: "Tar dere provisjon på bestillinger?", a: "Nei. Hver bestilling fra QR-menyen går direkte til restauranten — ingen prosent fra vår side, ingen aggregatorgebyrer. Ett fast månedlig gebyr og ingenting annet." },
+      { q: "Trenger gjestene en app, trenger vi tekniske ferdigheter?", a: "Gjestene trenger ingen app — de retter telefonkameraet mot QR-koden og menyen åpner i nettleseren. Restauranter trenger heller ingen tekniske ferdigheter: administrasjonspanelet fungerer i alle moderne nettlesere på telefon, nettbrett eller bærbar PC. Hver handling er med klikk og dra-og-slipp, uten kode." },
+      { q: "Hvor raskt endres priser og dukker nye retter opp?", a: "Umiddelbart. Endre en pris fra telefonen — gjestene ser det innen sekunder. En ny rett tar noen trykk: navn, pris, bilde. Ingen utskrift på nytt, ingen venting på en designer." },
+      { q: "Hvor mange språk støttes?", a: "35 språk med innebygd AI-oversettelse. Ett trykk og hele menyen er oversatt; AI-en forstår kulinarisk kontekst — navn og beskrivelser høres naturlige ut på alle språk. Turister bestiller med større selvtillit når de virkelig forstår menyen." },
     ],
   },
-  finalCta: { heading: "Klart på 5 minutter.", headingAccent: "Gratis i 14 dager.", sub: "Ingen kort. Avslutt når du vil. Bli med 500+ restauranter allerede på IQ Rest." },
-  scan: {
-    heading: "Papirmeny eller PDF?",
-    headingAccent: "AI digitaliserer den på 60 sekunder.",
-    sub: "Last opp — AI finner kategorier, retter og priser.",
-    cta: "Skann menyen →",
+
+  finalCta: {
+    heading: "Live på 5 minutter.",
+    headingAccent: "14 dager gratis.",
+    sub: "Ingen kort, avslutt når som helst. Bli en av 500+ restauranter som allerede bruker IQ Rest.",
   },
+
+  scan: {
+    heading: "Har du en papirmeny eller PDF?",
+    headingAccent: "AI digitaliserer den på 60 sekunder.",
+    sub: "Last opp et bilde eller dokument — AI-en gjenkjenner kategorier, retter og priser automatisk.",
+    cta: "Skann meny →",
+  },
+
+  pricingHero: {
+    chips: ["Ingen provisjon", "Ingen kontrakter", "14 dager gratis"],
+    heading: "Priser.",
+    headingAccent: "Ingen skjulte avgifter.",
+    sub: "Ett gjennomsiktig månedlig gebyr. Ingen prosent på bestillinger og ingen aggregatorprovisjon. Avslutt abonnementet når som helst.",
+    popularBadge: "Populær",
+    perMonthSuffix: "/mnd",
+    whenAnnualTemplate: "årlig fakturering · {total} € per år",
+    orMonthlyTemplate: "eller {price} €/mnd",
+    savingsTemplate: "spar {amount} € per år",
+    plans: {
+      basic: {
+        name: "Basic",
+        tagline: "Meny, QR-bestillinger og AI-oversettelse. Live på 5 minutter.",
+        features: [
+          "QR-meny for hvert bord",
+          "Digital meny med bilder og allergener",
+          "AI-oversettelse til 35 språk",
+          "Bestillinger fra menyen (valgfritt)",
+          "AI-generering av rettbilder",
+          "Administrer fra enhver telefon eller nettbrett",
+        ],
+      },
+      pro: {
+        name: "Pro",
+        tagline: "Full restaurantkontroll: kjøkkenskjerm og reservasjoner.",
+        features: [
+          "Alt i Basic",
+          "Kjøkkenskjerm (KDS)",
+          "Online bordreservasjon 24/7",
+          "Prioritert WhatsApp-støtte",
+        ],
+      },
+    },
+  },
+
   footer: {
     featureLinks: [
-      { href: "/no/online-bestillingssystem-restaurant", label: "Online bestillingssystem" },
-      { href: "/no/ai-translation", label: "AI-oversettelse" },
-      { href: "/no/reservations", label: "Reservasjoner" },
-      { href: "/no/mobile-management", label: "Mobilstyring" },
-      { href: "/no/easy-menu", label: "Meny-editor" },
-      { href: "/no/custom-design", label: "Video- og fotobakgrunner" },
-      { href: "/no/color-scheme", label: "Merkefarger" },
-      { href: "/no/multilingual", label: "Flerspråklig nettsted" },
-      { href: "/no/ai-images", label: "AI-bildeoptimalisering" },
-      { href: "/no/analytics", label: "Statistikk" },
-      { href: "/no/instant-setup", label: "Øyeblikkelig oppsett" },
-      { href: "/no/personal-support", label: "Personlig support" },
+      { href: "/no/digital-meny-restaurant", label: "Digital meny" },
+      { href: "/no/bestillingssystem-restaurant", label: "Bestillinger" },
+      { href: "/no/bordreservasjon", label: "Reservasjon" },
+      { href: "/no/kjokken-skjerm", label: "Kjøkkenskjerm" },
     ],
     navLinks: [
-      { href: "#pricing", label: "Priser" }, { href: "#faq", label: "Spørsmål" },
+      { href: "/no/priser", label: "Priser" },
+      { href: "#faq", label: "FAQ" },
       { href: "/no/languages", label: "Bytt språk" },
     ],
     copyrightTemplate: "© {year} IQ Rest. Alle rettigheter forbeholdt.",

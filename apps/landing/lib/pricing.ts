@@ -22,7 +22,7 @@ export const pricing: Record<SupportedCurrency, CurrencyPricing> = {
   EUR: {
     free: { monthly: 0, yearly: 0, yearlyTotal: 0 },
     basic: { monthly: 9.9, yearly: 6.9, yearlyTotal: 82.8 },
-    pro: { monthly: 29.9, yearly: 19.9, yearlyTotal: 238.8 },
+    pro: { monthly: 31.9, yearly: 24.9, yearlyTotal: 298.8 },
   },
 
   // США

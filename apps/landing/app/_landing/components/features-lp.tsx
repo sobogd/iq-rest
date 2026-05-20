@@ -31,7 +31,7 @@ export function FeaturesLp({ texts }: FeaturesProps) {
                 {href ? (
                   <LinkForward
                     href={href}
-                    trackEvent={`land_feature_card_click_${href.replace(/[^a-z0-9]+/gi, "_").replace(/^_+|_+$/g, "")}`}
+                    trackEvent={`l_feature_card_click_${href.replace(/[^a-z0-9]+/gi, "_").replace(/^_+|_+$/g, "")}`}
                     className="hover:text-primary transition-colors"
                   >
                     {title}

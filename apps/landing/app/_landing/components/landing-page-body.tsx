@@ -24,6 +24,10 @@ interface LandingPageBodyProps {
   jsonLdHtml?: string;
   /** Footer variant — "lp" hides keyword links + extra nav (PPC focus). */
   footerVariant?: "lp" | "default";
+  /** Optional override for the hero image src/alt — defaults to the
+   *  generic cafe shot when omitted. */
+  heroImageSrc?: string;
+  heroImageAlt?: string;
 }
 
 // Single source-of-truth body for every landing page. Sections rely on
@@ -35,6 +39,8 @@ export function LandingPageBody({
   seoContent,
   jsonLdHtml,
   footerVariant = "default",
+  heroImageSrc,
+  heroImageAlt,
 }: LandingPageBodyProps) {
   const featureRows = getFeatureRows(locale);
   return (
@@ -43,13 +49,15 @@ export function LandingPageBody({
       {jsonLdHtml ? (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdHtml }} />
       ) : null}
-      <LandingHeaderLp texts={texts.header} locale={locale} useLocalAnchors />
+      <LandingHeaderLp texts={texts.header} locale={locale} useLocalAnchors featureLinks={texts.footer.featureLinks} />
       <HeroLp
         texts={texts.hero}
         ctaText={texts.ctaText}
         demoText={texts.demoText}
         microcopy={texts.microcopy}
         locale={locale}
+        imageSrc={heroImageSrc}
+        imageAlt={heroImageAlt}
       />
       <ScanSectionLp texts={texts.scan} locale={locale} />
       <div className="lg:py-12 xl:py-16">
@@ -94,7 +102,7 @@ export function LandingPageBody({
           locale={locale}
         />
       </Section>
-      <Section as="footer" dataSection="footer" noContainer>
+      <Section as="footer" dataSection="footer" noContainer className="!py-6 sm:!py-8">
         <LandingFooterLp
           texts={texts.footer}
           headerTexts={texts.header}

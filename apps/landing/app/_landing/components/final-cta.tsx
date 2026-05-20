@@ -29,9 +29,9 @@ export function FinalCta({ texts, ctaText, demoText, microcopy, locale }: FinalC
         microcopy={microcopy}
         locale={locale}
         align="center-mobile"
-        trackEvent="land_final_cta_click"
+        trackEvent="l_final_cta_click"
         stackMobile
-        extra={<DemoButton text={demoText} locale={locale} trackEvent="land_final_cta_demo_open" />}
+        extra={<DemoButton text={demoText} locale={locale} trackEvent="l_final_cta_demo" />}
       />
     </div>
   );

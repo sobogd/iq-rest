@@ -2041,68 +2041,68 @@
   },
   "createFlow": {
     "step1": {
-      "title": "What kind of place is this?",
-      "subtitle": "Pick a vibe and we will preload a sample menu so you can edit, not start from scratch.",
-      "label": "Type"
+      "title": "Hvaða tegund staðar er þetta?",
+      "subtitle": "Veldu stíl og við hleðum sýnishorn af matseðli fyrirfram svo þú getir breytt í stað þess að byrja frá grunni.",
+      "label": "Tegund"
     },
     "step2": {
-      "title": "What is its name?",
-      "subtitle": "This is what guests see at the top of your menu. You can change it any time.",
-      "nameLabel": "Restaurant name",
-      "namePlaceholder": "Mario's Pizza",
-      "label": "Name"
+      "title": "Hvað heitir hann?",
+      "subtitle": "Þetta sjá gestir efst á matseðlinum. Þú getur breytt þessu hvenær sem er.",
+      "nameLabel": "Nafn veitingastaðar",
+      "namePlaceholder": "Pizza Mario",
+      "label": "Nafn"
     },
-    "back": "Back",
-    "continue": "Continue",
+    "back": "Til baka",
+    "continue": "Halda áfram",
     "cuisines": {
-      "pizza": "Pizzeria",
-      "sushi": "Sushi / Japanese",
-      "asian": "Asian",
-      "burger": "Burger / Fast food",
-      "coffee": "Coffee / Cafe",
-      "bar": "Bar / Pub",
-      "bakery": "Bakery / Pastry",
-      "restaurant": "Restaurant"
+      "pizza": "Pizzustaður",
+      "sushi": "Sushi / Japanskt",
+      "asian": "Asískt",
+      "burger": "Burger / Skyndibiti",
+      "coffee": "Kaffi / Kaffihús",
+      "bar": "Bar / Pöbb",
+      "bakery": "Bakarí / Konditori",
+      "restaurant": "Veitingastaður"
     },
-    "stepOf": "Step {step} of {total}",
+    "stepOf": "Skref {step} af {total}",
     "step3": {
-      "label": "Sign in"
+      "label": "Innskráning"
     }
   },
   "auth": {
-    "titleWithName": "One more thing for {name}",
-    "subtitle": "Just leave your email so we can save your menu — you'll be able to edit it any time.",
-    "emailLabel": "Email",
-    "emailPlaceholder": "you@restaurant.com",
-    "continueEmail": "Save my menu",
-    "or": "or",
-    "continueGoogle": "Continue with Google",
-    "changeRestaurant": "Change restaurant",
+    "titleWithName": "Ein síðasta hlutur fyrir {name}",
+    "subtitle": "Skildu bara eftir netfangið þitt svo við getum vistað matseðilinn — þú getur breytt honum hvenær sem er.",
+    "emailLabel": "Netfang",
+    "emailPlaceholder": "thu@veitingastad.is",
+    "continueEmail": "Vista matseðilinn minn",
+    "or": "eða",
+    "continueGoogle": "Halda áfram með Google",
+    "changeRestaurant": "Skipta um veitingastað",
     "consent": {
-      "text": "By continuing you agree to our",
-      "terms": "Terms",
-      "and": "and",
-      "privacy": "Privacy Policy"
+      "text": "Með því að halda áfram samþykkir þú",
+      "terms": "Skilmála",
+      "and": "og",
+      "privacy": "Persónuverndarstefnu"
     },
-    "verifyTitle": "Check your inbox",
-    "verifySubtitle": "We sent a 6-digit code to {email}.",
-    "verifyCodeLabel": "Verification code",
-    "checkSpam": "Don't see it? Check your spam folder.",
-    "verifyButton": "Verify and open dashboard",
-    "resendCode": "Resend code",
-    "resendSent": "Code sent",
-    "changeEmail": "Use a different email",
+    "verifyTitle": "Athugaðu pósthólfið þitt",
+    "verifySubtitle": "Við sendum 6 stafa kóða á {email}.",
+    "verifyCodeLabel": "Staðfestingarkóði",
+    "checkSpam": "Sérðu hann ekki? Athugaðu ruslpóstmöppuna.",
+    "verifyButton": "Staðfesta og opna stjórnborð",
+    "resendCode": "Senda kóða aftur",
+    "resendSent": "Kóði sendur",
+    "changeEmail": "Nota annað netfang",
     "errors": {
-      "emailInvalid": "Please enter a valid email address.",
-      "sendFailed": "Couldn't send the code. Try again.",
-      "verifyFailed": "Couldn't verify the code. Try again.",
-      "codeExpired": "This code expired. Request a new one.",
-      "noCode": "No code on file. Request a new one.",
-      "invalidCode": "Wrong code. Try again.",
-      "tooManyAttempts": "Too many attempts. Wait and try again later."
+      "emailInvalid": "Vinsamlegast sláðu inn gilt netfang.",
+      "sendFailed": "Ekki tókst að senda kóða. Reyndu aftur.",
+      "verifyFailed": "Ekki tókst að staðfesta kóða. Reyndu aftur.",
+      "codeExpired": "Þessi kóði er útrunninn. Biddu um nýjan.",
+      "noCode": "Enginn kóði skráður. Biddu um nýjan.",
+      "invalidCode": "Rangur kóði. Reyndu aftur.",
+      "tooManyAttempts": "Of margar tilraunir. Bíddu og reyndu seinna."
     },
-    "signInTitle": "Welcome back",
-    "signInSubtitle": "Enter your email and we'll send a quick code to sign you in.",
-    "goToDashboard": "Go to dashboard"
+    "signInTitle": "Velkominn aftur",
+    "signInSubtitle": "Sláðu inn netfangið þitt og við sendum hraðan innskráningarkóða.",
+    "goToDashboard": "Fara á stjórnborð"
   }
 }

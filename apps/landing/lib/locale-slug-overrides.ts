@@ -1,144 +1,207 @@
-// Per-locale slug overrides for feature pages that have been migrated to
-// keyword-rich SEO URLs. The shared route under the `app/[locale]/...`
-// segment is the canonical "logical" path used everywhere (sitemap, ads,
-// internal links). The override map says: when locale X visits the
-// feature, the URL is the slug listed here instead of the shared route.
+// Per-locale slug overrides for the five shared routes that exist on every
+// locale: digital-menu, order-taking, bookings, kitchen-display, pricing.
 //
-// Used by:
-//   - app/sitemap.ts — emits the locale-specific URL with correct alternates
-//   - middleware (next.config redirects) — 301s the shared `/online-orders`
-//     to the per-locale slug
-//   - RegionPromptModal — when the visitor picks a different locale we
-//     translate the current URL into that locale's slug (so e.g.
-//     /tr/restoran-online-siparis-sistemi → /es/sistema-de-pedidos-para-restaurantes
-//     instead of dropping the visitor on the wrong path).
+// The "shared route" key (e.g. "/digital-menu") is a logical identifier — it
+// is NOT a real URL that resolves. The per-locale override under that key
+// is the actual slug under `app/<locale>/<slug>/` (with leading slash).
 //
-// Each entry's KEY is the shared route ("/online-orders"). The inner map
-// is locale → slug for that locale (slug includes the leading slash).
+// Consumers:
+//   - `app/sitemap.ts` — emits per-locale URLs with hreflang alternates
+//   - `next.config.ts` `redirects()` — optional 301s from legacy SEO slugs
+//   - `app/_landing/components/region-prompt-modal.tsx` via `swapLocale()` —
+//     when the visitor switches locale on a feature page, we translate the
+//     current path to the equivalent slug in the target locale (instead of
+//     dropping them on a 404).
 
 export const LOCALE_SLUG_OVERRIDES: Record<string, Record<string, string>> = {
-  "/online-orders": {
-    en: "/restaurant-online-ordering-system",
-    es: "/sistema-de-pedidos-para-restaurantes",
-    it: "/tablet-per-ordinazioni-ristorante",
-    fr: "/logiciel-prise-de-commande-restaurant",
+  "/digital-menu": {
+    ru: "/tsifrovoe-menyu",
+    en: "/digital-menu-for-restaurants",
+    es: "/menu-digital-restaurantes",
+    it: "/menu-digitale-ristoranti",
+    fr: "/menu-digital-restaurants",
+    de: "/digitale-speisekarte-restaurant",
+    pt: "/menu-digital-restaurantes",
+    nl: "/digitaal-menu-restaurant",
+    pl: "/cyfrowe-menu-restauracja",
+    tr: "/dijital-menu-restoran",
+    uk: "/tsyfrove-menyu-restoran",
+    ja: "/dejitaru-menyu-resutoran",
+    ko: "/dijiteol-menyu-resutorang",
+    zh: "/shu-zi-cai-dan-can-ting",
+    ar: "/qaimat-taam-raqmiya-matam",
+    fa: "/menooye-dijital-restoran",
+    cs: "/digitalni-menu-restaurace",
+    sk: "/digitalne-menu-restauracia",
+    hu: "/digitalis-etlap-etterem",
+    ro: "/meniu-digital-restaurant",
+    el: "/psifiako-menou-estiatoria",
+    bg: "/digitalno-menyu-restorant",
+    hr: "/digitalni-jelovnik-restoran",
+    sr: "/digitalni-meni-restoran",
+    sl: "/digitalni-jedilnik-restavracija",
+    ca: "/carta-digital-restaurant",
+    da: "/digitalt-menu-restaurant",
+    no: "/digital-meny-restaurant",
+    sv: "/digital-meny-restaurang",
+    fi: "/digitaalinen-ruokalista-ravintola",
+    et: "/digitaalne-menuu-restoran",
+    lt: "/skaitmeninis-meniu-restoranas",
+    lv: "/digitala-edienkarte-restorans",
+    ga: "/biachlar-digiteach-bialann",
+    is: "/stafraen-matsedill-veitingastaur",
+  },
+
+  "/order-taking": {
+    ru: "/priem-zakazov-restoran",
+    en: "/restaurant-ordering-system",
+    es: "/sistema-pedidos-restaurante",
+    it: "/sistema-ordinazioni-ristorante",
+    fr: "/systeme-commandes-restaurant",
     de: "/restaurant-bestellsystem",
-    pt: "/sistema-de-pedidos-online-restaurante",
-    ru: "/sistema-onlayn-zakazov-restorana",
-    pl: "/system-zamowien-online-dla-restauracji",
-    nl: "/online-bestelsysteem-voor-restaurants",
-    ja: "/qr-order-system-restaurant",
-    zh: "/qr-ordering-system-restaurant",
-    tr: "/restoran-online-siparis-sistemi",
-    ar: "/nizam-talabat-online-matam",
-    ko: "/restaurant-online-order-system",
-    uk: "/onlayn-systema-zamovlen-restoran",
-    bg: "/sistema-za-onlayn-porachki-restorant",
-    ca: "/sistema-de-comandes-online-restaurant",
-    cs: "/online-objednavkovy-system-restaurace",
-    da: "/online-bestillingssystem-restaurant",
-    el: "/online-systima-paragelion-estiatorio",
-    et: "/online-tellimissusteem-restoranile",
-    fa: "/sistem-sefaresh-online-restoran",
-    fi: "/online-tilausjarjestelma-ravintolalle",
-    ga: "/coras-orduithe-ar-line-bialann",
-    hr: "/online-sustav-narudzbi-restoran",
-    hu: "/online-rendelesi-rendszer-etterem",
-    is: "/netpontunarkerfi-veitingastadar",
-    lt: "/internetine-uzsakymu-sistema-restoranui",
-    lv: "/tiessaistes-pasutijumu-sistema-restoranam",
-    no: "/online-bestillingssystem-restaurant",
-    ro: "/sistem-comenzi-online-restaurant",
-    sk: "/online-objednavkovy-system-restauracia",
-    sl: "/spletni-sistem-narocanja-restavracija",
-    sr: "/online-sistem-porudzbina-restoran",
-    sv: "/online-bestallningssystem-restaurang",
+    pt: "/sistema-de-pedidos-restaurante",
+    nl: "/bestelsysteem-restaurant",
+    pl: "/system-zamowien-restauracja",
+    tr: "/restoran-siparis-sistemi",
+    uk: "/pryjom-zamovlen-restoran",
+    ja: "/chumon-shisutemu-resutoran",
+    ko: "/juneun-shiseutem-resutorang",
+    zh: "/dian-can-xi-tong-can-ting",
+    ar: "/nizam-talabat-matam",
+    fa: "/sistem-sefaresh-restoran",
+    cs: "/objednavkovy-system-restaurace",
+    sk: "/objednavkovy-system-restauracia",
+    hu: "/rendelesi-rendszer-etterem",
+    ro: "/sistem-comenzi-restaurant",
+    el: "/systima-paragelion-estiatorio",
+    bg: "/sistema-porachki-restorant",
+    hr: "/sustav-narudzbi-restoran",
+    sr: "/sistem-porudzbina-restoran",
+    sl: "/sistem-narocanja-restavracija",
+    ca: "/sistema-comandes-restaurant",
+    da: "/bestillingssystem-restaurant",
+    no: "/bestillingssystem-restaurant",
+    sv: "/bestallningssystem-restaurang",
+    fi: "/tilausjarjestelma-ravintola",
+    et: "/tellimissusteem-restoran",
+    lt: "/uzsakymu-sistema-restoranas",
+    lv: "/pasutijumu-sistema-restorans",
+    ga: "/coras-orduithe-bialann",
+    is: "/pontunarkerfi-veitingastaur",
   },
 
-  // PPC landing pages for the "digital menu" theme. Only shipped for the
-  // locales we run paid Google Ads campaigns in. The shared route key
-  // (/lp/digital-menu) doesn't resolve to a real URL on its own — it's
-  // only used by swapLocale to translate between per-locale LP slugs.
-  // Locales without an override fall back to /<target> home via the
-  // /lp/* branch in swapLocale.
-  // PPC landings for the "QR menu" theme — separate ad groups / keyword
-  // (qr menu) targeting users with higher purchase intent. Same SoftwareApplication
-  // schema, distinct copy that hammers "QR menu" instead of "digital menu" for ad
-  // relevance scoring.
-  "/lp/qr-menu": {
-    en: "/lp/qr-menu-for-restaurants",
-    es: "/lp/codigo-qr-carta-restaurante",
-    it: "/lp/menu-qr-code-online-per-ristoranti",
-    fr: "/lp/menu-qr-pour-restaurants",
-    de: "/lp/qr-speisekarte-fuer-restaurants",
-    pt: "/lp/menu-qr-para-restaurantes",
-    ru: "/lp/qr-menyu-dlya-restoranov",
-    pl: "/lp/menu-qr-dla-restauracji",
-    nl: "/lp/qr-menu-voor-restaurants",
-    tr: "/lp/restoranlar-icin-qr-menu",
-    ar: "/lp/qaimat-qr-lilmataem",
-    ja: "/lp/restoran-qr-menu",
-    zh: "/lp/restaurant-qr-menu-chinese",
-    ko: "/lp/restaurant-qr-menu-korean",
-    uk: "/lp/qr-menyu-dlya-restoraniv",
-    bg: "/lp/qr-menyu-za-restoranti",
-    ca: "/lp/codi-qr-carta-restaurant",
-    cs: "/lp/qr-menu-pro-restaurace",
-    da: "/lp/qr-menu-til-restauranter",
-    el: "/lp/qr-menu-gia-estiatoria",
-    et: "/lp/qr-menuu-restoranidele",
-    fa: "/lp/menooye-qr-baraye-restoranha",
-    fi: "/lp/qr-ruokalista-ravintoloille",
-    ga: "/lp/biachlar-qr-do-bhialanna",
-    hr: "/lp/qr-jelovnik-za-restorane",
-    hu: "/lp/qr-etlap-ettermeknek",
-    is: "/lp/qr-matsedill-fyrir-veitingastadi",
-    lt: "/lp/qr-meniu-restoranams",
-    lv: "/lp/qr-edienkarte-restoraniem",
-    no: "/lp/qr-meny-for-restauranter",
-    ro: "/lp/meniu-qr-pentru-restaurante",
-    sk: "/lp/qr-menu-pre-restauracie",
-    sl: "/lp/qr-jedilnik-za-restavracije",
-    sr: "/lp/qr-meni-za-restorane",
-    sv: "/lp/qr-meny-for-restauranger",
+  "/bookings": {
+    ru: "/bronirovanie-stolov",
+    en: "/table-booking-system",
+    es: "/reservas-de-mesas",
+    it: "/prenotazione-tavoli",
+    fr: "/reservation-tables",
+    de: "/tisch-reservierung",
+    pt: "/reserva-de-mesas",
+    nl: "/tafel-reserveren",
+    pl: "/rezerwacja-stolikow",
+    tr: "/masa-rezervasyonu",
+    uk: "/bronyuvannya-stoliv",
+    ja: "/tesuto-yoyaku",
+    ko: "/tebeul-yeyak",
+    zh: "/yu-ding-zhuo-wei",
+    ar: "/hajz-tawilat",
+    fa: "/rezerve-miz",
+    cs: "/rezervace-stolu",
+    sk: "/rezervacia-stolov",
+    hu: "/asztalfoglalas",
+    ro: "/rezervare-mese",
+    el: "/kratisi-trapezi-online",
+    bg: "/rezervatsiya-masi",
+    hr: "/rezervacija-stolova",
+    sr: "/rezervacija-stolova",
+    sl: "/rezervacija-miz",
+    ca: "/reserva-de-taules",
+    da: "/bordreservation",
+    no: "/bordreservasjon",
+    sv: "/bordsbokning",
+    fi: "/poytavaraus",
+    et: "/laudade-broneerimine",
+    lt: "/staliuku-rezervacija",
+    lv: "/galdu-rezervesana",
+    ga: "/curfha-bord",
+    is: "/bord-bokun",
   },
 
-  "/lp/digital-menu": {
-    de: "/lp/digitale-speisekarte-fuer-restaurants",
-    fr: "/lp/menu-digital-pour-restaurants",
-    pt: "/lp/menu-digital-para-restaurantes",
-    nl: "/lp/digitaal-menu-voor-restaurants",
-    pl: "/lp/cyfrowe-menu-dla-restauracji",
-    ru: "/lp/tsifrovoe-menyu-dlya-restoranov",
-    uk: "/lp/tsyfrove-menyu-dlya-restoraniv",
-    sv: "/lp/digital-meny-for-restauranger",
-    da: "/lp/digital-menu-til-restauranter",
-    no: "/lp/digital-meny-for-restauranter",
-    fi: "/lp/digitaalinen-ruokalista-ravintoloille",
-    cs: "/lp/digitalni-menu-pro-restaurace",
-    el: "/lp/psifiako-menu-gia-estiatoria",
-    tr: "/lp/restoranlar-icin-dijital-menu",
-    ro: "/lp/meniu-digital-pentru-restaurante",
-    hu: "/lp/digitalis-etlap-ettermeknek",
-    bg: "/lp/digitalno-menyu-za-restoranti",
-    hr: "/lp/digitalni-jelovnik-za-restorane",
-    sk: "/lp/digitalne-menu-pre-restauracie",
-    sl: "/lp/digitalni-jedilnik-za-restavracije",
-    et: "/lp/digitaalne-menuu-restoranidele",
-    lv: "/lp/digitala-edienkarte-restoraniem",
-    lt: "/lp/skaitmeninis-meniu-restoranams",
-    sr: "/lp/digitalni-meni-za-restorane",
-    ga: "/lp/biachlar-digiteach-do-bhialanna",
-    is: "/lp/stafraenn-matsedill-fyrir-veitingastadi",
-    fa: "/lp/menooye-dijital-baraye-restoranha",
-    ar: "/lp/qaimat-taam-raqmiya-lilmataem",
-    ja: "/lp/restoran-digital-menu",
-    ko: "/lp/restaurant-digital-menu-korean",
-    zh: "/lp/restaurant-digital-menu-chinese",
-    en: "/lp/digital-menu-for-restaurants",
-    it: "/lp/menu-digitale-per-ristoranti",
-    es: "/lp/carta-digital-para-restaurante",
-    ca: "/lp/carta-digital-para-restaurante",
+  "/kitchen-display": {
+    ru: "/kds-kuhonnyy-displey",
+    en: "/kitchen-display-system",
+    es: "/pantalla-de-cocina",
+    it: "/display-cucina",
+    fr: "/ecran-cuisine",
+    de: "/kuechen-display",
+    pt: "/display-de-cozinha",
+    nl: "/keukenscherm",
+    pl: "/ekran-kuchenny",
+    tr: "/mutfak-ekrani",
+    uk: "/kukhonnyy-displey",
+    ja: "/chubo-disupurei",
+    ko: "/juhang-diseupeullei",
+    zh: "/hou-chu-xian-shi-qi",
+    ar: "/shashat-matbakh",
+    fa: "/namayeshgar-ashpazkhane",
+    cs: "/kuchynsky-displej",
+    sk: "/kuchynsky-displej",
+    hu: "/konyhai-kijelzo",
+    ro: "/display-bucatarie",
+    el: "/othoni-mageirio",
+    bg: "/kukhnenski-displei",
+    hr: "/kuhinjski-ekran",
+    sr: "/kuhinjski-ekran",
+    sl: "/kuhinjski-zaslon",
+    ca: "/pantalla-de-cuina",
+    da: "/kokken-skaerm",
+    no: "/kjokken-skjerm",
+    sv: "/kok-skarm",
+    fi: "/keittion-naytto",
+    et: "/kook-ekraan",
+    lt: "/virtuves-ekranas",
+    lv: "/virtuves-ekrans",
+    ga: "/scailean-cistine",
+    is: "/eldhus-skjar",
+  },
+
+  "/pricing": {
+    ru: "/tseny",
+    en: "/pricing",
+    es: "/precios",
+    it: "/prezzi",
+    fr: "/tarifs",
+    de: "/preise",
+    pt: "/precos",
+    nl: "/prijzen",
+    pl: "/cennik",
+    tr: "/fiyatlar",
+    uk: "/tsiny",
+    ja: "/kakaku",
+    ko: "/gagyeok",
+    zh: "/jia-ge",
+    ar: "/asaar",
+    fa: "/ghimat",
+    cs: "/ceny",
+    sk: "/ceny",
+    hu: "/arak",
+    ro: "/preturi",
+    el: "/times",
+    bg: "/tseni",
+    hr: "/cijene",
+    sr: "/cene",
+    sl: "/cene",
+    ca: "/preus",
+    da: "/priser",
+    no: "/priser",
+    sv: "/priser",
+    fi: "/hinnat",
+    et: "/hinnad",
+    lt: "/kainos",
+    lv: "/cenas",
+    ga: "/praghsanna",
+    is: "/verd",
   },
 };
 
@@ -148,10 +211,10 @@ export const LOCALE_SLUG_OVERRIDES: Record<string, Record<string, string>> = {
  * path isn't a known override.
  *
  * Examples (target = "es"):
- *   /tr/restoran-online-siparis-sistemi → /es/sistema-de-pedidos-para-restaurantes
- *   /tr/ai-translation                  → /es/ai-translation
- *   /tr                                  → /es
- *   /tr/some/sub/path                   → /es/some/sub/path
+ *   /it/menu-digitale-ristoranti → /es/menu-digital-restaurantes
+ *   /tr/restoran-siparis-sistemi → /es/sistema-pedidos-restaurante
+ *   /tr                          → /es
+ *   /tr/some/sub/path            → /es/some/sub/path
  */
 export function swapLocale(pathname: string, target: string): string {
   const segments = pathname.split("/").filter(Boolean);
@@ -160,32 +223,17 @@ export function swapLocale(pathname: string, target: string): string {
   const currentLocale = segments[0];
   const rest = "/" + segments.slice(1).join("/");
 
-  // Bare locale path (/tr) → swap to /<target>.
   if (segments.length === 1) return `/${target}`;
 
-  // Try to find the shared route that the current path maps to in the
-  // override table. If the current path is the override for currentLocale
-  // of some shared route, we know what the canonical route is and can ask
-  // for target's override.
   for (const [sharedRoute, byLocale] of Object.entries(LOCALE_SLUG_OVERRIDES)) {
     const matchedAsOverride = byLocale[currentLocale] === rest;
     const matchedAsShared = rest === sharedRoute && !byLocale[currentLocale];
     if (!matchedAsOverride && !matchedAsShared) continue;
 
-    // Target has its own slug for this shared route → translate.
     if (byLocale[target]) return `/${target}${byLocale[target]}`;
-
-    // Shared routes starting with /lp/ are PPC landings that don't have
-    // a "real" shared URL — only per-locale overrides. If the target
-    // doesn't ship that LP, send the visitor to their locale home rather
-    // than 404'ing on a slug that doesn't exist.
     if (sharedRoute.startsWith("/lp/")) return `/${target}`;
-
-    // Regular shared route → fall back to it for the target locale.
     return `/${target}${sharedRoute}`;
   }
 
-  // Not a known override route — assume the slug is shared across locales
-  // (e.g. /ai-translation, /reservations). Just swap the first segment.
   return `/${target}${rest}`;
 }

@@ -1,95 +1,169 @@
-import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { CalendarCheck, ChefHat, Receipt, Monitor } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
-  htmlLang: "ro", htmlDir: "ltr",
+  htmlLang: "ro",
+  htmlDir: "ltr",
+
   meta: {
-    title: "Meniu QR pentru Restaurante — Comenzi Directe, Zero Comision | IQ Rest",
-    description: "Gata cu meniurile pe hârtie și comisioanele aplicațiilor de livrare. Meniu QR, comenzi directe, rezervări și site multilingv. 14 zile gratis, fără card.",
-    canonical: "https://iq-rest.com/ro", ogLocale: "ro_RO",
-    ogTitle: "Meniu QR pentru Restaurante — Comenzi Directe, Zero Comision",
-    ogDescription: "Meniu QR, comenzi directe, rezervări și traducere AI. Gata în 5 minute. 14 zile gratis — fără card.",
+    title: "Meniu QR pentru restaurante — Comenzi directe, zero comision | IQ Rest",
+    description:
+      "Platformă all-in-one pentru restaurante: meniu digital, comenzi QR, rezervare mese și display bucătărie. Lansare în 5 minute. 14 zile gratuit, fără card.",
+    canonical: "https://iq-rest.com/ro",
+    ogLocale: "ro_RO",
+    ogTitle: "Meniu QR pentru restaurante — Comenzi directe, zero comision",
+    ogDescription:
+      "Meniu digital, comenzi QR, rezervare mese și traducere AI. Lansare în 5 minute. 14 zile gratuit.",
   },
-  ctaText: "Încearcă gratuit",
-  demoText: "Vezi demo live", microcopy: "14 zile gratis · Fără card · Anulezi când vrei",
-  header: { navFeatures: "Funcții", navHow: "Cum funcționează", navPricing: "Prețuri", navFaq: "Întrebări", signIn: "Conectare", cta: "Începe" },
+
+  ctaText: "Încercați gratuit",
+  demoText: "Vizionați demo",
+  microcopy: "14 zile gratuit · Fără card · Anulați oricând",
+
+  header: {
+    navFeatures: "Funcționalități",
+    navHow: "Cum funcționează",
+    navPricing: "Prețuri",
+    navFaq: "Întrebări",
+    signIn: "Autentificare",
+    cta: "Începeți",
+  },
+
   hero: {
     verticals: ["Restaurante", "Cafenele", "Baruri", "Hoteluri", "Pizzerii"],
-    headline: "Meniu digital pentru restaurante. Gata în 5 minute.",
-    sub: "Meniu digital pentru restaurantul tău în 5 minute. Totul inclus: editor mobil fără cod, scanare AI a meniului, coduri QR pentru mese și comenzi directe fără comisioane.",
-    dynamicHeadlines: ["0% comision.", "35 de limbi cu AI.", "Comenzi online.", "Rezervări 24/7.", "Design premium."],
-    painBullets: ["0% comision: Toate comenzile ajung direct la tine.", "Traducere AI: 35 de limbi pentru a crește consumul turiștilor.", "Rezervări 24/7: Sală plină fără apeluri inutile.", "Prețuri flexibile: Actualizează meniul în câteva secunde."],
-    rating: "Peste 500 de restaurante în 30+ țări",
+    headline: "Meniu digital pentru restaurant. Online în 5 minute.",
+    sub: "Meniu digital pentru restaurantul dumneavoastră în 5 minute. Totul inclus: editor fără cod, recunoaștere AI a meniului tipărit, coduri QR pentru mese și comenzi directe fără comision.",
+    dynamicHeadlines: ["0% comision.", "35 limbi AI.", "Comenzi online.", "Rezervări 24/7.", "Design premium."],
+    painBullets: [
+      "0% comision: fiecare comandă ajunge direct la restaurantul dumneavoastră.",
+      "Traducere AI în 35 de limbi — turiștii înțeleg meniul și comandă mai mult.",
+      "Rezervare 24/7: oaspeții își rezervă singuri mesele, fără apeluri în orele de vârf.",
+      "Prețuri flexibile: actualizările meniului apar în câteva secunde.",
+    ],
+    rating: "Peste 500 de restaurante în peste 30 de țări",
   },
+
   features: {
-    heading: "Tot ce ai nevoie.", headingAccent: "Nimic în plus.",
-    sub: "Făcut pentru restaurante. Folosit la masă.",
+    heading: "Tot ce aveți nevoie.",
+    headingAccent: "Nimic în plus.",
+    sub: "Construit pentru restaurante. Folosit zilnic la masă, în bucătărie și în sală.",
     items: [
-      
-      { Icon: QrCode, title: "Comenzi de la masă", desc: "Comenzile ajung instant pe WhatsApp sau în panou cu numărul mesei. Servire mai rapidă.", tag: "Comenzi directe", href: "/ro/sistem-comenzi-online-restaurant" },
-      { Icon: Languages, title: "Traducător AI (35 de limbi)", desc: "AI-ul nostru înțelege gastronomia. Turiștii comandă cu 20% mai mult când înțeleg meniul.", tag: "Traducere AI" },
-      { Icon: CalendarCheck, title: "Rezervare mese", desc: "Sistemul preia rezervările în timp ce ești în bucătărie. Niciun client pierdut.", tag: "Rezervări" },
-      { Icon: Palette, title: "Design modern", desc: "Fundaluri video și fotografii apetisante. Meniul tău arată premium și atrage clienții.", tag: "Design personalizat" },
-      { Icon: Smartphone, title: "Editor rapid", desc: "Gestionează stocurile și prețurile direct de pe telefon. Schimbările sunt live imediat.", tag: "Editor meniu" },
-      { Icon: ChefHat, title: "Ecran bucătărie", desc: "Uită de bonurile de hârtie. Comenzile din sală merg direct pe ecranul bucătarului.", tag: "Ecran bucătărie" },
-    
+      { Icon: Monitor, title: "Meniu digital", desc: "Meniu în browser cu fotografii, prețuri, alergeni și descrieri. Se actualizează în timp real de pe telefon. Oaspeții văd meniul în limba lor; restaurantul economisește la tipărire.", tag: "Meniu digital", href: "/ro/meniu-digital-restaurant" },
+      { Icon: Receipt, title: "Preluare comenzi: oaspete și ospătar", desc: "Cod QR la masă pentru oaspete sau ospătarul preia comanda de pe telefon — ambele ajung direct la bucătărie sau pe WhatsApp. Fără comision, cu numărul mesei pe fiecare bon.", tag: "Comenzi", href: "/ro/sistem-comenzi-restaurant" },
+      { Icon: CalendarCheck, title: "Rezervare mese 24/7", desc: "Oaspeții își rezervă singuri mesele prin site sau meniul QR în timp ce sunteți ocupat în sală. Calendar pe masă, confirmări și mementouri automate. Niciun oaspete pierdut.", tag: "Rezervare", href: "/ro/rezervare-mese" },
+      { Icon: ChefHat, title: "Display bucătărie (KDS)", desc: "Bonurile de hârtie nu mai sunt necesare. Comenzile din sală ajung direct pe ecranul bucătarului — coloane „în pregătire / gata / servit“, alergenii și notițele evidențiate cu culoare. Pe tabletă sau telefon.", tag: "KDS", href: "/ro/display-bucatarie" },
     ],
   },
+
   founder: {
-    eyebrow: "Construit de un restaurator",
-    quoteStart: "Cu soția mea am deschis o cafenea și am căutat săptămâni un sistem care să gestioneze comenzi online, rezervări și să arate modern. Tot ce am încercat era greoi, urât sau lipsea jumătate din funcții —",
-    quoteAccent: "așa că l-am construit pe cel pe care l-am fi vrut.",
+    eyebrow: "Construit de restauratori",
+    quoteStart:
+      "Cu soția mea am condus propria noastră cafenea și știm din experiență directă cum decurge o zi de restaurant — preluare comenzi, rezervări, fluxul sălii și al bucătăriei. Am dorit un singur instrument: modern, ușor de pornit și clar la prima vedere —",
+    quoteAccent: "așa am început să construim platforma pe care o dezvoltăm acum pentru alți restauratori.",
     sign: "Bogdan Sokolov · fondator, fost proprietar de cafenea",
-    photoAlt: "Bogdan, fondatorul IQ Rest",
+    photoAlt: "Bogdan Sokolov, fondator IQ Rest",
   },
+
   how: {
-    heading: "Live în mai puțin de 5 minute",
-    sub: "Patru pași scurți. Fără instalări, fără configurări tehnice.",
+    heading: "Online în 5 minute",
+    sub: "Patru pași scurți. Fără instalări, fără configurare tehnică.",
     steps: [
-      { n: "1", t: "Tip și nume", d: "Alege tipul și introdu numele." },
-      { n: "2", t: "Salvare", d: "Email sau autentificare cu Google." },
-      { n: "3", t: "Meniu", d: "Creează singur sau scanează unul pe hârtie." },
-      { n: "4", t: "Gata", d: "Vizualizează, distribuie și primește comenzi." },
+      { n: "1", t: "Tip și nume", d: "Alegeți tipul localului și introduceți numele." },
+      { n: "2", t: "Salvați", d: "Introduceți e-mailul sau autentificați-vă cu Google." },
+      { n: "3", t: "Meniu", d: "Adăugați articolele manual sau încărcați un meniu tipărit pentru scanare AI." },
+      { n: "4", t: "Gata", d: "Distribuiți un link sau cod QR și începeți să primiți comenzi." },
     ],
   },
+
   pricing: {
-    badge: "Zero comision · Fără contracte",
-    heading: "Un singur plan.", headingAccent: "Tot inclus.",
-    sub: "Meniu QR, comenzi, traducere AI, site restaurant și rezervări. Un preț simplu.",
-    monthlyLabel: "Lunar", yearlyLabel: "Anual", saveBadge: "Economisești 25%", perMonth: "pe lună",
-    billedAnnually: "Facturare anuală {total}", youSave: "Economisești {amount}",
-    trust: { secure: "Plată sigură cu Stripe", noCommitment: "Fără angajamente", quick: "Activ în câteva minute", restaurants: "500+ restaurante" },
+    badge: "Fără comision · Fără contracte",
+    heading: "Un singur plan.",
+    headingAccent: "Totul inclus.",
+    sub: "Meniu QR, preluare comenzi, traducere AI, site-ul restaurantului și rezervare. O singură taxă lunară transparentă.",
+    monthlyLabel: "Lunar",
+    yearlyLabel: "Anual",
+    saveBadge: "Economisiți 25%",
+    perMonth: "pe lună",
+    billedAnnually: "Facturare anuală: {total}",
+    youSave: "Economisiți {amount}",
+    trust: { secure: "Plată sigură prin Stripe", noCommitment: "Fără angajament", quick: "Activ în câteva minute", restaurants: "500+ restaurante" },
   },
+
   faq: {
-    eyebrow: "Întrebări?", heading: "Întrebări", headingAccent: "frecvente.",
-    sub: "Ce întreabă restauratorii înainte să se înscrie. Nu o vezi pe a ta? Scrie-ne pe WhatsApp — răspund oameni reali.",
-    whatsappCta: "Întreabă pe WhatsApp", whatsappPrefill: "Salut, am o întrebare despre IQ Rest",
+    eyebrow: "Aveți întrebări?",
+    heading: "Întrebări",
+    headingAccent: "frecvente.",
+    sub: "Ce întreabă restauratorii înainte de înregistrare. Nu găsiți întrebarea dumneavoastră? Scrieți-ne pe WhatsApp — răspund oameni reali, nu un bot.",
+    whatsappCta: "Întrebați pe WhatsApp",
+    whatsappPrefill: "Bună ziua, am o întrebare despre IQ Rest",
     items: [
-      { q: "Ce include perioada de probă și ce se întâmplă după?", a: "14 zile acces complet, fără card. După 14 zile contul se pune pe pauză dacă nu adaugi metoda de plată — nu retragem niciodată automat. Adaugi mai târziu pentru reactivare. Anulezi cu un click." },
-      { q: "Luați comision la comenzi?", a: "Zero. Fiecare comandă din meniul QR ajunge direct la tine — fără partea noastră, fără taxe Glovo / Tazz. Un singur preț lunar fix, atât." },
-      { q: "Clienții au nevoie de aplicație? Eu am nevoie de cunoștințe tehnice?", a: "Zero aplicații pentru clienți — scanează QR cu camera, meniul se deschide în browser. Zero tehnică pentru tine — tot panoul merge pe telefon, tap pentru a adăuga, glisează pentru a reordona, atât." },
-      { q: "Cât de repede schimb prețurile și adaug preparate?", a: "Instant. Schimbi prețul pe telefon, clienții văd în secunde. Preparat nou? Tap, scrii, foto, gata — fără reimprimări, fără să aștepți designerul." },
-      { q: "Câte limbi suportați?", a: "35 de limbi cu traducere AI încorporată. Un tap traduce tot meniul, AI înțelege contextul culinar — numele și descrierile sună natural în fiecare limbă. Turiștii comandă mai mult când chiar înțeleg." },
+      { q: "Ce include perioada de probă și ce se întâmplă după?", a: "Acces complet la toate funcționalitățile timp de 14 zile, fără card. După 14 zile contul este suspendat dacă nu este adăugată o metodă de plată — nu percepem niciodată automat. Puteți adăuga plata mai târziu și continua de unde ați rămas. Anulați oricând cu un singur click." },
+      { q: "Percepeți comision la comenzi?", a: "Nu. Fiecare comandă din meniul QR ajunge direct la restaurant — fără procente de la noi, fără comisioane de agregatori. O singură taxă lunară fixă și nimic altceva." },
+      { q: "Oaspeții au nevoie de o aplicație, noi avem nevoie de abilități tehnice?", a: "Oaspeții nu au nevoie de aplicație — îndreaptă camera telefonului spre codul QR și meniul se deschide în browser. Nici restaurantele nu au nevoie de abilități tehnice: panoul de administrare rulează în orice browser modern pe telefon, tabletă sau laptop. Fiecare acțiune se face prin click și tragere, fără cod." },
+      { q: "Cât de rapid se schimbă prețurile și apar preparate noi?", a: "Imediat. Schimbați un preț de pe telefon — oaspeții îl văd în câteva secunde. Un preparat nou necesită câteva atingeri: nume, preț, fotografie. Fără retipărire, fără așteptarea unui designer." },
+      { q: "Câte limbi sunt suportate?", a: "35 de limbi cu traducere AI integrată. O atingere și întregul meniu este tradus; AI înțelege contextul culinar — numele și descrierile sună natural în orice limbă. Turiștii comandă cu mai multă încredere când înțeleg cu adevărat meniul." },
     ],
   },
-  finalCta: { heading: "Gata în 5 minute.", headingAccent: "Gratis 14 zile.", sub: "Fără card. Anulezi când vrei. Alătură-te celor 500+ restaurante deja pe IQ Rest." },
-  scan: {
-    heading: "Meniu pe hârtie sau PDF?",
-    headingAccent: "AI îl digitizează în 60 de secunde.",
-    sub: "Încarcă — AI extrage categorii, produse și prețuri.",
-    cta: "Scanează meniul →",
+
+  finalCta: {
+    heading: "Online în 5 minute.",
+    headingAccent: "14 zile gratuit.",
+    sub: "Fără card, anulați oricând. Alăturați-vă la peste 500 de restaurante care folosesc deja IQ Rest.",
   },
+
+  scan: {
+    heading: "Aveți un meniu pe hârtie sau PDF?",
+    headingAccent: "AI îl digitalizează în 60 de secunde.",
+    sub: "Încărcați o fotografie sau un document — AI recunoaște categoriile, preparatele și prețurile automat.",
+    cta: "Scanează meniu →",
+  },
+
+  pricingHero: {
+    chips: ["Fără comision", "Fără contracte", "14 zile gratuit"],
+    heading: "Prețuri.",
+    headingAccent: "Fără costuri ascunse.",
+    sub: "O singură taxă lunară transparentă. Fără procent din comenzi și fără comisioane de agregatori. Anulați abonamentul oricând.",
+    popularBadge: "Popular",
+    perMonthSuffix: "/lună",
+    whenAnnualTemplate: "facturare anuală · {total} € pe an",
+    orMonthlyTemplate: "sau {price} €/lună",
+    savingsTemplate: "economisiți {amount} € pe an",
+    plans: {
+      basic: {
+        name: "Basic",
+        tagline: "Meniu, comenzi QR și traducere AI. Online în 5 minute.",
+        features: [
+          "Meniu QR pentru fiecare masă",
+          "Meniu digital cu fotografii și alergeni",
+          "Traducere AI în 35 de limbi",
+          "Comenzi din meniu (opțional)",
+          "Generare AI de fotografii ale preparatelor",
+          "Gestionare de pe orice telefon sau tabletă",
+        ],
+      },
+      pro: {
+        name: "Pro",
+        tagline: "Control complet al restaurantului: display bucătărie și rezervări.",
+        features: [
+          "Tot din Basic",
+          "Display bucătărie (KDS)",
+          "Rezervare mese online 24/7",
+          "Suport WhatsApp prioritar",
+        ],
+      },
+    },
+  },
+
   footer: {
     featureLinks: [
-      { href: "/ro/sistem-comenzi-online-restaurant", label: "Sistem comenzi online" }, { href: "/ro/ai-translation", label: "Traducere AI" },
-      { href: "/ro/reservations", label: "Rezervări" }, { href: "/ro/mobile-management", label: "Gestiune mobilă" },
-      { href: "/ro/easy-menu", label: "Editor de meniu" }, { href: "/ro/custom-design", label: "Fundal video și foto" },
-      { href: "/ro/color-scheme", label: "Culori brand" }, { href: "/ro/multilingual", label: "Site multilingv" },
-      { href: "/ro/ai-images", label: "Optimizare foto AI" }, { href: "/ro/analytics", label: "Analitică" },
-      { href: "/ro/instant-setup", label: "Configurare instant" }, { href: "/ro/personal-support", label: "Suport personal" },
+      { href: "/ro/meniu-digital-restaurant", label: "Meniu digital" },
+      { href: "/ro/sistem-comenzi-restaurant", label: "Comenzi" },
+      { href: "/ro/rezervare-mese", label: "Rezervare" },
+      { href: "/ro/display-bucatarie", label: "Display bucătărie" },
     ],
     navLinks: [
-      { href: "#pricing", label: "Prețuri" }, { href: "#faq", label: "Întrebări" },
+      { href: "/ro/preturi", label: "Prețuri" },
+      { href: "#faq", label: "Întrebări" },
       { href: "/ro/languages", label: "Schimbă limba" },
     ],
     copyrightTemplate: "© {year} IQ Rest. Toate drepturile rezervate.",

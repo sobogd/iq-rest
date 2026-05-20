@@ -2041,68 +2041,68 @@
   },
   "createFlow": {
     "step1": {
-      "title": "What kind of place is this?",
-      "subtitle": "Pick a vibe and we will preload a sample menu so you can edit, not start from scratch.",
-      "label": "Type"
+      "title": "Какво е това заведение?",
+      "subtitle": "Изберете тип и ще заредим примерно меню, за да редактирате, а не да започвате от нулата.",
+      "label": "Тип"
     },
     "step2": {
-      "title": "What is its name?",
-      "subtitle": "This is what guests see at the top of your menu. You can change it any time.",
-      "nameLabel": "Restaurant name",
-      "namePlaceholder": "Mario's Pizza",
-      "label": "Name"
+      "title": "Как се казва?",
+      "subtitle": "Това виждат гостите в горната част на менюто. Можете да го промените по всяко време.",
+      "nameLabel": "Име на ресторанта",
+      "namePlaceholder": "Пица Марио",
+      "label": "Име"
     },
-    "back": "Back",
-    "continue": "Continue",
+    "back": "Назад",
+    "continue": "Продължи",
     "cuisines": {
-      "pizza": "Pizzeria",
-      "sushi": "Sushi / Japanese",
-      "asian": "Asian",
-      "burger": "Burger / Fast food",
-      "coffee": "Coffee / Cafe",
-      "bar": "Bar / Pub",
-      "bakery": "Bakery / Pastry",
-      "restaurant": "Restaurant"
+      "pizza": "Пицария",
+      "sushi": "Суши / Японски",
+      "asian": "Азиатски",
+      "burger": "Бургер / Бързо хранене",
+      "coffee": "Кафе / Кафене",
+      "bar": "Бар / Пъб",
+      "bakery": "Пекарна / Сладкарница",
+      "restaurant": "Ресторант"
     },
-    "stepOf": "Step {step} of {total}",
+    "stepOf": "Стъпка {step} от {total}",
     "step3": {
-      "label": "Sign in"
+      "label": "Вход"
     }
   },
   "auth": {
-    "titleWithName": "One more thing for {name}",
-    "subtitle": "Just leave your email so we can save your menu — you'll be able to edit it any time.",
-    "emailLabel": "Email",
-    "emailPlaceholder": "you@restaurant.com",
-    "continueEmail": "Save my menu",
-    "or": "or",
-    "continueGoogle": "Continue with Google",
-    "changeRestaurant": "Change restaurant",
+    "titleWithName": "Още едно нещо за {name}",
+    "subtitle": "Само оставете имейла си, за да запазим менюто ви — ще можете да го редактирате по всяко време.",
+    "emailLabel": "Имейл",
+    "emailPlaceholder": "vie@restaurant.com",
+    "continueEmail": "Запази моето меню",
+    "or": "или",
+    "continueGoogle": "Продължи с Google",
+    "changeRestaurant": "Смени ресторанта",
     "consent": {
-      "text": "By continuing you agree to our",
-      "terms": "Terms",
-      "and": "and",
-      "privacy": "Privacy Policy"
+      "text": "С продължаването приемате нашите",
+      "terms": "Условия",
+      "and": "и",
+      "privacy": "Политика за поверителност"
     },
-    "verifyTitle": "Check your inbox",
-    "verifySubtitle": "We sent a 6-digit code to {email}.",
-    "verifyCodeLabel": "Verification code",
-    "checkSpam": "Don't see it? Check your spam folder.",
-    "verifyButton": "Verify and open dashboard",
-    "resendCode": "Resend code",
-    "resendSent": "Code sent",
-    "changeEmail": "Use a different email",
+    "verifyTitle": "Проверете пощата си",
+    "verifySubtitle": "Изпратихме 6-цифрен код на {email}.",
+    "verifyCodeLabel": "Код за потвърждение",
+    "checkSpam": "Не го виждате? Проверете папката със спам.",
+    "verifyButton": "Потвърди и отвори таблото",
+    "resendCode": "Изпрати кода отново",
+    "resendSent": "Кодът е изпратен",
+    "changeEmail": "Използвай друг имейл",
     "errors": {
-      "emailInvalid": "Please enter a valid email address.",
-      "sendFailed": "Couldn't send the code. Try again.",
-      "verifyFailed": "Couldn't verify the code. Try again.",
-      "codeExpired": "This code expired. Request a new one.",
-      "noCode": "No code on file. Request a new one.",
-      "invalidCode": "Wrong code. Try again.",
-      "tooManyAttempts": "Too many attempts. Wait and try again later."
+      "emailInvalid": "Моля, въведете валиден имейл адрес.",
+      "sendFailed": "Кодът не можа да бъде изпратен. Опитайте отново.",
+      "verifyFailed": "Кодът не можа да бъде потвърден. Опитайте отново.",
+      "codeExpired": "Този код е изтекъл. Заявете нов.",
+      "noCode": "Няма записан код. Заявете нов.",
+      "invalidCode": "Грешен код. Опитайте отново.",
+      "tooManyAttempts": "Твърде много опити. Изчакайте и опитайте отново по-късно."
     },
-    "signInTitle": "Welcome back",
-    "signInSubtitle": "Enter your email and we'll send a quick code to sign you in.",
-    "goToDashboard": "Go to dashboard"
+    "signInTitle": "Добре дошли отново",
+    "signInSubtitle": "Въведете имейла си и ще изпратим бърз код за вход.",
+    "goToDashboard": "Към таблото"
   }
 }

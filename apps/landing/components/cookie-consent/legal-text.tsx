@@ -56,7 +56,7 @@ export const COOKIE_POLICY_SECTIONS: { heading?: string; paragraphs: string[] }[
   {
     heading: "4. Analytics — no cookies on your device",
     paragraphs: [
-      `We measure how the Site is used through anonymous first-party events sent to our own server. No analytics-specific cookie is stored on your device, no cross-site identifier exists, and the events cannot be linked back to you as an individual. Each event records only the action name (e.g. "land_pricing_view"), the moment it occurred, and approximate geo (country and region from your IP via Cloudflare). Lawful under ePrivacy because nothing is written to your device beyond the strictly necessary cookies above.`,
+      `We measure how the Site is used through anonymous first-party events sent to our own server. No analytics-specific cookie is stored on your device, no cross-site identifier exists, and the events cannot be linked back to you as an individual. Each event records only the action name (e.g. "l_pricing_view"), the moment it occurred, and approximate geo (country and region from your IP via Cloudflare). Lawful under ePrivacy because nothing is written to your device beyond the strictly necessary cookies above.`,
     ],
   },
   {

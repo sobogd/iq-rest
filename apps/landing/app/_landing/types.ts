@@ -187,6 +187,26 @@ export type LandingTexts = {
     cta: string;
   };
 
+  /** All copy used by the shared `PricingHero` component (chips, plan
+   *  cards, helper templates). Templates use `{total}`, `{price}` and
+   *  `{amount}` placeholders that the component replaces at render time
+   *  with the formatted EUR values. */
+  pricingHero?: {
+    chips: readonly string[];
+    heading: string;
+    headingAccent: string;
+    sub: string;
+    popularBadge: string;
+    perMonthSuffix: string;
+    whenAnnualTemplate: string;
+    orMonthlyTemplate: string;
+    savingsTemplate: string;
+    plans: {
+      basic: { name: string; tagline: string; features: readonly string[] };
+      pro: { name: string; tagline: string; features: readonly string[] };
+    };
+  };
+
   footer: {
     featureLinks: FooterLink[];
     navLinks: FooterLink[];

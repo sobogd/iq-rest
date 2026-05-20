@@ -17,7 +17,12 @@ interface LanguageSwitcherModalProps {
 export function LanguageSwitcherModal({ open, onClose, currentLocale, title }: LanguageSwitcherModalProps) {
   return (
     <Dialog open={open} onOpenChange={(o) => { if (!o) onClose(); }}>
-      <DialogContent className="max-w-xl max-h-[80vh] flex flex-col p-0">
+      <DialogContent
+        className="max-w-xl max-h-[80vh] flex flex-col p-0"
+        onPointerDownOutside={(e) => e.preventDefault()}
+        onInteractOutside={(e) => e.preventDefault()}
+        onEscapeKeyDown={(e) => e.preventDefault()}
+      >
         <DialogHeader className="px-6 pt-5 pb-3 border-b">
           <DialogTitle className="text-lg">{title}</DialogTitle>
         </DialogHeader>

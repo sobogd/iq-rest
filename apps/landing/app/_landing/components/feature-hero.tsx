@@ -44,7 +44,7 @@ export function FeatureHero({
               align="center"
               trackEvent="feature_hero_cta_click"
               stackMobile
-              extra={<DemoButton text={demoText} locale={locale} trackEvent="feature_hero_demo_open" />}
+              extra={<DemoButton text={demoText} locale={locale} trackEvent="l_feature_hero_demo" />}
             />
           </div>
           {trustLine ? (

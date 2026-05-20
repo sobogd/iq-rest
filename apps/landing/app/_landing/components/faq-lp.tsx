@@ -15,21 +15,21 @@ export function FaqLp({ texts }: FaqProps) {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-start gap-10 lg:gap-14 w-full">
       <div className="flex flex-col items-center text-center lg:items-start lg:text-start lg:sticky lg:top-24">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-3 leading-[1.15]">
+        <h2 className="text-4xl sm:text-[2.625rem] lg:text-[3.25rem] xl:text-[3.5rem] font-medium tracking-tight mb-3 leading-[1.05]">
           {texts.heading}{" "}
           <span className="bg-gradient-to-br from-primary to-amber-400 bg-clip-text text-transparent">
             {texts.headingAccent}
           </span>
         </h2>
-        <p className="text-base sm:text-lg text-muted-foreground max-w-xl leading-snug mb-5">
+        <p className="text-base sm:text-lg lg:text-xl text-muted-foreground/70 max-w-xl leading-snug mb-5">
           {texts.sub}
         </p>
         <LinkForward
           href={wa}
           target="_blank"
           rel="noopener noreferrer"
-          trackEvent="land_faq_whatsapp_click"
-          className="inline-flex items-center gap-2 h-10 px-5 rounded-lg bg-[#0F766E] text-white text-sm font-medium hover:opacity-90 active:scale-[0.99] transition-all"
+          trackEvent="l_faq_whatsapp_click"
+          className="inline-flex items-center justify-center gap-2 min-h-11 py-2 px-6 rounded-lg bg-[#0F766E] text-white text-sm font-semibold leading-tight hover:opacity-90 active:scale-[0.99] transition-all"
         >
           <MessageCircle className="h-4 w-4" />
           {texts.whatsappCta}

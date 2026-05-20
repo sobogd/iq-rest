@@ -13,6 +13,16 @@ import type { CuisineKey } from "./cuisine";
 
 const TOTAL_STEPS = 3;
 
+function slugifyName(name: string): string {
+  const slug = name
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_+|_+$/g, "")
+    .slice(0, 40);
+  return slug || "empty";
+}
+
 export function CreateFlowModal({
   open,
   mode = "create",
@@ -26,15 +36,14 @@ export function CreateFlowModal({
   const [cuisine, setCuisine] = useState<CuisineKey | null>(null);
   const [restaurantName, setRestaurantName] = useState("");
   const isSignIn = mode === "signin";
-  // Records why the dialog is closing so onOpenChange can fire the right event.
-  // Set by outside-click / ESC handlers; otherwise defaults to "x" (Close button).
-  const closeReasonRef = useRef<"x" | "backdrop" | "esc" | "auth">("x");
+  // Backdrop/Esc closing is blocked — only the X button can close the modal.
+  const closeReasonRef = useRef<"x" | "auth">("x");
 
   // Already-authenticated visitors who land on the modal get bounced to the dashboard
   // — same behaviour as the dashboard's own /onboarding wizard.
   useEffect(() => {
     if (!open) return;
-    analytics.track(`land_onb_open_${mode}`);
+    analytics.track(`l_onb_open_${mode}`);
     closeReasonRef.current = "x";
     let cancelled = false;
     fetch(dashboardApi("/api/auth/check"), { credentials: "include", cache: "no-store" })
@@ -57,7 +66,7 @@ export function CreateFlowModal({
   // Track step view changes.
   useEffect(() => {
     if (!open || isSignIn) return;
-    analytics.track(`land_onb_step${step}_view`);
+    analytics.track(`l_onb_step${step}_view`);
   }, [open, step, isSignIn]);
 
   // Reset wizard whenever modal closes.
@@ -83,30 +92,14 @@ export function CreateFlowModal({
         open={open}
         onOpenChange={(o) => {
           if (o) return;
-          analytics.track(`land_onb_close_${closeReasonRef.current}_${mode}`);
+          analytics.track(`l_onb_close_${closeReasonRef.current}_${mode}`);
           onClose();
         }}
       >
         <DialogContent
-          onPointerDownOutside={(e) => {
-            // Cross-origin iframes (Google sign-in popup) report clicks
-            // as "outside" because their events don't bubble. Don't close.
-            const target = e.target as HTMLElement | null;
-            if (target?.tagName === "IFRAME" || target?.closest("[data-iframe-host]")) {
-              e.preventDefault();
-              return;
-            }
-            closeReasonRef.current = "backdrop";
-          }}
-          onInteractOutside={(e) => {
-            const target = e.target as HTMLElement | null;
-            if (target?.tagName === "IFRAME" || target?.closest("[data-iframe-host]")) {
-              e.preventDefault();
-            }
-          }}
-          onEscapeKeyDown={() => {
-            closeReasonRef.current = "esc";
-          }}
+          onPointerDownOutside={(e) => e.preventDefault()}
+          onInteractOutside={(e) => e.preventDefault()}
+          onEscapeKeyDown={(e) => e.preventDefault()}
           className="max-w-md p-0 gap-0 bg-background border-border overflow-hidden"
         >
           <div className="p-6 sm:p-8">
@@ -117,7 +110,7 @@ export function CreateFlowModal({
                 onJump={(target) => {
                   if (target === step) return;
                   if (target > step) return;
-                  analytics.track(`land_onb_jump_${target}`);
+                  analytics.track(`l_onb_jump_${target}`);
                   setStep(target);
                 }}
               />
@@ -131,11 +124,11 @@ export function CreateFlowModal({
                   <CuisineStep
                     selected={cuisine}
                     onSelect={(c) => {
-                      analytics.track(`land_onb_cuisine_${c}`);
+                      analytics.track(`l_onb_cuisine_${c}`);
                       setCuisine(c);
                     }}
                     onContinue={() => {
-                      analytics.track("land_onb_cuisine_continue");
+                      analytics.track("l_onb_cuisine_continue");
                       next();
                     }}
                   />
@@ -145,13 +138,13 @@ export function CreateFlowModal({
                   <NameStep
                     value={restaurantName}
                     onChange={setRestaurantName}
-                    onFocus={() => analytics.track("land_onb_name_focus")}
+                    onFocus={() => analytics.track("l_onb_name_focus")}
                     onBack={() => {
-                      analytics.track("land_onb_name_back");
+                      analytics.track("l_onb_name_back");
                       back();
                     }}
                     onContinue={() => {
-                      analytics.track("land_onb_name_continue");
+                      analytics.track(`l_onb_name_continue_${slugifyName(restaurantName)}`);
                       next();
                     }}
                   />

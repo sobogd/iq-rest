@@ -2041,68 +2041,68 @@
   },
   "createFlow": {
     "step1": {
-      "title": "What kind of place is this?",
-      "subtitle": "Pick a vibe and we will preload a sample menu so you can edit, not start from scratch.",
-      "label": "Type"
+      "title": "این چه نوع مکانی است؟",
+      "subtitle": "یک سبک انتخاب کنید و ما یک منوی نمونه پیش بارگذاری می‌کنیم تا ویرایش کنید، نه از صفر شروع کنید.",
+      "label": "نوع"
     },
     "step2": {
-      "title": "What is its name?",
-      "subtitle": "This is what guests see at the top of your menu. You can change it any time.",
-      "nameLabel": "Restaurant name",
-      "namePlaceholder": "Mario's Pizza",
-      "label": "Name"
+      "title": "نامش چیست؟",
+      "subtitle": "این چیزی است که مهمانان در بالای منوی شما می‌بینند. هر زمان می‌توانید تغییرش دهید.",
+      "nameLabel": "نام رستوران",
+      "namePlaceholder": "پیتزا ماریو",
+      "label": "نام"
     },
-    "back": "Back",
-    "continue": "Continue",
+    "back": "بازگشت",
+    "continue": "ادامه",
     "cuisines": {
-      "pizza": "Pizzeria",
-      "sushi": "Sushi / Japanese",
-      "asian": "Asian",
-      "burger": "Burger / Fast food",
-      "coffee": "Coffee / Cafe",
-      "bar": "Bar / Pub",
-      "bakery": "Bakery / Pastry",
-      "restaurant": "Restaurant"
+      "pizza": "پیتزایی",
+      "sushi": "سوشی / ژاپنی",
+      "asian": "آسیایی",
+      "burger": "برگر / فست‌فود",
+      "coffee": "قهوه / کافه",
+      "bar": "بار / پاب",
+      "bakery": "نانوایی / قنادی",
+      "restaurant": "رستوران"
     },
-    "stepOf": "Step {step} of {total}",
+    "stepOf": "مرحله {step} از {total}",
     "step3": {
-      "label": "Sign in"
+      "label": "ورود"
     }
   },
   "auth": {
-    "titleWithName": "One more thing for {name}",
-    "subtitle": "Just leave your email so we can save your menu — you'll be able to edit it any time.",
-    "emailLabel": "Email",
-    "emailPlaceholder": "you@restaurant.com",
-    "continueEmail": "Save my menu",
-    "or": "or",
-    "continueGoogle": "Continue with Google",
-    "changeRestaurant": "Change restaurant",
+    "titleWithName": "یک چیز دیگر برای {name}",
+    "subtitle": "فقط ایمیلتان را بگذارید تا منویتان را ذخیره کنیم — هر زمان می‌توانید ویرایش کنید.",
+    "emailLabel": "ایمیل",
+    "emailPlaceholder": "shoma@restaurant.com",
+    "continueEmail": "ذخیره منوی من",
+    "or": "یا",
+    "continueGoogle": "ادامه با Google",
+    "changeRestaurant": "تغییر رستوران",
     "consent": {
-      "text": "By continuing you agree to our",
-      "terms": "Terms",
-      "and": "and",
-      "privacy": "Privacy Policy"
+      "text": "با ادامه دادن، شما با",
+      "terms": "شرایط",
+      "and": "و",
+      "privacy": "سیاست حریم خصوصی موافقت می‌کنید"
     },
-    "verifyTitle": "Check your inbox",
-    "verifySubtitle": "We sent a 6-digit code to {email}.",
-    "verifyCodeLabel": "Verification code",
-    "checkSpam": "Don't see it? Check your spam folder.",
-    "verifyButton": "Verify and open dashboard",
-    "resendCode": "Resend code",
-    "resendSent": "Code sent",
-    "changeEmail": "Use a different email",
+    "verifyTitle": "صندوق ورودی خود را بررسی کنید",
+    "verifySubtitle": "کد 6 رقمی به {email} ارسال کردیم.",
+    "verifyCodeLabel": "کد تأیید",
+    "checkSpam": "آن را نمی‌بینید؟ پوشه اسپم را بررسی کنید.",
+    "verifyButton": "تأیید و باز کردن داشبورد",
+    "resendCode": "ارسال مجدد کد",
+    "resendSent": "کد ارسال شد",
+    "changeEmail": "از ایمیل دیگر استفاده کنید",
     "errors": {
-      "emailInvalid": "Please enter a valid email address.",
-      "sendFailed": "Couldn't send the code. Try again.",
-      "verifyFailed": "Couldn't verify the code. Try again.",
-      "codeExpired": "This code expired. Request a new one.",
-      "noCode": "No code on file. Request a new one.",
-      "invalidCode": "Wrong code. Try again.",
-      "tooManyAttempts": "Too many attempts. Wait and try again later."
+      "emailInvalid": "لطفاً یک آدرس ایمیل معتبر وارد کنید.",
+      "sendFailed": "ارسال کد ممکن نشد. دوباره امتحان کنید.",
+      "verifyFailed": "تأیید کد ممکن نشد. دوباره امتحان کنید.",
+      "codeExpired": "این کد منقضی شده. یک کد جدید درخواست کنید.",
+      "noCode": "هیچ کدی ثبت نشده. یک کد جدید درخواست کنید.",
+      "invalidCode": "کد اشتباه. دوباره امتحان کنید.",
+      "tooManyAttempts": "تلاش‌های زیاد. صبر کنید و بعداً امتحان کنید."
     },
-    "signInTitle": "Welcome back",
-    "signInSubtitle": "Enter your email and we'll send a quick code to sign you in.",
-    "goToDashboard": "Go to dashboard"
+    "signInTitle": "خوش آمدید",
+    "signInSubtitle": "ایمیلتان را وارد کنید و کد سریعی برای ورود ارسال خواهیم کرد.",
+    "goToDashboard": "رفتن به داشبورد"
   }
 }

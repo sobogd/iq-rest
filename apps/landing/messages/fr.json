@@ -2041,13 +2041,13 @@
   },
   "createFlow": {
     "step1": {
-      "title": "Quel type d'établissement ?",
-      "subtitle": "Choisis un style et nous préchargerons un menu exemple à éditer, plutôt qu'une page blanche.",
+      "title": "Quel type d'établissement est-ce ?",
+      "subtitle": "Choisissez un style et nous préchargerons un menu d'exemple pour que vous puissiez modifier au lieu de partir de zéro.",
       "label": "Type"
     },
     "step2": {
       "title": "Comment s'appelle-t-il ?",
-      "subtitle": "C'est ce que les clients voient en haut du menu. Tu peux le changer à tout moment.",
+      "subtitle": "C'est ce que les clients voient en haut de votre menu. Vous pouvez le modifier à tout moment.",
       "nameLabel": "Nom du restaurant",
       "namePlaceholder": "Pizzeria Mario",
       "label": "Nom"
@@ -2071,38 +2071,38 @@
   },
   "auth": {
     "titleWithName": "Une dernière chose pour {name}",
-    "subtitle": "Laisse-nous juste ton e-mail pour qu'on sauvegarde ton menu — tu pourras le modifier quand tu veux.",
+    "subtitle": "Laissez simplement votre e-mail pour que nous sauvegardions votre menu — vous pourrez le modifier à tout moment.",
     "emailLabel": "E-mail",
-    "emailPlaceholder": "toi@restaurant.com",
+    "emailPlaceholder": "vous@restaurant.fr",
     "continueEmail": "Sauvegarder mon menu",
     "or": "ou",
     "continueGoogle": "Continuer avec Google",
     "changeRestaurant": "Changer de restaurant",
     "consent": {
-      "text": "En continuant tu acceptes nos",
+      "text": "En continuant vous acceptez nos",
       "terms": "Conditions",
-      "and": "et",
+      "and": "et la",
       "privacy": "Politique de confidentialité"
     },
-    "verifyTitle": "Vérifie ta boîte",
+    "verifyTitle": "Vérifiez votre boîte de réception",
     "verifySubtitle": "Nous avons envoyé un code à 6 chiffres à {email}.",
     "verifyCodeLabel": "Code de vérification",
-    "checkSpam": "Pas de mail ? Vérifie le dossier spam.",
+    "checkSpam": "Vous ne le voyez pas ? Vérifiez votre dossier spam.",
     "verifyButton": "Vérifier et ouvrir le tableau de bord",
     "resendCode": "Renvoyer le code",
     "resendSent": "Code envoyé",
-    "changeEmail": "Utiliser une autre adresse",
+    "changeEmail": "Utiliser un autre e-mail",
     "errors": {
-      "emailInvalid": "Saisis une adresse e-mail valide.",
-      "sendFailed": "Impossible d'envoyer le code. Réessaie.",
-      "verifyFailed": "Impossible de vérifier le code. Réessaie.",
-      "codeExpired": "Ce code a expiré. Demandes-en un nouveau.",
-      "noCode": "Aucun code enregistré. Demandes-en un nouveau.",
-      "invalidCode": "Code incorrect. Réessaie.",
-      "tooManyAttempts": "Trop de tentatives. Attends et réessaie."
+      "emailInvalid": "Veuillez saisir une adresse e-mail valide.",
+      "sendFailed": "Impossible d'envoyer le code. Réessayez.",
+      "verifyFailed": "Impossible de vérifier le code. Réessayez.",
+      "codeExpired": "Ce code a expiré. Demandez-en un nouveau.",
+      "noCode": "Aucun code enregistré. Demandez-en un nouveau.",
+      "invalidCode": "Code incorrect. Réessayez.",
+      "tooManyAttempts": "Trop de tentatives. Attendez et réessayez plus tard."
     },
-    "signInTitle": "Content de te revoir",
-    "signInSubtitle": "Saisis ton e-mail et on t'envoie un code rapide pour te connecter.",
-    "goToDashboard": "Ouvrir le tableau"
+    "signInTitle": "Bon retour",
+    "signInSubtitle": "Entrez votre e-mail et nous enverrons un code rapide pour vous connecter.",
+    "goToDashboard": "Accéder au tableau de bord"
   }
 }

@@ -2042,13 +2042,13 @@
   "createFlow": {
     "step1": {
       "title": "Was für ein Lokal ist das?",
-      "subtitle": "Wähle einen Stil und wir laden eine Beispielkarte vor, damit du bearbeitest statt bei Null anfängst.",
+      "subtitle": "Wählen Sie einen Typ und wir laden eine Beispiel-Speisekarte vor, damit Sie bearbeiten und nicht von Null beginnen.",
       "label": "Typ"
     },
     "step2": {
       "title": "Wie heißt es?",
-      "subtitle": "Das sehen die Gäste oben in deiner Karte. Du kannst es jederzeit ändern.",
-      "nameLabel": "Name des Restaurants",
+      "subtitle": "Das sehen Gäste oben in Ihrer Speisekarte. Sie können es jederzeit ändern.",
+      "nameLabel": "Restaurantname",
       "namePlaceholder": "Marios Pizza",
       "label": "Name"
     },
@@ -2058,8 +2058,8 @@
       "pizza": "Pizzeria",
       "sushi": "Sushi / Japanisch",
       "asian": "Asiatisch",
-      "burger": "Burger / Fastfood",
-      "coffee": "Café",
+      "burger": "Burger / Fast Food",
+      "coffee": "Kaffee / Café",
       "bar": "Bar / Pub",
       "bakery": "Bäckerei / Konditorei",
       "restaurant": "Restaurant"
@@ -2071,38 +2071,38 @@
   },
   "auth": {
     "titleWithName": "Noch eine Sache für {name}",
-    "subtitle": "Lass uns nur deine E-Mail, damit wir dein Menü speichern — du kannst es jederzeit bearbeiten.",
+    "subtitle": "Lassen Sie einfach Ihre E-Mail-Adresse da, damit wir Ihre Speisekarte speichern können — Sie können sie jederzeit bearbeiten.",
     "emailLabel": "E-Mail",
-    "emailPlaceholder": "du@restaurant.com",
-    "continueEmail": "Mein Menü speichern",
+    "emailPlaceholder": "sie@restaurant.de",
+    "continueEmail": "Meine Speisekarte speichern",
     "or": "oder",
     "continueGoogle": "Mit Google fortfahren",
     "changeRestaurant": "Restaurant ändern",
     "consent": {
-      "text": "Mit Fortfahren akzeptierst du unsere",
-      "terms": "Bedingungen",
-      "and": "und",
-      "privacy": "Datenschutzerklärung"
+      "text": "Mit der Fortsetzung stimmen Sie unseren",
+      "terms": "AGB",
+      "and": "und der",
+      "privacy": "Datenschutzerklärung zu"
     },
-    "verifyTitle": "Schau in dein Postfach",
-    "verifySubtitle": "Wir haben einen 6-stelligen Code an {email} geschickt.",
+    "verifyTitle": "Prüfen Sie Ihren Posteingang",
+    "verifySubtitle": "Wir haben einen 6-stelligen Code an {email} gesendet.",
     "verifyCodeLabel": "Bestätigungscode",
-    "checkSpam": "Nicht da? Schau im Spam-Ordner nach.",
+    "checkSpam": "Sie sehen ihn nicht? Prüfen Sie Ihren Spam-Ordner.",
     "verifyButton": "Bestätigen und Dashboard öffnen",
     "resendCode": "Code erneut senden",
     "resendSent": "Code gesendet",
     "changeEmail": "Andere E-Mail verwenden",
     "errors": {
-      "emailInvalid": "Bitte gib eine gültige E-Mail-Adresse ein.",
-      "sendFailed": "Code konnte nicht gesendet werden. Versuche es erneut.",
-      "verifyFailed": "Code konnte nicht verifiziert werden. Versuche es erneut.",
-      "codeExpired": "Dieser Code ist abgelaufen. Fordere einen neuen an.",
-      "noCode": "Kein Code hinterlegt. Fordere einen neuen an.",
-      "invalidCode": "Falscher Code. Versuche es erneut.",
-      "tooManyAttempts": "Zu viele Versuche. Warte und versuche es später."
+      "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "sendFailed": "Code konnte nicht gesendet werden. Versuchen Sie es erneut.",
+      "verifyFailed": "Code konnte nicht überprüft werden. Versuchen Sie es erneut.",
+      "codeExpired": "Dieser Code ist abgelaufen. Fordern Sie einen neuen an.",
+      "noCode": "Kein Code hinterlegt. Fordern Sie einen neuen an.",
+      "invalidCode": "Falscher Code. Versuchen Sie es erneut.",
+      "tooManyAttempts": "Zu viele Versuche. Warten Sie und versuchen Sie es später erneut."
     },
     "signInTitle": "Willkommen zurück",
-    "signInSubtitle": "Gib deine E-Mail ein, wir schicken dir einen kurzen Code zum Anmelden.",
+    "signInSubtitle": "Geben Sie Ihre E-Mail ein, wir senden Ihnen einen schnellen Code zur Anmeldung.",
     "goToDashboard": "Zum Dashboard"
   }
 }

@@ -2041,68 +2041,68 @@
   },
   "createFlow": {
     "step1": {
-      "title": "What kind of place is this?",
-      "subtitle": "Pick a vibe and we will preload a sample menu so you can edit, not start from scratch.",
+      "title": "Hva slags sted er det?",
+      "subtitle": "Velg en stil og vi forhåndslaster en eksempelmeny så du kan redigere i stedet for å starte fra bunnen.",
       "label": "Type"
     },
     "step2": {
-      "title": "What is its name?",
-      "subtitle": "This is what guests see at the top of your menu. You can change it any time.",
-      "nameLabel": "Restaurant name",
-      "namePlaceholder": "Mario's Pizza",
-      "label": "Name"
+      "title": "Hva heter det?",
+      "subtitle": "Dette ser gjester øverst på menyen. Du kan endre det når som helst.",
+      "nameLabel": "Restaurantnavn",
+      "namePlaceholder": "Marios Pizza",
+      "label": "Navn"
     },
-    "back": "Back",
-    "continue": "Continue",
+    "back": "Tilbake",
+    "continue": "Fortsett",
     "cuisines": {
       "pizza": "Pizzeria",
-      "sushi": "Sushi / Japanese",
-      "asian": "Asian",
-      "burger": "Burger / Fast food",
-      "coffee": "Coffee / Cafe",
+      "sushi": "Sushi / Japansk",
+      "asian": "Asiatisk",
+      "burger": "Burger / Hurtigmat",
+      "coffee": "Kaffe / Kafé",
       "bar": "Bar / Pub",
-      "bakery": "Bakery / Pastry",
+      "bakery": "Bakeri / Konditori",
       "restaurant": "Restaurant"
     },
-    "stepOf": "Step {step} of {total}",
+    "stepOf": "Trinn {step} av {total}",
     "step3": {
-      "label": "Sign in"
+      "label": "Logg inn"
     }
   },
   "auth": {
-    "titleWithName": "One more thing for {name}",
-    "subtitle": "Just leave your email so we can save your menu — you'll be able to edit it any time.",
-    "emailLabel": "Email",
-    "emailPlaceholder": "you@restaurant.com",
-    "continueEmail": "Save my menu",
-    "or": "or",
-    "continueGoogle": "Continue with Google",
-    "changeRestaurant": "Change restaurant",
+    "titleWithName": "En siste ting for {name}",
+    "subtitle": "Bare legg igjen e-posten din så vi kan lagre menyen — du kan redigere når som helst.",
+    "emailLabel": "E-post",
+    "emailPlaceholder": "deg@restaurant.no",
+    "continueEmail": "Lagre menyen min",
+    "or": "eller",
+    "continueGoogle": "Fortsett med Google",
+    "changeRestaurant": "Bytt restaurant",
     "consent": {
-      "text": "By continuing you agree to our",
-      "terms": "Terms",
-      "and": "and",
-      "privacy": "Privacy Policy"
+      "text": "Ved å fortsette godtar du våre",
+      "terms": "Vilkår",
+      "and": "og",
+      "privacy": "Personvernerklæring"
     },
-    "verifyTitle": "Check your inbox",
-    "verifySubtitle": "We sent a 6-digit code to {email}.",
-    "verifyCodeLabel": "Verification code",
-    "checkSpam": "Don't see it? Check your spam folder.",
-    "verifyButton": "Verify and open dashboard",
-    "resendCode": "Resend code",
-    "resendSent": "Code sent",
-    "changeEmail": "Use a different email",
+    "verifyTitle": "Sjekk innboksen din",
+    "verifySubtitle": "Vi sendte en 6-sifret kode til {email}.",
+    "verifyCodeLabel": "Bekreftelseskode",
+    "checkSpam": "Ser du den ikke? Sjekk søppelpostmappen.",
+    "verifyButton": "Bekreft og åpne dashbord",
+    "resendCode": "Send kode på nytt",
+    "resendSent": "Kode sendt",
+    "changeEmail": "Bruk en annen e-post",
     "errors": {
-      "emailInvalid": "Please enter a valid email address.",
-      "sendFailed": "Couldn't send the code. Try again.",
-      "verifyFailed": "Couldn't verify the code. Try again.",
-      "codeExpired": "This code expired. Request a new one.",
-      "noCode": "No code on file. Request a new one.",
-      "invalidCode": "Wrong code. Try again.",
-      "tooManyAttempts": "Too many attempts. Wait and try again later."
+      "emailInvalid": "Skriv inn en gyldig e-postadresse.",
+      "sendFailed": "Kunne ikke sende kode. Prøv igjen.",
+      "verifyFailed": "Kunne ikke bekrefte kode. Prøv igjen.",
+      "codeExpired": "Denne koden er utløpt. Be om en ny.",
+      "noCode": "Ingen kode registrert. Be om en ny.",
+      "invalidCode": "Feil kode. Prøv igjen.",
+      "tooManyAttempts": "For mange forsøk. Vent og prøv igjen senere."
     },
-    "signInTitle": "Welcome back",
-    "signInSubtitle": "Enter your email and we'll send a quick code to sign you in.",
-    "goToDashboard": "Go to dashboard"
+    "signInTitle": "Velkommen tilbake",
+    "signInSubtitle": "Skriv inn e-posten din så sender vi en rask kode for å logge inn.",
+    "goToDashboard": "Gå til dashbord"
   }
 }

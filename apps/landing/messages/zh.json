@@ -2041,68 +2041,68 @@
   },
   "createFlow": {
     "step1": {
-      "title": "What kind of place is this?",
-      "subtitle": "Pick a vibe and we will preload a sample menu so you can edit, not start from scratch.",
-      "label": "Type"
+      "title": "这是什么类型的场所？",
+      "subtitle": "选择一种风格，我们将预先加载示例菜单，让您可以编辑而非从零开始。",
+      "label": "类型"
     },
     "step2": {
-      "title": "What is its name?",
-      "subtitle": "This is what guests see at the top of your menu. You can change it any time.",
-      "nameLabel": "Restaurant name",
-      "namePlaceholder": "Mario's Pizza",
-      "label": "Name"
+      "title": "叫什么名字？",
+      "subtitle": "这是顾客在菜单顶部看到的内容。您可以随时更改。",
+      "nameLabel": "餐厅名称",
+      "namePlaceholder": "马里奥披萨",
+      "label": "名称"
     },
-    "back": "Back",
-    "continue": "Continue",
+    "back": "返回",
+    "continue": "继续",
     "cuisines": {
-      "pizza": "Pizzeria",
-      "sushi": "Sushi / Japanese",
-      "asian": "Asian",
-      "burger": "Burger / Fast food",
-      "coffee": "Coffee / Cafe",
-      "bar": "Bar / Pub",
-      "bakery": "Bakery / Pastry",
-      "restaurant": "Restaurant"
+      "pizza": "披萨店",
+      "sushi": "寿司 / 日式",
+      "asian": "亚洲菜",
+      "burger": "汉堡 / 快餐",
+      "coffee": "咖啡 / 咖啡馆",
+      "bar": "酒吧",
+      "bakery": "烘焙 / 糕点",
+      "restaurant": "餐厅"
     },
-    "stepOf": "Step {step} of {total}",
+    "stepOf": "第 {step} 步，共 {total} 步",
     "step3": {
-      "label": "Sign in"
+      "label": "登录"
     }
   },
   "auth": {
-    "titleWithName": "One more thing for {name}",
-    "subtitle": "Just leave your email so we can save your menu — you'll be able to edit it any time.",
-    "emailLabel": "Email",
+    "titleWithName": "{name} 还有一件事",
+    "subtitle": "只需留下您的邮箱，以便我们保存您的菜单 — 您可以随时编辑。",
+    "emailLabel": "电子邮箱",
     "emailPlaceholder": "you@restaurant.com",
-    "continueEmail": "Save my menu",
-    "or": "or",
-    "continueGoogle": "Continue with Google",
-    "changeRestaurant": "Change restaurant",
+    "continueEmail": "保存我的菜单",
+    "or": "或",
+    "continueGoogle": "使用 Google 继续",
+    "changeRestaurant": "更换餐厅",
     "consent": {
-      "text": "By continuing you agree to our",
-      "terms": "Terms",
-      "and": "and",
-      "privacy": "Privacy Policy"
+      "text": "继续即表示您同意我们的",
+      "terms": "条款",
+      "and": "和",
+      "privacy": "隐私政策"
     },
-    "verifyTitle": "Check your inbox",
-    "verifySubtitle": "We sent a 6-digit code to {email}.",
-    "verifyCodeLabel": "Verification code",
-    "checkSpam": "Don't see it? Check your spam folder.",
-    "verifyButton": "Verify and open dashboard",
-    "resendCode": "Resend code",
-    "resendSent": "Code sent",
-    "changeEmail": "Use a different email",
+    "verifyTitle": "查看您的收件箱",
+    "verifySubtitle": "我们已向 {email} 发送了 6 位代码。",
+    "verifyCodeLabel": "验证码",
+    "checkSpam": "看不到？请检查垃圾邮件文件夹。",
+    "verifyButton": "验证并打开仪表板",
+    "resendCode": "重新发送代码",
+    "resendSent": "代码已发送",
+    "changeEmail": "使用其他邮箱",
     "errors": {
-      "emailInvalid": "Please enter a valid email address.",
-      "sendFailed": "Couldn't send the code. Try again.",
-      "verifyFailed": "Couldn't verify the code. Try again.",
-      "codeExpired": "This code expired. Request a new one.",
-      "noCode": "No code on file. Request a new one.",
-      "invalidCode": "Wrong code. Try again.",
-      "tooManyAttempts": "Too many attempts. Wait and try again later."
+      "emailInvalid": "请输入有效的电子邮箱地址。",
+      "sendFailed": "无法发送代码。请重试。",
+      "verifyFailed": "无法验证代码。请重试。",
+      "codeExpired": "此代码已过期。请请求新代码。",
+      "noCode": "未记录代码。请请求新代码。",
+      "invalidCode": "代码错误。请重试。",
+      "tooManyAttempts": "尝试次数过多。请稍后再试。"
     },
-    "signInTitle": "Welcome back",
-    "signInSubtitle": "Enter your email and we'll send a quick code to sign you in.",
-    "goToDashboard": "Go to dashboard"
+    "signInTitle": "欢迎回来",
+    "signInSubtitle": "输入您的邮箱，我们将发送快速登录代码。",
+    "goToDashboard": "前往仪表板"
   }
 }

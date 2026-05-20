@@ -1,96 +1,170 @@
-import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { CalendarCheck, ChefHat, Receipt, Monitor } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
-  htmlLang: "lt", htmlDir: "ltr",
+  htmlLang: "lt",
+  htmlDir: "ltr",
+
   meta: {
-    title: "QR Meniu Restoranams — Tiesioginiai Užsakymai, Nulis Komisinių | IQ Rest",
-    description: "Pabaiga popieriniams meniu ir maisto pristatymo programėlių komisiniams. QR meniu, tiesioginiai užsakymai, rezervacijos ir daugiakalbis tinklalapis. 14 dienų nemokamai, be kortelės.",
-    canonical: "https://iq-rest.com/lt", ogLocale: "lt_LT",
-    ogTitle: "QR Meniu Restoranams — Tiesioginiai Užsakymai, Nulis Komisinių",
-    ogDescription: "QR meniu, tiesioginiai užsakymai, rezervacijos ir AI vertimas. Paruošta per 5 minučių. 14 dienų nemokamai — be kortelės.",
+    title: "QR meniu restoranams — Tiesioginiai užsakymai, nulis komisinio | IQ Rest",
+    description:
+      "Viskas vienoje platforma restoranams: skaitmeninis meniu, QR užsakymai, staliukų rezervacija ir virtuvės ekranas. Paleidimas per 5 minutes. 14 dienų nemokamai, be kortelės.",
+    canonical: "https://iq-rest.com/lt",
+    ogLocale: "lt_LT",
+    ogTitle: "QR meniu restoranams — Tiesioginiai užsakymai, nulis komisinio",
+    ogDescription:
+      "Skaitmeninis meniu, QR užsakymai, staliukų rezervacija ir AI vertimas. Paleidimas per 5 minutes. 14 dienų nemokamai.",
   },
-  ctaText: "Išbandyti nemokamai",
-  demoText: "Žiūrėti demo", microcopy: "14 dienų nemokamai · Be kortelės · Atšauk bet kada",
-  header: { navFeatures: "Funkcijos", navHow: "Kaip tai veikia", navPricing: "Kainos", navFaq: "FAQ", signIn: "Prisijungti", cta: "Pradėti" },
+
+  ctaText: "Išbandykite nemokamai",
+  demoText: "Žiūrėti demonstraciją",
+  microcopy: "14 dienų nemokamai · Be kortelės · Atšaukite bet kada",
+
+  header: {
+    navFeatures: "Funkcijos",
+    navHow: "Kaip veikia",
+    navPricing: "Kainos",
+    navFaq: "DUK",
+    signIn: "Prisijungti",
+    cta: "Pradėti",
+  },
+
   hero: {
     verticals: ["Restoranai", "Kavinės", "Barai", "Viešbučiai", "Picerijos"],
-    headline: "Skaitmeninis meniu restoranams. Paruošta per 5 minutes.",
-    sub: "Skaitmeninis meniu jūsų restoranui per 5 minutes. Viskas įskaičiuota: mobilus redaktorius be kodo, AI meniu skenavimas, QR kodai stalams ir tiesioginiai užsakymai be komisinių.",
-    dynamicHeadlines: ["0% komisinių.", "35 kalbos su DI.", "Užsakymai internetu.", "Rezervacijos 24/7.", "Premium dizainas."],
-    painBullets: ["0% komisinių: Visi užsakymai keliauja tiesiai jums.", "AI vertimas: 35 kalbos didesnėms turistų sąskaitoms.", "Rezervacijos 24/7: Pilna salė be papildomų skambučių.", "Lanksčios kainos: Atnaujinkite meniu per kelias sekundes."],
-    rating: "Daugiau nei 500 restoranų 30+ šalių",
+    headline: "Skaitmeninis meniu restoranui. Veikia per 5 minutes.",
+    sub: "Skaitmeninis meniu jūsų restoranui per 5 minutes. Viskas įtraukta: redaktorius be kodo, AI atpažinimas spausdintam meniu, QR kodai staliukams ir tiesioginiai užsakymai be komisinio.",
+    dynamicHeadlines: ["0 % komisinis.", "35 AI kalbos.", "Užsakymai internetu.", "Rezervacijos 24/7.", "Premium dizainas."],
+    painBullets: [
+      "0 % komisinis: kiekvienas užsakymas patenka tiesiai į jūsų restoraną.",
+      "AI vertimas į 35 kalbas — turistai supranta meniu ir užsako daugiau.",
+      "Rezervacija 24/7: svečiai patys rezervuoja staliukus, be skambučių piko valandomis.",
+      "Lankstus kainų nustatymas: meniu pakeitimai pasiekia internetą per sekundes.",
+    ],
+    rating: "Daugiau nei 500 restoranų daugiau nei 30 šalių",
   },
+
   features: {
-    heading: "Viskas, ko reikia.", headingAccent: "Nieko nereikalingo.",
-    sub: "Sukurta restoranams. Naudojama prie stalo.",
+    heading: "Viskas, ko reikia.",
+    headingAccent: "Nieko per daug.",
+    sub: "Sukurta restoranams. Naudojama kasdien prie stalo, virtuvėje ir salėje.",
     items: [
-      
-      { Icon: QrCode, title: "Užsakymai nuo stalelio", desc: "Užsakymai akimirksniu ateina į WhatsApp arba pultą su stalo numeriu. Greitesnis aptarnavimas.", tag: "Tiesioginiai užsakymai", href: "/lt/internetine-uzsakymu-sistema-restoranui" },
-      { Icon: Languages, title: "AI vertėjas (35 kalbos)", desc: "Mūsų AI supranta gastronomiją. Turistai užsisako 20% daugiau, kai supranta meniu sudėtį.", tag: "DI vertimas" },
-      { Icon: CalendarCheck, title: "Stalų rezervacija", desc: "Sistemos priima rezervacijas, kol jūs virtuvėje. Nė vieno prarasto kliento.", tag: "Rezervacijos" },
-      { Icon: Palette, title: "Modernus dizainas", desc: "Video fonai ir skanios nuotraukos. Jūsų meniu atrodo prabangiai ir žadina apetitą.", tag: "Pritaikytas dizainas" },
-      { Icon: Smartphone, title: "Greitas redaktorius", desc: "Valdykite stop-sąrašą ir kainas tiesiai iš telefono. Pakeitimai svečiams matomi iškart.", tag: "Meniu redaktorius" },
-      { Icon: ChefHat, title: "Virtuvės ekranas", desc: "Pamirškite popierinius čekius. Užsakymai iš salės eina tiesiai į virėjo ekraną.", tag: "Virtuvės ekranas" },
-    
+      { Icon: Monitor, title: "Skaitmeninis meniu", desc: "Meniu naršyklėje su nuotraukomis, kainomis, alergenais ir aprašymais. Atnaujinamas realiu laiku iš telefono. Svečiai mato meniu savo kalba; restoranas taupo spausdinimui.", tag: "Skaitmeninis meniu", href: "/lt/skaitmeninis-meniu-restoranas" },
+      { Icon: Receipt, title: "Užsakymų priėmimas: svečias ir padavėjas", desc: "QR kodas ant staliuko svečiui arba padavėjas priima užsakymą iš telefono — abu patenka tiesiai į virtuvę arba WhatsApp. Be komisinio, su staliuko numeriu kiekviename kvite.", tag: "Užsakymai", href: "/lt/uzsakymu-sistema-restoranas" },
+      { Icon: CalendarCheck, title: "Staliukų rezervacija 24/7", desc: "Svečiai patys rezervuoja staliukus per svetainę ar QR meniu, kol jūs užimti salėje. Kalendorius pagal staliuką, automatiniai patvirtinimai ir priminimai. Nė vieno prarasto svečio.", tag: "Rezervacija", href: "/lt/staliuku-rezervacija" },
+      { Icon: ChefHat, title: "Virtuvės ekranas (KDS)", desc: "Popieriniai kvitai nebereikalingi. Užsakymai iš salės patenka tiesiai į virėjo ekraną — stulpeliai „gaminama / paruošta / patiekta“, alergenai ir pastabos paryškinti spalvomis. Planšetėje ar telefone.", tag: "KDS", href: "/lt/virtuves-ekranas" },
     ],
   },
+
   founder: {
-    eyebrow: "Sukūrė restoratorius",
-    quoteStart: "Su žmona atidarėme kavinę ir savaites ieškojome sistemos, kuri tvarkytų užsakymus internetu, rezervacijas ir atrodytų moderniai. Viskas, ką bandėme, buvo gremėzdiška, negraži arba trūko pusės funkcijų —",
-    quoteAccent: "todėl pasistatėme tai, ko patys norėjome.",
+    eyebrow: "Sukurta restoratorių",
+    quoteStart:
+      "Su žmona valdėme savo kavinę ir iš pirmų lūpų žinome, kaip iš tikrųjų atrodo restorano diena — užsakymų priėmimas, rezervacijos, salės ir virtuvės srautas. Norėjome vieno įrankio: modernaus, lengvai paleidžiamo ir aiškaus iš pirmo žvilgsnio —",
+    quoteAccent: "todėl pradėjome kurti platformą, kurią dabar plėtojame kitiems restoratoriams.",
     sign: "Bogdan Sokolov · įkūrėjas, buvęs kavinės savininkas",
-    photoAlt: "Bogdan, IQ Rest įkūrėjas",
+    photoAlt: "Bogdan Sokolov, IQ Rest įkūrėjas",
   },
+
   how: {
-    heading: "Tiesiogiai per mažiau nei 5 minučių",
-    sub: "Keturi trumpi žingsniai. Be diegimo, be techninės konfigūracijos.",
+    heading: "Veikia per 5 minutes",
+    sub: "Keturi trumpi žingsniai. Be diegimo, be techninio nustatymo.",
     steps: [
-      { n: "1", t: "Tipas ir pavadinimas", d: "Pasirink tipą ir įvesk pavadinimą." },
-      { n: "2", t: "Išsaugoti", d: "El. paštas arba prisijungimas per Google." },
-      { n: "3", t: "Meniu", d: "Sukurk pats arba nuskaityk popierinį." },
-      { n: "4", t: "Paruošta", d: "Žiūrėk, dalykis ir priimk užsakymus." },
+      { n: "1", t: "Tipas ir pavadinimas", d: "Pasirinkite įstaigos tipą ir įveskite pavadinimą." },
+      { n: "2", t: "Išsaugoti", d: "Įveskite el. paštą arba prisijunkite su Google." },
+      { n: "3", t: "Meniu", d: "Pridėkite prekes rankiniu būdu arba įkelkite spausdintą meniu AI atpažinimui." },
+      { n: "4", t: "Baigta", d: "Pasidalykite nuoroda arba QR kodu ir pradėkite priimti užsakymus." },
     ],
   },
+
   pricing: {
-    badge: "Nulis komisinių · Be sutarčių",
-    heading: "Vienas planas.", headingAccent: "Viskas įtraukta.",
-    sub: "QR meniu, užsakymai, AI vertimas, restorano tinklalapis ir rezervacijos. Viena paprasta kaina.",
-    monthlyLabel: "Mėnesinis", yearlyLabel: "Metinis", saveBadge: "Sutaupyk 25%", perMonth: "per mėnesį",
-    billedAnnually: "Metinis sąskaita {total}", youSave: "Sutaupai {amount}",
-    trust: { secure: "Saugus mokėjimas su Stripe", noCommitment: "Be įsipareigojimų", quick: "Aktyvus per minutes", restaurants: "500+ restoranų" },
+    badge: "Be komisinio · Be sutarčių",
+    heading: "Vienas planas.",
+    headingAccent: "Viskas įtraukta.",
+    sub: "QR meniu, užsakymų priėmimas, AI vertimas, restorano svetainė ir rezervacija. Vienas skaidrus mėnesio mokestis.",
+    monthlyLabel: "Per mėnesį",
+    yearlyLabel: "Per metus",
+    saveBadge: "Sutaupykite 25 %",
+    perMonth: "per mėnesį",
+    billedAnnually: "Metinis atsiskaitymas: {total}",
+    youSave: "Sutaupote {amount}",
+    trust: { secure: "Saugus mokėjimas per Stripe", noCommitment: "Be įsipareigojimo", quick: "Aktyvus per minutes", restaurants: "500+ restoranų" },
   },
+
   faq: {
-    eyebrow: "Klausimai?", heading: "Dažniausiai užduodami", headingAccent: "klausimai.",
-    sub: "Ką restoranų savininkai klausia prieš registruodamiesi. Nematai savo? Rašyk WhatsApp — atsako tikri žmonės.",
-    whatsappCta: "Klausk WhatsApp", whatsappPrefill: "Sveiki, turiu klausimą apie IQ Rest",
+    eyebrow: "Turite klausimų?",
+    heading: "Dažnai užduodami",
+    headingAccent: "klausimai.",
+    sub: "Ką restoratoriai klausia prieš registruodamiesi. Nerandate savo klausimo? Parašykite mums į WhatsApp — atsako tikri žmonės, ne robotas.",
+    whatsappCta: "Klauskite WhatsApp",
+    whatsappPrefill: "Sveiki, turiu klausimą apie IQ Rest",
     items: [
-      { q: "Ką apima nemokamas bandymas ir kas po to?", a: "14 dienų pilna prieiga, be kortelės. Po 14 dienų paskyra sustabdoma, jei nepridėsi mokėjimo būdo — niekada nesinuskaitome automatiškai. Vėliau pridėk mokėjimą, kad atnaujintum. Atšauk vienu paspaudimu." },
-      { q: "Ar imate komisinį nuo užsakymų?", a: "Nulį. Kiekvienas užsakymas iš tavo QR meniu eina tiesiai tau — be mūsų dalies, be Wolt / Bolt Food mokesčių. Viena fiksuota mėnesio kaina, ir viskas." },
-      { q: "Ar svečiams reikia programėlės? Ar man reikia techninių įgūdžių?", a: "Be programėlių svečiams — nuskaito QR kamera, meniu atsidaro naršyklėje. Be techninių įgūdžių tau — visas panelis veikia telefone, palietk pridėti, tempk pertvarkyti, tokia visa kreivė." },
-      { q: "Kaip greitai keičiu kainas ir pridedu patiekalų?", a: "Akimirksniu. Pakeisk kainą telefone, svečiai mato per sekundes. Naujas patiekalas? Palietk, įrašyk, nuotrauka, paruošta — be perspausdinimo, be dizainerio laukimo." },
-      { q: "Kiek kalbų palaikote?", a: "35 kalbas su įdiegtu AI vertimu. Vienas palietimas išverčia visą meniu, AI supranta kulinarinį kontekstą — pavadinimai ir aprašymai skamba natūraliai kiekviena kalba. Turistai užsako daugiau, kai tikrai supranta." },
+      { q: "Ką apima bandomasis laikotarpis ir kas vyksta po to?", a: "Pilna prieiga prie visų funkcijų 14 dienų, be kortelės. Po 14 dienų sąskaita pristabdoma, jei nepridėta mokėjimo priemonė — niekada neapmokestiname automatiškai. Mokėjimą galite pridėti vėliau ir tęsti nuo ten, kur sustojote. Atšaukite bet kada vienu spustelėjimu." },
+      { q: "Ar imate komisinį už užsakymus?", a: "Ne. Kiekvienas užsakymas iš QR meniu patenka tiesiai į restoraną — be procentų iš mūsų pusės, be agregatorių komisinių. Vienas fiksuotas mėnesio mokestis ir nieko daugiau." },
+      { q: "Ar svečiams reikia programėlės, ar mums reikia techninių įgūdžių?", a: "Svečiams nereikia programėlės — jie nukreipia telefono kamerą į QR kodą ir meniu atsidaro naršyklėje. Restoranams taip pat nereikia techninių įgūdžių: administravimo skydelis veikia bet kurioje moderniojoje naršyklėje telefone, planšetėje ar nešiojamajame kompiuteryje. Kiekvienas veiksmas atliekamas spustelėjimu ir vilkimu, be kodo." },
+      { q: "Kaip greitai keičiasi kainos ir pasirodo nauji patiekalai?", a: "Iškart. Pakeiskite kainą iš telefono — svečiai pamatys per sekundes. Naujas patiekalas užima kelis bakstelėjimus: pavadinimas, kaina, nuotrauka. Be perspausdinimo, be laukimo dizainerio." },
+      { q: "Kiek kalbų palaikoma?", a: "35 kalbos su integruotu AI vertimu. Vienas bakstelėjimas ir visas meniu išverstas; AI supranta kulinarinį kontekstą — pavadinimai ir aprašymai skamba natūraliai bet kuria kalba. Turistai užsako su didesniu pasitikėjimu, kai iš tikrųjų supranta meniu." },
     ],
   },
-  finalCta: { heading: "Paruošta per 5 minučių.", headingAccent: "Nemokamai 14 dienų.", sub: "Be kortelės. Atšauk bet kada. Prisijunk prie 500+ restoranų jau IQ Rest." },
+
+  finalCta: {
+    heading: "Veikia per 5 minutes.",
+    headingAccent: "14 dienų nemokamai.",
+    sub: "Be kortelės, atšaukite bet kada. Prisijunkite prie 500+ restoranų, kurie jau naudoja IQ Rest.",
+  },
+
   scan: {
-    heading: "Popierinis meniu ar PDF?",
-    headingAccent: "DI suskaitmenina jį per 60 sekundžių.",
-    sub: "Įkelk — DI atpažįsta kategorijas, patiekalus ir kainas.",
+    heading: "Turite popierinį meniu ar PDF?",
+    headingAccent: "AI suskaitmenina jį per 60 sekundžių.",
+    sub: "Įkelkite nuotrauką ar dokumentą — AI automatiškai atpažįsta kategorijas, patiekalus ir kainas.",
     cta: "Skenuoti meniu →",
   },
+
+  pricingHero: {
+    chips: ["Be komisinio", "Be sutarčių", "14 dienų nemokamai"],
+    heading: "Kainos.",
+    headingAccent: "Be paslėptų mokesčių.",
+    sub: "Vienas skaidrus mėnesio mokestis. Be procentų nuo užsakymų ir be agregatorių komisinių. Atšaukite prenumeratą bet kada.",
+    popularBadge: "Populiarus",
+    perMonthSuffix: "/mėn.",
+    whenAnnualTemplate: "metinis atsiskaitymas · {total} € per metus",
+    orMonthlyTemplate: "arba {price} €/mėn.",
+    savingsTemplate: "sutaupykite {amount} € per metus",
+    plans: {
+      basic: {
+        name: "Basic",
+        tagline: "Meniu, QR užsakymai ir AI vertimas. Veikia per 5 minutes.",
+        features: [
+          "QR meniu kiekvienam staliukui",
+          "Skaitmeninis meniu su nuotraukomis ir alergenais",
+          "AI vertimas į 35 kalbas",
+          "Užsakymai iš meniu (pasirinktinai)",
+          "AI patiekalų nuotraukų generavimas",
+          "Valdymas iš bet kurio telefono ar planšetės",
+        ],
+      },
+      pro: {
+        name: "Pro",
+        tagline: "Pilna restorano kontrolė: virtuvės ekranas ir rezervacijos.",
+        features: [
+          "Viskas iš Basic",
+          "Virtuvės ekranas (KDS)",
+          "Internetinė staliukų rezervacija 24/7",
+          "Prioritetinis WhatsApp palaikymas",
+        ],
+      },
+    },
+  },
+
   footer: {
     featureLinks: [
-      { href: "/lt/internetine-uzsakymu-sistema-restoranui", label: "Internetinė užsakymų sistema" }, { href: "/lt/ai-translation", label: "AI vertimas" },
-      { href: "/lt/reservations", label: "Rezervacijos" }, { href: "/lt/mobile-management", label: "Mobilus valdymas" },
-      { href: "/lt/easy-menu", label: "Meniu redaktorius" }, { href: "/lt/custom-design", label: "Video ir foto fonai" },
-      { href: "/lt/color-scheme", label: "Prekės ženklo spalvos" }, { href: "/lt/multilingual", label: "Daugiakalbis tinklalapis" },
-      { href: "/lt/ai-images", label: "AI nuotraukų optimizavimas" }, { href: "/lt/analytics", label: "Statistika" },
-      { href: "/lt/instant-setup", label: "Akimirksnio nustatymas" }, { href: "/lt/personal-support", label: "Asmeninė pagalba" },
+      { href: "/lt/skaitmeninis-meniu-restoranas", label: "Skaitmeninis meniu" },
+      { href: "/lt/uzsakymu-sistema-restoranas", label: "Užsakymai" },
+      { href: "/lt/staliuku-rezervacija", label: "Rezervacija" },
+      { href: "/lt/virtuves-ekranas", label: "Virtuvės ekranas" },
     ],
     navLinks: [
-      { href: "#pricing", label: "Kainos" }, { href: "#faq", label: "Klausimai" },
-      { href: "/lt/languages", label: "Pakeisti kalbą" },
+      { href: "/lt/kainos", label: "Kainos" },
+      { href: "#faq", label: "DUK" },
+      { href: "/lt/languages", label: "Keisti kalbą" },
     ],
     copyrightTemplate: "© {year} IQ Rest. Visos teisės saugomos.",
   },

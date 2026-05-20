@@ -7,6 +7,7 @@ import { analytics } from "@/lib/analytics";
 interface DemoButtonProps {
   text: string;
   locale: string;
+  /** Base name like `l_hero_demo` — `_open` and `_close` are appended automatically. */
   trackEvent?: string;
   className?: string;
 }
@@ -25,7 +26,7 @@ function demoUrl(locale: string): string {
 export function DemoButton({
   text,
   locale,
-  trackEvent = "land_demo_open",
+  trackEvent = "l_demo",
   className = "",
 }: DemoButtonProps) {
   const [open, setOpen] = useState(false);
@@ -49,7 +50,7 @@ export function DemoButton({
   const handleOpen = () => {
     setOpen(true);
     setLoading(true);
-    analytics.track(trackEvent);
+    analytics.track(`${trackEvent}_open`);
   };
 
   const handleClose = () => {
@@ -72,10 +73,9 @@ export function DemoButton({
       {open && (
         <div
           className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
-          onClick={handleClose}
           data-noindex="true"
         >
-          <div className="relative" onClick={(e) => e.stopPropagation()}>
+          <div className="relative">
             <button
               type="button"
               onClick={handleClose}

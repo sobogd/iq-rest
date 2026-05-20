@@ -1,8 +1,8 @@
 "use client";
 
-import { Suspense, useState } from "react";
+import { useState } from "react";
 import { Globe, LogIn } from "lucide-react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { analytics } from "@/lib/analytics";
 import { useOnboardingModal } from "./onboarding/onboarding-modal-provider";
@@ -23,30 +23,8 @@ interface HeaderProps {
    *  cross-page `/locale#section` behaviour so clicks navigate back to the
    *  homepage and scroll into view. */
   useLocalAnchors?: boolean;
-  /** Hide the Sign-in button entirely (e.g. on PPC landing pages). When
-   *  false, sign-in is still hidden for visitors arriving via Google Ads
-   *  (?gclid) to keep them focused on the create CTA. */
+  /** Hide the Sign-in button entirely (e.g. on PPC landing pages). */
   hideSignIn?: boolean;
-}
-
-// Hide Sign in for Google Ads visitors (focus them on the create CTA).
-// Isolated so its useSearchParams() bailout doesn't push the whole page
-// off static rendering — only this slot suspends.
-function SignInSlot({ onClick, label }: { onClick: () => void; label: string }) {
-  const searchParams = useSearchParams();
-  const showSignIn = !searchParams?.get("gclid");
-  if (!showSignIn) return null;
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      className="inline-flex items-center justify-center h-9 w-9 border border-border rounded-lg text-muted-foreground hover:text-foreground hover:border-foreground/40 transition-colors"
-      aria-label={label}
-      title={label}
-    >
-      <LogIn className="h-4 w-4" />
-    </button>
-  );
 }
 
 export function LandingHeader({ texts, locale, useLocalAnchors = false, hideSignIn = false }: HeaderProps) {
@@ -73,23 +51,23 @@ export function LandingHeader({ texts, locale, useLocalAnchors = false, hideSign
       <div className="container mx-auto px-4 h-16 flex items-center justify-between gap-3 relative">
         <LinkForward
           href={homeHref}
-          trackEvent="land_header_logo_click"
+          trackEvent="l_header_logo_click"
           className="flex items-center gap-1.5 text-[18px] sm:text-[22px] font-semibold tracking-tight shrink-0 text-foreground"
         >
           <LogoIcon className="h-8 w-8 sm:h-9 sm:w-9" />
           Rest
         </LinkForward>
         <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-muted-foreground absolute left-1/2 -translate-x-1/2">
-          <LinkForward href={anchor("features")} trackEvent="land_header_nav_features_click" className="hover:text-foreground transition-colors">{texts.navFeatures}</LinkForward>
-          <LinkForward href={anchor("how")} trackEvent="land_header_nav_how_click" className="hover:text-foreground transition-colors">{texts.navHow}</LinkForward>
-          <LinkForward href={anchor("pricing")} trackEvent="land_header_nav_pricing_click" className="hover:text-foreground transition-colors">{texts.navPricing}</LinkForward>
-          <LinkForward href={anchor("faq")} trackEvent="land_header_nav_faq_click" className="hover:text-foreground transition-colors">{texts.navFaq}</LinkForward>
+          <LinkForward href={anchor("features")} trackEvent="l_header_nav_features_click" className="hover:text-foreground transition-colors">{texts.navFeatures}</LinkForward>
+          <LinkForward href={anchor("how")} trackEvent="l_header_nav_how_click" className="hover:text-foreground transition-colors">{texts.navHow}</LinkForward>
+          <LinkForward href={anchor("pricing")} trackEvent="l_header_nav_pricing_click" className="hover:text-foreground transition-colors">{texts.navPricing}</LinkForward>
+          <LinkForward href={anchor("faq")} trackEvent="l_header_nav_faq_click" className="hover:text-foreground transition-colors">{texts.navFaq}</LinkForward>
         </nav>
         <div className="flex items-center gap-2 shrink-0">
           <button
             type="button"
             onClick={() => {
-              analytics.track("land_header_language_click");
+              analytics.track("l_header_language_click");
               setLangOpen(true);
             }}
             className="inline-flex items-center justify-center h-9 w-9 border border-border rounded-lg text-muted-foreground hover:text-foreground hover:border-foreground/40 transition-colors"
@@ -101,7 +79,7 @@ export function LandingHeader({ texts, locale, useLocalAnchors = false, hideSign
           {auth.authenticated ? (
             <a
               href={dashHref}
-              onClick={() => analytics.track("land_header_dashboard_click")}
+              onClick={() => analytics.track("l_header_dashboard_click")}
               className="inline-flex items-center justify-center h-9 px-4 text-sm font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 active:scale-[0.99] transition-all whitespace-nowrap"
             >
               {tAuth("goToDashboard")}
@@ -109,20 +87,23 @@ export function LandingHeader({ texts, locale, useLocalAnchors = false, hideSign
           ) : (
             <>
               {hideSignIn ? null : (
-                <Suspense fallback={<div className="h-9 w-9" aria-hidden />}>
-                  <SignInSlot
-                    onClick={() => {
-                      analytics.track("land_header_signin_click");
-                      modal.open("signin");
-                    }}
-                    label={texts.signIn}
-                  />
-                </Suspense>
+                <button
+                  type="button"
+                  onClick={() => {
+                    analytics.track("l_header_signin_click");
+                    modal.open("signin");
+                  }}
+                  className="inline-flex items-center justify-center h-9 w-9 border border-border rounded-lg text-muted-foreground hover:text-foreground hover:border-foreground/40 transition-colors"
+                  aria-label={texts.signIn}
+                  title={texts.signIn}
+                >
+                  <LogIn className="h-4 w-4" />
+                </button>
               )}
               <button
                 type="button"
                 onClick={() => {
-                  analytics.track("land_header_cta_click");
+                  analytics.track("l_header_cta_click");
                   modal.open();
                 }}
                 className="inline-flex items-center justify-center h-9 px-4 text-sm font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 active:scale-[0.99] transition-all whitespace-nowrap"

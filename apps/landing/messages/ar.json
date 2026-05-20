@@ -2041,68 +2041,68 @@
   },
   "createFlow": {
     "step1": {
-      "title": "What kind of place is this?",
-      "subtitle": "Pick a vibe and we will preload a sample menu so you can edit, not start from scratch.",
-      "label": "Type"
+      "title": "ما نوع هذا المكان؟",
+      "subtitle": "اختر النمط وسنحمّل قائمة طعام نموذجية لتعديلها بدلاً من البدء من الصفر.",
+      "label": "النوع"
     },
     "step2": {
-      "title": "What is its name?",
-      "subtitle": "This is what guests see at the top of your menu. You can change it any time.",
-      "nameLabel": "Restaurant name",
-      "namePlaceholder": "Mario's Pizza",
-      "label": "Name"
+      "title": "ما اسمه؟",
+      "subtitle": "هذا ما يراه الضيوف في أعلى قائمتك. يمكنك تغييره في أي وقت.",
+      "nameLabel": "اسم المطعم",
+      "namePlaceholder": "بيتزا ماريو",
+      "label": "الاسم"
     },
-    "back": "Back",
-    "continue": "Continue",
+    "back": "رجوع",
+    "continue": "متابعة",
     "cuisines": {
-      "pizza": "Pizzeria",
-      "sushi": "Sushi / Japanese",
-      "asian": "Asian",
-      "burger": "Burger / Fast food",
-      "coffee": "Coffee / Cafe",
-      "bar": "Bar / Pub",
-      "bakery": "Bakery / Pastry",
-      "restaurant": "Restaurant"
+      "pizza": "بيتزا",
+      "sushi": "سوشي / ياباني",
+      "asian": "آسيوي",
+      "burger": "برغر / وجبات سريعة",
+      "coffee": "قهوة / مقهى",
+      "bar": "بار / حانة",
+      "bakery": "مخبز / حلويات",
+      "restaurant": "مطعم"
     },
-    "stepOf": "Step {step} of {total}",
+    "stepOf": "الخطوة {step} من {total}",
     "step3": {
-      "label": "Sign in"
+      "label": "تسجيل الدخول"
     }
   },
   "auth": {
-    "titleWithName": "One more thing for {name}",
-    "subtitle": "Just leave your email so we can save your menu — you'll be able to edit it any time.",
-    "emailLabel": "Email",
+    "titleWithName": "شيء أخير لـ {name}",
+    "subtitle": "فقط اترك بريدك الإلكتروني لنحفظ قائمتك — يمكنك تعديلها في أي وقت.",
+    "emailLabel": "البريد الإلكتروني",
     "emailPlaceholder": "you@restaurant.com",
-    "continueEmail": "Save my menu",
-    "or": "or",
-    "continueGoogle": "Continue with Google",
-    "changeRestaurant": "Change restaurant",
+    "continueEmail": "احفظ قائمتي",
+    "or": "أو",
+    "continueGoogle": "المتابعة باستخدام Google",
+    "changeRestaurant": "تغيير المطعم",
     "consent": {
-      "text": "By continuing you agree to our",
-      "terms": "Terms",
-      "and": "and",
-      "privacy": "Privacy Policy"
+      "text": "بالمتابعة فإنك توافق على",
+      "terms": "الشروط",
+      "and": "و",
+      "privacy": "سياسة الخصوصية"
     },
-    "verifyTitle": "Check your inbox",
-    "verifySubtitle": "We sent a 6-digit code to {email}.",
-    "verifyCodeLabel": "Verification code",
-    "checkSpam": "Don't see it? Check your spam folder.",
-    "verifyButton": "Verify and open dashboard",
-    "resendCode": "Resend code",
-    "resendSent": "Code sent",
-    "changeEmail": "Use a different email",
+    "verifyTitle": "تحقق من بريدك الوارد",
+    "verifySubtitle": "أرسلنا رمزاً مكوناً من 6 أرقام إلى {email}.",
+    "verifyCodeLabel": "رمز التحقق",
+    "checkSpam": "لا تراه؟ تحقق من مجلد الرسائل المزعجة.",
+    "verifyButton": "تحقق وافتح لوحة التحكم",
+    "resendCode": "إعادة إرسال الرمز",
+    "resendSent": "تم إرسال الرمز",
+    "changeEmail": "استخدم بريداً إلكترونياً آخر",
     "errors": {
-      "emailInvalid": "Please enter a valid email address.",
-      "sendFailed": "Couldn't send the code. Try again.",
-      "verifyFailed": "Couldn't verify the code. Try again.",
-      "codeExpired": "This code expired. Request a new one.",
-      "noCode": "No code on file. Request a new one.",
-      "invalidCode": "Wrong code. Try again.",
-      "tooManyAttempts": "Too many attempts. Wait and try again later."
+      "emailInvalid": "يرجى إدخال عنوان بريد إلكتروني صالح.",
+      "sendFailed": "تعذر إرسال الرمز. حاول مرة أخرى.",
+      "verifyFailed": "تعذر التحقق من الرمز. حاول مرة أخرى.",
+      "codeExpired": "انتهت صلاحية هذا الرمز. اطلب رمزاً جديداً.",
+      "noCode": "لا يوجد رمز مسجل. اطلب رمزاً جديداً.",
+      "invalidCode": "رمز خاطئ. حاول مرة أخرى.",
+      "tooManyAttempts": "محاولات كثيرة جداً. انتظر وحاول لاحقاً."
     },
-    "signInTitle": "Welcome back",
-    "signInSubtitle": "Enter your email and we'll send a quick code to sign you in.",
-    "goToDashboard": "Go to dashboard"
+    "signInTitle": "مرحباً بعودتك",
+    "signInSubtitle": "أدخل بريدك الإلكتروني وسنرسل رمزاً سريعاً لتسجيل الدخول.",
+    "goToDashboard": "الذهاب إلى لوحة التحكم"
   }
 }

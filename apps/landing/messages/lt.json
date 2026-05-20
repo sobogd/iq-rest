@@ -2041,68 +2041,68 @@
   },
   "createFlow": {
     "step1": {
-      "title": "What kind of place is this?",
-      "subtitle": "Pick a vibe and we will preload a sample menu so you can edit, not start from scratch.",
-      "label": "Type"
+      "title": "Koks tai įstaiga?",
+      "subtitle": "Pasirinkite stilių, ir mes iš anksto įkelsime pavyzdinį meniu, kad galėtumėte redaguoti, o ne pradėti nuo nulio.",
+      "label": "Tipas"
     },
     "step2": {
-      "title": "What is its name?",
-      "subtitle": "This is what guests see at the top of your menu. You can change it any time.",
-      "nameLabel": "Restaurant name",
-      "namePlaceholder": "Mario's Pizza",
-      "label": "Name"
+      "title": "Koks pavadinimas?",
+      "subtitle": "Tai svečiai mato meniu viršuje. Galite pakeisti bet kada.",
+      "nameLabel": "Restorano pavadinimas",
+      "namePlaceholder": "Mario Pica",
+      "label": "Pavadinimas"
     },
-    "back": "Back",
-    "continue": "Continue",
+    "back": "Atgal",
+    "continue": "Tęsti",
     "cuisines": {
-      "pizza": "Pizzeria",
-      "sushi": "Sushi / Japanese",
-      "asian": "Asian",
-      "burger": "Burger / Fast food",
-      "coffee": "Coffee / Cafe",
-      "bar": "Bar / Pub",
-      "bakery": "Bakery / Pastry",
-      "restaurant": "Restaurant"
+      "pizza": "Picerija",
+      "sushi": "Sušiai / Japoniška",
+      "asian": "Azijietiška",
+      "burger": "Burgeriai / Greitas maistas",
+      "coffee": "Kava / Kavinė",
+      "bar": "Baras / Pubas",
+      "bakery": "Kepykla / Konditerija",
+      "restaurant": "Restoranas"
     },
-    "stepOf": "Step {step} of {total}",
+    "stepOf": "{step} žingsnis iš {total}",
     "step3": {
-      "label": "Sign in"
+      "label": "Prisijungti"
     }
   },
   "auth": {
-    "titleWithName": "One more thing for {name}",
-    "subtitle": "Just leave your email so we can save your menu — you'll be able to edit it any time.",
-    "emailLabel": "Email",
-    "emailPlaceholder": "you@restaurant.com",
-    "continueEmail": "Save my menu",
-    "or": "or",
-    "continueGoogle": "Continue with Google",
-    "changeRestaurant": "Change restaurant",
+    "titleWithName": "Dar vienas dalykas {name}",
+    "subtitle": "Tiesiog palikite el. paštą, kad galėtume išsaugoti meniu — galėsite redaguoti bet kada.",
+    "emailLabel": "El. paštas",
+    "emailPlaceholder": "jus@restoranas.lt",
+    "continueEmail": "Išsaugoti mano meniu",
+    "or": "arba",
+    "continueGoogle": "Tęsti su Google",
+    "changeRestaurant": "Keisti restoraną",
     "consent": {
-      "text": "By continuing you agree to our",
-      "terms": "Terms",
-      "and": "and",
-      "privacy": "Privacy Policy"
+      "text": "Tęsdami sutinkate su mūsų",
+      "terms": "Sąlygomis",
+      "and": "ir",
+      "privacy": "Privatumo politika"
     },
-    "verifyTitle": "Check your inbox",
-    "verifySubtitle": "We sent a 6-digit code to {email}.",
-    "verifyCodeLabel": "Verification code",
-    "checkSpam": "Don't see it? Check your spam folder.",
-    "verifyButton": "Verify and open dashboard",
-    "resendCode": "Resend code",
-    "resendSent": "Code sent",
-    "changeEmail": "Use a different email",
+    "verifyTitle": "Patikrinkite el. pašto dėžutę",
+    "verifySubtitle": "Išsiuntėme 6 skaitmenų kodą į {email}.",
+    "verifyCodeLabel": "Patvirtinimo kodas",
+    "checkSpam": "Nematote? Patikrinkite šlamšto aplanką.",
+    "verifyButton": "Patvirtinti ir atidaryti skydelį",
+    "resendCode": "Siųsti kodą iš naujo",
+    "resendSent": "Kodas išsiųstas",
+    "changeEmail": "Naudoti kitą el. paštą",
     "errors": {
-      "emailInvalid": "Please enter a valid email address.",
-      "sendFailed": "Couldn't send the code. Try again.",
-      "verifyFailed": "Couldn't verify the code. Try again.",
-      "codeExpired": "This code expired. Request a new one.",
-      "noCode": "No code on file. Request a new one.",
-      "invalidCode": "Wrong code. Try again.",
-      "tooManyAttempts": "Too many attempts. Wait and try again later."
+      "emailInvalid": "Įveskite galiojantį el. pašto adresą.",
+      "sendFailed": "Nepavyko išsiųsti kodo. Bandykite dar kartą.",
+      "verifyFailed": "Nepavyko patvirtinti kodo. Bandykite dar kartą.",
+      "codeExpired": "Kodas pasibaigė. Užsisakykite naują.",
+      "noCode": "Kodas neužregistruotas. Užsisakykite naują.",
+      "invalidCode": "Neteisingas kodas. Bandykite dar kartą.",
+      "tooManyAttempts": "Per daug bandymų. Palaukite ir bandykite vėliau."
     },
-    "signInTitle": "Welcome back",
-    "signInSubtitle": "Enter your email and we'll send a quick code to sign you in.",
-    "goToDashboard": "Go to dashboard"
+    "signInTitle": "Sveiki sugrįžę",
+    "signInSubtitle": "Įveskite el. paštą ir mes išsiųsime greitą prisijungimo kodą.",
+    "goToDashboard": "Eiti į skydelį"
   }
 }

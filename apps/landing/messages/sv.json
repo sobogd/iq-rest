@@ -2041,68 +2041,68 @@
   },
   "createFlow": {
     "step1": {
-      "title": "What kind of place is this?",
-      "subtitle": "Pick a vibe and we will preload a sample menu so you can edit, not start from scratch.",
-      "label": "Type"
+      "title": "Vilken typ av ställe är detta?",
+      "subtitle": "Välj en stil så förladdar vi en exempelmeny så att du kan redigera istället för att börja från noll.",
+      "label": "Typ"
     },
     "step2": {
-      "title": "What is its name?",
-      "subtitle": "This is what guests see at the top of your menu. You can change it any time.",
-      "nameLabel": "Restaurant name",
-      "namePlaceholder": "Mario's Pizza",
-      "label": "Name"
+      "title": "Vad heter det?",
+      "subtitle": "Det här ser gästerna högst upp på menyn. Du kan ändra det när som helst.",
+      "nameLabel": "Restaurangnamn",
+      "namePlaceholder": "Marios Pizza",
+      "label": "Namn"
     },
-    "back": "Back",
-    "continue": "Continue",
+    "back": "Tillbaka",
+    "continue": "Fortsätt",
     "cuisines": {
       "pizza": "Pizzeria",
-      "sushi": "Sushi / Japanese",
-      "asian": "Asian",
-      "burger": "Burger / Fast food",
-      "coffee": "Coffee / Cafe",
+      "sushi": "Sushi / Japanskt",
+      "asian": "Asiatiskt",
+      "burger": "Burger / Snabbmat",
+      "coffee": "Kaffe / Café",
       "bar": "Bar / Pub",
-      "bakery": "Bakery / Pastry",
-      "restaurant": "Restaurant"
+      "bakery": "Bageri / Konditori",
+      "restaurant": "Restaurang"
     },
-    "stepOf": "Step {step} of {total}",
+    "stepOf": "Steg {step} av {total}",
     "step3": {
-      "label": "Sign in"
+      "label": "Logga in"
     }
   },
   "auth": {
-    "titleWithName": "One more thing for {name}",
-    "subtitle": "Just leave your email so we can save your menu — you'll be able to edit it any time.",
-    "emailLabel": "Email",
-    "emailPlaceholder": "you@restaurant.com",
-    "continueEmail": "Save my menu",
-    "or": "or",
-    "continueGoogle": "Continue with Google",
-    "changeRestaurant": "Change restaurant",
+    "titleWithName": "En sista sak för {name}",
+    "subtitle": "Lämna bara din e-post så vi kan spara din meny — du kan redigera den när som helst.",
+    "emailLabel": "E-post",
+    "emailPlaceholder": "du@restaurang.se",
+    "continueEmail": "Spara min meny",
+    "or": "eller",
+    "continueGoogle": "Fortsätt med Google",
+    "changeRestaurant": "Byt restaurang",
     "consent": {
-      "text": "By continuing you agree to our",
-      "terms": "Terms",
-      "and": "and",
-      "privacy": "Privacy Policy"
+      "text": "Genom att fortsätta godkänner du våra",
+      "terms": "Villkor",
+      "and": "och",
+      "privacy": "Sekretesspolicy"
     },
-    "verifyTitle": "Check your inbox",
-    "verifySubtitle": "We sent a 6-digit code to {email}.",
-    "verifyCodeLabel": "Verification code",
-    "checkSpam": "Don't see it? Check your spam folder.",
-    "verifyButton": "Verify and open dashboard",
-    "resendCode": "Resend code",
-    "resendSent": "Code sent",
-    "changeEmail": "Use a different email",
+    "verifyTitle": "Kolla din inkorg",
+    "verifySubtitle": "Vi har skickat en 6-siffrig kod till {email}.",
+    "verifyCodeLabel": "Verifieringskod",
+    "checkSpam": "Ser du den inte? Kolla skräppostmappen.",
+    "verifyButton": "Verifiera och öppna instrumentpanelen",
+    "resendCode": "Skicka koden igen",
+    "resendSent": "Kod skickad",
+    "changeEmail": "Använd en annan e-post",
     "errors": {
-      "emailInvalid": "Please enter a valid email address.",
-      "sendFailed": "Couldn't send the code. Try again.",
-      "verifyFailed": "Couldn't verify the code. Try again.",
-      "codeExpired": "This code expired. Request a new one.",
-      "noCode": "No code on file. Request a new one.",
-      "invalidCode": "Wrong code. Try again.",
-      "tooManyAttempts": "Too many attempts. Wait and try again later."
+      "emailInvalid": "Ange en giltig e-postadress.",
+      "sendFailed": "Det gick inte att skicka koden. Försök igen.",
+      "verifyFailed": "Det gick inte att verifiera koden. Försök igen.",
+      "codeExpired": "Den här koden har gått ut. Begär en ny.",
+      "noCode": "Ingen kod registrerad. Begär en ny.",
+      "invalidCode": "Fel kod. Försök igen.",
+      "tooManyAttempts": "För många försök. Vänta och försök igen senare."
     },
-    "signInTitle": "Welcome back",
-    "signInSubtitle": "Enter your email and we'll send a quick code to sign you in.",
-    "goToDashboard": "Go to dashboard"
+    "signInTitle": "Välkommen tillbaka",
+    "signInSubtitle": "Ange din e-post så skickar vi en snabb kod för att logga in.",
+    "goToDashboard": "Gå till instrumentpanelen"
   }
 }

@@ -1,97 +1,171 @@
-import { QrCode, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
+import { CalendarCheck, ChefHat, Receipt, Monitor } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
-  htmlLang: "ja", htmlDir: "ltr",
+  htmlLang: "ja",
+  htmlDir: "ltr",
+
   meta: {
     title: "レストラン向けQRメニュー — 直接注文、手数料ゼロ | IQ Rest",
-    description: "紙のメニューとデリバリーアプリの手数料に終止符を。QRメニュー、直接注文、予約、多言語サイト。14日間無料、カード不要。",
-    canonical: "https://iq-rest.com/ja", ogLocale: "ja_JP",
+    description:
+      "レストラン向けオールインワンプラットフォーム:デジタルメニュー、QR注文、テーブル予約、キッチンディスプレイ。5分で開始。14日間無料、カード不要。",
+    canonical: "https://iq-rest.com/ja",
+    ogLocale: "ja_JP",
     ogTitle: "レストラン向けQRメニュー — 直接注文、手数料ゼロ",
-    ogDescription: "QRメニュー、直接注文、予約、AI翻訳。5分で稼働。14日間無料 — カード不要。",
+    ogDescription:
+      "デジタルメニュー、QR注文、テーブル予約、AI翻訳。5分で開始。14日間無料。",
   },
-  ctaText: "無料で試す",
-  demoText: "ライブデモを見る", microcopy: "14日間無料 · カード不要 · いつでも解約",
-  header: { navFeatures: "機能", navHow: "使い方", navPricing: "料金", navFaq: "FAQ", signIn: "ログイン", cta: "始める" },
+
+  ctaText: "無料でお試し",
+  demoText: "デモを見る",
+  microcopy: "14日間無料 · カード不要 · いつでもキャンセル可能",
+
+  header: {
+    navFeatures: "機能",
+    navHow: "仕組み",
+    navPricing: "料金",
+    navFaq: "よくある質問",
+    signIn: "サインイン",
+    cta: "始める",
+  },
+
   hero: {
-    verticals: ["レストラン", "カフェ", "バー", "ホテル", "ピザ店"],
-    headline: "レストラン向けデジタルメニュー。5分で完成。",
-    sub: "5分でできる、あなたのレストランのデジタルメニュー。すべて込み：ノーコードのモバイルエディタ、AIメニュースキャン、テーブル用QRコード、手数料なしの直接注文。",
-    dynamicHeadlines: ["手数料0%。", "35言語対応 AIで。", "オンライン注文。", "24時間予約受付。", "高級感あるデザイン。"],
-    painBullets: ["手数料0%：すべての注文は直接あなたに届きます。", "AI翻訳：観光客の客単価を上げる35言語対応。", "24時間予約：電話応対なしで満席を実現。", "柔軟な価格設定：メニューを数秒で更新。"],
-    rating: "30か国以上で500軒超のレストラン",
+    verticals: ["レストラン", "カフェ", "バー", "ホテル", "ピッツェリア"],
+    headline: "レストラン向けデジタルメニュー。5分でオンライン。",
+    sub: "5分でお店のデジタルメニューを作成。すべて込み:ノーコードエディタ、AI印刷メニュー認識、テーブル用QRコード、手数料なしの直接注文。",
+    dynamicHeadlines: ["手数料0%。", "AI 35言語。", "オンライン注文。", "24/7予約。", "プレミアムデザイン。"],
+    painBullets: [
+      "手数料0%:すべての注文が直接お店に届きます。",
+      "AI翻訳35言語 — 観光客はメニューを理解し、より多く注文します。",
+      "24/7予約:ピーク時に電話なしで、お客様自身がテーブルを予約。",
+      "柔軟な価格設定:メニューの更新は数秒で公開。",
+    ],
+    rating: "30か国以上で500以上のレストランが導入",
   },
+
   features: {
-    heading: "必要なものすべて。", headingAccent: "余分なものは何も。",
-    sub: "レストランのために。テーブルで使う。",
+    heading: "必要なものすべて。",
+    headingAccent: "余計なものはなし。",
+    sub: "レストラン向けに作られています。テーブル、キッチン、フロアで毎日使われています。",
     items: [
-      
-      { Icon: QrCode, title: "テーブルから QR オーダーシステム", desc: "お客様がテーブルの QR を読み取り、注文を作成。あなたのキッチンタブレットや WhatsApp に直接届きます。手数料ゼロ、テーブル番号付き。", tag: "QR 注文", href: "/ja/qr-order-system-restaurant" },
-      { Icon: Languages, title: "AI翻訳（35言語）", desc: "食の文脈を理解するAI。メニューの内容が伝わると、観光客の注文数は20%増加します。", tag: "AI翻訳" },
-      { Icon: CalendarCheck, title: "テーブル予約", desc: "忙しい調理中でもシステムが自動で予約受付。顧客を逃しません。", tag: "予約" },
-      { Icon: Palette, title: "モダンなデザイン", desc: "動画背景とシズル感のある写真。一目で食欲をそそる高級感のあるメニューを。", tag: "カスタムデザイン" },
-      { Icon: Smartphone, title: "クイック編集", desc: "売り切れ設定や価格改定もスマホで完結。変更は即座に反映されます。", tag: "メニューエディタ" },
-      { Icon: ChefHat, title: "キッチンディスプレイ", desc: "紙の伝票は不要。ホールの注文が即座に調理場の画面に表示されます。", tag: "キッチンディスプレイ" },
-    
+      { Icon: Monitor, title: "デジタルメニュー", desc: "ブラウザのメニューに写真、価格、アレルゲン、説明を表示。スマートフォンからリアルタイム更新。お客様は自分の言語でメニューを見ることができ、お店は印刷コストを節約。", tag: "デジタルメニュー", href: "/ja/dejitaru-menyu-resutoran" },
+      { Icon: Receipt, title: "注文受付:お客様とスタッフ", desc: "テーブルのQRコードからお客様が、またはスタッフがスマートフォンから注文 — どちらもキッチンまたはWhatsAppへ直接送信。手数料なし、すべての伝票にテーブル番号付き。", tag: "注文", href: "/ja/chumon-shisutemu-resutoran" },
+      { Icon: CalendarCheck, title: "テーブル予約24/7", desc: "フロアで忙しい間、お客様がウェブサイトやQRメニューから自分で予約。テーブルごとのカレンダー、自動確認とリマインダー。お客様を1人も逃しません。", tag: "予約", href: "/ja/tesuto-yoyaku" },
+      { Icon: ChefHat, title: "キッチンディスプレイ(KDS)", desc: "紙の伝票はもう不要。フロアからの注文がシェフの画面に直接届きます — 「調理中/準備完了/提供済み」の列、アレルゲンと備考を色で強調表示。タブレットまたはスマートフォンで。", tag: "KDS", href: "/ja/chubo-disupurei" },
     ],
   },
+
   founder: {
-    eyebrow: "レストランオーナーが作った",
-    quoteStart: "妻と私は小さなカフェを開き、オンライン注文・予約・モダンなデザインを兼ね備えたシステムを何週間も探しました。試したものはすべて重く、見栄えが悪く、半分の機能が抜けていました —",
-    quoteAccent: "そこで自分たちが欲しかったものを作りました。",
+    eyebrow: "レストラン経営者が作りました",
+    quoteStart:
+      "妻と私は自分たちのカフェを経営しており、レストランの1日が実際にどのように動くか — 注文受付、予約、フロアとキッチンの流れ — を身をもって知っています。私たちはたった1つのツールが欲しかった:モダンで、立ち上げが簡単で、一目で分かるもの —",
+    quoteAccent: "そうして他のレストラン経営者のために開発しているプラットフォームの構築を始めました。",
     sign: "ボグダン・ソコロフ · 創業者、元カフェオーナー",
-    photoAlt: "ボグダン、IQ Rest の創業者",
+    photoAlt: "ボグダン・ソコロフ、IQ Rest創業者",
   },
+
   how: {
-    heading: "5分以内で稼働",
-    sub: "短い4ステップ。インストール不要、技術設定不要。",
+    heading: "5分でオンライン",
+    sub: "4つの短いステップ。インストール不要、技術的なセットアップ不要。",
     steps: [
-      { n: "1", t: "タイプと名前", d: "タイプを選び、名前を入力。" },
-      { n: "2", t: "保存", d: "メールまたはGoogleでサインイン。" },
-      { n: "3", t: "メニュー", d: "自分で作成、または紙メニューをスキャン。" },
-      { n: "4", t: "完成", d: "表示、共有、注文受付開始。" },
+      { n: "1", t: "種類と名前", d: "店舗の種類を選び、名前を入力してください。" },
+      { n: "2", t: "保存", d: "メールアドレスを入力するか、Googleでサインインしてください。" },
+      { n: "3", t: "メニュー", d: "手動で商品を追加するか、AI認識用に印刷メニューをアップロード。" },
+      { n: "4", t: "完了", d: "リンクまたはQRコードを共有し、注文受付を開始。" },
     ],
   },
+
   pricing: {
-    badge: "手数料ゼロ · 契約なし",
-    heading: "プランは一つ。", headingAccent: "すべて込み。",
-    sub: "QRメニュー、注文、AI翻訳、レストランサイト、予約。シンプルな一つの価格。",
-    monthlyLabel: "月額", yearlyLabel: "年額", saveBadge: "25%お得", perMonth: "/月",
-    billedAnnually: "年一括 {total}", youSave: "{amount} お得",
-    trust: { secure: "Stripeで安全決済", noCommitment: "縛りなし", quick: "数分で稼働", restaurants: "500軒以上のレストラン" },
+    badge: "手数料なし · 契約なし",
+    heading: "1つのプラン。",
+    headingAccent: "すべて込み。",
+    sub: "QRメニュー、注文受付、AI翻訳、レストランウェブサイト、予約。透明な月額料金1つ。",
+    monthlyLabel: "月額",
+    yearlyLabel: "年額",
+    saveBadge: "25%節約",
+    perMonth: "/月",
+    billedAnnually: "年間請求:{total}",
+    youSave: "{amount}節約",
+    trust: { secure: "Stripeによる安全な支払い", noCommitment: "コミットメントなし", quick: "数分で有効", restaurants: "500+レストラン" },
   },
+
   faq: {
-    eyebrow: "ご質問？", heading: "よくある", headingAccent: "ご質問。",
-    sub: "登録前にレストランオーナーが尋ねること。あなたのが見当たらない？WhatsAppに送ってください — 本物の人間が返信します。",
-    whatsappCta: "WhatsAppで聞く", whatsappPrefill: "こんにちは、IQ Restについて質問があります",
+    eyebrow: "ご質問はありますか?",
+    heading: "よくある",
+    headingAccent: "質問。",
+    sub: "登録前にレストラン経営者がよく尋ねる質問。質問が見つからない場合は、WhatsAppでメッセージをお送りください — ボットではなく実際の人が回答します。",
+    whatsappCta: "WhatsAppで質問",
+    whatsappPrefill: "こんにちは、IQ Restについて質問があります",
     items: [
-      { q: "無料トライアルに含まれるものと、その後はどうなる？", a: "14日間フルアクセス、カード不要。14日後に支払い方法を追加しなければアカウントは停止 — 自動課金は一切しません。後で支払い情報を追加すれば再有効化。ワンクリックでキャンセル。" },
-      { q: "注文に手数料はかかる？", a: "ゼロ。QRメニューからの注文はすべて直接あなたへ — 当社の取り分なし、Uber Eats / 出前館の手数料もなし。月額固定の一つの価格、それだけ。" },
-      { q: "お客様にアプリは必要？技術スキルは必要？", a: "お客様にアプリは不要 — カメラでQRを読み、ブラウザでメニューが開きます。あなたに技術スキルは不要 — ダッシュボードはスマホで動作、タップで追加、ドラッグで並べ替え、これが学習曲線のすべて。" },
-      { q: "価格の変更や料理追加はどれくらい速い？", a: "即座。スマホで価格を変更、お客様には数秒で反映。新しい料理？タップ、入力、写真、完了 — 再印刷なし、デザイナー待ちなし。" },
-      { q: "対応言語は？", a: "AI翻訳内蔵で35言語。ワンタップでメニュー全部を翻訳、AIが料理の文脈を理解 — 名前と説明がどの言語でも自然に響きます。観光客は本当に理解した時に注文を増やします。" },
+      { q: "トライアル期間には何が含まれ、その後はどうなりますか?", a: "14日間、カード不要ですべての機能に完全アクセス可能。14日後に支払い方法が追加されていない場合、アカウントは一時停止されます — 自動課金は一切行いません。後で支払いを追加して、中断したところから続けることができます。ワンクリックでいつでもキャンセル可能。" },
+      { q: "注文に手数料を取りますか?", a: "いいえ。QRメニューからのすべての注文はレストランに直接届きます — 当社からのパーセンテージや集約サービスの手数料はありません。固定の月額料金のみ、それ以外は一切ありません。" },
+      { q: "お客様にはアプリが必要ですか?私たちには技術的なスキルが必要ですか?", a: "お客様にアプリは不要 — スマートフォンのカメラをQRコードに向けると、ブラウザでメニューが開きます。レストランも技術的なスキルは不要:管理パネルはスマートフォン、タブレット、ノートパソコンの任意のモダンブラウザで動作します。すべての操作はクリックとドラッグ&ドロップで、コードは一切不要。" },
+      { q: "価格はどれくらい速く変更され、新しい料理が表示されますか?", a: "瞬時に。スマートフォンから価格を変更 — お客様は数秒以内に確認できます。新しい料理は数タップ:名前、価格、写真。再印刷もデザイナーの待ち時間も不要。" },
+      { q: "何言語に対応していますか?", a: "AI翻訳が組み込まれた35言語。1タップでメニュー全体が翻訳され、AIは料理のコンテキストを理解 — 名前と説明はどの言語でも自然に聞こえます。観光客は本当にメニューを理解しているときに、より自信を持って注文します。" },
     ],
   },
-  finalCta: { heading: "5分で稼働。", headingAccent: "14日間無料。", sub: "カード不要。いつでもキャンセル。すでにIQ Restを使う500軒超のレストランに参加しよう。" },
+
+  finalCta: {
+    heading: "5分でオンライン。",
+    headingAccent: "14日間無料。",
+    sub: "カード不要、いつでもキャンセル可能。すでにIQ Restを使用している500以上のレストランに参加してください。",
+  },
+
   scan: {
-    heading: "紙のメニューや PDF をお持ちですか？",
-    headingAccent: "AI が 60 秒でデジタル化します。",
-    sub: "アップロードするだけ — AI がカテゴリー、料理、価格を抽出します。",
+    heading: "紙のメニューまたはPDFをお持ちですか?",
+    headingAccent: "AIが60秒でデジタル化します。",
+    sub: "写真または文書をアップロード — AIがカテゴリ、料理、価格を自動的に認識します。",
     cta: "メニューをスキャン →",
   },
+
+  pricingHero: {
+    chips: ["手数料なし", "契約なし", "14日間無料"],
+    heading: "料金。",
+    headingAccent: "隠れた料金なし。",
+    sub: "透明な月額料金1つ。注文に対するパーセンテージや集約サービスの手数料はありません。いつでも購読をキャンセルできます。",
+    popularBadge: "人気",
+    perMonthSuffix: "/月",
+    whenAnnualTemplate: "年間請求 · €{total}/年",
+    orMonthlyTemplate: "または €{price}/月",
+    savingsTemplate: "€{amount}/年節約",
+    plans: {
+      basic: {
+        name: "Basic",
+        tagline: "メニュー、QR注文、AI翻訳。5分でオンライン。",
+        features: [
+          "すべてのテーブルにQRメニュー",
+          "写真とアレルゲン付きデジタルメニュー",
+          "AI翻訳35言語",
+          "メニューからの注文(オプション)",
+          "AIによる料理写真生成",
+          "任意のスマートフォンまたはタブレットから管理",
+        ],
+      },
+      pro: {
+        name: "Pro",
+        tagline: "レストラン全体の管理:キッチンディスプレイと予約。",
+        features: [
+          "Basicのすべて",
+          "キッチンディスプレイ(KDS)",
+          "オンラインテーブル予約24/7",
+          "優先WhatsAppサポート",
+        ],
+      },
+    },
+  },
+
   footer: {
     featureLinks: [
-      { href: "/ja/qr-order-system-restaurant", label: "QR オーダーシステム" }, { href: "/ja/ai-translation", label: "AI翻訳" },
-      { href: "/ja/reservations", label: "予約" }, { href: "/ja/mobile-management", label: "スマホ管理" },
-      { href: "/ja/easy-menu", label: "メニューエディタ" }, { href: "/ja/custom-design", label: "動画・写真背景" },
-      { href: "/ja/color-scheme", label: "ブランドカラー" }, { href: "/ja/multilingual", label: "多言語サイト" },
-      { href: "/ja/ai-images", label: "AI画像最適化" }, { href: "/ja/analytics", label: "アナリティクス" },
-      { href: "/ja/instant-setup", label: "即時セットアップ" }, { href: "/ja/personal-support", label: "個別サポート" },
+      { href: "/ja/dejitaru-menyu-resutoran", label: "デジタルメニュー" },
+      { href: "/ja/chumon-shisutemu-resutoran", label: "注文" },
+      { href: "/ja/tesuto-yoyaku", label: "予約" },
+      { href: "/ja/chubo-disupurei", label: "キッチンディスプレイ" },
     ],
     navLinks: [
-      { href: "#pricing", label: "料金" }, { href: "#faq", label: "質問" },
+      { href: "/ja/kakaku", label: "料金" },
+      { href: "#faq", label: "よくある質問" },
       { href: "/ja/languages", label: "言語を変更" },
     ],
-    copyrightTemplate: "© {year} IQ Rest. 全著作権所有。",
+    copyrightTemplate: "© {year} IQ Rest. All rights reserved.",
   },
 };

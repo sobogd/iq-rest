@@ -2041,15 +2041,15 @@
   },
   "createFlow": {
     "step1": {
-      "title": "Que tipo de local é?",
-      "subtitle": "Escolhe um estilo e vamos pré-carregar um menu de exemplo para editares, em vez de começares do zero.",
+      "title": "Que tipo de espaço é este?",
+      "subtitle": "Escolha um estilo e pré-carregaremos um menu de exemplo para você editar em vez de começar do zero.",
       "label": "Tipo"
     },
     "step2": {
-      "title": "Como se chama?",
-      "subtitle": "É o que os clientes veem no topo do menu. Podes mudar a qualquer momento.",
+      "title": "Qual é o nome?",
+      "subtitle": "É o que os clientes veem no topo do menu. Pode alterar a qualquer momento.",
       "nameLabel": "Nome do restaurante",
-      "namePlaceholder": "Pizzaria Mário",
+      "namePlaceholder": "Pizzaria Mario",
       "label": "Nome"
     },
     "back": "Voltar",
@@ -2057,9 +2057,9 @@
     "cuisines": {
       "pizza": "Pizzaria",
       "sushi": "Sushi / Japonês",
-      "asian": "Asiática",
-      "burger": "Hamburgueria / Fast food",
-      "coffee": "Café / Cafetaria",
+      "asian": "Asiático",
+      "burger": "Burger / Fast food",
+      "coffee": "Café / Cafeteria",
       "bar": "Bar / Pub",
       "bakery": "Padaria / Pastelaria",
       "restaurant": "Restaurante"
@@ -2071,38 +2071,38 @@
   },
   "auth": {
     "titleWithName": "Mais uma coisa para {name}",
-    "subtitle": "Deixa só o teu email para guardarmos o teu menu — depois podes editar quando quiseres.",
-    "emailLabel": "Email",
-    "emailPlaceholder": "tu@restaurante.com",
+    "subtitle": "Basta deixar o seu e-mail para guardarmos o seu menu — poderá editá-lo a qualquer momento.",
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "voce@restaurante.com",
     "continueEmail": "Guardar o meu menu",
     "or": "ou",
     "continueGoogle": "Continuar com Google",
-    "changeRestaurant": "Mudar restaurante",
+    "changeRestaurant": "Mudar de restaurante",
     "consent": {
-      "text": "Ao continuar aceitas os nossos",
+      "text": "Ao continuar concorda com os nossos",
       "terms": "Termos",
-      "and": "e",
+      "and": "e a",
       "privacy": "Política de Privacidade"
     },
-    "verifyTitle": "Verifica a tua caixa",
+    "verifyTitle": "Verifique a sua caixa de entrada",
     "verifySubtitle": "Enviámos um código de 6 dígitos para {email}.",
     "verifyCodeLabel": "Código de verificação",
-    "checkSpam": "Não o vês? Verifica a pasta de spam.",
+    "checkSpam": "Não o vê? Verifique a pasta de spam.",
     "verifyButton": "Verificar e abrir o painel",
     "resendCode": "Reenviar código",
     "resendSent": "Código enviado",
-    "changeEmail": "Usar outro email",
+    "changeEmail": "Usar outro e-mail",
     "errors": {
-      "emailInvalid": "Introduz um email válido.",
-      "sendFailed": "Não conseguimos enviar o código. Tenta novamente.",
-      "verifyFailed": "Não conseguimos verificar o código. Tenta novamente.",
-      "codeExpired": "Este código expirou. Pede um novo.",
-      "noCode": "Não há código registado. Pede um novo.",
-      "invalidCode": "Código errado. Tenta novamente.",
-      "tooManyAttempts": "Demasiadas tentativas. Aguarda e tenta mais tarde."
+      "emailInvalid": "Introduza um endereço de e-mail válido.",
+      "sendFailed": "Não foi possível enviar o código. Tente novamente.",
+      "verifyFailed": "Não foi possível verificar o código. Tente novamente.",
+      "codeExpired": "Este código expirou. Peça um novo.",
+      "noCode": "Nenhum código registado. Peça um novo.",
+      "invalidCode": "Código incorreto. Tente novamente.",
+      "tooManyAttempts": "Demasiadas tentativas. Aguarde e tente mais tarde."
     },
     "signInTitle": "Bem-vindo de volta",
-    "signInSubtitle": "Introduz o teu email e enviamos um código rápido para entrares.",
-    "goToDashboard": "Ir ao painel"
+    "signInSubtitle": "Introduza o seu e-mail e enviaremos um código rápido para entrar.",
+    "goToDashboard": "Ir para o painel"
   }
 }

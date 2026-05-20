@@ -28,7 +28,7 @@ export function Faq({ texts }: FaqProps) {
           href={wa}
           target="_blank"
           rel="noopener noreferrer"
-          trackEvent="land_faq_whatsapp_click"
+          trackEvent="l_faq_whatsapp_click"
           className="inline-flex items-center gap-2 h-10 px-5 rounded-lg bg-[#0F766E] text-white text-sm font-medium hover:opacity-90 active:scale-[0.99] transition-all"
         >
           <MessageCircle className="h-4 w-4" />

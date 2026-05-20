@@ -55,7 +55,7 @@ export function LandingPricing({ texts, ctaText }: LandingPricingProps) {
           <div className="hidden lg:flex flex-col items-start">
             <button
               type="button"
-              onClick={() => cta.onClick("land_pricing_cta_click_desktop")}
+              onClick={() => cta.onClick("l_pricing_cta_click_desktop")}
               className="inline-flex w-full max-w-[14rem] items-center justify-center min-h-11 py-2 px-6 text-sm font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 active:scale-[0.99] transition-all text-center leading-tight"
             >
               {cta.label}
@@ -91,7 +91,7 @@ export function LandingPricing({ texts, ctaText }: LandingPricingProps) {
       <div className="flex lg:hidden flex-col items-center mt-4">
         <button
           type="button"
-          onClick={() => cta.onClick("land_pricing_cta_click_mobile")}
+          onClick={() => cta.onClick("l_pricing_cta_click_mobile")}
           className="inline-flex w-full max-w-[14rem] items-center justify-center min-h-11 py-2 px-6 text-sm font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 active:scale-[0.99] transition-all text-center leading-tight"
         >
           {cta.label}

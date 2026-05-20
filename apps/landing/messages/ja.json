@@ -2041,68 +2041,68 @@
   },
   "createFlow": {
     "step1": {
-      "title": "What kind of place is this?",
-      "subtitle": "Pick a vibe and we will preload a sample menu so you can edit, not start from scratch.",
-      "label": "Type"
+      "title": "どのような店ですか？",
+      "subtitle": "スタイルを選んでください。サンプルメニューを事前に読み込むので、ゼロから始めずに編集できます。",
+      "label": "種類"
     },
     "step2": {
-      "title": "What is its name?",
-      "subtitle": "This is what guests see at the top of your menu. You can change it any time.",
-      "nameLabel": "Restaurant name",
-      "namePlaceholder": "Mario's Pizza",
-      "label": "Name"
+      "title": "店名は？",
+      "subtitle": "メニューの上部にお客様が見るものです。いつでも変更できます。",
+      "nameLabel": "レストラン名",
+      "namePlaceholder": "マリオのピザ",
+      "label": "名前"
     },
-    "back": "Back",
-    "continue": "Continue",
+    "back": "戻る",
+    "continue": "続ける",
     "cuisines": {
-      "pizza": "Pizzeria",
-      "sushi": "Sushi / Japanese",
-      "asian": "Asian",
-      "burger": "Burger / Fast food",
-      "coffee": "Coffee / Cafe",
-      "bar": "Bar / Pub",
-      "bakery": "Bakery / Pastry",
-      "restaurant": "Restaurant"
+      "pizza": "ピッツェリア",
+      "sushi": "寿司 / 和食",
+      "asian": "アジア料理",
+      "burger": "バーガー / ファストフード",
+      "coffee": "コーヒー / カフェ",
+      "bar": "バー / パブ",
+      "bakery": "ベーカリー / 菓子店",
+      "restaurant": "レストラン"
     },
-    "stepOf": "Step {step} of {total}",
+    "stepOf": "ステップ {step} / {total}",
     "step3": {
-      "label": "Sign in"
+      "label": "サインイン"
     }
   },
   "auth": {
-    "titleWithName": "One more thing for {name}",
-    "subtitle": "Just leave your email so we can save your menu — you'll be able to edit it any time.",
-    "emailLabel": "Email",
+    "titleWithName": "{name} のためにもう一つ",
+    "subtitle": "メニューを保存できるようメールアドレスを残してください — いつでも編集できます。",
+    "emailLabel": "メールアドレス",
     "emailPlaceholder": "you@restaurant.com",
-    "continueEmail": "Save my menu",
-    "or": "or",
-    "continueGoogle": "Continue with Google",
-    "changeRestaurant": "Change restaurant",
+    "continueEmail": "メニューを保存",
+    "or": "または",
+    "continueGoogle": "Google で続ける",
+    "changeRestaurant": "レストランを変更",
     "consent": {
-      "text": "By continuing you agree to our",
-      "terms": "Terms",
-      "and": "and",
-      "privacy": "Privacy Policy"
+      "text": "続行することで、当社の",
+      "terms": "利用規約",
+      "and": "および",
+      "privacy": "プライバシーポリシーに同意したものとみなされます"
     },
-    "verifyTitle": "Check your inbox",
-    "verifySubtitle": "We sent a 6-digit code to {email}.",
-    "verifyCodeLabel": "Verification code",
-    "checkSpam": "Don't see it? Check your spam folder.",
-    "verifyButton": "Verify and open dashboard",
-    "resendCode": "Resend code",
-    "resendSent": "Code sent",
-    "changeEmail": "Use a different email",
+    "verifyTitle": "受信トレイを確認してください",
+    "verifySubtitle": "{email} に 6 桁のコードを送信しました。",
+    "verifyCodeLabel": "確認コード",
+    "checkSpam": "見当たりませんか？迷惑メールフォルダを確認してください。",
+    "verifyButton": "確認してダッシュボードを開く",
+    "resendCode": "コードを再送信",
+    "resendSent": "コードを送信しました",
+    "changeEmail": "別のメールアドレスを使用",
     "errors": {
-      "emailInvalid": "Please enter a valid email address.",
-      "sendFailed": "Couldn't send the code. Try again.",
-      "verifyFailed": "Couldn't verify the code. Try again.",
-      "codeExpired": "This code expired. Request a new one.",
-      "noCode": "No code on file. Request a new one.",
-      "invalidCode": "Wrong code. Try again.",
-      "tooManyAttempts": "Too many attempts. Wait and try again later."
+      "emailInvalid": "有効なメールアドレスを入力してください。",
+      "sendFailed": "コードを送信できませんでした。もう一度お試しください。",
+      "verifyFailed": "コードを確認できませんでした。もう一度お試しください。",
+      "codeExpired": "このコードは期限切れです。新しいコードをリクエストしてください。",
+      "noCode": "コードが登録されていません。新しいコードをリクエストしてください。",
+      "invalidCode": "コードが正しくありません。もう一度お試しください。",
+      "tooManyAttempts": "試行回数が多すぎます。しばらくしてから再試行してください。"
     },
-    "signInTitle": "Welcome back",
-    "signInSubtitle": "Enter your email and we'll send a quick code to sign you in.",
-    "goToDashboard": "Go to dashboard"
+    "signInTitle": "おかえりなさい",
+    "signInSubtitle": "メールアドレスを入力すると、ログイン用のクイックコードをお送りします。",
+    "goToDashboard": "ダッシュボードへ"
   }
 }
