@@ -62,7 +62,12 @@ export function DrillList({ items, kind, emptyKey, prependHeading }: Props) {
             className="w-full border-t border-gray-300/25 flex justify-center px-[8%]"
           >
             <span className="max-w-[440px] w-full py-[22px] flex items-center gap-3 text-black font-semibold">
-              <span className="flex-1 text-left truncate">{name}</span>
+              <span
+                className="flex-1 min-w-0 text-left leading-tight"
+                style={{ display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}
+              >
+                {name}
+              </span>
               <ChevronRight className="h-5 w-5 text-gray-400 shrink-0" />
             </span>
           </button>

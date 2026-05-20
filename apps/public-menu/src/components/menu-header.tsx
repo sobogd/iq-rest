@@ -30,19 +30,22 @@ export function MenuHeader({ title, accentColor, backTo = "/", sticky, right }: 
         backgroundColor: bg,
       }}
     >
-      <div className="h-14 max-w-[440px] w-full flex items-center relative mx-auto">
+      <div className="min-h-14 max-w-[440px] w-full flex items-center gap-2 mx-auto py-1.5">
         <Link
           to={backTo}
           search={search}
-          className="p-2 -ml-2 text-white z-10"
+          className="p-2 -ml-2 text-white shrink-0"
           aria-label="Back"
         >
           <ArrowLeft className="h-6 w-6" />
         </Link>
-        <h1 className="absolute inset-0 flex items-center justify-center text-lg font-semibold text-white pointer-events-none">
+        <h1
+          className="flex-1 min-w-0 text-center text-base font-semibold text-white leading-tight"
+          style={{ display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}
+        >
           {title}
         </h1>
-        {right ? <div className="ml-auto z-10">{right}</div> : null}
+        <div className="shrink-0 w-10 flex justify-end">{right}</div>
       </div>
     </header>
   );
