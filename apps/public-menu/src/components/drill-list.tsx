@@ -17,13 +17,19 @@ interface Props {
   emptyKey?: string;
   /** Optional sticky header (e.g. category-group name when nested). */
   prependHeading?: string | null;
+  /**
+   * When two DrillLists are stacked inside a shared scroller, this one
+   * should not own its own flex-1/overflow — otherwise each list eats half
+   * the screen and short lists get a huge empty gap.
+   */
+  embedded?: boolean;
 }
 
 /**
  * Vertical list of tappable cards used at every drill level.
  * Each row is a full-width card; the whole row is the hit-target.
  */
-export function DrillList({ items, kind, emptyKey, prependHeading }: Props) {
+export function DrillList({ items, kind, emptyKey, prependHeading, embedded }: Props) {
   const navigate = useNavigate();
   const { i18n, t } = useTranslation();
   const search = useForwardedSearch();
@@ -38,7 +44,13 @@ export function DrillList({ items, kind, emptyKey, prependHeading }: Props) {
   }
 
   return (
-    <div className="flex-1 overflow-auto min-h-0 hide-scrollbar bg-white">
+    <div
+      className={
+        embedded
+          ? "bg-white"
+          : "flex-1 overflow-auto min-h-0 hide-scrollbar bg-white"
+      }
+    >
       {prependHeading ? (
         <div className="flex justify-center px-[8%]">
           <h2 className="max-w-[440px] w-full pt-5 pb-2 text-sm font-bold text-gray-400 uppercase tracking-wide">

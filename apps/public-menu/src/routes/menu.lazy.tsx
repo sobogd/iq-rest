@@ -122,10 +122,10 @@ function MenuIndex() {
     // in drill mode it stays as more drill rows.
     return (
       <div className="flex-1 overflow-auto min-h-0 hide-scrollbar bg-white flex flex-col">
-        <DrillList items={topGroups} kind="group" />
+        <DrillList items={topGroups} kind="group" embedded />
         {ungroupedLeaves.length > 0 ? (
           layout === "drill" ? (
-            <DrillList items={ungroupedLeaves} kind="cat" />
+            <DrillList items={ungroupedLeaves} kind="cat" embedded />
           ) : (
             <div className="border-t border-gray-100">
               <MenuFeed dietFilter={dietFilter} categoryIds={ungroupedLeaves.map((c) => c.id)} />
