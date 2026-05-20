@@ -14,10 +14,20 @@ export function MenuImage({ src, alt, priority }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const imgRef = useRef<HTMLImageElement>(null);
 
+  // When the parent flips priority to true (e.g. filter pushed this row to
+  // index 0) we want the image to render immediately. useState's initial
+  // value only reads `priority` on first mount, so sync it on prop changes.
+  useEffect(() => {
+    if (priority) setIsInView(true);
+  }, [priority]);
+
   useEffect(() => {
     if (priority) return;
     const el = ref.current;
     if (!el) return;
+    // Re-check on every layout/scroll change. Without re-observing after
+    // a filter rearrange, an item that just shifted into the viewport (and
+    // never intersected before) would stay grey.
     const obs = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -29,7 +39,7 @@ export function MenuImage({ src, alt, priority }: Props) {
     );
     obs.observe(el);
     return () => obs.disconnect();
-  }, [priority]);
+  }, [priority, src]);
 
   // If the image is already cached by the browser, the native `load` event
   // can fire before React attaches our onLoad handler — leaving the gray
