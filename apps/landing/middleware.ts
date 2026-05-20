@@ -3,6 +3,32 @@ import { NextRequest, NextResponse } from "next/server";
 import { routing, locales, Locale } from "./i18n/routing";
 import { getLocaleByCountryAndRegion } from "./lib/country-locale-map";
 import { HOME_META, lastModifiedFor } from "./lib/page-meta";
+import { isGone } from "./lib/gone-paths";
+
+// Minimal HTML body for HTTP 410. Search engines look at the status code,
+// not the body — keep it tiny but human-readable in case anyone lands here.
+function goneResponse(pathname: string): NextResponse {
+  const body = `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Gone · IQ Rest</title>
+<meta name="robots" content="noindex">
+<style>body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:560px;margin:64px auto;padding:0 20px;color:#1a1a1a}h1{font-weight:500;font-size:28px;margin:0 0 12px}p{line-height:1.5;color:#555}a{color:#000;text-decoration:underline}</style>
+</head>
+<body>
+<h1>This page is no longer available</h1>
+<p>The page <code>${pathname.replace(/[<>&]/g, "")}</code> was removed and won't return. Head to <a href="/en">iq-rest.com</a> to find what you need.</p>
+</body>
+</html>`;
+  return new NextResponse(body, {
+    status: 410,
+    headers: {
+      "Content-Type": "text/html; charset=utf-8",
+      "Cache-Control": "public, max-age=86400",
+    },
+  });
+}
 
 const intlMiddleware = createMiddleware(routing);
 
@@ -71,6 +97,12 @@ function setGeoCookies(request: NextRequest, response: NextResponse): void {
 
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+
+  // Pages we removed in the 2026-05-20 landing restructure: serve 410 Gone
+  // so Googlebot can drop them from the index quickly. Lookup is O(1).
+  if (isGone(pathname)) {
+    return goneResponse(pathname);
+  }
 
   // Per-locale custom landings replace the locale-routed main page (e.g. /en, /es).
   // Match ONLY the bare locale path so sub-routes like /en/contacts keep going through next-intl.
