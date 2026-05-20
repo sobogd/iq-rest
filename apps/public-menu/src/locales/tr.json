@@ -56,7 +56,29 @@
       "backHome": "Ana sayfaya dön"
     },
     "menuUnavailableTitle": "Menü Geçici Olarak Kullanılamıyor",
-    "menuUnavailableText": "Bu restoranın menüsü şu anda mevcut değil. Lütfen restoranla doğrudan iletişime geçin."
+    "menuUnavailableText": "Bu restoranın menüsü şu anda mevcut değil. Lütfen restoranla doğrudan iletişime geçin.",
+    "dietNames": {
+      "vegan": "Vegan",
+      "vegetarian": "Vejetaryen",
+      "pescatarian": "Peskeryen",
+      "gluten_free": "Glütensiz",
+      "lactose_free": "Laktozsuz",
+      "nut_free": "Fındıksız",
+      "sugar_free": "Şekersiz",
+      "low_carb": "Düşük karbonhidratlı",
+      "keto": "Keto",
+      "halal": "Helal",
+      "kosher": "Koşer",
+      "spicy": "Acılı",
+      "organic": "Organik"
+    },
+    "dietFilter": {
+      "title": "Filtreler",
+      "tip": "Yalnızca tüm etiketlere uyan yemekleri göster.",
+      "reset": "Sıfırla",
+      "apply": "Uygula",
+      "empty": "Filtrelere uyan yemek yok."
+    }
   },
   "publicReserve": {
     "title": "Masa Ayırt",

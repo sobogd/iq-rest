@@ -56,7 +56,29 @@
       "backHome": "Nazaj na začetno stran"
     },
     "menuUnavailableTitle": "Meni Je Začasno Nedostopen",
-    "menuUnavailableText": "Meni te restavracije trenutno ni na voljo. Prosimo, kontaktirajte restavracijo neposredno."
+    "menuUnavailableText": "Meni te restavracije trenutno ni na voljo. Prosimo, kontaktirajte restavracijo neposredno.",
+    "dietNames": {
+      "vegan": "Vegansko",
+      "vegetarian": "Vegetarijansko",
+      "pescatarian": "Pescetarijansko",
+      "gluten_free": "Brez glutena",
+      "lactose_free": "Brez laktoze",
+      "nut_free": "Brez oreščkov",
+      "sugar_free": "Brez sladkorja",
+      "low_carb": "Z malo ogljikovih hidratov",
+      "keto": "Keto",
+      "halal": "Halal",
+      "kosher": "Košer",
+      "spicy": "Pikantno",
+      "organic": "Ekološko"
+    },
+    "dietFilter": {
+      "title": "Filtri",
+      "tip": "Pokaži samo jedi, ki ustrezajo vsem oznakam.",
+      "reset": "Ponastavi",
+      "apply": "Uporabi",
+      "empty": "Nobena jed ne ustreza filtrom."
+    }
   },
   "publicReserve": {
     "title": "Rezervirajte Mizo",

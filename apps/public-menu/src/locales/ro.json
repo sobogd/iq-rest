@@ -56,7 +56,29 @@
       "backHome": "Înapoi la pagina principală"
     },
     "menuUnavailableTitle": "Meniul Este Temporar Indisponibil",
-    "menuUnavailableText": "Meniul acestui restaurant nu este disponibil momentan. Vă rugăm contactați restaurantul direct."
+    "menuUnavailableText": "Meniul acestui restaurant nu este disponibil momentan. Vă rugăm contactați restaurantul direct.",
+    "dietNames": {
+      "vegan": "Vegan",
+      "vegetarian": "Vegetarian",
+      "pescatarian": "Pescetarian",
+      "gluten_free": "Fără gluten",
+      "lactose_free": "Fără lactoză",
+      "nut_free": "Fără nuci",
+      "sugar_free": "Fără zahăr",
+      "low_carb": "Sărac în carbohidrați",
+      "keto": "Keto",
+      "halal": "Halal",
+      "kosher": "Cușer",
+      "spicy": "Picant",
+      "organic": "Organic"
+    },
+    "dietFilter": {
+      "title": "Filtre",
+      "tip": "Afișează doar preparate care se potrivesc cu toate etichetele.",
+      "reset": "Resetează",
+      "apply": "Aplică",
+      "empty": "Niciun preparat nu se potrivește filtrelor."
+    }
   },
   "publicReserve": {
     "title": "Rezervă o Masă",

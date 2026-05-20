@@ -56,7 +56,29 @@
       "backHome": "Tagasi avalehele"
     },
     "menuUnavailableTitle": "Menüü On Ajutiselt Kättesaamatu",
-    "menuUnavailableText": "Selle restorani menüü ei ole praegu kättesaadav. Palun võtke ühendust restoraniga otse."
+    "menuUnavailableText": "Selle restorani menüü ei ole praegu kättesaadav. Palun võtke ühendust restoraniga otse.",
+    "dietNames": {
+      "vegan": "Vegan",
+      "vegetarian": "Taimetoit",
+      "pescatarian": "Pescetaarlane",
+      "gluten_free": "Gluteenivaba",
+      "lactose_free": "Laktoosivaba",
+      "nut_free": "Pähklivaba",
+      "sugar_free": "Suhkruvaba",
+      "low_carb": "Madala süsivesikute sisaldusega",
+      "keto": "Keto",
+      "halal": "Halal",
+      "kosher": "Košer",
+      "spicy": "Vürtsikas",
+      "organic": "Mahe"
+    },
+    "dietFilter": {
+      "title": "Filtrid",
+      "tip": "Näita ainult kõigile siltidele vastavaid roogasid.",
+      "reset": "Lähtesta",
+      "apply": "Rakenda",
+      "empty": "Ükski roog ei vasta filtritele."
+    }
   },
   "publicReserve": {
     "title": "Broneeri laud",

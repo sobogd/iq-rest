@@ -56,7 +56,29 @@
       "backHome": "ホームに戻る"
     },
     "menuUnavailableTitle": "メニューは一時的に利用できません",
-    "menuUnavailableText": "このレストランのメニューは現在ご利用いただけません。レストランに直接お問い合わせください。"
+    "menuUnavailableText": "このレストランのメニューは現在ご利用いただけません。レストランに直接お問い合わせください。",
+    "dietNames": {
+      "vegan": "ヴィーガン",
+      "vegetarian": "ベジタリアン",
+      "pescatarian": "ペスカタリアン",
+      "gluten_free": "グルテンフリー",
+      "lactose_free": "乳糖フリー",
+      "nut_free": "ナッツ不使用",
+      "sugar_free": "砂糖不使用",
+      "low_carb": "低糖質",
+      "keto": "ケト",
+      "halal": "ハラール",
+      "kosher": "コーシャ",
+      "spicy": "辛い",
+      "organic": "オーガニック"
+    },
+    "dietFilter": {
+      "title": "フィルター",
+      "tip": "選択したすべてのタグに合う料理のみ表示。",
+      "reset": "リセット",
+      "apply": "適用",
+      "empty": "フィルターに合う料理がありません。"
+    }
   },
   "publicReserve": {
     "title": "テーブルを予約",

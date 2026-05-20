@@ -56,7 +56,29 @@
       "backHome": "Tilbake til forsiden"
     },
     "menuUnavailableTitle": "Menyen Er Midlertidig Utilgjengelig",
-    "menuUnavailableText": "Denne restaurantens meny er for øyeblikket ikke tilgjengelig. Kontakt restauranten direkte."
+    "menuUnavailableText": "Denne restaurantens meny er for øyeblikket ikke tilgjengelig. Kontakt restauranten direkte.",
+    "dietNames": {
+      "vegan": "Vegansk",
+      "vegetarian": "Vegetar",
+      "pescatarian": "Pescetar",
+      "gluten_free": "Glutenfri",
+      "lactose_free": "Laktosefri",
+      "nut_free": "Nøttefri",
+      "sugar_free": "Sukkerfri",
+      "low_carb": "Lavkarbo",
+      "keto": "Keto",
+      "halal": "Halal",
+      "kosher": "Kosher",
+      "spicy": "Sterk",
+      "organic": "Økologisk"
+    },
+    "dietFilter": {
+      "title": "Filtre",
+      "tip": "Vis kun retter som matcher alle taggene.",
+      "reset": "Tilbakestill",
+      "apply": "Bruk",
+      "empty": "Ingen retter matcher filtrene."
+    }
   },
   "publicReserve": {
     "title": "Bestill et Bord",

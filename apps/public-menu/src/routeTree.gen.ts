@@ -16,6 +16,8 @@ import { Route as ContactsRouteImport } from "./routes/contacts"
 import { Route as IndexRouteImport } from "./routes/index"
 import { Route as OrderIndexRouteImport } from "./routes/order.index"
 import { Route as OrderSuccessRouteImport } from "./routes/order.success"
+import { Route as MenuGroupIdRouteImport } from "./routes/menu.group.$id"
+import { Route as MenuCatIdRouteImport } from "./routes/menu.cat.$id"
 
 const ReserveRoute = ReserveRouteImport.update({
   id: "/reserve",
@@ -52,34 +54,50 @@ const OrderSuccessRoute = OrderSuccessRouteImport.update({
   path: "/order/success",
   getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import("./routes/order.success.lazy").then((d) => d.Route))
+const MenuGroupIdRoute = MenuGroupIdRouteImport.update({
+  id: "/group/$id",
+  path: "/group/$id",
+  getParentRoute: () => MenuRoute,
+} as any)
+const MenuCatIdRoute = MenuCatIdRouteImport.update({
+  id: "/cat/$id",
+  path: "/cat/$id",
+  getParentRoute: () => MenuRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   "/": typeof IndexRoute
   "/contacts": typeof ContactsRoute
   "/language": typeof LanguageRoute
-  "/menu": typeof MenuRoute
+  "/menu": typeof MenuRouteWithChildren
   "/reserve": typeof ReserveRoute
   "/order/success": typeof OrderSuccessRoute
   "/order/": typeof OrderIndexRoute
+  "/menu/cat/$id": typeof MenuCatIdRoute
+  "/menu/group/$id": typeof MenuGroupIdRoute
 }
 export interface FileRoutesByTo {
   "/": typeof IndexRoute
   "/contacts": typeof ContactsRoute
   "/language": typeof LanguageRoute
-  "/menu": typeof MenuRoute
+  "/menu": typeof MenuRouteWithChildren
   "/reserve": typeof ReserveRoute
   "/order/success": typeof OrderSuccessRoute
   "/order": typeof OrderIndexRoute
+  "/menu/cat/$id": typeof MenuCatIdRoute
+  "/menu/group/$id": typeof MenuGroupIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   "/": typeof IndexRoute
   "/contacts": typeof ContactsRoute
   "/language": typeof LanguageRoute
-  "/menu": typeof MenuRoute
+  "/menu": typeof MenuRouteWithChildren
   "/reserve": typeof ReserveRoute
   "/order/success": typeof OrderSuccessRoute
   "/order/": typeof OrderIndexRoute
+  "/menu/cat/$id": typeof MenuCatIdRoute
+  "/menu/group/$id": typeof MenuGroupIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -91,6 +109,8 @@ export interface FileRouteTypes {
     | "/reserve"
     | "/order/success"
     | "/order/"
+    | "/menu/cat/$id"
+    | "/menu/group/$id"
   fileRoutesByTo: FileRoutesByTo
   to:
     | "/"
@@ -100,6 +120,8 @@ export interface FileRouteTypes {
     | "/reserve"
     | "/order/success"
     | "/order"
+    | "/menu/cat/$id"
+    | "/menu/group/$id"
   id:
     | "__root__"
     | "/"
@@ -109,13 +131,15 @@ export interface FileRouteTypes {
     | "/reserve"
     | "/order/success"
     | "/order/"
+    | "/menu/cat/$id"
+    | "/menu/group/$id"
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContactsRoute: typeof ContactsRoute
   LanguageRoute: typeof LanguageRoute
-  MenuRoute: typeof MenuRoute
+  MenuRoute: typeof MenuRouteWithChildren
   ReserveRoute: typeof ReserveRoute
   OrderSuccessRoute: typeof OrderSuccessRoute
   OrderIndexRoute: typeof OrderIndexRoute
@@ -172,14 +196,40 @@ declare module "@tanstack/react-router" {
       preLoaderRoute: typeof OrderSuccessRouteImport
       parentRoute: typeof rootRouteImport
     }
+    "/menu/group/$id": {
+      id: "/menu/group/$id"
+      path: "/group/$id"
+      fullPath: "/menu/group/$id"
+      preLoaderRoute: typeof MenuGroupIdRouteImport
+      parentRoute: typeof MenuRoute
+    }
+    "/menu/cat/$id": {
+      id: "/menu/cat/$id"
+      path: "/cat/$id"
+      fullPath: "/menu/cat/$id"
+      preLoaderRoute: typeof MenuCatIdRouteImport
+      parentRoute: typeof MenuRoute
+    }
   }
 }
+
+interface MenuRouteChildren {
+  MenuCatIdRoute: typeof MenuCatIdRoute
+  MenuGroupIdRoute: typeof MenuGroupIdRoute
+}
+
+const MenuRouteChildren: MenuRouteChildren = {
+  MenuCatIdRoute: MenuCatIdRoute,
+  MenuGroupIdRoute: MenuGroupIdRoute,
+}
+
+const MenuRouteWithChildren = MenuRoute._addFileChildren(MenuRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactsRoute: ContactsRoute,
   LanguageRoute: LanguageRoute,
-  MenuRoute: MenuRoute,
+  MenuRoute: MenuRouteWithChildren,
   ReserveRoute: ReserveRoute,
   OrderSuccessRoute: OrderSuccessRoute,
   OrderIndexRoute: OrderIndexRoute,

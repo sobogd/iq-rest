@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
+import type { ReactNode } from "react";
 import { useForwardedSearch } from "../lib/forward-search";
 
 interface Props {
@@ -7,9 +8,10 @@ interface Props {
   accentColor?: string;
   backTo?: string;
   sticky?: boolean;
+  right?: ReactNode;
 }
 
-export function MenuHeader({ title, accentColor, backTo = "/", sticky }: Props) {
+export function MenuHeader({ title, accentColor, backTo = "/", sticky, right }: Props) {
   const bg = accentColor || "#000000";
   const search = useForwardedSearch();
   // ?preview=1 means rendered inside the dashboard's iPhone-simulating iframe,
@@ -37,9 +39,10 @@ export function MenuHeader({ title, accentColor, backTo = "/", sticky }: Props) 
         >
           <ArrowLeft className="h-6 w-6" />
         </Link>
-        <h1 className="absolute inset-0 flex items-center justify-center text-lg font-semibold text-white">
+        <h1 className="absolute inset-0 flex items-center justify-center text-lg font-semibold text-white pointer-events-none">
           {title}
         </h1>
+        {right ? <div className="ml-auto z-10">{right}</div> : null}
       </div>
     </header>
   );

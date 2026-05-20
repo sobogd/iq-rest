@@ -56,7 +56,29 @@
       "backHome": "Grįžti į pradžią"
     },
     "menuUnavailableTitle": "Meniu Laikinai Nepasiekiamas",
-    "menuUnavailableText": "Šio restorano meniu šiuo metu nepasiekiamas. Susisiekite su restoranu tiesiogiai."
+    "menuUnavailableText": "Šio restorano meniu šiuo metu nepasiekiamas. Susisiekite su restoranu tiesiogiai.",
+    "dietNames": {
+      "vegan": "Veganiška",
+      "vegetarian": "Vegetariška",
+      "pescatarian": "Pescetariška",
+      "gluten_free": "Be gliuteno",
+      "lactose_free": "Be laktozės",
+      "nut_free": "Be riešutų",
+      "sugar_free": "Be cukraus",
+      "low_carb": "Mažai angliavandenių",
+      "keto": "Keto",
+      "halal": "Halal",
+      "kosher": "Košer",
+      "spicy": "Aštru",
+      "organic": "Ekologiška"
+    },
+    "dietFilter": {
+      "title": "Filtrai",
+      "tip": "Rodyti tik patiekalus, atitinkančius visas žymas.",
+      "reset": "Atstatyti",
+      "apply": "Taikyti",
+      "empty": "Nė vienas patiekalas neatitinka filtrų."
+    }
   },
   "publicReserve": {
     "title": "Užsakyti stalą",

@@ -12,7 +12,7 @@ import type { MenuPayload } from "../lib/types";
 
 export const Route = createRootRoute({ component: RootLayout });
 
-const PREFETCH_ROUTES = ["/menu", "/reserve", "/contacts", "/order", "/order/success", "/language"] as const;
+const PREFETCH_ROUTES = ["/menu", "/menu/group/$id", "/menu/cat/$id", "/reserve", "/contacts", "/order", "/order/success", "/language"] as const;
 
 function RootLayout() {
   const slug = resolveSlug();
@@ -20,12 +20,15 @@ function RootLayout() {
   const router = useRouter();
 
   useEffect(() => {
+    // Kick off route-chunk preloading immediately so navigation never blocks
+    // on a network fetch. The menu drill flow (group → cat) is the hot path,
+    // so we don't wait for requestIdleCallback before warming those bundles.
+    for (const to of PREFETCH_ROUTES) {
+      void router.preloadRoute({ to });
+    }
     const idle = (window as unknown as { requestIdleCallback?: (cb: () => void) => number }).requestIdleCallback
       || ((cb: () => void) => setTimeout(cb, 200));
     idle(() => {
-      for (const to of PREFETCH_ROUTES) {
-        void router.preloadRoute({ to });
-      }
       preloadMaps();
     });
   }, [router]);

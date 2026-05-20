@@ -56,7 +56,29 @@
       "backHome": "Natrag na početnu"
     },
     "menuUnavailableTitle": "Jelovnik Je Privremeno Nedostupan",
-    "menuUnavailableText": "Jelovnik ovog restorana trenutno nije dostupan. Kontaktirajte restoran izravno."
+    "menuUnavailableText": "Jelovnik ovog restorana trenutno nije dostupan. Kontaktirajte restoran izravno.",
+    "dietNames": {
+      "vegan": "Vegansko",
+      "vegetarian": "Vegetarijansko",
+      "pescatarian": "Pescetarijansko",
+      "gluten_free": "Bez glutena",
+      "lactose_free": "Bez laktoze",
+      "nut_free": "Bez orašastih plodova",
+      "sugar_free": "Bez šećera",
+      "low_carb": "Niskougljikohidratno",
+      "keto": "Keto",
+      "halal": "Halal",
+      "kosher": "Košer",
+      "spicy": "Pikantno",
+      "organic": "Organsko"
+    },
+    "dietFilter": {
+      "title": "Filtri",
+      "tip": "Prikaži samo jela koja odgovaraju svim oznakama.",
+      "reset": "Poništi",
+      "apply": "Primijeni",
+      "empty": "Nema jela koja odgovaraju filtrima."
+    }
   },
   "publicReserve": {
     "title": "Rezervirajte Stol",

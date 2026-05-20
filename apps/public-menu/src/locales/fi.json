@@ -56,7 +56,29 @@
       "backHome": "Takaisin etusivulle"
     },
     "menuUnavailableTitle": "Valikko On Tilapäisesti Poissa Käytöstä",
-    "menuUnavailableText": "Tämän ravintolan valikko ei ole tällä hetkellä saatavilla. Ota yhteyttä ravintolaan suoraan."
+    "menuUnavailableText": "Tämän ravintolan valikko ei ole tällä hetkellä saatavilla. Ota yhteyttä ravintolaan suoraan.",
+    "dietNames": {
+      "vegan": "Vegaaninen",
+      "vegetarian": "Kasvis",
+      "pescatarian": "Pescetaariaaninen",
+      "gluten_free": "Gluteeniton",
+      "lactose_free": "Laktoositon",
+      "nut_free": "Pähkinätön",
+      "sugar_free": "Sokeriton",
+      "low_carb": "Vähähiilihydraattinen",
+      "keto": "Keto",
+      "halal": "Halal",
+      "kosher": "Kosher",
+      "spicy": "Tulinen",
+      "organic": "Luomu"
+    },
+    "dietFilter": {
+      "title": "Suodattimet",
+      "tip": "Näytä vain kaikkiin tageihin sopivat annokset.",
+      "reset": "Nollaa",
+      "apply": "Käytä",
+      "empty": "Mikään annos ei vastaa suodattimia."
+    }
   },
   "publicReserve": {
     "title": "Varaa Pöytä",

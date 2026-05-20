@@ -7,11 +7,28 @@ import { useCart } from "../lib/cart";
 import { tField } from "../lib/translations";
 import { formatPrice } from "../lib/currencies";
 import { AllergenIcon } from "./allergen-icon";
+import { DietIcon } from "./diet-icon";
 import { MenuImage } from "./menu-image";
 import { useForwardedSearch } from "../lib/forward-search";
 
-export function MenuFeed() {
-  const { restaurant, categories, items } = useMenu();
+interface MenuFeedProps {
+  dietFilter?: string[];
+  // Restrict feed to a subset of categories (e.g. when inside a group).
+  categoryIds?: string[];
+}
+
+export function MenuFeed({ dietFilter = [], categoryIds }: MenuFeedProps) {
+  const { restaurant, categories: allCategories, items } = useMenu();
+  // Default: show only top-level leaf categories (no groups, no nested).
+  // Flat layout collapses groups (per settings: groups are hidden in flat).
+  const categories = useMemo(() => {
+    const isLeaf = (c: { isGroup?: boolean }) => !c.isGroup;
+    if (categoryIds) {
+      const set = new Set(categoryIds);
+      return allCategories.filter((c) => set.has(c.id) && isLeaf(c));
+    }
+    return allCategories.filter(isLeaf);
+  }, [allCategories, categoryIds]);
   const { i18n, t } = useTranslation();
   const { cart, add, remove, totalQty } = useCart();
   const accent = restaurant.accentColor || "#000";
@@ -19,10 +36,19 @@ export function MenuFeed() {
   const lang = i18n.language;
   const cartSearch = useForwardedSearch();
 
+  // Filter items by selected diet tags (AND — must include all).
+  const filteredItems = useMemo(() => {
+    if (dietFilter.length === 0) return items;
+    return items.filter((it) => {
+      const diets = it.diets || [];
+      return dietFilter.every((d) => diets.includes(d));
+    });
+  }, [items, dietFilter]);
+
   // Group items by category — bucket once, then map each cat in O(1).
   const groups = useMemo(() => {
     const byCat = new Map<string, typeof items>();
-    for (const it of items) {
+    for (const it of filteredItems) {
       const arr = byCat.get(it.categoryId);
       if (arr) arr.push(it);
       else byCat.set(it.categoryId, [it]);
@@ -34,7 +60,7 @@ export function MenuFeed() {
         items: byCat.get(c.id) ?? [],
       }))
       .filter((g) => g.items.length > 0);
-  }, [categories, items, lang]);
+  }, [categories, filteredItems, lang]);
 
   const [activeCategory, setActiveCategory] = useState(groups[0]?.id ?? "");
   const containerRef = useRef<HTMLDivElement>(null);
@@ -90,10 +116,12 @@ export function MenuFeed() {
     if (tab) (tab as HTMLElement).scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
   }, [activeCategory]);
 
-  if (groups.length === 0 || items.length === 0) {
+  if (groups.length === 0 || filteredItems.length === 0) {
     return (
       <div className="flex-1 flex items-center justify-center text-sm text-gray-400 px-4 text-center">
-        {t("publicMenu.noCategories")}
+        {dietFilter.length > 0
+          ? t("publicMenu.dietFilter.empty", { defaultValue: "No dishes match the selected filters." })
+          : t("publicMenu.noCategories")}
       </div>
     );
   }
@@ -140,7 +168,7 @@ export function MenuFeed() {
           <div
             className={
               "max-w-[440px] w-full space-y-5 " +
-              (groups.length <= 1 ? "pt-5" : "pt-0 min-[440px]:pt-5") +
+              (groups.length <= 1 ? "" : "pt-0 min-[440px]:pt-5") +
               " " +
               (groups.length > 1 ? "pb-[60vh]" : "pb-5")
             }
@@ -172,7 +200,22 @@ export function MenuFeed() {
                       ) : null}
                       <div className={item.imageUrl ? "p-5" : "px-5 pb-5"}>
                         <div className="flex justify-between items-start gap-4">
-                          <h3 className="font-semibold text-lg text-black">{name}</h3>
+                          <h3 className="font-semibold text-lg text-black flex-1 min-w-0">
+                            <span className="align-middle">{name}</span>
+                            {item.diets?.length ? (
+                              <span className="inline-flex items-center gap-1 align-middle ml-2">
+                                {item.diets.map((code) => (
+                                  <DietIcon
+                                    key={code}
+                                    code={code}
+                                    className="w-[18px] h-[18px] inline-block"
+                                    style={{ color: accent }}
+                                    aria-label={t(`publicMenu.dietNames.${code}`, { defaultValue: code })}
+                                  />
+                                ))}
+                              </span>
+                            ) : null}
+                          </h3>
                           {!ordersEnabled && Number(item.price) > 0 ? (
                             <span className="font-bold text-lg shrink-0 text-black">
                               {formatPrice(item.price, restaurant.currency)}

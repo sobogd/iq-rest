@@ -56,7 +56,29 @@
       "backHome": "Vissza a kezdőlapra"
     },
     "menuUnavailableTitle": "A Menü Átmenetileg Nem Elérhető",
-    "menuUnavailableText": "Ennek az étteremnek az étlapja jelenleg nem elérhető. Kérjük, lépjen kapcsolatba az étteremmel közvetlenül."
+    "menuUnavailableText": "Ennek az étteremnek az étlapja jelenleg nem elérhető. Kérjük, lépjen kapcsolatba az étteremmel közvetlenül.",
+    "dietNames": {
+      "vegan": "Vegán",
+      "vegetarian": "Vegetáriánus",
+      "pescatarian": "Peszketariánus",
+      "gluten_free": "Gluténmentes",
+      "lactose_free": "Laktózmentes",
+      "nut_free": "Diómentes",
+      "sugar_free": "Cukormentes",
+      "low_carb": "Alacsony szénhidráttartalmú",
+      "keto": "Keto",
+      "halal": "Halal",
+      "kosher": "Kóser",
+      "spicy": "Csípős",
+      "organic": "Bio"
+    },
+    "dietFilter": {
+      "title": "Szűrők",
+      "tip": "Csak az összes címkének megfelelő ételek megjelenítése.",
+      "reset": "Visszaállít",
+      "apply": "Alkalmaz",
+      "empty": "Egyik étel sem felel meg a szűrőknek."
+    }
   },
   "publicReserve": {
     "title": "Asztalfoglalás",

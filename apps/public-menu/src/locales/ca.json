@@ -56,7 +56,29 @@
       "backHome": "Tornar a l'inici"
     },
     "menuUnavailableTitle": "El Menú No Està Disponible Temporalment",
-    "menuUnavailableText": "El menú d'aquest restaurant no està disponible en aquest moment. Contacteu directament amb el restaurant."
+    "menuUnavailableText": "El menú d'aquest restaurant no està disponible en aquest moment. Contacteu directament amb el restaurant.",
+    "dietNames": {
+      "vegan": "Vegà",
+      "vegetarian": "Vegetarià",
+      "pescatarian": "Pescetarià",
+      "gluten_free": "Sense gluten",
+      "lactose_free": "Sense lactosa",
+      "nut_free": "Sense fruita seca",
+      "sugar_free": "Sense sucre",
+      "low_carb": "Baix en carbohidrats",
+      "keto": "Keto",
+      "halal": "Halal",
+      "kosher": "Kosher",
+      "spicy": "Picant",
+      "organic": "Ecològic"
+    },
+    "dietFilter": {
+      "title": "Filtres",
+      "tip": "Mostra només plats que coincideixin amb totes les etiquetes.",
+      "reset": "Restableix",
+      "apply": "Aplica",
+      "empty": "Cap plat coincideix amb els filtres."
+    }
   },
   "publicReserve": {
     "title": "Reserva una Taula",

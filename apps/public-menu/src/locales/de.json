@@ -56,7 +56,29 @@
       "backHome": "Zur Startseite"
     },
     "menuUnavailableTitle": "Speisekarte Vorübergehend Nicht Verfügbar",
-    "menuUnavailableText": "Die Speisekarte dieses Restaurants ist derzeit nicht verfügbar. Bitte kontaktieren Sie das Restaurant direkt."
+    "menuUnavailableText": "Die Speisekarte dieses Restaurants ist derzeit nicht verfügbar. Bitte kontaktieren Sie das Restaurant direkt.",
+    "dietNames": {
+      "vegan": "Vegan",
+      "vegetarian": "Vegetarisch",
+      "pescatarian": "Pescetarisch",
+      "gluten_free": "Glutenfrei",
+      "lactose_free": "Laktosefrei",
+      "nut_free": "Nussfrei",
+      "sugar_free": "Zuckerfrei",
+      "low_carb": "Low-Carb",
+      "keto": "Keto",
+      "halal": "Halal",
+      "kosher": "Koscher",
+      "spicy": "Scharf",
+      "organic": "Bio"
+    },
+    "dietFilter": {
+      "title": "Filter",
+      "tip": "Nur Gerichte zeigen, die zu allen Tags passen.",
+      "reset": "Zurücksetzen",
+      "apply": "Anwenden",
+      "empty": "Keine Gerichte entsprechen den Filtern."
+    }
   },
   "publicReserve": {
     "title": "Tisch reservieren",

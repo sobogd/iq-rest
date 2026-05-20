@@ -56,6 +56,28 @@
       "successTitle": "Order placed",
       "successBody": "Thanks! The restaurant will get back to you shortly.",
       "backHome": "Back to home"
+    },
+    "dietNames": {
+      "vegan": "Vegan",
+      "vegetarian": "Vegetarian",
+      "pescatarian": "Pescatarian",
+      "gluten_free": "Gluten-free",
+      "lactose_free": "Lactose-free",
+      "nut_free": "Nut-free",
+      "sugar_free": "Sugar-free",
+      "low_carb": "Low-carb",
+      "keto": "Keto",
+      "halal": "Halal",
+      "kosher": "Kosher",
+      "spicy": "Spicy",
+      "organic": "Organic"
+    },
+    "dietFilter": {
+      "title": "Filters",
+      "tip": "Show only dishes matching all selected tags.",
+      "reset": "Reset",
+      "apply": "Apply",
+      "empty": "No dishes match the selected filters."
     }
   },
   "publicReserve": {

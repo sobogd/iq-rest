@@ -56,7 +56,29 @@
       "backHome": "Späť na úvod"
     },
     "menuUnavailableTitle": "Menu Je Dočasne Nedostupné",
-    "menuUnavailableText": "Menu tohto reštaurantu momentálne nie je dostupné. Kontaktujte prosím reštauráciu priamo."
+    "menuUnavailableText": "Menu tohto reštaurantu momentálne nie je dostupné. Kontaktujte prosím reštauráciu priamo.",
+    "dietNames": {
+      "vegan": "Vegánske",
+      "vegetarian": "Vegetariánske",
+      "pescatarian": "Pescetariánske",
+      "gluten_free": "Bezlepkové",
+      "lactose_free": "Bez laktózy",
+      "nut_free": "Bez orechov",
+      "sugar_free": "Bez cukru",
+      "low_carb": "Nízkosacharidové",
+      "keto": "Keto",
+      "halal": "Halal",
+      "kosher": "Košer",
+      "spicy": "Pikantné",
+      "organic": "Bio"
+    },
+    "dietFilter": {
+      "title": "Filtre",
+      "tip": "Zobraziť len pokrmy zodpovedajúce všetkým tagom.",
+      "reset": "Resetovať",
+      "apply": "Použiť",
+      "empty": "Žiadne pokrmy nezodpovedajú filtrom."
+    }
   },
   "publicReserve": {
     "title": "Rezervujte stôl",

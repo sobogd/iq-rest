@@ -56,7 +56,29 @@
       "backHome": "Terug naar home"
     },
     "menuUnavailableTitle": "Menu Tijdelijk Niet Beschikbaar",
-    "menuUnavailableText": "Het menu van dit restaurant is momenteel niet beschikbaar. Neem rechtstreeks contact op met het restaurant."
+    "menuUnavailableText": "Het menu van dit restaurant is momenteel niet beschikbaar. Neem rechtstreeks contact op met het restaurant.",
+    "dietNames": {
+      "vegan": "Veganistisch",
+      "vegetarian": "Vegetarisch",
+      "pescatarian": "Pescetarisch",
+      "gluten_free": "Glutenvrij",
+      "lactose_free": "Lactosevrij",
+      "nut_free": "Notenvrij",
+      "sugar_free": "Suikervrij",
+      "low_carb": "Koolhydraatarm",
+      "keto": "Keto",
+      "halal": "Halal",
+      "kosher": "Koosjer",
+      "spicy": "Pikant",
+      "organic": "Biologisch"
+    },
+    "dietFilter": {
+      "title": "Filters",
+      "tip": "Toon alleen gerechten die aan alle tags voldoen.",
+      "reset": "Wissen",
+      "apply": "Toepassen",
+      "empty": "Geen gerechten voldoen aan de filters."
+    }
   },
   "publicReserve": {
     "title": "Boek een Tafel",

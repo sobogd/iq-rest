@@ -56,7 +56,29 @@
       "backHome": "Ar ais go dtí an leathanach baile"
     },
     "menuUnavailableTitle": "Tá An Roghchlár As Feidhm Go Sealadach",
-    "menuUnavailableText": "Níl roghchlár an bhialainne seo ar fáil faoi láthair. Déan teagmháil leis an mbialann go díreach."
+    "menuUnavailableText": "Níl roghchlár an bhialainne seo ar fáil faoi láthair. Déan teagmháil leis an mbialann go díreach.",
+    "dietNames": {
+      "vegan": "Vegan",
+      "vegetarian": "Veigeatóireach",
+      "pescatarian": "Peisceatóireach",
+      "gluten_free": "Saor ó glútan",
+      "lactose_free": "Saor ó lachtós",
+      "nut_free": "Saor ó chnónna",
+      "sugar_free": "Saor ó shiúcra",
+      "low_carb": "Carbaihiodráit íseal",
+      "keto": "Céato",
+      "halal": "Halal",
+      "kosher": "Cosher",
+      "spicy": "Spíosrach",
+      "organic": "Orgánach"
+    },
+    "dietFilter": {
+      "title": "Scagairí",
+      "tip": "Taispeáin béilte a oireann do gach clib amháin.",
+      "reset": "Athshocraigh",
+      "apply": "Cuir i bhfeidhm",
+      "empty": "Níl béilte ann a oireann do na scagairí."
+    }
   },
   "publicReserve": {
     "title": "Cuir Tábla in Áirithe",

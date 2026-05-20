@@ -56,7 +56,29 @@
       "backHome": "Tillbaka till startsidan"
     },
     "menuUnavailableTitle": "Menyn Är Tillfälligt Otillgänglig",
-    "menuUnavailableText": "Den här restaurangens meny är för tillfället inte tillgänglig. Kontakta restaurangen direkt."
+    "menuUnavailableText": "Den här restaurangens meny är för tillfället inte tillgänglig. Kontakta restaurangen direkt.",
+    "dietNames": {
+      "vegan": "Vegan",
+      "vegetarian": "Vegetarisk",
+      "pescatarian": "Pescetarian",
+      "gluten_free": "Glutenfri",
+      "lactose_free": "Laktosfri",
+      "nut_free": "Nötfri",
+      "sugar_free": "Sockerfri",
+      "low_carb": "Lågkolhydrat",
+      "keto": "Keto",
+      "halal": "Halal",
+      "kosher": "Kosher",
+      "spicy": "Stark",
+      "organic": "Ekologisk"
+    },
+    "dietFilter": {
+      "title": "Filter",
+      "tip": "Visa endast rätter som matchar alla taggar.",
+      "reset": "Återställ",
+      "apply": "Tillämpa",
+      "empty": "Inga rätter matchar filtren."
+    }
   },
   "publicReserve": {
     "title": "Boka ett Bord",

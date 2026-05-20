@@ -56,7 +56,29 @@
       "backHome": "Atpakaļ uz sākumu"
     },
     "menuUnavailableTitle": "Ēdienkarte Īslaicīgi Nav Pieejama",
-    "menuUnavailableText": "Šī restorāna ēdienkarte pašlaik nav pieejama. Lūdzu, sazinieties ar restorānu tieši."
+    "menuUnavailableText": "Šī restorāna ēdienkarte pašlaik nav pieejama. Lūdzu, sazinieties ar restorānu tieši.",
+    "dietNames": {
+      "vegan": "Vegānisks",
+      "vegetarian": "Veģetārs",
+      "pescatarian": "Pescetārs",
+      "gluten_free": "Bez glutēna",
+      "lactose_free": "Bez laktozes",
+      "nut_free": "Bez riekstiem",
+      "sugar_free": "Bez cukura",
+      "low_carb": "Maz ogļhidrātu",
+      "keto": "Keto",
+      "halal": "Halal",
+      "kosher": "Košers",
+      "spicy": "Pikants",
+      "organic": "Bio"
+    },
+    "dietFilter": {
+      "title": "Filtri",
+      "tip": "Rādīt tikai ēdienus, kas atbilst visām atzīmēm.",
+      "reset": "Atiestatīt",
+      "apply": "Lietot",
+      "empty": "Neviens ēdiens neatbilst filtriem."
+    }
   },
   "publicReserve": {
     "title": "Rezervēt Galdu",

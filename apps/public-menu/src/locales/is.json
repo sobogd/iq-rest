@@ -56,7 +56,29 @@
       "backHome": "Til baka á forsíðu"
     },
     "menuUnavailableTitle": "Matseðillinn Er Tímabundið Ekki Tiltækur",
-    "menuUnavailableText": "Matseðill þessa veitingastaðar er ekki tiltækur eins og er. Vinsamlegast hafðu samband við veitingastaðinn beint."
+    "menuUnavailableText": "Matseðill þessa veitingastaðar er ekki tiltækur eins og er. Vinsamlegast hafðu samband við veitingastaðinn beint.",
+    "dietNames": {
+      "vegan": "Vegan",
+      "vegetarian": "Grænmetisæti",
+      "pescatarian": "Pescetar",
+      "gluten_free": "Glútenlaust",
+      "lactose_free": "Laktósalaust",
+      "nut_free": "Hnetulaust",
+      "sugar_free": "Sykurlaust",
+      "low_carb": "Lágkolvetna",
+      "keto": "Keto",
+      "halal": "Halal",
+      "kosher": "Kosher",
+      "spicy": "Bragðmikið",
+      "organic": "Lífrænt"
+    },
+    "dietFilter": {
+      "title": "Síur",
+      "tip": "Sýna aðeins rétti sem passa við öll merki.",
+      "reset": "Endurstilla",
+      "apply": "Nota",
+      "empty": "Engir réttir passa við síurnar."
+    }
   },
   "publicReserve": {
     "title": "Bóka Borð",

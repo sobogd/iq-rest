@@ -56,7 +56,29 @@
       "backHome": "Torna alla home"
     },
     "menuUnavailableTitle": "Menu Temporaneamente Non Disponibile",
-    "menuUnavailableText": "Il menu di questo ristorante non è al momento disponibile. Contatta direttamente il ristorante."
+    "menuUnavailableText": "Il menu di questo ristorante non è al momento disponibile. Contatta direttamente il ristorante.",
+    "dietNames": {
+      "vegan": "Vegano",
+      "vegetarian": "Vegetariano",
+      "pescatarian": "Pescetariano",
+      "gluten_free": "Senza glutine",
+      "lactose_free": "Senza lattosio",
+      "nut_free": "Senza frutta a guscio",
+      "sugar_free": "Senza zucchero",
+      "low_carb": "Pochi carboidrati",
+      "keto": "Keto",
+      "halal": "Halal",
+      "kosher": "Kosher",
+      "spicy": "Piccante",
+      "organic": "Biologico"
+    },
+    "dietFilter": {
+      "title": "Filtri",
+      "tip": "Mostra solo i piatti che corrispondono a tutti i tag.",
+      "reset": "Reimposta",
+      "apply": "Applica",
+      "empty": "Nessun piatto corrisponde ai filtri."
+    }
   },
   "publicReserve": {
     "title": "Prenota un Tavolo",

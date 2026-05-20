@@ -13,6 +13,7 @@ export interface RestaurantPayload {
   whatsapp: string | null;
   languages: string[];
   defaultLanguage: string;
+  menuLayout?: string;
   reservationsEnabled: boolean;
   reservationMode: string;
   reservationSlotMinutes: number;
@@ -38,6 +39,8 @@ export interface CategoryPayload {
   name: string;
   translations: Record<string, { name?: string }> | null;
   sortOrder: number;
+  isGroup?: boolean;
+  parentId?: string | null;
 }
 
 export interface ItemPayload {
@@ -48,6 +51,7 @@ export interface ItemPayload {
   price: number;
   imageUrl: string | null;
   allergens: string[];
+  diets: string[];
   translations: Record<string, { name?: string; description?: string }> | null;
   sortOrder: number;
 }

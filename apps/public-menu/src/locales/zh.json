@@ -56,7 +56,29 @@
       "backHome": "返回首页"
     },
     "menuUnavailableTitle": "菜单暂时不可用",
-    "menuUnavailableText": "此餐厅的菜单目前不可用。请直接联系餐厅。"
+    "menuUnavailableText": "此餐厅的菜单目前不可用。请直接联系餐厅。",
+    "dietNames": {
+      "vegan": "纯素",
+      "vegetarian": "素食",
+      "pescatarian": "鱼素",
+      "gluten_free": "无麸质",
+      "lactose_free": "无乳糖",
+      "nut_free": "无坚果",
+      "sugar_free": "无糖",
+      "low_carb": "低碳水",
+      "keto": "生酮",
+      "halal": "清真",
+      "kosher": "犹太洁食",
+      "spicy": "辣",
+      "organic": "有机"
+    },
+    "dietFilter": {
+      "title": "筛选",
+      "tip": "仅显示符合所有标签的菜品。",
+      "reset": "重置",
+      "apply": "应用",
+      "empty": "没有菜品符合筛选条件。"
+    }
   },
   "publicReserve": {
     "title": "预订餐桌",
