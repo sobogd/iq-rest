@@ -231,7 +231,6 @@ export function AuthStep({
           inputMode="email"
           autoComplete="email"
           required
-          autoFocus
           placeholder={t("emailPlaceholder")}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -363,7 +362,6 @@ function VerifyScreen({
         type="text"
         inputMode="numeric"
         autoComplete="one-time-code"
-        autoFocus
         maxLength={CODE_LENGTH}
         value={joined}
         onChange={(e) => setFromString(e.target.value)}

@@ -39,7 +39,6 @@ export function NameStep({
         id="onboarding-name"
         type="text"
         required
-        autoFocus
         placeholder={t("step2.namePlaceholder")}
         value={value}
         onChange={(e) => onChange(e.target.value)}
