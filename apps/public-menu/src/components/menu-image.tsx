@@ -12,6 +12,7 @@ export function MenuImage({ src, alt, priority }: Props) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(!!priority);
   const ref = useRef<HTMLDivElement>(null);
+  const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     if (priority) return;
@@ -30,6 +31,20 @@ export function MenuImage({ src, alt, priority }: Props) {
     return () => obs.disconnect();
   }, [priority]);
 
+  // If the image is already cached by the browser, the native `load` event
+  // can fire before React attaches our onLoad handler — leaving the gray
+  // placeholder visible forever. Sync via img.complete after each src change.
+  useEffect(() => {
+    if (!isInView) return;
+    const img = imgRef.current;
+    if (img && img.complete && img.naturalWidth > 0) setIsLoaded(true);
+  }, [isInView, src]);
+
+  // Reset loaded state when src changes (item swap via filter).
+  useEffect(() => {
+    setIsLoaded(false);
+  }, [src]);
+
   return (
     <div ref={ref} className="relative aspect-square w-full min-[440px]:rounded-lg overflow-hidden">
       <div
@@ -40,6 +55,7 @@ export function MenuImage({ src, alt, priority }: Props) {
       />
       {isInView ? (
         <img
+          ref={imgRef}
           src={src}
           alt={alt}
           loading={priority ? "eager" : "lazy"}
