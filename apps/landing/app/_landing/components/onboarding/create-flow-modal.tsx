@@ -100,6 +100,10 @@ export function CreateFlowModal({
           onPointerDownOutside={(e) => e.preventDefault()}
           onInteractOutside={(e) => e.preventDefault()}
           onEscapeKeyDown={(e) => e.preventDefault()}
+          // Radix auto-focuses the first focusable child on open. With the
+          // email input that pops the mobile keyboard before the user has
+          // read the step copy. Block it; users tap when ready.
+          onOpenAutoFocus={(e) => e.preventDefault()}
           className="max-w-md p-0 gap-0 bg-background border-border overflow-hidden"
         >
           <div className="p-6 sm:p-8">
