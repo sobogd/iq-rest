@@ -23,6 +23,20 @@ function readBrowserLocale(): string | null {
   return short in LANGUAGE_NAMES ? short : null;
 }
 
+// Crawlers and ad/preview agents must never see the region prompt — it
+// pollutes the rendered HTML they index and skews Google Ads quality checks
+// (the bot lands on /en and gets nudged to switch). Match common bot
+// signatures conservatively; anything we miss just sees the prompt as
+// before, which is harmless beyond the SEO concern.
+function isBot(): boolean {
+  if (typeof navigator === "undefined") return false;
+  const ua = navigator.userAgent || "";
+  if (!ua) return true;
+  return /bot|crawler|spider|crawling|googlebot|bingbot|baiduspider|yandex|duckduckbot|slurp|facebookexternalhit|whatsapp|telegram|twitterbot|linkedinbot|adsbot-google|mediapartners-google|google-inspectiontool|google-pagespeed|chrome-lighthouse|headlesschrome|prerender|preview/i.test(
+    ua,
+  );
+}
+
 /**
  * Region prompt is a pure client-side decision now — no middleware redirect,
  * no ?askregion= param, no overlay on SSR HTML. We read:
@@ -49,6 +63,7 @@ export function RegionPromptModal() {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
+    if (isBot()) return;
 
     try {
       if (window.localStorage.getItem(DISMISSED_KEY)) return;
