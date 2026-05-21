@@ -3,6 +3,7 @@ import { PutObjectCommand } from "@aws-sdk/client-s3";
 import { prisma } from "@/lib/prisma";
 import { getUserCompanyId } from "@/lib/auth";
 import { s3Client, s3Key } from "@/lib/s3";
+import { getPrimaryRestaurantId } from "@/lib/primary-restaurant";
 import sharp from "sharp";
 
 export const maxDuration = 300;
@@ -228,6 +229,8 @@ Rules:
       );
     }
 
+    const restaurantId = await getPrimaryRestaurantId(companyId);
+
     // Create categories and items
     let categoriesCount = 0;
     let itemsCount = 0;
@@ -242,6 +245,7 @@ Rules:
           sortOrder: i,
           isActive: true,
           companyId,
+          restaurantId,
         },
       });
       categoriesCount++;
@@ -256,6 +260,7 @@ Rules:
           isActive: true,
           categoryId: category.id,
           companyId,
+          restaurantId,
         }));
 
       if (itemsData.length > 0) {

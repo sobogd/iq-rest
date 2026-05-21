@@ -53,7 +53,7 @@ export default async function DashboardLayout({
     const defaultCategoryName = tMenu("defaultCategoryName");
 
     await prisma.$transaction(async (tx) => {
-      await tx.restaurant.create({
+      const restaurant = await tx.restaurant.create({
         data: {
           title: "",
           slug,
@@ -73,6 +73,7 @@ export default async function DashboardLayout({
           name: defaultCategoryName,
           sortOrder: 0,
           companyId,
+          restaurantId: restaurant.id,
         },
       });
       await tx.company.update({

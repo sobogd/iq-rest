@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { getUserCompanyId } from "@/lib/auth";
 import { moveFromTemp } from "@/lib/s3";
+import { getPrimaryRestaurantId } from "@/lib/primary-restaurant";
 
 export async function GET(request: NextRequest) {
   try {
@@ -98,6 +99,8 @@ export async function POST(request: NextRequest) {
 
     const sortOrder = (lastItem?.sortOrder ?? 0) + 1;
 
+    const restaurantId = await getPrimaryRestaurantId(companyId);
+
     const item = await prisma.item.create({
       data: {
         name: name.trim(),
@@ -109,6 +112,7 @@ export async function POST(request: NextRequest) {
         isActive: isActive ?? true,
         categoryId,
         companyId,
+        restaurantId,
         translations: translations || null,
       },
       include: {

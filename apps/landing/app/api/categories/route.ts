@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { getUserCompanyId } from "@/lib/auth";
+import { getPrimaryRestaurantId } from "@/lib/primary-restaurant";
 
 export async function GET() {
   try {
@@ -49,6 +50,8 @@ export async function POST(request: NextRequest) {
     });
     const sortOrder = (lastCategory?.sortOrder ?? 0) + 1;
 
+    const restaurantId = await getPrimaryRestaurantId(companyId);
+
     const category = await prisma.category.create({
       data: {
         name: name.trim(),
@@ -56,6 +59,7 @@ export async function POST(request: NextRequest) {
         isActive: isActive ?? true,
         translations: translations || null,
         companyId,
+        restaurantId,
       },
     });
 
