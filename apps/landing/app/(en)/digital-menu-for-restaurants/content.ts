@@ -10,7 +10,7 @@ export const CONTENT: FeatureContent = {
     title: "Digital Menu for Restaurants | IQ Rest",
     description:
       "Digital menu for restaurants: online card with photos, allergens, AI translation and live price updates. 14 days free, no card required.",
-    canonical: "https://iq-rest.com/en/digital-menu-for-restaurants",
+    canonical: "https://iq-rest.com/digital-menu-for-restaurants",
     ogLocale: "en_US",
     ogTitle: "Digital Menu for Restaurants",
     ogDescription:

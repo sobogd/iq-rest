@@ -227,27 +227,34 @@ export const LOCALE_SLUG_OVERRIDES: Record<string, Record<string, string>> = {
  *   /tr                          → /es
  *   /tr/some/sub/path            → /es/some/sub/path
  */
+const KNOWN_LOCALES = new Set(
+  Object.values(LOCALE_SLUG_OVERRIDES).flatMap((m) => Object.keys(m)),
+);
+
+const targetHome = (target: string) => (target === "en" ? "/" : `/${target}`);
+const targetPath = (target: string, slug: string) =>
+  target === "en" ? slug : `/${target}${slug}`;
+
 export function swapLocale(pathname: string, target: string): string {
   const segments = pathname.split("/").filter(Boolean);
-  if (segments.length === 0) return `/${target}`;
+  if (segments.length === 0) return targetHome(target);
 
-  const currentLocale = segments[0];
-  const rest = "/" + segments.slice(1).join("/");
+  const firstIsLocale = KNOWN_LOCALES.has(segments[0]);
+  const currentLocale = firstIsLocale ? segments[0] : "en";
+  const rest = firstIsLocale
+    ? "/" + segments.slice(1).join("/")
+    : "/" + segments.join("/");
 
-  if (segments.length === 1) return `/${target}`;
+  if (rest === "/") return targetHome(target);
 
   for (const [sharedRoute, byLocale] of Object.entries(LOCALE_SLUG_OVERRIDES)) {
     const matchedAsOverride = byLocale[currentLocale] === rest;
     const matchedAsShared = rest === sharedRoute && !byLocale[currentLocale];
     if (!matchedAsOverride && !matchedAsShared) continue;
 
-    if (byLocale[target]) return `/${target}${byLocale[target]}`;
-    // Target locale has no override for this shared route — either it's a
-    // partial-coverage route (e.g. `/menu-qr-code`, only 4 locales) or a
-    // legacy `/lp/*` slug. Drop the visitor on the target locale home
-    // instead of sending them to a 404.
-    return `/${target}`;
+    if (byLocale[target]) return targetPath(target, byLocale[target]);
+    return targetHome(target);
   }
 
-  return `/${target}${rest}`;
+  return targetPath(target, rest);
 }

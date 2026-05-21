@@ -10,6 +10,7 @@ import { useOnboardingModal } from "./onboarding/onboarding-modal-provider";
 import { useLandingAuth } from "./onboarding/use-landing-auth";
 import { dashboardUrl } from "@/lib/dashboard-url";
 import { LOCALE_SLUG_OVERRIDES } from "@/lib/locale-slug-overrides";
+import { localeHome, localePath } from "@/lib/locale-paths";
 import { analytics } from "@/lib/analytics";
 import type { LandingTexts } from "../types";
 
@@ -43,14 +44,14 @@ export function LandingHeaderLp({ texts, locale, useLocalAnchors = false, featur
   //  - everywhere else (feature pages): `/{locale}#section` — full
   //    navigation back to homepage, then scroll on arrival
   const pathname = usePathname() || "";
-  const onHome = pathname === `/${locale}` || pathname === `/${locale}/`;
+  const homeHref = localeHome(locale);
+  const onHome = pathname === homeHref || pathname === `${homeHref}/`;
   const useLocal = useLocalAnchors || onHome;
-  const anchor = (id: string) => (useLocal ? `#${id}` : `/${locale}#${id}`);
-  const homeHref = `/${locale}`;
+  const anchor = (id: string) => (useLocal ? `#${id}` : `${homeHref}#${id}`);
   // Per-locale pricing page overrides — locales with a dedicated /pricing
   // page link there instead of scrolling to the homepage #pricing section.
   const pricingSlug = LOCALE_SLUG_OVERRIDES["/pricing"]?.[locale];
-  const pricingHref = pricingSlug ? `/${locale}${pricingSlug}` : anchor("pricing");
+  const pricingHref = pricingSlug ? localePath(locale, pricingSlug) : anchor("pricing");
 
   // Features dropdown — open on hover (desktop) or click (any device).
   // Close on mouseleave with a short delay so the gap between the trigger
@@ -81,7 +82,7 @@ export function LandingHeaderLp({ texts, locale, useLocalAnchors = false, featur
 
   const normalizedPath = pathname.replace(/\/$/, "");
   const pricingActive = pricingSlug
-    ? normalizedPath === `/${locale}${pricingSlug}`
+    ? normalizedPath === localePath(locale, pricingSlug).replace(/\/$/, "")
     : false;
   const featuresActive = !!featureLinks?.some(
     (l) => normalizedPath === l.href.replace(/\/$/, ""),

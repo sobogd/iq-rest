@@ -1,6 +1,7 @@
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { OnboardingModalProvider } from "./onboarding/onboarding-modal-provider";
+import { BrandSchema } from "./brand-schema";
 
 /** Wraps landing-route children with NextIntlClientProvider + onboarding modal.
  *  Use from per-locale `app/<locale>/layout.tsx` since those routes sit outside
@@ -15,6 +16,7 @@ export async function LandingI18nWrap({
   const messages = await getMessages({ locale });
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
+      <BrandSchema />
       <OnboardingModalProvider>{children}</OnboardingModalProvider>
     </NextIntlClientProvider>
   );

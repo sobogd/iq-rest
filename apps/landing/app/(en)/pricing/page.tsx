@@ -56,7 +56,7 @@ const JSON_LD = JSON.stringify({
     {
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "IQ Rest", item: `${SITE}/${LOCALE}` },
+        { "@type": "ListItem", position: 1, name: "IQ Rest", item: `${SITE}/` },
         { "@type": "ListItem", position: 2, name: "Pricing", item: TEXTS.meta.canonical },
       ],
     },

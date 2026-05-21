@@ -32,14 +32,14 @@ const JSON_LD = JSON.stringify({
   "@context": "https://schema.org",
   "@graph": [
     { "@type": "Organization", "@id": `${SITE}/#organization`, name: "IQ Rest", url: SITE, logo: `${SITE}/logo.png` },
-    { "@type": "WebSite", url: `${SITE}/${LOCALE}`, name: "IQ Rest", inLanguage: LOCALE, publisher: { "@id": `${SITE}/#organization` } },
+    { "@type": "WebSite", url: `${SITE}/`, name: "IQ Rest", inLanguage: LOCALE, publisher: { "@id": `${SITE}/#organization` } },
     {
       "@type": "SoftwareApplication",
       name: "IQ Rest — Restaurant management platform",
       description: "Restaurant management platform: digital menu, QR ordering, table booking and kitchen display. Launch in 5 minutes.",
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web, iOS, Android",
-      url: `${SITE}/${LOCALE}`,
+      url: `${SITE}/`,
       inLanguage: LOCALE,
       publisher: { "@id": `${SITE}/#organization` },
       offers: { "@type": "Offer", price: "6.90", priceCurrency: "EUR", availability: "https://schema.org/InStock" },

@@ -4,7 +4,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { LandingHeaderLp } from "@/app/_landing/components/header-lp";
 import { LandingFooterLp } from "@/app/_landing/components/footer-lp";
 import { LandingI18nWrap } from "@/app/_landing/components/landing-i18n-wrap";
-import { TEXTS } from "./en/texts";
+import { TEXTS } from "./(en)/texts";
 
 // Global not-found — App Router renders this for any unmatched URL that
 // wasn't caught by middleware (410 list lives in middleware.ts).
@@ -54,7 +54,7 @@ export default async function NotFound() {
                     The page you were looking for doesn&apos;t exist or was moved.
                   </p>
                   <Link
-                    href={`/${LOCALE}`}
+                    href="/"
                     className="inline-flex h-11 px-6 items-center justify-center rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
                   >
                     Go to homepage

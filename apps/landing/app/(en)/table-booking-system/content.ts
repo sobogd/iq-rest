@@ -10,7 +10,7 @@ export const CONTENT: FeatureContent = {
     title: "Table Booking 24/7 for Restaurants | IQ Rest",
     description:
       "Table booking 24/7 for restaurants: guests reserve themselves through the QR menu or website. Calendar by table, automatic confirmations and reminders. Not a single missed guest. 14 days free.",
-    canonical: "https://iq-rest.com/en/table-booking-system",
+    canonical: "https://iq-rest.com/table-booking-system",
     ogLocale: "en_US",
     ogTitle: "Table Booking 24/7 — guests book themselves",
     ogDescription:

@@ -10,7 +10,7 @@ export const CONTENT: FeatureContent = {
     title: "Kitchen Display System (KDS) for Restaurants | IQ Rest",
     description:
       "Kitchen display (KDS) for restaurants: orders from the floor and QR menu land on the chef's screen instantly. Columns by table, statuses Pending / Cooking / Ready / Served, zone filters. Runs on tablet or phone.",
-    canonical: "https://iq-rest.com/en/kitchen-display-system",
+    canonical: "https://iq-rest.com/kitchen-display-system",
     ogLocale: "en_US",
     ogTitle: "Kitchen Display System (KDS) — Orders on the chef's screen",
     ogDescription:

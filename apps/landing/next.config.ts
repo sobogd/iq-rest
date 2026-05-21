@@ -88,7 +88,8 @@ const nextConfig: NextConfig = {
       // /:locale/online-orders was the original shared order-taking URL;
       // 301 each to the new per-locale slug.
       { source: "/ru/online-orders", destination: "/ru/priem-zakazov-restoran", permanent: true },
-      { source: "/en/online-orders", destination: "/en/restaurant-ordering-system", permanent: true },
+      { source: "/en/online-orders", destination: "/restaurant-ordering-system", permanent: true },
+      { source: "/online-orders", destination: "/restaurant-ordering-system", permanent: true },
       { source: "/es/online-orders", destination: "/es/sistema-pedidos-restaurante", permanent: true },
       { source: "/it/online-orders", destination: "/it/sistema-ordinazioni-ristorante", permanent: true },
       { source: "/fr/online-orders", destination: "/fr/systeme-commandes-restaurant", permanent: true },
@@ -126,7 +127,8 @@ const nextConfig: NextConfig = {
       // Old per-locale SEO order-taking slugs renamed in the May-2026
       // rollout — 301 to the new slug to preserve link equity.
       { source: "/ru/sistema-onlayn-zakazov-restorana", destination: "/ru/priem-zakazov-restoran", permanent: true },
-      { source: "/en/restaurant-online-ordering-system", destination: "/en/restaurant-ordering-system", permanent: true },
+      { source: "/en/restaurant-online-ordering-system", destination: "/restaurant-ordering-system", permanent: true },
+      { source: "/restaurant-online-ordering-system", destination: "/restaurant-ordering-system", permanent: true },
       { source: "/es/sistema-de-pedidos-para-restaurantes", destination: "/es/sistema-pedidos-restaurante", permanent: true },
       { source: "/it/tablet-per-ordinazioni-ristorante", destination: "/it/sistema-ordinazioni-ristorante", permanent: true },
       { source: "/fr/logiciel-prise-de-commande-restaurant", destination: "/fr/systeme-commandes-restaurant", permanent: true },

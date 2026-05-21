@@ -8,7 +8,7 @@ export const TEXTS: LandingTexts = {
     title: "Pricing — One plan for your restaurant 6.90 €/mo | IQ Rest",
     description:
       "One plan starting at 6.90 €/mo for restaurants: QR menu, order taking, AI translation, booking, KDS, analytics. Unlimited. 14 days free, no card required, cancel anytime.",
-    canonical: "https://iq-rest.com/en/pricing",
+    canonical: "https://iq-rest.com/pricing",
     ogLocale: "en_US",
     ogTitle: "Pricing — One plan for your restaurant",
     ogDescription:

@@ -4,6 +4,13 @@ import { routing, locales, Locale } from "./i18n/routing";
 import { getLocaleByCountryAndRegion } from "./lib/country-locale-map";
 import { HOME_META, lastModifiedFor } from "./lib/page-meta";
 import { isGone } from "./lib/gone-paths";
+import { LOCALE_SLUG_OVERRIDES } from "./lib/locale-slug-overrides";
+
+const EN_ROOT_SLUGS: ReadonlySet<string> = new Set(
+  Object.values(LOCALE_SLUG_OVERRIDES)
+    .map((m) => m.en)
+    .filter((v): v is string => !!v),
+);
 
 // Minimal HTML body for HTTP 410. Search engines look at the status code,
 // not the body — keep it tiny but human-readable in case anyone lands here.
@@ -18,7 +25,7 @@ function goneResponse(pathname: string): NextResponse {
 </head>
 <body>
 <h1>This page is no longer available</h1>
-<p>The page <code>${pathname.replace(/[<>&]/g, "")}</code> was removed and won't return. Head to <a href="/en">iq-rest.com</a> to find what you need.</p>
+<p>The page <code>${pathname.replace(/[<>&]/g, "")}</code> was removed and won't return. Head to <a href="/">iq-rest.com</a> to find what you need.</p>
 </body>
 </html>`;
   return new NextResponse(body, {
@@ -104,8 +111,30 @@ export default function middleware(request: NextRequest) {
     return goneResponse(pathname);
   }
 
-  // Per-locale custom landings replace the locale-routed main page (e.g. /en, /es).
-  // Match ONLY the bare locale path so sub-routes like /en/contacts keep going through next-intl.
+  // English is served at the root: `/`, `/pricing`, etc. Old `/en` and known
+  // `/en/<slug>` URLs 301 to their root counterparts. Must run BEFORE the
+  // bare-locale-match block below, otherwise /en falls through to a 404.
+  if (pathname === "/en") {
+    const target = new URL("/", request.url);
+    target.search = request.nextUrl.search;
+    const response = NextResponse.redirect(target, 301);
+    setGeoCookies(request, response);
+    return response;
+  }
+  if (pathname.startsWith("/en/")) {
+    const sub = pathname.slice(3);
+    if (EN_ROOT_SLUGS.has(sub)) {
+      const target = new URL(sub, request.url);
+      target.search = request.nextUrl.search;
+      const response = NextResponse.redirect(target, 301);
+      setGeoCookies(request, response);
+      return response;
+    }
+  }
+
+  // Per-locale custom landings replace the locale-routed main page (e.g. /es, /it).
+  // Match ONLY the bare locale path so sub-routes like /it/contacts keep going through next-intl.
+  // `/en` is already handled above (301 → /), so it never reaches this match.
   const onlyLocaleMatch = pathname.match(/^\/([a-z]{2})$/);
   if (onlyLocaleMatch && (locales as readonly string[]).includes(onlyLocaleMatch[1])) {
     const response = NextResponse.next();
@@ -138,42 +167,32 @@ export default function middleware(request: NextRequest) {
     return response;
   }
 
-  // Redirect root to a locale.
-  //
-  // SEO note: this used to be a blanket 302 to a geo-detected locale. That
-  // made `/` indeterminate for crawlers (Googlebot in EU saw /es, in US saw
-  // /en) and triggered "Duplicate without user-selected canonical" warnings
-  // on locale homes.
-  //
-  // New behaviour:
-  //   - User has NEXT_LOCALE cookie (picked locale in switcher) → 302 to it.
-  //     Stays a 302 because the destination depends on a cookie.
-  //   - No cookie (first-time visitor, every crawler) → 301 to /en.
-  //     Deterministic, cacheable. Client-side RegionPromptModal still
-  //     offers the geo-suggested locale once on /en.
-  if (pathname === "/") {
-    const preferredLocale = request.cookies.get("NEXT_LOCALE")?.value as Locale | undefined;
-    if (preferredLocale && locales.includes(preferredLocale)) {
-      const redirectUrl = new URL(`/${preferredLocale}`, request.url);
-      redirectUrl.search = request.nextUrl.search;
-      const response = NextResponse.redirect(redirectUrl, 302);
-      response.headers.set("Vary", "Cookie");
-      setGeoCookies(request, response);
-      return response;
-    }
-    const redirectUrl = new URL(`/en`, request.url);
-    redirectUrl.search = request.nextUrl.search;
-    const response = NextResponse.redirect(redirectUrl, 301);
+  // `/` and English root slugs (pricing, digital-menu-for-restaurants, ...)
+  // resolve to the `app/(en)` route group. Set Last-Modified and skip the
+  // "no-locale-prefix" geo redirect below.
+  if (pathname === "/" || EN_ROOT_SLUGS.has(pathname)) {
+    const response = NextResponse.next();
+    const lm = pathname === "/" ? HOME_META.lastModified : lastModifiedFor(
+      // Resolve root slug → shared route key for lookup in FEATURE_PAGES
+      Object.entries(LOCALE_SLUG_OVERRIDES).find(([, m]) => m.en === pathname)?.[0] ?? pathname,
+    );
+    if (lm) response.headers.set("Last-Modified", new Date(lm).toUTCString());
+    response.headers.set("Content-Language", "en");
     setGeoCookies(request, response);
     return response;
   }
 
-  // Redirect paths without locale prefix
+  // Redirect paths without locale prefix to the visitor's preferred locale.
   if (!localeRegex.test(pathname)) {
     const preferredLocale = request.cookies.get("NEXT_LOCALE")?.value as Locale | undefined;
     const targetLocale = (preferredLocale && locales.includes(preferredLocale))
       ? preferredLocale
       : detectLocaleByCountry(request);
+    if (targetLocale === "en") {
+      const response = NextResponse.next();
+      setGeoCookies(request, response);
+      return response;
+    }
     const redirectUrl = new URL(`/${targetLocale}${pathname}`, request.url);
     redirectUrl.search = request.nextUrl.search;
     const response = NextResponse.redirect(redirectUrl, 302);

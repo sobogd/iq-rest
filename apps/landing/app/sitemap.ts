@@ -2,61 +2,52 @@ import { MetadataRoute } from 'next'
 import { locales } from '@/i18n/routing'
 import { FEATURE_PAGES, HOME_META, PARTIAL_FEATURE_PAGES, type PageMeta } from '@/lib/page-meta'
 import { LOCALE_SLUG_OVERRIDES } from '@/lib/locale-slug-overrides'
+import { localeHome, localePath } from '@/lib/locale-paths'
 
 type RouteConfig = PageMeta & { path: string }
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://iq-rest.com'
 
-  // Pull feature-page settings from the shared page-meta module so the
-  // sitemap stays in lockstep with the Last-Modified headers in middleware.
   const routes: RouteConfig[] = Object.entries(FEATURE_PAGES).map(([path, meta]) => ({
     path,
     ...meta,
   }))
 
-  // Generate sitemap entries for all locales
   const sitemapEntries: MetadataRoute.Sitemap = []
 
-  // Build alternates object for all locales
-  const buildAlternates = (path: string = '') => {
-    const languages: Record<string, string> = { 'x-default': `${baseUrl}/en${path}` }
+  const buildHomeAlternates = () => {
+    const languages: Record<string, string> = { 'x-default': `${baseUrl}/` }
     locales.forEach(locale => {
-      languages[locale] = `${baseUrl}/${locale}${path}`
+      languages[locale] = locale === 'en' ? `${baseUrl}/` : `${baseUrl}/${locale}`
     })
     return { languages }
   }
 
-  // Add localized home pages (x-default points to /en as the default)
   locales.forEach(locale => {
     sitemapEntries.push({
-      url: `${baseUrl}/${locale}`,
+      url: locale === 'en' ? `${baseUrl}/` : `${baseUrl}/${locale}`,
       lastModified: new Date(HOME_META.lastModified),
       changeFrequency: HOME_META.changeFrequency,
       priority: HOME_META.priority,
-      alternates: buildAlternates()
+      alternates: buildHomeAlternates(),
     })
   })
 
-  // Per-locale slug overrides live in lib/locale-slug-overrides.ts so the
-  // sitemap, the next.config redirects, and the client-side region-prompt
-  // modal all agree on the same translation table.
-
   locales.forEach(locale => {
     routes.forEach(route => {
-      const override = LOCALE_SLUG_OVERRIDES[route.path]?.[locale]
-      const path = override ?? route.path
-      // Build alternates that point each locale at its own slug — falling
-      // back to the shared route.path when no override exists.
       const overrideMap = LOCALE_SLUG_OVERRIDES[route.path]
+      const slug = overrideMap?.[locale] ?? route.path
       const languages: Record<string, string> = {}
       locales.forEach((other) => {
-        languages[other] = `${baseUrl}/${other}${overrideMap?.[other] ?? route.path}`
+        const otherSlug = overrideMap?.[other] ?? route.path
+        languages[other] = `${baseUrl}${localePath(other, otherSlug)}`
       })
-      languages["x-default"] = `${baseUrl}/en${overrideMap?.en ?? route.path}`
+      const enSlug = overrideMap?.en ?? route.path
+      languages['x-default'] = `${baseUrl}${localePath('en', enSlug)}`
 
       sitemapEntries.push({
-        url: `${baseUrl}/${locale}${path}`,
+        url: `${baseUrl}${localePath(locale, slug)}`,
         lastModified: new Date(route.lastModified),
         changeFrequency: route.changeFrequency,
         priority: route.priority,
@@ -65,9 +56,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   })
 
-  // Partial-coverage feature pages (e.g. paid-search landings on IT/ES/PT/CA
-  // only). Emit one entry per *participating* locale; hreflang alternates
-  // list just those locales (and x-default points at the first one).
   Object.entries(PARTIAL_FEATURE_PAGES).forEach(([sharedRoute, meta]) => {
     const overrideMap = LOCALE_SLUG_OVERRIDES[sharedRoute]
     if (!overrideMap) return
@@ -77,13 +65,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     const languages: Record<string, string> = {}
     participatingLocales.forEach((loc) => {
-      languages[loc] = `${baseUrl}/${loc}${overrideMap[loc]}`
+      languages[loc] = `${baseUrl}${localePath(loc, overrideMap[loc])}`
     })
-    languages["x-default"] = `${baseUrl}/${participatingLocales[0]}${overrideMap[participatingLocales[0]]}`
+    languages['x-default'] = `${baseUrl}${localePath(participatingLocales[0], overrideMap[participatingLocales[0]])}`
 
     participatingLocales.forEach((loc) => {
       sitemapEntries.push({
-        url: `${baseUrl}/${loc}${overrideMap[loc]}`,
+        url: `${baseUrl}${localePath(loc, overrideMap[loc])}`,
         lastModified: new Date(meta.lastModified),
         changeFrequency: meta.changeFrequency,
         priority: meta.priority,
@@ -92,11 +80,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   })
 
-  // Sitemap emits exactly 6 URLs per locale (home + 4 features + pricing) ×
-  // 35 locales = 210 entries, plus any partial-coverage paid-search landings
-  // declared in PARTIAL_FEATURE_PAGES. All legacy slugs (KW landings, PPC
-  // pages, /languages, /changelog, /online-orders, /m/*) are 301'd in
-  // next.config.
+  // Reference for future maintenance: silence unused-var noise from localeHome.
+  void localeHome
 
   return sitemapEntries
 }

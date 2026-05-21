@@ -9,7 +9,7 @@ export const TEXTS: LandingTexts = {
     title: "QR Menu for Restaurants — Direct Orders, Zero Commissions | IQ Rest",
     description:
       "All-in-one restaurant platform: digital menu, QR ordering, table booking and kitchen display. Launch in 5 minutes. 14 days free, no card required.",
-    canonical: "https://iq-rest.com/en",
+    canonical: "https://iq-rest.com/",
     ogLocale: "en_US",
     ogTitle: "QR Menu for Restaurants — Direct Orders, Zero Commissions",
     ogDescription:
@@ -48,10 +48,10 @@ export const TEXTS: LandingTexts = {
     headingAccent: "Nothing extra.",
     sub: "Built for restaurants. Used every day at the table, in the kitchen and on the floor.",
     items: [
-      { Icon: Monitor, title: "Digital menu", desc: "Menu in the browser with photos, prices, allergens and descriptions. Updates in real time from your phone. Guests see the menu in their language; the restaurant saves on print.", tag: "Digital menu", href: "/en/digital-menu-for-restaurants" },
-      { Icon: Receipt, title: "Order taking: guest and waiter", desc: "A QR code at the table for the guest, or the waiter takes the order from a phone — both go straight to the kitchen or WhatsApp. No commissions, with table number on every ticket.", tag: "Order taking", href: "/en/restaurant-ordering-system" },
-      { Icon: CalendarCheck, title: "Table booking 24/7", desc: "Guests reserve tables themselves through the website or QR menu while you're busy on the floor. Calendar by table, automatic confirmations and reminders. Not a single missed guest.", tag: "Booking", href: "/en/table-booking-system" },
-      { Icon: ChefHat, title: "Kitchen display (KDS)", desc: "Paper tickets are no longer needed. Orders from the floor go straight to the chef's screen — columns 'cooking / ready / served', allergens and notes highlighted in colour. Tablet or phone.", tag: "KDS", href: "/en/kitchen-display-system" },
+      { Icon: Monitor, title: "Digital menu", desc: "Menu in the browser with photos, prices, allergens and descriptions. Updates in real time from your phone. Guests see the menu in their language; the restaurant saves on print.", tag: "Digital menu", href: "/digital-menu-for-restaurants" },
+      { Icon: Receipt, title: "Order taking: guest and waiter", desc: "A QR code at the table for the guest, or the waiter takes the order from a phone — both go straight to the kitchen or WhatsApp. No commissions, with table number on every ticket.", tag: "Order taking", href: "/restaurant-ordering-system" },
+      { Icon: CalendarCheck, title: "Table booking 24/7", desc: "Guests reserve tables themselves through the website or QR menu while you're busy on the floor. Calendar by table, automatic confirmations and reminders. Not a single missed guest.", tag: "Booking", href: "/table-booking-system" },
+      { Icon: ChefHat, title: "Kitchen display (KDS)", desc: "Paper tickets are no longer needed. Orders from the floor go straight to the chef's screen — columns 'cooking / ready / served', allergens and notes highlighted in colour. Tablet or phone.", tag: "KDS", href: "/kitchen-display-system" },
     ],
   },
 
@@ -156,15 +156,15 @@ export const TEXTS: LandingTexts = {
 
   footer: {
     featureLinks: [
-      { href: "/en/digital-menu-for-restaurants", label: "Digital menu" },
-      { href: "/en/restaurant-ordering-system", label: "Order taking" },
-      { href: "/en/table-booking-system", label: "Table booking" },
-      { href: "/en/kitchen-display-system", label: "Kitchen display" },
+      { href: "/digital-menu-for-restaurants", label: "Digital menu" },
+      { href: "/restaurant-ordering-system", label: "Order taking" },
+      { href: "/table-booking-system", label: "Table booking" },
+      { href: "/kitchen-display-system", label: "Kitchen display" },
     ],
     navLinks: [
-      { href: "/en/pricing", label: "Pricing" },
+      { href: "/pricing", label: "Pricing" },
       { href: "#faq", label: "FAQ" },
-      { href: "/en/languages", label: "Change language" },
+      { href: "/languages", label: "Change language" },
     ],
     copyrightTemplate: "© {year} IQ Rest. All rights reserved.",
   },

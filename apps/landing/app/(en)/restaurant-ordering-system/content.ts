@@ -10,7 +10,7 @@ export const CONTENT: FeatureContent = {
     title: "Restaurant Ordering System — Guest and Waiter | IQ Rest",
     description:
       "Restaurant ordering from a phone or tablet: floor map, bill splitting, statuses, options and notes. Guests order at the table; the waiter takes orders from any device. 14 days free.",
-    canonical: "https://iq-rest.com/en/restaurant-ordering-system",
+    canonical: "https://iq-rest.com/restaurant-ordering-system",
     ogLocale: "en_US",
     ogTitle: "Restaurant Ordering System — Guest and Waiter",
     ogDescription:
