@@ -25,8 +25,22 @@ export const FEATURE_PAGES: Record<string, PageMeta> = {
   "/pricing": { lastModified: "2026-05-20", changeFrequency: "monthly", priority: 0.9 },
 };
 
+// Partial-coverage pages — only exist on a subset of locales (typically
+// paid-search landings targeted at specific markets). Sitemap emits one
+// entry per listed locale; hreflang alternates list only those locales.
+export type PartialPageMeta = PageMeta & { locales: readonly string[] };
+
+export const PARTIAL_FEATURE_PAGES: Record<string, PartialPageMeta> = {
+  "/menu-qr-code": {
+    lastModified: "2026-05-22",
+    changeFrequency: "monthly",
+    priority: 0.7,
+    locales: ["it", "es", "pt", "ca"],
+  },
+};
+
 // Last-Modified lookup keyed on path (`/` or `/<feature>`).
 export function lastModifiedFor(path: string): string | undefined {
   if (path === "/") return HOME_META.lastModified;
-  return FEATURE_PAGES[path]?.lastModified;
+  return FEATURE_PAGES[path]?.lastModified ?? PARTIAL_FEATURE_PAGES[path]?.lastModified;
 }

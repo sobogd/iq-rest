@@ -79,11 +79,11 @@ const nextConfig: NextConfig = {
       // Legacy keyword landings collapsed onto the locale home for SEO
       // equity (these slugs were indexed before the May-2026 rollout).
       { source: "/it/menu-digitale", destination: "/it", permanent: true },
-      { source: "/it/menu-qr-code", destination: "/it", permanent: true },
+      { source: "/it/menu-qr-code", destination: "/it/menu-qr-code-ristoranti", permanent: true },
       { source: "/it/creare-menu-digitale", destination: "/it", permanent: true },
       { source: "/es/carta-digital", destination: "/es", permanent: true },
       { source: "/es/menu-digital", destination: "/es", permanent: true },
-      { source: "/es/qr-carta", destination: "/es", permanent: true },
+      { source: "/es/qr-carta", destination: "/es/codigo-qr-restaurante", permanent: true },
 
       // /:locale/online-orders was the original shared order-taking URL;
       // 301 each to the new per-locale slug.

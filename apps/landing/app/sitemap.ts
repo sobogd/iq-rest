@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 import { locales } from '@/i18n/routing'
-import { FEATURE_PAGES, HOME_META, type PageMeta } from '@/lib/page-meta'
+import { FEATURE_PAGES, HOME_META, PARTIAL_FEATURE_PAGES, type PageMeta } from '@/lib/page-meta'
 import { LOCALE_SLUG_OVERRIDES } from '@/lib/locale-slug-overrides'
 
 type RouteConfig = PageMeta & { path: string }
@@ -65,9 +65,38 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   })
 
+  // Partial-coverage feature pages (e.g. paid-search landings on IT/ES/PT/CA
+  // only). Emit one entry per *participating* locale; hreflang alternates
+  // list just those locales (and x-default points at the first one).
+  Object.entries(PARTIAL_FEATURE_PAGES).forEach(([sharedRoute, meta]) => {
+    const overrideMap = LOCALE_SLUG_OVERRIDES[sharedRoute]
+    if (!overrideMap) return
+
+    const participatingLocales = meta.locales.filter((loc) => overrideMap[loc])
+    if (participatingLocales.length === 0) return
+
+    const languages: Record<string, string> = {}
+    participatingLocales.forEach((loc) => {
+      languages[loc] = `${baseUrl}/${loc}${overrideMap[loc]}`
+    })
+    languages["x-default"] = `${baseUrl}/${participatingLocales[0]}${overrideMap[participatingLocales[0]]}`
+
+    participatingLocales.forEach((loc) => {
+      sitemapEntries.push({
+        url: `${baseUrl}/${loc}${overrideMap[loc]}`,
+        lastModified: new Date(meta.lastModified),
+        changeFrequency: meta.changeFrequency,
+        priority: meta.priority,
+        alternates: { languages },
+      })
+    })
+  })
+
   // Sitemap emits exactly 6 URLs per locale (home + 4 features + pricing) ×
-  // 35 locales = 210 entries. All legacy slugs (KW landings, PPC pages,
-  // /languages, /changelog, /online-orders, /m/*) are 301'd in next.config.
+  // 35 locales = 210 entries, plus any partial-coverage paid-search landings
+  // declared in PARTIAL_FEATURE_PAGES. All legacy slugs (KW landings, PPC
+  // pages, /languages, /changelog, /online-orders, /m/*) are 301'd in
+  // next.config.
 
   return sitemapEntries
 }

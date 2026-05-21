@@ -166,6 +166,17 @@ export const LOCALE_SLUG_OVERRIDES: Record<string, Record<string, string>> = {
     is: "/eldhus-skjar",
   },
 
+  // Partial-coverage route: only the 4 locales targeted by the "menù QR
+  // code" / "código QR restaurante" Google Ads campaigns have this page.
+  // Other locales have no equivalent — `swapLocale()` sends them home in
+  // that case (no override for target = fallback to `/${target}`).
+  "/menu-qr-code": {
+    it: "/menu-qr-code-ristoranti",
+    es: "/codigo-qr-restaurante",
+    pt: "/qr-code-menu-restaurantes",
+    ca: "/codi-qr-restaurant",
+  },
+
   "/pricing": {
     ru: "/tseny",
     en: "/pricing",
@@ -231,8 +242,11 @@ export function swapLocale(pathname: string, target: string): string {
     if (!matchedAsOverride && !matchedAsShared) continue;
 
     if (byLocale[target]) return `/${target}${byLocale[target]}`;
-    if (sharedRoute.startsWith("/lp/")) return `/${target}`;
-    return `/${target}${sharedRoute}`;
+    // Target locale has no override for this shared route — either it's a
+    // partial-coverage route (e.g. `/menu-qr-code`, only 4 locales) or a
+    // legacy `/lp/*` slug. Drop the visitor on the target locale home
+    // instead of sending them to a 404.
+    return `/${target}`;
   }
 
   return `/${target}${rest}`;
