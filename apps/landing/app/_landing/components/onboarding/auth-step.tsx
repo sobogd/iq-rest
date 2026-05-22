@@ -257,9 +257,8 @@ export function AuthStep({
 
       <button
         type="button"
-        disabled={status === "loading"}
         onClick={handleGoogleClick}
-        className="w-full h-12 text-base font-medium text-foreground bg-background border border-border rounded-xl hover:border-foreground active:scale-[0.99] transition-all flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full h-12 text-base font-medium text-foreground bg-background border border-border rounded-xl hover:border-foreground active:scale-[0.99] transition-all flex items-center justify-center gap-3 cursor-pointer"
       >
         <GoogleIcon />
         {t("continueGoogle")}
