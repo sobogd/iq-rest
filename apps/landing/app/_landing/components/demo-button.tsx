@@ -9,7 +9,7 @@ import { usePrimaryCta } from "./onboarding/use-primary-cta";
 // The iframe keeps this fixed width and is scaled down to fit the phone
 // frame, so the menu always sees a stable mobile viewport regardless of the
 // frame's on-screen size (no reflow as the modal resizes).
-const IFRAME_WIDTH = 390;
+const IFRAME_WIDTH = 350;
 
 interface DemoButtonProps {
   text: string;
