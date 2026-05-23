@@ -106,10 +106,11 @@ export function formatPrice(amount: number, currencyCode: string = "EUR"): strin
   // For currencies that typically show symbol after the number
   const symbolAfter = ["PLN", "CZK", "HUF", "SEK", "NOK", "DKK", "ISK"].includes(currencyCode);
 
-  // Zero-decimal currencies don't show decimals
+  // Zero-decimal currencies don't show decimals. Otherwise show 2 decimals
+  // but trim trailing zeros: 42.00 → "42", 16.80 → "16.8", 16.85 → "16.85".
   const formattedAmount = ZERO_DECIMAL_CURRENCIES.includes(currencyCode)
     ? Math.round(amount).toString()
-    : amount.toFixed(2);
+    : amount.toFixed(2).replace(/\.?0+$/, "");
 
   if (symbolAfter) {
     return `${formattedAmount} ${currency.symbol}`;
