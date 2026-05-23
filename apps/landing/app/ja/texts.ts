@@ -17,6 +17,7 @@ export const TEXTS: LandingTexts = {
   },
 
   ctaText: "デジタルメニューを作成",
+  homeCtaText: "プラットフォームを構築",
   demoText: "デモを見る",
   microcopy: "14日間無料 · カード不要 · いつでもキャンセル可能",
 

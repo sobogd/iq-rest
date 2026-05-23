@@ -17,6 +17,7 @@ export const TEXTS: LandingTexts = {
   },
 
   ctaText: "Loo digitaalne menüü",
+  homeCtaText: "Loo oma platvorm",
   demoText: "Vaata demo",
   microcopy: "14 päeva tasuta · Ilma kaardita · Tühista igal ajal",
 

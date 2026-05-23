@@ -17,6 +17,7 @@ export const TEXTS: LandingTexts = {
   },
 
   ctaText: "Digitale Speisekarte erstellen",
+  homeCtaText: "Plattform aufbauen",
   demoText: "Demo ansehen",
   microcopy: "14 Tage kostenlos · Ohne Kreditkarte · Jederzeit kündbar",
 

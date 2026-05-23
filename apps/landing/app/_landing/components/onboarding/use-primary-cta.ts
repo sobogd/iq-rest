@@ -1,6 +1,6 @@
 "use client";
 
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import { dashboardUrl } from "@/lib/dashboard-url";
 import { analytics } from "@/lib/analytics";
 import { useLandingAuth } from "./use-landing-auth";
@@ -23,7 +23,6 @@ export function usePrimaryCta(defaultLabel: string): PrimaryCta {
   const auth = useLandingAuth();
   const modal = useOnboardingModal();
   const locale = useLocale();
-  const t = useTranslations("auth");
 
   const dashHref = auth.legacyDashboard
     ? `/${locale}/dashboard`
@@ -41,7 +40,10 @@ export function usePrimaryCta(defaultLabel: string): PrimaryCta {
   return {
     authenticated: auth.authenticated,
     onClick,
-    label: auth.authenticated ? t("goToDashboard") : defaultLabel,
+    // Label never swaps to "Go to dashboard" here — only the header does that
+    // relabel for signed-in visitors. Section CTAs keep their marketing copy
+    // (the click still routes a signed-in visitor to the dashboard).
+    label: defaultLabel,
     dashHref,
   };
 }

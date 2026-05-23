@@ -84,15 +84,15 @@ export default function PricingPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON_LD }} />
       <LandingHeaderLp texts={DEFAULT.header} locale={LOCALE} featureLinks={DEFAULT.footer.featureLinks} />
 
-      <Section dataSection="pricing_hero" noContainer>
+      <Section dataSection="pricing_hero" noContainer accent>
         <PricingHero locale={LOCALE} ctaText={DEFAULT.ctaText} demoText={DEFAULT.demoText} microcopy={DEFAULT.microcopy} texts={DEFAULT.pricingHero!} trackPrefix="l_hr_pricing_hero" />
       </Section>
 
-      <Section id="faq" dataSection="faq" accent noContainer>
+      <Section id="faq" dataSection="faq" noContainer>
         <FaqLp texts={PRICING_FAQ} />
       </Section>
 
-      <Section as="footer" dataSection="footer" noContainer className="!py-6 sm:!py-8">
+      <Section as="footer" dataSection="footer" noContainer accent className="!py-6 sm:!py-8">
         <LandingFooterLp texts={DEFAULT.footer} headerTexts={DEFAULT.header} locale={LOCALE} variant="lp" />
       </Section>
     </main>

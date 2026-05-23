@@ -17,6 +17,7 @@ export const TEXTS: LandingTexts = {
   },
 
   ctaText: "Vytvořit digitální menu",
+  homeCtaText: "Vytvořte si platformu",
   demoText: "Sledovat demo",
   microcopy: "14 dní zdarma · Bez karty · Zrušení kdykoli",
 

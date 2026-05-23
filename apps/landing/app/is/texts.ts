@@ -17,6 +17,7 @@ export const TEXTS: LandingTexts = {
   },
 
   ctaText: "Búa til stafrænan matseðil",
+  homeCtaText: "Búðu til vettvanginn þinn",
   demoText: "Horfðu á kynningu",
   microcopy: "14 dagar ókeypis · Ekkert kort · Hætta hvenær sem er",
 

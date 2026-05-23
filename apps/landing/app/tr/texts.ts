@@ -17,6 +17,7 @@ export const TEXTS: LandingTexts = {
   },
 
   ctaText: "Dijital menü oluştur",
+  homeCtaText: "Platformunu oluştur",
   demoText: "Demoyu izle",
   microcopy: "14 gün ücretsiz · Kart yok · İstediğiniz zaman iptal edin",
 

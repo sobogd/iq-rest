@@ -17,6 +17,7 @@ export const TEXTS: LandingTexts = {
   },
 
   ctaText: "创建数字菜单",
+  homeCtaText: "搭建你的平台",
   demoText: "观看演示",
   microcopy: "14 天免费 · 无需信用卡 · 随时取消",
 

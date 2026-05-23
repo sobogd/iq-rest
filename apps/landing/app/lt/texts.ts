@@ -17,6 +17,7 @@ export const TEXTS: LandingTexts = {
   },
 
   ctaText: "Sukurti skaitmeninį meniu",
+  homeCtaText: "Sukurkite savo platformą",
   demoText: "Žiūrėti demonstraciją",
   microcopy: "14 dienų nemokamai · Be kortelės · Atšaukite bet kada",
 

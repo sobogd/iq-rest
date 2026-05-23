@@ -17,6 +17,7 @@ export const TEXTS: LandingTexts = {
   },
 
   ctaText: "ساخت منوی دیجیتال",
+  homeCtaText: "پلتفرم خود را بسازید",
   demoText: "تماشای دمو",
   microcopy: "۱۴ روز رایگان · بدون کارت · لغو در هر زمان",
 

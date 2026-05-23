@@ -26,7 +26,7 @@ export function HeroLp({
   return (
     <section
       data-section="hero"
-      className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 pt-6 pb-10 sm:pb-16 lg:pt-10 lg:pb-20"
+      className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 pt-6 pb-10 sm:pb-16 lg:pt-10 lg:pb-20 bg-gradient-to-br from-primary/10 via-primary/[0.03] to-primary/[0.03] border-y border-border/40"
     >
       <div className="grid grid-cols-1 gap-6 lg:gap-14 xl:gap-20 lg:grid-cols-[1fr_1.05fr] lg:items-center">
         <div className="order-2 lg:order-1 flex flex-col items-center text-center lg:items-start lg:text-start">

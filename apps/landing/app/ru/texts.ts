@@ -16,6 +16,7 @@ export const TEXTS: LandingTexts = {
   },
 
   ctaText: "Создать цифровое меню",
+  homeCtaText: "Создайте платформу",
   demoText: "Посмотреть демо",
   microcopy: "14 дней бесплатно · Без банковской карты · Отмена в любой момент",
 

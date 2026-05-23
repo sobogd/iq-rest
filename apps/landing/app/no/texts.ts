@@ -17,6 +17,7 @@ export const TEXTS: LandingTexts = {
   },
 
   ctaText: "Lag digital meny",
+  homeCtaText: "Bygg plattformen din",
   demoText: "Se demo",
   microcopy: "14 dager gratis · Ingen kort · Avslutt når som helst",
 

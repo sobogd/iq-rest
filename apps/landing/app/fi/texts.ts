@@ -17,6 +17,7 @@ export const TEXTS: LandingTexts = {
   },
 
   ctaText: "Luo digitaalinen ruokalista",
+  homeCtaText: "Rakenna alustasi",
   demoText: "Katso demo",
   microcopy: "14 päivää ilmaiseksi · Ilman korttia · Peruutus koska tahansa",
 

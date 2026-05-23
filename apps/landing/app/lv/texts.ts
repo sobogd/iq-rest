@@ -17,6 +17,7 @@ export const TEXTS: LandingTexts = {
   },
 
   ctaText: "Izveidot digitālo ēdienkarti",
+  homeCtaText: "Izveidojiet savu platformu",
   demoText: "Skatīt demonstrāciju",
   microcopy: "14 dienas bez maksas · Bez kartes · Atcelt jebkurā laikā",
 

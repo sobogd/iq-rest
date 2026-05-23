@@ -17,6 +17,7 @@ export const TEXTS: LandingTexts = {
   },
 
   ctaText: "Crea la carta digital",
+  homeCtaText: "Crea la teva plataforma",
   demoText: "Mira la demo",
   microcopy: "14 dies gratis · Sense targeta · Cancel·la quan vulguis",
 

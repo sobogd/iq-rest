@@ -88,6 +88,9 @@ export type LandingTexts = {
   };
 
   ctaText: string;
+  /** Primary CTA label on the homepage hero — generic across all features
+   *  (the feature pages use the feature-specific `ctaText`). */
+  homeCtaText: string;
   demoText: string;
   microcopy: string;
 

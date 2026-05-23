@@ -17,6 +17,7 @@ export const TEXTS: LandingTexts = {
   },
 
   ctaText: "Δημιουργία ψηφιακού μενού",
+  homeCtaText: "Φτιάξτε την πλατφόρμα σας",
   demoText: "Δείτε το demo",
   microcopy: "14 ημέρες δωρεάν · Χωρίς κάρτα · Ακύρωση οποτεδήποτε",
 

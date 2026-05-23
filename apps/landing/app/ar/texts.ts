@@ -17,6 +17,7 @@ export const TEXTS: LandingTexts = {
   },
 
   ctaText: "إنشاء قائمة رقمية",
+  homeCtaText: "أنشئ منصتك",
   demoText: "شاهد العرض التوضيحي",
   microcopy: "14 يوماً مجاناً · بدون بطاقة · إلغاء في أي وقت",
 

@@ -17,6 +17,7 @@ export const TEXTS: LandingTexts = {
   },
 
   ctaText: "Creează meniu digital",
+  homeCtaText: "Creează-ți platforma",
   demoText: "Vizionați demo",
   microcopy: "14 zile gratuit · Fără card · Anulați oricând",
 

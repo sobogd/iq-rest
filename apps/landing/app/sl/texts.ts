@@ -17,6 +17,7 @@ export const TEXTS: LandingTexts = {
   },
 
   ctaText: "Ustvari digitalni meni",
+  homeCtaText: "Ustvarite svojo platformo",
   demoText: "Oglejte si demo",
   microcopy: "14 dni brezplačno · Brez kartice · Prekličete kadar koli",
 
