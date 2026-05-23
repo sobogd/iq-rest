@@ -21,6 +21,8 @@ export const CONTENT: FeatureContent = {
   hero: {
     headline: "قائمة طعام رقمية للمطاعم.",
     sub: "النسخة الأونلاين من قائمتك الورقية بصور ومسببات حساسية وأوصاف وتحديثات أسعار مباشرة. يرى الضيوف القائمة بلغتهم؛ ويوفّر المطعم على الطباعة.",
+    imageSrc: "/landing/hero-digital-menu.webp",
+    imageAlt: "Two phones on a wooden restaurant table showing a digital menu with dish photos and prices",
   },
 
   scan: {

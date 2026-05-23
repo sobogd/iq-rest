@@ -21,6 +21,8 @@ export const CONTENT: FeatureContent = {
   hero: {
     headline: "Digitālā ēdienkarte restorāniem.",
     sub: "Papīra ēdienkartes tiešsaistes versija ar fotoattēliem, alergēniem, aprakstiem un reāllaika cenu atjauninājumiem. Viesi redz ēdienkarti savā valodā; restorāns ietaupa uz drukāšanu.",
+    imageSrc: "/landing/hero-digital-menu.webp",
+    imageAlt: "Two phones on a wooden restaurant table showing a digital menu with dish photos and prices",
   },
 
   scan: {

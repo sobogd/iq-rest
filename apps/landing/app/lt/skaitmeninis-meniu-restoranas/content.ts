@@ -21,6 +21,8 @@ export const CONTENT: FeatureContent = {
   hero: {
     headline: "Skaitmeninis meniu restoranams.",
     sub: "Popierinio meniu internetinė versija su nuotraukomis, alergenais, aprašymais ir realaus laiko kainų atnaujinimais. Svečiai mato meniu savo kalba; restoranas taupo spausdinimui.",
+    imageSrc: "/landing/hero-digital-menu.webp",
+    imageAlt: "Two phones on a wooden restaurant table showing a digital menu with dish photos and prices",
   },
 
   scan: {

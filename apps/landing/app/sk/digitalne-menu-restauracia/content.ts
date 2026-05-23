@@ -21,6 +21,8 @@ export const CONTENT: FeatureContent = {
   hero: {
     headline: "Digitálne menu pre reštaurácie.",
     sub: "Online verzia vášho papierového menu s fotografiami, alergénmi, popismi a okamžitými aktualizáciami cien. Hostia vidia menu vo svojom vlastnom jazyku; reštaurácia šetrí na tlači.",
+    imageSrc: "/landing/hero-digital-menu.webp",
+    imageAlt: "Two phones on a wooden restaurant table showing a digital menu with dish photos and prices",
   },
 
   scan: {

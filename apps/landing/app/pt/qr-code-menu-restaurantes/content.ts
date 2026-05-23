@@ -21,6 +21,8 @@ export const CONTENT: FeatureContent = {
   hero: {
     headline: "QR code menu para restaurantes.",
     sub: "O cliente aponta a câmara ao QR code da mesa e a carta abre de imediato no browser do telemóvel: fotos dos pratos, alergénios, preços sempre atualizados e tradução automática em 35 línguas. Sem instalar aplicações, sem reimprimir cartas cada vez que muda um preço.",
+    imageSrc: "/landing/hero-digital-menu.webp",
+    imageAlt: "Two phones on a wooden restaurant table showing a digital menu with dish photos and prices",
   },
 
   scan: {

@@ -21,6 +21,8 @@ export const CONTENT: FeatureContent = {
   hero: {
     headline: "Carta digital per a restaurants.",
     sub: "Versió en línia de la teva carta en paper amb fotos, al·lèrgens, descripcions i actualitzacions de preus en directe. Els clients veuen la carta en la seva pròpia llengua; el restaurant estalvia en impressió.",
+    imageSrc: "/landing/hero-digital-menu.webp",
+    imageAlt: "Two phones on a wooden restaurant table showing a digital menu with dish photos and prices",
   },
 
   scan: {
