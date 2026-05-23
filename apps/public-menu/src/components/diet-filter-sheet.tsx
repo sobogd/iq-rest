@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { X } from "lucide-react";
 import { DIETS } from "../lib/diets";
 import { DietIcon } from "./diet-icon";
+import { getPreview } from "../lib/forward-search";
 
 interface Props {
   open: boolean;
@@ -38,6 +39,12 @@ export function DietFilterSheet({ open, onClose, selected, accentColor, onApply,
 
   if (!open) return null;
 
+  // In preview (?preview=1) the sheet renders inside the dashboard's
+  // iPhone-simulating iframe where env(safe-area-inset-bottom) is 0, so the
+  // action buttons glue to the frame edge. Add an artificial bottom padding —
+  // mirrors the header's artificial top padding in preview.
+  const isPreview = getPreview() === "1";
+
   function toggle(code: string) {
     setDraft((d) => (d.includes(code) ? d.filter((c) => c !== code) : [...d, code]));
   }
@@ -52,7 +59,7 @@ export function DietFilterSheet({ open, onClose, selected, accentColor, onApply,
       />
       <div
         className="bg-white rounded-t-2xl shadow-2xl flex flex-col"
-        style={{ maxHeight: "85vh", paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
+        style={{ maxHeight: "85vh", paddingBottom: isPreview ? 16 : "env(safe-area-inset-bottom, 0px)" }}
       >
         <div className="flex items-center justify-between px-5 pt-4 pb-0.5">
           <h2 className="text-lg font-semibold text-black">

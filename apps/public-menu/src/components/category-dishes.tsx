@@ -62,10 +62,6 @@ export function CategoryDishes({ category, dietFilter = [] }: Props) {
             const qty = cart[item.id] || 0;
             const name = tField(item.name, item.translations, "name", lang);
             const description = tField(item.description, item.translations, "description", lang);
-            const trimmedName = name.trim();
-            const lastSpace = trimmedName.lastIndexOf(" ");
-            const nameHead = lastSpace >= 0 ? trimmedName.slice(0, lastSpace) + " " : "";
-            const nameTail = lastSpace >= 0 ? trimmedName.slice(lastSpace + 1) : trimmedName;
             return (
               <article key={item.id}>
                 {item.imageUrl ? (
@@ -74,23 +70,7 @@ export function CategoryDishes({ category, dietFilter = [] }: Props) {
                 <div className={item.imageUrl ? "p-5" : "px-5 pb-5"}>
                   <div className="flex justify-between items-start gap-4">
                     <h3 className="font-semibold text-lg text-black flex-1 min-w-0">
-                      <span className="align-middle">{nameHead}</span>
-                      <span className="inline-flex items-baseline whitespace-nowrap align-middle">
-                        <span>{nameTail}</span>
-                        {item.diets?.length ? (
-                          <span className="inline-flex items-center gap-1 ml-2">
-                            {item.diets.map((code) => (
-                              <DietIcon
-                                key={code}
-                                code={code}
-                                className="w-[18px] h-[18px] inline-block"
-                                style={{ color: accent }}
-                                aria-label={t(`publicMenu.dietNames.${code}`, { defaultValue: code })}
-                              />
-                            ))}
-                          </span>
-                        ) : null}
-                      </span>
+                      {name}
                     </h3>
                     {!ordersEnabled && Number(item.price) > 0 ? (
                       <span className="font-bold text-lg shrink-0 text-black">
@@ -98,6 +78,19 @@ export function CategoryDishes({ category, dietFilter = [] }: Props) {
                       </span>
                     ) : null}
                   </div>
+                  {item.diets?.length ? (
+                    <div className="mt-1.5 flex flex-wrap items-center gap-2">
+                      {item.diets.map((code) => (
+                        <DietIcon
+                          key={code}
+                          code={code}
+                          className="w-[18px] h-[18px]"
+                          style={{ color: accent }}
+                          aria-label={t(`publicMenu.dietNames.${code}`, { defaultValue: code })}
+                        />
+                      ))}
+                    </div>
+                  ) : null}
                   {description ? (
                     <p className="mt-2 text-sm text-gray-500 whitespace-pre-line">{description}</p>
                   ) : null}
