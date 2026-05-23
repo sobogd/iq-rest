@@ -1,9 +1,15 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { X, Loader2 } from "lucide-react";
 import { analytics } from "@/lib/analytics";
 import { usePrimaryCta } from "./onboarding/use-primary-cta";
+
+// Logical viewport width the demo menu is rendered at inside the iframe.
+// The iframe keeps this fixed width and is scaled down to fit the phone
+// frame, so the menu always sees a stable mobile viewport regardless of the
+// frame's on-screen size (no reflow as the modal resizes).
+const IFRAME_WIDTH = 390;
 
 interface DemoButtonProps {
   text: string;
@@ -38,6 +44,27 @@ export function DemoButton({
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const cta = usePrimaryCta(createText ?? "");
+
+  // Fit the fixed-width iframe to the phone screen: scale = screenW / IFRAME_WIDTH,
+  // and give the iframe a matching logical height so it fills the frame exactly.
+  const screenRef = useRef<HTMLDivElement>(null);
+  const [fit, setFit] = useState({ scale: 1, height: 844 });
+
+  useEffect(() => {
+    if (!open) return;
+    const el = screenRef.current;
+    if (!el) return;
+    const measure = () => {
+      const { width, height } = el.getBoundingClientRect();
+      if (width === 0) return;
+      const scale = width / IFRAME_WIDTH;
+      setFit({ scale, height: height / scale });
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [open]);
 
   const handleCreate = () => {
     setOpen(false);
@@ -109,7 +136,7 @@ export function DemoButton({
               </button>
 
               <div className="absolute inset-0 bg-[#1a1a1a] rounded-[40px] p-2 shadow-2xl">
-                <div className="relative w-full h-full bg-[#1a1a1a] rounded-[32px] overflow-hidden">
+                <div ref={screenRef} className="relative w-full h-full bg-[#1a1a1a] rounded-[32px] overflow-hidden">
                   <div className="absolute top-2 left-1/2 -translate-x-1/2 w-[80px] h-[24px] bg-black rounded-full z-10" />
                   {loading && (
                     <div className="absolute inset-0 flex items-center justify-center bg-black z-[5]">
@@ -118,8 +145,12 @@ export function DemoButton({
                   )}
                   <iframe
                     src={menuUrl}
-                    className="absolute border-0 origin-top-left"
-                    style={{ width: "125%", height: "125%", transform: "scale(0.8)" }}
+                    className="absolute top-0 left-0 border-0 origin-top-left"
+                    style={{
+                      width: `${IFRAME_WIDTH}px`,
+                      height: `${fit.height}px`,
+                      transform: `scale(${fit.scale})`,
+                    }}
                     title="Menu Preview"
                     onLoad={() => setLoading(false)}
                   />
