@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: Languages,
-      eyebrow: "35 jazyků s AI",
-      heading: "35 jazyků s AI — každý host čte menu ve svém.",
-      body: "Jeden QR kód, 35 jazyků. AI zvládá kulinářský kontext — názvy jídel a popisy zní přirozeně. Turisté objednávají s větší jistotou a průměrný účet roste, aniž by číšník překládal každou položku.",
+      icon: LayoutList,
+      eyebrow: "Menu bez fotek",
+      heading: "Menu bez fotek vypadá stejně dobře.",
+      body: "Některé položky nemusí mít fotky — a to je úplně v pořádku. IQ Rest zobrazuje karty s obrázky i bez nich konzistentně: typografie, alergeny a ceny si zachovávají prémiový vzhled. Mix položek s fotkami i bez nich působí celistvě.",
       bullets: [
-        "35 jazyků zahrnutých v předplatném, bez doplatků.",
-        "AI s pochopením kulinářského kontextu, ne pouhý Google Translate.",
-        "Host přepíná jazyk jedním ťuknutím přímo v menu.",
+        "Karty bez fotek nevypadají prázdně.",
+        "Typografie se přizpůsobuje obsahu karty.",
+        "Konzistentní styl pro položky s obrázky i bez nich.",
       ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Dva hosté čtou stejné digitální menu v různých jazycích na svých telefonech" },
+      image: { src: "/landing/feature-photos-optional.webp", alt: "Dva telefony na stole: menu s fotkami jídel a menu pouze s textem" },
     },
     {
       icon: ShieldAlert,
@@ -68,16 +68,16 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-design.webp", alt: "Dva telefony na stole v kavárně: domovská obrazovka menu s video pozadím a kontaktní stránka s mapou" },
     },
     {
-      icon: LayoutList,
-      eyebrow: "Menu bez fotek",
-      heading: "Menu bez fotek vypadá stejně dobře.",
-      body: "Některé položky nemusí mít fotky — a to je úplně v pořádku. IQ Rest zobrazuje karty s obrázky i bez nich konzistentně: typografie, alergeny a ceny si zachovávají prémiový vzhled. Mix položek s fotkami i bez nich působí celistvě.",
+      icon: Languages,
+      eyebrow: "35 jazyků s AI",
+      heading: "35 jazyků s AI — každý host čte menu ve svém.",
+      body: "Jeden QR kód, 35 jazyků. AI zvládá kulinářský kontext — názvy jídel a popisy zní přirozeně. Turisté objednávají s větší jistotou a průměrný účet roste, aniž by číšník překládal každou položku.",
       bullets: [
-        "Karty bez fotek nevypadají prázdně.",
-        "Typografie se přizpůsobuje obsahu karty.",
-        "Konzistentní styl pro položky s obrázky i bez nich.",
+        "35 jazyků zahrnutých v předplatném, bez doplatků.",
+        "AI s pochopením kulinářského kontextu, ne pouhý Google Translate.",
+        "Host přepíná jazyk jedním ťuknutím přímo v menu.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Dva telefony na stole: menu s fotkami jídel a menu pouze s textem" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Dva hosté čtou stejné digitální menu v různých jazycích na svých telefonech" },
     },
     {
       icon: Smartphone,

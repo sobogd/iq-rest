@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: Languages,
-      eyebrow: "35 langues IA",
-      heading: "35 langues IA — chaque client lit le menu dans la sienne.",
-      body: "Un seul code QR, 35 langues. L'IA gère le contexte culinaire — les noms et descriptions des plats sonnent naturels. Les touristes commandent avec plus de confiance et le ticket moyen augmente sans qu'un serveur doive traduire chaque plat.",
+      icon: LayoutList,
+      eyebrow: "Menu sans photos",
+      heading: "Un menu sans photos est tout aussi élégant.",
+      body: "Certains plats n'ont peut-être pas de photos — et c'est parfaitement bien. IQ Rest affiche les cartes avec et sans images de manière cohérente : typographie, allergènes et prix conservent un rendu premium. Un mix de plats avec et sans photos reste harmonieux.",
       bullets: [
-        "35 langues incluses dans l'abonnement, sans surcoût.",
-        "IA consciente du contexte culinaire, pas un simple Google Translate.",
-        "Le client change de langue en un seul tap dans le menu.",
+        "Les cartes sans photos ne paraissent pas vides.",
+        "La typographie s'adapte au contenu de la carte.",
+        "Style cohérent pour les plats avec et sans images.",
       ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Deux clients lisent le même menu numérique dans des langues différentes sur leurs propres téléphones" },
+      image: { src: "/landing/feature-photos-optional.webp", alt: "Deux téléphones sur une table : menu avec photos des plats et menu uniquement texte" },
     },
     {
       icon: ShieldAlert,
@@ -68,16 +68,16 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-design.webp", alt: "Deux téléphones sur une table de café : écran d'accueil du menu avec arrière-plan vidéo et page contact avec carte" },
     },
     {
-      icon: LayoutList,
-      eyebrow: "Menu sans photos",
-      heading: "Un menu sans photos est tout aussi élégant.",
-      body: "Certains plats n'ont peut-être pas de photos — et c'est parfaitement bien. IQ Rest affiche les cartes avec et sans images de manière cohérente : typographie, allergènes et prix conservent un rendu premium. Un mix de plats avec et sans photos reste harmonieux.",
+      icon: Languages,
+      eyebrow: "35 langues IA",
+      heading: "35 langues IA — chaque client lit le menu dans la sienne.",
+      body: "Un seul code QR, 35 langues. L'IA gère le contexte culinaire — les noms et descriptions des plats sonnent naturels. Les touristes commandent avec plus de confiance et le ticket moyen augmente sans qu'un serveur doive traduire chaque plat.",
       bullets: [
-        "Les cartes sans photos ne paraissent pas vides.",
-        "La typographie s'adapte au contenu de la carte.",
-        "Style cohérent pour les plats avec et sans images.",
+        "35 langues incluses dans l'abonnement, sans surcoût.",
+        "IA consciente du contexte culinaire, pas un simple Google Translate.",
+        "Le client change de langue en un seul tap dans le menu.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Deux téléphones sur une table : menu avec photos des plats et menu uniquement texte" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Deux clients lisent le même menu numérique dans des langues différentes sur leurs propres téléphones" },
     },
     {
       icon: Smartphone,

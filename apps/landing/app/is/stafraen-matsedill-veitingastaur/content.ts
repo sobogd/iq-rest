@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: Languages,
-      eyebrow: "35 gervigreindar tungumál",
-      heading: "35 gervigreindar tungumál — hver gestur les matseðilinn á sínu eigin.",
-      body: "Einn QR kóði, 35 tungumál. Gervigreindin höndlar matargerðarsamhengið — heiti rétta og lýsingar hljóma náttúrulega. Ferðamenn panta með meiri öryggi og meðalreikningur vex án þess að þjónninn þurfi að þýða hvern rétt.",
+      icon: LayoutList,
+      eyebrow: "Matseðill án mynda",
+      heading: "Matseðill án mynda lítur jafnvel út.",
+      body: "Sumir réttir hafa kannski ekki myndir — og það er fullkomlega í lagi. IQ Rest sýnir spjöldin með og án mynda jafnt: leturfræði, ofnæmisvakar og verð halda premium tilfinningu. Blanda af réttum með og án mynda heldur samhengi.",
       bullets: [
-        "35 tungumál innifalin í áskriftinni, án aukagjalds.",
-        "Gervigreind sem skilur matargerðarsamhengi, ekki hrátt Google Translate.",
-        "Gesturinn skiptir um tungumál með einum smelli í matseðlinum sjálfum.",
+        "Spjöld án mynda líta ekki tóm út.",
+        "Leturfræðin aðlagast innihaldi spjaldsins.",
+        "Samhentur stíll fyrir rétti með og án mynda.",
       ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Tveir gestir lesa sama stafræna matseðilinn á mismunandi tungumálum í sínum eigin símum" },
+      image: { src: "/landing/feature-photos-optional.webp", alt: "Tveir símar á borði: matseðill með myndum af réttum og matseðill aðeins með texta" },
     },
     {
       icon: ShieldAlert,
@@ -68,16 +68,16 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-design.webp", alt: "Tveir símar á kaffihúsborði: heimaskjár matseðilsins með myndbandsbakgrunni og samskiptasíða með korti" },
     },
     {
-      icon: LayoutList,
-      eyebrow: "Matseðill án mynda",
-      heading: "Matseðill án mynda lítur jafnvel út.",
-      body: "Sumir réttir hafa kannski ekki myndir — og það er fullkomlega í lagi. IQ Rest sýnir spjöldin með og án mynda jafnt: leturfræði, ofnæmisvakar og verð halda premium tilfinningu. Blanda af réttum með og án mynda heldur samhengi.",
+      icon: Languages,
+      eyebrow: "35 gervigreindar tungumál",
+      heading: "35 gervigreindar tungumál — hver gestur les matseðilinn á sínu eigin.",
+      body: "Einn QR kóði, 35 tungumál. Gervigreindin höndlar matargerðarsamhengið — heiti rétta og lýsingar hljóma náttúrulega. Ferðamenn panta með meiri öryggi og meðalreikningur vex án þess að þjónninn þurfi að þýða hvern rétt.",
       bullets: [
-        "Spjöld án mynda líta ekki tóm út.",
-        "Leturfræðin aðlagast innihaldi spjaldsins.",
-        "Samhentur stíll fyrir rétti með og án mynda.",
+        "35 tungumál innifalin í áskriftinni, án aukagjalds.",
+        "Gervigreind sem skilur matargerðarsamhengi, ekki hrátt Google Translate.",
+        "Gesturinn skiptir um tungumál með einum smelli í matseðlinum sjálfum.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Tveir símar á borði: matseðill með myndum af réttum og matseðill aðeins með texta" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Tveir gestir lesa sama stafræna matseðilinn á mismunandi tungumálum í sínum eigin símum" },
     },
     {
       icon: Smartphone,

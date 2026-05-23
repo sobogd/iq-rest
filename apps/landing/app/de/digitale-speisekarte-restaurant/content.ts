@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: Languages,
-      eyebrow: "35 KI-Sprachen",
-      heading: "35 KI-Sprachen — jeder Gast liest die Speisekarte in seiner eigenen.",
-      body: "Ein QR-Code, 35 Sprachen. Die KI versteht den kulinarischen Kontext — Gerichtsnamen und Beschreibungen klingen natürlich. Touristen bestellen sicherer und der Durchschnittsbon steigt, ohne dass die Servicekraft jedes Gericht übersetzen muss.",
+      icon: LayoutList,
+      eyebrow: "Speisekarte ohne Fotos",
+      heading: "Eine fotofreie Speisekarte sieht genauso gut aus.",
+      body: "Manche Gerichte haben vielleicht keine Fotos — und das ist völlig in Ordnung. IQ Rest stellt Karten mit und ohne Bilder einheitlich dar: Typografie, Allergene und Preise behalten ein Premium-Gefühl. Ein Mix aus Gerichten mit und ohne Fotos bleibt stimmig.",
       bullets: [
-        "35 Sprachen im Abo enthalten, kein Aufpreis.",
-        "Kulinarisch bewusste KI, kein roher Google Translate.",
-        "Gast wechselt die Sprache mit einem Tipp direkt in der Speisekarte.",
+        "Karten ohne Fotos wirken nicht leer.",
+        "Typografie passt sich dem Karteninhalt an.",
+        "Einheitlicher Stil für Gerichte mit und ohne Bilder.",
       ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Zwei Gäste lesen dieselbe digitale Speisekarte in verschiedenen Sprachen auf ihren eigenen Smartphones" },
+      image: { src: "/landing/feature-photos-optional.webp", alt: "Zwei Smartphones auf einem Tisch: Speisekarte mit Gerichtsfotos und reine Textspeisekarte" },
     },
     {
       icon: ShieldAlert,
@@ -68,16 +68,16 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-design.webp", alt: "Zwei Smartphones auf einem Café-Tisch: Startbildschirm der Speisekarte mit Video-Hintergrund und Kontaktseite mit Karte" },
     },
     {
-      icon: LayoutList,
-      eyebrow: "Speisekarte ohne Fotos",
-      heading: "Eine fotofreie Speisekarte sieht genauso gut aus.",
-      body: "Manche Gerichte haben vielleicht keine Fotos — und das ist völlig in Ordnung. IQ Rest stellt Karten mit und ohne Bilder einheitlich dar: Typografie, Allergene und Preise behalten ein Premium-Gefühl. Ein Mix aus Gerichten mit und ohne Fotos bleibt stimmig.",
+      icon: Languages,
+      eyebrow: "35 KI-Sprachen",
+      heading: "35 KI-Sprachen — jeder Gast liest die Speisekarte in seiner eigenen.",
+      body: "Ein QR-Code, 35 Sprachen. Die KI versteht den kulinarischen Kontext — Gerichtsnamen und Beschreibungen klingen natürlich. Touristen bestellen sicherer und der Durchschnittsbon steigt, ohne dass die Servicekraft jedes Gericht übersetzen muss.",
       bullets: [
-        "Karten ohne Fotos wirken nicht leer.",
-        "Typografie passt sich dem Karteninhalt an.",
-        "Einheitlicher Stil für Gerichte mit und ohne Bilder.",
+        "35 Sprachen im Abo enthalten, kein Aufpreis.",
+        "Kulinarisch bewusste KI, kein roher Google Translate.",
+        "Gast wechselt die Sprache mit einem Tipp direkt in der Speisekarte.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Zwei Smartphones auf einem Tisch: Speisekarte mit Gerichtsfotos und reine Textspeisekarte" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Zwei Gäste lesen dieselbe digitale Speisekarte in verschiedenen Sprachen auf ihren eigenen Smartphones" },
     },
     {
       icon: Smartphone,

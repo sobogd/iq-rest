@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: Languages,
-      eyebrow: "35 języków AI",
-      heading: "35 języków AI — każdy gość czyta menu w swoim.",
-      body: "Jeden kod QR, 35 języków. AI obsługuje kontekst kulinarny — nazwy dań i opisy brzmią naturalnie. Turyści zamawiają z większą pewnością, a średni rachunek rośnie bez konieczności tłumaczenia każdego dania przez kelnera.",
+      icon: LayoutList,
+      eyebrow: "Menu bez zdjęć",
+      heading: "Menu bez zdjęć wygląda tak samo dobrze.",
+      body: "Niektóre pozycje mogą nie mieć zdjęć — i to jest absolutnie w porządku. IQ Rest wyświetla karty ze zdjęciami i bez nich konsekwentnie: typografia, alergeny i ceny zachowują premium look. Mieszanka pozycji ze zdjęciami i bez nich pozostaje spójna.",
       bullets: [
-        "35 języków w subskrypcji, bez dopłat.",
-        "AI rozumiejące kontekst kulinarny, nie surowy Google Translate.",
-        "Gość zmienia język jednym dotknięciem w samym menu.",
+        "Karty bez zdjęć nie wyglądają na puste.",
+        "Typografia dostosowuje się do zawartości karty.",
+        "Spójny styl dla pozycji ze zdjęciami i bez nich.",
       ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Dwóch gości czyta to samo cyfrowe menu w różnych językach na swoich telefonach" },
+      image: { src: "/landing/feature-photos-optional.webp", alt: "Dwa telefony na stoliku: menu ze zdjęciami dań i menu tylko z tekstem" },
     },
     {
       icon: ShieldAlert,
@@ -68,16 +68,16 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-design.webp", alt: "Dwa telefony na stoliku kawiarni: ekran startowy menu z tłem wideo i strona kontaktowa z mapą" },
     },
     {
-      icon: LayoutList,
-      eyebrow: "Menu bez zdjęć",
-      heading: "Menu bez zdjęć wygląda tak samo dobrze.",
-      body: "Niektóre pozycje mogą nie mieć zdjęć — i to jest absolutnie w porządku. IQ Rest wyświetla karty ze zdjęciami i bez nich konsekwentnie: typografia, alergeny i ceny zachowują premium look. Mieszanka pozycji ze zdjęciami i bez nich pozostaje spójna.",
+      icon: Languages,
+      eyebrow: "35 języków AI",
+      heading: "35 języków AI — każdy gość czyta menu w swoim.",
+      body: "Jeden kod QR, 35 języków. AI obsługuje kontekst kulinarny — nazwy dań i opisy brzmią naturalnie. Turyści zamawiają z większą pewnością, a średni rachunek rośnie bez konieczności tłumaczenia każdego dania przez kelnera.",
       bullets: [
-        "Karty bez zdjęć nie wyglądają na puste.",
-        "Typografia dostosowuje się do zawartości karty.",
-        "Spójny styl dla pozycji ze zdjęciami i bez nich.",
+        "35 języków w subskrypcji, bez dopłat.",
+        "AI rozumiejące kontekst kulinarny, nie surowy Google Translate.",
+        "Gość zmienia język jednym dotknięciem w samym menu.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Dwa telefony na stoliku: menu ze zdjęciami dań i menu tylko z tekstem" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Dwóch gości czyta to samo cyfrowe menu w różnych językach na swoich telefonach" },
     },
     {
       icon: Smartphone,

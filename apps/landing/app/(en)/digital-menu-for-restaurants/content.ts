@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: Languages,
-      eyebrow: "35 AI languages",
-      heading: "35 AI languages — every guest reads the menu in their own.",
-      body: "One QR code, 35 languages. The AI handles culinary context — dish names and descriptions sound natural. Tourists order with more confidence and average ticket grows without a waiter translating each item.",
+      icon: LayoutList,
+      eyebrow: "Menu without photos",
+      heading: "A photoless menu looks just as good.",
+      body: "Some items might not have photos — and that is perfectly fine. IQ Rest renders cards with and without images consistently: typography, allergens and prices keep a premium feel. A mix of items with and without photos stays cohesive.",
       bullets: [
-        "35 languages included in the subscription, no upcharge.",
-        "Culinary-aware AI, not raw Google Translate.",
-        "Guest switches language with a single tap inside the menu.",
+        "Cards without photos do not look empty.",
+        "Typography adapts to the card content.",
+        "Consistent style for items with and without images.",
       ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Two guests reading the same digital menu in different languages on their own phones" },
+      image: { src: "/landing/feature-photos-optional.webp", alt: "Two phones on a table: menu with dish photos and a text-only menu" },
     },
     {
       icon: ShieldAlert,
@@ -68,16 +68,16 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-design.webp", alt: "Two phones on a café table: home screen of the menu with a video background and the contact page with a map" },
     },
     {
-      icon: LayoutList,
-      eyebrow: "Menu without photos",
-      heading: "A photoless menu looks just as good.",
-      body: "Some items might not have photos — and that is perfectly fine. IQ Rest renders cards with and without images consistently: typography, allergens and prices keep a premium feel. A mix of items with and without photos stays cohesive.",
+      icon: Languages,
+      eyebrow: "35 AI languages",
+      heading: "35 AI languages — every guest reads the menu in their own.",
+      body: "One QR code, 35 languages. The AI handles culinary context — dish names and descriptions sound natural. Tourists order with more confidence and average ticket grows without a waiter translating each item.",
       bullets: [
-        "Cards without photos do not look empty.",
-        "Typography adapts to the card content.",
-        "Consistent style for items with and without images.",
+        "35 languages included in the subscription, no upcharge.",
+        "Culinary-aware AI, not raw Google Translate.",
+        "Guest switches language with a single tap inside the menu.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Two phones on a table: menu with dish photos and a text-only menu" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Two guests reading the same digital menu in different languages on their own phones" },
     },
     {
       icon: Smartphone,

@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: Languages,
-      eyebrow: "35 AI nyelv",
-      heading: "35 AI nyelv — minden vendég a saját nyelvén olvassa az étlapot.",
-      body: "Egyetlen QR kód, 35 nyelv. Az AI kezeli a kulináris kontextust — az ételnevek és leírások természetesen hangzanak. A turisták magabiztosabban rendelnek és az átlagos számla nő, anélkül, hogy a pincér minden ételt lefordítana.",
+      icon: LayoutList,
+      eyebrow: "Étlap fotók nélkül",
+      heading: "A fotók nélküli étlap is ugyanolyan jól néz ki.",
+      body: "Egyes tételeknek nem biztos, hogy van fotójuk — és ez teljesen rendben van. Az IQ Rest a kártyákat képekkel és anélkül egységesen jeleníti meg: a tipográfia, allergének és árak megőrzik a prémium érzést. A fotókkal és anélküli tételek keverékét összefogottnak látszik.",
       bullets: [
-        "35 nyelv az előfizetésbe foglalva, felár nélkül.",
-        "Kulináris kontextus megértésével rendelkező AI, nem nyers Google Translate.",
-        "A vendég egy érintéssel vált nyelvet az étlapon belül.",
+        "A fotók nélküli kártyák nem tűnnek üresnek.",
+        "A tipográfia alkalmazkodik a kártya tartalmához.",
+        "Egységes stílus a képekkel és anélküli tételekhez.",
       ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Két vendég ugyanazt a digitális étlapot olvassa különböző nyelveken a saját telefonjukon" },
+      image: { src: "/landing/feature-photos-optional.webp", alt: "Két telefon asztalon: étlap ételfotókkal és csak szöveges étlap" },
     },
     {
       icon: ShieldAlert,
@@ -68,16 +68,16 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-design.webp", alt: "Két telefon kávézó asztalon: étlap kezdőképernyője videó háttérrel és kapcsolat oldal térképpel" },
     },
     {
-      icon: LayoutList,
-      eyebrow: "Étlap fotók nélkül",
-      heading: "A fotók nélküli étlap is ugyanolyan jól néz ki.",
-      body: "Egyes tételeknek nem biztos, hogy van fotójuk — és ez teljesen rendben van. Az IQ Rest a kártyákat képekkel és anélkül egységesen jeleníti meg: a tipográfia, allergének és árak megőrzik a prémium érzést. A fotókkal és anélküli tételek keverékét összefogottnak látszik.",
+      icon: Languages,
+      eyebrow: "35 AI nyelv",
+      heading: "35 AI nyelv — minden vendég a saját nyelvén olvassa az étlapot.",
+      body: "Egyetlen QR kód, 35 nyelv. Az AI kezeli a kulináris kontextust — az ételnevek és leírások természetesen hangzanak. A turisták magabiztosabban rendelnek és az átlagos számla nő, anélkül, hogy a pincér minden ételt lefordítana.",
       bullets: [
-        "A fotók nélküli kártyák nem tűnnek üresnek.",
-        "A tipográfia alkalmazkodik a kártya tartalmához.",
-        "Egységes stílus a képekkel és anélküli tételekhez.",
+        "35 nyelv az előfizetésbe foglalva, felár nélkül.",
+        "Kulináris kontextus megértésével rendelkező AI, nem nyers Google Translate.",
+        "A vendég egy érintéssel vált nyelvet az étlapon belül.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Két telefon asztalon: étlap ételfotókkal és csak szöveges étlap" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Két vendég ugyanazt a digitális étlapot olvassa különböző nyelveken a saját telefonjukon" },
     },
     {
       icon: Smartphone,

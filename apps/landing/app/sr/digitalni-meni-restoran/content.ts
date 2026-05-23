@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: Languages,
-      eyebrow: "35 AI jezika",
-      heading: "35 AI jezika — svaki gost čita meni na svom.",
-      body: "Jedan QR kod, 35 jezika. AI razume kulinarski kontekst — imena jela i opisi zvuče prirodno. Turisti poručuju sa većom sigurnošću i prosečan račun raste, bez da konobar mora da prevodi svako jelo.",
+      icon: LayoutList,
+      eyebrow: "Meni bez fotografija",
+      heading: "Meni bez fotografija izgleda jednako dobro.",
+      body: "Neke stavke možda nemaju fotografije — i to je sasvim u redu. IQ Rest prikazuje kartice sa i bez slika dosledno: tipografija, alergeni i cene zadržavaju premijum osećaj. Mešavina stavki sa fotografijama i bez njih ostaje koherentna.",
       bullets: [
-        "35 jezika uključeno u pretplatu, bez doplate.",
-        "AI sa razumevanjem kulinarskog konteksta, ne sirov Google Translate.",
-        "Gost menja jezik jednim dodirom u samom meniju.",
+        "Kartice bez fotografija ne izgledaju prazno.",
+        "Tipografija se prilagođava sadržaju kartice.",
+        "Dosledan stil za stavke sa i bez slika.",
       ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Dva gosta čitaju isti digitalni meni na različitim jezicima na svojim telefonima" },
+      image: { src: "/landing/feature-photos-optional.webp", alt: "Dva telefona na stolu: meni sa fotografijama jela i meni samo sa tekstom" },
     },
     {
       icon: ShieldAlert,
@@ -68,16 +68,16 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-design.webp", alt: "Dva telefona na stolu kafića: početni ekran menija sa video pozadinom i stranica kontakta sa mapom" },
     },
     {
-      icon: LayoutList,
-      eyebrow: "Meni bez fotografija",
-      heading: "Meni bez fotografija izgleda jednako dobro.",
-      body: "Neke stavke možda nemaju fotografije — i to je sasvim u redu. IQ Rest prikazuje kartice sa i bez slika dosledno: tipografija, alergeni i cene zadržavaju premijum osećaj. Mešavina stavki sa fotografijama i bez njih ostaje koherentna.",
+      icon: Languages,
+      eyebrow: "35 AI jezika",
+      heading: "35 AI jezika — svaki gost čita meni na svom.",
+      body: "Jedan QR kod, 35 jezika. AI razume kulinarski kontekst — imena jela i opisi zvuče prirodno. Turisti poručuju sa većom sigurnošću i prosečan račun raste, bez da konobar mora da prevodi svako jelo.",
       bullets: [
-        "Kartice bez fotografija ne izgledaju prazno.",
-        "Tipografija se prilagođava sadržaju kartice.",
-        "Dosledan stil za stavke sa i bez slika.",
+        "35 jezika uključeno u pretplatu, bez doplate.",
+        "AI sa razumevanjem kulinarskog konteksta, ne sirov Google Translate.",
+        "Gost menja jezik jednim dodirom u samom meniju.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Dva telefona na stolu: meni sa fotografijama jela i meni samo sa tekstom" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Dva gosta čitaju isti digitalni meni na različitim jezicima na svojim telefonima" },
     },
     {
       icon: Smartphone,

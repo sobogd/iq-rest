@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: Languages,
-      eyebrow: "35 limbi AI",
-      heading: "35 limbi AI — fiecare oaspete citește meniul în limba sa.",
-      body: "Un singur cod QR, 35 de limbi. AI gestionează contextul culinar — numele preparatelor și descrierile sună natural. Turiștii comandă cu mai multă încredere și nota de plată medie crește fără ca ospătarul să fie nevoit să traducă fiecare preparat.",
+      icon: LayoutList,
+      eyebrow: "Meniu fără fotografii",
+      heading: "Un meniu fără fotografii arată la fel de bine.",
+      body: "Unele articole pot să nu aibă fotografii — și este perfect în regulă. IQ Rest afișează cardurile cu și fără imagini în mod consecvent: tipografia, alergenii și prețurile păstrează un aspect premium. Un amestec de articole cu și fără fotografii rămâne coerent.",
       bullets: [
-        "35 de limbi incluse în abonament, fără cost suplimentar.",
-        "AI cu înțelegere a contextului culinar, nu Google Translate brut.",
-        "Oaspetele schimbă limba cu o singură atingere în meniu.",
+        "Cardurile fără fotografii nu arată goale.",
+        "Tipografia se adaptează la conținutul cardului.",
+        "Stil consecvent pentru articolele cu și fără imagini.",
       ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Doi oaspeți citesc același meniu digital în limbi diferite pe telefoanele lor" },
+      image: { src: "/landing/feature-photos-optional.webp", alt: "Două telefoane pe o masă: meniu cu fotografii ale preparatelor și meniu doar cu text" },
     },
     {
       icon: ShieldAlert,
@@ -68,16 +68,16 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-design.webp", alt: "Două telefoane pe o masă de cafenea: ecranul de pornire al meniului cu fundal video și pagina de contact cu hartă" },
     },
     {
-      icon: LayoutList,
-      eyebrow: "Meniu fără fotografii",
-      heading: "Un meniu fără fotografii arată la fel de bine.",
-      body: "Unele articole pot să nu aibă fotografii — și este perfect în regulă. IQ Rest afișează cardurile cu și fără imagini în mod consecvent: tipografia, alergenii și prețurile păstrează un aspect premium. Un amestec de articole cu și fără fotografii rămâne coerent.",
+      icon: Languages,
+      eyebrow: "35 limbi AI",
+      heading: "35 limbi AI — fiecare oaspete citește meniul în limba sa.",
+      body: "Un singur cod QR, 35 de limbi. AI gestionează contextul culinar — numele preparatelor și descrierile sună natural. Turiștii comandă cu mai multă încredere și nota de plată medie crește fără ca ospătarul să fie nevoit să traducă fiecare preparat.",
       bullets: [
-        "Cardurile fără fotografii nu arată goale.",
-        "Tipografia se adaptează la conținutul cardului.",
-        "Stil consecvent pentru articolele cu și fără imagini.",
+        "35 de limbi incluse în abonament, fără cost suplimentar.",
+        "AI cu înțelegere a contextului culinar, nu Google Translate brut.",
+        "Oaspetele schimbă limba cu o singură atingere în meniu.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Două telefoane pe o masă: meniu cu fotografii ale preparatelor și meniu doar cu text" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Doi oaspeți citesc același meniu digital în limbi diferite pe telefoanele lor" },
     },
     {
       icon: Smartphone,

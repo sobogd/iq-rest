@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: Languages,
-      eyebrow: "35 idiomes IA",
-      heading: "35 idiomes IA — cada client llegeix la carta en la seva.",
-      body: "Un sol codi QR, 35 idiomes. La IA gestiona el context culinari — noms i descripcions de plats sonen naturals. Els turistes demanen amb més confiança i el tiquet mitjà creix sense que un cambrer hagi de traduir cada plat.",
+      icon: LayoutList,
+      eyebrow: "Carta sense fotos",
+      heading: "Una carta sense fotos queda igual de bé.",
+      body: "Alguns articles potser no tenen fotos — i això està perfectament bé. IQ Rest mostra les fitxes amb i sense imatges de manera consistent: la tipografia, els al·lèrgens i els preus mantenen una sensació premium. Una barreja d'articles amb i sense fotos manté la cohesió.",
       bullets: [
-        "35 idiomes inclosos a la subscripció, sense recàrrec.",
-        "IA conscient del context culinari, no un Google Translate cru.",
-        "El client canvia d'idioma amb un sol toc dins la carta.",
+        "Les fitxes sense fotos no semblen buides.",
+        "La tipografia s'adapta al contingut de la fitxa.",
+        "Estil consistent per a articles amb i sense imatges.",
       ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Dos clients llegint la mateixa carta digital en idiomes diferents als seus mòbils" },
+      image: { src: "/landing/feature-photos-optional.webp", alt: "Dos mòbils en una taula: carta amb fotos de plats i carta només de text" },
     },
     {
       icon: ShieldAlert,
@@ -68,16 +68,16 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-design.webp", alt: "Dos mòbils en una taula de cafeteria: pantalla d'inici de la carta amb fons de vídeo i pàgina de contacte amb mapa" },
     },
     {
-      icon: LayoutList,
-      eyebrow: "Carta sense fotos",
-      heading: "Una carta sense fotos queda igual de bé.",
-      body: "Alguns articles potser no tenen fotos — i això està perfectament bé. IQ Rest mostra les fitxes amb i sense imatges de manera consistent: la tipografia, els al·lèrgens i els preus mantenen una sensació premium. Una barreja d'articles amb i sense fotos manté la cohesió.",
+      icon: Languages,
+      eyebrow: "35 idiomes IA",
+      heading: "35 idiomes IA — cada client llegeix la carta en la seva.",
+      body: "Un sol codi QR, 35 idiomes. La IA gestiona el context culinari — noms i descripcions de plats sonen naturals. Els turistes demanen amb més confiança i el tiquet mitjà creix sense que un cambrer hagi de traduir cada plat.",
       bullets: [
-        "Les fitxes sense fotos no semblen buides.",
-        "La tipografia s'adapta al contingut de la fitxa.",
-        "Estil consistent per a articles amb i sense imatges.",
+        "35 idiomes inclosos a la subscripció, sense recàrrec.",
+        "IA conscient del context culinari, no un Google Translate cru.",
+        "El client canvia d'idioma amb un sol toc dins la carta.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Dos mòbils en una taula: carta amb fotos de plats i carta només de text" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Dos clients llegint la mateixa carta digital en idiomes diferents als seus mòbils" },
     },
     {
       icon: Smartphone,

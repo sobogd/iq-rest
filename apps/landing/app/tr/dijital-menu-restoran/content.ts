@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: Languages,
-      eyebrow: "35 AI dili",
-      heading: "35 AI dili — her misafir menüyü kendi dilinde okur.",
-      body: "Bir QR kodu, 35 dil. AI mutfak bağlamını yönetir — yemek adları ve açıklamalar doğal görünür. Turistler daha büyük güvenle sipariş verir ve ortalama hesap, garson her yemeği tercüme etmeden büyür.",
+      icon: LayoutList,
+      eyebrow: "Fotoğraf olmadan menü",
+      heading: "Fotoğrafsız menü de aynı derecede iyi görünür.",
+      body: "Bazı ürünlerin fotoğrafı olmayabilir — bu tamamen normaldir. IQ Rest, görüntülü ve görüntüsüz kartları aynı şekilde işler: tipografi, alerjenler ve fiyatlar premium hissini korur. Fotoğraflı ve fotoğrafsız ürünlerin karışımı tutarlı kalır.",
       bullets: [
-        "Abonelikte 35 dil dahil, ek ücret yok.",
-        "Ham Google Translate değil, mutfak farkındalığı olan AI.",
-        "Misafir, menüde tek dokunuşla dili değiştirir.",
+        "Fotoğrafsız kartlar boş görünmez.",
+        "Tipografi kart içeriğine uyum sağlar.",
+        "Görüntülü ve görüntüsüz ürünler için tutarlı stil.",
       ],
-      image: { src: "/landing/feature-multilang.webp", alt: "İki misafir aynı dijital menüyü kendi telefonlarında farklı dillerde okuyor" },
+      image: { src: "/landing/feature-photos-optional.webp", alt: "Masada iki telefon: yemek fotoğraflı menü ve yalnızca metinli menü" },
     },
     {
       icon: ShieldAlert,
@@ -68,16 +68,16 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-design.webp", alt: "Bir kafe masasında iki telefon: video arka planlı menü ana ekranı ve haritalı iletişim sayfası" },
     },
     {
-      icon: LayoutList,
-      eyebrow: "Fotoğraf olmadan menü",
-      heading: "Fotoğrafsız menü de aynı derecede iyi görünür.",
-      body: "Bazı ürünlerin fotoğrafı olmayabilir — bu tamamen normaldir. IQ Rest, görüntülü ve görüntüsüz kartları aynı şekilde işler: tipografi, alerjenler ve fiyatlar premium hissini korur. Fotoğraflı ve fotoğrafsız ürünlerin karışımı tutarlı kalır.",
+      icon: Languages,
+      eyebrow: "35 AI dili",
+      heading: "35 AI dili — her misafir menüyü kendi dilinde okur.",
+      body: "Bir QR kodu, 35 dil. AI mutfak bağlamını yönetir — yemek adları ve açıklamalar doğal görünür. Turistler daha büyük güvenle sipariş verir ve ortalama hesap, garson her yemeği tercüme etmeden büyür.",
       bullets: [
-        "Fotoğrafsız kartlar boş görünmez.",
-        "Tipografi kart içeriğine uyum sağlar.",
-        "Görüntülü ve görüntüsüz ürünler için tutarlı stil.",
+        "Abonelikte 35 dil dahil, ek ücret yok.",
+        "Ham Google Translate değil, mutfak farkındalığı olan AI.",
+        "Misafir, menüde tek dokunuşla dili değiştirir.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Masada iki telefon: yemek fotoğraflı menü ve yalnızca metinli menü" },
+      image: { src: "/landing/feature-multilang.webp", alt: "İki misafir aynı dijital menüyü kendi telefonlarında farklı dillerde okuyor" },
     },
     {
       icon: Smartphone,

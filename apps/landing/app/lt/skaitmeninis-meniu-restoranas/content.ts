@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: Languages,
-      eyebrow: "35 AI kalbos",
-      heading: "35 AI kalbos — kiekvienas svečias skaito meniu savo kalba.",
-      body: "Vienas QR kodas, 35 kalbos. AI tvarko kulinarinį kontekstą — patiekalų pavadinimai ir aprašymai skamba natūraliai. Turistai užsako su didesniu pasitikėjimu ir vidutinis kvitas auga, nereikalaujant padavėjo versti kiekvieno patiekalo.",
+      icon: LayoutList,
+      eyebrow: "Meniu be nuotraukų",
+      heading: "Meniu be nuotraukų atrodo lygiai taip pat gerai.",
+      body: "Kai kurios prekės gali neturėti nuotraukų — ir tai visiškai gerai. IQ Rest rodo korteles su vaizdais ir be jų nuosekliai: tipografija, alergenai ir kainos išlaiko premium jausmą. Prekių su nuotraukomis ir be jų mišinys lieka vientisas.",
       bullets: [
-        "35 kalbos įtrauktos į prenumeratą, be papildomų mokesčių.",
-        "AI, suprantantis kulinarinį kontekstą, ne neapdorotas Google Translate.",
-        "Svečias keičia kalbą vienu bakstelėjimu pačiame meniu.",
+        "Kortelės be nuotraukų neatrodo tuščios.",
+        "Tipografija prisitaiko prie kortelės turinio.",
+        "Nuoseklus stilius prekėms su vaizdais ir be jų.",
       ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Du svečiai skaito tą patį skaitmeninį meniu skirtingomis kalbomis savo telefonuose" },
+      image: { src: "/landing/feature-photos-optional.webp", alt: "Du telefonai ant staliuko: meniu su patiekalų nuotraukomis ir meniu tik su tekstu" },
     },
     {
       icon: ShieldAlert,
@@ -68,16 +68,16 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-design.webp", alt: "Du telefonai ant kavinės staliuko: meniu pradžios ekranas su vaizdo fonu ir kontaktų puslapis su žemėlapiu" },
     },
     {
-      icon: LayoutList,
-      eyebrow: "Meniu be nuotraukų",
-      heading: "Meniu be nuotraukų atrodo lygiai taip pat gerai.",
-      body: "Kai kurios prekės gali neturėti nuotraukų — ir tai visiškai gerai. IQ Rest rodo korteles su vaizdais ir be jų nuosekliai: tipografija, alergenai ir kainos išlaiko premium jausmą. Prekių su nuotraukomis ir be jų mišinys lieka vientisas.",
+      icon: Languages,
+      eyebrow: "35 AI kalbos",
+      heading: "35 AI kalbos — kiekvienas svečias skaito meniu savo kalba.",
+      body: "Vienas QR kodas, 35 kalbos. AI tvarko kulinarinį kontekstą — patiekalų pavadinimai ir aprašymai skamba natūraliai. Turistai užsako su didesniu pasitikėjimu ir vidutinis kvitas auga, nereikalaujant padavėjo versti kiekvieno patiekalo.",
       bullets: [
-        "Kortelės be nuotraukų neatrodo tuščios.",
-        "Tipografija prisitaiko prie kortelės turinio.",
-        "Nuoseklus stilius prekėms su vaizdais ir be jų.",
+        "35 kalbos įtrauktos į prenumeratą, be papildomų mokesčių.",
+        "AI, suprantantis kulinarinį kontekstą, ne neapdorotas Google Translate.",
+        "Svečias keičia kalbą vienu bakstelėjimu pačiame meniu.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Du telefonai ant staliuko: meniu su patiekalų nuotraukomis ir meniu tik su tekstu" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Du svečiai skaito tą patį skaitmeninį meniu skirtingomis kalbomis savo telefonuose" },
     },
     {
       icon: Smartphone,

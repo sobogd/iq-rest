@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: Languages,
-      eyebrow: "35 AI-keelt",
-      heading: "35 AI-keelt — iga külaline loeb menüüd oma keeles.",
-      body: "Üks QR-kood, 35 keelt. AI haldab kulinaarset konteksti — roogade nimed ja kirjeldused kõlavad loomulikult. Turistid tellivad enesekindlamalt ja keskmine arve kasvab, ilma et kelner peaks iga rooga tõlkima.",
+      icon: LayoutList,
+      eyebrow: "Menüü ilma fotodeta",
+      heading: "Menüü ilma fotodeta näeb samuti hea välja.",
+      body: "Mõnel roal ei pruugi fotosid olla — ja see on täiesti korras. IQ Rest kuvab kaardid piltidega ja ilma piltideta ühtlaselt: tüpograafia, allergeenid ja hinnad säilitavad premium-tunde. Roogade segu fotodega ja ilma jääb terviklikuks.",
       bullets: [
-        "35 keelt kuuluvad tellimusesse, ilma lisatasuta.",
-        "AI mõistab kulinaarset konteksti, mitte tavaline Google Translate.",
-        "Külaline vahetab keelt ühe puudutusega otse menüüs.",
+        "Fotodeta kaardid ei näe tühjad välja.",
+        "Tüpograafia kohandub kaardi sisule.",
+        "Ühtlane stiil piltidega ja ilma roogadel.",
       ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Kaks külalist loevad sama digitaalset menüüd erinevates keeltes oma telefonides" },
+      image: { src: "/landing/feature-photos-optional.webp", alt: "Kaks telefoni laual: menüü roogade fotodega ja ainult tekstist menüü" },
     },
     {
       icon: ShieldAlert,
@@ -68,16 +68,16 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-design.webp", alt: "Kaks telefoni kohvikulaual: menüü avakuva video taustaga ja kontaktileht kaardiga" },
     },
     {
-      icon: LayoutList,
-      eyebrow: "Menüü ilma fotodeta",
-      heading: "Menüü ilma fotodeta näeb samuti hea välja.",
-      body: "Mõnel roal ei pruugi fotosid olla — ja see on täiesti korras. IQ Rest kuvab kaardid piltidega ja ilma piltideta ühtlaselt: tüpograafia, allergeenid ja hinnad säilitavad premium-tunde. Roogade segu fotodega ja ilma jääb terviklikuks.",
+      icon: Languages,
+      eyebrow: "35 AI-keelt",
+      heading: "35 AI-keelt — iga külaline loeb menüüd oma keeles.",
+      body: "Üks QR-kood, 35 keelt. AI haldab kulinaarset konteksti — roogade nimed ja kirjeldused kõlavad loomulikult. Turistid tellivad enesekindlamalt ja keskmine arve kasvab, ilma et kelner peaks iga rooga tõlkima.",
       bullets: [
-        "Fotodeta kaardid ei näe tühjad välja.",
-        "Tüpograafia kohandub kaardi sisule.",
-        "Ühtlane stiil piltidega ja ilma roogadel.",
+        "35 keelt kuuluvad tellimusesse, ilma lisatasuta.",
+        "AI mõistab kulinaarset konteksti, mitte tavaline Google Translate.",
+        "Külaline vahetab keelt ühe puudutusega otse menüüs.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Kaks telefoni laual: menüü roogade fotodega ja ainult tekstist menüü" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Kaks külalist loevad sama digitaalset menüüd erinevates keeltes oma telefonides" },
     },
     {
       icon: Smartphone,

@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: Languages,
-      eyebrow: "35 AI-kieltä",
-      heading: "35 AI-kieltä — jokainen vieras lukee ruokalistan omallaan.",
-      body: "Yksi QR-koodi, 35 kieltä. AI hallitsee kulinaarista kontekstia — ruokien nimet ja kuvaukset kuulostavat luonnollisilta. Turistit tilaavat varmemmin ja keskimääräinen lasku kasvaa, ilman että tarjoilijan tarvitsee kääntää jokaista ruokaa.",
+      icon: LayoutList,
+      eyebrow: "Ruokalista ilman kuvia",
+      heading: "Kuvaton ruokalista näyttää yhtä hyvältä.",
+      body: "Joillakin tuotteilla ei välttämättä ole kuvia — ja se on täysin ok. IQ Rest näyttää kortit kuvien kanssa ja ilman yhtenäisesti: typografia, allergeenit ja hinnat säilyttävät premium-tuntuman. Sekoitus tuotteita kuvien kanssa ja ilman pysyy yhtenäisenä.",
       bullets: [
-        "35 kieltä sisältyy tilaukseen, ilman lisämaksua.",
-        "AI ymmärtää kulinaarisen kontekstin, ei pelkkä Google Translate.",
-        "Vieras vaihtaa kielen yhdellä näpäytyksellä suoraan ruokalistassa.",
+        "Kuvattomat kortit eivät näytä tyhjiltä.",
+        "Typografia mukautuu kortin sisältöön.",
+        "Yhtenäinen tyyli kuvien kanssa ja ilman tuotteille.",
       ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Kaksi vierasta lukee samaa digitaalista ruokalistaa eri kielillä omilla puhelimillaan" },
+      image: { src: "/landing/feature-photos-optional.webp", alt: "Kaksi puhelinta pöydällä: ruokalista ruokakuvilla ja vain tekstistä koostuva ruokalista" },
     },
     {
       icon: ShieldAlert,
@@ -68,16 +68,16 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-design.webp", alt: "Kaksi puhelinta kahvilan pöydällä: ruokalistan etusivu videotaustalla ja yhteystietosivu kartalla" },
     },
     {
-      icon: LayoutList,
-      eyebrow: "Ruokalista ilman kuvia",
-      heading: "Kuvaton ruokalista näyttää yhtä hyvältä.",
-      body: "Joillakin tuotteilla ei välttämättä ole kuvia — ja se on täysin ok. IQ Rest näyttää kortit kuvien kanssa ja ilman yhtenäisesti: typografia, allergeenit ja hinnat säilyttävät premium-tuntuman. Sekoitus tuotteita kuvien kanssa ja ilman pysyy yhtenäisenä.",
+      icon: Languages,
+      eyebrow: "35 AI-kieltä",
+      heading: "35 AI-kieltä — jokainen vieras lukee ruokalistan omallaan.",
+      body: "Yksi QR-koodi, 35 kieltä. AI hallitsee kulinaarista kontekstia — ruokien nimet ja kuvaukset kuulostavat luonnollisilta. Turistit tilaavat varmemmin ja keskimääräinen lasku kasvaa, ilman että tarjoilijan tarvitsee kääntää jokaista ruokaa.",
       bullets: [
-        "Kuvattomat kortit eivät näytä tyhjiltä.",
-        "Typografia mukautuu kortin sisältöön.",
-        "Yhtenäinen tyyli kuvien kanssa ja ilman tuotteille.",
+        "35 kieltä sisältyy tilaukseen, ilman lisämaksua.",
+        "AI ymmärtää kulinaarisen kontekstin, ei pelkkä Google Translate.",
+        "Vieras vaihtaa kielen yhdellä näpäytyksellä suoraan ruokalistassa.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Kaksi puhelinta pöydällä: ruokalista ruokakuvilla ja vain tekstistä koostuva ruokalista" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Kaksi vierasta lukee samaa digitaalista ruokalistaa eri kielillä omilla puhelimillaan" },
     },
     {
       icon: Smartphone,

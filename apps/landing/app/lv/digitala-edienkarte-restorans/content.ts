@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: Languages,
-      eyebrow: "35 AI valodas",
-      heading: "35 AI valodas — katrs viesis lasa ēdienkarti savā valodā.",
-      body: "Viens QR kods, 35 valodas. AI pārvalda kulinārijas kontekstu — ēdienu nosaukumi un apraksti izklausās dabiski. Tūristi pasūta ar lielāku pārliecību un vidējais čeks aug, nepieprasot viesmīlim tulkot katru ēdienu.",
+      icon: LayoutList,
+      eyebrow: "Ēdienkarte bez fotoattēliem",
+      heading: "Ēdienkarte bez fotoattēliem izskatās tikpat labi.",
+      body: "Dažām precēm var nebūt fotoattēlu — un tas ir pilnīgi pieņemami. IQ Rest rāda kartītes ar attēliem un bez tiem konsekventi: tipogrāfija, alergēni un cenas saglabā premium sajūtu. Preču ar fotoattēliem un bez tiem maisījums paliek saskaņots.",
       bullets: [
-        "35 valodas iekļautas abonementā, bez papildu maksas.",
-        "AI ar kulinārijas konteksta izpratni, nevis neapstrādāts Google Translate.",
-        "Viesis maina valodu ar vienu pieskārienu ēdienkartē.",
+        "Kartītes bez fotoattēliem neizskatās tukšas.",
+        "Tipogrāfija pielāgojas kartītes saturam.",
+        "Konsekvents stils precēm ar attēliem un bez tiem.",
       ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Divi viesi lasa to pašu digitālo ēdienkarti dažādās valodās savos telefonos" },
+      image: { src: "/landing/feature-photos-optional.webp", alt: "Divi telefoni uz galda: ēdienkarte ar ēdienu fotoattēliem un tikai teksta ēdienkarte" },
     },
     {
       icon: ShieldAlert,
@@ -68,16 +68,16 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-design.webp", alt: "Divi telefoni uz kafejnīcas galda: ēdienkartes sākuma ekrāns ar video fonu un kontaktu lapa ar karti" },
     },
     {
-      icon: LayoutList,
-      eyebrow: "Ēdienkarte bez fotoattēliem",
-      heading: "Ēdienkarte bez fotoattēliem izskatās tikpat labi.",
-      body: "Dažām precēm var nebūt fotoattēlu — un tas ir pilnīgi pieņemami. IQ Rest rāda kartītes ar attēliem un bez tiem konsekventi: tipogrāfija, alergēni un cenas saglabā premium sajūtu. Preču ar fotoattēliem un bez tiem maisījums paliek saskaņots.",
+      icon: Languages,
+      eyebrow: "35 AI valodas",
+      heading: "35 AI valodas — katrs viesis lasa ēdienkarti savā valodā.",
+      body: "Viens QR kods, 35 valodas. AI pārvalda kulinārijas kontekstu — ēdienu nosaukumi un apraksti izklausās dabiski. Tūristi pasūta ar lielāku pārliecību un vidējais čeks aug, nepieprasot viesmīlim tulkot katru ēdienu.",
       bullets: [
-        "Kartītes bez fotoattēliem neizskatās tukšas.",
-        "Tipogrāfija pielāgojas kartītes saturam.",
-        "Konsekvents stils precēm ar attēliem un bez tiem.",
+        "35 valodas iekļautas abonementā, bez papildu maksas.",
+        "AI ar kulinārijas konteksta izpratni, nevis neapstrādāts Google Translate.",
+        "Viesis maina valodu ar vienu pieskārienu ēdienkartē.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Divi telefoni uz galda: ēdienkarte ar ēdienu fotoattēliem un tikai teksta ēdienkarte" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Divi viesi lasa to pašu digitālo ēdienkarti dažādās valodās savos telefonos" },
     },
     {
       icon: Smartphone,

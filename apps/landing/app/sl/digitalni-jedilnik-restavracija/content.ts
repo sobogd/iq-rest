@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: Languages,
-      eyebrow: "35 AI jezikov",
-      heading: "35 AI jezikov — vsak gost bere jedilnik v svojem.",
-      body: "Ena QR koda, 35 jezikov. AI obvladuje kulinarični kontekst — imena jedi in opisi zvenijo naravno. Turisti naročajo z večjo gotovostjo in povprečen račun raste, ne da bi natakar moral prevajati vsako jed.",
+      icon: LayoutList,
+      eyebrow: "Jedilnik brez fotografij",
+      heading: "Jedilnik brez fotografij izgleda enako dobro.",
+      body: "Nekatere postavke morda nimajo fotografij — in to je popolnoma v redu. IQ Rest prikazuje kartice s slikami in brez njih dosledno: tipografija, alergeni in cene ohranjajo premium občutek. Mešanica postavk s fotografijami in brez njih ostane skladna.",
       bullets: [
-        "35 jezikov vključenih v naročnino, brez doplačila.",
-        "AI z razumevanjem kulinaričnega konteksta, ne surov Google Translate.",
-        "Gost spremeni jezik z enim dotikom v samem jedilniku.",
+        "Kartice brez fotografij ne izgledajo prazne.",
+        "Tipografija se prilagodi vsebini kartice.",
+        "Dosleden slog za postavke s slikami in brez njih.",
       ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Dva gosta bereta isti digitalni jedilnik v različnih jezikih na svojih telefonih" },
+      image: { src: "/landing/feature-photos-optional.webp", alt: "Dva telefona na mizi: jedilnik s fotografijami jedi in jedilnik samo z besedilom" },
     },
     {
       icon: ShieldAlert,
@@ -68,16 +68,16 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-design.webp", alt: "Dva telefona na mizi v kavarni: domači zaslon jedilnika z video ozadjem in kontaktna stran z zemljevidom" },
     },
     {
-      icon: LayoutList,
-      eyebrow: "Jedilnik brez fotografij",
-      heading: "Jedilnik brez fotografij izgleda enako dobro.",
-      body: "Nekatere postavke morda nimajo fotografij — in to je popolnoma v redu. IQ Rest prikazuje kartice s slikami in brez njih dosledno: tipografija, alergeni in cene ohranjajo premium občutek. Mešanica postavk s fotografijami in brez njih ostane skladna.",
+      icon: Languages,
+      eyebrow: "35 AI jezikov",
+      heading: "35 AI jezikov — vsak gost bere jedilnik v svojem.",
+      body: "Ena QR koda, 35 jezikov. AI obvladuje kulinarični kontekst — imena jedi in opisi zvenijo naravno. Turisti naročajo z večjo gotovostjo in povprečen račun raste, ne da bi natakar moral prevajati vsako jed.",
       bullets: [
-        "Kartice brez fotografij ne izgledajo prazne.",
-        "Tipografija se prilagodi vsebini kartice.",
-        "Dosleden slog za postavke s slikami in brez njih.",
+        "35 jezikov vključenih v naročnino, brez doplačila.",
+        "AI z razumevanjem kulinaričnega konteksta, ne surov Google Translate.",
+        "Gost spremeni jezik z enim dotikom v samem jedilniku.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Dva telefona na mizi: jedilnik s fotografijami jedi in jedilnik samo z besedilom" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Dva gosta bereta isti digitalni jedilnik v različnih jezikih na svojih telefonih" },
     },
     {
       icon: Smartphone,

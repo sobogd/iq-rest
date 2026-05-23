@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: Languages,
-      eyebrow: "Um QR, 35 línguas",
-      heading: "Um único QR code, o menu em 35 línguas.",
-      body: "O cliente lê o QR code e escolhe a sua língua: a tradução é feita por uma IA com sensibilidade gastronómica, não por um tradutor genérico. Sem cartas separadas para turistas, sem folhas avulsas sobre a mesa.",
+      icon: LayoutList,
+      eyebrow: "QR menu sem todas as fotos",
+      heading: "O menu QR mantém-se elegante mesmo sem foto de cada prato.",
+      body: "Nem sempre é possível fotografar todos os pratos — sobretudo em cozinhas sazonais. O IQ Rest coloca as cartas do menu QR de forma coesa: pratos com imagem e pratos só de texto convivem no mesmo layout limpo, sem espaços vazios nem desalinhamentos.",
       bullets: [
-        "Uma única impressão do QR cobre 35 línguas, incluídas na subscrição.",
-        "A IA conhece o vocabulário culinário — os pratos soam naturais em cada língua.",
-        "O cliente muda de língua dentro do próprio menu, sem voltar a ler o QR.",
+        "As cartas sem foto continuam legíveis e ordenadas.",
+        "A tipografia adapta-se ao conteúdo de cada carta.",
+        "Mistura pratos com e sem foto sem comprometer o design.",
       ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Dois clientes leem o mesmo QR code da mesa e veem o menu em línguas diferentes" },
+      image: { src: "/landing/feature-photos-optional.webp", alt: "Dois telemóveis numa mesa com o mesmo menu QR: uma versão com fotos e outra apenas com texto" },
     },
     {
       icon: ShieldAlert,
@@ -68,16 +68,16 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-design.webp", alt: "Dois telemóveis numa mesa: ecrã inicial do menu QR com fundo em vídeo e página de contactos com mapa" },
     },
     {
-      icon: LayoutList,
-      eyebrow: "QR menu sem todas as fotos",
-      heading: "O menu QR mantém-se elegante mesmo sem foto de cada prato.",
-      body: "Nem sempre é possível fotografar todos os pratos — sobretudo em cozinhas sazonais. O IQ Rest coloca as cartas do menu QR de forma coesa: pratos com imagem e pratos só de texto convivem no mesmo layout limpo, sem espaços vazios nem desalinhamentos.",
+      icon: Languages,
+      eyebrow: "Um QR, 35 línguas",
+      heading: "Um único QR code, o menu em 35 línguas.",
+      body: "O cliente lê o QR code e escolhe a sua língua: a tradução é feita por uma IA com sensibilidade gastronómica, não por um tradutor genérico. Sem cartas separadas para turistas, sem folhas avulsas sobre a mesa.",
       bullets: [
-        "As cartas sem foto continuam legíveis e ordenadas.",
-        "A tipografia adapta-se ao conteúdo de cada carta.",
-        "Mistura pratos com e sem foto sem comprometer o design.",
+        "Uma única impressão do QR cobre 35 línguas, incluídas na subscrição.",
+        "A IA conhece o vocabulário culinário — os pratos soam naturais em cada língua.",
+        "O cliente muda de língua dentro do próprio menu, sem voltar a ler o QR.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Dois telemóveis numa mesa com o mesmo menu QR: uma versão com fotos e outra apenas com texto" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Dois clientes leem o mesmo QR code da mesa e veem o menu em línguas diferentes" },
     },
     {
       icon: Smartphone,
