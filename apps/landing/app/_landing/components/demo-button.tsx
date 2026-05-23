@@ -86,17 +86,12 @@ export function DemoButton({
         <div
           className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
           data-noindex="true"
+          onClick={handleClose}
         >
-          <button
-            type="button"
-            onClick={handleClose}
-            aria-label="Close"
-            className="fixed top-4 right-4 text-white hover:text-gray-300 transition-colors z-[60]"
+          <div
+            className="relative flex flex-col items-center gap-5"
+            onClick={(e) => e.stopPropagation()}
           >
-            <X className="w-8 h-8" />
-          </button>
-
-          <div className="relative flex flex-col items-center gap-5">
             <div
               className="relative"
               style={{
@@ -104,6 +99,15 @@ export function DemoButton({
                 height: "min(calc(85dvh - 80px), calc(min(80dvw, 320px) * 16 / 8))",
               }}
             >
+              <button
+                type="button"
+                onClick={handleClose}
+                aria-label="Close"
+                className="absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors z-30"
+              >
+                <X className="w-8 h-8" />
+              </button>
+
               <div className="absolute inset-0 bg-[#1a1a1a] rounded-[40px] p-2 shadow-2xl">
                 <div className="relative w-full h-full bg-[#1a1a1a] rounded-[32px] overflow-hidden">
                   <div className="absolute top-2 left-1/2 -translate-x-1/2 w-[80px] h-[24px] bg-black rounded-full z-10" />
