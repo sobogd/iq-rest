@@ -1,4 +1,4 @@
-import { Languages, ShieldAlert, Palette, LayoutList, Smartphone, ShoppingCart } from "lucide-react";
+import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: LayoutList,
-      eyebrow: "사진 없는 메뉴",
-      heading: "사진 없는 메뉴도 똑같이 잘 보입니다.",
-      body: "일부 항목에는 사진이 없을 수 있으며 — 그것은 완전히 괜찮습니다. IQ Rest는 이미지가 있는 카드와 없는 카드를 일관되게 표시합니다: 타이포그래피, 알레르겐 및 가격은 프리미엄 느낌을 유지합니다. 사진이 있는 항목과 없는 항목의 조합은 일관성을 유지합니다.",
+      icon: Languages,
+      eyebrow: "35개 언어 AI",
+      heading: "35개 언어 AI — 각 손님이 자신의 언어로 메뉴를 읽습니다.",
+      body: "하나의 QR 코드, 35개 언어. AI가 요리 컨텍스트를 처리합니다 — 요리 이름과 설명은 자연스럽게 들립니다. 관광객은 더 큰 자신감으로 주문하고, 직원이 각 요리를 번역하지 않아도 평균 객단가가 증가합니다.",
       bullets: [
-        "사진 없는 카드는 비어 보이지 않습니다.",
-        "타이포그래피는 카드 내용에 적응합니다.",
-        "이미지가 있는 항목과 없는 항목의 일관된 스타일.",
+        "구독에 35개 언어 포함, 추가 요금 없음.",
+        "Google Translate 원본이 아닌 요리 컨텍스트를 이해하는 AI.",
+        "손님은 메뉴 내에서 원 탭으로 언어를 전환합니다.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "테이블의 두 휴대폰: 요리 사진이 있는 메뉴와 텍스트만 있는 메뉴" },
+      image: { src: "/landing/feature-multilang.webp", alt: "두 명의 손님이 자신의 휴대폰으로 같은 디지털 메뉴를 다른 언어로 읽고 있는 모습" },
     },
     {
       icon: ShieldAlert,
@@ -66,30 +66,6 @@ export const CONTENT: FeatureContent = {
         "연락처 페이지: 지도, 전화, Instagram, WhatsApp.",
       ],
       image: { src: "/landing/feature-design.webp", alt: "카페 테이블의 두 휴대폰: 비디오 배경의 메뉴 홈 화면과 지도가 있는 연락처 페이지" },
-    },
-    {
-      icon: Languages,
-      eyebrow: "35개 언어 AI",
-      heading: "35개 언어 AI — 각 손님이 자신의 언어로 메뉴를 읽습니다.",
-      body: "하나의 QR 코드, 35개 언어. AI가 요리 컨텍스트를 처리합니다 — 요리 이름과 설명은 자연스럽게 들립니다. 관광객은 더 큰 자신감으로 주문하고, 직원이 각 요리를 번역하지 않아도 평균 객단가가 증가합니다.",
-      bullets: [
-        "구독에 35개 언어 포함, 추가 요금 없음.",
-        "Google Translate 원본이 아닌 요리 컨텍스트를 이해하는 AI.",
-        "손님은 메뉴 내에서 원 탭으로 언어를 전환합니다.",
-      ],
-      image: { src: "/landing/feature-multilang.webp", alt: "두 명의 손님이 자신의 휴대폰으로 같은 디지털 메뉴를 다른 언어로 읽고 있는 모습" },
-    },
-    {
-      icon: Smartphone,
-      eyebrow: "모든 기기에서 관리",
-      heading: "모든 기기에서 메뉴를 관리.",
-      body: "휴대폰, 태블릿 또는 노트북의 브라우저에서 하나의 패널이 열립니다. 가격을 변경하거나, 스톱 리스트에서 요리를 제거하거나, 특별 메뉴를 추가하세요 — 손님은 몇 초 안에 변경 사항을 확인합니다. 설치 없음, 통합 없음.",
-      bullets: [
-        "설치할 앱 없음 — 브라우저를 열면 안에 들어갑니다.",
-        "가격, 사진, 스톱 리스트 — 휴대폰에서 몇 번의 탭.",
-        "홀을 포함하여 어디서든 메뉴를 관리.",
-      ],
-      image: { src: "/landing/feature-mobile.webp", alt: "카페 테이블의 노트북과 휴대폰이 두 기기에서 같은 메뉴 항목을 편집" },
     },
     {
       icon: ShoppingCart,

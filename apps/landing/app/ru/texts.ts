@@ -15,7 +15,7 @@ export const TEXTS: LandingTexts = {
     ogDescription: "Цифровое меню, QR-заказы, бронирование, AI-перевод. Запуск за 5 минут. 14 дней бесплатно, без карты.",
   },
 
-  ctaText: "Попробовать бесплатно",
+  ctaText: "Создать цифровое меню",
   demoText: "Посмотреть демо",
   microcopy: "14 дней бесплатно · Без банковской карты · Отмена в любой момент",
 
@@ -25,7 +25,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "Цены",
     navFaq: "Вопросы",
     signIn: "Войти",
-    cta: "Начать",
+    cta: "Создать меню",
   },
 
   hero: {

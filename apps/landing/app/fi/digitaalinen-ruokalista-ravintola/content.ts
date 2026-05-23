@@ -1,4 +1,4 @@
-import { Languages, ShieldAlert, Palette, LayoutList, Smartphone, ShoppingCart } from "lucide-react";
+import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: LayoutList,
-      eyebrow: "Ruokalista ilman kuvia",
-      heading: "Kuvaton ruokalista näyttää yhtä hyvältä.",
-      body: "Joillakin tuotteilla ei välttämättä ole kuvia — ja se on täysin ok. IQ Rest näyttää kortit kuvien kanssa ja ilman yhtenäisesti: typografia, allergeenit ja hinnat säilyttävät premium-tuntuman. Sekoitus tuotteita kuvien kanssa ja ilman pysyy yhtenäisenä.",
+      icon: Languages,
+      eyebrow: "35 AI-kieltä",
+      heading: "35 AI-kieltä — jokainen vieras lukee ruokalistan omallaan.",
+      body: "Yksi QR-koodi, 35 kieltä. AI hallitsee kulinaarista kontekstia — ruokien nimet ja kuvaukset kuulostavat luonnollisilta. Turistit tilaavat varmemmin ja keskimääräinen lasku kasvaa, ilman että tarjoilijan tarvitsee kääntää jokaista ruokaa.",
       bullets: [
-        "Kuvattomat kortit eivät näytä tyhjiltä.",
-        "Typografia mukautuu kortin sisältöön.",
-        "Yhtenäinen tyyli kuvien kanssa ja ilman tuotteille.",
+        "35 kieltä sisältyy tilaukseen, ilman lisämaksua.",
+        "AI ymmärtää kulinaarisen kontekstin, ei pelkkä Google Translate.",
+        "Vieras vaihtaa kielen yhdellä näpäytyksellä suoraan ruokalistassa.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Kaksi puhelinta pöydällä: ruokalista ruokakuvilla ja vain tekstistä koostuva ruokalista" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Kaksi vierasta lukee samaa digitaalista ruokalistaa eri kielillä omilla puhelimillaan" },
     },
     {
       icon: ShieldAlert,
@@ -66,30 +66,6 @@ export const CONTENT: FeatureContent = {
         "Yhteystietosivu: kartta, puhelin, Instagram, WhatsApp.",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Kaksi puhelinta kahvilan pöydällä: ruokalistan etusivu videotaustalla ja yhteystietosivu kartalla" },
-    },
-    {
-      icon: Languages,
-      eyebrow: "35 AI-kieltä",
-      heading: "35 AI-kieltä — jokainen vieras lukee ruokalistan omallaan.",
-      body: "Yksi QR-koodi, 35 kieltä. AI hallitsee kulinaarista kontekstia — ruokien nimet ja kuvaukset kuulostavat luonnollisilta. Turistit tilaavat varmemmin ja keskimääräinen lasku kasvaa, ilman että tarjoilijan tarvitsee kääntää jokaista ruokaa.",
-      bullets: [
-        "35 kieltä sisältyy tilaukseen, ilman lisämaksua.",
-        "AI ymmärtää kulinaarisen kontekstin, ei pelkkä Google Translate.",
-        "Vieras vaihtaa kielen yhdellä näpäytyksellä suoraan ruokalistassa.",
-      ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Kaksi vierasta lukee samaa digitaalista ruokalistaa eri kielillä omilla puhelimillaan" },
-    },
-    {
-      icon: Smartphone,
-      eyebrow: "Hallinta mistä tahansa laitteesta",
-      heading: "Hallitse ruokalistaa mistä tahansa laitteesta.",
-      body: "Yksi paneeli aukeaa selaimessa puhelimessa, tabletissa tai läppärillä. Vaihda hintaa, poista ruoka stop-listalta tai lisää erikoisuus — vieraat näkevät muutoksen sekunneissa. Ei asennuksia, ei integraatioita.",
-      bullets: [
-        "Ei sovellusta asennettavaksi — avaa selain ja olet sisällä.",
-        "Hinnat, kuvat ja stop-lista — muutama näpäytys puhelimesta.",
-        "Hallitse ruokalistaa mistä tahansa, myös salista.",
-      ],
-      image: { src: "/landing/feature-mobile.webp", alt: "Läppäri ja puhelin kahvilan pöydällä muokkaamassa samaa ruokalistan tuotetta molemmissa laitteissa" },
     },
     {
       icon: ShoppingCart,

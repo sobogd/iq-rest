@@ -138,6 +138,7 @@ function PlanCard({
             text={demoText}
             locale={locale}
             trackEvent={`${trackEvent}_demo`}
+            createText={ctaText}
           />
         }
       />

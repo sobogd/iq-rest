@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "デジタルメニュー、QR注文、テーブル予約、AI翻訳。5分で開始。14日間無料。",
   },
 
-  ctaText: "無料でお試し",
+  ctaText: "デジタルメニューを作成",
   demoText: "デモを見る",
   microcopy: "14日間無料 · カード不要 · いつでもキャンセル可能",
 
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "料金",
     navFaq: "よくある質問",
     signIn: "サインイン",
-    cta: "始める",
+    cta: "メニューを作成",
   },
 
   hero: {

@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "Carta digital, pedidos QR, reservas y traducción con IA. Listo en 5 minutos. 14 días gratis.",
   },
 
-  ctaText: "Probar gratis",
+  ctaText: "Crear carta digital",
   demoText: "Ver demo",
   microcopy: "14 días gratis · Sin tarjeta · Cancelas cuando quieras",
 
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "Precios",
     navFaq: "FAQ",
     signIn: "Iniciar sesión",
-    cta: "Empezar",
+    cta: "Crear carta",
   },
 
   hero: {

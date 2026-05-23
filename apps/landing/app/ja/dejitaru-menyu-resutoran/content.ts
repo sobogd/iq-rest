@@ -1,4 +1,4 @@
-import { Languages, ShieldAlert, Palette, LayoutList, Smartphone, ShoppingCart } from "lucide-react";
+import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: LayoutList,
-      eyebrow: "写真なしメニュー",
-      heading: "写真なしのメニューも同様に良く見えます。",
-      body: "一部の項目には写真がない場合があり、それはまったく問題ありません。IQ Restは画像付きと画像なしのカードを一貫して表示:タイポグラフィ、アレルゲン、価格はプレミアムな感覚を維持。写真ありとなしの項目の組み合わせは一貫性を保ちます。",
+      icon: Languages,
+      eyebrow: "AI 35言語",
+      heading: "AI 35言語 — 各お客様が自分の言語でメニューを読みます。",
+      body: "1つのQRコード、35言語。AIは料理のコンテキストを処理 — 料理名と説明は自然に聞こえます。観光客はより自信を持って注文し、スタッフが各料理を翻訳することなく平均客単価が増加します。",
       bullets: [
-        "写真なしのカードは空に見えません。",
-        "タイポグラフィはカードのコンテンツに適応します。",
-        "画像ありとなしの項目に対する一貫したスタイル。",
+        "サブスクリプションに35言語が含まれ、追加料金なし。",
+        "料理のコンテキストを理解するAI、生のGoogle Translateではありません。",
+        "お客様はメニュー内で1タップで言語を切り替えます。",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "テーブルの2台のスマートフォン:料理の写真付きメニューとテキストのみのメニュー" },
+      image: { src: "/landing/feature-multilang.webp", alt: "2人のお客様が自分のスマートフォンで同じデジタルメニューを異なる言語で読んでいる" },
     },
     {
       icon: ShieldAlert,
@@ -66,30 +66,6 @@ export const CONTENT: FeatureContent = {
         "連絡先ページ:地図、電話、Instagram、WhatsApp。",
       ],
       image: { src: "/landing/feature-design.webp", alt: "カフェテーブルの2台のスマートフォン:ビデオ背景のメニューホーム画面と地図付き連絡先ページ" },
-    },
-    {
-      icon: Languages,
-      eyebrow: "AI 35言語",
-      heading: "AI 35言語 — 各お客様が自分の言語でメニューを読みます。",
-      body: "1つのQRコード、35言語。AIは料理のコンテキストを処理 — 料理名と説明は自然に聞こえます。観光客はより自信を持って注文し、スタッフが各料理を翻訳することなく平均客単価が増加します。",
-      bullets: [
-        "サブスクリプションに35言語が含まれ、追加料金なし。",
-        "料理のコンテキストを理解するAI、生のGoogle Translateではありません。",
-        "お客様はメニュー内で1タップで言語を切り替えます。",
-      ],
-      image: { src: "/landing/feature-multilang.webp", alt: "2人のお客様が自分のスマートフォンで同じデジタルメニューを異なる言語で読んでいる" },
-    },
-    {
-      icon: Smartphone,
-      eyebrow: "任意のデバイスから管理",
-      heading: "任意のデバイスからメニューを管理。",
-      body: "スマートフォン、タブレット、ノートパソコンのブラウザで1つのパネルが開きます。価格を変更したり、ストップリストから料理を外したり、特別メニューを追加したり — お客様は数秒で変更を確認できます。インストール不要、統合不要。",
-      bullets: [
-        "インストールするアプリなし — ブラウザを開けば中に入れます。",
-        "価格、写真、ストップリスト — スマートフォンから数タップ。",
-        "フロアからを含む、どこからでもメニューを管理。",
-      ],
-      image: { src: "/landing/feature-mobile.webp", alt: "カフェテーブルのノートパソコンとスマートフォンが両方のデバイスで同じメニュー項目を編集" },
     },
     {
       icon: ShoppingCart,

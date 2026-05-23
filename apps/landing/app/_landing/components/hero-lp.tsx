@@ -26,7 +26,7 @@ export function HeroLp({
   return (
     <section
       data-section="hero"
-      className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 pt-6 pb-20 sm:pb-16 lg:pt-10 lg:pb-20"
+      className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 pt-6 pb-10 sm:pb-16 lg:pt-10 lg:pb-20"
     >
       <div className="grid grid-cols-1 gap-8 lg:gap-14 xl:gap-20 lg:grid-cols-[1fr_1.05fr] lg:items-center">
         <div className="order-1 lg:order-1 flex flex-col items-center text-center lg:items-start lg:text-start">
@@ -83,7 +83,7 @@ export function HeroLp({
               align="center-mobile"
               trackEvent="l_hero_cta_click"
               stackMobile
-              extra={<DemoButton text={demoText} locale={locale} trackEvent="l_hero_demo" />}
+              extra={<DemoButton text={demoText} locale={locale} trackEvent="l_hero_demo" createText={ctaText} />}
             />
           </div>
         </div>

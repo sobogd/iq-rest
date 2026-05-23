@@ -1,4 +1,4 @@
-import { Languages, ShieldAlert, Palette, LayoutList, Smartphone, ShoppingCart } from "lucide-react";
+import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: LayoutList,
-      eyebrow: "Menu bez zdjęć",
-      heading: "Menu bez zdjęć wygląda tak samo dobrze.",
-      body: "Niektóre pozycje mogą nie mieć zdjęć — i to jest absolutnie w porządku. IQ Rest wyświetla karty ze zdjęciami i bez nich konsekwentnie: typografia, alergeny i ceny zachowują premium look. Mieszanka pozycji ze zdjęciami i bez nich pozostaje spójna.",
+      icon: Languages,
+      eyebrow: "35 języków AI",
+      heading: "35 języków AI — każdy gość czyta menu w swoim.",
+      body: "Jeden kod QR, 35 języków. AI obsługuje kontekst kulinarny — nazwy dań i opisy brzmią naturalnie. Turyści zamawiają z większą pewnością, a średni rachunek rośnie bez konieczności tłumaczenia każdego dania przez kelnera.",
       bullets: [
-        "Karty bez zdjęć nie wyglądają na puste.",
-        "Typografia dostosowuje się do zawartości karty.",
-        "Spójny styl dla pozycji ze zdjęciami i bez nich.",
+        "35 języków w subskrypcji, bez dopłat.",
+        "AI rozumiejące kontekst kulinarny, nie surowy Google Translate.",
+        "Gość zmienia język jednym dotknięciem w samym menu.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Dwa telefony na stoliku: menu ze zdjęciami dań i menu tylko z tekstem" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Dwóch gości czyta to samo cyfrowe menu w różnych językach na swoich telefonach" },
     },
     {
       icon: ShieldAlert,
@@ -66,30 +66,6 @@ export const CONTENT: FeatureContent = {
         "Strona kontaktowa: mapa, telefon, Instagram, WhatsApp.",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Dwa telefony na stoliku kawiarni: ekran startowy menu z tłem wideo i strona kontaktowa z mapą" },
-    },
-    {
-      icon: Languages,
-      eyebrow: "35 języków AI",
-      heading: "35 języków AI — każdy gość czyta menu w swoim.",
-      body: "Jeden kod QR, 35 języków. AI obsługuje kontekst kulinarny — nazwy dań i opisy brzmią naturalnie. Turyści zamawiają z większą pewnością, a średni rachunek rośnie bez konieczności tłumaczenia każdego dania przez kelnera.",
-      bullets: [
-        "35 języków w subskrypcji, bez dopłat.",
-        "AI rozumiejące kontekst kulinarny, nie surowy Google Translate.",
-        "Gość zmienia język jednym dotknięciem w samym menu.",
-      ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Dwóch gości czyta to samo cyfrowe menu w różnych językach na swoich telefonach" },
-    },
-    {
-      icon: Smartphone,
-      eyebrow: "Zarządzaj z dowolnego urządzenia",
-      heading: "Zarządzaj menu z dowolnego urządzenia.",
-      body: "Jeden panel otwiera się w przeglądarce na telefonie, tablecie lub laptopie. Zmień cenę, usuń danie z listy stop lub dodaj specjalność — goście zobaczą zmianę w kilka sekund. Bez instalacji, bez integracji.",
-      bullets: [
-        "Bez aplikacji do zainstalowania — otwórz przeglądarkę i jesteś w środku.",
-        "Ceny, zdjęcia i lista stop — kilka dotknięć z telefonu.",
-        "Zarządzaj menu z dowolnego miejsca, w tym z sali.",
-      ],
-      image: { src: "/landing/feature-mobile.webp", alt: "Laptop i telefon na stoliku kawiarni edytujące tę samą pozycję menu na obu urządzeniach" },
     },
     {
       icon: ShoppingCart,

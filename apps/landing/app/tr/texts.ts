@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "Dijital menü, QR sipariş, masa rezervasyonu ve AI çeviri. 5 dakikada hazır. 14 gün ücretsiz.",
   },
 
-  ctaText: "Ücretsiz dene",
+  ctaText: "Dijital menü oluştur",
   demoText: "Demoyu izle",
   microcopy: "14 gün ücretsiz · Kart yok · İstediğiniz zaman iptal edin",
 
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "Fiyatlar",
     navFaq: "SSS",
     signIn: "Giriş yap",
-    cta: "Başla",
+    cta: "Menü oluştur",
   },
 
   hero: {

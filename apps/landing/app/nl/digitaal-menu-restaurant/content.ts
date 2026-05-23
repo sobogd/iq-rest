@@ -1,4 +1,4 @@
-import { Languages, ShieldAlert, Palette, LayoutList, Smartphone, ShoppingCart } from "lucide-react";
+import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: LayoutList,
-      eyebrow: "Menu zonder foto's",
-      heading: "Een menu zonder foto's ziet er net zo goed uit.",
-      body: "Sommige items hebben misschien geen foto's — en dat is helemaal prima. IQ Rest toont kaarten met en zonder afbeeldingen consistent: typografie, allergenen en prijzen behouden een premium gevoel. Een mix van items met en zonder foto's blijft samenhangend.",
+      icon: Languages,
+      eyebrow: "35 AI-talen",
+      heading: "35 AI-talen — elke gast leest het menu in zijn eigen taal.",
+      body: "Eén QR code, 35 talen. De AI begrijpt de culinaire context — gerechtnamen en beschrijvingen klinken natuurlijk. Toeristen bestellen met meer vertrouwen en de gemiddelde bon stijgt zonder dat een kelner elk gerecht hoeft te vertalen.",
       bullets: [
-        "Kaarten zonder foto's zien er niet leeg uit.",
-        "De typografie past zich aan de inhoud van de kaart aan.",
-        "Consistente stijl voor items met en zonder afbeeldingen.",
+        "35 talen inbegrepen in het abonnement, zonder meerkosten.",
+        "AI met begrip van culinaire context, geen ruwe Google Translate.",
+        "De gast wisselt van taal met één tik in het menu zelf.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Twee telefoons op een tafel: menu met gerechtfoto's en menu met alleen tekst" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Twee gasten lezen hetzelfde digitale menu in verschillende talen op hun eigen telefoons" },
     },
     {
       icon: ShieldAlert,
@@ -66,30 +66,6 @@ export const CONTENT: FeatureContent = {
         "Contactpagina: kaart, telefoon, Instagram, WhatsApp.",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Twee telefoons op een cafétafel: menuhomescherm met videoachtergrond en contactpagina met kaart" },
-    },
-    {
-      icon: Languages,
-      eyebrow: "35 AI-talen",
-      heading: "35 AI-talen — elke gast leest het menu in zijn eigen taal.",
-      body: "Eén QR code, 35 talen. De AI begrijpt de culinaire context — gerechtnamen en beschrijvingen klinken natuurlijk. Toeristen bestellen met meer vertrouwen en de gemiddelde bon stijgt zonder dat een kelner elk gerecht hoeft te vertalen.",
-      bullets: [
-        "35 talen inbegrepen in het abonnement, zonder meerkosten.",
-        "AI met begrip van culinaire context, geen ruwe Google Translate.",
-        "De gast wisselt van taal met één tik in het menu zelf.",
-      ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Twee gasten lezen hetzelfde digitale menu in verschillende talen op hun eigen telefoons" },
-    },
-    {
-      icon: Smartphone,
-      eyebrow: "Beheer vanaf elk apparaat",
-      heading: "Beheer het menu vanaf elk apparaat.",
-      body: "Eén paneel opent in de browser op telefoon, tablet of laptop. Wijzig een prijs, haal een gerecht van de stoplijst of voeg een speciaal aanbod toe — gasten zien de wijziging binnen seconden. Geen installaties, geen integraties.",
-      bullets: [
-        "Geen app te installeren — open een browser en je bent binnen.",
-        "Prijzen, foto's en stoplijst — een paar tikken vanaf de telefoon.",
-        "Beheer het menu vanaf overal, ook vanaf de vloer.",
-      ],
-      image: { src: "/landing/feature-mobile.webp", alt: "Laptop en telefoon op een cafétafel die hetzelfde menu-item bewerken op beide apparaten" },
     },
     {
       icon: ShoppingCart,

@@ -1,4 +1,4 @@
-import { Languages, ShieldAlert, Palette, LayoutList, Smartphone, ShoppingCart } from "lucide-react";
+import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: LayoutList,
-      eyebrow: "Speisekarte ohne Fotos",
-      heading: "Eine fotofreie Speisekarte sieht genauso gut aus.",
-      body: "Manche Gerichte haben vielleicht keine Fotos — und das ist völlig in Ordnung. IQ Rest stellt Karten mit und ohne Bilder einheitlich dar: Typografie, Allergene und Preise behalten ein Premium-Gefühl. Ein Mix aus Gerichten mit und ohne Fotos bleibt stimmig.",
+      icon: Languages,
+      eyebrow: "35 KI-Sprachen",
+      heading: "35 KI-Sprachen — jeder Gast liest die Speisekarte in seiner eigenen.",
+      body: "Ein QR-Code, 35 Sprachen. Die KI versteht den kulinarischen Kontext — Gerichtsnamen und Beschreibungen klingen natürlich. Touristen bestellen sicherer und der Durchschnittsbon steigt, ohne dass die Servicekraft jedes Gericht übersetzen muss.",
       bullets: [
-        "Karten ohne Fotos wirken nicht leer.",
-        "Typografie passt sich dem Karteninhalt an.",
-        "Einheitlicher Stil für Gerichte mit und ohne Bilder.",
+        "35 Sprachen im Abo enthalten, kein Aufpreis.",
+        "Kulinarisch bewusste KI, kein roher Google Translate.",
+        "Gast wechselt die Sprache mit einem Tipp direkt in der Speisekarte.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Zwei Smartphones auf einem Tisch: Speisekarte mit Gerichtsfotos und reine Textspeisekarte" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Zwei Gäste lesen dieselbe digitale Speisekarte in verschiedenen Sprachen auf ihren eigenen Smartphones" },
     },
     {
       icon: ShieldAlert,
@@ -68,30 +68,6 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-design.webp", alt: "Zwei Smartphones auf einem Café-Tisch: Startbildschirm der Speisekarte mit Video-Hintergrund und Kontaktseite mit Karte" },
     },
     {
-      icon: Languages,
-      eyebrow: "35 KI-Sprachen",
-      heading: "35 KI-Sprachen — jeder Gast liest die Speisekarte in seiner eigenen.",
-      body: "Ein QR-Code, 35 Sprachen. Die KI versteht den kulinarischen Kontext — Gerichtsnamen und Beschreibungen klingen natürlich. Touristen bestellen sicherer und der Durchschnittsbon steigt, ohne dass die Servicekraft jedes Gericht übersetzen muss.",
-      bullets: [
-        "35 Sprachen im Abo enthalten, kein Aufpreis.",
-        "Kulinarisch bewusste KI, kein roher Google Translate.",
-        "Gast wechselt die Sprache mit einem Tipp direkt in der Speisekarte.",
-      ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Zwei Gäste lesen dieselbe digitale Speisekarte in verschiedenen Sprachen auf ihren eigenen Smartphones" },
-    },
-    {
-      icon: Smartphone,
-      eyebrow: "Verwaltung von jedem Gerät",
-      heading: "Verwalten Sie die Speisekarte von jedem Gerät.",
-      body: "Ein einziges Panel öffnet sich im Browser auf Smartphone, Tablet oder Laptop. Preis ändern, Gericht von der Stop-Liste nehmen oder Tagesangebot hinzufügen — Gäste sehen die Änderung binnen Sekunden. Keine Installation, keine Integrationen.",
-      bullets: [
-        "Keine App zu installieren — Browser öffnen und Sie sind drin.",
-        "Preise, Fotos und Stop-Liste — wenige Tipps vom Smartphone.",
-        "Speisekarte von überall verwalten, auch aus dem Service heraus.",
-      ],
-      image: { src: "/landing/feature-mobile.webp", alt: "Laptop und Smartphone auf einem Café-Tisch bearbeiten denselben Speisekartenartikel auf beiden Geräten" },
-    },
-    {
       icon: ShoppingCart,
       eyebrow: "Bestellungen aus der Karte · optional",
       heading: "Gäste bestellen direkt aus der Speisekarte.",
@@ -110,7 +86,7 @@ export const CONTENT: FeatureContent = {
     items: [
       { q: "Brauche ich technische Kenntnisse oder CMS-Erfahrung?", a: "Nein, spezielle Kenntnisse sind nicht erforderlich. Jede Aktion im Admin-Panel ist per Klick und Drag-and-Drop — ohne Code. Einen Artikel hinzuzufügen dauert wenige Sekunden: Name, Preis, Foto. Eine komplette Speisekarten-Einrichtung dauert meist 30 Minuten bis eine Stunde." },
       { q: "Was ist die digitale Speisekarte von IQ Rest?", a: "IQ Rest ist eine Cloud-Plattform für Restaurants. Die digitale Speisekarte ist die Online-Version Ihrer Karte, für Gäste über QR-Code oder Direktlink verfügbar: Gerichtsfotos, Preise, Allergene, KI-Übersetzung in 35 Sprachen, Echtzeit-Updates. Die Speisekarte wird auf unseren Servern gehostet; Sie müssen keine Software installieren oder warten — einfach den Browser öffnen." },
-      { q: "Brauchen Gäste eine App oder spezielle Hardware?", a: "Nein. Gäste richten die Smartphone-Kamera auf den QR-Code und die Speisekarte öffnet sich im Browser. Das Admin-Panel für das Restaurant läuft ebenfalls in jedem modernen Browser — Smartphone, Tablet oder Laptop. QR-Codes lassen sich auf jedem Bürodrucker ausdrucken." },
+      { q: "Brauchen Gäste eine App oder spezielle Hardware?", a: "Nein. Gäste richten die Smartphone-Kamera auf den QR-Code und die Speisekarte öffnet sich im Browser. Das Admin-Panel für das Restaurant läuft ebenfalls in jedem modernen Browser — Tablet oder Laptop. QR-Codes lassen sich auf jedem Bürodrucker ausdrucken." },
       { q: "Kann ich die Speisekarte auf meiner eigenen Domain hosten?", a: "Ja. Wir unterstützen eine eigene Domain mit SSL-Zertifikat — Gäste sehen die Speisekarte unter der Adresse Ihres Restaurants (z. B. menu.ihrrestaurant.de). Wir helfen bei der DNS-Einrichtung; das dauert meist 5–10 Minuten." },
       { q: "Kann ich mehrere Restaurants aus einem Konto verwalten?", a: "Ja, auf Anfrage. Ein Konto kann mehrere Restaurants hosten: jedes Lokal mit eigener Speisekarte, eigenem Design, eigenen QR-Codes und eigener Analytik. Schreiben Sie uns auf WhatsApp und wir aktivieren den Multi-Restaurant-Modus für Ihre Gruppe." },
       { q: "Wie schwer ist es, die Speisekarte von Grund auf einzurichten?", a: "Die Einrichtung besteht aus drei Schritten: (1) Kategorien anlegen; (2) Artikel mit Namen, Preisen und Fotos hinzufügen; (3) QR-Codes für die Tische drucken. Wenn Sie bereits eine Papier-Speisekarte oder PDF haben, laden Sie sie hoch — die KI erkennt Kategorien, Namen und Preise und füllt die Karten automatisch aus. Eine Basis-Speisekarte ist in 5 Minuten online; die gesamte Einrichtungszeit hängt von der Artikelanzahl ab." },

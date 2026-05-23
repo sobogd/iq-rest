@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "Meniu digital, comenzi QR, rezervare mese și traducere AI. Lansare în 5 minute. 14 zile gratuit.",
   },
 
-  ctaText: "Încercați gratuit",
+  ctaText: "Creează meniu digital",
   demoText: "Vizionați demo",
   microcopy: "14 zile gratuit · Fără card · Anulați oricând",
 
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "Prețuri",
     navFaq: "Întrebări",
     signIn: "Autentificare",
-    cta: "Începeți",
+    cta: "Creează meniu",
   },
 
   hero: {

@@ -1,4 +1,4 @@
-import { Languages, ShieldAlert, Palette, LayoutList, Smartphone, ShoppingCart } from "lucide-react";
+import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: LayoutList,
-      eyebrow: "无图片菜单",
-      heading: "无图片菜单看起来同样好。",
-      body: "有些菜品可能没有图片 — 这完全没问题。IQ Rest 以一致的方式呈现有图片和无图片的卡片:排版、过敏原和价格保持高级感。有图片和无图片菜品的混合保持统一。",
+      icon: Languages,
+      eyebrow: "35 种 AI 语言",
+      heading: "35 种 AI 语言 — 每位客人以自己的语言阅读菜单。",
+      body: "一个 QR 码,35 种语言。AI 处理烹饪上下文 — 菜品名称和描述听起来自然。游客更有信心地点餐,即使服务员不翻译每道菜,平均账单也会增长。",
       bullets: [
-        "无图片的卡片看起来不空。",
-        "排版适应卡片内容。",
-        "有图片和无图片的菜品风格一致。",
+        "订阅中包含 35 种语言,无额外费用。",
+        "具有烹饪意识的 AI,而非原始 Google Translate。",
+        "客人在菜单内一键切换语言。",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "桌上的两部手机:带菜品照片的菜单和仅文本的菜单" },
+      image: { src: "/landing/feature-multilang.webp", alt: "两位客人在自己的手机上以不同语言阅读同一份数字菜单" },
     },
     {
       icon: ShieldAlert,
@@ -66,30 +66,6 @@ export const CONTENT: FeatureContent = {
         "联系页面:地图、电话、Instagram、WhatsApp。",
       ],
       image: { src: "/landing/feature-design.webp", alt: "咖啡馆桌上的两部手机:带视频背景的菜单主屏和带地图的联系页面" },
-    },
-    {
-      icon: Languages,
-      eyebrow: "35 种 AI 语言",
-      heading: "35 种 AI 语言 — 每位客人以自己的语言阅读菜单。",
-      body: "一个 QR 码,35 种语言。AI 处理烹饪上下文 — 菜品名称和描述听起来自然。游客更有信心地点餐,即使服务员不翻译每道菜,平均账单也会增长。",
-      bullets: [
-        "订阅中包含 35 种语言,无额外费用。",
-        "具有烹饪意识的 AI,而非原始 Google Translate。",
-        "客人在菜单内一键切换语言。",
-      ],
-      image: { src: "/landing/feature-multilang.webp", alt: "两位客人在自己的手机上以不同语言阅读同一份数字菜单" },
-    },
-    {
-      icon: Smartphone,
-      eyebrow: "从任何设备管理",
-      heading: "从任何设备管理菜单。",
-      body: "一个面板可在手机、平板电脑或笔记本电脑的浏览器中打开。更改价格、将菜品从停止列表中移除或添加特价菜 — 客人在数秒内看到变化。无需安装,无需集成。",
-      bullets: [
-        "无需安装应用 — 打开浏览器即可使用。",
-        "价格、照片和停止列表 — 在手机上几下点击。",
-        "从任何地方管理菜单,包括大堂。",
-      ],
-      image: { src: "/landing/feature-mobile.webp", alt: "咖啡馆桌上的笔记本电脑和手机在两台设备上编辑同一菜单项" },
     },
     {
       icon: ShoppingCart,

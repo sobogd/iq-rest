@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "Biachlár digiteach, orduithe QR, curfha bord agus aistriúchán IS. Ar líne i 5 nóiméad. 14 lá saor in aisce.",
   },
 
-  ctaText: "Bain triail as saor in aisce",
+  ctaText: "Cruthaigh biachlár digiteach",
   demoText: "Féach an taispeántas",
   microcopy: "14 lá saor in aisce · Gan cárta · Cealaigh aon uair",
 
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "Praghsanna",
     navFaq: "Ceisteanna Coitianta",
     signIn: "Sínigh isteach",
-    cta: "Tosaigh",
+    cta: "Cruthaigh biachlár",
   },
 
   hero: {

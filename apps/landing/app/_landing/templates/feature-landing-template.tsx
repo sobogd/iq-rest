@@ -23,10 +23,10 @@ interface FeatureLandingTemplateProps {
 
 // Single render for the standard feature landing page. Used by every
 // feature page in every locale. Order: header → hero → scan → subFeatures
-// (alternating accent, alternating image side) → founder → pricing → faq →
+// (alternating accent, alternating image side) → pricing → faq → founder →
 // finalCta → footer. Accent rhythm starts from `scan` (accent), so the
-// first subFeature is plain, the next is accent, and so on; founder,
-// pricing, faq, finalCta continue the alternation parity-correctly.
+// first subFeature is plain, the next is accent, and so on; pricing, faq,
+// founder, finalCta continue the alternation parity-correctly.
 export function FeatureLandingTemplate({
   content,
   chrome,
@@ -66,7 +66,7 @@ export function FeatureLandingTemplate({
             noContainer
             accent={i % 2 === 1}
           >
-            <div className="w-full lg:min-h-[70dvh] flex items-center py-12 sm:py-16 lg:py-0">
+            <div className="w-full lg:min-h-[70dvh] flex items-center py-6 sm:py-16 lg:py-0">
               <div
                 className={`grid grid-cols-1 gap-10 lg:gap-14 xl:gap-20 lg:grid-cols-2 lg:items-center w-full ${
                   reverse ? "lg:[&>*:first-child]:order-2" : ""
@@ -119,19 +119,10 @@ export function FeatureLandingTemplate({
       })}
 
       <Section
-        id="founder"
-        dataSection="founder"
-        noContainer
-        accent={subCount % 2 === 1}
-      >
-        <FounderLp texts={chrome.founder} />
-      </Section>
-
-      <Section
         id="pricing"
         dataSection="pricing_hero"
         noContainer
-        accent={subCount % 2 === 0}
+        accent={subCount % 2 === 1}
       >
         <PricingHero
           locale={locale}
@@ -143,7 +134,7 @@ export function FeatureLandingTemplate({
         />
       </Section>
 
-      <Section id="faq" dataSection="faq" noContainer accent={subCount % 2 === 1}>
+      <Section id="faq" dataSection="faq" noContainer accent={subCount % 2 === 0}>
         <FaqLp
           texts={{
             ...chrome.faq,
@@ -151,6 +142,15 @@ export function FeatureLandingTemplate({
             items: [...faq.items],
           }}
         />
+      </Section>
+
+      <Section
+        id="founder"
+        dataSection="founder"
+        noContainer
+        accent={subCount % 2 === 1}
+      >
+        <FounderLp texts={chrome.founder} />
       </Section>
 
       <Section dataSection="final_cta" noContainer accent={subCount % 2 === 0}>

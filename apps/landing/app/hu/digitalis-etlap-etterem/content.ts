@@ -1,4 +1,4 @@
-import { Languages, ShieldAlert, Palette, LayoutList, Smartphone, ShoppingCart } from "lucide-react";
+import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: LayoutList,
-      eyebrow: "Étlap fotók nélkül",
-      heading: "A fotók nélküli étlap is ugyanolyan jól néz ki.",
-      body: "Egyes tételeknek nem biztos, hogy van fotójuk — és ez teljesen rendben van. Az IQ Rest a kártyákat képekkel és anélkül egységesen jeleníti meg: a tipográfia, allergének és árak megőrzik a prémium érzést. A fotókkal és anélküli tételek keverékét összefogottnak látszik.",
+      icon: Languages,
+      eyebrow: "35 AI nyelv",
+      heading: "35 AI nyelv — minden vendég a saját nyelvén olvassa az étlapot.",
+      body: "Egyetlen QR kód, 35 nyelv. Az AI kezeli a kulináris kontextust — az ételnevek és leírások természetesen hangzanak. A turisták magabiztosabban rendelnek és az átlagos számla nő, anélkül, hogy a pincér minden ételt lefordítana.",
       bullets: [
-        "A fotók nélküli kártyák nem tűnnek üresnek.",
-        "A tipográfia alkalmazkodik a kártya tartalmához.",
-        "Egységes stílus a képekkel és anélküli tételekhez.",
+        "35 nyelv az előfizetésbe foglalva, felár nélkül.",
+        "Kulináris kontextus megértésével rendelkező AI, nem nyers Google Translate.",
+        "A vendég egy érintéssel vált nyelvet az étlapon belül.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Két telefon asztalon: étlap ételfotókkal és csak szöveges étlap" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Két vendég ugyanazt a digitális étlapot olvassa különböző nyelveken a saját telefonjukon" },
     },
     {
       icon: ShieldAlert,
@@ -66,30 +66,6 @@ export const CONTENT: FeatureContent = {
         "Kapcsolat oldal: térkép, telefon, Instagram, WhatsApp.",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Két telefon kávézó asztalon: étlap kezdőképernyője videó háttérrel és kapcsolat oldal térképpel" },
-    },
-    {
-      icon: Languages,
-      eyebrow: "35 AI nyelv",
-      heading: "35 AI nyelv — minden vendég a saját nyelvén olvassa az étlapot.",
-      body: "Egyetlen QR kód, 35 nyelv. Az AI kezeli a kulináris kontextust — az ételnevek és leírások természetesen hangzanak. A turisták magabiztosabban rendelnek és az átlagos számla nő, anélkül, hogy a pincér minden ételt lefordítana.",
-      bullets: [
-        "35 nyelv az előfizetésbe foglalva, felár nélkül.",
-        "Kulináris kontextus megértésével rendelkező AI, nem nyers Google Translate.",
-        "A vendég egy érintéssel vált nyelvet az étlapon belül.",
-      ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Két vendég ugyanazt a digitális étlapot olvassa különböző nyelveken a saját telefonjukon" },
-    },
-    {
-      icon: Smartphone,
-      eyebrow: "Kezelés bármely eszközről",
-      heading: "Kezelje az étlapot bármely eszközről.",
-      body: "Egyetlen panel nyílik meg a böngészőben telefonon, táblagépen vagy laptopon. Változtassa meg az árat, vegyen le egy ételt a stop listáról vagy adjon hozzá specialitást — a vendégek másodpercek alatt látják a változást. Telepítés nélkül, integráció nélkül.",
-      bullets: [
-        "Nincs alkalmazás telepítése — nyissa meg a böngészőt és benn van.",
-        "Árak, fotók és stop lista — néhány érintés a telefonról.",
-        "Kezelje az étlapot bárhonnan, beleértve az éttermet is.",
-      ],
-      image: { src: "/landing/feature-mobile.webp", alt: "Laptop és telefon kávézó asztalon, ugyanazt az étlap tételt szerkesztik mindkét eszközön" },
     },
     {
       icon: ShoppingCart,

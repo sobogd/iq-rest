@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "Digitālā ēdienkarte, QR pasūtījumi, galdu rezervēšana un AI tulkojums. Sākt 5 minūtēs. 14 dienas bez maksas.",
   },
 
-  ctaText: "Izmēģiniet bez maksas",
+  ctaText: "Izveidot digitālo ēdienkarti",
   demoText: "Skatīt demonstrāciju",
   microcopy: "14 dienas bez maksas · Bez kartes · Atcelt jebkurā laikā",
 
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "Cenas",
     navFaq: "BUJ",
     signIn: "Pieslēgties",
-    cta: "Sākt",
+    cta: "Izveidot ēdienkarti",
   },
 
   hero: {

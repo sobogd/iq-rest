@@ -1,4 +1,4 @@
-import { Languages, ShieldAlert, Palette, LayoutList, Smartphone, ShoppingCart } from "lucide-react";
+import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: LayoutList,
-      eyebrow: "Meni bez fotografija",
-      heading: "Meni bez fotografija izgleda jednako dobro.",
-      body: "Neke stavke možda nemaju fotografije — i to je sasvim u redu. IQ Rest prikazuje kartice sa i bez slika dosledno: tipografija, alergeni i cene zadržavaju premijum osećaj. Mešavina stavki sa fotografijama i bez njih ostaje koherentna.",
+      icon: Languages,
+      eyebrow: "35 AI jezika",
+      heading: "35 AI jezika — svaki gost čita meni na svom.",
+      body: "Jedan QR kod, 35 jezika. AI razume kulinarski kontekst — imena jela i opisi zvuče prirodno. Turisti poručuju sa većom sigurnošću i prosečan račun raste, bez da konobar mora da prevodi svako jelo.",
       bullets: [
-        "Kartice bez fotografija ne izgledaju prazno.",
-        "Tipografija se prilagođava sadržaju kartice.",
-        "Dosledan stil za stavke sa i bez slika.",
+        "35 jezika uključeno u pretplatu, bez doplate.",
+        "AI sa razumevanjem kulinarskog konteksta, ne sirov Google Translate.",
+        "Gost menja jezik jednim dodirom u samom meniju.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Dva telefona na stolu: meni sa fotografijama jela i meni samo sa tekstom" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Dva gosta čitaju isti digitalni meni na različitim jezicima na svojim telefonima" },
     },
     {
       icon: ShieldAlert,
@@ -66,30 +66,6 @@ export const CONTENT: FeatureContent = {
         "Stranica kontakta: mapa, telefon, Instagram, WhatsApp.",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Dva telefona na stolu kafića: početni ekran menija sa video pozadinom i stranica kontakta sa mapom" },
-    },
-    {
-      icon: Languages,
-      eyebrow: "35 AI jezika",
-      heading: "35 AI jezika — svaki gost čita meni na svom.",
-      body: "Jedan QR kod, 35 jezika. AI razume kulinarski kontekst — imena jela i opisi zvuče prirodno. Turisti poručuju sa većom sigurnošću i prosečan račun raste, bez da konobar mora da prevodi svako jelo.",
-      bullets: [
-        "35 jezika uključeno u pretplatu, bez doplate.",
-        "AI sa razumevanjem kulinarskog konteksta, ne sirov Google Translate.",
-        "Gost menja jezik jednim dodirom u samom meniju.",
-      ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Dva gosta čitaju isti digitalni meni na različitim jezicima na svojim telefonima" },
-    },
-    {
-      icon: Smartphone,
-      eyebrow: "Upravljajte sa bilo kog uređaja",
-      heading: "Upravljajte menijem sa bilo kog uređaja.",
-      body: "Jedan panel se otvara u pretraživaču na telefonu, tabletu ili laptopu. Promenite cenu, uklonite jelo sa stop liste ili dodajte specijalitet — gosti vide promenu za nekoliko sekundi. Bez instalacija, bez integracija.",
-      bullets: [
-        "Bez aplikacije za instaliranje — otvorite pretraživač i unutra ste.",
-        "Cene, fotografije i stop lista — nekoliko dodira sa telefona.",
-        "Upravljajte menijem sa bilo kog mesta, uključujući salu.",
-      ],
-      image: { src: "/landing/feature-mobile.webp", alt: "Laptop i telefon na stolu kafića uređuju istu stavku menija na oba uređaja" },
     },
     {
       icon: ShoppingCart,

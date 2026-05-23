@@ -1,4 +1,4 @@
-import { Languages, ShieldAlert, Palette, LayoutList, Smartphone, ShoppingCart } from "lucide-react";
+import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: LayoutList,
-      eyebrow: "Jelovnik bez fotografija",
-      heading: "Jelovnik bez fotografija izgleda jednako dobro.",
-      body: "Neka jela možda nemaju fotografije — i to je posve u redu. IQ Rest prikazuje kartice s i bez slika dosljedno: tipografija, alergeni i cijene zadržavaju premium osjećaj. Mješavina jela s fotografijama i bez ostaje koherentna.",
+      icon: Languages,
+      eyebrow: "35 AI jezika",
+      heading: "35 AI jezika — svaki gost čita jelovnik na svom.",
+      body: "Jedan QR kod, 35 jezika. AI upravlja kulinarskim kontekstom — nazivi jela i opisi zvuče prirodno. Turisti naručuju s većim povjerenjem i prosječni račun raste, a da konobar ne mora prevoditi svako jelo.",
       bullets: [
-        "Kartice bez fotografija ne izgledaju prazno.",
-        "Tipografija se prilagođava sadržaju kartice.",
-        "Dosljedan stil za jela sa i bez slika.",
+        "35 jezika uključeno u pretplatu, bez doplate.",
+        "AI s razumijevanjem kulinarskog konteksta, ne sirovi Google Translate.",
+        "Gost mijenja jezik jednim dodirom unutar jelovnika.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Dva telefona na stolu: jelovnik s fotografijama jela i jelovnik samo s tekstom" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Dva gosta čitaju isti digitalni jelovnik na različitim jezicima na svojim telefonima" },
     },
     {
       icon: ShieldAlert,
@@ -66,30 +66,6 @@ export const CONTENT: FeatureContent = {
         "Kontakt stranica: karta, telefon, Instagram, WhatsApp.",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Dva telefona na kafićkom stolu: početni zaslon jelovnika s video pozadinom i kontakt stranica s kartom" },
-    },
-    {
-      icon: Languages,
-      eyebrow: "35 AI jezika",
-      heading: "35 AI jezika — svaki gost čita jelovnik na svom.",
-      body: "Jedan QR kod, 35 jezika. AI upravlja kulinarskim kontekstom — nazivi jela i opisi zvuče prirodno. Turisti naručuju s većim povjerenjem i prosječni račun raste, a da konobar ne mora prevoditi svako jelo.",
-      bullets: [
-        "35 jezika uključeno u pretplatu, bez doplate.",
-        "AI s razumijevanjem kulinarskog konteksta, ne sirovi Google Translate.",
-        "Gost mijenja jezik jednim dodirom unutar jelovnika.",
-      ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Dva gosta čitaju isti digitalni jelovnik na različitim jezicima na svojim telefonima" },
-    },
-    {
-      icon: Smartphone,
-      eyebrow: "Upravljanje s bilo kojeg uređaja",
-      heading: "Upravljajte jelovnikom s bilo kojeg uređaja.",
-      body: "Jedan panel otvara se u pregledniku na telefonu, tabletu ili laptopu. Promijenite cijenu, uklonite jelo sa stop liste ili dodajte specijalitet — gosti vide promjenu u sekundama. Bez instalacija, bez integracija.",
-      bullets: [
-        "Bez aplikacije za instaliranje — otvorite preglednik i unutra ste.",
-        "Cijene, fotografije i stop lista — nekoliko dodira s telefona.",
-        "Upravljajte jelovnikom s bilo kojeg mjesta, uključujući salu.",
-      ],
-      image: { src: "/landing/feature-mobile.webp", alt: "Laptop i telefon na kafićkom stolu uređuju istu stavku jelovnika na oba uređaja" },
     },
     {
       icon: ShoppingCart,

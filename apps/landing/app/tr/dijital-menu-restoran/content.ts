@@ -1,4 +1,4 @@
-import { Languages, ShieldAlert, Palette, LayoutList, Smartphone, ShoppingCart } from "lucide-react";
+import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: LayoutList,
-      eyebrow: "Fotoğraf olmadan menü",
-      heading: "Fotoğrafsız menü de aynı derecede iyi görünür.",
-      body: "Bazı ürünlerin fotoğrafı olmayabilir — bu tamamen normaldir. IQ Rest, görüntülü ve görüntüsüz kartları aynı şekilde işler: tipografi, alerjenler ve fiyatlar premium hissini korur. Fotoğraflı ve fotoğrafsız ürünlerin karışımı tutarlı kalır.",
+      icon: Languages,
+      eyebrow: "35 AI dili",
+      heading: "35 AI dili — her misafir menüyü kendi dilinde okur.",
+      body: "Bir QR kodu, 35 dil. AI mutfak bağlamını yönetir — yemek adları ve açıklamalar doğal görünür. Turistler daha büyük güvenle sipariş verir ve ortalama hesap, garson her yemeği tercüme etmeden büyür.",
       bullets: [
-        "Fotoğrafsız kartlar boş görünmez.",
-        "Tipografi kart içeriğine uyum sağlar.",
-        "Görüntülü ve görüntüsüz ürünler için tutarlı stil.",
+        "Abonelikte 35 dil dahil, ek ücret yok.",
+        "Ham Google Translate değil, mutfak farkındalığı olan AI.",
+        "Misafir, menüde tek dokunuşla dili değiştirir.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Masada iki telefon: yemek fotoğraflı menü ve yalnızca metinli menü" },
+      image: { src: "/landing/feature-multilang.webp", alt: "İki misafir aynı dijital menüyü kendi telefonlarında farklı dillerde okuyor" },
     },
     {
       icon: ShieldAlert,
@@ -66,30 +66,6 @@ export const CONTENT: FeatureContent = {
         "İletişim sayfası: harita, telefon, Instagram, WhatsApp.",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Bir kafe masasında iki telefon: video arka planlı menü ana ekranı ve haritalı iletişim sayfası" },
-    },
-    {
-      icon: Languages,
-      eyebrow: "35 AI dili",
-      heading: "35 AI dili — her misafir menüyü kendi dilinde okur.",
-      body: "Bir QR kodu, 35 dil. AI mutfak bağlamını yönetir — yemek adları ve açıklamalar doğal görünür. Turistler daha büyük güvenle sipariş verir ve ortalama hesap, garson her yemeği tercüme etmeden büyür.",
-      bullets: [
-        "Abonelikte 35 dil dahil, ek ücret yok.",
-        "Ham Google Translate değil, mutfak farkındalığı olan AI.",
-        "Misafir, menüde tek dokunuşla dili değiştirir.",
-      ],
-      image: { src: "/landing/feature-multilang.webp", alt: "İki misafir aynı dijital menüyü kendi telefonlarında farklı dillerde okuyor" },
-    },
-    {
-      icon: Smartphone,
-      eyebrow: "Herhangi bir cihazdan yönetin",
-      heading: "Menüyü herhangi bir cihazdan yönetin.",
-      body: "Tek panel telefondaki, tabletteki veya dizüstündeki tarayıcıda açılır. Bir fiyatı değiştirin, bir yemeği stop listesinden çıkarın veya özel ekleyin — misafirler değişikliği saniyeler içinde görür. Kurulum yok, entegrasyon yok.",
-      bullets: [
-        "Kurulacak uygulama yok — tarayıcıyı açın ve içerideyiz.",
-        "Fiyatlar, fotoğraflar ve stop listesi — telefondan birkaç dokunuş.",
-        "Menüyü her yerden, salon dahil yönetin.",
-      ],
-      image: { src: "/landing/feature-mobile.webp", alt: "Bir kafe masasında aynı menü ürününü her iki cihazda da düzenleyen dizüstü ve telefon" },
     },
     {
       icon: ShoppingCart,

@@ -1,4 +1,4 @@
-import { Languages, ShieldAlert, Palette, LayoutList, Smartphone, ShoppingCart } from "lucide-react";
+import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: LayoutList,
-      eyebrow: "Menu senza foto",
-      heading: "Anche un menu senza foto resta elegante.",
-      body: "Non tutti i piatti hanno la foto — ed è normale. IQ Rest mostra le card con e senza immagine nello stesso modo curato: la tipografia, gli allergeni e i prezzi mantengono un aspetto premium. Una combinazione di piatti con e senza foto resta un insieme coerente.",
+      icon: Languages,
+      eyebrow: "35 lingue con IA",
+      heading: "35 lingue con IA — ogni ospite legge il menu nella sua.",
+      body: "Un solo QR, 35 lingue. L'IA tiene conto del contesto gastronomico — i nomi e le descrizioni dei piatti suonano naturali. I turisti ordinano con più sicurezza e lo scontrino medio cresce senza che un cameriere debba tradurre piatto per piatto.",
       bullets: [
-        "Le card senza foto non sembrano vuote.",
-        "La tipografia si adatta al contenuto della card.",
-        "Stile uniforme per piatti con e senza immagini.",
+        "35 lingue incluse nell'abbonamento, senza costi aggiuntivi.",
+        "IA con sensibilità culinaria, non un banale Google Translate.",
+        "L'ospite cambia lingua con un tocco direttamente nel menu.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Due cellulari su un tavolo: menu con foto dei piatti e menu solo testuale senza foto" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Due ospiti leggono lo stesso menu digitale in lingue diverse dai loro cellulari" },
     },
     {
       icon: ShieldAlert,
@@ -66,30 +66,6 @@ export const CONTENT: FeatureContent = {
         "Pagina contatti: mappa, telefono, Instagram, WhatsApp.",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Due cellulari su un tavolino da bar: schermata principale del menu con video di sfondo e pagina contatti con mappa" },
-    },
-    {
-      icon: Languages,
-      eyebrow: "35 lingue con IA",
-      heading: "35 lingue con IA — ogni ospite legge il menu nella sua.",
-      body: "Un solo QR, 35 lingue. L'IA tiene conto del contesto gastronomico — i nomi e le descrizioni dei piatti suonano naturali. I turisti ordinano con più sicurezza e lo scontrino medio cresce senza che un cameriere debba tradurre piatto per piatto.",
-      bullets: [
-        "35 lingue incluse nell'abbonamento, senza costi aggiuntivi.",
-        "IA con sensibilità culinaria, non un banale Google Translate.",
-        "L'ospite cambia lingua con un tocco direttamente nel menu.",
-      ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Due ospiti leggono lo stesso menu digitale in lingue diverse dai loro cellulari" },
-    },
-    {
-      icon: Smartphone,
-      eyebrow: "Gestione da qualsiasi dispositivo",
-      heading: "Gestisci il menu da qualsiasi dispositivo.",
-      body: "Un unico pannello che si apre nel browser di cellulare, tablet o portatile. Cambi un prezzo, togli un piatto dalla stop list o aggiungi una proposta — gli ospiti la vedono in pochi secondi. Senza installazioni, senza integrazioni.",
-      bullets: [
-        "Nessuna app da installare: apri il browser ed entri.",
-        "Prezzi, foto e stop list — pochi tocchi dal cellulare.",
-        "Gestisci il menu da ovunque, anche in sala.",
-      ],
-      image: { src: "/landing/feature-mobile.webp", alt: "Portatile e cellulare su un tavolino da bar: lo stesso piatto del menu modificato sui due dispositivi" },
     },
     {
       icon: ShoppingCart,

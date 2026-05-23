@@ -1,4 +1,4 @@
-import { Languages, ShieldAlert, Palette, LayoutList, Smartphone, ShoppingCart } from "lucide-react";
+import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: LayoutList,
-      eyebrow: "Meniu be nuotraukų",
-      heading: "Meniu be nuotraukų atrodo lygiai taip pat gerai.",
-      body: "Kai kurios prekės gali neturėti nuotraukų — ir tai visiškai gerai. IQ Rest rodo korteles su vaizdais ir be jų nuosekliai: tipografija, alergenai ir kainos išlaiko premium jausmą. Prekių su nuotraukomis ir be jų mišinys lieka vientisas.",
+      icon: Languages,
+      eyebrow: "35 AI kalbos",
+      heading: "35 AI kalbos — kiekvienas svečias skaito meniu savo kalba.",
+      body: "Vienas QR kodas, 35 kalbos. AI tvarko kulinarinį kontekstą — patiekalų pavadinimai ir aprašymai skamba natūraliai. Turistai užsako su didesniu pasitikėjimu ir vidutinis kvitas auga, nereikalaujant padavėjo versti kiekvieno patiekalo.",
       bullets: [
-        "Kortelės be nuotraukų neatrodo tuščios.",
-        "Tipografija prisitaiko prie kortelės turinio.",
-        "Nuoseklus stilius prekėms su vaizdais ir be jų.",
+        "35 kalbos įtrauktos į prenumeratą, be papildomų mokesčių.",
+        "AI, suprantantis kulinarinį kontekstą, ne neapdorotas Google Translate.",
+        "Svečias keičia kalbą vienu bakstelėjimu pačiame meniu.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Du telefonai ant staliuko: meniu su patiekalų nuotraukomis ir meniu tik su tekstu" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Du svečiai skaito tą patį skaitmeninį meniu skirtingomis kalbomis savo telefonuose" },
     },
     {
       icon: ShieldAlert,
@@ -66,30 +66,6 @@ export const CONTENT: FeatureContent = {
         "Kontaktų puslapis: žemėlapis, telefonas, Instagram, WhatsApp.",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Du telefonai ant kavinės staliuko: meniu pradžios ekranas su vaizdo fonu ir kontaktų puslapis su žemėlapiu" },
-    },
-    {
-      icon: Languages,
-      eyebrow: "35 AI kalbos",
-      heading: "35 AI kalbos — kiekvienas svečias skaito meniu savo kalba.",
-      body: "Vienas QR kodas, 35 kalbos. AI tvarko kulinarinį kontekstą — patiekalų pavadinimai ir aprašymai skamba natūraliai. Turistai užsako su didesniu pasitikėjimu ir vidutinis kvitas auga, nereikalaujant padavėjo versti kiekvieno patiekalo.",
-      bullets: [
-        "35 kalbos įtrauktos į prenumeratą, be papildomų mokesčių.",
-        "AI, suprantantis kulinarinį kontekstą, ne neapdorotas Google Translate.",
-        "Svečias keičia kalbą vienu bakstelėjimu pačiame meniu.",
-      ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Du svečiai skaito tą patį skaitmeninį meniu skirtingomis kalbomis savo telefonuose" },
-    },
-    {
-      icon: Smartphone,
-      eyebrow: "Valdykite iš bet kurio įrenginio",
-      heading: "Valdykite meniu iš bet kurio įrenginio.",
-      body: "Vienas skydelis atsidaro naršyklėje telefone, planšetėje ar nešiojamajame kompiuteryje. Pakeiskite kainą, pašalinkite patiekalą iš stop sąrašo arba pridėkite specialų pasiūlymą — svečiai mato pakeitimą per sekundes. Be diegimo, be integracijų.",
-      bullets: [
-        "Be diegtinos programėlės — atidarykite naršyklę ir esate viduje.",
-        "Kainos, nuotraukos ir stop sąrašas — keli bakstelėjimai iš telefono.",
-        "Valdykite meniu iš bet kur, įskaitant salę.",
-      ],
-      image: { src: "/landing/feature-mobile.webp", alt: "Nešiojamasis ir telefonas ant kavinės staliuko redaguoja tą patį meniu elementą abiejuose įrenginiuose" },
     },
     {
       icon: ShoppingCart,

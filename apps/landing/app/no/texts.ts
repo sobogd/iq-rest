@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "Digital meny, QR-bestillinger, bordreservasjon og AI-oversettelse. Live på 5 minutter. 14 dager gratis.",
   },
 
-  ctaText: "Prøv gratis",
+  ctaText: "Lag digital meny",
   demoText: "Se demo",
   microcopy: "14 dager gratis · Ingen kort · Avslutt når som helst",
 
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "Priser",
     navFaq: "FAQ",
     signIn: "Logg inn",
-    cta: "Kom i gang",
+    cta: "Lag meny",
   },
 
   hero: {

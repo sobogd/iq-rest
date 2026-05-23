@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "منوی دیجیتال، سفارش‌های QR، رزرو میز و ترجمه با هوش مصنوعی. راه‌اندازی در ۵ دقیقه. ۱۴ روز رایگان.",
   },
 
-  ctaText: "تست رایگان",
+  ctaText: "ساخت منوی دیجیتال",
   demoText: "تماشای دمو",
   microcopy: "۱۴ روز رایگان · بدون کارت · لغو در هر زمان",
 
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "قیمت‌ها",
     navFaq: "سؤالات",
     signIn: "ورود",
-    cta: "شروع کنید",
+    cta: "ساخت منو",
   },
 
   hero: {

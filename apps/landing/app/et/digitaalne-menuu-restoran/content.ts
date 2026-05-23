@@ -1,4 +1,4 @@
-import { Languages, ShieldAlert, Palette, LayoutList, Smartphone, ShoppingCart } from "lucide-react";
+import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: LayoutList,
-      eyebrow: "Menüü ilma fotodeta",
-      heading: "Menüü ilma fotodeta näeb samuti hea välja.",
-      body: "Mõnel roal ei pruugi fotosid olla — ja see on täiesti korras. IQ Rest kuvab kaardid piltidega ja ilma piltideta ühtlaselt: tüpograafia, allergeenid ja hinnad säilitavad premium-tunde. Roogade segu fotodega ja ilma jääb terviklikuks.",
+      icon: Languages,
+      eyebrow: "35 AI-keelt",
+      heading: "35 AI-keelt — iga külaline loeb menüüd oma keeles.",
+      body: "Üks QR-kood, 35 keelt. AI haldab kulinaarset konteksti — roogade nimed ja kirjeldused kõlavad loomulikult. Turistid tellivad enesekindlamalt ja keskmine arve kasvab, ilma et kelner peaks iga rooga tõlkima.",
       bullets: [
-        "Fotodeta kaardid ei näe tühjad välja.",
-        "Tüpograafia kohandub kaardi sisule.",
-        "Ühtlane stiil piltidega ja ilma roogadel.",
+        "35 keelt kuuluvad tellimusesse, ilma lisatasuta.",
+        "AI mõistab kulinaarset konteksti, mitte tavaline Google Translate.",
+        "Külaline vahetab keelt ühe puudutusega otse menüüs.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Kaks telefoni laual: menüü roogade fotodega ja ainult tekstist menüü" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Kaks külalist loevad sama digitaalset menüüd erinevates keeltes oma telefonides" },
     },
     {
       icon: ShieldAlert,
@@ -66,30 +66,6 @@ export const CONTENT: FeatureContent = {
         "Kontaktileht: kaart, telefon, Instagram, WhatsApp.",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Kaks telefoni kohvikulaual: menüü avakuva video taustaga ja kontaktileht kaardiga" },
-    },
-    {
-      icon: Languages,
-      eyebrow: "35 AI-keelt",
-      heading: "35 AI-keelt — iga külaline loeb menüüd oma keeles.",
-      body: "Üks QR-kood, 35 keelt. AI haldab kulinaarset konteksti — roogade nimed ja kirjeldused kõlavad loomulikult. Turistid tellivad enesekindlamalt ja keskmine arve kasvab, ilma et kelner peaks iga rooga tõlkima.",
-      bullets: [
-        "35 keelt kuuluvad tellimusesse, ilma lisatasuta.",
-        "AI mõistab kulinaarset konteksti, mitte tavaline Google Translate.",
-        "Külaline vahetab keelt ühe puudutusega otse menüüs.",
-      ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Kaks külalist loevad sama digitaalset menüüd erinevates keeltes oma telefonides" },
-    },
-    {
-      icon: Smartphone,
-      eyebrow: "Halda igast seadmest",
-      heading: "Halda menüüd igast seadmest.",
-      body: "Üks paneel avaneb brauseris telefonis, tahvelarvutis või sülearvutis. Muuda hinda, võta roog stopplistilt maha või lisa pakkumine — külalised näevad muudatust sekunditega. Ilma installideta, ilma integratsioonideta.",
-      bullets: [
-        "Ei mingit rakendust installimiseks — ava brauser ja oled sees.",
-        "Hinnad, fotod ja stoppnimekiri — paar puudutust telefonist.",
-        "Halda menüüd kõikjalt, kaasa arvatud saalist.",
-      ],
-      image: { src: "/landing/feature-mobile.webp", alt: "Sülearvuti ja telefon kohvikulaual muudavad sama menüüelementi mõlemas seadmes" },
     },
     {
       icon: ShoppingCart,

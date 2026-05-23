@@ -1,4 +1,4 @@
-import { Languages, ShieldAlert, Palette, LayoutList, Smartphone, ShoppingCart } from "lucide-react";
+import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: LayoutList,
-      eyebrow: "Menu without photos",
-      heading: "A photoless menu looks just as good.",
-      body: "Some items might not have photos — and that is perfectly fine. IQ Rest renders cards with and without images consistently: typography, allergens and prices keep a premium feel. A mix of items with and without photos stays cohesive.",
+      icon: Languages,
+      eyebrow: "35 AI languages",
+      heading: "35 AI languages — every guest reads the menu in their own.",
+      body: "One QR code, 35 languages. The AI handles culinary context — dish names and descriptions sound natural. Tourists order with more confidence and average ticket grows without a waiter translating each item.",
       bullets: [
-        "Cards without photos do not look empty.",
-        "Typography adapts to the card content.",
-        "Consistent style for items with and without images.",
+        "35 languages included in the subscription, no upcharge.",
+        "Culinary-aware AI, not raw Google Translate.",
+        "Guest switches language with a single tap inside the menu.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Two phones on a table: menu with dish photos and a text-only menu" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Two guests reading the same digital menu in different languages on their own phones" },
     },
     {
       icon: ShieldAlert,
@@ -66,30 +66,6 @@ export const CONTENT: FeatureContent = {
         "Contact page: map, phone, Instagram, WhatsApp.",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Two phones on a café table: home screen of the menu with a video background and the contact page with a map" },
-    },
-    {
-      icon: Languages,
-      eyebrow: "35 AI languages",
-      heading: "35 AI languages — every guest reads the menu in their own.",
-      body: "One QR code, 35 languages. The AI handles culinary context — dish names and descriptions sound natural. Tourists order with more confidence and average ticket grows without a waiter translating each item.",
-      bullets: [
-        "35 languages included in the subscription, no upcharge.",
-        "Culinary-aware AI, not raw Google Translate.",
-        "Guest switches language with a single tap inside the menu.",
-      ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Two guests reading the same digital menu in different languages on their own phones" },
-    },
-    {
-      icon: Smartphone,
-      eyebrow: "Manage from any device",
-      heading: "Manage the menu from any device.",
-      body: "A single panel opens in the browser on phone, tablet or laptop. Change a price, take a dish off the stop list or add a special — guests see the change within seconds. No installs, no integrations.",
-      bullets: [
-        "No app to install — open a browser and you are in.",
-        "Prices, photos and stop list — a few taps from the phone.",
-        "Manage the menu from anywhere, including the floor.",
-      ],
-      image: { src: "/landing/feature-mobile.webp", alt: "Laptop and phone on a café table editing the same menu item on both devices" },
     },
     {
       icon: ShoppingCart,

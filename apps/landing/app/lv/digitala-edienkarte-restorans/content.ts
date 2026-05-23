@@ -1,4 +1,4 @@
-import { Languages, ShieldAlert, Palette, LayoutList, Smartphone, ShoppingCart } from "lucide-react";
+import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: LayoutList,
-      eyebrow: "Ēdienkarte bez fotoattēliem",
-      heading: "Ēdienkarte bez fotoattēliem izskatās tikpat labi.",
-      body: "Dažām precēm var nebūt fotoattēlu — un tas ir pilnīgi pieņemami. IQ Rest rāda kartītes ar attēliem un bez tiem konsekventi: tipogrāfija, alergēni un cenas saglabā premium sajūtu. Preču ar fotoattēliem un bez tiem maisījums paliek saskaņots.",
+      icon: Languages,
+      eyebrow: "35 AI valodas",
+      heading: "35 AI valodas — katrs viesis lasa ēdienkarti savā valodā.",
+      body: "Viens QR kods, 35 valodas. AI pārvalda kulinārijas kontekstu — ēdienu nosaukumi un apraksti izklausās dabiski. Tūristi pasūta ar lielāku pārliecību un vidējais čeks aug, nepieprasot viesmīlim tulkot katru ēdienu.",
       bullets: [
-        "Kartītes bez fotoattēliem neizskatās tukšas.",
-        "Tipogrāfija pielāgojas kartītes saturam.",
-        "Konsekvents stils precēm ar attēliem un bez tiem.",
+        "35 valodas iekļautas abonementā, bez papildu maksas.",
+        "AI ar kulinārijas konteksta izpratni, nevis neapstrādāts Google Translate.",
+        "Viesis maina valodu ar vienu pieskārienu ēdienkartē.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Divi telefoni uz galda: ēdienkarte ar ēdienu fotoattēliem un tikai teksta ēdienkarte" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Divi viesi lasa to pašu digitālo ēdienkarti dažādās valodās savos telefonos" },
     },
     {
       icon: ShieldAlert,
@@ -66,30 +66,6 @@ export const CONTENT: FeatureContent = {
         "Kontaktu lapa: karte, tālrunis, Instagram, WhatsApp.",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Divi telefoni uz kafejnīcas galda: ēdienkartes sākuma ekrāns ar video fonu un kontaktu lapa ar karti" },
-    },
-    {
-      icon: Languages,
-      eyebrow: "35 AI valodas",
-      heading: "35 AI valodas — katrs viesis lasa ēdienkarti savā valodā.",
-      body: "Viens QR kods, 35 valodas. AI pārvalda kulinārijas kontekstu — ēdienu nosaukumi un apraksti izklausās dabiski. Tūristi pasūta ar lielāku pārliecību un vidējais čeks aug, nepieprasot viesmīlim tulkot katru ēdienu.",
-      bullets: [
-        "35 valodas iekļautas abonementā, bez papildu maksas.",
-        "AI ar kulinārijas konteksta izpratni, nevis neapstrādāts Google Translate.",
-        "Viesis maina valodu ar vienu pieskārienu ēdienkartē.",
-      ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Divi viesi lasa to pašu digitālo ēdienkarti dažādās valodās savos telefonos" },
-    },
-    {
-      icon: Smartphone,
-      eyebrow: "Pārvaldīt no jebkura ierīces",
-      heading: "Pārvaldiet ēdienkarti no jebkura ierīces.",
-      body: "Viens panelis atveras pārlūkprogrammā telefonā, planšetdatorā vai klēpjdatorā. Mainiet cenu, izņemiet ēdienu no stop saraksta vai pievienojiet īpašu piedāvājumu — viesi redz izmaiņas sekundēs. Bez instalēšanas, bez integrācijām.",
-      bullets: [
-        "Bez instalējamas lietotnes — atveriet pārlūkprogrammu un esat iekšā.",
-        "Cenas, fotoattēli un stop saraksts — daži pieskārieni no telefona.",
-        "Pārvaldiet ēdienkarti no jebkuras vietas, ieskaitot zāli.",
-      ],
-      image: { src: "/landing/feature-mobile.webp", alt: "Klēpjdators un telefons uz kafejnīcas galda rediģē to pašu ēdienkartes elementu abās ierīcēs" },
     },
     {
       icon: ShoppingCart,

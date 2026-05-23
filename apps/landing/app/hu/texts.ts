@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "Digitális étlap, QR rendelések, asztalfoglalás és AI fordítás. Indítás 5 perc alatt. 14 nap ingyenes.",
   },
 
-  ctaText: "Próbálja ki ingyen",
+  ctaText: "Digitális étlap létrehozása",
   demoText: "Nézze meg a demót",
   microcopy: "14 nap ingyenes · Kártya nélkül · Lemondás bármikor",
 
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "Árak",
     navFaq: "GYIK",
     signIn: "Bejelentkezés",
-    cta: "Kezdés",
+    cta: "Étlap létrehozása",
   },
 
   hero: {

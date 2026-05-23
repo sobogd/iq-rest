@@ -1,4 +1,4 @@
-import { Languages, ShieldAlert, Palette, LayoutList, Smartphone, ShoppingCart } from "lucide-react";
+import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: LayoutList,
-      eyebrow: "Menu bez fotek",
-      heading: "Menu bez fotek vypadá stejně dobře.",
-      body: "Některé položky nemusí mít fotky — a to je úplně v pořádku. IQ Rest zobrazuje karty s obrázky i bez nich konzistentně: typografie, alergeny a ceny si zachovávají prémiový vzhled. Mix položek s fotkami i bez nich působí celistvě.",
+      icon: Languages,
+      eyebrow: "35 jazyků s AI",
+      heading: "35 jazyků s AI — každý host čte menu ve svém.",
+      body: "Jeden QR kód, 35 jazyků. AI zvládá kulinářský kontext — názvy jídel a popisy zní přirozeně. Turisté objednávají s větší jistotou a průměrný účet roste, aniž by číšník překládal každou položku.",
       bullets: [
-        "Karty bez fotek nevypadají prázdně.",
-        "Typografie se přizpůsobuje obsahu karty.",
-        "Konzistentní styl pro položky s obrázky i bez nich.",
+        "35 jazyků zahrnutých v předplatném, bez doplatků.",
+        "AI s pochopením kulinářského kontextu, ne pouhý Google Translate.",
+        "Host přepíná jazyk jedním ťuknutím přímo v menu.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Dva telefony na stole: menu s fotkami jídel a menu pouze s textem" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Dva hosté čtou stejné digitální menu v různých jazycích na svých telefonech" },
     },
     {
       icon: ShieldAlert,
@@ -66,30 +66,6 @@ export const CONTENT: FeatureContent = {
         "Kontaktní stránka: mapa, telefon, Instagram, WhatsApp.",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Dva telefony na stole v kavárně: domovská obrazovka menu s video pozadím a kontaktní stránka s mapou" },
-    },
-    {
-      icon: Languages,
-      eyebrow: "35 jazyků s AI",
-      heading: "35 jazyků s AI — každý host čte menu ve svém.",
-      body: "Jeden QR kód, 35 jazyků. AI zvládá kulinářský kontext — názvy jídel a popisy zní přirozeně. Turisté objednávají s větší jistotou a průměrný účet roste, aniž by číšník překládal každou položku.",
-      bullets: [
-        "35 jazyků zahrnutých v předplatném, bez doplatků.",
-        "AI s pochopením kulinářského kontextu, ne pouhý Google Translate.",
-        "Host přepíná jazyk jedním ťuknutím přímo v menu.",
-      ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Dva hosté čtou stejné digitální menu v různých jazycích na svých telefonech" },
-    },
-    {
-      icon: Smartphone,
-      eyebrow: "Správa z jakéhokoli zařízení",
-      heading: "Spravujte menu z jakéhokoli zařízení.",
-      body: "Jeden panel se otevře v prohlížeči na telefonu, tabletu nebo notebooku. Změňte cenu, dejte jídlo na stop list nebo přidejte specialitu — hosté vidí změnu během několika sekund. Bez instalací, bez integrací.",
-      bullets: [
-        "Žádná aplikace k instalaci — otevřete prohlížeč a jste tam.",
-        "Ceny, fotky a stop list — pár ťuknutí z telefonu.",
-        "Spravujte menu odkudkoli, i z provozu sálu.",
-      ],
-      image: { src: "/landing/feature-mobile.webp", alt: "Notebook a telefon na stole v kavárně upravují stejnou položku menu na obou zařízeních" },
     },
     {
       icon: ShoppingCart,

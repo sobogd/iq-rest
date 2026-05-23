@@ -5,7 +5,7 @@ import type { ElementType, ReactNode } from "react";
 // homepages, PPC LPs, feature pages). Background alternation is owned by
 // SectionGroup via nth-child, so individual sections don't carry a bg
 // modifier.
-const PADDING = "py-12 sm:py-16";
+const PADDING = "py-8 sm:py-16";
 const CONTAINER = "container mx-auto px-4";
 const FULL_BLEED = "w-full px-4 sm:px-6 lg:px-10 xl:px-14";
 const SCROLL_MARGIN = "scroll-mt-16";

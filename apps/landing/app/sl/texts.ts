@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "Digitalni jedilnik, QR naročila, rezervacija miz in AI prevod. Zagon v 5 minutah. 14 dni brezplačno.",
   },
 
-  ctaText: "Preizkusite brezplačno",
+  ctaText: "Ustvari digitalni meni",
   demoText: "Oglejte si demo",
   microcopy: "14 dni brezplačno · Brez kartice · Prekličete kadar koli",
 
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "Cene",
     navFaq: "Pogosta vprašanja",
     signIn: "Prijava",
-    cta: "Začnite",
+    cta: "Ustvari meni",
   },
 
   hero: {

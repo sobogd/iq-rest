@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { X, Loader2 } from "lucide-react";
 import { analytics } from "@/lib/analytics";
+import { usePrimaryCta } from "./onboarding/use-primary-cta";
 
 interface DemoButtonProps {
   text: string;
@@ -10,6 +11,10 @@ interface DemoButtonProps {
   /** Base name like `l_hero_demo` — `_open` and `_close` are appended automatically. */
   trackEvent?: string;
   className?: string;
+  /** When set, renders a primary "create menu" CTA under the phone preview
+   *  inside the demo modal — turns the demo from a dead-end into a conversion
+   *  point. Opens the onboarding modal (guest) / dashboard (signed-in). */
+  createText?: string;
 }
 
 const DEMO_SLUG = "love-eatery";
@@ -28,9 +33,16 @@ export function DemoButton({
   locale,
   trackEvent = "l_demo",
   className = "",
+  createText,
 }: DemoButtonProps) {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(true);
+  const cta = usePrimaryCta(createText ?? "");
+
+  const handleCreate = () => {
+    setOpen(false);
+    cta.onClick(`${trackEvent}_create_click`);
+  };
 
   useEffect(() => {
     if (open) {
@@ -75,21 +87,21 @@ export function DemoButton({
           className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
           data-noindex="true"
         >
-          <div className="relative">
-            <button
-              type="button"
-              onClick={handleClose}
-              aria-label="Close"
-              className="absolute -top-7 -right-7 text-white hover:text-gray-300 transition-colors z-30"
-            >
-              <X className="w-8 h-8" />
-            </button>
+          <button
+            type="button"
+            onClick={handleClose}
+            aria-label="Close"
+            className="fixed top-4 right-4 text-white hover:text-gray-300 transition-colors z-[60]"
+          >
+            <X className="w-8 h-8" />
+          </button>
 
+          <div className="relative flex flex-col items-center gap-5">
             <div
               className="relative"
               style={{
-                width: "clamp(0px, min(calc(85dvh * 8 / 16), 80dvw), 350px)",
-                height: "min(85dvh, calc(min(80dvw, 350px) * 16 / 8))",
+                width: "clamp(0px, min(calc((85dvh - 80px) * 8 / 16), 80dvw), 320px)",
+                height: "min(calc(85dvh - 80px), calc(min(80dvw, 320px) * 16 / 8))",
               }}
             >
               <div className="absolute inset-0 bg-[#1a1a1a] rounded-[40px] p-2 shadow-2xl">
@@ -120,6 +132,16 @@ export function DemoButton({
               <div className="absolute left-[-2px] top-[35%] w-[2px] h-[8%] bg-[#2a2a2a] rounded-l-sm" />
               <div className="absolute right-[-2px] top-[28%] w-[2px] h-[12%] bg-[#2a2a2a] rounded-r-sm" />
             </div>
+
+            {createText && (
+              <button
+                type="button"
+                onClick={handleCreate}
+                className="inline-flex items-center justify-center min-h-11 py-2 px-8 text-sm font-semibold text-white bg-gradient-to-br from-[hsl(9,100%,58%)] to-[hsl(35,95%,55%)] rounded-lg hover:opacity-90 active:scale-[0.99] transition-all text-center leading-tight"
+              >
+                {cta.label}
+              </button>
+            )}
           </div>
         </div>
       )}

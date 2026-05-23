@@ -31,7 +31,7 @@ export function FinalCtaLp({ texts, ctaText, demoText, microcopy, locale }: Fina
           locale={locale}
           align="center"
           trackEvent="l_final_cta_click"
-          extra={<DemoButton text={demoText} locale={locale} trackEvent="l_final_cta_demo" />}
+          extra={<DemoButton text={demoText} locale={locale} trackEvent="l_final_cta_demo" createText={ctaText} />}
         />
       </div>
     </div>

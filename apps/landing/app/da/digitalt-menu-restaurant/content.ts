@@ -1,4 +1,4 @@
-import { Languages, ShieldAlert, Palette, LayoutList, Smartphone, ShoppingCart } from "lucide-react";
+import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: LayoutList,
-      eyebrow: "Menukort uden billeder",
-      heading: "Et menukort uden billeder ser lige så godt ud.",
-      body: "Nogle retter har måske ikke billeder — og det er helt fint. IQ Rest viser kortene med og uden billeder konsekvent: typografi, allergener og priser bevarer en premium fornemmelse. En blanding af retter med og uden billeder forbliver sammenhængende.",
+      icon: Languages,
+      eyebrow: "35 AI-sprog",
+      heading: "35 AI-sprog — hver gæst læser menuen på sit eget.",
+      body: "Én QR-kode, 35 sprog. AI'en håndterer den kulinariske kontekst — navne på retter og beskrivelser lyder naturligt. Turister bestiller med større selvtillid, og det gennemsnitlige beløb stiger, uden at en tjener oversætter hver ret.",
       bullets: [
-        "Kort uden billeder ser ikke tomme ud.",
-        "Typografien tilpasser sig kortets indhold.",
-        "Konsistent stil for retter med og uden billeder.",
+        "35 sprog inkluderet i abonnementet, uden tillæg.",
+        "AI med forståelse af kulinarisk kontekst, ikke bare Google Translate.",
+        "Gæsten skifter sprog med ét tryk i selve menuen.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "To telefoner på et bord: menu med billeder af retter og menu kun med tekst" },
+      image: { src: "/landing/feature-multilang.webp", alt: "To gæster læser samme digitale menukort på forskellige sprog på deres egne telefoner" },
     },
     {
       icon: ShieldAlert,
@@ -66,30 +66,6 @@ export const CONTENT: FeatureContent = {
         "Kontaktside: kort, telefon, Instagram, WhatsApp.",
       ],
       image: { src: "/landing/feature-design.webp", alt: "To telefoner på et cafébord: hjemmeskærm af menuen med videobaggrund og kontaktside med kort" },
-    },
-    {
-      icon: Languages,
-      eyebrow: "35 AI-sprog",
-      heading: "35 AI-sprog — hver gæst læser menuen på sit eget.",
-      body: "Én QR-kode, 35 sprog. AI'en håndterer den kulinariske kontekst — navne på retter og beskrivelser lyder naturligt. Turister bestiller med større selvtillid, og det gennemsnitlige beløb stiger, uden at en tjener oversætter hver ret.",
-      bullets: [
-        "35 sprog inkluderet i abonnementet, uden tillæg.",
-        "AI med forståelse af kulinarisk kontekst, ikke bare Google Translate.",
-        "Gæsten skifter sprog med ét tryk i selve menuen.",
-      ],
-      image: { src: "/landing/feature-multilang.webp", alt: "To gæster læser samme digitale menukort på forskellige sprog på deres egne telefoner" },
-    },
-    {
-      icon: Smartphone,
-      eyebrow: "Administrer fra enhver enhed",
-      heading: "Administrer menuen fra enhver enhed.",
-      body: "Ét panel åbner i browseren på telefon, tablet eller computer. Ændr en pris, fjern en ret fra stopliste eller tilføj en aftens menu — gæsterne ser ændringen inden for sekunder. Ingen installation, ingen integration.",
-      bullets: [
-        "Ingen app at installere — åbn en browser og du er i gang.",
-        "Priser, billeder og stopliste — få tryk fra telefonen.",
-        "Administrer menuen fra hvor som helst, også fra serveringen.",
-      ],
-      image: { src: "/landing/feature-mobile.webp", alt: "Computer og telefon på et cafébord, der redigerer den samme menuret på begge enheder" },
     },
     {
       icon: ShoppingCart,

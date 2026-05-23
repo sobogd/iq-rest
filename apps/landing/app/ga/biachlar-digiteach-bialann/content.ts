@@ -1,4 +1,4 @@
-import { Languages, ShieldAlert, Palette, LayoutList, Smartphone, ShoppingCart } from "lucide-react";
+import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: LayoutList,
-      eyebrow: "Biachlár gan grianghraif",
-      heading: "Breathnaíonn biachlár gan grianghraif chomh maith céanna.",
-      body: "B'fhéidir nach mbeidh grianghraif ag roinnt míreanna — agus tá sin ceart go leor. Léiríonn IQ Rest cártaí le híomhánna agus dá n-uireasa go comhsheasmhach: coinníonn clóghrafaíocht, ailléirginí agus praghsanna mothú préimhe. Fanann meascán de mhíreanna le grianghraif agus dá n-uireasa comhtháite.",
+      icon: Languages,
+      eyebrow: "35 teanga IS",
+      heading: "35 teanga IS — léann gach aoi an biachlár ina theanga féin.",
+      body: "Cód QR amháin, 35 teanga. Láimhseálann an IS comhthéacs cócaireachta — fuaimíonn ainmneacha miasa agus tuairiscí nádúrtha. Ordaíonn turasóirí le níos mó muiníne agus fásann an meánticéad gan an freastalaí a bheith ag aistriú gach mias.",
       bullets: [
-        "Ní bhreathnaíonn cártaí gan ghrianghraif folamh.",
-        "Oiriúnaíonn an chlóghrafaíocht do shusta an chárta.",
-        "Stíl chomhsheasmhach do mhíreanna le híomhánna agus dá n-uireasa.",
+        "35 teanga san áireamh sa síntiús, gan táille bhreise.",
+        "IS le tuiscint ar chomhthéacs cócaireachta, ní Google Translate amh.",
+        "Athraíonn an t-aoi an teanga le tapáil amháin sa bhiachlár féin.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Dhá ghuthán ar bhord: biachlár le grianghraif miasa agus biachlár téacs amháin" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Beirt aíonna ag léamh an bhiachláir dhigitigh chéanna i dteangacha éagsúla ar a ngutháin féin" },
     },
     {
       icon: ShieldAlert,
@@ -66,30 +66,6 @@ export const CONTENT: FeatureContent = {
         "Leathanach teagmhála: léarscáil, guthán, Instagram, WhatsApp.",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Dhá ghuthán ar bhord caifé: scáileán baile an bhiachláir le cúlra físeáin agus leathanach teagmhála le léarscáil" },
-    },
-    {
-      icon: Languages,
-      eyebrow: "35 teanga IS",
-      heading: "35 teanga IS — léann gach aoi an biachlár ina theanga féin.",
-      body: "Cód QR amháin, 35 teanga. Láimhseálann an IS comhthéacs cócaireachta — fuaimíonn ainmneacha miasa agus tuairiscí nádúrtha. Ordaíonn turasóirí le níos mó muiníne agus fásann an meánticéad gan an freastalaí a bheith ag aistriú gach mias.",
-      bullets: [
-        "35 teanga san áireamh sa síntiús, gan táille bhreise.",
-        "IS le tuiscint ar chomhthéacs cócaireachta, ní Google Translate amh.",
-        "Athraíonn an t-aoi an teanga le tapáil amháin sa bhiachlár féin.",
-      ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Beirt aíonna ag léamh an bhiachláir dhigitigh chéanna i dteangacha éagsúla ar a ngutháin féin" },
-    },
-    {
-      icon: Smartphone,
-      eyebrow: "Bainistigh ó aon ghléas",
-      heading: "Bainistigh an biachlár ó aon ghléas.",
-      body: "Osclaíonn painéal amháin sa bhrabhsálaí ar ghuthán, táibléad nó ríomhaire glúine. Athraigh praghas, bain mias den liosta stop nó cuir speisialtacht leis — feiceann aíonna an t-athrú i soicindí. Gan suiteálacha, gan comhtháthuithe.",
-      bullets: [
-        "Gan aip le suiteáil — oscail brabhsálaí agus tá tú istigh.",
-        "Praghsanna, grianghraif agus liosta stop — cúpla tapáil ón nguthán.",
-        "Bainistigh an biachlár ó aon áit, lena n-áirítear an t-urlár.",
-      ],
-      image: { src: "/landing/feature-mobile.webp", alt: "Ríomhaire glúine agus guthán ar bhord caifé ag cur na míre céanna biachláir in eagar ar an dá ghléas" },
     },
     {
       icon: ShoppingCart,

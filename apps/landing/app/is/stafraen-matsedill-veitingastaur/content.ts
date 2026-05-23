@@ -1,4 +1,4 @@
-import { Languages, ShieldAlert, Palette, LayoutList, Smartphone, ShoppingCart } from "lucide-react";
+import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: LayoutList,
-      eyebrow: "Matseðill án mynda",
-      heading: "Matseðill án mynda lítur jafnvel út.",
-      body: "Sumir réttir hafa kannski ekki myndir — og það er fullkomlega í lagi. IQ Rest sýnir spjöldin með og án mynda jafnt: leturfræði, ofnæmisvakar og verð halda premium tilfinningu. Blanda af réttum með og án mynda heldur samhengi.",
+      icon: Languages,
+      eyebrow: "35 gervigreindar tungumál",
+      heading: "35 gervigreindar tungumál — hver gestur les matseðilinn á sínu eigin.",
+      body: "Einn QR kóði, 35 tungumál. Gervigreindin höndlar matargerðarsamhengið — heiti rétta og lýsingar hljóma náttúrulega. Ferðamenn panta með meiri öryggi og meðalreikningur vex án þess að þjónninn þurfi að þýða hvern rétt.",
       bullets: [
-        "Spjöld án mynda líta ekki tóm út.",
-        "Leturfræðin aðlagast innihaldi spjaldsins.",
-        "Samhentur stíll fyrir rétti með og án mynda.",
+        "35 tungumál innifalin í áskriftinni, án aukagjalds.",
+        "Gervigreind sem skilur matargerðarsamhengi, ekki hrátt Google Translate.",
+        "Gesturinn skiptir um tungumál með einum smelli í matseðlinum sjálfum.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Tveir símar á borði: matseðill með myndum af réttum og matseðill aðeins með texta" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Tveir gestir lesa sama stafræna matseðilinn á mismunandi tungumálum í sínum eigin símum" },
     },
     {
       icon: ShieldAlert,
@@ -66,30 +66,6 @@ export const CONTENT: FeatureContent = {
         "Samskiptasíða: kort, sími, Instagram, WhatsApp.",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Tveir símar á kaffihúsborði: heimaskjár matseðilsins með myndbandsbakgrunni og samskiptasíða með korti" },
-    },
-    {
-      icon: Languages,
-      eyebrow: "35 gervigreindar tungumál",
-      heading: "35 gervigreindar tungumál — hver gestur les matseðilinn á sínu eigin.",
-      body: "Einn QR kóði, 35 tungumál. Gervigreindin höndlar matargerðarsamhengið — heiti rétta og lýsingar hljóma náttúrulega. Ferðamenn panta með meiri öryggi og meðalreikningur vex án þess að þjónninn þurfi að þýða hvern rétt.",
-      bullets: [
-        "35 tungumál innifalin í áskriftinni, án aukagjalds.",
-        "Gervigreind sem skilur matargerðarsamhengi, ekki hrátt Google Translate.",
-        "Gesturinn skiptir um tungumál með einum smelli í matseðlinum sjálfum.",
-      ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Tveir gestir lesa sama stafræna matseðilinn á mismunandi tungumálum í sínum eigin símum" },
-    },
-    {
-      icon: Smartphone,
-      eyebrow: "Stjórnaðu úr hvaða tæki sem er",
-      heading: "Stjórnaðu matseðlinum úr hvaða tæki sem er.",
-      body: "Eitt spjald opnar í vafranum á síma, spjaldtölvu eða fartölvu. Breyttu verði, taktu rétt af stoppleti eða bættu við sérstöku tilboði — gestir sjá breytinguna á sekúndum. Engar uppsetningar, engar samþættingar.",
-      bullets: [
-        "Engin app til að setja upp — opnaðu vafrann og þú ert kominn inn.",
-        "Verð, myndir og stopplisti — nokkrar pikkanir úr símanum.",
-        "Stjórnaðu matseðlinum hvaðan sem er, þar á meðal úr salnum.",
-      ],
-      image: { src: "/landing/feature-mobile.webp", alt: "Fartölva og sími á kaffihúsborði sem breyta sama matseðilshlutnum á báðum tækjum" },
     },
     {
       icon: ShoppingCart,

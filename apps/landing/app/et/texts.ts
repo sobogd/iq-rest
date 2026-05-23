@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "Digitaalne menüü, QR-tellimused, laudade broneerimine ja AI-tõlge. Käivitub 5 minutiga. 14 päeva tasuta.",
   },
 
-  ctaText: "Proovi tasuta",
+  ctaText: "Loo digitaalne menüü",
   demoText: "Vaata demo",
   microcopy: "14 päeva tasuta · Ilma kaardita · Tühista igal ajal",
 
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "Hinnad",
     navFaq: "KKK",
     signIn: "Logi sisse",
-    cta: "Alusta",
+    cta: "Loo menüü",
   },
 
   hero: {

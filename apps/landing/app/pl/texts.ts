@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "Cyfrowe menu, zamówienia QR, rezerwacja stolików i tłumaczenie AI. Uruchomienie w 5 minut. 14 dni za darmo.",
   },
 
-  ctaText: "Wypróbuj za darmo",
+  ctaText: "Stwórz cyfrowe menu",
   demoText: "Zobacz demo",
   microcopy: "14 dni za darmo · Bez karty · Anuluj w każdej chwili",
 
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "Cennik",
     navFaq: "FAQ",
     signIn: "Zaloguj się",
-    cta: "Zacznij",
+    cta: "Stwórz menu",
   },
 
   hero: {

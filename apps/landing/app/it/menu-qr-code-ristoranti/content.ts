@@ -1,4 +1,4 @@
-import { Languages, ShieldAlert, Palette, LayoutList, Smartphone, ShoppingCart } from "lucide-react";
+import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: LayoutList,
-      eyebrow: "QR menu anche senza foto",
-      heading: "Il menu QR resta elegante anche senza foto di ogni piatto.",
-      body: "Non sempre è possibile fotografare tutti i piatti — soprattutto in cucine stagionali. IQ Rest dispone le card del menu QR in modo coerente: piatti con immagine e piatti solo testo convivono nello stesso layout pulito, senza spazi vuoti o disallineamenti.",
+      icon: Languages,
+      eyebrow: "Un QR, 35 lingue",
+      heading: "Un solo QR code, il menù in 35 lingue.",
+      body: "L'ospite scansiona il QR code e sceglie la propria lingua: la traduzione è gestita da un'IA con sensibilità gastronomica, non da un traduttore generico. Niente menu separati per turisti, niente fogli aggiuntivi sui tavoli.",
       bullets: [
-        "Le card senza foto restano leggibili e ordinate.",
-        "La tipografia si adatta al contenuto della singola card.",
-        "Mix di piatti con e senza foto senza compromettere il design.",
+        "Una sola stampa del QR copre 35 lingue, incluse nell'abbonamento.",
+        "L'IA conosce il lessico culinario — i piatti suonano naturali in ogni lingua.",
+        "L'ospite cambia lingua direttamente dal menu, senza riaprire il QR.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Due cellulari su un tavolo che mostrano lo stesso menu QR: una versione con foto dei piatti e una solo testuale" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Due ospiti scansionano lo stesso QR code sul tavolo e leggono il menu in lingue diverse" },
     },
     {
       icon: ShieldAlert,
@@ -66,30 +66,6 @@ export const CONTENT: FeatureContent = {
         "Pagina contatti integrata: mappa, telefono, Instagram, WhatsApp.",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Due cellulari su un tavolino: schermata iniziale del menu QR con video di sfondo e pagina contatti con mappa" },
-    },
-    {
-      icon: Languages,
-      eyebrow: "Un QR, 35 lingue",
-      heading: "Un solo QR code, il menù in 35 lingue.",
-      body: "L'ospite scansiona il QR code e sceglie la propria lingua: la traduzione è gestita da un'IA con sensibilità gastronomica, non da un traduttore generico. Niente menu separati per turisti, niente fogli aggiuntivi sui tavoli.",
-      bullets: [
-        "Una sola stampa del QR copre 35 lingue, incluse nell'abbonamento.",
-        "L'IA conosce il lessico culinario — i piatti suonano naturali in ogni lingua.",
-        "L'ospite cambia lingua direttamente dal menu, senza riaprire il QR.",
-      ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Due ospiti scansionano lo stesso QR code sul tavolo e leggono il menu in lingue diverse" },
-    },
-    {
-      icon: Smartphone,
-      eyebrow: "Pannello da cellulare",
-      heading: "Aggiorni il menu QR dal cellulare, in tempo reale.",
-      body: "Il pannello di gestione del menu QR si apre nel browser di cellulare, tablet o portatile. Cambi un prezzo, togli un piatto dalla stop list o aggiungi una proposta del giorno: gli ospiti che hanno il QR già aperto vedono la modifica in pochi secondi.",
-      bullets: [
-        "Nessuna app: il pannello vive nel browser, come il menu QR.",
-        "Prezzi, foto e disponibilità modificabili dal telefono in sala.",
-        "Il QR resta sempre lo stesso — è il menu collegato a cambiare.",
-      ],
-      image: { src: "/landing/feature-mobile.webp", alt: "Portatile e cellulare su un tavolino: lo stesso piatto del menu QR aggiornato in parallelo" },
     },
     {
       icon: ShoppingCart,

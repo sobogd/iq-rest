@@ -1,4 +1,4 @@
-import { Languages, ShieldAlert, Palette, LayoutList, Smartphone, ShoppingCart } from "lucide-react";
+import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
@@ -32,16 +32,16 @@ export const CONTENT: FeatureContent = {
 
   subFeatures: [
     {
-      icon: LayoutList,
-      eyebrow: "Menu sans photos",
-      heading: "Un menu sans photos est tout aussi élégant.",
-      body: "Certains plats n'ont peut-être pas de photos — et c'est parfaitement bien. IQ Rest affiche les cartes avec et sans images de manière cohérente : typographie, allergènes et prix conservent un rendu premium. Un mix de plats avec et sans photos reste harmonieux.",
+      icon: Languages,
+      eyebrow: "35 langues IA",
+      heading: "35 langues IA — chaque client lit le menu dans la sienne.",
+      body: "Un seul code QR, 35 langues. L'IA gère le contexte culinaire — les noms et descriptions des plats sonnent naturels. Les touristes commandent avec plus de confiance et le ticket moyen augmente sans qu'un serveur doive traduire chaque plat.",
       bullets: [
-        "Les cartes sans photos ne paraissent pas vides.",
-        "La typographie s'adapte au contenu de la carte.",
-        "Style cohérent pour les plats avec et sans images.",
+        "35 langues incluses dans l'abonnement, sans surcoût.",
+        "IA consciente du contexte culinaire, pas un simple Google Translate.",
+        "Le client change de langue en un seul tap dans le menu.",
       ],
-      image: { src: "/landing/feature-photos-optional.webp", alt: "Deux téléphones sur une table : menu avec photos des plats et menu uniquement texte" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Deux clients lisent le même menu numérique dans des langues différentes sur leurs propres téléphones" },
     },
     {
       icon: ShieldAlert,
@@ -66,30 +66,6 @@ export const CONTENT: FeatureContent = {
         "Page contact : carte, téléphone, Instagram, WhatsApp.",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Deux téléphones sur une table de café : écran d'accueil du menu avec arrière-plan vidéo et page contact avec carte" },
-    },
-    {
-      icon: Languages,
-      eyebrow: "35 langues IA",
-      heading: "35 langues IA — chaque client lit le menu dans la sienne.",
-      body: "Un seul code QR, 35 langues. L'IA gère le contexte culinaire — les noms et descriptions des plats sonnent naturels. Les touristes commandent avec plus de confiance et le ticket moyen augmente sans qu'un serveur doive traduire chaque plat.",
-      bullets: [
-        "35 langues incluses dans l'abonnement, sans surcoût.",
-        "IA consciente du contexte culinaire, pas un simple Google Translate.",
-        "Le client change de langue en un seul tap dans le menu.",
-      ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Deux clients lisent le même menu numérique dans des langues différentes sur leurs propres téléphones" },
-    },
-    {
-      icon: Smartphone,
-      eyebrow: "Gestion depuis tout appareil",
-      heading: "Gérez le menu depuis n'importe quel appareil.",
-      body: "Un seul panneau s'ouvre dans le navigateur sur téléphone, tablette ou ordinateur portable. Changez un prix, retirez un plat de la stop liste ou ajoutez une suggestion du jour — les clients voient le changement en quelques secondes. Sans installation, sans intégration.",
-      bullets: [
-        "Aucune app à installer — ouvrez un navigateur et c'est parti.",
-        "Prix, photos et stop liste — quelques taps depuis le téléphone.",
-        "Gérez le menu depuis n'importe où, y compris la salle.",
-      ],
-      image: { src: "/landing/feature-mobile.webp", alt: "Ordinateur portable et téléphone sur une table de café modifiant le même article du menu sur les deux appareils" },
     },
     {
       icon: ShoppingCart,

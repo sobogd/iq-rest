@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       'Menu numérique, commandes QR, réservation de tables et traduction IA. Démarrage en 5 minutes. 14 jours gratuits.',
   },
 
-  ctaText: 'Essayer gratuitement',
+  ctaText: 'Créer le menu digital',
   demoText: 'Voir la démo',
   microcopy: '14 jours gratuits · Sans carte · Annulation à tout moment',
 
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     navPricing: 'Tarifs',
     navFaq: 'FAQ',
     signIn: 'Connexion',
-    cta: 'Démarrer',
+    cta: 'Créer le menu',
   },
 
   hero: {

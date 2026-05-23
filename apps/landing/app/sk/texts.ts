@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "Digitálne menu, QR objednávky, rezervácia stolov a AI preklad. Spustenie za 5 minút. 14 dní zadarmo.",
   },
 
-  ctaText: "Vyskúšajte zadarmo",
+  ctaText: "Vytvoriť digitálne menu",
   demoText: "Pozrieť demo",
   microcopy: "14 dní zadarmo · Bez karty · Zrušenie kedykoľvek",
 
@@ -26,7 +26,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "Ceny",
     navFaq: "Časté otázky",
     signIn: "Prihlásiť sa",
-    cta: "Začať",
+    cta: "Vytvoriť menu",
   },
 
   hero: {
