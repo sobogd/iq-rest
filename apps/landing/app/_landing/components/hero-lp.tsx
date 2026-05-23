@@ -28,7 +28,7 @@ export function HeroLp({
       data-section="hero"
       className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 pt-6 pb-10 sm:pb-16 lg:pt-10 lg:pb-20"
     >
-      <div className="grid grid-cols-1 gap-8 lg:gap-14 xl:gap-20 lg:grid-cols-[1fr_1.05fr] lg:items-center">
+      <div className="grid grid-cols-1 gap-4 lg:gap-14 xl:gap-20 lg:grid-cols-[1fr_1.05fr] lg:items-center">
         <div className="order-1 lg:order-1 flex flex-col items-center text-center lg:items-start lg:text-start">
           <div className="sm:hidden w-full mb-5 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
             <div className="flex w-max animate-marquee gap-1.5">

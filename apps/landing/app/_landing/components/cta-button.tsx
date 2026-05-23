@@ -54,11 +54,11 @@ export function CtaButton({
 
   return (
     <div className={`flex flex-col w-full ${alignClass}`}>
-      <div className={`flex ${stackMobile ? `flex-col w-full sm:w-auto sm:flex-row ${align === "start" ? "items-start sm:items-center" : align === "end" ? "items-end sm:items-center" : "items-center"} [&>*]:w-full sm:[&>*]:w-auto [&_button]:w-full sm:[&_button]:w-auto` : "flex-row flex-wrap items-center"} gap-3 ${rowJustify}`}>
+      <div className={`flex ${stackMobile ? `flex-col w-full sm:w-auto sm:flex-row ${align === "start" ? "items-start sm:items-center" : align === "end" ? "items-end sm:items-center" : "items-center"}` : "flex-row flex-wrap items-center"} gap-3 ${rowJustify}`}>
         <button
           type="button"
           onClick={() => cta.onClick(trackEvent)}
-          className={`${baseClass} ${isSticky || stackMobile ? "w-full sm:w-auto" : "w-auto"}`}
+          className={`${baseClass} ${isSticky ? "w-full sm:w-auto" : "w-auto"}`}
         >
           {cta.label}
         </button>
