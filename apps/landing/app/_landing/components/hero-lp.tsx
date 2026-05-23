@@ -88,7 +88,7 @@ export function HeroLp({
         </div>
 
         <div className="order-2 lg:order-2 w-full lg:max-w-[calc(100%-40px)] lg:ml-auto">
-          <div className="relative w-full aspect-[4/3] overflow-hidden rounded-2xl lg:rounded-3xl shadow-2xl ring-1 ring-black/5 dark:ring-white/5">
+          <div className="relative w-full aspect-[16/9] sm:aspect-[4/3] overflow-hidden rounded-2xl lg:rounded-3xl shadow-2xl ring-1 ring-black/5 dark:ring-white/5">
             <Image
               src={imageSrc}
               alt={imageAlt}
