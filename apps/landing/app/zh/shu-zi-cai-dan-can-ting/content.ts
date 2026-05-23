@@ -21,8 +21,6 @@ export const CONTENT: FeatureContent = {
   hero: {
     headline: "餐厅数字菜单。",
     sub: "您纸质菜单的在线版本,包含图片、过敏原、描述和实时价格更新。客人以自己的语言查看菜单;餐厅节省印刷成本。",
-    imageSrc: "/landing/hero-digital-menu.webp",
-    imageAlt: "Two phones on a wooden restaurant table showing a digital menu with dish photos and prices",
   },
 
   scan: {

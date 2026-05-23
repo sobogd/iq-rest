@@ -21,8 +21,6 @@ export const CONTENT: FeatureContent = {
   hero: {
     headline: "Digitalt menukort til restauranter.",
     sub: "Onlineversion af dit papirmenukort med billeder, allergener, beskrivelser og opdateringer af priser i realtid. Gæsterne ser menuen på deres eget sprog; restauranten sparer på tryk.",
-    imageSrc: "/landing/hero-digital-menu.webp",
-    imageAlt: "Two phones on a wooden restaurant table showing a digital menu with dish photos and prices",
   },
 
   scan: {

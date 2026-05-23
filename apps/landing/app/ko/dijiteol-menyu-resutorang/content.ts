@@ -21,8 +21,6 @@ export const CONTENT: FeatureContent = {
   hero: {
     headline: "레스토랑용 디지털 메뉴.",
     sub: "사진, 알레르겐, 설명 및 실시간 가격 업데이트가 있는 종이 메뉴의 온라인 버전. 손님은 자신의 언어로 메뉴를 볼 수 있으며 레스토랑은 인쇄 비용을 절약합니다.",
-    imageSrc: "/landing/hero-digital-menu.webp",
-    imageAlt: "Two phones on a wooden restaurant table showing a digital menu with dish photos and prices",
   },
 
   scan: {

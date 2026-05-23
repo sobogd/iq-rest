@@ -21,8 +21,6 @@ export const CONTENT: FeatureContent = {
   hero: {
     headline: "Ψηφιακό μενού για εστιατόρια.",
     sub: "Online έκδοση του χάρτινου μενού σας με φωτογραφίες, αλλεργιογόνα, περιγραφές και άμεση ενημέρωση τιμών. Οι πελάτες βλέπουν το μενού στη γλώσσα τους· το εστιατόριο εξοικονομεί από εκτυπώσεις.",
-    imageSrc: "/landing/hero-digital-menu.webp",
-    imageAlt: "Two phones on a wooden restaurant table showing a digital menu with dish photos and prices",
   },
 
   scan: {

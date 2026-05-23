@@ -21,8 +21,6 @@ export const CONTENT: FeatureContent = {
   hero: {
     headline: "منوی دیجیتال برای رستوران.",
     sub: "نسخه آنلاین منوی کاغذی شما با عکس، آلرژن‌ها، توضیحات و به‌روزرسانی زنده قیمت‌ها. مهمانان منو را به زبان خود می‌بینند؛ رستوران در چاپ صرفه‌جویی می‌کند.",
-    imageSrc: "/landing/hero-digital-menu.webp",
-    imageAlt: "Two phones on a wooden restaurant table showing a digital menu with dish photos and prices",
   },
 
   scan: {

@@ -21,8 +21,6 @@ export const CONTENT: FeatureContent = {
   hero: {
     headline: "Digitaalinen ruokalista ravintoloille.",
     sub: "Paperisen ruokalistasi online-versio kuvilla, allergeeneilla, kuvauksilla ja reaaliaikaisilla hintapäivityksillä. Vieraat näkevät ruokalistan omalla kielellään; ravintola säästää tulostuksessa.",
-    imageSrc: "/landing/hero-digital-menu.webp",
-    imageAlt: "Two phones on a wooden restaurant table showing a digital menu with dish photos and prices",
   },
 
   scan: {

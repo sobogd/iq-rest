@@ -21,8 +21,6 @@ export const CONTENT: FeatureContent = {
   hero: {
     headline: "Biachlár digiteach do bhialanna.",
     sub: "Leagan ar líne de do bhiachlár páipéir le grianghraif, ailléirginí, tuairiscí agus nuashonruithe beo praghsanna. Feiceann aíonna an biachlár ina dteanga féin; sábhálann an bhialann ar phriontáil.",
-    imageSrc: "/landing/hero-digital-menu.webp",
-    imageAlt: "Two phones on a wooden restaurant table showing a digital menu with dish photos and prices",
   },
 
   scan: {

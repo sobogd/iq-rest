@@ -21,8 +21,6 @@ export const CONTENT: FeatureContent = {
   hero: {
     headline: "Stafrænn matseðill fyrir veitingastaði.",
     sub: "Netútgáfa af pappírs matseðlinum þínum með myndum, ofnæmisvökum, lýsingum og uppfærslum á verðum í rauntíma. Gestir sjá matseðilinn á sínu eigin tungumáli; veitingastaðurinn sparar á prentun.",
-    imageSrc: "/landing/hero-digital-menu.webp",
-    imageAlt: "Two phones on a wooden restaurant table showing a digital menu with dish photos and prices",
   },
 
   scan: {

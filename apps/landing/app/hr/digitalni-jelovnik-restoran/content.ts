@@ -21,8 +21,6 @@ export const CONTENT: FeatureContent = {
   hero: {
     headline: "Digitalni jelovnik za restorane.",
     sub: "Online verzija vašeg papirnog jelovnika s fotografijama, alergenima, opisima i ažuriranjem cijena u stvarnom vremenu. Gosti vide jelovnik na svom jeziku; restoran štedi na tisku.",
-    imageSrc: "/landing/hero-digital-menu.webp",
-    imageAlt: "Two phones on a wooden restaurant table showing a digital menu with dish photos and prices",
   },
 
   scan: {

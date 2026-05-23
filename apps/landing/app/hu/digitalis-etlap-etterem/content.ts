@@ -21,8 +21,6 @@ export const CONTENT: FeatureContent = {
   hero: {
     headline: "Digitális étlap éttermeknek.",
     sub: "A papír étlap online változata fotókkal, allergénekkel, leírásokkal és valós idejű árfrissítésekkel. A vendégek a saját nyelvükön látják az étlapot; az étterem spórol a nyomtatáson.",
-    imageSrc: "/landing/hero-digital-menu.webp",
-    imageAlt: "Two phones on a wooden restaurant table showing a digital menu with dish photos and prices",
   },
 
   scan: {

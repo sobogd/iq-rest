@@ -21,8 +21,6 @@ export const CONTENT: FeatureContent = {
   hero: {
     headline: "Cyfrowe menu dla restauracji.",
     sub: "Internetowa wersja Twojego papierowego menu ze zdjęciami, alergenami, opisami i aktualizacjami cen na żywo. Goście widzą menu w swoim języku; restauracja oszczędza na druku.",
-    imageSrc: "/landing/hero-digital-menu.webp",
-    imageAlt: "Two phones on a wooden restaurant table showing a digital menu with dish photos and prices",
   },
 
   scan: {
