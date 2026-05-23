@@ -68,18 +68,8 @@ export function CategoryDishes({ category, dietFilter = [] }: Props) {
                   <MenuImage src={item.imageUrl} alt={name} priority={ii === 0} />
                 ) : null}
                 <div className={item.imageUrl ? "p-5" : "px-5 pb-5"}>
-                  <div className="flex justify-between items-start gap-4">
-                    <h3 className="font-semibold text-lg text-black flex-1 min-w-0">
-                      {name}
-                    </h3>
-                    {!ordersEnabled && Number(item.price) > 0 ? (
-                      <span className="font-bold text-lg shrink-0 text-black">
-                        {formatPrice(item.price, restaurant.currency)}
-                      </span>
-                    ) : null}
-                  </div>
                   {item.diets?.length ? (
-                    <div className="mt-1.5 flex flex-wrap items-center gap-2">
+                    <div className="mb-2 flex flex-wrap items-center gap-2">
                       {item.diets.map((code) => (
                         <DietIcon
                           key={code}
@@ -91,6 +81,16 @@ export function CategoryDishes({ category, dietFilter = [] }: Props) {
                       ))}
                     </div>
                   ) : null}
+                  <div className="flex justify-between items-start gap-4">
+                    <h3 className="font-semibold text-lg text-black flex-1 min-w-0">
+                      {name}
+                    </h3>
+                    {!ordersEnabled && Number(item.price) > 0 ? (
+                      <span className="font-bold text-lg shrink-0 text-black">
+                        {formatPrice(item.price, restaurant.currency)}
+                      </span>
+                    ) : null}
+                  </div>
                   {description ? (
                     <p className="mt-2 text-sm text-gray-500 whitespace-pre-line">{description}</p>
                   ) : null}
