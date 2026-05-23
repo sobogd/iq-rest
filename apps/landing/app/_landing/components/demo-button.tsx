@@ -130,7 +130,7 @@ export function DemoButton({
                 type="button"
                 onClick={handleClose}
                 aria-label="Close"
-                className="absolute -top-3 -right-3 text-white hover:text-gray-300 transition-colors z-30"
+                className="absolute -top-[22px] -right-[22px] text-white hover:text-gray-300 transition-colors z-30"
               >
                 <X className="w-8 h-8" />
               </button>

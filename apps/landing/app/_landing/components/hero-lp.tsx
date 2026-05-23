@@ -82,7 +82,6 @@ export function HeroLp({
               locale={locale}
               align="center-mobile"
               trackEvent="l_hero_cta_click"
-              stackMobile
               extra={<DemoButton text={demoText} locale={locale} trackEvent="l_hero_demo" createText={ctaText} />}
             />
           </div>
@@ -96,7 +95,7 @@ export function HeroLp({
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
+              className="object-cover scale-125 sm:scale-100"
             />
           </div>
         </div>
