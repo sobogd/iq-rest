@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { analytics } from "@/lib/analytics";
 
 const GCLID_REGEX = /^[A-Za-z0-9_-]{1,256}$/;
+const FBCLID_REGEX = /^[A-Za-z0-9_.-]{1,512}$/;
 const LOCALE_REGEX = /^\/([a-z]{2})(?=\/|$)/;
 const FROM_REGEX = /^[a-z0-9_]{1,32}$/;
 
@@ -64,6 +65,14 @@ function fireGclidEvent(): void {
   analytics.track(`l_gclid_${gclid}`);
 }
 
+function fireFbclidEvent(): void {
+  const sp = new URLSearchParams(window.location.search);
+  const fbclid = sp.get("fbclid");
+  if (!fbclid || !FBCLID_REGEX.test(fbclid)) return;
+
+  analytics.track(`l_fbclid_${fbclid}`);
+}
+
 function firePageEvent(): void {
   const pathname = window.location.pathname || "/";
   const localeMatch = pathname.match(LOCALE_REGEX);
@@ -87,6 +96,7 @@ interface PageTrackerProps {
 export function PageTracker(_props: PageTrackerProps = {}) {
   useEffect(() => {
     fireGclidEvent();
+    fireFbclidEvent();
     fireFromAndClean();
     firePageEvent();
     fireThemeEvent();
