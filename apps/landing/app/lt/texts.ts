@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "Skaitmeninis meniu, QR užsakymai, staliukų rezervacija ir AI vertimas. Paleidimas per 5 minutes. 14 dienų nemokamai.",
   },
 
-  ctaText: "Sukurti skaitmeninį meniu",
+  ctaText: "Pradėkite nemokamai",
   homeCtaText: "Sukurkite savo platformą",
   demoText: "Žiūrėti demonstraciją",
   microcopy: "14 dienų nemokamai · Be kortelės · Atšaukite bet kada",

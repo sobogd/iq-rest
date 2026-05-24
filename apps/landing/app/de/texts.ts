@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "Digitale Speisekarte, QR-Bestellungen, Tischreservierung und KI-Übersetzung. Start in 5 Minuten. 14 Tage kostenlos.",
   },
 
-  ctaText: "Digitale Speisekarte erstellen",
+  ctaText: "Kostenlos starten",
   homeCtaText: "Plattform aufbauen",
   demoText: "Demo ansehen",
   microcopy: "14 Tage kostenlos · Ohne Kreditkarte · Jederzeit kündbar",

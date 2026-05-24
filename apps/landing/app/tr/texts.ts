@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "Dijital menü, QR sipariş, masa rezervasyonu ve AI çeviri. 5 dakikada hazır. 14 gün ücretsiz.",
   },
 
-  ctaText: "Dijital menü oluştur",
+  ctaText: "Ücretsiz başla",
   homeCtaText: "Platformunu oluştur",
   demoText: "Demoyu izle",
   microcopy: "14 gün ücretsiz · Kart yok · İstediğiniz zaman iptal edin",

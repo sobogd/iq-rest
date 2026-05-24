@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "数字菜单、QR 点餐、餐桌预订和 AI 翻译。5 分钟上线。14 天免费。",
   },
 
-  ctaText: "创建数字菜单",
+  ctaText: "免费开始",
   homeCtaText: "搭建你的平台",
   demoText: "观看演示",
   microcopy: "14 天免费 · 无需信用卡 · 随时取消",

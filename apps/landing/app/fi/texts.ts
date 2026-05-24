@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "Digitaalinen ruokalista, QR-tilaukset, pöytävaraus ja tekoälykäännös. Käyntiin 5 minuutissa. 14 päivää ilmaiseksi.",
   },
 
-  ctaText: "Luo digitaalinen ruokalista",
+  ctaText: "Aloita ilmaiseksi",
   homeCtaText: "Rakenna alustasi",
   demoText: "Katso demo",
   microcopy: "14 päivää ilmaiseksi · Ilman korttia · Peruutus koska tahansa",

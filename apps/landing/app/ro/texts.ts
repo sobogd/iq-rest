@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "Meniu digital, comenzi QR, rezervare mese și traducere AI. Lansare în 5 minute. 14 zile gratuit.",
   },
 
-  ctaText: "Creează meniu digital",
+  ctaText: "Începe gratuit",
   homeCtaText: "Creează-ți platforma",
   demoText: "Vizionați demo",
   microcopy: "14 zile gratuit · Fără card · Anulați oricând",

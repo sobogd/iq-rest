@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "Digitaalne menüü, QR-tellimused, laudade broneerimine ja AI-tõlge. Käivitub 5 minutiga. 14 päeva tasuta.",
   },
 
-  ctaText: "Loo digitaalne menüü",
+  ctaText: "Alusta tasuta",
   homeCtaText: "Loo oma platvorm",
   demoText: "Vaata demo",
   microcopy: "14 päeva tasuta · Ilma kaardita · Tühista igal ajal",

@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "Digitális étlap, QR rendelések, asztalfoglalás és AI fordítás. Indítás 5 perc alatt. 14 nap ingyenes.",
   },
 
-  ctaText: "Digitális étlap létrehozása",
+  ctaText: "Kezdés ingyen",
   homeCtaText: "Építse fel platformját",
   demoText: "Nézze meg a demót",
   microcopy: "14 nap ingyenes · Kártya nélkül · Lemondás bármikor",

@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "Carta digital, comandes QR, reserva de taules i traducció IA. Engega en 5 minuts. 14 dies gratis.",
   },
 
-  ctaText: "Crea la carta digital",
+  ctaText: "Comença gratis",
   homeCtaText: "Crea la teva plataforma",
   demoText: "Mira la demo",
   microcopy: "14 dies gratis · Sense targeta · Cancel·la quan vulguis",

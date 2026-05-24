@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "Digitalni jedilnik, QR naročila, rezervacija miz in AI prevod. Zagon v 5 minutah. 14 dni brezplačno.",
   },
 
-  ctaText: "Ustvari digitalni meni",
+  ctaText: "Začni brezplačno",
   homeCtaText: "Ustvarite svojo platformo",
   demoText: "Oglejte si demo",
   microcopy: "14 dni brezplačno · Brez kartice · Prekličete kadar koli",

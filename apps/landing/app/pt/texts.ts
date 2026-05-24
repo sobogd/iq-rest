@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "Menu digital, pedidos QR, reserva de mesas e tradução IA. Arranque em 5 minutos. 14 dias grátis.",
   },
 
-  ctaText: "Criar menu digital",
+  ctaText: "Começar grátis",
   homeCtaText: "Crie a sua plataforma",
   demoText: "Ver demonstração",
   microcopy: "14 dias grátis · Sem cartão · Cancela quando quiseres",

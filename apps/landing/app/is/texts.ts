@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "Stafrænn matseðill, QR pantanir, borðabókun og þýðing með gervigreind. Komið í gang á 5 mínútum. 14 daga ókeypis.",
   },
 
-  ctaText: "Búa til stafrænan matseðil",
+  ctaText: "Byrjaðu frítt",
   homeCtaText: "Búðu til vettvanginn þinn",
   demoText: "Horfðu á kynningu",
   microcopy: "14 dagar ókeypis · Ekkert kort · Hætta hvenær sem er",
