@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
-import { LandingHeaderLp } from "@/app/_landing/components/header-lp";
-import { LandingFooterLp } from "@/app/_landing/components/footer-lp";
-import { FaqLp } from "@/app/_landing/components/faq-lp";
-import { Section } from "@/app/_landing/components/section";
-import { PageTracker } from "@/app/_landing/components/page-tracker";
-import { PricingHero } from "@/app/_landing/components/pricing-hero";
+import { PricingTemplate } from "@/app/_landing/templates/pricing-template";
 import { TEXTS as DEFAULT } from "../texts";
 import { TEXTS } from "./texts";
 import { SCHEMA_PRICE_BASIC_EUR, SCHEMA_PRICE_PRO_EUR } from "@/lib/pricing";
@@ -80,22 +75,12 @@ const JSON_LD = JSON.stringify({
 
 export default function PricingPage() {
   return (
-    <main className="relative">
-      <PageTracker />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON_LD }} />
-      <LandingHeaderLp texts={DEFAULT.header} locale={LOCALE} featureLinks={DEFAULT.footer.featureLinks} />
-
-      <Section dataSection="pricing_hero" noContainer accent>
-        <PricingHero locale={LOCALE} ctaText={DEFAULT.ctaText} demoText={DEFAULT.demoText} microcopy={DEFAULT.microcopy} texts={DEFAULT.pricingHero!} trackPrefix="l_ga_pricing_hero" />
-      </Section>
-
-      <Section id="faq" dataSection="faq" noContainer>
-        <FaqLp texts={PRICING_FAQ} />
-      </Section>
-
-      <Section as="footer" dataSection="footer" noContainer accent className="!py-6 sm:!py-8">
-        <LandingFooterLp texts={DEFAULT.footer} headerTexts={DEFAULT.header} locale={LOCALE} variant="lp" />
-      </Section>
-    </main>
+    <PricingTemplate
+      locale={LOCALE}
+      texts={DEFAULT}
+      faq={PRICING_FAQ}
+      jsonLd={JSON_LD}
+      trackPrefix="l_ga_pricing_hero"
+    />
   );
 }
