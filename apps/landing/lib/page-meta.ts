@@ -22,6 +22,7 @@ export const FEATURE_PAGES: Record<string, PageMeta> = {
   "/order-taking": { lastModified: "2026-05-20", changeFrequency: "monthly", priority: 0.8 },
   "/bookings": { lastModified: "2026-05-20", changeFrequency: "monthly", priority: 0.8 },
   "/kitchen-display": { lastModified: "2026-05-20", changeFrequency: "monthly", priority: 0.8 },
+  "/menu-qr-code": { lastModified: "2026-05-24", changeFrequency: "monthly", priority: 0.8 },
   "/pricing": { lastModified: "2026-05-20", changeFrequency: "monthly", priority: 0.9 },
 };
 
@@ -30,14 +31,9 @@ export const FEATURE_PAGES: Record<string, PageMeta> = {
 // entry per listed locale; hreflang alternates list only those locales.
 export type PartialPageMeta = PageMeta & { locales: readonly string[] };
 
-export const PARTIAL_FEATURE_PAGES: Record<string, PartialPageMeta> = {
-  "/menu-qr-code": {
-    lastModified: "2026-05-22",
-    changeFrequency: "monthly",
-    priority: 0.7,
-    locales: ["it", "es", "pt", "ca"],
-  },
-};
+// Currently empty — QR-menu graduated to FEATURE_PAGES (universal). Kept for
+// future market-specific landings that don't ship on every locale.
+export const PARTIAL_FEATURE_PAGES: Record<string, PartialPageMeta> = {};
 
 // Last-Modified lookup keyed on path (`/` or `/<feature>`).
 export function lastModifiedFor(path: string): string | undefined {

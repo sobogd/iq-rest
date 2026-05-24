@@ -166,15 +166,46 @@ export const LOCALE_SLUG_OVERRIDES: Record<string, Record<string, string>> = {
     is: "/eldhus-skjar",
   },
 
-  // Partial-coverage route: only the 4 locales targeted by the "menù QR
-  // code" / "código QR restaurante" Google Ads campaigns have this page.
-  // Other locales have no equivalent — `swapLocale()` sends them home in
-  // that case (no override for target = fallback to `/${target}`).
+  // QR-menu feature page — universal across all 35 locales. Slugs are
+  // keyword-rich and transliterated to Latin per locale (CJK/Cyrillic/
+  // Arabic included). `en` is served at the root so its value is the bare
+  // root path.
   "/menu-qr-code": {
-    it: "/menu-qr-code-ristoranti",
+    en: "/qr-code-menu-for-restaurants",
     es: "/codigo-qr-restaurante",
+    it: "/menu-qr-code-ristoranti",
     pt: "/qr-code-menu-restaurantes",
     ca: "/codi-qr-restaurant",
+    ru: "/qr-menyu-restoran",
+    de: "/qr-code-speisekarte-restaurant",
+    fr: "/menu-qr-code-restaurant",
+    nl: "/qr-code-menukaart-restaurant",
+    pl: "/menu-qr-kod-restauracja",
+    tr: "/qr-kod-menu-restoran",
+    uk: "/qr-menyu-restoran",
+    ja: "/qr-menu-resutoran",
+    ko: "/qr-menyu-resutorang",
+    zh: "/qr-cai-dan-can-ting",
+    ar: "/qr-menu-matam",
+    fa: "/menooye-qr-restoran",
+    cs: "/qr-menu-restaurace",
+    sk: "/qr-menu-restauracia",
+    hu: "/qr-kod-etlap-etterem",
+    ro: "/meniu-qr-cod-restaurant",
+    el: "/qr-menou-estiatorio",
+    bg: "/qr-menyu-restorant",
+    hr: "/qr-meni-restoran",
+    sr: "/qr-meni-restoran",
+    sl: "/qr-meni-restavracija",
+    da: "/qr-kode-menukort-restaurant",
+    no: "/qr-kode-meny-restaurant",
+    sv: "/qr-kod-meny-restaurang",
+    fi: "/qr-koodi-ruokalista-ravintola",
+    et: "/qr-kood-menuu-restoran",
+    lt: "/qr-kodo-meniu-restoranas",
+    lv: "/qr-koda-izvelne-restorans",
+    ga: "/biachlar-qr-coda-bialann",
+    is: "/qr-matsedill-veitingastadur",
   },
 
   "/pricing": {
