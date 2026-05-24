@@ -575,6 +575,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
                         src={imageUrl}
                         alt="Item"
                         fill
+                        unoptimized
                         className="object-cover"
                         sizes="128px"
                       />

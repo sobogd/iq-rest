@@ -3,6 +3,17 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin();
 
+// S3 host for next/image remotePatterns. Read from env so the secret host
+// never gets hardcoded in the repo. Menu images live at
+// `${S3_HOST}/${S3_NAME}/<key>`; optimization needs the hostname allow-listed.
+const s3Hostname = (() => {
+  try {
+    return process.env.S3_HOST ? new URL(process.env.S3_HOST).hostname : undefined;
+  } catch {
+    return undefined;
+  }
+})();
+
 const nextConfig: NextConfig = {
   // Compiler optimizations
   compiler: {
@@ -15,9 +26,13 @@ const nextConfig: NextConfig = {
   // Hide dev indicator
   devIndicators: false,
 
-  // Allow images from S3 with optimized settings
+  // Optimize images (responsive srcset + modern formats) for Core Web Vitals.
+  // S3 host allow-listed via remotePatterns so menu images keep working.
   images: {
-    unoptimized: true,
+    formats: ["image/avif", "image/webp"],
+    remotePatterns: s3Hostname
+      ? [{ protocol: "https", hostname: s3Hostname }]
+      : [],
   },
 
   // Don't bundle sharp — install native binary on target server

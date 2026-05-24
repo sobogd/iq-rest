@@ -341,6 +341,7 @@ export function DesignPage({ initialRestaurant, plan }: DesignPageProps) {
                           src={source}
                           alt="Background"
                           fill
+                          unoptimized
                           className="object-cover"
                           sizes="128px"
                         />

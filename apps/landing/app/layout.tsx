@@ -16,25 +16,16 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://iq-rest.com'),
+  // Page-level titles already carry the "| IQ Rest" brand suffix, so the
+  // template must NOT append it again (was producing "... | IQ Rest | IQ Rest").
+  // `%s` passes the page title through verbatim; `default` covers segments
+  // that set no title of their own.
   title: {
     default: "IQ Rest - QR Menu for Restaurant & Cafe | Digital Menu Website",
-    template: "%s | IQ Rest"
+    template: "%s"
   },
   description:
     "Create professional QR menu for restaurant and cafe in minutes. Digital menu website solution with instant updates, multilingual support, and analytics. Perfect for restaurants and cafes.",
-  keywords: [
-    "qr menu for restaurant",
-    "qr menu for cafe",
-    "website for restaurant",
-    "website for cafe",
-    "digital menu",
-    "restaurant qr code menu",
-    "cafe qr menu",
-    "online menu restaurant",
-    "contactless menu",
-    "restaurant website builder",
-    "cafe website builder"
-  ],
   authors: [{ name: "IQ Rest" }],
   creator: "IQ Rest",
   publisher: "IQ Rest",
@@ -75,7 +66,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: '32x32' },
-      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/icon.png', type: 'image/png' },
     ],
     apple: [
       { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },

@@ -399,6 +399,7 @@ export function TableFormPage({ id }: TableFormPageProps) {
                         src={imageUrl}
                         alt="Table"
                         fill
+                        unoptimized
                         className="object-cover"
                         sizes="128px"
                       />

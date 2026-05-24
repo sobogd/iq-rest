@@ -16,17 +16,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const sitemapEntries: MetadataRoute.Sitemap = []
 
+  // en home has NO trailing slash to match the canonical Next.js emits
+  // (`https://iq-rest.com`). Keeping sitemap + canonical identical avoids
+  // Google treating "/" and "" as competing URLs.
   const buildHomeAlternates = () => {
-    const languages: Record<string, string> = { 'x-default': `${baseUrl}/` }
+    const languages: Record<string, string> = { 'x-default': baseUrl }
     locales.forEach(locale => {
-      languages[locale] = locale === 'en' ? `${baseUrl}/` : `${baseUrl}/${locale}`
+      languages[locale] = locale === 'en' ? baseUrl : `${baseUrl}/${locale}`
     })
     return { languages }
   }
 
   locales.forEach(locale => {
     sitemapEntries.push({
-      url: locale === 'en' ? `${baseUrl}/` : `${baseUrl}/${locale}`,
+      url: locale === 'en' ? baseUrl : `${baseUrl}/${locale}`,
       lastModified: new Date(HOME_META.lastModified),
       changeFrequency: HOME_META.changeFrequency,
       priority: HOME_META.priority,

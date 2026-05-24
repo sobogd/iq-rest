@@ -9,6 +9,7 @@ import { Section } from "@/app/_landing/components/section";
 import { PageTracker } from "@/app/_landing/components/page-tracker";
 import { PricingHero } from "@/app/_landing/components/pricing-hero";
 import { TEXTS } from "./texts";
+import { homeAlternates } from "@/lib/hreflang";
 
 export const dynamic = "force-static";
 export const revalidate = false;
@@ -73,7 +74,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://iq-rest.com"),
   title: TEXTS.meta.title,
   description: TEXTS.meta.description,
-  alternates: { canonical: TEXTS.meta.canonical },
+  alternates: { canonical: TEXTS.meta.canonical, languages: homeAlternates() },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   openGraph: {
     title: TEXTS.meta.ogTitle,
