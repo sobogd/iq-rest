@@ -7,6 +7,7 @@ import { PageTracker } from "@/app/_landing/components/page-tracker";
 import { PricingHero } from "@/app/_landing/components/pricing-hero";
 import { TEXTS as DEFAULT } from "../texts";
 import { TEXTS } from "./texts";
+import { SCHEMA_PRICE_BASIC_EUR, SCHEMA_PRICE_PRO_EUR } from "@/lib/pricing";
 
 export const dynamic = "force-static";
 export const revalidate = false;
@@ -110,7 +111,7 @@ const JSON_LD = JSON.stringify({
         {
           "@type": "Offer",
           name: "Basic",
-          price: "6.90",
+          price: SCHEMA_PRICE_BASIC_EUR,
           priceCurrency: "EUR",
           availability: "https://schema.org/InStock",
           url: TEXTS.meta.canonical,
@@ -118,7 +119,7 @@ const JSON_LD = JSON.stringify({
         {
           "@type": "Offer",
           name: "Pro",
-          price: "24.90",
+          price: SCHEMA_PRICE_PRO_EUR,
           priceCurrency: "EUR",
           availability: "https://schema.org/InStock",
           url: TEXTS.meta.canonical,

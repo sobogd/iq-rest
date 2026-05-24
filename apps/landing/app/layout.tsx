@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    alternateLocale: ['es_ES', 'de_DE', 'fr_FR', 'it_IT', 'pt_PT', 'nl_NL', 'pl_PL', 'ru_RU', 'uk_UA', 'sv_SE', 'da_DK', 'ja_JP', 'ko_KR', 'zh_CN', 'ar_SA', 'tr_TR'],
+    alternateLocale: ['ar_SA', 'bg_BG', 'ca_ES', 'cs_CZ', 'da_DK', 'de_DE', 'el_GR', 'es_ES', 'et_EE', 'fa_IR', 'fi_FI', 'fr_FR', 'ga_IE', 'hr_HR', 'hu_HU', 'is_IS', 'it_IT', 'ja_JP', 'ko_KR', 'lt_LT', 'lv_LV', 'nl_NL', 'no_NO', 'pl_PL', 'pt_PT', 'ro_RO', 'ru_RU', 'sk_SK', 'sl_SI', 'sr_RS', 'sv_SE', 'tr_TR', 'uk_UA', 'zh_CN'],
     url: 'https://iq-rest.com',
     title: 'IQ Rest - QR Menu for Restaurant & Cafe',
     description: 'Create professional QR menu for restaurant and cafe in minutes. Digital menu website solution with instant updates.',

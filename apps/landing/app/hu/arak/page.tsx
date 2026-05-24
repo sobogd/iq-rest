@@ -7,6 +7,7 @@ import { PageTracker } from "@/app/_landing/components/page-tracker";
 import { PricingHero } from "@/app/_landing/components/pricing-hero";
 import { TEXTS as DEFAULT } from "../texts";
 import { TEXTS } from "./texts";
+import { SCHEMA_PRICE_BASIC_EUR, SCHEMA_PRICE_PRO_EUR } from "@/lib/pricing";
 
 export const dynamic = "force-static";
 export const revalidate = false;
@@ -66,8 +67,8 @@ const JSON_LD = JSON.stringify({
       description: TEXTS.meta.description,
       brand: { "@type": "Brand", name: "IQ Rest" },
       offers: [
-        { "@type": "Offer", name: "Basic", price: "6.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
-        { "@type": "Offer", name: "Pro", price: "24.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
+        { "@type": "Offer", name: "Basic", price: SCHEMA_PRICE_BASIC_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
+        { "@type": "Offer", name: "Pro", price: SCHEMA_PRICE_PRO_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
       ],
     },
     {

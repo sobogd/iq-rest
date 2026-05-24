@@ -96,6 +96,12 @@ export const pricing: Record<SupportedCurrency, CurrencyPricing> = {
   },
 };
 
+// Headline EUR prices rendered as JSON-LD `price` strings (2 decimals).
+// Single source for structured data across home / pricing / feature pages —
+// derived from the model above, so a price change propagates to all markup.
+export const SCHEMA_PRICE_BASIC_EUR = pricing.EUR.basic.yearly.toFixed(2); // "6.90"
+export const SCHEMA_PRICE_PRO_EUR = pricing.EUR.pro.yearly.toFixed(2); // "24.90"
+
 export type PlanId = "free" | "basic" | "pro";
 
 /**

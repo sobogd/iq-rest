@@ -1,4 +1,5 @@
 import type { FeatureContent } from "./types";
+import { SCHEMA_PRICE_BASIC_EUR } from "@/lib/pricing";
 
 const SITE = "https://iq-rest.com";
 
@@ -37,7 +38,7 @@ export function FeatureJsonLd({ content }: { content: FeatureContent }) {
         publisher: { "@id": `${SITE}/#organization` },
         offers: {
           "@type": "Offer",
-          price: "6.90",
+          price: SCHEMA_PRICE_BASIC_EUR,
           priceCurrency: "EUR",
           availability: "https://schema.org/InStock",
           url: pagePath,

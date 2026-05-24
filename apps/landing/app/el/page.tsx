@@ -10,6 +10,7 @@ import { PageTracker } from "@/app/_landing/components/page-tracker";
 import { PricingHero } from "@/app/_landing/components/pricing-hero";
 import { TEXTS } from "./texts";
 import { homeAlternates } from "@/lib/hreflang";
+import { SCHEMA_PRICE_BASIC_EUR } from "@/lib/pricing";
 
 export const dynamic = "force-static";
 export const revalidate = false;
@@ -44,7 +45,7 @@ const JSON_LD = JSON.stringify({
       url: `${SITE}/${LOCALE}`,
       inLanguage: LOCALE,
       publisher: { "@id": `${SITE}/#organization` },
-      offers: { "@type": "Offer", price: "6.90", priceCurrency: "EUR", availability: "https://schema.org/InStock" },
+      offers: { "@type": "Offer", price: SCHEMA_PRICE_BASIC_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock" },
     },
   ],
 }).replace(/</g, "\\u003c");
