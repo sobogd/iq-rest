@@ -27,7 +27,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "Priser",
     navFaq: "FAQ",
     signIn: "Log ind",
-    cta: "Opret menukort",
+    cta: "Start gratis",
   },
 
   hero: {

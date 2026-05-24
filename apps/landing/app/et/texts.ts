@@ -27,7 +27,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "Hinnad",
     navFaq: "KKK",
     signIn: "Logi sisse",
-    cta: "Loo menüü",
+    cta: "Alusta tasuta",
   },
 
   hero: {

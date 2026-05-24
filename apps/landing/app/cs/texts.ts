@@ -27,7 +27,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "Ceny",
     navFaq: "Časté dotazy",
     signIn: "Přihlásit se",
-    cta: "Vytvořit menu",
+    cta: "Začít zdarma",
   },
 
   hero: {

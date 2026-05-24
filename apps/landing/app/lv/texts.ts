@@ -27,7 +27,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "Cenas",
     navFaq: "BUJ",
     signIn: "Pieslēgties",
-    cta: "Izveidot ēdienkarti",
+    cta: "Sāc bez maksas",
   },
 
   hero: {

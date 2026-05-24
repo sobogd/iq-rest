@@ -27,7 +27,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "قیمت‌ها",
     navFaq: "سؤالات",
     signIn: "ورود",
-    cta: "ساخت منو",
+    cta: "شروع رایگان",
   },
 
   hero: {
