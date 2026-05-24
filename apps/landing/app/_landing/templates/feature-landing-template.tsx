@@ -33,6 +33,11 @@ export function FeatureLandingTemplate({
 }: FeatureLandingTemplateProps) {
   const { locale, subFeatures, hero, scan, faq, trackPrefix } = content;
   const subCount = subFeatures.length;
+  // Kitchen-display feature page embeds the real KDS kiosk (tablet frame)
+  // instead of the phone menu preview, so the demo matches the feature.
+  // `trackPrefix` contains "kds" on every locale's KDS content (e.g.
+  // l_kds, l_en_kds) — a locale-stable signal that needs no per-locale edit.
+  const demoVariant = trackPrefix?.includes("kds") ? "tablet" : "phone";
 
   return (
     <main className="relative">
@@ -52,6 +57,7 @@ export function FeatureLandingTemplate({
         locale={locale}
         imageSrc={hero.imageSrc}
         imageAlt={hero.imageAlt}
+        demoVariant={demoVariant}
       />
 
       <ScanSection texts={scan} locale={locale} />
@@ -160,6 +166,7 @@ export function FeatureLandingTemplate({
           demoText={chrome.demoText}
           microcopy={chrome.microcopy}
           locale={locale}
+          demoVariant={demoVariant}
         />
       </Section>
 

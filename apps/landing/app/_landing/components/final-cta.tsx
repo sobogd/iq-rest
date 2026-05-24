@@ -1,5 +1,5 @@
 import { CtaButton } from "./cta-button";
-import { DemoButton } from "./demo-button";
+import { DemoButton, type DemoVariant } from "./demo-button";
 import type { LandingTexts } from "../types";
 
 interface FinalCtaProps {
@@ -8,9 +8,10 @@ interface FinalCtaProps {
   demoText: string;
   microcopy: string;
   locale: string;
+  demoVariant?: DemoVariant;
 }
 
-export function FinalCta({ texts, ctaText, demoText, microcopy, locale }: FinalCtaProps) {
+export function FinalCta({ texts, ctaText, demoText, microcopy, locale, demoVariant = "phone" }: FinalCtaProps) {
   return (
     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 lg:gap-10 text-center lg:text-start w-full">
       <div className="flex-1 min-w-0">
@@ -31,7 +32,7 @@ export function FinalCta({ texts, ctaText, demoText, microcopy, locale }: FinalC
           locale={locale}
           align="center"
           trackEvent="l_final_cta_click"
-          extra={<DemoButton text={demoText} locale={locale} trackEvent="l_final_cta_demo" createText={ctaText} />}
+          extra={<DemoButton text={demoText} locale={locale} trackEvent="l_final_cta_demo" createText={ctaText} variant={demoVariant} />}
         />
       </div>
     </div>

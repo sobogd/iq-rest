@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { CtaButton } from "./cta-button";
-import { DemoButton } from "./demo-button";
+import { DemoButton, type DemoVariant } from "./demo-button";
 import { AccentWordRotator } from "./accent-word-rotator";
 import type { LandingTexts } from "../types";
 
@@ -12,6 +12,7 @@ interface HeroProps {
   locale: string;
   imageSrc?: string;
   imageAlt?: string;
+  demoVariant?: DemoVariant;
 }
 
 export function Hero({
@@ -22,6 +23,7 @@ export function Hero({
   locale,
   imageSrc = "/landing/hero-cafe.webp",
   imageAlt = "Two guests at a sunlit cafe table holding phones with the IQ Rest QR menu on screen",
+  demoVariant = "phone",
 }: HeroProps) {
   return (
     <section
@@ -82,7 +84,7 @@ export function Hero({
               locale={locale}
               align="center-mobile"
               trackEvent="l_hero_cta_click"
-              extra={<DemoButton text={demoText} locale={locale} trackEvent="l_hero_demo" createText={ctaText} />}
+              extra={<DemoButton text={demoText} locale={locale} trackEvent="l_hero_demo" createText={ctaText} variant={demoVariant} />}
             />
           </div>
         </div>
