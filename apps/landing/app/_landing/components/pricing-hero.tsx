@@ -1,7 +1,6 @@
 import { Check } from "lucide-react";
 import { pricing } from "@/lib/pricing";
 import { CtaButton } from "./cta-button";
-import { DemoButton } from "./demo-button";
 import type { LandingTexts } from "../types";
 
 type PricingHeroTexts = NonNullable<LandingTexts["pricingHero"]>;
@@ -132,15 +131,7 @@ function PlanCard({
         locale={locale}
         align="center"
         trackEvent={trackEvent}
-        stackMobile
-        extra={
-          <DemoButton
-            text={demoText}
-            locale={locale}
-            trackEvent={`${trackEvent}_demo`}
-            createText={ctaText}
-          />
-        }
+        fullWidth
       />
     </div>
   );

@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { CtaButton } from "@/app/_landing/components/cta-button";
-import { DemoButton } from "@/app/_landing/components/demo-button";
 import { LandingHeaderLp } from "@/app/_landing/components/header-lp";
 import { LandingFooterLp } from "@/app/_landing/components/footer-lp";
 import { Section } from "@/app/_landing/components/section";
@@ -81,7 +80,7 @@ export default function HomePage() {
               {[...TEXTS.hero.verticals, ...TEXTS.hero.verticals].map((v, i) => (
                 <span
                   key={`${v}-${i}`}
-                  className="shrink-0 inline-flex items-center h-7 leading-none text-[11px] uppercase tracking-wider text-muted-foreground border border-border rounded-full px-2.5 whitespace-nowrap"
+                  className="shrink-0 inline-flex items-center h-7 leading-none text-[11px] uppercase tracking-wider text-muted-foreground rounded-full px-2.5 whitespace-nowrap"
                 >
                   {v}
                 </span>
@@ -93,17 +92,17 @@ export default function HomePage() {
             {TEXTS.hero.verticals.map((v) => (
               <span
                 key={v}
-                className="inline-flex items-center h-6 leading-none text-[10px] uppercase tracking-wider text-muted-foreground border border-border rounded-full px-2.5"
+                className="inline-flex items-center h-8 leading-none text-xs lg:text-sm uppercase tracking-wider text-muted-foreground rounded-full px-3"
               >
                 {v}
               </span>
             ))}
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-medium tracking-tight max-w-4xl mb-5">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-medium tracking-tight max-w-4xl lg:max-w-6xl mb-5">
             {HOME_HERO.title}{" "}
-            <span className="text-primary">{HOME_HERO.titleAccent}</span>
+            <span className="text-primary lg:block">{HOME_HERO.titleAccent}</span>
           </h1>
-          <p className="text-sm sm:text-lg lg:text-xl text-muted-foreground max-w-2xl mb-10">
+          <p className="text-sm sm:text-lg lg:text-xl text-muted-foreground max-w-2xl lg:max-w-4xl mb-10">
             {HOME_HERO.sub}
           </p>
           <CtaButton
@@ -113,12 +112,12 @@ export default function HomePage() {
             align="center"
             trackEvent="l_home_hero_cta_click"
             extra={
-              <DemoButton
-                text={TEXTS.demoText}
-                locale={LOCALE}
-                trackEvent="l_home_hero_demo"
-                createText={TEXTS.homeCtaText}
-              />
+              <a
+                href="#features"
+                className="inline-flex items-center justify-center min-h-11 py-2 px-6 text-sm font-medium text-foreground bg-transparent border border-border rounded-lg hover:bg-muted active:scale-[0.99] transition-all text-center leading-tight"
+              >
+                {TEXTS.header.navFeatures}
+              </a>
             }
           />
         </div>

@@ -20,6 +20,9 @@ interface CtaButtonProps {
   extra?: React.ReactNode;
   /** On mobile, stack the primary CTA and `extra` button vertically. */
   stackMobile?: boolean;
+  /** Stretch the primary button to the full width of its container
+   *  (e.g. pricing plan cards). */
+  fullWidth?: boolean;
 }
 
 export function CtaButton({
@@ -30,6 +33,7 @@ export function CtaButton({
   trackEvent = "l_cta_click",
   extra,
   stackMobile = false,
+  fullWidth = false,
 }: CtaButtonProps) {
   const isSticky = layout === "sticky";
   const cta = usePrimaryCta(text);
@@ -54,17 +58,17 @@ export function CtaButton({
 
   return (
     <div className={`flex flex-col w-full ${alignClass}`}>
-      <div className={`flex ${stackMobile ? `flex-col w-full sm:w-auto sm:flex-row ${align === "start" ? "items-start sm:items-center" : align === "end" ? "items-end sm:items-center" : "items-center"}` : "flex-row flex-wrap items-center"} gap-3 ${rowJustify}`}>
+      <div className={`flex ${fullWidth ? "flex-row w-full" : stackMobile ? `flex-col w-full sm:w-auto sm:flex-row ${align === "start" ? "items-start sm:items-center" : align === "end" ? "items-end sm:items-center" : "items-center"}` : "flex-row flex-wrap items-center"} gap-3 ${rowJustify}`}>
         <button
           type="button"
           onClick={() => cta.onClick(trackEvent)}
-          className={`${baseClass} ${isSticky ? "w-full sm:w-auto" : "w-auto"}`}
+          className={`${baseClass} ${fullWidth ? "w-full" : isSticky ? "w-full sm:w-auto" : "w-auto"}`}
         >
           {cta.label}
         </button>
         {extra}
       </div>
-      {!isSticky && microcopy && !cta.authenticated && (
+      {!isSticky && microcopy && (
         <p className="mt-3 text-sm text-muted-foreground/80">{microcopy}</p>
       )}
     </div>

@@ -35,7 +35,7 @@ export function HeroLp({
               {[...texts.verticals, ...texts.verticals].map((v, i) => (
                 <span
                   key={`${v}-${i}`}
-                  className="shrink-0 inline-flex items-center h-7 leading-none text-[11px] uppercase tracking-wider text-muted-foreground border border-border rounded-full px-2.5 whitespace-nowrap"
+                  className="shrink-0 inline-flex items-center h-7 leading-none text-[11px] uppercase tracking-wider text-muted-foreground rounded-full px-2.5 whitespace-nowrap"
                 >
                   {v}
                 </span>
@@ -47,7 +47,7 @@ export function HeroLp({
             {texts.verticals.map((v) => (
               <span
                 key={v}
-                className="inline-flex items-center h-6 leading-none text-[10px] uppercase tracking-wider text-muted-foreground border border-border rounded-full px-2.5"
+                className="inline-flex items-center h-6 leading-none text-[10px] uppercase tracking-wider text-muted-foreground rounded-full px-2.5"
               >
                 {v}
               </span>
