@@ -13,6 +13,12 @@ import { usePrimaryCta } from "./onboarding/use-primary-cta";
 //   - tablet → kitchen-display kiosk demo, wide landscape viewport.
 const IFRAME_WIDTH_PHONE = 350;
 const IFRAME_WIDTH_TABLET = 1024;
+// On a phone the tablet frame is only ~340px wide, so a 1024px logical
+// viewport scales down to ~0.33 and the kiosk text is tiny. Render the KDS
+// at a narrower logical width on phones instead — the iframe scales up
+// (~0.5), the kiosk reflows to fewer columns, and everything reads ~50%
+// larger. Changing the iframe's own scale, not the app's font-size.
+const IFRAME_WIDTH_TABLET_PHONE = 680;
 
 export type DemoVariant = "phone" | "tablet";
 
@@ -49,10 +55,9 @@ function menuUrlFor(locale: string): string {
 // legible inside the small embedded tablet frame — the iframe itself renders
 // at a fixed 1024px logical width and can't sense the real device, so the
 // parent decides.
-function kdsUrlFor(locale: string, zoom?: number): string {
+function kdsUrlFor(locale: string): string {
   const params = new URLSearchParams({ demo: "1" });
   if (locale) params.set("lang", locale);
-  if (zoom && zoom !== 100) params.set("zoom", String(zoom));
   return `https://k.iq-rest.com/?${params.toString()}`;
 }
 
@@ -65,12 +70,17 @@ export function DemoButton({
   variant = "phone",
 }: DemoButtonProps) {
   const isTablet = variant === "tablet";
-  const IFRAME_WIDTH = isTablet ? IFRAME_WIDTH_TABLET : IFRAME_WIDTH_PHONE;
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(true);
-  // Phone viewport → open the KDS demo ~50% larger so it reads inside the
-  // small embedded frame. Resolved client-side once on mount.
+  // Phone viewport → render the tablet KDS demo at a narrower logical width
+  // so the iframe scales up and the kiosk reads larger. Resolved client-side
+  // on mount. Phone menu preview keeps its fixed width.
   const [isPhone, setIsPhone] = useState(false);
+  const IFRAME_WIDTH = isTablet
+    ? isPhone
+      ? IFRAME_WIDTH_TABLET_PHONE
+      : IFRAME_WIDTH_TABLET
+    : IFRAME_WIDTH_PHONE;
   const cta = usePrimaryCta(createText ?? "");
 
   useEffect(() => {
@@ -134,7 +144,7 @@ export function DemoButton({
     analytics.track(`${trackEvent}_close`);
   };
 
-  const iframeSrc = isTablet ? kdsUrlFor(locale, isPhone ? 150 : undefined) : menuUrlFor(locale);
+  const iframeSrc = isTablet ? kdsUrlFor(locale) : menuUrlFor(locale);
   const iframeTitle = isTablet ? "Kitchen Display Preview" : "Menu Preview";
 
   return (
