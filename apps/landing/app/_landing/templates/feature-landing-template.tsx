@@ -1,14 +1,14 @@
 import Image from "next/image";
 import { Check } from "lucide-react";
-import { LandingHeaderLp } from "../components/header-lp";
-import { LandingFooterLp } from "../components/footer-lp";
-import { HeroLp } from "../components/hero-lp";
+import { LandingHeader } from "../components/header";
+import { LandingFooter } from "../components/footer";
+import { Hero } from "../components/hero";
 import { Section } from "../components/section";
 import { PageTracker } from "../components/page-tracker";
-import { ScanSectionLp } from "../components/scan-section-lp";
-import { FounderLp } from "../components/founder-lp";
-import { FinalCtaLp } from "../components/final-cta-lp";
-import { FaqLp } from "../components/faq-lp";
+import { ScanSection } from "../components/scan-section";
+import { Founder } from "../components/founder";
+import { FinalCta } from "../components/final-cta";
+import { Faq } from "../components/faq";
 import { PricingHero } from "../components/pricing-hero";
 import { FeatureJsonLd } from "./feature-json-ld";
 import type { LandingTexts } from "../types";
@@ -38,13 +38,13 @@ export function FeatureLandingTemplate({
     <main className="relative">
       <PageTracker />
       <FeatureJsonLd content={content} />
-      <LandingHeaderLp
+      <LandingHeader
         texts={chrome.header}
         locale={locale}
         featureLinks={chrome.footer.featureLinks}
       />
 
-      <HeroLp
+      <Hero
         texts={{ ...chrome.hero, headline: hero.headline, sub: hero.sub }}
         ctaText={chrome.ctaText}
         demoText={chrome.demoText}
@@ -54,7 +54,7 @@ export function FeatureLandingTemplate({
         imageAlt={hero.imageAlt}
       />
 
-      <ScanSectionLp texts={scan} locale={locale} />
+      <ScanSection texts={scan} locale={locale} />
 
       {subFeatures.map((row, i) => {
         const reverse = i % 2 === 0;
@@ -135,7 +135,7 @@ export function FeatureLandingTemplate({
       </Section>
 
       <Section id="faq" dataSection="faq" noContainer accent={subCount % 2 === 1}>
-        <FaqLp
+        <Faq
           texts={{
             ...chrome.faq,
             sub: faq.sub,
@@ -150,11 +150,11 @@ export function FeatureLandingTemplate({
         noContainer
         accent={subCount % 2 === 0}
       >
-        <FounderLp texts={chrome.founder} />
+        <Founder texts={chrome.founder} />
       </Section>
 
       <Section dataSection="final_cta" noContainer accent={subCount % 2 === 1}>
-        <FinalCtaLp
+        <FinalCta
           texts={chrome.finalCta}
           ctaText={chrome.ctaText}
           demoText={chrome.demoText}
@@ -170,11 +170,11 @@ export function FeatureLandingTemplate({
         accent={subCount % 2 === 0}
         className="!py-6 sm:!py-8"
       >
-        <LandingFooterLp
+        <LandingFooter
           texts={chrome.footer}
           headerTexts={chrome.header}
           locale={locale}
-          variant="lp"
+         
         />
       </Section>
     </main>

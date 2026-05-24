@@ -112,7 +112,7 @@ export type LandingTexts = {
     rating: string;
     /**
      * Optional in-headline word swap (PPC LP only). When all four fields
-     * are set, hero-lp renders the H1 as `${prefix}${accentWord}${suffix}`
+     * are set, hero renders the H1 as `${prefix}${accentWord}${suffix}`
      * and after hydration cycles `accentWord` through `accentWordRotation`.
      * SSR HTML keeps the keyword phrase intact so the Ads crawler scores
      * landing-page relevance against the original word.

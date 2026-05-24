@@ -10,7 +10,7 @@ interface FinalCtaProps {
   locale: string;
 }
 
-export function FinalCtaLp({ texts, ctaText, demoText, microcopy, locale }: FinalCtaProps) {
+export function FinalCta({ texts, ctaText, demoText, microcopy, locale }: FinalCtaProps) {
   return (
     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 lg:gap-10 text-center lg:text-start w-full">
       <div className="flex-1 min-w-0">

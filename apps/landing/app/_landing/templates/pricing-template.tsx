@@ -1,6 +1,6 @@
-import { LandingHeaderLp } from "../components/header-lp";
-import { LandingFooterLp } from "../components/footer-lp";
-import { FaqLp } from "../components/faq-lp";
+import { LandingHeader } from "../components/header";
+import { LandingFooter } from "../components/footer";
+import { Faq } from "../components/faq";
 import { Section } from "../components/section";
 import { PageTracker } from "../components/page-tracker";
 import { PricingHero } from "../components/pricing-hero";
@@ -26,18 +26,18 @@ export function PricingTemplate({
     <main className="relative">
       <PageTracker />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
-      <LandingHeaderLp texts={texts.header} locale={locale} featureLinks={texts.footer.featureLinks} />
+      <LandingHeader texts={texts.header} locale={locale} featureLinks={texts.footer.featureLinks} />
 
       <Section dataSection="pricing_hero" noContainer accent>
         <PricingHero locale={locale} ctaText={texts.ctaText} demoText={texts.demoText} microcopy={texts.microcopy} texts={texts.pricingHero!} trackPrefix={trackPrefix} />
       </Section>
 
       <Section id="faq" dataSection="faq" noContainer>
-        <FaqLp texts={faq} />
+        <Faq texts={faq} />
       </Section>
 
       <Section as="footer" dataSection="footer" noContainer accent className="!py-6 sm:!py-8">
-        <LandingFooterLp texts={texts.footer} headerTexts={texts.header} locale={locale} variant="lp" />
+        <LandingFooter texts={texts.footer} headerTexts={texts.header} locale={locale} />
       </Section>
     </main>
   );

@@ -1,8 +1,8 @@
 import Link from "next/link";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { LandingHeaderLp } from "@/app/_landing/components/header-lp";
-import { LandingFooterLp } from "@/app/_landing/components/footer-lp";
+import { LandingHeader } from "@/app/_landing/components/header";
+import { LandingFooter } from "@/app/_landing/components/footer";
 import { LandingI18nWrap } from "@/app/_landing/components/landing-i18n-wrap";
 import { TEXTS } from "./(en)/texts";
 
@@ -35,7 +35,7 @@ export default async function NotFound() {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange storageKey="iq-rest-theme-v2">
           <LandingI18nWrap locale={LOCALE}>
             <main className="relative">
-              <LandingHeaderLp
+              <LandingHeader
                 texts={TEXTS.header}
                 locale={LOCALE}
                 useLocalAnchors={false}
@@ -62,11 +62,11 @@ export default async function NotFound() {
                 </div>
               </section>
 
-              <LandingFooterLp
+              <LandingFooter
                 texts={TEXTS.footer}
                 headerTexts={TEXTS.header}
                 locale={LOCALE}
-                variant="lp"
+               
               />
             </main>
           </LandingI18nWrap>

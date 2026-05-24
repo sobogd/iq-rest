@@ -8,7 +8,7 @@ interface ScanSectionProps {
   locale: string;
 }
 
-export function ScanSectionLp({ texts }: ScanSectionProps) {
+export function ScanSection({ texts }: ScanSectionProps) {
   const cta = usePrimaryCta(texts.cta);
   return (
     <section

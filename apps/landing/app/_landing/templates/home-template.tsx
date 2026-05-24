@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { LandingHeaderLp } from "../components/header-lp";
-import { LandingFooterLp } from "../components/footer-lp";
+import { LandingHeader } from "../components/header";
+import { LandingFooter } from "../components/footer";
 import { Section } from "../components/section";
 import { PageTracker } from "../components/page-tracker";
 import { PricingHero } from "../components/pricing-hero";
@@ -34,7 +34,7 @@ export function HomeTemplate({
     <main className="relative">
       <PageTracker />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
-      <LandingHeaderLp texts={texts.header} locale={locale} useLocalAnchors featureLinks={texts.footer.featureLinks} />
+      <LandingHeader texts={texts.header} locale={locale} useLocalAnchors featureLinks={texts.footer.featureLinks} />
 
       <Section dataSection="home_hero" noContainer accent>
         <div className="w-full lg:min-h-[50dvh] flex flex-col items-center justify-center text-center py-8 sm:py-14">
@@ -134,7 +134,7 @@ export function HomeTemplate({
       </Section>
 
       <Section as="footer" dataSection="footer" noContainer accent className="!py-6 sm:!py-8">
-        <LandingFooterLp texts={texts.footer} headerTexts={texts.header} locale={locale} variant="lp" />
+        <LandingFooter texts={texts.footer} headerTexts={texts.header} locale={locale} />
       </Section>
     </main>
   );

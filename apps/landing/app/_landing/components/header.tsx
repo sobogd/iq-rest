@@ -32,7 +32,7 @@ interface HeaderProps {
 // and the organic homepage. Hosts logo, nav, theme + language switcher,
 // and one short Start CTA that doubles as login and signup (OTP flow
 // covers both in a single entry point).
-export function LandingHeaderLp({ texts, locale, useLocalAnchors = false, featureLinks }: HeaderProps) {
+export function LandingHeader({ texts, locale, useLocalAnchors = false, featureLinks }: HeaderProps) {
   const modal = useOnboardingModal();
   const auth = useLandingAuth();
   const tAuth = useTranslations("auth");

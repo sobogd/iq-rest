@@ -14,7 +14,7 @@ interface HeroProps {
   imageAlt?: string;
 }
 
-export function HeroLp({
+export function Hero({
   texts,
   ctaText,
   demoText,
