@@ -45,9 +45,14 @@ function menuUrlFor(locale: string): string {
 
 // Kitchen-display kiosk in public demo mode. `demo=1` makes the dashboard
 // bundle render the real KDS with hardcoded sample data — no pairing, no API.
-function kdsUrlFor(locale: string): string {
+// On phones we pass a larger `zoom` (root font-size %) so the kiosk is
+// legible inside the small embedded tablet frame — the iframe itself renders
+// at a fixed 1024px logical width and can't sense the real device, so the
+// parent decides.
+function kdsUrlFor(locale: string, zoom?: number): string {
   const params = new URLSearchParams({ demo: "1" });
   if (locale) params.set("lang", locale);
+  if (zoom && zoom !== 100) params.set("zoom", String(zoom));
   return `https://k.iq-rest.com/?${params.toString()}`;
 }
 
@@ -63,7 +68,19 @@ export function DemoButton({
   const IFRAME_WIDTH = isTablet ? IFRAME_WIDTH_TABLET : IFRAME_WIDTH_PHONE;
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(true);
+  // Phone viewport → open the KDS demo ~50% larger so it reads inside the
+  // small embedded frame. Resolved client-side once on mount.
+  const [isPhone, setIsPhone] = useState(false);
   const cta = usePrimaryCta(createText ?? "");
+
+  useEffect(() => {
+    if (typeof window === "undefined" || !window.matchMedia) return;
+    const mq = window.matchMedia("(max-width: 640px)");
+    const sync = () => setIsPhone(mq.matches);
+    sync();
+    mq.addEventListener("change", sync);
+    return () => mq.removeEventListener("change", sync);
+  }, []);
 
   // Fit the fixed-width iframe to the phone screen: scale = screenW / IFRAME_WIDTH,
   // and give the iframe a matching logical height so it fills the frame exactly.
@@ -117,7 +134,7 @@ export function DemoButton({
     analytics.track(`${trackEvent}_close`);
   };
 
-  const iframeSrc = isTablet ? kdsUrlFor(locale) : menuUrlFor(locale);
+  const iframeSrc = isTablet ? kdsUrlFor(locale, isPhone ? 150 : undefined) : menuUrlFor(locale);
   const iframeTitle = isTablet ? "Kitchen Display Preview" : "Menu Preview";
 
   return (
