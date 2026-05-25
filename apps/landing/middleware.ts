@@ -4,7 +4,7 @@ import { routing, locales, Locale } from "./i18n/routing";
 import { getLocaleByCountryAndRegion } from "./lib/country-locale-map";
 import { HOME_META, lastModifiedFor } from "./lib/page-meta";
 import { isGone } from "./lib/gone-paths";
-import { LOCALE_SLUG_OVERRIDES } from "./lib/locale-slug-overrides";
+import { LOCALE_SLUG_OVERRIDES, swapLocale } from "./lib/locale-slug-overrides";
 
 const EN_ROOT_SLUGS: ReadonlySet<string> = new Set(
   Object.values(LOCALE_SLUG_OVERRIDES)
@@ -114,6 +114,23 @@ export default function middleware(request: NextRequest) {
       ? preferred
       : detectLocaleByCountry(request);
     const target = new URL(locale === "en" ? "/" : `/${locale}`, request.url);
+    target.search = request.nextUrl.search; // preserve fbclid/utm/gclid
+    const response = NextResponse.redirect(target, 302);
+    setGeoCookies(request, response);
+    return response;
+  }
+
+  // FB/PPC deep-link: pass the EN slug, redirect to the geo-locale equivalent.
+  // e.g. /d/digital-menu-for-restaurants + geo ES → /es/menu-digital-restaurantes.
+  // swapLocale handles en→root, missing override→locale home (never a 404).
+  // 302 (geo-dependent, must not be cached); respects NEXT_LOCALE for returners.
+  if (pathname === "/d" || pathname.startsWith("/d/")) {
+    const enPath = pathname.slice(2) || "/"; // "/d/<slug>" → "/<slug>"
+    const preferred = request.cookies.get("NEXT_LOCALE")?.value as Locale | undefined;
+    const locale = (preferred && locales.includes(preferred))
+      ? preferred
+      : detectLocaleByCountry(request);
+    const target = new URL(swapLocale(enPath, locale), request.url);
     target.search = request.nextUrl.search; // preserve fbclid/utm/gclid
     const response = NextResponse.redirect(target, 302);
     setGeoCookies(request, response);
