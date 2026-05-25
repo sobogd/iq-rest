@@ -33,7 +33,7 @@ export async function getSubscriptionStatus(companyId: string) {
 // ---- Categories ----
 export async function getCategories(companyId: string) {
   const categories = await prisma.category.findMany({
-    where: { companyId },
+    where: { companyId, deletedAt: null },
     orderBy: { sortOrder: "asc" },
   });
   return categories.map((c) => ({
@@ -46,7 +46,9 @@ export async function getCategories(companyId: string) {
 // ---- Items ----
 export async function getItems(companyId: string) {
   const items = await prisma.item.findMany({
-    where: { companyId },
+    // Exclude items whose category was soft-deleted (and any orphaned ones) so
+    // the legacy dashboard never renders a phantom category group.
+    where: { companyId, category: { deletedAt: null } },
     orderBy: { sortOrder: "asc" },
     include: {
       category: {

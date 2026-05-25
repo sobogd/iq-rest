@@ -12,7 +12,7 @@ export async function GET() {
     }
 
     const categories = await prisma.category.findMany({
-      where: { companyId },
+      where: { companyId, deletedAt: null },
       orderBy: { sortOrder: "asc" },
     });
 

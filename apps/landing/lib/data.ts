@@ -12,7 +12,7 @@ export async function getCategories(): Promise<Category[]> {
   }
 
   const categories = await prisma.category.findMany({
-    where: { companyId },
+    where: { companyId, deletedAt: null },
     orderBy: { sortOrder: "asc" },
     select: {
       id: true,
@@ -33,7 +33,7 @@ export async function getItems(): Promise<ItemWithCategory[]> {
   }
 
   const items = await prisma.item.findMany({
-    where: { companyId },
+    where: { companyId, category: { deletedAt: null } },
     orderBy: { sortOrder: "asc" },
     include: {
       category: {
@@ -64,7 +64,7 @@ export async function getCategoryById(id: string): Promise<Category | null> {
   }
 
   const category = await prisma.category.findFirst({
-    where: { id, companyId },
+    where: { id, companyId, deletedAt: null },
     select: {
       id: true,
       name: true,
@@ -165,7 +165,7 @@ export async function getCategoryWithTranslations(id: string): Promise<CategoryW
   }
 
   const category = await prisma.category.findFirst({
-    where: { id, companyId },
+    where: { id, companyId, deletedAt: null },
   });
 
   if (!category) {
