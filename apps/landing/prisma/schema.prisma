@@ -405,6 +405,7 @@ model Order {
 enum DeviceType {
   KITCHEN
   WAITER
+  RESERVATION
 }
 
 enum DeviceStatus {
