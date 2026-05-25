@@ -105,6 +105,21 @@ function setGeoCookies(request: NextRequest, response: NextResponse): void {
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
+  // FB/PPC entry point: detect locale by Cloudflare geo, 302 to localized home.
+  // 302 (NOT 301) — the target depends on the visitor's geo, so it must not be
+  // cached. Respects an explicit NEXT_LOCALE cookie for returning visitors.
+  if (pathname === "/detect-lang") {
+    const preferred = request.cookies.get("NEXT_LOCALE")?.value as Locale | undefined;
+    const locale = (preferred && locales.includes(preferred))
+      ? preferred
+      : detectLocaleByCountry(request);
+    const target = new URL(locale === "en" ? "/" : `/${locale}`, request.url);
+    target.search = request.nextUrl.search; // preserve fbclid/utm/gclid
+    const response = NextResponse.redirect(target, 302);
+    setGeoCookies(request, response);
+    return response;
+  }
+
   // Pages we removed in the 2026-05-20 landing restructure: serve 410 Gone
   // so Googlebot can drop them from the index quickly. Lookup is O(1).
   if (isGone(pathname)) {
