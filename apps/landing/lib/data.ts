@@ -117,7 +117,7 @@ export interface ItemWithTranslations {
   imageUrl: string | null;
   sortOrder: number;
   isActive: boolean;
-  categoryId: string;
+  categoryId: string | null;
   translations: Record<string, { name?: string; description?: string }> | null;
 }
 

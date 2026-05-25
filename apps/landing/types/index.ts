@@ -20,11 +20,12 @@ export interface Item {
   imageUrl: string | null;
   sortOrder: number;
   isActive: boolean;
-  categoryId: string;
+  // null = orphaned item whose category was deleted (FK ON DELETE SET NULL).
+  categoryId: string | null;
 }
 
 export interface ItemWithCategory extends Item {
-  category: Pick<Category, "id" | "name" | "sortOrder">;
+  category: Pick<Category, "id" | "name" | "sortOrder"> | null;
 }
 
 // API response types
