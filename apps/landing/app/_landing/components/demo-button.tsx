@@ -19,7 +19,12 @@ const IFRAME_WIDTH_TABLET = 1024;
 // larger. Changing the iframe's own scale, not the app's font-size.
 const IFRAME_WIDTH_TABLET_PHONE = 680;
 
-export type DemoVariant = "phone" | "tablet";
+// `phone` → public menu, narrow portrait frame. Everything else renders the
+// dashboard bundle in a board-specific demo inside the landscape tablet frame:
+//   tablet       → kitchen-display kiosk (legacy name, kept for existing call sites)
+//   orders       → waiter orders board
+//   reservations → reservations board
+export type DemoVariant = "phone" | "tablet" | "orders" | "reservations";
 
 interface DemoButtonProps {
   text: string;
@@ -32,8 +37,9 @@ interface DemoButtonProps {
    *  point. Opens the onboarding modal (guest) / dashboard (signed-in). */
   createText?: string;
   /** `phone` (default) embeds the public menu of the demo restaurant.
-   *  `tablet` embeds the live kitchen-display kiosk in demo mode — used on
-   *  the kitchen-display feature page so the preview matches the feature. */
+   *  `tablet` / `orders` / `reservations` embed the live dashboard board in
+   *  demo mode (landscape tablet frame) — used on the matching feature page
+   *  so the preview matches the feature. */
   variant?: DemoVariant;
 }
 
@@ -48,14 +54,14 @@ function menuUrlFor(locale: string): string {
   return `https://${DEMO_SLUG}.iq-rest.com?${params.toString()}`;
 }
 
-// Kitchen-display kiosk in public demo mode. `demo=1` makes the dashboard
-// bundle render the real KDS with hardcoded sample data — no pairing, no API.
-// On phones we pass a larger `zoom` (root font-size %) so the kiosk is
-// legible inside the small embedded tablet frame — the iframe itself renders
-// at a fixed 1024px logical width and can't sense the real device, so the
-// parent decides.
-function kdsUrlFor(locale: string): string {
-  const params = new URLSearchParams({ demo: "1" });
+// Dashboard board in public demo mode. `?demo=<board>` makes the dashboard
+// bundle render the real board with hardcoded sample data — no pairing, no
+// API. `kitchen` uses the legacy `demo=1` value the bundle still accepts.
+// Served from the kiosk host (k.*), where the bundle skips PWA/SW registration
+// in demo mode.
+type DemoBoard = "kitchen" | "orders" | "reservations";
+function demoUrlFor(board: DemoBoard, locale: string): string {
+  const params = new URLSearchParams({ demo: board === "kitchen" ? "1" : board });
   if (locale) params.set("lang", locale);
   return `https://k.iq-rest.com/?${params.toString()}`;
 }
@@ -67,7 +73,7 @@ export function DemoButton({
   className = "",
   variant = "phone",
 }: DemoButtonProps) {
-  const isTablet = variant === "tablet";
+  const isTablet = variant !== "phone";
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   // Phone viewport → render the tablet KDS demo at a narrower logical width
@@ -136,8 +142,22 @@ export function DemoButton({
     analytics.track(`${trackEvent}_close`);
   };
 
-  const iframeSrc = isTablet ? kdsUrlFor(locale) : menuUrlFor(locale);
-  const iframeTitle = isTablet ? "Kitchen Display Preview" : "Menu Preview";
+  const iframeSrc =
+    variant === "phone"
+      ? menuUrlFor(locale)
+      : variant === "orders"
+        ? demoUrlFor("orders", locale)
+        : variant === "reservations"
+          ? demoUrlFor("reservations", locale)
+          : demoUrlFor("kitchen", locale);
+  const iframeTitle =
+    variant === "orders"
+      ? "Orders Board Preview"
+      : variant === "reservations"
+        ? "Reservations Board Preview"
+        : variant === "tablet"
+          ? "Kitchen Display Preview"
+          : "Menu Preview";
 
   return (
     <>

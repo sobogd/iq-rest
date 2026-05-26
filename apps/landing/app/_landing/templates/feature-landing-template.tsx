@@ -33,11 +33,18 @@ export function FeatureLandingTemplate({
 }: FeatureLandingTemplateProps) {
   const { locale, subFeatures, hero, scan, faq, trackPrefix } = content;
   const subCount = subFeatures.length;
-  // Kitchen-display feature page embeds the real KDS kiosk (tablet frame)
-  // instead of the phone menu preview, so the demo matches the feature.
-  // `trackPrefix` contains "kds" on every locale's KDS content (e.g.
-  // l_kds, l_en_kds) — a locale-stable signal that needs no per-locale edit.
-  const demoVariant = trackPrefix?.includes("kds") ? "tablet" : "phone";
+  // Board feature pages embed the real dashboard board (landscape tablet
+  // frame) instead of the phone menu preview, so the demo matches the
+  // feature. `trackPrefix` carries a locale-stable token on every locale's
+  // content (e.g. l_kds / l_en_kds, l_orders, l_bookings) — no per-locale
+  // edit needed. Menu/QR pages keep the phone preview.
+  const demoVariant = trackPrefix?.includes("kds")
+    ? "tablet"
+    : trackPrefix?.includes("orders")
+      ? "orders"
+      : trackPrefix?.includes("bookings")
+        ? "reservations"
+        : "phone";
 
   return (
     <main className="relative">
