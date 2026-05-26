@@ -6,6 +6,8 @@ import { Globe, LogIn, Menu, X } from "lucide-react";
 import { LogoIcon } from "./logo-icon";
 import { LinkForward } from "./link-forward";
 import { usePrimaryCta } from "./onboarding/use-primary-cta";
+import { useOnboardingModal } from "./onboarding/onboarding-modal-provider";
+import { useLandingAuth } from "./onboarding/use-landing-auth";
 import { getCookieTexts } from "@/app/_landing/lib/cookie-texts";
 import { LanguageSwitcherModal } from "@/components/language-switcher/modal";
 import { dashboardUrl } from "@/lib/dashboard-url";
@@ -60,6 +62,8 @@ export function LandingHeader({
   const cookieTexts = getCookieTexts(locale);
   const dashHref = `${dashboardUrl()}/${locale}/dashboard`;
   const cta = usePrimaryCta(texts.cta);
+  const auth = useLandingAuth();
+  const modal = useOnboardingModal();
 
   const pathname = usePathname() || "";
   const homeHref = localeHome(locale);
@@ -160,15 +164,30 @@ export function LandingHeader({
               </button>
             ) : (
               <>
-                <a
-                  href={dashHref}
-                  aria-label={texts.signIn}
-                  onClick={() => analytics.track("l_header_signin_click")}
-                  className={`inline-flex items-center justify-center h-9 w-9 lg:w-auto lg:px-4 text-sm font-semibold rounded-lg transition-colors whitespace-nowrap ${iconBtn}`}
-                >
-                  <LogIn className="h-5 w-5 lg:hidden" />
-                  <span className="hidden lg:inline">{texts.signIn}</span>
-                </a>
+                {auth.authenticated ? (
+                  <a
+                    href={dashHref}
+                    aria-label={texts.signIn}
+                    onClick={() => analytics.track("l_header_dashboard_click")}
+                    className={`inline-flex items-center justify-center h-9 w-9 lg:w-auto lg:px-4 text-sm font-semibold rounded-lg transition-colors whitespace-nowrap ${iconBtn}`}
+                  >
+                    <LogIn className="h-5 w-5 lg:hidden" />
+                    <span className="hidden lg:inline">{texts.signIn}</span>
+                  </a>
+                ) : (
+                  <button
+                    type="button"
+                    aria-label={texts.signIn}
+                    onClick={() => {
+                      analytics.track("l_header_signin_click");
+                      modal.open("signin");
+                    }}
+                    className={`inline-flex items-center justify-center h-9 w-9 lg:w-auto lg:px-4 text-sm font-semibold rounded-lg transition-colors whitespace-nowrap ${iconBtn}`}
+                  >
+                    <LogIn className="h-5 w-5 lg:hidden" />
+                    <span className="hidden lg:inline">{texts.signIn}</span>
+                  </button>
+                )}
                 <button
                   type="button"
                   aria-label={cookieTexts.languageSwitcher}
