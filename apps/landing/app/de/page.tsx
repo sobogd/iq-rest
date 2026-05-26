@@ -14,6 +14,7 @@ const HOME_HERO = {
   title: "Alles, was Ihr Restaurant braucht.",
   titleAccent: "Auf einer Plattform.",
   sub: "Speisekarte, Bestellannahme, Reservierungen, Küchen-Display und KI-Übersetzung — eine einzige Plattform statt fünf separater Dienste. Wählen Sie unten eine Funktion für mehr Details.",
+  imageAlt: "Ein Gast filtert die QR-Speisekarte am Handy nach Allergenen, während der Inhaber die Liste am Tablet bearbeitet",
 };
 
 const FEATURE_IMAGES: Record<string, string> = {

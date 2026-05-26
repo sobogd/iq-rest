@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef } from "react";
 import { X, Loader2 } from "lucide-react";
 import { analytics } from "@/lib/analytics";
-import { usePrimaryCta } from "./onboarding/use-primary-cta";
 
 // Logical viewport width the demo is rendered at inside the iframe. The
 // iframe keeps this fixed width and is scaled down to fit the device frame,
@@ -66,7 +65,6 @@ export function DemoButton({
   locale,
   trackEvent = "l_demo",
   className = "",
-  createText,
   variant = "phone",
 }: DemoButtonProps) {
   const isTablet = variant === "tablet";
@@ -81,7 +79,6 @@ export function DemoButton({
       ? IFRAME_WIDTH_TABLET_PHONE
       : IFRAME_WIDTH_TABLET
     : IFRAME_WIDTH_PHONE;
-  const cta = usePrimaryCta(createText ?? "");
 
   useEffect(() => {
     if (typeof window === "undefined" || !window.matchMedia) return;
@@ -112,11 +109,6 @@ export function DemoButton({
     ro.observe(el);
     return () => ro.disconnect();
   }, [open, IFRAME_WIDTH]);
-
-  const handleCreate = () => {
-    setOpen(false);
-    cta.onClick(`${trackEvent}_create_click`);
-  };
 
   useEffect(() => {
     if (open) {
@@ -264,15 +256,6 @@ export function DemoButton({
               </div>
             )}
 
-            {createText && (
-              <button
-                type="button"
-                onClick={handleCreate}
-                className="inline-flex items-center justify-center min-h-11 py-2 px-8 text-sm font-semibold text-white bg-gradient-to-br from-[hsl(9,100%,58%)] to-[hsl(35,95%,55%)] rounded-lg hover:opacity-90 active:scale-[0.99] transition-all text-center leading-tight"
-              >
-                {cta.label}
-              </button>
-            )}
           </div>
         </div>
       )}

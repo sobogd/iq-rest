@@ -19,7 +19,7 @@ export default async function LandingLayout({ children }: { children: React.Reac
   return (
     <html lang="no" dir="ltr" translate="no" suppressHydrationWarning>
       <body className="min-h-dvh bg-background text-foreground antialiased tracking-tight">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange storageKey="iq-rest-theme-v2">
+        <ThemeProvider attribute="class" forcedTheme="dark" disableTransitionOnChange storageKey="iq-rest-theme-v2">
           <LandingI18nWrap locale="no">{children}</LandingI18nWrap>
           <RegionPromptModal />
         </ThemeProvider>

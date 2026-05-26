@@ -14,6 +14,7 @@ const HOME_HERO = {
   title: "Todo lo que tu restaurante necesita.",
   titleAccent: "En una sola plataforma.",
   sub: "Carta, pedidos, reservas, pantalla de cocina y traducción con IA — una única plataforma en lugar de cinco servicios distintos. Elige una función abajo para ver más.",
+  imageAlt: "Un comensal filtra la carta QR por alérgenos en el móvil mientras el propietario edita la lista desde una tableta",
 };
 
 const FEATURE_IMAGES: Record<string, string> = {

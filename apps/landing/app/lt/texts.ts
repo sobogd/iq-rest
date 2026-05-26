@@ -27,6 +27,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "Kainos",
     navFaq: "DUK",
     signIn: "Prisijungti",
+    viewFeatures: "Peržiūrėti funkcijas",
     cta: "Pradėkite nemokamai",
   },
 

@@ -14,6 +14,7 @@ const HOME_HERO = {
   title: "レストランに必要なものすべて。",
   titleAccent: "1つのプラットフォームで。",
   sub: "メニュー、注文受付、予約、キッチンディスプレイ、AI翻訳 — 5つの別々のサービスの代わりに1つのプラットフォーム。詳細については下記の機能をお選びください。",
+  imageAlt: "客がスマホでQRメニューをアレルゲンで絞り込み、オーナーはタブレットでリストを編集",
 };
 
 const FEATURE_IMAGES: Record<string, string> = {

@@ -30,6 +30,8 @@ const nextConfig: NextConfig = {
   // S3 host allow-listed via remotePatterns so menu images keep working.
   images: {
     formats: ["image/avif", "image/webp"],
+    // Quality levels used across the app (Next 16 requires them declared).
+    qualities: [75, 90],
     remotePatterns: s3Hostname
       ? [{ protocol: "https", hostname: s3Hostname }]
       : [],

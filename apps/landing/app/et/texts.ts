@@ -27,6 +27,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "Hinnad",
     navFaq: "KKK",
     signIn: "Logi sisse",
+    viewFeatures: "Vaata funktsioone",
     cta: "Alusta tasuta",
   },
 

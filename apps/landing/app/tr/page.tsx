@@ -14,6 +14,7 @@ const HOME_HERO = {
   title: "Restoranınızın ihtiyacı olan her şey.",
   titleAccent: "Tek platformda.",
   sub: "Menü, sipariş alma, rezervasyon, mutfak ekranı ve AI çevirisi — beş ayrı servis yerine tek bir platform. Daha fazla bilgi için aşağıdan bir özellik seçin.",
+  imageAlt: "Bir müşteri telefonda QR menüyü alerjenlere göre filtrelerken işletme sahibi listeyi tabletten düzenliyor",
 };
 
 const FEATURE_IMAGES: Record<string, string> = {

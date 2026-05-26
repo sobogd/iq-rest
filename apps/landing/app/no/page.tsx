@@ -14,6 +14,7 @@ const HOME_HERO = {
   title: "Alt restauranten din trenger.",
   titleAccent: "På én plattform.",
   sub: "Meny, bestillingsmottak, reservasjoner, kjøkkenskjerm og AI-oversettelse — én plattform i stedet for fem separate tjenester. Velg en funksjon nedenfor for å lære mer.",
+  imageAlt: "En gjest filtrerer QR-menyen etter allergener på telefonen mens eieren redigerer listen på et nettbrett",
 };
 
 const FEATURE_IMAGES: Record<string, string> = {

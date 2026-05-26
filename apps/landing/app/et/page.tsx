@@ -14,6 +14,7 @@ const HOME_HERO = {
   title: "Kõik, mida sinu restoran vajab.",
   titleAccent: "Ühel platvormil.",
   sub: "Menüü, tellimuste vastuvõtmine, broneeringud, köögiekraan ja AI-tõlge — üks platvorm viie eraldi teenuse asemel. Vali allpool funktsioon, et rohkem teada saada.",
+  imageAlt: "Külaline filtreerib QR-menüüd allergeenide järgi telefonis, samal ajal kui omanik muudab nimekirja tahvelarvutis",
 };
 
 const FEATURE_IMAGES: Record<string, string> = {

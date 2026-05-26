@@ -14,6 +14,7 @@ const HOME_HERO = {
   title: "Alles wat je restaurant nodig heeft.",
   titleAccent: "Op één platform.",
   sub: "Menu, bestellingen aannemen, reserveringen, keukenscherm en AI vertaling — één platform in plaats van vijf aparte diensten. Kies hieronder een functie om meer te weten te komen.",
+  imageAlt: "Een gast filtert het QR-menu op allergenen op de telefoon terwijl de eigenaar de lijst op een tablet bewerkt",
 };
 
 const FEATURE_IMAGES: Record<string, string> = {

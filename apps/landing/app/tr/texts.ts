@@ -27,6 +27,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "Fiyatlar",
     navFaq: "SSS",
     signIn: "Giriş yap",
+    viewFeatures: "Özellikleri gör",
     cta: "Ücretsiz başla",
   },
 

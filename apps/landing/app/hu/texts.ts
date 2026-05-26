@@ -27,6 +27,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "Árak",
     navFaq: "GYIK",
     signIn: "Bejelentkezés",
+    viewFeatures: "Funkciók megtekintése",
     cta: "Kezdés ingyen",
   },
 

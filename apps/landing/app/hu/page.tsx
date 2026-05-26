@@ -14,6 +14,7 @@ const HOME_HERO = {
   title: "Minden, amire éttermének szüksége van.",
   titleAccent: "Egyetlen platformon.",
   sub: "Étlap, rendelésfelvétel, foglalások, konyhai kijelző és AI fordítás — egy platform öt különálló szolgáltatás helyett. Válasszon funkciót alább, hogy többet megtudjon.",
+  imageAlt: "Egy vendég allergének szerint szűri a QR-menüt telefonon, miközben a tulajdonos táblagépen szerkeszti a listát",
 };
 
 const FEATURE_IMAGES: Record<string, string> = {

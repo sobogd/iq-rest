@@ -14,6 +14,7 @@ const HOME_HERO = {
   title: "Viss, kas nepieciešams jūsu restorānam.",
   titleAccent: "Vienā platformā.",
   sub: "Ēdienkarte, pasūtījumu pieņemšana, rezervācijas, virtuves ekrāns un AI tulkojums — viena platforma piecu atsevišķu pakalpojumu vietā. Izvēlieties funkciju zemāk, lai uzzinātu vairāk.",
+  imageAlt: "Viesis telefonā filtrē QR ēdienkarti pēc alergēniem, kamēr īpašnieks rediģē sarakstu planšetē",
 };
 
 const FEATURE_IMAGES: Record<string, string> = {

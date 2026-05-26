@@ -14,6 +14,7 @@ const HOME_HERO = {
   title: "Everything your restaurant needs.",
   titleAccent: "On one platform.",
   sub: "Menu, order taking, bookings, kitchen display and AI translation — a single platform instead of five separate services. Pick a feature below to learn more.",
+  imageAlt: "Diner filters the QR menu by allergens on a phone while the owner edits the list from a tablet",
 };
 
 const FEATURE_IMAGES: Record<string, string> = {

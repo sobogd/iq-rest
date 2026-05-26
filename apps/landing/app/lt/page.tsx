@@ -14,6 +14,7 @@ const HOME_HERO = {
   title: "Viskas, ko reikia jūsų restoranui.",
   titleAccent: "Vienoje platformoje.",
   sub: "Meniu, užsakymų priėmimas, rezervacijos, virtuvės ekranas ir AI vertimas — viena platforma vietoj penkių atskirų paslaugų. Pasirinkite funkciją žemiau, kad sužinotumėte daugiau.",
+  imageAlt: "Svečias telefone filtruoja QR meniu pagal alergenus, o savininkas redaguoja sąrašą planšetėje",
 };
 
 const FEATURE_IMAGES: Record<string, string> = {

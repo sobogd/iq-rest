@@ -27,6 +27,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "Τιμές",
     navFaq: "Συχνές ερωτήσεις",
     signIn: "Σύνδεση",
+    viewFeatures: "Δείτε τις λειτουργίες",
     cta: "Ξεκινήστε δωρεάν",
   },
 

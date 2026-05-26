@@ -27,6 +27,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "Ціни",
     navFaq: "FAQ",
     signIn: "Увійти",
+    viewFeatures: "Переглянути функції",
     cta: "Почати безкоштовно",
   },
 

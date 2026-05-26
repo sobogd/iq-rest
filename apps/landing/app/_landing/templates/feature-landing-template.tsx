@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Check } from "lucide-react";
 import { LandingHeader } from "../components/header";
 import { LandingFooter } from "../components/footer";
-import { Hero } from "../components/hero";
+import { LandingHero } from "../components/landing-hero";
 import { Section } from "../components/section";
 import { PageTracker } from "../components/page-tracker";
 import { ScanSection } from "../components/scan-section";
@@ -47,19 +47,32 @@ export function FeatureLandingTemplate({
         texts={chrome.header}
         locale={locale}
         featureLinks={chrome.footer.featureLinks}
+        useLocalAnchors
+        revealOnScroll
       />
 
-      <Hero
-        texts={{ ...chrome.hero, headline: hero.headline, sub: hero.sub }}
-        ctaText={chrome.ctaText}
-        demoText={chrome.demoText}
-        microcopy={chrome.microcopy}
+      <LandingHero
         locale={locale}
+        headerTexts={chrome.header}
+        featureLinks={chrome.footer.featureLinks}
+        verticals={chrome.hero.verticals}
+        title={hero.headline}
+        sub={hero.sub}
+        primaryLabel={chrome.ctaText}
+        primaryTrack={`${trackPrefix ?? "l_feature"}_hero_cta`}
+        demoText={chrome.demoText}
+        demoVariant={demoVariant}
+        secondaryLabel={chrome.header.viewFeatures}
+        secondaryHref="#features"
+        secondaryTrack={`${trackPrefix ?? "l_feature"}_hero_features`}
+        secondaryHideMobile
+        secondaryPinRight
+        microcopy={chrome.microcopy}
         imageSrc={hero.imageSrc}
         imageAlt={hero.imageAlt}
-        demoVariant={demoVariant}
       />
 
+      <div id="features">
       <ScanSection texts={scan} locale={locale} />
 
       {subFeatures.map((row, i) => {
@@ -123,6 +136,7 @@ export function FeatureLandingTemplate({
           </Section>
         );
       })}
+      </div>
 
       <Section
         id="pricing"

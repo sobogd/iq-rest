@@ -14,6 +14,7 @@ const HOME_HERO = {
   title: "Wszystko, czego Twoja restauracja potrzebuje.",
   titleAccent: "Na jednej platformie.",
   sub: "Menu, przyjmowanie zamówień, rezerwacje, ekran kuchenny i tłumaczenie AI — jedna platforma zamiast pięciu oddzielnych usług. Wybierz funkcję poniżej, aby dowiedzieć się więcej.",
+  imageAlt: "Gość filtruje menu QR według alergenów w telefonie, podczas gdy właściciel edytuje listę na tablecie",
 };
 
 const FEATURE_IMAGES: Record<string, string> = {

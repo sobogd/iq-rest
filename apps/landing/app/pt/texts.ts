@@ -27,6 +27,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "Preços",
     navFaq: "FAQ",
     signIn: "Entrar",
+    viewFeatures: "Ver funcionalidades",
     cta: "Começar grátis",
   },
 

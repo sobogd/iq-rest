@@ -14,6 +14,7 @@ const HOME_HERO = {
   title: "Kaikki mitä ravintolasi tarvitsee.",
   titleAccent: "Yhdellä alustalla.",
   sub: "Ruokalista, tilausten vastaanotto, varaukset, keittiön näyttö ja AI-käännös — yksi alusta viiden erillisen palvelun sijaan. Valitse alta ominaisuus saadaksesi lisätietoja.",
+  imageAlt: "Asiakas suodattaa QR-ruokalistaa allergeenien mukaan puhelimella samalla kun omistaja muokkaa listaa tabletilla",
 };
 
 const FEATURE_IMAGES: Record<string, string> = {

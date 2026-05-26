@@ -14,6 +14,7 @@ const HOME_HERO = {
   title: "Gach rud a theastaíonn ó do bhialann.",
   titleAccent: "Ar ardán amháin.",
   sub: "Biachlár, glacadh orduithe, curfhaí, scáileán cistine agus aistriúchán IS — ardán amháin in ionad cúig sheirbhís ar leith. Roghnaigh gné thíos chun níos mó a fhoghlaim.",
+  imageAlt: "Scagann custaiméir an biachlár QR de réir ailléirginí ar an bhfón agus an t-úinéir ag cur an liosta in eagar ó tháibléad",
 };
 
 const FEATURE_IMAGES: Record<string, string> = {

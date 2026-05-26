@@ -14,6 +14,7 @@ const HOME_HERO = {
   title: "레스토랑에 필요한 모든 것.",
   titleAccent: "하나의 플랫폼에서.",
   sub: "메뉴, 주문 받기, 예약, 주방 디스플레이 및 AI 번역 — 다섯 개의 별도 서비스 대신 하나의 플랫폼. 자세히 알아보려면 아래의 기능을 선택하세요.",
+  imageAlt: "손님이 휴대폰에서 QR 메뉴를 알레르기 유발 물질로 필터링하고 사장은 태블릿에서 목록을 편집합니다",
 };
 
 const FEATURE_IMAGES: Record<string, string> = {

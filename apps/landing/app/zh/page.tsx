@@ -14,6 +14,7 @@ const HOME_HERO = {
   title: "您餐厅所需的一切。",
   titleAccent: "在一个平台上。",
   sub: "菜单、接单、预订、厨房显示屏和 AI 翻译 — 一个平台代替五个独立的服务。在下方选择一个功能以了解更多。",
+  imageAlt: "顾客在手机上按过敏原筛选二维码菜单，店主用平板编辑列表",
 };
 
 const FEATURE_IMAGES: Record<string, string> = {

@@ -27,6 +27,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "价格",
     navFaq: "常见问题",
     signIn: "登录",
+    viewFeatures: "查看功能",
     cta: "免费开始",
   },
 

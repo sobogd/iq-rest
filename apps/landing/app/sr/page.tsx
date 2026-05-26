@@ -14,6 +14,7 @@ const HOME_HERO = {
   title: "Sve što vašem restoranu treba.",
   titleAccent: "Na jednoj platformi.",
   sub: "Meni, primanje porudžbina, rezervacije, kuhinjski ekran i AI prevod — jedna platforma umesto pet odvojenih servisa. Izaberite funkciju ispod da saznate više.",
+  imageAlt: "Гост филтрира QR мени по алергенима на телефону док власник уређује листу са таблета",
 };
 
 const FEATURE_IMAGES: Record<string, string> = {

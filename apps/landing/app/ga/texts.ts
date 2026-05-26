@@ -27,6 +27,7 @@ export const TEXTS: LandingTexts = {
     navPricing: "Praghsanna",
     navFaq: "Ceisteanna Coitianta",
     signIn: "Sínigh isteach",
+    viewFeatures: "Féach ar ghnéithe",
     cta: "Tosaigh saor in aisce",
   },
 

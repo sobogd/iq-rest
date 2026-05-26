@@ -14,6 +14,7 @@ const HOME_HERO = {
   title: "Vse, kar vaša restavracija potrebuje.",
   titleAccent: "Na eni platformi.",
   sub: "Jedilnik, sprejemanje naročil, rezervacije, kuhinjski zaslon in AI prevod — ena platforma namesto petih ločenih storitev. Izberite funkcijo spodaj za več informacij.",
+  imageAlt: "Gost na telefonu filtrira QR meni po alergenih, medtem ko lastnik ureja seznam na tablici",
 };
 
 const FEATURE_IMAGES: Record<string, string> = {

@@ -14,6 +14,7 @@ const HOME_HERO = {
   title: "Vše, co vaše restaurace potřebuje.",
   titleAccent: "Na jedné platformě.",
   sub: "Menu, příjem objednávek, rezervace, kuchyňský displej a AI překlad — jedna platforma místo pěti samostatných služeb. Vyberte funkci níže a dozvíte se víc.",
+  imageAlt: "Host filtruje QR menu podle alergenů v telefonu, zatímco majitel upravuje seznam na tabletu",
 };
 
 const FEATURE_IMAGES: Record<string, string> = {

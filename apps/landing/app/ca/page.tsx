@@ -14,6 +14,7 @@ const HOME_HERO = {
   title: "Tot el que el teu restaurant necessita.",
   titleAccent: "En una sola plataforma.",
   sub: "Carta, recepció de comandes, reserves, pantalla de cuina i traducció IA — una sola plataforma en lloc de cinc serveis separats. Tria una funcionalitat a sota per saber-ne més.",
+  imageAlt: "Un client filtra la carta QR per al·lèrgens al mòbil mentre el propietari edita la llista des d'una tauleta",
 };
 
 const FEATURE_IMAGES: Record<string, string> = {

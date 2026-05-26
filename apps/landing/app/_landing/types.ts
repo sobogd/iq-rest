@@ -101,6 +101,8 @@ export type LandingTexts = {
     navFaq: string;
     signIn: string;
     cta: string;
+    /** Secondary hero CTA — scrolls to the features section ("View features"). */
+    viewFeatures: string;
   };
 
   hero: {

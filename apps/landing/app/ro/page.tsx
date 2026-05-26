@@ -14,6 +14,7 @@ const HOME_HERO = {
   title: "Tot ce are nevoie restaurantul dumneavoastră.",
   titleAccent: "Pe o singură platformă.",
   sub: "Meniu, preluare comenzi, rezervări, display bucătărie și traducere AI — o singură platformă în loc de cinci servicii separate. Alegeți o funcționalitate mai jos pentru a afla mai multe.",
+  imageAlt: "Un client filtrează meniul QR după alergeni pe telefon în timp ce proprietarul editează lista de pe o tabletă",
 };
 
 const FEATURE_IMAGES: Record<string, string> = {

@@ -6,10 +6,10 @@ import { LandingFooter } from "../components/footer";
 import { Section } from "../components/section";
 import { PageTracker } from "../components/page-tracker";
 import { PricingHero } from "../components/pricing-hero";
-import { CtaButton } from "../components/cta-button";
+import { LandingHero } from "../components/landing-hero";
 import type { LandingTexts } from "../types";
 
-export type HomeHero = { title: string; titleAccent: string; sub: string };
+export type HomeHero = { title: string; titleAccent: string; sub: string; imageAlt: string };
 
 // Shared markup for every per-locale home page. Per-locale data (hero copy,
 // feature images, JSON-LD, the "learn more" label) stays in each `page.tsx`
@@ -34,57 +34,25 @@ export function HomeTemplate({
     <main className="relative">
       <PageTracker />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
-      <LandingHeader texts={texts.header} locale={locale} useLocalAnchors featureLinks={texts.footer.featureLinks} />
+      <LandingHeader texts={texts.header} locale={locale} useLocalAnchors featureLinks={texts.footer.featureLinks} revealOnScroll />
 
-      <Section dataSection="home_hero" noContainer accent>
-        <div className="w-full lg:min-h-[50dvh] flex flex-col items-center justify-center text-center py-8 sm:py-14">
-          <div className="sm:hidden w-full mb-5 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-            <div className="flex w-max animate-marquee gap-1.5">
-              {[...texts.hero.verticals, ...texts.hero.verticals].map((v, i) => (
-                <span
-                  key={`${v}-${i}`}
-                  className="shrink-0 inline-flex items-center h-7 leading-none text-[11px] uppercase tracking-wider text-muted-foreground rounded-full px-2.5 whitespace-nowrap"
-                >
-                  {v}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div className="hidden sm:flex flex-row flex-wrap items-center justify-center gap-1.5 mb-5 w-full">
-            {texts.hero.verticals.map((v) => (
-              <span
-                key={v}
-                className="inline-flex items-center h-8 leading-none text-xs lg:text-sm uppercase tracking-wider text-muted-foreground rounded-full px-3"
-              >
-                {v}
-              </span>
-            ))}
-          </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-medium tracking-tight max-w-4xl lg:max-w-6xl mb-5">
-            {hero.title}{" "}
-            <span className="text-primary lg:block">{hero.titleAccent}</span>
-          </h1>
-          <p className="text-sm sm:text-lg lg:text-xl text-muted-foreground max-w-2xl lg:max-w-4xl mb-10">
-            {hero.sub}
-          </p>
-          <CtaButton
-            text={texts.homeCtaText}
-            microcopy={texts.microcopy}
-            locale={locale}
-            align="center"
-            trackEvent="l_home_hero_cta_click"
-            extra={
-              <a
-                href="#features"
-                className="inline-flex items-center justify-center min-h-11 py-2 px-6 text-sm font-medium text-foreground bg-transparent border border-border rounded-lg hover:bg-muted active:scale-[0.99] transition-all text-center leading-tight"
-              >
-                {texts.header.navFeatures}
-              </a>
-            }
-          />
-        </div>
-      </Section>
+      <LandingHero
+        locale={locale}
+        headerTexts={texts.header}
+        featureLinks={texts.footer.featureLinks}
+        verticals={texts.hero.verticals}
+        title={hero.title}
+        titleAccent={hero.titleAccent}
+        sub={hero.sub}
+        primaryLabel={texts.homeCtaText}
+        primaryTrack="l_home_hero_cta_click"
+        secondaryLabel={texts.header.viewFeatures}
+        secondaryHref="#features"
+        secondaryTrack="l_home_hero_features_click"
+        microcopy={texts.microcopy}
+        imageSrc="/landing/feature-allergens.webp"
+        imageAlt={hero.imageAlt}
+      />
 
       <div id="features">
         {texts.features.items.map((item, i) => {

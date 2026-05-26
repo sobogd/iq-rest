@@ -14,6 +14,7 @@ const HOME_HERO = {
   title: "Allt sem veitingastaðurinn þinn þarf.",
   titleAccent: "Á einum vettvangi.",
   sub: "Matseðill, pantanataka, bókanir, eldhússkjár og gervigreindar þýðing — einn vettvangur í stað fimm aðskildra þjónustna. Veldu eiginleika hér að neðan til að læra meira.",
+  imageAlt: "Gestur síar QR-matseðilinn eftir ofnæmisvöldum í símanum á meðan eigandinn breytir listanum í spjaldtölvu",
 };
 
 const FEATURE_IMAGES: Record<string, string> = {
