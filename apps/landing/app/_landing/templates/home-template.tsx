@@ -8,6 +8,9 @@ import { PageTracker } from "../components/page-tracker";
 import { PricingHero } from "../components/pricing-hero";
 import { Founder } from "../components/founder";
 import { LandingHero } from "../components/landing-hero";
+import { FinalCta } from "../components/final-cta";
+import { getHelpBanner } from "../help/registry";
+import { HelpBannerSection } from "../help/help-banner-section";
 import type { LandingTexts } from "../types";
 
 export type HomeHero = { title: string; titleAccent: string; sub: string; imageAlt: string };
@@ -31,6 +34,8 @@ export function HomeTemplate({
   jsonLd: string;
   learnMoreText: string;
 }) {
+  // Help banner shows only for locales whose guide is translated (registry).
+  const helpBanner = getHelpBanner(locale);
   return (
     <main className="relative">
       <PageTracker />
@@ -40,6 +45,7 @@ export function HomeTemplate({
       <LandingHero
         locale={locale}
         headerTexts={texts.header}
+        helpHref={helpBanner?.href}
         featureLinks={texts.footer.featureLinks}
         verticals={texts.hero.verticals}
         title={hero.title}
@@ -63,12 +69,12 @@ export function HomeTemplate({
             <Section key={item.title} dataSection={`feature_${i}`} noContainer accent={i % 2 === 1}>
               <div className="w-full lg:min-h-[70dvh] flex items-center py-8 sm:py-16 lg:py-0">
                 <div className={`grid grid-cols-1 gap-10 lg:gap-14 xl:gap-20 lg:grid-cols-2 lg:items-center w-full ${reverse ? "lg:[&>*:first-child]:order-2" : ""}`}>
-                  <div className="flex flex-col items-start text-start">
+                  <div className="flex flex-col items-center text-center lg:items-start lg:text-start">
                     <div className="inline-flex items-center gap-2 text-primary mb-5">
                       <item.Icon className="h-5 w-5" strokeWidth={2} />
                       {item.tag ? <span className="text-[11px] uppercase tracking-widest font-medium">{item.tag}</span> : null}
                     </div>
-                    <h2 className="text-4xl sm:text-[2.625rem] lg:text-[3.25rem] xl:text-[3.5rem] font-medium tracking-tight leading-[1.05] mb-5">
+                    <h2 className="text-[2rem] sm:text-[2.5rem] lg:text-[3rem] xl:text-[3.25rem] font-medium tracking-tight leading-[1.05] mb-5">
                       {item.title}
                     </h2>
                     <p className="text-base sm:text-lg lg:text-xl text-muted-foreground/70 max-w-xl leading-snug mb-8">
@@ -77,7 +83,7 @@ export function HomeTemplate({
                     {item.href ? (
                       <Link
                         href={item.href}
-                        className="inline-flex items-center justify-center gap-2 min-h-11 py-2 px-6 text-sm font-semibold text-white bg-gradient-to-br from-[hsl(9,100%,58%)] to-[hsl(35,95%,55%)] rounded-lg hover:opacity-90 active:scale-[0.99] transition-all text-center leading-tight"
+                        className="inline-flex items-center justify-center gap-2 h-11 px-6 text-base font-semibold text-white bg-gradient-to-br from-[hsl(9,100%,58%)] to-[hsl(35,95%,55%)] rounded-lg hover:opacity-90 active:scale-[0.99] transition-all text-center leading-tight whitespace-nowrap"
                       >
                         {learnMoreText}
                         <ArrowRight className="h-4 w-4" />
@@ -105,6 +111,18 @@ export function HomeTemplate({
       <Section id="founder" dataSection="founder" noContainer accent className="!py-16">
         <Founder texts={texts.founder} />
       </Section>
+
+      <Section dataSection="final_cta" noContainer className="!py-16">
+        <FinalCta
+          texts={texts.finalCta}
+          ctaText={texts.ctaText}
+          demoText={texts.demoText}
+          microcopy={texts.microcopy}
+          locale={locale}
+        />
+      </Section>
+
+      {helpBanner ? <HelpBannerSection banner={helpBanner} source="home" /> : null}
 
       <Section as="footer" dataSection="footer" noContainer className="!py-6 sm:!py-8">
         <LandingFooter texts={texts.footer} headerTexts={texts.header} locale={locale} />

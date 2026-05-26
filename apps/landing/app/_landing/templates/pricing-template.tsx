@@ -4,6 +4,9 @@ import { Faq } from "../components/faq";
 import { Section } from "../components/section";
 import { PageTracker } from "../components/page-tracker";
 import { PricingHero } from "../components/pricing-hero";
+import { FinalCta } from "../components/final-cta";
+import { getHelpBanner } from "../help/registry";
+import { HelpBannerSection } from "../help/help-banner-section";
 import type { LandingTexts } from "../types";
 
 // Shared markup for every per-locale pricing page. Per-locale data (the
@@ -22,21 +25,34 @@ export function PricingTemplate({
   jsonLd: string;
   trackPrefix: string;
 }) {
+  const helpBanner = getHelpBanner(locale);
   return (
     <main className="relative">
       <PageTracker />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
-      <LandingHeader texts={texts.header} locale={locale} featureLinks={texts.footer.featureLinks} />
+      <LandingHeader texts={texts.header} locale={locale} featureLinks={texts.footer.featureLinks} helpHref={helpBanner?.href} />
 
-      <Section dataSection="pricing_hero" noContainer accent>
+      <Section dataSection="pricing_hero" noContainer>
         <PricingHero locale={locale} ctaText={texts.ctaText} demoText={texts.demoText} microcopy={texts.microcopy} texts={texts.pricingHero!} trackPrefix={trackPrefix} />
       </Section>
 
-      <Section id="faq" dataSection="faq" noContainer>
+      <Section id="faq" dataSection="faq" noContainer accent>
         <Faq texts={faq} />
       </Section>
 
-      <Section as="footer" dataSection="footer" noContainer accent className="!py-6 sm:!py-8">
+      <Section dataSection="final_cta" noContainer className="!py-16">
+        <FinalCta
+          texts={texts.finalCta}
+          ctaText={texts.ctaText}
+          demoText={texts.demoText}
+          microcopy={texts.microcopy}
+          locale={locale}
+        />
+      </Section>
+
+      {helpBanner ? <HelpBannerSection banner={helpBanner} source="pricing" /> : null}
+
+      <Section as="footer" dataSection="footer" noContainer className="!py-6 sm:!py-8">
         <LandingFooter texts={texts.footer} headerTexts={texts.header} locale={locale} />
       </Section>
     </main>

@@ -15,7 +15,7 @@ export function Faq({ texts }: FaqProps) {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-start gap-10 lg:gap-14 w-full">
       <div className="flex flex-col items-center text-center lg:items-start lg:text-start lg:sticky lg:top-24">
-        <h2 className="text-4xl sm:text-[2.625rem] lg:text-[3.25rem] xl:text-[3.5rem] font-medium tracking-tight mb-3 leading-[1.05]">
+        <h2 className="text-[2rem] sm:text-[2.5rem] lg:text-[3rem] xl:text-[3.25rem] font-medium tracking-tight mb-3 leading-[1.05]">
           {texts.heading}{" "}
           <span className="bg-gradient-to-br from-primary to-amber-400 bg-clip-text text-transparent">
             {texts.headingAccent}

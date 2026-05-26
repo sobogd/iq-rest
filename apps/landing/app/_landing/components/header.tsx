@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import { Globe, LogIn, Menu, X } from "lucide-react";
+import { Globe, HelpCircle, LogIn, Menu, X } from "lucide-react";
 import { LogoIcon } from "./logo-icon";
 import { LinkForward } from "./link-forward";
 import { usePrimaryCta } from "./onboarding/use-primary-cta";
@@ -30,6 +30,10 @@ interface HeaderProps {
   /** `solid` (default): opaque sticky/fixed bar on a light background.
    *  `hero`: transparent, white, in-flow bar rendered over the hero image. */
   variant?: "solid" | "hero";
+  /** Help guide URL for this locale; when set, a "?" icon shows before the
+   *  language switcher. Computed server-side by the template so the client
+   *  bundle doesn't pull in every locale's help doc. */
+  helpHref?: string;
 }
 
 // One landing header in two skins. `solid` is the opaque sticky bar used across
@@ -44,6 +48,7 @@ export function LandingHeader({
   featureLinks,
   revealOnScroll = false,
   variant = "solid",
+  helpHref,
 }: HeaderProps) {
   const isHero = variant === "hero";
   // The solid reveal-on-scroll header is only ever shown once scrolled, so it
@@ -188,6 +193,16 @@ export function LandingHeader({
                     <span className="hidden lg:inline">{texts.signIn}</span>
                   </button>
                 )}
+                {helpHref ? (
+                  <a
+                    href={helpHref}
+                    aria-label="Help"
+                    onClick={() => analytics.track("l_header_help_click")}
+                    className={`inline-flex items-center justify-center h-9 w-9 rounded-lg transition-colors ${iconBtn}`}
+                  >
+                    <HelpCircle className="h-5 w-5" />
+                  </a>
+                ) : null}
                 <button
                   type="button"
                   aria-label={cookieTexts.languageSwitcher}

@@ -162,7 +162,7 @@ export function PricingHero({
           ))}
         </div>
 
-        <h2 className="text-4xl sm:text-[2.625rem] lg:text-[3.25rem] xl:text-[3.5rem] font-medium tracking-tight leading-[1.05] mb-5">
+        <h2 className="text-[2rem] sm:text-[2.5rem] lg:text-[3rem] xl:text-[3.25rem] font-medium tracking-tight leading-[1.05] mb-5">
           {texts.heading}{" "}
           <span className="bg-gradient-to-br from-primary to-amber-400 bg-clip-text text-transparent">
             {texts.headingAccent}

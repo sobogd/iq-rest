@@ -11,6 +11,8 @@ import { FinalCta } from "../components/final-cta";
 import { Faq } from "../components/faq";
 import { PricingHero } from "../components/pricing-hero";
 import { FeatureJsonLd } from "./feature-json-ld";
+import { getHelpBanner } from "../help/registry";
+import { HelpBannerSection } from "../help/help-banner-section";
 import type { LandingTexts } from "../types";
 import type { FeatureContent } from "./types";
 
@@ -33,6 +35,7 @@ export function FeatureLandingTemplate({
 }: FeatureLandingTemplateProps) {
   const { locale, subFeatures, hero, scan, faq, trackPrefix } = content;
   const subCount = subFeatures.length;
+  const helpBanner = getHelpBanner(locale);
   // Board feature pages embed the real dashboard board (landscape tablet
   // frame) instead of the phone menu preview, so the demo matches the
   // feature. `trackPrefix` carries a locale-stable token on every locale's
@@ -62,6 +65,7 @@ export function FeatureLandingTemplate({
         locale={locale}
         headerTexts={chrome.header}
         featureLinks={chrome.footer.featureLinks}
+        helpHref={helpBanner?.href}
         verticals={chrome.hero.verticals}
         title={hero.headline}
         sub={hero.sub}
@@ -98,7 +102,7 @@ export function FeatureLandingTemplate({
                   reverse ? "lg:[&>*:first-child]:order-2" : ""
                 }`}
               >
-                <div className="flex flex-col items-start text-start">
+                <div className="flex flex-col items-center text-center lg:items-start lg:text-start">
                   <div className="inline-flex items-center gap-2 text-primary mb-5">
                     <Icon className="h-5 w-5" strokeWidth={2} />
                     <span className="text-[11px] uppercase tracking-widest font-medium">
@@ -115,13 +119,13 @@ export function FeatureLandingTemplate({
                     {row.bullets.map((b) => (
                       <li
                         key={b}
-                        className="flex items-start gap-1.5 text-sm sm:text-base text-foreground/90 leading-snug text-start"
+                        className="text-sm sm:text-base text-foreground/90 leading-snug text-center lg:text-start"
                       >
                         <Check
-                          className="shrink-0 mt-0.5 h-4 w-4 sm:h-[18px] sm:w-[18px] text-primary"
+                          className="inline align-[-0.15em] mr-1.5 h-4 w-4 sm:h-[18px] sm:w-[18px] text-primary"
                           strokeWidth={2.5}
                         />
-                        <span>{b}</span>
+                        {b}
                       </li>
                     ))}
                   </ul>
@@ -182,7 +186,7 @@ export function FeatureLandingTemplate({
         <Founder texts={chrome.founder} />
       </Section>
 
-      <Section dataSection="final_cta" noContainer accent={subCount % 2 === 1} className="!py-16">
+      <Section dataSection="final_cta" noContainer className="!py-16">
         <FinalCta
           texts={chrome.finalCta}
           ctaText={hero.cta}
@@ -193,11 +197,12 @@ export function FeatureLandingTemplate({
         />
       </Section>
 
+      {helpBanner ? <HelpBannerSection banner={helpBanner} source="feature" /> : null}
+
       <Section
         as="footer"
         dataSection="footer"
         noContainer
-        accent={subCount % 2 === 0}
         className="!py-6 sm:!py-8"
       >
         <LandingFooter

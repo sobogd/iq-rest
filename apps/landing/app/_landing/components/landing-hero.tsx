@@ -12,6 +12,8 @@ interface LandingHeroProps {
   /** Header strings + feature links for the embedded transparent hero header. */
   headerTexts: LandingTexts["header"];
   featureLinks: LandingTexts["footer"]["featureLinks"];
+  /** Help guide URL for the locale; forwarded to the hero header's "?" icon. */
+  helpHref?: string;
   /** Establishment-type chips shown above the headline. */
   verticals: string[];
 
@@ -50,6 +52,7 @@ export function LandingHero({
   locale,
   headerTexts,
   featureLinks,
+  helpHref,
   verticals,
   title,
   titleAccent,
@@ -95,6 +98,7 @@ export function LandingHero({
         texts={headerTexts}
         locale={locale}
         featureLinks={featureLinks}
+        helpHref={helpHref}
         useLocalAnchors
         variant="hero"
       />

@@ -14,9 +14,9 @@ export function LandingFooter({ texts, headerTexts: _headerTexts, locale }: Foot
   const copyright = texts.copyrightTemplate.replace("{year}", String(year));
 
   return (
-    <div className="w-full flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-      <FooterToolbar locale={locale} navClassName="justify-start gap-x-4" />
-      <p className="text-base text-muted-foreground/80 text-start sm:text-end">
+    <div className="w-full flex flex-col items-center sm:flex-row sm:items-center sm:justify-between gap-8 sm:gap-3">
+      <FooterToolbar locale={locale} navClassName="justify-center sm:justify-start gap-x-4" />
+      <p className="text-sm sm:text-base text-muted-foreground/50 text-center sm:text-end">
         {copyright}
       </p>
     </div>
