@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Tellimuste vastuvõtmine: külaline ja kelner — otse kööki.",
+    cta: "Seadista online-tellimused",
     sub: "Külalised tellivad lauas QR-menüü kaudu või kelner võtab tellimuse vastu telefonist või tahvelarvutist — tellimus jõuab köögiekraanile sekunditega. Saaliplaan värvikoodiga laudadega, arve jagamine, paindlikud valikud ja kommentaarid. Ei mingeid märkmikke, ei mingeid käike baari.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Kelner võtab lauas tellimuse vastu nutitelefonist — tellimus jõuab köögiekraanile",

@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "QR koda ēdienkarte restorāniem.",
+    cta: "Izveidot QR ēdienkarti",
     sub: "Viesis pavērš kameru uz QR kodu uz galda, un ēdienkarte uzreiz atveras telefona pārlūkā: ēdienu fotoattēli, alergēni, vienmēr aktuālas cenas un automātisks tulkojums 35 valodās. Bez lietotņu lejupielādes un bez ēdienkartes atkārtotas drukāšanas pie katras cenas maiņas.",
   },
 

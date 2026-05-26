@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Digitální menu pro restaurace.",
+    cta: "Vytvořit digitální menu",
     sub: "Online verze vašeho papírového menu s fotkami, alergeny, popisy a okamžitými aktualizacemi cen. Hosté vidí menu ve svém vlastním jazyce; restaurace šetří za tisk.",
   },
 

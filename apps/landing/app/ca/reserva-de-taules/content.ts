@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Reserva de taules 24/7 — els clients reserven sols.",
+    cta: "Configurar reserves de taula",
     sub: "Els clients reserven taules a través de la carta QR o un enllaç directe. Calendari per taula, confirmacions i recordatoris automàtics. Cap client perdut i sense trucades en hores punta.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Hostessa gestionant reserves des d'una tauleta a l'entrada del restaurant",

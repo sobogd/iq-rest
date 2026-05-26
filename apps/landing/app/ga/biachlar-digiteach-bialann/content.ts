@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Biachlár digiteach do bhialanna.",
+    cta: "Cruthaigh biachlár digiteach",
     sub: "Leagan ar líne de do bhiachlár páipéir le grianghraif, ailléirginí, tuairiscí agus nuashonruithe beo praghsanna. Feiceann aíonna an biachlár ina dteanga féin; sábhálann an bhialann ar phriontáil.",
   },
 

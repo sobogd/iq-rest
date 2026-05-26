@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Écran de cuisine : commandes directement sur l'écran du chef.",
+    cta: "Configurer l’écran de cuisine",
     sub: "Les tickets papier ne sont plus nécessaires. Les commandes de la salle ou du menu QR arrivent instantanément sur l'écran de cuisine — avec notes, allergènes et minuteur. Un tap change le statut. Fonctionne sur une tablette au passe ou sur le smartphone dans la poche du chef.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Cuisine professionnelle avec une tablette sur un support en laiton affichant l'écran de cuisine avec les commandes actives",

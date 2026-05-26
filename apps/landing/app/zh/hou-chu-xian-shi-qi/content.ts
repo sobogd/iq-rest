@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "厨房显示屏:订单直接出现在厨师的屏幕上。",
+    cta: "设置厨房显示屏",
     sub: "不再需要纸质订单。来自大堂或 QR 菜单的订单立即出现在厨房屏幕上 — 带备注、过敏原和计时器。一键更改状态。在传菜口的平板电脑或厨师口袋里的智能手机上运行。",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "专业厨房,黄铜支架上的平板电脑显示带活跃订单的厨房显示屏",

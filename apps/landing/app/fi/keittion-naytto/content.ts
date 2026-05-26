@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Keittiön näyttö: tilaukset suoraan kokin näyttöön.",
+    cta: "Ota keittiönäyttö käyttöön",
     sub: "Paperilappuja ei enää tarvita. Tilaukset salista tai QR-ruokalistasta saapuvat välittömästi keittiön näyttöön — muistiinpanoilla, allergeeneilla ja ajastimella. Yksi näpäytys vaihtaa tilan. Toimii tabletilla läpiantopisteellä tai älypuhelimella kokin taskussa.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Ammattikeittiö, jossa tabletti messinkitelineellä näyttää keittiön näyttöä aktiivisilla tilauksilla",

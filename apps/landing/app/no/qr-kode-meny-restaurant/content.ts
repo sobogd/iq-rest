@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "QR-kode meny for restauranter.",
+    cta: "Lag QR-meny",
     sub: "Gjesten retter kameraet mot QR-koden på bordet, og menyen åpnes umiddelbart i telefonens nettleser: bilder av rettene, allergener, alltid oppdaterte priser og automatisk oversettelse til 35 språk. Uten å laste ned apper, og uten å trykke menyen på nytt ved hver prisendring.",
   },
 

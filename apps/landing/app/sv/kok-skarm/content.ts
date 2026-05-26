@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Köksskärm: beställningar direkt till kockens skärm.",
+    cta: "Konfigurera köksdisplay",
     sub: "Pappersnotor behövs inte längre. Beställningar från salen eller QR-menyn landar omedelbart på köksskärmen — med anteckningar, allergener och timer. Ett tryck ändrar status. Fungerar på en surfplatta vid passet eller en smartphone i kockens ficka.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Professionellt kök med en surfplatta på ett mässingsstativ som visar köksskärmen med aktiva beställningar",

@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "테이블 예약 24/7 — 손님이 직접 예약.",
+    cta: "테이블 예약 설정",
     sub: "손님이 QR 메뉴 또는 직접 링크를 통해 테이블을 예약합니다. 테이블별 캘린더, 자동 확인 및 알림. 단 한 명의 손님도 놓치지 않으며 피크 시간에 전화도 없습니다.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "레스토랑 입구에서 태블릿으로 예약을 관리하는 호스티스",

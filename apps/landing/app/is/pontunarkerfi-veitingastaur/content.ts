@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Pantanataka: gestur og þjónn — beint í eldhúsið.",
+    cta: "Setja upp netpantanir",
     sub: "Gestir panta í gegnum QR matseðilinn við borðið eða þjónninn tekur pöntunina úr síma eða spjaldtölvu — pöntunin kemur á eldhússkjáinn á sekúndum. Salaráætlun með litakóða borðum, skipting reiknings, sveigjanlegir valmöguleikar og athugasemdir. Engar minnisbækur, engar ferðir á barinn.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Þjónn tekur pöntun við borðið úr snjallsíma — pöntunin kemur á eldhússkjáinn",

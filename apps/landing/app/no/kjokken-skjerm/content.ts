@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Kjøkkenskjerm: bestillinger direkte til kokkens skjerm.",
+    cta: "Sett opp kjøkkenskjerm",
     sub: "Papirkvitteringer er ikke lenger nødvendige. Bestillinger fra salongen eller QR-menyen lander umiddelbart på kjøkkenskjermen — med notater, allergener og timer. Ett trykk endrer status. Fungerer på et nettbrett ved utleveringsdisken eller en smarttelefon i kokkens lomme.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Profesjonelt kjøkken med et nettbrett på en messingstativ som viser kjøkkenskjermen med aktive bestillinger",

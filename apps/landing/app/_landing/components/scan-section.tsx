@@ -14,7 +14,7 @@ export function ScanSection({ texts }: ScanSectionProps) {
     <section
       id="scan"
       data-section="scan"
-      className="scroll-mt-16 w-full px-4 sm:px-6 lg:px-10 xl:px-14 py-16 sm:py-12"
+      className="scroll-mt-16 w-full px-4 sm:px-6 lg:px-10 xl:px-14 py-8 sm:py-16"
     >
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 lg:gap-10 text-center lg:text-start">
         <div className="flex-1 min-w-0">

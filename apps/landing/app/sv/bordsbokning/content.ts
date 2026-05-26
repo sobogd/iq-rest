@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Bordsbokning 24/7 — gäster bokar själva.",
+    cta: "Konfigurera bordsbokning",
     sub: "Gäster bokar bord via QR-menyn eller en direktlänk. Kalender per bord, automatiska bekräftelser och påminnelser. Inte en enda missad gäst och inga telefonsamtal under rusningstid.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Värdinna hanterar bokningar från en surfplatta vid restaurangens entré",

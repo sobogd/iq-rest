@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Curfha bord 24/7 — cuireann aíonna in áirithe iad féin.",
+    cta: "Socraigh áirithint boird",
     sub: "Cuireann aíonna boird in áirithe tríd an mbiachlár QR nó nasc díreach. Féilire de réir boird, deimhnithe uathoibríocha agus meabhrúcháin. Gan aon aoi caillte agus gan ghlaonna le linn buaicuaireanta.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Banaltra ag bainistiú curfhaí ó tháibléad ag bealach isteach na bialainne",

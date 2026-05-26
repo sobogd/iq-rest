@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Köögiekraan: tellimused otse koka ekraanile.",
+    cta: "Seadista köögiekraan",
     sub: "Paberitellimusi pole enam vaja. Tellimused saalist või QR-menüüst jõuavad kohe köögiekraanile — märkuste, allergeenide ja taimeriga. Üks puudutus muudab olekut. Toimib tahvelarvutil väljastusletil või nutitelefonil koka taskus.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Professionaalne köök vasalkujul oleva tahvelarvutiga, mis kuvab köögiekraani aktiivsete tellimustega",

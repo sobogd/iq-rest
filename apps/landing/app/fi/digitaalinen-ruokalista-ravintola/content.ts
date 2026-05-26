@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Digitaalinen ruokalista ravintoloille.",
+    cta: "Luo digitaalinen menu",
     sub: "Paperisen ruokalistasi online-versio kuvilla, allergeeneilla, kuvauksilla ja reaaliaikaisilla hintapäivityksillä. Vieraat näkevät ruokalistan omalla kielellään; ravintola säästää tulostuksessa.",
   },
 

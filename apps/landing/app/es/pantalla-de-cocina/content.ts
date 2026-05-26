@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Pantalla de cocina: los pedidos directos a la pantalla del chef.",
+    cta: "Configurar pantalla de cocina",
     sub: "Adiós a los tickets de papel. Los pedidos de sala o de la carta QR llegan al instante a la pantalla de la cocina — con comentarios, alérgenos y temporizador. Un solo toque cambia el estado. Funciona tanto en una tableta en el pase como en el móvil del jefe de cocina.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Cocina profesional con una tableta sobre un soporte de latón mostrando la pantalla de cocina con los pedidos activos",

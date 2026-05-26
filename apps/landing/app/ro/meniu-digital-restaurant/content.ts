@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Meniu digital pentru restaurante.",
+    cta: "Creează meniul digital",
     sub: "Versiune online a meniului dumneavoastră pe hârtie cu fotografii, alergeni, descrieri și actualizări de prețuri în timp real. Oaspeții văd meniul în propria lor limbă; restaurantul economisește la tipărire.",
   },
 

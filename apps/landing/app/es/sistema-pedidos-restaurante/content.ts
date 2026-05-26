@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Pedidos: comensal y camarero — directo a la cocina.",
+    cta: "Configurar pedidos online",
     sub: "El comensal pide a través de la carta QR en la mesa o el camarero toma la comanda desde su móvil o tableta — el pedido llega a la pantalla de cocina al instante. Plano de sala con mesas codificadas por color, división de cuenta, opciones flexibles y comentarios. Sin libretas y sin idas y venidas a la barra.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Camarero toma una comanda en la mesa desde un smartphone — el pedido llega a la pantalla de cocina",

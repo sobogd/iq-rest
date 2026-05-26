@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "テーブル予約24/7 — お客様が自分で予約。",
+    cta: "テーブル予約を設定",
     sub: "お客様はQRメニューまたは直接リンクからテーブルを予約。テーブルごとのカレンダー、自動確認とリマインダー。お客様を1人も逃さず、ピーク時の電話なし。",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "レストランの入り口でタブレットから予約を管理するホステス",

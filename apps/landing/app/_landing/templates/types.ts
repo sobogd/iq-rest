@@ -22,6 +22,8 @@ export interface FeatureMeta {
 export interface FeatureHero {
   headline: string;
   sub: string;
+  /** Feature-specific primary CTA label (e.g. "Create Digital Menu"). */
+  cta: string;
   imageSrc?: string;
   imageAlt?: string;
 }

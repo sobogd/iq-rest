@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Virtuves ekrāns: pasūtījumi tieši uz šefpavāra ekrāna.",
+    cta: "Iestatīt virtuves ekrānu",
     sub: "Papīra kvītis vairs nav nepieciešamas. Pasūtījumi no zāles vai QR ēdienkartes uzreiz nonāk virtuves ekrānā — ar piezīmēm, alergēniem un taimeri. Viens pieskāriens maina statusu. Darbojas planšetdatorā pie izsniegšanas loga vai viedtālrunī šefpavāra kabatā.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Profesionāla virtuve ar planšetdatoru uz misiņa stenda, kas rāda virtuves ekrānu ar aktīviem pasūtījumiem",

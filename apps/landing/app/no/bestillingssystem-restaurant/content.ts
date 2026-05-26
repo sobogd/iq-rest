@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Bestillingsmottak: gjest og kelner — direkte til kjøkkenet.",
+    cta: "Sett opp nettbestilling",
     sub: "Gjester bestiller via QR-menyen ved bordet eller kelneren tar bestillingen fra en telefon eller nettbrett — bestillingen lander på kjøkkenskjermen på sekunder. Salongplan med fargekodede bord, regningsdeling, fleksible alternativer og kommentarer. Ingen notisblokker, ingen turer til baren.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Kelner tar en bestilling ved bordet fra en smarttelefon — bestillingen lander på kjøkkenskjermen",

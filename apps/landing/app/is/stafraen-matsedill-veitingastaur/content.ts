@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Stafrænn matseðill fyrir veitingastaði.",
+    cta: "Búa til stafrænan matseðil",
     sub: "Netútgáfa af pappírs matseðlinum þínum með myndum, ofnæmisvökum, lýsingum og uppfærslum á verðum í rauntíma. Gestir sjá matseðilinn á sínu eigin tungumáli; veitingastaðurinn sparar á prentun.",
   },
 

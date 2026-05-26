@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Menu z kodem QR dla restauracji.",
+    cta: "Utwórz menu QR",
     sub: "Gość kieruje aparat na kod QR na stoliku i menu otwiera się natychmiast w przeglądarce telefonu: zdjęcia dań, alergeny, zawsze aktualne ceny i automatyczne tłumaczenie na 35 języków. Bez pobierania aplikacji, bez przedruku menu przy każdej zmianie ceny.",
   },
 

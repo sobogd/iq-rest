@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Keukenscherm: bestellingen direct naar het chef-scherm.",
+    cta: "Keukenscherm instellen",
     sub: "Papieren bonnen zijn niet meer nodig. Bestellingen vanuit de zaal of het QR menu komen direct op het keukenscherm — met notities, allergenen en timer. Eén tik wijzigt de status. Werkt op een tablet bij de doorgeefluik of een smartphone in de zak van de chef.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Professionele keuken met een tablet op een messing standaard die het keukenscherm toont met actieve bestellingen",

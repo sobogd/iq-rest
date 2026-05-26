@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "QR matseðill fyrir veitingastaði.",
+    cta: "Búa til QR-matseðil",
     sub: "Gesturinn beinir myndavélinni að QR-kóðanum á borðinu og matseðillinn opnast samstundis í vafra símans: myndir af réttunum, ofnæmisvaldar, alltaf uppfærð verð og sjálfvirk þýðing á 35 tungumál. Án þess að hlaða niður öppum og án þess að endurprenta matseðilinn í hvert sinn sem verð breytist.",
   },
 

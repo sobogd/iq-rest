@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Primanje narudžbi: gost i konobar — izravno u kuhinju.",
+    cta: "Postavi online narudžbe",
     sub: "Gosti naručuju putem QR jelovnika za stolom ili konobar prima narudžbu s telefona ili tableta — narudžba stiže na kuhinjski ekran u sekundama. Plan sale s obojenim stolovima, podjela računa, fleksibilne opcije i komentari. Bez blokova, bez odlazaka do šanka.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Konobar prima narudžbu za stolom sa smartphonea — narudžba stiže na kuhinjski ekran",

@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Digitalni meni za restorane.",
+    cta: "Направи дигитални мени",
     sub: "Onlajn verzija vašeg papirnog menija sa fotografijama, alergenima, opisima i ažuriranjima cena u realnom vremenu. Gosti vide meni na svom jeziku; restoran štedi na štampi.",
   },
 

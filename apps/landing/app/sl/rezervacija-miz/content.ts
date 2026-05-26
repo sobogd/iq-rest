@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Rezervacija miz 24/7 — gostje rezervirajo sami.",
+    cta: "Nastavi rezervacije miz",
     sub: "Gostje rezervirajo mize prek QR jedilnika ali neposredne povezave. Koledar po mizi, samodejne potrditve in opomniki. Niti enega izgubljenega gosta in brez klicev v konicah.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Hostesa upravlja rezervacije s tablice pri vhodu v restavracijo",

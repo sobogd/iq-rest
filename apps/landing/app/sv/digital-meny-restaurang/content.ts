@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Digital meny för restauranger.",
+    cta: "Skapa digital meny",
     sub: "Onlineversion av din pappersmeny med bilder, allergener, beskrivningar och prisuppdateringar i realtid. Gäster ser menyn på sitt eget språk; restaurangen sparar på tryck.",
   },
 

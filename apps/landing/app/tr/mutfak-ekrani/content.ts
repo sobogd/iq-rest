@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Mutfak ekranı: siparişler doğrudan aşçının ekranına.",
+    cta: "Mutfak ekranını kur",
     sub: "Kağıt fişlere artık gerek yok. Salondan veya QR menüden gelen siparişler anında mutfak ekranına düşer — notlar, alerjenler ve zamanlayıcı ile. Tek dokunuş durumu değiştirir. Passteki tablette veya aşçının cebindeki akıllı telefonda çalışır.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Aktif siparişlerin olduğu mutfak ekranını gösteren pirinç stand üzerinde tablet bulunan profesyonel mutfak",

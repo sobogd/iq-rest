@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Eldhússkjár: pantanir beint á skjá kokksins.",
+    cta: "Setja upp eldhússkjá",
     sub: "Pappírsmiðar eru ekki lengur nauðsynlegir. Pantanir úr salnum eða QR matseðli koma strax á eldhússkjáinn — með athugasemdum, ofnæmisvökum og tímamæli. Eitt pikk breytir stöðu. Virkar á spjaldtölvu við afgreiðsluborðið eða snjallsíma í vasa kokksins.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Atvinnueldhús með spjaldtölvu á koparstandi sem sýnir eldhússkjáinn með virkum pöntunum",

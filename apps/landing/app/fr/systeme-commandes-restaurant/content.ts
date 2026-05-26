@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Prise de commande : client et serveur — directement en cuisine.",
+    cta: "Configurer la commande en ligne",
     sub: "Les clients commandent via le menu QR à table ou le serveur prend la commande depuis un téléphone ou une tablette — la commande arrive sur l'écran de cuisine en quelques secondes. Plan de salle avec tables codées par couleur, partage d'addition, options flexibles et commentaires. Pas de carnets, pas d'allers-retours au bar.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Un serveur prend une commande à table depuis un smartphone — la commande arrive sur l'écran de cuisine",

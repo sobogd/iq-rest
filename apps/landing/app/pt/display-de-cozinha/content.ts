@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Ecrã de cozinha: pedidos diretamente no ecrã do chef.",
+    cta: "Configurar ecrã de cozinha",
     sub: "Os talões em papel deixam de ser necessários. Os pedidos da sala ou do menu QR chegam imediatamente ao ecrã da cozinha — com notas, alergénios e cronómetro. Um toque muda o estado. Funciona num tablet ao pass ou num smartphone no bolso do chef.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Cozinha profissional com um tablet num suporte em latão a mostrar o ecrã de cozinha com pedidos ativos",

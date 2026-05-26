@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Réservation de tables 24/7 — les clients réservent eux-mêmes.",
+    cta: "Configurer la réservation",
     sub: "Les clients réservent des tables via le menu QR ou un lien direct. Calendrier par table, confirmations et rappels automatiques. Aucun client manqué et pas d'appels en heure de pointe.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Une hôtesse gère les réservations depuis une tablette à l'entrée du restaurant",

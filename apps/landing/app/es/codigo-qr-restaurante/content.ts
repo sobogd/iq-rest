@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Código QR para restaurantes.",
+    cta: "Crear menú QR",
     sub: "El comensal enfoca el código QR de la mesa y la carta se abre al instante en el navegador del móvil: fotos de los platos, alérgenos, precios siempre al día y traducción automática a 35 idiomas. Sin descargar aplicaciones, sin reimprimir cartas cada vez que cambia un precio.",
   },
 

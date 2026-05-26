@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Restoranlar için dijital menü.",
+    cta: "Dijital menü oluştur",
     sub: "Fotoğraflar, alerjenler, açıklamalar ve canlı fiyat güncellemeleriyle kağıt menünüzün online versiyonu. Misafirler menüyü kendi dillerinde görür; restoran baskıdan tasarruf eder.",
   },
 

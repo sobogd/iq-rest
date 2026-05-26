@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Kuchyňský displej: objednávky rovnou na obrazovku šéfkuchaře.",
+    cta: "Nastavit kuchyňský displej",
     sub: "Papírové lístky už nepotřebujete. Objednávky ze sálu nebo z QR menu dorazí okamžitě na kuchyňskou obrazovku — s poznámkami, alergeny a časovačem. Jedno ťuknutí mění stav. Funguje na tabletu u výdejního pultu nebo na smartphonu v kapse kuchaře.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Profesionální kuchyně s tabletem na mosazném stojanu zobrazujícím kuchyňský displej s aktivními objednávkami",

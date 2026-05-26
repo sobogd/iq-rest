@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Display bucătărie: comenzi direct pe ecranul bucătarului.",
+    cta: "Configurează ecranul de bucătărie",
     sub: "Bonurile de hârtie nu mai sunt necesare. Comenzile din sală sau din meniul QR ajung imediat pe ecranul de bucătărie — cu note, alergeni și cronometru. O atingere schimbă statusul. Funcționează pe o tabletă la pasajul de servire sau pe un smartphone în buzunarul bucătarului.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Bucătărie profesională cu o tabletă pe un suport de alamă afișând display-ul bucătăriei cu comenzi active",

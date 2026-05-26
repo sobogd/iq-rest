@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "QR-code menukaart voor restaurants.",
+    cta: "QR-menu maken",
     sub: "De gast richt de camera op de QR-code op tafel en de menukaart opent meteen in de browser van de telefoon: foto's van gerechten, allergenen, prijzen altijd actueel en automatische vertaling naar 35 talen. Geen apps downloaden, geen kaart opnieuw drukken bij elke prijswijziging.",
   },
 

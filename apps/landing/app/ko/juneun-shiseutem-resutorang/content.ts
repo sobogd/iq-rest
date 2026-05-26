@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "주문 받기: 손님과 직원 — 주방으로 직접.",
+    cta: "온라인 주문 설정",
     sub: "손님은 테이블에서 QR 메뉴를 통해 주문하거나, 직원은 휴대폰이나 태블릿에서 주문을 받습니다 — 주문이 몇 초 안에 주방 디스플레이에 도착합니다. 색상으로 표시된 테이블의 홀 맵, 영수증 분할, 유연한 옵션 및 코멘트. 메모장 없음, 바로 가는 일 없음.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "스마트폰에서 테이블의 주문을 받는 직원 — 주문이 주방 디스플레이에 도착",

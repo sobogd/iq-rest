@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Laudade broneerimine 24/7 — külalised broneerivad ise.",
+    cta: "Seadista lauabroneeringud",
     sub: "Külalised broneerivad lauad QR-menüü või otselingi kaudu. Lauakalender, automaatsed kinnitused ja meeldetuletused. Mitte ühtegi kaotsi läinud külalist ja ei mingeid kõnesid tipptundidel.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Perenaine haldab broneeringuid tahvelarvutist restorani sissepääsu juures",

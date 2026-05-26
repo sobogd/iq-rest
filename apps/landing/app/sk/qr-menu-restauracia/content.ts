@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "QR menu pre reštaurácie.",
+    cta: "Vytvoriť QR menu",
     sub: "Hosť namieri fotoaparát na QR kód na stole a jedálny lístok sa okamžite otvorí v prehliadači telefónu: fotky jedál, alergény, vždy aktuálne ceny a automatický preklad do 35 jazykov. Bez sťahovania aplikácií, bez pretláčania lístka pri každej zmene ceny.",
   },
 

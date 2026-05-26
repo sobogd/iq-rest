@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Digitális étlap éttermeknek.",
+    cta: "Digitális menü létrehozása",
     sub: "A papír étlap online változata fotókkal, allergénekkel, leírásokkal és valós idejű árfrissítésekkel. A vendégek a saját nyelvükön látják az étlapot; az étterem spórol a nyomtatáson.",
   },
 

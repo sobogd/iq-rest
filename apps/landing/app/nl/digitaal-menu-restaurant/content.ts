@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Digitaal menu voor restaurants.",
+    cta: "Digitaal menu maken",
     sub: "Online versie van je papieren menu met foto's, allergenen, beschrijvingen en live prijsupdates. Gasten zien het menu in hun eigen taal; het restaurant bespaart op drukwerk.",
   },
 

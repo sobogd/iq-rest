@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Tafelreservering 24/7 — gasten reserveren zelf.",
+    cta: "Tafelreservering instellen",
     sub: "Gasten reserveren tafels via het QR menu of een directe link. Kalender per tafel, automatische bevestigingen en herinneringen. Geen enkele gemiste gast en geen telefoontjes tijdens piekuren.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Gastvrouw beheert reserveringen vanaf een tablet bij de ingang van het restaurant",

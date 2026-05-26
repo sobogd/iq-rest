@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "QR-kood menüü restoranidele.",
+    cta: "Loo QR-menüü",
     sub: "Külaline suunab kaamera laual olevale QR-koodile ja menüü avaneb kohe telefoni brauseris: roogade fotod, allergeenid, alati ajakohased hinnad ja automaatne tõlge 35 keelde. Ilma rakendusi alla laadimata ja ilma menüüd iga hinnamuudatuse korral uuesti trükkimata.",
   },
 

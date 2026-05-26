@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Rendelésfelvétel: vendég és pincér — közvetlenül a konyhába.",
+    cta: "Online rendelés beállítása",
     sub: "A vendégek a QR étlapon keresztül rendelnek az asztalnál vagy a pincér felveszi a rendelést telefonról vagy táblagépről — a rendelés másodpercek alatt a konyhai kijelzőre érkezik. Terem terve színkódolt asztalokkal, számla felosztása, rugalmas opciók és megjegyzések. Jegyzetfüzetek nélkül, bárhoz menés nélkül.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Pincér rendelést vesz fel az asztalnál okostelefonról — a rendelés a konyhai kijelzőre érkezik",

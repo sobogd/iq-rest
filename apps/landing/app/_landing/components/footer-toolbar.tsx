@@ -23,7 +23,7 @@ export function FooterToolbar({ locale, navClassName = "" }: FooterToolbarProps)
 
   return (
     <>
-      <nav className={`flex flex-wrap items-center gap-x-5 gap-y-2 text-base text-muted-foreground ${navClassName}`}>
+      <nav className={`flex flex-wrap items-center gap-x-5 gap-y-2 text-sm sm:text-base text-muted-foreground ${navClassName}`}>
         <button
           type="button"
           onClick={() => {

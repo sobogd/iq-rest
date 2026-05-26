@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Prijímanie objednávok: hosť a čašník — rovno do kuchyne.",
+    cta: "Nastaviť online objednávky",
     sub: "Hostia objednávajú cez QR menu pri stole alebo čašník prijíma objednávku z telefónu či tabletu — objednávka dorazí na kuchynský displej za pár sekúnd. Plán sály s farebne označenými stolmi, delenie účtu, flexibilné varianty a komentáre. Žiadne bloky, žiadne cesty k baru.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Čašník prijíma objednávku pri stole zo smartfónu — objednávka dorazí na kuchynský displej",

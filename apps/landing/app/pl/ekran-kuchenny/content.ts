@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Ekran kuchenny: zamówienia bezpośrednio na ekran szefa kuchni.",
+    cta: "Skonfiguruj ekran kuchenny",
     sub: "Papierowe rachunki nie są już potrzebne. Zamówienia z sali lub menu QR trafiają natychmiast na ekran kuchenny — z notatkami, alergenami i timerem. Jedno dotknięcie zmienia status. Działa na tablecie przy ladzie wydawczej lub smartfonie w kieszeni szefa kuchni.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Profesjonalna kuchnia z tabletem na mosiężnym stojaku pokazującym ekran kuchenny z aktywnymi zamówieniami",

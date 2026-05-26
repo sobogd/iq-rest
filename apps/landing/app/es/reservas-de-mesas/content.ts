@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Reservas de mesa 24/7 — los comensales reservan ellos mismos.",
+    cta: "Configurar reservas de mesa",
     sub: "Los comensales reservan a través de la carta QR o de un enlace directo. Calendario por mesa, confirmaciones automáticas y recordatorios. Ni un solo cliente perdido y ni una llamada en hora punta.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Maître gestiona las reservas desde una tableta en la entrada del restaurante",

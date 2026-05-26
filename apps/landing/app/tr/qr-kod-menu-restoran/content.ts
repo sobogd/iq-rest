@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Restoranlar için QR kod menü.",
+    cta: "QR menü oluştur",
     sub: "Misafir kamerayı masadaki QR koda tutar ve menü telefon tarayıcısında anında açılır: yemek fotoğrafları, alerjenler, her zaman güncel fiyatlar ve 35 dile otomatik çeviri. Uygulama indirmeden, her fiyat değişiminde menüyü yeniden bastırmadan.",
   },
 

@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Virtuvės ekranas: užsakymai tiesiai į virėjo ekraną.",
+    cta: "Nustatyti virtuvės ekraną",
     sub: "Popieriniai kvitai nebereikalingi. Užsakymai iš salės ar QR meniu iškart pasiekia virtuvės ekraną — su pastabomis, alergenais ir laikmačiu. Vienas bakstelėjimas keičia būseną. Veikia planšetėje prie išdavimo lango ar išmaniajame telefone virėjo kišenėje.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Profesionali virtuvė su planšetė ant žalvarinio stovo, rodančia virtuvės ekraną su aktyviais užsakymais",

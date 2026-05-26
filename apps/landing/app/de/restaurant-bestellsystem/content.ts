@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Bestellannahme: Gast und Servicekraft — direkt in die Küche.",
+    cta: "Online-Bestellung einrichten",
     sub: "Gäste bestellen über die QR-Speisekarte am Tisch oder die Servicekraft nimmt die Bestellung vom Smartphone oder Tablet auf — die Bestellung erscheint binnen Sekunden auf dem Küchen-Display. Tischplan mit farblich markierten Tischen, Rechnungsteilung, flexible Optionen und Kommentare. Keine Notizblöcke, kein Hin und Her zur Bar.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Servicekraft nimmt eine Bestellung am Tisch vom Smartphone auf — die Bestellung landet auf dem Küchen-Display",

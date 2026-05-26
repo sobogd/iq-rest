@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Sprejemanje naročil: gost in natakar — neposredno v kuhinjo.",
+    cta: "Nastavi spletno naročanje",
     sub: "Gostje naročajo prek QR jedilnika pri mizi ali natakar sprejme naročilo s telefona ali tablice — naročilo prispe na kuhinjski zaslon v nekaj sekundah. Tloris dvorane z barvno označenimi mizami, delitev računa, prilagodljive možnosti in komentarji. Brez beležk, brez sprehodov do šanka.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Natakar sprejema naročilo pri mizi s pametnega telefona — naročilo prispe na kuhinjski zaslon",

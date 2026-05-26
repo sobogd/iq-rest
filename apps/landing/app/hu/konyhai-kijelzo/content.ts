@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Konyhai kijelző: rendelések közvetlenül a séf képernyőjére.",
+    cta: "Konyhai kijelző beállítása",
     sub: "A papír blokkok már nem szükségesek. A teremből vagy QR étlapról érkező rendelések azonnal a konyhai képernyőre kerülnek — megjegyzésekkel, allergénekkel és időzítővel. Egy érintés megváltoztatja az állapotot. Működik táblagépen a tálalópulton vagy okostelefonon a séf zsebében.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Professzionális konyha sárgaréz állványon lévő táblagéppel, amely a konyhai kijelzőt mutatja aktív rendelésekkel",

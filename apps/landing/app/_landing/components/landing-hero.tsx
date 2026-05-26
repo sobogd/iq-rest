@@ -102,11 +102,11 @@ export function LandingHero({
       <div className="relative flex-1 flex flex-col justify-end w-full px-4 sm:px-6 lg:px-10 xl:px-14 pb-12 sm:pb-16 lg:pb-20">
         <div className="w-full max-w-3xl lg:max-w-[65%]">
           {verticals.length ? (
-            <div className="grid grid-cols-3 gap-x-3 gap-y-1.5 sm:flex sm:flex-wrap sm:items-center mb-5">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 mb-5 max-w-[65%] sm:max-w-none">
               {verticals.map((v) => (
                 <span
                   key={v}
-                  className="text-[11px] lg:text-sm uppercase tracking-wider text-white/70"
+                  className="text-[11px] lg:text-xs uppercase tracking-wider text-white/70"
                 >
                   {v}
                 </span>

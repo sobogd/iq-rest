@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Rezervare mese 24/7 — oaspeții rezervă singuri.",
+    cta: "Configurează rezervările de mese",
     sub: "Oaspeții rezervă mese prin meniul QR sau link direct. Calendar pe masă, confirmări și mementouri automate. Niciun oaspete pierdut și fără apeluri în orele de vârf.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Hostess gestionează rezervări de pe o tabletă la intrarea în restaurant",

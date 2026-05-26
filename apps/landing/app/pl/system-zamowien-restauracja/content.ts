@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Przyjmowanie zamówień: gość i kelner — bezpośrednio do kuchni.",
+    cta: "Skonfiguruj zamówienia online",
     sub: "Goście zamawiają przez menu QR przy stoliku lub kelner przyjmuje zamówienie z telefonu lub tabletu — zamówienie trafia na ekran kuchenny w kilka sekund. Plan sali z kolorowymi stolikami, podział rachunku, elastyczne opcje i komentarze. Bez notesów, bez chodzenia do baru.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Kelner przyjmuje zamówienie przy stoliku ze smartfona — zamówienie trafia na ekran kuchenny",

@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Staliukų rezervacija 24/7 — svečiai rezervuoja patys.",
+    cta: "Nustatyti staliukų rezervacijas",
     sub: "Svečiai rezervuoja staliukus per QR meniu ar tiesioginę nuorodą. Kalendorius pagal staliuką, automatiniai patvirtinimai ir priminimai. Nė vieno prarasto svečio ir jokių skambučių piko valandomis.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Šeimininkė valdo rezervacijas iš planšetės prie restorano įėjimo",

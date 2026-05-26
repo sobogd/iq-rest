@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Sipariş alma: misafir ve garson — doğrudan mutfağa.",
+    cta: "Online siparişi kur",
     sub: "Misafirler masada QR menü üzerinden sipariş verir veya garson siparişi telefon ya da tabletten alır — sipariş saniyeler içinde mutfak ekranına düşer. Renk kodlu masalı salon haritası, hesap bölme, esnek seçenekler ve yorumlar. Defter yok, bara gidiş geliş yok.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Garson akıllı telefondan masada bir sipariş alıyor — sipariş mutfak ekranına düşüyor",

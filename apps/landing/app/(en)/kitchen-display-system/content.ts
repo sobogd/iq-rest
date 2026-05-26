@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Kitchen display: orders straight to the chef's screen.",
+    cta: "Set Up Kitchen Display",
     sub: "Paper tickets are no longer needed. Orders from the floor or the QR menu land on the kitchen screen instantly — with notes, allergens and a timer. One tap changes the status. Works on a tablet at the pass or a smartphone in the chef's pocket.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Professional kitchen with a tablet on a brass stand showing the kitchen display with active orders",

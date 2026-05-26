@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Glacadh orduithe: aoi agus freastalaí — díreach chuig an gcistin.",
+    cta: "Socraigh ordú ar líne",
     sub: "Ordaíonn aíonna tríd an mbiachlár QR ag an mbord nó glacann an freastalaí an t-ordú ó ghuthán nó táibléad — sroicheann an t-ordú scáileán na cistine i soicindí. Léarscáil urláir le boird daite, scoilteadh bille, roghanna solúbtha agus tuairimí. Gan leabhair nótaí, gan turais chuig an mbeár.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Freastalaí ag glacadh ordaithe ag an mbord ó fhón cliste — sroicheann an t-ordú scáileán na cistine",

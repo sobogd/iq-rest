@@ -58,7 +58,7 @@ export function FeatureLandingTemplate({
         verticals={chrome.hero.verticals}
         title={hero.headline}
         sub={hero.sub}
-        primaryLabel={chrome.ctaText}
+        primaryLabel={hero.cta}
         primaryTrack={`${trackPrefix ?? "l_feature"}_hero_cta`}
         demoText={chrome.demoText}
         demoVariant={demoVariant}
@@ -91,7 +91,7 @@ export function FeatureLandingTemplate({
                   reverse ? "lg:[&>*:first-child]:order-2" : ""
                 }`}
               >
-                <div className="flex flex-col items-center text-center lg:items-start lg:text-start">
+                <div className="flex flex-col items-start text-start">
                   <div className="inline-flex items-center gap-2 text-primary mb-5">
                     <Icon className="h-5 w-5" strokeWidth={2} />
                     <span className="text-[11px] uppercase tracking-widest font-medium">
@@ -108,20 +108,20 @@ export function FeatureLandingTemplate({
                     {row.bullets.map((b) => (
                       <li
                         key={b}
-                        className="text-sm sm:text-base text-foreground/90 leading-snug text-center lg:text-start"
+                        className="flex items-start gap-1.5 text-sm sm:text-base text-foreground/90 leading-snug text-start"
                       >
                         <Check
-                          className="inline-block h-4 w-4 sm:h-[18px] sm:w-[18px] text-primary mr-1.5 align-[-3px]"
+                          className="shrink-0 mt-0.5 h-4 w-4 sm:h-[18px] sm:w-[18px] text-primary"
                           strokeWidth={2.5}
                         />
-                        {b}
+                        <span>{b}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
                 <div className="w-full">
-                  <div className="relative w-full aspect-[4/3] overflow-hidden rounded-2xl lg:rounded-3xl shadow-2xl ring-1 ring-black/5 dark:ring-white/5">
+                  <div className="relative w-full aspect-[4/3] overflow-hidden rounded-lg shadow-2xl ring-1 ring-black/5 dark:ring-white/5">
                     <Image
                       src={row.image.src}
                       alt={row.image.alt}
@@ -143,6 +143,7 @@ export function FeatureLandingTemplate({
         dataSection="pricing_hero"
         noContainer
         accent={subCount % 2 === 0}
+        className="!py-16"
       >
         <PricingHero
           locale={locale}
@@ -154,7 +155,7 @@ export function FeatureLandingTemplate({
         />
       </Section>
 
-      <Section id="faq" dataSection="faq" noContainer accent={subCount % 2 === 1}>
+      <Section id="faq" dataSection="faq" noContainer accent={subCount % 2 === 1} className="!py-16">
         <Faq
           texts={{
             ...chrome.faq,
@@ -169,14 +170,15 @@ export function FeatureLandingTemplate({
         dataSection="founder"
         noContainer
         accent={subCount % 2 === 0}
+        className="!py-16"
       >
         <Founder texts={chrome.founder} />
       </Section>
 
-      <Section dataSection="final_cta" noContainer accent={subCount % 2 === 1}>
+      <Section dataSection="final_cta" noContainer accent={subCount % 2 === 1} className="!py-16">
         <FinalCta
           texts={chrome.finalCta}
-          ctaText={chrome.ctaText}
+          ctaText={hero.cta}
           demoText={chrome.demoText}
           microcopy={chrome.microcopy}
           locale={locale}

@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Asztalfoglalás 24/7 — a vendégek maguk foglalnak.",
+    cta: "Asztalfoglalás beállítása",
     sub: "A vendégek asztalt foglalnak a QR étlapon vagy közvetlen linken keresztül. Asztal naptár, automatikus visszaigazolások és emlékeztetők. Egyetlen elveszített vendég sem és nincs csúcsidőszaki telefonhívás.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Hostess foglalásokat kezel táblagépről az étterem bejáratánál",

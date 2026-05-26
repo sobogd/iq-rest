@@ -6,6 +6,7 @@ import { LandingFooter } from "../components/footer";
 import { Section } from "../components/section";
 import { PageTracker } from "../components/page-tracker";
 import { PricingHero } from "../components/pricing-hero";
+import { Founder } from "../components/founder";
 import { LandingHero } from "../components/landing-hero";
 import type { LandingTexts } from "../types";
 
@@ -62,7 +63,7 @@ export function HomeTemplate({
             <Section key={item.title} dataSection={`feature_${i}`} noContainer accent={i % 2 === 1}>
               <div className="w-full lg:min-h-[70dvh] flex items-center py-8 sm:py-16 lg:py-0">
                 <div className={`grid grid-cols-1 gap-10 lg:gap-14 xl:gap-20 lg:grid-cols-2 lg:items-center w-full ${reverse ? "lg:[&>*:first-child]:order-2" : ""}`}>
-                  <div className="flex flex-col items-center text-center lg:items-start lg:text-start">
+                  <div className="flex flex-col items-start text-start">
                     <div className="inline-flex items-center gap-2 text-primary mb-5">
                       <item.Icon className="h-5 w-5" strokeWidth={2} />
                       {item.tag ? <span className="text-[11px] uppercase tracking-widest font-medium">{item.tag}</span> : null}
@@ -85,7 +86,7 @@ export function HomeTemplate({
                   </div>
                   <div className="w-full">
                     {image ? (
-                      <div className="relative w-full aspect-[16/9] sm:aspect-[4/3] overflow-hidden rounded-2xl lg:rounded-3xl shadow-2xl ring-1 ring-black/5 dark:ring-white/5">
+                      <div className="relative w-full aspect-[16/9] sm:aspect-[4/3] overflow-hidden rounded-lg shadow-2xl ring-1 ring-black/5 dark:ring-white/5">
                         <Image src={image} alt={item.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
                       </div>
                     ) : null}
@@ -97,11 +98,15 @@ export function HomeTemplate({
         })}
       </div>
 
-      <Section id="pricing" dataSection="pricing_hero" noContainer>
+      <Section id="pricing" dataSection="pricing_hero" noContainer className="!py-16">
         <PricingHero locale={locale} ctaText={texts.ctaText} demoText={texts.demoText} microcopy={texts.microcopy} texts={texts.pricingHero!} trackPrefix="l_home_pricing" />
       </Section>
 
-      <Section as="footer" dataSection="footer" noContainer accent className="!py-6 sm:!py-8">
+      <Section id="founder" dataSection="founder" noContainer accent className="!py-16">
+        <Founder texts={texts.founder} />
+      </Section>
+
+      <Section as="footer" dataSection="footer" noContainer className="!py-6 sm:!py-8">
         <LandingFooter texts={texts.footer} headerTexts={texts.header} locale={locale} />
       </Section>
     </main>

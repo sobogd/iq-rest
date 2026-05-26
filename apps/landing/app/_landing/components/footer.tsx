@@ -15,8 +15,8 @@ export function LandingFooter({ texts, headerTexts: _headerTexts, locale }: Foot
 
   return (
     <div className="w-full flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-      <FooterToolbar locale={locale} navClassName="justify-center sm:justify-start gap-x-4" />
-      <p className="text-base text-muted-foreground/80 text-center sm:text-end">
+      <FooterToolbar locale={locale} navClassName="justify-start gap-x-4" />
+      <p className="text-base text-muted-foreground/80 text-start sm:text-end">
         {copyright}
       </p>
     </div>

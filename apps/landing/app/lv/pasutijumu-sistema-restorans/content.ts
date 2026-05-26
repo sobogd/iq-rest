@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Pasūtījumu pieņemšana: viesis un viesmīlis — tieši uz virtuvi.",
+    cta: "Iestatīt tiešsaistes pasūtījumus",
     sub: "Viesi pasūta caur QR ēdienkarti pie galda vai viesmīlis pieņem pasūtījumu no telefona vai planšetdatora — pasūtījums sekundēs nonāk virtuves ekrānā. Zāles plāns ar krāsotām galdiem, rēķina sadalīšana, elastīgas opcijas un komentāri. Bez piezīmju grāmatām, bez staigāšanas pie bāra.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Viesmīlis pieņem pasūtījumu pie galda no viedtālruņa — pasūtījums nonāk virtuves ekrānā",

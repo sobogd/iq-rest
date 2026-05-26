@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Recepció de comandes: client i cambrer — directament a la cuina.",
+    cta: "Configurar comandes en línia",
     sub: "Els clients fan comanda a través de la carta QR a taula o el cambrer la pren des d'un mòbil o tauleta — la comanda arriba a la pantalla de cuina en segons. Plànol de sala amb taules codificades per color, divisió del compte, opcions flexibles i comentaris. Sense llibretes, sense anades i vingudes a la barra.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Cambrer prenent una comanda a taula amb un smartphone — la comanda arriba a la pantalla de cuina",

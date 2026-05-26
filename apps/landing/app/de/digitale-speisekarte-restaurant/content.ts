@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Digitale Speisekarte für Restaurants.",
+    cta: "Digitale Speisekarte erstellen",
     sub: "Online-Version Ihrer Papier-Speisekarte mit Fotos, Allergenen, Beschreibungen und Live-Preisaktualisierungen. Gäste sehen die Karte in ihrer Sprache; das Restaurant spart Druckkosten.",
   },
 

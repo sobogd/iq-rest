@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Digitalt menukort til restauranter.",
+    cta: "Opret digital menu",
     sub: "Onlineversion af dit papirmenukort med billeder, allergener, beskrivelser og opdateringer af priser i realtid. Gæsterne ser menuen på deres eget sprog; restauranten sparer på tryk.",
   },
 

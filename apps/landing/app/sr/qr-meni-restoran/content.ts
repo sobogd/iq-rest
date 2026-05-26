@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "QR meni za restorane.",
+    cta: "Направи QR мени",
     sub: "Gost usmeri kameru na QR kod na stolu i meni se odmah otvori u pregledaču telefona: fotografije jela, alergeni, uvek ažurne cene i automatski prevod na 35 jezika. Bez preuzimanja aplikacija, bez ponovnog štampanja menija pri svakoj promeni cene.",
   },
 

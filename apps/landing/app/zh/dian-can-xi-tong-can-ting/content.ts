@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "接单:客人和服务员 — 直接到厨房。",
+    cta: "设置在线点餐",
     sub: "客人通过餐桌上的 QR 菜单下单,或者服务员从手机或平板电脑接单 — 订单在数秒内到达厨房显示屏。带彩色编码餐桌的大堂地图、账单分割、灵活选项和评论。无需便笺本,无需往返于吧台。",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "服务员在餐桌上从智能手机接单 — 订单到达厨房显示屏",

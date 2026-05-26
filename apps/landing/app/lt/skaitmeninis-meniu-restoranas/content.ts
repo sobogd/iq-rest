@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Skaitmeninis meniu restoranams.",
+    cta: "Sukurti skaitmeninį meniu",
     sub: "Popierinio meniu internetinė versija su nuotraukomis, alergenais, aprašymais ir realaus laiko kainų atnaujinimais. Svečiai mato meniu savo kalba; restoranas taupo spausdinimui.",
   },
 

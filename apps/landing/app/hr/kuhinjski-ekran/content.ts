@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Kuhinjski ekran: narudžbe izravno na ekran kuhara.",
+    cta: "Postavi kuhinjski zaslon",
     sub: "Papirnati računi više nisu potrebni. Narudžbe iz sale ili QR jelovnika odmah stižu na kuhinjski ekran — s napomenama, alergenima i mjeračem vremena. Jedan dodir mijenja status. Radi na tabletu na šanku za izdavanje ili na smartphoneu u džepu kuhara.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Profesionalna kuhinja s tabletom na mjedenom stalku koji prikazuje kuhinjski ekran s aktivnim narudžbama",

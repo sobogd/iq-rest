@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Rezerwacja stolików 24/7 — goście rezerwują sami.",
+    cta: "Skonfiguruj rezerwacje stolików",
     sub: "Goście rezerwują stoliki przez menu QR lub bezpośredni link. Kalendarz wg stolika, automatyczne potwierdzenia i przypomnienia. Ani jednego straconego gościa i bez telefonów w godzinach szczytu.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Hostessa zarządza rezerwacjami z tabletu przy wejściu do restauracji",

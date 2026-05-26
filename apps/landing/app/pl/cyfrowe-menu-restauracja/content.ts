@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Cyfrowe menu dla restauracji.",
+    cta: "Utwórz menu cyfrowe",
     sub: "Internetowa wersja Twojego papierowego menu ze zdjęciami, alergenami, opisami i aktualizacjami cen na żywo. Goście widzą menu w swoim języku; restauracja oszczędza na druku.",
   },
 

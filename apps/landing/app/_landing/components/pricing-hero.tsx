@@ -71,7 +71,7 @@ function PlanCard({
 
   return (
     <div
-      className={`relative rounded-2xl border p-6 sm:p-7 flex flex-col gap-6 ${
+      className={`relative rounded-lg border p-6 sm:p-7 flex flex-col gap-6 ${
         popular ? "border-primary/60 bg-primary/5" : "border-border bg-card"
       }`}
     >
@@ -151,11 +151,11 @@ export function PricingHero({
   return (
     <div className="w-full max-w-6xl mx-auto flex flex-col items-center text-center gap-10 sm:gap-14">
       <div className="flex flex-col items-center text-center w-full">
-        <div className="flex flex-row flex-wrap items-center justify-center gap-1.5 mb-5">
+        <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 mb-5">
           {texts.chips.map((v) => (
             <span
               key={v}
-              className="inline-flex items-center h-7 leading-none text-[11px] uppercase tracking-wider text-muted-foreground border border-border rounded-full px-3"
+              className="text-[11px] lg:text-xs uppercase tracking-wider text-muted-foreground"
             >
               {v}
             </span>
@@ -174,7 +174,7 @@ export function PricingHero({
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 w-full max-w-[924px] text-start">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 w-full text-start">
         <PlanCard
           name={texts.plans.basic.name}
           tagline={texts.plans.basic.tagline}

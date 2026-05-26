@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "QR-koodi ruokalista ravintoloille.",
+    cta: "Luo QR-menu",
     sub: "Asiakas suuntaa kameran pöydän QR-koodiin ja ruokalista avautuu heti puhelimen selaimessa: annosten kuvat, allergeenit, aina ajantasaiset hinnat ja automaattinen käännös 35 kielelle. Ilman sovellusten lataamista ja ilman ruokalistan uudelleentulostusta jokaisen hinnanmuutoksen yhteydessä.",
   },
 

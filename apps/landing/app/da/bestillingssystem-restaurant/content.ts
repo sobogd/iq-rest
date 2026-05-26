@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Bestillingsmodtagelse: gæst og tjener — direkte til køkkenet.",
+    cta: "Opsæt onlinebestilling",
     sub: "Gæsterne bestiller gennem QR-menuen ved bordet, eller tjeneren tager bestillingen fra en telefon eller tablet — bestillingen lander på køkkenskærmen på få sekunder. Bordoversigt med farvekodede borde, opdeling af regning, fleksible valgmuligheder og kommentarer. Ingen blokke, ingen ture til baren.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Tjener tager en bestilling ved bordet fra en smartphone — bestillingen lander på køkkenskærmen",

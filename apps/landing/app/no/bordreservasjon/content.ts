@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Bordreservasjon 24/7 — gjester reserverer selv.",
+    cta: "Sett opp bordbestilling",
     sub: "Gjester reserverer bord via QR-menyen eller en direkte lenke. Kalender per bord, automatiske bekreftelser og påminnelser. Ikke en eneste tapt gjest og ingen samtaler i rushtidene.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Vertinne administrerer reservasjoner fra et nettbrett ved restaurantens inngang",

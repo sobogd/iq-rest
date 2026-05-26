@@ -126,7 +126,6 @@ export function LandingHeader({
             Rest
           </LinkForward>
 
-          {!minimal ? (
             <nav className="hidden lg:flex items-center gap-7 text-base font-semibold mr-auto ml-8">
               {hasFeatureLinks
                 ? featureLinks!.map((link) => (
@@ -149,7 +148,6 @@ export function LandingHeader({
                 {texts.navPricing}
               </LinkForward>
             </nav>
-          ) : null}
 
           <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             {minimal ? (
@@ -194,7 +192,7 @@ export function LandingHeader({
                   analytics.track(`l_header_burger_${menuOpen ? "close" : "open"}`);
                   setMenuOpen((v) => !v);
                 }}
-                className={`${minimal ? "" : "lg:hidden"} inline-flex items-center justify-center h-9 w-9 rounded-lg transition-colors ${iconBtn}`}
+                className={`lg:hidden inline-flex items-center justify-center h-9 w-9 rounded-lg transition-colors ${iconBtn}`}
               >
                 {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
               </button>

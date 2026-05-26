@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "주방 디스플레이: 셰프 화면으로 직접 가는 주문.",
+    cta: "주방 디스플레이 설정",
     sub: "종이 영수증은 더 이상 필요하지 않습니다. 홀이나 QR 메뉴의 주문이 메모, 알레르겐 및 타이머와 함께 주방 화면에 즉시 도착합니다. 원 탭으로 상태 변경. 패스의 태블릿 또는 셰프 주머니의 스마트폰에서 작동.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "활성 주문이 있는 주방 디스플레이를 보여주는 황동 스탠드의 태블릿이 있는 전문 주방",

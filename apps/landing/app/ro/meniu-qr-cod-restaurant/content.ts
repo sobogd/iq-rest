@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Meniu cu cod QR pentru restaurante.",
+    cta: "Creează meniul QR",
     sub: "Clientul îndreaptă camera spre codul QR de pe masă, iar meniul se deschide instant în browserul telefonului: fotografii ale preparatelor, alergeni, prețuri mereu actualizate și traducere automată în 35 de limbi. Fără descărcat aplicații, fără retipărit meniul la fiecare schimbare de preț.",
   },
 

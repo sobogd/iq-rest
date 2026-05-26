@@ -8,7 +8,7 @@ interface FounderProps {
 
 export function Founder({ texts }: FounderProps) {
   return (
-    <div className="w-full max-w-4xl mx-auto flex flex-col items-center text-center py-6 sm:py-10">
+    <div className="w-full max-w-4xl mx-auto flex flex-col items-center text-center">
       <p className="text-xs font-medium uppercase tracking-widest text-primary mb-6">
         {texts.eyebrow}
       </p>

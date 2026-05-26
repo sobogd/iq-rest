@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Digitaalne menüü restoranidele.",
+    cta: "Loo digitaalne menüü",
     sub: "Sinu paberitkartmenüü veebiversioon fotode, allergeenide, kirjelduste ja hindade reaalajauuendustega. Külalised näevad menüüd omas keeles; restoran säästab trükikuludelt.",
   },
 

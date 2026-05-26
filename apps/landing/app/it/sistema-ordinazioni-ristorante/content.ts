@@ -20,6 +20,7 @@ export const CONTENT: FeatureContent = {
 
   hero: {
     headline: "Ordini: ospite e cameriere — direttamente in cucina.",
+    cta: "Configura gli ordini online",
     sub: "L'ospite ordina dal menu QR al tavolo oppure il cameriere prende la comanda dal cellulare o dal tablet — l'ordine arriva sul display di cucina in pochi istanti. Piantina della sala con tavoli colorati per stato, divisione del conto, opzioni flessibili e note. Senza blocchetti e senza viaggi al banco.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Cameriere prende un'ordinazione al tavolo da uno smartphone — la comanda arriva sul display di cucina",
