@@ -73,14 +73,19 @@ export function DemoButton({
   className = "",
   variant = "phone",
 }: DemoButtonProps) {
-  const isTablet = variant !== "phone";
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   // Phone viewport → render the tablet KDS demo at a narrower logical width
   // so the iframe scales up and the kiosk reads larger. Resolved client-side
   // on mount. Phone menu preview keeps its fixed width.
   const [isPhone, setIsPhone] = useState(false);
-  const IFRAME_WIDTH = isTablet
+  // The orders/reservations boards are responsive (kioskLayout stacks on
+  // narrow widths), so on a phone we show them in the portrait phone frame —
+  // same as the digital-menu demo. On desktop they keep the tablet frame.
+  // The kitchen (`tablet`) demo always uses the tablet frame.
+  const boardReflowsToPhone = variant === "orders" || variant === "reservations";
+  const useTabletFrame = variant !== "phone" && !(isPhone && boardReflowsToPhone);
+  const IFRAME_WIDTH = useTabletFrame
     ? isPhone
       ? IFRAME_WIDTH_TABLET_PHONE
       : IFRAME_WIDTH_TABLET
@@ -179,7 +184,7 @@ export function DemoButton({
             className="relative flex flex-col items-center gap-5"
             onClick={(e) => e.stopPropagation()}
           >
-            {isTablet ? (
+            {useTabletFrame ? (
               // Landscape tablet frame (≈4:3) for the kitchen-display kiosk.
               <div
                 className="relative"
