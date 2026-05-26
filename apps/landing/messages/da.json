@@ -2071,12 +2071,15 @@
   },
   "auth": {
     "titleWithName": "En sidste ting til {name}",
-    "subtitle": "Bare efterlad din e-mail, så vi kan gemme dit menukort — du kan redigere det når som helst.",
+    "subtitle": "Vi sender kun en engangskode til login for at gemme din menu. Ingen spam, ingen nyhedsbreve.",
     "emailLabel": "E-mail",
     "emailPlaceholder": "dig@restaurant.dk",
     "continueEmail": "Gem mit menukort",
     "or": "eller",
     "continueGoogle": "Fortsæt med Google",
+    "continueApple": "Fortsæt med Apple",
+    "emailOption": "Fortsæt med e-mail",
+    "changeMethod": "Skift loginmetode",
     "changeRestaurant": "Skift restaurant",
     "consent": {
       "text": "Ved at fortsætte accepterer du vores",
@@ -2103,6 +2106,7 @@
     },
     "signInTitle": "Velkommen tilbage",
     "signInSubtitle": "Indtast din e-mail, og vi sender en hurtig kode til at logge ind.",
+    "chooseSubtitle": "Vælg, hvordan du vil fortsætte.",
     "goToDashboard": "Gå til dashboard"
   }
 }

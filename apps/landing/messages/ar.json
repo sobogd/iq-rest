@@ -2071,12 +2071,15 @@
   },
   "auth": {
     "titleWithName": "شيء أخير لـ {name}",
-    "subtitle": "فقط اترك بريدك الإلكتروني لنحفظ قائمتك — يمكنك تعديلها في أي وقت.",
+    "subtitle": "سنرسل فقط رمز دخول لمرة واحدة لحفظ قائمتك. لا رسائل مزعجة ولا نشرات بريدية.",
     "emailLabel": "البريد الإلكتروني",
     "emailPlaceholder": "you@restaurant.com",
     "continueEmail": "احفظ قائمتي",
     "or": "أو",
     "continueGoogle": "المتابعة باستخدام Google",
+    "continueApple": "المتابعة باستخدام Apple",
+    "emailOption": "المتابعة بالبريد الإلكتروني",
+    "changeMethod": "تغيير طريقة تسجيل الدخول",
     "changeRestaurant": "تغيير المطعم",
     "consent": {
       "text": "بالمتابعة فإنك توافق على",
@@ -2103,6 +2106,7 @@
     },
     "signInTitle": "مرحباً بعودتك",
     "signInSubtitle": "أدخل بريدك الإلكتروني وسنرسل رمزاً سريعاً لتسجيل الدخول.",
+    "chooseSubtitle": "اختر كيف تريد المتابعة.",
     "goToDashboard": "الذهاب إلى لوحة التحكم"
   }
 }

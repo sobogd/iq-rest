@@ -2071,12 +2071,15 @@
   },
   "auth": {
     "titleWithName": "En siste ting for {name}",
-    "subtitle": "Bare legg igjen e-posten din så vi kan lagre menyen — du kan redigere når som helst.",
+    "subtitle": "Vi sender bare en engangskode for innlogging for å lagre menyen din. Ingen spam, ingen nyhetsbrev.",
     "emailLabel": "E-post",
     "emailPlaceholder": "deg@restaurant.no",
     "continueEmail": "Lagre menyen min",
     "or": "eller",
     "continueGoogle": "Fortsett med Google",
+    "continueApple": "Fortsett med Apple",
+    "emailOption": "Fortsett med e-post",
+    "changeMethod": "Endre påloggingsmetode",
     "changeRestaurant": "Bytt restaurant",
     "consent": {
       "text": "Ved å fortsette godtar du våre",
@@ -2103,6 +2106,7 @@
     },
     "signInTitle": "Velkommen tilbake",
     "signInSubtitle": "Skriv inn e-posten din så sender vi en rask kode for å logge inn.",
+    "chooseSubtitle": "Velg hvordan du vil fortsette.",
     "goToDashboard": "Gå til dashbord"
   }
 }

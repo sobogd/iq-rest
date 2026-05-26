@@ -2071,12 +2071,15 @@
   },
   "auth": {
     "titleWithName": "Ešte jedna vec pre {name}",
-    "subtitle": "Stačí zanechať e-mail, aby sme mohli uložiť vaše menu — môžete ho kedykoľvek upraviť.",
+    "subtitle": "Pošleme len jednorazový prihlasovací kód na uloženie menu. Žiadny spam, žiadne newslettery.",
     "emailLabel": "E-mail",
     "emailPlaceholder": "vy@restauracia.sk",
     "continueEmail": "Uložiť moje menu",
     "or": "alebo",
     "continueGoogle": "Pokračovať s Google",
+    "continueApple": "Pokračovať s Apple",
+    "emailOption": "Pokračovať e-mailom",
+    "changeMethod": "Zmeniť spôsob prihlásenia",
     "changeRestaurant": "Zmeniť reštauráciu",
     "consent": {
       "text": "Pokračovaním súhlasíte s našimi",
@@ -2103,6 +2106,7 @@
     },
     "signInTitle": "Vitajte späť",
     "signInSubtitle": "Zadajte e-mail a my pošleme rýchly kód na prihlásenie.",
+    "chooseSubtitle": "Vyberte, ako chcete pokračovať.",
     "goToDashboard": "Prejsť na panel"
   }
 }

@@ -2059,12 +2059,15 @@
   },
   "auth": {
     "titleWithName": "One more thing for {name}",
-    "subtitle": "Just leave your email so we can save your menu — you'll be able to edit it any time.",
+    "subtitle": "We'll only email a one-time sign-in code to save your menu — no spam, no newsletters.",
     "emailLabel": "Email",
     "emailPlaceholder": "you@restaurant.com",
     "continueEmail": "Save my menu",
     "or": "or",
     "continueGoogle": "Continue with Google",
+    "continueApple": "Continue with Apple",
+    "emailOption": "Continue with email",
+    "changeMethod": "Change sign-in method",
     "changeRestaurant": "Change restaurant",
     "consent": {
       "text": "By continuing you agree to our",
@@ -2091,6 +2094,7 @@
     },
     "signInTitle": "Welcome back",
     "signInSubtitle": "Enter your email and we'll send a quick code to sign you in.",
+    "chooseSubtitle": "Choose how you'd like to continue.",
     "goToDashboard": "Go to dashboard"
   }
 }

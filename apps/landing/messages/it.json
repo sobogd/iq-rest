@@ -2071,12 +2071,15 @@
   },
   "auth": {
     "titleWithName": "Un'ultima cosa per {name}",
-    "subtitle": "Lascia la tua email per salvare il menù — potrai modificarlo quando vuoi.",
+    "subtitle": "Ti invieremo solo un codice di accesso monouso per salvare il menu. Niente spam né newsletter.",
     "emailLabel": "Email",
     "emailPlaceholder": "tu@ristorante.com",
     "continueEmail": "Salva il mio menù",
     "or": "o",
     "continueGoogle": "Continua con Google",
+    "continueApple": "Continua con Apple",
+    "emailOption": "Continua con email",
+    "changeMethod": "Cambia metodo di accesso",
     "changeRestaurant": "Cambia ristorante",
     "consent": {
       "text": "Continuando accetti i nostri",
@@ -2103,6 +2106,7 @@
     },
     "signInTitle": "Bentornato",
     "signInSubtitle": "Inserisci la tua email e ti invieremo un codice veloce per entrare.",
+    "chooseSubtitle": "Scegli come continuare.",
     "goToDashboard": "Vai al pannello"
   }
 }

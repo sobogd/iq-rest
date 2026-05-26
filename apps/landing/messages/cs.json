@@ -2071,12 +2071,15 @@
   },
   "auth": {
     "titleWithName": "Ještě jedna věc pro {name}",
-    "subtitle": "Stačí zanechat e-mail, abychom mohli uložit vaše menu — můžete ho kdykoli upravit.",
+    "subtitle": "Pošleme jen jednorázový přihlašovací kód pro uložení menu. Žádný spam, žádné newslettery.",
     "emailLabel": "E-mail",
     "emailPlaceholder": "vy@restaurace.cz",
     "continueEmail": "Uložit moje menu",
     "or": "nebo",
     "continueGoogle": "Pokračovat s Googlem",
+    "continueApple": "Pokračovat s Applem",
+    "emailOption": "Pokračovat e-mailem",
+    "changeMethod": "Změnit způsob přihlášení",
     "changeRestaurant": "Změnit restauraci",
     "consent": {
       "text": "Pokračováním souhlasíte s našimi",
@@ -2103,6 +2106,7 @@
     },
     "signInTitle": "Vítejte zpět",
     "signInSubtitle": "Zadejte svůj e-mail a my pošleme rychlý kód pro přihlášení.",
+    "chooseSubtitle": "Vyberte, jak chcete pokračovat.",
     "goToDashboard": "Přejít na panel"
   }
 }

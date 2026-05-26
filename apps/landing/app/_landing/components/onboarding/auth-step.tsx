@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { Loader2 } from "lucide-react";
+import { Loader2, ChevronLeft } from "lucide-react";
 import { dashboardApi, dashboardApiBase, dashboardUrl } from "@/lib/dashboard-url";
 import { analytics } from "@/lib/analytics";
 import type { CuisineKey } from "./cuisine";
@@ -11,6 +11,10 @@ import type { CuisineKey } from "./cuisine";
 const GOOGLE_CLIENT_ID =
   process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID ||
   "576149678945-vjqlc4sce6bsne3p0n63bqdvf33k43s0.apps.googleusercontent.com";
+
+// Sign in with Apple — the Services ID is the web OAuth client_id.
+const APPLE_SERVICES_ID =
+  process.env.NEXT_PUBLIC_APPLE_SERVICES_ID || "com.iqrest.web";
 
 const CODE_LENGTH = 6;
 const RESEND_COOLDOWN = 60;
@@ -46,6 +50,9 @@ export function AuthStep({
   const locale = useLocale();
 
   const [screen, setScreen] = useState<Screen>("email");
+  // The "email" screen opens on a method choice (Google / Apple / Email).
+  // The email input form is revealed only after the user picks "email".
+  const [emailOpen, setEmailOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [code, setCode] = useState<string[]>(Array(CODE_LENGTH).fill(""));
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
@@ -78,6 +85,30 @@ export function AuthStep({
       state,
     });
     window.location.assign(`https://accounts.google.com/o/oauth2/v2/auth?${params.toString()}`);
+  };
+
+  const handleAppleClick = () => {
+    if (!APPLE_SERVICES_ID) return;
+    analytics.track("l_onb_apple_click");
+    const state = btoa(
+      JSON.stringify({
+        locale,
+        signupContext: signupContext ?? undefined,
+      }),
+    );
+    // scope name+email forces response_mode=form_post — Apple POSTs the
+    // callback (and sends the name only on the first authorization). The
+    // redirect_uri must byte-match the one registered on the Services ID
+    // and the one the API uses when exchanging the code.
+    const params = new URLSearchParams({
+      client_id: APPLE_SERVICES_ID,
+      redirect_uri: `${dashboardApiBase()}/api/auth/apple/callback`,
+      response_type: "code",
+      response_mode: "form_post",
+      scope: "name email",
+      state,
+    });
+    window.location.assign(`https://appleid.apple.com/auth/authorize?${params.toString()}`);
   };
 
   const handleContinue = async () => {
@@ -178,6 +209,7 @@ export function AuthStep({
     analytics.track("l_onb_change_email_click");
     setCode(Array(CODE_LENGTH).fill(""));
     setScreen("email");
+    setEmailOpen(true);
     setStatus("idle");
     setErrorMessage("");
   };
@@ -207,7 +239,11 @@ export function AuthStep({
           : t("signInTitle")}
       </h2>
       <p className="text-sm sm:text-base text-muted-foreground leading-snug mb-6">
-        {signupContext ? t("subtitle") : t("signInSubtitle")}
+        {emailOpen
+          ? signupContext
+            ? t("subtitle")
+            : t("signInSubtitle")
+          : t("chooseSubtitle")}
       </p>
 
       {status === "error" && errorMessage && (
@@ -216,53 +252,88 @@ export function AuthStep({
         </div>
       )}
 
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          handleContinue();
-        }}
-      >
-        <label htmlFor="onboarding-email" className="block text-sm font-medium text-foreground mb-2 tracking-tight">
-          {t("emailLabel")}
-        </label>
-        <input
-          id="onboarding-email"
-          type="email"
-          inputMode="email"
-          autoComplete="email"
-          required
-          placeholder={t("emailPlaceholder")}
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          onFocus={() => analytics.track("l_onb_email_focus")}
-          disabled={status === "loading"}
-          className="w-full h-12 px-4 text-base text-foreground bg-background border border-border rounded-xl placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors"
-        />
+      {emailOpen ? (
+        <>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleContinue();
+            }}
+          >
+            <label htmlFor="onboarding-email" className="block text-sm font-medium text-foreground mb-2 tracking-tight">
+              {t("emailLabel")}
+            </label>
+            <input
+              id="onboarding-email"
+              type="email"
+              inputMode="email"
+              autoComplete="email"
+              required
+              autoFocus
+              placeholder={t("emailPlaceholder")}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              onFocus={() => analytics.track("l_onb_email_focus")}
+              disabled={status === "loading"}
+              className="w-full h-12 px-4 text-base text-foreground bg-background border border-border rounded-xl placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors"
+            />
 
-        <button
-          type="submit"
-          disabled={status === "loading"}
-          className="mt-4 h-12 w-full text-base font-semibold text-white bg-gradient-to-br from-[hsl(9,100%,58%)] to-[hsl(35,95%,55%)] rounded-xl hover:opacity-90 active:scale-[0.99] transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-        >
-          {status === "loading" && <Loader2 className="h-4 w-4 animate-spin" />}
-          {t("continueEmail")}
-        </button>
-      </form>
+            <button
+              type="submit"
+              disabled={status === "loading"}
+              className="mt-4 h-12 w-full text-base font-semibold text-white bg-gradient-to-br from-[hsl(9,100%,58%)] to-[hsl(35,95%,55%)] rounded-xl hover:opacity-90 active:scale-[0.99] transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+            >
+              {status === "loading" && <Loader2 className="h-4 w-4 animate-spin" />}
+              {t("continueEmail")}
+            </button>
+          </form>
 
-      <div className="flex items-center gap-3 my-3">
-        <div className="flex-1 h-px bg-border" />
-        <span className="text-xs uppercase tracking-wider text-muted-foreground">{t("or")}</span>
-        <div className="flex-1 h-px bg-border" />
-      </div>
+          <button
+            type="button"
+            onClick={() => {
+              setEmailOpen(false);
+              setStatus("idle");
+              setErrorMessage("");
+            }}
+            className="w-full inline-flex items-center justify-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors mt-3 cursor-pointer"
+          >
+            <ChevronLeft className="h-4 w-4" />
+            {t("changeMethod")}
+          </button>
+        </>
+      ) : (
+        <div className="flex flex-col gap-3">
+          <button
+            type="button"
+            onClick={handleGoogleClick}
+            className="w-full h-12 text-base font-medium text-foreground bg-background border border-border rounded-xl hover:border-foreground active:scale-[0.99] transition-all flex items-center justify-center gap-3 cursor-pointer"
+          >
+            <GoogleIcon />
+            {t("continueGoogle")}
+          </button>
 
-      <button
-        type="button"
-        onClick={handleGoogleClick}
-        className="w-full h-12 text-base font-medium text-foreground bg-background border border-border rounded-xl hover:border-foreground active:scale-[0.99] transition-all flex items-center justify-center gap-3 cursor-pointer"
-      >
-        <GoogleIcon />
-        {t("continueGoogle")}
-      </button>
+          <button
+            type="button"
+            onClick={handleAppleClick}
+            className="w-full h-12 text-base font-medium text-foreground bg-background border border-border rounded-xl hover:border-foreground active:scale-[0.99] transition-all flex items-center justify-center gap-3 cursor-pointer"
+          >
+            <AppleIcon />
+            {t("continueApple")}
+          </button>
+
+          <button
+            type="button"
+            onClick={() => {
+              analytics.track("l_onb_email_option_click");
+              setEmailOpen(true);
+            }}
+            className="w-full h-12 text-base font-medium text-foreground bg-background border border-border rounded-xl hover:border-foreground active:scale-[0.99] transition-all flex items-center justify-center gap-3 cursor-pointer"
+          >
+            <EmailIcon />
+            {t("emailOption")}
+          </button>
+        </div>
+      )}
 
       <p className="text-xs text-muted-foreground leading-snug text-center mt-5">
         {t("consent.text")}{" "}
@@ -421,6 +492,24 @@ function GoogleIcon() {
       <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
       <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
       <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+    </svg>
+  );
+}
+
+function AppleIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" className="fill-foreground">
+      <path d="M17.05 12.54c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.1-2.01-3.77-2.04-1.6-.16-3.13.94-3.94.94-.81 0-2.07-.92-3.41-.9-1.75.03-3.37 1.02-4.27 2.59-1.82 3.16-.47 7.84 1.31 10.41.87 1.26 1.9 2.67 3.25 2.62 1.31-.05 1.8-.84 3.38-.84 1.58 0 2.02.84 3.4.82 1.41-.03 2.3-1.28 3.16-2.55.99-1.46 1.4-2.87 1.42-2.94-.03-.01-2.73-1.05-2.76-4.15z" />
+      <path d="M14.46 4.84c.72-.87 1.21-2.08 1.07-3.29-1.04.04-2.29.69-3.03 1.56-.66.77-1.24 2-1.09 3.18 1.16.09 2.34-.59 3.05-1.45z" />
+    </svg>
+  );
+}
+
+function EmailIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <rect x="2" y="4" width="20" height="16" rx="2" />
+      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
     </svg>
   );
 }

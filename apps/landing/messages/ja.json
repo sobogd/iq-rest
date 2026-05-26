@@ -2071,12 +2071,15 @@
   },
   "auth": {
     "titleWithName": "{name} のためにもう一つ",
-    "subtitle": "メニューを保存できるようメールアドレスを残してください — いつでも編集できます。",
+    "subtitle": "メニューを保存するためのワンタイムログインコードのみを送信します。スパムやニュースレターは送りません。",
     "emailLabel": "メールアドレス",
     "emailPlaceholder": "you@restaurant.com",
     "continueEmail": "メニューを保存",
     "or": "または",
     "continueGoogle": "Google で続ける",
+    "continueApple": "Apple で続ける",
+    "emailOption": "メールで続行",
+    "changeMethod": "ログイン方法を変更",
     "changeRestaurant": "レストランを変更",
     "consent": {
       "text": "続行することで、当社の",
@@ -2103,6 +2106,7 @@
     },
     "signInTitle": "おかえりなさい",
     "signInSubtitle": "メールアドレスを入力すると、ログイン用のクイックコードをお送りします。",
+    "chooseSubtitle": "続行方法を選択してください。",
     "goToDashboard": "ダッシュボードへ"
   }
 }

@@ -2071,12 +2071,15 @@
   },
   "auth": {
     "titleWithName": "Последний штрих для {name}",
-    "subtitle": "Осталось оставить email, чтобы сохранить ваше меню — редактировать сможете в любой момент.",
+    "subtitle": "Пришлём только одноразовый код для входа, чтобы сохранить меню. Без спама и рассылок.",
     "emailLabel": "Email",
     "emailPlaceholder": "you@restaurant.com",
     "continueEmail": "Сохранить меню",
     "or": "или",
     "continueGoogle": "Продолжить с Google",
+    "continueApple": "Продолжить с Apple",
+    "emailOption": "Продолжить с email",
+    "changeMethod": "Изменить способ входа",
     "changeRestaurant": "Изменить ресторан",
     "consent": {
       "text": "Продолжая, вы соглашаетесь с",
@@ -2103,6 +2106,7 @@
     },
     "signInTitle": "С возвращением",
     "signInSubtitle": "Введите email — пришлём короткий код для входа.",
+    "chooseSubtitle": "Выберите способ входа.",
     "goToDashboard": "Открыть дашборд"
   }
 }

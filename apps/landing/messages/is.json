@@ -2071,12 +2071,15 @@
   },
   "auth": {
     "titleWithName": "Ein síðasta hlutur fyrir {name}",
-    "subtitle": "Skildu bara eftir netfangið þitt svo við getum vistað matseðilinn — þú getur breytt honum hvenær sem er.",
+    "subtitle": "Við sendum aðeins einnota innskráningarkóða til að vista matseðilinn þinn. Ekkert ruslpóstur, engin fréttabréf.",
     "emailLabel": "Netfang",
     "emailPlaceholder": "thu@veitingastad.is",
     "continueEmail": "Vista matseðilinn minn",
     "or": "eða",
     "continueGoogle": "Halda áfram með Google",
+    "continueApple": "Halda áfram með Apple",
+    "emailOption": "Halda áfram með tölvupósti",
+    "changeMethod": "Breyta innskráningaraðferð",
     "changeRestaurant": "Skipta um veitingastað",
     "consent": {
       "text": "Með því að halda áfram samþykkir þú",
@@ -2103,6 +2106,7 @@
     },
     "signInTitle": "Velkominn aftur",
     "signInSubtitle": "Sláðu inn netfangið þitt og við sendum hraðan innskráningarkóða.",
+    "chooseSubtitle": "Veldu hvernig þú vilt halda áfram.",
     "goToDashboard": "Fara á stjórnborð"
   }
 }

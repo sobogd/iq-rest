@@ -2071,12 +2071,15 @@
   },
   "auth": {
     "titleWithName": "Još jedna stvar za {name}",
-    "subtitle": "Samo ostavite svoj e-mail da spremimo vaš jelovnik — moći ćete ga uređivati bilo kada.",
+    "subtitle": "Poslat ćemo samo jednokratni kod za prijavu kako bismo spremili vaš jelovnik. Bez spama i biltena.",
     "emailLabel": "E-mail",
     "emailPlaceholder": "ti@restoran.hr",
     "continueEmail": "Spremi moj jelovnik",
     "or": "ili",
     "continueGoogle": "Nastavi s Googleom",
+    "continueApple": "Nastavi s Appleom",
+    "emailOption": "Nastavi s e-poštom",
+    "changeMethod": "Promijeni način prijave",
     "changeRestaurant": "Promijeni restoran",
     "consent": {
       "text": "Nastavkom prihvaćate naše",
@@ -2103,6 +2106,7 @@
     },
     "signInTitle": "Dobro došli natrag",
     "signInSubtitle": "Unesite e-mail i poslat ćemo brzi kod za prijavu.",
+    "chooseSubtitle": "Odaberite kako želite nastaviti.",
     "goToDashboard": "Idi na ploču"
   }
 }

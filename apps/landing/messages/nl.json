@@ -2071,12 +2071,15 @@
   },
   "auth": {
     "titleWithName": "Nog één ding voor {name}",
-    "subtitle": "Laat gewoon je e-mail achter zodat we je menu kunnen opslaan — je kunt het op elk moment bewerken.",
+    "subtitle": "We sturen alleen een eenmalige inlogcode om je menu op te slaan. Geen spam, geen nieuwsbrieven.",
     "emailLabel": "E-mail",
     "emailPlaceholder": "jij@restaurant.nl",
     "continueEmail": "Mijn menu opslaan",
     "or": "of",
     "continueGoogle": "Doorgaan met Google",
+    "continueApple": "Doorgaan met Apple",
+    "emailOption": "Doorgaan met e-mail",
+    "changeMethod": "Inlogmethode wijzigen",
     "changeRestaurant": "Restaurant wijzigen",
     "consent": {
       "text": "Door door te gaan ga je akkoord met onze",
@@ -2103,6 +2106,7 @@
     },
     "signInTitle": "Welkom terug",
     "signInSubtitle": "Voer je e-mail in en we sturen een snelle code om in te loggen.",
+    "chooseSubtitle": "Kies hoe je wilt doorgaan.",
     "goToDashboard": "Naar dashboard"
   }
 }

@@ -2071,12 +2071,15 @@
   },
   "auth": {
     "titleWithName": "Una cosa més per a {name}",
-    "subtitle": "Només deixa el teu correu perquè puguem desar la teva carta — la podràs editar en qualsevol moment.",
+    "subtitle": "Només t'enviarem un codi d'accés únic per desar el teu menú. Sense spam ni newsletters.",
     "emailLabel": "Correu electrònic",
     "emailPlaceholder": "tu@restaurant.com",
     "continueEmail": "Desa la meva carta",
     "or": "o",
     "continueGoogle": "Continua amb Google",
+    "continueApple": "Continua amb Apple",
+    "emailOption": "Continua amb correu electrònic",
+    "changeMethod": "Canvia el mètode d'accés",
     "changeRestaurant": "Canvia de restaurant",
     "consent": {
       "text": "En continuar acceptes els nostres",
@@ -2103,6 +2106,7 @@
     },
     "signInTitle": "Benvingut de nou",
     "signInSubtitle": "Introdueix el teu correu i t'enviarem un codi ràpid per entrar.",
+    "chooseSubtitle": "Tria com vols continuar.",
     "goToDashboard": "Vés al tauler"
   }
 }

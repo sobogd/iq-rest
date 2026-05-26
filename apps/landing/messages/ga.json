@@ -2071,12 +2071,15 @@
   },
   "auth": {
     "titleWithName": "Rud amháin eile do {name}",
-    "subtitle": "Fág do ríomhphost díreach ionas gur féidir linn do bhiachlár a shábháil — beidh tú in ann é a chur in eagar aon uair.",
+    "subtitle": "Ní sheolfaimid ach cód sínithe isteach aon uaire chun do bhiachlár a shábháil. Gan turscar, gan nuachtlitreacha.",
     "emailLabel": "Ríomhphost",
     "emailPlaceholder": "tu@bialann.ie",
     "continueEmail": "Sábháil mo bhiachlár",
     "or": "nó",
     "continueGoogle": "Lean ar aghaidh le Google",
+    "continueApple": "Lean ar aghaidh le Apple",
+    "emailOption": "Lean ar aghaidh le ríomhphost",
+    "changeMethod": "Athraigh modh sínithe isteach",
     "changeRestaurant": "Athraigh bialann",
     "consent": {
       "text": "Trí leanúint ar aghaidh aontaíonn tú lenár",
@@ -2103,6 +2106,7 @@
     },
     "signInTitle": "Fáilte ar ais",
     "signInSubtitle": "Cuir isteach do ríomhphost agus seolfaimid cód tapa chun síniú isteach.",
+    "chooseSubtitle": "Roghnaigh conas is mian leat leanúint ar aghaidh.",
     "goToDashboard": "Téigh chuig an bpainéal"
   }
 }

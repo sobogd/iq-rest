@@ -2071,12 +2071,15 @@
   },
   "auth": {
     "titleWithName": "Veel üks asi {name} jaoks",
-    "subtitle": "Jäta meile lihtsalt oma e-post, et saaksime menüü salvestada — saad seda igal ajal muuta.",
+    "subtitle": "Saadame ainult ühekordse sisselogimiskoodi, et menüü salvestada. Ei mingit rämpsposti ega uudiskirju.",
     "emailLabel": "E-post",
     "emailPlaceholder": "sina@restoran.ee",
     "continueEmail": "Salvesta minu menüü",
     "or": "või",
     "continueGoogle": "Jätka Google'iga",
+    "continueApple": "Jätka Apple'iga",
+    "emailOption": "Jätka e-postiga",
+    "changeMethod": "Muuda sisselogimisviisi",
     "changeRestaurant": "Vaheta restorani",
     "consent": {
       "text": "Jätkates nõustud meie",
@@ -2103,6 +2106,7 @@
     },
     "signInTitle": "Tere tulemast tagasi",
     "signInSubtitle": "Sisesta oma e-post ja saadame kiire sisselogimiskoodi.",
+    "chooseSubtitle": "Vali, kuidas soovid jätkata.",
     "goToDashboard": "Mine töölauale"
   }
 }

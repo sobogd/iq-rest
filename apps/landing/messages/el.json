@@ -2071,12 +2071,15 @@
   },
   "auth": {
     "titleWithName": "Ακόμα ένα πράγμα για το {name}",
-    "subtitle": "Απλά αφήστε το email σας ώστε να αποθηκεύσουμε το μενού σας — μπορείτε να το επεξεργαστείτε ανά πάσα στιγμή.",
+    "subtitle": "Θα στείλουμε μόνο έναν μοναδικό κωδικό σύνδεσης για να αποθηκεύσουμε το μενού σας. Χωρίς spam ή newsletter.",
     "emailLabel": "Email",
     "emailPlaceholder": "esy@restaurant.gr",
     "continueEmail": "Αποθήκευση του μενού μου",
     "or": "ή",
     "continueGoogle": "Συνέχεια με Google",
+    "continueApple": "Συνέχεια με Apple",
+    "emailOption": "Συνέχεια με email",
+    "changeMethod": "Αλλαγή μεθόδου σύνδεσης",
     "changeRestaurant": "Αλλαγή εστιατορίου",
     "consent": {
       "text": "Συνεχίζοντας αποδέχεστε τους",
@@ -2103,6 +2106,7 @@
     },
     "signInTitle": "Καλώς ήρθατε ξανά",
     "signInSubtitle": "Εισαγάγετε το email σας και θα στείλουμε γρήγορο κωδικό σύνδεσης.",
+    "chooseSubtitle": "Επιλέξτε πώς θέλετε να συνεχίσετε.",
     "goToDashboard": "Μετάβαση στον πίνακα"
   }
 }

@@ -2071,12 +2071,15 @@
   },
   "auth": {
     "titleWithName": "Vielä yksi asia {name} varten",
-    "subtitle": "Jätä sähköpostiosoitteesi, jotta voimme tallentaa menusi — voit muokata sitä koska tahansa.",
+    "subtitle": "Lähetämme vain kertakäyttöisen kirjautumiskoodin menusi tallentamiseksi. Ei roskapostia, ei uutiskirjeitä.",
     "emailLabel": "Sähköposti",
     "emailPlaceholder": "sina@ravintola.fi",
     "continueEmail": "Tallenna menuni",
     "or": "tai",
     "continueGoogle": "Jatka Googlella",
+    "continueApple": "Jatka Applella",
+    "emailOption": "Jatka sähköpostilla",
+    "changeMethod": "Vaihda kirjautumistapaa",
     "changeRestaurant": "Vaihda ravintolaa",
     "consent": {
       "text": "Jatkamalla hyväksyt",
@@ -2103,6 +2106,7 @@
     },
     "signInTitle": "Tervetuloa takaisin",
     "signInSubtitle": "Anna sähköpostiosoitteesi, niin lähetämme nopean kirjautumiskoodin.",
+    "chooseSubtitle": "Valitse, miten haluat jatkaa.",
     "goToDashboard": "Siirry hallintapaneeliin"
   }
 }

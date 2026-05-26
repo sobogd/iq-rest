@@ -2071,12 +2071,15 @@
   },
   "auth": {
     "titleWithName": "Vēl viena lieta {name}",
-    "subtitle": "Atstājiet savu e-pastu, lai mēs varētu saglabāt jūsu ēdienkarti — varēsiet rediģēt jebkurā laikā.",
+    "subtitle": "Nosūtīsim tikai vienreizēju pieteikšanās kodu, lai saglabātu jūsu ēdienkarti. Bez surogātpasta un jaunumiem.",
     "emailLabel": "E-pasts",
     "emailPlaceholder": "jus@restorans.lv",
     "continueEmail": "Saglabāt manu ēdienkarti",
     "or": "vai",
     "continueGoogle": "Turpināt ar Google",
+    "continueApple": "Turpināt ar Apple",
+    "emailOption": "Turpināt ar e-pastu",
+    "changeMethod": "Mainīt pieteikšanās veidu",
     "changeRestaurant": "Mainīt restorānu",
     "consent": {
       "text": "Turpinot, jūs piekrītat mūsu",
@@ -2103,6 +2106,7 @@
     },
     "signInTitle": "Laipni lūdzam atpakaļ",
     "signInSubtitle": "Ievadiet e-pastu, un mēs nosūtīsim ātru pieteikšanās kodu.",
+    "chooseSubtitle": "Izvēlieties, kā vēlaties turpināt.",
     "goToDashboard": "Doties uz paneli"
   }
 }

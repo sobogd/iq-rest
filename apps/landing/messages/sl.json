@@ -2071,12 +2071,15 @@
   },
   "auth": {
     "titleWithName": "Še ena stvar za {name}",
-    "subtitle": "Samo pustite svoj e-poštni naslov, da shranimo vaš jedilnik — urejali ga boste lahko kadar koli.",
+    "subtitle": "Poslali bomo le enkratno kodo za prijavo, da shranimo vaš meni. Brez neželene pošte in novic.",
     "emailLabel": "E-pošta",
     "emailPlaceholder": "vi@restavracija.si",
     "continueEmail": "Shrani moj jedilnik",
     "or": "ali",
     "continueGoogle": "Nadaljuj z Googlom",
+    "continueApple": "Continue with Apple",
+    "emailOption": "Nadaljuj z e-pošto",
+    "changeMethod": "Spremeni način prijave",
     "changeRestaurant": "Zamenjaj restavracijo",
     "consent": {
       "text": "Z nadaljevanjem se strinjate z našimi",
@@ -2103,6 +2106,7 @@
     },
     "signInTitle": "Dobrodošli nazaj",
     "signInSubtitle": "Vnesite e-pošto in poslali bomo hitro kodo za prijavo.",
+    "chooseSubtitle": "Izberite, kako želite nadaljevati.",
     "goToDashboard": "Pojdi na nadzorno ploščo"
   }
 }

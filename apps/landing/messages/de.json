@@ -2071,12 +2071,15 @@
   },
   "auth": {
     "titleWithName": "Noch eine Sache für {name}",
-    "subtitle": "Lassen Sie einfach Ihre E-Mail-Adresse da, damit wir Ihre Speisekarte speichern können — Sie können sie jederzeit bearbeiten.",
+    "subtitle": "Wir senden dir nur einen einmaligen Login-Code, um dein Menü zu speichern. Kein Spam, keine Newsletter.",
     "emailLabel": "E-Mail",
     "emailPlaceholder": "sie@restaurant.de",
     "continueEmail": "Meine Speisekarte speichern",
     "or": "oder",
     "continueGoogle": "Mit Google fortfahren",
+    "continueApple": "Mit Apple fortfahren",
+    "emailOption": "Mit E-Mail fortfahren",
+    "changeMethod": "Anmeldemethode ändern",
     "changeRestaurant": "Restaurant ändern",
     "consent": {
       "text": "Mit der Fortsetzung stimmen Sie unseren",
@@ -2103,6 +2106,7 @@
     },
     "signInTitle": "Willkommen zurück",
     "signInSubtitle": "Geben Sie Ihre E-Mail ein, wir senden Ihnen einen schnellen Code zur Anmeldung.",
+    "chooseSubtitle": "Wähle, wie du fortfahren möchtest.",
     "goToDashboard": "Zum Dashboard"
   }
 }

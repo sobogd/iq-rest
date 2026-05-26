@@ -2071,12 +2071,15 @@
   },
   "auth": {
     "titleWithName": "Още едно нещо за {name}",
-    "subtitle": "Само оставете имейла си, за да запазим менюто ви — ще можете да го редактирате по всяко време.",
+    "subtitle": "Ще изпратим само еднократен код за вход, за да запазим менюто ви. Без спам и бюлетини.",
     "emailLabel": "Имейл",
     "emailPlaceholder": "vie@restaurant.com",
     "continueEmail": "Запази моето меню",
     "or": "или",
     "continueGoogle": "Продължи с Google",
+    "continueApple": "Продължи с Apple",
+    "emailOption": "Продължи с имейл",
+    "changeMethod": "Промяна на метода за вход",
     "changeRestaurant": "Смени ресторанта",
     "consent": {
       "text": "С продължаването приемате нашите",
@@ -2103,6 +2106,7 @@
     },
     "signInTitle": "Добре дошли отново",
     "signInSubtitle": "Въведете имейла си и ще изпратим бърз код за вход.",
+    "chooseSubtitle": "Изберете как да продължите.",
     "goToDashboard": "Към таблото"
   }
 }

@@ -2071,12 +2071,15 @@
   },
   "auth": {
     "titleWithName": "Dar vienas dalykas {name}",
-    "subtitle": "Tiesiog palikite el. paštą, kad galėtume išsaugoti meniu — galėsite redaguoti bet kada.",
+    "subtitle": "Atsiųsime tik vienkartinį prisijungimo kodą jūsų meniu išsaugoti. Jokio šlamšto ar naujienlaiškių.",
     "emailLabel": "El. paštas",
     "emailPlaceholder": "jus@restoranas.lt",
     "continueEmail": "Išsaugoti mano meniu",
     "or": "arba",
     "continueGoogle": "Tęsti su Google",
+    "continueApple": "Tęsti su Apple",
+    "emailOption": "Tęsti su el. paštu",
+    "changeMethod": "Keisti prisijungimo būdą",
     "changeRestaurant": "Keisti restoraną",
     "consent": {
       "text": "Tęsdami sutinkate su mūsų",
@@ -2103,6 +2106,7 @@
     },
     "signInTitle": "Sveiki sugrįžę",
     "signInSubtitle": "Įveskite el. paštą ir mes išsiųsime greitą prisijungimo kodą.",
+    "chooseSubtitle": "Pasirinkite, kaip norite tęsti.",
     "goToDashboard": "Eiti į skydelį"
   }
 }

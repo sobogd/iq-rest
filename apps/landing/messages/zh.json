@@ -2071,12 +2071,15 @@
   },
   "auth": {
     "titleWithName": "{name} 还有一件事",
-    "subtitle": "只需留下您的邮箱，以便我们保存您的菜单 — 您可以随时编辑。",
+    "subtitle": "我们只会发送一次性登录码以保存您的菜单。绝无垃圾邮件和推广。",
     "emailLabel": "电子邮箱",
     "emailPlaceholder": "you@restaurant.com",
     "continueEmail": "保存我的菜单",
     "or": "或",
     "continueGoogle": "使用 Google 继续",
+    "continueApple": "使用 Apple 继续",
+    "emailOption": "使用邮箱继续",
+    "changeMethod": "更改登录方式",
     "changeRestaurant": "更换餐厅",
     "consent": {
       "text": "继续即表示您同意我们的",
@@ -2103,6 +2106,7 @@
     },
     "signInTitle": "欢迎回来",
     "signInSubtitle": "输入您的邮箱，我们将发送快速登录代码。",
+    "chooseSubtitle": "选择您的登录方式。",
     "goToDashboard": "前往仪表板"
   }
 }

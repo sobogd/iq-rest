@@ -2071,12 +2071,15 @@
   },
   "auth": {
     "titleWithName": "Une dernière chose pour {name}",
-    "subtitle": "Laissez simplement votre e-mail pour que nous sauvegardions votre menu — vous pourrez le modifier à tout moment.",
+    "subtitle": "Nous enverrons seulement un code de connexion unique pour enregistrer votre menu. Pas de spam, pas de newsletters.",
     "emailLabel": "E-mail",
     "emailPlaceholder": "vous@restaurant.fr",
     "continueEmail": "Sauvegarder mon menu",
     "or": "ou",
     "continueGoogle": "Continuer avec Google",
+    "continueApple": "Continuer avec Apple",
+    "emailOption": "Continuer avec l'e-mail",
+    "changeMethod": "Changer de méthode de connexion",
     "changeRestaurant": "Changer de restaurant",
     "consent": {
       "text": "En continuant vous acceptez nos",
@@ -2103,6 +2106,7 @@
     },
     "signInTitle": "Bon retour",
     "signInSubtitle": "Entrez votre e-mail et nous enverrons un code rapide pour vous connecter.",
+    "chooseSubtitle": "Choisissez comment continuer.",
     "goToDashboard": "Accéder au tableau de bord"
   }
 }

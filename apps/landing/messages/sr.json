@@ -2071,12 +2071,15 @@
   },
   "auth": {
     "titleWithName": "Još jedna stvar za {name}",
-    "subtitle": "Samo ostavite svoj e-mail da sačuvamo vaš jelovnik — moći ćete da ga uređujete bilo kada.",
+    "subtitle": "Послаћемо само једнократни код за пријаву да сачувамо ваш мени. Без спама и билтена.",
     "emailLabel": "E-mail",
     "emailPlaceholder": "vi@restoran.rs",
     "continueEmail": "Sačuvaj moj jelovnik",
     "or": "ili",
     "continueGoogle": "Nastavi sa Google-om",
+    "continueApple": "Nastavi sa Apple-om",
+    "emailOption": "Настави са имејлом",
+    "changeMethod": "Промени начин пријаве",
     "changeRestaurant": "Promeni restoran",
     "consent": {
       "text": "Nastavljanjem prihvatate naše",
@@ -2103,6 +2106,7 @@
     },
     "signInTitle": "Dobrodošli nazad",
     "signInSubtitle": "Unesite svoj e-mail i poslaćemo brz kod za prijavu.",
+    "chooseSubtitle": "Изаберите како желите да наставите.",
     "goToDashboard": "Idi na kontrolnu tablu"
   }
 }

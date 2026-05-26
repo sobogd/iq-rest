@@ -2071,12 +2071,15 @@
   },
   "auth": {
     "titleWithName": "En sista sak för {name}",
-    "subtitle": "Lämna bara din e-post så vi kan spara din meny — du kan redigera den när som helst.",
+    "subtitle": "Vi skickar bara en engångskod för inloggning för att spara din meny. Ingen spam, inga nyhetsbrev.",
     "emailLabel": "E-post",
     "emailPlaceholder": "du@restaurang.se",
     "continueEmail": "Spara min meny",
     "or": "eller",
     "continueGoogle": "Fortsätt med Google",
+    "continueApple": "Fortsätt med Apple",
+    "emailOption": "Fortsätt med e-post",
+    "changeMethod": "Byt inloggningsmetod",
     "changeRestaurant": "Byt restaurang",
     "consent": {
       "text": "Genom att fortsätta godkänner du våra",
@@ -2103,6 +2106,7 @@
     },
     "signInTitle": "Välkommen tillbaka",
     "signInSubtitle": "Ange din e-post så skickar vi en snabb kod för att logga in.",
+    "chooseSubtitle": "Välj hur du vill fortsätta.",
     "goToDashboard": "Gå till instrumentpanelen"
   }
 }

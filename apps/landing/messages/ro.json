@@ -2071,12 +2071,15 @@
   },
   "auth": {
     "titleWithName": "Încă un lucru pentru {name}",
-    "subtitle": "Lasă-ne doar e-mailul tău ca să-ți putem salva meniul — îl vei putea edita oricând.",
+    "subtitle": "Îți trimitem doar un cod unic de conectare pentru a salva meniul. Fără spam, fără newslettere.",
     "emailLabel": "E-mail",
     "emailPlaceholder": "tu@restaurant.ro",
     "continueEmail": "Salvează meniul meu",
     "or": "sau",
     "continueGoogle": "Continuă cu Google",
+    "continueApple": "Continuă cu Apple",
+    "emailOption": "Continuă cu email",
+    "changeMethod": "Schimbă metoda de conectare",
     "changeRestaurant": "Schimbă restaurantul",
     "consent": {
       "text": "Continuând, accepți",
@@ -2103,6 +2106,7 @@
     },
     "signInTitle": "Bun venit înapoi",
     "signInSubtitle": "Introdu e-mailul și îți vom trimite un cod rapid pentru autentificare.",
+    "chooseSubtitle": "Alege cum vrei să continui.",
     "goToDashboard": "Mergi la panou"
   }
 }

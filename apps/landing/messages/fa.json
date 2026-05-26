@@ -2071,12 +2071,15 @@
   },
   "auth": {
     "titleWithName": "یک چیز دیگر برای {name}",
-    "subtitle": "فقط ایمیلتان را بگذارید تا منویتان را ذخیره کنیم — هر زمان می‌توانید ویرایش کنید.",
+    "subtitle": "فقط یک کد ورود یک‌بارمصرف برای ذخیره منوی شما می‌فرستیم. بدون اسپم و خبرنامه.",
     "emailLabel": "ایمیل",
     "emailPlaceholder": "shoma@restaurant.com",
     "continueEmail": "ذخیره منوی من",
     "or": "یا",
     "continueGoogle": "ادامه با Google",
+    "continueApple": "ادامه با Apple",
+    "emailOption": "ادامه با ایمیل",
+    "changeMethod": "تغییر روش ورود",
     "changeRestaurant": "تغییر رستوران",
     "consent": {
       "text": "با ادامه دادن، شما با",
@@ -2103,6 +2106,7 @@
     },
     "signInTitle": "خوش آمدید",
     "signInSubtitle": "ایمیلتان را وارد کنید و کد سریعی برای ورود ارسال خواهیم کرد.",
+    "chooseSubtitle": "نحوه ادامه را انتخاب کنید.",
     "goToDashboard": "رفتن به داشبورد"
   }
 }

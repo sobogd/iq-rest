@@ -2071,12 +2071,15 @@
   },
   "auth": {
     "titleWithName": "Még egy dolog a {name} számára",
-    "subtitle": "Csak hagyd meg az e-mail címed, hogy elmenthessük az étlapodat — bármikor szerkesztheted.",
+    "subtitle": "Csak egy egyszeri belépési kódot küldünk a menüd mentéséhez. Nincs spam, nincsenek hírlevelek.",
     "emailLabel": "E-mail",
     "emailPlaceholder": "te@etterem.hu",
     "continueEmail": "Étlap mentése",
     "or": "vagy",
     "continueGoogle": "Folytatás Google-lel",
+    "continueApple": "Folytatás Apple-lel",
+    "emailOption": "Folytatás e-maillel",
+    "changeMethod": "Bejelentkezési mód módosítása",
     "changeRestaurant": "Étterem váltása",
     "consent": {
       "text": "A folytatással elfogadod a",
@@ -2103,6 +2106,7 @@
     },
     "signInTitle": "Üdv újra",
     "signInSubtitle": "Add meg e-mail címed, és gyors belépési kódot küldünk.",
+    "chooseSubtitle": "Válaszd ki, hogyan szeretnél folytatni.",
     "goToDashboard": "Ugrás a vezérlőpultra"
   }
 }
