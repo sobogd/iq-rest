@@ -19,11 +19,26 @@ import { ro } from "./content/ro";
 import { sk } from "./content/sk";
 import { sl } from "./content/sl";
 import { hr } from "./content/hr";
+import { hu } from "./content/hu";
+import { bg } from "./content/bg";
+import { lt } from "./content/lt";
+import { lv } from "./content/lv";
+import { et } from "./content/et";
+import { ca } from "./content/ca";
+import { el } from "./content/el";
+import { ga } from "./content/ga";
+import { is } from "./content/is";
+import { sr } from "./content/sr";
+import { ja } from "./content/ja";
+import { ko } from "./content/ko";
+import { zh } from "./content/zh";
+import { ar } from "./content/ar";
+import { fa } from "./content/fa";
 
 // Single source of truth for which locales have a translated help guide.
 // Templates (home/pricing/feature) and the sitemap read from here, so rolling
 // out a new locale = add its doc import below (+ its app/<locale>/help/page.tsx).
-const DOCS: Record<string, HelpDoc> = { ru, en, it, es, pt, de, fr, nl, pl, tr, uk, cs, sv, da, no, fi, ro, sk, sl, hr };
+const DOCS: Record<string, HelpDoc> = { ru, en, it, es, pt, de, fr, nl, pl, tr, uk, cs, sv, da, no, fi, ro, sk, sl, hr, hu, bg, lt, lv, et, ca, el, ga, is, sr, ja, ko, zh, ar, fa };
 
 export const HELP_LOCALES = Object.keys(DOCS);
 
