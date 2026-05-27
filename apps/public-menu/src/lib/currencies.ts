@@ -103,8 +103,8 @@ const ZERO_DECIMAL_CURRENCIES = ["JPY", "KRW", "VND", "CLP", "ISK", "HUF", "XOF"
 export function formatPrice(amount: number, currencyCode: string = "EUR"): string {
   const currency = getCurrency(currencyCode);
 
-  // For currencies that typically show symbol after the number
-  const symbolAfter = ["PLN", "CZK", "HUF", "SEK", "NOK", "DKK", "ISK"].includes(currencyCode);
+  // For currencies that typically show symbol after the number (e.g. "12.50 €").
+  const symbolAfter = ["EUR", "PLN", "CZK", "HUF", "SEK", "NOK", "DKK", "ISK"].includes(currencyCode);
 
   // Zero-decimal currencies don't show decimals. Otherwise show 2 decimals
   // but trim trailing zeros: 42.00 → "42", 16.80 → "16.8", 16.85 → "16.85".
