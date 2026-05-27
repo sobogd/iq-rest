@@ -5,16 +5,21 @@
 // Operator data sourced from the existing Privacy Policy (messages/en.json → privacy.sections).
 
 export const OPERATOR = {
-  // Spanish autónomo is itself a recognised legal form for conducting business.
-  legalName: "Bogdan Sokolov (Autónomo)",
-  status: "Autónomo registered in Spain",
+  // The legal person behind the IQ Rest brand. In Spain this is an "autónomo"
+  // (a registered self-employed individual) — rendered in the docs as
+  // "individual entrepreneur (autónomo)" so it reads clearly internationally
+  // while staying legally precise. GDPR requires the controller's real
+  // identity + tax ID, so the personal name stays; the copy just leads with
+  // the brand.
+  legalName: "Bogdan Sokolov",
+  status: "individual entrepreneur (autónomo) registered in Spain",
   brand: "IQ Rest",
   domain: "iq-rest.com",
   contactEmail: "support@iq-rest.com",
   fiscalAddress: "Calle Boca Del Rio 2, 1A, Oviedo, 33010, Asturias, Spain",
-  taxId: "Z1894474S",
+  taxId: "ESZ1894474S",
   hostingProvider: "Hetzner Online GmbH, Nuremberg, Germany",
-  lastUpdated: "May 1, 2026",
+  lastUpdated: "May 27, 2026",
 };
 
 // Backwards-compat alias used by the rest of the file.
@@ -27,7 +32,7 @@ export const COOKIE_POLICY_SECTIONS: { heading?: string; paragraphs: string[] }[
   {
     paragraphs: [
       `Last updated: ${OPERATOR.lastUpdated}`,
-      `This Cookie Policy explains how ${OPERATOR.legalName}, ${OPERATOR.status} ("${OPERATOR.brand}", "we", "us"), uses cookies and similar technologies on the ${OPERATOR.brand} website at ${OPERATOR.domain} ("the Site"). It should be read together with our Terms of Service.`,
+      `This Cookie Policy explains how ${OPERATOR.brand} — a service operated by ${OPERATOR.legalName}, ${OPERATOR.status} ("${OPERATOR.brand}", "we", "us") — uses cookies and similar technologies on the ${OPERATOR.brand} website at ${OPERATOR.domain} ("the Site"). It should be read together with our Terms of Service.`,
     ],
   },
   {
@@ -99,14 +104,14 @@ export const PRIVACY_POLICY_SECTIONS: { heading?: string; paragraphs: string[] }
   {
     paragraphs: [
       `Last updated: ${OPERATOR.lastUpdated}`,
-      `This Privacy Policy explains how ${OPERATOR.legalName}, ${OPERATOR.status}, with fiscal address at ${OPERATOR.fiscalAddress} (Tax ID: ${OPERATOR.taxId}) ("${OPERATOR.brand}", "we", "us"), collects, uses, stores and protects your personal data when you use the ${OPERATOR.brand} platform at ${OPERATOR.domain}.`,
+      `This Privacy Policy explains how ${OPERATOR.brand} — a service operated by ${OPERATOR.legalName}, ${OPERATOR.status}, with fiscal address at ${OPERATOR.fiscalAddress} (Tax ID: ${OPERATOR.taxId}) ("${OPERATOR.brand}", "we", "us") — collects, uses, stores and protects your personal data when you use the ${OPERATOR.brand} platform at ${OPERATOR.domain}.`,
       `We comply with the General Data Protection Regulation (GDPR), the Spanish Organic Law on Data Protection and Guarantee of Digital Rights (LOPDGDD), and the ePrivacy Directive.`,
     ],
   },
   {
     heading: "1. Data Controller",
     paragraphs: [
-      `The data controller responsible for your personal data is ${OPERATOR.legalName} (Tax ID: ${OPERATOR.taxId}, fiscal address ${OPERATOR.fiscalAddress}).`,
+      `${OPERATOR.brand} is operated by ${OPERATOR.legalName}, ${OPERATOR.status}, who is the data controller responsible for your personal data (Tax ID: ${OPERATOR.taxId}, fiscal address ${OPERATOR.fiscalAddress}).`,
       `For any privacy inquiries, including the exercise of your data subject rights, contact ${OPERATOR.contactEmail}.`,
     ],
   },
@@ -236,7 +241,7 @@ export const TERMS_SECTIONS: { heading?: string; paragraphs: string[] }[] = [
   {
     heading: "Overview",
     paragraphs: [
-      `This website (${OPERATOR.domain}) is operated by ${OPERATOR.legalName}, ${OPERATOR.status}, with fiscal address at ${OPERATOR.fiscalAddress} (Tax ID: ${OPERATOR.taxId}) ("${OPERATOR.brand}", "we", "us"). ${OPERATOR.brand} provides a software-as-a-service platform that allows restaurants to create QR menus, accept online orders, manage table reservations, and view analytics ("the Service").`,
+      `${OPERATOR.brand} is a software-as-a-service platform that lets restaurants create QR menus, accept online orders, manage table reservations, and view analytics ("the Service"). It is provided through the website at ${OPERATOR.domain} and operated by ${OPERATOR.legalName}, ${OPERATOR.status}, with fiscal address at ${OPERATOR.fiscalAddress} (Tax ID: ${OPERATOR.taxId}) ("${OPERATOR.brand}", "we", "us").`,
       `By visiting our site or using the Service, you accept these Terms of Service ("Terms"). If you do not agree to all of these Terms, please do not use the site or the Service.`,
       `These Terms apply to all visitors and users, including restaurants subscribing to the Service and end customers scanning QR menus.`,
     ],
