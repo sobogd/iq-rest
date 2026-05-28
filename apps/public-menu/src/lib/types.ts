@@ -26,12 +26,12 @@ export interface RestaurantPayload {
   x: string | null;
   y: string | null;
   googlePlaceId: string | null;
-  company: {
-    id: string;
-    plan: string;
-    subscriptionStatus: string;
-    trialEndsAt: string | null;
-  };
+  // Per-restaurant billing (2026-05-28): trial / plan come directly off the
+  // restaurant. A FREE restaurant whose trialEndsAt is in the past is
+  // overlay-blocked for diners.
+  plan: string | null;
+  subscriptionStatus: string;
+  trialEndsAt: string | null;
 }
 
 export interface CategoryPayload {

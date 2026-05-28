@@ -82,10 +82,15 @@ function RootLayout() {
     return <NotFoundScreen />;
   }
 
+  // Per-restaurant billing: a restaurant is "trial-expired" when its plan is
+  // FREE (or null — i.e. never on a paid plan) and its trialEndsAt is in the
+  // past. Paid restaurants and active trials show normally. love-eatery is a
+  // demo carve-out (used in the marketing landing iframe).
+  const planActive = data.restaurant.plan && data.restaurant.plan !== "FREE";
   const trialExpired =
-    data.restaurant.company.plan === "FREE"
-    && data.restaurant.company.trialEndsAt !== null
-    && new Date(data.restaurant.company.trialEndsAt) <= new Date()
+    !planActive
+    && data.restaurant.trialEndsAt !== null
+    && new Date(data.restaurant.trialEndsAt) <= new Date()
     && data.restaurant.slug !== "love-eatery";
 
   return (
