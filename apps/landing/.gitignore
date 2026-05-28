@@ -50,6 +50,7 @@ vercel.json
 *.md
 !README.md
 !scripts/GOOGLE_ADS.md
+!CLAUDE.md
 
 # scripts and configs
 *.sh
