@@ -198,6 +198,17 @@ const nextConfig: NextConfig = {
       { source: "/:locale/signup", destination: "https://dashboard.iq-rest.com/:locale/login?create=true", permanent: true },
       { source: "/:locale/otp", destination: "https://dashboard.iq-rest.com/:locale/login", permanent: true },
       { source: "/:locale/logout", destination: "https://dashboard.iq-rest.com/:locale/logout", permanent: true },
+
+      // Legacy dashboard fully removed from this repo as of 2026-05-28. Every
+      // /:locale/dashboard/* path 301s to the same path on the new SPA host.
+      // Cookie domain `.iq-rest.com` keeps the session valid across the hop,
+      // so logged-in users land in the new dashboard already authed.
+      { source: "/:locale/dashboard", destination: "https://dashboard.iq-rest.com/:locale/dashboard", permanent: true },
+      { source: "/:locale/dashboard/:path*", destination: "https://dashboard.iq-rest.com/:locale/dashboard/:path*", permanent: true },
+      // Drop the legacy in-landing API surface (the old dashboard's backend)
+      // — none of these routes exist anymore. Crawlers / cached bookmarks 301
+      // to the public landing root (the API is not callable by humans).
+      { source: "/api/:path*", destination: "/", permanent: true },
     ];
   },
 
