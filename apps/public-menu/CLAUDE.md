@@ -2,6 +2,8 @@
 
 Vite + React 19 single-page app — the IQ Rest **public menu** (guest-facing). When a diner scans a table QR code at a venue, the QR opens this app at `<slug>.iq-rest.com` (optionally `?table=N`); the diner browses the menu, places an order, and/or books a table. The backend is `iq-rest-public-menu-api`; the data shown here comes from a single restaurant-by-slug fetch.
 
+> **Schema cleanup 2026-05-28 (Stage C).** `RestaurantPayload` (in `src/lib/types.ts`) no longer carries a nested `company` object — `plan`, `subscriptionStatus`, `trialEndsAt` are flat on the restaurant. The trial-overlay gate in `src/routes/__root.tsx` reads them directly. See `/home/deploy/dev/AUDIT_2026-05-29.md` for the audit (notably: null `trialEndsAt` on a non-paid plan currently fails OPEN; client-supplied order `total` is trusted by backend; missing focus traps on modals; eagerly bundled locale JSONs).
+
 ## Build rule on this server (read first)
 
 This server has ~3.7 GB RAM. **DO NOT run production builds here**:
