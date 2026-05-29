@@ -11,6 +11,8 @@
 >
 > This CLAUDE.md exists **for reference only**. For any dashboard work, use `iq-rest-dashboard-api` / `iq-rest-dashboard-web` instead. For any guest-menu work, use `iq-rest-public-menu` / `iq-rest-public-menu-api`.
 
+> **Update 2026-05-28 (Stage C teardown).** The legacy in-landing dashboard (`app/[locale]/dashboard/...`) was deleted from the repo. The only thing that remains here for dashboard-related routes is the 301 redirect table in `next.config.ts:195–211` (login/signup/otp/logout + `/dashboard/*` → `dashboard.iq-rest.com`). The marketing-only mode means `prisma/`, `@prisma/client`, `prisma`, and `stripe` are no longer needed at runtime (only string mentions remain in marketing copy). The `types/index.ts` file has zero importers. The 4 places that branch on `auth.legacyDashboard` (auth-step, use-landing-auth, use-primary-cta, create-flow-modal) are dead now that the API always returns `false`. ~40 unused shadcn components remain in `components/ui/`. See `/home/deploy/dev/AUDIT_2026-05-29.md` for the full audit + a recommended-commit list.
+
 ## Branch and naming caveats
 
 - **Working branch is `release`** (not `master`, not `main`). Both other branches exist on the remote but are stale. Any reference checkout must use `release`.
