@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { analytics } from "@/lib/analytics";
+import { readBillingCurrencyFromDocument } from "@/lib/country-currency-map";
 
 const GCLID_REGEX = /^[A-Za-z0-9_-]{1,256}$/;
 const FBCLID_REGEX = /^[A-Za-z0-9_.-]{1,512}$/;
@@ -81,9 +82,9 @@ function firePageEvent(): void {
   analytics.track(`l_page_${locale}_${page}`);
 }
 
-function fireThemeEvent(): void {
-  const isDark = document.documentElement.classList.contains("dark");
-  analytics.track(`l_theme_${isDark ? "black" : "white"}`);
+function fireCurrencyEvent(): void {
+  // Geo-determined billing currency (from the geo_currency cookie, EUR default).
+  analytics.track(`land_currency_${readBillingCurrencyFromDocument()}`);
 }
 
 interface PageTrackerProps {
@@ -99,7 +100,7 @@ export function PageTracker(_props: PageTrackerProps = {}) {
     fireFbclidEvent();
     fireFromAndClean();
     firePageEvent();
-    fireThemeEvent();
+    fireCurrencyEvent();
 
     // Re-fires on every viewport (re-)entry so the server timeline shows
     // the full scroll path — `hero → features → footer → features → ...`.
