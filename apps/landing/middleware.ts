@@ -2,6 +2,7 @@ import createMiddleware from "next-intl/middleware";
 import { NextRequest, NextResponse } from "next/server";
 import { routing, locales, Locale } from "./i18n/routing";
 import { getLocaleByCountryAndRegion } from "./lib/country-locale-map";
+import { getCurrencyByCountry } from "./lib/country-currency-map";
 import { HOME_META, lastModifiedFor } from "./lib/page-meta";
 import { isGone } from "./lib/gone-paths";
 import { LOCALE_SLUG_OVERRIDES, swapLocale } from "./lib/locale-slug-overrides";
@@ -45,6 +46,10 @@ const localeRegex = new RegExp(`^/(${localePattern})(/|$)`);
 
 const GEO_COUNTRY_COOKIE = "geo_country";
 const GEO_LOCALE_COOKIE = "geo_locale";
+// Billing currency (EUR/NOK/SEK/DKK) — read by the dashboard pricing UI and the
+// API checkout. Prefer the nginx GeoIP2 header (x-currency); else derive from
+// country. Distinct from the restaurant's public-menu currency.
+const GEO_CURRENCY_COOKIE = "geo_currency";
 
 /**
  * Получить страну из Cloudflare header.
@@ -96,6 +101,15 @@ function setGeoCookies(request: NextRequest, response: NextResponse): void {
   }
 
   response.cookies.set(GEO_LOCALE_COOKIE, detectLocaleByCountry(request), {
+    path: "/",
+    maxAge: 60 * 60 * 24 * 7,
+    sameSite: "lax",
+  });
+
+  // Billing currency: nginx GeoIP2 header wins, else derive from country.
+  const headerCurrency = request.headers.get("x-currency");
+  const billingCurrency = headerCurrency || getCurrencyByCountry(cfCountry);
+  response.cookies.set(GEO_CURRENCY_COOKIE, billingCurrency, {
     path: "/",
     maxAge: 60 * 60 * 24 * 7,
     sameSite: "lax",

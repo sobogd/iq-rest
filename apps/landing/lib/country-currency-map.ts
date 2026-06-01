@@ -13,6 +13,9 @@ export const supportedCurrencies = [
   "PEN", // Перу
   "UYU", // Уругвай
   "TRY", // Турция
+  "NOK", // Норвегия
+  "SEK", // Швеция
+  "DKK", // Дания
 ] as const;
 
 export type SupportedCurrency = (typeof supportedCurrencies)[number];
@@ -36,6 +39,11 @@ export const countryToCurrency: Record<string, SupportedCurrency> = {
 
   // Турция
   TR: "TRY",
+
+  // Скандинавия (своя валюта биллинга)
+  NO: "NOK", // Норвегия
+  SE: "SEK", // Швеция
+  DK: "DKK", // Дания
 
   // США
   US: "USD",
@@ -83,6 +91,9 @@ export const currencyInfo: Record<SupportedCurrency, {
   PEN: { symbol: "S/", name: "Peruvian Sol", symbolPosition: "before", zeroDecimal: false },
   UYU: { symbol: "UY$", name: "Uruguayan Peso", symbolPosition: "before", zeroDecimal: false },
   TRY: { symbol: "₺", name: "Turkish Lira", symbolPosition: "after", zeroDecimal: false },
+  NOK: { symbol: "kr", name: "Norwegian Krone", symbolPosition: "after", zeroDecimal: false },
+  SEK: { symbol: "kr", name: "Swedish Krona", symbolPosition: "after", zeroDecimal: false },
+  DKK: { symbol: "kr", name: "Danish Krone", symbolPosition: "after", zeroDecimal: false },
 };
 
 /**
@@ -92,4 +103,29 @@ export const currencyInfo: Record<SupportedCurrency, {
 export function getCurrencyByCountry(countryCode: string | null): SupportedCurrency {
   if (!countryCode) return "EUR";
   return countryToCurrency[countryCode.toUpperCase()] || "EUR";
+}
+
+/** Validate a raw string against the supported set, else EUR. */
+export function asSupportedCurrency(raw: string | null | undefined): SupportedCurrency {
+  const up = (raw || "").toUpperCase();
+  return (supportedCurrencies as readonly string[]).includes(up) ? (up as SupportedCurrency) : "EUR";
+}
+
+/** Client-side: billing currency from the `geo_currency` cookie (default EUR).
+ *  Kept here (no next/headers) so client components can import it safely. */
+export function readBillingCurrencyFromDocument(): SupportedCurrency {
+  if (typeof document === "undefined") return "EUR";
+  const m = /(?:^|;\s*)geo_currency=([^;]+)/.exec(document.cookie);
+  return asSupportedCurrency(m ? decodeURIComponent(m[1]) : null);
+}
+
+/** Format a plan price: no decimals for whole numbers, symbol placed per
+ *  currency (e.g. "€9.90", "109 kr"). Non-breaking space before "kr". */
+export function formatMoney(amount: number, currency: SupportedCurrency): string {
+  const info = currencyInfo[currency];
+  const n = amount.toLocaleString("en-US", {
+    minimumFractionDigits: Number.isInteger(amount) ? 0 : 2,
+    maximumFractionDigits: 2,
+  });
+  return info.symbolPosition === "after" ? `${n} ${info.symbol}` : `${info.symbol}${n}`;
 }

@@ -94,6 +94,27 @@ export const pricing: Record<SupportedCurrency, CurrencyPricing> = {
     basic: { monthly: 349, yearly: 249, yearlyTotal: 2988 },
     pro: { monthly: 999, yearly: 669, yearlyTotal: 8028 },
   },
+
+  // Норвегия (≈ EUR × 10.8, charm-rounded)
+  NOK: {
+    free: { monthly: 0, yearly: 0, yearlyTotal: 0 },
+    basic: { monthly: 109, yearly: 79, yearlyTotal: 948 },
+    pro: { monthly: 349, yearly: 269, yearlyTotal: 3228 },
+  },
+
+  // Швеция (≈ EUR × 10.78, charm-rounded)
+  SEK: {
+    free: { monthly: 0, yearly: 0, yearlyTotal: 0 },
+    basic: { monthly: 109, yearly: 79, yearlyTotal: 948 },
+    pro: { monthly: 349, yearly: 269, yearlyTotal: 3228 },
+  },
+
+  // Дания (≈ EUR × 7.46, charm-rounded)
+  DKK: {
+    free: { monthly: 0, yearly: 0, yearlyTotal: 0 },
+    basic: { monthly: 79, yearly: 49, yearlyTotal: 588 },
+    pro: { monthly: 239, yearly: 189, yearlyTotal: 2268 },
+  },
 };
 
 // Headline EUR prices rendered as JSON-LD `price` strings (2 decimals).

@@ -1,6 +1,8 @@
 "use client";
 
-import { pricing } from "@/lib/pricing";
+import { useEffect, useState } from "react";
+import { getPricing } from "@/lib/pricing";
+import { currencyInfo, formatMoney, readBillingCurrencyFromDocument, type SupportedCurrency } from "@/lib/country-currency-map";
 import { usePrimaryCta } from "./onboarding/use-primary-cta";
 import type { LandingTexts } from "../types";
 
@@ -13,21 +15,20 @@ interface LandingPricingProps {
   locale?: string;
 }
 
-function formatEur(amount: number): string {
-  return amount.toLocaleString("en-US", {
+function PriceDisplay({ amount, perMonth, currency }: { amount: number; perMonth: string; currency: SupportedCurrency }) {
+  const info = currencyInfo[currency];
+  const formatted = amount.toLocaleString("en-US", {
     minimumFractionDigits: Number.isInteger(amount) ? 0 : 2,
     maximumFractionDigits: 2,
   });
-}
-
-function PriceDisplay({ amount, perMonth }: { amount: number; perMonth: string }) {
-  const formatted = formatEur(amount);
   const sizeClass = formatted.length > 5 ? "text-2xl md:text-3xl" : "text-3xl md:text-4xl";
+  const symbol = <span className="text-base font-medium text-muted-foreground">{info.symbol}</span>;
   return (
     <div className="leading-none">
       <div className="flex items-baseline gap-1">
-        <span className="text-base font-medium text-muted-foreground">€</span>
+        {info.symbolPosition === "before" ? symbol : null}
         <span className={`${sizeClass} font-medium tracking-tight leading-none`}>{formatted}</span>
+        {info.symbolPosition === "after" ? symbol : null}
       </div>
       <span className="text-sm text-muted-foreground mt-1.5 inline-block">{perMonth}</span>
     </div>
@@ -35,8 +36,12 @@ function PriceDisplay({ amount, perMonth }: { amount: number; perMonth: string }
 }
 
 export function LandingPricing({ texts, ctaText }: LandingPricingProps) {
-  const plan = pricing.EUR.basic;
-  const savings = formatEur(plan.monthly * 12 - plan.yearlyTotal);
+  // Billing currency from the geo_currency cookie (EUR until hydrated).
+  const [currency, setCurrency] = useState<SupportedCurrency>("EUR");
+  useEffect(() => setCurrency(readBillingCurrencyFromDocument()), []);
+
+  const plan = getPricing(currency).basic;
+  const savings = formatMoney(plan.monthly * 12 - plan.yearlyTotal, currency);
   const cta = usePrimaryCta(ctaText);
 
   return (
@@ -68,7 +73,7 @@ export function LandingPricing({ texts, ctaText }: LandingPricingProps) {
             <p className="text-[10px] font-medium uppercase tracking-widest text-muted-foreground mb-3">
               {texts.monthlyLabel}
             </p>
-            <PriceDisplay amount={plan.monthly} perMonth={texts.perMonth} />
+            <PriceDisplay amount={plan.monthly} perMonth={texts.perMonth} currency={currency} />
           </div>
 
           <div className="relative flex flex-col justify-center text-start rounded-2xl border border-primary/60 bg-primary/5 p-5">
@@ -78,12 +83,12 @@ export function LandingPricing({ texts, ctaText }: LandingPricingProps) {
             <p className="text-[10px] font-medium uppercase tracking-widest text-primary mb-3">
               {texts.yearlyLabel}
             </p>
-            <PriceDisplay amount={plan.yearly} perMonth={texts.perMonth} />
+            <PriceDisplay amount={plan.yearly} perMonth={texts.perMonth} currency={currency} />
             <p className="text-xs text-muted-foreground mt-3">
-              {texts.billedAnnually.replace("{total}", `€${formatEur(plan.yearlyTotal)}`)}
+              {texts.billedAnnually.replace("{total}", formatMoney(plan.yearlyTotal, currency))}
             </p>
             <p className="text-xs text-emerald-500 font-medium mt-0.5">
-              {texts.youSave.replace("{amount}", `€${savings}`)}
+              {texts.youSave.replace("{amount}", savings)}
             </p>
           </div>
         </div>
