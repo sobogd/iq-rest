@@ -127,9 +127,9 @@ export const TEXTS: LandingTexts = {
     sub: "Ett gjennomsiktig månedlig gebyr. Ingen prosent på bestillinger og ingen aggregatorprovisjon. Avslutt abonnementet når som helst.",
     popularBadge: "Populær",
     perMonthSuffix: "/mnd",
-    whenAnnualTemplate: "årlig fakturering · {total} € per år",
-    orMonthlyTemplate: "eller {price} €/mnd",
-    savingsTemplate: "spar {amount} € per år",
+    whenAnnualTemplate: "årlig fakturering · {total} per år",
+    orMonthlyTemplate: "eller {price}/mnd",
+    savingsTemplate: "spar {amount} per år",
     plans: {
       basic: {
         name: "Basic",

@@ -127,9 +127,9 @@ export const TEXTS: LandingTexts = {
     sub: "一笔透明的月费。订单无百分比,无聚合器佣金。随时取消订阅。",
     popularBadge: "热门",
     perMonthSuffix: "/月",
-    whenAnnualTemplate: "按年计费 · 每年 {total} €",
-    orMonthlyTemplate: "或 {price} €/月",
-    savingsTemplate: "每年节省 {amount} €",
+    whenAnnualTemplate: "按年计费 · 每年 {total}",
+    orMonthlyTemplate: "或 {price}/月",
+    savingsTemplate: "每年节省 {amount}",
     plans: {
       basic: {
         name: "Basic",

@@ -126,9 +126,9 @@ export const TEXTS: LandingTexts = {
     sub: "Один прозрачный платёж в месяц. Без процента с заказов и комиссий агрегаторов. Отмена подписки доступна в любой момент.",
     popularBadge: "Популярный",
     perMonthSuffix: "/мес",
-    whenAnnualTemplate: "при оплате за год · €{total} в год",
-    orMonthlyTemplate: "или €{price}/мес",
-    savingsTemplate: "экономия €{amount} в год",
+    whenAnnualTemplate: "при оплате за год · {total} в год",
+    orMonthlyTemplate: "или {price}/мес",
+    savingsTemplate: "экономия {amount} в год",
     plans: {
       basic: {
         name: "Basic",

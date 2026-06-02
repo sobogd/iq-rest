@@ -127,9 +127,9 @@ export const TEXTS: LandingTexts = {
     sub: "Eén transparante maandelijkse vergoeding. Geen percentage op bestellingen en geen aggregatorcommissies. Zeg het abonnement op elk moment op.",
     popularBadge: "Populair",
     perMonthSuffix: "/mnd",
-    whenAnnualTemplate: "jaarlijkse facturering · {total} € per jaar",
-    orMonthlyTemplate: "of {price} €/mnd",
-    savingsTemplate: "bespaar {amount} € per jaar",
+    whenAnnualTemplate: "jaarlijkse facturering · {total} per jaar",
+    orMonthlyTemplate: "of {price}/mnd",
+    savingsTemplate: "bespaar {amount} per jaar",
     plans: {
       basic: {
         name: "Basic",

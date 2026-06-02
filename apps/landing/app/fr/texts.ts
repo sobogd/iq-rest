@@ -127,9 +127,9 @@ export const TEXTS: LandingTexts = {
     sub: "Un seul tarif mensuel transparent. Aucun pourcentage sur les commandes ni commission d'agrégateur. Annulez l'abonnement à tout moment.",
     popularBadge: 'Populaire',
     perMonthSuffix: '/mois',
-    whenAnnualTemplate: 'facturé annuellement · {total} € par an',
-    orMonthlyTemplate: 'ou {price} €/mois',
-    savingsTemplate: 'économisez {amount} € par an',
+    whenAnnualTemplate: 'facturé annuellement · {total} par an',
+    orMonthlyTemplate: 'ou {price}/mois',
+    savingsTemplate: 'économisez {amount} par an',
     plans: {
       basic: {
         name: "Basic",

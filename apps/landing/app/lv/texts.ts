@@ -127,9 +127,9 @@ export const TEXTS: LandingTexts = {
     sub: "Viena caurspīdīga ikmēneša maksa. Bez procentiem no pasūtījumiem un bez agregatoru komisijas. Atceliet abonēšanu jebkurā laikā.",
     popularBadge: "Populārs",
     perMonthSuffix: "/mēn.",
-    whenAnnualTemplate: "ikgadējais rēķins · {total} € gadā",
-    orMonthlyTemplate: "vai {price} €/mēn.",
-    savingsTemplate: "ietaupiet {amount} € gadā",
+    whenAnnualTemplate: "ikgadējais rēķins · {total} gadā",
+    orMonthlyTemplate: "vai {price}/mēn.",
+    savingsTemplate: "ietaupiet {amount} gadā",
     plans: {
       basic: {
         name: "Basic",

@@ -127,9 +127,9 @@ export const TEXTS: LandingTexts = {
     sub: "Jedna transparentna mesečna naknada. Bez procenta od porudžbina i bez provizija agregatora. Otkažite pretplatu bilo kada.",
     popularBadge: "Popularno",
     perMonthSuffix: "/mes.",
-    whenAnnualTemplate: "godišnji obračun · {total} € godišnje",
-    orMonthlyTemplate: "ili {price} €/mes.",
-    savingsTemplate: "uštedite {amount} € godišnje",
+    whenAnnualTemplate: "godišnji obračun · {total} godišnje",
+    orMonthlyTemplate: "ili {price}/mes.",
+    savingsTemplate: "uštedite {amount} godišnje",
     plans: {
       basic: {
         name: "Basic",

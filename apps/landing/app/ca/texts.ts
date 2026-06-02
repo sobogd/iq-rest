@@ -127,9 +127,9 @@ export const TEXTS: LandingTexts = {
     sub: "Una sola tarifa mensual transparent. Sense percentatges sobre comandes ni comissions d'agregadors. Cancel·la la subscripció quan vulguis.",
     popularBadge: "Popular",
     perMonthSuffix: "/mes",
-    whenAnnualTemplate: "facturació anual · {total} € l'any",
-    orMonthlyTemplate: "o {price} €/mes",
-    savingsTemplate: "estalvia {amount} € l'any",
+    whenAnnualTemplate: "facturació anual · {total} l'any",
+    orMonthlyTemplate: "o {price}/mes",
+    savingsTemplate: "estalvia {amount} l'any",
     plans: {
       basic: {
         name: "Basic",

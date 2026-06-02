@@ -127,9 +127,9 @@ export const TEXTS: LandingTexts = {
     sub: "Egyetlen átlátható havi díj. Nincs százalék a rendelésekre és nincs aggregátor jutalék. Lemondja az előfizetést bármikor.",
     popularBadge: "Népszerű",
     perMonthSuffix: "/hó",
-    whenAnnualTemplate: "éves számlázás · {total} € évente",
-    orMonthlyTemplate: "vagy {price} €/hó",
-    savingsTemplate: "megtakarít {amount} € évente",
+    whenAnnualTemplate: "éves számlázás · {total} évente",
+    orMonthlyTemplate: "vagy {price}/hó",
+    savingsTemplate: "megtakarít {amount} évente",
     plans: {
       basic: {
         name: "Basic",

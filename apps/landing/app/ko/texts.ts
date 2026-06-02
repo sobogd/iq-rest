@@ -127,9 +127,9 @@ export const TEXTS: LandingTexts = {
     sub: "하나의 투명한 월 요금. 주문에 대한 백분율이나 집계 수수료 없음. 언제든지 구독을 취소하세요.",
     popularBadge: "인기",
     perMonthSuffix: "/월",
-    whenAnnualTemplate: "연간 청구 · 연간 €{total}",
-    orMonthlyTemplate: "또는 월 €{price}",
-    savingsTemplate: "연간 €{amount} 절약",
+    whenAnnualTemplate: "연간 청구 · 연간 {total}",
+    orMonthlyTemplate: "또는 월 {price}",
+    savingsTemplate: "연간 {amount} 절약",
     plans: {
       basic: {
         name: "Basic",

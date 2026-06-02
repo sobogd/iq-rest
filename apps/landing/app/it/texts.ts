@@ -127,9 +127,9 @@ export const TEXTS: LandingTexts = {
     sub: "Un'unica tariffa mensile trasparente. Nessuna percentuale sugli ordini né commissioni da aggregatore. Disdici l'abbonamento quando vuoi.",
     popularBadge: "Più scelto",
     perMonthSuffix: "/mese",
-    whenAnnualTemplate: "con pagamento annuale · {total} € all'anno",
-    orMonthlyTemplate: "oppure {price} €/mese",
-    savingsTemplate: "risparmi {amount} € all'anno",
+    whenAnnualTemplate: "con pagamento annuale · {total} all'anno",
+    orMonthlyTemplate: "oppure {price}/mese",
+    savingsTemplate: "risparmi {amount} all'anno",
     plans: {
       basic: {
         name: "Basic",

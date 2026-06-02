@@ -127,9 +127,9 @@ export const TEXTS: LandingTexts = {
     sub: "Одна прозора щомісячна плата. Жодних відсотків із замовлень та комісій агрегаторів. Скасуйте підписку будь-коли.",
     popularBadge: "Популярний",
     perMonthSuffix: "/міс",
-    whenAnnualTemplate: "річне виставлення рахунку · {total} € на рік",
-    orMonthlyTemplate: "або {price} €/міс",
-    savingsTemplate: "економія {amount} € на рік",
+    whenAnnualTemplate: "річне виставлення рахунку · {total} на рік",
+    orMonthlyTemplate: "або {price}/міс",
+    savingsTemplate: "економія {amount} на рік",
     plans: {
       basic: {
         name: "Basic",

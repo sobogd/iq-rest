@@ -127,9 +127,9 @@ export const TEXTS: LandingTexts = {
     sub: "Üks läbipaistev kuutasu. Mitte mingit protsenti tellimustelt ega agregaatorite komisjoni. Tühista tellimus igal ajal.",
     popularBadge: "Populaarne",
     perMonthSuffix: "/k",
-    whenAnnualTemplate: "aastane arve · {total} € aastas",
-    orMonthlyTemplate: "või {price} €/k",
-    savingsTemplate: "säästad {amount} € aastas",
+    whenAnnualTemplate: "aastane arve · {total} aastas",
+    orMonthlyTemplate: "või {price}/k",
+    savingsTemplate: "säästad {amount} aastas",
     plans: {
       basic: {
         name: "Basic",

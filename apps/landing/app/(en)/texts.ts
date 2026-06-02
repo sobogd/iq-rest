@@ -127,9 +127,9 @@ export const TEXTS: LandingTexts = {
     sub: "One transparent monthly fee. No percentage on orders and no aggregator commissions. Cancel the subscription anytime.",
     popularBadge: "Popular",
     perMonthSuffix: "/mo",
-    whenAnnualTemplate: "billed annually · €{total} per year",
-    orMonthlyTemplate: "or €{price}/mo",
-    savingsTemplate: "save €{amount} per year",
+    whenAnnualTemplate: "billed annually · {total} per year",
+    orMonthlyTemplate: "or {price}/mo",
+    savingsTemplate: "save {amount} per year",
     plans: {
       basic: {
         name: "Basic",

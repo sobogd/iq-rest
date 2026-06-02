@@ -127,9 +127,9 @@ export const TEXTS: LandingTexts = {
     sub: "Ena pregledna mesečna naročnina. Brez odstotka od naročil in brez provizij agregatorjev. Prekličete naročnino kadar koli.",
     popularBadge: "Priljubljeno",
     perMonthSuffix: "/mes.",
-    whenAnnualTemplate: "letno zaračunavanje · {total} € letno",
-    orMonthlyTemplate: "ali {price} €/mes.",
-    savingsTemplate: "prihranite {amount} € letno",
+    whenAnnualTemplate: "letno zaračunavanje · {total} letno",
+    orMonthlyTemplate: "ali {price}/mes.",
+    savingsTemplate: "prihranite {amount} letno",
     plans: {
       basic: {
         name: "Basic",

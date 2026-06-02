@@ -127,9 +127,9 @@ export const TEXTS: LandingTexts = {
     sub: "Táille mhíosúil shoiléir amháin. Gan céatadán ar orduithe ná coimisiúin comhthiomsóra. Cealaigh an síntiús aon uair.",
     popularBadge: "Coitianta",
     perMonthSuffix: "/mí",
-    whenAnnualTemplate: "bille bliantúil · {total} € sa bhliain",
-    orMonthlyTemplate: "nó {price} €/mí",
-    savingsTemplate: "sábháil {amount} € sa bhliain",
+    whenAnnualTemplate: "bille bliantúil · {total} sa bhliain",
+    orMonthlyTemplate: "nó {price}/mí",
+    savingsTemplate: "sábháil {amount} sa bhliain",
     plans: {
       basic: {
         name: "Basic",

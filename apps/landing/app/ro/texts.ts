@@ -127,9 +127,9 @@ export const TEXTS: LandingTexts = {
     sub: "O singură taxă lunară transparentă. Fără procent din comenzi și fără comisioane de agregatori. Anulați abonamentul oricând.",
     popularBadge: "Popular",
     perMonthSuffix: "/lună",
-    whenAnnualTemplate: "facturare anuală · {total} € pe an",
-    orMonthlyTemplate: "sau {price} €/lună",
-    savingsTemplate: "economisiți {amount} € pe an",
+    whenAnnualTemplate: "facturare anuală · {total} pe an",
+    orMonthlyTemplate: "sau {price}/lună",
+    savingsTemplate: "economisiți {amount} pe an",
     plans: {
       basic: {
         name: "Basic",

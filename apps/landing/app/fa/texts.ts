@@ -127,9 +127,9 @@ export const TEXTS: LandingTexts = {
     sub: "یک هزینه ماهانه شفاف. بدون درصد از سفارش‌ها و بدون کمیسیون واسطه‌ها. اشتراک را در هر زمان لغو کنید.",
     popularBadge: "محبوب",
     perMonthSuffix: "/ماه",
-    whenAnnualTemplate: "صورتحساب سالانه · {total} € در سال",
-    orMonthlyTemplate: "یا {price} €/ماه",
-    savingsTemplate: "صرفه‌جویی {amount} € در سال",
+    whenAnnualTemplate: "صورتحساب سالانه · {total} در سال",
+    orMonthlyTemplate: "یا {price}/ماه",
+    savingsTemplate: "صرفه‌جویی {amount} در سال",
     plans: {
       basic: {
         name: "Basic",

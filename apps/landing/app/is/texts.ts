@@ -127,9 +127,9 @@ export const TEXTS: LandingTexts = {
     sub: "Eitt gagnsætt mánaðarlegt gjald. Engin prósenta af pöntunum eða samanafnsþóknun. Hættu áskrift hvenær sem er.",
     popularBadge: "Vinsælt",
     perMonthSuffix: "/mán",
-    whenAnnualTemplate: "árlegt reikningagerð · {total} € á ári",
-    orMonthlyTemplate: "eða {price} €/mán",
-    savingsTemplate: "sparaðu {amount} € á ári",
+    whenAnnualTemplate: "árlegt reikningagerð · {total} á ári",
+    orMonthlyTemplate: "eða {price}/mán",
+    savingsTemplate: "sparaðu {amount} á ári",
     plans: {
       basic: {
         name: "Basic",

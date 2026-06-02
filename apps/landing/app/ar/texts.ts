@@ -127,9 +127,9 @@ export const TEXTS: LandingTexts = {
     sub: "رسم شهري واحد وشفاف. لا نسبة على الطلبات ولا عمولات وسطاء. ألغِ الاشتراك في أي وقت.",
     popularBadge: "الأكثر شيوعاً",
     perMonthSuffix: "/شهر",
-    whenAnnualTemplate: "فاتورة سنوية · €{total} في السنة",
-    orMonthlyTemplate: "أو €{price}/شهر",
-    savingsTemplate: "توفّر €{amount} في السنة",
+    whenAnnualTemplate: "فاتورة سنوية · {total} في السنة",
+    orMonthlyTemplate: "أو {price}/شهر",
+    savingsTemplate: "توفّر {amount} في السنة",
     plans: {
       basic: {
         name: "Basic",

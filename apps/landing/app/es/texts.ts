@@ -127,9 +127,9 @@ export const TEXTS: LandingTexts = {
     sub: "Una única cuota mensual transparente. Sin porcentaje sobre los pedidos ni comisiones de agregadores. Puedes cancelar la suscripción en cualquier momento.",
     popularBadge: "Más popular",
     perMonthSuffix: "/mes",
-    whenAnnualTemplate: "con pago anual · {total} € al año",
-    orMonthlyTemplate: "o {price} €/mes",
-    savingsTemplate: "ahorras {amount} € al año",
+    whenAnnualTemplate: "con pago anual · {total} al año",
+    orMonthlyTemplate: "o {price}/mes",
+    savingsTemplate: "ahorras {amount} al año",
     plans: {
       basic: {
         name: "Basic",

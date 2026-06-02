@@ -127,9 +127,9 @@ export const TEXTS: LandingTexts = {
     sub: "Една прозрачна месечна такса. Без процент от поръчките и без комисиони на агрегатори. Отказ на абонамента по всяко време.",
     popularBadge: "Популярен",
     perMonthSuffix: "/мес",
-    whenAnnualTemplate: "годишна такса · €{total} на година",
-    orMonthlyTemplate: "или €{price}/мес",
-    savingsTemplate: "спестявате €{amount} на година",
+    whenAnnualTemplate: "годишна такса · {total} на година",
+    orMonthlyTemplate: "или {price}/мес",
+    savingsTemplate: "спестявате {amount} на година",
     plans: {
       basic: {
         name: "Basic",

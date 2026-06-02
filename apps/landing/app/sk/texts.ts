@@ -127,9 +127,9 @@ export const TEXTS: LandingTexts = {
     sub: "Jeden transparentný mesačný poplatok. Žiadne percento z objednávok ani provízie agregátorov. Predplatné môžete zrušiť kedykoľvek.",
     popularBadge: "Obľúbený",
     perMonthSuffix: "/mes.",
-    whenAnnualTemplate: "ročná platba · {total} € ročne",
-    orMonthlyTemplate: "alebo {price} €/mes.",
-    savingsTemplate: "ušetríte {amount} € ročne",
+    whenAnnualTemplate: "ročná platba · {total} ročne",
+    orMonthlyTemplate: "alebo {price}/mes.",
+    savingsTemplate: "ušetríte {amount} ročne",
     plans: {
       basic: {
         name: "Basic",

@@ -127,9 +127,9 @@ export const TEXTS: LandingTexts = {
     sub: "Tek şeffaf aylık ücret. Siparişlerden yüzde yok, aracı komisyonu yok. Aboneliği istediğiniz zaman iptal edin.",
     popularBadge: "Popüler",
     perMonthSuffix: "/ay",
-    whenAnnualTemplate: "yıllık faturalandırma · yılda {total} €",
-    orMonthlyTemplate: "veya {price} €/ay",
-    savingsTemplate: "yılda {amount} € tasarruf",
+    whenAnnualTemplate: "yıllık faturalandırma · yılda {total}",
+    orMonthlyTemplate: "veya {price}/ay",
+    savingsTemplate: "yılda {amount} tasarruf",
     plans: {
       basic: {
         name: "Basic",

@@ -127,9 +127,9 @@ export const TEXTS: LandingTexts = {
     sub: "Yksi läpinäkyvä kuukausimaksu. Ei prosenttia tilauksista eikä välityspalkkioita. Peruuta tilaus koska tahansa.",
     popularBadge: "Suosittu",
     perMonthSuffix: "/kk",
-    whenAnnualTemplate: "vuosilaskutus · {total} € vuodessa",
-    orMonthlyTemplate: "tai {price} €/kk",
-    savingsTemplate: "säästä {amount} € vuodessa",
+    whenAnnualTemplate: "vuosilaskutus · {total} vuodessa",
+    orMonthlyTemplate: "tai {price}/kk",
+    savingsTemplate: "säästä {amount} vuodessa",
     plans: {
       basic: {
         name: "Basic",

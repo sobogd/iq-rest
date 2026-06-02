@@ -127,9 +127,9 @@ export const TEXTS: LandingTexts = {
     sub: "透明な月額料金1つ。注文に対するパーセンテージや集約サービスの手数料はありません。いつでも購読をキャンセルできます。",
     popularBadge: "人気",
     perMonthSuffix: "/月",
-    whenAnnualTemplate: "年間請求 · €{total}/年",
-    orMonthlyTemplate: "または €{price}/月",
-    savingsTemplate: "€{amount}/年節約",
+    whenAnnualTemplate: "年間請求 · {total}/年",
+    orMonthlyTemplate: "または {price}/月",
+    savingsTemplate: "{amount}/年節約",
     plans: {
       basic: {
         name: "Basic",

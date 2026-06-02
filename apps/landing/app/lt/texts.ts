@@ -127,9 +127,9 @@ export const TEXTS: LandingTexts = {
     sub: "Vienas skaidrus mėnesio mokestis. Be procentų nuo užsakymų ir be agregatorių komisinių. Atšaukite prenumeratą bet kada.",
     popularBadge: "Populiarus",
     perMonthSuffix: "/mėn.",
-    whenAnnualTemplate: "metinis atsiskaitymas · {total} € per metus",
-    orMonthlyTemplate: "arba {price} €/mėn.",
-    savingsTemplate: "sutaupykite {amount} € per metus",
+    whenAnnualTemplate: "metinis atsiskaitymas · {total} per metus",
+    orMonthlyTemplate: "arba {price}/mėn.",
+    savingsTemplate: "sutaupykite {amount} per metus",
     plans: {
       basic: {
         name: "Basic",

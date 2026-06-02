@@ -127,9 +127,9 @@ export const TEXTS: LandingTexts = {
     sub: "Ένα διαφανές μηνιαίο τέλος. Χωρίς ποσοστό σε παραγγελίες ή προμήθειες aggregators. Ακυρώστε τη συνδρομή οποτεδήποτε.",
     popularBadge: "Δημοφιλές",
     perMonthSuffix: "/μήνα",
-    whenAnnualTemplate: "ετήσια χρέωση · {total} € τον χρόνο",
-    orMonthlyTemplate: "ή {price} €/μήνα",
-    savingsTemplate: "εξοικονομείτε {amount} € τον χρόνο",
+    whenAnnualTemplate: "ετήσια χρέωση · {total} τον χρόνο",
+    orMonthlyTemplate: "ή {price}/μήνα",
+    savingsTemplate: "εξοικονομείτε {amount} τον χρόνο",
     plans: {
       basic: {
         name: "Basic",
