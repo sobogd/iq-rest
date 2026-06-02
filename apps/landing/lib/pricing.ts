@@ -122,6 +122,34 @@ export const pricing: Record<SupportedCurrency, CurrencyPricing> = {
     basic: { monthly: 16.9, yearly: 11.9, yearlyTotal: 142.8 },
     pro: { monthly: 49.9, yearly: 39.9, yearlyTotal: 478.8 },
   },
+
+  // Великобритания (≈ EUR × 0.85, charm-rounded)
+  GBP: {
+    free: { monthly: 0, yearly: 0, yearlyTotal: 0 },
+    basic: { monthly: 8.9, yearly: 5.9, yearlyTotal: 70.8 },
+    pro: { monthly: 27.9, yearly: 19.9, yearlyTotal: 238.8 },
+  },
+
+  // Чехия (≈ EUR × 25, charm-rounded)
+  CZK: {
+    free: { monthly: 0, yearly: 0, yearlyTotal: 0 },
+    basic: { monthly: 249, yearly: 169, yearlyTotal: 2028 },
+    pro: { monthly: 799, yearly: 619, yearlyTotal: 7428 },
+  },
+
+  // Венгрия (≈ EUR × 395, charm-rounded)
+  HUF: {
+    free: { monthly: 0, yearly: 0, yearlyTotal: 0 },
+    basic: { monthly: 3990, yearly: 2790, yearlyTotal: 33480 },
+    pro: { monthly: 12900, yearly: 9900, yearlyTotal: 118800 },
+  },
+
+  // Исландия (≈ EUR × 150, charm-rounded)
+  ISK: {
+    free: { monthly: 0, yearly: 0, yearlyTotal: 0 },
+    basic: { monthly: 1490, yearly: 990, yearlyTotal: 11880 },
+    pro: { monthly: 4790, yearly: 3790, yearlyTotal: 45480 },
+  },
 };
 
 // Headline EUR prices rendered as JSON-LD `price` strings (2 decimals).

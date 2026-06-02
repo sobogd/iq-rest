@@ -17,6 +17,10 @@ export const supportedCurrencies = [
   "SEK", // Швеция
   "DKK", // Дания
   "AUD", // Австралия
+  "GBP", // Великобритания
+  "CZK", // Чехия
+  "HUF", // Венгрия
+  "ISK", // Исландия
 ] as const;
 
 export type SupportedCurrency = (typeof supportedCurrencies)[number];
@@ -51,6 +55,14 @@ export const countryToCurrency: Record<string, SupportedCurrency> = {
 
   // Австралия
   AU: "AUD",
+
+  // Великобритания
+  GB: "GBP",
+
+  // Прочая Европа (своя валюта биллинга; PL уже выше)
+  CZ: "CZK", // Чехия
+  HU: "HUF", // Венгрия
+  IS: "ISK", // Исландия
 
   // Еврозона → EUR
   ES: "EUR", // Испания
@@ -99,6 +111,10 @@ export const currencyInfo: Record<SupportedCurrency, {
   SEK: { symbol: "kr", name: "Swedish Krona", symbolPosition: "after", zeroDecimal: false },
   DKK: { symbol: "kr", name: "Danish Krone", symbolPosition: "after", zeroDecimal: false },
   AUD: { symbol: "A$", name: "Australian Dollar", symbolPosition: "before", zeroDecimal: false },
+  GBP: { symbol: "£", name: "British Pound", symbolPosition: "before", zeroDecimal: false },
+  CZK: { symbol: "Kč", name: "Czech Koruna", symbolPosition: "after", zeroDecimal: false },
+  HUF: { symbol: "Ft", name: "Hungarian Forint", symbolPosition: "after", zeroDecimal: false },
+  ISK: { symbol: "kr", name: "Icelandic Króna", symbolPosition: "after", zeroDecimal: false },
 };
 
 /**
