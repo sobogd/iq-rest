@@ -247,9 +247,8 @@ export function DemoButton({
                   <X className="w-8 h-8" />
                 </button>
 
-                <div className="absolute inset-0 bg-[#1a1a1a] rounded-[40px] p-2 shadow-2xl">
-                  <div ref={screenRef} className="relative w-full h-full bg-[#1a1a1a] rounded-[32px] overflow-hidden">
-                    <div className="absolute top-2 left-1/2 -translate-x-1/2 w-[80px] h-[24px] bg-black rounded-full z-10" />
+                <div className="absolute inset-0 bg-[#1a1a1a] rounded-[20px] p-2 shadow-2xl">
+                  <div ref={screenRef} className="relative w-full h-full bg-[#1a1a1a] overflow-hidden">
                     {loading && (
                       <div className="absolute inset-0 flex items-center justify-center bg-black z-[5]">
                         <Loader2 className="w-8 h-8 animate-spin text-white/50" />
@@ -270,7 +269,7 @@ export function DemoButton({
                 </div>
 
                 <div
-                  className="absolute inset-0 rounded-[40px] pointer-events-none z-20"
+                  className="absolute inset-0 rounded-[20px] pointer-events-none z-20"
                   style={{ boxShadow: "inset 0 0 0 10px #1a1a1a" }}
                 />
 
