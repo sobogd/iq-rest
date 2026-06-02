@@ -5,7 +5,6 @@ import { useMenu } from "../lib/menu-context";
 import { HeroMedia } from "../components/hero-media";
 import { MenuNavLink } from "../components/menu-nav-link";
 import { RouteSeo } from "../components/route-seo";
-import { getPreview } from "../lib/forward-search";
 
 export const Route = createFileRoute("/")({ component: HomePage });
 
@@ -28,10 +27,6 @@ function HomePage() {
   const multiLang = (restaurant.languages?.length ?? 0) > 1;
   const langTop = multiLang && restaurant.languageSwitcher === "top";
   const langInline = multiLang && restaurant.languageSwitcher !== "top";
-  // In the dashboard preview (?preview=1) the menu renders inside a phone
-  // mockup whose notch overlaps the top of the hero — push the globe down so
-  // it clears the simulated notch. Real devices use the safe-area inset.
-  const isPreview = getPreview() != null;
 
   const jsonLd: Record<string, unknown> = {
     "@context": "https://schema.org",
@@ -60,7 +55,7 @@ function HomePage() {
         {langTop ? (
           <MenuNavLink
             to="/language"
-            className={`absolute ${isPreview ? "top-12" : "top-3"} right-3 z-20 flex items-center justify-center h-11 w-11 rounded-xl bg-black/35 backdrop-blur-sm text-white`}
+            className="absolute top-3 right-3 z-20 flex items-center justify-center h-11 w-11 rounded-xl bg-black/35 backdrop-blur-sm text-white"
           >
             <Globe className="h-5 w-5" />
           </MenuNavLink>

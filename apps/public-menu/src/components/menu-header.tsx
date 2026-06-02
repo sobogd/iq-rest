@@ -14,10 +14,6 @@ interface Props {
 export function MenuHeader({ title, accentColor, backTo = "/", sticky, right }: Props) {
   const bg = accentColor || "#000000";
   const search = useForwardedSearch();
-  // ?preview=1 means rendered inside the dashboard's iPhone-simulating iframe,
-  // which doesn't have a real safe-area inset — fake the notch space so the
-  // header looks right next to the simulated camera cutout.
-  const isPreview = search.preview === "1";
   return (
     <header
       className={
@@ -25,8 +21,8 @@ export function MenuHeader({ title, accentColor, backTo = "/", sticky, right }: 
         (sticky ? "sticky top-0" : "")
       }
       style={{
-        minHeight: isPreview ? 93 : 56,
-        paddingTop: isPreview ? 37 : "env(safe-area-inset-top, 0px)",
+        minHeight: 56,
+        paddingTop: "env(safe-area-inset-top, 0px)",
         backgroundColor: bg,
       }}
     >
