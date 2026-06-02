@@ -115,6 +115,13 @@ export const pricing: Record<SupportedCurrency, CurrencyPricing> = {
     basic: { monthly: 79, yearly: 49, yearlyTotal: 588 },
     pro: { monthly: 239, yearly: 189, yearlyTotal: 2268 },
   },
+
+  // Австралия (≈ EUR × 1.65, charm-rounded)
+  AUD: {
+    free: { monthly: 0, yearly: 0, yearlyTotal: 0 },
+    basic: { monthly: 16.9, yearly: 11.9, yearlyTotal: 142.8 },
+    pro: { monthly: 49.9, yearly: 39.9, yearlyTotal: 478.8 },
+  },
 };
 
 // Headline EUR prices rendered as JSON-LD `price` strings (2 decimals).

@@ -16,6 +16,7 @@ export const supportedCurrencies = [
   "NOK", // Норвегия
   "SEK", // Швеция
   "DKK", // Дания
+  "AUD", // Австралия
 ] as const;
 
 export type SupportedCurrency = (typeof supportedCurrencies)[number];
@@ -47,6 +48,9 @@ export const countryToCurrency: Record<string, SupportedCurrency> = {
 
   // США
   US: "USD",
+
+  // Австралия
+  AU: "AUD",
 
   // Еврозона → EUR
   ES: "EUR", // Испания
@@ -94,6 +98,7 @@ export const currencyInfo: Record<SupportedCurrency, {
   NOK: { symbol: "kr", name: "Norwegian Krone", symbolPosition: "after", zeroDecimal: false },
   SEK: { symbol: "kr", name: "Swedish Krona", symbolPosition: "after", zeroDecimal: false },
   DKK: { symbol: "kr", name: "Danish Krone", symbolPosition: "after", zeroDecimal: false },
+  AUD: { symbol: "A$", name: "Australian Dollar", symbolPosition: "before", zeroDecimal: false },
 };
 
 /**
