@@ -207,7 +207,6 @@ model Table {
   deletedAt    DateTime?
   isActive     Boolean   @default(true)
   sortOrder    Int       @default(0)
-  isExample    Boolean   @default(false)
   createdAt    DateTime  @default(now())
   updatedAt    DateTime  @updatedAt
 
@@ -232,7 +231,6 @@ model Reservation {
   guestsCount  Int
   status       String   @default("pending") // pending, confirmed, cancelled, completed
   notes        String?
-  isExample    Boolean  @default(false)
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
 
@@ -288,7 +286,6 @@ model Item {
   diets        String[]  @default([]) // Array of diet/lifestyle tags: vegan, vegetarian, gluten_free, etc.
   sortOrder    Int       @default(0)
   isActive     Boolean   @default(true)
-  isExample    Boolean   @default(false)
   deletedAt    DateTime?
   // Nullable + SetNull: deleting a category soft-deletes & orphans its items
   // (categoryId -> null) instead of cascade-removing them, so orders' dishId +
@@ -307,7 +304,6 @@ model Item {
   @@index([categoryId])
   @@index([companyId, categoryId])
   @@index([categoryId, sortOrder])
-  @@index([companyId, isExample])
   @@index([restaurantId])
   @@index([restaurantId, categoryId])
   @@map("items")
@@ -393,7 +389,6 @@ model Order {
   status            String    @default("new") // new | in_progress | completed | cancelled
   statusBeforeClose String?
   paymentMethodId   String?
-  isExample         Boolean   @default(false)
   deletedAt         DateTime?
   orderDate         DateTime  @db.Date
   dailyNumber       Int
