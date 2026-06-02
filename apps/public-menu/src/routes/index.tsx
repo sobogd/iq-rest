@@ -55,9 +55,9 @@ function HomePage() {
         {langTop ? (
           <MenuNavLink
             to="/language"
-            className="absolute top-3 right-3 z-20 flex items-center justify-center h-11 w-11 rounded-full bg-black/35 backdrop-blur-sm text-white"
+            className="absolute top-3 right-3 z-20 flex items-center justify-center p-2 text-white"
           >
-            <Globe className="h-5 w-5" />
+            <Globe className="h-7 w-7 drop-shadow-md" />
           </MenuNavLink>
         ) : null}
 
