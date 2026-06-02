@@ -84,7 +84,9 @@ function firePageEvent(): void {
 
 function fireCurrencyEvent(): void {
   // Geo-determined billing currency (from the geo_currency cookie, EUR default).
-  analytics.track(`land_currency_${readBillingCurrencyFromDocument()}`);
+  // Lowercase: the API's generic-event regex is /^[a-z0-9_]{1,64}$/, so an
+  // uppercase currency (e.g. "EUR") would be rejected and the event dropped.
+  analytics.track(`land_currency_${readBillingCurrencyFromDocument().toLowerCase()}`);
 }
 
 interface PageTrackerProps {
