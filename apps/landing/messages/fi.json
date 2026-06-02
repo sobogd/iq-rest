@@ -2107,6 +2107,8 @@
     "signInTitle": "Tervetuloa takaisin",
     "signInSubtitle": "Anna sähköpostiosoitteesi, niin lähetämme nopean kirjautumiskoodin.",
     "chooseSubtitle": "Valitse, miten haluat jatkaa.",
-    "goToDashboard": "Siirry hallintapaneeliin"
+    "goToDashboard": "Siirry hallintapaneeliin",
+    "registerTitle": "Aloita ilmaiseksi",
+    "registerSubtitle": "Anna sähköpostisi, niin lähetämme nopean koodin aloittamiseen."
   }
 }

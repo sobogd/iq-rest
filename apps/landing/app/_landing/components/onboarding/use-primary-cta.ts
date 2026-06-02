@@ -33,7 +33,9 @@ export function usePrimaryCta(defaultLabel: string): PrimaryCta {
     if (auth.authenticated) {
       window.location.assign(dashHref);
     } else {
-      modal.open();
+      // Onboarding (cuisine + name) is temporarily skipped — open the auth step
+      // directly with register copy. The API seeds a default "My restaurant".
+      modal.open("register");
     }
   };
 

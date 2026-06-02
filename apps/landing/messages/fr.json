@@ -2107,6 +2107,8 @@
     "signInTitle": "Bon retour",
     "signInSubtitle": "Entrez votre e-mail et nous enverrons un code rapide pour vous connecter.",
     "chooseSubtitle": "Choisissez comment continuer.",
-    "goToDashboard": "Accéder au tableau de bord"
+    "goToDashboard": "Accéder au tableau de bord",
+    "registerTitle": "Commencez gratuitement",
+    "registerSubtitle": "Saisis ton email et nous t'enverrons un code rapide pour démarrer."
   }
 }

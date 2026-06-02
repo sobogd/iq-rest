@@ -2107,6 +2107,8 @@
     "signInTitle": "Benvingut de nou",
     "signInSubtitle": "Introdueix el teu correu i t'enviarem un codi ràpid per entrar.",
     "chooseSubtitle": "Tria com vols continuar.",
-    "goToDashboard": "Vés al tauler"
+    "goToDashboard": "Vés al tauler",
+    "registerTitle": "Comença gratis",
+    "registerSubtitle": "Introdueix el teu correu i t'enviarem un codi ràpid per començar."
   }
 }

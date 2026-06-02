@@ -2107,6 +2107,8 @@
     "signInTitle": "다시 오신 것을 환영합니다",
     "signInSubtitle": "이메일을 입력하시면 빠른 로그인 코드를 보내드립니다.",
     "chooseSubtitle": "계속할 방법을 선택하세요.",
-    "goToDashboard": "대시보드로 이동"
+    "goToDashboard": "대시보드로 이동",
+    "registerTitle": "무료로 시작하기",
+    "registerSubtitle": "이메일을 입력하시면 시작을 위한 빠른 코드를 보내드립니다."
   }
 }

@@ -2107,6 +2107,8 @@
     "signInTitle": "Bun venit înapoi",
     "signInSubtitle": "Introdu e-mailul și îți vom trimite un cod rapid pentru autentificare.",
     "chooseSubtitle": "Alege cum vrei să continui.",
-    "goToDashboard": "Mergi la panou"
+    "goToDashboard": "Mergi la panou",
+    "registerTitle": "Începe gratuit",
+    "registerSubtitle": "Introdu emailul și îți trimitem un cod rapid ca să începi."
   }
 }

@@ -2095,6 +2095,8 @@
     "signInTitle": "Welcome back",
     "signInSubtitle": "Enter your email and we'll send a quick code to sign you in.",
     "chooseSubtitle": "Choose how you'd like to continue.",
-    "goToDashboard": "Go to dashboard"
+    "goToDashboard": "Go to dashboard",
+    "registerTitle": "Start for free",
+    "registerSubtitle": "Enter your email and we'll send a quick code to get you started."
   }
 }

@@ -2107,6 +2107,8 @@
     "signInTitle": "Sveiki sugrįžę",
     "signInSubtitle": "Įveskite el. paštą ir mes išsiųsime greitą prisijungimo kodą.",
     "chooseSubtitle": "Pasirinkite, kaip norite tęsti.",
-    "goToDashboard": "Eiti į skydelį"
+    "goToDashboard": "Eiti į skydelį",
+    "registerTitle": "Pradėk nemokamai",
+    "registerSubtitle": "Įvesk savo el. paštą ir atsiųsime greitą kodą pradžiai."
   }
 }

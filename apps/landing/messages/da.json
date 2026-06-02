@@ -2107,6 +2107,8 @@
     "signInTitle": "Velkommen tilbage",
     "signInSubtitle": "Indtast din e-mail, og vi sender en hurtig kode til at logge ind.",
     "chooseSubtitle": "Vælg, hvordan du vil fortsætte.",
-    "goToDashboard": "Gå til dashboard"
+    "goToDashboard": "Gå til dashboard",
+    "registerTitle": "Kom gratis i gang",
+    "registerSubtitle": "Indtast din e-mail, så sender vi en hurtig kode, så du kan komme i gang."
   }
 }

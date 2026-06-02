@@ -2107,6 +2107,8 @@
     "signInTitle": "Bienvenido de nuevo",
     "signInSubtitle": "Introduce tu email y te enviaremos un código rápido para entrar.",
     "chooseSubtitle": "Elige cómo quieres continuar.",
-    "goToDashboard": "Ir al panel"
+    "goToDashboard": "Ir al panel",
+    "registerTitle": "Empieza gratis",
+    "registerSubtitle": "Introduce tu email y te enviaremos un código rápido para empezar."
   }
 }

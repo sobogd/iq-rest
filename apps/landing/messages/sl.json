@@ -2107,6 +2107,8 @@
     "signInTitle": "Dobrodošli nazaj",
     "signInSubtitle": "Vnesite e-pošto in poslali bomo hitro kodo za prijavo.",
     "chooseSubtitle": "Izberite, kako želite nadaljevati.",
-    "goToDashboard": "Pojdi na nadzorno ploščo"
+    "goToDashboard": "Pojdi na nadzorno ploščo",
+    "registerTitle": "Začnite brezplačno",
+    "registerSubtitle": "Vnesite svoj e-poštni naslov in poslali vam bomo kratko kodo za začetek."
   }
 }

@@ -2107,6 +2107,8 @@
     "signInTitle": "Witaj ponownie",
     "signInSubtitle": "Wpisz swój e-mail, a wyślemy szybki kod do zalogowania.",
     "chooseSubtitle": "Wybierz, jak chcesz kontynuować.",
-    "goToDashboard": "Przejdź do panelu"
+    "goToDashboard": "Przejdź do panelu",
+    "registerTitle": "Zacznij za darmo",
+    "registerSubtitle": "Podaj swój email, a wyślemy Ci szybki kod, aby zacząć."
   }
 }

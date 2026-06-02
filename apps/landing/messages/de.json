@@ -2107,6 +2107,8 @@
     "signInTitle": "Willkommen zurück",
     "signInSubtitle": "Geben Sie Ihre E-Mail ein, wir senden Ihnen einen schnellen Code zur Anmeldung.",
     "chooseSubtitle": "Wähle, wie du fortfahren möchtest.",
-    "goToDashboard": "Zum Dashboard"
+    "goToDashboard": "Zum Dashboard",
+    "registerTitle": "Kostenlos starten",
+    "registerSubtitle": "Gib deine E-Mail ein und wir senden dir einen kurzen Code zum Loslegen."
   }
 }

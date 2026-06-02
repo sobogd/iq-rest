@@ -2107,6 +2107,8 @@
     "signInTitle": "Üdv újra",
     "signInSubtitle": "Add meg e-mail címed, és gyors belépési kódot küldünk.",
     "chooseSubtitle": "Válaszd ki, hogyan szeretnél folytatni.",
-    "goToDashboard": "Ugrás a vezérlőpultra"
+    "goToDashboard": "Ugrás a vezérlőpultra",
+    "registerTitle": "Kezdje ingyen",
+    "registerSubtitle": "Add meg az e-mail-címed, és küldünk egy gyors kódot az induláshoz."
   }
 }

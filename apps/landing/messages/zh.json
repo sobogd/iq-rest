@@ -2107,6 +2107,8 @@
     "signInTitle": "欢迎回来",
     "signInSubtitle": "输入您的邮箱，我们将发送快速登录代码。",
     "chooseSubtitle": "选择您的登录方式。",
-    "goToDashboard": "前往仪表板"
+    "goToDashboard": "前往仪表板",
+    "registerTitle": "免费开始",
+    "registerSubtitle": "输入您的邮箱，我们会发送一个快捷验证码帮您开始。"
   }
 }

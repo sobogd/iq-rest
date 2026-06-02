@@ -2107,6 +2107,8 @@
     "signInTitle": "Tere tulemast tagasi",
     "signInSubtitle": "Sisesta oma e-post ja saadame kiire sisselogimiskoodi.",
     "chooseSubtitle": "Vali, kuidas soovid jätkata.",
-    "goToDashboard": "Mine töölauale"
+    "goToDashboard": "Mine töölauale",
+    "registerTitle": "Alusta tasuta",
+    "registerSubtitle": "Sisesta oma e-post ja saadame sulle kiire koodi alustamiseks."
   }
 }

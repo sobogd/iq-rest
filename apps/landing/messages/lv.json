@@ -2107,6 +2107,8 @@
     "signInTitle": "Laipni lūdzam atpakaļ",
     "signInSubtitle": "Ievadiet e-pastu, un mēs nosūtīsim ātru pieteikšanās kodu.",
     "chooseSubtitle": "Izvēlieties, kā vēlaties turpināt.",
-    "goToDashboard": "Doties uz paneli"
+    "goToDashboard": "Doties uz paneli",
+    "registerTitle": "Sāc bez maksas",
+    "registerSubtitle": "Ievadi savu e-pastu, un mēs nosūtīsim ātru kodu, lai sāktu."
   }
 }

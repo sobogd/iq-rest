@@ -2107,6 +2107,8 @@
     "signInTitle": "Dobro došli natrag",
     "signInSubtitle": "Unesite e-mail i poslat ćemo brzi kod za prijavu.",
     "chooseSubtitle": "Odaberite kako želite nastaviti.",
-    "goToDashboard": "Idi na ploču"
+    "goToDashboard": "Idi na ploču",
+    "registerTitle": "Započnite besplatno",
+    "registerSubtitle": "Unesite svoj email i poslat ćemo vam brzi kod za početak."
   }
 }

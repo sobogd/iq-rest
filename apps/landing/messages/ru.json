@@ -2107,6 +2107,8 @@
     "signInTitle": "С возвращением",
     "signInSubtitle": "Введите email — пришлём короткий код для входа.",
     "chooseSubtitle": "Выберите способ входа.",
-    "goToDashboard": "Открыть дашборд"
+    "goToDashboard": "Открыть дашборд",
+    "registerTitle": "Начните бесплатно",
+    "registerSubtitle": "Введите email — пришлём короткий код, чтобы начать."
   }
 }

@@ -29,13 +29,16 @@ export function CreateFlowModal({
   onClose,
 }: {
   open: boolean;
-  mode?: "create" | "signin";
+  mode?: "create" | "signin" | "register";
   onClose: () => void;
 }) {
   const [step, setStep] = useState(1);
   const [cuisine, setCuisine] = useState<CuisineKey | null>(null);
   const [restaurantName, setRestaurantName] = useState("");
   const isSignIn = mode === "signin";
+  const isRegister = mode === "register";
+  // Both signin and register skip the cuisine/name wizard and show the auth step directly.
+  const isAuthOnly = isSignIn || isRegister;
   // Backdrop/Esc closing is blocked — only the X button can close the modal.
   const closeReasonRef = useRef<"x" | "auth">("x");
 
@@ -65,9 +68,9 @@ export function CreateFlowModal({
 
   // Track step view changes.
   useEffect(() => {
-    if (!open || isSignIn) return;
+    if (!open || isAuthOnly) return;
     analytics.track(`l_onb_step${step}_view`);
-  }, [open, step, isSignIn]);
+  }, [open, step, isAuthOnly]);
 
   // Reset wizard whenever modal closes.
   useEffect(() => {
@@ -107,7 +110,7 @@ export function CreateFlowModal({
           className="max-w-md p-0 gap-0 bg-background border-border overflow-hidden"
         >
           <div className="p-6 sm:p-8">
-            {!isSignIn && (
+            {!isAuthOnly && (
               <Progress
                 step={step}
                 total={TOTAL_STEPS}
@@ -120,8 +123,8 @@ export function CreateFlowModal({
               />
             )}
 
-            {isSignIn ? (
-              <AuthStep signupContext={null} />
+            {isAuthOnly ? (
+              <AuthStep signupContext={null} variant={isRegister ? "register" : "signin"} />
             ) : (
               <>
                 {step === 1 && (

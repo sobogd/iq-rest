@@ -2107,6 +2107,8 @@
     "signInTitle": "Fáilte ar ais",
     "signInSubtitle": "Cuir isteach do ríomhphost agus seolfaimid cód tapa chun síniú isteach.",
     "chooseSubtitle": "Roghnaigh conas is mian leat leanúint ar aghaidh.",
-    "goToDashboard": "Téigh chuig an bpainéal"
+    "goToDashboard": "Téigh chuig an bpainéal",
+    "registerTitle": "Tosaigh saor in aisce",
+    "registerSubtitle": "Cuir isteach do ríomhphost agus seolfaimid cód tapa chun tús a chur leis."
   }
 }

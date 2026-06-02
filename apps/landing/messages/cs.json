@@ -2107,6 +2107,8 @@
     "signInTitle": "Vítejte zpět",
     "signInSubtitle": "Zadejte svůj e-mail a my pošleme rychlý kód pro přihlášení.",
     "chooseSubtitle": "Vyberte, jak chcete pokračovat.",
-    "goToDashboard": "Přejít na panel"
+    "goToDashboard": "Přejít na panel",
+    "registerTitle": "Začněte zdarma",
+    "registerSubtitle": "Zadejte svůj e-mail a my vám pošleme rychlý kód pro začátek."
   }
 }

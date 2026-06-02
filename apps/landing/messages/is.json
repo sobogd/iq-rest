@@ -2107,6 +2107,8 @@
     "signInTitle": "Velkominn aftur",
     "signInSubtitle": "Sláðu inn netfangið þitt og við sendum hraðan innskráningarkóða.",
     "chooseSubtitle": "Veldu hvernig þú vilt halda áfram.",
-    "goToDashboard": "Fara á stjórnborð"
+    "goToDashboard": "Fara á stjórnborð",
+    "registerTitle": "Byrjaðu frítt",
+    "registerSubtitle": "Sláðu inn netfangið þitt og við sendum þér fljótlegan kóða til að byrja."
   }
 }

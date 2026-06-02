@@ -2107,6 +2107,8 @@
     "signInTitle": "おかえりなさい",
     "signInSubtitle": "メールアドレスを入力すると、ログイン用のクイックコードをお送りします。",
     "chooseSubtitle": "続行方法を選択してください。",
-    "goToDashboard": "ダッシュボードへ"
+    "goToDashboard": "ダッシュボードへ",
+    "registerTitle": "無料で始める",
+    "registerSubtitle": "メールアドレスを入力すると、開始用のコードをすぐにお送りします。"
   }
 }

@@ -9,7 +9,7 @@ const CreateFlowModal = dynamic(
   { ssr: false, loading: () => null },
 );
 
-export type OnboardingMode = "create" | "signin";
+export type OnboardingMode = "create" | "signin" | "register";
 
 type OnboardingModalContextValue = {
   open: (mode?: OnboardingMode) => void;

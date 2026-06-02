@@ -43,11 +43,15 @@ function redirectAfterAuth(locale: string, legacyDashboard: boolean) {
 
 export function AuthStep({
   signupContext,
+  variant = "signin",
 }: {
   signupContext: SignupContext | null;
+  /** "register" → fresh-signup copy (onboarding skipped); "signin" → returning-user copy. */
+  variant?: "signin" | "register";
 }) {
   const t = useTranslations("auth");
   const locale = useLocale();
+  const isRegister = variant === "register";
 
   const [screen, setScreen] = useState<Screen>("email");
   // The "email" screen opens on a method choice (Google / Apple / Email).
@@ -236,13 +240,17 @@ export function AuthStep({
       <h2 className="text-2xl sm:text-3xl font-medium tracking-tight leading-tight mb-2">
         {signupContext
           ? t("titleWithName", { name: signupContext.restaurantName })
-          : t("signInTitle")}
+          : isRegister
+            ? t("registerTitle")
+            : t("signInTitle")}
       </h2>
       <p className="text-sm sm:text-base text-muted-foreground leading-snug mb-6">
         {emailOpen
           ? signupContext
             ? t("subtitle")
-            : t("signInSubtitle")
+            : isRegister
+              ? t("registerSubtitle")
+              : t("signInSubtitle")
           : t("chooseSubtitle")}
       </p>
 
