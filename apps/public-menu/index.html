@@ -3,6 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <!-- Indexing policy depends on the host: menus served on our own
+         <slug>.iq-rest.com must NOT be indexed (thin/duplicate vs the marketing
+         landing), but a restaurant on its OWN custom domain (restaurant.com)
+         SHOULD be indexed. Decide synchronously before paint so crawlers always
+         see the right directive. Do NOT add a robots.txt Disallow — Google must
+         be able to recrawl to drop already-indexed iq-rest.com pages. -->
+    <script>
+      (function () {
+        try {
+          var h = location.hostname;
+          if (h === "iq-rest.com" || /\.iq-rest\.com$/.test(h)) {
+            var m = document.createElement("meta");
+            m.name = "robots";
+            m.content = "noindex";
+            document.head.appendChild(m);
+          }
+        } catch (e) {}
+      })();
+    </script>
     <title>Menu</title>
     <style>
       html, body, #root { margin: 0; height: 100%; background: #000; }
