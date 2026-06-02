@@ -14,6 +14,7 @@ export interface RestaurantPayload {
   languages: string[];
   defaultLanguage: string;
   menuLayout?: string;
+  titleScale?: "small" | "medium" | "large";
   reservationsEnabled: boolean;
   reservationMode: string;
   reservationSlotMinutes: number;

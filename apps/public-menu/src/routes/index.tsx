@@ -13,6 +13,14 @@ function HomePage() {
   const { t } = useTranslation();
   const accentColor = restaurant.accentColor || "#000000";
 
+  // Hero font scale set in the dashboard design settings. Proportional steps;
+  // classes are spelled out so Tailwind keeps them through purge.
+  const scale = restaurant.titleScale ?? "large";
+  const titleSizeCls =
+    scale === "small" ? "text-4xl" : scale === "medium" ? "text-5xl" : "text-6xl";
+  const descSizeCls =
+    scale === "small" ? "text-base" : scale === "medium" ? "text-lg" : "text-xl";
+
   const jsonLd: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Restaurant",
@@ -42,9 +50,9 @@ function HomePage() {
             {restaurant.source ? <div className="absolute inset-0 bg-black/40 z-[2]" /> : null}
             <div className="absolute inset-x-0 top-[30%] z-10 flex justify-center px-[8%]">
               <div className="max-w-[440px] w-full">
-                <h1 className="text-6xl font-black text-white break-words">{restaurant.title}</h1>
+                <h1 className={`${titleSizeCls} font-black text-white break-words`}>{restaurant.title}</h1>
                 {restaurant.description ? (
-                  <p className="text-xl text-white/90 mt-3">{restaurant.description}</p>
+                  <p className={`${descSizeCls} text-white/90 mt-3`}>{restaurant.description}</p>
                 ) : null}
               </div>
             </div>
