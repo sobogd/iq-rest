@@ -21,6 +21,13 @@ function HomePage() {
   const descSizeCls =
     scale === "small" ? "text-base" : scale === "medium" ? "text-lg" : "text-xl";
 
+  // Language switcher placement. "top" = a globe icon floating over the hero;
+  // "inline" (default) = a row in the nav list below. Only meaningful with >1
+  // language — otherwise no switcher shows at all.
+  const multiLang = (restaurant.languages?.length ?? 0) > 1;
+  const langTop = multiLang && restaurant.languageSwitcher === "top";
+  const langInline = multiLang && restaurant.languageSwitcher !== "top";
+
   const jsonLd: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Restaurant",
@@ -45,10 +52,19 @@ function HomePage() {
           <div className="absolute inset-0" style={{ backgroundColor: accentColor }} />
         )}
 
+        {langTop ? (
+          <MenuNavLink
+            to="/language"
+            className="absolute top-3 right-3 z-20 flex items-center justify-center h-11 w-11 rounded-full bg-black/35 backdrop-blur-sm text-white"
+          >
+            <Globe className="h-5 w-5" />
+          </MenuNavLink>
+        ) : null}
+
         {!restaurant.hideTitle ? (
           <>
             {restaurant.source ? <div className="absolute inset-0 bg-black/40 z-[2]" /> : null}
-            <div className="absolute inset-x-0 top-[30%] z-10 flex justify-center px-[8%]">
+            <div className={`absolute inset-x-0 ${langTop ? "top-[34%]" : "top-[30%]"} z-10 flex justify-center px-[8%]`}>
               <div className="max-w-[440px] w-full">
                 <h1 className={`${titleSizeCls} font-black text-white break-words`}>{restaurant.title}</h1>
                 {restaurant.description ? (
@@ -77,7 +93,7 @@ function HomePage() {
             </span>
           </MenuNavLink>
         ) : null}
-        {(restaurant.languages?.length ?? 0) > 1 ? (
+        {langInline ? (
           <MenuNavLink to="/language" className="border-t border-gray-300/25 flex justify-center px-[8%]">
             <span className="max-w-[440px] w-full py-[22px] flex items-center gap-3 text-black font-semibold">
               <Globe className="h-5 w-5" />
