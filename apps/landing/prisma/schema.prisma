@@ -136,6 +136,7 @@ model Restaurant {
   hideTitle       Boolean  @default(false)
   menuLayout      String   @default("flat")
   titleScale      String   @default("medium")
+  languageSwitcher String  @default("inline")
   paymentMethods  String[] @default(["cash", "card"])
   companyId       String
   createdAt       DateTime @default(now())
