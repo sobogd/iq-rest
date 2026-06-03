@@ -40,7 +40,7 @@ export const CRO: CroCopy = {
     { Icon: Languages, tag: "Digitale Speisekarte", title: "Eine Karte, die verkauft.", bullets: ["35 KI-Sprachen","Premium-Design","Preise sofort aktuell"], image: "/landing/feature-design.webp", imageAlt: "Zwei Handys auf einem Café-Tisch: der Startbildschirm der digitalen Karte und die Kontaktseite mit Karte" },
     { Icon: ChefHat, tag: "Küchendisplay", title: "Schneller kochen, nichts verpassen.", bullets: ["Live am Bildschirm","Notizen & Allergene","Tablet oder Handy"], image: "/landing/feature-kds-cards.webp", imageAlt: "Tablet am Tresen zeigt das Küchendisplay mit Bestellungen pro Tisch" },
     { Icon: CalendarCheck, tag: "Reservierungen", title: "Reservierungen auf Autopilot.", bullets: ["Selbst buchen","Automatische Bestätigung","Kalender pro Tisch"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Zwei Tablets zeigen den Reservierungskalender: Tagesansicht pro Tisch und Monatsansicht" },
-    { Icon: Receipt, tag: "Bestellen am Tisch", title: "Bestellungen direkt in die Küche.", bullets: ["Gast oder Kellner","Direkt in die Küche","Jederzeit an/aus"], image: "/landing/feature-orders.webp", imageAlt: "Kellner nimmt am Tisch eine Bestellung per Handy auf, sie landet am Küchendisplay" },
+    { Icon: Receipt, tag: "Bestellen am Tisch", title: "Bestellungen direkt in die Küche.", bullets: ["Gast oder Kellner","Direkt in die Küche","Jederzeit an/aus"], image: "/landing/feature-orders-map.webp", imageAlt: "Tablet mit der Bestellübersicht: Bestellliste und Saalplan mit farblich markierten Tischen." },
   ],
 
   seeDetails: "Details ansehen",

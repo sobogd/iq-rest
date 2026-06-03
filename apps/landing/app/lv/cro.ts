@@ -40,7 +40,7 @@ export const CRO: CroCopy = {
     { Icon: Languages, tag: "Digitālā ēdienkarte", title: "Ēdienkarte, kas pārdod.", bullets: ["35 valodas ar MI","Premium dizains","Cenas uzreiz aktuālas"], image: "/landing/feature-design.webp", imageAlt: "Divi telefoni uz kafejnīcas galda: digitālās ēdienkartes sākuma ekrāns un kontaktu lapa ar karti" },
     { Icon: ChefHat, tag: "Virtuves ekrāns", title: "Gatavojiet ātrāk, nepalaidiet garām neko.", bullets: ["Tiešraidē ekrānā","Piezīmes un alergēni","Planšete vai telefons"], image: "/landing/feature-kds-cards.webp", imageAlt: "Planšete pie bāra rāda virtuves ekrānu ar pasūtījumiem pa galdiem" },
     { Icon: CalendarCheck, tag: "Rezervācijas", title: "Rezervācijas autopilotā.", bullets: ["Pašapkalpošanās rezervācija","Automātisks apstiprinājums","Kalendārs pa galdiem"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Divas planšetes rāda rezervāciju kalendāru: dienas skats pa galdiem un mēneša skats" },
-    { Icon: Receipt, tag: "Pasūtījumi pie galda", title: "Pasūtījumi tieši uz virtuvi.", bullets: ["Viesis vai viesmīlis","Tieši uz virtuvi","Ieslēdziet jebkurā laikā"], image: "/landing/feature-orders.webp", imageAlt: "Viesmīlis pieņem pasūtījumu pie galda telefonā, tas nonāk virtuves ekrānā" },
+    { Icon: Receipt, tag: "Pasūtījumi pie galda", title: "Pasūtījumi tieši uz virtuvi.", bullets: ["Viesis vai viesmīlis","Tieši uz virtuvi","Ieslēdziet jebkurā laikā"], image: "/landing/feature-orders-map.webp", imageAlt: "Planšete ar pasūtījumu ekrānu: pasūtījumu saraksts un zāles plāns ar krāsainiem galdiem." },
   ],
 
   seeDetails: "Skatīt vairāk",

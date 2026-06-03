@@ -40,7 +40,7 @@ export const CRO: CroCopy = {
     { Icon: Languages, tag: "Menu cyfrowe", title: "Menu, które sprzedaje.", bullets: ["35 języków z AI","Premium design","Ceny od razu aktualne"], image: "/landing/feature-design.webp", imageAlt: "Dwa telefony na stoliku w kawiarni: ekran powitalny menu cyfrowego i strona kontaktu z mapą" },
     { Icon: ChefHat, tag: "Ekran kuchni", title: "Gotuj szybciej, nic nie przeocz.", bullets: ["Na żywo na ekranie","Notatki i alergeny","Tablet lub telefon"], image: "/landing/feature-kds-cards.webp", imageAlt: "Tablet na barze pokazujący ekran kuchni z zamówieniami według stolika" },
     { Icon: CalendarCheck, tag: "Rezerwacje", title: "Rezerwacje na autopilocie.", bullets: ["Samodzielna rezerwacja","Automatyczne potwierdzenie","Kalendarz po stolikach"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Dwa tablety pokazujące kalendarz rezerwacji: widok dzienny po stolikach i widok miesięczny" },
-    { Icon: Receipt, tag: "Zamówienia przy stoliku", title: "Zamówienia prosto do kuchni.", bullets: ["Gość lub kelner","Prosto do kuchni","Włącz, kiedy chcesz"], image: "/landing/feature-orders.webp", imageAlt: "Kelner przyjmuje zamówienie przy stoliku telefonem, trafia ono na ekran kuchni" },
+    { Icon: Receipt, tag: "Zamówienia przy stoliku", title: "Zamówienia prosto do kuchni.", bullets: ["Gość lub kelner","Prosto do kuchni","Włącz, kiedy chcesz"], image: "/landing/feature-orders-map.webp", imageAlt: "Tablet z ekranem zamówień: lista zamówień i plan sali z kolorowymi stolikami." },
   ],
 
   seeDetails: "Zobacz szczegóły",

@@ -40,7 +40,7 @@ export const CRO: CroCopy = {
     { Icon: Languages, tag: "Carta digital", title: "Una carta que ven.", bullets: ["35 idiomes amb IA","Disseny premium","Preus a l'instant"], image: "/landing/feature-design.webp", imageAlt: "Dos mòbils a la taula d'un cafè: la pantalla de benvinguda de la carta digital i la pàgina de contacte amb un mapa" },
     { Icon: ChefHat, tag: "Pantalla de cuina", title: "Cuina més ràpid, sense errades.", bullets: ["En directe a la pantalla","Notes i al·lèrgens","Tauleta o mòbil"], image: "/landing/feature-kds-cards.webp", imageAlt: "Tauleta a la barra mostrant la pantalla de cuina amb comandes per taula" },
     { Icon: CalendarCheck, tag: "Reserves", title: "Reserves en pilot automàtic.", bullets: ["Reserva sense trucades","Confirmació automàtica","Calendari per taula"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Dues tauletes mostrant el calendari de reserves: vista diària per taula i vista mensual" },
-    { Icon: Receipt, tag: "Comandes a taula", title: "Comandes directes a la cuina.", bullets: ["Client o cambrer","Directe a la cuina","Activa-ho quan vulguis"], image: "/landing/feature-orders.webp", imageAlt: "Un cambrer pren una comanda a taula des del mòbil i arriba a la pantalla de cuina" },
+    { Icon: Receipt, tag: "Comandes a taula", title: "Comandes directes a la cuina.", bullets: ["Client o cambrer","Directe a la cuina","Activa-ho quan vulguis"], image: "/landing/feature-orders-map.webp", imageAlt: "Tauleta amb la pantalla de comandes: llista de comandes i plànol de sala amb taules per colors." },
   ],
 
   seeDetails: "Mira els detalls",

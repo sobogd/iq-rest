@@ -40,7 +40,7 @@ export const CRO: CroCopy = {
     { Icon: Languages, tag: "Digitaalinen menu", title: "Menu joka myy.", bullets: ["35 tekoälykieltä","Premium-design","Hinnat heti ajan tasalla"], image: "/landing/feature-design.webp", imageAlt: "Kaksi puhelinta kahvilan pöydällä: digitaalisen menun aloitusnäyttö ja yhteystietosivu kartalla" },
     { Icon: ChefHat, tag: "Keittiönäyttö", title: "Kokkaa nopeammin, älä missaa mitään.", bullets: ["Suoraan näytölle","Merkinnät ja allergeenit","Tabletti tai puhelin"], image: "/landing/feature-kds-cards.webp", imageAlt: "Tabletti tiskillä näyttää keittiönäytön tilauksineen pöydittäin" },
     { Icon: CalendarCheck, tag: "Varaukset", title: "Varaukset autopilotilla.", bullets: ["Itsevaraus","Automaattinen vahvistus","Kalenteri pöydittäin"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Kaksi tablettia näyttää varauskalenterin: päivänäkymä pöydittäin ja kuukausinäkymä" },
-    { Icon: Receipt, tag: "Tilaus pöydässä", title: "Tilaukset suoraan keittiöön.", bullets: ["Asiakas tai tarjoilija","Suoraan keittiöön","Päälle/pois milloin vain"], image: "/landing/feature-orders.webp", imageAlt: "Tarjoilija ottaa tilauksen pöydässä puhelimella, se päätyy keittiönäytölle" },
+    { Icon: Receipt, tag: "Tilaus pöydässä", title: "Tilaukset suoraan keittiöön.", bullets: ["Asiakas tai tarjoilija","Suoraan keittiöön","Päälle/pois milloin vain"], image: "/landing/feature-orders-map.webp", imageAlt: "Tabletti tilausnäytöllä: tilauslista ja pohjakartta värikoodatuilla pöydillä." },
   ],
 
   seeDetails: "Katso lisää",

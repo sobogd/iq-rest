@@ -40,7 +40,7 @@ export const CRO: CroCopy = {
     { Icon: Languages, tag: "Stafrænn matseðill", title: "Matseðill sem selur.", bullets: ["35 tungumál með gervigreind","Vönduð hönnun","Verð uppfærð strax"], image: "/landing/feature-design.webp", imageAlt: "Tveir símar á kaffihúsaborði: velkomuskjár stafræna matseðilsins og tengiliðasíða með korti" },
     { Icon: ChefHat, tag: "Eldhússkjár", title: "Eldaðu hraðar, misstu ekki af neinu.", bullets: ["Beint á skjáinn","Athugasemdir og ofnæmisvaldar","Spjaldtölva eða sími"], image: "/landing/feature-kds-cards.webp", imageAlt: "Spjaldtölva á barnum sýnir eldhússkjáinn með pöntunum eftir borðum" },
     { Icon: CalendarCheck, tag: "Bókanir", title: "Bókanir á sjálfstýringu.", bullets: ["Sjálfsafgreiðslubókun","Sjálfvirk staðfesting","Dagatal eftir borðum"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Tvær spjaldtölvur sýna bókunardagatalið: dagsýn eftir borðum og mánaðarsýn" },
-    { Icon: Receipt, tag: "Pantanir við borðið", title: "Pantanir beint í eldhúsið.", bullets: ["Gestur eða þjónn","Beint í eldhúsið","Kveiktu hvenær sem er"], image: "/landing/feature-orders.webp", imageAlt: "Þjónn tekur pöntun við borðið í símanum, hún berst á eldhússkjáinn" },
+    { Icon: Receipt, tag: "Pantanir við borðið", title: "Pantanir beint í eldhúsið.", bullets: ["Gestur eða þjónn","Beint í eldhúsið","Kveiktu hvenær sem er"], image: "/landing/feature-orders-map.webp", imageAlt: "Spjaldtölva með pöntunarskjánum: pöntunarlisti og gólfteikning með litakóðuðum borðum." },
   ],
 
   seeDetails: "Sjá nánar",

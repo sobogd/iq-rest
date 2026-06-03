@@ -40,7 +40,7 @@ export const CRO: CroCopy = {
     { Icon: Languages, tag: "Digitaalne menüü", title: "Menüü, mis müüb.", bullets: ["35 keelt tehisintellektiga","Premium-disain","Hinnad kohe ajakohased"], image: "/landing/feature-design.webp", imageAlt: "Kaks telefoni kohviku laual: digitaalse menüü tervitusekraan ja kontaktileht kaardiga" },
     { Icon: ChefHat, tag: "Köögiekraan", title: "Valmista kiiremini, ära jää millestki ilma.", bullets: ["Otse ekraanil","Märkused ja allergeenid","Tahvel või telefon"], image: "/landing/feature-kds-cards.webp", imageAlt: "Tahvelarvuti baaril näitab köögiekraani tellimustega laudade kaupa" },
     { Icon: CalendarCheck, tag: "Broneeringud", title: "Broneeringud autopiloodil.", bullets: ["Iseteenindusbroneering","Automaatne kinnitus","Kalender laudade kaupa"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Kaks tahvelarvutit näitavad broneeringukalendrit: päevavaade laudade kaupa ja kuuvaade" },
-    { Icon: Receipt, tag: "Tellimused lauas", title: "Tellimused otse kööki.", bullets: ["Külaline või ettekandja","Otse kööki","Sisse/välja igal ajal"], image: "/landing/feature-orders.webp", imageAlt: "Ettekandja võtab lauas tellimuse telefonist, see jõuab köögiekraanile" },
+    { Icon: Receipt, tag: "Tellimused lauas", title: "Tellimused otse kööki.", bullets: ["Külaline või ettekandja","Otse kööki","Sisse/välja igal ajal"], image: "/landing/feature-orders-map.webp", imageAlt: "Tahvelarvuti tellimuste ekraaniga: tellimuste loend ja saaliplaan värvikoodiga laudadega." },
   ],
 
   seeDetails: "Vaata lähemalt",

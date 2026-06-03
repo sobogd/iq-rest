@@ -40,7 +40,7 @@ export const CRO: CroCopy = {
     { Icon: Languages, tag: "Skaitmeninis meniu", title: "Meniu, kuris parduoda.", bullets: ["35 kalbos su DI","Premium dizainas","Kainos iškart atnaujintos"], image: "/landing/feature-design.webp", imageAlt: "Du telefonai ant kavinės stalo: skaitmeninio meniu pasveikinimo ekranas ir kontaktų puslapis su žemėlapiu" },
     { Icon: ChefHat, tag: "Virtuvės ekranas", title: "Gaminkite greičiau, nieko nepraleiskite.", bullets: ["Tiesiogiai ekrane","Pastabos ir alergenai","Planšetė ar telefonas"], image: "/landing/feature-kds-cards.webp", imageAlt: "Planšetė prie baro rodo virtuvės ekraną su užsakymais pagal stalus" },
     { Icon: CalendarCheck, tag: "Rezervacijos", title: "Rezervacijos autopilotu.", bullets: ["Savitarnos rezervacija","Automatinis patvirtinimas","Kalendorius pagal stalus"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Dvi planšetės rodo rezervacijų kalendorių: dienos rodinys pagal stalus ir mėnesio rodinys" },
-    { Icon: Receipt, tag: "Užsakymai prie stalo", title: "Užsakymai tiesiai į virtuvę.", bullets: ["Svečias ar padavėjas","Tiesiai į virtuvę","Įjunkite bet kada"], image: "/landing/feature-orders.webp", imageAlt: "Padavėjas priima užsakymą prie stalo telefonu, jis patenka į virtuvės ekraną" },
+    { Icon: Receipt, tag: "Užsakymai prie stalo", title: "Užsakymai tiesiai į virtuvę.", bullets: ["Svečias ar padavėjas","Tiesiai į virtuvę","Įjunkite bet kada"], image: "/landing/feature-orders-map.webp", imageAlt: "Planšetė su užsakymų ekranu: užsakymų sąrašas ir salės planas su spalvotais stalais." },
   ],
 
   seeDetails: "Daugiau",

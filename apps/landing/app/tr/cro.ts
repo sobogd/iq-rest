@@ -40,7 +40,7 @@ export const CRO: CroCopy = {
     { Icon: Languages, tag: "Dijital menü", title: "Satan bir menü.", bullets: ["35 yapay zeka dili","Premium tasarım","Anında fiyat değişimi"], image: "/landing/feature-design.webp", imageAlt: "Bir kafe masasında iki telefon: dijital menünün karşılama ekranı ve haritalı iletişim sayfası" },
     { Icon: ChefHat, tag: "Mutfak ekranı", title: "Daha hızlı pişirin, hiçbir şeyi kaçırmayın.", bullets: ["Ekranda canlı","Notlar ve alerjenler","Tablet ya da telefon"], image: "/landing/feature-kds-cards.webp", imageAlt: "Bardaki tablet, masalara göre siparişlerle mutfak ekranını gösteriyor" },
     { Icon: CalendarCheck, tag: "Rezervasyonlar", title: "Otomatik pilotta rezervasyonlar.", bullets: ["Self rezervasyon","Otomatik onay","Masaya göre takvim"], image: "/landing/feature-booking-calendar.webp", imageAlt: "İki tablet rezervasyon takvimini gösteriyor: masaya göre günlük görünüm ve aylık görünüm" },
-    { Icon: Receipt, tag: "Masada sipariş", title: "Siparişler doğrudan mutfağa.", bullets: ["Misafir ya da garson","Doğrudan mutfağa","İstediğinde aç/kapa"], image: "/landing/feature-orders.webp", imageAlt: "Garson masada telefondan sipariş alıyor, sipariş mutfak ekranına düşüyor" },
+    { Icon: Receipt, tag: "Masada sipariş", title: "Siparişler doğrudan mutfağa.", bullets: ["Misafir ya da garson","Doğrudan mutfağa","İstediğinde aç/kapa"], image: "/landing/feature-orders-map.webp", imageAlt: "Sipariş ekranlı tablet: sipariş listesi ve renk kodlu masalarla salon planı." },
   ],
 
   seeDetails: "Ayrıntılar",

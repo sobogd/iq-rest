@@ -40,7 +40,7 @@ export const CRO: CroCopy = {
     { Icon: Languages, tag: "Biachlár digiteach", title: "Biachlár a dhíolann.", bullets: ["35 teanga le IS","Dearadh den scoth","Praghsanna láithreach"], image: "/landing/feature-design.webp", imageAlt: "Dhá fhón ar bhord caifé: scáileán fáilte an bhiachláir dhigitigh agus an leathanach teagmhála le léarscáil" },
     { Icon: ChefHat, tag: "Scáileán cistine", title: "Cócaráil níos tapúla, gan aon rud a chailleadh.", bullets: ["Beo ar an scáileán","Nótaí is ailléirginí","Táibléad nó fón"], image: "/landing/feature-kds-cards.webp", imageAlt: "Táibléad ag an mbeár ag taispeáint scáileán na cistine le horduithe de réir boird" },
     { Icon: CalendarCheck, tag: "Áirithintí", title: "Áirithintí ar uathphíolóta.", bullets: ["Áirithint féinseirbhíse","Deimhniú uathoibríoch","Féilire de réir boird"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Dhá tháibléad ag taispeáint an fhéilire áirithintí: amharc laethúil de réir boird agus amharc míosúil" },
-    { Icon: Receipt, tag: "Orduithe ag an mbord", title: "Orduithe díreach chuig an gcistin.", bullets: ["Aoi nó freastalaí","Díreach go dtí an chistin","Cas air am ar bith"], image: "/landing/feature-orders.webp", imageAlt: "Freastalaí ag glacadh ordú ag an mbord ar an bhfón, sroicheann sé scáileán na cistine" },
+    { Icon: Receipt, tag: "Orduithe ag an mbord", title: "Orduithe díreach chuig an gcistin.", bullets: ["Aoi nó freastalaí","Díreach go dtí an chistin","Cas air am ar bith"], image: "/landing/feature-orders-map.webp", imageAlt: "Táibléad le scáileán na n-orduithe: liosta orduithe agus plean an urláir le boird daite." },
   ],
 
   seeDetails: "Féach mionsonraí",

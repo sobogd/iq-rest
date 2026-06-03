@@ -40,7 +40,7 @@ export const CRO: CroCopy = {
     { Icon: Languages, tag: "Digitaal menu", title: "Een menu dat verkoopt.", bullets: ["35 AI-talen","Premium design","Prijzen meteen bij"], image: "/landing/feature-design.webp", imageAlt: "Twee telefoons op een cafétafel: het welkomstscherm van het digitale menu en de contactpagina met kaart" },
     { Icon: ChefHat, tag: "Keukenscherm", title: "Kook sneller, mis niets.", bullets: ["Live op het scherm","Notities & allergenen","Tablet of telefoon"], image: "/landing/feature-kds-cards.webp", imageAlt: "Tablet op de bar toont het keukenscherm met bestellingen per tafel" },
     { Icon: CalendarCheck, tag: "Reserveringen", title: "Reserveringen op autopilot.", bullets: ["Zelf reserveren","Automatische bevestiging","Kalender per tafel"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Twee tablets tonen de reserveringskalender: dagweergave per tafel en maandweergave" },
-    { Icon: Receipt, tag: "Bestellen aan tafel", title: "Bestellingen direct naar de keuken.", bullets: ["Gast of ober","Direct naar de keuken","Altijd aan/uit"], image: "/landing/feature-orders.webp", imageAlt: "Ober neemt aan tafel een bestelling op met de telefoon, die op het keukenscherm verschijnt" },
+    { Icon: Receipt, tag: "Bestellen aan tafel", title: "Bestellingen direct naar de keuken.", bullets: ["Gast of ober","Direct naar de keuken","Altijd aan/uit"], image: "/landing/feature-orders-map.webp", imageAlt: "Tablet met het bestelscherm: bestellijst en plattegrond met gekleurde tafels." },
   ],
 
   seeDetails: "Bekijk details",

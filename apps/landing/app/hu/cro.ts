@@ -40,7 +40,7 @@ export const CRO: CroCopy = {
     { Icon: Languages, tag: "Digitális menü", title: "Egy menü, ami elad.", bullets: ["35 nyelv MI-vel","Prémium dizájn","Azonnali árfrissítés"], image: "/landing/feature-design.webp", imageAlt: "Két telefon egy kávézó asztalán: a digitális menü üdvözlő képernyője és a kapcsolati oldal térképpel" },
     { Icon: ChefHat, tag: "Konyhai kijelző", title: "Főzz gyorsabban, ne maradj le semmiről.", bullets: ["Élőben a kijelzőn","Jegyzetek és allergének","Tablet vagy telefon"], image: "/landing/feature-kds-cards.webp", imageAlt: "Tablet a pultnál a konyhai kijelzőt mutatja asztalonkénti rendelésekkel" },
     { Icon: CalendarCheck, tag: "Foglalások", title: "Foglalások robotpilótán.", bullets: ["Önálló foglalás","Automatikus visszaigazolás","Naptár asztalonként"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Két tablet a foglalási naptárat mutatja: napi nézet asztalonként és havi nézet" },
-    { Icon: Receipt, tag: "Rendelés az asztalnál", title: "Rendelések egyenesen a konyhába.", bullets: ["Vendég vagy pincér","Egyenesen a konyhába","Bármikor be/ki"], image: "/landing/feature-orders.webp", imageAlt: "Pincér rendelést vesz fel az asztalnál telefonon, az a konyhai kijelzőre kerül" },
+    { Icon: Receipt, tag: "Rendelés az asztalnál", title: "Rendelések egyenesen a konyhába.", bullets: ["Vendég vagy pincér","Egyenesen a konyhába","Bármikor be/ki"], image: "/landing/feature-orders-map.webp", imageAlt: "Tablet a rendelési képernyővel: rendeléslista és teremtérkép színkódolt asztalokkal." },
   ],
 
   seeDetails: "Részletek",

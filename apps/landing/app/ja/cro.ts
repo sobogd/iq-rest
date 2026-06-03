@@ -40,7 +40,7 @@ export const CRO: CroCopy = {
     { Icon: Languages, tag: "デジタルメニュー", title: "売れるメニュー。", bullets: ["AIで35言語","上質なデザイン","価格を即時更新"], image: "/landing/feature-design.webp", imageAlt: "カフェのテーブルに2台のスマホ：デジタルメニューのウェルカム画面と地図付きの連絡先ページ" },
     { Icon: ChefHat, tag: "キッチンディスプレイ", title: "速く作り、見落とさない。", bullets: ["画面にリアルタイム","メモとアレルゲン","タブレットかスマホ"], image: "/landing/feature-kds-cards.webp", imageAlt: "カウンターのタブレットがテーブルごとの注文とともにキッチンディスプレイを表示" },
     { Icon: CalendarCheck, tag: "予約", title: "予約を自動操縦で。", bullets: ["セルフ予約","自動確認","テーブル別カレンダー"], image: "/landing/feature-booking-calendar.webp", imageAlt: "2台のタブレットが予約カレンダーを表示：テーブル別の日次ビューと月次ビュー" },
-    { Icon: Receipt, tag: "テーブルで注文", title: "注文はまっすぐ厨房へ。", bullets: ["お客様かスタッフ","厨房へ直接","いつでもオン/オフ"], image: "/landing/feature-orders.webp", imageAlt: "スタッフがテーブルでスマホから注文を取り、キッチンディスプレイに届く" },
+    { Icon: Receipt, tag: "テーブルで注文", title: "注文はまっすぐ厨房へ。", bullets: ["お客様かスタッフ","厨房へ直接","いつでもオン/オフ"], image: "/landing/feature-orders-map.webp", imageAlt: "注文画面のタブレット：注文リストと、色分けされたテーブルのフロアマップ。" },
   ],
 
   seeDetails: "詳細を見る",

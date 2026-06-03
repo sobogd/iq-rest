@@ -40,7 +40,7 @@ export const CRO: CroCopy = {
     { Icon: Languages, tag: "디지털 메뉴", title: "팔리는 메뉴.", bullets: ["AI 35개 언어","프리미엄 디자인","가격 즉시 반영"], image: "/landing/feature-design.webp", imageAlt: "카페 테이블 위 두 대의 휴대폰: 디지털 메뉴 환영 화면과 지도가 있는 연락처 페이지" },
     { Icon: ChefHat, tag: "주방 디스플레이", title: "더 빨리 조리하고, 놓치지 않게.", bullets: ["화면에 실시간","메모와 알레르기","태블릿 또는 휴대폰"], image: "/landing/feature-kds-cards.webp", imageAlt: "바 위의 태블릿이 테이블별 주문과 함께 주방 디스플레이를 표시" },
     { Icon: CalendarCheck, tag: "예약", title: "예약은 자동으로.", bullets: ["셀프 예약","자동 확인","테이블별 캘린더"], image: "/landing/feature-booking-calendar.webp", imageAlt: "두 대의 태블릿이 예약 캘린더를 표시: 테이블별 일간 보기와 월간 보기" },
-    { Icon: Receipt, tag: "테이블 주문", title: "주문은 곧장 주방으로.", bullets: ["손님 또는 직원","주방으로 바로","언제든 켜고 끄기"], image: "/landing/feature-orders.webp", imageAlt: "직원이 테이블에서 휴대폰으로 주문을 받아 주방 디스플레이로 전달" },
+    { Icon: Receipt, tag: "테이블 주문", title: "주문은 곧장 주방으로.", bullets: ["손님 또는 직원","주방으로 바로","언제든 켜고 끄기"], image: "/landing/feature-orders-map.webp", imageAlt: "주문 화면의 태블릿: 주문 목록과 색상으로 구분된 테이블의 플로어 맵." },
   ],
 
   seeDetails: "자세히 보기",

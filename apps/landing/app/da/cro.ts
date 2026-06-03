@@ -40,7 +40,7 @@ export const CRO: CroCopy = {
     { Icon: Languages, tag: "Digital menu", title: "En menu der sælger.", bullets: ["35 AI-sprog","Premium-design","Priser opdateret straks"], image: "/landing/feature-design.webp", imageAlt: "To telefoner på et cafébord: den digitale menus velkomstskærm og kontaktsiden med kort" },
     { Icon: ChefHat, tag: "Køkkenskærm", title: "Lav mad hurtigere, mis intet.", bullets: ["Live på skærmen","Noter & allergener","Tablet eller telefon"], image: "/landing/feature-kds-cards.webp", imageAlt: "Tablet på baren viser køkkenskærmen med bestillinger pr. bord" },
     { Icon: CalendarCheck, tag: "Reservationer", title: "Reservationer på autopilot.", bullets: ["Reservér selv","Automatisk bekræftelse","Kalender pr. bord"], image: "/landing/feature-booking-calendar.webp", imageAlt: "To tablets viser reservationskalenderen: dagsvisning pr. bord og månedsvisning" },
-    { Icon: Receipt, tag: "Bestil ved bordet", title: "Bestillinger direkte til køkkenet.", bullets: ["Gæst eller tjener","Direkte til køkkenet","Til/fra når som helst"], image: "/landing/feature-orders.webp", imageAlt: "Tjener tager en bestilling ved bordet på telefonen, den lander på køkkenskærmen" },
+    { Icon: Receipt, tag: "Bestil ved bordet", title: "Bestillinger direkte til køkkenet.", bullets: ["Gæst eller tjener","Direkte til køkkenet","Til/fra når som helst"], image: "/landing/feature-orders-map.webp", imageAlt: "Tablet med bestillingsskærmen: ordreliste og plantegning med farvekodede borde." },
   ],
 
   seeDetails: "Se detaljer",

@@ -40,7 +40,7 @@ export const CRO: CroCopy = {
     { Icon: Languages, tag: "数字菜单", title: "会卖货的菜单。", bullets: ["AI 35 种语言","高级设计","价格即时更新"], image: "/landing/feature-design.webp", imageAlt: "咖啡桌上的两部手机:数字菜单的欢迎页和带地图的联系页" },
     { Icon: ChefHat, tag: "厨房显示屏", title: "做得更快,零遗漏。", bullets: ["实时显示在屏","备注与过敏原","平板或手机"], image: "/landing/feature-kds-cards.webp", imageAlt: "吧台上的平板显示厨房屏,按桌位呈现订单" },
     { Icon: CalendarCheck, tag: "预订", title: "预订自动搞定。", bullets: ["自助预订","自动确认","按桌位日历"], image: "/landing/feature-booking-calendar.webp", imageAlt: "两台平板显示预订日历:按桌位的每日视图与每月视图" },
-    { Icon: Receipt, tag: "桌边点单", title: "订单直达厨房。", bullets: ["顾客或服务员","直达厨房","随时开关"], image: "/landing/feature-orders.webp", imageAlt: "服务员在桌边用手机点单,订单送达厨房显示屏" },
+    { Icon: Receipt, tag: "桌边点单", title: "订单直达厨房。", bullets: ["顾客或服务员","直达厨房","随时开关"], image: "/landing/feature-orders-map.webp", imageAlt: "显示订单界面的平板:订单列表与按颜色区分餐桌的平面图。" },
   ],
 
   seeDetails: "查看详情",

@@ -40,7 +40,7 @@ export const CRO: CroCopy = {
     { Icon: Languages, tag: "Digitální menu", title: "Menu, které prodává.", bullets: ["35 jazyků s AI","Prémiový design","Ceny ihned aktuální"], image: "/landing/feature-design.webp", imageAlt: "Dva telefony na stole v kavárně: úvodní obrazovka digitálního menu a kontaktní stránka s mapou" },
     { Icon: ChefHat, tag: "Kuchyňský displej", title: "Vařte rychleji, nic nezmeškáte.", bullets: ["Živě na obrazovce","Poznámky a alergeny","Tablet nebo telefon"], image: "/landing/feature-kds-cards.webp", imageAlt: "Tablet na baru zobrazuje kuchyňský displej s objednávkami podle stolů" },
     { Icon: CalendarCheck, tag: "Rezervace", title: "Rezervace na autopilota.", bullets: ["Samoobslužná rezervace","Automatické potvrzení","Kalendář podle stolů"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Dva tablety zobrazují rezervační kalendář: denní pohled podle stolů a měsíční pohled" },
-    { Icon: Receipt, tag: "Objednávky u stolu", title: "Objednávky rovnou do kuchyně.", bullets: ["Host nebo číšník","Rovnou do kuchyně","Zapněte kdykoli"], image: "/landing/feature-orders.webp", imageAlt: "Číšník přijímá objednávku u stolu z telefonu, dorazí na kuchyňský displej" },
+    { Icon: Receipt, tag: "Objednávky u stolu", title: "Objednávky rovnou do kuchyně.", bullets: ["Host nebo číšník","Rovnou do kuchyně","Zapněte kdykoli"], image: "/landing/feature-orders-map.webp", imageAlt: "Tablet s obrazovkou objednávek: seznam objednávek a plán sálu s barevně odlišenými stoly." },
   ],
 
   seeDetails: "Zobrazit detaily",

@@ -73,8 +73,8 @@ export const CRO: CroCopy = {
       tag: "Orders at the table",
       title: "Orders straight to the kitchen.",
       bullets: ["Guest or waiter", "Straight to kitchen", "On / off anytime"],
-      image: "/landing/feature-orders.webp",
-      imageAlt: "Waiter takes an order at the table from a smartphone, order lands on the kitchen display",
+      image: "/landing/feature-orders-map.webp",
+      imageAlt: "Tablet with the orders screen: order list and floor map with colour-coded tables.",
     },
   ],
 
