@@ -1,28 +1,18 @@
 import type { Metadata } from "next";
-import { HomeTemplate } from "@/app/_landing/templates/home-template";
+import { CroHomeTemplate } from "@/app/_landing/templates/cro-home-template";
 import { TEXTS } from "./texts";
+import { CRO } from "./cro";
+import { restaurantCount } from "@/lib/restaurant-count";
 import { homeAlternates } from "@/lib/hreflang";
 import { SCHEMA_PRICE_BASIC_EUR } from "@/lib/pricing";
 
+// Static like the rest of the marketing site. The restaurant counter is
+// computed at build time and refreshes on each deploy.
 export const dynamic = "force-static";
 export const revalidate = false;
 
 const LOCALE = "en";
 const SITE = "https://iq-rest.com";
-
-const HOME_HERO = {
-  title: "Everything your restaurant needs.",
-  titleAccent: "On one platform.",
-  sub: "Menu, order taking, bookings, kitchen display and AI translation — a single platform instead of five separate services. Pick a feature below to learn more.",
-  imageAlt: "Diner filters the QR menu by allergens on a phone while the owner edits the list from a tablet",
-};
-
-const FEATURE_IMAGES: Record<string, string> = {
-  "Digital menu": "/landing/hero-cafe.webp",
-  "Order taking": "/landing/feature-orders.webp",
-  "Booking": "/landing/feature-reservation.webp",
-  "KDS": "/landing/feature-kitchen.webp",
-};
 
 const JSON_LD = JSON.stringify({
   "@context": "https://schema.org",
@@ -63,13 +53,9 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <HomeTemplate
-      locale={LOCALE}
-      texts={TEXTS}
-      hero={HOME_HERO}
-      featureImages={FEATURE_IMAGES}
-      jsonLd={JSON_LD}
-      learnMoreText="Learn more"
-    />
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON_LD }} />
+      <CroHomeTemplate locale={LOCALE} texts={TEXTS} cro={CRO} count={restaurantCount()} />
+    </>
   );
 }

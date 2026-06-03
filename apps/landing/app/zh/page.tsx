@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { HomeTemplate } from "@/app/_landing/templates/home-template";
+import { CroHomeTemplate } from "@/app/_landing/templates/cro-home-template";
 import { TEXTS } from "./texts";
+import { CRO } from "./cro";
+import { restaurantCount } from "@/lib/restaurant-count";
 import { homeAlternates } from "@/lib/hreflang";
 import { SCHEMA_PRICE_BASIC_EUR } from "@/lib/pricing";
 
@@ -10,19 +12,7 @@ export const revalidate = false;
 const LOCALE = "zh";
 const SITE = "https://iq-rest.com";
 
-const HOME_HERO = {
-  title: "您餐厅所需的一切。",
-  titleAccent: "在一个平台上。",
-  sub: "菜单、接单、预订、厨房显示屏和 AI 翻译 — 一个平台代替五个独立的服务。在下方选择一个功能以了解更多。",
-  imageAlt: "顾客在手机上按过敏原筛选二维码菜单，店主用平板编辑列表",
-};
 
-const FEATURE_IMAGES: Record<string, string> = {
-  "数字菜单": "/landing/hero-cafe.webp",
-  "订单": "/landing/feature-orders.webp",
-  "预订": "/landing/feature-reservation.webp",
-  "KDS": "/landing/feature-kitchen.webp",
-};
 
 const JSON_LD = JSON.stringify({
   "@context": "https://schema.org",
@@ -63,13 +53,9 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <HomeTemplate
-      locale={LOCALE}
-      texts={TEXTS}
-      hero={HOME_HERO}
-      featureImages={FEATURE_IMAGES}
-      jsonLd={JSON_LD}
-      learnMoreText="了解更多"
-    />
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON_LD }} />
+      <CroHomeTemplate locale={LOCALE} texts={TEXTS} cro={CRO} count={restaurantCount()} />
+    </>
   );
 }

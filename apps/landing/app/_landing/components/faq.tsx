@@ -7,14 +7,17 @@ const WHATSAPP_NUMBER = "34637621754";
 
 interface FaqProps {
   texts: LandingTexts["faq"];
+  /** Single centered column instead of the default two-column (sticky header
+   *  left, questions right) layout. */
+  centered?: boolean;
 }
 
-export function Faq({ texts }: FaqProps) {
+export function Faq({ texts, centered = false }: FaqProps) {
   const wa = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(texts.whatsappPrefill)}`;
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-start gap-10 lg:gap-14 w-full">
-      <div className="flex flex-col items-center text-center lg:items-start lg:text-start lg:sticky lg:top-24">
+    <div className={centered ? "flex flex-col items-center gap-10 w-full max-w-3xl mx-auto" : "grid grid-cols-1 lg:grid-cols-2 lg:items-start gap-10 lg:gap-14 w-full"}>
+      <div className={centered ? "flex flex-col items-center text-center w-full" : "flex flex-col items-center text-center lg:items-start lg:text-start lg:sticky lg:top-24"}>
         <h2 className="text-[2rem] sm:text-[2.5rem] lg:text-[3rem] xl:text-[3.25rem] font-medium tracking-tight mb-3 leading-[1.05]">
           {texts.heading}{" "}
           <span className="bg-gradient-to-br from-primary to-amber-400 bg-clip-text text-transparent">

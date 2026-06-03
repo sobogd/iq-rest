@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { HomeTemplate } from "@/app/_landing/templates/home-template";
+import { CroHomeTemplate } from "@/app/_landing/templates/cro-home-template";
 import { TEXTS } from "./texts";
+import { CRO } from "./cro";
+import { restaurantCount } from "@/lib/restaurant-count";
 import { homeAlternates } from "@/lib/hreflang";
 import { SCHEMA_PRICE_BASIC_EUR } from "@/lib/pricing";
 
@@ -10,19 +12,7 @@ export const revalidate = false;
 const LOCALE = "pl";
 const SITE = "https://iq-rest.com";
 
-const HOME_HERO = {
-  title: "Wszystko, czego Twoja restauracja potrzebuje.",
-  titleAccent: "Na jednej platformie.",
-  sub: "Menu, przyjmowanie zamówień, rezerwacje, ekran kuchenny i tłumaczenie AI — jedna platforma zamiast pięciu oddzielnych usług. Wybierz funkcję poniżej, aby dowiedzieć się więcej.",
-  imageAlt: "Gość filtruje menu QR według alergenów w telefonie, podczas gdy właściciel edytuje listę na tablecie",
-};
 
-const FEATURE_IMAGES: Record<string, string> = {
-  "Cyfrowe menu": "/landing/hero-cafe.webp",
-  "Zamówienia": "/landing/feature-orders.webp",
-  "Rezerwacja": "/landing/feature-reservation.webp",
-  "KDS": "/landing/feature-kitchen.webp",
-};
 
 const JSON_LD = JSON.stringify({
   "@context": "https://schema.org",
@@ -63,13 +53,9 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <HomeTemplate
-      locale={LOCALE}
-      texts={TEXTS}
-      hero={HOME_HERO}
-      featureImages={FEATURE_IMAGES}
-      jsonLd={JSON_LD}
-      learnMoreText="Dowiedz się więcej"
-    />
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON_LD }} />
+      <CroHomeTemplate locale={LOCALE} texts={TEXTS} cro={CRO} count={restaurantCount()} />
+    </>
   );
 }

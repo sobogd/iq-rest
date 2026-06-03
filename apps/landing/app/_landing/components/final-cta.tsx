@@ -9,11 +9,13 @@ interface FinalCtaProps {
   microcopy: string;
   locale: string;
   demoVariant?: DemoVariant;
+  /** Stack and center everything instead of the default heading-left / CTA-right row. */
+  centered?: boolean;
 }
 
-export function FinalCta({ texts, ctaText, demoText, microcopy, locale, demoVariant = "phone" }: FinalCtaProps) {
+export function FinalCta({ texts, ctaText, demoText, microcopy, locale, demoVariant = "phone", centered = false }: FinalCtaProps) {
   return (
-    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 lg:gap-10 text-center lg:text-start w-full">
+    <div className={centered ? "flex flex-col items-center text-center gap-6 w-full max-w-3xl mx-auto" : "flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 lg:gap-10 text-center lg:text-start w-full"}>
       <div className="flex-1 min-w-0">
         <h2 className="text-[2rem] sm:text-[2.5rem] lg:text-[3rem] xl:text-[3.25rem] font-medium tracking-tight leading-[1.05] mb-3">
           {texts.heading}{" "}
@@ -25,7 +27,7 @@ export function FinalCta({ texts, ctaText, demoText, microcopy, locale, demoVari
           {texts.sub}
         </p>
       </div>
-      <div className="shrink-0 flex justify-center lg:justify-end">
+      <div className={centered ? "shrink-0 flex justify-center" : "shrink-0 flex justify-center lg:justify-end"}>
         <CtaButton
           text={ctaText}
           microcopy={microcopy}

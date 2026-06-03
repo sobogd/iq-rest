@@ -1,0 +1,75 @@
+import {
+  Languages,
+  ChefHat,
+  CalendarCheck,
+  Receipt,
+  ScanLine,
+  Globe,
+  BarChart3,
+  QrCode,
+  Smartphone,
+  Palette,
+} from "lucide-react";
+import type { CroCopy } from "@/app/_landing/templates/cro-home-template";
+
+export const CRO: CroCopy = {
+  hero: {
+    verticals: ["Restavracije","Kavarne","Bari","Picerije"],
+    title: "Vaša restavracija,",
+    titleAccent: "popolnoma digitalna v 5 minutah.",
+    sub: "Popolna platforma za vodenje sodobne restavracije — lepa, vse na enem mestu, brez tehničnega znanja.",
+  },
+
+  heroMicrocopy: "{count} restavracij · 14 dni brezplačno · Brez kartice",
+  seeIncluded: "Kaj je vključeno",
+
+  trust: [
+    { kind: "num", value: 35, label: "Jezikov" },
+    { kind: "text", value: "24/7", label: "Rezervacije" },
+    { kind: "num", value: 5, suffix: " min", label: "Zagon" },
+    { kind: "count", label: "Restavracij" },
+  ],
+
+  bundle: {
+    heading: "Vse, na čemer temelji vaša restavracija.",
+    headingAccent: "V eni aplikaciji.",
+    sub: "Meni, kuhinja in rezervacije na enem mestu — sodobno, hitro in zasnovano za to, kako restavracije resnično delujejo. Brez dodatkov, brez plačila po funkciji.",
+  },
+
+  benefits: [
+    { Icon: Languages, tag: "Digitalni meni", title: "Meni, ki je videti kot spletna stran, ne kot PDF.", bullets: ["35 jezikov z UI","Premium oblikovanje","Cene takoj posodobljene"], image: "/landing/feature-design.webp", imageAlt: "Dva telefona na mizi v kavarni: pozdravni zaslon digitalnega menija in kontaktna stran z zemljevidom" },
+    { Icon: ChefHat, tag: "Kuhinjski zaslon", title: "Kuhinja, končno brez papirja.", bullets: ["V živo na zaslonu","Opombe in alergeni","Tablica ali telefon"], image: "/landing/feature-kds-cards.webp", imageAlt: "Tablica na pultu prikazuje kuhinjski zaslon z naročili po mizah" },
+    { Icon: CalendarCheck, tag: "Rezervacije", title: "Mize, ki se rezervirajo same, 24/7.", bullets: ["Samopostrežna rezervacija","Samodejna potrditev","Koledar po mizah"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Dve tablici prikazujeta koledar rezervacij: dnevni pogled po mizah in mesečni pogled" },
+    { Icon: Receipt, tag: "Naročila pri mizi", title: "Sprejemajte naročila brez bloka — izbirno.", bullets: ["Gost ali natakar","Naravnost v kuhinjo","Vklop/izklop kadarkoli"], image: "/landing/feature-orders.webp", imageAlt: "Natakar sprejme naročilo pri mizi prek telefona, prispe na kuhinjski zaslon" },
+  ],
+
+  seeDetails: "Podrobnosti",
+
+  extras: {
+    heading: "In vse ostalo je vključeno.",
+    items: [
+      { Icon: ScanLine, label: "UI digitalizira vaš papirnati meni v 60 sekundah" },
+      { Icon: QrCode, label: "Edinstvena QR koda za vsako mizo" },
+      { Icon: Smartphone, label: "Brez aplikacije za goste — odpre se v brskalniku" },
+      { Icon: Globe, label: "Lastna domena s SSL" },
+      { Icon: BarChart3, label: "Analitika prodaje: prihodki, najboljše jedi, ure" },
+      { Icon: Palette, label: "Oznake alergenov in diet za filtriranje" },
+    ],
+  },
+
+  midCta: {
+    heading: "Ena aplikacija namesto petih.",
+    sub: "Brez žongliranja z ločenimi orodji za meni, kuhinjo in rezervacije — vse na enem mestu, na katerem koli telefonu ali tablici, brez namestitve.",
+  },
+
+  how: {
+    heading: "Pripravljeno v 5 minutah",
+    sub: "Štirje koraki. Brez namestitve, brez tehnične nastavitve, brez kartice.",
+    steps: [
+      { n: "1", t: "Vrsta in ime", d: "Vrsta lokala in ime — to je celotna registracija." },
+      { n: "2", t: "Prijavite se", d: "E-pošta ali Google. Brez kartice." },
+      { n: "3", t: "Dodajte meni", d: "Vnesite ga ali pustite UI, da skenira papirnati meni." },
+      { n: "4", t: "Ste v živo", d: "Meni, kuhinja in rezervacije — pripravljeno." },
+    ],
+  },
+};

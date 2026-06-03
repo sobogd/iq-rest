@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { HomeTemplate } from "@/app/_landing/templates/home-template";
+import { CroHomeTemplate } from "@/app/_landing/templates/cro-home-template";
 import { TEXTS } from "./texts";
+import { CRO } from "./cro";
+import { restaurantCount } from "@/lib/restaurant-count";
 import { homeAlternates } from "@/lib/hreflang";
 import { SCHEMA_PRICE_BASIC_EUR } from "@/lib/pricing";
 
@@ -10,19 +12,7 @@ export const revalidate = false;
 const LOCALE = "is";
 const SITE = "https://iq-rest.com";
 
-const HOME_HERO = {
-  title: "Allt sem veitingastaðurinn þinn þarf.",
-  titleAccent: "Á einum vettvangi.",
-  sub: "Matseðill, pantanataka, bókanir, eldhússkjár og gervigreindar þýðing — einn vettvangur í stað fimm aðskildra þjónustna. Veldu eiginleika hér að neðan til að læra meira.",
-  imageAlt: "Gestur síar QR-matseðilinn eftir ofnæmisvöldum í símanum á meðan eigandinn breytir listanum í spjaldtölvu",
-};
 
-const FEATURE_IMAGES: Record<string, string> = {
-  "Stafrænn matseðill": "/landing/hero-cafe.webp",
-  "Pantanir": "/landing/feature-orders.webp",
-  "Bókun": "/landing/feature-reservation.webp",
-  "KDS": "/landing/feature-kitchen.webp",
-};
 
 const JSON_LD = JSON.stringify({
   "@context": "https://schema.org",
@@ -63,13 +53,9 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <HomeTemplate
-      locale={LOCALE}
-      texts={TEXTS}
-      hero={HOME_HERO}
-      featureImages={FEATURE_IMAGES}
-      jsonLd={JSON_LD}
-      learnMoreText="Lærðu meira"
-    />
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON_LD }} />
+      <CroHomeTemplate locale={LOCALE} texts={TEXTS} cro={CRO} count={restaurantCount()} />
+    </>
   );
 }

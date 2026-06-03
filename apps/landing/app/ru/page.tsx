@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { HomeTemplate } from "@/app/_landing/templates/home-template";
+import { CroHomeTemplate } from "@/app/_landing/templates/cro-home-template";
 import { TEXTS } from "./texts";
+import { CRO } from "./cro";
+import { restaurantCount } from "@/lib/restaurant-count";
 import { homeAlternates } from "@/lib/hreflang";
 import { SCHEMA_PRICE_BASIC_EUR } from "@/lib/pricing";
 
@@ -46,23 +48,7 @@ const JSON_LD = JSON.stringify({
   ],
 }).replace(/</g, "\\u003c");
 
-const HOME_HERO = {
-  title: "Всё для вашего ресторана.",
-  titleAccent: "В одной платформе.",
-  sub: "Меню, приём заказов, бронирование, кухонный дисплей и AI-перевод — единая платформа вместо пяти разных сервисов. Выберите интересующую возможность ниже, чтобы узнать подробнее.",
-  imageAlt: "Гость фильтрует QR-меню по аллергенам в телефоне, пока владелец редактирует список с планшета",
-};
 
-const FEATURE_IMAGES: Record<string, string> = {
-  "Цифровое меню": "/landing/hero-cafe.webp",
-  "Приём заказов": "/landing/feature-orders.webp",
-  "Бронирование": "/landing/feature-reservation.webp",
-  "KDS": "/landing/feature-kitchen.webp",
-  "QR-меню": "/samples/sample-qr-settings.webp",
-  "AI-перевод": "/landing/feature-multilang.webp",
-  "AI-фото": "/landing/burrata.webp",
-  "Мобильное управление": "/landing/feature-mobile.webp",
-};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://iq-rest.com"),
@@ -89,13 +75,9 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <HomeTemplate
-      locale={LOCALE}
-      texts={TEXTS}
-      hero={HOME_HERO}
-      featureImages={FEATURE_IMAGES}
-      jsonLd={JSON_LD}
-      learnMoreText="Подробнее"
-    />
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON_LD }} />
+      <CroHomeTemplate locale={LOCALE} texts={TEXTS} cro={CRO} count={restaurantCount()} />
+    </>
   );
 }

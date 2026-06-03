@@ -202,7 +202,7 @@ export function DemoButton({
                   <X className="w-8 h-8" />
                 </button>
 
-                <div className="absolute inset-0 bg-[#1a1a1a] rounded-[26px] p-2.5 shadow-2xl">
+                <div className="absolute inset-0 bg-[#1a1a1a] rounded-[20px] p-2.5 shadow-2xl">
                   <div ref={screenRef} className="relative w-full h-full bg-[#1a1a1a] rounded-[16px] overflow-hidden">
                     {/* Front camera dot, centered on the long (top) edge. */}
                     <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-[6px] h-[6px] bg-black rounded-full z-10" />
@@ -226,7 +226,7 @@ export function DemoButton({
                 </div>
 
                 <div
-                  className="absolute inset-0 rounded-[26px] pointer-events-none z-20"
+                  className="absolute inset-0 rounded-[20px] pointer-events-none z-20"
                   style={{ boxShadow: "inset 0 0 0 8px #1a1a1a" }}
                 />
               </div>

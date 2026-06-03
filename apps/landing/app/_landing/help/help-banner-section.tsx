@@ -10,9 +10,9 @@ import type { HelpBanner } from "./registry";
 // home, pricing and feature templates. `source` distinguishes where the click
 // came from in analytics (l_help_banner_click_<source>). Section view is
 // auto-tracked via data-section by PageTracker.
-export function HelpBannerSection({ banner, source }: { banner: HelpBanner; source: string }) {
+export function HelpBannerSection({ banner, source, accent = true }: { banner: HelpBanner; source: string; accent?: boolean }) {
   return (
-    <Section id="help-banner" dataSection="help_banner" noContainer accent className="!py-16">
+    <Section id="help-banner" dataSection="help_banner" noContainer accent={accent} className="!py-16">
       <div className="mx-auto max-w-3xl px-4 text-center">
         <h2 className="text-[2rem] sm:text-[2.5rem] lg:text-[3rem] xl:text-[3.25rem] font-medium tracking-tight leading-[1.05] mb-3">{banner.title}</h2>
         <p className="text-base sm:text-lg lg:text-xl text-muted-foreground/70 mb-7 leading-snug">{banner.sub}</p>
