@@ -13,6 +13,7 @@ import { PricingHero } from "../components/pricing-hero";
 import { FeatureJsonLd } from "./feature-json-ld";
 import { getHelpBanner } from "../help/registry";
 import { HelpBannerSection } from "../help/help-banner-section";
+import { stablePrefix, featureKey } from "@/lib/track-keys";
 import type { LandingTexts } from "../types";
 import type { FeatureContent } from "./types";
 
@@ -34,6 +35,9 @@ export function FeatureLandingTemplate({
   chrome,
 }: FeatureLandingTemplateProps) {
   const { locale, subFeatures, hero, scan, faq, trackPrefix } = content;
+  // Locale-stable prefix/page so every language version fires the same events.
+  const prefix = stablePrefix(trackPrefix);
+  const page = featureKey(trackPrefix);
   const subCount = subFeatures.length;
   const helpBanner = getHelpBanner(locale);
   // Board feature pages embed the real dashboard board (landscape tablet
@@ -41,17 +45,17 @@ export function FeatureLandingTemplate({
   // feature. `trackPrefix` carries a locale-stable token on every locale's
   // content (e.g. l_kds / l_en_kds, l_orders, l_bookings) — no per-locale
   // edit needed. Menu/QR pages keep the phone preview.
-  const demoVariant = trackPrefix?.includes("kds")
+  const demoVariant = prefix.includes("kds")
     ? "tablet"
-    : trackPrefix?.includes("orders")
+    : prefix.includes("orders")
       ? "orders"
-      : trackPrefix?.includes("bookings")
+      : prefix.includes("bookings")
         ? "reservations"
         : "phone";
 
   return (
     <main className="relative">
-      <PageTracker />
+      <PageTracker page={page} />
       <FeatureJsonLd content={content} />
       <LandingHeader
         texts={chrome.header}
@@ -70,12 +74,12 @@ export function FeatureLandingTemplate({
         title={hero.headline}
         sub={hero.sub}
         primaryLabel={hero.cta}
-        primaryTrack={`${trackPrefix ?? "l_feature"}_hero_cta`}
+        primaryTrack={`${prefix}_hero_cta`}
         demoText={chrome.demoText}
         demoVariant={demoVariant}
         secondaryLabel={chrome.header.viewFeatures}
         secondaryHref="#features"
-        secondaryTrack={`${trackPrefix ?? "l_feature"}_hero_features`}
+        secondaryTrack={`${prefix}_hero_features`}
         secondaryHideMobile
         secondaryPinRight
         microcopy={chrome.microcopy}
@@ -162,7 +166,7 @@ export function FeatureLandingTemplate({
           demoText={chrome.demoText}
           microcopy={chrome.microcopy}
           texts={chrome.pricingHero!}
-          trackPrefix={`${trackPrefix ?? "l_feature"}_pricing`}
+          trackPrefix={`${prefix}_pricing`}
         />
       </Section>
 

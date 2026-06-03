@@ -63,7 +63,7 @@ export function HelpView({
   const { tipLabel, noteLabel } = doc;
   return (
     <main className="relative">
-      <PageTracker />
+      <PageTracker page="help" />
       <LandingHeader texts={texts.header} locale={locale} featureLinks={texts.footer.featureLinks} />
 
       <Section dataSection="help" noContainer className="!pt-10 md:!pt-12 !pb-16">

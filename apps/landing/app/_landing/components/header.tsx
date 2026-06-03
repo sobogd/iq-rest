@@ -14,6 +14,7 @@ import { dashboardUrl } from "@/lib/dashboard-url";
 import { LOCALE_SLUG_OVERRIDES } from "@/lib/locale-slug-overrides";
 import { localeHome, localePath } from "@/lib/locale-paths";
 import { analytics } from "@/lib/analytics";
+import { featureKeyFromHref } from "@/lib/track-keys";
 import type { LandingTexts } from "../types";
 
 interface HeaderProps {
@@ -142,7 +143,7 @@ export function LandingHeader({
                       key={link.href}
                       href={link.href}
                       prefetch={false}
-                      trackEvent={`l_header_nav_${link.href.replace(/[^a-z0-9]+/gi, "_")}_click`}
+                      trackEvent={`l_header_nav_${featureKeyFromHref(link.href)}_click`}
                       className={navClass(isLinkActive(link.href))}
                     >
                       {link.label}
@@ -238,7 +239,7 @@ export function LandingHeader({
                           key={link.href}
                           href={link.href}
                           prefetch={false}
-                          trackEvent={`l_header_menu_${link.href.replace(/[^a-z0-9]+/gi, "_")}_click`}
+                          trackEvent={`l_header_menu_${featureKeyFromHref(link.href)}_click`}
                           className="text-sm font-medium px-3 py-2 rounded-lg hover:bg-muted/50 transition-colors"
                           onClick={closeMenu}
                         >

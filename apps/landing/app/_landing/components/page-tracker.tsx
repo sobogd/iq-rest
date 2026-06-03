@@ -6,7 +6,6 @@ import { readBillingCurrencyFromDocument } from "@/lib/country-currency-map";
 
 const GCLID_REGEX = /^[A-Za-z0-9_-]{1,256}$/;
 const FBCLID_REGEX = /^[A-Za-z0-9_.-]{1,512}$/;
-const LOCALE_REGEX = /^\/([a-z]{2})(?=\/|$)/;
 const FROM_REGEX = /^[a-z0-9_]{1,32}$/;
 
 // Minimum gap between two consecutive view events for the same section.
@@ -14,14 +13,6 @@ const FROM_REGEX = /^[a-z0-9_]{1,32}$/;
 // of events while a real re-visit (scroll away, scroll back) still fires
 // a new one.
 const SECTION_THROTTLE_MS = 1500;
-
-function pageNameFromPathname(pathname: string, locale: string): string {
-  const prefix = `/${locale}`;
-  let rest = pathname.startsWith(prefix) ? pathname.slice(prefix.length) : pathname;
-  if (rest.startsWith("/")) rest = rest.slice(1);
-  if (!rest) return "home";
-  return rest.replace(/\//g, "_").replace(/-/g, "_").toLowerCase();
-}
 
 function readFromSource(): string | null {
   // First, look at the URL — direct hit before middleware-stripped cookie kicks in
@@ -74,34 +65,25 @@ function fireFbclidEvent(): void {
   analytics.track(`l_fbclid_${fbclid}`);
 }
 
-function firePageEvent(): void {
-  const pathname = window.location.pathname || "/";
-  const localeMatch = pathname.match(LOCALE_REGEX);
-  const locale = localeMatch ? localeMatch[1] : "en";
-  const page = pageNameFromPathname(pathname, locale);
-  analytics.track(`l_page_${locale}_${page}`);
-}
-
 function fireCurrencyEvent(): void {
   // Geo-determined billing currency (from the geo_currency cookie, EUR default).
   // Lowercase: the API's generic-event regex is /^[a-z0-9_]{1,64}$/, so an
   // uppercase currency (e.g. "EUR") would be rejected and the event dropped.
-  analytics.track(`land_currency_${readBillingCurrencyFromDocument().toLowerCase()}`);
+  analytics.track(`l_currency_${readBillingCurrencyFromDocument().toLowerCase()}`);
 }
 
 interface PageTrackerProps {
-  /** Kept for backwards compatibility with feature pages, no longer used —
-   *  every section view now fires `l_section_view_<name>` so the server
-   *  can reconstruct the full scroll journey via event timestamps. */
-  eventPrefix?: string;
+  /** Locale-stable page key (e.g. "home", "pricing", "help", "kds"). Fires
+   *  `l_page_<page>` so the event aggregates across every language version. */
+  page: string;
 }
 
-export function PageTracker(_props: PageTrackerProps = {}) {
+export function PageTracker({ page }: PageTrackerProps) {
   useEffect(() => {
     fireGclidEvent();
     fireFbclidEvent();
     fireFromAndClean();
-    firePageEvent();
+    analytics.track(`l_page_${page}`);
     fireCurrencyEvent();
 
     // Re-fires on every viewport (re-)entry so the server timeline shows
@@ -128,7 +110,8 @@ export function PageTracker(_props: PageTrackerProps = {}) {
     document.querySelectorAll("[data-section]").forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [page]);
 
   return null;
 }

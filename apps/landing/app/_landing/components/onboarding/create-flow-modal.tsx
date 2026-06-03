@@ -13,16 +13,6 @@ import type { CuisineKey } from "./cuisine";
 
 const TOTAL_STEPS = 3;
 
-function slugifyName(name: string): string {
-  const slug = name
-    .toLowerCase()
-    .normalize("NFKD")
-    .replace(/[^a-z0-9]+/g, "_")
-    .replace(/^_+|_+$/g, "")
-    .slice(0, 40);
-  return slug || "empty";
-}
-
 export function CreateFlowModal({
   open,
   mode = "create",
@@ -151,7 +141,7 @@ export function CreateFlowModal({
                       back();
                     }}
                     onContinue={() => {
-                      analytics.track(`l_onb_name_continue_${slugifyName(restaurantName)}`);
+                      analytics.track("l_onb_name_continue");
                       next();
                     }}
                   />

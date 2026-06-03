@@ -38,7 +38,7 @@ export function HomeTemplate({
   const helpBanner = getHelpBanner(locale);
   return (
     <main className="relative">
-      <PageTracker />
+      <PageTracker page="home" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
       <LandingHeader texts={texts.header} locale={locale} useLocalAnchors featureLinks={texts.footer.featureLinks} revealOnScroll />
 
