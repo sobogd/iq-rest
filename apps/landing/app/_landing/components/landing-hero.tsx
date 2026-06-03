@@ -89,7 +89,7 @@ export function LandingHero({
   return (
     <section
       data-section="hero"
-      className={`relative w-full ${heightClass} overflow-hidden flex flex-col text-white`}
+      className={`relative w-full ${heightClass} flex flex-col text-white`}
     >
       <Image
         src={imageSrc}
@@ -117,7 +117,7 @@ export function LandingHero({
         variant="hero"
       />
 
-      <div className="relative flex-1 flex flex-col justify-end w-full px-4 sm:px-6 lg:px-10 xl:px-14 pb-12 sm:pb-16 lg:pb-20">
+      <div className="relative mt-auto flex flex-col w-full px-4 sm:px-6 lg:px-10 xl:px-14 pt-6 pb-12 sm:pb-16 lg:pb-20">
         <div className={`w-full max-w-3xl ${centered ? "mx-auto text-center" : "lg:max-w-[65%]"}`}>
           {verticals.length ? (
             <div className={`flex flex-wrap items-center gap-x-3 gap-y-1.5 mb-5 ${centered ? "justify-center" : "max-w-[65%] sm:max-w-none"}`}>
