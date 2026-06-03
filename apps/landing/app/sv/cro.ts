@@ -37,10 +37,10 @@ export const CRO: CroCopy = {
   },
 
   benefits: [
-    { Icon: Languages, tag: "Digital meny", title: "En meny som ser ut som en sajt, inte en PDF.", bullets: ["35 AI-språk","Premiumdesign","Priser direkt"], image: "/landing/feature-design.webp", imageAlt: "Två telefoner på ett kafébord: den digitala menyns startskärm och kontaktsidan med karta" },
-    { Icon: ChefHat, tag: "Köksskärm", title: "Köket, äntligen papperslöst.", bullets: ["Live på skärmen","Noteringar & allergener","Surfplatta eller telefon"], image: "/landing/feature-kds-cards.webp", imageAlt: "Surfplatta på baren visar köksskärmen med beställningar per bord" },
-    { Icon: CalendarCheck, tag: "Bokningar", title: "Bord som bokar sig själva, 24/7.", bullets: ["Boka själv","Automatisk bekräftelse","Kalender per bord"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Två surfplattor visar bokningskalendern: dagsvy per bord och månadsvy" },
-    { Icon: Receipt, tag: "Beställ vid bordet", title: "Ta beställningar utan block — valfritt.", bullets: ["Gäst eller servitör","Direkt till köket","På/av när du vill"], image: "/landing/feature-orders.webp", imageAlt: "Servitör tar en beställning vid bordet med telefonen, den hamnar på köksskärmen" },
+    { Icon: Languages, tag: "Digital meny", title: "En meny som säljer.", bullets: ["35 AI-språk","Premiumdesign","Priser direkt"], image: "/landing/feature-design.webp", imageAlt: "Två telefoner på ett kafébord: den digitala menyns startskärm och kontaktsidan med karta" },
+    { Icon: ChefHat, tag: "Köksskärm", title: "Laga snabbare, missa inget.", bullets: ["Live på skärmen","Noteringar & allergener","Surfplatta eller telefon"], image: "/landing/feature-kds-cards.webp", imageAlt: "Surfplatta på baren visar köksskärmen med beställningar per bord" },
+    { Icon: CalendarCheck, tag: "Bokningar", title: "Bokningar på autopilot.", bullets: ["Boka själv","Automatisk bekräftelse","Kalender per bord"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Två surfplattor visar bokningskalendern: dagsvy per bord och månadsvy" },
+    { Icon: Receipt, tag: "Beställ vid bordet", title: "Beställningar direkt till köket.", bullets: ["Gäst eller servitör","Direkt till köket","På/av när du vill"], image: "/landing/feature-orders.webp", imageAlt: "Servitör tar en beställning vid bordet med telefonen, den hamnar på köksskärmen" },
   ],
 
   seeDetails: "Se detaljer",

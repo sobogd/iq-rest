@@ -37,10 +37,10 @@ export const CRO: CroCopy = {
   },
 
   benefits: [
-    { Icon: Languages, tag: "Menu digitale", title: "Un menu che sembra un sito, non un PDF.", bullets: ["35 lingue con IA","Design premium","Prezzi aggiornati subito"], image: "/landing/feature-design.webp", imageAlt: "Due telefoni sul tavolo di un bar: la schermata di benvenuto del menu digitale e la pagina contatti con la mappa" },
-    { Icon: ChefHat, tag: "Display di cucina", title: "La cucina, finalmente senza carta.", bullets: ["Live sullo schermo","Note e allergeni","Tablet o telefono"], image: "/landing/feature-kds-cards.webp", imageAlt: "Tablet sul bancone che mostra il display di cucina con le comande per tavolo" },
-    { Icon: CalendarCheck, tag: "Prenotazioni", title: "Tavoli che si prenotano da soli, 24/7.", bullets: ["Prenotazione autonoma","Conferma automatica","Calendario per tavolo"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Due tablet che mostrano il calendario prenotazioni: vista giornaliera per tavolo e vista mensile" },
-    { Icon: Receipt, tag: "Ordini al tavolo", title: "Prendi le comande senza blocchetto — opzionale.", bullets: ["Cliente o cameriere","Dritto in cucina","Attivalo quando vuoi"], image: "/landing/feature-orders.webp", imageAlt: "Un cameriere prende un ordine al tavolo dal telefono, arriva sul display di cucina" },
+    { Icon: Languages, tag: "Menu digitale", title: "Un menu che vende.", bullets: ["35 lingue con IA","Design premium","Prezzi aggiornati subito"], image: "/landing/feature-design.webp", imageAlt: "Due telefoni sul tavolo di un bar: la schermata di benvenuto del menu digitale e la pagina contatti con la mappa" },
+    { Icon: ChefHat, tag: "Display di cucina", title: "Cucina più in fretta, senza errori.", bullets: ["Live sullo schermo","Note e allergeni","Tablet o telefono"], image: "/landing/feature-kds-cards.webp", imageAlt: "Tablet sul bancone che mostra il display di cucina con le comande per tavolo" },
+    { Icon: CalendarCheck, tag: "Prenotazioni", title: "Prenotazioni in automatico.", bullets: ["Prenotazione autonoma","Conferma automatica","Calendario per tavolo"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Due tablet che mostrano il calendario prenotazioni: vista giornaliera per tavolo e vista mensile" },
+    { Icon: Receipt, tag: "Ordini al tavolo", title: "Ordini dritti in cucina.", bullets: ["Cliente o cameriere","Dritto in cucina","Attivalo quando vuoi"], image: "/landing/feature-orders.webp", imageAlt: "Un cameriere prende un ordine al tavolo dal telefono, arriva sul display di cucina" },
   ],
 
   seeDetails: "Vedi dettagli",

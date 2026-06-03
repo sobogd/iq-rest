@@ -37,10 +37,10 @@ export const CRO: CroCopy = {
   },
 
   benefits: [
-    { Icon: Languages, tag: "Digitalni meni", title: "Meni, ki je videti kot spletna stran, ne kot PDF.", bullets: ["35 jezikov z UI","Premium oblikovanje","Cene takoj posodobljene"], image: "/landing/feature-design.webp", imageAlt: "Dva telefona na mizi v kavarni: pozdravni zaslon digitalnega menija in kontaktna stran z zemljevidom" },
-    { Icon: ChefHat, tag: "Kuhinjski zaslon", title: "Kuhinja, končno brez papirja.", bullets: ["V živo na zaslonu","Opombe in alergeni","Tablica ali telefon"], image: "/landing/feature-kds-cards.webp", imageAlt: "Tablica na pultu prikazuje kuhinjski zaslon z naročili po mizah" },
-    { Icon: CalendarCheck, tag: "Rezervacije", title: "Mize, ki se rezervirajo same, 24/7.", bullets: ["Samopostrežna rezervacija","Samodejna potrditev","Koledar po mizah"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Dve tablici prikazujeta koledar rezervacij: dnevni pogled po mizah in mesečni pogled" },
-    { Icon: Receipt, tag: "Naročila pri mizi", title: "Sprejemajte naročila brez bloka — izbirno.", bullets: ["Gost ali natakar","Naravnost v kuhinjo","Vklop/izklop kadarkoli"], image: "/landing/feature-orders.webp", imageAlt: "Natakar sprejme naročilo pri mizi prek telefona, prispe na kuhinjski zaslon" },
+    { Icon: Languages, tag: "Digitalni meni", title: "Meni, ki prodaja.", bullets: ["35 jezikov z UI","Premium oblikovanje","Cene takoj posodobljene"], image: "/landing/feature-design.webp", imageAlt: "Dva telefona na mizi v kavarni: pozdravni zaslon digitalnega menija in kontaktna stran z zemljevidom" },
+    { Icon: ChefHat, tag: "Kuhinjski zaslon", title: "Kuhajte hitreje, brez spregledov.", bullets: ["V živo na zaslonu","Opombe in alergeni","Tablica ali telefon"], image: "/landing/feature-kds-cards.webp", imageAlt: "Tablica na pultu prikazuje kuhinjski zaslon z naročili po mizah" },
+    { Icon: CalendarCheck, tag: "Rezervacije", title: "Rezervacije na samodejnem pilotu.", bullets: ["Samopostrežna rezervacija","Samodejna potrditev","Koledar po mizah"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Dve tablici prikazujeta koledar rezervacij: dnevni pogled po mizah in mesečni pogled" },
+    { Icon: Receipt, tag: "Naročila pri mizi", title: "Naročila naravnost v kuhinjo.", bullets: ["Gost ali natakar","Naravnost v kuhinjo","Vklop/izklop kadarkoli"], image: "/landing/feature-orders.webp", imageAlt: "Natakar sprejme naročilo pri mizi prek telefona, prispe na kuhinjski zaslon" },
   ],
 
   seeDetails: "Podrobnosti",

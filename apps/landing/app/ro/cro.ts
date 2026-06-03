@@ -37,10 +37,10 @@ export const CRO: CroCopy = {
   },
 
   benefits: [
-    { Icon: Languages, tag: "Meniu digital", title: "Un meniu care arată ca un site, nu ca un PDF.", bullets: ["35 de limbi cu AI","Design premium","Prețuri actualizate instant"], image: "/landing/feature-design.webp", imageAlt: "Două telefoane pe o masă de cafenea: ecranul de bun venit al meniului digital și pagina de contact cu hartă" },
-    { Icon: ChefHat, tag: "Ecran de bucătărie", title: "Bucătăria, în sfârșit fără hârtie.", bullets: ["Live pe ecran","Note și alergeni","Tabletă sau telefon"], image: "/landing/feature-kds-cards.webp", imageAlt: "Tabletă pe bar afișând ecranul de bucătărie cu comenzi pe mese" },
-    { Icon: CalendarCheck, tag: "Rezervări", title: "Mese care se rezervă singure, 24/7.", bullets: ["Rezervare self-service","Confirmare automată","Calendar pe mese"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Două tablete afișând calendarul de rezervări: vizualizare zilnică pe mese și vizualizare lunară" },
-    { Icon: Receipt, tag: "Comenzi la masă", title: "Preia comenzi fără carnet — opțional.", bullets: ["Client sau ospătar","Direct la bucătărie","Pornit/oprit oricând"], image: "/landing/feature-orders.webp", imageAlt: "Un ospătar preia o comandă la masă de pe telefon, ajunge pe ecranul de bucătărie" },
+    { Icon: Languages, tag: "Meniu digital", title: "Un meniu care vinde.", bullets: ["35 de limbi cu AI","Design premium","Prețuri actualizate instant"], image: "/landing/feature-design.webp", imageAlt: "Două telefoane pe o masă de cafenea: ecranul de bun venit al meniului digital și pagina de contact cu hartă" },
+    { Icon: ChefHat, tag: "Ecran de bucătărie", title: "Gătește mai repede, fără scăpări.", bullets: ["Live pe ecran","Note și alergeni","Tabletă sau telefon"], image: "/landing/feature-kds-cards.webp", imageAlt: "Tabletă pe bar afișând ecranul de bucătărie cu comenzi pe mese" },
+    { Icon: CalendarCheck, tag: "Rezervări", title: "Rezervări pe pilot automat.", bullets: ["Rezervare self-service","Confirmare automată","Calendar pe mese"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Două tablete afișând calendarul de rezervări: vizualizare zilnică pe mese și vizualizare lunară" },
+    { Icon: Receipt, tag: "Comenzi la masă", title: "Comenzile direct la bucătărie.", bullets: ["Client sau ospătar","Direct la bucătărie","Pornit/oprit oricând"], image: "/landing/feature-orders.webp", imageAlt: "Un ospătar preia o comandă la masă de pe telefon, ajunge pe ecranul de bucătărie" },
   ],
 
   seeDetails: "Vezi detalii",

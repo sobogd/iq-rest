@@ -37,10 +37,10 @@ export const CRO: CroCopy = {
   },
 
   benefits: [
-    { Icon: Languages, tag: "Menu digital", title: "Un menu qui ressemble à un site, pas à un PDF.", bullets: ["35 langues par IA","Design premium","Prix mis à jour en direct"], image: "/landing/feature-design.webp", imageAlt: "Deux téléphones sur une table de café : l'écran d'accueil du menu digital et la page contact avec une carte" },
-    { Icon: ChefHat, tag: "Écran cuisine", title: "La cuisine, enfin sans papier.", bullets: ["En direct à l'écran","Notes & allergènes","Tablette ou téléphone"], image: "/landing/feature-kds-cards.webp", imageAlt: "Tablette sur le comptoir affichant l'écran cuisine avec les commandes par table" },
-    { Icon: CalendarCheck, tag: "Réservations", title: "Des tables qui se réservent seules, 24/7.", bullets: ["Réservation en autonomie","Confirmation automatique","Calendrier par table"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Deux tablettes affichant le calendrier de réservations : vue du jour par table et vue mensuelle" },
-    { Icon: Receipt, tag: "Commande à table", title: "Prenez les commandes sans carnet — en option.", bullets: ["Client ou serveur","Direct en cuisine","Activable à tout moment"], image: "/landing/feature-orders.webp", imageAlt: "Un serveur prend une commande à table sur son téléphone, elle arrive sur l'écran cuisine" },
+    { Icon: Languages, tag: "Menu digital", title: "Un menu qui fait vendre.", bullets: ["35 langues par IA","Design premium","Prix mis à jour en direct"], image: "/landing/feature-design.webp", imageAlt: "Deux téléphones sur une table de café : l'écran d'accueil du menu digital et la page contact avec une carte" },
+    { Icon: ChefHat, tag: "Écran cuisine", title: "Cuisinez plus vite, sans rien rater.", bullets: ["En direct à l'écran","Notes & allergènes","Tablette ou téléphone"], image: "/landing/feature-kds-cards.webp", imageAlt: "Tablette sur le comptoir affichant l'écran cuisine avec les commandes par table" },
+    { Icon: CalendarCheck, tag: "Réservations", title: "Réservations en pilote automatique.", bullets: ["Réservation en autonomie","Confirmation automatique","Calendrier par table"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Deux tablettes affichant le calendrier de réservations : vue du jour par table et vue mensuelle" },
+    { Icon: Receipt, tag: "Commande à table", title: "Les commandes droit en cuisine.", bullets: ["Client ou serveur","Direct en cuisine","Activable à tout moment"], image: "/landing/feature-orders.webp", imageAlt: "Un serveur prend une commande à table sur son téléphone, elle arrive sur l'écran cuisine" },
   ],
 
   seeDetails: "Voir les détails",

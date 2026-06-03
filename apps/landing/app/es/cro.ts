@@ -37,10 +37,10 @@ export const CRO: CroCopy = {
   },
 
   benefits: [
-    { Icon: Languages, tag: "Carta digital", title: "Una carta que parece una web, no un PDF.", bullets: ["35 idiomas con IA","Diseño premium","Precios al instante"], image: "/landing/feature-design.webp", imageAlt: "Dos móviles en la mesa de un café: la pantalla de bienvenida de la carta digital y la página de contacto con un mapa" },
-    { Icon: ChefHat, tag: "Pantalla de cocina", title: "La cocina, por fin sin papeles.", bullets: ["En vivo en pantalla","Notas y alérgenos","Tablet o móvil"], image: "/landing/feature-kds-cards.webp", imageAlt: "Tablet en la barra mostrando la pantalla de cocina con comandas por mesa" },
-    { Icon: CalendarCheck, tag: "Reservas", title: "Mesas que se reservan solas, 24/7.", bullets: ["Reserva sin llamadas","Confirmación automática","Calendario por mesa"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Dos tablets mostrando el calendario de reservas: vista diaria por mesa y vista mensual" },
-    { Icon: Receipt, tag: "Pedidos en mesa", title: "Toma pedidos sin libretas — opcional.", bullets: ["Cliente o camarero","Directo a cocina","Actívalo cuando quieras"], image: "/landing/feature-orders.webp", imageAlt: "Camarero toma un pedido en la mesa desde el móvil y llega a la pantalla de cocina" },
+    { Icon: Languages, tag: "Carta digital", title: "Una carta que vende.", bullets: ["35 idiomas con IA","Diseño premium","Precios al instante"], image: "/landing/feature-design.webp", imageAlt: "Dos móviles en la mesa de un café: la pantalla de bienvenida de la carta digital y la página de contacto con un mapa" },
+    { Icon: ChefHat, tag: "Pantalla de cocina", title: "Cocina más rápido, sin fallos.", bullets: ["En vivo en pantalla","Notas y alérgenos","Tablet o móvil"], image: "/landing/feature-kds-cards.webp", imageAlt: "Tablet en la barra mostrando la pantalla de cocina con comandas por mesa" },
+    { Icon: CalendarCheck, tag: "Reservas", title: "Reservas en piloto automático.", bullets: ["Reserva sin llamadas","Confirmación automática","Calendario por mesa"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Dos tablets mostrando el calendario de reservas: vista diaria por mesa y vista mensual" },
+    { Icon: Receipt, tag: "Pedidos en mesa", title: "Pedidos directos a cocina.", bullets: ["Cliente o camarero","Directo a cocina","Actívalo cuando quieras"], image: "/landing/feature-orders.webp", imageAlt: "Camarero toma un pedido en la mesa desde el móvil y llega a la pantalla de cocina" },
   ],
 
   seeDetails: "Ver detalles",

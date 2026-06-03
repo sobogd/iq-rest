@@ -37,10 +37,10 @@ export const CRO: CroCopy = {
   },
 
   benefits: [
-    { Icon: Languages, tag: "Digitālā ēdienkarte", title: "Ēdienkarte, kas izskatās kā mājaslapa, nevis PDF.", bullets: ["35 valodas ar MI","Premium dizains","Cenas uzreiz aktuālas"], image: "/landing/feature-design.webp", imageAlt: "Divi telefoni uz kafejnīcas galda: digitālās ēdienkartes sākuma ekrāns un kontaktu lapa ar karti" },
-    { Icon: ChefHat, tag: "Virtuves ekrāns", title: "Virtuve beidzot bez papīra.", bullets: ["Tiešraidē ekrānā","Piezīmes un alergēni","Planšete vai telefons"], image: "/landing/feature-kds-cards.webp", imageAlt: "Planšete pie bāra rāda virtuves ekrānu ar pasūtījumiem pa galdiem" },
-    { Icon: CalendarCheck, tag: "Rezervācijas", title: "Galdi, kas rezervējas paši, 24/7.", bullets: ["Pašapkalpošanās rezervācija","Automātisks apstiprinājums","Kalendārs pa galdiem"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Divas planšetes rāda rezervāciju kalendāru: dienas skats pa galdiem un mēneša skats" },
-    { Icon: Receipt, tag: "Pasūtījumi pie galda", title: "Pieņemiet pasūtījumus bez bloknota — pēc izvēles.", bullets: ["Viesis vai viesmīlis","Tieši uz virtuvi","Ieslēdziet jebkurā laikā"], image: "/landing/feature-orders.webp", imageAlt: "Viesmīlis pieņem pasūtījumu pie galda telefonā, tas nonāk virtuves ekrānā" },
+    { Icon: Languages, tag: "Digitālā ēdienkarte", title: "Ēdienkarte, kas pārdod.", bullets: ["35 valodas ar MI","Premium dizains","Cenas uzreiz aktuālas"], image: "/landing/feature-design.webp", imageAlt: "Divi telefoni uz kafejnīcas galda: digitālās ēdienkartes sākuma ekrāns un kontaktu lapa ar karti" },
+    { Icon: ChefHat, tag: "Virtuves ekrāns", title: "Gatavojiet ātrāk, nepalaidiet garām neko.", bullets: ["Tiešraidē ekrānā","Piezīmes un alergēni","Planšete vai telefons"], image: "/landing/feature-kds-cards.webp", imageAlt: "Planšete pie bāra rāda virtuves ekrānu ar pasūtījumiem pa galdiem" },
+    { Icon: CalendarCheck, tag: "Rezervācijas", title: "Rezervācijas autopilotā.", bullets: ["Pašapkalpošanās rezervācija","Automātisks apstiprinājums","Kalendārs pa galdiem"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Divas planšetes rāda rezervāciju kalendāru: dienas skats pa galdiem un mēneša skats" },
+    { Icon: Receipt, tag: "Pasūtījumi pie galda", title: "Pasūtījumi tieši uz virtuvi.", bullets: ["Viesis vai viesmīlis","Tieši uz virtuvi","Ieslēdziet jebkurā laikā"], image: "/landing/feature-orders.webp", imageAlt: "Viesmīlis pieņem pasūtījumu pie galda telefonā, tas nonāk virtuves ekrānā" },
   ],
 
   seeDetails: "Skatīt vairāk",

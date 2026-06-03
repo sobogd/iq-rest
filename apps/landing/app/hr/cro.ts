@@ -37,10 +37,10 @@ export const CRO: CroCopy = {
   },
 
   benefits: [
-    { Icon: Languages, tag: "Digitalni jelovnik", title: "Jelovnik koji izgleda kao web, ne kao PDF.", bullets: ["35 jezika s UI","Premium dizajn","Cijene odmah ažurne"], image: "/landing/feature-design.webp", imageAlt: "Dva telefona na stolu u kafiću: početni zaslon digitalnog jelovnika i kontakt stranica s kartom" },
-    { Icon: ChefHat, tag: "Kuhinjski zaslon", title: "Kuhinja, napokon bez papira.", bullets: ["Uživo na zaslonu","Bilješke i alergeni","Tablet ili telefon"], image: "/landing/feature-kds-cards.webp", imageAlt: "Tablet na šanku prikazuje kuhinjski zaslon s narudžbama po stolovima" },
-    { Icon: CalendarCheck, tag: "Rezervacije", title: "Stolovi koji se sami rezerviraju, 24/7.", bullets: ["Samostalna rezervacija","Automatska potvrda","Kalendar po stolovima"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Dva tableta prikazuju kalendar rezervacija: dnevni prikaz po stolovima i mjesečni prikaz" },
-    { Icon: Receipt, tag: "Narudžbe za stolom", title: "Primajte narudžbe bez bloka — opcionalno.", bullets: ["Gost ili konobar","Ravno u kuhinju","Uključite kad želite"], image: "/landing/feature-orders.webp", imageAlt: "Konobar prima narudžbu za stolom s telefona, stiže na kuhinjski zaslon" },
+    { Icon: Languages, tag: "Digitalni jelovnik", title: "Jelovnik koji prodaje.", bullets: ["35 jezika s UI","Premium dizajn","Cijene odmah ažurne"], image: "/landing/feature-design.webp", imageAlt: "Dva telefona na stolu u kafiću: početni zaslon digitalnog jelovnika i kontakt stranica s kartom" },
+    { Icon: ChefHat, tag: "Kuhinjski zaslon", title: "Kuhajte brže, bez propusta.", bullets: ["Uživo na zaslonu","Bilješke i alergeni","Tablet ili telefon"], image: "/landing/feature-kds-cards.webp", imageAlt: "Tablet na šanku prikazuje kuhinjski zaslon s narudžbama po stolovima" },
+    { Icon: CalendarCheck, tag: "Rezervacije", title: "Rezervacije na autopilotu.", bullets: ["Samostalna rezervacija","Automatska potvrda","Kalendar po stolovima"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Dva tableta prikazuju kalendar rezervacija: dnevni prikaz po stolovima i mjesečni prikaz" },
+    { Icon: Receipt, tag: "Narudžbe za stolom", title: "Narudžbe ravno u kuhinju.", bullets: ["Gost ili konobar","Ravno u kuhinju","Uključite kad želite"], image: "/landing/feature-orders.webp", imageAlt: "Konobar prima narudžbu za stolom s telefona, stiže na kuhinjski zaslon" },
   ],
 
   seeDetails: "Detalji",

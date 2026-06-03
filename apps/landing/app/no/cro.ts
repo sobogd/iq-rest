@@ -37,10 +37,10 @@ export const CRO: CroCopy = {
   },
 
   benefits: [
-    { Icon: Languages, tag: "Digital meny", title: "En meny som ser ut som et nettsted, ikke en PDF.", bullets: ["35 AI-språk","Premium-design","Priser oppdatert straks"], image: "/landing/feature-design.webp", imageAlt: "To telefoner på et kafébord: den digitale menyens velkomstskjerm og kontaktsiden med kart" },
-    { Icon: ChefHat, tag: "Kjøkkenskjerm", title: "Kjøkkenet, endelig papirløst.", bullets: ["Live på skjermen","Notater og allergener","Nettbrett eller telefon"], image: "/landing/feature-kds-cards.webp", imageAlt: "Nettbrett på baren viser kjøkkenskjermen med bestillinger per bord" },
-    { Icon: CalendarCheck, tag: "Reservasjoner", title: "Bord som reserverer seg selv, 24/7.", bullets: ["Reserver selv","Automatisk bekreftelse","Kalender per bord"], image: "/landing/feature-booking-calendar.webp", imageAlt: "To nettbrett viser reservasjonskalenderen: dagsvisning per bord og månedsvisning" },
-    { Icon: Receipt, tag: "Bestill ved bordet", title: "Ta bestillinger uten blokk — valgfritt.", bullets: ["Gjest eller servitør","Rett til kjøkkenet","På/av når du vil"], image: "/landing/feature-orders.webp", imageAlt: "Servitør tar en bestilling ved bordet på telefonen, den havner på kjøkkenskjermen" },
+    { Icon: Languages, tag: "Digital meny", title: "En meny som selger.", bullets: ["35 AI-språk","Premium-design","Priser oppdatert straks"], image: "/landing/feature-design.webp", imageAlt: "To telefoner på et kafébord: den digitale menyens velkomstskjerm og kontaktsiden med kart" },
+    { Icon: ChefHat, tag: "Kjøkkenskjerm", title: "Lag mat raskere, gå glipp av ingenting.", bullets: ["Live på skjermen","Notater og allergener","Nettbrett eller telefon"], image: "/landing/feature-kds-cards.webp", imageAlt: "Nettbrett på baren viser kjøkkenskjermen med bestillinger per bord" },
+    { Icon: CalendarCheck, tag: "Reservasjoner", title: "Reservasjoner på autopilot.", bullets: ["Reserver selv","Automatisk bekreftelse","Kalender per bord"], image: "/landing/feature-booking-calendar.webp", imageAlt: "To nettbrett viser reservasjonskalenderen: dagsvisning per bord og månedsvisning" },
+    { Icon: Receipt, tag: "Bestill ved bordet", title: "Bestillinger rett til kjøkkenet.", bullets: ["Gjest eller servitør","Rett til kjøkkenet","På/av når du vil"], image: "/landing/feature-orders.webp", imageAlt: "Servitør tar en bestilling ved bordet på telefonen, den havner på kjøkkenskjermen" },
   ],
 
   seeDetails: "Se detaljer",

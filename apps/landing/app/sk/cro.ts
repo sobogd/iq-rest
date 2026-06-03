@@ -37,10 +37,10 @@ export const CRO: CroCopy = {
   },
 
   benefits: [
-    { Icon: Languages, tag: "Digitálne menu", title: "Menu, ktoré vyzerá ako web, nie ako PDF.", bullets: ["35 jazykov s AI","Prémiový dizajn","Ceny ihneď aktuálne"], image: "/landing/feature-design.webp", imageAlt: "Dva telefóny na stole v kaviarni: úvodná obrazovka digitálneho menu a kontaktná stránka s mapou" },
-    { Icon: ChefHat, tag: "Kuchynský displej", title: "Kuchyňa konečne bez papiera.", bullets: ["Naživo na obrazovke","Poznámky a alergény","Tablet alebo telefón"], image: "/landing/feature-kds-cards.webp", imageAlt: "Tablet na bare zobrazuje kuchynský displej s objednávkami podľa stolov" },
-    { Icon: CalendarCheck, tag: "Rezervácie", title: "Stoly, ktoré sa rezervujú samy, 24/7.", bullets: ["Samoobslužná rezervácia","Automatické potvrdenie","Kalendár podľa stolov"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Dva tablety zobrazujú rezervačný kalendár: denný pohľad podľa stolov a mesačný pohľad" },
-    { Icon: Receipt, tag: "Objednávky pri stole", title: "Prijímajte objednávky bez bloku — voliteľné.", bullets: ["Hosť alebo čašník","Rovno do kuchyne","Zapnite kedykoľvek"], image: "/landing/feature-orders.webp", imageAlt: "Čašník prijíma objednávku pri stole z telefónu, dorazí na kuchynský displej" },
+    { Icon: Languages, tag: "Digitálne menu", title: "Menu, ktoré predáva.", bullets: ["35 jazykov s AI","Prémiový dizajn","Ceny ihneď aktuálne"], image: "/landing/feature-design.webp", imageAlt: "Dva telefóny na stole v kaviarni: úvodná obrazovka digitálneho menu a kontaktná stránka s mapou" },
+    { Icon: ChefHat, tag: "Kuchynský displej", title: "Varte rýchlejšie, nič nezmeškáte.", bullets: ["Naživo na obrazovke","Poznámky a alergény","Tablet alebo telefón"], image: "/landing/feature-kds-cards.webp", imageAlt: "Tablet na bare zobrazuje kuchynský displej s objednávkami podľa stolov" },
+    { Icon: CalendarCheck, tag: "Rezervácie", title: "Rezervácie na autopilota.", bullets: ["Samoobslužná rezervácia","Automatické potvrdenie","Kalendár podľa stolov"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Dva tablety zobrazujú rezervačný kalendár: denný pohľad podľa stolov a mesačný pohľad" },
+    { Icon: Receipt, tag: "Objednávky pri stole", title: "Objednávky rovno do kuchyne.", bullets: ["Hosť alebo čašník","Rovno do kuchyne","Zapnite kedykoľvek"], image: "/landing/feature-orders.webp", imageAlt: "Čašník prijíma objednávku pri stole z telefónu, dorazí na kuchynský displej" },
   ],
 
   seeDetails: "Zobraziť detaily",

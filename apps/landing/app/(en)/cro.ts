@@ -47,7 +47,7 @@ export const CRO: CroCopy = {
     {
       Icon: Languages,
       tag: "Digital menu",
-      title: "A menu that looks like a website, not a PDF.",
+      title: "A menu that sells.",
       bullets: ["35 AI languages", "Premium design", "Instant price updates"],
       image: "/landing/feature-design.webp",
       imageAlt: "Two phones on a cafe table: the digital menu welcome screen with video background and the contact page with a map",
@@ -55,7 +55,7 @@ export const CRO: CroCopy = {
     {
       Icon: ChefHat,
       tag: "Kitchen display",
-      title: "The kitchen, finally paperless.",
+      title: "Cook faster, miss nothing.",
       bullets: ["Live on the screen", "Notes & allergens", "Tablet or phone"],
       image: "/landing/feature-kds-cards.webp",
       imageAlt: "Tablet on a bar counter showing the kitchen display: order cards by table with cooking, ready and served statuses",
@@ -63,7 +63,7 @@ export const CRO: CroCopy = {
     {
       Icon: CalendarCheck,
       tag: "Reservations",
-      title: "Tables that book themselves, 24/7.",
+      title: "Bookings on autopilot.",
       bullets: ["Self-service booking", "Auto confirmations", "Calendar by table"],
       image: "/landing/feature-booking-calendar.webp",
       imageAlt: "Two tablets on a table showing the booking calendar: daily timeline by table and monthly view",
@@ -71,7 +71,7 @@ export const CRO: CroCopy = {
     {
       Icon: Receipt,
       tag: "Orders at the table",
-      title: "Take orders without notepads — optional.",
+      title: "Orders straight to the kitchen.",
       bullets: ["Guest or waiter", "Straight to kitchen", "On / off anytime"],
       image: "/landing/feature-orders.webp",
       imageAlt: "Waiter takes an order at the table from a smartphone, order lands on the kitchen display",

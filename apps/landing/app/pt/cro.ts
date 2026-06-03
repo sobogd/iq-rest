@@ -37,10 +37,10 @@ export const CRO: CroCopy = {
   },
 
   benefits: [
-    { Icon: Languages, tag: "Menu digital", title: "Um menu que parece um site, não um PDF.", bullets: ["35 idiomas com IA","Design premium","Preços atualizados na hora"], image: "/landing/feature-design.webp", imageAlt: "Dois telemóveis na mesa de um café: o ecrã de boas-vindas do menu digital e a página de contactos com mapa" },
-    { Icon: ChefHat, tag: "Ecrã de cozinha", title: "A cozinha, finalmente sem papéis.", bullets: ["Ao vivo no ecrã","Notas e alergénios","Tablet ou telemóvel"], image: "/landing/feature-kds-cards.webp", imageAlt: "Tablet no balcão a mostrar o ecrã de cozinha com pedidos por mesa" },
-    { Icon: CalendarCheck, tag: "Reservas", title: "Mesas que se reservam sozinhas, 24/7.", bullets: ["Reserva sem chamadas","Confirmação automática","Calendário por mesa"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Dois tablets a mostrar o calendário de reservas: vista diária por mesa e vista mensal" },
-    { Icon: Receipt, tag: "Pedidos à mesa", title: "Tire pedidos sem bloco — opcional.", bullets: ["Cliente ou empregado","Direto para a cozinha","Ligue quando quiser"], image: "/landing/feature-orders.webp", imageAlt: "Empregado tira um pedido à mesa pelo telemóvel e chega ao ecrã de cozinha" },
+    { Icon: Languages, tag: "Menu digital", title: "Um menu que vende.", bullets: ["35 idiomas com IA","Design premium","Preços atualizados na hora"], image: "/landing/feature-design.webp", imageAlt: "Dois telemóveis na mesa de um café: o ecrã de boas-vindas do menu digital e a página de contactos com mapa" },
+    { Icon: ChefHat, tag: "Ecrã de cozinha", title: "Cozinhe mais rápido, sem falhas.", bullets: ["Ao vivo no ecrã","Notas e alergénios","Tablet ou telemóvel"], image: "/landing/feature-kds-cards.webp", imageAlt: "Tablet no balcão a mostrar o ecrã de cozinha com pedidos por mesa" },
+    { Icon: CalendarCheck, tag: "Reservas", title: "Reservas em piloto automático.", bullets: ["Reserva sem chamadas","Confirmação automática","Calendário por mesa"], image: "/landing/feature-booking-calendar.webp", imageAlt: "Dois tablets a mostrar o calendário de reservas: vista diária por mesa e vista mensal" },
+    { Icon: Receipt, tag: "Pedidos à mesa", title: "Pedidos diretos para a cozinha.", bullets: ["Cliente ou empregado","Direto para a cozinha","Ligue quando quiser"], image: "/landing/feature-orders.webp", imageAlt: "Empregado tira um pedido à mesa pelo telemóvel e chega ao ecrã de cozinha" },
   ],
 
   seeDetails: "Ver detalhes",
