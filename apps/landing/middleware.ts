@@ -46,9 +46,9 @@ const localeRegex = new RegExp(`^/(${localePattern})(/|$)`);
 
 const GEO_COUNTRY_COOKIE = "geo_country";
 const GEO_LOCALE_COOKIE = "geo_locale";
-// Billing currency (EUR/NOK/SEK/DKK) — read by the dashboard pricing UI and the
-// API checkout. Prefer the nginx GeoIP2 header (x-currency); else derive from
-// country. Distinct from the restaurant's public-menu currency.
+// Billing currency cookie — read client-side by the landing pricing UI.
+// Filled from a hardcoded country→currency map (NOT the nginx X-Currency
+// header). Distinct from the restaurant's public-menu currency.
 const GEO_CURRENCY_COOKIE = "geo_currency";
 
 /**
@@ -106,9 +106,12 @@ function setGeoCookies(request: NextRequest, response: NextResponse): void {
     sameSite: "lax",
   });
 
-  // Billing currency: nginx GeoIP2 header wins, else derive from country.
-  const headerCurrency = request.headers.get("x-currency");
-  const billingCurrency = headerCurrency || getCurrencyByCountry(cfCountry);
+  // Billing currency: a primitive, hardcoded country→currency map
+  // (lib/country-currency-map.ts). We intentionally IGNORE the nginx
+  // X-Currency header — currency must be a direct function of the detected
+  // country, not a separately-derived value that can drift (that drift is how
+  // a Swede ended up billed in USD).
+  const billingCurrency = getCurrencyByCountry(cfCountry);
   response.cookies.set(GEO_CURRENCY_COOKIE, billingCurrency, {
     path: "/",
     maxAge: 60 * 60 * 24 * 7,
