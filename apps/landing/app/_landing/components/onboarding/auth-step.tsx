@@ -28,7 +28,7 @@ const ERROR_MAP: Record<string, string> = {
 
 const isValidEmail = (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
 
-type SignupContext = { cuisine: CuisineKey; restaurantName: string };
+type SignupContext = { cuisine?: CuisineKey; restaurantName: string };
 
 type Screen = "email" | "verify";
 

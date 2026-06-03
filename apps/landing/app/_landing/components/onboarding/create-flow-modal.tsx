@@ -11,8 +11,6 @@ import { NameStep } from "./name-step";
 import { AuthStep } from "./auth-step";
 import type { CuisineKey } from "./cuisine";
 
-const TOTAL_STEPS = 3;
-
 export function CreateFlowModal({
   open,
   mode = "create",
@@ -22,13 +20,22 @@ export function CreateFlowModal({
   mode?: "create" | "signin" | "register";
   onClose: () => void;
 }) {
+  const t = useTranslations("createFlow");
   const [step, setStep] = useState(1);
   const [cuisine, setCuisine] = useState<CuisineKey | null>(null);
   const [restaurantName, setRestaurantName] = useState("");
   const isSignIn = mode === "signin";
   const isRegister = mode === "register";
-  // Both signin and register skip the cuisine/name wizard and show the auth step directly.
-  const isAuthOnly = isSignIn || isRegister;
+  // Sign-in skips the wizard entirely and shows the auth step directly.
+  // Register runs a 2-step wizard: name → auth (cuisine skipped).
+  const isAuthOnly = isSignIn;
+  // The "create" flow is the full 3-step wizard (cuisine → name → auth);
+  // "register" is a 2-step subset (name → auth).
+  const totalSteps = isRegister ? 2 : 3;
+  // Progress labels per mode. Register reuses the name + sign-in labels.
+  const progressLabels = isRegister
+    ? [t("step2.label"), t("step3.label")]
+    : [t("step1.label"), t("step2.label"), t("step3.label")];
   // Backdrop/Esc closing is blocked — only the X button can close the modal.
   const closeReasonRef = useRef<"x" | "auth">("x");
 
@@ -71,13 +78,17 @@ export function CreateFlowModal({
     return () => clearTimeout(reset);
   }, [open]);
 
-  const next = () => setStep((s) => Math.min(s + 1, TOTAL_STEPS));
+  const next = () => setStep((s) => Math.min(s + 1, totalSteps));
   const back = () => setStep((s) => Math.max(s - 1, 1));
 
-  const signupContext = useMemo(
-    () => (cuisine ? { cuisine, restaurantName: restaurantName.trim() } : null),
-    [cuisine, restaurantName],
-  );
+  const signupContext = useMemo(() => {
+    const name = restaurantName.trim();
+    if (isRegister) {
+      // Register skips cuisine — send just the name.
+      return name ? { restaurantName: name } : null;
+    }
+    return cuisine ? { cuisine, restaurantName: name } : null;
+  }, [cuisine, restaurantName, isRegister]);
 
   return (
     <>
@@ -103,7 +114,8 @@ export function CreateFlowModal({
             {!isAuthOnly && (
               <Progress
                 step={step}
-                total={TOTAL_STEPS}
+                total={totalSteps}
+                labels={progressLabels}
                 onJump={(target) => {
                   if (target === step) return;
                   if (target > step) return;
@@ -114,7 +126,29 @@ export function CreateFlowModal({
             )}
 
             {isAuthOnly ? (
-              <AuthStep signupContext={null} variant={isRegister ? "register" : "signin"} />
+              <AuthStep signupContext={null} variant="signin" />
+            ) : isRegister ? (
+              <>
+                {step === 1 && (
+                  <NameStep
+                    value={restaurantName}
+                    onChange={setRestaurantName}
+                    onFocus={() => analytics.track("l_onb_name_focus")}
+                    onBack={() => {
+                      closeReasonRef.current = "x";
+                      onClose();
+                    }}
+                    onContinue={() => {
+                      analytics.track("l_onb_name_continue");
+                      next();
+                    }}
+                  />
+                )}
+
+                {step === 2 && signupContext && (
+                  <AuthStep signupContext={signupContext} variant="register" />
+                )}
+              </>
             ) : (
               <>
                 {step === 1 && (
@@ -162,14 +196,15 @@ export function CreateFlowModal({
 function Progress({
   step,
   total,
+  labels,
   onJump,
 }: {
   step: number;
   total: number;
+  labels: string[];
   onJump: (target: number) => void;
 }) {
   const t = useTranslations("createFlow");
-  const labels = [t("step1.label"), t("step2.label"), t("step3.label")];
   return (
     <div className="mb-7">
       <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-3">
