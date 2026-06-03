@@ -208,7 +208,7 @@ export function CroHomeTemplate({
           </h2>
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-5">
             {cro.extras.items.map((it) => (
-              <li key={it.label} className="flex items-start gap-3 justify-center sm:justify-start text-left">
+              <li key={it.label} className="flex items-start gap-3 text-left">
                 <it.Icon className="h-5 w-5 shrink-0 mt-0.5 text-primary" strokeWidth={2} />
                 <span className="text-base text-foreground/85 leading-snug">{it.label}</span>
               </li>
