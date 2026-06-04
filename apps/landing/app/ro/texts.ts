@@ -6,14 +6,14 @@ export const TEXTS: LandingTexts = {
   htmlDir: "ltr",
 
   meta: {
-    title: "Meniu QR pentru restaurante — Comenzi directe, zero comision | IQ Rest",
+    title: "Meniu digital, ecran de bucătărie și rezervări — IQ Rest",
     description:
-      "Platformă all-in-one pentru restaurante: meniu digital, comenzi QR, rezervare mese și display bucătărie. Lansare în 5 minute. 14 zile gratuit, fără card.",
+      "Administrează-ți restaurantul dintr-o singură aplicație: meniu digital multilingv, ecran de bucătărie și rezervări 24/7. Gata în 5 minute. 14 zile gratis, fără card.",
     canonical: "https://iq-rest.com/ro",
     ogLocale: "ro_RO",
-    ogTitle: "Meniu QR pentru restaurante — Comenzi directe, zero comision",
+    ogTitle: "Meniu digital, ecran de bucătărie și rezervări",
     ogDescription:
-      "Meniu digital, comenzi QR, rezervare mese și traducere AI. Lansare în 5 minute. 14 zile gratuit.",
+      "Administrează-ți restaurantul dintr-o singură aplicație: meniu digital multilingv, ecran de bucătărie și rezervări 24/7. Gata în 5 minute. 14 zile gratis, fără card.",
   },
 
   ctaText: "Începe gratuit",

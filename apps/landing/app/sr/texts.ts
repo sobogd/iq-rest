@@ -6,14 +6,14 @@ export const TEXTS: LandingTexts = {
   htmlDir: "ltr",
 
   meta: {
-    title: "QR meni za restorane — Direktne porudžbine bez provizije | IQ Rest",
+    title: "Дигитални мени, кухињски екран и резервације — IQ Rest",
     description:
-      "Sveobuhvatna platforma za restorane: digitalni meni, QR porudžbine, rezervacija stolova i kuhinjski ekran. Pokretanje za 5 minuta. 14 dana besplatno, bez kartice.",
+      "Управљајте рестораном из једне апликације: вишејезични дигитални мени, кухињски екран и резервације 24/7. Спремно за 5 минута. 14 дана бесплатно, без картице.",
     canonical: "https://iq-rest.com/sr",
     ogLocale: "sr_RS",
-    ogTitle: "QR meni za restorane — Direktne porudžbine bez provizije",
+    ogTitle: "Дигитални мени, кухињски екран и резервације",
     ogDescription:
-      "Digitalni meni, QR porudžbine, rezervacije stolova i AI prevod. Pokretanje za 5 minuta. 14 dana besplatno.",
+      "Управљајте рестораном из једне апликације: вишејезични дигитални мени, кухињски екран и резервације 24/7. Спремно за 5 минута. 14 дана бесплатно, без картице.",
   },
 
   ctaText: "Почни бесплатно",

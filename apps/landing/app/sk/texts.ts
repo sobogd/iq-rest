@@ -6,14 +6,14 @@ export const TEXTS: LandingTexts = {
   htmlDir: "ltr",
 
   meta: {
-    title: "QR menu pre reštaurácie — Priame objednávky bez provízií | IQ Rest",
+    title: "Digitálne menu, kuchynský displej a rezervácie — IQ Rest",
     description:
-      "Komplexná platforma pre reštaurácie: digitálne menu, QR objednávky, rezervácia stolov a kuchynský displej. Spustenie za 5 minút. 14 dní zadarmo, bez karty.",
+      "Riaďte reštauráciu z jednej aplikácie: viacjazyčné digitálne menu, kuchynský displej a rezervácie 24/7. Hotovo za 5 minút. 14 dní zadarmo, bez karty.",
     canonical: "https://iq-rest.com/sk",
     ogLocale: "sk_SK",
-    ogTitle: "QR menu pre reštaurácie — Priame objednávky bez provízií",
+    ogTitle: "Digitálne menu, kuchynský displej a rezervácie",
     ogDescription:
-      "Digitálne menu, QR objednávky, rezervácia stolov a AI preklad. Spustenie za 5 minút. 14 dní zadarmo.",
+      "Riaďte reštauráciu z jednej aplikácie: viacjazyčné digitálne menu, kuchynský displej a rezervácie 24/7. Hotovo za 5 minút. 14 dní zadarmo, bez karty.",
   },
 
   ctaText: "Začať zadarmo",

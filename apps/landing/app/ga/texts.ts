@@ -6,14 +6,14 @@ export const TEXTS: LandingTexts = {
   htmlDir: "ltr",
 
   meta: {
-    title: "Biachlár QR do bhialanna — Orduithe Díreacha, gan Coimisiún | IQ Rest",
+    title: "Biachlár Digiteach, Scáileán Cistine & Áirithintí — IQ Rest",
     description:
-      "Ardán uile-in-aon do bhialanna: biachlár digiteach, orduithe QR, curfha bord agus scáileán cistine. Ar líne i 5 nóiméad. 14 lá saor in aisce, gan cárta.",
+      "Bainistigh do bhialann ó aon aip amháin: biachlár digiteach ilteangach, scáileán cistine agus áirithintí 24/7. Réidh i 5 nóiméad. 14 lá saor, gan chárta.",
     canonical: "https://iq-rest.com/ga",
     ogLocale: "ga_IE",
-    ogTitle: "Biachlár QR do bhialanna — Orduithe Díreacha, gan Coimisiún",
+    ogTitle: "Biachlár Digiteach, Scáileán Cistine & Áirithintí",
     ogDescription:
-      "Biachlár digiteach, orduithe QR, curfha bord agus aistriúchán IS. Ar líne i 5 nóiméad. 14 lá saor in aisce.",
+      "Bainistigh do bhialann ó aon aip amháin: biachlár digiteach ilteangach, scáileán cistine agus áirithintí 24/7. Réidh i 5 nóiméad. 14 lá saor, gan chárta.",
   },
 
   ctaText: "Tosaigh saor in aisce",

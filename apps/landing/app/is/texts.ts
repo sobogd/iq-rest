@@ -6,14 +6,14 @@ export const TEXTS: LandingTexts = {
   htmlDir: "ltr",
 
   meta: {
-    title: "QR matseðill fyrir veitingastaði — Beinar pantanir, núll þóknun | IQ Rest",
+    title: "Stafrænn matseðill, eldhússkjár og bókanir — IQ Rest",
     description:
-      "Allt-í-einu vettvangur fyrir veitingastaði: stafrænn matseðill, QR pantanir, borðabókun og eldhússkjár. Komið í gang á 5 mínútum. 14 daga ókeypis, ekkert kort krafist.",
+      "Stýrðu veitingastaðnum úr einu appi: fjöltyngdur stafrænn matseðill, eldhússkjár og bókanir allan sólarhringinn. Tilbúið á 5 mínútum. 14 dagar frítt, ekkert kort.",
     canonical: "https://iq-rest.com/is",
     ogLocale: "is_IS",
-    ogTitle: "QR matseðill fyrir veitingastaði — Beinar pantanir, núll þóknun",
+    ogTitle: "Stafrænn matseðill, eldhússkjár og bókanir",
     ogDescription:
-      "Stafrænn matseðill, QR pantanir, borðabókun og þýðing með gervigreind. Komið í gang á 5 mínútum. 14 daga ókeypis.",
+      "Stýrðu veitingastaðnum úr einu appi: fjöltyngdur stafrænn matseðill, eldhússkjár og bókanir allan sólarhringinn. Tilbúið á 5 mínútum. 14 dagar frítt, ekkert kort.",
   },
 
   ctaText: "Byrjaðu frítt",

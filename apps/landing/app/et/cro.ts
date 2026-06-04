@@ -17,7 +17,7 @@ export const CRO: CroCopy = {
     verticals: ["Restoranid","Kohvikud","Baarid","Pitsabaarid"],
     title: "Sinu restoran,",
     titleAccent: "täisdigitaalne 5 minutiga.",
-    sub: "Täielik platvorm kaasaegse restorani juhtimiseks — ilus, kõik ühes kohas, ilma tehniliste teadmisteta.",
+    sub: "Ilus digitaalne menüü, köögiekraan ja broneeringud ööpäev läbi — täielik platvorm kaasaegsele restoranile.",
   },
 
   heroMicrocopy: "{count} restorani · 14 päeva tasuta · Kaardita",

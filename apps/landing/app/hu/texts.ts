@@ -6,14 +6,14 @@ export const TEXTS: LandingTexts = {
   htmlDir: "ltr",
 
   meta: {
-    title: "QR étlap éttermeknek — Közvetlen rendelések, nulla jutalék | IQ Rest",
+    title: "Digitális menü, konyhai kijelző és foglalások — IQ Rest",
     description:
-      "Mindent-egyben platform éttermeknek: digitális étlap, QR rendelések, asztalfoglalás és konyhai kijelző. Indítás 5 perc alatt. 14 nap ingyenes, kártya nélkül.",
+      "Vezesd éttermed egyetlen appból: többnyelvű digitális menü, konyhai kijelző és éjjel-nappali foglalások. 5 perc alatt kész. 14 nap ingyen, kártya nélkül.",
     canonical: "https://iq-rest.com/hu",
     ogLocale: "hu_HU",
-    ogTitle: "QR étlap éttermeknek — Közvetlen rendelések, nulla jutalék",
+    ogTitle: "Digitális menü, konyhai kijelző és foglalások",
     ogDescription:
-      "Digitális étlap, QR rendelések, asztalfoglalás és AI fordítás. Indítás 5 perc alatt. 14 nap ingyenes.",
+      "Vezesd éttermed egyetlen appból: többnyelvű digitális menü, konyhai kijelző és éjjel-nappali foglalások. 5 perc alatt kész. 14 nap ingyen, kártya nélkül.",
   },
 
   ctaText: "Kezdés ingyen",

@@ -6,14 +6,14 @@ export const TEXTS: LandingTexts = {
   htmlDir: "ltr",
 
   meta: {
-    title: "QR-menu til restauranter — Direkte bestillinger, ingen kommission | IQ Rest",
+    title: "Digital Menu, Køkkenskærm & Reservationer — IQ Rest",
     description:
-      "Alt-i-én-platform til restauranter: digitalt menukort, QR-bestillinger, bordreservation og køkkenskærm. Live på 5 minutter. 14 dages gratis prøveperiode, intet kort krævet.",
+      "Driv din restaurant fra én app: flersproget digital menu, køkkenskærm og reservationer døgnet rundt. Klar på 5 minutter. 14 dage gratis, intet kort.",
     canonical: "https://iq-rest.com/da",
     ogLocale: "da_DK",
-    ogTitle: "QR-menu til restauranter — Direkte bestillinger, ingen kommission",
+    ogTitle: "Digital Menu, Køkkenskærm & Reservationer",
     ogDescription:
-      "Digitalt menukort, QR-bestillinger, bordreservation og AI-oversættelse. Live på 5 minutter. 14 dage gratis.",
+      "Driv din restaurant fra én app: flersproget digital menu, køkkenskærm og reservationer døgnet rundt. Klar på 5 minutter. 14 dage gratis, intet kort.",
   },
 
   ctaText: "Start gratis",

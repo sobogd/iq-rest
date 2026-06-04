@@ -6,14 +6,14 @@ export const TEXTS: LandingTexts = {
   htmlDir: "ltr",
 
   meta: {
-    title: "QR-ruokalista ravintoloille — Suorat tilaukset, nolla komissiota | IQ Rest",
+    title: "Digitaalinen menu, keittiönäyttö ja varaukset — IQ Rest",
     description:
-      "Kaikki yhdessä -alusta ravintoloille: digitaalinen ruokalista, QR-tilaukset, pöytävaraus ja keittiön näyttö. Käyntiin 5 minuutissa. 14 päivää ilmaiseksi, ilman korttia.",
+      "Pyöritä ravintolaasi yhdellä sovelluksella: monikielinen digitaalinen menu, keittiönäyttö ja varaukset 24/7. Valmis 5 minuutissa. 14 päivää ilmaiseksi, ei korttia.",
     canonical: "https://iq-rest.com/fi",
     ogLocale: "fi_FI",
-    ogTitle: "QR-ruokalista ravintoloille — Suorat tilaukset, nolla komissiota",
+    ogTitle: "Digitaalinen menu, keittiönäyttö ja varaukset",
     ogDescription:
-      "Digitaalinen ruokalista, QR-tilaukset, pöytävaraus ja tekoälykäännös. Käyntiin 5 minuutissa. 14 päivää ilmaiseksi.",
+      "Pyöritä ravintolaasi yhdellä sovelluksella: monikielinen digitaalinen menu, keittiönäyttö ja varaukset 24/7. Valmis 5 minuutissa. 14 päivää ilmaiseksi, ei korttia.",
   },
 
   ctaText: "Aloita ilmaiseksi",

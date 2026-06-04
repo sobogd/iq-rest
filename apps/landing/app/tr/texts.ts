@@ -6,14 +6,14 @@ export const TEXTS: LandingTexts = {
   htmlDir: "ltr",
 
   meta: {
-    title: "Restoranlar için QR menü — Doğrudan sipariş, sıfır komisyon | IQ Rest",
+    title: "Dijital Menü, Mutfak Ekranı ve Rezervasyon — IQ Rest",
     description:
-      "Restoranlar için hepsi bir arada platform: dijital menü, QR sipariş, masa rezervasyonu ve mutfak ekranı. 5 dakikada hazır. 14 gün ücretsiz, kart gerekmez.",
+      "Restoranınızı tek uygulamadan yönetin: çok dilli dijital menü, mutfak ekranı ve 7/24 rezervasyon. 5 dakikada hazır. 14 gün ücretsiz, kart yok.",
     canonical: "https://iq-rest.com/tr",
     ogLocale: "tr_TR",
-    ogTitle: "Restoranlar için QR menü — Doğrudan sipariş, sıfır komisyon",
+    ogTitle: "Dijital Menü, Mutfak Ekranı ve Rezervasyon",
     ogDescription:
-      "Dijital menü, QR sipariş, masa rezervasyonu ve AI çeviri. 5 dakikada hazır. 14 gün ücretsiz.",
+      "Restoranınızı tek uygulamadan yönetin: çok dilli dijital menü, mutfak ekranı ve 7/24 rezervasyon. 5 dakikada hazır. 14 gün ücretsiz, kart yok.",
   },
 
   ctaText: "Ücretsiz başla",

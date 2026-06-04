@@ -96,12 +96,11 @@ export function LandingHero({
         alt={imageAlt}
         fill
         priority
-        quality={90}
-        // Full-bleed + object-cover on a tall portrait viewport crops the
-        // landscape photo and zooms in, so the rendered area needs more pixels
-        // than the CSS width implies. Over-request on phones to avoid upscaling
-        // blur; desktop stays at 100vw.
-        sizes="(max-width: 768px) 160vw, 100vw"
+        // LCP element — keep quality moderate (photo sits under a dark overlay,
+        // so 80 is indistinguishable from 90 but lighter) and request at the
+        // CSS width (100vw) instead of over-requesting to protect mobile LCP.
+        quality={80}
+        sizes="100vw"
         className="object-cover -z-20"
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/55 via-black/10 to-transparent h-1/3" />

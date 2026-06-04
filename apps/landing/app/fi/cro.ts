@@ -17,7 +17,7 @@ export const CRO: CroCopy = {
     verticals: ["Ravintolat","Kahvilat","Baarit","Pizzeriat"],
     title: "Ravintolasi,",
     titleAccent: "täysin digitaalinen 5 minuutissa.",
-    sub: "Täydellinen alusta nykyaikaisen ravintolan pyörittämiseen — tyylikäs, kaikki yhdessä paikassa, ilman teknistä osaamista.",
+    sub: "Tyylikäs digitaalinen menu, keittiönäyttö ja varaukset 24/7 — täydellinen alusta nykyaikaiselle ravintolalle.",
   },
 
   heroMicrocopy: "{count} ravintolaa · 14 päivää ilmaiseksi · Ei korttia",

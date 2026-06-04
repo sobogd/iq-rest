@@ -17,7 +17,7 @@ export const CRO: CroCopy = {
     verticals: ["Restoranai","Kavinės","Barai","Picerijos"],
     title: "Jūsų restoranas,",
     titleAccent: "visiškai skaitmeninis per 5 minutes.",
-    sub: "Pilna platforma moderniam restoranui valdyti — graži, viskas vienoje vietoje, be techninių žinių.",
+    sub: "Gražus skaitmeninis meniu, virtuvės ekranas ir rezervacijos visą parą — pilna platforma modernam restoranui.",
   },
 
   heroMicrocopy: "{count} restoranai · 14 dienų nemokamai · Be kortelės",

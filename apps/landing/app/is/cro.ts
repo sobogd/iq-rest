@@ -17,7 +17,7 @@ export const CRO: CroCopy = {
     verticals: ["Veitingastaðir","Kaffihús","Barir","Pítsustaðir"],
     title: "Veitingastaðurinn þinn,",
     titleAccent: "algjörlega stafrænn á 5 mínútum.",
-    sub: "Heildarvettvangurinn til að reka nútímalegan veitingastað — fallegur, allt á einum stað, án tæknikunnáttu.",
+    sub: "Fallegur stafrænn matseðill, eldhússkjár og bókanir allan sólarhringinn — heildarvettvangurinn fyrir nútímalegan veitingastað.",
   },
 
   heroMicrocopy: "{count} veitingastaðir · 14 dagar frítt · Ekkert kort",

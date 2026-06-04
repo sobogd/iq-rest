@@ -6,14 +6,14 @@ export const TEXTS: LandingTexts = {
   htmlDir: "ltr",
 
   meta: {
-    title: "QR ēdienkarte restorāniem — Tieši pasūtījumi, nulle komisijas | IQ Rest",
+    title: "Digitālā ēdienkarte, virtuves ekrāns un rezervācijas — IQ Rest",
     description:
-      "Viss-vienā platforma restorāniem: digitālā ēdienkarte, QR pasūtījumi, galdu rezervēšana un virtuves ekrāns. Sākt 5 minūtēs. 14 dienas bez maksas, bez kartes.",
+      "Pārvaldiet restorānu no vienas lietotnes: daudzvalodu digitālā ēdienkarte, virtuves ekrāns un rezervācijas visu diennakti. Gatavs 5 minūtēs. 14 dienas bez maksas, bez kartes.",
     canonical: "https://iq-rest.com/lv",
     ogLocale: "lv_LV",
-    ogTitle: "QR ēdienkarte restorāniem — Tieši pasūtījumi, nulle komisijas",
+    ogTitle: "Digitālā ēdienkarte, virtuves ekrāns un rezervācijas",
     ogDescription:
-      "Digitālā ēdienkarte, QR pasūtījumi, galdu rezervēšana un AI tulkojums. Sākt 5 minūtēs. 14 dienas bez maksas.",
+      "Pārvaldiet restorānu no vienas lietotnes: daudzvalodu digitālā ēdienkarte, virtuves ekrāns un rezervācijas visu diennakti. Gatavs 5 minūtēs. 14 dienas bez maksas, bez kartes.",
   },
 
   ctaText: "Sāc bez maksas",

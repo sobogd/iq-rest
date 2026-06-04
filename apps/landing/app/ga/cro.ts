@@ -17,7 +17,7 @@ export const CRO: CroCopy = {
     verticals: ["Bialanna","Caiféanna","Beáir","Píotsaíochtaí"],
     title: "Do bhialann,",
     titleAccent: "go hiomlán digiteach i 5 nóiméad.",
-    sub: "An t-ardán iomlán chun bialann nua-aimseartha a rith — galánta, gach rud in aon áit amháin, gan scileanna teicniúla.",
+    sub: "Biachlár digiteach álainn, scáileán cistine agus áirithintí 24/7 — an t-ardán iomlán do bhialann nua-aimseartha.",
   },
 
   heroMicrocopy: "{count} bialann · 14 lá saor · Gan chárta",

@@ -6,14 +6,14 @@ export const TEXTS: LandingTexts = {
   htmlDir: "ltr",
 
   meta: {
-    title: "Carta QR para restaurantes — Pedidos directos, sin comisiones | IQ Rest",
+    title: "Carta Digital, Pantalla de Cocina y Reservas — IQ Rest",
     description:
-      "Plataforma todo en uno para restaurantes: carta digital, pedidos QR, reservas de mesas y pantalla de cocina. Listo en 5 minutos. 14 días gratis, sin tarjeta.",
+      "Gestiona tu restaurante desde una sola app: carta digital multilingüe, pantalla de cocina y reservas 24/7. Listo en 5 minutos. 14 días gratis, sin tarjeta.",
     canonical: "https://iq-rest.com/es",
     ogLocale: "es_ES",
-    ogTitle: "Carta QR para restaurantes — Pedidos directos, sin comisiones",
+    ogTitle: "Carta Digital, Pantalla de Cocina y Reservas",
     ogDescription:
-      "Carta digital, pedidos QR, reservas y traducción con IA. Listo en 5 minutos. 14 días gratis.",
+      "Gestiona tu restaurante desde una sola app: carta digital multilingüe, pantalla de cocina y reservas 24/7. Listo en 5 minutos. 14 días gratis, sin tarjeta.",
   },
 
   ctaText: "Empieza gratis",

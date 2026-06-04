@@ -24,7 +24,7 @@ export const CRO: CroCopy = {
     verticals: ["Restaurants", "Cafés", "Bars", "Pizzerias"],
     title: "Your restaurant,",
     titleAccent: "fully digital in 5 minutes.",
-    sub: "The complete platform to run a modern restaurant — beautiful, all in one place, no technical skills.",
+    sub: "A beautiful digital menu, a kitchen display and 24/7 table bookings — the complete platform for a modern restaurant.",
   },
 
   heroMicrocopy: "{count} restaurants · 14 days free · No card",

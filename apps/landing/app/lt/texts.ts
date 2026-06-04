@@ -6,14 +6,14 @@ export const TEXTS: LandingTexts = {
   htmlDir: "ltr",
 
   meta: {
-    title: "QR meniu restoranams — Tiesioginiai užsakymai, nulis komisinio | IQ Rest",
+    title: "Skaitmeninis meniu, virtuvės ekranas ir rezervacijos — IQ Rest",
     description:
-      "Viskas vienoje platforma restoranams: skaitmeninis meniu, QR užsakymai, staliukų rezervacija ir virtuvės ekranas. Paleidimas per 5 minutes. 14 dienų nemokamai, be kortelės.",
+      "Valdykite restoraną iš vienos programėlės: daugiakalbis skaitmeninis meniu, virtuvės ekranas ir rezervacijos visą parą. Paruošta per 5 minutes. 14 dienų nemokamai, be kortelės.",
     canonical: "https://iq-rest.com/lt",
     ogLocale: "lt_LT",
-    ogTitle: "QR meniu restoranams — Tiesioginiai užsakymai, nulis komisinio",
+    ogTitle: "Skaitmeninis meniu, virtuvės ekranas ir rezervacijos",
     ogDescription:
-      "Skaitmeninis meniu, QR užsakymai, staliukų rezervacija ir AI vertimas. Paleidimas per 5 minutes. 14 dienų nemokamai.",
+      "Valdykite restoraną iš vienos programėlės: daugiakalbis skaitmeninis meniu, virtuvės ekranas ir rezervacijos visą parą. Paruošta per 5 minutes. 14 dienų nemokamai, be kortelės.",
   },
 
   ctaText: "Pradėkite nemokamai",

@@ -6,14 +6,14 @@ export const TEXTS: LandingTexts = {
   htmlDir: "ltr",
 
   meta: {
-    title: "레스토랑용 QR 메뉴 — 직접 주문, 수수료 제로 | IQ Rest",
+    title: "디지털 메뉴, 주방 디스플레이, 예약 — IQ Rest",
     description:
-      "레스토랑용 올인원 플랫폼: 디지털 메뉴, QR 주문, 테이블 예약 및 주방 디스플레이. 5분 만에 시작. 14일 무료, 카드 불필요.",
+      "하나의 앱으로 매장 운영: 다국어 디지털 메뉴, 주방 디스플레이, 24/7 예약. 5분 만에 시작. 14일 무료, 카드 불필요.",
     canonical: "https://iq-rest.com/ko",
     ogLocale: "ko_KR",
-    ogTitle: "레스토랑용 QR 메뉴 — 직접 주문, 수수료 제로",
+    ogTitle: "디지털 메뉴, 주방 디스플레이, 예약",
     ogDescription:
-      "디지털 메뉴, QR 주문, 테이블 예약 및 AI 번역. 5분 만에 시작. 14일 무료.",
+      "하나의 앱으로 매장 운영: 다국어 디지털 메뉴, 주방 디스플레이, 24/7 예약. 5분 만에 시작. 14일 무료, 카드 불필요.",
   },
 
   ctaText: "무료로 시작하기",

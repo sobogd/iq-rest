@@ -6,14 +6,14 @@ export const TEXTS: LandingTexts = {
   htmlDir: "ltr",
 
   meta: {
-    title: "QR-menüü restoranidele — Otse tellimused, null komisjoni | IQ Rest",
+    title: "Digitaalne menüü, köögiekraan ja broneeringud — IQ Rest",
     description:
-      "Kõik-ühes platvorm restoranidele: digitaalne menüü, QR-tellimused, laudade broneerimine ja köögiekraan. Käivitub 5 minutiga. 14 päeva tasuta, ilma kaardita.",
+      "Juhi restorani ühest rakendusest: mitmekeelne digitaalne menüü, köögiekraan ja broneeringud ööpäev läbi. Valmis 5 minutiga. 14 päeva tasuta, kaardita.",
     canonical: "https://iq-rest.com/et",
     ogLocale: "et_EE",
-    ogTitle: "QR-menüü restoranidele — Otse tellimused, null komisjoni",
+    ogTitle: "Digitaalne menüü, köögiekraan ja broneeringud",
     ogDescription:
-      "Digitaalne menüü, QR-tellimused, laudade broneerimine ja AI-tõlge. Käivitub 5 minutiga. 14 päeva tasuta.",
+      "Juhi restorani ühest rakendusest: mitmekeelne digitaalne menüü, köögiekraan ja broneeringud ööpäev läbi. Valmis 5 minutiga. 14 päeva tasuta, kaardita.",
   },
 
   ctaText: "Alusta tasuta",

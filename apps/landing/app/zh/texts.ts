@@ -6,14 +6,14 @@ export const TEXTS: LandingTexts = {
   htmlDir: "ltr",
 
   meta: {
-    title: "餐厅 QR 菜单 — 直接接单,零佣金 | IQ Rest",
+    title: "数字菜单、厨房显示屏与预订 — IQ Rest",
     description:
-      "餐厅一体化平台:数字菜单、QR 点餐、餐桌预订和厨房显示屏。5 分钟上线。14 天免费试用,无需信用卡。",
+      "用一个应用运营餐厅:多语言数字菜单、厨房显示屏与 24/7 预订。5 分钟上线。14 天免费,无需银行卡。",
     canonical: "https://iq-rest.com/zh",
     ogLocale: "zh_CN",
-    ogTitle: "餐厅 QR 菜单 — 直接接单,零佣金",
+    ogTitle: "数字菜单、厨房显示屏与预订",
     ogDescription:
-      "数字菜单、QR 点餐、餐桌预订和 AI 翻译。5 分钟上线。14 天免费。",
+      "用一个应用运营餐厅:多语言数字菜单、厨房显示屏与 24/7 预订。5 分钟上线。14 天免费,无需银行卡。",
   },
 
   ctaText: "免费开始",
