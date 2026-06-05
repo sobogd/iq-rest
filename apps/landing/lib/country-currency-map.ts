@@ -21,6 +21,8 @@ export const supportedCurrencies = [
   "CZK", // Чехия
   "HUF", // Венгрия
   "ISK", // Исландия
+  "CHF", // Швейцария
+  "RSD", // Сербия
 ] as const;
 
 export type SupportedCurrency = (typeof supportedCurrencies)[number];
@@ -63,6 +65,8 @@ export const countryToCurrency: Record<string, SupportedCurrency> = {
   CZ: "CZK", // Чехия
   HU: "HUF", // Венгрия
   IS: "ISK", // Исландия
+  CH: "CHF", // Швейцария
+  RS: "RSD", // Сербия
 
   // Еврозона → EUR
   ES: "EUR", // Испания
@@ -115,6 +119,8 @@ export const currencyInfo: Record<SupportedCurrency, {
   CZK: { symbol: "Kč", name: "Czech Koruna", symbolPosition: "after", zeroDecimal: false },
   HUF: { symbol: "Ft", name: "Hungarian Forint", symbolPosition: "after", zeroDecimal: false },
   ISK: { symbol: "kr", name: "Icelandic Króna", symbolPosition: "after", zeroDecimal: false },
+  CHF: { symbol: "CHF", name: "Swiss Franc", symbolPosition: "after", zeroDecimal: false },
+  RSD: { symbol: "RSD", name: "Serbian Dinar", symbolPosition: "after", zeroDecimal: false },
 };
 
 /**

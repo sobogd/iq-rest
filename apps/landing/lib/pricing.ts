@@ -150,6 +150,20 @@ export const pricing: Record<SupportedCurrency, CurrencyPricing> = {
     basic: { monthly: 1490, yearly: 990, yearlyTotal: 11880 },
     pro: { monthly: 4790, yearly: 3790, yearlyTotal: 45480 },
   },
+
+  // Швейцария (≈ EUR паритет)
+  CHF: {
+    free: { monthly: 0, yearly: 0, yearlyTotal: 0 },
+    basic: { monthly: 9.9, yearly: 6.9, yearlyTotal: 82.8 },
+    pro: { monthly: 31.9, yearly: 24.9, yearlyTotal: 298.8 },
+  },
+
+  // Сербия (≈ EUR × 117, charm-rounded)
+  RSD: {
+    free: { monthly: 0, yearly: 0, yearlyTotal: 0 },
+    basic: { monthly: 1190, yearly: 790, yearlyTotal: 9480 },
+    pro: { monthly: 3790, yearly: 2890, yearlyTotal: 34680 },
+  },
 };
 
 // Headline EUR prices rendered as JSON-LD `price` strings (2 decimals).
