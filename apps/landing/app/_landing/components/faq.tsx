@@ -3,7 +3,7 @@ import { FaqItem } from "./faq-item";
 import { LinkForward } from "./link-forward";
 import type { LandingTexts } from "../types";
 
-const WHATSAPP_NUMBER = "34637621754";
+const WHATSAPP_NUMBER = "998948663743";
 
 interface FaqProps {
   texts: LandingTexts["faq"];
