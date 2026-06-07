@@ -8,10 +8,9 @@
 // Consumers:
 //   - `app/sitemap.ts` — emits per-locale URLs with hreflang alternates
 //   - `next.config.ts` `redirects()` — optional 301s from legacy SEO slugs
-//   - `app/_landing/components/region-prompt-modal.tsx` via `swapLocale()` —
-//     when the visitor switches locale on a feature page, we translate the
-//     current path to the equivalent slug in the target locale (instead of
-//     dropping them on a 404).
+//   - `middleware.ts` via `swapLocale()` — the `/d` geo deep-link translates
+//     the EN slug to the equivalent slug in the target locale (instead of
+//     dropping the visitor on a 404).
 
 export const LOCALE_SLUG_OVERRIDES: Record<string, Record<string, string>> = {
   "/digital-menu": {
