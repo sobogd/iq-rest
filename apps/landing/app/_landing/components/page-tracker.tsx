@@ -72,6 +72,16 @@ function fireCurrencyEvent(): void {
   analytics.track(`l_currency_${readBillingCurrencyFromDocument().toLowerCase()}`);
 }
 
+function fireLocaleEvent(): void {
+  // Language the page actually rendered in — read from <html lang="…">, set by
+  // each per-locale layout (root group is "en"). Fires `l_locale_<lang>` so we
+  // can see which language visitors land on, alongside the currency event.
+  // Guarded to the API's /^[a-z0-9_]{1,64}$/ event regex.
+  const lang = (document.documentElement.lang || "").toLowerCase();
+  if (!/^[a-z]{2,8}$/.test(lang)) return;
+  analytics.track(`l_locale_${lang}`);
+}
+
 interface PageTrackerProps {
   /** Locale-stable page key (e.g. "home", "pricing", "help", "kds"). Fires
    *  `l_page_<page>` so the event aggregates across every language version. */
@@ -85,6 +95,7 @@ export function PageTracker({ page }: PageTrackerProps) {
     fireFromAndClean();
     analytics.track(`l_page_${page}`);
     fireCurrencyEvent();
+    fireLocaleEvent();
 
     // Re-fires on every viewport (re-)entry so the server timeline shows
     // the full scroll path — `hero → features → footer → features → ...`.
