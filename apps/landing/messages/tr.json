@@ -2102,13 +2102,18 @@
       "codeExpired": "Bu kodun süresi doldu. Yenisini isteyin.",
       "noCode": "Kayıtlı kod yok. Yenisini isteyin.",
       "invalidCode": "Yanlış kod. Tekrar deneyin.",
-      "tooManyAttempts": "Çok fazla deneme. Bekleyin ve daha sonra tekrar deneyin."
+      "tooManyAttempts": "Çok fazla deneme. Bekleyin ve daha sonra tekrar deneyin.",
+      "demoFailed": "Demo açılamadı. Tekrar deneyin."
     },
     "signInTitle": "Tekrar hoş geldiniz",
     "signInSubtitle": "E-postanızı girin, hızlı bir giriş kodu gönderelim.",
     "chooseSubtitle": "Nasıl devam etmek istediğinizi seçin.",
     "goToDashboard": "Panele git",
     "registerTitle": "Ücretsiz başlayın",
-    "registerSubtitle": "E-postanı gir, başlamak için sana hızlı bir kod gönderelim."
+    "registerSubtitle": "E-postanı gir, başlamak için sana hızlı bir kod gönderelim.",
+    "unifiedTitle": "Başla",
+    "unifiedSubtitle": "Giriş yap veya hesap oluştur — şifre gerekmez.",
+    "tryDemo": "Hemen dene — kayıt yok",
+    "tryDemoHint": "E-posta gerekmez · veriler kaydedilmez"
   }
 }

@@ -2102,13 +2102,18 @@
       "codeExpired": "Aquest codi ha caducat. Sol·licita'n un de nou.",
       "noCode": "No hi ha cap codi registrat. Sol·licita'n un de nou.",
       "invalidCode": "Codi incorrecte. Torna-ho a provar.",
-      "tooManyAttempts": "Massa intents. Espera i torna-ho a provar més tard."
+      "tooManyAttempts": "Massa intents. Espera i torna-ho a provar més tard.",
+      "demoFailed": "No s'ha pogut obrir la demo. Torna-ho a provar."
     },
     "signInTitle": "Benvingut de nou",
     "signInSubtitle": "Introdueix el teu correu i t'enviarem un codi ràpid per entrar.",
     "chooseSubtitle": "Tria com vols continuar.",
     "goToDashboard": "Vés al tauler",
     "registerTitle": "Comença gratis",
-    "registerSubtitle": "Introdueix el teu correu i t'enviarem un codi ràpid per començar."
+    "registerSubtitle": "Introdueix el teu correu i t'enviarem un codi ràpid per començar.",
+    "unifiedTitle": "Comença",
+    "unifiedSubtitle": "Inicia la sessió o crea el teu compte — sense contrasenya.",
+    "tryDemo": "Prova-ho ara — sense registre",
+    "tryDemoHint": "Sense correu · les dades no es desen"
   }
 }

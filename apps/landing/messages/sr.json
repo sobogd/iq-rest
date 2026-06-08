@@ -2102,13 +2102,18 @@
       "codeExpired": "Ovaj kod je istekao. Zatražite novi.",
       "noCode": "Nijedan kod nije evidentiran. Zatražite novi.",
       "invalidCode": "Pogrešan kod. Pokušajte ponovo.",
-      "tooManyAttempts": "Previše pokušaja. Sačekajte i pokušajte kasnije."
+      "tooManyAttempts": "Previše pokušaja. Sačekajte i pokušajte kasnije.",
+      "demoFailed": "Демо није могуће отворити. Покушајте поново."
     },
     "signInTitle": "Dobrodošli nazad",
     "signInSubtitle": "Unesite svoj e-mail i poslaćemo brz kod za prijavu.",
     "chooseSubtitle": "Изаберите како желите да наставите.",
     "goToDashboard": "Idi na kontrolnu tablu",
     "registerTitle": "Počnite besplatno",
-    "registerSubtitle": "Unesite svoj imejl i poslaćemo vam brzi kod da počnete."
+    "registerSubtitle": "Unesite svoj imejl i poslaćemo vam brzi kod da počnete.",
+    "unifiedTitle": "Почните",
+    "unifiedSubtitle": "Пријавите се или направите налог — без лозинке.",
+    "tryDemo": "Испробај одмах — без регистрације",
+    "tryDemoHint": "Без имејла · подаци се не чувају"
   }
 }

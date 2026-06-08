@@ -2102,13 +2102,18 @@
       "codeExpired": "Den här koden har gått ut. Begär en ny.",
       "noCode": "Ingen kod registrerad. Begär en ny.",
       "invalidCode": "Fel kod. Försök igen.",
-      "tooManyAttempts": "För många försök. Vänta och försök igen senare."
+      "tooManyAttempts": "För många försök. Vänta och försök igen senare.",
+      "demoFailed": "Det gick inte att öppna demon. Försök igen."
     },
     "signInTitle": "Välkommen tillbaka",
     "signInSubtitle": "Ange din e-post så skickar vi en snabb kod för att logga in.",
     "chooseSubtitle": "Välj hur du vill fortsätta.",
     "goToDashboard": "Gå till instrumentpanelen",
     "registerTitle": "Kom igång gratis",
-    "registerSubtitle": "Ange din e-post så skickar vi en snabb kod för att komma igång."
+    "registerSubtitle": "Ange din e-post så skickar vi en snabb kod för att komma igång.",
+    "unifiedTitle": "Kom igång",
+    "unifiedSubtitle": "Logga in eller skapa ett konto — inget lösenord behövs.",
+    "tryDemo": "Testa nu — ingen registrering",
+    "tryDemoHint": "Ingen e-post · data sparas inte"
   }
 }

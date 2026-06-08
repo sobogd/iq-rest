@@ -2102,13 +2102,18 @@
       "codeExpired": "此代码已过期。请请求新代码。",
       "noCode": "未记录代码。请请求新代码。",
       "invalidCode": "代码错误。请重试。",
-      "tooManyAttempts": "尝试次数过多。请稍后再试。"
+      "tooManyAttempts": "尝试次数过多。请稍后再试。",
+      "demoFailed": "无法打开演示，请重试。"
     },
     "signInTitle": "欢迎回来",
     "signInSubtitle": "输入您的邮箱，我们将发送快速登录代码。",
     "chooseSubtitle": "选择您的登录方式。",
     "goToDashboard": "前往仪表板",
     "registerTitle": "免费开始",
-    "registerSubtitle": "输入您的邮箱，我们会发送一个快捷验证码帮您开始。"
+    "registerSubtitle": "输入您的邮箱，我们会发送一个快捷验证码帮您开始。",
+    "unifiedTitle": "开始使用",
+    "unifiedSubtitle": "登录或创建账户 — 无需密码。",
+    "tryDemo": "立即试用 — 无需注册",
+    "tryDemoHint": "无需邮箱 · 数据不会保存"
   }
 }

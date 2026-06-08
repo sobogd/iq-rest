@@ -2102,13 +2102,18 @@
       "codeExpired": "Kod wygasł. Poproś o nowy.",
       "noCode": "Brak zapisanego kodu. Poproś o nowy.",
       "invalidCode": "Nieprawidłowy kod. Spróbuj ponownie.",
-      "tooManyAttempts": "Zbyt wiele prób. Poczekaj i spróbuj później."
+      "tooManyAttempts": "Zbyt wiele prób. Poczekaj i spróbuj później.",
+      "demoFailed": "Nie udało się otworzyć demo. Spróbuj ponownie."
     },
     "signInTitle": "Witaj ponownie",
     "signInSubtitle": "Wpisz swój e-mail, a wyślemy szybki kod do zalogowania.",
     "chooseSubtitle": "Wybierz, jak chcesz kontynuować.",
     "goToDashboard": "Przejdź do panelu",
     "registerTitle": "Zacznij za darmo",
-    "registerSubtitle": "Podaj swój email, a wyślemy Ci szybki kod, aby zacząć."
+    "registerSubtitle": "Podaj swój email, a wyślemy Ci szybki kod, aby zacząć.",
+    "unifiedTitle": "Zacznij teraz",
+    "unifiedSubtitle": "Zaloguj się lub załóż konto — bez hasła.",
+    "tryDemo": "Wypróbuj teraz — bez rejestracji",
+    "tryDemoHint": "Bez e-maila · dane nie są zapisywane"
   }
 }

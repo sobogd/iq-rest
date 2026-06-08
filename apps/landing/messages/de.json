@@ -2102,13 +2102,18 @@
       "codeExpired": "Dieser Code ist abgelaufen. Fordern Sie einen neuen an.",
       "noCode": "Kein Code hinterlegt. Fordern Sie einen neuen an.",
       "invalidCode": "Falscher Code. Versuchen Sie es erneut.",
-      "tooManyAttempts": "Zu viele Versuche. Warten Sie und versuchen Sie es später erneut."
+      "tooManyAttempts": "Zu viele Versuche. Warten Sie und versuchen Sie es später erneut.",
+      "demoFailed": "Demo konnte nicht geöffnet werden. Erneut versuchen."
     },
     "signInTitle": "Willkommen zurück",
     "signInSubtitle": "Geben Sie Ihre E-Mail ein, wir senden Ihnen einen schnellen Code zur Anmeldung.",
     "chooseSubtitle": "Wähle, wie du fortfahren möchtest.",
     "goToDashboard": "Zum Dashboard",
     "registerTitle": "Kostenlos starten",
-    "registerSubtitle": "Gib deine E-Mail ein und wir senden dir einen kurzen Code zum Loslegen."
+    "registerSubtitle": "Gib deine E-Mail ein und wir senden dir einen kurzen Code zum Loslegen.",
+    "unifiedTitle": "Loslegen",
+    "unifiedSubtitle": "Anmelden oder Konto erstellen — kein Passwort nötig.",
+    "tryDemo": "Jetzt testen — ohne Anmeldung",
+    "tryDemoHint": "Keine E-Mail · Daten werden nicht gespeichert"
   }
 }

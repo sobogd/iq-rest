@@ -2102,13 +2102,18 @@
       "codeExpired": "이 코드는 만료되었습니다. 새 코드를 요청하세요.",
       "noCode": "등록된 코드가 없습니다. 새 코드를 요청하세요.",
       "invalidCode": "잘못된 코드. 다시 시도하세요.",
-      "tooManyAttempts": "시도가 너무 많습니다. 잠시 후 다시 시도하세요."
+      "tooManyAttempts": "시도가 너무 많습니다. 잠시 후 다시 시도하세요.",
+      "demoFailed": "데모를 열 수 없습니다. 다시 시도하세요."
     },
     "signInTitle": "다시 오신 것을 환영합니다",
     "signInSubtitle": "이메일을 입력하시면 빠른 로그인 코드를 보내드립니다.",
     "chooseSubtitle": "계속할 방법을 선택하세요.",
     "goToDashboard": "대시보드로 이동",
     "registerTitle": "무료로 시작하기",
-    "registerSubtitle": "이메일을 입력하시면 시작을 위한 빠른 코드를 보내드립니다."
+    "registerSubtitle": "이메일을 입력하시면 시작을 위한 빠른 코드를 보내드립니다.",
+    "unifiedTitle": "시작하기",
+    "unifiedSubtitle": "로그인하거나 계정을 만드세요 — 비밀번호 불필요.",
+    "tryDemo": "지금 사용해보기 — 가입 불필요",
+    "tryDemoHint": "이메일 불필요 · 데이터는 저장되지 않음"
   }
 }

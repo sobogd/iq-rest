@@ -2102,13 +2102,18 @@
       "codeExpired": "Tento kód vypršal. Vyžiadajte si nový.",
       "noCode": "Žiadny kód nie je evidovaný. Vyžiadajte si nový.",
       "invalidCode": "Nesprávny kód. Skúste znova.",
-      "tooManyAttempts": "Príliš veľa pokusov. Počkajte a skúste neskôr."
+      "tooManyAttempts": "Príliš veľa pokusov. Počkajte a skúste neskôr.",
+      "demoFailed": "Demo sa nepodarilo otvoriť. Skúste znova."
     },
     "signInTitle": "Vitajte späť",
     "signInSubtitle": "Zadajte e-mail a my pošleme rýchly kód na prihlásenie.",
     "chooseSubtitle": "Vyberte, ako chcete pokračovať.",
     "goToDashboard": "Prejsť na panel",
     "registerTitle": "Začnite zadarmo",
-    "registerSubtitle": "Zadajte svoj e-mail a pošleme vám rýchly kód na začiatok."
+    "registerSubtitle": "Zadajte svoj e-mail a pošleme vám rýchly kód na začiatok.",
+    "unifiedTitle": "Začať",
+    "unifiedSubtitle": "Prihláste sa alebo si vytvorte účet — bez hesla.",
+    "tryDemo": "Vyskúšajte hneď — bez registrácie",
+    "tryDemoHint": "Bez e-mailu · údaje sa neukladajú"
   }
 }

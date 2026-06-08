@@ -2102,13 +2102,18 @@
       "codeExpired": "Acest cod a expirat. Solicită unul nou.",
       "noCode": "Niciun cod înregistrat. Solicită unul nou.",
       "invalidCode": "Cod greșit. Încearcă din nou.",
-      "tooManyAttempts": "Prea multe încercări. Așteaptă și încearcă mai târziu."
+      "tooManyAttempts": "Prea multe încercări. Așteaptă și încearcă mai târziu.",
+      "demoFailed": "Demo nu a putut fi deschis. Încearcă din nou."
     },
     "signInTitle": "Bun venit înapoi",
     "signInSubtitle": "Introdu e-mailul și îți vom trimite un cod rapid pentru autentificare.",
     "chooseSubtitle": "Alege cum vrei să continui.",
     "goToDashboard": "Mergi la panou",
     "registerTitle": "Începe gratuit",
-    "registerSubtitle": "Introdu emailul și îți trimitem un cod rapid ca să începi."
+    "registerSubtitle": "Introdu emailul și îți trimitem un cod rapid ca să începi.",
+    "unifiedTitle": "Începe",
+    "unifiedSubtitle": "Conectează-te sau creează un cont — fără parolă.",
+    "tryDemo": "Încearcă acum — fără înregistrare",
+    "tryDemoHint": "Fără e-mail · datele nu se salvează"
   }
 }

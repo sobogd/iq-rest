@@ -2102,13 +2102,18 @@
       "codeExpired": "Kodas pasibaigė. Užsisakykite naują.",
       "noCode": "Kodas neužregistruotas. Užsisakykite naują.",
       "invalidCode": "Neteisingas kodas. Bandykite dar kartą.",
-      "tooManyAttempts": "Per daug bandymų. Palaukite ir bandykite vėliau."
+      "tooManyAttempts": "Per daug bandymų. Palaukite ir bandykite vėliau.",
+      "demoFailed": "Nepavyko atidaryti demo. Bandykite dar kartą."
     },
     "signInTitle": "Sveiki sugrįžę",
     "signInSubtitle": "Įveskite el. paštą ir mes išsiųsime greitą prisijungimo kodą.",
     "chooseSubtitle": "Pasirinkite, kaip norite tęsti.",
     "goToDashboard": "Eiti į skydelį",
     "registerTitle": "Pradėk nemokamai",
-    "registerSubtitle": "Įvesk savo el. paštą ir atsiųsime greitą kodą pradžiai."
+    "registerSubtitle": "Įvesk savo el. paštą ir atsiųsime greitą kodą pradžiai.",
+    "unifiedTitle": "Pradėti",
+    "unifiedSubtitle": "Prisijunkite arba sukurkite paskyrą — be slaptažodžio.",
+    "tryDemo": "Išbandykite dabar — be registracijos",
+    "tryDemoHint": "Nereikia el. pašto · duomenys neišsaugomi"
   }
 }

@@ -2090,13 +2090,18 @@
       "codeExpired": "This code expired. Request a new one.",
       "noCode": "No code on file. Request a new one.",
       "invalidCode": "Wrong code. Try again.",
-      "tooManyAttempts": "Too many attempts. Wait and try again later."
+      "tooManyAttempts": "Too many attempts. Wait and try again later.",
+      "demoFailed": "Couldn't open the demo. Try again."
     },
     "signInTitle": "Welcome back",
     "signInSubtitle": "Enter your email and we'll send a quick code to sign you in.",
     "chooseSubtitle": "Choose how you'd like to continue.",
     "goToDashboard": "Go to dashboard",
     "registerTitle": "Start for free",
-    "registerSubtitle": "Enter your email and we'll send a quick code to get you started."
+    "registerSubtitle": "Enter your email and we'll send a quick code to get you started.",
+    "unifiedTitle": "Get started",
+    "unifiedSubtitle": "Sign in or create your account — no password needed.",
+    "tryDemo": "Try it now — no signup",
+    "tryDemoHint": "No email needed · data not saved"
   }
 }

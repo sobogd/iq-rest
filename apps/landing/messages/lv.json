@@ -2102,13 +2102,18 @@
       "codeExpired": "Šis kods ir beidzies. Pieprasiet jaunu.",
       "noCode": "Kods nav reģistrēts. Pieprasiet jaunu.",
       "invalidCode": "Nepareizs kods. Mēģiniet vēlreiz.",
-      "tooManyAttempts": "Pārāk daudz mēģinājumu. Uzgaidiet un mēģiniet vēlāk."
+      "tooManyAttempts": "Pārāk daudz mēģinājumu. Uzgaidiet un mēģiniet vēlāk.",
+      "demoFailed": "Neizdevās atvērt demo. Mēģiniet vēlreiz."
     },
     "signInTitle": "Laipni lūdzam atpakaļ",
     "signInSubtitle": "Ievadiet e-pastu, un mēs nosūtīsim ātru pieteikšanās kodu.",
     "chooseSubtitle": "Izvēlieties, kā vēlaties turpināt.",
     "goToDashboard": "Doties uz paneli",
     "registerTitle": "Sāc bez maksas",
-    "registerSubtitle": "Ievadi savu e-pastu, un mēs nosūtīsim ātru kodu, lai sāktu."
+    "registerSubtitle": "Ievadi savu e-pastu, un mēs nosūtīsim ātru kodu, lai sāktu.",
+    "unifiedTitle": "Sākt",
+    "unifiedSubtitle": "Piesakieties vai izveidojiet kontu — bez paroles.",
+    "tryDemo": "Izmēģiniet tūlīt — bez reģistrācijas",
+    "tryDemoHint": "Bez e-pasta · dati netiek saglabāti"
   }
 }

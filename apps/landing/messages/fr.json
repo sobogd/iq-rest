@@ -2102,13 +2102,18 @@
       "codeExpired": "Ce code a expiré. Demandez-en un nouveau.",
       "noCode": "Aucun code enregistré. Demandez-en un nouveau.",
       "invalidCode": "Code incorrect. Réessayez.",
-      "tooManyAttempts": "Trop de tentatives. Attendez et réessayez plus tard."
+      "tooManyAttempts": "Trop de tentatives. Attendez et réessayez plus tard.",
+      "demoFailed": "Impossible d'ouvrir la démo. Réessayez."
     },
     "signInTitle": "Bon retour",
     "signInSubtitle": "Entrez votre e-mail et nous enverrons un code rapide pour vous connecter.",
     "chooseSubtitle": "Choisissez comment continuer.",
     "goToDashboard": "Accéder au tableau de bord",
     "registerTitle": "Commencez gratuitement",
-    "registerSubtitle": "Saisis ton email et nous t'enverrons un code rapide pour démarrer."
+    "registerSubtitle": "Saisis ton email et nous t'enverrons un code rapide pour démarrer.",
+    "unifiedTitle": "Commencer",
+    "unifiedSubtitle": "Connectez-vous ou créez votre compte — sans mot de passe.",
+    "tryDemo": "Essayer maintenant — sans inscription",
+    "tryDemoHint": "Sans e-mail · données non enregistrées"
   }
 }

@@ -2102,13 +2102,18 @@
       "codeExpired": "See kood on aegunud. Telli uus.",
       "noCode": "Koodi pole salvestatud. Telli uus.",
       "invalidCode": "Vale kood. Proovi uuesti.",
-      "tooManyAttempts": "Liiga palju katseid. Oota ja proovi hiljem."
+      "tooManyAttempts": "Liiga palju katseid. Oota ja proovi hiljem.",
+      "demoFailed": "Demo avamine ebaõnnestus. Proovi uuesti."
     },
     "signInTitle": "Tere tulemast tagasi",
     "signInSubtitle": "Sisesta oma e-post ja saadame kiire sisselogimiskoodi.",
     "chooseSubtitle": "Vali, kuidas soovid jätkata.",
     "goToDashboard": "Mine töölauale",
     "registerTitle": "Alusta tasuta",
-    "registerSubtitle": "Sisesta oma e-post ja saadame sulle kiire koodi alustamiseks."
+    "registerSubtitle": "Sisesta oma e-post ja saadame sulle kiire koodi alustamiseks.",
+    "unifiedTitle": "Alusta",
+    "unifiedSubtitle": "Logi sisse või loo konto — parooli pole vaja.",
+    "tryDemo": "Proovi kohe — ilma registreerimiseta",
+    "tryDemoHint": "E-posti pole vaja · andmeid ei salvestata"
   }
 }

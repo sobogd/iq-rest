@@ -46,14 +46,17 @@ export function AuthStep({
   variant = "signin",
 }: {
   signupContext: SignupContext | null;
-  /** "register" → fresh-signup copy (onboarding skipped); "signin" → returning-user copy. */
-  variant?: "signin" | "register";
+  /** "unified" → single login-or-register screen with a demo button (landing default);
+   *  "register" → fresh-signup copy; "signin" → returning-user copy. */
+  variant?: "signin" | "register" | "unified";
 }) {
   const t = useTranslations("auth");
   const locale = useLocale();
   const isRegister = variant === "register";
+  const isUnified = variant === "unified";
 
   const [screen, setScreen] = useState<Screen>("email");
+  const [demoLoading, setDemoLoading] = useState(false);
   // The "email" screen opens on a method choice (Google / Apple / Email).
   // The email input form is revealed only after the user picks "email".
   const [emailOpen, setEmailOpen] = useState(false);
@@ -68,6 +71,37 @@ export function AuthStep({
     const timer = setTimeout(() => setCooldown((c) => c - 1), 1000);
     return () => clearTimeout(timer);
   }, [cooldown]);
+
+  // Demo: mint an ephemeral account server-side (no email, no OTP) and drop the
+  // visitor straight into a populated dashboard. Their poking is saved later via
+  // the "save your menu" claim flow inside the dashboard.
+  const handleDemo = async () => {
+    if (demoLoading) return;
+    analytics.track("l_onb_demo_click");
+    setDemoLoading(true);
+    setErrorMessage("");
+    setStatus("idle");
+    try {
+      const res = await fetch(dashboardApi("/api/auth/demo"), {
+        credentials: "include",
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ locale }),
+      });
+      if (res.ok) {
+        analytics.track("l_onb_demo_success");
+        redirectAfterAuth(locale, false);
+      } else {
+        setDemoLoading(false);
+        setErrorMessage(t("errors.demoFailed"));
+        setStatus("error");
+      }
+    } catch {
+      setDemoLoading(false);
+      setErrorMessage(t("errors.demoFailed"));
+      setStatus("error");
+    }
+  };
 
   const handleGoogleClick = () => {
     if (!GOOGLE_CLIENT_ID) return;
@@ -240,18 +274,22 @@ export function AuthStep({
       <h2 className="text-2xl sm:text-3xl font-medium tracking-tight leading-tight mb-2">
         {signupContext
           ? t("titleWithName", { name: signupContext.restaurantName })
-          : isRegister
-            ? t("registerTitle")
-            : t("signInTitle")}
+          : isUnified
+            ? t("unifiedTitle")
+            : isRegister
+              ? t("registerTitle")
+              : t("signInTitle")}
       </h2>
       <p className="text-sm sm:text-base text-muted-foreground leading-snug mb-6">
         {emailOpen
           ? signupContext
             ? t("subtitle")
-            : isRegister
+            : isRegister || isUnified
               ? t("registerSubtitle")
               : t("signInSubtitle")
-          : t("chooseSubtitle")}
+          : isUnified
+            ? t("unifiedSubtitle")
+            : t("chooseSubtitle")}
       </p>
 
       {status === "error" && errorMessage && (
@@ -311,6 +349,29 @@ export function AuthStep({
         </>
       ) : (
         <div className="flex flex-col gap-3">
+          {isUnified && (
+            <>
+              <button
+                type="button"
+                onClick={handleDemo}
+                disabled={demoLoading}
+                className="w-full min-h-12 py-2 text-base font-medium text-foreground bg-background border border-border rounded-xl hover:border-foreground active:scale-[0.99] transition-all flex flex-col items-center justify-center gap-0.5 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
+              >
+                <span className="inline-flex items-center gap-2">
+                  {demoLoading && <Loader2 className="h-4 w-4 animate-spin" />}
+                  {t("tryDemo")}
+                </span>
+                <span className="text-xs font-normal text-muted-foreground">{t("tryDemoHint")}</span>
+              </button>
+
+              <div className="flex items-center gap-3 my-1">
+                <span className="h-px flex-1 bg-border" />
+                <span className="text-xs text-muted-foreground">{t("or")}</span>
+                <span className="h-px flex-1 bg-border" />
+              </div>
+            </>
+          )}
+
           <button
             type="button"
             onClick={handleGoogleClick}

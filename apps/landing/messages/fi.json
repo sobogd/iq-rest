@@ -2102,13 +2102,18 @@
       "codeExpired": "Tämä koodi on vanhentunut. Pyydä uusi.",
       "noCode": "Koodia ei ole tallennettu. Pyydä uusi.",
       "invalidCode": "Väärä koodi. Yritä uudelleen.",
-      "tooManyAttempts": "Liikaa yrityksiä. Odota ja yritä myöhemmin."
+      "tooManyAttempts": "Liikaa yrityksiä. Odota ja yritä myöhemmin.",
+      "demoFailed": "Demon avaaminen epäonnistui. Yritä uudelleen."
     },
     "signInTitle": "Tervetuloa takaisin",
     "signInSubtitle": "Anna sähköpostiosoitteesi, niin lähetämme nopean kirjautumiskoodin.",
     "chooseSubtitle": "Valitse, miten haluat jatkaa.",
     "goToDashboard": "Siirry hallintapaneeliin",
     "registerTitle": "Aloita ilmaiseksi",
-    "registerSubtitle": "Anna sähköpostisi, niin lähetämme nopean koodin aloittamiseen."
+    "registerSubtitle": "Anna sähköpostisi, niin lähetämme nopean koodin aloittamiseen.",
+    "unifiedTitle": "Aloita",
+    "unifiedSubtitle": "Kirjaudu sisään tai luo tili — ei salasanaa.",
+    "tryDemo": "Kokeile heti — ilman rekisteröitymistä",
+    "tryDemoHint": "Ei sähköpostia · tietoja ei tallenneta"
   }
 }

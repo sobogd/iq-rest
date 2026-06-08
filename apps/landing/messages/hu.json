@@ -2102,13 +2102,18 @@
       "codeExpired": "A kód lejárt. Kérj újat.",
       "noCode": "Nincs kód rögzítve. Kérj újat.",
       "invalidCode": "Hibás kód. Próbáld újra.",
-      "tooManyAttempts": "Túl sok próbálkozás. Várj és próbáld később."
+      "tooManyAttempts": "Túl sok próbálkozás. Várj és próbáld később.",
+      "demoFailed": "A demó megnyitása nem sikerült. Próbáld újra."
     },
     "signInTitle": "Üdv újra",
     "signInSubtitle": "Add meg e-mail címed, és gyors belépési kódot küldünk.",
     "chooseSubtitle": "Válaszd ki, hogyan szeretnél folytatni.",
     "goToDashboard": "Ugrás a vezérlőpultra",
     "registerTitle": "Kezdje ingyen",
-    "registerSubtitle": "Add meg az e-mail-címed, és küldünk egy gyors kódot az induláshoz."
+    "registerSubtitle": "Add meg az e-mail-címed, és küldünk egy gyors kódot az induláshoz.",
+    "unifiedTitle": "Kezdjük",
+    "unifiedSubtitle": "Jelentkezz be vagy hozz létre fiókot — jelszó nélkül.",
+    "tryDemo": "Próbáld ki most — regisztráció nélkül",
+    "tryDemoHint": "Nincs e-mail · az adatok nem mentődnek"
   }
 }

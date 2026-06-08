@@ -2102,13 +2102,18 @@
       "codeExpired": "Denne kode er udløbet. Anmod om en ny.",
       "noCode": "Ingen kode registreret. Anmod om en ny.",
       "invalidCode": "Forkert kode. Prøv igen.",
-      "tooManyAttempts": "For mange forsøg. Vent og prøv igen senere."
+      "tooManyAttempts": "For mange forsøg. Vent og prøv igen senere.",
+      "demoFailed": "Kunne ikke åbne demoen. Prøv igen."
     },
     "signInTitle": "Velkommen tilbage",
     "signInSubtitle": "Indtast din e-mail, og vi sender en hurtig kode til at logge ind.",
     "chooseSubtitle": "Vælg, hvordan du vil fortsætte.",
     "goToDashboard": "Gå til dashboard",
     "registerTitle": "Kom gratis i gang",
-    "registerSubtitle": "Indtast din e-mail, så sender vi en hurtig kode, så du kan komme i gang."
+    "registerSubtitle": "Indtast din e-mail, så sender vi en hurtig kode, så du kan komme i gang.",
+    "unifiedTitle": "Kom i gang",
+    "unifiedSubtitle": "Log ind eller opret en konto — ingen adgangskode nødvendig.",
+    "tryDemo": "Prøv nu — ingen tilmelding",
+    "tryDemoHint": "Ingen e-mail · data gemmes ikke"
   }
 }

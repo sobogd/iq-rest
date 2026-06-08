@@ -2102,13 +2102,18 @@
       "codeExpired": "Tá an cód seo imithe in éag. Iarr ceann nua.",
       "noCode": "Níl aon chód cláraithe. Iarr ceann nua.",
       "invalidCode": "Cód mícheart. Triail arís.",
-      "tooManyAttempts": "An iomarca iarrachtaí. Fan agus triail níos déanaí."
+      "tooManyAttempts": "An iomarca iarrachtaí. Fan agus triail níos déanaí.",
+      "demoFailed": "Níorbh fhéidir an taispeántas a oscailt. Bain triail eile."
     },
     "signInTitle": "Fáilte ar ais",
     "signInSubtitle": "Cuir isteach do ríomhphost agus seolfaimid cód tapa chun síniú isteach.",
     "chooseSubtitle": "Roghnaigh conas is mian leat leanúint ar aghaidh.",
     "goToDashboard": "Téigh chuig an bpainéal",
     "registerTitle": "Tosaigh saor in aisce",
-    "registerSubtitle": "Cuir isteach do ríomhphost agus seolfaimid cód tapa chun tús a chur leis."
+    "registerSubtitle": "Cuir isteach do ríomhphost agus seolfaimid cód tapa chun tús a chur leis.",
+    "unifiedTitle": "Tosaigh",
+    "unifiedSubtitle": "Sínigh isteach nó cruthaigh cuntas — gan pasfhocal.",
+    "tryDemo": "Bain triail as anois — gan chlárú",
+    "tryDemoHint": "Gan ríomhphost · ní shábháiltear sonraí"
   }
 }

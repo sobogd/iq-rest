@@ -2102,13 +2102,18 @@
       "codeExpired": "Tento kód vypršel. Vyžádejte nový.",
       "noCode": "Žádný kód není evidován. Vyžádejte nový.",
       "invalidCode": "Špatný kód. Zkuste to znovu.",
-      "tooManyAttempts": "Příliš mnoho pokusů. Počkejte a zkuste to později."
+      "tooManyAttempts": "Příliš mnoho pokusů. Počkejte a zkuste to později.",
+      "demoFailed": "Demo se nepodařilo otevřít. Zkuste to znovu."
     },
     "signInTitle": "Vítejte zpět",
     "signInSubtitle": "Zadejte svůj e-mail a my pošleme rychlý kód pro přihlášení.",
     "chooseSubtitle": "Vyberte, jak chcete pokračovat.",
     "goToDashboard": "Přejít na panel",
     "registerTitle": "Začněte zdarma",
-    "registerSubtitle": "Zadejte svůj e-mail a my vám pošleme rychlý kód pro začátek."
+    "registerSubtitle": "Zadejte svůj e-mail a my vám pošleme rychlý kód pro začátek.",
+    "unifiedTitle": "Začít",
+    "unifiedSubtitle": "Přihlaste se nebo si vytvořte účet — bez hesla.",
+    "tryDemo": "Vyzkoušejte hned — bez registrace",
+    "tryDemoHint": "Bez e-mailu · data se neukládají"
   }
 }

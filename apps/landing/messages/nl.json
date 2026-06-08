@@ -2102,13 +2102,18 @@
       "codeExpired": "Deze code is verlopen. Vraag een nieuwe aan.",
       "noCode": "Geen code geregistreerd. Vraag een nieuwe aan.",
       "invalidCode": "Onjuiste code. Probeer opnieuw.",
-      "tooManyAttempts": "Te veel pogingen. Wacht en probeer later opnieuw."
+      "tooManyAttempts": "Te veel pogingen. Wacht en probeer later opnieuw.",
+      "demoFailed": "Kan de demo niet openen. Probeer opnieuw."
     },
     "signInTitle": "Welkom terug",
     "signInSubtitle": "Voer je e-mail in en we sturen een snelle code om in te loggen.",
     "chooseSubtitle": "Kies hoe je wilt doorgaan.",
     "goToDashboard": "Naar dashboard",
     "registerTitle": "Begin gratis",
-    "registerSubtitle": "Voer je e-mail in en we sturen je een snelle code om te beginnen."
+    "registerSubtitle": "Voer je e-mail in en we sturen je een snelle code om te beginnen.",
+    "unifiedTitle": "Aan de slag",
+    "unifiedSubtitle": "Log in of maak een account — geen wachtwoord nodig.",
+    "tryDemo": "Probeer nu — geen account nodig",
+    "tryDemoHint": "Geen e-mail · gegevens niet opgeslagen"
   }
 }

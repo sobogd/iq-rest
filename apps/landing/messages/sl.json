@@ -2102,13 +2102,18 @@
       "codeExpired": "Ta koda je potekla. Zahtevajte novo.",
       "noCode": "Ni zabeležene kode. Zahtevajte novo.",
       "invalidCode": "Napačna koda. Poskusite znova.",
-      "tooManyAttempts": "Preveč poskusov. Počakajte in poskusite kasneje."
+      "tooManyAttempts": "Preveč poskusov. Počakajte in poskusite kasneje.",
+      "demoFailed": "Demota ni bilo mogoče odpreti. Poskusite znova."
     },
     "signInTitle": "Dobrodošli nazaj",
     "signInSubtitle": "Vnesite e-pošto in poslali bomo hitro kodo za prijavo.",
     "chooseSubtitle": "Izberite, kako želite nadaljevati.",
     "goToDashboard": "Pojdi na nadzorno ploščo",
     "registerTitle": "Začnite brezplačno",
-    "registerSubtitle": "Vnesite svoj e-poštni naslov in poslali vam bomo kratko kodo za začetek."
+    "registerSubtitle": "Vnesite svoj e-poštni naslov in poslali vam bomo kratko kodo za začetek.",
+    "unifiedTitle": "Začnite",
+    "unifiedSubtitle": "Prijavite se ali ustvarite račun — brez gesla.",
+    "tryDemo": "Preizkusite zdaj — brez registracije",
+    "tryDemoHint": "Brez e-pošte · podatki se ne shranijo"
   }
 }

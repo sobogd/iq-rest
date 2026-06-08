@@ -2102,13 +2102,18 @@
       "codeExpired": "Þessi kóði er útrunninn. Biddu um nýjan.",
       "noCode": "Enginn kóði skráður. Biddu um nýjan.",
       "invalidCode": "Rangur kóði. Reyndu aftur.",
-      "tooManyAttempts": "Of margar tilraunir. Bíddu og reyndu seinna."
+      "tooManyAttempts": "Of margar tilraunir. Bíddu og reyndu seinna.",
+      "demoFailed": "Ekki tókst að opna kynninguna. Reyndu aftur."
     },
     "signInTitle": "Velkominn aftur",
     "signInSubtitle": "Sláðu inn netfangið þitt og við sendum hraðan innskráningarkóða.",
     "chooseSubtitle": "Veldu hvernig þú vilt halda áfram.",
     "goToDashboard": "Fara á stjórnborð",
     "registerTitle": "Byrjaðu frítt",
-    "registerSubtitle": "Sláðu inn netfangið þitt og við sendum þér fljótlegan kóða til að byrja."
+    "registerSubtitle": "Sláðu inn netfangið þitt og við sendum þér fljótlegan kóða til að byrja.",
+    "unifiedTitle": "Byrja",
+    "unifiedSubtitle": "Skráðu þig inn eða stofnaðu reikning — ekkert lykilorð.",
+    "tryDemo": "Prófaðu núna — engin skráning",
+    "tryDemoHint": "Enginn tölvupóstur · gögn eru ekki vistuð"
   }
 }
