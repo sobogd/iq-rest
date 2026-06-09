@@ -349,6 +349,7 @@ export function AuthStep({
         </>
       ) : (
         <div className="flex flex-col gap-3">
+          {/* Demo button temporarily hidden — keep only Google / Apple / Email.
           {isUnified && (
             <>
               <button
@@ -371,6 +372,7 @@ export function AuthStep({
               </div>
             </>
           )}
+          */}
 
           <button
             type="button"
