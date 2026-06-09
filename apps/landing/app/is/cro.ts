@@ -16,7 +16,7 @@ export const CRO: CroCopy = {
   hero: {
     verticals: ["Veitingastaðir","Kaffihús","Barir","Pítsustaðir"],
     title: "Veitingastaðurinn þinn,",
-    titleAccent: "algjörlega stafrænn á 5 mínútum.",
+    titleAccent: "stafrænn á 5 mínútum.",
     sub: "Fallegur stafrænn matseðill, eldhússkjár og bókanir allan sólarhringinn — heildarvettvangurinn fyrir nútímalegan veitingastað.",
   },
 

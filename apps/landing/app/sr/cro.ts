@@ -15,8 +15,8 @@ import type { CroCopy } from "@/app/_landing/templates/cro-home-template";
 export const CRO: CroCopy = {
   hero: {
     verticals: ["Ресторани","Кафићи","Барови","Пицерије"],
-    title: "Ваш ресторан,",
-    titleAccent: "потпуно дигиталан за 5 минута.",
+    title: "Ваш ресторан —",
+    titleAccent: "онлајн за 5 минута.",
     sub: "Леп дигитални мени, кухињски екран и резервације 24/7 — комплетна платформа за модеран ресторан.",
   },
 

@@ -16,7 +16,7 @@ export const CRO: CroCopy = {
   hero: {
     verticals: ["Restavracije","Kavarne","Bari","Picerije"],
     title: "Vaša restavracija,",
-    titleAccent: "popolnoma digitalna v 5 minutah.",
+    titleAccent: "digitalna v 5 minutah.",
     sub: "Lep digitalni meni, kuhinjski zaslon in rezervacije 24/7 — popolna platforma za sodobno restavracijo.",
   },
 

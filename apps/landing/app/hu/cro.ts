@@ -16,7 +16,7 @@ export const CRO: CroCopy = {
   hero: {
     verticals: ["Éttermek","Kávézók","Bárok","Pizzériák"],
     title: "Az éttermed,",
-    titleAccent: "teljesen digitálisan 5 perc alatt.",
+    titleAccent: "digitálisan 5 perc alatt.",
     sub: "Egy szép digitális menü, egy konyhai kijelző és éjjel-nappali foglalások — a teljes platform egy modern étteremhez.",
   },
 
