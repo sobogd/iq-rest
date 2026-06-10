@@ -13,25 +13,6 @@ const FBCLID_REGEX = /^[A-Za-z0-9_.-]{1,512}$/;
 // a new one.
 const SECTION_THROTTLE_MS = 1500;
 
-function readFromSource(): string | null {
-  // `?from=` is no longer stripped server-side — read it straight from the URL.
-  // Sanitize to the API event charset (a-z0-9_) instead of rejecting, so ANY
-  // source name still fires `l_from_<name>` (e.g. "My-Campaign 1" → "my_campaign_1").
-  const sp = new URLSearchParams(window.location.search);
-  const raw = (sp.get("from") || "")
-    .toLowerCase()
-    .replace(/[^a-z0-9_]+/g, "_")
-    .replace(/^_+|_+$/g, "")
-    .slice(0, 32);
-  return raw || null;
-}
-
-function fireFromEvent(): void {
-  const source = readFromSource();
-  if (!source) return;
-  analytics.track(`l_from_${source}`);
-}
-
 // Sanitize an arbitrary string to the API event charset (a-z0-9_), collapsing
 // any underscore run to a single `_` so a double underscore `__` can be used
 // as an unambiguous name/value separator (parts never contain `__`).
@@ -43,15 +24,16 @@ function sanitizeEventPart(s: string): string {
     .replace(/^_+|_+$/g, "");
 }
 
-// These params are already emitted with their canonical `l_*` event names
-// (carrying server-side semantics — paid-ad bot-filter bypass, is_*_ads flags).
-// The generic pass skips them so we don't double-fire.
-const HANDLED_PARAMS = new Set(["gclid", "gbraid", "wbraid", "fbclid", "from"]);
+// Only the paid click ids keep dedicated `l_gclid_`/`l_fbclid_` events — their
+// raw value (case + . -, up to 512 chars) and server-side semantics (bot-filter
+// bypass, is_*_ads flags, CAPI fbc) can't survive the generic a-z0-9_ channel.
+// Everything else (incl. `from`) goes through the universal l_param_ pass.
+const HANDLED_PARAMS = new Set(["gclid", "gbraid", "wbraid", "fbclid"]);
 
 // Fire a `l_param_<name>__<value>` event for every other URL query param (the
 // double underscore `__` separates name from value unambiguously — single
 // underscores inside either part are kept), then strip ALL params from the URL
-// so a reload doesn't double-count. Runs AFTER the dedicated gclid/fbclid/from
+// so a reload doesn't double-count. Runs AFTER the dedicated gclid/fbclid
 // handlers (they read their params first).
 function fireAllParamsAndClean(): void {
   const sp = new URLSearchParams(window.location.search);
@@ -69,12 +51,16 @@ function fireAllParamsAndClean(): void {
   window.history.replaceState({}, "", newUrl);
 }
 
+// Paid click ids ride the unified `l_param_<name>__<value>` namespace too, but
+// the value is the RAW id (case + . - preserved, NOT sanitized) — the server
+// accepts these via a dedicated permissive regex, sets is_*_ads, and bypasses
+// the bot filter. CAPI/admin parse the id back by stripping the fixed prefix.
 function fireGclidEvent(): void {
   const sp = new URLSearchParams(window.location.search);
   const gclid = sp.get("gclid") || sp.get("gbraid") || sp.get("wbraid");
   if (!gclid || !GCLID_REGEX.test(gclid)) return;
 
-  analytics.track(`l_gclid_${gclid}`);
+  analytics.track(`l_param_gclid__${gclid}`);
 }
 
 function fireFbclidEvent(): void {
@@ -82,7 +68,7 @@ function fireFbclidEvent(): void {
   const fbclid = sp.get("fbclid");
   if (!fbclid || !FBCLID_REGEX.test(fbclid)) return;
 
-  analytics.track(`l_fbclid_${fbclid}`);
+  analytics.track(`l_param_fbclid__${fbclid}`);
 }
 
 function fireCurrencyEvent(): void {
@@ -112,8 +98,8 @@ export function PageTracker({ page }: PageTrackerProps) {
   useEffect(() => {
     fireGclidEvent();
     fireFbclidEvent();
-    fireFromEvent();
-    // Generic catch-all for every other URL param, then strip the whole query.
+    // Generic catch-all for every other URL param (incl. `from`), then strip
+    // the whole query.
     fireAllParamsAndClean();
     analytics.track(`l_page_${page}`);
     fireCurrencyEvent();
