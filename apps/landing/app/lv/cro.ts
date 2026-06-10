@@ -82,6 +82,9 @@ export const CRO: CroCopy = {
           "Pasūtīšana, negaidot viesmīli",
           "Viesmīļa izsaukšana vai rēķina pieprasīšana",
           "Galda rezervēšana 24/7",
+          "Unikāls QR kods katram galdam",
+          "Viesiem nav vajadzīga lietotne — atveras pārlūkā",
+          "Alergēnu un diētu birkas filtrēšanai",
         ],
       },
       {
@@ -102,6 +105,8 @@ export const CRO: CroCopy = {
           "Mākslīgā intelekta tulkojums ar vienu klikšķi",
           "Pārdošanas analīze un atskaites",
           "Vairāki restorāni vienā kontā",
+          "MI digitalizē jūsu papīra ēdienkarti 60 sekundēs",
+          "Jūsu paša domēns ar SSL",
         ],
       },
     ],

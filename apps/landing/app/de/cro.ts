@@ -82,6 +82,9 @@ export const CRO: CroCopy = {
           "Bestellen ohne auf die Bedienung zu warten",
           "Bedienung rufen oder Rechnung anfordern",
           "Tisch rund um die Uhr reservieren",
+          "Ein eigener QR-Code für jeden Tisch",
+          "Keine App für Gäste — öffnet im Browser",
+          "Allergen- und Diät-Tags zum Filtern",
         ],
       },
       {
@@ -102,6 +105,8 @@ export const CRO: CroCopy = {
           "KI-Übersetzung mit einem Klick",
           "Verkaufsanalysen und Berichte",
           "Mehrere Restaurants in einem Konto",
+          "KI digitalisiert deine Papierkarte in 60 Sekunden",
+          "Eigene Domain mit SSL",
         ],
       },
     ],

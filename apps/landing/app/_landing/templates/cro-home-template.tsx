@@ -243,39 +243,10 @@ export function CroHomeTemplate({
         })}
       </div>
 
-      {/* Breadth grid — everything else, one line each. */}
-      <Section dataSection="cro_extras" noContainer accent={!shift} className="!py-16">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-center text-[1.6rem] sm:text-3xl lg:text-[2.25rem] font-medium tracking-tight leading-[1.1] mb-8 sm:mb-10">
-            {cro.extras.heading}
-          </h2>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-5">
-            {cro.extras.items.map((it) => (
-              <li key={it.label} className="flex items-start gap-3 text-left">
-                <it.Icon className="h-5 w-5 shrink-0 mt-0.5 text-primary" strokeWidth={2} />
-                <span className="text-base text-foreground/85 leading-snug">{it.label}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </Section>
-
-      {/* Positioning recap + mid-page CTA. */}
-      <Section dataSection="cro_midcta" noContainer accent={shift} className="!py-16">
-        <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
-          <h2 className="text-[2rem] sm:text-[2.75rem] lg:text-[3.25rem] font-medium tracking-tight leading-[1.05] mb-4">
-            <span className="bg-gradient-to-br from-primary to-amber-400 bg-clip-text text-transparent">
-              {cro.midCta.heading}
-            </span>
-          </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground/70 leading-snug mb-8">
-            {cro.midCta.sub}
-          </p>
-          <CtaButton text={texts.homeCtaText} microcopy={texts.microcopy} locale={locale} align="center" trackEvent="l_cro_midcta_cta_click" />
-        </div>
-      </Section>
-
-      {/* One system, the whole restaurant — guest / kitchen / management.
+      {/* One system, the whole restaurant — guest / kitchen / management,
+          capped with the mid-page CTA (merged from the old recap section).
+          The breadth items from the old "everything else" grid now live inside
+          these three groups.
           Falls back to the legacy four-step "how" for not-yet-migrated locales. */}
       {cro.activities ? (
         <Section dataSection="cro_activities" noContainer accent={!shift} className="!py-16">
@@ -306,6 +277,9 @@ export function CroHomeTemplate({
                   </ul>
                 </div>
               ))}
+            </div>
+            <div className="mt-10 sm:mt-12 flex justify-center">
+              <CtaButton text={texts.homeCtaText} microcopy={texts.microcopy} locale={locale} align="center" trackEvent="l_cro_midcta_cta_click" />
             </div>
           </div>
         </Section>

@@ -82,6 +82,9 @@ export const CRO: CroCopy = {
           "Beställ utan att vänta på servitören",
           "Kalla på servitören eller be om notan",
           "Boka bord dygnet runt",
+          "En unik QR-kod för varje bord",
+          "Ingen app för gäster — öppnas i webbläsaren",
+          "Allergen- och kosttaggar att filtrera på",
         ],
       },
       {
@@ -102,6 +105,8 @@ export const CRO: CroCopy = {
           "AI-översättning med ett klick",
           "Försäljningsanalys och rapporter",
           "Flera restauranger på ett konto",
+          "AI digitaliserar din pappersmeny på 60 sekunder",
+          "Din egen domän med SSL",
         ],
       },
     ],

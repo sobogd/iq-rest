@@ -82,6 +82,9 @@ export const CRO: CroCopy = {
           "Comandă fără să aștepți ospătarul",
           "Cheamă ospătarul sau cere nota",
           "Rezervare de masă 24/7",
+          "Un cod QR unic pentru fiecare masă",
+          "Fără aplicație pentru clienți — se deschide în browser",
+          "Etichete de alergeni și diete pentru filtrare",
         ],
       },
       {
@@ -102,6 +105,8 @@ export const CRO: CroCopy = {
           "Traducere cu AI dintr-un clic",
           "Analize de vânzări și rapoarte",
           "Mai multe restaurante într-un singur cont",
+          "AI-ul digitalizează meniul pe hârtie în 60 de secunde",
+          "Propriul tău domeniu cu SSL",
         ],
       },
     ],

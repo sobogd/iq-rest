@@ -82,6 +82,9 @@ export const CRO: CroCopy = {
           "Ordú gan fanacht leis an bhfreastalaí",
           "Glaoigh ar an bhfreastalaí nó iarr an bille",
           "Cuir bord in áirithe 24/7",
+          "Cód QR uathúil do gach bord",
+          "Gan aip do na haíonna — osclaíonn sé sa bhrabhsálaí",
+          "Clibeanna ailléirginí is aistí bia le scagadh",
         ],
       },
       {
@@ -102,6 +105,8 @@ export const CRO: CroCopy = {
           "Aistriúchán IS le cliceáil amháin",
           "Anailís díolacháin agus tuairiscí",
           "Bialanna iomadúla ar aon chuntas amháin",
+          "Déanann IS do bhiachlár páipéir a dhigitiú i 60 soicind",
+          "D'fhearann féin le SSL",
         ],
       },
     ],

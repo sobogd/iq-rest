@@ -82,6 +82,9 @@ export const CRO: CroCopy = {
           "Naročanje brez čakanja na natakarja",
           "Klic natakarja ali prošnja za račun",
           "Rezervacija mize 24/7",
+          "Edinstvena QR koda za vsako mizo",
+          "Brez aplikacije za goste — odpre se v brskalniku",
+          "Oznake alergenov in diet za filtriranje",
         ],
       },
       {
@@ -102,6 +105,8 @@ export const CRO: CroCopy = {
           "Prevod z UI z enim klikom",
           "Analitika prodaje in poročila",
           "Več restavracij na enem računu",
+          "UI digitalizira vaš papirnati meni v 60 sekundah",
+          "Lastna domena s SSL",
         ],
       },
     ],

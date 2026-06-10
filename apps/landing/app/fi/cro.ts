@@ -82,6 +82,9 @@ export const CRO: CroCopy = {
           "Tilaa odottamatta tarjoilijaa",
           "Kutsu tarjoilija tai pyydä lasku",
           "Varaa pöytä ympäri vuorokauden",
+          "Oma QR-koodi jokaiselle pöydälle",
+          "Ei sovellusta asiakkaille — aukeaa selaimessa",
+          "Allergeeni- ja ruokavaliotagit suodatukseen",
         ],
       },
       {
@@ -102,6 +105,8 @@ export const CRO: CroCopy = {
           "Tekoälykäännös yhdellä klikkauksella",
           "Myyntianalytiikka ja raportit",
           "Useita ravintoloita yhdellä tilillä",
+          "Tekoäly digitoi paperimenun 60 sekunnissa",
+          "Oma verkkotunnus SSL:llä",
         ],
       },
     ],

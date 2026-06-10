@@ -82,6 +82,9 @@ export const CRO: CroCopy = {
           "Naručivanje bez čekanja konobara",
           "Pozivanje konobara ili traženje računa",
           "Rezervacija stola 24/7",
+          "Jedinstveni QR kod za svaki stol",
+          "Bez aplikacije za goste — otvara se u pregledniku",
+          "Oznake alergena i dijeta za filtriranje",
         ],
       },
       {
@@ -102,6 +105,8 @@ export const CRO: CroCopy = {
           "AI prijevod jednim klikom",
           "Analitika prodaje i izvješća",
           "Više restorana na jednom računu",
+          "UI digitalizira vaš papirnati jelovnik u 60 sekundi",
+          "Vlastita domena sa SSL-om",
         ],
       },
     ],

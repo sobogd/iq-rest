@@ -82,6 +82,9 @@ export const CRO: CroCopy = {
           "Zamawianie bez czekania na kelnera",
           "Wezwanie kelnera lub prośba o rachunek",
           "Rezerwacja stolika 24/7",
+          "Unikalny kod QR dla każdego stolika",
+          "Bez aplikacji dla gości — otwiera się w przeglądarce",
+          "Etykiety alergenów i diet do filtrowania",
         ],
       },
       {
@@ -102,6 +105,8 @@ export const CRO: CroCopy = {
           "Tłumaczenie AI jednym kliknięciem",
           "Analizy sprzedaży i raporty",
           "Kilka restauracji na jednym koncie",
+          "AI cyfryzuje papierowe menu w 60 sekund",
+          "Własna domena z SSL",
         ],
       },
     ],

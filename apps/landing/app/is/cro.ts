@@ -82,6 +82,9 @@ export const CRO: CroCopy = {
           "Panta án þess að bíða eftir þjóni",
           "Kalla á þjón eða biðja um reikning",
           "Bóka borð allan sólarhringinn",
+          "Einstakur QR-kóði fyrir hvert borð",
+          "Ekkert app fyrir gesti — opnast í vafranum",
+          "Ofnæmis- og mataræðismerki til að sía",
         ],
       },
       {
@@ -102,6 +105,8 @@ export const CRO: CroCopy = {
           "Þýðing með gervigreind með einum smelli",
           "Sölugreiningar og skýrslur",
           "Margir veitingastaðir á einum reikningi",
+          "Gervigreind gerir pappírsmatseðilinn stafrænan á 60 sekúndum",
+          "Þitt eigið lén með SSL",
         ],
       },
     ],

@@ -117,6 +117,9 @@ export const CRO: CroCopy = {
           "Order without waving for a waiter",
           "Call the waiter or ask for the bill",
           "Book a table 24/7",
+          "A unique QR code for every table",
+          "No app for guests — opens in the browser",
+          "Allergen and diet tags guests filter by",
         ],
       },
       {
@@ -137,6 +140,8 @@ export const CRO: CroCopy = {
           "AI translation in one click",
           "Sales analytics and reports",
           "Run several restaurants from one account",
+          "AI scans your paper menu in 60 seconds",
+          "Your own domain with SSL",
         ],
       },
     ],

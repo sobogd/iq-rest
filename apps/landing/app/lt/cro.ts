@@ -82,6 +82,9 @@ export const CRO: CroCopy = {
           "Užsakymas nelaukiant padavėjo",
           "Padavėjo iškvietimas arba sąskaitos prašymas",
           "Stalo rezervacija visą parą",
+          "Unikalus QR kodas kiekvienam stalui",
+          "Svečiams nereikia programėlės — atsidaro naršyklėje",
+          "Alergenų ir dietų žymos filtravimui",
         ],
       },
       {
@@ -102,6 +105,8 @@ export const CRO: CroCopy = {
           "DI vertimas vienu paspaudimu",
           "Pardavimų analitika ir ataskaitos",
           "Keli restoranai vienoje paskyroje",
+          "DI suskaitmenina popierinį meniu per 60 sekundžių",
+          "Jūsų pačių domenas su SSL",
         ],
       },
     ],

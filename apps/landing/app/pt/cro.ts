@@ -82,6 +82,9 @@ export const CRO: CroCopy = {
           "Pedir sem esperar pelo empregado",
           "Chamar o empregado ou pedir a conta",
           "Reservar mesa 24/7",
+          "Um QR code único para cada mesa",
+          "Sem app para os clientes — abre no navegador",
+          "Etiquetas de alergénios e dietas para filtrar",
         ],
       },
       {
@@ -102,6 +105,8 @@ export const CRO: CroCopy = {
           "Tradução com IA num clique",
           "Análises de vendas e relatórios",
           "Vários restaurantes numa só conta",
+          "A IA digitaliza o seu menu em papel em 60 segundos",
+          "O seu próprio domínio com SSL",
         ],
       },
     ],

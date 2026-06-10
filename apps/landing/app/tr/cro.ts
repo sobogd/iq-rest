@@ -82,6 +82,9 @@ export const CRO: CroCopy = {
           "Garson beklemeden sipariş",
           "Garson çağırma veya hesap isteme",
           "7/24 masa rezervasyonu",
+          "Her masa için benzersiz QR kod",
+          "Misafirler için uygulama yok — tarayıcıda açılır",
+          "Filtrelenebilir alerjen ve diyet etiketleri",
         ],
       },
       {
@@ -102,6 +105,8 @@ export const CRO: CroCopy = {
           "Tek tıkla yapay zeka çevirisi",
           "Satış analizleri ve raporlar",
           "Tek hesapta birden çok restoran",
+          "Yapay zeka kağıt menünüzü 60 saniyede dijitalleştirir",
+          "SSL ile kendi alan adınız",
         ],
       },
     ],

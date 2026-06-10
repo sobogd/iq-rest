@@ -82,6 +82,9 @@ export const CRO: CroCopy = {
           "Demanar sense esperar el cambrer",
           "Cridar el cambrer o demanar el compte",
           "Reservar taula 24/7",
+          "Un codi QR únic per a cada taula",
+          "Sense app per als clients: s'obre al navegador",
+          "Etiquetes d'al·lèrgens i dietes per filtrar",
         ],
       },
       {
@@ -102,6 +105,8 @@ export const CRO: CroCopy = {
           "Traducció amb IA amb un clic",
           "Analítiques de vendes i informes",
           "Diversos restaurants en un sol compte",
+          "La IA digitalitza la teva carta en paper en 60 segons",
+          "El teu propi domini amb SSL",
         ],
       },
     ],

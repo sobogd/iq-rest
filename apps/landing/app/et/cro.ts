@@ -82,6 +82,9 @@ export const CRO: CroCopy = {
           "Telli ilma kelnerit ootamata",
           "Kutsu kelner või palu arvet",
           "Laua broneerimine ööpäev läbi",
+          "Unikaalne QR-kood igale lauale",
+          "Külalistele rakendust pole — avaneb brauseris",
+          "Allergeeni- ja dieedisildid filtreerimiseks",
         ],
       },
       {
@@ -102,6 +105,8 @@ export const CRO: CroCopy = {
           "Tehisintellekti tõlge ühe klikiga",
           "Müügianalüütika ja aruanded",
           "Mitu restorani ühel kontol",
+          "Tehisintellekt digiteerib pabermenüü 60 sekundiga",
+          "Sinu enda domeen SSL-iga",
         ],
       },
     ],

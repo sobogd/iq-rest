@@ -82,6 +82,9 @@ export const CRO: CroCopy = {
           "Rendelés a pincér várása nélkül",
           "Pincér hívása vagy a számla kérése",
           "Asztalfoglalás a nap 24 órájában",
+          "Egyedi QR-kód minden asztalhoz",
+          "Nincs app a vendégeknek — böngészőben nyílik",
+          "Allergén- és diétacímkék szűréshez",
         ],
       },
       {
@@ -102,6 +105,8 @@ export const CRO: CroCopy = {
           "MI-fordítás egyetlen kattintással",
           "Értékesítési elemzések és jelentések",
           "Több étterem egyetlen fiókban",
+          "Az MI 60 másodperc alatt digitalizálja a papírmenüt",
+          "Saját domain SSL-lel",
         ],
       },
     ],

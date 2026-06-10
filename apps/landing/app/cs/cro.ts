@@ -82,6 +82,9 @@ export const CRO: CroCopy = {
           "Objednávka bez čekání na číšníka",
           "Přivolání číšníka nebo žádost o účet",
           "Rezervace stolu 24/7",
+          "Unikátní QR kód pro každý stůl",
+          "Bez aplikace pro hosty — otevře se v prohlížeči",
+          "Štítky alergenů a diet pro filtrování",
         ],
       },
       {
@@ -102,6 +105,8 @@ export const CRO: CroCopy = {
           "Překlad pomocí AI na jedno kliknutí",
           "Analýzy prodeje a reporty",
           "Více restaurací na jednom účtu",
+          "AI digitalizuje vaše papírové menu za 60 sekund",
+          "Vlastní doména s SSL",
         ],
       },
     ],

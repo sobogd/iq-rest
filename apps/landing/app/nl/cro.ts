@@ -82,6 +82,9 @@ export const CRO: CroCopy = {
           "Bestellen zonder op de ober te wachten",
           "De ober roepen of de rekening vragen",
           "24/7 een tafel reserveren",
+          "Een unieke QR-code voor elke tafel",
+          "Geen app voor gasten — opent in de browser",
+          "Allergenen- en dieetlabels om te filteren",
         ],
       },
       {
@@ -102,6 +105,8 @@ export const CRO: CroCopy = {
           "AI-vertaling met één klik",
           "Verkoopanalyses en rapporten",
           "Meerdere restaurants in één account",
+          "AI digitaliseert je papieren menu in 60 seconden",
+          "Je eigen domein met SSL",
         ],
       },
     ],
