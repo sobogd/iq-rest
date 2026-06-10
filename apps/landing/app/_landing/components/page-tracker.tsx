@@ -26,18 +26,46 @@ function readFromSource(): string | null {
   return raw || null;
 }
 
-function fireFromAndClean(): void {
+function fireFromEvent(): void {
   const source = readFromSource();
   if (!source) return;
-
   analytics.track(`l_from_${source}`);
+}
 
-  // Strip ?from= from the URL after firing so a reload doesn't double-count.
+// Sanitize an arbitrary string to the API event charset (a-z0-9_), collapsing
+// any underscore run to a single `_` so a double underscore `__` can be used
+// as an unambiguous name/value separator (parts never contain `__`).
+function sanitizeEventPart(s: string): string {
+  return s
+    .toLowerCase()
+    .replace(/[^a-z0-9_]+/g, "_")
+    .replace(/_+/g, "_")
+    .replace(/^_+|_+$/g, "");
+}
+
+// These params are already emitted with their canonical `l_*` event names
+// (carrying server-side semantics — paid-ad bot-filter bypass, is_*_ads flags).
+// The generic pass skips them so we don't double-fire.
+const HANDLED_PARAMS = new Set(["gclid", "gbraid", "wbraid", "fbclid", "from"]);
+
+// Fire a `l_param_<name>__<value>` event for every other URL query param (the
+// double underscore `__` separates name from value unambiguously — single
+// underscores inside either part are kept), then strip ALL params from the URL
+// so a reload doesn't double-count. Runs AFTER the dedicated gclid/fbclid/from
+// handlers (they read their params first).
+function fireAllParamsAndClean(): void {
   const sp = new URLSearchParams(window.location.search);
-  if (!sp.has("from")) return;
-  sp.delete("from");
-  const qs = sp.toString();
-  const newUrl = window.location.pathname + (qs ? `?${qs}` : "") + window.location.hash;
+  if ([...sp.keys()].length === 0) return;
+
+  for (const [key, value] of sp.entries()) {
+    if (HANDLED_PARAMS.has(key.toLowerCase())) continue;
+    const k = sanitizeEventPart(key);
+    const v = sanitizeEventPart(value);
+    if (!k || !v) continue;
+    analytics.track(`l_param_${k}__${v}`.slice(0, 64));
+  }
+
+  const newUrl = window.location.pathname + window.location.hash;
   window.history.replaceState({}, "", newUrl);
 }
 
@@ -84,7 +112,9 @@ export function PageTracker({ page }: PageTrackerProps) {
   useEffect(() => {
     fireGclidEvent();
     fireFbclidEvent();
-    fireFromAndClean();
+    fireFromEvent();
+    // Generic catch-all for every other URL param, then strip the whole query.
+    fireAllParamsAndClean();
     analytics.track(`l_page_${page}`);
     fireCurrencyEvent();
     fireLocaleEvent();
