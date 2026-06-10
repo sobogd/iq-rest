@@ -16,8 +16,8 @@ export const TEXTS: LandingTexts = {
       "Stýrðu veitingastaðnum úr einu appi: fjöltyngdur stafrænn matseðill, eldhússkjár og bókanir allan sólarhringinn. Tilbúið á 5 mínútum. 14 dagar frítt, ekkert kort.",
   },
 
-  ctaText: "Byrjaðu frítt",
-  homeCtaText: "Búðu til vettvanginn þinn",
+  ctaText: "Prófaðu frítt",
+  homeCtaText: "Prófaðu frítt",
   demoText: "Horfðu á kynningu",
   microcopy: "14 dagar ókeypis · Ekkert kort · Hætta hvenær sem er",
 
@@ -28,7 +28,7 @@ export const TEXTS: LandingTexts = {
     navFaq: "Algengar spurningar",
     signIn: "Skráning",
     viewFeatures: "Skoða eiginleika",
-    cta: "Byrjaðu frítt",
+    cta: "Prófaðu frítt",
   },
 
   hero: {

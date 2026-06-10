@@ -62,14 +62,48 @@ export const CRO: CroCopy = {
     sub: "Engin glíma við aðskilin verkfæri fyrir matseðil, eldhús og bókanir — allt á einum stað, í hvaða síma eða spjaldtölvu sem er, án uppsetningar.",
   },
 
-  how: {
-    heading: "Tilbúið á 5 mínútum",
-    sub: "Fjögur skref. Engin uppsetning, engin tæknileg stilling, ekkert kort.",
-    steps: [
-      { n: "1", t: "Tegund og nafn", d: "Tegund staðar og nafn — það er öll skráningin." },
-      { n: "2", t: "Skráðu þig inn", d: "Tölvupóstur eða Google. Ekkert kort." },
-      { n: "3", t: "Bættu við matseðli", d: "Sláðu hann inn eða leyfðu gervigreind að skanna pappírsmatseðilinn." },
-      { n: "4", t: "Þú ert komin í loftið", d: "Matseðill, eldhús og bókanir — tilbúið." },
+  platform: {
+    hardwareTitle: "Vinndu með þínum eigin búnaði",
+    hardwareSub: "Við neyðum þig aldrei til að kaupa búnað af okkur. Notaðu símana, spjaldtölvurnar og tölvurnar sem þú átt nú þegar.",
+    anywhereTitle: "Virkar alls staðar",
+    anywhereSub: "Sími, spjaldtölva, fartölva, PC. Android, iOS, Windows, Mac, Linux. Virkar í öllum nútíma vöfrum, án uppsetningar.",
+  },
+
+  activities: {
+    heading: "Eitt kerfi,",
+    headingAccent: "allur veitingastaðurinn þinn.",
+    sub: "Hraðari þjónusta, rólegra eldhús, lægri kostnaður og upplifun sem gestir muna — allt á einum vettvangi.",
+    groups: [
+      {
+        Icon: Smartphone,
+        tag: "Við borðið — gestir",
+        bullets: [
+          "QR matseðill á 35 tungumálum",
+          "Panta án þess að bíða eftir þjóni",
+          "Kalla á þjón eða biðja um reikning",
+          "Bóka borð allan sólarhringinn",
+        ],
+      },
+      {
+        Icon: ChefHat,
+        tag: "Í eldhúsinu",
+        bullets: [
+          "Pantanir birtast strax á skjánum",
+          "Dálkar í vinnslu / tilbúið / borið fram",
+          "Ofnæmisvaldar og athugasemdir merktar",
+          "Spjaldtölva eða sími — engir pappírsmiðar",
+        ],
+      },
+      {
+        Icon: BarChart3,
+        tag: "Stjórnun",
+        bullets: [
+          "Breytingar á matseðli og verði samstundis",
+          "Þýðing með gervigreind með einum smelli",
+          "Sölugreiningar og skýrslur",
+          "Margir veitingastaðir á einum reikningi",
+        ],
+      },
     ],
   },
 };

@@ -62,14 +62,48 @@ export const CRO: CroCopy = {
     sub: "Žiadne žonglovanie so samostatnými nástrojmi pre menu, kuchyňu a rezervácie — všetko na jednom mieste, na akomkoľvek telefóne či tablete, bez inštalácie.",
   },
 
-  how: {
-    heading: "Hotovo za 5 minút",
-    sub: "Štyri kroky. Bez inštalácie, bez technického nastavenia, bez karty.",
-    steps: [
-      { n: "1", t: "Typ a názov", d: "Typ podniku a názov — to je celá registrácia." },
-      { n: "2", t: "Prihláste sa", d: "E-mail alebo Google. Bez karty." },
-      { n: "3", t: "Pridajte menu", d: "Napíšte ho alebo nechajte AI naskenovať papierové menu." },
-      { n: "4", t: "Ste online", d: "Menu, kuchyňa a rezervácie — hotovo." },
+  platform: {
+    hardwareTitle: "Pracujte s vlastným hardvérom",
+    hardwareSub: "Nikdy vás nenútime kupovať hardvér od nás. Použite telefóny, tablety a počítače, ktoré už máte.",
+    anywhereTitle: "Funguje všade",
+    anywhereSub: "Mobil, tablet, notebook, PC. Android, iOS, Windows, Mac, Linux. Funguje v každom modernom prehliadači, bez inštalácie.",
+  },
+
+  activities: {
+    heading: "Jeden systém,",
+    headingAccent: "celá vaša reštaurácia.",
+    sub: "Rýchlejšia obsluha, pokojnejšia kuchyňa, nižšie náklady a zážitok, ktorý si hosť zapamätá — všetko na jednej platforme.",
+    groups: [
+      {
+        Icon: Smartphone,
+        tag: "Pri stole — hostia",
+        bullets: [
+          "QR menu v 35 jazykoch",
+          "Objednávka bez čakania na čašníka",
+          "Privolanie čašníka alebo žiadosť o účet",
+          "Rezervácia stola 24/7",
+        ],
+      },
+      {
+        Icon: ChefHat,
+        tag: "V kuchyni",
+        bullets: [
+          "Objednávky sa okamžite zobrazia na obrazovke",
+          "Stĺpce pripravuje sa / hotovo / podané",
+          "Alergény a poznámky zvýraznené",
+          "Tablet alebo telefón — žiadne papierové bločky",
+        ],
+      },
+      {
+        Icon: BarChart3,
+        tag: "Správa",
+        bullets: [
+          "Zmeny menu a cien okamžite naživo",
+          "Preklad pomocou AI jedným kliknutím",
+          "Analýzy predaja a reporty",
+          "Viac reštaurácií na jednom účte",
+        ],
+      },
     ],
   },
 };

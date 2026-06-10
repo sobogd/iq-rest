@@ -16,8 +16,8 @@ export const TEXTS: LandingTexts = {
       "하나의 앱으로 매장 운영: 다국어 디지털 메뉴, 주방 디스플레이, 24/7 예약. 5분 만에 시작. 14일 무료, 카드 불필요.",
   },
 
-  ctaText: "무료로 시작하기",
-  homeCtaText: "플랫폼 구축하기",
+  ctaText: "무료로 사용해 보기",
+  homeCtaText: "무료로 사용해 보기",
   demoText: "데모 보기",
   microcopy: "14일 무료 · 카드 불필요 · 언제든지 취소",
 
@@ -28,7 +28,7 @@ export const TEXTS: LandingTexts = {
     navFaq: "자주 묻는 질문",
     signIn: "로그인",
     viewFeatures: "기능 보기",
-    cta: "무료로 시작하기",
+    cta: "무료로 사용해 보기",
   },
 
   hero: {

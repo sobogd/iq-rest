@@ -62,14 +62,48 @@ export const CRO: CroCopy = {
     sub: "Fără să jonglezi cu instrumente separate pentru meniu, bucătărie și rezervări — totul într-un singur loc, pe orice telefon sau tabletă, fără instalare.",
   },
 
-  how: {
-    heading: "Gata în 5 minute",
-    sub: "Patru pași. Fără instalare, fără configurare tehnică, fără card.",
-    steps: [
-      { n: "1", t: "Tip și nume", d: "Tipul localului și numele — asta e toată înregistrarea." },
-      { n: "2", t: "Conectează-te", d: "E-mail sau Google. Fără card." },
-      { n: "3", t: "Adaugă meniul", d: "Scrie-l sau lasă AI-ul să-ți scaneze meniul pe hârtie." },
-      { n: "4", t: "Ești live", d: "Meniu, bucătărie și rezervări — gata." },
+  platform: {
+    hardwareTitle: "Lucrează cu propriul echipament",
+    hardwareSub: "Nu te obligăm niciodată să cumperi echipamente de la noi. Folosește telefoanele, tabletele și computerele pe care le ai deja.",
+    anywhereTitle: "Funcționează oriunde",
+    anywhereSub: "Telefon, tabletă, laptop, PC. Android, iOS, Windows, Mac, Linux. Funcționează în orice browser modern, fără instalare.",
+  },
+
+  activities: {
+    heading: "Un singur sistem,",
+    headingAccent: "tot restaurantul tău.",
+    sub: "Servire mai rapidă, o bucătărie mai liniștită, costuri mai mici și o experiență pe care clientul o ține minte — totul într-o singură platformă.",
+    groups: [
+      {
+        Icon: Smartphone,
+        tag: "La masă — clienți",
+        bullets: [
+          "Meniu QR în 35 de limbi",
+          "Comandă fără să aștepți ospătarul",
+          "Cheamă ospătarul sau cere nota",
+          "Rezervare de masă 24/7",
+        ],
+      },
+      {
+        Icon: ChefHat,
+        tag: "În bucătărie",
+        bullets: [
+          "Comenzile ajung instant pe ecran",
+          "Coloane în pregătire / gata / servit",
+          "Alergeni și note evidențiate",
+          "Tabletă sau telefon — fără bonuri pe hârtie",
+        ],
+      },
+      {
+        Icon: BarChart3,
+        tag: "Administrare",
+        bullets: [
+          "Modificări de meniu și prețuri instant",
+          "Traducere cu AI dintr-un clic",
+          "Analize de vânzări și rapoarte",
+          "Mai multe restaurante într-un singur cont",
+        ],
+      },
     ],
   },
 };

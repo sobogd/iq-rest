@@ -16,8 +16,8 @@ export const TEXTS: LandingTexts = {
       "Řiďte restauraci z jedné aplikace: vícejazyčné digitální menu, kuchyňský displej a rezervace 24/7. Hotovo za 5 minut. 14 dní zdarma, bez karty.",
   },
 
-  ctaText: "Začít zdarma",
-  homeCtaText: "Vytvořte si platformu",
+  ctaText: "Vyzkoušejte zdarma",
+  homeCtaText: "Vyzkoušejte zdarma",
   demoText: "Sledovat demo",
   microcopy: "14 dní zdarma · Bez karty · Zrušení kdykoli",
 
@@ -28,7 +28,7 @@ export const TEXTS: LandingTexts = {
     navFaq: "Časté dotazy",
     signIn: "Přihlásit se",
     viewFeatures: "Zobrazit funkce",
-    cta: "Začít zdarma",
+    cta: "Vyzkoušejte zdarma",
   },
 
   hero: {

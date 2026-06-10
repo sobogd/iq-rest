@@ -16,8 +16,8 @@ export const TEXTS: LandingTexts = {
       "Juhi restorani ühest rakendusest: mitmekeelne digitaalne menüü, köögiekraan ja broneeringud ööpäev läbi. Valmis 5 minutiga. 14 päeva tasuta, kaardita.",
   },
 
-  ctaText: "Alusta tasuta",
-  homeCtaText: "Loo oma platvorm",
+  ctaText: "Proovige tasuta",
+  homeCtaText: "Proovige tasuta",
   demoText: "Vaata demo",
   microcopy: "14 päeva tasuta · Ilma kaardita · Tühista igal ajal",
 
@@ -28,7 +28,7 @@ export const TEXTS: LandingTexts = {
     navFaq: "KKK",
     signIn: "Logi sisse",
     viewFeatures: "Vaata funktsioone",
-    cta: "Alusta tasuta",
+    cta: "Proovige tasuta",
   },
 
   hero: {

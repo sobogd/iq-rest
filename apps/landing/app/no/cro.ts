@@ -62,14 +62,48 @@ export const CRO: CroCopy = {
     sub: "Slutt å sjonglere separate verktøy for meny, kjøkken og reservasjoner — alt på ett sted, på hvilken som helst telefon eller nettbrett, uten å installere noe.",
   },
 
-  how: {
-    heading: "Klar på 5 minutter",
-    sub: "Fire trinn. Ingen installasjon, ingen teknisk oppsett, uten kort.",
-    steps: [
-      { n: "1", t: "Type og navn", d: "Type sted og navn — det er hele registreringen." },
-      { n: "2", t: "Logg inn", d: "E-post eller Google. Uten kort." },
-      { n: "3", t: "Legg til menyen", d: "Skriv den inn, eller la AI skanne papirmenyen." },
-      { n: "4", t: "Du er live", d: "Meny, kjøkken og reservasjoner — klare." },
+  platform: {
+    hardwareTitle: "Jobb med ditt eget utstyr",
+    hardwareSub: "Vi tvinger deg aldri til å kjøpe utstyr av oss. Bruk telefonene, nettbrettene og datamaskinene du allerede har.",
+    anywhereTitle: "Fungerer overalt",
+    anywhereSub: "Mobil, nettbrett, laptop, PC. Android, iOS, Windows, Mac, Linux. Fungerer i alle moderne nettlesere, uten installasjon.",
+  },
+
+  activities: {
+    heading: "Ett system,",
+    headingAccent: "hele restauranten din.",
+    sub: "Raskere service, et roligere kjøkken, lavere kostnader og en gjesteopplevelse som huskes — alt i én plattform.",
+    groups: [
+      {
+        Icon: Smartphone,
+        tag: "Ved bordet — gjester",
+        bullets: [
+          "QR-meny på 35 språk",
+          "Bestill uten å vente på servitøren",
+          "Tilkall servitøren eller be om regningen",
+          "Book bord døgnet rundt",
+        ],
+      },
+      {
+        Icon: ChefHat,
+        tag: "På kjøkkenet",
+        bullets: [
+          "Bestillinger kommer rett på skjermen",
+          "Kolonner under tilberedning / klar / servert",
+          "Allergener og notater uthevet",
+          "Nettbrett eller telefon — ingen papirlapper",
+        ],
+      },
+      {
+        Icon: BarChart3,
+        tag: "Administrasjon",
+        bullets: [
+          "Meny- og prisendringer live med en gang",
+          "AI-oversettelse med ett klikk",
+          "Salgsanalyser og rapporter",
+          "Flere restauranter på én konto",
+        ],
+      },
     ],
   },
 };

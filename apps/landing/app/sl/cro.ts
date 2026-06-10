@@ -62,14 +62,48 @@ export const CRO: CroCopy = {
     sub: "Brez žongliranja z ločenimi orodji za meni, kuhinjo in rezervacije — vse na enem mestu, na katerem koli telefonu ali tablici, brez namestitve.",
   },
 
-  how: {
-    heading: "Pripravljeno v 5 minutah",
-    sub: "Štirje koraki. Brez namestitve, brez tehnične nastavitve, brez kartice.",
-    steps: [
-      { n: "1", t: "Vrsta in ime", d: "Vrsta lokala in ime — to je celotna registracija." },
-      { n: "2", t: "Prijavite se", d: "E-pošta ali Google. Brez kartice." },
-      { n: "3", t: "Dodajte meni", d: "Vnesite ga ali pustite UI, da skenira papirnati meni." },
-      { n: "4", t: "Ste v živo", d: "Meni, kuhinja in rezervacije — pripravljeno." },
+  platform: {
+    hardwareTitle: "Delajte z lastno opremo",
+    hardwareSub: "Nikoli vas ne silimo k nakupu opreme pri nas. Uporabite telefone, tablice in računalnike, ki jih že imate.",
+    anywhereTitle: "Deluje povsod",
+    anywhereSub: "Telefon, tablica, prenosnik, PC. Android, iOS, Windows, Mac, Linux. Deluje v vsakem sodobnem brskalniku, brez namestitve.",
+  },
+
+  activities: {
+    heading: "En sistem,",
+    headingAccent: "vaša celotna restavracija.",
+    sub: "Hitrejša postrežba, mirnejša kuhinja, nižji stroški in izkušnja, ki si jo gost zapomni — vse na eni platformi.",
+    groups: [
+      {
+        Icon: Smartphone,
+        tag: "Za mizo — gostje",
+        bullets: [
+          "QR meni v 35 jezikih",
+          "Naročanje brez čakanja na natakarja",
+          "Klic natakarja ali prošnja za račun",
+          "Rezervacija mize 24/7",
+        ],
+      },
+      {
+        Icon: ChefHat,
+        tag: "V kuhinji",
+        bullets: [
+          "Naročila se takoj prikažejo na zaslonu",
+          "Stolpci v pripravi / pripravljeno / postreženo",
+          "Alergeni in opombe poudarjeni",
+          "Tablica ali telefon — brez papirnatih listkov",
+        ],
+      },
+      {
+        Icon: BarChart3,
+        tag: "Upravljanje",
+        bullets: [
+          "Spremembe menija in cen takoj v živo",
+          "Prevod z UI z enim klikom",
+          "Analitika prodaje in poročila",
+          "Več restavracij na enem računu",
+        ],
+      },
     ],
   },
 };

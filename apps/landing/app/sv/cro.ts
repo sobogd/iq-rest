@@ -62,14 +62,48 @@ export const CRO: CroCopy = {
     sub: "Slut på att jonglera separata verktyg för meny, kök och bokningar — allt på ett ställe, på vilken telefon eller surfplatta som helst, utan installation.",
   },
 
-  how: {
-    heading: "Igång på 5 minuter",
-    sub: "Fyra steg. Ingen installation, ingen teknisk uppsättning, inget kort.",
-    steps: [
-      { n: "1", t: "Typ & namn", d: "Typ av ställe och namn — det är hela registreringen." },
-      { n: "2", t: "Logga in", d: "E-post eller Google. Inget kort." },
-      { n: "3", t: "Lägg till menyn", d: "Skriv in den eller låt AI skanna din pappersmeny." },
-      { n: "4", t: "Du är live", d: "Meny, kök och bokningar — klara." },
+  platform: {
+    hardwareTitle: "Arbeta med din egen hårdvara",
+    hardwareSub: "Vi tvingar dig aldrig att köpa hårdvara av oss. Använd de telefoner, surfplattor och datorer du redan har.",
+    anywhereTitle: "Fungerar överallt",
+    anywhereSub: "Mobil, surfplatta, laptop, PC. Android, iOS, Windows, Mac, Linux. Fungerar i alla moderna webbläsare, utan installation.",
+  },
+
+  activities: {
+    heading: "Ett system,",
+    headingAccent: "hela din restaurang.",
+    sub: "Snabbare service, ett lugnare kök, lägre kostnader och en gästupplevelse som minns — allt i en plattform.",
+    groups: [
+      {
+        Icon: Smartphone,
+        tag: "Vid bordet — gäster",
+        bullets: [
+          "QR-meny på 35 språk",
+          "Beställ utan att vänta på servitören",
+          "Kalla på servitören eller be om notan",
+          "Boka bord dygnet runt",
+        ],
+      },
+      {
+        Icon: ChefHat,
+        tag: "I köket",
+        bullets: [
+          "Beställningar hamnar direkt på skärmen",
+          "Kolumner tillagas / klart / serverat",
+          "Allergener och noteringar markerade",
+          "Surfplatta eller telefon — inga papperslappar",
+        ],
+      },
+      {
+        Icon: BarChart3,
+        tag: "Hantering",
+        bullets: [
+          "Meny- och prisändringar direkt live",
+          "AI-översättning med ett klick",
+          "Försäljningsanalys och rapporter",
+          "Flera restauranger på ett konto",
+        ],
+      },
     ],
   },
 };

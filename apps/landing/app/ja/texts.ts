@@ -16,8 +16,8 @@ export const TEXTS: LandingTexts = {
       "ひとつのアプリで店舗運営：多言語対応のデジタルメニュー、キッチンディスプレイ、24時間予約。5分で開始。14日間無料、カード不要。",
   },
 
-  ctaText: "無料で始める",
-  homeCtaText: "プラットフォームを構築",
+  ctaText: "無料で試す",
+  homeCtaText: "無料で試す",
   demoText: "デモを見る",
   microcopy: "14日間無料 · カード不要 · いつでもキャンセル可能",
 
@@ -28,7 +28,7 @@ export const TEXTS: LandingTexts = {
     navFaq: "よくある質問",
     signIn: "サインイン",
     viewFeatures: "機能を見る",
-    cta: "無料で始める",
+    cta: "無料で試す",
   },
 
   hero: {

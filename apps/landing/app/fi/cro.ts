@@ -62,14 +62,48 @@ export const CRO: CroCopy = {
     sub: "Ei tarvitse jongleerata erillisillä työkaluilla menulle, keittiölle ja varauksille — kaikki yhdessä paikassa, millä tahansa puhelimella tai tabletilla, ilman asennuksia.",
   },
 
-  how: {
-    heading: "Valmiina 5 minuutissa",
-    sub: "Neljä vaihetta. Ei asennuksia, ei teknistä määritystä, ei korttia.",
-    steps: [
-      { n: "1", t: "Tyyppi ja nimi", d: "Paikan tyyppi ja nimi — siinä koko rekisteröinti." },
-      { n: "2", t: "Kirjaudu", d: "Sähköposti tai Google. Ei korttia." },
-      { n: "3", t: "Lisää menu", d: "Kirjoita se tai anna tekoälyn skannata paperimenu." },
-      { n: "4", t: "Olet livenä", d: "Menu, keittiö ja varaukset — valmiina." },
+  platform: {
+    hardwareTitle: "Käytä omia laitteitasi",
+    hardwareSub: "Emme koskaan pakota ostamaan laitteita meiltä. Käytä puhelimia, tabletteja ja tietokoneita, joita sinulla jo on.",
+    anywhereTitle: "Toimii missä tahansa",
+    anywhereSub: "Puhelin, tabletti, kannettava, PC. Android, iOS, Windows, Mac, Linux. Toimii kaikissa nykyaikaisissa selaimissa, ilman asennusta.",
+  },
+
+  activities: {
+    heading: "Yksi järjestelmä,",
+    headingAccent: "koko ravintolasi.",
+    sub: "Nopeampi palvelu, rauhallisempi keittiö, pienemmät kustannukset ja vieraskokemus, joka jää mieleen — kaikki yhdellä alustalla.",
+    groups: [
+      {
+        Icon: Smartphone,
+        tag: "Pöydässä — asiakkaat",
+        bullets: [
+          "QR-menu 35 kielellä",
+          "Tilaa odottamatta tarjoilijaa",
+          "Kutsu tarjoilija tai pyydä lasku",
+          "Varaa pöytä ympäri vuorokauden",
+        ],
+      },
+      {
+        Icon: ChefHat,
+        tag: "Keittiössä",
+        bullets: [
+          "Tilaukset näkyvät heti ruudulla",
+          "Sarakkeet valmistuu / valmis / tarjoiltu",
+          "Allergeenit ja muistiinpanot korostettu",
+          "Tabletti tai puhelin — ei paperilappuja",
+        ],
+      },
+      {
+        Icon: BarChart3,
+        tag: "Hallinta",
+        bullets: [
+          "Menu- ja hintamuutokset heti käyttöön",
+          "Tekoälykäännös yhdellä klikkauksella",
+          "Myyntianalytiikka ja raportit",
+          "Useita ravintoloita yhdellä tilillä",
+        ],
+      },
     ],
   },
 };

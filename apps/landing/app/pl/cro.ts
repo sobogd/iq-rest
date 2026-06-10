@@ -62,14 +62,48 @@ export const CRO: CroCopy = {
     sub: "Koniec żonglowania osobnymi narzędziami do menu, kuchni i rezerwacji — wszystko w jednym miejscu, na każdym telefonie lub tablecie, bez instalacji.",
   },
 
-  how: {
-    heading: "Gotowe w 5 minut",
-    sub: "Cztery kroki. Bez instalacji, bez technicznej konfiguracji, bez karty.",
-    steps: [
-      { n: "1", t: "Typ i nazwa", d: "Typ lokalu i nazwa — to cała rejestracja." },
-      { n: "2", t: "Zaloguj się", d: "E-mail lub Google. Bez karty." },
-      { n: "3", t: "Dodaj menu", d: "Wpisz je lub pozwól AI zeskanować papierowe menu." },
-      { n: "4", t: "Działasz", d: "Menu, kuchnia i rezerwacje — gotowe." },
+  platform: {
+    hardwareTitle: "Pracuj na własnym sprzęcie",
+    hardwareSub: "Nigdy nie zmuszamy do kupowania sprzętu od nas. Korzystaj z telefonów, tabletów i komputerów, które już masz.",
+    anywhereTitle: "Działa wszędzie",
+    anywhereSub: "Telefon, tablet, laptop, PC. Android, iOS, Windows, Mac, Linux. Działa w każdej nowoczesnej przeglądarce, bez instalacji.",
+  },
+
+  activities: {
+    heading: "Jeden system,",
+    headingAccent: "cała Twoja restauracja.",
+    sub: "Szybsza obsługa, spokojniejsza kuchnia, niższe koszty i obsługa, którą gość zapamięta — wszystko na jednej platformie.",
+    groups: [
+      {
+        Icon: Smartphone,
+        tag: "Przy stoliku — goście",
+        bullets: [
+          "Menu QR w 35 językach",
+          "Zamawianie bez czekania na kelnera",
+          "Wezwanie kelnera lub prośba o rachunek",
+          "Rezerwacja stolika 24/7",
+        ],
+      },
+      {
+        Icon: ChefHat,
+        tag: "W kuchni",
+        bullets: [
+          "Zamówienia trafiają na ekran natychmiast",
+          "Kolumny w przygotowaniu / gotowe / podane",
+          "Alergeny i uwagi wyróżnione",
+          "Tablet lub telefon — bez papierowych bonów",
+        ],
+      },
+      {
+        Icon: BarChart3,
+        tag: "Zarządzanie",
+        bullets: [
+          "Zmiany menu i cen od razu na żywo",
+          "Tłumaczenie AI jednym kliknięciem",
+          "Analizy sprzedaży i raporty",
+          "Kilka restauracji na jednym koncie",
+        ],
+      },
     ],
   },
 };

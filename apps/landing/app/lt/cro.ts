@@ -62,14 +62,48 @@ export const CRO: CroCopy = {
     sub: "Nebereikia žongliruoti atskirais įrankiais meniu, virtuvei ir rezervacijoms — viskas vienoje vietoje, bet kuriame telefone ar planšetėje, be diegimo.",
   },
 
-  how: {
-    heading: "Paruošta per 5 minutes",
-    sub: "Keturi žingsniai. Be diegimo, be techninio nustatymo, be kortelės.",
-    steps: [
-      { n: "1", t: "Tipas ir pavadinimas", d: "Įstaigos tipas ir pavadinimas — tai visa registracija." },
-      { n: "2", t: "Prisijunkite", d: "El. paštas arba Google. Be kortelės." },
-      { n: "3", t: "Pridėkite meniu", d: "Įveskite jį arba leiskite DI nuskaityti popierinį meniu." },
-      { n: "4", t: "Esate gyvai", d: "Meniu, virtuvė ir rezervacijos — paruošta." },
+  platform: {
+    hardwareTitle: "Dirbkite su savo įranga",
+    hardwareSub: "Niekada neverčiame pirkti įrangos iš mūsų. Naudokite telefonus, planšetes ir kompiuterius, kuriuos jau turite.",
+    anywhereTitle: "Veikia bet kur",
+    anywhereSub: "Telefonas, planšetė, nešiojamasis kompiuteris, PC. Android, iOS, Windows, Mac, Linux. Veikia bet kurioje šiuolaikinėje naršyklėje, be diegimo.",
+  },
+
+  activities: {
+    heading: "Viena sistema,",
+    headingAccent: "visas jūsų restoranas.",
+    sub: "Greitesnis aptarnavimas, ramesnė virtuvė, mažesnės sąnaudos ir įspūdis, kurį svečias prisimena — viskas vienoje platformoje.",
+    groups: [
+      {
+        Icon: Smartphone,
+        tag: "Prie stalo — svečiai",
+        bullets: [
+          "QR meniu 35 kalbomis",
+          "Užsakymas nelaukiant padavėjo",
+          "Padavėjo iškvietimas arba sąskaitos prašymas",
+          "Stalo rezervacija visą parą",
+        ],
+      },
+      {
+        Icon: ChefHat,
+        tag: "Virtuvėje",
+        bullets: [
+          "Užsakymai iškart pasirodo ekrane",
+          "Stulpeliai ruošiama / paruošta / patiekta",
+          "Alergenai ir pastabos paryškinti",
+          "Planšetė ar telefonas — jokių popierinių kvitų",
+        ],
+      },
+      {
+        Icon: BarChart3,
+        tag: "Valdymas",
+        bullets: [
+          "Meniu ir kainų pakeitimai iškart",
+          "DI vertimas vienu paspaudimu",
+          "Pardavimų analitika ir ataskaitos",
+          "Keli restoranai vienoje paskyroje",
+        ],
+      },
     ],
   },
 };

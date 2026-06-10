@@ -16,8 +16,8 @@ export const TEXTS: LandingTexts = {
       "用一个应用运营餐厅:多语言数字菜单、厨房显示屏与 24/7 预订。5 分钟上线。14 天免费,无需银行卡。",
   },
 
-  ctaText: "免费开始",
-  homeCtaText: "搭建你的平台",
+  ctaText: "免费试用",
+  homeCtaText: "免费试用",
   demoText: "观看演示",
   microcopy: "14 天免费 · 无需信用卡 · 随时取消",
 
@@ -28,7 +28,7 @@ export const TEXTS: LandingTexts = {
     navFaq: "常见问题",
     signIn: "登录",
     viewFeatures: "查看功能",
-    cta: "免费开始",
+    cta: "免费试用",
   },
 
   hero: {

@@ -62,14 +62,48 @@ export const CRO: CroCopy = {
     sub: "Gan a bheith ag lámhchleasaíocht le huirlisí ar leith don bhiachlár, don chistin agus do na háirithintí — gach rud in aon áit, ar aon fhón nó táibléad, gan aon rud a shuiteáil.",
   },
 
-  how: {
-    heading: "Beo i 5 nóiméad",
-    sub: "Ceithre chéim. Gan suiteáil, gan socrú teicniúil, gan chárta.",
-    steps: [
-      { n: "1", t: "Cineál is ainm", d: "Cineál an ionaid agus an t-ainm — sin an clárú ar fad." },
-      { n: "2", t: "Logáil isteach", d: "Ríomhphost nó Google. Gan chárta." },
-      { n: "3", t: "Cuir an biachlár leis", d: "Clóscríobh é nó lig don IS do bhiachlár páipéir a scanadh." },
-      { n: "4", t: "Tá tú beo", d: "Biachlár, cistin agus áirithintí — réidh." },
+  platform: {
+    hardwareTitle: "Oibrigh le do chrua-earraí féin",
+    hardwareSub: "Ní chuirimid iallach ort riamh crua-earraí a cheannach uainn. Bain úsáid as na fóin, táibléid agus ríomhairí atá agat cheana.",
+    anywhereTitle: "Oibríonn sé áit ar bith",
+    anywhereSub: "Fón, táibléad, ríomhaire glúine, PC. Android, iOS, Windows, Mac, Linux. Oibríonn sé i mbrabhsálaí nua-aimseartha ar bith, gan suiteáil.",
+  },
+
+  activities: {
+    heading: "Córas amháin,",
+    headingAccent: "do bhialann iomlán.",
+    sub: "Seirbhís níos tapúla, cistin níos suaimhní, costais níos ísle agus eispéireas a chuimhníonn an t-aoi air — gach rud ar aon ardán amháin.",
+    groups: [
+      {
+        Icon: Smartphone,
+        tag: "Ag an mbord — aíonna",
+        bullets: [
+          "Biachlár QR i 35 teanga",
+          "Ordú gan fanacht leis an bhfreastalaí",
+          "Glaoigh ar an bhfreastalaí nó iarr an bille",
+          "Cuir bord in áirithe 24/7",
+        ],
+      },
+      {
+        Icon: ChefHat,
+        tag: "Sa chistin",
+        bullets: [
+          "Tagann orduithe ar an scáileán láithreach",
+          "Colúin á ullmhú / réidh / freastalaithe",
+          "Ailléirginí agus nótaí aibhsithe",
+          "Táibléad nó fón — gan admhálacha páipéir",
+        ],
+      },
+      {
+        Icon: BarChart3,
+        tag: "Bainistíocht",
+        bullets: [
+          "Athruithe biachláir agus praghsanna beo láithreach",
+          "Aistriúchán IS le cliceáil amháin",
+          "Anailís díolacháin agus tuairiscí",
+          "Bialanna iomadúla ar aon chuntas amháin",
+        ],
+      },
     ],
   },
 };

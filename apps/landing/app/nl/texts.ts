@@ -16,8 +16,8 @@ export const TEXTS: LandingTexts = {
       "Run je restaurant vanuit één app: meertalig digitaal menu, keukenscherm en 24/7 reserveringen. Klaar in 5 minuten. 14 dagen gratis, geen kaart.",
   },
 
-  ctaText: "Gratis starten",
-  homeCtaText: "Bouw je platform",
+  ctaText: "Probeer het gratis",
+  homeCtaText: "Probeer het gratis",
   demoText: "Bekijk demo",
   microcopy: "14 dagen gratis · Geen kaart · Op elk moment opzegbaar",
 
@@ -28,7 +28,7 @@ export const TEXTS: LandingTexts = {
     navFaq: "FAQ",
     signIn: "Inloggen",
     viewFeatures: "Functies bekijken",
-    cta: "Gratis starten",
+    cta: "Probeer het gratis",
   },
 
   hero: {

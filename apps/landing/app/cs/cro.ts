@@ -62,14 +62,48 @@ export const CRO: CroCopy = {
     sub: "Žádné žonglování se samostatnými nástroji pro menu, kuchyni a rezervace — vše na jednom místě, na jakémkoli telefonu či tabletu, bez instalace.",
   },
 
-  how: {
-    heading: "Spuštěno za 5 minut",
-    sub: "Čtyři kroky. Bez instalace, bez technického nastavení, bez karty.",
-    steps: [
-      { n: "1", t: "Typ a název", d: "Typ podniku a název — to je celá registrace." },
-      { n: "2", t: "Přihlaste se", d: "E-mail nebo Google. Bez karty." },
-      { n: "3", t: "Přidejte menu", d: "Napište ho, nebo nechte AI naskenovat papírové menu." },
-      { n: "4", t: "Jste online", d: "Menu, kuchyně a rezervace — hotovo." },
+  platform: {
+    hardwareTitle: "Pracujte s vlastním hardwarem",
+    hardwareSub: "Nikdy vás nenutíme kupovat hardware od nás. Použijte telefony, tablety a počítače, které už máte.",
+    anywhereTitle: "Funguje všude",
+    anywhereSub: "Mobil, tablet, notebook, PC. Android, iOS, Windows, Mac, Linux. Funguje v každém moderním prohlížeči, bez instalace.",
+  },
+
+  activities: {
+    heading: "Jeden systém,",
+    headingAccent: "celá vaše restaurace.",
+    sub: "Rychlejší obsluha, klidnější kuchyně, nižší náklady a zážitek, který si host zapamatuje — vše na jedné platformě.",
+    groups: [
+      {
+        Icon: Smartphone,
+        tag: "U stolu — hosté",
+        bullets: [
+          "QR menu ve 35 jazycích",
+          "Objednávka bez čekání na číšníka",
+          "Přivolání číšníka nebo žádost o účet",
+          "Rezervace stolu 24/7",
+        ],
+      },
+      {
+        Icon: ChefHat,
+        tag: "V kuchyni",
+        bullets: [
+          "Objednávky se objeví na obrazovce okamžitě",
+          "Sloupce připravuje se / hotovo / podáno",
+          "Alergeny a poznámky zvýrazněny",
+          "Tablet nebo telefon — žádné papírové účtenky",
+        ],
+      },
+      {
+        Icon: BarChart3,
+        tag: "Správa",
+        bullets: [
+          "Změny menu a cen okamžitě naživo",
+          "Překlad pomocí AI na jedno kliknutí",
+          "Analýzy prodeje a reporty",
+          "Více restaurací na jednom účtu",
+        ],
+      },
     ],
   },
 };

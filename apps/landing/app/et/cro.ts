@@ -62,14 +62,48 @@ export const CRO: CroCopy = {
     sub: "Pole vaja žongleerida eraldi tööriistadega menüü, köögi ja broneeringute jaoks — kõik ühes kohas, igal telefonil või tahvlil, ilma paigalduseta.",
   },
 
-  how: {
-    heading: "Valmis 5 minutiga",
-    sub: "Neli sammu. Ei mingit paigaldust, tehnilist seadistust ega kaarti.",
-    steps: [
-      { n: "1", t: "Tüüp ja nimi", d: "Koha tüüp ja nimi — see ongi kogu registreerimine." },
-      { n: "2", t: "Logi sisse", d: "E-post või Google. Kaardita." },
-      { n: "3", t: "Lisa menüü", d: "Sisesta see või lase tehisintellektil pabermenüü skannida." },
-      { n: "4", t: "Oled live'is", d: "Menüü, köök ja broneeringud — valmis." },
+  platform: {
+    hardwareTitle: "Töötage oma riistvaraga",
+    hardwareSub: "Me ei sunni teid kunagi meilt riistvara ostma. Kasutage telefone, tahvelarvuteid ja arvuteid, mis teil juba on.",
+    anywhereTitle: "Töötab kõikjal",
+    anywhereSub: "Telefon, tahvelarvuti, sülearvuti, PC. Android, iOS, Windows, Mac, Linux. Töötab igas kaasaegses brauseris, ilma paigalduseta.",
+  },
+
+  activities: {
+    heading: "Üks süsteem,",
+    headingAccent: "kogu teie restoran.",
+    sub: "Kiirem teenindus, rahulikum köök, väiksemad kulud ja külastuskogemus, mida mäletatakse — kõik ühel platvormil.",
+    groups: [
+      {
+        Icon: Smartphone,
+        tag: "Laua taga — külalised",
+        bullets: [
+          "QR-menüü 35 keeles",
+          "Telli ilma kelnerit ootamata",
+          "Kutsu kelner või palu arvet",
+          "Laua broneerimine ööpäev läbi",
+        ],
+      },
+      {
+        Icon: ChefHat,
+        tag: "Köögis",
+        bullets: [
+          "Tellimused jõuavad kohe ekraanile",
+          "Veerud valmistamisel / valmis / serveeritud",
+          "Allergeenid ja märkmed esile tõstetud",
+          "Tahvelarvuti või telefon — ilma paberitšekkideta",
+        ],
+      },
+      {
+        Icon: BarChart3,
+        tag: "Haldus",
+        bullets: [
+          "Menüü- ja hinnamuudatused kohe eetris",
+          "Tehisintellekti tõlge ühe klikiga",
+          "Müügianalüütika ja aruanded",
+          "Mitu restorani ühel kontol",
+        ],
+      },
     ],
   },
 };

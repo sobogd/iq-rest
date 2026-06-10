@@ -62,14 +62,48 @@ export const CRO: CroCopy = {
     sub: "Nincs több zsonglőrködés külön eszközökkel a menühöz, a konyhához és a foglalásokhoz — minden egy helyen, bármilyen telefonon vagy tableten, telepítés nélkül.",
   },
 
-  how: {
-    heading: "Kész 5 perc alatt",
-    sub: "Négy lépés. Nincs telepítés, nincs technikai beállítás, nincs kártya.",
-    steps: [
-      { n: "1", t: "Típus és név", d: "A hely típusa és neve — ennyi az egész regisztráció." },
-      { n: "2", t: "Bejelentkezés", d: "E-mail vagy Google. Kártya nélkül." },
-      { n: "3", t: "Add hozzá a menüt", d: "Írd be, vagy hagyd, hogy az MI beolvassa a papírmenüt." },
-      { n: "4", t: "Élesben vagy", d: "Menü, konyha és foglalások — készen." },
+  platform: {
+    hardwareTitle: "Dolgozz a saját eszközeiddel",
+    hardwareSub: "Soha nem kényszerítünk arra, hogy tőlünk vásárolj hardvert. Használd a már meglévő telefonokat, tableteket és számítógépeket.",
+    anywhereTitle: "Bárhol működik",
+    anywhereSub: "Mobil, tablet, laptop, PC. Android, iOS, Windows, Mac, Linux. Minden modern böngészőben működik, telepítés nélkül.",
+  },
+
+  activities: {
+    heading: "Egyetlen rendszer,",
+    headingAccent: "az egész éttermed.",
+    sub: "Gyorsabb kiszolgálás, nyugodtabb konyha, alacsonyabb költségek és emlékezetes vendégélmény — mindez egyetlen platformon.",
+    groups: [
+      {
+        Icon: Smartphone,
+        tag: "Az asztalnál — vendégek",
+        bullets: [
+          "QR-menü 35 nyelven",
+          "Rendelés a pincér várása nélkül",
+          "Pincér hívása vagy a számla kérése",
+          "Asztalfoglalás a nap 24 órájában",
+        ],
+      },
+      {
+        Icon: ChefHat,
+        tag: "A konyhában",
+        bullets: [
+          "A rendelések azonnal a képernyőn",
+          "Készül / kész / felszolgálva oszlopok",
+          "Allergének és megjegyzések kiemelve",
+          "Tablet vagy telefon — nincs papírcetli",
+        ],
+      },
+      {
+        Icon: BarChart3,
+        tag: "Kezelés",
+        bullets: [
+          "Menü- és árváltozások azonnal élőben",
+          "MI-fordítás egyetlen kattintással",
+          "Értékesítési elemzések és jelentések",
+          "Több étterem egyetlen fiókban",
+        ],
+      },
     ],
   },
 };

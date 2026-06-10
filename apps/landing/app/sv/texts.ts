@@ -16,8 +16,8 @@ export const TEXTS: LandingTexts = {
       "Driv din restaurang från en app: flerspråkig digital meny, köksskärm och bokningar dygnet runt. Igång på 5 minuter. 14 dagar gratis, inget kort.",
   },
 
-  ctaText: "Börja gratis",
-  homeCtaText: "Bygg din plattform",
+  ctaText: "Prova gratis",
+  homeCtaText: "Prova gratis",
   demoText: "Se demo",
   microcopy: "14 dagar gratis · Inget kort · Avsluta när som helst",
 
@@ -28,7 +28,7 @@ export const TEXTS: LandingTexts = {
     navFaq: "FAQ",
     signIn: "Logga in",
     viewFeatures: "Se funktioner",
-    cta: "Börja gratis",
+    cta: "Prova gratis",
   },
 
   hero: {

@@ -62,14 +62,48 @@ export const CRO: CroCopy = {
     sub: "Vairs nav jāžonglē ar atsevišķiem rīkiem ēdienkartei, virtuvei un rezervācijām — viss vienuviet, jebkurā telefonā vai planšetē, bez instalēšanas.",
   },
 
-  how: {
-    heading: "Gatavs 5 minūtēs",
-    sub: "Četri soļi. Bez instalēšanas, bez tehniskas iestatīšanas, bez kartes.",
-    steps: [
-      { n: "1", t: "Veids un nosaukums", d: "Vietas veids un nosaukums — tā ir visa reģistrācija." },
-      { n: "2", t: "Pieslēdzieties", d: "E-pasts vai Google. Bez kartes." },
-      { n: "3", t: "Pievienojiet ēdienkarti", d: "Ierakstiet to vai ļaujiet MI noskenēt papīra ēdienkarti." },
-      { n: "4", t: "Esat tiešsaistē", d: "Ēdienkarte, virtuve un rezervācijas — gatavs." },
+  platform: {
+    hardwareTitle: "Strādājiet ar savu aprīkojumu",
+    hardwareSub: "Mēs nekad nepiespiežam iegādāties aprīkojumu no mums. Izmantojiet tālruņus, planšetdatorus un datorus, kas jums jau ir.",
+    anywhereTitle: "Darbojas jebkur",
+    anywhereSub: "Tālrunis, planšetdators, klēpjdators, PC. Android, iOS, Windows, Mac, Linux. Darbojas jebkurā mūsdienīgā pārlūkā, bez instalēšanas.",
+  },
+
+  activities: {
+    heading: "Viena sistēma,",
+    headingAccent: "viss jūsu restorāns.",
+    sub: "Ātrāka apkalpošana, mierīgāka virtuve, zemākas izmaksas un pieredze, ko viesis atceras — viss vienā platformā.",
+    groups: [
+      {
+        Icon: Smartphone,
+        tag: "Pie galda — viesi",
+        bullets: [
+          "QR ēdienkarte 35 valodās",
+          "Pasūtīšana, negaidot viesmīli",
+          "Viesmīļa izsaukšana vai rēķina pieprasīšana",
+          "Galda rezervēšana 24/7",
+        ],
+      },
+      {
+        Icon: ChefHat,
+        tag: "Virtuvē",
+        bullets: [
+          "Pasūtījumi uzreiz parādās ekrānā",
+          "Kolonnas gatavojas / gatavs / pasniegts",
+          "Alergēni un piezīmes izceltas",
+          "Planšetdators vai tālrunis — bez papīra čekiem",
+        ],
+      },
+      {
+        Icon: BarChart3,
+        tag: "Pārvaldība",
+        bullets: [
+          "Ēdienkartes un cenu izmaiņas uzreiz tiešraidē",
+          "Mākslīgā intelekta tulkojums ar vienu klikšķi",
+          "Pārdošanas analīze un atskaites",
+          "Vairāki restorāni vienā kontā",
+        ],
+      },
     ],
   },
 };

@@ -16,8 +16,8 @@ export const TEXTS: LandingTexts = {
       "Restoranınızı tek uygulamadan yönetin: çok dilli dijital menü, mutfak ekranı ve 7/24 rezervasyon. 5 dakikada hazır. 14 gün ücretsiz, kart yok.",
   },
 
-  ctaText: "Ücretsiz başla",
-  homeCtaText: "Platformunu oluştur",
+  ctaText: "Ücretsiz deneyin",
+  homeCtaText: "Ücretsiz deneyin",
   demoText: "Demoyu izle",
   microcopy: "14 gün ücretsiz · Kart yok · İstediğiniz zaman iptal edin",
 
@@ -28,7 +28,7 @@ export const TEXTS: LandingTexts = {
     navFaq: "SSS",
     signIn: "Giriş yap",
     viewFeatures: "Özellikleri gör",
-    cta: "Ücretsiz başla",
+    cta: "Ücretsiz deneyin",
   },
 
   hero: {

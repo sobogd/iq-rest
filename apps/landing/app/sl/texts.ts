@@ -16,8 +16,8 @@ export const TEXTS: LandingTexts = {
       "Vodite restavracijo iz ene aplikacije: večjezični digitalni meni, kuhinjski zaslon in rezervacije 24/7. Pripravljeno v 5 minutah. 14 dni brezplačno, brez kartice.",
   },
 
-  ctaText: "Začni brezplačno",
-  homeCtaText: "Ustvarite svojo platformo",
+  ctaText: "Preizkusite brezplačno",
+  homeCtaText: "Preizkusite brezplačno",
   demoText: "Oglejte si demo",
   microcopy: "14 dni brezplačno · Brez kartice · Prekličete kadar koli",
 
@@ -28,7 +28,7 @@ export const TEXTS: LandingTexts = {
     navFaq: "Pogosta vprašanja",
     signIn: "Prijava",
     viewFeatures: "Oglejte si funkcije",
-    cta: "Začni brezplačno",
+    cta: "Preizkusite brezplačno",
   },
 
   hero: {

@@ -16,8 +16,8 @@ export const TEXTS: LandingTexts = {
       "Pārvaldiet restorānu no vienas lietotnes: daudzvalodu digitālā ēdienkarte, virtuves ekrāns un rezervācijas visu diennakti. Gatavs 5 minūtēs. 14 dienas bez maksas, bez kartes.",
   },
 
-  ctaText: "Sāc bez maksas",
-  homeCtaText: "Izveidojiet savu platformu",
+  ctaText: "Izmēģiniet bez maksas",
+  homeCtaText: "Izmēģiniet bez maksas",
   demoText: "Skatīt demonstrāciju",
   microcopy: "14 dienas bez maksas · Bez kartes · Atcelt jebkurā laikā",
 
@@ -28,7 +28,7 @@ export const TEXTS: LandingTexts = {
     navFaq: "BUJ",
     signIn: "Pieslēgties",
     viewFeatures: "Skatīt funkcijas",
-    cta: "Sāc bez maksas",
+    cta: "Izmēģiniet bez maksas",
   },
 
   hero: {

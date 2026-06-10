@@ -16,8 +16,8 @@ export const TEXTS: LandingTexts = {
       "Administrează-ți restaurantul dintr-o singură aplicație: meniu digital multilingv, ecran de bucătărie și rezervări 24/7. Gata în 5 minute. 14 zile gratis, fără card.",
   },
 
-  ctaText: "Începe gratuit",
-  homeCtaText: "Creează-ți platforma",
+  ctaText: "Încearcă gratuit",
+  homeCtaText: "Încearcă gratuit",
   demoText: "Vizionați demo",
   microcopy: "14 zile gratuit · Fără card · Anulați oricând",
 
@@ -28,7 +28,7 @@ export const TEXTS: LandingTexts = {
     navFaq: "Întrebări",
     signIn: "Autentificare",
     viewFeatures: "Vezi funcțiile",
-    cta: "Începe gratuit",
+    cta: "Încearcă gratuit",
   },
 
   hero: {

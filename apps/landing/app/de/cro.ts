@@ -62,14 +62,48 @@ export const CRO: CroCopy = {
     sub: "Kein Jonglieren mit getrennten Tools für Karte, Küche und Reservierungen — alles an einem Ort, auf jedem Handy oder Tablet, ohne Installation.",
   },
 
-  how: {
-    heading: "In 5 Minuten startklar",
-    sub: "Vier Schritte. Keine Installation, keine technische Einrichtung, keine Karte.",
-    steps: [
-      { n: "1", t: "Typ & Name", d: "Lokaltyp und Name — das ist die ganze Anmeldung." },
-      { n: "2", t: "Anmelden", d: "E-Mail oder Google. Keine Karte." },
-      { n: "3", t: "Karte hinzufügen", d: "Eintippen oder die KI deine Papierkarte scannen lassen." },
-      { n: "4", t: "Fertig", d: "Karte, Küche und Reservierungen — bereit." },
+  platform: {
+    hardwareTitle: "Mit eigener Hardware arbeiten",
+    hardwareSub: "Wir zwingen Sie nie, Hardware bei uns zu kaufen. Nutzen Sie die Handys, Tablets und Computer, die Sie bereits haben.",
+    anywhereTitle: "Läuft überall",
+    anywhereSub: "Handy, Tablet, Laptop, PC. Android, iOS, Windows, Mac, Linux. Funktioniert in jedem modernen Browser, ohne Installation.",
+  },
+
+  activities: {
+    heading: "Ein System,",
+    headingAccent: "Ihr ganzes Restaurant.",
+    sub: "Schnellerer Service, eine ruhigere Küche, geringere Kosten und ein Gästeerlebnis, das in Erinnerung bleibt — alles in einer Plattform.",
+    groups: [
+      {
+        Icon: Smartphone,
+        tag: "Am Tisch — Gäste",
+        bullets: [
+          "QR-Menü in 35 Sprachen",
+          "Bestellen ohne auf die Bedienung zu warten",
+          "Bedienung rufen oder Rechnung anfordern",
+          "Tisch rund um die Uhr reservieren",
+        ],
+      },
+      {
+        Icon: ChefHat,
+        tag: "In der Küche",
+        bullets: [
+          "Bestellungen erscheinen sofort am Bildschirm",
+          "Spalten in Zubereitung / fertig / serviert",
+          "Allergene und Hinweise hervorgehoben",
+          "Tablet oder Handy — keine Papierbons",
+        ],
+      },
+      {
+        Icon: BarChart3,
+        tag: "Verwaltung",
+        bullets: [
+          "Menü- und Preisänderungen sofort live",
+          "KI-Übersetzung mit einem Klick",
+          "Verkaufsanalysen und Berichte",
+          "Mehrere Restaurants in einem Konto",
+        ],
+      },
     ],
   },
 };

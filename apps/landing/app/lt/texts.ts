@@ -16,8 +16,8 @@ export const TEXTS: LandingTexts = {
       "Valdykite restoraną iš vienos programėlės: daugiakalbis skaitmeninis meniu, virtuvės ekranas ir rezervacijos visą parą. Paruošta per 5 minutes. 14 dienų nemokamai, be kortelės.",
   },
 
-  ctaText: "Pradėkite nemokamai",
-  homeCtaText: "Sukurkite savo platformą",
+  ctaText: "Išbandykite nemokamai",
+  homeCtaText: "Išbandykite nemokamai",
   demoText: "Žiūrėti demonstraciją",
   microcopy: "14 dienų nemokamai · Be kortelės · Atšaukite bet kada",
 
@@ -28,7 +28,7 @@ export const TEXTS: LandingTexts = {
     navFaq: "DUK",
     signIn: "Prisijungti",
     viewFeatures: "Peržiūrėti funkcijas",
-    cta: "Pradėkite nemokamai",
+    cta: "Išbandykite nemokamai",
   },
 
   hero: {

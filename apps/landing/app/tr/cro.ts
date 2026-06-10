@@ -62,14 +62,48 @@ export const CRO: CroCopy = {
     sub: "Menü, mutfak ve rezervasyonlar için ayrı araçlarla uğraşmak yok — hepsi tek yerde, her telefon ya da tablette, kurulum gerektirmeden.",
   },
 
-  how: {
-    heading: "5 dakikada hazır",
-    sub: "Dört adım. Kurulum yok, teknik ayar yok, kart yok.",
-    steps: [
-      { n: "1", t: "Tür ve ad", d: "Mekan türü ve adı — tüm kayıt bu kadar." },
-      { n: "2", t: "Giriş yap", d: "E-posta ya da Google. Kart yok." },
-      { n: "3", t: "Menüyü ekle", d: "Yazın ya da yapay zeka kağıt menünüzü tarasın." },
-      { n: "4", t: "Yayındasınız", d: "Menü, mutfak ve rezervasyonlar — hazır." },
+  platform: {
+    hardwareTitle: "Kendi donanımınızla çalışın",
+    hardwareSub: "Sizi asla bizden donanım almaya zorlamayız. Zaten sahip olduğunuz telefon, tablet ve bilgisayarları kullanın.",
+    anywhereTitle: "Her yerde çalışır",
+    anywhereSub: "Telefon, tablet, dizüstü, PC. Android, iOS, Windows, Mac, Linux. Tüm modern tarayıcılarda kurulum gerektirmeden çalışır.",
+  },
+
+  activities: {
+    heading: "Tek sistem,",
+    headingAccent: "tüm restoranınız.",
+    sub: "Daha hızlı servis, daha sakin bir mutfak, daha düşük maliyet ve misafirin hatırlayacağı bir deneyim — hepsi tek platformda.",
+    groups: [
+      {
+        Icon: Smartphone,
+        tag: "Masada — misafirler",
+        bullets: [
+          "35 dilde QR menü",
+          "Garson beklemeden sipariş",
+          "Garson çağırma veya hesap isteme",
+          "7/24 masa rezervasyonu",
+        ],
+      },
+      {
+        Icon: ChefHat,
+        tag: "Mutfakta",
+        bullets: [
+          "Siparişler ekrana anında düşer",
+          "Hazırlanıyor / hazır / servis edildi sütunları",
+          "Alerjenler ve notlar vurgulanır",
+          "Tablet veya telefon — kâğıt fiş yok",
+        ],
+      },
+      {
+        Icon: BarChart3,
+        tag: "Yönetim",
+        bullets: [
+          "Menü ve fiyat değişiklikleri anında yayında",
+          "Tek tıkla yapay zeka çevirisi",
+          "Satış analizleri ve raporlar",
+          "Tek hesapta birden çok restoran",
+        ],
+      },
     ],
   },
 };

@@ -16,8 +16,8 @@ export const TEXTS: LandingTexts = {
       "Führe dein Restaurant aus einer App: mehrsprachige digitale Speisekarte, Küchendisplay und Reservierungen rund um die Uhr. In 5 Minuten startklar. 14 Tage gratis, ohne Karte.",
   },
 
-  ctaText: "Kostenlos starten",
-  homeCtaText: "Plattform aufbauen",
+  ctaText: "Kostenlos testen",
+  homeCtaText: "Kostenlos testen",
   demoText: "Demo ansehen",
   microcopy: "14 Tage kostenlos · Ohne Kreditkarte · Jederzeit kündbar",
 
@@ -28,7 +28,7 @@ export const TEXTS: LandingTexts = {
     navFaq: "FAQ",
     signIn: "Anmelden",
     viewFeatures: "Funktionen ansehen",
-    cta: "Kostenlos starten",
+    cta: "Kostenlos testen",
   },
 
   hero: {

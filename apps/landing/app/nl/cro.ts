@@ -62,14 +62,48 @@ export const CRO: CroCopy = {
     sub: "Geen gejongleer met aparte tools voor menu, keuken en reserveringen — alles op één plek, op elke telefoon of tablet, zonder iets te installeren.",
   },
 
-  how: {
-    heading: "Klaar in 5 minuten",
-    sub: "Vier stappen. Geen installatie, geen technische setup, geen kaart.",
-    steps: [
-      { n: "1", t: "Type & naam", d: "Type zaak en naam — dat is de hele aanmelding." },
-      { n: "2", t: "Inloggen", d: "E-mail of Google. Geen kaart." },
-      { n: "3", t: "Menu toevoegen", d: "Typ het in of laat AI je papieren menu scannen." },
-      { n: "4", t: "Je staat live", d: "Menu, keuken en reserveringen — klaar." },
+  platform: {
+    hardwareTitle: "Werk met je eigen hardware",
+    hardwareSub: "We dwingen je nooit om hardware bij ons te kopen. Gebruik de telefoons, tablets en computers die je al hebt.",
+    anywhereTitle: "Werkt overal",
+    anywhereSub: "Mobiel, tablet, laptop, pc. Android, iOS, Windows, Mac, Linux. Werkt in elke moderne browser, zonder installatie.",
+  },
+
+  activities: {
+    heading: "Eén systeem,",
+    headingAccent: "je hele restaurant.",
+    sub: "Snellere bediening, een rustigere keuken, lagere kosten en een gastervaring die bijblijft — alles in één platform.",
+    groups: [
+      {
+        Icon: Smartphone,
+        tag: "Aan tafel — gasten",
+        bullets: [
+          "QR-menu in 35 talen",
+          "Bestellen zonder op de ober te wachten",
+          "De ober roepen of de rekening vragen",
+          "24/7 een tafel reserveren",
+        ],
+      },
+      {
+        Icon: ChefHat,
+        tag: "In de keuken",
+        bullets: [
+          "Bestellingen verschijnen direct op het scherm",
+          "Kolommen in bereiding / klaar / geserveerd",
+          "Allergenen en notities gemarkeerd",
+          "Tablet of telefoon — geen papieren bonnen",
+        ],
+      },
+      {
+        Icon: BarChart3,
+        tag: "Beheer",
+        bullets: [
+          "Menu- en prijswijzigingen direct live",
+          "AI-vertaling met één klik",
+          "Verkoopanalyses en rapporten",
+          "Meerdere restaurants in één account",
+        ],
+      },
     ],
   },
 };

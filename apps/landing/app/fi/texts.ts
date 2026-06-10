@@ -16,8 +16,8 @@ export const TEXTS: LandingTexts = {
       "Pyöritä ravintolaasi yhdellä sovelluksella: monikielinen digitaalinen menu, keittiönäyttö ja varaukset 24/7. Valmis 5 minuutissa. 14 päivää ilmaiseksi, ei korttia.",
   },
 
-  ctaText: "Aloita ilmaiseksi",
-  homeCtaText: "Rakenna alustasi",
+  ctaText: "Kokeile ilmaiseksi",
+  homeCtaText: "Kokeile ilmaiseksi",
   demoText: "Katso demo",
   microcopy: "14 päivää ilmaiseksi · Ilman korttia · Peruutus koska tahansa",
 
@@ -28,7 +28,7 @@ export const TEXTS: LandingTexts = {
     navFaq: "UKK",
     signIn: "Kirjaudu sisään",
     viewFeatures: "Katso ominaisuudet",
-    cta: "Aloita ilmaiseksi",
+    cta: "Kokeile ilmaiseksi",
   },
 
   hero: {

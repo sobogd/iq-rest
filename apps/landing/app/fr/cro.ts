@@ -62,14 +62,48 @@ export const CRO: CroCopy = {
     sub: "Fini de jongler entre des outils séparés pour le menu, la cuisine et les réservations — tout au même endroit, sur n'importe quel téléphone ou tablette, sans rien installer.",
   },
 
-  how: {
-    heading: "Prêt en 5 minutes",
-    sub: "Quatre étapes. Sans installation, sans configuration technique, sans carte.",
-    steps: [
-      { n: "1", t: "Type & nom", d: "Type d'établissement et nom — c'est toute l'inscription." },
-      { n: "2", t: "Connexion", d: "E-mail ou Google. Sans carte." },
-      { n: "3", t: "Ajoutez le menu", d: "Saisissez-le ou laissez l'IA scanner votre menu papier." },
-      { n: "4", t: "C'est en ligne", d: "Menu, cuisine et réservations — prêts." },
+  platform: {
+    hardwareTitle: "Travaillez avec votre propre matériel",
+    hardwareSub: "Nous ne vous obligeons jamais à acheter du matériel chez nous. Utilisez les téléphones, tablettes et ordinateurs que vous avez déjà.",
+    anywhereTitle: "Fonctionne partout",
+    anywhereSub: "Mobile, tablette, ordinateur portable, PC. Android, iOS, Windows, Mac, Linux. Fonctionne dans tout navigateur moderne, sans installation.",
+  },
+
+  activities: {
+    heading: "Un seul système,",
+    headingAccent: "tout votre restaurant.",
+    sub: "Un service plus rapide, une cuisine plus sereine, des coûts réduits et une expérience dont les clients se souviennent — le tout sur une seule plateforme.",
+    groups: [
+      {
+        Icon: Smartphone,
+        tag: "À table — clients",
+        bullets: [
+          "Menu QR en 35 langues",
+          "Commander sans attendre le serveur",
+          "Appeler le serveur ou demander l’addition",
+          "Réserver une table 24h/24",
+        ],
+      },
+      {
+        Icon: ChefHat,
+        tag: "En cuisine",
+        bullets: [
+          "Les commandes arrivent à l’écran instantanément",
+          "Colonnes en préparation / prêt / servi",
+          "Allergènes et notes mis en évidence",
+          "Tablette ou téléphone — sans tickets papier",
+        ],
+      },
+      {
+        Icon: BarChart3,
+        tag: "Gestion",
+        bullets: [
+          "Modifications du menu et des prix en direct",
+          "Traduction par IA en un clic",
+          "Analyses des ventes et rapports",
+          "Plusieurs restaurants sur un seul compte",
+        ],
+      },
     ],
   },
 };

@@ -16,8 +16,8 @@ export const TEXTS: LandingTexts = {
       "Bainistigh do bhialann ó aon aip amháin: biachlár digiteach ilteangach, scáileán cistine agus áirithintí 24/7. Réidh i 5 nóiméad. 14 lá saor, gan chárta.",
   },
 
-  ctaText: "Tosaigh saor in aisce",
-  homeCtaText: "Tóg d'ardán",
+  ctaText: "Bain triail as saor in aisce",
+  homeCtaText: "Bain triail as saor in aisce",
   demoText: "Féach an taispeántas",
   microcopy: "14 lá saor in aisce · Gan cárta · Cealaigh aon uair",
 
@@ -28,7 +28,7 @@ export const TEXTS: LandingTexts = {
     navFaq: "Ceisteanna Coitianta",
     signIn: "Sínigh isteach",
     viewFeatures: "Féach ar ghnéithe",
-    cta: "Tosaigh saor in aisce",
+    cta: "Bain triail as saor in aisce",
   },
 
   hero: {

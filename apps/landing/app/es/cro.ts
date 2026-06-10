@@ -62,14 +62,48 @@ export const CRO: CroCopy = {
     sub: "Sin malabares con herramientas distintas para la carta, la cocina y las reservas: todo en un solo lugar, en cualquier móvil o tablet y sin instalar nada.",
   },
 
-  how: {
-    heading: "Listo en 5 minutos",
-    sub: "Cuatro pasos. Sin instalaciones, sin configuración técnica, sin tarjeta.",
-    steps: [
-      { n: "1", t: "Tipo y nombre", d: "Tipo de local y nombre: ese es todo el registro." },
-      { n: "2", t: "Entra", d: "Email o Google. Sin tarjeta." },
-      { n: "3", t: "Añade la carta", d: "Escríbela o deja que la IA escanee tu carta en papel." },
-      { n: "4", t: "Ya estás", d: "Carta, cocina y reservas — listas." },
+  platform: {
+    hardwareTitle: "Trabaja con tu propio hardware",
+    hardwareSub: "Nunca te obligamos a comprarnos hardware. Usa los teléfonos, tablets y ordenadores que ya tienes.",
+    anywhereTitle: "Funciona en cualquier dispositivo",
+    anywhereSub: "Móvil, tablet, portátil, PC. Android, iOS, Windows, Mac, Linux. Funciona en cualquier navegador moderno, sin instalar nada.",
+  },
+
+  activities: {
+    heading: "Un solo sistema,",
+    headingAccent: "todo tu restaurante.",
+    sub: "Servicio más rápido, una cocina más tranquila, menos costes y una experiencia que el cliente recuerda — todo en una plataforma.",
+    groups: [
+      {
+        Icon: Smartphone,
+        tag: "En la mesa — clientes",
+        bullets: [
+          "Carta QR en 35 idiomas",
+          "Pedir sin esperar al camarero",
+          "Llamar al camarero o pedir la cuenta",
+          "Reservar mesa 24/7",
+        ],
+      },
+      {
+        Icon: ChefHat,
+        tag: "En la cocina",
+        bullets: [
+          "Los pedidos llegan a la pantalla al instante",
+          "Columnas en preparación / listo / servido",
+          "Alérgenos y notas resaltados",
+          "Tablet o móvil — sin tickets en papel",
+        ],
+      },
+      {
+        Icon: BarChart3,
+        tag: "Gestión",
+        bullets: [
+          "Cambios de carta y precios al instante",
+          "Traducción con IA en un clic",
+          "Analíticas de ventas e informes",
+          "Varios restaurantes en una sola cuenta",
+        ],
+      },
     ],
   },
 };

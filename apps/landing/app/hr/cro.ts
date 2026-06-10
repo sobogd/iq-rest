@@ -62,14 +62,48 @@ export const CRO: CroCopy = {
     sub: "Bez žongliranja zasebnim alatima za jelovnik, kuhinju i rezervacije — sve na jednom mjestu, na bilo kojem telefonu ili tabletu, bez instalacije.",
   },
 
-  how: {
-    heading: "Spremno za 5 minuta",
-    sub: "Četiri koraka. Bez instalacije, bez tehničkog postavljanja, bez kartice.",
-    steps: [
-      { n: "1", t: "Vrsta i naziv", d: "Vrsta lokala i naziv — to je cijela registracija." },
-      { n: "2", t: "Prijavite se", d: "E-mail ili Google. Bez kartice." },
-      { n: "3", t: "Dodajte jelovnik", d: "Upišite ga ili pustite UI da skenira papirnati jelovnik." },
-      { n: "4", t: "Uživo ste", d: "Jelovnik, kuhinja i rezervacije — spremno." },
+  platform: {
+    hardwareTitle: "Radite s vlastitom opremom",
+    hardwareSub: "Nikada vas ne prisiljavamo na kupnju opreme od nas. Koristite telefone, tablete i računala koja već imate.",
+    anywhereTitle: "Radi svugdje",
+    anywhereSub: "Mobitel, tablet, laptop, PC. Android, iOS, Windows, Mac, Linux. Radi u svakom modernom pregledniku, bez instalacije.",
+  },
+
+  activities: {
+    heading: "Jedan sustav,",
+    headingAccent: "cijeli vaš restoran.",
+    sub: "Brža usluga, mirnija kuhinja, niži troškovi i iskustvo koje gost pamti — sve na jednoj platformi.",
+    groups: [
+      {
+        Icon: Smartphone,
+        tag: "Za stolom — gosti",
+        bullets: [
+          "QR jelovnik na 35 jezika",
+          "Naručivanje bez čekanja konobara",
+          "Pozivanje konobara ili traženje računa",
+          "Rezervacija stola 24/7",
+        ],
+      },
+      {
+        Icon: ChefHat,
+        tag: "U kuhinji",
+        bullets: [
+          "Narudžbe se odmah pojavljuju na ekranu",
+          "Stupci u pripremi / gotovo / posluženo",
+          "Alergeni i napomene istaknuti",
+          "Tablet ili telefon — bez papirnatih računa",
+        ],
+      },
+      {
+        Icon: BarChart3,
+        tag: "Upravljanje",
+        bullets: [
+          "Izmjene jelovnika i cijena odmah uživo",
+          "AI prijevod jednim klikom",
+          "Analitika prodaje i izvješća",
+          "Više restorana na jednom računu",
+        ],
+      },
     ],
   },
 };

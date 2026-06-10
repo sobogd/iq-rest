@@ -62,14 +62,48 @@ export const CRO: CroCopy = {
     sub: "Sem malabarismos com ferramentas separadas para o menu, a cozinha e as reservas — está tudo num só lugar, em qualquer telemóvel ou tablet, sem instalar nada.",
   },
 
-  how: {
-    heading: "Pronto em 5 minutos",
-    sub: "Quatro passos. Sem instalações, sem configuração técnica, sem cartão.",
-    steps: [
-      { n: "1", t: "Tipo e nome", d: "Tipo de espaço e nome — é todo o registo." },
-      { n: "2", t: "Entrar", d: "Email ou Google. Sem cartão." },
-      { n: "3", t: "Adicione o menu", d: "Escreva-o ou deixe a IA digitalizar o seu menu em papel." },
-      { n: "4", t: "Está no ar", d: "Menu, cozinha e reservas — prontos." },
+  platform: {
+    hardwareTitle: "Trabalhe com o seu próprio hardware",
+    hardwareSub: "Nunca o obrigamos a comprar hardware connosco. Use os telemóveis, tablets e computadores que já tem.",
+    anywhereTitle: "Funciona em qualquer lugar",
+    anywhereSub: "Telemóvel, tablet, portátil, PC. Android, iOS, Windows, Mac, Linux. Funciona em qualquer navegador moderno, sem instalação.",
+  },
+
+  activities: {
+    heading: "Um só sistema,",
+    headingAccent: "todo o seu restaurante.",
+    sub: "Serviço mais rápido, uma cozinha mais tranquila, custos menores e uma experiência que os clientes recordam — tudo numa só plataforma.",
+    groups: [
+      {
+        Icon: Smartphone,
+        tag: "À mesa — clientes",
+        bullets: [
+          "Menu QR em 35 idiomas",
+          "Pedir sem esperar pelo empregado",
+          "Chamar o empregado ou pedir a conta",
+          "Reservar mesa 24/7",
+        ],
+      },
+      {
+        Icon: ChefHat,
+        tag: "Na cozinha",
+        bullets: [
+          "Os pedidos chegam ao ecrã instantaneamente",
+          "Colunas em preparação / pronto / servido",
+          "Alérgenos e notas destacados",
+          "Tablet ou telemóvel — sem talões em papel",
+        ],
+      },
+      {
+        Icon: BarChart3,
+        tag: "Gestão",
+        bullets: [
+          "Alterações de menu e preços em tempo real",
+          "Tradução com IA num clique",
+          "Análises de vendas e relatórios",
+          "Vários restaurantes numa só conta",
+        ],
+      },
     ],
   },
 };

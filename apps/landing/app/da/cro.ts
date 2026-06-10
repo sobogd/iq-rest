@@ -62,14 +62,48 @@ export const CRO: CroCopy = {
     sub: "Slut med at jonglere separate værktøjer til menu, køkken og reservationer — alt ét sted, på enhver telefon eller tablet, uden at installere noget.",
   },
 
-  how: {
-    heading: "Klar på 5 minutter",
-    sub: "Fire trin. Ingen installation, ingen teknisk opsætning, intet kort.",
-    steps: [
-      { n: "1", t: "Type & navn", d: "Type sted og navn — det er hele tilmeldingen." },
-      { n: "2", t: "Log ind", d: "E-mail eller Google. Intet kort." },
-      { n: "3", t: "Tilføj menuen", d: "Skriv den ind, eller lad AI scanne din papirmenu." },
-      { n: "4", t: "Du er live", d: "Menu, køkken og reservationer — klar." },
+  platform: {
+    hardwareTitle: "Arbejd med din egen hardware",
+    hardwareSub: "Vi tvinger dig aldrig til at købe hardware hos os. Brug de telefoner, tablets og computere, du allerede har.",
+    anywhereTitle: "Virker overalt",
+    anywhereSub: "Mobil, tablet, laptop, PC. Android, iOS, Windows, Mac, Linux. Virker i enhver moderne browser, uden installation.",
+  },
+
+  activities: {
+    heading: "Ét system,",
+    headingAccent: "hele din restaurant.",
+    sub: "Hurtigere service, et roligere køkken, lavere omkostninger og en gæsteoplevelse, der huskes — alt i én platform.",
+    groups: [
+      {
+        Icon: Smartphone,
+        tag: "Ved bordet — gæster",
+        bullets: [
+          "QR-menu på 35 sprog",
+          "Bestil uden at vente på tjeneren",
+          "Kald på tjeneren eller bed om regningen",
+          "Book bord døgnet rundt",
+        ],
+      },
+      {
+        Icon: ChefHat,
+        tag: "I køkkenet",
+        bullets: [
+          "Ordrer rammer skærmen med det samme",
+          "Kolonner under tilberedning / klar / serveret",
+          "Allergener og noter fremhævet",
+          "Tablet eller telefon — ingen papirsedler",
+        ],
+      },
+      {
+        Icon: BarChart3,
+        tag: "Administration",
+        bullets: [
+          "Menu- og prisændringer live med det samme",
+          "AI-oversættelse med ét klik",
+          "Salgsanalyser og rapporter",
+          "Flere restauranter på én konto",
+        ],
+      },
     ],
   },
 };

@@ -16,8 +16,8 @@ export const TEXTS: LandingTexts = {
       "Vezesd éttermed egyetlen appból: többnyelvű digitális menü, konyhai kijelző és éjjel-nappali foglalások. 5 perc alatt kész. 14 nap ingyen, kártya nélkül.",
   },
 
-  ctaText: "Kezdés ingyen",
-  homeCtaText: "Építse fel platformját",
+  ctaText: "Próbáld ki ingyen",
+  homeCtaText: "Próbáld ki ingyen",
   demoText: "Nézze meg a demót",
   microcopy: "14 nap ingyenes · Kártya nélkül · Lemondás bármikor",
 
@@ -28,7 +28,7 @@ export const TEXTS: LandingTexts = {
     navFaq: "GYIK",
     signIn: "Bejelentkezés",
     viewFeatures: "Funkciók megtekintése",
-    cta: "Kezdés ingyen",
+    cta: "Próbáld ki ingyen",
   },
 
   hero: {

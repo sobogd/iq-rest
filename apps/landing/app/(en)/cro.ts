@@ -97,14 +97,48 @@ export const CRO: CroCopy = {
     sub: "No juggling separate tools for the menu, the kitchen and the bookings — it all lives in a single place, on any phone or tablet, with nothing to install.",
   },
 
-  how: {
-    heading: "Live in 5 minutes",
-    sub: "Four steps. No installs, no technical setup, no card.",
-    steps: [
-      { n: "1", t: "Pick type & name", d: "Venue type and name — that's the whole signup." },
-      { n: "2", t: "Sign in", d: "Email or Google. No card." },
-      { n: "3", t: "Add the menu", d: "Type it in, or let AI scan your paper menu." },
-      { n: "4", t: "You're live", d: "Menu, kitchen and bookings — ready." },
+  platform: {
+    hardwareTitle: "Work with your own hardware",
+    hardwareSub: "We never force you to buy hardware from us. Use the phones, tablets and computers you already have.",
+    anywhereTitle: "Built to run anywhere",
+    anywhereSub: "Mobile, tablet, laptop, PC. Android, iOS, Windows, Mac, Linux. Works in any modern browser, no install.",
+  },
+
+  activities: {
+    heading: "One system,",
+    headingAccent: "your whole restaurant.",
+    sub: "Faster service, a calmer kitchen, lower costs and a guest experience they remember — all in one platform.",
+    groups: [
+      {
+        Icon: Smartphone,
+        tag: "At the table — guests",
+        bullets: [
+          "QR menu in 35 languages",
+          "Order without waving for a waiter",
+          "Call the waiter or ask for the bill",
+          "Book a table 24/7",
+        ],
+      },
+      {
+        Icon: ChefHat,
+        tag: "In the kitchen",
+        bullets: [
+          "Orders land on the screen instantly",
+          "Cooking / ready / served columns",
+          "Allergens and notes highlighted",
+          "Tablet or phone — no paper tickets",
+        ],
+      },
+      {
+        Icon: BarChart3,
+        tag: "Management",
+        bullets: [
+          "Menu and price edits go live instantly",
+          "AI translation in one click",
+          "Sales analytics and reports",
+          "Run several restaurants from one account",
+        ],
+      },
     ],
   },
 };

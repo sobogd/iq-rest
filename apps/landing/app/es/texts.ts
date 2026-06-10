@@ -16,8 +16,8 @@ export const TEXTS: LandingTexts = {
       "Gestiona tu restaurante desde una sola app: carta digital multilingüe, pantalla de cocina y reservas 24/7. Listo en 5 minutos. 14 días gratis, sin tarjeta.",
   },
 
-  ctaText: "Empieza gratis",
-  homeCtaText: "Crea tu plataforma",
+  ctaText: "Pruébalo gratis",
+  homeCtaText: "Pruébalo gratis",
   demoText: "Ver demo",
   microcopy: "14 días gratis · Sin tarjeta · Cancelas cuando quieras",
 
@@ -28,7 +28,7 @@ export const TEXTS: LandingTexts = {
     navFaq: "FAQ",
     signIn: "Iniciar sesión",
     viewFeatures: "Ver funciones",
-    cta: "Empieza gratis",
+    cta: "Pruébalo gratis",
   },
 
   hero: {

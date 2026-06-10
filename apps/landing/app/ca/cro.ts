@@ -62,14 +62,48 @@ export const CRO: CroCopy = {
     sub: "Sense fer malabars amb eines separades per a la carta, la cuina i les reserves — tot en un sol lloc, en qualsevol mòbil o tauleta i sense instal·lar res.",
   },
 
-  how: {
-    heading: "A punt en 5 minuts",
-    sub: "Quatre passos. Sense instal·lacions, sense configuració tècnica, sense targeta.",
-    steps: [
-      { n: "1", t: "Tipus i nom", d: "Tipus de local i nom — això és tot el registre." },
-      { n: "2", t: "Inicia sessió", d: "Correu o Google. Sense targeta." },
-      { n: "3", t: "Afegeix la carta", d: "Escriu-la o deixa que la IA escanegi la teva carta en paper." },
-      { n: "4", t: "Ja estàs en línia", d: "Carta, cuina i reserves — a punt." },
+  platform: {
+    hardwareTitle: "Treballa amb el teu propi maquinari",
+    hardwareSub: "Mai t’obliguem a comprar-nos maquinari. Fes servir els telèfons, tauletes i ordinadors que ja tens.",
+    anywhereTitle: "Funciona a tot arreu",
+    anywhereSub: "Mòbil, tauleta, portàtil, PC. Android, iOS, Windows, Mac, Linux. Funciona en qualsevol navegador modern, sense instal·lació.",
+  },
+
+  activities: {
+    heading: "Un sol sistema,",
+    headingAccent: "tot el teu restaurant.",
+    sub: "Servei més ràpid, una cuina més tranquil·la, menys costos i una experiència que el client recorda — tot en una plataforma.",
+    groups: [
+      {
+        Icon: Smartphone,
+        tag: "A taula — clients",
+        bullets: [
+          "Carta QR en 35 idiomes",
+          "Demanar sense esperar el cambrer",
+          "Cridar el cambrer o demanar el compte",
+          "Reservar taula 24/7",
+        ],
+      },
+      {
+        Icon: ChefHat,
+        tag: "A la cuina",
+        bullets: [
+          "Les comandes arriben a la pantalla a l’instant",
+          "Columnes en preparació / a punt / servit",
+          "Al·lèrgens i notes destacats",
+          "Tauleta o mòbil — sense tiquets de paper",
+        ],
+      },
+      {
+        Icon: BarChart3,
+        tag: "Gestió",
+        bullets: [
+          "Canvis de carta i preus a l’instant",
+          "Traducció amb IA amb un clic",
+          "Analítiques de vendes i informes",
+          "Diversos restaurants en un sol compte",
+        ],
+      },
     ],
   },
 };
