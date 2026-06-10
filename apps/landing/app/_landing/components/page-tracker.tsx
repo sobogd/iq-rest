@@ -6,7 +6,6 @@ import { readBillingCurrencyFromDocument } from "@/lib/country-currency-map";
 
 const GCLID_REGEX = /^[A-Za-z0-9_-]{1,256}$/;
 const FBCLID_REGEX = /^[A-Za-z0-9_.-]{1,512}$/;
-const FROM_REGEX = /^[a-z0-9_]{1,32}$/;
 
 // Minimum gap between two consecutive view events for the same section.
 // Stops a single slow scroll near the section's edge from firing dozens
@@ -15,19 +14,16 @@ const FROM_REGEX = /^[a-z0-9_]{1,32}$/;
 const SECTION_THROTTLE_MS = 1500;
 
 function readFromSource(): string | null {
-  // First, look at the URL — direct hit before middleware-stripped cookie kicks in
-  // (e.g. SPA-style nav added by an external linker, or middleware bypass for some path).
+  // `?from=` is no longer stripped server-side — read it straight from the URL.
+  // Sanitize to the API event charset (a-z0-9_) instead of rejecting, so ANY
+  // source name still fires `l_from_<name>` (e.g. "My-Campaign 1" → "my_campaign_1").
   const sp = new URLSearchParams(window.location.search);
-  const fromParam = sp.get("from");
-  if (fromParam && FROM_REGEX.test(fromParam.toLowerCase())) {
-    return fromParam.toLowerCase();
-  }
-  // Otherwise read the cookie middleware set on the initial /?from=… hit
-  // (5-minute TTL — only covers the first navigation after the click).
-  const m = document.cookie.match(/(?:^|; )ref_from=([^;]*)/);
-  if (!m) return null;
-  const raw = decodeURIComponent(m[1]).toLowerCase();
-  return FROM_REGEX.test(raw) ? raw : null;
+  const raw = (sp.get("from") || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9_]+/g, "_")
+    .replace(/^_+|_+$/g, "")
+    .slice(0, 32);
+  return raw || null;
 }
 
 function fireFromAndClean(): void {
@@ -36,11 +32,7 @@ function fireFromAndClean(): void {
 
   analytics.track(`l_from_${source}`);
 
-  // Clear cookie so we don't re-fire on subsequent page loads in the same session.
-  document.cookie = "ref_from=; path=/; max-age=0";
-
-  // Strip ?from= from the URL if it survived (middleware normally redirects it away,
-  // but a same-origin SPA push could leave it).
+  // Strip ?from= from the URL after firing so a reload doesn't double-count.
   const sp = new URLSearchParams(window.location.search);
   if (!sp.has("from")) return;
   sp.delete("from");

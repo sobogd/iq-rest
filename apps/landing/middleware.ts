@@ -193,28 +193,10 @@ export default function middleware(request: NextRequest) {
     return response;
   }
 
-  // Strip ?from= param → save to cookie for client-side referral tracking
-  const fromParam = request.nextUrl.searchParams.get("from");
-  if (fromParam) {
-    const slugParam = request.nextUrl.searchParams.get("slug");
-    const cleanUrl = new URL(request.url);
-    cleanUrl.searchParams.delete("from");
-    if (slugParam) cleanUrl.searchParams.delete("slug");
-    const response = NextResponse.redirect(cleanUrl, 302);
-    response.cookies.set("ref_from", fromParam, {
-      path: "/",
-      maxAge: 60 * 5, // 5 minutes
-      sameSite: "lax",
-    });
-    if (slugParam) {
-      response.cookies.set("ref_slug", slugParam, {
-        path: "/",
-        maxAge: 60 * 5,
-        sameSite: "lax",
-      });
-    }
-    return response;
-  }
+  // `?from=` is intentionally NOT stripped/redirected here — it reaches the
+  // page so the client tracker reads it from the URL and fires `l_from_<source>`
+  // itself, then cleans the URL (history.replaceState). Middleware interception
+  // dropped the event for fast/SPA navigations.
 
   // `/` and English root slugs (pricing, digital-menu-for-restaurants, ...)
   // resolve to the `app/(en)` route group. Set Last-Modified and skip the
