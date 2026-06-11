@@ -3,6 +3,10 @@
 
 generator client {
   provider      = "prisma-client-js"
+  // App-local output so landing's `prisma generate` never overwrites the shared
+  // root @prisma/client (owned by dashboard-api). Landing doesn't use Prisma at
+  // runtime; this just keeps its generate self-contained.
+  output        = "./.generated-client"
   binaryTargets = ["native", "linux-arm64-openssl-3.0.x"]
 }
 

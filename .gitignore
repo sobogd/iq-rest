@@ -16,12 +16,16 @@ apps/*/build/
 apps/*/.turbo/
 .turbo/
 
+# pnpm
+# (lockfile pnpm-lock.yaml IS committed; node_modules already ignored above)
+
 # vite / next caches
 apps/*/.vite/
 apps/*/node_modules/.vite/
 
 # prisma generated client (regenerated on install)
 apps/*/node_modules/.prisma/
+apps/landing/prisma/.generated-client/
 
 # logs
 *.log

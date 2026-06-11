@@ -3,15 +3,36 @@
   "private": true,
   "version": "0.0.0",
   "description": "IQ Rest monorepo — landing, dashboard (web+api), public menu (web+api)",
+  "packageManager": "pnpm@10.33.0",
   "scripts": {
     "dev": "./scripts/dev.sh",
     "gen-env": "node scripts/gen-env.mjs",
     "stop": "pm2 delete landing dashboard-web dashboard-api public-menu-api public-menu",
     "logs": "pm2 logs",
     "status": "pm2 status",
-    "db:reset": "./scripts/db-reset.sh"
+    "db:reset": "./scripts/db-reset.sh",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck"
+  },
+  "devDependencies": {
+    "turbo": "^2.3.3"
   },
   "dependencies": {
     "dotenv": "^16.4.5"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@nestjs/core",
+      "@prisma/client",
+      "@prisma/engines",
+      "argon2",
+      "esbuild",
+      "ffmpeg-static",
+      "prisma",
+      "protobufjs",
+      "sharp",
+      "unrs-resolver"
+    ]
   }
 }
