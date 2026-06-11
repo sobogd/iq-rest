@@ -4,11 +4,11 @@ Single repo for the IQ Rest system. Five services under `apps/`:
 
 | App | Stack | Local port | Role |
 |-----|-------|-----------|------|
-| `apps/landing` | Next.js | 5123 | marketing landing + auth login flow |
-| `apps/dashboard-web` | Vite/React | 5129 | dashboard SPA + KDS/waiter/reservation kiosks |
-| `apps/dashboard-api` | NestJS | 5130 | dashboard backend, owns Prisma schema, SSE fan-out |
-| `apps/public-menu-api` | NestJS | 5131 | guest menu backend |
-| `apps/public-menu` | Vite/React | 5132 | guest QR menu PWA |
+| `apps/landing` | Next.js | 8001 | marketing landing + auth login flow |
+| `apps/dashboard-web` | Vite/React | 8002 | dashboard SPA + KDS/waiter/reservation kiosks |
+| `apps/dashboard-api` | NestJS | 8003 | dashboard backend, owns Prisma schema, SSE fan-out |
+| `apps/public-menu-api` | NestJS | 8004 | guest menu backend |
+| `apps/public-menu` | Vite/React | 8005 | guest QR menu PWA |
 
 ## Local development
 
