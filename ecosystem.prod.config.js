@@ -7,14 +7,19 @@
 //   pm2 start /home/deploy/ecosystem.prod.config.js
 //   pm2 save
 //
-// The two NestJS APIs run in cluster mode (2 instances) → `pm2 reload` brings
-// workers up one at a time with no dropped requests. They are cluster-safe:
-//   - orders_events pg LISTEN: every worker LISTENs and fans out to its own SSE
-//     clients, so whichever worker holds a client's connection gets the event.
-//   - public-menu-api's in-memory order rate-limit is per-worker → the effective
-//     limit is ~2x (acceptable; tighten later with a shared store if needed).
-// Landing (Next.js) stays in fork mode — `pm2 reload` there is a graceful restart
-// (~1-2s), since Next isn't a plain cluster-able node entrypoint.
+// public-menu-api runs in cluster mode (2 instances) → `pm2 reload` brings workers
+// up one at a time with no dropped requests. It is cluster-safe: no @Cron jobs, and
+// its in-memory order rate-limit being per-worker just makes the effective limit ~2x
+// (acceptable; move to a shared store later if needed).
+//
+// dashboard-api stays FORK (single instance): it has 4 @Cron jobs (inbox-notify,
+// usage-stitch, Meta CAPI conversion upload every 15m, usage-cleanup). In cluster
+// mode every worker would fire them → DOUBLED conversions/emails. `pm2 reload` here
+// is a graceful restart (~2s). To make it true zero-downtime later: guard the crons
+// to only run on NODE_APP_INSTANCE===0, then switch to cluster.
+//
+// Landing (Next.js) stays fork — `pm2 reload` is a graceful restart (~2s); Next
+// isn't a plain cluster-able node entrypoint.
 
 const base = {
   autorestart: true,
@@ -33,8 +38,8 @@ module.exports = {
       name: "dashboard-api",
       cwd: "/home/deploy/apps/iq-rest-dashboard-api",
       script: "dist/src/main.js",
-      exec_mode: "cluster",
-      instances: 2,
+      exec_mode: "fork", // FORK: has @Cron jobs — cluster would double them
+      instances: 1,
       env: { NODE_ENV: "production", PORT: 8130 },
     },
     {
