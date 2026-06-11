@@ -16,8 +16,18 @@ function getPublicMenuApex(): string {
   return env.VITE_PUBLIC_MENU_APEX || "iq-rest.com";
 }
 
-/** Full URL of a restaurant's public menu — `https://<slug>.iq-rest.com`. */
+/** Full URL of a restaurant's public menu.
+ *  Prod: `https://<slug>.iq-rest.com` (subdomain per restaurant).
+ *  Local dev: the public menu runs as a single origin and resolves the
+ *  restaurant via `?slug=` — so we point at `VITE_PUBLIC_MENU_URL` directly.
+ *  The `import.meta.env.DEV` guard keeps prod builds on the subdomain form
+ *  regardless of what `VITE_PUBLIC_MENU_URL` is set to. */
 export function getMenuUrl(slug: string): string {
+  const env = viteEnv();
+  if (env.DEV && env.VITE_PUBLIC_MENU_URL) {
+    const base = String(env.VITE_PUBLIC_MENU_URL).replace(/\/+$/, "");
+    return `${base}/?slug=${encodeURIComponent(slug)}`;
+  }
   return "https://" + slug + "." + getPublicMenuApex();
 }
 
