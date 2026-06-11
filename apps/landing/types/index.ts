@@ -1,7 +1,7 @@
 // Shared types for Categories and Items modules
 // Using Prisma types as base and extending for client-side use
 
-import type { Category as PrismaCategory, Item as PrismaItem } from "@prisma/client";
+import type { Category as PrismaCategory, Item as PrismaItem } from "@iq-rest/db";
 
 // Category types
 export type Category = Pick<

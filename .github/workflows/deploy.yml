@@ -51,7 +51,7 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 22, cache: pnpm }
       - run: pnpm install --frozen-lockfile
-      - run: pnpm --filter $PNPM_FILTER_API_DASH exec prisma generate
+      - run: pnpm --filter @iq-rest/db generate
       - run: pnpm --filter $PNPM_FILTER_API_DASH build
       - name: Bundle (self-contained, prod deps)
         run: pnpm --filter $PNPM_FILTER_API_DASH deploy --prod --legacy ./out-dashboard-api
@@ -59,7 +59,7 @@ jobs:
         if: ${{ inputs.run_migrations }}
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
-        run: pnpm --filter $PNPM_FILTER_API_DASH exec prisma migrate deploy
+        run: pnpm --filter @iq-rest/db migrate:deploy
       - name: Copy bundle to server
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -92,7 +92,7 @@ jobs:
         with: { node-version: 22, cache: pnpm }
       - run: pnpm install --frozen-lockfile
       # public-menu-api reuses the dashboard-api (superset) Prisma client at runtime.
-      - run: pnpm --filter $PNPM_FILTER_API_DASH exec prisma generate
+      - run: pnpm --filter @iq-rest/db generate
       - run: pnpm --filter $PNPM_FILTER_API_MENU build
       - run: pnpm --filter $PNPM_FILTER_API_MENU deploy --prod --legacy ./out-public-menu-api
       - name: Copy bundle to server

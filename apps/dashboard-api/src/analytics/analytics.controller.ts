@@ -6,7 +6,7 @@ import {
   UseGuards,
 } from "@nestjs/common";
 import type { Request } from "express";
-import { Prisma } from "@prisma/client";
+import { Prisma } from "@iq-rest/db";
 import { AuthGuard, type AuthedRequest } from "../auth/auth.guard";
 import { PrismaService } from "../prisma/prisma.service";
 

@@ -10,7 +10,7 @@
 //
 // Falls back to "UTC" when no coordinates are present or tz-lookup throws.
 
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "@iq-rest/db";
 import tzlookup from "tz-lookup";
 
 const APPLY = process.argv.includes("--apply");

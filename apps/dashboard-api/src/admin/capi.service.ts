@@ -1,7 +1,7 @@
 import { Injectable, Logger } from "@nestjs/common";
 import { Cron } from "@nestjs/schedule";
 import { ConfigService } from "@nestjs/config";
-import { Prisma } from "@prisma/client";
+import { Prisma } from "@iq-rest/db";
 import { createHash } from "crypto";
 import { PrismaService } from "../prisma/prisma.service";
 

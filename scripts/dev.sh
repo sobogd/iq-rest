@@ -55,11 +55,10 @@ fi
 echo "==> Regenerating per-app .env from root .env"
 node "$ROOT/scripts/gen-env.mjs"
 
-# dashboard-api owns the shared root @prisma/client. Regenerate it every run so
-# the hoisted client always matches dashboard-api's schema (public-menu-api uses
-# the same superset client; landing generates its own app-local client).
-echo "==> prisma generate (dashboard-api → shared root client)"
-( cd "$ROOT/apps/dashboard-api" && npx prisma generate >/dev/null 2>&1 ) || echo "  (prisma generate warning — continuing)"
+# Generate the shared Prisma client in packages/db (@iq-rest/db) — the single
+# schema all apps import from.
+echo "==> prisma generate (@iq-rest/db)"
+( cd "$ROOT" && pnpm --filter @iq-rest/db generate >/dev/null 2>&1 ) || echo "  (prisma generate warning — continuing)"
 
 echo "==> Restarting: ${SELECTED[*]}"
 for name in "${SELECTED[@]}"; do pm2 delete "$name" >/dev/null 2>&1 || true; done

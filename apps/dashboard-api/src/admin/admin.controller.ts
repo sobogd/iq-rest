@@ -17,7 +17,7 @@ import {
 } from "@nestjs/common";
 import type { Request, Response } from "express";
 import { ConfigService } from "@nestjs/config";
-import { Prisma } from "@prisma/client";
+import { Prisma } from "@iq-rest/db";
 import { PrismaService } from "../prisma/prisma.service";
 import { AdminGuard } from "./admin.guard";
 import { UsageStitchService } from "./usage-stitch.service";

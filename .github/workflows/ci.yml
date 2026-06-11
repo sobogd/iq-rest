@@ -31,7 +31,7 @@ jobs:
       - name: Generate shared Prisma client (dashboard-api schema)
         # The hoisted @prisma/client is owned by dashboard-api; public-menu-api and
         # landing's @prisma/client imports resolve to it. No DB connection needed.
-        run: pnpm --filter iq-rest-dashboard-api exec prisma generate
+        run: pnpm --filter @iq-rest/db generate
 
       - name: Typecheck all apps (Turborepo)
         run: pnpm turbo run typecheck

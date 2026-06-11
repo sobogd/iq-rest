@@ -15,7 +15,7 @@
 // Targets every restaurant the user is attached to via RestaurantUser. Skips
 // orders whose items are already correctly keyed so the script is re-runnable.
 
-import { PrismaClient, Prisma } from "@prisma/client";
+import { PrismaClient, Prisma } from "@iq-rest/db";
 
 const APPLY = process.argv.includes("--apply");
 const email = process.argv.find((a) => !a.startsWith("--") && a.includes("@"));

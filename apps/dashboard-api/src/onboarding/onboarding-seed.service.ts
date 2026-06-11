@@ -1,5 +1,5 @@
 import { Injectable, Logger } from "@nestjs/common";
-import { Prisma } from "@prisma/client";
+import { Prisma } from "@iq-rest/db";
 import { PrismaService } from "../prisma/prisma.service";
 import { isSupportedCurrency } from "../common/stripe";
 import { cuisineTemplates, SAMPLE_PREFIX, type LocaleString } from "./cuisine-templates";
