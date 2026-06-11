@@ -73,14 +73,18 @@ jobs:
           target: "/home/deploy/apps/iq-rest-dashboard-api"
           strip_components: 1
           overwrite: true
-      - name: Reload pm2 (zero-downtime in cluster)
+      - name: Write .env + reload pm2 (zero-downtime in cluster)
         uses: appleboy/ssh-action@v1.0.3
+        env:
+          APP_ENV: ${{ secrets.ENV_DASHBOARD_API }}
         with:
           host: ${{ secrets.SERVER_IP }}
           username: deployer
           key: ${{ secrets.SSH_KEY }}
+          envs: APP_ENV
           script: |
             cd /home/deploy/apps/iq-rest-dashboard-api
+            printf '%s' "$APP_ENV" > .env && chmod 600 .env
             pm2 reload dashboard-api --update-env || pm2 start dist/src/main.js --name dashboard-api --time
             pm2 save
 
@@ -108,14 +112,18 @@ jobs:
           target: "/home/deploy/apps/iq-rest-public-menu-api"
           strip_components: 1
           overwrite: true
-      - name: Reload pm2 (zero-downtime in cluster)
+      - name: Write .env + reload pm2 (zero-downtime in cluster)
         uses: appleboy/ssh-action@v1.0.3
+        env:
+          APP_ENV: ${{ secrets.ENV_PUBLIC_MENU_API }}
         with:
           host: ${{ secrets.SERVER_IP }}
           username: deployer
           key: ${{ secrets.SSH_KEY }}
+          envs: APP_ENV
           script: |
             cd /home/deploy/apps/iq-rest-public-menu-api
+            printf '%s' "$APP_ENV" > .env && chmod 600 .env
             pm2 reload public-menu-api --update-env || pm2 start dist/main.js --name public-menu-api --time
             pm2 save
 
@@ -230,13 +238,17 @@ jobs:
           target: "/home/deploy/apps/iq-rest"
           strip_components: 1
           overwrite: true
-      - name: Reload pm2 (zero-downtime in cluster)
+      - name: Write .env + reload pm2 (graceful)
         uses: appleboy/ssh-action@v1.0.3
+        env:
+          APP_ENV: ${{ secrets.ENV_LANDING }}
         with:
           host: ${{ secrets.SERVER_IP }}
           username: deployer
           key: ${{ secrets.SSH_KEY }}
+          envs: APP_ENV
           script: |
             cd /home/deploy/apps/iq-rest
+            printf '%s' "$APP_ENV" > .env && chmod 600 .env
             pm2 reload iq-rest --update-env || pm2 start npm --name iq-rest -- start
             pm2 save
