@@ -1,0 +1,1788 @@
+{
+  "fromSpain": 229,
+  "fromItaly": 264,
+  "combinedUnique": 388,
+  "proposed": 356,
+  "items": [
+    {
+      "text": "industrial",
+      "match": 4,
+      "via": "fallback"
+    },
+    {
+      "text": "tv",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "barcode",
+      "match": 4,
+      "via": "fallback"
+    },
+    {
+      "text": "design",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "generator",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "suite",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "mexico",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "peru",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "print",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "ia",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "pda",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "argentina",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "tropical",
+      "match": 4,
+      "via": "fallback"
+    },
+    {
+      "text": "ecuador",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "chile",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "colombia",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "antonio",
+      "match": 4,
+      "via": "fallback"
+    },
+    {
+      "text": "modelo",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "modelos",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "template",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "gestão",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "suporte",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "free",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "excel",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "caixa registadora",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "domicílio",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "encomendas",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "portal",
+      "match": 2,
+      "via": "fallback"
+    },
+    {
+      "text": "scanner",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "subway",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "autocolantes",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "adesivo",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "exemplos",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "autocolante",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "haddock",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "pessoal",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "designers",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "asia",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "word",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "tpv",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "acrílico",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "grátis",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "madeira",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "domino",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "just eat",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "plastificado",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "pdf",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "viena",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "exemplo",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "cozinhar",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "cartão",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "impressão",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "sabor",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "imprimir",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "starbucks",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "farinhas",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "kostenlose",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "contrato",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "burger king",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "fudo",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "emprego",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "menumaker",
+      "match": 2,
+      "via": "keep"
+    },
+    {
+      "text": "luminoso",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "formato",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "receita",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "receitas",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "elefantes",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "canva",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "mcdonalds",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "pho",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "impressora de talões",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "vips",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "tegel",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "kostenloses",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "mcdonald",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "pizza hut",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "tríptico",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "gratuito",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "empregados",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "menu board",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "papa john",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "dunkin",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "gratuita",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "como fazer",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "kostenlosen",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "kfc",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "kyffhäuser",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "gratuitamente",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "asiatisch",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "rodilla",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "gratuitement",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "telepizza",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "pliezhausen",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "ginos",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "latam",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "owner com",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "zoho",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "hans im glück",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "100 montaditos",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "menu restaurante",
+      "match": 2,
+      "via": "keep"
+    },
+    {
+      "text": "mcdo",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "scanner qr",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "grossharthau",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "monte corona",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "whatsapp",
+      "match": 4,
+      "via": "fallback"
+    },
+    {
+      "text": "scanner qr code",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "vapiano",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "l'osteria",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "deliveroo",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "uber eats",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "perto de mim",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "assalariado",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "flachslanden",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "glovo",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "sukol",
+      "match": 4,
+      "via": "fallback"
+    },
+    {
+      "text": "jalama",
+      "match": 4,
+      "via": "fallback"
+    },
+    {
+      "text": "ementa online",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "criativas",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "maxmenu",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "para tv",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "block house",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "flipdish",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "comandero",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "foster's hollywood",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "scanneur",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "gasthof rose",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "agora restaurant",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "ementa de restaurante",
+      "match": 2,
+      "via": "translate"
+    },
+    {
+      "text": "ementa de bar",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "l osteria",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "ementas personalizadas",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "großharthau",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "design de ementa",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "como ver",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "menu degustação",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "menew",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "ler código qr",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "agorapos",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "storyous",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "ementa de um restaurante",
+      "match": 2,
+      "via": "translate"
+    },
+    {
+      "text": "tierra astur",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "ler qr",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "qr code lesen",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "kyffhauser",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "tabaibales",
+      "match": 2,
+      "via": "keep"
+    },
+    {
+      "text": "motopress",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "comanderos",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "ementas originais",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "ementa de um bar",
+      "match": 2,
+      "via": "translate"
+    },
+    {
+      "text": "smart restaurant",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "ver ementa",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "covermanager",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "numier",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "gourmeats",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "com preços",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "osteria ingolstadt",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "menutech",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "qr lesen",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "holaclick",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "ordr menu",
+      "match": 2,
+      "via": "keep"
+    },
+    {
+      "text": "cozinhar para",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "scanner código qr",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "menu crianças",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "ementas pequeno-almoço",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "ementas criativas",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "l epoque",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "arlinger",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "menu infantil",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "mr restaurant",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "el homenaje",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "modelos de ementas de restaurante",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "smartmenu",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "foodyt",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "haxenhaus",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "waitry",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "movilmenu",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "octotable",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "menuqr",
+      "match": 2,
+      "via": "keep"
+    },
+    {
+      "text": "olaclick",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "que ementa",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "infoqr",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "queresto",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "cheerfy",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "ler um qr",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "ver o menu",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "haddock app",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "avocaty",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "tappens",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "ler menu",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "smartmenu agorapos",
+      "match": 2,
+      "via": "fallback"
+    },
+    {
+      "text": "arlinger restaurant",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "restaurantic",
+      "match": 2,
+      "via": "fallback"
+    },
+    {
+      "text": "qamarero",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "nord qr",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "qamarero app",
+      "match": 2,
+      "via": "fallback"
+    },
+    {
+      "text": "nordqr",
+      "match": 4,
+      "via": "fallback"
+    },
+    {
+      "text": "ver menu",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "mister restaurant",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "menuveo",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "que carta com",
+      "match": 2,
+      "via": "fallback"
+    },
+    {
+      "text": "agora smart menu",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "ler o menu",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "scanmi",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "viena carta online",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "gratuitemente",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "epoque pliezhausen",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "consultar menu",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "menuya",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "revosolo",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "vê a minha ementa",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "tutorial",
+      "match": 4,
+      "via": "fallback"
+    },
+    {
+      "text": "stand",
+      "match": 4,
+      "via": "fallback"
+    },
+    {
+      "text": "cv",
+      "match": 4,
+      "via": "fallback"
+    },
+    {
+      "text": "pos",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "plexiglass",
+      "match": 4,
+      "via": "fallback"
+    },
+    {
+      "text": "peixe",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "onde",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "trabalho",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "carreira",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "encomendar",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "currículo",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "contratação",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "ideias",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "pdas",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "sushi",
+      "match": 4,
+      "via": "fallback"
+    },
+    {
+      "text": "para download",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "scan",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "via",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "comer",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "telefone",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "ofertas emprego",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "horário",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "pizza",
+      "match": 2,
+      "via": "fallback"
+    },
+    {
+      "text": "cocktail",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "carne",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "menu",
+      "match": 2,
+      "via": "fallback"
+    },
+    {
+      "text": "cavalete",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "app",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "download",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "zucchetti",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "terminal",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "escrever",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "bebidas",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "nfc",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "pizzeria",
+      "match": 2,
+      "via": "fallback"
+    },
+    {
+      "text": "faça você mesmo",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "expositor",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "caixa",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "trattoria",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "hoje",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "pequeno-almoço",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "osteria",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "endereço",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "play store",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "indicações",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "tripadvisor",
+      "match": 4,
+      "via": "fallback"
+    },
+    {
+      "text": "ofertas",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "Viva",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "baixar",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "gratuitos",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "android",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "baixa",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "como funciona",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "iphone",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "wordpress",
+      "match": 4,
+      "via": "fallback"
+    },
+    {
+      "text": "login",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "0 euro",
+      "match": 4,
+      "via": "fallback"
+    },
+    {
+      "text": "preço",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "preços",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "jantar",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "reservar",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "apk",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "reserva",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "entrega",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "acesso",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "plastificato",
+      "match": 4,
+      "via": "fallback"
+    },
+    {
+      "text": "almoçar",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "smart menu",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "contratações",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "ver",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "salário",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "zmenu",
+      "match": 4,
+      "via": "fallback"
+    },
+    {
+      "text": "app store",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "meu menu",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "porta menu",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "menu subito",
+      "match": 2,
+      "via": "fallback"
+    },
+    {
+      "text": "placa",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "gerador",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "Poke",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "sistemas de caixa",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "take away",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "menu bar",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "melhores restaurantes",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "the fork",
+      "match": 4,
+      "via": "fallback"
+    },
+    {
+      "text": "thefork",
+      "match": 4,
+      "via": "fallback"
+    },
+    {
+      "text": "quandoo",
+      "match": 4,
+      "via": "fallback"
+    },
+    {
+      "text": "o que comer",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "expositor de mesa",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "restaurantes perto",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "Grom",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "Poke House",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "Roadhouse",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "impressora comandas",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "Shinto",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "menu do dia",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "Old Wild West",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "imprimível",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "Spontini",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "consultar",
+      "match": 3,
+      "via": "translate"
+    },
+    {
+      "text": "Rossopomodoro",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "para preencher",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "criar do zero",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "Fratelli La Bufala",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "sem custos",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "restaurante económico",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "reservar mesa",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "fa menu",
+      "match": 2,
+      "via": "fallback"
+    },
+    {
+      "text": "jmenu",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "menuu",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "La Piadineria",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "dishcovery",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "menusifu",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "Alice Pizza",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "xmenu",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "preço jantar",
+      "match": 4,
+      "via": "translate"
+    },
+    {
+      "text": "menusubito",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "qrcarta",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "menu io",
+      "match": 2,
+      "via": "fallback"
+    },
+    {
+      "text": "Pizzium",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "mydigimenu",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "viewmenu",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "famenu",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "leggimenu it",
+      "match": 2,
+      "via": "fallback"
+    },
+    {
+      "text": "il mio menù",
+      "match": 2,
+      "via": "fallback"
+    },
+    {
+      "text": "leggimenù",
+      "match": 2,
+      "via": "fallback"
+    },
+    {
+      "text": "quickqr",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "leggimenu",
+      "match": 4,
+      "via": "keep"
+    },
+    {
+      "text": "leggimenù it",
+      "match": 2,
+      "via": "fallback"
+    },
+    {
+      "text": "digitavolo",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "qrmenu restaurant risto asp i 71&p msrrw98ryi",
+      "match": 2,
+      "via": "fallback"
+    },
+    {
+      "text": "my contactless menu",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "qromo",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "qodeup",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "menu digitale io",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "menumagic",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "menubly",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "leggimenuit",
+      "match": 2,
+      "via": "fallback"
+    },
+    {
+      "text": "menudigitale io",
+      "match": 2,
+      "via": "fallback"
+    },
+    {
+      "text": "https www menudigitale io dryqu",
+      "match": 2,
+      "via": "fallback"
+    },
+    {
+      "text": "menu pienissimo",
+      "match": 3,
+      "via": "fallback"
+    },
+    {
+      "text": "menudigitale login",
+      "match": 2,
+      "via": "fallback"
+    },
+    {
+      "text": "wymenu",
+      "match": 4,
+      "via": "fallback"
+    },
+    {
+      "text": "portablemenu",
+      "match": 3,
+      "via": "keep"
+    },
+    {
+      "text": "ler qr code menu",
+      "match": 2,
+      "via": "translate"
+    },
+    {
+      "text": "como digitalizar qr menu",
+      "match": 2,
+      "via": "translate"
+    },
+    {
+      "text": "visualizar menu",
+      "match": 2,
+      "via": "translate"
+    }
+  ]
+}

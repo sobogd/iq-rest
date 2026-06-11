@@ -1,0 +1,288 @@
+"use client";
+
+import { useState, useEffect, useRef } from "react";
+import { X, Loader2 } from "lucide-react";
+import { analytics } from "@/lib/analytics";
+
+// Logical viewport width the demo is rendered at inside the iframe. The
+// iframe keeps this fixed width and is scaled down to fit the device frame,
+// so the embedded app always sees a stable viewport regardless of the
+// frame's on-screen size (no reflow as the modal resizes).
+//   - phone  → public menu (love-eatery), narrow mobile viewport.
+//   - tablet → kitchen-display kiosk demo, wide landscape viewport.
+const IFRAME_WIDTH_PHONE = 350;
+const IFRAME_WIDTH_TABLET = 1024;
+// On a phone the tablet frame is only ~340px wide, so a 1024px logical
+// viewport scales down to ~0.33 and the kiosk text is tiny. Render the KDS
+// at a narrower logical width on phones instead — the iframe scales up
+// (~0.5), the kiosk reflows to fewer columns, and everything reads ~50%
+// larger. Changing the iframe's own scale, not the app's font-size.
+const IFRAME_WIDTH_TABLET_PHONE = 680;
+
+// `phone` → public menu, narrow portrait frame. Everything else renders the
+// dashboard bundle in a board-specific demo inside the landscape tablet frame:
+//   tablet       → kitchen-display kiosk (legacy name, kept for existing call sites)
+//   orders       → waiter orders board
+//   reservations → reservations board
+export type DemoVariant = "phone" | "tablet" | "orders" | "reservations";
+
+interface DemoButtonProps {
+  text: string;
+  locale: string;
+  /** Base name like `l_hero_demo` — `_open` and `_close` are appended automatically. */
+  trackEvent?: string;
+  className?: string;
+  /** When set, renders a primary "create menu" CTA under the device preview
+   *  inside the demo modal — turns the demo from a dead-end into a conversion
+   *  point. Opens the onboarding modal (guest) / dashboard (signed-in). */
+  createText?: string;
+  /** `phone` (default) embeds the public menu of the demo restaurant.
+   *  `tablet` / `orders` / `reservations` embed the live dashboard board in
+   *  demo mode (landscape tablet frame) — used on the matching feature page
+   *  so the preview matches the feature. */
+  variant?: DemoVariant;
+}
+
+const DEMO_SLUG = "love-eatery";
+
+// Always forward the landing's locale. The public-menu SPA matches it
+// against the demo restaurant's enabled languages and falls back to the
+// restaurant's default language if it's not configured.
+function menuUrlFor(locale: string): string {
+  const params = new URLSearchParams({ preview: "1" });
+  if (locale) params.set("lang", locale);
+  return `https://${DEMO_SLUG}.iq-rest.com?${params.toString()}`;
+}
+
+// Dashboard board in public demo mode. `?demo=<board>` makes the dashboard
+// bundle render the real board with hardcoded sample data — no pairing, no
+// API. `kitchen` uses the legacy `demo=1` value the bundle still accepts.
+// Served from the kiosk host (k.*), where the bundle skips PWA/SW registration
+// in demo mode.
+type DemoBoard = "kitchen" | "orders" | "reservations";
+function demoUrlFor(board: DemoBoard, locale: string): string {
+  const params = new URLSearchParams({ demo: board === "kitchen" ? "1" : board });
+  if (locale) params.set("lang", locale);
+  return `https://k.iq-rest.com/?${params.toString()}`;
+}
+
+export function DemoButton({
+  text,
+  locale,
+  trackEvent = "l_demo",
+  className = "",
+  variant = "phone",
+}: DemoButtonProps) {
+  const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
+  // Phone viewport → render the tablet KDS demo at a narrower logical width
+  // so the iframe scales up and the kiosk reads larger. Resolved client-side
+  // on mount. Phone menu preview keeps its fixed width.
+  const [isPhone, setIsPhone] = useState(false);
+  // The orders/reservations boards are responsive (kioskLayout stacks on
+  // narrow widths), so on a phone we show them in the portrait phone frame —
+  // same as the digital-menu demo. On desktop they keep the tablet frame.
+  // The kitchen (`tablet`) demo always uses the tablet frame.
+  const boardReflowsToPhone = variant === "orders" || variant === "reservations";
+  const useTabletFrame = variant !== "phone" && !(isPhone && boardReflowsToPhone);
+  const IFRAME_WIDTH = useTabletFrame
+    ? isPhone
+      ? IFRAME_WIDTH_TABLET_PHONE
+      : IFRAME_WIDTH_TABLET
+    : IFRAME_WIDTH_PHONE;
+
+  useEffect(() => {
+    if (typeof window === "undefined" || !window.matchMedia) return;
+    const mq = window.matchMedia("(max-width: 640px)");
+    const sync = () => setIsPhone(mq.matches);
+    sync();
+    mq.addEventListener("change", sync);
+    return () => mq.removeEventListener("change", sync);
+  }, []);
+
+  // Fit the fixed-width iframe to the phone screen: scale = screenW / IFRAME_WIDTH,
+  // and give the iframe a matching logical height so it fills the frame exactly.
+  const screenRef = useRef<HTMLDivElement>(null);
+  const [fit, setFit] = useState({ scale: 1, height: 844 });
+
+  useEffect(() => {
+    if (!open) return;
+    const el = screenRef.current;
+    if (!el) return;
+    const measure = () => {
+      const { width, height } = el.getBoundingClientRect();
+      if (width === 0) return;
+      const scale = width / IFRAME_WIDTH;
+      setFit({ scale, height: height / scale });
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [open, IFRAME_WIDTH]);
+
+  useEffect(() => {
+    if (open) {
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.overflow = "hidden";
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+    } else {
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
+    };
+  }, [open]);
+
+  const handleOpen = () => {
+    setOpen(true);
+    setLoading(true);
+    analytics.track(`${trackEvent}_open`);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+    analytics.track(`${trackEvent}_close`);
+  };
+
+  const iframeSrc =
+    variant === "phone"
+      ? menuUrlFor(locale)
+      : variant === "orders"
+        ? demoUrlFor("orders", locale)
+        : variant === "reservations"
+          ? demoUrlFor("reservations", locale)
+          : demoUrlFor("kitchen", locale);
+  const iframeTitle =
+    variant === "orders"
+      ? "Orders Board Preview"
+      : variant === "reservations"
+        ? "Reservations Board Preview"
+        : variant === "tablet"
+          ? "Kitchen Display Preview"
+          : "Menu Preview";
+
+  return (
+    <>
+      <button
+        type="button"
+        onClick={handleOpen}
+        className={`inline-flex items-center justify-center min-h-11 py-2 px-6 text-sm font-medium text-foreground bg-transparent border border-border rounded-lg hover:bg-muted active:scale-[0.99] transition-all text-center leading-tight ${className}`}
+      >
+        {text}
+      </button>
+
+      {open && (
+        <div
+          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
+          data-noindex="true"
+          onClick={handleClose}
+        >
+          <div
+            className="relative flex flex-col items-center gap-5"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {useTabletFrame ? (
+              // Landscape tablet frame (≈4:3) for the kitchen-display kiosk.
+              <div
+                className="relative"
+                style={{
+                  width: "min(92dvw, calc((85dvh - 80px) * 4 / 3), 1000px)",
+                  height: "min(calc(85dvh - 80px), calc(min(92dvw, 1000px) * 3 / 4))",
+                }}
+              >
+                <button
+                  type="button"
+                  onClick={handleClose}
+                  aria-label="Close"
+                  className="fixed top-4 right-4 text-white hover:text-gray-300 transition-colors z-[60]"
+                >
+                  <X className="w-8 h-8" />
+                </button>
+
+                <div className="absolute inset-0 bg-[#1a1a1a] rounded-[20px] p-2.5 shadow-2xl">
+                  <div ref={screenRef} className="relative w-full h-full bg-[#1a1a1a] rounded-[16px] overflow-hidden">
+                    {/* Front camera dot, centered on the long (top) edge. */}
+                    <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-[6px] h-[6px] bg-black rounded-full z-10" />
+                    {loading && (
+                      <div className="absolute inset-0 flex items-center justify-center bg-black z-[5]">
+                        <Loader2 className="w-8 h-8 animate-spin text-white/50" />
+                      </div>
+                    )}
+                    <iframe
+                      src={iframeSrc}
+                      className="absolute top-0 left-0 border-0 origin-top-left"
+                      style={{
+                        width: `${IFRAME_WIDTH}px`,
+                        height: `${fit.height}px`,
+                        transform: `scale(${fit.scale})`,
+                      }}
+                      title={iframeTitle}
+                      onLoad={() => setLoading(false)}
+                    />
+                  </div>
+                </div>
+
+                <div
+                  className="absolute inset-0 rounded-[20px] pointer-events-none z-20"
+                  style={{ boxShadow: "inset 0 0 0 8px #1a1a1a" }}
+                />
+              </div>
+            ) : (
+              <div
+                className="relative"
+                style={{
+                  width: "clamp(0px, min(calc((85dvh - 80px) * 8 / 16), 80dvw), 320px)",
+                  height: "min(calc(85dvh - 80px), calc(min(80dvw, 320px) * 16 / 8))",
+                }}
+              >
+                <button
+                  type="button"
+                  onClick={handleClose}
+                  aria-label="Close"
+                  className="fixed top-4 right-4 text-white hover:text-gray-300 transition-colors z-[60]"
+                >
+                  <X className="w-8 h-8" />
+                </button>
+
+                <div className="absolute inset-0 bg-[#1a1a1a] rounded-[20px] p-2 shadow-2xl">
+                  <div ref={screenRef} className="relative w-full h-full bg-[#1a1a1a] overflow-hidden">
+                    {loading && (
+                      <div className="absolute inset-0 flex items-center justify-center bg-black z-[5]">
+                        <Loader2 className="w-8 h-8 animate-spin text-white/50" />
+                      </div>
+                    )}
+                    <iframe
+                      src={iframeSrc}
+                      className="absolute top-0 left-0 border-0 origin-top-left"
+                      style={{
+                        width: `${IFRAME_WIDTH}px`,
+                        height: `${fit.height}px`,
+                        transform: `scale(${fit.scale})`,
+                      }}
+                      title={iframeTitle}
+                      onLoad={() => setLoading(false)}
+                    />
+                  </div>
+                </div>
+
+                <div
+                  className="absolute inset-0 rounded-[20px] pointer-events-none z-20"
+                  style={{ boxShadow: "inset 0 0 0 10px #1a1a1a" }}
+                />
+
+                <div className="absolute left-[-2px] top-[18%] w-[2px] h-[5%] bg-[#2a2a2a] rounded-l-sm" />
+                <div className="absolute left-[-2px] top-[25%] w-[2px] h-[8%] bg-[#2a2a2a] rounded-l-sm" />
+                <div className="absolute left-[-2px] top-[35%] w-[2px] h-[8%] bg-[#2a2a2a] rounded-l-sm" />
+                <div className="absolute right-[-2px] top-[28%] w-[2px] h-[12%] bg-[#2a2a2a] rounded-r-sm" />
+              </div>
+            )}
+
+          </div>
+        </div>
+      )}
+    </>
+  );
+}

@@ -1,0 +1,42 @@
+// Language label registry shared between the landing footer (modal switcher) and any other
+// place that needs to render a locale code as its native name.
+
+export const LANGUAGE_NAMES: Record<string, string> = {
+  en: "English",
+  es: "Español",
+  de: "Deutsch",
+  fr: "Français",
+  it: "Italiano",
+  pt: "Português",
+  nl: "Nederlands",
+  pl: "Polski",
+  ru: "Русский",
+  uk: "Українська",
+  sv: "Svenska",
+  da: "Dansk",
+  no: "Norsk",
+  fi: "Suomi",
+  cs: "Čeština",
+  el: "Ελληνικά",
+  tr: "Türkçe",
+  ro: "Română",
+  hu: "Magyar",
+  bg: "Български",
+  hr: "Hrvatski",
+  sk: "Slovenčina",
+  sl: "Slovenščina",
+  et: "Eesti",
+  lv: "Latviešu",
+  lt: "Lietuvių",
+  sr: "Српски",
+  ca: "Català",
+  ga: "Gaeilge",
+  is: "Íslenska",
+  fa: "فارسی",
+  ar: "العربية",
+  ja: "日本語",
+  ko: "한국어",
+  zh: "中文",
+};
+
+export const LANGUAGE_CODES: string[] = Object.keys(LANGUAGE_NAMES).sort();

@@ -1,0 +1,1592 @@
+"use client";
+
+// Standalone form components for category / dish / option editing.
+// Each one lives in its own Next.js route and uses router.push for navigation.
+
+import { useEffect, useMemo, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
+import {
+ ArrowDownIcon,
+ ArrowUpIcon,
+ ChevronRightIcon,
+ CopyIcon,
+ PlusIcon,
+ TrashIcon,
+} from "./icons";
+import {
+ AiImageModal,
+ ConfirmDialog,
+ EditPageHeader,
+ Modal,
+ PhotoPicker,
+ Select,
+ ToggleSwitch,
+ TranslatedInput,
+ UnsavedChangesDialog,
+} from "./ui";
+import { iconBtn, inputClass } from "./tokens";
+import {
+ ALLERGENS,
+ AVAILABLE_LANGUAGES,
+ emptyMl,
+ getMl,
+ getMlWithFallback,
+ setMl,
+ translateText,
+} from "./i18n";
+import { AllergenIcon } from "./allergen-icon";
+import { DietIcon } from "./diet-icon";
+import { DIETS } from "@/lib/diets";
+import { moveItem, newId, currencySymbolOf, parseDecimal, sanitizePriceInput } from "./helpers";
+import { buildCategoryTranslations, buildItemTranslations } from "./mappers";
+import {
+ createCategory,
+ createItem,
+ deleteCategory,
+ deleteItem,
+ updateCategory,
+ updateItem,
+} from "./api";
+import { useRestaurant } from "./restaurant-context";
+import type { Category, Dish, DishOption, Ml, OptionVariant } from "./types";
+import { track } from "@/lib/dashboard-events";
+import { showApiError } from "@/lib/show-api-error";
+
+// ── Category form ──
+
+export function CategoryForm({
+ category,
+ onSavedRedirect,
+ onBack,
+ onDeletedRedirect,
+ isGroup,
+ parentGroupId,
+ availableGroups = [],
+}: {
+ category: Category | null;
+ onSavedRedirect: () => void;
+ onBack: () => void;
+ onDeletedRedirect: () => void;
+ isGroup?: boolean;
+ parentGroupId?: string | null;
+ availableGroups?: Category[];
+}) {
+ const t = useTranslations("dashboard.categoryForm");
+ const tc = useTranslations("dashboard.common");
+ const restaurant = useRestaurant();
+ const { defaultLang, languages } = restaurant;
+ const isNew = category === null;
+ // For an existing category — derive group-ness from the row. For new — from props.
+ const editingGroup = category?.isGroup ?? !!isGroup;
+ const initialParentId = category?.parentId ?? parentGroupId ?? null;
+
+ const [lang, setLang] = useState<string>(defaultLang);
+ const initialForm = useMemo<{ name: Ml; parentId: string | null }>(
+ () => ({
+ name: category ? category.name : emptyMl(languages),
+ parentId: initialParentId,
+ }),
+ // We only need to compute initial once — category / languages / parentId are
+ // stable for the lifetime of a CategoryForm mount.
+ // eslint-disable-next-line react-hooks/exhaustive-deps
+ [],
+ );
+ const [form, setForm] = useState<{ name: Ml; parentId: string | null }>(initialForm);
+ const [saving, setSaving] = useState(false);
+ const [deleting, setDeleting] = useState(false);
+ const [confirmOpen, setConfirmOpen] = useState(false);
+ const [unsavedOpen, setUnsavedOpen] = useState(false);
+ const [saveErrorOpen, setSaveErrorOpen] = useState(false);
+ const isDirty =
+ JSON.stringify(form.name) !== JSON.stringify(initialForm.name) ||
+ form.parentId !== initialForm.parentId;
+ const langMetas = useMemo(() => {
+ const enabled = AVAILABLE_LANGUAGES.filter((l) => languages.includes(l.code));
+ const def = enabled.find((l) => l.code === defaultLang);
+ if (!def) return enabled;
+ return [def, ...enabled.filter((l) => l.code !== defaultLang)];
+ }, [languages, defaultLang]);
+
+ useEffect(() => {
+ window.scrollTo({ top: 0, behavior: "auto" });
+ }, []);
+
+ const namePrimary = (form.name[defaultLang] || "").trim();
+ const [alert, setAlert] = useState<{ title: string; message: string } | null>(null);
+
+ async function save() {
+ track("dash_category_click_save");
+ if (saving) return;
+ if (namePrimary.length === 0) {
+ setAlert({
+ title: t("nameRequiredTitle"),
+ message: t("nameRequiredMessage"),
+ });
+ return;
+ }
+ const trimmed: Ml = {};
+ languages.forEach((l) => {
+ trimmed[l] = (form.name[l] || "").trim();
+ });
+ const translations = buildCategoryTranslations(trimmed, defaultLang);
+ setSaving(true);
+ try {
+ if (isNew) {
+ await createCategory({
+ name: trimmed[defaultLang],
+ translations,
+ isGroup: editingGroup,
+ parentId: editingGroup ? null : form.parentId,
+ });
+ } else if (category) {
+ await updateCategory(category.id, {
+ name: trimmed[defaultLang],
+ translations,
+ ...(editingGroup ? {} : { parentId: form.parentId }),
+ });
+ }
+ onSavedRedirect();
+ } catch (err) {
+ track("dash_category_save_error", { error: String(err) });
+ setSaveErrorOpen(true);
+ setSaving(false);
+ }
+ }
+
+ async function confirmDelete() {
+ track("dash_category_click_delete");
+ if (!category) return;
+ setDeleting(true);
+ try {
+ await deleteCategory(category.id);
+ onDeletedRedirect();
+ } catch (err) {
+ showApiError(err, "dash_category_delete");
+ setDeleting(false);
+ setConfirmOpen(false);
+ }
+ }
+
+ const titleText = isNew
+ ? (editingGroup ? t("newGroupTitle", { defaultValue: t("newTitle") }) : t("newTitle"))
+ : (getMlWithFallback(form.name, lang, defaultLang) || tc("untitled"));
+
+ return (
+ <div>
+ <EditPageHeader
+ onBack={() => {
+ track("dash_category_click_back");
+ if (isDirty && !saving) { setUnsavedOpen(true); return; }
+ onBack();
+ }}
+ title={titleText}
+ breadcrumb={t("breadcrumb")}
+ lang={lang}
+ onLangChange={setLang}
+ languages={langMetas}
+ onSave={save}
+ canSave={!saving}
+ saving={saving}
+ onLangsOpen={() => track("dash_category_click_langs")}
+ onLangSelect={() => track("dash_category_click_lang")}
+ />
+
+ <div className="max-w-5xl mx-auto md:px-6">
+ <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
+ <TranslatedInput
+ id="cat-name"
+ label={t("nameLabel")}
+ value={form.name}
+ lang={lang}
+ defaultLang={defaultLang}
+ languages={languages}
+ onChange={(v) => setForm((f) => ({ ...f, name: v }))}
+ placeholder={t("namePlaceholder")}
+ onFocus={() => track("dash_category_focus_name_input")}
+ />
+
+ {!editingGroup && availableGroups.length > 0 ? (
+ <div className="mt-4">
+ <label htmlFor="cat-parent" className="block text-sm font-medium text-foreground mb-2.5">
+ {t("parentGroupLabel", { defaultValue: "Group" })}
+ </label>
+ <Select<string | null>
+ id="cat-parent"
+ value={form.parentId}
+ onChange={(next) => setForm((f) => ({ ...f, parentId: next }))}
+ placeholder={t("noGroup", { defaultValue: "No group" })}
+ options={[
+ { value: null, label: t("noGroup", { defaultValue: "No group" }) },
+ ...availableGroups.map((g) => ({
+ value: g.id as string | null,
+ label: getMlWithFallback(g.name, defaultLang, defaultLang) || tc("untitled"),
+ })),
+ ]}
+ />
+ </div>
+ ) : null}
+ </div>
+ </div>
+
+ {!isNew ? (
+ <div className="max-w-5xl mx-auto md:px-6 mt-6 flex justify-center">
+ <button
+ type="button"
+ onClick={() => setConfirmOpen(true)}
+ className="inline-flex items-center gap-1.5 h-9 px-3 text-xs font-medium text-red-600 rounded-lg transition-colors"
+ >
+ <TrashIcon size={13} />
+ {editingGroup ? t("deleteButtonGroup") : t("deleteButton")}
+ </button>
+ </div>
+ ) : null}
+
+ <ConfirmDialog
+ open={confirmOpen}
+ title={editingGroup ? t("deleteTitleGroup") : t("deleteTitle")}
+ message={
+ deleting
+ ? tc("deleting")
+ : editingGroup
+ ? t("deleteMessageGroup")
+ : t("deleteMessage")
+ }
+ onConfirm={confirmDelete}
+ onCancel={() => (deleting ? null : setConfirmOpen(false))}
+ />
+
+ <ConfirmDialog
+ open={alert !== null}
+ singleButton
+ title={alert?.title}
+ message={alert?.message}
+ onCancel={() => setAlert(null)}
+ />
+
+ <UnsavedChangesDialog
+ open={unsavedOpen}
+ saving={saving}
+ onDiscard={() => { setUnsavedOpen(false); onBack(); }}
+ onSave={() => { setUnsavedOpen(false); void save(); }}
+ onClose={() => setUnsavedOpen(false)}
+ />
+
+ <ConfirmDialog
+ open={saveErrorOpen}
+ singleButton
+ title={tc("saveErrorTitle")}
+ message={tc("saveErrorMessage")}
+ confirmLabel={tc("close")}
+ onCancel={() => setSaveErrorOpen(false)}
+ />
+
+ {saving ? (
+ <div className="fixed inset-0 z-50 bg-background/70 backdrop-blur-sm flex items-center justify-center px-6">
+ <div className="flex flex-col items-center gap-3 text-center">
+ <div className="w-10 h-10 border-[3px] border-input border-t-foreground rounded-full animate-spin" />
+ <div className="text-xs text-muted-foreground">
+ {editingGroup
+ ? (languages.length > 1 ? t("savingAndTranslatingGroupOverlay") : t("savingGroupOverlay"))
+ : (languages.length > 1 ? t("savingAndTranslatingOverlay") : t("savingOverlay"))}
+ </div>
+ </div>
+ </div>
+ ) : null}
+ </div>
+ );
+}
+
+// ── Dish form ──
+
+interface DishFormState {
+ name: Ml;
+ description: Ml;
+ price: string;
+ photoUrl: string | null;
+ visible: boolean;
+ allergens: string[];
+ diets: string[];
+ options: DishOption[];
+}
+
+function mlEqual(a: Ml, b: Ml): boolean {
+ const keys = new Set([...Object.keys(a), ...Object.keys(b)]);
+ for (const k of keys) {
+ if ((a[k] || "") !== (b[k] || "")) return false;
+ }
+ return true;
+}
+
+function arrEqual(a: string[], b: string[]): boolean {
+ if (a.length !== b.length) return false;
+ for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) return false;
+ return true;
+}
+
+function isDishFormDirty(a: DishFormState, b: DishFormState): boolean {
+ if (a.price !== b.price) return true;
+ if (a.photoUrl !== b.photoUrl) return true;
+ if (a.visible !== b.visible) return true;
+ if (!arrEqual(a.allergens, b.allergens)) return true;
+ if (!arrEqual(a.diets, b.diets)) return true;
+ if (!mlEqual(a.name, b.name)) return true;
+ if (!mlEqual(a.description, b.description)) return true;
+ if (!optionsEqual(a.options, b.options)) return true;
+ return false;
+}
+
+function optionsEqual(a: DishOption[], b: DishOption[]): boolean {
+ if (a.length !== b.length) return false;
+ for (let i = 0; i < a.length; i++) {
+ const x = a[i];
+ const y = b[i];
+ if (x.id !== y.id) return false;
+ if (x.type !== y.type) return false;
+ if (!!x.required !== !!y.required) return false;
+ if (!mlEqual(x.name || {}, y.name || {})) return false;
+ const xv = x.variants || [];
+ const yv = y.variants || [];
+ if (xv.length !== yv.length) return false;
+ for (let j = 0; j < xv.length; j++) {
+ if (xv[j].id !== yv[j].id) return false;
+ if (String(xv[j].priceDelta) !== String(yv[j].priceDelta)) return false;
+ if (!mlEqual(xv[j].name || {}, yv[j].name || {})) return false;
+ }
+ }
+ return true;
+}
+
+// Pick whichever language has content for the AI prompt. Default-lang first,
+// then any other non-empty value. Without the fallback a user who typed the
+// dish name only in their non-default language would send an empty prompt
+// to the image generator.
+function pickAnyMlValue(ml: Ml, preferred: string): string {
+ const first = (ml[preferred] || "").trim();
+ if (first) return first;
+ for (const v of Object.values(ml)) {
+ const trimmed = (v || "").trim();
+ if (trimmed) return trimmed;
+ }
+ return "";
+}
+
+export function DishForm({
+ dish,
+ categoryId,
+ categoryName,
+ onSavedRedirect,
+ onBack,
+ onDeletedRedirect,
+ optionRoutePrefix,
+ onOpenOption,
+ onPersisted,
+ onOptionsRefresh,
+}: {
+ dish: Dish | null;
+ // null only for an orphaned dish opened from the synthetic "No category"
+ // bucket. New dishes always carry a real category from the item.new route.
+ categoryId: string | null;
+ categoryName: string;
+ onSavedRedirect: (newId: string) => void;
+ onBack: () => void;
+ onDeletedRedirect: () => void;
+ optionRoutePrefix?: (dishId: string) => string;
+ onOpenOption?: (dishId: string, optionId: string | null) => void;
+ onPersisted?: (id: string) => void | Promise<void>;
+ onOptionsRefresh?: () => void | Promise<void>;
+}) {
+ const t = useTranslations("dashboard.dishForm");
+ const tc = useTranslations("dashboard.common");
+ const tAllergens = useTranslations("dashboard.allergens");
+ const tDiets = useTranslations("dashboard.diets");
+ const router = useRouter();
+ const restaurant = useRestaurant();
+ const { defaultLang, languages, currency } = restaurant;
+ const currencySymbol = currencySymbolOf(currency);
+ const isNew = dish === null;
+
+ const [lang, setLang] = useState<string>(defaultLang);
+ const initialForm = useMemo<DishFormState>(() => ({
+ name: dish ? dish.name : emptyMl(languages),
+ description: dish && dish.description ? dish.description : emptyMl(languages),
+ price: dish ? dish.price : "",
+ photoUrl: dish?.photoUrl ?? null,
+ visible: dish ? dish.visible : true,
+ allergens: dish?.allergens ?? [],
+ diets: dish?.diets ?? [],
+ options: dish?.options ?? [],
+ }), [dish, languages]);
+ const [form, setForm] = useState<DishFormState>(initialForm);
+ // Resync the form when the parent swaps to a different dish (e.g. after a
+ // concurrent save+stay or an auto-translate-driven reload). useState only
+ // reads its initial value once, so without this the form would keep
+ // showing the previous dish's data.
+ const dishKey = dish?.id ?? null;
+ useEffect(() => {
+ setForm(initialForm);
+ }, [dishKey, initialForm]);
+ const [saving, setSaving] = useState(false);
+ const [deleting, setDeleting] = useState(false);
+ const [duplicating, setDuplicating] = useState(false);
+ const [confirmOpen, setConfirmOpen] = useState(false);
+ const [unsavedOpen, setUnsavedOpen] = useState(false);
+ const [saveErrorOpen, setSaveErrorOpen] = useState(false);
+ const [aiOpen, setAiOpen] = useState(false);
+ const [optionModal, setOptionModal] = useState<
+ { kind: "new" } | { kind: "edit"; id: string } | null
+ >(null);
+ // Cheap-and-correct dirty check: only the fields that the form actually
+ // owns. Previously this serialised the whole state twice on every render.
+ const isDirty = useMemo(() => isDishFormDirty(form, initialForm), [form, initialForm]);
+ const langMetas = useMemo(() => {
+ const enabled = AVAILABLE_LANGUAGES.filter((l) => languages.includes(l.code));
+ const def = enabled.find((l) => l.code === defaultLang);
+ if (!def) return enabled;
+ return [def, ...enabled.filter((l) => l.code !== defaultLang)];
+ }, [languages, defaultLang]);
+
+ useEffect(() => {
+ if (typeof window !== "undefined" && window.location.hash === "#options") {
+ const el = document.getElementById("options-section");
+ if (el) {
+ el.scrollIntoView({ block: "start", behavior: "auto" });
+ return;
+ }
+ }
+ window.scrollTo({ top: 0, behavior: "auto" });
+ }, []);
+
+ const namePrimary = (form.name[defaultLang] || "").trim();
+ const [alert, setAlert] = useState<{ title: string; message: string } | null>(null);
+
+ function validateForm(): { title: string; message: string } | null {
+ const missing: string[] = [];
+ if (namePrimary.length === 0) missing.push("name");
+ const priceTrim = form.price.trim();
+ if (priceTrim.length === 0 || isNaN(parseDecimal(priceTrim))) missing.push("price");
+ if (missing.length === 0) return null;
+ if (missing.length === 1) {
+ const field = missing[0];
+ return {
+ title: field === "name" ? t("nameRequiredTitle") : t("priceRequiredTitle"),
+ message:
+ field === "name"
+ ? t("nameRequiredMessage")
+ : t("priceRequiredMessage"),
+ };
+ }
+ return {
+ title: t("missingTitle"),
+ message: t("missingMessage"),
+ };
+ }
+
+ function toggleAllergen(code: string) {
+ setForm((f) => ({
+ ...f,
+ allergens: f.allergens.includes(code)
+ ? f.allergens.filter((a) => a !== code)
+ : [...f.allergens, code],
+ }));
+ }
+
+ function toggleDiet(code: string) {
+ setForm((f) => ({
+ ...f,
+ diets: f.diets.includes(code)
+ ? f.diets.filter((d) => d !== code)
+ : [...f.diets, code],
+ }));
+ }
+
+ async function persist(redirectAfter: "list" | "stay" = "list"): Promise<string | null> {
+ if (saving) return null;
+ const validation = validateForm();
+ if (validation) {
+ setAlert(validation);
+ return null;
+ }
+ const priceNum = parseDecimal(form.price);
+ const translations = buildItemTranslations(form.name, form.description, defaultLang);
+ const descPrimary = (form.description[defaultLang] || "").trim() || null;
+ setSaving(true);
+ try {
+ let savedId: string;
+ if (isNew) {
+ if (!categoryId) {
+ // New dishes always come from the item.new route with a real category;
+ // a null here is a programming error, not a user-reachable state.
+ setSaving(false);
+ return null;
+ }
+ const created = await createItem({
+ name: namePrimary,
+ description: descPrimary,
+ price: priceNum,
+ imageUrl: form.photoUrl,
+ categoryId,
+ isActive: form.visible,
+ translations,
+ allergens: form.allergens,
+ diets: form.diets,
+ options: form.options.length > 0 ? form.options : null,
+ });
+ savedId = created.id;
+ } else if (dish) {
+ await updateItem(dish.id, {
+ name: namePrimary,
+ description: descPrimary,
+ price: priceNum,
+ imageUrl: form.photoUrl,
+ // Orphaned dish (no category): leave it orphaned rather than send a
+ // null the API would reject — editing name/price/etc still works.
+ ...(categoryId ? { categoryId } : {}),
+ isActive: form.visible,
+ translations,
+ allergens: form.allergens,
+ diets: form.diets,
+ options: form.options,
+ });
+ savedId = dish.id;
+ } else {
+ setSaving(false);
+ return null;
+ }
+ if (redirectAfter === "list") {
+ onSavedRedirect(savedId);
+ } else {
+ setSaving(false);
+ }
+ return savedId;
+ } catch (err) {
+ track("dash_item_save_error", { error: String(err) });
+ setSaveErrorOpen(true);
+ setSaving(false);
+ return null;
+ }
+ }
+
+ async function save() {
+ track("dash_item_click_save");
+ await persist("list");
+ }
+
+ // Options live entirely in form state until the user hits the dish's
+ // Save button. Tapping "add option" or an existing row just opens the
+ // modal — no server round-trip per option. Used to fire `updateItem`
+ // before opening, which meant every option click cost a full dish
+ // auto-translate cycle.
+ function handleAddOption() {
+ track("dash_item_click_add_option");
+ setOptionModal({ kind: "new" });
+ }
+
+ function handleEditOption(optId: string) {
+ track("dash_item_click_edit_option");
+ setOptionModal({ kind: "edit", id: optId });
+ }
+
+ // Keep legacy hooks alive so the prop signature stays compatible with
+ // callers that still pass them (DishForm consumers in the legacy SPA
+ // shell). They're no-ops in the new in-form-state flow.
+ void optionRoutePrefix;
+ void onOpenOption;
+ void onPersisted;
+ void onOptionsRefresh;
+ void router;
+
+ async function confirmDelete() {
+ track("dash_item_click_delete");
+ if (!dish) return;
+ setDeleting(true);
+ try {
+ await deleteItem(dish.id);
+ onDeletedRedirect();
+ } catch (err) {
+ showApiError(err, "dash_item_delete");
+ setDeleting(false);
+ setConfirmOpen(false);
+ }
+ }
+
+ async function handleDuplicate() {
+ // Can't duplicate an orphaned dish — there's no category to place the copy
+ // in. (The duplicate button is hidden for the No-category bucket anyway.)
+ if (!dish || !dish.categoryId || duplicating) return;
+ track("dash_item_click_duplicate");
+ setDuplicating(true);
+ const copySuffix = " (" + tc("copy", { defaultValue: "copy" }) + ")";
+ const newName: Ml = { ...dish.name };
+ for (const code of Object.keys(newName)) {
+ const v = (newName[code] || "").trim();
+ if (v.length > 0) newName[code] = v + copySuffix;
+ }
+ const namePrimary = (newName[defaultLang] || "").trim();
+ const descPrimary = (dish.description?.[defaultLang] || "").trim() || null;
+ const translations = buildItemTranslations(newName, dish.description || emptyMl(languages), defaultLang);
+ const copiedOptions: DishOption[] = (dish.options || []).map((opt) => ({
+ ...opt,
+ id: newId(),
+ variants: opt.variants.map((v) => ({ ...v, id: newId() })),
+ }));
+ try {
+ const created = await createItem({
+ name: namePrimary,
+ description: descPrimary,
+ price: parseDecimal(dish.price),
+ imageUrl: dish.photoUrl,
+ categoryId: dish.categoryId,
+ isActive: dish.visible,
+ translations,
+ allergens: dish.allergens,
+ diets: dish.diets,
+ options: copiedOptions,
+ });
+ onSavedRedirect(created.id);
+ } catch (err) {
+ showApiError(err, "dash_item_duplicate");
+ setDuplicating(false);
+ }
+ }
+
+ const titleText = isNew
+ ? t("newTitle")
+ : (getMlWithFallback(form.name, lang, defaultLang) || tc("untitled"));
+ const divider = <div className="border-t border-border my-5" />;
+
+ return (
+ <div>
+ <EditPageHeader
+ onBack={() => {
+ track("dash_item_click_back");
+ if (isDirty && !saving) { setUnsavedOpen(true); return; }
+ onBack();
+ }}
+ title={titleText}
+ breadcrumb={categoryName ? t("breadcrumb") + " / " + categoryName : t("breadcrumb")}
+ lang={lang}
+ onLangChange={setLang}
+ languages={langMetas}
+ onSave={save}
+ canSave={!saving}
+ saving={saving}
+ onLangsOpen={() => track("dash_item_click_langs")}
+ onLangSelect={() => track("dash_item_click_lang")}
+ />
+
+ <div className="max-w-5xl mx-auto md:px-6 space-y-3">
+ <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
+ <div className="flex flex-col-reverse md:flex-row-reverse gap-4 md:gap-5">
+ <div className="w-full md:w-[7.6rem] shrink-0">
+ <PhotoPicker
+ url={form.photoUrl}
+ onChange={(url) => setForm((f) => ({ ...f, photoUrl: url }))}
+ onAiClick={() => { track("dash_item_click_generate_photo"); setAiOpen(true); }}
+ onAddClick={() => track("dash_item_click_add_photo")}
+ onRemoveClick={() => track("dash_item_click_delete_photo")}
+ inputId="dish-photo"
+ width="w-full"
+ height="aspect-square"
+ />
+ </div>
+ <div className="flex-1 min-w-0">
+ <div className="flex gap-5 items-start mb-4">
+ <div className="flex-1 min-w-0">
+ <TranslatedInput
+ id="dish-name"
+ label={t("nameLabel")}
+ value={form.name}
+ lang={lang}
+ defaultLang={defaultLang}
+ languages={languages}
+ onChange={(v) => setForm((f) => ({ ...f, name: v }))}
+ placeholder={t("namePlaceholder")}
+ onFocus={() => track("dash_item_focus_name_input")}
+ />
+ </div>
+ <div className="w-24 shrink-0">
+ <label htmlFor="dish-price" className="block text-sm font-medium text-foreground mb-2.5">
+ {t("priceLabel")}
+ </label>
+ <div className="relative">
+ <input
+ id="dish-price"
+ type="text"
+ inputMode="decimal"
+ placeholder={t("pricePlaceholder")}
+ value={form.price}
+ onChange={(e) => setForm((f) => ({ ...f, price: sanitizePriceInput(e.target.value) }))}
+ onFocus={() => track("dash_item_focus_price_input")}
+ className={inputClass + " pl-3 pr-8 tabular-nums"}
+ />
+ <span className="absolute top-1 right-1 w-8 h-8 inline-flex items-center justify-center text-sm text-muted-foreground pointer-events-none">
+ {currencySymbol}
+ </span>
+ </div>
+ </div>
+ </div>
+ <TranslatedInput
+ id="dish-desc"
+ label={t("descLabel")}
+ value={form.description}
+ lang={lang}
+ defaultLang={defaultLang}
+ languages={languages}
+ onChange={(v) => setForm((f) => ({ ...f, description: v }))}
+ placeholder={t("descPlaceholder")}
+ multiline
+ onFocus={() => track("dash_item_focus_description_input")}
+ />
+ </div>
+ </div>
+ </div>
+
+ <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
+ <div className="flex items-baseline justify-between gap-3 mb-0.5">
+ <div className="text-sm font-medium text-foreground">{t("dietsLabel")}</div>
+ {form.diets.length > 0 ? (
+ <span className="text-[11px] font-medium text-muted-foreground tabular-nums">
+ {form.diets.length} {tc("selected")}
+ </span>
+ ) : null}
+ </div>
+ <p className="text-xs text-muted-foreground mb-4">{t("dietsTip")}</p>
+ <div className="flex flex-wrap gap-1.5">
+ {DIETS.map((d) => {
+ const checked = form.diets.includes(d.code);
+ return (
+ <button
+ key={d.code}
+ type="button"
+ onClick={() => {
+ track(form.diets.includes(d.code) ? "dash_item_click_diet_off" : "dash_item_click_diet_on");
+ toggleDiet(d.code);
+ }}
+ className={
+ "inline-flex items-center gap-1.5 h-8 px-2.5 text-xs font-medium rounded-md transition-colors " +
+ (checked
+ ? "bg-foreground text-background"
+ : "bg-secondary text-muted-foreground")
+ }
+ >
+ <DietIcon code={d.code} className="w-3.5 h-3.5" />
+ {tDiets(d.code as never)}
+ </button>
+ );
+ })}
+ </div>
+ </div>
+
+ <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
+ <div className="flex items-baseline justify-between gap-3 mb-0.5">
+ <div className="text-sm font-medium text-foreground">{t("allergensLabel")}</div>
+ {form.allergens.length > 0 ? (
+ <span className="text-[11px] font-medium text-muted-foreground tabular-nums">
+ {form.allergens.length} {tc("selected")}
+ </span>
+ ) : null}
+ </div>
+ <p className="text-xs text-muted-foreground mb-4">{t("allergensTip")}</p>
+ <div className="flex flex-wrap gap-1.5">
+ {ALLERGENS.map((a) => {
+ const checked = form.allergens.includes(a.code);
+ return (
+ <button
+ key={a.code}
+ type="button"
+ onClick={() => {
+ track(form.allergens.includes(a.code) ? "dash_item_click_allergen_off" : "dash_item_click_allergen_on");
+ toggleAllergen(a.code);
+ }}
+ className={
+ "inline-flex items-center gap-1.5 h-8 px-2.5 text-xs font-medium rounded-md transition-colors " +
+ (checked
+ ? "bg-foreground text-background"
+ : "bg-secondary text-muted-foreground")
+ }
+ >
+ <AllergenIcon code={a.code} className="w-3.5 h-3.5" />
+ {tAllergens(a.code as never)}
+ </button>
+ );
+ })}
+ </div>
+ </div>
+
+ <div id="options-section" className="bg-card border border-border rounded-2xl p-5 md:p-6">
+ <div className="text-sm font-medium text-foreground">{t("optionsLabel")}</div>
+ <p className="text-xs text-muted-foreground mb-4 mt-0.5">
+ {t("optionsTip")}
+ </p>
+
+ <DishOptionsInline
+ options={form.options}
+ defaultLang={defaultLang}
+ disabled={saving}
+ onReorder={(next) => setForm((f) => ({ ...f, options: next }))}
+ onAddOption={handleAddOption}
+ onEditOption={handleEditOption}
+ />
+ </div>
+
+ <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
+ <label className="flex items-center justify-between gap-3 cursor-pointer select-none">
+ <div>
+ <div className="text-sm font-medium text-foreground">{t("visibleLabel")}</div>
+ <div className="text-xs text-muted-foreground leading-snug mt-0.5">
+ {t("visibleTip")}
+ </div>
+ </div>
+ <ToggleSwitch
+ checked={form.visible}
+ onChange={() => {
+ track("dash_item_click_visible_toggle");
+ setForm((f) => ({ ...f, visible: !f.visible }));
+ }}
+ />
+ </label>
+ </div>
+ </div>
+
+ {!isNew ? (
+ <div className="max-w-5xl mx-auto md:px-6 mt-6 flex items-center justify-center gap-3">
+ {categoryId ? (
+ <button
+ type="button"
+ onClick={handleDuplicate}
+ disabled={duplicating}
+ className="inline-flex items-center gap-1.5 h-9 px-3 text-xs font-medium text-muted-foreground rounded-lg transition-colors disabled:opacity-50"
+ >
+ <CopyIcon size={13} />
+ {duplicating ? tc("saving") : t("duplicateButton", { defaultValue: "Duplicate" })}
+ </button>
+ ) : null}
+ <button
+ type="button"
+ onClick={() => setConfirmOpen(true)}
+ className="inline-flex items-center gap-1.5 h-9 px-3 text-xs font-medium text-red-600 rounded-lg transition-colors"
+ >
+ <TrashIcon size={13} />
+ {t("deleteButton")}
+ </button>
+ </div>
+ ) : null}
+
+ <ConfirmDialog
+ open={confirmOpen}
+ title={t("deleteTitle")}
+ message={deleting ? tc("deleting") : t("deleteMessage")}
+ onConfirm={confirmDelete}
+ onCancel={() => (deleting ? null : setConfirmOpen(false))}
+ />
+
+ <ConfirmDialog
+ open={alert !== null}
+ singleButton
+ title={alert?.title}
+ message={alert?.message}
+ onCancel={() => setAlert(null)}
+ />
+
+ <AiImageModal
+ open={aiOpen}
+ onClose={() => setAiOpen(false)}
+ onUse={(url) => setForm((f) => ({ ...f, photoUrl: url }))}
+ endpoint="/api/items/generate-image"
+ title={t("aiTitle")}
+ defaultPrompt={pickAnyMlValue(form.name, defaultLang)}
+ aspect="square"
+ eventPrefix="dash_item"
+ />
+
+ <UnsavedChangesDialog
+ open={unsavedOpen}
+ saving={saving}
+ onDiscard={() => { setUnsavedOpen(false); onBack(); }}
+ onSave={() => { setUnsavedOpen(false); void save(); }}
+ onClose={() => setUnsavedOpen(false)}
+ />
+
+ <ConfirmDialog
+ open={saveErrorOpen}
+ singleButton
+ title={tc("saveErrorTitle")}
+ message={tc("saveErrorMessage")}
+ confirmLabel={tc("close")}
+ onCancel={() => setSaveErrorOpen(false)}
+ />
+
+ {optionModal ? (
+ <Modal
+ open
+ onClose={() => setOptionModal(null)}
+ title={optionModal.kind === "new"
+ ? t("newOptionTitle", { defaultValue: "New option" })
+ : t("editOptionTitle", { defaultValue: "Edit option" })}
+ size="lg"
+ >
+ <OptionForm
+ embedded
+ lang={lang}
+ currentOptions={form.options}
+ currentDishName={form.name}
+ option={
+ optionModal.kind === "edit"
+ ? form.options.find((o) => o.id === optionModal.id) || null
+ : null
+ }
+ onBack={() => setOptionModal(null)}
+ onLocalSave={(nextOptions) => {
+ setForm((f) => ({ ...f, options: nextOptions }));
+ setOptionModal(null);
+ }}
+ onLocalDelete={(nextOptions) => {
+ setForm((f) => ({ ...f, options: nextOptions }));
+ setOptionModal(null);
+ }}
+ />
+ </Modal>
+ ) : null}
+ {saving ? (
+ <div className="fixed inset-0 z-50 bg-background/70 backdrop-blur-sm flex items-center justify-center px-6">
+ <div className="flex flex-col items-center gap-3 text-center">
+ <div className="w-10 h-10 border-[3px] border-input border-t-foreground rounded-full animate-spin" />
+ <div className="text-xs text-muted-foreground">
+ {languages.length > 1 ? t("savingAndTranslatingOverlay") : t("savingOverlay")}
+ </div>
+ </div>
+ </div>
+ ) : null}
+ </div>
+ );
+}
+
+// ── Options list (rendered inline inside DishForm) ──
+
+function DishOptionsInline({
+ options,
+ defaultLang,
+ disabled,
+ onReorder,
+ onAddOption,
+ onEditOption,
+}: {
+ options: DishOption[];
+ defaultLang: string;
+ disabled: boolean;
+ onReorder: (next: DishOption[]) => void;
+ onAddOption: () => void;
+ onEditOption: (optionId: string) => void;
+}) {
+ const t = useTranslations("dashboard.dishForm");
+
+ function moveOption(idx: number, dir: number) {
+ if (disabled) return;
+ onReorder(moveItem(options, idx, dir));
+ }
+
+ return (
+ <>
+ {options.length > 0 ? (
+ <div className="border border-border rounded-lg overflow-hidden divide-y divide-border">
+ {options.map((opt, idx) => (
+ <OptionRow
+ key={opt.id}
+ option={opt}
+ defaultLang={defaultLang}
+ isFirst={idx === 0}
+ isLast={idx === options.length - 1}
+ onEdit={() => !disabled && onEditOption(opt.id)}
+ onMoveUp={() => moveOption(idx, -1)}
+ onMoveDown={() => moveOption(idx, 1)}
+ />
+ ))}
+ </div>
+ ) : null}
+
+ <button
+ type="button"
+ onClick={() => !disabled && onAddOption()}
+ disabled={disabled}
+ className={
+ "w-full h-10 text-sm font-medium text-muted-foreground bg-card border border-dashed border-input rounded-lg flex items-center justify-center gap-1.5 transition-colors disabled:opacity-60 disabled:cursor-not-allowed " +
+ (options.length > 0 ? "mt-2" : "")
+ }
+ >
+ {disabled ? (
+ <div className="w-3.5 h-3.5 border-2 border-muted-foreground/30 border-t-muted-foreground rounded-full animate-spin" />
+ ) : (
+ <PlusIcon size={14} />
+ )}
+ {t("addOption")}
+ </button>
+ </>
+ );
+}
+
+function OptionRow({
+ option,
+ defaultLang,
+ isFirst,
+ isLast,
+ onEdit,
+ onMoveUp,
+ onMoveDown,
+}: {
+ option: DishOption;
+ defaultLang: string;
+ isFirst: boolean;
+ isLast: boolean;
+ onEdit: () => void;
+ onMoveUp: () => void;
+ onMoveDown: () => void;
+}) {
+ const tc = useTranslations("dashboard.common");
+ const to = useTranslations("dashboard.optionForm");
+ const typeLabel = option.type === "multi" ? to("typeMulti") : to("typeSingle");
+ const reqLabel = option.required ? to("required") : to("optional");
+ const variantsCount = option.variants?.length || 0;
+ return (
+ <div className="flex items-center gap-2 px-3 py-2 transition-colors">
+ <div className="flex items-center gap-0.5 shrink-0">
+ <button type="button" onClick={onMoveUp} disabled={isFirst} className={iconBtn} aria-label={tc("moveUp")}>
+ <ArrowUpIcon size={14} />
+ </button>
+ <button type="button" onClick={onMoveDown} disabled={isLast} className={iconBtn} aria-label={tc("moveDown")}>
+ <ArrowDownIcon size={14} />
+ </button>
+ </div>
+ <button type="button" onClick={onEdit} className="flex-1 min-w-0 text-left">
+ <div className="text-sm font-medium text-foreground truncate">
+ {getMlWithFallback(option.name, defaultLang, defaultLang) || to("untitledOption")}
+ </div>
+ <div className="text-xs text-muted-foreground truncate mt-0.5">
+ {typeLabel} · {reqLabel} · {variantsCount} {variantsCount === 1 ? to("variantOne") : to("variantOther")}
+ </div>
+ </button>
+ <ChevronRightIcon size={14} className="text-muted-foreground shrink-0" />
+ </div>
+ );
+}
+
+// ── Option form ──
+
+interface OptionFormState {
+ name: Ml;
+ type: "single" | "multi";
+ required: boolean;
+ variants: OptionVariant[];
+}
+
+export function OptionForm({
+ dish,
+ option,
+ onSavedRedirect,
+ onBack,
+ onDeletedRedirect,
+ embedded,
+ lang: langProp,
+ currentOptions,
+ currentDishName,
+ onLocalSave,
+ onLocalDelete,
+}: {
+ // Standalone path (legacy SPA shell) still uses `dish` for the server
+ // round-trip; the embedded path inside DishForm uses `currentOptions`
+ // and the on-local-* callbacks so options are buffered in form state
+ // until the user hits the dish's main Save button.
+ dish?: Dish;
+ option: DishOption | null;
+ onSavedRedirect?: () => void;
+ onBack: () => void;
+ onDeletedRedirect?: () => void;
+ embedded?: boolean;
+ lang?: string;
+ currentOptions?: DishOption[];
+ currentDishName?: Ml;
+ onLocalSave?: (nextOptions: DishOption[]) => void;
+ onLocalDelete?: (nextOptions: DishOption[]) => void;
+}) {
+ const t = useTranslations("dashboard.optionForm");
+ const tc = useTranslations("dashboard.common");
+ const restaurant = useRestaurant();
+ const { defaultLang, languages, currency } = restaurant;
+ const currencySymbol = currencySymbolOf(currency);
+ const isNew = option === null;
+
+ const [internalLang, setInternalLang] = useState<string>(defaultLang);
+ const lang = langProp ?? internalLang;
+ // When `langProp` is supplied the parent owns the language; writing to the
+ // internal state would dead-end. Skip the update so the dropdown reads its
+ // value from props on every render.
+ const setLang = langProp !== undefined ? () => {} : setInternalLang;
+ const [form, setForm] = useState<OptionFormState>(() => ({
+ name: option ? option.name : emptyMl(languages),
+ type: option ? option.type : "single",
+ required: option ? !!option.required : false,
+ variants:
+ option && option.variants && option.variants.length > 0
+ ? option.variants
+ : [{ id: newId(), name: emptyMl(languages), priceDelta: "0" }],
+ }));
+ const [saving, setSaving] = useState(false);
+ const [deleting, setDeleting] = useState(false);
+ const [confirmOpen, setConfirmOpen] = useState(false);
+ const [translatingAll, setTranslatingAll] = useState(false);
+ const langMetas = useMemo(() => {
+ const enabled = AVAILABLE_LANGUAGES.filter((l) => languages.includes(l.code));
+ const def = enabled.find((l) => l.code === defaultLang);
+ if (!def) return enabled;
+ return [def, ...enabled.filter((l) => l.code !== defaultLang)];
+ }, [languages, defaultLang]);
+
+ useEffect(() => {
+ if (embedded) return;
+ window.scrollTo({ top: 0, behavior: "auto" });
+ }, [embedded]);
+
+ const namePrimary = (form.name[defaultLang] || "").trim();
+ const validVariants = form.variants.filter((v) => (v.name?.[defaultLang] || "").trim().length > 0);
+ const [alert, setAlert] = useState<{ title: string; message: string } | null>(null);
+
+ function validateForm(): { title: string; message: string } | null {
+ if (namePrimary.length === 0 && validVariants.length === 0) {
+ return {
+ title: t("missingTitle"),
+ message: t("missingMessage"),
+ };
+ }
+ if (namePrimary.length === 0) {
+ return {
+ title: t("nameRequiredTitle"),
+ message: t("nameRequiredMessage"),
+ };
+ }
+ if (validVariants.length === 0) {
+ return {
+ title: t("variantRequiredTitle"),
+ message: t("variantRequiredMessage"),
+ };
+ }
+ return null;
+ }
+
+ function setVariant(idx: number, patch: Partial<OptionVariant>) {
+ setForm((f) => ({
+ ...f,
+ variants: f.variants.map((v, i) => (i === idx ? { ...v, ...patch } : v)),
+ }));
+ }
+ function addVariant() {
+ setForm((f) => ({
+ ...f,
+ variants: [...f.variants, { id: newId(), name: emptyMl(languages), priceDelta: "0" }],
+ }));
+ }
+ function removeVariant(idx: number) {
+ setForm((f) => ({ ...f, variants: f.variants.filter((_, i) => i !== idx) }));
+ }
+ function moveVariant(idx: number, dir: number) {
+ setForm((f) => ({ ...f, variants: moveItem(f.variants, idx, dir) }));
+ }
+
+ async function translateAllVariants() {
+ if (lang === defaultLang || translatingAll) return;
+ const targets = form.variants
+ .map((v, i) => ({ v, i }))
+ .filter(({ v }) => {
+ const src = getMl(v.name, defaultLang);
+ const cur = getMl(v.name, lang);
+ return src.trim().length > 0 && cur.trim().length === 0;
+ });
+ if (targets.length === 0) return;
+ setTranslatingAll(true);
+ try {
+ const results = await Promise.all(
+ targets.map(({ v }) => translateText(getMl(v.name, defaultLang), defaultLang, lang)),
+ );
+ setForm((f) => {
+ const next = f.variants.slice();
+ targets.forEach(({ i }, j) => {
+ next[i] = { ...next[i], name: setMl(next[i].name, lang, results[j]) };
+ });
+ return { ...f, variants: next };
+ });
+ } catch (err) {
+ showApiError(err, "dash_option_translate_variants");
+ } finally {
+ setTranslatingAll(false);
+ }
+ }
+
+ // Source-of-truth for the dish's existing options. Embedded mode reads
+ // it from props (buffered DishForm state); legacy mode reads from the
+ // server-side `dish` row.
+ const baseOptions: DishOption[] = currentOptions ?? dish?.options ?? [];
+
+ async function save() {
+ if (saving) return;
+ const validation = validateForm();
+ if (validation) {
+ setAlert(validation);
+ return;
+ }
+ setSaving(true);
+ const normalisedVariants = validVariants.map((v) => ({
+ ...v,
+ priceDelta: String(v.priceDelta || "0").replace(",", ".").trim() || "0",
+ }));
+ const data: Omit<DishOption, "id"> = {
+ name: form.name,
+ type: form.type,
+ required: form.required,
+ variants: normalisedVariants,
+ };
+ let nextOptions: DishOption[];
+ if (isNew) {
+ nextOptions = [...baseOptions, { id: newId(), ...data }];
+ } else if (option) {
+ nextOptions = baseOptions.map((o) => (o.id === option.id ? { ...o, ...data } : o));
+ } else {
+ nextOptions = baseOptions;
+ }
+ // Embedded inside DishForm — hand the new options array back to the
+ // parent and exit immediately. The eventual server round-trip happens
+ // when the user saves the dish as a whole.
+ if (onLocalSave) {
+ onLocalSave(nextOptions);
+ setSaving(false);
+ return;
+ }
+ // Legacy standalone path — persist directly via dish update.
+ if (!dish) {
+ setSaving(false);
+ return;
+ }
+ try {
+ await persistDishOptions(dish, nextOptions, defaultLang);
+ onSavedRedirect?.();
+ } catch (err) {
+ showApiError(err, isNew ? "dash_option_create" : "dash_option_update");
+ setSaving(false);
+ }
+ }
+
+ async function confirmDelete() {
+ if (!option) return;
+ setDeleting(true);
+ const nextOptions = baseOptions.filter((o) => o.id !== option.id);
+ if (onLocalDelete) {
+ onLocalDelete(nextOptions);
+ setDeleting(false);
+ setConfirmOpen(false);
+ return;
+ }
+ if (!dish) {
+ setDeleting(false);
+ setConfirmOpen(false);
+ return;
+ }
+ try {
+ await persistDishOptions(dish, nextOptions, defaultLang);
+ onDeletedRedirect?.();
+ } catch (err) {
+ showApiError(err, "dash_option_delete");
+ setDeleting(false);
+ setConfirmOpen(false);
+ }
+ }
+
+ const translatableVariantsCount =
+ lang === defaultLang
+ ? 0
+ : form.variants.filter((v) => {
+ const src = getMl(v.name, defaultLang);
+ const cur = getMl(v.name, lang);
+ return src.trim().length > 0 && cur.trim().length === 0;
+ }).length;
+
+ const titleText = isNew
+ ? t("newTitle")
+ : (getMlWithFallback(form.name, lang, defaultLang) || t("untitledOption"));
+ const divider = <div className="border-t border-border my-5" />;
+ const dishName = dish
+ ? getMlWithFallback(dish.name, defaultLang, defaultLang)
+ : currentDishName
+ ? getMlWithFallback(currentDishName, defaultLang, defaultLang)
+ : "";
+
+ return (
+ <div>
+ {!embedded ? (
+ <EditPageHeader
+ onBack={onBack}
+ title={titleText}
+ breadcrumb={dishName ? t("breadcrumb") + " / " + dishName : t("breadcrumb")}
+ lang={lang}
+ onLangChange={setLang}
+ languages={langMetas}
+ onSave={save}
+ canSave={!saving}
+ saving={saving}
+ />
+ ) : null}
+
+ <div className={embedded
+ ? ""
+ : "max-w-5xl mx-auto bg-card border border-border rounded-2xl p-5 md:p-6"}>
+ <TranslatedInput
+ id="opt-name"
+ label={t("nameLabel")}
+ value={form.name}
+ lang={lang}
+ defaultLang={defaultLang}
+ languages={languages}
+ onChange={(v) => setForm((f) => ({ ...f, name: v }))}
+ placeholder={t("namePlaceholder")}
+ />
+
+ {divider}
+
+ <label className="flex items-center justify-between gap-3 cursor-pointer select-none">
+ <div>
+ <div className="text-sm font-medium text-foreground">{t("multiLabel")}</div>
+ <div className="text-xs text-muted-foreground leading-snug mt-0.5">
+ {t("multiTip")}
+ </div>
+ </div>
+ <ToggleSwitch
+ checked={form.type === "multi"}
+ onChange={() => {
+ setForm((f) => ({ ...f, type: f.type === "multi" ? "single" : "multi" }));
+ }}
+ />
+ </label>
+
+ {divider}
+
+ <label className="flex items-center justify-between gap-3 cursor-pointer select-none">
+ <div>
+ <div className="text-sm font-medium text-foreground">{t("requiredLabel")}</div>
+ <div className="text-xs text-muted-foreground leading-snug mt-0.5">
+ {t("requiredTip")}
+ </div>
+ </div>
+ <ToggleSwitch
+ checked={form.required}
+ onChange={() => {
+ setForm((f) => ({ ...f, required: !f.required }));
+ }}
+ />
+ </label>
+
+ {divider}
+
+ <div className="flex items-center justify-between gap-2 mb-0.5">
+ <div className="text-sm font-medium text-foreground">{t("variantsLabel")}</div>
+ {lang !== defaultLang && translatableVariantsCount > 0 ? (
+ <button
+ type="button"
+ onClick={translateAllVariants}
+ disabled={translatingAll}
+ className="inline-flex items-center gap-1 text-[11px] font-medium text-muted-foreground transition-colors disabled:text-muted-foreground/50 disabled:cursor-not-allowed"
+ >
+ {translatingAll ? tc("translating") : tc("translateAll")}
+ </button>
+ ) : null}
+ </div>
+ <p className="text-xs text-muted-foreground mb-2.5">
+ {t("variantsTip")}
+ </p>
+ <div className="space-y-2">
+ {form.variants.map((variant, idx) => (
+ <VariantRow
+ key={variant.id}
+ variant={variant}
+ lang={lang}
+ defaultLang={defaultLang}
+ languages={languages}
+ currencySymbol={currencySymbol}
+ isFirst={idx === 0}
+ isLast={idx === form.variants.length - 1}
+ canRemove={form.variants.length > 1}
+ onChange={(patch) => setVariant(idx, patch)}
+ onRemove={() => removeVariant(idx)}
+ onMoveUp={() => moveVariant(idx, -1)}
+ onMoveDown={() => moveVariant(idx, 1)}
+ />
+ ))}
+ </div>
+
+ <button
+ type="button"
+ onClick={addVariant}
+ className="w-full mt-3 mb-6 h-10 text-sm font-medium text-muted-foreground bg-card border border-dashed border-input rounded-lg flex items-center justify-center gap-1.5 transition-colors"
+ >
+ <PlusIcon size={14} />
+ {t("addVariant")}
+ </button>
+ </div>
+
+ {embedded ? (
+ <div className="sticky -bottom-5 -mx-5 -mb-5 px-5 py-3 bg-card border-t border-border flex items-center justify-between gap-2 z-10">
+ {!isNew ? (
+ <button
+ type="button"
+ onClick={() => setConfirmOpen(true)}
+ className="w-8 h-8 inline-flex items-center justify-center rounded-lg text-red-600 border border-border transition-colors"
+ aria-label={t("deleteButton")}
+ title={t("deleteButton")}
+ >
+ <TrashIcon size={13} />
+ </button>
+ ) : <span />}
+ <div className="flex items-center gap-2">
+ <button
+ type="button"
+ onClick={onBack}
+ className="h-8 px-3 text-xs font-medium text-foreground bg-card border border-border rounded-lg transition-colors"
+ >
+ {tc("cancel")}
+ </button>
+ <button
+ type="button"
+ onClick={save}
+ disabled={saving}
+ className="h-8 px-3 text-xs font-medium text-primary-foreground bg-primary-gradient rounded-lg transition-colors disabled:opacity-40"
+ >
+ {saving ? tc("saving") : tc("save")}
+ </button>
+ </div>
+ </div>
+ ) : !isNew ? (
+ <div className="max-w-5xl mx-auto md:px-6 mt-6 flex justify-center">
+ <button
+ type="button"
+ onClick={() => setConfirmOpen(true)}
+ className="inline-flex items-center gap-1.5 h-9 px-3 text-xs font-medium text-red-600 rounded-lg transition-colors"
+ >
+ <TrashIcon size={13} />
+ {t("deleteButton")}
+ </button>
+ </div>
+ ) : null}
+
+ <ConfirmDialog
+ open={confirmOpen}
+ title={t("deleteTitle")}
+ message={deleting ? tc("deleting") : t("deleteMessage")}
+ onConfirm={confirmDelete}
+ onCancel={() => (deleting ? null : setConfirmOpen(false))}
+ />
+
+ <ConfirmDialog
+ open={alert !== null}
+ singleButton
+ title={alert?.title}
+ message={alert?.message}
+ onCancel={() => setAlert(null)}
+ />
+ </div>
+ );
+}
+
+function VariantRow({
+ variant,
+ lang,
+ defaultLang,
+ languages,
+ currencySymbol,
+ isFirst,
+ isLast,
+ canRemove,
+ onChange,
+ onRemove,
+ onMoveUp,
+ onMoveDown,
+}: {
+ variant: OptionVariant;
+ lang: string;
+ defaultLang: string;
+ languages: string[];
+ currencySymbol: string;
+ isFirst: boolean;
+ isLast: boolean;
+ canRemove: boolean;
+ onChange: (patch: Partial<OptionVariant>) => void;
+ onRemove: () => void;
+ onMoveUp: () => void;
+ onMoveDown: () => void;
+}) {
+ const tc = useTranslations("dashboard.common");
+ const t = useTranslations("dashboard.optionForm");
+ return (
+ <div className="flex items-center gap-1 md:gap-2">
+ <div className="flex items-center gap-0.5 shrink-0">
+ <button type="button" onClick={onMoveUp} disabled={isFirst} className={iconBtn} aria-label={tc("moveUp")}>
+ <ArrowUpIcon size={14} />
+ </button>
+ <button type="button" onClick={onMoveDown} disabled={isLast} className={iconBtn} aria-label={tc("moveDown")}>
+ <ArrowDownIcon size={14} />
+ </button>
+ </div>
+ <div className="flex-1 min-w-0">
+ <TranslatedInput
+ id={`variant-${variant.id}`}
+ value={variant.name}
+ lang={lang}
+ defaultLang={defaultLang}
+ languages={languages}
+ onChange={(next) => onChange({ name: next })}
+ placeholder={t("variantNamePlaceholder")}
+ translatable={false}
+ />
+ </div>
+ <div className="w-16 md:w-20 shrink-0 relative">
+ <input
+ type="text"
+ inputMode="decimal"
+ value={variant.priceDelta}
+ onChange={(e) => onChange({ priceDelta: sanitizePriceInput(e.target.value) })}
+ placeholder="0"
+ title={t("priceModifier")}
+ className={inputClass + " pl-2 pr-7 tabular-nums"}
+ />
+ <span className="absolute top-1 right-1 w-7 h-8 inline-flex items-center justify-center text-xs text-muted-foreground pointer-events-none">
+ {currencySymbol}
+ </span>
+ </div>
+ <button
+ type="button"
+ onClick={onRemove}
+ disabled={!canRemove}
+ className={iconBtn + " shrink-0"}
+ aria-label={t("removeVariant")}
+ >
+ <TrashIcon size={14} />
+ </button>
+ </div>
+ );
+}
+
+async function persistDishOptions(dish: Dish, nextOptions: DishOption[], defaultLang: string) {
+ const namePrimary = (dish.name[defaultLang] || "").trim();
+ const descPrimary = (dish.description[defaultLang] || "").trim() || null;
+ const translations = buildItemTranslations(dish.name, dish.description, defaultLang);
+ await updateItem(dish.id, {
+ name: namePrimary,
+ description: descPrimary,
+ // parseDecimal handles comma-decimal locales and rejects NaN — parseFloat
+ // silently mangles "9,90" to 9 and drops everything after the comma.
+ price: parseDecimal(dish.price),
+ imageUrl: dish.photoUrl,
+ ...(dish.categoryId ? { categoryId: dish.categoryId } : {}),
+ isActive: dish.visible,
+ translations,
+ allergens: dish.allergens,
+ diets: dish.diets,
+ options: nextOptions,
+ });
+}
+

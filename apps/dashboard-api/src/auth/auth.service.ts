@@ -1,0 +1,620 @@
+import {
+  BadRequestException,
+  HttpException,
+  HttpStatus,
+  Injectable,
+  OnModuleDestroy,
+  UnauthorizedException,
+} from "@nestjs/common";
+import { ConfigService } from "@nestjs/config";
+import { Prisma } from "@prisma/client";
+import { PrismaService } from "../prisma/prisma.service";
+import { MailService } from "../mail/mail.service";
+import { I18nService } from "../i18n/i18n.service";
+import { OnboardingSeedService } from "../onboarding/onboarding-seed.service";
+import { isCuisineKey, type CuisineKey } from "../onboarding/cuisine";
+import {
+  generateOTP,
+  generateSessionToken,
+  hashOTP,
+  hashSessionToken,
+  MAX_OTP_ATTEMPTS,
+  OTP_EXPIRY_MS,
+  safeCompare,
+} from "../common/session-utils";
+import { validateEmail } from "../common/validate-email";
+
+export type SignupContext = { cuisine?: string; restaurantName: string };
+
+const SEND_LIMIT_WINDOW = 15 * 60 * 1000;
+const SEND_LIMIT_MAX = 5;
+const VERIFY_LIMIT_WINDOW = 15 * 60 * 1000;
+const VERIFY_LIMIT_MAX = 10;
+
+// Legacy in-landing dashboard at iq-rest.com/<locale>/dashboard was torn down
+// on 2026-05-28 — the path now 301s to dashboard.iq-rest.com. Keep
+// `legacyDashboard: false` in the response shape for backward compat with any
+// in-flight SPA that still reads it.
+function isLegacyEmail(_email: string | null | undefined): boolean {
+  return false;
+}
+
+// Dashboard defaults to dark theme for accounts created on/after this date.
+// Older accounts keep the system-follow default so we don't flip anyone's UI.
+const DARK_DEFAULT_SINCE = new Date("2026-06-08T00:00:00Z");
+
+@Injectable()
+export class AuthService implements OnModuleDestroy {
+  private sendAttempts = new Map<string, { count: number; resetAt: number }>();
+  private verifyAttempts = new Map<string, { count: number; resetAt: number }>();
+  // Drop expired rate-limit entries periodically so the Maps don't grow forever
+  // under abuse (each unique email leaves a record otherwise).
+  private readonly rateLimitSweep = setInterval(() => this.sweepRateLimits(), 10 * 60 * 1000);
+
+  constructor(
+    private readonly prisma: PrismaService,
+    private readonly mail: MailService,
+    private readonly config: ConfigService,
+    private readonly i18n: I18nService,
+    private readonly seed: OnboardingSeedService,
+  ) {
+    // Don't keep the Node process alive for the cleanup timer alone.
+    this.rateLimitSweep.unref?.();
+  }
+
+  onModuleDestroy(): void {
+    clearInterval(this.rateLimitSweep);
+  }
+
+  private sweepRateLimits(): void {
+    const now = Date.now();
+    for (const map of [this.sendAttempts, this.verifyAttempts]) {
+      for (const [key, entry] of map) {
+        if (now > entry.resetAt) map.delete(key);
+      }
+    }
+  }
+
+  private rateLimit(map: Map<string, { count: number; resetAt: number }>, key: string, max: number, window: number): boolean {
+    const now = Date.now();
+    const entry = map.get(key);
+    if (!entry || now > entry.resetAt) {
+      map.set(key, { count: 1, resetAt: now + window });
+      return false;
+    }
+    entry.count++;
+    return entry.count > max;
+  }
+
+  async sendOtp(
+    emailRaw: string,
+    locale = "en",
+    signupContext?: SignupContext,
+    currency?: string,
+  ): Promise<{ isNewUser: boolean }> {
+    const email = validateEmail(emailRaw);
+    if (!email) throw new BadRequestException("Invalid email");
+
+    if (this.rateLimit(this.sendAttempts, email, SEND_LIMIT_MAX, SEND_LIMIT_WINDOW)) {
+      throw new HttpException("Too many requests", HttpStatus.TOO_MANY_REQUESTS);
+    }
+
+    const code = generateOTP();
+    const otpHash = hashOTP(code);
+    const otpExpiresAt = new Date(Date.now() + OTP_EXPIRY_MS);
+    const normalizedLocale = this.i18n.urlLocale(locale);
+    let pending = this.normalizeSignupContext(signupContext, currency);
+
+    const existing = await this.prisma.user.findUnique({ where: { email }, select: { id: true } });
+    let isNewUser = false;
+
+    // Brand-new email and no create-flow context → seed a generic template anyway so the user
+    // doesn't land on a blank dashboard. Existing users are left alone (their pending fields
+    // are not overwritten with defaults).
+    if (!existing && Object.keys(pending).length === 0) {
+      pending = this.defaultSignupContext(currency);
+    }
+
+    if (existing) {
+      await this.prisma.user.update({
+        where: { email },
+        data: {
+          otp: otpHash,
+          otpExpiresAt,
+          otpAttempts: 0,
+          preferredLocale: normalizedLocale,
+          ...pending,
+        },
+      });
+    } else {
+      isNewUser = true;
+      try {
+        await this.prisma.user.create({
+          data: {
+            email,
+            otp: otpHash,
+            otpExpiresAt,
+            otpAttempts: 0,
+            preferredLocale: normalizedLocale,
+            ...pending,
+          },
+        });
+      } catch (e) {
+        if (e instanceof Prisma.PrismaClientKnownRequestError && e.code === "P2002") {
+          // Race: another request created the user. Update OTP on existing.
+          await this.prisma.user.update({
+            where: { email },
+            data: {
+              otp: otpHash,
+              otpExpiresAt,
+              otpAttempts: 0,
+              preferredLocale: normalizedLocale,
+              ...pending,
+            },
+          });
+          isNewUser = false;
+        } else {
+          throw e;
+        }
+      }
+    }
+
+    await this.mail.sendOtp({ email, code, locale });
+    return { isNewUser };
+  }
+
+  /** Pick out a pending-signup-context field set, or empty object if no valid context.
+   *  Cuisine is validated via the literal whitelist; restaurantName is trimmed and capped. */
+  private normalizeSignupContext(
+    ctx: SignupContext | undefined,
+    currency: string | undefined,
+  ): { pendingCuisine: CuisineKey; pendingRestaurantName: string; pendingCurrency: string } | Record<string, never> {
+    if (!ctx) return {};
+    const name = ctx.restaurantName?.trim().slice(0, 120);
+    if (!name) return {};
+    const cuisine: CuisineKey = isCuisineKey(ctx.cuisine) ? ctx.cuisine : "restaurant";
+    return {
+      pendingCuisine: cuisine,
+      pendingRestaurantName: name,
+      pendingCurrency: currency || "EUR",
+    };
+  }
+
+  /** Fallback context for a brand-new user who didn't go through the create-flow.
+   *  Only the currency matters for seeding now (the empty restaurant carries no
+   *  name/cuisine — the onboarding wizard collects the name). `pendingCuisine`
+   *  is kept purely as a "seed an empty restaurant on first verify" marker. */
+  private defaultSignupContext(
+    currency: string | undefined,
+  ): { pendingCuisine: CuisineKey; pendingRestaurantName: string; pendingCurrency: string } {
+    return {
+      pendingCuisine: "restaurant",
+      pendingRestaurantName: "",
+      pendingCurrency: currency || "EUR",
+    };
+  }
+
+  /** After a successful auth (OTP/Google/Apple), if the user has a pending
+   *  signup marker AND no restaurant yet, seed an EMPTY restaurant (no menu —
+   *  the onboarding wizard fills it). Pending fields are cleared **only on
+   *  success** so a transient failure retries on next login. Returns true when
+   *  seeding actually happened in this call. */
+  private async applyPendingAndMaybeSeed(userId: string, fallbackLocale: string | null | undefined): Promise<boolean> {
+    const user = await this.prisma.user.findUnique({
+      where: { id: userId },
+      select: {
+        pendingCurrency: true,
+        preferredLocale: true,
+        restaurantUsers: { take: 1, select: { id: true } },
+      },
+    });
+    if (!user) return false;
+
+    const hasRestaurant = user.restaurantUsers.length > 0;
+
+    // Restaurant already attached → pending is moot; clear it and exit.
+    // NOTE: we seed whenever the user has NO restaurant, regardless of any
+    // pending signup marker. This also self-heals accounts orphaned when their
+    // last restaurant was deleted (a co-owner/admin delete leaves the other
+    // attached users with zero restaurants → AuthGuard would 401 them
+    // otherwise). They get a fresh empty restaurant and the onboarding modals.
+    if (hasRestaurant) {
+      await this.prisma.user.update({
+        where: { id: userId },
+        data: { pendingCuisine: null, pendingRestaurantName: null, pendingCurrency: null },
+      });
+      return false;
+    }
+
+    let seeded = false;
+    try {
+      await this.seed.seedEmptyRestaurant({
+        userId,
+        currency: user.pendingCurrency || "EUR",
+        locale: user.preferredLocale || fallbackLocale,
+      });
+      seeded = true;
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.error("[auth] empty-restaurant seed failed — pending kept for retry on next login", err);
+    }
+
+    if (seeded) {
+      await this.prisma.user.update({
+        where: { id: userId },
+        data: { pendingCuisine: null, pendingRestaurantName: null, pendingCurrency: null },
+      });
+    }
+    return seeded;
+  }
+
+  async verifyOtp(emailRaw: string, code: string): Promise<{ token: string; userId: string; onboardingStep: number; isNewUser: boolean; legacyDashboard: boolean }> {
+    const email = validateEmail(emailRaw);
+    if (!email || !code) throw new BadRequestException("Email and code required");
+
+    if (this.rateLimit(this.verifyAttempts, email, VERIFY_LIMIT_MAX, VERIFY_LIMIT_WINDOW)) {
+      throw new HttpException("Too many attempts", HttpStatus.TOO_MANY_REQUESTS);
+    }
+
+    const user = await this.prisma.user.findUnique({
+      where: { email },
+      include: { restaurantUsers: { take: 1, select: { id: true } } },
+    });
+
+    if (!user) {
+      throw new BadRequestException("INVALID_CODE");
+    }
+
+    if (!user.otp || !user.otpExpiresAt) {
+      throw new BadRequestException("INVALID_CODE");
+    }
+
+    if (user.otpAttempts >= MAX_OTP_ATTEMPTS) {
+      await this.prisma.user.update({
+        where: { email },
+        data: { otp: null, otpExpiresAt: null, otpAttempts: 0 },
+      });
+      throw new HttpException("TOO_MANY_ATTEMPTS", HttpStatus.TOO_MANY_REQUESTS);
+    }
+
+    if (user.otpExpiresAt < new Date()) {
+      await this.prisma.user.update({
+        where: { email },
+        data: { otp: null, otpExpiresAt: null, otpAttempts: 0 },
+      });
+      throw new BadRequestException("CODE_EXPIRED");
+    }
+
+    if (!safeCompare(user.otp, hashOTP(code))) {
+      await this.prisma.user.update({
+        where: { email },
+        data: { otpAttempts: { increment: 1 } },
+      });
+      throw new BadRequestException("INVALID_CODE");
+    }
+
+    // Success — issue session token.
+    const token = generateSessionToken();
+    const tokenHash = hashSessionToken(token);
+
+    await this.prisma.user.update({
+      where: { email },
+      data: {
+        otp: null,
+        otpExpiresAt: null,
+        otpAttempts: 0,
+        // Dual-write: legacy single-token column kept until phase B (drop on
+        // 2026-05-13). Multi-device login now lives in the `sessions` table.
+        sessionToken: tokenHash,
+      },
+    });
+    await this.prisma.session.create({
+      data: {
+        userId: user.id,
+        tokenHash,
+        expiresAt: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000),
+      },
+    });
+
+    // If signup-flow context was attached on send-otp, seed the template restaurant now.
+    const seeded = await this.applyPendingAndMaybeSeed(user.id, null);
+
+    // Onboarding is "complete" the moment the user has at least one attached
+    // restaurant — either freshly seeded above or from a prior session.
+    const hasRestaurant = seeded || user.restaurantUsers.length > 0;
+    const finalStep = hasRestaurant ? 3 : 0;
+    const legacyDashboard = isLegacyEmail(email);
+    return {
+      token,
+      userId: user.id,
+      onboardingStep: finalStep,
+      isNewUser: !hasRestaurant,
+      legacyDashboard,
+    };
+  }
+
+  /** Resolve user from session cookie. Throws Unauthorized when missing/invalid.
+   *
+   *  When admin_original_* cookies are present we are inside an impersonation
+   *  session: validate the **admin's** session token (kept untouched in
+   *  iqr_session) and skip target sessionToken validation entirely so the
+   *  target user keeps their existing login. */
+  async resolveSession(
+    cookieValue: string | undefined,
+    email: string | undefined,
+    impersonation?: { adminOrigSession?: string; adminOrigEmail?: string },
+  ): Promise<{ userId: string; email: string; onboardingStep: number; legacyDashboard: boolean; isDemo: boolean; defaultDark: boolean; accountCreatedAt: string }> {
+    if (!cookieValue || !email) throw new UnauthorizedException();
+    const adminEmail = impersonation?.adminOrigEmail;
+    const adminSession = impersonation?.adminOrigSession;
+    const isImpersonating = Boolean(adminEmail && adminSession);
+
+    if (isImpersonating) {
+      const adminDomain = (process.env.ADMIN_EMAIL_DOMAIN || "iq-rest.com").toLowerCase();
+      if (!adminEmail!.toLowerCase().endsWith("@" + adminDomain)) {
+        throw new UnauthorizedException();
+      }
+      const adminUser = await this.prisma.user.findUnique({ where: { email: adminEmail! } });
+      if (!adminUser) throw new UnauthorizedException();
+      const adminTokenHash = hashSessionToken(adminSession!);
+      // Phase A dual-read: prefer multi-device sessions row, fall back to the
+      // legacy User.sessionToken column for users who logged in before phase A.
+      const adminSessionRow = await this.prisma.session.findUnique({ where: { tokenHash: adminTokenHash } });
+      const adminSessionValid =
+        (adminSessionRow && adminSessionRow.userId === adminUser.id && (adminSessionRow.expiresAt === null || adminSessionRow.expiresAt > new Date())) ||
+        (adminUser.sessionToken !== null && safeCompare(adminUser.sessionToken, adminTokenHash));
+      if (!adminSessionValid) throw new UnauthorizedException();
+    }
+
+    const user = await this.prisma.user.findUnique({ where: { email } });
+    if (!user) throw new UnauthorizedException();
+
+    if (!isImpersonating) {
+      const tokenHash = hashSessionToken(cookieValue);
+      const sessionRow = await this.prisma.session.findUnique({ where: { tokenHash } });
+      const sessionRowValid =
+        sessionRow !== null && sessionRow.userId === user.id && (sessionRow.expiresAt === null || sessionRow.expiresAt > new Date());
+      const legacyValid =
+        user.sessionToken !== null && safeCompare(user.sessionToken, tokenHash);
+      if (!sessionRowValid && !legacyValid) {
+        throw new UnauthorizedException();
+      }
+    }
+
+    return {
+      userId: user.id,
+      email: user.email,
+      // Onboarding flag lived on Company; the new model treats every account
+      // as "complete" — the SPA derives onboarding state from whether the
+      // active restaurant has a menu yet.
+      onboardingStep: 3,
+      legacyDashboard: isLegacyEmail(user.email),
+      isDemo: user.isDemo,
+      defaultDark: user.createdAt >= DARK_DEFAULT_SINCE,
+      // Account creation time — the dashboard gates the daily trial reminder
+      // modal on this (first shown ≥24h after signup, then once per day).
+      accountCreatedAt: user.createdAt.toISOString(),
+    };
+  }
+
+  async logout(email: string | undefined, cookieValue?: string): Promise<void> {
+    if (!email) return;
+    if (cookieValue) {
+      const tokenHash = hashSessionToken(cookieValue);
+      await this.prisma.session.deleteMany({ where: { tokenHash } }).catch(() => undefined);
+      // Legacy compat: if this token was the User.sessionToken (logged in
+      // before phase A), clear it too. Otherwise leave it — it belongs to a
+      // different device that should remain logged in.
+      await this.prisma.user.updateMany({
+        where: { email, sessionToken: tokenHash },
+        data: { sessionToken: null },
+      }).catch(() => undefined);
+    } else {
+      // No token in cookie: nuke everything for this user (defensive).
+      const u = await this.prisma.user.findUnique({ where: { email }, select: { id: true } }).catch(() => null);
+      if (u) await this.prisma.session.deleteMany({ where: { userId: u.id } }).catch(() => undefined);
+      await this.prisma.user.update({ where: { email }, data: { sessionToken: null } }).catch(() => undefined);
+    }
+  }
+
+  /** Exchange an authorization code (from accounts.oauth2.initCodeClient popup flow)
+   *  for an id_token. Uses redirect_uri="postmessage" because the popup hands the
+   *  code back via window.postMessage rather than a redirect. */
+  /** Exchange a Google authorization code for an id_token.
+   *  redirectUri defaults to "postmessage" (popup ux_mode); pass the actual
+   *  callback URL when using a full-page redirect flow — Google validates it
+   *  must match the one used to obtain the code. */
+  async exchangeGoogleCode(code: string, redirectUri = "postmessage"): Promise<string> {
+    const clientId = this.config.get<string>("GOOGLE_CLIENT_ID");
+    const clientSecret =
+      this.config.get<string>("GOOGLE_CLIENT_SECRET") ||
+      this.config.get<string>("GOOGLE_ADS_CLIENT_SECRET");
+    if (!clientId || !clientSecret) {
+      throw new HttpException("Google auth not configured", HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+    const { OAuth2Client } = await import("google-auth-library");
+    const oauth = new OAuth2Client(clientId, clientSecret, redirectUri);
+    try {
+      const { tokens } = await oauth.getToken(code);
+      if (!tokens.id_token) throw new BadRequestException("Google did not return id_token");
+      return tokens.id_token;
+    } catch (e) {
+      if (e instanceof BadRequestException) throw e;
+      throw new BadRequestException("Invalid Google authorization code");
+    }
+  }
+
+  async verifyGoogleCredential(
+    credential: string,
+    signupContext?: SignupContext,
+    currency?: string,
+    locale?: string | null,
+  ): Promise<{
+    token: string;
+    userId: string;
+    email: string;
+    onboardingStep: number;
+    isNewUser: boolean;
+    legacyDashboard: boolean;
+  }> {
+    if (!credential) throw new BadRequestException("Missing credential");
+    const clientId = this.config.get<string>("GOOGLE_CLIENT_ID");
+    if (!clientId) throw new HttpException("Google auth not configured", HttpStatus.INTERNAL_SERVER_ERROR);
+
+    const { OAuth2Client } = await import("google-auth-library");
+    const oauth = new OAuth2Client(clientId);
+    let payload: { email?: string; name?: string } | undefined;
+    try {
+      const ticket = await oauth.verifyIdToken({ idToken: credential, audience: clientId });
+      payload = ticket.getPayload() as { email?: string; name?: string } | undefined;
+    } catch {
+      throw new BadRequestException("Invalid Google token");
+    }
+    if (!payload?.email) throw new BadRequestException("Invalid Google token");
+
+    const email = payload.email.trim().toLowerCase();
+    const displayName = payload.name || email.split("@")[0];
+
+    void displayName;
+    let user = await this.prisma.user.findUnique({
+      where: { email },
+      include: { restaurantUsers: { take: 1, select: { id: true } } },
+    });
+    let isNewUser = false;
+
+    if (!user) {
+      isNewUser = true;
+      const normalizedLocale = locale ? this.i18n.urlLocale(locale) : null;
+      user = await this.prisma.user.create({
+        data: { email, ...(normalizedLocale ? { preferredLocale: normalizedLocale } : {}) },
+        include: { restaurantUsers: { take: 1, select: { id: true } } },
+      });
+    }
+
+    if (!user) throw new HttpException("Failed to load user", HttpStatus.INTERNAL_SERVER_ERROR);
+
+    const token = generateSessionToken();
+    const tokenHash = hashSessionToken(token);
+    // Stash the signup context on the user row so the seeder can pick it up
+    // in the same code path as the OTP flow (single source of truth).
+    // Brand-new Google account with no create-flow context → use the default template.
+    let pending = this.normalizeSignupContext(signupContext, currency);
+    if (isNewUser && Object.keys(pending).length === 0) {
+      pending = this.defaultSignupContext(currency);
+    }
+    await this.prisma.user.update({
+      where: { id: user.id },
+      data: { sessionToken: tokenHash, ...pending },
+    });
+    await this.prisma.session.create({
+      data: {
+        userId: user.id,
+        tokenHash,
+        expiresAt: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000),
+      },
+    });
+
+    const seeded = await this.applyPendingAndMaybeSeed(user.id, locale ?? null);
+    const hasRestaurant = seeded || user.restaurantUsers.length > 0;
+    const finalStep = hasRestaurant ? 3 : 0;
+    const legacyDashboard = isLegacyEmail(email);
+    return { token, userId: user.id, email, onboardingStep: finalStep, isNewUser, legacyDashboard };
+  }
+
+  private appleConfig(): import("./apple-auth").AppleConfig {
+    const teamId = this.config.get<string>("APPLE_TEAM_ID");
+    const keyId = this.config.get<string>("APPLE_KEY_ID");
+    const servicesId = this.config.get<string>("APPLE_SERVICES_ID");
+    const privateKey = this.config.get<string>("APPLE_PRIVATE_KEY");
+    if (!teamId || !keyId || !servicesId || !privateKey) {
+      throw new HttpException("Apple auth not configured", HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+    return { teamId, keyId, servicesId, privateKey };
+  }
+
+  /** Exchange an Apple authorization code for an id_token. The redirect URI
+   *  must byte-match the one registered on the Services ID and used in the
+   *  authorize request. */
+  async exchangeAppleCode(code: string, redirectUri: string): Promise<string> {
+    const { exchangeAppleCode } = await import("./apple-auth");
+    try {
+      return await exchangeAppleCode(this.appleConfig(), code, redirectUri);
+    } catch {
+      throw new BadRequestException("Invalid Apple authorization code");
+    }
+  }
+
+  /** Mirror of verifyGoogleCredential for Sign in with Apple. Verifies the
+   *  id_token, then runs the exact same find-or-create + session-issue path.
+   *  `displayName` carries the name Apple only sends on the FIRST sign-in
+   *  (parsed from the form_post `user` field); it seeds the company name for
+   *  brand-new accounts and is ignored thereafter. */
+  async verifyAppleCredential(
+    idToken: string,
+    displayName: string | null,
+    signupContext?: SignupContext,
+    currency?: string,
+    locale?: string | null,
+  ): Promise<{
+    token: string;
+    userId: string;
+    email: string;
+    onboardingStep: number;
+    isNewUser: boolean;
+    legacyDashboard: boolean;
+  }> {
+    if (!idToken) throw new BadRequestException("Missing credential");
+    const { verifyAppleIdToken } = await import("./apple-auth");
+    let identity: import("./apple-auth").AppleIdentity;
+    try {
+      identity = await verifyAppleIdToken(this.appleConfig(), idToken);
+    } catch {
+      throw new BadRequestException("Invalid Apple token");
+    }
+    if (!identity.email) throw new BadRequestException("Invalid Apple token");
+
+    const email = identity.email.trim().toLowerCase();
+    void displayName;
+
+    let user = await this.prisma.user.findUnique({
+      where: { email },
+      include: { restaurantUsers: { take: 1, select: { id: true } } },
+    });
+    let isNewUser = false;
+
+    if (!user) {
+      isNewUser = true;
+      const normalizedLocale = locale ? this.i18n.urlLocale(locale) : null;
+      user = await this.prisma.user.create({
+        data: { email, ...(normalizedLocale ? { preferredLocale: normalizedLocale } : {}) },
+        include: { restaurantUsers: { take: 1, select: { id: true } } },
+      });
+    }
+
+    if (!user) throw new HttpException("Failed to load user", HttpStatus.INTERNAL_SERVER_ERROR);
+
+    const token = generateSessionToken();
+    const tokenHash = hashSessionToken(token);
+    let pending = this.normalizeSignupContext(signupContext, currency);
+    if (isNewUser && Object.keys(pending).length === 0) {
+      pending = this.defaultSignupContext(currency);
+    }
+    await this.prisma.user.update({
+      where: { id: user.id },
+      data: { sessionToken: tokenHash, ...pending },
+    });
+    await this.prisma.session.create({
+      data: {
+        userId: user.id,
+        tokenHash,
+        expiresAt: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000),
+      },
+    });
+
+    const seeded = await this.applyPendingAndMaybeSeed(user.id, locale ?? null);
+    const hasRestaurant = seeded || user.restaurantUsers.length > 0;
+    const finalStep = hasRestaurant ? 3 : 0;
+    const legacyDashboard = isLegacyEmail(email);
+    return { token, userId: user.id, email, onboardingStep: finalStep, isNewUser, legacyDashboard };
+  }
+}

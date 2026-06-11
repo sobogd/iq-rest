@@ -1,0 +1,622 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-arm64-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id              String    @id @default(cuid())
+  email           String    @unique
+  otp             String?
+  otpExpiresAt    DateTime?
+  otpAttempts     Int       @default(0) // failed OTP verification attempts
+  sessionToken    String?   // hashed session token for validation
+  preferredLocale String?   // last locale the user actively used in the dashboard; drives email language
+  // Pre-signup context captured before OTP verify (cleared on first verify).
+  // Used to seed a template restaurant for new accounts that came through the create-flow.
+  pendingCuisine        String?
+  pendingRestaurantName String?
+  pendingCurrency       String?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  // Billing — Stripe customer is per-human, not per-account. Multiple
+  // per-restaurant subscriptions sit under this single customer.
+  stripeCustomerId String? @unique
+
+  // Email-campaign tracking — emails go to the human, not the venue.
+  emailsSent        Json?
+  emailUnsubscribed Boolean   @default(false)
+  upsellShownAt     DateTime?
+  reminderSentAt    DateTime?
+
+  // Demo accounts — ephemeral, no email, no trial. Auto-deleted by the demo
+  // cleanup cron once `demoCreatedAt` ages out (unless claimed first). `isDemo`
+  // gates email suppression, the Stripe block, and the "save your menu" banner.
+  isDemo        Boolean   @default(false)
+  demoCreatedAt DateTime?
+  // Real email a demo user entered to claim (convert) the account — the OTP
+  // target during the claim flow. Cleared once the claim verifies.
+  claimEmail    String?
+
+  supportMessages SupportMessage[]
+  sessions        Session[]
+  restaurantUsers RestaurantUser[]
+
+  @@index([isDemo, demoCreatedAt])
+  @@map("users")
+}
+
+model Session {
+  id        String    @id @default(cuid())
+  userId    String
+  tokenHash String    @unique
+  userAgent String?
+  ip        String?
+  createdAt DateTime  @default(now())
+  expiresAt DateTime?
+
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("sessions")
+}
+
+enum Plan {
+  FREE
+  BASIC
+  PRO
+}
+
+enum BillingCycle {
+  MONTHLY
+  YEARLY
+}
+
+enum SubscriptionStatus {
+  INACTIVE
+  ACTIVE
+  PAST_DUE
+  CANCELED
+  EXPIRED
+}
+
+model Restaurant {
+  id              String   @id @default(cuid())
+  title           String
+  subtitle        String?
+  description     String?
+  slug            String?
+  currency        String   @default("EUR")
+  source          String?
+  // "image" | "video"; null when source is unset
+  backgroundType  String?
+  accentColor     String   @default("#ED3A3A")
+  address         String?
+  x               String?
+  y               String?
+  // Google Places ID for the venue, captured by the dashboard map picker.
+  // Used only to disambiguate the "Open in Google Maps" link when several
+  // businesses share the same address (different floor / unit). Marker on
+  // the public menu map still renders from x/y to avoid Places API cost.
+  googlePlaceId   String?
+  phone           String?
+  instagram       String?
+  whatsapp        String?
+  languages       String[] @default(["en"])
+  defaultLanguage String   @default("en")
+  hideTitle       Boolean  @default(false)
+  // Public-menu visual: "flat" (current — horizontal tabs + inline dishes)
+  // or "drill" (vertical list of categories → click into per-category dish screen).
+  // Groups, when present, always show as a vertical drill above this layout.
+  menuLayout      String   @default("flat")
+  // Public-menu hero title/description font scale: "small" | "medium" | "large".
+  // Proportional steps applied over the background image (default large).
+  titleScale      String   @default("medium")
+  // Public-menu language switcher placement: "inline" (nav-list row, default
+  // for existing restaurants) | "top" (globe icon over the hero). New
+  // restaurants are seeded with "top".
+  languageSwitcher String  @default("inline")
+  // Payment methods this restaurant offers — enum codes only (cash, card, ...).
+  // Display strings live in dashboard locales; integrations add new codes here.
+  paymentMethods  String[] @default(["cash", "card"])
+  // Free-form internal note written by admins; never shown to customers
+  // or restaurant owners. Edited via the admin restaurant modal.
+  adminComment    String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  // Checklist flags (set once on first user action)
+  checklistMenuEdited      Boolean @default(false)
+  checklistContactsSaved   Boolean @default(false)
+  checklistBrandCustomized Boolean @default(false)
+  startedFromScratch       Boolean @default(false)
+  fromScanner              Boolean @default(false)
+  // First-login onboarding modals (two independent steps, persisted so they
+  // never reappear once handled). Name step: set true when the owner enters a
+  // name or skips. Fill step: set true when they pick demo / scan / scratch.
+  // New empty restaurants start false; restaurants created via the
+  // multi-restaurant flow start true; existing rows are backfilled to true.
+  onboardingNameDone       Boolean @default(false)
+  onboardingFillDone       Boolean @default(false)
+
+  // UI banners (per-restaurant dismissals)
+  scanBannerDismissed      Boolean @default(false)
+
+  // Free AI trials
+  freeTranslationsLeft      Int @default(5)
+  freeImageGenerationsLeft  Int @default(2)
+
+  // Monthly AI usage counters (reset manually or via cron)
+  translationsUsed      Int @default(0)
+  imageGenerationsUsed  Int @default(0)
+  imageStylizationsUsed Int @default(0)
+
+  // Reservation settings
+  reservationsEnabled    Boolean @default(false)
+  reservationMode        String  @default("manual") // "auto" | "manual"
+  reservationSlotMinutes Int     @default(90)
+  workingHoursStart      String  @default("10:00")
+  workingHoursEnd        String  @default("22:00")
+  // Per-day schedule. Array length 7, index 0=Mon ... 6=Sun.
+  // [{ closed, from, to, lunchFrom, lunchTo }]. Null = legacy single-window
+  // mode driven by workingHoursStart/End.
+  reservationSchedule    Json?
+  // IANA timezone identifier (e.g. "Europe/Rome", "America/New_York"). Used
+  // by the public booking flow to interpret workingHours / reservationSchedule
+  // strings and the "is slot in the past" check against the restaurant's
+  // local clock instead of the server's UTC clock. New restaurants set this
+  // from `Intl.DateTimeFormat().resolvedOptions().timeZone`; existing rows
+  // are backfilled from the lat/lon stored in (x, y).
+  timezone               String  @default("UTC")
+
+  // WhatsApp orders
+  ordersEnabled          Boolean @default(false)
+  orderNameEnabled       Boolean @default(true)
+  orderPhoneEnabled      Boolean @default(false)
+  orderAddressEnabled    Boolean @default(false)
+  orderMode              String  @default("internal") // "internal" | "whatsapp" | "both"
+
+  // Per-restaurant billing. Each restaurant carries its own subscription —
+  // creating a second restaurant means a second sub. `trialEndsAt` is
+  // populated only for a user's FIRST restaurant; subsequent restaurants
+  // start as FREE without trial.
+  plan                  Plan?
+  billingCycle          BillingCycle?
+  subscriptionStatus    SubscriptionStatus  @default(INACTIVE)
+  currentPeriodEnd      DateTime?
+  paymentProcessing     Boolean             @default(false)
+  stripeSubscriptionId  String?             @unique
+  // Stripe customer is now per-restaurant (each venue bills independently and
+  // may use a different currency). Legacy subscriptions created before this
+  // change still sit under User.stripeCustomerId; new checkouts create/reuse
+  // this one. Currency is locked per Stripe customer, so it must be per-venue.
+  stripeCustomerId      String?             @unique
+  // Billing currency for this restaurant's IQ Rest subscription (EUR/NOK/SEK/
+  // DKK). Distinct from `currency` above, which is the public-menu currency.
+  billingCurrency       String              @default("EUR")
+  trialEndsAt           DateTime?
+
+  tables          Table[]
+  reservations    Reservation[]
+  orders          Order[]
+  categories      Category[]
+  items           Item[]
+  pageViews       PageView[]
+  restaurantUsers RestaurantUser[]
+  supportMessages SupportMessage[]
+  devices         Device[]
+
+  @@index([slug])
+  @@map("restaurants")
+}
+
+// User ↔ Restaurant many-to-many. Sole ownership model.
+// Anyone in this table has full access to the restaurant (no role hierarchy —
+// kept intentionally flat per product decision 2026-05-28).
+model RestaurantUser {
+  id           String   @id @default(cuid())
+  restaurantId String
+  userId       String
+  addedAt      DateTime @default(now())
+  // userId of whoever invited this user (null for the first user, who is the
+  // restaurant's creator).
+  addedBy      String?
+
+  restaurant Restaurant @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
+  user       User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([restaurantId, userId])
+  @@index([userId])
+  @@index([restaurantId])
+  @@map("restaurant_users")
+}
+
+model Table {
+  id           String   @id @default(cuid())
+  restaurantId String
+  number       Int
+  capacity     Int
+  zone         String?
+  description  String?  // Free-form note shown next to the name on the table form
+  translations Json?    // { "en": { "zone": "...", "description": "..." }, "es": {...} }
+  imageUrl     String?
+  // Hex color used on the dashboard floor map / table grid when set;
+  // overrides imageUrl in dashboard rendering, ignored on the public menu.
+  color        String?
+  // Floor-map position in percent (0-100); null = unplaced
+  x            Float?
+  y            Float?
+  // Floor-map marker shape: "circle" (default) or "rect". Width/height + rotation
+  // for the marker come in a later phase; today the size is capacity-derived.
+  shape        String   @default("circle")
+  // Floor-map marker rotation in degrees (0 = upright).
+  rotation     Float    @default(0)
+  // Floor-map marker size as a percent of the map (0-100); null = derive from
+  // capacity (legacy default). Set once the owner resizes via the handles.
+  width        Float?
+  height       Float?
+  isActive     Boolean  @default(true)
+  sortOrder    Int      @default(0)
+  // Soft-delete marker. Hidden from active table lists but kept so older
+  // bookings / orders can still resolve their tableId and tableNumber.
+  deletedAt    DateTime?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  restaurant   Restaurant    @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
+  reservations Reservation[]
+
+  @@index([restaurantId])
+  @@index([restaurantId, isActive])
+  @@map("tables")
+}
+
+model Reservation {
+  id           String   @id @default(cuid())
+  restaurantId String
+  tableId      String
+  date         DateTime @db.Date
+  startTime    String   // "19:00"
+  duration     Int      // minutes
+  guestName    String
+  guestEmail   String
+  guestPhone   String?
+  guestsCount  Int
+  status       String   @default("pending") // pending, confirmed, cancelled, completed
+  notes        String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  restaurant Restaurant @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
+  table      Table      @relation(fields: [tableId], references: [id], onDelete: Cascade)
+
+  @@index([restaurantId, date])
+  @@index([restaurantId, status])
+  @@index([tableId, date])
+  @@map("reservations")
+}
+
+model Category {
+  id           String   @id @default(cuid())
+  name         String
+  translations Json?    // { "en": { "name": "..." }, "es": {...} }
+  sortOrder    Int      @default(0)
+  isActive     Boolean  @default(true)
+  // Group nodes have isGroup=true and contain only sub-categories (no items).
+  // Leaf categories contain items and never have children.
+  isGroup      Boolean  @default(false)
+  // Self-reference for the 2-level tree (group -> categories). Null = top-level.
+  // onDelete: SetNull -> deleting a group bubbles its children to top-level.
+  parentId     String?
+  parent       Category?  @relation("CategoryTree", fields: [parentId], references: [id], onDelete: SetNull)
+  children     Category[] @relation("CategoryTree")
+  // Soft-delete marker. Deleting a category just sets this — its items keep
+  // their categoryId and stop rendering (orders are self-contained snapshots,
+  // so nothing downstream breaks).
+  deletedAt    DateTime?
+  restaurantId String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  restaurant Restaurant @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
+  items      Item[]
+
+  @@index([restaurantId])
+  @@index([restaurantId, sortOrder])
+  @@index([restaurantId, isActive, sortOrder])
+  @@index([restaurantId, parentId, sortOrder])
+  @@index([restaurantId, deletedAt])
+  @@map("categories")
+}
+
+model Item {
+  id           String   @id @default(cuid())
+  name         String
+  description  String?
+  translations Json?    // { "en": { "name": "...", "description": "..." }, "es": {...} }
+  price        Decimal  @db.Decimal(10, 2)
+  imageUrl     String?
+  allergens    String[] @default([]) // Array of allergen codes: gluten, dairy, eggs, etc.
+  diets        String[] @default([]) // Array of diet/lifestyle tags: vegan, vegetarian, gluten_free, etc.
+  // Variant groups: [{ id, name, translations, type: "single"|"multi", required, variants: [{ id, name, translations, priceDelta }] }]
+  options      Json?
+  sortOrder    Int      @default(0)
+  isActive     Boolean  @default(true)
+  // Soft-delete marker. Hidden from menu lists, but kept around so orders'
+  // dishId references and historical analytics can still resolve the row.
+  deletedAt    DateTime?
+  // Nullable + SetNull: deleting a category must NOT hard-delete its items.
+  // Orders' dishId + historical analytics still resolve the row; the item is
+  // soft-deleted and orphaned (categoryId -> null) instead of cascade-removed.
+  categoryId   String?
+  restaurantId String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  category   Category?  @relation(fields: [categoryId], references: [id], onDelete: SetNull)
+  restaurant Restaurant @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
+
+  @@index([categoryId])
+  @@index([categoryId, sortOrder])
+  @@index([restaurantId])
+  @@index([restaurantId, categoryId])
+  @@map("items")
+}
+
+model PageView {
+  id           String   @id @default(cuid())
+  restaurantId String
+  sessionId    String
+  page         String   // 'home' | 'contacts' | 'language' | 'menu'
+  language     String
+  referrer     String?
+  userAgent    String?
+  ip           String?
+  createdAt    DateTime @default(now())
+
+  restaurant Restaurant @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
+
+  @@index([createdAt])
+  @@index([restaurantId, createdAt])
+  @@index([restaurantId, sessionId])
+  @@map("page_views")
+}
+
+model SupportMessage {
+  id           String   @id @default(cuid())
+  userId       String
+  // Per-restaurant chat (all users attached to the restaurant see it).
+  restaurantId String
+  message      String   @db.Text
+  // Auto-translation parity with the WhatsApp inbox: `lang` is the language of
+  // `message`; `translatedRu` holds the Russian rendering (inbound: translation
+  // of the owner's text; admin reply: the admin's Russian original).
+  lang         String?
+  translatedRu String?  @db.Text
+  isAdmin      Boolean  @default(false)
+  createdAt    DateTime @default(now())
+
+  user       User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  restaurant Restaurant @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
+
+  @@index([restaurantId, createdAt])
+  @@map("support_messages")
+}
+
+/// Unified analytics. Replaces the old PulseEvent + Session + AnalyticsEvent.
+/// Anonymous by default (event + at + country + region + device + platform).
+/// gclid is set only by SSR (server-pulse from /app/<locale>/page.tsx on landing
+/// arrival with ?gclid=...). userId is attached server-side from the auth
+/// cookie when the request comes from a logged-in user; restaurantId from the
+/// active-restaurant cookie when present.
+model UsageEvent {
+  id        String   @id @default(cuid())
+  at        DateTime @default(now())
+  event     String
+  country   String   @default("XX")
+  region    String   @default("")
+  device    String?  // 'mobile' / 'tablet' / 'desktop'
+  platform  String?  // 'ios' / 'android' / 'windows' / 'macos' / 'linux' / 'other'
+  gclid     String?  // SSR-only — landing page on gclid arrival
+  ad_params String?  // JSON: { kw, term, campaign } from ValueTrack params
+  userId    String?  // server-side from iqr_session cookie when logged in
+  restaurantId String? // server-side from iqr_active_restaurant_id cookie when present
+  ip        String?  // anonymized client IP (IPv4 last octet zeroed, IPv6 truncated to /64)
+  is_google_ads Boolean @default(false) // arrival via gclid/gbraid/wbraid on the URL
+  is_facebook_ads Boolean @default(false) // arrival via fbclid on the URL (Facebook/Instagram ads)
+  is_search     Boolean @default(false) // arrival from a search engine referrer (google/bing/yandex/…)
+  // Identity stitched from device-fingerprint islands (anonymous pre-login
+  // activity attributed to the user/restaurant that later logged in from the
+  // same ip+device+platform+country+region within a <=3-day gap). Set by the
+  // stitching pass; only ever populated on otherwise-anonymous events.
+  stitchedUserId       String?
+  stitchedRestaurantId String?
+  // Manual admin attribution of a session to a restaurant. Highest precedence;
+  // never touched by the stitching pass.
+  manualRestaurantId   String?
+
+  @@index([at])
+  @@index([event, at])
+  @@index([userId, at])
+  @@index([restaurantId, at])
+  @@index([stitchedRestaurantId])
+  @@index([gclid])
+  @@index([is_google_ads, at])
+  @@index([is_facebook_ads, at])
+  @@index([is_search, at])
+  @@map("usage_events")
+}
+
+// Journal of manual Meta CAPI sends. One row per (fbclid, eventName) attempt;
+// a row with status="success" blocks re-sending the same event for the same
+// click. Replaces the old UsageEvent.fbSentEvents array.
+model CapiSend {
+  id        String   @id @default(cuid())
+  fbclid    String
+  eventName String
+  status    String   // "success" | "error"
+  response  Json?
+  createdAt DateTime @default(now())
+
+  @@index([fbclid])
+  @@index([fbclid, eventName, status])
+  @@map("capi_sends")
+}
+
+model Order {
+  id              String   @id @default(cuid())
+  restaurantId    String
+  items           Json     // [{ id, name, qty, price }]
+  total           Decimal  @db.Decimal(10, 2)
+  currency        String   @default("EUR")
+  customerName    String?
+  customerPhone   String?
+  customerAddress String?
+  comment         String?
+  tableNumber     Int?
+  status          String   @default("new") // new | in_progress | completed | cancelled
+  // Status the order had right before being closed (completed/cancelled). Lets
+  // "Return to kitchen" restore exactly that without guessing.
+  statusBeforeClose String?
+  // Payment method code chosen at close-time. Nullable for legacy orders.
+  paymentMethodId String?
+  // Order-level discount + total amount of (item discounts + order discount).
+  // Stored separately from items so analytics queries don't need JSON parsing
+  // — sum(discountTotal) over orders gives "discounts given" for a period.
+  // Item-level discounts continue to live inside Order.items JSON.
+  discount        Json?
+  discountTotal   Decimal? @db.Decimal(10, 2)
+  // Soft-delete marker. Hidden from operational lists but preserved so
+  // analytics (revenue, top dishes, etc.) survive a delete.
+  deletedAt       DateTime?
+  orderDate       DateTime @db.Date
+  dailyNumber     Int
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  restaurant Restaurant @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
+
+  @@unique([restaurantId, orderDate, dailyNumber])
+  @@index([restaurantId, createdAt])
+  @@index([restaurantId, status])
+  @@map("orders")
+}
+
+enum DeviceType {
+  KITCHEN
+  WAITER
+  RESERVATION
+}
+
+enum DeviceStatus {
+  ACTIVE
+  REVOKED
+}
+
+/// Physical device (tablet / phone) paired to a restaurant for kiosk-style
+/// access — kitchen display, waiter terminal, etc. Auth is by long-lived
+/// device JWT (not user session) so a tablet survives staff turnover.
+model Device {
+  id            String       @id @default(cuid())
+  restaurantId  String
+  name          String
+  type          DeviceType
+  status        DeviceStatus @default(ACTIVE)
+  // Bumped on revoke; every authed request re-checks this against the JWT.
+  // Mismatch / REVOKED → 401, kitchen redirects to pairing screen.
+  tokenVersion  Int          @default(1)
+  pairedAt      DateTime?
+  lastSeenAt    DateTime?
+  createdAt     DateTime     @default(now())
+  updatedAt     DateTime     @updatedAt
+
+  restaurant    Restaurant   @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
+  pairingCode   PairingCode?
+
+  @@index([restaurantId])
+  @@map("devices")
+}
+
+/// One-time pairing code generated in the admin and entered on the tablet.
+/// TTL ~120s. Consumed on successful pair (usedAt set). One pending code per
+/// device at a time — regenerate replaces the row.
+model PairingCode {
+  code      String   @id
+  deviceId  String   @unique
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime @default(now())
+
+  device    Device   @relation(fields: [deviceId], references: [id], onDelete: Cascade)
+
+  @@index([expiresAt])
+  @@map("pairing_codes")
+}
+
+
+
+/// A person who messages us on an external channel (currently WhatsApp). One
+/// row per (channel, externalId). `watched` = pin to the inbox; `muted` = hide
+/// new messages (e.g. personal contacts like family). Soft-hidden via `muted`.
+model InboxContact {
+  id            String   @id @default(cuid())
+  channel       String   // "whatsapp"
+  externalId    String   // WhatsApp phone (digits, e.g. "34123456789")
+  name          String?  // WhatsApp profile name (as received from Meta)
+  customName    String?  // admin-assigned internal name (highest display priority)
+  note          String?  // free-form admin comment about the contact
+  lang          String?  // detected language of the contact's messages
+  watched       Boolean  @default(false)
+  muted         Boolean  @default(false)
+  lastMessageAt DateTime @default(now())
+  createdAt     DateTime @default(now())
+
+  messages      InboxMessage[]
+
+  @@unique([channel, externalId])
+  @@index([lastMessageAt])
+  @@map("inbox_contacts")
+}
+
+/// One message in an inbox thread. `direction` in = from the contact, out =
+/// sent by the admin. `translatedRu` holds the Russian translation of inbound
+/// text; outbound stores the admin's Russian original in `translatedRu` and the
+/// sent (contact-language) text in `body`.
+model InboxMessage {
+  id           String   @id @default(cuid())
+  contactId    String
+  direction    String   // "in" | "out"
+  body         String   // text actually sent/received (contact language)
+  lang         String?  // language of `body`
+  translatedRu String?  // Russian rendering (in: translation; out: admin original)
+  externalId   String?  // provider message id (WhatsApp wamid)
+  status       String   @default("received") // received | sent | failed
+  createdAt    DateTime @default(now())
+
+  contact      InboxContact @relation(fields: [contactId], references: [id], onDelete: Cascade)
+
+  @@index([contactId, createdAt])
+  @@map("inbox_messages")
+}
+
+/// Admin-side read marker for a unified inbox thread. `threadId` is the same
+/// composite key the inbox API uses: "wa:<contactId>" for WhatsApp contacts and
+/// "int:<restaurantId>" for internal support threads. Opening a thread upserts
+/// `readAt = now()`; a thread counts as unread when it has inbound messages
+/// newer than `readAt` (or no marker yet). Drives the half-hourly digest email.
+model InboxRead {
+  id        String   @id @default(cuid())
+  threadId  String   @unique
+  readAt    DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("inbox_reads")
+}

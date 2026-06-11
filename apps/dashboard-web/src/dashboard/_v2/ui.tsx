@@ -1,0 +1,1795 @@
+"use client";
+
+import { useState, useEffect, useRef, ReactNode } from "react";
+import { createPortal } from "react-dom";
+import { apiUrl } from "@/lib/api";
+import { activeRestaurantHeader } from "@/lib/active-restaurant";
+import { useQueryClient } from "@tanstack/react-query";
+import { useTranslations } from "next-intl";
+import {
+ CheckIcon,
+ ChevronLeftIcon,
+ CloseIcon,
+ CopyIcon,
+ DownloadIcon,
+ ExternalLinkIcon,
+ EyeIcon,
+ GlobeIcon,
+ HelpCircleIcon,
+ ShareIcon,
+ SparklesIcon,
+} from "./icons";
+import { inputClass, labelClass, primaryBtn, secondaryBtn } from "./tokens";
+import { AVAILABLE_LANGUAGES, getMl, setMl, translateText } from "./i18n";
+import { useLocale } from "@/lib/i18n-compat";
+import { useAiImageAccess } from "./sub-context";
+import type { Ml } from "./types";
+import { MenuPreviewModal } from "@/components/menu-preview-modal";
+import { useScrollLock } from "./use-scroll-lock";
+import { track } from "@/lib/dashboard-events";
+import { QRCodeCanvas } from "qrcode.react";
+
+// Modal — Escape closes, body scroll lock while open.
+
+export function Modal({
+ open,
+ onClose,
+ onBack,
+ title,
+ subtitle,
+ children,
+ size = "md",
+ footer,
+ closeOnBackdrop = true,
+ hideHeader = false,
+ hideClose = false,
+}: {
+ open: boolean;
+ onClose: () => void;
+ onBack?: (() => void) | null;
+ title?: ReactNode;
+ subtitle?: ReactNode;
+ children?: ReactNode;
+ size?: "sm" | "md" | "lg";
+ footer?: ReactNode;
+ closeOnBackdrop?: boolean;
+ hideHeader?: boolean;
+ hideClose?: boolean;
+}) {
+ useEffect(() => {
+ if (!open) return;
+ function onKey(e: KeyboardEvent) {
+ if (e.key === "Escape") onClose();
+ }
+ window.addEventListener("keydown", onKey);
+ return () => window.removeEventListener("keydown", onKey);
+ }, [open, onClose]);
+
+ useScrollLock(open);
+
+ const tc = useTranslations("dashboard.common");
+ if (!open) return null;
+
+ const widthCls =
+ size === "sm" ? "max-w-sm" : size === "lg" ? "max-w-2xl" : "max-w-lg";
+
+ return (
+ <div className="fixed inset-0 z-50 flex items-center justify-center px-4 py-4 bg-black/50 backdrop-blur-sm">
+ <div className="absolute inset-0" onClick={closeOnBackdrop ? onClose : undefined} aria-hidden="true" />
+ <div
+ className={
+ "relative w-full " +
+ widthCls +
+ " bg-card border border-border rounded-2xl max-h-[90dvh] flex flex-col overflow-hidden"
+ }
+ >
+ {hideHeader ? null : (
+ <div className="flex items-start gap-2 px-5 py-3.5 border-b border-border shrink-0">
+ {onBack ? (
+ <button
+ type="button"
+ onClick={onBack}
+ className="w-8 h-8 -ml-2 flex items-center justify-center rounded-md text-muted-foreground transition-colors shrink-0"
+ aria-label={tc("back")}
+ >
+ <ChevronLeftIcon size={16} />
+ </button>
+ ) : null}
+ <div className="min-w-0 flex-1">
+ <h3 className="text-base font-medium text-foreground truncate">{title}</h3>
+ {subtitle ? (
+ <div className="text-xs text-muted-foreground mt-0.5">{subtitle}</div>
+ ) : null}
+ </div>
+ {hideClose ? null : (
+ <button
+ type="button"
+ onClick={onClose}
+ className="w-8 h-8 -mr-2 flex items-center justify-center rounded-md text-muted-foreground transition-colors shrink-0"
+ aria-label={tc("close")}
+ >
+ <CloseIcon size={16} />
+ </button>
+ )}
+ </div>
+ )}
+ {children != null && children !== false ? (
+ <div className="flex-1 min-h-0 overflow-y-auto p-5">{children}</div>
+ ) : null}
+ {footer ? (
+ <div
+ className={
+ "px-5 py-3 shrink-0" +
+ (children != null && children !== false ? " border-t border-border" : "")
+ }
+ >
+ {footer}
+ </div>
+ ) : null}
+ </div>
+ </div>
+ );
+}
+
+// Select — input-styled trigger with a chevron, opens a header/footer-less
+// modal whose body is a tap-to-select list. Closes on backdrop click or on
+// selecting an option (Escape works too via Modal's keydown handler).
+
+export interface SelectOption<T extends string | null> {
+ value: T;
+ label: string;
+}
+
+export function Select<T extends string | null>({
+ value,
+ onChange,
+ options,
+ placeholder,
+ id,
+ disabled,
+ className,
+}: {
+ value: T;
+ onChange: (next: T) => void;
+ options: SelectOption<T>[];
+ placeholder?: string;
+ id?: string;
+ disabled?: boolean;
+ /** Extra Tailwind classes appended to the trigger button. Useful for
+  *  width overrides (e.g. `"w-24"`, `"w-auto"`) when the Select sits
+  *  inline next to other controls. */
+ className?: string;
+}) {
+ const [open, setOpen] = useState(false);
+ const tc = useTranslations("dashboard.common");
+ const current = options.find((o) => o.value === value);
+ const showPlaceholder = !current && !!placeholder;
+ return (
+ <>
+ <button
+ id={id}
+ type="button"
+ disabled={disabled}
+ onClick={() => setOpen(true)}
+ className={inputClass + " inline-flex items-center justify-between gap-2 text-left disabled:opacity-50" + (className ? " " + className : "")}
+ >
+ <span
+ className={
+ "truncate " +
+ (showPlaceholder ? "text-muted-foreground" : "text-foreground")
+ }
+ >
+ {current?.label || placeholder || tc("untitled")}
+ </span>
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-muted-foreground shrink-0">
+ <polyline points="6 9 12 15 18 9" />
+ </svg>
+ </button>
+ <Modal
+ open={open}
+ onClose={() => setOpen(false)}
+ hideHeader
+ size="sm"
+ >
+ <div className="-m-5 divide-y divide-border">
+ {options.map((o, idx) => {
+ const isActive = o.value === value;
+ return (
+ <button
+ key={(o.value ?? "__null__") + ":" + idx}
+ type="button"
+ onClick={() => {
+ onChange(o.value);
+ setOpen(false);
+ }}
+ className={
+ "w-full flex items-center gap-3 px-5 py-3 text-left text-sm transition-colors " +
+ (isActive
+ ? "bg-primary/5 text-foreground font-medium"
+ : "text-foreground hover:bg-secondary/40")
+ }
+ >
+ <span className="flex-1 min-w-0 truncate">{o.label}</span>
+ {isActive ? <CheckIcon size={14} className="text-primary shrink-0" /> : null}
+ </button>
+ );
+ })}
+ </div>
+ </Modal>
+ </>
+ );
+}
+
+// UnsavedChangesDialog — leave-prompt for forms with unsaved edits.
+// Shared between DishForm + CategoryForm. Buttons match other modal
+// footers (justify-end, content-width, h-8 px-3 text-xs).
+
+export function UnsavedChangesDialog({
+ open,
+ saving,
+ onDiscard,
+ onSave,
+ onClose,
+}: {
+ open: boolean;
+ saving: boolean;
+ onDiscard: () => void;
+ onSave: () => void | Promise<void>;
+ onClose: () => void;
+}) {
+ const t = useTranslations("dashboard.common");
+ return (
+ <Modal
+ open={open}
+ onClose={() => !saving && onClose()}
+ title={t("unsavedTitle")}
+ subtitle={t("unsavedMessage")}
+ size="sm"
+ closeOnBackdrop={!saving}
+ footer={
+ <div className="flex items-center gap-2 justify-end">
+ <button
+ type="button"
+ onClick={onDiscard}
+ disabled={saving}
+ className="inline-flex items-center gap-1.5 h-8 px-3 text-xs font-medium text-foreground bg-card border border-border rounded-lg disabled:opacity-50"
+ >
+ <CloseIcon size={14} />
+ {t("discard")}
+ </button>
+ <button
+ type="button"
+ onClick={() => void onSave()}
+ disabled={saving}
+ className="inline-flex items-center gap-1.5 h-8 px-3 text-xs font-medium text-primary-foreground bg-primary-gradient rounded-lg disabled:opacity-60"
+ >
+ {saving ? (
+ <span className="w-3 h-3 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+ ) : (
+ <CheckIcon size={14} />
+ )}
+ {t("save")}
+ </button>
+ </div>
+ }
+ />
+ );
+}
+
+// ConfirmDialog — destructive by default. singleButton turns it into a one-button alert.
+
+export function ConfirmDialog({
+ open,
+ title,
+ message,
+ onConfirm,
+ onCancel,
+ confirmLabel,
+ confirmStyle,
+ singleButton,
+}: {
+ open: boolean;
+ title?: string;
+ message?: string;
+ onConfirm?: () => void;
+ onCancel: () => void;
+ confirmLabel?: string;
+ confirmStyle?: "danger" | "primary";
+ singleButton?: boolean;
+}) {
+ const tc = useTranslations("dashboard.common");
+ const label = confirmLabel || (singleButton ? tc("ok") : tc("delete"));
+ const isDanger = !singleButton && (!confirmStyle || confirmStyle === "danger");
+ const confirmCls = isDanger
+ ? "h-8 px-3 text-xs font-medium text-white bg-red-600 rounded-lg transition-colors"
+ : "h-8 px-3 text-xs font-medium text-primary-foreground bg-primary-gradient rounded-lg transition-colors";
+
+ return (
+ <Modal
+ open={open}
+ onClose={onCancel}
+ title={title || tc("confirm")}
+ subtitle={message}
+ size="sm"
+ footer={
+ <div className="flex gap-2 justify-end">
+ {!singleButton ? (
+ <button
+ type="button"
+ onClick={onCancel}
+ className="h-8 px-3 text-xs font-medium text-foreground bg-card border border-border rounded-lg transition-colors"
+ >
+ {tc("cancel")}
+ </button>
+ ) : null}
+ <button
+ type="button"
+ onClick={singleButton ? onCancel : onConfirm}
+ className={confirmCls}
+ >
+ {label}
+ </button>
+ </div>
+ }
+ />
+ );
+}
+
+// ToggleSwitch.
+
+export function ToggleSwitch({
+ checked,
+ onChange,
+}: {
+ checked: boolean;
+ onChange: () => void;
+}) {
+ return (
+ <button
+ type="button"
+ role="switch"
+ aria-checked={checked}
+ onClick={onChange}
+ className={
+ "shrink-0 relative inline-flex h-6 w-11 items-center rounded-full transition-colors " +
+ (checked ? "bg-foreground" : "bg-input")
+ }
+ >
+ <span
+ className={
+ "inline-block h-4 w-4 transform rounded-full bg-background transition-transform " +
+ (checked ? "translate-x-6" : "translate-x-1")
+ }
+ />
+ </button>
+ );
+}
+
+// LanguageSwitcher — pill tabs, only the languages enabled on the restaurant.
+
+interface MiniLang {
+ code: string;
+ short: string;
+ label: string;
+}
+
+export function LanguageSwitcher({
+ lang,
+ onChange,
+ languages,
+ onOpen,
+ onSelect,
+}: {
+ lang: string;
+ onChange: (code: string) => void;
+ languages: MiniLang[];
+ onOpen?: () => void;
+ onSelect?: () => void;
+}) {
+ const [open, setOpen] = useState(false);
+ const ref = useRef<HTMLDivElement | null>(null);
+
+ useEffect(() => {
+ if (!open) return;
+ function onDocClick(e: MouseEvent) {
+ if (!ref.current) return;
+ if (!ref.current.contains(e.target as Node)) setOpen(false);
+ }
+ function onEsc(e: KeyboardEvent) {
+ if (e.key === "Escape") setOpen(false);
+ }
+ document.addEventListener("mousedown", onDocClick);
+ document.addEventListener("keydown", onEsc);
+ return () => {
+ document.removeEventListener("mousedown", onDocClick);
+ document.removeEventListener("keydown", onEsc);
+ };
+ }, [open]);
+
+ if (languages.length <= 1) return null;
+ const active = languages.find((l) => l.code === lang) || languages[0];
+
+ return (
+ <div ref={ref} className="relative">
+ <button
+ type="button"
+ onClick={() => {
+ setOpen((v) => {
+ if (!v) onOpen?.();
+ return !v;
+ });
+ }}
+ className="inline-flex items-center gap-1 h-8 px-2.5 text-xs font-medium bg-secondary text-foreground rounded-md transition-colors"
+ title={active.label}
+ aria-haspopup="listbox"
+ aria-expanded={open}
+ >
+ <span className="uppercase">{active.short}</span>
+ <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+ <polyline points="6 9 12 15 18 9" />
+ </svg>
+ </button>
+ {open ? (
+ <div
+ role="listbox"
+ className="absolute right-0 mt-1 z-20 min-w-[180px] max-h-64 overflow-y-auto bg-card border border-border rounded-lg shadow-lg py-1"
+ >
+ {languages.map((l) => {
+ const isActive = l.code === lang;
+ return (
+ <button
+ key={l.code}
+ type="button"
+ role="option"
+ aria-selected={isActive}
+ onClick={() => {
+ onSelect?.();
+ onChange(l.code);
+ setOpen(false);
+ }}
+ className={
+ "w-full flex items-center justify-between gap-3 px-3 h-8 text-[12px] text-left transition-colors " +
+ (isActive ? "text-foreground" : "text-muted-foreground")
+ }
+ >
+ <span className="truncate">{l.label}</span>
+ <span className="uppercase text-[10px] tabular-nums shrink-0">{l.short}</span>
+ </button>
+ );
+ })}
+ </div>
+ ) : null}
+ </div>
+ );
+}
+
+// AiTranslateButton — invoked from within TranslatedInput when not on default lang.
+
+function AiTranslateButton({
+ value,
+ lang,
+ defaultLang,
+ languages,
+ onChange,
+ disabled,
+ inline,
+}: {
+ value: Ml;
+ lang: string;
+ defaultLang: string;
+ languages: string[];
+ onChange: (next: Ml) => void;
+ disabled?: boolean;
+ inline?: boolean;
+}) {
+ const [translating, setTranslating] = useState(false);
+ const [confirmReplace, setConfirmReplace] = useState(false);
+ const tc = useTranslations("dashboard.common");
+ const ta = useTranslations("dashboard.ai");
+
+ if (lang === defaultLang) return null;
+
+ const current = getMl(value, lang);
+ const sourceText = (() => {
+ const def = getMl(value, defaultLang);
+ if (def) return { text: def, fromLang: defaultLang };
+ for (const code of languages) {
+ const v = getMl(value, code);
+ if (v && code !== lang) return { text: v, fromLang: code };
+ }
+ return null;
+ })();
+
+ const canTranslate = !!sourceText && !translating && !disabled;
+
+ async function doTranslate() {
+ if (!canTranslate || !sourceText) return;
+ setTranslating(true);
+ try {
+ const translated = await translateText(sourceText.text, sourceText.fromLang, lang);
+ onChange(setMl(value, lang, translated));
+ } catch {
+ // Silent fail; the user can retry.
+ } finally {
+ setTranslating(false);
+ }
+ }
+
+ function handleClick() {
+ if (current.trim().length > 0) {
+ setConfirmReplace(true);
+ } else {
+ doTranslate();
+ }
+ }
+
+ const inlineCls =
+ "flex items-center justify-center w-9 h-10 rounded-lg text-muted-foreground transition-colors disabled:text-muted-foreground/50 disabled:cursor-not-allowed shrink-0";
+ const linkCls =
+ "inline-flex items-center gap-1 text-[11px] font-medium text-muted-foreground transition-colors disabled:text-muted-foreground/50 disabled:cursor-not-allowed";
+
+ return (
+ <>
+ <button
+ type="button"
+ onClick={handleClick}
+ disabled={!canTranslate}
+ className={inline ? inlineCls : linkCls}
+ aria-label={tc("translateWithAi")}
+ title={inline && translating ? tc("translating") : (inline ? tc("translateWithAi") : undefined)}
+ >
+ {translating ? (
+ <div className="w-3 h-3 border-2 border-input border-t-neutral-900 rounded-full animate-spin" />
+ ) : (
+ <SparklesIcon size={inline ? 14 : 11} />
+ )}
+ {!inline ? (translating ? tc("translating") : tc("translate")) : null}
+ </button>
+
+ <ConfirmDialog
+ open={confirmReplace}
+ title={ta("translateReplaceTitle")}
+ message={ta("translateReplaceMessage")}
+ confirmLabel={tc("replace")}
+ confirmStyle="primary"
+ onConfirm={() => {
+ setConfirmReplace(false);
+ doTranslate();
+ }}
+ onCancel={() => setConfirmReplace(false)}
+ />
+ </>
+ );
+}
+
+// Textarea that grows to fit its content. Starts at the height of a regular
+// input (h-10) and expands one line at a time. On md+ it keeps a min height
+// matching the dish photo column so the form stays balanced.
+export function AutoGrowTextarea(props: React.TextareaHTMLAttributes<HTMLTextAreaElement>) {
+ const ref = useRef<HTMLTextAreaElement | null>(null);
+
+ useEffect(() => {
+ const el = ref.current;
+ if (!el) return;
+ el.style.height = "auto";
+ // scrollHeight reports content + padding only; with border-box sizing
+ // we still owe the element its border width (otherwise the bottom row
+ // is clipped by 2 px and the bottom padding visually shrinks).
+ const borderY = el.offsetHeight - el.clientHeight;
+ el.style.height = el.scrollHeight + borderY + "px";
+ }, [props.value]);
+
+ const baseCls = inputClass + " h-10 py-2 resize-none overflow-hidden";
+ return (
+ <textarea
+ {...props}
+ ref={ref}
+ rows={1}
+ className={baseCls + (props.className ? " " + props.className : "")}
+ />
+ );
+}
+
+// TranslatedInput — text/textarea bound to a multilingual field.
+
+export function TranslatedInput({
+ id,
+ label,
+ value,
+ lang,
+ defaultLang,
+ languages,
+ onChange,
+ placeholder,
+ type = "text",
+ multiline,
+ hint,
+ translatable = true,
+ onFocus,
+}: {
+ id: string;
+ label?: string;
+ value: Ml;
+ lang: string;
+ defaultLang: string;
+ languages: string[];
+ onChange: (next: Ml) => void;
+ placeholder?: string;
+ type?: string;
+ multiline?: boolean;
+ hint?: string;
+ translatable?: boolean;
+ onFocus?: () => void;
+}) {
+ const current = getMl(value, lang);
+ const fallback = lang !== defaultLang ? getMl(value, defaultLang) : "";
+ const showFallback = lang !== defaultLang && !current && fallback;
+
+ const showTranslate = translatable && lang !== defaultLang;
+ const [allLangsOpen, setAllLangsOpen] = useState(false);
+
+ const tc = useTranslations("dashboard.common");
+ const inputProps = {
+ id,
+ value: current,
+ onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+ onChange(setMl(value, lang, e.target.value)),
+ onFocus,
+ placeholder: showFallback ? tc("willUse") + ": " + fallback : (placeholder || ""),
+ className: inputClass + " pr-10",
+ };
+
+ return (
+ <div>
+ {(label || showTranslate) ? (
+ <div className="flex items-center justify-between gap-2 mb-2.5">
+ {label ? (
+ <label htmlFor={id} className="block text-sm font-medium text-foreground">
+ {label}
+ </label>
+ ) : (
+ <span />
+ )}
+ {showTranslate ? (
+ <AiTranslateButton
+ value={value}
+ lang={lang}
+ defaultLang={defaultLang}
+ languages={languages}
+ onChange={onChange}
+ />
+ ) : null}
+ </div>
+ ) : null}
+ <div className="relative">
+ {multiline ? (
+ <AutoGrowTextarea {...inputProps} />
+ ) : (
+ <input
+ {...inputProps}
+ type={type}
+ inputMode={type === "decimal" ? "decimal" : undefined}
+ />
+ )}
+ <button
+ type="button"
+ onClick={() => setAllLangsOpen(true)}
+ className="absolute top-1 right-1 w-8 h-8 flex items-center justify-center rounded-md text-muted-foreground hover:text-foreground transition-colors"
+ aria-label="All languages"
+ title="All languages"
+ >
+ <GlobeIcon size={14} />
+ </button>
+ </div>
+ {hint ? <p className="text-[11px] text-muted-foreground mt-1">{hint}</p> : null}
+ <AllLanguagesModal
+ open={allLangsOpen}
+ onClose={() => setAllLangsOpen(false)}
+ title={label || ""}
+ value={value}
+ defaultLang={defaultLang}
+ languages={languages}
+ onChange={onChange}
+ multiline={!!multiline}
+ placeholder={placeholder}
+ />
+ </div>
+ );
+}
+
+// AllLanguagesModal — admin-only side-quest UI. Lets the user edit one
+// multilingual field across every restaurant language in a single modal,
+// instead of toggling the top-level language selector and re-opening
+// the form. Triggered by the globe icon inside TranslatedInput.
+
+// HelpButton — small "?" icon that toggles a popover with the given text.
+// Closes on outside click / Escape. Used inside modal titles to expose
+// long explainer copy without bloating the header.
+
+export function HelpButton({ text }: { text: string }) {
+ const [open, setOpen] = useState(false);
+ const btnRef = useRef<HTMLButtonElement | null>(null);
+ const popRef = useRef<HTMLDivElement | null>(null);
+ const [pos, setPos] = useState<{ top: number; left: number } | null>(null);
+
+ useEffect(() => {
+ if (!open) return;
+ // Anchor the popover to the button's screen rect. Recompute on resize
+ // and scroll so it stays glued even when the modal's body scrolls.
+ // Clamps horizontally so the popover never spills past the viewport.
+ function compute() {
+ const el = btnRef.current;
+ if (!el) return;
+ const r = el.getBoundingClientRect();
+ const popWidth = Math.min(288, window.innerWidth - 16);
+ const pad = 8;
+ const center = r.left + r.width / 2;
+ const left = Math.max(
+ pad,
+ Math.min(center - popWidth / 2, window.innerWidth - popWidth - pad),
+ );
+ setPos({ top: r.bottom + 8, left });
+ }
+ compute();
+ window.addEventListener("resize", compute);
+ window.addEventListener("scroll", compute, true);
+ function onDown(e: MouseEvent) {
+ const t = e.target as Node;
+ if (btnRef.current?.contains(t)) return;
+ if (popRef.current?.contains(t)) return;
+ setOpen(false);
+ }
+ function onKey(e: KeyboardEvent) {
+ if (e.key === "Escape") setOpen(false);
+ }
+ window.addEventListener("mousedown", onDown);
+ window.addEventListener("keydown", onKey);
+ return () => {
+ window.removeEventListener("resize", compute);
+ window.removeEventListener("scroll", compute, true);
+ window.removeEventListener("mousedown", onDown);
+ window.removeEventListener("keydown", onKey);
+ };
+ }, [open]);
+
+ return (
+ <>
+ <button
+ ref={btnRef}
+ type="button"
+ onClick={(e) => {
+ e.stopPropagation();
+ setOpen((v) => !v);
+ }}
+ className="w-4 h-4 inline-flex items-center justify-center rounded-full text-muted-foreground hover:text-foreground transition-colors"
+ aria-label="Help"
+ >
+ <HelpCircleIcon size={14} />
+ </button>
+ {open && pos
+ ? createPortal(
+ <div
+ ref={popRef}
+ role="tooltip"
+ style={{ top: pos.top, left: pos.left }}
+ className="fixed z-[60] w-72 max-w-[calc(100vw-1rem)] p-3 rounded-lg bg-card border border-border shadow-lg text-xs text-foreground font-normal leading-snug normal-case"
+ >
+ {text}
+ </div>,
+ document.body,
+ )
+ : null}
+ </>
+ );
+}
+
+function AllLanguagesModal({
+ open,
+ onClose,
+ title,
+ value,
+ defaultLang,
+ languages,
+ onChange,
+ multiline,
+ placeholder,
+}: {
+ open: boolean;
+ onClose: () => void;
+ title: string;
+ value: Ml;
+ defaultLang: string;
+ languages: string[];
+ onChange: (next: Ml) => void;
+ multiline?: boolean;
+ placeholder?: string;
+}) {
+ const tc = useTranslations("dashboard.common");
+ const uiLocale = useLocale();
+ // Localised language name in the current UI locale (e.g. "Italian" / "Itali-
+ // ano" / "итальянский" for code "it"). Falls back to the raw code if the
+ // platform's Intl.DisplayNames doesn't know the code.
+ const displayNames = (() => {
+ try {
+ return new Intl.DisplayNames([uiLocale], { type: "language" });
+ } catch {
+ return null;
+ }
+ })();
+ const langLabel = (code: string): string => {
+ const name = displayNames?.of(code);
+ if (!name || name === code) return code.toUpperCase();
+ return name.charAt(0).toUpperCase() + name.slice(1);
+ };
+
+ // Default language is the source — the user fills it in the main input,
+ // not in this modal. The list shows the *other* enabled languages only.
+ const ordered = (() => {
+ const set = new Set(languages);
+ const langs: string[] = [];
+ for (const meta of AVAILABLE_LANGUAGES) {
+ if (meta.code !== defaultLang && set.has(meta.code)) langs.push(meta.code);
+ }
+ return langs;
+ })();
+
+ const ta = useTranslations("dashboard.allLangsModal");
+ const helpText = title ? ta("subtitle", { field: title }) : ta("subtitleGeneric");
+ const sourceText = getMl(value, defaultLang);
+ return (
+ <Modal
+ open={open}
+ onClose={onClose}
+ title={
+ <span className="inline-flex items-center gap-2">
+ <span>{ta("title")}</span>
+ <HelpButton text={helpText} />
+ </span>
+ }
+ subtitle={sourceText || undefined}
+ size="md"
+ footer={
+ <div className="flex items-center justify-end">
+ <button
+ type="button"
+ onClick={onClose}
+ className="inline-flex items-center gap-1.5 h-8 px-3 text-xs font-medium text-primary-foreground bg-primary-gradient rounded-lg transition-colors"
+ >
+ {tc("save")}
+ </button>
+ </div>
+ }
+ >
+ <div className="space-y-3">
+ {ordered.map((code) => {
+ const v = getMl(value, code);
+ return (
+ <div key={code} className="space-y-1">
+ <div className="flex items-center justify-between gap-2">
+ <div className="text-sm font-medium text-foreground">
+ {langLabel(code)}
+ </div>
+ <AiTranslateButton
+ value={value}
+ lang={code}
+ defaultLang={defaultLang}
+ languages={languages}
+ onChange={onChange}
+ />
+ </div>
+ {multiline ? (
+ <AutoGrowTextarea
+ value={v}
+ onChange={(e) => onChange(setMl(value, code, e.target.value))}
+ placeholder={placeholder || ""}
+ className={inputClass}
+ />
+ ) : (
+ <input
+ type="text"
+ value={v}
+ onChange={(e) => onChange(setMl(value, code, e.target.value))}
+ placeholder={placeholder || ""}
+ className={inputClass}
+ />
+ )}
+ </div>
+ );
+ })}
+ </div>
+ </Modal>
+ );
+}
+
+// PageHeader.
+
+export function PageHeader({
+ title,
+ subtitle,
+ action,
+}: {
+ title: string;
+ subtitle?: string;
+ action?: ReactNode;
+}) {
+ return (
+ <div className="mb-5 flex items-start justify-between gap-3">
+ <div className="min-w-0">
+ <h2 className="text-xl font-medium text-foreground">{title}</h2>
+ {subtitle ? (
+ <p className="text-[13px] text-muted-foreground leading-snug mt-1">{subtitle}</p>
+ ) : null}
+ </div>
+ {action}
+ </div>
+ );
+}
+
+// Subscription chip — shows current plan / trial state. Click goes to billing.
+
+export function SubscriptionChip({
+ sub,
+ onClick,
+}: {
+ sub: { plan: string | null; subscriptionStatus: string | null; trialEndsAt: string | null } | null;
+ onClick: () => void;
+}) {
+ const tsub = useTranslations("dashboard.subscriptionChip");
+ let label = tsub("plan");
+ let cls = "bg-secondary text-foreground border-border";
+
+ if (sub) {
+ const isActive = sub.subscriptionStatus === "ACTIVE" && sub.plan && sub.plan !== "FREE";
+ const trialEndsAt = sub.trialEndsAt ? new Date(sub.trialEndsAt) : null;
+ const trialing = !isActive && trialEndsAt !== null && trialEndsAt > new Date();
+ const trialExpired = !isActive && trialEndsAt !== null && trialEndsAt <= new Date();
+
+ if (isActive && sub.plan) {
+ label = sub.plan.charAt(0) + sub.plan.slice(1).toLowerCase();
+ cls = "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-emerald-500/30";
+ } else if (trialing && trialEndsAt) {
+ const daysLeft = Math.max(1, Math.ceil((trialEndsAt.getTime() - Date.now()) / 86400000));
+ label = tsub("trialDays", { days: daysLeft });
+ cls = "bg-primary/10 text-primary border-primary/30";
+ } else if (trialExpired) {
+ label = tsub("trialExpired");
+ cls = "bg-red-500/15 text-red-600 dark:text-red-400 border-red-500/30";
+ } else {
+ label = tsub("free");
+ cls = "bg-secondary text-muted-foreground border-border";
+ }
+ }
+
+ return (
+ <button
+ type="button"
+ onClick={onClick}
+ className={"shrink-0 inline-flex items-center gap-1 h-8 px-2.5 text-xs font-medium rounded-md " + cls}
+ >
+ {label}
+ </button>
+ );
+}
+
+// EmptyState.
+
+export function EmptyState({
+ title,
+ subtitle,
+ action,
+}: {
+ title: string;
+ subtitle?: string;
+ action?: ReactNode;
+}) {
+ return (
+ <div className="bg-card border border-border rounded-xl p-8 md:p-12 min-h-[280px] flex flex-col items-center justify-center text-center">
+ <h3 className="text-sm font-medium text-foreground">{title}</h3>
+ {subtitle ? (
+ <p className="text-xs text-muted-foreground leading-snug mt-1.5 max-w-sm">{subtitle}</p>
+ ) : null}
+ {action ? <div className="mt-5 w-full max-w-xs">{action}</div> : null}
+ </div>
+ );
+}
+
+// Section card for edit pages.
+
+export function Section({
+ title,
+ description,
+ children,
+ className = "",
+}: {
+ title?: string;
+ description?: string;
+ children: ReactNode;
+ className?: string;
+}) {
+ return (
+ <section className={"bg-card border border-border rounded-xl p-4 md:p-5 " + className}>
+ {title || description ? (
+ <div className="mb-4">
+ {title ? <h3 className="text-sm font-medium text-foreground">{title}</h3> : null}
+ {description ? (
+ <p className="text-xs text-muted-foreground leading-snug mt-0.5">{description}</p>
+ ) : null}
+ </div>
+ ) : null}
+ {children}
+ </section>
+ );
+}
+
+// Sticky bar used on edit/sub pages.
+
+export function SubpageStickyBar({
+ onBack,
+ onSave,
+ canSave,
+ hideSave,
+ title,
+ children,
+}: {
+ onBack: () => void;
+ onSave?: () => void | Promise<void>;
+ canSave?: boolean;
+ hideSave?: boolean;
+ title?: ReactNode;
+ children?: ReactNode;
+}) {
+ const tc = useTranslations("dashboard.common");
+ const [saving, setSaving] = useState(false);
+ async function handleSave() {
+ if (saving || !onSave) return;
+ setSaving(true);
+ try {
+ await onSave();
+ } finally {
+ setSaving(false);
+ }
+ }
+ return (
+ <div
+ className="sticky z-10 -mx-4 md:-mx-6 -mt-5 md:-mt-4 px-4 md:px-6 h-14 flex items-center bg-subheader/90 backdrop-blur-md border-b border-border md:border-border/60"
+ style={{ top: "var(--topbar-h, 0px)" }}
+ >
+ <div className="w-full max-w-5xl mx-auto md:px-6 flex items-center justify-between gap-3">
+ <div className="flex items-center gap-2.5 min-w-0">
+ <button
+ type="button"
+ onClick={onBack}
+ className="inline-flex items-center gap-1 h-8 px-2.5 text-xs font-medium text-muted-foreground bg-secondary rounded-md shrink-0"
+ >
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6" /></svg>
+ {tc("back")}
+ </button>
+ {title ? <span className="text-base font-medium text-foreground truncate min-w-0">{title}</span> : null}
+ </div>
+ <div className="flex items-center gap-2">
+ {children}
+ {!hideSave ? (
+ <button
+ type="button"
+ onClick={handleSave}
+ disabled={!canSave || saving}
+ className="h-8 px-2.5 text-xs font-medium text-primary-foreground bg-primary-gradient rounded-md transition-colors inline-flex items-center gap-1"
+ >
+ {saving ? (
+ <span className="w-3 h-3 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+ ) : (
+ <CheckIcon size={14} />
+ )}
+ {tc("save")}
+ </button>
+ ) : null}
+ </div>
+ </div>
+ </div>
+ );
+}
+
+// EditPageHeader — bigger heading + sticky save bar (used for dish/option pages).
+
+export function EditPageHeader({
+ onBack,
+ title,
+ breadcrumb,
+ lang,
+ onLangChange,
+ languages,
+ onSave,
+ canSave,
+ saving,
+ onLangsOpen,
+ onLangSelect,
+}: {
+ onBack: () => void;
+ title: string;
+ breadcrumb?: string;
+ lang?: string;
+ onLangChange?: (code: string) => void;
+ languages?: MiniLang[];
+ onSave?: () => void;
+ canSave?: boolean;
+ saving?: boolean;
+ onLangsOpen?: () => void;
+ onLangSelect?: () => void;
+}) {
+ const tc = useTranslations("dashboard.common");
+ return (
+ <>
+ <div
+ className="sticky z-10 -mx-4 md:-mx-6 -mt-5 md:-mt-4 px-4 md:px-6 h-14 flex items-center bg-subheader/90 backdrop-blur-md border-b border-border md:border-border/60"
+ style={{ top: "var(--topbar-h, 0px)" }}
+ >
+ <div className="w-full max-w-5xl mx-auto md:px-6 flex items-center justify-between gap-3">
+ <button
+ type="button"
+ onClick={onBack}
+ className="inline-flex items-center gap-1 h-8 px-2.5 text-xs font-medium text-muted-foreground bg-secondary rounded-md"
+ >
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6" /></svg>
+ {tc("back")}
+ </button>
+ <div className="flex items-center gap-2">
+ {onSave ? (
+ <button
+ type="button"
+ onClick={onSave}
+ disabled={!canSave || saving}
+ className="h-8 px-2.5 text-xs font-medium text-primary-foreground bg-primary-gradient rounded-md transition-colors inline-flex items-center gap-1"
+ >
+ {saving ? (
+ <span className="w-3 h-3 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+ ) : (
+ <CheckIcon size={14} />
+ )}
+ {tc("save")}
+ </button>
+ ) : null}
+ </div>
+ </div>
+ </div>
+
+ <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4 pb-5">
+ {breadcrumb ? <div className="text-xs text-muted-foreground truncate">{breadcrumb}</div> : null}
+ <h2 className="text-xl font-medium text-foreground truncate mt-1">{title}</h2>
+ </div>
+ </>
+ );
+}
+
+// PreviewButton + ShareButton (used on Menu page sticky bar).
+
+export function PreviewButton({
+ url,
+ onOpen,
+}: {
+ url: string;
+ onOpen?: () => void;
+}) {
+ const t = useTranslations("dashboard.preview");
+ const [open, setOpen] = useState(false);
+ const fullUrl = url.startsWith("http") ? url : "https://" + url;
+ return (
+ <>
+ <button
+ type="button"
+ onClick={() => {
+ onOpen?.();
+ setOpen(true);
+ }}
+ className="inline-flex items-center gap-1 h-8 px-3 text-xs font-medium text-primary-foreground bg-primary-gradient rounded-lg transition-colors"
+ >
+ <EyeIcon size={14} />
+ {t("preview")}
+ </button>
+ <MenuPreviewModal menuUrl={fullUrl} open={open} onOpenChange={setOpen} />
+ </>
+ );
+}
+
+export function ShareButton({
+ onClick,
+}: {
+ onClick: () => void;
+}) {
+ const t = useTranslations("dashboard.preview");
+ return (
+ <button
+ type="button"
+ onClick={onClick}
+ className="inline-flex items-center gap-1 h-8 px-2.5 text-xs font-medium text-muted-foreground bg-secondary rounded-md"
+ >
+ <ShareIcon size={14} />
+ {t("share")}
+ </button>
+ );
+}
+
+// ShareModal — QR + link + actions.
+
+export function ShareModal({
+ open,
+ onClose,
+ url,
+ restaurantName,
+}: {
+ open: boolean;
+ onClose: () => void;
+ url: string;
+ restaurantName: string;
+}) {
+ const tc = useTranslations("dashboard.common");
+ const tp = useTranslations("dashboard.preview");
+ const [copied, setCopied] = useState(false);
+ const fullUrl = url && url.startsWith("http") ? url : "https://" + (url || "");
+ const qrCanvasRef = useRef<HTMLCanvasElement | null>(null);
+
+ function copyLink() {
+ track("dash_menu_share_copy");
+ if (navigator.clipboard?.writeText) {
+ navigator.clipboard
+ .writeText(fullUrl)
+ .then(() => {
+ setCopied(true);
+ setTimeout(() => setCopied(false), 1800);
+ })
+ .catch(() => {});
+ }
+ }
+
+ function downloadQr() {
+ track("dash_menu_share_download");
+ const canvas = qrCanvasRef.current;
+ if (!canvas) return;
+ canvas.toBlob((blob) => {
+ if (!blob) return;
+ const objectUrl = URL.createObjectURL(blob);
+ const a = document.createElement("a");
+ a.href = objectUrl;
+ a.download = "menu-qr.png";
+ document.body.appendChild(a);
+ a.click();
+ document.body.removeChild(a);
+ setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
+ }, "image/png");
+ }
+
+ function openInNewTab() {
+ track("dash_menu_share_open_menu");
+ window.open(fullUrl, "_blank", "noopener,noreferrer");
+ }
+
+ const handleClose = () => {
+ track("dash_menu_share_close");
+ onClose();
+ };
+
+ return (
+ <Modal open={open} onClose={handleClose} size="sm" title={tp("shareTitle", { name: restaurantName || tp("shareYourMenu") })}>
+ <div className="flex justify-center">
+ <div
+ className="w-[180px] h-[180px] p-5 bg-white rounded-2xl shadow-[0_8px_24px_rgba(0,0,0,0.12)]"
+ onClick={() => track("dash_menu_share_qr_image")}
+ >
+ <QRCodeCanvas
+ value={fullUrl}
+ size={140}
+ marginSize={2}
+ level="M"
+ style={{ width: 140, height: 140, display: "block" }}
+ />
+ </div>
+ {/* Hidden high-res canvas for download */}
+ <div style={{ position: "absolute", left: -99999, top: -99999, opacity: 0, pointerEvents: "none" }} aria-hidden>
+ <QRCodeCanvas
+ ref={qrCanvasRef}
+ value={fullUrl}
+ size={640}
+ marginSize={2}
+ level="M"
+ />
+ </div>
+ </div>
+ <p className="text-xs text-muted-foreground text-center mt-3">
+ {tp("tip")}
+ </p>
+ <div className="mt-5 flex items-center justify-between gap-2 p-3 bg-secondary border border-border rounded-lg">
+ <span
+ className="text-xs text-muted-foreground truncate"
+ onClick={() => track("dash_menu_share_link_input")}
+ >{fullUrl.replace(/^https?:\/\//, "")}</span>
+ <button
+ type="button"
+ onClick={copyLink}
+ className="text-xs font-medium text-foreground hover:text-foreground/70 transition-colors flex items-center gap-1 flex-shrink-0"
+ >
+ {copied ? <CheckIcon size={12} /> : <CopyIcon size={12} />}
+ {copied ? tc("copied") : tc("copy")}
+ </button>
+ </div>
+ <div className="grid grid-cols-2 gap-2 mt-4">
+ <button
+ type="button"
+ onClick={downloadQr}
+ className="h-10 px-3 text-sm font-medium text-foreground bg-card border border-input rounded-lg transition-colors flex items-center justify-center gap-1.5"
+ >
+ <DownloadIcon size={14} />
+ {tc("downloadQr")}
+ </button>
+ <button
+ type="button"
+ onClick={openInNewTab}
+ className="h-10 px-3 text-sm font-medium text-foreground bg-card border border-input rounded-lg transition-colors flex items-center justify-center gap-1.5"
+ >
+ <ExternalLinkIcon size={14} />
+ {tc("openMenu")}
+ </button>
+ </div>
+ </Modal>
+ );
+}
+
+// TableQrModal — per-table QR.
+
+export function TableQrModal({
+ open,
+ onClose,
+ tableNumber,
+ tableLabel,
+ menuUrl,
+}: {
+ open: boolean;
+ onClose: () => void;
+ tableNumber: number | null;
+ tableLabel: string;
+ menuUrl: string;
+}) {
+ const tc = useTranslations("dashboard.common");
+ const tp = useTranslations("dashboard.preview");
+ const tt = useTranslations("dashboard.tables");
+ const [copied, setCopied] = useState(false);
+ const tableQrCanvasRef = useRef<HTMLCanvasElement | null>(null);
+ if (tableNumber === null) return null;
+ const baseUrl = menuUrl && menuUrl.startsWith("http") ? menuUrl : "https://" + (menuUrl || "");
+ const fullUrl = baseUrl + "?table=" + tableNumber;
+
+ function copyLink() {
+ if (navigator.clipboard?.writeText) {
+ navigator.clipboard
+ .writeText(fullUrl)
+ .then(() => {
+ setCopied(true);
+ setTimeout(() => setCopied(false), 1800);
+ })
+ .catch(() => {});
+ }
+ }
+
+ function downloadQr() {
+ const canvas = tableQrCanvasRef.current;
+ if (!canvas) return;
+ canvas.toBlob((blob) => {
+ if (!blob) return;
+ const objectUrl = URL.createObjectURL(blob);
+ const a = document.createElement("a");
+ a.href = objectUrl;
+ a.download = "table-" + tableNumber + "-qr.png";
+ document.body.appendChild(a);
+ a.click();
+ document.body.removeChild(a);
+ setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
+ }, "image/png");
+ }
+
+ function openInNewTab() {
+ window.open(fullUrl, "_blank", "noopener,noreferrer");
+ }
+
+ return (
+ <Modal open={open} onClose={onClose} title={tt("qrModalTitle", { number: tableNumber, label: tableLabel ? " · " + tableLabel : "" })}>
+ <div className="flex justify-center">
+ <div className="p-3 bg-card border border-border rounded-xl">
+ <QRCodeCanvas
+ value={fullUrl}
+ size={192}
+ marginSize={2}
+ level="M"
+ style={{ width: 192, height: 192, display: "block" }}
+ />
+ </div>
+ {/* Hidden high-res canvas for download */}
+ <div style={{ position: "absolute", left: -99999, top: -99999, opacity: 0, pointerEvents: "none" }} aria-hidden>
+ <QRCodeCanvas
+ ref={tableQrCanvasRef}
+ value={fullUrl}
+ size={640}
+ marginSize={2}
+ level="M"
+ />
+ </div>
+ </div>
+ <p className="text-xs text-muted-foreground text-center mt-3">
+ {tp("tableTip")}
+ </p>
+ <div className="mt-5">
+ <label className={labelClass}>{tc("tableLink")}</label>
+ <div className="flex gap-2">
+ <input
+ type="text"
+ readOnly
+ value={fullUrl}
+ onFocus={(e) => e.target.select()}
+ className={inputClass + " font-mono text-xs"}
+ />
+ <button
+ type="button"
+ onClick={copyLink}
+ className={
+ "shrink-0 h-10 px-3 text-sm font-medium rounded-lg transition-colors flex items-center gap-1.5 " +
+ (copied
+ ? "text-emerald-700 bg-emerald-50 border border-emerald-200"
+ : "text-foreground bg-card border border-input")
+ }
+ >
+ {copied ? <CheckIcon size={14} /> : <CopyIcon size={14} />}
+ {copied ? tc("copied") : tc("copy")}
+ </button>
+ </div>
+ </div>
+ <div className="flex gap-2 mt-4">
+ <button
+ type="button"
+ onClick={downloadQr}
+ className={secondaryBtn + " flex-1 inline-flex items-center justify-center gap-1.5"}
+ >
+ <DownloadIcon size={14} />
+ {tc("download")}
+ </button>
+ <button
+ type="button"
+ onClick={openInNewTab}
+ className={primaryBtn + " flex-1 inline-flex items-center justify-center gap-1.5"}
+ >
+ <ExternalLinkIcon size={14} />
+ {tc("open")}
+ </button>
+ </div>
+ </Modal>
+ );
+}
+
+// File upload helper — POST to /api/upload, returns the public URL.
+
+export async function uploadFile(file: File): Promise<string> {
+ const fd = new FormData();
+ fd.append("file", file);
+ const res = await fetch(apiUrl("/api/upload"), {
+        credentials: "include", method: "POST", body: fd });
+ if (!res.ok) throw new Error("Upload failed");
+ const data = await res.json();
+ return data.url as string;
+}
+
+// PhotoPicker — reusable inline upload control with hover-overlay remove + AI generate slot.
+
+export function PhotoPicker({
+ url,
+ onChange,
+ onAiClick,
+ inputId,
+ height = "h-10",
+ width = "min-w-[150px]",
+ fileInputRef,
+ onAddClick,
+ onRemoveClick,
+}: {
+ url: string | null;
+ onChange: (url: string | null) => void;
+ onAiClick?: () => void;
+ inputId: string;
+ height?: string;
+ width?: string;
+ fileInputRef?: React.RefObject<HTMLInputElement | null>;
+ onAddClick?: () => void;
+ onRemoveClick?: () => void;
+}) {
+ const tph = useTranslations("dashboard.photo");
+ const ta = useTranslations("dashboard.ai");
+ const [uploading, setUploading] = useState(false);
+ const localRef = useRef<HTMLInputElement | null>(null);
+ const ref = fileInputRef ?? localRef;
+
+ async function handleFile(e: React.ChangeEvent<HTMLInputElement>) {
+ const file = e.target.files?.[0];
+ if (!file) return;
+ setUploading(true);
+ try {
+ const uploadedUrl = await uploadFile(file);
+ onChange(uploadedUrl);
+ } catch {
+ // Silent; the upload error surfaces via missing photo.
+ } finally {
+ setUploading(false);
+ if (ref.current) ref.current.value = "";
+ }
+ }
+
+ function remove() {
+ onRemoveClick?.();
+ onChange(null);
+ if (ref.current) ref.current.value = "";
+ }
+
+ return (
+ <>
+ {onAiClick ? (
+ <div className="flex items-center justify-between gap-2 mb-2.5">
+ <label className="block text-sm font-medium text-foreground">{tph("label")}</label>
+ <button
+ type="button"
+ onClick={onAiClick}
+ className="inline-flex items-center gap-1 text-[11px] font-medium text-muted-foreground transition-colors"
+ >
+ <SparklesIcon size={11} />
+ {tph("generate")}
+ </button>
+ </div>
+ ) : null}
+ <label
+ htmlFor={inputId}
+ onClick={() => { if (!url) onAddClick?.(); }}
+ className={
+ "relative flex flex-col items-center justify-center gap-1 " + width + " " + height +
+ " border border-dashed rounded-lg cursor-pointer transition-all overflow-hidden " +
+ (url
+ ? "border-input p-0"
+ : "border-input bg-secondary text-muted-foreground px-3 text-center")
+ }
+ >
+ {uploading ? (
+ <div className="w-4 h-4 border-2 border-input border-t-neutral-900 rounded-full animate-spin" />
+ ) : url ? (
+ <>
+ <img src={url} alt="" className="absolute inset-0 w-full h-full object-cover" />
+ <button
+ type="button"
+ onClick={(e) => {
+ e.preventDefault();
+ remove();
+ }}
+ className="absolute top-0.5 right-0.5 w-5 h-5 flex items-center justify-center rounded-full bg-black/50 text-white transition-colors"
+ aria-label={tph("removePhoto")}
+ >
+ <CloseIcon size={11} />
+ </button>
+ </>
+ ) : (
+ <>
+ <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+ <rect x="3" y="3" width="18" height="18" rx="2" />
+ <circle cx="9" cy="9" r="2" />
+ <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+ </svg>
+ <span className="text-[11px] font-medium leading-none">{tph("addPhoto")}</span>
+ </>
+ )}
+ <input
+ id={inputId}
+ ref={ref}
+ type="file"
+ accept="image/*"
+ className="hidden"
+ onChange={handleFile}
+ />
+ </label>
+ </>
+ );
+}
+
+// AiImageModal — prompt-driven image generation modal. Posts {prompt} (and any extra body) to endpoint.
+
+export function AiImageModal({
+ open,
+ onClose,
+ onUse,
+ endpoint,
+ title,
+ placeholder,
+ defaultPrompt,
+ aspect = "square",
+ extraBody,
+ eventPrefix,
+}: {
+ open: boolean;
+ onClose: () => void;
+ onUse: (url: string) => void;
+ endpoint: string;
+ title: string;
+ placeholder?: string;
+ defaultPrompt?: string;
+ aspect?: "square" | "portrait";
+ extraBody?: Record<string, unknown>;
+ eventPrefix?: string;
+}) {
+ const tc = useTranslations("dashboard.common");
+ const ta = useTranslations("dashboard.ai");
+ const access = useAiImageAccess();
+ const qc = useQueryClient();
+ const [prompt, setPrompt] = useState(defaultPrompt || "");
+ const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">("idle");
+ const [resultUrl, setResultUrl] = useState<string | null>(null);
+ const [error, setError] = useState<string | null>(null);
+
+ useEffect(() => {
+ if (open) {
+ setPrompt(defaultPrompt || "");
+ setStatus("idle");
+ setResultUrl(null);
+ setError(null);
+ }
+ }, [open, defaultPrompt]);
+
+ async function generate() {
+ if (eventPrefix) track(`${eventPrefix}_generate_photo_click_generate`);
+ if (!prompt.trim()) return;
+ setStatus("loading");
+ setError(null);
+ try {
+ const res = await fetch(apiUrl(endpoint), {
+ method: "POST",
+ credentials: "include",
+ headers: { "Content-Type": "application/json", ...activeRestaurantHeader() },
+ body: JSON.stringify({ prompt: prompt.trim(), ...(extraBody || {}) }),
+ });
+ if (!res.ok) {
+ if (res.status === 403) {
+ void qc.invalidateQueries({ queryKey: ["sub"] });
+ setError(ta("quotaExceededMessage", { limit: 5 }));
+ } else {
+ setError(ta("errorGenerate"));
+ }
+ setStatus("error");
+ return;
+ }
+ const data = await res.json();
+ if (!data.url) {
+ setError(ta("noImage"));
+ setStatus("error");
+ return;
+ }
+ setResultUrl(data.url);
+ setStatus("done");
+ void qc.invalidateQueries({ queryKey: ["sub"] });
+ } catch {
+ setError(ta("errorGenerate"));
+ setStatus("error");
+ }
+ }
+
+ function useImage() {
+ if (eventPrefix) track(`${eventPrefix}_generate_photo_click_use`);
+ if (resultUrl) {
+ onUse(resultUrl);
+ onClose();
+ }
+ }
+
+ const handleClose = () => {
+ if (eventPrefix) track(`${eventPrefix}_generate_photo_click_close`);
+ onClose();
+ };
+ const handleCancel = () => {
+ if (eventPrefix) track(`${eventPrefix}_generate_photo_click_cancel`);
+ onClose();
+ };
+
+ const isLoading = status === "loading";
+ const hasResult = status === "done" && resultUrl;
+ const previewCls = aspect === "portrait" ? "aspect-[9/16] max-h-[40vh] mx-auto" : "aspect-square w-full max-w-[60vh] mx-auto";
+
+ if (access.kind === "exhausted" && !resultUrl) {
+ return (
+ <Modal open={open} onClose={handleClose} title={title} size="sm">
+ <div className="flex flex-col items-center text-center gap-3 py-4">
+ <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-muted-foreground">
+ <SparklesIcon size={20} />
+ </div>
+ <div className="text-sm font-medium text-foreground">{ta("quotaExceededTitle")}</div>
+ <p className="text-xs text-muted-foreground max-w-xs">{ta("quotaExceededMessage", { limit: access.limit })}</p>
+ </div>
+ <div className="flex gap-2 mt-4">
+ <button type="button" onClick={handleClose} className={primaryBtn + " flex-1"}>
+ {tc("close")}
+ </button>
+ </div>
+ </Modal>
+ );
+ }
+
+ return (
+ <Modal open={open} onClose={handleClose} title={title} size="sm">
+ <div className={previewCls + " bg-secondary rounded-xl overflow-hidden border border-border flex items-center justify-center mb-4"}>
+ {isLoading ? (
+ <div className="flex flex-col items-center gap-1.5 text-muted-foreground">
+ <div className="w-6 h-6 border-2 border-input border-t-foreground rounded-full animate-spin" />
+ <div className="text-[11px]">{ta("generating")}</div>
+ </div>
+ ) : hasResult ? (
+ <img src={resultUrl!} alt="" className="w-full h-full object-cover" />
+ ) : (
+ <div className="flex flex-col items-center gap-1.5 text-muted-foreground px-4 text-center">
+ <SparklesIcon size={20} />
+ <div className="text-[11px]">{ta("describeTip")}</div>
+ </div>
+ )}
+ </div>
+
+ <label htmlFor="ai-prompt" className={labelClass}>{ta("describe")}</label>
+ <textarea
+ id="ai-prompt"
+ rows={2}
+ placeholder={placeholder || ta("promptPlaceholder")}
+ value={prompt}
+ onChange={(e) => setPrompt(e.target.value)}
+ onFocus={() => { if (eventPrefix) track(`${eventPrefix}_generate_photo_focus_description`); }}
+ disabled={isLoading}
+ className={inputClass + " h-auto py-2 resize-none"}
+ />
+ <p className="text-[11px] text-muted-foreground mt-1">
+ {ta("promptTip")}
+ </p>
+ {access.kind === "limited" ? (
+ <p className="text-[11px] text-muted-foreground mt-1">
+ {ta("quotaRemaining", { remaining: access.remaining, limit: access.limit })}
+ </p>
+ ) : null}
+
+ {error ? <p className="text-xs text-red-600 mt-3">{error}</p> : null}
+
+ <div className="flex gap-2 mt-4">
+ {hasResult ? (
+ <>
+ <button
+ type="button"
+ onClick={generate}
+ disabled={isLoading || !prompt.trim() || access.kind === "exhausted"}
+ className={secondaryBtn + " flex-1 inline-flex items-center justify-center gap-1.5"}
+ >
+ <SparklesIcon size={13} />
+ {ta("tryAgain")}
+ </button>
+ <button
+ type="button"
+ onClick={useImage}
+ className={primaryBtn + " flex-1"}
+ >
+ {ta("useThisPhoto")}
+ </button>
+ </>
+ ) : (
+ <>
+ <button type="button" onClick={handleCancel} className={secondaryBtn + " flex-1"}>
+ {tc("cancel")}
+ </button>
+ <button
+ type="button"
+ onClick={generate}
+ disabled={isLoading || !prompt.trim()}
+ className={primaryBtn + " flex-1 inline-flex items-center justify-center gap-1.5"}
+ >
+ {isLoading ? (
+ <span className="w-3 h-3 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+ ) : (
+ <SparklesIcon size={13} />
+ )}
+ {isLoading ? ta("generating") : ta("generate")}
+ </button>
+ </>
+ )}
+ </div>
+ </Modal>
+ );
+}

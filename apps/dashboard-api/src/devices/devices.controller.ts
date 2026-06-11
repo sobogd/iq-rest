@@ -1,0 +1,180 @@
+import {
+  BadRequestException,
+  Body,
+  Controller,
+  Delete,
+  forwardRef,
+  Get,
+  Inject,
+  Param,
+  Patch,
+  Post,
+  Req,
+  UseGuards,
+} from "@nestjs/common";
+import type { Request } from "express";
+import { AuthGuard, AuthedRequest } from "../auth/auth.guard";
+import { DevicesService } from "./devices.service";
+import { DeviceGuard, DevicedRequest } from "./device.guard";
+import { CreateDeviceDto, PairDeviceDto } from "./dto";
+import { OrdersService } from "../orders/orders.service";
+import { PrismaService } from "../prisma/prisma.service";
+
+@Controller("devices")
+export class DevicesController {
+  constructor(
+    private readonly devices: DevicesService,
+    @Inject(forwardRef(() => OrdersService))
+    private readonly orders: OrdersService,
+    private readonly prisma: PrismaService,
+  ) {}
+
+  // ── Admin (signed-in user via cookie session) ───────────────────────────
+
+  @UseGuards(AuthGuard)
+  @Get()
+  list(@Req() req: AuthedRequest) {
+    return this.devices.list(req.authUser.restaurantId);
+  }
+
+  @UseGuards(AuthGuard)
+  @Post()
+  create(@Req() req: AuthedRequest, @Body() dto: CreateDeviceDto) {
+    return this.devices.create({
+      restaurantId: req.authUser.restaurantId,
+      userId: req.authUser.userId,
+      name: dto.name,
+      type: dto.type,
+      overrideRestaurantId: dto.restaurantId,
+    });
+  }
+
+  @UseGuards(AuthGuard)
+  @Post(":id/regenerate-code")
+  regenerate(@Req() req: AuthedRequest, @Param("id") id: string) {
+    return this.devices.regenerateCode(req.authUser.restaurantId, id);
+  }
+
+  @UseGuards(AuthGuard)
+  @Post(":id/revoke")
+  revoke(@Req() req: AuthedRequest, @Param("id") id: string) {
+    return this.devices.revoke(req.authUser.restaurantId, id);
+  }
+
+  @UseGuards(AuthGuard)
+  @Delete(":id")
+  remove(@Req() req: AuthedRequest, @Param("id") id: string) {
+    return this.devices.remove(req.authUser.restaurantId, id);
+  }
+
+  // ── Public: pair (no auth — the 6-digit code is the credential) ─────────
+
+  @Post("pair")
+  async pair(@Body() dto: PairDeviceDto, @Req() req: Request) {
+    const ip =
+      (req.headers["x-forwarded-for"] as string | undefined)?.split(",")[0]?.trim() ||
+      req.ip;
+    return this.devices.pair(dto.code, ip);
+  }
+
+  // ── Device (Bearer token) ───────────────────────────────────────────────
+
+  // Single snapshot endpoint for the kitchen UI on boot. Returns everything
+  // KitchenPage needs (restaurant + menu + active orders + tables) so the
+  // tablet doesn't have to make five parallel calls before it can render.
+  // Subsequent live updates ride on the /devices/stream SSE.
+  @UseGuards(DeviceGuard)
+  @Get("bootstrap")
+  async bootstrap(@Req() req: DevicedRequest) {
+    const { restaurantId } = req.device;
+    const isReservation = req.device.type === "RESERVATION";
+    const [restaurant, categories, items, tables, orders, reservations] = await Promise.all([
+      this.prisma.restaurant.findUnique({ where: { id: restaurantId } }),
+      this.prisma.category.findMany({
+        where: { restaurantId, deletedAt: null },
+        orderBy: { sortOrder: "asc" },
+      }),
+      this.prisma.item.findMany({
+        where: { restaurantId, deletedAt: null },
+        orderBy: { sortOrder: "asc" },
+      }),
+      this.prisma.table.findMany({
+        where: { restaurantId, isActive: true, deletedAt: null },
+        orderBy: { sortOrder: "asc" },
+      }),
+      isReservation
+        ? Promise.resolve([])
+        : this.orders.list({ restaurantId }, undefined, undefined, undefined, true),
+      isReservation
+        ? this.prisma.reservation.findMany({
+            where: { restaurantId },
+            orderBy: [{ date: "desc" }, { startTime: "desc" }],
+            include: { table: { select: { number: true, zone: true } } },
+          })
+        : Promise.resolve([]),
+    ]);
+    if (!restaurant) {
+      throw new BadRequestException("Restaurant not found");
+    }
+    return {
+      device: {
+        id: req.device.deviceId,
+        type: req.device.type,
+        restaurantId: req.device.restaurantId,
+      },
+      restaurant,
+      categories,
+      items,
+      tables,
+      orders,
+      reservations,
+    };
+  }
+
+  @UseGuards(DeviceGuard)
+  @Get("me")
+  async me(@Req() req: DevicedRequest) {
+    await this.devices.heartbeat(req.device.deviceId);
+    return {
+      deviceId: req.device.deviceId,
+      restaurantId: req.device.restaurantId,
+      type: req.device.type,
+    };
+  }
+
+  // Kitchen-scoped order PATCH. Lets a paired tablet advance per-item statuses
+  // without exposing the full /orders/:id surface (which can change payment
+  // method, close an order, mutate tableNumber, etc.). The body is
+  // hard-restricted to {items, total, discount} — anything else is rejected,
+  // and RESERVATION devices are blocked outright.
+  @UseGuards(DeviceGuard)
+  @Patch("orders/:id")
+  async patchOrder(
+    @Req() req: DevicedRequest,
+    @Param("id") id: string,
+    @Body() body: {
+      items?: unknown[];
+      total?: number;
+      discount?: { type: string; value: number; reason?: string } | null;
+    },
+  ) {
+    // RESERVATION kiosks have no order surface at all.
+    if (req.device.type === "RESERVATION") {
+      throw new BadRequestException("Field not allowed for devices: orders");
+    }
+    const allowed = new Set(["items", "total", "discount"]);
+    for (const key of Object.keys(body || {})) {
+      if (!allowed.has(key)) {
+        throw new BadRequestException(`Field not allowed for devices: ${key}`);
+      }
+    }
+    if (body.items !== undefined && !Array.isArray(body.items)) {
+      throw new BadRequestException("items must be an array");
+    }
+    return this.orders.patch(
+      { restaurantId: req.device.restaurantId },
+      id,
+      { items: body.items, total: body.total, discount: body.discount },
+    );
+  }
+}

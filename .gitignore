@@ -1,0 +1,31 @@
+# dependencies
+node_modules/
+apps/*/node_modules/
+
+# env (secrets) — never commit
+.env
+.env.local
+.env.*.local
+apps/*/.env
+apps/*/.env.local
+
+# build output
+apps/*/dist/
+apps/*/.next/
+apps/*/build/
+apps/*/.turbo/
+.turbo/
+
+# vite / next caches
+apps/*/.vite/
+apps/*/node_modules/.vite/
+
+# prisma generated client (regenerated on install)
+apps/*/node_modules/.prisma/
+
+# logs
+*.log
+.pm2/
+
+# os
+.DS_Store

@@ -1,0 +1,838 @@
+// API client for the new dashboard. Thin wrappers over fetch with typed return shapes.
+
+import type { Ml, DishOption } from "./types";
+import { apiUrl } from "@/lib/api";
+import { activeRestaurantHeader } from "@/lib/active-restaurant";
+import {
+  getDeviceToken,
+  getKioskRole,
+  getStoredDeviceType,
+  isKioskHost,
+  roleToDeviceType,
+} from "@/lib/device-mode";
+
+// Tiny wrapper around fetch that auto-attaches X-Restaurant-Id and
+// credentials so every call in this module scopes to the active
+// restaurant without us repeating the header per-call.
+//
+// Kiosk-mode branch: when the bundle is loaded from any kiosk host (unified
+// device.* or legacy k/w/r.*) it sends the device bearer instead of the
+// cookie session. A KITCHEN device additionally rewrites `PATCH /orders/:id`
+// to the locked-down `/api/devices/orders/:id` variant — kitchens may only
+// flip item statuses, not change payment/table/etc. WAITER kiosks need the
+// full order surface so they hit /api/orders directly.
+//
+// The device type drives the rewrite, NOT the host: the unified entry host
+// has no role in its name. We read the persisted type (set on pair/bootstrap)
+// and fall back to the legacy host→type map only when it isn't stored yet
+// (first request right after a deploy on an already-paired tablet). The
+// backend enforces the type regardless, so this is a UX nicety not a gate.
+function apiFetch(path: string, init: RequestInit = {}): Promise<Response> {
+  const headers = new Headers(init.headers || {});
+  let target = path;
+  if (isKioskHost()) {
+    const token = getDeviceToken();
+    if (token) headers.set("Authorization", `Bearer ${token}`);
+    const role = getKioskRole();
+    const deviceType = getStoredDeviceType() ?? (role ? roleToDeviceType(role) : null);
+    if (deviceType === "KITCHEN") {
+      const orderPatch = init.method === "PATCH" && /^\/api\/orders\/[^/]+$/.test(path);
+      if (orderPatch) {
+        target = path.replace("/api/orders/", "/api/devices/orders/");
+      }
+    }
+  } else {
+    for (const [k, v] of Object.entries(activeRestaurantHeader())) headers.set(k, v);
+  }
+  return fetch(apiUrl(target), { credentials: "include", ...init, headers });
+}
+// (Ml retained for OrderItem option snapshots even though categories/items use richer shapes.)
+
+// ── Restaurant ──
+
+export interface ApiScheduleDay {
+ closed: boolean;
+ from: string;
+ to: string;
+ lunchFrom: string | null;
+ lunchTo: string | null;
+}
+
+export interface ApiRestaurant {
+ id: string;
+ title: string;
+ subtitle: string | null;
+ description: string | null;
+ slug: string | null;
+ currency: string;
+ billingCurrency?: string;
+ source: string | null;
+ backgroundType: string | null;
+ accentColor: string;
+ address: string | null;
+ x: string | null;
+ y: string | null;
+ googlePlaceId: string | null;
+ phone: string | null;
+ instagram: string | null;
+ whatsapp: string | null;
+ languages: string[];
+ defaultLanguage: string;
+ hideTitle: boolean;
+ menuLayout: string;
+ titleScale: string;
+ languageSwitcher: string;
+ paymentMethods?: string[];
+ reservationsEnabled: boolean;
+ reservationMode: string;
+ reservationSlotMinutes: number;
+ workingHoursStart: string;
+ workingHoursEnd: string;
+ reservationSchedule: ApiScheduleDay[] | null;
+ timezone: string;
+ ordersEnabled: boolean;
+ orderNameEnabled: boolean;
+ orderPhoneEnabled: boolean;
+ orderAddressEnabled: boolean;
+ orderMode: string;
+ scanBannerDismissed?: boolean;
+ // First-login onboarding step flags. false → the matching modal still shows.
+ onboardingNameDone?: boolean;
+ onboardingFillDone?: boolean;
+ // Present only in the switcher list (GET /restaurants): false = managed for
+ // another company via grant (hide delete/billing affordances).
+ owned?: boolean;
+}
+
+export async function fetchRestaurant(): Promise<ApiRestaurant | null> {
+ const res = await apiFetch("/api/restaurant", {
+        credentials: "include", cache: "no-store" });
+ if (!res.ok) return null;
+ return (await res.json()) as ApiRestaurant;
+}
+
+export async function updateRestaurant(
+ patch: Partial<ApiRestaurant> & { source?: string | null },
+): Promise<ApiRestaurant> {
+ const res = await apiFetch("/api/restaurant", {
+        credentials: "include",
+ method: "POST",
+ headers: { "Content-Type": "application/json" },
+ body: JSON.stringify(patch),
+ });
+ if (!res.ok) throw new Error("Failed to save restaurant");
+ return (await res.json()) as ApiRestaurant;
+}
+
+export async function updateRestaurantLanguages(
+ languages: string[],
+ defaultLanguage: string,
+): Promise<ApiRestaurant> {
+ const res = await apiFetch("/api/restaurant/languages", {
+        credentials: "include",
+ method: "PUT",
+ headers: { "Content-Type": "application/json" },
+ body: JSON.stringify({ languages, defaultLanguage }),
+ });
+ if (!res.ok) throw new Error("Failed to update languages");
+ return (await res.json()) as ApiRestaurant;
+}
+
+export async function dismissScanBanner(): Promise<void> {
+ await apiFetch("/api/restaurant/dismiss-scan-banner", {
+  credentials: "include",
+  method: "POST",
+ });
+}
+
+/** Onboarding "fill with demo data" choice — seeds the active restaurant with
+ *  demo data (menu + tables + bookings + orders) and marks the fill step done.
+ *  Idempotent server-side. */
+export async function fillDemoData(): Promise<void> {
+ const res = await apiFetch("/api/onboarding/fill-demo", {
+  credentials: "include",
+  method: "POST",
+ });
+ if (!res.ok) throw new Error("Failed to fill demo data");
+}
+
+/** Mark a first-login onboarding step as handled (persisted) so its modal never
+ *  reappears. `name` → name entered/skipped; `fill` → scan or start-from-scratch
+ *  chosen (the demo choice marks it via fillDemoData). */
+export async function markOnboardingStep(step: "name" | "fill"): Promise<void> {
+ const res = await apiFetch("/api/onboarding/step", {
+  credentials: "include",
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ step }),
+ });
+ if (!res.ok) throw new Error("Failed to mark onboarding step");
+}
+
+// ── Multi-restaurant: list, switch, create, delete ──
+
+export interface RestaurantListResponse {
+ activeId: string;
+ isPaid: boolean;
+ // False when the active restaurant is managed for another company via grant —
+ // billing UI is hidden in that context.
+ canManageBilling?: boolean;
+ restaurants: ApiRestaurant[];
+}
+
+export async function fetchRestaurantList(): Promise<RestaurantListResponse> {
+ const res = await apiFetch("/api/restaurants", {
+  credentials: "include",
+  cache: "no-store",
+ });
+ if (!res.ok) throw new Error("Failed to fetch restaurants");
+ return (await res.json()) as RestaurantListResponse;
+}
+
+export async function setActiveRestaurant(id: string): Promise<{ activeId: string }> {
+ const res = await apiFetch("/api/restaurants/active", {
+  credentials: "include",
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ id }),
+ });
+ if (!res.ok) throw new Error("Failed to switch restaurant");
+ return (await res.json()) as { activeId: string };
+}
+
+export async function createRestaurant(payload: {
+ name: string;
+ duplicateFromId?: string | null;
+}): Promise<ApiRestaurant> {
+ const res = await apiFetch("/api/restaurants", {
+  credentials: "include",
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(payload),
+ });
+ if (!res.ok) {
+  const data: { message?: string } = await res.json().catch(() => ({}));
+  throw new Error(data.message ?? `HTTP ${res.status}`);
+ }
+ return (await res.json()) as ApiRestaurant;
+}
+
+export async function previewRestaurantSlug(name: string): Promise<string> {
+ const res = await apiFetch(`/api/restaurants/slug-preview?name=${encodeURIComponent(name)}`, {
+  credentials: "include",
+  cache: "no-store",
+ });
+ if (!res.ok) return "";
+ const data = (await res.json()) as { slug?: string };
+ return data.slug ?? "";
+}
+
+export async function deleteRestaurant(id: string): Promise<void> {
+ const res = await apiFetch(`/api/restaurants/${id}`, {
+  credentials: "include",
+  method: "DELETE",
+ });
+ if (!res.ok) throw new Error("Failed to delete restaurant");
+}
+
+// ── Scan menu ──
+
+export interface ScanMenuItem {
+ name: string;
+ price: number;
+ description?: string;
+}
+export interface ScanMenuCategory {
+ name: string;
+ items: ScanMenuItem[];
+}
+
+export async function scanMenuParse(images: string[]): Promise<{
+ ok: true;
+ categories: ScanMenuCategory[];
+} | { ok: false; error: string }> {
+ const res = await apiFetch("/api/scan-menu/parse", {
+  credentials: "include",
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ images }),
+ });
+ if (!res.ok) {
+  const data: { message?: string } = await res.json().catch(() => ({}));
+  return { ok: false, error: data.message ?? `HTTP ${res.status}` };
+ }
+ const data = (await res.json()) as { categories: ScanMenuCategory[] };
+ return { ok: true, categories: data.categories };
+}
+
+export async function scanMenuSave(
+ categories: ScanMenuCategory[],
+ replaceExisting: boolean,
+): Promise<{ ok: true; categoriesCount: number; itemsCount: number } | { ok: false; error: string }> {
+ const res = await apiFetch("/api/scan-menu/save", {
+  credentials: "include",
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ categories, replaceExisting }),
+ });
+ if (!res.ok) {
+  const data: { message?: string } = await res.json().catch(() => ({}));
+  return { ok: false, error: data.message ?? `HTTP ${res.status}` };
+ }
+ const data = (await res.json()) as { categoriesCount: number; itemsCount: number };
+ return { ok: true, categoriesCount: data.categoriesCount, itemsCount: data.itemsCount };
+}
+
+// ── Categories ──
+
+// Server stores category translations as { [lang]: { name } } JSON.
+export type CategoryTranslations = Record<string, { name: string }> | null;
+
+export interface ApiCategory {
+ id: string;
+ name: string;
+ translations: CategoryTranslations;
+ sortOrder: number;
+ isActive: boolean;
+ isGroup: boolean;
+ parentId: string | null;
+}
+
+export async function fetchCategories(): Promise<ApiCategory[]> {
+ const res = await apiFetch("/api/categories", {
+        credentials: "include", cache: "no-store" });
+ if (!res.ok) return [];
+ return (await res.json()) as ApiCategory[];
+}
+
+export async function createCategory(payload: {
+ name: string;
+ translations?: CategoryTranslations;
+ isActive?: boolean;
+ isGroup?: boolean;
+ parentId?: string | null;
+}): Promise<ApiCategory> {
+ const res = await apiFetch("/api/categories", {
+        credentials: "include",
+ method: "POST",
+ headers: { "Content-Type": "application/json" },
+ body: JSON.stringify(payload),
+ });
+ if (!res.ok) throw new Error("Failed to create category");
+ return (await res.json()) as ApiCategory;
+}
+
+export async function updateCategory(
+ id: string,
+ payload: { name: string; translations?: CategoryTranslations; isActive?: boolean; sortOrder?: number; isGroup?: boolean; parentId?: string | null },
+): Promise<ApiCategory> {
+ const res = await apiFetch(`/api/categories/${id}`, {
+        credentials: "include",
+ method: "PUT",
+ headers: { "Content-Type": "application/json" },
+ body: JSON.stringify(payload),
+ });
+ if (!res.ok) throw new Error("Failed to update category");
+ return (await res.json()) as ApiCategory;
+}
+
+export async function deleteCategory(id: string): Promise<void> {
+ const res = await apiFetch(`/api/categories/${id}`, {
+        credentials: "include", method: "DELETE" });
+ if (!res.ok) throw new Error("Failed to delete category");
+}
+
+export async function reorderCategories(
+ items: { id: string; sortOrder: number }[],
+ signal?: AbortSignal,
+): Promise<ApiCategory[]> {
+ const res = await apiFetch("/api/categories/reorder", {
+        credentials: "include",
+ method: "POST",
+ headers: { "Content-Type": "application/json" },
+ body: JSON.stringify({ items }),
+ signal,
+ });
+ if (!res.ok) throw new Error("Failed to reorder categories");
+ return (await res.json()) as ApiCategory[];
+}
+
+// ── Items ──
+
+// Server stores item translations as { [lang]: { name?, description? } } JSON.
+export type ItemTranslations = Record<string, { name?: string; description?: string }> | null;
+
+export interface ApiItem {
+ id: string;
+ name: string;
+ description: string | null;
+ translations: ItemTranslations;
+ price: number;
+ imageUrl: string | null;
+ allergens: string[];
+ diets: string[];
+ options: DishOption[] | null;
+ sortOrder: number;
+ isActive: boolean;
+ // null = orphaned item (its category was deleted) — surfaced in the
+ // synthetic "No category" bucket.
+ categoryId: string | null;
+}
+
+export async function fetchItems(): Promise<ApiItem[]> {
+ const res = await apiFetch("/api/items", {
+        credentials: "include", cache: "no-store" });
+ if (!res.ok) return [];
+ return (await res.json()) as ApiItem[];
+}
+
+export async function createItem(payload: {
+ name: string;
+ description?: string | null;
+ price: number;
+ imageUrl?: string | null;
+ categoryId: string;
+ isActive?: boolean;
+ translations?: ItemTranslations;
+ allergens?: string[];
+ diets?: string[];
+ options?: DishOption[] | null;
+}): Promise<ApiItem> {
+ const res = await apiFetch("/api/items", {
+        credentials: "include",
+ method: "POST",
+ headers: { "Content-Type": "application/json" },
+ body: JSON.stringify(payload),
+ });
+ if (!res.ok) throw new Error("Failed to create item");
+ return (await res.json()) as ApiItem;
+}
+
+export async function updateItem(
+ id: string,
+ payload: {
+ name: string;
+ description?: string | null;
+ price: number;
+ imageUrl?: string | null;
+ // Optional: omitted when editing an orphaned dish so it stays orphaned
+ // (the server rejects a null categoryId).
+ categoryId?: string;
+ isActive?: boolean;
+ translations?: ItemTranslations;
+ allergens?: string[];
+ diets?: string[];
+ options?: DishOption[] | null;
+ sortOrder?: number;
+ },
+): Promise<ApiItem> {
+ const res = await apiFetch(`/api/items/${id}`, {
+        credentials: "include",
+ method: "PUT",
+ headers: { "Content-Type": "application/json" },
+ body: JSON.stringify(payload),
+ });
+ if (!res.ok) throw new Error("Failed to update item");
+ return (await res.json()) as ApiItem;
+}
+
+export async function patchItem(
+ id: string,
+ payload: { isActive?: boolean },
+ signal?: AbortSignal,
+): Promise<ApiItem> {
+ const res = await apiFetch(`/api/items/${id}`, {
+        credentials: "include",
+ method: "PATCH",
+ headers: { "Content-Type": "application/json" },
+ body: JSON.stringify(payload),
+ signal,
+ });
+ if (!res.ok) throw new Error("Failed to update item");
+ return (await res.json()) as ApiItem;
+}
+
+export async function deleteItem(id: string): Promise<void> {
+ const res = await apiFetch(`/api/items/${id}`, {
+        credentials: "include", method: "DELETE" });
+ if (!res.ok) throw new Error("Failed to delete item");
+}
+
+export interface ReorderSwap {
+ id: string;
+ sortOrder: number;
+}
+
+export async function reorderItem(
+ itemId: string,
+ direction: "up" | "down",
+): Promise<ReorderSwap[]> {
+ const res = await apiFetch("/api/items/reorder", {
+        credentials: "include",
+ method: "POST",
+ headers: { "Content-Type": "application/json" },
+ body: JSON.stringify({ itemId, direction }),
+ });
+ if (!res.ok) throw new Error("Failed to reorder item");
+ const data = await res.json();
+ // New API returns { swapped: [{id, sortOrder}, ...] }. Tolerate the legacy
+ // full-list shape too in case an old API is deployed.
+ if (Array.isArray(data)) {
+  return (data as ApiItem[]).map((it) => ({ id: it.id, sortOrder: it.sortOrder }));
+ }
+ if (data && Array.isArray(data.swapped)) return data.swapped as ReorderSwap[];
+ return [];
+}
+
+export async function reorderItemsBulk(
+ items: { id: string; sortOrder: number }[],
+ signal?: AbortSignal,
+): Promise<void> {
+ const res = await apiFetch("/api/items/reorder-bulk", {
+   credentials: "include",
+   method: "POST",
+   headers: { "Content-Type": "application/json" },
+   body: JSON.stringify({ items }),
+   signal,
+ });
+ if (!res.ok) throw new Error("Failed to reorder items");
+}
+
+// ── Tables ──
+
+export interface ApiTable {
+ id: string;
+ number: number;
+ capacity: number;
+ zone: string | null;
+ description: string | null;
+ imageUrl: string | null;
+ color: string | null;
+ x: number | null;
+ y: number | null;
+ shape: string;
+ rotation: number;
+ width: number | null;
+ height: number | null;
+ isActive: boolean;
+ sortOrder: number;
+}
+
+export async function fetchTables(): Promise<ApiTable[]> {
+ const res = await apiFetch("/api/tables", {
+        credentials: "include", cache: "no-store" });
+ if (!res.ok) return [];
+ return (await res.json()) as ApiTable[];
+}
+
+export async function createTable(payload: {
+ number: number;
+ capacity: number;
+ zone?: string | null;
+ description?: string | null;
+ imageUrl?: string | null;
+ color?: string | null;
+ x?: number | null;
+ y?: number | null;
+ shape?: string;
+ rotation?: number;
+ width?: number | null;
+ height?: number | null;
+}): Promise<ApiTable> {
+ const res = await apiFetch("/api/tables", {
+        credentials: "include",
+ method: "POST",
+ headers: { "Content-Type": "application/json" },
+ body: JSON.stringify(payload),
+ });
+ if (!res.ok) throw new Error("Failed to create table");
+ return (await res.json()) as ApiTable;
+}
+
+export async function updateTable(
+ id: string,
+ payload: Partial<ApiTable>,
+): Promise<ApiTable> {
+ const res = await apiFetch(`/api/tables/${id}`, {
+        credentials: "include",
+ method: "PUT",
+ headers: { "Content-Type": "application/json" },
+ body: JSON.stringify(payload),
+ });
+ if (!res.ok) throw new Error("Failed to update table");
+ return (await res.json()) as ApiTable;
+}
+
+export async function deleteTable(id: string): Promise<void> {
+ const res = await apiFetch(`/api/tables/${id}`, {
+        credentials: "include", method: "DELETE" });
+ if (!res.ok) throw new Error("Failed to delete table");
+}
+
+// ── Reservations ──
+
+export interface ApiReservation {
+ id: string;
+ date: string;
+ startTime: string;
+ duration: number;
+ guestName: string;
+ guestEmail: string;
+ guestPhone: string | null;
+ guestsCount: number;
+ status: string;
+ notes: string | null;
+ tableId: string;
+ table: { number: number; zone: string | null };
+}
+
+export async function fetchReservations(): Promise<ApiReservation[]> {
+ const res = await apiFetch("/api/reservations", {
+        credentials: "include", cache: "no-store" });
+ if (!res.ok) return [];
+ return (await res.json()) as ApiReservation[];
+}
+
+export async function patchReservation(
+ id: string,
+ payload: { status?: string; notes?: string | null },
+): Promise<ApiReservation> {
+ const res = await apiFetch(`/api/reservations/${id}`, {
+        credentials: "include",
+ method: "PATCH",
+ headers: { "Content-Type": "application/json" },
+ body: JSON.stringify(payload),
+ });
+ if (!res.ok) throw new Error("Failed to update reservation");
+ return (await res.json()) as ApiReservation;
+}
+
+// ── Orders ──
+
+export interface ApiDiscount {
+ type: "percent" | "fixed";
+ value: number;
+ reason?: string;
+}
+
+export interface ApiOrderItem {
+ id: string;
+ dishId: string;
+ dishNameSnapshot: Ml;
+ basePriceSnapshot: string;
+ options: { optionName: Ml; variantName: Ml; priceDelta: string; quantity?: number }[];
+ notes: string;
+ status: "pending" | "cooking" | "ready" | "served";
+ createdAt: string;
+ discount?: ApiDiscount | null;
+}
+
+export interface ApiOrder {
+ id: string;
+ restaurantId: string;
+ items: ApiOrderItem[];
+ total: number;
+ currency: string;
+ customerName: string | null;
+ customerPhone: string | null;
+ customerAddress: string | null;
+ comment: string | null;
+ tableNumber: number | null;
+ status: string;
+ orderDate: string;
+ dailyNumber: number;
+ createdAt: string;
+ updatedAt: string;
+ discount?: ApiDiscount | null;
+ discountTotal?: number | null;
+}
+
+export async function fetchOrders(status?: string): Promise<ApiOrder[]> {
+ const path = status ? `/api/orders?status=${encodeURIComponent(status)}` : "/api/orders";
+ const res = await apiFetch(path, { credentials: "include", cache: "no-store" });
+ if (!res.ok) return [];
+ return (await res.json()) as ApiOrder[];
+}
+
+export async function createOrder(payload: {
+ tableNumber?: number | null;
+ items?: unknown[];
+ total?: number;
+ customerName?: string | null;
+}): Promise<ApiOrder> {
+ const res = await apiFetch("/api/orders", {
+        credentials: "include",
+ method: "POST",
+ headers: { "Content-Type": "application/json" },
+ body: JSON.stringify(payload),
+ });
+ if (!res.ok) throw new Error("Failed to create order");
+ return (await res.json()) as ApiOrder;
+}
+
+export async function patchOrder(
+ id: string,
+ payload: {
+   status?: string;
+   items?: ApiOrderItem[];
+   total?: number;
+   tableNumber?: number | null;
+   paymentMethodId?: string | null;
+   discount?: ApiDiscount | null;
+ },
+): Promise<ApiOrder> {
+ const res = await apiFetch(`/api/orders/${id}`, {
+        credentials: "include",
+ method: "PATCH",
+ headers: { "Content-Type": "application/json" },
+ body: JSON.stringify(payload),
+ });
+ if (!res.ok) throw new Error("Failed to update order");
+ return (await res.json()) as ApiOrder;
+}
+
+export async function splitOrder(
+ id: string,
+ payload: { itemIds: string[] },
+): Promise<{ source: ApiOrder; created: ApiOrder }> {
+ const res = await apiFetch(`/api/orders/${id}/split`, {
+        credentials: "include",
+ method: "POST",
+ headers: { "Content-Type": "application/json" },
+ body: JSON.stringify(payload),
+ });
+ if (!res.ok) throw new Error("Failed to split order");
+ return (await res.json()) as { source: ApiOrder; created: ApiOrder };
+}
+
+export async function deleteOrder(id: string): Promise<void> {
+ const res = await apiFetch(`/api/orders/${id}`, {
+        credentials: "include", method: "DELETE" });
+ if (!res.ok) throw new Error("Failed to delete order");
+}
+
+// ── Support ──
+
+export interface ApiSupportMessage {
+ id: string;
+ message: string;
+ isAdmin: boolean;
+ createdAt: string;
+}
+
+export async function fetchSupportMessages(): Promise<ApiSupportMessage[]> {
+ const res = await apiFetch("/api/support/messages", {
+        credentials: "include", cache: "no-store" });
+ if (!res.ok) return [];
+ return (await res.json()) as ApiSupportMessage[];
+}
+
+export async function sendSupportMessage(message: string): Promise<ApiSupportMessage> {
+ const res = await apiFetch("/api/support/messages", {
+        credentials: "include",
+ method: "POST",
+ headers: { "Content-Type": "application/json" },
+ body: JSON.stringify({ message }),
+ });
+ if (!res.ok) throw new Error("Failed to send message");
+ return (await res.json()) as ApiSupportMessage;
+}
+
+// ── Subscription / Stripe ──
+
+export async function fetchSubscriptionStatus(): Promise<{
+ plan: string | null;
+ subscriptionStatus: string | null;
+ currentPeriodEnd: string | null;
+ billingCycle: string | null;
+ trialEndsAt: string | null;
+ canManageBilling?: boolean;
+} | null> {
+ const res = await apiFetch("/api/restaurant/subscription", {
+        credentials: "include", cache: "no-store" });
+ if (!res.ok) return null;
+ return await res.json();
+}
+
+export async function createCheckoutSession(
+ plan: "BASIC" | "PRO",
+ cycle: "MONTHLY" | "YEARLY",
+ currency?: string,
+): Promise<string | null> {
+ // priceLookupKey mirrors PRICE_LOOKUP_KEYS on the API
+ // (basic_monthly, basic_yearly, pro_monthly, pro_yearly).
+ const priceLookupKey = `${plan.toLowerCase()}_${cycle.toLowerCase()}`;
+ const locale = typeof window !== "undefined" ? (window.location.pathname.match(/^\/([a-z]{2})\b/)?.[1] || "en") : "en";
+ const res = await apiFetch("/api/stripe/checkout", {
+        credentials: "include",
+ method: "POST",
+ headers: { "Content-Type": "application/json" },
+ body: JSON.stringify({ priceLookupKey, locale, currency }),
+ });
+ if (!res.ok) {
+ const text = await res.text().catch(() => "");
+ console.error("Checkout error:", res.status, text);
+ return null;
+ }
+ const data = await res.json();
+ return data.url || null;
+}
+
+export async function openBillingPortal(locale?: string): Promise<string | null> {
+ const res = await apiFetch("/api/stripe/portal", {
+        credentials: "include",
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ locale: locale || "en" }) });
+ if (!res.ok) return null;
+ const data = await res.json();
+ return data.url || null;
+}
+
+// ── Logout ──
+
+export async function logout(): Promise<void> {
+ await apiFetch("/api/auth/logout", {
+        credentials: "include", method: "POST" });
+}
+
+// ── Order serialization helpers (kitchen + orders pages) ──
+//
+// Server stores Order.items as a JSON array on the row. We extend each item with a
+// per-item kitchen status and option snapshots client-side, persisting via PATCH /orders/[id].
+
+function normalizeDiscount(raw: unknown): ApiDiscount | null {
+ if (!raw || typeof raw !== "object") return null;
+ const r = raw as Record<string, unknown>;
+ const type = r.type;
+ const value = Number(r.value);
+ if ((type !== "percent" && type !== "fixed") || !Number.isFinite(value) || value <= 0) {
+   return null;
+ }
+ const reason = typeof r.reason === "string" && r.reason.trim() ? r.reason : undefined;
+ return { type, value, ...(reason ? { reason } : {}) };
+}
+
+export function normalizeOrderItems(items: unknown): ApiOrderItem[] {
+ if (!Array.isArray(items)) return [];
+ return items
+ .filter((x): x is Record<string, unknown> => typeof x === "object" && x !== null)
+ .map((raw, idx) => {
+ const r = raw as Record<string, unknown>;
+ const id = typeof r.id === "string" ? r.id : `it_${idx}_${Date.now()}`;
+ const status = (r.status as ApiOrderItem["status"]) || "pending";
+ return {
+ id,
+ dishId: typeof r.dishId === "string" ? r.dishId : "",
+ dishNameSnapshot: (r.dishNameSnapshot as Ml) || {},
+ basePriceSnapshot: typeof r.basePriceSnapshot === "string"
+ ? r.basePriceSnapshot
+ : String(r.basePriceSnapshot ?? "0"),
+ options: Array.isArray(r.options) ? (r.options as ApiOrderItem["options"]) : [],
+ notes: typeof r.notes === "string" ? r.notes : "",
+ status,
+ createdAt: typeof r.createdAt === "string" ? r.createdAt : new Date().toISOString(),
+ discount: normalizeDiscount(r.discount),
+ };
+ });
+}

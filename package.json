@@ -1,0 +1,16 @@
+{
+  "name": "iq-rest",
+  "private": true,
+  "version": "0.0.0",
+  "description": "IQ Rest monorepo — landing, dashboard (web+api), public menu (web+api)",
+  "scripts": {
+    "dev": "./scripts/dev.sh",
+    "gen-env": "node scripts/gen-env.mjs",
+    "stop": "pm2 delete landing dashboard-web dashboard-api public-menu-api public-menu",
+    "logs": "pm2 logs",
+    "status": "pm2 status"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
