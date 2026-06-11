@@ -1,0 +1,37 @@
+name: CI
+
+# Validation only — typechecks the workspace on every push/PR.
+# Does NOT build for prod and does NOT deploy. Safe to run.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  typecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install (workspace)
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate shared Prisma client (dashboard-api schema)
+        # The hoisted @prisma/client is owned by dashboard-api; public-menu-api and
+        # landing's @prisma/client imports resolve to it. No DB connection needed.
+        run: pnpm --filter iq-rest-dashboard-api exec prisma generate
+
+      - name: Typecheck all apps (Turborepo)
+        run: pnpm turbo run typecheck
