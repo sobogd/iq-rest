@@ -1,21 +1,9 @@
 name: Deploy (manual)
 
-# INERT until cutover. Runs ONLY on manual dispatch — never on push — so merging
-# to main never touches prod. The old per-repo workflows still own prod until we
-# explicitly cut over. Pick a service (or "all") to deploy.
-#
-# Server layout (unchanged from the legacy deploys):
-#   landing          → /home/deploy/apps/iq-rest                  pm2: iq-rest        (Next :8123)
-#   dashboard-api    → /home/deploy/apps/iq-rest-dashboard-api    pm2: dashboard-api  (Nest :8130)
-#   public-menu-api  → /home/deploy/apps/iq-rest-public-menu-api  pm2: public-menu-api(Nest :8131)
-#   dashboard-web    → /home/deploy/apps/iq-rest-dashboard        nginx static (current/ symlink)
-#   public-menu      → /home/deploy/apps/iq-rest-public-menu      nginx static (current/ symlink)
-#
-# Zero-downtime: static deploys upload to releases/<sha> then atomically swap a
-# `current` symlink (nginx root must point at .../current — see DEPLOY-RUNBOOK.md);
-# Node apps use `pm2 reload` (rolling, zero-downtime when pm2 runs them in cluster
-# mode — see ecosystem.prod.config.js + the runbook). `pm2 reload` degrades to a
-# graceful restart in fork mode, so this is safe before the cluster switch too.
+# Manual cutover deploy. Runs ONLY on workflow_dispatch (never on push).
+# Each node app's .env is assembled on the server from individual GH secrets
+# (shared values are single secrets; PORT/NODE_ENV/CORS_ORIGINS are inline below).
+# Static apps swap an atomic `current` symlink (nginx root = .../current).
 
 on:
   workflow_dispatch:
@@ -27,7 +15,7 @@ on:
         type: choice
         options: [none, all, landing, dashboard-api, public-menu-api, dashboard-web, public-menu]
       run_migrations:
-        description: Run prisma migrate deploy (dashboard-api owns the schema)
+        description: Run prisma migrate deploy (@iq-rest/db owns the schema)
         required: false
         default: false
         type: boolean
@@ -36,15 +24,7 @@ concurrency:
   group: deploy-prod
   cancel-in-progress: false
 
-env:
-  PNPM_FILTER_API_DASH: iq-rest-dashboard-api
-  PNPM_FILTER_API_MENU: iq-rest-public-menu-api
-  PNPM_FILTER_WEB_DASH: iq-rest-dashboard-web
-  PNPM_FILTER_WEB_MENU: iq-rest-public-menu
-  PNPM_FILTER_LANDING: soqrmenuweb
-
 jobs:
-  # ---------------------------------------------------------------- dashboard-api
   dashboard-api:
     if: ${{ inputs.service == 'dashboard-api' || inputs.service == 'all' }}
     runs-on: ubuntu-latest
@@ -55,10 +35,9 @@ jobs:
         with: { node-version: 22, cache: pnpm }
       - run: pnpm install --frozen-lockfile
       - run: pnpm --filter @iq-rest/db generate
-      - run: pnpm --filter $PNPM_FILTER_API_DASH build
-      - name: Bundle (self-contained, prod deps)
-        run: pnpm --filter $PNPM_FILTER_API_DASH deploy --prod --legacy ./out-dashboard-api
-      - name: Optional DB migrate (schema owner)
+      - run: pnpm --filter iq-rest-dashboard-api build
+      - run: pnpm --filter iq-rest-dashboard-api deploy --prod --legacy ./out-dashboard-api
+      - name: Optional DB migrate
         if: ${{ inputs.run_migrations }}
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
@@ -73,22 +52,101 @@ jobs:
           target: "/home/deploy/apps/iq-rest-dashboard-api"
           strip_components: 1
           overwrite: true
-      - name: Write .env + reload pm2 (zero-downtime in cluster)
+      - name: Write .env + reload
         uses: appleboy/ssh-action@v1.0.3
         env:
-          APP_ENV: ${{ secrets.ENV_DASHBOARD_API }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          JWT_SECRET: ${{ secrets.JWT_SECRET }}
+          JWT_EXPIRES_IN: ${{ secrets.JWT_EXPIRES_IN }}
+          COOKIE_NAME: ${{ secrets.COOKIE_NAME }}
+          COOKIE_DOMAIN: ${{ secrets.COOKIE_DOMAIN }}
+          COOKIE_SECURE: ${{ secrets.COOKIE_SECURE }}
+          APP_URL: ${{ secrets.APP_URL }}
+          ANALYTICS_COOKIE_DOMAIN: ${{ secrets.ANALYTICS_COOKIE_DOMAIN }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
+          S3_HOST: ${{ secrets.S3_HOST }}
+          S3_KEY: ${{ secrets.S3_KEY }}
+          S3_TOKEN: ${{ secrets.S3_TOKEN }}
+          S3_NAME: ${{ secrets.S3_NAME }}
+          S3_REGION: ${{ secrets.S3_REGION }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
+          STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          APPLE_KEY_ID: ${{ secrets.APPLE_KEY_ID }}
+          APPLE_SERVICES_ID: ${{ secrets.APPLE_SERVICES_ID }}
+          APPLE_PRIVATE_KEY: ${{ secrets.APPLE_PRIVATE_KEY }}
+          ADMIN_EMAIL_DOMAIN: ${{ secrets.ADMIN_EMAIL_DOMAIN }}
+          PUBLIC_MENU_URL: ${{ secrets.PUBLIC_MENU_URL }}
+          GOOGLE_ADS_CLIENT_ID: ${{ secrets.GOOGLE_ADS_CLIENT_ID }}
+          GOOGLE_ADS_CLIENT_SECRET: ${{ secrets.GOOGLE_ADS_CLIENT_SECRET }}
+          GOOGLE_ADS_REFRESH_TOKEN: ${{ secrets.GOOGLE_ADS_REFRESH_TOKEN }}
+          GOOGLE_ADS_DEVELOPER_TOKEN: ${{ secrets.GOOGLE_ADS_DEVELOPER_TOKEN }}
+          FB_ADS_TOKEN: ${{ secrets.FB_ADS_TOKEN }}
+          FB_ADS_PIXEL_ID: ${{ secrets.FB_ADS_PIXEL_ID }}
+          WHATSAPP_TOKEN: ${{ secrets.WHATSAPP_TOKEN }}
+          WHATSAPP_PHONE_NUMBER_ID: ${{ secrets.WHATSAPP_PHONE_NUMBER_ID }}
+          WHATSAPP_VERIFY_TOKEN: ${{ secrets.WHATSAPP_VERIFY_TOKEN }}
+          WHATSAPP_APP_SECRET: ${{ secrets.WHATSAPP_APP_SECRET }}
         with:
           host: ${{ secrets.SERVER_IP }}
           username: deployer
           key: ${{ secrets.SSH_KEY }}
-          envs: APP_ENV
+          envs: DATABASE_URL,JWT_SECRET,JWT_EXPIRES_IN,COOKIE_NAME,COOKIE_DOMAIN,COOKIE_SECURE,APP_URL,ANALYTICS_COOKIE_DOMAIN,SMTP_HOST,SMTP_PORT,SMTP_USER,SMTP_PASS,FROM_EMAIL,S3_HOST,S3_KEY,S3_TOKEN,S3_NAME,S3_REGION,GEMINI_API_KEY,STRIPE_SECRET_KEY,STRIPE_WEBHOOK_SECRET,GOOGLE_CLIENT_ID,APPLE_TEAM_ID,APPLE_KEY_ID,APPLE_SERVICES_ID,APPLE_PRIVATE_KEY,ADMIN_EMAIL_DOMAIN,PUBLIC_MENU_URL,GOOGLE_ADS_CLIENT_ID,GOOGLE_ADS_CLIENT_SECRET,GOOGLE_ADS_REFRESH_TOKEN,GOOGLE_ADS_DEVELOPER_TOKEN,FB_ADS_TOKEN,FB_ADS_PIXEL_ID,WHATSAPP_TOKEN,WHATSAPP_PHONE_NUMBER_ID,WHATSAPP_VERIFY_TOKEN,WHATSAPP_APP_SECRET
           script: |
             cd /home/deploy/apps/iq-rest-dashboard-api
-            printf '%s' "$APP_ENV" > .env && chmod 600 .env
+            cat > .env <<EOF
+            PORT=8130
+            NODE_ENV=production
+            CORS_ORIGINS=https://iq-rest.com,https://dashboard.iq-rest.com
+            DATABASE_URL=$DATABASE_URL
+            JWT_SECRET=$JWT_SECRET
+            JWT_EXPIRES_IN=$JWT_EXPIRES_IN
+            COOKIE_NAME=$COOKIE_NAME
+            COOKIE_DOMAIN=$COOKIE_DOMAIN
+            COOKIE_SECURE=$COOKIE_SECURE
+            APP_URL=$APP_URL
+            ANALYTICS_COOKIE_DOMAIN=$ANALYTICS_COOKIE_DOMAIN
+            SMTP_HOST=$SMTP_HOST
+            SMTP_PORT=$SMTP_PORT
+            SMTP_USER=$SMTP_USER
+            SMTP_PASS=$SMTP_PASS
+            FROM_EMAIL=$FROM_EMAIL
+            S3_HOST=$S3_HOST
+            S3_KEY=$S3_KEY
+            S3_TOKEN=$S3_TOKEN
+            S3_NAME=$S3_NAME
+            S3_REGION=$S3_REGION
+            GEMINI_API_KEY=$GEMINI_API_KEY
+            STRIPE_SECRET_KEY=$STRIPE_SECRET_KEY
+            STRIPE_WEBHOOK_SECRET=$STRIPE_WEBHOOK_SECRET
+            GOOGLE_CLIENT_ID=$GOOGLE_CLIENT_ID
+            APPLE_TEAM_ID=$APPLE_TEAM_ID
+            APPLE_KEY_ID=$APPLE_KEY_ID
+            APPLE_SERVICES_ID=$APPLE_SERVICES_ID
+            APPLE_PRIVATE_KEY=$APPLE_PRIVATE_KEY
+            ADMIN_EMAIL_DOMAIN=$ADMIN_EMAIL_DOMAIN
+            PUBLIC_MENU_URL=$PUBLIC_MENU_URL
+            GOOGLE_ADS_CLIENT_ID=$GOOGLE_ADS_CLIENT_ID
+            GOOGLE_ADS_CLIENT_SECRET=$GOOGLE_ADS_CLIENT_SECRET
+            GOOGLE_ADS_REFRESH_TOKEN=$GOOGLE_ADS_REFRESH_TOKEN
+            GOOGLE_ADS_DEVELOPER_TOKEN=$GOOGLE_ADS_DEVELOPER_TOKEN
+            FB_ADS_TOKEN=$FB_ADS_TOKEN
+            FB_ADS_PIXEL_ID=$FB_ADS_PIXEL_ID
+            WHATSAPP_TOKEN=$WHATSAPP_TOKEN
+            WHATSAPP_PHONE_NUMBER_ID=$WHATSAPP_PHONE_NUMBER_ID
+            WHATSAPP_VERIFY_TOKEN=$WHATSAPP_VERIFY_TOKEN
+            WHATSAPP_APP_SECRET=$WHATSAPP_APP_SECRET
+            EOF
+            chmod 600 .env
             pm2 reload dashboard-api --update-env || pm2 start dist/src/main.js --name dashboard-api --time
             pm2 save
 
-  # -------------------------------------------------------------- public-menu-api
   public-menu-api:
     if: ${{ inputs.service == 'public-menu-api' || inputs.service == 'all' }}
     runs-on: ubuntu-latest
@@ -98,10 +156,9 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 22, cache: pnpm }
       - run: pnpm install --frozen-lockfile
-      # public-menu-api reuses the dashboard-api (superset) Prisma client at runtime.
       - run: pnpm --filter @iq-rest/db generate
-      - run: pnpm --filter $PNPM_FILTER_API_MENU build
-      - run: pnpm --filter $PNPM_FILTER_API_MENU deploy --prod --legacy ./out-public-menu-api
+      - run: pnpm --filter iq-rest-public-menu-api build
+      - run: pnpm --filter iq-rest-public-menu-api deploy --prod --legacy ./out-public-menu-api
       - name: Copy bundle to server
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -112,22 +169,136 @@ jobs:
           target: "/home/deploy/apps/iq-rest-public-menu-api"
           strip_components: 1
           overwrite: true
-      - name: Write .env + reload pm2 (zero-downtime in cluster)
+      - name: Write .env + reload
         uses: appleboy/ssh-action@v1.0.3
         env:
-          APP_ENV: ${{ secrets.ENV_PUBLIC_MENU_API }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          CORS_PATTERN: ${{ secrets.CORS_PATTERN }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
+          DASHBOARD_URL: ${{ secrets.DASHBOARD_URL }}
         with:
           host: ${{ secrets.SERVER_IP }}
           username: deployer
           key: ${{ secrets.SSH_KEY }}
-          envs: APP_ENV
+          envs: DATABASE_URL,CORS_PATTERN,SMTP_HOST,SMTP_PORT,SMTP_USER,SMTP_PASS,FROM_EMAIL,DASHBOARD_URL
           script: |
             cd /home/deploy/apps/iq-rest-public-menu-api
-            printf '%s' "$APP_ENV" > .env && chmod 600 .env
+            cat > .env <<EOF
+            PORT=8131
+            NODE_ENV=production
+            CORS_ORIGINS=
+            DATABASE_URL=$DATABASE_URL
+            CORS_PATTERN=$CORS_PATTERN
+            SMTP_HOST=$SMTP_HOST
+            SMTP_PORT=$SMTP_PORT
+            SMTP_USER=$SMTP_USER
+            SMTP_PASS=$SMTP_PASS
+            FROM_EMAIL=$FROM_EMAIL
+            DASHBOARD_URL=$DASHBOARD_URL
+            EOF
+            chmod 600 .env
             pm2 reload public-menu-api --update-env || pm2 start dist/main.js --name public-menu-api --time
             pm2 save
 
-  # ---------------------------------------------------------------- dashboard-web
+  landing:
+    if: ${{ inputs.service == 'landing' || inputs.service == 'all' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: pnpm }
+      - run: pnpm install --frozen-lockfile
+      - name: Build
+        env:
+          NEXT_PUBLIC_MAPS_API_KEY: ${{ secrets.NEXT_PUBLIC_MAPS_API_KEY }}
+          NEXT_PUBLIC_APP_URL: ${{ secrets.NEXT_PUBLIC_APP_URL }}
+        run: pnpm --filter soqrmenuweb build
+      - run: pnpm --filter soqrmenuweb deploy --prod --legacy ./out-landing
+      - name: Copy bundle to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: deployer
+          key: ${{ secrets.SSH_KEY }}
+          source: "out-landing/*"
+          target: "/home/deploy/apps/iq-rest"
+          strip_components: 1
+          overwrite: true
+      - name: Write .env + reload
+        uses: appleboy/ssh-action@v1.0.3
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
+          TO_EMAIL: ${{ secrets.TO_EMAIL }}
+          S3_HOST: ${{ secrets.S3_HOST }}
+          S3_KEY: ${{ secrets.S3_KEY }}
+          S3_NAME: ${{ secrets.S3_NAME }}
+          S3_REGION: ${{ secrets.S3_REGION }}
+          S3_TOKEN: ${{ secrets.S3_TOKEN }}
+          NEXT_PUBLIC_MAPS_API_KEY: ${{ secrets.NEXT_PUBLIC_MAPS_API_KEY }}
+          STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
+          STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET }}
+          NEXT_PUBLIC_APP_URL: ${{ secrets.NEXT_PUBLIC_APP_URL }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GOOGLE_ADS_CLIENT_ID: ${{ secrets.GOOGLE_ADS_CLIENT_ID }}
+          GOOGLE_ADS_CLIENT_SECRET: ${{ secrets.GOOGLE_ADS_CLIENT_SECRET }}
+          GOOGLE_ADS_REFRESH_TOKEN: ${{ secrets.GOOGLE_ADS_REFRESH_TOKEN }}
+          GOOGLE_ADS_CUSTOMER_ID: ${{ secrets.GOOGLE_ADS_CUSTOMER_ID }}
+          GOOGLE_ADS_DEVELOPER_TOKEN: ${{ secrets.GOOGLE_ADS_DEVELOPER_TOKEN }}
+          GOOGLE_ADS_CONVERSION_ACTION_ID: ${{ secrets.GOOGLE_ADS_CONVERSION_ACTION_ID }}
+          GOOGLE_ADS_CONVERSION_ACTION_ID_VIEWS: ${{ secrets.GOOGLE_ADS_CONVERSION_ACTION_ID_VIEWS }}
+          GOOGLE_ADS_CONVERSION_ACTION_ID_SUBSCRIPTION: ${{ secrets.GOOGLE_ADS_CONVERSION_ACTION_ID_SUBSCRIPTION }}
+          GOOGLE_ADS_LOGIN_CUSTOMER_ID: ${{ secrets.GOOGLE_ADS_LOGIN_CUSTOMER_ID }}
+          TURNSTILE_SECRET_KEY: ${{ secrets.TURNSTILE_SECRET_KEY }}
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: deployer
+          key: ${{ secrets.SSH_KEY }}
+          envs: DATABASE_URL,SMTP_HOST,SMTP_PORT,SMTP_USER,SMTP_PASS,FROM_EMAIL,TO_EMAIL,S3_HOST,S3_KEY,S3_NAME,S3_REGION,S3_TOKEN,NEXT_PUBLIC_MAPS_API_KEY,STRIPE_SECRET_KEY,STRIPE_WEBHOOK_SECRET,NEXT_PUBLIC_APP_URL,GEMINI_API_KEY,GOOGLE_ADS_CLIENT_ID,GOOGLE_ADS_CLIENT_SECRET,GOOGLE_ADS_REFRESH_TOKEN,GOOGLE_ADS_CUSTOMER_ID,GOOGLE_ADS_DEVELOPER_TOKEN,GOOGLE_ADS_CONVERSION_ACTION_ID,GOOGLE_ADS_CONVERSION_ACTION_ID_VIEWS,GOOGLE_ADS_CONVERSION_ACTION_ID_SUBSCRIPTION,GOOGLE_ADS_LOGIN_CUSTOMER_ID,TURNSTILE_SECRET_KEY
+          script: |
+            cd /home/deploy/apps/iq-rest
+            cat > .env <<EOF
+            DATABASE_URL=$DATABASE_URL
+            SMTP_HOST=$SMTP_HOST
+            SMTP_PORT=$SMTP_PORT
+            SMTP_USER=$SMTP_USER
+            SMTP_PASS=$SMTP_PASS
+            FROM_EMAIL=$FROM_EMAIL
+            TO_EMAIL=$TO_EMAIL
+            S3_HOST=$S3_HOST
+            S3_KEY=$S3_KEY
+            S3_NAME=$S3_NAME
+            S3_REGION=$S3_REGION
+            S3_TOKEN=$S3_TOKEN
+            NEXT_PUBLIC_MAPS_API_KEY=$NEXT_PUBLIC_MAPS_API_KEY
+            STRIPE_SECRET_KEY=$STRIPE_SECRET_KEY
+            STRIPE_WEBHOOK_SECRET=$STRIPE_WEBHOOK_SECRET
+            NEXT_PUBLIC_APP_URL=$NEXT_PUBLIC_APP_URL
+            GEMINI_API_KEY=$GEMINI_API_KEY
+            GOOGLE_ADS_CLIENT_ID=$GOOGLE_ADS_CLIENT_ID
+            GOOGLE_ADS_CLIENT_SECRET=$GOOGLE_ADS_CLIENT_SECRET
+            GOOGLE_ADS_REFRESH_TOKEN=$GOOGLE_ADS_REFRESH_TOKEN
+            GOOGLE_ADS_CUSTOMER_ID=$GOOGLE_ADS_CUSTOMER_ID
+            GOOGLE_ADS_DEVELOPER_TOKEN=$GOOGLE_ADS_DEVELOPER_TOKEN
+            GOOGLE_ADS_CONVERSION_ACTION_ID=$GOOGLE_ADS_CONVERSION_ACTION_ID
+            GOOGLE_ADS_CONVERSION_ACTION_ID_VIEWS=$GOOGLE_ADS_CONVERSION_ACTION_ID_VIEWS
+            GOOGLE_ADS_CONVERSION_ACTION_ID_SUBSCRIPTION=$GOOGLE_ADS_CONVERSION_ACTION_ID_SUBSCRIPTION
+            GOOGLE_ADS_LOGIN_CUSTOMER_ID=$GOOGLE_ADS_LOGIN_CUSTOMER_ID
+            TURNSTILE_SECRET_KEY=$TURNSTILE_SECRET_KEY
+            EOF
+            chmod 600 .env
+            pm2 reload iq-rest --update-env || pm2 start npm --name iq-rest -- start
+            pm2 save
+
   dashboard-web:
     if: ${{ inputs.service == 'dashboard-web' || inputs.service == 'all' }}
     runs-on: ubuntu-latest
@@ -145,10 +316,10 @@ jobs:
           VITE_ADMIN_EMAIL_DOMAIN: ${{ secrets.VITE_ADMIN_EMAIL_DOMAIN }}
           VITE_GOOGLE_MAPS_API_KEY: ${{ secrets.VITE_GOOGLE_MAPS_API_KEY }}
           VITE_GOOGLE_CLIENT_ID: ${{ secrets.VITE_GOOGLE_CLIENT_ID }}
-        run: pnpm --filter $PNPM_FILTER_WEB_DASH build
-      - name: Stage bundle as release-<sha>/
+        run: pnpm --filter iq-rest-dashboard-web build
+      - name: Stage release
         run: mv apps/dashboard-web/dist "release-${GITHUB_SHA}"
-      - name: Upload release (into releases/<sha>)
+      - name: Upload release
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.SERVER_IP }}
@@ -158,7 +329,7 @@ jobs:
           target: "/home/deploy/apps/iq-rest-dashboard/releases/${{ github.sha }}"
           strip_components: 1
           overwrite: true
-      - name: Atomic symlink swap (zero-downtime; nginx root = .../current)
+      - name: Atomic symlink swap
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SERVER_IP }}
@@ -169,10 +340,8 @@ jobs:
             base=/home/deploy/apps/iq-rest-dashboard
             ln -sfn "$base/releases/${{ github.sha }}" "$base/current.tmp"
             mv -Tf "$base/current.tmp" "$base/current"
-            # keep the 5 most recent releases
             ls -1dt "$base"/releases/*/ | tail -n +6 | xargs -r rm -rf
 
-  # ------------------------------------------------------------------ public-menu
   public-menu:
     if: ${{ inputs.service == 'public-menu' || inputs.service == 'all' }}
     runs-on: ubuntu-latest
@@ -185,10 +354,10 @@ jobs:
       - name: Build
         env:
           VITE_GOOGLE_MAPS_KEY: ${{ secrets.VITE_GOOGLE_MAPS_KEY }}
-        run: pnpm --filter $PNPM_FILTER_WEB_MENU build
-      - name: Stage bundle as release-<sha>/
+        run: pnpm --filter iq-rest-public-menu build
+      - name: Stage release
         run: mv apps/public-menu/dist "release-${GITHUB_SHA}"
-      - name: Upload release (into releases/<sha>)
+      - name: Upload release
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.SERVER_IP }}
@@ -198,7 +367,7 @@ jobs:
           target: "/home/deploy/apps/iq-rest-public-menu/releases/${{ github.sha }}"
           strip_components: 1
           overwrite: true
-      - name: Atomic symlink swap (zero-downtime; nginx root = .../current)
+      - name: Atomic symlink swap
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SERVER_IP }}
@@ -211,44 +380,3 @@ jobs:
             mv -Tf "$base/current.tmp" "$base/current"
             ls -1dt "$base"/releases/*/ | tail -n +6 | xargs -r rm -rf
 
-  # ---------------------------------------------------------------------- landing
-  landing:
-    if: ${{ inputs.service == 'landing' || inputs.service == 'all' }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
-        with: { node-version: 22, cache: pnpm }
-      - run: pnpm install --frozen-lockfile
-      - name: Build
-        env:
-          NEXT_PUBLIC_MAPS_API_KEY: ${{ secrets.NEXT_PUBLIC_MAPS_API_KEY }}
-          NEXT_PUBLIC_APP_URL: ${{ secrets.NEXT_PUBLIC_APP_URL }}
-        run: pnpm --filter $PNPM_FILTER_LANDING build
-      - name: Bundle (self-contained, prod deps)
-        run: pnpm --filter $PNPM_FILTER_LANDING deploy --prod --legacy ./out-landing
-      - name: Copy bundle to server
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.SERVER_IP }}
-          username: deployer
-          key: ${{ secrets.SSH_KEY }}
-          source: "out-landing/*"
-          target: "/home/deploy/apps/iq-rest"
-          strip_components: 1
-          overwrite: true
-      - name: Write .env + reload pm2 (graceful)
-        uses: appleboy/ssh-action@v1.0.3
-        env:
-          APP_ENV: ${{ secrets.ENV_LANDING }}
-        with:
-          host: ${{ secrets.SERVER_IP }}
-          username: deployer
-          key: ${{ secrets.SSH_KEY }}
-          envs: APP_ENV
-          script: |
-            cd /home/deploy/apps/iq-rest
-            printf '%s' "$APP_ENV" > .env && chmod 600 .env
-            pm2 reload iq-rest --update-env || pm2 start npm --name iq-rest -- start
-            pm2 save
