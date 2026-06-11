@@ -8,11 +8,14 @@ name: Deploy (manual)
 #   landing          → /home/deploy/apps/iq-rest                  pm2: iq-rest        (Next :8123)
 #   dashboard-api    → /home/deploy/apps/iq-rest-dashboard-api    pm2: dashboard-api  (Nest :8130)
 #   public-menu-api  → /home/deploy/apps/iq-rest-public-menu-api  pm2: public-menu-api(Nest :8131)
-#   dashboard-web    → /home/deploy/apps/iq-rest-dashboard        nginx static (dashboard/)
-#   public-menu      → /home/deploy/apps/iq-rest-public-menu      nginx static (public-menu/)
+#   dashboard-web    → /home/deploy/apps/iq-rest-dashboard        nginx static (current/ symlink)
+#   public-menu      → /home/deploy/apps/iq-rest-public-menu      nginx static (current/ symlink)
 #
-# Zero-downtime (release-dir symlink swap for static, pm2 reload/cluster for the
-# Node apps) lands in Phase 5 — this file is the parity baseline.
+# Zero-downtime: static deploys upload to releases/<sha> then atomically swap a
+# `current` symlink (nginx root must point at .../current — see DEPLOY-RUNBOOK.md);
+# Node apps use `pm2 reload` (rolling, zero-downtime when pm2 runs them in cluster
+# mode — see ecosystem.prod.config.js + the runbook). `pm2 reload` degrades to a
+# graceful restart in fork mode, so this is safe before the cluster switch too.
 
 on:
   workflow_dispatch:
@@ -70,7 +73,7 @@ jobs:
           target: "/home/deploy/apps/iq-rest-dashboard-api"
           strip_components: 1
           overwrite: true
-      - name: Restart pm2
+      - name: Reload pm2 (zero-downtime in cluster)
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SERVER_IP }}
@@ -78,7 +81,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd /home/deploy/apps/iq-rest-dashboard-api
-            pm2 restart dashboard-api --update-env || pm2 start dist/src/main.js --name dashboard-api --time
+            pm2 reload dashboard-api --update-env || pm2 start dist/src/main.js --name dashboard-api --time
             pm2 save
 
   # -------------------------------------------------------------- public-menu-api
@@ -105,7 +108,7 @@ jobs:
           target: "/home/deploy/apps/iq-rest-public-menu-api"
           strip_components: 1
           overwrite: true
-      - name: Restart pm2
+      - name: Reload pm2 (zero-downtime in cluster)
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SERVER_IP }}
@@ -113,7 +116,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd /home/deploy/apps/iq-rest-public-menu-api
-            pm2 restart public-menu-api --update-env || pm2 start dist/main.js --name public-menu-api --time
+            pm2 reload public-menu-api --update-env || pm2 start dist/main.js --name public-menu-api --time
             pm2 save
 
   # ---------------------------------------------------------------- dashboard-web
@@ -135,18 +138,31 @@ jobs:
           VITE_GOOGLE_MAPS_API_KEY: ${{ secrets.VITE_GOOGLE_MAPS_API_KEY }}
           VITE_GOOGLE_CLIENT_ID: ${{ secrets.VITE_GOOGLE_CLIENT_ID }}
         run: pnpm --filter $PNPM_FILTER_WEB_DASH build
-      - name: Stage bundle as dashboard/
-        run: rm -rf dashboard && mv apps/dashboard-web/dist dashboard
-      - name: Copy to server
+      - name: Stage bundle as release-<sha>/
+        run: mv apps/dashboard-web/dist "release-${GITHUB_SHA}"
+      - name: Upload release (into releases/<sha>)
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.SERVER_IP }}
           username: deployer
           key: ${{ secrets.SSH_KEY }}
-          source: "dashboard/"
-          target: "/home/deploy/apps/iq-rest-dashboard"
-          rm: true
+          source: "release-${{ github.sha }}/"
+          target: "/home/deploy/apps/iq-rest-dashboard/releases/${{ github.sha }}"
+          strip_components: 1
           overwrite: true
+      - name: Atomic symlink swap (zero-downtime; nginx root = .../current)
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: deployer
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            set -e
+            base=/home/deploy/apps/iq-rest-dashboard
+            ln -sfn "$base/releases/${{ github.sha }}" "$base/current.tmp"
+            mv -Tf "$base/current.tmp" "$base/current"
+            # keep the 5 most recent releases
+            ls -1dt "$base"/releases/*/ | tail -n +6 | xargs -r rm -rf
 
   # ------------------------------------------------------------------ public-menu
   public-menu:
@@ -162,18 +178,30 @@ jobs:
         env:
           VITE_GOOGLE_MAPS_KEY: ${{ secrets.VITE_GOOGLE_MAPS_KEY }}
         run: pnpm --filter $PNPM_FILTER_WEB_MENU build
-      - name: Stage bundle as public-menu/
-        run: rm -rf public-menu && mv apps/public-menu/dist public-menu
-      - name: Copy to server
+      - name: Stage bundle as release-<sha>/
+        run: mv apps/public-menu/dist "release-${GITHUB_SHA}"
+      - name: Upload release (into releases/<sha>)
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.SERVER_IP }}
           username: deployer
           key: ${{ secrets.SSH_KEY }}
-          source: "public-menu/"
-          target: "/home/deploy/apps/iq-rest-public-menu"
-          rm: true
+          source: "release-${{ github.sha }}/"
+          target: "/home/deploy/apps/iq-rest-public-menu/releases/${{ github.sha }}"
+          strip_components: 1
           overwrite: true
+      - name: Atomic symlink swap (zero-downtime; nginx root = .../current)
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: deployer
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            set -e
+            base=/home/deploy/apps/iq-rest-public-menu
+            ln -sfn "$base/releases/${{ github.sha }}" "$base/current.tmp"
+            mv -Tf "$base/current.tmp" "$base/current"
+            ls -1dt "$base"/releases/*/ | tail -n +6 | xargs -r rm -rf
 
   # ---------------------------------------------------------------------- landing
   landing:
@@ -202,7 +230,7 @@ jobs:
           target: "/home/deploy/apps/iq-rest"
           strip_components: 1
           overwrite: true
-      - name: Restart pm2
+      - name: Reload pm2 (zero-downtime in cluster)
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SERVER_IP }}
@@ -210,5 +238,5 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd /home/deploy/apps/iq-rest
-            pm2 restart iq-rest --update-env || pm2 start npm --name iq-rest -- start
+            pm2 reload iq-rest --update-env || pm2 start npm --name iq-rest -- start
             pm2 save
