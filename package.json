@@ -8,7 +8,8 @@
     "gen-env": "node scripts/gen-env.mjs",
     "stop": "pm2 delete landing dashboard-web dashboard-api public-menu-api public-menu",
     "logs": "pm2 logs",
-    "status": "pm2 status"
+    "status": "pm2 status",
+    "db:reset": "./scripts/db-reset.sh"
   },
   "dependencies": {
     "dotenv": "^16.4.5"
