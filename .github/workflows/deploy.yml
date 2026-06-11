@@ -220,15 +220,18 @@ jobs:
           NEXT_PUBLIC_APP_URL: ${{ secrets.NEXT_PUBLIC_APP_URL }}
         run: pnpm --filter soqrmenuweb build
       - run: pnpm --filter soqrmenuweb deploy --prod --legacy ./out-landing
-      - name: Copy bundle to server
+      - name: Pack bundle (embed hardlinks, avoid scp tar perm issues)
+        run: |
+          chmod -R u+rwX out-landing
+          tar czf landing.tgz --hard-dereference -C out-landing .
+      - name: Copy tarball to server
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.SERVER_IP }}
           username: deployer
           key: ${{ secrets.SSH_KEY }}
-          source: "out-landing/*"
+          source: "landing.tgz"
           target: "/home/deploy/apps/iq-rest"
-          strip_components: 1
           overwrite: true
       - name: Write .env + reload
         uses: appleboy/ssh-action@v1.0.3
@@ -267,6 +270,7 @@ jobs:
           envs: DATABASE_URL,SMTP_HOST,SMTP_PORT,SMTP_USER,SMTP_PASS,FROM_EMAIL,TO_EMAIL,S3_HOST,S3_KEY,S3_NAME,S3_REGION,S3_TOKEN,NEXT_PUBLIC_MAPS_API_KEY,STRIPE_SECRET_KEY,STRIPE_WEBHOOK_SECRET,NEXT_PUBLIC_APP_URL,GEMINI_API_KEY,GOOGLE_ADS_CLIENT_ID,GOOGLE_ADS_CLIENT_SECRET,GOOGLE_ADS_REFRESH_TOKEN,GOOGLE_ADS_CUSTOMER_ID,GOOGLE_ADS_DEVELOPER_TOKEN,GOOGLE_ADS_CONVERSION_ACTION_ID,GOOGLE_ADS_CONVERSION_ACTION_ID_VIEWS,GOOGLE_ADS_CONVERSION_ACTION_ID_SUBSCRIPTION,GOOGLE_ADS_LOGIN_CUSTOMER_ID,TURNSTILE_SECRET_KEY
           script: |
             cd /home/deploy/apps/iq-rest
+            tar xzf landing.tgz && rm -f landing.tgz
             cat > .env <<EOF
             DATABASE_URL=$DATABASE_URL
             SMTP_HOST=$SMTP_HOST
