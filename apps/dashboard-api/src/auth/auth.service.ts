@@ -397,6 +397,41 @@ export class AuthService implements OnModuleDestroy {
     };
   }
 
+  /** Issue a one-time handoff code for the OAuth full-page-redirect flow.
+   *  The callback can't reliably set the session cookie during the cross-domain
+   *  redirect bounce (in-app webviews use a separate cookie jar; Safari ITP
+   *  drops mid-redirect-intermediary cookies). Instead we stash the already
+   *  issued session token under a short-lived single-use code and hand the code
+   *  to the dashboard origin, where the SPA exchanges it via a first-party XHR
+   *  (POST /auth/handoff) that sets the cookie the same way the OTP flow does.
+   *  Only the SHA-256 of the code is stored; the row expires in 60s. */
+  async createHandoff(token: string, email: string): Promise<string> {
+    const code = generateSessionToken();
+    const codeHash = hashSessionToken(code);
+    await this.prisma.authHandoff.create({
+      data: { codeHash, token, email, expiresAt: new Date(Date.now() + 60_000) },
+    });
+    // Opportunistic cleanup of abandoned codes (user never returned).
+    void this.prisma.authHandoff
+      .deleteMany({ where: { expiresAt: { lt: new Date() } } })
+      .catch(() => undefined);
+    return code;
+  }
+
+  /** Validate + consume a handoff code. Single-use: the row is deleted on the
+   *  first lookup regardless of validity, so a replay finds nothing. Returns
+   *  the session token + email to install as cookies, or null when the code is
+   *  unknown/expired. */
+  async consumeHandoff(code: string | undefined): Promise<{ token: string; email: string } | null> {
+    if (!code) return null;
+    const codeHash = hashSessionToken(code);
+    const row = await this.prisma.authHandoff.findUnique({ where: { codeHash } });
+    if (!row) return null;
+    await this.prisma.authHandoff.delete({ where: { id: row.id } }).catch(() => undefined);
+    if (row.expiresAt < new Date()) return null;
+    return { token: row.token, email: row.email };
+  }
+
   async logout(email: string | undefined, cookieValue?: string): Promise<void> {
     if (!email) return;
     if (cookieValue) {

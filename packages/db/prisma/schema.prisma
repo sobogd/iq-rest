@@ -621,3 +621,24 @@ model InboxRead {
 
   @@map("inbox_reads")
 }
+
+/// One-time handoff codes for the OAuth full-page-redirect flow. The
+/// /auth/{google,apple}/callback endpoints cannot reliably set the session
+/// cookie during the cross-domain redirect bounce — in-app webviews
+/// (Instagram/Facebook) use a separate cookie jar for the OAuth tab, and
+/// Safari ITP drops cookies set by a domain that only appears mid-redirect.
+/// Instead the callback issues a short-lived single-use code, redirects to the
+/// dashboard's own origin, and the SPA exchanges it via a first-party XHR
+/// (POST /auth/handoff) that installs the cookie exactly like the OTP flow
+/// (which has a 100% mobile success rate). Rows are deleted on consume and
+/// expire after ~60s; only the SHA-256 of the code is stored.
+model AuthHandoff {
+  id        String   @id @default(cuid())
+  codeHash  String   @unique
+  token     String
+  email     String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  @@map("auth_handoffs")
+}

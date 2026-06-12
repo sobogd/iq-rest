@@ -8,11 +8,12 @@ import {
   Query,
   Req,
   Res,
+  UnauthorizedException,
 } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 import type { Request, Response } from "express";
 import { AuthService } from "./auth.service";
-import { AppleCallbackDto, GoogleAuthDto, SendOtpDto, VerifyOtpDto } from "./dto";
+import { AppleCallbackDto, GoogleAuthDto, HandoffDto, SendOtpDto, VerifyOtpDto } from "./dto";
 import { authCookieOptions } from "../common/session-utils";
 import { getRequestCurrency } from "../common/geo";
 
@@ -129,8 +130,6 @@ export class AuthController {
 
     try {
       const credential = await this.auth.exchangeGoogleCode(code, `${apiBase}/api/auth/google/callback`);
-      const domain = this.config.get<string>("COOKIE_DOMAIN") || undefined;
-      const opts = authCookieOptions(domain);
 
       const acceptLang = req.headers["accept-language"]?.toString().split(",")[0]?.split("-")[0];
       const currency = getRequestCurrency(req);
@@ -140,14 +139,14 @@ export class AuthController {
         currency,
         locale || acceptLang || null,
       );
-      res.cookie(SESSION_COOKIE, result.token, opts);
-      res.cookie(EMAIL_COOKIE, result.email, { ...opts, httpOnly: false });
-      res.cookie(LEGACY_SESSION_COOKIE, result.token, opts);
-      res.cookie(LEGACY_EMAIL_COOKIE, result.email, { ...opts, httpOnly: false });
-      const target = result.legacyDashboard
-        ? `${landingBase}/${locale}/dashboard`
-        : `${dashboardBase}/${locale}/dashboard`;
-      return res.redirect(302, target);
+      // We do NOT set the session cookie on this redirect response — in-app
+      // webviews and Safari ITP routinely drop a cookie set by a domain that
+      // only appears as a mid-redirect intermediary. Instead hand a one-time
+      // code to the dashboard origin (in the URL fragment so it never hits a
+      // server log or Referer header); the SPA exchanges it via a first-party
+      // XHR that installs the cookie reliably (POST /auth/handoff).
+      const code2 = await this.auth.createHandoff(result.token, result.email);
+      return res.redirect(302, `${dashboardBase}/${locale}/auth#ott=${code2}`);
     } catch {
       return res.redirect(302, `${landingBase}/${locale}?google_error=1`);
     }
@@ -204,8 +203,6 @@ export class AuthController {
         body.code,
         `${apiBase}/api/auth/apple/callback`,
       );
-      const domain = this.config.get<string>("COOKIE_DOMAIN") || undefined;
-      const opts = authCookieOptions(domain);
 
       const acceptLang = req.headers["accept-language"]?.toString().split(",")[0]?.split("-")[0];
       const currency = getRequestCurrency(req);
@@ -216,17 +213,36 @@ export class AuthController {
         currency,
         locale || acceptLang || null,
       );
-      res.cookie(SESSION_COOKIE, result.token, opts);
-      res.cookie(EMAIL_COOKIE, result.email, { ...opts, httpOnly: false });
-      res.cookie(LEGACY_SESSION_COOKIE, result.token, opts);
-      res.cookie(LEGACY_EMAIL_COOKIE, result.email, { ...opts, httpOnly: false });
-      const target = result.legacyDashboard
-        ? `${landingBase}/${locale}/dashboard`
-        : `${dashboardBase}/${locale}/dashboard`;
-      return res.redirect(302, target);
+      // Same one-time-code handoff as the Google callback — see the note there.
+      // Apple's form_post lands here cross-site, so a cookie set on this
+      // response is even more likely to be dropped by the browser.
+      const code = await this.auth.createHandoff(result.token, result.email);
+      return res.redirect(302, `${dashboardBase}/${locale}/auth#ott=${code}`);
     } catch {
       return res.redirect(302, `${landingBase}/${locale}?apple_error=1`);
     }
+  }
+
+  /**
+   * Exchange a one-time handoff code (issued by the Google/Apple full-page
+   * callback) for the session cookies. Called by the dashboard SPA as a
+   * first-party XHR right after the OAuth redirect lands on
+   * dashboard.iq-rest.com/<locale>/auth — this is what actually persists the
+   * session in in-app webviews and Safari, where a cookie set mid-redirect by
+   * the callback gets dropped. Mirrors the cookie set of verify-otp.
+   */
+  @Post("handoff")
+  @HttpCode(HttpStatus.OK)
+  async handoff(@Body() dto: HandoffDto, @Res({ passthrough: true }) res: Response) {
+    const result = await this.auth.consumeHandoff(dto.ott);
+    if (!result) throw new UnauthorizedException();
+    const domain = this.config.get<string>("COOKIE_DOMAIN") || undefined;
+    const opts = authCookieOptions(domain);
+    res.cookie(SESSION_COOKIE, result.token, opts);
+    res.cookie(EMAIL_COOKIE, result.email, { ...opts, httpOnly: false });
+    res.cookie(LEGACY_SESSION_COOKIE, result.token, opts);
+    res.cookie(LEGACY_EMAIL_COOKIE, result.email, { ...opts, httpOnly: false });
+    return { ok: true, email: result.email };
   }
 
   @Post("logout")

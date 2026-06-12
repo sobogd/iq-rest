@@ -57,6 +57,14 @@ export class GoogleAuthDto {
   signupContext?: SignupContextDto;
 }
 
+// One-time code the SPA exchanges (first-party XHR) for the session cookie
+// after the OAuth full-page-redirect callback. See AuthService.createHandoff.
+export class HandoffDto {
+  @IsString()
+  @Length(16, 256)
+  ott!: string;
+}
+
 // Apple posts these fields (application/x-www-form-urlencoded) to the
 // redirect URI. `user` is a JSON string sent only on the user's FIRST
 // authorization; everything else is present every time.
