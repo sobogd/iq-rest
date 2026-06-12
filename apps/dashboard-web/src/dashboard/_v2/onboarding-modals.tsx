@@ -9,6 +9,7 @@ import { Modal } from "./ui";
 import { ScanModal } from "./scan-modal";
 import { inputClass, primaryBtn, secondaryBtn } from "./tokens";
 import { updateRestaurant, fillDemoData, markOnboardingStep } from "./api";
+import { track } from "@/lib/dashboard-events";
 
 type Step = "name" | "fill" | "scan" | null;
 
@@ -65,6 +66,15 @@ export function OnboardingModals({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [step]);
 
+  // Funnel: which onboarding modal the user actually saw — the in-dashboard
+  // half of the signup funnel was previously untracked (landing-only), so a
+  // user who bailed here looked identical to one who never arrived.
+  useEffect(() => {
+    if (step === "name") track("dash_onb_name_view");
+    else if (step === "fill") track("dash_onb_fill_view");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [step]);
+
   // Persist a step flag, then refresh the restaurant cache (fire-and-forget;
   // onboarding is non-blocking so failures are ignored).
   const persistStep = (stepName: "name" | "fill") => {
@@ -78,6 +88,7 @@ export function OnboardingModals({
 
   const skipName = () => {
     if (busy) return;
+    track("dash_onb_name_skip");
     persistStep("name");
     afterName();
   };
@@ -90,6 +101,7 @@ export function OnboardingModals({
       return;
     }
     setBusy(true);
+    track("dash_onb_name_save");
     try {
       await updateRestaurant({ title: trimmed });
       persistStep("name");
@@ -104,12 +116,14 @@ export function OnboardingModals({
 
   const chooseScratch = () => {
     if (busy) return;
+    track("dash_onb_fill_scratch");
     persistStep("fill");
     setStep(null);
   };
 
   const chooseDemo = async () => {
     if (busy) return;
+    track("dash_onb_fill_demo");
     setBusy(true);
     try {
       // fillDemoData() also marks the fill step done server-side.
@@ -175,6 +189,7 @@ export function OnboardingModals({
           placeholder={t("name.placeholder")}
           value={name}
           onChange={(e) => setName(e.target.value)}
+          onFocus={() => track("dash_onb_name_focus")}
           onKeyDown={(e) => {
             if (e.key === "Enter") void saveName();
           }}
@@ -194,7 +209,7 @@ export function OnboardingModals({
       >
         <div className="space-y-2.5">
           <OnbChoice icon={<Sparkles className="h-5 w-5" />} title={t("fill.demo")} hint={t("fill.demoHint")} busy={busy} onClick={() => void chooseDemo()} />
-          <OnbChoice icon={<ScanLine className="h-5 w-5" />} title={t("fill.scan")} hint={t("fill.scanHint")} disabled={busy} onClick={() => setStep("scan")} />
+          <OnbChoice icon={<ScanLine className="h-5 w-5" />} title={t("fill.scan")} hint={t("fill.scanHint")} disabled={busy} onClick={() => { track("dash_onb_fill_scan"); setStep("scan"); }} />
           <OnbChoice icon={<Pencil className="h-5 w-5" />} title={t("fill.scratch")} hint={t("fill.scratchHint")} disabled={busy} onClick={chooseScratch} />
         </div>
       </Modal>
