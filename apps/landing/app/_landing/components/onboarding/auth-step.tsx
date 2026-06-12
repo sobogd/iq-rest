@@ -87,10 +87,18 @@ export function AuthStep({
   const [errorMessage, setErrorMessage] = useState("");
   const [cooldown, setCooldown] = useState(0);
   const [resendStatus, setResendStatus] = useState<"idle" | "loading" | "sent">("idle");
-  // In-app webviews (Instagram/Facebook/…) often have Google OAuth blocked —
-  // promote the email option to the top there so those users still convert.
+  // In-app webviews (Instagram/Facebook/…) routinely block Google/Apple OAuth
+  // (disallowed_useragent) and can't break out to the system browser. Detect on
+  // mount and take those users straight to the email + OTP form — the only path
+  // that works in every browser. Effect-based (not a lazy initializer) to stay
+  // SSR/hydration-safe; costs at most one frame on the method screen.
   const [inApp, setInApp] = useState(false);
-  useEffect(() => setInApp(isInAppWebView()), []);
+  useEffect(() => {
+    if (isInAppWebView()) {
+      setInApp(true);
+      setEmailOpen(true);
+    }
+  }, []);
   useEffect(() => {
     if (cooldown <= 0) return;
     const timer = setTimeout(() => setCooldown((c) => c - 1), 1000);
@@ -318,18 +326,21 @@ export function AuthStep({
             </button>
           </form>
 
-          <button
-            type="button"
-            onClick={() => {
-              setEmailOpen(false);
-              setStatus("idle");
-              setErrorMessage("");
-            }}
-            className="w-full inline-flex items-center justify-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors mt-3 cursor-pointer"
-          >
-            <ChevronLeft className="h-4 w-4" />
-            {t("changeMethod")}
-          </button>
+          {/* No way back to Google/Apple in a webview — they don't work there. */}
+          {!inApp && (
+            <button
+              type="button"
+              onClick={() => {
+                setEmailOpen(false);
+                setStatus("idle");
+                setErrorMessage("");
+              }}
+              className="w-full inline-flex items-center justify-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors mt-3 cursor-pointer"
+            >
+              <ChevronLeft className="h-4 w-4" />
+              {t("changeMethod")}
+            </button>
+          )}
         </>
       ) : (
         <div className="flex flex-col gap-3">
@@ -357,11 +368,7 @@ export function AuthStep({
               analytics.track("l_onb_email_option_click");
               setEmailOpen(true);
             }}
-            className={
-              inApp
-                ? "order-first w-full h-12 text-base font-semibold text-white bg-gradient-to-br from-[hsl(9,100%,58%)] to-[hsl(35,95%,55%)] rounded-xl hover:opacity-90 active:scale-[0.99] transition-all flex items-center justify-center gap-3 cursor-pointer"
-                : "w-full h-12 text-base font-medium text-foreground bg-background border border-border rounded-xl hover:border-foreground active:scale-[0.99] transition-all flex items-center justify-center gap-3 cursor-pointer"
-            }
+            className="w-full h-12 text-base font-medium text-foreground bg-background border border-border rounded-xl hover:border-foreground active:scale-[0.99] transition-all flex items-center justify-center gap-3 cursor-pointer"
           >
             <EmailIcon />
             {t("emailOption")}
