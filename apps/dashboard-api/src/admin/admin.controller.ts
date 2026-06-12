@@ -1186,14 +1186,33 @@ export class AdminController {
     };
   }
 
-  /** Restaurants for the manual session-assign picker. */
+  /** Restaurants for the manual session-assign picker. Each row carries the
+   *  owner's email and creation date so the picker can render name/email/date
+   *  chips; newest first. */
   @Get("usage/restaurants")
   async usageRestaurants() {
     const rs = await this.prisma.restaurant.findMany({
-      select: { id: true, title: true },
-      orderBy: { title: "asc" },
+      select: {
+        id: true,
+        title: true,
+        createdAt: true,
+        restaurantUsers: {
+          where: { addedBy: null },
+          orderBy: { addedAt: "asc" },
+          take: 1,
+          select: { user: { select: { email: true } } },
+        },
+      },
+      orderBy: { createdAt: "desc" },
     });
-    return { restaurants: rs };
+    return {
+      restaurants: rs.map((r) => ({
+        id: r.id,
+        title: r.title,
+        email: r.restaurantUsers[0]?.user?.email ?? null,
+        createdAt: r.createdAt.toISOString(),
+      })),
+    };
   }
 
   /** Manually merge a session into a restaurant: stamp manualRestaurantId

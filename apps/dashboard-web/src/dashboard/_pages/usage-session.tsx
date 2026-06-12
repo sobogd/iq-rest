@@ -581,7 +581,8 @@ function RestaurantPickerModal({
   onAssigned: () => void;
 }) {
   useScrollLock(true);
-  const [restaurants, setRestaurants] = useState<Array<{ id: string; title: string }>>([]);
+  type PickerRestaurant = { id: string; title: string; email: string | null; createdAt: string };
+  const [restaurants, setRestaurants] = useState<PickerRestaurant[]>([]);
   const [q, setQ] = useState("");
   const [selected, setSelected] = useState<{ id: string; title: string } | null>(null);
   const [assigning, setAssigning] = useState(false);
@@ -589,13 +590,20 @@ function RestaurantPickerModal({
   useEffect(() => {
     fetch(apiUrl("/api/admin/usage/restaurants"), { credentials: "include" })
       .then((r) => (r.ok ? r.json() : { restaurants: [] }))
-      .then((j: { restaurants: Array<{ id: string; title: string }> }) => setRestaurants(j.restaurants ?? []))
+      .then((j: { restaurants: PickerRestaurant[] }) => setRestaurants(j.restaurants ?? []))
       .catch(() => undefined);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const filtered = q.trim()
-    ? restaurants.filter((r) => r.title.toLowerCase().includes(q.trim().toLowerCase()))
+  // Server already returns newest-first; filter matches name OR email.
+  const needle = q.trim().toLowerCase();
+  const filtered = needle
+    ? restaurants.filter(
+        (r) => r.title.toLowerCase().includes(needle) || (r.email ?? "").toLowerCase().includes(needle),
+      )
     : restaurants;
+  const fmtDate = (iso: string) =>
+    new Date(iso).toLocaleDateString("en", { day: "numeric", month: "short", year: "2-digit" });
 
   async function continueAssign() {
     if (!selected || assigning) return;
@@ -646,10 +654,22 @@ function RestaurantPickerModal({
               <button
                 key={r.id}
                 type="button"
-                onClick={() => setSelected(r)}
-                className={"w-full flex items-center gap-2 px-4 py-2.5 text-sm text-left transition-colors " + (selected?.id === r.id ? "bg-primary/10" : "hover:bg-muted/40")}
+                onClick={() => setSelected({ id: r.id, title: r.title })}
+                className={"w-full flex items-center gap-1.5 px-4 py-2.5 text-left transition-colors " + (selected?.id === r.id ? "bg-primary/10" : "hover:bg-muted/40")}
               >
-                <span className="flex-1 truncate text-foreground">{r.title}</span>
+                {r.title.trim() ? (
+                  <span className="text-[10px] rounded px-1.5 py-0.5 bg-secondary text-foreground font-medium truncate max-w-[45%]" title={r.title}>
+                    {r.title}
+                  </span>
+                ) : null}
+                {r.email ? (
+                  <span className="text-[10px] rounded px-1.5 py-0.5 bg-slate-500/10 text-slate-700 dark:text-slate-300 truncate min-w-0" title={r.email}>
+                    {r.email}
+                  </span>
+                ) : null}
+                <span className="ml-auto text-[10px] rounded px-1.5 py-0.5 bg-secondary text-muted-foreground shrink-0">
+                  {fmtDate(r.createdAt)}
+                </span>
                 {selected?.id === r.id ? <Check className="w-4 h-4 text-primary shrink-0" /> : null}
               </button>
             ))
