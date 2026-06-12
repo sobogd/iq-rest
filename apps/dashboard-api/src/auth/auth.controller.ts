@@ -4,6 +4,7 @@ import {
   Get,
   HttpCode,
   HttpStatus,
+  Logger,
   Post,
   Query,
   Req,
@@ -28,6 +29,8 @@ const LEGACY_EMAIL_COOKIE = "user_email";
 
 @Controller("auth")
 export class AuthController {
+  private readonly logger = new Logger(AuthController.name);
+
   constructor(private readonly auth: AuthService, private readonly config: ConfigService) {}
 
   @Post("send-otp")
@@ -125,6 +128,7 @@ export class AuthController {
     const locale = parsedState.locale || "en";
 
     if (error || !code) {
+      this.logger.warn(`google callback without code (error=${error ?? "none"}, locale=${locale})`);
       return res.redirect(302, `${landingBase}/${locale}`);
     }
 
@@ -147,7 +151,8 @@ export class AuthController {
       // XHR that installs the cookie reliably (POST /auth/handoff).
       const code2 = await this.auth.createHandoff(result.token, result.email);
       return res.redirect(302, `${dashboardBase}/${locale}/auth#ott=${code2}`);
-    } catch {
+    } catch (err) {
+      this.logger.error(`google callback failed: ${err instanceof Error ? err.message : String(err)}`);
       return res.redirect(302, `${landingBase}/${locale}?google_error=1`);
     }
   }
@@ -182,6 +187,7 @@ export class AuthController {
     const locale = parsedState.locale || "en";
 
     if (body.error || !body.code) {
+      this.logger.warn(`apple callback without code (error=${body.error ?? "none"}, locale=${locale})`);
       return res.redirect(302, `${landingBase}/${locale}`);
     }
 
@@ -218,7 +224,8 @@ export class AuthController {
       // response is even more likely to be dropped by the browser.
       const code = await this.auth.createHandoff(result.token, result.email);
       return res.redirect(302, `${dashboardBase}/${locale}/auth#ott=${code}`);
-    } catch {
+    } catch (err) {
+      this.logger.error(`apple callback failed: ${err instanceof Error ? err.message : String(err)}`);
       return res.redirect(302, `${landingBase}/${locale}?apple_error=1`);
     }
   }

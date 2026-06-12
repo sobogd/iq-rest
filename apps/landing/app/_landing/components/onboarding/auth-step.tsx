@@ -28,6 +28,28 @@ const ERROR_MAP: Record<string, string> = {
 
 const isValidEmail = (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
 
+/** Encode the OAuth `state` payload as unicode-safe base64url.
+ *  Plain `btoa(JSON.stringify(...))` (a) throws on non-Latin1 restaurant names,
+ *  killing the Google/Apple button silently, and (b) emits standard base64
+ *  (`+` `/` `=`) which the API's `base64url` decode + the query/form parser
+ *  mangle (`+` → space) — so locale + signupContext get lost. base64url avoids
+ *  both. */
+function encodeState(payload: unknown): string {
+  const bytes = new TextEncoder().encode(JSON.stringify(payload));
+  let bin = "";
+  for (const b of bytes) bin += String.fromCharCode(b);
+  return btoa(bin).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+
+/** Detect an in-app webview (Instagram/Facebook/TikTok/…). Google blocks OAuth
+ *  in many of these (`disallowed_useragent`), so we surface the email option as
+ *  the primary path there — it works in every browser. */
+function isInAppWebView(): boolean {
+  if (typeof navigator === "undefined") return false;
+  const ua = navigator.userAgent || "";
+  return /FBAN|FBAV|FB_IAB|Instagram|Line\/|Twitter|TikTok|musical_ly|Snapchat|Pinterest|; wv\)/i.test(ua);
+}
+
 type SignupContext = { cuisine?: CuisineKey; restaurantName: string };
 
 type Screen = "email" | "verify";
@@ -65,6 +87,10 @@ export function AuthStep({
   const [errorMessage, setErrorMessage] = useState("");
   const [cooldown, setCooldown] = useState(0);
   const [resendStatus, setResendStatus] = useState<"idle" | "loading" | "sent">("idle");
+  // In-app webviews (Instagram/Facebook/…) often have Google OAuth blocked —
+  // promote the email option to the top there so those users still convert.
+  const [inApp, setInApp] = useState(false);
+  useEffect(() => setInApp(isInAppWebView()), []);
   useEffect(() => {
     if (cooldown <= 0) return;
     const timer = setTimeout(() => setCooldown((c) => c - 1), 1000);
@@ -74,12 +100,7 @@ export function AuthStep({
   const handleGoogleClick = () => {
     if (!GOOGLE_CLIENT_ID) return;
     analytics.track("l_onb_google_click");
-    const state = btoa(
-      JSON.stringify({
-        locale,
-        signupContext: signupContext ?? undefined,
-      }),
-    );
+    const state = encodeState({ locale, signupContext: signupContext ?? undefined });
     const params = new URLSearchParams({
       client_id: GOOGLE_CLIENT_ID,
       redirect_uri: `${dashboardApiBase()}/api/auth/google/callback`,
@@ -96,12 +117,7 @@ export function AuthStep({
   const handleAppleClick = () => {
     if (!APPLE_SERVICES_ID) return;
     analytics.track("l_onb_apple_click");
-    const state = btoa(
-      JSON.stringify({
-        locale,
-        signupContext: signupContext ?? undefined,
-      }),
-    );
+    const state = encodeState({ locale, signupContext: signupContext ?? undefined });
     // scope name+email forces response_mode=form_post — Apple POSTs the
     // callback (and sends the name only on the first authorization). The
     // redirect_uri must byte-match the one registered on the Services ID
@@ -341,7 +357,11 @@ export function AuthStep({
               analytics.track("l_onb_email_option_click");
               setEmailOpen(true);
             }}
-            className="w-full h-12 text-base font-medium text-foreground bg-background border border-border rounded-xl hover:border-foreground active:scale-[0.99] transition-all flex items-center justify-center gap-3 cursor-pointer"
+            className={
+              inApp
+                ? "order-first w-full h-12 text-base font-semibold text-white bg-gradient-to-br from-[hsl(9,100%,58%)] to-[hsl(35,95%,55%)] rounded-xl hover:opacity-90 active:scale-[0.99] transition-all flex items-center justify-center gap-3 cursor-pointer"
+                : "w-full h-12 text-base font-medium text-foreground bg-background border border-border rounded-xl hover:border-foreground active:scale-[0.99] transition-all flex items-center justify-center gap-3 cursor-pointer"
+            }
           >
             <EmailIcon />
             {t("emailOption")}
