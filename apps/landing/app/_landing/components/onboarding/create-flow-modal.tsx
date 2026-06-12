@@ -28,34 +28,66 @@ export function CreateFlowModal({
   const closeReasonRef = useRef<"x" | "auth">("x");
   const contentRef = useRef<HTMLDivElement>(null);
 
-  // Keyboard-aware centering. The dialog is vertically centered via CSS, but a
-  // `position: fixed` element centers against the *layout* viewport, which the
-  // mobile on-screen keyboard does not shrink — so the keyboard ends up covering
-  // the lower half (the email input + submit button). We re-center against the
-  // visualViewport instead: keyboard closed → screen center; keyboard open →
-  // center of the still-visible area above the keyboard. `top` is driven inline
-  // (wins over the class), `translateY(-50%)` keeps it a true center.
+  // Keyboard-aware positioning. A `position: fixed` dialog centers against the
+  // layout viewport, which the mobile keyboard doesn't shrink — so the keyboard
+  // covers the lower half (email input + submit button). Two strategies, picked
+  // at runtime:
+  //   • If visualViewport actually shrinks on keyboard open (modern browsers) →
+  //     center inside the still-visible area above the keyboard.
+  //   • If it doesn't (many in-app webviews keep the viewport full-size) → fall
+  //     back to the only reliable signal, input focus: pin the dialog near the
+  //     top while a field is focused so it clears the keyboard, re-center on blur.
+  // `top` + `transform` are driven inline so they win over the Tailwind classes
+  // (transform must re-include translateX(-50%) since inline replaces the class).
   useEffect(() => {
     if (!open || typeof window === "undefined") return;
     const vv = window.visualViewport;
+    let focused = false;
     const apply = () => {
       const el = contentRef.current;
       if (!el) return;
       const h = vv?.height ?? window.innerHeight;
       const offset = vv?.offsetTop ?? 0;
-      el.style.top = `${offset + h / 2}px`;
+      const viewportShrank = vv ? vv.height < window.innerHeight - 100 : false;
       el.style.maxHeight = `${h - 24}px`;
+      if (focused && !viewportShrank) {
+        // Webview that won't resize: pin to the top so the field clears the keyboard.
+        el.style.top = `${offset + 12}px`;
+        el.style.transform = "translate(-50%, 0)";
+      } else {
+        // Center in the visible area (full screen when closed, above-keyboard when shrunk).
+        el.style.top = `${offset + h / 2}px`;
+        el.style.transform = "translate(-50%, -50%)";
+      }
+    };
+    const onFocusIn = (e: FocusEvent) => {
+      const tag = (e.target as HTMLElement)?.tagName;
+      if (tag === "INPUT" || tag === "TEXTAREA") {
+        focused = true;
+        apply();
+      }
+    };
+    const onFocusOut = () => {
+      focused = false;
+      // Delay so focus moving between two fields doesn't flicker to center.
+      setTimeout(() => {
+        if (!contentRef.current?.contains(document.activeElement)) apply();
+      }, 50);
     };
     apply();
     const raf = requestAnimationFrame(apply);
     vv?.addEventListener("resize", apply);
     vv?.addEventListener("scroll", apply);
     window.addEventListener("resize", apply);
+    document.addEventListener("focusin", onFocusIn);
+    document.addEventListener("focusout", onFocusOut);
     return () => {
       cancelAnimationFrame(raf);
       vv?.removeEventListener("resize", apply);
       vv?.removeEventListener("scroll", apply);
       window.removeEventListener("resize", apply);
+      document.removeEventListener("focusin", onFocusIn);
+      document.removeEventListener("focusout", onFocusOut);
     };
   }, [open]);
 
