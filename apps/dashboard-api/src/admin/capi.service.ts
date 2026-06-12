@@ -229,20 +229,37 @@ export class CapiService {
     // Journal lookup for these fbclids: a successful (fbclid,eventName) is never
     // resent; a pair that already failed MAX_ERRORS times is given up on (a
     // permanently-rejected event must not be retried forever every 15 minutes).
-    const MAX_ERRORS = 3;
+    // Meta returns transient/throttling errors (code 1 "unknown error", rate
+    // limits, …) that succeed on a later retry — the SAME fbclid's other events
+    // often go through minutes apart. Giving up after 3 of those permanently
+    // drops real conversions, so transient codes get a much higher retry budget
+    // (still bounded so a genuinely-stuck event can't loop for the whole 7-day
+    // window). Only hard rejections (bad token/param/etc.) hit the low cap.
+    const TRANSIENT_CODES = new Set([1, 2, 4, 17, 32, 341, 368, 613]);
+    const MAX_PERMANENT_ERRORS = 3;
+    const MAX_TRANSIENT_ERRORS = 24;
     const MAX_PER_RUN = 300;
     const fbclids = Array.from(wanted.keys());
     const journal = await this.prisma.capiSend.findMany({
       where: { fbclid: { in: fbclids }, status: { in: ["success", "error"] } },
-      select: { fbclid: true, eventName: true, status: true },
+      select: { fbclid: true, eventName: true, status: true, response: true },
     });
     const successSet = new Set<string>();
-    const errorCount = new Map<string, number>();
+    const permErrors = new Map<string, number>();
+    const transientErrors = new Map<string, number>();
     for (const j of journal) {
       const key = `${j.fbclid}|${j.eventName}`;
-      if (j.status === "success") successSet.add(key);
-      else errorCount.set(key, (errorCount.get(key) ?? 0) + 1);
+      if (j.status === "success") {
+        successSet.add(key);
+        continue;
+      }
+      const code = (j.response as { error?: { code?: number } } | null)?.error?.code;
+      const map = typeof code === "number" && TRANSIENT_CODES.has(code) ? transientErrors : permErrors;
+      map.set(key, (map.get(key) ?? 0) + 1);
     }
+    const givenUp = (key: string): boolean =>
+      (permErrors.get(key) ?? 0) >= MAX_PERMANENT_ERRORS ||
+      (transientErrors.get(key) ?? 0) >= MAX_TRANSIENT_ERRORS;
 
     let sent = 0;
     let skipped = 0;
@@ -260,7 +277,7 @@ export class CapiService {
       const match: CapiMatch = { userId: isDemo ? null : userId, email: userId ? emailById.get(userId) ?? null : null };
       for (const eventName of events) {
         const key = `${fbclid}|${eventName}`;
-        if (successSet.has(key) || (errorCount.get(key) ?? 0) >= MAX_ERRORS) {
+        if (successSet.has(key) || givenUp(key)) {
           skipped++;
           continue;
         }
