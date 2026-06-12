@@ -68,17 +68,9 @@ export function MenuPreviewModal({ menuUrl, children, className, open: controlle
             }}
           >
             {/* iPhone frame */}
-            <div
-              className="absolute inset-0 bg-black rounded-[20px] p-2"
-              style={{
-                // Light hairline ring + soft outer glow so the all-black frame
-                // stays visible against the dark (black/80) modal backdrop.
-                boxShadow:
-                  "0 0 0 1px rgba(255,255,255,0.18), 0 0 40px rgba(255,255,255,0.12), 0 20px 50px rgba(0,0,0,0.6)",
-              }}
-            >
+            <div className="absolute inset-0 bg-[#2c2c2e] rounded-[20px] p-2 shadow-2xl">
               {/* Inner bezel */}
-              <div className="relative w-full h-full bg-black overflow-hidden">
+              <div className="relative w-full h-full bg-[#2c2c2e] overflow-hidden">
                 {/* Loading spinner */}
                 {loading && (
                   <div className="absolute inset-0 flex items-center justify-center bg-black z-5">
@@ -105,17 +97,17 @@ export function MenuPreviewModal({ menuUrl, children, className, open: controlle
             <div
               className="absolute inset-0 rounded-[20px] pointer-events-none z-20"
               style={{
-                boxShadow: "inset 0 0 0 10px #000",
+                boxShadow: "inset 0 0 0 10px #2c2c2e",
               }}
             />
 
             {/* Side buttons - Volume */}
-            <div className="absolute left-[-2px] top-[18%] w-[2px] h-[5%] bg-black rounded-l-sm" />
-            <div className="absolute left-[-2px] top-[25%] w-[2px] h-[8%] bg-black rounded-l-sm" />
-            <div className="absolute left-[-2px] top-[35%] w-[2px] h-[8%] bg-black rounded-l-sm" />
+            <div className="absolute left-[-2px] top-[18%] w-[2px] h-[5%] bg-[#2c2c2e] rounded-l-sm" />
+            <div className="absolute left-[-2px] top-[25%] w-[2px] h-[8%] bg-[#2c2c2e] rounded-l-sm" />
+            <div className="absolute left-[-2px] top-[35%] w-[2px] h-[8%] bg-[#2c2c2e] rounded-l-sm" />
 
             {/* Side button - Power */}
-            <div className="absolute right-[-2px] top-[28%] w-[2px] h-[12%] bg-black rounded-r-sm" />
+            <div className="absolute right-[-2px] top-[28%] w-[2px] h-[12%] bg-[#2c2c2e] rounded-r-sm" />
           </div>
         </div>
       </div>,
