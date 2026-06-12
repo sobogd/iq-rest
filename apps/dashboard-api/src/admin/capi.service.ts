@@ -19,7 +19,6 @@ function hashField(value: string): string {
 
 export type CapiEventName =
   | "ViewContent"
-  | "Lead"
   | "InitiateCheckout"
   | "CompleteRegistration"
   | "Subscribe";
@@ -177,20 +176,23 @@ export class CapiService {
     if (rows.length === 0) return { sent: 0, skipped: 0 };
 
     // Build the set of (fbclid → events to ensure). ViewContent = pricing /
-    // landing iframe demo. InitiateCheckout is NOT a landing event — it means
-    // the visitor entered a DEMO ACCOUNT (resolved from the dashboard / isDemo,
-    // applied in the match loop below). CompleteRegistration = real dashboard
-    // activity by a non-demo account.
+    // landing iframe demo. InitiateCheckout = opened the signup/onboarding modal
+    // (started registration); a DEMO ACCOUNT's dashboard activity also collapses
+    // to InitiateCheckout (resolved from isDemo, applied in the match loop
+    // below). CompleteRegistration = real dashboard activity by a non-demo
+    // account.
     const wanted = new Map<string, { events: Set<CapiEventName>; clickMs: number; userId: string | null }>();
     for (const r of rows) {
       if (!r.fbclid) continue;
       const events = new Set<CapiEventName>();
       if (r.has_content) events.add("ViewContent");
-      // Lead = opened the signup modal (started registration). This is the
-      // primary ad-set optimization event: it fires in-session (inside the
-      // 7-day click window) and is several times more frequent than the
-      // completed registration, so the ad set can leave the learning phase.
-      if (r.has_lead) events.add("Lead");
+      // InitiateCheckout = opened the signup/onboarding modal (started
+      // registration). This is the primary ad-set optimization event: it fires
+      // in-session (inside the 7-day click window) and is several times more
+      // frequent than the completed registration, so the ad set can leave the
+      // learning phase. (A demo account's dashboard activity also maps to
+      // InitiateCheckout below — both collapse to one event per fbclid.)
+      if (r.has_lead) events.add("InitiateCheckout");
       if (r.has_registered) events.add("CompleteRegistration");
       if (events.size === 0) continue;
       const clickMs = r.fb_at ? r.fb_at.getTime() : Date.now();
