@@ -603,7 +603,13 @@ function RestaurantPickerModal({
       )
     : restaurants;
   const fmtDate = (iso: string) =>
-    new Date(iso).toLocaleDateString("en", { day: "numeric", month: "short", year: "2-digit" });
+    new Date(iso).toLocaleString("en", {
+      day: "numeric",
+      month: "short",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false,
+    });
 
   async function continueAssign() {
     if (!selected || assigning) return;
