@@ -211,11 +211,13 @@ export class OnboardingSeedService {
           accentColor: "#A55A3C",
           languages: [seedLocale, secondaryLang],
           subtitle: pick(template.subtitle, seedLocale),
-          // Placeholder contacts so the contacts page / public menu aren't blank.
+          // Demo contacts: the support number (same as the landing WhatsApp) so
+          // the contacts page / public menu aren't blank, and Instagram's own
+          // official @instagram account as the placeholder handle.
           address: "12 Garden Street, Old Town",
-          phone: "+34 612 345 678",
-          whatsapp: "+34 612 345 678",
-          instagram: "yourrestaurant",
+          phone: "+998 94 866 37 43",
+          whatsapp: "+998 94 866 37 43",
+          instagram: "instagram",
           checklistContactsSaved: true,
           checklistBrandCustomized: true,
           ...(template.backgroundUrl
