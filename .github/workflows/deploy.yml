@@ -37,11 +37,24 @@ jobs:
       - run: pnpm --filter @iq-rest/db generate
       - run: pnpm --filter iq-rest-dashboard-api build
       - run: pnpm --filter iq-rest-dashboard-api deploy --prod --legacy ./out-dashboard-api
-      - name: Optional DB migrate
+      - name: Optional DB migrate (over SSH tunnel)
+        # The prod Postgres only listens on the server's localhost, so a plain
+        # `migrate deploy` from the runner can't reach it (P1001). Open an SSH
+        # tunnel to the server's 5432 and point Prisma at the local end.
         if: ${{ inputs.run_migrations }}
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
-        run: pnpm --filter @iq-rest/db migrate:deploy
+          SSH_KEY: ${{ secrets.SSH_KEY }}
+          SERVER_IP: ${{ secrets.SERVER_IP }}
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/id_deploy
+          chmod 600 ~/.ssh/id_deploy
+          ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
+            -i ~/.ssh/id_deploy -fN -L 5433:localhost:5432 "deployer@${SERVER_IP}"
+          # Re-point the DSN host:port at the tunnel's local end.
+          TUNNEL_URL="$(printf '%s' "$DATABASE_URL" | sed -E 's#@[^/]+/#@localhost:5433/#')"
+          DATABASE_URL="$TUNNEL_URL" pnpm --filter @iq-rest/db migrate:deploy
       - name: Copy bundle to server
         uses: appleboy/scp-action@v0.1.7
         with:
