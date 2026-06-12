@@ -2074,7 +2074,7 @@
     "subtitle": "メニューを保存するためのワンタイムログインコードのみを送信します。スパムやニュースレターは送りません。",
     "emailLabel": "メールアドレス",
     "emailPlaceholder": "you@restaurant.com",
-    "continueEmail": "メニューを保存",
+    "continueEmail": "続ける",
     "or": "または",
     "continueGoogle": "Google で続ける",
     "continueApple": "Apple で続ける",

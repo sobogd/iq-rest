@@ -66,7 +66,10 @@ export function CreateFlowModal({
         // Radix auto-focuses the first focusable child on open. Block it so the
         // mobile keyboard doesn't pop before the user has read the copy.
         onOpenAutoFocus={(e) => e.preventDefault()}
-        className="max-w-md p-0 gap-0 bg-background border-border overflow-hidden"
+        // Mobile: pin near the top + allow scroll so the on-screen keyboard
+        // (which shrinks the visual viewport from the bottom) can't overlap the
+        // email input / submit button. Desktop (sm+): keep it vertically centered.
+        className="max-w-md p-0 gap-0 bg-background border-border max-h-[92dvh] overflow-y-auto top-[2vh] translate-y-0 sm:top-[50%] sm:-translate-y-1/2"
       >
         <div className="p-6 sm:p-8">
           <AuthStep signupContext={null} variant="unified" />

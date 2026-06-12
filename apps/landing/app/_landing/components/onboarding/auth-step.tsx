@@ -273,14 +273,14 @@ export function AuthStep({
               : t("signInTitle")}
       </h2>
       <p className="text-sm sm:text-base text-muted-foreground leading-snug mb-6">
-        {emailOpen
-          ? signupContext
-            ? t("subtitle")
-            : isRegister || isUnified
-              ? t("registerSubtitle")
-              : t("signInSubtitle")
-          : isUnified
-            ? t("unifiedSubtitle")
+        {isUnified
+          ? t("unifiedSubtitle")
+          : emailOpen
+            ? signupContext
+              ? t("subtitle")
+              : isRegister
+                ? t("registerSubtitle")
+                : t("signInSubtitle")
             : t("chooseSubtitle")}
       </p>
 
