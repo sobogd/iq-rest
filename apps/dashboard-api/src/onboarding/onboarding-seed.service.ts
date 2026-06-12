@@ -144,6 +144,10 @@ export class OnboardingSeedService {
     const seedLocale = pickSeedLocale(restaurant.defaultLanguage);
     const currency = restaurant.currency;
     const template = cuisineTemplates.restaurant;
+    // Demo always ships a second example language so the owner sees the
+    // multilingual switcher in action. English venues get Spanish as the
+    // example; every other locale gets English as the second.
+    const secondaryLang = seedLocale === "en" ? "es" : "en";
 
     await this.prisma.$transaction(async (tx) => {
       // Categories — default-lang name + JSON translations. Sequential awaits
@@ -194,12 +198,26 @@ export class OnboardingSeedService {
         createdItems.push({ ...created, nameMl });
       }
 
-      // Turn orders on so the seeded sample orders are visible, and apply the
-      // template's cover background, then lay down the tables + bookings + orders.
+      // Flesh out the demo restaurant so every surface looks populated: orders on,
+      // template cover background, an accent tuned to the warm rustic template
+      // photo, a second example language, sample contacts and a subtitle. Then
+      // lay down the tables + bookings + orders.
       await tx.restaurant.update({
         where: { id: restaurantId },
         data: {
           ordersEnabled: true,
+          // Warm terracotta — echoes the brick/wood of the template interior
+          // photo far better than the default near-black accent.
+          accentColor: "#A55A3C",
+          languages: [seedLocale, secondaryLang],
+          subtitle: pick(template.subtitle, seedLocale),
+          // Placeholder contacts so the contacts page / public menu aren't blank.
+          address: "12 Garden Street, Old Town",
+          phone: "+34 612 345 678",
+          whatsapp: "+34 612 345 678",
+          instagram: "yourrestaurant",
+          checklistContactsSaved: true,
+          checklistBrandCustomized: true,
           ...(template.backgroundUrl
             ? { backgroundUrl: template.backgroundUrl, backgroundType: "image" }
             : {}),
