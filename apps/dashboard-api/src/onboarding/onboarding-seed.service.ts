@@ -194,9 +194,17 @@ export class OnboardingSeedService {
         createdItems.push({ ...created, nameMl });
       }
 
-      // Turn orders on so the seeded sample orders are visible, then lay down
-      // the tables + bookings + live orders.
-      await tx.restaurant.update({ where: { id: restaurantId }, data: { ordersEnabled: true } });
+      // Turn orders on so the seeded sample orders are visible, and apply the
+      // template's cover background, then lay down the tables + bookings + orders.
+      await tx.restaurant.update({
+        where: { id: restaurantId },
+        data: {
+          ordersEnabled: true,
+          ...(template.backgroundUrl
+            ? { backgroundUrl: template.backgroundUrl, backgroundType: "image" }
+            : {}),
+        },
+      });
       if (createdItems.length > 0) {
         await this.seedDemoExtras(tx, restaurantId, currency, createdItems);
       }

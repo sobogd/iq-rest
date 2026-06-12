@@ -68,9 +68,9 @@ export function MenuPreviewModal({ menuUrl, children, className, open: controlle
             }}
           >
             {/* iPhone frame */}
-            <div className="absolute inset-0 bg-[#1a1a1a] rounded-[20px] p-2 shadow-2xl">
+            <div className="absolute inset-0 bg-black rounded-[20px] p-2 shadow-2xl">
               {/* Inner bezel */}
-              <div className="relative w-full h-full bg-[#1a1a1a] overflow-hidden">
+              <div className="relative w-full h-full bg-black overflow-hidden">
                 {/* Loading spinner */}
                 {loading && (
                   <div className="absolute inset-0 flex items-center justify-center bg-black z-5">
@@ -97,7 +97,7 @@ export function MenuPreviewModal({ menuUrl, children, className, open: controlle
             <div
               className="absolute inset-0 rounded-[20px] pointer-events-none z-20"
               style={{
-                boxShadow: "inset 0 0 0 10px #1a1a1a",
+                boxShadow: "inset 0 0 0 10px #000",
               }}
             />
 
