@@ -1,7 +1,13 @@
 import { useQueries } from "@tanstack/react-query";
 import { useParams } from "@tanstack/react-router";
 import { useEffect } from "react";
-import { api } from "@/lib/api";
+import { api, ApiError } from "@/lib/api";
+
+// Orders + reservations are PRO-only; a BASIC restaurant gets 403 there. Don't
+// retry that (it's a deterministic entitlement block, not a transient error) —
+// otherwise the boot loader hangs for seconds while React Query backs off.
+const retryUnlessForbidden = (count: number, err: unknown) =>
+  !(err instanceof ApiError && err.status === 403) && count < 3;
 import { FullPageLoader } from "@/components/full-page-loader";
 import { landingUrl } from "@/lib/landing-url";
 import { Shell } from "./_spa/shell";
@@ -105,6 +111,7 @@ export function DashboardHost() {
         // payload doesn't grow unbounded with history.
         queryFn: () => api<ApiOrder[]>("/orders?open=1"),
         enabled,
+        retry: retryUnlessForbidden,
         refetchInterval: 30_000,
         refetchIntervalInBackground: true,
         refetchOnReconnect: "always",
@@ -114,6 +121,7 @@ export function DashboardHost() {
         queryKey: ["reservations"],
         queryFn: () => api<ApiReservation[]>("/reservations"),
         enabled,
+        retry: retryUnlessForbidden,
         refetchInterval: 30_000,
         refetchIntervalInBackground: true,
         refetchOnReconnect: "always",
