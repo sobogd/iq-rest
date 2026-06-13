@@ -196,17 +196,23 @@ function ShellBody(props: ShellInitialData) {
         refreshMenu={refreshMenu}
       />
       {/* First-run modals: onboarding (name → fill → scan), then the daily
-          trial reminder — sequenced so the trial modal is always last. */}
-      <FirstRunModals
-        key={restaurant.id}
-        restaurantName={restaurant.name}
-        onboardingNameDone={props.onboardingNameDone ?? true}
-        onboardingFillDone={props.onboardingFillDone ?? true}
-        existingRealItemsCount={realItemsCount}
-        onRefresh={refreshMenu}
-        sub={props.initialSub}
-        accountCreatedAt={props.accountCreatedAt ?? null}
-      />
+          trial reminder — sequenced so the trial modal is always last.
+          Suppressed under admin impersonation: these are gated on the visited
+          restaurant's own flags, so an admin logging into someone else's
+          restaurant would otherwise get onboarding / trial prompts that aren't
+          theirs. */}
+      {props.impersonatedBy ? null : (
+        <FirstRunModals
+          key={restaurant.id}
+          restaurantName={restaurant.name}
+          onboardingNameDone={props.onboardingNameDone ?? true}
+          onboardingFillDone={props.onboardingFillDone ?? true}
+          existingRealItemsCount={realItemsCount}
+          onRefresh={refreshMenu}
+          sub={props.initialSub}
+          accountCreatedAt={props.accountCreatedAt ?? null}
+        />
+      )}
     </>
   );
 }
