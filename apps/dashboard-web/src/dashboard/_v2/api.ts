@@ -746,6 +746,9 @@ export async function fetchSubscriptionStatus(): Promise<{
  currentPeriodEnd: string | null;
  billingCycle: string | null;
  trialEndsAt: string | null;
+ // PRO-feature entitlement (orders / kitchen / reservations). The SPA gates
+ // those surfaces on this single flag instead of re-deriving plan logic.
+ proFeatures?: boolean;
  canManageBilling?: boolean;
 } | null> {
  const res = await apiFetch("/api/restaurant/subscription", {

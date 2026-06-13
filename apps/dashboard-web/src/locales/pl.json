@@ -853,7 +853,9 @@
       "retry": "Spróbuj ponownie",
       "soundDismiss": "Nie teraz",
       "soundPromptTitle": "Włączyć dźwięk?",
-      "soundPromptMessage": "Przeglądarki blokują dźwięk, dopóki nie zezwolisz na niego dotknięciem. Włącz sygnał nowych zamówień, żeby kuchnia je słyszała."
+      "soundPromptMessage": "Przeglądarki blokują dźwięk, dopóki nie zezwolisz na niego dotknięciem. Włącz sygnał nowych zamówień, żeby kuchnia je słyszała.",
+      "proLockedTitle": "Wymagany plan PRO",
+      "proLockedBody": "Ten ekran wymaga aktywnego planu PRO. Poproś właściciela o przejście na PRO, aby kontynuować."
     },
     "devices": {
       "title": "Urządzenia",
@@ -901,6 +903,25 @@
       "toastCodeFailed": "Nie udało się wygenerować kodu",
       "requiresPaid": "Urządzenia wymagają płatnego planu lub aktywnego okresu próbnego.",
       "createFailed": "Nie udało się utworzyć urządzenia"
+    },
+    "proUpsell": {
+      "cta": "Przejdź na PRO",
+      "orders": {
+        "title": "Zamówienia to funkcja PRO",
+        "body": "Przyjmuj zamówienia przy stolikach i zarządzaj nimi w planie PRO. Przejdź na PRO, aby przyjmować zamówienia."
+      },
+      "kitchen": {
+        "title": "Ekran kuchni to funkcja PRO",
+        "body": "Wysyłaj zamówienia na ekran kuchni w planie PRO. Przejdź na PRO, aby włączyć."
+      },
+      "reservations": {
+        "title": "Rezerwacje to funkcja PRO",
+        "body": "Przyjmuj rezerwacje stolików w planie PRO. Przejdź na PRO, aby włączyć rezerwacje."
+      },
+      "devices": {
+        "title": "Urządzenia to funkcja PRO",
+        "body": "Paruj tablety kuchni, kelnera i rezerwacji w planie PRO. Przejdź na PRO, aby podłączyć urządzenia."
+      }
     }
   },
   "demo": {

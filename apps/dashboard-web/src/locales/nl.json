@@ -853,7 +853,9 @@
       "retry": "Opnieuw proberen",
       "soundDismiss": "Niet nu",
       "soundPromptTitle": "Geluid inschakelen?",
-      "soundPromptMessage": "Browsers blokkeren audio totdat je tikt om het toe te staan. Schakel het geluid voor nieuwe bestellingen in zodat de keuken ze hoort."
+      "soundPromptMessage": "Browsers blokkeren audio totdat je tikt om het toe te staan. Schakel het geluid voor nieuwe bestellingen in zodat de keuken ze hoort.",
+      "proLockedTitle": "PRO-abonnement vereist",
+      "proLockedBody": "Dit scherm vereist een actief PRO-abonnement. Vraag de eigenaar om te upgraden om door te gaan."
     },
     "devices": {
       "title": "Apparaten",
@@ -901,6 +903,25 @@
       "toastCodeFailed": "Code kon niet worden gegenereerd",
       "requiresPaid": "Apparaten vereisen een betaald abonnement of een actieve proefperiode.",
       "createFailed": "Apparaat kon niet worden aangemaakt"
+    },
+    "proUpsell": {
+      "cta": "Upgraden naar PRO",
+      "orders": {
+        "title": "Bestellingen zijn een PRO-functie",
+        "body": "Neem tafelbestellingen aan en beheer ze met het PRO-abonnement. Upgrade om bestellingen te accepteren."
+      },
+      "kitchen": {
+        "title": "Het keukenscherm is een PRO-functie",
+        "body": "Stuur bestellingen naar het keukenscherm met het PRO-abonnement. Upgrade om het in te schakelen."
+      },
+      "reservations": {
+        "title": "Reserveringen zijn een PRO-functie",
+        "body": "Accepteer tafelreserveringen met het PRO-abonnement. Upgrade om reserveringen in te schakelen."
+      },
+      "devices": {
+        "title": "Apparaten zijn een PRO-functie",
+        "body": "Koppel keuken-, bediening- en reserveringstablets met het PRO-abonnement. Upgrade om apparaten te verbinden."
+      }
     }
   },
   "demo": {

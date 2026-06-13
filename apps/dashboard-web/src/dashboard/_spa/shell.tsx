@@ -1,13 +1,14 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import { useQueryClient } from "@tanstack/react-query";
 import { useDashboardRouter } from "./router";
 import type { View } from "./types";
 
 import { MenuList } from "../_v2/menu-list";
 import { OrdersPage, KitchenPage } from "../_v2/orders";
-import { ReservationsPage } from "../_v2/reservations";
+import { ReservationsPage, CtaState } from "../_v2/reservations";
 import { TablesPage, TableFormPage } from "../_v2/tables";
 import { CategoryForm, DishForm, OptionForm } from "../_v2/forms";
 import { useRestaurant, useRestaurantOrNull } from "../_v2/restaurant-context";
@@ -47,7 +48,7 @@ export interface ShellInitialData {
   initialOrders: Order[];
   initialBookings: Booking[];
   initialTables: TableEntity[];
-  initialSub: { plan: string | null; subscriptionStatus: string | null; trialEndsAt: string | null } | null;
+  initialSub: { plan: string | null; subscriptionStatus: string | null; trialEndsAt: string | null; proFeatures?: boolean } | null;
   isAdmin: boolean;
   isDemo?: boolean;
   impersonatedBy?: string | null;
@@ -236,6 +237,33 @@ interface SwitchProps {
   refreshMenu: () => Promise<void>;
 }
 
+// PRO-gated views: orders/kitchen/reservations + their settings sub-pages are
+// PRO-only. A BASIC (menu-only) restaurant sees the upsell placeholder instead.
+type ProFeature = "orders" | "kitchen" | "reservations" | "devices";
+const PRO_FEATURE_VIEWS: Record<string, ProFeature> = {
+  orders: "orders",
+  "orders.detail": "orders",
+  kitchen: "kitchen",
+  reservations: "reservations",
+  "settings.orders": "orders",
+  "settings.bookings": "reservations",
+  "settings.devices": "devices",
+};
+
+function ProUpsell({ feature, onUpgrade }: { feature: ProFeature; onUpgrade: () => void }) {
+  const t = useTranslations("dashboard.proUpsell");
+  return (
+    <div className="max-w-5xl mx-auto md:px-6">
+      <CtaState
+        title={t(`${feature}.title`)}
+        body={t(`${feature}.body`)}
+        cta={t("cta")}
+        onClick={onUpgrade}
+      />
+    </div>
+  );
+}
+
 function ViewSwitch(p: SwitchProps) {
   const { view, restaurant, categories, orders, setOrders, bookings, setBookings, tables, setTables, sub, isAdmin, isDemo, impersonatedBy, backToSettings, backToMenu, refreshMenu } = p;
   const router = useDashboardRouter();
@@ -244,6 +272,13 @@ function ViewSwitch(p: SwitchProps) {
     await refreshMenu();
     backToMenu();
   };
+
+  // PRO-feature gate: only lock once we know the entitlement (sub loaded) so
+  // paying users never see a flash of the upsell. The backend enforces too.
+  const lockedFeature = sub != null && !sub.proFeatures ? PRO_FEATURE_VIEWS[view.name] : undefined;
+  if (lockedFeature) {
+    return <ProUpsell feature={lockedFeature} onUpgrade={() => router.push({ name: "settings.billing" })} />;
+  }
 
   switch (view.name) {
     case "auth.login":

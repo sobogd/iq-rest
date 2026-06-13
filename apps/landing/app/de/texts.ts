@@ -133,23 +133,25 @@ export const TEXTS: LandingTexts = {
     plans: {
       basic: {
         name: "Basic",
-        tagline: "Speisekarte, QR-Bestellungen und KI-Übersetzung. Start in 5 Minuten.",
+        tagline: "Digitale Speisekarte und KI-Übersetzung. In 5 Minuten online.",
         features: [
           "QR-Speisekarte für jeden Tisch",
           "Digitale Speisekarte mit Fotos und Allergenen",
           "KI-Übersetzung in 35 Sprachen",
-          "Bestellungen aus der Karte (optional)",
           "KI-Generierung von Gerichtsfotos",
           "Verwaltung von jedem Smartphone oder Tablet",
         ],
       },
       pro: {
         name: "Pro",
-        tagline: "Volle Restaurantkontrolle: Küchen-Display und Reservierungen.",
+        tagline: "Volle Restaurantkontrolle: Bestellungen, Küche und Reservierungen.",
         features: [
           "Alles aus Basic",
+          "Bestellannahme über die Karte",
+          "Kellner-App",
           "Küchen-Display (KDS)",
           "Online-Tischreservierung 24/7",
+          "Eigene Domain",
           "Priorisierter WhatsApp-Support",
         ],
       },

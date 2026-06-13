@@ -133,23 +133,25 @@ export const TEXTS: LandingTexts = {
     plans: {
       basic: {
         name: "Basic",
-        tagline: "Ēdienkarte, QR pasūtījumi un AI tulkojums. Tiešsaistē 5 minūtēs.",
+        tagline: "Digitālā ēdienkarte un AI tulkojums. Darbojas 5 minūtēs.",
         features: [
           "QR ēdienkarte katram galdam",
           "Digitālā ēdienkarte ar fotoattēliem un alergēniem",
           "AI tulkojums 35 valodās",
-          "Pasūtījumi no ēdienkartes (pēc izvēles)",
           "AI ēdienu fotoattēlu ģenerēšana",
           "Pārvaldība no jebkura telefona vai planšetdatora",
         ],
       },
       pro: {
         name: "Pro",
-        tagline: "Pilnīga restorāna kontrole: virtuves ekrāns un rezervācijas.",
+        tagline: "Pilnīga restorāna kontrole: pasūtījumi, virtuve un rezervācijas.",
         features: [
           "Viss no Basic",
+          "Pasūtījumu pieņemšana no ēdienkartes",
+          "Viesmīļa lietotne",
           "Virtuves ekrāns (KDS)",
           "Tiešsaistes galdu rezervēšana 24/7",
+          "Savs domēns",
           "Prioritārs WhatsApp atbalsts",
         ],
       },

@@ -22,6 +22,7 @@ import { OnboardingSeedService } from "../onboarding/onboarding-seed.service";
 import { PrismaService } from "../prisma/prisma.service";
 import { callGeminiImage, uploadGeneratedImage } from "../common/gemini-image";
 import { consumeAiImageQuota, getAiImageUsage, refundAiImageUsage } from "../common/ai-quota";
+import { hasProFeatures } from "../common/entitlements";
 import { getRequestCurrency } from "../common/geo";
 
 const ACTIVE_RESTAURANT_COOKIE = "iqr_active_restaurant_id";
@@ -196,6 +197,7 @@ export class RestaurantController {
         paymentProcessing: true,
         trialEndsAt: true,
         stripeSubscriptionId: true,
+        legacyFullAccess: true,
       },
     });
     if (!restaurant) return null;
@@ -207,6 +209,9 @@ export class RestaurantController {
       currentPeriodEnd: restaurant.currentPeriodEnd ? restaurant.currentPeriodEnd.toISOString() : null,
       paymentProcessing: restaurant.paymentProcessing,
       trialEndsAt: restaurant.trialEndsAt ? restaurant.trialEndsAt.toISOString() : null,
+      // PRO-feature entitlement (orders / kitchen / reservations). The SPA gates
+      // those surfaces on this single flag instead of re-deriving plan logic.
+      proFeatures: hasProFeatures(restaurant),
       aiImagesUsed: usage.aiImagesUsed,
       aiImagesLimit: usage.aiImagesLimit,
       // Demo accounts can't pay — hide the billing UI (the SPA gates on this).

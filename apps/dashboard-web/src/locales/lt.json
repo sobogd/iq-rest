@@ -853,7 +853,9 @@
       "retry": "Bandyti dar kartą",
       "soundDismiss": "Ne dabar",
       "soundPromptTitle": "Įjungti garsą?",
-      "soundPromptMessage": "Naršyklės blokuoja garsą, kol bakstelėjate jam leisti. Įjunkite naujų užsakymų signalą, kad virtuvė girdėtų atvykstančius užsakymus."
+      "soundPromptMessage": "Naršyklės blokuoja garsą, kol bakstelėjate jam leisti. Įjunkite naujų užsakymų signalą, kad virtuvė girdėtų atvykstančius užsakymus.",
+      "proLockedTitle": "Reikalingas PRO planas",
+      "proLockedBody": "Šiam ekranui reikia aktyvaus PRO plano. Paprašykite savininko atnaujinti į PRO, kad tęstumėte."
     },
     "devices": {
       "title": "Įrenginiai",
@@ -901,6 +903,25 @@
       "toastCodeFailed": "Kodo sukurti nepavyko",
       "requiresPaid": "Įrenginiams reikia mokamo plano arba aktyvaus bandomojo laikotarpio.",
       "createFailed": "Įrenginio sukurti nepavyko"
+    },
+    "proUpsell": {
+      "cta": "Atnaujinti į PRO",
+      "orders": {
+        "title": "Užsakymai yra PRO funkcija",
+        "body": "Priimkite ir tvarkykite užsakymus prie stalų su PRO planu. Atnaujinkite į PRO, kad priimtumėte užsakymus."
+      },
+      "kitchen": {
+        "title": "Virtuvės ekranas yra PRO funkcija",
+        "body": "Siųskite užsakymus į virtuvės ekraną su PRO planu. Atnaujinkite į PRO, kad įjungtumėte."
+      },
+      "reservations": {
+        "title": "Rezervacijos yra PRO funkcija",
+        "body": "Priimkite stalų rezervacijas su PRO planu. Atnaujinkite į PRO, kad įjungtumėte rezervacijas."
+      },
+      "devices": {
+        "title": "Įrenginiai yra PRO funkcija",
+        "body": "Susiekite virtuvės, padavėjo ir rezervacijų planšetes su PRO planu. Atnaujinkite į PRO, kad prijungtumėte įrenginius."
+      }
     }
   },
   "demo": {

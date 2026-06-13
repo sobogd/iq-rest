@@ -853,7 +853,9 @@
       "retry": "Tentar novamente",
       "soundDismiss": "Agora não",
       "soundPromptTitle": "Ativar o som?",
-      "soundPromptMessage": "Os navegadores bloqueiam o áudio até que toques para o permitir. Ativa o aviso sonoro de novas encomendas para que a cozinha as ouça."
+      "soundPromptMessage": "Os navegadores bloqueiam o áudio até que toques para o permitir. Ativa o aviso sonoro de novas encomendas para que a cozinha as ouça.",
+      "proLockedTitle": "É necessário o plano PRO",
+      "proLockedBody": "Este ecrã precisa de um plano PRO ativo. Peça ao proprietário para fazer upgrade para continuar."
     },
     "devices": {
       "title": "Dispositivos",
@@ -901,6 +903,25 @@
       "toastCodeFailed": "Não foi possível gerar o código",
       "requiresPaid": "Os dispositivos requerem um plano pago ou um período de teste ativo.",
       "createFailed": "Não foi possível criar o dispositivo"
+    },
+    "proUpsell": {
+      "cta": "Mudar para PRO",
+      "orders": {
+        "title": "Os pedidos são uma funcionalidade PRO",
+        "body": "Receba e faça a gestão de pedidos de mesa com o plano PRO. Faça upgrade para começar a aceitar pedidos."
+      },
+      "kitchen": {
+        "title": "O ecrã de cozinha é uma funcionalidade PRO",
+        "body": "Envie os pedidos para o ecrã da cozinha com o plano PRO. Faça upgrade para ativar."
+      },
+      "reservations": {
+        "title": "As reservas são uma funcionalidade PRO",
+        "body": "Aceite reservas de mesa com o plano PRO. Faça upgrade para ativar as reservas."
+      },
+      "devices": {
+        "title": "Os dispositivos são uma funcionalidade PRO",
+        "body": "Associe tablets de cozinha, de mesa e de reservas com o plano PRO. Faça upgrade para ligar dispositivos."
+      }
     }
   },
   "demo": {

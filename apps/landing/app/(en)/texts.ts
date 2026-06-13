@@ -133,23 +133,25 @@ export const TEXTS: LandingTexts = {
     plans: {
       basic: {
         name: "Basic",
-        tagline: "Menu, QR ordering and AI translation. Live in 5 minutes.",
+        tagline: "Digital menu and AI translation. Live in 5 minutes.",
         features: [
           "QR menu for every table",
           "Digital menu with photos and allergens",
           "AI translation in 35 languages",
-          "Orders from the menu (optional)",
           "AI dish photo generation",
           "Manage from any phone or tablet",
         ],
       },
       pro: {
         name: "Pro",
-        tagline: "Full restaurant control: kitchen display and bookings.",
+        tagline: "Full restaurant control: orders, kitchen and bookings.",
         features: [
           "Everything in Basic",
+          "Order taking from the menu",
+          "Waiter app",
           "Kitchen display (KDS)",
           "Online table booking 24/7",
+          "Custom domain",
           "Priority WhatsApp support",
         ],
       },

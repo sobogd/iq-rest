@@ -853,7 +853,9 @@
       "retry": "Torna-ho a intentar",
       "soundDismiss": "Ara no",
       "soundPromptTitle": "Activar el so?",
-      "soundPromptMessage": "Els navegadors bloquegen el so fins que toques per permetre'l. Activa l'avís de noves comandes perquè la cuina les senti."
+      "soundPromptMessage": "Els navegadors bloquegen el so fins que toques per permetre'l. Activa l'avís de noves comandes perquè la cuina les senti.",
+      "proLockedTitle": "Cal el pla PRO",
+      "proLockedBody": "Aquesta pantalla necessita un pla PRO actiu. Demana al propietari que millori el pla per continuar."
     },
     "devices": {
       "title": "Dispositius",
@@ -901,6 +903,25 @@
       "toastCodeFailed": "No s'ha pogut generar el codi",
       "requiresPaid": "Els dispositius requereixen un pla de pagament o un període de prova actiu.",
       "createFailed": "No s'ha pogut crear el dispositiu"
+    },
+    "proUpsell": {
+      "cta": "Canvia a PRO",
+      "orders": {
+        "title": "Les comandes són una funció PRO",
+        "body": "Rep i gestiona comandes de taula amb el pla PRO. Millora el pla per començar a acceptar comandes."
+      },
+      "kitchen": {
+        "title": "La pantalla de cuina és una funció PRO",
+        "body": "Envia les comandes a la pantalla de cuina amb el pla PRO. Millora el pla per activar-la."
+      },
+      "reservations": {
+        "title": "Les reserves són una funció PRO",
+        "body": "Accepta reserves de taula amb el pla PRO. Millora el pla per activar les reserves."
+      },
+      "devices": {
+        "title": "Els dispositius són una funció PRO",
+        "body": "Vincula tauletes de cuina, cambrer i reserves amb el pla PRO. Millora el pla per connectar dispositius."
+      }
     }
   },
   "demo": {

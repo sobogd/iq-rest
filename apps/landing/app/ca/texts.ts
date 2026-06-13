@@ -133,23 +133,25 @@ export const TEXTS: LandingTexts = {
     plans: {
       basic: {
         name: "Basic",
-        tagline: "Carta, comandes QR i traducció IA. En línia en 5 minuts.",
+        tagline: "Menú digital i traducció amb IA. En marxa en 5 minuts.",
         features: [
           "Carta QR per a cada taula",
           "Carta digital amb fotos i al·lèrgens",
           "Traducció IA en 35 idiomes",
-          "Comandes des de la carta (opcional)",
           "Generació IA de fotos de plats",
           "Gestió des de qualsevol mòbil o tauleta",
         ],
       },
       pro: {
         name: "Pro",
-        tagline: "Control total del restaurant: pantalla de cuina i reserves.",
+        tagline: "Control total del restaurant: comandes, cuina i reserves.",
         features: [
           "Tot el del Basic",
+          "Comandes des del menú",
+          "App de cambrer",
           "Pantalla de cuina (KDS)",
           "Reserva de taules en línia 24/7",
+          "Domini propi",
           "Suport prioritari per WhatsApp",
         ],
       },

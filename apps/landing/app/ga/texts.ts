@@ -133,23 +133,25 @@ export const TEXTS: LandingTexts = {
     plans: {
       basic: {
         name: "Basic",
-        tagline: "Biachlár, orduithe QR agus aistriúchán IS. Beo i 5 nóiméad.",
+        tagline: "Biachlár digiteach agus aistriúchán AI. Beo i 5 nóiméad.",
         features: [
           "Biachlár QR do gach bord",
           "Biachlár digiteach le grianghraif agus ailléirginí",
           "Aistriúchán IS i 35 teanga",
-          "Orduithe ón mbiachlár (roghnach)",
           "Cruthú grianghraf miasa le IS",
           "Bainistigh ó aon ghuthán nó táibléad",
         ],
       },
       pro: {
         name: "Pro",
-        tagline: "Smacht iomlán bialainne: scáileán cistine agus curfhaí.",
+        tagline: "Smacht iomlán ar an mbialann: orduithe, cistin agus áirithintí.",
         features: [
           "Gach rud sa Basic",
+          "Orduithe a ghlacadh ón mbiachlár",
+          "Aip freastalaí",
           "Scáileán cistine (KDS)",
           "Curfha bord ar líne 24/7",
+          "Fearann saincheaptha",
           "Tacaíocht WhatsApp tosaíochta",
         ],
       },

@@ -853,7 +853,9 @@
       "retry": "Skúsiť znovu",
       "soundDismiss": "Teraz nie",
       "soundPromptTitle": "Zapnúť zvuk?",
-      "soundPromptMessage": "Prehliadače blokujú zvuk, kým ho klepnutím nepovolíte. Zapnite zvuk nových objednávok, aby ich kuchyňa počula."
+      "soundPromptMessage": "Prehliadače blokujú zvuk, kým ho klepnutím nepovolíte. Zapnite zvuk nových objednávok, aby ich kuchyňa počula.",
+      "proLockedTitle": "Vyžaduje sa plán PRO",
+      "proLockedBody": "Táto obrazovka vyžaduje aktívny plán PRO. Požiadajte majiteľa o prechod na PRO, aby ste mohli pokračovať."
     },
     "devices": {
       "title": "Zariadenia",
@@ -901,6 +903,25 @@
       "toastCodeFailed": "Kód sa nepodarilo vytvoriť",
       "requiresPaid": "Zariadenia vyžadujú platený plán alebo aktívne skúšobné obdobie.",
       "createFailed": "Zariadenie sa nepodarilo vytvoriť"
+    },
+    "proUpsell": {
+      "cta": "Prejsť na PRO",
+      "orders": {
+        "title": "Objednávky sú funkcia PRO",
+        "body": "Prijímajte a spravujte objednávky pri stoloch s plánom PRO. Prejdite na PRO, aby ste mohli prijímať objednávky."
+      },
+      "kitchen": {
+        "title": "Kuchynská obrazovka je funkcia PRO",
+        "body": "Posielajte objednávky na kuchynskú obrazovku s plánom PRO. Prejdite na PRO pre aktiváciu."
+      },
+      "reservations": {
+        "title": "Rezervácie sú funkcia PRO",
+        "body": "Prijímajte rezervácie stolov s plánom PRO. Prejdite na PRO pre aktiváciu rezervácií."
+      },
+      "devices": {
+        "title": "Zariadenia sú funkcia PRO",
+        "body": "Spárujte tablety kuchyne, čašníka a rezervácií s plánom PRO. Prejdite na PRO pre pripojenie zariadení."
+      }
     }
   },
   "demo": {

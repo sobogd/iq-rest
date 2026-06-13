@@ -853,7 +853,9 @@
       "retry": "Proovi uuesti",
       "soundDismiss": "Mitte praegu",
       "soundPromptTitle": "Lülitada heli sisse?",
-      "soundPromptMessage": "Brauserid blokeerivad heli, kuni puudutad selle lubamiseks. Lülita uue tellimuse helisignaal sisse, et köök kuuleks tellimusi."
+      "soundPromptMessage": "Brauserid blokeerivad heli, kuni puudutad selle lubamiseks. Lülita uue tellimuse helisignaal sisse, et köök kuuleks tellimusi.",
+      "proLockedTitle": "Vajalik on PRO-pakett",
+      "proLockedBody": "See ekraan vajab aktiivset PRO-paketti. Palu omanikul uuendada PRO-le, et jätkata."
     },
     "devices": {
       "title": "Seadmed",
@@ -901,6 +903,25 @@
       "toastCodeFailed": "Koodi ei õnnestunud luua",
       "requiresPaid": "Seadmed nõuavad tasulist plaani või aktiivset prooviperioodi.",
       "createFailed": "Seadet ei õnnestunud luua"
+    },
+    "proUpsell": {
+      "cta": "Uuenda PRO-le",
+      "orders": {
+        "title": "Tellimused on PRO-funktsioon",
+        "body": "Võta vastu ja halda lauatellimusi PRO-paketiga. Uuenda PRO-le, et hakata tellimusi vastu võtma."
+      },
+      "kitchen": {
+        "title": "Köögiekraan on PRO-funktsioon",
+        "body": "Saada tellimused köögiekraanile PRO-paketiga. Uuenda PRO-le, et see sisse lülitada."
+      },
+      "reservations": {
+        "title": "Broneeringud on PRO-funktsioon",
+        "body": "Võta vastu lauabroneeringuid PRO-paketiga. Uuenda PRO-le, et broneeringud sisse lülitada."
+      },
+      "devices": {
+        "title": "Seadmed on PRO-funktsioon",
+        "body": "Seo köögi-, kelneri- ja broneeringutahvlid PRO-paketiga. Uuenda PRO-le, et seadmeid ühendada."
+      }
     }
   },
   "demo": {

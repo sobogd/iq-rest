@@ -133,23 +133,25 @@ export const TEXTS: LandingTexts = {
     plans: {
       basic: {
         name: "Basic",
-        tagline: "Menu, zamówienia QR i tłumaczenie AI. Online w 5 minut.",
+        tagline: "Cyfrowe menu i tłumaczenie AI. Gotowe w 5 minut.",
         features: [
           "Menu QR dla każdego stolika",
           "Cyfrowe menu ze zdjęciami i alergenami",
           "Tłumaczenie AI na 35 języków",
-          "Zamówienia z menu (opcjonalnie)",
           "Generowanie zdjęć dań przez AI",
           "Zarządzanie z dowolnego telefonu lub tabletu",
         ],
       },
       pro: {
         name: "Pro",
-        tagline: "Pełna kontrola restauracji: ekran kuchenny i rezerwacje.",
+        tagline: "Pełna kontrola nad restauracją: zamówienia, kuchnia i rezerwacje.",
         features: [
           "Wszystko z Basic",
+          "Przyjmowanie zamówień z menu",
+          "Aplikacja kelnera",
           "Ekran kuchenny (KDS)",
           "Rezerwacja stolików online 24/7",
+          "Własna domena",
           "Priorytetowe wsparcie WhatsApp",
         ],
       },

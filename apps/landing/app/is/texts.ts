@@ -133,23 +133,25 @@ export const TEXTS: LandingTexts = {
     plans: {
       basic: {
         name: "Basic",
-        tagline: "Matseðill, QR pantanir og gervigreindar þýðing. Í lofti á 5 mínútum.",
+        tagline: "Stafrænn matseðill og gervigreindarþýðing. Tilbúið á 5 mínútum.",
         features: [
           "QR matseðill fyrir hvert borð",
           "Stafrænn matseðill með myndum og ofnæmisvökum",
           "Gervigreindar þýðing á 35 tungumál",
-          "Pantanir úr matseðlinum (valfrjálst)",
           "Gervigreindar myndgerð fyrir rétti",
           "Stjórnaðu úr hvaða síma eða spjaldtölvu sem er",
         ],
       },
       pro: {
         name: "Pro",
-        tagline: "Full stjórn veitingastaðar: eldhússkjár og bókanir.",
+        tagline: "Full stjórn á veitingastaðnum: pantanir, eldhús og bókanir.",
         features: [
           "Allt í Basic",
+          "Pantanir af matseðli",
+          "Þjónsforrit",
           "Eldhússkjár (KDS)",
           "Borðabókun á netinu 24/7",
+          "Eigið lén",
           "Forgangs WhatsApp aðstoð",
         ],
       },

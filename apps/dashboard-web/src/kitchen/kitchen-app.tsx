@@ -53,6 +53,9 @@ type DeviceType = "KITCHEN" | "WAITER" | "RESERVATION";
 
 interface BootstrapResponse {
   device: { id: string; type: DeviceType; restaurantId: string };
+  // True when the restaurant no longer has PRO (e.g. downgraded) — the kiosk
+  // keeps its pairing but renders a locked placeholder instead of the board.
+  proLocked?: boolean;
   restaurant: ApiRestaurant;
   categories: ApiCategory[];
   items: ApiItem[];
@@ -63,6 +66,7 @@ interface BootstrapResponse {
 
 interface KitchenSnapshot {
   deviceType: DeviceType;
+  proLocked: boolean;
   restaurant: Restaurant;
   categories: Category[];
   tables: TableEntity[];
@@ -348,6 +352,7 @@ function KitchenAppBody() {
     const bookings = (data.reservations ?? []).map(apiReservationToBooking);
     setSnapshot({
       deviceType: data.device.type,
+      proLocked: data.proLocked ?? false,
       restaurant,
       categories,
       tables,
@@ -616,6 +621,20 @@ function KitchenAppBody() {
           >
             {t("retry")}
           </button>
+        </div>
+      </div>
+    );
+  }
+
+  // Restaurant lost PRO — paired kiosk stays alive but the board is locked.
+  // No upgrade CTA here: a kiosk operator can't pay; the owner upgrades in the
+  // dashboard, after which the next bootstrap clears this.
+  if (snapshot.proLocked) {
+    return (
+      <div className="min-h-dvh bg-background flex items-center justify-center px-6 text-center">
+        <div className="max-w-sm">
+          <div className="text-base font-medium text-foreground mb-2">{t("proLockedTitle")}</div>
+          <p className="text-sm text-muted-foreground">{t("proLockedBody")}</p>
         </div>
       </div>
     );

@@ -853,7 +853,9 @@
       "retry": "Poskusi znova",
       "soundDismiss": "Ne zdaj",
       "soundPromptTitle": "Vklopiti zvok?",
-      "soundPromptMessage": "Brskalniki blokirajo zvok, dokler ga ne dovoliš s tapom. Vklopi zvok za nova naročila, da jih kuhinja sliši."
+      "soundPromptMessage": "Brskalniki blokirajo zvok, dokler ga ne dovoliš s tapom. Vklopi zvok za nova naročila, da jih kuhinja sliši.",
+      "proLockedTitle": "Potrebna je naročnina PRO",
+      "proLockedBody": "Ta zaslon potrebuje aktivno naročnino PRO. Prosite lastnika za nadgradnjo na PRO za nadaljevanje."
     },
     "devices": {
       "title": "Naprave",
@@ -901,6 +903,25 @@
       "toastCodeFailed": "Kode ni bilo mogoče ustvariti",
       "requiresPaid": "Naprave zahtevajo plačan paket ali aktivno preizkusno obdobje.",
       "createFailed": "Naprave ni bilo mogoče ustvariti"
+    },
+    "proUpsell": {
+      "cta": "Nadgradi na PRO",
+      "orders": {
+        "title": "Naročila so funkcija PRO",
+        "body": "Sprejemajte in upravljajte naročila za mizami z naročnino PRO. Nadgradite na PRO za sprejemanje naročil."
+      },
+      "kitchen": {
+        "title": "Kuhinjski zaslon je funkcija PRO",
+        "body": "Pošiljajte naročila na kuhinjski zaslon z naročnino PRO. Nadgradite na PRO za vklop."
+      },
+      "reservations": {
+        "title": "Rezervacije so funkcija PRO",
+        "body": "Sprejemajte rezervacije miz z naročnino PRO. Nadgradite na PRO za vklop rezervacij."
+      },
+      "devices": {
+        "title": "Naprave so funkcija PRO",
+        "body": "Povežite tablice za kuhinjo, natakarja in rezervacije z naročnino PRO. Nadgradite na PRO za povezavo naprav."
+      }
     }
   },
   "demo": {

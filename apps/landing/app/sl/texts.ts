@@ -133,23 +133,25 @@ export const TEXTS: LandingTexts = {
     plans: {
       basic: {
         name: "Basic",
-        tagline: "Jedilnik, QR naročila in AI prevod. Na spletu v 5 minutah.",
+        tagline: "Digitalni meni in prevod z UI. Na spletu v 5 minutah.",
         features: [
           "QR jedilnik za vsako mizo",
           "Digitalni jedilnik s fotografijami in alergeni",
           "AI prevod v 35 jezikov",
-          "Naročila iz jedilnika (izbirno)",
           "AI generiranje fotografij jedi",
           "Upravljanje s katerega koli telefona ali tablice",
         ],
       },
       pro: {
         name: "Pro",
-        tagline: "Popoln nadzor restavracije: kuhinjski zaslon in rezervacije.",
+        tagline: "Popoln nadzor nad restavracijo: naročila, kuhinja in rezervacije.",
         features: [
           "Vse iz Basic",
+          "Sprejem naročil iz menija",
+          "Aplikacija za natakarja",
           "Kuhinjski zaslon (KDS)",
           "Spletna rezervacija miz 24/7",
+          "Lastna domena",
           "Prednostna WhatsApp podpora",
         ],
       },

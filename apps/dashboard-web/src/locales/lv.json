@@ -853,7 +853,9 @@
       "retry": "Mēģināt vēlreiz",
       "soundDismiss": "Ne tagad",
       "soundPromptTitle": "Ieslēgt skaņu?",
-      "soundPromptMessage": "Pārlūki bloķē skaņu, līdz pieskaraties, lai to atļautu. Ieslēdziet jaunu pasūtījumu signālu, lai virtuve dzird ienākošos pasūtījumus."
+      "soundPromptMessage": "Pārlūki bloķē skaņu, līdz pieskaraties, lai to atļautu. Ieslēdziet jaunu pasūtījumu signālu, lai virtuve dzird ienākošos pasūtījumus.",
+      "proLockedTitle": "Nepieciešams PRO plāns",
+      "proLockedBody": "Šim ekrānam nepieciešams aktīvs PRO plāns. Lūdziet īpašniekam jaunināt uz PRO, lai turpinātu."
     },
     "devices": {
       "title": "Ierīces",
@@ -901,6 +903,25 @@
       "toastCodeFailed": "Neizdevās izveidot kodu",
       "requiresPaid": "Ierīcēm nepieciešams maksas plāns vai aktīvs izmēģinājuma periods.",
       "createFailed": "Neizdevās izveidot ierīci"
+    },
+    "proUpsell": {
+      "cta": "Jaunināt uz PRO",
+      "orders": {
+        "title": "Pasūtījumi ir PRO funkcija",
+        "body": "Pieņemiet un pārvaldiet galdiņu pasūtījumus ar PRO plānu. Jauniniet uz PRO, lai pieņemtu pasūtījumus."
+      },
+      "kitchen": {
+        "title": "Virtuves ekrāns ir PRO funkcija",
+        "body": "Sūtiet pasūtījumus uz virtuves ekrānu ar PRO plānu. Jauniniet uz PRO, lai to ieslēgtu."
+      },
+      "reservations": {
+        "title": "Rezervācijas ir PRO funkcija",
+        "body": "Pieņemiet galdiņu rezervācijas ar PRO plānu. Jauniniet uz PRO, lai ieslēgtu rezervācijas."
+      },
+      "devices": {
+        "title": "Ierīces ir PRO funkcija",
+        "body": "Savienojiet virtuves, viesmīļa un rezervāciju planšetes ar PRO plānu. Jauniniet uz PRO, lai pievienotu ierīces."
+      }
     }
   },
   "demo": {

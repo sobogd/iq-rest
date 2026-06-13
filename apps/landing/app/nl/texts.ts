@@ -133,23 +133,25 @@ export const TEXTS: LandingTexts = {
     plans: {
       basic: {
         name: "Basic",
-        tagline: "Menu, QR bestellingen en AI vertaling. Live in 5 minuten.",
+        tagline: "Digitale menukaart en AI-vertaling. In 5 minuten live.",
         features: [
           "QR menu voor elke tafel",
           "Digitaal menu met foto's en allergenen",
           "AI vertaling in 35 talen",
-          "Bestellingen vanuit het menu (optioneel)",
           "AI gerechtfoto-generatie",
           "Beheer vanaf elke telefoon of tablet",
         ],
       },
       pro: {
         name: "Pro",
-        tagline: "Volledige restaurantcontrole: keukenscherm en reserveringen.",
+        tagline: "Volledige restaurantcontrole: bestellingen, keuken en reserveringen.",
         features: [
           "Alles in Basic",
+          "Bestellingen via het menu",
+          "Ober-app",
           "Keukenscherm (KDS)",
           "Online tafelreservering 24/7",
+          "Eigen domein",
           "Prioriteit WhatsApp ondersteuning",
         ],
       },

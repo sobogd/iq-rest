@@ -853,7 +853,9 @@
       "retry": "Încearcă din nou",
       "soundDismiss": "Nu acum",
       "soundPromptTitle": "Activează sunetul?",
-      "soundPromptMessage": "Browserele blochează sunetul până când atingi pentru a-l permite. Activează sunetul pentru comenzi noi pentru ca bucătăria să le audă."
+      "soundPromptMessage": "Browserele blochează sunetul până când atingi pentru a-l permite. Activează sunetul pentru comenzi noi pentru ca bucătăria să le audă.",
+      "proLockedTitle": "Este necesar planul PRO",
+      "proLockedBody": "Acest ecran necesită un plan PRO activ. Roagă proprietarul să treacă la PRO pentru a continua."
     },
     "devices": {
       "title": "Dispozitive",
@@ -901,6 +903,25 @@
       "toastCodeFailed": "Codul nu a putut fi generat",
       "requiresPaid": "Dispozitivele necesită un plan plătit sau o perioadă de probă activă.",
       "createFailed": "Dispozitivul nu a putut fi creat"
+    },
+    "proUpsell": {
+      "cta": "Treci la PRO",
+      "orders": {
+        "title": "Comenzile sunt o funcție PRO",
+        "body": "Preia și gestionează comenzile la masă cu planul PRO. Treci la PRO pentru a accepta comenzi."
+      },
+      "kitchen": {
+        "title": "Ecranul de bucătărie este o funcție PRO",
+        "body": "Trimite comenzile către ecranul din bucătărie cu planul PRO. Treci la PRO pentru a-l activa."
+      },
+      "reservations": {
+        "title": "Rezervările sunt o funcție PRO",
+        "body": "Acceptă rezervări de mese cu planul PRO. Treci la PRO pentru a activa rezervările."
+      },
+      "devices": {
+        "title": "Dispozitivele sunt o funcție PRO",
+        "body": "Asociază tablete de bucătărie, ospătar și rezervări cu planul PRO. Treci la PRO pentru a conecta dispozitive."
+      }
     }
   },
   "demo": {

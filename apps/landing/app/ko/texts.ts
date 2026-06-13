@@ -133,23 +133,25 @@ export const TEXTS: LandingTexts = {
     plans: {
       basic: {
         name: "Basic",
-        tagline: "메뉴, QR 주문 및 AI 번역. 5분 만에 온라인.",
+        tagline: "디지털 메뉴와 AI 번역. 5분 만에 시작.",
         features: [
           "모든 테이블용 QR 메뉴",
           "사진과 알레르겐이 있는 디지털 메뉴",
           "35개 언어 AI 번역",
-          "메뉴에서 주문 (선택 사항)",
           "AI 요리 사진 생성",
           "모든 휴대폰 또는 태블릿에서 관리",
         ],
       },
       pro: {
         name: "Pro",
-        tagline: "완전한 레스토랑 관리: 주방 디스플레이와 예약.",
+        tagline: "레스토랑 전체 관리: 주문, 주방, 예약.",
         features: [
           "Basic의 모든 기능",
+          "메뉴에서 주문 받기",
+          "웨이터 앱",
           "주방 디스플레이 (KDS)",
           "온라인 테이블 예약 24/7",
+          "맞춤 도메인",
           "우선 WhatsApp 지원",
         ],
       },

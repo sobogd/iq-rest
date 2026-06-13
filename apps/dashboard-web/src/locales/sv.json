@@ -853,7 +853,9 @@
       "retry": "Försök igen",
       "soundDismiss": "Inte nu",
       "soundPromptTitle": "Aktivera ljud?",
-      "soundPromptMessage": "Webbläsare blockerar ljud tills du trycker för att tillåta det. Slå på ljudet för nya beställningar så köket hör dem."
+      "soundPromptMessage": "Webbläsare blockerar ljud tills du trycker för att tillåta det. Slå på ljudet för nya beställningar så köket hör dem.",
+      "proLockedTitle": "PRO-plan krävs",
+      "proLockedBody": "Den här skärmen kräver en aktiv PRO-plan. Be ägaren att uppgradera för att fortsätta."
     },
     "devices": {
       "title": "Enheter",
@@ -901,6 +903,25 @@
       "toastCodeFailed": "Det gick inte att skapa koden",
       "requiresPaid": "Enheter kräver ett betalt abonnemang eller aktiv provperiod.",
       "createFailed": "Det gick inte att skapa enheten"
+    },
+    "proUpsell": {
+      "cta": "Uppgradera till PRO",
+      "orders": {
+        "title": "Beställningar är en PRO-funktion",
+        "body": "Ta emot och hantera bordsbeställningar med PRO-planen. Uppgradera för att börja ta emot beställningar."
+      },
+      "kitchen": {
+        "title": "Köksskärmen är en PRO-funktion",
+        "body": "Skicka beställningar till köksskärmen med PRO-planen. Uppgradera för att aktivera den."
+      },
+      "reservations": {
+        "title": "Bokningar är en PRO-funktion",
+        "body": "Ta emot bordsbokningar med PRO-planen. Uppgradera för att aktivera bokningar."
+      },
+      "devices": {
+        "title": "Enheter är en PRO-funktion",
+        "body": "Para ihop köks-, servitörs- och bokningsplattor med PRO-planen. Uppgradera för att ansluta enheter."
+      }
     }
   },
   "demo": {

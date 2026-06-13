@@ -133,23 +133,25 @@ export const TEXTS: LandingTexts = {
     plans: {
       basic: {
         name: "Basic",
-        tagline: "Jelovnik, QR narudžbe i AI prijevod. Online za 5 minuta.",
+        tagline: "Digitalni jelovnik i AI prijevod. Online za 5 minuta.",
         features: [
           "QR jelovnik za svaki stol",
           "Digitalni jelovnik s fotografijama i alergenima",
           "AI prijevod na 35 jezika",
-          "Narudžbe iz jelovnika (opcionalno)",
           "AI generiranje fotografija jela",
           "Upravljanje s bilo kojeg telefona ili tableta",
         ],
       },
       pro: {
         name: "Pro",
-        tagline: "Potpuna kontrola restorana: kuhinjski ekran i rezervacije.",
+        tagline: "Potpuna kontrola restorana: narudžbe, kuhinja i rezervacije.",
         features: [
           "Sve iz Basica",
+          "Primanje narudžbi iz jelovnika",
+          "Aplikacija za konobara",
           "Kuhinjski ekran (KDS)",
           "Online rezervacija stolova 24/7",
+          "Vlastita domena",
           "Prioritetna WhatsApp podrška",
         ],
       },

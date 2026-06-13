@@ -3,6 +3,7 @@ import { z } from "zod";
 import { PrismaService } from "../prisma/prisma.service";
 import { MailService } from "../mail/mail.service";
 import { OrdersNotifierService } from "../orders/orders-notifier.service";
+import { hasProFeatures, PRO_FEATURE_SELECT } from "../common/entitlements";
 
 const reservationSchema = z.object({
   restaurantId: z.string().min(1),
@@ -137,10 +138,13 @@ export class ReservationsController {
         workingHoursEnd: true,
         reservationSchedule: true,
         timezone: true,
+        ...PRO_FEATURE_SELECT,
       },
     });
     if (!restaurant) throw new NotFoundException("not_found");
-    if (!restaurant.reservationsEnabled) throw new BadRequestException("reservations_disabled");
+    // Reservations are PRO-only; a BASIC restaurant exposes no booking surface.
+    if (!hasProFeatures(restaurant) || !restaurant.reservationsEnabled)
+      throw new BadRequestException("reservations_disabled");
 
     const tables = await this.prisma.table.findMany({
       where: { restaurantId: restaurant.id, isActive: true, deletedAt: null },
@@ -219,10 +223,13 @@ export class ReservationsController {
         reservationSlotMinutes: true,
         reservationMode: true,
         restaurantUsers: { select: { user: { select: { email: true } } } },
+        ...PRO_FEATURE_SELECT,
       },
     });
     if (!restaurant) throw new NotFoundException("not_found");
-    if (!restaurant.reservationsEnabled) throw new BadRequestException("reservations_disabled");
+    // Reservations are PRO-only; reject bookings for BASIC restaurants.
+    if (!hasProFeatures(restaurant) || !restaurant.reservationsEnabled)
+      throw new BadRequestException("reservations_disabled");
 
     const reservationDate = new Date(date);
     const slotDuration = restaurant.reservationSlotMinutes;

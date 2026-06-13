@@ -133,23 +133,25 @@ export const TEXTS: LandingTexts = {
     plans: {
       basic: {
         name: "Basic",
-        tagline: "Menüü, QR-tellimused ja AI-tõlge. Veebis 5 minutiga.",
+        tagline: "Digitaalne menüü ja AI-tõlge. Töökorras 5 minutiga.",
         features: [
           "QR-menüü igale lauale",
           "Digitaalne menüü fotode ja allergeenidega",
           "AI-tõlge 35 keelde",
-          "Tellimused menüüst (valikuline)",
           "AI roogade fotode genereerimine",
           "Halda igast telefonist või tahvelarvutist",
         ],
       },
       pro: {
         name: "Pro",
-        tagline: "Täielik kontroll restorani üle: köögiekraan ja broneeringud.",
+        tagline: "Täielik kontroll restorani üle: tellimused, köök ja broneeringud.",
         features: [
           "Kõik Basicust",
+          "Tellimuste vastuvõtt menüüst",
+          "Kelneri rakendus",
           "Köögiekraan (KDS)",
           "Veebipõhine laudade broneerimine 24/7",
+          "Oma domeen",
           "Eelistatud WhatsAppi tugi",
         ],
       },

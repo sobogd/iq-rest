@@ -853,7 +853,9 @@
       "retry": "Bain triail eile",
       "soundDismiss": "Ní anois",
       "soundPromptTitle": "Cumasaigh an fhuaim?",
-      "soundPromptMessage": "Cuireann brabhsálaithe fuaim faoi chosc go dtí go bpriocfaidh tú lena chumasú. Cumasaigh fógra na n-orduithe nua ionas go gcloisfidh an chistin iad."
+      "soundPromptMessage": "Cuireann brabhsálaithe fuaim faoi chosc go dtí go bpriocfaidh tú lena chumasú. Cumasaigh fógra na n-orduithe nua ionas go gcloisfidh an chistin iad.",
+      "proLockedTitle": "Tá plean PRO ag teastáil",
+      "proLockedBody": "Teastaíonn plean PRO gníomhach don scáileán seo. Iarr ar an úinéir uasghrádú go PRO chun leanúint ar aghaidh."
     },
     "devices": {
       "title": "Gléasanna",
@@ -901,6 +903,25 @@
       "toastCodeFailed": "Níorbh fhéidir cód a ghiniúint",
       "requiresPaid": "Éilíonn na gléasanna plean íoctha nó tréimhse trialach gníomhach.",
       "createFailed": "Níorbh fhéidir an gléas a chruthú"
+    },
+    "proUpsell": {
+      "cta": "Uasghrádú go PRO",
+      "orders": {
+        "title": "Is gné PRO iad orduithe",
+        "body": "Glac le horduithe boird agus bainistigh iad leis an bplean PRO. Uasghrádaigh go PRO chun orduithe a ghlacadh."
+      },
+      "kitchen": {
+        "title": "Is gné PRO é scáileán na cistine",
+        "body": "Seol orduithe chuig scáileán na cistine leis an bplean PRO. Uasghrádaigh go PRO chun é a chumasú."
+      },
+      "reservations": {
+        "title": "Is gné PRO iad áirithintí",
+        "body": "Glac le háirithintí boird leis an bplean PRO. Uasghrádaigh go PRO chun áirithintí a chumasú."
+      },
+      "devices": {
+        "title": "Is gné PRO iad gléasanna",
+        "body": "Péireáil táibléid chistine, freastalaí agus áirithinte leis an bplean PRO. Uasghrádaigh go PRO chun gléasanna a nascadh."
+      }
     }
   },
   "demo": {

@@ -853,7 +853,9 @@
       "retry": "Reintentar",
       "soundDismiss": "Ahora no",
       "soundPromptTitle": "¿Activar sonido?",
-      "soundPromptMessage": "Los navegadores bloquean el audio hasta que tocas para permitirlo. Activa el aviso de pedidos nuevos para que la cocina los oiga."
+      "soundPromptMessage": "Los navegadores bloquean el audio hasta que tocas para permitirlo. Activa el aviso de pedidos nuevos para que la cocina los oiga.",
+      "proLockedTitle": "Se requiere el plan PRO",
+      "proLockedBody": "Esta pantalla necesita un plan PRO activo. Pide al propietario que mejore el plan para continuar."
     },
     "devices": {
       "title": "Dispositivos",
@@ -901,6 +903,25 @@
       "toastCodeFailed": "No se ha podido generar el código",
       "requiresPaid": "Los dispositivos requieren un plan de pago o un periodo de prueba activo.",
       "createFailed": "No se ha podido crear el dispositivo"
+    },
+    "proUpsell": {
+      "cta": "Cambiar a PRO",
+      "orders": {
+        "title": "Los pedidos son una función PRO",
+        "body": "Recibe y gestiona pedidos de mesa con el plan PRO. Mejora tu plan para empezar a aceptar pedidos."
+      },
+      "kitchen": {
+        "title": "La pantalla de cocina es una función PRO",
+        "body": "Envía los pedidos a la pantalla de cocina con el plan PRO. Mejora tu plan para activarla."
+      },
+      "reservations": {
+        "title": "Las reservas son una función PRO",
+        "body": "Acepta reservas de mesa con el plan PRO. Mejora tu plan para activar las reservas."
+      },
+      "devices": {
+        "title": "Los dispositivos son una función PRO",
+        "body": "Vincula tablets de cocina, camarero y reservas con el plan PRO. Mejora tu plan para conectar dispositivos."
+      }
     }
   },
   "demo": {

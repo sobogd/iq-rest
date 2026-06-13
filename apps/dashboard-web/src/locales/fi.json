@@ -853,7 +853,9 @@
       "retry": "Yritä uudelleen",
       "soundDismiss": "Ei nyt",
       "soundPromptTitle": "Otetaanko ääni käyttöön?",
-      "soundPromptMessage": "Selaimet estävät äänen, kunnes napautat sallia. Ota uuden tilauksen merkkiääni käyttöön, jotta keittiö kuulee tilaukset."
+      "soundPromptMessage": "Selaimet estävät äänen, kunnes napautat sallia. Ota uuden tilauksen merkkiääni käyttöön, jotta keittiö kuulee tilaukset.",
+      "proLockedTitle": "PRO-tilaus vaaditaan",
+      "proLockedBody": "Tämä näyttö vaatii aktiivisen PRO-tilauksen. Pyydä omistajaa päivittämään PRO-tasoon jatkaaksesi."
     },
     "devices": {
       "title": "Laitteet",
@@ -901,6 +903,25 @@
       "toastCodeFailed": "Koodia ei voitu luoda",
       "requiresPaid": "Laitteet vaativat maksullisen tilauksen tai aktiivisen kokeilujakson.",
       "createFailed": "Laitetta ei voitu luoda"
+    },
+    "proUpsell": {
+      "cta": "Päivitä PRO-tasoon",
+      "orders": {
+        "title": "Tilaukset ovat PRO-ominaisuus",
+        "body": "Ota vastaan ja hallitse pöytätilauksia PRO-tilauksella. Päivitä PRO-tasoon ottaaksesi tilauksia vastaan."
+      },
+      "kitchen": {
+        "title": "Keittiönäyttö on PRO-ominaisuus",
+        "body": "Lähetä tilaukset keittiönäytölle PRO-tilauksella. Päivitä PRO-tasoon ottaaksesi sen käyttöön."
+      },
+      "reservations": {
+        "title": "Varaukset ovat PRO-ominaisuus",
+        "body": "Ota vastaan pöytävarauksia PRO-tilauksella. Päivitä PRO-tasoon ottaaksesi varaukset käyttöön."
+      },
+      "devices": {
+        "title": "Laitteet ovat PRO-ominaisuus",
+        "body": "Yhdistä keittiö-, tarjoilija- ja varaustabletit PRO-tilauksella. Päivitä PRO-tasoon yhdistääksesi laitteita."
+      }
     }
   },
   "demo": {

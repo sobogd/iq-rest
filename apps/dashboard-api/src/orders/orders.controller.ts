@@ -16,6 +16,7 @@ import type { Request } from "express";
 import { type AuthedRequest } from "../auth/auth.guard";
 import { UserOrDeviceGuard } from "../devices/user-or-device.guard";
 import { DeviceTypes } from "../devices/device-types.decorator";
+import { ProFeatureGuard } from "../common/pro-feature.guard";
 import { OrdersService } from "./orders.service";
 import { CreateOrderDto, PatchOrderDto, SplitOrderDto } from "./dto";
 
@@ -28,7 +29,7 @@ function ctx(req: Request) {
 // are rejected here (KITCHEN flips item statuses via the locked-down
 // /devices/orders/:id; RESERVATION has no business on the orders surface).
 @Controller("orders")
-@UseGuards(UserOrDeviceGuard)
+@UseGuards(UserOrDeviceGuard, ProFeatureGuard)
 @DeviceTypes("WAITER")
 export class OrdersController {
   constructor(private readonly svc: OrdersService) {}

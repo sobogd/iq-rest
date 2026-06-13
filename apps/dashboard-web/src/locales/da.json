@@ -853,7 +853,9 @@
       "retry": "Prøv igen",
       "soundDismiss": "Ikke nu",
       "soundPromptTitle": "Aktivér lyd?",
-      "soundPromptMessage": "Browsere blokerer lyd indtil du trykker for at tillade den. Slå lyden til, så køkkenet hører nye ordrer."
+      "soundPromptMessage": "Browsere blokerer lyd indtil du trykker for at tillade den. Slå lyden til, så køkkenet hører nye ordrer.",
+      "proLockedTitle": "PRO-abonnement kræves",
+      "proLockedBody": "Denne skærm kræver et aktivt PRO-abonnement. Bed ejeren om at opgradere for at fortsætte."
     },
     "devices": {
       "title": "Enheder",
@@ -901,6 +903,25 @@
       "toastCodeFailed": "Kunne ikke generere kode",
       "requiresPaid": "Enheder kræver et betalt abonnement eller en aktiv prøveperiode.",
       "createFailed": "Kunne ikke oprette enheden"
+    },
+    "proUpsell": {
+      "cta": "Opgrader til PRO",
+      "orders": {
+        "title": "Bestillinger er en PRO-funktion",
+        "body": "Modtag og håndtér bordbestillinger med PRO-abonnementet. Opgrader for at modtage bestillinger."
+      },
+      "kitchen": {
+        "title": "Køkkenskærmen er en PRO-funktion",
+        "body": "Send bestillinger til køkkenskærmen med PRO-abonnementet. Opgrader for at aktivere den."
+      },
+      "reservations": {
+        "title": "Reservationer er en PRO-funktion",
+        "body": "Modtag bordreservationer med PRO-abonnementet. Opgrader for at aktivere reservationer."
+      },
+      "devices": {
+        "title": "Enheder er en PRO-funktion",
+        "body": "Par køkken-, tjener- og reservationstablets med PRO-abonnementet. Opgrader for at forbinde enheder."
+      }
     }
   },
   "demo": {

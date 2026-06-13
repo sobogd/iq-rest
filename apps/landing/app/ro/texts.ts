@@ -133,23 +133,25 @@ export const TEXTS: LandingTexts = {
     plans: {
       basic: {
         name: "Basic",
-        tagline: "Meniu, comenzi QR și traducere AI. Online în 5 minute.",
+        tagline: "Meniu digital și traducere AI. Online în 5 minute.",
         features: [
           "Meniu QR pentru fiecare masă",
           "Meniu digital cu fotografii și alergeni",
           "Traducere AI în 35 de limbi",
-          "Comenzi din meniu (opțional)",
           "Generare AI de fotografii ale preparatelor",
           "Gestionare de pe orice telefon sau tabletă",
         ],
       },
       pro: {
         name: "Pro",
-        tagline: "Control complet al restaurantului: display bucătărie și rezervări.",
+        tagline: "Control total al restaurantului: comenzi, bucătărie și rezervări.",
         features: [
           "Tot din Basic",
+          "Preluare comenzi din meniu",
+          "Aplicație ospătar",
           "Display bucătărie (KDS)",
           "Rezervare mese online 24/7",
+          "Domeniu propriu",
           "Suport WhatsApp prioritar",
         ],
       },

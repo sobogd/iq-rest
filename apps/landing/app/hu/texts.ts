@@ -133,23 +133,25 @@ export const TEXTS: LandingTexts = {
     plans: {
       basic: {
         name: "Basic",
-        tagline: "Étlap, QR rendelések és AI fordítás. Élesben 5 perc alatt.",
+        tagline: "Digitális étlap és AI-fordítás. 5 perc alatt élesben.",
         features: [
           "QR étlap minden asztalra",
           "Digitális étlap fotókkal és allergénekkel",
           "AI fordítás 35 nyelvre",
-          "Rendelések az étlapról (opcionális)",
           "AI étel fotó generálás",
           "Kezelés bármelyik telefonról vagy táblagépről",
         ],
       },
       pro: {
         name: "Pro",
-        tagline: "Teljes étterem irányítás: konyhai kijelző és foglalások.",
+        tagline: "Teljes éttermi irányítás: rendelések, konyha és foglalások.",
         features: [
           "Minden a Basic-ből",
+          "Rendelésfelvétel az étlapról",
+          "Pincér app",
           "Konyhai kijelző (KDS)",
           "Online asztalfoglalás 24/7",
+          "Saját domain",
           "Prioritásos WhatsApp támogatás",
         ],
       },

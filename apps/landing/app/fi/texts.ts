@@ -133,23 +133,25 @@ export const TEXTS: LandingTexts = {
     plans: {
       basic: {
         name: "Basic",
-        tagline: "Ruokalista, QR-tilaukset ja AI-käännös. Käytössä 5 minuutissa.",
+        tagline: "Digitaalinen ruokalista ja AI-käännös. Käytössä 5 minuutissa.",
         features: [
           "QR-ruokalista jokaiseen pöytään",
           "Digitaalinen ruokalista kuvilla ja allergeeneilla",
           "AI-käännös 35 kielelle",
-          "Tilaukset ruokalistalta (valinnainen)",
           "AI-ruokakuvien generointi",
           "Hallinta mistä tahansa puhelimesta tai tabletista",
         ],
       },
       pro: {
         name: "Pro",
-        tagline: "Täysi hallinta ravintolasta: keittiön näyttö ja varaukset.",
+        tagline: "Täysi hallinta ravintolaan: tilaukset, keittiö ja varaukset.",
         features: [
           "Kaikki Basicista",
+          "Tilausten vastaanotto ruokalistalta",
+          "Tarjoilijasovellus",
           "Keittiön näyttö (KDS)",
           "Verkkopöytävaraus 24/7",
+          "Oma verkkotunnus",
           "Prioriteetti-WhatsApp-tuki",
         ],
       },

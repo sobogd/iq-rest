@@ -853,7 +853,9 @@
       "retry": "Réessayer",
       "soundDismiss": "Pas maintenant",
       "soundPromptTitle": "Activer le son ?",
-      "soundPromptMessage": "Les navigateurs bloquent l'audio tant que vous n'avez pas appuyé pour l'autoriser. Activez le signal sonore pour que la cuisine entende les nouvelles commandes."
+      "soundPromptMessage": "Les navigateurs bloquent l'audio tant que vous n'avez pas appuyé pour l'autoriser. Activez le signal sonore pour que la cuisine entende les nouvelles commandes.",
+      "proLockedTitle": "Forfait PRO requis",
+      "proLockedBody": "Cet écran nécessite un forfait PRO actif. Demandez au propriétaire de passer à PRO pour continuer."
     },
     "devices": {
       "title": "Appareils",
@@ -901,6 +903,25 @@
       "toastCodeFailed": "Impossible de générer le code",
       "requiresPaid": "Les appareils nécessitent un abonnement payant ou un essai actif.",
       "createFailed": "Impossible de créer l'appareil"
+    },
+    "proUpsell": {
+      "cta": "Passer à PRO",
+      "orders": {
+        "title": "Les commandes sont une fonctionnalité PRO",
+        "body": "Prenez et gérez les commandes à table avec le forfait PRO. Passez à PRO pour commencer à accepter des commandes."
+      },
+      "kitchen": {
+        "title": "L’écran cuisine est une fonctionnalité PRO",
+        "body": "Envoyez les commandes vers l’écran de cuisine avec le forfait PRO. Passez à PRO pour l’activer."
+      },
+      "reservations": {
+        "title": "Les réservations sont une fonctionnalité PRO",
+        "body": "Acceptez les réservations de tables avec le forfait PRO. Passez à PRO pour activer les réservations."
+      },
+      "devices": {
+        "title": "Les appareils sont une fonctionnalité PRO",
+        "body": "Associez les tablettes cuisine, salle et réservations avec le forfait PRO. Passez à PRO pour connecter des appareils."
+      }
     }
   },
   "demo": {

@@ -853,7 +853,9 @@
       "retry": "重试",
       "soundDismiss": "暂不",
       "soundPromptTitle": "启用声音?",
-      "soundPromptMessage": "浏览器会阻止音频,直到你点按授权。请启用新订单提示音,以便厨房能听到来单。"
+      "soundPromptMessage": "浏览器会阻止音频,直到你点按授权。请启用新订单提示音,以便厨房能听到来单。",
+      "proLockedTitle": "需要 PRO 套餐",
+      "proLockedBody": "此屏幕需要有效的 PRO 套餐。请让店主升级到 PRO 以继续。"
     },
     "devices": {
       "title": "设备",
@@ -901,6 +903,25 @@
       "toastCodeFailed": "无法生成代码",
       "requiresPaid": "设备功能需要付费套餐或有效的试用期。",
       "createFailed": "无法创建设备"
+    },
+    "proUpsell": {
+      "cta": "升级到 PRO",
+      "orders": {
+        "title": "订单是 PRO 功能",
+        "body": "使用 PRO 套餐接收和管理餐桌订单。升级到 PRO 即可开始接单。"
+      },
+      "kitchen": {
+        "title": "厨房显示屏是 PRO 功能",
+        "body": "使用 PRO 套餐将订单发送到厨房显示屏。升级到 PRO 即可启用。"
+      },
+      "reservations": {
+        "title": "预订是 PRO 功能",
+        "body": "使用 PRO 套餐接受餐桌预订。升级到 PRO 即可启用预订。"
+      },
+      "devices": {
+        "title": "设备是 PRO 功能",
+        "body": "使用 PRO 套餐配对厨房、服务员和预订平板。升级到 PRO 即可连接设备。"
+      }
     }
   },
   "demo": {

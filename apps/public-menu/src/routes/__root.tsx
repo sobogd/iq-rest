@@ -93,8 +93,23 @@ function RootLayout() {
     && new Date(data.restaurant.trialEndsAt) <= new Date()
     && data.restaurant.slug !== "love-eatery";
 
+  // Orders + reservations are PRO-only. For a BASIC (menu-only) restaurant the
+  // menu still shows, but the order/booking surfaces are hidden. Force the
+  // enabled flags off here so every downstream consumer respects it without a
+  // separate proFeatures check.
+  const menu: MenuPayload = data.restaurant.proFeatures
+    ? data
+    : {
+        ...data,
+        restaurant: {
+          ...data.restaurant,
+          ordersEnabled: false,
+          reservationsEnabled: false,
+        },
+      };
+
   return (
-    <MenuProvider menu={data}>
+    <MenuProvider menu={menu}>
       <MenuPageTracker slug={slug} />
       <Outlet />
       {trialExpired ? <TrialExpiredOverlay defaultLanguage={data.restaurant.defaultLanguage} /> : null}

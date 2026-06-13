@@ -13,6 +13,7 @@ import {
   signDeviceToken,
   verifyDeviceToken,
 } from "./device-token";
+import { hasProFeatures, PRO_FEATURE_SELECT } from "../common/entitlements";
 
 const PAIRING_CODE_TTL_MS = 2 * 60 * 1000; // 120s
 const PAIR_RATE_WINDOW_MS = 60 * 1000;
@@ -36,24 +37,19 @@ export class DevicesService {
 
   // ─── Admin: gating ────────────────────────────────────────────────────────
   //
-  // Kitchen / waiter devices are a paid feature. Trial counts as paid (the
-  // 14-day trial gives the customer full access to evaluate the product).
-  // Per-restaurant billing — the gate checks the restaurant's own plan/trial.
+  // All kiosks (KITCHEN / WAITER / RESERVATION) are PRO-only — they drive the
+  // order/kitchen/reservation surfaces, which are PRO features. Trial counts as
+  // entitled (the 14-day trial gives full access); grandfathered BASIC venues
+  // (`legacyFullAccess`) keep devices too. Per-restaurant billing.
 
   private async assertRestaurantMayUseDevices(restaurantId: string): Promise<void> {
     const restaurant = await this.prisma.restaurant.findUnique({
       where: { id: restaurantId },
-      select: { plan: true, subscriptionStatus: true, trialEndsAt: true },
+      select: PRO_FEATURE_SELECT,
     });
     if (!restaurant) throw new NotFoundException("Restaurant not found");
-    const isPaid =
-      restaurant.subscriptionStatus === "ACTIVE" &&
-      !!restaurant.plan &&
-      restaurant.plan !== "FREE";
-    const inTrial =
-      restaurant.trialEndsAt !== null && restaurant.trialEndsAt > new Date();
-    if (!isPaid && !inTrial) {
-      throw new ForbiddenException("devices_require_paid_plan");
+    if (!hasProFeatures(restaurant)) {
+      throw new ForbiddenException("devices_require_pro_plan");
     }
   }
 

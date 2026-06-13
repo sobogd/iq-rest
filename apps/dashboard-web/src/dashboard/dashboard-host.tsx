@@ -44,6 +44,7 @@ interface SubData {
   plan: string | null;
   subscriptionStatus: string | null;
   trialEndsAt: string | null;
+  proFeatures?: boolean;
   aiImagesUsed?: number;
   aiImagesLimit?: number | null;
   canManageBilling?: boolean;
@@ -150,6 +151,7 @@ export function DashboardHost() {
         plan: sub.plan,
         subscriptionStatus: sub.subscriptionStatus,
         trialEndsAt: sub.trialEndsAt,
+        proFeatures: sub.proFeatures ?? false,
         aiImagesUsed: sub.aiImagesUsed ?? 0,
         aiImagesLimit: sub.aiImagesLimit ?? null,
         canManageBilling: sub.canManageBilling ?? true,

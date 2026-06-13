@@ -853,7 +853,9 @@
       "retry": "Zkusit znovu",
       "soundDismiss": "Teď ne",
       "soundPromptTitle": "Zapnout zvuk?",
-      "soundPromptMessage": "Prohlížeče blokují zvuk, dokud klepnutím nepovolíš jeho přehrávání. Zapni signál nových objednávek, aby je kuchyně slyšela."
+      "soundPromptMessage": "Prohlížeče blokují zvuk, dokud klepnutím nepovolíš jeho přehrávání. Zapni signál nových objednávek, aby je kuchyně slyšela.",
+      "proLockedTitle": "Vyžaduje se tarif PRO",
+      "proLockedBody": "Tato obrazovka vyžaduje aktivní tarif PRO. Požádejte majitele o přechod na PRO, abyste mohli pokračovat."
     },
     "devices": {
       "title": "Zařízení",
@@ -901,6 +903,25 @@
       "toastCodeFailed": "Kód nelze vygenerovat",
       "requiresPaid": "Zařízení vyžadují placený tarif nebo aktivní zkušební období.",
       "createFailed": "Zařízení nelze vytvořit"
+    },
+    "proUpsell": {
+      "cta": "Přejít na PRO",
+      "orders": {
+        "title": "Objednávky jsou funkce PRO",
+        "body": "Přijímejte a spravujte objednávky u stolů s tarifem PRO. Přejděte na PRO, abyste mohli přijímat objednávky."
+      },
+      "kitchen": {
+        "title": "Kuchyňská obrazovka je funkce PRO",
+        "body": "Posílejte objednávky na kuchyňskou obrazovku s tarifem PRO. Přejděte na PRO pro aktivaci."
+      },
+      "reservations": {
+        "title": "Rezervace jsou funkce PRO",
+        "body": "Přijímejte rezervace stolů s tarifem PRO. Přejděte na PRO pro aktivaci rezervací."
+      },
+      "devices": {
+        "title": "Zařízení jsou funkce PRO",
+        "body": "Spárujte tablety kuchyně, číšníka a rezervací s tarifem PRO. Přejděte na PRO pro připojení zařízení."
+      }
     }
   },
   "demo": {

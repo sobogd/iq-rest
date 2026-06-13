@@ -204,6 +204,10 @@ model Restaurant {
   // DKK). Distinct from `currency` above, which is the public-menu currency.
   billingCurrency       String              @default("EUR")
   trialEndsAt           DateTime?
+  // Grandfather flag: when true the restaurant keeps full PRO features
+  // (orders, kitchen/KDS, reservations) regardless of its plan. Set manually
+  // for the handful of pre-PRO-gating BASIC venues that already rely on these.
+  legacyFullAccess      Boolean             @default(false)
 
   tables          Table[]
   reservations    Reservation[]

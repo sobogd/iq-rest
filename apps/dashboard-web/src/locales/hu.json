@@ -853,7 +853,9 @@
       "retry": "Újrapróbálás",
       "soundDismiss": "Most nem",
       "soundPromptTitle": "Hang bekapcsolása?",
-      "soundPromptMessage": "A böngészők letiltják a hangot, amíg koppintással engedélyezést nem adsz. Kapcsold be az új rendelés hangját, hogy a konyha hallja a rendeléseket."
+      "soundPromptMessage": "A böngészők letiltják a hangot, amíg koppintással engedélyezést nem adsz. Kapcsold be az új rendelés hangját, hogy a konyha hallja a rendeléseket.",
+      "proLockedTitle": "PRO csomag szükséges",
+      "proLockedBody": "Ehhez a képernyőhöz aktív PRO csomag szükséges. Kérd meg a tulajdonost, hogy váltson PRO-ra a folytatáshoz."
     },
     "devices": {
       "title": "Eszközök",
@@ -901,6 +903,25 @@
       "toastCodeFailed": "A kódot nem sikerült létrehozni",
       "requiresPaid": "Az eszközökhöz fizetős csomag vagy aktív próbaidőszak szükséges.",
       "createFailed": "Az eszközt nem sikerült létrehozni"
+    },
+    "proUpsell": {
+      "cta": "Váltás PRO-ra",
+      "orders": {
+        "title": "A rendelések PRO funkció",
+        "body": "Fogadj és kezelj asztali rendeléseket a PRO csomaggal. Válts PRO-ra a rendelések fogadásához."
+      },
+      "kitchen": {
+        "title": "A konyhai kijelző PRO funkció",
+        "body": "Küldd a rendeléseket a konyhai kijelzőre a PRO csomaggal. Válts PRO-ra az aktiváláshoz."
+      },
+      "reservations": {
+        "title": "A foglalások PRO funkció",
+        "body": "Fogadj asztalfoglalásokat a PRO csomaggal. Válts PRO-ra a foglalások bekapcsolásához."
+      },
+      "devices": {
+        "title": "Az eszközök PRO funkció",
+        "body": "Párosíts konyhai, pincér és foglalási táblagépeket a PRO csomaggal. Válts PRO-ra az eszközök csatlakoztatásához."
+      }
     }
   },
   "demo": {

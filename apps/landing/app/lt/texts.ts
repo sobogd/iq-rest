@@ -133,23 +133,25 @@ export const TEXTS: LandingTexts = {
     plans: {
       basic: {
         name: "Basic",
-        tagline: "Meniu, QR užsakymai ir AI vertimas. Veikia per 5 minutes.",
+        tagline: "Skaitmeninis meniu ir AI vertimas. Veikia per 5 minutes.",
         features: [
           "QR meniu kiekvienam staliukui",
           "Skaitmeninis meniu su nuotraukomis ir alergenais",
           "AI vertimas į 35 kalbas",
-          "Užsakymai iš meniu (pasirinktinai)",
           "AI patiekalų nuotraukų generavimas",
           "Valdymas iš bet kurio telefono ar planšetės",
         ],
       },
       pro: {
         name: "Pro",
-        tagline: "Pilna restorano kontrolė: virtuvės ekranas ir rezervacijos.",
+        tagline: "Visiška restorano kontrolė: užsakymai, virtuvė ir rezervacijos.",
         features: [
           "Viskas iš Basic",
+          "Užsakymų priėmimas iš meniu",
+          "Padavėjo programėlė",
           "Virtuvės ekranas (KDS)",
           "Internetinė staliukų rezervacija 24/7",
+          "Nuosavas domenas",
           "Prioritetinis WhatsApp palaikymas",
         ],
       },

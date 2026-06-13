@@ -853,7 +853,9 @@
       "retry": "Erneut versuchen",
       "soundDismiss": "Jetzt nicht",
       "soundPromptTitle": "Ton aktivieren?",
-      "soundPromptMessage": "Browser blockieren Audio, bis du es per Tippen erlaubst. Aktiviere den Hinweiston, damit die Küche neue Bestellungen hört."
+      "soundPromptMessage": "Browser blockieren Audio, bis du es per Tippen erlaubst. Aktiviere den Hinweiston, damit die Küche neue Bestellungen hört.",
+      "proLockedTitle": "PRO-Tarif erforderlich",
+      "proLockedBody": "Dieser Bildschirm benötigt einen aktiven PRO-Tarif. Bitte den Inhaber um ein Upgrade, um fortzufahren."
     },
     "devices": {
       "title": "Geräte",
@@ -901,6 +903,25 @@
       "toastCodeFailed": "Code konnte nicht erstellt werden",
       "requiresPaid": "Geräte erfordern einen kostenpflichtigen Tarif oder eine aktive Testphase.",
       "createFailed": "Gerät konnte nicht erstellt werden"
+    },
+    "proUpsell": {
+      "cta": "Auf PRO upgraden",
+      "orders": {
+        "title": "Bestellungen sind eine PRO-Funktion",
+        "body": "Nimm Tischbestellungen mit dem PRO-Tarif an und verwalte sie. Upgrade, um Bestellungen anzunehmen."
+      },
+      "kitchen": {
+        "title": "Der Küchenmonitor ist eine PRO-Funktion",
+        "body": "Sende Bestellungen mit dem PRO-Tarif an den Küchenbildschirm. Upgrade, um ihn zu aktivieren."
+      },
+      "reservations": {
+        "title": "Reservierungen sind eine PRO-Funktion",
+        "body": "Nimm Tischreservierungen mit dem PRO-Tarif an. Upgrade, um Reservierungen zu aktivieren."
+      },
+      "devices": {
+        "title": "Geräte sind eine PRO-Funktion",
+        "body": "Verbinde Küchen-, Kellner- und Reservierungstablets mit dem PRO-Tarif. Upgrade, um Geräte zu verbinden."
+      }
     }
   },
   "demo": {

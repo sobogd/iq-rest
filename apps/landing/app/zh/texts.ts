@@ -133,23 +133,25 @@ export const TEXTS: LandingTexts = {
     plans: {
       basic: {
         name: "Basic",
-        tagline: "菜单、QR 点餐和 AI 翻译。5 分钟上线。",
+        tagline: "数字菜单和 AI 翻译。5 分钟上线。",
         features: [
           "每张餐桌的 QR 菜单",
           "带图片和过敏原的数字菜单",
           "AI 翻译成 35 种语言",
-          "从菜单点餐(可选)",
           "菜品照片的 AI 生成",
           "从任何手机或平板电脑管理",
         ],
       },
       pro: {
         name: "Pro",
-        tagline: "完整餐厅控制:厨房显示屏和预订。",
+        tagline: "餐厅全面掌控：订单、厨房和预订。",
         features: [
           "Basic 中的所有内容",
+          "从菜单接单",
+          "服务员应用",
           "厨房显示屏 (KDS)",
           "24/7 在线餐桌预订",
+          "自定义域名",
           "WhatsApp 优先支持",
         ],
       },

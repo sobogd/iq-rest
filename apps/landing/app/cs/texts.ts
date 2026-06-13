@@ -133,23 +133,25 @@ export const TEXTS: LandingTexts = {
     plans: {
       basic: {
         name: "Basic",
-        tagline: "Menu, QR objednávky a AI překlad. Online za 5 minut.",
+        tagline: "Digitální menu a AI překlad. Spuštění za 5 minut.",
         features: [
           "QR menu pro každý stůl",
           "Digitální menu s fotkami a alergeny",
           "AI překlad do 35 jazyků",
-          "Objednávky z menu (volitelné)",
           "AI generování fotek jídel",
           "Správa z jakéhokoli telefonu nebo tabletu",
         ],
       },
       pro: {
         name: "Pro",
-        tagline: "Plná kontrola nad restaurací: kuchyňský displej a rezervace.",
+        tagline: "Úplná kontrola nad restaurací: objednávky, kuchyně a rezervace.",
         features: [
           "Vše z Basic",
+          "Příjem objednávek z menu",
+          "Aplikace pro číšníka",
           "Kuchyňský displej (KDS)",
           "Online rezervace stolů 24/7",
+          "Vlastní doména",
           "Prioritní WhatsApp podpora",
         ],
       },

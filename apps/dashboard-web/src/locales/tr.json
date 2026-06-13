@@ -853,7 +853,9 @@
       "retry": "Tekrar dene",
       "soundDismiss": "Şimdi değil",
       "soundPromptTitle": "Sesi aç?",
-      "soundPromptMessage": "Tarayıcılar siz dokunup izin verene kadar sesi engeller. Yeni sipariş bildirim sesini açın ki mutfak siparişleri duysun."
+      "soundPromptMessage": "Tarayıcılar siz dokunup izin verene kadar sesi engeller. Yeni sipariş bildirim sesini açın ki mutfak siparişleri duysun.",
+      "proLockedTitle": "PRO planı gerekli",
+      "proLockedBody": "Bu ekran etkin bir PRO planı gerektirir. Devam etmek için sahibinden PRO’ya geçmesini iste."
     },
     "devices": {
       "title": "Cihazlar",
@@ -901,6 +903,25 @@
       "toastCodeFailed": "Kod oluşturulamadı",
       "requiresPaid": "Cihazlar ücretli bir plan veya aktif deneme süresi gerektirir.",
       "createFailed": "Cihaz oluşturulamadı"
+    },
+    "proUpsell": {
+      "cta": "PRO’ya geç",
+      "orders": {
+        "title": "Siparişler bir PRO özelliğidir",
+        "body": "PRO planıyla masa siparişlerini al ve yönet. Sipariş almaya başlamak için PRO’ya geç."
+      },
+      "kitchen": {
+        "title": "Mutfak ekranı bir PRO özelliğidir",
+        "body": "Siparişleri PRO planıyla mutfak ekranına gönder. Etkinleştirmek için PRO’ya geç."
+      },
+      "reservations": {
+        "title": "Rezervasyonlar bir PRO özelliğidir",
+        "body": "PRO planıyla masa rezervasyonları al. Rezervasyonları açmak için PRO’ya geç."
+      },
+      "devices": {
+        "title": "Cihazlar bir PRO özelliğidir",
+        "body": "PRO planıyla mutfak, garson ve rezervasyon tabletlerini eşle. Cihaz bağlamak için PRO’ya geç."
+      }
     }
   },
   "demo": {

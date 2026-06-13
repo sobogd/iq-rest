@@ -853,7 +853,9 @@
       "retry": "Pokušaj ponovno",
       "soundDismiss": "Ne sada",
       "soundPromptTitle": "Uključiti zvuk?",
-      "soundPromptMessage": "Preglednici blokiraju zvuk dok ga ne dopustite dodirom. Uključite zvuk novih narudžbi kako bi ih kuhinja čula."
+      "soundPromptMessage": "Preglednici blokiraju zvuk dok ga ne dopustite dodirom. Uključite zvuk novih narudžbi kako bi ih kuhinja čula.",
+      "proLockedTitle": "Potreban je PRO plan",
+      "proLockedBody": "Ovaj zaslon zahtijeva aktivan PRO plan. Zamolite vlasnika da prijeđe na PRO da biste nastavili."
     },
     "devices": {
       "title": "Uređaji",
@@ -901,6 +903,25 @@
       "toastCodeFailed": "Nije moguće generirati kod",
       "requiresPaid": "Uređaji zahtijevaju plaćeni plan ili aktivno probno razdoblje.",
       "createFailed": "Nije moguće stvoriti uređaj"
+    },
+    "proUpsell": {
+      "cta": "Prijeđi na PRO",
+      "orders": {
+        "title": "Narudžbe su PRO značajka",
+        "body": "Primajte i upravljajte narudžbama za stolovima uz PRO plan. Prijeđite na PRO da biste primali narudžbe."
+      },
+      "kitchen": {
+        "title": "Kuhinjski zaslon je PRO značajka",
+        "body": "Šaljite narudžbe na kuhinjski zaslon uz PRO plan. Prijeđite na PRO da biste ga uključili."
+      },
+      "reservations": {
+        "title": "Rezervacije su PRO značajka",
+        "body": "Primajte rezervacije stolova uz PRO plan. Prijeđite na PRO da biste uključili rezervacije."
+      },
+      "devices": {
+        "title": "Uređaji su PRO značajka",
+        "body": "Povežite tablete kuhinje, konobara i rezervacija uz PRO plan. Prijeđite na PRO da biste povezali uređaje."
+      }
     }
   },
   "demo": {

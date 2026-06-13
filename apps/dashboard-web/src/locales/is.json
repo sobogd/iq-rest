@@ -853,7 +853,9 @@
       "retry": "Reyna aftur",
       "soundDismiss": "Ekki núna",
       "soundPromptTitle": "Kveikja á hljóði?",
-      "soundPromptMessage": "Vafrar loka fyrir hljóð þar til þú snertir til að leyfa það. Kveiktu á hljóði fyrir nýjar pantanir svo eldhúsið heyri þær."
+      "soundPromptMessage": "Vafrar loka fyrir hljóð þar til þú snertir til að leyfa það. Kveiktu á hljóði fyrir nýjar pantanir svo eldhúsið heyri þær.",
+      "proLockedTitle": "PRO-áskrift krafist",
+      "proLockedBody": "Þessi skjár þarf virka PRO-áskrift. Biddu eigandann um að uppfæra í PRO til að halda áfram."
     },
     "devices": {
       "title": "Tæki",
@@ -901,6 +903,25 @@
       "toastCodeFailed": "Tókst ekki að búa til kóða",
       "requiresPaid": "Tæki krefjast greidds áskriftarpakka eða virkrar prufuáskriftar.",
       "createFailed": "Tókst ekki að búa til tækið"
+    },
+    "proUpsell": {
+      "cta": "Uppfæra í PRO",
+      "orders": {
+        "title": "Pantanir eru PRO-eiginleiki",
+        "body": "Taktu við og stýrðu borðpöntunum með PRO-áskrift. Uppfærðu í PRO til að taka við pöntunum."
+      },
+      "kitchen": {
+        "title": "Eldhússkjárinn er PRO-eiginleiki",
+        "body": "Sendu pantanir á eldhússkjáinn með PRO-áskrift. Uppfærðu í PRO til að virkja hann."
+      },
+      "reservations": {
+        "title": "Borðpantanir eru PRO-eiginleiki",
+        "body": "Taktu við borðpöntunum með PRO-áskrift. Uppfærðu í PRO til að virkja borðpantanir."
+      },
+      "devices": {
+        "title": "Tæki eru PRO-eiginleiki",
+        "body": "Paraðu spjaldtölvur fyrir eldhús, þjón og bókanir með PRO-áskrift. Uppfærðu í PRO til að tengja tæki."
+      }
     }
   },
   "demo": {

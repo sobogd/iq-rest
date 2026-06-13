@@ -287,7 +287,9 @@
       "retryHint": "New status changes will be retried automatically once the connection is back.",
       "loading": "Loading…",
       "failedToLoad": "Failed to load kitchen data",
-      "retry": "Retry"
+      "retry": "Retry",
+      "proLockedTitle": "PRO plan required",
+      "proLockedBody": "This screen needs an active PRO plan. Ask the owner to upgrade to continue."
     },
     "devices": {
       "title": "Devices",
@@ -901,6 +903,25 @@
       "in_progress": "In progress",
       "completed": "Completed",
       "cancelled": "Cancelled"
+    },
+    "proUpsell": {
+      "cta": "Upgrade to PRO",
+      "orders": {
+        "title": "Orders are a PRO feature",
+        "body": "Take and manage table orders with the PRO plan. Upgrade to start accepting orders."
+      },
+      "kitchen": {
+        "title": "Kitchen Display is a PRO feature",
+        "body": "Send orders to the kitchen screen with the PRO plan. Upgrade to enable it."
+      },
+      "reservations": {
+        "title": "Reservations are a PRO feature",
+        "body": "Accept table bookings with the PRO plan. Upgrade to enable reservations."
+      },
+      "devices": {
+        "title": "Devices are a PRO feature",
+        "body": "Pair kitchen, waiter and reservation tablets with the PRO plan. Upgrade to connect devices."
+      }
     }
   },
   "demo": {

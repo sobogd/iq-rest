@@ -853,7 +853,9 @@
       "retry": "Riprova",
       "soundDismiss": "Non ora",
       "soundPromptTitle": "Attivare l'audio?",
-      "soundPromptMessage": "I browser bloccano l'audio finché non tocchi per consentirlo. Attiva il suono dei nuovi ordini in modo che la cucina li senta."
+      "soundPromptMessage": "I browser bloccano l'audio finché non tocchi per consentirlo. Attiva il suono dei nuovi ordini in modo che la cucina li senta.",
+      "proLockedTitle": "È richiesto il piano PRO",
+      "proLockedBody": "Questa schermata richiede un piano PRO attivo. Chiedi al titolare di passare a PRO per continuare."
     },
     "devices": {
       "title": "Dispositivi",
@@ -901,6 +903,25 @@
       "toastCodeFailed": "Impossibile generare il codice",
       "requiresPaid": "I dispositivi richiedono un piano a pagamento o un periodo di prova attivo.",
       "createFailed": "Impossibile creare il dispositivo"
+    },
+    "proUpsell": {
+      "cta": "Passa a PRO",
+      "orders": {
+        "title": "Gli ordini sono una funzione PRO",
+        "body": "Ricevi e gestisci gli ordini al tavolo con il piano PRO. Passa a PRO per iniziare ad accettare ordini."
+      },
+      "kitchen": {
+        "title": "Il monitor cucina è una funzione PRO",
+        "body": "Invia gli ordini allo schermo della cucina con il piano PRO. Passa a PRO per attivarlo."
+      },
+      "reservations": {
+        "title": "Le prenotazioni sono una funzione PRO",
+        "body": "Accetta prenotazioni dei tavoli con il piano PRO. Passa a PRO per attivare le prenotazioni."
+      },
+      "devices": {
+        "title": "I dispositivi sono una funzione PRO",
+        "body": "Abbina tablet di cucina, cameriere e prenotazioni con il piano PRO. Passa a PRO per collegare i dispositivi."
+      }
     }
   },
   "demo": {

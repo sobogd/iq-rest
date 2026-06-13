@@ -133,23 +133,25 @@ export const TEXTS: LandingTexts = {
     plans: {
       basic: {
         name: "Basic",
-        tagline: "Menü, QR sipariş ve AI çevirisi. 5 dakikada hazır.",
+        tagline: "Dijital menü ve AI çeviri. 5 dakikada yayında.",
         features: [
           "Her masa için QR menü",
           "Fotoğraflı ve alerjenli dijital menü",
           "35 dile AI çevirisi",
-          "Menüden sipariş (isteğe bağlı)",
           "Yemek fotoğraflarının AI üretimi",
           "Herhangi bir telefon veya tabletten yönetim",
         ],
       },
       pro: {
         name: "Pro",
-        tagline: "Tam restoran kontrolü: mutfak ekranı ve rezervasyonlar.",
+        tagline: "Tam restoran kontrolü: siparişler, mutfak ve rezervasyonlar.",
         features: [
           "Basic'teki her şey",
+          "Menüden sipariş alma",
+          "Garson uygulaması",
           "Mutfak ekranı (KDS)",
           "7/24 online masa rezervasyonu",
+          "Özel alan adı",
           "Öncelikli WhatsApp desteği",
         ],
       },
