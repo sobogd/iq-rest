@@ -1,3 +1,8 @@
+/* Jost = free, self-loading Futura-like webfont. Loads everywhere (phone /
+ * prod / browsers without Futura). On macOS the local Futura wins (see the
+ * font-family stack below), matching the FB ad creatives exactly. */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -61,19 +66,21 @@ html {
   }
 
   .dark {
-    --background: 0 0% 5%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 5%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 5%;
-    --popover-foreground: 0 0% 98%;
+    /* Warm dark palette matched to the FB ad creatives:
+     * bg #1A1612 (rgb 26,22,18), ink #f7f3ec, subink #a59c8f */
+    --background: 30 18% 9%;
+    --foreground: 40 38% 95%;
+    --card: 30 18% 9%;
+    --card-foreground: 40 38% 95%;
+    --popover: 30 18% 9%;
+    --popover-foreground: 40 38% 95%;
     --primary: 16 100% 58%;
     --primary-foreground: 0 0% 100%;
     --secondary: 0 0% 15%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 65%;
-    --accent: 0 0% 15%;
+    --muted: 30 12% 15%;
+    --muted-foreground: 36 11% 60%;
+    --accent: 30 12% 15%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
@@ -98,6 +105,13 @@ html {
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Force Futura (matched to the FB ad creatives) across the whole site.
+   * Explicit rule wins over Tailwind preflight; Jost is the web fallback. */
+  html,
+  body {
+    font-family: "Futura", "Jost", "Century Gothic", system-ui, sans-serif;
   }
 
   /* Section-stripe — slightly darker than the default bg-muted/20 (which

@@ -10,6 +10,12 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+  		fontFamily: {
+  			// Match the FB ad creatives (make_square/story.js use "Futura").
+  			// Futura is a system font on macOS; Jost is the free Futura-like
+  			// web fallback for everyone else.
+  			sans: ['Futura', 'Jost', '"Century Gothic"', 'system-ui', 'sans-serif'],
+  		},
   		colors: {
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
