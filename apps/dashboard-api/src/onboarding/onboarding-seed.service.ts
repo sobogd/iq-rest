@@ -221,7 +221,7 @@ export class OnboardingSeedService {
           checklistContactsSaved: true,
           checklistBrandCustomized: true,
           ...(template.backgroundUrl
-            ? { backgroundUrl: template.backgroundUrl, backgroundType: "image" }
+            ? { source: template.backgroundUrl, backgroundType: "image" }
             : {}),
         },
       });
