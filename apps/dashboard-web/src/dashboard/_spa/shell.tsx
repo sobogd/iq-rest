@@ -73,7 +73,12 @@ function ShellBody(props: ShellInitialData) {
   // updates from any device / QR diner / other tab arrive in ~100ms.
   // Polling stays alive in dashboard-host as a 30s fallback for the rare
   // case when the stream is disconnected (server restart, CDN flake).
-  useOrdersStream(restaurant?.id ?? null);
+  // PRO-gated: a BASIC (menu-only) restaurant has no orders/reservations, so
+  // we never open the stream — otherwise every (re)connect's "ready" event
+  // invalidates orders+reservations, both 403, and the churn remounts the
+  // dashboard in a tight loop (the "blinking dashboard" regression).
+  const proFeatures = !!props.initialSub?.proFeatures;
+  useOrdersStream(proFeatures ? (restaurant?.id ?? null) : null);
 
   // Cheap extra safety: invalidate when the user lands on an orders/kitchen/
   // reservations view, in case the stream is mid-reconnect.

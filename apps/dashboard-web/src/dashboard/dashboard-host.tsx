@@ -94,6 +94,20 @@ export function DashboardHost() {
 
   const enabled = !!authData?.authenticated;
 
+  // Subscription gates the PRO-only surfaces. Fetch it first (separately from
+  // the data batch) so orders/reservations + the SSE stream can be disabled
+  // for BASIC (menu-only) restaurants. Without this gate a BASIC account hits
+  // /orders + /reservations on every stream (re)connect, each returns 403, and
+  // the resulting state churn remounts the whole dashboard in a tight loop —
+  // the "blinking dashboard" regression introduced with PRO gating.
+  const subQ = useQueries({
+    queries: [
+      { queryKey: ["sub"], queryFn: () => api<SubData | null>("/restaurant/subscription").catch(() => null), enabled },
+    ],
+  })[0];
+  const proFeatures = !!subQ.data?.proFeatures;
+  const proEnabled = enabled && proFeatures;
+
   const data = useQueries({
     queries: [
       { queryKey: ["restaurant"], queryFn: () => api<ApiRestaurant>("/restaurant"), enabled },
@@ -104,13 +118,15 @@ export function DashboardHost() {
       // updates; polling stays as a safety net for the rare case the stream
       // is disconnected. refetchIntervalInBackground keeps a KDS on a side
       // monitor up-to-date when the staff has the window in the background.
+      // PRO-gated: BASIC has no orders/reservations surface, so don't fetch
+      // (the endpoints 403 for BASIC) — see the proEnabled comment above.
       {
         queryKey: ["orders"],
         // The board only renders open orders (completed/cancelled are filtered
         // out client-side and live in analytics) — fetch just those so the
         // payload doesn't grow unbounded with history.
         queryFn: () => api<ApiOrder[]>("/orders?open=1"),
-        enabled,
+        enabled: proEnabled,
         retry: retryUnlessForbidden,
         refetchInterval: 30_000,
         refetchIntervalInBackground: true,
@@ -120,14 +136,13 @@ export function DashboardHost() {
       {
         queryKey: ["reservations"],
         queryFn: () => api<ApiReservation[]>("/reservations"),
-        enabled,
+        enabled: proEnabled,
         retry: retryUnlessForbidden,
         refetchInterval: 30_000,
         refetchIntervalInBackground: true,
         refetchOnReconnect: "always",
         refetchOnWindowFocus: "always",
       },
-      { queryKey: ["sub"], queryFn: () => api<SubData | null>("/restaurant/subscription").catch(() => null), enabled },
     ],
   });
 
@@ -135,7 +150,7 @@ export function DashboardHost() {
   if (!authData.authenticated) return <FullPageLoader />;
   if (data.some((q) => q.isLoading)) return <FullPageLoader />;
 
-  const [restaurantQ, catsQ, itemsQ, tablesQ, ordersQ, reservationsQ, subQ] = data;
+  const [restaurantQ, catsQ, itemsQ, tablesQ, ordersQ, reservationsQ] = data;
   const restaurant = restaurantQ.data;
   if (!restaurant) return <FullPageLoader />;
 
