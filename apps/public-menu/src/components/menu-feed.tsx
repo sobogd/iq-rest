@@ -132,10 +132,16 @@ export function MenuFeed({ dietFilter = [], categoryIds, scrollRootRef }: MenuFe
     return () => obs.disconnect();
   }, [groups, scrollRootRef]);
 
-  // Scroll active tab into view.
+  // Keep the active tab centered in the horizontal tab strip. Scroll the
+  // tablist itself (not scrollIntoView) — when the strip is sticky inside the
+  // content scroller, scrollIntoView also nudges that vertical scroller and
+  // cancels the in-flight tap scrollTo, so tapping a tab appeared to do nothing.
   useEffect(() => {
-    const tab = tabsRef.current?.querySelector(`[data-cat="${activeCategory}"]`);
-    if (tab) (tab as HTMLElement).scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    const list = tabsRef.current;
+    const tab = list?.querySelector(`[data-cat="${activeCategory}"]`) as HTMLElement | null;
+    if (!list || !tab) return;
+    const left = tab.offsetLeft - (list.clientWidth - tab.clientWidth) / 2;
+    list.scrollTo({ left: Math.max(0, left), behavior: "smooth" });
   }, [activeCategory]);
 
   if (groups.length === 0 || filteredItems.length === 0) {
