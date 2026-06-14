@@ -1,5 +1,5 @@
 import { createLazyFileRoute, Outlet, useLocation } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { SlidersHorizontal } from "lucide-react";
 import { useMenu } from "../lib/menu-context";
@@ -29,6 +29,10 @@ function MenuIndex() {
   const label = t("publicMenu.onlineMenu");
   const [filterOpen, setFilterOpen] = useState(false);
   const [dietFilter, setDietFilter] = useState<string[]>([]);
+  // Scroll container shared by the groups drill-list + the trailing ungrouped
+  // tab feed, so the feed's scroll-spy observes the element that actually
+  // scrolls (otherwise the tabs never highlight while scrolling).
+  const groupedScrollRef = useRef<HTMLDivElement>(null);
 
   const lang = i18n.language;
   const layout = restaurant.menuLayout === "drill" ? "drill" : "flat";
@@ -121,14 +125,21 @@ function MenuIndex() {
     // In flat mode, the trailing ungrouped block becomes a horizontal-tab feed;
     // in drill mode it stays as more drill rows.
     return (
-      <div className="flex-1 overflow-auto min-h-0 hide-scrollbar bg-white flex flex-col">
+      <div
+        ref={groupedScrollRef}
+        className="flex-1 overflow-auto min-h-0 hide-scrollbar bg-white flex flex-col"
+      >
         <DrillList items={topGroups} kind="group" embedded />
         {ungroupedLeaves.length > 0 ? (
           layout === "drill" ? (
             <DrillList items={ungroupedLeaves} kind="cat" embedded />
           ) : (
             <div className="border-t border-gray-100">
-              <MenuFeed dietFilter={dietFilter} categoryIds={ungroupedLeaves.map((c) => c.id)} />
+              <MenuFeed
+                dietFilter={dietFilter}
+                categoryIds={ungroupedLeaves.map((c) => c.id)}
+                scrollRootRef={groupedScrollRef}
+              />
             </div>
           )
         ) : null}

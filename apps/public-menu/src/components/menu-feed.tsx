@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type RefObject } from "react";
 import { Plus, Minus, ShoppingCart } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "@tanstack/react-router";
@@ -15,9 +15,15 @@ interface MenuFeedProps {
   dietFilter?: string[];
   // Restrict feed to a subset of categories (e.g. when inside a group).
   categoryIds?: string[];
+  // When the feed is embedded inside an outer scroll container (groups + flat
+  // layout — groups render as drill rows above this tab feed), the page scrolls
+  // on that outer element, not this component's own container. Pass it here so
+  // the scroll-spy IntersectionObserver, the tab scrollTo, and scroll math all
+  // observe the real scroller. Without it the tabs never highlight on scroll.
+  scrollRootRef?: RefObject<HTMLElement | null>;
 }
 
-export function MenuFeed({ dietFilter = [], categoryIds }: MenuFeedProps) {
+export function MenuFeed({ dietFilter = [], categoryIds, scrollRootRef }: MenuFeedProps) {
   const { restaurant, categories: allCategories, items } = useMenu();
   // Default: show only top-level leaf categories (no groups, no nested).
   // Flat layout collapses groups (per settings: groups are hidden in flat).
@@ -70,7 +76,7 @@ export function MenuFeed({ dietFilter = [], categoryIds }: MenuFeedProps) {
 
   const scrollTo = useCallback((id: string) => {
     const el = refs.current[id];
-    const c = containerRef.current;
+    const c = scrollRootRef?.current ?? containerRef.current;
     if (!el || !c) return;
     programmatic.current = true;
     setActiveCategory(id);
@@ -85,11 +91,11 @@ export function MenuFeed({ dietFilter = [], categoryIds }: MenuFeedProps) {
     };
     const safety = setTimeout(release, 1500);
     c.addEventListener("scrollend", release, { once: true });
-  }, []);
+  }, [scrollRootRef]);
 
   // Intersection observer to update active tab on scroll.
   useEffect(() => {
-    const c = containerRef.current;
+    const c = scrollRootRef?.current ?? containerRef.current;
     if (!c) return;
     const obs = new IntersectionObserver(
       (entries) => {
@@ -108,7 +114,7 @@ export function MenuFeed({ dietFilter = [], categoryIds }: MenuFeedProps) {
       if (el) obs.observe(el);
     }
     return () => obs.disconnect();
-  }, [groups]);
+  }, [groups, scrollRootRef]);
 
   // Scroll active tab into view.
   useEffect(() => {
@@ -129,7 +135,16 @@ export function MenuFeed({ dietFilter = [], categoryIds }: MenuFeedProps) {
   return (
     <>
       {groups.length > 1 ? (
-        <div className="shrink-0 flex justify-center relative" style={{ backgroundColor: "#fff" }}>
+        <div
+          className={
+            "flex justify-center relative " +
+            // Embedded under an outer scroller (groups + flat): the tab strip
+            // must stick to the top so it stays visible while the page scrolls.
+            // Standalone: it's a flex sibling above the scroll area (no sticky).
+            (scrollRootRef ? "sticky top-0 z-10" : "shrink-0")
+          }
+          style={{ backgroundColor: "#fff" }}
+        >
           <div className="absolute bottom-0 left-0 right-0 h-px" style={{ backgroundColor: "#e5e7eb" }} />
           <div
             ref={tabsRef}
@@ -161,7 +176,9 @@ export function MenuFeed({ dietFilter = [], categoryIds }: MenuFeedProps) {
 
       <div
         ref={containerRef}
-        className="flex-1 overflow-auto min-h-0 hide-scrollbar"
+        // Embedded: don't create a nested scroller — let content flow into the
+        // outer scroll container so scroll-spy on that element works.
+        className={(scrollRootRef ? "" : "flex-1 overflow-auto min-h-0 ") + "hide-scrollbar"}
         style={{ backgroundColor: "#fff" }}
       >
         <div className="flex justify-center px-0 min-[440px]:px-5">
