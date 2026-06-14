@@ -10,6 +10,7 @@ import {
 } from "@nestjs/common";
 import type { Request } from "express";
 import { PutObjectCommand } from "@aws-sdk/client-s3";
+import { PDFDocument } from "pdf-lib";
 import { AuthGuard, type AuthedRequest } from "../auth/auth.guard";
 import { PrismaService } from "../prisma/prisma.service";
 import { s3Client, s3Bucket, s3Key } from "../upload/s3";
@@ -53,6 +54,10 @@ async function callGeminiForFile(
           temperature: 0.1,
           maxOutputTokens: 50000,
           responseMimeType: "application/json",
+          // Disable model "thinking": on gemini-2.5-flash it otherwise eats half
+          // the output-token budget (observed ~25k thought tokens), truncating the
+          // JSON to MAX_TOKENS, and roughly doubles latency. We don't need it for OCR.
+          thinkingConfig: { thinkingBudget: 0 },
         },
       }),
     },
@@ -75,6 +80,50 @@ async function callGeminiForFile(
     console.error("Failed to parse AI response:", content);
     return { error: "parse_error" };
   }
+}
+
+// Split a multi-page PDF into one single-page PDF per page (base64, no rendering).
+// Big multi-page PDFs scanned in a single Gemini call take >100s and overrun the
+// nginx 60s proxy timeout; per-page calls run in parallel and each stays fast.
+// Falls back to the original PDF on any parse failure so a weird PDF still tries once.
+async function splitPdfToPages(base64Data: string): Promise<string[]> {
+  try {
+    const src = await PDFDocument.load(Buffer.from(base64Data, "base64"), {
+      ignoreEncryption: true,
+    });
+    const pageCount = src.getPageCount();
+    if (pageCount <= 1) return [base64Data];
+    const pages: string[] = [];
+    for (let i = 0; i < pageCount; i++) {
+      const doc = await PDFDocument.create();
+      const [pg] = await doc.copyPages(src, [i]);
+      doc.addPage(pg);
+      const bytes = await doc.save();
+      pages.push(Buffer.from(bytes).toString("base64"));
+    }
+    return pages;
+  } catch (err) {
+    console.error("Failed to split PDF, scanning as a single file:", err);
+    return [base64Data];
+  }
+}
+
+// Run `fn` over `items` with at most `limit` concurrent executions.
+async function mapLimit<T, R>(
+  items: T[],
+  limit: number,
+  fn: (item: T) => Promise<R>,
+): Promise<R[]> {
+  const results: R[] = new Array(items.length);
+  let idx = 0;
+  async function worker() {
+    while (idx < items.length) {
+      const cur = idx++;
+      results[cur] = await fn(items[cur]);
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, worker));
+  return results;
 }
 
 function mergeCategories(results: ScannedCategory[][]): ScannedCategory[] {
@@ -169,7 +218,12 @@ export class ScanMenuController {
       if (sizeInBytes > MAX_SIZE) throw new BadRequestException("too_large");
 
       if (isPdf) {
-        contentParts.push({ inline_data: { mime_type: "application/pdf", data: base64Data } });
+        // Multi-page PDFs are split into per-page parts so each Gemini call is
+        // small and fast and the batch stays under the proxy timeout.
+        const pageDatas = await splitPdfToPages(base64Data);
+        for (const pageData of pageDatas) {
+          contentParts.push({ inline_data: { mime_type: "application/pdf", data: pageData } });
+        }
       } else {
         const mimeMatch = file.match(/^data:(image\/[a-z+]+);base64,/);
         if (!mimeMatch) throw new BadRequestException("Invalid file format");
@@ -177,8 +231,8 @@ export class ScanMenuController {
       }
     }
 
-    // Send each file to Gemini in parallel
-    const results = await Promise.all(contentParts.map((part) => callGeminiForFile(apiKey, part)));
+    // Send each page/image to Gemini, capped concurrency to avoid rate limits.
+    const results = await mapLimit(contentParts, 6, (part) => callGeminiForFile(apiKey, part));
 
     // Collect categories from successful responses
     const successCategories: ScannedCategory[][] = [];
