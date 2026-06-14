@@ -23,6 +23,19 @@ interface MenuFeedProps {
   scrollRootRef?: RefObject<HTMLElement | null>;
 }
 
+// Walk up from a node to the nearest actually-scrollable ancestor. More
+// reliable than a passed-in ref: tab clicks scroll *this* element so the
+// section we want always lives inside it, whatever the surrounding layout is.
+function getScrollParent(node: HTMLElement | null): HTMLElement | null {
+  let el = node?.parentElement ?? null;
+  while (el) {
+    const oy = getComputedStyle(el).overflowY;
+    if ((oy === "auto" || oy === "scroll") && el.scrollHeight > el.clientHeight) return el;
+    el = el.parentElement;
+  }
+  return null;
+}
+
 export function MenuFeed({ dietFilter = [], categoryIds, scrollRootRef }: MenuFeedProps) {
   const { restaurant, categories: allCategories, items } = useMenu();
   // Default: show only top-level leaf categories (no groups, no nested).
@@ -76,7 +89,9 @@ export function MenuFeed({ dietFilter = [], categoryIds, scrollRootRef }: MenuFe
 
   const scrollTo = useCallback((id: string) => {
     const el = refs.current[id];
-    const c = scrollRootRef?.current ?? containerRef.current;
+    // Derive the scroller from the section itself — the embedded (groups+flat)
+    // layout scrolls an outer ancestor, not this component's own container.
+    const c = getScrollParent(el) ?? scrollRootRef?.current ?? containerRef.current;
     if (!el || !c) return;
     programmatic.current = true;
     setActiveCategory(id);
@@ -95,7 +110,8 @@ export function MenuFeed({ dietFilter = [], categoryIds, scrollRootRef }: MenuFe
 
   // Intersection observer to update active tab on scroll.
   useEffect(() => {
-    const c = scrollRootRef?.current ?? containerRef.current;
+    const c =
+      getScrollParent(refs.current[groups[0]?.id ?? ""]) ?? scrollRootRef?.current ?? containerRef.current;
     if (!c) return;
     const obs = new IntersectionObserver(
       (entries) => {
