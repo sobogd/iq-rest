@@ -18,6 +18,12 @@ export const TEXTS: LandingTexts = {
 
   ctaText: "Încearcă gratuit",
   homeCtaText: "Încearcă gratuit",
+  trust: [
+    { kind: "num", value: 35, label: "Limbi" },
+    { kind: "text", value: "24/7", label: "Rezervări" },
+    { kind: "num", value: 5, suffix: " min", label: "Pornire" },
+    { kind: "count", label: "Restaurante" },
+  ],
   demoText: "Vizionați demo",
   microcopy: "14 zile gratuit · Fără card · Anulați oricând",
 

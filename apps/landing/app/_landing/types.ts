@@ -27,6 +27,14 @@ export type FooterLink = {
   label: string;
 };
 
+/** One stat in the trust strip (shared by the homepage and feature pages).
+ *  `num` renders value+suffix, `text` renders the raw value, `count` renders
+ *  the live restaurant counter. */
+export type TrustStat =
+  | { kind: "num"; value: number; suffix?: string; label: string }
+  | { kind: "text"; value: string; label: string }
+  | { kind: "count"; label: string };
+
 /**
  * Per-feature content. All shared chrome (header, footer, pricing trust,
  * faq eyebrow, ctaText, etc.) is read from the per-locale homepage TEXTS
@@ -91,6 +99,11 @@ export type LandingTexts = {
   /** Primary CTA label on the homepage hero — generic across all features
    *  (the feature pages use the feature-specific `ctaText`). */
   homeCtaText: string;
+
+  /** Product-level trust strip shown under the hero on feature pages (same
+   *  four stats as the homepage). Optional during the per-locale migration —
+   *  locales without it skip the strip. */
+  trust?: TrustStat[];
   demoText: string;
   microcopy: string;
 

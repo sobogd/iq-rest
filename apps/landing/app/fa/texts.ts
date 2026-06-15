@@ -18,6 +18,12 @@ export const TEXTS: LandingTexts = {
 
   ctaText: "رایگان امتحان کنید",
   homeCtaText: "رایگان امتحان کنید",
+  trust: [
+    { kind: "num", value: 35, label: "زبان" },
+    { kind: "text", value: "24/7", label: "رزروها" },
+    { kind: "num", value: 5, suffix: " min", label: "راه‌اندازی" },
+    { kind: "count", label: "رستوران" },
+  ],
   demoText: "تماشای دمو",
   microcopy: "۱۴ روز رایگان · بدون کارت · لغو در هر زمان",
 

@@ -18,6 +18,12 @@ export const TEXTS: LandingTexts = {
 
   ctaText: "Išbandykite nemokamai",
   homeCtaText: "Išbandykite nemokamai",
+  trust: [
+    { kind: "num", value: 35, label: "Kalbos" },
+    { kind: "text", value: "24/7", label: "Rezervacijos" },
+    { kind: "num", value: 5, suffix: " min", label: "Paleidimas" },
+    { kind: "count", label: "Restoranai" },
+  ],
   demoText: "Žiūrėti demonstraciją",
   microcopy: "14 dienų nemokamai · Be kortelės · Atšaukite bet kada",
 

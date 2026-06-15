@@ -18,6 +18,12 @@ export const TEXTS: LandingTexts = {
 
   ctaText: "Prova-ho gratis",
   homeCtaText: "Prova-ho gratis",
+  trust: [
+    { kind: "num", value: 35, label: "Idiomes" },
+    { kind: "text", value: "24/7", label: "Reserves" },
+    { kind: "num", value: 5, suffix: " min", label: "Engegada" },
+    { kind: "count", label: "Restaurants" },
+  ],
   demoText: "Mira la demo",
   microcopy: "14 dies gratis · Sense targeta · Cancel·la quan vulguis",
 

@@ -18,6 +18,12 @@ export const TEXTS: LandingTexts = {
 
   ctaText: "Próbáld ki ingyen",
   homeCtaText: "Próbáld ki ingyen",
+  trust: [
+    { kind: "num", value: 35, label: "Nyelv" },
+    { kind: "text", value: "24/7", label: "Foglalások" },
+    { kind: "num", value: 5, suffix: " min", label: "Indítás" },
+    { kind: "count", label: "Étterem" },
+  ],
   demoText: "Nézze meg a demót",
   microcopy: "14 nap ingyenes · Kártya nélkül · Lemondás bármikor",
 

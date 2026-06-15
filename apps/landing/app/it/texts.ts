@@ -18,6 +18,12 @@ export const TEXTS: LandingTexts = {
 
   ctaText: "Provalo gratis",
   homeCtaText: "Provalo gratis",
+  trust: [
+    { kind: "num", value: 35, label: "Lingue" },
+    { kind: "text", value: "24/7", label: "Prenotazioni" },
+    { kind: "num", value: 5, suffix: " min", label: "Avvio" },
+    { kind: "count", label: "Ristoranti" },
+  ],
   demoText: "Guarda la demo",
   microcopy: "14 giorni gratis · Senza carta · Disdici quando vuoi",
 

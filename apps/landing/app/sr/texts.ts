@@ -18,6 +18,12 @@ export const TEXTS: LandingTexts = {
 
   ctaText: "Испробајте бесплатно",
   homeCtaText: "Испробајте бесплатно",
+  trust: [
+    { kind: "num", value: 35, label: "Језика" },
+    { kind: "text", value: "24/7", label: "Резервације" },
+    { kind: "num", value: 5, suffix: " min", label: "Покретање" },
+    { kind: "count", label: "Ресторана" },
+  ],
   demoText: "Pogledajte demo",
   microcopy: "14 dana besplatno · Bez kartice · Otkažite bilo kada",
 

@@ -18,6 +18,12 @@ export const TEXTS: LandingTexts = {
 
   ctaText: "Ücretsiz deneyin",
   homeCtaText: "Ücretsiz deneyin",
+  trust: [
+    { kind: "num", value: 35, label: "Dil" },
+    { kind: "text", value: "24/7", label: "Rezervasyon" },
+    { kind: "num", value: 5, suffix: " min", label: "Kurulum" },
+    { kind: "count", label: "Restoran" },
+  ],
   demoText: "Demoyu izle",
   microcopy: "14 gün ücretsiz · Kart yok · İstediğiniz zaman iptal edin",
 

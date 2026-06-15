@@ -18,6 +18,12 @@ export const TEXTS: LandingTexts = {
 
   ctaText: "Proovige tasuta",
   homeCtaText: "Proovige tasuta",
+  trust: [
+    { kind: "num", value: 35, label: "Keelt" },
+    { kind: "text", value: "24/7", label: "Broneeringud" },
+    { kind: "num", value: 5, suffix: " min", label: "Käivitus" },
+    { kind: "count", label: "Restorani" },
+  ],
   demoText: "Vaata demo",
   microcopy: "14 päeva tasuta · Ilma kaardita · Tühista igal ajal",
 

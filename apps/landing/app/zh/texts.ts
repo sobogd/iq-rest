@@ -18,6 +18,12 @@ export const TEXTS: LandingTexts = {
 
   ctaText: "免费试用",
   homeCtaText: "免费试用",
+  trust: [
+    { kind: "num", value: 35, label: "种语言" },
+    { kind: "text", value: "24/7", label: "预订" },
+    { kind: "num", value: 5, suffix: " min", label: "启动" },
+    { kind: "count", label: "家餐厅" },
+  ],
   demoText: "观看演示",
   microcopy: "14 天免费 · 无需信用卡 · 随时取消",
 

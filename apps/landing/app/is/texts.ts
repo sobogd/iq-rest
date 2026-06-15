@@ -18,6 +18,12 @@ export const TEXTS: LandingTexts = {
 
   ctaText: "Prófaðu frítt",
   homeCtaText: "Prófaðu frítt",
+  trust: [
+    { kind: "num", value: 35, label: "Tungumál" },
+    { kind: "text", value: "24/7", label: "Bókanir" },
+    { kind: "num", value: 5, suffix: " min", label: "Ræsing" },
+    { kind: "count", label: "Veitingastaðir" },
+  ],
   demoText: "Horfðu á kynningu",
   microcopy: "14 dagar ókeypis · Ekkert kort · Hætta hvenær sem er",
 

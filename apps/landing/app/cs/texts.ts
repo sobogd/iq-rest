@@ -18,6 +18,12 @@ export const TEXTS: LandingTexts = {
 
   ctaText: "Vyzkoušejte zdarma",
   homeCtaText: "Vyzkoušejte zdarma",
+  trust: [
+    { kind: "num", value: 35, label: "Jazyků" },
+    { kind: "text", value: "24/7", label: "Rezervace" },
+    { kind: "num", value: 5, suffix: " min", label: "Spuštění" },
+    { kind: "count", label: "Restaurací" },
+  ],
   demoText: "Sledovat demo",
   microcopy: "14 dní zdarma · Bez karty · Zrušení kdykoli",
 

@@ -14,6 +14,7 @@ import { FeatureJsonLd } from "./feature-json-ld";
 import { getHelpBanner } from "../help/registry";
 import { HelpBannerSection } from "../help/help-banner-section";
 import { stablePrefix, featureKey } from "@/lib/track-keys";
+import { restaurantCount } from "@/lib/restaurant-count";
 import type { LandingTexts } from "../types";
 import type { FeatureContent } from "./types";
 
@@ -40,6 +41,9 @@ export function FeatureLandingTemplate({
   const page = featureKey(trackPrefix);
   const subCount = subFeatures.length;
   const helpBanner = getHelpBanner(locale);
+  // Live restaurant counter for the trust strip (build-time, like the home page).
+  const count = restaurantCount();
+  const countLabel = count.toLocaleString(locale);
   // Board feature pages embed the real dashboard board (landscape tablet
   // frame) instead of the phone menu preview, so the demo matches the
   // feature. `trackPrefix` carries a locale-stable token on every locale's
@@ -81,11 +85,35 @@ export function FeatureLandingTemplate({
         secondaryHref="#features"
         secondaryTrack={`${prefix}_hero_features`}
         secondaryHideMobile
-        secondaryPinRight
         microcopy={chrome.microcopy}
         imageSrc={hero.imageSrc}
         imageAlt={hero.imageAlt}
+        heightClass="min-h-[32rem] sm:min-h-[36rem] lg:min-h-[40rem]"
+        overlayClass="bg-black/25"
+        centered
       />
+
+      {/* Trust strip — same four product stats as the homepage, read in a
+          glance just below the fold. Optional per-locale (skipped until the
+          locale's chrome carries `trust`). */}
+      {chrome.trust?.length ? (
+        <Section dataSection="feature_trust" noContainer accent className="!py-8 sm:!py-10">
+          <dl className="grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-6 max-w-5xl mx-auto text-center">
+            {chrome.trust.map((t) => (
+              <div key={t.label} className="flex flex-col items-center">
+                <dt className="text-3xl sm:text-4xl font-medium tracking-tight bg-gradient-to-br from-primary to-amber-400 bg-clip-text text-transparent">
+                  {t.kind === "count"
+                    ? countLabel
+                    : t.kind === "num"
+                      ? `${t.value}${t.suffix ?? ""}`
+                      : t.value}
+                </dt>
+                <dd className="mt-1 text-base text-muted-foreground/80 leading-tight">{t.label}</dd>
+              </div>
+            ))}
+          </dl>
+        </Section>
+      ) : null}
 
       <div id="features">
       <ScanSection texts={scan} locale={locale} />

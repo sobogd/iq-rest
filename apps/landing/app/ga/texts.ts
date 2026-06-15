@@ -18,6 +18,12 @@ export const TEXTS: LandingTexts = {
 
   ctaText: "Bain triail as saor in aisce",
   homeCtaText: "Bain triail as saor in aisce",
+  trust: [
+    { kind: "num", value: 35, label: "Teangacha" },
+    { kind: "text", value: "24/7", label: "Áirithintí" },
+    { kind: "num", value: 5, suffix: " min", label: "Tús" },
+    { kind: "count", label: "Bialanna" },
+  ],
   demoText: "Féach an taispeántas",
   microcopy: "14 lá saor in aisce · Gan cárta · Cealaigh aon uair",
 

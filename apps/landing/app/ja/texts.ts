@@ -18,6 +18,12 @@ export const TEXTS: LandingTexts = {
 
   ctaText: "無料で試す",
   homeCtaText: "無料で試す",
+  trust: [
+    { kind: "num", value: 35, label: "言語" },
+    { kind: "text", value: "24/7", label: "予約" },
+    { kind: "num", value: 5, suffix: " min", label: "開始" },
+    { kind: "count", label: "店舗" },
+  ],
   demoText: "デモを見る",
   microcopy: "14日間無料 · カード不要 · いつでもキャンセル可能",
 

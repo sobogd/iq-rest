@@ -18,6 +18,12 @@ export const TEXTS: LandingTexts = {
 
   ctaText: "Izmēģiniet bez maksas",
   homeCtaText: "Izmēģiniet bez maksas",
+  trust: [
+    { kind: "num", value: 35, label: "Valodas" },
+    { kind: "text", value: "24/7", label: "Rezervācijas" },
+    { kind: "num", value: 5, suffix: " min", label: "Palaišana" },
+    { kind: "count", label: "Restorāni" },
+  ],
   demoText: "Skatīt demonstrāciju",
   microcopy: "14 dienas bez maksas · Bez kartes · Atcelt jebkurā laikā",
 

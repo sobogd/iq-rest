@@ -18,6 +18,12 @@ export const TEXTS: LandingTexts = {
 
   ctaText: "Probeer het gratis",
   homeCtaText: "Probeer het gratis",
+  trust: [
+    { kind: "num", value: 35, label: "Talen" },
+    { kind: "text", value: "24/7", label: "Reserveringen" },
+    { kind: "num", value: 5, suffix: " min", label: "Opstarten" },
+    { kind: "count", label: "Restaurants" },
+  ],
   demoText: "Bekijk demo",
   microcopy: "14 dagen gratis · Geen kaart · Op elk moment opzegbaar",
 
