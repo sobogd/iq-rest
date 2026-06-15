@@ -690,6 +690,7 @@ export class AdminController {
       has_registered: boolean;
       last_fbclid_event: string | null;
       last_fb_at: Date | null;
+      latest_gclid: string | null;
     };
     // Group by the effective USER (its own events + anonymous pre-login events
     // stitched to it). A user with several restaurants is ONE session — the
@@ -721,7 +722,11 @@ export class AdminController {
         bool_or(event = 'l_page_pricing' OR event LIKE '%demo_open') AS has_content,
         bool_or(event = 'l_onb_verify_success' OR event LIKE 'dash\\_%') AS has_registered,
         (array_agg(event ORDER BY at DESC) FILTER (WHERE event LIKE 'l_fbclid_%' OR event LIKE 'l_param_fbclid__%'))[1] AS last_fbclid_event,
-        MAX(at) FILTER (WHERE event LIKE 'l_fbclid_%' OR event LIKE 'l_param_fbclid__%') AS last_fb_at
+        MAX(at) FILTER (WHERE event LIKE 'l_fbclid_%' OR event LIKE 'l_param_fbclid__%') AS last_fb_at,
+        COALESCE(
+          (array_agg(gclid ORDER BY at DESC) FILTER (WHERE gclid IS NOT NULL))[1],
+          regexp_replace((array_agg(event ORDER BY at DESC) FILTER (WHERE event LIKE 'l_gclid_%' OR event LIKE 'l_param_gclid__%'))[1], '^(l_param_gclid__|l_gclid_)', '')
+        ) AS latest_gclid
       FROM ev
       GROUP BY eff_uid, (CASE WHEN eff_uid IS NULL THEN COALESCE(ip, region) END)
       ORDER BY MAX(at) DESC
@@ -777,6 +782,33 @@ export class AdminController {
       return "view"; // some other event was sent — still mark as touched
     };
 
+    // Same, for Google Ads offline uploads (google_ads_sends), keyed by the
+    // session's latest gclid — drives the green/amber/grey Google chip.
+    const gclids = Array.from(
+      new Set(rows.map((r) => r.latest_gclid).filter((x): x is string => !!x)),
+    );
+    const sentByGclid = new Map<string, Set<string>>();
+    if (gclids.length) {
+      const sent = await this.prisma.googleAdsSend.findMany({
+        where: { gclid: { in: gclids }, status: "success" },
+        select: { gclid: true, eventName: true },
+      });
+      for (const s of sent) {
+        let set = sentByGclid.get(s.gclid);
+        if (!set) { set = new Set(); sentByGclid.set(s.gclid, set); }
+        set.add(s.eventName);
+      }
+    }
+    const googleStageOf = (gclid: string | null): "reg" | "checkout" | "view" | null => {
+      if (!gclid) return null;
+      const set = sentByGclid.get(gclid);
+      if (!set || set.size === 0) return null;
+      if (set.has("CompleteRegistration")) return "reg";
+      if (set.has("InitiateCheckout")) return "checkout";
+      if (set.has("ViewContent")) return "view";
+      return "view";
+    };
+
     return {
       sessions: rows.map((r) => {
         const latestFbclid = r.last_fbclid_event ? r.last_fbclid_event.replace(/^(l_param_fbclid__|l_fbclid_)/, "") : null;
@@ -805,6 +837,8 @@ export class AdminController {
           latestFbclid,
           latestFbTs: r.last_fb_at ? r.last_fb_at.getTime() : null,
           fbStage: fbStageOf(latestFbclid),
+          latestGclid: r.latest_gclid,
+          googleStage: googleStageOf(r.latest_gclid),
           userLabel: r.uid ? labels.email(r.uid) : null,
         };
       }),

@@ -7,10 +7,11 @@ import { AdminController } from "./admin.controller";
 import { AdminGuard } from "./admin.guard";
 import { UsageStitchService } from "./usage-stitch.service";
 import { CapiService } from "./capi.service";
+import { GoogleAdsConversionsService } from "./google-ads-conversions.service";
 
 @Module({
   imports: [AuthModule, MailModule, DevicesModule, RestaurantModule],
   controllers: [AdminController],
-  providers: [AdminGuard, UsageStitchService, CapiService],
+  providers: [AdminGuard, UsageStitchService, CapiService, GoogleAdsConversionsService],
 })
 export class AdminModule {}

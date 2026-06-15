@@ -476,6 +476,22 @@ model CapiSend {
   @@map("capi_sends")
 }
 
+// Journal of Google Ads offline (gclid) conversion uploads. Google analogue of
+// CapiSend: one row per (gclid, eventName) upload attempt; a row with
+// status="success" blocks re-sending the same conversion for the same click.
+model GoogleAdsSend {
+  id        String   @id @default(cuid())
+  gclid     String
+  eventName String   // ViewContent | InitiateCheckout | CompleteRegistration
+  status    String   // "success" | "error"
+  response  Json?
+  createdAt DateTime @default(now())
+
+  @@index([gclid])
+  @@index([gclid, eventName, status])
+  @@map("google_ads_sends")
+}
+
 model Order {
   id              String   @id @default(cuid())
   restaurantId    String

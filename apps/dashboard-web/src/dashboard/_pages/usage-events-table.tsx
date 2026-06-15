@@ -44,6 +44,20 @@ function fbStageTitle(stage: SessionRow["fbStage"]): string {
       return "Send a Meta CAPI event";
   }
 }
+// Google Ads chip — same funnel colours as FB, coloured by the deepest offline
+// conversion already uploaded for the session's gclid (auto-sent by the cron).
+function googleStageTitle(stage: SessionRow["googleStage"]): string {
+  switch (stage) {
+    case "reg":
+      return "CompleteRegistration uploaded to Google Ads";
+    case "checkout":
+      return "InitiateCheckout uploaded to Google Ads";
+    case "view":
+      return "ViewContent uploaded to Google Ads";
+    default:
+      return "Google click — nothing uploaded yet";
+  }
+}
 
 // Module-level cache so navigating into a session and back doesn't re-fetch or
 // re-render the (potentially large) list. Refreshed only by the Update button.
@@ -304,7 +318,16 @@ function SessionItem({
             {s.hasRegistered ? <span className="w-[5px] h-[5px] rounded-full bg-pink-500" title="Registered (CompleteRegistration)" /> : null}
           </span>
         ) : null}
-        {s.hasGoogle ? <span className={chip}>G</span> : null}
+        {s.latestGclid ? (
+          <span
+            className={"text-[10px] rounded px-1.5 py-0.5 shrink-0 " + fbStageClass(s.googleStage)}
+            title={googleStageTitle(s.googleStage)}
+          >
+            G
+          </span>
+        ) : s.hasGoogle ? (
+          <span className={chip}>G</span>
+        ) : null}
         {s.latestFbclid ? (
           <span
             className={"text-[10px] rounded px-1.5 py-0.5 shrink-0 " + fbStageClass(s.fbStage)}

@@ -28,6 +28,8 @@ export interface SessionRow {
   latestFbclid: string | null; // newest fbclid in the group (for CAPI)
   latestFbTs: number | null;
   fbStage?: "reg" | "checkout" | "view" | null; // deepest CAPI event sent for latestFbclid
+  latestGclid?: string | null; // newest gclid in the group (for Google Ads upload)
+  googleStage?: "reg" | "checkout" | "view" | null; // deepest Google Ads event uploaded for latestGclid
   userLabel: string | null;
   restaurantLabel?: string | null; // LEGACY (kind "r"); user sessions show email
 }
