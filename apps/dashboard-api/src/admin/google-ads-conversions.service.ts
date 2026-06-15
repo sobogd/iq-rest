@@ -243,20 +243,27 @@ export class GoogleAdsConversionsService {
       }
     }
 
-    // Journal dedup + bounded retries (mirror of CAPI).
+    // Journal dedup + bounded retries (mirror of CAPI). Transient Google errors
+    // (rate limits, internal errors, and the "conversion action was just
+    // created — try again in 6 hours" window) must NOT count toward the give-up
+    // cap, or a brand-new action's conversions get dropped before it matures.
     const MAX_ERRORS = 6;
     const MAX_PER_RUN = 300;
+    const isTransient = (resp: unknown): boolean => {
+      const s = JSON.stringify(resp ?? "");
+      return /just created|Try importing again|INTERNAL_ERROR|RESOURCE_EXHAUSTED|CONCURRENT_MODIFICATION|DEADLINE_EXCEEDED/i.test(s);
+    };
     const gclids = Array.from(wanted.keys());
     const journal = await this.prisma.googleAdsSend.findMany({
       where: { gclid: { in: gclids }, status: { in: ["success", "error"] } },
-      select: { gclid: true, eventName: true, status: true },
+      select: { gclid: true, eventName: true, status: true, response: true },
     });
     const successSet = new Set<string>();
     const errorCount = new Map<string, number>();
     for (const j of journal) {
       const key = `${j.gclid}|${j.eventName}`;
       if (j.status === "success") successSet.add(key);
-      else errorCount.set(key, (errorCount.get(key) ?? 0) + 1);
+      else if (!isTransient(j.response)) errorCount.set(key, (errorCount.get(key) ?? 0) + 1);
     }
 
     let sent = 0;
