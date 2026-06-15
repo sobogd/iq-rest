@@ -687,6 +687,7 @@ export class AdminController {
       has_fb: boolean;
       has_onb: boolean;
       has_content: boolean;
+      has_lead: boolean;
       has_registered: boolean;
       last_fbclid_event: string | null;
       last_fb_at: Date | null;
@@ -720,6 +721,7 @@ export class AdminController {
         bool_or(is_facebook_ads OR event LIKE 'l_fbclid_%' OR event LIKE 'l_param_fbclid__%') AS has_fb,
         bool_or(event LIKE '%onb%') AS has_onb,
         bool_or(event = 'l_page_pricing' OR event LIKE '%demo_open') AS has_content,
+        bool_or(event LIKE 'l_onb_open_%' AND event NOT IN ('l_onb_open_terms', 'l_onb_open_privacy')) AS has_lead,
         bool_or(event = 'l_onb_verify_success' OR event LIKE 'dash\\_%') AS has_registered,
         (array_agg(event ORDER BY at DESC) FILTER (WHERE event LIKE 'l_fbclid_%' OR event LIKE 'l_param_fbclid__%'))[1] AS last_fbclid_event,
         MAX(at) FILTER (WHERE event LIKE 'l_fbclid_%' OR event LIKE 'l_param_fbclid__%') AS last_fb_at,
@@ -813,6 +815,18 @@ export class AdminController {
       sessions: rows.map((r) => {
         const latestFbclid = r.last_fbclid_event ? r.last_fbclid_event.replace(/^(l_param_fbclid__|l_fbclid_)/, "") : null;
         const isDemo = r.uid ? demoSet.has(r.uid) : false;
+        // Predicted chip colour: the deepest milestone the session reached, i.e.
+        // what the FB/Google cron WILL upload (before it has run). Mirrors the
+        // cron's milestone→event mapping incl. the demo collapse (demo dashboard
+        // activity → InitiateCheckout, not registration).
+        const predictedStage: "reg" | "checkout" | "view" | null =
+          r.has_registered && !isDemo
+            ? "reg"
+            : (r.has_registered && isDemo) || r.has_lead
+              ? "checkout"
+              : r.has_content
+                ? "view"
+                : null;
         return {
           kind: r.kind,
           uid: r.uid,
@@ -839,6 +853,7 @@ export class AdminController {
           fbStage: fbStageOf(latestFbclid),
           latestGclid: r.latest_gclid,
           googleStage: googleStageOf(r.latest_gclid),
+          predictedStage,
           userLabel: r.uid ? labels.email(r.uid) : null,
         };
       }),

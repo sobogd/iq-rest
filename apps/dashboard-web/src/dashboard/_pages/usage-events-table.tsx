@@ -44,6 +44,32 @@ function fbStageTitle(stage: SessionRow["fbStage"]): string {
       return "Send a Meta CAPI event";
   }
 }
+// Predicted dot — solid fill in the funnel colour the FB/Google chip WILL take
+// once the cron uploads, i.e. the deepest milestone the session has reached.
+function predictedDotClass(stage: SessionRow["predictedStage"]): string {
+  switch (stage) {
+    case "reg":
+      return "bg-pink-500";
+    case "checkout":
+      return "bg-amber-500";
+    case "view":
+      return "bg-emerald-500";
+    default:
+      return "";
+  }
+}
+function predictedDotTitle(stage: SessionRow["predictedStage"]): string {
+  switch (stage) {
+    case "reg":
+      return "Will upload: CompleteRegistration";
+    case "checkout":
+      return "Will upload: InitiateCheckout";
+    case "view":
+      return "Will upload: ViewContent";
+    default:
+      return "";
+  }
+}
 // Google Ads chip — same funnel colours as FB, coloured by the deepest offline
 // conversion already uploaded for the session's gclid (auto-sent by the cron).
 function googleStageTitle(stage: SessionRow["googleStage"]): string {
@@ -308,15 +334,14 @@ function SessionItem({
       </span>
 
       <span className="shrink-0 flex items-center gap-2">
-        {s.hasContent || s.isDemo || s.hasRegistered ? (
-          // Dots mirror the Meta CAPI funnel colours (view=emerald, demo/
-          // checkout=amber, registration=pink). Onboarding is intentionally
-          // not shown here.
-          <span className="shrink-0 flex flex-col items-center justify-center gap-0.5">
-            {s.hasContent ? <span className="w-[5px] h-[5px] rounded-full bg-emerald-500" title="ViewContent" /> : null}
-            {s.isDemo ? <span className="w-[5px] h-[5px] rounded-full bg-amber-500" title="Demo (InitiateCheckout)" /> : null}
-            {s.hasRegistered ? <span className="w-[5px] h-[5px] rounded-full bg-pink-500" title="Registered (CompleteRegistration)" /> : null}
-          </span>
+        {s.predictedStage ? (
+          // One dot in the funnel colour the FB/Google chip will become after the
+          // cron uploads (deepest milestone reached): view=emerald, checkout=amber
+          // (incl. demo), registration=pink.
+          <span
+            className={"w-[6px] h-[6px] rounded-full shrink-0 " + predictedDotClass(s.predictedStage)}
+            title={predictedDotTitle(s.predictedStage)}
+          />
         ) : null}
         {s.latestGclid ? (
           <span
