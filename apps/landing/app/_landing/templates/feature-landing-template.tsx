@@ -81,10 +81,6 @@ export function FeatureLandingTemplate({
         primaryTrack={`${prefix}_hero_cta`}
         demoText={chrome.demoText}
         demoVariant={demoVariant}
-        secondaryLabel={chrome.header.viewFeatures}
-        secondaryHref="#features"
-        secondaryTrack={`${prefix}_hero_features`}
-        secondaryHideMobile
         microcopy={chrome.microcopy}
         imageSrc={hero.imageSrc}
         imageAlt={hero.imageAlt}

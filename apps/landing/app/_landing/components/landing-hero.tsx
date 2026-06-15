@@ -30,10 +30,10 @@ interface LandingHeroProps {
   demoVariant?: DemoVariant;
   /** Hide the demo button on mobile (homepage). */
   demoHideMobile?: boolean;
-  /** Secondary CTA — a plain anchor (e.g. "#features"). */
-  secondaryLabel: string;
-  secondaryHref: string;
-  secondaryTrack: string;
+  /** Secondary CTA — a plain anchor (e.g. "#features"). Omit to hide it. */
+  secondaryLabel?: string;
+  secondaryHref?: string;
+  secondaryTrack?: string;
   /** Hide the secondary CTA on mobile (feature pages). */
   secondaryHideMobile?: boolean;
   /** Push the secondary CTA to the right edge on desktop (feature pages). */
@@ -160,13 +160,15 @@ export function LandingHero({
               className={`h-11 px-6 !text-base !font-semibold !text-white !bg-white/10 hover:!bg-white/20 backdrop-blur !border-white/30 ${demoHideMobile ? "!hidden sm:!inline-flex" : ""}`}
             />
           ) : null}
-          <a
-            href={secondaryHref}
-            onClick={() => analytics.track(secondaryTrack)}
-            className={`inline-flex items-center justify-center h-11 px-6 text-base font-semibold text-white bg-white/10 hover:bg-white/20 backdrop-blur border border-white/30 rounded-lg transition-colors whitespace-nowrap ${secondaryHideMobile ? "hidden sm:inline-flex" : ""} ${secondaryPinRight ? "sm:ml-auto" : ""}`}
-          >
-            {secondaryLabel}
-          </a>
+          {secondaryLabel ? (
+            <a
+              href={secondaryHref}
+              onClick={() => secondaryTrack && analytics.track(secondaryTrack)}
+              className={`inline-flex items-center justify-center h-11 px-6 text-base font-semibold text-white bg-white/10 hover:bg-white/20 backdrop-blur border border-white/30 rounded-lg transition-colors whitespace-nowrap ${secondaryHideMobile ? "hidden sm:inline-flex" : ""} ${secondaryPinRight ? "sm:ml-auto" : ""}`}
+            >
+              {secondaryLabel}
+            </a>
+          ) : null}
         </div>
 
         {microcopy ? <p className={`mt-4 text-sm text-white/65 ${centered ? "text-center" : ""}`}>{microcopy}</p> : null}
