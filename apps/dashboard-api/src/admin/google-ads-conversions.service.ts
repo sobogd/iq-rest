@@ -179,10 +179,12 @@ export class GoogleAdsConversionsService {
       WITH ev AS (
         SELECT ue.*,
                COALESCE(ue."manualRestaurantId", ue."restaurantId", ue."stitchedRestaurantId", ru."restaurantId") AS eff_rid,
-               COALESCE(
-                 ue.gclid,
-                 regexp_replace(ue.event, '^(l_param_gclid__|l_gclid_)', '')
-               ) FILTER (WHERE ue.gclid IS NOT NULL OR ue.event LIKE 'l_gclid_%' OR ue.event LIKE 'l_param_gclid__%') AS any_gclid
+               CASE
+                 WHEN ue.gclid IS NOT NULL THEN ue.gclid
+                 WHEN ue.event LIKE 'l_gclid_%' OR ue.event LIKE 'l_param_gclid__%'
+                   THEN regexp_replace(ue.event, '^(l_param_gclid__|l_gclid_)', '')
+                 ELSE NULL
+               END AS any_gclid
         FROM usage_events ue
         LEFT JOIN LATERAL (
           SELECT "restaurantId" FROM restaurant_users
