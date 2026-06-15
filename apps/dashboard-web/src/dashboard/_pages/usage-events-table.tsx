@@ -44,30 +44,19 @@ function fbStageTitle(stage: SessionRow["fbStage"]): string {
       return "Send a Meta CAPI event";
   }
 }
-// Predicted dot — solid fill in the funnel colour the FB/Google chip WILL take
-// once the cron uploads, i.e. the deepest milestone the session has reached.
-function predictedDotClass(stage: SessionRow["predictedStage"]): string {
+// Funnel depth for the always-3-dots progress indicator: view=1, checkout=2,
+// reg=3 (0 = nothing reached). Dots light up cumulatively up to this depth and
+// in the same colour the FB/Google chip will take once the cron uploads.
+function stageRank(stage: SessionRow["predictedStage"]): number {
   switch (stage) {
     case "reg":
-      return "bg-pink-500";
+      return 3;
     case "checkout":
-      return "bg-amber-500";
+      return 2;
     case "view":
-      return "bg-emerald-500";
+      return 1;
     default:
-      return "";
-  }
-}
-function predictedDotTitle(stage: SessionRow["predictedStage"]): string {
-  switch (stage) {
-    case "reg":
-      return "Will upload: CompleteRegistration";
-    case "checkout":
-      return "Will upload: InitiateCheckout";
-    case "view":
-      return "Will upload: ViewContent";
-    default:
-      return "";
+      return 0;
   }
 }
 // Google Ads chip — same funnel colours as FB, coloured by the deepest offline
@@ -334,15 +323,22 @@ function SessionItem({
       </span>
 
       <span className="shrink-0 flex items-center gap-2">
-        {s.predictedStage ? (
-          // One dot in the funnel colour the FB/Google chip will become after the
-          // cron uploads (deepest milestone reached): view=emerald, checkout=amber
-          // (incl. demo), registration=pink.
-          <span
-            className={"w-[6px] h-[6px] rounded-full shrink-0 " + predictedDotClass(s.predictedStage)}
-            title={predictedDotTitle(s.predictedStage)}
-          />
-        ) : null}
+        {/* Always 3 dots (view, checkout, reg). Grey by default; each lights up
+            cumulatively up to the deepest milestone the session reached — same
+            colours the FB/Google chip will take after the cron uploads. */}
+        <span className="shrink-0 flex items-center gap-0.5">
+          {(() => {
+            const r = stageRank(s.predictedStage);
+            const off = "bg-muted-foreground/25";
+            return (
+              <>
+                <span className={"w-[5px] h-[5px] rounded-full " + (r >= 1 ? "bg-emerald-500" : off)} title="ViewContent" />
+                <span className={"w-[5px] h-[5px] rounded-full " + (r >= 2 ? "bg-amber-500" : off)} title="InitiateCheckout" />
+                <span className={"w-[5px] h-[5px] rounded-full " + (r >= 3 ? "bg-pink-500" : off)} title="CompleteRegistration" />
+              </>
+            );
+          })()}
+        </span>
         {s.latestGclid ? (
           <span
             className={"text-[10px] rounded px-1.5 py-0.5 shrink-0 " + fbStageClass(s.googleStage)}
