@@ -30,7 +30,7 @@ export interface SessionRow {
   fbStage?: "reg" | "checkout" | "view" | null; // deepest CAPI event sent for latestFbclid
   latestGclid?: string | null; // newest gclid in the group (for Google Ads upload)
   googleStage?: "reg" | "checkout" | "view" | null; // deepest Google Ads event uploaded for latestGclid
-  predictedStage?: "reg" | "checkout" | "view" | null; // deepest milestone reached = chip colour the cron WILL produce
+  willCheckout?: boolean; // session will upload InitiateCheckout (clicked create OR demo collapse)
   userLabel: string | null;
   restaurantLabel?: string | null; // LEGACY (kind "r"); user sessions show email
 }

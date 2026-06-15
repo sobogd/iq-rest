@@ -815,18 +815,6 @@ export class AdminController {
       sessions: rows.map((r) => {
         const latestFbclid = r.last_fbclid_event ? r.last_fbclid_event.replace(/^(l_param_fbclid__|l_fbclid_)/, "") : null;
         const isDemo = r.uid ? demoSet.has(r.uid) : false;
-        // Predicted chip colour: the deepest milestone the session reached, i.e.
-        // what the FB/Google cron WILL upload (before it has run). Mirrors the
-        // cron's milestone→event mapping incl. the demo collapse (demo dashboard
-        // activity → InitiateCheckout, not registration).
-        const predictedStage: "reg" | "checkout" | "view" | null =
-          r.has_registered && !isDemo
-            ? "reg"
-            : (r.has_registered && isDemo) || r.has_lead
-              ? "checkout"
-              : r.has_content
-                ? "view"
-                : null;
         return {
           kind: r.kind,
           uid: r.uid,
@@ -853,7 +841,11 @@ export class AdminController {
           fbStage: fbStageOf(latestFbclid),
           latestGclid: r.latest_gclid,
           googleStage: googleStageOf(r.latest_gclid),
-          predictedStage,
+          // Per-event flags = exactly what the cron WILL upload, independently
+          // (not cumulative). view = hasContent, reg = hasRegistered (already
+          // demo-excluded above); checkout also covers the demo collapse (a demo
+          // account's dashboard activity uploads as InitiateCheckout).
+          willCheckout: r.has_lead || (isDemo && r.has_registered),
           userLabel: r.uid ? labels.email(r.uid) : null,
         };
       }),

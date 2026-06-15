@@ -44,21 +44,6 @@ function fbStageTitle(stage: SessionRow["fbStage"]): string {
       return "Send a Meta CAPI event";
   }
 }
-// Funnel depth for the always-3-dots progress indicator: view=1, checkout=2,
-// reg=3 (0 = nothing reached). Dots light up cumulatively up to this depth and
-// in the same colour the FB/Google chip will take once the cron uploads.
-function stageRank(stage: SessionRow["predictedStage"]): number {
-  switch (stage) {
-    case "reg":
-      return 3;
-    case "checkout":
-      return 2;
-    case "view":
-      return 1;
-    default:
-      return 0;
-  }
-}
 // Google Ads chip — same funnel colours as FB, coloured by the deepest offline
 // conversion already uploaded for the session's gclid (auto-sent by the cron).
 function googleStageTitle(stage: SessionRow["googleStage"]): string {
@@ -324,20 +309,13 @@ function SessionItem({
 
       <span className="shrink-0 flex items-center gap-2">
         {/* Always 3 dots (view, checkout, reg). Grey by default; each lights up
-            cumulatively up to the deepest milestone the session reached — same
-            colours the FB/Google chip will take after the cron uploads. */}
+            INDEPENDENTLY iff that exact milestone happened — i.e. 1:1 with what
+            the FB/Google cron will upload. A hole is possible (checkout lit, view
+            grey = onboarding without viewing pricing/demo). */}
         <span className="shrink-0 flex items-center gap-0.5">
-          {(() => {
-            const r = stageRank(s.predictedStage);
-            const off = "bg-muted-foreground/25";
-            return (
-              <>
-                <span className={"w-[5px] h-[5px] rounded-full " + (r >= 1 ? "bg-emerald-500" : off)} title="ViewContent" />
-                <span className={"w-[5px] h-[5px] rounded-full " + (r >= 2 ? "bg-amber-500" : off)} title="InitiateCheckout" />
-                <span className={"w-[5px] h-[5px] rounded-full " + (r >= 3 ? "bg-pink-500" : off)} title="CompleteRegistration" />
-              </>
-            );
-          })()}
+          <span className={"w-[5px] h-[5px] rounded-full " + (s.hasContent ? "bg-emerald-500" : "bg-muted-foreground/25")} title="ViewContent" />
+          <span className={"w-[5px] h-[5px] rounded-full " + (s.willCheckout ? "bg-amber-500" : "bg-muted-foreground/25")} title="InitiateCheckout" />
+          <span className={"w-[5px] h-[5px] rounded-full " + (s.hasRegistered ? "bg-pink-500" : "bg-muted-foreground/25")} title="CompleteRegistration" />
         </span>
         {s.latestGclid ? (
           <span
