@@ -5,6 +5,7 @@ import { CRO } from "./cro";
 import { restaurantCount } from "@/lib/restaurant-count";
 import { homeAlternates } from "@/lib/hreflang";
 import { SCHEMA_PRICE_BASIC_EUR } from "@/lib/pricing";
+import { SCHEMA_DATE_MODIFIED } from "@/lib/page-meta";
 
 export const dynamic = "force-static";
 export const revalidate = false;
@@ -35,6 +36,7 @@ const JSON_LD = JSON.stringify({
       description: "Платформа управления рестораном: цифровое меню, QR-заказы, бронирование столов и кухонный дисплей. Запуск за 5 минут.",
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web, iOS, Android",
+      dateModified: SCHEMA_DATE_MODIFIED,
       url: `${SITE}/${LOCALE}`,
       inLanguage: LOCALE,
       publisher: { "@id": `${SITE}/#organization` },
@@ -44,6 +46,14 @@ const JSON_LD = JSON.stringify({
         priceCurrency: "EUR",
         availability: "https://schema.org/InStock",
       },
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: TEXTS.faq.items.map((it) => ({
+        "@type": "Question",
+        name: it.q,
+        acceptedAnswer: { "@type": "Answer", text: it.a },
+      })),
     },
   ],
 }).replace(/</g, "\\u003c");

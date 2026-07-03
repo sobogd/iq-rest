@@ -5,6 +5,7 @@ import { CRO } from "./cro";
 import { restaurantCount } from "@/lib/restaurant-count";
 import { homeAlternates } from "@/lib/hreflang";
 import { SCHEMA_PRICE_BASIC_EUR } from "@/lib/pricing";
+import { SCHEMA_DATE_MODIFIED } from "@/lib/page-meta";
 
 // Static like the rest of the marketing site. The restaurant counter is
 // computed at build time and refreshes on each deploy.
@@ -25,10 +26,19 @@ const JSON_LD = JSON.stringify({
       description: "Restaurant management platform: digital menu, QR ordering, table booking and kitchen display. Launch in 5 minutes.",
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web, iOS, Android",
+      dateModified: SCHEMA_DATE_MODIFIED,
       url: `${SITE}/`,
       inLanguage: LOCALE,
       publisher: { "@id": `${SITE}/#organization` },
       offers: { "@type": "Offer", price: SCHEMA_PRICE_BASIC_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock" },
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: TEXTS.faq.items.map((it) => ({
+        "@type": "Question",
+        name: it.q,
+        acceptedAnswer: { "@type": "Answer", text: it.a },
+      })),
     },
   ],
 }).replace(/</g, "\\u003c");

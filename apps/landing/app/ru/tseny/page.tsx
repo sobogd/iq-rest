@@ -3,6 +3,7 @@ import { PricingTemplate } from "@/app/_landing/templates/pricing-template";
 import { TEXTS as DEFAULT } from "../texts";
 import { TEXTS } from "./texts";
 import { SCHEMA_PRICE_BASIC_EUR, SCHEMA_PRICE_PRO_EUR } from "@/lib/pricing";
+import { SCHEMA_DATE_MODIFIED } from "@/lib/page-meta";
 
 export const dynamic = "force-static";
 export const revalidate = false;
@@ -101,6 +102,7 @@ const JSON_LD = JSON.stringify({
       "@type": "Product",
       name: "IQ Rest",
       description: TEXTS.meta.description,
+      dateModified: SCHEMA_DATE_MODIFIED,
       brand: { "@type": "Brand", name: "IQ Rest" },
       offers: [
         {

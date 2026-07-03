@@ -8,6 +8,11 @@ export type PageMeta = {
   priority: number;
 };
 
+// Last content-review date, published as `dateModified` in the marketing
+// JSON-LD (freshness signal for AI answer engines / search). Bump when the
+// on-page copy or offer is materially revised.
+export const SCHEMA_DATE_MODIFIED = "2026-07-03";
+
 // Home page meta (per-locale `/`).
 export const HOME_META: PageMeta = {
   lastModified: "2026-05-20",

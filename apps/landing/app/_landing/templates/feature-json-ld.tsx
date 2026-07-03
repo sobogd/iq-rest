@@ -1,5 +1,6 @@
 import type { FeatureContent } from "./types";
 import { SCHEMA_PRICE_BASIC_EUR } from "@/lib/pricing";
+import { SCHEMA_DATE_MODIFIED } from "@/lib/page-meta";
 
 const SITE = "https://iq-rest.com";
 
@@ -33,6 +34,7 @@ export function FeatureJsonLd({ content }: { content: FeatureContent }) {
         description: content.meta.description,
         applicationCategory: "BusinessApplication",
         operatingSystem: "Web, iOS, Android",
+        dateModified: SCHEMA_DATE_MODIFIED,
         url: pagePath,
         inLanguage,
         publisher: { "@id": `${SITE}/#organization` },

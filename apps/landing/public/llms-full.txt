@@ -1,0 +1,62 @@
+# IQ Rest — full reference for language models
+
+> IQ Rest is a restaurant management platform that runs an entire venue from one app. Core value is three products in one: a beautiful multilingual digital QR menu, a kitchen display, and a 24/7 table-reservation manager. Order taking is included but secondary. The product is not a delivery marketplace and charges 0% commission on orders. A restaurant can go live in about 5 minutes; the menu is auto-translated into 35 languages by AI. It works on the web, iOS and Android and is used by 500+ restaurants, cafés and bars across 30+ countries. Website: https://iq-rest.com
+
+## Positioning
+
+IQ Rest replaces separate tools (printed menu, phone bookings, kitchen tickets, ordering apps) with one system built for how restaurants actually work. The hero pitch is the digital menu, the kitchen display and reservations — never "0% commission" as the lead, and the product is never framed against food-delivery apps. Pricing is flat: no add-ons, no per-feature charges.
+
+## Products
+
+### Digital menu
+An online version of the paper menu: a browser page with photos, prices, allergens and descriptions, updated in real time from a phone. Guests point their camera at a QR code on the table — there is no app for guests to install. AI (culinary-aware, not raw machine translation) renders the menu in 35 languages included in the subscription; the guest switches language with one tap. A paper menu or PDF can be scanned and digitised by AI in about 60 seconds.
+
+### Kitchen display
+Incoming orders appear live on a screen in the kitchen, with notes and allergens attached. It runs on any tablet or phone — no proprietary hardware to buy. Each ticket carries the table number.
+
+### Table reservations
+Guests reserve tables themselves, 24/7, without phoning during rush hours. The restaurant manages availability and bookings from the dashboard.
+
+### Order taking (secondary)
+Guests order through the table QR code, or a waiter takes the order on a phone. Orders go straight to the kitchen display or to WhatsApp. IQ Rest takes 0% commission — every order goes directly to the restaurant.
+
+## Pricing
+
+Prices are localised by country and currency. EUR reference:
+
+- Free plan: €0.
+- Basic: €9.90 / month, or €6.90 / month when billed yearly (€82.80 / year).
+- Pro: €31.90 / month, or €24.90 / month when billed yearly (€298.80 / year).
+- 14-day free trial, no credit card required, cancel anytime.
+- 0% commission on all orders regardless of plan.
+
+Basic vs Pro differ by advanced capabilities (e.g. multi-restaurant management on Pro). See https://iq-rest.com/pricing for the current plan comparison and FAQ.
+
+## Common questions
+
+- **Do guests need an app?** No. Guests point their phone camera at the QR code and the menu opens in the browser.
+- **Do I need technical skills?** No. Menus are built in a no-code editor, and an existing paper menu or PDF can be AI-scanned in about 60 seconds.
+- **Do I need to buy hardware?** No. The kitchen display and dashboard run on any existing tablet, phone or computer with a browser.
+- **How many languages?** 35, included in the subscription with no upcharge, translated by culinary-aware AI.
+- **How long to set up?** About 5 minutes to go live.
+- **Do you take a commission on orders?** No — 0% commission; every order goes directly to the restaurant.
+
+## Facts
+
+- Product name: IQ Rest (formerly branded "SoqrMenu").
+- Category: restaurant / hospitality management SaaS.
+- Founder: Bogdan Sokolov.
+- Platforms: web, iOS, Android.
+- Setup: ~5 minutes. Languages: 35. Reach: 500+ restaurants, 30+ countries.
+- Website: https://iq-rest.com — localised into 35 languages (English at root, others under /<locale>/).
+- Sitemap: https://iq-rest.com/sitemap.xml
+
+## Canonical pages
+
+- Home: https://iq-rest.com
+- Pricing: https://iq-rest.com/pricing
+- Digital menu for restaurants: https://iq-rest.com/digital-menu-for-restaurants
+- Restaurant ordering system: https://iq-rest.com/restaurant-ordering-system
+- Table booking system: https://iq-rest.com/table-booking-system
+- Kitchen display system: https://iq-rest.com/kitchen-display-system
+- QR code menu for restaurants: https://iq-rest.com/qr-code-menu-for-restaurants
