@@ -3,22 +3,15 @@ import { PrismaService } from "../prisma/prisma.service";
 
 export const FREE_AI_IMAGE_QUOTA = 5;
 
-/** A restaurant counts as "paid" — i.e. unlocked for AI image generation
- *  and other paid features — when EITHER:
- *    - it has an ACTIVE non-FREE subscription, OR
- *    - it is inside its 14-day trial window (`trialEndsAt > now`).
- *
- *  Mirrors `DevicesService.assertRestaurantMayUseDevices` so both paid-only
- *  gates treat trial users consistently. */
+/** A restaurant gets UNLIMITED AI image generation only when it has an ACTIVE
+ *  non-FREE (BASIC/PRO) subscription. Trial restaurants do NOT get unlimited
+ *  images — they share the same free quota of `FREE_AI_IMAGE_QUOTA` (5) as FREE
+ *  plans and must upgrade to keep generating past the limit. */
 export function isPaidActive(r: {
   plan: string | null;
   subscriptionStatus: string | null;
-  trialEndsAt?: Date | null;
 }): boolean {
-  const subActive = r.subscriptionStatus === "ACTIVE" && !!r.plan && r.plan !== "FREE";
-  if (subActive) return true;
-  const inTrial = !!r.trialEndsAt && r.trialEndsAt > new Date();
-  return inTrial;
+  return r.subscriptionStatus === "ACTIVE" && !!r.plan && r.plan !== "FREE";
 }
 
 // Atomically reserve a free-quota slot before doing the expensive Gemini call.
@@ -31,7 +24,7 @@ export async function consumeAiImageQuota(
 ): Promise<{ isPaid: boolean }> {
   const restaurant = await prisma.restaurant.findUnique({
     where: { id: restaurantId },
-    select: { plan: true, subscriptionStatus: true, trialEndsAt: true },
+    select: { plan: true, subscriptionStatus: true },
   });
   if (!restaurant) throw new ForbiddenException("Not found");
   if (isPaidActive(restaurant)) return { isPaid: true };
@@ -64,7 +57,6 @@ export async function getAiImageUsage(prisma: PrismaService, restaurantId: strin
       imageGenerationsUsed: true,
       plan: true,
       subscriptionStatus: true,
-      trialEndsAt: true,
     },
   });
   const paid = restaurant ? isPaidActive(restaurant) : false;

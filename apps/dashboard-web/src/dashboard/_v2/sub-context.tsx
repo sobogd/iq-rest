@@ -30,14 +30,11 @@ export type AiImageAccess =
 
 export function useAiImageAccess(): AiImageAccess {
   const sub = useSub();
-  // Mirror backend `isPaidActive` (ai-quota.ts): a restaurant is unlocked when it
-  // has an ACTIVE non-FREE subscription OR is inside its 14-day trial window.
-  // Without the trial check the UI showed "5/5 exhausted" while the backend still
-  // generated unlimited images for trial users.
-  const subActive =
+  // Only an ACTIVE non-FREE subscription unlocks unlimited AI images. Trial and
+  // FREE restaurants share the free quota of 5 — mirror backend `isPaidActive`.
+  const isPaid =
     !!sub && sub.subscriptionStatus === "ACTIVE" && !!sub.plan && sub.plan !== "FREE";
-  const inTrial = !!sub?.trialEndsAt && new Date(sub.trialEndsAt) > new Date();
-  if (subActive || inTrial) return { kind: "unlimited" };
+  if (isPaid) return { kind: "unlimited" };
   const used = sub?.aiImagesUsed ?? 0;
   const limit = sub?.aiImagesLimit ?? 5;
   const remaining = Math.max(0, limit - used);
