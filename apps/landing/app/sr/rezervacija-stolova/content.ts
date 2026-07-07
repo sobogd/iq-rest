@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Rezervacija stolova 24/7 — gosti rezervišu sami.",
+    headline: "Digitalna rezervacija stolova 24/7",
     cta: "Подеси резервације столова",
     sub: "Gosti rezervišu stolove preko QR menija ili direktnog linka. Kalendar po stolu, automatske potvrde i podsetnici. Nijedan izgubljen gost i bez poziva u vrhuncu.",
     imageSrc: "/landing/feature-reservation.webp",

@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Kitchen display: orders straight to the chef's screen.",
+    headline: "KDS for Restaurants: Digital Orders",
     cta: "Set Up Kitchen Display",
-    sub: "Paper tickets are no longer needed. Orders from the floor or the QR menu land on the kitchen screen instantly — with notes, allergens and a timer. One tap changes the status. Works on a tablet at the pass or a smartphone in the chef's pocket.",
+    sub: "IQ Rest's Kitchen Display System (KDS) eliminates paper tickets. Orders from QR menus instantly hit screens with notes, allergens & a timer. One tap changes status.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Professional kitchen with a tablet on a brass stand showing the kitchen display with active orders",
   },

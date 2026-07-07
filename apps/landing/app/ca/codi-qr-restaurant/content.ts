@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Codi QR per a restaurants.",
+    headline: "Restaurant digital amb codi QR",
     cta: "Crear menú QR",
-    sub: "El client enfoca el codi QR de la taula i la carta s'obre a l'instant al navegador del mòbil: fotos dels plats, al·lèrgens, preus sempre al dia i traducció automàtica a 35 idiomes. Sense instal·lar aplicacions, sense reimprimir cartes cada vegada que canvia un preu.",
+    sub: "Amb el codi QR d'IQ Rest, els clients accedeixen a la carta digital al mòbil: fotos, al·lèrgens, preus actualitzats i traducció automàtica. Sense apps ni reimpressions.",
   },
 
   scan: {

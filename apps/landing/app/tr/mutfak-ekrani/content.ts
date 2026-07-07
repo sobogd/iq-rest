@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Mutfak ekranı: siparişler doğrudan aşçının ekranına.",
+    headline: "Dijital Mutfak Ekranı (KDS)",
     cta: "Mutfak ekranını kur",
-    sub: "Kağıt fişlere artık gerek yok. Salondan veya QR menüden gelen siparişler anında mutfak ekranına düşer — notlar, alerjenler ve zamanlayıcı ile. Tek dokunuş durumu değiştirir. Passteki tablette veya aşçının cebindeki akıllı telefonda çalışır.",
+    sub: "Kağıt fişlere son! IQ Rest mutfak ekranı (KDS) ile tüm siparişler anında mutfakta. Notlar, alerjenler, zamanlayıcı ve tek dokunuşla durum güncelleme cebinizde.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Aktif siparişlerin olduğu mutfak ekranını gösteren pirinç stand üzerinde tablet bulunan profesyonel mutfak",
   },

@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitālā ēdienkarte restorāniem.",
+    headline: "Viedā digitālā ēdienkarte restorāniem",
     cta: "Izveidot digitālo ēdienkarti",
-    sub: "Papīra ēdienkartes tiešsaistes versija ar fotoattēliem, alergēniem, aprakstiem un reāllaika cenu atjauninājumiem. Viesi redz ēdienkarti savā valodā; restorāns ietaupa uz drukāšanu.",
+    sub: "IQ Rest digitālā ēdienkarte restorāniem: foto, apraksti, alergēni un cenas reāllaikā. Viesi redz ēdienkarti savā valodā, ietaupot uz drukāšanu.",
   },
 
   scan: {

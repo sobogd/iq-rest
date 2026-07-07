@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Pöytävaraus 24/7 — vieraat varaavat itse.",
+    headline: "Digitaalinen pöytävaraus 24/7",
     cta: "Ota pöytävaraukset käyttöön",
-    sub: "Vieraat varaavat pöydät QR-ruokalistan tai suoran linkin kautta. Pöytäkalenteri, automaattiset vahvistukset ja muistutukset. Ei yhtään menetettyä vierasta eikä ruuhka-aikojen puheluita.",
+    sub: "IQ Restin pöytävaraus: vieraat varaavat 24/7 QR-listan tai linkin kautta. Automaattiset vahvistukset ja muistutukset. Ei menetettyjä varauksia ruuhka-aikoina.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Hovimestari hallitsee varauksia tabletista ravintolan sisäänkäynnillä",
   },

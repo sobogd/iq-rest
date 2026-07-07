@@ -15,8 +15,8 @@ import type { CroCopy } from "@/app/_landing/templates/cro-home-template";
 export const CRO: CroCopy = {
   hero: {
     verticals: ["Restoranai","Kavinės","Barai","Picerijos"],
-    title: "Jūsų restoranas,",
-    titleAccent: "skaitmeninis per 5 minutes.",
+    title: "Restoranas skaitmeninis?",
+    titleAccent: "Per 5 min!",
     sub: "Gražus skaitmeninis meniu, virtuvės ekranas ir rezervacijos visą parą — pilna platforma modernam restoranui.",
   },
 

@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "QR-kode meny for restauranter.",
+    headline: "Digitaliser restauranten med QR-meny",
     cta: "Lag QR-meny",
-    sub: "Gjesten retter kameraet mot QR-koden på bordet, og menyen åpnes umiddelbart i telefonens nettleser: bilder av rettene, allergener, alltid oppdaterte priser og automatisk oversettelse til 35 språk. Uten å laste ned apper, og uten å trykke menyen på nytt ved hver prisendring.",
+    sub: "IQ Rest sin QR-kode meny: Gjesten skanner koden, menyen åpnes i nettleseren. Se bilder, allergener og oversettelser. Alltid oppdaterte priser, uten app.",
   },
 
   scan: {

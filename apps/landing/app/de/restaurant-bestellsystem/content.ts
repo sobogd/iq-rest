@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Bestellannahme: Gast und Servicekraft — direkt in die Küche.",
+    headline: "Digitales Bestellsystem fürs Restaurant",
     cta: "Online-Bestellung einrichten",
-    sub: "Gäste bestellen über die QR-Speisekarte am Tisch oder die Servicekraft nimmt die Bestellung vom Smartphone oder Tablet auf — die Bestellung erscheint binnen Sekunden auf dem Küchen-Display. Tischplan mit farblich markierten Tischen, Rechnungsteilung, flexible Optionen und Kommentare. Keine Notizblöcke, kein Hin und Her zur Bar.",
+    sub: "Optimieren Sie Ihr Restaurant-Bestellsystem mit IQ Rest: Gäste bestellen per QR, Servicekräfte mobil. Bestellungen direkt an die Küche – effizient, schnell, fehlerfrei.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Servicekraft nimmt eine Bestellung am Tisch vom Smartphone auf — die Bestellung landet auf dem Küchen-Display",
   },

@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitaal menu voor restaurants.",
+    headline: "Jouw restaurant digitaal: QR menu",
     cta: "Digitaal menu maken",
-    sub: "Online versie van je papieren menu met foto's, allergenen, beschrijvingen en live prijsupdates. Gasten zien het menu in hun eigen taal; het restaurant bespaart op drukwerk.",
+    sub: "Transformeer je restaurant met een digitaal menu: foto's, allergenen, meertalig en live prijsupdates. Bespaar op drukwerk en bied gasten een moderne ervaring.",
   },
 
   scan: {

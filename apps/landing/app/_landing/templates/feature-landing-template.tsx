@@ -4,6 +4,7 @@ import { LandingHeader } from "../components/header";
 import { LandingFooter } from "../components/footer";
 import { LandingHero } from "../components/landing-hero";
 import { Section } from "../components/section";
+import { HeroStats } from "../components/hero-stats";
 import { PageTracker } from "../components/page-tracker";
 import { ScanSection } from "../components/scan-section";
 import { Founder } from "../components/founder";
@@ -84,32 +85,13 @@ export function FeatureLandingTemplate({
         microcopy={chrome.microcopy}
         imageSrc={hero.imageSrc}
         imageAlt={hero.imageAlt}
-        heightClass="min-h-[32rem] sm:min-h-[36rem] lg:min-h-[40rem]"
+        heightClass=""
         overlayClass="bg-black/25"
         centered
       />
 
-      {/* Trust strip — same four product stats as the homepage, read in a
-          glance just below the fold. Optional per-locale (skipped until the
-          locale's chrome carries `trust`). */}
-      {chrome.trust?.length ? (
-        <Section dataSection="feature_trust" noContainer accent className="!py-8 sm:!py-10">
-          <dl className="grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-6 max-w-5xl mx-auto text-center">
-            {chrome.trust.map((t) => (
-              <div key={t.label} className="flex flex-col items-center">
-                <dt className="text-3xl sm:text-4xl font-medium tracking-tight bg-gradient-to-br from-primary to-amber-400 bg-clip-text text-transparent">
-                  {t.kind === "count"
-                    ? countLabel
-                    : t.kind === "num"
-                      ? `${t.value}${t.suffix ?? ""}`
-                      : t.value}
-                </dt>
-                <dd className="mt-1 text-base text-muted-foreground/80 leading-tight">{t.label}</dd>
-              </div>
-            ))}
-          </dl>
-        </Section>
-      ) : null}
+      {/* Trust strip — shared HeroStats, same four product numbers as the homepage. */}
+      <HeroStats trust={chrome.trust ?? []} countLabel={countLabel} dataSection="feature_trust" />
 
       <div id="features">
       <ScanSection texts={scan} locale={locale} />

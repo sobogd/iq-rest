@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "QR-kode menukort til restauranter.",
+    headline: "Digital menu & bestilling til restauranter",
     cta: "Opret QR-menu",
-    sub: "Gæsten retter kameraet mod QR-koden på bordet, og menuen åbnes med det samme i telefonens browser: billeder af retter, allergener, altid opdaterede priser og automatisk oversættelse til 35 sprog. Uden at downloade apps og uden at genoptrykke menuen ved hver prisændring.",
+    sub: "Gæsten scanner QR-koden, og menukortet åbnes med det samme: billeder, allergener, opdaterede priser og automatisk oversættelse. Ingen apps, ingen genoptryk. Kun IQ Rest.",
   },
 
   scan: {

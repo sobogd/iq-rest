@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Pantalla de cuina: comandes directament a la pantalla del xef.",
+    headline: "KDS: la teva cuina digitalitzada",
     cta: "Configurar pantalla de cuina",
-    sub: "Els tiquets de paper ja no calen. Les comandes de la sala o de la carta QR arriben a l'instant a la pantalla de cuina — amb notes, al·lèrgens i temporitzador. Un toc canvia l'estat. Funciona en una tauleta al pas o en un smartphone a la butxaca del xef.",
+    sub: "La pantalla de cuina (KDS) d'IQ Rest elimina tiquets de paper. Comandes de sala o QR arriben a l'instant, amb notes, al·lèrgens i temporitzador. Gestiona-les amb un toc.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Cuina professional amb una tauleta sobre un suport de llautó mostrant la pantalla de cuina amb comandes actives",
   },

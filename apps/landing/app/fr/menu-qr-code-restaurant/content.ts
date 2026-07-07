@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Menu QR code pour restaurants.",
+    headline: "Menu QR code & restaurant digital",
     cta: "Créer le menu QR",
-    sub: "Le client pointe l'appareil photo sur le QR code de la table et la carte s'ouvre aussitôt dans le navigateur du mobile : photos des plats, allergènes, prix toujours à jour et traduction automatique en 35 langues. Sans application à télécharger, sans réimprimer la carte à chaque changement de prix.",
+    sub: "Avec IQ Rest, votre menu QR code s'ouvre instantanément sur mobile : photos, allergènes, prix à jour, traduction auto (35 langues). Fini les réimpressions coûteuses !",
   },
 
   scan: {

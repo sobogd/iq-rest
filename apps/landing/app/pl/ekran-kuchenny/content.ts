@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Ekran kuchenny: zamówienia bezpośrednio na ekran szefa kuchni.",
+    headline: "KDS: cyfrowe zamówienia na ekranie kuchni",
     cta: "Skonfiguruj ekran kuchenny",
-    sub: "Papierowe rachunki nie są już potrzebne. Zamówienia z sali lub menu QR trafiają natychmiast na ekran kuchenny — z notatkami, alergenami i timerem. Jedno dotknięcie zmienia status. Działa na tablecie przy ladzie wydawczej lub smartfonie w kieszeni szefa kuchni.",
+    sub: "Ekran kuchenny IQ Rest to koniec papieru! Zamówienia z sali lub QR trafiają na KDS z notatkami, alergenami i timerem. Zmieniaj status jednym dotknięciem.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Profesjonalna kuchnia z tabletem na mosiężnym stojaku pokazującym ekran kuchenny z aktywnymi zamówieniami",
   },

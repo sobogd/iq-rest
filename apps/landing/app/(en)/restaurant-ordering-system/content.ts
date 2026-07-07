@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Order taking: guest and waiter — straight to the kitchen.",
+    headline: "Digital Restaurant Ordering: Guest & Staff",
     cta: "Set Up Online Ordering",
-    sub: "Guests order through the QR menu at the table or the waiter takes the order from a phone or tablet — the order lands on the kitchen display in seconds. Floor map with colour-coded tables, bill splitting, flexible options and comments. No notepads, no trips to the bar.",
+    sub: "IQ Rest's restaurant ordering system lets guests order via QR or staff devices. Orders hit the kitchen display instantly. Manage tables, split bills & more.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Waiter takes an order at the table from a smartphone — the order lands on the kitchen display",
   },

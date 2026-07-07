@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "QR matseðill fyrir veitingastaði.",
+    headline: "Stafrænn matseðill og pöntunarkerfi",
     cta: "Búa til QR-matseðil",
-    sub: "Gesturinn beinir myndavélinni að QR-kóðanum á borðinu og matseðillinn opnast samstundis í vafra símans: myndir af réttunum, ofnæmisvaldar, alltaf uppfærð verð og sjálfvirk þýðing á 35 tungumál. Án þess að hlaða niður öppum og án þess að endurprenta matseðilinn í hvert sinn sem verð breytist.",
+    sub: "Gestir skanna QR matseðil með símanum og fá uppfærðan matseðil með myndum, ofnæmisvöldum og þýðingum. Engin app, engin endurprentun. IQ Rest.",
   },
 
   scan: {

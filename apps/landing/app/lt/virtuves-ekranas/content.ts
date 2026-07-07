@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Virtuvės ekranas: užsakymai tiesiai į virėjo ekraną.",
+    headline: "KDS ekranas: skaitmeninė virtuvė",
     cta: "Nustatyti virtuvės ekraną",
-    sub: "Popieriniai kvitai nebereikalingi. Užsakymai iš salės ar QR meniu iškart pasiekia virtuvės ekraną — su pastabomis, alergenais ir laikmačiu. Vienas bakstelėjimas keičia būseną. Veikia planšetėje prie išdavimo lango ar išmaniajame telefone virėjo kišenėje.",
+    sub: "Pamirškite popierinius kvitus. IQ Rest virtuvės ekranas rodo užsakymus iš salės ar QR meniu su pastabomis, alergenais ir laikmačiu. Keiskite būseną vienu paspaudimu.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Profesionali virtuvė su planšetė ant žalvarinio stovo, rodančia virtuvės ekraną su aktyviais užsakymais",
   },

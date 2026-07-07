@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitálne menu pre reštaurácie.",
+    headline: "Reštaurácia digitálne: menu, objednávky",
     cta: "Vytvoriť digitálne menu",
-    sub: "Online verzia vášho papierového menu s fotografiami, alergénmi, popismi a okamžitými aktualizáciami cien. Hostia vidia menu vo svojom vlastnom jazyku; reštaurácia šetrí na tlači.",
+    sub: "IQ Rest: moderné digitálne menu pre reštaurácie. Hostia skenujú QR, vidia foto, alergény, preklady. Šetrite na tlači, aktualizujte ceny ihneď.",
   },
 
   scan: {

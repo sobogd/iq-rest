@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "7/24 masa rezervasyonu — misafirler kendileri rezerve eder.",
+    headline: "Dijital 7/24 Masa Rezervasyonu",
     cta: "Masa rezervasyonunu kur",
-    sub: "Misafirler QR menü veya doğrudan bir bağlantı üzerinden masa rezerve eder. Masaya göre takvim, otomatik onaylar ve hatırlatmalar. Tek bir misafir bile kaçmıyor ve yoğun saatlerde telefon yok.",
+    sub: "Misafirler QR menü veya bağlantı üzerinden masa rezerve eder. Masaya göre takvim, otomatik onay ve hatırlatmalar. Yoğun saatlerde telefon yok, tek misafir kaçmaz.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Hostes restoran girişindeki tabletten rezervasyonları yönetiyor",
   },

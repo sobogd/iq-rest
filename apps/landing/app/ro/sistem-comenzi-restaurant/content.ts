@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Preluare comenzi: oaspete și ospătar — direct în bucătărie.",
+    headline: "Comenzi Digitale la Masă pentru Restaurant",
     cta: "Configurează comenzile online",
-    sub: "Oaspeții comandă prin meniul QR la masă sau ospătarul preia comanda de pe telefon sau tabletă — comanda ajunge pe display-ul bucătăriei în câteva secunde. Plan sală cu mese colorate, împărțire notă, opțiuni flexibile și comentarii. Fără carnețele, fără drumuri la bar.",
+    sub: "IQ Rest: sistem de comenzi restaurant. Clienții comandă prin meniul QR la masă, sau ospătarul preia pe tabletă. Comanda ajunge instant în bucătărie. Gata cu carnețelele!",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Ospătar preia o comandă la masă de pe un smartphone — comanda ajunge pe display-ul bucătăriei",
   },

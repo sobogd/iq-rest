@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Kuhinjski ekran: narudžbe izravno na ekran kuhara.",
+    headline: "Kuhinjski KDS za digitalni restoran",
     cta: "Postavi kuhinjski zaslon",
-    sub: "Papirnati računi više nisu potrebni. Narudžbe iz sale ili QR jelovnika odmah stižu na kuhinjski ekran — s napomenama, alergenima i mjeračem vremena. Jedan dodir mijenja status. Radi na tabletu na šanku za izdavanje ili na smartphoneu u džepu kuhara.",
+    sub: "IQ Rest kuhinjski ekran (KDS) eliminira papir: narudžbe s napomenama i alergenima stižu odmah. Jedan dodir mijenja status. Radi na tabletu ili smartphoneu.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Profesionalna kuhinja s tabletom na mjedenom stalku koji prikazuje kuhinjski ekran s aktivnim narudžbama",
   },

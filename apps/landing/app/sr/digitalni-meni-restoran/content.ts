@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitalni meni za restorane.",
+    headline: "Digitalizujte restoran: Meni i više",
     cta: "Направи дигитални мени",
-    sub: "Onlajn verzija vašeg papirnog menija sa fotografijama, alergenima, opisima i ažuriranjima cena u realnom vremenu. Gosti vide meni na svom jeziku; restoran štedi na štampi.",
+    sub: "Unapredite poslovanje uz IQ Rest digitalni meni: online verzija sa slikama, alergenima i automatskim ažuriranjem cena. Gosti biraju jezik, vi štedite na štampi.",
   },
 
   scan: {

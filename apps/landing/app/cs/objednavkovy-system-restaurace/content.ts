@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Příjem objednávek: host a číšník — rovnou do kuchyně.",
+    headline: "Digitální restaurace: Objednávky u stolu",
     cta: "Nastavit online objednávky",
-    sub: "Hosté objednávají přes QR menu u stolu nebo číšník přijímá objednávku z telefonu či tabletu — objednávka dorazí na kuchyňský displej během několika sekund. Plán sálu s barevně označenými stoly, dělení účtu, flexibilní varianty a poznámky. Žádné bloky, žádné cesty k baru.",
+    sub: "IQ Rest: Objednávkový systém pro restauraci. Hosté objednávají přes QR menu u stolu nebo číšník mobilem. Objednávka je hned na kuchyňském displeji, bez zdržení.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Číšník přijímá objednávku u stolu ze smartphonu — objednávka dorazí na kuchyňský displej",
   },

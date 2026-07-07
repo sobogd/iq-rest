@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Konyhai kijelző: rendelések közvetlenül a séf képernyőjére.",
+    headline: "Konyhai kijelző: digitális rendeléskezelés",
     cta: "Konyhai kijelző beállítása",
-    sub: "A papír blokkok már nem szükségesek. A teremből vagy QR étlapról érkező rendelések azonnal a konyhai képernyőre kerülnek — megjegyzésekkel, allergénekkel és időzítővel. Egy érintés megváltoztatja az állapotot. Működik táblagépen a tálalópulton vagy okostelefonon a séf zsebében.",
+    sub: "Az IQ Rest konyhai kijelző (KDS) azonnal megjeleníti a rendeléseket. Nincs több papír! Érintéssel változtatható státusz, időzítő, allergének. Tableten vagy okostelefonon is.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Professzionális konyha sárgaréz állványon lévő táblagéppel, amely a konyhai kijelzőt mutatja aktív rendelésekkel",
   },

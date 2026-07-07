@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitalt menukort til restauranter.",
+    headline: "Dit menukort digitalt: Mere end en menu",
     cta: "Opret digital menu",
-    sub: "Onlineversion af dit papirmenukort med billeder, allergener, beskrivelser og opdateringer af priser i realtid. Gæsterne ser menuen på deres eget sprog; restauranten sparer på tryk.",
+    sub: "Forvandl dit papirmenukort til et digitalt menukort med billeder, allergener og realtidsopdateringer. Gæsterne ser menuen på eget sprog, og du sparer trykomkostninger.",
   },
 
   scan: {

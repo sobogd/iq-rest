@@ -21,7 +21,7 @@ export const CONTENT: FeatureContent = {
   hero: {
     headline: "Digitális étlap éttermeknek.",
     cta: "Digitális menü létrehozása",
-    sub: "A papír étlap online változata fotókkal, allergénekkel, leírásokkal és valós idejű árfrissítésekkel. A vendégek a saját nyelvükön látják az étlapot; az étterem spórol a nyomtatáson.",
+    sub: "Az IQ Rest digitális étlapja fotókkal, allergénekkel, valós idejű árakkal. Spóroljon a nyomtatáson, tegye elérhetővé az étlapot több nyelven, és frissítse azonnal!",
   },
 
   scan: {

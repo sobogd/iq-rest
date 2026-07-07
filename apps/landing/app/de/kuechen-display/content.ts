@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Küchen-Display: Bestellungen direkt auf den Bildschirm des Kochs.",
+    headline: "Küchen-Display: Digitale Bestellungen",
     cta: "Küchendisplay einrichten",
-    sub: "Papierbons sind nicht mehr nötig. Bestellungen aus dem Service oder der QR-Speisekarte landen sofort auf dem Küchen-Bildschirm — mit Notizen, Allergenen und Timer. Ein Tipp ändert den Status. Funktioniert auf einem Tablet am Pass oder einem Smartphone in der Kochjacke.",
+    sub: "Nie mehr Papierbons! Bestellungen von Service oder QR-Speisekarte landen sofort auf Ihrem IQ Rest Küchen-Display – mit Notizen, Allergenen & Timer. Status per Tipp.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Profiküche mit einem Tablet auf einem Messingständer, das das Küchen-Display mit aktiven Bestellungen zeigt",
   },

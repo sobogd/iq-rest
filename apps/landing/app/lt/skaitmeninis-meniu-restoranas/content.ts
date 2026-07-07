@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Skaitmeninis meniu restoranams.",
+    headline: "Restoranas skaitmenizuotas: meniu ir kt.",
     cta: "Sukurti skaitmeninį meniu",
-    sub: "Popierinio meniu internetinė versija su nuotraukomis, alergenais, aprašymais ir realaus laiko kainų atnaujinimais. Svečiai mato meniu savo kalba; restoranas taupo spausdinimui.",
+    sub: "IQ Rest skaitmeninis meniu: atnaujinkite kainas realiu laiku, rodykite alergenus, nuotraukas. Svečiai mato meniu savo kalba, o jūs taupote spausdinimui.",
   },
 
   scan: {

@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Carta digital para restaurantes.",
+    headline: "Carta Digital para tu Restaurante",
     cta: "Crear menú digital",
-    sub: "Versión online de la carta en papel con fotos, alérgenos, descripciones y actualización de precios en tiempo real. Los comensales ven la carta en su propio idioma; el restaurante ahorra en impresión.",
+    sub: "Actualiza tu carta digital al instante con fotos, alérgenos y precios. Tus comensales la verán en su idioma, ahorrándote costes de impresión. Con IQ Rest.",
   },
 
   scan: {

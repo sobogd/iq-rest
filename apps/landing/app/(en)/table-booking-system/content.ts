@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Table booking 24/7 — guests reserve themselves.",
+    headline: "Digital Table Booking 24/7",
     cta: "Set Up Table Booking",
     sub: "Guests book tables through the QR menu or a direct link. Calendar by table, automatic confirmations and reminders. Not a single missed guest and no rush-hour phone calls.",
     imageSrc: "/landing/feature-reservation.webp",

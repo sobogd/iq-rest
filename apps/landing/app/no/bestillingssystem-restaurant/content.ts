@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Bestillingsmottak: gjest og kelner — direkte til kjøkkenet.",
+    headline: "Digitalt bestillingssystem for restaurant",
     cta: "Sett opp nettbestilling",
-    sub: "Gjester bestiller via QR-menyen ved bordet eller kelneren tar bestillingen fra en telefon eller nettbrett — bestillingen lander på kjøkkenskjermen på sekunder. Salongplan med fargekodede bord, regningsdeling, fleksible alternativer og kommentarer. Ingen notisblokker, ingen turer til baren.",
+    sub: "IQ Rest sitt bestillingssystem effektiviserer driften: gjester bestiller via QR-meny, eller kelner tar ordre fra nettbrett. Bestillinger sendes direkte til kjøkkenet.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Kelner tar en bestilling ved bordet fra en smarttelefon — bestillingen lander på kjøkkenskjermen",
   },

@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Borðabókun 24/7 — gestir bóka sjálfir.",
+    headline: "Stafræn borðabókun 24/7",
     cta: "Setja upp borðabókanir",
     sub: "Gestir bóka borð í gegnum QR matseðil eða beinan tengil. Dagatal eftir borði, sjálfvirk staðfesting og áminningar. Ekki einn glataður gestur og engin símtöl á álagstímum.",
     imageSrc: "/landing/feature-reservation.webp",

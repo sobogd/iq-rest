@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Receção de pedidos: cliente e empregado — diretamente para a cozinha.",
+    headline: "Pedidos Digitais no Seu Restaurante",
     cta: "Configurar pedidos online",
-    sub: "Os clientes pedem através do menu QR à mesa ou o empregado recebe o pedido a partir de telemóvel ou tablet — o pedido chega ao ecrã de cozinha em segundos. Planta da sala com mesas coloridas, divisão de conta, opções flexíveis e comentários. Sem blocos de notas, sem idas ao bar.",
+    sub: "Os clientes pedem pelo menu QR ou o empregado pelo telemóvel; o pedido chega à cozinha em segundos. Planta da sala, divisão de conta, opções e comentários.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Empregado recebe um pedido à mesa a partir de um smartphone — o pedido chega ao ecrã de cozinha",
   },

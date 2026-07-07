@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Meniu digital pentru restaurante.",
+    headline: "Digitalizează-ți restaurantul cu un meniu",
     cta: "Creează meniul digital",
-    sub: "Versiune online a meniului dumneavoastră pe hârtie cu fotografii, alergeni, descrieri și actualizări de prețuri în timp real. Oaspeții văd meniul în propria lor limbă; restaurantul economisește la tipărire.",
+    sub: "Digitalizează-ți meniul clasic cu IQ Rest: fotografii, alergeni și actualizări în timp real. Economisești la tipărire, iar oaspeții văd meniul digital în limba lor.",
   },
 
   scan: {

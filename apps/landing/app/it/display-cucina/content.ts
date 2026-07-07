@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Display di cucina: gli ordini direttamente sullo schermo dello chef.",
+    headline: "KDS: la cucina digitale del tuo ristorante",
     cta: "Configura il monitor di cucina",
-    sub: "Addio scontrini di carta. Gli ordini dalla sala o dal menu QR arrivano subito sul display di cucina — con note, allergeni e timer. Un tocco cambia lo stato. Funziona sia su un tablet al pass sia sullo smartphone del responsabile di cucina.",
+    sub: "Addio scontrini di carta! Gli ordini da sala o menu QR arrivano sul tuo display di cucina (KDS) con note, allergeni e timer. Gestisci tutto con un tocco.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Cucina professionale con un tablet su supporto in ottone che mostra il display di cucina con gli ordini attivi",
   },

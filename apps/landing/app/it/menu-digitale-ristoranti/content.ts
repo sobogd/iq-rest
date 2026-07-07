@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Menu digitale per ristoranti.",
+    headline: "Ristorante Digitale: Menu, Ordini, Prenota",
     cta: "Crea il menù digitale",
-    sub: "Versione online del menu cartaceo con foto, allergeni, descrizioni e aggiornamento dei prezzi in tempo reale. Gli ospiti leggono il menu nella loro lingua e il ristorante risparmia sulla stampa.",
+    sub: "Il tuo menù digitale per ristoranti: foto, allergeni e prezzi sempre aggiornati. I clienti ordinano nella loro lingua, tu risparmi sulla stampa e migliori l'esperienza.",
   },
 
   scan: {

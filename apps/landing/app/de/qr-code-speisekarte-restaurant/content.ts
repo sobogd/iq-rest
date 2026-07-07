@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "QR-Code-Speisekarte für Restaurants.",
+    headline: "Digitale Speisekarte für Restaurants",
     cta: "QR-Menü erstellen",
-    sub: "Der Gast richtet die Kamera auf den QR-Code am Tisch und die Speisekarte öffnet sich sofort im Handy-Browser: Gerichtsfotos, Allergene, stets aktuelle Preise und automatische Übersetzung in 35 Sprachen. Keine App-Downloads, kein Nachdrucken der Karte bei jeder Preisänderung.",
+    sub: "Ihre digitale QR-Code-Speisekarte von IQ Rest: Gäste scannen, sehen Fotos, Allergene, Preise & Übersetzungen (35 Sprachen). Kein App-Download, kein Nachdrucken.",
   },
 
   scan: {

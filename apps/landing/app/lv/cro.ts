@@ -15,8 +15,8 @@ import type { CroCopy } from "@/app/_landing/templates/cro-home-template";
 export const CRO: CroCopy = {
   hero: {
     verticals: ["Restorāni","Kafejnīcas","Bāri","Picērijas"],
-    title: "Jūsu restorāns,",
-    titleAccent: "pilnībā digitāls 5 minūtēs.",
+    title: "Restorāns digitāli",
+    titleAccent: "5 minūtēs.",
     sub: "Skaista digitālā ēdienkarte, virtuves ekrāns un rezervācijas visu diennakti — pilnīga platforma modernam restorānam.",
   },
 

@@ -5,6 +5,7 @@ import { DemoButton, type DemoVariant } from "../components/demo-button";
 import { PageTracker } from "../components/page-tracker";
 import { LandingHeader } from "../components/header";
 import { LandingHero } from "../components/landing-hero";
+import { HeroStats } from "../components/hero-stats";
 import { Section } from "../components/section";
 import { CtaButton } from "../components/cta-button";
 import { PricingHero } from "../components/pricing-hero";
@@ -129,33 +130,14 @@ export function CroHomeTemplate({
         secondaryHref="#bundle"
         secondaryTrack="l_cro_hero_features_click"
         secondaryHideMobile
-        microcopy={cro.heroMicrocopy.replace("{count}", countLabel)}
-        heightClass="min-h-[32rem] sm:min-h-[36rem] lg:min-h-[40rem]"
+        microcopy={texts.microcopy}
+        heightClass=""
         overlayClass="bg-black/25"
         centered
       />
 
-      {/* Trust strip — four numbers, read in a glance, just below the fold. */}
-      <Section dataSection="cro_trust" noContainer accent className="!py-8 sm:!py-10">
-        <dl className="grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-6 max-w-5xl mx-auto text-center">
-          {cro.trust.map((t) => {
-            const statClass =
-              "text-3xl sm:text-4xl font-medium tracking-tight bg-gradient-to-br from-primary to-amber-400 bg-clip-text text-transparent";
-            return (
-              <div key={t.label} className="flex flex-col items-center">
-                <dt className={statClass}>
-                  {t.kind === "count"
-                    ? countLabel
-                    : t.kind === "num"
-                      ? `${t.value}${t.suffix ?? ""}`
-                      : t.value}
-                </dt>
-                <dd className="mt-1 text-base text-muted-foreground/80 leading-tight">{t.label}</dd>
-              </div>
-            );
-          })}
-        </dl>
-      </Section>
+      {/* Trust strip — shared HeroStats, same four product numbers as feature pages. */}
+      <HeroStats trust={texts.trust ?? []} countLabel={countLabel} dataSection="cro_trust" />
 
       {/* Hardware + run-anywhere reassurance — early objection killer. */}
       {cro.platform ? (

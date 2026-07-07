@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "キッチンディスプレイ:注文がシェフの画面に直接。",
+    headline: "IQ Rest KDS: 注文をデジタル管理、調理を効率化",
     cta: "キッチンディスプレイを設定",
     sub: "紙の伝票はもう不要。フロアやQRメニューからの注文がキッチン画面に即座に届きます — 備考、アレルゲン、タイマー付き。ワンタップでステータス変更。パスのタブレットまたはシェフのポケットのスマートフォンで動作。",
     imageSrc: "/landing/feature-kitchen.webp",

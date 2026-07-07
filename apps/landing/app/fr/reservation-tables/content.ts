@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Réservation de tables 24/7 — les clients réservent eux-mêmes.",
+    headline: "Réservation de tables digitale 24/7",
     cta: "Configurer la réservation",
-    sub: "Les clients réservent des tables via le menu QR ou un lien direct. Calendrier par table, confirmations et rappels automatiques. Aucun client manqué et pas d'appels en heure de pointe.",
+    sub: "Optimisez la réservation de tables 24/7 via menu QR ou lien direct. IQ Rest gère confirmations, rappels auto, et réduit les appels en pointe. Zéro client manqué.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Une hôtesse gère les réservations depuis une tablette à l'entrée du restaurant",
   },

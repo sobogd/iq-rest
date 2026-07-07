@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Mottagande av beställningar: gäst och servitör — direkt till köket.",
+    headline: "Digitalt beställningssystem restaurang",
     cta: "Konfigurera onlinebeställning",
-    sub: "Gäster beställer via QR-menyn vid bordet eller servitören tar beställningen från en telefon eller surfplatta — beställningen landar på köksskärmen på några sekunder. Salsplan med färgkodade bord, tudelning av nota, flexibla alternativ och kommentarer. Inga anteckningsblock, inga turer till baren.",
+    sub: "IQ Rest är ett beställningssystem för restaurang där gäster beställer via QR-meny eller servitören tar upp beställningar med surfplatta. Inkl. bordskarta & delad nota.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Servitör tar en beställning vid bordet från en smartphone — beställningen landar på köksskärmen",
   },

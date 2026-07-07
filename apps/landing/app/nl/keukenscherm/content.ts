@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Keukenscherm: bestellingen direct naar het chef-scherm.",
+    headline: "Digitaal Keukenscherm (KDS) voor Chefs",
     cta: "Keukenscherm instellen",
-    sub: "Papieren bonnen zijn niet meer nodig. Bestellingen vanuit de zaal of het QR menu komen direct op het keukenscherm — met notities, allergenen en timer. Eén tik wijzigt de status. Werkt op een tablet bij de doorgeefluik of een smartphone in de zak van de chef.",
+    sub: "Geen papieren bonnen meer! Bestellingen van zaal of QR menu verschijnen direct op het IQ Rest keukenscherm. Met notities, allergenen en timer. Status wijzigen met één tik.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Professionele keuken met een tablet op een messing standaard die het keukenscherm toont met actieve bestellingen",
   },

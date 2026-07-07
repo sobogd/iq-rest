@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Primanje porudžbina: gost i konobar — direktno u kuhinju.",
+    headline: "Digitalno poručivanje u restoranu",
     cta: "Подеси онлајн поруџбине",
-    sub: "Gosti poručuju preko QR menija za stolom ili konobar prima porudžbinu sa telefona ili tableta — porudžbina stiže na kuhinjski ekran za nekoliko sekundi. Plan sale sa stolovima u bojama, podela računa, fleksibilne opcije i komentari. Bez beležnica, bez šetnje do bara.",
+    sub: "IQ Rest sistem porudžbina za restoran: gosti naručuju preko QR menija, konobari telefonom. Porudžbine stižu na kuhinjski ekran uz plan sale i podelu računa.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Konobar prima porudžbinu za stolom sa pametnog telefona — porudžbina stiže na kuhinjski ekran",
   },

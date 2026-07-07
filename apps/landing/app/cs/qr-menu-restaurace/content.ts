@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "QR menu pro restaurace.",
+    headline: "Digitální menu pro restaurace",
     cta: "Vytvořit QR menu",
-    sub: "Host namíří fotoaparát na QR kód na stole a jídelní lístek se okamžitě otevře v prohlížeči telefonu: fotky jídel, alergeny, vždy aktuální ceny a automatický překlad do 35 jazyků. Bez stahování aplikací, bez přetiskování lístku při každé změně ceny.",
+    sub: "IQ Rest QR menu: Hosté skenují a prohlížejí jídelní lístek s fotkami, alergeny a cenami. Automatický překlad do 35 jazyků. Žádné aplikace, žádné přetiskování.",
   },
 
   scan: {

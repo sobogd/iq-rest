@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Tilausten otto: vieras ja tarjoilija — suoraan keittiöön.",
+    headline: "Digitaalinen tilaus ravintolaan",
     cta: "Ota verkkotilaukset käyttöön",
-    sub: "Vieraat tilaavat QR-ruokalistan kautta pöydässä tai tarjoilija ottaa tilauksen puhelimesta tai tabletista — tilaus saapuu keittiön näyttöön sekunneissa. Salin pohjakartta värikoodatuilla pöydillä, laskun jakaminen, joustavat vaihtoehdot ja kommentit. Ei muistivihkoja, ei käyntejä baariin.",
+    sub: "IQ Restin tilausjärjestelmä ravintolalle: vieraat tilaavat QR-listalta tai tarjoilija tabletilla. Tilaukset keittiöön, pöytäkartta ja laskun jako. Joustavaa!",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Tarjoilija ottaa tilausta pöydässä älypuhelimella — tilaus saapuu keittiön näyttöön",
   },

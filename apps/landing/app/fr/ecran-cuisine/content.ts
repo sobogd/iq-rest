@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Écran de cuisine : commandes directement sur l'écran du chef.",
+    headline: "KDS: Commandes instantanées en cuisine",
     cta: "Configurer l’écran de cuisine",
-    sub: "Les tickets papier ne sont plus nécessaires. Les commandes de la salle ou du menu QR arrivent instantanément sur l'écran de cuisine — avec notes, allergènes et minuteur. Un tap change le statut. Fonctionne sur une tablette au passe ou sur le smartphone dans la poche du chef.",
+    sub: "L'écran de cuisine (KDS) IQ Rest reçoit commandes salle/QR instantanément. Notes, allergènes, minuteur. Gérez tout du bout des doigts sur tablette ou smartphone.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Cuisine professionnelle avec une tablette sur un support en laiton affichant l'écran de cuisine avec les commandes actives",
   },

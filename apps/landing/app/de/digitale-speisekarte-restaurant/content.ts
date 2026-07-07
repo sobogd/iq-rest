@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitale Speisekarte für Restaurants.",
+    headline: "Digitale Speisekarte & Restaurant-System",
     cta: "Digitale Speisekarte erstellen",
-    sub: "Online-Version Ihrer Papier-Speisekarte mit Fotos, Allergenen, Beschreibungen und Live-Preisaktualisierungen. Gäste sehen die Karte in ihrer Sprache; das Restaurant spart Druckkosten.",
+    sub: "Ihre digitale Speisekarte: Fotos, Allergene, Beschreibungen und Live-Preise. Gäste sehen die Karte in ihrer Sprache, Sie sparen Druckkosten. Mit IQ Rest.",
   },
 
   scan: {

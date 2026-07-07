@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Reserva de mesas 24/7 — os clientes reservam sozinhos.",
+    headline: "Reserva de Mesas Digital 24/7",
     cta: "Configurar reservas de mesa",
-    sub: "Os clientes reservam mesas através do menu QR ou de um link direto. Calendário por mesa, confirmações e lembretes automáticos. Nem um cliente perdido e sem chamadas em hora de ponta.",
+    sub: "Sistema de reserva de mesas 24/7 para restaurantes. Clientes reservam via menu QR ou link direto. Confirmações e lembretes automáticos. Mais reservas, menos chamadas.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Hospedeira a gerir reservas a partir de um tablet à entrada do restaurante",
   },

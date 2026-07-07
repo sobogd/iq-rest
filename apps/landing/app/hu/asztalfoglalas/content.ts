@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Asztalfoglalás 24/7 — a vendégek maguk foglalnak.",
+    headline: "Digitális asztalfoglalás 24/7",
     cta: "Asztalfoglalás beállítása",
-    sub: "A vendégek asztalt foglalnak a QR étlapon vagy közvetlen linken keresztül. Asztal naptár, automatikus visszaigazolások és emlékeztetők. Egyetlen elveszített vendég sem és nincs csúcsidőszaki telefonhívás.",
+    sub: "IQ Rest asztalfoglalás: vendégei 24/7 foglalhatnak QR menüből vagy linken. Automatikus visszaigazolások, emlékeztetők és asztal naptár. Kevesebb lemondás, több bevétel.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Hostess foglalásokat kezel táblagépről az étterem bejáratánál",
   },

@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Scáileán cistine: orduithe go díreach chuig scáileán an chócaire.",
+    headline: "KDS: Orduithe Digiteacha Láithreach",
     cta: "Socraigh scáileán cistine",
-    sub: "Níl ticéid pháipéir ag teastáil a thuilleadh. Sroicheann orduithe ón urlár nó ón mbiachlár QR scáileán na cistine láithreach — le nótaí, ailléirginí agus uaineadóir. Tapáil amháin a athraíonn an stádas. Oibríonn ar tháibléad ag an gcuntar nó ar fhón cliste i bpóca an chócaire.",
+    sub: "Slán le páipéar! Sroicheann orduithe QR/urlár an scáileán cistine IQ Rest láithreach, le nótaí, ailléirginí & uaineadóir. Athraigh stádas le sconna.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Cistin ghairmiúil le táibléad ar sheasamh prás a thaispeánann scáileán na cistine le horduithe gníomhacha",
   },

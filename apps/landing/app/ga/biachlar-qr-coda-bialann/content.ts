@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Biachlár cód QR do bhialanna.",
+    headline: "Bialann Dhigiteach: Biachlár QR",
     cta: "Cruthaigh biachlár QR",
-    sub: "Díríonn an t-aoi an ceamara ar an gcód QR ar an mbord agus osclaíonn an biachlár láithreach i mbrabhsálaí an fhóin: grianghraif na mbéilí, ailléirginí, praghsanna cothrom le dáta i gcónaí agus aistriúchán uathoibríoch go 35 teanga. Gan aipeanna a íoslódáil, agus gan an biachlár a athphriontáil gach uair a athraíonn praghas.",
+    sub: "Le IQ Rest, scanann aíonna cód QR chun do bhiachlár digiteach a fheiceáil: grianghraif, ailléirginí, praghsanna cothrom le dáta, 35 teanga. Gan aip, gan athphriontáil!",
   },
 
   scan: {

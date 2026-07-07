@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "QR kodo meniu restoranams.",
+    headline: "Skaitmeninis meniu restoranams",
     cta: "Sukurti QR meniu",
-    sub: "Svečias nukreipia kamerą į QR kodą ant stalo ir meniu iškart atsiveria telefono naršyklėje: patiekalų nuotraukos, alergenai, visada atnaujintos kainos ir automatinis vertimas į 35 kalbas. Nereikia atsisiųsti programėlių ir iš naujo spausdinti meniu kaskart pasikeitus kainai.",
+    sub: "IQ Rest QR kodo meniu: svečias nuskaito, o jūs mėgaujatės atnaujintomis kainomis, alergenais, nuotraukomis ir vertimu į 35 kalbas. Jokio perspausdinimo!",
   },
 
   scan: {
