@@ -3,13 +3,8 @@ import {
   ShieldAlert,
   Palette,
   ShoppingCart,
-  MonitorSmartphone,
-  BadgePercent,
-  Globe,
-  LayoutTemplate,
-  Contact,
-  MessageCircle,
   CalendarCheck,
+  MonitorSmartphone,
 } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
@@ -47,9 +42,9 @@ export const CONTENT: FeatureContent = {
   subFeatures: [
     {
       icon: Languages,
-      eyebrow: "35 limbi AI",
-      heading: "35 de limbi pentru orice oaspete",
-      body: "Un QR, 35 de limbi. AI traduce cu context culinar, așa că fiecare preparat sună natural. Turiștii comandă fără ezitare.",
+      eyebrow: "Traducere AI",
+      heading: "Meniu în 35 de limbi",
+      body: "Un QR, 35 de limbi. AI traduce cu context culinar, așa că fiecare preparat sună natural. Turiștii comandă cu încredere.",
       bullets: [
         "35 de limbi în abonament",
         "AI culinar, nu Google",
@@ -60,7 +55,7 @@ export const CONTENT: FeatureContent = {
     {
       icon: ShieldAlert,
       eyebrow: "Alergeni",
-      heading: "Alergeni și diete pe fiecare preparat",
+      heading: "Alergeni și diete pe preparate",
       body: "Marcați gluten, lactoză, nuci, vegan și fără gluten. Oaspeții filtrează meniul după dieta lor și comandă ușor.",
       bullets: [
         "14 categorii de alergeni",
@@ -70,105 +65,50 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-allergens.webp", alt: "Oaspete filtrează meniul după alergeni pe telefon în timp ce proprietarul editează lista de alergeni pe o tabletă" },
     },
     {
-      icon: MonitorSmartphone,
-      eyebrow: "Orice dispozitiv",
-      heading: "Gestionați de pe orice dispozitiv",
-      body: "Panoul de administrare rulează în browser — editați meniul, prețurile și pozele de oriunde. Nu instalați nimic.",
-      bullets: [
-        "Rulează în orice browser",
-        "Telefon, tabletă sau PC",
-        "Nu instalați nimic",
-      ],
-    },
-    {
-      icon: BadgePercent,
-      eyebrow: "Fără comision",
-      heading: "Zero comision, fără extra",
-      body: "Un singur abonament transparent. Nu luăm parte din încasări și nu ascundem taxe — totul rămâne la restaurant.",
-      bullets: [
-        "Zero la sută pe comenzi",
-        "Fără extra ascunse",
-        "Un singur preț fix",
-      ],
-    },
-    {
-      icon: Globe,
-      eyebrow: "Domeniu propriu",
-      heading: "Meniul pe domeniul tău",
-      body: "Conectăm domeniul tău cu SSL — oaspeții văd meniul la adresa restaurantului tău. Ajutăm cu DNS în 10 minute.",
-      bullets: [
-        "Domeniul tău cu SSL",
-        "menu.restaurantultau.com",
-        "Ajutăm la configurarea DNS",
-      ],
-    },
-    {
-      icon: LayoutTemplate,
-      eyebrow: "Designul tău",
-      heading: "Design flexibil pe gustul tău",
-      body: "Câteva șabloane și stiluri gata făcute — alegeți coperta, culorile și prezentarea preparatelor potrivite localului.",
-      bullets: [
-        "Câteva șabloane gata făcute",
-        "Coperta și culorile tale",
-        "Restilizezi din câteva clicuri",
-      ],
-    },
-    {
-      icon: Contact,
-      eyebrow: "Contacte",
-      heading: "Contacte și social în meniu",
-      body: "O pagină dedicată cu hartă, telefon și linkuri către Instagram și WhatsApp — oaspeții te găsesc dintr-o atingere.",
-      bullets: [
-        "Hartă, telefon și adresă",
-        "Instagram și WhatsApp",
-        "Te contactează dintr-o atingere",
-      ],
-    },
-    {
-      icon: MessageCircle,
-      eyebrow: "Comenzi WhatsApp",
-      heading: "Primiți comenzi prin WhatsApp",
-      body: "Oaspeții fac un coș și trimit comanda direct pe WhatsApp-ul tău — fără aplicație separată, în chatul pe care îl folosesc deja.",
-      bullets: [
-        "Comanda pe WhatsApp-ul tău",
-        "Fără aplicație separată",
-        "Chat ca de obicei",
-      ],
-    },
-    {
-      icon: CalendarCheck,
-      eyebrow: "Rezervări",
-      heading: "Rezervări la masă fără apeluri",
-      body: "Oaspeții rezervă singuri o masă din meniu sau un link, tu vezi calendarul pe mese și confirmi auto sau manual.",
-      bullets: [
-        "Rezervări 24/7, fără apeluri",
-        "Calendar pe mese",
-        "Confirmare auto și manuală",
-      ],
-    },
-    {
       icon: Palette,
-      eyebrow: "Design premium",
-      heading: "Arată ca un site, nu un PDF",
-      body: "Fundal video pe ecranul de bun venit, conceptul descris și o pagină separată de contact cu hartă și social.",
+      eyebrow: "Design și brand",
+      heading: "Meniu premium pe domeniul tău",
+      body: "Ecran video de bun venit, designul tău propriu și o pagină de contact cu hartă și social — pe domeniul tău, nu un PDF.",
       bullets: [
-        "Video pe ecranul principal",
-        "Concept și preparate descrise",
-        "Pagină separată de contact",
+        "Video și design premium",
+        "Domeniul tău cu SSL",
+        "Contacte, hartă și social",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Două telefoane pe o masă de cafenea: ecranul de pornire al meniului cu fundal video și pagina de contact cu hartă" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Comenzi · opțional",
-      heading: "Comenzi direct din meniu",
-      body: "Oaspeții fac un coș și trimit comanda — ajunge în sală, pe WhatsApp sau pe ecranul din bucătărie. Opțional.",
+      eyebrow: "Comenzi",
+      heading: "Comenzi online, zero comision",
+      body: "Oaspeții comandă din meniu sau direct pe WhatsApp-ul tău — ajunge în sală sau bucătărie, cu 0% luat din vânzări.",
       bullets: [
-        "Coș și trimitere dintr-o atingere",
-        "În sală, WhatsApp sau bucătărie",
+        "Din meniu sau WhatsApp",
+        "În sală sau bucătărie, 0%",
         "Îl activezi din setări",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Două telefoane pe o masă: coș cu comandă și confirmare a trimiterii comenzii" },
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Rezervări",
+      heading: "Rezervări la masă, 24/7",
+      body: "Oaspeții rezervă singuri o masă din meniu sau un link, tu vezi calendarul pe mese și confirmi auto sau manual.",
+      bullets: [
+        "Oaspeții rezervă singuri",
+        "Calendar pe mese",
+        "Confirmare auto și manuală",
+      ],
+    },
+    {
+      icon: MonitorSmartphone,
+      eyebrow: "Administrare",
+      heading: "Gestionezi de oriunde",
+      body: "Panoul de administrare rulează în orice browser — telefon, tabletă sau PC. Nu instalezi nimic, iar un meniu de bază pornește în minute.",
+      bullets: [
+        "Orice dispozitiv, orice browser",
+        "Nu instalezi nimic",
+        "Pornești în minute",
+      ],
     },
   ],
 

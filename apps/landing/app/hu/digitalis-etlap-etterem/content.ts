@@ -3,13 +3,8 @@ import {
   ShieldAlert,
   Palette,
   ShoppingCart,
-  MonitorSmartphone,
-  BadgePercent,
-  Globe,
-  LayoutTemplate,
-  Contact,
-  MessageCircle,
   CalendarCheck,
+  MonitorSmartphone,
 } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
@@ -47,8 +42,8 @@ export const CONTENT: FeatureContent = {
   subFeatures: [
     {
       icon: Languages,
-      eyebrow: "35 AI nyelv",
-      heading: "35 nyelv minden vendégnek",
+      eyebrow: "AI fordítás",
+      heading: "Étlap 35 nyelven",
       body: "Egy QR, 35 nyelv. Az AI kulináris kontextussal fordít, így minden étel természetesen hangzik. A turisták magabiztosan rendelnek.",
       bullets: [
         "35 nyelv az előfizetésben",
@@ -60,7 +55,7 @@ export const CONTENT: FeatureContent = {
     {
       icon: ShieldAlert,
       eyebrow: "Allergének",
-      heading: "Allergének és diéták minden ételen",
+      heading: "Allergének és diéták az ételeken",
       body: "Jelölje a glutént, laktózt, diót, vegán és gluténmentes opciókat. A vendégek diétára szűrik az étlapot és könnyen rendelnek.",
       bullets: [
         "14 allergén kategória",
@@ -70,105 +65,50 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-allergens.webp", alt: "Vendég szűri az étlapot allergénekre telefonon, míg a tulajdonos az allergén listát szerkeszti táblagépen" },
     },
     {
-      icon: MonitorSmartphone,
-      eyebrow: "Bármely eszköz",
-      heading: "Kezelje bármely eszközről",
-      body: "Az adminfelület böngészőben fut — szerkessze az étlapot, árakat és fotókat bárhonnan. Semmit sem kell telepíteni.",
-      bullets: [
-        "Bármely böngészőben fut",
-        "Telefon, tablet vagy PC",
-        "Nincs telepítés",
-      ],
-    },
-    {
-      icon: BadgePercent,
-      eyebrow: "Nincs jutalék",
-      heading: "Nulla jutalék, nincs extra",
-      body: "Egy átlátható előfizetés. Nem veszünk részt a bevételből és nem rejtünk el díjakat — minden az étteremé marad.",
-      bullets: [
-        "Nulla százalék a rendeléseken",
-        "Nincs rejtett extra",
-        "Egy fix ár",
-      ],
-    },
-    {
-      icon: Globe,
-      eyebrow: "Saját domain",
-      heading: "Étlap a saját domainen",
-      body: "A domainjét SSL-lel kötjük be — a vendégek az étterem címén látják az étlapot. Segítünk a DNS-sel 10 perc alatt.",
-      bullets: [
-        "Saját domain SSL-lel",
-        "menu.azonetterme.com",
-        "Segítünk a DNS beállításban",
-      ],
-    },
-    {
-      icon: LayoutTemplate,
-      eyebrow: "A te dizájnod",
-      heading: "Rugalmas, hozzád illő dizájn",
-      body: "Több kész sablon és stílus — válassza ki a borítót, színeket és étel-megjelenítést, ami illik a helyéhez.",
-      bullets: [
-        "Több kész sablon",
-        "Saját borító és színek",
-        "Új stílus pár kattintással",
-      ],
-    },
-    {
-      icon: Contact,
-      eyebrow: "Kapcsolat",
-      heading: "Kapcsolat és közösség az étlapon",
-      body: "Külön oldal térképpel, telefonnal és linkekkel az Instagramra és WhatsAppra — a vendégek egy érintéssel megtalálják.",
-      bullets: [
-        "Térkép, telefon és cím",
-        "Instagram és WhatsApp",
-        "Elérés egy érintéssel",
-      ],
-    },
-    {
-      icon: MessageCircle,
-      eyebrow: "WhatsApp rendelés",
-      heading: "Fogadjon rendelést WhatsAppon",
-      body: "A vendégek kosarat állítanak össze és a rendelést egyenesen a WhatsAppjára küldik — külön app nélkül, a megszokott chatben.",
-      bullets: [
-        "Rendelés a WhatsAppjára",
-        "Nincs külön app",
-        "Chat a megszokott módon",
-      ],
-    },
-    {
-      icon: CalendarCheck,
-      eyebrow: "Foglalások",
-      heading: "Asztalfoglalás hívások nélkül",
-      body: "A vendégek maguk foglalnak asztalt az étlapon vagy linken, ön asztalonként látja a naptárt és auto vagy kézzel erősít meg.",
-      bullets: [
-        "Foglalás 24/7, hívás nélkül",
-        "Naptár asztalonként",
-        "Auto és kézi megerősítés",
-      ],
-    },
-    {
       icon: Palette,
-      eyebrow: "Prémium dizájn",
-      heading: "Weboldalnak tűnik, nem PDF-nek",
-      body: "Videó háttér az üdvözlő képernyőn, a koncepció leírva és külön kapcsolat oldal térképpel és közösségi linkekkel.",
+      eyebrow: "Dizájn és márka",
+      heading: "Prémium étlap a saját domainen",
+      body: "Videós üdvözlő képernyő, saját dizájn és kapcsolat oldal térképpel és közösségi linkekkel — a saját domainjén, nem PDF.",
       bullets: [
-        "Videó a kezdőképernyőn",
-        "Koncepció és ételek leírva",
-        "Külön kapcsolat oldal",
+        "Videó és prémium dizájn",
+        "Saját domain SSL-lel",
+        "Kapcsolat, térkép és közösség",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Két telefon kávézó asztalon: étlap kezdőképernyője videó háttérrel és kapcsolat oldal térképpel" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Rendelések · opcionális",
-      heading: "Rendelés egyenesen az étlapról",
-      body: "A vendégek kosarat állítanak össze és elküldik a rendelést — a terembe, WhatsAppra vagy a konyhai kijelzőre érkezik. Opcionális.",
+      eyebrow: "Rendelések",
+      heading: "Online rendelés, nulla jutalék",
+      body: "A vendégek az étlapról vagy egyenesen a WhatsAppjára rendelnek — a terembe vagy konyhára érkezik, 0% levonással.",
       bullets: [
-        "Kosár és küldés egy érintéssel",
-        "Terembe, WhatsAppra vagy konyhára",
+        "Étlapról vagy WhatsAppról",
+        "Terembe vagy konyhára, 0%",
         "A beállításokban kapcsolható",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Két telefon asztalon: kosár rendeléssel és elküldött rendelés visszaigazolása" },
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Foglalások",
+      heading: "Asztalfoglalás, 24/7",
+      body: "A vendégek maguk foglalnak asztalt az étlapon vagy linken, ön asztalonként látja a naptárt és auto vagy kézzel erősít meg.",
+      bullets: [
+        "A vendégek maguk foglalnak",
+        "Naptár asztalonként",
+        "Auto és kézi megerősítés",
+      ],
+    },
+    {
+      icon: MonitorSmartphone,
+      eyebrow: "Kezelés",
+      heading: "Kezelje bárhonnan",
+      body: "Az adminfelület bármely böngészőben fut — telefon, tablet vagy PC. Nincs telepítés, egy alapétlap percek alatt élesben van.",
+      bullets: [
+        "Bármely eszköz, bármely böngésző",
+        "Nincs telepítés",
+        "Percek alatt élesben",
+      ],
     },
   ],
 

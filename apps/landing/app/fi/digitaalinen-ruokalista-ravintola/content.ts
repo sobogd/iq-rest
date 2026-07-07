@@ -3,13 +3,8 @@ import {
   ShieldAlert,
   Palette,
   ShoppingCart,
-  MonitorSmartphone,
-  BadgePercent,
-  Globe,
-  LayoutTemplate,
-  Contact,
-  MessageCircle,
   CalendarCheck,
+  MonitorSmartphone,
 } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
@@ -47,8 +42,8 @@ export const CONTENT: FeatureContent = {
   subFeatures: [
     {
       icon: Languages,
-      eyebrow: "35 AI-kieltä",
-      heading: "35 kieltä jokaiselle vieraalle",
+      eyebrow: "AI-käännös",
+      heading: "Ruokalista 35 kielellä",
       body: "Yksi QR, 35 kieltä. AI kääntää kulinaarisella kontekstilla, joten jokainen ruoka kuulostaa luonnolliselta. Turistit tilaavat varmasti.",
       bullets: [
         "35 kieltä tilauksessasi",
@@ -60,7 +55,7 @@ export const CONTENT: FeatureContent = {
     {
       icon: ShieldAlert,
       eyebrow: "Allergeenit",
-      heading: "Allergeenit ja ruokavaliot joka ruoassa",
+      heading: "Allergeenit ja ruokavaliot ruoissa",
       body: "Merkitse gluteeni, laktoosi, pähkinät, vegaani ja gluteeniton. Vieraat suodattavat ruokalistan ja tilaavat vaivattomasti.",
       bullets: [
         "14 allergeeniryhmää",
@@ -70,105 +65,50 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-allergens.webp", alt: "Vieras suodattaa ruokalistaa allergeenien mukaan puhelimella, kun omistaja muokkaa allergeenilistaa tabletilla" },
     },
     {
-      icon: MonitorSmartphone,
-      eyebrow: "Mikä tahansa laite",
-      heading: "Hallitse miltä tahansa laitteelta",
-      body: "Hallintapaneeli toimii selaimessa — muokkaa ruokalistaa, hintoja ja kuvia mistä tahansa. Mitään ei tarvitse asentaa.",
-      bullets: [
-        "Toimii missä tahansa selaimessa",
-        "Puhelin, tabletti tai PC",
-        "Mitään ei asenneta",
-      ],
-    },
-    {
-      icon: BadgePercent,
-      eyebrow: "Ei provisiota",
-      heading: "Nolla provisiota, ei lisiä",
-      body: "Yksi läpinäkyvä tilaus. Emme ota osuutta liikevaihdostasi emmekä piilota maksuja — kaikki jää ravintolalle.",
-      bullets: [
-        "Nolla prosenttia tilauksista",
-        "Ei piilokuluja",
-        "Yksi kiinteä hinta",
-      ],
-    },
-    {
-      icon: Globe,
-      eyebrow: "Oma verkkotunnus",
-      heading: "Ruokalista omalla verkkotunnuksellasi",
-      body: "Yhdistämme verkkotunnuksesi SSL:llä — vieraat näkevät ruokalistan ravintolasi osoitteessa. Autamme DNS:ssä 10 minuutissa.",
-      bullets: [
-        "Oma verkkotunnus SSL:llä",
-        "ruokalista.ravintolasi.fi",
-        "Autamme DNS-asetuksissa",
-      ],
-    },
-    {
-      icon: LayoutTemplate,
-      eyebrow: "Oma ilmeesi",
-      heading: "Joustava ulkoasu juuri sinulle",
-      body: "Useita valmiita pohjia ja tyylejä — valitse kansi, värit ja ruokien esitystapa, jotka sopivat ravintolaasi.",
-      bullets: [
-        "Useita valmiita pohjia",
-        "Oma kansi ja omat värit",
-        "Uusi ilme muutamalla klikkauksella",
-      ],
-    },
-    {
-      icon: Contact,
-      eyebrow: "Yhteystiedot",
-      heading: "Yhteystiedot ja somet ruokalistassa",
-      body: "Oma sivu kartalla, puhelimella ja linkeillä Instagramiin ja WhatsAppiin — vieraat löytävät sinut yhdellä napautuksella.",
-      bullets: [
-        "Kartta, puhelin ja osoite",
-        "Instagram ja WhatsApp",
-        "Tavoita meidät yhdellä napautuksella",
-      ],
-    },
-    {
-      icon: MessageCircle,
-      eyebrow: "WhatsApp-tilaukset",
-      heading: "Ota tilauksia vastaan WhatsAppissa",
-      body: "Vieraat kokoavat ostoskorin ja lähettävät tilauksen suoraan WhatsAppiisi — ei erillistä sovellusta, tutussa chatissa.",
-      bullets: [
-        "Tilaus WhatsAppiisi",
-        "Ei erillistä sovellusta",
-        "Chattaa kuten ennenkin",
-      ],
-    },
-    {
-      icon: CalendarCheck,
-      eyebrow: "Varaukset",
-      heading: "Pöytävaraus ilman puheluita",
-      body: "Vieraat varaavat pöydän itse ruokalistan tai linkin kautta, sinä näet kalenterin pöydittäin ja vahvistat auto- tai käsin.",
-      bullets: [
-        "Varaus 24/7, ilman puheluita",
-        "Kalenteri kaikille pöydille",
-        "Auto- ja käsivahvistus",
-      ],
-    },
-    {
       icon: Palette,
-      eyebrow: "Premium-ilme",
-      heading: "Näyttää sivustolta, ei PDF:ltä",
-      body: "Videotausta tervetuloruudulla, konseptisi kuvattuna ja erillinen yhteystietosivu kartalla ja someilla.",
+      eyebrow: "Ilme ja brändi",
+      heading: "Premium-ruokalista omalla domainilla",
+      body: "Videotervetuloruutu, oma ilmeesi ja yhteystietosivu kartalla ja someilla — omalla verkkotunnuksellasi, ei PDF.",
       bullets: [
-        "Video etusivulla",
-        "Konsepti ja ruoat kuvattuna",
-        "Erillinen yhteystietosivu",
+        "Video ja premium-ilme",
+        "Oma verkkotunnus SSL:llä",
+        "Yhteystiedot, kartta ja somet",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Kaksi puhelinta kahvilan pöydällä: ruokalistan etusivu videotaustalla ja yhteystietosivu kartalla" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Tilaukset · valinnainen",
-      heading: "Tilaukset suoraan ruokalistasta",
-      body: "Vieraat kokoavat ostoskorin ja lähettävät tilauksen — se saapuu saliin, WhatsAppiin tai keittiön näyttöön. Valinnainen.",
+      eyebrow: "Tilaukset",
+      heading: "Verkkotilaukset, nolla provisiota",
+      body: "Vieraat tilaavat ruokalistalta tai suoraan WhatsAppiisi — tilaus saapuu saliin tai keittiöön, ilman että myynnistä otetaan osuutta.",
       bullets: [
-        "Ostoskori ja lähetys napautuksella",
-        "Saliin, WhatsAppiin tai keittiöön",
+        "Ruokalistalta tai WhatsAppista",
+        "Saliin tai keittiöön, 0%",
         "Kytke se asetuksissa",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Kaksi puhelinta pöydällä: ostoskori tilauksella ja tilauksen lähetyksen vahvistus" },
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Varaukset",
+      heading: "Pöytävaraus, 24/7",
+      body: "Vieraat varaavat pöydän itse ruokalistan tai linkin kautta, sinä näet kalenterin pöydittäin ja vahvistat auto- tai käsin.",
+      bullets: [
+        "Vieraat varaavat itse",
+        "Kalenteri kaikille pöydille",
+        "Auto- ja käsivahvistus",
+      ],
+    },
+    {
+      icon: MonitorSmartphone,
+      eyebrow: "Hallinta",
+      heading: "Hallitse mistä tahansa",
+      body: "Hallintapaneeli toimii missä tahansa selaimessa — puhelin, tabletti tai PC. Mitään ei tarvitse asentaa, ja perusruokalista on käytössä minuuteissa.",
+      bullets: [
+        "Mikä tahansa laite ja selain",
+        "Mitään ei asenneta",
+        "Käytössä minuuteissa",
+      ],
     },
   ],
 

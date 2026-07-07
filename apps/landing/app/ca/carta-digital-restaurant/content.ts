@@ -3,13 +3,8 @@ import {
   ShieldAlert,
   Palette,
   ShoppingCart,
-  MonitorSmartphone,
-  BadgePercent,
-  Globe,
-  LayoutTemplate,
-  Contact,
-  MessageCircle,
   CalendarCheck,
+  MonitorSmartphone,
 } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
@@ -47,8 +42,8 @@ export const CONTENT: FeatureContent = {
   subFeatures: [
     {
       icon: Languages,
-      eyebrow: "35 idiomes IA",
-      heading: "35 idiomes per a cada client",
+      eyebrow: "Traducció IA",
+      heading: "Carta en 35 idiomes",
       body: "Un QR, 35 idiomes. La IA tradueix amb context culinari, així cada plat sona natural. Els turistes demanen amb confiança.",
       bullets: [
         "35 idiomes al teu pla",
@@ -60,7 +55,7 @@ export const CONTENT: FeatureContent = {
     {
       icon: ShieldAlert,
       eyebrow: "Al·lèrgens",
-      heading: "Al·lèrgens i dietes a cada plat",
+      heading: "Al·lèrgens i dietes als plats",
       body: "Etiqueta gluten, lactosa, fruita seca, vegà i sense gluten. Els clients filtren la carta segons la seva dieta i demanen amb facilitat.",
       bullets: [
         "14 categories d'al·lèrgens",
@@ -70,105 +65,50 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-allergens.webp", alt: "El client filtra la carta per al·lèrgens al mòbil mentre el propietari edita la llista d'al·lèrgens a una tauleta" },
     },
     {
-      icon: MonitorSmartphone,
-      eyebrow: "Qualsevol dispositiu",
-      heading: "Gestiona-ho des de qualsevol dispositiu",
-      body: "El panell d'administració va al navegador — edita carta, preus i fotos des d'on vulguis. Res per instal·lar.",
-      bullets: [
-        "Va a qualsevol navegador",
-        "Mòbil, tauleta o PC",
-        "Res per instal·lar",
-      ],
-    },
-    {
-      icon: BadgePercent,
-      eyebrow: "Sense comissió",
-      heading: "Zero comissió, sense extres",
-      body: "Una subscripció transparent. No ens quedem cap tall dels teus ingressos ni amaguem taxes — tot es queda al restaurant.",
-      bullets: [
-        "Zero per cent en comandes",
-        "Sense extres ocults",
-        "Un únic preu fix",
-      ],
-    },
-    {
-      icon: Globe,
-      eyebrow: "Domini propi",
-      heading: "La carta al teu propi domini",
-      body: "Connectem el teu domini amb SSL — els clients veuen la carta a l'adreça del teu restaurant. T'ajudem amb el DNS en 10 minuts.",
-      bullets: [
-        "El teu domini amb SSL",
-        "carta.elteurestaurant.cat",
-        "T'ajudem amb el DNS",
-      ],
-    },
-    {
-      icon: LayoutTemplate,
-      eyebrow: "El teu disseny",
-      heading: "Disseny flexible al teu estil",
-      body: "Diverses plantilles i estils a punt — tria la portada, els colors i la presentació dels plats que van amb el teu local.",
-      bullets: [
-        "Diverses plantilles a punt",
-        "La teva portada i colors",
-        "Redissenya en uns clics",
-      ],
-    },
-    {
-      icon: Contact,
-      eyebrow: "Contactes",
-      heading: "Contactes i xarxes a la carta",
-      body: "Una pàgina amb mapa, telèfon i enllaços a Instagram i WhatsApp — els clients et troben amb un sol toc.",
-      bullets: [
-        "Mapa, telèfon i adreça",
-        "Instagram i WhatsApp",
-        "Contacta amb un sol toc",
-      ],
-    },
-    {
-      icon: MessageCircle,
-      eyebrow: "Comandes per WhatsApp",
-      heading: "Rep comandes per WhatsApp",
-      body: "Els clients munten el carret i envien la comanda directament al teu WhatsApp — sense cap app a part, al xat que ja fan servir.",
-      bullets: [
-        "Comanda al teu WhatsApp",
-        "Sense cap app a part",
-        "Xat com sempre",
-      ],
-    },
-    {
-      icon: CalendarCheck,
-      eyebrow: "Reserves",
-      heading: "Reserva de taula sense trucades",
-      body: "Els clients reserven taula sols des de la carta o un enllaç, tu veus el calendari per taula i confirmes automàtic o manual.",
-      bullets: [
-        "Reserves 24/7, sense trucades",
-        "Calendari per taules",
-        "Confirmació auto i manual",
-      ],
-    },
-    {
       icon: Palette,
-      eyebrow: "Disseny premium",
-      heading: "Sembla un web, no un PDF",
-      body: "Fons de vídeo a la pantalla de benvinguda, el teu concepte descrit i una pàgina de contacte a part amb mapa i xarxes.",
+      eyebrow: "Disseny i marca",
+      heading: "Carta premium al teu domini",
+      body: "Pantalla de benvinguda amb vídeo, el teu propi disseny i una pàgina de contacte amb mapa i xarxes — al teu propi domini, no un PDF.",
       bullets: [
-        "Vídeo a la pantalla d'inici",
-        "Concepte i plats descrits",
-        "Pàgina de contacte a part",
+        "Vídeo i disseny premium",
+        "El teu domini amb SSL",
+        "Contactes, mapa i xarxes",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Dos mòbils en una taula de cafeteria: pantalla d'inici de la carta amb fons de vídeo i pàgina de contacte amb mapa" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Comandes · opcional",
-      heading: "Comandes directament des de la carta",
-      body: "Els clients munten el carret i envien la comanda — arriba a la sala, WhatsApp o la pantalla de cuina. Opcional.",
+      eyebrow: "Comandes",
+      heading: "Comandes en línia, zero comissió",
+      body: "Els clients demanen des de la carta o directament al teu WhatsApp — arriba a la sala o la cuina, amb un 0% tret de les vendes.",
       bullets: [
-        "Carret i enviament amb un toc",
-        "A sala, WhatsApp o cuina",
+        "Des de la carta o WhatsApp",
+        "A sala o cuina, 0%",
         "Activa-ho a la configuració",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Dos mòbils en una taula: carret amb comanda i confirmació d'enviament" },
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Reserves",
+      heading: "Reserva de taula, 24/7",
+      body: "Els clients reserven taula sols des de la carta o un enllaç, tu veus el calendari per taula i confirmes automàtic o manual.",
+      bullets: [
+        "Els clients reserven sols",
+        "Calendari per taules",
+        "Confirmació auto i manual",
+      ],
+    },
+    {
+      icon: MonitorSmartphone,
+      eyebrow: "Gestió",
+      heading: "Gestiona-ho des d'on vulguis",
+      body: "El panell d'administració va a qualsevol navegador — mòbil, tauleta o PC. Res per instal·lar, i una carta bàsica es publica en minuts.",
+      bullets: [
+        "Qualsevol dispositiu i navegador",
+        "Res per instal·lar",
+        "Publica en minuts",
+      ],
     },
   ],
 

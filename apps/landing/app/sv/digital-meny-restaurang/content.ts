@@ -3,13 +3,8 @@ import {
   ShieldAlert,
   Palette,
   ShoppingCart,
-  MonitorSmartphone,
-  BadgePercent,
-  Globe,
-  LayoutTemplate,
-  Contact,
-  MessageCircle,
   CalendarCheck,
+  MonitorSmartphone,
 } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
@@ -47,8 +42,8 @@ export const CONTENT: FeatureContent = {
   subFeatures: [
     {
       icon: Languages,
-      eyebrow: "35 AI-språk",
-      heading: "35 språk varje gäst förstår",
+      eyebrow: "AI-översättning",
+      heading: "Meny på 35 språk",
       body: "En QR, 35 språk. AI:n översätter med kulinarisk kontext, så varje rätt låter naturlig. Turister beställer med trygghet.",
       bullets: [
         "35 språk i din prenumeration",
@@ -60,7 +55,7 @@ export const CONTENT: FeatureContent = {
     {
       icon: ShieldAlert,
       eyebrow: "Allergener",
-      heading: "Allergener och koster på varje rätt",
+      heading: "Allergener och koster på rätterna",
       body: "Markera gluten, laktos, nötter, veganskt och glutenfritt. Gästerna filtrerar menyn efter sin kost och beställer med lätthet.",
       bullets: [
         "14 allergenkategorier",
@@ -70,105 +65,50 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-allergens.webp", alt: "Gäst filtrerar menyn efter allergener på telefonen medan ägaren redigerar allergenlistan på en surfplatta" },
     },
     {
-      icon: MonitorSmartphone,
-      eyebrow: "Vilken enhet som helst",
-      heading: "Sköt det från vilken enhet som helst",
-      body: "Adminpanelen körs i webbläsaren — redigera meny, priser och bilder var som helst. Inget att installera.",
-      bullets: [
-        "Körs i vilken webbläsare som helst",
-        "Telefon, surfplatta eller PC",
-        "Inget att installera",
-      ],
-    },
-    {
-      icon: BadgePercent,
-      eyebrow: "Ingen provision",
-      heading: "Noll provision, inga tillägg",
-      body: "En transparent prenumeration. Vi tar ingen andel av din omsättning och döljer inga avgifter — allt stannar hos restaurangen.",
-      bullets: [
-        "Noll procent på beställningar",
-        "Inga dolda tillägg",
-        "Ett fast pris",
-      ],
-    },
-    {
-      icon: Globe,
-      eyebrow: "Egen domän",
-      heading: "Meny på din egen domän",
-      body: "Vi kopplar din domän med SSL — gästerna ser menyn på din restaurangs adress. Vi hjälper med DNS på 10 minuter.",
-      bullets: [
-        "Din domän med SSL",
-        "meny.dinrestaurang.se",
-        "Vi hjälper med DNS",
-      ],
-    },
-    {
-      icon: LayoutTemplate,
-      eyebrow: "Din design",
-      heading: "Flexibel design som matchar dig",
-      body: "Flera färdiga layouter och stilar — välj omslaget, färgerna och rättpresentationen som passar ditt ställe.",
-      bullets: [
-        "Flera färdiga layouter",
-        "Ditt omslag och dina färger",
-        "Ny stil med några klick",
-      ],
-    },
-    {
-      icon: Contact,
-      eyebrow: "Kontakt",
-      heading: "Kontakt och sociala medier i menyn",
-      body: "En egen sida med karta, telefon och länkar till Instagram och WhatsApp — gästerna hittar dig med ett tryck.",
-      bullets: [
-        "Karta, telefon och adress",
-        "Instagram och WhatsApp",
-        "Nå dig med ett tryck",
-      ],
-    },
-    {
-      icon: MessageCircle,
-      eyebrow: "WhatsApp-beställningar",
-      heading: "Ta emot beställningar via WhatsApp",
-      body: "Gästerna bygger en varukorg och skickar beställningen direkt till din WhatsApp — ingen separat app, i chatten de redan använder.",
-      bullets: [
-        "Beställning till din WhatsApp",
-        "Ingen separat app",
-        "Chatta som vanligt",
-      ],
-    },
-    {
-      icon: CalendarCheck,
-      eyebrow: "Bokningar",
-      heading: "Bordsbokning utan samtal",
-      body: "Gästerna bokar bord själva via menyn eller en länk, du ser kalendern per bord och bekräftar automatiskt eller manuellt.",
-      bullets: [
-        "Bokning 24/7, utan samtal",
-        "Kalender över alla bord",
-        "Auto- och manuell bekräftelse",
-      ],
-    },
-    {
       icon: Palette,
-      eyebrow: "Premiumdesign",
-      heading: "Ser ut som en sajt, inte en PDF",
-      body: "Videobakgrund på välkomstskärmen, ditt koncept beskrivet och en separat kontaktsida med karta och sociala medier.",
+      eyebrow: "Design och varumärke",
+      heading: "Premiummeny på din domän",
+      body: "Videovälkomstskärm, din egen design och en kontaktsida med karta och sociala medier — på din egen domän, inte en PDF.",
       bullets: [
-        "Video på startskärmen",
-        "Koncept och rätter beskrivna",
-        "Separat kontaktsida",
+        "Video och premiumdesign",
+        "Din domän med SSL",
+        "Kontakt, karta och sociala medier",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Två telefoner på ett kafébord: menyns startskärm med videobakgrund och kontaktsidan med karta" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Beställningar · valfritt",
-      heading: "Beställningar direkt från menyn",
-      body: "Gästerna bygger en varukorg och skickar beställningen — den landar i salen, på WhatsApp eller på köksskärmen. Valfritt.",
+      eyebrow: "Beställningar",
+      heading: "Onlinebeställningar, noll provision",
+      body: "Gästerna beställer från menyn eller direkt till din WhatsApp — det landar i salen eller köket, med 0% taget från försäljningen.",
       bullets: [
-        "Varukorg och skicka med ett tryck",
-        "Till sal, WhatsApp eller kök",
+        "Från menyn eller WhatsApp",
+        "Till sal eller kök, 0%",
         "Slå på det i inställningar",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Två telefoner på ett bord: varukorg med beställning och bekräftelse på skickad beställning" },
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Bokningar",
+      heading: "Bordsbokning, 24/7",
+      body: "Gästerna bokar bord själva via menyn eller en länk, du ser kalendern per bord och bekräftar automatiskt eller manuellt.",
+      bullets: [
+        "Gäster bokar själva",
+        "Kalender över alla bord",
+        "Auto- och manuell bekräftelse",
+      ],
+    },
+    {
+      icon: MonitorSmartphone,
+      eyebrow: "Hantering",
+      heading: "Sköt det var som helst ifrån",
+      body: "Adminpanelen körs i vilken webbläsare som helst — telefon, surfplatta eller PC. Inget att installera, och en enkel meny är live på minuter.",
+      bullets: [
+        "Vilken enhet och webbläsare som helst",
+        "Inget att installera",
+        "Live på minuter",
+      ],
     },
   ],
 

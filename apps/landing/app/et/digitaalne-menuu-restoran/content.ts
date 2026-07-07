@@ -3,13 +3,8 @@ import {
   ShieldAlert,
   Palette,
   ShoppingCart,
-  MonitorSmartphone,
-  BadgePercent,
-  Globe,
-  LayoutTemplate,
-  Contact,
-  MessageCircle,
   CalendarCheck,
+  MonitorSmartphone,
 } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
@@ -47,8 +42,8 @@ export const CONTENT: FeatureContent = {
   subFeatures: [
     {
       icon: Languages,
-      eyebrow: "35 AI-keelt",
-      heading: "35 keelt igale külalisele",
+      eyebrow: "AI-tõlge",
+      heading: "Menüü 35 keeles",
       body: "Üks QR, 35 keelt. AI tõlgib kulinaarse kontekstiga, nii et iga roog kõlab loomulikult. Turistid tellivad kindlalt.",
       bullets: [
         "35 keelt sinu paketis",
@@ -60,7 +55,7 @@ export const CONTENT: FeatureContent = {
     {
       icon: ShieldAlert,
       eyebrow: "Allergeenid",
-      heading: "Allergeenid ja dieedid igal rool",
+      heading: "Allergeenid ja dieedid roogadel",
       body: "Märgi gluteen, laktoos, pähklid, vegan ja gluteenivaba. Külalised filtreerivad menüüd oma dieedi järgi ja tellivad hõlpsalt.",
       bullets: [
         "14 allergeenikategooriat",
@@ -70,105 +65,50 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-allergens.webp", alt: "Külaline filtreerib menüüd allergeenide järgi telefonis, samal ajal kui omanik muudab allergeenide loendit tahvelarvutis" },
     },
     {
-      icon: MonitorSmartphone,
-      eyebrow: "Iga seade",
-      heading: "Halda seda igast seadmest",
-      body: "Halduspaneel töötab brauseris — muuda menüüd, hindu ja fotosid kõikjalt. Midagi pole vaja installida.",
-      bullets: [
-        "Töötab igas brauseris",
-        "Telefon, tahvel või arvuti",
-        "Midagi pole vaja installida",
-      ],
-    },
-    {
-      icon: BadgePercent,
-      eyebrow: "Ei mingit vahendustasu",
-      heading: "Null vahendustasu, ei lisatasusid",
-      body: "Üks läbipaistev tellimus. Me ei võta osa sinu käibest ega peida tasusid — kõik jääb restoranile.",
-      bullets: [
-        "Null protsenti tellimustelt",
-        "Ei peidetud lisatasusid",
-        "Üks kindel hind",
-      ],
-    },
-    {
-      icon: Globe,
-      eyebrow: "Oma domeen",
-      heading: "Menüü sinu oma domeenil",
-      body: "Ühendame sinu domeeni SSL-iga — külalised näevad menüüd sinu restorani aadressil. Aitame DNS-iga 10 minutiga.",
-      bullets: [
-        "Sinu domeen SSL-iga",
-        "menu.sinurestoran.ee",
-        "Aitame DNS-i seadistada",
-      ],
-    },
-    {
-      icon: LayoutTemplate,
-      eyebrow: "Sinu disain",
-      heading: "Paindlik disain just sulle",
-      body: "Mitu valmis paigutust ja stiili — vali kaas, värvid ja roogade esitlus, mis sobivad sinu restoraniga.",
-      bullets: [
-        "Mitu valmis paigutust",
-        "Sinu kaas ja värvid",
-        "Uus ilme mõne klikiga",
-      ],
-    },
-    {
-      icon: Contact,
-      eyebrow: "Kontaktid",
-      heading: "Kontaktid ja sotsiaalmeedia menüüs",
-      body: "Eraldi leht kaardi, telefoni ja linkidega Instagrami ja WhatsAppi — külalised leiavad sind ühe puudutusega.",
-      bullets: [
-        "Kaart, telefon ja aadress",
-        "Instagram ja WhatsApp",
-        "Võta ühendust ühe puudutusega",
-      ],
-    },
-    {
-      icon: MessageCircle,
-      eyebrow: "WhatsAppi tellimused",
-      heading: "Võta tellimusi vastu WhatsAppis",
-      body: "Külalised koostavad korvi ja saadavad tellimuse otse sinu WhatsAppi — ilma eraldi rakenduseta, tuttavas vestluses.",
-      bullets: [
-        "Tellimus sinu WhatsAppi",
-        "Ilma eraldi rakenduseta",
-        "Vestle nagu tavaliselt",
-      ],
-    },
-    {
-      icon: CalendarCheck,
-      eyebrow: "Broneeringud",
-      heading: "Lauabroneering ilma kõnedeta",
-      body: "Külalised broneerivad laua ise menüü või lingi kaudu, sina näed kalendrit laua kaupa ja kinnitad auto- või käsitsi.",
-      bullets: [
-        "Broneering 24/7, ilma kõnedeta",
-        "Kalender kõigi laudade järgi",
-        "Auto- ja käsitsi kinnitus",
-      ],
-    },
-    {
       icon: Palette,
-      eyebrow: "Premium-disain",
-      heading: "Näeb välja nagu sait, mitte PDF",
-      body: "Videotaust tervituskuval, sinu kontseptsioon kirjeldatud ja eraldi kontaktileht kaardi ja sotsiaalmeediaga.",
+      eyebrow: "Disain ja bränd",
+      heading: "Premium-menüü sinu domeenil",
+      body: "Videotervituskuva, sinu oma disain ja kontaktileht kaardi ja sotsiaalmeediaga — sinu oma domeenil, mitte PDF.",
       bullets: [
-        "Video avakuval",
-        "Kontseptsioon ja road kirjeldatud",
-        "Eraldi kontaktileht",
+        "Video ja premium-disain",
+        "Sinu domeen SSL-iga",
+        "Kontaktid, kaart ja sotsiaalmeedia",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Kaks telefoni kohvikulaual: menüü avakuva video taustaga ja kontaktileht kaardiga" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Tellimused · valikuline",
-      heading: "Tellimused otse menüüst",
-      body: "Külalised koostavad korvi ja saadavad tellimuse — see jõuab saali, WhatsAppi või köögiekraanile. Valikuline.",
+      eyebrow: "Tellimused",
+      heading: "Veebitellimused, null vahendustasu",
+      body: "Külalised tellivad menüüst või otse sinu WhatsAppi — tellimus jõuab saali või kööki, ilma et müügist osa võetaks.",
       bullets: [
-        "Korv ja saatmine ühe puudutusega",
-        "Saali, WhatsAppi või kööki",
+        "Menüüst või WhatsAppist",
+        "Saali või kööki, 0%",
         "Lülita see seadetes sisse",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Kaks telefoni laual: korv tellimusega ja tellimuse saatmise kinnitus" },
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Broneeringud",
+      heading: "Lauabroneering, 24/7",
+      body: "Külalised broneerivad laua ise menüü või lingi kaudu, sina näed kalendrit laua kaupa ja kinnitad auto- või käsitsi.",
+      bullets: [
+        "Külalised broneerivad ise",
+        "Kalender kõigi laudade järgi",
+        "Auto- ja käsitsi kinnitus",
+      ],
+    },
+    {
+      icon: MonitorSmartphone,
+      eyebrow: "Haldus",
+      heading: "Halda seda kõikjalt",
+      body: "Halduspaneel töötab igas brauseris — telefon, tahvel või arvuti. Midagi pole vaja installida ja põhimenüü läheb veebi mõne minutiga.",
+      bullets: [
+        "Iga seade, iga brauser",
+        "Midagi pole vaja installida",
+        "Veebis mõne minutiga",
+      ],
     },
   ],
 

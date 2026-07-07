@@ -3,13 +3,8 @@ import {
   ShieldAlert,
   Palette,
   ShoppingCart,
-  MonitorSmartphone,
-  BadgePercent,
-  Globe,
-  LayoutTemplate,
-  Contact,
-  MessageCircle,
   CalendarCheck,
+  MonitorSmartphone,
 } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
@@ -47,8 +42,8 @@ export const CONTENT: FeatureContent = {
   subFeatures: [
     {
       icon: Languages,
-      eyebrow: "35 AI kalbos",
-      heading: "35 kalbos kiekvienam svečiui",
+      eyebrow: "AI vertimas",
+      heading: "Meniu 35 kalbomis",
       body: "Vienas QR, 35 kalbos. AI verčia su kulinariniu kontekstu, tad kiekvienas patiekalas skamba natūraliai. Turistai užsako drąsiai.",
       bullets: [
         "35 kalbos jūsų plane",
@@ -60,7 +55,7 @@ export const CONTENT: FeatureContent = {
     {
       icon: ShieldAlert,
       eyebrow: "Alergenai",
-      heading: "Alergenai ir dietos prie kiekvieno patiekalo",
+      heading: "Alergenai ir dietos prie patiekalų",
       body: "Pažymėkite glitimą, laktozę, riešutus, veganišką ir be glitimo. Svečiai filtruoja meniu pagal dietą ir užsako be rūpesčių.",
       bullets: [
         "14 alergenų kategorijų",
@@ -70,105 +65,50 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-allergens.webp", alt: "Svečias telefone filtruoja meniu pagal alergenus, o savininkas planšetėje redaguoja alergenų sąrašą" },
     },
     {
-      icon: MonitorSmartphone,
-      eyebrow: "Bet koks įrenginys",
-      heading: "Valdykite iš bet kurio įrenginio",
-      body: "Administravimo skydelis veikia naršyklėje — keiskite meniu, kainas ir nuotraukas iš bet kur. Nieko nereikia diegti.",
-      bullets: [
-        "Veikia bet kurioje naršyklėje",
-        "Telefonas, planšetė ar PC",
-        "Nieko diegti nereikia",
-      ],
-    },
-    {
-      icon: BadgePercent,
-      eyebrow: "Jokių komisinių",
-      heading: "Nulis komisinių, be priedų",
-      body: "Viena skaidri prenumerata. Neimame dalies iš jūsų pajamų ir neslepiame mokesčių — viskas lieka restoranui.",
-      bullets: [
-        "Nulis procentų nuo užsakymų",
-        "Jokių slaptų priedų",
-        "Viena fiksuota kaina",
-      ],
-    },
-    {
-      icon: Globe,
-      eyebrow: "Savas domenas",
-      heading: "Meniu jūsų domene",
-      body: "Prijungiame jūsų domeną su SSL — svečiai mato meniu restorano adresu. Padedame su DNS per 10 minučių.",
-      bullets: [
-        "Jūsų domenas su SSL",
-        "menu.jusurestoranas.lt",
-        "Padedame su DNS",
-      ],
-    },
-    {
-      icon: LayoutTemplate,
-      eyebrow: "Jūsų dizainas",
-      heading: "Lankstus dizainas pagal jus",
-      body: "Keli paruošti šablonai ir stiliai — pasirinkite viršelį, spalvas ir patiekalų pateikimą, tinkantį jūsų vietai.",
-      bullets: [
-        "Keli paruošti šablonai",
-        "Jūsų viršelis ir spalvos",
-        "Perstyling per kelis paspaudimus",
-      ],
-    },
-    {
-      icon: Contact,
-      eyebrow: "Kontaktai",
-      heading: "Kontaktai ir soc. tinklai meniu",
-      body: "Atskiras puslapis su žemėlapiu, telefonu ir nuorodomis į Instagram bei WhatsApp — svečiai jus randa vienu bakstelėjimu.",
-      bullets: [
-        "Žemėlapis, telefonas, adresas",
-        "Instagram ir WhatsApp",
-        "Susisiekite vienu bakstelėjimu",
-      ],
-    },
-    {
-      icon: MessageCircle,
-      eyebrow: "Užsakymai per WhatsApp",
-      heading: "Priimkite užsakymus per WhatsApp",
-      body: "Svečiai sudaro krepšelį ir siunčia užsakymą tiesiai į jūsų WhatsApp — be atskiros programėlės, jiems įprastame pokalbyje.",
-      bullets: [
-        "Užsakymas į jūsų WhatsApp",
-        "Be atskiros programėlės",
-        "Įprastas pokalbis",
-      ],
-    },
-    {
-      icon: CalendarCheck,
-      eyebrow: "Rezervacijos",
-      heading: "Staliukų rezervacija be skambučių",
-      body: "Svečiai patys rezervuoja staliuką per meniu ar nuorodą, jūs matote kalendorių pagal staliukus ir patvirtinate automatiškai ar rankiniu būdu.",
-      bullets: [
-        "Rezervacija 24/7, be skambučių",
-        "Kalendorius pagal staliukus",
-        "Auto ir rankinis patvirtinimas",
-      ],
-    },
-    {
       icon: Palette,
-      eyebrow: "Premium dizainas",
-      heading: "Atrodo kaip svetainė, ne PDF",
-      body: "Vaizdo fonas pasveikinimo ekrane, aprašyta jūsų koncepcija ir atskiras kontaktų puslapis su žemėlapiu bei soc. tinklais.",
+      eyebrow: "Dizainas ir prekės ženklas",
+      heading: "Premium meniu jūsų domene",
+      body: "Vaizdo fonas pasveikinimo ekrane, jūsų dizainas ir kontaktų puslapis su žemėlapiu bei soc. tinklais — jūsų domene, ne PDF.",
       bullets: [
-        "Vaizdo įrašas pradžios ekrane",
-        "Aprašyta koncepcija ir patiekalai",
-        "Atskiras kontaktų puslapis",
+        "Vaizdo įrašas ir premium dizainas",
+        "Jūsų domenas su SSL",
+        "Kontaktai, žemėlapis ir soc. tinklai",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Du telefonai ant kavinės staliuko: meniu pradžios ekranas su vaizdo fonu ir kontaktų puslapis su žemėlapiu" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Užsakymai · pasirinktinai",
-      heading: "Užsakymai tiesiai iš meniu",
-      body: "Svečiai sudaro krepšelį ir siunčia užsakymą — jis patenka į salę, WhatsApp ar virtuvės ekraną. Pasirinktinai.",
+      eyebrow: "Užsakymai",
+      heading: "Užsakymai internetu, be komisinių",
+      body: "Svečiai užsako iš meniu ar tiesiai į jūsų WhatsApp — jis patenka į salę ar virtuvę, o 0% nuimama nuo pardavimų.",
       bullets: [
-        "Krepšelis ir siuntimas bakstelėjus",
-        "Į salę, WhatsApp ar virtuvę",
+        "Iš meniu ar WhatsApp",
+        "Į salę ar virtuvę, 0%",
         "Įjungiama nustatymuose",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Du telefonai ant staliuko: krepšelis su užsakymu ir užsakymo išsiuntimo patvirtinimas" },
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Rezervacijos",
+      heading: "Staliukų rezervacija 24/7",
+      body: "Svečiai patys rezervuoja staliuką per meniu ar nuorodą, jūs matote kalendorių pagal staliukus ir patvirtinate automatiškai ar rankiniu būdu.",
+      bullets: [
+        "Svečiai rezervuoja patys",
+        "Kalendorius pagal staliukus",
+        "Auto ir rankinis patvirtinimas",
+      ],
+    },
+    {
+      icon: MonitorSmartphone,
+      eyebrow: "Valdymas",
+      heading: "Valdykite iš bet kur",
+      body: "Administravimo skydelis veikia bet kurioje naršyklėje — telefone, planšetėje ar PC. Nieko nereikia diegti, o pagrindinis meniu paruošiamas per kelias minutes.",
+      bullets: [
+        "Bet koks įrenginys, bet kuri naršyklė",
+        "Nieko diegti nereikia",
+        "Paruošiama per kelias minutes",
+      ],
     },
   ],
 

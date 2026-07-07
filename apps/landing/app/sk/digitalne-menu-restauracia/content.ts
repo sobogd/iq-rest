@@ -3,13 +3,8 @@ import {
   ShieldAlert,
   Palette,
   ShoppingCart,
-  MonitorSmartphone,
-  BadgePercent,
-  Globe,
-  LayoutTemplate,
-  Contact,
-  MessageCircle,
   CalendarCheck,
+  MonitorSmartphone,
 } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
@@ -47,8 +42,8 @@ export const CONTENT: FeatureContent = {
   subFeatures: [
     {
       icon: Languages,
-      eyebrow: "35 jazykov s AI",
-      heading: "35 jazykov pre každého hosťa",
+      eyebrow: "Preklad s AI",
+      heading: "Menu v 35 jazykoch",
       body: "Jeden QR, 35 jazykov. AI prekladá s kulinárskym kontextom, takže každé jedlo znie prirodzene. Turisti objednávajú s istotou.",
       bullets: [
         "35 jazykov v tarife",
@@ -60,7 +55,7 @@ export const CONTENT: FeatureContent = {
     {
       icon: ShieldAlert,
       eyebrow: "Alergény",
-      heading: "Alergény a diéty pri každom jedle",
+      heading: "Alergény a diéty pri jedlách",
       body: "Označte lepok, laktózu, orechy, vegán aj bezlepok. Hostia si menu vyfiltrujú podľa diéty a objednávajú bez starostí.",
       bullets: [
         "14 kategórií alergénov",
@@ -70,105 +65,50 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-allergens.webp", alt: "Hosť filtruje menu podľa alergénov na telefóne, zatiaľ čo majiteľ upravuje zoznam alergénov na tablete" },
     },
     {
-      icon: MonitorSmartphone,
-      eyebrow: "Akékoľvek zariadenie",
-      heading: "Spravujte z akéhokoľvek zariadenia",
-      body: "Administrácia beží v prehliadači — upravujte menu, ceny aj fotky odkiaľkoľvek. Netreba nič inštalovať.",
-      bullets: [
-        "Beží v každom prehliadači",
-        "Telefón, tablet alebo PC",
-        "Nič na inštaláciu",
-      ],
-    },
-    {
-      icon: BadgePercent,
-      eyebrow: "Bez provízie",
-      heading: "Nulová provízia, žiadne príplatky",
-      body: "Jedno transparentné predplatné. Neberieme podiel z vašich tržieb a neskrývame poplatky — všetko zostáva reštaurácii.",
-      bullets: [
-        "Nula percent z objednávok",
-        "Žiadne skryté príplatky",
-        "Jedna pevná cena",
-      ],
-    },
-    {
-      icon: Globe,
-      eyebrow: "Vlastná doména",
-      heading: "Menu na vašej vlastnej doméne",
-      body: "Pripojíme vašu doménu s SSL — hostia vidia menu na adrese reštaurácie. S nastavením DNS pomôžeme za 10 minút.",
-      bullets: [
-        "Vaša doména s SSL",
-        "menu.vasarestauracia.com",
-        "Pomôžeme s nastavením DNS",
-      ],
-    },
-    {
-      icon: LayoutTemplate,
-      eyebrow: "Váš dizajn",
-      heading: "Flexibilný dizajn podľa vás",
-      body: "Niekoľko hotových šablón a štýlov — vyberte si obálku, farby a spôsob prezentácie jedál, ktoré sedia vášmu podniku.",
-      bullets: [
-        "Niekoľko hotových šablón",
-        "Vaša obálka a farby",
-        "Zmena na pár klikov",
-      ],
-    },
-    {
-      icon: Contact,
-      eyebrow: "Kontakty",
-      heading: "Kontakty a siete priamo v menu",
-      body: "Samostatná stránka s mapou, telefónom a odkazmi na Instagram a WhatsApp — hostia vás nájdu jedným ťuknutím.",
-      bullets: [
-        "Mapa, telefón a adresa",
-        "Instagram a WhatsApp",
-        "Spojenie jedným ťuknutím",
-      ],
-    },
-    {
-      icon: MessageCircle,
-      eyebrow: "Objednávky cez WhatsApp",
-      heading: "Prijímajte objednávky cez WhatsApp",
-      body: "Hostia zostavia košík a pošlú objednávku rovno na váš WhatsApp — bez osobitnej aplikácie, v chate, ktorý už používajú.",
-      bullets: [
-        "Objednávka na váš WhatsApp",
-        "Žiadna osobitná aplikácia",
-        "Chat ako obvykle",
-      ],
-    },
-    {
-      icon: CalendarCheck,
-      eyebrow: "Rezervácie",
-      heading: "Rezervácie stolov bez telefonátov",
-      body: "Hostia si rezervujú stôl sami cez menu alebo odkaz, vy vidíte kalendár po stoloch a potvrdíte automaticky či ručne.",
-      bullets: [
-        "Rezervácie 24/7 bez volania",
-        "Kalendár po stoloch",
-        "Auto aj ručné potvrdenie",
-      ],
-    },
-    {
       icon: Palette,
-      eyebrow: "Prémiový dizajn",
-      heading: "Vyzerá ako web, nie ako PDF",
-      body: "Video pozadie na úvodnej obrazovke, opísaný koncept a samostatná kontaktná stránka s mapou a sociálnymi sieťami.",
+      eyebrow: "Dizajn a značka",
+      heading: "Prémiové menu na vašej doméne",
+      body: "Video úvodná obrazovka, vlastný dizajn a kontaktná stránka s mapou a sieťami — na vašej vlastnej doméne, nie PDF.",
       bullets: [
-        "Video na úvodnej obrazovke",
-        "Opísaný koncept aj jedlá",
-        "Samostatná kontaktná stránka",
+        "Video a prémiový dizajn",
+        "Vaša doména s SSL",
+        "Kontakty, mapa a siete",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Dva telefóny na stole v kaviarni: domovská obrazovka menu s videopozadím a kontaktná stránka s mapou" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Objednávky · voliteľné",
-      heading: "Objednávky priamo z menu",
-      body: "Hostia zostavia košík a pošlú objednávku — dorazí do sály, na WhatsApp alebo na kuchynskú obrazovku. Voliteľné.",
+      eyebrow: "Objednávky",
+      heading: "Objednávky online, nulová provízia",
+      body: "Hostia objednávajú z menu alebo rovno na váš WhatsApp — dorazí do sály či kuchyne, s 0 % z tržieb.",
       bullets: [
-        "Košík a odoslanie ťuknutím",
-        "Do sály, WhatsApp či kuchyne",
+        "Z menu alebo z WhatsApp",
+        "Do sály či kuchyne, 0 %",
         "Prepnete v nastaveniach",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Dva telefóny na stole: košík s objednávkou a potvrdenie o odoslaní objednávky" },
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Rezervácie",
+      heading: "Rezervácie stolov, 24/7",
+      body: "Hostia si rezervujú stôl sami cez menu alebo odkaz, vy vidíte kalendár po stoloch a potvrdíte automaticky či ručne.",
+      bullets: [
+        "Hostia si rezervujú sami",
+        "Kalendár po stoloch",
+        "Auto aj ručné potvrdenie",
+      ],
+    },
+    {
+      icon: MonitorSmartphone,
+      eyebrow: "Správa",
+      heading: "Spravujte odkiaľkoľvek",
+      body: "Administrácia beží v každom prehliadači — telefón, tablet alebo PC. Nič na inštaláciu a základné menu je online za pár minút.",
+      bullets: [
+        "Akékoľvek zariadenie a prehliadač",
+        "Nič na inštaláciu",
+        "Online za pár minút",
+      ],
     },
   ],
 

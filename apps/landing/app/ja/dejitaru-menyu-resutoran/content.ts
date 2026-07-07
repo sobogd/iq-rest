@@ -3,13 +3,8 @@ import {
   ShieldAlert,
   Palette,
   ShoppingCart,
-  MonitorSmartphone,
-  BadgePercent,
-  Globe,
-  LayoutTemplate,
-  Contact,
-  MessageCircle,
   CalendarCheck,
+  MonitorSmartphone,
 } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
@@ -47,8 +42,8 @@ export const CONTENT: FeatureContent = {
   subFeatures: [
     {
       icon: Languages,
-      eyebrow: "AI 35言語",
-      heading: "誰もが読める35言語",
+      eyebrow: "AI翻訳",
+      heading: "35言語のメニュー",
       body: "1つのQRで35言語。AIが料理の文脈で翻訳し、どの料理も自然に伝わります。観光客も安心して注文できます。",
       bullets: [
         "プランに35言語込み",
@@ -60,7 +55,7 @@ export const CONTENT: FeatureContent = {
     {
       icon: ShieldAlert,
       eyebrow: "アレルゲン",
-      heading: "全料理にアレルゲン表示",
+      heading: "料理にアレルゲンと食事対応",
       body: "グルテン、乳糖、ナッツ、ヴィーガン、グルテンフリーをタグ付け。お客様は食事に合わせて絞り込み、楽に注文できます。",
       bullets: [
         "14のアレルゲン区分",
@@ -70,105 +65,50 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-allergens.webp", alt: "お客様がスマートフォンでアレルゲンによってメニューをフィルタリングし、オーナーがタブレットでアレルゲンリストを編集している" },
     },
     {
-      icon: MonitorSmartphone,
-      eyebrow: "どの端末でも",
-      heading: "どの端末でも管理できる",
-      body: "管理画面はブラウザで動作 — メニュー、価格、写真をどこからでも編集。インストールは不要です。",
-      bullets: [
-        "どのブラウザでも動作",
-        "スマホ・タブレット・PC",
-        "インストール不要",
-      ],
-    },
-    {
-      icon: BadgePercent,
-      eyebrow: "手数料ゼロ",
-      heading: "手数料ゼロ、追加費用なし",
-      body: "明快なサブスク一つ。売上から一切徴収せず、隠れた費用もなし — すべてお店に残ります。",
-      bullets: [
-        "注文に0%",
-        "隠れた追加費用なし",
-        "定額ワンプライス",
-      ],
-    },
-    {
-      icon: Globe,
-      eyebrow: "独自ドメイン",
-      heading: "独自ドメインでメニュー公開",
-      body: "SSL付きで独自ドメインを接続 — お客様はお店のアドレスでメニューを見られます。DNS設定も10分でサポート。",
-      bullets: [
-        "SSL付き独自ドメイン",
-        "menu.restaurant.com",
-        "DNS設定をサポート",
-      ],
-    },
-    {
-      icon: LayoutTemplate,
-      eyebrow: "自由なデザイン",
-      heading: "お店に合う柔軟なデザイン",
-      body: "複数の既製レイアウトとスタイル — 表紙、色、料理の見せ方をお店に合わせて選べます。",
-      bullets: [
-        "複数の既製レイアウト",
-        "表紙と色を自由に",
-        "数クリックで模様替え",
-      ],
-    },
-    {
-      icon: Contact,
-      eyebrow: "連絡先",
-      heading: "連絡先とSNSをメニューに",
-      body: "地図、電話、InstagramとWhatsAppへのリンクを載せた専用ページ — お客様はワンタップでお店を見つけます。",
-      bullets: [
-        "地図・電話・住所",
-        "InstagramとWhatsApp",
-        "ワンタップで連絡",
-      ],
-    },
-    {
-      icon: MessageCircle,
-      eyebrow: "WhatsApp注文",
-      heading: "WhatsAppで注文を受ける",
-      body: "お客様はカートを作り、注文をそのままWhatsAppへ送信 — 別アプリ不要、いつものチャットで完結します。",
-      bullets: [
-        "WhatsAppへ注文",
-        "別アプリ不要",
-        "いつものチャットで",
-      ],
-    },
-    {
-      icon: CalendarCheck,
-      eyebrow: "予約",
-      heading: "電話なしで席予約",
-      body: "お客様がメニューやリンクから自分で席を予約。テーブルごとのカレンダーを見て自動または手動で確定できます。",
-      bullets: [
-        "24/7予約、電話不要",
-        "テーブル別カレンダー",
-        "自動・手動で確定",
-      ],
-    },
-    {
       icon: Palette,
-      eyebrow: "プレミアムデザイン",
-      heading: "PDFではなくサイトのよう",
-      body: "ウェルカム画面の動画背景、コンセプトの説明、地図とSNS付きの独立した連絡先ページ。",
+      eyebrow: "デザインとブランド",
+      heading: "独自ドメインで上質なメニュー",
+      body: "ウェルカム画面の動画、独自のデザイン、地図とSNS付きの連絡先ページ — PDFではなく、独自ドメインで。",
       bullets: [
-        "ホーム画面に動画",
-        "コンセプトと料理を紹介",
-        "独立した連絡先ページ",
+        "動画と上質なデザイン",
+        "SSL付き独自ドメイン",
+        "連絡先・地図・SNS",
       ],
       image: { src: "/landing/feature-design.webp", alt: "カフェテーブルの2台のスマートフォン:ビデオ背景のメニューホーム画面と地図付き連絡先ページ" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "注文 · オプション",
-      heading: "メニューから直接注文",
-      body: "お客様はカートを作り注文を送信 — ホール、WhatsApp、厨房画面に届きます。オプション機能です。",
+      eyebrow: "注文",
+      heading: "手数料ゼロのオンライン注文",
+      body: "お客様はメニューから、またはそのままWhatsAppへ注文 — ホールや厨房に届き、売上から取るのは0%。",
       bullets: [
-        "タップでカート送信",
-        "ホール・WhatsApp・厨房へ",
+        "メニューまたはWhatsAppから",
+        "ホールや厨房へ、0%",
         "設定でオン・オフ",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "テーブルの2台のスマートフォン:注文付きカートと注文送信確認" },
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "予約",
+      heading: "席予約、24/7",
+      body: "お客様がメニューやリンクから自分で席を予約。テーブルごとのカレンダーを見て自動または手動で確定できます。",
+      bullets: [
+        "お客様が自分で予約",
+        "テーブル別カレンダー",
+        "自動・手動で確定",
+      ],
+    },
+    {
+      icon: MonitorSmartphone,
+      eyebrow: "管理",
+      heading: "どこからでも管理",
+      body: "管理画面はどのブラウザでも動作 — スマホ、タブレット、PC。インストール不要で、基本メニューは数分で公開できます。",
+      bullets: [
+        "どの端末・どのブラウザでも",
+        "インストール不要",
+        "数分で公開",
+      ],
     },
   ],
 

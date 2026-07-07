@@ -3,13 +3,8 @@ import {
   ShieldAlert,
   Palette,
   ShoppingCart,
-  MonitorSmartphone,
-  BadgePercent,
-  Globe,
-  LayoutTemplate,
-  Contact,
-  MessageCircle,
   CalendarCheck,
+  MonitorSmartphone,
 } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
@@ -47,8 +42,8 @@ export const CONTENT: FeatureContent = {
   subFeatures: [
     {
       icon: Languages,
-      eyebrow: "35 AI languages",
-      heading: "35 languages every guest reads",
+      eyebrow: "AI translation",
+      heading: "Menu in 35 languages",
       body: "One QR, 35 languages. AI translates with culinary context, so every dish sounds natural. Tourists order with confidence.",
       bullets: [
         "35 languages in your plan",
@@ -60,7 +55,7 @@ export const CONTENT: FeatureContent = {
     {
       icon: ShieldAlert,
       eyebrow: "Allergens",
-      heading: "Allergens and diets on every dish",
+      heading: "Allergens and diets on dishes",
       body: "Tag gluten, lactose, nuts, vegan and gluten-free. Guests filter the menu to fit their diet and order with ease.",
       bullets: [
         "14 allergen categories",
@@ -70,105 +65,50 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-allergens.webp", alt: "Guest filters menu by allergens on phone while owner edits the allergen list on a tablet" },
     },
     {
-      icon: MonitorSmartphone,
-      eyebrow: "Any device",
-      heading: "Manage it from any device",
-      body: "The admin panel runs in the browser — edit menu, prices and photos from anywhere. Nothing to install.",
-      bullets: [
-        "Runs in any browser",
-        "Phone, tablet or PC",
-        "Nothing to install",
-      ],
-    },
-    {
-      icon: BadgePercent,
-      eyebrow: "No commission",
-      heading: "Zero commission, no add-ons",
-      body: "One transparent subscription. We take no cut of your revenue and hide no fees — it all stays with the restaurant.",
-      bullets: [
-        "Zero percent on orders",
-        "No hidden add-ons",
-        "One flat price",
-      ],
-    },
-    {
-      icon: Globe,
-      eyebrow: "Custom domain",
-      heading: "Menu on your own domain",
-      body: "We connect your domain with SSL — guests see the menu on your restaurant's address. We help with DNS in 10 minutes.",
-      bullets: [
-        "Your domain with SSL",
-        "menu.yourrestaurant.com",
-        "We help with DNS setup",
-      ],
-    },
-    {
-      icon: LayoutTemplate,
-      eyebrow: "Your design",
-      heading: "Flexible design to match you",
-      body: "Several ready layouts and styles — pick the cover, colors and dish presentation that fit your venue.",
-      bullets: [
-        "Several ready layouts",
-        "Your cover and colors",
-        "Restyle in a few clicks",
-      ],
-    },
-    {
-      icon: Contact,
-      eyebrow: "Contacts",
-      heading: "Contacts and socials in the menu",
-      body: "A dedicated page with map, phone and links to Instagram and WhatsApp — guests find you in a single tap.",
-      bullets: [
-        "Map, phone and address",
-        "Instagram and WhatsApp",
-        "Reach you in one tap",
-      ],
-    },
-    {
-      icon: MessageCircle,
-      eyebrow: "WhatsApp orders",
-      heading: "Take orders through WhatsApp",
-      body: "Guests build a cart and send the order straight to your WhatsApp — no separate app, in the chat they already use.",
-      bullets: [
-        "Order to your WhatsApp",
-        "No separate app",
-        "Chat as usual",
-      ],
-    },
-    {
-      icon: CalendarCheck,
-      eyebrow: "Reservations",
-      heading: "Table booking without calls",
-      body: "Guests book a table themselves via the menu or a link, you see the calendar by table and confirm auto or manually.",
-      bullets: [
-        "Booking 24/7, no calls",
-        "Calendar across tables",
-        "Auto and manual confirm",
-      ],
-    },
-    {
       icon: Palette,
-      eyebrow: "Premium design",
-      heading: "Looks like a site, not a PDF",
-      body: "Video background on the welcome screen, your concept described and a separate contact page with map and socials.",
+      eyebrow: "Design & brand",
+      heading: "Premium menu on your domain",
+      body: "Video welcome screen, your own design and a contact page with map and socials — on your own domain, not a PDF.",
       bullets: [
-        "Video on the home screen",
-        "Concept and dishes described",
-        "Separate contact page",
+        "Video and premium design",
+        "Your domain with SSL",
+        "Contacts, map and socials",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Two phones on a café table: home screen of the menu with a video background and the contact page with a map" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Orders · optional",
-      heading: "Orders straight from the menu",
-      body: "Guests build a cart and send the order — it lands in the hall, WhatsApp or the kitchen screen. Optional.",
+      eyebrow: "Orders",
+      heading: "Online orders, zero commission",
+      body: "Guests order from the menu or straight to your WhatsApp — it lands in the hall or kitchen, with 0% taken from sales.",
       bullets: [
-        "Cart and send in a tap",
-        "To hall, WhatsApp or kitchen",
+        "From the menu or WhatsApp",
+        "To hall or kitchen, 0%",
         "Toggle it in settings",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Two phones on a table: cart with an order and the order-placed confirmation" },
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Reservations",
+      heading: "Table booking, 24/7",
+      body: "Guests book a table themselves via the menu or a link, you see the calendar by table and confirm auto or manually.",
+      bullets: [
+        "Guests book themselves",
+        "Calendar across tables",
+        "Auto and manual confirm",
+      ],
+    },
+    {
+      icon: MonitorSmartphone,
+      eyebrow: "Management",
+      heading: "Manage it from anywhere",
+      body: "The admin panel runs in any browser — phone, tablet or PC. Nothing to install, and a basic menu goes live in minutes.",
+      bullets: [
+        "Any device, any browser",
+        "Nothing to install",
+        "Go live in minutes",
+      ],
     },
   ],
 

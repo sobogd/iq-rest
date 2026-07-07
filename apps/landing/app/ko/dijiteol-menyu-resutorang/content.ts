@@ -3,13 +3,8 @@ import {
   ShieldAlert,
   Palette,
   ShoppingCart,
-  MonitorSmartphone,
-  BadgePercent,
-  Globe,
-  LayoutTemplate,
-  Contact,
-  MessageCircle,
   CalendarCheck,
+  MonitorSmartphone,
 } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
@@ -47,8 +42,8 @@ export const CONTENT: FeatureContent = {
   subFeatures: [
     {
       icon: Languages,
-      eyebrow: "35개 언어 AI",
-      heading: "모두가 읽는 35개 언어",
+      eyebrow: "AI 번역",
+      heading: "35개 언어 메뉴",
       body: "하나의 QR로 35개 언어. AI가 요리 맥락을 살려 번역해 모든 메뉴가 자연스럽습니다. 관광객도 자신 있게 주문합니다.",
       bullets: [
         "요금제에 35개 언어 포함",
@@ -60,7 +55,7 @@ export const CONTENT: FeatureContent = {
     {
       icon: ShieldAlert,
       eyebrow: "알레르겐",
-      heading: "모든 메뉴에 알레르겐 표시",
+      heading: "메뉴에 알레르겐과 식단 표시",
       body: "글루텐, 유당, 견과류, 비건, 글루텐프리를 태그하세요. 손님은 식단에 맞게 메뉴를 걸러 편하게 주문합니다.",
       bullets: [
         "14개 알레르겐 분류",
@@ -70,105 +65,50 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-allergens.webp", alt: "손님이 휴대폰에서 알레르겐으로 메뉴를 필터링하고, 소유자가 태블릿에서 알레르겐 목록을 편집하는 모습" },
     },
     {
-      icon: MonitorSmartphone,
-      eyebrow: "모든 기기",
-      heading: "어떤 기기에서도 관리",
-      body: "관리자 패널은 브라우저에서 실행됩니다 — 메뉴, 가격, 사진을 어디서든 편집하세요. 설치는 필요 없습니다.",
-      bullets: [
-        "모든 브라우저에서 실행",
-        "휴대폰·태블릿·PC",
-        "설치 불필요",
-      ],
-    },
-    {
-      icon: BadgePercent,
-      eyebrow: "수수료 없음",
-      heading: "수수료 0%, 추가 비용 없음",
-      body: "투명한 구독 하나. 매출에서 떼지 않고 숨은 비용도 없습니다 — 모두 매장에 남습니다.",
-      bullets: [
-        "주문에 0%",
-        "숨은 추가 비용 없음",
-        "단일 정액 요금",
-      ],
-    },
-    {
-      icon: Globe,
-      eyebrow: "자체 도메인",
-      heading: "자체 도메인으로 메뉴 공개",
-      body: "SSL과 함께 도메인을 연결합니다 — 손님은 매장 주소에서 메뉴를 봅니다. DNS 설정도 10분 안에 도와드립니다.",
-      bullets: [
-        "SSL 포함 자체 도메인",
-        "menu.restaurant.com",
-        "DNS 설정 지원",
-      ],
-    },
-    {
-      icon: LayoutTemplate,
-      eyebrow: "나만의 디자인",
-      heading: "매장에 맞는 유연한 디자인",
-      body: "완성형 레이아웃과 스타일 다수 — 커버, 색상, 메뉴 표현 방식을 매장에 맞게 고르세요.",
-      bullets: [
-        "완성형 레이아웃 다수",
-        "나만의 커버와 색상",
-        "몇 번의 클릭으로 변경",
-      ],
-    },
-    {
-      icon: Contact,
-      eyebrow: "연락처",
-      heading: "메뉴 안에 연락처와 SNS",
-      body: "지도, 전화, Instagram과 WhatsApp 링크를 담은 전용 페이지 — 손님은 한 번의 탭으로 찾아옵니다.",
-      bullets: [
-        "지도·전화·주소",
-        "Instagram과 WhatsApp",
-        "원 탭으로 연결",
-      ],
-    },
-    {
-      icon: MessageCircle,
-      eyebrow: "WhatsApp 주문",
-      heading: "WhatsApp으로 주문 받기",
-      body: "손님이 장바구니를 만들어 주문을 바로 WhatsApp으로 보냅니다 — 별도 앱 없이, 늘 쓰던 채팅에서.",
-      bullets: [
-        "WhatsApp으로 주문",
-        "별도 앱 불필요",
-        "늘 쓰던 채팅으로",
-      ],
-    },
-    {
-      icon: CalendarCheck,
-      eyebrow: "예약",
-      heading: "전화 없는 좌석 예약",
-      body: "손님이 메뉴나 링크로 직접 좌석을 예약하고, 테이블별 캘린더를 보며 자동 또는 수동으로 확정합니다.",
-      bullets: [
-        "24/7 예약, 전화 불필요",
-        "테이블별 캘린더",
-        "자동·수동 확정",
-      ],
-    },
-    {
       icon: Palette,
-      eyebrow: "프리미엄 디자인",
-      heading: "PDF 아닌 웹사이트처럼",
-      body: "환영 화면의 영상 배경, 컨셉 소개, 그리고 지도와 SNS가 담긴 별도 연락처 페이지.",
+      eyebrow: "디자인과 브랜드",
+      heading: "자체 도메인의 프리미엄 메뉴",
+      body: "영상 환영 화면, 나만의 디자인, 그리고 지도와 SNS가 담긴 연락처 페이지 — PDF가 아닌 자체 도메인에.",
       bullets: [
-        "홈 화면에 영상",
-        "컨셉과 메뉴 소개",
-        "별도 연락처 페이지",
+        "영상과 프리미엄 디자인",
+        "SSL 포함 자체 도메인",
+        "연락처·지도·SNS",
       ],
       image: { src: "/landing/feature-design.webp", alt: "카페 테이블의 두 휴대폰: 비디오 배경의 메뉴 홈 화면과 지도가 있는 연락처 페이지" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "주문 · 선택 사항",
-      heading: "메뉴에서 바로 주문",
-      body: "손님이 장바구니를 만들어 주문을 보냅니다 — 홀, WhatsApp, 주방 화면으로 전달됩니다. 선택 기능입니다.",
+      eyebrow: "주문",
+      heading: "수수료 0% 온라인 주문",
+      body: "손님이 메뉴에서, 또는 바로 WhatsApp으로 주문합니다 — 홀이나 주방으로 전달되고, 매출에서 떼는 건 0%.",
       bullets: [
-        "탭 한 번에 장바구니 전송",
-        "홀·WhatsApp·주방으로",
+        "메뉴나 WhatsApp에서",
+        "홀이나 주방으로, 0%",
         "설정에서 켜고 끄기",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "테이블의 두 휴대폰: 주문이 있는 장바구니와 주문 전송 확인" },
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "예약",
+      heading: "좌석 예약, 24/7",
+      body: "손님이 메뉴나 링크로 직접 좌석을 예약하고, 테이블별 캘린더를 보며 자동 또는 수동으로 확정합니다.",
+      bullets: [
+        "손님이 직접 예약",
+        "테이블별 캘린더",
+        "자동·수동 확정",
+      ],
+    },
+    {
+      icon: MonitorSmartphone,
+      eyebrow: "관리",
+      heading: "어디서든 관리",
+      body: "관리자 패널은 어떤 브라우저에서도 실행됩니다 — 휴대폰, 태블릿, PC. 설치할 것 없이 기본 메뉴가 몇 분 만에 공개됩니다.",
+      bullets: [
+        "모든 기기, 모든 브라우저",
+        "설치 불필요",
+        "몇 분 만에 공개",
+      ],
     },
   ],
 

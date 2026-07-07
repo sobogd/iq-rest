@@ -3,13 +3,8 @@ import {
   ShieldAlert,
   Palette,
   ShoppingCart,
-  MonitorSmartphone,
-  BadgePercent,
-  Globe,
-  LayoutTemplate,
-  Contact,
-  MessageCircle,
   CalendarCheck,
+  MonitorSmartphone,
 } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
@@ -47,8 +42,8 @@ export const CONTENT: FeatureContent = {
   subFeatures: [
     {
       icon: Languages,
-      eyebrow: "35 AI jezikov",
-      heading: "35 jezikov za vsakega gosta",
+      eyebrow: "Prevod z AI",
+      heading: "Meni v 35 jezikih",
       body: "Ena QR, 35 jezikov. AI prevaja s kulinaričnim kontekstom, zato vsaka jed zveni naravno. Turisti naročajo z gotovostjo.",
       bullets: [
         "35 jezikov v paketu",
@@ -60,7 +55,7 @@ export const CONTENT: FeatureContent = {
     {
       icon: ShieldAlert,
       eyebrow: "Alergeni",
-      heading: "Alergeni in diete pri vsaki jedi",
+      heading: "Alergeni in diete pri jedeh",
       body: "Označite gluten, laktozo, oreščke, vegansko in brez glutena. Gostje filtrirajo meni po dieti in naročajo z lahkoto.",
       bullets: [
         "14 kategorij alergenov",
@@ -70,105 +65,50 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-allergens.webp", alt: "Gost filtrira jedilnik po alergenih na telefonu, medtem ko lastnik ureja seznam alergenov na tablici" },
     },
     {
-      icon: MonitorSmartphone,
-      eyebrow: "Katera koli naprava",
-      heading: "Upravljajte s katere koli naprave",
-      body: "Skrbniška plošča teče v brskalniku — urejajte meni, cene in fotografije od kjer koli. Ničesar ni treba namestiti.",
-      bullets: [
-        "Teče v vsakem brskalniku",
-        "Telefon, tablica ali PC",
-        "Nič za namestitev",
-      ],
-    },
-    {
-      icon: BadgePercent,
-      eyebrow: "Brez provizije",
-      heading: "Nič provizije, brez dodatkov",
-      body: "Ena pregledna naročnina. Ne vzamemo deleža vašega prometa in ne skrivamo stroškov — vse ostane restavraciji.",
-      bullets: [
-        "Nič odstotkov od naročil",
-        "Brez skritih dodatkov",
-        "Ena fiksna cena",
-      ],
-    },
-    {
-      icon: Globe,
-      eyebrow: "Lastna domena",
-      heading: "Meni na vaši lastni domeni",
-      body: "Povežemo vašo domeno s SSL — gostje vidijo meni na naslovu restavracije. Pri DNS pomagamo v 10 minutah.",
-      bullets: [
-        "Vaša domena s SSL",
-        "meni.vasarestavracija.com",
-        "Pomagamo pri nastavitvi DNS",
-      ],
-    },
-    {
-      icon: LayoutTemplate,
-      eyebrow: "Vaša oblika",
-      heading: "Prilagodljiva oblika po vaše",
-      body: "Več pripravljenih postavitev in slogov — izberite naslovnico, barve in prikaz jedi, ki ustrezajo vašemu lokalu.",
-      bullets: [
-        "Več pripravljenih postavitev",
-        "Vaša naslovnica in barve",
-        "Sprememba v nekaj klikih",
-      ],
-    },
-    {
-      icon: Contact,
-      eyebrow: "Kontakti",
-      heading: "Kontakti in omrežja v meniju",
-      body: "Ločena stran z zemljevidom, telefonom in povezavami na Instagram in WhatsApp — gostje vas najdejo z enim dotikom.",
-      bullets: [
-        "Zemljevid, telefon in naslov",
-        "Instagram in WhatsApp",
-        "Stik z enim dotikom",
-      ],
-    },
-    {
-      icon: MessageCircle,
-      eyebrow: "Naročila prek WhatsApp",
-      heading: "Sprejemajte naročila prek WhatsApp",
-      body: "Gostje sestavijo košarico in pošljejo naročilo naravnost na vaš WhatsApp — brez ločene aplikacije, v klepetu, ki ga že uporabljajo.",
-      bullets: [
-        "Naročilo na vaš WhatsApp",
-        "Brez ločene aplikacije",
-        "Klepet kot običajno",
-      ],
-    },
-    {
-      icon: CalendarCheck,
-      eyebrow: "Rezervacije",
-      heading: "Rezervacija mize brez klicev",
-      body: "Gostje sami rezervirajo mizo prek menija ali povezave, vi vidite koledar po mizah in potrdite samodejno ali ročno.",
-      bullets: [
-        "Rezervacije 24/7 brez klicev",
-        "Koledar po mizah",
-        "Samodejna in ročna potrditev",
-      ],
-    },
-    {
       icon: Palette,
-      eyebrow: "Premium oblika",
-      heading: "Videti kot stran, ne PDF",
-      body: "Video ozadje na pozdravnem zaslonu, opisan koncept in ločena kontaktna stran z zemljevidom in družbenimi omrežji.",
+      eyebrow: "Oblika in znamka",
+      heading: "Premium meni na vaši domeni",
+      body: "Video pozdravni zaslon, lastna oblika in kontaktna stran z zemljevidom in omrežji — na vaši lastni domeni, ne PDF.",
       bullets: [
-        "Video na začetnem zaslonu",
-        "Opisan koncept in jedi",
-        "Ločena kontaktna stran",
+        "Video in premium oblika",
+        "Vaša domena s SSL",
+        "Kontakti, zemljevid in omrežja",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Dva telefona na mizi v kavarni: domači zaslon jedilnika z video ozadjem in kontaktna stran z zemljevidom" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Naročila · izbirno",
-      heading: "Naročila naravnost iz menija",
-      body: "Gostje sestavijo košarico in pošljejo naročilo — pride v dvorano, na WhatsApp ali na kuhinjski zaslon. Izbirno.",
+      eyebrow: "Naročila",
+      heading: "Spletna naročila, nič provizije",
+      body: "Gostje naročajo iz menija ali naravnost na vaš WhatsApp — pride v dvorano ali kuhinjo, z 0 % od prodaje.",
       bullets: [
-        "Košarica in pošiljanje z dotikom",
-        "V dvorano, WhatsApp ali kuhinjo",
+        "Iz menija ali z WhatsApp",
+        "V dvorano ali kuhinjo, 0 %",
         "Preklop v nastavitvah",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Dva telefona na mizi: košarica z naročilom in potrditev poslanega naročila" },
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Rezervacije",
+      heading: "Rezervacija mize, 24/7",
+      body: "Gostje sami rezervirajo mizo prek menija ali povezave, vi vidite koledar po mizah in potrdite samodejno ali ročno.",
+      bullets: [
+        "Gostje rezervirajo sami",
+        "Koledar po mizah",
+        "Samodejna in ročna potrditev",
+      ],
+    },
+    {
+      icon: MonitorSmartphone,
+      eyebrow: "Upravljanje",
+      heading: "Upravljajte od kjer koli",
+      body: "Skrbniška plošča teče v vsakem brskalniku — telefon, tablica ali PC. Nič za namestitev, osnovni meni zaživi v nekaj minutah.",
+      bullets: [
+        "Katera koli naprava in brskalnik",
+        "Nič za namestitev",
+        "Zaživi v nekaj minutah",
+      ],
     },
   ],
 

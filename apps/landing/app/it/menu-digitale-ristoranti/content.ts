@@ -3,13 +3,8 @@ import {
   ShieldAlert,
   Palette,
   ShoppingCart,
-  MonitorSmartphone,
-  BadgePercent,
-  Globe,
-  LayoutTemplate,
-  Contact,
-  MessageCircle,
   CalendarCheck,
+  MonitorSmartphone,
 } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
@@ -47,8 +42,8 @@ export const CONTENT: FeatureContent = {
   subFeatures: [
     {
       icon: Languages,
-      eyebrow: "35 lingue con IA",
-      heading: "35 lingue che ogni ospite legge",
+      eyebrow: "Traduzione con IA",
+      heading: "Menu in 35 lingue",
       body: "Un QR, 35 lingue. L'IA traduce con contesto culinario, così ogni piatto suona naturale. I turisti ordinano sicuri.",
       bullets: [
         "35 lingue nel tuo piano",
@@ -60,7 +55,7 @@ export const CONTENT: FeatureContent = {
     {
       icon: ShieldAlert,
       eyebrow: "Allergeni",
-      heading: "Allergeni e diete su ogni piatto",
+      heading: "Allergeni e diete sui piatti",
       body: "Segnala glutine, lattosio, frutta a guscio, vegano e senza glutine. Gli ospiti filtrano il menu sulla dieta e ordinano facile.",
       bullets: [
         "14 categorie di allergeni",
@@ -70,105 +65,50 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-allergens.webp", alt: "Ospite filtra il menu per allergeni sul cellulare mentre il titolare modifica l'elenco degli allergeni su un tablet" },
     },
     {
-      icon: MonitorSmartphone,
-      eyebrow: "Ogni dispositivo",
-      heading: "Gestiscilo da ogni dispositivo",
-      body: "Il pannello gira nel browser — modifica menu, prezzi e foto da ovunque. Non c'è nulla da installare.",
-      bullets: [
-        "Gira in ogni browser",
-        "Telefono, tablet o PC",
-        "Niente da installare",
-      ],
-    },
-    {
-      icon: BadgePercent,
-      eyebrow: "Zero commissioni",
-      heading: "Zero commissioni, nessun extra",
-      body: "Un abbonamento trasparente. Non tratteniamo parte dei tuoi incassi né nascondiamo costi — tutto resta al ristorante.",
-      bullets: [
-        "Zero percento sugli ordini",
-        "Nessun extra nascosto",
-        "Un prezzo unico",
-      ],
-    },
-    {
-      icon: Globe,
-      eyebrow: "Dominio tuo",
-      heading: "Il menu sul tuo dominio",
-      body: "Colleghiamo il tuo dominio con SSL — gli ospiti vedono il menu all'indirizzo del ristorante. Aiutiamo col DNS in 10 minuti.",
-      bullets: [
-        "Il tuo dominio con SSL",
-        "menu.tuoristorante.com",
-        "Aiutiamo col DNS",
-      ],
-    },
-    {
-      icon: LayoutTemplate,
-      eyebrow: "Il tuo stile",
-      heading: "Design flessibile su misura",
-      body: "Vari layout e stili pronti — scegli copertina, colori e presentazione dei piatti giusti per il tuo locale.",
-      bullets: [
-        "Vari layout pronti",
-        "Copertina e colori tuoi",
-        "Ristyling in pochi clic",
-      ],
-    },
-    {
-      icon: Contact,
-      eyebrow: "Contatti",
-      heading: "Contatti e social nel menu",
-      body: "Una pagina con mappa, telefono e link a Instagram e WhatsApp — gli ospiti ti trovano con un solo tocco.",
-      bullets: [
-        "Mappa, telefono e indirizzo",
-        "Instagram e WhatsApp",
-        "Ti contattano in un tocco",
-      ],
-    },
-    {
-      icon: MessageCircle,
-      eyebrow: "Ordini su WhatsApp",
-      heading: "Ricevi ordini su WhatsApp",
-      body: "Gli ospiti compongono il carrello e inviano l'ordine dritto al tuo WhatsApp — nessuna app a parte, nella chat che già usano.",
-      bullets: [
-        "Ordine al tuo WhatsApp",
-        "Nessuna app a parte",
-        "La chat di sempre",
-      ],
-    },
-    {
-      icon: CalendarCheck,
-      eyebrow: "Prenotazioni",
-      heading: "Prenota tavolo senza chiamate",
-      body: "Gli ospiti prenotano il tavolo dal menu o da un link, tu vedi il calendario per tavolo e confermi auto o a mano.",
-      bullets: [
-        "Prenotazioni 24/7, no chiamate",
-        "Calendario per tavolo",
-        "Conferma auto o manuale",
-      ],
-    },
-    {
       icon: Palette,
-      eyebrow: "Design premium",
-      heading: "Sembra un sito, non un PDF",
-      body: "Video di sfondo sulla schermata iniziale, il tuo concept descritto e una pagina contatti a parte con mappa e social.",
+      eyebrow: "Design e brand",
+      heading: "Menu premium sul tuo dominio",
+      body: "Video di benvenuto, il tuo design e una pagina contatti con mappa e social — sul tuo dominio, non un PDF.",
       bullets: [
-        "Video sulla schermata iniziale",
-        "Concept e piatti descritti",
-        "Pagina contatti a parte",
+        "Video e design premium",
+        "Il tuo dominio con SSL",
+        "Contatti, mappa e social",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Due cellulari su un tavolino da bar: schermata principale del menu con video di sfondo e pagina contatti con mappa" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Ordini · opzionale",
-      heading: "Ordini diretti dal menu",
-      body: "Gli ospiti compongono il carrello e inviano l'ordine — arriva in sala, su WhatsApp o sul display di cucina. Opzionale.",
+      eyebrow: "Ordini",
+      heading: "Ordini online, zero commissioni",
+      body: "Gli ospiti ordinano dal menu o dritto sul tuo WhatsApp — arriva in sala o in cucina, con 0% trattenuto sugli incassi.",
       bullets: [
-        "Carrello e invio in un tocco",
-        "In sala, WhatsApp o cucina",
+        "Dal menu o da WhatsApp",
+        "In sala o cucina, 0%",
         "Attivalo nelle impostazioni",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Due cellulari su un tavolo: carrello con l'ordine e schermata di ordine confermato" },
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Prenotazioni",
+      heading: "Prenotazione tavolo, 24/7",
+      body: "Gli ospiti prenotano il tavolo da soli dal menu o da un link, tu vedi il calendario per tavolo e confermi auto o a mano.",
+      bullets: [
+        "Prenotano da soli",
+        "Calendario per tavolo",
+        "Conferma auto o manuale",
+      ],
+    },
+    {
+      icon: MonitorSmartphone,
+      eyebrow: "Gestione",
+      heading: "Gestiscilo da ovunque",
+      body: "Il pannello gira in ogni browser — telefono, tablet o PC. Niente da installare, e un menu base va online in pochi minuti.",
+      bullets: [
+        "Ogni dispositivo, ogni browser",
+        "Niente da installare",
+        "Online in pochi minuti",
+      ],
     },
   ],
 

@@ -3,13 +3,8 @@ import {
   ShieldAlert,
   Palette,
   ShoppingCart,
-  MonitorSmartphone,
-  BadgePercent,
-  Globe,
-  LayoutTemplate,
-  Contact,
-  MessageCircle,
   CalendarCheck,
+  MonitorSmartphone,
 } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
@@ -47,8 +42,8 @@ export const CONTENT: FeatureContent = {
   subFeatures: [
     {
       icon: Languages,
-      eyebrow: "35 idiomas com IA",
-      heading: "35 idiomas que todos leem",
+      eyebrow: "Tradução IA",
+      heading: "Menu em 35 idiomas",
       body: "Um QR, 35 idiomas. A IA traduz com contexto culinário, cada prato soa natural. Os turistas pedem com confiança.",
       bullets: [
         "35 idiomas no teu plano",
@@ -60,7 +55,7 @@ export const CONTENT: FeatureContent = {
     {
       icon: ShieldAlert,
       eyebrow: "Alergénios",
-      heading: "Alergénios e dietas em cada prato",
+      heading: "Alergénios e dietas nos pratos",
       body: "Marca glúten, lactose, frutos secos, vegano e sem glúten. Os clientes filtram o menu à sua dieta e pedem sem problemas.",
       bullets: [
         "14 categorias de alergénios",
@@ -70,105 +65,50 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-allergens.webp", alt: "Cliente filtra o menu por alergénios no telemóvel enquanto o proprietário edita a lista de alergénios num tablet" },
     },
     {
-      icon: MonitorSmartphone,
-      eyebrow: "Qualquer dispositivo",
-      heading: "Gere de qualquer dispositivo",
-      body: "O painel corre no browser — edita menu, preços e fotos onde estiveres. Não há nada para instalar.",
-      bullets: [
-        "Corre em qualquer browser",
-        "Telemóvel, tablet ou PC",
-        "Nada para instalar",
-      ],
-    },
-    {
-      icon: BadgePercent,
-      eyebrow: "Sem comissão",
-      heading: "Zero comissão, sem extras",
-      body: "Uma subscrição transparente. Não ficamos com parte das tuas receitas nem escondemos taxas — fica tudo no restaurante.",
-      bullets: [
-        "Zero por cento nos pedidos",
-        "Sem extras escondidos",
-        "Um preço único",
-      ],
-    },
-    {
-      icon: Globe,
-      eyebrow: "Domínio próprio",
-      heading: "Menu no teu próprio domínio",
-      body: "Ligamos o teu domínio com SSL — os clientes veem o menu na morada do restaurante. Ajudamos com o DNS em 10 minutos.",
-      bullets: [
-        "O teu domínio com SSL",
-        "menu.oteurestaurante.pt",
-        "Ajudamos com o DNS",
-      ],
-    },
-    {
-      icon: LayoutTemplate,
-      eyebrow: "O teu design",
-      heading: "Design flexível à tua medida",
-      body: "Vários layouts e estilos prontos — escolhe a capa, as cores e a apresentação dos pratos que combinam com o teu espaço.",
-      bullets: [
-        "Vários layouts prontos",
-        "A tua capa e cores",
-        "Muda o estilo em cliques",
-      ],
-    },
-    {
-      icon: Contact,
-      eyebrow: "Contactos",
-      heading: "Contactos e redes no menu",
-      body: "Uma página com mapa, telefone e links para Instagram e WhatsApp — os clientes encontram-te num só toque.",
-      bullets: [
-        "Mapa, telefone e morada",
-        "Instagram e WhatsApp",
-        "Chega a ti num toque",
-      ],
-    },
-    {
-      icon: MessageCircle,
-      eyebrow: "Pedidos por WhatsApp",
-      heading: "Recebe pedidos por WhatsApp",
-      body: "Os clientes montam o carrinho e enviam o pedido direto para o teu WhatsApp — sem outra app, no chat que já usam.",
-      bullets: [
-        "Pedido ao teu WhatsApp",
-        "Sem outra app",
-        "O chat do costume",
-      ],
-    },
-    {
-      icon: CalendarCheck,
-      eyebrow: "Reservas",
-      heading: "Reserva de mesa sem chamadas",
-      body: "Os clientes reservam mesa pelo menu ou por um link, vês o calendário por mesa e confirmas auto ou manualmente.",
-      bullets: [
-        "Reservas 24/7, sem chamadas",
-        "Calendário por mesa",
-        "Confirmação auto ou manual",
-      ],
-    },
-    {
       icon: Palette,
-      eyebrow: "Design premium",
-      heading: "Parece um site, não um PDF",
-      body: "Vídeo de fundo no ecrã de boas-vindas, o teu conceito descrito e uma página de contactos à parte com mapa e redes.",
+      eyebrow: "Design e marca",
+      heading: "Menu premium no teu domínio",
+      body: "Ecrã de boas-vindas em vídeo, o teu próprio design e uma página de contactos com mapa e redes — no teu domínio, não um PDF.",
       bullets: [
-        "Vídeo no ecrã inicial",
-        "Conceito e pratos descritos",
-        "Página de contactos à parte",
+        "Vídeo e design premium",
+        "O teu domínio com SSL",
+        "Contactos, mapa e redes",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Dois telemóveis numa mesa de café: ecrã inicial do menu com fundo em vídeo e página de contactos com mapa" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Pedidos · opcional",
-      heading: "Pedidos direto do menu",
-      body: "Os clientes montam o carrinho e enviam o pedido — chega à sala, ao WhatsApp ou ao ecrã de cozinha. Opcional.",
+      eyebrow: "Pedidos",
+      heading: "Pedidos online, zero comissão",
+      body: "Os clientes pedem pelo menu ou direto ao teu WhatsApp — chega à sala ou à cozinha, com 0% retido das vendas.",
       bullets: [
-        "Carrinho e envio num toque",
-        "Sala, WhatsApp ou cozinha",
+        "Pelo menu ou WhatsApp",
+        "À sala ou cozinha, 0%",
         "Ativa nas definições",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Dois telemóveis numa mesa: carrinho com pedido e confirmação de envio" },
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Reservas",
+      heading: "Reserva de mesa, 24/7",
+      body: "Os clientes reservam mesa pelo menu ou por um link, vês o calendário por mesa e confirmas auto ou manualmente.",
+      bullets: [
+        "Os clientes reservam sozinhos",
+        "Calendário por mesa",
+        "Confirmação auto ou manual",
+      ],
+    },
+    {
+      icon: MonitorSmartphone,
+      eyebrow: "Gestão",
+      heading: "Gere de qualquer lugar",
+      body: "O painel corre em qualquer browser — telemóvel, tablet ou PC. Nada para instalar e um menu básico fica online em minutos.",
+      bullets: [
+        "Qualquer dispositivo e browser",
+        "Nada para instalar",
+        "Online em minutos",
+      ],
     },
   ],
 

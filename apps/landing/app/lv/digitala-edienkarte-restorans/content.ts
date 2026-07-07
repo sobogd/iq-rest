@@ -3,13 +3,8 @@ import {
   ShieldAlert,
   Palette,
   ShoppingCart,
-  MonitorSmartphone,
-  BadgePercent,
-  Globe,
-  LayoutTemplate,
-  Contact,
-  MessageCircle,
   CalendarCheck,
+  MonitorSmartphone,
 } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
@@ -47,8 +42,8 @@ export const CONTENT: FeatureContent = {
   subFeatures: [
     {
       icon: Languages,
-      eyebrow: "35 AI valodas",
-      heading: "35 valodas katram viesim",
+      eyebrow: "AI tulkojums",
+      heading: "Ēdienkarte 35 valodās",
       body: "Viens QR, 35 valodas. AI tulko ar kulinārijas kontekstu, tāpēc katrs ēdiens skan dabiski. Tūristi pasūta pārliecināti.",
       bullets: [
         "35 valodas tavā plānā",
@@ -60,7 +55,7 @@ export const CONTENT: FeatureContent = {
     {
       icon: ShieldAlert,
       eyebrow: "Alergēni",
-      heading: "Alergēni un diētas katram ēdienam",
+      heading: "Alergēni un diētas ēdienos",
       body: "Atzīmē glutēnu, laktozi, riekstus, vegānu un bezglutēna. Viesi filtrē ēdienkarti pēc savas diētas un pasūta bez pūlēm.",
       bullets: [
         "14 alergēnu kategorijas",
@@ -70,105 +65,50 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-allergens.webp", alt: "Viesis filtrē ēdienkarti pēc alergēniem telefonā, kamēr īpašnieks rediģē alergēnu sarakstu planšetdatorā" },
     },
     {
-      icon: MonitorSmartphone,
-      eyebrow: "Jebkura ierīce",
-      heading: "Pārvaldi no jebkuras ierīces",
-      body: "Administrēšanas panelis darbojas pārlūkā — rediģē ēdienkarti, cenas un foto no jebkurienes. Nekas nav jāinstalē.",
-      bullets: [
-        "Darbojas jebkurā pārlūkā",
-        "Telefons, planšete vai dators",
-        "Nekas nav jāinstalē",
-      ],
-    },
-    {
-      icon: BadgePercent,
-      eyebrow: "Bez komisijas",
-      heading: "Nulle komisijas, bez piemaksām",
-      body: "Viens caurspīdīgs abonements. Mēs neņemam daļu no tavas apgrozības un neslēpjam maksas — viss paliek restorānam.",
-      bullets: [
-        "Nulle procentu no pasūtījumiem",
-        "Bez slēptām piemaksām",
-        "Viena fiksēta cena",
-      ],
-    },
-    {
-      icon: Globe,
-      eyebrow: "Savs domēns",
-      heading: "Ēdienkarte tavā domēnā",
-      body: "Mēs savienojam tavu domēnu ar SSL — viesi redz ēdienkarti tava restorāna adresē. Palīdzam ar DNS 10 minūtēs.",
-      bullets: [
-        "Tavs domēns ar SSL",
-        "edienkarte.jusurestorans.lv",
-        "Palīdzam ar DNS iestatīšanu",
-      ],
-    },
-    {
-      icon: LayoutTemplate,
-      eyebrow: "Tavs dizains",
-      heading: "Elastīgs dizains tieši tev",
-      body: "Vairāki gatavi izkārtojumi un stili — izvēlies vāku, krāsas un ēdienu noformējumu, kas atbilst tavai vietai.",
-      bullets: [
-        "Vairāki gatavi izkārtojumi",
-        "Tavs vāks un krāsas",
-        "Jauns izskats dažos klikšķos",
-      ],
-    },
-    {
-      icon: Contact,
-      eyebrow: "Kontakti",
-      heading: "Kontakti un sociālie tīkli ēdienkartē",
-      body: "Atsevišķa lapa ar karti, tālruni un saitēm uz Instagram un WhatsApp — viesi atrod tevi ar vienu pieskārienu.",
-      bullets: [
-        "Karte, tālrunis un adrese",
-        "Instagram un WhatsApp",
-        "Sazinies ar vienu pieskārienu",
-      ],
-    },
-    {
-      icon: MessageCircle,
-      eyebrow: "WhatsApp pasūtījumi",
-      heading: "Pieņem pasūtījumus caur WhatsApp",
-      body: "Viesi izveido grozu un nosūta pasūtījumu tieši tavā WhatsApp — bez atsevišķas lietotnes, jau ierastajā sarunā.",
-      bullets: [
-        "Pasūtījums tavā WhatsApp",
-        "Bez atsevišķas lietotnes",
-        "Sarunājies kā ierasts",
-      ],
-    },
-    {
-      icon: CalendarCheck,
-      eyebrow: "Rezervācijas",
-      heading: "Galdiņu rezervēšana bez zvaniem",
-      body: "Viesi rezervē galdiņu paši caur ēdienkarti vai saiti, tu redzi kalendāru pa galdiem un apstiprini auto vai manuāli.",
-      bullets: [
-        "Rezervācija 24/7, bez zvaniem",
-        "Kalendārs visiem galdiem",
-        "Auto un manuāls apstiprinājums",
-      ],
-    },
-    {
       icon: Palette,
-      eyebrow: "Premium dizains",
-      heading: "Izskatās kā vietne, nevis PDF",
-      body: "Video fons sveiciena ekrānā, tava koncepcija aprakstīta un atsevišķa kontaktu lapa ar karti un sociālajiem tīkliem.",
+      eyebrow: "Dizains un zīmols",
+      heading: "Premium ēdienkarte tavā domēnā",
+      body: "Video sveiciena ekrāns, tavs dizains un kontaktu lapa ar karti un sociālajiem tīkliem — tavā domēnā, nevis PDF.",
       bullets: [
-        "Video sākuma ekrānā",
-        "Koncepcija un ēdieni aprakstīti",
-        "Atsevišķa kontaktu lapa",
+        "Video un premium dizains",
+        "Tavs domēns ar SSL",
+        "Kontakti, karte, sociālie tīkli",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Divi telefoni uz kafejnīcas galda: ēdienkartes sākuma ekrāns ar video fonu un kontaktu lapa ar karti" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Pasūtījumi · pēc izvēles",
-      heading: "Pasūtījumi tieši no ēdienkartes",
-      body: "Viesi izveido grozu un nosūta pasūtījumu — tas nonāk zālē, WhatsApp vai virtuves ekrānā. Pēc izvēles.",
+      eyebrow: "Pasūtījumi",
+      heading: "Tiešsaistes pasūtījumi, 0% komisijas",
+      body: "Viesi pasūta no ēdienkartes vai tieši tavā WhatsApp — pasūtījums nonāk zālē vai virtuvē, 0% no apgrozības.",
       bullets: [
-        "Grozs un sūtīšana ar pieskārienu",
-        "Uz zāli, WhatsApp vai virtuvi",
+        "No ēdienkartes vai WhatsApp",
+        "Uz zāli vai virtuvi, 0%",
         "Ieslēdz to iestatījumos",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Divi telefoni uz galda: grozs ar pasūtījumu un pasūtījuma nosūtīšanas apstiprinājums" },
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Rezervācijas",
+      heading: "Galdiņu rezervēšana 24/7",
+      body: "Viesi rezervē galdiņu paši caur ēdienkarti vai saiti, tu redzi kalendāru pa galdiem un apstiprini auto vai manuāli.",
+      bullets: [
+        "Viesi rezervē paši",
+        "Kalendārs visiem galdiem",
+        "Auto un manuāls apstiprinājums",
+      ],
+    },
+    {
+      icon: MonitorSmartphone,
+      eyebrow: "Pārvaldība",
+      heading: "Pārvaldi no jebkurienes",
+      body: "Administrēšanas panelis darbojas jebkurā pārlūkā — telefons, planšete vai dators. Nekas nav jāinstalē, palaišana minūtēs.",
+      bullets: [
+        "Jebkura ierīce, jebkurš pārlūks",
+        "Nekas nav jāinstalē",
+        "Palaišana dažās minūtēs",
+      ],
     },
   ],
 

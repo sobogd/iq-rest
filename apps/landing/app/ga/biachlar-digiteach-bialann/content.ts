@@ -3,13 +3,8 @@ import {
   ShieldAlert,
   Palette,
   ShoppingCart,
-  MonitorSmartphone,
-  BadgePercent,
-  Globe,
-  LayoutTemplate,
-  Contact,
-  MessageCircle,
   CalendarCheck,
+  MonitorSmartphone,
 } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
@@ -47,8 +42,8 @@ export const CONTENT: FeatureContent = {
   subFeatures: [
     {
       icon: Languages,
-      eyebrow: "35 teanga IS",
-      heading: "35 teanga do gach aoi",
+      eyebrow: "Aistriúchán IS",
+      heading: "Biachlár i 35 teanga",
       body: "QR amháin, 35 teanga. Aistríonn an IS le comhthéacs cócaireachta, mar sin fuaimíonn gach mias nádúrtha. Ordaíonn turasóirí go muiníneach.",
       bullets: [
         "35 teanga i do phlean",
@@ -60,7 +55,7 @@ export const CONTENT: FeatureContent = {
     {
       icon: ShieldAlert,
       eyebrow: "Ailléirginí",
-      heading: "Ailléirginí agus aiste bia ar gach mias",
+      heading: "Ailléirginí agus aiste bia ar mhiasa",
       body: "Clibeáil glútan, lachtós, cnónna, véigeach agus saor ó ghlútan. Scagann aíonna an biachlár chun a n-aiste bia a oiriúnú agus ordaíonn go héasca.",
       bullets: [
         "14 catagóir ailléirginí",
@@ -70,105 +65,50 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-allergens.webp", alt: "Aoi ag scagadh an bhiachláir de réir ailléirginí ar a ghuthán fad atá an t-úinéir ag cur an liosta ailléirginí in eagar ar tháibléad" },
     },
     {
-      icon: MonitorSmartphone,
-      eyebrow: "Gléas ar bith",
-      heading: "Bainistigh ó ghléas ar bith",
-      body: "Ritheann an painéal riaracháin sa bhrabhsálaí — cuir biachlár, praghsanna is grianghraif in eagar ó áit ar bith. Gan aon rud le suiteáil.",
-      bullets: [
-        "Ritheann in aon bhrabhsálaí",
-        "Guthán, táibléad nó ríomhaire",
-        "Gan aon rud le suiteáil",
-      ],
-    },
-    {
-      icon: BadgePercent,
-      eyebrow: "Gan choimisiún",
-      heading: "Coimisiún nialasach, gan bhreiseáin",
-      body: "Síntiús trédhearcach amháin. Ní thógaimid sciar de d'ioncam ná ní cheilimid táillí — fanann sé ar fad leis an mbialann.",
-      bullets: [
-        "Nialas faoin gcéad ar orduithe",
-        "Gan bhreiseáin fholaithe",
-        "Praghas cothrom amháin",
-      ],
-    },
-    {
-      icon: Globe,
-      eyebrow: "Fearann féin",
-      heading: "Biachlár ar d'fhearann féin",
-      body: "Nascann muid d'fhearann le SSL — feiceann aíonna an biachlár ar sheoladh do bhialainne. Cuidímid le DNS i 10 nóiméad.",
-      bullets: [
-        "D'fhearann le SSL",
-        "menu.dobhialannsa.ie",
-        "Cuidímid le socrú DNS",
-      ],
-    },
-    {
-      icon: LayoutTemplate,
-      eyebrow: "Do dhearadh",
-      heading: "Dearadh solúbtha a oireann duit",
-      body: "Roinnt leagan amach agus stíleanna réidh — roghnaigh an clúdach, na dathanna is cur i láthair na miasa a oireann do d'áit.",
-      bullets: [
-        "Roinnt leagan amach réidh",
-        "Do chlúdach is do dhathanna",
-        "Athstíl i gcúpla cliceáil",
-      ],
-    },
-    {
-      icon: Contact,
-      eyebrow: "Teagmhálacha",
-      heading: "Teagmhálacha is sóisialta sa bhiachlár",
-      body: "Leathanach tiomnaithe le léarscáil, guthán is naisc chuig Instagram agus WhatsApp — aimsíonn aíonna thú le tapáil amháin.",
-      bullets: [
-        "Léarscáil, guthán is seoladh",
-        "Instagram agus WhatsApp",
-        "Teagmháil le tapáil amháin",
-      ],
-    },
-    {
-      icon: MessageCircle,
-      eyebrow: "Orduithe WhatsApp",
-      heading: "Glac orduithe trí WhatsApp",
-      body: "Tógann aíonna ciseán is seolann an t-ordú díreach chuig do WhatsApp — gan aip ar leith, sa chomhrá a úsáideann siad cheana.",
-      bullets: [
-        "Ordú chuig do WhatsApp",
-        "Gan aip ar leith",
-        "Comhrá mar is gnách",
-      ],
-    },
-    {
-      icon: CalendarCheck,
-      eyebrow: "Áirithintí",
-      heading: "Áirithint bord gan ghlaonna",
-      body: "Áirithníonn aíonna bord iad féin tríd an mbiachlár nó nasc, feiceann tú an féilire de réir boird is deimhníonn go huathoibríoch nó de láimh.",
-      bullets: [
-        "Áirithint 24/7, gan ghlaonna",
-        "Féilire trasna na mbord",
-        "Deimhniú uath is de láimh",
-      ],
-    },
-    {
       icon: Palette,
-      eyebrow: "Dearadh préimhe",
-      heading: "Cuma suímh, ní PDF",
-      body: "Cúlra físeáin ar an scáileán fáilte, cur síos ar do choincheap is leathanach teagmhála ar leith le léarscáil is sóisialta.",
+      eyebrow: "Dearadh is branda",
+      heading: "Biachlár préimhe ar d'fhearann",
+      body: "Scáileán fáilte físeáin, do dhearadh féin is leathanach teagmhála le léarscáil is sóisialta — ar d'fhearann féin, ní PDF.",
       bullets: [
-        "Físeán ar an scáileán baile",
-        "Coincheap is miasa curtha síos",
-        "Leathanach teagmhála ar leith",
+        "Físeán is dearadh préimhe",
+        "D'fhearann le SSL",
+        "Teagmhálacha, léarscáil is sóisialta",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Dhá ghuthán ar bhord caifé: scáileán baile an bhiachláir le cúlra físeáin agus leathanach teagmhála le léarscáil" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Orduithe · roghnach",
-      heading: "Orduithe díreach ón mbiachlár",
-      body: "Tógann aíonna ciseán is seolann an t-ordú — sroicheann sé an halla, WhatsApp nó scáileán na cistine. Roghnach.",
+      eyebrow: "Orduithe",
+      heading: "Orduithe ar líne, gan choimisiún",
+      body: "Ordaíonn aíonna ón mbiachlár nó díreach chuig do WhatsApp — sroicheann sé an halla nó an chistin, le 0% á thógáil ó dhíolacháin.",
       bullets: [
-        "Ciseán is seoladh le tapáil",
-        "Chuig halla, WhatsApp nó cistin",
+        "Ón mbiachlár nó WhatsApp",
+        "Chuig halla nó cistin, 0%",
         "Cas air sna socruithe",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Dhá ghuthán ar bhord: ciseán le hordú agus deimhniú gur seoladh an t-ordú" },
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Áirithintí",
+      heading: "Áirithint bord, 24/7",
+      body: "Áirithníonn aíonna bord iad féin tríd an mbiachlár nó nasc, feiceann tú an féilire de réir boird is deimhníonn go huathoibríoch nó de láimh.",
+      bullets: [
+        "Áirithníonn aíonna iad féin",
+        "Féilire trasna na mbord",
+        "Deimhniú uath is de láimh",
+      ],
+    },
+    {
+      icon: MonitorSmartphone,
+      eyebrow: "Bainistíocht",
+      heading: "Bainistigh é ó áit ar bith",
+      body: "Ritheann an painéal riaracháin in aon bhrabhsálaí — guthán, táibléad nó ríomhaire. Gan aon rud le suiteáil, is téann biachlár bunúsach beo i gceann nóiméad.",
+      bullets: [
+        "Aon ghléas, aon bhrabhsálaí",
+        "Gan aon rud le suiteáil",
+        "Beo i gceann nóiméad",
+      ],
     },
   ],
 

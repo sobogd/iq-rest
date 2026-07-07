@@ -3,13 +3,8 @@ import {
   ShieldAlert,
   Palette,
   ShoppingCart,
-  MonitorSmartphone,
-  BadgePercent,
-  Globe,
-  LayoutTemplate,
-  Contact,
-  MessageCircle,
   CalendarCheck,
+  MonitorSmartphone,
 } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
@@ -47,9 +42,9 @@ export const CONTENT: FeatureContent = {
   subFeatures: [
     {
       icon: Languages,
-      eyebrow: "35 AI jezika",
-      heading: "35 jezika za svakog gosta",
-      body: "Jedan QR, 35 jezika. AI prevodi sa kulinarskim kontekstom, pa svako jelo zvuči prirodno. Turisti poručuju bez ustručavanja.",
+      eyebrow: "AI prevod",
+      heading: "Meni na 35 jezika",
+      body: "Jedan QR, 35 jezika. AI prevodi sa kulinarskim kontekstom, pa svako jelo zvuči prirodno. Turisti poručuju sigurno.",
       bullets: [
         "35 jezika u pretplati",
         "Kulinarski AI, ne Google",
@@ -60,7 +55,7 @@ export const CONTENT: FeatureContent = {
     {
       icon: ShieldAlert,
       eyebrow: "Alergeni",
-      heading: "Alergeni i dijete na svakom jelu",
+      heading: "Alergeni i dijete na jelima",
       body: "Označite gluten, laktozu, orašaste plodove, vegansko i bez glutena. Gosti filtriraju meni po svojoj ishrani i lako poručuju.",
       bullets: [
         "14 kategorija alergena",
@@ -70,105 +65,50 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-allergens.webp", alt: "Gost filtrira meni po alergenima na telefonu dok vlasnik uređuje listu alergena na tabletu" },
     },
     {
-      icon: MonitorSmartphone,
-      eyebrow: "Bilo koji uređaj",
-      heading: "Upravljajte sa svakog uređaja",
-      body: "Administrativni panel radi u pregledaču — menjajte meni, cene i fotografije bilo gde. Ništa se ne instalira.",
-      bullets: [
-        "Radi u svakom pregledaču",
-        "Telefon, tablet ili PC",
-        "Ništa se ne instalira",
-      ],
-    },
-    {
-      icon: BadgePercent,
-      eyebrow: "Bez provizije",
-      heading: "Nula provizije, bez dodataka",
-      body: "Jedna transparentna pretplata. Ne uzimamo deo vašeg prometa niti krijemo naknade — sve ostaje restoranu.",
-      bullets: [
-        "Nula procenata na porudžbine",
-        "Bez skrivenih dodataka",
-        "Jedna fiksna cena",
-      ],
-    },
-    {
-      icon: Globe,
-      eyebrow: "Sopstveni domen",
-      heading: "Meni na vašem domenu",
-      body: "Povezujemo vaš domen sa SSL — gosti vide meni na adresi vašeg restorana. Pomažemo sa DNS za 10 minuta.",
-      bullets: [
-        "Vaš domen sa SSL",
-        "menu.vasrestoran.com",
-        "Pomažemo sa DNS podešavanjem",
-      ],
-    },
-    {
-      icon: LayoutTemplate,
-      eyebrow: "Vaš dizajn",
-      heading: "Fleksibilan dizajn po meri",
-      body: "Nekoliko gotovih šablona i stilova — izaberite naslovnu, boje i prikaz jela koji odgovaraju vašem lokalu.",
-      bullets: [
-        "Nekoliko gotovih šablona",
-        "Vaša naslovna i boje",
-        "Novi izgled u par klikova",
-      ],
-    },
-    {
-      icon: Contact,
-      eyebrow: "Kontakti",
-      heading: "Kontakti i mreže u meniju",
-      body: "Posebna stranica sa mapom, telefonom i linkovima ka Instagramu i WhatsAppu — gosti vas nađu jednim dodirom.",
-      bullets: [
-        "Mapa, telefon i adresa",
-        "Instagram i WhatsApp",
-        "Dostupni jednim dodirom",
-      ],
-    },
-    {
-      icon: MessageCircle,
-      eyebrow: "WhatsApp porudžbine",
-      heading: "Primajte porudžbine preko WhatsAppa",
-      body: "Gosti prave korpu i šalju porudžbinu pravo na vaš WhatsApp — bez posebne aplikacije, u čatu koji već koriste.",
-      bullets: [
-        "Porudžbina na vaš WhatsApp",
-        "Bez posebne aplikacije",
-        "Čat kao i obično",
-      ],
-    },
-    {
-      icon: CalendarCheck,
-      eyebrow: "Rezervacije",
-      heading: "Rezervacija stolova bez poziva",
-      body: "Gosti sami rezervišu sto preko menija ili linka, vi vidite kalendar po stolovima i potvrđujete auto ili ručno.",
-      bullets: [
-        "Rezervacije 24/7, bez poziva",
-        "Kalendar po stolovima",
-        "Auto i ručna potvrda",
-      ],
-    },
-    {
       icon: Palette,
-      eyebrow: "Premijum dizajn",
-      heading: "Izgleda kao sajt, ne kao PDF",
-      body: "Video pozadina na ekranu dobrodošlice, opisan koncept i posebna stranica kontakta sa mapom i mrežama.",
+      eyebrow: "Dizajn i brend",
+      heading: "Premijum meni na vašem domenu",
+      body: "Video ekran dobrodošlice, vaš sopstveni dizajn i stranica kontakta sa mapom i mrežama — na vašem domenu, ne PDF.",
       bullets: [
-        "Video na početnom ekranu",
-        "Opisan koncept i jela",
-        "Posebna stranica kontakta",
+        "Video i premijum dizajn",
+        "Vaš domen sa SSL",
+        "Kontakti, mapa i mreže",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Dva telefona na stolu kafića: početni ekran menija sa video pozadinom i stranica kontakta sa mapom" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Porudžbine · opciono",
-      heading: "Porudžbine pravo iz menija",
-      body: "Gosti prave korpu i šalju porudžbinu — stiže u salu, na WhatsApp ili na kuhinjski ekran. Opciono.",
+      eyebrow: "Porudžbine",
+      heading: "Onlajn porudžbine, nula provizije",
+      body: "Gosti poručuju iz menija ili pravo na vaš WhatsApp — stiže u salu ili kuhinju, uz 0% uzeto od prometa.",
       bullets: [
-        "Korpa i slanje jednim dodirom",
-        "U salu, WhatsApp ili kuhinju",
+        "Iz menija ili WhatsAppa",
+        "U salu ili kuhinju, 0%",
         "Uključite u podešavanjima",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Dva telefona na stolu: korpa sa porudžbinom i potvrda poslate porudžbine" },
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Rezervacije",
+      heading: "Rezervacija stolova, 24/7",
+      body: "Gosti sami rezervišu sto preko menija ili linka, vi vidite kalendar po stolovima i potvrđujete auto ili ručno.",
+      bullets: [
+        "Gosti rezervišu sami",
+        "Kalendar po stolovima",
+        "Auto i ručna potvrda",
+      ],
+    },
+    {
+      icon: MonitorSmartphone,
+      eyebrow: "Upravljanje",
+      heading: "Upravljajte sa bilo kog mesta",
+      body: "Administrativni panel radi u svakom pregledaču — telefon, tablet ili PC. Ništa se ne instalira, a osnovni meni je onlajn za par minuta.",
+      bullets: [
+        "Svaki uređaj, svaki pregledač",
+        "Ništa se ne instalira",
+        "Onlajn za par minuta",
+      ],
     },
   ],
 

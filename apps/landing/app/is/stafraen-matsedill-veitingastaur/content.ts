@@ -3,13 +3,8 @@ import {
   ShieldAlert,
   Palette,
   ShoppingCart,
-  MonitorSmartphone,
-  BadgePercent,
-  Globe,
-  LayoutTemplate,
-  Contact,
-  MessageCircle,
   CalendarCheck,
+  MonitorSmartphone,
 } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
@@ -47,8 +42,8 @@ export const CONTENT: FeatureContent = {
   subFeatures: [
     {
       icon: Languages,
-      eyebrow: "35 gervigreindartungumál",
-      heading: "35 tungumál fyrir hvern gest",
+      eyebrow: "Gervigreindar þýðing",
+      heading: "Matseðill á 35 tungumálum",
       body: "Einn QR, 35 tungumál. Gervigreindin þýðir með matargerðarsamhengi, svo hver réttur hljómar eðlilega. Ferðamenn panta óhikað.",
       bullets: [
         "35 tungumál í áskriftinni",
@@ -60,7 +55,7 @@ export const CONTENT: FeatureContent = {
     {
       icon: ShieldAlert,
       eyebrow: "Ofnæmisvakar",
-      heading: "Ofnæmisvakar og mataræði á hverjum rétti",
+      heading: "Ofnæmisvakar og mataræði á réttum",
       body: "Merktu glúten, laktósa, hnetur, vegan og glúteinlaust. Gestir sía matseðilinn eftir mataræði og panta áreynslulaust.",
       bullets: [
         "14 flokkar ofnæmisvaka",
@@ -70,105 +65,50 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-allergens.webp", alt: "Gestur síar matseðilinn eftir ofnæmisvökum í símanum meðan eigandinn breytir ofnæmisvakalistanum á spjaldtölvu" },
     },
     {
-      icon: MonitorSmartphone,
-      eyebrow: "Hvaða tæki sem er",
-      heading: "Stjórnaðu úr hvaða tæki sem er",
-      body: "Stjórnborðið keyrir í vafranum — breyttu matseðli, verðum og myndum hvaðan sem er. Ekkert að setja upp.",
-      bullets: [
-        "Keyrir í hvaða vafra sem er",
-        "Sími, spjaldtölva eða tölva",
-        "Ekkert að setja upp",
-      ],
-    },
-    {
-      icon: BadgePercent,
-      eyebrow: "Engin þóknun",
-      heading: "Engin þóknun, engir aukahlutir",
-      body: "Ein gagnsæ áskrift. Við tökum enga hlutdeild í tekjum þínum og felum engin gjöld — allt situr hjá veitingastaðnum.",
-      bullets: [
-        "Núll prósent af pöntunum",
-        "Engir faldir aukahlutir",
-        "Eitt fast verð",
-      ],
-    },
-    {
-      icon: Globe,
-      eyebrow: "Eigið lén",
-      heading: "Matseðill á þínu eigin léni",
-      body: "Við tengjum lénið þitt með SSL — gestir sjá matseðilinn á heimilisfangi veitingastaðarins. Við hjálpum með DNS á 10 mínútum.",
-      bullets: [
-        "Þitt lén með SSL",
-        "matsedill.veitingastadurthinn.is",
-        "Við hjálpum með DNS",
-      ],
-    },
-    {
-      icon: LayoutTemplate,
-      eyebrow: "Þín hönnun",
-      heading: "Sveigjanleg hönnun sem hentar þér",
-      body: "Nokkur tilbúin snið og stílar — veldu forsíðu, liti og framsetningu rétta sem passa við staðinn þinn.",
-      bullets: [
-        "Nokkur tilbúin snið",
-        "Þín forsíða og litir",
-        "Umbreyttu í nokkrum smellum",
-      ],
-    },
-    {
-      icon: Contact,
-      eyebrow: "Tengiliðir",
-      heading: "Tengiliðir og samfélagsmiðlar í matseðli",
-      body: "Sérstök síða með korti, síma og tenglum á Instagram og WhatsApp — gestir finna þig með einum smelli.",
-      bullets: [
-        "Kort, sími og heimilisfang",
-        "Instagram og WhatsApp",
-        "Náðu í okkur með einum smelli",
-      ],
-    },
-    {
-      icon: MessageCircle,
-      eyebrow: "WhatsApp pantanir",
-      heading: "Taktu við pöntunum gegnum WhatsApp",
-      body: "Gestir byggja körfu og senda pöntunina beint í þitt WhatsApp — ekkert sérstakt app, í spjallinu sem þeir nota nú þegar.",
-      bullets: [
-        "Pöntun í þitt WhatsApp",
-        "Ekkert sérstakt app",
-        "Spjall eins og venjulega",
-      ],
-    },
-    {
-      icon: CalendarCheck,
-      eyebrow: "Bókanir",
-      heading: "Borðabókun án símtala",
-      body: "Gestir bóka borð sjálfir gegnum matseðilinn eða tengil, þú sérð dagatal eftir borðum og staðfestir sjálfvirkt eða handvirkt.",
-      bullets: [
-        "Bókun 24/7, engin símtöl",
-        "Dagatal yfir öll borð",
-        "Sjálfvirk og handvirk staðfesting",
-      ],
-    },
-    {
       icon: Palette,
-      eyebrow: "Premium hönnun",
-      heading: "Lítur út eins og vefur, ekki PDF",
-      body: "Myndbandsbakgrunnur á velkominskjánum, hugmyndinni þinni lýst og sérstök tengiliðasíða með korti og samfélagsmiðlum.",
+      eyebrow: "Hönnun og vörumerki",
+      heading: "Vandaður matseðill á þínu léni",
+      body: "Myndbandsbakgrunnur á velkominskjánum, þín eigin hönnun og tengiliðasíða með korti og samfélagsmiðlum — á þínu eigin léni, ekki PDF.",
       bullets: [
-        "Myndband á heimaskjánum",
-        "Hugmynd og réttum lýst",
-        "Sérstök tengiliðasíða",
+        "Myndband og vönduð hönnun",
+        "Þitt lén með SSL",
+        "Tengiliðir, kort og samfélagsmiðlar",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Tveir símar á kaffihúsborði: heimaskjár matseðilsins með myndbandsbakgrunni og samskiptasíða með korti" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Pantanir · valfrjálst",
-      heading: "Pantanir beint úr matseðlinum",
-      body: "Gestir byggja körfu og senda pöntunina — hún berst í salinn, WhatsApp eða á eldhússkjáinn. Valfrjálst.",
+      eyebrow: "Pantanir",
+      heading: "Netpantanir, engin þóknun",
+      body: "Gestir panta úr matseðlinum eða beint í þitt WhatsApp — það berst í salinn eða eldhúsið, með 0% tekin af sölunni.",
       bullets: [
-        "Karfa og sending með einum smelli",
-        "Í sal, WhatsApp eða eldhús",
+        "Úr matseðli eða WhatsApp",
+        "Í sal eða eldhús, 0%",
         "Kveiktu á því í stillingum",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Tveir símar á borði: karfa með pöntun og staðfesting á sendri pöntun" },
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Bókanir",
+      heading: "Borðabókun, 24/7",
+      body: "Gestir bóka borð sjálfir gegnum matseðilinn eða tengil, þú sérð dagatal eftir borðum og staðfestir sjálfvirkt eða handvirkt.",
+      bullets: [
+        "Gestir bóka sjálfir",
+        "Dagatal yfir öll borð",
+        "Sjálfvirk og handvirk staðfesting",
+      ],
+    },
+    {
+      icon: MonitorSmartphone,
+      eyebrow: "Stjórnun",
+      heading: "Stjórnaðu hvaðan sem er",
+      body: "Stjórnborðið keyrir í hvaða vafra sem er — síma, spjaldtölvu eða tölvu. Ekkert að setja upp, og grunnmatseðill fer í loftið á nokkrum mínútum.",
+      bullets: [
+        "Hvaða tæki og vafri sem er",
+        "Ekkert að setja upp",
+        "Fer í loftið á nokkrum mínútum",
+      ],
     },
   ],
 

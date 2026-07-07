@@ -3,13 +3,8 @@ import {
   ShieldAlert,
   Palette,
   ShoppingCart,
-  MonitorSmartphone,
-  BadgePercent,
-  Globe,
-  LayoutTemplate,
-  Contact,
-  MessageCircle,
   CalendarCheck,
+  MonitorSmartphone,
 } from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
@@ -47,8 +42,8 @@ export const CONTENT: FeatureContent = {
   subFeatures: [
     {
       icon: Languages,
-      eyebrow: "35 种 AI 语言",
-      heading: "人人读懂的 35 种语言",
+      eyebrow: "AI 翻译",
+      heading: "35 种语言的菜单",
       body: "一个 QR，35 种语言。AI 结合菜品语境翻译，每道菜都地道自然，游客点餐更放心。",
       bullets: [
         "套餐含 35 种语言",
@@ -60,7 +55,7 @@ export const CONTENT: FeatureContent = {
     {
       icon: ShieldAlert,
       eyebrow: "过敏原",
-      heading: "每道菜都标注过敏原",
+      heading: "菜品标注过敏原与饮食",
       body: "标记麸质、乳糖、坚果、纯素和无麸质。客人按饮食筛选菜单，轻松点餐。",
       bullets: [
         "14 类过敏原",
@@ -70,105 +65,50 @@ export const CONTENT: FeatureContent = {
       image: { src: "/landing/feature-allergens.webp", alt: "客人在手机上按过敏原过滤菜单,同时老板在平板电脑上编辑过敏原列表" },
     },
     {
-      icon: MonitorSmartphone,
-      eyebrow: "任意设备",
-      heading: "任意设备皆可管理",
-      body: "管理后台在浏览器中运行 — 随时随地编辑菜单、价格和图片，无需安装。",
-      bullets: [
-        "任意浏览器可用",
-        "手机、平板或电脑",
-        "无需安装",
-      ],
-    },
-    {
-      icon: BadgePercent,
-      eyebrow: "零抽成",
-      heading: "零抽成，无附加费",
-      body: "一份透明订阅。不抽取您的营收，也没有隐藏费用 — 全部归餐厅所有。",
-      bullets: [
-        "订单 0% 抽成",
-        "无隐藏附加费",
-        "统一固定价格",
-      ],
-    },
-    {
-      icon: Globe,
-      eyebrow: "专属域名",
-      heading: "用自己的域名展示菜单",
-      body: "为您接入带 SSL 的域名 — 客人在餐厅自己的网址上看菜单。10 分钟协助完成 DNS。",
-      bullets: [
-        "专属域名带 SSL",
-        "menu.restaurant.com",
-        "协助配置 DNS",
-      ],
-    },
-    {
-      icon: LayoutTemplate,
-      eyebrow: "自定义设计",
-      heading: "灵活设计契合风格",
-      body: "多套现成版式与样式 — 选择契合门店的封面、配色和菜品呈现方式。",
-      bullets: [
-        "多套现成版式",
-        "自定义封面配色",
-        "几步即可换装",
-      ],
-    },
-    {
-      icon: Contact,
-      eyebrow: "联系方式",
-      heading: "菜单内含联系与社交",
-      body: "专属页面含地图、电话及 Instagram 和 WhatsApp 链接 — 客人一键即可找到您。",
-      bullets: [
-        "地图、电话与地址",
-        "Instagram 与 WhatsApp",
-        "一键触达",
-      ],
-    },
-    {
-      icon: MessageCircle,
-      eyebrow: "WhatsApp 点餐",
-      heading: "通过 WhatsApp 接单",
-      body: "客人建立购物车，把订单直接发到您的 WhatsApp — 无需另装应用，就用他们常用的聊天。",
-      bullets: [
-        "订单发到 WhatsApp",
-        "无需另装应用",
-        "照常聊天下单",
-      ],
-    },
-    {
-      icon: CalendarCheck,
-      eyebrow: "订座",
-      heading: "无需电话即可订座",
-      body: "客人通过菜单或链接自助订座，您按餐桌查看日历，自动或手动确认。",
-      bullets: [
-        "24/7 订座，无需来电",
-        "跨餐桌日历",
-        "自动与手动确认",
-      ],
-    },
-    {
       icon: Palette,
-      eyebrow: "高级设计",
-      heading: "像网站，而非 PDF",
-      body: "欢迎屏的视频背景、门店概念介绍，以及带地图和社交的独立联系页面。",
+      eyebrow: "设计与品牌",
+      heading: "专属域名上的高级菜单",
+      body: "视频欢迎屏、专属设计，以及带地图和社交的联系页面 — 呈现在您自己的域名上，而非 PDF。",
       bullets: [
-        "主屏视频背景",
-        "介绍概念与菜品",
-        "独立联系页面",
+        "视频与高级设计",
+        "专属域名带 SSL",
+        "联系、地图与社交",
       ],
       image: { src: "/landing/feature-design.webp", alt: "咖啡馆桌上的两部手机:带视频背景的菜单主屏和带地图的联系页面" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "点餐 · 可选",
-      heading: "直接从菜单下单",
-      body: "客人建立购物车并发送订单 — 送达大堂、WhatsApp 或厨房屏幕。可选功能。",
+      eyebrow: "点餐",
+      heading: "在线点餐，零抽成",
+      body: "客人从菜单或直接发到您的 WhatsApp 下单 — 送达大堂或厨房，销售额抽成为 0%。",
       bullets: [
-        "一键加入购物车并发送",
-        "送达大堂、WhatsApp 或厨房",
+        "从菜单或 WhatsApp",
+        "送达大堂或厨房，0%",
         "在设置中开关",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "桌上的两部手机:带订单的购物车和已下单的确认" },
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "订座",
+      heading: "餐桌预订，24/7",
+      body: "客人通过菜单或链接自助订座，您按餐桌查看日历，自动或手动确认。",
+      bullets: [
+        "客人自助预订",
+        "跨餐桌日历",
+        "自动与手动确认",
+      ],
+    },
+    {
+      icon: MonitorSmartphone,
+      eyebrow: "管理",
+      heading: "随时随地管理",
+      body: "管理后台在任意浏览器中运行 — 手机、平板或电脑。无需安装，基础菜单几分钟即可上线。",
+      bullets: [
+        "任意设备、任意浏览器",
+        "无需安装",
+        "几分钟即上线",
+      ],
     },
   ],
 
