@@ -1,10 +1,23 @@
-import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
+import {
+  Languages,
+  ShieldAlert,
+  Palette,
+  ShoppingCart,
+  MonitorSmartphone,
+  BadgePercent,
+  Globe,
+  LayoutTemplate,
+  Contact,
+  MessageCircle,
+  CalendarCheck,
+} from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
   locale: "ja",
   slug: "dejitaru-menyu-resutoran",
   trackPrefix: "l_ja_digital",
+  hideFeatureHeading: true,
 
   meta: {
     title: "レストラン向けデジタルメニュー | IQ Rest",
@@ -19,9 +32,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "売れるデジタルメニュー。",
+    headline: "すべてが揃うデジタルメニュー",
     cta: "デジタルメニューを作成",
-    sub: "紙のメニューをオンラインに：写真、アレルゲン、リアルタイム価格、35言語翻訳。再印刷なし。",
+    sub: "写真、アレルゲン、35言語翻訳。さらに注文、WhatsApp、席予約まで — すべてIQ Rest一つで。",
   },
 
   scan: {
@@ -35,48 +48,125 @@ export const CONTENT: FeatureContent = {
     {
       icon: Languages,
       eyebrow: "AI 35言語",
-      heading: "AI 35言語 — 各お客様が自分の言語でメニューを読みます。",
-      body: "1つのQRコード、35言語。AIは料理のコンテキストを処理 — 料理名と説明は自然に聞こえます。観光客はより自信を持って注文し、スタッフが各料理を翻訳することなく平均客単価が増加します。",
+      heading: "誰もが読める35言語",
+      body: "1つのQRで35言語。AIが料理の文脈で翻訳し、どの料理も自然に伝わります。観光客も安心して注文できます。",
       bullets: [
-        "サブスクリプションに35言語が含まれ、追加料金なし。",
-        "料理のコンテキストを理解するAI、生のGoogle Translateではありません。",
-        "お客様はメニュー内で1タップで言語を切り替えます。",
+        "プランに35言語込み",
+        "GoogleではなくグルメAI",
+        "ワンタップで言語切替",
       ],
       image: { src: "/landing/feature-multilang.webp", alt: "2人のお客様が自分のスマートフォンで同じデジタルメニューを異なる言語で読んでいる" },
     },
     {
       icon: ShieldAlert,
       eyebrow: "アレルゲン",
-      heading: "アレルゲンと食事制限のタグ。",
-      body: "グルテン、乳糖、ナッツ、シーフード、ビーガン、グルテンフリーのオプションに料理をマーク。お客様は食事のニーズに応じてメニューをフィルタリングし、より大きな信頼を持って注文できます。",
+      heading: "全料理にアレルゲン表示",
+      body: "グルテン、乳糖、ナッツ、ヴィーガン、グルテンフリーをタグ付け。お客様は食事に合わせて絞り込み、楽に注文できます。",
       bullets: [
-        "各料理に14の標準アレルゲンカテゴリ。",
-        "ビーガン、ベジタリアン、グルテンフリーのタグをワンクリックで。",
-        "お客様は食事制限に応じてメニューをフィルタリングします。",
+        "14のアレルゲン区分",
+        "ヴィーガン・グルテンフリー表示",
+        "食事制限で絞り込み",
       ],
       image: { src: "/landing/feature-allergens.webp", alt: "お客様がスマートフォンでアレルゲンによってメニューをフィルタリングし、オーナーがタブレットでアレルゲンリストを編集している" },
     },
     {
+      icon: MonitorSmartphone,
+      eyebrow: "どの端末でも",
+      heading: "どの端末でも管理できる",
+      body: "管理画面はブラウザで動作 — メニュー、価格、写真をどこからでも編集。インストールは不要です。",
+      bullets: [
+        "どのブラウザでも動作",
+        "スマホ・タブレット・PC",
+        "インストール不要",
+      ],
+    },
+    {
+      icon: BadgePercent,
+      eyebrow: "手数料ゼロ",
+      heading: "手数料ゼロ、追加費用なし",
+      body: "明快なサブスク一つ。売上から一切徴収せず、隠れた費用もなし — すべてお店に残ります。",
+      bullets: [
+        "注文に0%",
+        "隠れた追加費用なし",
+        "定額ワンプライス",
+      ],
+    },
+    {
+      icon: Globe,
+      eyebrow: "独自ドメイン",
+      heading: "独自ドメインでメニュー公開",
+      body: "SSL付きで独自ドメインを接続 — お客様はお店のアドレスでメニューを見られます。DNS設定も10分でサポート。",
+      bullets: [
+        "SSL付き独自ドメイン",
+        "menu.restaurant.com",
+        "DNS設定をサポート",
+      ],
+    },
+    {
+      icon: LayoutTemplate,
+      eyebrow: "自由なデザイン",
+      heading: "お店に合う柔軟なデザイン",
+      body: "複数の既製レイアウトとスタイル — 表紙、色、料理の見せ方をお店に合わせて選べます。",
+      bullets: [
+        "複数の既製レイアウト",
+        "表紙と色を自由に",
+        "数クリックで模様替え",
+      ],
+    },
+    {
+      icon: Contact,
+      eyebrow: "連絡先",
+      heading: "連絡先とSNSをメニューに",
+      body: "地図、電話、InstagramとWhatsAppへのリンクを載せた専用ページ — お客様はワンタップでお店を見つけます。",
+      bullets: [
+        "地図・電話・住所",
+        "InstagramとWhatsApp",
+        "ワンタップで連絡",
+      ],
+    },
+    {
+      icon: MessageCircle,
+      eyebrow: "WhatsApp注文",
+      heading: "WhatsAppで注文を受ける",
+      body: "お客様はカートを作り、注文をそのままWhatsAppへ送信 — 別アプリ不要、いつものチャットで完結します。",
+      bullets: [
+        "WhatsAppへ注文",
+        "別アプリ不要",
+        "いつものチャットで",
+      ],
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "予約",
+      heading: "電話なしで席予約",
+      body: "お客様がメニューやリンクから自分で席を予約。テーブルごとのカレンダーを見て自動または手動で確定できます。",
+      bullets: [
+        "24/7予約、電話不要",
+        "テーブル別カレンダー",
+        "自動・手動で確定",
+      ],
+    },
+    {
       icon: Palette,
       eyebrow: "プレミアムデザイン",
-      heading: "ビデオ背景と連絡先ページ付きプレミアムデザイン。",
-      body: "ウェルカム画面のビデオまたは写真、レストランの説明、地図、電話番号、ソーシャルプロフィール付きの専用連絡先ページ。デジタルメニューはQRコードの背後にあるPDFではなく、完全なレストランウェブサイトのように見えます。",
+      heading: "PDFではなくサイトのよう",
+      body: "ウェルカム画面の動画背景、コンセプトの説明、地図とSNS付きの独立した連絡先ページ。",
       bullets: [
-        "ウェルカム画面のビデオ背景または大きな写真。",
-        "レストランとカテゴリの説明 — コンセプトのストーリーを伝えます。",
-        "連絡先ページ:地図、電話、Instagram、WhatsApp。",
+        "ホーム画面に動画",
+        "コンセプトと料理を紹介",
+        "独立した連絡先ページ",
       ],
       image: { src: "/landing/feature-design.webp", alt: "カフェテーブルの2台のスマートフォン:ビデオ背景のメニューホーム画面と地図付き連絡先ページ" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "メニューからの注文 · オプション",
-      heading: "お客様はメニューから直接注文します。",
-      body: "お客様はQRメニューでカートを作成し、注文を送信 — フロアのスタッフまたはキッチンタブレットに届きます。この機能は、設定でいつでも有効または無効にできます。",
+      eyebrow: "注文 · オプション",
+      heading: "メニューから直接注文",
+      body: "お客様はカートを作り注文を送信 — ホール、WhatsApp、厨房画面に届きます。オプション機能です。",
       bullets: [
-        "カート、コメント、注文送信をワンタップで。",
-        "注文は管理パネル、WhatsApp、またはキッチンディスプレイに即座に届きます。",
-        "機能は設定で切り替え可能。",
+        "タップでカート送信",
+        "ホール・WhatsApp・厨房へ",
+        "設定でオン・オフ",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "テーブルの2台のスマートフォン:注文付きカートと注文送信確認" },
     },

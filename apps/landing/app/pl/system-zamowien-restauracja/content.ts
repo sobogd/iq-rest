@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Zamówienia od stołu do kuchni.",
+    headline: "Zamówienia od stołu\ndo kuchni.",
     cta: "Skonfiguruj zamówienia online",
     sub: "Gość zamawia przy stole lub kelner z dowolnego urządzenia — prosto do kuchni. Plan sali, podział rachunku.",
     imageSrc: "/landing/feature-orders.webp",

@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Tellimused lauast kööki.",
+    headline: "Tellimused lauast\nkööki.",
     cta: "Seadista online-tellimused",
     sub: "Külaline tellib lauas või teenindaja mis tahes seadmest — otse kööki. Saaliplaan ja arve jagamine.",
     imageSrc: "/landing/feature-orders.webp",

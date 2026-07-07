@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Biachlár QR: scan agus ordaigh.",
+    headline: "Biachlár QR: scan\nagus ordaigh.",
     cta: "Cruthaigh biachlár QR",
     sub: "Scanann an t-aoi QR an bhoird, feiceann grianghraif agus ailléirginí i 35 teanga agus ordaíonn — gan aip.",
   },

@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "QR étlap: szkenneld, rendelj.",
+    headline: "QR étlap:\nszkenneld, rendelj.",
     cta: "QR-menü létrehozása",
     sub: "A vendég beolvassa az asztal QR-kódját, fotókat és allergéneket lát 35 nyelven, és rendel — app nélkül.",
   },

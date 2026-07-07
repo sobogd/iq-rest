@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Naročila od mize do kuhinje.",
+    headline: "Naročila od mize\ndo kuhinje.",
     cta: "Nastavi spletno naročanje",
     sub: "Gost naroči za mizo ali natakar s katere koli naprave — naravnost v kuhinjo. Načrt dvorane, delitev računa.",
     imageSrc: "/landing/feature-orders.webp",

@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Comenzi de la masă la bucătărie.",
+    headline: "Comenzi de la masă\nla bucătărie.",
     cta: "Configurează comenzile online",
     sub: "Clientul comandă la masă sau ospătarul de pe orice dispozitiv — direct la bucătărie. Harta sălii, împărțirea notei.",
     imageSrc: "/landing/feature-orders.webp",

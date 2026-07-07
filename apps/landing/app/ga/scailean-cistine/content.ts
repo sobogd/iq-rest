@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS: orduithe díreach don chócaire.",
+    headline: "KDS: orduithe díreach\ndon chócaire.",
     cta: "Socraigh scáileán cistine",
     sub: "Tagann orduithe ar scáileán na cistine láithreach: nótaí, ailléirginí agus amadóir. Athraigh an stádas le tapadh amháin.",
     imageSrc: "/landing/feature-kitchen.webp",

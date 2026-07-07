@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "حجوزات 24/7 بلا مكالمات.",
+    headline: "حجوزات 24/7\nبلا مكالمات.",
     cta: "إعداد حجز الطاولات",
     sub: "يحجز العملاء 24/7 عبر قائمة QR أو رابط. تقويم حسب الطاولة، تأكيدات وتذكيرات تلقائية.",
     imageSrc: "/landing/feature-reservation.webp",

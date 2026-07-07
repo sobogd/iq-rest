@@ -19,10 +19,10 @@ export const TEXTS: LandingTexts = {
   ctaText: "무료로 사용해 보기",
   homeCtaText: "무료로 사용해 보기",
   trust: [
-    { kind: "num", value: 35, label: "언어" },
-    { kind: "text", value: "24/7", label: "예약" },
-    { kind: "num", value: 5, suffix: " min", label: "시작" },
-    { kind: "count", label: "매장" },
+    { kind: "num", value: 35, label: "메뉴 언어" },
+    { kind: "text", value: "24/7", label: "온라인 예약" },
+    { kind: "num", value: 5, suffix: "분", label: "오픈까지" },
+    { kind: "count", label: "함께하는 매장" },
   ],
   demoText: "데모 보기",
   microcopy: "14일 무료 · 카드 불필요 · 언제든지 취소",
@@ -39,7 +39,7 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["레스토랑", "카페", "바", "호텔", "피자집"],
-    headline: "레스토랑용 디지털 메뉴. 5분 만에 온라인.",
+    headline: "레스토랑용 디지털 메뉴.\n5분 만에 온라인.",
     sub: "5분 만에 귀하의 레스토랑을 위한 디지털 메뉴. 모든 것 포함: 노코드 편집기, AI 인쇄 메뉴 인식, 테이블용 QR 코드 및 수수료 없는 직접 주문.",
     dynamicHeadlines: ["0% 수수료.", "AI 35개 언어.", "온라인 주문.", "예약 24/7.", "프리미엄 디자인."],
     painBullets: [
@@ -117,6 +117,11 @@ export const TEXTS: LandingTexts = {
     heading: "5분 만에 온라인.",
     headingAccent: "14일 무료.",
     sub: "카드 없이, 언제든지 취소. 이미 IQ Rest를 사용 중인 500개 이상의 레스토랑에 참여하세요.",
+  },
+
+  featureHighlights: {
+    heading: "모든 기능 포함",
+    sub: "방문객을 주문으로 바꾸는 기능 — 모든 요금제에 추가 비용 없이.",
   },
 
   scan: {

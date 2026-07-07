@@ -1,10 +1,23 @@
-import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
+import {
+  Languages,
+  ShieldAlert,
+  Palette,
+  ShoppingCart,
+  MonitorSmartphone,
+  BadgePercent,
+  Globe,
+  LayoutTemplate,
+  Contact,
+  MessageCircle,
+  CalendarCheck,
+} from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
   locale: "sk",
   slug: "digitalne-menu-restauracia",
   trackPrefix: "l_sk_digital",
+  hideFeatureHeading: true,
 
   meta: {
     title: "Digitálne menu pre reštaurácie | IQ Rest",
@@ -19,9 +32,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitálne menu, ktoré predáva.",
+    headline: "Digitálne menu,\nktoré vie všetko",
     cta: "Vytvoriť digitálne menu",
-    sub: "Vaše papierové menu online: fotky, alergény, ceny naživo a preklad do 35 jazykov. Žiadna dotlač.",
+    sub: "Fotky, alergény a preklad do 35 jazykov. Plus objednávky, WhatsApp a rezervácie stolov — všetko v jednom IQ Rest.",
   },
 
   scan: {
@@ -35,48 +48,125 @@ export const CONTENT: FeatureContent = {
     {
       icon: Languages,
       eyebrow: "35 jazykov s AI",
-      heading: "35 jazykov s AI — každý hosť číta menu vo svojom.",
-      body: "Jeden QR kód, 35 jazykov. AI zvláda kulinársky kontext — názvy jedál a popisy znejú prirodzene. Turisti objednávajú s väčšou istotou a priemerný účet rastie, bez toho aby čašník musel prekladať každú položku.",
+      heading: "35 jazykov pre každého hosťa",
+      body: "Jeden QR, 35 jazykov. AI prekladá s kulinárskym kontextom, takže každé jedlo znie prirodzene. Turisti objednávajú s istotou.",
       bullets: [
-        "35 jazykov zahrnutých v predplatnom, bez doplatkov.",
-        "AI s porozumením kulinárskeho kontextu, nie iba Google Translate.",
-        "Hosť mení jazyk jedným ťuknutím priamo v menu.",
+        "35 jazykov v tarife",
+        "Kulinárska AI, nie Google",
+        "Zmena jazyka jedným ťuknutím",
       ],
       image: { src: "/landing/feature-multilang.webp", alt: "Dvaja hostia čítajú rovnaké digitálne menu v rôznych jazykoch na svojich telefónoch" },
     },
     {
       icon: ShieldAlert,
       eyebrow: "Alergény",
-      heading: "Štítky alergénov a stravovacích režimov.",
-      body: "Označte jedlá pre lepok, laktózu, orechy, morské plody, vegánske a bezlepkové možnosti. Hostia filtrujú menu podľa svojich diétnych potrieb a objednávajú s väčšou istotou.",
+      heading: "Alergény a diéty pri každom jedle",
+      body: "Označte lepok, laktózu, orechy, vegán aj bezlepok. Hostia si menu vyfiltrujú podľa diéty a objednávajú bez starostí.",
       bullets: [
-        "14 štandardných kategórií alergénov pri každom jedle.",
-        "Štítky vegan, vegetariánske a bezlepkové jedným kliknutím.",
-        "Hostia filtrujú menu podľa svojich diétnych obmedzení.",
+        "14 kategórií alergénov",
+        "Štítky vegán a bezlepok",
+        "Hostia filtrujú podľa diéty",
       ],
       image: { src: "/landing/feature-allergens.webp", alt: "Hosť filtruje menu podľa alergénov na telefóne, zatiaľ čo majiteľ upravuje zoznam alergénov na tablete" },
     },
     {
+      icon: MonitorSmartphone,
+      eyebrow: "Akékoľvek zariadenie",
+      heading: "Spravujte z akéhokoľvek zariadenia",
+      body: "Administrácia beží v prehliadači — upravujte menu, ceny aj fotky odkiaľkoľvek. Netreba nič inštalovať.",
+      bullets: [
+        "Beží v každom prehliadači",
+        "Telefón, tablet alebo PC",
+        "Nič na inštaláciu",
+      ],
+    },
+    {
+      icon: BadgePercent,
+      eyebrow: "Bez provízie",
+      heading: "Nulová provízia, žiadne príplatky",
+      body: "Jedno transparentné predplatné. Neberieme podiel z vašich tržieb a neskrývame poplatky — všetko zostáva reštaurácii.",
+      bullets: [
+        "Nula percent z objednávok",
+        "Žiadne skryté príplatky",
+        "Jedna pevná cena",
+      ],
+    },
+    {
+      icon: Globe,
+      eyebrow: "Vlastná doména",
+      heading: "Menu na vašej vlastnej doméne",
+      body: "Pripojíme vašu doménu s SSL — hostia vidia menu na adrese reštaurácie. S nastavením DNS pomôžeme za 10 minút.",
+      bullets: [
+        "Vaša doména s SSL",
+        "menu.vasarestauracia.com",
+        "Pomôžeme s nastavením DNS",
+      ],
+    },
+    {
+      icon: LayoutTemplate,
+      eyebrow: "Váš dizajn",
+      heading: "Flexibilný dizajn podľa vás",
+      body: "Niekoľko hotových šablón a štýlov — vyberte si obálku, farby a spôsob prezentácie jedál, ktoré sedia vášmu podniku.",
+      bullets: [
+        "Niekoľko hotových šablón",
+        "Vaša obálka a farby",
+        "Zmena na pár klikov",
+      ],
+    },
+    {
+      icon: Contact,
+      eyebrow: "Kontakty",
+      heading: "Kontakty a siete priamo v menu",
+      body: "Samostatná stránka s mapou, telefónom a odkazmi na Instagram a WhatsApp — hostia vás nájdu jedným ťuknutím.",
+      bullets: [
+        "Mapa, telefón a adresa",
+        "Instagram a WhatsApp",
+        "Spojenie jedným ťuknutím",
+      ],
+    },
+    {
+      icon: MessageCircle,
+      eyebrow: "Objednávky cez WhatsApp",
+      heading: "Prijímajte objednávky cez WhatsApp",
+      body: "Hostia zostavia košík a pošlú objednávku rovno na váš WhatsApp — bez osobitnej aplikácie, v chate, ktorý už používajú.",
+      bullets: [
+        "Objednávka na váš WhatsApp",
+        "Žiadna osobitná aplikácia",
+        "Chat ako obvykle",
+      ],
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Rezervácie",
+      heading: "Rezervácie stolov bez telefonátov",
+      body: "Hostia si rezervujú stôl sami cez menu alebo odkaz, vy vidíte kalendár po stoloch a potvrdíte automaticky či ručne.",
+      bullets: [
+        "Rezervácie 24/7 bez volania",
+        "Kalendár po stoloch",
+        "Auto aj ručné potvrdenie",
+      ],
+    },
+    {
       icon: Palette,
       eyebrow: "Prémiový dizajn",
-      heading: "Prémiový dizajn s videopozadím a kontaktnou stránkou.",
-      body: "Video alebo fotografia na uvítacej obrazovke, popis reštaurácie, vlastná kontaktná stránka s mapou, telefónnymi číslami a sociálnymi profilmi. Digitálne menu vyzerá ako plnohodnotný web reštaurácie, nie ako PDF za QR kódom.",
+      heading: "Vyzerá ako web, nie ako PDF",
+      body: "Video pozadie na úvodnej obrazovke, opísaný koncept a samostatná kontaktná stránka s mapou a sociálnymi sieťami.",
       bullets: [
-        "Videopozadie alebo veľká fotografia na uvítacej obrazovke.",
-        "Popisy reštaurácie a kategórií — rozprávajte príbeh konceptu.",
-        "Kontaktná stránka: mapa, telefón, Instagram, WhatsApp.",
+        "Video na úvodnej obrazovke",
+        "Opísaný koncept aj jedlá",
+        "Samostatná kontaktná stránka",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Dva telefóny na stole v kaviarni: domovská obrazovka menu s videopozadím a kontaktná stránka s mapou" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Objednávky z menu · voliteľné",
-      heading: "Hostia objednávajú priamo z menu.",
-      body: "Hostia si v QR menu skladajú košík a odosielajú objednávku — dorazí čašníkovi v sále alebo na tablet v kuchyni. Funkciu je možné v nastaveniach kedykoľvek zapnúť alebo vypnúť.",
+      eyebrow: "Objednávky · voliteľné",
+      heading: "Objednávky priamo z menu",
+      body: "Hostia zostavia košík a pošlú objednávku — dorazí do sály, na WhatsApp alebo na kuchynskú obrazovku. Voliteľné.",
       bullets: [
-        "Košík, komentáre a odoslanie objednávky jedným ťuknutím.",
-        "Objednávka dorazí okamžite do administračného panela, na WhatsApp alebo na kuchynský displej.",
-        "Funkcia sa prepína v nastaveniach.",
+        "Košík a odoslanie ťuknutím",
+        "Do sály, WhatsApp či kuchyne",
+        "Prepnete v nastaveniach",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Dva telefóny na stole: košík s objednávkou a potvrdenie o odoslaní objednávky" },
     },

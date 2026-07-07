@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS: ordrer direkte til kokken.",
+    headline: "KDS:\nordrer direkte til kokken.",
     cta: "Opsæt køkkenskærm",
     sub: "Ordrer rammer køkkenskærmen med det samme: noter, allergener og timer. Skift status med ét tryk.",
     imageSrc: "/landing/feature-kitchen.webp",

@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Commandes de la table à la cuisine.",
+    headline: "Commandes de la table\nà la cuisine.",
     cta: "Configurer la commande en ligne",
     sub: "Le client commande à table ou le serveur sur tout appareil — direct en cuisine. Plan de salle et partage d'addition.",
     imageSrc: "/landing/feature-orders.webp",

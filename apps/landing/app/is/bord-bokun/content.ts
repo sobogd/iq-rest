@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Bókanir 24/7, engin símtöl.",
+    headline: "Bókanir 24/7,\nengin símtöl.",
     cta: "Setja upp borðabókanir",
     sub: "Gestir bóka 24/7 gegnum QR matseðil eða hlekk. Dagatal eftir borðum, sjálfvirkar staðfestingar og áminningar.",
     imageSrc: "/landing/feature-reservation.webp",

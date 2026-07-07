@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Užsakymai nuo stalo į virtuvę.",
+    headline: "Užsakymai nuo stalo\nį virtuvę.",
     cta: "Nustatyti internetinius užsakymus",
     sub: "Svečias užsako prie stalo arba padavėjas iš bet kurio įrenginio — tiesiai į virtuvę. Salės planas, sąskaitos padalijimas.",
     imageSrc: "/landing/feature-orders.webp",

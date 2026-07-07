@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS: rendelés egyből a szakácsnak.",
+    headline: "KDS: rendelés\negyből a szakácsnak.",
     cta: "Konyhai kijelző beállítása",
     sub: "A rendelések azonnal megjelennek a konyhai kijelzőn: jegyzetek, allergének és időzítő. Állapotváltás egy érintéssel.",
     imageSrc: "/landing/feature-kitchen.webp",

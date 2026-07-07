@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Резервации 24/7, без обаждания",
+    headline: "Резервации 24/7,\nбез обаждания",
     cta: "Настрой резервации на маси",
     sub: "Гостите резервират 24/7 през QR менюто или линк. Календар по маси, автоматични потвърждения и напомняния.",
     imageSrc: "/landing/feature-reservation.webp",

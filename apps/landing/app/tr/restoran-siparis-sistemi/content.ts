@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Masadan mutfağa siparişler.",
+    headline: "Masadan mutfağa\nsiparişler.",
     cta: "Online siparişi kur",
     sub: "Misafir masada veya garson herhangi bir cihazdan sipariş verir — doğrudan mutfağa. Salon planı, hesap bölme.",
     imageSrc: "/landing/feature-orders.webp",

@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "رزرو ۲۴/۷، بدون تماس.",
+    headline: "رزرو ۲۴/۷،\nبدون تماس.",
     cta: "راه‌اندازی رزرو میز",
     sub: "مشتریان ۲۴/۷ از طریق منوی QR یا لینک رزرو می‌کنند. تقویم بر اساس میز، تأیید و یادآوری خودکار.",
     imageSrc: "/landing/feature-reservation.webp",

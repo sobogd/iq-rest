@@ -1,10 +1,23 @@
-import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
+import {
+  Languages,
+  ShieldAlert,
+  Palette,
+  ShoppingCart,
+  MonitorSmartphone,
+  BadgePercent,
+  Globe,
+  LayoutTemplate,
+  Contact,
+  MessageCircle,
+  CalendarCheck,
+} from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
   locale: "sv",
   slug: "digital-meny-restaurang",
   trackPrefix: "l_sv_digital",
+  hideFeatureHeading: true,
 
   meta: {
     title: "Digital meny för restauranger | IQ Rest",
@@ -19,9 +32,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digital meny som säljer mer.",
+    headline: "En digital meny\nsom har allt",
     cta: "Skapa digital meny",
-    sub: "Din pappersmeny online: bilder, allergener, live-priser och översättning till 35 språk. Ingen omtryckning.",
+    sub: "Bilder, allergener och översättning till 35 språk. Plus beställningar, WhatsApp och bordsbokning — allt i en IQ Rest.",
   },
 
   scan: {
@@ -35,48 +48,125 @@ export const CONTENT: FeatureContent = {
     {
       icon: Languages,
       eyebrow: "35 AI-språk",
-      heading: "35 AI-språk — varje gäst läser menyn på sitt eget.",
-      body: "En QR-kod, 35 språk. AI:n hanterar den kulinariska kontexten — rätternas namn och beskrivningar låter naturliga. Turister beställer med större trygghet och snittnotan växer utan att en servitör behöver översätta varje rätt.",
+      heading: "35 språk varje gäst förstår",
+      body: "En QR, 35 språk. AI:n översätter med kulinarisk kontext, så varje rätt låter naturlig. Turister beställer med trygghet.",
       bullets: [
-        "35 språk ingår i prenumerationen, ingen tilläggsavgift.",
-        "AI med förståelse för matlagning, inte rå Google Translate.",
-        "Gästen byter språk med ett enda tryck inne i menyn.",
+        "35 språk i din prenumeration",
+        "Kulinarisk AI, inte Google",
+        "Byt språk med ett tryck",
       ],
       image: { src: "/landing/feature-multilang.webp", alt: "Två gäster läser samma digitala meny på olika språk på sina egna telefoner" },
     },
     {
       icon: ShieldAlert,
       eyebrow: "Allergener",
-      heading: "Etiketter för allergener och kost.",
-      body: "Markera rätter för gluten, laktos, nötter, skaldjur, veganska och glutenfria alternativ. Gästerna filtrerar menyn efter sina kostbehov och beställer med större trygghet.",
+      heading: "Allergener och koster på varje rätt",
+      body: "Markera gluten, laktos, nötter, veganskt och glutenfritt. Gästerna filtrerar menyn efter sin kost och beställer med lätthet.",
       bullets: [
-        "14 standardkategorier av allergener på varje rätt.",
-        "Vegan-, vegetariska och glutenfria etiketter med ett klick.",
-        "Gästerna filtrerar menyn efter sina kostbegränsningar.",
+        "14 allergenkategorier",
+        "Vegan- och glutenfri-etiketter",
+        "Gäster filtrerar efter kost",
       ],
       image: { src: "/landing/feature-allergens.webp", alt: "Gäst filtrerar menyn efter allergener på telefonen medan ägaren redigerar allergenlistan på en surfplatta" },
     },
     {
+      icon: MonitorSmartphone,
+      eyebrow: "Vilken enhet som helst",
+      heading: "Sköt det från vilken enhet som helst",
+      body: "Adminpanelen körs i webbläsaren — redigera meny, priser och bilder var som helst. Inget att installera.",
+      bullets: [
+        "Körs i vilken webbläsare som helst",
+        "Telefon, surfplatta eller PC",
+        "Inget att installera",
+      ],
+    },
+    {
+      icon: BadgePercent,
+      eyebrow: "Ingen provision",
+      heading: "Noll provision, inga tillägg",
+      body: "En transparent prenumeration. Vi tar ingen andel av din omsättning och döljer inga avgifter — allt stannar hos restaurangen.",
+      bullets: [
+        "Noll procent på beställningar",
+        "Inga dolda tillägg",
+        "Ett fast pris",
+      ],
+    },
+    {
+      icon: Globe,
+      eyebrow: "Egen domän",
+      heading: "Meny på din egen domän",
+      body: "Vi kopplar din domän med SSL — gästerna ser menyn på din restaurangs adress. Vi hjälper med DNS på 10 minuter.",
+      bullets: [
+        "Din domän med SSL",
+        "meny.dinrestaurang.se",
+        "Vi hjälper med DNS",
+      ],
+    },
+    {
+      icon: LayoutTemplate,
+      eyebrow: "Din design",
+      heading: "Flexibel design som matchar dig",
+      body: "Flera färdiga layouter och stilar — välj omslaget, färgerna och rättpresentationen som passar ditt ställe.",
+      bullets: [
+        "Flera färdiga layouter",
+        "Ditt omslag och dina färger",
+        "Ny stil med några klick",
+      ],
+    },
+    {
+      icon: Contact,
+      eyebrow: "Kontakt",
+      heading: "Kontakt och sociala medier i menyn",
+      body: "En egen sida med karta, telefon och länkar till Instagram och WhatsApp — gästerna hittar dig med ett tryck.",
+      bullets: [
+        "Karta, telefon och adress",
+        "Instagram och WhatsApp",
+        "Nå dig med ett tryck",
+      ],
+    },
+    {
+      icon: MessageCircle,
+      eyebrow: "WhatsApp-beställningar",
+      heading: "Ta emot beställningar via WhatsApp",
+      body: "Gästerna bygger en varukorg och skickar beställningen direkt till din WhatsApp — ingen separat app, i chatten de redan använder.",
+      bullets: [
+        "Beställning till din WhatsApp",
+        "Ingen separat app",
+        "Chatta som vanligt",
+      ],
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Bokningar",
+      heading: "Bordsbokning utan samtal",
+      body: "Gästerna bokar bord själva via menyn eller en länk, du ser kalendern per bord och bekräftar automatiskt eller manuellt.",
+      bullets: [
+        "Bokning 24/7, utan samtal",
+        "Kalender över alla bord",
+        "Auto- och manuell bekräftelse",
+      ],
+    },
+    {
       icon: Palette,
       eyebrow: "Premiumdesign",
-      heading: "Premiumdesign med videobakgrund och kontaktsida.",
-      body: "Video eller bild på välkomstskärmen, beskrivning av restaurangen, dedikerad kontaktsida med karta, telefonnummer och sociala profiler. Den digitala menyn ser ut som en komplett restaurangwebbplats, inte en PDF bakom en QR-kod.",
+      heading: "Ser ut som en sajt, inte en PDF",
+      body: "Videobakgrund på välkomstskärmen, ditt koncept beskrivet och en separat kontaktsida med karta och sociala medier.",
       bullets: [
-        "Videobakgrund eller stor bild på välkomstskärmen.",
-        "Beskrivningar av restaurang och kategorier — berätta konceptets historia.",
-        "Kontaktsida: karta, telefon, Instagram, WhatsApp.",
+        "Video på startskärmen",
+        "Koncept och rätter beskrivna",
+        "Separat kontaktsida",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Två telefoner på ett kafébord: menyns startskärm med videobakgrund och kontaktsidan med karta" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Beställningar från menyn · valfritt",
-      heading: "Gäster lägger beställningar direkt från menyn.",
-      body: "Gäster bygger en varukorg i QR-menyn och skickar beställningen — den landar hos servitören i salen eller på köksplattan. Funktionen kan aktiveras eller inaktiveras i inställningarna när som helst.",
+      eyebrow: "Beställningar · valfritt",
+      heading: "Beställningar direkt från menyn",
+      body: "Gästerna bygger en varukorg och skickar beställningen — den landar i salen, på WhatsApp eller på köksskärmen. Valfritt.",
       bullets: [
-        "Varukorg, kommentarer och beställningsutskick med ett tryck.",
-        "Beställningen landar omedelbart i administrationspanelen, WhatsApp eller på köksskärmen.",
-        "Funktionen växlas i inställningarna.",
+        "Varukorg och skicka med ett tryck",
+        "Till sal, WhatsApp eller kök",
+        "Slå på det i inställningar",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Två telefoner på ett bord: varukorg med beställning och bekräftelse på skickad beställning" },
     },

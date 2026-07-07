@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS: tellimused otse kokale.",
+    headline: "KDS: tellimused otse\nkokale.",
     cta: "Seadista köögiekraan",
     sub: "Tellimused ilmuvad köögiekraanile kohe: märkmed, allergeenid ja taimer. Muuda staatust ühe puudutusega.",
     imageSrc: "/landing/feature-kitchen.webp",

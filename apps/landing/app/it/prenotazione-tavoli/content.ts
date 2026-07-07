@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Prenotazioni 24/7, zero chiamate.",
+    headline: "Prenotazioni 24/7,\nzero chiamate.",
     cta: "Configura le prenotazioni",
     sub: "I clienti prenotano 24/7 dal menu QR o da un link. Calendario per tavolo, conferme e promemoria automatici.",
     imageSrc: "/landing/feature-reservation.webp",

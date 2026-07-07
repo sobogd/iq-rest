@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "QR-menüü: skaneeri ja telli.",
+    headline: "QR-menüü: skaneeri\nja telli.",
     cta: "Loo QR-menüü",
     sub: "Külaline skaneerib laua QR-koodi, näeb fotosid ja allergeene 35 keeles ning tellib — ilma rakenduseta.",
   },

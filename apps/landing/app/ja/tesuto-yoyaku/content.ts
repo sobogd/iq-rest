@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "24時間予約、電話ゼロ。",
+    headline: "24時間予約、\n電話ゼロ。",
     cta: "テーブル予約を設定",
     sub: "客がQRメニューやリンクから24時間予約。テーブル別カレンダー、自動確認とリマインダー。",
     imageSrc: "/landing/feature-reservation.webp",

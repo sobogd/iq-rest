@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "从餐桌到厨房下单。",
+    headline: "从餐桌到厨房\n下单。",
     cta: "设置在线点餐",
     sub: "顾客在桌边或员工用任意设备下单 — 直达厨房。桌位图、账单拆分。",
     imageSrc: "/landing/feature-orders.webp",

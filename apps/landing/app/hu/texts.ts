@@ -19,10 +19,10 @@ export const TEXTS: LandingTexts = {
   ctaText: "Próbáld ki ingyen",
   homeCtaText: "Próbáld ki ingyen",
   trust: [
-    { kind: "num", value: 35, label: "Nyelv" },
-    { kind: "text", value: "24/7", label: "Foglalások" },
-    { kind: "num", value: 5, suffix: " min", label: "Indítás" },
-    { kind: "count", label: "Étterem" },
+    { kind: "num", value: 35, label: "Menünyelv" },
+    { kind: "text", value: "24/7", label: "Online foglalások" },
+    { kind: "num", value: 5, suffix: " perc", label: "Az indulásig" },
+    { kind: "count", label: "Étterem velünk" },
   ],
   demoText: "Nézze meg a demót",
   microcopy: "14 nap ingyenes · Kártya nélkül · Lemondás bármikor",
@@ -39,7 +39,7 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Éttermek", "Kávézók", "Bárok", "Szállodák", "Pizzériák"],
-    headline: "Digitális étlap éttermeknek. Élesben 5 perc alatt.",
+    headline: "Digitális étlap éttermeknek.\nÉlesben 5 perc alatt.",
     sub: "Digitális étlap az Ön éttermének 5 perc alatt. Minden benne van: kód nélküli szerkesztő, nyomtatott étlap AI felismerés, QR kódok az asztalokra és közvetlen rendelések jutalék nélkül.",
     dynamicHeadlines: ["0% jutalék.", "35 AI nyelv.", "Online rendelések.", "Foglalás 24/7.", "Prémium dizájn."],
     painBullets: [
@@ -117,6 +117,11 @@ export const TEXTS: LandingTexts = {
     heading: "Élesben 5 perc alatt.",
     headingAccent: "14 nap ingyenes.",
     sub: "Kártya nélkül, lemondás bármikor. Csatlakozzon 500+ étteremhez, amelyek már az IQ Rest-et használják.",
+  },
+
+  featureHighlights: {
+    heading: "Minden benne van",
+    sub: "A funkciók, amelyek a vendégekből rendeléseket csinálnak — minden csomagban, felár nélkül.",
   },
 
   scan: {

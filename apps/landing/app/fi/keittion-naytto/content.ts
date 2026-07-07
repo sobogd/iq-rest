@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS: tilaukset suoraan kokille.",
+    headline: "KDS: tilaukset suoraan\nkokille.",
     cta: "Ota keittiönäyttö käyttöön",
     sub: "Tilaukset ilmestyvät keittiönäytölle heti: muistiinpanot, allergeenit ja ajastin. Vaihda tila yhdellä napautuksella.",
     imageSrc: "/landing/feature-kitchen.webp",

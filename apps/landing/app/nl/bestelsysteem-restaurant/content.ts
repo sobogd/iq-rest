@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Bestellingen van tafel naar keuken.",
+    headline: "Bestellingen van tafel\nnaar keuken.",
     cta: "Online bestellen instellen",
     sub: "De gast bestelt aan tafel of personeel via elk apparaat — direct naar de keuken. Plattegrond en rekening splitsen.",
     imageSrc: "/landing/feature-orders.webp",

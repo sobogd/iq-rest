@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Narudžbe od stola do kuhinje.",
+    headline: "Narudžbe od stola\ndo kuhinje.",
     cta: "Postavi online narudžbe",
     sub: "Gost naručuje za stolom ili konobar s bilo kojeg uređaja — ravno u kuhinju. Tlocrt sale, podjela računa.",
     imageSrc: "/landing/feature-orders.webp",

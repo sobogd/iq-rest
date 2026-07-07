@@ -19,10 +19,10 @@ export const TEXTS: LandingTexts = {
   ctaText: "Proovige tasuta",
   homeCtaText: "Proovige tasuta",
   trust: [
-    { kind: "num", value: 35, label: "Keelt" },
-    { kind: "text", value: "24/7", label: "Broneeringud" },
-    { kind: "num", value: 5, suffix: " min", label: "Käivitus" },
-    { kind: "count", label: "Restorani" },
+    { kind: "num", value: 35, label: "Menüü keelt" },
+    { kind: "text", value: "24/7", label: "Broneeringud veebis" },
+    { kind: "num", value: 5, suffix: " min", label: "Käivitamiseks" },
+    { kind: "count", label: "Restorani meiega" },
   ],
   demoText: "Vaata demo",
   microcopy: "14 päeva tasuta · Ilma kaardita · Tühista igal ajal",
@@ -39,7 +39,7 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Restoranid", "Kohvikud", "Baarid", "Hotellid", "Pitsabaarid"],
-    headline: "Digitaalne menüü restoranidele. Veebis 5 minutiga.",
+    headline: "Digitaalne menüü restoranidele.\nVeebis 5 minutiga.",
     sub: "Digitaalne menüü sinu restoranile 5 minutiga. Kõik kaasas: koodita redaktor, AI-tuvastus trükimenüüst, QR-koodid laudadele ja otsetellimused ilma komisjonita.",
     dynamicHeadlines: ["0% komisjon.", "35 AI-keelt.", "Veebitellimused.", "Broneerimine 24/7.", "Premium-disain."],
     painBullets: [
@@ -117,6 +117,11 @@ export const TEXTS: LandingTexts = {
     heading: "Veebis 5 minutiga.",
     headingAccent: "14 päeva tasuta.",
     sub: "Ilma kaardita, tühista igal ajal. Liitu 500+ restoraniga, kes juba kasutavad IQ Resti.",
+  },
+
+  featureHighlights: {
+    heading: "Kõik sisaldub",
+    sub: "Funktsioonid, mis muudavad külalised tellimusteks — igas paketis, ilma lisatasuta.",
   },
 
   scan: {

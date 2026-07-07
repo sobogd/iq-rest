@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS：订单直达厨师。",
+    headline: "KDS：订单直达\n厨师。",
     cta: "设置厨房显示屏",
     sub: "订单即时显示在厨房屏幕：备注、过敏原、计时器。一键切换状态。",
     imageSrc: "/landing/feature-kitchen.webp",

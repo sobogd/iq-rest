@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Ajanvaraus 24/7, ei puheluita.",
+    headline: "Ajanvaraus 24/7,\nei puheluita.",
     cta: "Ota pöytävaraukset käyttöön",
     sub: "Asiakkaat varaavat 24/7 QR-listalta tai linkistä. Pöytäkohtainen kalenteri, vahvistukset ja muistutukset.",
     imageSrc: "/landing/feature-reservation.webp",

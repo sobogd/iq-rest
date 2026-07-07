@@ -1,11 +1,42 @@
 "use client";
 
 import Image from "next/image";
+import { Fragment, type ReactNode } from "react";
 import { LandingHeader } from "./header";
 import { DemoButton, type DemoVariant } from "./demo-button";
 import { usePrimaryCta } from "./onboarding/use-primary-cta";
 import { analytics } from "@/lib/analytics";
 import type { LandingTexts } from "../types";
+
+// Turn line-break markers inside a translated string into responsive <br>s so
+// hero headings/subs wrap at chosen phrase boundaries on tablet + desktop while
+// staying a plain adaptive wrap on phones (every <br> is hidden on mobile).
+//   \n    → break on tablet AND desktop (same spot)   → hidden sm:block
+//   [md]  → break on tablet only (sm..lg)             → hidden sm:max-lg:block
+//   [lg]  → break on desktop only (lg+)               → hidden lg:block
+// Markers are written surrounded by a space, so when the <br> is hidden the
+// remaining whitespace collapses to a normal single space.
+const BR_CLASS: Record<string, string> = {
+  "\n": "hidden sm:block",
+  "[md]": "hidden sm:max-lg:block",
+  "[lg]": "hidden lg:block",
+};
+
+function withBreaks(text: string): ReactNode {
+  return text.split(/(\n|\[md\]|\[lg\])/).map((part, i) => {
+    const cls = BR_CLASS[part];
+    // A space precedes every <br> so that when the <br> is hidden (mobile, or
+    // the other breakpoint) the two words stay separated instead of merging.
+    return cls ? (
+      <Fragment key={i}>
+        {" "}
+        <br className={cls} />
+      </Fragment>
+    ) : (
+      <Fragment key={i}>{part}</Fragment>
+    );
+  });
+}
 
 interface LandingHeroProps {
   locale: string;
@@ -123,7 +154,7 @@ export function LandingHero({
               {verticals.map((v) => (
                 <span
                   key={v}
-                  className="text-[11px] lg:text-xs uppercase tracking-wider text-white/70"
+                  className="text-xs lg:text-sm uppercase tracking-wider text-white/70"
                 >
                   {v}
                 </span>
@@ -132,13 +163,13 @@ export function LandingHero({
           ) : null}
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-medium tracking-tight leading-[1.05] mb-5 text-white">
-            {titleAccent ? `${title} ${titleAccent}` : title}
+            {withBreaks(titleAccent ? `${title} ${titleAccent}` : title)}
           </h1>
 
           <div className={`h-[5px] w-20 rounded-full bg-gradient-to-r from-[hsl(9,100%,58%)] to-[hsl(35,95%,55%)] mb-6 ${centered ? "mx-auto" : ""}`} />
 
           <p className="text-base sm:text-lg lg:text-xl text-white/80 leading-snug">
-            {sub}
+            {withBreaks(sub)}
           </p>
         </div>
 

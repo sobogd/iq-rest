@@ -19,10 +19,10 @@ export const TEXTS: LandingTexts = {
   ctaText: "Probeer het gratis",
   homeCtaText: "Probeer het gratis",
   trust: [
-    { kind: "num", value: 35, label: "Talen" },
-    { kind: "text", value: "24/7", label: "Reserveringen" },
-    { kind: "num", value: 5, suffix: " min", label: "Opstarten" },
-    { kind: "count", label: "Restaurants" },
+    { kind: "num", value: 35, label: "Menutalen" },
+    { kind: "text", value: "24/7", label: "Online reserveringen" },
+    { kind: "num", value: 5, suffix: " min", label: "Tot livegang" },
+    { kind: "count", label: "Restaurants bij ons" },
   ],
   demoText: "Bekijk demo",
   microcopy: "14 dagen gratis · Geen kaart · Op elk moment opzegbaar",
@@ -39,7 +39,7 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Restaurants", "Cafés", "Bars", "Hotels", "Pizzeria's"],
-    headline: "Digitaal menu voor restaurants. Live in 5 minuten.",
+    headline: "Digitaal menu voor restaurants.\nLive in 5 minuten.",
     sub: "Digitaal menu voor jouw restaurant in 5 minuten. Alles inbegrepen: no-code editor, AI menuherkenning, QR codes voor tafels en directe bestellingen zonder commissie.",
     dynamicHeadlines: ["0% commissie.", "35 AI-talen.", "Online bestellingen.", "Reserveringen 24/7.", "Premium ontwerp."],
     painBullets: [
@@ -117,6 +117,11 @@ export const TEXTS: LandingTexts = {
     heading: "Live in 5 minuten.",
     headingAccent: "14 dagen gratis.",
     sub: "Geen kaart nodig, op elk moment opzegbaar. Sluit je aan bij 500+ restaurants die al IQ Rest gebruiken.",
+  },
+
+  featureHighlights: {
+    heading: "Alles inbegrepen",
+    sub: "De functies die gasten in bestellingen veranderen — in elk abonnement, zonder extra kosten.",
   },
 
   scan: {

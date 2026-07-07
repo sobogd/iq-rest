@@ -1,10 +1,23 @@
-import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
+import {
+  Languages,
+  ShieldAlert,
+  Palette,
+  ShoppingCart,
+  MonitorSmartphone,
+  BadgePercent,
+  Globe,
+  LayoutTemplate,
+  Contact,
+  MessageCircle,
+  CalendarCheck,
+} from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
   locale: "tr",
   slug: "dijital-menu-restoran",
   trackPrefix: "l_tr_digital",
+  hideFeatureHeading: true,
 
   meta: {
     title: "Restoranlar için dijital menü | IQ Rest",
@@ -19,9 +32,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Daha çok satan dijital menü.",
+    headline: "Her şeyi olan\ndijital menü",
     cta: "Dijital menü oluştur",
-    sub: "Kağıt menünüz çevrimiçi: fotoğraflar, alerjenler, anlık fiyatlar ve 35 dile çeviri. Yeniden baskı yok.",
+    sub: "Fotoğraflar, alerjenler ve 35 dile çeviri. Ayrıca siparişler, WhatsApp ve masa rezervasyonu — hepsi tek bir IQ Rest'te.",
   },
 
   scan: {
@@ -35,48 +48,125 @@ export const CONTENT: FeatureContent = {
     {
       icon: Languages,
       eyebrow: "35 AI dili",
-      heading: "35 AI dili — her misafir menüyü kendi dilinde okur.",
-      body: "Bir QR kodu, 35 dil. AI mutfak bağlamını yönetir — yemek adları ve açıklamalar doğal görünür. Turistler daha büyük güvenle sipariş verir ve ortalama hesap, garson her yemeği tercüme etmeden büyür.",
+      heading: "Her misafire 35 dil",
+      body: "Tek QR, 35 dil. AI mutfak bağlamıyla çevirir, böylece her yemek doğal görünür. Turistler güvenle sipariş verir.",
       bullets: [
-        "Abonelikte 35 dil dahil, ek ücret yok.",
-        "Ham Google Translate değil, mutfak farkındalığı olan AI.",
-        "Misafir, menüde tek dokunuşla dili değiştirir.",
+        "Planınızda 35 dil",
+        "Mutfak AI'ı, Google değil",
+        "Tek dokunuşla dil değiştirme",
       ],
       image: { src: "/landing/feature-multilang.webp", alt: "İki misafir aynı dijital menüyü kendi telefonlarında farklı dillerde okuyor" },
     },
     {
       icon: ShieldAlert,
       eyebrow: "Alerjenler",
-      heading: "Alerjen ve diyet etiketleri.",
-      body: "Yemekleri gluten, laktoz, kuruyemiş, deniz ürünleri, vegan ve glutensiz seçenekler için işaretleyin. Misafirler menüyü diyet ihtiyaçlarına göre filtreler ve daha büyük güvenle sipariş verir.",
+      heading: "Her yemekte alerjen ve diyet",
+      body: "Gluten, laktoz, kuruyemiş, vegan ve glutensizi etiketleyin. Misafirler menüyü diyetine göre filtreler ve rahatça sipariş verir.",
       bullets: [
-        "Her yemek üzerinde 14 standart alerjen kategorisi.",
-        "Tek tıklamayla vegan, vejetaryen ve glutensiz etiketler.",
-        "Misafirler menüyü diyet kısıtlamalarına göre filtreler.",
+        "14 alerjen kategorisi",
+        "Vegan ve glutensiz etiketleri",
+        "Diyete göre filtreleme",
       ],
       image: { src: "/landing/feature-allergens.webp", alt: "Misafir telefonda menüyü alerjenlere göre filtrelerken sahip alerjen listesini bir tablette düzenliyor" },
     },
     {
+      icon: MonitorSmartphone,
+      eyebrow: "Her cihaz",
+      heading: "Her cihazdan yönetin",
+      body: "Yönetim paneli tarayıcıda çalışır — menüyü, fiyatları ve fotoğrafları her yerden düzenleyin. Kurulum gerekmez.",
+      bullets: [
+        "Her tarayıcıda çalışır",
+        "Telefon, tablet veya PC",
+        "Kurulum gerekmez",
+      ],
+    },
+    {
+      icon: BadgePercent,
+      eyebrow: "Komisyon yok",
+      heading: "Sıfır komisyon, ek ücret yok",
+      body: "Tek şeffaf abonelik. Gelirinizden pay almayız ve gizli ücret koymayız — hepsi restoranda kalır.",
+      bullets: [
+        "Siparişlerde sıfır yüzde",
+        "Gizli ek ücret yok",
+        "Tek sabit fiyat",
+      ],
+    },
+    {
+      icon: Globe,
+      eyebrow: "Özel alan adı",
+      heading: "Menü kendi alan adınızda",
+      body: "Alan adınızı SSL ile bağlarız — misafirler menüyü restoranınızın adresinde görür. DNS'te 10 dakikada yardımcı oluruz.",
+      bullets: [
+        "SSL'li kendi alan adınız",
+        "menu.restoraniniz.com",
+        "DNS kurulumunda yardım",
+      ],
+    },
+    {
+      icon: LayoutTemplate,
+      eyebrow: "Sizin tasarımınız",
+      heading: "Size uygun esnek tasarım",
+      body: "Birkaç hazır düzen ve stil — mekanınıza uyan kapağı, renkleri ve yemek sunumunu seçin.",
+      bullets: [
+        "Birkaç hazır düzen",
+        "Kendi kapak ve renkleriniz",
+        "Birkaç tıkla yeni stil",
+      ],
+    },
+    {
+      icon: Contact,
+      eyebrow: "İletişim",
+      heading: "Menüde iletişim ve sosyal",
+      body: "Harita, telefon ve Instagram ile WhatsApp bağlantıları olan özel bir sayfa — misafirler sizi tek dokunuşla bulur.",
+      bullets: [
+        "Harita, telefon ve adres",
+        "Instagram ve WhatsApp",
+        "Tek dokunuşla ulaşım",
+      ],
+    },
+    {
+      icon: MessageCircle,
+      eyebrow: "WhatsApp siparişleri",
+      heading: "WhatsApp üzerinden sipariş alın",
+      body: "Misafirler sepet oluşturur ve siparişi doğrudan WhatsApp'ınıza gönderir — ayrı uygulama yok, zaten kullandıkları sohbette.",
+      bullets: [
+        "WhatsApp'ınıza sipariş",
+        "Ayrı uygulama yok",
+        "Her zamanki sohbet",
+      ],
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Rezervasyonlar",
+      heading: "Aramasız masa rezervasyonu",
+      body: "Misafirler menü veya bağlantıyla kendileri masa ayırtır, siz masalara göre takvimi görür ve otomatik ya da elle onaylarsınız.",
+      bullets: [
+        "7/24 rezervasyon, aramasız",
+        "Masalara göre takvim",
+        "Otomatik ve elle onay",
+      ],
+    },
+    {
       icon: Palette,
       eyebrow: "Premium tasarım",
-      heading: "Video arka plan ve iletişim sayfasıyla premium tasarım.",
-      body: "Karşılama ekranında video veya fotoğraf, restoran açıklaması, harita, telefon numaraları ve sosyal profillerle özel iletişim sayfası. Dijital menü, QR kodu arkasında bir PDF değil, tam bir restoran web sitesi gibi görünür.",
+      heading: "PDF değil, site gibi görünür",
+      body: "Karşılama ekranında video arka plan, anlatılan konseptiniz ve harita ile sosyalin olduğu ayrı bir iletişim sayfası.",
       bullets: [
-        "Karşılama ekranında video arka plan veya büyük fotoğraf.",
-        "Restoran ve kategori açıklamaları — kavramın hikayesini anlatın.",
-        "İletişim sayfası: harita, telefon, Instagram, WhatsApp.",
+        "Ana ekranda video",
+        "Konsept ve yemekler anlatılır",
+        "Ayrı iletişim sayfası",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Bir kafe masasında iki telefon: video arka planlı menü ana ekranı ve haritalı iletişim sayfası" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Menüden sipariş · isteğe bağlı",
-      heading: "Misafirler doğrudan menüden sipariş verir.",
-      body: "Misafirler QR menüsünde sepet oluşturur ve siparişi gönderir — salondaki garsona veya mutfak tabletine düşer. Özellik, ayarlardan istediğiniz zaman etkinleştirilebilir veya devre dışı bırakılabilir.",
+      eyebrow: "Siparişler · isteğe bağlı",
+      heading: "Doğrudan menüden sipariş",
+      body: "Misafirler sepet oluşturur ve siparişi gönderir — salona, WhatsApp'a veya mutfak ekranına düşer. İsteğe bağlı.",
       bullets: [
-        "Sepet, yorumlar ve tek dokunuşla sipariş gönderme.",
-        "Sipariş anında yönetim paneline, WhatsApp'a veya mutfak ekranına düşer.",
-        "Özellik ayarlardan değiştirilir.",
+        "Tek dokunuşla sepet ve gönderim",
+        "Salona, WhatsApp'a veya mutfağa",
+        "Ayarlardan açın",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Masada iki telefon: siparişli sepet ve sipariş onayı" },
     },

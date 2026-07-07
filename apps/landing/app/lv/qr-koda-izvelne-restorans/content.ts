@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "QR ēdienkarte: skenē un pasūti.",
+    headline: "QR ēdienkarte:\nskenē un pasūti.",
     cta: "Izveidot QR ēdienkarti",
     sub: "Viesis skenē galda QR kodu, redz foto un alergēnus 35 valodās un pasūta — bez lietotnes.",
   },

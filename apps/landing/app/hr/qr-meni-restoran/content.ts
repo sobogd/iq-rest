@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "QR jelovnik: skeniraj i naruči.",
+    headline: "QR jelovnik:\nskeniraj i naruči.",
     cta: "Izradi QR jelovnik",
     sub: "Gost skenira QR na stolu, vidi fotografije i alergene na 35 jezika i naruči — bez aplikacije.",
   },

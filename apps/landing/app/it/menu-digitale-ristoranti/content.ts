@@ -1,10 +1,23 @@
-import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
+import {
+  Languages,
+  ShieldAlert,
+  Palette,
+  ShoppingCart,
+  MonitorSmartphone,
+  BadgePercent,
+  Globe,
+  LayoutTemplate,
+  Contact,
+  MessageCircle,
+  CalendarCheck,
+} from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
   locale: "it",
   slug: "menu-digitale-ristoranti",
   trackPrefix: "l_it_digital",
+  hideFeatureHeading: true,
 
   meta: {
     title: "Menu digitale per ristoranti | IQ Rest",
@@ -19,9 +32,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Menu digitale che vende di più.",
+    headline: "Un menu digitale\nche ha tutto",
     cta: "Crea il menù digitale",
-    sub: "Il tuo menu cartaceo online: foto, allergeni, prezzi in tempo reale e traduzione in 35 lingue. Senza ristampe.",
+    sub: "Foto, allergeni e traduzione in 35 lingue. Più ordini, WhatsApp e prenotazione tavolo — tutto in un solo IQ Rest.",
   },
 
   scan: {
@@ -35,48 +48,125 @@ export const CONTENT: FeatureContent = {
     {
       icon: Languages,
       eyebrow: "35 lingue con IA",
-      heading: "35 lingue con IA — ogni ospite legge il menu nella sua.",
-      body: "Un solo QR, 35 lingue. L'IA tiene conto del contesto gastronomico — i nomi e le descrizioni dei piatti suonano naturali. I turisti ordinano con più sicurezza e lo scontrino medio cresce senza che un cameriere debba tradurre piatto per piatto.",
+      heading: "35 lingue che ogni ospite legge",
+      body: "Un QR, 35 lingue. L'IA traduce con contesto culinario, così ogni piatto suona naturale. I turisti ordinano sicuri.",
       bullets: [
-        "35 lingue incluse nell'abbonamento, senza costi aggiuntivi.",
-        "IA con sensibilità culinaria, non un banale Google Translate.",
-        "L'ospite cambia lingua con un tocco direttamente nel menu.",
+        "35 lingue nel tuo piano",
+        "IA culinaria, non Google",
+        "Cambio lingua con un tocco",
       ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Due ospiti leggono lo stesso menu digitale in lingue diverse dai loro cellulari" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Due ospiti leggono lo stesso menu digitale in lingue diverse dai propri cellulari" },
     },
     {
       icon: ShieldAlert,
       eyebrow: "Allergeni",
-      heading: "Allergeni ed etichette dietetiche.",
-      body: "Contrassegna i piatti con glutine, lattosio, frutta a guscio, frutti di mare, opzioni vegane e senza glutine. Gli ospiti filtrano il menu in base alle loro esigenze e ordinano con maggiore tranquillità.",
+      heading: "Allergeni e diete su ogni piatto",
+      body: "Segnala glutine, lattosio, frutta a guscio, vegano e senza glutine. Gli ospiti filtrano il menu sulla dieta e ordinano facile.",
       bullets: [
-        "14 categorie standard di allergeni su ogni piatto.",
-        "Etichette vegan, vegetarian e gluten-free con un solo clic.",
-        "L'ospite filtra il menu in base alle proprie esigenze.",
+        "14 categorie di allergeni",
+        "Tag vegano e senza glutine",
+        "Filtro per dieta",
       ],
       image: { src: "/landing/feature-allergens.webp", alt: "Ospite filtra il menu per allergeni sul cellulare mentre il titolare modifica l'elenco degli allergeni su un tablet" },
     },
     {
+      icon: MonitorSmartphone,
+      eyebrow: "Ogni dispositivo",
+      heading: "Gestiscilo da ogni dispositivo",
+      body: "Il pannello gira nel browser — modifica menu, prezzi e foto da ovunque. Non c'è nulla da installare.",
+      bullets: [
+        "Gira in ogni browser",
+        "Telefono, tablet o PC",
+        "Niente da installare",
+      ],
+    },
+    {
+      icon: BadgePercent,
+      eyebrow: "Zero commissioni",
+      heading: "Zero commissioni, nessun extra",
+      body: "Un abbonamento trasparente. Non tratteniamo parte dei tuoi incassi né nascondiamo costi — tutto resta al ristorante.",
+      bullets: [
+        "Zero percento sugli ordini",
+        "Nessun extra nascosto",
+        "Un prezzo unico",
+      ],
+    },
+    {
+      icon: Globe,
+      eyebrow: "Dominio tuo",
+      heading: "Il menu sul tuo dominio",
+      body: "Colleghiamo il tuo dominio con SSL — gli ospiti vedono il menu all'indirizzo del ristorante. Aiutiamo col DNS in 10 minuti.",
+      bullets: [
+        "Il tuo dominio con SSL",
+        "menu.tuoristorante.com",
+        "Aiutiamo col DNS",
+      ],
+    },
+    {
+      icon: LayoutTemplate,
+      eyebrow: "Il tuo stile",
+      heading: "Design flessibile su misura",
+      body: "Vari layout e stili pronti — scegli copertina, colori e presentazione dei piatti giusti per il tuo locale.",
+      bullets: [
+        "Vari layout pronti",
+        "Copertina e colori tuoi",
+        "Ristyling in pochi clic",
+      ],
+    },
+    {
+      icon: Contact,
+      eyebrow: "Contatti",
+      heading: "Contatti e social nel menu",
+      body: "Una pagina con mappa, telefono e link a Instagram e WhatsApp — gli ospiti ti trovano con un solo tocco.",
+      bullets: [
+        "Mappa, telefono e indirizzo",
+        "Instagram e WhatsApp",
+        "Ti contattano in un tocco",
+      ],
+    },
+    {
+      icon: MessageCircle,
+      eyebrow: "Ordini su WhatsApp",
+      heading: "Ricevi ordini su WhatsApp",
+      body: "Gli ospiti compongono il carrello e inviano l'ordine dritto al tuo WhatsApp — nessuna app a parte, nella chat che già usano.",
+      bullets: [
+        "Ordine al tuo WhatsApp",
+        "Nessuna app a parte",
+        "La chat di sempre",
+      ],
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Prenotazioni",
+      heading: "Prenota tavolo senza chiamate",
+      body: "Gli ospiti prenotano il tavolo dal menu o da un link, tu vedi il calendario per tavolo e confermi auto o a mano.",
+      bullets: [
+        "Prenotazioni 24/7, no chiamate",
+        "Calendario per tavolo",
+        "Conferma auto o manuale",
+      ],
+    },
+    {
       icon: Palette,
       eyebrow: "Design premium",
-      heading: "Design premium con video di sfondo e pagina contatti.",
-      body: "Un video o una foto sulla schermata di benvenuto, la descrizione del ristorante, una pagina contatti dedicata con mappa, numeri di telefono e social. Il menu digitale appare come un vero sito del ristorante, non come un PDF dietro un QR.",
+      heading: "Sembra un sito, non un PDF",
+      body: "Video di sfondo sulla schermata iniziale, il tuo concept descritto e una pagina contatti a parte con mappa e social.",
       bullets: [
-        "Video di sfondo o foto in primo piano sulla schermata principale.",
-        "Descrizione del ristorante e delle categorie — racconta il concept.",
-        "Pagina contatti: mappa, telefono, Instagram, WhatsApp.",
+        "Video sulla schermata iniziale",
+        "Concept e piatti descritti",
+        "Pagina contatti a parte",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Due cellulari su un tavolino da bar: schermata principale del menu con video di sfondo e pagina contatti con mappa" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Ordini dal menu · opzionale",
-      heading: "L'ospite ordina direttamente dal menu.",
-      body: "L'ospite compone il carrello nel menu QR e invia l'ordine — arriva al cameriere in sala o sul tablet della cucina. La funzione si attiva o disattiva nelle impostazioni in qualsiasi momento.",
+      eyebrow: "Ordini · opzionale",
+      heading: "Ordini diretti dal menu",
+      body: "Gli ospiti compongono il carrello e inviano l'ordine — arriva in sala, su WhatsApp o sul display di cucina. Opzionale.",
       bullets: [
-        "Carrello, note e invio dell'ordine con un solo tocco.",
-        "L'ordine arriva subito sul pannello, su WhatsApp o sul display di cucina.",
-        "Funzionalità opzionale, attivabile o disattivabile nelle impostazioni.",
+        "Carrello e invio in un tocco",
+        "In sala, WhatsApp o cucina",
+        "Attivalo nelle impostazioni",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Due cellulari su un tavolo: carrello con l'ordine e schermata di ordine confermato" },
     },

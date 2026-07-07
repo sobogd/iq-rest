@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS: 주문이 바로 셰프에게.",
+    headline: "KDS:\n주문이 바로 셰프에게.",
     cta: "주방 디스플레이 설정",
     sub: "주문이 주방 화면에 즉시 표시: 메모, 알레르기, 타이머. 한 번의 터치로 상태 변경.",
     imageSrc: "/landing/feature-kitchen.webp",

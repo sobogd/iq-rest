@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Pasūtījumi no galda uz virtuvi.",
+    headline: "Pasūtījumi no galda\nuz virtuvi.",
     cta: "Iestatīt tiešsaistes pasūtījumus",
     sub: "Viesis pasūta pie galda vai viesmīlis no jebkuras ierīces — tieši virtuvē. Zāles plāns, rēķina dalīšana.",
     imageSrc: "/landing/feature-orders.webp",

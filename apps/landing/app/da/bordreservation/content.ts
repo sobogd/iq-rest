@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Bordbestilling 24/7, ingen opkald.",
+    headline: "Bordbestilling 24/7,\ningen opkald.",
     cta: "Opsæt bordreservation",
     sub: "Gæster booker 24/7 via QR-menuen eller et link. Kalender pr. bord, automatiske bekræftelser og påmindelser.",
     imageSrc: "/landing/feature-reservation.webp",

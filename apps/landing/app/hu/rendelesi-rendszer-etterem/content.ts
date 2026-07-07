@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Rendelés az asztaltól a konyhába.",
+    headline: "Rendelés az asztaltól\na konyhába.",
     cta: "Online rendelés beállítása",
     sub: "A vendég az asztalnál rendel, vagy a pincér bármely eszközről — egyből a konyhába. Teremtérkép, számla megosztása.",
     imageSrc: "/landing/feature-orders.webp",

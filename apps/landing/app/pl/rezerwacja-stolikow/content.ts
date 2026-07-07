@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Rezerwacje 24/7, bez telefonów.",
+    headline: "Rezerwacje 24/7,\nbez telefonów.",
     cta: "Skonfiguruj rezerwacje stolików",
     sub: "Goście rezerwują 24/7 przez menu QR lub link. Kalendarz według stolika, automatyczne potwierdzenia i przypomnienia.",
     imageSrc: "/landing/feature-reservation.webp",

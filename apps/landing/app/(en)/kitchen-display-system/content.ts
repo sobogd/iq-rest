@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS: orders straight to the chef.",
+    headline: "KDS: orders straight\nto the chef.",
     cta: "Set Up Kitchen Display",
     sub: "Orders hit the chef's screen instantly, with notes, allergens and a timer. One tap updates the status.",
     imageSrc: "/landing/feature-kitchen.webp",

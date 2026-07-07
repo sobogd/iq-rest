@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "24/7在线预订，零来电。",
+    headline: "24/7在线预订，\n零来电。",
     cta: "设置餐桌预订",
     sub: "顾客通过QR菜单或链接24/7预订。按桌位日历、自动确认与提醒。",
     imageSrc: "/landing/feature-reservation.webp",

@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Bordsbokning 24/7, inga samtal.",
+    headline: "Bordsbokning 24/7,\ninga samtal.",
     cta: "Konfigurera bordsbokning",
     sub: "Gäster bokar 24/7 via QR-menyn eller en länk. Kalender per bord, automatiska bekräftelser och påminnelser.",
     imageSrc: "/landing/feature-reservation.webp",

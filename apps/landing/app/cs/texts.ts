@@ -19,10 +19,10 @@ export const TEXTS: LandingTexts = {
   ctaText: "Vyzkoušejte zdarma",
   homeCtaText: "Vyzkoušejte zdarma",
   trust: [
-    { kind: "num", value: 35, label: "Jazyků" },
-    { kind: "text", value: "24/7", label: "Rezervace" },
-    { kind: "num", value: 5, suffix: " min", label: "Spuštění" },
-    { kind: "count", label: "Restaurací" },
+    { kind: "num", value: 35, label: "Jazyků menu" },
+    { kind: "text", value: "24/7", label: "Online rezervace" },
+    { kind: "num", value: 5, suffix: " min", label: "Do spuštění" },
+    { kind: "count", label: "Restaurací s námi" },
   ],
   demoText: "Sledovat demo",
   microcopy: "14 dní zdarma · Bez karty · Zrušení kdykoli",
@@ -39,7 +39,7 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Restaurace", "Kavárny", "Bary", "Hotely", "Pizzerie"],
-    headline: "Digitální menu pro restauraci. Online za 5 minut.",
+    headline: "Digitální menu pro restauraci.\nOnline za 5 minut.",
     sub: "Digitální menu pro vaši restauraci za 5 minut. Vše v ceně: editor bez kódu, AI rozpoznání tištěného menu, QR kódy ke stolům a přímé objednávky bez provizí.",
     dynamicHeadlines: ["0 % provize.", "35 jazyků s AI.", "Online objednávky.", "Rezervace 24/7.", "Prémiový design."],
     painBullets: [
@@ -117,6 +117,11 @@ export const TEXTS: LandingTexts = {
     heading: "Online za 5 minut.",
     headingAccent: "14 dní zdarma.",
     sub: "Bez karty, zrušení kdykoli. Připojte se k více než 500 restauracím, které už používají IQ Rest.",
+  },
+
+  featureHighlights: {
+    heading: "Vše v ceně",
+    sub: "Funkce, které mění hosty v objednávky — v každém tarifu, bez příplatků.",
   },
 
   scan: {

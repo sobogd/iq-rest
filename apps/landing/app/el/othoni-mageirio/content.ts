@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS: παραγγελίες στον σεφ.",
+    headline: "KDS: παραγγελίες\nστον σεφ.",
     cta: "Ρύθμιση οθόνης κουζίνας",
     sub: "Οι παραγγελίες φτάνουν αμέσως στην οθόνη κουζίνας: σημειώσεις, αλλεργιογόνα, χρονόμετρο, αλλαγή με ένα άγγιγμα.",
     imageSrc: "/landing/feature-kitchen.webp",

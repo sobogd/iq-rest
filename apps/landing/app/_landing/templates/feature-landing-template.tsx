@@ -1,9 +1,8 @@
-import Image from "next/image";
-import { Check } from "lucide-react";
 import { LandingHeader } from "../components/header";
 import { LandingFooter } from "../components/footer";
 import { LandingHero } from "../components/landing-hero";
 import { Section } from "../components/section";
+import { FeatureCard } from "../components/feature-card";
 import { HeroStats } from "../components/hero-stats";
 import { PageTracker } from "../components/page-tracker";
 import { ScanSection } from "../components/scan-section";
@@ -36,11 +35,10 @@ export function FeatureLandingTemplate({
   content,
   chrome,
 }: FeatureLandingTemplateProps) {
-  const { locale, subFeatures, hero, scan, faq, trackPrefix } = content;
+  const { locale, subFeatures, hero, scan, faq, trackPrefix, hideFeatureHeading } = content;
   // Locale-stable prefix/page so every language version fires the same events.
   const prefix = stablePrefix(trackPrefix);
   const page = featureKey(trackPrefix);
-  const subCount = subFeatures.length;
   const helpBanner = getHelpBanner(locale);
   // Live restaurant counter for the trust strip (build-time, like the home page).
   const count = restaurantCount();
@@ -94,76 +92,31 @@ export function FeatureLandingTemplate({
       <HeroStats trust={chrome.trust ?? []} countLabel={countLabel} dataSection="feature_trust" />
 
       <div id="features">
-      <ScanSection texts={scan} locale={locale} />
+      <Section dataSection="subfeatures" noContainer className="!py-16">
+        {chrome.featureHighlights && !hideFeatureHeading ? (
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+            <h2 className="text-[2rem] sm:text-[2.5rem] lg:text-[3rem] font-medium tracking-tight leading-[1.05] mb-4">
+              {chrome.featureHighlights.heading}
+            </h2>
+            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground/70 leading-snug">
+              {chrome.featureHighlights.sub}
+            </p>
+          </div>
+        ) : null}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+          {subFeatures.map((row) => (
+            <FeatureCard key={row.heading} row={row} />
+          ))}
+        </div>
+      </Section>
 
-      {subFeatures.map((row, i) => {
-        const reverse = i % 2 === 0;
-        const Icon = row.icon;
-        return (
-          <Section
-            key={row.heading}
-            dataSection={`subfeature_${i}`}
-            noContainer
-            accent={i % 2 === 0}
-          >
-            <div className="w-full lg:min-h-[70dvh] flex items-center py-6 sm:py-16 lg:py-0">
-              <div
-                className={`grid grid-cols-1 gap-10 lg:gap-14 xl:gap-20 lg:grid-cols-2 lg:items-center w-full ${
-                  reverse ? "lg:[&>*:first-child]:order-2" : ""
-                }`}
-              >
-                <div className="flex flex-col items-center text-center lg:items-start lg:text-start">
-                  <div className="inline-flex items-center gap-2 text-primary mb-5">
-                    <Icon className="h-5 w-5" strokeWidth={2} />
-                    <span className="text-[11px] uppercase tracking-widest font-medium">
-                      {row.eyebrow}
-                    </span>
-                  </div>
-                  <h2 className="text-[2rem] sm:text-[2.5rem] lg:text-[3rem] xl:text-[3.25rem] font-medium tracking-tight leading-[1.05] mb-5">
-                    {row.heading}
-                  </h2>
-                  <p className="text-base sm:text-lg lg:text-xl text-muted-foreground/70 max-w-xl leading-snug mb-6">
-                    {row.body}
-                  </p>
-                  <ul className="w-full max-w-xl grid grid-cols-1 gap-2.5">
-                    {row.bullets.map((b) => (
-                      <li
-                        key={b}
-                        className="text-sm sm:text-base text-foreground/90 leading-snug text-center lg:text-start"
-                      >
-                        <Check
-                          className="inline align-[-0.15em] mr-1.5 h-4 w-4 sm:h-[18px] sm:w-[18px] text-primary"
-                          strokeWidth={2.5}
-                        />
-                        {b}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="w-full">
-                  <div className="relative w-full aspect-[4/3] overflow-hidden rounded-lg shadow-2xl ring-1 ring-black/5 dark:ring-white/5">
-                    <Image
-                      src={row.image.src}
-                      alt={row.image.alt}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Section>
-        );
-      })}
+      <ScanSection texts={scan} locale={locale} accent />
       </div>
 
       <Section
         id="pricing"
         dataSection="pricing_hero"
         noContainer
-        accent={subCount % 2 === 0}
         className="!py-16"
       >
         <PricingHero
@@ -176,7 +129,7 @@ export function FeatureLandingTemplate({
         />
       </Section>
 
-      <Section id="faq" dataSection="faq" noContainer accent={subCount % 2 === 1} className="!py-16">
+      <Section id="faq" dataSection="faq" noContainer accent className="!py-16">
         <Faq
           texts={{
             ...chrome.faq,
@@ -190,13 +143,12 @@ export function FeatureLandingTemplate({
         id="founder"
         dataSection="founder"
         noContainer
-        accent={subCount % 2 === 0}
         className="!py-16"
       >
         <Founder texts={chrome.founder} />
       </Section>
 
-      <Section dataSection="final_cta" noContainer className="!py-16">
+      <Section dataSection="final_cta" noContainer accent className="!py-16">
         <FinalCta
           texts={chrome.finalCta}
           ctaText={hero.cta}

@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Бронювання 24/7, без дзвінків",
+    headline: "Бронювання 24/7,\nбез дзвінків",
     cta: "Налаштувати бронювання столів",
     sub: "Гості бронюють 24/7 через QR-меню або посилання. Календар за столами, автопідтвердження та нагадування.",
     imageSrc: "/landing/feature-reservation.webp",

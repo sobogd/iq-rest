@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Pedidos de la mesa a cocina.",
+    headline: "Pedidos de la mesa\na cocina.",
     cta: "Configurar pedidos online",
     sub: "Pide el cliente en la mesa o el camarero en cualquier dispositivo — directo a cocina. Plano de sala, dividir cuenta.",
     imageSrc: "/landing/feature-orders.webp",

@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "7/24 rezervasyon, telefon yok.",
+    headline: "7/24 rezervasyon,\ntelefon yok.",
     cta: "Masa rezervasyonunu kur",
     sub: "Misafirler QR menü veya bağlantıyla 7/24 rezervasyon yapar. Masaya göre takvim, otomatik onay ve hatırlatmalar.",
     imageSrc: "/landing/feature-reservation.webp",

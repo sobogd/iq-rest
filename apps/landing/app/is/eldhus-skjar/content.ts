@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS: pantanir beint til kokksins.",
+    headline: "KDS: pantanir\nbeint til kokksins.",
     cta: "Setja upp eldhússkjá",
     sub: "Pantanir birtast strax á eldhússkjánum: athugasemdir, ofnæmisvaldar og teljari. Breyttu stöðu með einni snertingu.",
     imageSrc: "/landing/feature-kitchen.webp",

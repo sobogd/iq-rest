@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS: سفارش‌ها مستقیم به آشپز.",
+    headline: "KDS: سفارش‌ها مستقیم به\nآشپز.",
     cta: "راه‌اندازی نمایشگر آشپزخانه",
     sub: "سفارش‌ها فوراً روی نمایشگر آشپزخانه می‌آیند: یادداشت، آلرژن و تایمر. وضعیت را با یک لمس تغییر بده.",
     imageSrc: "/landing/feature-kitchen.webp",

@@ -1,10 +1,23 @@
-import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
+import {
+  Languages,
+  ShieldAlert,
+  Palette,
+  ShoppingCart,
+  MonitorSmartphone,
+  BadgePercent,
+  Globe,
+  LayoutTemplate,
+  Contact,
+  MessageCircle,
+  CalendarCheck,
+} from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
   locale: "ga",
   slug: "biachlar-digiteach-bialann",
   trackPrefix: "l_ga_digital",
+  hideFeatureHeading: true,
 
   meta: {
     title: "Biachlár digiteach do bhialanna | IQ Rest",
@@ -19,9 +32,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Biachlár digiteach a dhíolann.",
+    headline: "Biachlár digiteach\nina bhfuil gach rud",
     cta: "Cruthaigh biachlár digiteach",
-    sub: "Do bhiachlár páipéir ar líne: grianghraif, ailléirginí, praghsanna beo agus aistriúchán go 35 teanga. Gan athphriontáil.",
+    sub: "Grianghraif, ailléirginí agus aistriúchán go 35 teanga. Chomh maith le horduithe, WhatsApp agus áirithint bord — gach rud in IQ Rest amháin.",
   },
 
   scan: {
@@ -35,48 +48,125 @@ export const CONTENT: FeatureContent = {
     {
       icon: Languages,
       eyebrow: "35 teanga IS",
-      heading: "35 teanga IS — léann gach aoi an biachlár ina theanga féin.",
-      body: "Cód QR amháin, 35 teanga. Láimhseálann an IS comhthéacs cócaireachta — fuaimíonn ainmneacha miasa agus tuairiscí nádúrtha. Ordaíonn turasóirí le níos mó muiníne agus fásann an meánticéad gan an freastalaí a bheith ag aistriú gach mias.",
+      heading: "35 teanga do gach aoi",
+      body: "QR amháin, 35 teanga. Aistríonn an IS le comhthéacs cócaireachta, mar sin fuaimíonn gach mias nádúrtha. Ordaíonn turasóirí go muiníneach.",
       bullets: [
-        "35 teanga san áireamh sa síntiús, gan táille bhreise.",
-        "IS le tuiscint ar chomhthéacs cócaireachta, ní Google Translate amh.",
-        "Athraíonn an t-aoi an teanga le tapáil amháin sa bhiachlár féin.",
+        "35 teanga i do phlean",
+        "IS cócaireachta, ní Google",
+        "Athrú teanga le tapáil amháin",
       ],
       image: { src: "/landing/feature-multilang.webp", alt: "Beirt aíonna ag léamh an bhiachláir dhigitigh chéanna i dteangacha éagsúla ar a ngutháin féin" },
     },
     {
       icon: ShieldAlert,
       eyebrow: "Ailléirginí",
-      heading: "Clibeanna ailléirginí agus aiste bia.",
-      body: "Marcáil miasa do ghluten, lachtós, cnónna, bia mara, roghanna véigeacha agus saor ó ghluten. Scagann aíonna an biachlár de réir a riachtanas aiste bia agus ordaíonn le níos mó muiníne.",
+      heading: "Ailléirginí agus aiste bia ar gach mias",
+      body: "Clibeáil glútan, lachtós, cnónna, véigeach agus saor ó ghlútan. Scagann aíonna an biachlár chun a n-aiste bia a oiriúnú agus ordaíonn go héasca.",
       bullets: [
-        "14 catagóir chaighdeánach ailléirginí ar gach mias.",
-        "Clibeanna véigeach, glasraí agus saor ó ghluten le cliceáil amháin.",
-        "Scagann aíonna an biachlár de réir a srianta aiste bia.",
+        "14 catagóir ailléirginí",
+        "Clibeanna véigeach is saor ó ghlútan",
+        "Scagann aíonna de réir aiste bia",
       ],
       image: { src: "/landing/feature-allergens.webp", alt: "Aoi ag scagadh an bhiachláir de réir ailléirginí ar a ghuthán fad atá an t-úinéir ag cur an liosta ailléirginí in eagar ar tháibléad" },
     },
     {
+      icon: MonitorSmartphone,
+      eyebrow: "Gléas ar bith",
+      heading: "Bainistigh ó ghléas ar bith",
+      body: "Ritheann an painéal riaracháin sa bhrabhsálaí — cuir biachlár, praghsanna is grianghraif in eagar ó áit ar bith. Gan aon rud le suiteáil.",
+      bullets: [
+        "Ritheann in aon bhrabhsálaí",
+        "Guthán, táibléad nó ríomhaire",
+        "Gan aon rud le suiteáil",
+      ],
+    },
+    {
+      icon: BadgePercent,
+      eyebrow: "Gan choimisiún",
+      heading: "Coimisiún nialasach, gan bhreiseáin",
+      body: "Síntiús trédhearcach amháin. Ní thógaimid sciar de d'ioncam ná ní cheilimid táillí — fanann sé ar fad leis an mbialann.",
+      bullets: [
+        "Nialas faoin gcéad ar orduithe",
+        "Gan bhreiseáin fholaithe",
+        "Praghas cothrom amháin",
+      ],
+    },
+    {
+      icon: Globe,
+      eyebrow: "Fearann féin",
+      heading: "Biachlár ar d'fhearann féin",
+      body: "Nascann muid d'fhearann le SSL — feiceann aíonna an biachlár ar sheoladh do bhialainne. Cuidímid le DNS i 10 nóiméad.",
+      bullets: [
+        "D'fhearann le SSL",
+        "menu.dobhialannsa.ie",
+        "Cuidímid le socrú DNS",
+      ],
+    },
+    {
+      icon: LayoutTemplate,
+      eyebrow: "Do dhearadh",
+      heading: "Dearadh solúbtha a oireann duit",
+      body: "Roinnt leagan amach agus stíleanna réidh — roghnaigh an clúdach, na dathanna is cur i láthair na miasa a oireann do d'áit.",
+      bullets: [
+        "Roinnt leagan amach réidh",
+        "Do chlúdach is do dhathanna",
+        "Athstíl i gcúpla cliceáil",
+      ],
+    },
+    {
+      icon: Contact,
+      eyebrow: "Teagmhálacha",
+      heading: "Teagmhálacha is sóisialta sa bhiachlár",
+      body: "Leathanach tiomnaithe le léarscáil, guthán is naisc chuig Instagram agus WhatsApp — aimsíonn aíonna thú le tapáil amháin.",
+      bullets: [
+        "Léarscáil, guthán is seoladh",
+        "Instagram agus WhatsApp",
+        "Teagmháil le tapáil amháin",
+      ],
+    },
+    {
+      icon: MessageCircle,
+      eyebrow: "Orduithe WhatsApp",
+      heading: "Glac orduithe trí WhatsApp",
+      body: "Tógann aíonna ciseán is seolann an t-ordú díreach chuig do WhatsApp — gan aip ar leith, sa chomhrá a úsáideann siad cheana.",
+      bullets: [
+        "Ordú chuig do WhatsApp",
+        "Gan aip ar leith",
+        "Comhrá mar is gnách",
+      ],
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Áirithintí",
+      heading: "Áirithint bord gan ghlaonna",
+      body: "Áirithníonn aíonna bord iad féin tríd an mbiachlár nó nasc, feiceann tú an féilire de réir boird is deimhníonn go huathoibríoch nó de láimh.",
+      bullets: [
+        "Áirithint 24/7, gan ghlaonna",
+        "Féilire trasna na mbord",
+        "Deimhniú uath is de láimh",
+      ],
+    },
+    {
       icon: Palette,
       eyebrow: "Dearadh préimhe",
-      heading: "Dearadh préimhe le cúlra físeáin agus leathanach teagmhála.",
-      body: "Físeán nó grianghraf ar an scáileán fáilte, tuairisc bialainne, leathanach teagmhála tiomnaithe le léarscáil, uimhreacha gutháin agus próifílí sóisialta. Breathnaíonn an biachlár digiteach cosúil le suíomh iomlán bialainne, ní PDF taobh thiar de chód QR.",
+      heading: "Cuma suímh, ní PDF",
+      body: "Cúlra físeáin ar an scáileán fáilte, cur síos ar do choincheap is leathanach teagmhála ar leith le léarscáil is sóisialta.",
       bullets: [
-        "Cúlra físeáin nó grianghraf mór ar an scáileán fáilte.",
-        "Tuairiscí bialainne agus catagóirí — inis scéal an choincheap.",
-        "Leathanach teagmhála: léarscáil, guthán, Instagram, WhatsApp.",
+        "Físeán ar an scáileán baile",
+        "Coincheap is miasa curtha síos",
+        "Leathanach teagmhála ar leith",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Dhá ghuthán ar bhord caifé: scáileán baile an bhiachláir le cúlra físeáin agus leathanach teagmhála le léarscáil" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Orduithe ón mbiachlár · roghnach",
-      heading: "Cuireann aíonna orduithe go díreach ón mbiachlár.",
-      body: "Tógann aíonna ciseán sa bhiachlár QR agus seolann an t-ordú — sroicheann sé an freastalaí san urlár nó an táibléad cistine. Is féidir an ghné a chumasú nó a dhíchumasú sna socruithe ag aon am.",
+      eyebrow: "Orduithe · roghnach",
+      heading: "Orduithe díreach ón mbiachlár",
+      body: "Tógann aíonna ciseán is seolann an t-ordú — sroicheann sé an halla, WhatsApp nó scáileán na cistine. Roghnach.",
       bullets: [
-        "Ciseán, tráchtanna agus seoladh ordaithe le tapáil amháin.",
-        "Sroicheann an t-ordú láithreach an painéal riaracháin, WhatsApp nó an scáileán cistine.",
-        "Athraítear an ghné sna socruithe.",
+        "Ciseán is seoladh le tapáil",
+        "Chuig halla, WhatsApp nó cistin",
+        "Cas air sna socruithe",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Dhá ghuthán ar bhord: ciseán le hordú agus deimhniú gur seoladh an t-ordú" },
     },

@@ -19,10 +19,10 @@ export const TEXTS: LandingTexts = {
   ctaText: "Preizkusite brezplačno",
   homeCtaText: "Preizkusite brezplačno",
   trust: [
-    { kind: "num", value: 35, label: "Jezikov" },
-    { kind: "text", value: "24/7", label: "Rezervacije" },
-    { kind: "num", value: 5, suffix: " min", label: "Zagon" },
-    { kind: "count", label: "Restavracij" },
+    { kind: "num", value: 35, label: "Jezikov menija" },
+    { kind: "text", value: "24/7", label: "Spletne rezervacije" },
+    { kind: "num", value: 5, suffix: " min", label: "Do zagona" },
+    { kind: "count", label: "Restavracij z nami" },
   ],
   demoText: "Oglejte si demo",
   microcopy: "14 dni brezplačno · Brez kartice · Prekličete kadar koli",
@@ -39,7 +39,7 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Restavracije", "Kavarne", "Bari", "Hoteli", "Picerije"],
-    headline: "Digitalni jedilnik za restavracijo. Na spletu v 5 minutah.",
+    headline: "Digitalni jedilnik za restavracijo.\nNa spletu v 5 minutah.",
     sub: "Digitalni jedilnik za vašo restavracijo v 5 minutah. Vse vključeno: urejevalnik brez kode, AI prepoznavanje natisnjenega jedilnika, QR kode za mize in neposredna naročila brez provizije.",
     dynamicHeadlines: ["0 % provizije.", "35 AI jezikov.", "Spletna naročila.", "Rezervacije 24/7.", "Premium oblika."],
     painBullets: [
@@ -117,6 +117,11 @@ export const TEXTS: LandingTexts = {
     heading: "Na spletu v 5 minutah.",
     headingAccent: "14 dni brezplačno.",
     sub: "Brez kartice, prekličete kadar koli. Pridružite se 500+ restavracijam, ki že uporabljajo IQ Rest.",
+  },
+
+  featureHighlights: {
+    heading: "Vse vključeno",
+    sub: "Funkcije, ki obiskovalce spremenijo v naročila — v vsakem paketu, brez doplačil.",
   },
 
   scan: {

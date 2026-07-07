@@ -19,10 +19,10 @@ export const TEXTS: LandingTexts = {
   ctaText: "Wypróbuj za darmo",
   homeCtaText: "Wypróbuj za darmo",
   trust: [
-    { kind: "num", value: 35, label: "Języki" },
-    { kind: "text", value: "24/7", label: "Rezerwacje" },
-    { kind: "num", value: 5, suffix: " min", label: "Start" },
-    { kind: "count", label: "Restauracje" },
+    { kind: "num", value: 35, label: "Języki menu" },
+    { kind: "text", value: "24/7", label: "Rezerwacje online" },
+    { kind: "num", value: 5, suffix: " min", label: "Do startu" },
+    { kind: "count", label: "Restauracji z nami" },
   ],
   demoText: "Zobacz demo",
   microcopy: "14 dni za darmo · Bez karty · Anuluj w każdej chwili",
@@ -39,7 +39,7 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Restauracje", "Kawiarnie", "Bary", "Hotele", "Pizzerie"],
-    headline: "Cyfrowe menu dla restauracji. Online w 5 minut.",
+    headline: "Cyfrowe menu dla restauracji.\nOnline w 5 minut.",
     sub: "Cyfrowe menu dla Twojej restauracji w 5 minut. Wszystko w pakiecie: edytor bez kodu, rozpoznawanie menu AI, kody QR dla stolików i bezpośrednie zamówienia bez prowizji.",
     dynamicHeadlines: ["0% prowizji.", "35 języków AI.", "Zamówienia online.", "Rezerwacje 24/7.", "Premium design."],
     painBullets: [
@@ -117,6 +117,11 @@ export const TEXTS: LandingTexts = {
     heading: "Online w 5 minut.",
     headingAccent: "14 dni za darmo.",
     sub: "Bez karty, anuluj w każdej chwili. Dołącz do 500+ restauracji, które już używają IQ Rest.",
+  },
+
+  featureHighlights: {
+    heading: "Wszystko w cenie",
+    sub: "Funkcje, które zamieniają gości w zamówienia — w każdym planie, bez dopłat.",
   },
 
   scan: {

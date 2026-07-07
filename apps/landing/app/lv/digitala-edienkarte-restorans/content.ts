@@ -1,10 +1,23 @@
-import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
+import {
+  Languages,
+  ShieldAlert,
+  Palette,
+  ShoppingCart,
+  MonitorSmartphone,
+  BadgePercent,
+  Globe,
+  LayoutTemplate,
+  Contact,
+  MessageCircle,
+  CalendarCheck,
+} from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
   locale: "lv",
   slug: "digitala-edienkarte-restorans",
   trackPrefix: "l_lv_digital",
+  hideFeatureHeading: true,
 
   meta: {
     title: "Digitālā ēdienkarte restorāniem | IQ Rest",
@@ -19,9 +32,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitāla ēdienkarte, kas pārdod.",
+    headline: "Digitālā ēdienkarte,\nkurā ir viss",
     cta: "Izveidot digitālo ēdienkarti",
-    sub: "Jūsu papīra ēdienkarte tiešsaistē: foto, alergēni, cenas reāllaikā un tulkojums 35 valodās. Bez pārdrukas.",
+    sub: "Foto, alergēni un tulkojums 35 valodās. Plus pasūtījumi, WhatsApp un galdiņu rezervēšana — viss vienā IQ Rest.",
   },
 
   scan: {
@@ -35,48 +48,125 @@ export const CONTENT: FeatureContent = {
     {
       icon: Languages,
       eyebrow: "35 AI valodas",
-      heading: "35 AI valodas — katrs viesis lasa ēdienkarti savā valodā.",
-      body: "Viens QR kods, 35 valodas. AI pārvalda kulinārijas kontekstu — ēdienu nosaukumi un apraksti izklausās dabiski. Tūristi pasūta ar lielāku pārliecību un vidējais čeks aug, nepieprasot viesmīlim tulkot katru ēdienu.",
+      heading: "35 valodas katram viesim",
+      body: "Viens QR, 35 valodas. AI tulko ar kulinārijas kontekstu, tāpēc katrs ēdiens skan dabiski. Tūristi pasūta pārliecināti.",
       bullets: [
-        "35 valodas iekļautas abonementā, bez papildu maksas.",
-        "AI ar kulinārijas konteksta izpratni, nevis neapstrādāts Google Translate.",
-        "Viesis maina valodu ar vienu pieskārienu ēdienkartē.",
+        "35 valodas tavā plānā",
+        "Kulinārijas AI, nevis Google",
+        "Valodas maiņa ar vienu pieskārienu",
       ],
       image: { src: "/landing/feature-multilang.webp", alt: "Divi viesi lasa to pašu digitālo ēdienkarti dažādās valodās savos telefonos" },
     },
     {
       icon: ShieldAlert,
       eyebrow: "Alergēni",
-      heading: "Alergēnu un diētas etiķetes.",
-      body: "Atzīmējiet ēdienus glutēnam, laktozei, riekstiem, jūras veltēm, vegānu un bezglutēna opcijām. Viesi filtrē ēdienkarti saskaņā ar saviem diētiskajiem vajadzībām un pasūta ar lielāku pārliecību.",
+      heading: "Alergēni un diētas katram ēdienam",
+      body: "Atzīmē glutēnu, laktozi, riekstus, vegānu un bezglutēna. Viesi filtrē ēdienkarti pēc savas diētas un pasūta bez pūlēm.",
       bullets: [
-        "14 standarta alergēnu kategorijas katrā ēdienā.",
-        "Vegāns, veģetārietis un bezglutēna etiķetes ar vienu klikšķi.",
-        "Viesi filtrē ēdienkarti saskaņā ar saviem diētas ierobežojumiem.",
+        "14 alergēnu kategorijas",
+        "Vegānu un bezglutēna atzīmes",
+        "Viesi filtrē pēc diētas",
       ],
       image: { src: "/landing/feature-allergens.webp", alt: "Viesis filtrē ēdienkarti pēc alergēniem telefonā, kamēr īpašnieks rediģē alergēnu sarakstu planšetdatorā" },
     },
     {
+      icon: MonitorSmartphone,
+      eyebrow: "Jebkura ierīce",
+      heading: "Pārvaldi no jebkuras ierīces",
+      body: "Administrēšanas panelis darbojas pārlūkā — rediģē ēdienkarti, cenas un foto no jebkurienes. Nekas nav jāinstalē.",
+      bullets: [
+        "Darbojas jebkurā pārlūkā",
+        "Telefons, planšete vai dators",
+        "Nekas nav jāinstalē",
+      ],
+    },
+    {
+      icon: BadgePercent,
+      eyebrow: "Bez komisijas",
+      heading: "Nulle komisijas, bez piemaksām",
+      body: "Viens caurspīdīgs abonements. Mēs neņemam daļu no tavas apgrozības un neslēpjam maksas — viss paliek restorānam.",
+      bullets: [
+        "Nulle procentu no pasūtījumiem",
+        "Bez slēptām piemaksām",
+        "Viena fiksēta cena",
+      ],
+    },
+    {
+      icon: Globe,
+      eyebrow: "Savs domēns",
+      heading: "Ēdienkarte tavā domēnā",
+      body: "Mēs savienojam tavu domēnu ar SSL — viesi redz ēdienkarti tava restorāna adresē. Palīdzam ar DNS 10 minūtēs.",
+      bullets: [
+        "Tavs domēns ar SSL",
+        "edienkarte.jusurestorans.lv",
+        "Palīdzam ar DNS iestatīšanu",
+      ],
+    },
+    {
+      icon: LayoutTemplate,
+      eyebrow: "Tavs dizains",
+      heading: "Elastīgs dizains tieši tev",
+      body: "Vairāki gatavi izkārtojumi un stili — izvēlies vāku, krāsas un ēdienu noformējumu, kas atbilst tavai vietai.",
+      bullets: [
+        "Vairāki gatavi izkārtojumi",
+        "Tavs vāks un krāsas",
+        "Jauns izskats dažos klikšķos",
+      ],
+    },
+    {
+      icon: Contact,
+      eyebrow: "Kontakti",
+      heading: "Kontakti un sociālie tīkli ēdienkartē",
+      body: "Atsevišķa lapa ar karti, tālruni un saitēm uz Instagram un WhatsApp — viesi atrod tevi ar vienu pieskārienu.",
+      bullets: [
+        "Karte, tālrunis un adrese",
+        "Instagram un WhatsApp",
+        "Sazinies ar vienu pieskārienu",
+      ],
+    },
+    {
+      icon: MessageCircle,
+      eyebrow: "WhatsApp pasūtījumi",
+      heading: "Pieņem pasūtījumus caur WhatsApp",
+      body: "Viesi izveido grozu un nosūta pasūtījumu tieši tavā WhatsApp — bez atsevišķas lietotnes, jau ierastajā sarunā.",
+      bullets: [
+        "Pasūtījums tavā WhatsApp",
+        "Bez atsevišķas lietotnes",
+        "Sarunājies kā ierasts",
+      ],
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Rezervācijas",
+      heading: "Galdiņu rezervēšana bez zvaniem",
+      body: "Viesi rezervē galdiņu paši caur ēdienkarti vai saiti, tu redzi kalendāru pa galdiem un apstiprini auto vai manuāli.",
+      bullets: [
+        "Rezervācija 24/7, bez zvaniem",
+        "Kalendārs visiem galdiem",
+        "Auto un manuāls apstiprinājums",
+      ],
+    },
+    {
       icon: Palette,
       eyebrow: "Premium dizains",
-      heading: "Premium dizains ar video fonu un kontaktu lapu.",
-      body: "Video vai fotoattēls sveiciena ekrānā, restorāna apraksts, atsevišķa kontaktu lapa ar karti, tālruņu numuriem un sociālo tīklu profiliem. Digitālā ēdienkarte izskatās kā pilnvērtīga restorāna vietne, nevis PDF aiz QR koda.",
+      heading: "Izskatās kā vietne, nevis PDF",
+      body: "Video fons sveiciena ekrānā, tava koncepcija aprakstīta un atsevišķa kontaktu lapa ar karti un sociālajiem tīkliem.",
       bullets: [
-        "Video fons vai liels fotoattēls sveiciena ekrānā.",
-        "Restorāna un kategoriju apraksti — pastāstiet koncepcijas stāstu.",
-        "Kontaktu lapa: karte, tālrunis, Instagram, WhatsApp.",
+        "Video sākuma ekrānā",
+        "Koncepcija un ēdieni aprakstīti",
+        "Atsevišķa kontaktu lapa",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Divi telefoni uz kafejnīcas galda: ēdienkartes sākuma ekrāns ar video fonu un kontaktu lapa ar karti" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Pasūtījumi no ēdienkartes · pēc izvēles",
-      heading: "Viesi pasūta tieši no ēdienkartes.",
-      body: "Viesi izveido grozu QR ēdienkartē un nosūta pasūtījumu — tas nonāk pie viesmīļa zālē vai virtuves planšetdatorā. Funkciju var ieslēgt vai izslēgt iestatījumos jebkurā laikā.",
+      eyebrow: "Pasūtījumi · pēc izvēles",
+      heading: "Pasūtījumi tieši no ēdienkartes",
+      body: "Viesi izveido grozu un nosūta pasūtījumu — tas nonāk zālē, WhatsApp vai virtuves ekrānā. Pēc izvēles.",
       bullets: [
-        "Grozs, komentāri un pasūtījuma nosūtīšana ar vienu pieskārienu.",
-        "Pasūtījums uzreiz nonāk administrēšanas panelī, WhatsApp vai virtuves ekrānā.",
-        "Funkcija tiek pārslēgta iestatījumos.",
+        "Grozs un sūtīšana ar pieskārienu",
+        "Uz zāli, WhatsApp vai virtuvi",
+        "Ieslēdz to iestatījumos",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Divi telefoni uz galda: grozs ar pasūtījumu un pasūtījuma nosūtīšanas apstiprinājums" },
     },

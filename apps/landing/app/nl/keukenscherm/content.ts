@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS: bestellingen direct naar kok.",
+    headline: "KDS:\nbestellingen direct naar kok.",
     cta: "Keukenscherm instellen",
     sub: "Bestellingen verschijnen direct op het keukenscherm: notities, allergenen en timer. Wijzig status met één tik.",
     imageSrc: "/landing/feature-kitchen.webp",

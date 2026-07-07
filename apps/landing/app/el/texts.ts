@@ -19,10 +19,10 @@ export const TEXTS: LandingTexts = {
   ctaText: "Δοκιμάστε δωρεάν",
   homeCtaText: "Δοκιμάστε δωρεάν",
   trust: [
-    { kind: "num", value: 35, label: "Γλώσσες" },
-    { kind: "text", value: "24/7", label: "Κρατήσεις" },
-    { kind: "num", value: 5, suffix: " min", label: "Εκκίνηση" },
-    { kind: "count", label: "Εστιατόρια" },
+    { kind: "num", value: 35, label: "Γλώσσες μενού" },
+    { kind: "text", value: "24/7", label: "Online κρατήσεις" },
+    { kind: "num", value: 5, suffix: " λεπτά", label: "Για ενεργοποίηση" },
+    { kind: "count", label: "Εστιατόρια μαζί μας" },
   ],
   demoText: "Δείτε το demo",
   microcopy: "14 ημέρες δωρεάν · Χωρίς κάρτα · Ακύρωση οποτεδήποτε",
@@ -39,7 +39,7 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Εστιατόρια", "Καφέ", "Μπαρ", "Ξενοδοχεία", "Πιτσαρίες"],
-    headline: "Ψηφιακό μενού για εστιατόρια. Online σε 5 λεπτά.",
+    headline: "Ψηφιακό μενού για εστιατόρια.\nOnline σε 5 λεπτά.",
     sub: "Ψηφιακό μενού για το εστιατόριό σας σε 5 λεπτά. Όλα περιλαμβάνονται: επεξεργαστής χωρίς κώδικα, αναγνώριση μενού με AI, QR κωδικοί στα τραπέζια και άμεσες παραγγελίες χωρίς προμήθειες.",
     dynamicHeadlines: ["0 % προμήθεια.", "35 γλώσσες AI.", "Online παραγγελίες.", "Κρατήσεις 24/7.", "Premium σχεδιασμός."],
     painBullets: [
@@ -117,6 +117,11 @@ export const TEXTS: LandingTexts = {
     heading: "Online σε 5 λεπτά.",
     headingAccent: "14 ημέρες δωρεάν.",
     sub: "Χωρίς κάρτα, ακύρωση οποτεδήποτε. Γίνετε μέλος 500+ εστιατορίων που ήδη λειτουργούν με το IQ Rest.",
+  },
+
+  featureHighlights: {
+    heading: "Όλα περιλαμβάνονται",
+    sub: "Οι λειτουργίες που μετατρέπουν τους επισκέπτες σε παραγγελίες — σε κάθε πλάνο, χωρίς επιπλέον χρεώσεις.",
   },
 
   scan: {

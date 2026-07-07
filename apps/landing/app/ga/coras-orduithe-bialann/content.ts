@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Orduithe ón mbord go dtí an chistin.",
+    headline: "Orduithe ón mbord\ngo dtí an chistin.",
     cta: "Socraigh ordú ar líne",
     sub: "Ordaíonn an t-aoi ag an mbord nó an freastalaí ó aon ghléas — díreach chuig an gcistin. Léarscáil urláir, roinnt bille.",
     imageSrc: "/landing/feature-orders.webp",

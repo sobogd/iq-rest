@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Comandes de la taula a la cuina.",
+    headline: "Comandes de la taula\na la cuina.",
     cta: "Configurar comandes en línia",
     sub: "El client demana a taula o el cambrer des de qualsevol dispositiu — directe a cuina. Plànol de sala, dividir compte.",
     imageSrc: "/landing/feature-orders.webp",

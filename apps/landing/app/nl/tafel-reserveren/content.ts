@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Reserveringen 24/7, geen telefoon.",
+    headline: "Reserveringen 24/7,\ngeen telefoon.",
     cta: "Tafelreservering instellen",
     sub: "Gasten reserveren 24/7 via het QR-menu of een link. Kalender per tafel, automatische bevestigingen en herinneringen.",
     imageSrc: "/landing/feature-reservation.webp",

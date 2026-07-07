@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS: поръчки право към готвача",
+    headline: "KDS:\nпоръчки право към готвача",
     cta: "Настрой кухненски дисплей",
     sub: "Поръчките влизат на екрана в кухнята мигновено: бележки, алергени и таймер. Статус с едно докосване.",
     imageSrc: "/landing/feature-kitchen.webp",

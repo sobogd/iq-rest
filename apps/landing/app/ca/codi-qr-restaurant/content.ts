@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Carta QR: escaneja i demana.",
+    headline: "Carta QR:\nescaneja i demana.",
     cta: "Crear menú QR",
     sub: "El client escaneja el QR de la taula, veu fotos i al·lèrgens en 35 idiomes i demana — sense apps ni reimpressions.",
   },

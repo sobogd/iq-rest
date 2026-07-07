@@ -19,10 +19,10 @@ export const TEXTS: LandingTexts = {
   ctaText: "Isprobajte besplatno",
   homeCtaText: "Isprobajte besplatno",
   trust: [
-    { kind: "num", value: 35, label: "Jezika" },
-    { kind: "text", value: "24/7", label: "Rezervacije" },
-    { kind: "num", value: 5, suffix: " min", label: "Pokretanje" },
-    { kind: "count", label: "Restorana" },
+    { kind: "num", value: 35, label: "Jezika jelovnika" },
+    { kind: "text", value: "24/7", label: "Online rezervacije" },
+    { kind: "num", value: 5, suffix: " min", label: "Do pokretanja" },
+    { kind: "count", label: "Restorana s nama" },
   ],
   demoText: "Pogledajte demo",
   microcopy: "14 dana besplatno · Bez kartice · Otkažite bilo kada",
@@ -39,7 +39,7 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Restorani", "Kafići", "Barovi", "Hoteli", "Pizzerije"],
-    headline: "Digitalni jelovnik za restoran. Online za 5 minuta.",
+    headline: "Digitalni jelovnik za restoran.\nOnline za 5 minuta.",
     sub: "Digitalni jelovnik za vaš restoran za 5 minuta. Sve uključeno: editor bez kodiranja, AI prepoznavanje tiskanog jelovnika, QR kodovi za stolove i izravne narudžbe bez provizije.",
     dynamicHeadlines: ["0 % provizije.", "35 jezika s AI.", "Online narudžbe.", "Rezervacije 24/7.", "Premium dizajn."],
     painBullets: [
@@ -117,6 +117,11 @@ export const TEXTS: LandingTexts = {
     heading: "Online za 5 minuta.",
     headingAccent: "14 dana besplatno.",
     sub: "Bez kartice, otkažite bilo kada. Pridružite se 500+ restorana koji već koriste IQ Rest.",
+  },
+
+  featureHighlights: {
+    heading: "Sve uključeno",
+    sub: "Značajke koje goste pretvaraju u narudžbe — u svakom planu, bez doplata.",
   },
 
   scan: {

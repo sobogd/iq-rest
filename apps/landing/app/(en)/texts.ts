@@ -19,10 +19,10 @@ export const TEXTS: LandingTexts = {
   ctaText: "Try it for free",
   homeCtaText: "Try it for free",
   trust: [
-    { kind: "num", value: 35, label: "Languages" },
-    { kind: "text", value: "24/7", label: "Reservations" },
-    { kind: "num", value: 5, suffix: " min", label: "Setup" },
-    { kind: "count", label: "Restaurants" },
+    { kind: "num", value: 35, label: "Menu languages" },
+    { kind: "text", value: "24/7", label: "Online bookings" },
+    { kind: "num", value: 5, suffix: " min", label: "To go live" },
+    { kind: "count", label: "Restaurants with us" },
   ],
   demoText: "Watch demo",
   microcopy: "14 days free · No card required · Cancel anytime",
@@ -39,7 +39,7 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Restaurants", "Cafés", "Bars", "Hotels", "Pizzerias"],
-    headline: "Digital menu for restaurants. Live in 5 minutes.",
+    headline: "Digital menu for restaurants.\nLive in 5 minutes.",
     sub: "Digital menu for your restaurant in 5 minutes. Everything included: no-code editor, AI menu scanning, table QR codes and direct orders without commissions.",
     dynamicHeadlines: ["0% commission.", "35 AI languages.", "Online orders.", "24/7 bookings.", "Premium design."],
     painBullets: [
@@ -117,6 +117,11 @@ export const TEXTS: LandingTexts = {
     heading: "Live in 5 minutes.",
     headingAccent: "14 days free.",
     sub: "No card required, cancel anytime. Join 500+ restaurants already running on IQ Rest.",
+  },
+
+  featureHighlights: {
+    heading: "Everything included",
+    sub: "The features that turn guests into orders — in every plan, no add-ons.",
   },
 
   scan: {

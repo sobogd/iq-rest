@@ -19,10 +19,10 @@ export const TEXTS: LandingTexts = {
   ctaText: "Prova-ho gratis",
   homeCtaText: "Prova-ho gratis",
   trust: [
-    { kind: "num", value: 35, label: "Idiomes" },
-    { kind: "text", value: "24/7", label: "Reserves" },
-    { kind: "num", value: 5, suffix: " min", label: "Engegada" },
-    { kind: "count", label: "Restaurants" },
+    { kind: "num", value: 35, label: "Idiomes de la carta" },
+    { kind: "text", value: "24/7", label: "Reserves en línia" },
+    { kind: "num", value: 5, suffix: " min", label: "Per activar-ho" },
+    { kind: "count", label: "Restaurants amb nosaltres" },
   ],
   demoText: "Mira la demo",
   microcopy: "14 dies gratis · Sense targeta · Cancel·la quan vulguis",
@@ -39,7 +39,7 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Restaurants", "Cafeteries", "Bars", "Hotels", "Pizzeries"],
-    headline: "Carta digital per a restaurants. En línia en 5 minuts.",
+    headline: "Carta digital per a restaurants.\nEn línia en 5 minuts.",
     sub: "Carta digital per al teu restaurant en 5 minuts. Tot inclòs: editor sense codi, escaneig IA de la carta, codis QR per a les taules i comandes directes sense comissions.",
     dynamicHeadlines: ["0 % de comissió.", "35 idiomes IA.", "Comandes en línia.", "Reserves 24/7.", "Disseny premium."],
     painBullets: [
@@ -117,6 +117,11 @@ export const TEXTS: LandingTexts = {
     heading: "En línia en 5 minuts.",
     headingAccent: "14 dies gratis.",
     sub: "Sense targeta, cancel·la quan vulguis. Uneix-te a més de 500 restaurants que ja treballen amb IQ Rest.",
+  },
+
+  featureHighlights: {
+    heading: "Tot inclòs",
+    sub: "Les funcions que converteixen les visites en comandes, en tots els plans i sense extres.",
   },
 
   scan: {

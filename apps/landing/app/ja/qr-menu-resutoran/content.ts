@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "QRメニュー：スキャンして注文。",
+    headline: "QRメニュー：スキャンして\n注文。",
     cta: "QRメニューを作成",
     sub: "客がテーブルのQRをスキャンし、35言語で写真とアレルゲンを見て注文 — アプリ不要。",
   },

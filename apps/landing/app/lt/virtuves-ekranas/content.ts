@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS: užsakymai tiesiai virėjui.",
+    headline: "KDS:\nužsakymai tiesiai virėjui.",
     cta: "Nustatyti virtuvės ekraną",
     sub: "Užsakymai iškart pasirodo virtuvės ekrane: pastabos, alergenai ir laikmatis. Pakeisk būseną vienu palietimu.",
     imageSrc: "/landing/feature-kitchen.webp",

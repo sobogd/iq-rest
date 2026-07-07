@@ -198,6 +198,14 @@ export type LandingTexts = {
     sub: string;
   };
 
+  /** Heading + sub shown above the feature-card carousel on feature pages.
+   *  Generic across all features. Optional during the per-locale migration —
+   *  locales without it just render the carousel with no section header. */
+  featureHighlights?: {
+    heading: string;
+    sub: string;
+  };
+
   scan: {
     heading: string;
     headingAccent: string;

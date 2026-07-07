@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS : commandes direct au chef.",
+    headline: "KDS : commandes direct\nau chef.",
     cta: "Configurer l’écran de cuisine",
     sub: "Les commandes arrivent à l'écran cuisine à l'instant : notes, allergènes et minuteur. Statut changé en un tap.",
     imageSrc: "/landing/feature-kitchen.webp",

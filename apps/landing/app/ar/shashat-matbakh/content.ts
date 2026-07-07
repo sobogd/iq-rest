@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS: الطلبات مباشرة للطاهي.",
+    headline: "KDS:\nالطلبات مباشرة للطاهي.",
     cta: "إعداد شاشة المطبخ",
     sub: "تصل الطلبات إلى شاشة المطبخ فوراً: ملاحظات ومسببات حساسية ومؤقت. غيّر الحالة بلمسة واحدة.",
     imageSrc: "/landing/feature-kitchen.webp",

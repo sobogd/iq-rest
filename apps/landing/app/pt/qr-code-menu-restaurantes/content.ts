@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Menu QR: aponte e peça.",
+    headline: "Menu QR:\naponte e peça.",
     cta: "Criar menu QR",
     sub: "O cliente lê o QR da mesa, vê fotos e alergénios em 35 idiomas e pede — sem apps nem reimpressões.",
   },

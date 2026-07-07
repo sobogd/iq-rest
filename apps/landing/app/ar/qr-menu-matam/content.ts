@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "قائمة QR: امسح واطلب.",
+    headline: "قائمة QR:\nامسح واطلب.",
     cta: "إنشاء قائمة QR",
     sub: "يمسح الضيف رمز QR للطاولة، ويرى الصور ومسببات الحساسية بـ35 لغة ويطلب — بلا تطبيق.",
   },

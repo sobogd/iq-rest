@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "QR meni: skeniraj i poruči.",
+    headline: "QR meni:\nskeniraj i poruči.",
     cta: "Направи QR мени",
     sub: "Gost skenira QR na stolu, vidi fotografije i alergene na 35 jezika i poruči — bez aplikacije.",
   },

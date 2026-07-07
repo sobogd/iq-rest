@@ -1,10 +1,23 @@
-import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
+import {
+  Languages,
+  ShieldAlert,
+  Palette,
+  ShoppingCart,
+  MonitorSmartphone,
+  BadgePercent,
+  Globe,
+  LayoutTemplate,
+  Contact,
+  MessageCircle,
+  CalendarCheck,
+} from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
   locale: "no",
   slug: "digital-meny-restaurant",
   trackPrefix: "l_no_digital",
+  hideFeatureHeading: true,
 
   meta: {
     title: "Digital meny for restauranter | IQ Rest",
@@ -19,9 +32,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digital meny som selger mer.",
+    headline: "En digital meny\nsom har alt",
     cta: "Lag digital meny",
-    sub: "Papirmenyen din på nett: bilder, allergener, live-priser og oversettelse til 35 språk. Ingen ny utskrift.",
+    sub: "Bilder, allergener og oversettelse til 35 språk. Pluss bestillinger, WhatsApp og bordbestilling — alt i én IQ Rest.",
   },
 
   scan: {
@@ -35,48 +48,125 @@ export const CONTENT: FeatureContent = {
     {
       icon: Languages,
       eyebrow: "35 AI-språk",
-      heading: "35 AI-språk — hver gjest leser menyen på sitt eget.",
-      body: "Én QR-kode, 35 språk. AI-en håndterer kulinarisk kontekst — rettnavn og beskrivelser høres naturlige ut. Turister bestiller med større selvtillit og gjennomsnittsregningen vokser uten at en kelner må oversette hver rett.",
+      heading: "35 språk hver gjest forstår",
+      body: "Én QR, 35 språk. AI oversetter med kulinarisk kontekst, så hver rett høres naturlig ut. Turister bestiller med trygghet.",
       bullets: [
-        "35 språk inkludert i abonnementet, uten ekstrakostnad.",
-        "AI med forståelse av kulinarisk kontekst, ikke rå Google Translate.",
-        "Gjesten bytter språk med ett trykk i menyen.",
+        "35 språk i abonnementet",
+        "Kulinarisk AI, ikke Google",
+        "Bytt språk med ett trykk",
       ],
       image: { src: "/landing/feature-multilang.webp", alt: "To gjester leser samme digitale meny på forskjellige språk på sine egne telefoner" },
     },
     {
       icon: ShieldAlert,
       eyebrow: "Allergener",
-      heading: "Merker for allergener og kosthold.",
-      body: "Merk retter for gluten, laktose, nøtter, sjømat, veganske og glutenfrie alternativer. Gjester filtrerer menyen etter sine kostholdsbehov og bestiller med større tillit.",
+      heading: "Allergener og kosthold på hver rett",
+      body: "Merk gluten, laktose, nøtter, vegansk og glutenfritt. Gjestene filtrerer menyen etter sitt kosthold og bestiller med letthet.",
       bullets: [
-        "14 standard allergenkategorier på hver rett.",
-        "Veganske, vegetariske og glutenfrie merker med ett klikk.",
-        "Gjester filtrerer menyen etter sine kostholdsbegrensninger.",
+        "14 allergenkategorier",
+        "Vegansk- og glutenfri-merker",
+        "Gjester filtrerer på kosthold",
       ],
       image: { src: "/landing/feature-allergens.webp", alt: "Gjest filtrerer menyen etter allergener på telefonen mens eieren redigerer allergenlisten på et nettbrett" },
     },
     {
+      icon: MonitorSmartphone,
+      eyebrow: "Enhver enhet",
+      heading: "Styr det fra enhver enhet",
+      body: "Administrasjonspanelet kjører i nettleseren — rediger meny, priser og bilder hvor som helst. Ingenting å installere.",
+      bullets: [
+        "Kjører i enhver nettleser",
+        "Telefon, nettbrett eller PC",
+        "Ingenting å installere",
+      ],
+    },
+    {
+      icon: BadgePercent,
+      eyebrow: "Ingen provisjon",
+      heading: "Null provisjon, ingen tillegg",
+      body: "Ett gjennomsiktig abonnement. Vi tar ingen andel av omsetningen din og skjuler ingen gebyrer — alt blir hos restauranten.",
+      bullets: [
+        "Null prosent på bestillinger",
+        "Ingen skjulte tillegg",
+        "Én fast pris",
+      ],
+    },
+    {
+      icon: Globe,
+      eyebrow: "Eget domene",
+      heading: "Meny på ditt eget domene",
+      body: "Vi kobler domenet ditt med SSL — gjestene ser menyen på restaurantens adresse. Vi hjelper med DNS på 10 minutter.",
+      bullets: [
+        "Ditt domene med SSL",
+        "meny.dinrestaurant.no",
+        "Vi hjelper med DNS",
+      ],
+    },
+    {
+      icon: LayoutTemplate,
+      eyebrow: "Ditt design",
+      heading: "Fleksibelt design som passer deg",
+      body: "Flere ferdige oppsett og stiler — velg forsiden, fargene og rettpresentasjonen som passer stedet ditt.",
+      bullets: [
+        "Flere ferdige oppsett",
+        "Din forside og dine farger",
+        "Nytt utseende på få klikk",
+      ],
+    },
+    {
+      icon: Contact,
+      eyebrow: "Kontakt",
+      heading: "Kontakt og sosiale medier i menyen",
+      body: "En egen side med kart, telefon og lenker til Instagram og WhatsApp — gjestene finner deg med ett trykk.",
+      bullets: [
+        "Kart, telefon og adresse",
+        "Instagram og WhatsApp",
+        "Nå deg med ett trykk",
+      ],
+    },
+    {
+      icon: MessageCircle,
+      eyebrow: "WhatsApp-bestillinger",
+      heading: "Ta imot bestillinger via WhatsApp",
+      body: "Gjestene bygger en handlekurv og sender bestillingen rett til din WhatsApp — ingen egen app, i chatten de allerede bruker.",
+      bullets: [
+        "Bestilling til din WhatsApp",
+        "Ingen egen app",
+        "Chat som vanlig",
+      ],
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Reservasjoner",
+      heading: "Bordbestilling uten anrop",
+      body: "Gjestene booker bord selv via menyen eller en lenke, du ser kalenderen per bord og bekrefter automatisk eller manuelt.",
+      bullets: [
+        "Booking 24/7, uten anrop",
+        "Kalender på tvers av bord",
+        "Auto- og manuell bekreftelse",
+      ],
+    },
+    {
       icon: Palette,
       eyebrow: "Premium design",
-      heading: "Premium design med videobakgrunn og kontaktside.",
-      body: "En video eller bilde på velkomstskjermen, restaurantbeskrivelse, dedikert kontaktside med kart, telefonnumre og sosiale profiler. Den digitale menyen ser ut som en fullverdig restaurantnettside, ikke en PDF bak en QR-kode.",
+      heading: "Ser ut som en nettside, ikke en PDF",
+      body: "Videobakgrunn på velkomstskjermen, konseptet ditt beskrevet og en egen kontaktside med kart og sosiale medier.",
       bullets: [
-        "Videobakgrunn eller stort bilde på velkomstskjermen.",
-        "Restaurant- og kategoribeskrivelser — fortell konseptets historie.",
-        "Kontaktside: kart, telefon, Instagram, WhatsApp.",
+        "Video på forsiden",
+        "Konsept og retter beskrevet",
+        "Egen kontaktside",
       ],
       image: { src: "/landing/feature-design.webp", alt: "To telefoner på et kafébord: hjemmeskjerm for menyen med videobakgrunn og kontaktside med kart" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Bestillinger fra menyen · valgfritt",
-      heading: "Gjester bestiller direkte fra menyen.",
-      body: "Gjester bygger en handlekurv i QR-menyen og sender bestillingen — den lander hos kelneren i salongen eller på kjøkkennettbrettet. Funksjonen kan slås av eller på i innstillingene når som helst.",
+      eyebrow: "Bestillinger · valgfritt",
+      heading: "Bestillinger rett fra menyen",
+      body: "Gjestene bygger en handlekurv og sender bestillingen — den lander i salongen, på WhatsApp eller på kjøkkenskjermen. Valgfritt.",
       bullets: [
-        "Handlekurv, kommentarer og bestillingssending med ett trykk.",
-        "Bestillingen lander umiddelbart i administrasjonspanelet, WhatsApp eller på kjøkkenskjermen.",
-        "Funksjon kan veksles i innstillingene.",
+        "Handlekurv og send med ett trykk",
+        "Til sal, WhatsApp eller kjøkken",
+        "Slå det på i innstillinger",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "To telefoner på et bord: handlekurv med bestilling og bekreftelse på sendt bestilling" },
     },

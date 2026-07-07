@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "QR菜单：扫码即点。",
+    headline: "QR菜单：扫码\n即点。",
     cta: "创建二维码菜单",
     sub: "顾客扫描桌上二维码，用35种语言查看照片和过敏原并下单 — 无需App。",
   },

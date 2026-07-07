@@ -19,10 +19,10 @@ export const TEXTS: LandingTexts = {
   ctaText: "Essayer gratuitement",
   homeCtaText: 'Créez votre plateforme',
   trust: [
-    { kind: "num", value: 35, label: "Langues" },
-    { kind: "text", value: "24/7", label: "Réservations" },
-    { kind: "num", value: 5, suffix: " min", label: "Mise en place" },
-    { kind: "count", label: "Restaurants" },
+    { kind: "num", value: 35, label: "Langues du menu" },
+    { kind: "text", value: "24/7", label: "Réservations en ligne" },
+    { kind: "num", value: 5, suffix: " min", label: "Pour démarrer" },
+    { kind: "count", label: "Restaurants avec nous" },
   ],
   demoText: 'Voir la démo',
   microcopy: '14 jours gratuits · Sans carte · Annulation à tout moment',
@@ -39,7 +39,7 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ['Restaurants', 'Cafés', 'Bars', 'Hôtels', 'Pizzerias'],
-    headline: 'Menu numérique pour restaurants. En ligne en 5 minutes.',
+    headline: 'Menu numérique pour restaurants.\nEn ligne en 5 minutes.',
     sub: 'Menu numérique pour votre restaurant en 5 minutes. Tout inclus : éditeur sans code, reconnaissance IA du menu, codes QR pour les tables et commandes directes sans commission.',
     dynamicHeadlines: ['0 % de commission.', '35 langues IA.', 'Commandes en ligne.', 'Réservations 24/7.', 'Design premium.'],
     painBullets: [
@@ -117,6 +117,11 @@ export const TEXTS: LandingTexts = {
     heading: 'En ligne en 5 minutes.',
     headingAccent: '14 jours gratuits.',
     sub: 'Sans carte, annulation à tout moment. Rejoignez 500+ restaurants qui utilisent déjà IQ Rest.',
+  },
+
+  featureHighlights: {
+    heading: "Tout est inclus",
+    sub: "Les fonctionnalités qui transforment vos clients en commandes, dans toutes les formules et sans supplément.",
   },
 
   scan: {

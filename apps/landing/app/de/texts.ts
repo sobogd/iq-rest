@@ -19,10 +19,10 @@ export const TEXTS: LandingTexts = {
   ctaText: "Kostenlos testen",
   homeCtaText: "Kostenlos testen",
   trust: [
-    { kind: "num", value: 35, label: "Sprachen" },
-    { kind: "text", value: "24/7", label: "Reservierungen" },
-    { kind: "num", value: 5, suffix: " min", label: "Einrichtung" },
-    { kind: "count", label: "Restaurants" },
+    { kind: "num", value: 35, label: "Menüsprachen" },
+    { kind: "text", value: "24/7", label: "Online-Reservierungen" },
+    { kind: "num", value: 5, suffix: " min", label: "Bis zum Start" },
+    { kind: "count", label: "Restaurants bei uns" },
   ],
   demoText: "Demo ansehen",
   microcopy: "14 Tage kostenlos · Ohne Kreditkarte · Jederzeit kündbar",
@@ -39,7 +39,7 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Restaurants", "Cafés", "Bars", "Hotels", "Pizzerien"],
-    headline: "Digitale Speisekarte für Restaurants. Start in 5 Minuten.",
+    headline: "Digitale Speisekarte für Restaurants.\nStart in 5 Minuten.",
     sub: "Digitale Speisekarte für Ihr Restaurant in 5 Minuten. Alles inklusive: No-Code-Editor, KI-Erkennung gedruckter Speisekarten, QR-Codes für Tische und direkte Bestellungen ohne Provision.",
     dynamicHeadlines: ["0 % Provision.", "35 KI-Sprachen.", "Online-Bestellungen.", "Reservierungen 24/7.", "Premium-Design."],
     painBullets: [
@@ -117,6 +117,11 @@ export const TEXTS: LandingTexts = {
     heading: "Start in 5 Minuten.",
     headingAccent: "14 Tage kostenlos.",
     sub: "Ohne Kreditkarte, jederzeit kündbar. Schließen Sie sich 500+ Restaurants an, die bereits mit IQ Rest arbeiten.",
+  },
+
+  featureHighlights: {
+    heading: "Alles inklusive",
+    sub: "Die Funktionen, die aus Gästen Bestellungen machen – in jedem Tarif, ohne Aufpreis.",
   },
 
   scan: {

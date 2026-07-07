@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Pantanir frá borði í eldhús.",
+    headline: "Pantanir frá borði\ní eldhús.",
     cta: "Setja upp netpantanir",
     sub: "Gesturinn pantar við borðið eða þjónninn úr hvaða tæki sem er — beint í eldhúsið. Salarkort, skipting reiknings.",
     imageSrc: "/landing/feature-orders.webp",

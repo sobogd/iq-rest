@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Broneerimine 24/7, ilma helistamata.",
+    headline: "Broneerimine 24/7,\nilma helistamata.",
     cta: "Seadista lauabroneeringud",
     sub: "Külalised broneerivad 24/7 QR-menüü või lingi kaudu. Lauapõhine kalender, automaatsed kinnitused ja meeldetuletused.",
     imageSrc: "/landing/feature-reservation.webp",

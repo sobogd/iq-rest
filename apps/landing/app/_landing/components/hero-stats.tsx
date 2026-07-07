@@ -19,7 +19,7 @@ export function HeroStats({ trust, countLabel, dataSection = "hero_stats" }: Her
       <dl className="grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-6 max-w-5xl mx-auto text-center">
         {trust.map((t) => (
           <div key={t.label} className="flex flex-col items-center">
-            <dt className="text-3xl sm:text-4xl font-medium tracking-tight bg-gradient-to-br from-primary to-amber-400 bg-clip-text text-transparent">
+            <dt className="text-4xl sm:text-5xl font-medium tracking-tight bg-gradient-to-br from-primary to-amber-400 bg-clip-text text-transparent">
               {t.kind === "count"
                 ? countLabel
                 : t.kind === "num"

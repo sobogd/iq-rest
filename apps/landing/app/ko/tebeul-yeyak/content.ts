@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "24/7 예약, 전화 제로.",
+    headline: "24/7 예약,\n전화 제로.",
     cta: "테이블 예약 설정",
     sub: "손님이 QR 메뉴나 링크로 24/7 예약. 테이블별 캘린더, 자동 확인 및 알림.",
     imageSrc: "/landing/feature-reservation.webp",

@@ -1,10 +1,23 @@
-import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
+import {
+  Languages,
+  ShieldAlert,
+  Palette,
+  ShoppingCart,
+  MonitorSmartphone,
+  BadgePercent,
+  Globe,
+  LayoutTemplate,
+  Contact,
+  MessageCircle,
+  CalendarCheck,
+} from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
   locale: "fi",
   slug: "digitaalinen-ruokalista-ravintola",
   trackPrefix: "l_fi_digital",
+  hideFeatureHeading: true,
 
   meta: {
     title: "Digitaalinen ruokalista ravintoloille | IQ Rest",
@@ -19,9 +32,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitaalinen lista, joka myy.",
+    headline: "Digitaalinen ruokalista,\njossa on kaikki",
     cta: "Luo digitaalinen menu",
-    sub: "Paperinen ruokalistasi verkossa: kuvat, allergeenit, hinnat reaaliajassa ja käännös 35 kielelle. Ei uusintapainatusta.",
+    sub: "Kuvat, allergeenit ja käännös 35 kielelle. Lisäksi tilaukset, WhatsApp ja pöytävaraus — kaikki yhdessä IQ Restissä.",
   },
 
   scan: {
@@ -35,48 +48,125 @@ export const CONTENT: FeatureContent = {
     {
       icon: Languages,
       eyebrow: "35 AI-kieltä",
-      heading: "35 AI-kieltä — jokainen vieras lukee ruokalistan omallaan.",
-      body: "Yksi QR-koodi, 35 kieltä. AI hallitsee kulinaarista kontekstia — ruokien nimet ja kuvaukset kuulostavat luonnollisilta. Turistit tilaavat varmemmin ja keskimääräinen lasku kasvaa, ilman että tarjoilijan tarvitsee kääntää jokaista ruokaa.",
+      heading: "35 kieltä jokaiselle vieraalle",
+      body: "Yksi QR, 35 kieltä. AI kääntää kulinaarisella kontekstilla, joten jokainen ruoka kuulostaa luonnolliselta. Turistit tilaavat varmasti.",
       bullets: [
-        "35 kieltä sisältyy tilaukseen, ilman lisämaksua.",
-        "AI ymmärtää kulinaarisen kontekstin, ei pelkkä Google Translate.",
-        "Vieras vaihtaa kielen yhdellä näpäytyksellä suoraan ruokalistassa.",
+        "35 kieltä tilauksessasi",
+        "Kulinaarinen AI, ei Google",
+        "Kielen vaihto yhdellä napautuksella",
       ],
       image: { src: "/landing/feature-multilang.webp", alt: "Kaksi vierasta lukee samaa digitaalista ruokalistaa eri kielillä omilla puhelimillaan" },
     },
     {
       icon: ShieldAlert,
       eyebrow: "Allergeenit",
-      heading: "Allergeeni- ja ruokavalio-merkit.",
-      body: "Merkitse ruoat gluteenille, laktoosille, pähkinöille, äyriäisille, vegaanisille ja gluteenittomille vaihtoehdoille. Vieraat suodattavat ruokalistan ruokavaliotarpeidensa mukaan ja tilaavat suuremmalla varmuudella.",
+      heading: "Allergeenit ja ruokavaliot joka ruoassa",
+      body: "Merkitse gluteeni, laktoosi, pähkinät, vegaani ja gluteeniton. Vieraat suodattavat ruokalistan ja tilaavat vaivattomasti.",
       bullets: [
-        "14 vakioallergeenikategoriaa jokaisessa ruoassa.",
-        "Vegaani-, kasvis- ja gluteeniton-merkit yhdellä klikkauksella.",
-        "Vieraat suodattavat ruokalistan ruokavaliorajoitustensa mukaan.",
+        "14 allergeeniryhmää",
+        "Vegaani- ja gluteeniton-merkit",
+        "Vieraat suodattavat ruokavalion mukaan",
       ],
       image: { src: "/landing/feature-allergens.webp", alt: "Vieras suodattaa ruokalistaa allergeenien mukaan puhelimella, kun omistaja muokkaa allergeenilistaa tabletilla" },
     },
     {
-      icon: Palette,
-      eyebrow: "Premium-suunnittelu",
-      heading: "Premium-suunnittelu videotaustalla ja yhteystietosivulla.",
-      body: "Video tai kuva tervetuloruudulla, ravintolan kuvaus, oma yhteystietosivu kartalla, puhelinnumeroilla ja sosiaalisen median profiileilla. Digitaalinen ruokalista näyttää täydeltä ravintolasivustolta, ei PDF:ltä QR-koodin takana.",
+      icon: MonitorSmartphone,
+      eyebrow: "Mikä tahansa laite",
+      heading: "Hallitse miltä tahansa laitteelta",
+      body: "Hallintapaneeli toimii selaimessa — muokkaa ruokalistaa, hintoja ja kuvia mistä tahansa. Mitään ei tarvitse asentaa.",
       bullets: [
-        "Videotausta tai iso kuva tervetuloruudulla.",
-        "Ravintolan ja kategorioiden kuvaukset — kerro konseptin tarina.",
-        "Yhteystietosivu: kartta, puhelin, Instagram, WhatsApp.",
+        "Toimii missä tahansa selaimessa",
+        "Puhelin, tabletti tai PC",
+        "Mitään ei asenneta",
+      ],
+    },
+    {
+      icon: BadgePercent,
+      eyebrow: "Ei provisiota",
+      heading: "Nolla provisiota, ei lisiä",
+      body: "Yksi läpinäkyvä tilaus. Emme ota osuutta liikevaihdostasi emmekä piilota maksuja — kaikki jää ravintolalle.",
+      bullets: [
+        "Nolla prosenttia tilauksista",
+        "Ei piilokuluja",
+        "Yksi kiinteä hinta",
+      ],
+    },
+    {
+      icon: Globe,
+      eyebrow: "Oma verkkotunnus",
+      heading: "Ruokalista omalla verkkotunnuksellasi",
+      body: "Yhdistämme verkkotunnuksesi SSL:llä — vieraat näkevät ruokalistan ravintolasi osoitteessa. Autamme DNS:ssä 10 minuutissa.",
+      bullets: [
+        "Oma verkkotunnus SSL:llä",
+        "ruokalista.ravintolasi.fi",
+        "Autamme DNS-asetuksissa",
+      ],
+    },
+    {
+      icon: LayoutTemplate,
+      eyebrow: "Oma ilmeesi",
+      heading: "Joustava ulkoasu juuri sinulle",
+      body: "Useita valmiita pohjia ja tyylejä — valitse kansi, värit ja ruokien esitystapa, jotka sopivat ravintolaasi.",
+      bullets: [
+        "Useita valmiita pohjia",
+        "Oma kansi ja omat värit",
+        "Uusi ilme muutamalla klikkauksella",
+      ],
+    },
+    {
+      icon: Contact,
+      eyebrow: "Yhteystiedot",
+      heading: "Yhteystiedot ja somet ruokalistassa",
+      body: "Oma sivu kartalla, puhelimella ja linkeillä Instagramiin ja WhatsAppiin — vieraat löytävät sinut yhdellä napautuksella.",
+      bullets: [
+        "Kartta, puhelin ja osoite",
+        "Instagram ja WhatsApp",
+        "Tavoita meidät yhdellä napautuksella",
+      ],
+    },
+    {
+      icon: MessageCircle,
+      eyebrow: "WhatsApp-tilaukset",
+      heading: "Ota tilauksia vastaan WhatsAppissa",
+      body: "Vieraat kokoavat ostoskorin ja lähettävät tilauksen suoraan WhatsAppiisi — ei erillistä sovellusta, tutussa chatissa.",
+      bullets: [
+        "Tilaus WhatsAppiisi",
+        "Ei erillistä sovellusta",
+        "Chattaa kuten ennenkin",
+      ],
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Varaukset",
+      heading: "Pöytävaraus ilman puheluita",
+      body: "Vieraat varaavat pöydän itse ruokalistan tai linkin kautta, sinä näet kalenterin pöydittäin ja vahvistat auto- tai käsin.",
+      bullets: [
+        "Varaus 24/7, ilman puheluita",
+        "Kalenteri kaikille pöydille",
+        "Auto- ja käsivahvistus",
+      ],
+    },
+    {
+      icon: Palette,
+      eyebrow: "Premium-ilme",
+      heading: "Näyttää sivustolta, ei PDF:ltä",
+      body: "Videotausta tervetuloruudulla, konseptisi kuvattuna ja erillinen yhteystietosivu kartalla ja someilla.",
+      bullets: [
+        "Video etusivulla",
+        "Konsepti ja ruoat kuvattuna",
+        "Erillinen yhteystietosivu",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Kaksi puhelinta kahvilan pöydällä: ruokalistan etusivu videotaustalla ja yhteystietosivu kartalla" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Tilaukset ruokalistasta · valinnainen",
-      heading: "Vieraat tilaavat suoraan ruokalistasta.",
-      body: "Vieraat kokoavat ostoskorin QR-ruokalistassa ja lähettävät tilauksen — se saapuu tarjoilijalle salissa tai keittiön tabletille. Ominaisuus voidaan kytkeä päälle tai pois asetuksissa koska tahansa.",
+      eyebrow: "Tilaukset · valinnainen",
+      heading: "Tilaukset suoraan ruokalistasta",
+      body: "Vieraat kokoavat ostoskorin ja lähettävät tilauksen — se saapuu saliin, WhatsAppiin tai keittiön näyttöön. Valinnainen.",
       bullets: [
-        "Ostoskori, kommentit ja tilauksen lähetys yhdellä näpäytyksellä.",
-        "Tilaus saapuu välittömästi hallintapaneeliin, WhatsAppiin tai keittiön näyttöön.",
-        "Ominaisuus kytketään asetuksissa.",
+        "Ostoskori ja lähetys napautuksella",
+        "Saliin, WhatsAppiin tai keittiöön",
+        "Kytke se asetuksissa",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Kaksi puhelinta pöydällä: ostoskori tilauksella ja tilauksen lähetyksen vahvistus" },
     },

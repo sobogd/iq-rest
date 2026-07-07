@@ -19,10 +19,10 @@ export const TEXTS: LandingTexts = {
   ctaText: "Kokeile ilmaiseksi",
   homeCtaText: "Kokeile ilmaiseksi",
   trust: [
-    { kind: "num", value: 35, label: "Kieltä" },
-    { kind: "text", value: "24/7", label: "Varaukset" },
-    { kind: "num", value: 5, suffix: " min", label: "Käyttöön" },
-    { kind: "count", label: "Ravintolaa" },
+    { kind: "num", value: 35, label: "Menun kieltä" },
+    { kind: "text", value: "24/7", label: "Verkkovarausta" },
+    { kind: "num", value: 5, suffix: " min", label: "Käyttöönottoon" },
+    { kind: "count", label: "Ravintolaa mukana" },
   ],
   demoText: "Katso demo",
   microcopy: "14 päivää ilmaiseksi · Ilman korttia · Peruutus koska tahansa",
@@ -39,7 +39,7 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Ravintolat", "Kahvilat", "Baarit", "Hotellit", "Pizzeriat"],
-    headline: "Digitaalinen ruokalista ravintoloille. Käytössä 5 minuutissa.",
+    headline: "Digitaalinen ruokalista ravintoloille.\nKäytössä 5 minuutissa.",
     sub: "Digitaalinen ruokalista ravintoloosi 5 minuutissa. Kaikki mukana: koodaamaton editori, ruokalistan AI-tunnistus, QR-koodit pöytiin ja suorat tilaukset ilman komissiota.",
     dynamicHeadlines: ["0 % komissiota.", "35 tekoälykieltä.", "Verkkotilaukset.", "Varaukset 24/7.", "Premium-suunnittelu."],
     painBullets: [
@@ -117,6 +117,11 @@ export const TEXTS: LandingTexts = {
     heading: "Käytössä 5 minuutissa.",
     headingAccent: "14 päivää ilmaiseksi.",
     sub: "Ilman korttia, peruutus koska tahansa. Liity 500+ ravintolaan, jotka jo käyttävät IQ Restiä.",
+  },
+
+  featureHighlights: {
+    heading: "Kaikki mukana",
+    sub: "Ominaisuudet, jotka muuttavat vieraat tilauksiksi — jokaisessa paketissa, ilman lisämaksuja.",
   },
 
   scan: {

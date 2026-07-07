@@ -19,10 +19,10 @@ export const TEXTS: LandingTexts = {
   ctaText: "Încearcă gratuit",
   homeCtaText: "Încearcă gratuit",
   trust: [
-    { kind: "num", value: 35, label: "Limbi" },
-    { kind: "text", value: "24/7", label: "Rezervări" },
-    { kind: "num", value: 5, suffix: " min", label: "Pornire" },
-    { kind: "count", label: "Restaurante" },
+    { kind: "num", value: 35, label: "Limbi în meniu" },
+    { kind: "text", value: "24/7", label: "Rezervări online" },
+    { kind: "num", value: 5, suffix: " min", label: "Până la lansare" },
+    { kind: "count", label: "Restaurante cu noi" },
   ],
   demoText: "Vizionați demo",
   microcopy: "14 zile gratuit · Fără card · Anulați oricând",
@@ -39,7 +39,7 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Restaurante", "Cafenele", "Baruri", "Hoteluri", "Pizzerii"],
-    headline: "Meniu digital pentru restaurant. Online în 5 minute.",
+    headline: "Meniu digital pentru restaurant.\nOnline în 5 minute.",
     sub: "Meniu digital pentru restaurantul dumneavoastră în 5 minute. Totul inclus: editor fără cod, recunoaștere AI a meniului tipărit, coduri QR pentru mese și comenzi directe fără comision.",
     dynamicHeadlines: ["0% comision.", "35 limbi AI.", "Comenzi online.", "Rezervări 24/7.", "Design premium."],
     painBullets: [
@@ -117,6 +117,11 @@ export const TEXTS: LandingTexts = {
     heading: "Online în 5 minute.",
     headingAccent: "14 zile gratuit.",
     sub: "Fără card, anulați oricând. Alăturați-vă la peste 500 de restaurante care folosesc deja IQ Rest.",
+  },
+
+  featureHighlights: {
+    heading: "Totul inclus",
+    sub: "Funcțiile care transformă vizitatorii în comenzi — în orice plan, fără costuri suplimentare.",
   },
 
   scan: {

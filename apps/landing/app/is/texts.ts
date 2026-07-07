@@ -19,10 +19,10 @@ export const TEXTS: LandingTexts = {
   ctaText: "Prófaðu frítt",
   homeCtaText: "Prófaðu frítt",
   trust: [
-    { kind: "num", value: 35, label: "Tungumál" },
-    { kind: "text", value: "24/7", label: "Bókanir" },
-    { kind: "num", value: 5, suffix: " min", label: "Ræsing" },
-    { kind: "count", label: "Veitingastaðir" },
+    { kind: "num", value: 35, label: "Tungumál á matseðli" },
+    { kind: "text", value: "24/7", label: "Netbókanir" },
+    { kind: "num", value: 5, suffix: " min", label: "Að fara í loftið" },
+    { kind: "count", label: "Veitingastaðir með okkur" },
   ],
   demoText: "Horfðu á kynningu",
   microcopy: "14 dagar ókeypis · Ekkert kort · Hætta hvenær sem er",
@@ -39,7 +39,7 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Veitingastaðir", "Kaffihús", "Barir", "Hótel", "Pizzustaðir"],
-    headline: "Stafrænn matseðill fyrir veitingastað. Í lofti á 5 mínútum.",
+    headline: "Stafrænn matseðill fyrir veitingastað.\nÍ lofti á 5 mínútum.",
     sub: "Stafrænn matseðill fyrir veitingastaðinn þinn á 5 mínútum. Allt innifalið: ritill án kóða, gervigreindar þekking á prentuðum matseðli, QR kóðar á borð og beinar pantanir án þóknunar.",
     dynamicHeadlines: ["0% þóknun.", "35 gervigreindar tungumál.", "Pantanir á netinu.", "Bókanir 24/7.", "Premium hönnun."],
     painBullets: [
@@ -117,6 +117,11 @@ export const TEXTS: LandingTexts = {
     heading: "Í lofti á 5 mínútum.",
     headingAccent: "14 dagar ókeypis.",
     sub: "Ekkert kort, hætta hvenær sem er. Komdu með 500+ veitingastöðum sem eru nú þegar að nota IQ Rest.",
+  },
+
+  featureHighlights: {
+    heading: "Allt innifalið",
+    sub: "Eiginleikarnir sem breyta gestum í pantanir — í öllum áskriftum, án aukagjalds.",
   },
 
   scan: {

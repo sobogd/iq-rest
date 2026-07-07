@@ -19,10 +19,10 @@ export const TEXTS: LandingTexts = {
   ctaText: "無料で試す",
   homeCtaText: "無料で試す",
   trust: [
-    { kind: "num", value: 35, label: "言語" },
-    { kind: "text", value: "24/7", label: "予約" },
-    { kind: "num", value: 5, suffix: " min", label: "開始" },
-    { kind: "count", label: "店舗" },
+    { kind: "num", value: 35, label: "メニュー対応言語" },
+    { kind: "text", value: "24/7", label: "オンライン予約" },
+    { kind: "num", value: 5, suffix: "分", label: "公開まで" },
+    { kind: "count", label: "導入店舗" },
   ],
   demoText: "デモを見る",
   microcopy: "14日間無料 · カード不要 · いつでもキャンセル可能",
@@ -39,7 +39,7 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["レストラン", "カフェ", "バー", "ホテル", "ピッツェリア"],
-    headline: "レストラン向けデジタルメニュー。5分でオンライン。",
+    headline: "レストラン向けデジタルメニュー。\n5分でオンライン。",
     sub: "5分でお店のデジタルメニューを作成。すべて込み:ノーコードエディタ、AI印刷メニュー認識、テーブル用QRコード、手数料なしの直接注文。",
     dynamicHeadlines: ["手数料0%。", "AI 35言語。", "オンライン注文。", "24/7予約。", "プレミアムデザイン。"],
     painBullets: [
@@ -117,6 +117,11 @@ export const TEXTS: LandingTexts = {
     heading: "5分でオンライン。",
     headingAccent: "14日間無料。",
     sub: "カード不要、いつでもキャンセル可能。すでにIQ Restを使用している500以上のレストランに参加してください。",
+  },
+
+  featureHighlights: {
+    heading: "すべて込み",
+    sub: "来店客を注文に変える機能を、どのプランにも追加料金なしで。",
   },
 
   scan: {

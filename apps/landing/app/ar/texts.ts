@@ -19,10 +19,10 @@ export const TEXTS: LandingTexts = {
   ctaText: "جرّبه مجانًا",
   homeCtaText: "جرّبه مجانًا",
   trust: [
-    { kind: "num", value: 35, label: "لغة" },
-    { kind: "text", value: "24/7", label: "الحجوزات" },
-    { kind: "num", value: 5, suffix: " min", label: "الإطلاق" },
-    { kind: "count", label: "مطعم" },
+    { kind: "num", value: 35, label: "لغة للقائمة" },
+    { kind: "text", value: "24/7", label: "حجوزات أونلاين" },
+    { kind: "num", value: 5, suffix: " min", label: "حتى الإطلاق" },
+    { kind: "count", label: "مطعم معنا" },
   ],
   demoText: "شاهد العرض التوضيحي",
   microcopy: "14 يوماً مجاناً · بدون بطاقة · إلغاء في أي وقت",
@@ -39,7 +39,7 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["مطاعم", "مقاهي", "بارات", "فنادق", "محلات بيتزا"],
-    headline: "قائمة طعام رقمية للمطاعم. مباشرة في 5 دقائق.",
+    headline: "قائمة طعام رقمية للمطاعم.\nمباشرة في 5 دقائق.",
     sub: "قائمة طعام رقمية لمطعمك في 5 دقائق. كل شيء مشمول: محرر بدون برمجة، تعرّف ذكي على القوائم المطبوعة، رموز QR للطاولات وطلبات مباشرة بدون عمولات.",
     dynamicHeadlines: ["0% عمولة.", "35 لغة بالذكاء الاصطناعي.", "طلبات أونلاين.", "حجوزات 24/7.", "تصميم متميز."],
     painBullets: [
@@ -117,6 +117,11 @@ export const TEXTS: LandingTexts = {
     heading: "مباشر في 5 دقائق.",
     headingAccent: "14 يوماً مجاناً.",
     sub: "بدون بطاقة، إلغاء في أي وقت. انضم إلى أكثر من 500 مطعم يعملون بالفعل على IQ Rest.",
+  },
+
+  featureHighlights: {
+    heading: "كل شيء مشمول",
+    sub: "الميزات التي تحوّل الضيوف إلى طلبات — في كل باقة، دون أي إضافات.",
   },
 
   scan: {

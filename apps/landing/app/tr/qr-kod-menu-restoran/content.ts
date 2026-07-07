@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "QR menü: okut ve sipariş ver.",
+    headline: "QR menü: okut ve\nsipariş ver.",
     cta: "QR menü oluştur",
     sub: "Misafir masadaki QR'ı okutur, 35 dilde fotoğraf ve alerjenleri görür ve sipariş verir — uygulama yok.",
   },

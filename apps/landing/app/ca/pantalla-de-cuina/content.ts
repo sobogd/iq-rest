@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS: comandes directes a cuina.",
+    headline: "KDS:\ncomandes directes a cuina.",
     cta: "Configurar pantalla de cuina",
     sub: "Les comandes arriben a la pantalla de cuina a l'instant: notes, al·lèrgens i temporitzador. Canvia l'estat amb un toc.",
     imageSrc: "/landing/feature-kitchen.webp",

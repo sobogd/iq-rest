@@ -1,10 +1,23 @@
-import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
+import {
+  Languages,
+  ShieldAlert,
+  Palette,
+  ShoppingCart,
+  MonitorSmartphone,
+  BadgePercent,
+  Globe,
+  LayoutTemplate,
+  Contact,
+  MessageCircle,
+  CalendarCheck,
+} from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
   locale: "nl",
   slug: "digitaal-menu-restaurant",
   trackPrefix: "l_nl_digital",
+  hideFeatureHeading: true,
 
   meta: {
     title: "Digitaal menu voor restaurants | IQ Rest",
@@ -19,9 +32,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitale menukaart die verkoopt.",
+    headline: "Een digitaal menu\ndat alles heeft",
     cta: "Digitaal menu maken",
-    sub: "Je papieren menukaart online: foto's, allergenen, live prijzen en vertaling in 35 talen. Geen herdruk.",
+    sub: "Foto's, allergenen en vertaling in 35 talen. Plus bestellingen, WhatsApp en tafelreservering — alles in één IQ Rest.",
   },
 
   scan: {
@@ -35,48 +48,125 @@ export const CONTENT: FeatureContent = {
     {
       icon: Languages,
       eyebrow: "35 AI-talen",
-      heading: "35 AI-talen — elke gast leest het menu in zijn eigen taal.",
-      body: "Eén QR code, 35 talen. De AI begrijpt de culinaire context — gerechtnamen en beschrijvingen klinken natuurlijk. Toeristen bestellen met meer vertrouwen en de gemiddelde bon stijgt zonder dat een kelner elk gerecht hoeft te vertalen.",
+      heading: "35 talen die elke gast leest",
+      body: "Eén QR, 35 talen. De AI vertaalt met culinaire context, elk gerecht klinkt natuurlijk. Toeristen bestellen zelfverzekerd.",
       bullets: [
-        "35 talen inbegrepen in het abonnement, zonder meerkosten.",
-        "AI met begrip van culinaire context, geen ruwe Google Translate.",
-        "De gast wisselt van taal met één tik in het menu zelf.",
+        "35 talen in je abonnement",
+        "Culinaire AI, geen Google",
+        "Taal wisselen met één tik",
       ],
       image: { src: "/landing/feature-multilang.webp", alt: "Twee gasten lezen hetzelfde digitale menu in verschillende talen op hun eigen telefoons" },
     },
     {
       icon: ShieldAlert,
       eyebrow: "Allergenen",
-      heading: "Labels voor allergenen en diëten.",
-      body: "Markeer gerechten voor gluten, lactose, noten, schaaldieren, veganistische en glutenvrije opties. Gasten filteren het menu op basis van hun dieetbehoeften en bestellen met meer vertrouwen.",
+      heading: "Allergenen en diëten per gerecht",
+      body: "Markeer gluten, lactose, noten, veganistisch en glutenvrij. Gasten filteren het menu op hun dieet en bestellen moeiteloos.",
       bullets: [
-        "14 standaard allergeencategorieën op elk gerecht.",
-        "Veganistische, vegetarische en glutenvrije labels met één klik.",
-        "Gasten filteren het menu op basis van hun dieetbeperkingen.",
+        "14 allergeencategorieën",
+        "Veganistische en glutenvrije labels",
+        "Filteren op dieet",
       ],
       image: { src: "/landing/feature-allergens.webp", alt: "Gast filtert het menu op allergenen op de telefoon terwijl de eigenaar de allergeenlijst bewerkt op een tablet" },
     },
     {
+      icon: MonitorSmartphone,
+      eyebrow: "Elk apparaat",
+      heading: "Beheer het op elk apparaat",
+      body: "Het paneel draait in de browser — bewerk menu, prijzen en foto's waar je ook bent. Niets te installeren.",
+      bullets: [
+        "Draait in elke browser",
+        "Telefoon, tablet of pc",
+        "Niets te installeren",
+      ],
+    },
+    {
+      icon: BadgePercent,
+      eyebrow: "Geen commissie",
+      heading: "Nul commissie, geen extra's",
+      body: "Eén transparant abonnement. We nemen geen deel van je omzet en verbergen geen kosten — alles blijft bij het restaurant.",
+      bullets: [
+        "Nul procent op bestellingen",
+        "Geen verborgen extra's",
+        "Eén vaste prijs",
+      ],
+    },
+    {
+      icon: Globe,
+      eyebrow: "Eigen domein",
+      heading: "Menu op je eigen domein",
+      body: "We koppelen je domein met SSL — gasten zien het menu op het adres van je restaurant. We helpen met DNS in 10 minuten.",
+      bullets: [
+        "Je domein met SSL",
+        "menu.jouwrestaurant.nl",
+        "We helpen met DNS",
+      ],
+    },
+    {
+      icon: LayoutTemplate,
+      eyebrow: "Jouw ontwerp",
+      heading: "Flexibel ontwerp op maat",
+      body: "Meerdere kant-en-klare lay-outs en stijlen — kies de cover, kleuren en presentatie die bij je zaak passen.",
+      bullets: [
+        "Meerdere kant-en-klare lay-outs",
+        "Je eigen cover en kleuren",
+        "Restylen in enkele klikken",
+      ],
+    },
+    {
+      icon: Contact,
+      eyebrow: "Contact",
+      heading: "Contact en socials in het menu",
+      body: "Een pagina met kaart, telefoon en links naar Instagram en WhatsApp — gasten vinden je met één tik.",
+      bullets: [
+        "Kaart, telefoon en adres",
+        "Instagram en WhatsApp",
+        "Bereik je in één tik",
+      ],
+    },
+    {
+      icon: MessageCircle,
+      eyebrow: "WhatsApp-bestellingen",
+      heading: "Bestellingen via WhatsApp",
+      body: "Gasten vullen een winkelwagen en sturen de bestelling recht naar je WhatsApp — geen aparte app, in de chat die ze al gebruiken.",
+      bullets: [
+        "Bestelling naar je WhatsApp",
+        "Geen aparte app",
+        "Chatten zoals altijd",
+      ],
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Reserveringen",
+      heading: "Tafel reserveren zonder bellen",
+      body: "Gasten reserveren zelf een tafel via het menu of een link, jij ziet de kalender per tafel en bevestigt auto of handmatig.",
+      bullets: [
+        "Reserveren 24/7, zonder bellen",
+        "Kalender per tafel",
+        "Auto- of handbevestiging",
+      ],
+    },
+    {
       icon: Palette,
       eyebrow: "Premium ontwerp",
-      heading: "Premium ontwerp met videoachtergrond en contactpagina.",
-      body: "Een video of foto op het welkomstscherm, restaurantbeschrijving, dedicated contactpagina met kaart, telefoonnummers en sociale profielen. Het digitale menu ziet eruit als een volledige restaurantwebsite, geen PDF achter een QR code.",
+      heading: "Lijkt een site, geen PDF",
+      body: "Videoachtergrond op het welkomstscherm, je concept beschreven en een aparte contactpagina met kaart en socials.",
       bullets: [
-        "Videoachtergrond of grote foto op het welkomstscherm.",
-        "Restaurant- en categoriebeschrijvingen — vertel het verhaal van het concept.",
-        "Contactpagina: kaart, telefoon, Instagram, WhatsApp.",
+        "Video op het startscherm",
+        "Concept en gerechten beschreven",
+        "Aparte contactpagina",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Twee telefoons op een cafétafel: menuhomescherm met videoachtergrond en contactpagina met kaart" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Bestellingen vanuit het menu · optioneel",
-      heading: "Gasten plaatsen bestellingen direct vanuit het menu.",
-      body: "Gasten bouwen een winkelwagen in het QR menu en sturen de bestelling — die komt aan bij de kelner op de vloer of op de keukentablet. De functie kan in de instellingen op elk moment worden in- of uitgeschakeld.",
+      eyebrow: "Bestellingen · optioneel",
+      heading: "Bestellingen direct uit het menu",
+      body: "Gasten vullen een winkelwagen en sturen de bestelling — die komt in de zaal, WhatsApp of het keukenscherm. Optioneel.",
       bullets: [
-        "Winkelwagen, opmerkingen en bestellen verzenden met één tik.",
-        "Bestelling komt direct aan in het beheerpaneel, WhatsApp of het keukenscherm.",
-        "Functie wisselbaar in de instellingen.",
+        "Winkelwagen en versturen in een tik",
+        "Zaal, WhatsApp of keuken",
+        "Zet het aan in de instellingen",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Twee telefoons op een tafel: winkelwagen met bestelling en bevestiging van verzonden bestelling" },
     },

@@ -19,10 +19,10 @@ export const TEXTS: LandingTexts = {
   ctaText: "Bain triail as saor in aisce",
   homeCtaText: "Bain triail as saor in aisce",
   trust: [
-    { kind: "num", value: 35, label: "Teangacha" },
-    { kind: "text", value: "24/7", label: "Áirithintí" },
-    { kind: "num", value: 5, suffix: " min", label: "Tús" },
-    { kind: "count", label: "Bialanna" },
+    { kind: "num", value: 35, label: "Teangacha biachláir" },
+    { kind: "text", value: "24/7", label: "Áirithintí ar líne" },
+    { kind: "num", value: 5, suffix: " nóim.", label: "Chun tosú" },
+    { kind: "count", label: "Bialanna linn" },
   ],
   demoText: "Féach an taispeántas",
   microcopy: "14 lá saor in aisce · Gan cárta · Cealaigh aon uair",
@@ -39,7 +39,7 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Bialanna", "Caifeanna", "Beáir", "Óstáin", "Pizzeríos"],
-    headline: "Biachlár digiteach do bhialann. Beo i 5 nóiméad.",
+    headline: "Biachlár digiteach do bhialann.\nBeo i 5 nóiméad.",
     sub: "Biachlár digiteach do do bhialann i 5 nóiméad. Gach rud san áireamh: eagarthóir gan chód, aithint IS ar bhiachlár clóite, cóid QR do na boird agus orduithe díreacha gan choimisiún.",
     dynamicHeadlines: ["0% coimisiún.", "35 teanga le IS.", "Orduithe ar líne.", "Curfha 24/7.", "Dearadh préimhe."],
     painBullets: [
@@ -117,6 +117,11 @@ export const TEXTS: LandingTexts = {
     heading: "Beo i 5 nóiméad.",
     headingAccent: "14 lá saor in aisce.",
     sub: "Gan cárta, cealaigh aon uair. Bí mar chuid de 500+ bialann atá ag úsáid IQ Rest cheana féin.",
+  },
+
+  featureHighlights: {
+    heading: "Gach rud san áireamh",
+    sub: "Na gnéithe a iompaíonn cuairteoirí ina n-orduithe — i ngach plean, gan aon bhreis.",
   },
 
   scan: {

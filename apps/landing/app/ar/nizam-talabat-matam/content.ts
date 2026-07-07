@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "الطلبات من الطاولة إلى المطبخ.",
+    headline: "الطلبات من الطاولة\nإلى المطبخ.",
     cta: "إعداد الطلب عبر الإنترنت",
     sub: "يطلب الضيف على الطاولة أو النادل من أي جهاز — مباشرة إلى المطبخ. مخطط الصالة وتقسيم الفاتورة.",
     imageSrc: "/landing/feature-orders.webp",

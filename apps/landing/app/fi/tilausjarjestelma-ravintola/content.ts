@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Tilaukset pöydästä keittiöön.",
+    headline: "Tilaukset pöydästä\nkeittiöön.",
     cta: "Ota verkkotilaukset käyttöön",
     sub: "Asiakas tilaa pöydässä tai tarjoilija miltä tahansa laitteelta — suoraan keittiöön. Salikartta ja laskun jako.",
     imageSrc: "/landing/feature-orders.webp",

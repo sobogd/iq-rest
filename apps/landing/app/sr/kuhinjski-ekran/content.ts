@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS: porudžbine pravo kuvaru.",
+    headline: "KDS: porudžbine\npravo kuvaru.",
     cta: "Подеси кухињски екран",
     sub: "Porudžbine se odmah pojave na kuhinjskom ekranu: beleške, alergeni i tajmer. Promena statusa jednim dodirom.",
     imageSrc: "/landing/feature-kitchen.webp",

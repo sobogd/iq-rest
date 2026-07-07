@@ -19,10 +19,10 @@ export const TEXTS: LandingTexts = {
   ctaText: "免费试用",
   homeCtaText: "免费试用",
   trust: [
-    { kind: "num", value: 35, label: "种语言" },
-    { kind: "text", value: "24/7", label: "预订" },
-    { kind: "num", value: 5, suffix: " min", label: "启动" },
-    { kind: "count", label: "家餐厅" },
+    { kind: "num", value: 35, label: "种菜单语言" },
+    { kind: "text", value: "24/7", label: "在线预订" },
+    { kind: "num", value: 5, suffix: "分钟", label: "即可上线" },
+    { kind: "count", label: "家餐厅选择我们" },
   ],
   demoText: "观看演示",
   microcopy: "14 天免费 · 无需信用卡 · 随时取消",
@@ -39,7 +39,7 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["餐厅", "咖啡馆", "酒吧", "酒店", "比萨店"],
-    headline: "餐厅数字菜单。5 分钟上线。",
+    headline: "餐厅数字菜单。\n5 分钟上线。",
     sub: "5 分钟内为您的餐厅创建数字菜单。一切包含在内:无代码编辑器、印刷菜单的 AI 识别、餐桌 QR 码,以及无佣金的直接订单。",
     dynamicHeadlines: ["0% 佣金。", "35 种 AI 语言。", "在线订单。", "24/7 预订。", "高级设计。"],
     painBullets: [
@@ -117,6 +117,11 @@ export const TEXTS: LandingTexts = {
     heading: "5 分钟上线。",
     headingAccent: "14 天免费。",
     sub: "无需信用卡,随时取消。加入已经使用 IQ Rest 的 500+ 家餐厅。",
+  },
+
+  featureHighlights: {
+    heading: "功能全包含",
+    sub: "把顾客变成订单的功能——每个套餐都包含，无额外费用。",
   },
 
   scan: {

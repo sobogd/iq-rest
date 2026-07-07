@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Tischbuchung 24/7, keine Anrufe.",
+    headline: "Tischbuchung 24/7,\nkeine Anrufe.",
     cta: "Tischreservierung einrichten",
     sub: "Gäste buchen 24/7 per QR-Menü oder Link. Kalender pro Tisch, automatische Bestätigungen und Erinnerungen.",
     imageSrc: "/landing/feature-reservation.webp",

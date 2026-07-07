@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS: comenzi direct la bucătar.",
+    headline: "KDS: comenzi direct\nla bucătar.",
     cta: "Configurează ecranul de bucătărie",
     sub: "Comenzile ajung instant pe ecranul de bucătărie: notițe, alergeni și cronometru. Schimbi statusul dintr-o atingere.",
     imageSrc: "/landing/feature-kitchen.webp",

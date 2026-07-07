@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "QR-menukort: scan og bestil.",
+    headline: "QR-menukort:\nscan og bestil.",
     cta: "Opret QR-menu",
     sub: "Gæsten scanner bordets QR, ser billeder og allergener på 35 sprog og bestiller — ingen app, ingen genoptryk.",
   },

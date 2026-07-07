@@ -1,10 +1,23 @@
-import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
+import {
+  Languages,
+  ShieldAlert,
+  Palette,
+  ShoppingCart,
+  MonitorSmartphone,
+  BadgePercent,
+  Globe,
+  LayoutTemplate,
+  Contact,
+  MessageCircle,
+  CalendarCheck,
+} from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
   locale: "ro",
   slug: "meniu-digital-restaurant",
   trackPrefix: "l_ro_digital",
+  hideFeatureHeading: true,
 
   meta: {
     title: "Meniu digital pentru restaurante | IQ Rest",
@@ -19,9 +32,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Meniu digital care vinde mai mult.",
+    headline: "Meniu digital\ncare are tot",
     cta: "Creează meniul digital",
-    sub: "Meniul tău pe hârtie, online: poze, alergeni, prețuri live și traducere în 35 de limbi. Fără retipărire.",
+    sub: "Poze, alergeni și traducere în 35 de limbi. Plus comenzi, WhatsApp și rezervări la masă — totul într-un singur IQ Rest.",
   },
 
   scan: {
@@ -35,48 +48,125 @@ export const CONTENT: FeatureContent = {
     {
       icon: Languages,
       eyebrow: "35 limbi AI",
-      heading: "35 limbi AI — fiecare oaspete citește meniul în limba sa.",
-      body: "Un singur cod QR, 35 de limbi. AI gestionează contextul culinar — numele preparatelor și descrierile sună natural. Turiștii comandă cu mai multă încredere și nota de plată medie crește fără ca ospătarul să fie nevoit să traducă fiecare preparat.",
+      heading: "35 de limbi pentru orice oaspete",
+      body: "Un QR, 35 de limbi. AI traduce cu context culinar, așa că fiecare preparat sună natural. Turiștii comandă fără ezitare.",
       bullets: [
-        "35 de limbi incluse în abonament, fără cost suplimentar.",
-        "AI cu înțelegere a contextului culinar, nu Google Translate brut.",
-        "Oaspetele schimbă limba cu o singură atingere în meniu.",
+        "35 de limbi în abonament",
+        "AI culinar, nu Google",
+        "Schimbi limba dintr-o atingere",
       ],
       image: { src: "/landing/feature-multilang.webp", alt: "Doi oaspeți citesc același meniu digital în limbi diferite pe telefoanele lor" },
     },
     {
       icon: ShieldAlert,
       eyebrow: "Alergeni",
-      heading: "Etichete pentru alergeni și diete.",
-      body: "Marcați preparatele pentru gluten, lactoză, nuci, fructe de mare, opțiuni vegane și fără gluten. Oaspeții filtrează meniul în funcție de nevoile lor alimentare și comandă cu mai multă încredere.",
+      heading: "Alergeni și diete pe fiecare preparat",
+      body: "Marcați gluten, lactoză, nuci, vegan și fără gluten. Oaspeții filtrează meniul după dieta lor și comandă ușor.",
       bullets: [
-        "14 categorii standard de alergeni pe fiecare preparat.",
-        "Etichete vegan, vegetarian și fără gluten cu un singur click.",
-        "Oaspeții filtrează meniul în funcție de restricțiile lor alimentare.",
+        "14 categorii de alergeni",
+        "Etichete vegan și fără gluten",
+        "Oaspeții filtrează după dietă",
       ],
       image: { src: "/landing/feature-allergens.webp", alt: "Oaspete filtrează meniul după alergeni pe telefon în timp ce proprietarul editează lista de alergeni pe o tabletă" },
     },
     {
+      icon: MonitorSmartphone,
+      eyebrow: "Orice dispozitiv",
+      heading: "Gestionați de pe orice dispozitiv",
+      body: "Panoul de administrare rulează în browser — editați meniul, prețurile și pozele de oriunde. Nu instalați nimic.",
+      bullets: [
+        "Rulează în orice browser",
+        "Telefon, tabletă sau PC",
+        "Nu instalați nimic",
+      ],
+    },
+    {
+      icon: BadgePercent,
+      eyebrow: "Fără comision",
+      heading: "Zero comision, fără extra",
+      body: "Un singur abonament transparent. Nu luăm parte din încasări și nu ascundem taxe — totul rămâne la restaurant.",
+      bullets: [
+        "Zero la sută pe comenzi",
+        "Fără extra ascunse",
+        "Un singur preț fix",
+      ],
+    },
+    {
+      icon: Globe,
+      eyebrow: "Domeniu propriu",
+      heading: "Meniul pe domeniul tău",
+      body: "Conectăm domeniul tău cu SSL — oaspeții văd meniul la adresa restaurantului tău. Ajutăm cu DNS în 10 minute.",
+      bullets: [
+        "Domeniul tău cu SSL",
+        "menu.restaurantultau.com",
+        "Ajutăm la configurarea DNS",
+      ],
+    },
+    {
+      icon: LayoutTemplate,
+      eyebrow: "Designul tău",
+      heading: "Design flexibil pe gustul tău",
+      body: "Câteva șabloane și stiluri gata făcute — alegeți coperta, culorile și prezentarea preparatelor potrivite localului.",
+      bullets: [
+        "Câteva șabloane gata făcute",
+        "Coperta și culorile tale",
+        "Restilizezi din câteva clicuri",
+      ],
+    },
+    {
+      icon: Contact,
+      eyebrow: "Contacte",
+      heading: "Contacte și social în meniu",
+      body: "O pagină dedicată cu hartă, telefon și linkuri către Instagram și WhatsApp — oaspeții te găsesc dintr-o atingere.",
+      bullets: [
+        "Hartă, telefon și adresă",
+        "Instagram și WhatsApp",
+        "Te contactează dintr-o atingere",
+      ],
+    },
+    {
+      icon: MessageCircle,
+      eyebrow: "Comenzi WhatsApp",
+      heading: "Primiți comenzi prin WhatsApp",
+      body: "Oaspeții fac un coș și trimit comanda direct pe WhatsApp-ul tău — fără aplicație separată, în chatul pe care îl folosesc deja.",
+      bullets: [
+        "Comanda pe WhatsApp-ul tău",
+        "Fără aplicație separată",
+        "Chat ca de obicei",
+      ],
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Rezervări",
+      heading: "Rezervări la masă fără apeluri",
+      body: "Oaspeții rezervă singuri o masă din meniu sau un link, tu vezi calendarul pe mese și confirmi auto sau manual.",
+      bullets: [
+        "Rezervări 24/7, fără apeluri",
+        "Calendar pe mese",
+        "Confirmare auto și manuală",
+      ],
+    },
+    {
       icon: Palette,
       eyebrow: "Design premium",
-      heading: "Design premium cu fundal video și pagină de contact.",
-      body: "Un video sau o fotografie pe ecranul de bun venit, descriere a restaurantului, pagină de contact dedicată cu hartă, numere de telefon și profiluri sociale. Meniul digital arată ca un site complet de restaurant, nu ca un PDF în spatele unui cod QR.",
+      heading: "Arată ca un site, nu un PDF",
+      body: "Fundal video pe ecranul de bun venit, conceptul descris și o pagină separată de contact cu hartă și social.",
       bullets: [
-        "Fundal video sau fotografie mare pe ecranul de bun venit.",
-        "Descrieri ale restaurantului și categoriilor — spuneți povestea conceptului.",
-        "Pagină de contact: hartă, telefon, Instagram, WhatsApp.",
+        "Video pe ecranul principal",
+        "Concept și preparate descrise",
+        "Pagină separată de contact",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Două telefoane pe o masă de cafenea: ecranul de pornire al meniului cu fundal video și pagina de contact cu hartă" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Comenzi din meniu · opțional",
-      heading: "Oaspeții plasează comenzi direct din meniu.",
-      body: "Oaspeții construiesc un coș în meniul QR și trimit comanda — ajunge la ospătarul din sală sau pe tableta din bucătărie. Funcționalitatea poate fi activată sau dezactivată în setări oricând.",
+      eyebrow: "Comenzi · opțional",
+      heading: "Comenzi direct din meniu",
+      body: "Oaspeții fac un coș și trimit comanda — ajunge în sală, pe WhatsApp sau pe ecranul din bucătărie. Opțional.",
       bullets: [
-        "Coș, comentarii și trimitere comandă cu o singură atingere.",
-        "Comanda ajunge imediat în panoul de administrare, pe WhatsApp sau pe display-ul de bucătărie.",
-        "Funcționalitate comutabilă în setări.",
+        "Coș și trimitere dintr-o atingere",
+        "În sală, WhatsApp sau bucătărie",
+        "Îl activezi din setări",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Două telefoane pe o masă: coș cu comandă și confirmare a trimiterii comenzii" },
     },

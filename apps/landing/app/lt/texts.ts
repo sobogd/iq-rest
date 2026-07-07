@@ -19,10 +19,10 @@ export const TEXTS: LandingTexts = {
   ctaText: "Išbandykite nemokamai",
   homeCtaText: "Išbandykite nemokamai",
   trust: [
-    { kind: "num", value: 35, label: "Kalbos" },
-    { kind: "text", value: "24/7", label: "Rezervacijos" },
-    { kind: "num", value: 5, suffix: " min", label: "Paleidimas" },
-    { kind: "count", label: "Restoranai" },
+    { kind: "num", value: 35, label: "Meniu kalbų" },
+    { kind: "text", value: "24/7", label: "Rezervacijos internetu" },
+    { kind: "num", value: 5, suffix: " min", label: "Iki paleidimo" },
+    { kind: "count", label: "Restoranų su mumis" },
   ],
   demoText: "Žiūrėti demonstraciją",
   microcopy: "14 dienų nemokamai · Be kortelės · Atšaukite bet kada",
@@ -39,7 +39,7 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Restoranai", "Kavinės", "Barai", "Viešbučiai", "Picerijos"],
-    headline: "Skaitmeninis meniu restoranui. Veikia per 5 minutes.",
+    headline: "Skaitmeninis meniu restoranui.\nVeikia per 5 minutes.",
     sub: "Skaitmeninis meniu jūsų restoranui per 5 minutes. Viskas įtraukta: redaktorius be kodo, AI atpažinimas spausdintam meniu, QR kodai staliukams ir tiesioginiai užsakymai be komisinio.",
     dynamicHeadlines: ["0 % komisinis.", "35 AI kalbos.", "Užsakymai internetu.", "Rezervacijos 24/7.", "Premium dizainas."],
     painBullets: [
@@ -117,6 +117,11 @@ export const TEXTS: LandingTexts = {
     heading: "Veikia per 5 minutes.",
     headingAccent: "14 dienų nemokamai.",
     sub: "Be kortelės, atšaukite bet kada. Prisijunkite prie 500+ restoranų, kurie jau naudoja IQ Rest.",
+  },
+
+  featureHighlights: {
+    heading: "Viskas įskaičiuota",
+    sub: "Funkcijos, kurios lankytojus paverčia užsakymais — kiekviename plane, be papildomų mokesčių.",
   },
 
   scan: {

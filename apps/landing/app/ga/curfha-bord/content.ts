@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Áirithintí 24/7, gan glaonna.",
+    headline: "Áirithintí 24/7,\ngan glaonna.",
     cta: "Socraigh áirithint boird",
     sub: "Áirithníonn aíonna 24/7 tríd an mbiachlár QR nó nasc. Féilire de réir boird, deimhnithe agus meabhrúcháin uathoibríoch.",
     imageSrc: "/landing/feature-reservation.webp",

@@ -1,10 +1,23 @@
-import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
+import {
+  Languages,
+  ShieldAlert,
+  Palette,
+  ShoppingCart,
+  MonitorSmartphone,
+  BadgePercent,
+  Globe,
+  LayoutTemplate,
+  Contact,
+  MessageCircle,
+  CalendarCheck,
+} from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
   locale: "is",
   slug: "stafraen-matsedill-veitingastaur",
   trackPrefix: "l_is_digital",
+  hideFeatureHeading: true,
 
   meta: {
     title: "Stafrænn matseðill fyrir veitingastaði | IQ Rest",
@@ -19,9 +32,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Stafrænn matseðill sem selur.",
+    headline: "Stafrænn matseðill\nsem hefur allt",
     cta: "Búa til stafrænan matseðil",
-    sub: "Pappírsmatseðillinn þinn á netinu: myndir, ofnæmisvaldar, verð í rauntíma og þýðing á 35 tungumál. Engin endurprentun.",
+    sub: "Myndir, ofnæmisvakar og þýðing á 35 tungumál. Auk pantana, WhatsApp og borðabókana — allt í einu IQ Rest.",
   },
 
   scan: {
@@ -34,49 +47,126 @@ export const CONTENT: FeatureContent = {
   subFeatures: [
     {
       icon: Languages,
-      eyebrow: "35 gervigreindar tungumál",
-      heading: "35 gervigreindar tungumál — hver gestur les matseðilinn á sínu eigin.",
-      body: "Einn QR kóði, 35 tungumál. Gervigreindin höndlar matargerðarsamhengið — heiti rétta og lýsingar hljóma náttúrulega. Ferðamenn panta með meiri öryggi og meðalreikningur vex án þess að þjónninn þurfi að þýða hvern rétt.",
+      eyebrow: "35 gervigreindartungumál",
+      heading: "35 tungumál fyrir hvern gest",
+      body: "Einn QR, 35 tungumál. Gervigreindin þýðir með matargerðarsamhengi, svo hver réttur hljómar eðlilega. Ferðamenn panta óhikað.",
       bullets: [
-        "35 tungumál innifalin í áskriftinni, án aukagjalds.",
-        "Gervigreind sem skilur matargerðarsamhengi, ekki hrátt Google Translate.",
-        "Gesturinn skiptir um tungumál með einum smelli í matseðlinum sjálfum.",
+        "35 tungumál í áskriftinni",
+        "Matar-gervigreind, ekki Google",
+        "Skipt um tungumál með einum smelli",
       ],
       image: { src: "/landing/feature-multilang.webp", alt: "Tveir gestir lesa sama stafræna matseðilinn á mismunandi tungumálum í sínum eigin símum" },
     },
     {
       icon: ShieldAlert,
       eyebrow: "Ofnæmisvakar",
-      heading: "Merkingar fyrir ofnæmisvaka og mataræði.",
-      body: "Merktu rétti fyrir glúten, laktósa, hnetur, sjávarrétti, vegan og glúteinlausa valkosti. Gestir sía matseðilinn eftir mataræðisþörfum sínum og panta með meiri öryggi.",
+      heading: "Ofnæmisvakar og mataræði á hverjum rétti",
+      body: "Merktu glúten, laktósa, hnetur, vegan og glúteinlaust. Gestir sía matseðilinn eftir mataræði og panta áreynslulaust.",
       bullets: [
-        "14 staðlaðir flokkar ofnæmisvaka á hverjum rétti.",
-        "Merkingar vegan, grænmetisréttar og glúteinlausar með einum smelli.",
-        "Gestir sía matseðilinn eftir mataræðistakmörkunum sínum.",
+        "14 flokkar ofnæmisvaka",
+        "Vegan- og glúteinlausar merkingar",
+        "Gestir sía eftir mataræði",
       ],
-      image: { src: "/landing/feature-allergens.webp", alt: "Gestur síar matseðilinn eftir ofnæmisvökum í símanum meðan eigandinn er að breyta ofnæmisvakalistanum á spjaldtölvu" },
+      image: { src: "/landing/feature-allergens.webp", alt: "Gestur síar matseðilinn eftir ofnæmisvökum í símanum meðan eigandinn breytir ofnæmisvakalistanum á spjaldtölvu" },
+    },
+    {
+      icon: MonitorSmartphone,
+      eyebrow: "Hvaða tæki sem er",
+      heading: "Stjórnaðu úr hvaða tæki sem er",
+      body: "Stjórnborðið keyrir í vafranum — breyttu matseðli, verðum og myndum hvaðan sem er. Ekkert að setja upp.",
+      bullets: [
+        "Keyrir í hvaða vafra sem er",
+        "Sími, spjaldtölva eða tölva",
+        "Ekkert að setja upp",
+      ],
+    },
+    {
+      icon: BadgePercent,
+      eyebrow: "Engin þóknun",
+      heading: "Engin þóknun, engir aukahlutir",
+      body: "Ein gagnsæ áskrift. Við tökum enga hlutdeild í tekjum þínum og felum engin gjöld — allt situr hjá veitingastaðnum.",
+      bullets: [
+        "Núll prósent af pöntunum",
+        "Engir faldir aukahlutir",
+        "Eitt fast verð",
+      ],
+    },
+    {
+      icon: Globe,
+      eyebrow: "Eigið lén",
+      heading: "Matseðill á þínu eigin léni",
+      body: "Við tengjum lénið þitt með SSL — gestir sjá matseðilinn á heimilisfangi veitingastaðarins. Við hjálpum með DNS á 10 mínútum.",
+      bullets: [
+        "Þitt lén með SSL",
+        "matsedill.veitingastadurthinn.is",
+        "Við hjálpum með DNS",
+      ],
+    },
+    {
+      icon: LayoutTemplate,
+      eyebrow: "Þín hönnun",
+      heading: "Sveigjanleg hönnun sem hentar þér",
+      body: "Nokkur tilbúin snið og stílar — veldu forsíðu, liti og framsetningu rétta sem passa við staðinn þinn.",
+      bullets: [
+        "Nokkur tilbúin snið",
+        "Þín forsíða og litir",
+        "Umbreyttu í nokkrum smellum",
+      ],
+    },
+    {
+      icon: Contact,
+      eyebrow: "Tengiliðir",
+      heading: "Tengiliðir og samfélagsmiðlar í matseðli",
+      body: "Sérstök síða með korti, síma og tenglum á Instagram og WhatsApp — gestir finna þig með einum smelli.",
+      bullets: [
+        "Kort, sími og heimilisfang",
+        "Instagram og WhatsApp",
+        "Náðu í okkur með einum smelli",
+      ],
+    },
+    {
+      icon: MessageCircle,
+      eyebrow: "WhatsApp pantanir",
+      heading: "Taktu við pöntunum gegnum WhatsApp",
+      body: "Gestir byggja körfu og senda pöntunina beint í þitt WhatsApp — ekkert sérstakt app, í spjallinu sem þeir nota nú þegar.",
+      bullets: [
+        "Pöntun í þitt WhatsApp",
+        "Ekkert sérstakt app",
+        "Spjall eins og venjulega",
+      ],
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Bókanir",
+      heading: "Borðabókun án símtala",
+      body: "Gestir bóka borð sjálfir gegnum matseðilinn eða tengil, þú sérð dagatal eftir borðum og staðfestir sjálfvirkt eða handvirkt.",
+      bullets: [
+        "Bókun 24/7, engin símtöl",
+        "Dagatal yfir öll borð",
+        "Sjálfvirk og handvirk staðfesting",
+      ],
     },
     {
       icon: Palette,
       eyebrow: "Premium hönnun",
-      heading: "Premium hönnun með myndbandsbakgrunni og samskiptasíðu.",
-      body: "Myndband eða mynd á velkominskjánum, lýsing veitingastaðar, sérstök samskiptasíða með korti, símanúmerum og samfélagsmiðlasniðum. Stafræni matseðillinn lítur út eins og full vefsíða veitingastaðar, ekki PDF á bak við QR kóða.",
+      heading: "Lítur út eins og vefur, ekki PDF",
+      body: "Myndbandsbakgrunnur á velkominskjánum, hugmyndinni þinni lýst og sérstök tengiliðasíða með korti og samfélagsmiðlum.",
       bullets: [
-        "Myndbandsbakgrunnur eða stór mynd á velkominskjánum.",
-        "Lýsingar veitingastaðar og flokka — segðu söguna af hugmyndinni.",
-        "Samskiptasíða: kort, sími, Instagram, WhatsApp.",
+        "Myndband á heimaskjánum",
+        "Hugmynd og réttum lýst",
+        "Sérstök tengiliðasíða",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Tveir símar á kaffihúsborði: heimaskjár matseðilsins með myndbandsbakgrunni og samskiptasíða með korti" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Pantanir úr matseðlinum · valfrjálst",
-      heading: "Gestir panta beint úr matseðlinum.",
-      body: "Gestir byggja körfu í QR matseðlinum og senda pöntunina — hún kemur til þjónsins í salnum eða á spjaldtölvuna í eldhúsinu. Eiginleikinn er hægt að kveikja eða slökkva á í stillingum hvenær sem er.",
+      eyebrow: "Pantanir · valfrjálst",
+      heading: "Pantanir beint úr matseðlinum",
+      body: "Gestir byggja körfu og senda pöntunina — hún berst í salinn, WhatsApp eða á eldhússkjáinn. Valfrjálst.",
       bullets: [
-        "Karfa, athugasemdir og sendingar pöntunar með einum smelli.",
-        "Pöntunin kemur strax í stjórnborðið, WhatsApp eða á eldhússkjáinn.",
-        "Eiginleikinn er stilltur í stillingum.",
+        "Karfa og sending með einum smelli",
+        "Í sal, WhatsApp eða eldhús",
+        "Kveiktu á því í stillingum",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Tveir símar á borði: karfa með pöntun og staðfesting á sendri pöntun" },
     },

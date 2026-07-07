@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS: pasūtījumi tieši pavāram.",
+    headline: "KDS:\npasūtījumi tieši pavāram.",
     cta: "Iestatīt virtuves ekrānu",
     sub: "Pasūtījumi uzreiz parādās virtuves ekrānā: piezīmes, alergēni un taimeris. Maini statusu ar vienu pieskārienu.",
     imageSrc: "/landing/feature-kitchen.webp",

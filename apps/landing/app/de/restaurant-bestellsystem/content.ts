@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Bestellungen vom Tisch zur Küche.",
+    headline: "Bestellungen vom Tisch\nzur Küche.",
     cta: "Online-Bestellung einrichten",
     sub: "Der Gast bestellt am Tisch oder das Personal per Gerät — direkt in die Küche. Tischplan und Rechnung teilen.",
     imageSrc: "/landing/feature-orders.webp",

@@ -41,7 +41,8 @@ export interface FeatureSubFeature {
   heading: string;
   body: string;
   bullets: readonly string[];
-  image: { src: string; alt: string };
+  /** Optional card image. Omit for a text-only card (icon + copy). */
+  image?: { src: string; alt: string };
   /** Optional analytics suffix; auto-generated from heading when omitted. */
   trackEvent?: string;
 }
@@ -60,6 +61,8 @@ export interface FeatureContent {
   hero: FeatureHero;
   scan: FeatureScan;
   subFeatures: readonly FeatureSubFeature[];
+  /** Hide the section heading/sub above the subFeatures grid on this page. */
+  hideFeatureHeading?: boolean;
   faq: {
     sub: string;
     items: readonly FeatureFaqItem[];

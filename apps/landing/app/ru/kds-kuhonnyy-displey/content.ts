@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS: заказы сразу повару",
+    headline: "KDS:\nзаказы сразу повару",
     cta: "Настроить кухонный дисплей",
     sub: "Заказы попадают на экран кухни мгновенно: заметки, аллергены и таймер. Смена статуса в один тап.",
     imageSrc: "/landing/feature-kitchen.webp",

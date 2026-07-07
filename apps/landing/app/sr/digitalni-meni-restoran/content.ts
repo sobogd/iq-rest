@@ -1,10 +1,23 @@
-import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
+import {
+  Languages,
+  ShieldAlert,
+  Palette,
+  ShoppingCart,
+  MonitorSmartphone,
+  BadgePercent,
+  Globe,
+  LayoutTemplate,
+  Contact,
+  MessageCircle,
+  CalendarCheck,
+} from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
   locale: "sr",
   slug: "digitalni-meni-restoran",
   trackPrefix: "l_sr_digital",
+  hideFeatureHeading: true,
 
   meta: {
     title: "Digitalni meni za restorane | IQ Rest",
@@ -19,9 +32,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitalni meni koji prodaje.",
+    headline: "Digitalni meni\nkoji ima sve",
     cta: "Направи дигитални мени",
-    sub: "Vaš papirni meni onlajn: fotografije, alergeni, cene uživo i prevod na 35 jezika. Bez preštampavanja.",
+    sub: "Fotografije, alergeni i prevod na 35 jezika. Plus porudžbine, WhatsApp i rezervacija stolova — sve u jednom IQ Rest.",
   },
 
   scan: {
@@ -35,48 +48,125 @@ export const CONTENT: FeatureContent = {
     {
       icon: Languages,
       eyebrow: "35 AI jezika",
-      heading: "35 AI jezika — svaki gost čita meni na svom.",
-      body: "Jedan QR kod, 35 jezika. AI razume kulinarski kontekst — imena jela i opisi zvuče prirodno. Turisti poručuju sa većom sigurnošću i prosečan račun raste, bez da konobar mora da prevodi svako jelo.",
+      heading: "35 jezika za svakog gosta",
+      body: "Jedan QR, 35 jezika. AI prevodi sa kulinarskim kontekstom, pa svako jelo zvuči prirodno. Turisti poručuju bez ustručavanja.",
       bullets: [
-        "35 jezika uključeno u pretplatu, bez doplate.",
-        "AI sa razumevanjem kulinarskog konteksta, ne sirov Google Translate.",
-        "Gost menja jezik jednim dodirom u samom meniju.",
+        "35 jezika u pretplati",
+        "Kulinarski AI, ne Google",
+        "Promena jezika jednim dodirom",
       ],
       image: { src: "/landing/feature-multilang.webp", alt: "Dva gosta čitaju isti digitalni meni na različitim jezicima na svojim telefonima" },
     },
     {
       icon: ShieldAlert,
       eyebrow: "Alergeni",
-      heading: "Oznake alergena i dijeta.",
-      body: "Označite jela za gluten, laktozu, orašaste plodove, plodove mora, veganske i bezglutenske opcije. Gosti filtriraju meni prema svojim dijetnim potrebama i poručuju sa većom sigurnošću.",
+      heading: "Alergeni i dijete na svakom jelu",
+      body: "Označite gluten, laktozu, orašaste plodove, vegansko i bez glutena. Gosti filtriraju meni po svojoj ishrani i lako poručuju.",
       bullets: [
-        "14 standardnih kategorija alergena na svakom jelu.",
-        "Oznake vegansko, vegetarijansko i bez glutena jednim klikom.",
-        "Gosti filtriraju meni prema svojim dijetnim ograničenjima.",
+        "14 kategorija alergena",
+        "Oznake vegansko i bez glutena",
+        "Gosti filtriraju po ishrani",
       ],
       image: { src: "/landing/feature-allergens.webp", alt: "Gost filtrira meni po alergenima na telefonu dok vlasnik uređuje listu alergena na tabletu" },
     },
     {
+      icon: MonitorSmartphone,
+      eyebrow: "Bilo koji uređaj",
+      heading: "Upravljajte sa svakog uređaja",
+      body: "Administrativni panel radi u pregledaču — menjajte meni, cene i fotografije bilo gde. Ništa se ne instalira.",
+      bullets: [
+        "Radi u svakom pregledaču",
+        "Telefon, tablet ili PC",
+        "Ništa se ne instalira",
+      ],
+    },
+    {
+      icon: BadgePercent,
+      eyebrow: "Bez provizije",
+      heading: "Nula provizije, bez dodataka",
+      body: "Jedna transparentna pretplata. Ne uzimamo deo vašeg prometa niti krijemo naknade — sve ostaje restoranu.",
+      bullets: [
+        "Nula procenata na porudžbine",
+        "Bez skrivenih dodataka",
+        "Jedna fiksna cena",
+      ],
+    },
+    {
+      icon: Globe,
+      eyebrow: "Sopstveni domen",
+      heading: "Meni na vašem domenu",
+      body: "Povezujemo vaš domen sa SSL — gosti vide meni na adresi vašeg restorana. Pomažemo sa DNS za 10 minuta.",
+      bullets: [
+        "Vaš domen sa SSL",
+        "menu.vasrestoran.com",
+        "Pomažemo sa DNS podešavanjem",
+      ],
+    },
+    {
+      icon: LayoutTemplate,
+      eyebrow: "Vaš dizajn",
+      heading: "Fleksibilan dizajn po meri",
+      body: "Nekoliko gotovih šablona i stilova — izaberite naslovnu, boje i prikaz jela koji odgovaraju vašem lokalu.",
+      bullets: [
+        "Nekoliko gotovih šablona",
+        "Vaša naslovna i boje",
+        "Novi izgled u par klikova",
+      ],
+    },
+    {
+      icon: Contact,
+      eyebrow: "Kontakti",
+      heading: "Kontakti i mreže u meniju",
+      body: "Posebna stranica sa mapom, telefonom i linkovima ka Instagramu i WhatsAppu — gosti vas nađu jednim dodirom.",
+      bullets: [
+        "Mapa, telefon i adresa",
+        "Instagram i WhatsApp",
+        "Dostupni jednim dodirom",
+      ],
+    },
+    {
+      icon: MessageCircle,
+      eyebrow: "WhatsApp porudžbine",
+      heading: "Primajte porudžbine preko WhatsAppa",
+      body: "Gosti prave korpu i šalju porudžbinu pravo na vaš WhatsApp — bez posebne aplikacije, u čatu koji već koriste.",
+      bullets: [
+        "Porudžbina na vaš WhatsApp",
+        "Bez posebne aplikacije",
+        "Čat kao i obično",
+      ],
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Rezervacije",
+      heading: "Rezervacija stolova bez poziva",
+      body: "Gosti sami rezervišu sto preko menija ili linka, vi vidite kalendar po stolovima i potvrđujete auto ili ručno.",
+      bullets: [
+        "Rezervacije 24/7, bez poziva",
+        "Kalendar po stolovima",
+        "Auto i ručna potvrda",
+      ],
+    },
+    {
       icon: Palette,
       eyebrow: "Premijum dizajn",
-      heading: "Premijum dizajn sa video pozadinom i stranicom kontakta.",
-      body: "Video ili fotografija na ekranu dobrodošlice, opis restorana, namenska stranica kontakta sa mapom, telefonima i profilima na društvenim mrežama. Digitalni meni izgleda kao pun sajt restorana, ne kao PDF iza QR koda.",
+      heading: "Izgleda kao sajt, ne kao PDF",
+      body: "Video pozadina na ekranu dobrodošlice, opisan koncept i posebna stranica kontakta sa mapom i mrežama.",
       bullets: [
-        "Video pozadina ili velika fotografija na ekranu dobrodošlice.",
-        "Opisi restorana i kategorija — ispričajte priču koncepta.",
-        "Stranica kontakta: mapa, telefon, Instagram, WhatsApp.",
+        "Video na početnom ekranu",
+        "Opisan koncept i jela",
+        "Posebna stranica kontakta",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Dva telefona na stolu kafića: početni ekran menija sa video pozadinom i stranica kontakta sa mapom" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Porudžbine iz menija · opciono",
-      heading: "Gosti poručuju direktno iz menija.",
-      body: "Gosti grade korpu u QR meniju i šalju porudžbinu — stiže konobaru u sali ili na tablet u kuhinji. Funkcija se može uključiti ili isključiti u podešavanjima u bilo kom trenutku.",
+      eyebrow: "Porudžbine · opciono",
+      heading: "Porudžbine pravo iz menija",
+      body: "Gosti prave korpu i šalju porudžbinu — stiže u salu, na WhatsApp ili na kuhinjski ekran. Opciono.",
       bullets: [
-        "Korpa, komentari i slanje porudžbine jednim dodirom.",
-        "Porudžbina odmah stiže u administrativni panel, na WhatsApp ili na kuhinjski ekran.",
-        "Funkcija se prebacuje u podešavanjima.",
+        "Korpa i slanje jednim dodirom",
+        "U salu, WhatsApp ili kuhinju",
+        "Uključite u podešavanjima",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Dva telefona na stolu: korpa sa porudžbinom i potvrda poslate porudžbine" },
     },

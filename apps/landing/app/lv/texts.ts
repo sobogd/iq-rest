@@ -19,10 +19,10 @@ export const TEXTS: LandingTexts = {
   ctaText: "Izmēģiniet bez maksas",
   homeCtaText: "Izmēģiniet bez maksas",
   trust: [
-    { kind: "num", value: 35, label: "Valodas" },
-    { kind: "text", value: "24/7", label: "Rezervācijas" },
-    { kind: "num", value: 5, suffix: " min", label: "Palaišana" },
-    { kind: "count", label: "Restorāni" },
+    { kind: "num", value: 35, label: "Ēdienkartes valodas" },
+    { kind: "text", value: "24/7", label: "Rezervācijas tiešsaistē" },
+    { kind: "num", value: 5, suffix: " min", label: "Līdz palaišanai" },
+    { kind: "count", label: "Restorāni ar mums" },
   ],
   demoText: "Skatīt demonstrāciju",
   microcopy: "14 dienas bez maksas · Bez kartes · Atcelt jebkurā laikā",
@@ -39,7 +39,7 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Restorāni", "Kafejnīcas", "Bāri", "Viesnīcas", "Picērijas"],
-    headline: "Digitālā ēdienkarte restorānam. Tiešsaistē 5 minūtēs.",
+    headline: "Digitālā ēdienkarte restorānam.\nTiešsaistē 5 minūtēs.",
     sub: "Digitālā ēdienkarte jūsu restorānam 5 minūtēs. Viss iekļauts: redaktors bez koda, AI atpazīšana drukātai ēdienkartei, QR kodi galdiem un tieši pasūtījumi bez komisijas.",
     dynamicHeadlines: ["0 % komisija.", "35 AI valodas.", "Tiešsaistes pasūtījumi.", "Rezervēšana 24/7.", "Premium dizains."],
     painBullets: [
@@ -117,6 +117,11 @@ export const TEXTS: LandingTexts = {
     heading: "Tiešsaistē 5 minūtēs.",
     headingAccent: "14 dienas bez maksas.",
     sub: "Bez kartes, atceliet jebkurā laikā. Pievienojieties 500+ restorāniem, kas jau izmanto IQ Rest.",
+  },
+
+  featureHighlights: {
+    heading: "Viss iekļauts",
+    sub: "Funkcijas, kas apmeklētājus pārvērš pasūtījumos — katrā plānā, bez piemaksām.",
   },
 
   scan: {

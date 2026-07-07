@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "QR menu: scan, view, order.",
+    headline: "QR menu: scan,\nview, order.",
     cta: "Create QR Menu",
     sub: "Guests scan the table QR, browse photos and allergens in 35 languages, and order — no app, no reprints.",
   },

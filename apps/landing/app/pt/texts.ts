@@ -19,10 +19,10 @@ export const TEXTS: LandingTexts = {
   ctaText: "Experimente grátis",
   homeCtaText: "Experimente grátis",
   trust: [
-    { kind: "num", value: 35, label: "Idiomas" },
-    { kind: "text", value: "24/7", label: "Reservas" },
-    { kind: "num", value: 5, suffix: " min", label: "Arranque" },
-    { kind: "count", label: "Restaurantes" },
+    { kind: "num", value: 35, label: "Idiomas do menu" },
+    { kind: "text", value: "24/7", label: "Reservas online" },
+    { kind: "num", value: 5, suffix: " min", label: "Para arrancar" },
+    { kind: "count", label: "Restaurantes connosco" },
   ],
   demoText: "Ver demonstração",
   microcopy: "14 dias grátis · Sem cartão · Cancela quando quiseres",
@@ -39,7 +39,7 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Restaurantes", "Cafés", "Bares", "Hotéis", "Pizzarias"],
-    headline: "Menu digital para restaurantes. Online em 5 minutos.",
+    headline: "Menu digital para restaurantes.\nOnline em 5 minutos.",
     sub: "Menu digital para o teu restaurante em 5 minutos. Tudo incluído: editor sem código, reconhecimento IA do menu, códigos QR para as mesas e pedidos diretos sem comissões.",
     dynamicHeadlines: ["0 % de comissão.", "35 línguas IA.", "Pedidos online.", "Reservas 24/7.", "Design premium."],
     painBullets: [
@@ -117,6 +117,11 @@ export const TEXTS: LandingTexts = {
     heading: "Online em 5 minutos.",
     headingAccent: "14 dias grátis.",
     sub: "Sem cartão, cancela quando quiseres. Junta-te a mais de 500 restaurantes que já trabalham com o IQ Rest.",
+  },
+
+  featureHighlights: {
+    heading: "Tudo incluído",
+    sub: "Os recursos que transformam clientes em pedidos, em todos os planos e sem extras.",
   },
 
   scan: {

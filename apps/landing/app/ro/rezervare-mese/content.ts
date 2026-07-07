@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Rezervări 24/7, fără telefoane.",
+    headline: "Rezervări 24/7,\nfără telefoane.",
     cta: "Configurează rezervările de mese",
     sub: "Clienții rezervă 24/7 prin meniul QR sau un link. Calendar pe masă, confirmări și memento-uri automate.",
     imageSrc: "/landing/feature-reservation.webp",

@@ -1,10 +1,23 @@
-import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
+import {
+  Languages,
+  ShieldAlert,
+  Palette,
+  ShoppingCart,
+  MonitorSmartphone,
+  BadgePercent,
+  Globe,
+  LayoutTemplate,
+  Contact,
+  MessageCircle,
+  CalendarCheck,
+} from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
   locale: "es",
   slug: "menu-digital-restaurantes",
   trackPrefix: "l_es_digital",
+  hideFeatureHeading: true,
 
   meta: {
     title: "Carta digital para restaurantes | IQ Rest",
@@ -19,9 +32,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Carta digital que vende más.",
+    headline: "Una carta digital\nque lo tiene todo",
     cta: "Crear menú digital",
-    sub: "Tu carta en papel, online: fotos, alérgenos, precios al momento y traducción a 35 idiomas. Sin reimprimir.",
+    sub: "Fotos, alérgenos y traducción a 35 idiomas. Además pedidos, WhatsApp y reserva de mesa — todo en un solo IQ Rest.",
   },
 
   scan: {
@@ -35,48 +48,125 @@ export const CONTENT: FeatureContent = {
     {
       icon: Languages,
       eyebrow: "35 idiomas con IA",
-      heading: "35 idiomas con IA — cada comensal lee la carta en el suyo.",
-      body: "Un único QR, 35 idiomas. La IA tiene en cuenta el contexto gastronómico — los nombres y las descripciones suenan naturales. Los turistas piden con más confianza y el ticket medio sube sin que un camarero tenga que ir traduciendo plato a plato.",
+      heading: "35 idiomas que todos leen",
+      body: "Un QR, 35 idiomas. La IA traduce con contexto culinario, así cada plato suena natural. Los turistas piden sin dudar.",
       bullets: [
-        "35 idiomas incluidos en la suscripción, sin sobrecoste.",
-        "IA con sensibilidad culinaria, no es Google Translate sin más.",
-        "El comensal cambia el idioma con un solo toque dentro de la carta.",
+        "35 idiomas en tu plan",
+        "IA culinaria, no Google",
+        "Cambio de idioma en un toque",
       ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Dos comensales leen la misma carta digital en idiomas distintos desde sus móviles" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Dos comensales leen la misma carta digital en idiomas distintos desde sus propios móviles" },
     },
     {
       icon: ShieldAlert,
       eyebrow: "Alérgenos",
-      heading: "Alérgenos y etiquetas dietéticas.",
-      body: "Marca los platos con gluten, lactosa, frutos secos, marisco, opciones veganas y sin gluten. Los comensales filtran la carta según sus restricciones y piden con mayor tranquilidad.",
+      heading: "Alérgenos y dietas en cada plato",
+      body: "Etiqueta gluten, lactosa, frutos secos, vegano y sin gluten. Los comensales filtran la carta a su dieta y piden sin problema.",
       bullets: [
-        "14 categorías estándar de alérgenos en cada plato.",
-        "Etiquetas vegano, vegetariano y sin gluten con un clic.",
-        "El comensal filtra la carta según sus restricciones.",
+        "14 categorías de alérgenos",
+        "Etiquetas vegano y sin gluten",
+        "Filtran por su dieta",
       ],
       image: { src: "/landing/feature-allergens.webp", alt: "Comensal filtra la carta por alérgenos en el móvil mientras el propietario edita la lista de alérgenos en una tableta" },
     },
     {
+      icon: MonitorSmartphone,
+      eyebrow: "Cualquier dispositivo",
+      heading: "Gestiónala desde cualquier equipo",
+      body: "El panel funciona en el navegador — edita carta, precios y fotos desde donde estés. No hay que instalar nada.",
+      bullets: [
+        "Funciona en cualquier navegador",
+        "Móvil, tableta o PC",
+        "Nada que instalar",
+      ],
+    },
+    {
+      icon: BadgePercent,
+      eyebrow: "Sin comisión",
+      heading: "Cero comisiones, sin extras",
+      body: "Una suscripción transparente. No nos llevamos parte de tus ingresos ni escondemos cargos — todo queda en el restaurante.",
+      bullets: [
+        "Cero por ciento en pedidos",
+        "Sin extras ocultos",
+        "Un precio único",
+      ],
+    },
+    {
+      icon: Globe,
+      eyebrow: "Dominio propio",
+      heading: "La carta en tu propio dominio",
+      body: "Conectamos tu dominio con SSL — los comensales ven la carta en la dirección de tu restaurante. Ayudamos con el DNS en 10 minutos.",
+      bullets: [
+        "Tu dominio con SSL",
+        "menu.turestaurante.com",
+        "Ayudamos con el DNS",
+      ],
+    },
+    {
+      icon: LayoutTemplate,
+      eyebrow: "Tu diseño",
+      heading: "Diseño flexible a tu medida",
+      body: "Varios diseños y estilos listos — elige la portada, los colores y la presentación de los platos que encajen con tu local.",
+      bullets: [
+        "Varios diseños listos",
+        "Tu portada y colores",
+        "Cambia el estilo en clics",
+      ],
+    },
+    {
+      icon: Contact,
+      eyebrow: "Contacto",
+      heading: "Contacto y redes en la carta",
+      body: "Una página con mapa, teléfono y enlaces a Instagram y WhatsApp — los comensales te encuentran con un solo toque.",
+      bullets: [
+        "Mapa, teléfono y dirección",
+        "Instagram y WhatsApp",
+        "Contacta en un toque",
+      ],
+    },
+    {
+      icon: MessageCircle,
+      eyebrow: "Pedidos por WhatsApp",
+      heading: "Recibe pedidos por WhatsApp",
+      body: "Los comensales arman la cesta y envían el pedido directo a tu WhatsApp — sin otra app, en el chat que ya usan.",
+      bullets: [
+        "Pedido a tu WhatsApp",
+        "Sin otra app",
+        "El chat de siempre",
+      ],
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Reservas",
+      heading: "Reserva de mesa sin llamadas",
+      body: "Los comensales reservan mesa desde la carta o un enlace, tú ves el calendario por mesa y confirmas auto o manual.",
+      bullets: [
+        "Reservas 24/7, sin llamadas",
+        "Calendario por mesa",
+        "Confirmación auto o manual",
+      ],
+    },
+    {
       icon: Palette,
       eyebrow: "Diseño premium",
-      heading: "Diseño premium con vídeo de fondo y página de contacto.",
-      body: "Un vídeo o una fotografía en la pantalla de bienvenida, la descripción del restaurante, una página de contacto con mapa, teléfonos y redes sociales. La carta digital se ve como la web del restaurante, no como un PDF detrás de un QR.",
+      heading: "Parece una web, no un PDF",
+      body: "Vídeo de fondo en la pantalla de bienvenida, tu concepto descrito y una página de contacto aparte con mapa y redes.",
       bullets: [
-        "Vídeo de fondo o foto destacada en la pantalla principal.",
-        "Descripción del restaurante y de las categorías — explica el concepto.",
-        "Página de contacto: mapa, teléfono, Instagram, WhatsApp.",
+        "Vídeo en la pantalla inicial",
+        "Concepto y platos descritos",
+        "Página de contacto aparte",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Dos móviles sobre una mesa de cafetería: pantalla principal de la carta con vídeo de fondo y página de contacto con mapa" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Pedidos desde la carta · opcional",
-      heading: "El comensal hace el pedido directamente desde la carta.",
-      body: "El comensal arma su cesta en la carta QR y envía el pedido — llega al camarero en sala o a la tableta de la cocina. La función puede activarse o desactivarse en los ajustes en cualquier momento.",
+      eyebrow: "Pedidos · opcional",
+      heading: "Pedidos directos desde la carta",
+      body: "Los comensales arman la cesta y envían el pedido — llega a la sala, WhatsApp o la pantalla de cocina. Opcional.",
       bullets: [
-        "Cesta, comentarios y envío del pedido con un solo toque.",
-        "El pedido llega al instante al panel, a WhatsApp o a la pantalla de cocina.",
-        "Función opcional, activable o desactivable en los ajustes.",
+        "Cesta y envío en un toque",
+        "A sala, WhatsApp o cocina",
+        "Actívalo en los ajustes",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Dos móviles sobre una mesa: cesta con el pedido y pantalla de pedido enviado" },
     },

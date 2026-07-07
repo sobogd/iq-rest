@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS: zamówienia prosto do kuchni.",
+    headline: "KDS:\nzamówienia prosto do kuchni.",
     cta: "Skonfiguruj ekran kuchenny",
     sub: "Zamówienia trafiają na ekran kuchni natychmiast: notatki, alergeny i timer. Zmiana statusu jednym dotknięciem.",
     imageSrc: "/landing/feature-kitchen.webp",

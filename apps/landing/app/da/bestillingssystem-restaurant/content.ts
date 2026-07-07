@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Ordrer fra bordet til køkkenet.",
+    headline: "Ordrer fra bordet\ntil køkkenet.",
     cta: "Opsæt onlinebestilling",
     sub: "Gæsten bestiller ved bordet eller personalet fra enhver enhed — direkte til køkkenet. Bordplan og deling af regning.",
     imageSrc: "/landing/feature-orders.webp",

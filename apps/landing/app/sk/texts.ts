@@ -19,10 +19,10 @@ export const TEXTS: LandingTexts = {
   ctaText: "Vyskúšajte zadarmo",
   homeCtaText: "Vyskúšajte zadarmo",
   trust: [
-    { kind: "num", value: 35, label: "Jazykov" },
-    { kind: "text", value: "24/7", label: "Rezervácie" },
-    { kind: "num", value: 5, suffix: " min", label: "Spustenie" },
-    { kind: "count", label: "Reštaurácií" },
+    { kind: "num", value: 35, label: "Jazykov menu" },
+    { kind: "text", value: "24/7", label: "Online rezervácie" },
+    { kind: "num", value: 5, suffix: " min", label: "Do spustenia" },
+    { kind: "count", label: "Reštaurácií s nami" },
   ],
   demoText: "Pozrieť demo",
   microcopy: "14 dní zadarmo · Bez karty · Zrušenie kedykoľvek",
@@ -39,7 +39,7 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Reštaurácie", "Kaviarne", "Bary", "Hotely", "Pizzerie"],
-    headline: "Digitálne menu pre reštauráciu. Online za 5 minút.",
+    headline: "Digitálne menu pre reštauráciu.\nOnline za 5 minút.",
     sub: "Digitálne menu pre vašu reštauráciu za 5 minút. Všetko v cene: editor bez kódu, AI rozpoznávanie tlačeného menu, QR kódy pre stoly a priame objednávky bez provízií.",
     dynamicHeadlines: ["0 % provízia.", "35 jazykov s AI.", "Online objednávky.", "Rezervácie 24/7.", "Prémiový dizajn."],
     painBullets: [
@@ -117,6 +117,11 @@ export const TEXTS: LandingTexts = {
     heading: "Online za 5 minút.",
     headingAccent: "14 dní zadarmo.",
     sub: "Bez karty, zrušenie kedykoľvek. Pridajte sa k 500+ reštauráciám, ktoré už používajú IQ Rest.",
+  },
+
+  featureHighlights: {
+    heading: "Všetko v cene",
+    sub: "Funkcie, ktoré menia hostí na objednávky — v každom pláne, bez príplatkov.",
   },
 
   scan: {

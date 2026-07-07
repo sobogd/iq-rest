@@ -1,10 +1,23 @@
-import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
+import {
+  Languages,
+  ShieldAlert,
+  Palette,
+  ShoppingCart,
+  MonitorSmartphone,
+  BadgePercent,
+  Globe,
+  LayoutTemplate,
+  Contact,
+  MessageCircle,
+  CalendarCheck,
+} from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
   locale: "pl",
   slug: "cyfrowe-menu-restauracja",
   trackPrefix: "l_pl_digital",
+  hideFeatureHeading: true,
 
   meta: {
     title: "Cyfrowe menu dla restauracji | IQ Rest",
@@ -19,9 +32,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Cyfrowe menu, które sprzedaje.",
+    headline: "Cyfrowe menu,\nktóre ma wszystko",
     cta: "Utwórz menu cyfrowe",
-    sub: "Twoje papierowe menu online: zdjęcia, alergeny, ceny na żywo i tłumaczenie na 35 języków. Bez druku.",
+    sub: "Zdjęcia, alergeny i tłumaczenie na 35 języków. Plus zamówienia, WhatsApp i rezerwacja stolików — wszystko w jednym IQ Rest.",
   },
 
   scan: {
@@ -35,48 +48,125 @@ export const CONTENT: FeatureContent = {
     {
       icon: Languages,
       eyebrow: "35 języków AI",
-      heading: "35 języków AI — każdy gość czyta menu w swoim.",
-      body: "Jeden kod QR, 35 języków. AI obsługuje kontekst kulinarny — nazwy dań i opisy brzmią naturalnie. Turyści zamawiają z większą pewnością, a średni rachunek rośnie bez konieczności tłumaczenia każdego dania przez kelnera.",
+      heading: "35 języków dla każdego gościa",
+      body: "Jeden QR, 35 języków. AI tłumaczy z kontekstem kulinarnym, więc każde danie brzmi naturalnie. Turyści zamawiają pewnie.",
       bullets: [
-        "35 języków w subskrypcji, bez dopłat.",
-        "AI rozumiejące kontekst kulinarny, nie surowy Google Translate.",
-        "Gość zmienia język jednym dotknięciem w samym menu.",
+        "35 języków w abonamencie",
+        "AI kulinarne, nie Google",
+        "Zmiana języka jednym dotknięciem",
       ],
       image: { src: "/landing/feature-multilang.webp", alt: "Dwóch gości czyta to samo cyfrowe menu w różnych językach na swoich telefonach" },
     },
     {
       icon: ShieldAlert,
       eyebrow: "Alergeny",
-      heading: "Etykiety alergenów i diet.",
-      body: "Oznacz dania pod kątem glutenu, laktozy, orzechów, owoców morza, opcji wegańskich i bezglutenowych. Goście filtrują menu według swoich potrzeb dietetycznych i zamawiają z większą pewnością.",
+      heading: "Alergeny i diety przy każdym daniu",
+      body: "Oznacz gluten, laktozę, orzechy, wegańskie i bezglutenowe. Goście filtrują menu pod swoją dietę i zamawiają bez obaw.",
       bullets: [
-        "14 standardowych kategorii alergenów w każdym daniu.",
-        "Etykiety wegańskie, wegetariańskie i bezglutenowe jednym kliknięciem.",
-        "Goście filtrują menu według swoich ograniczeń dietetycznych.",
+        "14 kategorii alergenów",
+        "Etykiety wegańskie i bezglutenowe",
+        "Goście filtrują wg diety",
       ],
       image: { src: "/landing/feature-allergens.webp", alt: "Gość filtruje menu po alergenach na telefonie, podczas gdy właściciel edytuje listę alergenów na tablecie" },
     },
     {
+      icon: MonitorSmartphone,
+      eyebrow: "Każde urządzenie",
+      heading: "Zarządzaj z każdego urządzenia",
+      body: "Panel działa w przeglądarce — edytuj menu, ceny i zdjęcia z dowolnego miejsca. Niczego nie trzeba instalować.",
+      bullets: [
+        "Działa w każdej przeglądarce",
+        "Telefon, tablet lub PC",
+        "Nic do instalacji",
+      ],
+    },
+    {
+      icon: BadgePercent,
+      eyebrow: "Bez prowizji",
+      heading: "Zero prowizji, bez dopłat",
+      body: "Jeden przejrzysty abonament. Nie bierzemy udziału w Twoim obrocie i nie ukrywamy opłat — wszystko zostaje w restauracji.",
+      bullets: [
+        "Zero procent od zamówień",
+        "Bez ukrytych dopłat",
+        "Jedna stała cena",
+      ],
+    },
+    {
+      icon: Globe,
+      eyebrow: "Własna domena",
+      heading: "Menu na Twojej własnej domenie",
+      body: "Podłączamy Twoją domenę z SSL — goście widzą menu pod adresem restauracji. Pomagamy z DNS w 10 minut.",
+      bullets: [
+        "Twoja domena z SSL",
+        "menu.twojarestauracja.com",
+        "Pomagamy z konfiguracją DNS",
+      ],
+    },
+    {
+      icon: LayoutTemplate,
+      eyebrow: "Twój design",
+      heading: "Elastyczny design pod Ciebie",
+      body: "Kilka gotowych układów i stylów — wybierz okładkę, kolory i sposób prezentacji dań pasujące do Twojego lokalu.",
+      bullets: [
+        "Kilka gotowych układów",
+        "Twoja okładka i kolory",
+        "Zmiana w kilka kliknięć",
+      ],
+    },
+    {
+      icon: Contact,
+      eyebrow: "Kontakt",
+      heading: "Kontakt i social media w menu",
+      body: "Osobna strona z mapą, telefonem i linkami do Instagrama i WhatsApp — goście znajdą Cię jednym dotknięciem.",
+      bullets: [
+        "Mapa, telefon i adres",
+        "Instagram i WhatsApp",
+        "Kontakt jednym dotknięciem",
+      ],
+    },
+    {
+      icon: MessageCircle,
+      eyebrow: "Zamówienia na WhatsApp",
+      heading: "Przyjmuj zamówienia przez WhatsApp",
+      body: "Goście budują koszyk i wysyłają zamówienie prosto na Twój WhatsApp — bez osobnej aplikacji, w czacie, którego już używają.",
+      bullets: [
+        "Zamówienie na Twój WhatsApp",
+        "Bez osobnej aplikacji",
+        "Czat jak zwykle",
+      ],
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Rezerwacje",
+      heading: "Rezerwacja stolika bez telefonów",
+      body: "Goście sami rezerwują stolik przez menu lub link, Ty widzisz kalendarz wg stolików i potwierdzasz auto lub ręcznie.",
+      bullets: [
+        "Rezerwacje 24/7 bez telefonów",
+        "Kalendarz wg stolików",
+        "Auto i ręczne potwierdzenie",
+      ],
+    },
+    {
       icon: Palette,
       eyebrow: "Design premium",
-      heading: "Design premium z tłem wideo i stroną kontaktową.",
-      body: "Film lub zdjęcie na ekranie powitalnym, opis restauracji, dedykowana strona kontaktowa z mapą, numerami telefonów i profilami w mediach społecznościowych. Cyfrowe menu wygląda jak pełna strona internetowa restauracji, a nie PDF za kodem QR.",
+      heading: "Wygląda jak strona, nie PDF",
+      body: "Tło wideo na ekranie powitalnym, opisany koncept i osobna strona kontaktowa z mapą i mediami społecznościowymi.",
       bullets: [
-        "Tło wideo lub duże zdjęcie na ekranie powitalnym.",
-        "Opisy restauracji i kategorii — opowiedz historię konceptu.",
-        "Strona kontaktowa: mapa, telefon, Instagram, WhatsApp.",
+        "Wideo na ekranie startowym",
+        "Opisany koncept i dania",
+        "Osobna strona kontaktowa",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Dwa telefony na stoliku kawiarni: ekran startowy menu z tłem wideo i strona kontaktowa z mapą" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Zamówienia z menu · opcjonalnie",
-      heading: "Goście składają zamówienia bezpośrednio z menu.",
-      body: "Goście budują koszyk w menu QR i wysyłają zamówienie — trafia ono do kelnera na sali lub na tablet w kuchni. Funkcję można włączać i wyłączać w ustawieniach w dowolnym momencie.",
+      eyebrow: "Zamówienia · opcjonalnie",
+      heading: "Zamówienia prosto z menu",
+      body: "Goście budują koszyk i wysyłają zamówienie — trafia na salę, WhatsApp lub ekran w kuchni. Opcjonalnie.",
       bullets: [
-        "Koszyk, komentarze i wysyłka zamówienia jednym dotknięciem.",
-        "Zamówienie trafia natychmiast do panelu administracyjnego, WhatsApp lub na ekran kuchenny.",
-        "Funkcja przełączana w ustawieniach.",
+        "Koszyk i wysyłka dotknięciem",
+        "Na salę, WhatsApp lub do kuchni",
+        "Przełączasz w ustawieniach",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Dwa telefony na stoliku: koszyk z zamówieniem i potwierdzenie wysłania zamówienia" },
     },

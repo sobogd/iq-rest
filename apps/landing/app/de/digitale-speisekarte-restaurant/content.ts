@@ -1,10 +1,23 @@
-import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
+import {
+  Languages,
+  ShieldAlert,
+  Palette,
+  ShoppingCart,
+  MonitorSmartphone,
+  BadgePercent,
+  Globe,
+  LayoutTemplate,
+  Contact,
+  MessageCircle,
+  CalendarCheck,
+} from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
   locale: "de",
   slug: "digitale-speisekarte-restaurant",
   trackPrefix: "l_de_digital",
+  hideFeatureHeading: true,
 
   meta: {
     title: "Digitale Speisekarte für Restaurants | IQ Rest",
@@ -19,9 +32,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitale Karte, die mehr verkauft.",
+    headline: "Eine digitale Karte,\ndie alles kann",
     cta: "Digitale Speisekarte erstellen",
-    sub: "Deine Papierkarte online: Fotos, Allergene, Live-Preise und Übersetzung in 35 Sprachen. Kein Nachdrucken.",
+    sub: "Fotos, Allergene und Übersetzung in 35 Sprachen. Plus Bestellungen, WhatsApp und Tischreservierung — alles in einem IQ Rest.",
   },
 
   scan: {
@@ -35,48 +48,125 @@ export const CONTENT: FeatureContent = {
     {
       icon: Languages,
       eyebrow: "35 KI-Sprachen",
-      heading: "35 KI-Sprachen — jeder Gast liest die Speisekarte in seiner eigenen.",
-      body: "Ein QR-Code, 35 Sprachen. Die KI versteht den kulinarischen Kontext — Gerichtsnamen und Beschreibungen klingen natürlich. Touristen bestellen sicherer und der Durchschnittsbon steigt, ohne dass die Servicekraft jedes Gericht übersetzen muss.",
+      heading: "35 Sprachen für jeden Gast",
+      body: "Ein QR, 35 Sprachen. Die KI übersetzt mit kulinarischem Kontext, jedes Gericht klingt natürlich. Touristen bestellen sicher.",
       bullets: [
-        "35 Sprachen im Abo enthalten, kein Aufpreis.",
-        "Kulinarisch bewusste KI, kein roher Google Translate.",
-        "Gast wechselt die Sprache mit einem Tipp direkt in der Speisekarte.",
+        "35 Sprachen im Tarif",
+        "Kulinarische KI, kein Google",
+        "Sprachwechsel per Tipp",
       ],
       image: { src: "/landing/feature-multilang.webp", alt: "Zwei Gäste lesen dieselbe digitale Speisekarte in verschiedenen Sprachen auf ihren eigenen Smartphones" },
     },
     {
       icon: ShieldAlert,
       eyebrow: "Allergene",
-      heading: "Allergen- und Ernährungs-Tags.",
-      body: "Markieren Sie Gerichte für Gluten, Laktose, Nüsse, Meeresfrüchte, vegane und glutenfreie Optionen. Gäste filtern die Speisekarte nach ihren Ernährungsbedürfnissen und bestellen mit mehr Sicherheit.",
+      heading: "Allergene und Diäten je Gericht",
+      body: "Markiere Gluten, Laktose, Nüsse, vegan und glutenfrei. Gäste filtern die Karte nach ihrer Ernährung und bestellen bequem.",
       bullets: [
-        "14 Standard-Allergen-Kategorien für jedes Gericht.",
-        "Tags für vegan, vegetarisch und glutenfrei mit einem Klick.",
-        "Gäste filtern die Speisekarte nach ihren Ernährungseinschränkungen.",
+        "14 Allergen-Kategorien",
+        "Vegan- und Glutenfrei-Tags",
+        "Filter nach Ernährung",
       ],
       image: { src: "/landing/feature-allergens.webp", alt: "Gast filtert die Speisekarte am Smartphone nach Allergenen, während der Inhaber die Allergenliste auf einem Tablet bearbeitet" },
     },
     {
+      icon: MonitorSmartphone,
+      eyebrow: "Jedes Gerät",
+      heading: "Steuern von jedem Gerät",
+      body: "Das Panel läuft im Browser — bearbeite Karte, Preise und Fotos von überall. Nichts zu installieren.",
+      bullets: [
+        "Läuft in jedem Browser",
+        "Handy, Tablet oder PC",
+        "Nichts zu installieren",
+      ],
+    },
+    {
+      icon: BadgePercent,
+      eyebrow: "Keine Provision",
+      heading: "Null Provision, keine Extras",
+      body: "Ein transparentes Abo. Wir nehmen keinen Anteil an deinem Umsatz und verstecken keine Kosten — alles bleibt im Restaurant.",
+      bullets: [
+        "Null Prozent auf Bestellungen",
+        "Keine versteckten Extras",
+        "Ein fester Preis",
+      ],
+    },
+    {
+      icon: Globe,
+      eyebrow: "Eigene Domain",
+      heading: "Karte auf eigener Domain",
+      body: "Wir binden deine Domain mit SSL an — Gäste sehen die Karte unter der Adresse des Restaurants. Wir helfen beim DNS in 10 Minuten.",
+      bullets: [
+        "Deine Domain mit SSL",
+        "menu.deinrestaurant.de",
+        "Wir helfen beim DNS",
+      ],
+    },
+    {
+      icon: LayoutTemplate,
+      eyebrow: "Dein Design",
+      heading: "Flexibles Design ganz nach dir",
+      body: "Mehrere fertige Layouts und Stile — wähle Cover, Farben und Darstellung der Gerichte, die zu deinem Lokal passen.",
+      bullets: [
+        "Mehrere fertige Layouts",
+        "Dein Cover und Farben",
+        "Umstylen in wenigen Klicks",
+      ],
+    },
+    {
+      icon: Contact,
+      eyebrow: "Kontakte",
+      heading: "Kontakte und Social in der Karte",
+      body: "Eine Seite mit Karte, Telefon und Links zu Instagram und WhatsApp — Gäste finden dich mit einem Tipp.",
+      bullets: [
+        "Karte, Telefon und Adresse",
+        "Instagram und WhatsApp",
+        "Erreichbar per Tipp",
+      ],
+    },
+    {
+      icon: MessageCircle,
+      eyebrow: "WhatsApp-Bestellungen",
+      heading: "Bestellungen über WhatsApp",
+      body: "Gäste füllen den Warenkorb und senden die Bestellung direkt an dein WhatsApp — keine extra App, im gewohnten Chat.",
+      bullets: [
+        "Bestellung an dein WhatsApp",
+        "Keine extra App",
+        "Chat wie gewohnt",
+      ],
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Reservierungen",
+      heading: "Tisch buchen ohne Anrufe",
+      body: "Gäste buchen den Tisch selbst per Karte oder Link, du siehst den Kalender je Tisch und bestätigst auto oder manuell.",
+      bullets: [
+        "Buchung 24/7, ohne Anruf",
+        "Kalender je Tisch",
+        "Auto- oder Handbestätigung",
+      ],
+    },
+    {
       icon: Palette,
       eyebrow: "Premium-Design",
-      heading: "Premium-Design mit Video-Hintergrund und Kontaktseite.",
-      body: "Ein Video oder Foto auf dem Begrüßungsbildschirm, Restaurantbeschreibung, eigene Kontaktseite mit Karte, Telefonnummern und Social-Profilen. Die digitale Speisekarte wirkt wie eine vollständige Restaurant-Website, nicht wie ein PDF hinter einem QR-Code.",
+      heading: "Wirkt wie Website, kein PDF",
+      body: "Video-Hintergrund auf dem Startbildschirm, dein Konzept beschrieben und eine eigene Kontaktseite mit Karte und Social.",
       bullets: [
-        "Video-Hintergrund oder großes Foto auf dem Begrüßungsbildschirm.",
-        "Restaurant- und Kategoriebeschreibungen — erzählen Sie die Geschichte des Konzepts.",
-        "Kontaktseite: Karte, Telefon, Instagram, WhatsApp.",
+        "Video auf dem Startbildschirm",
+        "Konzept und Gerichte erklärt",
+        "Eigene Kontaktseite",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Zwei Smartphones auf einem Café-Tisch: Startbildschirm der Speisekarte mit Video-Hintergrund und Kontaktseite mit Karte" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Bestellungen aus der Karte · optional",
-      heading: "Gäste bestellen direkt aus der Speisekarte.",
-      body: "Gäste füllen den Warenkorb in der QR-Speisekarte und senden die Bestellung — sie landet bei der Servicekraft im Service oder auf dem Küchentablet. Die Funktion lässt sich in den Einstellungen jederzeit aktivieren oder deaktivieren.",
+      eyebrow: "Bestellungen · optional",
+      heading: "Bestellungen direkt aus der Karte",
+      body: "Gäste füllen den Warenkorb und senden die Bestellung — sie landet im Service, auf WhatsApp oder dem Küchen-Display. Optional.",
       bullets: [
-        "Warenkorb, Kommentare und Bestellung senden mit einem Tipp.",
-        "Bestellung landet sofort im Admin-Panel, auf WhatsApp oder dem Küchen-Display.",
-        "Funktion in den Einstellungen umschaltbar.",
+        "Warenkorb und Senden per Tipp",
+        "Service, WhatsApp oder Küche",
+        "In den Einstellungen umschalten",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Zwei Smartphones auf einem Tisch: Warenkorb mit Bestellung und Bestätigung der abgeschickten Bestellung" },
     },

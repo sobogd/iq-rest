@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Foglalás 24/7, telefon nélkül.",
+    headline: "Foglalás 24/7,\ntelefon nélkül.",
     cta: "Asztalfoglalás beállítása",
     sub: "Vendégek 24/7 foglalnak a QR étlapról vagy linkről. Asztalonkénti naptár, automatikus visszaigazolás, emlékeztető.",
     imageSrc: "/landing/feature-reservation.webp",

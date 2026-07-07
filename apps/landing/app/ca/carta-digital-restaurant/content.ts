@@ -1,10 +1,23 @@
-import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
+import {
+  Languages,
+  ShieldAlert,
+  Palette,
+  ShoppingCart,
+  MonitorSmartphone,
+  BadgePercent,
+  Globe,
+  LayoutTemplate,
+  Contact,
+  MessageCircle,
+  CalendarCheck,
+} from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
   locale: "ca",
   slug: "carta-digital-restaurant",
   trackPrefix: "l_ca_digital",
+  hideFeatureHeading: true,
 
   meta: {
     title: "Carta digital per a restaurants | IQ Rest",
@@ -19,9 +32,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Carta digital que ven més.",
+    headline: "Una carta digital\nque ho té tot",
     cta: "Crear menú digital",
-    sub: "La teva carta de paper, en línia: fotos, al·lèrgens, preus al moment i traducció a 35 idiomes. Sense reimprimir.",
+    sub: "Fotos, al·lèrgens i traducció a 35 idiomes. A més de comandes, WhatsApp i reserva de taula — tot en un sol IQ Rest.",
   },
 
   scan: {
@@ -35,48 +48,125 @@ export const CONTENT: FeatureContent = {
     {
       icon: Languages,
       eyebrow: "35 idiomes IA",
-      heading: "35 idiomes IA — cada client llegeix la carta en la seva.",
-      body: "Un sol codi QR, 35 idiomes. La IA gestiona el context culinari — noms i descripcions de plats sonen naturals. Els turistes demanen amb més confiança i el tiquet mitjà creix sense que un cambrer hagi de traduir cada plat.",
+      heading: "35 idiomes per a cada client",
+      body: "Un QR, 35 idiomes. La IA tradueix amb context culinari, així cada plat sona natural. Els turistes demanen amb confiança.",
       bullets: [
-        "35 idiomes inclosos a la subscripció, sense recàrrec.",
-        "IA conscient del context culinari, no un Google Translate cru.",
-        "El client canvia d'idioma amb un sol toc dins la carta.",
+        "35 idiomes al teu pla",
+        "IA culinària, no Google",
+        "Canvi d'idioma amb un toc",
       ],
       image: { src: "/landing/feature-multilang.webp", alt: "Dos clients llegint la mateixa carta digital en idiomes diferents als seus mòbils" },
     },
     {
       icon: ShieldAlert,
       eyebrow: "Al·lèrgens",
-      heading: "Etiquetes d'al·lèrgens i dietes.",
-      body: "Marca els plats per a gluten, lactosa, fruita seca, marisc, opcions veganes i sense gluten. Els clients filtren la carta segons les seves necessitats dietètiques i demanen amb més confiança.",
+      heading: "Al·lèrgens i dietes a cada plat",
+      body: "Etiqueta gluten, lactosa, fruita seca, vegà i sense gluten. Els clients filtren la carta segons la seva dieta i demanen amb facilitat.",
       bullets: [
-        "14 categories d'al·lèrgens estàndard a cada plat.",
-        "Etiquetes vegà, vegetarià i sense gluten amb un sol clic.",
-        "Els clients filtren la carta segons les seves restriccions dietètiques.",
+        "14 categories d'al·lèrgens",
+        "Etiquetes vegà i sense gluten",
+        "Els clients filtren per dieta",
       ],
       image: { src: "/landing/feature-allergens.webp", alt: "El client filtra la carta per al·lèrgens al mòbil mentre el propietari edita la llista d'al·lèrgens a una tauleta" },
     },
     {
+      icon: MonitorSmartphone,
+      eyebrow: "Qualsevol dispositiu",
+      heading: "Gestiona-ho des de qualsevol dispositiu",
+      body: "El panell d'administració va al navegador — edita carta, preus i fotos des d'on vulguis. Res per instal·lar.",
+      bullets: [
+        "Va a qualsevol navegador",
+        "Mòbil, tauleta o PC",
+        "Res per instal·lar",
+      ],
+    },
+    {
+      icon: BadgePercent,
+      eyebrow: "Sense comissió",
+      heading: "Zero comissió, sense extres",
+      body: "Una subscripció transparent. No ens quedem cap tall dels teus ingressos ni amaguem taxes — tot es queda al restaurant.",
+      bullets: [
+        "Zero per cent en comandes",
+        "Sense extres ocults",
+        "Un únic preu fix",
+      ],
+    },
+    {
+      icon: Globe,
+      eyebrow: "Domini propi",
+      heading: "La carta al teu propi domini",
+      body: "Connectem el teu domini amb SSL — els clients veuen la carta a l'adreça del teu restaurant. T'ajudem amb el DNS en 10 minuts.",
+      bullets: [
+        "El teu domini amb SSL",
+        "carta.elteurestaurant.cat",
+        "T'ajudem amb el DNS",
+      ],
+    },
+    {
+      icon: LayoutTemplate,
+      eyebrow: "El teu disseny",
+      heading: "Disseny flexible al teu estil",
+      body: "Diverses plantilles i estils a punt — tria la portada, els colors i la presentació dels plats que van amb el teu local.",
+      bullets: [
+        "Diverses plantilles a punt",
+        "La teva portada i colors",
+        "Redissenya en uns clics",
+      ],
+    },
+    {
+      icon: Contact,
+      eyebrow: "Contactes",
+      heading: "Contactes i xarxes a la carta",
+      body: "Una pàgina amb mapa, telèfon i enllaços a Instagram i WhatsApp — els clients et troben amb un sol toc.",
+      bullets: [
+        "Mapa, telèfon i adreça",
+        "Instagram i WhatsApp",
+        "Contacta amb un sol toc",
+      ],
+    },
+    {
+      icon: MessageCircle,
+      eyebrow: "Comandes per WhatsApp",
+      heading: "Rep comandes per WhatsApp",
+      body: "Els clients munten el carret i envien la comanda directament al teu WhatsApp — sense cap app a part, al xat que ja fan servir.",
+      bullets: [
+        "Comanda al teu WhatsApp",
+        "Sense cap app a part",
+        "Xat com sempre",
+      ],
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Reserves",
+      heading: "Reserva de taula sense trucades",
+      body: "Els clients reserven taula sols des de la carta o un enllaç, tu veus el calendari per taula i confirmes automàtic o manual.",
+      bullets: [
+        "Reserves 24/7, sense trucades",
+        "Calendari per taules",
+        "Confirmació auto i manual",
+      ],
+    },
+    {
       icon: Palette,
       eyebrow: "Disseny premium",
-      heading: "Disseny premium amb fons de vídeo i pàgina de contacte.",
-      body: "Un vídeo o una foto a la pantalla de benvinguda, descripció del restaurant, pàgina de contacte dedicada amb mapa, telèfons i perfils socials. La carta digital sembla un web complet de restaurant, no un PDF darrere d'un codi QR.",
+      heading: "Sembla un web, no un PDF",
+      body: "Fons de vídeo a la pantalla de benvinguda, el teu concepte descrit i una pàgina de contacte a part amb mapa i xarxes.",
       bullets: [
-        "Fons de vídeo o foto gran a la pantalla de benvinguda.",
-        "Descripcions del restaurant i de les categories — explica la història del concepte.",
-        "Pàgina de contacte: mapa, telèfon, Instagram, WhatsApp.",
+        "Vídeo a la pantalla d'inici",
+        "Concepte i plats descrits",
+        "Pàgina de contacte a part",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Dos mòbils en una taula de cafeteria: pantalla d'inici de la carta amb fons de vídeo i pàgina de contacte amb mapa" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Comandes des de la carta · opcional",
-      heading: "Els clients fan comandes directament des de la carta.",
-      body: "Els clients munten un carret a la carta QR i envien la comanda — arriba al cambrer a la sala o a la tauleta de cuina. La funcionalitat es pot activar o desactivar a la configuració en qualsevol moment.",
+      eyebrow: "Comandes · opcional",
+      heading: "Comandes directament des de la carta",
+      body: "Els clients munten el carret i envien la comanda — arriba a la sala, WhatsApp o la pantalla de cuina. Opcional.",
       bullets: [
-        "Carret, comentaris i enviament de comanda amb un sol toc.",
-        "La comanda arriba a l'instant al panell d'administració, a WhatsApp o a la pantalla de cuina.",
-        "Funcionalitat activable a la configuració.",
+        "Carret i enviament amb un toc",
+        "A sala, WhatsApp o cuina",
+        "Activa-ho a la configuració",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Dos mòbils en una taula: carret amb comanda i confirmació d'enviament" },
     },

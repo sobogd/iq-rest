@@ -1,10 +1,23 @@
-import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
+import {
+  Languages,
+  ShieldAlert,
+  Palette,
+  ShoppingCart,
+  MonitorSmartphone,
+  BadgePercent,
+  Globe,
+  LayoutTemplate,
+  Contact,
+  MessageCircle,
+  CalendarCheck,
+} from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
   locale: "et",
   slug: "digitaalne-menuu-restoran",
   trackPrefix: "l_et_digital",
+  hideFeatureHeading: true,
 
   meta: {
     title: "Digitaalne menüü restoranidele | IQ Rest",
@@ -19,9 +32,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitaalne menüü, mis müüb.",
+    headline: "Digitaalne menüü,\nkus on kõik olemas",
     cta: "Loo digitaalne menüü",
-    sub: "Sinu pabermenüü veebis: fotod, allergeenid, hinnad reaalajas ja tõlge 35 keelde. Ei mingit kordustrükki.",
+    sub: "Fotod, allergeenid ja tõlge 35 keelde. Lisaks tellimused, WhatsApp ja lauabroneering — kõik ühes IQ Restis.",
   },
 
   scan: {
@@ -35,48 +48,125 @@ export const CONTENT: FeatureContent = {
     {
       icon: Languages,
       eyebrow: "35 AI-keelt",
-      heading: "35 AI-keelt — iga külaline loeb menüüd oma keeles.",
-      body: "Üks QR-kood, 35 keelt. AI haldab kulinaarset konteksti — roogade nimed ja kirjeldused kõlavad loomulikult. Turistid tellivad enesekindlamalt ja keskmine arve kasvab, ilma et kelner peaks iga rooga tõlkima.",
+      heading: "35 keelt igale külalisele",
+      body: "Üks QR, 35 keelt. AI tõlgib kulinaarse kontekstiga, nii et iga roog kõlab loomulikult. Turistid tellivad kindlalt.",
       bullets: [
-        "35 keelt kuuluvad tellimusesse, ilma lisatasuta.",
-        "AI mõistab kulinaarset konteksti, mitte tavaline Google Translate.",
-        "Külaline vahetab keelt ühe puudutusega otse menüüs.",
+        "35 keelt sinu paketis",
+        "Kulinaarne AI, mitte Google",
+        "Keelevahetus ühe puudutusega",
       ],
       image: { src: "/landing/feature-multilang.webp", alt: "Kaks külalist loevad sama digitaalset menüüd erinevates keeltes oma telefonides" },
     },
     {
       icon: ShieldAlert,
       eyebrow: "Allergeenid",
-      heading: "Allergeenide ja dieetide märgistused.",
-      body: "Märgi road gluteeni, laktoosi, pähklite, mereandide, vegan- ja gluteenivabade valikute jaoks. Külalised filtreerivad menüüd oma dieedinõudmiste järgi ja tellivad suurema enesekindlusega.",
+      heading: "Allergeenid ja dieedid igal rool",
+      body: "Märgi gluteen, laktoos, pähklid, vegan ja gluteenivaba. Külalised filtreerivad menüüd oma dieedi järgi ja tellivad hõlpsalt.",
       bullets: [
-        "14 standardset allergeenikategooriat igal roal.",
-        "Vegan-, taimetoidu- ja gluteenivabad märgised ühe klikiga.",
-        "Külalised filtreerivad menüüd oma dieedipiirangute järgi.",
+        "14 allergeenikategooriat",
+        "Vegan- ja gluteenivaba märgised",
+        "Külalised filtreerivad dieedi järgi",
       ],
       image: { src: "/landing/feature-allergens.webp", alt: "Külaline filtreerib menüüd allergeenide järgi telefonis, samal ajal kui omanik muudab allergeenide loendit tahvelarvutis" },
     },
     {
+      icon: MonitorSmartphone,
+      eyebrow: "Iga seade",
+      heading: "Halda seda igast seadmest",
+      body: "Halduspaneel töötab brauseris — muuda menüüd, hindu ja fotosid kõikjalt. Midagi pole vaja installida.",
+      bullets: [
+        "Töötab igas brauseris",
+        "Telefon, tahvel või arvuti",
+        "Midagi pole vaja installida",
+      ],
+    },
+    {
+      icon: BadgePercent,
+      eyebrow: "Ei mingit vahendustasu",
+      heading: "Null vahendustasu, ei lisatasusid",
+      body: "Üks läbipaistev tellimus. Me ei võta osa sinu käibest ega peida tasusid — kõik jääb restoranile.",
+      bullets: [
+        "Null protsenti tellimustelt",
+        "Ei peidetud lisatasusid",
+        "Üks kindel hind",
+      ],
+    },
+    {
+      icon: Globe,
+      eyebrow: "Oma domeen",
+      heading: "Menüü sinu oma domeenil",
+      body: "Ühendame sinu domeeni SSL-iga — külalised näevad menüüd sinu restorani aadressil. Aitame DNS-iga 10 minutiga.",
+      bullets: [
+        "Sinu domeen SSL-iga",
+        "menu.sinurestoran.ee",
+        "Aitame DNS-i seadistada",
+      ],
+    },
+    {
+      icon: LayoutTemplate,
+      eyebrow: "Sinu disain",
+      heading: "Paindlik disain just sulle",
+      body: "Mitu valmis paigutust ja stiili — vali kaas, värvid ja roogade esitlus, mis sobivad sinu restoraniga.",
+      bullets: [
+        "Mitu valmis paigutust",
+        "Sinu kaas ja värvid",
+        "Uus ilme mõne klikiga",
+      ],
+    },
+    {
+      icon: Contact,
+      eyebrow: "Kontaktid",
+      heading: "Kontaktid ja sotsiaalmeedia menüüs",
+      body: "Eraldi leht kaardi, telefoni ja linkidega Instagrami ja WhatsAppi — külalised leiavad sind ühe puudutusega.",
+      bullets: [
+        "Kaart, telefon ja aadress",
+        "Instagram ja WhatsApp",
+        "Võta ühendust ühe puudutusega",
+      ],
+    },
+    {
+      icon: MessageCircle,
+      eyebrow: "WhatsAppi tellimused",
+      heading: "Võta tellimusi vastu WhatsAppis",
+      body: "Külalised koostavad korvi ja saadavad tellimuse otse sinu WhatsAppi — ilma eraldi rakenduseta, tuttavas vestluses.",
+      bullets: [
+        "Tellimus sinu WhatsAppi",
+        "Ilma eraldi rakenduseta",
+        "Vestle nagu tavaliselt",
+      ],
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Broneeringud",
+      heading: "Lauabroneering ilma kõnedeta",
+      body: "Külalised broneerivad laua ise menüü või lingi kaudu, sina näed kalendrit laua kaupa ja kinnitad auto- või käsitsi.",
+      bullets: [
+        "Broneering 24/7, ilma kõnedeta",
+        "Kalender kõigi laudade järgi",
+        "Auto- ja käsitsi kinnitus",
+      ],
+    },
+    {
       icon: Palette,
       eyebrow: "Premium-disain",
-      heading: "Premium-disain video taustaga ja kontaktilehega.",
-      body: "Video või foto tervituskuval, restorani kirjeldus, eraldi kontaktileht kaardi, telefoninumbrite ja sotsiaalmeediaprofiilidega. Digitaalne menüü näeb välja nagu täisväärtuslik restorani veebileht, mitte PDF QR-koodi taga.",
+      heading: "Näeb välja nagu sait, mitte PDF",
+      body: "Videotaust tervituskuval, sinu kontseptsioon kirjeldatud ja eraldi kontaktileht kaardi ja sotsiaalmeediaga.",
       bullets: [
-        "Video taust või suur foto tervituskuval.",
-        "Restorani ja kategooriate kirjeldused — räägi kontseptsiooni lugu.",
-        "Kontaktileht: kaart, telefon, Instagram, WhatsApp.",
+        "Video avakuval",
+        "Kontseptsioon ja road kirjeldatud",
+        "Eraldi kontaktileht",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Kaks telefoni kohvikulaual: menüü avakuva video taustaga ja kontaktileht kaardiga" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Tellimused menüüst · valikuline",
-      heading: "Külalised tellivad otse menüüst.",
-      body: "Külalised koostavad korvi QR-menüüs ja saadavad tellimuse — see jõuab saalis olevale kelnerile või köögi tahvelarvutisse. Funktsiooni saab seadetes igal ajal sisse või välja lülitada.",
+      eyebrow: "Tellimused · valikuline",
+      heading: "Tellimused otse menüüst",
+      body: "Külalised koostavad korvi ja saadavad tellimuse — see jõuab saali, WhatsAppi või köögiekraanile. Valikuline.",
       bullets: [
-        "Korv, kommentaarid ja tellimuse saatmine ühe puudutusega.",
-        "Tellimus jõuab kohe halduspaneeli, WhatsAppi või köögiekraanile.",
-        "Funktsioon lülitatakse seadetes.",
+        "Korv ja saatmine ühe puudutusega",
+        "Saali, WhatsAppi või kööki",
+        "Lülita see seadetes sisse",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Kaks telefoni laual: korv tellimusega ja tellimuse saatmise kinnitus" },
     },

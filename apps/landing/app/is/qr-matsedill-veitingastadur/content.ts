@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "QR matseðill: skannaðu og pantaðu.",
+    headline: "QR matseðill: skannaðu\nog pantaðu.",
     cta: "Búa til QR-matseðil",
     sub: "Gesturinn skannar QR borðsins, sér myndir og ofnæmisvalda á 35 tungumálum og pantar — án smáforrits.",
   },

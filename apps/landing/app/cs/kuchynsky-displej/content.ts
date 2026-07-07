@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS: objednávky rovnou kuchaři.",
+    headline: "KDS:\nobjednávky rovnou kuchaři.",
     cta: "Nastavit kuchyňský displej",
     sub: "Objednávky se objeví na kuchyňském displeji okamžitě: poznámky, alergeny a časovač. Změna stavu jedním klepnutím.",
     imageSrc: "/landing/feature-kitchen.webp",

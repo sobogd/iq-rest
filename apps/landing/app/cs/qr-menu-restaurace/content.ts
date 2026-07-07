@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "QR menu: naskenuj a objednej.",
+    headline: "QR menu:\nnaskenuj a objednej.",
     cta: "Vytvořit QR menu",
     sub: "Host naskenuje QR na stole, vidí fotky a alergeny ve 35 jazycích a objedná — bez aplikace.",
   },

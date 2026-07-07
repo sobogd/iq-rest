@@ -1,10 +1,23 @@
-import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
+import {
+  Languages,
+  ShieldAlert,
+  Palette,
+  ShoppingCart,
+  MonitorSmartphone,
+  BadgePercent,
+  Globe,
+  LayoutTemplate,
+  Contact,
+  MessageCircle,
+  CalendarCheck,
+} from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
   locale: "pt",
   slug: "menu-digital-restaurantes",
   trackPrefix: "l_pt_digital",
+  hideFeatureHeading: true,
 
   meta: {
     title: "Menu digital para restaurantes | IQ Rest",
@@ -19,9 +32,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Menu digital que vende mais.",
+    headline: "Um menu digital\nque tem tudo",
     cta: "Criar menu digital",
-    sub: "O seu menu em papel, online: fotos, alergénios, preços ao vivo e tradução em 35 idiomas. Sem reimpressões.",
+    sub: "Fotos, alergénios e tradução em 35 idiomas. Mais pedidos, WhatsApp e reserva de mesa — tudo num só IQ Rest.",
   },
 
   scan: {
@@ -34,49 +47,126 @@ export const CONTENT: FeatureContent = {
   subFeatures: [
     {
       icon: Languages,
-      eyebrow: "35 línguas IA",
-      heading: "35 línguas IA — cada cliente lê o menu na sua própria.",
-      body: "Um único código QR, 35 línguas. A IA percebe o contexto culinário — os nomes e descrições de pratos soam naturais. Os turistas pedem com mais confiança e o ticket médio cresce sem o empregado ter de traduzir cada prato.",
+      eyebrow: "35 idiomas com IA",
+      heading: "35 idiomas que todos leem",
+      body: "Um QR, 35 idiomas. A IA traduz com contexto culinário, cada prato soa natural. Os turistas pedem com confiança.",
       bullets: [
-        "35 línguas incluídas na subscrição, sem custo adicional.",
-        "IA consciente do contexto culinário, não Google Translate em bruto.",
-        "O cliente muda de língua com um toque dentro do próprio menu.",
+        "35 idiomas no teu plano",
+        "IA culinária, não Google",
+        "Troca de idioma num toque",
       ],
-      image: { src: "/landing/feature-multilang.webp", alt: "Dois clientes leem o mesmo menu digital em línguas diferentes nos seus telemóveis" },
+      image: { src: "/landing/feature-multilang.webp", alt: "Dois clientes leem o mesmo menu digital em idiomas diferentes nos seus próprios telemóveis" },
     },
     {
       icon: ShieldAlert,
       eyebrow: "Alergénios",
-      heading: "Etiquetas de alergénios e dietas.",
-      body: "Marca os pratos para glúten, lactose, frutos secos, mariscos, opções veganas e sem glúten. Os clientes filtram o menu segundo as suas necessidades alimentares e pedem com maior confiança.",
+      heading: "Alergénios e dietas em cada prato",
+      body: "Marca glúten, lactose, frutos secos, vegano e sem glúten. Os clientes filtram o menu à sua dieta e pedem sem problemas.",
       bullets: [
-        "14 categorias-padrão de alergénios em cada prato.",
-        "Etiquetas vegano, vegetariano e sem glúten num único clique.",
-        "Os clientes filtram o menu segundo as suas restrições alimentares.",
+        "14 categorias de alergénios",
+        "Etiquetas vegano e sem glúten",
+        "Filtram pela sua dieta",
       ],
       image: { src: "/landing/feature-allergens.webp", alt: "Cliente filtra o menu por alergénios no telemóvel enquanto o proprietário edita a lista de alergénios num tablet" },
     },
     {
+      icon: MonitorSmartphone,
+      eyebrow: "Qualquer dispositivo",
+      heading: "Gere de qualquer dispositivo",
+      body: "O painel corre no browser — edita menu, preços e fotos onde estiveres. Não há nada para instalar.",
+      bullets: [
+        "Corre em qualquer browser",
+        "Telemóvel, tablet ou PC",
+        "Nada para instalar",
+      ],
+    },
+    {
+      icon: BadgePercent,
+      eyebrow: "Sem comissão",
+      heading: "Zero comissão, sem extras",
+      body: "Uma subscrição transparente. Não ficamos com parte das tuas receitas nem escondemos taxas — fica tudo no restaurante.",
+      bullets: [
+        "Zero por cento nos pedidos",
+        "Sem extras escondidos",
+        "Um preço único",
+      ],
+    },
+    {
+      icon: Globe,
+      eyebrow: "Domínio próprio",
+      heading: "Menu no teu próprio domínio",
+      body: "Ligamos o teu domínio com SSL — os clientes veem o menu na morada do restaurante. Ajudamos com o DNS em 10 minutos.",
+      bullets: [
+        "O teu domínio com SSL",
+        "menu.oteurestaurante.pt",
+        "Ajudamos com o DNS",
+      ],
+    },
+    {
+      icon: LayoutTemplate,
+      eyebrow: "O teu design",
+      heading: "Design flexível à tua medida",
+      body: "Vários layouts e estilos prontos — escolhe a capa, as cores e a apresentação dos pratos que combinam com o teu espaço.",
+      bullets: [
+        "Vários layouts prontos",
+        "A tua capa e cores",
+        "Muda o estilo em cliques",
+      ],
+    },
+    {
+      icon: Contact,
+      eyebrow: "Contactos",
+      heading: "Contactos e redes no menu",
+      body: "Uma página com mapa, telefone e links para Instagram e WhatsApp — os clientes encontram-te num só toque.",
+      bullets: [
+        "Mapa, telefone e morada",
+        "Instagram e WhatsApp",
+        "Chega a ti num toque",
+      ],
+    },
+    {
+      icon: MessageCircle,
+      eyebrow: "Pedidos por WhatsApp",
+      heading: "Recebe pedidos por WhatsApp",
+      body: "Os clientes montam o carrinho e enviam o pedido direto para o teu WhatsApp — sem outra app, no chat que já usam.",
+      bullets: [
+        "Pedido ao teu WhatsApp",
+        "Sem outra app",
+        "O chat do costume",
+      ],
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Reservas",
+      heading: "Reserva de mesa sem chamadas",
+      body: "Os clientes reservam mesa pelo menu ou por um link, vês o calendário por mesa e confirmas auto ou manualmente.",
+      bullets: [
+        "Reservas 24/7, sem chamadas",
+        "Calendário por mesa",
+        "Confirmação auto ou manual",
+      ],
+    },
+    {
       icon: Palette,
       eyebrow: "Design premium",
-      heading: "Design premium com fundo em vídeo e página de contactos.",
-      body: "Um vídeo ou foto no ecrã de boas-vindas, descrição do restaurante, página de contactos dedicada com mapa, números de telefone e perfis sociais. O menu digital parece um site completo do restaurante, não um PDF atrás de um código QR.",
+      heading: "Parece um site, não um PDF",
+      body: "Vídeo de fundo no ecrã de boas-vindas, o teu conceito descrito e uma página de contactos à parte com mapa e redes.",
       bullets: [
-        "Fundo em vídeo ou foto grande no ecrã de boas-vindas.",
-        "Descrições do restaurante e das categorias — conta a história do conceito.",
-        "Página de contactos: mapa, telefone, Instagram, WhatsApp.",
+        "Vídeo no ecrã inicial",
+        "Conceito e pratos descritos",
+        "Página de contactos à parte",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Dois telemóveis numa mesa de café: ecrã inicial do menu com fundo em vídeo e página de contactos com mapa" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Pedidos a partir do menu · opcional",
-      heading: "Os clientes fazem pedidos diretamente a partir do menu.",
-      body: "Os clientes constroem um carrinho no menu QR e enviam o pedido — chega ao empregado na sala ou no tablet da cozinha. A funcionalidade pode ser ativada ou desativada nas definições a qualquer momento.",
+      eyebrow: "Pedidos · opcional",
+      heading: "Pedidos direto do menu",
+      body: "Os clientes montam o carrinho e enviam o pedido — chega à sala, ao WhatsApp ou ao ecrã de cozinha. Opcional.",
       bullets: [
-        "Carrinho, comentários e envio do pedido com um único toque.",
-        "O pedido chega imediatamente ao painel de admin, ao WhatsApp ou ao ecrã de cozinha.",
-        "Funcionalidade ativável nas definições.",
+        "Carrinho e envio num toque",
+        "Sala, WhatsApp ou cozinha",
+        "Ativa nas definições",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Dois telemóveis numa mesa: carrinho com pedido e confirmação de envio" },
     },

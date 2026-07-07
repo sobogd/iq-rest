@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Reserves 24/7, sense trucades.",
+    headline: "Reserves 24/7,\nsense trucades.",
     cta: "Configurar reserves de taula",
     sub: "Els clients reserven 24/7 des de la carta QR o un enllaç. Calendari per taula, confirmacions i recordatoris automàtics.",
     imageSrc: "/landing/feature-reservation.webp",

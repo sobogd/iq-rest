@@ -1,10 +1,23 @@
-import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
+import {
+  Languages,
+  ShieldAlert,
+  Palette,
+  ShoppingCart,
+  MonitorSmartphone,
+  BadgePercent,
+  Globe,
+  LayoutTemplate,
+  Contact,
+  MessageCircle,
+  CalendarCheck,
+} from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
   locale: "hr",
   slug: "digitalni-jelovnik-restoran",
   trackPrefix: "l_hr_digital",
+  hideFeatureHeading: true,
 
   meta: {
     title: "Digitalni jelovnik za restorane | IQ Rest",
@@ -19,9 +32,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitalni jelovnik koji prodaje.",
+    headline: "Digitalni jelovnik\nkoji ima sve",
     cta: "Izradi digitalni jelovnik",
-    sub: "Vaš papirnati jelovnik online: fotografije, alergeni, cijene uživo i prijevod na 35 jezika. Bez pretiska.",
+    sub: "Fotografije, alergeni i prijevod na 35 jezika. Plus narudžbe, WhatsApp i rezervacije stolova — sve u jednom IQ Rest.",
   },
 
   scan: {
@@ -35,48 +48,125 @@ export const CONTENT: FeatureContent = {
     {
       icon: Languages,
       eyebrow: "35 AI jezika",
-      heading: "35 AI jezika — svaki gost čita jelovnik na svom.",
-      body: "Jedan QR kod, 35 jezika. AI upravlja kulinarskim kontekstom — nazivi jela i opisi zvuče prirodno. Turisti naručuju s većim povjerenjem i prosječni račun raste, a da konobar ne mora prevoditi svako jelo.",
+      heading: "35 jezika za svakog gosta",
+      body: "Jedan QR, 35 jezika. AI prevodi s kulinarskim kontekstom, pa svako jelo zvuči prirodno. Turisti naručuju sa sigurnošću.",
       bullets: [
-        "35 jezika uključeno u pretplatu, bez doplate.",
-        "AI s razumijevanjem kulinarskog konteksta, ne sirovi Google Translate.",
-        "Gost mijenja jezik jednim dodirom unutar jelovnika.",
+        "35 jezika u paketu",
+        "Kulinarski AI, ne Google",
+        "Promjena jezika jednim dodirom",
       ],
       image: { src: "/landing/feature-multilang.webp", alt: "Dva gosta čitaju isti digitalni jelovnik na različitim jezicima na svojim telefonima" },
     },
     {
       icon: ShieldAlert,
       eyebrow: "Alergeni",
-      heading: "Oznake alergena i prehrambenih režima.",
-      body: "Označite jela za gluten, laktozu, orašaste plodove, plodove mora, veganske i bezglutenske opcije. Gosti filtriraju jelovnik prema svojim prehrambenim potrebama i naručuju s većim povjerenjem.",
+      heading: "Alergeni i dijete na svakom jelu",
+      body: "Označite gluten, laktozu, orašaste plodove, vegansko i bez glutena. Gosti filtriraju jelovnik po dijeti i lako naručuju.",
       bullets: [
-        "14 standardnih kategorija alergena na svakom jelu.",
-        "Oznake vegansko, vegetarijansko i bezglutensko jednim klikom.",
-        "Gosti filtriraju jelovnik prema svojim prehrambenim ograničenjima.",
+        "14 kategorija alergena",
+        "Oznake vegansko i bez glutena",
+        "Gosti filtriraju po dijeti",
       ],
       image: { src: "/landing/feature-allergens.webp", alt: "Gost filtrira jelovnik prema alergenima na telefonu dok vlasnik uređuje popis alergena na tabletu" },
     },
     {
+      icon: MonitorSmartphone,
+      eyebrow: "Bilo koji uređaj",
+      heading: "Upravljajte s bilo kojeg uređaja",
+      body: "Admin panel radi u pregledniku — uređujte jelovnik, cijene i fotografije bilo gdje. Ništa se ne mora instalirati.",
+      bullets: [
+        "Radi u svakom pregledniku",
+        "Telefon, tablet ili PC",
+        "Ništa za instalirati",
+      ],
+    },
+    {
+      icon: BadgePercent,
+      eyebrow: "Bez provizije",
+      heading: "Nula provizije, bez dodataka",
+      body: "Jedna transparentna pretplata. Ne uzimamo udio u vašem prometu i ne skrivamo naknade — sve ostaje restoranu.",
+      bullets: [
+        "Nula posto na narudžbe",
+        "Bez skrivenih dodataka",
+        "Jedna fiksna cijena",
+      ],
+    },
+    {
+      icon: Globe,
+      eyebrow: "Vlastita domena",
+      heading: "Jelovnik na vlastitoj domeni",
+      body: "Povezujemo vašu domenu sa SSL-om — gosti vide jelovnik na adresi restorana. Pomažemo s DNS-om u 10 minuta.",
+      bullets: [
+        "Vaša domena sa SSL",
+        "jelovnik.vasrestoran.com",
+        "Pomažemo s postavljanjem DNS-a",
+      ],
+    },
+    {
+      icon: LayoutTemplate,
+      eyebrow: "Vaš dizajn",
+      heading: "Fleksibilan dizajn po vašoj mjeri",
+      body: "Nekoliko gotovih rasporeda i stilova — odaberite naslovnicu, boje i prikaz jela koji pristaju vašem lokalu.",
+      bullets: [
+        "Nekoliko gotovih rasporeda",
+        "Vaša naslovnica i boje",
+        "Promjena u par klikova",
+      ],
+    },
+    {
+      icon: Contact,
+      eyebrow: "Kontakti",
+      heading: "Kontakti i mreže u jelovniku",
+      body: "Zasebna stranica s kartom, telefonom i poveznicama na Instagram i WhatsApp — gosti vas nađu jednim dodirom.",
+      bullets: [
+        "Karta, telefon i adresa",
+        "Instagram i WhatsApp",
+        "Kontakt jednim dodirom",
+      ],
+    },
+    {
+      icon: MessageCircle,
+      eyebrow: "Narudžbe putem WhatsApp",
+      heading: "Primajte narudžbe putem WhatsApp",
+      body: "Gosti grade košaricu i šalju narudžbu ravno na vaš WhatsApp — bez zasebne aplikacije, u chatu koji već koriste.",
+      bullets: [
+        "Narudžba na vaš WhatsApp",
+        "Bez zasebne aplikacije",
+        "Chat kao i obično",
+      ],
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Rezervacije",
+      heading: "Rezervacija stola bez poziva",
+      body: "Gosti sami rezerviraju stol putem jelovnika ili linka, vi vidite kalendar po stolovima i potvrđujete auto ili ručno.",
+      bullets: [
+        "Rezervacije 24/7 bez poziva",
+        "Kalendar po stolovima",
+        "Auto i ručna potvrda",
+      ],
+    },
+    {
       icon: Palette,
       eyebrow: "Premium dizajn",
-      heading: "Premium dizajn s video pozadinom i kontakt stranicom.",
-      body: "Video ili fotografija na pozdravnom zaslonu, opis restorana, namjenska kontakt stranica s kartom, telefonima i društvenim profilima. Digitalni jelovnik izgleda kao puna web-stranica restorana, ne kao PDF iza QR koda.",
+      heading: "Izgleda kao stranica, ne PDF",
+      body: "Video pozadina na pozdravnom zaslonu, opisan koncept i zasebna kontakt stranica s kartom i društvenim mrežama.",
       bullets: [
-        "Video pozadina ili velika fotografija na pozdravnom zaslonu.",
-        "Opisi restorana i kategorija — ispričajte priču koncepta.",
-        "Kontakt stranica: karta, telefon, Instagram, WhatsApp.",
+        "Video na početnom zaslonu",
+        "Opisan koncept i jela",
+        "Zasebna kontakt stranica",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Dva telefona na kafićkom stolu: početni zaslon jelovnika s video pozadinom i kontakt stranica s kartom" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Narudžbe iz jelovnika · opcionalno",
-      heading: "Gosti naručuju izravno iz jelovnika.",
-      body: "Gosti grade košaricu u QR jelovniku i šalju narudžbu — stiže konobaru u sali ili na tablet u kuhinji. Mogućnost se može uključiti ili isključiti u postavkama u bilo kojem trenutku.",
+      eyebrow: "Narudžbe · opcionalno",
+      heading: "Narudžbe ravno iz jelovnika",
+      body: "Gosti grade košaricu i šalju narudžbu — stiže u salu, WhatsApp ili na kuhinjski ekran. Opcionalno.",
       bullets: [
-        "Košarica, komentari i slanje narudžbe jednim dodirom.",
-        "Narudžba odmah stiže u admin panel, na WhatsApp ili na kuhinjski ekran.",
-        "Mogućnost se prebacuje u postavkama.",
+        "Košarica i slanje dodirom",
+        "U salu, WhatsApp ili kuhinju",
+        "Uključite u postavkama",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Dva telefona na stolu: košarica s narudžbom i potvrda poslane narudžbe" },
     },

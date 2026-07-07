@@ -125,8 +125,8 @@ export function LandingHeader({
 
   return (
     <header className={barClass}>
-      <div className={`w-full px-4 sm:px-6 lg:px-10 xl:px-14 ${isHero ? "pt-5 sm:pt-7" : ""}`}>
-        <div className={`flex items-center justify-between gap-3 ${isHero ? "" : "h-16"} ${isHero ? "text-white" : "text-foreground"}`}>
+      <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
+        <div className={`flex items-center justify-between gap-3 h-16 sm:h-20 ${isHero ? "text-white" : "text-foreground"}`}>
           <LinkForward
             href={homeHref}
             trackEvent="l_header_logo_click"

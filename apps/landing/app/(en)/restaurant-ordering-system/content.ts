@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Orders from table to kitchen.",
+    headline: "Orders from table\nto kitchen.",
     cta: "Set Up Online Ordering",
     sub: "Guests order at the table or staff on any device — straight to the kitchen. Floor map, bill splitting, options.",
     imageSrc: "/landing/feature-orders.webp",

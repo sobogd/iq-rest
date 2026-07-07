@@ -1,10 +1,23 @@
-import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
+import {
+  Languages,
+  ShieldAlert,
+  Palette,
+  ShoppingCart,
+  MonitorSmartphone,
+  BadgePercent,
+  Globe,
+  LayoutTemplate,
+  Contact,
+  MessageCircle,
+  CalendarCheck,
+} from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
   locale: "zh",
   slug: "shu-zi-cai-dan-can-ting",
   trackPrefix: "l_zh_digital",
+  hideFeatureHeading: true,
 
   meta: {
     title: "餐厅数字菜单 | IQ Rest",
@@ -19,9 +32,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "会带货的数字菜单。",
+    headline: "功能齐全的数字菜单",
     cta: "创建电子菜单",
-    sub: "把纸质菜单搬到线上：照片、过敏原、实时价格、35种语言翻译。无需重印。",
+    sub: "照片、过敏原、35种语言翻译。还有点餐、WhatsApp和订座 — 尽在一个 IQ Rest。",
   },
 
   scan: {
@@ -35,48 +48,125 @@ export const CONTENT: FeatureContent = {
     {
       icon: Languages,
       eyebrow: "35 种 AI 语言",
-      heading: "35 种 AI 语言 — 每位客人以自己的语言阅读菜单。",
-      body: "一个 QR 码,35 种语言。AI 处理烹饪上下文 — 菜品名称和描述听起来自然。游客更有信心地点餐,即使服务员不翻译每道菜,平均账单也会增长。",
+      heading: "人人读懂的 35 种语言",
+      body: "一个 QR，35 种语言。AI 结合菜品语境翻译，每道菜都地道自然，游客点餐更放心。",
       bullets: [
-        "订阅中包含 35 种语言,无额外费用。",
-        "具有烹饪意识的 AI,而非原始 Google Translate。",
-        "客人在菜单内一键切换语言。",
+        "套餐含 35 种语言",
+        "美食 AI，非 Google",
+        "一键切换语言",
       ],
       image: { src: "/landing/feature-multilang.webp", alt: "两位客人在自己的手机上以不同语言阅读同一份数字菜单" },
     },
     {
       icon: ShieldAlert,
       eyebrow: "过敏原",
-      heading: "过敏原和饮食标签。",
-      body: "为麸质、乳糖、坚果、海鲜、纯素和无麸质选项标记菜品。客人根据饮食需求过滤菜单,更有信心地点餐。",
+      heading: "每道菜都标注过敏原",
+      body: "标记麸质、乳糖、坚果、纯素和无麸质。客人按饮食筛选菜单，轻松点餐。",
       bullets: [
-        "每道菜上有 14 个标准过敏原类别。",
-        "一键即可添加纯素、素食和无麸质标签。",
-        "客人按饮食限制过滤菜单。",
+        "14 类过敏原",
+        "纯素与无麸质标签",
+        "按饮食筛选",
       ],
       image: { src: "/landing/feature-allergens.webp", alt: "客人在手机上按过敏原过滤菜单,同时老板在平板电脑上编辑过敏原列表" },
     },
     {
+      icon: MonitorSmartphone,
+      eyebrow: "任意设备",
+      heading: "任意设备皆可管理",
+      body: "管理后台在浏览器中运行 — 随时随地编辑菜单、价格和图片，无需安装。",
+      bullets: [
+        "任意浏览器可用",
+        "手机、平板或电脑",
+        "无需安装",
+      ],
+    },
+    {
+      icon: BadgePercent,
+      eyebrow: "零抽成",
+      heading: "零抽成，无附加费",
+      body: "一份透明订阅。不抽取您的营收，也没有隐藏费用 — 全部归餐厅所有。",
+      bullets: [
+        "订单 0% 抽成",
+        "无隐藏附加费",
+        "统一固定价格",
+      ],
+    },
+    {
+      icon: Globe,
+      eyebrow: "专属域名",
+      heading: "用自己的域名展示菜单",
+      body: "为您接入带 SSL 的域名 — 客人在餐厅自己的网址上看菜单。10 分钟协助完成 DNS。",
+      bullets: [
+        "专属域名带 SSL",
+        "menu.restaurant.com",
+        "协助配置 DNS",
+      ],
+    },
+    {
+      icon: LayoutTemplate,
+      eyebrow: "自定义设计",
+      heading: "灵活设计契合风格",
+      body: "多套现成版式与样式 — 选择契合门店的封面、配色和菜品呈现方式。",
+      bullets: [
+        "多套现成版式",
+        "自定义封面配色",
+        "几步即可换装",
+      ],
+    },
+    {
+      icon: Contact,
+      eyebrow: "联系方式",
+      heading: "菜单内含联系与社交",
+      body: "专属页面含地图、电话及 Instagram 和 WhatsApp 链接 — 客人一键即可找到您。",
+      bullets: [
+        "地图、电话与地址",
+        "Instagram 与 WhatsApp",
+        "一键触达",
+      ],
+    },
+    {
+      icon: MessageCircle,
+      eyebrow: "WhatsApp 点餐",
+      heading: "通过 WhatsApp 接单",
+      body: "客人建立购物车，把订单直接发到您的 WhatsApp — 无需另装应用，就用他们常用的聊天。",
+      bullets: [
+        "订单发到 WhatsApp",
+        "无需另装应用",
+        "照常聊天下单",
+      ],
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "订座",
+      heading: "无需电话即可订座",
+      body: "客人通过菜单或链接自助订座，您按餐桌查看日历，自动或手动确认。",
+      bullets: [
+        "24/7 订座，无需来电",
+        "跨餐桌日历",
+        "自动与手动确认",
+      ],
+    },
+    {
       icon: Palette,
       eyebrow: "高级设计",
-      heading: "带视频背景和联系页面的高级设计。",
-      body: "欢迎屏幕上的视频或照片、餐厅描述、专用联系页面,带地图、电话号码和社交资料。数字菜单看起来像一个完整的餐厅网站,而不是 QR 码后面的 PDF。",
+      heading: "像网站，而非 PDF",
+      body: "欢迎屏的视频背景、门店概念介绍，以及带地图和社交的独立联系页面。",
       bullets: [
-        "欢迎屏幕上的视频背景或大幅照片。",
-        "餐厅和类别描述 — 讲述您的概念故事。",
-        "联系页面:地图、电话、Instagram、WhatsApp。",
+        "主屏视频背景",
+        "介绍概念与菜品",
+        "独立联系页面",
       ],
       image: { src: "/landing/feature-design.webp", alt: "咖啡馆桌上的两部手机:带视频背景的菜单主屏和带地图的联系页面" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "从菜单订购 · 可选",
-      heading: "客人直接从菜单下单。",
-      body: "客人在 QR 菜单中建立购物车并发送订单 — 它会到达大堂的服务员或厨房的平板电脑。该功能可以随时在设置中启用或禁用。",
+      eyebrow: "点餐 · 可选",
+      heading: "直接从菜单下单",
+      body: "客人建立购物车并发送订单 — 送达大堂、WhatsApp 或厨房屏幕。可选功能。",
       bullets: [
-        "购物车、评论和一键发送订单。",
-        "订单立即到达管理面板、WhatsApp 或厨房显示屏。",
-        "可在设置中切换该功能。",
+        "一键加入购物车并发送",
+        "送达大堂、WhatsApp 或厨房",
+        "在设置中开关",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "桌上的两部手机:带订单的购物车和已下单的确认" },
     },

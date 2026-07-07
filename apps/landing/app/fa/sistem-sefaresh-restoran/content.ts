@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "سفارش از میز تا آشپزخانه.",
+    headline: "سفارش از میز تا\nآشپزخانه.",
     cta: "راه‌اندازی سفارش آنلاین",
     sub: "مهمان سر میز یا گارسون از هر دستگاهی سفارش می‌گیرد — مستقیم به آشپزخانه. نقشه سالن و تقسیم صورتحساب.",
     imageSrc: "/landing/feature-orders.webp",

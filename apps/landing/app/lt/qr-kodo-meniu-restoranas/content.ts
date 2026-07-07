@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "QR meniu: skenuok ir užsakyk.",
+    headline: "QR meniu:\nskenuok ir užsakyk.",
     cta: "Sukurti QR meniu",
     sub: "Svečias nuskaito stalo QR kodą, mato nuotraukas ir alergenus 35 kalbomis ir užsako — be programėlės.",
   },

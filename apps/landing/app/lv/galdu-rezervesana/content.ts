@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Rezervācija 24/7, bez zvaniem.",
+    headline: "Rezervācija 24/7,\nbez zvaniem.",
     cta: "Iestatīt galdiņu rezervācijas",
     sub: "Viesi rezervē 24/7 caur QR ēdienkarti vai saiti. Kalendārs pa galdiem, automātiski apstiprinājumi un atgādinājumi.",
     imageSrc: "/landing/feature-reservation.webp",

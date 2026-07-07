@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Rezervacija 24/7, be skambučių.",
+    headline: "Rezervacija 24/7,\nbe skambučių.",
     cta: "Nustatyti staliukų rezervacijas",
     sub: "Svečiai rezervuoja 24/7 per QR meniu ar nuorodą. Kalendorius pagal stalą, automatiniai patvirtinimai ir priminimai.",
     imageSrc: "/landing/feature-reservation.webp",

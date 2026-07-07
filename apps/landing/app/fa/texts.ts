@@ -19,10 +19,10 @@ export const TEXTS: LandingTexts = {
   ctaText: "رایگان امتحان کنید",
   homeCtaText: "رایگان امتحان کنید",
   trust: [
-    { kind: "num", value: 35, label: "زبان" },
-    { kind: "text", value: "24/7", label: "رزروها" },
-    { kind: "num", value: 5, suffix: " min", label: "راه‌اندازی" },
-    { kind: "count", label: "رستوران" },
+    { kind: "num", value: 35, label: "زبان منو" },
+    { kind: "text", value: "24/7", label: "رزرو آنلاین" },
+    { kind: "num", value: 5, suffix: " min", label: "تا راه‌اندازی" },
+    { kind: "count", label: "رستوران با ما" },
   ],
   demoText: "تماشای دمو",
   microcopy: "۱۴ روز رایگان · بدون کارت · لغو در هر زمان",
@@ -39,7 +39,7 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["رستوران‌ها", "کافه‌ها", "بارها", "هتل‌ها", "پیتزافروشی‌ها"],
-    headline: "منوی دیجیتال برای رستوران. آنلاین در ۵ دقیقه.",
+    headline: "منوی دیجیتال برای رستوران.\nآنلاین در ۵ دقیقه.",
     sub: "منوی دیجیتال برای رستوران شما در ۵ دقیقه. همه چیز شامل است: ویرایشگر بدون کد، شناسایی منوی چاپی با AI، کدهای QR برای میزها و سفارش مستقیم بدون کمیسیون.",
     dynamicHeadlines: ["۰٪ کمیسیون.", "۳۵ زبان با AI.", "سفارش‌های آنلاین.", "رزرو ۲۴/۷.", "طراحی پریمیوم."],
     painBullets: [
@@ -117,6 +117,11 @@ export const TEXTS: LandingTexts = {
     heading: "آنلاین در ۵ دقیقه.",
     headingAccent: "۱۴ روز رایگان.",
     sub: "بدون کارت، لغو در هر زمان. به بیش از ۵۰۰ رستوران بپیوندید که قبلاً از IQ Rest استفاده می‌کنند.",
+  },
+
+  featureHighlights: {
+    heading: "همه‌چیز شامل است",
+    sub: "قابلیت‌هایی که مهمان‌ها را به سفارش تبدیل می‌کنند — در همهٔ پلن‌ها، بدون هزینهٔ اضافه.",
   },
 
   scan: {

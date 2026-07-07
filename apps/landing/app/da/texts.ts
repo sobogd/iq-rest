@@ -19,10 +19,10 @@ export const TEXTS: LandingTexts = {
   ctaText: "Prøv gratis",
   homeCtaText: "Prøv gratis",
   trust: [
-    { kind: "num", value: 35, label: "Sprog" },
-    { kind: "text", value: "24/7", label: "Reservationer" },
-    { kind: "num", value: 5, suffix: " min", label: "I gang" },
-    { kind: "count", label: "Restauranter" },
+    { kind: "num", value: 35, label: "Menusprog" },
+    { kind: "text", value: "24/7", label: "Onlinebookinger" },
+    { kind: "num", value: 5, suffix: " min", label: "Til live" },
+    { kind: "count", label: "Restauranter hos os" },
   ],
   demoText: "Se demo",
   microcopy: "14 dage gratis · Intet kort · Opsig når som helst",
@@ -39,7 +39,7 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Restauranter", "Caféer", "Barer", "Hoteller", "Pizzeriaer"],
-    headline: "Digitalt menukort til restauranter. Live på 5 minutter.",
+    headline: "Digitalt menukort til restauranter.\nLive på 5 minutter.",
     sub: "Digitalt menukort til din restaurant på 5 minutter. Alt inkluderet: editor uden kode, AI-genkendelse af menukortet, QR-koder til bordene og direkte bestillinger uden kommission.",
     dynamicHeadlines: ["0 % kommission.", "35 AI-sprog.", "Online bestillinger.", "Reservationer 24/7.", "Premium design."],
     painBullets: [
@@ -117,6 +117,11 @@ export const TEXTS: LandingTexts = {
     heading: "Live på 5 minutter.",
     headingAccent: "14 dage gratis.",
     sub: "Intet kort, opsig når som helst. Bliv en del af 500+ restauranter, der allerede bruger IQ Rest.",
+  },
+
+  featureHighlights: {
+    heading: "Alt er inkluderet",
+    sub: "Funktionerne, der gør gæster til ordrer — i alle abonnementer, uden tillæg.",
   },
 
   scan: {

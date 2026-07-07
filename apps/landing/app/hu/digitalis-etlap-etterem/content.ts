@@ -1,10 +1,23 @@
-import { Languages, ShieldAlert, Palette, ShoppingCart } from "lucide-react";
+import {
+  Languages,
+  ShieldAlert,
+  Palette,
+  ShoppingCart,
+  MonitorSmartphone,
+  BadgePercent,
+  Globe,
+  LayoutTemplate,
+  Contact,
+  MessageCircle,
+  CalendarCheck,
+} from "lucide-react";
 import type { FeatureContent } from "@/app/_landing/templates/types";
 
 export const CONTENT: FeatureContent = {
   locale: "hu",
   slug: "digitalis-etlap-etterem",
   trackPrefix: "l_hu_digital",
+  hideFeatureHeading: true,
 
   meta: {
     title: "Digitális étlap éttermeknek | IQ Rest",
@@ -19,9 +32,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitális étlap, ami többet ad el.",
+    headline: "Digitális étlap,\namiben minden ott van",
     cta: "Digitális menü létrehozása",
-    sub: "Papír étlapod online: fotók, allergének, élő árak és fordítás 35 nyelvre. Nincs több újranyomtatás.",
+    sub: "Fotók, allergének és fordítás 35 nyelvre. Plusz rendelések, WhatsApp és asztalfoglalás — mind egy IQ Restben.",
   },
 
   scan: {
@@ -35,48 +48,125 @@ export const CONTENT: FeatureContent = {
     {
       icon: Languages,
       eyebrow: "35 AI nyelv",
-      heading: "35 AI nyelv — minden vendég a saját nyelvén olvassa az étlapot.",
-      body: "Egyetlen QR kód, 35 nyelv. Az AI kezeli a kulináris kontextust — az ételnevek és leírások természetesen hangzanak. A turisták magabiztosabban rendelnek és az átlagos számla nő, anélkül, hogy a pincér minden ételt lefordítana.",
+      heading: "35 nyelv minden vendégnek",
+      body: "Egy QR, 35 nyelv. Az AI kulináris kontextussal fordít, így minden étel természetesen hangzik. A turisták magabiztosan rendelnek.",
       bullets: [
-        "35 nyelv az előfizetésbe foglalva, felár nélkül.",
-        "Kulináris kontextus megértésével rendelkező AI, nem nyers Google Translate.",
-        "A vendég egy érintéssel vált nyelvet az étlapon belül.",
+        "35 nyelv az előfizetésben",
+        "Kulináris AI, nem Google",
+        "Nyelvváltás egy érintéssel",
       ],
       image: { src: "/landing/feature-multilang.webp", alt: "Két vendég ugyanazt a digitális étlapot olvassa különböző nyelveken a saját telefonjukon" },
     },
     {
       icon: ShieldAlert,
       eyebrow: "Allergének",
-      heading: "Allergén és diétás címkék.",
-      body: "Jelölje meg az ételeket gluténra, laktózra, diófélékre, tengeri herkentyűkre, vegán és gluténmentes opciókra. A vendégek diétás igényeik szerint szűrik az étlapot és nagyobb biztonsággal rendelnek.",
+      heading: "Allergének és diéták minden ételen",
+      body: "Jelölje a glutént, laktózt, diót, vegán és gluténmentes opciókat. A vendégek diétára szűrik az étlapot és könnyen rendelnek.",
       bullets: [
-        "14 standard allergén kategória minden ételen.",
-        "Vegán, vegetáriánus és gluténmentes címkék egy kattintással.",
-        "A vendégek diétás korlátozásaik szerint szűrik az étlapot.",
+        "14 allergén kategória",
+        "Vegán és gluténmentes címkék",
+        "A vendégek diétára szűrnek",
       ],
       image: { src: "/landing/feature-allergens.webp", alt: "Vendég szűri az étlapot allergénekre telefonon, míg a tulajdonos az allergén listát szerkeszti táblagépen" },
     },
     {
+      icon: MonitorSmartphone,
+      eyebrow: "Bármely eszköz",
+      heading: "Kezelje bármely eszközről",
+      body: "Az adminfelület böngészőben fut — szerkessze az étlapot, árakat és fotókat bárhonnan. Semmit sem kell telepíteni.",
+      bullets: [
+        "Bármely böngészőben fut",
+        "Telefon, tablet vagy PC",
+        "Nincs telepítés",
+      ],
+    },
+    {
+      icon: BadgePercent,
+      eyebrow: "Nincs jutalék",
+      heading: "Nulla jutalék, nincs extra",
+      body: "Egy átlátható előfizetés. Nem veszünk részt a bevételből és nem rejtünk el díjakat — minden az étteremé marad.",
+      bullets: [
+        "Nulla százalék a rendeléseken",
+        "Nincs rejtett extra",
+        "Egy fix ár",
+      ],
+    },
+    {
+      icon: Globe,
+      eyebrow: "Saját domain",
+      heading: "Étlap a saját domainen",
+      body: "A domainjét SSL-lel kötjük be — a vendégek az étterem címén látják az étlapot. Segítünk a DNS-sel 10 perc alatt.",
+      bullets: [
+        "Saját domain SSL-lel",
+        "menu.azonetterme.com",
+        "Segítünk a DNS beállításban",
+      ],
+    },
+    {
+      icon: LayoutTemplate,
+      eyebrow: "A te dizájnod",
+      heading: "Rugalmas, hozzád illő dizájn",
+      body: "Több kész sablon és stílus — válassza ki a borítót, színeket és étel-megjelenítést, ami illik a helyéhez.",
+      bullets: [
+        "Több kész sablon",
+        "Saját borító és színek",
+        "Új stílus pár kattintással",
+      ],
+    },
+    {
+      icon: Contact,
+      eyebrow: "Kapcsolat",
+      heading: "Kapcsolat és közösség az étlapon",
+      body: "Külön oldal térképpel, telefonnal és linkekkel az Instagramra és WhatsAppra — a vendégek egy érintéssel megtalálják.",
+      bullets: [
+        "Térkép, telefon és cím",
+        "Instagram és WhatsApp",
+        "Elérés egy érintéssel",
+      ],
+    },
+    {
+      icon: MessageCircle,
+      eyebrow: "WhatsApp rendelés",
+      heading: "Fogadjon rendelést WhatsAppon",
+      body: "A vendégek kosarat állítanak össze és a rendelést egyenesen a WhatsAppjára küldik — külön app nélkül, a megszokott chatben.",
+      bullets: [
+        "Rendelés a WhatsAppjára",
+        "Nincs külön app",
+        "Chat a megszokott módon",
+      ],
+    },
+    {
+      icon: CalendarCheck,
+      eyebrow: "Foglalások",
+      heading: "Asztalfoglalás hívások nélkül",
+      body: "A vendégek maguk foglalnak asztalt az étlapon vagy linken, ön asztalonként látja a naptárt és auto vagy kézzel erősít meg.",
+      bullets: [
+        "Foglalás 24/7, hívás nélkül",
+        "Naptár asztalonként",
+        "Auto és kézi megerősítés",
+      ],
+    },
+    {
       icon: Palette,
       eyebrow: "Prémium dizájn",
-      heading: "Prémium dizájn videó háttérrel és kapcsolat oldallal.",
-      body: "Videó vagy fotó az üdvözlő képernyőn, étterem leírása, dedikált kapcsolat oldal térképpel, telefonszámokkal és közösségi profilokkal. A digitális étlap teljes étterem weboldalnak tűnik, nem PDF-nek QR kód mögött.",
+      heading: "Weboldalnak tűnik, nem PDF-nek",
+      body: "Videó háttér az üdvözlő képernyőn, a koncepció leírva és külön kapcsolat oldal térképpel és közösségi linkekkel.",
       bullets: [
-        "Videó háttér vagy nagy fotó az üdvözlő képernyőn.",
-        "Étterem és kategória leírások — mesélje el a koncepció történetét.",
-        "Kapcsolat oldal: térkép, telefon, Instagram, WhatsApp.",
+        "Videó a kezdőképernyőn",
+        "Koncepció és ételek leírva",
+        "Külön kapcsolat oldal",
       ],
       image: { src: "/landing/feature-design.webp", alt: "Két telefon kávézó asztalon: étlap kezdőképernyője videó háttérrel és kapcsolat oldal térképpel" },
     },
     {
       icon: ShoppingCart,
-      eyebrow: "Rendelések az étlapról · opcionális",
-      heading: "A vendégek közvetlenül az étlapról rendelnek.",
-      body: "A vendégek kosarat építenek a QR étlapon és elküldik a rendelést — eljut a pincérhez az étteremben vagy a konyhai táblagéphez. A funkció a beállításokban bármikor be- vagy kikapcsolható.",
+      eyebrow: "Rendelések · opcionális",
+      heading: "Rendelés egyenesen az étlapról",
+      body: "A vendégek kosarat állítanak össze és elküldik a rendelést — a terembe, WhatsAppra vagy a konyhai kijelzőre érkezik. Opcionális.",
       bullets: [
-        "Kosár, megjegyzések és rendelés küldése egy érintéssel.",
-        "A rendelés azonnal megérkezik az adminisztrációs panelre, WhatsApp-ra vagy a konyhai kijelzőre.",
-        "A funkció a beállításokban kapcsolható.",
+        "Kosár és küldés egy érintéssel",
+        "Terembe, WhatsAppra vagy konyhára",
+        "A beállításokban kapcsolható",
       ],
       image: { src: "/landing/feature-ordering.webp", alt: "Két telefon asztalon: kosár rendeléssel és elküldött rendelés visszaigazolása" },
     },

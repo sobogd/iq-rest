@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS: naročila naravnost kuharju.",
+    headline: "KDS: naročila\nnaravnost kuharju.",
     cta: "Nastavi kuhinjski zaslon",
     sub: "Naročila se takoj prikažejo na kuhinjskem zaslonu: opombe, alergeni in časovnik. Sprememba statusa z enim dotikom.",
     imageSrc: "/landing/feature-kitchen.webp",

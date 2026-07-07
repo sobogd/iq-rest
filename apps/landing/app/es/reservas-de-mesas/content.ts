@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Reservas 24/7, sin llamadas.",
+    headline: "Reservas 24/7,\nsin llamadas.",
     cta: "Configurar reservas de mesa",
     sub: "Los clientes reservan 24/7 por la carta QR o un enlace. Calendario por mesa, confirmaciones y recordatorios automáticos.",
     imageSrc: "/landing/feature-reservation.webp",

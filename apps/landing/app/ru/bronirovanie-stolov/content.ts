@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Бронь столов 24/7, без звонков",
+    headline: "Бронь столов 24/7,\nбез звонков",
     cta: "Настроить бронирование столов",
     sub: "Гости бронируют 24/7 через QR-меню или ссылку. Календарь по столам, авто-подтверждения и напоминания.",
     imageSrc: "/landing/feature-reservation.webp",

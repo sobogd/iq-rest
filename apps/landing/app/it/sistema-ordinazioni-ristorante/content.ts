@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Ordini dal tavolo alla cucina.",
+    headline: "Ordini dal tavolo\nalla cucina.",
     cta: "Configura gli ordini online",
     sub: "Il cliente ordina al tavolo o il cameriere da qualsiasi dispositivo — dritto in cucina. Mappa sala e conto diviso.",
     imageSrc: "/landing/feature-orders.webp",

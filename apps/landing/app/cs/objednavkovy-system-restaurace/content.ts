@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Objednávky od stolu do kuchyně.",
+    headline: "Objednávky od stolu\ndo kuchyně.",
     cta: "Nastavit online objednávky",
     sub: "Host objednává u stolu nebo číšník z libovolného zařízení — rovnou do kuchyně. Plán sálu, rozdělení účtu.",
     imageSrc: "/landing/feature-orders.webp",

@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "テーブルから厨房へ注文。",
+    headline: "テーブルから厨房へ\n注文。",
     cta: "オンライン注文を設定",
     sub: "客がテーブルで、スタッフが任意の端末で注文 — 直接厨房へ。フロアマップ、会計分割。",
     imageSrc: "/landing/feature-orders.webp",

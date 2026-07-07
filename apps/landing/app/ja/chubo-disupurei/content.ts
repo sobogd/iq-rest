@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS：注文が直接シェフへ。",
+    headline: "KDS：注文が直接\nシェフへ。",
     cta: "キッチンディスプレイを設定",
     sub: "注文はキッチン画面に即表示：メモ、アレルゲン、タイマー。ワンタップでステータス変更。",
     imageSrc: "/landing/feature-kitchen.webp",

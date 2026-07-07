@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Rezervace 24/7, žádné telefony.",
+    headline: "Rezervace 24/7,\nžádné telefony.",
     cta: "Nastavit rezervace stolů",
     sub: "Hosté rezervují 24/7 přes QR menu nebo odkaz. Kalendář podle stolů, automatická potvrzení a připomínky.",
     imageSrc: "/landing/feature-reservation.webp",

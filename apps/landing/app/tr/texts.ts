@@ -19,10 +19,10 @@ export const TEXTS: LandingTexts = {
   ctaText: "Ücretsiz deneyin",
   homeCtaText: "Ücretsiz deneyin",
   trust: [
-    { kind: "num", value: 35, label: "Dil" },
-    { kind: "text", value: "24/7", label: "Rezervasyon" },
-    { kind: "num", value: 5, suffix: " min", label: "Kurulum" },
-    { kind: "count", label: "Restoran" },
+    { kind: "num", value: 35, label: "Menü dili" },
+    { kind: "text", value: "24/7", label: "Online rezervasyon" },
+    { kind: "num", value: 5, suffix: " dk", label: "Yayına almak için" },
+    { kind: "count", label: "Bizimle restoran" },
   ],
   demoText: "Demoyu izle",
   microcopy: "14 gün ücretsiz · Kart yok · İstediğiniz zaman iptal edin",
@@ -39,7 +39,7 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Restoranlar", "Kafeler", "Barlar", "Oteller", "Pizzacılar"],
-    headline: "Restoran için dijital menü. 5 dakikada hazır.",
+    headline: "Restoran için dijital menü.\n5 dakikada hazır.",
     sub: "Restoranınız için 5 dakikada dijital menü. Hepsi dahil: kodsuz editör, basılı menünün AI tanıması, masalar için QR kodları ve komisyonsuz doğrudan sipariş.",
     dynamicHeadlines: ["0% komisyon.", "35 AI dili.", "Online sipariş.", "7/24 rezervasyon.", "Premium tasarım."],
     painBullets: [
@@ -117,6 +117,11 @@ export const TEXTS: LandingTexts = {
     heading: "5 dakikada hazır.",
     headingAccent: "14 gün ücretsiz.",
     sub: "Kart yok, istediğiniz zaman iptal. IQ Rest'i zaten kullanan 500+ restorana katılın.",
+  },
+
+  featureHighlights: {
+    heading: "Her şey dahil",
+    sub: "Misafirleri siparişe dönüştüren özellikler — her planda, ek ücret yok.",
   },
 
   scan: {

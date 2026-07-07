@@ -19,7 +19,7 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS: siparişler doğrudan aşçıya.",
+    headline: "KDS: siparişler doğrudan\naşçıya.",
     cta: "Mutfak ekranını kur",
     sub: "Siparişler mutfak ekranına anında düşer: notlar, alerjenler ve zamanlayıcı. Durumu tek dokunuşla değiştir.",
     imageSrc: "/landing/feature-kitchen.webp",
