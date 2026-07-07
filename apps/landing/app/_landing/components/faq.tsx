@@ -39,7 +39,7 @@ export function Faq({ texts, centered = false }: FaqProps) {
         </LinkForward>
       </div>
 
-      <div className="flex flex-col gap-3 w-full">
+      <div className="flex flex-col gap-5 w-full">
         {texts.items.map(({ q, a }, idx) => (
           <FaqItem key={q} q={q} a={a} position={idx + 1} />
         ))}

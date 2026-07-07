@@ -1,33 +1,20 @@
-"use client";
-
-import { ChevronDown } from "lucide-react";
-import { analytics } from "@/lib/analytics";
+import type { ReactNode } from "react";
 
 interface FaqItemProps {
   q: string;
-  a: string;
-  /** 1-based index — embedded in the analytics event name so each
-   *  question can be tracked independently. */
-  position: number;
+  a: ReactNode;
+  /** 1-based index — kept for API compatibility with the caller; no longer
+   *  used now that items render statically (always open, no toggle). */
+  position?: number;
 }
 
-// Client island around a single <details> element. Native disclosure
-// already works without JS, so SSR shipping is fine for users with
-// JS disabled — this island only adds the open-tracking handler.
-export function FaqItem({ q, a, position }: FaqItemProps) {
+// Static FAQ card — always open, no disclosure toggle. Styled like the
+// feature cards (rounded gradient panel with a hairline ring + shadow).
+export function FaqItem({ q, a }: FaqItemProps) {
   return (
-    <details
-      onToggle={(e) => {
-        const open = (e.currentTarget as HTMLDetailsElement).open;
-        analytics.track(`l_faq_item_${position}_${open ? "open" : "close"}`);
-      }}
-      className="group bg-muted/50 dark:bg-muted/20 border border-border rounded-2xl px-5 py-4 open:bg-muted/70 dark:open:bg-muted/30 transition-colors"
-    >
-      <summary className="flex items-center justify-between gap-4 cursor-pointer list-none text-base font-medium tracking-tight">
-        <span>{q}</span>
-        <ChevronDown className="h-4 w-4 text-muted-foreground flex-shrink-0 transition-transform group-open:rotate-180" />
-      </summary>
-      <p className="mt-3 text-base text-muted-foreground leading-relaxed">{a}</p>
-    </details>
+    <article className="rounded-2xl bg-card ring-1 ring-border/50 shadow-xl p-5 sm:p-6">
+      <h3 className="text-lg sm:text-xl font-medium tracking-tight mb-3">{q}</h3>
+      <p className="text-base text-muted-foreground leading-relaxed">{a}</p>
+    </article>
   );
 }
