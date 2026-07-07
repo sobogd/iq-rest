@@ -15,9 +15,9 @@ import type { CroCopy } from "@/app/_landing/templates/cro-home-template";
 export const CRO: CroCopy = {
   hero: {
     verticals: ["レストラン","カフェ","バー","ピッツェリア"],
-    title: "あなたのお店を、5分で完全デジタルに。",
-    titleAccent: "",
-    sub: "美しいデジタルメニュー、キッチンディスプレイ、24時間予約——モダンな飲食店のための完結型プラットフォーム。",
+    title: "あなたの店をデジタルに",
+    titleAccent: "5分で",
+    sub: "デジタルメニュー、キッチンディスプレイ、24時間予約 — お店に必要なすべてが5分で。",
   },
 
   heroMicrocopy: "{count} 店舗 · 14日間無料 · カード不要",

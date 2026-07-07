@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitalni meni i naručivanje za restorane",
+    headline: "QR jelovnik: skeniraj i naruči.",
     cta: "Izradi QR jelovnik",
-    sub: "IQ Rest QR meni: gosti skeniraju i pristupaju digitalnom jelovniku s fotografijama, alergenima i prijevodom. Ažurirajte cijene bez ponovnog tiskanja.",
+    sub: "Gost skenira QR na stolu, vidi fotografije i alergene na 35 jezika i naruči — bez aplikacije.",
   },
 
   scan: {

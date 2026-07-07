@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digital bordreservation 24/7",
+    headline: "Bordbestilling 24/7, ingen opkald.",
     cta: "Opsæt bordreservation",
-    sub: "IQ Rest's bordreservationssystem lader gæster booke via QR-menu eller link. Få automatisk bekræftelse, påmindelser, og undgå telefonkøer – aldrig mere en mistet gæst.",
+    sub: "Gæster booker 24/7 via QR-menuen eller et link. Kalender pr. bord, automatiske bekræftelser og påmindelser.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Værtinde administrerer reservationer fra en tablet ved restaurantens indgang",
   },

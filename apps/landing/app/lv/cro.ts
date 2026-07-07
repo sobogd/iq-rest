@@ -16,8 +16,8 @@ export const CRO: CroCopy = {
   hero: {
     verticals: ["Restorāni","Kafejnīcas","Bāri","Picērijas"],
     title: "Restorāns digitāli",
-    titleAccent: "5 minūtēs.",
-    sub: "Skaista digitālā ēdienkarte, virtuves ekrāns un rezervācijas visu diennakti — pilnīga platforma modernam restorānam.",
+    titleAccent: "5 minūtēs",
+    sub: "Digitāla ēdienkarte, virtuves ekrāns un rezervācija 24/7 — viss, kas restorānam vajadzīgs, 5 minūtēs.",
   },
 
   heroMicrocopy: "{count} restorāni · 14 dienas bez maksas · Bez kartes",

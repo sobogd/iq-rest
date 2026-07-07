@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS: Cocina digital sin errores",
+    headline: "KDS: pedidos directos a cocina.",
     cta: "Configurar pantalla de cocina",
-    sub: "Optimiza tu cocina con la pantalla KDS de IQ Rest. Recibe pedidos al instante con alérgenos, cambia estados con un toque y elimina el papel. ¡Agiliza tu servicio!",
+    sub: "Los pedidos llegan a cocina al instante: notas, alérgenos y temporizador. Cambia el estado en un toque.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Cocina profesional con una tableta sobre un soporte de latón mostrando la pantalla de cocina con los pedidos activos",
   },

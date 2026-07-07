@@ -15,9 +15,9 @@ import type { CroCopy } from "@/app/_landing/templates/cro-home-template";
 export const CRO: CroCopy = {
   hero: {
     verticals: ["Restauranger","Kaféer","Barer","Pizzerior"],
-    title: "Din restaurang,",
-    titleAccent: "helt digital på 5 minuter.",
-    sub: "En snygg digital meny, en köksskärm och bokningar dygnet runt — den kompletta plattformen för en modern restaurang.",
+    title: "Din restaurang, digital",
+    titleAccent: "på 5 min",
+    sub: "Digital meny, köksskärm och bordsbokning 24/7 — allt din restaurang behöver, klart på 5 minuter.",
   },
 
   heroMicrocopy: "{count} restauranger · 14 dagar gratis · Inget kort",

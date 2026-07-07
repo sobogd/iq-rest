@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitaal Bestelsysteem voor Restaurant",
+    headline: "Bestellingen van tafel naar keuken.",
     cta: "Online bestellen instellen",
-    sub: "IQ Rest's bestelsysteem stroomlijnt alles: gasten bestellen via QR-menu of kelner met tablet. Bestellingen direct op keukenscherm. Efficiënt, snel, foutloos.",
+    sub: "De gast bestelt aan tafel of personeel via elk apparaat — direct naar de keuken. Plattegrond en rekening splitsen.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Kelner neemt een bestelling op aan tafel vanaf een smartphone — de bestelling komt op het keukenscherm",
   },

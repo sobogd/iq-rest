@@ -15,9 +15,9 @@ import type { CroCopy } from "@/app/_landing/templates/cro-home-template";
 export const CRO: CroCopy = {
   hero: {
     verticals: ["Bialanna","Caiféanna","Beáir","Píotsaíochtaí"],
-    title: "Do bhialann,",
-    titleAccent: "digiteach i 5 nóiméad.",
-    sub: "Biachlár digiteach álainn, scáileán cistine agus áirithintí 24/7 — an t-ardán iomlán do bhialann nua-aimseartha.",
+    title: "Do bhialann, digiteach",
+    titleAccent: "i 5 nóiméad",
+    sub: "Biachlár digiteach, scáileán cistine agus áirithintí 24/7 — gach rud a theastaíonn ó do bhialann, réidh i 5 nóiméad.",
   },
 
   heroMicrocopy: "{count} bialann · 14 lá saor · Gan chárta",

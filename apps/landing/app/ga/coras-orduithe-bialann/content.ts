@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Orduithe Digiteacha do Bhialanna",
+    headline: "Orduithe ón mbord go dtí an chistin.",
     cta: "Socraigh ordú ar líne",
-    sub: "Glac orduithe bialainne go tapa le IQ Rest: QR, WhatsApp, nó freastalaí. Sroicheann siad an chistin láithreach. Bainistigh boird & billí go héasca.",
+    sub: "Ordaíonn an t-aoi ag an mbord nó an freastalaí ó aon ghléas — díreach chuig an gcistin. Léarscáil urláir, roinnt bille.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Freastalaí ag glacadh ordaithe ag an mbord ó fhón cliste — sroicheann an t-ordú scáileán na cistine",
   },

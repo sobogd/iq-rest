@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Reserva de taules digital 24/7",
+    headline: "Reserves 24/7, sense trucades.",
     cta: "Configurar reserves de taula",
-    sub: "Optimitza la **reserva de taules** amb IQ Rest. Clients reserven 24/7 via QR o enllaç. Gestió automàtica de confirmacions i recordatoris. Sense trucades.",
+    sub: "Els clients reserven 24/7 des de la carta QR o un enllaç. Calendari per taula, confirmacions i recordatoris automàtics.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Hostessa gestionant reserves des d'una tauleta a l'entrada del restaurant",
   },

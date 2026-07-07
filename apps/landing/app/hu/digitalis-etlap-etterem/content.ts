@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitális étlap éttermeknek.",
+    headline: "Digitális étlap, ami többet ad el.",
     cta: "Digitális menü létrehozása",
-    sub: "Az IQ Rest digitális étlapja fotókkal, allergénekkel, valós idejű árakkal. Spóroljon a nyomtatáson, tegye elérhetővé az étlapot több nyelven, és frissítse azonnal!",
+    sub: "Papír étlapod online: fotók, allergének, élő árak és fordítás 35 nyelvre. Nincs több újranyomtatás.",
   },
 
   scan: {

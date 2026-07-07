@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Pedidos digitales en mesa y sala",
+    headline: "Pedidos de la mesa a cocina.",
     cta: "Configurar pedidos online",
-    sub: "El sistema de pedidos para restaurante de IQ Rest agiliza tu operación: comensales piden por QR y camareros desde móvil. Pedidos directos a cocina y más.",
+    sub: "Pide el cliente en la mesa o el camarero en cualquier dispositivo — directo a cocina. Plano de sala, dividir cuenta.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Camarero toma una comanda en la mesa desde un smartphone — el pedido llega a la pantalla de cocina",
   },

@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Menu digital para restaurantes.",
+    headline: "Menu digital que vende mais.",
     cta: "Criar menu digital",
-    sub: "O menu digital para restaurantes da IQ Rest: carta online com fotos, alergénios e preços em tempo real. Clientes veem na sua língua, e o restaurante poupa em impressão.",
+    sub: "O seu menu em papel, online: fotos, alergénios, preços ao vivo e tradução em 35 idiomas. Sem reimpressões.",
   },
 
   scan: {

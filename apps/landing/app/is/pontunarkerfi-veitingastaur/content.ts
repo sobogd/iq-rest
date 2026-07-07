@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Stafrænar pantanir fyrir veitingastaði",
+    headline: "Pantanir frá borði í eldhús.",
     cta: "Setja upp netpantanir",
-    sub: "IQ Rest pöntunarkerfi fyrir veitingastað einfaldar reksturinn. Gestir panta með QR matseðli, starfsfólk með snjalltæki. Pantanir á eldhússkjá, salaráætlun og fleira.",
+    sub: "Gesturinn pantar við borðið eða þjónninn úr hvaða tæki sem er — beint í eldhúsið. Salarkort, skipting reiknings.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Þjónn tekur pöntun við borðið úr snjallsíma — pöntunin kemur á eldhússkjáinn",
   },

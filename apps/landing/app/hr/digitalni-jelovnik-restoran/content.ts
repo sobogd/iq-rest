@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitalizirajte restoran: IQ Rest jelovnik",
+    headline: "Digitalni jelovnik koji prodaje.",
     cta: "Izradi digitalni jelovnik",
-    sub: "IQ Rest digitalni jelovnik: online verzija vašeg menija s fotografijama, alergenima i ažuriranjem cijena u stvarnom vremenu. Gosti vide jelovnik na svom jeziku.",
+    sub: "Vaš papirnati jelovnik online: fotografije, alergeni, cijene uživo i prijevod na 35 jezika. Bez pretiska.",
   },
 
   scan: {

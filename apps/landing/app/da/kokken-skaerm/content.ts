@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Køkkenskærm (KDS): Digitalt køkken",
+    headline: "KDS: ordrer direkte til kokken.",
     cta: "Opsæt køkkenskærm",
-    sub: "IQ Rest's køkkenskærm (KDS) fjerner papirboner. Ordrer fra tjenere eller QR-menu lander straks med noter, allergener og timer. Ét tryk ændrer status på tablet/smartphone.",
+    sub: "Ordrer rammer køkkenskærmen med det samme: noter, allergener og timer. Skift status med ét tryk.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Professionelt køkken med en tablet på en messingstander, der viser køkkenskærmen med aktive bestillinger",
   },

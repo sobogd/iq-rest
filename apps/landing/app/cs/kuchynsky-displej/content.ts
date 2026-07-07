@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS pro restaurace: Digitální kuchyně",
+    headline: "KDS: objednávky rovnou kuchaři.",
     cta: "Nastavit kuchyňský displej",
-    sub: "Dejte sbohem papírům! Objednávky z QR menu či od obsluhy dorazí na kuchyňský displej IQ Rest okamžitě – s poznámkami, alergeny a časovačem. Změna stavu jedním ťuknutím.",
+    sub: "Objednávky se objeví na kuchyňském displeji okamžitě: poznámky, alergeny a časovač. Změna stavu jedním klepnutím.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Profesionální kuchyně s tabletem na mosazném stojanu zobrazujícím kuchyňský displej s aktivními objednávkami",
   },

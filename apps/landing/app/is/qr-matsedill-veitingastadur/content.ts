@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Stafrænn matseðill og pöntunarkerfi",
+    headline: "QR matseðill: skannaðu og pantaðu.",
     cta: "Búa til QR-matseðil",
-    sub: "Gestir skanna QR matseðil með símanum og fá uppfærðan matseðil með myndum, ofnæmisvöldum og þýðingum. Engin app, engin endurprentun. IQ Rest.",
+    sub: "Gesturinn skannar QR borðsins, sér myndir og ofnæmisvalda á 35 tungumálum og pantar — án smáforrits.",
   },
 
   scan: {

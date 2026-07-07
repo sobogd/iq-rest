@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Stafrænt eldhús: pantanir á skjáinn",
+    headline: "KDS: pantanir beint til kokksins.",
     cta: "Setja upp eldhússkjá",
-    sub: "Segðu bless við pappírsmiða! Pantanir af QR matseðli eða úr salnum berast samstundis á eldhússkjáinn, með ofnæmisvökum og tímamæli. Einfalt að uppfæra stöðu.",
+    sub: "Pantanir birtast strax á eldhússkjánum: athugasemdir, ofnæmisvaldar og teljari. Breyttu stöðu með einni snertingu.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Atvinnueldhús með spjaldtölvu á koparstandi sem sýnir eldhússkjáinn með virkum pöntunum",
   },

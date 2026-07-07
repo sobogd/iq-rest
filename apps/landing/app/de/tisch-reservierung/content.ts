@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "24/7 Tischreservierung für Ihr Restaurant",
+    headline: "Tischbuchung 24/7, keine Anrufe.",
     cta: "Tischreservierung einrichten",
-    sub: "Optimieren Sie Ihre Tischreservierung: Gäste buchen 24/7 via QR-Speisekarte oder Direktlink. Automatisierte Bestätigungen & Erinnerungen. Nie wieder Anrufe in Stoßzeiten.",
+    sub: "Gäste buchen 24/7 per QR-Menü oder Link. Kalender pro Tisch, automatische Bestätigungen und Erinnerungen.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Hostess verwaltet Reservierungen von einem Tablet am Restauranteingang",
   },

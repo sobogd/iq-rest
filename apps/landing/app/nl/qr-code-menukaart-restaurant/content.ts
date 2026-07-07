@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitale menukaart voor uw restaurant",
+    headline: "QR-menu: scannen en bestellen.",
     cta: "QR-menu maken",
-    sub: "Uw gasten scannen de QR-code menukaart en zien direct actuele prijzen, allergenen en foto's in 35 talen. Geen app nodig, geen printkosten meer. Ontdek IQ Rest.",
+    sub: "De gast scant de tafel-QR, ziet foto's en allergenen in 35 talen en bestelt — geen app, geen herdruk.",
   },
 
   scan: {

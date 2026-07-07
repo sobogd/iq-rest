@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Restaurant Digital: Meniu QR & Comandă",
+    headline: "Meniu QR: scanează și comandă.",
     cta: "Creează meniul QR",
-    sub: "Meniul cu cod QR de la IQ Rest: clienții scanează, văd fotografii, alergeni și prețuri actualizate, cu traducere în 35 de limbi. Fără aplicații, retipăriri.",
+    sub: "Clientul scanează QR-ul mesei, vede poze și alergeni în 35 de limbi și comandă — fără app, fără retipărire.",
   },
 
   scan: {

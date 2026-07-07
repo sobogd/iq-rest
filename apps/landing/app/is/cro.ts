@@ -15,9 +15,9 @@ import type { CroCopy } from "@/app/_landing/templates/cro-home-template";
 export const CRO: CroCopy = {
   hero: {
     verticals: ["Veitingastaðir","Kaffihús","Barir","Pítsustaðir"],
-    title: "Stafrænn veitingastaður",
-    titleAccent: "á 5 mínútum.",
-    sub: "Fallegur stafrænn matseðill, eldhússkjár og bókanir allan sólarhringinn — heildarvettvangurinn fyrir nútímalegan veitingastað.",
+    title: "Veitingastaður, stafrænn",
+    titleAccent: "á 5 mínútum",
+    sub: "Stafrænn matseðill, eldhússkjár og bókanir 24/7 — allt sem veitingastaðurinn þarf, tilbúið á 5 mínútum.",
   },
 
   heroMicrocopy: "{count} veitingastaðir · 14 dagar frítt · Ekkert kort",

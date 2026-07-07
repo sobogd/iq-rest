@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitales Bestellsystem fürs Restaurant",
+    headline: "Bestellungen vom Tisch zur Küche.",
     cta: "Online-Bestellung einrichten",
-    sub: "Optimieren Sie Ihr Restaurant-Bestellsystem mit IQ Rest: Gäste bestellen per QR, Servicekräfte mobil. Bestellungen direkt an die Küche – effizient, schnell, fehlerfrei.",
+    sub: "Der Gast bestellt am Tisch oder das Personal per Gerät — direkt in die Küche. Tischplan und Rechnung teilen.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Servicekraft nimmt eine Bestellung am Tisch vom Smartphone auf — die Bestellung landet auf dem Küchen-Display",
   },

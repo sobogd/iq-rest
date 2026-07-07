@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "IQ Rest: Reservas digitales 24/7",
+    headline: "Reservas 24/7, sin llamadas.",
     cta: "Configurar reservas de mesa",
-    sub: "Optimiza tus reservas de mesa 24/7 con IQ Rest. Tus clientes reservan fácil vía QR o enlace. Gestión automática de confirmaciones y recordatorios. Cero llamadas perdidas.",
+    sub: "Los clientes reservan 24/7 por la carta QR o un enlace. Calendario por mesa, confirmaciones y recordatorios automáticos.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Maître gestiona las reservas desde una tableta en la entrada del restaurante",
   },

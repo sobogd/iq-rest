@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Restorāns DIGITĀLS: QR ēdienkarte, KDS",
+    headline: "QR ēdienkarte: skenē un pasūti.",
     cta: "Izveidot QR ēdienkarti",
-    sub: "IQ Rest QR koda ēdienkarte: viesi skenē kodu, ēdienkarte atveras telefonā ar foto, alergēniem, aktuālām cenām un tulkojumu 35 valodās. Vairs nav jāpārdrukā ēdienkartes!",
+    sub: "Viesis skenē galda QR kodu, redz foto un alergēnus 35 valodās un pasūta — bez lietotnes.",
   },
 
   scan: {

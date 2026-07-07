@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Comenzi Digitale la Masă pentru Restaurant",
+    headline: "Comenzi de la masă la bucătărie.",
     cta: "Configurează comenzile online",
-    sub: "IQ Rest: sistem de comenzi restaurant. Clienții comandă prin meniul QR la masă, sau ospătarul preia pe tabletă. Comanda ajunge instant în bucătărie. Gata cu carnețelele!",
+    sub: "Clientul comandă la masă sau ospătarul de pe orice dispozitiv — direct la bucătărie. Harta sălii, împărțirea notei.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Ospătar preia o comandă la masă de pe un smartphone — comanda ajunge pe display-ul bucătăriei",
   },

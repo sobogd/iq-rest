@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "餐厅数字厨房显示屏 (KDS)：订单直达厨师",
+    headline: "KDS：订单直达厨师。",
     cta: "设置厨房显示屏",
-    sub: "不再需要纸质订单。来自大堂或 QR 菜单的订单立即出现在厨房屏幕上 — 带备注、过敏原和计时器。一键更改状态。在传菜口的平板电脑或厨师口袋里的智能手机上运行。",
+    sub: "订单即时显示在厨房屏幕：备注、过敏原、计时器。一键切换状态。",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "专业厨房,黄铜支架上的平板电脑显示带活跃订单的厨房显示屏",
   },

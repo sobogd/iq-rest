@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Dijital Restoran Sipariş Sistemi",
+    headline: "Masadan mutfağa siparişler.",
     cta: "Online siparişi kur",
-    sub: "IQ Rest restoran sipariş sistemi ile misafirler QR menüden, garsonlar telefon/tabletten sipariş alır. Siparişler anında mutfakta, deftere ve bara gidişe son.",
+    sub: "Misafir masada veya garson herhangi bir cihazdan sipariş verir — doğrudan mutfağa. Salon planı, hesap bölme.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Garson akıllı telefondan masada bir sipariş alıyor — sipariş mutfak ekranına düşüyor",
   },

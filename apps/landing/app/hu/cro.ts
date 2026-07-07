@@ -15,9 +15,9 @@ import type { CroCopy } from "@/app/_landing/templates/cro-home-template";
 export const CRO: CroCopy = {
   hero: {
     verticals: ["Éttermek","Kávézók","Bárok","Pizzériák"],
-    title: "Az éttermed,",
-    titleAccent: "digitálisan 5 perc alatt.",
-    sub: "Egy szép digitális menü, egy konyhai kijelző és éjjel-nappali foglalások — a teljes platform egy modern étteremhez.",
+    title: "Éttermed, digitálisan",
+    titleAccent: "5 perc alatt",
+    sub: "Digitális étlap, konyhai kijelző és 24/7 foglalás — minden, amire az éttermednek szüksége van, 5 perc alatt kész.",
   },
 
   heroMicrocopy: "{count} étterem · 14 nap ingyen · Kártya nélkül",

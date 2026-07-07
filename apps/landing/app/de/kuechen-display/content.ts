@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Küchen-Display: Digitale Bestellungen",
+    headline: "KDS: Bestellungen direkt zum Koch.",
     cta: "Küchendisplay einrichten",
-    sub: "Nie mehr Papierbons! Bestellungen von Service oder QR-Speisekarte landen sofort auf Ihrem IQ Rest Küchen-Display – mit Notizen, Allergenen & Timer. Status per Tipp.",
+    sub: "Bestellungen erscheinen sofort auf dem Küchen-Display: Notizen, Allergene und Timer. Status per Tipp ändern.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Profiküche mit einem Tablet auf einem Messingständer, das das Küchen-Display mit aktiven Bestellungen zeigt",
   },

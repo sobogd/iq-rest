@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Tu restaurante, ahora digital.",
+    headline: "Carta QR: escanea y pide.",
     cta: "Crear menú QR",
-    sub: "El comensal escanea el código QR y accede al instante a tu carta digital: fotos, alérgenos, precios actualizados y traducción a 35 idiomas. Sin apps, sin reimprimir.",
+    sub: "El cliente escanea el QR de la mesa, ve fotos y alérgenos en 35 idiomas y pide — sin apps ni reimpresiones.",
   },
 
   scan: {

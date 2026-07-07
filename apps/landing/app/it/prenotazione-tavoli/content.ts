@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Prenotazione Tavoli Digitale 24/7",
+    headline: "Prenotazioni 24/7, zero chiamate.",
     cta: "Configura le prenotazioni",
-    sub: "Sistema di prenotazione tavoli 24/7 per ristoranti. I clienti prenotano da QR o link, ricevono conferme e promemoria automatici. Meno telefonate, più coperti.",
+    sub: "I clienti prenotano 24/7 dal menu QR o da un link. Calendario per tavolo, conferme e promemoria automatici.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Hostess gestisce le prenotazioni da un tablet all'ingresso del ristorante",
   },

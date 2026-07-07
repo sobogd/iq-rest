@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digital Menu & Ordering for Restaurants",
+    headline: "A digital menu that sells more.",
     cta: "Create Digital Menu",
-    sub: "Online version of your paper menu with photos, allergens, descriptions and live price updates. Guests see the menu in their own language; the restaurant saves on print.",
+    sub: "Your paper menu online: photos, allergens, live prices and auto-translation into 35 languages. No reprints.",
   },
 
   scan: {

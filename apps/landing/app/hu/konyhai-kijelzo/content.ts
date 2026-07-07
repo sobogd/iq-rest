@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Konyhai kijelző: digitális rendeléskezelés",
+    headline: "KDS: rendelés egyből a szakácsnak.",
     cta: "Konyhai kijelző beállítása",
-    sub: "Az IQ Rest konyhai kijelző (KDS) azonnal megjeleníti a rendeléseket. Nincs több papír! Érintéssel változtatható státusz, időzítő, allergének. Tableten vagy okostelefonon is.",
+    sub: "A rendelések azonnal megjelennek a konyhai kijelzőn: jegyzetek, allergének és időzítő. Állapotváltás egy érintéssel.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Professzionális konyha sárgaréz állványon lévő táblagéppel, amely a konyhai kijelzőt mutatja aktív rendelésekkel",
   },

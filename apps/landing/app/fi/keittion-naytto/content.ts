@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitaalinen keittiön näyttö (KDS)",
+    headline: "KDS: tilaukset suoraan kokille.",
     cta: "Ota keittiönäyttö käyttöön",
-    sub: "IQ Restin keittiön näyttö (KDS) tehostaa toimintaa. Tilaukset salista tai QR-listalta saapuvat heti näyttöön – sis. allergeenit ja ajastimen. Yksi napautus vaihtaa tilaa.",
+    sub: "Tilaukset ilmestyvät keittiönäytölle heti: muistiinpanot, allergeenit ja ajastin. Vaihda tila yhdellä napautuksella.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Ammattikeittiö, jossa tabletti messinkitelineellä näyttää keittiön näyttöä aktiivisilla tilauksilla",
   },

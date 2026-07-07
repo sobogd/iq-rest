@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Restaurant digital amb codi QR",
+    headline: "Carta QR: escaneja i demana.",
     cta: "Crear menú QR",
-    sub: "Amb el codi QR d'IQ Rest, els clients accedeixen a la carta digital al mòbil: fotos, al·lèrgens, preus actualitzats i traducció automàtica. Sense apps ni reimpressions.",
+    sub: "El client escaneja el QR de la taula, veu fotos i al·lèrgens en 35 idiomes i demana — sense apps ni reimpressions.",
   },
 
   scan: {

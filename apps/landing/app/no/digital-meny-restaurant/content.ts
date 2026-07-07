@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitaliser din restaurant med IQ Rest",
+    headline: "Digital meny som selger mer.",
     cta: "Lag digital meny",
-    sub: "Online versjon av papirmenyen din med bilder, allergener, beskrivelser og live prisoppdateringer. Gjester ser menyen på sitt eget språk; restauranten sparer på trykking.",
+    sub: "Papirmenyen din på nett: bilder, allergener, live-priser og oversettelse til 35 språk. Ingen ny utskrift.",
   },
 
   scan: {

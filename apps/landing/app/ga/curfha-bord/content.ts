@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Áirithintí Boird Digiteacha 24/7",
+    headline: "Áirithintí 24/7, gan glaonna.",
     cta: "Socraigh áirithint boird",
-    sub: "Cuireann aíonna boird in áirithe tríd an mbiachlár QR nó nasc. Féilire de réir boird, deimhnithe uathoibríocha. Curfha bord 24/7 le IQ Rest. Gan aoi caillte!",
+    sub: "Áirithníonn aíonna 24/7 tríd an mbiachlár QR nó nasc. Féilire de réir boird, deimhnithe agus meabhrúcháin uathoibríoch.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Banaltra ag bainistiú curfhaí ó tháibléad ag bealach isteach na bialainne",
   },

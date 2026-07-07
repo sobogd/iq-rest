@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitális rendelés étteremben",
+    headline: "Rendelés az asztaltól a konyhába.",
     cta: "Online rendelés beállítása",
-    sub: "IQ Rest rendelési rendszer étteremnek: QR étlapról asztalnál, vagy pincér által. A rendelés azonnal a konyhai kijelzőn. Teremterv, számlaosztás, rugalmas opciók.",
+    sub: "A vendég az asztalnál rendel, vagy a pincér bármely eszközről — egyből a konyhába. Teremtérkép, számla megosztása.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Pincér rendelést vesz fel az asztalnál okostelefonról — a rendelés a konyhai kijelzőre érkezik",
   },

@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitalisera menyn & restaurangen",
+    headline: "Digital meny som säljer mer.",
     cta: "Skapa digital meny",
-    sub: "Onlineversion av din pappersmeny med bilder, allergener, beskrivningar och prisuppdateringar i realtid. Gäster ser menyn på sitt eget språk; restaurangen sparar på tryck.",
+    sub: "Din pappersmeny online: bilder, allergener, live-priser och översättning till 35 språk. Ingen omtryckning.",
   },
 
   scan: {

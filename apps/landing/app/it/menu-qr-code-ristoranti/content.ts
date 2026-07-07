@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Menù Digitale QR Code per Ristoranti",
+    headline: "Menu QR: scansiona e ordina.",
     cta: "Crea il menù QR",
-    sub: "Con IQ Rest, il menù QR code è subito sul cellulare del cliente: foto, allergeni, prezzi aggiornati e traduzione in 35 lingue. Niente app, niente sprechi di carta.",
+    sub: "Il cliente scansiona il QR al tavolo, vede foto e allergeni in 35 lingue e ordina — senza app né ristampe.",
   },
 
   scan: {

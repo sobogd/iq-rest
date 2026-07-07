@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Restoranınızı Dijitalleştirin: QR Menü",
+    headline: "QR menü: okut ve sipariş ver.",
     cta: "QR menü oluştur",
-    sub: "IQ Rest'in QR kod menüsüyle misafirleriniz menüye anında ulaşır: güncel fiyatlar, yemek fotoğrafları, alerjen bilgileri ve 35 dil seçeneği. Uygulamasız, baskısız!",
+    sub: "Misafir masadaki QR'ı okutur, 35 dilde fotoğraf ve alerjenleri görür ve sipariş verir — uygulama yok.",
   },
 
   scan: {

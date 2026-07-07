@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Kuhinjski zaslon: digitalna kuhinja.",
+    headline: "KDS: naročila naravnost kuharju.",
     cta: "Nastavi kuhinjski zaslon",
-    sub: "Pozabite na papir! Naročila iz dvorane ali QR jedilnika takoj prispejo na kuhinjski zaslon (KDS) IQ Rest — z opombami, alergeni in časomerom. Status spremenite z enim dotikom.",
+    sub: "Naročila se takoj prikažejo na kuhinjskem zaslonu: opombe, alergeni in časovnik. Sprememba statusa z enim dotikom.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Profesionalna kuhinja s tablico na medenem stojalu, ki prikazuje kuhinjski zaslon z aktivnimi naročili",
   },

@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Staliukų rezervacija 24/7: svečiai patys",
+    headline: "Rezervacija 24/7, be skambučių.",
     cta: "Nustatyti staliukų rezervacijas",
-    sub: "IQ Rest staliukų rezervacija 24/7: svečiai rezervuoja per QR meniu, o jūs gaunate automatinius patvirtinimus. Daugiau jokių prarastų užsakymų ar skambučių piko metu.",
+    sub: "Svečiai rezervuoja 24/7 per QR meniu ar nuorodą. Kalendorius pagal stalą, automatiniai patvirtinimai ir priminimai.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Šeimininkė valdo rezervacijas iš planšetės prie restorano įėjimo",
   },

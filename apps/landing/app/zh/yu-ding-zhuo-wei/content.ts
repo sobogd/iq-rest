@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "餐厅数字化升级：智能24/7餐桌预订",
+    headline: "24/7在线预订，零来电。",
     cta: "设置餐桌预订",
-    sub: "客人通过 QR 菜单或直接链接预订餐桌。按餐桌的日历、自动确认和提醒。一位客人都不会错过,繁忙时段也无需接听电话。",
+    sub: "顾客通过QR菜单或链接24/7预订。按桌位日历、自动确认与提醒。",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "迎宾员在餐厅入口处的平板电脑上管理预订",
   },

@@ -15,9 +15,9 @@ import type { CroCopy } from "@/app/_landing/templates/cro-home-template";
 export const CRO: CroCopy = {
   hero: {
     verticals: ["مطاعم","مقاهي","حانات","بيتزا"],
-    title: "مطعمك،",
-    titleAccent: "رقمي بالكامل في 5 دقائق.",
-    sub: "قائمة رقمية أنيقة وشاشة مطبخ وحجوزات على مدار الساعة — المنصة المتكاملة لمطعم عصري.",
+    title: "مطعمك رقمي",
+    titleAccent: "في 5 دقائق",
+    sub: "قائمة رقمية وشاشة مطبخ وحجوزات 24/7 — كل ما يحتاجه مطعمك، جاهز في 5 دقائق.",
   },
 
   heroMicrocopy: "{count} مطعم · 14 يومًا مجانًا · بدون بطاقة",

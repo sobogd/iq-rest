@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitální jídelní lístek pro restaurace",
+    headline: "Digitální menu, které prodává.",
     cta: "Vytvořit digitální menu",
-    sub: "Online verze vašeho papírového menu s fotkami, alergeny, popisy a okamžitými aktualizacemi cen. Hosté vidí menu ve svém vlastním jazyce; restaurace šetří za tisk.",
+    sub: "Vaše papírové menu online: fotky, alergeny, ceny živě a překlad do 35 jazyků. Žádný dotisk.",
   },
 
   scan: {

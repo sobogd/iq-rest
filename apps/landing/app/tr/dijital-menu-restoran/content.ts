@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Restoranınızı Dijitalleştirin: Akıllı Menü",
+    headline: "Daha çok satan dijital menü.",
     cta: "Dijital menü oluştur",
-    sub: "IQ Rest dijital menü ile fotoğraflı, alerjen bilgili menünüzü anında güncelleyin. Misafirler kendi dilinde görür, siz baskıdan tasarruf edersiniz.",
+    sub: "Kağıt menünüz çevrimiçi: fotoğraflar, alerjenler, anlık fiyatlar ve 35 dile çeviri. Yeniden baskı yok.",
   },
 
   scan: {

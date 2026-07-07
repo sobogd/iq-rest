@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitalna rezervacija stolova 24/7",
+    headline: "Rezervacije 24/7, bez poziva.",
     cta: "Postavi rezervacije stolova",
-    sub: "Gosti rezerviraju stolove putem QR jelovnika ili izravnog linka. Kalendar po stolu, automatske potvrde i podsjetnici. Niti jedan propušten gost i bez poziva u špici.",
+    sub: "Gosti rezerviraju 24/7 putem QR jelovnika ili linka. Kalendar po stolu, automatske potvrde i podsjetnici.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Domaćica upravlja rezervacijama s tableta na ulazu u restoran",
   },

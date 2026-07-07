@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Comandes digitals a taula al restaurant",
+    headline: "Comandes de la taula a la cuina.",
     cta: "Configurar comandes en línia",
-    sub: "Els clients demanen amb la carta QR o el cambrer des del mòbil; la comanda arriba a cuina en segons. Plànol de sala, divisió de compte, opcions i comentaris.",
+    sub: "El client demana a taula o el cambrer des de qualsevol dispositiu — directe a cuina. Plànol de sala, dividir compte.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Cambrer prenent una comanda a taula amb un smartphone — la comanda arriba a la pantalla de cuina",
   },

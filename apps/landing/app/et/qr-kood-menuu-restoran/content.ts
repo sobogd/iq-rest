@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitaalne menüü ja tellimine restoranis",
+    headline: "QR-menüü: skaneeri ja telli.",
     cta: "Loo QR-menüü",
-    sub: "IQ Resti QR-kood menüüga avaneb külalisele koheselt telefonis: fotod, allergeenid, ajakohased hinnad ja tõlge 35 keelde. Säästa trükikuludelt ja aega!",
+    sub: "Külaline skaneerib laua QR-koodi, näeb fotosid ja allergeene 35 keeles ning tellib — ilma rakenduseta.",
   },
 
   scan: {

@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Do Bhialann, Go Digiteach",
+    headline: "Biachlár digiteach a dhíolann.",
     cta: "Cruthaigh biachlár digiteach",
-    sub: "Do bhiachlár digiteach do bhialanna le grianghraif, ailléirginí, tuairiscí & praghsanna beo. Sábháil ar phriontáil, feiceann aíonna an biachlár ina dteanga féin.",
+    sub: "Do bhiachlár páipéir ar líne: grianghraif, ailléirginí, praghsanna beo agus aistriúchán go 35 teanga. Gan athphriontáil.",
   },
 
   scan: {

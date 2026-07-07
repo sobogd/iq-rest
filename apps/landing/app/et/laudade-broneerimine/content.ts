@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitaalne laudade broneerimine 24/7",
+    headline: "Broneerimine 24/7, ilma helistamata.",
     cta: "Seadista lauabroneeringud",
-    sub: "IQ Rest muudab laudade broneerimise sujuvaks: külalised broneerivad QR-menüü või lingi kaudu. Automaatsed kinnitused ja meeldetuletused vähendavad kõnesid tipptundidel.",
+    sub: "Külalised broneerivad 24/7 QR-menüü või lingi kaudu. Lauapõhine kalender, automaatsed kinnitused ja meeldetuletused.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Perenaine haldab broneeringuid tahvelarvutist restorani sissepääsu juures",
   },

@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digital bordsbokning 24/7 för restauranger",
+    headline: "Bordsbokning 24/7, inga samtal.",
     cta: "Konfigurera bordsbokning",
-    sub: "Optimera din bordsbokning med IQ Rest. Gäster bokar enkelt via QR-menyn eller direktlänk. Automatisk bekräftelse/påminnelse – inga missade gäster eller samtal.",
+    sub: "Gäster bokar 24/7 via QR-menyn eller en länk. Kalender per bord, automatiska bekräftelser och påminnelser.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Värdinna hanterar bokningar från en surfplatta vid restaurangens entré",
   },

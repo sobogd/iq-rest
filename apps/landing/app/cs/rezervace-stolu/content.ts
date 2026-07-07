@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitální rezervace stolů 24/7",
+    headline: "Rezervace 24/7, žádné telefony.",
     cta: "Nastavit rezervace stolů",
-    sub: "Hosté rezervují stoly přes QR menu nebo přímý odkaz. Kalendář podle stolu, automatická potvrzení a připomínky. Ani jeden zmeškaný host a žádné telefonáty ve špičce.",
+    sub: "Hosté rezervují 24/7 přes QR menu nebo odkaz. Kalendář podle stolů, automatická potvrzení a připomínky.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Hosteska spravuje rezervace z tabletu u vchodu do restaurace",
   },

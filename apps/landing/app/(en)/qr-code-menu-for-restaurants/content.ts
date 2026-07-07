@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digital QR Menu for Restaurants",
+    headline: "QR menu: scan, view, order.",
     cta: "Create QR Menu",
-    sub: "Guests scan your table QR Code Menu to instantly view dish photos, allergens, and auto-translated prices in 35 languages. No app downloads, no reprinting.",
+    sub: "Guests scan the table QR, browse photos and allergens in 35 languages, and order — no app, no reprints.",
   },
 
   scan: {

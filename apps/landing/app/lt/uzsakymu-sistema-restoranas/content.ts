@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Skaitmeninis restoranas: užsakymai lengvai",
+    headline: "Užsakymai nuo stalo į virtuvę.",
     cta: "Nustatyti internetinius užsakymus",
-    sub: "IQ Rest užsakymų sistema restoranui: svečiai užsako per QR meniu, padavėjai – iš telefono. Užsakymai akimirksniu virtuvėje. Salės planas, sąskaitos padalijimas. Jokio popieriaus!",
+    sub: "Svečias užsako prie stalo arba padavėjas iš bet kurio įrenginio — tiesiai į virtuvę. Salės planas, sąskaitos padalijimas.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Padavėjas priima užsakymą prie staliuko iš išmaniojo telefono — užsakymas pasiekia virtuvės ekraną",
   },

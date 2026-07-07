@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitalne narudžbe za vaš restoran",
+    headline: "Narudžbe od stola do kuhinje.",
     cta: "Postavi online narudžbe",
-    sub: "IQ Rest sustav narudžbi za restoran: gosti naručuju QR jelovnikom, konobari tabletom. Narudžbe odmah stižu na kuhinjski ekran. Brzo, efikasno, bez gužve.",
+    sub: "Gost naručuje za stolom ili konobar s bilo kojeg uređaja — ravno u kuhinju. Tlocrt sale, podjela računa.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Konobar prima narudžbu za stolom sa smartphonea — narudžba stiže na kuhinjski ekran",
   },

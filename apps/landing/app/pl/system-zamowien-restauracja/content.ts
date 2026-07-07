@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Zamówienia cyfrowe: gość i kelner",
+    headline: "Zamówienia od stołu do kuchni.",
     cta: "Skonfiguruj zamówienia online",
-    sub: "IQ Rest to system zamówień dla restauracji: goście zamawiają przez menu QR, kelnerzy z tabletu, a zamówienia trafiają na KDS. Bez pomyłek, z pełną kontrolą sali.",
+    sub: "Gość zamawia przy stole lub kelner z dowolnego urządzenia — prosto do kuchni. Plan sali, podział rachunku.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Kelner przyjmuje zamówienie przy stoliku ze smartfona — zamówienie trafia na ekran kuchenny",
   },

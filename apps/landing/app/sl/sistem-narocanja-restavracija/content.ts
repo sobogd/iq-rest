@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitalno naročanje za restavracije",
+    headline: "Naročila od mize do kuhinje.",
     cta: "Nastavi spletno naročanje",
-    sub: "IQ Rest sistem naročanja za restavracijo: gostje naročajo prek QR jedilnika, natakarji s telefona. Naročila takoj na kuhinjski zaslon. Delitev računa, tloris miz.",
+    sub: "Gost naroči za mizo ali natakar s katere koli naprave — naravnost v kuhinjo. Načrt dvorane, delitev računa.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Natakar sprejema naročilo pri mizi s pametnega telefona — naročilo prispe na kuhinjski zaslon",
   },

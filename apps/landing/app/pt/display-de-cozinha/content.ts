@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS: Cozinha digital, pedidos na hora",
+    headline: "KDS: pedidos direto à cozinha.",
     cta: "Configurar ecrã de cozinha",
-    sub: "O ecrã de cozinha (KDS) da IQ Rest elimina talões! Receba pedidos do salão ou menu QR com notas, alergénios e cronómetro. Altere o estado com um toque.",
+    sub: "Os pedidos chegam ao ecrã de cozinha ao instante: notas, alergénios e temporizador. Muda o estado num toque.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Cozinha profissional com um tablet num suporte em latão a mostrar o ecrã de cozinha com pedidos ativos",
   },

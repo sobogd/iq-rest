@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Cyfrowe menu dla restauracji.",
+    headline: "Cyfrowe menu, które sprzedaje.",
     cta: "Utwórz menu cyfrowe",
-    sub: "Cyfrowe menu restauracji od IQ Rest: interaktywne, wielojęzyczne, z aktualizacją cen na żywo. Goście skanują QR, zamawiają, płacą. Oszczędzasz na druku.",
+    sub: "Twoje papierowe menu online: zdjęcia, alergeny, ceny na żywo i tłumaczenie na 35 języków. Bez druku.",
   },
 
   scan: {

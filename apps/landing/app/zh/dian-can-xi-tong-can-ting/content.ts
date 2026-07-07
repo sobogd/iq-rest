@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "餐厅数字化点餐系统：客人自助，服务员高效",
+    headline: "从餐桌到厨房下单。",
     cta: "设置在线点餐",
-    sub: "客人通过餐桌上的 QR 菜单下单,或者服务员从手机或平板电脑接单 — 订单在数秒内到达厨房显示屏。带彩色编码餐桌的大堂地图、账单分割、灵活选项和评论。无需便笺本,无需往返于吧台。",
+    sub: "顾客在桌边或员工用任意设备下单 — 直达厨房。桌位图、账单拆分。",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "服务员在餐桌上从智能手机接单 — 订单到达厨房显示屏",
   },

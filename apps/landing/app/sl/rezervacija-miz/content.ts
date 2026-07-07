@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitalna rezervacija miz 24/7",
+    headline: "Rezervacije 24/7, brez klicev.",
     cta: "Nastavi rezervacije miz",
-    sub: "Gostje rezervirajo mize 24/7 prek QR jedilnika ali povezave. IQ Rest avtomatizira potrditve in opomnike, kar pomeni več rezervacij in manj klicev med konicami.",
+    sub: "Gostje rezervirajo 24/7 prek QR menija ali povezave. Koledar po mizah, samodejne potrditve in opomniki.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Hostesa upravlja rezervacije s tablice pri vhodu v restavracijo",
   },

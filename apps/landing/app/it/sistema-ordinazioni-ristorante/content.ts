@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Sistema ordini digitale per ristoranti",
+    headline: "Ordini dal tavolo alla cucina.",
     cta: "Configura gli ordini online",
-    sub: "Il sistema di ordinazioni per ristorante IQ Rest: i tuoi ospiti ordinano dal menu QR, i camerieri da mobile. Comande subito in cucina, tavoli aggiornati in tempo reale.",
+    sub: "Il cliente ordina al tavolo o il cameriere da qualsiasi dispositivo — dritto in cucina. Mappa sala e conto diviso.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Cameriere prende un'ordinazione al tavolo da uno smartphone — la comanda arriva sul display di cucina",
   },

@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Votre restaurant passe au numérique.",
+    headline: "Menu digital qui vend plus.",
     cta: "Créer le menu digital",
-    sub: "Créez votre menu numérique pour restaurants avec photos, allergènes et prix. Vos clients consultent la carte dans leur langue, vous économisez l'impression.",
+    sub: "Votre menu papier en ligne : photos, allergènes, prix en direct et traduction en 35 langues. Sans réimpression.",
   },
 
   scan: {

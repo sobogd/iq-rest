@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Ravintolan digitaalinen QR-menu",
+    headline: "QR-lista: skannaa ja tilaa.",
     cta: "Luo QR-menu",
-    sub: "IQ Restin QR-koodi ruokalista avautuu heti asiakkaan puhelimeen: kuvat, allergeenit, ajantasaiset hinnat ja käännökset 35 kielelle. Ei sovelluksia, ei tulostusta.",
+    sub: "Asiakas skannaa pöydän QR-koodin, näkee kuvat ja allergeenit 35 kielellä ja tilaa — ilman sovellusta.",
   },
 
   scan: {

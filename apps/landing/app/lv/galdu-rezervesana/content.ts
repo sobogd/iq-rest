@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Galdu rezervēšana 24/7: viesi digitāli!",
+    headline: "Rezervācija 24/7, bez zvaniem.",
     cta: "Iestatīt galdiņu rezervācijas",
-    sub: "Viesi rezervē galdus 24/7, izmantojot QR ēdienkarti vai tiešo saiti. Automātiskas apstiprināšanas un atgādinājumi nodrošina, ka neviena galdu rezervēšana netiek zaudēta.",
+    sub: "Viesi rezervē 24/7 caur QR ēdienkarti vai saiti. Kalendārs pa galdiem, automātiski apstiprinājumi un atgādinājumi.",
     imageSrc: "/landing/feature-reservation.webp",
     imageAlt: "Saimniece pārvalda rezervācijas no planšetdatora pie restorāna ieejas",
   },

@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitaalne köögiekraan (KDS) restoranile",
+    headline: "KDS: tellimused otse kokale.",
     cta: "Seadista köögiekraan",
-    sub: "IQ Resti köögiekraaniga (KDS) kaovad paberitellimused. Saali- ja QR-menüü tellimused jõuavad kohe ekraanile koos märkuste ja taimeriga. Muuda olekut ühe puudutusega.",
+    sub: "Tellimused ilmuvad köögiekraanile kohe: märkmed, allergeenid ja taimer. Muuda staatust ühe puudutusega.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Professionaalne köök vasalkujul oleva tahvelarvutiga, mis kuvab köögiekraani aktiivsete tellimustega",
   },

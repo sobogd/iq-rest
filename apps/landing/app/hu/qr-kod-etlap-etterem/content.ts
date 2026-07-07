@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitális étterem: QR-kódos étlap",
+    headline: "QR étlap: szkenneld, rendelj.",
     cta: "QR-menü létrehozása",
-    sub: "Vendégei a QR-kódos étlapot azonnal elérik telefonjukon: ételfotók, allergének, friss árak és 35 nyelvre fordítás. Nincs appletöltés, nincs többé étlapnyomtatás. IQ Rest.",
+    sub: "A vendég beolvassa az asztal QR-kódját, fotókat és allergéneket lát 35 nyelven, és rendel — app nélkül.",
   },
 
   scan: {

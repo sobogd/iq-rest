@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Köksskärm (KDS): Digitalisera köket",
+    headline: "KDS: beställningar direkt till kock.",
     cta: "Konfigurera köksdisplay",
-    sub: "IQ Rest köksskärm (KDS): digitala ordrar från sal & QR-meny direkt till köket. Slipp pappersnotor, hantera allergener & status enkelt på surfplatta/smartphone.",
+    sub: "Beställningar når köksskärmen direkt: noteringar, allergener och timer. Byt status med en knapptryckning.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Professionellt kök med en surfplatta på ett mässingsstativ som visar köksskärmen med aktiva beställningar",
   },

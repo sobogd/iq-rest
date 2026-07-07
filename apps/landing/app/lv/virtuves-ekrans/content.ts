@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitālais virtuves ekrāns (KDS)",
+    headline: "KDS: pasūtījumi tieši pavāram.",
     cta: "Iestatīt virtuves ekrānu",
-    sub: "IQ Rest virtuves ekrāns atbrīvo no papīra! Pasūtījumi no zāles vai QR ēdienkartes uzreiz nonāk ekrānā ar piezīmēm, alergēniem un taimeri. Mainiet statusu ar vienu pieskārienu.",
+    sub: "Pasūtījumi uzreiz parādās virtuves ekrānā: piezīmes, alergēni un taimeris. Maini statusu ar vienu pieskārienu.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Profesionāla virtuve ar planšetdatoru uz misiņa stenda, kas rāda virtuves ekrānu ar aktīviem pasūtījumiem",
   },

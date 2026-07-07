@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS: Orduithe Digiteacha Láithreach",
+    headline: "KDS: orduithe díreach don chócaire.",
     cta: "Socraigh scáileán cistine",
-    sub: "Slán le páipéar! Sroicheann orduithe QR/urlár an scáileán cistine IQ Rest láithreach, le nótaí, ailléirginí & uaineadóir. Athraigh stádas le sconna.",
+    sub: "Tagann orduithe ar scáileán na cistine láithreach: nótaí, ailléirginí agus amadóir. Athraigh an stádas le tapadh amháin.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Cistin ghairmiúil le táibléad ar sheasamh prás a thaispeánann scáileán na cistine le horduithe gníomhacha",
   },

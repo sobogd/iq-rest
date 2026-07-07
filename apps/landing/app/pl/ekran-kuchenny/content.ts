@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "KDS: cyfrowe zamówienia na ekranie kuchni",
+    headline: "KDS: zamówienia prosto do kuchni.",
     cta: "Skonfiguruj ekran kuchenny",
-    sub: "Ekran kuchenny IQ Rest to koniec papieru! Zamówienia z sali lub QR trafiają na KDS z notatkami, alergenami i timerem. Zmieniaj status jednym dotknięciem.",
+    sub: "Zamówienia trafiają na ekran kuchni natychmiast: notatki, alergeny i timer. Zmiana statusu jednym dotknięciem.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Profesjonalna kuchnia z tabletem na mosiężnym stojaku pokazującym ekran kuchenny z aktywnymi zamówieniami",
   },

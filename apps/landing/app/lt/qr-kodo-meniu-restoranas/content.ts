@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Skaitmeninis meniu restoranams",
+    headline: "QR meniu: skenuok ir užsakyk.",
     cta: "Sukurti QR meniu",
-    sub: "IQ Rest QR kodo meniu: svečias nuskaito, o jūs mėgaujatės atnaujintomis kainomis, alergenais, nuotraukomis ir vertimu į 35 kalbas. Jokio perspausdinimo!",
+    sub: "Svečias nuskaito stalo QR kodą, mato nuotraukas ir alergenus 35 kalbomis ir užsako — be programėlės.",
   },
 
   scan: {

@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitálne menu pre reštaurácie",
+    headline: "QR menu: naskenuj a objednaj.",
     cta: "Vytvoriť QR menu",
-    sub: "S IQ Rest získate QR menu pre reštaurácie, ktoré hostia otvoria mobilom. Fotky, alergény, aktuálne ceny, 35 jazykov. Žiadne appky, žiadna tlač.",
+    sub: "Hosť naskenuje QR na stole, vidí fotky a alergény v 35 jazykoch a objedná — bez aplikácie.",
   },
 
   scan: {

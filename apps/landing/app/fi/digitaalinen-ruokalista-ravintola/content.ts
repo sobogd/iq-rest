@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Ravintolasi digitaaliseksi IQ Restillä",
+    headline: "Digitaalinen lista, joka myy.",
     cta: "Luo digitaalinen menu",
-    sub: "IQ Restin digitaalinen ruokalista tuo kuvat, allergeenit ja reaaliaikaiset hintapäivitykset verkkoon. Vieraat näkevät menun omalla kielellään, säästät tulostuskuluissa.",
+    sub: "Paperinen ruokalistasi verkossa: kuvat, allergeenit, hinnat reaaliajassa ja käännös 35 kielelle. Ei uusintapainatusta.",
   },
 
   scan: {

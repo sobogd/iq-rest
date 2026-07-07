@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Gerðu veitingastaðinn stafrænan",
+    headline: "Stafrænn matseðill sem selur.",
     cta: "Búa til stafrænan matseðil",
-    sub: "Stafrænn matseðill frá IQ Rest: birtu myndir, ofnæmisvalda og uppfærðu verð í rauntíma. Gestir sjá matseðilinn á sínu máli, þú sparar prentkostnað.",
+    sub: "Pappírsmatseðillinn þinn á netinu: myndir, ofnæmisvaldar, verð í rauntíma og þýðing á 35 tungumál. Engin endurprentun.",
   },
 
   scan: {

@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Commandes digitales pour votre restaurant",
+    headline: "Commandes de la table à la cuisine.",
     cta: "Configurer la commande en ligne",
-    sub: "IQ Rest est le système de commandes pour restaurant qui optimise tout: menus QR, prise de commande mobile (serveur), écran de cuisine, gestion de table. Fini les carnets!",
+    sub: "Le client commande à table ou le serveur sur tout appareil — direct en cuisine. Plan de salle et partage d'addition.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Un serveur prend une commande à table depuis un smartphone — la commande arrive sur l'écran de cuisine",
   },

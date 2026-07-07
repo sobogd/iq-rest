@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Display bucătărie digital: comenzi instant",
+    headline: "KDS: comenzi direct la bucătar.",
     cta: "Configurează ecranul de bucătărie",
-    sub: "Comenzile din sală sau meniul QR ajung instant pe display bucătărie — cu note, alergeni și cronometru. Schimbi statusul printr-o atingere, pe tabletă sau smartphone.",
+    sub: "Comenzile ajung instant pe ecranul de bucătărie: notițe, alergeni și cronometru. Schimbi statusul dintr-o atingere.",
     imageSrc: "/landing/feature-kitchen.webp",
     imageAlt: "Bucătărie profesională cu o tabletă pe un suport de alamă afișând display-ul bucătăriei cu comenzi active",
   },

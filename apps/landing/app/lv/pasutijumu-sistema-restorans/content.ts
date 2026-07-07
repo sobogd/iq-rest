@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitāla pasūtījumu sistēma restorānam",
+    headline: "Pasūtījumi no galda uz virtuvi.",
     cta: "Iestatīt tiešsaistes pasūtījumus",
-    sub: "IQ Rest pasūtījumu sistēma restorānam: viesi pasūta ar QR, viesmīļi ar telefonu. Pasūtījumi uz virtuves ekrāna, galdu plāns, rēķinu sadalīšana. Ātri un bez papīra.",
+    sub: "Viesis pasūta pie galda vai viesmīlis no jebkuras ierīces — tieši virtuvē. Zāles plāns, rēķina dalīšana.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Viesmīlis pieņem pasūtījumu pie galda no viedtālruņa — pasūtījums nonāk virtuves ekrānā",
   },

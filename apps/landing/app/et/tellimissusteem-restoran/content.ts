@@ -19,9 +19,9 @@ export const CONTENT: FeatureContent = {
   },
 
   hero: {
-    headline: "Digitaalne tellimissüsteem restoranile",
+    headline: "Tellimused lauast kööki.",
     cta: "Seadista online-tellimused",
-    sub: "IQ Resti tellimissüsteem restoranile: külalised tellivad QR-menüüga, kelner tahvelarvutist. Tellimused kööki sekunditega. Saaliplaan, arvete jagamine, paindlikud valikud.",
+    sub: "Külaline tellib lauas või teenindaja mis tahes seadmest — otse kööki. Saaliplaan ja arve jagamine.",
     imageSrc: "/landing/feature-orders.webp",
     imageAlt: "Kelner võtab lauas tellimuse vastu nutitelefonist — tellimus jõuab köögiekraanile",
   },
