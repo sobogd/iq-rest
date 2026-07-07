@@ -12,7 +12,10 @@ export const CONTENT: FeatureContent = {
   locale: "ga",
   slug: "biachlar-digiteach-bialann",
   trackPrefix: "l_ga_digital",
-  hideFeatureHeading: true,
+  featureHeading: {
+    heading: "Níos mó ná biachlár",
+    sub: "Gach rud a dhéanann seirbhís as biachlár QR do d'urlár agus do do chistin.",
+  },
 
   meta: {
     title: "Biachlár digiteach do bhialanna | IQ Rest",

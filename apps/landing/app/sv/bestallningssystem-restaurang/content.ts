@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "sv",
   slug: "bestallningssystem-restaurang",
   trackPrefix: "l_sv_orders",
+  featureHeading: {
+    heading: "Mer än beställning",
+    sub: "Allt som gör en skanning till en betald beställning i köket.",
+  },
 
   meta: {
     title: "Beställningssystem för restaurang — gäst och servitör | IQ Rest",

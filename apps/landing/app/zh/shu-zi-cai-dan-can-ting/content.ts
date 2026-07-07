@@ -12,7 +12,10 @@ export const CONTENT: FeatureContent = {
   locale: "zh",
   slug: "shu-zi-cai-dan-can-ting",
   trackPrefix: "l_zh_digital",
-  hideFeatureHeading: true,
+  featureHeading: {
+    heading: "不止是一份菜单",
+    sub: "让二维码菜单成为前厅与后厨服务的一切功能。",
+  },
 
   meta: {
     title: "餐厅数字菜单 | IQ Rest",

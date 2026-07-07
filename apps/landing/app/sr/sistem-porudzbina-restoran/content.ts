@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "sr",
   slug: "sistem-porudzbina-restoran",
   trackPrefix: "l_sr_orders",
+  featureHeading: {
+    heading: "Više od poručivanja",
+    sub: "Sve što skeniranje pretvara u plaćenu porudžbinu u kuhinji.",
+  },
 
   meta: {
     title: "Sistem porudžbina za restoran — gost i konobar | IQ Rest",

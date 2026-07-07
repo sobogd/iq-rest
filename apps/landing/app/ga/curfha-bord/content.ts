@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "ga",
   slug: "curfha-bord",
   trackPrefix: "l_ga_bookings",
+  featureHeading: {
+    heading: "Níos mó ná áirithint",
+    sub: "Gach rud a líonann do bhoird gan glao amháin a dhéanamh.",
+  },
 
   meta: {
     title: "Curfha bord 24/7 do bhialanna | IQ Rest",

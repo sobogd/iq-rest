@@ -133,9 +133,9 @@ export const TEXTS: LandingTexts = {
 
   pricingHero: {
     chips: ["Jutalék nélkül", "Szerződés nélkül", "14 nap ingyenes"],
-    heading: "Árak.",
-    headingAccent: "Rejtett díjak nélkül.",
-    sub: "Egyetlen átlátható havi díj. Nincs százalék a rendelésekre és nincs aggregátor jutalék. Lemondja az előfizetést bármikor.",
+    heading: "Egyszerű árak.",
+    headingAccent: "Nincs meglepetés.",
+    sub: "Egyetlen havi díj. Nincs jutalék a rendelésekre. Bármikor lemondható.",
     popularBadge: "Népszerű",
     perMonthSuffix: "/hó",
     whenAnnualTemplate: "éves számlázás · {total} évente",

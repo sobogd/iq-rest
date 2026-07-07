@@ -12,7 +12,10 @@ export const CONTENT: FeatureContent = {
   locale: "da",
   slug: "digitalt-menu-restaurant",
   trackPrefix: "l_da_digital",
-  hideFeatureHeading: true,
+  featureHeading: {
+    heading: "Mere end et menukort",
+    sub: "Alt det, der gør et QR-menukort til en service for din sal og dit køkken.",
+  },
 
   meta: {
     title: "Digitalt menukort til restauranter | IQ Rest",

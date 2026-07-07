@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "lt",
   slug: "uzsakymu-sistema-restoranas",
   trackPrefix: "l_lt_orders",
+  featureHeading: {
+    heading: "Daugiau nei užsakymai",
+    sub: "Viskas, kas nuskaitymą paverčia apmokėtu užsakymu virtuvėje.",
+  },
 
   meta: {
     title: "Užsakymų sistema restoranui — svečias ir padavėjas | IQ Rest",

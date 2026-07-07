@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "lv",
   slug: "galdu-rezervesana",
   trackPrefix: "l_lv_bookings",
+  featureHeading: {
+    heading: "Vairāk nekā rezervācija",
+    sub: "Viss, kas piepilda jūsu galdus bez neviena zvana.",
+  },
 
   meta: {
     title: "Galdu rezervēšana 24/7 restorāniem | IQ Rest",

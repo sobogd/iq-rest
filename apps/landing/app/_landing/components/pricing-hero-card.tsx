@@ -32,8 +32,6 @@ export function PlanCard({
   tagline,
   planId,
   features,
-  popular,
-  popularBadge,
   perMonthSuffix,
   whenAnnualTemplate,
   orMonthlyTemplate,
@@ -58,17 +56,7 @@ export function PlanCard({
   const savingsLine = savingsTemplate.replace("{amount}", formatMoney(savings, currency));
 
   return (
-    <div
-      className={`relative rounded-lg border p-6 sm:p-7 flex flex-col gap-6 ${
-        popular ? "border-primary/60 bg-primary/5" : "border-border bg-card"
-      }`}
-    >
-      {popular ? (
-        <span className="absolute -top-3 right-5 px-2.5 py-1 rounded-md bg-primary text-primary-foreground text-[11px] font-semibold uppercase tracking-wider">
-          {popularBadge}
-        </span>
-      ) : null}
-
+    <div className="relative rounded-2xl p-6 sm:p-7 flex flex-col gap-6 shadow-xl ring-1 ring-border/50 bg-gradient-to-br from-primary/10 via-primary/[0.03] to-primary/[0.03]">
       <div className="flex flex-col gap-2">
         <p className="text-sm font-semibold uppercase tracking-widest text-primary">{name}</p>
         <p className="text-base text-muted-foreground leading-snug">{tagline}</p>

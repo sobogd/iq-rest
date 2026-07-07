@@ -12,7 +12,10 @@ export const CONTENT: FeatureContent = {
   locale: "et",
   slug: "digitaalne-menuu-restoran",
   trackPrefix: "l_et_digital",
-  hideFeatureHeading: true,
+  featureHeading: {
+    heading: "Rohkem kui menüü",
+    sub: "Kõik, mis muudab QR-menüü teenuseks sinu saali ja köögi jaoks.",
+  },
 
   meta: {
     title: "Digitaalne menüü restoranidele | IQ Rest",

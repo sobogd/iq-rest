@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "hu",
   slug: "asztalfoglalas",
   trackPrefix: "l_hu_bookings",
+  featureHeading: {
+    heading: "Több mint egy foglalás",
+    sub: "Minden, ami megtölti az asztalaidat egyetlen telefonhívás nélkül.",
+  },
 
   meta: {
     title: "Asztalfoglalás 24/7 éttermeknek | IQ Rest",

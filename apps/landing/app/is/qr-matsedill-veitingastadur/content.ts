@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "is",
   slug: "qr-matsedill-veitingastadur",
   trackPrefix: "l_is_qr",
+  featureHeading: {
+    heading: "Ekki bara QR-kóði",
+    sub: "Allt sem ein skönnun verður að fyrir gesti þína og salinn.",
+  },
 
   meta: {
     title: "QR matseðill fyrir veitingastaði | IQ Rest",

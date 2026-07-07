@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "sv",
   slug: "kok-skarm",
   trackPrefix: "l_sv_kds",
+  featureHeading: {
+    heading: "Mer än en skärm",
+    sub: "Allt som håller köket synkroniserat, nota för nota.",
+  },
 
   meta: {
     title: "Köksskärm (KDS) för restauranger | IQ Rest",

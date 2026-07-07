@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "el",
   slug: "othoni-mageirio",
   trackPrefix: "l_el_kds",
+  featureHeading: {
+    heading: "Κάτι παραπάνω από μια οθόνη",
+    sub: "Όλα όσα κρατούν την κουζίνα συντονισμένη, παραγγελία με παραγγελία.",
+  },
 
   meta: {
     title: "Οθόνη κουζίνας (KDS) για εστιατόρια | IQ Rest",

@@ -12,7 +12,10 @@ export const CONTENT: FeatureContent = {
   locale: "hu",
   slug: "digitalis-etlap-etterem",
   trackPrefix: "l_hu_digital",
-  hideFeatureHeading: true,
+  featureHeading: {
+    heading: "Több mint egy étlap",
+    sub: "Minden, ami a QR-étlapot az étterem és a konyha szolgáltatásává varázsolja.",
+  },
 
   meta: {
     title: "Digitális étlap éttermeknek | IQ Rest",

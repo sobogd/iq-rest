@@ -133,9 +133,9 @@ export const TEXTS: LandingTexts = {
 
   pricingHero: {
     chips: ["Bez provizije", "Bez ugovora", "14 dana besplatno"],
-    heading: "Cene.",
-    headingAccent: "Bez skrivenih troškova.",
-    sub: "Jedna transparentna mesečna naknada. Bez procenta od porudžbina i bez provizija agregatora. Otkažite pretplatu bilo kada.",
+    heading: "Jednostavne cene.",
+    headingAccent: "Bez iznenađenja.",
+    sub: "Jedna mesečna naknada. Bez procenta od porudžbina. Otkažite bilo kada.",
     popularBadge: "Popularno",
     perMonthSuffix: "/mes.",
     whenAnnualTemplate: "godišnji obračun · {total} godišnje",

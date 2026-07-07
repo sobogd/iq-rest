@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "is",
   slug: "pontunarkerfi-veitingastaur",
   trackPrefix: "l_is_orders",
+  featureHeading: {
+    heading: "Meira en pöntun",
+    sub: "Allt sem breytir skönnun í greidda pöntun í eldhúsinu.",
+  },
 
   meta: {
     title: "Pöntunarkerfi fyrir veitingastað — gestur og þjónn | IQ Rest",

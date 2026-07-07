@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "is",
   slug: "eldhus-skjar",
   trackPrefix: "l_is_kds",
+  featureHeading: {
+    heading: "Meira en skjár",
+    sub: "Allt sem heldur eldhúsinu í takt, pöntun fyrir pöntun.",
+  },
 
   meta: {
     title: "Eldhússkjár (KDS) fyrir veitingastaði | IQ Rest",

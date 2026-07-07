@@ -133,9 +133,9 @@ export const TEXTS: LandingTexts = {
 
   pricingHero: {
     chips: ["Be komisinio", "Be sutarčių", "14 dienų nemokamai"],
-    heading: "Kainos.",
-    headingAccent: "Be paslėptų mokesčių.",
-    sub: "Vienas skaidrus mėnesio mokestis. Be procentų nuo užsakymų ir be agregatorių komisinių. Atšaukite prenumeratą bet kada.",
+    heading: "Paprastos kainos.",
+    headingAccent: "Jokių netikėtumų.",
+    sub: "Vienas mėnesio mokestis. Be procentų nuo užsakymų. Atšaukite bet kada.",
     popularBadge: "Populiarus",
     perMonthSuffix: "/mėn.",
     whenAnnualTemplate: "metinis atsiskaitymas · {total} per metus",

@@ -133,9 +133,9 @@ export const TEXTS: LandingTexts = {
 
   pricingHero: {
     chips: ["Bez komisijas", "Bez līgumiem", "14 dienas bez maksas"],
-    heading: "Cenas.",
-    headingAccent: "Bez slēptām maksām.",
-    sub: "Viena caurspīdīga ikmēneša maksa. Bez procentiem no pasūtījumiem un bez agregatoru komisijas. Atceliet abonēšanu jebkurā laikā.",
+    heading: "Vienkāršas cenas.",
+    headingAccent: "Bez pārsteigumiem.",
+    sub: "Viena ikmēneša maksa. Bez procentiem no pasūtījumiem. Atceliet jebkurā laikā.",
     popularBadge: "Populārs",
     perMonthSuffix: "/mēn.",
     whenAnnualTemplate: "ikgadējais rēķins · {total} gadā",

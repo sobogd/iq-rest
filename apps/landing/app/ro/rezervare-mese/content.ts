@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "ro",
   slug: "rezervare-mese",
   trackPrefix: "l_ro_bookings",
+  featureHeading: {
+    heading: "Mai mult decât o rezervare",
+    sub: "Tot ce îți umple mesele fără niciun apel telefonic.",
+  },
 
   meta: {
     title: "Rezervare mese 24/7 pentru restaurante | IQ Rest",

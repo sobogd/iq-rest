@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "et",
   slug: "tellimissusteem-restoran",
   trackPrefix: "l_et_orders",
+  featureHeading: {
+    heading: "Enam kui tellimine",
+    sub: "Kõik, mis muudab skannimise makstud tellimuseks köögis.",
+  },
 
   meta: {
     title: "Tellimissüsteem restoranile — külaline ja kelner | IQ Rest",

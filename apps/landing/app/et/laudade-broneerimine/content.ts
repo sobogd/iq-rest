@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "et",
   slug: "laudade-broneerimine",
   trackPrefix: "l_et_bookings",
+  featureHeading: {
+    heading: "Enam kui broneering",
+    sub: "Kõik, mis täidab su lauad ilma ühegi kõneta.",
+  },
 
   meta: {
     title: "Laudade broneerimine 24/7 restoranidele | IQ Rest",

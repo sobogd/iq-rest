@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "hu",
   slug: "rendelesi-rendszer-etterem",
   trackPrefix: "l_hu_orders",
+  featureHeading: {
+    heading: "Több mint rendelés",
+    sub: "Minden, ami a beolvasásból fizetett rendelést csinál a konyhában.",
+  },
 
   meta: {
     title: "Rendelési rendszer étteremnek — vendég és pincér | IQ Rest",

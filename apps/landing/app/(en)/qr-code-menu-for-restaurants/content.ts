@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "en",
   slug: "qr-code-menu-for-restaurants",
   trackPrefix: "l_en_qr",
+  featureHeading: {
+    heading: "Not just a QR code",
+    sub: "Everything one scan turns into for your guests and your floor.",
+  },
 
   meta: {
     title: "QR Code Menu for Restaurants | IQ Rest",

@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "ar",
   slug: "hajz-tawilat",
   trackPrefix: "l_ar_bookings",
+  featureHeading: {
+    heading: "أكثر من مجرد حجز",
+    sub: "كل ما يملأ طاولاتك دون مكالمة واحدة.",
+  },
 
   meta: {
     title: "حجز طاولات 24/7 للمطاعم | IQ Rest",

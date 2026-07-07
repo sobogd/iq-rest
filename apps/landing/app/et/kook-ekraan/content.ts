@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "et",
   slug: "kook-ekraan",
   trackPrefix: "l_et_kds",
+  featureHeading: {
+    heading: "Enam kui ekraan",
+    sub: "Kõik, mis hoiab köögi tellimuse haaval ühes taktis.",
+  },
 
   meta: {
     title: "Köögiekraan (KDS) restoranidele | IQ Rest",

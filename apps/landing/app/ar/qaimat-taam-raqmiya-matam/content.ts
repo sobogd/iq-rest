@@ -12,7 +12,10 @@ export const CONTENT: FeatureContent = {
   locale: "ar",
   slug: "qaimat-taam-raqmiya-matam",
   trackPrefix: "l_ar_digital",
-  hideFeatureHeading: true,
+  featureHeading: {
+    heading: "أكثر من مجرد قائمة",
+    sub: "كل ما يحوّل قائمة QR إلى خدمة لصالتك ومطبخك.",
+  },
 
   meta: {
     title: "قائمة طعام رقمية للمطاعم | IQ Rest",

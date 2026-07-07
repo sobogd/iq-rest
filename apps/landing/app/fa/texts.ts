@@ -133,9 +133,9 @@ export const TEXTS: LandingTexts = {
 
   pricingHero: {
     chips: ["بدون کمیسیون", "بدون قرارداد", "۱۴ روز رایگان"],
-    heading: "قیمت‌ها.",
-    headingAccent: "بدون هزینه پنهان.",
-    sub: "یک هزینه ماهانه شفاف. بدون درصد از سفارش‌ها و بدون کمیسیون واسطه‌ها. اشتراک را در هر زمان لغو کنید.",
+    heading: "قیمت‌گذاری ساده.",
+    headingAccent: "بدون غافلگیری.",
+    sub: "یک هزینه ماهانه. بدون کمیسیون روی سفارش‌ها. هر زمان لغو کنید.",
     popularBadge: "محبوب",
     perMonthSuffix: "/ماه",
     whenAnnualTemplate: "صورتحساب سالانه · {total} در سال",

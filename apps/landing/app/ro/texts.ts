@@ -133,9 +133,9 @@ export const TEXTS: LandingTexts = {
 
   pricingHero: {
     chips: ["Fără comision", "Fără contracte", "14 zile gratuit"],
-    heading: "Prețuri.",
-    headingAccent: "Fără costuri ascunse.",
-    sub: "O singură taxă lunară transparentă. Fără procent din comenzi și fără comisioane de agregatori. Anulați abonamentul oricând.",
+    heading: "Prețuri simple.",
+    headingAccent: "Fără surprize.",
+    sub: "O singură taxă lunară. Fără comision din comenzi. Anulați oricând.",
     popularBadge: "Popular",
     perMonthSuffix: "/lună",
     whenAnnualTemplate: "facturare anuală · {total} pe an",

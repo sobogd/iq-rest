@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "zh",
   slug: "qr-cai-dan-can-ting",
   trackPrefix: "l_zh_qr",
+  featureHeading: {
+    heading: "不只是一个二维码",
+    sub: "一次扫码，为你的客人和前厅带来的一切。",
+  },
 
   meta: {
     title: "餐厅二维码菜单 | IQ Rest",

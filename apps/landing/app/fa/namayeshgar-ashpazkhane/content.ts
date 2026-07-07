@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "fa",
   slug: "namayeshgar-ashpazkhane",
   trackPrefix: "l_fa_kds",
+  featureHeading: {
+    heading: "فراتر از یک نمایشگر",
+    sub: "هر آنچه آشپزخانه را سفارش به سفارش هماهنگ نگه می‌دارد.",
+  },
 
   meta: {
     title: "نمایشگر آشپزخانه (KDS) برای رستوران‌ها | IQ Rest",

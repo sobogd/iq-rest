@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "ga",
   slug: "coras-orduithe-bialann",
   trackPrefix: "l_ga_orders",
+  featureHeading: {
+    heading: "Níos mó ná ordú",
+    sub: "Gach rud a iompaíonn scanadh ina ordú íoctha sa chistin.",
+  },
 
   meta: {
     title: "Córas orduithe do bhialann — aoi agus freastalaí | IQ Rest",

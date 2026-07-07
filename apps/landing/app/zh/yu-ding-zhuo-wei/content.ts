@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "zh",
   slug: "yu-ding-zhuo-wei",
   trackPrefix: "l_zh_bookings",
+  featureHeading: {
+    heading: "不只是预订",
+    sub: "无需一通电话，就能坐满你的餐桌的一切。",
+  },
 
   meta: {
     title: "餐厅 24/7 餐桌预订 | IQ Rest",

@@ -12,7 +12,10 @@ export const CONTENT: FeatureContent = {
   locale: "el",
   slug: "psifiako-menou-estiatoria",
   trackPrefix: "l_el_digital",
-  hideFeatureHeading: true,
+  featureHeading: {
+    heading: "Κάτι παραπάνω από ένα μενού",
+    sub: "Ό,τι μετατρέπει ένα μενού QR σε υπηρεσία για την αίθουσα και την κουζίνα σας.",
+  },
 
   meta: {
     title: "Ψηφιακό μενού για εστιατόρια | IQ Rest",

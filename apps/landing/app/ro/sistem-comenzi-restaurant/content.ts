@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "ro",
   slug: "sistem-comenzi-restaurant",
   trackPrefix: "l_ro_orders",
+  featureHeading: {
+    heading: "Mai mult decât o comandă",
+    sub: "Tot ce transformă o scanare într-o comandă plătită la bucătărie.",
+  },
 
   meta: {
     title: "Sistem de comenzi pentru restaurant — oaspete și ospătar | IQ Rest",

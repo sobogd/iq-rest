@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "fi",
   slug: "poytavaraus",
   trackPrefix: "l_fi_bookings",
+  featureHeading: {
+    heading: "Enemmän kuin varaus",
+    sub: "Kaikki, mikä täyttää pöytäsi ilman yhtäkään puhelua.",
+  },
 
   meta: {
     title: "Pöytävaraus 24/7 ravintoloille | IQ Rest",

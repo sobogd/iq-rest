@@ -166,8 +166,6 @@ export function LandingHero({
             {withBreaks(titleAccent ? `${title} ${titleAccent}` : title)}
           </h1>
 
-          <div className={`h-[5px] w-20 rounded-full bg-gradient-to-r from-[hsl(9,100%,58%)] to-[hsl(35,95%,55%)] mb-6 ${centered ? "mx-auto" : ""}`} />
-
           <p className="text-base sm:text-lg lg:text-xl text-white/80 leading-snug">
             {withBreaks(sub)}
           </p>

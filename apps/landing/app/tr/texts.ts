@@ -133,9 +133,9 @@ export const TEXTS: LandingTexts = {
 
   pricingHero: {
     chips: ["Komisyon yok", "Sözleşme yok", "14 gün ücretsiz"],
-    heading: "Fiyatlar.",
-    headingAccent: "Gizli ücret yok.",
-    sub: "Tek şeffaf aylık ücret. Siparişlerden yüzde yok, aracı komisyonu yok. Aboneliği istediğiniz zaman iptal edin.",
+    heading: "Basit fiyatlar.",
+    headingAccent: "Sürpriz yok.",
+    sub: "Tek aylık ücret. Siparişlerden komisyon yok. İstediğiniz zaman iptal edin.",
     popularBadge: "Popüler",
     perMonthSuffix: "/ay",
     whenAnnualTemplate: "yıllık faturalandırma · yılda {total}",

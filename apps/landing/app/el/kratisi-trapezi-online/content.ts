@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "el",
   slug: "kratisi-trapezi-online",
   trackPrefix: "l_el_bookings",
+  featureHeading: {
+    heading: "Κάτι παραπάνω από μια κράτηση",
+    sub: "Όλα όσα γεμίζουν τα τραπέζια σας χωρίς ούτε ένα τηλεφώνημα.",
+  },
 
   meta: {
     title: "Κράτηση τραπεζιών 24/7 για εστιατόρια | IQ Rest",

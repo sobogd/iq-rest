@@ -12,7 +12,10 @@ export const CONTENT: FeatureContent = {
   locale: "is",
   slug: "stafraen-matsedill-veitingastaur",
   trackPrefix: "l_is_digital",
-  hideFeatureHeading: true,
+  featureHeading: {
+    heading: "Meira en matseðill",
+    sub: "Allt sem gerir QR-matseðil að þjónustu fyrir salinn og eldhúsið þitt.",
+  },
 
   meta: {
     title: "Stafrænn matseðill fyrir veitingastaði | IQ Rest",

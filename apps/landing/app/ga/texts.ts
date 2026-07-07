@@ -133,9 +133,9 @@ export const TEXTS: LandingTexts = {
 
   pricingHero: {
     chips: ["Gan choimisiún", "Gan chonarthaí", "14 lá saor in aisce"],
-    heading: "Praghsanna.",
-    headingAccent: "Gan táillí folaithe.",
-    sub: "Táille mhíosúil shoiléir amháin. Gan céatadán ar orduithe ná coimisiúin comhthiomsóra. Cealaigh an síntiús aon uair.",
+    heading: "Praghsáil shimplí.",
+    headingAccent: "Gan aon iontas.",
+    sub: "Táille mhíosúil amháin. Gan choimisiún ar orduithe. Cealaigh aon uair.",
     popularBadge: "Coitianta",
     perMonthSuffix: "/mí",
     whenAnnualTemplate: "bille bliantúil · {total} sa bhliain",

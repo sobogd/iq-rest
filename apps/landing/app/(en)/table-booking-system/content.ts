@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "en",
   slug: "table-booking-system",
   trackPrefix: "l_en_bookings",
+  featureHeading: {
+    heading: "More than a booking",
+    sub: "Everything that fills your tables without a single call.",
+  },
 
   meta: {
     title: "Table Booking 24/7 for Restaurants | IQ Rest",

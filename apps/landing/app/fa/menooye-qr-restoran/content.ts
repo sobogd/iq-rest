@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "fa",
   slug: "menooye-qr-restoran",
   trackPrefix: "l_fa_qr",
+  featureHeading: {
+    heading: "فراتر از یک کد QR",
+    sub: "هر آنچه یک اسکن برای مهمانان و سالن شما به آن تبدیل می‌شود.",
+  },
 
   meta: {
     title: "منوی کیو آر کد برای رستوران‌ها | IQ Rest",

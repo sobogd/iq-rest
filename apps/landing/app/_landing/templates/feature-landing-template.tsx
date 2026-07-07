@@ -35,7 +35,8 @@ export function FeatureLandingTemplate({
   content,
   chrome,
 }: FeatureLandingTemplateProps) {
-  const { locale, subFeatures, hero, scan, faq, trackPrefix, hideFeatureHeading } = content;
+  const { locale, subFeatures, hero, scan, faq, trackPrefix, hideFeatureHeading, featureHeading } = content;
+  const featureIntro = featureHeading ?? chrome.featureHighlights;
   // Locale-stable prefix/page so every language version fires the same events.
   const prefix = stablePrefix(trackPrefix);
   const page = featureKey(trackPrefix);
@@ -93,17 +94,17 @@ export function FeatureLandingTemplate({
 
       <div id="features">
       <Section dataSection="subfeatures" noContainer className="!py-16">
-        {chrome.featureHighlights && !hideFeatureHeading ? (
+        {featureIntro && !hideFeatureHeading ? (
           <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
             <h2 className="text-[2rem] sm:text-[2.5rem] lg:text-[3rem] font-medium tracking-tight leading-[1.05] mb-4">
-              {chrome.featureHighlights.heading}
+              {featureIntro.heading}
             </h2>
             <p className="text-base sm:text-lg lg:text-xl text-muted-foreground/70 leading-snug">
-              {chrome.featureHighlights.sub}
+              {featureIntro.sub}
             </p>
           </div>
         ) : null}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
           {subFeatures.map((row) => (
             <FeatureCard key={row.heading} row={row} />
           ))}
@@ -159,12 +160,13 @@ export function FeatureLandingTemplate({
         />
       </Section>
 
-      {helpBanner ? <HelpBannerSection banner={helpBanner} source="feature" /> : null}
+      {helpBanner ? <HelpBannerSection banner={helpBanner} source="feature" accent={false} /> : null}
 
       <Section
         as="footer"
         dataSection="footer"
         noContainer
+        accent
         className="!py-6 sm:!py-8"
       >
         <LandingFooter

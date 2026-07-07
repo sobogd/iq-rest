@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "sl",
   slug: "rezervacija-miz",
   trackPrefix: "l_sl_bookings",
+  featureHeading: {
+    heading: "Več kot rezervacija",
+    sub: "Vse, kar napolni vaše mize brez enega samega klica.",
+  },
 
   meta: {
     title: "Rezervacija miz 24/7 za restavracije | IQ Rest",

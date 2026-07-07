@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "pt",
   slug: "sistema-de-pedidos-restaurante",
   trackPrefix: "l_pt_orders",
+  featureHeading: {
+    heading: "Mais do que pedir",
+    sub: "Tudo o que transforma uma leitura num pedido pago na cozinha.",
+  },
 
   meta: {
     title: "Sistema de pedidos para restaurante — cliente e empregado | IQ Rest",

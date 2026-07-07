@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "lv",
   slug: "virtuves-ekrans",
   trackPrefix: "l_lv_kds",
+  featureHeading: {
+    heading: "Vairāk nekā ekrāns",
+    sub: "Viss, kas notur virtuvi vienā ritmā, pasūtījumu pēc pasūtījuma.",
+  },
 
   meta: {
     title: "Virtuves ekrāns (KDS) restorāniem | IQ Rest",

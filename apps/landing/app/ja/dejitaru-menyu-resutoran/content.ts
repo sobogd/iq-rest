@@ -12,7 +12,10 @@ export const CONTENT: FeatureContent = {
   locale: "ja",
   slug: "dejitaru-menyu-resutoran",
   trackPrefix: "l_ja_digital",
-  hideFeatureHeading: true,
+  featureHeading: {
+    heading: "メニュー以上のもの",
+    sub: "QRメニューを客席と厨房のためのサービスに変える、すべての機能。",
+  },
 
   meta: {
     title: "レストラン向けデジタルメニュー | IQ Rest",

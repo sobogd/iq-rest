@@ -133,9 +133,9 @@ export const TEXTS: LandingTexts = {
 
   pricingHero: {
     chips: ["Ei komissiota", "Ei sopimuksia", "14 päivää ilmaiseksi"],
-    heading: "Hinnat.",
-    headingAccent: "Ei piilokuluja.",
-    sub: "Yksi läpinäkyvä kuukausimaksu. Ei prosenttia tilauksista eikä välityspalkkioita. Peruuta tilaus koska tahansa.",
+    heading: "Selkeät hinnat.",
+    headingAccent: "Ei yllätyksiä.",
+    sub: "Yksi kuukausimaksu. Ei komissiota tilauksista. Peruuta koska tahansa.",
     popularBadge: "Suosittu",
     perMonthSuffix: "/kk",
     whenAnnualTemplate: "vuosilaskutus · {total} vuodessa",

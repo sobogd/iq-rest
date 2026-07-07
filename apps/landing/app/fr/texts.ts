@@ -133,9 +133,9 @@ export const TEXTS: LandingTexts = {
 
   pricingHero: {
     chips: ['Sans commission', 'Sans contrat', '14 jours gratuits'],
-    heading: 'Tarifs.',
-    headingAccent: 'Pas de frais cachés.',
-    sub: "Un seul tarif mensuel transparent. Aucun pourcentage sur les commandes ni commission d'agrégateur. Annulez l'abonnement à tout moment.",
+    heading: 'Des tarifs simples.',
+    headingAccent: 'Sans surprise.',
+    sub: "Un forfait mensuel. Aucune commission sur les commandes. Annulez à tout moment.",
     popularBadge: 'Populaire',
     perMonthSuffix: '/mois',
     whenAnnualTemplate: 'facturé annuellement · {total} par an',

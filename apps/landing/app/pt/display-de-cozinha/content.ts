@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "pt",
   slug: "display-de-cozinha",
   trackPrefix: "l_pt_kds",
+  featureHeading: {
+    heading: "Mais do que um ecrã",
+    sub: "Tudo o que mantém a cozinha sincronizada, comanda a comanda.",
+  },
 
   meta: {
     title: "Ecrã de cozinha (KDS) para restaurantes | IQ Rest",

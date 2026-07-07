@@ -133,9 +133,9 @@ export const TEXTS: LandingTexts = {
 
   pricingHero: {
     chips: ["بدون عمولات", "بدون عقود", "14 يوماً مجاناً"],
-    heading: "الأسعار.",
-    headingAccent: "بلا رسوم خفية.",
-    sub: "رسم شهري واحد وشفاف. لا نسبة على الطلبات ولا عمولات وسطاء. ألغِ الاشتراك في أي وقت.",
+    heading: "أسعار بسيطة.",
+    headingAccent: "بلا مفاجآت.",
+    sub: "رسم شهري واحد. لا عمولة على الطلبات. ألغِ في أي وقت.",
     popularBadge: "الأكثر شيوعاً",
     perMonthSuffix: "/شهر",
     whenAnnualTemplate: "فاتورة سنوية · {total} في السنة",

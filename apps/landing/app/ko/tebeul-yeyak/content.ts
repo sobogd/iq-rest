@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "ko",
   slug: "tebeul-yeyak",
   trackPrefix: "l_ko_bookings",
+  featureHeading: {
+    heading: "단순한 예약이 아닙니다",
+    sub: "전화 한 통 없이 테이블을 채우는 모든 것.",
+  },
 
   meta: {
     title: "레스토랑용 테이블 예약 24/7 | IQ Rest",

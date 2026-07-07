@@ -133,9 +133,9 @@ export const TEXTS: LandingTexts = {
 
   pricingHero: {
     chips: ["手数料なし", "契約なし", "14日間無料"],
-    heading: "料金。",
-    headingAccent: "隠れた料金なし。",
-    sub: "透明な月額料金1つ。注文に対するパーセンテージや集約サービスの手数料はありません。いつでも購読をキャンセルできます。",
+    heading: "シンプルな料金",
+    headingAccent: "隠れた費用なし",
+    sub: "月額料金のみ。注文に手数料はかかりません。いつでも解約できます。",
     popularBadge: "人気",
     perMonthSuffix: "/月",
     whenAnnualTemplate: "年間請求 · {total}/年",

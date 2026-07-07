@@ -12,7 +12,10 @@ export const CONTENT: FeatureContent = {
   locale: "fa",
   slug: "menooye-dijital-restoran",
   trackPrefix: "l_fa_digital",
-  hideFeatureHeading: true,
+  featureHeading: {
+    heading: "بیش از یک منو",
+    sub: "هر آنچه یک منوی QR را به سرویسی برای سالن و آشپزخانه شما تبدیل می‌کند.",
+  },
 
   meta: {
     title: "منوی دیجیتال برای رستوران | IQ Rest",

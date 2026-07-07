@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "ca",
   slug: "reserva-de-taules",
   trackPrefix: "l_ca_bookings",
+  featureHeading: {
+    heading: "Més que una reserva",
+    sub: "Tot allò que omple les teves taules sense ni una sola trucada.",
+  },
 
   meta: {
     title: "Reserva de taules 24/7 per a restaurants | IQ Rest",

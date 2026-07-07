@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "it",
   slug: "prenotazione-tavoli",
   trackPrefix: "l_it_bookings",
+  featureHeading: {
+    heading: "Più di una prenotazione",
+    sub: "Tutto ciò che riempie i tuoi tavoli senza una sola telefonata.",
+  },
 
   meta: {
     title: "Prenotazione tavoli 24/7 per ristoranti | IQ Rest",

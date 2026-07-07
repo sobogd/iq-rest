@@ -12,7 +12,10 @@ export const CONTENT: FeatureContent = {
   locale: "de",
   slug: "digitale-speisekarte-restaurant",
   trackPrefix: "l_de_digital",
-  hideFeatureHeading: true,
+  featureHeading: {
+    heading: "Mehr als eine Speisekarte",
+    sub: "Alles, was aus einer QR-Speisekarte einen Service für Ihren Gastraum und Ihre Küche macht.",
+  },
 
   meta: {
     title: "Digitale Speisekarte für Restaurants | IQ Rest",

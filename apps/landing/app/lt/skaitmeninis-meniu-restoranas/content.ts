@@ -12,7 +12,10 @@ export const CONTENT: FeatureContent = {
   locale: "lt",
   slug: "skaitmeninis-meniu-restoranas",
   trackPrefix: "l_lt_digital",
-  hideFeatureHeading: true,
+  featureHeading: {
+    heading: "Daugiau nei meniu",
+    sub: "Viskas, kas QR meniu paverčia paslauga jūsų salei ir virtuvei.",
+  },
 
   meta: {
     title: "Skaitmeninis meniu restoranams | IQ Rest",

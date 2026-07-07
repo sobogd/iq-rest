@@ -133,9 +133,9 @@ export const TEXTS: LandingTexts = {
 
   pricingHero: {
     chips: ["Geen commissie", "Geen contracten", "14 dagen gratis"],
-    heading: "Prijzen.",
-    headingAccent: "Geen verborgen kosten.",
-    sub: "Eén transparante maandelijkse vergoeding. Geen percentage op bestellingen en geen aggregatorcommissies. Zeg het abonnement op elk moment op.",
+    heading: "Eenvoudige prijzen.",
+    headingAccent: "Geen verrassingen.",
+    sub: "Eén maandelijkse vergoeding. Geen commissie op bestellingen. Opzegbaar wanneer je wilt.",
     popularBadge: "Populair",
     perMonthSuffix: "/mnd",
     whenAnnualTemplate: "jaarlijkse facturering · {total} per jaar",

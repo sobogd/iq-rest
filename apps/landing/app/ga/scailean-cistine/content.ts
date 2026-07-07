@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "ga",
   slug: "scailean-cistine",
   trackPrefix: "l_ga_kds",
+  featureHeading: {
+    heading: "Níos mó ná scáileán",
+    sub: "Gach rud a choinníonn an chistin ar aon dul, ordú ar ordú.",
+  },
 
   meta: {
     title: "Scáileán cistine (KDS) do bhialanna | IQ Rest",

@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "tr",
   slug: "masa-rezervasyonu",
   trackPrefix: "l_tr_bookings",
+  featureHeading: {
+    heading: "Bir rezervasyondan fazlası",
+    sub: "Masalarınızı tek bir telefon araması olmadan dolduran her şey.",
+  },
 
   meta: {
     title: "Restoranlar için 7/24 masa rezervasyonu | IQ Rest",

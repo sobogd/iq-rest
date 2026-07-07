@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "ru",
   slug: "bronirovanie-stolov",
   trackPrefix: "l_bookings",
+  featureHeading: {
+    heading: "Больше, чем бронь",
+    sub: "Всё, что заполняет столы без единого звонка.",
+  },
 
   meta: {
     title: "Бронирование столов 24/7 для ресторана | IQ Rest",

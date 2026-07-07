@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "ro",
   slug: "display-bucatarie",
   trackPrefix: "l_ro_kds",
+  featureHeading: {
+    heading: "Mai mult decât un ecran",
+    sub: "Tot ce ține bucătăria sincronizată, comandă cu comandă.",
+  },
 
   meta: {
     title: "Display bucătărie (KDS) pentru restaurante | IQ Rest",

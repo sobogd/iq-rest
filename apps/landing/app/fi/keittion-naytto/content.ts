@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "fi",
   slug: "keittion-naytto",
   trackPrefix: "l_fi_kds",
+  featureHeading: {
+    heading: "Enemmän kuin näyttö",
+    sub: "Kaikki, mikä pitää keittiön tahdissa, tilaus tilaukselta.",
+  },
 
   meta: {
     title: "Keittiön näyttö (KDS) ravintoloille | IQ Rest",

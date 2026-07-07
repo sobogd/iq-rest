@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "da",
   slug: "kokken-skaerm",
   trackPrefix: "l_da_kds",
+  featureHeading: {
+    heading: "Mere end en skærm",
+    sub: "Alt, der holder køkkenet synkront, bon for bon.",
+  },
 
   meta: {
     title: "Køkkenskærm (KDS) til restauranter | IQ Rest",

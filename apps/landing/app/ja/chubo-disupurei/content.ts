@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "ja",
   slug: "chubo-disupurei",
   trackPrefix: "l_ja_kds",
+  featureHeading: {
+    heading: "ただの画面ではありません",
+    sub: "1伝票ずつ、厨房の連携を保つすべて。",
+  },
 
   meta: {
     title: "レストラン向けキッチンディスプレイ(KDS) | IQ Rest",

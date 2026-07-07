@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "lv",
   slug: "pasutijumu-sistema-restorans",
   trackPrefix: "l_lv_orders",
+  featureHeading: {
+    heading: "Vairāk nekā pasūtīšana",
+    sub: "Viss, kas skenējumu pārvērš apmaksātā pasūtījumā virtuvē.",
+  },
 
   meta: {
     title: "Pasūtījumu sistēma restorānam — viesis un viesmīlis | IQ Rest",

@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "el",
   slug: "qr-menou-estiatorio",
   trackPrefix: "l_el_qr",
+  featureHeading: {
+    heading: "Όχι απλώς ένας κωδικός QR",
+    sub: "Όλα όσα γίνεται μια σάρωση για τους πελάτες σας και την αίθουσά σας.",
+  },
 
   meta: {
     title: "Μενού με QR code για εστιατόρια | IQ Rest",

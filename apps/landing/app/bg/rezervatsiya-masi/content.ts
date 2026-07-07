@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "bg",
   slug: "rezervatsiya-masi",
   trackPrefix: "l_bg_bookings",
+  featureHeading: {
+    heading: "Повече от резервация",
+    sub: "Всичко, което пълни масите ви без нито едно обаждане.",
+  },
 
   meta: {
     title: "Резервация на маси 24/7 за ресторанти | IQ Rest",

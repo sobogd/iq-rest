@@ -12,7 +12,10 @@ export const CONTENT: FeatureContent = {
   locale: "sv",
   slug: "digital-meny-restaurang",
   trackPrefix: "l_sv_digital",
-  hideFeatureHeading: true,
+  featureHeading: {
+    heading: "Mer än en meny",
+    sub: "Allt som gör en QR-meny till en tjänst för din matsal och ditt kök.",
+  },
 
   meta: {
     title: "Digital meny för restauranger | IQ Rest",

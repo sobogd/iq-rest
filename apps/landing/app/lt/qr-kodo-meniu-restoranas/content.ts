@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "lt",
   slug: "qr-kodo-meniu-restoranas",
   trackPrefix: "l_lt_qr",
+  featureHeading: {
+    heading: "Ne tik QR kodas",
+    sub: "Viskas, kuo vienas nuskaitymas virsta jūsų svečiams ir salei.",
+  },
 
   meta: {
     title: "QR kodo meniu restoranams | IQ Rest",

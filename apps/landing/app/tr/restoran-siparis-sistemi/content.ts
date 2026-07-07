@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "tr",
   slug: "restoran-siparis-sistemi",
   trackPrefix: "l_tr_orders",
+  featureHeading: {
+    heading: "Sipariş almaktan fazlası",
+    sub: "Bir taramayı mutfakta ödenmiş bir siparişe dönüştüren her şey.",
+  },
 
   meta: {
     title: "Restoran sipariş sistemi — misafir ve garson | IQ Rest",

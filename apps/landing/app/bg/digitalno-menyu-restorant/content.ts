@@ -12,7 +12,10 @@ export const CONTENT: FeatureContent = {
   locale: "bg",
   slug: "digitalno-menyu-restorant",
   trackPrefix: "l_bg_digital",
-  hideFeatureHeading: true,
+  featureHeading: {
+    heading: "Повече от меню",
+    sub: "Всичко, което превръща QR менюто в услуга за вашата зала и кухня.",
+  },
 
   meta: {
     title: "Дигитално меню за ресторант | IQ Rest",

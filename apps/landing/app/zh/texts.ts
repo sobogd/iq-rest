@@ -133,9 +133,9 @@ export const TEXTS: LandingTexts = {
 
   pricingHero: {
     chips: ["无佣金", "无合同", "14 天免费"],
-    heading: "价格。",
-    headingAccent: "无隐藏费用。",
-    sub: "一笔透明的月费。订单无百分比,无聚合器佣金。随时取消订阅。",
+    heading: "简单定价",
+    headingAccent: "没有意外",
+    sub: "每月一笔费用。订单不收佣金。随时取消。",
     popularBadge: "热门",
     perMonthSuffix: "/月",
     whenAnnualTemplate: "按年计费 · 每年 {total}",

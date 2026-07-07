@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "zh",
   slug: "hou-chu-xian-shi-qi",
   trackPrefix: "l_zh_kds",
+  featureHeading: {
+    heading: "不只是一块屏幕",
+    sub: "一单接一单，让后厨始终保持同步的一切。",
+  },
 
   meta: {
     title: "餐厅厨房显示屏 (KDS) | IQ Rest",

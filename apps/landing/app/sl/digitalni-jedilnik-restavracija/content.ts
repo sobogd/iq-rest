@@ -12,7 +12,10 @@ export const CONTENT: FeatureContent = {
   locale: "sl",
   slug: "digitalni-jedilnik-restavracija",
   trackPrefix: "l_sl_digital",
-  hideFeatureHeading: true,
+  featureHeading: {
+    heading: "Več kot le meni",
+    sub: "Vse, kar QR meni spremeni v storitev za vašo dvorano in kuhinjo.",
+  },
 
   meta: {
     title: "Digitalni jedilnik za restavracije | IQ Rest",

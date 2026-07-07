@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "hu",
   slug: "qr-kod-etlap-etterem",
   trackPrefix: "l_hu_qr",
+  featureHeading: {
+    heading: "Nem csak egy QR-kód",
+    sub: "Minden, amivé egyetlen beolvasás válik a vendégeidnek és a termednek.",
+  },
 
   meta: {
     title: "QR-kódos étlap éttermeknek | IQ Rest",

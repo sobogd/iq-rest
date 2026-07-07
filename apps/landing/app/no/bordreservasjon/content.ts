@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "no",
   slug: "bordreservasjon",
   trackPrefix: "l_no_bookings",
+  featureHeading: {
+    heading: "Mer enn en reservasjon",
+    sub: "Alt som fyller bordene dine uten en eneste telefon.",
+  },
 
   meta: {
     title: "Bordreservasjon 24/7 for restauranter | IQ Rest",

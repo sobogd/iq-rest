@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "ko",
   slug: "juhang-diseupeullei",
   trackPrefix: "l_ko_kds",
+  featureHeading: {
+    heading: "단순한 화면이 아닙니다",
+    sub: "주문표 하나하나, 주방을 동기화 상태로 유지하는 모든 것.",
+  },
 
   meta: {
     title: "레스토랑용 주방 디스플레이 (KDS) | IQ Rest",

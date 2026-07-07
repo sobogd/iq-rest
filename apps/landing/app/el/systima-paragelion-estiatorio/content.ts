@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "el",
   slug: "systima-paragelion-estiatorio",
   trackPrefix: "l_el_orders",
+  featureHeading: {
+    heading: "Κάτι παραπάνω από παραγγελίες",
+    sub: "Όλα όσα μετατρέπουν μια σάρωση σε πληρωμένη παραγγελία στην κουζίνα.",
+  },
 
   meta: {
     title: "Σύστημα παραγγελιών για εστιατόριο — πελάτης και σερβιτόρος | IQ Rest",

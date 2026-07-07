@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "ar",
   slug: "qr-menu-matam",
   trackPrefix: "l_ar_qr",
+  featureHeading: {
+    heading: "أكثر من مجرد رمز QR",
+    sub: "كل ما تتحوّل إليه مسحة واحدة لضيوفك ولصالتك.",
+  },
 
   meta: {
     title: "قائمة طعام برمز QR للمطاعم | IQ Rest",

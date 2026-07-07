@@ -133,9 +133,9 @@ export const TEXTS: LandingTexts = {
 
   pricingHero: {
     chips: ["Ingen provision", "Inga kontrakt", "14 dagar gratis"],
-    heading: "Priser.",
-    headingAccent: "Inga dolda avgifter.",
-    sub: "En transparent månadsavgift. Ingen procent på beställningar och inga aggregatorprovisioner. Avsluta prenumerationen när som helst.",
+    heading: "Enkla priser.",
+    headingAccent: "Inga överraskningar.",
+    sub: "En månadsavgift. Ingen provision på beställningar. Avsluta när som helst.",
     popularBadge: "Populär",
     perMonthSuffix: "/mån",
     whenAnnualTemplate: "årlig fakturering · {total} per år",

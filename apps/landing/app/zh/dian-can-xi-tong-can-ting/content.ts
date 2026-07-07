@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "zh",
   slug: "dian-can-xi-tong-can-ting",
   trackPrefix: "l_zh_orders",
+  featureHeading: {
+    heading: "不只是点餐",
+    sub: "把一次扫码变成后厨里已付款订单的一切。",
+  },
 
   meta: {
     title: "餐厅点餐系统 — 客人和服务员 | IQ Rest",

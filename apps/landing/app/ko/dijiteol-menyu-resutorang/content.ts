@@ -12,7 +12,10 @@ export const CONTENT: FeatureContent = {
   locale: "ko",
   slug: "dijiteol-menyu-resutorang",
   trackPrefix: "l_ko_digital",
-  hideFeatureHeading: true,
+  featureHeading: {
+    heading: "메뉴 그 이상",
+    sub: "QR 메뉴를 홀과 주방을 위한 서비스로 바꿔주는 모든 것.",
+  },
 
   meta: {
     title: "레스토랑용 디지털 메뉴 | IQ Rest",

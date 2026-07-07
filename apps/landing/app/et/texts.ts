@@ -133,9 +133,9 @@ export const TEXTS: LandingTexts = {
 
   pricingHero: {
     chips: ["Ilma komisjonita", "Ilma lepinguteta", "14 päeva tasuta"],
-    heading: "Hinnad.",
-    headingAccent: "Mitte mingeid varjatud tasusid.",
-    sub: "Üks läbipaistev kuutasu. Mitte mingit protsenti tellimustelt ega agregaatorite komisjoni. Tühista tellimus igal ajal.",
+    heading: "Lihtsad hinnad.",
+    headingAccent: "Ilma üllatusteta.",
+    sub: "Üks kuutasu. Mitte mingit protsenti tellimustelt. Tühista igal ajal.",
     popularBadge: "Populaarne",
     perMonthSuffix: "/k",
     whenAnnualTemplate: "aastane arve · {total} aastas",

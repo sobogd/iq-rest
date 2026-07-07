@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "ja",
   slug: "tesuto-yoyaku",
   trackPrefix: "l_ja_bookings",
+  featureHeading: {
+    heading: "ただの予約ではありません",
+    sub: "1本の電話もなしに、席を埋めるすべて。",
+  },
 
   meta: {
     title: "レストラン向けテーブル予約24/7 | IQ Rest",

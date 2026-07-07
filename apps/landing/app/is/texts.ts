@@ -133,9 +133,9 @@ export const TEXTS: LandingTexts = {
 
   pricingHero: {
     chips: ["Engin þóknun", "Engir samningar", "14 dagar ókeypis"],
-    heading: "Verð.",
-    headingAccent: "Engin falin gjöld.",
-    sub: "Eitt gagnsætt mánaðarlegt gjald. Engin prósenta af pöntunum eða samanafnsþóknun. Hættu áskrift hvenær sem er.",
+    heading: "Einföld verð.",
+    headingAccent: "Engin óvænt gjöld.",
+    sub: "Eitt mánaðarlegt gjald. Engin þóknun af pöntunum. Hættu hvenær sem er.",
     popularBadge: "Vinsælt",
     perMonthSuffix: "/mán",
     whenAnnualTemplate: "árlegt reikningagerð · {total} á ári",

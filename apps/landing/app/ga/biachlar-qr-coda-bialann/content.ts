@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "ga",
   slug: "biachlar-qr-coda-bialann",
   trackPrefix: "l_ga_qr",
+  featureHeading: {
+    heading: "Níos mó ná cód QR",
+    sub: "Gach rud a dhéanann aon scanadh amháin do d'aíonna agus don urlár.",
+  },
 
   meta: {
     title: "Biachlár cód QR do bhialanna | IQ Rest",

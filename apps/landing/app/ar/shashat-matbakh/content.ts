@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "ar",
   slug: "shashat-matbakh",
   trackPrefix: "l_ar_kds",
+  featureHeading: {
+    heading: "أكثر من مجرد شاشة",
+    sub: "كل ما يبقي المطبخ متناغماً، طلباً بعد طلب.",
+  },
 
   meta: {
     title: "شاشة المطبخ (KDS) للمطاعم | IQ Rest",

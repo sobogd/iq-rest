@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "de",
   slug: "restaurant-bestellsystem",
   trackPrefix: "l_de_orders",
+  featureHeading: {
+    heading: "Mehr als Bestellen",
+    sub: "Alles, was aus einem Scan eine bezahlte Bestellung in der Küche macht.",
+  },
 
   meta: {
     title: "Restaurant-Bestellsystem — Gast und Servicekraft | IQ Rest",

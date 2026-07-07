@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "tr",
   slug: "mutfak-ekrani",
   trackPrefix: "l_tr_kds",
+  featureHeading: {
+    heading: "Bir ekrandan fazlası",
+    sub: "Mutfağı sipariş sipariş uyumlu tutan her şey.",
+  },
 
   meta: {
     title: "Restoranlar için mutfak ekranı (KDS) | IQ Rest",

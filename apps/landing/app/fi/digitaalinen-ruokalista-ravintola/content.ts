@@ -12,7 +12,10 @@ export const CONTENT: FeatureContent = {
   locale: "fi",
   slug: "digitaalinen-ruokalista-ravintola",
   trackPrefix: "l_fi_digital",
-  hideFeatureHeading: true,
+  featureHeading: {
+    heading: "Enemmän kuin ruokalista",
+    sub: "Kaikki, mikä tekee QR-ruokalistasta palvelun salillesi ja keittiöllesi.",
+  },
 
   meta: {
     title: "Digitaalinen ruokalista ravintoloille | IQ Rest",

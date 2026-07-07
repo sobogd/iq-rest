@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "ko",
   slug: "qr-menyu-resutorang",
   trackPrefix: "l_ko_qr",
+  featureHeading: {
+    heading: "단순한 QR 코드가 아닙니다",
+    sub: "한 번의 스캔이 손님과 홀에 가져다주는 모든 것.",
+  },
 
   meta: {
     title: "레스토랑용 QR 코드 메뉴 | IQ Rest",

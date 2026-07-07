@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "sl",
   slug: "kuhinjski-zaslon",
   trackPrefix: "l_sl_kds",
+  featureHeading: {
+    heading: "Več kot zaslon",
+    sub: "Vse, kar ohranja kuhinjo usklajeno, naročilo za naročilom.",
+  },
 
   meta: {
     title: "Kuhinjski zaslon (KDS) za restavracije | IQ Rest",

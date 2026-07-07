@@ -12,7 +12,10 @@ export const CONTENT: FeatureContent = {
   locale: "lv",
   slug: "digitala-edienkarte-restorans",
   trackPrefix: "l_lv_digital",
-  hideFeatureHeading: true,
+  featureHeading: {
+    heading: "Vairāk nekā ēdienkarte",
+    sub: "Viss, kas QR ēdienkarti pārvērš par pakalpojumu jūsu zālei un virtuvei.",
+  },
 
   meta: {
     title: "Digitālā ēdienkarte restorāniem | IQ Rest",

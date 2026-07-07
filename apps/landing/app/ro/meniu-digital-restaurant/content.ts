@@ -12,7 +12,10 @@ export const CONTENT: FeatureContent = {
   locale: "ro",
   slug: "meniu-digital-restaurant",
   trackPrefix: "l_ro_digital",
-  hideFeatureHeading: true,
+  featureHeading: {
+    heading: "Mai mult decât un meniu",
+    sub: "Tot ce transformă un meniu QR într-un serviciu pentru salonul și bucătăria ta.",
+  },
 
   meta: {
     title: "Meniu digital pentru restaurante | IQ Rest",

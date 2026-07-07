@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "fi",
   slug: "tilausjarjestelma-ravintola",
   trackPrefix: "l_fi_orders",
+  featureHeading: {
+    heading: "Enemmän kuin tilaaminen",
+    sub: "Kaikki, mikä muuttaa skannauksen maksetuksi tilaukseksi keittiössä.",
+  },
 
   meta: {
     title: "Tilausjärjestelmä ravintolalle — vieras ja tarjoilija | IQ Rest",

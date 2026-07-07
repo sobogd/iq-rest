@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "fa",
   slug: "sistem-sefaresh-restoran",
   trackPrefix: "l_fa_orders",
+  featureHeading: {
+    heading: "فراتر از سفارش‌گیری",
+    sub: "هر آنچه یک اسکن را به سفارشی پرداخت‌شده در آشپزخانه تبدیل می‌کند.",
+  },
 
   meta: {
     title: "سیستم سفارش برای رستوران — مهمان و گارسون | IQ Rest",

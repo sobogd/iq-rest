@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "uk",
   slug: "bronyuvannya-stoliv",
   trackPrefix: "l_uk_bookings",
+  featureHeading: {
+    heading: "Більше ніж бронювання",
+    sub: "Усе, що заповнює ваші столи без жодного дзвінка.",
+  },
 
   meta: {
     title: "Бронювання столиків 24/7 для ресторанів | IQ Rest",

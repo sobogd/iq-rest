@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "fa",
   slug: "rezerve-miz",
   trackPrefix: "l_fa_bookings",
+  featureHeading: {
+    heading: "فراتر از یک رزرو",
+    sub: "هر آنچه میزهای شما را بدون حتی یک تماس پر می‌کند.",
+  },
 
   meta: {
     title: "رزرو میز ۲۴/۷ برای رستوران‌ها | IQ Rest",

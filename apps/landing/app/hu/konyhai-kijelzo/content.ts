@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "hu",
   slug: "konyhai-kijelzo",
   trackPrefix: "l_hu_kds",
+  featureHeading: {
+    heading: "Több mint egy kijelző",
+    sub: "Minden, ami összehangolja a konyhát, rendelésről rendelésre.",
+  },
 
   meta: {
     title: "Konyhai kijelző (KDS) éttermeknek | IQ Rest",

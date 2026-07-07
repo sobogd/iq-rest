@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "uk",
   slug: "kukhonnyy-displey",
   trackPrefix: "l_uk_kds",
+  featureHeading: {
+    heading: "Більше ніж екран",
+    sub: "Усе, що тримає кухню злагодженою, замовлення за замовленням.",
+  },
 
   meta: {
     title: "Кухонний дисплей (KDS) для ресторанів | IQ Rest",

@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "es",
   slug: "sistema-pedidos-restaurante",
   trackPrefix: "l_es_orders",
+  featureHeading: {
+    heading: "Más que pedir",
+    sub: "Todo lo que convierte un escaneo en un pedido pagado en la cocina.",
+  },
 
   meta: {
     title: "Sistema de pedidos para restaurante — Comensal y camarero | IQ Rest",

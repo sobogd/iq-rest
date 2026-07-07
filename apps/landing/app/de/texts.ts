@@ -133,9 +133,9 @@ export const TEXTS: LandingTexts = {
 
   pricingHero: {
     chips: ["Keine Provision", "Keine Verträge", "14 Tage kostenlos"],
-    heading: "Preise.",
-    headingAccent: "Keine versteckten Gebühren.",
-    sub: "Eine transparente monatliche Gebühr. Keine Prozente auf Bestellungen und keine Aggregator-Provisionen. Abo jederzeit kündbar.",
+    heading: "Einfache Preise.",
+    headingAccent: "Keine Überraschungen.",
+    sub: "Eine monatliche Gebühr. Keine Provision auf Bestellungen. Jederzeit kündbar.",
     popularBadge: "Beliebt",
     perMonthSuffix: "/Mon.",
     whenAnnualTemplate: "jährliche Abrechnung · {total} pro Jahr",

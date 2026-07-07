@@ -133,9 +133,9 @@ export const TEXTS: LandingTexts = {
 
   pricingHero: {
     chips: ["수수료 없음", "계약 없음", "14일 무료"],
-    heading: "가격.",
-    headingAccent: "숨겨진 비용 없음.",
-    sub: "하나의 투명한 월 요금. 주문에 대한 백분율이나 집계 수수료 없음. 언제든지 구독을 취소하세요.",
+    heading: "간단한 요금",
+    headingAccent: "숨겨진 비용 없음",
+    sub: "월 요금 하나. 주문 수수료 없음. 언제든지 해지하세요.",
     popularBadge: "인기",
     perMonthSuffix: "/월",
     whenAnnualTemplate: "연간 청구 · 연간 {total}",

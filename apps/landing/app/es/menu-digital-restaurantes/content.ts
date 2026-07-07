@@ -12,7 +12,10 @@ export const CONTENT: FeatureContent = {
   locale: "es",
   slug: "menu-digital-restaurantes",
   trackPrefix: "l_es_digital",
-  hideFeatureHeading: true,
+  featureHeading: {
+    heading: "Más que una carta",
+    sub: "Todo lo que convierte una carta QR en un servicio para tu sala y tu cocina.",
+  },
 
   meta: {
     title: "Carta digital para restaurantes | IQ Rest",

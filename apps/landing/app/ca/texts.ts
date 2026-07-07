@@ -133,9 +133,9 @@ export const TEXTS: LandingTexts = {
 
   pricingHero: {
     chips: ["Sense comissions", "Sense contractes", "14 dies gratis"],
-    heading: "Preus.",
-    headingAccent: "Sense costos amagats.",
-    sub: "Una sola tarifa mensual transparent. Sense percentatges sobre comandes ni comissions d'agregadors. Cancel·la la subscripció quan vulguis.",
+    heading: "Preus senzills.",
+    headingAccent: "Sense sorpreses.",
+    sub: "Una quota mensual. Sense comissió sobre les comandes. Cancel·la quan vulguis.",
     popularBadge: "Popular",
     perMonthSuffix: "/mes",
     whenAnnualTemplate: "facturació anual · {total} l'any",

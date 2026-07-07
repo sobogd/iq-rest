@@ -63,6 +63,9 @@ export interface FeatureContent {
   subFeatures: readonly FeatureSubFeature[];
   /** Hide the section heading/sub above the subFeatures grid on this page. */
   hideFeatureHeading?: boolean;
+  /** Per-page heading/sub above the subFeatures grid. Overrides the shared
+   *  chrome.featureHighlights so a feature page can frame its own cards. */
+  featureHeading?: { heading: string; sub: string };
   faq: {
     sub: string;
     items: readonly FeatureFaqItem[];

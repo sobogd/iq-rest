@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "ru",
   slug: "priem-zakazov-restoran",
   trackPrefix: "l_orders",
+  featureHeading: {
+    heading: "Больше, чем приём заказов",
+    sub: "Всё, что превращает скан в оплаченный заказ на кухне.",
+  },
 
   meta: {
     title: "Приём заказов в ресторане — Гость и официант | IQ Rest",

@@ -12,7 +12,10 @@ export const CONTENT: FeatureContent = {
   locale: "uk",
   slug: "tsyfrove-menyu-restoran",
   trackPrefix: "l_uk_digital",
-  hideFeatureHeading: true,
+  featureHeading: {
+    heading: "Більше, ніж меню",
+    sub: "Усе, що перетворює QR-меню на сервіс для вашого залу та кухні.",
+  },
 
   meta: {
     title: "Цифрове меню для ресторану | IQ Rest",

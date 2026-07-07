@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "ko",
   slug: "juneun-shiseutem-resutorang",
   trackPrefix: "l_ko_orders",
+  featureHeading: {
+    heading: "단순한 주문이 아닙니다",
+    sub: "한 번의 스캔을 주방의 결제 완료 주문으로 바꾸는 모든 것.",
+  },
 
   meta: {
     title: "레스토랑용 주문 시스템 — 손님과 직원 | IQ Rest",

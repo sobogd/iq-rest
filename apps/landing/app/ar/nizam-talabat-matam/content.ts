@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "ar",
   slug: "nizam-talabat-matam",
   trackPrefix: "l_ar_orders",
+  featureHeading: {
+    heading: "أكثر من مجرد طلب",
+    sub: "كل ما يحوّل المسحة إلى طلب مدفوع في المطبخ.",
+  },
 
   meta: {
     title: "نظام طلبات للمطعم — الضيف والنادل | IQ Rest",

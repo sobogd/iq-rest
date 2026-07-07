@@ -12,7 +12,10 @@ export const CONTENT: FeatureContent = {
   locale: "hr",
   slug: "digitalni-jelovnik-restoran",
   trackPrefix: "l_hr_digital",
-  hideFeatureHeading: true,
+  featureHeading: {
+    heading: "Više od jelovnika",
+    sub: "Sve što QR jelovnik pretvara u uslugu za vašu salu i kuhinju.",
+  },
 
   meta: {
     title: "Digitalni jelovnik za restorane | IQ Rest",

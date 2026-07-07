@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "lt",
   slug: "staliuku-rezervacija",
   trackPrefix: "l_lt_bookings",
+  featureHeading: {
+    heading: "Daugiau nei rezervacija",
+    sub: "Viskas, kas užpildo jūsų stalus be nė vieno skambučio.",
+  },
 
   meta: {
     title: "Staliukų rezervacija 24/7 restoranams | IQ Rest",

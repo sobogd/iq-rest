@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "ja",
   slug: "chumon-shisutemu-resutoran",
   trackPrefix: "l_ja_orders",
+  featureHeading: {
+    heading: "ただの注文ではありません",
+    sub: "1回のスキャンを、厨房への支払い済み注文に変えるすべて。",
+  },
 
   meta: {
     title: "レストラン向け注文システム — お客様とスタッフ | IQ Rest",

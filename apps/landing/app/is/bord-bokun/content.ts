@@ -5,6 +5,10 @@ export const CONTENT: FeatureContent = {
   locale: "is",
   slug: "bord-bokun",
   trackPrefix: "l_is_bookings",
+  featureHeading: {
+    heading: "Meira en bókun",
+    sub: "Allt sem fyllir borðin þín án þess að hringja einu sinni.",
+  },
 
   meta: {
     title: "Borðabókun 24/7 fyrir veitingastaði | IQ Rest",
