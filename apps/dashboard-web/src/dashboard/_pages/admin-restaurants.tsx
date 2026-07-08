@@ -92,7 +92,7 @@ export function AdminRestaurantsPage({ onBack }: { onBack: () => void }) {
           <RefreshIcon size={14} className={loading ? "animate-spin" : ""} />
         </button>
       </SubpageStickyBar>
-      <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4">
+      <div className="">
         {loading && rows.length === 0 ? (
           <div className="text-xs text-muted-foreground py-8 text-center">Loading…</div>
         ) : visible.length === 0 ? (

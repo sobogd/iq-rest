@@ -6,6 +6,9 @@ const config: Config = {
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
   theme: {
   	extend: {
+  		fontFamily: {
+  			sans: ['Futura', 'Jost', '"Century Gothic"', 'system-ui', 'sans-serif'],
+  		},
   		colors: {
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
@@ -45,6 +48,7 @@ const config: Config = {
   				foreground: 'hsl(var(--card-foreground))'
   			},
   			nav: 'hsl(var(--nav-bg))',
+  			header: 'hsl(var(--header-bg))',
   			subheader: 'hsl(var(--subheader-bg))',
   			sidebar: {
   				DEFAULT: 'hsl(var(--sidebar-background))',

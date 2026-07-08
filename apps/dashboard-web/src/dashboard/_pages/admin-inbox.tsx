@@ -98,7 +98,7 @@ export function AdminInboxPage({ onBack }: { onBack: () => void }) {
           <RefreshIcon size={14} className={loading ? "animate-spin" : ""} />
         </button>
       </SubpageStickyBar>
-      <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4 space-y-3">
+      <div className="space-y-3">
         {waConfigured === false ? (
           <div className="text-[11px] text-amber-700 dark:text-amber-400 bg-amber-500/10 rounded-lg px-3 py-2">
             WhatsApp is not connected yet — only internal threads show. See the setup steps to link your number.

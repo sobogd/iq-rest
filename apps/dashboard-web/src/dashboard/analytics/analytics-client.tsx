@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { apiUrl } from "@/lib/api";
 import { useTranslations } from "next-intl";
-import { EmptyState, PageHeader } from "../_v2/ui";
+import { EmptyState, PageHeaderSlot } from "../_v2/ui";
 import { AVAILABLE_LANGUAGES } from "../_v2/i18n";
 import { track } from "@/lib/dashboard-events";
 import { OrdersListModal } from "./orders-modal";
@@ -166,12 +166,11 @@ export function AnalyticsClient() {
     !stats || (stats.totalViews === 0 && (stats.orders?.ordersCount ?? 0) === 0);
 
   return (
-    <div className="max-w-5xl mx-auto md:px-6">
-      <PageHeader
-        title={t("title")}
-        subtitle={t("subtitle")}
-        action={
-          months.length > 0 ? (
+    <div className="">
+      <PageHeaderSlot>
+        <div className="w-full flex items-center justify-between gap-3">
+          <span className="min-w-0 text-sm font-medium text-foreground truncate">{t("title")}</span>
+          {months.length > 0 ? (
             <PeriodDropdown
               months={months}
               period={period}
@@ -180,9 +179,9 @@ export function AnalyticsClient() {
                 setPeriod(p);
               }}
             />
-          ) : null
-        }
-      />
+          ) : null}
+        </div>
+      </PageHeaderSlot>
 
       {loading && !stats ? (
         <div className="bg-card border border-border rounded-xl min-h-[280px] flex items-center justify-center">

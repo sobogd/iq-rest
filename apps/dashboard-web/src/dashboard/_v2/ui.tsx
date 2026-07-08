@@ -1050,11 +1050,8 @@ export function SubpageStickyBar({
  }
  }
  return (
- <div
- className="sticky z-10 -mx-4 md:-mx-6 -mt-5 md:-mt-4 px-4 md:px-6 h-14 flex items-center bg-subheader/90 backdrop-blur-md border-b border-border md:border-border/60"
- style={{ top: "var(--topbar-h, 0px)" }}
- >
- <div className="w-full max-w-5xl mx-auto md:px-6 flex items-center justify-between gap-3">
+ <PageHeaderSlot>
+ <div className="w-full flex items-center justify-between gap-3">
  <div className="flex items-center gap-2.5 min-w-0">
  <button
  type="button"
@@ -1085,8 +1082,37 @@ export function SubpageStickyBar({
  ) : null}
  </div>
  </div>
- </div>
+ </PageHeaderSlot>
  );
+}
+
+// The DOM ids pages portal their header/footer rows into. Live here (not
+// chrome.tsx) so chrome can import UI pieces without an import cycle.
+export const PAGE_HEADER_SLOT_ID = "page-header-slot";
+export const PAGE_FOOTER_SLOT_ID = "page-footer-slot";
+
+function useSlotEl(id: string): HTMLElement | null {
+ const [el, setEl] = useState<HTMLElement | null>(null);
+ useEffect(() => {
+ setEl(document.getElementById(id));
+ }, [id]);
+ return el;
+}
+
+// Portal into the chrome's page header (see PageHeaderBar in chrome.tsx).
+// While no page renders this, the header shows the section title instead.
+export function PageHeaderSlot({ children }: { children: ReactNode }) {
+ const el = useSlotEl(PAGE_HEADER_SLOT_ID);
+ if (!el) return null;
+ return createPortal(children, el);
+}
+
+// Portal into the chrome's page footer (see PageFooterBar in chrome.tsx).
+// The footer bar only shows while some page renders this.
+export function PageFooterSlot({ children }: { children: ReactNode }) {
+ const el = useSlotEl(PAGE_FOOTER_SLOT_ID);
+ if (!el) return null;
+ return createPortal(children, el);
 }
 
 // EditPageHeader — bigger heading + sticky save bar (used for dish/option pages).
@@ -1119,11 +1145,8 @@ export function EditPageHeader({
  const tc = useTranslations("dashboard.common");
  return (
  <>
- <div
- className="sticky z-10 -mx-4 md:-mx-6 -mt-5 md:-mt-4 px-4 md:px-6 h-14 flex items-center bg-subheader/90 backdrop-blur-md border-b border-border md:border-border/60"
- style={{ top: "var(--topbar-h, 0px)" }}
- >
- <div className="w-full max-w-5xl mx-auto md:px-6 flex items-center justify-between gap-3">
+ <PageHeaderSlot>
+ <div className="w-full flex items-center justify-between gap-3">
  <button
  type="button"
  onClick={onBack}
@@ -1150,9 +1173,9 @@ export function EditPageHeader({
  ) : null}
  </div>
  </div>
- </div>
+ </PageHeaderSlot>
 
- <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4 pb-5">
+ <div className="pb-5">
  {breadcrumb ? <div className="text-xs text-muted-foreground truncate">{breadcrumb}</div> : null}
  <h2 className="text-xl font-medium text-foreground truncate mt-1">{title}</h2>
  </div>

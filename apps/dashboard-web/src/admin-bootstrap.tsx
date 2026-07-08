@@ -6,7 +6,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
 import { Toaster } from "sonner";
 import { routeTree } from "./routeTree.gen";
-import { ThemeProvider } from "./components/theme-provider";
 import { reloadIfStale } from "./lib/version-check";
 
 // Admin SPA boot. Extracted from main.tsx so the kitchen.* subdomain
@@ -53,12 +52,10 @@ export function mountAdmin(rootEl: HTMLElement, FullPageLoader: ComponentType): 
   const root = createRoot(rootEl);
   root.render(
     <StrictMode>
-      <ThemeProvider>
-        <QueryClientProvider client={queryClient}>
-          <RouterProvider router={router} />
-          <Toaster position="top-center" richColors closeButton />
-        </QueryClientProvider>
-      </ThemeProvider>
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+        <Toaster position="top-center" richColors closeButton />
+      </QueryClientProvider>
     </StrictMode>,
   );
   return root;

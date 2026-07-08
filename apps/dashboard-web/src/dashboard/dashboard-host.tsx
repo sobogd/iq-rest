@@ -29,7 +29,6 @@ import type {
   ApiTable,
 } from "./_v2/api";
 import { isAdminEmail } from "@/lib/admin";
-import { useTheme } from "@/components/theme-provider";
 
 interface AuthCheck {
   authenticated: boolean;
@@ -58,7 +57,6 @@ interface SubData {
 
 export function DashboardHost() {
   const { locale } = useParams({ strict: false }) as { locale?: string };
-  const { setTheme } = useTheme();
 
   const auth = useQueries({
     queries: [
@@ -79,18 +77,6 @@ export function DashboardHost() {
     // the old monolith would bounce straight back. Once they've reached
     // the new SPA we let them stay.
   }, [auth.isLoading, authData, locale]);
-
-  // New accounts (created on/after the cutoff) default to dark. Only applied
-  // when the user has never picked a theme — once "iq-theme" is in localStorage
-  // (system/light/dark), their choice wins and we never override it.
-  useEffect(() => {
-    if (!authData?.authenticated || !authData.defaultDark) return;
-    try {
-      if (localStorage.getItem("iq-theme") === null) setTheme("dark");
-    } catch {
-      // ignore storage access errors
-    }
-  }, [authData, setTheme]);
 
   const enabled = !!authData?.authenticated;
 
@@ -185,7 +171,12 @@ export function DashboardHost() {
 
   return (
     <DashboardSpaWrapper locale={locale || "en"}>
-      <DashboardChrome restaurant={uiRestaurant} sub={initialSub}>
+      <DashboardChrome
+        restaurant={uiRestaurant}
+        sub={initialSub}
+        isAdmin={isAdminEmail(authData.email)}
+        impersonatedBy={authData.impersonatedBy ?? null}
+      >
         <Shell
           initialCategories={initialCategories}
           initialOrders={initialOrders}

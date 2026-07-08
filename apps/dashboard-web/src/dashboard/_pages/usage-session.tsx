@@ -314,7 +314,7 @@ export function UsageSessionPage({ id }: { id: string }) {
           <RefreshIcon size={14} className={loading || refreshing ? "animate-spin" : ""} />
         </button>
       </SubpageStickyBar>
-      <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4 space-y-3">
+      <div className="space-y-3">
         {!session ? (
           <div className="text-xs text-muted-foreground py-8 text-center">Invalid session link</div>
         ) : (

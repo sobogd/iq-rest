@@ -655,7 +655,7 @@ export function TablesPage({
  </button>
  </SubpageStickyBar>
 
- <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4 min-w-0">
+ <div className="min-w-0">
  {tables.length === 0 ? (
  <>
  <EmptyState title={t("emptyTitle")} subtitle={t("emptySubtitle")} />
@@ -786,7 +786,7 @@ export function TableFormPage({
 
  if (mode === "edit" && !tables.find((x) => x.id === tableId)) {
  return (
- <div className="max-w-5xl mx-auto md:px-6 py-10 text-center text-sm text-muted-foreground">
+ <div className="py-10 text-center text-sm text-muted-foreground">
  {t("emptyTitle")}
  </div>
  );
@@ -890,7 +890,7 @@ export function TableFormPage({
  <div>
  <SubpageStickyBar onBack={() => { track("dash_settings_table_click_back"); onBack(); }} onSave={save} canSave={!saving} />
 
- <div className="max-w-2xl md:max-w-5xl mx-auto md:px-6 pt-5 md:pt-4 min-w-0">
+ <div className="min-w-0">
  <div className="mb-5">
  <div className="text-xs text-muted-foreground">
  {t("settingsBreadcrumb")} / {t("title")}

@@ -192,7 +192,7 @@ export function CategoryForm({
  onLangSelect={() => track("dash_category_click_lang")}
  />
 
- <div className="max-w-5xl mx-auto md:px-6">
+ <div className="">
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
  <TranslatedInput
  id="cat-name"
@@ -230,7 +230,7 @@ export function CategoryForm({
  </div>
 
  {!isNew ? (
- <div className="max-w-5xl mx-auto md:px-6 mt-6 flex justify-center">
+ <div className="mt-6 flex justify-center">
  <button
  type="button"
  onClick={() => setConfirmOpen(true)}
@@ -675,7 +675,7 @@ export function DishForm({
  onLangSelect={() => track("dash_item_click_lang")}
  />
 
- <div className="max-w-5xl mx-auto md:px-6 space-y-3">
+ <div className="space-y-3">
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
  <div className="flex flex-col-reverse md:flex-row-reverse gap-4 md:gap-5">
  <div className="w-full md:w-[7.6rem] shrink-0">
@@ -850,7 +850,7 @@ export function DishForm({
  </div>
 
  {!isNew ? (
- <div className="max-w-5xl mx-auto md:px-6 mt-6 flex items-center justify-center gap-3">
+ <div className="mt-6 flex items-center justify-center gap-3">
  {categoryId ? (
  <button
  type="button"
@@ -1335,7 +1335,7 @@ export function OptionForm({
 
  <div className={embedded
  ? ""
- : "max-w-5xl mx-auto bg-card border border-border rounded-2xl p-5 md:p-6"}>
+ : "bg-card border border-border rounded-2xl p-5 md:p-6"}>
  <TranslatedInput
  id="opt-name"
  label={t("nameLabel")}
@@ -1461,7 +1461,7 @@ export function OptionForm({
  </div>
  </div>
  ) : !isNew ? (
- <div className="max-w-5xl mx-auto md:px-6 mt-6 flex justify-center">
+ <div className="mt-6 flex justify-center">
  <button
  type="button"
  onClick={() => setConfirmOpen(true)}

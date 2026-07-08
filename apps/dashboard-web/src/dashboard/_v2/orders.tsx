@@ -18,7 +18,7 @@ import {
  SwapIcon,
  TrashIcon,
 } from "./icons";
-import { ConfirmDialog, EmptyState, Modal, PageHeader } from "./ui";
+import { ConfirmDialog, EmptyState, Modal } from "./ui";
 import { DiscountModal } from "./discount-modal";
 import { FloorMap } from "./tables";
 import { CtaState } from "./reservations";
@@ -723,10 +723,10 @@ export function OrdersPage({
  // edge-to-edge. Outer height pins to viewport (minus topbar) so the
  // orders card has an explicit height to fill — without that the
  // internal scroll has no upper bound and the card sprawls.
- const outerHeightStyle = {
- height:
- "calc(100dvh - var(--topbar-h, 0px) - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 6rem)",
- } as React.CSSProperties;
+ // Mobile no longer reserves bottom-nav space (the nav is a side strip now);
+ // desktop keeps the same breathing room for the page header + gutters.
+ const outerHeightClass =
+ "h-[calc(100dvh-var(--topbar-h,0px)-2.5rem-env(safe-area-inset-bottom))] md:h-[calc(100dvh-var(--topbar-h,0px)-3.5rem)] ";
 
  // No tables → replace the whole orders surface with the same "add a table"
  // placeholder the bookings page uses. On the dashboard it offers a button to
@@ -734,8 +734,7 @@ export function OrdersPage({
  if (!hasTables) {
  const showCta = !kioskLayout && !demoMode;
  return (
- <div className={kioskLayout ? "h-full p-4 md:p-6" : "max-w-5xl mx-auto md:px-6"}>
- {!kioskLayout ? <PageHeader title={t("title")} /> : null}
+ <div className={kioskLayout ? "h-full p-4 md:p-6" : ""}>
  <CtaState
  title={t("noTablesTitle")}
  body={t("noTablesBody")}
@@ -750,10 +749,9 @@ export function OrdersPage({
  <>
  <div
  className={
- (kioskLayout ? "h-full p-4 md:p-6 " : "max-w-5xl mx-auto md:px-6 ") +
+ (kioskLayout ? "h-full p-4 md:p-6 " : "" + outerHeightClass) +
  "flex flex-col lg:flex-row gap-3 lg:gap-4 min-h-0"
  }
- style={kioskLayout ? undefined : outerHeightStyle}
  >
  {hasTables ? (
  <div className="aspect-square w-full lg:w-auto lg:h-full lg:aspect-square shrink-0">

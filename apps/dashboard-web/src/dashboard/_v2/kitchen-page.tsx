@@ -297,7 +297,7 @@ export function KitchenPage({
       >
         <div
           className={
-            (fullWidthFilterBar ? "" : "max-w-5xl mx-auto md:px-6 ") +
+            (fullWidthFilterBar ? "" : "") +
             "flex items-center gap-2 px-4 py-2"
           }
         >
@@ -351,7 +351,7 @@ export function KitchenPage({
       </div>
 
       {visibleGroups.length === 0 ? (
-        <div className={kioskLayout ? "flex-1 min-h-0 flex items-center justify-center" : "max-w-5xl mx-auto md:px-6 pt-7 md:pt-6"}>
+        <div className={kioskLayout ? "flex-1 min-h-0 flex items-center justify-center" : "pt-7 md:pt-6"}>
           <EmptyState title={t("kitchenClear")} subtitle={t("kitchenClearSub")} />
         </div>
       ) : kioskLayout ? (

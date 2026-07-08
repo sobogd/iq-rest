@@ -17,7 +17,7 @@ import {
  EyeOffIcon,
  PlusIcon,
 } from "./icons";
-import { EmptyState, PreviewButton, ShareButton, ShareModal, SubscriptionChip } from "./ui";
+import { EmptyState, PageFooterSlot, PageHeaderSlot, SubscriptionChip } from "./ui";
 import { iconBtn, primaryBtn } from "./tokens";
 import { getMlWithFallback } from "./i18n";
 import { currencySymbolOf, moveItem } from "./helpers";
@@ -45,6 +45,7 @@ export function MenuList({
  currentGroupId?: string | null;
 }) {
  const t = useTranslations("dashboard.menu");
+ const tNav = useTranslations("dashboard.nav");
  const restaurant = useRestaurant();
  const router = useDashboardRouter();
  const { defaultLang, currency, menuUrl } = restaurant;
@@ -104,7 +105,6 @@ export function MenuList({
  });
  return map;
  });
- const [shareOpen, setShareOpen] = useState(false);
  const [sub, setSub] = useState<SubData | null>(initialSub);
 
  // Empty layout: no categories and no groups anywhere (drives the empty state).
@@ -335,11 +335,8 @@ export function MenuList({
 
  return (
  <>
- <div
- className="sticky z-10 -mx-4 md:-mx-6 -mt-5 md:-mt-4 px-4 md:px-6 h-14 flex items-center bg-subheader/90 backdrop-blur-md border-b border-border md:border-border/60"
- style={{ top: "var(--topbar-h, 0px)" }}
- >
- <div className="w-full max-w-5xl mx-auto md:px-6 flex items-center justify-between gap-3">
+ <PageHeaderSlot>
+ <div className="w-full flex items-center justify-between gap-3">
  <div className="flex items-center gap-2 min-w-0">
  {currentGroup ? (
  <button
@@ -354,22 +351,7 @@ export function MenuList({
  </span>
  </button>
  ) : (
- <>
- {menuUrl ? (
- <PreviewButton
- url={menuUrl}
- onOpen={() => track("dash_menu_preview_open")}
- />
- ) : null}
- {menuUrl ? (
- <ShareButton
- onClick={() => {
- track("dash_menu_share_open");
- setShareOpen(true);
- }}
- />
- ) : null}
- </>
+ <span className="text-sm font-medium text-foreground truncate">{tNav("menu")}</span>
  )}
  </div>
  {scopedLeaves.length > 0 ? (
@@ -390,9 +372,9 @@ export function MenuList({
  </button>
  ) : null}
  </div>
- </div>
+ </PageHeaderSlot>
 
- <div className="max-w-5xl mx-auto md:px-6 pt-4">
+ <div>
 
  {noCategories ? (
  <EmptyState
@@ -472,18 +454,8 @@ export function MenuList({
  </div>
  )}
 
- <div className="flex items-center justify-center gap-6 pt-6 pb-8 md:pb-0">
- <button
- type="button"
- onClick={() => {
- track("dash_menu_add_category");
- router.push({ name: "category.new" });
- }}
- className="inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
- >
- <PlusIcon size={14} />
- {t("addCategory")}
- </button>
+ <PageFooterSlot>
+ <div className="w-full flex items-center justify-center gap-6">
  <button
  type="button"
  onClick={() => {
@@ -495,17 +467,36 @@ export function MenuList({
  <PlusIcon size={14} />
  {t("addGroup", { defaultValue: "Add group" })}
  </button>
+ <button
+ type="button"
+ onClick={() => {
+ track("dash_menu_add_category");
+ router.push({ name: "category.new" });
+ }}
+ className="inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
+ >
+ <PlusIcon size={14} />
+ {t("addCategory")}
+ </button>
+ {scopedLeaves.length > 0 ? (
+ <button
+ type="button"
+ onClick={() => {
+ track("dash_menu_add_item");
+ router.push({ name: "item.new", categoryId: scopedLeaves[0].id });
+ }}
+ className="inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
+ >
+ <PlusIcon size={14} />
+ {t("addDish")}
+ </button>
+ ) : null}
  </div>
+ </PageFooterSlot>
  </div>
  )}
  </div>
 
- <ShareModal
- open={shareOpen}
- onClose={() => setShareOpen(false)}
- url={menuUrl}
- restaurantName={restaurant.name}
- />
  </>
  );
 }
@@ -653,6 +644,7 @@ function CategoryAccordion({
  onToggleDishVisible: (categoryId: string, dishId: string) => void;
 }) {
  const t = useTranslations("dashboard.menu");
+ const tNav = useTranslations("dashboard.nav");
  const router = useDashboardRouter();
  const dishesFlipRef = useFlip<HTMLDivElement>([category.dishes.map((d) => d.id).join(",")]);
  return (
@@ -789,6 +781,7 @@ function DishRow({
  onToggleVisible: () => void;
 }) {
  const t = useTranslations("dashboard.menu");
+ const tNav = useTranslations("dashboard.nav");
  const tc = useTranslations("dashboard.common");
  const router = useDashboardRouter();
  const rowCls =

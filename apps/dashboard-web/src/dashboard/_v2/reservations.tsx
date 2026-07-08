@@ -9,7 +9,7 @@ import {
  MapPinIcon,
  UsersIcon,
 } from "./icons";
-import { Modal, PageHeader } from "./ui";
+import { Modal, PageHeaderSlot } from "./ui";
 import { formatTime, isSameDay } from "./helpers";
 import { patchReservation } from "./api";
 import { useDashboardRouter } from "../_spa/router";
@@ -58,8 +58,8 @@ export function ReservationsPage({
  // A reload resets the board.
  demoMode?: boolean;
 }) {
- // Centered + width-capped in the admin tab; full-bleed on the kiosk.
- const wrapWidth = kioskLayout ? "w-full" : "max-w-5xl mx-auto";
+ // Full-bleed everywhere; the kiosk shell adds its own padding below.
+ const wrapWidth = "w-full";
  const t = useTranslations("dashboard.reservations");
  const router = useDashboardRouter();
 
@@ -136,55 +136,48 @@ export function ReservationsPage({
   }
  }
 
+ const headerRow = (
+  <div className="w-full flex items-center justify-between gap-3">
+   <div className="flex items-center rounded-lg border border-border bg-card overflow-hidden">
+    <ViewBtn active={view === "month"} onClick={() => { track("dash_booking_view_month"); setView("month"); }}>
+     {t("viewMonth")}
+    </ViewBtn>
+    <ViewBtn active={view === "day"} onClick={() => { track("dash_booking_view_day"); setView("day"); }}>
+     {t("viewDay")}
+    </ViewBtn>
+   </div>
+   <div className="min-w-0 flex-1 text-center text-sm font-medium text-foreground truncate">{title}</div>
+   <div className="flex items-center gap-1">
+    <NavBtn onClick={() => shift(-1)} aria-label={t("prev")}>
+     <ChevronLeftIcon size={16} />
+    </NavBtn>
+    <NavBtn onClick={() => shift(1)} aria-label={t("next")}>
+     <ChevronRightIcon size={16} />
+    </NavBtn>
+   </div>
+  </div>
+ );
+
  return (
   <>
-   {/* Sticky sub-header — view toggle on the left, prev/next on the right. */}
-   <div
-    className={
-      // Admin tab breaks out of the centered content padding with negative
-      // margins so the bar's background spans edge-to-edge. The kiosk shell
-      // has no horizontal padding to break out of, so keep the bar in-flow —
-      // its own px-4/px-6 then gives the content real side padding.
-      (kioskLayout
-        ? "bg-subheader min-h-14"
-        : "-mx-4 md:-mx-6 -mt-5 md:-mt-4 h-14 bg-subheader/90 backdrop-blur-md") +
-      " sticky z-10 px-4 md:px-6 flex items-center border-b border-border md:border-border/60"
-    }
-    style={
-      kioskLayout
-        ? // In the embedded phone-frame demo there's no real safe area, so the
-          // preview passes the notch height via --kiosk-notch. Add it as opaque
-          // top padding here so the bar covers the cutout and content scrolls
-          // beneath it. Real devices keep env() via the shell.
-          { top: 0, paddingTop: "var(--kiosk-notch, 0px)" }
-        : { top: "var(--topbar-h, 0px)" }
-    }
-   >
-    <div className={(kioskLayout ? "w-full" : "max-w-5xl mx-auto md:px-6 w-full") + " flex items-center justify-between gap-3"}>
-     <div className="flex items-center rounded-lg border border-border bg-card overflow-hidden">
-      <ViewBtn active={view === "month"} onClick={() => { track("dash_booking_view_month"); setView("month"); }}>
-       {t("viewMonth")}
-      </ViewBtn>
-      <ViewBtn active={view === "day"} onClick={() => { track("dash_booking_view_day"); setView("day"); }}>
-       {t("viewDay")}
-      </ViewBtn>
-     </div>
-     <div className="flex items-center gap-1">
-      <NavBtn onClick={() => shift(-1)} aria-label={t("prev")}>
-       <ChevronLeftIcon size={16} />
-      </NavBtn>
-      <NavBtn onClick={() => shift(1)} aria-label={t("next")}>
-       <ChevronRightIcon size={16} />
-      </NavBtn>
-     </div>
+   {/* View toggle + prev/next. Admin: portaled into the chrome page header.
+       Kiosk: kept in-flow as a sticky bar (there is no chrome header there);
+       --kiosk-notch covers the phone-frame demo cutout. */}
+   {kioskLayout ? (
+    <div
+     className="bg-subheader min-h-14 sticky z-10 px-4 md:px-6 flex items-center border-b border-border md:border-border/60"
+     style={{ top: 0, paddingTop: "var(--kiosk-notch, 0px)" }}
+    >
+     {headerRow}
     </div>
-   </div>
+   ) : (
+    <PageHeaderSlot>{headerRow}</PageHeaderSlot>
+   )}
 
-   <div className={wrapWidth + (kioskLayout ? " px-4 pt-8 md:pt-8" : " pt-5 md:pt-4") + " md:px-6"}>
+   <div className={wrapWidth + (kioskLayout ? " px-4 pt-8 md:pt-8 md:px-6" : "")}>
     {view === "month" ? (
      <div className="lg:flex lg:gap-8 lg:items-stretch">
       <div className="lg:flex-1 lg:min-w-0 lg:flex lg:flex-col lg:h-[calc(100dvh-var(--topbar-h,0px)-160px)]">
-       <PageHeader title={title} subtitle={subtitle} />
        <div className="mt-6 hidden lg:flex lg:flex-1 lg:min-h-[200px] lg:overflow-y-auto pr-1">
         <div className="w-full">
          <PendingList
@@ -216,7 +209,6 @@ export function ReservationsPage({
      </div>
     ) : (
      <>
-      <PageHeader title={title} subtitle={subtitle} />
       <div className="mt-6">
        <DayView
         focusDate={focusDate}
@@ -280,8 +272,7 @@ function NavBtn({ children, onClick, ...rest }: { children: React.ReactNode; onC
 
 function CtaWrapper({ title, children }: { title: string; children: React.ReactNode }) {
  return (
-  <div className="max-w-5xl mx-auto md:px-6">
-   <PageHeader title={title} />
+  <div>
    {children}
   </div>
  );

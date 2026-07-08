@@ -28,7 +28,6 @@ import {
   SupportPage,
 } from "../_v2/settings";
 import { AnalyticsClient } from "../analytics/analytics-client";
-import { SettingsHubView } from "./views/settings-hub";
 import { DevicesSettingsPage } from "../_v2/devices-settings";
 import { RestaurantsListPage, RestaurantNewPage } from "../_v2/restaurants-page";
 import { FirstRunModals } from "../_v2/first-run-modals";
@@ -258,7 +257,7 @@ const PRO_FEATURE_VIEWS: Record<string, ProFeature> = {
 function ProUpsell({ feature, onUpgrade }: { feature: ProFeature; onUpgrade: () => void }) {
   const t = useTranslations("dashboard.proUpsell");
   return (
-    <div className="max-w-5xl mx-auto md:px-6">
+    <div className="">
       <CtaState
         title={t(`${feature}.title`)}
         body={t(`${feature}.body`)}
@@ -316,15 +315,12 @@ function ViewSwitch(p: SwitchProps) {
       return <ReservationsPage restaurant={restaurant} bookings={bookings} setBookings={setBookings} tables={tables} />;
     case "kitchen":
       // Fixed-height kanban inside the document-scroll dashboard: cancel the
-      // <main> padding (top + sides + the inline bottom-nav clearance) and pin
-      // the board to the viewport below the sticky topbar (desktop) / above the
-      // bottom nav (mobile, where --topbar-h is 0). Only the columns scroll
-      // internally — the page itself doesn't.
+      // <main> padding and pin the board to the viewport. On mobile -mx-4
+      // cancels the left gutter fully and leaves exactly the 3.5rem icon-strip
+      // width on the right. Only the columns scroll internally — the page
+      // itself doesn't.
       return (
-        <div
-          className="-mx-4 md:-mx-6 -mt-5 md:-mt-4 h-[calc(100dvh-5rem-env(safe-area-inset-bottom))] md:h-[calc(100dvh-var(--topbar-h,0px))]"
-          style={{ marginBottom: "calc(-5rem - env(safe-area-inset-bottom))" }}
-        >
+        <div className="-mx-4 md:-mx-6 -mt-5 md:-mt-4 -mb-[calc(1.25rem+env(safe-area-inset-bottom))] md:-mb-10 h-[calc(100dvh-var(--topbar-h,0px))]">
           <KitchenPage
             orders={orders}
             setOrders={setOrders}
@@ -339,12 +335,13 @@ function ViewSwitch(p: SwitchProps) {
     case "analytics":
       return <AnalyticsClient />;
 
+    // The settings hub page is gone — sections are first-class sidebar items.
+    // Bare /dashboard/settings shows Branding (the "settings home").
     case "settings":
-      return <SettingsHubView isAdmin={isAdmin} impersonatedBy={impersonatedBy} />;
+    case "settings.branding":
+      return <SettingsBrandingWrapper onBack={backToMenu} />;
     case "settings.contacts":
       return <SettingsContactsWrapper onBack={backToSettings} />;
-    case "settings.branding":
-      return <SettingsBrandingWrapper onBack={backToSettings} />;
     case "settings.general":
       return <SettingsGeneralWrapper onBack={backToSettings} />;
     case "settings.tables":
@@ -545,7 +542,7 @@ function ViewSwitch(p: SwitchProps) {
 
 function NotMigrated({ label }: { label: string }) {
   return (
-    <div className="max-w-5xl mx-auto md:px-6 py-10 text-center text-sm text-muted-foreground">{label}</div>
+    <div className="py-10 text-center text-sm text-muted-foreground">{label}</div>
   );
 }
 

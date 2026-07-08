@@ -380,7 +380,7 @@ export function AdminRestaurantPage({ restaurantId, onClose }: Props) {
         <SubpageStickyBar onBack={close} hideSave>{headerActions}</SubpageStickyBar>
       )}
 
-      <div className={onClose ? "flex-1 overflow-y-auto p-5" : "max-w-5xl mx-auto md:px-6 pt-5 md:pt-4"}>
+      <div className={onClose ? "flex-1 overflow-y-auto p-5" : ""}>
         <div className="space-y-4">
           <div className="bg-card border border-border rounded-xl overflow-hidden divide-y divide-border">
             {restaurantRows.map((row) => (

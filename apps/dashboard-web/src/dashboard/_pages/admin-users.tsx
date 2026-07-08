@@ -55,7 +55,7 @@ export function AdminUsersPage({ onBack }: { onBack: () => void }) {
   return (
     <div>
       <SubpageStickyBar onBack={onBack} hideSave />
-      <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4">
+      <div className="">
         {loading && rows.length === 0 ? (
           <div className="text-xs text-muted-foreground py-8 text-center">Loading…</div>
         ) : rows.length === 0 ? (

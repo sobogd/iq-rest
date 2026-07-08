@@ -3,7 +3,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "sonner";
 import i18n from "i18next";
 import { useTranslations } from "next-intl";
-import { ThemeProvider } from "@/components/theme-provider";
 import { apiUrl } from "@/lib/api";
 import { clearDeviceToken, getDeviceToken, setDeviceToken, setStoredDeviceType, getDemoLang, getDemoZoom, type DemoBoard, type DeviceType as StoredDeviceType } from "@/lib/device-mode";
 import { buildKitchenDemoSnapshot, buildReservationsDemoSnapshot } from "./demo-data";
@@ -87,20 +86,18 @@ const queryClient = new QueryClient({
 
 export function KitchenApp({ demoBoard = null }: { demoBoard?: DemoBoard | null }) {
   return (
-    <ThemeProvider>
-      <QueryClientProvider client={queryClient}>
-        {demoBoard === "orders" ? (
-          <OrdersDemoBody />
-        ) : demoBoard === "reservations" ? (
-          <ReservationsDemoBody />
-        ) : demoBoard === "kitchen" ? (
-          <KitchenDemoBody />
-        ) : (
-          <KitchenAppBody />
-        )}
-        <Toaster position="top-center" richColors closeButton />
-      </QueryClientProvider>
-    </ThemeProvider>
+    <QueryClientProvider client={queryClient}>
+      {demoBoard === "orders" ? (
+        <OrdersDemoBody />
+      ) : demoBoard === "reservations" ? (
+        <ReservationsDemoBody />
+      ) : demoBoard === "kitchen" ? (
+        <KitchenDemoBody />
+      ) : (
+        <KitchenAppBody />
+      )}
+      <Toaster position="top-center" richColors closeButton />
+    </QueryClientProvider>
   );
 }
 
