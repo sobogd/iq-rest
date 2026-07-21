@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from "@nestjs/common";
+import { BadRequestException, Injectable, NotFoundException } from "@nestjs/common";
 import { Prisma } from "@iq-rest/db";
 import { PrismaService } from "../prisma/prisma.service";
 import { OrdersEventsService } from "../orders-stream/orders-events.service";
@@ -223,6 +223,58 @@ export class OrdersService {
         ...statusBeforeUpdate,
       },
     });
+    await this.events.publish({
+      action: "updated",
+      restaurantId: updated.restaurantId,
+      order: updated,
+    });
+    return updated;
+  }
+
+  // Merge per-item STATUS changes into the order's items JSON under a row
+  // lock. KDS/waiter status taps go through here instead of PATCHing the
+  // whole items array — two devices working the same order can no longer
+  // last-write-wins each other: each merge re-reads the freshest items
+  // inside the lock and only touches the statuses it was asked to change.
+  // Item ids that no longer exist (split away / removed concurrently) are
+  // ignored; the SSE echo of the updated order reconciles the client.
+  async patchItemStatuses(
+    ctx: Ctx,
+    id: string,
+    changes: { itemId: string; status: string }[],
+  ) {
+    const VALID = new Set(["pending", "cooking", "ready", "served"]);
+    if (!Array.isArray(changes) || changes.length === 0) {
+      throw new BadRequestException("changes must be a non-empty array");
+    }
+    for (const c of changes) {
+      if (!c || typeof c.itemId !== "string" || !c.itemId || !VALID.has(c.status)) {
+        throw new BadRequestException("invalid item status change");
+      }
+    }
+    const byItemId = new Map(changes.map((c) => [c.itemId, c.status]));
+    const updated = await this.prisma.$transaction(async (tx) => {
+      // Row lock: concurrent merges queue up instead of racing read→write.
+      const locked = await tx.$queryRaw<{ id: string }[]>`
+        SELECT id FROM orders
+        WHERE id = ${id} AND "restaurantId" = ${ctx.restaurantId} AND "deletedAt" IS NULL
+        FOR UPDATE`;
+      if (locked.length === 0) throw new NotFoundException();
+      const order = await tx.order.findUniqueOrThrow({ where: { id } });
+      const items = Array.isArray(order.items)
+        ? (order.items as Array<Record<string, unknown>>)
+        : [];
+      const merged = items.map((it) =>
+        typeof it?.id === "string" && byItemId.has(it.id)
+          ? { ...it, status: byItemId.get(it.id) }
+          : it,
+      );
+      return tx.order.update({
+        where: { id },
+        data: { items: merged as Prisma.InputJsonValue },
+      });
+    });
+    // Publish AFTER commit so subscribers can't observe pre-commit state.
     await this.events.publish({
       action: "updated",
       restaurantId: updated.restaurantId,

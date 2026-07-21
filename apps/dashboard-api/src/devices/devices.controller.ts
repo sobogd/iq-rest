@@ -191,4 +191,32 @@ export class DevicesController {
       { items: body.items, total: body.total, discount: body.discount },
     );
   }
+
+  // Race-safe per-item status merge for kitchen/waiter tablets. Preferred
+  // over PATCH orders/:id for status taps: the server merges statuses by
+  // item id under a row lock, so concurrent devices can't overwrite each
+  // other's items array.
+  @UseGuards(DeviceGuard)
+  @Patch("orders/:id/item-status")
+  async patchOrderItemStatus(
+    @Req() req: DevicedRequest,
+    @Param("id") id: string,
+    @Body() body: { changes?: { itemId: string; status: string }[] },
+  ) {
+    if (req.device.type === "RESERVATION") {
+      throw new BadRequestException("Field not allowed for devices: orders");
+    }
+    const r = await this.prisma.restaurant.findUnique({
+      where: { id: req.device.restaurantId },
+      select: PRO_FEATURE_SELECT,
+    });
+    if (!r || !hasProFeatures(r)) {
+      throw new BadRequestException("feature_requires_pro");
+    }
+    return this.orders.patchItemStatuses(
+      { restaurantId: req.device.restaurantId },
+      id,
+      body?.changes ?? [],
+    );
+  }
 }

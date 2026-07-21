@@ -34,6 +34,38 @@ html {
   -ms-overflow-style: none;
 }
 
+/* Kill the browser autofill background (yellow/blue). Paint the field's own
+   --muted surface via an inset shadow and keep the foreground text color; the
+   long transition defers the UA's repaint indefinitely. */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px hsl(var(--muted)) inset;
+  box-shadow: 0 0 0 1000px hsl(var(--muted)) inset;
+  -webkit-text-fill-color: hsl(var(--foreground));
+  caret-color: hsl(var(--foreground));
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+/* Menu form inputs (form-input-bg) sit on the main --background surface, so
+   their autofill must paint --background too. Unlayered + class-pseudo keeps
+   this ahead of the generic @layer base autofill override above. */
+.form-input-bg:-webkit-autofill,
+.form-input-bg:-webkit-autofill:hover,
+.form-input-bg:-webkit-autofill:focus,
+.form-input-bg:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px hsl(var(--background)) inset !important;
+  box-shadow: 0 0 0 1000px hsl(var(--background)) inset !important;
+  -webkit-text-fill-color: hsl(var(--foreground)) !important;
+  caret-color: hsl(var(--foreground)) !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
 
 @layer base {
   :root {
@@ -71,8 +103,10 @@ html {
        tweak here to differentiate them from regular cards. Mobile keeps
        the sub-header flat (100 %); desktop overrides to 99 % below. */
     --nav-bg: 0 0% 100%;
-    --header-bg: 0 0% 100%;
+    --header-bg: 0 0% 98.75%;
     --subheader-bg: 0 0% 100%;
+    /* Menu/settings/form cards: same tone as the page header. */
+    --menu-card-bg: var(--header-bg);
   }
 
   /* Desktop (md+) sub-header gets a hair darker than the cards for visible
@@ -106,7 +140,8 @@ html {
     --destructive-foreground: 0 0% 100%;
     --success: 131 100% 58%;
     --success-foreground: 0 0% 100%;
-    --border: 0 0% 12%;
+    /* Warm border matched to the sidebar edge. */
+    --border: 30 12% 15.5%;
     --input: 0 0% 18%;
     --ring: 16 100% 58%;
     --sidebar-background: 0 0% 10%;
@@ -119,9 +154,11 @@ html {
     --sidebar-ring: 16 100% 58%;
     /* Sidebar: warm-lifted above the page bg. */
     --nav-bg: 30 18% 12%;
+    /* Menu/settings/form cards: same tone as the page header. */
+    --menu-card-bg: var(--header-bg);
     /* Page header: same tone as the sidebar (separate token so it can be
        tuned independently later). */
-    --header-bg: 30 18% 12%;
+    --header-bg: 30 18% 11%;
     --subheader-bg: 30 18% 7%;
   }
 
@@ -211,6 +248,7 @@ html {
   textarea,
   select {
     color: inherit;
+    font-family: inherit;
     background-color: transparent;
   }
   input:focus,
@@ -247,6 +285,11 @@ html {
   display: none;
 }
 .page-hdr:has(.page-hdr-slot:not(:empty)) .page-hdr-fallback {
+  display: none;
+}
+/* While a page portals a back button into the header, the mobile burger
+   yields its spot — back is the primary escape on subpages. */
+.page-hdr:has(.page-hdr-back) .page-hdr-burger {
   display: none;
 }
 

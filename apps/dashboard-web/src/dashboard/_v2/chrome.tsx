@@ -25,9 +25,7 @@ import {
   MessageIcon,
   ReceiptIcon,
   RefreshIcon,
-  SettingsIcon,
   ShareIcon,
-  SwapIcon,
   TrendingUpIcon,
   UsersIcon,
 } from "./icons";
@@ -38,6 +36,7 @@ import { RestaurantsProvider, useRestaurantsOrNull } from "./restaurants-context
 import { useOrdersStreamStateStore } from "./orders-sync-state";
 import { useIsFetching, useQueryClient } from "@tanstack/react-query";
 import { SubProvider, type Sub } from "./sub-context";
+import { NoticeHost } from "./notice";
 import type { Restaurant } from "./types";
 import { track } from "@/lib/dashboard-events";
 import { logout } from "./api";
@@ -45,6 +44,7 @@ import { apiUrl } from "@/lib/api";
 import { landingUrl } from "@/lib/landing-url";
 import { useDashboardRouter } from "../_spa/router";
 import type { View } from "../_spa/types";
+import { interceptNav } from "./nav-guard";
 
 type IconCmp = React.ComponentType<{ size?: number; className?: string }>;
 
@@ -88,12 +88,11 @@ interface SettingsItem {
 const SETTINGS_ITEMS: SettingsItem[] = [
   { key: "branding", labelKey: "branding", view: { name: "settings.branding" }, icon: Palette, event: "dash_settings_click_tab_brand" },
   { key: "contacts", labelKey: "contacts", view: { name: "settings.contacts" }, icon: Phone, event: "dash_settings_click_tab_contacts" },
-  { key: "general", labelKey: "general", view: { name: "settings.general" }, icon: SettingsIcon, event: "dash_settings_click_tab_general" },
+  { key: "general", labelKey: "general", view: { name: "settings.general" }, icon: GlobeIcon, event: "dash_settings_click_tab_general" },
   { key: "tables", labelKey: "tables", view: { name: "settings.tables" }, icon: GridIcon, event: "dash_settings_click_tab_tables" },
   { key: "devices", labelKey: "devices", view: { name: "settings.devices" }, icon: Tablet, event: "dash_settings_click_tab_devices" },
   { key: "set-orders", labelKey: "orders", view: { name: "settings.orders" }, icon: ClipboardList, event: "dash_settings_click_tab_orders" },
   { key: "bookings", labelKey: "bookings", view: { name: "settings.bookings" }, icon: ClockIcon, event: "dash_settings_click_tab_bookings" },
-  { key: "languages", labelKey: "languages", view: { name: "settings.languages" }, icon: GlobeIcon, event: "dash_settings_click_tab_langs" },
   { key: "billing", labelKey: "billing", view: { name: "settings.billing" }, icon: CreditCard, event: "dash_settings_click_tab_billing" },
   { key: "support", labelKey: "support", view: { name: "settings.support" }, icon: HelpCircleIcon, event: "dash_settings_click_tab_support" },
 ];
@@ -107,7 +106,7 @@ const ADMIN_ITEMS: { key: string; label: string; view: View; icon: IconCmp }[] =
 ];
 
 function viewToNavKey(viewName: string): string {
-  if (viewName === "reservations") return "reservations";
+  if (viewName === "reservations" || viewName.startsWith("reservations.")) return "reservations";
   if (viewName === "orders" || viewName.startsWith("orders.")) return "orders";
   if (viewName === "kitchen") return "kitchen";
   if (viewName === "analytics") return "analytics";
@@ -119,7 +118,6 @@ function viewToNavKey(viewName: string): string {
   if (viewName === "settings.devices") return "devices";
   if (viewName === "settings.orders") return "set-orders";
   if (viewName === "settings.bookings") return "bookings";
-  if (viewName === "settings.languages") return "languages";
   if (viewName === "settings.billing") return "billing";
   if (viewName === "settings.support") return "support";
   if (viewName.startsWith("settings.restaurants")) return "restaurants";
@@ -207,10 +205,11 @@ export function DashboardChrome({
               />
             ) : null}
             <PageHeaderBar activeKey={activeKey} onOpenDrawer={() => setDrawerState("open")} />
-            <main className="px-4 md:px-6 pt-5 md:pt-4 pb-[calc(1.25rem+env(safe-area-inset-bottom))] md:pb-10">
+            <main className="px-5 pt-5 md:pt-5 pb-[calc(1.25rem+env(safe-area-inset-bottom))] md:pb-10">
               {children}
             </main>
             <PageFooterBar />
+            <NoticeHost />
           </div>
         </SubProvider>
       </RestaurantProvider>
@@ -264,10 +263,7 @@ function DesktopSidebar({
 }) {
   const t = useTranslations("dashboard.nav");
   return (
-    <aside className="hidden md:flex fixed inset-y-0 left-0 z-30 w-60 flex-col bg-nav border-r border-[hsl(30,12%,15.5%)]">
-      <div className="shrink-0 px-2 pt-3">
-        <RestaurantCard restaurant={restaurant} />
-      </div>
+    <aside className="hidden md:flex fixed inset-y-0 left-0 z-30 w-60 flex-col bg-nav border-r border-border">
       <NavList activeKey={activeKey} isAdmin={isAdmin} impersonatedBy={impersonatedBy} />
     </aside>
   );
@@ -296,7 +292,7 @@ function PageHeaderBar({ activeKey, onOpenDrawer }: { activeKey: string; onOpenD
 
   return (
     <header
-      className="page-hdr sticky top-0 z-20 bg-header/90 backdrop-blur-md border-b border-border flex items-center gap-2 px-4 md:px-6"
+      className="page-hdr sticky top-0 z-20 bg-header border-b border-border flex items-center gap-3 px-5"
       style={{
         height: "calc(3.5rem + env(safe-area-inset-top))",
         paddingTop: "env(safe-area-inset-top)",
@@ -309,12 +305,12 @@ function PageHeaderBar({ activeKey, onOpenDrawer }: { activeKey: string; onOpenD
           track("dash_side_nav_open");
           onOpenDrawer();
         }}
-        className="md:hidden -ml-1 p-1.5 text-muted-foreground shrink-0"
+        className="page-hdr-burger md:hidden inline-flex items-center justify-center h-[36px] w-[36px] rounded-lg text-foreground bg-muted hover:bg-muted/70 transition-colors shrink-0"
       >
-        <BurgerIcon size={20} />
+        <BurgerIcon size={18} />
       </button>
       <div id={PAGE_HEADER_SLOT_ID} className="page-hdr-slot min-w-0 flex-1 h-full flex items-center" />
-      <div className="page-hdr-fallback min-w-0 flex-1 text-sm font-medium text-foreground truncate">
+      <div className="page-hdr-fallback relative -top-px min-w-0 flex-1 text-base font-bold text-foreground truncate">
         {fallbackTitle}
       </div>
     </header>
@@ -357,19 +353,6 @@ function MobileDrawer({
         }
         onClick={onClose}
       />
-      {/* Close floats in the top-right corner of the screen, over the backdrop. */}
-      <button
-        type="button"
-        aria-label="Close navigation"
-        onClick={onClose}
-        className={
-          "absolute right-1 w-10 h-10 rounded-full flex items-center justify-center text-white/90 duration-200 " +
-          (closing ? "animate-out fade-out-0 fill-mode-forwards" : "animate-in fade-in-0")
-        }
-        style={{ top: "calc(0.5rem + env(safe-area-inset-top))" }}
-      >
-        <CloseIcon size={22} />
-      </button>
       <div
         className={
           "absolute inset-y-0 left-0 w-[70vw] max-w-sm bg-nav border-r border-border flex flex-col duration-200 " +
@@ -385,9 +368,6 @@ function MobileDrawer({
           if (closing && e.target === e.currentTarget) onExited();
         }}
       >
-        <div className="shrink-0 px-2 pt-3">
-          <RestaurantCard restaurant={restaurant} onNavigate={onClose} />
-        </div>
         <NavList activeKey={activeKey} isAdmin={isAdmin} impersonatedBy={impersonatedBy} onNavigate={onClose} />
       </div>
     </div>
@@ -400,7 +380,7 @@ function MobileDrawer({
 function PageFooterBar() {
   return (
     <footer
-      className="page-ftr fixed bottom-0 left-0 right-0 md:left-60 z-20 bg-header/90 backdrop-blur-md border-t border-border flex items-center px-4 md:px-6"
+      className="page-ftr fixed bottom-0 left-0 right-0 md:left-60 z-20 bg-header/90 backdrop-blur-md border-t border-border flex items-center px-5"
       style={{
         height: "calc(3.5rem + env(safe-area-inset-bottom))",
         paddingBottom: "env(safe-area-inset-bottom)",
@@ -417,42 +397,23 @@ function PageFooterBar() {
 // actually switch.
 function RestaurantCard({
   restaurant,
-  onNavigate,
 }: {
   restaurant: Restaurant;
   onNavigate?: () => void;
 }) {
   const t = useTranslations("dashboard.nav");
-  const router = useDashboardRouter();
-  const restaurants = useRestaurantsOrNull();
-  const canSwitch = !!restaurants && restaurants.isPaid && restaurants.list.length > 0;
   const name = restaurant.name || t("untitledRestaurant");
   return (
-    <div className="w-full flex items-center gap-1.5">
-      <div className="flex-1 min-w-0 h-9 px-3.5 rounded-lg bg-muted flex items-center gap-2">
-        <span className="min-w-0 text-sm font-medium text-foreground truncate">{name}</span>
-        <SyncIndicator />
-      </div>
-      {canSwitch ? (
-        <button
-          type="button"
-          aria-label="Switch restaurant"
-          onClick={() => {
-            router.resetTo({ name: "settings.restaurants" });
-            onNavigate?.();
-          }}
-          className="shrink-0 w-9 h-9 rounded-lg bg-muted flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors"
-        >
-          <SwapIcon size={15} />
-        </button>
-      ) : null}
+    <div className="w-full flex items-center gap-2 px-2.5">
+      <span className="min-w-0 text-lg font-semibold text-foreground truncate">{name}</span>
+      <SyncIndicator />
     </div>
   );
 }
 
 function GroupLabel({ children }: { children: ReactNode }) {
   return (
-    <div className="px-2.5 pt-4 pb-2.5 text-xs font-medium uppercase tracking-wide text-muted-foreground/70">
+    <div className="px-2.5 pt-5 pb-2.5 text-xs font-medium uppercase tracking-wide text-muted-foreground/70">
       {children}
     </div>
   );
@@ -491,14 +452,27 @@ function NavList({
   );
 
   const go = (view: View, event?: string) => {
-    if (event) track(event);
-    router.resetTo(view);
-    onNavigate?.();
+    const proceed = () => {
+      if (event) track(event);
+      router.resetTo(view);
+      onNavigate?.();
+    };
+    // A dirty page (unsaved edits) may intercept: it shows its own
+    // unsaved-changes dialog and resumes via `proceed`. Close the mobile
+    // drawer right away so the dialog isn't stacked behind it.
+    if (interceptNav(proceed)) {
+      onNavigate?.();
+      return;
+    }
+    proceed();
   };
 
   return (
     <>
       <nav className="flex-1 min-h-0 overflow-y-auto px-2 py-3">
+        <div className="pt-3 pb-4">
+          <RestaurantCard restaurant={restaurant} />
+        </div>
         {menuUrl ? (
           <div className="space-y-0.5">
             <NavItem

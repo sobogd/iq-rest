@@ -258,22 +258,22 @@ export function ScanModal({ open, onClose, existingRealItemsCount, onSaved }: Sc
     )}
     <button
      type="button"
-     className={primaryBtn + " shrink-0 disabled:cursor-not-allowed"}
+     className={primaryBtn + " shrink-0 disabled:cursor-not-allowed inline-flex items-center"}
      disabled={photoPool.length === 0}
      onClick={() => void handleStartScan()}
     >
-     {t("upload.scan")}
+     <span className="truncate">{t("upload.scan")}</span>
     </button>
    </div>
   ) : stage === "review" ? (
    <div className="flex justify-end">
     <button
      type="button"
-     className={primaryBtn + " disabled:cursor-not-allowed"}
+     className={primaryBtn + " disabled:cursor-not-allowed inline-flex items-center"}
      disabled={selectedCount === 0}
      onClick={proceedFromReview}
     >
-     {t("review.continue", { n: selectedCount })}
+     <span className="truncate">{t("review.continue", { n: selectedCount })}</span>
     </button>
    </div>
   ) : null;

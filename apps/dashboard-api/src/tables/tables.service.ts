@@ -2,6 +2,10 @@ import { Injectable, NotFoundException } from "@nestjs/common";
 import { Prisma } from "@iq-rest/db";
 import { PrismaService } from "../prisma/prisma.service";
 
+// Table marker shapes the map supports; anything else falls back to a circle.
+const TABLE_SHAPES = ["circle", "square", "rect", "oval"];
+const normalizeShape = (s?: string): string => (s && TABLE_SHAPES.includes(s) ? s : "circle");
+
 interface TableUpsert {
   number: number;
   capacity: number;
@@ -46,7 +50,7 @@ export class TablesService {
         color: body.color ?? null,
         x: body.x ?? null,
         y: body.y ?? null,
-        shape: body.shape === "rect" ? "rect" : "circle",
+        shape: normalizeShape(body.shape),
         rotation: typeof body.rotation === "number" ? body.rotation : 0,
         width: typeof body.width === "number" ? body.width : null,
         height: typeof body.height === "number" ? body.height : null,
@@ -70,7 +74,7 @@ export class TablesService {
     if (body.color !== undefined) data.color = body.color ?? null;
     if (body.x !== undefined) data.x = body.x ?? null;
     if (body.y !== undefined) data.y = body.y ?? null;
-    if (body.shape !== undefined) data.shape = body.shape === "rect" ? "rect" : "circle";
+    if (body.shape !== undefined) data.shape = normalizeShape(body.shape);
     if (body.rotation !== undefined) data.rotation = typeof body.rotation === "number" ? body.rotation : 0;
     if (body.width !== undefined) data.width = typeof body.width === "number" ? body.width : null;
     if (body.height !== undefined) data.height = typeof body.height === "number" ? body.height : null;

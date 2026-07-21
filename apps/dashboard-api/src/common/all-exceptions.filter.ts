@@ -54,10 +54,16 @@ export class AllExceptionsFilter implements ExceptionFilter {
       (req.headers["x-request-id"] as string) ||
       Math.random().toString(36).slice(2, 10);
 
+    // Never leak an internal error's raw message to the client on a 5xx — a raw
+    // Prisma / runtime message can expose schema, constraint names or infra
+    // detail. The real message still goes to the server log below.
+    const clientMessage = status >= 500 ? "Internal server error" : message;
+    const clientCode = status >= 500 ? "internal_error" : code;
+
     const body: ErrorBody = {
       statusCode: status,
-      message,
-      code,
+      message: clientMessage,
+      code: clientCode,
       requestId,
       path: req.originalUrl,
     };

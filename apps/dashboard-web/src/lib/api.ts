@@ -28,7 +28,7 @@ function currentLocale(): string {
 /** Fired on any unexpected 401 from the API. Clears any leftover client state
  *  and bounces the user to the marketing landing — the session cookie is
  *  already gone or invalid, no point pretending we're signed in. */
-function handleUnauthorized(): void {
+export function handleUnauthorized(): void {
   if (isLoggingOut) return;
   isLoggingOut = true;
   // Fire-and-forget logout so the server-side row is cleared too. We don't

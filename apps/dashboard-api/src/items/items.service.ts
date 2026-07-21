@@ -3,21 +3,46 @@ import { Prisma } from "@iq-rest/db";
 import { z } from "zod";
 import { PrismaService } from "../prisma/prisma.service";
 import { AutoTranslateService } from "../auto-translate/auto-translate.service";
+import { cloneItemRecord, COPY_SUFFIX } from "./clone";
 
-const mlSchema = z.record(z.string(), z.string());
+// Bounds so the client can't stuff unbounded attacker-controlled JSON into the
+// `options` column (consumed later by public-menu / order snapshots).
+const MAX_LOCALES = 60;
+const MAX_STR = 500;
+const MAX_VARIANTS = 100;
+const MAX_OPTIONS = 50;
+const MAX_DELTA = 1_000_000;
+
+const mlSchema = z
+  .record(z.string().min(1).max(20), z.string().max(MAX_STR))
+  .refine((m) => Object.keys(m).length <= MAX_LOCALES, { message: "Too many locales" });
+
+// Accept string or number, coerce to a finite bounded number, store a canonical
+// 2-decimal string so downstream parseDecimal() never sees NaN / garbage.
+const priceDeltaSchema = z
+  .union([z.string(), z.number()])
+  .optional()
+  .transform((v) => {
+    if (v === undefined) return undefined;
+    const n = typeof v === "number" ? v : parseFloat(String(v).replace(",", ".").trim());
+    if (!Number.isFinite(n)) return "0.00";
+    const clamped = Math.max(-MAX_DELTA, Math.min(MAX_DELTA, n));
+    return clamped.toFixed(2);
+  });
+
 const variantSchema = z.object({
-  id: z.string().min(1),
+  id: z.string().min(1).max(80),
   name: mlSchema.nullable().optional(),
-  priceDelta: z.union([z.string(), z.number()]).optional(),
-}).passthrough();
+  priceDelta: priceDeltaSchema,
+}).strict();
 const optionSchema = z.object({
-  id: z.string().min(1),
+  id: z.string().min(1).max(80),
   name: mlSchema.nullable().optional(),
   type: z.enum(["single", "multi"]).optional(),
   required: z.boolean().optional(),
-  variants: z.array(variantSchema).optional(),
-}).passthrough();
-const optionsArraySchema = z.array(optionSchema).nullable();
+  variants: z.array(variantSchema).max(MAX_VARIANTS).optional(),
+}).strict();
+const optionsArraySchema = z.array(optionSchema).max(MAX_OPTIONS).nullable();
 
 function validateOptions(raw: unknown): unknown {
   if (raw === null || raw === undefined) return raw;
@@ -100,56 +125,74 @@ export class ItemsService {
   }
 
   async update(ctx: Ctx, id: string, body: Partial<ItemUpsert>) {
-    const item = await this.prisma.item.findFirst({ where: { id, restaurantId: ctx.restaurantId, deletedAt: null } });
-    if (!item) throw new NotFoundException();
-    const data: Prisma.ItemUpdateInput = {};
-    if (body.name !== undefined) data.name = body.name;
-    if (body.description !== undefined) data.description = body.description ?? null;
-    if (body.price !== undefined) data.price = new Prisma.Decimal(body.price);
-    if (body.imageUrl !== undefined) data.imageUrl = body.imageUrl ?? null;
-    if (body.categoryId !== undefined) {
-      const targetCat = await this.prisma.category.findFirst({
-        where: { id: body.categoryId, restaurantId: ctx.restaurantId, deletedAt: null },
-        select: { isGroup: true },
-      });
-      if (!targetCat) throw new BadRequestException("Category not found");
-      if (targetCat.isGroup) throw new BadRequestException("Cannot move item to a group category");
-      data.category = { connect: { id: body.categoryId } };
-    }
-    if (body.isActive !== undefined) data.isActive = body.isActive;
-    const sourceNameChangedForMerge = body.name !== undefined && body.name !== item.name;
-    const sourceDescriptionChangedForMerge =
-      body.description !== undefined && (body.description ?? null) !== (item.description ?? null);
-    if (body.translations !== undefined) {
-      const resetLocks: ("name" | "description")[] = [];
-      if (sourceNameChangedForMerge) resetLocks.push("name");
-      if (sourceDescriptionChangedForMerge) resetLocks.push("description");
-      const merged = mergeTranslationsWithLocks(
-        item.translations as TranslationsRow | null,
-        body.translations as Record<string, { name?: string; description?: string }> | null,
-        ["name", "description"],
-        resetLocks,
-      );
-      data.translations = (merged as Prisma.InputJsonValue) ?? Prisma.JsonNull;
-    }
-    if (body.allergens !== undefined) data.allergens = body.allergens;
-    if (body.diets !== undefined) data.diets = body.diets;
-    if (body.options !== undefined) {
-      const validatedOptions = validateOptions(body.options);
-      const restaurant = await this.prisma.restaurant.findUnique({
-        where: { id: ctx.restaurantId },
-        select: { defaultLanguage: true },
-      });
-      const defaultLang = restaurant?.defaultLanguage || "en";
-      const prevOptions = Array.isArray(item.options) ? (item.options as DishOptLike[]) : [];
-      const nextOptions = resetTargetLangsOnSourceRename(prevOptions, validatedOptions, defaultLang);
-      data.options = (nextOptions as Prisma.InputJsonValue) ?? Prisma.JsonNull;
-    }
-    if (body.sortOrder !== undefined) data.sortOrder = body.sortOrder;
-    const sourceNameChanged = body.name !== undefined && body.name !== item.name;
-    const sourceDescriptionChanged =
-      body.description !== undefined && (body.description ?? null) !== (item.description ?? null);
-    const updated = await this.prisma.item.update({ where: { id }, data });
+    // `translations` and `options` are read-modify-write JSON blobs. Under two
+    // concurrent updates of the same item, a plain read-then-update loses one
+    // side's merge. Do the read + merge + write inside one Serializable
+    // transaction so Postgres aborts a conflicting concurrent writer instead of
+    // silently dropping data. autoTranslate runs AFTER commit (it re-reads).
+    const { updated, sourceNameChanged, sourceDescriptionChanged } = await this.prisma.$transaction(
+      async (tx) => {
+        const item = await tx.item.findFirst({ where: { id, restaurantId: ctx.restaurantId, deletedAt: null } });
+        if (!item) throw new NotFoundException();
+        const data: Prisma.ItemUpdateInput = {};
+        if (body.name !== undefined) data.name = body.name;
+        if (body.description !== undefined) data.description = body.description ?? null;
+        if (body.price !== undefined) data.price = new Prisma.Decimal(body.price);
+        if (body.imageUrl !== undefined) data.imageUrl = body.imageUrl ?? null;
+        if (body.categoryId !== undefined) {
+          const targetCat = await tx.category.findFirst({
+            where: { id: body.categoryId, restaurantId: ctx.restaurantId, deletedAt: null },
+            select: { isGroup: true },
+          });
+          if (!targetCat) throw new BadRequestException("Category not found");
+          if (targetCat.isGroup) throw new BadRequestException("Cannot move item to a group category");
+          data.category = { connect: { id: body.categoryId } };
+          // Moving to a different category: append to the end of the target
+          // category so the item's stale sortOrder can't collide with existing
+          // siblings there (which corrupts the whole category's ordering).
+          if (body.categoryId !== item.categoryId && body.sortOrder === undefined) {
+            const max = await tx.item.aggregate({
+              where: { restaurantId: ctx.restaurantId, categoryId: body.categoryId, deletedAt: null },
+              _max: { sortOrder: true },
+            });
+            data.sortOrder = (max._max.sortOrder ?? -1) + 1;
+          }
+        }
+        if (body.isActive !== undefined) data.isActive = body.isActive;
+        const nameChanged = body.name !== undefined && body.name !== item.name;
+        const descriptionChanged =
+          body.description !== undefined && (body.description ?? null) !== (item.description ?? null);
+        if (body.translations !== undefined) {
+          const resetLocks: ("name" | "description")[] = [];
+          if (nameChanged) resetLocks.push("name");
+          if (descriptionChanged) resetLocks.push("description");
+          const merged = mergeTranslationsWithLocks(
+            item.translations as TranslationsRow | null,
+            body.translations as Record<string, { name?: string; description?: string }> | null,
+            ["name", "description"],
+            resetLocks,
+          );
+          data.translations = (merged as Prisma.InputJsonValue) ?? Prisma.JsonNull;
+        }
+        if (body.allergens !== undefined) data.allergens = body.allergens;
+        if (body.diets !== undefined) data.diets = body.diets;
+        if (body.options !== undefined) {
+          const validatedOptions = validateOptions(body.options);
+          const restaurant = await tx.restaurant.findUnique({
+            where: { id: ctx.restaurantId },
+            select: { defaultLanguage: true },
+          });
+          const defaultLang = restaurant?.defaultLanguage || "en";
+          const prevOptions = Array.isArray(item.options) ? (item.options as DishOptLike[]) : [];
+          const nextOptions = resetTargetLangsOnSourceRename(prevOptions, validatedOptions, defaultLang);
+          data.options = (nextOptions as Prisma.InputJsonValue) ?? Prisma.JsonNull;
+        }
+        if (body.sortOrder !== undefined) data.sortOrder = body.sortOrder;
+        const row = await tx.item.update({ where: { id }, data });
+        return { updated: row, sourceNameChanged: nameChanged, sourceDescriptionChanged: descriptionChanged };
+      },
+      { isolationLevel: Prisma.TransactionIsolationLevel.Serializable },
+    );
     await this.autoTranslate.translateItem({
 
       restaurantId: ctx.restaurantId,
@@ -175,6 +218,25 @@ export class ItemsService {
     await this.prisma.item.update({ where: { id }, data: { deletedAt: new Date() } });
   }
 
+  // Clone a dish with everything it carries — translations, options/variants,
+  // allergens, diets, and a fresh copy of its S3 image — into the same
+  // category, marked "(Copy)".
+  async duplicate(ctx: Ctx, id: string) {
+    const item = await this.prisma.item.findFirst({ where: { id, restaurantId: ctx.restaurantId, deletedAt: null } });
+    if (!item) throw new NotFoundException();
+    const restaurant = await this.prisma.restaurant.findUnique({
+      where: { id: ctx.restaurantId },
+      select: { defaultLanguage: true },
+    });
+    const created = await cloneItemRecord(this.prisma, item, {
+      restaurantId: ctx.restaurantId,
+      categoryId: item.categoryId,
+      defaultLang: restaurant?.defaultLanguage || "en",
+      nameSuffix: COPY_SUFFIX,
+    });
+    return this.prisma.item.findFirst({ where: { id: created.id } });
+  }
+
   async reorderBulk(ctx: Ctx, items: { id: string; sortOrder: number }[]) {
     if (!Array.isArray(items) || items.length === 0) return { ok: true };
     await this.prisma.$transaction(
@@ -189,7 +251,7 @@ export class ItemsService {
   }
 
   async reorder(ctx: Ctx, itemId: string, direction: "up" | "down") {
-    const item = await this.prisma.item.findFirst({ where: { id: itemId, restaurantId: ctx.restaurantId } });
+    const item = await this.prisma.item.findFirst({ where: { id: itemId, restaurantId: ctx.restaurantId, deletedAt: null } });
     if (!item) throw new NotFoundException();
     const siblings = await this.prisma.item.findMany({
       where: { restaurantId: ctx.restaurantId, categoryId: item.categoryId, deletedAt: null },

@@ -23,7 +23,6 @@ import {
   GeneralSettingsPage,
   OrderSettingsPage,
   BookingSettingsPage,
-  LanguagesSettingsPage,
   BillingSettingsPage,
   SupportPage,
 } from "../_v2/settings";
@@ -312,7 +311,9 @@ function ViewSwitch(p: SwitchProps) {
         />
       );
     case "reservations":
-      return <ReservationsPage restaurant={restaurant} bookings={bookings} setBookings={setBookings} tables={tables} />;
+      return <ReservationsPage restaurant={restaurant} bookings={bookings} setBookings={setBookings} tables={tables} month={view.month} />;
+    case "reservations.day":
+      return <ReservationsPage restaurant={restaurant} bookings={bookings} setBookings={setBookings} tables={tables} dayDate={view.date} />;
     case "kitchen":
       // Fixed-height kanban inside the document-scroll dashboard: cancel the
       // <main> padding and pin the board to the viewport. On mobile -mx-4
@@ -320,10 +321,9 @@ function ViewSwitch(p: SwitchProps) {
       // width on the right. Only the columns scroll internally — the page
       // itself doesn't.
       return (
-        <div className="-mx-4 md:-mx-6 -mt-5 md:-mt-4 -mb-[calc(1.25rem+env(safe-area-inset-bottom))] md:-mb-10 h-[calc(100dvh-var(--topbar-h,0px))]">
+        <div className="-mx-5 -mt-5 md:-mt-4 -mb-[calc(1.25rem+env(safe-area-inset-bottom))] md:-mb-10 h-[calc(100dvh-var(--topbar-h,0px))]">
           <KitchenPage
             orders={orders}
-            setOrders={setOrders}
             tables={tables}
             categories={categories}
             defaultLang={restaurant.defaultLang}
@@ -384,8 +384,6 @@ function ViewSwitch(p: SwitchProps) {
       return <SettingsOrdersWrapper onBack={backToSettings} />;
     case "settings.bookings":
       return <SettingsBookingsWrapper onBack={backToSettings} />;
-    case "settings.languages":
-      return <SettingsLanguagesWrapper onBack={backToSettings} />;
     case "settings.billing":
       return <SettingsBillingWrapper onBack={view.from === "menu" ? backToMenu : backToSettings} />;
     case "settings.support":
@@ -468,6 +466,7 @@ function ViewSwitch(p: SwitchProps) {
           dish={null}
           categoryId={view.categoryId}
           categoryName={categoryName}
+          categories={categories}
           onBack={backToMenu}
           onSavedRedirect={onSavedMenu}
           onDeletedRedirect={onSavedMenu}
@@ -494,6 +493,7 @@ function ViewSwitch(p: SwitchProps) {
           dish={dish}
           categoryId={dish.categoryId}
           categoryName={categoryName}
+          categories={categories}
           onBack={backToMenu}
           onSavedRedirect={onSavedMenu}
           onDeletedRedirect={onSavedMenu}
@@ -583,10 +583,6 @@ function SettingsOrdersWrapper({ onBack }: BackProp) {
 function SettingsBookingsWrapper({ onBack }: BackProp) {
   const [r, setR] = useRestaurantDraft();
   return <BookingSettingsPage restaurant={r} setRestaurant={setR} onBack={onBack} />;
-}
-function SettingsLanguagesWrapper({ onBack }: BackProp) {
-  const [r, setR] = useRestaurantDraft();
-  return <LanguagesSettingsPage restaurant={r} setRestaurant={setR} onBack={onBack} />;
 }
 function SettingsBillingWrapper({ onBack }: BackProp) {
   return <BillingSettingsPage onBack={onBack} />;

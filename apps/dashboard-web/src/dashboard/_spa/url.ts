@@ -20,7 +20,9 @@ export function viewToPath(view: View): string {
     case "orders.detail":
       return `/dashboard/orders/${view.orderId}`;
     case "reservations":
-      return "/dashboard/reservations";
+      return view.month ? `/dashboard/reservations?m=${view.month}` : "/dashboard/reservations";
+    case "reservations.day":
+      return `/dashboard/reservations/${view.date}`;
     case "kitchen":
       return "/dashboard/kitchen";
     case "analytics":
@@ -43,8 +45,6 @@ export function viewToPath(view: View): string {
       return "/dashboard/settings/orders";
     case "settings.bookings":
       return "/dashboard/settings/bookings";
-    case "settings.languages":
-      return "/dashboard/settings/languages";
     case "settings.billing":
       return view.from ? `/dashboard/settings/billing?from=${view.from}` : "/dashboard/settings/billing";
     case "settings.support":
@@ -121,7 +121,9 @@ export function pathToView(path: string): View {
   if (tableEdit) return { name: "settings.tables.edit", id: tableEdit[1] };
   if (stripped === "/dashboard/settings/orders") return { name: "settings.orders" };
   if (stripped === "/dashboard/settings/bookings") return { name: "settings.bookings" };
-  if (stripped === "/dashboard/settings/languages") return { name: "settings.languages" };
+  // Languages merged into the general (Region & languages) page — keep the
+  // old URL as an alias so bookmarks/back-stack entries still resolve.
+  if (stripped === "/dashboard/settings/languages") return { name: "settings.general" };
   if (stripped === "/dashboard/settings/billing") {
     const from = params.get("from");
     return from === "menu" ? { name: "settings.billing", from: "menu" } : { name: "settings.billing" };
@@ -153,7 +155,12 @@ export function pathToView(path: string): View {
   if (stripped === "/dashboard/orders") return { name: "orders" };
   const orderMatch = stripped.match(/^\/dashboard\/orders\/([^/]+)$/);
   if (orderMatch) return { name: "orders.detail", orderId: orderMatch[1] };
-  if (stripped === "/dashboard/reservations") return { name: "reservations" };
+  if (stripped === "/dashboard/reservations") {
+    const m = params.get("m");
+    return m ? { name: "reservations", month: m } : { name: "reservations" };
+  }
+  const reservationDay = stripped.match(/^\/dashboard\/reservations\/(\d{4}-\d{2}-\d{2})$/);
+  if (reservationDay) return { name: "reservations.day", date: reservationDay[1] };
   if (stripped === "/dashboard/kitchen") return { name: "kitchen" };
   if (stripped === "/dashboard/analytics") return { name: "analytics" };
 

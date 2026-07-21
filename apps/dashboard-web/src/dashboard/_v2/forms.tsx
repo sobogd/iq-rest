@@ -9,13 +9,16 @@ import { useTranslations } from "next-intl";
 import {
  ArrowDownIcon,
  ArrowUpIcon,
- ChevronRightIcon,
  CopyIcon,
+ EyeIcon,
+ FlameIcon,
+ PlateForkKnifeIcon,
  PlusIcon,
+ SlidersIcon,
+ SplitIcon,
  TrashIcon,
 } from "./icons";
 import {
- AiImageModal,
  ConfirmDialog,
  EditPageHeader,
  Modal,
@@ -25,15 +28,14 @@ import {
  TranslatedInput,
  UnsavedChangesDialog,
 } from "./ui";
-import { iconBtn, inputClass } from "./tokens";
+import { formInputClass, primaryBtn, secondaryBtn } from "./tokens";
+import { notify } from "./notice";
+import { useFlip } from "./use-flip";
 import {
  ALLERGENS,
  AVAILABLE_LANGUAGES,
  emptyMl,
- getMl,
  getMlWithFallback,
- setMl,
- translateText,
 } from "./i18n";
 import { AllergenIcon } from "./allergen-icon";
 import { DietIcon } from "./diet-icon";
@@ -45,10 +47,13 @@ import {
  createItem,
  deleteCategory,
  deleteItem,
+ duplicateCategory,
+ duplicateItem,
  updateCategory,
  updateItem,
 } from "./api";
 import { useRestaurant } from "./restaurant-context";
+import { useHistoryModal } from "./use-history-modal";
 import type { Category, Dish, DishOption, Ml, OptionVariant } from "./types";
 import { track } from "@/lib/dashboard-events";
 import { showApiError } from "@/lib/show-api-error";
@@ -95,6 +100,8 @@ export function CategoryForm({
  const [form, setForm] = useState<{ name: Ml; parentId: string | null }>(initialForm);
  const [saving, setSaving] = useState(false);
  const [deleting, setDeleting] = useState(false);
+ const [duplicating, setDuplicating] = useState(false);
+ const [duplicateConfirmOpen, setDuplicateConfirmOpen] = useState(false);
  const [confirmOpen, setConfirmOpen] = useState(false);
  const [unsavedOpen, setUnsavedOpen] = useState(false);
  const [saveErrorOpen, setSaveErrorOpen] = useState(false);
@@ -168,6 +175,24 @@ export function CategoryForm({
  }
  }
 
+ // Duplicate the persisted category/group with everything below it, then bounce
+ // back to the menu list (same redirect as delete) where the "(Copy)" appears.
+ // Operates on the saved row — any unsaved edits in the form are ignored, just
+ // like Delete does.
+ async function handleDuplicate() {
+ track("dash_category_click_duplicate");
+ if (!category || duplicating || saving) return;
+ setDuplicating(true);
+ try {
+ await duplicateCategory(category.id);
+ onDeletedRedirect();
+ } catch (err) {
+ showApiError(err, "dash_category_duplicate");
+ setDuplicating(false);
+ setDuplicateConfirmOpen(false);
+ }
+ }
+
  const titleText = isNew
  ? (editingGroup ? t("newGroupTitle", { defaultValue: t("newTitle") }) : t("newTitle"))
  : (getMlWithFallback(form.name, lang, defaultLang) || tc("untitled"));
@@ -181,7 +206,6 @@ export function CategoryForm({
  onBack();
  }}
  title={titleText}
- breadcrumb={t("breadcrumb")}
  lang={lang}
  onLangChange={setLang}
  languages={langMetas}
@@ -190,10 +214,39 @@ export function CategoryForm({
  saving={saving}
  onLangsOpen={() => track("dash_category_click_langs")}
  onLangSelect={() => track("dash_category_click_lang")}
+ actionMenu={
+ !isNew ? (
+ <>
+ <button
+ type="button"
+ data-testid="form-duplicate"
+ onClick={() => setDuplicateConfirmOpen(true)}
+ disabled={saving || duplicating}
+ className="inline-flex items-center justify-center gap-1.5 h-[36px] w-[36px] px-0 md:w-auto md:px-[16px] text-[14px] font-semibold rounded-lg text-foreground bg-muted hover:bg-muted/70 transition-colors whitespace-nowrap shrink-0 disabled:opacity-50"
+ aria-label={editingGroup ? t("duplicateButtonGroup", { defaultValue: "Duplicate group" }) : t("duplicateButton", { defaultValue: "Duplicate category" })}
+ title={editingGroup ? t("duplicateButtonGroup", { defaultValue: "Duplicate group" }) : t("duplicateButton", { defaultValue: "Duplicate category" })}
+ >
+ <CopyIcon size={18} />
+ <span className="hidden md:inline">{tc("duplicate", { defaultValue: "Duplicate" })}</span>
+ </button>
+ <button
+ type="button"
+ data-testid="form-delete"
+ onClick={() => setConfirmOpen(true)}
+ className="inline-flex items-center justify-center gap-1.5 h-[36px] w-[36px] px-0 md:w-auto md:px-[16px] text-[14px] font-semibold rounded-lg text-foreground bg-muted hover:bg-muted/70 transition-colors whitespace-nowrap shrink-0"
+ aria-label={editingGroup ? t("deleteButtonGroup") : t("deleteButton")}
+ title={editingGroup ? t("deleteButtonGroup") : t("deleteButton")}
+ >
+ <TrashIcon size={18} />
+ <span className="hidden md:inline">{tc("delete")}</span>
+ </button>
+ </>
+ ) : undefined
+ }
  />
 
  <div className="">
- <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
+ <div className="rounded-2xl bg-[hsl(var(--menu-card-bg))] border border-border p-5 md:p-6">
  <TranslatedInput
  id="cat-name"
  label={t("nameLabel")}
@@ -209,10 +262,11 @@ export function CategoryForm({
  {!editingGroup && availableGroups.length > 0 ? (
  <div className="mt-4">
  <label htmlFor="cat-parent" className="block text-sm font-medium text-foreground mb-2.5">
- {t("parentGroupLabel", { defaultValue: "Group" })}
+ {t("parentGroupLabel", { defaultValue: "Group" })}:
  </label>
  <Select<string | null>
  id="cat-parent"
+ title={t("parentGroupLabel", { defaultValue: "Group" })}
  value={form.parentId}
  onChange={(next) => setForm((f) => ({ ...f, parentId: next }))}
  placeholder={t("noGroup", { defaultValue: "No group" })}
@@ -229,19 +283,6 @@ export function CategoryForm({
  </div>
  </div>
 
- {!isNew ? (
- <div className="mt-6 flex justify-center">
- <button
- type="button"
- onClick={() => setConfirmOpen(true)}
- className="inline-flex items-center gap-1.5 h-9 px-3 text-xs font-medium text-red-600 rounded-lg transition-colors"
- >
- <TrashIcon size={13} />
- {editingGroup ? t("deleteButtonGroup") : t("deleteButton")}
- </button>
- </div>
- ) : null}
-
  <ConfirmDialog
  open={confirmOpen}
  title={editingGroup ? t("deleteTitleGroup") : t("deleteTitle")}
@@ -254,6 +295,26 @@ export function CategoryForm({
  }
  onConfirm={confirmDelete}
  onCancel={() => (deleting ? null : setConfirmOpen(false))}
+ />
+
+ <ConfirmDialog
+ open={duplicateConfirmOpen}
+ confirmStyle="primary"
+ confirmLabel={tc("duplicate", { defaultValue: "Duplicate" })}
+ title={
+ editingGroup
+ ? t("duplicateConfirmTitleGroup", { defaultValue: "Duplicate group?" })
+ : t("duplicateConfirmTitle", { defaultValue: "Duplicate category?" })
+ }
+ message={
+ duplicating
+ ? tc("duplicating", { defaultValue: "Duplicating…" })
+ : editingGroup
+ ? t("duplicateConfirmMessageGroup", { defaultValue: "A copy of this group with all its categories and dishes will be created." })
+ : t("duplicateConfirmMessage", { defaultValue: "A copy of this category with all its dishes will be created." })
+ }
+ onConfirm={handleDuplicate}
+ onCancel={() => (duplicating ? null : setDuplicateConfirmOpen(false))}
  />
 
  <ConfirmDialog
@@ -285,10 +346,21 @@ export function CategoryForm({
  <div className="fixed inset-0 z-50 bg-background/70 backdrop-blur-sm flex items-center justify-center px-6">
  <div className="flex flex-col items-center gap-3 text-center">
  <div className="w-10 h-10 border-[3px] border-input border-t-foreground rounded-full animate-spin" />
- <div className="text-xs text-muted-foreground">
+ <div className="text-sm text-muted-foreground">
  {editingGroup
  ? (languages.length > 1 ? t("savingAndTranslatingGroupOverlay") : t("savingGroupOverlay"))
  : (languages.length > 1 ? t("savingAndTranslatingOverlay") : t("savingOverlay"))}
+ </div>
+ </div>
+ </div>
+ ) : null}
+
+ {duplicating ? (
+ <div className="fixed inset-0 z-50 bg-background/70 backdrop-blur-sm flex items-center justify-center px-6">
+ <div className="flex flex-col items-center gap-3 text-center">
+ <div className="w-10 h-10 border-[3px] border-input border-t-foreground rounded-full animate-spin" />
+ <div className="text-sm text-muted-foreground">
+ {tc("duplicating", { defaultValue: "Duplicating…" })}
  </div>
  </div>
  </div>
@@ -300,6 +372,7 @@ export function CategoryForm({
 // ── Dish form ──
 
 interface DishFormState {
+ categoryId: string | null;
  name: Ml;
  description: Ml;
  price: string;
@@ -325,6 +398,7 @@ function arrEqual(a: string[], b: string[]): boolean {
 }
 
 function isDishFormDirty(a: DishFormState, b: DishFormState): boolean {
+ if (a.categoryId !== b.categoryId) return true;
  if (a.price !== b.price) return true;
  if (a.photoUrl !== b.photoUrl) return true;
  if (a.visible !== b.visible) return true;
@@ -375,6 +449,7 @@ export function DishForm({
  dish,
  categoryId,
  categoryName,
+ categories = [],
  onSavedRedirect,
  onBack,
  onDeletedRedirect,
@@ -388,6 +463,9 @@ export function DishForm({
  // bucket. New dishes always carry a real category from the item.new route.
  categoryId: string | null;
  categoryName: string;
+ // All categories + groups — feeds the category picker (leaf categories only,
+ // each labelled with its parent group in the option description).
+ categories?: Category[];
  onSavedRedirect: (newId: string) => void;
  onBack: () => void;
  onDeletedRedirect: () => void;
@@ -408,6 +486,8 @@ export function DishForm({
 
  const [lang, setLang] = useState<string>(defaultLang);
  const initialForm = useMemo<DishFormState>(() => ({
+ // New dishes start with no category — the user must pick one explicitly.
+ categoryId: dish ? dish.categoryId : null,
  name: dish ? dish.name : emptyMl(languages),
  description: dish && dish.description ? dish.description : emptyMl(languages),
  price: dish ? dish.price : "",
@@ -418,24 +498,45 @@ export function DishForm({
  options: dish?.options ?? [],
  }), [dish, languages]);
  const [form, setForm] = useState<DishFormState>(initialForm);
- // Resync the form when the parent swaps to a different dish (e.g. after a
- // concurrent save+stay or an auto-translate-driven reload). useState only
- // reads its initial value once, so without this the form would keep
- // showing the previous dish's data.
+ // Resync the form ONLY when the parent swaps to a different dish id. Keying the
+ // effect on `initialForm` identity used to reset the form on any parent-driven
+ // `dish` reference change (background refetch / auto-translate reload) with the
+ // same id — silently discarding the user's unsaved edits. A ref feeds the
+ // latest computed initial state without retriggering the reset.
  const dishKey = dish?.id ?? null;
+ const initialFormRef = useRef(initialForm);
+ initialFormRef.current = initialForm;
  useEffect(() => {
- setForm(initialForm);
- }, [dishKey, initialForm]);
+ setForm(initialFormRef.current);
+ }, [dishKey]);
  const [saving, setSaving] = useState(false);
  const [deleting, setDeleting] = useState(false);
  const [duplicating, setDuplicating] = useState(false);
+ const [duplicateConfirmOpen, setDuplicateConfirmOpen] = useState(false);
  const [confirmOpen, setConfirmOpen] = useState(false);
  const [unsavedOpen, setUnsavedOpen] = useState(false);
  const [saveErrorOpen, setSaveErrorOpen] = useState(false);
- const [aiOpen, setAiOpen] = useState(false);
  const [optionModal, setOptionModal] = useState<
  { kind: "new" } | { kind: "edit"; id: string } | null
  >(null);
+ // Retain the last request so the modal keeps its content while it plays the
+ // close animation (Modal stays mounted; `open` drives enter/exit).
+ const optionModalRef = useRef(optionModal);
+ if (optionModal) optionModalRef.current = optionModal;
+ const activeOptionModal = optionModal ?? optionModalRef.current;
+ // History-backed option modal: phone / browser Back closes it. The embedded
+ // OptionForm reports its dirty state + save action up here so a hardware Back
+ // on an unsaved option prompts instead of silently discarding.
+ const optionDirtyRef = useRef(false);
+ const optionSubmitRef = useRef<null | (() => void)>(null);
+ const [optionUnsavedOpen, setOptionUnsavedOpen] = useState(false);
+ useHistoryModal({
+ open: optionModal !== null,
+ hash: "option",
+ onClose: () => setOptionModal(null),
+ guard: () => optionDirtyRef.current,
+ onBlocked: () => setOptionUnsavedOpen(true),
+ });
  // Cheap-and-correct dirty check: only the fields that the form actually
  // owns. Previously this serialised the whole state twice on every render.
  const isDirty = useMemo(() => isDishFormDirty(form, initialForm), [form, initialForm]);
@@ -445,6 +546,30 @@ export function DishForm({
  if (!def) return enabled;
  return [def, ...enabled.filter((l) => l.code !== defaultLang)];
  }, [languages, defaultLang]);
+
+ // Category picker options: leaf categories only, ordered exactly like the menu
+ // list — ungrouped categories first, then each group (by sortOrder) followed
+ // by its own categories. Each option is described by its parent group (or
+ // "no group" at the top level).
+ const categoryOptions = useMemo(() => {
+ const bySort = (a: Category, b: Category) => a.sortOrder - b.sortOrder;
+ const leaves = categories.filter((c) => !c.isGroup);
+ const groups = categories.filter((c) => c.isGroup).sort(bySort);
+ const ordered: Category[] = [
+ ...leaves.filter((c) => (c.parentId ?? null) === null).sort(bySort),
+ ...groups.flatMap((g) => leaves.filter((c) => c.parentId === g.id).sort(bySort)),
+ ];
+ return ordered.map((c) => {
+ const group = c.parentId ? groups.find((g) => g.id === c.parentId) : null;
+ return {
+ value: c.id as string | null,
+ label: getMlWithFallback(c.name, defaultLang, defaultLang) || tc("untitled"),
+ desc: group
+ ? getMlWithFallback(group.name, defaultLang, defaultLang)
+ : t("noGroup"),
+ };
+ });
+ }, [categories, defaultLang, t, tc]);
 
  useEffect(() => {
  if (typeof window !== "undefined" && window.location.hash === "#options") {
@@ -462,12 +587,16 @@ export function DishForm({
 
  function validateForm(): { title: string; message: string } | null {
  const missing: string[] = [];
+ if (!form.categoryId) missing.push("category");
  if (namePrimary.length === 0) missing.push("name");
  const priceTrim = form.price.trim();
  if (priceTrim.length === 0 || isNaN(parseDecimal(priceTrim))) missing.push("price");
  if (missing.length === 0) return null;
  if (missing.length === 1) {
  const field = missing[0];
+ if (field === "category") {
+ return { title: t("categoryRequiredTitle"), message: t("categoryRequiredMessage") };
+ }
  return {
  title: field === "name" ? t("nameRequiredTitle") : t("priceRequiredTitle"),
  message:
@@ -514,9 +643,9 @@ export function DishForm({
  try {
  let savedId: string;
  if (isNew) {
- if (!categoryId) {
- // New dishes always come from the item.new route with a real category;
- // a null here is a programming error, not a user-reachable state.
+ if (!form.categoryId) {
+ // Category is required to create a dish. The picker defaults to the
+ // route's category, so a null here means the user cleared it.
  setSaving(false);
  return null;
  }
@@ -525,7 +654,7 @@ export function DishForm({
  description: descPrimary,
  price: priceNum,
  imageUrl: form.photoUrl,
- categoryId,
+ categoryId: form.categoryId,
  isActive: form.visible,
  translations,
  allergens: form.allergens,
@@ -541,7 +670,7 @@ export function DishForm({
  imageUrl: form.photoUrl,
  // Orphaned dish (no category): leave it orphaned rather than send a
  // null the API would reject — editing name/price/etc still works.
- ...(categoryId ? { categoryId } : {}),
+ ...(form.categoryId ? { categoryId: form.categoryId } : {}),
  isActive: form.visible,
  translations,
  allergens: form.allergens,
@@ -554,6 +683,7 @@ export function DishForm({
  return null;
  }
  if (redirectAfter === "list") {
+ notify(tc("savedTitle"), tc("savedMessage"));
  onSavedRedirect(savedId);
  } else {
  setSaving(false);
@@ -610,45 +740,38 @@ export function DishForm({
  }
  }
 
+ // Duplicate the persisted dish (unsaved edits ignored, like Delete) and go
+ // back to the menu list where the "(Copy)" appears.
  async function handleDuplicate() {
- // Can't duplicate an orphaned dish — there's no category to place the copy
- // in. (The duplicate button is hidden for the No-category bucket anyway.)
- if (!dish || !dish.categoryId || duplicating) return;
  track("dash_item_click_duplicate");
+ if (!dish || duplicating || saving) return;
  setDuplicating(true);
- const copySuffix = " (" + tc("copy", { defaultValue: "copy" }) + ")";
- const newName: Ml = { ...dish.name };
- for (const code of Object.keys(newName)) {
- const v = (newName[code] || "").trim();
- if (v.length > 0) newName[code] = v + copySuffix;
- }
- const namePrimary = (newName[defaultLang] || "").trim();
- const descPrimary = (dish.description?.[defaultLang] || "").trim() || null;
- const translations = buildItemTranslations(newName, dish.description || emptyMl(languages), defaultLang);
- const copiedOptions: DishOption[] = (dish.options || []).map((opt) => ({
- ...opt,
- id: newId(),
- variants: opt.variants.map((v) => ({ ...v, id: newId() })),
- }));
  try {
- const created = await createItem({
- name: namePrimary,
- description: descPrimary,
- price: parseDecimal(dish.price),
- imageUrl: dish.photoUrl,
- categoryId: dish.categoryId,
- isActive: dish.visible,
- translations,
- allergens: dish.allergens,
- diets: dish.diets,
- options: copiedOptions,
- });
- onSavedRedirect(created.id);
+ await duplicateItem(dish.id);
+ onDeletedRedirect();
  } catch (err) {
  showApiError(err, "dash_item_duplicate");
  setDuplicating(false);
+ setDuplicateConfirmOpen(false);
  }
  }
+
+ const renderAddOption = () => (
+ <button
+ type="button"
+ data-testid="option-add"
+ onClick={handleAddOption}
+ disabled={saving}
+ className={secondaryBtn + " inline-flex items-center gap-1.5 shrink-0"}
+ >
+ {saving ? (
+ <div className="w-3.5 h-3.5 border-2 border-muted-foreground/40 border-t-muted-foreground rounded-full animate-spin" />
+ ) : (
+ <PlusIcon size={18} />
+ )}
+ <span className="hidden md:inline">{t("addOption")}</span>
+ </button>
+ );
 
  const titleText = isNew
  ? t("newTitle")
@@ -664,7 +787,6 @@ export function DishForm({
  onBack();
  }}
  title={titleText}
- breadcrumb={categoryName ? t("breadcrumb") + " / " + categoryName : t("breadcrumb")}
  lang={lang}
  onLangChange={setLang}
  languages={langMetas}
@@ -673,26 +795,70 @@ export function DishForm({
  saving={saving}
  onLangsOpen={() => track("dash_item_click_langs")}
  onLangSelect={() => track("dash_item_click_lang")}
+ actionMenu={
+ !isNew ? (
+ <>
+ <button
+ type="button"
+ data-testid="form-duplicate"
+ onClick={() => setDuplicateConfirmOpen(true)}
+ disabled={saving || duplicating}
+ className="inline-flex items-center justify-center gap-1.5 h-[36px] w-[36px] px-0 md:w-auto md:px-[16px] text-[14px] font-semibold rounded-lg text-foreground bg-muted hover:bg-muted/70 transition-colors whitespace-nowrap shrink-0 disabled:opacity-50"
+ aria-label={t("duplicateButton", { defaultValue: "Duplicate dish" })}
+ title={t("duplicateButton", { defaultValue: "Duplicate dish" })}
+ >
+ <CopyIcon size={18} />
+ <span className="hidden md:inline">{tc("duplicate", { defaultValue: "Duplicate" })}</span>
+ </button>
+ <button
+ type="button"
+ data-testid="form-delete"
+ onClick={() => setConfirmOpen(true)}
+ className="inline-flex items-center justify-center gap-1.5 h-[36px] w-[36px] px-0 md:w-auto md:px-[16px] text-[14px] font-semibold rounded-lg text-foreground bg-muted hover:bg-muted/70 transition-colors whitespace-nowrap shrink-0"
+ aria-label={t("deleteButton")}
+ title={t("deleteButton")}
+ >
+ <TrashIcon size={18} />
+ <span className="hidden md:inline">{tc("delete")}</span>
+ </button>
+ </>
+ ) : undefined
+ }
  />
 
  <div className="space-y-3">
- <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
+ <div className="rounded-2xl bg-[hsl(var(--menu-card-bg))] border border-border p-4 sm:p-5">
  <div className="flex flex-col-reverse md:flex-row-reverse gap-4 md:gap-5">
  <div className="w-full md:w-[7.6rem] shrink-0">
  <PhotoPicker
  url={form.photoUrl}
+ showLabel
  onChange={(url) => setForm((f) => ({ ...f, photoUrl: url }))}
- onAiClick={() => { track("dash_item_click_generate_photo"); setAiOpen(true); }}
  onAddClick={() => track("dash_item_click_add_photo")}
  onRemoveClick={() => track("dash_item_click_delete_photo")}
  inputId="dish-photo"
  width="w-full"
- height="aspect-square"
+ height="h-28 md:h-auto md:aspect-square"
  />
  </div>
  <div className="flex-1 min-w-0">
- <div className="flex gap-5 items-start mb-4">
- <div className="flex-1 min-w-0">
+ <div className="flex flex-col md:flex-row gap-4 md:gap-5 md:items-start mb-4">
+ {categoryOptions.length > 0 ? (
+ <div className="w-full md:w-1/4 shrink-0">
+ <label htmlFor="dish-category" className="block text-sm font-medium text-foreground mb-2.5">
+ {t("categoryLabel")}:
+ </label>
+ <Select<string | null>
+ id="dish-category"
+ title={t("categoryLabel")}
+ value={form.categoryId}
+ onChange={(next) => setForm((f) => ({ ...f, categoryId: next }))}
+ options={categoryOptions}
+ placeholder={t("categoryLabel")}
+ />
+ </div>
+ ) : null}
+ <div className="w-full md:flex-1 min-w-0">
  <TranslatedInput
  id="dish-name"
  label={t("nameLabel")}
@@ -705,9 +871,9 @@ export function DishForm({
  onFocus={() => track("dash_item_focus_name_input")}
  />
  </div>
- <div className="w-24 shrink-0">
+ <div className="w-full md:w-1/4 shrink-0">
  <label htmlFor="dish-price" className="block text-sm font-medium text-foreground mb-2.5">
- {t("priceLabel")}
+ {t("priceLabel")}:
  </label>
  <div className="relative">
  <input
@@ -718,7 +884,7 @@ export function DishForm({
  value={form.price}
  onChange={(e) => setForm((f) => ({ ...f, price: sanitizePriceInput(e.target.value) }))}
  onFocus={() => track("dash_item_focus_price_input")}
- className={inputClass + " pl-3 pr-8 tabular-nums"}
+ className={formInputClass + " pl-3 pr-8 tabular-nums"}
  />
  <span className="absolute top-1 right-1 w-8 h-8 inline-flex items-center justify-center text-sm text-muted-foreground pointer-events-none">
  {currencySymbol}
@@ -742,52 +908,12 @@ export function DishForm({
  </div>
  </div>
 
- <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
- <div className="flex items-baseline justify-between gap-3 mb-0.5">
- <div className="text-sm font-medium text-foreground">{t("dietsLabel")}</div>
- {form.diets.length > 0 ? (
- <span className="text-[11px] font-medium text-muted-foreground tabular-nums">
- {form.diets.length} {tc("selected")}
- </span>
- ) : null}
+ <div className="grid gap-3 md:grid-cols-2">
+ <div className="rounded-2xl bg-[hsl(var(--menu-card-bg))] border border-border p-4 sm:p-5">
+ <div className="flex items-center gap-1.5 text-sm font-medium text-foreground mb-2.5">
+ <FlameIcon size={16} className="text-muted-foreground" />
+ {t("allergensLabel")}:
  </div>
- <p className="text-xs text-muted-foreground mb-4">{t("dietsTip")}</p>
- <div className="flex flex-wrap gap-1.5">
- {DIETS.map((d) => {
- const checked = form.diets.includes(d.code);
- return (
- <button
- key={d.code}
- type="button"
- onClick={() => {
- track(form.diets.includes(d.code) ? "dash_item_click_diet_off" : "dash_item_click_diet_on");
- toggleDiet(d.code);
- }}
- className={
- "inline-flex items-center gap-1.5 h-8 px-2.5 text-xs font-medium rounded-md transition-colors " +
- (checked
- ? "bg-foreground text-background"
- : "bg-secondary text-muted-foreground")
- }
- >
- <DietIcon code={d.code} className="w-3.5 h-3.5" />
- {tDiets(d.code as never)}
- </button>
- );
- })}
- </div>
- </div>
-
- <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
- <div className="flex items-baseline justify-between gap-3 mb-0.5">
- <div className="text-sm font-medium text-foreground">{t("allergensLabel")}</div>
- {form.allergens.length > 0 ? (
- <span className="text-[11px] font-medium text-muted-foreground tabular-nums">
- {form.allergens.length} {tc("selected")}
- </span>
- ) : null}
- </div>
- <p className="text-xs text-muted-foreground mb-4">{t("allergensTip")}</p>
  <div className="flex flex-wrap gap-1.5">
  {ALLERGENS.map((a) => {
  const checked = form.allergens.includes(a.code);
@@ -800,7 +926,7 @@ export function DishForm({
  toggleAllergen(a.code);
  }}
  className={
- "inline-flex items-center gap-1.5 h-8 px-2.5 text-xs font-medium rounded-md transition-colors " +
+ "inline-flex items-center gap-1.5 h-8 px-2.5 text-sm font-medium rounded-md transition-colors " +
  (checked
  ? "bg-foreground text-background"
  : "bg-secondary text-muted-foreground")
@@ -814,32 +940,47 @@ export function DishForm({
  </div>
  </div>
 
- <div id="options-section" className="bg-card border border-border rounded-2xl p-5 md:p-6">
- <div className="text-sm font-medium text-foreground">{t("optionsLabel")}</div>
- <p className="text-xs text-muted-foreground mb-4 mt-0.5">
- {t("optionsTip")}
- </p>
-
- <DishOptionsInline
- options={form.options}
- defaultLang={defaultLang}
- disabled={saving}
- onReorder={(next) => setForm((f) => ({ ...f, options: next }))}
- onAddOption={handleAddOption}
- onEditOption={handleEditOption}
- />
+ <div className="rounded-2xl bg-[hsl(var(--menu-card-bg))] border border-border p-4 sm:p-5">
+ <div className="flex items-center gap-1.5 text-sm font-medium text-foreground mb-2.5">
+ <PlateForkKnifeIcon size={16} className="text-muted-foreground" />
+ {t("dietsLabel")}:
+ </div>
+ <div className="flex flex-wrap gap-1.5">
+ {DIETS.map((d) => {
+ const checked = form.diets.includes(d.code);
+ return (
+ <button
+ key={d.code}
+ type="button"
+ onClick={() => {
+ track(form.diets.includes(d.code) ? "dash_item_click_diet_off" : "dash_item_click_diet_on");
+ toggleDiet(d.code);
+ }}
+ className={
+ "inline-flex items-center gap-1.5 h-8 px-2.5 text-sm font-medium rounded-md transition-colors " +
+ (checked
+ ? "bg-foreground text-background"
+ : "bg-secondary text-muted-foreground")
+ }
+ >
+ <DietIcon code={d.code} className="w-3.5 h-3.5" />
+ {tDiets(d.code as never)}
+ </button>
+ );
+ })}
+ </div>
+ </div>
  </div>
 
- <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
+ <div className="rounded-2xl bg-[hsl(var(--menu-card-bg))] border border-border p-4 sm:p-5">
  <label className="flex items-center justify-between gap-3 cursor-pointer select-none">
- <div>
- <div className="text-sm font-medium text-foreground">{t("visibleLabel")}</div>
- <div className="text-xs text-muted-foreground leading-snug mt-0.5">
- {t("visibleTip")}
- </div>
+ <div className="flex items-center gap-1.5 text-sm font-medium text-foreground">
+ <EyeIcon size={16} className="text-muted-foreground" />
+ {t("visibleLabel")}:
  </div>
  <ToggleSwitch
  checked={form.visible}
+ size="sm"
  onChange={() => {
  track("dash_item_click_visible_toggle");
  setForm((f) => ({ ...f, visible: !f.visible }));
@@ -847,31 +988,29 @@ export function DishForm({
  />
  </label>
  </div>
+
+ <div id="options-section" className="rounded-2xl bg-[hsl(var(--menu-card-bg))] border border-border p-4 sm:p-5">
+ <div className="flex items-center justify-between gap-3">
+ <div className="flex items-center gap-1.5 text-base font-medium text-foreground">
+ <SlidersIcon size={16} className="text-muted-foreground" />
+ {t("optionsLabel")}:
+ </div>
+ {renderAddOption()}
+ </div>
+ {form.options.length > 0 ? (
+ <div className="mt-4">
+ <DishOptionsInline
+ options={form.options}
+ defaultLang={defaultLang}
+ disabled={saving}
+ onReorder={(next) => setForm((f) => ({ ...f, options: next }))}
+ onEditOption={handleEditOption}
+ />
+ </div>
+ ) : null}
  </div>
 
- {!isNew ? (
- <div className="mt-6 flex items-center justify-center gap-3">
- {categoryId ? (
- <button
- type="button"
- onClick={handleDuplicate}
- disabled={duplicating}
- className="inline-flex items-center gap-1.5 h-9 px-3 text-xs font-medium text-muted-foreground rounded-lg transition-colors disabled:opacity-50"
- >
- <CopyIcon size={13} />
- {duplicating ? tc("saving") : t("duplicateButton", { defaultValue: "Duplicate" })}
- </button>
- ) : null}
- <button
- type="button"
- onClick={() => setConfirmOpen(true)}
- className="inline-flex items-center gap-1.5 h-9 px-3 text-xs font-medium text-red-600 rounded-lg transition-colors"
- >
- <TrashIcon size={13} />
- {t("deleteButton")}
- </button>
  </div>
- ) : null}
 
  <ConfirmDialog
  open={confirmOpen}
@@ -882,22 +1021,25 @@ export function DishForm({
  />
 
  <ConfirmDialog
+ open={duplicateConfirmOpen}
+ confirmStyle="primary"
+ confirmLabel={tc("duplicate", { defaultValue: "Duplicate" })}
+ title={t("duplicateConfirmTitle", { defaultValue: "Duplicate dish?" })}
+ message={
+ duplicating
+ ? tc("duplicating", { defaultValue: "Duplicating…" })
+ : t("duplicateConfirmMessage", { defaultValue: "A copy of this dish will be created." })
+ }
+ onConfirm={handleDuplicate}
+ onCancel={() => (duplicating ? null : setDuplicateConfirmOpen(false))}
+ />
+
+ <ConfirmDialog
  open={alert !== null}
  singleButton
  title={alert?.title}
  message={alert?.message}
  onCancel={() => setAlert(null)}
- />
-
- <AiImageModal
- open={aiOpen}
- onClose={() => setAiOpen(false)}
- onUse={(url) => setForm((f) => ({ ...f, photoUrl: url }))}
- endpoint="/api/items/generate-image"
- title={t("aiTitle")}
- defaultPrompt={pickAnyMlValue(form.name, defaultLang)}
- aspect="square"
- eventPrefix="dash_item"
  />
 
  <UnsavedChangesDialog
@@ -917,23 +1059,24 @@ export function DishForm({
  onCancel={() => setSaveErrorOpen(false)}
  />
 
- {optionModal ? (
+ {activeOptionModal ? (
  <Modal
- open
+ open={optionModal !== null}
  onClose={() => setOptionModal(null)}
- title={optionModal.kind === "new"
+ title={activeOptionModal.kind === "new"
  ? t("newOptionTitle", { defaultValue: "New option" })
  : t("editOptionTitle", { defaultValue: "Edit option" })}
  size="lg"
  >
  <OptionForm
+ key={activeOptionModal.kind === "edit" ? activeOptionModal.id : "new"}
  embedded
  lang={lang}
  currentOptions={form.options}
  currentDishName={form.name}
  option={
- optionModal.kind === "edit"
- ? form.options.find((o) => o.id === optionModal.id) || null
+ activeOptionModal.kind === "edit"
+ ? form.options.find((o) => o.id === activeOptionModal.id) || null
  : null
  }
  onBack={() => setOptionModal(null)}
@@ -945,15 +1088,35 @@ export function DishForm({
  setForm((f) => ({ ...f, options: nextOptions }));
  setOptionModal(null);
  }}
+ onDirtyChange={(d) => { optionDirtyRef.current = d; }}
+ bindSubmit={(fn) => { optionSubmitRef.current = fn; }}
  />
  </Modal>
  ) : null}
+
+ <UnsavedChangesDialog
+ open={optionUnsavedOpen}
+ saving={false}
+ onDiscard={() => { setOptionUnsavedOpen(false); setOptionModal(null); }}
+ onSave={() => { setOptionUnsavedOpen(false); optionSubmitRef.current?.(); }}
+ onClose={() => setOptionUnsavedOpen(false)}
+ />
  {saving ? (
  <div className="fixed inset-0 z-50 bg-background/70 backdrop-blur-sm flex items-center justify-center px-6">
  <div className="flex flex-col items-center gap-3 text-center">
  <div className="w-10 h-10 border-[3px] border-input border-t-foreground rounded-full animate-spin" />
- <div className="text-xs text-muted-foreground">
+ <div className="text-sm text-muted-foreground">
  {languages.length > 1 ? t("savingAndTranslatingOverlay") : t("savingOverlay")}
+ </div>
+ </div>
+ </div>
+ ) : null}
+ {duplicating ? (
+ <div className="fixed inset-0 z-50 bg-background/70 backdrop-blur-sm flex items-center justify-center px-6">
+ <div className="flex flex-col items-center gap-3 text-center">
+ <div className="w-10 h-10 border-[3px] border-input border-t-foreground rounded-full animate-spin" />
+ <div className="text-sm text-muted-foreground">
+ {tc("duplicating", { defaultValue: "Duplicating…" })}
  </div>
  </div>
  </div>
@@ -969,17 +1132,15 @@ function DishOptionsInline({
  defaultLang,
  disabled,
  onReorder,
- onAddOption,
  onEditOption,
 }: {
  options: DishOption[];
  defaultLang: string;
  disabled: boolean;
  onReorder: (next: DishOption[]) => void;
- onAddOption: () => void;
  onEditOption: (optionId: string) => void;
 }) {
- const t = useTranslations("dashboard.dishForm");
+ const flipRef = useFlip<HTMLDivElement>([options.map((o) => o.id).join(",")]);
 
  function moveOption(idx: number, dir: number) {
  if (disabled) return;
@@ -987,12 +1148,10 @@ function DishOptionsInline({
  }
 
  return (
- <>
- {options.length > 0 ? (
- <div className="border border-border rounded-lg overflow-hidden divide-y divide-border">
+ <div ref={flipRef}>
  {options.map((opt, idx) => (
+ <div key={opt.id} data-flip-id={opt.id}>
  <OptionRow
- key={opt.id}
  option={opt}
  defaultLang={defaultLang}
  isFirst={idx === 0}
@@ -1001,27 +1160,9 @@ function DishOptionsInline({
  onMoveUp={() => moveOption(idx, -1)}
  onMoveDown={() => moveOption(idx, 1)}
  />
+ </div>
  ))}
  </div>
- ) : null}
-
- <button
- type="button"
- onClick={() => !disabled && onAddOption()}
- disabled={disabled}
- className={
- "w-full h-10 text-sm font-medium text-muted-foreground bg-card border border-dashed border-input rounded-lg flex items-center justify-center gap-1.5 transition-colors disabled:opacity-60 disabled:cursor-not-allowed " +
- (options.length > 0 ? "mt-2" : "")
- }
- >
- {disabled ? (
- <div className="w-3.5 h-3.5 border-2 border-muted-foreground/30 border-t-muted-foreground rounded-full animate-spin" />
- ) : (
- <PlusIcon size={14} />
- )}
- {t("addOption")}
- </button>
- </>
  );
 }
 
@@ -1048,24 +1189,52 @@ function OptionRow({
  const reqLabel = option.required ? to("required") : to("optional");
  const variantsCount = option.variants?.length || 0;
  return (
- <div className="flex items-center gap-2 px-3 py-2 transition-colors">
- <div className="flex items-center gap-0.5 shrink-0">
- <button type="button" onClick={onMoveUp} disabled={isFirst} className={iconBtn} aria-label={tc("moveUp")}>
- <ArrowUpIcon size={14} />
- </button>
- <button type="button" onClick={onMoveDown} disabled={isLast} className={iconBtn} aria-label={tc("moveDown")}>
- <ArrowDownIcon size={14} />
- </button>
- </div>
- <button type="button" onClick={onEdit} className="flex-1 min-w-0 text-left">
- <div className="text-sm font-medium text-foreground truncate">
+ <div
+ data-testid="option-row"
+ role="button"
+ tabIndex={0}
+ onClick={onEdit}
+ onKeyDown={(e) => {
+ if (e.key === "Enter" || e.key === " ") {
+ e.preventDefault();
+ onEdit();
+ }
+ }}
+ className="flex items-center gap-3 py-2 -mx-2 px-2 rounded-lg select-none cursor-pointer transition-colors md:hover:bg-primary/5"
+ >
+ <span className="flex-1 min-w-0 flex items-center gap-1.5 text-sm text-muted-foreground">
+ <span className="shrink-0 tabular-nums">{variantsCount}×</span>
+ <span className="shrink-0">·</span>
+ <span className="min-w-0 truncate font-medium text-foreground">
  {getMlWithFallback(option.name, defaultLang, defaultLang) || to("untitledOption")}
- </div>
- <div className="text-xs text-muted-foreground truncate mt-0.5">
- {typeLabel} · {reqLabel} · {variantsCount} {variantsCount === 1 ? to("variantOne") : to("variantOther")}
- </div>
+ </span>
+ <span className="hidden md:flex items-center gap-1.5 shrink-0">
+ <span>·</span>
+ <span>{typeLabel}</span>
+ <span>·</span>
+ <span>{reqLabel}</span>
+ </span>
+ </span>
+ <span onClick={(e) => e.stopPropagation()} className="shrink-0 inline-flex items-center gap-2.5">
+ <button
+ type="button"
+ onClick={(e) => { e.stopPropagation(); onMoveUp(); }}
+ disabled={isFirst}
+ className="py-1 text-muted-foreground/60 enabled:md:hover:text-foreground transition-colors disabled:opacity-40"
+ aria-label={tc("moveUp")}
+ >
+ <ArrowUpIcon size={17} />
  </button>
- <ChevronRightIcon size={14} className="text-muted-foreground shrink-0" />
+ <button
+ type="button"
+ onClick={(e) => { e.stopPropagation(); onMoveDown(); }}
+ disabled={isLast}
+ className="py-1 text-muted-foreground/60 enabled:md:hover:text-foreground transition-colors disabled:opacity-40"
+ aria-label={tc("moveDown")}
+ >
+ <ArrowDownIcon size={17} />
+ </button>
+ </span>
  </div>
  );
 }
@@ -1091,6 +1260,8 @@ export function OptionForm({
  currentDishName,
  onLocalSave,
  onLocalDelete,
+ onDirtyChange,
+ bindSubmit,
 }: {
  // Standalone path (legacy SPA shell) still uses `dish` for the server
  // round-trip; the embedded path inside DishForm uses `currentOptions`
@@ -1107,6 +1278,11 @@ export function OptionForm({
  currentDishName?: Ml;
  onLocalSave?: (nextOptions: DishOption[]) => void;
  onLocalDelete?: (nextOptions: DishOption[]) => void;
+ // Embedded modal only: report the form's dirty state up to the owner (so a
+ // hardware Back can prompt) and register the save action (so the owner's
+ // unsaved dialog can trigger it).
+ onDirtyChange?: (dirty: boolean) => void;
+ bindSubmit?: (submit: () => void) => void;
 }) {
  const t = useTranslations("dashboard.optionForm");
  const tc = useTranslations("dashboard.common");
@@ -1125,15 +1301,19 @@ export function OptionForm({
  name: option ? option.name : emptyMl(languages),
  type: option ? option.type : "single",
  required: option ? !!option.required : false,
- variants:
- option && option.variants && option.variants.length > 0
- ? option.variants
- : [{ id: newId(), name: emptyMl(languages), priceDelta: "0" }],
+ variants: option?.variants ?? [],
  }));
  const [saving, setSaving] = useState(false);
  const [deleting, setDeleting] = useState(false);
  const [confirmOpen, setConfirmOpen] = useState(false);
- const [translatingAll, setTranslatingAll] = useState(false);
+ // null = closed; otherwise a create/edit request for the variant sub-modal.
+ const [variantModal, setVariantModal] = useState<
+ { kind: "new" } | { kind: "edit"; id: string } | null
+ >(null);
+ // Retained so the sub-modal keeps its content through the close animation.
+ const variantModalRef = useRef(variantModal);
+ if (variantModal) variantModalRef.current = variantModal;
+ const activeVariantModal = variantModal ?? variantModalRef.current;
  const langMetas = useMemo(() => {
  const enabled = AVAILABLE_LANGUAGES.filter((l) => languages.includes(l.code));
  const def = enabled.find((l) => l.code === defaultLang);
@@ -1147,8 +1327,32 @@ export function OptionForm({
  }, [embedded]);
 
  const namePrimary = (form.name[defaultLang] || "").trim();
- const validVariants = form.variants.filter((v) => (v.name?.[defaultLang] || "").trim().length > 0);
+ // A variant counts as valid if it has a name in ANY enabled locale, not only
+ // the default one — filtering on defaultLang alone silently dropped variants a
+ // user filled in a non-default language on save (data loss).
+ const validVariants = form.variants.filter((v) =>
+ Object.values(v.name || {}).some((s) => (s || "").trim().length > 0),
+ );
  const [alert, setAlert] = useState<{ title: string; message: string } | null>(null);
+
+ // Dirty-tracking for the embedded history-Back guard (see DishForm). Compare
+ // the buffered form against the option we opened with; reuse optionsEqual by
+ // wrapping each side in a single-element array with a shared id.
+ const curOption: DishOption = {
+ id: "x", name: form.name, type: form.type, required: form.required, variants: form.variants,
+ };
+ const baseOption: DishOption = {
+ id: "x",
+ name: (option ? option.name : {}) as Ml,
+ type: option ? option.type : "single",
+ required: option ? !!option.required : false,
+ variants: option?.variants ?? [],
+ };
+ const isDirty = !optionsEqual([curOption], [baseOption]);
+ useEffect(() => { onDirtyChange?.(isDirty); }, [isDirty, onDirtyChange]);
+ // Register the latest save() each render so the owner's unsaved dialog can
+ // trigger it.
+ useEffect(() => { bindSubmit?.(save); });
 
  function validateForm(): { title: string; message: string } | null {
  if (namePrimary.length === 0 && validVariants.length === 0) {
@@ -1172,53 +1376,40 @@ export function OptionForm({
  return null;
  }
 
- function setVariant(idx: number, patch: Partial<OptionVariant>) {
- setForm((f) => ({
- ...f,
- variants: f.variants.map((v, i) => (i === idx ? { ...v, ...patch } : v)),
- }));
- }
- function addVariant() {
- setForm((f) => ({
- ...f,
- variants: [...f.variants, { id: newId(), name: emptyMl(languages), priceDelta: "0" }],
- }));
- }
- function removeVariant(idx: number) {
- setForm((f) => ({ ...f, variants: f.variants.filter((_, i) => i !== idx) }));
- }
+ const variantsFlipRef = useFlip<HTMLDivElement>([form.variants.map((v) => v.id).join(",")]);
+
  function moveVariant(idx: number, dir: number) {
  setForm((f) => ({ ...f, variants: moveItem(f.variants, idx, dir) }));
  }
-
- async function translateAllVariants() {
- if (lang === defaultLang || translatingAll) return;
- const targets = form.variants
- .map((v, i) => ({ v, i }))
- .filter(({ v }) => {
- const src = getMl(v.name, defaultLang);
- const cur = getMl(v.name, lang);
- return src.trim().length > 0 && cur.trim().length === 0;
- });
- if (targets.length === 0) return;
- setTranslatingAll(true);
- try {
- const results = await Promise.all(
- targets.map(({ v }) => translateText(getMl(v.name, defaultLang), defaultLang, lang)),
- );
+ // Variants are edited in a sub-modal (name + price delta + translations) and
+ // buffered here by id — no server round-trip until the dish is saved.
+ function saveVariant(v: OptionVariant) {
  setForm((f) => {
- const next = f.variants.slice();
- targets.forEach(({ i }, j) => {
- next[i] = { ...next[i], name: setMl(next[i].name, lang, results[j]) };
+ const exists = f.variants.some((x) => x.id === v.id);
+ return {
+ ...f,
+ variants: exists ? f.variants.map((x) => (x.id === v.id ? v : x)) : [...f.variants, v],
+ };
  });
- return { ...f, variants: next };
- });
- } catch (err) {
- showApiError(err, "dash_option_translate_variants");
- } finally {
- setTranslatingAll(false);
+ setVariantModal(null);
  }
+ function deleteVariant(id: string) {
+ setForm((f) => ({ ...f, variants: f.variants.filter((x) => x.id !== id) }));
+ setVariantModal(null);
  }
+
+ const renderAddVariant = () => (
+ <button
+ type="button"
+ data-testid="variant-add"
+ disabled={saving}
+ onClick={() => setVariantModal({ kind: "new" })}
+ className={secondaryBtn + " inline-flex items-center gap-1.5 shrink-0"}
+ >
+ <PlusIcon size={18} />
+ <span className="hidden md:inline">{tc("add")}</span>
+ </button>
+ );
 
  // Source-of-truth for the dish's existing options. Embedded mode reads
  // it from props (buffered DishForm state); legacy mode reads from the
@@ -1233,10 +1424,14 @@ export function OptionForm({
  return;
  }
  setSaving(true);
- const normalisedVariants = validVariants.map((v) => ({
- ...v,
- priceDelta: String(v.priceDelta || "0").replace(",", ".").trim() || "0",
- }));
+ const normalisedVariants = validVariants.map((v) => {
+ // Coerce to a canonical 2-decimal string. parseDecimal handles comma
+ // separators; NaN (empty / garbage like "1.2.3" / ".") falls back to 0 so
+ // the public menu never does price math on a malformed delta.
+ const parsed = parseDecimal(v.priceDelta as unknown as string);
+ const num = Number.isFinite(parsed) ? parsed : 0;
+ return { ...v, priceDelta: num.toFixed(2) };
+ });
  const data: Omit<DishOption, "id"> = {
  name: form.name,
  type: form.type,
@@ -1298,15 +1493,6 @@ export function OptionForm({
  }
  }
 
- const translatableVariantsCount =
- lang === defaultLang
- ? 0
- : form.variants.filter((v) => {
- const src = getMl(v.name, defaultLang);
- const cur = getMl(v.name, lang);
- return src.trim().length > 0 && cur.trim().length === 0;
- }).length;
-
  const titleText = isNew
  ? t("newTitle")
  : (getMlWithFallback(form.name, lang, defaultLang) || t("untitledOption"));
@@ -1323,7 +1509,6 @@ export function OptionForm({
  <EditPageHeader
  onBack={onBack}
  title={titleText}
- breadcrumb={dishName ? t("breadcrumb") + " / " + dishName : t("breadcrumb")}
  lang={lang}
  onLangChange={setLang}
  languages={langMetas}
@@ -1335,7 +1520,7 @@ export function OptionForm({
 
  <div className={embedded
  ? ""
- : "bg-card border border-border rounded-2xl p-5 md:p-6"}>
+ : "rounded-2xl bg-nav border border-border p-5 md:p-6"}>
  <TranslatedInput
  id="opt-name"
  label={t("nameLabel")}
@@ -1350,31 +1535,25 @@ export function OptionForm({
  {divider}
 
  <label className="flex items-center justify-between gap-3 cursor-pointer select-none">
- <div>
- <div className="text-sm font-medium text-foreground">{t("multiLabel")}</div>
- <div className="text-xs text-muted-foreground leading-snug mt-0.5">
- {t("multiTip")}
- </div>
- </div>
+ <div className="text-sm font-medium text-foreground">{t("multiLabel")}:</div>
  <ToggleSwitch
  checked={form.type === "multi"}
+ size="sm"
+ testId="opt-multi"
  onChange={() => {
  setForm((f) => ({ ...f, type: f.type === "multi" ? "single" : "multi" }));
  }}
  />
  </label>
 
- {divider}
+ <div className="h-4" />
 
  <label className="flex items-center justify-between gap-3 cursor-pointer select-none">
- <div>
- <div className="text-sm font-medium text-foreground">{t("requiredLabel")}</div>
- <div className="text-xs text-muted-foreground leading-snug mt-0.5">
- {t("requiredTip")}
- </div>
- </div>
+ <div className="text-sm font-medium text-foreground">{t("requiredLabel")}:</div>
  <ToggleSwitch
  checked={form.required}
+ size="sm"
+ testId="opt-required"
  onChange={() => {
  setForm((f) => ({ ...f, required: !f.required }));
  }}
@@ -1383,50 +1562,33 @@ export function OptionForm({
 
  {divider}
 
- <div className="flex items-center justify-between gap-2 mb-0.5">
- <div className="text-sm font-medium text-foreground">{t("variantsLabel")}</div>
- {lang !== defaultLang && translatableVariantsCount > 0 ? (
- <button
- type="button"
- onClick={translateAllVariants}
- disabled={translatingAll}
- className="inline-flex items-center gap-1 text-[11px] font-medium text-muted-foreground transition-colors disabled:text-muted-foreground/50 disabled:cursor-not-allowed"
- >
- {translatingAll ? tc("translating") : tc("translateAll")}
- </button>
- ) : null}
+ <div className="mb-6">
+ <div className="flex items-center justify-between gap-3">
+ <div className="flex items-center gap-1.5 text-base font-medium text-foreground">
+ <SplitIcon size={16} className="text-muted-foreground" />
+ {t("variantsLabel")}:
  </div>
- <p className="text-xs text-muted-foreground mb-2.5">
- {t("variantsTip")}
- </p>
- <div className="space-y-2">
+ {renderAddVariant()}
+ </div>
+ {form.variants.length > 0 ? (
+ <div className="mt-2.5" ref={variantsFlipRef}>
  {form.variants.map((variant, idx) => (
+ <div key={variant.id} data-flip-id={variant.id}>
  <VariantRow
- key={variant.id}
  variant={variant}
- lang={lang}
  defaultLang={defaultLang}
- languages={languages}
  currencySymbol={currencySymbol}
  isFirst={idx === 0}
  isLast={idx === form.variants.length - 1}
- canRemove={form.variants.length > 1}
- onChange={(patch) => setVariant(idx, patch)}
- onRemove={() => removeVariant(idx)}
+ onEdit={() => setVariantModal({ kind: "edit", id: variant.id })}
  onMoveUp={() => moveVariant(idx, -1)}
  onMoveDown={() => moveVariant(idx, 1)}
  />
+ </div>
  ))}
  </div>
-
- <button
- type="button"
- onClick={addVariant}
- className="w-full mt-3 mb-6 h-10 text-sm font-medium text-muted-foreground bg-card border border-dashed border-input rounded-lg flex items-center justify-center gap-1.5 transition-colors"
- >
- <PlusIcon size={14} />
- {t("addVariant")}
- </button>
+ ) : null}
+ </div>
  </div>
 
  {embedded ? (
@@ -1435,26 +1597,28 @@ export function OptionForm({
  <button
  type="button"
  onClick={() => setConfirmOpen(true)}
- className="w-8 h-8 inline-flex items-center justify-center rounded-lg text-red-600 border border-border transition-colors"
- aria-label={t("deleteButton")}
- title={t("deleteButton")}
+ className="inline-flex items-center justify-center gap-1.5 h-[36px] w-[36px] px-0 md:w-auto md:px-[16px] text-[14px] font-semibold rounded-lg text-foreground bg-muted hover:bg-muted/70 transition-colors whitespace-nowrap"
+ aria-label={tc("delete")}
+ title={tc("delete")}
  >
- <TrashIcon size={13} />
+ <TrashIcon size={16} />
+ <span className="hidden md:inline">{tc("delete")}</span>
  </button>
  ) : <span />}
  <div className="flex items-center gap-2">
  <button
  type="button"
  onClick={onBack}
- className="h-8 px-3 text-xs font-medium text-foreground bg-card border border-border rounded-lg transition-colors"
+ className={secondaryBtn}
  >
  {tc("cancel")}
  </button>
  <button
  type="button"
+ data-testid="option-save"
  onClick={save}
  disabled={saving}
- className="h-8 px-3 text-xs font-medium text-primary-foreground bg-primary-gradient rounded-lg transition-colors disabled:opacity-40"
+ className={primaryBtn}
  >
  {saving ? tc("saving") : tc("save")}
  </button>
@@ -1488,85 +1652,256 @@ export function OptionForm({
  message={alert?.message}
  onCancel={() => setAlert(null)}
  />
+
+ {activeVariantModal ? (
+ <VariantFormModal
+ key={activeVariantModal.kind === "edit" ? activeVariantModal.id : "new"}
+ open={variantModal !== null}
+ variant={
+ activeVariantModal.kind === "edit"
+ ? form.variants.find((v) => v.id === activeVariantModal.id) ?? null
+ : null
+ }
+ lang={lang}
+ defaultLang={defaultLang}
+ languages={languages}
+ currencySymbol={currencySymbol}
+ onClose={() => setVariantModal(null)}
+ onSave={saveVariant}
+ onDelete={
+ activeVariantModal.kind === "edit"
+ ? () => deleteVariant(activeVariantModal.id)
+ : undefined
+ }
+ />
+ ) : null}
  </div>
  );
 }
 
 function VariantRow({
  variant,
- lang,
  defaultLang,
- languages,
  currencySymbol,
  isFirst,
  isLast,
- canRemove,
- onChange,
- onRemove,
+ onEdit,
  onMoveUp,
  onMoveDown,
 }: {
  variant: OptionVariant;
- lang: string;
  defaultLang: string;
- languages: string[];
  currencySymbol: string;
  isFirst: boolean;
  isLast: boolean;
- canRemove: boolean;
- onChange: (patch: Partial<OptionVariant>) => void;
- onRemove: () => void;
+ onEdit: () => void;
  onMoveUp: () => void;
  onMoveDown: () => void;
 }) {
  const tc = useTranslations("dashboard.common");
  const t = useTranslations("dashboard.optionForm");
+ const name = getMlWithFallback(variant.name, defaultLang, defaultLang) || t("variantNamePlaceholder");
+ const raw = String(variant.priceDelta ?? "0");
+ const num = parseDecimal(raw);
+ const deltaLabel = !isNaN(num) && num !== 0 ? (num > 0 ? "+" : "") + raw + currencySymbol : "";
  return (
- <div className="flex items-center gap-1 md:gap-2">
- <div className="flex items-center gap-0.5 shrink-0">
- <button type="button" onClick={onMoveUp} disabled={isFirst} className={iconBtn} aria-label={tc("moveUp")}>
- <ArrowUpIcon size={14} />
+ <div
+ role="button"
+ tabIndex={0}
+ onClick={onEdit}
+ onKeyDown={(e) => {
+ if (e.key === "Enter" || e.key === " ") {
+ e.preventDefault();
+ onEdit();
+ }
+ }}
+ data-testid="variant-row"
+ className="flex items-center gap-3 py-2 -mx-2 px-2 rounded-lg select-none cursor-pointer transition-colors md:hover:bg-primary/5"
+ >
+ <span className="flex-1 min-w-0 flex items-center gap-1.5 text-sm text-muted-foreground">
+ <span className="min-w-0 truncate font-medium text-foreground">{name}</span>
+ {deltaLabel ? (
+ <>
+ <span className="shrink-0">·</span>
+ <span className="shrink-0 tabular-nums">{deltaLabel}</span>
+ </>
+ ) : null}
+ </span>
+ <span onClick={(e) => e.stopPropagation()} className="shrink-0 inline-flex items-center gap-2.5">
+ <button
+ type="button"
+ onClick={(e) => { e.stopPropagation(); onMoveUp(); }}
+ disabled={isFirst}
+ className="py-1 text-muted-foreground/60 enabled:md:hover:text-foreground transition-colors disabled:opacity-40"
+ aria-label={tc("moveUp")}
+ >
+ <ArrowUpIcon size={17} />
  </button>
- <button type="button" onClick={onMoveDown} disabled={isLast} className={iconBtn} aria-label={tc("moveDown")}>
- <ArrowDownIcon size={14} />
+ <button
+ type="button"
+ onClick={(e) => { e.stopPropagation(); onMoveDown(); }}
+ disabled={isLast}
+ className="py-1 text-muted-foreground/60 enabled:md:hover:text-foreground transition-colors disabled:opacity-40"
+ aria-label={tc("moveDown")}
+ >
+ <ArrowDownIcon size={17} />
+ </button>
+ </span>
+ </div>
+ );
+}
+
+// Variant sub-modal (opened from the option modal): name (translatable) +
+// price delta, buffered back into the option's variants list on save.
+function VariantFormModal({
+ open,
+ variant,
+ lang,
+ defaultLang,
+ languages,
+ currencySymbol,
+ onClose,
+ onSave,
+ onDelete,
+}: {
+ open: boolean;
+ variant: OptionVariant | null;
+ lang: string;
+ defaultLang: string;
+ languages: string[];
+ currencySymbol: string;
+ onClose: () => void;
+ onSave: (v: OptionVariant) => void;
+ onDelete?: () => void;
+}) {
+ const tc = useTranslations("dashboard.common");
+ const t = useTranslations("dashboard.optionForm");
+ const isNew = variant === null;
+ const [name, setName] = useState<Ml>(() => (variant ? variant.name : emptyMl(languages)));
+ const [priceDelta, setPriceDelta] = useState<string>(() =>
+ variant ? String(variant.priceDelta ?? "0") : "0",
+ );
+ const [alert, setAlert] = useState<string | null>(null);
+ const [unsavedOpen, setUnsavedOpen] = useState(false);
+ const namePrimary = (name[defaultLang] || "").trim();
+
+ // The modal instance is reused across "add" clicks (kept mounted through its
+ // exit animation, key stays "new"), so state would otherwise carry the last
+ // variant's data into the next add. Reset each time it reopens for a new one.
+ useEffect(() => {
+ if (open && isNew) {
+ setName(emptyMl(languages));
+ setPriceDelta("0");
+ setAlert(null);
+ }
+ }, [open, isNew, languages]);
+
+ // History-backed modal: the phone / browser Back button closes this variant
+ // form. A dirty form vetoes a hardware Back and shows the unsaved dialog; UI
+ // buttons (Cancel / Save / Delete) flip `open` themselves and the hook then
+ // reconciles the history entry.
+ const baseName = variant ? variant.name : {};
+ const baseDelta = variant ? String(variant.priceDelta ?? "0") : "0";
+ const isDirty = !mlEqual(name, baseName) || String(priceDelta).trim() !== baseDelta;
+ const isDirtyRef = useRef(isDirty);
+ isDirtyRef.current = isDirty;
+ useHistoryModal({
+ open,
+ hash: "variant",
+ onClose,
+ guard: () => isDirtyRef.current,
+ onBlocked: () => setUnsavedOpen(true),
+ });
+
+ function handleSave() {
+ if (namePrimary.length === 0) {
+ setAlert(t("nameRequiredMessage"));
+ return;
+ }
+ const normalised = String(priceDelta || "0").replace(",", ".").trim() || "0";
+ onSave({ id: variant?.id ?? newId(), name, priceDelta: normalised });
+ }
+
+ const title = isNew
+ ? t("addVariant")
+ : getMlWithFallback(name, lang, defaultLang) || t("addVariant");
+
+ return (
+ <Modal
+ open={open}
+ onClose={onClose}
+ title={title}
+ size="md"
+ footer={
+ <div className="flex items-center justify-between gap-2">
+ {!isNew && onDelete ? (
+ <button
+ type="button"
+ onClick={onDelete}
+ className="inline-flex items-center justify-center gap-1.5 h-[36px] w-[36px] px-0 md:w-auto md:px-[16px] text-[14px] font-semibold rounded-lg text-foreground bg-muted hover:bg-muted/70 transition-colors whitespace-nowrap"
+ aria-label={tc("delete")}
+ title={tc("delete")}
+ >
+ <TrashIcon size={16} className="shrink-0" />
+ <span className="hidden md:inline truncate">{tc("delete")}</span>
+ </button>
+ ) : <span />}
+ <div className="flex items-center gap-2">
+ <button type="button" onClick={onClose} className={secondaryBtn + " inline-flex items-center"}>
+ <span className="truncate">{tc("cancel")}</span>
+ </button>
+ <button type="button" data-testid="variant-save" onClick={handleSave} className={primaryBtn + " inline-flex items-center"}>
+ <span className="truncate">{tc("save")}</span>
  </button>
  </div>
- <div className="flex-1 min-w-0">
+ </div>
+ }
+ >
  <TranslatedInput
- id={`variant-${variant.id}`}
- value={variant.name}
+ id={`vf-${variant?.id ?? "new"}`}
+ label={t("nameLabel")}
+ value={name}
  lang={lang}
  defaultLang={defaultLang}
  languages={languages}
- onChange={(next) => onChange({ name: next })}
- placeholder={t("variantNamePlaceholder")}
- translatable={false}
+ onChange={setName}
+ placeholder={t("variantNameExample")}
  />
- </div>
- <div className="w-16 md:w-20 shrink-0 relative">
+
+ <div className="h-4" />
+
+ <label className="block text-sm font-medium text-foreground mb-2.5">{t("priceModifier")}:</label>
+ <div className="relative w-32">
  <input
  type="text"
  inputMode="decimal"
- value={variant.priceDelta}
- onChange={(e) => onChange({ priceDelta: sanitizePriceInput(e.target.value) })}
- placeholder="0"
- title={t("priceModifier")}
- className={inputClass + " pl-2 pr-7 tabular-nums"}
+ data-testid="variant-price"
+ value={priceDelta}
+ onChange={(e) => setPriceDelta(sanitizePriceInput(e.target.value))}
+ placeholder="2.00"
+ className={formInputClass + " pl-3 pr-8 tabular-nums"}
  />
- <span className="absolute top-1 right-1 w-7 h-8 inline-flex items-center justify-center text-xs text-muted-foreground pointer-events-none">
+ <span className="absolute top-1 right-1 w-8 h-8 inline-flex items-center justify-center text-sm text-muted-foreground pointer-events-none">
  {currencySymbol}
  </span>
  </div>
- <button
- type="button"
- onClick={onRemove}
- disabled={!canRemove}
- className={iconBtn + " shrink-0"}
- aria-label={t("removeVariant")}
- >
- <TrashIcon size={14} />
- </button>
- </div>
+
+ <ConfirmDialog
+ open={alert !== null}
+ singleButton
+ title={t("nameRequiredTitle")}
+ message={alert || ""}
+ onCancel={() => setAlert(null)}
+ />
+
+ <UnsavedChangesDialog
+ open={unsavedOpen}
+ saving={false}
+ onDiscard={() => { setUnsavedOpen(false); onClose(); }}
+ onSave={() => { setUnsavedOpen(false); handleSave(); }}
+ onClose={() => setUnsavedOpen(false)}
+ />
+ </Modal>
  );
 }
 

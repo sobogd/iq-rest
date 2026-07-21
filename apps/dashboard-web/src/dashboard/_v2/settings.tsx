@@ -1,15 +1,16 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useQueryClient } from "@tanstack/react-query";
 import { useLocale, useTranslations } from "next-intl";
-import { ChevronRightIcon, CheckIcon, CopyIcon, SendIcon, SparklesIcon, CloseIcon } from "./icons";
+import { ChevronRightIcon, CheckIcon, CopyIcon, SendIcon, CloseIcon, GlobeIcon } from "./icons";
 import {
- AiImageModal,
+ EditPageHeader,
  PageHeader,
  Select,
  SubpageStickyBar,
  ToggleSwitch,
+ UnsavedChangesDialog,
  uploadFile,
 } from "./ui";
 import { TablesPage } from "./tables";
@@ -30,6 +31,8 @@ import {
  type ApiSupportMessage,
 } from "./api";
 import { useRestaurant } from "./restaurant-context";
+import { setNavInterceptor } from "./nav-guard";
+import { notify } from "./notice";
 import type { Booking, Order, Restaurant, TableEntity } from "./types";
 import { track } from "@/lib/dashboard-events";
 
@@ -343,7 +346,6 @@ export function BrandingSettingsPage({
  const fileInputRef = useRef<HTMLInputElement | null>(null);
  const colorPickerRef = useRef<HTMLInputElement | null>(null);
  const [uploading, setUploading] = useState(false);
- const [aiOpen, setAiOpen] = useState(false);
  const [slugCopied, setSlugCopied] = useState(false);
 
  const validSlug = /^[a-z0-9-]{2,40}$/.test(draft.slug);
@@ -557,16 +559,8 @@ export function BrandingSettingsPage({
  </label>
  </div>
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
- <div className="flex items-center justify-between gap-3 mb-2.5">
+ <div className="mb-2.5">
  <div className="text-sm font-medium text-foreground">{tb("backgroundLabel")}</div>
- <button
- type="button"
- onClick={() => { track("dash_settings_branding_click_generate_photo"); setAiOpen(true); }}
- className="inline-flex items-center gap-1 text-[11px] font-medium text-muted-foreground transition-colors"
- >
- <SparklesIcon size={11} />
- {tb("generateAi")}
- </button>
  </div>
  <label
  htmlFor="brand-bg"
@@ -755,22 +749,17 @@ export function BrandingSettingsPage({
  </div>
  </div>
 
- <AiImageModal
- open={aiOpen}
- onClose={() => setAiOpen(false)}
- onUse={(url) => setDraft((d) => ({ ...d, backgroundUrl: url, backgroundType: "image" }))}
- eventPrefix="dash_settings_branding"
- endpoint="/api/restaurant/generate-background"
- title={tb("aiTitle")}
- placeholder={tb("aiPlaceholder")}
- aspect="portrait"
- />
  </div>
  );
 }
 
 // ── General ──
 
+// Region & languages — the merged "Locale" + "Languages" settings page:
+// currency + timezone + menu languages + default language in one card. A
+// single POST /api/restaurant carries all four fields; the backend diffs the
+// language set itself and runs auto-translate only on a language delta, so
+// currency/timezone-only saves never show the translating overlay.
 export function GeneralSettingsPage({
  restaurant,
  setRestaurant,
@@ -780,42 +769,130 @@ export function GeneralSettingsPage({
  setRestaurant: React.Dispatch<React.SetStateAction<Restaurant>>;
  onBack: () => void;
 }) {
- const t = useTranslations("dashboard.settings");
  const tg = useTranslations("dashboard.settings.general");
- const tb = useTranslations("dashboard.settings.bookings");
+ const tl = useTranslations("dashboard.settings.languages");
+ const tc = useTranslations("dashboard.common");
+ const qc = useQueryClient();
  const [draft, setDraft] = useState({
  currency: restaurant.currency,
  timezone: restaurant.bookingSettings.timezone,
+ languages: restaurant.languages,
+ defaultLang: restaurant.defaultLang,
  });
+ const [saving, setSaving] = useState(false);
+ const [translating, setTranslating] = useState(false);
+ const [translateError, setTranslateError] = useState<string | null>(null);
+ const [unsavedOpen, setUnsavedOpen] = useState(false);
+
+ // ~430 zones × Intl.DateTimeFormat is too heavy to redo per render.
+ const timezoneOptions = useMemo(
+ () => TIMEZONE_OPTIONS.map((tz) => ({ value: tz, label: tz, desc: tzOffsetLabel(tz) })),
+ [],
+ );
 
  useEffect(() => {
  window.scrollTo({ top: 0, behavior: "auto" });
  }, []);
 
+ const canSave = draft.languages.length > 0 && draft.languages.includes(draft.defaultLang) && !saving;
+ const langsDirty =
+ [...draft.languages].sort().join(",") !== [...restaurant.languages].sort().join(",") ||
+ draft.defaultLang !== restaurant.defaultLang;
+ const isDirty =
+ langsDirty ||
+ draft.currency !== restaurant.currency ||
+ draft.timezone !== restaurant.bookingSettings.timezone;
+
+ // Sidebar/drawer navigation guard: while dirty, intercept the click, show
+ // the unsaved-changes dialog, and resume the blocked navigation afterwards.
+ const pendingNavRef = useRef<(() => void) | null>(null);
+ const dirtyRef = useRef(false);
+ dirtyRef.current = isDirty && !saving;
+ useEffect(() => {
+ setNavInterceptor((proceed) => {
+ if (!dirtyRef.current) return false;
+ pendingNavRef.current = proceed;
+ setUnsavedOpen(true);
+ return true;
+ });
+ return () => setNavInterceptor(null);
+ }, []);
+
+ // Where to go after a save / discard: the intercepted nav target if any,
+ // otherwise back to the settings list.
+ function leave() {
+ const next = pendingNavRef.current;
+ pendingNavRef.current = null;
+ (next ?? onBack)();
+ }
+
  async function save() {
  track("dash_settings_general_save");
+ if (!canSave) return;
+ const addedLangs = draft.languages.filter((l) => !restaurant.languages.includes(l));
+ const willBackfill = addedLangs.length > 0;
+ setSaving(true);
+ if (willBackfill) setTranslating(true);
  try {
- await updateRestaurant({ currency: draft.currency, timezone: draft.timezone });
- } catch {
- return;
- }
+ await updateRestaurant({
+ currency: draft.currency,
+ timezone: draft.timezone,
+ languages: draft.languages,
+ defaultLanguage: draft.defaultLang,
+ });
  setRestaurant((r) => ({
  ...r,
  currency: draft.currency,
+ languages: draft.languages,
+ defaultLang: draft.defaultLang,
  bookingSettings: { ...r.bookingSettings, timezone: draft.timezone },
  }));
- onBack();
+ if (langsDirty) {
+ // Categories + items snapshots now carry new/removed translations.
+ // Invalidate the cached menu so the next render picks up the
+ // backfilled (or pruned) ml fields.
+ await Promise.all([
+ qc.invalidateQueries({ queryKey: ["categories"] }),
+ qc.invalidateQueries({ queryKey: ["items"] }),
+ qc.invalidateQueries({ queryKey: ["restaurant"] }),
+ ]);
+ }
+ setTranslating(false);
+ notify(tc("savedTitle"), tc("savedMessage"));
+ leave();
+ } catch (err) {
+ if (willBackfill) setTranslateError(err instanceof Error ? err.message : String(err));
+ setSaving(false);
+ }
+ }
+
+ function setLanguages(next: string[]) {
+ setDraft((d) => {
+ for (const code of next) if (!d.languages.includes(code)) track("dash_settings_langs_lang_on");
+ for (const code of d.languages) if (!next.includes(code)) track("dash_settings_langs_lang_off");
+ let nextDefault = d.defaultLang;
+ if (!next.includes(nextDefault)) nextDefault = next[0] || "";
+ if (next.length === 1) nextDefault = next[0];
+ return { ...d, languages: next, defaultLang: nextDefault };
+ });
  }
 
  return (
  <div>
- <SubpageStickyBar onBack={() => { track("dash_settings_general_back"); onBack(); }} onSave={save} canSave />
- <div className="">
- <div className="mb-5">
- <div className="text-xs text-muted-foreground">{t("breadcrumb")}</div>
- <h2 className="text-xl font-medium text-foreground mt-1">{tg("title")}</h2>
- </div>
- <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
+ <EditPageHeader
+ onBack={() => {
+ track("dash_settings_general_back");
+ if (isDirty && !saving) { setUnsavedOpen(true); return; }
+ onBack();
+ }}
+ title={tg("title")}
+ titleIcon={<GlobeIcon size={18} />}
+ hideBack
+ onSave={save}
+ canSave={canSave}
+ saving={saving}
+ />
+ <div className="rounded-2xl bg-[hsl(var(--menu-card-bg))] border border-border p-4 sm:p-5">
  <label htmlFor="gen-currency" className="block text-sm font-medium text-foreground mb-2.5">{tg("currencyLabel")}</label>
  <Select<string>
  id="gen-currency"
@@ -824,16 +901,15 @@ export function GeneralSettingsPage({
  track("dash_settings_general_currency_change", { currency: next });
  setDraft((d) => ({ ...d, currency: next }));
  }}
+ title={tg("currencyLabel")}
  options={CURRENCIES.map((c) => ({
  value: c.code,
- label: `${c.code} (${c.symbol}) — ${c.name}`,
+ label: `${c.code} (${c.symbol})`,
+ desc: c.name,
  }))}
  />
- <p className="text-xs text-muted-foreground mt-1.5 leading-snug">{tg("currencyTip")}</p>
 
- <Divider />
-
- <label htmlFor="gen-timezone" className="block text-sm font-medium text-foreground mb-2.5">{tb("timezoneLabel")}</label>
+ <label htmlFor="gen-timezone" className="block text-sm font-medium text-foreground mb-2.5 mt-6">{tg("timezoneLabel")}</label>
  <Select<string>
  id="gen-timezone"
  value={draft.timezone}
@@ -841,11 +917,74 @@ export function GeneralSettingsPage({
  track("dash_settings_general_change_timezone", { tz: next });
  setDraft((d) => ({ ...d, timezone: next }));
  }}
- options={TIMEZONE_OPTIONS.map((tz) => ({ value: tz, label: tz }))}
+ title={tg("timezoneLabel")}
+ options={timezoneOptions}
  />
- <p className="text-xs text-muted-foreground mt-1.5 leading-snug">{tb("timezoneTip")}</p>
+
+ <label htmlFor="langs-supported" className="block text-sm font-medium text-foreground mb-2.5 mt-6">{tl("availableLabel")}</label>
+ <Select<string>
+ multiple
+ id="langs-supported"
+ value={draft.languages}
+ onChange={setLanguages}
+ title={tl("availableLabel")}
+ placeholder={tl("availableLabel")}
+ options={[...AVAILABLE_LANGUAGES]
+ .sort((a, b) => a.label.localeCompare(b.label))
+ .map((l) => ({ value: l.code, label: `${l.flag} ${l.label}` }))}
+ />
+ {draft.languages.length === 0 ? (
+ <p className="text-xs text-red-600 mt-2">{tl("noneError")}</p>
+ ) : null}
+
+ <label htmlFor="lang-default" className="block text-sm font-medium text-foreground mb-2.5 mt-6">{tl("defaultLabel")}</label>
+ <Select<string>
+ id="lang-default"
+ value={draft.defaultLang}
+ onChange={(next) => {
+ track("dash_settings_langs_change_default");
+ setDraft((d) => ({ ...d, defaultLang: next }));
+ }}
+ disabled={draft.languages.length === 0}
+ title={tl("defaultLabel")}
+ options={draft.languages
+ .map((code) => AVAILABLE_LANGUAGES.find((x) => x.code === code))
+ .filter((l): l is NonNullable<typeof l> => !!l)
+ .map((l) => ({ value: l.code, label: `${l.flag} ${l.label}` }))}
+ />
+ </div>
+ <UnsavedChangesDialog
+ open={unsavedOpen}
+ saving={false}
+ onDiscard={() => { setUnsavedOpen(false); leave(); }}
+ onSave={() => { setUnsavedOpen(false); void save(); }}
+ onClose={() => { pendingNavRef.current = null; setUnsavedOpen(false); }}
+ />
+ {translating || translateError ? (
+ <div className="fixed inset-0 z-[60] bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+ <div className="w-full max-w-sm bg-card border border-border rounded-2xl shadow-xl p-6 text-center">
+ {translateError ? (
+ <>
+ <div className="text-base font-semibold text-foreground mb-2">{tl("translateErrorTitle")}</div>
+ <p className="text-sm text-muted-foreground mb-5 leading-relaxed">{translateError}</p>
+ <button
+ type="button"
+ onClick={() => { setTranslateError(null); }}
+ className="w-full h-10 rounded-md bg-primary-gradient text-primary-foreground text-sm font-medium hover:bg-primary/90"
+ >
+ {tc("close")}
+ </button>
+ </>
+ ) : (
+ <>
+ <div className="w-10 h-10 mx-auto mb-4 border-4 border-primary/30 border-t-primary rounded-full animate-spin" />
+ <div className="text-base font-semibold text-foreground mb-2">{tl("translatingTitle")}</div>
+ <p className="text-sm text-muted-foreground leading-relaxed">{tl("translatingBody")}</p>
+ </>
+ )}
  </div>
  </div>
+ ) : null}
  </div>
  );
 }
@@ -922,6 +1061,7 @@ export function OrderSettingsPage({
  </div>
  </div>
  <ToggleSwitch
+ testId="orders-accept"
  checked={draft.acceptOrders}
  onChange={() => {
  track("dash_settings_orders_toggle_accept");
@@ -999,6 +1139,7 @@ export function OrderSettingsPage({
  {tpm(code as never, { defaultValue: code })}
  </div>
  <ToggleSwitch
+ testId={"pay-toggle-" + code}
  checked={paymentDraft.includes(code)}
  onChange={() => {
  track(`dash_settings_orders_toggle_pm_${code}`);
@@ -1099,6 +1240,7 @@ export function BookingSettingsPage({
  </div>
  </div>
  <ToggleSwitch
+ testId="bookings-enable"
  checked={draft.enabled}
  onChange={() => {
  track("dash_settings_booking_toggle_enable");
@@ -1182,6 +1324,20 @@ export function BookingSettingsPage({
 
 // IANA timezone identifiers available at runtime. Falls back to a small
 // curated list on environments that don't expose Intl.supportedValuesOf.
+// Current UTC offset of an IANA zone (e.g. "GMT+2"), DST-aware for "now".
+// Shown as the option description in the timezone picker.
+function tzOffsetLabel(tz: string): string {
+ try {
+ return (
+ new Intl.DateTimeFormat("en-US", { timeZone: tz, timeZoneName: "shortOffset" })
+ .formatToParts(new Date())
+ .find((p) => p.type === "timeZoneName")?.value ?? ""
+ );
+ } catch {
+ return "";
+ }
+}
+
 const TIMEZONE_OPTIONS: string[] = (() => {
  try {
  const fn = (Intl as unknown as { supportedValuesOf?: (k: string) => string[] }).supportedValuesOf;
@@ -1305,169 +1461,6 @@ function ScheduleDayRow({
  ) : null}
  </>
  )}
- </div>
- );
-}
-
-// ── Languages ──
-
-export function LanguagesSettingsPage({
- restaurant,
- setRestaurant,
- onBack,
-}: {
- restaurant: Restaurant;
- setRestaurant: React.Dispatch<React.SetStateAction<Restaurant>>;
- onBack: () => void;
-}) {
- const t = useTranslations("dashboard.settings");
- const tl = useTranslations("dashboard.settings.languages");
- const tc = useTranslations("dashboard.common");
- const qc = useQueryClient();
- const [draft, setDraft] = useState({
- languages: restaurant.languages,
- defaultLang: restaurant.defaultLang,
- });
- const [saving, setSaving] = useState(false);
- const [translating, setTranslating] = useState(false);
- const [translateError, setTranslateError] = useState<string | null>(null);
-
- useEffect(() => {
- window.scrollTo({ top: 0, behavior: "auto" });
- }, []);
-
- const canSave = draft.languages.length > 0 && draft.languages.includes(draft.defaultLang) && !saving;
-
- async function save() {
- track("dash_settings_langs_save");
- if (!canSave) return;
- const addedLangs = draft.languages.filter((l) => !restaurant.languages.includes(l));
- const willBackfill = addedLangs.length > 0;
- setSaving(true);
- if (willBackfill) setTranslating(true);
- try {
- await updateRestaurantLanguages(draft.languages, draft.defaultLang);
- setRestaurant((r) => ({ ...r, languages: draft.languages, defaultLang: draft.defaultLang }));
- // Categories + items snapshots now carry new/removed translations.
- // Invalidate the cached menu so the next render picks up the
- // backfilled (or pruned) ml fields.
- await Promise.all([
- qc.invalidateQueries({ queryKey: ["categories"] }),
- qc.invalidateQueries({ queryKey: ["items"] }),
- qc.invalidateQueries({ queryKey: ["restaurant"] }),
- ]);
- setTranslating(false);
- onBack();
- } catch (err) {
- if (willBackfill) setTranslateError(err instanceof Error ? err.message : String(err));
- setSaving(false);
- }
- }
-
- function toggleLang(code: string) {
- setDraft((d) => {
- const isOn = d.languages.includes(code);
- track(isOn ? "dash_settings_langs_lang_off" : "dash_settings_langs_lang_on");
- const next = isOn ? d.languages.filter((c) => c !== code) : [...d.languages, code];
- let nextDefault = d.defaultLang;
- if (isOn && code === d.defaultLang) nextDefault = next[0] || "";
- if (!isOn && next.length === 1) nextDefault = code;
- return { languages: next, defaultLang: nextDefault };
- });
- }
-
- return (
- <div>
- <SubpageStickyBar onBack={() => { track("dash_settings_langs_back"); onBack(); }} onSave={save} canSave={canSave} />
- <div className="">
- <div className="mb-5 flex items-start justify-between gap-3">
- <div>
- <div className="text-xs text-muted-foreground">{t("breadcrumb")}</div>
- <h2 className="text-xl font-medium text-foreground mt-1">{tl("title")}</h2>
- </div>
- {draft.languages.length > 0 ? (
- <span className="shrink-0 inline-flex items-center h-8 px-2.5 text-xs font-medium text-muted-foreground bg-secondary rounded-md tabular-nums">
- {draft.languages.length} {tc("selected")}
- </span>
- ) : null}
- </div>
- <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
- <div className="text-sm font-medium text-foreground mb-0.5">{tl("availableLabel")}</div>
- <p className="text-xs text-muted-foreground mb-3">
- {tl("availableTip")}
- </p>
- <div className="flex flex-wrap gap-1.5">
- {[...AVAILABLE_LANGUAGES]
- .sort((a, b) => a.label.localeCompare(b.label))
- .map((l) => {
- const isSelected = draft.languages.includes(l.code);
- return (
- <button
- key={l.code}
- type="button"
- onClick={() => toggleLang(l.code)}
- className={
- "inline-flex items-center gap-1.5 h-8 px-2.5 text-xs font-medium rounded-md transition-colors " +
- (isSelected
- ? "bg-foreground text-background"
- : "bg-secondary text-muted-foreground")
- }
- >
- {l.label}
- </button>
- );
- })}
- </div>
- {draft.languages.length === 0 ? (
- <p className="text-xs text-red-600 mt-2">{tl("noneError")}</p>
- ) : null}
-
- <Divider />
-
- <label htmlFor="lang-default" className="block text-sm font-medium text-foreground mb-2.5">{tl("defaultLabel")}</label>
- <Select<string>
- id="lang-default"
- value={draft.defaultLang}
- onChange={(next) => {
- track("dash_settings_langs_change_default");
- setDraft((d) => ({ ...d, defaultLang: next }));
- }}
- disabled={draft.languages.length === 0}
- options={draft.languages
- .map((code) => AVAILABLE_LANGUAGES.find((x) => x.code === code))
- .filter((l): l is NonNullable<typeof l> => !!l)
- .map((l) => ({ value: l.code, label: `${l.flag} ${l.label}` }))}
- />
- <p className="text-xs text-muted-foreground mt-1.5 leading-snug">
- {tl("defaultTip")}
- </p>
- </div>
- </div>
- {translating || translateError ? (
- <div className="fixed inset-0 z-[60] bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
- <div className="w-full max-w-sm bg-card border border-border rounded-2xl shadow-xl p-6 text-center">
- {translateError ? (
- <>
- <div className="text-base font-semibold text-foreground mb-2">{tl("translateErrorTitle")}</div>
- <p className="text-sm text-muted-foreground mb-5 leading-relaxed">{translateError}</p>
- <button
- type="button"
- onClick={() => { setTranslateError(null); }}
- className="w-full h-10 rounded-md bg-primary-gradient text-primary-foreground text-sm font-medium hover:bg-primary/90"
- >
- {tc("close")}
- </button>
- </>
- ) : (
- <>
- <div className="w-10 h-10 mx-auto mb-4 border-4 border-primary/30 border-t-primary rounded-full animate-spin" />
- <div className="text-base font-semibold text-foreground mb-2">{tl("translatingTitle")}</div>
- <p className="text-sm text-muted-foreground leading-relaxed">{tl("translatingBody")}</p>
- </>
- )}
- </div>
- </div>
- ) : null}
  </div>
  );
 }

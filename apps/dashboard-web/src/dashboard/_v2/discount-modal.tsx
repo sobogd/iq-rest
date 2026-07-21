@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Modal } from "./ui";
-import { inputClass } from "./tokens";
+import { formInputClass, primaryBtn } from "./tokens";
 import { sanitizePriceInput } from "./helpers";
 import type { Discount } from "./types";
 
@@ -17,7 +17,6 @@ interface DiscountModalProps {
   initial: Discount | null;
   // Optional copy override — the menu provides "order" / "item" label.
   title?: string;
-  subtitle?: string;
   currencySymbol: string;
   onClose: () => void;
   onSave: (next: Discount | null) => void | Promise<void>;
@@ -27,7 +26,6 @@ export function DiscountModal({
   open,
   initial,
   title,
-  subtitle,
   currencySymbol,
   onClose,
   onSave,
@@ -38,13 +36,19 @@ export function DiscountModal({
   const [reason, setReason] = useState<string>("");
   const [saving, setSaving] = useState(false);
 
+  // Reset only on the closed→open transition. `initial` is re-derived from
+  // `orders` on every parent render, so keeping it in the deps meant any
+  // SSE/poll tick wiped the user's in-progress edits while the modal was open.
+  const initialRef = useRef(initial);
+  initialRef.current = initial;
   useEffect(() => {
     if (!open) return;
-    setType(initial?.type ?? "percent");
-    setValue(initial?.value != null ? String(initial.value) : "");
-    setReason(initial?.reason ?? "");
+    const init = initialRef.current;
+    setType(init?.type ?? "percent");
+    setValue(init?.value != null ? String(init.value) : "");
+    setReason(init?.reason ?? "");
     setSaving(false);
-  }, [open, initial]);
+  }, [open]);
 
   const numericValue = Number(value);
   const valid =
@@ -82,7 +86,6 @@ export function DiscountModal({
       open={open}
       onClose={() => !saving && onClose()}
       title={title || t("discountTitle", { defaultValue: "Discount" })}
-      subtitle={subtitle || t("discountSubtitle", { defaultValue: "Apply a discount to the price." })}
       size="sm"
       closeOnBackdrop={!saving}
       footer={
@@ -90,22 +93,24 @@ export function DiscountModal({
           {initial ? (
             <button
               type="button"
+              data-testid="discount-remove"
               onClick={() => void handleRemove()}
               disabled={saving}
-              className="h-8 px-3 text-xs font-medium text-red-600 transition-colors disabled:opacity-50"
+              className="h-[36px] px-[16px] text-[14px] font-semibold text-red-600 rounded-lg transition-colors disabled:opacity-50 inline-flex items-center"
             >
-              {t("discountRemove", { defaultValue: "Remove" })}
+              <span className="truncate">{t("discountRemove", { defaultValue: "Remove" })}</span>
             </button>
           ) : (
             <span />
           )}
           <button
             type="button"
+            data-testid="discount-save"
             onClick={() => void handleSave()}
             disabled={!valid || saving}
-            className="h-8 px-3 text-xs font-medium text-primary-foreground bg-primary-gradient rounded-lg transition-colors disabled:opacity-50"
+            className={primaryBtn + " inline-flex items-center"}
           >
-            {t("discountSave", { defaultValue: "Save" })}
+            <span className="truncate">{t("discountSave", { defaultValue: "Save" })}</span>
           </button>
         </div>
       }
@@ -113,23 +118,23 @@ export function DiscountModal({
       <div className="space-y-4">
         <div>
           <label className="block text-sm font-medium text-foreground mb-2.5">
-            {t("discountTypeLabel", { defaultValue: "Type" })}
+            {t("discountTypeLabel", { defaultValue: "Type" })}:
           </label>
           {/* Segmented control — mirrors the day/month switch on the
               bookings page so the kiosk + admin share one visual idiom
               for binary mode pickers. */}
           <div className="inline-flex items-center rounded-lg border border-border bg-card overflow-hidden">
             <TypeBtn active={type === "percent"} onClick={() => setType("percent")}>
-              {t("discountTypePercent", { defaultValue: "Percent" })} (%)
+              {t("discountTypePercent", { defaultValue: "Percent" })}
             </TypeBtn>
             <TypeBtn active={type === "fixed"} onClick={() => setType("fixed")}>
-              {t("discountTypeFixed", { defaultValue: "Fixed" })} ({currencySymbol})
+              {t("discountTypeFixed", { defaultValue: "Fixed" })}
             </TypeBtn>
           </div>
         </div>
         <div>
           <label htmlFor="discount-value" className="block text-sm font-medium text-foreground mb-2.5">
-            {t("discountValueLabel", { defaultValue: "Value" })}
+            {t("discountValueLabel", { defaultValue: "Value" })}:
           </label>
           <div className="relative">
             <input
@@ -139,8 +144,7 @@ export function DiscountModal({
               value={value}
               onChange={(e) => setValue(sanitizePriceInput(e.target.value))}
               placeholder={type === "percent" ? "10" : "5.00"}
-              className={inputClass + " pl-3 pr-8 tabular-nums"}
-              autoFocus
+              className={formInputClass + " pl-3 pr-8 tabular-nums"}
             />
             <span className="absolute top-1 right-1 w-8 h-8 inline-flex items-center justify-center text-sm text-muted-foreground pointer-events-none">
               {type === "percent" ? "%" : currencySymbol}
@@ -149,7 +153,7 @@ export function DiscountModal({
         </div>
         <div>
           <label htmlFor="discount-reason" className="block text-sm font-medium text-foreground mb-2.5">
-            {t("discountReasonLabel", { defaultValue: "Reason (optional)" })}
+            {t("discountReasonLabel", { defaultValue: "Reason (optional)" })}:
           </label>
           <input
             id="discount-reason"
@@ -157,7 +161,7 @@ export function DiscountModal({
             value={reason}
             onChange={(e) => setReason(e.target.value)}
             placeholder={t("discountReasonPlaceholder", { defaultValue: "e.g. Loyal customer" })}
-            className={inputClass}
+            className={formInputClass}
           />
         </div>
       </div>
@@ -179,7 +183,8 @@ function TypeBtn({
       type="button"
       onClick={onClick}
       className={
-        "h-8 px-3 text-xs font-medium transition-colors " +
+        // h-10 matches the form inputs (formInputClass) next to the tabs.
+        "h-10 px-4 text-sm font-medium transition-colors " +
         (active ? "bg-primary-gradient text-primary-foreground" : "text-muted-foreground hover:text-foreground")
       }
     >

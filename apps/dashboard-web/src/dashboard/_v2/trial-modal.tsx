@@ -83,11 +83,11 @@ export function TrialModal({
       size="sm"
       footer={
         <div className="flex items-center justify-end gap-2">
-          <button type="button" onClick={hide} className={secondaryBtn}>
-            {t("hide")}
+          <button type="button" onClick={hide} className={secondaryBtn + " inline-flex items-center"}>
+            <span className="truncate">{t("hide")}</span>
           </button>
-          <button type="button" onClick={goPlans} className={primaryBtn}>
-            {t("viewPlans")}
+          <button type="button" onClick={goPlans} className={primaryBtn + " inline-flex items-center"}>
+            <span className="truncate">{t("viewPlans")}</span>
           </button>
         </div>
       }

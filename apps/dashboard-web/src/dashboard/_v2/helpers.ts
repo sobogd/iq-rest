@@ -11,7 +11,13 @@ export function moveItem<T>(arr: T[], idx: number, dir: number): T[] {
 }
 
 export function newId(): string {
- return "id_" + Math.random().toString(36).slice(2, 9);
+ // crypto.randomUUID is available in all target browsers; collision-free unlike
+ // the previous 7-char Math.random() id (birthday-bound collisions across many
+ // options/variants targeted the wrong row on edit/delete).
+ if (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function") {
+ return "id_" + crypto.randomUUID();
+ }
+ return "id_" + Math.random().toString(36).slice(2, 9) + Math.random().toString(36).slice(2, 9);
 }
 
 export function slugify(s: string): string {
@@ -32,12 +38,29 @@ export function isSameDay(a: Date, b: Date): boolean {
  );
 }
 
+// Module-level formatter: constructing Intl.DateTimeFormat per call costs
+// 50-200µs on cheap kiosk tablets, and these run per row per render.
+const hhmmFmt = new Intl.DateTimeFormat([], { hour: "2-digit", minute: "2-digit", hour12: false });
+
 export function formatTime(date: Date): string {
- return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", hour12: false });
+ return hhmmFmt.format(date);
 }
 
 export function formatTimeShort(iso: string): string {
- return new Date(iso).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", hour12: false });
+ return hhmmFmt.format(new Date(iso));
+}
+
+// Cached locale-aware date formatter (keyed by locale + options) — same
+// rationale as hhmmFmt above.
+const dtfCache = new Map<string, Intl.DateTimeFormat>();
+export function cachedDateFormat(locale: string, opts: Intl.DateTimeFormatOptions, d: Date): string {
+ const key = locale + "|" + JSON.stringify(opts);
+ let f = dtfCache.get(key);
+ if (!f) {
+  f = new Intl.DateTimeFormat(locale, opts);
+  dtfCache.set(key, f);
+ }
+ return f.format(d);
 }
 
 export function minutesSince(iso: string): number {
@@ -76,7 +99,12 @@ export function formatPrice(num: number, currencySymbol = "€"): string {
 // Filter user input for price fields: keep only digits and dots, replace commas with
 // dots on the fly so users can type comma decimal separators naturally.
 export function sanitizePriceInput(value: string): string {
- return value.replace(/,/g, ".").replace(/[^\d.]/g, "");
+ const cleaned = value.replace(/,/g, ".").replace(/[^\d.]/g, "");
+ // Collapse to at most one decimal point — keep the first dot, drop the rest so
+ // "1.2.3" can never reach the persist path and produce NaN downstream.
+ const firstDot = cleaned.indexOf(".");
+ if (firstDot === -1) return cleaned;
+ return cleaned.slice(0, firstDot + 1) + cleaned.slice(firstDot + 1).replace(/\./g, "");
 }
 
 export function parseDecimal(value: string | null | undefined): number {

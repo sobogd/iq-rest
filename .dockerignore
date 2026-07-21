@@ -1,0 +1,19 @@
+# Keep host (macOS) artifacts out of the linux image — host node_modules carry
+# native binaries that would clobber the container install.
+**/node_modules
+**/.next
+**/dist
+**/out
+**/out-*
+**/.turbo
+**/.vite
+**/build
+**/coverage
+**/playwright-report
+**/test-results
+.git
+.env
+apps/*/.env
+apps/*/.env.local
+e2e/real.env
+**/*.log

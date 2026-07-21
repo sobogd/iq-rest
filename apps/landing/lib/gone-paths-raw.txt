@@ -11,6 +11,7 @@
 /ar/multilingual
 /ar/nizam-talabat-online-matam
 /ar/personal-support
+/ar/qr-menu-matam
 /ar/reservations
 /bg/ai-images
 /bg/ai-translation
@@ -24,11 +25,13 @@
 /bg/mobile-management
 /bg/multilingual
 /bg/personal-support
+/bg/qr-menyu-restorant
 /bg/reservations
 /bg/sistema-za-onlayn-porachki-restorant
 /ca/ai-images
 /ca/ai-translation
 /ca/analytics
+/ca/codi-qr-restaurant
 /ca/color-scheme
 /ca/custom-design
 /ca/easy-menu
@@ -53,6 +56,7 @@
 /cs/multilingual
 /cs/online-objednavkovy-system-restaurace
 /cs/personal-support
+/cs/qr-menu-restaurace
 /cs/reservations
 /da/ai-images
 /da/ai-translation
@@ -67,6 +71,7 @@
 /da/multilingual
 /da/online-bestillingssystem-restaurant
 /da/personal-support
+/da/qr-kode-menukort-restaurant
 /da/reservations
 /de/ai-images
 /de/ai-translation
@@ -80,6 +85,7 @@
 /de/mobile-management
 /de/multilingual
 /de/personal-support
+/de/qr-code-speisekarte-restaurant
 /de/reservations
 /el/ai-images
 /el/ai-translation
@@ -94,6 +100,7 @@
 /el/multilingual
 /el/online-systima-paragelion-estiatorio
 /el/personal-support
+/el/qr-menou-estiatorio
 /el/reservations
 /en/ai-images
 /en/ai-translation
@@ -112,6 +119,7 @@
 /es/ai-images
 /es/ai-translation
 /es/analytics
+/es/codigo-qr-restaurante
 /es/color-scheme
 /es/custom-design
 /es/easy-menu
@@ -136,6 +144,7 @@
 /et/multilingual
 /et/online-tellimissusteem-restoranile
 /et/personal-support
+/et/qr-kood-menuu-restoran
 /et/reservations
 /fa/ai-images
 /fa/ai-translation
@@ -146,6 +155,7 @@
 /fa/instant-setup
 /fa/lp/menooye-dijital-baraye-restoranha
 /fa/lp/menooye-qr-baraye-restoranha
+/fa/menooye-qr-restoran
 /fa/mobile-management
 /fa/multilingual
 /fa/personal-support
@@ -164,6 +174,7 @@
 /fi/multilingual
 /fi/online-tilausjarjestelma-ravintolalle
 /fi/personal-support
+/fi/qr-koodi-ruokalista-ravintola
 /fi/reservations
 /fr/ai-images
 /fr/ai-translation
@@ -175,6 +186,7 @@
 /fr/logiciel-prise-de-commande-restaurant
 /fr/lp/menu-digital-pour-restaurants
 /fr/lp/menu-qr-pour-restaurants
+/fr/menu-qr-code-restaurant
 /fr/mobile-management
 /fr/multilingual
 /fr/personal-support
@@ -182,6 +194,7 @@
 /ga/ai-images
 /ga/ai-translation
 /ga/analytics
+/ga/biachlar-qr-coda-bialann
 /ga/color-scheme
 /ga/coras-orduithe-ar-line-bialann
 /ga/custom-design
@@ -206,6 +219,7 @@
 /hr/multilingual
 /hr/online-sustav-narudzbi-restoran
 /hr/personal-support
+/hr/qr-meni-restoran
 /hr/reservations
 /hu/ai-images
 /hu/ai-translation
@@ -220,6 +234,7 @@
 /hu/multilingual
 /hu/online-rendelesi-rendszer-etterem
 /hu/personal-support
+/hu/qr-kod-etlap-etterem
 /hu/reservations
 /is/ai-images
 /is/ai-translation
@@ -234,6 +249,7 @@
 /is/multilingual
 /is/netpontunarkerfi-veitingastadar
 /is/personal-support
+/is/qr-matsedill-veitingastadur
 /is/reservations
 /it/ai-images
 /it/ai-translation
@@ -244,6 +260,7 @@
 /it/instant-setup
 /it/lp/menu-digitale-per-ristoranti
 /it/lp/menu-qr-code-online-per-ristoranti
+/it/menu-qr-code-ristoranti
 /it/mobile-management
 /it/multilingual
 /it/personal-support
@@ -261,6 +278,7 @@
 /ja/mobile-management
 /ja/multilingual
 /ja/personal-support
+/ja/qr-menu-resutoran
 /ja/qr-order-system-restaurant
 /ja/reservations
 /ko/ai-images
@@ -275,6 +293,7 @@
 /ko/mobile-management
 /ko/multilingual
 /ko/personal-support
+/ko/qr-menyu-resutorang
 /ko/reservations
 /ko/restaurant-online-order-system
 /lt/ai-images
@@ -290,6 +309,7 @@
 /lt/mobile-management
 /lt/multilingual
 /lt/personal-support
+/lt/qr-kodo-meniu-restoranas
 /lt/reservations
 /lv/ai-images
 /lv/ai-translation
@@ -303,6 +323,7 @@
 /lv/mobile-management
 /lv/multilingual
 /lv/personal-support
+/lv/qr-koda-izvelne-restorans
 /lv/reservations
 /lv/tiessaistes-pasutijumu-sistema-restoranam
 /nl/ai-images
@@ -318,6 +339,7 @@
 /nl/multilingual
 /nl/online-bestelsysteem-voor-restaurants
 /nl/personal-support
+/nl/qr-code-menukaart-restaurant
 /nl/reservations
 /no/ai-images
 /no/ai-translation
@@ -332,6 +354,7 @@
 /no/multilingual
 /no/online-bestillingssystem-restaurant
 /no/personal-support
+/no/qr-kode-meny-restaurant
 /no/reservations
 /pl/ai-images
 /pl/ai-translation
@@ -342,6 +365,7 @@
 /pl/instant-setup
 /pl/lp/cyfrowe-menu-dla-restauracji
 /pl/lp/menu-qr-dla-restauracji
+/pl/menu-qr-kod-restauracja
 /pl/mobile-management
 /pl/multilingual
 /pl/personal-support
@@ -359,8 +383,10 @@
 /pt/mobile-management
 /pt/multilingual
 /pt/personal-support
+/pt/qr-code-menu-restaurantes
 /pt/reservations
 /pt/sistema-de-pedidos-online-restaurante
+/qr-code-menu-for-restaurants
 /ro/ai-images
 /ro/ai-translation
 /ro/analytics
@@ -370,6 +396,7 @@
 /ro/instant-setup
 /ro/lp/meniu-digital-pentru-restaurante
 /ro/lp/meniu-qr-pentru-restaurante
+/ro/meniu-qr-cod-restaurant
 /ro/mobile-management
 /ro/multilingual
 /ro/personal-support
@@ -387,6 +414,7 @@
 /ru/mobile-management
 /ru/multilingual
 /ru/personal-support
+/ru/qr-menyu-restoran
 /ru/reservations
 /ru/sistema-onlayn-zakazov-restorana
 /sk/ai-images
@@ -402,6 +430,7 @@
 /sk/multilingual
 /sk/online-objednavkovy-system-restauracia
 /sk/personal-support
+/sk/qr-menu-restauracia
 /sk/reservations
 /sl/ai-images
 /sl/ai-translation
@@ -415,6 +444,7 @@
 /sl/mobile-management
 /sl/multilingual
 /sl/personal-support
+/sl/qr-meni-restavracija
 /sl/reservations
 /sl/spletni-sistem-narocanja-restavracija
 /sr/ai-images
@@ -430,6 +460,7 @@
 /sr/multilingual
 /sr/online-sistem-porudzbina-restoran
 /sr/personal-support
+/sr/qr-meni-restoran
 /sr/reservations
 /sv/ai-images
 /sv/ai-translation
@@ -444,6 +475,7 @@
 /sv/multilingual
 /sv/online-bestallningssystem-restaurang
 /sv/personal-support
+/sv/qr-kod-meny-restaurang
 /sv/reservations
 /tr/ai-images
 /tr/ai-translation
@@ -457,6 +489,7 @@
 /tr/mobile-management
 /tr/multilingual
 /tr/personal-support
+/tr/qr-kod-menu-restoran
 /tr/reservations
 /tr/restoran-online-siparis-sistemi
 /uk/ai-images
@@ -472,6 +505,7 @@
 /uk/multilingual
 /uk/onlayn-systema-zamovlen-restoran
 /uk/personal-support
+/uk/qr-menyu-restoran
 /uk/reservations
 /zh/ai-images
 /zh/ai-translation
@@ -485,5 +519,6 @@
 /zh/mobile-management
 /zh/multilingual
 /zh/personal-support
+/zh/qr-cai-dan-can-ting
 /zh/qr-ordering-system-restaurant
 /zh/reservations

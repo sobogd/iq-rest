@@ -99,7 +99,11 @@ export class AuthService implements OnModuleDestroy {
       throw new HttpException("Too many requests", HttpStatus.TOO_MANY_REQUESTS);
     }
 
-    const code = generateOTP();
+    // E2E autotest bypass: for the reserved autotest domain, in non-production
+    // only, force a fixed OTP and never send a real email. Dead in production
+    // (NODE_ENV === "production") so it can't be abused.
+    const e2eBypass = process.env.NODE_ENV !== "production" && email.endsWith("@e2e.iqrest.test");
+    const code = e2eBypass ? "000000" : generateOTP();
     const otpHash = hashOTP(code);
     const otpExpiresAt = new Date(Date.now() + OTP_EXPIRY_MS);
     const normalizedLocale = this.i18n.urlLocale(locale);
@@ -159,7 +163,7 @@ export class AuthService implements OnModuleDestroy {
       }
     }
 
-    await this.mail.sendOtp({ email, code, locale });
+    if (!e2eBypass) await this.mail.sendOtp({ email, code, locale });
     return { isNewUser };
   }
 

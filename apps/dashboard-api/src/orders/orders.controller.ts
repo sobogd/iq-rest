@@ -55,6 +55,19 @@ export class OrdersController {
     return this.svc.patch(ctx(req), id, body);
   }
 
+  // Per-item status merge — the race-safe path for KDS/waiter status taps.
+  // Unlike PATCH :id this never rewrites the items array wholesale, so two
+  // devices advancing different items of the same order can't clobber each
+  // other's changes.
+  @Patch(":id/item-status")
+  patchItemStatus(
+    @Req() req: Request,
+    @Param("id") id: string,
+    @Body() body: { changes?: { itemId: string; status: string }[] },
+  ) {
+    return this.svc.patchItemStatuses(ctx(req), id, body?.changes ?? []);
+  }
+
   @Post(":id/split")
   split(@Req() req: Request, @Param("id") id: string, @Body() body: SplitOrderDto) {
     return this.svc.split(ctx(req), id, body);

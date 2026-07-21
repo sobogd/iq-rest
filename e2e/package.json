@@ -1,0 +1,15 @@
+{
+  "name": "iqrest-e2e",
+  "private": true,
+  "description": "E2E happy-path against the LOCAL dev stack (./scripts/dev.sh). Creates one autotest restaurant, drives the full flow, deletes it + all linked data after. Real backend + real Gemini.",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.51.1",
+    "@types/pg": "^8.11.10",
+    "pg": "^8.13.1"
+  }
+}

@@ -13,7 +13,9 @@
     "db:reset": "./scripts/db-reset.sh",
     "build": "turbo run build",
     "lint": "turbo run lint",
-    "typecheck": "turbo run typecheck"
+    "typecheck": "turbo run typecheck",
+    "e2e": "npm --prefix e2e test",
+    "e2e:setup": "npm --prefix e2e install && npm --prefix e2e exec -- playwright install chromium"
   },
   "devDependencies": {
     "turbo": "^2.3.3"

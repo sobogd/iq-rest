@@ -1,8 +1,19 @@
-import { Injectable, Logger, NotFoundException } from "@nestjs/common";
+import { ConflictException, Injectable, Logger, NotFoundException } from "@nestjs/common";
 import { PrismaService } from "../prisma/prisma.service";
 import { MailService } from "../mail/mail.service";
 import { OrdersEventsService } from "../orders-stream/orders-events.service";
 import type { ReservationStatus } from "./dto";
+
+// Allowed status transitions. cancelled/completed are terminal. Enforced
+// server-side so a stale client (e.g. a host acting on a booking another
+// device already cancelled) can't silently resurrect it — the guest already
+// got the cancellation email; re-confirming would desync them.
+const ALLOWED_TRANSITIONS: Record<ReservationStatus, ReservationStatus[]> = {
+  pending: ["confirmed", "cancelled"],
+  confirmed: ["completed", "cancelled"],
+  cancelled: [],
+  completed: [],
+};
 
 @Injectable()
 export class ReservationsService {
@@ -14,12 +25,17 @@ export class ReservationsService {
   ) {}
 
   async list(restaurantId: string) {
-    // Newest-first with a safety ceiling so the calendar (admin) and the
-    // reservation kiosk can't pull an unbounded history in one shot. 2000
-    // most-recent bookings cover normal navigation; deep-past months beyond
-    // that would need an explicit date range (not wired yet).
+    // Bound the window so neither the admin calendar nor the reservation kiosk
+    // pulls an unbounded history in one shot: everything from a year ago
+    // forward covers normal month navigation plus all upcoming bookings, while
+    // an always-on kiosk no longer re-loads the venue's entire booking history
+    // on every slim-payload re-bootstrap. A row ceiling stays as a backstop for
+    // pathological volumes (deeper past would need an explicit date range).
+    const from = new Date();
+    from.setFullYear(from.getFullYear() - 1);
+    from.setHours(0, 0, 0, 0);
     return this.prisma.reservation.findMany({
-      where: { restaurantId },
+      where: { restaurantId, date: { gte: from } },
       orderBy: [{ date: "desc" }, { startTime: "desc" }],
       take: 2000,
     });
@@ -45,6 +61,16 @@ export class ReservationsService {
       include: { restaurant: { select: { title: true, defaultLanguage: true } }, table: { select: { number: true } } },
     });
     if (!res) throw new NotFoundException();
+
+    // Idempotent: re-applying the current status is a no-op (don't re-email or
+    // re-broadcast). Otherwise the transition must be allowed from where the
+    // booking actually is now, not where the client thinks it is.
+    const current = res.status as ReservationStatus;
+    if (current === status) return res;
+    if (!(ALLOWED_TRANSITIONS[current] ?? []).includes(status)) {
+      throw new ConflictException(`Cannot change reservation from ${current} to ${status}`);
+    }
+
     const updated = await this.prisma.reservation.update({ where: { id }, data: { status } });
 
     if ((status === "confirmed" || status === "cancelled") && res.status !== status && res.guestEmail) {

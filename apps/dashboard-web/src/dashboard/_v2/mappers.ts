@@ -183,7 +183,7 @@ export function apiTableToTable(t: ApiTable): TableEntity {
  capacity: t.capacity,
  x: typeof t.x === "number" ? t.x : null,
  y: typeof t.y === "number" ? t.y : null,
- shape: t.shape === "rect" ? "rect" : "circle",
+ shape: t.shape === "rect" || t.shape === "square" || t.shape === "oval" ? t.shape : "circle",
  rotation: typeof t.rotation === "number" ? t.rotation : 0,
  width: typeof t.width === "number" ? t.width : null,
  height: typeof t.height === "number" ? t.height : null,

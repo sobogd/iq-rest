@@ -9,7 +9,8 @@ export type View =
   | { name: "menu"; group?: string }
   | { name: "orders" }
   | { name: "orders.detail"; orderId: string }
-  | { name: "reservations" }
+  | { name: "reservations"; month?: string }
+  | { name: "reservations.day"; date: string }
   | { name: "kitchen" }
   | { name: "analytics" }
   | { name: "settings" }
@@ -21,7 +22,6 @@ export type View =
   | { name: "settings.tables.edit"; id: string }
   | { name: "settings.orders" }
   | { name: "settings.bookings" }
-  | { name: "settings.languages" }
   | { name: "settings.billing"; from?: "menu" }
   | { name: "settings.support" }
   | { name: "settings.devices" }

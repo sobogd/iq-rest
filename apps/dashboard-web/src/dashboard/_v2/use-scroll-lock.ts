@@ -20,8 +20,11 @@ export function useScrollLock(active: boolean) {
       prevHtmlOverflow = html.style.overflow;
       prevBodyOverflow = body.style.overflow;
       prevBodyPaddingRight = body.style.paddingRight;
-      html.style.overflow = "hidden";
-      body.style.overflow = "hidden";
+      // `clip` (not `hidden`) so the window scroll root doesn't turn into a
+      // scroll container — `hidden` resets the sticky page header's scrollport
+      // origin and makes it visibly jump when a modal opens on a scrolled page.
+      html.style.overflow = "clip";
+      body.style.overflow = "clip";
       if (scrollbarWidth > 0) {
         const current = parseInt(body.style.paddingRight || "0", 10) || 0;
         body.style.paddingRight = `${current + scrollbarWidth}px`;

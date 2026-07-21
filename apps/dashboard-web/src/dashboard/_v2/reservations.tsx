@@ -1,29 +1,23 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
+import { useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 import {
  ChevronLeftIcon,
  ChevronRightIcon,
- MapPinIcon,
  UsersIcon,
 } from "./icons";
 import { Modal, PageHeaderSlot } from "./ui";
-import { formatTime, isSameDay } from "./helpers";
-import { patchReservation } from "./api";
+import { primaryBtn } from "./tokens";
+import { cachedDateFormat, formatTime, isSameDay } from "./helpers";
+import { patchReservation, type ApiReservation } from "./api";
 import { useDashboardRouter } from "../_spa/router";
 import type { Booking, Restaurant, TableEntity } from "./types";
 import { track } from "@/lib/dashboard-events";
 
 type ViewMode = "month" | "day";
-
-const STATUS_KEY: Record<Booking["status"], "statusPending" | "statusConfirmed" | "statusCancelled" | "statusCompleted"> = {
- pending: "statusPending",
- confirmed: "statusConfirmed",
- cancelled: "statusCancelled",
- completed: "statusCompleted",
-};
 
 const STATUS_BAR: Record<Booking["status"], string> = {
  pending: "bg-amber-500/85 text-white border border-amber-600 hover:bg-amber-500",
@@ -32,18 +26,13 @@ const STATUS_BAR: Record<Booking["status"], string> = {
  cancelled: "bg-secondary text-muted-foreground border border-border",
 };
 
-const STATUS_PILL: Record<Booking["status"], string> = {
- pending: "bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-950/40 dark:text-amber-400 dark:border-amber-900/50",
- confirmed: "bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-400 dark:border-emerald-900/50",
- completed: "bg-secondary text-muted-foreground border-border",
- cancelled: "bg-secondary text-muted-foreground border-border",
-};
-
 export function ReservationsPage({
  restaurant,
  bookings,
  setBookings,
  tables,
+ month,
+ dayDate,
  kioskLayout = false,
  demoMode = false,
 }: {
@@ -51,6 +40,13 @@ export function ReservationsPage({
  bookings: Booking[];
  setBookings: React.Dispatch<React.SetStateAction<Booking[]>>;
  tables: TableEntity[];
+ // Month grid the URL points at (YYYY-MM); absent ⇒ current month. Router-
+ // driven so prev/next are bookmarkable and drilling into a day then going
+ // back restores the same month.
+ month?: string;
+ // When set (YYYY-MM-DD), the page renders the single-day view for that date
+ // — driven by the SPA router (`reservations.day`). Absent ⇒ month view.
+ dayDate?: string;
  // Reservation kiosk: drop the centered max-width container so the day /
  // month views stretch edge-to-edge on the tablet, mirroring OrdersPage.
  kioskLayout?: boolean;
@@ -61,48 +57,76 @@ export function ReservationsPage({
  // Full-bleed everywhere; the kiosk shell adds its own padding below.
  const wrapWidth = "w-full";
  const t = useTranslations("dashboard.reservations");
+ const tc = useTranslations("dashboard.common");
+ const locale = useLocale();
  const router = useDashboardRouter();
+ const qc = useQueryClient();
+ // Kiosk primary controls get 44px touch targets (HIG); admin keeps the
+ // standard 36px header-button size.
+ const navBtnSize = kioskLayout ? "h-[44px] w-[44px]" : "h-[36px] w-[36px]";
 
- const [view, setView] = useState<ViewMode>("month");
- const [focusDate, setFocusDate] = useState<Date>(() => {
-  const d = new Date();
-  d.setHours(0, 0, 0, 0);
-  return d;
- });
- const [selected, setSelected] = useState<Booking | null>(null);
+ // View is router-driven: a `dayDate` prop means we're on the day page.
+ const view: ViewMode = dayDate ? "day" : "month";
+ // Both the month grid and the focused day come from the URL, so back /
+ // bookmark / reload all restore faithfully. Default month = current.
+ const monthFocus = useMemo(() => (month ? parseYM(month) : monthStart(new Date())), [month]);
+ const dayFocus = useMemo(() => (dayDate ? parseYMD(dayDate) : monthFocus), [dayDate, monthFocus]);
+ // Selection is by id and the shown booking is re-derived from `bookings`
+ // every render — an SSE/poll update (status changed on another device)
+ // must reach an already-open modal, otherwise stale footer actions could
+ // e.g. re-confirm a booking that was just cancelled elsewhere.
+ const [selectedId, setSelectedId] = useState<string | null>(null);
+ const selectedBooking = selectedId
+  ? bookings.find((b) => b.id === selectedId) ?? null
+  : null;
+ // Keep the last-shown booking during the modal's close animation — clearing
+ // the selection must not unmount the modal instantly, or its exit animation
+ // never plays.
+ const lastBookingRef = useRef<Booking | null>(null);
+ if (selectedBooking) lastBookingRef.current = selectedBooking;
+ const shownBooking = selectedBooking ?? lastBookingRef.current;
+ // Booking deleted while its modal is open → close it.
+ useEffect(() => {
+  if (selectedId && !bookings.some((b) => b.id === selectedId)) setSelectedId(null);
+ }, [selectedId, bookings]);
 
  const monthBookings = useMemo(
   () =>
    bookings.filter((b) => {
     if (b.status === "cancelled") return false;
     const d = new Date(b.datetime);
-    return d.getFullYear() === focusDate.getFullYear() && d.getMonth() === focusDate.getMonth();
+    return d.getFullYear() === monthFocus.getFullYear() && d.getMonth() === monthFocus.getMonth();
    }),
-  [bookings, focusDate],
+  [bookings, monthFocus],
  );
 
  const dayBookings = useMemo(
-  () => bookings.filter((b) => b.status !== "cancelled" && isSameDay(new Date(b.datetime), focusDate)),
-  [bookings, focusDate],
+  () => bookings.filter((b) => b.status !== "cancelled" && isSameDay(new Date(b.datetime), dayFocus)),
+  [bookings, dayFocus],
  );
 
  // Empty state — render late so all hooks above run unconditionally.
  if (tables.length === 0) {
+  // Kiosk/demo hosts don't render settings routes — the CTA would silently
+  // rewrite the URL and do nothing, so show a plain message there.
+  const showCta = !kioskLayout && !demoMode;
   return (
-   <CtaWrapper title={t("title")}>
+   <CtaWrapper>
     <CtaState
      title={t("noTablesTitle")}
      body={t("noTablesBody")}
-     cta={t("noTablesCta")}
-     onClick={() => router.push({ name: "settings.tables" })}
+     cta={showCta ? t("noTablesCta") : undefined}
+     onClick={showCta ? () => router.push({ name: "settings.tables" }) : undefined}
     />
    </CtaWrapper>
   );
  }
 
+ // Locale-aware, via the app locale (not the runtime default). Month → "Июнь
+ // 2020" (capitalized); day → "10 июня 2020" (no weekday, starts with a digit).
  const title = view === "month"
-  ? capitalize(focusDate.toLocaleDateString([], { month: "long", year: "numeric" }))
-  : capitalize(focusDate.toLocaleDateString([], { weekday: "long", day: "numeric", month: "long", year: "numeric" }));
+  ? capitalize(cachedDateFormat(locale, { month: "long", year: "numeric" }, monthFocus))
+  : cachedDateFormat(locale, { day: "numeric", month: "long", year: "numeric" }, dayFocus);
 
  const count = view === "month" ? monthBookings.length : dayBookings.length;
  const subtitle = count === 0
@@ -110,49 +134,73 @@ export function ReservationsPage({
   : count === 1 ? t("subtitleOne", { count }) : t("subtitleOther", { count });
 
  function shift(delta: number) {
-  setFocusDate((d) => {
-   const next = new Date(d);
-   if (view === "month") {
-    next.setDate(1);
-    next.setMonth(d.getMonth() + delta);
-   } else {
-    next.setDate(d.getDate() + delta);
-   }
-   return next;
-  });
+  if (view === "month") {
+   const next = new Date(monthFocus);
+   next.setMonth(monthFocus.getMonth() + delta);
+   router.replace({ name: "reservations", month: fmtYM(next) });
+  } else {
+   // Day nav replaces the URL (no history entry per day) so back → month.
+   const next = new Date(dayFocus);
+   next.setDate(dayFocus.getDate() + delta);
+   router.replace({ name: "reservations.day", date: fmtYMD(next) });
+  }
+ }
+
+ // Back from the day page to its month grid. Forward-push the month view (the
+ // codebase's back convention — window.history.back races with the framework
+ // history and needs two clicks). The day's own month keeps context.
+ function backToMonth() {
+  router.push({ name: "reservations", month: fmtYM(dayFocus) });
  }
 
  async function setBookingStatus(id: string, status: Booking["status"]) {
   if (status === "confirmed") track("dash_booking_accept");
   else if (status === "cancelled") track("dash_booking_reject");
-  const before = bookings;
+  const prevStatus = bookings.find((b) => b.id === id)?.status;
   setBookings((bks) => bks.map((b) => (b.id === id ? { ...b, status } : b)));
   if (demoMode) return;
   try {
    await patchReservation(id, { status });
+   // Re-assert locally after the round-trip: a snapshot refresh that raced
+   // the PATCH may have flipped the row back to its pre-patch status.
+   setBookings((bks) => bks.map((b) => (b.id === id ? { ...b, status } : b)));
+   // Write through to the TanStack cache — otherwise the shell's merge
+   // effect re-applies the stale cached copy on the next unrelated tick
+   // (visible pending→confirmed→pending flicker until the next refetch).
+   qc.setQueryData<ApiReservation[] | undefined>(["reservations"], (cur) =>
+    cur ? cur.map((r) => (r.id === id ? { ...r, status } : r)) : cur,
+   );
   } catch {
-   setBookings(before);
+   // Revert only this booking — restoring the whole pre-patch array would
+   // wipe every SSE/merge update that arrived while the request flew.
+   setBookings((bks) =>
+    bks.map((b) => (b.id === id && prevStatus ? { ...b, status: prevStatus } : b)),
+   );
    toast.error(t("error"));
   }
  }
 
  const headerRow = (
-  <div className="w-full flex items-center justify-between gap-3">
-   <div className="flex items-center rounded-lg border border-border bg-card overflow-hidden">
-    <ViewBtn active={view === "month"} onClick={() => { track("dash_booking_view_month"); setView("month"); }}>
-     {t("viewMonth")}
-    </ViewBtn>
-    <ViewBtn active={view === "day"} onClick={() => { track("dash_booking_view_day"); setView("day"); }}>
-     {t("viewDay")}
-    </ViewBtn>
-   </div>
-   <div className="min-w-0 flex-1 text-center text-sm font-medium text-foreground truncate">{title}</div>
-   <div className="flex items-center gap-1">
-    <NavBtn onClick={() => shift(-1)} aria-label={t("prev")}>
-     <ChevronLeftIcon size={16} />
+  <div className="w-full flex items-center gap-3">
+   {/* Day page: back replaces the chrome burger (page-hdr-back hides it),
+       mirroring the menu item detail header. Month keeps the burger. */}
+   {view === "day" ? (
+    <button
+     type="button"
+     onClick={backToMonth}
+     aria-label={tc("back")}
+     className={"page-hdr-back inline-flex items-center justify-center rounded-lg text-foreground bg-muted hover:bg-muted/70 transition-colors shrink-0 " + navBtnSize}
+    >
+     <ChevronLeftIcon size={18} />
+    </button>
+   ) : null}
+   <span className="min-w-0 flex-1 text-base font-bold text-foreground truncate">{title}</span>
+   <div className="flex items-center gap-1 shrink-0">
+    <NavBtn sizeCls={navBtnSize} onClick={() => shift(-1)} aria-label={t("prev")}>
+     <ChevronLeftIcon size={18} />
     </NavBtn>
-    <NavBtn onClick={() => shift(1)} aria-label={t("next")}>
-     <ChevronRightIcon size={16} />
+    <NavBtn sizeCls={navBtnSize} onClick={() => shift(1)} aria-label={t("next")}>
+     <ChevronRightIcon size={18} />
     </NavBtn>
    </div>
   </div>
@@ -176,60 +224,73 @@ export function ReservationsPage({
 
    <div className={wrapWidth + (kioskLayout ? " px-4 pt-8 md:pt-8 md:px-6" : "")}>
     {view === "month" ? (
-     <div className="lg:flex lg:gap-8 lg:items-stretch">
-      <div className="lg:flex-1 lg:min-w-0 lg:flex lg:flex-col lg:h-[calc(100dvh-var(--topbar-h,0px)-160px)]">
-       <div className="mt-6 hidden lg:flex lg:flex-1 lg:min-h-[200px] lg:overflow-y-auto pr-1">
-        <div className="w-full">
-         <PendingList
-          bookings={bookings}
-          tables={tables}
-          onClickBooking={setSelected}
-         />
-        </div>
-       </div>
-      </div>
-      <div className="mt-6 lg:mt-0 lg:shrink-0 lg:h-[calc(100dvh-var(--topbar-h,0px)-160px)] lg:aspect-[1.2/1] lg:max-h-[calc((100vw-360px)/1.2)]">
+     // Kiosk subtracts more: its sticky sub-header (min-h-14) + pt-8 live
+     // in-flow (the admin chrome header is out-of-flow), otherwise the grid
+     // + pending sidebar overflow the viewport on ≥1230px tablets.
+     <div
+      className={
+       "min-[1230px]:flex min-[1230px]:gap-5 " +
+       (kioskLayout
+        ? "min-[1230px]:h-[calc(100dvh-var(--topbar-h,0px)-10rem)]"
+        : "min-[1230px]:h-[calc(100dvh-var(--topbar-h,0px)-5rem)]")
+      }
+     >
+      {/* Desktop left: calendar fills the full viewport height and takes the
+          remaining width; the page never scrolls — only the pending list on the
+          right does (see below). */}
+      <div className="min-[1230px]:flex-1 min-[1230px]:min-w-0 min-[1230px]:h-full">
        <MonthView
-        focusDate={focusDate}
+        focusDate={monthFocus}
         bookings={monthBookings}
+        timezone={restaurant.bookingSettings.timezone}
         onClickDay={(d) => {
          track("dash_booking_drill_to_day");
-         setFocusDate(d);
-         setView("day");
+         router.push({ name: "reservations.day", date: fmtYMD(d) });
         }}
        />
       </div>
-      <div className="mt-6 lg:hidden">
+      {/* Desktop right: fixed-width pending list, scrolls internally. */}
+      <div className="hidden min-[1230px]:block min-[1230px]:w-[360px] min-[1230px]:shrink-0 min-[1230px]:h-full min-[1230px]:overflow-y-auto">
        <PendingList
         bookings={bookings}
         tables={tables}
-        onClickBooking={setSelected}
+        onClickBooking={(b) => setSelectedId(b.id)}
+       />
+      </div>
+      {/* Below 1230px: pending list stacks below the calendar. */}
+      <div className="mt-5 min-[1230px]:hidden">
+       <PendingList
+        bookings={bookings}
+        tables={tables}
+        onClickBooking={(b) => setSelectedId(b.id)}
        />
       </div>
      </div>
     ) : (
      <>
-      <div className="mt-6">
+      <div>
        <DayView
-        focusDate={focusDate}
+        focusDate={dayFocus}
         bookings={dayBookings}
         tables={tables}
         schedule={restaurant.bookingSettings.schedule}
-        onClickBooking={setSelected}
+        onClickBooking={(b) => setSelectedId(b.id)}
        />
       </div>
      </>
     )}
    </div>
 
-   {selected ? (
+   {shownBooking ? (
     <BookingDetailModal
-     booking={selected}
+     open={!!selectedBooking}
+     booking={shownBooking}
      tables={tables}
-     onClose={() => setSelected(null)}
+     kioskLayout={kioskLayout}
+     onClose={() => setSelectedId(null)}
      onStatusChange={async (status) => {
-      const id = selected.id;
-      setSelected(null);
+      const id = shownBooking.id;
+      setSelectedId(null);
       await setBookingStatus(id, status);
      }}
     />
@@ -238,29 +299,32 @@ export function ReservationsPage({
  );
 }
 
-// ---------- Sub-header buttons ----------
-
-function ViewBtn({ active, onClick, children }: { active: boolean; onClick: () => void; children: React.ReactNode }) {
- return (
-  <button
-   type="button"
-   onClick={onClick}
-   className={
-    "h-8 px-3 text-xs font-medium transition-colors " +
-    (active ? "bg-primary-gradient text-primary-foreground" : "text-muted-foreground hover:text-foreground")
-   }
-  >
-   {children}
-  </button>
- );
+// Router-aware wrapper for hosts that mount ReservationsPage directly instead
+// of through the SPA shell (the reservation kiosk + landing demo). It derives
+// `dayDate` from the current SPA-router view so drilling into a day works there
+// too. The admin shell passes `dayDate` explicitly and doesn't need this.
+export function ReservationsRouted(props: {
+ restaurant: Restaurant;
+ bookings: Booking[];
+ setBookings: React.Dispatch<React.SetStateAction<Booking[]>>;
+ tables: TableEntity[];
+ kioskLayout?: boolean;
+ demoMode?: boolean;
+}) {
+ const { view } = useDashboardRouter();
+ const month = view.name === "reservations" ? view.month : undefined;
+ const dayDate = view.name === "reservations.day" ? view.date : undefined;
+ return <ReservationsPage {...props} month={month} dayDate={dayDate} />;
 }
 
-function NavBtn({ children, onClick, ...rest }: { children: React.ReactNode; onClick: () => void } & React.ButtonHTMLAttributes<HTMLButtonElement>) {
+// ---------- Sub-header buttons ----------
+
+function NavBtn({ children, onClick, sizeCls = "h-[36px] w-[36px]", ...rest }: { children: React.ReactNode; onClick: () => void; sizeCls?: string } & React.ButtonHTMLAttributes<HTMLButtonElement>) {
  return (
   <button
    type="button"
    onClick={onClick}
-   className="h-8 w-8 rounded-md hover:bg-muted/50 inline-flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors"
+   className={sizeCls + " rounded-lg bg-muted hover:bg-muted/70 inline-flex items-center justify-center text-foreground transition-colors shrink-0"}
    {...rest}
   >
    {children}
@@ -270,7 +334,7 @@ function NavBtn({ children, onClick, ...rest }: { children: React.ReactNode; onC
 
 // ---------- Empty / disabled states ----------
 
-function CtaWrapper({ title, children }: { title: string; children: React.ReactNode }) {
+function CtaWrapper({ children }: { children: React.ReactNode }) {
  return (
   <div>
    {children}
@@ -308,6 +372,7 @@ function PendingList({
  onClickBooking: (b: Booking) => void;
 }) {
  const t = useTranslations("dashboard.reservations");
+ const locale = useLocale();
  const items = useMemo(() => {
   return bookings
    .filter((b) => b.status === "pending")
@@ -316,47 +381,51 @@ function PendingList({
 
  if (items.length === 0) {
   return (
-   <div className="w-full h-full min-h-[200px] flex items-center justify-center bg-card border border-border rounded-xl px-6 py-10 text-center">
+   <div className="w-full h-full min-h-[200px] flex items-center justify-center bg-[hsl(var(--menu-card-bg))] border border-border rounded-xl px-6 py-10 text-center">
     <div>
      <div className="text-sm font-medium text-foreground mb-1">{t("pendingEmptyTitle")}</div>
-     <div className="text-xs text-muted-foreground">{t("pendingEmptyBody")}</div>
+     <div className="text-sm text-muted-foreground">{t("pendingEmptyBody")}</div>
     </div>
    </div>
   );
  }
 
  return (
-  <div className="w-full">
-   <div className="text-xs uppercase tracking-wider text-muted-foreground mb-2">
+  // One card holding a flat, borderless row list — mirrors a menu category.
+  <div className="w-full rounded-2xl bg-[hsl(var(--menu-card-bg))] border border-border p-4 sm:p-5">
+   <div className="pb-3 text-base font-medium tracking-tight text-foreground">
     {t("pendingHeader", { count: items.length })}
    </div>
-   <div className="space-y-2">
+   <div>
     {items.map((b) => {
      const dt = new Date(b.datetime);
      const tbl = tables.find((tt) => tt.id === b.tableId);
      return (
-      <button
+      <div
        key={b.id}
-       type="button"
+       data-testid="pending-booking"
+       role="button"
+       tabIndex={0}
        onClick={() => onClickBooking(b)}
-       className="w-full bg-card border border-border rounded-xl p-3 text-left hover:border-primary/40 hover:bg-muted/30 transition-colors"
+       onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+         e.preventDefault();
+         onClickBooking(b);
+        }
+       }}
+       className="flex items-center gap-3 py-3 -mx-2 px-2 rounded-lg select-none cursor-pointer transition-colors md:hover:bg-primary/5"
       >
-       <div className="flex items-center gap-2 flex-wrap">
-        <div className="text-sm font-medium tabular-nums">{formatTime(dt)}</div>
-        <div className="text-xs text-muted-foreground tabular-nums">
-         {dt.toLocaleDateString([], { day: "numeric", month: "short" })}
-        </div>
-        <span className={"ml-auto inline-flex items-center h-5 px-2 text-[10px] font-medium border rounded-full " + STATUS_PILL.pending}>
-         {t("statusPending")}
-        </span>
-       </div>
-       <div className="text-sm text-foreground mt-1 truncate">{b.guestName}</div>
-       <div className="text-xs text-muted-foreground truncate">
+       <span className="flex-1 min-w-0 text-sm text-foreground tabular-nums truncate">
+        {cachedDateFormat(locale, { day: "numeric", month: "long" }, dt)}
+        {" "}
+        {formatTime(dt)}
+       </span>
+       <span className="shrink-0 text-sm text-muted-foreground tabular-nums truncate">
         {tbl ? t("tableLabel", { number: tbl.number }) : t("notAssigned")}
         {" · "}
         {b.guests === 1 ? t("guestOne", { count: b.guests }) : t("guestOther", { count: b.guests })}
-       </div>
-      </button>
+       </span>
+      </div>
      );
     })}
    </div>
@@ -369,14 +438,30 @@ function PendingList({
 function MonthView({
  focusDate,
  bookings,
+ timezone,
  onClickDay,
 }: {
  focusDate: Date;
  bookings: Booking[];
+ // Restaurant timezone — "today" must highlight the venue's today, not the
+ // browser's (matters for an owner checking from another timezone).
+ timezone?: string | null;
  onClickDay: (d: Date) => void;
 }) {
  const t = useTranslations("dashboard.reservations");
- const today = todayMidnight();
+ const locale = useLocale();
+ const today = todayMidnight(timezone);
+
+ // An all-day kiosk crosses midnight without any re-render trigger — re-arm
+ // a timer for shortly after local midnight so the "today" ring moves on.
+ const todayKey = fmtYMD(today);
+ const [, setMidnightTick] = useState(0);
+ useEffect(() => {
+  const now = new Date();
+  const next = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 30);
+  const id = window.setTimeout(() => setMidnightTick((v) => v + 1), next.getTime() - now.getTime());
+  return () => window.clearTimeout(id);
+ }, [todayKey]);
 
  // Build day cells for the visible month only. Leading empty slots are
  // inserted so weekdays line up; trailing empty cells are not needed —
@@ -388,14 +473,24 @@ function MonthView({
   const daysInMonth = new Date(year, month + 1, 0).getDate();
   const leadingEmpty = (firstOfMonth.getDay() + 6) % 7; // ISO weekday: Mon=0
   type Cell = { kind: "empty" } | { kind: "day"; date: Date; items: Booking[] };
+  // Single pass: bucket bookings by local day (one Date per booking) instead
+  // of filtering the whole list per cell (31 × N Date allocations).
+  const byDay = new Map<number, Booking[]>();
+  for (const b of bookings) {
+   const d = new Date(b.datetime);
+   if (d.getFullYear() !== year || d.getMonth() !== month) continue;
+   const day = d.getDate();
+   const list = byDay.get(day);
+   if (list) list.push(b);
+   else byDay.set(day, [b]);
+  }
+  for (const list of byDay.values()) {
+   list.sort((a, b) => new Date(a.datetime).getTime() - new Date(b.datetime).getTime());
+  }
   const list: Cell[] = [];
   for (let i = 0; i < leadingEmpty; i++) list.push({ kind: "empty" });
   for (let d = 1; d <= daysInMonth; d++) {
-   const date = new Date(year, month, d);
-   const items = bookings
-    .filter((b) => isSameDay(new Date(b.datetime), date))
-    .sort((a, b) => new Date(a.datetime).getTime() - new Date(b.datetime).getTime());
-   list.push({ kind: "day", date, items });
+   list.push({ kind: "day", date: new Date(year, month, d), items: byDay.get(d) ?? [] });
   }
   // Pad to whole weeks — trailing empties for clean grid.
   while (list.length % 7 !== 0) list.push({ kind: "empty" });
@@ -408,21 +503,21 @@ function MonthView({
   return Array.from({ length: 7 }, (_, i) => {
    const d = new Date(start);
    d.setDate(start.getDate() + i);
-   return d.toLocaleDateString([], { weekday: "short" });
+   return d.toLocaleDateString(locale, { weekday: "short" });
   });
- }, []);
+ }, [locale]);
 
  const weeks = Math.max(1, cells.length / 7);
 
  return (
-  <div className="flex flex-col lg:h-full lg:min-h-[420px]">
+  <div className="flex flex-col min-[1230px]:h-full min-[1230px]:min-h-[420px]">
    <div className="grid grid-cols-7 gap-1 mb-2 text-center text-[11px] font-medium text-muted-foreground/50 uppercase tracking-wider">
     {weekdayLabels.map((w, i) => (
      <div key={i}>{w}</div>
     ))}
    </div>
    <div
-    className="grid grid-cols-7 gap-1 flex-1 min-h-0"
+    className="grid grid-cols-7 gap-2 flex-1 min-h-0"
     style={{ gridTemplateRows: `repeat(${weeks}, minmax(0, 1fr))` }}
    >
     {cells.map((cell, i) => {
@@ -438,40 +533,27 @@ function MonthView({
        type="button"
        onClick={() => onClickDay(cellDate)}
        className={
-        "aspect-square sm:aspect-[5/4] lg:aspect-auto lg:h-full rounded-lg border bg-card p-1.5 flex flex-col gap-0.5 overflow-hidden text-left transition-colors hover:border-primary/60 hover:bg-muted/40 " +
+        "relative aspect-square sm:aspect-[5/4] min-[1230px]:aspect-auto min-[1230px]:h-full rounded-lg border bg-[hsl(var(--menu-card-bg))] p-1.5 flex flex-col gap-0.5 overflow-hidden text-left transition-colors hover:border-primary/60 hover:bg-muted/40 " +
         (isToday ? "border-primary/60" : "border-border")
        }
       >
-       <div className={"text-xs tabular-nums " + (isToday ? "font-bold text-primary" : "text-foreground")}>
+       {/* Mobile: a dot in the top-right corner if any bookings. */}
+       {cellItems.length > 0 ? (
+        <span className="sm:hidden absolute top-1 right-1 block w-1.5 h-1.5 rounded-full bg-primary" />
+       ) : null}
+       {/* Day number: centered on mobile, top-left on wider screens. */}
+       <div className={"flex-1 flex items-center justify-center sm:block sm:flex-none text-sm tabular-nums " + (isToday ? "font-bold text-primary" : "text-foreground")}>
         {cellDate.getDate()}
        </div>
-       {/* Mobile: a single dot if any bookings — keeps the cell compact. */}
+       {/* Wide screens: no per-booking detail, just a count badge. */}
        {cellItems.length > 0 ? (
-        <div className="sm:hidden flex-1 flex items-center justify-center">
-         <span className="block w-1.5 h-1.5 rounded-full bg-primary" />
+        <div className="hidden sm:flex flex-1 items-end">
+         <span className="inline-flex items-center gap-1 rounded-md bg-primary/10 text-primary text-sm font-medium px-2 py-0.5 tabular-nums">
+          <UsersIcon size={14} />
+          {cellItems.length}
+         </span>
         </div>
        ) : null}
-       {/* Desktop: list up to 2 booking pills + overflow counter. */}
-       <div className="hidden sm:flex flex-col gap-0.5 min-h-0 overflow-hidden">
-        {cellItems.slice(0, 2).map((b) => (
-         <span
-          key={b.id}
-          className={
-           "rounded px-1.5 py-0.5 text-[10px] font-medium leading-tight truncate transition-colors pointer-events-none " +
-           STATUS_BAR[b.status]
-          }
-         >
-          <span className="tabular-nums">{formatTime(new Date(b.datetime))}</span>
-          {" "}
-          <span>{b.guestName}</span>
-         </span>
-        ))}
-        {cellItems.length > 2 ? (
-         <div className="text-[10px] text-muted-foreground/80">
-          {t("plusMore", { count: cellItems.length - 2 })}
-         </div>
-        ) : null}
-       </div>
       </button>
      );
     })}
@@ -482,8 +564,11 @@ function MonthView({
 
 // ---------- Day view ----------
 
-const TABLE_ROW_PX = 44;
-const TABLE_COL_PX_RESPONSIVE = 36;
+const TABLE_ROW_PX = 52;
+// Minimum horizontal density of the day grid. Below this the timeline gets a
+// horizontal scroll instead of squeezing 1h bookings to ~20px untappable
+// slivers on phones.
+const MIN_PX_PER_HOUR = 64;
 
 function DayView({
  focusDate,
@@ -527,14 +612,26 @@ function DayView({
  const DAY_START_HOUR = dayStart;
  const DAY_END_HOUR = dayEnd;
 
- // Build map tableId → bookings sorted by start time.
+ // Build map tableId → bookings sorted by start time. Bookings without a
+ // table OR pointing at a soft-deleted table collect into an extra
+ // "not assigned" row — hiding them while still counting them in the
+ // header ("3 bookings", 2 visible) confused staff.
+ const tableIds = new Set(tables.map((tb) => tb.id));
  const byTable = new Map<string, Booking[]>();
+ const orphaned: Booking[] = [];
  for (const b of bookings) {
-  if (!b.tableId) continue;
+  if (!b.tableId || !tableIds.has(b.tableId)) {
+   orphaned.push(b);
+   continue;
+  }
   const list = byTable.get(b.tableId) || [];
   list.push(b);
   byTable.set(b.tableId, list);
  }
+ for (const list of byTable.values()) {
+  list.sort((a, b) => new Date(a.datetime).getTime() - new Date(b.datetime).getTime());
+ }
+ orphaned.sort((a, b) => new Date(a.datetime).getTime() - new Date(b.datetime).getTime());
 
  const totalMinutes = (DAY_END_HOUR - DAY_START_HOUR) * 60;
  const pct = (min: number) => ((min - DAY_START_HOUR * 60) / totalMinutes) * 100;
@@ -542,103 +639,135 @@ function DayView({
  const stripesBg =
   "repeating-linear-gradient(45deg, rgba(148,163,184,0.2) 0 4px, transparent 4px 10px)";
 
- return (
-  <div className="space-y-2">
-   {/* Hour strip — boundary labels straddling the grid lines. Day open
-       from 9 reads 9, 10, … 22 along the scale. */}
-   <div className="flex pb-1">
+ // Row body shared by real tables and the "not assigned" bucket.
+ const renderRow = (key: string, label: string, items: Booking[]) => {
+   // Two bookings on the same table at overlapping times must not stack on top
+   // of each other (the back one becomes invisible and untappable). Greedy
+   // interval colouring on start-sorted items assigns each to the first lane
+   // whose previous booking has already ended; the row grows taller so every
+   // lane stays a tappable height.
+   const laneEnds: number[] = [];
+   const placed = items.map((b) => {
+     const dt = new Date(b.datetime);
+     const startMin = dt.getHours() * 60 + dt.getMinutes();
+     const endMin = startMin + b.duration;
+     let lane = laneEnds.findIndex((e) => e <= startMin);
+     if (lane === -1) {
+       lane = laneEnds.length;
+       laneEnds.push(endMin);
+     } else {
+       laneEnds[lane] = endMin;
+     }
+     return { b, startMin, lane };
+   });
+   const laneCount = Math.max(1, laneEnds.length);
+   const rowHeight = Math.max(TABLE_ROW_PX, laneCount * 30);
+   const laneSlot = rowHeight / laneCount;
+   return (
+  <div key={key} className="relative bg-[hsl(var(--menu-card-bg))] border border-border rounded-xl overflow-hidden" style={{ height: rowHeight }}>
+    {/* Hour grid lines */}
     {hours.map((h, i) => (
      <div
       key={h}
-      className="flex-1 h-12 relative text-[10px] sm:text-xs text-muted-foreground/50 tabular-nums min-w-0"
-     >
-      {i === 0 ? (
+      className="absolute top-0 bottom-0 border-l border-border/40 first:border-l-0"
+      style={{ left: `${(i / (DAY_END_HOUR - DAY_START_HOUR)) * 100}%` }}
+     />
+    ))}
+    {/* Closed day — stripes over the entire row. */}
+    {isClosed ? (
+     <div
+      className="absolute inset-0 pointer-events-none"
+      style={{ backgroundImage: stripesBg }}
+     />
+    ) : null}
+    {/* Lunch break — diagonal stripes (visible on dark theme). */}
+    {!isClosed && lunchStart !== null && lunchEnd !== null && day?.lunchFrom && day?.lunchTo ? (() => {
+     const lLeft = pct(parseLooseMinutes(day.lunchFrom));
+     const lWidth = pct(parseLooseMinutes(day.lunchTo)) - lLeft;
+     return (
+      <div
+       className="absolute top-0 bottom-0 pointer-events-none"
+       style={{
+        left: `${Math.max(0, lLeft)}%`,
+        width: `${Math.max(0, lWidth)}%`,
+        backgroundImage: stripesBg,
+       }}
+      />
+     );
+    })() : null}
+    {/* Row label — at the start of the row, muted, behind bookings. */}
+    <div className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none text-sm font-medium text-muted-foreground/50 tabular-nums">
+     {label}
+    </div>
+    {placed.map(({ b, startMin, lane }) => {
+      const left = pct(startMin);
+      const width = (b.duration / totalMinutes) * 100;
+      if (left + width <= 0 || left >= 100) return null;
+      // A bar starting before the visible range is clipped on the left —
+      // its width must shrink by the clipped amount, otherwise the end
+      // time visually shifts right.
+      const clampedLeft = Math.max(0, left);
+      const clampedWidth = Math.min(100 - clampedLeft, width - (clampedLeft - left));
+      return (
+       <button
+        key={b.id}
+        type="button"
+        onClick={() => onClickBooking(b)}
+        className={
+         "absolute rounded-md px-3 text-sm font-medium text-left truncate transition-colors " +
+         STATUS_BAR[b.status]
+        }
+        style={{
+         left: `${clampedLeft}%`,
+         width: `${clampedWidth}%`,
+         top: lane * laneSlot + 3,
+         height: laneSlot - 6,
+        }}
+       >
+        <span>{b.guestName}</span>
+       </button>
+      );
+     })}
+   </div>
+   );
+  };
+
+ // One scroll container for both axes: horizontal overflow keeps 1h bookings
+ // at a tappable width on phones (MIN_PX_PER_HOUR floor), and the sticky hour
+ // strip stays visible while the table rows scroll vertically inside it.
+ return (
+  <div className="overflow-auto max-h-[calc(100dvh-var(--topbar-h,0px)-11rem)]">
+   <div className="space-y-2" style={{ minWidth: (DAY_END_HOUR - DAY_START_HOUR) * MIN_PX_PER_HOUR }}>
+    {/* Hour strip — one label per grid line. First label sits to the RIGHT of
+        the left (Y) axis, last one to the LEFT of the right axis, the rest are
+        centered on their grid lines. */}
+    <div className="relative h-10 sticky top-0 z-20 bg-background">
+     {[...hours, DAY_END_HOUR].map((h, i, arr) => {
+      const isFirst = i === 0;
+      const isLast = i === arr.length - 1;
+      const leftPct = (i / (arr.length - 1)) * 100;
+      const transform = isFirst
+       ? "rotate(180deg)"
+       : isLast
+        ? "translateX(-100%) rotate(180deg)"
+        : "translateX(-50%) rotate(180deg)";
+      return (
        <span
-        className="absolute bottom-0 left-0"
-        style={{ writingMode: "vertical-rl", transform: "translateX(-50%) rotate(180deg)" }}
+        key={h}
+        className="absolute top-0 text-xs text-muted-foreground/50 tabular-nums"
+        style={{ left: `${leftPct}%`, writingMode: "vertical-rl", transform }}
        >
         {String(h).padStart(2, "0")}:00
        </span>
-      ) : null}
-      <span
-       className="absolute bottom-0 right-0"
-       style={{ writingMode: "vertical-rl", transform: "translateX(50%) rotate(180deg)" }}
-      >
-       {String(h + 1).padStart(2, "0")}:00
-      </span>
-     </div>
-    ))}
-   </div>
+      );
+     })}
+    </div>
 
-   {/* One card per table. */}
-   {sortedTables.map((tbl) => {
-    const items = byTable.get(tbl.id) || [];
-    return (
-     <div key={tbl.id} className="relative bg-card border border-border rounded-xl overflow-hidden" style={{ height: TABLE_ROW_PX }}>
-       {/* Hour grid lines */}
-       {hours.map((h, i) => (
-        <div
-         key={h}
-         className="absolute top-0 bottom-0 border-l border-border/40 first:border-l-0"
-         style={{ left: `${(i / (DAY_END_HOUR - DAY_START_HOUR)) * 100}%` }}
-        />
-       ))}
-       {/* Closed day — stripes over the entire row. */}
-       {isClosed ? (
-        <div
-         className="absolute inset-0 pointer-events-none"
-         style={{
-          backgroundImage:
-           stripesBg,
-         }}
-        />
-       ) : null}
-       {/* Lunch break — diagonal stripes (visible on dark theme). */}
-       {!isClosed && lunchStart !== null && lunchEnd !== null && day?.lunchFrom && day?.lunchTo ? (() => {
-        const lLeft = pct(parseLooseMinutes(day.lunchFrom));
-        const lWidth = pct(parseLooseMinutes(day.lunchTo)) - lLeft;
-        return (
-         <div
-          className="absolute top-0 bottom-0 pointer-events-none"
-          style={{
-           left: `${Math.max(0, lLeft)}%`,
-           width: `${Math.max(0, lWidth)}%`,
-           backgroundImage:
-            stripesBg,
-          }}
-         />
-        );
-       })() : null}
-       {/* Table label — at the start of the row, muted, behind bookings. */}
-       <div className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none text-[11px] sm:text-xs font-medium text-muted-foreground/50 tabular-nums">
-        {t("tableLabel", { number: tbl.number })}
-       </div>
-       {items.map((b) => {
-         const dt = new Date(b.datetime);
-         const startMin = dt.getHours() * 60 + dt.getMinutes();
-         const left = pct(startMin);
-         const width = (b.duration / totalMinutes) * 100;
-         if (left + width <= 0 || left >= 100) return null;
-         return (
-          <button
-           key={b.id}
-           type="button"
-           onClick={() => onClickBooking(b)}
-           className={
-            "absolute top-1 bottom-1 rounded-md px-1.5 text-[10px] sm:text-[11px] font-medium text-left truncate transition-colors " +
-            STATUS_BAR[b.status]
-           }
-           style={{ left: `${Math.max(0, left)}%`, width: `${Math.min(100 - Math.max(0, left), width)}%` }}
-          >
-           <span className="tabular-nums">{formatTime(dt)}</span>
-           {" "}
-           <span>{b.guestName}</span>
-          </button>
-         );
-        })}
-      </div>
-     );
-    })}
+    {/* One card per table, plus a bucket row for bookings whose table is
+        missing (unassigned or soft-deleted). */}
+    {sortedTables.map((tbl) => renderRow(tbl.id, t("tableLabel", { number: tbl.number }), byTable.get(tbl.id) || []))}
+    {orphaned.length > 0 ? renderRow("__orphaned__", t("notAssigned"), orphaned) : null}
+   </div>
   </div>
  );
 }
@@ -646,82 +775,79 @@ function DayView({
 // ---------- Detail modal ----------
 
 function BookingDetailModal({
+ open,
  booking,
  tables,
+ kioskLayout = false,
  onClose,
  onStatusChange,
 }: {
+ open: boolean;
  booking: Booking;
  tables: TableEntity[];
+ // Kiosk: 44px touch targets for the host's primary daily actions.
+ kioskLayout?: boolean;
  onClose: () => void;
  onStatusChange: (status: Booking["status"]) => void;
 }) {
  const t = useTranslations("dashboard.reservations");
+ const locale = useLocale();
  const dt = new Date(booking.datetime);
  const table = tables.find((tb) => tb.id === booking.tableId);
- const statusKey = STATUS_KEY[booking.status];
- const statusCls = STATUS_PILL[booking.status];
+ const btnH = kioskLayout ? "h-[44px]" : "h-[36px]";
 
  const footer = booking.status === "pending" ? (
-  <div className="flex items-center gap-2">
+  <div className="flex gap-2 justify-end">
    <button
     type="button"
+    data-testid="booking-reject"
     onClick={() => onStatusChange("cancelled")}
-    className="flex-1 h-10 text-sm font-medium text-red-700 bg-red-50 rounded-md transition-colors dark:bg-red-950/40 dark:text-red-400"
+    className={btnH + " px-[16px] text-[14px] font-semibold text-white bg-red-600 rounded-lg transition-colors inline-flex items-center"}
    >
-    {t("reject")}
+    <span className="truncate">{t("reject")}</span>
    </button>
    <button
     type="button"
+    data-testid="booking-confirm"
     onClick={() => onStatusChange("confirmed")}
-    className="flex-1 h-10 text-sm font-medium text-emerald-700 bg-emerald-50 rounded-md transition-colors dark:bg-emerald-950/40 dark:text-emerald-400"
+    className={btnH + " px-[16px] text-[14px] font-semibold text-white bg-emerald-600 rounded-lg transition-colors hover:bg-emerald-500 inline-flex items-center"}
    >
-    {t("confirm")}
+    <span className="truncate">{t("confirm")}</span>
    </button>
   </div>
  ) : booking.status === "confirmed" ? (
-  <button
-   type="button"
-   onClick={() => onStatusChange("completed")}
-   className="w-full h-10 text-sm font-medium text-foreground bg-secondary rounded-md transition-colors hover:bg-muted"
-  >
-   {t("markComplete")}
-  </button>
+  <div className="flex gap-2 justify-end">
+   <button
+    type="button"
+    data-testid="booking-complete"
+    onClick={() => onStatusChange("completed")}
+    className={primaryBtn + " inline-flex items-center" + (kioskLayout ? " h-[44px]" : "")}
+   >
+    <span className="truncate">{t("markComplete")}</span>
+   </button>
+  </div>
  ) : null;
 
  return (
-  <Modal open={true} onClose={onClose} title={t("bookingDetailsTitle")} size="md" footer={footer}>
+  <Modal open={open} onClose={onClose} title={t("bookingDetailsTitle")} size="sm" footer={footer}>
    <div className="space-y-4">
-    <div className="flex items-center gap-2 flex-wrap">
-     <div className="text-base font-semibold tabular-nums">
-      {capitalize(dt.toLocaleDateString([], { weekday: "long", day: "numeric", month: "long" }))} · {formatTime(dt)}
-     </div>
-     <span className={"inline-flex items-center h-5 px-2 text-[10px] font-medium border rounded-full " + statusCls}>
-      {t(statusKey)}
-     </span>
+    <div className="text-base font-semibold tabular-nums">
+     {capitalize(cachedDateFormat(locale, { weekday: "long", day: "numeric", month: "long" }, dt))} · {formatTime(dt)}
     </div>
 
     <div>
      <div className="text-sm font-medium text-foreground">{booking.guestName}</div>
-     <div className="text-xs text-muted-foreground">
+     {/* break-all — long emails otherwise clip inside the max-w-sm card. */}
+     <div className="text-sm text-muted-foreground break-all">
       {booking.guestEmail}
       {booking.guestPhone ? ` · ${booking.guestPhone}` : ""}
      </div>
     </div>
 
-    <div className="flex items-center gap-4 text-xs text-muted-foreground">
-     <div className="inline-flex items-center gap-1.5">
-      <UsersIcon size={14} />
-      <span>
-       {booking.guests === 1 ? t("guestOne", { count: booking.guests }) : t("guestOther", { count: booking.guests })}
-      </span>
-     </div>
-     <div className="inline-flex items-center gap-1.5">
-      <MapPinIcon size={14} />
-      <span>
-       {table ? t("tableLabel", { number: table.number }) + (table.name ? " · " + table.name : "") : t("notAssigned")}
-      </span>
-     </div>
+    <div className="text-sm text-muted-foreground">
+     {booking.guests === 1 ? t("guestOne", { count: booking.guests }) : t("guestOther", { count: booking.guests })}
+     {" · "}
+     {table ? t("tableLabel", { number: table.number }) : t("notAssigned")}
     </div>
 
     {booking.notes ? (
@@ -764,7 +890,25 @@ function parseHourCeil(hhmm: string): number {
  return Math.max(0, Math.min(24, h + (m > 0 ? 1 : 0)));
 }
 
-function todayMidnight() {
+// Midnight of "today" — in the restaurant's timezone when provided, so the
+// calendar highlights the venue's today even for a remote owner. Falls back
+// to browser-local on a missing/invalid timezone.
+function todayMidnight(timeZone?: string | null) {
+ if (timeZone) {
+  try {
+   // en-CA gives YYYY-MM-DD directly.
+   const ymd = new Intl.DateTimeFormat("en-CA", {
+    timeZone,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+   }).format(new Date());
+   const [y, m, d] = ymd.split("-").map(Number);
+   return new Date(y, m - 1, d, 0, 0, 0, 0);
+  } catch {
+   // fall through to browser-local
+  }
+ }
  const d = new Date();
  d.setHours(0, 0, 0, 0);
  return d;
@@ -772,4 +916,35 @@ function todayMidnight() {
 
 function capitalize(s: string) {
  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
+// Local-time YYYY-MM-DD codec for the day-view URL (never UTC — bookings are
+// bucketed by the venue's local calendar day).
+function fmtYMD(d: Date): string {
+ const p = (n: number) => String(n).padStart(2, "0");
+ return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
+}
+
+function parseYMD(s: string): Date {
+ const [y, m, d] = s.split("-").map(Number);
+ const parsed = new Date(y, (m || 1) - 1, d || 1, 0, 0, 0, 0);
+ // Garbage URL param → fall back to today instead of an Invalid Date view.
+ return isNaN(parsed.getTime()) ? todayMidnight() : parsed;
+}
+
+// Local-time YYYY-MM codec for the month-grid URL param.
+function monthStart(d: Date): Date {
+ return new Date(d.getFullYear(), d.getMonth(), 1, 0, 0, 0, 0);
+}
+
+function fmtYM(d: Date): string {
+ return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
+}
+
+function parseYM(s: string): Date {
+ const [y, m] = s.split("-").map(Number);
+ const parsed = new Date(y, (m || 1) - 1, 1, 0, 0, 0, 0);
+ // Garbage URL param → fall back to the current month instead of an
+ // "Invalid Date" title + NaN prev/next URLs.
+ return isNaN(parsed.getTime()) ? monthStart(new Date()) : parsed;
 }

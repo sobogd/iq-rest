@@ -1,23 +1,36 @@
 "use client";
 
 import { Fragment, useEffect, useRef, useState } from "react";
-import { RotateCw, MoveDiagonal2 } from "lucide-react";
+import { Scaling, MousePointerClick } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useQueryClient } from "@tanstack/react-query";
-import { MinusIcon, PlusIcon, QrIcon, TrashIcon, UsersIcon } from "./icons";
+import { GridIcon, MinusIcon, PlusIcon, QrIcon, TrashIcon, UsersIcon } from "./icons";
 import {
  ConfirmDialog,
+ EditPageHeader,
  EmptyState,
  PhotoPicker,
+ Select,
  SubpageStickyBar,
  TableQrModal,
+ UnsavedChangesDialog,
 } from "./ui";
-import { inputClass } from "./tokens";
+import { setNavInterceptor } from "./nav-guard";
+import { notify } from "./notice";
+import { formInputClass } from "./tokens";
 import { newId } from "./helpers";
 import { createTable, deleteTable, updateTable } from "./api";
-import { apiTableToTable } from "./mappers";
 import type { Booking, Order, TableEntity } from "./types";
 import { track } from "@/lib/dashboard-events";
+
+// A booking pins its table against deletion only while it's still upcoming or
+// in progress. A pending/confirmed booking whose slot already fully elapsed
+// (e.g. a no-show the staff never rejected) must NOT block the table forever.
+function blocksTableDeletion(b: Booking): boolean {
+ if (b.status !== "pending" && b.status !== "confirmed") return false;
+ const endMs = new Date(b.datetime).getTime() + (b.duration || 0) * 60_000;
+ return Number.isFinite(endMs) && endMs >= Date.now();
+}
 
 function Stepper({
  value,
@@ -26,6 +39,7 @@ function Stepper({
  onChange,
  onPlus,
  onMinus,
+ testId,
 }: {
  value: number;
  min?: number;
@@ -33,6 +47,7 @@ function Stepper({
  onChange: (n: number) => void;
  onPlus?: () => void;
  onMinus?: () => void;
+ testId?: string;
 }) {
  const lo = min ?? -Infinity;
  const hi = max ?? Infinity;
@@ -41,13 +56,13 @@ function Stepper({
  const btn = "w-10 h-10 flex items-center justify-center text-foreground transition-colors disabled:opacity-40";
  return (
  <div className="flex items-center w-full h-10 bg-card border border-input rounded-lg overflow-hidden">
- <button type="button" onClick={dec} disabled={value <= lo} className={btn + " border-r border-input"} aria-label="−">
+ <button type="button" data-testid={testId ? testId + "-dec" : undefined} onClick={dec} disabled={value <= lo} className={btn + " border-r border-input"} aria-label="−">
  <MinusIcon size={14} />
  </button>
- <div className="flex-1 min-w-0 h-full flex items-center justify-center text-sm font-medium tabular-nums text-foreground">
+ <div data-testid={testId ? testId + "-value" : undefined} className="flex-1 min-w-0 h-full flex items-center justify-center text-sm font-medium tabular-nums text-foreground">
  {value}
  </div>
- <button type="button" onClick={inc} disabled={value >= hi} className={btn + " border-l border-input"} aria-label="+">
+ <button type="button" data-testid={testId ? testId + "-inc" : undefined} onClick={inc} disabled={value >= hi} className={btn + " border-l border-input"} aria-label="+">
  <PlusIcon size={14} />
  </button>
  </div>
@@ -69,6 +84,11 @@ function tableSize(capacity: number): number {
  const c = Math.max(1, Math.min(12, capacity || 2));
  return Math.round(28 + (c - 1) * 3);
 }
+
+// Fixed width:height proportion per shape (drives both the marker size on the
+// map and the resize handle). Round shapes render with a full border radius.
+const SHAPE_ASPECT: Record<string, number> = { circle: 1, square: 1, rect: 1.6, oval: 1.5 };
+const isRoundShape = (s: string) => s === "circle" || s === "oval";
 
 // Find a spot on the floor map (0-100 percent coords) that doesn't overlap
 // any existing table. Scans a coarse grid and accepts the first cell at
@@ -157,6 +177,11 @@ export function FloorMap({
  // Offset (percent) between the grab point and the table center, so dragging
  // from anywhere on the table doesn't snap its center to the cursor.
  const grabOffsetRef = useRef({ dx: 0, dy: 0 });
+ // Snapshot of the transform at the moment a corner-drag starts: pointer angle
+ // + distance from the table center, and the table's size/rotation then. The
+ // one corner handle both rotates (by pointer angle delta) and uniformly scales
+ // (by pointer distance ratio) around the fixed center — so no grab jump.
+ const transformRef = useRef({ ang: 0, dist: 0, w0: 0, h0: 0, rot0: 0 });
  const [mapSize, setMapSize] = useState({ w: 0, h: 0 });
 
  useEffect(() => {
@@ -175,8 +200,8 @@ export function FloorMap({
  // Invisible alignment grid: positions + sizes snap to GRID_STEP% cells and
  // rotation snaps to ROT_STEP° so tables line up evenly with little effort.
  const GRID_STEP = 4;
- const SIZE_STEP = 2; // finer step for resize so smaller tables are possible
- const ROT_STEP = 15;
+ const SIZE_STEP = 1; // finer step for resize so smaller tables are possible
+ const ROT_STEP = 5;
  const clampPct = (v: number) => Math.max(0, Math.min(100, v));
  const snapPct = (v: number) => Math.round(v / GRID_STEP) * GRID_STEP;
  const posFromEvent = (e: { clientX: number; clientY: number }) => {
@@ -206,7 +231,11 @@ export function FloorMap({
  overflow: hidden;
  box-sizing: border-box;
  }
- ${wide ? "" : "@media (min-width: 768px) { .floor-map { width: 280px; height: 280px; aspect-ratio: auto; } }"}
+ ${wide
+ // Desktop: the square map must never overflow the viewport below the
+ // fixed header — cap its width (= height, 1:1 aspect) accordingly.
+ ? "@media (min-width: 768px) { .floor-map { width: min(calc(100dvh - var(--topbar-h, 3.5rem) - 3.75rem), 60vw); } }"
+ : "@media (min-width: 768px) { .floor-map { width: 280px; height: 280px; aspect-ratio: auto; } }"}
  `}</style>
  <div
  ref={mapRef}
@@ -230,16 +259,17 @@ export function FloorMap({
  const size = tableSize(t.capacity);
  const x = t.x ?? 50;
  const y = t.y ?? 50;
- // Rectangle markers are a touch wider than tall so they read as tables;
- // circles stay square. Sizing by capacity for now (resize comes later).
- const isRect = t.shape === "rect";
+ // Each shape has a fixed width:height proportion; square/circle are 1:1,
+ // rectangle + oval are wider. Round shapes (circle, oval) get a full radius.
+ const aspect = SHAPE_ASPECT[t.shape] ?? 1;
+ const round = isRoundShape(t.shape);
  // Capacity-derived fallback size in px; once the owner resizes, width/height
  // (percent of map) take over — converted to px via the measured map size.
- const baseWpx = isRect ? Math.round(size * 1.4) : size;
  const baseHpx = size;
+ const baseWpx = Math.round(size * aspect);
  const w = typeof t.width === "number" && mapSize.w > 0 ? (t.width / 100) * mapSize.w : baseWpx;
  const h = typeof t.height === "number" && mapSize.h > 0 ? (t.height / 100) * mapSize.h : baseHpx;
- const radiusCls = isRect ? "rounded-md" : "rounded-full";
+ const radiusCls = round ? "rounded-full" : "rounded-md";
  // No border on any state — flat fill only. In-progress (occupied but
  // not all ready) takes the app's primary brand colour (same hue the
  // Save button uses); all-ready stays emerald; idle uses the regular
@@ -261,20 +291,22 @@ export function FloorMap({
  const capFont = Math.max(8, Math.round(numFont * 0.62));
  return (
  <Fragment key={t.id}>
- {/* rotate connector — rendered BEFORE the table so it sits UNDER it. */}
- {draggable && onRotate ? (
+ {/* connector to the handle — rendered BEFORE the table so it sits behind
+     the table body (and the knob, which is drawn later, sits over it) */}
+ {draggable && (onRotate || onResize) ? (
  <div
  className="absolute pointer-events-none"
  style={{ left: x + "%", top: y + "%", width: 0, height: 0, transform: "rotate(" + t.rotation + "deg)" }}
  >
  <div
- className="absolute bg-foreground/50"
- style={{ left: 0, top: -(h / 2 + 26), width: 2, height: 26 + 8, transform: "translateX(-50%)" }}
+ className="absolute bg-foreground/20"
+ style={{ left: 0, top: -(h / 2 + 30), width: 2, height: h / 2 + 30, transform: "translateX(-50%)" }}
  />
  </div>
  ) : null}
  <button
  type="button"
+ data-testid={"floor-table-" + t.number}
  onClick={(e) => { e.stopPropagation(); onSelectTable(t.id); }}
  onPointerDown={draggable ? (e) => {
  e.stopPropagation();
@@ -327,7 +359,11 @@ export function FloorMap({
  // reads as a solid marker (dark in light theme, light in dark theme).
  <span className={"absolute inset-0 bg-foreground " + radiusCls} />
  )}
- <span className={"relative z-10 flex flex-col items-center justify-center leading-none " + (t.color || t.photoUrl ? "text-white" : "text-background")}>
+ <span
+ className={"relative z-10 flex flex-col items-center justify-center leading-none " + (t.color || t.photoUrl ? "text-white" : "text-background")}
+ // Counter-rotate the label so the number/seats stay upright while the table rotates.
+ style={t.rotation ? { transform: "rotate(" + -t.rotation + "deg)" } : undefined}
+ >
  <span className="font-semibold inline-flex items-center gap-0.5" style={{ fontSize: numFont }}>
  <TableGlyph size={Math.round(numFont * 0.9)} />
  {t.number}
@@ -340,15 +376,23 @@ export function FloorMap({
  {badge && badge > 0 ? (
  <span
  className={
- "absolute -top-2.5 -right-2.5 z-20 min-w-[18px] h-[18px] px-1 inline-flex items-center justify-center text-[10px] font-semibold rounded-full ring-4 ring-foreground/20 " +
+ "absolute -top-3 -right-3 z-20 min-w-[26px] h-[26px] px-1.5 inline-flex items-center justify-center text-sm font-semibold rounded-full ring-4 ring-foreground/20 " +
  (isReady ? "bg-emerald-500 text-white" : "bg-primary-gradient text-primary-foreground")
  }
+ // Counter-rotate the count so it stays upright while the table rotates.
+ style={t.rotation ? { transform: "rotate(" + -t.rotation + "deg)" } : undefined}
  >
  {badge}
  </span>
  ) : null}
  </button>
- {draggable && (onRotate || onResize) ? (
+ {draggable && (onRotate || onResize) ? (() => {
+ const circleCls = "absolute rounded-full bg-secondary border border-foreground/40 ring-4 ring-foreground/20 flex items-center justify-center text-muted-foreground pointer-events-auto";
+ // Fixed small handle, sat a little above the table.
+ const knobPx = 22;
+ const iconPx = 12;
+ const gapPx = 30;
+ return (
  <div
  className="absolute z-20 pointer-events-none"
  style={{ left: x + "%", top: y + "%", width: 0, height: 0, transform: "rotate(" + t.rotation + "deg)" }}
@@ -356,80 +400,64 @@ export function FloorMap({
  {/* outline of the selected table's box */}
  <div
  className="absolute border border-foreground/40 pointer-events-none"
- style={{ left: -w / 2, top: -h / 2, width: w, height: h, borderRadius: isRect ? 6 : "9999px" }}
+ style={{ left: -w / 2, top: -h / 2, width: w, height: h, borderRadius: round ? "9999px" : 6 }}
  />
 
- {/* Single bottom-right corner handle — diagonal resize. */}
- {onResize ? [[1, 1]].map(([dx, dy]) => {
- const axisX = dx !== 0;
- const axisY = dy !== 0;
- const OFF = 16;
- const cornerX = (dx * w) / 2;
- const cornerY = (dy * h) / 2;
- const handleX = cornerX + dx * OFF;
- const handleY = cornerY + dy * OFF;
- // Connector starts at the box corner with a small inward continuation
- // (INSET) and runs out to the handle — reads cleaner than a center line.
- const INSET = 8;
- const ux = dx / Math.SQRT2;
- const uy = dy / Math.SQRT2;
- const lineStartX = cornerX - ux * INSET;
- const lineStartY = cornerY - uy * INSET;
- const lineLen = OFF + INSET;
- const lineAngle = (Math.atan2(dy, dx) * 180) / Math.PI;
- return (
- <Fragment key={dx + "," + dy}>
- {/* connector from the box corner (with a slight inward overlap) to the handle */}
+                {/* single handle above the table — rotate (by angle) + uniform scale (by distance) */}
+ {onResize || onRotate ? (
+ <>
  <div
- className="absolute bg-foreground/50 pointer-events-none"
- style={{ left: lineStartX, top: lineStartY, width: lineLen, height: 2, transformOrigin: "0 50%", transform: "rotate(" + lineAngle + "deg)" }}
- />
- <div
- className="absolute w-5 h-5 rounded-full bg-white border border-foreground/40 ring-4 ring-foreground/20 flex items-center justify-center text-neutral-700 pointer-events-auto"
- style={{ left: handleX, top: handleY, transform: "translate(-50%,-50%)", touchAction: "none", cursor: "nwse-resize" }}
+ className={circleCls + " cursor-grab active:cursor-grabbing"}
+ style={{ left: 0, top: -(h / 2 + gapPx), width: knobPx, height: knobPx, transform: "translate(-50%,-50%) rotate(" + -t.rotation + "deg)", touchAction: "none" }}
  onClick={(e) => e.stopPropagation()}
  onPointerDown={(e) => {
  e.stopPropagation();
  resizingRef.current = true;
+ const rect = mapRef.current?.getBoundingClientRect();
+ if (rect) {
+ const cx = rect.left + (x / 100) * rect.width;
+ const cy = rect.top + (y / 100) * rect.height;
+ const dx = e.clientX - cx;
+ const dy = e.clientY - cy;
+ transformRef.current = {
+ ang: (Math.atan2(dy, dx) * 180) / Math.PI,
+ dist: Math.max(1, Math.hypot(dx, dy)),
+ w0: w,
+ h0: h,
+ rot0: t.rotation,
+ };
+ }
  (e.currentTarget as HTMLElement).setPointerCapture?.(e.pointerId);
  }}
  onPointerMove={(e) => {
  if (!resizingRef.current) return;
  const rect = mapRef.current?.getBoundingClientRect();
  if (!rect) return;
- const MIN = 18;
- const r = (t.rotation * Math.PI) / 180;
- // Local axis unit vectors in world (screen) space.
- const ux = { x: Math.cos(r), y: Math.sin(r) };
- const uy = { x: -Math.sin(r), y: Math.cos(r) };
  const cx = rect.left + (x / 100) * rect.width;
  const cy = rect.top + (y / 100) * rect.height;
- const halfW = w / 2;
- const halfH = h / 2;
- // Anchor = the box corner/edge OPPOSITE the dragged handle. It stays put
- // while the dragged side follows the pointer (no re-centering jump).
- const ax = cx - dx * halfW * ux.x - dy * halfH * uy.x;
- const ay = cy - dx * halfW * ux.y - dy * halfH * uy.y;
- const vx = e.clientX - ax;
- const vy = e.clientY - ay;
- let newWpx = w;
- let newHpx = h;
- // Subtract the handle's diagonal offset from the corner so the box edge
- // tracks the corner (not the offset handle) — no jump on grab.
- if (axisX) newWpx = Math.max(MIN, dx * (vx * ux.x + vy * ux.y) - OFF);
- if (axisY) newHpx = Math.max(MIN, dy * (vx * uy.x + vy * uy.y) - OFF);
- newWpx = Math.min(newWpx, rect.width);
- newHpx = Math.min(newHpx, rect.height);
- // Snap size to the grid (one cell minimum) so tables match each other.
- const stepW = (SIZE_STEP / 100) * rect.width;
+ const dx = e.clientX - cx;
+ const dy = e.clientY - cy;
+ const st = transformRef.current;
+ const dist = Math.hypot(dx, dy);
+ // rotation: point the table's up-axis straight at the pointer, so the knob
+ // sits under the cursor (no lag). +90 because the knob rests straight up.
+ if (onRotate) {
+ let deg = (Math.atan2(dy, dx) * 180) / Math.PI + 90;
+ deg = Math.round(deg / ROT_STEP) * ROT_STEP;
+ deg = ((deg % 360) + 360) % 360;
+ onRotate(deg);
+ }
+ // size follows the pointer directly: the knob sits gapPx above the box top
+ // along the up-axis, so keeping it under the cursor means (h/2 + gapPx) = dist.
+ if (onResize) {
+ const MIN = 26;
+ const aspect = SHAPE_ASPECT[t.shape] ?? 1; // width per height, fixed by shape
  const stepH = (SIZE_STEP / 100) * rect.height;
- if (axisX) newWpx = Math.min(rect.width, Math.max(stepW, Math.round(newWpx / stepW) * stepW));
- if (axisY) newHpx = Math.min(rect.height, Math.max(stepH, Math.round(newHpx / stepH) * stepH));
- // New center sits half a (new) extent away from the fixed anchor.
- const ncx = ax + dx * (newWpx / 2) * ux.x + dy * (newHpx / 2) * uy.x;
- const ncy = ay + dx * (newWpx / 2) * ux.y + dy * (newHpx / 2) * uy.y;
+ let newHpx = Math.max(MIN, 2 * (dist - gapPx));
+ newHpx = Math.min(rect.height, Math.max(stepH, Math.round(newHpx / stepH) * stepH));
+ const newWpx = Math.min(rect.width, Math.max(MIN, newHpx * aspect));
  onResize((newWpx / rect.width) * 100, (newHpx / rect.height) * 100);
- onMove?.(clampPct(((ncx - rect.left) / rect.width) * 100), clampPct(((ncy - rect.top) / rect.height) * 100));
+ }
  }}
  onPointerUp={(e) => {
  resizingRef.current = false;
@@ -437,47 +465,13 @@ export function FloorMap({
  }}
  onPointerCancel={() => { resizingRef.current = false; }}
  >
- <MoveDiagonal2 size={12} />
- </div>
- </Fragment>
- );
- }) : null}
-
- {/* rotate handle above the box (connector line is rendered under the table) */}
- {onRotate ? (
- <>
- <div
- className="absolute w-5 h-5 rounded-full bg-white border border-foreground/40 ring-4 ring-foreground/20 flex items-center justify-center text-neutral-700 cursor-grab active:cursor-grabbing pointer-events-auto"
- style={{ left: 0, top: -(h / 2 + 26), transform: "translate(-50%,-50%)", touchAction: "none" }}
- onClick={(e) => e.stopPropagation()}
- onPointerDown={(e) => {
- e.stopPropagation();
- rotatingRef.current = true;
- (e.currentTarget as HTMLElement).setPointerCapture?.(e.pointerId);
- }}
- onPointerMove={(e) => {
- if (!rotatingRef.current) return;
- const rect = mapRef.current?.getBoundingClientRect();
- if (!rect) return;
- const cx = rect.left + (x / 100) * rect.width;
- const cy = rect.top + (y / 100) * rect.height;
- let deg = (Math.atan2(e.clientY - cy, e.clientX - cx) * 180) / Math.PI + 90;
- deg = Math.round(deg / ROT_STEP) * ROT_STEP;
- deg = ((deg % 360) + 360) % 360;
- onRotate(deg);
- }}
- onPointerUp={(e) => {
- rotatingRef.current = false;
- (e.currentTarget as HTMLElement).releasePointerCapture?.(e.pointerId);
- }}
- onPointerCancel={() => { rotatingRef.current = false; }}
- >
- <RotateCw size={12} />
+ <Scaling size={iconPx} />
  </div>
  </>
  ) : null}
  </div>
- ) : null}
+ );
+ })() : null}
  </Fragment>
  );
  })}
@@ -504,6 +498,7 @@ export function TablesPage({
  onBack: () => void;
 }) {
  const t = useTranslations("dashboard.tables");
+ const tc = useTranslations("dashboard.common");
  const qc = useQueryClient();
 
  const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -514,39 +509,77 @@ export function TablesPage({
 
  useEffect(() => { window.scrollTo({ top: 0, behavior: "auto" }); }, []);
 
- // Keep a valid selection — default to the lowest-numbered table.
+ // Nothing is selected by default; drop the selection if its table is gone.
  useEffect(() => {
- if (selectedId && tables.some((x) => x.id === selectedId)) return;
- const first = [...tables].sort((a, b) => a.number - b.number)[0];
- setSelectedId(first ? first.id : null);
+ if (selectedId && !tables.some((x) => x.id === selectedId)) setSelectedId(null);
  }, [tables, selectedId]);
 
  const selected = tables.find((x) => x.id === selectedId) || null;
 
- // Debounced per-table save: continuous edits (drag / steppers) coalesce into
- // one PATCH ~600ms after the last change. Flushed on back.
+ // Manual save: edits accumulate per table id and are PATCHed only when the
+ // owner hits Save (header button or the unsaved-changes dialog). Freshly
+ // added tables are local drafts too (ids in createdIdsRef) — POSTed on Save.
  const pendingRef = useRef<Map<string, TableEntity>>(new Map());
- const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+ const createdIdsRef = useRef<Set<string>>(new Set());
+ const [dirty, setDirty] = useState(false);
+ const [saving, setSaving] = useState(false);
+ const [unsavedOpen, setUnsavedOpen] = useState(false);
  const payloadOf = (tbl: TableEntity) => ({
  number: tbl.number, capacity: tbl.capacity, zone: tbl.name || null,
  imageUrl: tbl.photoUrl, color: tbl.color, x: tbl.x, y: tbl.y,
  shape: tbl.shape, rotation: tbl.rotation, width: tbl.width, height: tbl.height,
  });
- const flush = () => {
- if (timerRef.current) { clearTimeout(timerRef.current); timerRef.current = null; }
+ async function saveAll(): Promise<boolean> {
  const items = Array.from(pendingRef.current.values());
+ if (items.length === 0) return true;
+ setSaving(true);
+ try {
+ await Promise.all(items.map((tbl) =>
+ createdIdsRef.current.has(tbl.id)
+ ? createTable(payloadOf(tbl))
+ : updateTable(tbl.id, payloadOf(tbl)),
+ ));
  pendingRef.current.clear();
- if (items.length === 0) return;
- Promise.all(items.map((tbl) => updateTable(tbl.id, payloadOf(tbl)).catch(() => undefined)))
- .then(() => qc.invalidateQueries({ queryKey: ["tables"] }).catch(() => undefined));
- };
- const scheduleSave = (tbl: TableEntity) => {
- pendingRef.current.set(tbl.id, tbl);
- if (timerRef.current) clearTimeout(timerRef.current);
- timerRef.current = setTimeout(flush, 600);
- };
- // Flush any pending save on unmount.
- useEffect(() => () => { flush(); }, []); // eslint-disable-line react-hooks/exhaustive-deps
+ createdIdsRef.current.clear();
+ setDirty(false);
+ await qc.invalidateQueries({ queryKey: ["tables"] }).catch(() => undefined);
+ return true;
+ } catch {
+ return false;
+ } finally {
+ setSaving(false);
+ }
+ }
+ // Drop the pending edits (incl. unsaved new tables) and refetch so the map
+ // snaps back to the saved state.
+ function discard() {
+ const created = createdIdsRef.current;
+ if (created.size) setTables((prev) => prev.filter((x) => !created.has(x.id)));
+ pendingRef.current.clear();
+ createdIdsRef.current = new Set();
+ setDirty(false);
+ qc.invalidateQueries({ queryKey: ["tables"] }).catch(() => undefined);
+ }
+
+ // Sidebar/drawer navigation guard: while dirty, intercept the click, show
+ // the unsaved-changes dialog, and resume the blocked navigation afterwards.
+ const pendingNavRef = useRef<(() => void) | null>(null);
+ const dirtyRef = useRef(false);
+ dirtyRef.current = dirty && !saving;
+ useEffect(() => {
+ setNavInterceptor((proceed) => {
+ if (!dirtyRef.current) return false;
+ pendingNavRef.current = proceed;
+ setUnsavedOpen(true);
+ return true;
+ });
+ return () => setNavInterceptor(null);
+ }, []);
+ function leave() {
+ const next = pendingNavRef.current;
+ pendingNavRef.current = null;
+ next?.();
+ }
 
  function patchSelected(patch: Partial<TableEntity>) {
  // Functional update so back-to-back calls in one event (resize fires both
@@ -554,16 +587,18 @@ export function TablesPage({
  setTables((prev) => prev.map((x) => {
  if (x.id !== selectedId) return x;
  const next = { ...x, ...patch };
- scheduleSave(next);
+ pendingRef.current.set(next.id, next);
  return next;
  }));
+ setDirty(true);
  }
 
- async function addTable() {
+ function addTable() {
  track("dash_settings_tables_click_add");
  const number = tables.reduce((m, tbl) => Math.max(m, tbl.number || 0), 0) + 1;
- // New table = a copy of the currently selected one (shape/size/color/seats),
- // nudged ~12% so it doesn't sit exactly on top of the original.
+ // New table = a LOCAL draft copying the selected one (shape/size/color/
+ // seats), nudged so it doesn't sit exactly on top of the original. It is
+ // POSTed to the backend only on Save.
  const src = selected;
  const OFF = 5;
  const nudge = (v: number | null) => {
@@ -571,30 +606,32 @@ export function TablesPage({
  const n = base + OFF;
  return Math.max(0, Math.min(100, n > 100 ? base - OFF : n));
  };
- try {
- const created = await createTable({
+ const entity: TableEntity = {
+ id: newId(),
  number,
+ name: "",
+ description: "",
  capacity: src ? src.capacity : 2,
- zone: null,
- imageUrl: null,
- color: src ? src.color : null,
  x: src ? nudge(src.x) : 50,
  y: src ? nudge(src.y) : 50,
  shape: src ? src.shape : "circle",
  rotation: src ? src.rotation : 0,
  width: src ? src.width : null,
  height: src ? src.height : null,
- });
- const entity = apiTableToTable(created);
+ photoUrl: null,
+ color: src ? src.color : null,
+ sortOrder: tables.length,
+ };
+ createdIdsRef.current.add(entity.id);
+ pendingRef.current.set(entity.id, entity);
  setTables((prev) => [...prev, entity]);
  setSelectedId(entity.id);
- qc.invalidateQueries({ queryKey: ["tables"] }).catch(() => undefined);
- } catch { /* ignore */ }
+ setDirty(true);
  }
 
  const usedIds = new Set<string>([
  ...orders.filter((o) => o.status === "active").map((o) => o.tableId).filter((v): v is string => !!v),
- ...bookings.filter((b) => b.status === "pending" || b.status === "confirmed").map((b) => b.tableId).filter((v): v is string => !!v),
+ ...bookings.filter(blocksTableDeletion).map((b) => b.tableId).filter((v): v is string => !!v),
  ]);
 
  function handleDelete() {
@@ -610,8 +647,20 @@ export function TablesPage({
  onConfirm: async () => {
  setConfirmState({ open: false });
  const id = selected.id;
+ // An unsaved draft never reached the backend — just drop it locally.
+ if (createdIdsRef.current.has(id)) {
+ createdIdsRef.current.delete(id);
+ pendingRef.current.delete(id);
+ setTables((prev) => prev.filter((x) => x.id !== id));
+ setSelectedId(null);
+ if (pendingRef.current.size === 0) setDirty(false);
+ return;
+ }
  try {
+ // Keep other tables' unsaved edits alive across the invalidate.
+ if (dirty && !(await saveAll())) return;
  await deleteTable(id);
+ pendingRef.current.delete(id);
  setTables((prev) => prev.filter((x) => x.id !== id));
  setSelectedId(null);
  await qc.invalidateQueries({ queryKey: ["tables"] });
@@ -620,40 +669,70 @@ export function TablesPage({
  });
  }
 
- const goBack = () => { flush(); track("dash_settings_tables_click_back"); onBack(); };
-
  return (
  <div>
- <SubpageStickyBar onBack={goBack} hideSave>
- {selected ? (
+ <EditPageHeader
+ onBack={onBack}
+ hideBack
+ title={t("title")}
+ titleIcon={<GridIcon size={18} />}
+ // Save shows only while a table is selected; it's always clickable —
+ // saving with no pending edits is a no-op that still confirms success.
+ onSave={selected ? async () => {
+ track("dash_settings_tables_save");
+ if (await saveAll()) {
+ // Success ack + drop the selection so the placeholder returns.
+ notify(tc("savedTitle"), tc("savedMessage"));
+ setSelectedId(null);
+ }
+ } : undefined}
+ canSave
+ saving={saving}
+ actionMenu={(() => {
+ // Same button recipe as the dish form header: icon-only on mobile,
+ // icon + label on desktop.
+ const btnCls = "inline-flex items-center justify-center gap-1.5 h-[36px] w-[36px] px-0 md:w-auto md:px-[16px] text-[14px] font-semibold rounded-lg transition-all whitespace-nowrap shrink-0";
+ const mutedCls = btnCls + " text-foreground bg-muted hover:bg-muted/70";
+ return selected ? (
  <>
  <button
  type="button"
+ data-testid="table-delete"
  onClick={handleDelete}
  aria-label={t("deleteTable")}
- className="h-8 w-8 inline-flex items-center justify-center text-red-600 bg-secondary rounded-md"
+ title={t("deleteTable")}
+ className={mutedCls}
  >
- <TrashIcon size={15} />
+ <TrashIcon size={18} />
+ <span className="hidden md:inline">{tc("delete")}</span>
  </button>
  <button
  type="button"
  onClick={() => setQrOpen(true)}
  aria-label={t("showQr")}
- className="h-8 w-8 inline-flex items-center justify-center text-muted-foreground bg-secondary rounded-md"
+ title={t("showQr")}
+ className={mutedCls}
  >
- <QrIcon size={15} />
+ <QrIcon size={18} />
+ <span className="hidden md:inline">{tc("qrCode")}</span>
  </button>
  </>
- ) : null}
+ ) : (
+ // No selection → the primary action is adding a table (Save hidden).
  <button
  type="button"
+ data-testid="table-add"
  onClick={addTable}
- className="inline-flex items-center gap-1 h-8 px-2.5 text-xs font-medium text-primary-foreground bg-primary-gradient rounded-md transition-colors"
+ aria-label={t("addFirstTable")}
+ title={t("addFirstTable")}
+ className={btnCls + " text-white bg-gradient-to-br from-[hsl(9,100%,58%)] to-[hsl(35,95%,55%)] hover:opacity-90 active:scale-[0.99]"}
  >
- <PlusIcon size={14} />
- {t("table")}
+ <PlusIcon size={18} />
+ <span className="hidden md:inline">{t("addFirstTable")}</span>
  </button>
- </SubpageStickyBar>
+ );
+ })()}
+ />
 
  <div className="min-w-0">
  {tables.length === 0 ? (
@@ -661,6 +740,7 @@ export function TablesPage({
  <EmptyState title={t("emptyTitle")} subtitle={t("emptySubtitle")} />
  <button
  type="button"
+ data-testid="table-add-empty"
  onClick={addTable}
  className="w-full mt-2.5 h-12 text-sm font-medium text-muted-foreground/60 border border-dashed border-input rounded-xl flex items-center justify-center gap-2 transition-colors"
  >
@@ -669,12 +749,12 @@ export function TablesPage({
  </button>
  </>
  ) : (
- <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-5 md:gap-4">
+ <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-5 md:gap-4">
  <div className="min-w-0">
  <FloorMap
  tables={tables}
  selectedId={selectedId}
- onSelectTable={(id) => { if (id) { track("dash_settings_tables_click_table"); setSelectedId(id); } }}
+ onSelectTable={(id) => { if (id) track("dash_settings_tables_click_table"); setSelectedId(id); }}
  onMove={(x, y) => patchSelected({ x, y })}
  onRotate={(deg) => patchSelected({ rotation: deg })}
  onResize={(width, height) => patchSelected({ width, height })}
@@ -684,7 +764,19 @@ export function TablesPage({
  </div>
 
  <div className="min-w-0">
- {selected ? <TableSettings table={selected} onChange={patchSelected} /> : null}
+ {selected ? (
+ <TableSettings
+ table={selected}
+ onChange={patchSelected}
+ />
+ ) : (
+ <div className="h-[calc(100dvh-var(--topbar-h,3.5rem)-100vw-1.25rem-env(safe-area-inset-bottom))] md:h-full flex items-center justify-center rounded-2xl bg-[hsl(var(--menu-card-bg))] border border-border">
+ <div className="flex flex-col items-center gap-3 px-6 text-center">
+ <MousePointerClick size={28} className="text-muted-foreground/50" />
+ <p className="text-sm text-muted-foreground max-w-[260px] leading-snug">{t("selectPrompt")}</p>
+ </div>
+ </div>
+ )}
  </div>
  </div>
  )}
@@ -708,6 +800,14 @@ export function TablesPage({
  menuUrl={menuUrl}
  />
  ) : null}
+
+ <UnsavedChangesDialog
+ open={unsavedOpen}
+ saving={saving}
+ onDiscard={() => { setUnsavedOpen(false); discard(); leave(); }}
+ onSave={async () => { setUnsavedOpen(false); if (await saveAll()) leave(); }}
+ onClose={() => { pendingNavRef.current = null; setUnsavedOpen(false); }}
+ />
  </div>
  );
 }
@@ -775,11 +875,12 @@ export function TableFormPage({
  }, []);
 
  // A table can't be deleted while it has a live order or a still-active booking
- // (pending or confirmed). Completed and cancelled/rejected bookings don't block.
+ // (upcoming/in-progress pending or confirmed). Completed, cancelled/rejected,
+ // and already-elapsed bookings don't block — see blocksTableDeletion.
  const usedIds = new Set<string>([
  ...orders.filter((o) => o.status === "active").map((o) => o.tableId).filter((x): x is string => !!x),
  ...bookings
-  .filter((b) => b.status === "pending" || b.status === "confirmed")
+  .filter(blocksTableDeletion)
   .map((b) => b.tableId)
   .filter((x): x is string => !!x),
  ]);
@@ -904,7 +1005,7 @@ export function TableFormPage({
  </div>
 
 
- <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-6 md:gap-8">
+ <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-6 md:gap-8">
  <div className="min-w-0">
  <FloorMap
  tables={mode === "edit"
@@ -969,45 +1070,72 @@ export function TableFormPage({
  );
 }
 
+const settingsCard = "rounded-2xl bg-[hsl(var(--menu-card-bg))] border border-border p-4 sm:p-5";
+
 function TableSettings({
  table,
  onChange,
+ className,
 }: {
  table: TableEntity;
  onChange: (patch: Partial<TableEntity>) => void;
+ // Extra classes on the card, e.g. a max-height + overflow-y-auto so the
+ // whole editor scrolls inside the space left next to / below the map.
+ className?: string;
 }) {
  const t = useTranslations("dashboard.tables");
  return (
- <div className="bg-card border border-border rounded-xl p-4 space-y-3">
- <div>
- <label className="block text-sm font-medium text-foreground mb-2.5">{t("shapeLabel")}</label>
- <div className="inline-flex w-full items-center rounded-lg border border-border bg-card overflow-hidden">
- <ShapeBtn active={table.shape === "circle"} onClick={() => onChange({ shape: "circle" })}>
- {t("shapeCircle")}
- </ShapeBtn>
- <ShapeBtn active={table.shape === "rect"} onClick={() => onChange({ shape: "rect" })}>
- {t("shapeRect")}
- </ShapeBtn>
+ <div className={settingsCard + " space-y-3" + (className ? " " + className : "")}>
+ <div className="flex flex-col md:grid md:grid-cols-[2fr_3fr] gap-3">
+ <div className="flex-1 min-w-0">
+ <label htmlFor="table-shape" className="block text-sm font-medium text-foreground mb-2.5">{t("shapeLabel")}:</label>
+ <Select<string>
+ id="table-shape"
+ value={table.shape}
+ title={t("shapeLabel")}
+ // Reset the custom size so the new shape's fixed proportion takes over.
+ onChange={(next) => onChange({ shape: next as TableEntity["shape"], width: null, height: null })}
+ options={[
+ { value: "circle", label: t("shapeCircle") },
+ { value: "square", label: t("shapeSquare") },
+ { value: "rect", label: t("shapeRect") },
+ { value: "oval", label: t("shapeOval") },
+ ]}
+ />
+ </div>
+ <div className="flex-1 min-w-0">
+ <label className="block text-sm font-medium text-foreground mb-2.5">{t("name")}:</label>
+ <input
+ type="text"
+ data-testid="table-name"
+ value={table.name}
+ onChange={(e) => onChange({ name: e.target.value })}
+ onFocus={() => track("dash_settings_table_focus_name")}
+ placeholder={t("namePlaceholder")}
+ className={formInputClass}
+ />
  </div>
  </div>
 
  <div className="flex gap-3">
  <div className="flex-1 min-w-0">
- <label className="block text-sm font-medium text-foreground mb-2.5">{t("number")}</label>
+ <label className="block text-sm font-medium text-foreground mb-2.5">{t("number")}:</label>
  <Stepper
  value={table.number}
  min={1}
+ testId="table-number"
  onChange={(n) => onChange({ number: n })}
  onPlus={() => track("dash_settings_table_number_plus")}
  onMinus={() => track("dash_settings_table_number_minus")}
  />
  </div>
  <div className="flex-1 min-w-0">
- <label className="block text-sm font-medium text-foreground mb-2.5">{t("seats")}</label>
+ <label className="block text-sm font-medium text-foreground mb-2.5">{t("seats")}:</label>
  <Stepper
  value={table.capacity}
  min={1}
  max={20}
+ testId="table-seats"
  onChange={(n) => onChange({ capacity: n })}
  onPlus={() => track("dash_settings_table_seats_plus")}
  onMinus={() => track("dash_settings_table_seats_minus")}
@@ -1015,51 +1143,27 @@ function TableSettings({
  </div>
  </div>
 
+ {/* color + photo side by side on desktop; the photo is a square and the
+     5-per-row swatch grid roughly matches its height */}
+ <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-4 md:gap-5">
  <TableColorPicker
  value={table.color}
  onChange={(color) => onChange({ color })}
  />
-
  <div>
- <label className="block text-sm font-medium text-foreground mb-2.5">{t("name")}</label>
- <input
- type="text"
- value={table.name}
- onChange={(e) => onChange({ name: e.target.value })}
- onFocus={() => track("dash_settings_table_focus_name")}
- placeholder={t("namePlaceholder")}
- className={inputClass}
- />
- </div>
-
- <div>
- <label className="block text-sm font-medium text-foreground mb-2.5">{t("photo")}</label>
+ <label className="block text-sm font-medium text-foreground mb-2.5">{t("photo")}:</label>
  <PhotoPicker
  url={table.photoUrl}
  onChange={(url) => onChange({ photoUrl: url })}
  onAddClick={() => track("dash_settings_table_add_photo")}
  onRemoveClick={() => track("dash_settings_table_delete_photo")}
  inputId={"table-photo-" + table.id}
- width="w-full"
- height="h-32"
+ width="w-full md:max-w-[230px]"
+ height="h-32 md:h-auto md:aspect-square"
  />
  </div>
  </div>
- );
-}
-
-function ShapeBtn({ active, onClick, children }: { active: boolean; onClick: () => void; children: React.ReactNode }) {
- return (
- <button
- type="button"
- onClick={onClick}
- className={
- "flex-1 h-9 px-3 text-xs font-medium transition-colors " +
- (active ? "bg-primary-gradient text-primary-foreground" : "text-muted-foreground hover:text-foreground")
- }
- >
- {children}
- </button>
+ </div>
  );
 }
 
@@ -1081,20 +1185,8 @@ function TableColorPicker({
  const hasPreset = TABLE_COLORS.some((c) => c.toLowerCase() === normalized);
  return (
  <div>
- <div className="flex items-center justify-between mb-2.5">
- <label className="block text-sm font-medium text-foreground">{t("colorLabel")}</label>
- {value ? (
- <button
- type="button"
- onClick={() => { track("dash_settings_table_color_clear"); onChange(null); }}
- className="text-xs text-muted-foreground hover:text-foreground transition-colors"
- >
- {t("colorClear")}
- </button>
- ) : null}
- </div>
- <p className="text-xs text-muted-foreground mb-3 leading-snug">{t("colorTip")}</p>
- <div className="grid grid-cols-7 gap-2 relative">
+ <label className="block text-sm font-medium text-foreground mb-2.5">{t("colorLabel")}:</label>
+ <div className="grid grid-cols-7 md:grid-cols-5 gap-2 relative">
  {TABLE_COLORS.map((c) => {
  const selected = c.toLowerCase() === normalized;
  return (

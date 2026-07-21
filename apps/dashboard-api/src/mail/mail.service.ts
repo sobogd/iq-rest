@@ -242,6 +242,13 @@ export class MailService implements OnModuleDestroy {
     status: "confirmed" | "cancelled";
     locale: string;
   }): Promise<void> {
+    // Reserved autotest domain: outside production, never deliver (e2e confirm/
+    // reject would otherwise bounce off non-existent guest addresses). Mirrors
+    // the OTP bypass in auth.service.
+    if (process.env.NODE_ENV !== "production" && /@e2e\.iqrest\.test$/i.test(email)) {
+      this.logger.log("autotest recipient — reservation status email skipped");
+      return;
+    }
     const cfg = this.smtpConfig();
     if (!cfg) {
       this.logger.warn("SMTP not configured — reservation status email skipped");

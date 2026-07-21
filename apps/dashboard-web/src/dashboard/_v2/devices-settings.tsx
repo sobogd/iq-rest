@@ -367,17 +367,17 @@ function AddDeviceModal({
             type="button"
             onClick={onClose}
             disabled={saving}
-            className="h-8 px-3 text-xs font-medium text-foreground bg-card border border-border rounded-lg disabled:opacity-50"
+            className="h-8 px-3 text-xs font-medium text-foreground bg-card border border-border rounded-lg disabled:opacity-50 inline-flex items-center"
           >
-            {t("cancel")}
+            <span className="truncate">{t("cancel")}</span>
           </button>
           <button
             type="button"
             onClick={() => void handleCreate()}
             disabled={saving || !name.trim()}
-            className="h-8 px-3 text-xs font-medium text-primary-foreground bg-primary-gradient rounded-lg disabled:opacity-60"
+            className="h-8 px-3 text-xs font-medium text-primary-foreground bg-primary-gradient rounded-lg disabled:opacity-60 inline-flex items-center"
           >
-            {saving ? t("creating") : t("generateCode")}
+            <span className="truncate">{saving ? t("creating") : t("generateCode")}</span>
           </button>
         </div>
       }

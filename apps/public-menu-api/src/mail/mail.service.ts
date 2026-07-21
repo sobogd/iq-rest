@@ -60,6 +60,13 @@ export class MailService implements OnModuleDestroy {
     if (this.transporter) this.transporter.close();
   }
 
+  // Reserved autotest domain: outside production, never actually deliver to it
+  // so e2e bookings (guest + owner) don't spray bounce-backs at real inboxes.
+  // Mirrors the OTP bypass in dashboard-api's auth.service.
+  private skipAutotest(email: string): boolean {
+    return process.env.NODE_ENV !== "production" && /@e2e\.iqrest\.test$/i.test(email);
+  }
+
   private cfg() {
     const host = this.config.get<string>("SMTP_HOST");
     const port = Number(this.config.get<string>("SMTP_PORT") || 587);
@@ -101,6 +108,10 @@ export class MailService implements OnModuleDestroy {
   }
 
   async sendGuestEmail(params: ReservationParams): Promise<void> {
+    if (this.skipAutotest(params.email)) {
+      this.logger.log("autotest recipient — guest reservation email skipped");
+      return;
+    }
     const transporter = await this.getTransporter();
     if (!transporter) {
       this.logger.warn("SMTP not configured — guest reservation email skipped");
@@ -139,6 +150,9 @@ export class MailService implements OnModuleDestroy {
   }
 
   async sendOwnerEmail(params: OwnerParams): Promise<void> {
+    // Drop autotest owner recipients; bail if nothing real is left to notify.
+    const ownerEmails = params.ownerEmails.filter((e) => !this.skipAutotest(e));
+    if (ownerEmails.length === 0) return;
     const transporter = await this.getTransporter();
     if (!transporter) return;
     const c = this.cfg()!;
@@ -155,7 +169,7 @@ export class MailService implements OnModuleDestroy {
     if (params.guestPhone) rows += detailRow("Phone", params.guestPhone);
     if (params.notes) rows += detailRow(t.notes, params.notes);
 
-    const [primary, ...rest] = params.ownerEmails;
+    const [primary, ...rest] = ownerEmails;
     await transporter.sendMail({
       from: c.from,
       to: primary,

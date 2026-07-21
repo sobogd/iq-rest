@@ -162,9 +162,9 @@ export function OnboardingModals({
               type="button"
               onClick={() => skipName()}
               disabled={busy}
-              className={secondaryBtn + " disabled:opacity-50"}
+              className={secondaryBtn + " disabled:opacity-50 inline-flex items-center"}
             >
-              {t("name.skip")}
+              <span className="truncate">{t("name.skip")}</span>
             </button>
             <button
               type="button"
@@ -172,8 +172,8 @@ export function OnboardingModals({
               disabled={busy}
               className={primaryBtn + " inline-flex items-center gap-1.5 disabled:opacity-50"}
             >
-              {busy && <Loader2 className="h-3.5 w-3.5 animate-spin" />}
-              {t("name.continue")}
+              {busy && <Loader2 className="h-3.5 w-3.5 animate-spin shrink-0" />}
+              <span className="truncate">{t("name.continue")}</span>
             </button>
           </div>
         }

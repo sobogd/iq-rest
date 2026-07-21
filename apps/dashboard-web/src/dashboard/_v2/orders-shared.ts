@@ -30,6 +30,15 @@ export const STATUS_TEXT_CLS: Record<OrderItemStatus, string> = {
   served: "text-emerald-600 dark:text-emerald-500",
 };
 
+// Soft chip colours (status label on a tinted background) — same visual
+// language as DiscountBadge (tint-100 / text-700, dark: tint-950 / text-300).
+export const STATUS_CHIP_CLS: Record<OrderItemStatus, string> = {
+  pending: "bg-slate-100 text-slate-700 dark:bg-slate-800/60 dark:text-slate-300",
+  cooking: "bg-amber-100 text-amber-700 dark:bg-amber-950/40 dark:text-amber-300",
+  ready: "bg-blue-100 text-blue-700 dark:bg-blue-950/40 dark:text-blue-300",
+  served: "bg-emerald-100 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300",
+};
+
 export const STATUS_ORDER: OrderItemStatus[] = ["pending", "cooking", "ready", "served"];
 
 // Item subtotal before any discount. Used by SplitOrderModal and other

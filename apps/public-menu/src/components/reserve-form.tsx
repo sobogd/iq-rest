@@ -260,6 +260,7 @@ export function ReserveForm() {
             <button
               key={n}
               type="button"
+              data-testid={"res-guest-" + n}
               onClick={() => handleGuestsSelect(n)}
               className="h-11 rounded-lg border-2 text-sm font-semibold transition-colors flex items-center justify-center"
               style={
@@ -320,6 +321,7 @@ export function ReserveForm() {
                 <button
                   key={date.toISOString()}
                   type="button"
+                  data-testid="res-date"
                   disabled={isDisabled}
                   onClick={() => handleDateSelect(date)}
                   className="h-11 rounded-lg border-2 text-sm font-semibold transition-colors flex items-center justify-center px-4 capitalize"
@@ -350,6 +352,7 @@ export function ReserveForm() {
                 <button
                   key={slot.time}
                   type="button"
+                  data-testid="res-time"
                   disabled={!slot.available || loadingTables}
                   onClick={() => handleTimeSelect(slot.time)}
                   className="h-11 rounded-lg border-2 text-sm font-semibold transition-colors flex items-center justify-center"
@@ -385,6 +388,7 @@ export function ReserveForm() {
                   ) : null}
                   <button
                     type="button"
+                    data-testid="res-table"
                     onClick={() => handleTableSelect(table.id)}
                     className="flex-1 h-16 rounded-lg border-2 transition-colors flex flex-col justify-center px-4 text-left"
                     style={
@@ -430,6 +434,7 @@ export function ReserveForm() {
           </div>
           <button
             type="submit"
+            data-testid="res-submit"
             disabled={submitting || !name.trim() || !email.trim()}
             className="w-full h-14 rounded-lg font-bold text-lg transition-colors"
             style={

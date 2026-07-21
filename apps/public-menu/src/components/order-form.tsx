@@ -242,6 +242,7 @@ export function OrderForm() {
       </div>
 
       <button
+        data-testid="order-submit"
         onClick={handleSend}
         disabled={!canSubmit || sending}
         className="w-full h-14 rounded-lg font-bold text-lg flex items-center justify-center gap-3 text-white active:opacity-90 disabled:opacity-50"

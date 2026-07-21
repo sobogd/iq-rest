@@ -11,9 +11,8 @@
 //   - it carries the `legacyFullAccess` grandfather flag (a few pre-gating
 //     BASIC venues that already relied on orders/kitchen/reservations).
 //
-// Distinct from `isPaidActive` (ai-quota.ts), which gates the menu staying
-// online + AI image generation and still treats BASIC as paid. Keep the two
-// separate: BASIC keeps its menu, but loses the operational features.
+// BASIC keeps its menu online but loses the operational (PRO) features —
+// orders / kitchen / reservations gate on this flag.
 export function hasProFeatures(r: {
   plan: string | null;
   subscriptionStatus: string | null;

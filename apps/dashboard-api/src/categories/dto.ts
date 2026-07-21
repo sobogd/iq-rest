@@ -1,5 +1,6 @@
 import { Type } from "class-transformer";
 import {
+  ArrayMaxSize,
   IsArray,
   IsBoolean,
   IsInt,
@@ -73,6 +74,7 @@ export class ReorderEntryDto {
 
 export class ReorderDto {
   @IsArray()
+  @ArrayMaxSize(2000)
   @ValidateNested({ each: true })
   @Type(() => ReorderEntryDto)
   items!: ReorderEntryDto[];

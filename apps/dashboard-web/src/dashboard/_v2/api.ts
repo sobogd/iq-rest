@@ -1,7 +1,8 @@
 // API client for the new dashboard. Thin wrappers over fetch with typed return shapes.
 
 import type { Ml, DishOption } from "./types";
-import { apiUrl } from "@/lib/api";
+import { apiUrl, handleUnauthorized } from "@/lib/api";
+import { observeResponseVersion } from "@/lib/version-check";
 import { activeRestaurantHeader } from "@/lib/active-restaurant";
 import {
   getDeviceToken,
@@ -36,7 +37,9 @@ function apiFetch(path: string, init: RequestInit = {}): Promise<Response> {
     const role = getKioskRole();
     const deviceType = getStoredDeviceType() ?? (role ? roleToDeviceType(role) : null);
     if (deviceType === "KITCHEN") {
-      const orderPatch = init.method === "PATCH" && /^\/api\/orders\/[^/]+$/.test(path);
+      const orderPatch =
+        init.method === "PATCH" &&
+        (/^\/api\/orders\/[^/]+$/.test(path) || /^\/api\/orders\/[^/]+\/item-status$/.test(path));
       if (orderPatch) {
         target = path.replace("/api/orders/", "/api/devices/orders/");
       }
@@ -44,7 +47,16 @@ function apiFetch(path: string, init: RequestInit = {}): Promise<Response> {
   } else {
     for (const [k, v] of Object.entries(activeRestaurantHeader())) headers.set(k, v);
   }
-  return fetch(apiUrl(target), { credentials: "include", ...init, headers });
+  return fetch(apiUrl(target), { credentials: "include", ...init, headers }).then((res) => {
+    // Mirror the shared api() wrapper: observe the X-App-Version header (quiet
+    // reload after a redeploy) and bounce to the landing on an unexpected 401
+    // so an expired session doesn't leave this whole surface silently failing.
+    // Kiosk hosts authenticate with a device bearer, not the cookie session —
+    // a 401 there must NOT redirect to the marketing landing.
+    observeResponseVersion(res);
+    if (res.status === 401 && !isKioskHost()) handleUnauthorized();
+    return res;
+  });
 }
 // (Ml retained for OrderItem option snapshots even though categories/items use richer shapes.)
 
@@ -342,6 +354,16 @@ export async function deleteCategory(id: string): Promise<void> {
  if (!res.ok) throw new Error("Failed to delete category");
 }
 
+// Clone a category (or group) with all its nested categories/items, their
+// translations, options, allergens, diets and duplicated S3 images. Returns the
+// newly created top-level category.
+export async function duplicateCategory(id: string): Promise<ApiCategory> {
+ const res = await apiFetch(`/api/categories/${id}/duplicate`, {
+        credentials: "include", method: "POST" });
+ if (!res.ok) throw new Error("Failed to duplicate category");
+ return (await res.json()) as ApiCategory;
+}
+
 export async function reorderCategories(
  items: { id: string; sortOrder: number }[],
  signal?: AbortSignal,
@@ -456,6 +478,15 @@ export async function deleteItem(id: string): Promise<void> {
  const res = await apiFetch(`/api/items/${id}`, {
         credentials: "include", method: "DELETE" });
  if (!res.ok) throw new Error("Failed to delete item");
+}
+
+// Clone a dish with its translations, options/variants, allergens, diets and a
+// fresh copy of its S3 image, into the same category. Returns the new dish.
+export async function duplicateItem(id: string): Promise<ApiItem> {
+ const res = await apiFetch(`/api/items/${id}/duplicate`, {
+        credentials: "include", method: "POST" });
+ if (!res.ok) throw new Error("Failed to duplicate item");
+ return (await res.json()) as ApiItem;
 }
 
 export interface ReorderSwap {
@@ -689,6 +720,23 @@ export async function patchOrder(
  });
  if (!res.ok) throw new Error("Failed to update order");
  return (await res.json()) as ApiOrder;
+}
+
+// Race-safe per-item status merge (KDS/waiter taps). The server merges the
+// given statuses by item id under a row lock instead of overwriting the
+// whole items array — concurrent devices can't clobber each other.
+export async function patchOrderItemStatuses(
+  id: string,
+  changes: { itemId: string; status: string }[],
+): Promise<ApiOrder> {
+  const res = await apiFetch(`/api/orders/${id}/item-status`, {
+    credentials: "include",
+    method: "PATCH",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ changes }),
+  });
+  if (!res.ok) throw new Error("Failed to update item status");
+  return (await res.json()) as ApiOrder;
 }
 
 export async function splitOrder(

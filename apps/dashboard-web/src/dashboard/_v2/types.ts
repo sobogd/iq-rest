@@ -49,7 +49,7 @@ export interface TableEntity {
  capacity: number;
  x: number | null;
  y: number | null;
- shape: "circle" | "rect";
+ shape: "circle" | "square" | "rect" | "oval";
  rotation: number;
  width: number | null;
  height: number | null;

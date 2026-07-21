@@ -200,9 +200,9 @@ export function RestaurantsListPage({ onBack, isDemo = false }: { onBack: () => 
               type="button"
               onClick={() => setPendingDelete(null)}
               disabled={deleting}
-              className="h-8 px-3 text-xs font-medium text-foreground bg-card border border-border rounded-lg transition-colors disabled:opacity-50"
+              className="h-8 px-3 text-xs font-medium text-foreground bg-card border border-border rounded-lg transition-colors disabled:opacity-50 inline-flex items-center"
             >
-              {tc("cancel")}
+              <span className="truncate">{tc("cancel")}</span>
             </button>
             <button
               type="button"
@@ -211,9 +211,9 @@ export function RestaurantsListPage({ onBack, isDemo = false }: { onBack: () => 
               className="h-8 px-3 text-xs font-medium text-white bg-red-600 rounded-lg transition-colors inline-flex items-center gap-1.5 disabled:opacity-70"
             >
               {deleting ? (
-                <span className="w-3 h-3 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+                <span className="w-3 h-3 border-2 border-white/40 border-t-white rounded-full animate-spin shrink-0" />
               ) : null}
-              {t("delete")}
+              <span className="truncate">{t("delete")}</span>
             </button>
           </div>
         }

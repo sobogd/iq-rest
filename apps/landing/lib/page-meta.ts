@@ -27,7 +27,6 @@ export const FEATURE_PAGES: Record<string, PageMeta> = {
   "/order-taking": { lastModified: "2026-05-20", changeFrequency: "monthly", priority: 0.8 },
   "/bookings": { lastModified: "2026-05-20", changeFrequency: "monthly", priority: 0.8 },
   "/kitchen-display": { lastModified: "2026-05-20", changeFrequency: "monthly", priority: 0.8 },
-  "/menu-qr-code": { lastModified: "2026-05-24", changeFrequency: "monthly", priority: 0.8 },
   "/pricing": { lastModified: "2026-05-20", changeFrequency: "monthly", priority: 0.9 },
 };
 

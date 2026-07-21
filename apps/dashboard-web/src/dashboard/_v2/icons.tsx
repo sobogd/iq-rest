@@ -244,6 +244,18 @@ export const CopyIcon = (p: IconProps) => svg({ ...p, children: <>
 
 export const CheckIcon = (p: IconProps) => svg({ ...p, children: <polyline points="20 6 9 17 4 12" /> });
 
+export const BanknoteIcon = (p: IconProps) => svg({ ...p, children: <>
+ <rect x="2" y="6" width="20" height="12" rx="2" />
+ <circle cx="12" cy="12" r="2" />
+ <path d="M6 12h.01M18 12h.01" />
+</> });
+
+export const PercentIcon = (p: IconProps) => svg({ ...p, children: <>
+ <line x1="19" y1="5" x2="5" y2="19" />
+ <circle cx="6.5" cy="6.5" r="2.5" />
+ <circle cx="17.5" cy="17.5" r="2.5" />
+</> });
+
 export const ExternalLinkIcon = (p: IconProps) => svg({ ...p, children: <>
  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
  <polyline points="15 3 21 3 21 9" />

@@ -21,7 +21,7 @@ import { useKitchenStream, type KitchenOrderEvent } from "./use-kitchen-stream";
 import { ZoomControls } from "./zoom-controls";
 import { KitchenPage, type KitchenFilterState } from "@/dashboard/_v2/kitchen-page";
 import { OrdersPage } from "@/dashboard/_v2/orders";
-import { ReservationsPage } from "@/dashboard/_v2/reservations";
+import { ReservationsRouted } from "@/dashboard/_v2/reservations";
 import { RestaurantProvider } from "@/dashboard/_v2/restaurant-context";
 import { DashboardRouterProvider } from "@/dashboard/_spa/router";
 import {
@@ -180,7 +180,7 @@ function ReservationsDemoBody() {
       <div className="flex-1 min-h-0 overflow-y-auto">
       <RestaurantProvider restaurant={snapshot.restaurant}>
         <DashboardRouterProvider initialPath="/dashboard/reservations" locale="en">
-          <ReservationsPage
+          <ReservationsRouted
             restaurant={snapshot.restaurant}
             bookings={bookings}
             setBookings={setBookings}
@@ -201,7 +201,8 @@ function ReservationsDemoBody() {
 // PATCH), so a reload resets the board.
 function KitchenDemoBody() {
   const [snapshot] = useState(() => buildKitchenDemoSnapshot(getDemoLang() || "en"));
-  const [orders, setOrders] = useState<Order[]>(snapshot.orders);
+  // Static demo snapshot — taps live in KitchenPage's optimistic overlay.
+  const [orders] = useState<Order[]>(snapshot.orders);
   // Phones get a larger default scale (passed by the landing as ?zoom=) so
   // the kiosk is legible inside the small embedded tablet frame.
   const [demoZoom] = useState(() => getDemoZoom());
@@ -215,7 +216,6 @@ function KitchenDemoBody() {
     <KitchenShell>
       <KitchenPage
         orders={orders}
-        setOrders={setOrders}
         tables={snapshot.tables}
         categories={snapshot.categories}
         defaultLang={snapshot.restaurant.defaultLang}
@@ -248,17 +248,9 @@ function KitchenAppBody() {
   const snapshotRef = useRef<KitchenSnapshot | null>(null);
   snapshotRef.current = snapshot;
 
-  // Orders with un-flushed / in-flight optimistic mutations. KitchenPage
-  // populates this via onOrderPendingChange; we use it in onSseOrder to
-  // skip the server's broadcast of our own write — otherwise the SSE
-  // echo arrives while the staff is mid-tap-burst and rolls back the
-  // still-pending second tap. Stored as a ref because it's read inside
-  // the SSE handler and shouldn't trigger re-renders.
-  const pendingOrderIdsRef = useRef<Set<string>>(new Set());
-  const handleOrderPendingChange = useCallback((orderId: string, pending: boolean) => {
-    if (pending) pendingOrderIdsRef.current.add(orderId);
-    else pendingOrderIdsRef.current.delete(orderId);
-  }, []);
+  // NOTE: no SSE-echo suppression here anymore. KitchenPage renders its own
+  // optimistic per-item overlay on top of the `orders` snapshot, so applying
+  // any SSE event / bootstrap at any time is safe — it can't roll a tap back.
 
   // Mirror of the kitchen-page filter state. Used by the chime policy so
   // a kitchen station that's narrowed its view (e.g. only the cold-pasta
@@ -476,6 +468,13 @@ function KitchenAppBody() {
         return;
       }
 
+      // Everything past here is an order event. A RESERVATION board never
+      // renders orders, so ignore them entirely — otherwise every kitchen
+      // status tap re-renders the reservation grid, and a slim (>8KB
+      // pg_notify) order payload triggers a full re-bootstrap the board
+      // doesn't need.
+      if (snap.deviceType === "RESERVATION") return;
+
       if (event.action === "deleted") {
         if (!event.orderId) return;
         setSnapshot((cur) =>
@@ -495,8 +494,7 @@ function KitchenAppBody() {
           event.itemSummary &&
           event.orderId &&
           snap.deviceType === "KITCHEN" &&
-          soundReady &&
-          !pendingOrderIdsRef.current.has(event.orderId)
+          soundReady
         ) {
           if (slimSummaryPassesFilter(snap.orders, event.orderId, event.itemSummary, filterStateRef.current)) {
             playOrderChime();
@@ -509,13 +507,7 @@ function KitchenAppBody() {
         return;
       }
 
-      const mapped = incoming
-        .map((raw) => apiOrderToOrder(raw, snap.tablesByNumber))
-        // Skip echoes of orders we still have local pending writes for.
-        // The SSE broadcast from our own PATCH would otherwise replace
-        // the optimistic state mid-tap-burst — staff sees an item snap
-        // back to its server status, lose the most recent tap.
-        .filter((m) => !pendingOrderIdsRef.current.has(m.id));
+      const mapped = incoming.map((raw) => apiOrderToOrder(raw, snap.tablesByNumber));
       const prevOrdersById = new Map(snap.orders.map((o) => [o.id, o]));
 
       if (mapped.length === 0) return;
@@ -678,7 +670,7 @@ function KitchenAppBody() {
           <div className="flex-1 min-h-0 overflow-y-auto">
           <RestaurantProvider restaurant={snapshot.restaurant}>
             <DashboardRouterProvider initialPath="/dashboard/reservations" locale="en">
-              <ReservationsPage
+              <ReservationsRouted
                 restaurant={snapshot.restaurant}
                 bookings={snapshot.bookings}
                 setBookings={updateBookings}
@@ -710,7 +702,6 @@ function KitchenAppBody() {
         ) : (
           <KitchenPage
             orders={snapshot.orders}
-            setOrders={updateOrders}
             tables={snapshot.tables}
             categories={snapshot.categories}
             defaultLang={snapshot.restaurant.defaultLang}
@@ -720,7 +711,6 @@ function KitchenAppBody() {
               void _prev;
               void next;
             }}
-            onOrderPendingChange={handleOrderPendingChange}
             filterBarExtras={<ZoomControls />}
             fullWidthFilterBar
             kioskLayout

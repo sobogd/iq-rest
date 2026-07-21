@@ -1,16 +1,17 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { showApiError } from "@/lib/show-api-error";
-import { createPortal } from "react-dom";
 import { useTranslations } from "next-intl";
 import { useRestaurant } from "./restaurant-context";
 import {
+ BanknoteIcon,
  CheckIcon,
- ChevronLeftIcon,
  ChevronRightIcon,
  CopyIcon,
+ EditIcon,
  MoreVerticalIcon,
+ PercentIcon,
  PlusIcon,
  ReceiptIcon,
  RefreshIcon,
@@ -18,7 +19,7 @@ import {
  SwapIcon,
  TrashIcon,
 } from "./icons";
-import { ConfirmDialog, EmptyState, Modal } from "./ui";
+import { ConfirmDialog, Modal } from "./ui";
 import { DiscountModal } from "./discount-modal";
 import { FloorMap } from "./tables";
 import { CtaState } from "./reservations";
@@ -26,14 +27,13 @@ import { useDashboardRouter } from "../_spa/router";
 import {
  formatPrice,
  formatTimeShort,
- formatElapsedHMS,
  currencySymbolOf,
  parseDecimal,
  newId,
 } from "./helpers";
 import { getMlWithFallback } from "./i18n";
-import { inputClass } from "./tokens";
-import { createOrder, deleteOrder, patchOrder, splitOrder } from "./api";
+import { primaryBtn, secondaryBtn } from "./tokens";
+import { createOrder, deleteOrder, patchOrder, patchOrderItemStatuses, splitOrder } from "./api";
 import type {
  Category,
  Discount,
@@ -49,6 +49,7 @@ import type {
 import { track } from "@/lib/dashboard-events";
 import {
  ITEM_STATUS_KEYS,
+ STATUS_CHIP_CLS,
  STATUS_DOT_CLS,
  STATUS_TEXT_CLS,
  STATUS_ORDER,
@@ -76,9 +77,18 @@ type ModalView =
  | {
  kind: "addItem";
  orderId: string | null;
- step: "category" | "dish" | "configure";
+ // "group" only exists when the menu has category groups — it precedes
+ // "category" and filters it via groupId.
+ step: "group" | "category" | "dish" | "configure";
  categoryId?: string;
  dishId?: string;
+ // Group filter for the category step: string = group id, null = the
+ // "without group" bucket, undefined = no filter (menu has no groups).
+ groupId?: string | null;
+ // Editing an existing order item: the wizard opens straight on the
+ // configure step (group/category/dish are fixed) prefilled with the
+ // item's options + notes, and saving replaces them on that item.
+ editItemId?: string;
  };
 
 export function OrdersPage({
@@ -135,11 +145,15 @@ export function OrdersPage({
 
  // Sort by daily number so the orders list (global and per-table) reads
  // top→bottom by creation order. Date order ≈ creation order but ties on
- // same-second rows would otherwise be undefined.
- const activeOrders = orders
+ // same-second rows would otherwise be undefined. Memoized so the derived
+ // sets below (occupied/ready) don't recompute on unrelated re-renders.
+ const activeOrders = useMemo(
+ () =>
+ orders
  .filter((o) => o.status === "active")
- .slice()
- .sort((a, b) => (a.dailyNumber ?? 0) - (b.dailyNumber ?? 0));
+ .sort((a, b) => (a.dailyNumber ?? 0) - (b.dailyNumber ?? 0)),
+ [orders],
+ );
  const occupiedIds = useMemo(
  () => new Set(activeOrders.map((o) => o.tableId).filter((x): x is string => !!x)),
  [activeOrders],
@@ -160,6 +174,13 @@ export function OrdersPage({
  }
  return result;
  }, [tables, activeOrders]);
+
+ // Dishes still present in the menu — an order item is editable only while
+ // its dish exists (edit re-opens the dish wizard, which needs live options).
+ const menuDishIds = useMemo(
+ () => new Set(categories.flatMap((c) => c.dishes.map((d) => d.id))),
+ [categories],
+ );
 
  function tileBadge(tableId: string): number | null {
  const tableOrders = activeOrders.filter((o) => o.tableId === tableId);
@@ -184,6 +205,12 @@ export function OrdersPage({
  ? orders.find((o) => o.id === view.orderId) || null
  : null;
 
+ // Add-item wizard starts on the group picker when the menu has category
+ // groups; otherwise it goes straight to the category list.
+ const addItemFirstStep = categories.some((c) => c.isGroup)
+ ? ("group" as const)
+ : ("category" as const);
+
  function openTable(id: string) {
  setActiveTableId(id);
  setOpenedFrom("table");
@@ -194,6 +221,36 @@ export function OrdersPage({
  setView(null);
  setActiveTableId(null);
  }
+
+ // External-sync guard: SSE/poll can complete or delete the order (or the
+ // item being edited) from another device while its modal is open here.
+ // Close / step back instead of leaving an empty shell on screen.
+ useEffect(() => {
+ if (!view) return;
+ const guardedOrderId =
+ view.kind === "order" ? view.orderId : view.kind === "addItem" ? view.orderId : null;
+ if (!guardedOrderId) return;
+ const target = orders.find((o) => o.id === guardedOrderId);
+ if (!target || target.status !== "active") {
+ setView(null);
+ setActiveTableId(null);
+ // Satellite modals target the same order — orphaning them over a closed
+ // page (or letting them re-patch a completed order) makes no sense.
+ setMoreOpen(false);
+ setConfirmCompleteOrder((cur) => (cur === guardedOrderId ? null : cur));
+ setConfirmDeleteOrder((cur) => (cur === guardedOrderId ? null : cur));
+ setChangeTableForOrder((cur) => (cur === guardedOrderId ? null : cur));
+ setSplitForOrder((cur) => (cur === guardedOrderId ? null : cur));
+ setDiscountForOrder((cur) => (cur === guardedOrderId ? null : cur));
+ setDiscountForItem((cur) => (cur?.orderId === guardedOrderId ? null : cur));
+ return;
+ }
+ if (view.kind === "addItem" && view.editItemId) {
+ const stillThere = target.items.some((it) => it.id === view.editItemId);
+ if (!stillThere) setView({ kind: "order", orderId: guardedOrderId });
+ }
+ // eslint-disable-next-line react-hooks/exhaustive-deps
+ }, [orders, view]);
 
  async function persistOrder(orderId: string, patch: Partial<Order>, base?: Order) {
  // First-item adds pass `base` explicitly because the closure-captured
@@ -230,7 +287,15 @@ export function OrdersPage({
  const order = orders.find((o) => o.id === orderId);
  if (!order) return;
  const items = order.items.map((it) => (it.id === itemId ? { ...it, status } : it));
- persistOrder(orderId, { items });
+ // Optimistic local update, then the race-safe per-item merge endpoint —
+ // NOT persistOrder: a whole-items PATCH here would clobber statuses another
+ // device (KDS) changed since our snapshot.
+ setOrders((all) => all.map((o) => (o.id === orderId ? { ...o, items } : o)));
+ if (demoMode) return;
+ patchOrderItemStatuses(orderId, [{ itemId, status }]).catch((err) => {
+ // No rollback — the next SSE event carries the server-confirmed copy.
+ showApiError(err, "patchOrder");
+ });
  }
 
  function removeItem(orderId: string, itemId: string) {
@@ -332,7 +397,9 @@ export function OrdersPage({
  o.id === orderId ? { ...o, tableId: table.id, tableNumber: table.number } : o,
  ),
  );
- closeModal();
+ // Stay in the order detail — just retarget the active table so back/list
+ // navigation follows the order to its new table.
+ setActiveTableId(table.id);
  if (demoMode) return;
  try {
  await patchOrder(orderId, { tableNumber: table.number });
@@ -386,6 +453,22 @@ export function OrdersPage({
  track("dash_orders_order_save_item");
  const currentView = view;
  if (!currentView || currentView.kind !== "addItem") return;
+ // Edit mode: replace the existing item's options + notes in place. The
+ // dish, name/price snapshots, status, discount and createdAt stay as-is.
+ if (currentView.editItemId) {
+ const editOrderId = currentView.orderId;
+ if (!editOrderId) return;
+ const base = orders.find((o) => o.id === editOrderId);
+ if (!base) return;
+ const items = base.items.map((it) =>
+ it.id === currentView.editItemId
+ ? { ...it, options: itemData.options, notes: itemData.notes }
+ : it,
+ );
+ persistOrder(editOrderId, { items }, base);
+ setView({ kind: "order", orderId: editOrderId });
+ return;
+ }
  let orderId = currentView.orderId;
  let baseOrder: Order | null = null;
  if (!orderId) {
@@ -414,19 +497,26 @@ export function OrdersPage({
  }
 
  // Заголовок, подзаголовок, контент и футер модалки зависят от уровня.
- let modalTitle: React.ReactNode = "";
- let modalSubtitle: React.ReactNode = undefined;
- let modalContent: React.ReactNode = null;
- let modalFooter: React.ReactNode = null;
- let modalSize: "sm" | "md" | "lg" = "md";
- if (view?.kind === "list" || view?.kind === "addItem") modalSize = "sm";
+ // Three separate Modal instances (list / order / addItem) — each keeps its
+ // own fixed size and content, so navigating between steps cross-fades two
+ // modals instead of one modal snapping its width/height mid-flight.
+ let listTitle: React.ReactNode = "";
+ let listContent: React.ReactNode = null;
+ let listFooter: React.ReactNode = null;
+ let orderTitle: React.ReactNode = "";
+ let orderSubtitle: React.ReactNode = undefined;
+ let orderContent: React.ReactNode = null;
+ let orderFooter: React.ReactNode = null;
+ let addItemTitle: React.ReactNode = "";
+ let addItemContent: React.ReactNode = null;
+ let addItemFooter: React.ReactNode = null;
  if (view) {
  if (view.kind === "list") {
  const tableLabel = isNoTable
  ? t("noTableLabel", { defaultValue: "No table" })
  : t("tableLabel", { number: activeTable?.number ?? "?" });
- modalTitle = tableLabel;
- modalContent = (
+ listTitle = tableLabel;
+ listContent = (
  <OrderListView
  orders={activeTableOrders}
  currencySymbol={currencySymbol}
@@ -437,17 +527,18 @@ export function OrdersPage({
  />
  );
  if (!isNoTable) {
- modalFooter = (
+ listFooter = (
  <div className="flex justify-end">
  <button
  type="button"
+ data-testid="order-new"
  onClick={() =>
- setView({ kind: "addItem", orderId: null, step: "category" })
+ setView({ kind: "addItem", orderId: null, step: addItemFirstStep })
  }
- className="inline-flex items-center gap-1.5 h-8 px-3 text-xs font-medium text-primary-foreground bg-primary-gradient rounded-lg transition-colors"
+ className={primaryBtn + " inline-flex items-center gap-1.5"}
  >
- <PlusIcon size={13} />
- {activeTableOrders.length === 0 ? t("startOrder") : t("newOrder")}
+ <PlusIcon size={15} className="shrink-0" />
+ <span className="truncate">{activeTableOrders.length === 0 ? t("startOrder") : t("newOrder")}</span>
  </button>
  </div>
  );
@@ -468,22 +559,26 @@ export function OrdersPage({
  defaultValue: "Order #{number}",
  number: currentOrder.dailyNumber,
  });
- modalTitle = (
+ orderTitle = (
  <span>
  {orderLabel}
  {overall && overallText ? (
  <>
  {" · "}
- <span className={OVERALL_STATUS_TEXT_CLS[overall]}>{overallText}</span>
+ {/* font-normal — the h3 header is bold, the status shouldn't be. */}
+ <span className={"font-normal " + OVERALL_STATUS_TEXT_CLS[overall]}>{overallText}</span>
  </>
  ) : null}
  </span>
  );
- modalSubtitle = (
+ orderSubtitle = (
  <span>
- {t("createdLabel", { defaultValue: "Created" })}: {formatTimeShort(currentOrder.createdAt)}
+ {/* Labels only on desktop — mobile shows just the time + amount. */}
+ <span className="hidden md:inline">{t("createdLabel", { defaultValue: "Created" })}: </span>
+ {formatTimeShort(currentOrder.createdAt)}
  {" · "}
- {t("total")}: {formatPrice(total, currencySymbol)}
+ <span className="hidden md:inline">{t("total")}: </span>
+ {formatPrice(total, currencySymbol)}
  {currentOrder.discount ? (
  <>
  {" "}
@@ -492,7 +587,7 @@ export function OrdersPage({
  ) : null}
  </span>
  );
- modalContent = (
+ orderContent = (
  <OrderDetailView
  order={currentOrder}
  defaultLang={defaultLang}
@@ -503,101 +598,47 @@ export function OrdersPage({
  onRemoveItem={(itemId) => removeItem(currentOrder.id, itemId)}
  onDuplicateItem={(itemId) => duplicateItem(currentOrder.id, itemId)}
  onItemDiscount={(itemId) => setDiscountForItem({ orderId: currentOrder.id, itemId })}
- />
+ editableDishIds={menuDishIds}
+ onEditItem={(itemId) => {
+ const it = currentOrder.items.find((i) => i.id === itemId);
+ if (!it) return;
+ const cat = categories.find(
+ (c) => !c.isGroup && c.dishes.some((d) => d.id === it.dishId),
  );
- const hasUnservedItems =
- currentOrder.items.length > 0 &&
- currentOrder.items.some((it) => it.status !== "served");
- modalFooter = (
- <div className="flex items-center justify-between gap-2">
- <div className="relative">
- <button
- type="button"
- onClick={() => setMoreOpen((v) => !v)}
- className="w-8 h-8 inline-flex items-center justify-center rounded-lg text-foreground bg-card border border-border transition-colors"
- aria-label="More"
- title="More"
- >
- <MoreVerticalIcon size={14} />
- </button>
- {moreOpen ? (
- <>
- <div
- className="fixed inset-0 z-40"
- onClick={() => setMoreOpen(false)}
- />
- <div className="absolute left-0 bottom-full mb-2 z-50 min-w-[180px] bg-card border border-border rounded-lg shadow-lg overflow-hidden">
- {tables.length > 0 ? (
- <button
- type="button"
- onClick={() => {
- setMoreOpen(false);
- setChangeTableForOrder(currentOrder.id);
- }}
- className="w-full flex items-center gap-2 px-3 h-9 text-left text-xs font-medium text-foreground transition-colors"
- >
- <SwapIcon size={13} />
- {t("changeTable", { defaultValue: "Change table" })}
- </button>
- ) : null}
- <button
- type="button"
- onClick={() => {
- setMoreOpen(false);
- setSplitForOrder(currentOrder.id);
- }}
- disabled={currentOrder.items.length < 2}
- className="w-full flex items-center gap-2 px-3 h-9 text-left text-xs font-medium text-foreground transition-colors disabled:opacity-40"
- >
- <SplitIcon size={13} />
- {t("splitOrder", { defaultValue: "Split order" })}
- </button>
- <button
- type="button"
- onClick={() => {
- setMoreOpen(false);
- setDiscountForOrder(currentOrder.id);
- }}
- className="w-full flex items-center gap-2 px-3 h-9 text-left text-xs font-medium text-foreground transition-colors"
- >
- <span className="inline-flex items-center justify-center w-[13px] text-[13px] font-bold">%</span>
- {currentOrder.discount
- ? t("discountEdit", { defaultValue: "Edit discount" })
- : t("discountAdd", { defaultValue: "Add discount" })}
- </button>
- <button
- type="button"
- onClick={() => {
- setMoreOpen(false);
- setConfirmDeleteOrder(currentOrder.id);
- }}
- className="w-full flex items-center gap-2 px-3 h-9 text-left text-xs font-medium text-red-600 transition-colors"
- >
- <TrashIcon size={13} />
- {t("deleteOrder")}
- </button>
- </div>
- </>
- ) : null}
- </div>
- <div className="flex items-center gap-2">
- <button
- type="button"
- onClick={() => {
- track("dash_orders_order_add_item");
+ if (!cat) return;
  setView({
  kind: "addItem",
  orderId: currentOrder.id,
- step: "category",
+ step: "configure",
+ categoryId: cat.id,
+ dishId: it.dishId,
+ editItemId: itemId,
  });
  }}
- className="inline-flex items-center gap-1.5 h-8 px-3 text-xs font-medium text-foreground bg-card border border-border rounded-lg transition-colors"
- >
- <PlusIcon size={13} />
- {t("dishShort", { defaultValue: "Dish" })}
- </button>
+ />
+ );
+ orderFooter = (
+ <div className="flex items-center justify-between gap-2">
  <button
  type="button"
+ data-testid="order-actions"
+ onClick={() => setMoreOpen(true)}
+ // Square 36px icon button on mobile; grows into a labeled
+ // secondary button (matching secondaryBtn) on desktop.
+ className="h-[36px] w-[36px] md:w-auto md:px-[16px] shrink-0 inline-flex items-center justify-center gap-1.5 text-[14px] font-semibold text-foreground bg-muted rounded-lg hover:bg-muted/70 transition-colors"
+ aria-label={t("orderActions", { defaultValue: "Actions" })}
+ >
+ <MoreVerticalIcon size={16} className="shrink-0" />
+ <span className="hidden md:inline truncate">{t("orderActions", { defaultValue: "Actions" })}</span>
+ </button>
+ {/* min-w-0 down the chain lets narrow screens truncate the button
+     labels instead of overflowing the footer. */}
+ <div className="flex items-center gap-2 min-w-0">
+ {/* Add item is the frequent action → primary; closing happens once
+     per order and pays via its own confirm modal → secondary. */}
+ <button
+ type="button"
+ data-testid="order-close"
  onClick={() => {
  // Always go through the confirm modal — even when no payment
  // methods are configured. The modal collapses to just the
@@ -606,30 +647,54 @@ export function OrdersPage({
  setConfirmCompleteOrder(currentOrder.id);
  }}
  disabled={currentOrder.items.length === 0}
- className="inline-flex items-center gap-1.5 h-8 px-3 text-xs font-medium text-primary-foreground bg-primary-gradient rounded-lg transition-colors disabled:opacity-40"
+ className={secondaryBtn + " inline-flex items-center gap-1.5 min-w-0"}
  >
- <CheckIcon size={13} />
- {t("closeShort", { defaultValue: "Close" })}
+ <BanknoteIcon size={15} className="shrink-0" />
+ <span className="truncate">{t("closeShort", { defaultValue: "Close" })}</span>
+ </button>
+ <button
+ type="button"
+ data-testid="order-add-item"
+ onClick={() => {
+ track("dash_orders_order_add_item");
+ setView({
+ kind: "addItem",
+ orderId: currentOrder.id,
+ step: addItemFirstStep,
+ });
+ }}
+ className={primaryBtn + " inline-flex items-center gap-1.5 min-w-0"}
+ >
+ <PlusIcon size={15} className="shrink-0" />
+ <span className="truncate">{t("dishShort", { defaultValue: "Item" })}</span>
  </button>
  </div>
  </div>
  );
  } else if (view.kind === "addItem") {
- if (view.step === "category") {
- modalTitle = t("selectCategory", { defaultValue: "Select category" });
+ if (view.step === "group") {
+ addItemTitle = t("selectGroup", { defaultValue: "Select group" });
+ } else if (view.step === "category") {
+ addItemTitle = t("selectCategory", { defaultValue: "Select category" });
  } else if (view.step === "dish") {
- modalTitle = t("selectDish", { defaultValue: "Select dish" });
+ addItemTitle = t("selectDish", { defaultValue: "Select dish" });
  } else {
- modalTitle = wizardTitle || t("addItem");
+ addItemTitle = wizardTitle || t("addItem");
  }
- if (view.step === "configure") modalFooter = wizardFooter;
- modalContent = (
+ if (view.step === "configure") addItemFooter = wizardFooter;
+ // Edit mode: the item being edited (prefills the wizard).
+ const editItem =
+ view.editItemId && view.orderId
+ ? orders.find((o) => o.id === view.orderId)?.items.find((it) => it.id === view.editItemId) ?? null
+ : null;
+ addItemContent = (
  <AddItemView
  categories={categories}
  defaultLang={defaultLang}
  currencySymbol={currencySymbol}
  view={view}
  setView={setView}
+ editItem={editItem}
  onBackToOrder={() => {
  if (view.orderId) setView({ kind: "order", orderId: view.orderId });
  else setView({ kind: "list" });
@@ -659,7 +724,7 @@ export function OrdersPage({
  track("dash_orders_click_new_no_table");
  setActiveTableId(NO_TABLE);
  setOpenedFrom("list");
- setView({ kind: "addItem", orderId: null, step: "category" });
+ setView({ kind: "addItem", orderId: null, step: addItemFirstStep });
  }
 
  const floorPane = hasTables ? (
@@ -690,18 +755,18 @@ export function OrdersPage({
  {t("newOrder")}
  </button>
  ) : activeOrders.length === 0 ? (
- <div className="bg-card border border-border rounded-xl px-6 py-10 text-center h-full flex items-center justify-center">
+ <div className="rounded-2xl bg-[hsl(var(--menu-card-bg))] border border-border px-6 py-10 text-center h-full flex items-center justify-center">
  <div>
  <div className="text-sm font-medium text-foreground mb-1">
  {t("noActiveTitle", { defaultValue: "No active orders" })}
  </div>
- <div className="text-xs text-muted-foreground">
+ <div className="text-sm text-muted-foreground">
  {t("noActiveBody", { defaultValue: "New orders will show up here." })}
  </div>
  </div>
  </div>
  ) : (
- <div className="bg-card border border-border rounded-xl overflow-hidden flex flex-col max-h-full">
+ <div className="rounded-2xl bg-[hsl(var(--menu-card-bg))] border border-border overflow-hidden flex flex-col max-h-full">
  <div className="min-h-0 overflow-y-auto divide-y divide-border">
  {activeOrders.map((o) => (
  <OrderListCard
@@ -709,7 +774,6 @@ export function OrdersPage({
  order={o}
  currencySymbol={currencySymbol}
  onClick={() => openOrderDirect(o)}
- variant="row"
  />
  ))}
  </div>
@@ -717,16 +781,16 @@ export function OrdersPage({
  );
 
  // Unified dual-pane layout: kanban-like floor map (square, priority on
- // desktop) + a single orders card with divider-separated rows that
- // scroll inside. Admin host adds the standard max-w-5xl container so
- // the page doesn't stretch on wide displays; kiosk host runs
- // edge-to-edge. Outer height pins to viewport (minus topbar) so the
- // orders card has an explicit height to fill — without that the
- // internal scroll has no upper bound and the card sprawls.
- // Mobile no longer reserves bottom-nav space (the nav is a side strip now);
- // desktop keeps the same breathing room for the page header + gutters.
- const outerHeightClass =
- "h-[calc(100dvh-var(--topbar-h,0px)-2.5rem-env(safe-area-inset-bottom))] md:h-[calc(100dvh-var(--topbar-h,0px)-3.5rem)] ";
+ // desktop) + a single orders card with divider-separated rows. Admin host
+ // adds the standard max-w-5xl container so the page doesn't stretch on wide
+ // displays; kiosk host runs edge-to-edge.
+ // Desktop (lg+, side-by-side): outer height pins to viewport (minus topbar)
+ // so the orders card has an explicit height and scrolls internally —
+ // without that the internal scroll has no upper bound and the card sprawls.
+ // Below lg (map stacked above the list): no pinned height — the card grows
+ // to its content and the page itself scrolls, instead of clipping the card
+ // into the space left under the square map.
+ const outerHeightClass = "lg:h-[calc(100dvh-var(--topbar-h,0px)-3.5rem)] ";
 
  // No tables → replace the whole orders surface with the same "add a table"
  // placeholder the bookings page uses. On the dashboard it offers a button to
@@ -765,16 +829,22 @@ export function OrdersPage({
 
 
  <Modal
- open={!!view}
+ open={view?.kind === "list"}
  onClose={() => {
- if (!view) return;
- if (view.kind === "addItem") {
- if (view.orderId) setView({ kind: "order", orderId: view.orderId });
- else if (openedFrom === "list") closeModal();
- else setView({ kind: "list" });
- return;
- }
- if (view.kind === "order") {
+ if (view?.kind !== "list") return;
+ closeModal();
+ }}
+ title={listTitle}
+ size="sm"
+ footer={listFooter}
+ >
+ {listContent}
+ </Modal>
+
+ <Modal
+ open={view?.kind === "order"}
+ onClose={() => {
+ if (view?.kind !== "order") return;
  if (openedFrom === "list") {
  closeModal();
  } else if (activeTableOrders.length > 1) {
@@ -782,19 +852,54 @@ export function OrdersPage({
  } else {
  closeModal();
  }
- return;
- }
- closeModal();
  }}
- onBack={view?.kind === "addItem" ? headerBack : null}
- title={modalTitle}
- subtitle={modalSubtitle}
- size={modalSize}
- footer={modalFooter}
- closeOnBackdrop={view?.kind !== "addItem"}
+ title={orderTitle}
+ subtitle={orderSubtitle}
+ size="md"
+ footer={orderFooter}
  >
- {modalContent}
+ {orderContent}
  </Modal>
+
+ <Modal
+ open={view?.kind === "addItem"}
+ onClose={() => {
+ if (view?.kind !== "addItem") return;
+ if (view.orderId) setView({ kind: "order", orderId: view.orderId });
+ else if (openedFrom === "list") closeModal();
+ else setView({ kind: "list" });
+ }}
+ onBack={headerBack}
+ title={addItemTitle}
+ size="sm"
+ footer={addItemFooter}
+ closeOnBackdrop={false}
+ >
+ {addItemContent}
+ </Modal>
+
+ <OrderActionsModal
+ open={moreOpen && view?.kind === "order" && !!currentOrder}
+ order={view?.kind === "order" ? currentOrder : null}
+ hasTables={tables.length > 0}
+ onClose={() => setMoreOpen(false)}
+ onChangeTable={() => {
+ setMoreOpen(false);
+ if (currentOrder) setChangeTableForOrder(currentOrder.id);
+ }}
+ onSplit={() => {
+ setMoreOpen(false);
+ if (currentOrder) setSplitForOrder(currentOrder.id);
+ }}
+ onDiscount={() => {
+ setMoreOpen(false);
+ if (currentOrder) setDiscountForOrder(currentOrder.id);
+ }}
+ onDelete={() => {
+ setMoreOpen(false);
+ if (currentOrder) setConfirmDeleteOrder(currentOrder.id);
+ }}
+ />
 
  <ConfirmDialog
  open={!!confirmDeleteOrder}
@@ -810,10 +915,6 @@ export function OrdersPage({
 
  <CompleteOrderModal
  open={!!confirmCompleteOrder}
- hasUnserved={
- !!confirmCompleteOrder &&
- (orders.find((o) => o.id === confirmCompleteOrder)?.items.some((it) => it.status !== "served") ?? false)
- }
  paymentMethods={restaurant.paymentMethods}
  onCancel={() => setConfirmCompleteOrder(null)}
  onConfirm={(paymentMethodId) => {
@@ -907,7 +1008,7 @@ function OrderListView({
  return (
  <div className="text-center py-10">
  <ReceiptIcon size={28} className="mx-auto text-muted-foreground/50 mb-2" />
- <p className="text-xs text-muted-foreground">{t("noActiveShort")}</p>
+ <p className="text-sm text-muted-foreground">{t("noActiveShort")}</p>
  </div>
  );
  }
@@ -919,6 +1020,7 @@ function OrderListView({
  order={order}
  currencySymbol={currencySymbol}
  onClick={() => onSelect(order.id)}
+ showTable={false}
  />
  ))}
  </div>
@@ -929,12 +1031,13 @@ function OrderListCard({
  order,
  currencySymbol,
  onClick,
- variant = "row",
+ showTable = true,
 }: {
  order: Order;
  currencySymbol: string;
  onClick: () => void;
- variant?: "row" | "card";
+ // False inside the table modal — the table is already in the modal title.
+ showTable?: boolean;
 }) {
  const t = useTranslations("dashboard.orders");
  const total = calcOrderTotal(order);
@@ -951,19 +1054,23 @@ function OrderListCard({
  ? t("tableLabel", { number: order.tableNumber })
  : t("noTableLabel", { defaultValue: "No table" });
 
- const cls =
- variant === "card"
- ? "w-full text-left bg-card border border-border rounded-xl px-4 py-3 transition-colors"
- : "w-full text-left px-5 py-3 transition-colors";
  return (
- <button type="button" onClick={onClick} className={cls}>
+ <button
+ type="button"
+ data-testid="order-list-card"
+ onClick={onClick}
+ className="w-full text-left px-5 py-3 select-none transition-colors md:hover:bg-primary/5"
+ >
  <div className="flex items-center gap-3">
  <div className="min-w-0 flex-1">
- <div className="flex items-center gap-2">
- <div className="min-w-0 flex-1 text-sm font-medium text-foreground truncate">
+ <div className="text-sm font-medium text-foreground truncate">
  <span>{orderNum}</span>
+ {showTable ? (
+ <>
  <span className="text-muted-foreground font-normal"> · </span>
  <span>{tableLabel}</span>
+ </>
+ ) : null}
  {statusLabel && overallStatus ? (
  <>
  <span className="text-muted-foreground font-normal"> · </span>
@@ -971,11 +1078,7 @@ function OrderListCard({
  </>
  ) : null}
  </div>
- <div className="shrink-0 text-sm font-medium text-foreground tabular-nums">
- {formatPrice(total, currencySymbol)}
- </div>
- </div>
- <div className="text-xs text-muted-foreground mt-0.5 flex items-center gap-1.5">
+ <div className="text-sm text-muted-foreground mt-0.5 flex items-center gap-1.5">
  <span className="min-w-0 flex-1 truncate">
  {t("createdLabel", { defaultValue: "Created" })} {formatTimeShort(order.createdAt)}
  {" · "}
@@ -988,7 +1091,10 @@ function OrderListCard({
  ) : null}
  </div>
  </div>
- <ChevronRightIcon size={14} className="shrink-0 text-muted-foreground -mr-2" />
+ {/* Price sits outside the two-line block so it centers vertically. */}
+ <div className="shrink-0 text-sm font-medium text-foreground tabular-nums">
+ {formatPrice(total, currencySymbol)}
+ </div>
  </div>
  </button>
  );
@@ -1001,13 +1107,6 @@ function computeOrderStatus(order: Order): OverallStatus | null {
  if (order.items.every((it) => it.status === "served")) return "served";
  return "inProgress";
 }
-
-const OVERALL_STATUS_CLS: Record<OverallStatus, string> = {
- served:
- "bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-900",
- inProgress:
- "bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 border-amber-200 dark:border-amber-900",
-};
 
 const OVERALL_STATUS_TEXT_CLS: Record<OverallStatus, string> = {
  served: "text-emerald-700 dark:text-emerald-300",
@@ -1024,6 +1123,8 @@ function OrderDetailView({
  onRemoveItem,
  onDuplicateItem,
  onItemDiscount,
+ onEditItem,
+ editableDishIds,
 }: {
  order: Order;
  defaultLang: string;
@@ -1032,37 +1133,110 @@ function OrderDetailView({
  onRemoveItem: (itemId: string) => void;
  onDuplicateItem: (itemId: string) => void;
  onItemDiscount: (itemId: string) => void;
+ onEditItem: (itemId: string) => void;
+ // Items whose dish is gone from the menu can't be edited.
+ editableDishIds: Set<string>;
 }) {
  const t = useTranslations("dashboard.orders");
+ // Tapping a row opens a select-style actions modal (change status,
+ // duplicate, discount, remove) instead of the old per-row "⋮" dropdown.
+ // "Change status" chains into a second select-style picker.
+ const [actionsFor, setActionsFor] = useState<string | null>(null);
+ const [statusPickFor, setStatusPickFor] = useState<string | null>(null);
+ const actionsItem = order.items.find((it) => it.id === actionsFor) || null;
+ const statusPickItem = order.items.find((it) => it.id === statusPickFor) || null;
+
+ // Hybrid status sort: served items sink below the active ones, but the
+ // bucket is a SNAPSHOT — each item keeps the bucket it had when it first
+ // appeared in this detail view, so rows don't jump under the finger when a
+ // status is changed mid-session. Reopening the detail re-groups fresh.
+ const statusSnapRef = useRef<{ orderId: string; served: Map<string, boolean> }>({
+ orderId: order.id,
+ served: new Map(),
+ });
+ if (statusSnapRef.current.orderId !== order.id) {
+ statusSnapRef.current = { orderId: order.id, served: new Map() };
+ }
+ const servedSnap = statusSnapRef.current.served;
+ for (const it of order.items) {
+ if (!servedSnap.has(it.id)) servedSnap.set(it.id, it.status === "served");
+ }
 
  if (order.items.length === 0) {
  return (
  <div className="text-center py-10">
  <ReceiptIcon size={28} className="mx-auto text-muted-foreground/50 mb-2" />
- <p className="text-xs text-muted-foreground">{t("noItems")}</p>
+ <p className="text-sm text-muted-foreground">{t("noItems")}</p>
  </div>
  );
  }
 
  const sortedItems = [...order.items].sort((a, b) => {
+ const sa = servedSnap.get(a.id) ? 1 : 0;
+ const sb = servedSnap.get(b.id) ? 1 : 0;
+ if (sa !== sb) return sa - sb;
  if (a.dishId !== b.dishId) return a.dishId.localeCompare(b.dishId);
  return a.createdAt.localeCompare(b.createdAt);
  });
  return (
- <div className="-my-3 divide-y divide-border">
+ <>
+ <div className="-m-5 divide-y divide-border">
  {sortedItems.map((item) => (
  <OrderItemCard
  key={item.id}
  item={item}
  defaultLang={defaultLang}
  currencySymbol={currencySymbol}
- onStatusChange={(status) => onItemStatusChange(item.id, status)}
- onRemove={() => onRemoveItem(item.id)}
- onDuplicate={() => onDuplicateItem(item.id)}
- onDiscount={() => onItemDiscount(item.id)}
+ onOpenActions={() => setActionsFor(item.id)}
  />
  ))}
  </div>
+ <ItemActionsModal
+ open={!!actionsItem}
+ item={actionsItem}
+ defaultLang={defaultLang}
+ onClose={() => setActionsFor(null)}
+ onChangeStatus={() => {
+ if (actionsItem) setStatusPickFor(actionsItem.id);
+ setActionsFor(null);
+ }}
+ onEdit={
+ actionsItem && editableDishIds.has(actionsItem.dishId)
+ ? () => {
+ onEditItem(actionsItem.id);
+ setActionsFor(null);
+ }
+ : null
+ }
+ onDuplicate={() => {
+ if (actionsItem) onDuplicateItem(actionsItem.id);
+ setActionsFor(null);
+ }}
+ onDiscount={() => {
+ if (actionsItem) onItemDiscount(actionsItem.id);
+ setActionsFor(null);
+ }}
+ onRemove={() => {
+ if (actionsItem) onRemoveItem(actionsItem.id);
+ setActionsFor(null);
+ }}
+ />
+ <ItemStatusModal
+ open={!!statusPickItem}
+ item={statusPickItem}
+ onClose={() => setStatusPickFor(null)}
+ onStatusChange={(status) => {
+ if (statusPickItem) {
+ // Explicit change from this view: refresh the item's sort bucket so
+ // the list re-groups right away (the snapshot only guards against
+ // rows jumping on external/SSE updates).
+ servedSnap.set(statusPickItem.id, status === "served");
+ onItemStatusChange(statusPickItem.id, status);
+ }
+ setStatusPickFor(null);
+ }}
+ />
+ </>
  );
 }
 
@@ -1070,77 +1244,84 @@ function OrderItemCard({
  item,
  defaultLang,
  currencySymbol,
- onStatusChange,
- onRemove,
- onDuplicate,
- onDiscount,
+ onOpenActions,
 }: {
  item: OrderItem;
  defaultLang: string;
  currencySymbol: string;
- onStatusChange: (status: OrderItemStatus) => void;
- onRemove: () => void;
- onDuplicate: () => void;
- onDiscount: () => void;
+ onOpenActions: () => void;
 }) {
  const t = useTranslations("dashboard.orders");
  const statusKey = ITEM_STATUS_KEYS[item.status] || ITEM_STATUS_KEYS.pending;
  const price = calcItemPrice(item);
 
+ // Whole row is the tap target (mirrors the dish rows in the menu editor);
+ // it opens the select-style actions modal.
  return (
- <div className="py-3">
- <div className="flex items-center gap-2">
+ <div
+ data-testid="order-item"
+ role="button"
+ tabIndex={0}
+ onClick={onOpenActions}
+ onKeyDown={(e) => {
+ if (e.key === "Enter" || e.key === " ") {
+ e.preventDefault();
+ onOpenActions();
+ }
+ }}
+ className={
+ "py-3 px-5 select-none cursor-pointer transition-colors md:hover:bg-primary/5" +
+ // Served rows are done — mute them so the active work reads first.
+ (item.status === "served" ? " opacity-60" : "")
+ }
+ >
+ {/* Status chip · dish name (stretches + truncates) · price on the right.
+     min-h matches the dish rows in the menu editor (24px content line). */}
+ <div className="flex items-center gap-2 min-h-[24px]">
  <span
- className={"shrink-0 w-2 h-2 rounded-full " + STATUS_DOT_CLS[item.status]}
- title={t(statusKey)}
- aria-label={t(statusKey)}
- />
- <div className="min-w-0 flex-1 flex items-baseline gap-1 text-sm font-medium text-foreground leading-6">
- <span className="min-w-0 truncate">
+ className={
+ "shrink-0 inline-flex items-center h-[24px] px-2.5 rounded-md text-xs " +
+ STATUS_CHIP_CLS[item.status]
+ }
+ >
+ {t(statusKey)}
+ </span>
+ <span className="min-w-0 flex-1 text-sm font-medium text-foreground truncate">
  {getMlWithFallback(item.dishNameSnapshot, defaultLang, defaultLang)}
  </span>
- <span className="shrink-0 text-[13px] text-muted-foreground font-normal tabular-nums inline-flex items-center gap-1.5">
- · {formatPrice(price, currencySymbol)}
- {item.discount ? <DiscountBadge discount={item.discount} currencySymbol={currencySymbol} /> : null}
+ {item.discount ? (
+ <DiscountBadge discount={item.discount} currencySymbol={currencySymbol} />
+ ) : null}
+ <span className="shrink-0 text-sm text-muted-foreground tabular-nums">
+ {formatPrice(price, currencySymbol)}
  </span>
  </div>
- <ItemMoreMenu
- currentStatus={item.status}
- onStatusChange={onStatusChange}
- onDuplicate={onDuplicate}
- onDiscount={onDiscount}
- hasDiscount={!!item.discount}
- onRemove={onRemove}
- statusLabels={{
- pending: t("statusPending"),
- cooking: t("statusCooking"),
- ready: t("statusReady"),
- served: t("statusServed"),
- }}
- duplicateLabel={t("duplicateItem", { defaultValue: "Duplicate" })}
- discountLabel={item.discount
- ? t("discountEdit", { defaultValue: "Edit discount" })
- : t("discountAdd", { defaultValue: "Add discount" })}
- removeLabel={t("removeItem")}
- />
- </div>
  {item.options.length > 0 ? (
- <div className="text-xs text-muted-foreground mt-0.5 space-y-0.5 pl-4">
+ <div className="mt-3 flex flex-wrap gap-1.5">
  {item.options.map((o, i) => {
  const name = getMlWithFallback(o.variantName, defaultLang, defaultLang);
  const delta = parseDecimal(o.priceDelta) || 0;
  const qty = o.quantity ?? 1;
- const parts: string[] = [];
- if (qty > 1) parts.push(`×${qty}`);
- parts.push(name);
- if (delta > 0) parts.push(`+${formatPrice(delta, currencySymbol)}`);
- return <div key={i}>{parts.join(" · ")}</div>;
+ return (
+ <span
+ key={i}
+ className="inline-flex items-center gap-1 max-w-full px-2 py-0.5 rounded-md bg-secondary text-xs text-muted-foreground"
+ >
+ <span className="shrink-0 tabular-nums">×{qty}</span>
+ <span className="min-w-0 truncate text-foreground">{name}</span>
+ {delta > 0 ? (
+ <span className="shrink-0 tabular-nums">+{formatPrice(delta, currencySymbol)}</span>
+ ) : null}
+ </span>
+ );
  })}
  </div>
  ) : null}
  {item.notes ? (
- <div className="text-xs text-muted-foreground mt-0.5 pl-4">
- {t("notesLabel")}: {item.notes}
+ <div className="mt-2 flex flex-wrap gap-1.5">
+ <span className="inline-flex items-center gap-1 max-w-full px-2 py-0.5 rounded-md bg-secondary text-xs text-muted-foreground">
+ <span className="min-w-0 text-foreground">{item.notes}</span>
+ </span>
  </div>
  ) : null}
  </div>
@@ -1161,6 +1342,7 @@ function AddItemView({
  onRegisterBack,
  onTitleChange,
  onRegisterFooter,
+ editItem = null,
 }: {
  categories: Category[];
  defaultLang: string;
@@ -1173,63 +1355,93 @@ function AddItemView({
  onRegisterBack: (fn: (() => void) | null) => void;
  onTitleChange: (title: string | null) => void;
  onRegisterFooter: (node: React.ReactNode | null) => void;
+ // Set when editing an existing order item — the wizard is prefilled with
+ // its options/notes and "back" returns to the order (dish is fixed).
+ editItem?: OrderItem | null;
 }) {
  const t = useTranslations("dashboard.orders");
+ const hasGroups = categories.some((c) => c.isGroup);
 
- function goCategory() {
- setView({ kind: "addItem", orderId: view.orderId, step: "category" });
+ function goGroup() {
+ setView({ kind: "addItem", orderId: view.orderId, step: "group" });
+ }
+ // groupId travels with every later step so "back" returns to the same
+ // filtered category list (string = group, null = "without group",
+ // undefined = no groups in the menu).
+ function goCategory(groupId?: string | null) {
+ setView({ kind: "addItem", orderId: view.orderId, step: "category", groupId });
  }
  function goDish(categoryId: string) {
- setView({ kind: "addItem", orderId: view.orderId, step: "dish", categoryId });
+ setView({ kind: "addItem", orderId: view.orderId, step: "dish", categoryId, groupId: view.groupId });
  }
  function goConfigure(categoryId: string, dishId: string) {
- setView({ kind: "addItem", orderId: view.orderId, step: "configure", categoryId, dishId });
+ setView({ kind: "addItem", orderId: view.orderId, step: "configure", categoryId, dishId, groupId: view.groupId });
  }
+
+ // The dish/category can vanish mid-wizard (menu edited on another device).
+ // Fall back to the category step from an effect — navigating during render
+ // triggers React's "cannot update while rendering" error.
+ const missingTarget =
+ (view.step === "configure" &&
+ !categories
+ .find((c) => c.id === view.categoryId)
+ ?.dishes.some((d) => d.id === view.dishId)) ||
+ (view.step === "dish" && !categories.some((c) => c.id === view.categoryId));
+ useEffect(() => {
+ if (missingTarget) goCategory(view.groupId);
+ // eslint-disable-next-line react-hooks/exhaustive-deps
+ }, [missingTarget]);
 
  // Register back handler in modal header for category/dish steps.
  // Configure step delegates to DishWizard which registers its own.
  useEffect(() => {
  if (view.step === "dish") {
- onRegisterBack(goCategory);
+ onRegisterBack(() => goCategory(view.groupId));
+ } else if (view.step === "category" && hasGroups) {
+ onRegisterBack(goGroup);
  }
- // category step: no back; configure: DishWizard registers its own.
+ // group step: no back; configure: DishWizard registers its own.
  return () => {
  if (view.step !== "configure") onRegisterBack(null);
  };
  // eslint-disable-next-line react-hooks/exhaustive-deps
- }, [view.step, view.categoryId, view.dishId, view.orderId]);
+ }, [view.step, view.categoryId, view.dishId, view.orderId, view.groupId, hasGroups]);
 
  if (view.step === "configure") {
  const cat = categories.find((c) => c.id === view.categoryId);
  const dish = cat?.dishes.find((d) => d.id === view.dishId);
- if (!dish || !cat) {
- goCategory();
- return null;
- }
+ if (!dish || !cat) return null; // missingTarget effect navigates away
  return (
  <DishWizard
+ // Remount when the dish or the edited item changes so selections
+ // never leak between different wizard sessions.
+ key={dish.id + ":" + (editItem?.id ?? "new")}
  dish={dish}
  defaultLang={defaultLang}
  currencySymbol={currencySymbol}
  creating={creating}
- onBack={() => goDish(cat.id)}
+ // Edit mode: the dish is fixed, so "back" leaves the wizard
+ // entirely instead of returning to the dish list.
+ onBack={editItem ? onBackToOrder : () => goDish(cat.id)}
  onAdd={(data) => onAdd(data, dish)}
  onRegisterBack={onRegisterBack}
  onTitleChange={onTitleChange}
  onRegisterFooter={onRegisterFooter}
+ editing={!!editItem}
+ initialOptions={editItem?.options}
+ initialNotes={editItem?.notes}
+ initialBasePrice={editItem?.basePriceSnapshot}
  />
  );
  }
 
  if (view.step === "dish") {
  const cat = categories.find((c) => c.id === view.categoryId);
- if (!cat) {
- goCategory();
- return null;
- }
+ if (!cat) return null; // missingTarget effect navigates away
   // Order-flow lists every dish in the category, including ones hidden from
   // the public menu — staff still need a way to add them to in-house orders.
-  const visibleDishes = cat.dishes;
+  // Same sortOrder as the menu editor + public menu.
+  const visibleDishes = [...cat.dishes].sort((a, b) => a.sortOrder - b.sortOrder);
  return (
  <div>
  {visibleDishes.length === 0 ? (
@@ -1240,11 +1452,12 @@ function AddItemView({
  <button
  key={d.id}
  type="button"
+ data-testid="wiz-dish"
  onClick={() => {
  track("dash_orders_order_select_item");
  goConfigure(cat.id, d.id);
  }}
- className="w-full text-left flex items-center justify-between gap-3 px-5 py-3 transition-colors"
+ className="w-full text-left flex items-center justify-between gap-3 px-5 py-3 select-none transition-colors md:hover:bg-primary/5"
  >
  <span className="min-w-0 flex-1 text-sm text-foreground truncate">
  {getMlWithFallback(d.name, defaultLang, defaultLang)}
@@ -1252,7 +1465,7 @@ function AddItemView({
  <span className="text-sm text-muted-foreground tabular-nums shrink-0">
  {currencySymbol + d.price}
  </span>
- <ChevronRightIcon size={14} className="shrink-0 text-muted-foreground" />
+ <ChevronRightIcon size={18} className="shrink-0 text-muted-foreground/60" />
  </button>
  ))}
  </div>
@@ -1261,10 +1474,66 @@ function AddItemView({
  );
  }
 
+ if (view.step === "group") {
+ // Groups first (menu-editor order), then a "without group" bucket when
+ // ungrouped leaf categories exist.
+ const groups = categories
+ .filter((c) => c.isGroup)
+ .sort((a, b) => a.sortOrder - b.sortOrder);
+ const hasUngrouped = categories.some((c) => !c.isGroup && (c.parentId ?? null) === null);
+ return (
+ <div>
+ {groups.length === 0 && !hasUngrouped ? (
+ <p className="text-sm text-muted-foreground text-center py-6">{t("noDishesInCategory")}</p>
+ ) : (
+ <div className="-m-5 divide-y divide-border">
+ {groups.map((g) => (
+ <button
+ key={g.id}
+ type="button"
+ data-testid="wiz-group"
+ onClick={() => goCategory(g.id)}
+ className="w-full text-left flex items-center justify-between gap-3 px-5 py-3 select-none transition-colors md:hover:bg-primary/5"
+ >
+ <span className="min-w-0 flex-1 text-sm font-medium text-foreground truncate">
+ {getMlWithFallback(g.name, defaultLang, defaultLang)}
+ </span>
+ <ChevronRightIcon size={18} className="shrink-0 text-muted-foreground/60" />
+ </button>
+ ))}
+ {hasUngrouped ? (
+ <button
+ type="button"
+ onClick={() => goCategory(null)}
+ className="w-full text-left flex items-center justify-between gap-3 px-5 py-3 select-none transition-colors md:hover:bg-primary/5"
+ >
+ <span className="min-w-0 flex-1 text-sm font-medium text-foreground truncate">
+ {t("withoutGroup", { defaultValue: "Without group" })}
+ </span>
+ <ChevronRightIcon size={18} className="shrink-0 text-muted-foreground/60" />
+ </button>
+ ) : null}
+ </div>
+ )}
+ </div>
+ );
+ }
+
  // step === "category"
  // Order item creation works against leaf categories only — groups are
- // organizational and never carry dishes themselves.
- const pickable = categories.filter((c) => !c.isGroup);
+ // organizational and never carry dishes themselves. When a group was
+ // picked, only its categories show (null = the ungrouped bucket).
+ // Same sortOrder as the menu editor + public menu.
+ const pickable = categories
+ .filter((c) => !c.isGroup)
+ .filter((c) =>
+ view.groupId === undefined
+ ? true
+ : view.groupId === null
+ ? (c.parentId ?? null) === null
+ : c.parentId === view.groupId,
+ )
+ .sort((a, b) => a.sortOrder - b.sortOrder);
  return (
  <div>
  {pickable.length === 0 ? (
@@ -1275,16 +1544,17 @@ function AddItemView({
  <button
  key={c.id}
  type="button"
+ data-testid="wiz-category"
  onClick={() => {
  track("dash_orders_order_select_category");
  goDish(c.id);
  }}
- className="w-full text-left flex items-center justify-between gap-3 px-5 py-3 transition-colors"
+ className="w-full text-left flex items-center justify-between gap-3 px-5 py-3 select-none transition-colors md:hover:bg-primary/5"
  >
  <span className="min-w-0 flex-1 text-sm font-medium text-foreground truncate">
  {getMlWithFallback(c.name, defaultLang, defaultLang)}
  </span>
- <ChevronRightIcon size={14} className="shrink-0 text-muted-foreground" />
+ <ChevronRightIcon size={18} className="shrink-0 text-muted-foreground/60" />
  </button>
  ))}
  </div>
@@ -1308,6 +1578,10 @@ function DishWizard({
  onRegisterBack,
  onTitleChange,
  onRegisterFooter,
+ editing = false,
+ initialOptions,
+ initialNotes,
+ initialBasePrice,
 }: {
  dish: Dish;
  defaultLang: string;
@@ -1318,10 +1592,29 @@ function DishWizard({
  onRegisterBack?: (fn: (() => void) | null) => void;
  onTitleChange?: (title: string | null) => void;
  onRegisterFooter?: (node: React.ReactNode | null) => void;
+ // Edit mode: prefill from an existing order item; the footer button says
+ // "Save" instead of "Add".
+ editing?: boolean;
+ initialOptions?: OrderItemOptionSnapshot[];
+ initialNotes?: string;
+ // Item's saved base price — footer total must match what will be persisted
+ // (the item keeps its snapshot even if the menu price changed since).
+ initialBasePrice?: string;
 }) {
  const t = useTranslations("dashboard.orders");
+ const tc = useTranslations("dashboard.common");
  const requiredOpts = (dish.options || []).filter((o) => o.required);
  const extraOpts = (dish.options || []).filter((o) => !o.required);
+
+ // Best-effort mapping of saved option snapshots back onto the live dish
+ // options — snapshots store names (not ids), so match by default-language
+ // text. Options renamed since the item was created simply come back
+ // unselected.
+ const mlKey = (ml: OrderItem["dishNameSnapshot"]) => getMlWithFallback(ml, defaultLang, defaultLang);
+ const findSnap = (opt: DishOption, v: OptionVariant) =>
+ (initialOptions ?? []).find(
+ (s) => mlKey(s.optionName) === mlKey(opt.name) && mlKey(s.variantName) === mlKey(v.name),
+ );
 
  const initialSubstep: WizardSubstep =
  requiredOpts.length > 0
@@ -1334,13 +1627,31 @@ function DishWizard({
  const [reqSelections, setReqSelections] = useState<Record<string, string | string[] | null>>(() => {
  const init: Record<string, string | string[] | null> = {};
  requiredOpts.forEach((opt) => {
- if (opt.type === "single") init[opt.id] = null;
- else init[opt.id] = [];
+ if (opt.type === "single") {
+ init[opt.id] = opt.variants.find((v) => findSnap(opt, v))?.id ?? null;
+ } else {
+ init[opt.id] = opt.variants.filter((v) => findSnap(opt, v)).map((v) => v.id);
+ }
  });
  return init;
  });
- const [extraQty, setExtraQty] = useState<Record<string, number>>({});
- const [notes, setNotes] = useState("");
+ const [extraQty, setExtraQty] = useState<Record<string, number>>(() => {
+ const init: Record<string, number> = {};
+ extraOpts.forEach((opt) =>
+ opt.variants.forEach((v) => {
+ const snap = findSnap(opt, v);
+ if (snap) init[v.id] = snap.quantity ?? 1;
+ }),
+ );
+ return init;
+ });
+ const [notes, setNotes] = useState(initialNotes ?? "");
+ // handleAdd (closed over by the registered footer) reads notes via a ref so
+ // the footer-registration effect doesn't depend on `notes` — otherwise every
+ // keystroke in the comment field re-registered the footer and re-rendered
+ // the whole OrdersPage (visible input lag on cheap kiosk tablets).
+ const notesRef = useRef(notes);
+ notesRef.current = notes;
 
  function setQty(variantId: string, qty: number) {
  setExtraQty((s) => {
@@ -1379,7 +1690,7 @@ function DishWizard({
 
  const snapshots = buildSnapshots();
  const totalPrice =
- (parseDecimal(dish.price) || 0) +
+ (parseDecimal(editing ? initialBasePrice ?? dish.price : dish.price) || 0) +
  snapshots.reduce((sum, o) => sum + (parseDecimal(o.priceDelta) || 0) * (o.quantity ?? 1), 0);
 
  function goAfterRequired() {
@@ -1423,8 +1734,9 @@ function DishWizard({
  // eslint-disable-next-line react-hooks/exhaustive-deps
  }, [substep.kind, stepIndex, requiredOpts.length, extraOpts.length]);
 
- // Set modal title per substep.
- useEffect(() => {
+ // Set modal title per substep. Layout effect — a plain effect ran after
+ // paint, flashing the generic "Add item" title for one frame on entry.
+ useLayoutEffect(() => {
  if (!onTitleChange) return;
  if (substep.kind === "required") {
  const opt = requiredOpts[substep.index];
@@ -1463,7 +1775,7 @@ function DishWizard({
  }
 
  function handleAdd() {
- onAdd({ options: snapshots, notes: notes.trim() });
+ onAdd({ options: snapshots, notes: notesRef.current.trim() });
  }
 
  const currentOpt = substep.kind === "required" ? requiredOpts[substep.index] : null;
@@ -1475,19 +1787,19 @@ function DishWizard({
  currentOpt.type === "multi" &&
  Array.isArray(reqSelections[currentOpt.id]) &&
  (reqSelections[currentOpt.id] as string[]).length > 0;
- const btnCls =
- "inline-flex items-center gap-1.5 h-8 px-3 text-xs font-medium text-primary-foreground bg-primary-gradient rounded-lg transition-colors disabled:opacity-40";
+ const btnCls = primaryBtn + " inline-flex items-center gap-1.5";
  const footerNode: React.ReactNode = (() => {
  if (substep.kind === "required" && currentOpt && currentOpt.type === "multi") {
  return (
  <div className="flex justify-end">
  <button
  type="button"
+ data-testid="wiz-continue"
  onClick={() => handleMultiContinue(currentOpt, substep.index)}
  disabled={!multiEnabled}
  className={btnCls}
  >
- {t("continue")}
+ <span className="truncate">{t("continue")}</span>
  </button>
  </div>
  );
@@ -1497,10 +1809,11 @@ function DishWizard({
  <div className="flex justify-end">
  <button
  type="button"
+ data-testid="wiz-continue"
  onClick={() => advanceFromExtras(substep.index)}
  className={btnCls}
  >
- {t("continue")}
+ <span className="truncate">{t("continue")}</span>
  </button>
  </div>
  );
@@ -1510,14 +1823,17 @@ function DishWizard({
  <div className="flex justify-end">
  <button
  type="button"
+ data-testid="wiz-add"
  onClick={handleAdd}
  disabled={creating}
  className={btnCls}
  >
  {creating ? (
- <span className="inline-block w-3 h-3 border-2 border-current border-r-transparent rounded-full animate-spin" />
+ <span className="inline-block w-3 h-3 border-2 border-current border-r-transparent rounded-full animate-spin shrink-0" />
+ ) : editing ? (
+ <span className="truncate">{tc("save")} · {formatPrice(totalPrice, currencySymbol)}</span>
  ) : (
- t("addPrice", { price: formatPrice(totalPrice, currencySymbol) })
+ <span className="truncate">{t("addPrice", { price: formatPrice(totalPrice, currencySymbol) })}</span>
  )}
  </button>
  </div>
@@ -1526,7 +1842,9 @@ function DishWizard({
  return null;
  })();
 
- useEffect(() => {
+ // Layout effect for the same reason as the title above — the footer
+ // otherwise pops in a frame late.
+ useLayoutEffect(() => {
  if (!onRegisterFooter) return;
  onRegisterFooter(footerNode);
  return () => onRegisterFooter(null);
@@ -1537,7 +1855,6 @@ function DishWizard({
  multiEnabled,
  creating,
  totalPrice,
- notes,
  ]);
 
  if (substep.kind === "required" && currentOpt) {
@@ -1554,6 +1871,7 @@ function DishWizard({
  <button
  key={v.id}
  type="button"
+ data-testid="wiz-variant"
  onClick={() => pickRequiredVariant(currentOpt, substep.index, v.id)}
  className="w-full text-left flex items-center justify-between gap-3 px-5 py-3 transition-colors"
  >
@@ -1597,6 +1915,7 @@ function DishWizard({
  return (
  <div
  key={v.id}
+ data-testid="wiz-extra-row"
  className="flex items-center justify-between gap-3 px-5 py-3"
  >
  <div className="min-w-0 flex-1">
@@ -1604,7 +1923,7 @@ function DishWizard({
  {getMlWithFallback(v.name, defaultLang, defaultLang)}
  </div>
  {delta > 0 ? (
- <div className="text-[11px] text-muted-foreground tabular-nums">
+ <div className="text-sm text-muted-foreground tabular-nums">
  {t("perEach", { amount: delta.toFixed(2) })}
  </div>
  ) : null}
@@ -1652,7 +1971,7 @@ function DishWizard({
  </div>
  </div>
  {snapshots.length > 0 ? (
- <div className="text-xs text-muted-foreground mt-1 space-y-0.5">
+ <div className="text-sm text-muted-foreground mt-1 space-y-0.5">
  {snapshots.map((o, i) => {
  const name = getMlWithFallback(o.variantName, defaultLang, defaultLang);
  const delta = parseDecimal(o.priceDelta) || 0;
@@ -1741,25 +2060,25 @@ function ChangeTableModal({
  onClose={onClose}
  title={t("changeTable", { defaultValue: "Change table" })}
  size="sm"
- closeOnBackdrop={false}
  footer={
  <div className="flex items-center justify-end gap-2">
  <button
  type="button"
  onClick={onClose}
- className="h-8 px-3 text-xs font-medium text-foreground bg-card border border-border rounded-lg transition-colors"
+ className={secondaryBtn + " inline-flex items-center"}
  >
- {tc("cancel")}
+ <span className="truncate">{tc("cancel")}</span>
  </button>
  <button
  type="button"
+ data-testid="change-table-save"
  onClick={() => {
  if (selectedTable) onConfirm(orderId, selectedTable);
  }}
  disabled={!selectedTable || isSame === true}
- className="h-8 px-3 text-xs font-medium text-primary-foreground bg-primary-gradient rounded-lg transition-colors disabled:opacity-40"
+ className={primaryBtn + " inline-flex items-center"}
  >
- {tc("save")}
+ <span className="truncate">{tc("save")}</span>
  </button>
  </div>
  }
@@ -1768,10 +2087,16 @@ function ChangeTableModal({
  <FloorMap
  tables={tables}
  selectedId={selectedId}
- onSelectTable={(id) => setSelectedId(id)}
+ // Background taps report null — ignore them, a change-table pick
+ // can only ever land on a real table.
+ onSelectTable={(id) => { if (id) setSelectedId(id); }}
  occupiedIds={occupiedIds}
  wide
  ringAll
+ // Chosen table stays solid, the rest fade — same look as the
+ // table edit page. No-table orders start with nothing selected,
+ // so only dim once a table is picked.
+ dimUnselected={!!selectedId}
  />
  </div>
  </Modal>
@@ -1807,8 +2132,6 @@ function SplitOrderModal({
  const items = order.items;
  const pickedItems = items.filter((it) => picked.has(it.id));
  const keptItems = items.filter((it) => !picked.has(it.id));
- const pickedTotal = pickedItems.reduce((sum, it) => sum + calcItemPrice(it), 0);
- const keptTotal = keptItems.reduce((sum, it) => sum + calcItemPrice(it), 0);
  const canSplit = pickedItems.length > 0 && keptItems.length > 0;
 
  function toggle(id: string) {
@@ -1825,24 +2148,18 @@ function SplitOrderModal({
  open={!!orderId}
  onClose={onClose}
  title={t("splitOrder", { defaultValue: "Split order" })}
- subtitle={t("splitOrderHint", {
- defaultValue: "Pick items to move into a new order",
- })}
  size="sm"
- closeOnBackdrop={false}
  footer={
- <div className="flex items-center justify-between gap-2">
- <div className="text-xs text-muted-foreground tabular-nums">
- {formatPrice(keptTotal, currencySymbol)} · {formatPrice(pickedTotal, currencySymbol)}
- </div>
+ <div className="flex items-center justify-end gap-2">
  <button
  type="button"
+ data-testid="split-confirm"
  onClick={() => onConfirm(orderId, Array.from(picked))}
  disabled={!canSplit}
- className="inline-flex items-center gap-1.5 h-8 px-3 text-xs font-medium text-primary-foreground bg-primary-gradient rounded-lg transition-colors disabled:opacity-40"
+ className={primaryBtn + " inline-flex items-center gap-1.5"}
  >
- <SplitIcon size={13} />
- {t("splitOrder", { defaultValue: "Split order" })}
+ <SplitIcon size={15} className="shrink-0" />
+ <span className="truncate">{t("splitOrder", { defaultValue: "Split order" })}</span>
  </button>
  </div>
  }
@@ -1855,6 +2172,7 @@ function SplitOrderModal({
  <button
  key={item.id}
  type="button"
+ data-testid="split-item"
  onClick={() => toggle(item.id)}
  className={
  "w-full flex items-center gap-3 px-5 py-3 text-left transition-colors " +
@@ -1885,150 +2203,226 @@ function SplitOrderModal({
  );
 }
 
-function ItemMoreMenu({
- currentStatus,
- onStatusChange,
+// Select-style row shared by the item/order action modals — mirrors the
+// "add" picker in the menu editor (full-bleed rows, desktop-only hover tint).
+const actionRowCls =
+ "w-full flex items-center gap-3 text-left py-3 px-5 select-none transition-colors md:hover:bg-primary/5";
+
+// Select-style modal listing the actions for one order item: change status
+// (opens the status picker below), then duplicate / discount / remove.
+function ItemActionsModal({
+ open,
+ item,
+ defaultLang,
+ onClose,
+ onChangeStatus,
+ onEdit,
  onDuplicate,
  onDiscount,
- hasDiscount,
  onRemove,
- statusLabels,
- duplicateLabel,
- discountLabel,
- removeLabel,
 }: {
- currentStatus: OrderItemStatus;
- onStatusChange: (status: OrderItemStatus) => void;
+ open: boolean;
+ item: OrderItem | null;
+ defaultLang: string;
+ onClose: () => void;
+ onChangeStatus: () => void;
+ // null → dish no longer exists in the menu, the edit row is hidden.
+ onEdit: (() => void) | null;
  onDuplicate: () => void;
  onDiscount: () => void;
- hasDiscount: boolean;
  onRemove: () => void;
- statusLabels: Record<OrderItemStatus, string>;
- duplicateLabel: string;
- discountLabel: string;
- removeLabel: string;
 }) {
- const [open, setOpen] = useState(false);
- const btnRef = useRef<HTMLButtonElement | null>(null);
- const [pos, setPos] = useState<
- { right: number; top?: number; bottom?: number } | null
- >(null);
- useEffect(() => {
- if (!open) {
- setPos(null);
- return;
- }
- const el = btnRef.current;
- if (!el) return;
- const r = el.getBoundingClientRect();
- const dropdownH = 260;
- const spaceBelow = window.innerHeight - r.bottom;
- const right = window.innerWidth - r.right;
- if (spaceBelow < dropdownH && r.top > spaceBelow) {
- setPos({ right, bottom: window.innerHeight - r.top + 4 });
- } else {
- setPos({ right, top: r.bottom + 4 });
- }
- }, [open]);
- const transitions = STATUS_ORDER.filter((s) => s !== currentStatus);
+ const t = useTranslations("dashboard.orders");
+ const tc = useTranslations("dashboard.common");
+ const statusKey = ITEM_STATUS_KEYS[item?.status ?? "pending"];
  return (
- <div className="relative shrink-0">
- <button
- ref={btnRef}
- type="button"
- onClick={() => setOpen((v) => !v)}
- className="w-7 h-7 flex items-center justify-center rounded-md text-muted-foreground transition-colors"
- aria-label="More"
+ <Modal
+ open={open}
+ onClose={onClose}
+ title={item ? getMlWithFallback(item.dishNameSnapshot, defaultLang, defaultLang) : ""}
+ size="sm"
  >
- <MoreVerticalIcon size={14} />
+ <div className="-m-5">
+ <button type="button" data-testid="item-act-status" onClick={onChangeStatus} className={actionRowCls}>
+ <RefreshIcon size={16} className="shrink-0 text-muted-foreground" />
+ <span className="min-w-0 flex-1 text-sm font-medium text-foreground truncate">
+ {t("changeStatus", { defaultValue: "Change status" })}
+ </span>
+ {/* Current status as a hint on the right. */}
+ <span className="shrink-0 text-sm text-muted-foreground">{t(statusKey)}</span>
+ <ChevronRightIcon size={18} className="shrink-0 text-muted-foreground/60" />
  </button>
- {open && pos
- ? createPortal(
- <>
- <div className="fixed inset-0 z-[60]" onClick={() => setOpen(false)} />
- <div
- className="fixed z-[70] min-w-[180px] max-h-[80vh] overflow-y-auto bg-card border border-border rounded-lg shadow-lg"
- style={{
- right: pos.right,
- ...(pos.top !== undefined ? { top: pos.top } : {}),
- ...(pos.bottom !== undefined ? { bottom: pos.bottom } : {}),
- }}
+ {onEdit ? (
+ <button type="button" data-testid="item-act-edit" onClick={onEdit} className={actionRowCls}>
+ <EditIcon size={16} className="shrink-0 text-muted-foreground" />
+ <span className="min-w-0 flex-1 text-sm font-medium text-foreground truncate">
+ {tc("edit")}
+ </span>
+ <ChevronRightIcon size={18} className="shrink-0 text-muted-foreground/60" />
+ </button>
+ ) : null}
+ <button type="button" data-testid="item-act-duplicate" onClick={onDuplicate} className={actionRowCls}>
+ <CopyIcon size={16} className="shrink-0 text-muted-foreground" />
+ <span className="min-w-0 flex-1 text-sm font-medium text-foreground truncate">
+ {t("duplicateItem", { defaultValue: "Duplicate" })}
+ </span>
+ <ChevronRightIcon size={18} className="shrink-0 text-muted-foreground/60" />
+ </button>
+ <button type="button" data-testid="item-act-discount" onClick={onDiscount} className={actionRowCls}>
+ <PercentIcon size={16} className="shrink-0 text-muted-foreground" />
+ <span className="min-w-0 flex-1 text-sm font-medium text-foreground truncate">
+ {item?.discount
+ ? t("discountEdit", { defaultValue: "Edit discount" })
+ : t("discountAdd", { defaultValue: "Add discount" })}
+ </span>
+ <ChevronRightIcon size={18} className="shrink-0 text-muted-foreground/60" />
+ </button>
+ <button type="button" data-testid="item-act-remove" onClick={onRemove} className={actionRowCls}>
+ <TrashIcon size={16} className="shrink-0 text-red-600" />
+ <span className="min-w-0 flex-1 text-sm font-medium text-red-600 truncate">
+ {t("removeItem")}
+ </span>
+ <ChevronRightIcon size={18} className="shrink-0 text-muted-foreground/60" />
+ </button>
+ </div>
+ </Modal>
+ );
+}
+
+// Select-style status picker for one order item — opened from the "Change
+// status" row of ItemActionsModal. The current status shows a check mark;
+// picking another one applies it immediately.
+function ItemStatusModal({
+ open,
+ item,
+ onClose,
+ onStatusChange,
+}: {
+ open: boolean;
+ item: OrderItem | null;
+ onClose: () => void;
+ onStatusChange: (status: OrderItemStatus) => void;
+}) {
+ const t = useTranslations("dashboard.orders");
+ return (
+ <Modal
+ open={open}
+ onClose={onClose}
+ title={t("changeStatus", { defaultValue: "Change status" })}
+ size="sm"
  >
- <div className="py-1">
- {transitions.map((s) => (
+ <div className="-m-5">
+ {STATUS_ORDER.map((s) => {
+ const isActive = item?.status === s;
+ return (
  <button
  key={s}
  type="button"
+ data-testid={"item-status-" + s}
  onClick={() => {
- setOpen(false);
+ if (isActive) {
+ onClose();
+ return;
+ }
  track("dash_orders_order_status_click");
  onStatusChange(s);
  }}
- className="w-full flex items-center gap-2 px-3 h-9 text-left text-xs font-medium text-foreground transition-colors"
+ className={actionRowCls + (isActive ? " bg-primary/5" : "")}
  >
- <span className="w-[13px] h-[13px] inline-flex items-center justify-center shrink-0">
- <span className={"w-2 h-2 rounded-full " + STATUS_DOT_CLS[s]} />
+ <span className={"w-2 h-2 rounded-full shrink-0 " + STATUS_DOT_CLS[s]} />
+ <span className={"min-w-0 flex-1 text-sm text-foreground truncate" + (isActive ? " font-medium" : "")}>
+ {t(ITEM_STATUS_KEYS[s])}
  </span>
- {statusLabels[s]}
+ {isActive ? (
+ <CheckIcon size={18} className="shrink-0 text-primary" />
+ ) : (
+ <ChevronRightIcon size={18} className="shrink-0 text-muted-foreground/60" />
+ )}
  </button>
- ))}
+ );
+ })}
  </div>
- <div className="border-t border-border" />
- <div className="py-1">
- <button
- type="button"
- onClick={() => {
- setOpen(false);
- onDuplicate();
- }}
- className="w-full flex items-center gap-2 px-3 h-9 text-left text-xs font-medium text-foreground transition-colors"
+ </Modal>
+ );
+}
+
+// Select-style modal with the order-level actions — opened from the footer
+// "Actions" button in the order detail modal (replaces the old dropdown).
+function OrderActionsModal({
+ open,
+ order,
+ hasTables,
+ onClose,
+ onChangeTable,
+ onSplit,
+ onDiscount,
+ onDelete,
+}: {
+ open: boolean;
+ order: Order | null;
+ hasTables: boolean;
+ onClose: () => void;
+ onChangeTable: () => void;
+ onSplit: () => void;
+ onDiscount: () => void;
+ onDelete: () => void;
+}) {
+ const t = useTranslations("dashboard.orders");
+ return (
+ <Modal
+ open={open}
+ onClose={onClose}
+ title={t("orderActions", { defaultValue: "Actions" })}
+ size="sm"
  >
- <CopyIcon size={13} />
- {duplicateLabel}
+ <div className="-m-5">
+ {hasTables ? (
+ <button type="button" data-testid="ord-act-change-table" onClick={onChangeTable} className={actionRowCls}>
+ <SwapIcon size={16} className="shrink-0 text-muted-foreground" />
+ <span className="min-w-0 flex-1 text-sm font-medium text-foreground truncate">
+ {t("changeTable", { defaultValue: "Change table" })}
+ </span>
+ <ChevronRightIcon size={18} className="shrink-0 text-muted-foreground/60" />
  </button>
- <button
- type="button"
- onClick={() => {
- setOpen(false);
- onDiscount();
- }}
- className="w-full flex items-center gap-2 px-3 h-9 text-left text-xs font-medium text-foreground transition-colors"
- >
- <span className="inline-flex items-center justify-center w-[13px] text-[13px] font-bold">%</span>
- {discountLabel}
- {hasDiscount ? <span className="ml-auto text-[10px] text-muted-foreground">●</span> : null}
+ ) : null}
+ {order && order.items.length >= 2 ? (
+ <button type="button" data-testid="ord-act-split" onClick={onSplit} className={actionRowCls}>
+ <SplitIcon size={16} className="shrink-0 text-muted-foreground" />
+ <span className="min-w-0 flex-1 text-sm font-medium text-foreground truncate">
+ {t("splitOrder", { defaultValue: "Split order" })}
+ </span>
+ <ChevronRightIcon size={18} className="shrink-0 text-muted-foreground/60" />
  </button>
- <button
- type="button"
- onClick={() => {
- setOpen(false);
- onRemove();
- }}
- className="w-full flex items-center gap-2 px-3 h-9 text-left text-xs font-medium text-red-600 transition-colors"
- >
- <TrashIcon size={13} />
- {removeLabel}
+ ) : null}
+ <button type="button" data-testid="ord-act-discount" onClick={onDiscount} className={actionRowCls}>
+ <PercentIcon size={16} className="shrink-0 text-muted-foreground" />
+ <span className="min-w-0 flex-1 text-sm font-medium text-foreground truncate">
+ {order?.discount
+ ? t("discountEdit", { defaultValue: "Edit discount" })
+ : t("discountAdd", { defaultValue: "Add discount" })}
+ </span>
+ <ChevronRightIcon size={18} className="shrink-0 text-muted-foreground/60" />
+ </button>
+ <button type="button" data-testid="ord-act-delete" onClick={onDelete} className={actionRowCls}>
+ <TrashIcon size={16} className="shrink-0 text-red-600" />
+ <span className="min-w-0 flex-1 text-sm font-medium text-red-600 truncate">
+ {t("deleteOrder")}
+ </span>
+ <ChevronRightIcon size={18} className="shrink-0 text-muted-foreground/60" />
  </button>
  </div>
- </div>
- </>,
- document.body,
- )
- : null}
- </div>
+ </Modal>
  );
 }
 
 
 function CompleteOrderModal({
  open,
- hasUnserved,
  paymentMethods,
  onCancel,
  onConfirm,
 }: {
  open: boolean;
- hasUnserved: boolean;
  paymentMethods: string[];
  onCancel: () => void;
  onConfirm: (paymentMethodId: string | null) => void;
@@ -2037,38 +2431,36 @@ function CompleteOrderModal({
  const tc = useTranslations("dashboard.common");
  const tpm = useTranslations("dashboard.paymentMethods");
  const [selected, setSelected] = useState<string | null>(paymentMethods[0] ?? null);
+ // Reset only on open — `paymentMethods` identity churns with SSE ticks and
+ // would knock the picked method back to the first one mid-selection.
+ const paymentMethodsRef = useRef(paymentMethods);
+ paymentMethodsRef.current = paymentMethods;
  useEffect(() => {
- if (open) setSelected(paymentMethods[0] ?? null);
- }, [open, paymentMethods]);
+ if (open) setSelected(paymentMethodsRef.current[0] ?? null);
+ }, [open]);
  const hasMethods = paymentMethods.length > 0;
- const baseMsg = hasUnserved
- ? t("completeOrderUnservedMessage", { defaultValue: "Some items are not served yet. Complete order anyway?" })
- : t("completeOrderMessage", { defaultValue: "Close this order?" });
- const subtitle = hasMethods
- ? baseMsg + " " + t("selectPaymentMethod", { defaultValue: "Select a payment method." })
- : baseMsg;
  return (
  <Modal
  open={open}
  onClose={onCancel}
  title={t("completeOrder")}
- subtitle={subtitle}
  size="sm"
  footer={
  <div className="flex gap-2 justify-end">
  <button
  type="button"
  onClick={onCancel}
- className="h-8 px-3 text-xs font-medium text-foreground bg-card border border-border rounded-lg transition-colors"
+ className={secondaryBtn + " inline-flex items-center"}
  >
- {tc("cancel")}
+ <span className="truncate">{tc("cancel")}</span>
  </button>
  <button
  type="button"
+ data-testid="complete-confirm"
  onClick={() => onConfirm(selected)}
- className="h-8 px-3 text-xs font-medium text-primary-foreground bg-primary-gradient rounded-lg transition-colors"
+ className={primaryBtn + " inline-flex items-center"}
  >
- {t("completeOrder")}
+ <span className="truncate">{t("completeOrder")}</span>
  </button>
  </div>
  }
@@ -2081,6 +2473,7 @@ function CompleteOrderModal({
  <button
  key={code}
  type="button"
+ data-testid={"pay-method-" + code}
  onClick={() => setSelected(code)}
  className={
  "w-full flex items-center gap-3 px-5 py-3 text-left transition-colors " +
@@ -2115,7 +2508,7 @@ export function DiscountBadge({
  ? `-${Math.round(discount.value * 100) / 100}%`
  : `-${formatPrice(discount.value, currencySymbol)}`;
  return (
- <span className="inline-flex items-center h-[18px] px-1.5 rounded text-[10px] font-semibold tabular-nums bg-emerald-100 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300 align-middle">
+ <span className="inline-flex items-center h-[22px] px-1.5 rounded-md text-sm font-semibold tabular-nums bg-emerald-100 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300 align-middle">
  {label}
  </span>
  );

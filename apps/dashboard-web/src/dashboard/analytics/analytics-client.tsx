@@ -169,7 +169,7 @@ export function AnalyticsClient() {
     <div className="">
       <PageHeaderSlot>
         <div className="w-full flex items-center justify-between gap-3">
-          <span className="min-w-0 text-sm font-medium text-foreground truncate">{t("title")}</span>
+          <span className="min-w-0 text-base font-medium text-foreground truncate">{t("title")}</span>
           {months.length > 0 ? (
             <PeriodDropdown
               months={months}
@@ -411,7 +411,7 @@ function RevenueByDayChart({
   return (
     <div className="bg-card border border-border rounded-2xl p-4 md:p-5">
       <div className="text-sm font-medium text-foreground mb-3">{t("revenueByDay", { defaultValue: "Revenue by day" })}</div>
-      <div className="overflow-x-auto -mx-4 md:-mx-5 px-4 md:px-5">
+      <div className="overflow-x-auto -mx-5 px-5">
         <div ref={containerRef} className="flex items-stretch gap-2">
           {byDay.map((d, i) => {
             const prev = byDayPrev[i];
@@ -665,7 +665,7 @@ function DayChart({ byDay, byDayPrev }: { byDay: Stats["byDay"]; byDayPrev: Stat
   return (
     <div className="bg-card border border-border rounded-2xl p-4 md:p-5">
       <div className="text-sm font-medium text-foreground mb-3">{t("scansPerDay")}</div>
-      <div className="overflow-x-auto -mx-4 md:-mx-5 px-4 md:px-5">
+      <div className="overflow-x-auto -mx-5 px-5">
         <div ref={containerRef} className="flex items-stretch gap-2">
           {dense.map((d, i) => {
             const hCur = Math.round((d.scans / max) * 100);

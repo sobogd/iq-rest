@@ -41,6 +41,11 @@ export class CategoriesController {
     return this.svc.update(ctx(req), id, body);
   }
 
+  @Post(":id/duplicate")
+  duplicate(@Req() req: Request, @Param("id") id: string) {
+    return this.svc.duplicate(ctx(req), id);
+  }
+
   @Delete(":id")
   @HttpCode(HttpStatus.NO_CONTENT)
   async remove(@Req() req: Request, @Param("id") id: string) {
