@@ -53,7 +53,8 @@
       "plan": "Pla",
       "free": "Gratuït",
       "trialDays": "Prova · {days}d",
-      "trialExpired": "Prova caducada"
+      "trialExpired": "Prova caducada",
+      "pastDue": "Pendent"
     },
     "preview": {
       "preview": "Vista prèvia",
@@ -588,7 +589,10 @@
         "planBasic": "Bàsic",
         "planPro": "Pro",
         "comparePlans": "Comparar plans a iq-rest.com →",
-        "otherCurrencyTip": "El pagament és només en EUR. Per pagar en una altra moneda, contacta amb el suport."
+        "otherCurrencyTip": "El pagament és només en EUR. Per pagar en una altra moneda, contacta amb el suport.",
+        "pastDueTitle": "El pagament ha fallat",
+        "pastDueTip": "No hem pogut processar el teu últim pagament. Tens {days} dies per pagar abans que el menú es desconnecti.",
+        "pastDueBlockedTip": "El teu menú està desconnectat perquè l'últim pagament ha fallat. Paga ara per restaurar-lo."
       },
       "support": {
         "title": "Suport",
@@ -983,5 +987,15 @@
     "body": "Tria un pla per mantenir comandes, pantalla de cuina i reserves.",
     "hide": "Amaga",
     "viewPlans": "Veure plans"
+  },
+  "pastDueModal": {
+    "title": "El pagament ha fallat",
+    "blockedTitle": "Menú no disponible",
+    "daysLeft": "Queden {days} dies abans que el teu menú es desconnecti",
+    "blockedHeadline": "El teu menú no està disponible",
+    "body": "No hem pogut processar el teu últim pagament. Actualitza el mètode de pagament perquè el menú i les funcions segueixin actius.",
+    "blockedBody": "El teu últim pagament ha fallat i el període de gràcia ha acabat. Paga ara per tornar a activar el menú.",
+    "pay": "Actualitzar pagament",
+    "hide": "Amaga"
   }
 }

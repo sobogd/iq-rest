@@ -7,6 +7,7 @@ import { Modal } from "./ui";
 import { primaryBtn, secondaryBtn } from "./tokens";
 import { useDashboardRouter } from "../_spa/router";
 import { track } from "@/lib/dashboard-events";
+import { hasPaidPlan } from "./billing-status";
 
 const SHOWN_KEY = "dash_trial_modal_shown";
 const DAY_MS = 86_400_000;
@@ -107,8 +108,9 @@ export function TrialModal({
 
 function shouldShow(sub: TrialSub, accountCreatedAt?: string | null): boolean {
   if (!sub) return false;
-  const isPaid = sub.subscriptionStatus === "ACTIVE" && !!sub.plan && sub.plan !== "FREE";
-  if (isPaid) return false;
+  // Any paid plan — including one that's PAST_DUE — is never on a trial. The
+  // past-due nudge (PastDueModal) covers failed payments, not this modal.
+  if (hasPaidPlan(sub)) return false;
   if (!sub.trialEndsAt) return false;
   // First reminder only ≥24h after signup.
   if (accountCreatedAt) {

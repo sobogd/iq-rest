@@ -48,7 +48,7 @@ export interface ShellInitialData {
   initialOrders: Order[];
   initialBookings: Booking[];
   initialTables: TableEntity[];
-  initialSub: { plan: string | null; subscriptionStatus: string | null; trialEndsAt: string | null; proFeatures?: boolean } | null;
+  initialSub: { plan: string | null; subscriptionStatus: string | null; trialEndsAt: string | null; currentPeriodEnd?: string | null; proFeatures?: boolean } | null;
   isAdmin: boolean;
   isDemo?: boolean;
   impersonatedBy?: string | null;

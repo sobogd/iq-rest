@@ -53,7 +53,8 @@
       "plan": "Plan",
       "free": "Gratuit",
       "trialDays": "Probă · {days}z",
-      "trialExpired": "Probă expirată"
+      "trialExpired": "Probă expirată",
+      "pastDue": "Restant"
     },
     "preview": {
       "preview": "Previzualizare",
@@ -588,7 +589,10 @@
         "planBasic": "De bază",
         "planPro": "Pro",
         "comparePlans": "Compară planurile pe iq-rest.com →",
-        "otherCurrencyTip": "Plata se face doar în EUR. Pentru plata în altă monedă, contactați asistența."
+        "otherCurrencyTip": "Plata se face doar în EUR. Pentru plata în altă monedă, contactați asistența.",
+        "pastDueTitle": "Plata a eșuat",
+        "pastDueTip": "Nu am putut procesa ultima ta plată. Ai {days} zile la dispoziție să plătești înainte ca meniul să fie dezactivat.",
+        "pastDueBlockedTip": "Meniul tău este dezactivat din cauza plății eșuate. Plătește acum pentru a-l restabili."
       },
       "support": {
         "title": "Suport",
@@ -983,5 +987,15 @@
     "body": "Alege un plan pentru a păstra comenzile, ecranul de bucătărie și rezervările.",
     "hide": "Ascunde",
     "viewPlans": "Vezi planurile"
+  },
+  "pastDueModal": {
+    "title": "Plata a eșuat",
+    "blockedTitle": "Meniu indisponibil",
+    "daysLeft": "Au mai rămas {days} zile până la dezactivarea meniului",
+    "blockedHeadline": "Meniul tău este indisponibil",
+    "body": "Nu am putut procesa ultima ta plată. Actualizează metoda de plată pentru a menține meniul și funcțiile active.",
+    "blockedBody": "Ultima ta plată a eșuat, iar perioada de grație s-a încheiat. Plătește acum pentru a reactiva meniul.",
+    "pay": "Actualizează plata",
+    "hide": "Ascunde"
   }
 }

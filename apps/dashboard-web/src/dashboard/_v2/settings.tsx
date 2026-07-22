@@ -14,6 +14,7 @@ import {
 } from "./ui";
 import { TablesPage } from "./tables";
 import { inputClass, secondaryBtn } from "./tokens";
+import { isPastDue, pastDueDaysLeft } from "./billing-status";
 import { MapPicker } from "@/components/map-picker";
 import { slugify } from "./helpers";
 import { getMenuUrl, getMenuUrlPrefix } from "@/lib/menu-url";
@@ -1664,9 +1665,13 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  }
 
  const isActive = sub?.subscriptionStatus === "ACTIVE" && sub.plan !== "FREE";
+ // A paid plan (BASIC/PRO) whose renewal failed → past-due banner, not a trial.
+ const paidPlan = !!sub?.plan && sub.plan !== "FREE";
+ const pastDue = isPastDue(sub ?? null);
+ const pastDueDays = pastDueDaysLeft(sub ?? null);
  const trialEndsAt = sub?.trialEndsAt ? new Date(sub.trialEndsAt) : null;
- const trialExpired = !isActive && trialEndsAt !== null && trialEndsAt <= new Date();
- const trialing = !isActive && trialEndsAt !== null && trialEndsAt > new Date();
+ const trialExpired = !isActive && !paidPlan && trialEndsAt !== null && trialEndsAt <= new Date();
+ const trialing = !isActive && !paidPlan && trialEndsAt !== null && trialEndsAt > new Date();
 
  async function startCheckout(plan: "BASIC" | "PRO", cycle: "MONTHLY" | "YEARLY") {
  track(cycle === "YEARLY" ? "dash_settings_billing_subscribe_year" : "dash_settings_billing_subscribe_month");
@@ -1700,7 +1705,14 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  <h2 className="text-xl font-medium text-foreground mt-1">{tb("title")}</h2>
  </div>
 
- {trialExpired ? (
+ {pastDue ? (
+ <div className="bg-red-50 border border-red-200 rounded-2xl p-4 mb-5">
+ <div className="text-sm font-medium text-red-800">{tb("pastDueTitle")}</div>
+ <p className="text-xs text-red-700 mt-1 leading-snug">
+ {pastDueDays > 0 ? tb("pastDueTip", { days: pastDueDays }) : tb("pastDueBlockedTip")}
+ </p>
+ </div>
+ ) : trialExpired ? (
  <div className="bg-red-50 border border-red-200 rounded-2xl p-4 mb-5">
  <div className="text-sm font-medium text-red-800">{tb("menuUnavailable")}</div>
  <p className="text-xs text-red-700 mt-1 leading-snug">

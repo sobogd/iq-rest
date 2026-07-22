@@ -53,7 +53,8 @@
       "plan": "Plán",
       "free": "Zadarmo",
       "trialDays": "Skúšobné · {days}d",
-      "trialExpired": "Skúšobné vypršalo"
+      "trialExpired": "Skúšobné vypršalo",
+      "pastDue": "Po splatnosti"
     },
     "preview": {
       "preview": "Náhľad",
@@ -588,7 +589,10 @@
         "planBasic": "Základný",
         "planPro": "Pro",
         "comparePlans": "Porovnať tarify na iq-rest.com →",
-        "otherCurrencyTip": "Platba iba v EUR. Pre platbu v inej mene kontaktujte podporu."
+        "otherCurrencyTip": "Platba iba v EUR. Pre platbu v inej mene kontaktujte podporu.",
+        "pastDueTitle": "Platba zlyhala",
+        "pastDueTip": "Nepodarilo sa nám spracovať vašu poslednú platbu. Máte {days} dní na zaplatenie, kým sa menu vypne.",
+        "pastDueBlockedTip": "Vaše menu je vypnuté kvôli neúspešnej platbe. Zaplaťte teraz pre obnovenie."
       },
       "support": {
         "title": "Podpora",
@@ -983,5 +987,15 @@
     "body": "Vyberte plán, aby ste zachovali objednávky, kuchynský displej a rezervácie.",
     "hide": "Skryť",
     "viewPlans": "Zobraziť plány"
+  },
+  "pastDueModal": {
+    "title": "Platba zlyhala",
+    "blockedTitle": "Menu nie je dostupné",
+    "daysLeft": "Zostáva {days} dní do vypnutia vášho menu",
+    "blockedHeadline": "Vaše menu nie je dostupné",
+    "body": "Nepodarilo sa nám spracovať vašu poslednú platbu. Aktualizujte platobnú metódu, aby menu a funkcie zostali aktívne.",
+    "blockedBody": "Vaša posledná platba zlyhala a ochranná lehota sa skončila. Zaplaťte teraz pre obnovenie menu.",
+    "pay": "Aktualizovať platbu",
+    "hide": "Skryť"
   }
 }

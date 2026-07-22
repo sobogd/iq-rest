@@ -53,7 +53,8 @@
       "plan": "Tarif",
       "free": "Kostenlos",
       "trialDays": "Test · {days}T",
-      "trialExpired": "Test abgelaufen"
+      "trialExpired": "Test abgelaufen",
+      "pastDue": "Überfällig"
     },
     "preview": {
       "preview": "Vorschau",
@@ -588,7 +589,10 @@
         "planBasic": "Basic",
         "planPro": "Pro",
         "comparePlans": "Tarife auf iq-rest.com vergleichen →",
-        "otherCurrencyTip": "Zahlung nur in EUR. Für Zahlung in anderer Währung kontaktieren Sie den Support."
+        "otherCurrencyTip": "Zahlung nur in EUR. Für Zahlung in anderer Währung kontaktieren Sie den Support.",
+        "pastDueTitle": "Zahlung fehlgeschlagen",
+        "pastDueTip": "Wir konnten deine letzte Zahlung nicht verarbeiten. Du hast {days} Tage Zeit zu zahlen, bevor dein Menü offline geht.",
+        "pastDueBlockedTip": "Dein Menü ist offline, weil deine letzte Zahlung fehlgeschlagen ist. Zahle jetzt, um es wiederherzustellen."
       },
       "support": {
         "title": "Support",
@@ -983,5 +987,15 @@
     "body": "Wähle einen Tarif, um Bestellungen, Küchenanzeige und Reservierungen zu behalten.",
     "hide": "Ausblenden",
     "viewPlans": "Tarife ansehen"
+  },
+  "pastDueModal": {
+    "title": "Zahlung fehlgeschlagen",
+    "blockedTitle": "Menü nicht verfügbar",
+    "daysLeft": "Noch {days} Tage, bis dein Menü offline geht",
+    "blockedHeadline": "Dein Menü ist offline",
+    "body": "Wir konnten deine letzte Zahlung nicht verarbeiten. Aktualisiere deine Zahlungsmethode, damit Menü und Funktionen aktiv bleiben.",
+    "blockedBody": "Deine letzte Zahlung ist fehlgeschlagen und die Frist ist abgelaufen. Zahle jetzt, um dein Menü wieder online zu bringen.",
+    "pay": "Zahlung aktualisieren",
+    "hide": "Ausblenden"
   }
 }

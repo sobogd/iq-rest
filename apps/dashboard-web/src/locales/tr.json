@@ -53,7 +53,8 @@
       "plan": "Plan",
       "free": "Ücretsiz",
       "trialDays": "Deneme · {days}g",
-      "trialExpired": "Deneme bitti"
+      "trialExpired": "Deneme bitti",
+      "pastDue": "Gecikmiş"
     },
     "preview": {
       "preview": "Önizleme",
@@ -588,7 +589,10 @@
         "planBasic": "Temel",
         "planPro": "Pro",
         "comparePlans": "iq-rest.com'da planları karşılaştır →",
-        "otherCurrencyTip": "Ödeme yalnızca EUR ile yapılır. Başka bir para biriminde ödeme için destekle iletişime geçin."
+        "otherCurrencyTip": "Ödeme yalnızca EUR ile yapılır. Başka bir para biriminde ödeme için destekle iletişime geçin.",
+        "pastDueTitle": "Ödeme başarısız",
+        "pastDueTip": "Son ödemenizi işleme alamadık. Menü devre dışı kalmadan önce ödemek için {days} gününüz var.",
+        "pastDueBlockedTip": "Son ödemeniz başarısız olduğu için menünüz devre dışı. Geri yüklemek için şimdi ödeyin."
       },
       "support": {
         "title": "Destek",
@@ -983,5 +987,15 @@
     "body": "Siparişleri, mutfak ekranını ve rezervasyonları sürdürmek için bir plan seçin.",
     "hide": "Gizle",
     "viewPlans": "Planları gör"
+  },
+  "pastDueModal": {
+    "title": "Ödeme başarısız",
+    "blockedTitle": "Menü kullanılamıyor",
+    "daysLeft": "Menünüz devre dışı kalmadan önce {days} gün kaldı",
+    "blockedHeadline": "Menünüz kullanılamıyor",
+    "body": "Son ödemenizi işleme alamadık. Menü ve özelliklerin aktif kalması için ödeme yönteminizi güncelleyin.",
+    "blockedBody": "Son ödemeniz başarısız oldu ve ek süre sona erdi. Menünüzü yeniden etkinleştirmek için şimdi ödeyin.",
+    "pay": "Ödemeyi güncelle",
+    "hide": "Gizle"
   }
 }

@@ -34,6 +34,9 @@ export interface RestaurantPayload {
   plan: string | null;
   subscriptionStatus: string;
   trialEndsAt: string | null;
+  // Failed-renewal date. A PAST_DUE restaurant stays visible for 3 days past
+  // this, then the menu is blocked (see __root.tsx).
+  currentPeriodEnd: string | null;
   // PRO-feature entitlement: orders + reservations are PRO-only. When false the
   // diner sees a menu-only experience (no order/booking surfaces).
   proFeatures: boolean;

@@ -53,7 +53,8 @@
       "plan": "Forfait",
       "free": "Gratuit",
       "trialDays": "Essai · {days}j",
-      "trialExpired": "Essai expiré"
+      "trialExpired": "Essai expiré",
+      "pastDue": "En retard"
     },
     "preview": {
       "preview": "Aperçu",
@@ -588,7 +589,10 @@
         "planBasic": "Basique",
         "planPro": "Pro",
         "comparePlans": "Comparer les forfaits sur iq-rest.com →",
-        "otherCurrencyTip": "Le paiement est uniquement en EUR. Pour payer dans une autre devise, contactez le support."
+        "otherCurrencyTip": "Le paiement est uniquement en EUR. Pour payer dans une autre devise, contactez le support.",
+        "pastDueTitle": "Échec du paiement",
+        "pastDueTip": "Nous n'avons pas pu traiter votre dernier paiement. Vous avez {days} jours pour payer avant la désactivation de votre menu.",
+        "pastDueBlockedTip": "Votre menu est désactivé car votre dernier paiement a échoué. Payez maintenant pour le rétablir."
       },
       "support": {
         "title": "Support",
@@ -983,5 +987,15 @@
     "body": "Choisissez une formule pour garder commandes, écran cuisine et réservations.",
     "hide": "Masquer",
     "viewPlans": "Voir les formules"
+  },
+  "pastDueModal": {
+    "title": "Échec du paiement",
+    "blockedTitle": "Menu indisponible",
+    "daysLeft": "Il reste {days} jours avant la désactivation de votre menu",
+    "blockedHeadline": "Votre menu est indisponible",
+    "body": "Nous n'avons pas pu traiter votre dernier paiement. Mettez à jour votre moyen de paiement pour garder votre menu et vos fonctionnalités actifs.",
+    "blockedBody": "Votre dernier paiement a échoué et le délai de grâce est écoulé. Payez maintenant pour réactiver votre menu.",
+    "pay": "Mettre à jour le paiement",
+    "hide": "Masquer"
   }
 }

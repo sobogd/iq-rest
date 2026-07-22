@@ -86,12 +86,25 @@ function RootLayout() {
   // FREE (or null — i.e. never on a paid plan) and its trialEndsAt is in the
   // past. Paid restaurants and active trials show normally. love-eatery is a
   // demo carve-out (used in the marketing landing iframe).
+  const isDemo = data.restaurant.slug === "love-eatery";
   const planActive = data.restaurant.plan && data.restaurant.plan !== "FREE";
   const trialExpired =
     !planActive
     && data.restaurant.trialEndsAt !== null
     && new Date(data.restaurant.trialEndsAt) <= new Date()
-    && data.restaurant.slug !== "love-eatery";
+    && !isDemo;
+
+  // Paid plan whose renewal failed: stays visible for a 3-day grace window past
+  // `currentPeriodEnd`, then the menu is blocked. Keep the 3 days in sync with
+  // PAST_DUE_GRACE_DAYS in the API entitlements helpers.
+  const PAST_DUE_GRACE_MS = 3 * 86_400_000;
+  const pastDueBlocked =
+    data.restaurant.subscriptionStatus === "PAST_DUE"
+    && data.restaurant.currentPeriodEnd !== null
+    && new Date(data.restaurant.currentPeriodEnd).getTime() + PAST_DUE_GRACE_MS <= Date.now()
+    && !isDemo;
+
+  const menuBlocked = trialExpired || pastDueBlocked;
 
   // Orders + reservations are PRO-only. For a BASIC (menu-only) restaurant the
   // menu still shows, but the order/booking surfaces are hidden. Force the
@@ -112,7 +125,7 @@ function RootLayout() {
     <MenuProvider menu={menu}>
       <MenuPageTracker slug={slug} />
       <Outlet />
-      {trialExpired ? <TrialExpiredOverlay defaultLanguage={data.restaurant.defaultLanguage} /> : null}
+      {menuBlocked ? <TrialExpiredOverlay defaultLanguage={data.restaurant.defaultLanguage} /> : null}
     </MenuProvider>
   );
 }

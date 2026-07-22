@@ -44,6 +44,9 @@ export class MenuService {
         plan: true,
         subscriptionStatus: true,
         trialEndsAt: true,
+        // Drives the PAST_DUE grace window (menu block + proFeatures) on both
+        // the API (hasProFeatures) and the diner SPA (__root.tsx).
+        currentPeriodEnd: true,
         legacyFullAccess: true,
       },
     });

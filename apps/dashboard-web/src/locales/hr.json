@@ -53,7 +53,8 @@
       "plan": "Plan",
       "free": "Besplatno",
       "trialDays": "Probni · {days}d",
-      "trialExpired": "Probno istekao"
+      "trialExpired": "Probno istekao",
+      "pastDue": "Dospjelo"
     },
     "preview": {
       "preview": "Pregled",
@@ -588,7 +589,10 @@
         "planBasic": "Osnovni",
         "planPro": "Pro",
         "comparePlans": "Usporedi planove na iq-rest.com →",
-        "otherCurrencyTip": "Plaćanje samo u EUR. Za plaćanje u drugoj valuti obratite se podršci."
+        "otherCurrencyTip": "Plaćanje samo u EUR. Za plaćanje u drugoj valuti obratite se podršci.",
+        "pastDueTitle": "Plaćanje nije uspjelo",
+        "pastDueTip": "Nismo mogli obraditi vaše posljednje plaćanje. Imate {days} dana za plaćanje prije nego se jelovnik isključi.",
+        "pastDueBlockedTip": "Vaš jelovnik je isključen jer posljednje plaćanje nije uspjelo. Platite sada za vraćanje."
       },
       "support": {
         "title": "Podrška",
@@ -983,5 +987,15 @@
     "body": "Odaberite plan kako biste zadržali narudžbe, kuhinjski zaslon i rezervacije.",
     "hide": "Sakrij",
     "viewPlans": "Pogledaj planove"
+  },
+  "pastDueModal": {
+    "title": "Plaćanje nije uspjelo",
+    "blockedTitle": "Jelovnik nije dostupan",
+    "daysLeft": "Preostalo je {days} dana do isključivanja vašeg jelovnika",
+    "blockedHeadline": "Vaš jelovnik nije dostupan",
+    "body": "Nismo mogli obraditi vaše posljednje plaćanje. Ažurirajte način plaćanja kako bi jelovnik i značajke ostali aktivni.",
+    "blockedBody": "Vaše posljednje plaćanje nije uspjelo i razdoblje počeka je isteklo. Platite sada da vratite jelovnik na mrežu.",
+    "pay": "Ažuriraj plaćanje",
+    "hide": "Sakrij"
   }
 }

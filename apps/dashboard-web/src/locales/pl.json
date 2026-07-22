@@ -53,7 +53,8 @@
       "plan": "Plan",
       "free": "Darmowy",
       "trialDays": "Próba · {days}d",
-      "trialExpired": "Próba zakończona"
+      "trialExpired": "Próba zakończona",
+      "pastDue": "Zaległe"
     },
     "preview": {
       "preview": "Podgląd",
@@ -588,7 +589,10 @@
         "planBasic": "Podstawowy",
         "planPro": "Pro",
         "comparePlans": "Porównaj plany na iq-rest.com →",
-        "otherCurrencyTip": "Płatność tylko w EUR. Aby zapłacić w innej walucie, skontaktuj się z pomocą techniczną."
+        "otherCurrencyTip": "Płatność tylko w EUR. Aby zapłacić w innej walucie, skontaktuj się z pomocą techniczną.",
+        "pastDueTitle": "Płatność nieudana",
+        "pastDueTip": "Nie mogliśmy przetworzyć Twojej ostatniej płatności. Masz {days} dni na zapłatę, zanim menu zostanie wyłączone.",
+        "pastDueBlockedTip": "Twoje menu jest wyłączone z powodu nieudanej płatności. Zapłać teraz, aby je przywrócić."
       },
       "support": {
         "title": "Wsparcie",
@@ -983,5 +987,15 @@
     "body": "Wybierz plan, aby zachować zamówienia, ekran kuchni i rezerwacje.",
     "hide": "Ukryj",
     "viewPlans": "Zobacz plany"
+  },
+  "pastDueModal": {
+    "title": "Płatność nieudana",
+    "blockedTitle": "Menu niedostępne",
+    "daysLeft": "Pozostało {days} dni do wyłączenia Twojego menu",
+    "blockedHeadline": "Twoje menu jest niedostępne",
+    "body": "Nie mogliśmy przetworzyć Twojej ostatniej płatności. Zaktualizuj metodę płatności, aby menu i funkcje pozostały aktywne.",
+    "blockedBody": "Twoja ostatnia płatność nie powiodła się, a okres karencji się zakończył. Zapłać teraz, aby przywrócić menu online.",
+    "pay": "Zaktualizuj płatność",
+    "hide": "Ukryj"
   }
 }

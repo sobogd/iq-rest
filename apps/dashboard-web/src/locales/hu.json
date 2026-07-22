@@ -53,7 +53,8 @@
       "plan": "Csomag",
       "free": "Ingyenes",
       "trialDays": "Próba · {days}n",
-      "trialExpired": "Próba lejárt"
+      "trialExpired": "Próba lejárt",
+      "pastDue": "Lejárt"
     },
     "preview": {
       "preview": "Előnézet",
@@ -588,7 +589,10 @@
         "planBasic": "Alap",
         "planPro": "Pro",
         "comparePlans": "Csomagok összehasonlítása az iq-rest.com oldalon →",
-        "otherCurrencyTip": "A fizetés csak EUR-ban történik. Más pénznemben történő fizetéshez vegye fel a kapcsolatot az ügyfélszolgálattal."
+        "otherCurrencyTip": "A fizetés csak EUR-ban történik. Más pénznemben történő fizetéshez vegye fel a kapcsolatot az ügyfélszolgálattal.",
+        "pastDueTitle": "A fizetés sikertelen",
+        "pastDueTip": "Nem tudtuk feldolgozni a legutóbbi fizetését. {days} napja van fizetni, mielőtt a menü lekapcsol.",
+        "pastDueBlockedTip": "A menüje le van kapcsolva a sikertelen fizetés miatt. Fizessen most a visszaállításhoz."
       },
       "support": {
         "title": "Támogatás",
@@ -983,5 +987,15 @@
     "body": "Válassz csomagot, hogy megtartsd a rendeléseket, a konyhai kijelzőt és a foglalásokat.",
     "hide": "Elrejtés",
     "viewPlans": "Csomagok megtekintése"
+  },
+  "pastDueModal": {
+    "title": "A fizetés sikertelen",
+    "blockedTitle": "A menü nem érhető el",
+    "daysLeft": "{days} nap van hátra, mielőtt a menü lekapcsol",
+    "blockedHeadline": "A menü nem érhető el",
+    "body": "Nem tudtuk feldolgozni a legutóbbi fizetését. Frissítse a fizetési módot, hogy a menü és a funkciók aktívak maradjanak.",
+    "blockedBody": "A legutóbbi fizetése sikertelen volt, és a türelmi idő lejárt. Fizessen most, hogy a menü újra elérhető legyen.",
+    "pay": "Fizetés frissítése",
+    "hide": "Elrejtés"
   }
 }

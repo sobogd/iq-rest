@@ -53,7 +53,8 @@
       "plan": "Plano",
       "free": "Grátis",
       "trialDays": "Avaliação · {days}d",
-      "trialExpired": "Avaliação expirada"
+      "trialExpired": "Avaliação expirada",
+      "pastDue": "Em atraso"
     },
     "preview": {
       "preview": "Pré-visualização",
@@ -588,7 +589,10 @@
         "planBasic": "Básico",
         "planPro": "Pro",
         "comparePlans": "Comparar planos em iq-rest.com →",
-        "otherCurrencyTip": "O pagamento é apenas em EUR. Para pagar em outra moeda, contacte o suporte."
+        "otherCurrencyTip": "O pagamento é apenas em EUR. Para pagar em outra moeda, contacte o suporte.",
+        "pastDueTitle": "Pagamento falhou",
+        "pastDueTip": "Não conseguimos processar o seu último pagamento. Tem {days} dias para pagar antes de o menu ser desativado.",
+        "pastDueBlockedTip": "O seu menu está desativado porque o último pagamento falhou. Pague agora para restaurá-lo."
       },
       "support": {
         "title": "Suporte",
@@ -983,5 +987,15 @@
     "body": "Escolha um plano para manter pedidos, ecrã de cozinha e reservas.",
     "hide": "Ocultar",
     "viewPlans": "Ver planos"
+  },
+  "pastDueModal": {
+    "title": "Pagamento falhou",
+    "blockedTitle": "Menu indisponível",
+    "daysLeft": "Faltam {days} dias antes de o seu menu ser desativado",
+    "blockedHeadline": "O seu menu está indisponível",
+    "body": "Não conseguimos processar o seu último pagamento. Atualize o método de pagamento para manter o menu e as funcionalidades ativos.",
+    "blockedBody": "O seu último pagamento falhou e o período de tolerância terminou. Pague agora para reativar o seu menu.",
+    "pay": "Atualizar pagamento",
+    "hide": "Ocultar"
   }
 }

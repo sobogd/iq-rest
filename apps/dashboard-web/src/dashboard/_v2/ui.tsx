@@ -23,6 +23,7 @@ import { inputClass, labelClass, primaryBtn, secondaryBtn } from "./tokens";
 import { AVAILABLE_LANGUAGES, getMl, setMl, translateText } from "./i18n";
 import { useLocale } from "@/lib/i18n-compat";
 import { useAiImageAccess } from "./sub-context";
+import { isPastDue } from "./billing-status";
 import type { Ml } from "./types";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
 import { useScrollLock } from "./use-scroll-lock";
@@ -940,13 +941,19 @@ export function SubscriptionChip({
 
  if (sub) {
  const isActive = sub.subscriptionStatus === "ACTIVE" && sub.plan && sub.plan !== "FREE";
+ // A paid plan whose payment failed — never a "trial", show a past-due chip.
+ const pastDue = isPastDue(sub);
+ const paidPlan = !!sub.plan && sub.plan !== "FREE";
  const trialEndsAt = sub.trialEndsAt ? new Date(sub.trialEndsAt) : null;
- const trialing = !isActive && trialEndsAt !== null && trialEndsAt > new Date();
- const trialExpired = !isActive && trialEndsAt !== null && trialEndsAt <= new Date();
+ const trialing = !isActive && !paidPlan && trialEndsAt !== null && trialEndsAt > new Date();
+ const trialExpired = !isActive && !paidPlan && trialEndsAt !== null && trialEndsAt <= new Date();
 
  if (isActive && sub.plan) {
  label = sub.plan.charAt(0) + sub.plan.slice(1).toLowerCase();
  cls = "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-emerald-500/30";
+ } else if (pastDue) {
+ label = tsub("pastDue");
+ cls = "bg-red-500/15 text-red-600 dark:text-red-400 border-red-500/30";
  } else if (trialing && trialEndsAt) {
  const daysLeft = Math.max(1, Math.ceil((trialEndsAt.getTime() - Date.now()) / 86400000));
  label = tsub("trialDays", { days: daysLeft });

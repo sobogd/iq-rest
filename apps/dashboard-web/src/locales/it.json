@@ -53,7 +53,8 @@
       "plan": "Piano",
       "free": "Gratuito",
       "trialDays": "Prova · {days}g",
-      "trialExpired": "Prova scaduta"
+      "trialExpired": "Prova scaduta",
+      "pastDue": "Scaduto"
     },
     "preview": {
       "preview": "Anteprima",
@@ -588,7 +589,10 @@
         "planBasic": "Base",
         "planPro": "Pro",
         "comparePlans": "Confronta i piani su iq-rest.com →",
-        "otherCurrencyTip": "Il pagamento è solo in EUR. Per pagare in un'altra valuta, contatta il supporto."
+        "otherCurrencyTip": "Il pagamento è solo in EUR. Per pagare in un'altra valuta, contatta il supporto.",
+        "pastDueTitle": "Pagamento non riuscito",
+        "pastDueTip": "Non siamo riusciti a elaborare il tuo ultimo pagamento. Hai {days} giorni per pagare prima che il menu venga disattivato.",
+        "pastDueBlockedTip": "Il tuo menu è disattivato perché l'ultimo pagamento non è riuscito. Paga ora per ripristinarlo."
       },
       "support": {
         "title": "Supporto",
@@ -983,5 +987,15 @@
     "body": "Scegli un piano per mantenere ordini, display cucina e prenotazioni.",
     "hide": "Nascondi",
     "viewPlans": "Vedi i piani"
+  },
+  "pastDueModal": {
+    "title": "Pagamento non riuscito",
+    "blockedTitle": "Menu non disponibile",
+    "daysLeft": "Mancano {days} giorni prima che il tuo menu venga disattivato",
+    "blockedHeadline": "Il tuo menu non è disponibile",
+    "body": "Non siamo riusciti a elaborare il tuo ultimo pagamento. Aggiorna il metodo di pagamento per mantenere attivi il menu e le funzioni.",
+    "blockedBody": "Il tuo ultimo pagamento non è riuscito e il periodo di tolleranza è terminato. Paga ora per riattivare il tuo menu.",
+    "pay": "Aggiorna pagamento",
+    "hide": "Nascondi"
   }
 }

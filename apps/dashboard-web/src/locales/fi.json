@@ -53,7 +53,8 @@
       "plan": "Tilaus",
       "free": "Ilmainen",
       "trialDays": "Kokeilu · {days}pv",
-      "trialExpired": "Kokeilu päättynyt"
+      "trialExpired": "Kokeilu päättynyt",
+      "pastDue": "Erääntynyt"
     },
     "preview": {
       "preview": "Esikatselu",
@@ -588,7 +589,10 @@
         "planBasic": "Perus",
         "planPro": "Pro",
         "comparePlans": "Vertaa tilauksia osoitteessa iq-rest.com →",
-        "otherCurrencyTip": "Maksu vain EUR. Maksaaksesi muulla valuutalla, ota yhteyttä tukeen."
+        "otherCurrencyTip": "Maksu vain EUR. Maksaaksesi muulla valuutalla, ota yhteyttä tukeen.",
+        "pastDueTitle": "Maksu epäonnistui",
+        "pastDueTip": "Emme voineet käsitellä viimeisintä maksuasi. Sinulla on {days} päivää aikaa maksaa ennen kuin menu suljetaan.",
+        "pastDueBlockedTip": "Menusi on poissa käytöstä epäonnistuneen maksun vuoksi. Maksa nyt palauttaaksesi sen."
       },
       "support": {
         "title": "Tuki",
@@ -983,5 +987,15 @@
     "body": "Valitse tilaus, jotta tilaukset, keittiönäyttö ja varaukset pysyvät käytössä.",
     "hide": "Piilota",
     "viewPlans": "Näytä tilaukset"
+  },
+  "pastDueModal": {
+    "title": "Maksu epäonnistui",
+    "blockedTitle": "Menu ei käytettävissä",
+    "daysLeft": "{days} päivää jäljellä ennen kuin menusi suljetaan",
+    "blockedHeadline": "Menusi ei ole käytettävissä",
+    "body": "Emme voineet käsitellä viimeisintä maksuasi. Päivitä maksutapa pitääksesi menun ja ominaisuudet käytössä.",
+    "blockedBody": "Viimeisin maksusi epäonnistui ja lisäaika on päättynyt. Maksa nyt palauttaaksesi menusi käyttöön.",
+    "pay": "Päivitä maksu",
+    "hide": "Piilota"
   }
 }

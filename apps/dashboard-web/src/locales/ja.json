@@ -53,7 +53,8 @@
       "plan": "プラン",
       "free": "無料",
       "trialDays": "試用 · {days}日",
-      "trialExpired": "試用期間終了"
+      "trialExpired": "試用期間終了",
+      "pastDue": "支払い遅延"
     },
     "preview": {
       "preview": "プレビュー",
@@ -588,7 +589,10 @@
         "planBasic": "ベーシック",
         "planPro": "プロ",
         "comparePlans": "iq-rest.com でプランを比較 →",
-        "otherCurrencyTip": "お支払いはEURのみ。他通貨でのお支払いはサポートまでお問い合わせください。"
+        "otherCurrencyTip": "お支払いはEURのみ。他通貨でのお支払いはサポートまでお問い合わせください。",
+        "pastDueTitle": "支払いに失敗しました",
+        "pastDueTip": "前回のお支払いを処理できませんでした。メニューが停止するまでに{days}日以内にお支払いください。",
+        "pastDueBlockedTip": "前回のお支払いに失敗したため、メニューが停止しています。今すぐお支払いいただくと復旧します。"
       },
       "support": {
         "title": "サポート",
@@ -983,5 +987,15 @@
     "body": "注文、キッチンディスプレイ、予約を継続するにはプランを選択してください。",
     "hide": "非表示",
     "viewPlans": "プランを見る"
+  },
+  "pastDueModal": {
+    "title": "支払いに失敗しました",
+    "blockedTitle": "メニューは利用できません",
+    "daysLeft": "メニューが停止するまであと{days}日",
+    "blockedHeadline": "メニューは現在利用できません",
+    "body": "前回のお支払いを処理できませんでした。メニューと機能を維持するにはお支払い方法を更新してください。",
+    "blockedBody": "前回のお支払いに失敗し、猶予期間が終了しました。今すぐお支払いいただくとメニューが再び有効になります。",
+    "pay": "支払いを更新",
+    "hide": "非表示"
   }
 }
