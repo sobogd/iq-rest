@@ -29,7 +29,12 @@ function HomePage() {
     logoScale === "small" ? "h-14" : logoScale === "medium" ? "h-20" : "h-28";
   const showLogo = !!restaurant.logoUrl && !restaurant.hideLogo;
   const showTitle = !restaurant.hideTitle;
-  const showDesc = !!restaurant.description && !restaurant.hideDescription;
+  // Version-skew guard: when the payload predates the hideDescription field
+  // (old API / cached response), fall back to hideTitle — the old behavior
+  // where hiding the title hid the whole block. Otherwise a restaurant that
+  // hid its hero would suddenly show the description mid-rollout.
+  const showDesc =
+    !!restaurant.description && !(restaurant.hideDescription ?? restaurant.hideTitle);
   const anyHeroContent = showLogo || showTitle || showDesc;
 
   // Language switcher placement. "top" = a globe icon floating over the hero;
@@ -82,6 +87,10 @@ function HomePage() {
                   <img
                     src={restaurant.logoUrl!}
                     alt={restaurant.title}
+                    // Above-the-fold branding: fetch ahead of the hero bg it
+                    // competes with on mobile connections.
+                    fetchPriority="high"
+                    decoding="async"
                     className={`${logoSizeCls} w-auto max-w-full object-contain ${showTitle || showDesc ? "mb-4" : ""}`}
                   />
                 ) : null}
