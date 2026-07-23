@@ -27,6 +27,7 @@ import {
   BillingSettingsPage,
   SupportPage,
 } from "../_v2/settings";
+import { CustomTextsSettingsPage } from "../_v2/custom-texts";
 import { AnalyticsClient } from "../analytics/analytics-client";
 import { SettingsHubView } from "./views/settings-hub";
 import { DevicesSettingsPage } from "../_v2/devices-settings";
@@ -389,6 +390,10 @@ function ViewSwitch(p: SwitchProps) {
       return <SettingsBookingsWrapper onBack={backToSettings} />;
     case "settings.languages":
       return <SettingsLanguagesWrapper onBack={backToSettings} />;
+    case "settings.customTexts":
+      // Admin-only surface — a non-impersonation deep-link bounces to the hub
+      // (the save/translate endpoints are also 403'd server-side).
+      return impersonatedBy ? <CustomTextsSettingsPage onBack={backToSettings} /> : <SettingsHubView isAdmin={isAdmin} impersonatedBy={impersonatedBy} />;
     case "settings.billing":
       return <SettingsBillingWrapper onBack={view.from === "menu" ? backToMenu : backToSettings} />;
     case "settings.support":

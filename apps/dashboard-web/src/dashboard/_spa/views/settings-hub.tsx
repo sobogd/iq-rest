@@ -27,6 +27,7 @@ const CARDS: CardDef[] = [
   { view: { name: "settings.orders" }, titleKey: "orders", descKey: "ordersDesc", event: "dash_settings_click_tab_orders" },
   { view: { name: "settings.bookings" }, titleKey: "bookings", descKey: "bookingsDesc", event: "dash_settings_click_tab_bookings" },
   { view: { name: "settings.languages" }, titleKey: "languages", descKey: "languagesDesc", event: "dash_settings_click_tab_langs" },
+  { view: { name: "settings.customTexts" }, titleKey: "customTexts", descKey: "customTextsDesc", event: "dash_settings_click_tab_customtexts" },
   { view: { name: "settings.billing" }, titleKey: "billing", descKey: "billingDesc", event: "dash_settings_click_tab_billing" },
   { view: { name: "settings.support" }, titleKey: "support", descKey: "supportDesc", event: "dash_settings_click_tab_support" },
 ];
@@ -93,9 +94,14 @@ export function SettingsHubView({
   // Hide the billing tab when the active restaurant is managed for another
   // company via grant — billing belongs to the owner.
   const canManageBilling = restaurants?.canManageBilling ?? true;
-  const cards = canManageBilling
-    ? CARDS
-    : CARDS.filter((c) => c.view.name !== "settings.billing");
+  const cards = CARDS.filter((c) => {
+    // Billing belongs to the owner — hide it on grant-managed restaurants.
+    if (c.view.name === "settings.billing" && !canManageBilling) return false;
+    // "Menu texts" is an admin-only surface: shown only inside an admin
+    // impersonation session (backend also 403s the save/translate endpoints).
+    if (c.view.name === "settings.customTexts" && !impersonatedBy) return false;
+    return true;
+  });
 
   async function handleExitImpersonation() {
     if (exiting) return;

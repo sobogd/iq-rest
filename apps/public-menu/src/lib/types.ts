@@ -13,6 +13,10 @@ export interface RestaurantPayload {
   whatsapp: string | null;
   languages: string[];
   defaultLanguage: string;
+  // Per-restaurant overrides for the diner-SPA UI i18n strings. Shape:
+  // { [locale]: { [i18nKey]: string } }. Merged into i18next on load
+  // (see __root.tsx); an absent key falls back to the built-in translation.
+  customTexts?: Record<string, Record<string, string>> | null;
   menuLayout?: string;
   titleScale?: "small" | "medium" | "large";
   languageSwitcher?: "inline" | "top";

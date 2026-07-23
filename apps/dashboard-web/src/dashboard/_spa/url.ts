@@ -45,6 +45,8 @@ export function viewToPath(view: View): string {
       return "/dashboard/settings/bookings";
     case "settings.languages":
       return "/dashboard/settings/languages";
+    case "settings.customTexts":
+      return "/dashboard/settings/menu-texts";
     case "settings.billing":
       return view.from ? `/dashboard/settings/billing?from=${view.from}` : "/dashboard/settings/billing";
     case "settings.support":
@@ -122,6 +124,7 @@ export function pathToView(path: string): View {
   if (stripped === "/dashboard/settings/orders") return { name: "settings.orders" };
   if (stripped === "/dashboard/settings/bookings") return { name: "settings.bookings" };
   if (stripped === "/dashboard/settings/languages") return { name: "settings.languages" };
+  if (stripped === "/dashboard/settings/menu-texts") return { name: "settings.customTexts" };
   if (stripped === "/dashboard/settings/billing") {
     const from = params.get("from");
     return from === "menu" ? { name: "settings.billing", from: "menu" } : { name: "settings.billing" };

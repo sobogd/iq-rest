@@ -30,6 +30,9 @@ export interface AuthedRequest extends Request {
     // Ephemeral demo account — gates billing (can't pay) and surfaces the
     // "save your menu" banner client-side.
     isDemo: boolean;
+    // True only inside a validated admin-impersonation session. Gates
+    // admin-only edits (e.g. public-menu custom texts).
+    isImpersonating: boolean;
   };
 }
 
@@ -67,6 +70,7 @@ export class AuthGuard implements CanActivate {
       primaryRestaurantId: primaryId,
       viaGrant,
       isDemo: user.isDemo,
+      isImpersonating: user.isImpersonating,
     };
     return true;
   }

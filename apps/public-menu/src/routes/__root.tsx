@@ -48,6 +48,28 @@ function RootLayout() {
 
   useEffect(() => {
     if (!data?.restaurant) return;
+    // Merge the restaurant's custom UI-text overrides into i18next FIRST, so the
+    // re-render below already renders with them. Keys are dotted i18n paths
+    // (e.g. "publicMenu.order.add"); addResource honours the default "."
+    // keySeparator so each override deep-sets over the built-in string. Every
+    // locale is seeded up front, so later language switches just work.
+    const ct = data.restaurant.customTexts;
+    if (ct) {
+      for (const [locale, byKey] of Object.entries(ct)) {
+        if (!byKey || typeof byKey !== "object") continue;
+        for (const [key, value] of Object.entries(byKey)) {
+          if (typeof value !== "string" || !value) continue;
+          // Guard against an override key that targets an intermediate node
+          // (e.g. "publicMenu.order") — deep-setting a string there would
+          // replace the whole object and blank out every sibling string. Only
+          // apply when the existing resource at this path is absent or a leaf.
+          const existing = i18n.getResource(locale, "translation", key);
+          if (existing !== undefined && typeof existing === "object") continue;
+          i18n.addResource(locale, "translation", key, value);
+        }
+      }
+    }
+
     // ?lang=<code> from the URL wins over restaurant default — used by the
     // landing demo to open the iframe in the visitor's landing locale, when
     // that locale is enabled on the demo restaurant.

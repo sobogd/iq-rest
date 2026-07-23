@@ -27,6 +27,9 @@ export class MenuService {
         whatsapp: true,
         languages: true,
         defaultLanguage: true,
+        // Per-restaurant overrides for the diner-SPA UI strings. Merged into
+        // i18next at runtime (see public-menu __root.tsx); empty ⇒ built-in text.
+        customTexts: true,
         reservationsEnabled: true,
         reservationMode: true,
         reservationSlotMinutes: true,
