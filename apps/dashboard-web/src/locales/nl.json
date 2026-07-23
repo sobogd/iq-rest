@@ -71,7 +71,20 @@
     },
     "ai": {
       "translateReplaceTitle": "Bestaande vertaling vervangen?",
-      "translateReplaceMessage": "Hiermee overschrijf je wat je al in dit veld hebt getypt."
+      "translateReplaceMessage": "Hiermee overschrijf je wat je al in dit veld hebt getypt.",
+      "generate": "Genereren",
+      "generating": "Genereren...",
+      "tryAgain": "Opnieuw proberen",
+      "useThisPhoto": "Deze foto gebruiken",
+      "describe": "Beschrijven",
+      "describeTip": "Beschrijf wat u wilt en tik op Genereren.",
+      "promptTip": "Tip: noem hoek, belichting of achtergrond.",
+      "noImage": "Geen afbeelding ontvangen.",
+      "errorGenerate": "Genereren mislukt. Probeer opnieuw.",
+      "promptPlaceholder": "bv. Margherita-pizza op een houten plank, bovenaanzicht",
+      "quotaRemaining": "Nog {remaining} van {limit} gratis AI-afbeeldingen over. Neem een abonnement voor onbeperkt.",
+      "quotaExceededTitle": "Limiet gratis AI-afbeeldingen bereikt",
+      "quotaExceededMessage": "U heeft alle {limit} gratis AI-generaties gebruikt. Neem een abonnement voor onbeperkt AI-afbeeldingen."
     },
     "photo": {
       "label": "Foto",
@@ -497,7 +510,10 @@
         "langSwitcherLabel": "Taalkiezer",
         "langSwitcherTip": "Waar gasten de menutaal kiezen op de openbare pagina.",
         "langSwitcher_inline": "In de lijst",
-        "langSwitcher_top": "Wereldbolpictogram"
+        "langSwitcher_top": "Wereldbolpictogram",
+        "generateAi": "Genereren met AI",
+        "aiTitle": "Achtergrond genereren",
+        "aiPlaceholder": "bv. Sfeervolle tafel bij kaarslicht met rustieke borden en warm hout"
       },
       "general": {
         "title": "Regio en talen",

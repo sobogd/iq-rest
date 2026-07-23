@@ -71,7 +71,20 @@
     },
     "ai": {
       "translateReplaceTitle": "An aistriúchán atá ann a chur ina áit?",
-      "translateReplaceMessage": "Scríobhfaidh sé seo thar an méid atá clóscríofa agat cheana sa réimse seo."
+      "translateReplaceMessage": "Scríobhfaidh sé seo thar an méid atá clóscríofa agat cheana sa réimse seo.",
+      "generate": "Gin",
+      "generating": "Á ghineadh...",
+      "tryAgain": "Bain triail eile",
+      "useThisPhoto": "Úsáid an grianghraf seo",
+      "describe": "Cuir síos",
+      "describeTip": "Cuir síos cad is mian leat, ansin tapáil Gin.",
+      "promptTip": "Leid: luaigh uillinn, soilsiú nó cúlra.",
+      "noImage": "Níor cuireadh íomhá ar ais.",
+      "errorGenerate": "Theip ar ghineadh. Bain triail eile.",
+      "promptPlaceholder": "m.sh. Pizza margherita ar chlár adhmaid, amharc ón mbarr",
+      "quotaRemaining": "Tá {remaining} as {limit} íomhá AI saor in aisce fágtha. Liostáil le haghaidh gan teorainn.",
+      "quotaExceededTitle": "Sroicheadh teorainn na n-íomhánna AI saor in aisce",
+      "quotaExceededMessage": "D'úsáid tú gach ceann de na {limit} ghineadh AI saor in aisce. Liostáil le haon phlean le haghaidh íomhánna AI gan teorainn."
     },
     "photo": {
       "label": "Grianghraf",
@@ -497,7 +510,10 @@
         "langSwitcherLabel": "Malartóir teanga",
         "langSwitcherTip": "Cá roghnaíonn aíonna teanga an bhiachláir ar an leathanach poiblí.",
         "langSwitcher_inline": "Sa liosta",
-        "langSwitcher_top": "Deilbhín cruinne"
+        "langSwitcher_top": "Deilbhín cruinne",
+        "generateAi": "Gin le AI",
+        "aiTitle": "Gin cúlra",
+        "aiPlaceholder": "m.sh. Bord taitneamhach le coinnle agus plátaí tuaithe agus adhmad te"
       },
       "general": {
         "title": "Réigiún & teangacha",

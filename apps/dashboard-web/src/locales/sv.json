@@ -71,7 +71,20 @@
     },
     "ai": {
       "translateReplaceTitle": "Ersätta befintlig översättning?",
-      "translateReplaceMessage": "Detta skriver över det du redan har skrivit i fältet."
+      "translateReplaceMessage": "Detta skriver över det du redan har skrivit i fältet.",
+      "generate": "Generera",
+      "generating": "Genererar...",
+      "tryAgain": "Försök igen",
+      "useThisPhoto": "Använd detta foto",
+      "describe": "Beskriv",
+      "describeTip": "Beskriv vad du vill, tryck sedan på Generera.",
+      "promptTip": "Tips: nämn vinkel, ljus eller bakgrund.",
+      "noImage": "Ingen bild returnerad.",
+      "errorGenerate": "Kunde inte generera. Försök igen.",
+      "promptPlaceholder": "t.ex. Margherita-pizza på träbricka, ovanifrån",
+      "quotaRemaining": "{remaining} av {limit} gratis AI-bilder kvar. Prenumerera för obegränsat.",
+      "quotaExceededTitle": "Gränsen för gratis AI-bilder är nådd",
+      "quotaExceededMessage": "Du har använt alla {limit} gratis AI-genereringar. Prenumerera på valfri plan för obegränsade AI-bilder."
     },
     "photo": {
       "label": "Bild",
@@ -497,7 +510,10 @@
         "langSwitcherLabel": "Språkväljare",
         "langSwitcherTip": "Var gästerna väljer menyspråk på den publika sidan.",
         "langSwitcher_inline": "I listan",
-        "langSwitcher_top": "Jordglobsikon"
+        "langSwitcher_top": "Jordglobsikon",
+        "generateAi": "Generera med AI",
+        "aiTitle": "Generera bakgrund",
+        "aiPlaceholder": "t.ex. Mysigt bord vid levande ljus med rustika tallrikar och varmt trä"
       },
       "general": {
         "title": "Region och språk",

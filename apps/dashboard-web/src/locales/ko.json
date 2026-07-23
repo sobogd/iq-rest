@@ -71,7 +71,20 @@
     },
     "ai": {
       "translateReplaceTitle": "기존 번역을 교체할까요?",
-      "translateReplaceMessage": "이 필드에 이미 입력한 내용을 덮어씁니다."
+      "translateReplaceMessage": "이 필드에 이미 입력한 내용을 덮어씁니다.",
+      "generate": "생성",
+      "generating": "생성 중...",
+      "tryAgain": "다시 시도",
+      "useThisPhoto": "이 사진 사용",
+      "describe": "설명",
+      "describeTip": "원하는 내용을 설명하고 생성을 누르세요.",
+      "promptTip": "팁: 각도, 조명, 배경을 언급하세요.",
+      "noImage": "반환된 이미지가 없습니다.",
+      "errorGenerate": "생성 실패. 다시 시도하세요.",
+      "promptPlaceholder": "예: 나무 보드 위 마르게리타 피자, 위에서 본 모습",
+      "quotaRemaining": "{limit}개 중 {remaining}개의 무료 AI 이미지가 남았습니다. 무제한은 구독하세요.",
+      "quotaExceededTitle": "무료 AI 이미지 한도 도달",
+      "quotaExceededMessage": "무료 AI 생성 {limit}회를 모두 사용했습니다. 무제한 AI 이미지를 위해 어떤 플랜이든 구독하세요."
     },
     "photo": {
       "label": "사진",
@@ -497,7 +510,10 @@
         "langSwitcherLabel": "언어 전환기",
         "langSwitcherTip": "공개 페이지에서 손님이 메뉴 언어를 선택하는 위치입니다.",
         "langSwitcher_inline": "목록 안에",
-        "langSwitcher_top": "지구본 아이콘"
+        "langSwitcher_top": "지구본 아이콘",
+        "generateAi": "AI로 생성",
+        "aiTitle": "배경 생성",
+        "aiPlaceholder": "예: 촛불 아래 소박한 접시와 따뜻한 나무가 있는 아늑한 테이블"
       },
       "general": {
         "title": "지역 및 언어",

@@ -71,7 +71,20 @@
     },
     "ai": {
       "translateReplaceTitle": "替换现有翻译？",
-      "translateReplaceMessage": "这将覆盖您已在该字段输入的内容。"
+      "translateReplaceMessage": "这将覆盖您已在该字段输入的内容。",
+      "generate": "生成",
+      "generating": "生成中...",
+      "tryAgain": "重试",
+      "useThisPhoto": "使用此照片",
+      "describe": "描述",
+      "describeTip": "描述您想要的内容，然后点击生成。",
+      "promptTip": "提示：提及角度、光线或背景。",
+      "noImage": "未返回图像。",
+      "errorGenerate": "生成失败。请重试。",
+      "promptPlaceholder": "如：木板上的玛格丽特披萨，俯视图",
+      "quotaRemaining": "剩余 {limit} 张中的 {remaining} 张免费AI图片。订阅可获得无限量。",
+      "quotaExceededTitle": "已达免费AI图片上限",
+      "quotaExceededMessage": "您已用尽全部 {limit} 次免费AI生成。订阅任意套餐获得无限AI图片。"
     },
     "photo": {
       "label": "照片",
@@ -423,7 +436,10 @@
         "langSwitcherLabel": "语言切换",
         "langSwitcherTip": "顾客在公开页面选择菜单语言的位置。",
         "langSwitcher_inline": "在列表中",
-        "langSwitcher_top": "地球图标"
+        "langSwitcher_top": "地球图标",
+        "generateAi": "用AI生成",
+        "aiTitle": "生成背景",
+        "aiPlaceholder": "如：温馨的烛光餐桌，配有质朴餐盘和暖色木材"
       },
       "general": {
         "title": "地区与语言",

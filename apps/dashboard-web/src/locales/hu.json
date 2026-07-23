@@ -71,7 +71,20 @@
     },
     "ai": {
       "translateReplaceTitle": "Lecseréli a meglévő fordítást?",
-      "translateReplaceMessage": "Ez felülírja azt, amit már beírt ebbe a mezőbe."
+      "translateReplaceMessage": "Ez felülírja azt, amit már beírt ebbe a mezőbe.",
+      "generate": "Generálás",
+      "generating": "Generálás...",
+      "tryAgain": "Próbáld újra",
+      "useThisPhoto": "Ezt a fotót használom",
+      "describe": "Leírás",
+      "describeTip": "Írd le, mit szeretnél, és kattints a Generálásra.",
+      "promptTip": "Tipp: említsd a szöget, fényt vagy hátteret.",
+      "noImage": "Nem érkezett kép.",
+      "errorGenerate": "Nem sikerült generálni. Próbáld újra.",
+      "promptPlaceholder": "pl. Margherita pizza fa deszkán, felülnézet",
+      "quotaRemaining": "Maradt {remaining} a {limit} ingyenes MI képből. Iratkozz fel a korlátlan használatért.",
+      "quotaExceededTitle": "Ingyenes MI képek elfogytak",
+      "quotaExceededMessage": "Felhasználtad mind a {limit} ingyenes MI generálást. Iratkozz fel bármely csomagra a korlátlan MI képekhez."
     },
     "photo": {
       "label": "Fénykép",
@@ -497,7 +510,10 @@
         "langSwitcherLabel": "Nyelvváltó",
         "langSwitcherTip": "Ahol a vendégek kiválasztják az étlap nyelvét a nyilvános oldalon.",
         "langSwitcher_inline": "A listában",
-        "langSwitcher_top": "Földgömb ikon"
+        "langSwitcher_top": "Földgömb ikon",
+        "generateAi": "Generálás MI-vel",
+        "aiTitle": "Háttér generálása",
+        "aiPlaceholder": "pl. Hangulatos asztal gyertyafényben rusztikus tányérokkal és meleg fával"
       },
       "general": {
         "title": "Régió és nyelvek",

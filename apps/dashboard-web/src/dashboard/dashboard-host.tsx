@@ -52,6 +52,8 @@ interface SubData {
   currentPeriodEnd?: string | null;
   proFeatures?: boolean;
   canManageBilling?: boolean;
+  aiImagesUsed?: number;
+  aiImagesLimit?: number | null;
 }
 
 export function DashboardHost() {
@@ -161,6 +163,8 @@ export function DashboardHost() {
         trialEndsAt: sub.trialEndsAt,
         proFeatures: sub.proFeatures ?? false,
         canManageBilling: sub.canManageBilling ?? true,
+        aiImagesUsed: sub.aiImagesUsed,
+        aiImagesLimit: sub.aiImagesLimit,
       }
     : null;
 

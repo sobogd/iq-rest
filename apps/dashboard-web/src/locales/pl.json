@@ -71,7 +71,20 @@
     },
     "ai": {
       "translateReplaceTitle": "Zastąpić istniejące tłumaczenie?",
-      "translateReplaceMessage": "Spowoduje to nadpisanie tego, co już wpisałeś w tym polu."
+      "translateReplaceMessage": "Spowoduje to nadpisanie tego, co już wpisałeś w tym polu.",
+      "generate": "Generuj",
+      "generating": "Generowanie...",
+      "tryAgain": "Spróbuj ponownie",
+      "useThisPhoto": "Użyj tego zdjęcia",
+      "describe": "Opisz",
+      "describeTip": "Opisz, czego chcesz, i naciśnij Generuj.",
+      "promptTip": "Wskazówka: podaj kąt, oświetlenie lub tło.",
+      "noImage": "Nie zwrócono obrazu.",
+      "errorGenerate": "Nie udało się wygenerować. Spróbuj ponownie.",
+      "promptPlaceholder": "np. Pizza margherita na drewnianej desce, widok z góry",
+      "quotaRemaining": "Pozostało {remaining} z {limit} darmowych obrazów AI. Subskrybuj, aby mieć bez ograniczeń.",
+      "quotaExceededTitle": "Limit darmowych obrazów AI osiągnięty",
+      "quotaExceededMessage": "Wykorzystano wszystkie {limit} darmowych generacji AI. Subskrybuj dowolny plan dla nieograniczonych obrazów AI."
     },
     "photo": {
       "label": "Zdjęcie",
@@ -497,7 +510,10 @@
         "langSwitcherLabel": "Przełącznik języka",
         "langSwitcherTip": "Gdzie goście wybierają język menu na stronie publicznej.",
         "langSwitcher_inline": "Na liście",
-        "langSwitcher_top": "Ikona globusa"
+        "langSwitcher_top": "Ikona globusa",
+        "generateAi": "Generuj z AI",
+        "aiTitle": "Generuj tło",
+        "aiPlaceholder": "np. Przytulny stół przy świecach z rustykalnymi talerzami i ciepłym drewnem"
       },
       "general": {
         "title": "Region i języki",

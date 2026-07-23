@@ -71,7 +71,20 @@
     },
     "ai": {
       "translateReplaceTitle": "Remplacer la traduction existante ?",
-      "translateReplaceMessage": "Cela remplacera ce que vous avez déjà saisi dans ce champ."
+      "translateReplaceMessage": "Cela remplacera ce que vous avez déjà saisi dans ce champ.",
+      "generate": "Générer",
+      "generating": "Génération...",
+      "tryAgain": "Réessayer",
+      "useThisPhoto": "Utiliser cette photo",
+      "describe": "Décrire",
+      "describeTip": "Décrivez ce que vous voulez, puis appuyez sur Générer.",
+      "promptTip": "Astuce : précisez l'angle, la lumière ou l'arrière-plan.",
+      "noImage": "Aucune image renvoyée.",
+      "errorGenerate": "Échec de la génération. Réessayez.",
+      "promptPlaceholder": "ex. Pizza Margherita sur planche en bois, vue de dessus",
+      "quotaRemaining": "{remaining} sur {limit} images IA gratuites restantes. Abonnez-vous pour un accès illimité.",
+      "quotaExceededTitle": "Limite d'images IA gratuites atteinte",
+      "quotaExceededMessage": "Vous avez utilisé toutes les {limit} générations IA gratuites. Abonnez-vous à un forfait pour des images IA illimitées."
     },
     "photo": {
       "label": "Photo",

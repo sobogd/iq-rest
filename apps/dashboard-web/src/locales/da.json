@@ -71,7 +71,20 @@
     },
     "ai": {
       "translateReplaceTitle": "Erstat eksisterende oversættelse?",
-      "translateReplaceMessage": "Dette overskriver det, du allerede har skrevet i dette felt."
+      "translateReplaceMessage": "Dette overskriver det, du allerede har skrevet i dette felt.",
+      "generate": "Generer",
+      "generating": "Genererer...",
+      "tryAgain": "Prøv igen",
+      "useThisPhoto": "Brug dette foto",
+      "describe": "Beskriv",
+      "describeTip": "Beskriv hvad du vil have, og tryk på Generer.",
+      "promptTip": "Tip: nævn vinkel, lys eller baggrund.",
+      "noImage": "Intet billede returneret.",
+      "errorGenerate": "Kunne ikke generere. Prøv igen.",
+      "promptPlaceholder": "f.eks. Margherita-pizza på træbræt, set ovenfra",
+      "quotaRemaining": "{remaining} af {limit} gratis AI-billeder tilbage. Abonner for ubegrænset.",
+      "quotaExceededTitle": "Grænsen for gratis AI-billeder er nået",
+      "quotaExceededMessage": "Du har brugt alle {limit} gratis AI-genereringer. Abonner på en plan for ubegrænsede AI-billeder."
     },
     "photo": {
       "label": "Billede",
@@ -497,7 +510,10 @@
         "langSwitcherLabel": "Sprogvælger",
         "langSwitcherTip": "Hvor gæsterne vælger menusprog på den offentlige side.",
         "langSwitcher_inline": "I listen",
-        "langSwitcher_top": "Globusikon"
+        "langSwitcher_top": "Globusikon",
+        "generateAi": "Generer med AI",
+        "aiTitle": "Generer baggrund",
+        "aiPlaceholder": "f.eks. Hyggeligt bord ved levende lys med rustikke tallerkener og varmt træ"
       },
       "general": {
         "title": "Region og sprog",

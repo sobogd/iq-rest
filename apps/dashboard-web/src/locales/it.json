@@ -71,7 +71,20 @@
     },
     "ai": {
       "translateReplaceTitle": "Sostituire la traduzione esistente?",
-      "translateReplaceMessage": "Questo sovrascriverà ciò che hai già scritto in questo campo."
+      "translateReplaceMessage": "Questo sovrascriverà ciò che hai già scritto in questo campo.",
+      "generate": "Genera",
+      "generating": "Generazione...",
+      "tryAgain": "Riprova",
+      "useThisPhoto": "Usa questa foto",
+      "describe": "Descrivi",
+      "describeTip": "Descrivi cosa vuoi e tocca Genera.",
+      "promptTip": "Suggerimento: indica angolazione, illuminazione o sfondo.",
+      "noImage": "Nessuna immagine restituita.",
+      "errorGenerate": "Generazione fallita. Riprova.",
+      "promptPlaceholder": "es. Pizza margherita su tagliere di legno, vista dall'alto",
+      "quotaRemaining": "Rimangono {remaining} di {limit} immagini IA gratuite. Abbonati per averle illimitate.",
+      "quotaExceededTitle": "Limite immagini IA gratuite raggiunto",
+      "quotaExceededMessage": "Hai usato tutte le {limit} generazioni IA gratuite. Abbonati a un piano per immagini IA illimitate."
     },
     "photo": {
       "label": "Foto",
@@ -497,7 +510,10 @@
         "langSwitcherLabel": "Selettore lingua",
         "langSwitcherTip": "Dove gli ospiti scelgono la lingua del menu nella pagina pubblica.",
         "langSwitcher_inline": "Nell'elenco",
-        "langSwitcher_top": "Icona del mappamondo"
+        "langSwitcher_top": "Icona del mappamondo",
+        "generateAi": "Genera con IA",
+        "aiTitle": "Genera sfondo",
+        "aiPlaceholder": "es. Tavolo accogliente a lume di candela con piatti rustici e legno caldo"
       },
       "general": {
         "title": "Regione e lingue",

@@ -71,7 +71,20 @@
     },
     "ai": {
       "translateReplaceTitle": "استبدال الترجمة الحالية؟",
-      "translateReplaceMessage": "سيؤدي هذا إلى الكتابة فوق ما أدخلته بالفعل في هذا الحقل."
+      "translateReplaceMessage": "سيؤدي هذا إلى الكتابة فوق ما أدخلته بالفعل في هذا الحقل.",
+      "generate": "إنشاء",
+      "generating": "جارٍ الإنشاء...",
+      "tryAgain": "حاول مرة أخرى",
+      "useThisPhoto": "استخدم هذه الصورة",
+      "describe": "صف",
+      "describeTip": "صف ما تريد، ثم انقر على إنشاء.",
+      "promptTip": "نصيحة: اذكر الزاوية والإضاءة أو الخلفية.",
+      "noImage": "لم يتم إرجاع صورة.",
+      "errorGenerate": "فشل الإنشاء. حاول مرة أخرى.",
+      "promptPlaceholder": "مثلاً بيتزا مارغريتا على لوح خشبي، عرض من الأعلى",
+      "quotaRemaining": "تبقى {remaining} من {limit} صور AI مجانية. اشترك للحصول على غير محدود.",
+      "quotaExceededTitle": "تم الوصول إلى حد صور AI المجانية",
+      "quotaExceededMessage": "لقد استخدمت كل {limit} عمليات إنشاء AI المجانية. اشترك في أي خطة للحصول على صور AI غير محدودة."
     },
     "photo": {
       "label": "صورة",
@@ -497,7 +510,10 @@
         "langSwitcherLabel": "مبدّل اللغة",
         "langSwitcherTip": "المكان الذي يختار فيه الضيوف لغة القائمة في الصفحة العامة.",
         "langSwitcher_inline": "في القائمة",
-        "langSwitcher_top": "أيقونة الكرة الأرضية"
+        "langSwitcher_top": "أيقونة الكرة الأرضية",
+        "generateAi": "إنشاء بالذكاء الاصطناعي",
+        "aiTitle": "إنشاء خلفية",
+        "aiPlaceholder": "مثلاً طاولة دافئة بضوء الشموع مع أطباق ريفية وخشب دافئ"
       },
       "general": {
         "title": "المنطقة واللغات",

@@ -71,7 +71,20 @@
     },
     "ai": {
       "translateReplaceTitle": "Pakeisti esamą vertimą?",
-      "translateReplaceMessage": "Tai perrašys tai, ką jau įvedėte šiame laukelyje."
+      "translateReplaceMessage": "Tai perrašys tai, ką jau įvedėte šiame laukelyje.",
+      "generate": "Generuoti",
+      "generating": "Generuojama...",
+      "tryAgain": "Bandyti dar kartą",
+      "useThisPhoto": "Naudoti šią nuotrauką",
+      "describe": "Apibūdinkite",
+      "describeTip": "Apibūdinkite, ko norite, ir paspauskite Generuoti.",
+      "promptTip": "Patarimas: paminėkite kampą, apšvietimą arba foną.",
+      "noImage": "Vaizdas negrąžintas.",
+      "errorGenerate": "Nepavyko sugeneruoti. Bandykite dar kartą.",
+      "promptPlaceholder": "pvz. Margherita pica ant medinės lentos, vaizdas iš viršaus",
+      "quotaRemaining": "Liko {remaining} iš {limit} nemokamų DI vaizdų. Užsiprenumeruokite neribotam naudojimui.",
+      "quotaExceededTitle": "Pasiektas nemokamų DI vaizdų limitas",
+      "quotaExceededMessage": "Sunaudojote visus {limit} nemokamus DI generavimus. Užsiprenumeruokite bet kurį planą neribotam DI vaizdų skaičiui."
     },
     "photo": {
       "label": "Nuotrauka",
@@ -497,7 +510,10 @@
         "langSwitcherLabel": "Kalbos perjungiklis",
         "langSwitcherTip": "Kur svečiai pasirenka meniu kalbą viešajame puslapyje.",
         "langSwitcher_inline": "Sąraše",
-        "langSwitcher_top": "Gaublio piktograma"
+        "langSwitcher_top": "Gaublio piktograma",
+        "generateAi": "Generuoti su DI",
+        "aiTitle": "Generuoti foną",
+        "aiPlaceholder": "pvz. Jaukus stalas su žvakių šviesa, kaimiškomis lėkštėmis ir šiltu medžiu"
       },
       "general": {
         "title": "Regionas ir kalbos",

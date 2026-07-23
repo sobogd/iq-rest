@@ -71,7 +71,20 @@
     },
     "ai": {
       "translateReplaceTitle": "Skipta út núverandi þýðingu?",
-      "translateReplaceMessage": "Þetta skrifar yfir það sem þú hefur nú þegar slegið inn í þennan reit."
+      "translateReplaceMessage": "Þetta skrifar yfir það sem þú hefur nú þegar slegið inn í þennan reit.",
+      "generate": "Búa til",
+      "generating": "Býr til...",
+      "tryAgain": "Reyna aftur",
+      "useThisPhoto": "Nota þessa mynd",
+      "describe": "Lýsa",
+      "describeTip": "Lýstu því sem þú vilt og smelltu á Búa til.",
+      "promptTip": "Ráð: nefndu sjónarhorn, lýsingu eða bakgrunn.",
+      "noImage": "Engin mynd skilað.",
+      "errorGenerate": "Tókst ekki að búa til. Reyndu aftur.",
+      "promptPlaceholder": "t.d. Margherita pizza á viðarbretti, ofan frá",
+      "quotaRemaining": "{remaining} af {limit} ókeypis gervigreindarmyndum eftir. Gerðust áskrifandi fyrir ótakmarkað.",
+      "quotaExceededTitle": "Mörk ókeypis gervigreindarmynda náð",
+      "quotaExceededMessage": "Þú hefur notað allar {limit} ókeypis gervigreindar gerðir. Gerðust áskrifandi að einhverjum áskriftarpakka fyrir ótakmarkaðar gervigreindarmyndir."
     },
     "photo": {
       "label": "Mynd",
@@ -497,7 +510,10 @@
         "langSwitcherLabel": "Tungumálaval",
         "langSwitcherTip": "Hvar gestir velja tungumál matseðilsins á opinberu síðunni.",
         "langSwitcher_inline": "Í listanum",
-        "langSwitcher_top": "Hnattartákn"
+        "langSwitcher_top": "Hnattartákn",
+        "generateAi": "Búa til með gervigreind",
+        "aiTitle": "Búa til bakgrunn",
+        "aiPlaceholder": "t.d. Notalegt borð við kertaljós með rúmlegum diskum og hlýjum viði"
       },
       "general": {
         "title": "Svæði og tungumál",

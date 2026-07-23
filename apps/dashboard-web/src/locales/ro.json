@@ -71,7 +71,20 @@
     },
     "ai": {
       "translateReplaceTitle": "Înlocuiți traducerea existentă?",
-      "translateReplaceMessage": "Aceasta va suprascrie ce ați introdus deja în acest câmp."
+      "translateReplaceMessage": "Aceasta va suprascrie ce ați introdus deja în acest câmp.",
+      "generate": "Generează",
+      "generating": "Se generează...",
+      "tryAgain": "Încearcă din nou",
+      "useThisPhoto": "Folosește această poză",
+      "describe": "Descrie",
+      "describeTip": "Descrie ce vrei și apasă Generează.",
+      "promptTip": "Sfat: menționează unghiul, lumina sau fundalul.",
+      "noImage": "Nu s-a returnat nicio imagine.",
+      "errorGenerate": "Generarea a eșuat. Încearcă din nou.",
+      "promptPlaceholder": "ex. Pizza margherita pe scândură de lemn, vedere de sus",
+      "quotaRemaining": "Au rămas {remaining} din {limit} imagini AI gratuite. Abonează-te pentru nelimitat.",
+      "quotaExceededTitle": "Limita imaginilor AI gratuite atinsă",
+      "quotaExceededMessage": "Ai folosit toate cele {limit} generări AI gratuite. Abonează-te la orice plan pentru imagini AI nelimitate."
     },
     "photo": {
       "label": "Fotografie",
@@ -497,7 +510,10 @@
         "langSwitcherLabel": "Selector de limbă",
         "langSwitcherTip": "Unde aleg oaspeții limba meniului pe pagina publică.",
         "langSwitcher_inline": "În listă",
-        "langSwitcher_top": "Pictogramă glob"
+        "langSwitcher_top": "Pictogramă glob",
+        "generateAi": "Generează cu AI",
+        "aiTitle": "Generează fundal",
+        "aiPlaceholder": "ex. Masă confortabilă la lumânări cu farfurii rustice și lemn cald"
       },
       "general": {
         "title": "Regiune și limbi",

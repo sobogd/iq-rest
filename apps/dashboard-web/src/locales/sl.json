@@ -71,7 +71,20 @@
     },
     "ai": {
       "translateReplaceTitle": "Zamenjam obstoječi prevod?",
-      "translateReplaceMessage": "To bo prepisalo, kar ste že vnesli v to polje."
+      "translateReplaceMessage": "To bo prepisalo, kar ste že vnesli v to polje.",
+      "generate": "Ustvari",
+      "generating": "Ustvarjanje...",
+      "tryAgain": "Poskusi znova",
+      "useThisPhoto": "Uporabi to fotografijo",
+      "describe": "Opišite",
+      "describeTip": "Opišite, kaj želite, in tapnite Ustvari.",
+      "promptTip": "Namig: omenite kot, osvetlitev ali ozadje.",
+      "noImage": "Ni vrnjene slike.",
+      "errorGenerate": "Ustvarjanje ni uspelo. Poskusite znova.",
+      "promptPlaceholder": "npr. Margherita pica na leseni deski, pogled od zgoraj",
+      "quotaRemaining": "Ostalo {remaining} od {limit} brezplačnih UI slik. Naročite se za neomejeno.",
+      "quotaExceededTitle": "Dosežena meja brezplačnih UI slik",
+      "quotaExceededMessage": "Porabili ste vseh {limit} brezplačnih UI generiranj. Naročite se na kateri koli paket za neomejene UI slike."
     },
     "photo": {
       "label": "Fotografija",
@@ -497,7 +510,10 @@
         "langSwitcherLabel": "Preklopnik jezika",
         "langSwitcherTip": "Kje gostje izberejo jezik menija na javni strani.",
         "langSwitcher_inline": "Na seznamu",
-        "langSwitcher_top": "Ikona globusa"
+        "langSwitcher_top": "Ikona globusa",
+        "generateAi": "Ustvari z UI",
+        "aiTitle": "Ustvari ozadje",
+        "aiPlaceholder": "npr. Prijetna miza pri svečah z rustikalnimi krožniki in toplim lesom"
       },
       "general": {
         "title": "Regija in jeziki",

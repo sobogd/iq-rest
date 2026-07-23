@@ -71,7 +71,20 @@
     },
     "ai": {
       "translateReplaceTitle": "Zamijeniti postojeći prijevod?",
-      "translateReplaceMessage": "Ovo će prebrisati ono što ste već upisali u ovo polje."
+      "translateReplaceMessage": "Ovo će prebrisati ono što ste već upisali u ovo polje.",
+      "generate": "Generiraj",
+      "generating": "Generiranje...",
+      "tryAgain": "Pokušaj ponovno",
+      "useThisPhoto": "Koristi ovu fotografiju",
+      "describe": "Opišite",
+      "describeTip": "Opišite što želite i dodirnite Generiraj.",
+      "promptTip": "Savjet: navedite kut, osvjetljenje ili pozadinu.",
+      "noImage": "Nije vraćena slika.",
+      "errorGenerate": "Generiranje neuspješno. Pokušajte ponovno.",
+      "promptPlaceholder": "npr. Margherita pizza na drvenoj dasci, pogled odozgo",
+      "quotaRemaining": "Preostalo je {remaining} od {limit} besplatnih AI slika. Pretplatite se za neograničeno.",
+      "quotaExceededTitle": "Dosegnuto je ograničenje besplatnih AI slika",
+      "quotaExceededMessage": "Iskoristili ste svih {limit} besplatnih AI generiranja. Pretplatite se na bilo koji plan za neograničene AI slike."
     },
     "photo": {
       "label": "Fotografija",
@@ -497,7 +510,10 @@
         "langSwitcherLabel": "Prebacivač jezika",
         "langSwitcherTip": "Gdje gosti biraju jezik jelovnika na javnoj stranici.",
         "langSwitcher_inline": "Na popisu",
-        "langSwitcher_top": "Ikona globusa"
+        "langSwitcher_top": "Ikona globusa",
+        "generateAi": "Generiraj s AI",
+        "aiTitle": "Generiraj pozadinu",
+        "aiPlaceholder": "npr. Ugodan stol pri svjetlu svijeća s rustikalnim tanjurima i toplim drvom"
       },
       "general": {
         "title": "Regija i jezici",

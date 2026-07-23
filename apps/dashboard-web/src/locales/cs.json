@@ -71,7 +71,20 @@
     },
     "ai": {
       "translateReplaceTitle": "Nahradit stávající překlad?",
-      "translateReplaceMessage": "Tímto přepíšete text, který jste už do tohoto pole zadali."
+      "translateReplaceMessage": "Tímto přepíšete text, který jste už do tohoto pole zadali.",
+      "generate": "Generovat",
+      "generating": "Generování...",
+      "tryAgain": "Zkusit znovu",
+      "useThisPhoto": "Použít tuto fotku",
+      "describe": "Popsat",
+      "describeTip": "Popište, co chcete, a klepněte na Generovat.",
+      "promptTip": "Tip: zmiňte úhel, osvětlení nebo pozadí.",
+      "noImage": "Nebyl vrácen žádný obrázek.",
+      "errorGenerate": "Nelze generovat. Zkuste znovu.",
+      "promptPlaceholder": "např. Pizza margherita na dřevěném prkénku, pohled shora",
+      "quotaRemaining": "Zbývá {remaining} z {limit} bezplatných AI obrázků. Předplaťte si pro neomezeně.",
+      "quotaExceededTitle": "Limit bezplatných AI obrázků dosažen",
+      "quotaExceededMessage": "Použili jste všech {limit} bezplatných AI generací. Předplaťte si jakýkoliv plán pro neomezené AI obrázky."
     },
     "photo": {
       "label": "Fotka",
@@ -497,7 +510,10 @@
         "langSwitcherLabel": "Přepínač jazyků",
         "langSwitcherTip": "Kde si hosté volí jazyk menu na veřejné stránce.",
         "langSwitcher_inline": "V seznamu",
-        "langSwitcher_top": "Ikona zeměkoule"
+        "langSwitcher_top": "Ikona zeměkoule",
+        "generateAi": "Generovat pomocí AI",
+        "aiTitle": "Generovat pozadí",
+        "aiPlaceholder": "např. Útulný stůl při svíčkách s rustikálními talíři a teplým dřevem"
       },
       "general": {
         "title": "Region a jazyky",

@@ -71,7 +71,20 @@
     },
     "ai": {
       "translateReplaceTitle": "Kas asendada olemasolev tõlge?",
-      "translateReplaceMessage": "See kirjutab üle selle, mille oled sellele väljale juba sisestanud."
+      "translateReplaceMessage": "See kirjutab üle selle, mille oled sellele väljale juba sisestanud.",
+      "generate": "Genereeri",
+      "generating": "Genereerimine...",
+      "tryAgain": "Proovi uuesti",
+      "useThisPhoto": "Kasuta seda fotot",
+      "describe": "Kirjelda",
+      "describeTip": "Kirjelda, mida soovid, ja vajuta Genereeri.",
+      "promptTip": "Vihje: maini nurka, valgust või tausta.",
+      "noImage": "Pilti ei tagastatud.",
+      "errorGenerate": "Ei õnnestunud genereerida. Proovi uuesti.",
+      "promptPlaceholder": "nt margherita pitsa puidust laual, vaade ülevalt",
+      "quotaRemaining": "Jäänud {remaining}/{limit} tasuta tehisintellekti pilti. Telli piiramatu kasutamise jaoks.",
+      "quotaExceededTitle": "Tasuta tehisintellekti piltide piir saavutatud",
+      "quotaExceededMessage": "Oled kasutanud kõik {limit} tasuta tehisintellekti genereerimist. Telli mõni plaan piiramatute tehisintellekti piltide jaoks."
     },
     "photo": {
       "label": "Foto",
@@ -497,7 +510,10 @@
         "langSwitcherLabel": "Keelevahetaja",
         "langSwitcherTip": "Kus külalised valivad avalikul lehel menüü keele.",
         "langSwitcher_inline": "Loendis",
-        "langSwitcher_top": "Maakera ikoon"
+        "langSwitcher_top": "Maakera ikoon",
+        "generateAi": "Genereeri tehisintellektiga",
+        "aiTitle": "Genereeri taust",
+        "aiPlaceholder": "nt Hubane laud küünlavalgel rustikaalsete taldrikutega ja sooja puiduga"
       },
       "general": {
         "title": "Piirkond ja keeled",

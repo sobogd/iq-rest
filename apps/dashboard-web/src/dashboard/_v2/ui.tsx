@@ -25,6 +25,7 @@ import { AVAILABLE_LANGUAGES, getMl, setMl, translateText } from "./i18n";
 import { useLocale } from "@/lib/i18n-compat";
 import { useHistoryModal } from "./use-history-modal";
 import { isPastDue } from "./billing-status";
+import { useAiImageAccess } from "./sub-context";
 import type { Ml } from "./types";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
 import { useScrollLock } from "./use-scroll-lock";
@@ -2012,3 +2013,206 @@ export function PhotoPicker({
  );
 }
 
+
+export function AiImageModal({
+ open,
+ onClose,
+ onUse,
+ endpoint,
+ title,
+ placeholder,
+ defaultPrompt,
+ aspect = "square",
+ extraBody,
+ eventPrefix,
+}: {
+ open: boolean;
+ onClose: () => void;
+ onUse: (url: string) => void;
+ endpoint: string;
+ title: string;
+ placeholder?: string;
+ defaultPrompt?: string;
+ aspect?: "square" | "portrait";
+ extraBody?: Record<string, unknown>;
+ eventPrefix?: string;
+}) {
+ const tc = useTranslations("dashboard.common");
+ const ta = useTranslations("dashboard.ai");
+ const access = useAiImageAccess();
+ const qc = useQueryClient();
+ const [prompt, setPrompt] = useState(defaultPrompt || "");
+ const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">("idle");
+ const [resultUrl, setResultUrl] = useState<string | null>(null);
+ const [error, setError] = useState<string | null>(null);
+
+ useEffect(() => {
+ if (open) {
+ setPrompt(defaultPrompt || "");
+ setStatus("idle");
+ setResultUrl(null);
+ setError(null);
+ }
+ }, [open, defaultPrompt]);
+
+ async function generate() {
+ if (eventPrefix) track(`${eventPrefix}_generate_photo_click_generate`);
+ if (!prompt.trim()) return;
+ setStatus("loading");
+ setError(null);
+ try {
+ const res = await fetch(apiUrl(endpoint), {
+ method: "POST",
+ credentials: "include",
+ headers: { "Content-Type": "application/json", ...activeRestaurantHeader() },
+ body: JSON.stringify({ prompt: prompt.trim(), ...(extraBody || {}) }),
+ });
+ if (!res.ok) {
+ if (res.status === 403) {
+ void qc.invalidateQueries({ queryKey: ["sub"] });
+ setError(ta("quotaExceededMessage", { limit: 5 }));
+ } else {
+ setError(ta("errorGenerate"));
+ }
+ setStatus("error");
+ return;
+ }
+ const data = await res.json();
+ if (!data.url) {
+ setError(ta("noImage"));
+ setStatus("error");
+ return;
+ }
+ setResultUrl(data.url);
+ setStatus("done");
+ void qc.invalidateQueries({ queryKey: ["sub"] });
+ } catch {
+ setError(ta("errorGenerate"));
+ setStatus("error");
+ }
+ }
+
+ function useImage() {
+ if (eventPrefix) track(`${eventPrefix}_generate_photo_click_use`);
+ if (resultUrl) {
+ onUse(resultUrl);
+ onClose();
+ }
+ }
+
+ const handleClose = () => {
+ if (eventPrefix) track(`${eventPrefix}_generate_photo_click_close`);
+ onClose();
+ };
+ const handleCancel = () => {
+ if (eventPrefix) track(`${eventPrefix}_generate_photo_click_cancel`);
+ onClose();
+ };
+
+ const isLoading = status === "loading";
+ const hasResult = status === "done" && resultUrl;
+ const previewCls = aspect === "portrait" ? "aspect-[9/16] max-h-[40vh] mx-auto" : "aspect-square w-full max-w-[60vh] mx-auto";
+
+ if (access.kind === "exhausted" && !resultUrl) {
+ return (
+ <Modal open={open} onClose={handleClose} title={title} size="sm">
+ <div className="flex flex-col items-center text-center gap-3 py-4">
+ <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-muted-foreground">
+ <SparklesIcon size={20} />
+ </div>
+ <div className="text-sm font-medium text-foreground">{ta("quotaExceededTitle")}</div>
+ <p className="text-xs text-muted-foreground max-w-xs">{ta("quotaExceededMessage", { limit: access.limit })}</p>
+ </div>
+ <div className="flex gap-2 mt-4">
+ <button type="button" onClick={handleClose} className={primaryBtn + " flex-1"}>
+ {tc("close")}
+ </button>
+ </div>
+ </Modal>
+ );
+ }
+
+ return (
+ <Modal open={open} onClose={handleClose} title={title} size="sm">
+ <div className={previewCls + " bg-secondary rounded-xl overflow-hidden border border-border flex items-center justify-center mb-4"}>
+ {isLoading ? (
+ <div className="flex flex-col items-center gap-1.5 text-muted-foreground">
+ <div className="w-6 h-6 border-2 border-input border-t-foreground rounded-full animate-spin" />
+ <div className="text-[11px]">{ta("generating")}</div>
+ </div>
+ ) : hasResult ? (
+ <img src={resultUrl!} alt="" className="w-full h-full object-cover" />
+ ) : (
+ <div className="flex flex-col items-center gap-1.5 text-muted-foreground px-4 text-center">
+ <SparklesIcon size={20} />
+ <div className="text-[11px]">{ta("describeTip")}</div>
+ </div>
+ )}
+ </div>
+
+ <label htmlFor="ai-prompt" className={labelClass}>{ta("describe")}</label>
+ <textarea
+ id="ai-prompt"
+ rows={2}
+ placeholder={placeholder || ta("promptPlaceholder")}
+ value={prompt}
+ onChange={(e) => setPrompt(e.target.value)}
+ onFocus={() => { if (eventPrefix) track(`${eventPrefix}_generate_photo_focus_description`); }}
+ disabled={isLoading}
+ className={inputClass + " h-auto py-2 resize-none"}
+ />
+ <p className="text-[11px] text-muted-foreground mt-1">
+ {ta("promptTip")}
+ </p>
+ {access.kind === "limited" ? (
+ <p className="text-[11px] text-muted-foreground mt-1">
+ {ta("quotaRemaining", { remaining: access.remaining, limit: access.limit })}
+ </p>
+ ) : null}
+
+ {error ? <p className="text-xs text-red-600 mt-3">{error}</p> : null}
+
+ <div className="flex gap-2 mt-4">
+ {hasResult ? (
+ <>
+ <button
+ type="button"
+ onClick={generate}
+ disabled={isLoading || !prompt.trim() || access.kind === "exhausted"}
+ className={secondaryBtn + " flex-1 inline-flex items-center justify-center gap-1.5"}
+ >
+ <SparklesIcon size={13} />
+ {ta("tryAgain")}
+ </button>
+ <button
+ type="button"
+ onClick={useImage}
+ className={primaryBtn + " flex-1"}
+ >
+ {ta("useThisPhoto")}
+ </button>
+ </>
+ ) : (
+ <>
+ <button type="button" onClick={handleCancel} className={secondaryBtn + " flex-1"}>
+ {tc("cancel")}
+ </button>
+ <button
+ type="button"
+ onClick={generate}
+ disabled={isLoading || !prompt.trim()}
+ className={primaryBtn + " flex-1 inline-flex items-center justify-center gap-1.5"}
+ >
+ {isLoading ? (
+ <span className="w-3 h-3 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+ ) : (
+ <SparklesIcon size={13} />
+ )}
+ {isLoading ? ta("generating") : ta("generate")}
+ </button>
+ </>
+ )}
+ </div>
+ </Modal>
+ );
+}

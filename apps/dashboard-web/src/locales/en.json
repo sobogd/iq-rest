@@ -71,7 +71,20 @@
     },
     "ai": {
       "translateReplaceTitle": "Replace existing translation?",
-      "translateReplaceMessage": "This will overwrite what you've already typed in this field."
+      "translateReplaceMessage": "This will overwrite what you've already typed in this field.",
+      "generate": "Generate",
+      "generating": "Generating...",
+      "tryAgain": "Try again",
+      "useThisPhoto": "Use this photo",
+      "describe": "Describe",
+      "describeTip": "Describe what you want, then tap Generate.",
+      "promptTip": "Tip: mention angle, lighting, or background.",
+      "noImage": "No image returned.",
+      "errorGenerate": "Couldn't generate. Try again.",
+      "promptPlaceholder": "e.g. Margherita pizza on a wooden board, top-down view",
+      "quotaRemaining": "{remaining} of {limit} free AI images left. Subscribe for unlimited.",
+      "quotaExceededTitle": "Free AI image limit reached",
+      "quotaExceededMessage": "You've used all {limit} free AI image generations. Subscribe to any plan for unlimited AI images."
     },
     "photo": {
       "label": "Photo",
@@ -497,7 +510,10 @@
         "langSwitcherLabel": "Language switcher",
         "langSwitcherTip": "Where guests pick the menu language on the public page.",
         "langSwitcher_inline": "In the list",
-        "langSwitcher_top": "Globe icon"
+        "langSwitcher_top": "Globe icon",
+        "generateAi": "Generate with AI",
+        "aiTitle": "Generate background",
+        "aiPlaceholder": "e.g. Cozy candlelit table with rustic plates and warm wood"
       },
       "general": {
         "title": "Region & languages",

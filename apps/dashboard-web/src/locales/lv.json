@@ -71,7 +71,20 @@
     },
     "ai": {
       "translateReplaceTitle": "Aizstāt esošo tulkojumu?",
-      "translateReplaceMessage": "Tas pārrakstīs to, ko jau esat ievadījis šajā laukā."
+      "translateReplaceMessage": "Tas pārrakstīs to, ko jau esat ievadījis šajā laukā.",
+      "generate": "Ģenerēt",
+      "generating": "Ģenerē...",
+      "tryAgain": "Mēģināt vēlreiz",
+      "useThisPhoto": "Izmantot šo fotoattēlu",
+      "describe": "Aprakstiet",
+      "describeTip": "Aprakstiet, ko vēlaties, un nospiediet Ģenerēt.",
+      "promptTip": "Padoms: minējiet leņķi, apgaismojumu vai fonu.",
+      "noImage": "Attēls nav atgriezts.",
+      "errorGenerate": "Ģenerēšana neizdevās. Mēģiniet vēlreiz.",
+      "promptPlaceholder": "piem. Margherita pica uz koka dēļa, skats no augšas",
+      "quotaRemaining": "Atlikuši {remaining} no {limit} bezmaksas MI attēliem. Abonējiet, lai iegūtu neierobežotu skaitu.",
+      "quotaExceededTitle": "Bezmaksas MI attēlu limits sasniegts",
+      "quotaExceededMessage": "Jūs esat izmantojis visas {limit} bezmaksas MI ģenerēšanas. Abonējiet jebkuru plānu, lai iegūtu neierobežotu skaitu MI attēlu."
     },
     "photo": {
       "label": "Fotoattēls",
@@ -497,7 +510,10 @@
         "langSwitcherLabel": "Valodas pārslēdzējs",
         "langSwitcherTip": "Kur viesi izvēlas ēdienkartes valodu publiskajā lapā.",
         "langSwitcher_inline": "Sarakstā",
-        "langSwitcher_top": "Zemeslodes ikona"
+        "langSwitcher_top": "Zemeslodes ikona",
+        "generateAi": "Ģenerēt ar MI",
+        "aiTitle": "Ģenerēt fonu",
+        "aiPlaceholder": "piem. Mājīgs galds sveču gaismā ar lauku stila šķīvjiem un siltu koku"
       },
       "general": {
         "title": "Reģions un valodas",

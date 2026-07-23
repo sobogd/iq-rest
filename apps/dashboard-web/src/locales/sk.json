@@ -71,7 +71,20 @@
     },
     "ai": {
       "translateReplaceTitle": "Nahradiť existujúci preklad?",
-      "translateReplaceMessage": "Toto prepíše text, ktorý ste už do tohto poľa zadali."
+      "translateReplaceMessage": "Toto prepíše text, ktorý ste už do tohto poľa zadali.",
+      "generate": "Generovať",
+      "generating": "Generuje sa...",
+      "tryAgain": "Skúsiť znova",
+      "useThisPhoto": "Použiť túto fotku",
+      "describe": "Popísať",
+      "describeTip": "Popíšte, čo chcete, a klepnite na Generovať.",
+      "promptTip": "Tip: spomeňte uhol, osvetlenie alebo pozadie.",
+      "noImage": "Nebola vrátená žiadna obrázok.",
+      "errorGenerate": "Nemožno generovať. Skúste znova.",
+      "promptPlaceholder": "napr. Pizza margherita na drevenej doske, pohľad zhora",
+      "quotaRemaining": "Zostáva {remaining} z {limit} bezplatných AI obrázkov. Predplaťte si pre neobmedzene.",
+      "quotaExceededTitle": "Limit bezplatných AI obrázkov dosiahnutý",
+      "quotaExceededMessage": "Použili ste všetkých {limit} bezplatných AI generovaní. Predplaťte si akýkoľvek plán pre neobmedzené AI obrázky."
     },
     "photo": {
       "label": "Fotka",
@@ -497,7 +510,10 @@
         "langSwitcherLabel": "Prepínač jazyka",
         "langSwitcherTip": "Kde si hostia vyberajú jazyk menu na verejnej stránke.",
         "langSwitcher_inline": "V zozname",
-        "langSwitcher_top": "Ikona zemegule"
+        "langSwitcher_top": "Ikona zemegule",
+        "generateAi": "Generovať pomocou AI",
+        "aiTitle": "Generovať pozadie",
+        "aiPlaceholder": "napr. Útulný stôl pri sviečkach s rustikálnymi tanierami a teplým drevom"
       },
       "general": {
         "title": "Región a jazyky",

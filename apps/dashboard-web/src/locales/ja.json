@@ -71,7 +71,20 @@
     },
     "ai": {
       "translateReplaceTitle": "既存の翻訳を置き換えますか？",
-      "translateReplaceMessage": "このフィールドに入力済みの内容が上書きされます。"
+      "translateReplaceMessage": "このフィールドに入力済みの内容が上書きされます。",
+      "generate": "生成",
+      "generating": "生成中...",
+      "tryAgain": "もう一度試す",
+      "useThisPhoto": "この写真を使う",
+      "describe": "説明",
+      "describeTip": "希望を説明し、生成をタップしてください。",
+      "promptTip": "ヒント：角度、照明、背景に言及してください。",
+      "noImage": "画像が返されませんでした。",
+      "errorGenerate": "生成に失敗しました。もう一度試してください。",
+      "promptPlaceholder": "例：木のボードに乗ったマルゲリータピザ、上から見た角度",
+      "quotaRemaining": "無料AI画像が {limit} 中 {remaining} 残っています。無制限はサブスクから。",
+      "quotaExceededTitle": "無料AI画像の上限に達しました",
+      "quotaExceededMessage": "無料AI生成 {limit} 回をすべて使用しました。AI画像を無制限にするには任意のプランにご登録ください。"
     },
     "photo": {
       "label": "写真",
@@ -497,7 +510,10 @@
         "langSwitcherLabel": "言語切り替え",
         "langSwitcherTip": "公開ページでお客様がメニューの言語を選ぶ場所です。",
         "langSwitcher_inline": "リスト内",
-        "langSwitcher_top": "地球儀アイコン"
+        "langSwitcher_top": "地球儀アイコン",
+        "generateAi": "AIで生成",
+        "aiTitle": "背景を生成",
+        "aiPlaceholder": "例：素朴な皿と暖かい木のキャンドルライトのテーブル"
       },
       "general": {
         "title": "地域・言語",

@@ -3,8 +3,9 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useQueryClient } from "@tanstack/react-query";
 import { useLocale, useTranslations } from "next-intl";
-import { ChevronRightIcon, CheckIcon, CopyIcon, SendIcon, CloseIcon, GlobeIcon } from "./icons";
+import { ChevronRightIcon, CheckIcon, CopyIcon, SendIcon, CloseIcon, GlobeIcon, SparklesIcon } from "./icons";
 import {
+ AiImageModal,
  EditPageHeader,
  PageHeader,
  Select,
@@ -348,6 +349,7 @@ export function BrandingSettingsPage({
  const colorPickerRef = useRef<HTMLInputElement | null>(null);
  const [uploading, setUploading] = useState(false);
  const [slugCopied, setSlugCopied] = useState(false);
+ const [aiOpen, setAiOpen] = useState(false);
 
  const validSlug = /^[a-z0-9-]{2,40}$/.test(draft.slug);
 
@@ -560,8 +562,16 @@ export function BrandingSettingsPage({
  </label>
  </div>
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
- <div className="mb-2.5">
+ <div className="flex items-center justify-between gap-3 mb-2.5">
  <div className="text-sm font-medium text-foreground">{tb("backgroundLabel")}</div>
+ <button
+ type="button"
+ onClick={() => { track("dash_settings_branding_click_generate_photo"); setAiOpen(true); }}
+ className="inline-flex items-center gap-1 text-[11px] font-medium text-muted-foreground transition-colors"
+ >
+ <SparklesIcon size={11} />
+ {tb("generateAi")}
+ </button>
  </div>
  <label
  htmlFor="brand-bg"
@@ -750,6 +760,16 @@ export function BrandingSettingsPage({
  </div>
  </div>
 
+ <AiImageModal
+ open={aiOpen}
+ onClose={() => setAiOpen(false)}
+ onUse={(url) => setDraft((d) => ({ ...d, backgroundUrl: url, backgroundType: "image" }))}
+ eventPrefix="dash_settings_branding"
+ endpoint="/api/restaurant/generate-background"
+ title={tb("aiTitle")}
+ placeholder={tb("aiPlaceholder")}
+ aspect="portrait"
+ />
  </div>
  );
 }

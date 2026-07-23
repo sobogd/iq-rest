@@ -71,7 +71,20 @@
     },
     "ai": {
       "translateReplaceTitle": "Mevcut çeviri değiştirilsin mi?",
-      "translateReplaceMessage": "Bu, bu alana daha önce yazdığınız metnin üzerine yazar."
+      "translateReplaceMessage": "Bu, bu alana daha önce yazdığınız metnin üzerine yazar.",
+      "generate": "Oluştur",
+      "generating": "Oluşturuluyor...",
+      "tryAgain": "Tekrar dene",
+      "useThisPhoto": "Bu fotoğrafı kullan",
+      "describe": "Tanımla",
+      "describeTip": "Ne istediğinizi tanımlayın ve Oluştur'a dokunun.",
+      "promptTip": "İpucu: açı, ışık veya arka planı belirtin.",
+      "noImage": "Görüntü dönmedi.",
+      "errorGenerate": "Oluşturulamadı. Tekrar deneyin.",
+      "promptPlaceholder": "ör. Tahta üzerinde margherita pizza, üstten görünüm",
+      "quotaRemaining": "{limit} ücretsiz AI görselden {remaining} kaldı. Sınırsız için abone olun.",
+      "quotaExceededTitle": "Ücretsiz AI görsel limiti doldu",
+      "quotaExceededMessage": "Tüm {limit} ücretsiz AI üretimini kullandınız. Sınırsız AI görsel için herhangi bir plana abone olun."
     },
     "photo": {
       "label": "Fotoğraf",
@@ -497,7 +510,10 @@
         "langSwitcherLabel": "Dil seçici",
         "langSwitcherTip": "Misafirlerin herkese açık sayfada menü dilini seçtiği yer.",
         "langSwitcher_inline": "Listede",
-        "langSwitcher_top": "Küre simgesi"
+        "langSwitcher_top": "Küre simgesi",
+        "generateAi": "AI ile oluştur",
+        "aiTitle": "Arka plan oluştur",
+        "aiPlaceholder": "ör. Mum ışığında rustik tabaklar ve sıcak ahşapla samimi masa"
       },
       "general": {
         "title": "Bölge ve diller",

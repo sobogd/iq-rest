@@ -71,7 +71,20 @@
     },
     "ai": {
       "translateReplaceTitle": "Korvataanko nykyinen käännös?",
-      "translateReplaceMessage": "Tämä korvaa sen, mitä olet jo kirjoittanut tähän kenttään."
+      "translateReplaceMessage": "Tämä korvaa sen, mitä olet jo kirjoittanut tähän kenttään.",
+      "generate": "Luo",
+      "generating": "Luodaan...",
+      "tryAgain": "Yritä uudelleen",
+      "useThisPhoto": "Käytä tätä kuvaa",
+      "describe": "Kuvaile",
+      "describeTip": "Kuvaile mitä haluat ja paina Luo.",
+      "promptTip": "Vinkki: mainitse kulma, valaistus tai tausta.",
+      "noImage": "Kuvaa ei palautunut.",
+      "errorGenerate": "Luonti ei onnistunut. Yritä uudelleen.",
+      "promptPlaceholder": "esim. Margherita-pizza puulaudalla, ylhäältä",
+      "quotaRemaining": "{remaining} / {limit} ilmaista tekoälykuvaa jäljellä. Tilaa rajoittamaton.",
+      "quotaExceededTitle": "Ilmaisten tekoälykuvien raja saavutettu",
+      "quotaExceededMessage": "Olet käyttänyt kaikki {limit} ilmaista tekoälyluontia. Tilaa mikä tahansa paketti rajoittamattomille tekoälykuville."
     },
     "photo": {
       "label": "Kuva",
@@ -497,7 +510,10 @@
         "langSwitcherLabel": "Kielivalitsin",
         "langSwitcherTip": "Missä asiakkaat valitsevat ruokalistan kielen julkisella sivulla.",
         "langSwitcher_inline": "Luettelossa",
-        "langSwitcher_top": "Maapallokuvake"
+        "langSwitcher_top": "Maapallokuvake",
+        "generateAi": "Luo tekoälyllä",
+        "aiTitle": "Luo tausta",
+        "aiPlaceholder": "esim. Viihtyisä pöytä kynttilänvalossa rustiikkisilla lautasilla ja lämpimällä puulla"
       },
       "general": {
         "title": "Alue ja kielet",

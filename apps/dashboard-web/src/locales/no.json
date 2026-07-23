@@ -71,7 +71,20 @@
     },
     "ai": {
       "translateReplaceTitle": "Erstatte eksisterende oversettelse?",
-      "translateReplaceMessage": "Dette overskriver det du allerede har skrevet i dette feltet."
+      "translateReplaceMessage": "Dette overskriver det du allerede har skrevet i dette feltet.",
+      "generate": "Generer",
+      "generating": "Genererer...",
+      "tryAgain": "Prøv igjen",
+      "useThisPhoto": "Bruk dette bildet",
+      "describe": "Beskriv",
+      "describeTip": "Beskriv hva du vil ha, og trykk Generer.",
+      "promptTip": "Tips: nevn vinkel, lys eller bakgrunn.",
+      "noImage": "Ingen bilde returnert.",
+      "errorGenerate": "Kunne ikke generere. Prøv igjen.",
+      "promptPlaceholder": "f.eks. Margherita-pizza på trefjøl, ovenfra",
+      "quotaRemaining": "{remaining} av {limit} gratis AI-bilder igjen. Abonner for ubegrenset.",
+      "quotaExceededTitle": "Grense for gratis AI-bilder nådd",
+      "quotaExceededMessage": "Du har brukt alle {limit} gratis AI-genereringer. Abonner på en plan for ubegrensede AI-bilder."
     },
     "photo": {
       "label": "Bilde",
@@ -497,7 +510,10 @@
         "langSwitcherLabel": "Språkvelger",
         "langSwitcherTip": "Hvor gjestene velger menyspråk på den offentlige siden.",
         "langSwitcher_inline": "I listen",
-        "langSwitcher_top": "Globusikon"
+        "langSwitcher_top": "Globusikon",
+        "generateAi": "Generer med AI",
+        "aiTitle": "Generer bakgrunn",
+        "aiPlaceholder": "f.eks. Koselig bord ved levende lys med rustikke tallerkener og varmt tre"
       },
       "general": {
         "title": "Region og språk",

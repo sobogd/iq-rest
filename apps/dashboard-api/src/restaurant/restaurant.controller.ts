@@ -22,6 +22,8 @@ import { OnboardingSeedService } from "../onboarding/onboarding-seed.service";
 import { PrismaService } from "../prisma/prisma.service";
 import { hasProFeatures } from "../common/entitlements";
 import { getRequestCurrency } from "../common/geo";
+import { callGeminiImage, uploadGeneratedImage } from "../common/gemini-image";
+import { consumeAiImageQuota, getAiImageUsage, refundAiImageUsage } from "../common/ai-quota";
 
 const ACTIVE_RESTAURANT_COOKIE = "iqr_active_restaurant_id";
 // 1 year — purely a UI convenience for the browser; AuthGuard validates the
@@ -102,6 +104,64 @@ export class RestaurantController {
     return this.svc.translateCustomTexts(userId, restaurantId);
   }
 
+  // Generate a restaurant public-menu BACKGROUND image via Gemini. (Per-dish
+  // image generation was removed; this is the only AI-image surface left.)
+  @Post("restaurant/generate-background")
+  async generateBackground(@Req() req: Request, @Body() body: { prompt?: string }) {
+    const { restaurantId } = (req as AuthedRequest).authUser;
+    const { isPaid } = await consumeAiImageQuota(this.prisma, restaurantId);
+    const userPrompt = typeof body?.prompt === "string" ? body.prompt.trim() : "";
+
+    let prompt: string;
+    if (userPrompt) {
+      prompt = [
+        userPrompt,
+        "Vertical portrait composition (9:16), suitable as a mobile background.",
+        "Dark moody atmosphere — the surface should be dark so white text is readable on top.",
+        "Soft, warm, slightly dim lighting. Rich but muted tones.",
+        "No people, no hands, no text, no words, no letters, no numbers, no logos, no watermarks, no labels, no signs.",
+        "Professional photography.",
+      ].join("\n");
+    } else {
+      const items = await this.prisma.item.findMany({
+        where: { restaurantId, isActive: true, deletedAt: null },
+        select: { name: true },
+        take: 6,
+      });
+      if (items.length === 0) {
+        throw new BadRequestException("No menu items to generate background from");
+      }
+      const sampleItems = items.map((i) => i.name).join(", ");
+      prompt = [
+        "Top-down flat lay photograph on an elegant dark dining table.",
+        `ONLY these items are on the table, nothing else: ${sampleItems}.`,
+        "Style: restaurant cuisine. Each item in its own plate/glass/bowl, beautifully arranged.",
+        "Bird's eye view, looking straight down at the table.",
+        "Spread across the table with space between them. Elegant plating.",
+        "Soft, warm, slightly dim lighting. Rich but muted tones.",
+        "Dark moody atmosphere — the table surface should be dark so white text is readable on top.",
+        "Do NOT add any items that are not in the list above. No extra food, no desserts, no drinks unless listed.",
+        "No people, no hands, no text, no words, no letters, no numbers, no logos, no watermarks, no labels, no signs.",
+        "Professional food photography. Vertical portrait (9:16).",
+      ].join("\n");
+    }
+
+    try {
+      const b64 = await callGeminiImage({ prompt, aspectRatio: "9:16", timeoutMs: 50_000 });
+      const url = await uploadGeneratedImage(b64, {
+        pathPrefix: "restaurants",
+        restaurantId,
+        filenamePrefix: "bg",
+        resize: { w: 1080, h: 1920, fit: "cover" },
+        quality: 85,
+      });
+      return { url };
+    } catch (err) {
+      if (!isPaid) await refundAiImageUsage(this.prisma, restaurantId);
+      throw err;
+    }
+  }
+
   @Post("restaurant/dismiss-scan-banner")
   async dismissScanBanner(@Req() req: Request) {
     const { restaurantId } = (req as AuthedRequest).authUser;
@@ -166,6 +226,8 @@ export class RestaurantController {
       },
     });
     if (!restaurant) return null;
+    // AI-image quota (drives the background-generator's remaining-count UI).
+    const usage = await getAiImageUsage(this.prisma, restaurantId);
     return {
       plan: restaurant.plan,
       billingCycle: restaurant.billingCycle,
@@ -178,6 +240,8 @@ export class RestaurantController {
       proFeatures: hasProFeatures(restaurant),
       // Demo accounts can't pay — hide the billing UI (the SPA gates on this).
       canManageBilling: !viaGrant && !isDemo,
+      aiImagesUsed: usage.aiImagesUsed,
+      aiImagesLimit: usage.aiImagesLimit,
     };
   }
 

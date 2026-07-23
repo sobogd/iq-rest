@@ -71,7 +71,20 @@
     },
     "ai": {
       "translateReplaceTitle": "¿Reemplazar la traducción existente?",
-      "translateReplaceMessage": "Esto sobrescribirá lo que ya has escrito en este campo."
+      "translateReplaceMessage": "Esto sobrescribirá lo que ya has escrito en este campo.",
+      "generate": "Generar",
+      "generating": "Generando...",
+      "tryAgain": "Intentar de nuevo",
+      "useThisPhoto": "Usar esta foto",
+      "describe": "Describir",
+      "describeTip": "Describe lo que quieres y pulsa Generar.",
+      "promptTip": "Consejo: menciona el ángulo, la iluminación o el fondo.",
+      "noImage": "No se devolvió ninguna imagen.",
+      "errorGenerate": "No se pudo generar. Inténtalo de nuevo.",
+      "promptPlaceholder": "p. ej. Pizza margherita en una tabla de madera, vista cenital",
+      "quotaRemaining": "Quedan {remaining} de {limit} imágenes IA gratuitas. Suscríbete para ilimitadas.",
+      "quotaExceededTitle": "Límite de imágenes IA gratuitas alcanzado",
+      "quotaExceededMessage": "Has usado las {limit} generaciones de imágenes IA gratuitas. Suscríbete a cualquier plan para imágenes IA ilimitadas."
     },
     "photo": {
       "label": "Foto",
@@ -497,7 +510,10 @@
         "langSwitcherLabel": "Selector de idioma",
         "langSwitcherTip": "Dónde eligen los comensales el idioma de la carta en la página pública.",
         "langSwitcher_inline": "En la lista",
-        "langSwitcher_top": "Icono de globo"
+        "langSwitcher_top": "Icono de globo",
+        "generateAi": "Generar con IA",
+        "aiTitle": "Generar fondo",
+        "aiPlaceholder": "p. ej. Mesa acogedora a la luz de las velas con platos rústicos y madera cálida"
       },
       "general": {
         "title": "Región e idiomas",

@@ -71,7 +71,20 @@
     },
     "ai": {
       "translateReplaceTitle": "Vols substituir la traducció existent?",
-      "translateReplaceMessage": "Això sobreescriurà el que ja has escrit en aquest camp."
+      "translateReplaceMessage": "Això sobreescriurà el que ja has escrit en aquest camp.",
+      "generate": "Genera",
+      "generating": "Generant...",
+      "tryAgain": "Torna-ho a provar",
+      "useThisPhoto": "Usa aquesta foto",
+      "describe": "Descriu",
+      "describeTip": "Descriu el que vulguis i toca Genera.",
+      "promptTip": "Consell: menciona angle, il·luminació o fons.",
+      "noImage": "No s'ha retornat cap imatge.",
+      "errorGenerate": "No s'ha pogut generar. Torna-ho a provar.",
+      "promptPlaceholder": "p. ex. Pizza margherita en una taula de fusta, vista zenital",
+      "quotaRemaining": "Queden {remaining} de {limit} imatges IA gratuïtes. Subscriu-te per accés il·limitat.",
+      "quotaExceededTitle": "Límit d'imatges IA gratuïtes assolit",
+      "quotaExceededMessage": "Has utilitzat les {limit} generacions IA gratuïtes. Subscriu-te a qualsevol pla per imatges IA il·limitades."
     },
     "photo": {
       "label": "Foto",
@@ -497,7 +510,10 @@
         "langSwitcherLabel": "Selector d'idioma",
         "langSwitcherTip": "On trien els clients l'idioma de la carta a la pàgina pública.",
         "langSwitcher_inline": "A la llista",
-        "langSwitcher_top": "Icona del globus"
+        "langSwitcher_top": "Icona del globus",
+        "generateAi": "Genera amb IA",
+        "aiTitle": "Genera fons",
+        "aiPlaceholder": "p. ex. Taula acollidora amb llum d'espelmes amb plats rústics i fusta càlida"
       },
       "general": {
         "title": "Regió i idiomes",

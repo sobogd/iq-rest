@@ -71,7 +71,20 @@
     },
     "ai": {
       "translateReplaceTitle": "Substituir a tradução existente?",
-      "translateReplaceMessage": "Isto vai substituir o que já escreveste neste campo."
+      "translateReplaceMessage": "Isto vai substituir o que já escreveste neste campo.",
+      "generate": "Gerar",
+      "generating": "A gerar...",
+      "tryAgain": "Tentar novamente",
+      "useThisPhoto": "Usar esta foto",
+      "describe": "Descrever",
+      "describeTip": "Descreva o que quer e toque em Gerar.",
+      "promptTip": "Dica: indique ângulo, iluminação ou fundo.",
+      "noImage": "Nenhuma imagem retornada.",
+      "errorGenerate": "Não foi possível gerar. Tente novamente.",
+      "promptPlaceholder": "ex. Pizza margherita numa tábua de madeira, vista de cima",
+      "quotaRemaining": "Restam {remaining} de {limit} imagens IA gratuitas. Subscreva para ilimitado.",
+      "quotaExceededTitle": "Limite de imagens IA gratuitas atingido",
+      "quotaExceededMessage": "Usou todas as {limit} gerações IA gratuitas. Subscreva qualquer plano para imagens IA ilimitadas."
     },
     "photo": {
       "label": "Foto",
@@ -497,7 +510,10 @@
         "langSwitcherLabel": "Seletor de idioma",
         "langSwitcherTip": "Onde os clientes escolhem o idioma do menu na página pública.",
         "langSwitcher_inline": "Na lista",
-        "langSwitcher_top": "Ícone de globo"
+        "langSwitcher_top": "Ícone de globo",
+        "generateAi": "Gerar com IA",
+        "aiTitle": "Gerar fundo",
+        "aiPlaceholder": "ex. Mesa acolhedora à luz de velas com pratos rústicos e madeira quente"
       },
       "general": {
         "title": "Região e idiomas",

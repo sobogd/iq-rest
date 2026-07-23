@@ -71,7 +71,20 @@
     },
     "ai": {
       "translateReplaceTitle": "Vorhandene Übersetzung ersetzen?",
-      "translateReplaceMessage": "Dadurch wird überschrieben, was Sie in diesem Feld bereits eingegeben haben."
+      "translateReplaceMessage": "Dadurch wird überschrieben, was Sie in diesem Feld bereits eingegeben haben.",
+      "generate": "Generieren",
+      "generating": "Wird generiert...",
+      "tryAgain": "Erneut versuchen",
+      "useThisPhoto": "Dieses Foto verwenden",
+      "describe": "Beschreiben",
+      "describeTip": "Beschreiben Sie, was Sie möchten, und tippen Sie auf Generieren.",
+      "promptTip": "Tipp: Erwähnen Sie Blickwinkel, Beleuchtung oder Hintergrund.",
+      "noImage": "Kein Bild zurückgegeben.",
+      "errorGenerate": "Konnte nicht generieren. Erneut versuchen.",
+      "promptPlaceholder": "z. B. Margherita-Pizza auf Holzbrett, von oben",
+      "quotaRemaining": "{remaining} von {limit} kostenlosen KI-Bildern übrig. Abonnieren für unbegrenzt.",
+      "quotaExceededTitle": "Limit für kostenlose KI-Bilder erreicht",
+      "quotaExceededMessage": "Sie haben alle {limit} kostenlosen KI-Bilder verbraucht. Abonnieren Sie einen Tarif für unbegrenzte KI-Bilder."
     },
     "photo": {
       "label": "Foto",
@@ -497,7 +510,10 @@
         "langSwitcherLabel": "Sprachumschalter",
         "langSwitcherTip": "Wo Gäste auf der öffentlichen Seite die Sprache der Speisekarte wählen.",
         "langSwitcher_inline": "In der Liste",
-        "langSwitcher_top": "Globus-Symbol"
+        "langSwitcher_top": "Globus-Symbol",
+        "generateAi": "Mit KI generieren",
+        "aiTitle": "Hintergrund generieren",
+        "aiPlaceholder": "z. B. Gemütlicher Tisch im Kerzenschein mit rustikalen Tellern und warmem Holz"
       },
       "general": {
         "title": "Region & Sprachen",
