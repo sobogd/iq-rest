@@ -489,7 +489,17 @@
         "langSwitcherLabel": "انتخاب‌گر زبان",
         "langSwitcherTip": "جایی که مهمانان زبان منو را در صفحه عمومی انتخاب می‌کنند.",
         "langSwitcher_inline": "در فهرست",
-        "langSwitcher_top": "نماد کره زمین"
+        "langSwitcher_top": "نماد کره زمین",
+        "showDescriptionLabel": "نمایش توضیحات",
+        "showDescriptionTip": "توضیحات را در صفحه اصلی منو نمایش دهید.",
+        "logoLabel": "لوگو",
+        "logoTip": "در صفحه اصلی منو بالای نام — یا به‌تنهایی — نمایش داده می‌شود. PNG شفاف بهترین نتیجه را دارد.",
+        "logoUploadHint": "بارگذاری لوگو",
+        "removeLogo": "حذف لوگو",
+        "showLogoLabel": "نمایش لوگو",
+        "showLogoTip": "لوگو را در صفحه اصلی منو نمایش دهید.",
+        "logoScaleLabel": "اندازه لوگو",
+        "logoScaleTip": "اندازه لوگو روی پس‌زمینه."
       },
       "general": {
         "title": "منطقه و زبان",

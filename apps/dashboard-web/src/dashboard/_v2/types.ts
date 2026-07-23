@@ -168,6 +168,11 @@ export interface Restaurant {
  name: string;
  subtitle: string;
  showTitleOnHomepage: boolean;
+ // Hero description + logo visibility (independent of the title toggle).
+ showDescriptionOnHomepage: boolean;
+ logoUrl: string | null;
+ showLogoOnHomepage: boolean;
+ logoScale: "small" | "medium" | "large";
  menuLayout: "flat" | "drill";
  titleScale: "small" | "medium" | "large";
  languageSwitcher: "inline" | "top";

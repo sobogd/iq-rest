@@ -489,7 +489,17 @@
         "langSwitcherLabel": "言語切り替え",
         "langSwitcherTip": "公開ページでゲストがメニューの言語を選ぶ場所。",
         "langSwitcher_inline": "リスト内",
-        "langSwitcher_top": "地球儀アイコン"
+        "langSwitcher_top": "地球儀アイコン",
+        "showDescriptionLabel": "説明を表示",
+        "showDescriptionTip": "メニューのホームページに説明を表示します。",
+        "logoLabel": "ロゴ",
+        "logoTip": "メニューのホームページで名前の上に、または単独で表示されます。透過PNGが最適です。",
+        "logoUploadHint": "ロゴをアップロード",
+        "removeLogo": "ロゴを削除",
+        "showLogoLabel": "ロゴを表示",
+        "showLogoTip": "メニューのホームページにロゴを表示します。",
+        "logoScaleLabel": "ロゴのサイズ",
+        "logoScaleTip": "背景に対するロゴのサイズ。"
       },
       "general": {
         "title": "地域設定",

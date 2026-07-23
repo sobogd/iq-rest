@@ -489,7 +489,17 @@
         "langSwitcherLabel": "Selector de idioma",
         "langSwitcherTip": "Dónde eligen los clientes el idioma del menú en la página pública.",
         "langSwitcher_inline": "En la lista",
-        "langSwitcher_top": "Icono de globo"
+        "langSwitcher_top": "Icono de globo",
+        "showDescriptionLabel": "Mostrar descripción",
+        "showDescriptionTip": "Mostrar la descripción en la página de inicio del menú.",
+        "logoLabel": "Logo",
+        "logoTip": "Se muestra en la página de inicio del menú, encima del nombre — o solo. Lo mejor es un PNG transparente.",
+        "logoUploadHint": "Subir logo",
+        "removeLogo": "Quitar logo",
+        "showLogoLabel": "Mostrar logo",
+        "showLogoTip": "Mostrar el logo en la página de inicio del menú.",
+        "logoScaleLabel": "Tamaño del logo",
+        "logoScaleTip": "Tamaño del logo sobre el fondo."
       },
       "general": {
         "title": "Configuración regional",

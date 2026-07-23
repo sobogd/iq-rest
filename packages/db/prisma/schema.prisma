@@ -114,6 +114,18 @@ model Restaurant {
   languages       String[] @default(["en"])
   defaultLanguage String   @default("en")
   hideTitle       Boolean  @default(false)
+  // Public-menu hero: hide the description independently of the title. Kept in
+  // sync with hideTitle at migration time (old hideTitle hid the whole block).
+  hideDescription Boolean  @default(false)
+  // Restaurant logo shown on the public-menu hero (above the name, or alone).
+  // Transparent PNG/SVG/WebP recommended; uploaded via /api/upload like the
+  // background. Null = no logo.
+  logoUrl         String?
+  // Toggle to hide an uploaded logo without deleting the file.
+  hideLogo        Boolean  @default(false)
+  // Hero logo size: "small" | "medium" | "large" — mirrors titleScale but
+  // independent (logos often embed the name and want their own scale).
+  logoScale       String   @default("medium")
   // Public-menu visual: "flat" (current — horizontal tabs + inline dishes)
   // or "drill" (vertical list of categories → click into per-category dish screen).
   // Groups, when present, always show as a vertical drill above this layout.

@@ -489,7 +489,17 @@
         "langSwitcherLabel": "Taalkeuze",
         "langSwitcherTip": "Waar gasten de menutaal kiezen op de openbare pagina.",
         "langSwitcher_inline": "In de lijst",
-        "langSwitcher_top": "Wereldbol-pictogram"
+        "langSwitcher_top": "Wereldbol-pictogram",
+        "showDescriptionLabel": "Beschrijving tonen",
+        "showDescriptionTip": "Toon de beschrijving op de startpagina van het menu.",
+        "logoLabel": "Logo",
+        "logoTip": "Wordt getoond op de startpagina van het menu, boven de naam of op zichzelf. Een transparante PNG werkt het best.",
+        "logoUploadHint": "Logo uploaden",
+        "removeLogo": "Logo verwijderen",
+        "showLogoLabel": "Logo tonen",
+        "showLogoTip": "Toon het logo op de startpagina van het menu.",
+        "logoScaleLabel": "Logogrootte",
+        "logoScaleTip": "Grootte van het logo op de achtergrond."
       },
       "general": {
         "title": "Regio",

@@ -489,7 +489,17 @@
         "langSwitcherLabel": "Kalbos perjungiklis",
         "langSwitcherTip": "Kur svečiai pasirenka meniu kalbą viešame puslapyje.",
         "langSwitcher_inline": "Sąraše",
-        "langSwitcher_top": "Gaublio piktograma"
+        "langSwitcher_top": "Gaublio piktograma",
+        "showDescriptionLabel": "Rodyti aprašymą",
+        "showDescriptionTip": "Rodyti aprašymą meniu pagrindiniame puslapyje.",
+        "logoLabel": "Logotipas",
+        "logoTip": "Rodomas meniu pagrindiniame puslapyje virš pavadinimo arba atskirai. Geriausiai tinka permatomas PNG.",
+        "logoUploadHint": "Įkelti logotipą",
+        "removeLogo": "Pašalinti logotipą",
+        "showLogoLabel": "Rodyti logotipą",
+        "showLogoTip": "Rodyti logotipą meniu pagrindiniame puslapyje.",
+        "logoScaleLabel": "Logotipo dydis",
+        "logoScaleTip": "Logotipo dydis virš fono."
       },
       "general": {
         "title": "Regiono nustatymai",

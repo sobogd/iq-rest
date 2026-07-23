@@ -489,7 +489,17 @@
         "langSwitcherLabel": "محوّل اللغة",
         "langSwitcherTip": "حيث يختار الضيوف لغة القائمة في الصفحة العامة.",
         "langSwitcher_inline": "في القائمة",
-        "langSwitcher_top": "أيقونة الكرة الأرضية"
+        "langSwitcher_top": "أيقونة الكرة الأرضية",
+        "showDescriptionLabel": "إظهار الوصف",
+        "showDescriptionTip": "عرض الوصف في الصفحة الرئيسية للقائمة.",
+        "logoLabel": "الشعار",
+        "logoTip": "يظهر في الصفحة الرئيسية للقائمة فوق الاسم — أو بمفرده. الأفضل صورة PNG بخلفية شفافة.",
+        "logoUploadHint": "رفع الشعار",
+        "removeLogo": "إزالة الشعار",
+        "showLogoLabel": "إظهار الشعار",
+        "showLogoTip": "عرض الشعار في الصفحة الرئيسية للقائمة.",
+        "logoScaleLabel": "حجم الشعار",
+        "logoScaleTip": "حجم الشعار فوق الخلفية."
       },
       "general": {
         "title": "اللغة والمنطقة",

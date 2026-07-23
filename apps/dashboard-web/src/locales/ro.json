@@ -489,7 +489,17 @@
         "langSwitcherLabel": "Selector de limbă",
         "langSwitcherTip": "Unde aleg clienții limba meniului pe pagina publică.",
         "langSwitcher_inline": "În listă",
-        "langSwitcher_top": "Pictogramă glob"
+        "langSwitcher_top": "Pictogramă glob",
+        "showDescriptionLabel": "Afișează descrierea",
+        "showDescriptionTip": "Afișează descrierea pe pagina principală a meniului.",
+        "logoLabel": "Logo",
+        "logoTip": "Afișat pe pagina principală a meniului, deasupra numelui — sau separat. Un PNG transparent funcționează cel mai bine.",
+        "logoUploadHint": "Încarcă logo-ul",
+        "removeLogo": "Elimină logo-ul",
+        "showLogoLabel": "Afișează logo-ul",
+        "showLogoTip": "Afișează logo-ul pe pagina principală a meniului.",
+        "logoScaleLabel": "Dimensiunea logo-ului",
+        "logoScaleTip": "Dimensiunea logo-ului peste fundal."
       },
       "general": {
         "title": "Regional",

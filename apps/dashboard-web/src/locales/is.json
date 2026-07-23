@@ -489,7 +489,17 @@
         "langSwitcherLabel": "Tungumálaval",
         "langSwitcherTip": "Hvar gestir velja tungumál matseðils á opinberu síðunni.",
         "langSwitcher_inline": "Á listanum",
-        "langSwitcher_top": "Hnattartákn"
+        "langSwitcher_top": "Hnattartákn",
+        "showDescriptionLabel": "Sýna lýsingu",
+        "showDescriptionTip": "Sýna lýsinguna á forsíðu matseðilsins.",
+        "logoLabel": "Lógó",
+        "logoTip": "Birtist á forsíðu matseðilsins fyrir ofan nafnið — eða eitt og sér. Gagnsæ PNG-mynd virkar best.",
+        "logoUploadHint": "Hlaða upp lógói",
+        "removeLogo": "Fjarlægja lógó",
+        "showLogoLabel": "Sýna lógó",
+        "showLogoTip": "Sýna lógóið á forsíðu matseðilsins.",
+        "logoScaleLabel": "Stærð lógós",
+        "logoScaleTip": "Stærð lógósins yfir bakgrunninum."
       },
       "general": {
         "title": "Staðsetning",

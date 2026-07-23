@@ -489,7 +489,17 @@
         "langSwitcherLabel": "Přepínač jazyka",
         "langSwitcherTip": "Kde hosté vybírají jazyk menu na veřejné stránce.",
         "langSwitcher_inline": "V seznamu",
-        "langSwitcher_top": "Ikona zeměkoule"
+        "langSwitcher_top": "Ikona zeměkoule",
+        "showDescriptionLabel": "Zobrazit popis",
+        "showDescriptionTip": "Zobrazit popis na úvodní stránce menu.",
+        "logoLabel": "Logo",
+        "logoTip": "Zobrazuje se na úvodní stránce menu nad názvem — nebo samostatně. Nejlépe funguje průhledné PNG.",
+        "logoUploadHint": "Nahrát logo",
+        "removeLogo": "Odebrat logo",
+        "showLogoLabel": "Zobrazit logo",
+        "showLogoTip": "Zobrazit logo na úvodní stránce menu.",
+        "logoScaleLabel": "Velikost loga",
+        "logoScaleTip": "Velikost loga na pozadí."
       },
       "general": {
         "title": "Místní nastavení",

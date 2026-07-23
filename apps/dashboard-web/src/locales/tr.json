@@ -489,7 +489,17 @@
         "langSwitcherLabel": "Dil seçici",
         "langSwitcherTip": "Misafirlerin herkese açık sayfada menü dilini seçtiği yer.",
         "langSwitcher_inline": "Listede",
-        "langSwitcher_top": "Küre simgesi"
+        "langSwitcher_top": "Küre simgesi",
+        "showDescriptionLabel": "Açıklamayı göster",
+        "showDescriptionTip": "Açıklamayı menü ana sayfasında göster.",
+        "logoLabel": "Logo",
+        "logoTip": "Menü ana sayfasında adın üzerinde — veya tek başına gösterilir. En iyi sonucu şeffaf PNG verir.",
+        "logoUploadHint": "Logo yükle",
+        "removeLogo": "Logoyu kaldır",
+        "showLogoLabel": "Logoyu göster",
+        "showLogoTip": "Logoyu menü ana sayfasında göster.",
+        "logoScaleLabel": "Logo boyutu",
+        "logoScaleTip": "Arka planın üzerindeki logonun boyutu."
       },
       "general": {
         "title": "Bölge",

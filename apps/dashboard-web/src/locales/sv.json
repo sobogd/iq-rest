@@ -489,7 +489,17 @@
         "langSwitcherLabel": "Språkväljare",
         "langSwitcherTip": "Var gäster väljer menyspråk på den publika sidan.",
         "langSwitcher_inline": "I listan",
-        "langSwitcher_top": "Jordglobsikon"
+        "langSwitcher_top": "Jordglobsikon",
+        "showDescriptionLabel": "Visa beskrivning",
+        "showDescriptionTip": "Visa beskrivningen på menyns startsida.",
+        "logoLabel": "Logotyp",
+        "logoTip": "Visas på menyns startsida ovanför namnet — eller för sig själv. Transparent PNG fungerar bäst.",
+        "logoUploadHint": "Ladda upp logotyp",
+        "removeLogo": "Ta bort logotyp",
+        "showLogoLabel": "Visa logotyp",
+        "showLogoTip": "Visa logotypen på menyns startsida.",
+        "logoScaleLabel": "Logotypstorlek",
+        "logoScaleTip": "Logotypens storlek över bakgrunden."
       },
       "general": {
         "title": "Region",

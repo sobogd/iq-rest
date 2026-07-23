@@ -489,7 +489,17 @@
         "langSwitcherLabel": "Selector d'idioma",
         "langSwitcherTip": "On els clients trien l'idioma del menú a la pàgina pública.",
         "langSwitcher_inline": "A la llista",
-        "langSwitcher_top": "Icona de globus"
+        "langSwitcher_top": "Icona de globus",
+        "showDescriptionLabel": "Mostra la descripció",
+        "showDescriptionTip": "Mostra la descripció a la pàgina d'inici del menú.",
+        "logoLabel": "Logo",
+        "logoTip": "Es mostra a la pàgina d'inici del menú, sobre el nom — o sol. Un PNG transparent funciona millor.",
+        "logoUploadHint": "Puja el logo",
+        "removeLogo": "Elimina el logo",
+        "showLogoLabel": "Mostra el logo",
+        "showLogoTip": "Mostra el logo a la pàgina d'inici del menú.",
+        "logoScaleLabel": "Mida del logo",
+        "logoScaleTip": "Mida del logo sobre el fons."
       },
       "general": {
         "title": "Configuració regional",

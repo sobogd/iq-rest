@@ -489,7 +489,17 @@
         "langSwitcherLabel": "Sprogvælger",
         "langSwitcherTip": "Hvor gæster vælger menusproget på den offentlige side.",
         "langSwitcher_inline": "På listen",
-        "langSwitcher_top": "Globusikon"
+        "langSwitcher_top": "Globusikon",
+        "showDescriptionLabel": "Vis beskrivelse",
+        "showDescriptionTip": "Vis beskrivelsen på menuens forside.",
+        "logoLabel": "Logo",
+        "logoTip": "Vises på menuens forside over navnet — eller alene. En gennemsigtig PNG fungerer bedst.",
+        "logoUploadHint": "Upload logo",
+        "removeLogo": "Fjern logo",
+        "showLogoLabel": "Vis logo",
+        "showLogoTip": "Vis logoet på menuens forside.",
+        "logoScaleLabel": "Logostørrelse",
+        "logoScaleTip": "Logoets størrelse over baggrunden."
       },
       "general": {
         "title": "Lokalisering",

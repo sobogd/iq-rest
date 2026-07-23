@@ -489,7 +489,17 @@
         "langSwitcherLabel": "Roghnóir teanga",
         "langSwitcherTip": "An áit a roghnaíonn aíonna teanga an bhiachláir ar an leathanach poiblí.",
         "langSwitcher_inline": "Sa liosta",
-        "langSwitcher_top": "Deilbhín cruinneoige"
+        "langSwitcher_top": "Deilbhín cruinneoige",
+        "showDescriptionLabel": "Taispeáin cur síos",
+        "showDescriptionTip": "Taispeáin an cur síos ar leathanach baile an bhiachláir.",
+        "logoLabel": "Lógó",
+        "logoTip": "Taispeántar é ar leathanach baile an bhiachláir os cionn an ainm — nó leis féin. Is fearr PNG trédhearcach.",
+        "logoUploadHint": "Uaslódáil lógó",
+        "removeLogo": "Bain an lógó",
+        "showLogoLabel": "Taispeáin lógó",
+        "showLogoTip": "Taispeáin an lógó ar leathanach baile an bhiachláir.",
+        "logoScaleLabel": "Méid an lógó",
+        "logoScaleTip": "Méid an lógó os cionn an chúlra."
       },
       "general": {
         "title": "Áitiúil",

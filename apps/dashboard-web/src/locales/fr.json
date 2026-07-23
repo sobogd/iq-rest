@@ -489,7 +489,17 @@
         "langSwitcherLabel": "Sélecteur de langue",
         "langSwitcherTip": "Où les clients choisissent la langue du menu sur la page publique.",
         "langSwitcher_inline": "Dans la liste",
-        "langSwitcher_top": "Icône de globe"
+        "langSwitcher_top": "Icône de globe",
+        "showDescriptionLabel": "Afficher la description",
+        "showDescriptionTip": "Afficher la description sur la page d'accueil du menu.",
+        "logoLabel": "Logo",
+        "logoTip": "Affiché sur la page d'accueil du menu au-dessus du nom — ou seul. Un PNG transparent donne le meilleur résultat.",
+        "logoUploadHint": "Importer le logo",
+        "removeLogo": "Supprimer le logo",
+        "showLogoLabel": "Afficher le logo",
+        "showLogoTip": "Afficher le logo sur la page d'accueil du menu.",
+        "logoScaleLabel": "Taille du logo",
+        "logoScaleTip": "Taille du logo sur l'arrière-plan."
       },
       "general": {
         "title": "Localisation",

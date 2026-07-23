@@ -82,6 +82,10 @@ export interface ApiRestaurant {
  // { [locale]: { [i18nKey]: string } }. Edited in the "Menu texts" section.
  customTexts?: Record<string, Record<string, string>> | null;
  hideTitle: boolean;
+ hideDescription?: boolean;
+ logoUrl?: string | null;
+ hideLogo?: boolean;
+ logoScale?: string;
  menuLayout: string;
  titleScale: string;
  languageSwitcher: string;

@@ -489,7 +489,17 @@
         "langSwitcherLabel": "Språkvelger",
         "langSwitcherTip": "Hvor gjester velger menyspråk på den offentlige siden.",
         "langSwitcher_inline": "I listen",
-        "langSwitcher_top": "Globusikon"
+        "langSwitcher_top": "Globusikon",
+        "showDescriptionLabel": "Vis beskrivelse",
+        "showDescriptionTip": "Vis beskrivelsen på menyens forside.",
+        "logoLabel": "Logo",
+        "logoTip": "Vises på menyens forside over navnet – eller alene. En gjennomsiktig PNG fungerer best.",
+        "logoUploadHint": "Last opp logo",
+        "removeLogo": "Fjern logo",
+        "showLogoLabel": "Vis logo",
+        "showLogoTip": "Vis logoen på menyens forside.",
+        "logoScaleLabel": "Logostørrelse",
+        "logoScaleTip": "Størrelsen på logoen over bakgrunnen."
       },
       "general": {
         "title": "Regional",

@@ -489,7 +489,17 @@
         "langSwitcherLabel": "Valodas pārslēdzējs",
         "langSwitcherTip": "Kur viesi izvēlas izvēlnes valodu publiskajā lapā.",
         "langSwitcher_inline": "Sarakstā",
-        "langSwitcher_top": "Globusa ikona"
+        "langSwitcher_top": "Globusa ikona",
+        "showDescriptionLabel": "Rādīt aprakstu",
+        "showDescriptionTip": "Rādīt aprakstu ēdienkartes sākumlapā.",
+        "logoLabel": "Logotips",
+        "logoTip": "Tiek rādīts ēdienkartes sākumlapā virs nosaukuma vai atsevišķi. Vislabāk der caurspīdīgs PNG.",
+        "logoUploadHint": "Augšupielādēt logotipu",
+        "removeLogo": "Noņemt logotipu",
+        "showLogoLabel": "Rādīt logotipu",
+        "showLogoTip": "Rādīt logotipu ēdienkartes sākumlapā.",
+        "logoScaleLabel": "Logotipa izmērs",
+        "logoScaleTip": "Logotipa izmērs virs fona."
       },
       "general": {
         "title": "Reģiona iestatījumi",

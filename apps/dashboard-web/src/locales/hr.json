@@ -489,7 +489,17 @@
         "langSwitcherLabel": "Odabir jezika",
         "langSwitcherTip": "Gdje gosti biraju jezik izbornika na javnoj stranici.",
         "langSwitcher_inline": "Na popisu",
-        "langSwitcher_top": "Ikona globusa"
+        "langSwitcher_top": "Ikona globusa",
+        "showDescriptionLabel": "Prikaži opis",
+        "showDescriptionTip": "Prikaži opis na početnoj stranici jelovnika.",
+        "logoLabel": "Logo",
+        "logoTip": "Prikazuje se na početnoj stranici jelovnika iznad naziva — ili samostalno. Najbolje funkcionira prozirni PNG.",
+        "logoUploadHint": "Učitaj logo",
+        "removeLogo": "Ukloni logo",
+        "showLogoLabel": "Prikaži logo",
+        "showLogoTip": "Prikaži logo na početnoj stranici jelovnika.",
+        "logoScaleLabel": "Veličina loga",
+        "logoScaleTip": "Veličina loga iznad pozadine."
       },
       "general": {
         "title": "Lokalizacija",

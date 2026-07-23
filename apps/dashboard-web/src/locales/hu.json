@@ -489,7 +489,17 @@
         "langSwitcherLabel": "Nyelvválasztó",
         "langSwitcherTip": "Hol választják a vendégek a menü nyelvét a nyilvános oldalon.",
         "langSwitcher_inline": "A listában",
-        "langSwitcher_top": "Földgömb ikon"
+        "langSwitcher_top": "Földgömb ikon",
+        "showDescriptionLabel": "Leírás megjelenítése",
+        "showDescriptionTip": "A leírás megjelenítése az étlap kezdőlapján.",
+        "logoLabel": "Logó",
+        "logoTip": "Az étlap kezdőlapján jelenik meg a név fölött — vagy önmagában. Átlátszó PNG a legjobb választás.",
+        "logoUploadHint": "Logó feltöltése",
+        "removeLogo": "Logó eltávolítása",
+        "showLogoLabel": "Logó megjelenítése",
+        "showLogoTip": "A logó megjelenítése az étlap kezdőlapján.",
+        "logoScaleLabel": "Logó mérete",
+        "logoScaleTip": "A logó mérete a háttér fölött."
       },
       "general": {
         "title": "Területi beállítások",

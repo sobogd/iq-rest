@@ -489,7 +489,17 @@
         "langSwitcherLabel": "Переключатель языка",
         "langSwitcherTip": "Где гости выбирают язык меню на публичной странице.",
         "langSwitcher_inline": "В списке",
-        "langSwitcher_top": "Иконка-глобус"
+        "langSwitcher_top": "Иконка-глобус",
+        "showDescriptionLabel": "Показывать описание",
+        "showDescriptionTip": "Показывать описание на главной странице меню.",
+        "logoLabel": "Логотип",
+        "logoTip": "Отображается на главной странице меню над названием — или отдельно. Лучше всего подходит PNG с прозрачным фоном.",
+        "logoUploadHint": "Загрузить логотип",
+        "removeLogo": "Удалить логотип",
+        "showLogoLabel": "Показывать логотип",
+        "showLogoTip": "Показывать логотип на главной странице меню.",
+        "logoScaleLabel": "Размер логотипа",
+        "logoScaleTip": "Размер логотипа поверх фона."
       },
       "general": {
         "title": "Регион",

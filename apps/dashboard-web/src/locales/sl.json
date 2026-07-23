@@ -489,7 +489,17 @@
         "langSwitcherLabel": "Izbirnik jezika",
         "langSwitcherTip": "Kje gostje izberejo jezik menija na javni strani.",
         "langSwitcher_inline": "Na seznamu",
-        "langSwitcher_top": "Ikona globusa"
+        "langSwitcher_top": "Ikona globusa",
+        "showDescriptionLabel": "Prikaži opis",
+        "showDescriptionTip": "Prikaži opis na domači strani menija.",
+        "logoLabel": "Logotip",
+        "logoTip": "Prikazan na domači strani menija nad imenom — ali samostojno. Najbolje deluje PNG s prozornim ozadjem.",
+        "logoUploadHint": "Naloži logotip",
+        "removeLogo": "Odstrani logotip",
+        "showLogoLabel": "Prikaži logotip",
+        "showLogoTip": "Prikaži logotip na domači strani menija.",
+        "logoScaleLabel": "Velikost logotipa",
+        "logoScaleTip": "Velikost logotipa čez ozadje."
       },
       "general": {
         "title": "Lokalne nastavitve",

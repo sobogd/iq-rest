@@ -489,7 +489,17 @@
         "langSwitcherLabel": "Kielenvalitsin",
         "langSwitcherTip": "Missä asiakkaat valitsevat valikon kielen julkisella sivulla.",
         "langSwitcher_inline": "Luettelossa",
-        "langSwitcher_top": "Maapallokuvake"
+        "langSwitcher_top": "Maapallokuvake",
+        "showDescriptionLabel": "Näytä kuvaus",
+        "showDescriptionTip": "Näytä kuvaus menun etusivulla.",
+        "logoLabel": "Logo",
+        "logoTip": "Näytetään menun etusivulla nimen yläpuolella — tai yksinään. Läpinäkyvä PNG toimii parhaiten.",
+        "logoUploadHint": "Lataa logo",
+        "removeLogo": "Poista logo",
+        "showLogoLabel": "Näytä logo",
+        "showLogoTip": "Näytä logo menun etusivulla.",
+        "logoScaleLabel": "Logon koko",
+        "logoScaleTip": "Logon koko taustan päällä."
       },
       "general": {
         "title": "Aluekohtaiset",

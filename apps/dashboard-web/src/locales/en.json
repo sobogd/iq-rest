@@ -566,7 +566,17 @@
         "langSwitcherLabel": "Language switcher",
         "langSwitcherTip": "Where guests pick the menu language on the public page.",
         "langSwitcher_inline": "In the list",
-        "langSwitcher_top": "Globe icon"
+        "langSwitcher_top": "Globe icon",
+        "showDescriptionLabel": "Show description",
+        "showDescriptionTip": "Display the description on the menu homepage.",
+        "logoLabel": "Logo",
+        "logoTip": "Shown on the menu homepage above the name — or on its own. Transparent PNG works best.",
+        "logoUploadHint": "Upload logo",
+        "removeLogo": "Remove logo",
+        "showLogoLabel": "Show logo",
+        "showLogoTip": "Display the logo on the menu homepage.",
+        "logoScaleLabel": "Logo size",
+        "logoScaleTip": "Size of the logo over the background."
       },
       "general": {
         "title": "Locale",

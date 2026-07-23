@@ -57,6 +57,10 @@ interface RestaurantInput {
   languages?: string[];
   defaultLanguage?: string;
   hideTitle?: boolean;
+  hideDescription?: boolean;
+  logoUrl?: string | null;
+  hideLogo?: boolean;
+  logoScale?: string;
   menuLayout?: string;
   titleScale?: string;
   languageSwitcher?: string;
@@ -78,7 +82,8 @@ interface RestaurantInput {
 const FIELDS: (keyof RestaurantInput)[] = [
   "title", "subtitle", "description", "slug", "currency", "billingCurrency", "source", "backgroundType",
   "accentColor", "address", "x", "y", "googlePlaceId", "phone", "instagram", "whatsapp", "languages",
-  "defaultLanguage", "hideTitle", "menuLayout", "titleScale", "languageSwitcher", "paymentMethods", "reservationsEnabled", "reservationMode",
+  "defaultLanguage", "hideTitle", "hideDescription", "logoUrl", "hideLogo", "logoScale",
+  "menuLayout", "titleScale", "languageSwitcher", "paymentMethods", "reservationsEnabled", "reservationMode",
   "reservationSlotMinutes", "workingHoursStart", "workingHoursEnd",
   "reservationSchedule", "timezone", "ordersEnabled",
   "orderNameEnabled", "orderPhoneEnabled", "orderAddressEnabled", "orderMode",
@@ -125,6 +130,13 @@ function pickFields(raw: Record<string, unknown>): RestaurantInput {
       throw new BadRequestException("Invalid titleScale: must be 'small', 'medium' or 'large'");
     }
     out.titleScale = v;
+  }
+  if (out.logoScale !== undefined) {
+    const v = String(out.logoScale);
+    if (v !== "small" && v !== "medium" && v !== "large") {
+      throw new BadRequestException("Invalid logoScale: must be 'small', 'medium' or 'large'");
+    }
+    out.logoScale = v;
   }
   if (out.languageSwitcher !== undefined) {
     const v = String(out.languageSwitcher);

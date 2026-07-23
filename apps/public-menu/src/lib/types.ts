@@ -7,6 +7,11 @@ export interface RestaurantPayload {
   currency: string;
   source: string | null;
   hideTitle: boolean;
+  // Hero element visibility + logo (all independent; see routes/index.tsx).
+  hideDescription?: boolean;
+  logoUrl?: string | null;
+  hideLogo?: boolean;
+  logoScale?: "small" | "medium" | "large";
   address: string | null;
   phone: string | null;
   instagram: string | null;
