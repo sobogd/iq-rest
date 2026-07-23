@@ -11,6 +11,7 @@ import {
   Palette,
   Phone,
   Tablet,
+  Type,
   Utensils,
 } from "lucide-react";
 import {
@@ -118,6 +119,7 @@ function viewToNavKey(viewName: string): string {
   if (viewName === "settings.devices") return "devices";
   if (viewName === "settings.orders") return "set-orders";
   if (viewName === "settings.bookings") return "bookings";
+  if (viewName === "settings.customTexts") return "customTexts";
   if (viewName === "settings.billing") return "billing";
   if (viewName === "settings.support") return "support";
   if (viewName.startsWith("settings.restaurants")) return "restaurants";
@@ -286,9 +288,11 @@ function PageHeaderBar({ activeKey, onOpenDrawer }: { activeKey: string; onOpenD
       ? tHub(`rows.${settings.labelKey}` as never)
       : admin
         ? admin.label
-        : activeKey === "restaurants"
-          ? tRest("title")
-          : t("menu");
+        : activeKey === "customTexts"
+          ? "Menu texts"
+          : activeKey === "restaurants"
+            ? tRest("title")
+            : t("menu");
 
   return (
     <header
@@ -517,6 +521,17 @@ function NavList({
               onClick={() => go(it.view, it.event)}
             />
           ))}
+          {/* Public-menu custom texts — admin-only, shown solely inside an
+              admin-impersonation session (English label per admin convention;
+              the save/translate endpoints are also 403'd server-side). */}
+          {impersonatedBy ? (
+            <NavItem
+              icon={Type}
+              label="Menu texts"
+              active={activeKey === "customTexts"}
+              onClick={() => go({ name: "settings.customTexts" }, "dash_settings_click_tab_customtexts")}
+            />
+          ) : null}
         </div>
         {isAdmin ? (
           <>

@@ -13,6 +13,10 @@ export interface RestaurantPayload {
   whatsapp: string | null;
   languages: string[];
   defaultLanguage: string;
+  // Per-restaurant overrides for the diner-SPA UI i18n strings. Shape:
+  // { [locale]: { [i18nKey]: string } }. Merged into i18next on load
+  // (see __root.tsx); an absent key falls back to the built-in translation.
+  customTexts?: Record<string, Record<string, string>> | null;
   menuLayout?: string;
   titleScale?: "small" | "medium" | "large";
   languageSwitcher?: "inline" | "top";
@@ -34,6 +38,9 @@ export interface RestaurantPayload {
   plan: string | null;
   subscriptionStatus: string;
   trialEndsAt: string | null;
+  // Failed-renewal date. A PAST_DUE restaurant stays visible for 3 days past
+  // this, then the menu is blocked (see __root.tsx).
+  currentPeriodEnd: string | null;
   // PRO-feature entitlement: orders + reservations are PRO-only. When false the
   // diner sees a menu-only experience (no order/booking surfaces).
   proFeatures: boolean;

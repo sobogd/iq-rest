@@ -18,6 +18,13 @@ void i18n.use(initReactI18next).init({
   lng: "en",
   fallbackLng: "en",
   interpolation: { escapeValue: false },
+  // Re-render bound components when resources are added at runtime. The
+  // per-restaurant custom UI-text overrides are merged via i18n.addResource
+  // after the menu loads (see routes/__root.tsx); without this, react-i18next
+  // only re-renders on languageChanged, so a same-language override would not
+  // repaint. TanStack Router memoizes <Outlet/>, so a parent state bump can't
+  // stand in for this.
+  react: { bindI18nStore: "added removed" },
 });
 
 export default i18n;

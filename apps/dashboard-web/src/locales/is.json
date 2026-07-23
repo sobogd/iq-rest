@@ -58,7 +58,8 @@
       "plan": "Áskrift",
       "free": "Ókeypis",
       "trialDays": "Prufa · {days} d",
-      "trialExpired": "Prufa útrunnin"
+      "trialExpired": "Prufa útrunnin",
+      "pastDue": "Í vanskilum"
     },
     "preview": {
       "preview": "Forskoðun",
@@ -587,7 +588,10 @@
         "planBasic": "Basic",
         "planPro": "Pro",
         "comparePlans": "Bera saman áskriftir á iq-rest.com →",
-        "otherCurrencyTip": "Greitt er aðeins í EUR. Til að greiða í öðrum gjaldmiðli skaltu hafa samband við þjónustuver."
+        "otherCurrencyTip": "Greitt er aðeins í EUR. Til að greiða í öðrum gjaldmiðli skaltu hafa samband við þjónustuver.",
+        "pastDueTitle": "Greiðsla mistókst",
+        "pastDueTip": "Okkur tókst ekki að vinna síðustu greiðslu þína. Þú hefur {days} daga til að greiða áður en matseðillinn fer offline.",
+        "pastDueBlockedTip": "Matseðillinn þinn er óvirkur vegna misheppnaðrar greiðslu. Greiddu núna til að endurheimta hann."
       },
       "support": {
         "title": "Þjónustuver",
@@ -804,5 +808,15 @@
     "body": "Veldu áskrift til að halda pöntunum, eldhússkjá og borðapöntunum gangandi.",
     "hide": "Fela",
     "viewPlans": "Skoða áskriftir"
+  },
+  "pastDueModal": {
+    "title": "Greiðsla mistókst",
+    "blockedTitle": "Matseðill ekki í boði",
+    "daysLeft": "{days} dagar eftir þar til matseðillinn þinn fer offline",
+    "blockedHeadline": "Matseðillinn þinn er ekki í boði",
+    "body": "Okkur tókst ekki að vinna síðustu greiðslu þína. Uppfærðu greiðslumátann til að halda matseðli og eiginleikum virkum.",
+    "blockedBody": "Síðasta greiðslan þín mistókst og frestur er liðinn. Greiddu núna til að virkja matseðilinn aftur.",
+    "pay": "Uppfæra greiðslu",
+    "hide": "Fela"
   }
 }

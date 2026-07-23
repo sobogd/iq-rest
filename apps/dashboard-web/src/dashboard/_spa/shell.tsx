@@ -26,6 +26,7 @@ import {
   BillingSettingsPage,
   SupportPage,
 } from "../_v2/settings";
+import { CustomTextsSettingsPage } from "../_v2/custom-texts";
 import { AnalyticsClient } from "../analytics/analytics-client";
 import { DevicesSettingsPage } from "../_v2/devices-settings";
 import { RestaurantsListPage, RestaurantNewPage } from "../_v2/restaurants-page";
@@ -46,7 +47,7 @@ export interface ShellInitialData {
   initialOrders: Order[];
   initialBookings: Booking[];
   initialTables: TableEntity[];
-  initialSub: { plan: string | null; subscriptionStatus: string | null; trialEndsAt: string | null; proFeatures?: boolean } | null;
+  initialSub: { plan: string | null; subscriptionStatus: string | null; trialEndsAt: string | null; currentPeriodEnd?: string | null; proFeatures?: boolean } | null;
   isAdmin: boolean;
   isDemo?: boolean;
   impersonatedBy?: string | null;
@@ -384,6 +385,16 @@ function ViewSwitch(p: SwitchProps) {
       return <SettingsOrdersWrapper onBack={backToSettings} />;
     case "settings.bookings":
       return <SettingsBookingsWrapper onBack={backToSettings} />;
+    case "settings.customTexts":
+      // Admin-only surface, reachable only inside an admin-impersonation
+      // session (the nav hides it otherwise; save/translate endpoints also
+      // 403 server-side). A non-impersonation deep-link falls back to the
+      // settings home (Branding).
+      return impersonatedBy ? (
+        <CustomTextsSettingsPage onBack={backToSettings} />
+      ) : (
+        <SettingsBrandingWrapper onBack={backToMenu} />
+      );
     case "settings.billing":
       return <SettingsBillingWrapper onBack={view.from === "menu" ? backToMenu : backToSettings} />;
     case "settings.support":

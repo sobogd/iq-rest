@@ -162,6 +162,34 @@ function pickFields(raw: Record<string, unknown>): RestaurantInput {
   return out as RestaurantInput;
 }
 
+// Hard caps so a crafted payload can't grow the customTexts blob unbounded —
+// it ships on every public-menu load. Generous vs the ~35 locales × ~22
+// curated keys the dashboard actually sends.
+const MAX_CUSTOM_TEXT_LOCALES = 40;
+const MAX_CUSTOM_TEXT_KEYS_PER_LOCALE = 100;
+const MAX_CUSTOM_TEXT_VALUE_LEN = 500;
+
+/** Coerce arbitrary client input into a { [locale]: { [key]: string } } map,
+ *  keeping only non-empty string values. Guards the JSON column against
+ *  malformed payloads (nested objects, numbers, oversized blobs). */
+function sanitizeCustomTexts(raw: unknown): Record<string, Record<string, string>> {
+  const out: Record<string, Record<string, string>> = {};
+  if (!raw || typeof raw !== "object") return out;
+  for (const [locale, byKey] of Object.entries(raw as Record<string, unknown>)) {
+    if (Object.keys(out).length >= MAX_CUSTOM_TEXT_LOCALES) break;
+    if (!byKey || typeof byKey !== "object") continue;
+    const cleanedLocale: Record<string, string> = {};
+    for (const [key, val] of Object.entries(byKey as Record<string, unknown>)) {
+      if (Object.keys(cleanedLocale).length >= MAX_CUSTOM_TEXT_KEYS_PER_LOCALE) break;
+      if (typeof val !== "string") continue;
+      const text = val.trim();
+      if (text) cleanedLocale[key] = text.slice(0, MAX_CUSTOM_TEXT_VALUE_LEN);
+    }
+    if (Object.keys(cleanedLocale).length > 0) out[locale] = cleanedLocale;
+  }
+  return out;
+}
+
 @Injectable()
 export class RestaurantService {
   private readonly logger = new Logger(RestaurantService.name);
@@ -170,6 +198,50 @@ export class RestaurantService {
     private readonly prisma: PrismaService,
     private readonly autoTranslate: AutoTranslateService,
   ) {}
+
+  /** Ownership guard shared by the custom-text endpoints — the user must be
+   *  attached to the restaurant via the flat-access model. */
+  private async assertMembership(userId: string, restaurantId: string): Promise<void> {
+    const membership = await this.prisma.restaurantUser.findUnique({
+      where: { restaurantId_userId: { restaurantId, userId } },
+      select: { id: true },
+    });
+    if (!membership) throw new NotFoundException("Restaurant not found");
+  }
+
+  /** Persist the public-menu custom-text overrides. Stored as
+   *  { [locale]: { [i18nKey]: string } }; empty strings are dropped so an
+   *  absent key transparently falls back to the diner SPA's built-in i18n. */
+  async saveCustomTexts(
+    userId: string,
+    restaurantId: string,
+    raw: unknown,
+  ): Promise<{ customTexts: Record<string, Record<string, string>> }> {
+    await this.assertMembership(userId, restaurantId);
+    const cleaned = sanitizeCustomTexts(raw);
+    const updated = await this.prisma.restaurant.update({
+      where: { id: restaurantId },
+      data: {
+        customTexts:
+          Object.keys(cleaned).length > 0
+            ? (cleaned as Prisma.InputJsonValue)
+            : Prisma.DbNull,
+      },
+      select: { customTexts: true },
+    });
+    return { customTexts: (updated.customTexts as Record<string, Record<string, string>>) ?? {} };
+  }
+
+  /** Auto-translate the custom-text overrides into every enabled language
+   *  (gap-fill from the default language). Returns the merged map. */
+  async translateCustomTexts(
+    userId: string,
+    restaurantId: string,
+  ): Promise<{ customTexts: Record<string, Record<string, string>> }> {
+    await this.assertMembership(userId, restaurantId);
+    const customTexts = await this.autoTranslate.translateCustomTexts(restaurantId);
+    return { customTexts };
+  }
 
   /** Cancel any active Stripe subscription on a restaurant before we delete
    *  the row. Best-effort — if Stripe is unreachable we still proceed with

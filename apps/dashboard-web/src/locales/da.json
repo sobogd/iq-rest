@@ -58,7 +58,8 @@
       "plan": "Abonnement",
       "free": "Gratis",
       "trialDays": "Prøveperiode · {days} d",
-      "trialExpired": "Prøveperiode udløbet"
+      "trialExpired": "Prøveperiode udløbet",
+      "pastDue": "Forfalden"
     },
     "preview": {
       "preview": "Forhåndsvisning",
@@ -587,7 +588,10 @@
         "planBasic": "Basic",
         "planPro": "Pro",
         "comparePlans": "Sammenlign abonnementer på iq-rest.com →",
-        "otherCurrencyTip": "Betaling foregår kun i EUR. Kontakt support for at betale i en anden valuta."
+        "otherCurrencyTip": "Betaling foregår kun i EUR. Kontakt support for at betale i en anden valuta.",
+        "pastDueTitle": "Betaling mislykkedes",
+        "pastDueTip": "Vi kunne ikke behandle din seneste betaling. Du har {days} dage til at betale, før menuen lukkes ned.",
+        "pastDueBlockedTip": "Din menu er offline, fordi din seneste betaling mislykkedes. Betal nu for at gendanne den."
       },
       "support": {
         "title": "Support",
@@ -804,5 +808,15 @@
     "body": "Vælg et abonnement for at holde ordrer, køkkenskærm og reservationer kørende.",
     "hide": "Skjul",
     "viewPlans": "Se abonnementer"
+  },
+  "pastDueModal": {
+    "title": "Betaling mislykkedes",
+    "blockedTitle": "Menu utilgængelig",
+    "daysLeft": "{days} dage tilbage, før din menu lukkes ned",
+    "blockedHeadline": "Din menu er utilgængelig",
+    "body": "Vi kunne ikke behandle din seneste betaling. Opdater din betalingsmetode for at holde menuen og funktionerne aktive.",
+    "blockedBody": "Din seneste betaling mislykkedes, og fristen er udløbet. Betal nu for at få din menu online igen.",
+    "pay": "Opdater betaling",
+    "hide": "Skjul"
   }
 }

@@ -58,7 +58,8 @@
       "plan": "Abonnemang",
       "free": "Gratis",
       "trialDays": "Testperiod · {days} d",
-      "trialExpired": "Testperioden har gått ut"
+      "trialExpired": "Testperioden har gått ut",
+      "pastDue": "Förfallen"
     },
     "preview": {
       "preview": "Förhandsvisning",
@@ -587,7 +588,10 @@
         "planBasic": "Bas",
         "planPro": "Pro",
         "comparePlans": "Jämför abonnemang på iq-rest.com →",
-        "otherCurrencyTip": "Betalning sker endast i EUR. Kontakta supporten för att betala i en annan valuta."
+        "otherCurrencyTip": "Betalning sker endast i EUR. Kontakta supporten för att betala i en annan valuta.",
+        "pastDueTitle": "Betalningen misslyckades",
+        "pastDueTip": "Vi kunde inte behandla din senaste betalning. Du har {days} dagar på dig att betala innan menyn stängs av.",
+        "pastDueBlockedTip": "Din meny är avstängd eftersom din senaste betalning misslyckades. Betala nu för att återställa den."
       },
       "support": {
         "title": "Support",
@@ -804,5 +808,15 @@
     "body": "Välj ett abonnemang för att hålla beställningar, köksskärm och bokningar igång.",
     "hide": "Dölj",
     "viewPlans": "Visa abonnemang"
+  },
+  "pastDueModal": {
+    "title": "Betalningen misslyckades",
+    "blockedTitle": "Menyn är inte tillgänglig",
+    "daysLeft": "{days} dagar kvar innan din meny stängs av",
+    "blockedHeadline": "Din meny är inte tillgänglig",
+    "body": "Vi kunde inte behandla din senaste betalning. Uppdatera din betalningsmetod för att hålla menyn och funktionerna aktiva.",
+    "blockedBody": "Din senaste betalning misslyckades och fristen har löpt ut. Betala nu för att få din meny online igen.",
+    "pay": "Uppdatera betalning",
+    "hide": "Dölj"
   }
 }

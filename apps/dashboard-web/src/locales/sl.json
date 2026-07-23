@@ -58,7 +58,8 @@
       "plan": "Paket",
       "free": "Brezplačno",
       "trialDays": "Preizkus · {days} d",
-      "trialExpired": "Preizkus je potekel"
+      "trialExpired": "Preizkus je potekel",
+      "pastDue": "Zapadlo"
     },
     "preview": {
       "preview": "Predogled",
@@ -587,7 +588,10 @@
         "planBasic": "Osnovni",
         "planPro": "Pro",
         "comparePlans": "Primerjajte pakete na iq-rest.com →",
-        "otherCurrencyTip": "Plačilo poteka samo v EUR. Za plačilo v drugi valuti se obrnite na podporo."
+        "otherCurrencyTip": "Plačilo poteka samo v EUR. Za plačilo v drugi valuti se obrnite na podporo.",
+        "pastDueTitle": "Plačilo ni uspelo",
+        "pastDueTip": "Vašega zadnjega plačila nismo mogli obdelati. Za plačilo imate {days} dni, preden se meni izklopi.",
+        "pastDueBlockedTip": "Vaš meni je izklopljen zaradi neuspešnega plačila. Plačajte zdaj za obnovitev."
       },
       "support": {
         "title": "Podpora",
@@ -804,5 +808,15 @@
     "body": "Izberite paket, da naročila, kuhinjski zaslon in rezervacije še naprej delujejo.",
     "hide": "Skrij",
     "viewPlans": "Ogled paketov"
+  },
+  "pastDueModal": {
+    "title": "Plačilo ni uspelo",
+    "blockedTitle": "Meni ni na voljo",
+    "daysLeft": "Do izklopa vašega menija je ostalo še {days} dni",
+    "blockedHeadline": "Vaš meni ni na voljo",
+    "body": "Vašega zadnjega plačila nismo mogli obdelati. Posodobite način plačila, da meni in funkcije ostanejo aktivni.",
+    "blockedBody": "Vaše zadnje plačilo ni uspelo in obdobje odloga se je izteklo. Plačajte zdaj, da meni znova omogočite.",
+    "pay": "Posodobi plačilo",
+    "hide": "Skrij"
   }
 }

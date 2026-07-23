@@ -213,6 +213,58 @@ export class AutoTranslateService {
     );
   }
 
+  /**
+   * Gap-fill the restaurant's public-menu custom-text overrides: for every
+   * key the owner set in the default language, translate it into each enabled
+   * language whose slot is still empty. Never overwrites a non-empty target
+   * (manual edits win). Custom-text keys (e.g. "publicMenu.order.add") are
+   * used verbatim as batch keys — dots are valid JSON property names.
+   * Returns the merged { [locale]: { [key]: string } } map so the caller can
+   * hand it straight back to the dashboard.
+   */
+  async translateCustomTexts(restaurantId: string): Promise<Record<string, Record<string, string>>> {
+    const restaurant = await this.prisma.restaurant.findUnique({
+      where: { id: restaurantId },
+      select: { defaultLanguage: true, languages: true, customTexts: true },
+    });
+    if (!restaurant) return {};
+    const defaultLang = restaurant.defaultLanguage;
+    const ct = (restaurant.customTexts as Record<string, Record<string, string>> | null) ?? {};
+    const source = ct[defaultLang] ?? {};
+    const targets = (restaurant.languages || []).filter((l) => l && l !== defaultLang);
+    const apiKey = process.env.GEMINI_API_KEY;
+    if (targets.length === 0 || !apiKey) return ct;
+
+    const byLang = new Map<string, KeyedSource[]>();
+    for (const lang of targets) {
+      const existing = ct[lang] ?? {};
+      const reqs: KeyedSource[] = [];
+      for (const [key, val] of Object.entries(source)) {
+        const text = (val || "").trim();
+        if (text && !(existing[key] || "").trim()) reqs.push({ key, text });
+      }
+      if (reqs.length > 0) byLang.set(lang, reqs);
+    }
+    if (byLang.size === 0) return ct;
+
+    const merged: Record<string, Record<string, string>> = { ...ct };
+    await Promise.all(
+      Array.from(byLang.entries()).map(async ([lang, reqs]) => {
+        const out = await this.translateKeyedBatch(apiKey, lang, reqs);
+        if (!out || out.size === 0) return;
+        const next = { ...(merged[lang] ?? {}) };
+        for (const [key, value] of out) next[key] = value;
+        merged[lang] = next;
+      }),
+    );
+
+    await this.prisma.restaurant.update({
+      where: { id: restaurantId },
+      data: { customTexts: merged as Prisma.InputJsonValue },
+    });
+    return merged;
+  }
+
   private async runItem({
     restaurantId,
     itemId,

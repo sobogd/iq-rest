@@ -90,6 +90,9 @@ export interface ApiRestaurant {
  whatsapp: string | null;
  languages: string[];
  defaultLanguage: string;
+ // Per-restaurant overrides for the public-menu UI strings, keyed
+ // { [locale]: { [i18nKey]: string } }. Edited in the "Menu texts" section.
+ customTexts?: Record<string, Record<string, string>> | null;
  hideTitle: boolean;
  menuLayout: string;
  titleScale: string;
@@ -148,6 +151,31 @@ export async function updateRestaurantLanguages(
  });
  if (!res.ok) throw new Error("Failed to update languages");
  return (await res.json()) as ApiRestaurant;
+}
+
+export type CustomTexts = Record<string, Record<string, string>>;
+
+/** Save the public-menu UI-text overrides for the active restaurant. */
+export async function updateCustomTexts(customTexts: CustomTexts): Promise<CustomTexts> {
+ const res = await apiFetch("/api/restaurant/custom-texts", {
+  credentials: "include",
+  method: "PUT",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ customTexts }),
+ });
+ if (!res.ok) throw new Error("Failed to save menu texts");
+ return ((await res.json()).customTexts ?? {}) as CustomTexts;
+}
+
+/** Auto-translate the overrides into every enabled language (gap-fill from the
+ *  default language). Returns the merged map. */
+export async function translateCustomTexts(): Promise<CustomTexts> {
+ const res = await apiFetch("/api/restaurant/custom-texts/translate", {
+  credentials: "include",
+  method: "POST",
+ });
+ if (!res.ok) throw new Error("Failed to translate menu texts");
+ return ((await res.json()).customTexts ?? {}) as CustomTexts;
 }
 
 export async function dismissScanBanner(): Promise<void> {

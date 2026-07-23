@@ -58,7 +58,8 @@
       "plan": "Abonnement",
       "free": "Gratis",
       "trialDays": "Proefperiode · {days}d",
-      "trialExpired": "Proefperiode verlopen"
+      "trialExpired": "Proefperiode verlopen",
+      "pastDue": "Achterstallig"
     },
     "preview": {
       "preview": "Voorbeeld",
@@ -587,7 +588,10 @@
         "planBasic": "Basic",
         "planPro": "Pro",
         "comparePlans": "Vergelijk abonnementen op iq-rest.com →",
-        "otherCurrencyTip": "Betaling is alleen in EUR. Neem contact op met support om in een andere valuta te betalen."
+        "otherCurrencyTip": "Betaling is alleen in EUR. Neem contact op met support om in een andere valuta te betalen.",
+        "pastDueTitle": "Betaling mislukt",
+        "pastDueTip": "We konden je laatste betaling niet verwerken. Je hebt {days} dagen om te betalen voordat je menu offline gaat.",
+        "pastDueBlockedTip": "Je menu is offline omdat je laatste betaling is mislukt. Betaal nu om het te herstellen."
       },
       "support": {
         "title": "Support",
@@ -804,5 +808,15 @@
     "body": "Kies een abonnement om bestellingen, keukenscherm en reserveringen te blijven gebruiken.",
     "hide": "Verbergen",
     "viewPlans": "Abonnementen bekijken"
+  },
+  "pastDueModal": {
+    "title": "Betaling mislukt",
+    "blockedTitle": "Menu niet beschikbaar",
+    "daysLeft": "Nog {days} dagen voordat je menu offline gaat",
+    "blockedHeadline": "Je menu is niet beschikbaar",
+    "body": "We konden je laatste betaling niet verwerken. Werk je betaalmethode bij om je menu en functies actief te houden.",
+    "blockedBody": "Je laatste betaling is mislukt en de respijtperiode is voorbij. Betaal nu om je menu weer online te brengen.",
+    "pay": "Betaling bijwerken",
+    "hide": "Verbergen"
   }
 }

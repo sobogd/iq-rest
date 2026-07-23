@@ -58,7 +58,8 @@
       "plan": "Plāns",
       "free": "Bezmaksas",
       "trialDays": "Izmēģinājums · {days} d.",
-      "trialExpired": "Izmēģinājums beidzies"
+      "trialExpired": "Izmēģinājums beidzies",
+      "pastDue": "Nokavēts"
     },
     "preview": {
       "preview": "Priekšskatījums",
@@ -587,7 +588,10 @@
         "planBasic": "Basic",
         "planPro": "Pro",
         "comparePlans": "Salīdziniet plānus vietnē iq-rest.com →",
-        "otherCurrencyTip": "Maksājums ir tikai EUR. Lai maksātu citā valūtā, lūdzu, sazinieties ar atbalsta dienestu."
+        "otherCurrencyTip": "Maksājums ir tikai EUR. Lai maksātu citā valūtā, lūdzu, sazinieties ar atbalsta dienestu.",
+        "pastDueTitle": "Maksājums neizdevās",
+        "pastDueTip": "Neizdevās apstrādāt jūsu pēdējo maksājumu. Jums ir {days} dienas, lai samaksātu, pirms ēdienkarte tiek atspējota.",
+        "pastDueBlockedTip": "Jūsu ēdienkarte ir atspējota neizdevušās maksājuma dēļ. Samaksājiet tagad, lai to atjaunotu."
       },
       "support": {
         "title": "Atbalsts",
@@ -804,5 +808,15 @@
     "body": "Izvēlieties plānu, lai pasūtījumi, virtuves displejs un rezervācijas turpinātu darboties.",
     "hide": "Paslēpt",
     "viewPlans": "Skatīt plānus"
+  },
+  "pastDueModal": {
+    "title": "Maksājums neizdevās",
+    "blockedTitle": "Ēdienkarte nav pieejama",
+    "daysLeft": "Atlikušas {days} dienas līdz ēdienkartes atspējošanai",
+    "blockedHeadline": "Jūsu ēdienkarte nav pieejama",
+    "body": "Neizdevās apstrādāt jūsu pēdējo maksājumu. Atjauniniet maksājuma veidu, lai ēdienkarte un funkcijas paliktu aktīvas.",
+    "blockedBody": "Jūsu pēdējais maksājums neizdevās un labvēlības periods ir beidzies. Samaksājiet tagad, lai atjaunotu ēdienkarti.",
+    "pay": "Atjaunināt maksājumu",
+    "hide": "Slēpt"
   }
 }

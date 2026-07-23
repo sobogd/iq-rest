@@ -58,7 +58,8 @@
       "plan": "Plan",
       "free": "Besplatno",
       "trialDays": "Probni · {days} d",
-      "trialExpired": "Probni istekao"
+      "trialExpired": "Probni istekao",
+      "pastDue": "Доспело"
     },
     "preview": {
       "preview": "Pregled",
@@ -587,7 +588,10 @@
         "planBasic": "Basic",
         "planPro": "Pro",
         "comparePlans": "Uporedite planove na iq-rest.com →",
-        "otherCurrencyTip": "Plaćanje je isključivo u evrima. Za plaćanje u drugoj valuti obratite se podršci."
+        "otherCurrencyTip": "Plaćanje je isključivo u evrima. Za plaćanje u drugoj valuti obratite se podršci.",
+        "pastDueTitle": "Плаћање није успело",
+        "pastDueTip": "Нисмо могли да обрадимо ваше последње плаћање. Имате {days} дана да платите пре него што се мени искључи.",
+        "pastDueBlockedTip": "Ваш мени је искључен због неуспешног плаћања. Платите сада да га вратите."
       },
       "support": {
         "title": "Podrška",
@@ -804,5 +808,15 @@
     "body": "Izaberite plan da biste zadržali porudžbine, kuhinjski ekran i rezervacije.",
     "hide": "Sakrij",
     "viewPlans": "Pogledaj planove"
+  },
+  "pastDueModal": {
+    "title": "Плаћање није успело",
+    "blockedTitle": "Мени није доступан",
+    "daysLeft": "Преостало је {days} дана до искључивања вашег менија",
+    "blockedHeadline": "Ваш мени није доступан",
+    "body": "Нисмо могли да обрадимо ваше последње плаћање. Ажурирајте начин плаћања да мени и функције остану активни.",
+    "blockedBody": "Ваше последње плаћање није успело и период почека је истекао. Платите сада да вратите мени на мрежу.",
+    "pay": "Ажурирај плаћање",
+    "hide": "Сакриј"
   }
 }

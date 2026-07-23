@@ -131,6 +131,12 @@ model Restaurant {
   // Free-form internal note written by admins; never shown to customers
   // or restaurant owners. Edited via the admin restaurant modal.
   adminComment    String?
+  // Per-restaurant overrides for the public-menu UI i18n strings (buttons,
+  // headings, order/reservation copy). Shape: { [locale]: { [i18nKey]: string } }
+  // e.g. { "es": { "publicMenu.order.add": "Añadir" } }. Empty / missing key
+  // ⇒ the diner SPA falls back to its built-in i18n text. Edited from the
+  // dashboard "Menu texts" section; the curated key list lives client-side.
+  customTexts     Json?
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
 

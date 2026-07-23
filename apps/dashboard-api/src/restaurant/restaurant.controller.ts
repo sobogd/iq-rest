@@ -79,6 +79,28 @@ export class RestaurantController {
     });
   }
 
+  /** Save the public-menu custom-text overrides for the active restaurant.
+   *  Body: { customTexts: { [locale]: { [i18nKey]: string } } }. */
+  @Put("restaurant/custom-texts")
+  async setCustomTexts(
+    @Req() req: Request,
+    @Body() body: { customTexts?: unknown },
+  ) {
+    const { userId, restaurantId, isImpersonating } = (req as AuthedRequest).authUser;
+    // Admin-only surface: editable solely from inside an admin-impersonation
+    // session, so restaurant owners can't touch the public-menu custom texts.
+    if (!isImpersonating) throw new ForbiddenException("Admin only");
+    return this.svc.saveCustomTexts(userId, restaurantId, body?.customTexts ?? {});
+  }
+
+  /** Gap-fill the custom-text overrides into every enabled language via Gemini
+   *  (translates from the default language; never overwrites a manual value). */
+  @Post("restaurant/custom-texts/translate")
+  async translateCustomTexts(@Req() req: Request) {
+    const { userId, restaurantId, isImpersonating } = (req as AuthedRequest).authUser;
+    if (!isImpersonating) throw new ForbiddenException("Admin only");
+    return this.svc.translateCustomTexts(userId, restaurantId);
+  }
 
   @Post("restaurant/dismiss-scan-banner")
   async dismissScanBanner(@Req() req: Request) {

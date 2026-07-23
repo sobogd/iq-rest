@@ -58,7 +58,8 @@
       "plan": "Pakett",
       "free": "Tasuta",
       "trialDays": "Prooviaeg · {days} p",
-      "trialExpired": "Prooviaeg lõppes"
+      "trialExpired": "Prooviaeg lõppes",
+      "pastDue": "Tähtaeg ületatud"
     },
     "preview": {
       "preview": "Eelvaade",
@@ -587,7 +588,10 @@
         "planBasic": "Basic",
         "planPro": "Pro",
         "comparePlans": "Võrdle pakette aadressil iq-rest.com →",
-        "otherCurrencyTip": "Makse toimub ainult EUR-is. Muus valuutas maksmiseks võta palun ühendust toega."
+        "otherCurrencyTip": "Makse toimub ainult EUR-is. Muus valuutas maksmiseks võta palun ühendust toega.",
+        "pastDueTitle": "Makse ebaõnnestus",
+        "pastDueTip": "Me ei saanud teie viimast makset töödelda. Teil on {days} päeva aega maksta, enne kui menüü välja lülitub.",
+        "pastDueBlockedTip": "Teie menüü on väljas, kuna viimane makse ebaõnnestus. Makske kohe, et see taastada."
       },
       "support": {
         "title": "Tugi",
@@ -804,5 +808,15 @@
     "body": "Vali pakett, et hoida tellimused, köögiekraan ja broneeringud töös.",
     "hide": "Peida",
     "viewPlans": "Vaata pakette"
+  },
+  "pastDueModal": {
+    "title": "Makse ebaõnnestus",
+    "blockedTitle": "Menüü pole saadaval",
+    "daysLeft": "Menüü väljalülitamiseni jäänud {days} päeva",
+    "blockedHeadline": "Teie menüü pole saadaval",
+    "body": "Me ei saanud teie viimast makset töödelda. Uuendage makseviisi, et menüü ja funktsioonid jääksid aktiivseks.",
+    "blockedBody": "Teie viimane makse ebaõnnestus ja ajapikendus on lõppenud. Makske kohe, et menüü uuesti aktiveerida.",
+    "pay": "Uuenda makset",
+    "hide": "Peida"
   }
 }

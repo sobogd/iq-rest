@@ -58,7 +58,8 @@
       "plan": "플랜",
       "free": "무료",
       "trialDays": "체험판 · {days}일",
-      "trialExpired": "체험판 만료됨"
+      "trialExpired": "체험판 만료됨",
+      "pastDue": "연체"
     },
     "preview": {
       "preview": "미리보기",
@@ -587,7 +588,10 @@
         "planBasic": "Basic",
         "planPro": "Pro",
         "comparePlans": "iq-rest.com에서 플랜 비교 →",
-        "otherCurrencyTip": "결제는 EUR로만 가능합니다. 다른 통화로 결제하려면 고객지원에 문의하세요."
+        "otherCurrencyTip": "결제는 EUR로만 가능합니다. 다른 통화로 결제하려면 고객지원에 문의하세요.",
+        "pastDueTitle": "결제 실패",
+        "pastDueTip": "최근 결제를 처리하지 못했습니다. 메뉴가 중단되기 전 {days}일 이내에 결제하세요.",
+        "pastDueBlockedTip": "최근 결제 실패로 메뉴가 중단되었습니다. 지금 결제하여 복구하세요."
       },
       "support": {
         "title": "고객지원",
@@ -804,5 +808,15 @@
     "body": "주문, 주방 디스플레이, 예약을 계속 이용하려면 플랜을 선택하세요.",
     "hide": "숨기기",
     "viewPlans": "플랜 보기"
+  },
+  "pastDueModal": {
+    "title": "결제 실패",
+    "blockedTitle": "메뉴 사용 불가",
+    "daysLeft": "메뉴가 중단되기까지 {days}일 남았습니다",
+    "blockedHeadline": "메뉴를 사용할 수 없습니다",
+    "body": "최근 결제를 처리하지 못했습니다. 메뉴와 기능을 유지하려면 결제 수단을 업데이트하세요.",
+    "blockedBody": "최근 결제가 실패했고 유예 기간이 종료되었습니다. 지금 결제하여 메뉴를 다시 활성화하세요.",
+    "pay": "결제 업데이트",
+    "hide": "숨기기"
   }
 }

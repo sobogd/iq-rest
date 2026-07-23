@@ -58,7 +58,8 @@
       "plan": "Plan",
       "free": "Gratis",
       "trialDays": "Prueba · {days} d",
-      "trialExpired": "Prueba caducada"
+      "trialExpired": "Prueba caducada",
+      "pastDue": "Vencido"
     },
     "preview": {
       "preview": "Vista previa",
@@ -587,7 +588,10 @@
         "planBasic": "Basic",
         "planPro": "Pro",
         "comparePlans": "Compara los planes en iq-rest.com →",
-        "otherCurrencyTip": "El pago es solo en EUR. Para pagar en otra moneda, contacta con soporte."
+        "otherCurrencyTip": "El pago es solo en EUR. Para pagar en otra moneda, contacta con soporte.",
+        "pastDueTitle": "El pago ha fallado",
+        "pastDueTip": "No pudimos procesar tu último pago. Tienes {days} días para pagar antes de que tu menú se desconecte.",
+        "pastDueBlockedTip": "Tu menú está desconectado porque tu último pago ha fallado. Paga ahora para restaurarlo."
       },
       "support": {
         "title": "Soporte",
@@ -804,5 +808,15 @@
     "body": "Elige un plan para mantener activos los pedidos, la pantalla de cocina y las reservas.",
     "hide": "Ocultar",
     "viewPlans": "Ver planes"
+  },
+  "pastDueModal": {
+    "title": "El pago ha fallado",
+    "blockedTitle": "Menú no disponible",
+    "daysLeft": "Quedan {days} días antes de que tu menú se desconecte",
+    "blockedHeadline": "Tu menú no está disponible",
+    "body": "No pudimos procesar tu último pago. Actualiza tu método de pago para mantener el menú y las funciones activos.",
+    "blockedBody": "Tu último pago ha fallado y el período de gracia ha terminado. Paga ahora para volver a activar tu menú.",
+    "pay": "Actualizar pago",
+    "hide": "Ocultar"
   }
 }

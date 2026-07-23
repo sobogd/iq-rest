@@ -45,6 +45,8 @@ export function viewToPath(view: View): string {
       return "/dashboard/settings/orders";
     case "settings.bookings":
       return "/dashboard/settings/bookings";
+    case "settings.customTexts":
+      return "/dashboard/settings/menu-texts";
     case "settings.billing":
       return view.from ? `/dashboard/settings/billing?from=${view.from}` : "/dashboard/settings/billing";
     case "settings.support":
@@ -124,6 +126,7 @@ export function pathToView(path: string): View {
   // Languages merged into the general (Region & languages) page — keep the
   // old URL as an alias so bookmarks/back-stack entries still resolve.
   if (stripped === "/dashboard/settings/languages") return { name: "settings.general" };
+  if (stripped === "/dashboard/settings/menu-texts") return { name: "settings.customTexts" };
   if (stripped === "/dashboard/settings/billing") {
     const from = params.get("from");
     return from === "menu" ? { name: "settings.billing", from: "menu" } : { name: "settings.billing" };

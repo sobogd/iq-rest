@@ -347,7 +347,7 @@ export class AuthService implements OnModuleDestroy {
     cookieValue: string | undefined,
     email: string | undefined,
     impersonation?: { adminOrigSession?: string; adminOrigEmail?: string },
-  ): Promise<{ userId: string; email: string; onboardingStep: number; legacyDashboard: boolean; isDemo: boolean; defaultDark: boolean; accountCreatedAt: string }> {
+  ): Promise<{ userId: string; email: string; onboardingStep: number; legacyDashboard: boolean; isDemo: boolean; defaultDark: boolean; accountCreatedAt: string; isImpersonating: boolean }> {
     if (!cookieValue || !email) throw new UnauthorizedException();
     const adminEmail = impersonation?.adminOrigEmail;
     const adminSession = impersonation?.adminOrigSession;
@@ -398,6 +398,10 @@ export class AuthService implements OnModuleDestroy {
       // Account creation time — the dashboard gates the daily trial reminder
       // modal on this (first shown ≥24h after signup, then once per day).
       accountCreatedAt: user.createdAt.toISOString(),
+      // True only inside a validated admin-impersonation session (admin_original_*
+      // cookies present + admin email/domain/session verified above). Gates
+      // admin-only edits like the public-menu custom texts.
+      isImpersonating,
     };
   }
 

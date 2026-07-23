@@ -3,17 +3,20 @@
 import { useState } from "react";
 import { OnboardingModals } from "./onboarding-modals";
 import { TrialModal } from "./trial-modal";
+import { PastDueModal } from "./past-due-modal";
 
 type TrialSub = {
   plan: string | null;
   subscriptionStatus: string | null;
   trialEndsAt: string | null;
+  currentPeriodEnd?: string | null;
 } | null;
 
 /**
  * Sequences the first-run modals: the onboarding modals (name → fill → scan)
- * run first; only once they're resolved does the daily trial reminder appear,
- * so the trial modal is always last in the queue. Mount with
+ * run first; only once they're resolved does the daily billing nudge appear —
+ * either the trial reminder or, for a PAST_DUE paid plan, the past-due nudge
+ * (the two are mutually exclusive, each self-decides). Mount with
  * `key={restaurant.id}` so switching restaurants re-evaluates everything.
  */
 export function FirstRunModals({
@@ -46,6 +49,7 @@ export function FirstRunModals({
         onResolved={() => setOnboardingResolved(true)}
       />
       {onboardingResolved ? <TrialModal sub={sub} accountCreatedAt={accountCreatedAt} /> : null}
+      {onboardingResolved ? <PastDueModal sub={sub} /> : null}
     </>
   );
 }

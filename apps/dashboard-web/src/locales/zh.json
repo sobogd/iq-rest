@@ -58,7 +58,8 @@
       "plan": "套餐",
       "free": "免费",
       "trialDays": "试用 · {days}天",
-      "trialExpired": "试用期已结束"
+      "trialExpired": "试用期已结束",
+      "pastDue": "逾期"
     },
     "preview": {
       "preview": "预览",
@@ -513,7 +514,10 @@
         "planBasic": "基础",
         "planPro": "专业",
         "comparePlans": "在 iq-rest.com 比较套餐 →",
-        "otherCurrencyTip": "仅支持欧元支付。如需以其他货币支付,请联系客服。"
+        "otherCurrencyTip": "仅支持欧元支付。如需以其他货币支付,请联系客服。",
+        "pastDueTitle": "支付失败",
+        "pastDueTip": "我们无法处理您的上次付款。请在 {days} 天内付款，否则菜单将下线。",
+        "pastDueBlockedTip": "由于上次付款失败，您的菜单已下线。立即付款以恢复。"
       },
       "support": {
         "title": "支持",
@@ -804,5 +808,15 @@
     "body": "选择套餐以继续使用订单、厨房显示和预订。",
     "hide": "隐藏",
     "viewPlans": "查看套餐"
+  },
+  "pastDueModal": {
+    "title": "支付失败",
+    "blockedTitle": "菜单不可用",
+    "daysLeft": "距离您的菜单下线还有 {days} 天",
+    "blockedHeadline": "您的菜单不可用",
+    "body": "我们无法处理您的上次付款。请更新付款方式，以保持菜单和功能可用。",
+    "blockedBody": "您的上次付款失败，宽限期已结束。立即付款以重新上线您的菜单。",
+    "pay": "更新付款",
+    "hide": "隐藏"
   }
 }

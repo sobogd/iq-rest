@@ -58,7 +58,8 @@
       "plan": "Planas",
       "free": "Nemokamas",
       "trialDays": "Bandomasis · {days} d.",
-      "trialExpired": "Bandomasis laikotarpis baigėsi"
+      "trialExpired": "Bandomasis laikotarpis baigėsi",
+      "pastDue": "Pradelsta"
     },
     "preview": {
       "preview": "Peržiūra",
@@ -587,7 +588,10 @@
         "planBasic": "Basic",
         "planPro": "Pro",
         "comparePlans": "Palyginkite planus iq-rest.com →",
-        "otherCurrencyTip": "Mokama tik eurais (EUR). Norėdami mokėti kita valiuta, susisiekite su pagalba."
+        "otherCurrencyTip": "Mokama tik eurais (EUR). Norėdami mokėti kita valiuta, susisiekite su pagalba.",
+        "pastDueTitle": "Mokėjimas nepavyko",
+        "pastDueTip": "Nepavyko apdoroti paskutinio mokėjimo. Turite {days} d. sumokėti, kol meniu bus išjungtas.",
+        "pastDueBlockedTip": "Jūsų meniu išjungtas dėl nepavykusio mokėjimo. Sumokėkite dabar, kad jį atkurtumėte."
       },
       "support": {
         "title": "Pagalba",
@@ -804,5 +808,15 @@
     "body": "Pasirinkite planą, kad užsakymai, virtuvės ekranas ir rezervacijos veiktų toliau.",
     "hide": "Slėpti",
     "viewPlans": "Peržiūrėti planus"
+  },
+  "pastDueModal": {
+    "title": "Mokėjimas nepavyko",
+    "blockedTitle": "Meniu nepasiekiamas",
+    "daysLeft": "Liko {days} d. iki jūsų meniu išjungimo",
+    "blockedHeadline": "Jūsų meniu nepasiekiamas",
+    "body": "Nepavyko apdoroti paskutinio mokėjimo. Atnaujinkite mokėjimo būdą, kad meniu ir funkcijos liktų aktyvūs.",
+    "blockedBody": "Paskutinis mokėjimas nepavyko ir lengvatinis laikotarpis pasibaigė. Sumokėkite dabar, kad meniu vėl veiktų.",
+    "pay": "Atnaujinti mokėjimą",
+    "hide": "Slėpti"
   }
 }

@@ -58,7 +58,8 @@
       "plan": "Plan",
       "free": "Free",
       "trialDays": "Trial · {days}d",
-      "trialExpired": "Trial expired"
+      "trialExpired": "Trial expired",
+      "pastDue": "Past due"
     },
     "preview": {
       "preview": "Preview",
@@ -564,6 +565,16 @@
         "translatingBody": "Please wait — we're translating every item and category into the languages you added. Don't close this window.",
         "translateErrorTitle": "Translation failed"
       },
+      "customTexts": {
+        "title": "Menu texts",
+        "subtitle": "Override the built-in buttons and labels on your public menu. Leave a field empty to keep the built-in text. Write a text in your default language, then use Translate all to fill the other languages — any language left empty falls back to your default.",
+        "translateAll": "Translate all",
+        "groups": {
+          "navigation": "Navigation & menu",
+          "order": "Ordering",
+          "reservation": "Reservations"
+        }
+      },
       "billing": {
         "title": "Billing",
         "menuUnavailable": "Menu unavailable for scanning",
@@ -587,7 +598,10 @@
         "planBasic": "Basic",
         "planPro": "Pro",
         "comparePlans": "Compare plans on iq-rest.com →",
-        "otherCurrencyTip": "Payment is in EUR only. To pay in another currency, please contact support."
+        "otherCurrencyTip": "Payment is in EUR only. To pay in another currency, please contact support.",
+        "pastDueTitle": "Payment failed",
+        "pastDueTip": "We couldn't process your last payment. You have {days} days to pay before your menu goes offline.",
+        "pastDueBlockedTip": "Your menu is offline because your last payment failed. Pay now to restore it."
       },
       "support": {
         "title": "Support",
@@ -804,5 +818,15 @@
     "body": "Choose a plan to keep orders, kitchen display and reservations running.",
     "hide": "Hide",
     "viewPlans": "View plans"
+  },
+  "pastDueModal": {
+    "title": "Payment failed",
+    "blockedTitle": "Menu offline",
+    "daysLeft": "{days} days left before your menu goes offline",
+    "blockedHeadline": "Your menu is offline",
+    "body": "We couldn't process your last payment. Update your payment method to keep your menu and features online.",
+    "blockedBody": "Your last payment failed and the grace period has ended. Pay now to bring your menu back online.",
+    "pay": "Update payment",
+    "hide": "Hide"
   }
 }

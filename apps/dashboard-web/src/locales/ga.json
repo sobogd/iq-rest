@@ -58,7 +58,8 @@
       "plan": "Plean",
       "free": "Saor",
       "trialDays": "Triail · {days}l",
-      "trialExpired": "Triail imithe as feidhm"
+      "trialExpired": "Triail imithe as feidhm",
+      "pastDue": "Thar téarma"
     },
     "preview": {
       "preview": "Réamhamharc",
@@ -587,7 +588,10 @@
         "planBasic": "Basic",
         "planPro": "Pro",
         "comparePlans": "Cuir pleananna i gcomparáid ar iq-rest.com →",
-        "otherCurrencyTip": "Ní dhéantar íocaíocht ach in EUR. Chun íoc in airgeadra eile, déan teagmháil le tacaíocht le do thoil."
+        "otherCurrencyTip": "Ní dhéantar íocaíocht ach in EUR. Chun íoc in airgeadra eile, déan teagmháil le tacaíocht le do thoil.",
+        "pastDueTitle": "Theip ar an íocaíocht",
+        "pastDueTip": "Ní rabhamar in ann d'íocaíocht dheireanach a phróiseáil. Tá {days} lá agat chun íoc sula rachaidh do bhiachlár as líne.",
+        "pastDueBlockedTip": "Tá do bhiachlár as líne toisc gur theip ar d'íocaíocht dheireanach. Íoc anois chun é a athchóiriú."
       },
       "support": {
         "title": "Tacaíocht",
@@ -804,5 +808,15 @@
     "body": "Roghnaigh plean chun orduithe, taispeáint chistine agus áirithintí a choinneáil ag rith.",
     "hide": "Folaigh",
     "viewPlans": "Féach ar na pleananna"
+  },
+  "pastDueModal": {
+    "title": "Theip ar an íocaíocht",
+    "blockedTitle": "Níl an biachlár ar fáil",
+    "daysLeft": "{days} lá fágtha sula rachaidh do bhiachlár as líne",
+    "blockedHeadline": "Níl do bhiachlár ar fáil",
+    "body": "Ní rabhamar in ann d'íocaíocht dheireanach a phróiseáil. Nuashonraigh do mhodh íocaíochta chun do bhiachlár agus na gnéithe a choinneáil gníomhach.",
+    "blockedBody": "Theip ar d'íocaíocht dheireanach agus tá an tréimhse chairde thart. Íoc anois chun do bhiachlár a chur ar líne arís.",
+    "pay": "Nuashonraigh íocaíocht",
+    "hide": "Folaigh"
   }
 }
