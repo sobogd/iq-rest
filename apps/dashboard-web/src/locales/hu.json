@@ -513,7 +513,17 @@
         "langSwitcher_top": "Földgömb ikon",
         "generateAi": "Generálás MI-vel",
         "aiTitle": "Háttér generálása",
-        "aiPlaceholder": "pl. Hangulatos asztal gyertyafényben rusztikus tányérokkal és meleg fával"
+        "aiPlaceholder": "pl. Hangulatos asztal gyertyafényben rusztikus tányérokkal és meleg fával",
+        "showDescriptionLabel": "Leírás megjelenítése",
+        "showDescriptionTip": "A leírás megjelenítése az étlap kezdőlapján.",
+        "logoLabel": "Logó",
+        "logoTip": "Az étlap kezdőlapján jelenik meg a név fölött — vagy önmagában. Átlátszó PNG a legjobb választás.",
+        "logoUploadHint": "Logó feltöltése",
+        "removeLogo": "Logó eltávolítása",
+        "showLogoLabel": "Logó megjelenítése",
+        "showLogoTip": "A logó megjelenítése az étlap kezdőlapján.",
+        "logoScaleLabel": "Logó mérete",
+        "logoScaleTip": "A logó mérete a háttér fölött."
       },
       "general": {
         "title": "Régió és nyelvek",

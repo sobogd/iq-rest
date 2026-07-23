@@ -513,7 +513,17 @@
         "langSwitcher_top": "Globe icon",
         "generateAi": "Generate with AI",
         "aiTitle": "Generate background",
-        "aiPlaceholder": "e.g. Cozy candlelit table with rustic plates and warm wood"
+        "aiPlaceholder": "e.g. Cozy candlelit table with rustic plates and warm wood",
+        "showDescriptionLabel": "Show description",
+        "showDescriptionTip": "Display the description on the menu homepage.",
+        "logoLabel": "Logo",
+        "logoTip": "Shown on the menu homepage above the name — or on its own. Transparent PNG works best.",
+        "logoUploadHint": "Upload logo",
+        "removeLogo": "Remove logo",
+        "showLogoLabel": "Show logo",
+        "showLogoTip": "Display the logo on the menu homepage.",
+        "logoScaleLabel": "Logo size",
+        "logoScaleTip": "Size of the logo over the background."
       },
       "general": {
         "title": "Region & languages",

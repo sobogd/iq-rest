@@ -513,7 +513,17 @@
         "langSwitcher_top": "Hnattartákn",
         "generateAi": "Búa til með gervigreind",
         "aiTitle": "Búa til bakgrunn",
-        "aiPlaceholder": "t.d. Notalegt borð við kertaljós með rúmlegum diskum og hlýjum viði"
+        "aiPlaceholder": "t.d. Notalegt borð við kertaljós með rúmlegum diskum og hlýjum viði",
+        "showDescriptionLabel": "Sýna lýsingu",
+        "showDescriptionTip": "Sýna lýsinguna á forsíðu matseðilsins.",
+        "logoLabel": "Lógó",
+        "logoTip": "Birtist á forsíðu matseðilsins fyrir ofan nafnið — eða eitt og sér. Gagnsæ PNG-mynd virkar best.",
+        "logoUploadHint": "Hlaða upp lógói",
+        "removeLogo": "Fjarlægja lógó",
+        "showLogoLabel": "Sýna lógó",
+        "showLogoTip": "Sýna lógóið á forsíðu matseðilsins.",
+        "logoScaleLabel": "Stærð lógós",
+        "logoScaleTip": "Stærð lógósins yfir bakgrunninum."
       },
       "general": {
         "title": "Svæði og tungumál",

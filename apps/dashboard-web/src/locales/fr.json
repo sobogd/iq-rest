@@ -500,7 +500,17 @@
         "langSwitcher_top": "Icône de globe",
         "generateAi": "Générer avec l'IA",
         "aiTitle": "Générer le fond",
-        "aiPlaceholder": "ex. Table chaleureuse aux chandelles avec assiettes rustiques et bois clair"
+        "aiPlaceholder": "ex. Table chaleureuse aux chandelles avec assiettes rustiques et bois clair",
+        "showDescriptionLabel": "Afficher la description",
+        "showDescriptionTip": "Afficher la description sur la page d'accueil du menu.",
+        "logoLabel": "Logo",
+        "logoTip": "Affiché sur la page d'accueil du menu au-dessus du nom — ou seul. Un PNG transparent donne le meilleur résultat.",
+        "logoUploadHint": "Importer le logo",
+        "removeLogo": "Supprimer le logo",
+        "showLogoLabel": "Afficher le logo",
+        "showLogoTip": "Afficher le logo sur la page d'accueil du menu.",
+        "logoScaleLabel": "Taille du logo",
+        "logoScaleTip": "Taille du logo sur l'arrière-plan."
       },
       "general": {
         "title": "Région et langues",

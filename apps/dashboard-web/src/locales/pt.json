@@ -513,7 +513,17 @@
         "langSwitcher_top": "Ícone de globo",
         "generateAi": "Gerar com IA",
         "aiTitle": "Gerar fundo",
-        "aiPlaceholder": "ex. Mesa acolhedora à luz de velas com pratos rústicos e madeira quente"
+        "aiPlaceholder": "ex. Mesa acolhedora à luz de velas com pratos rústicos e madeira quente",
+        "showDescriptionLabel": "Mostrar descrição",
+        "showDescriptionTip": "Mostrar a descrição na página inicial do menu.",
+        "logoLabel": "Logótipo",
+        "logoTip": "Apresentado na página inicial do menu, acima do nome — ou sozinho. Um PNG transparente funciona melhor.",
+        "logoUploadHint": "Carregar logótipo",
+        "removeLogo": "Remover logótipo",
+        "showLogoLabel": "Mostrar logótipo",
+        "showLogoTip": "Mostrar o logótipo na página inicial do menu.",
+        "logoScaleLabel": "Tamanho do logótipo",
+        "logoScaleTip": "Tamanho do logótipo sobre o fundo."
       },
       "general": {
         "title": "Região e idiomas",

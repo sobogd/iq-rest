@@ -513,7 +513,17 @@
         "langSwitcher_top": "Deilbhín cruinne",
         "generateAi": "Gin le AI",
         "aiTitle": "Gin cúlra",
-        "aiPlaceholder": "m.sh. Bord taitneamhach le coinnle agus plátaí tuaithe agus adhmad te"
+        "aiPlaceholder": "m.sh. Bord taitneamhach le coinnle agus plátaí tuaithe agus adhmad te",
+        "showDescriptionLabel": "Taispeáin cur síos",
+        "showDescriptionTip": "Taispeáin an cur síos ar leathanach baile an bhiachláir.",
+        "logoLabel": "Lógó",
+        "logoTip": "Taispeántar é ar leathanach baile an bhiachláir os cionn an ainm — nó leis féin. Is fearr PNG trédhearcach.",
+        "logoUploadHint": "Uaslódáil lógó",
+        "removeLogo": "Bain an lógó",
+        "showLogoLabel": "Taispeáin lógó",
+        "showLogoTip": "Taispeáin an lógó ar leathanach baile an bhiachláir.",
+        "logoScaleLabel": "Méid an lógó",
+        "logoScaleTip": "Méid an lógó os cionn an chúlra."
       },
       "general": {
         "title": "Réigiún & teangacha",

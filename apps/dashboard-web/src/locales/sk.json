@@ -513,7 +513,17 @@
         "langSwitcher_top": "Ikona zemegule",
         "generateAi": "Generovať pomocou AI",
         "aiTitle": "Generovať pozadie",
-        "aiPlaceholder": "napr. Útulný stôl pri sviečkach s rustikálnymi tanierami a teplým drevom"
+        "aiPlaceholder": "napr. Útulný stôl pri sviečkach s rustikálnymi tanierami a teplým drevom",
+        "showDescriptionLabel": "Zobraziť popis",
+        "showDescriptionTip": "Zobrazte popis na úvodnej stránke menu.",
+        "logoLabel": "Logo",
+        "logoTip": "Zobrazuje sa na úvodnej stránke menu nad názvom — alebo samostatne. Najlepšie funguje PNG s priehľadným pozadím.",
+        "logoUploadHint": "Nahrať logo",
+        "removeLogo": "Odstrániť logo",
+        "showLogoLabel": "Zobraziť logo",
+        "showLogoTip": "Zobrazte logo na úvodnej stránke menu.",
+        "logoScaleLabel": "Veľkosť loga",
+        "logoScaleTip": "Veľkosť loga cez pozadie."
       },
       "general": {
         "title": "Región a jazyky",

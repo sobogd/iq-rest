@@ -513,7 +513,17 @@
         "langSwitcher_top": "Maakera ikoon",
         "generateAi": "Genereeri tehisintellektiga",
         "aiTitle": "Genereeri taust",
-        "aiPlaceholder": "nt Hubane laud küünlavalgel rustikaalsete taldrikutega ja sooja puiduga"
+        "aiPlaceholder": "nt Hubane laud küünlavalgel rustikaalsete taldrikutega ja sooja puiduga",
+        "showDescriptionLabel": "Näita kirjeldust",
+        "showDescriptionTip": "Näita kirjeldust menüü avalehel.",
+        "logoLabel": "Logo",
+        "logoTip": "Kuvatakse menüü avalehel nime kohal — või eraldi. Kõige paremini sobib läbipaistev PNG.",
+        "logoUploadHint": "Laadi logo üles",
+        "removeLogo": "Eemalda logo",
+        "showLogoLabel": "Näita logo",
+        "showLogoTip": "Näita logo menüü avalehel.",
+        "logoScaleLabel": "Logo suurus",
+        "logoScaleTip": "Logo suurus tausta peal."
       },
       "general": {
         "title": "Piirkond ja keeled",

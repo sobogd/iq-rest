@@ -513,7 +513,17 @@
         "langSwitcher_top": "Icona del globus",
         "generateAi": "Genera amb IA",
         "aiTitle": "Genera fons",
-        "aiPlaceholder": "p. ex. Taula acollidora amb llum d'espelmes amb plats rústics i fusta càlida"
+        "aiPlaceholder": "p. ex. Taula acollidora amb llum d'espelmes amb plats rústics i fusta càlida",
+        "showDescriptionLabel": "Mostra la descripció",
+        "showDescriptionTip": "Mostra la descripció a la pàgina d'inici del menú.",
+        "logoLabel": "Logo",
+        "logoTip": "Es mostra a la pàgina d'inici del menú, sobre el nom — o sol. Un PNG transparent funciona millor.",
+        "logoUploadHint": "Puja el logo",
+        "removeLogo": "Elimina el logo",
+        "showLogoLabel": "Mostra el logo",
+        "showLogoTip": "Mostra el logo a la pàgina d'inici del menú.",
+        "logoScaleLabel": "Mida del logo",
+        "logoScaleTip": "Mida del logo sobre el fons."
       },
       "general": {
         "title": "Regió i idiomes",

@@ -513,7 +513,17 @@
         "langSwitcher_top": "Jordglobsikon",
         "generateAi": "Generera med AI",
         "aiTitle": "Generera bakgrund",
-        "aiPlaceholder": "t.ex. Mysigt bord vid levande ljus med rustika tallrikar och varmt trä"
+        "aiPlaceholder": "t.ex. Mysigt bord vid levande ljus med rustika tallrikar och varmt trä",
+        "showDescriptionLabel": "Visa beskrivning",
+        "showDescriptionTip": "Visa beskrivningen på menyns startsida.",
+        "logoLabel": "Logotyp",
+        "logoTip": "Visas på menyns startsida ovanför namnet — eller för sig själv. Transparent PNG fungerar bäst.",
+        "logoUploadHint": "Ladda upp logotyp",
+        "removeLogo": "Ta bort logotyp",
+        "showLogoLabel": "Visa logotyp",
+        "showLogoTip": "Visa logotypen på menyns startsida.",
+        "logoScaleLabel": "Logotypstorlek",
+        "logoScaleTip": "Logotypens storlek över bakgrunden."
       },
       "general": {
         "title": "Region och språk",

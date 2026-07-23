@@ -21,6 +21,17 @@ function HomePage() {
   const descSizeCls =
     scale === "small" ? "text-base" : scale === "medium" ? "text-lg" : "text-xl";
 
+  // Hero elements are independently toggleable: logo, name, description in any
+  // combination. The logo has its own scale (mirrors titleScale semantics) —
+  // logos often embed the restaurant name and want a size of their own.
+  const logoScale = restaurant.logoScale ?? "medium";
+  const logoSizeCls =
+    logoScale === "small" ? "h-14" : logoScale === "medium" ? "h-20" : "h-28";
+  const showLogo = !!restaurant.logoUrl && !restaurant.hideLogo;
+  const showTitle = !restaurant.hideTitle;
+  const showDesc = !!restaurant.description && !restaurant.hideDescription;
+  const anyHeroContent = showLogo || showTitle || showDesc;
+
   // Language switcher placement. "top" = a globe icon floating over the hero;
   // "inline" (default) = a row in the nav list below. Only meaningful with >1
   // language — otherwise no switcher shows at all.
@@ -34,6 +45,7 @@ function HomePage() {
     name: restaurant.title,
     url: window.location.origin + "/",
     ...(restaurant.description && { description: restaurant.description }),
+    ...(restaurant.logoUrl && { logo: restaurant.logoUrl }),
     ...(restaurant.source && !/\.(mp4|webm|mov)$/i.test(restaurant.source) && { image: restaurant.source }),
     ...(restaurant.address && { address: { "@type": "PostalAddress", streetAddress: restaurant.address } }),
     ...(restaurant.phone && { telephone: restaurant.phone }),
@@ -61,14 +73,23 @@ function HomePage() {
           </MenuNavLink>
         ) : null}
 
-        {!restaurant.hideTitle ? (
+        {anyHeroContent ? (
           <>
             {restaurant.source ? <div className="absolute inset-0 bg-black/40 z-[2]" /> : null}
             <div className={`absolute inset-x-0 ${langTop ? "top-[34%]" : "top-[30%]"} z-10 flex justify-center px-[8%]`}>
               <div className="max-w-[440px] w-full">
-                <h1 className={`${titleSizeCls} font-black text-white break-words`}>{restaurant.title}</h1>
-                {restaurant.description ? (
-                  <p className={`${descSizeCls} text-white/90 mt-3`}>{restaurant.description}</p>
+                {showLogo ? (
+                  <img
+                    src={restaurant.logoUrl!}
+                    alt={restaurant.title}
+                    className={`${logoSizeCls} w-auto max-w-full object-contain ${showTitle || showDesc ? "mb-4" : ""}`}
+                  />
+                ) : null}
+                {showTitle ? (
+                  <h1 className={`${titleSizeCls} font-black text-white break-words`}>{restaurant.title}</h1>
+                ) : null}
+                {showDesc ? (
+                  <p className={`${descSizeCls} text-white/90 ${showTitle ? "mt-3" : ""}`}>{restaurant.description}</p>
                 ) : null}
               </div>
             </div>

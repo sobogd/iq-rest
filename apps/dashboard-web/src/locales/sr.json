@@ -513,7 +513,17 @@
         "langSwitcher_top": "Ikona globusa",
         "generateAi": "Generiši pomoću AI",
         "aiTitle": "Generiši pozadinu",
-        "aiPlaceholder": "npr. Ugodan sto pri svetlosti sveća sa rustičnim tanjirima i toplim drvetom"
+        "aiPlaceholder": "npr. Ugodan sto pri svetlosti sveća sa rustičnim tanjirima i toplim drvetom",
+        "showDescriptionLabel": "Prikaži opis",
+        "showDescriptionTip": "Prikaži opis na početnoj stranici menija.",
+        "logoLabel": "Logotip",
+        "logoTip": "Prikazuje se na početnoj stranici menija iznad imena — ili samostalno. Najbolje radi PNG sa providnom pozadinom.",
+        "logoUploadHint": "Otpremi logotip",
+        "removeLogo": "Ukloni logotip",
+        "showLogoLabel": "Prikaži logotip",
+        "showLogoTip": "Prikaži logotip na početnoj stranici menija.",
+        "logoScaleLabel": "Veličina logotipa",
+        "logoScaleTip": "Veličina logotipa preko pozadine."
       },
       "general": {
         "title": "Region i jezici",

@@ -341,11 +341,17 @@ export function BrandingSettingsPage({
  backgroundType: restaurant.backgroundType,
  accentColor: restaurant.accentColor,
  showTitleOnHomepage: restaurant.showTitleOnHomepage,
+ showDescriptionOnHomepage: restaurant.showDescriptionOnHomepage,
+ logoUrl: restaurant.logoUrl,
+ showLogoOnHomepage: restaurant.showLogoOnHomepage,
+ logoScale: restaurant.logoScale ?? "medium",
  menuLayout: restaurant.menuLayout ?? "flat",
  titleScale: restaurant.titleScale ?? "large",
  languageSwitcher: restaurant.languageSwitcher ?? "inline",
  });
  const fileInputRef = useRef<HTMLInputElement | null>(null);
+ const logoInputRef = useRef<HTMLInputElement | null>(null);
+ const [logoUploading, setLogoUploading] = useState(false);
  const colorPickerRef = useRef<HTMLInputElement | null>(null);
  const [uploading, setUploading] = useState(false);
  const [slugCopied, setSlugCopied] = useState(false);
@@ -384,6 +390,10 @@ export function BrandingSettingsPage({
  backgroundType: draft.backgroundType,
  accentColor: draft.accentColor,
     hideTitle: !draft.showTitleOnHomepage,
+    hideDescription: !draft.showDescriptionOnHomepage,
+    logoUrl: draft.logoUrl,
+    hideLogo: !draft.showLogoOnHomepage,
+    logoScale: draft.logoScale,
     menuLayout: draft.menuLayout,
     titleScale: draft.titleScale,
     languageSwitcher: draft.languageSwitcher,
@@ -400,6 +410,10 @@ export function BrandingSettingsPage({
  backgroundType: draft.backgroundType,
  accentColor: draft.accentColor,
     showTitleOnHomepage: draft.showTitleOnHomepage,
+    showDescriptionOnHomepage: draft.showDescriptionOnHomepage,
+    logoUrl: draft.logoUrl,
+    showLogoOnHomepage: draft.showLogoOnHomepage,
+    logoScale: draft.logoScale,
     menuLayout: draft.menuLayout,
     titleScale: draft.titleScale,
     languageSwitcher: draft.languageSwitcher,
@@ -431,6 +445,27 @@ export function BrandingSettingsPage({
  track("dash_settings_branding_click_delete_photo");
  setDraft((d) => ({ ...d, backgroundUrl: null, backgroundType: null }));
  if (fileInputRef.current) fileInputRef.current.value = "";
+ }
+
+ async function handleLogo(e: React.ChangeEvent<HTMLInputElement>) {
+ track("dash_settings_branding_click_add_logo");
+ const file = e.target.files?.[0];
+ if (!file) return;
+ setLogoUploading(true);
+ try {
+ const url = await uploadFile(file);
+ setDraft((d) => ({ ...d, logoUrl: url }));
+ } catch {
+ } finally {
+ setLogoUploading(false);
+ if (logoInputRef.current) logoInputRef.current.value = "";
+ }
+ }
+
+ function removeLogo() {
+ track("dash_settings_branding_click_delete_logo");
+ setDraft((d) => ({ ...d, logoUrl: null }));
+ if (logoInputRef.current) logoInputRef.current.value = "";
  }
 
 
@@ -560,6 +595,18 @@ export function BrandingSettingsPage({
  onChange={() => { track("dash_settings_branding_toggle_visible"); setDraft((d) => ({ ...d, showTitleOnHomepage: !d.showTitleOnHomepage })); }}
  />
  </label>
+ <label className="flex items-center justify-between gap-3 cursor-pointer select-none mt-4">
+ <div>
+ <div className="text-sm font-medium text-foreground">{tb("showDescriptionLabel", { defaultValue: "Show description" })}</div>
+ <div className="text-xs text-muted-foreground leading-snug mt-0.5">
+ {tb("showDescriptionTip", { defaultValue: "Display the description on the menu homepage." })}
+ </div>
+ </div>
+ <ToggleSwitch
+ checked={draft.showDescriptionOnHomepage}
+ onChange={() => { track("dash_settings_branding_toggle_description"); setDraft((d) => ({ ...d, showDescriptionOnHomepage: !d.showDescriptionOnHomepage })); }}
+ />
+ </label>
  </div>
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6">
  <div className="flex items-center justify-between gap-3 mb-2.5">
@@ -639,6 +686,113 @@ export function BrandingSettingsPage({
  <p className="text-xs text-muted-foreground mt-2 leading-snug">
  {tb("backgroundTip")}
  </p>
+ </div>
+ <div className="bg-card border border-border rounded-2xl p-5 md:p-6 md:col-span-2">
+ <div className="text-sm font-medium text-foreground mb-1">
+ {tb("logoLabel", { defaultValue: "Logo" })}
+ </div>
+ <p className="text-xs text-muted-foreground mb-3 leading-snug">
+ {tb("logoTip", { defaultValue: "Shown on the menu homepage above the name — or on its own. Transparent PNG works best." })}
+ </p>
+ <div className="flex flex-col sm:flex-row sm:items-start gap-4">
+ <label
+ htmlFor="brand-logo"
+ className={
+ "relative flex flex-col items-center justify-center gap-1.5 shrink-0 w-full sm:w-[140px] aspect-square border border-dashed rounded-lg cursor-pointer transition-all overflow-hidden " +
+ (draft.logoUrl ? "border-input bg-secondary/40 p-3" : "border-input bg-secondary text-muted-foreground")
+ }
+ >
+ {logoUploading ? (
+ <div className="w-5 h-5 border-2 border-input border-t-neutral-900 rounded-full animate-spin" />
+ ) : draft.logoUrl ? (
+ <>
+ <img src={draft.logoUrl} alt="" className="w-full h-full object-contain" />
+ <button
+ type="button"
+ onClick={(e) => {
+ e.preventDefault();
+ removeLogo();
+ }}
+ className="absolute top-1.5 right-1.5 w-6 h-6 flex items-center justify-center rounded-full bg-black/50 text-white transition-colors"
+ aria-label={tb("removeLogo", { defaultValue: "Remove logo" })}
+ >
+ <CloseIcon size={12} />
+ </button>
+ </>
+ ) : (
+ <>
+ <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+ <rect x="3" y="3" width="18" height="18" rx="2" />
+ <circle cx="9" cy="9" r="2" />
+ <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+ </svg>
+ <span className="text-[11px] font-medium text-center px-2 leading-snug">{tb("logoUploadHint", { defaultValue: "Upload logo" })}</span>
+ </>
+ )}
+ <input
+ id="brand-logo"
+ ref={logoInputRef}
+ type="file"
+ accept="image/*"
+ className="hidden"
+ onChange={handleLogo}
+ />
+ </label>
+ {draft.logoUrl ? (
+ <div className="flex-1 min-w-0">
+ <label className="flex items-center justify-between gap-3 cursor-pointer select-none">
+ <div>
+ <div className="text-sm font-medium text-foreground">{tb("showLogoLabel", { defaultValue: "Show logo" })}</div>
+ <div className="text-xs text-muted-foreground leading-snug mt-0.5">
+ {tb("showLogoTip", { defaultValue: "Display the logo on the menu homepage." })}
+ </div>
+ </div>
+ <ToggleSwitch
+ checked={draft.showLogoOnHomepage}
+ onChange={() => { track("dash_settings_branding_toggle_logo"); setDraft((d) => ({ ...d, showLogoOnHomepage: !d.showLogoOnHomepage })); }}
+ />
+ </label>
+ <div className="text-sm font-medium text-foreground mt-4 mb-1">
+ {tb("logoScaleLabel", { defaultValue: "Logo size" })}
+ </div>
+ <p className="text-xs text-muted-foreground mb-3 leading-snug">
+ {tb("logoScaleTip", { defaultValue: "Size of the logo over the background." })}
+ </p>
+ <div className="grid grid-cols-3 gap-3">
+ {(["small", "medium", "large"] as const).map((opt) => {
+ const selected = draft.logoScale === opt;
+ return (
+ <button
+ key={opt}
+ type="button"
+ onClick={() => {
+ track(`dash_settings_branding_logo_scale_${opt}`);
+ setDraft((d) => ({ ...d, logoScale: opt }));
+ }}
+ className={
+ "flex items-center justify-center p-3 rounded-xl border-2 transition-colors " +
+ (selected
+ ? "border-foreground bg-foreground/5"
+ : "border-input hover:border-muted-foreground/50")
+ }
+ >
+ <span
+ className={
+ "font-black text-foreground leading-none " +
+ (opt === "small" ? "text-base" : opt === "medium" ? "text-xl" : "text-2xl")
+ }
+ >
+ {tb(`titleScale_${opt}`, {
+ defaultValue: opt === "small" ? "Small" : opt === "medium" ? "Medium" : "Large",
+ })}
+ </span>
+ </button>
+ );
+ })}
+ </div>
+ </div>
+ ) : null}
+ </div>
  </div>
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6 md:col-span-2">
  <div className="text-sm font-medium text-foreground mb-1">

@@ -513,7 +513,17 @@
         "langSwitcher_top": "Küre simgesi",
         "generateAi": "AI ile oluştur",
         "aiTitle": "Arka plan oluştur",
-        "aiPlaceholder": "ör. Mum ışığında rustik tabaklar ve sıcak ahşapla samimi masa"
+        "aiPlaceholder": "ör. Mum ışığında rustik tabaklar ve sıcak ahşapla samimi masa",
+        "showDescriptionLabel": "Açıklamayı göster",
+        "showDescriptionTip": "Açıklamayı menü ana sayfasında göster.",
+        "logoLabel": "Logo",
+        "logoTip": "Menü ana sayfasında adın üzerinde — veya tek başına gösterilir. En iyi sonucu şeffaf PNG verir.",
+        "logoUploadHint": "Logo yükle",
+        "removeLogo": "Logoyu kaldır",
+        "showLogoLabel": "Logoyu göster",
+        "showLogoTip": "Logoyu menü ana sayfasında göster.",
+        "logoScaleLabel": "Logo boyutu",
+        "logoScaleTip": "Arka planın üzerindeki logonun boyutu."
       },
       "general": {
         "title": "Bölge ve diller",

@@ -513,7 +513,17 @@
         "langSwitcher_top": "Ikona globusa",
         "generateAi": "Generiraj s AI",
         "aiTitle": "Generiraj pozadinu",
-        "aiPlaceholder": "npr. Ugodan stol pri svjetlu svijeća s rustikalnim tanjurima i toplim drvom"
+        "aiPlaceholder": "npr. Ugodan stol pri svjetlu svijeća s rustikalnim tanjurima i toplim drvom",
+        "showDescriptionLabel": "Prikaži opis",
+        "showDescriptionTip": "Prikaži opis na početnoj stranici jelovnika.",
+        "logoLabel": "Logo",
+        "logoTip": "Prikazuje se na početnoj stranici jelovnika iznad naziva — ili samostalno. Najbolje funkcionira prozirni PNG.",
+        "logoUploadHint": "Učitaj logo",
+        "removeLogo": "Ukloni logo",
+        "showLogoLabel": "Prikaži logo",
+        "showLogoTip": "Prikaži logo na početnoj stranici jelovnika.",
+        "logoScaleLabel": "Veličina loga",
+        "logoScaleTip": "Veličina loga iznad pozadine."
       },
       "general": {
         "title": "Regija i jezici",

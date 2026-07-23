@@ -513,7 +513,17 @@
         "langSwitcher_top": "Pictogramă glob",
         "generateAi": "Generează cu AI",
         "aiTitle": "Generează fundal",
-        "aiPlaceholder": "ex. Masă confortabilă la lumânări cu farfurii rustice și lemn cald"
+        "aiPlaceholder": "ex. Masă confortabilă la lumânări cu farfurii rustice și lemn cald",
+        "showDescriptionLabel": "Afișează descrierea",
+        "showDescriptionTip": "Afișează descrierea pe pagina principală a meniului.",
+        "logoLabel": "Logo",
+        "logoTip": "Afișat pe pagina principală a meniului, deasupra numelui — sau separat. Un PNG transparent funcționează cel mai bine.",
+        "logoUploadHint": "Încarcă logo-ul",
+        "removeLogo": "Elimină logo-ul",
+        "showLogoLabel": "Afișează logo-ul",
+        "showLogoTip": "Afișează logo-ul pe pagina principală a meniului.",
+        "logoScaleLabel": "Dimensiunea logo-ului",
+        "logoScaleTip": "Dimensiunea logo-ului peste fundal."
       },
       "general": {
         "title": "Regiune și limbi",

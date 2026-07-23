@@ -513,7 +513,17 @@
         "langSwitcher_top": "Ikona globusa",
         "generateAi": "Generuj z AI",
         "aiTitle": "Generuj tło",
-        "aiPlaceholder": "np. Przytulny stół przy świecach z rustykalnymi talerzami i ciepłym drewnem"
+        "aiPlaceholder": "np. Przytulny stół przy świecach z rustykalnymi talerzami i ciepłym drewnem",
+        "showDescriptionLabel": "Pokaż opis",
+        "showDescriptionTip": "Wyświetlaj opis na stronie głównej menu.",
+        "logoLabel": "Logo",
+        "logoTip": "Wyświetlane na stronie głównej menu nad nazwą — lub samodzielnie. Najlepiej sprawdza się przezroczysty PNG.",
+        "logoUploadHint": "Prześlij logo",
+        "removeLogo": "Usuń logo",
+        "showLogoLabel": "Pokaż logo",
+        "showLogoTip": "Wyświetlaj logo na stronie głównej menu.",
+        "logoScaleLabel": "Rozmiar logo",
+        "logoScaleTip": "Rozmiar logo na tle."
       },
       "general": {
         "title": "Region i języki",

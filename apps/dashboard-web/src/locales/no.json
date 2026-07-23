@@ -513,7 +513,17 @@
         "langSwitcher_top": "Globusikon",
         "generateAi": "Generer med AI",
         "aiTitle": "Generer bakgrunn",
-        "aiPlaceholder": "f.eks. Koselig bord ved levende lys med rustikke tallerkener og varmt tre"
+        "aiPlaceholder": "f.eks. Koselig bord ved levende lys med rustikke tallerkener og varmt tre",
+        "showDescriptionLabel": "Vis beskrivelse",
+        "showDescriptionTip": "Vis beskrivelsen på menyens forside.",
+        "logoLabel": "Logo",
+        "logoTip": "Vises på menyens forside over navnet – eller alene. En gjennomsiktig PNG fungerer best.",
+        "logoUploadHint": "Last opp logo",
+        "removeLogo": "Fjern logo",
+        "showLogoLabel": "Vis logo",
+        "showLogoTip": "Vis logoen på menyens forside.",
+        "logoScaleLabel": "Logostørrelse",
+        "logoScaleTip": "Størrelsen på logoen over bakgrunnen."
       },
       "general": {
         "title": "Region og språk",

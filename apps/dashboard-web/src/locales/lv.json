@@ -513,7 +513,17 @@
         "langSwitcher_top": "Zemeslodes ikona",
         "generateAi": "Ģenerēt ar MI",
         "aiTitle": "Ģenerēt fonu",
-        "aiPlaceholder": "piem. Mājīgs galds sveču gaismā ar lauku stila šķīvjiem un siltu koku"
+        "aiPlaceholder": "piem. Mājīgs galds sveču gaismā ar lauku stila šķīvjiem un siltu koku",
+        "showDescriptionLabel": "Rādīt aprakstu",
+        "showDescriptionTip": "Rādīt aprakstu ēdienkartes sākumlapā.",
+        "logoLabel": "Logotips",
+        "logoTip": "Tiek rādīts ēdienkartes sākumlapā virs nosaukuma vai atsevišķi. Vislabāk der caurspīdīgs PNG.",
+        "logoUploadHint": "Augšupielādēt logotipu",
+        "removeLogo": "Noņemt logotipu",
+        "showLogoLabel": "Rādīt logotipu",
+        "showLogoTip": "Rādīt logotipu ēdienkartes sākumlapā.",
+        "logoScaleLabel": "Logotipa izmērs",
+        "logoScaleTip": "Logotipa izmērs virs fona."
       },
       "general": {
         "title": "Reģions un valodas",

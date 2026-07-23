@@ -513,7 +513,17 @@
         "langSwitcher_top": "地球儀アイコン",
         "generateAi": "AIで生成",
         "aiTitle": "背景を生成",
-        "aiPlaceholder": "例：素朴な皿と暖かい木のキャンドルライトのテーブル"
+        "aiPlaceholder": "例：素朴な皿と暖かい木のキャンドルライトのテーブル",
+        "showDescriptionLabel": "説明を表示",
+        "showDescriptionTip": "メニューのホームページに説明を表示します。",
+        "logoLabel": "ロゴ",
+        "logoTip": "メニューのホームページで名前の上に、または単独で表示されます。透過PNGが最適です。",
+        "logoUploadHint": "ロゴをアップロード",
+        "removeLogo": "ロゴを削除",
+        "showLogoLabel": "ロゴを表示",
+        "showLogoTip": "メニューのホームページにロゴを表示します。",
+        "logoScaleLabel": "ロゴのサイズ",
+        "logoScaleTip": "背景に対するロゴのサイズ。"
       },
       "general": {
         "title": "地域・言語",

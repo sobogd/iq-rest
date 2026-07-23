@@ -513,7 +513,17 @@
         "langSwitcher_top": "Gaublio piktograma",
         "generateAi": "Generuoti su DI",
         "aiTitle": "Generuoti foną",
-        "aiPlaceholder": "pvz. Jaukus stalas su žvakių šviesa, kaimiškomis lėkštėmis ir šiltu medžiu"
+        "aiPlaceholder": "pvz. Jaukus stalas su žvakių šviesa, kaimiškomis lėkštėmis ir šiltu medžiu",
+        "showDescriptionLabel": "Rodyti aprašymą",
+        "showDescriptionTip": "Rodyti aprašymą meniu pagrindiniame puslapyje.",
+        "logoLabel": "Logotipas",
+        "logoTip": "Rodomas meniu pagrindiniame puslapyje virš pavadinimo arba atskirai. Geriausiai tinka permatomas PNG.",
+        "logoUploadHint": "Įkelti logotipą",
+        "removeLogo": "Pašalinti logotipą",
+        "showLogoLabel": "Rodyti logotipą",
+        "showLogoTip": "Rodyti logotipą meniu pagrindiniame puslapyje.",
+        "logoScaleLabel": "Logotipo dydis",
+        "logoScaleTip": "Logotipo dydis virš fono."
       },
       "general": {
         "title": "Regionas ir kalbos",

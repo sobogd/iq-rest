@@ -513,7 +513,17 @@
         "langSwitcher_top": "지구본 아이콘",
         "generateAi": "AI로 생성",
         "aiTitle": "배경 생성",
-        "aiPlaceholder": "예: 촛불 아래 소박한 접시와 따뜻한 나무가 있는 아늑한 테이블"
+        "aiPlaceholder": "예: 촛불 아래 소박한 접시와 따뜻한 나무가 있는 아늑한 테이블",
+        "showDescriptionLabel": "설명 표시",
+        "showDescriptionTip": "메뉴 홈페이지에 설명을 표시합니다.",
+        "logoLabel": "로고",
+        "logoTip": "메뉴 홈페이지에서 이름 위에 표시되며, 로고만 단독으로 표시할 수도 있습니다. 투명 PNG가 가장 적합합니다.",
+        "logoUploadHint": "로고 업로드",
+        "removeLogo": "로고 제거",
+        "showLogoLabel": "로고 표시",
+        "showLogoTip": "메뉴 홈페이지에 로고를 표시합니다.",
+        "logoScaleLabel": "로고 크기",
+        "logoScaleTip": "배경 위 로고의 크기입니다."
       },
       "general": {
         "title": "지역 및 언어",

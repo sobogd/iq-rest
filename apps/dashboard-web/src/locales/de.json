@@ -513,7 +513,17 @@
         "langSwitcher_top": "Globus-Symbol",
         "generateAi": "Mit KI generieren",
         "aiTitle": "Hintergrund generieren",
-        "aiPlaceholder": "z. B. Gemütlicher Tisch im Kerzenschein mit rustikalen Tellern und warmem Holz"
+        "aiPlaceholder": "z. B. Gemütlicher Tisch im Kerzenschein mit rustikalen Tellern und warmem Holz",
+        "showDescriptionLabel": "Beschreibung anzeigen",
+        "showDescriptionTip": "Beschreibung auf der Startseite der Karte anzeigen.",
+        "logoLabel": "Logo",
+        "logoTip": "Wird auf der Startseite der Karte über dem Namen angezeigt — oder allein. Am besten eignet sich ein transparentes PNG.",
+        "logoUploadHint": "Logo hochladen",
+        "removeLogo": "Logo entfernen",
+        "showLogoLabel": "Logo anzeigen",
+        "showLogoTip": "Logo auf der Startseite der Karte anzeigen.",
+        "logoScaleLabel": "Logogröße",
+        "logoScaleTip": "Größe des Logos über dem Hintergrund."
       },
       "general": {
         "title": "Region & Sprachen",

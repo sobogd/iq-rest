@@ -513,7 +513,17 @@
         "langSwitcher_top": "Ikona zeměkoule",
         "generateAi": "Generovat pomocí AI",
         "aiTitle": "Generovat pozadí",
-        "aiPlaceholder": "např. Útulný stůl při svíčkách s rustikálními talíři a teplým dřevem"
+        "aiPlaceholder": "např. Útulný stůl při svíčkách s rustikálními talíři a teplým dřevem",
+        "showDescriptionLabel": "Zobrazit popis",
+        "showDescriptionTip": "Zobrazit popis na úvodní stránce menu.",
+        "logoLabel": "Logo",
+        "logoTip": "Zobrazuje se na úvodní stránce menu nad názvem — nebo samostatně. Nejlépe funguje průhledné PNG.",
+        "logoUploadHint": "Nahrát logo",
+        "removeLogo": "Odebrat logo",
+        "showLogoLabel": "Zobrazit logo",
+        "showLogoTip": "Zobrazit logo na úvodní stránce menu.",
+        "logoScaleLabel": "Velikost loga",
+        "logoScaleTip": "Velikost loga na pozadí."
       },
       "general": {
         "title": "Region a jazyky",
