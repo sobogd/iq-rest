@@ -450,7 +450,10 @@ export function BrandingSettingsPage({
  setLogoUploading(true);
  try {
  const url = await uploadFile(file);
- setDraft((d) => ({ ...d, logoUrl: url }));
+ // A fresh upload always turns the logo on — otherwise a hideLogo left over
+ // from a previous remove-while-hidden cycle silently hides the new file
+ // (the visibility toggle is not rendered until a logo exists).
+ setDraft((d) => ({ ...d, logoUrl: url, showLogoOnHomepage: true }));
  } catch {
  } finally {
  setLogoUploading(false);
@@ -729,7 +732,9 @@ export function BrandingSettingsPage({
  id="brand-logo"
  ref={logoInputRef}
  type="file"
- accept="image/*"
+ // Matches the backend IMAGE_TYPES allowlist — image/* would let the
+ // picker offer SVG, which the upload endpoint rejects (silent dead end).
+ accept="image/png,image/jpeg,image/webp,image/gif"
  className="hidden"
  onChange={handleLogo}
  />
