@@ -2,8 +2,11 @@ import { createFileRoute, redirect } from "@tanstack/react-router";
 import { api } from "@/lib/api";
 import { landingUrl } from "@/lib/landing-url";
 import { FullPageLoader } from "@/components/full-page-loader";
+import { SUPPORTED_LOCALES } from "@/lib/i18n-compat";
 
-const SUPPORTED = new Set(["en", "es"]);
+// All 35 UI locales — must match what `/` (geo redirect) can produce, or the
+// two routes bounce a visitor between each other forever.
+const SUPPORTED = new Set<string>(SUPPORTED_LOCALES);
 
 export const Route = createFileRoute("/$locale/")({
   pendingComponent: FullPageLoader,
