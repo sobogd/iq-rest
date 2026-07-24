@@ -26,6 +26,11 @@ const EMAIL_COOKIE = "iqr_email";
 // old dashboard (and vice versa).
 const LEGACY_SESSION_COOKIE = "session";
 const LEGACY_EMAIL_COOKIE = "user_email";
+// Host-only cookie on this API domain, set by restaurant create/switch
+// (restaurant.controller). AuthGuard validates it per-request, but the usage
+// tracker used to trust it blindly — so a login must not leave a value that
+// points at another account's venue.
+const ACTIVE_RESTAURANT_COOKIE = "iqr_active_restaurant_id";
 
 @Controller("auth")
 export class AuthController {
@@ -50,7 +55,7 @@ export class AuthController {
 
   @Post("verify-otp")
   @HttpCode(HttpStatus.OK)
-  async verifyOtp(@Body() dto: VerifyOtpDto, @Res({ passthrough: true }) res: Response) {
+  async verifyOtp(@Body() dto: VerifyOtpDto, @Req() req: Request, @Res({ passthrough: true }) res: Response) {
     const { token, onboardingStep, isNewUser, legacyDashboard } = await this.auth.verifyOtp(dto.email, dto.code);
     const domain = this.config.get<string>("COOKIE_DOMAIN") || undefined;
     const opts = authCookieOptions(domain);
@@ -58,6 +63,7 @@ export class AuthController {
     res.cookie(EMAIL_COOKIE, dto.email, { ...opts, httpOnly: false });
     res.cookie(LEGACY_SESSION_COOKIE, token, opts);
     res.cookie(LEGACY_EMAIL_COOKIE, dto.email, { ...opts, httpOnly: false });
+    await this.dropStaleActiveRestaurant(req, res, dto.email);
     return { ok: true, onboardingStep, isNewUser, legacyDashboard };
   }
 
@@ -87,6 +93,7 @@ export class AuthController {
     res.cookie(EMAIL_COOKIE, result.email, { ...opts, httpOnly: false });
     res.cookie(LEGACY_SESSION_COOKIE, result.token, opts);
     res.cookie(LEGACY_EMAIL_COOKIE, result.email, { ...opts, httpOnly: false });
+    await this.dropStaleActiveRestaurant(req, res, result.email);
     return {
       ok: true,
       email: result.email,
@@ -240,7 +247,7 @@ export class AuthController {
    */
   @Post("handoff")
   @HttpCode(HttpStatus.OK)
-  async handoff(@Body() dto: HandoffDto, @Res({ passthrough: true }) res: Response) {
+  async handoff(@Body() dto: HandoffDto, @Req() req: Request, @Res({ passthrough: true }) res: Response) {
     const result = await this.auth.consumeHandoff(dto.ott);
     if (!result) throw new UnauthorizedException();
     const domain = this.config.get<string>("COOKIE_DOMAIN") || undefined;
@@ -249,6 +256,7 @@ export class AuthController {
     res.cookie(EMAIL_COOKIE, result.email, { ...opts, httpOnly: false });
     res.cookie(LEGACY_SESSION_COOKIE, result.token, opts);
     res.cookie(LEGACY_EMAIL_COOKIE, result.email, { ...opts, httpOnly: false });
+    await this.dropStaleActiveRestaurant(req, res, result.email);
     return { ok: true, email: result.email };
   }
 
@@ -271,7 +279,24 @@ export class AuthController {
     res.clearCookie("iqr_admin_original_session", baseOpts);
     res.clearCookie("iqr_admin_original_email", baseOpts);
     res.clearCookie("iqr_admin_original_user_id", baseOpts);
+    // Host-only (no domain) — must be cleared without the domain attribute.
+    res.clearCookie(ACTIVE_RESTAURANT_COOKIE, { path: "/" });
     return { ok: true };
+  }
+
+  /** Drop a stale active-restaurant cookie after login. The cookie survives
+   *  account switches in the same browser (it is set on restaurant
+   *  create/switch, never at login), so a user signing into a different
+   *  account would keep the previous account's venue id — harmless for
+   *  AuthGuard (which validates membership) but it mislabeled usage events.
+   *  Keep it when the new user is a member of that restaurant, so a
+   *  multi-restaurant owner re-logging in keeps their selection. */
+  private async dropStaleActiveRestaurant(req: Request, res: Response, email: string): Promise<void> {
+    const cookies = req.cookies as Record<string, string | undefined> | undefined;
+    const active = cookies?.[ACTIVE_RESTAURANT_COOKIE];
+    if (!active) return;
+    const member = await this.auth.isMemberOfRestaurant(email, active).catch(() => false);
+    if (!member) res.clearCookie(ACTIVE_RESTAURANT_COOKIE, { path: "/" });
   }
 
   @Get("check")
