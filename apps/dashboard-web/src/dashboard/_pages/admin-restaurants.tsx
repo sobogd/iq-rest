@@ -52,7 +52,12 @@ export function AdminRestaurantsPage({ onBack }: { onBack: () => void }) {
   }, [fetchRows]);
 
   const visible = useMemo(() => {
-    if (filter === "subscribed") return rows.filter((r) => r.subscriptionStatus === "ACTIVE");
+    // "Subscribed" = still on a paid plan, including PAST_DUE (payment failed /
+    // delayed but the subscription lives through the 3-day grace window). Only
+    // once it drops to INACTIVE/CANCELED/EXPIRED does it leave this view.
+    if (filter === "subscribed") {
+      return rows.filter((r) => r.subscriptionStatus === "ACTIVE" || r.subscriptionStatus === "PAST_DUE");
+    }
     return rows;
   }, [rows, filter]);
 
@@ -115,6 +120,8 @@ export function AdminRestaurantsPage({ onBack }: { onBack: () => void }) {
                   ? "bg-emerald-500/10 text-emerald-700 dark:text-emerald-400"
                   : trialActive
                   ? "bg-orange-500/10 text-orange-600 dark:text-orange-400"
+                  : r.subscriptionStatus === "PAST_DUE"
+                  ? "bg-red-500/10 text-red-600 dark:text-red-400"
                   : "bg-secondary text-muted-foreground";
               const subLabel = active ? r.plan || "Active" : trialActive ? "Trial" : r.subscriptionStatus;
               const scansChipColor =
