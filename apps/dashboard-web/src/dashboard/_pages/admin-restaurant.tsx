@@ -84,6 +84,11 @@ const EMAIL_TEMPLATES: EmailTemplate[] = [
     label: "Trial ends tomorrow",
     description: "Heads-up that the free trial expires in 1 day. Points to billing page; offers reply for questions.",
   },
+  {
+    id: "payment_failed",
+    label: "Payment failed — update card",
+    description: "Dunning notice: payment didn't go through, update card and retry or the restaurant is switched off in 3 days. Points to billing page; offers support.",
+  },
 ];
 
 interface Props {

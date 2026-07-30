@@ -5,6 +5,7 @@ import { I18nService } from "../i18n/i18n.service";
 import { pickWelcomePersonal, isRtl as isWelcomeRtl } from "./templates/welcome-personal";
 import { pickMenuAlmostReady, isRtl as isMarRtl } from "./templates/menu-almost-ready";
 import { pickTrialEnding, isRtl as isTrialEndingRtl } from "./templates/trial-ending";
+import { pickPaymentFailed, isRtl as isPaymentFailedRtl } from "./templates/payment-failed";
 import { pickReservationStatus, isRtl as isResRtl } from "./templates/reservation-status";
 
 interface SendOtpOptions {
@@ -209,6 +210,26 @@ export class MailService implements OnModuleDestroy {
       email,
       subject: t.subject,
       dir: isTrialEndingRtl(locale) ? "rtl" : "ltr",
+      greeting: t.greeting,
+      body: t.body,
+      help: t.help,
+      closing: t.closing,
+      signature: t.signature,
+      cta: t.cta,
+      ctaUrl: `${this.dashboardUrl()}/settings/billing`,
+    });
+  }
+
+  /** Payment-failed / dunning reminder — manually triggered from the admin
+   *  panel after a charge fails. Name-less; CTA opens the billing page so the
+   *  owner can update their card and retry. */
+  async sendPaymentFailed({ email, locale }: { email: string; locale: string }): Promise<void> {
+    const t = pickPaymentFailed(locale);
+    await this.sendPersonalEmail({
+      kind: "payment_failed",
+      email,
+      subject: t.subject,
+      dir: isPaymentFailedRtl(locale) ? "rtl" : "ltr",
       greeting: t.greeting,
       body: t.body,
       help: t.help,

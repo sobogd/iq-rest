@@ -538,7 +538,12 @@ export class AdminController {
     @Body() body: { template?: string; locale?: string },
   ) {
     const template = body.template;
-    if (template !== "welcome_personal" && template !== "menu_almost_ready" && template !== "trial_ending") {
+    if (
+      template !== "welcome_personal" &&
+      template !== "menu_almost_ready" &&
+      template !== "trial_ending" &&
+      template !== "payment_failed"
+    ) {
       throw new BadRequestException("Unknown template");
     }
 
@@ -563,6 +568,8 @@ export class AdminController {
       await this.mail.sendWelcomePersonal({ email: user.email, locale });
     } else if (template === "trial_ending") {
       await this.mail.sendTrialEnding({ email: user.email, locale });
+    } else if (template === "payment_failed") {
+      await this.mail.sendPaymentFailed({ email: user.email, locale });
     } else {
       await this.mail.sendMenuAlmostReady({ email: user.email, locale });
     }
