@@ -24,7 +24,6 @@ import { callGeminiImage, uploadGeneratedImage } from "../common/gemini-image";
 import { consumeAiImageQuota, getAiImageUsage, refundAiImageUsage } from "../common/ai-quota";
 import {
   hasProFeatures,
-  ownerHasProAccess,
   restaurantHasProAccess,
   PRO_ACCESS_SELECT,
 } from "../common/entitlements";
@@ -297,11 +296,11 @@ export class RestaurantController {
     const list = await this.svc.listForUser(userId);
     return {
       activeId: restaurantId,
-      // Account-level PRO gate for the "+ Add restaurant" button: only an owner
-      // who holds PRO on any of their restaurants can create more venues. FREE/
-      // BASIC owners are limited to their single restaurant. The SPA hides the
-      // add button + shows a paid-only hint when this is false.
-      isPaid: await ownerHasProAccess(this.prisma, [userId]),
+      // Adding/deleting restaurants is open to everyone. A new venue starts
+      // FREE/INACTIVE and only gains PRO features if the owner is PRO (handled
+      // by account-level entitlement). Kept always-true so the SPA never hides
+      // the add/switch affordances.
+      isPaid: true,
       canManageBilling: !viaGrant,
       restaurants: list,
     };

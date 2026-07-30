@@ -1,6 +1,5 @@
 import {
   BadRequestException,
-  ForbiddenException,
   Injectable,
   Logger,
   NotFoundException,
@@ -10,7 +9,6 @@ import { z } from "zod";
 import { PrismaService } from "../prisma/prisma.service";
 import { AutoTranslateService } from "../auto-translate/auto-translate.service";
 import { isReservedSlug, slugify } from "../common/reserved-slugs";
-import { hasProFeatures } from "../common/entitlements";
 import { getStripe, isSupportedCurrency } from "../common/stripe";
 
 const HHMM = /^([01]\d|2[0-3]):[0-5]\d$/;
@@ -430,15 +428,11 @@ export class RestaurantService {
     });
     const ownedRestaurants = ownedRus.map((ru) => ru.restaurant);
 
-    // Account-level PRO gate: creating a SECOND (or later) restaurant requires
-    // the owner to hold PRO on one of their existing restaurants. A PRO owner
-    // gets unlimited venues (all inherit PRO via restaurantHasProAccess); a
-    // FREE/BASIC owner is capped at their single restaurant. The first
-    // restaurant is seeded via OnboardingSeedService, not here, so in practice
-    // this always guards the 2nd+.
-    if (ownedRestaurants.length >= 1 && !ownedRestaurants.some(hasProFeatures)) {
-      throw new ForbiddenException("restaurant_requires_pro");
-    }
+    // Adding restaurants is open to everyone (no PRO gate). A newly created
+    // venue starts FREE/INACTIVE and simply has no PRO features unless the owner
+    // is PRO — account-level entitlement (restaurantHasProAccess) grants PRO to
+    // all of a PRO owner's venues, and leaves a BASIC/FREE owner's venues
+    // inactive. So "inactive for BASIC, PRO for PRO" falls out automatically.
 
     let source: typeof ownedRestaurants[number] | null = null;
     if (body.duplicateFromId) {
