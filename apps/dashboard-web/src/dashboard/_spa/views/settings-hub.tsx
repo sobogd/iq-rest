@@ -89,7 +89,12 @@ export function SettingsHubView({
   const router = useDashboardRouter();
   const [exiting, setExiting] = useState(false);
   const restaurants = useRestaurantsOrNull();
-  const showSwitcher = !!restaurants && restaurants.isPaid && restaurants.list.length > 0;
+  // Entry to the restaurants management page (switch active venue + add). Show
+  // it whenever the user has at least one restaurant — NOT gated on PRO. The
+  // "+ Add restaurant" action inside that page is what's PRO-gated (via isPaid);
+  // gating the whole entry on isPaid hid it for every FREE/BASIC/expired-trial
+  // owner, which is a regression from the old always-visible switcher.
+  const showSwitcher = !!restaurants && restaurants.list.length > 0;
   const activeName = restaurants?.list.find((r) => r.id === restaurants.activeId)?.title ?? "";
   // Hide the billing tab when the active restaurant is managed for another
   // company via grant — billing belongs to the owner.
