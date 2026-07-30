@@ -1851,8 +1851,17 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  setPendingPlan({ plan, cycle });
  try {
  const url = await createCheckoutSession(plan, cycle, currency);
- if (url) window.location.href = url;
+ if (url) {
+ window.location.href = url;
+ return;
+ }
+ // Null url = backend couldn't create the session (e.g. no Stripe price for
+ // this plan+currency). Don't leave the user staring at a dead button.
+ track("dash_settings_billing_checkout_error");
+ alert(tb("checkoutError"));
  } catch {
+ track("dash_settings_billing_checkout_error");
+ alert(tb("checkoutError"));
  } finally {
  setPendingPlan(null);
  }
@@ -1870,7 +1879,7 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  return (
  <div>
  <SubpageStickyBar onBack={() => { track("dash_settings_billing_back"); onBack(); }} hideSave>
- <CurrencyDropdown value={currency} onChange={changeCurrency} disabled={isActive} />
+ <CurrencyDropdown value={currency} onChange={changeCurrency} disabled={paidPlan} />
  </SubpageStickyBar>
  <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4">
  <div className="mb-5">
@@ -1938,12 +1947,31 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  </div>
  ) : null}
 
+ {/* PAST_DUE with the venue's own (delinquent) sub: the fix is to update the
+     card via the Stripe portal, NOT to buy a second subscription. So show a
+     "Update payment method" → portal card and hide the purchase cards below. */}
+ {paidPlan && !isActive && !coveredByAccount && sub ? (
+ <div className="bg-card border border-border rounded-2xl p-5 md:p-6 mb-5">
+ <div className="flex items-start justify-between gap-3">
+ <div>
+ <div className="text-base font-medium text-foreground">
+ {sub.plan} · {sub.billingCycle?.toLowerCase() || "—"}
+ </div>
+ <div className="text-xs text-muted-foreground mt-0.5 leading-snug">{tb("updatePaymentTip")}</div>
+ </div>
+ <button type="button" onClick={manage} className={secondaryBtn}>
+ {tb("updatePayment")}
+ </button>
+ </div>
+ </div>
+ ) : null}
+
  <style>{`
  .billing-plans { display: grid; grid-template-columns: 1fr; gap: 0.75rem; }
  @media (min-width: 600px) { .billing-plans { grid-template-columns: 1fr 1fr; } }
  `}</style>
 
- {!coveredByAccount && (["BASIC", "PRO"] as const).map((tier) => (
+ {!coveredByAccount && (isActive || !paidPlan) && (["BASIC", "PRO"] as const).map((tier) => (
  <div key={tier} className="mt-2 first:mt-0">
  <div className="flex items-baseline justify-between mb-2 mt-5">
  <h3 className="text-sm font-semibold text-foreground uppercase tracking-wide">

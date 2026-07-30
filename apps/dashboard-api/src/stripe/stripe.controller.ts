@@ -251,18 +251,21 @@ export class StripeController {
         const sub = event.data.object as unknown as SubscriptionData;
         const targetRestaurantId = await this.resolveRestaurantId(sub.id, null);
         if (targetRestaurantId) {
-          if (event.type === "customer.subscription.created") {
-            // Cancel the previous subscription on THIS restaurant.
-            const r = await this.prisma.restaurant.findUnique({
-              where: { id: targetRestaurantId },
-              select: { stripeSubscriptionId: true },
-            });
-            if (r?.stripeSubscriptionId && r.stripeSubscriptionId !== sub.id) {
-              try {
-                await stripe.subscriptions.cancel(r.stripeSubscriptionId);
-              } catch (err) {
-                console.error("Cancel old sub error:", err);
-              }
+          // Cancel the restaurant's PREVIOUS subscription if a different one is
+          // now taking over. Done for BOTH created AND updated (and BEFORE
+          // applySubscription overwrites stripeSubscriptionId) because Stripe
+          // doesn't guarantee event ordering — if `updated` for the new sub
+          // lands before `created`, doing this only on `created` would miss the
+          // swap and leave two active subs (double charge).
+          const r = await this.prisma.restaurant.findUnique({
+            where: { id: targetRestaurantId },
+            select: { stripeSubscriptionId: true },
+          });
+          if (r?.stripeSubscriptionId && r.stripeSubscriptionId !== sub.id) {
+            try {
+              await stripe.subscriptions.cancel(r.stripeSubscriptionId);
+            } catch (err) {
+              console.error("Cancel old sub error:", err);
             }
           }
           await this.applySubscription(targetRestaurantId, sub);
@@ -297,7 +300,10 @@ export class StripeController {
         const invoice = event.data.object as { subscription?: string | null };
         if (invoice.subscription) {
           const targetRestaurantId = await this.resolveRestaurantId(invoice.subscription, null);
-          if (targetRestaurantId) {
+          // Only apply if this invoice's subscription is still the restaurant's
+          // CURRENT one — a late/retry invoice for a superseded sub must not
+          // re-activate a restaurant that has moved on (or been cancelled).
+          if (targetRestaurantId && (await this.isCurrentSub(targetRestaurantId, invoice.subscription))) {
             await this.prisma.restaurant.update({
               where: { id: targetRestaurantId },
               data: { subscriptionStatus: "ACTIVE", paymentProcessing: false },
@@ -310,7 +316,7 @@ export class StripeController {
         const invoice = event.data.object as { subscription?: string | null };
         if (invoice.subscription) {
           const targetRestaurantId = await this.resolveRestaurantId(invoice.subscription, null);
-          if (targetRestaurantId) {
+          if (targetRestaurantId && (await this.isCurrentSub(targetRestaurantId, invoice.subscription))) {
             await this.prisma.restaurant.update({
               where: { id: targetRestaurantId },
               data: { subscriptionStatus: "PAST_DUE" },
@@ -369,9 +375,29 @@ export class StripeController {
         }
       }
     } catch (err) {
-      console.error("resolveRestaurantId:", err);
+      // A permanently-missing subscription (deleted) is a legitimate "no target"
+      // → return null and let the webhook succeed. Any OTHER error (transient
+      // Stripe/DB failure) MUST propagate so the handler 500s and Stripe RETRIES
+      // — swallowing it here would silently drop a real payment's PRO forever.
+      const code = (err as { code?: string })?.code;
+      if (code === "resource_missing") {
+        console.error("resolveRestaurantId: subscription missing", subscriptionId);
+        return null;
+      }
+      console.error("resolveRestaurantId (transient, will retry):", err);
+      throw err;
     }
     return null;
+  }
+
+  /** True if `subscriptionId` is still the restaurant's current subscription.
+   *  Guards late/duplicate invoice events for a superseded subscription. */
+  private async isCurrentSub(restaurantId: string, subscriptionId: string): Promise<boolean> {
+    const r = await this.prisma.restaurant.findUnique({
+      where: { id: restaurantId },
+      select: { stripeSubscriptionId: true },
+    });
+    return r?.stripeSubscriptionId === subscriptionId;
   }
 
   private async applySubscription(
@@ -383,15 +409,16 @@ export class StripeController {
 
     let plan: Plan = "FREE";
     let billingCycle: BillingCycle | null = null;
+    let matched = false;
     if (lookupKey) {
       if (lookupKey.startsWith(PRICE_LOOKUP_KEYS.BASIC_MONTHLY)) {
-        plan = "BASIC"; billingCycle = "MONTHLY";
+        plan = "BASIC"; billingCycle = "MONTHLY"; matched = true;
       } else if (lookupKey.startsWith(PRICE_LOOKUP_KEYS.BASIC_YEARLY)) {
-        plan = "BASIC"; billingCycle = "YEARLY";
+        plan = "BASIC"; billingCycle = "YEARLY"; matched = true;
       } else if (lookupKey.startsWith(PRICE_LOOKUP_KEYS.PRO_MONTHLY)) {
-        plan = "PRO"; billingCycle = "MONTHLY";
+        plan = "PRO"; billingCycle = "MONTHLY"; matched = true;
       } else if (lookupKey.startsWith(PRICE_LOOKUP_KEYS.PRO_YEARLY)) {
-        plan = "PRO"; billingCycle = "YEARLY";
+        plan = "PRO"; billingCycle = "YEARLY"; matched = true;
       }
     }
 
@@ -421,12 +448,25 @@ export class StripeController {
     const subCurrency = (sub.currency ?? item?.price.currency ?? "").toUpperCase();
     const billingCurrency = isSupportedCurrency(subCurrency) ? subCurrency : undefined;
 
+    // Misconfigured Stripe price: a live sub whose lookup_key maps to no known
+    // plan. Do NOT silently stamp plan=FREE over the restaurant (that would mean
+    // "charged but no PRO"). Log loudly for a human to fix the price, and leave
+    // plan/billingCycle untouched (write only status/period/customer).
+    const liveStatus = subscriptionStatus === "ACTIVE" || subscriptionStatus === "PAST_DUE";
+    if (!matched && liveStatus) {
+      console.error(
+        `applySubscription: unrecognized price lookup_key "${lookupKey ?? "<none>"}" ` +
+          `for sub ${sub.id} (restaurant ${restaurantId}, status ${sub.status}). ` +
+          `Plan NOT changed — fix the Stripe price lookup_key.`,
+      );
+    }
+
     await this.prisma.restaurant.update({
       where: { id: restaurantId },
       data: {
         stripeSubscriptionId: sub.id,
-        plan,
-        billingCycle,
+        // Only write plan/billingCycle when the price resolved to a known plan.
+        ...(matched ? { plan, billingCycle } : {}),
         subscriptionStatus,
         currentPeriodEnd,
         paymentProcessing: false,

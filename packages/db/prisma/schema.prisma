@@ -207,9 +207,16 @@ model Restaurant {
   // creating a second restaurant means a second sub. `trialEndsAt` is
   // populated only for a user's FIRST restaurant; subsequent restaurants
   // start as FREE without trial.
-  plan                  Plan?
-  billingCycle          BillingCycle?
-  subscriptionStatus    SubscriptionStatus  @default(INACTIVE)
+  //
+  // These are String (not the Plan/BillingCycle/SubscriptionStatus enums)
+  // because the actual prod columns are TEXT — schema/DB drifted long ago, and
+  // declaring them as enums made Prisma cast WHERE params to the enum type,
+  // crashing every filter with `operator does not exist: text = "Plan"`. Values
+  // still use the enum members as string literals; the enums remain declared
+  // only as reusable TS types (see stripe.controller).
+  plan                  String?
+  billingCycle          String?
+  subscriptionStatus    String              @default("INACTIVE")
   currentPeriodEnd      DateTime?
   paymentProcessing     Boolean             @default(false)
   stripeSubscriptionId  String?             @unique
