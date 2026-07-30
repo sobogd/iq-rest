@@ -1,3 +1,5 @@
+import type { PrismaClient } from "@iq-rest/db";
+
 // PRO-feature entitlement (diner side). Mirrors the dashboard-api helper:
 // orders + reservations are PRO-only. A restaurant is entitled when it has an
 // ACTIVE PRO subscription, is inside its trial window, is a PRO plan still in
@@ -50,3 +52,56 @@ export const PRO_FEATURE_SELECT = {
   currentPeriodEnd: true,
   legacyFullAccess: true,
 } as const;
+
+// Same fields plus `id` — needed by the account-level helpers below.
+export const PRO_ACCESS_SELECT = { id: true, ...PRO_FEATURE_SELECT } as const;
+
+// ─── Account-level PRO (mirrors dashboard-api) ──────────────────────────────
+//
+// A single PRO subscription entitles ALL of an owner's restaurants (the
+// "PRO = multiple restaurants" promise). BASIC stays per-restaurant. Diner
+// side has no logged-in user, so the owner is resolved straight from the
+// restaurant row (the RestaurantUser with null `addedBy`, i.e. the creator).
+
+type ProDb = Pick<PrismaClient, "restaurant" | "restaurantUser">;
+
+// True if ANY restaurant OWNED (RestaurantUser.addedBy === null) by one of
+// `ownerIds` is itself entitled to PRO features. Empty list → false.
+export async function ownerHasProAccess(
+  prisma: ProDb,
+  ownerIds: string[],
+): Promise<boolean> {
+  if (ownerIds.length === 0) return false;
+  const owned = await prisma.restaurant.findMany({
+    where: {
+      restaurantUsers: { some: { userId: { in: ownerIds }, addedBy: null } },
+    },
+    select: PRO_FEATURE_SELECT,
+  });
+  return owned.some(hasProFeatures);
+}
+
+// Account-aware entitlement for a single restaurant. Fast path returns without
+// a query when the row is entitled on its own; otherwise the restaurant's
+// owner is checked so a PRO owner's extra (FREE-row) venues inherit PRO.
+export async function restaurantHasProAccess(
+  prisma: ProDb,
+  restaurant: {
+    id: string;
+    plan: string | null;
+    subscriptionStatus: string | null;
+    trialEndsAt?: Date | null;
+    currentPeriodEnd?: Date | null;
+    legacyFullAccess?: boolean | null;
+  },
+): Promise<boolean> {
+  if (hasProFeatures(restaurant)) return true;
+  const owners = await prisma.restaurantUser.findMany({
+    where: { restaurantId: restaurant.id, addedBy: null },
+    select: { userId: true },
+  });
+  return ownerHasProAccess(
+    prisma,
+    owners.map((o) => o.userId),
+  );
+}

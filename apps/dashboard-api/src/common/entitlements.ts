@@ -1,3 +1,5 @@
+import type { PrismaClient } from "@iq-rest/db";
+
 // Central PRO-feature entitlement check.
 //
 // As of the PRO-gating change, the operational features — order taking
@@ -65,3 +67,61 @@ export const PRO_FEATURE_SELECT = {
   currentPeriodEnd: true,
   legacyFullAccess: true,
 } as const;
+
+// Same fields plus `id` — needed by the account-level helpers below, which have
+// to know which restaurant they're resolving the owner for.
+export const PRO_ACCESS_SELECT = { id: true, ...PRO_FEATURE_SELECT } as const;
+
+// ─── Account-level PRO ──────────────────────────────────────────────────────
+//
+// Pricing model: a single PRO subscription entitles ALL of an owner's
+// restaurants (the "PRO = multiple restaurants" promise on the landing).
+// BASIC stays per-restaurant (only the one venue it's paid on). So entitlement
+// is: this restaurant's OWN row is entitled, OR the restaurant's owner holds
+// PRO on any of their restaurants. Owner = the RestaurantUser with a null
+// `addedBy` (the creator); managers attached via grant don't count.
+
+type ProDb = Pick<PrismaClient, "restaurant" | "restaurantUser">;
+
+// True if ANY restaurant OWNED (RestaurantUser.addedBy === null) by one of
+// `ownerIds` is itself entitled to PRO features. Empty list → false.
+export async function ownerHasProAccess(
+  prisma: ProDb,
+  ownerIds: string[],
+): Promise<boolean> {
+  if (ownerIds.length === 0) return false;
+  const owned = await prisma.restaurant.findMany({
+    where: {
+      restaurantUsers: { some: { userId: { in: ownerIds }, addedBy: null } },
+    },
+    select: PRO_FEATURE_SELECT,
+  });
+  return owned.some(hasProFeatures);
+}
+
+// Account-aware entitlement for a single restaurant. Fast path: if the row is
+// entitled on its own (own PRO sub / trial / legacy) return true with no query.
+// Otherwise resolve the restaurant's owner(s) and check whether they hold PRO
+// on any of their venues — so a PRO owner's extra (FREE-row) restaurants
+// inherit PRO. Pass a row selected with PRO_ACCESS_SELECT.
+export async function restaurantHasProAccess(
+  prisma: ProDb,
+  restaurant: {
+    id: string;
+    plan: string | null;
+    subscriptionStatus: string | null;
+    trialEndsAt?: Date | null;
+    currentPeriodEnd?: Date | null;
+    legacyFullAccess?: boolean | null;
+  },
+): Promise<boolean> {
+  if (hasProFeatures(restaurant)) return true;
+  const owners = await prisma.restaurantUser.findMany({
+    where: { restaurantId: restaurant.id, addedBy: null },
+    select: { userId: true },
+  });
+  return ownerHasProAccess(
+    prisma,
+    owners.map((o) => o.userId),
+  );
+}

@@ -19,7 +19,7 @@ import { DeviceGuard, DevicedRequest } from "./device.guard";
 import { CreateDeviceDto, PairDeviceDto } from "./dto";
 import { OrdersService } from "../orders/orders.service";
 import { PrismaService } from "../prisma/prisma.service";
-import { hasProFeatures, PRO_FEATURE_SELECT } from "../common/entitlements";
+import { restaurantHasProAccess, PRO_ACCESS_SELECT } from "../common/entitlements";
 
 @Controller("devices")
 export class DevicesController {
@@ -126,7 +126,8 @@ export class DevicesController {
       // When the restaurant lost PRO (e.g. downgraded to BASIC) an already-paired
       // kiosk keeps booting but renders the locked placeholder instead of the
       // board. We still return the snapshot so re-upgrading needs no re-pair.
-      proLocked: !hasProFeatures(restaurant),
+      // Account-aware: a PRO owner's other venues stay unlocked.
+      proLocked: !(await restaurantHasProAccess(this.prisma, restaurant)),
       restaurant,
       categories,
       items,
@@ -171,9 +172,9 @@ export class DevicesController {
     // orders (the board is locked client-side; this is the server backstop).
     const r = await this.prisma.restaurant.findUnique({
       where: { id: req.device.restaurantId },
-      select: PRO_FEATURE_SELECT,
+      select: PRO_ACCESS_SELECT,
     });
-    if (!r || !hasProFeatures(r)) {
+    if (!r || !(await restaurantHasProAccess(this.prisma, r))) {
       throw new BadRequestException("feature_requires_pro");
     }
     const allowed = new Set(["items", "total", "discount"]);

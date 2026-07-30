@@ -3,7 +3,7 @@ import { z } from "zod";
 import { PrismaService } from "../prisma/prisma.service";
 import { MailService } from "../mail/mail.service";
 import { OrdersNotifierService } from "../orders/orders-notifier.service";
-import { hasProFeatures, PRO_FEATURE_SELECT } from "../common/entitlements";
+import { restaurantHasProAccess, PRO_FEATURE_SELECT } from "../common/entitlements";
 
 const reservationSchema = z.object({
   restaurantId: z.string().min(1),
@@ -143,7 +143,10 @@ export class ReservationsController {
     });
     if (!restaurant) throw new NotFoundException("not_found");
     // Reservations are PRO-only; a BASIC restaurant exposes no booking surface.
-    if (!hasProFeatures(restaurant) || !restaurant.reservationsEnabled)
+    if (
+      !(await restaurantHasProAccess(this.prisma, restaurant)) ||
+      !restaurant.reservationsEnabled
+    )
       throw new BadRequestException("reservations_disabled");
 
     const tables = await this.prisma.table.findMany({
@@ -228,7 +231,10 @@ export class ReservationsController {
     });
     if (!restaurant) throw new NotFoundException("not_found");
     // Reservations are PRO-only; reject bookings for BASIC restaurants.
-    if (!hasProFeatures(restaurant) || !restaurant.reservationsEnabled)
+    if (
+      !(await restaurantHasProAccess(this.prisma, restaurant)) ||
+      !restaurant.reservationsEnabled
+    )
       throw new BadRequestException("reservations_disabled");
 
     const reservationDate = new Date(date);

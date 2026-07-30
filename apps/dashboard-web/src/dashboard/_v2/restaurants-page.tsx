@@ -234,7 +234,7 @@ export function RestaurantNewPage({ onBack, isDemo = false }: { onBack: () => vo
   const t = useTranslations("dashboard.restaurants");
   const router = useDashboardRouter();
   const qc = useQueryClient();
-  const { list, activeId, refresh } = useRestaurants();
+  const { list, activeId, refresh, isPaid } = useRestaurants();
   const current = list.find((r) => r.id === activeId);
 
   const [name, setName] = useState("");
@@ -249,12 +249,14 @@ export function RestaurantNewPage({ onBack, isDemo = false }: { onBack: () => vo
     window.scrollTo({ top: 0, behavior: "auto" });
   }, []);
 
-  // Demo accounts can't create restaurants. If one reaches this page by URL,
-  // bounce back to the list (the server also 403s the create call).
+  // Demo accounts can't create restaurants, and creating additional venues is a
+  // PRO-plan feature (account-level). If a FREE/BASIC or demo user reaches this
+  // page by URL, bounce back to the list (the server also 403s the create call
+  // with `restaurant_requires_pro`).
   useEffect(() => {
-    if (isDemo) router.push({ name: "settings.restaurants" });
-  }, [isDemo, router]);
-  if (isDemo) return null;
+    if (isDemo || !isPaid) router.push({ name: "settings.restaurants" });
+  }, [isDemo, isPaid, router]);
+  if (isDemo || !isPaid) return null;
 
   // Debounce slug-preview API calls. Loading flag flips on the first keystroke
   // and back off only when the server responds (or the field is cleared).

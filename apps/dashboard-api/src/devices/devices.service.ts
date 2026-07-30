@@ -13,7 +13,7 @@ import {
   signDeviceToken,
   verifyDeviceToken,
 } from "./device-token";
-import { hasProFeatures, PRO_FEATURE_SELECT } from "../common/entitlements";
+import { restaurantHasProAccess, PRO_ACCESS_SELECT } from "../common/entitlements";
 
 const PAIRING_CODE_TTL_MS = 2 * 60 * 1000; // 120s
 const PAIR_RATE_WINDOW_MS = 60 * 1000;
@@ -45,10 +45,10 @@ export class DevicesService {
   private async assertRestaurantMayUseDevices(restaurantId: string): Promise<void> {
     const restaurant = await this.prisma.restaurant.findUnique({
       where: { id: restaurantId },
-      select: PRO_FEATURE_SELECT,
+      select: PRO_ACCESS_SELECT,
     });
     if (!restaurant) throw new NotFoundException("Restaurant not found");
-    if (!hasProFeatures(restaurant)) {
+    if (!(await restaurantHasProAccess(this.prisma, restaurant))) {
       throw new ForbiddenException("devices_require_pro_plan");
     }
   }
