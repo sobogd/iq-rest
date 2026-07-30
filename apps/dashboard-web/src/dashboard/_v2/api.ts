@@ -781,6 +781,9 @@ export async function fetchSubscriptionStatus(): Promise<{
  // PRO-feature entitlement (orders / kitchen / reservations). The SPA gates
  // those surfaces on this single flag instead of re-deriving plan logic.
  proFeatures?: boolean;
+ // PRO inherited from another restaurant of the same owner (account-level PRO).
+ proViaAccount?: boolean;
+ proSource?: { title: string } | null;
  canManageBilling?: boolean;
 } | null> {
  const res = await apiFetch("/api/restaurant/subscription", {

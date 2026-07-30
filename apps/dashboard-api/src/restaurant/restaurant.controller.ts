@@ -22,7 +22,11 @@ import { OnboardingSeedService } from "../onboarding/onboarding-seed.service";
 import { PrismaService } from "../prisma/prisma.service";
 import { callGeminiImage, uploadGeneratedImage } from "../common/gemini-image";
 import { consumeAiImageQuota, getAiImageUsage, refundAiImageUsage } from "../common/ai-quota";
-import { ownerHasProAccess, restaurantHasProAccess } from "../common/entitlements";
+import {
+  hasProFeatures,
+  ownerHasProAccess,
+  restaurantHasProAccess,
+} from "../common/entitlements";
 import { getRequestCurrency } from "../common/geo";
 
 const ACTIVE_RESTAURANT_COOKIE = "iqr_active_restaurant_id";
@@ -226,6 +230,36 @@ export class RestaurantController {
     });
     if (!restaurant) return null;
     const usage = await getAiImageUsage(this.prisma, restaurantId);
+    // PRO-feature entitlement (orders / kitchen / reservations). The SPA gates
+    // those surfaces on this single flag instead of re-deriving plan logic.
+    // Account-level: a PRO owner's other (FREE-row) restaurants inherit PRO.
+    const proFeatures = await restaurantHasProAccess(this.prisma, restaurant);
+    // When this restaurant's OWN row isn't a paid/trial PRO but it's still
+    // entitled, the entitlement comes from ANOTHER restaurant of the owner
+    // (account-level PRO). The billing page uses this to show a "covered by
+    // your account" notice instead of inviting a second purchase.
+    const proViaAccount = proFeatures && !hasProFeatures(restaurant);
+    let proSource: { title: string } | null = null;
+    if (proViaAccount) {
+      const owners = await this.prisma.restaurantUser.findMany({
+        where: { restaurantId, addedBy: null },
+        select: { userId: true },
+      });
+      const ownerIds = owners.map((o) => o.userId);
+      const payer = ownerIds.length
+        ? await this.prisma.restaurant.findFirst({
+            where: {
+              restaurantUsers: {
+                some: { userId: { in: ownerIds }, addedBy: null },
+              },
+              subscriptionStatus: "ACTIVE",
+              plan: "PRO",
+            },
+            select: { title: true },
+          })
+        : null;
+      proSource = payer ? { title: payer.title } : null;
+    }
     return {
       plan: restaurant.plan,
       billingCycle: restaurant.billingCycle,
@@ -233,10 +267,11 @@ export class RestaurantController {
       currentPeriodEnd: restaurant.currentPeriodEnd ? restaurant.currentPeriodEnd.toISOString() : null,
       paymentProcessing: restaurant.paymentProcessing,
       trialEndsAt: restaurant.trialEndsAt ? restaurant.trialEndsAt.toISOString() : null,
-      // PRO-feature entitlement (orders / kitchen / reservations). The SPA gates
-      // those surfaces on this single flag instead of re-deriving plan logic.
-      // Account-level: a PRO owner's other (FREE-row) restaurants inherit PRO.
-      proFeatures: await restaurantHasProAccess(this.prisma, restaurant),
+      proFeatures,
+      // True when PRO is inherited from another of the owner's restaurants.
+      proViaAccount,
+      // The paying restaurant (named in the billing notice), when known.
+      proSource,
       aiImagesUsed: usage.aiImagesUsed,
       aiImagesLimit: usage.aiImagesLimit,
       // Demo accounts can't pay — hide the billing UI (the SPA gates on this).
