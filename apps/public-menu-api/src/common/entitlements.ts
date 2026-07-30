@@ -1,4 +1,4 @@
-import type { PrismaClient } from "@iq-rest/db";
+import type { PrismaClient, Prisma } from "@iq-rest/db";
 
 // PRO-feature entitlement (diner side). Mirrors the dashboard-api helper:
 // orders + reservations are PRO-only. A restaurant is entitled when it has an
@@ -65,25 +65,46 @@ export const PRO_ACCESS_SELECT = { id: true, ...PRO_FEATURE_SELECT } as const;
 
 type ProDb = Pick<PrismaClient, "restaurant" | "restaurantUser">;
 
-// True if ANY restaurant OWNED (RestaurantUser.addedBy === null) by one of
-// `ownerIds` is itself entitled to PRO features. Empty list → false.
+// Prisma `where` fragment mirroring `hasProFeatures`, pushed into SQL so the
+// account-level lookups resolve in a single indexed query. MUST stay in lockstep
+// with `hasProFeatures`. PAST_DUE grace: currentPeriodEnd > now-grace.
+function entitledWhere(): Prisma.RestaurantWhereInput {
+  const now = new Date();
+  const graceCutoff = new Date(now.getTime() - PAST_DUE_GRACE_DAYS * DAY_MS);
+  return {
+    OR: [
+      { legacyFullAccess: true },
+      { plan: "PRO", subscriptionStatus: "ACTIVE" },
+      { plan: "PRO", subscriptionStatus: "PAST_DUE", currentPeriodEnd: { gt: graceCutoff } },
+      { trialEndsAt: { gt: now } },
+    ],
+  };
+}
+
+// True if any restaurant OWNED (RestaurantUser.addedBy === null) by one of
+// `ownerIds` is entitled to PRO. One indexed query, short-circuits on first hit.
 export async function ownerHasProAccess(
   prisma: ProDb,
   ownerIds: string[],
 ): Promise<boolean> {
   if (ownerIds.length === 0) return false;
-  const owned = await prisma.restaurant.findMany({
+  const hit = await prisma.restaurant.findFirst({
     where: {
-      restaurantUsers: { some: { userId: { in: ownerIds }, addedBy: null } },
+      AND: [
+        entitledWhere(),
+        { restaurantUsers: { some: { userId: { in: ownerIds }, addedBy: null } } },
+      ],
     },
-    select: PRO_FEATURE_SELECT,
+    select: { id: true },
   });
-  return owned.some(hasProFeatures);
+  return hit !== null;
 }
 
-// Account-aware entitlement for a single restaurant. Fast path returns without
-// a query when the row is entitled on its own; otherwise the restaurant's
-// owner is checked so a PRO owner's extra (FREE-row) venues inherit PRO.
+// Account-aware entitlement for a single restaurant. Fast path returns without a
+// query when the row is entitled on its own; otherwise a single query asks
+// whether an entitled restaurant exists that is owned by an owner of this one,
+// so a PRO owner's extra (FREE-row) venues inherit PRO. Orphan rows (no
+// addedBy=null owner) fail closed.
 export async function restaurantHasProAccess(
   prisma: ProDb,
   restaurant: {
@@ -96,27 +117,25 @@ export async function restaurantHasProAccess(
   },
 ): Promise<boolean> {
   if (hasProFeatures(restaurant)) return true;
-  const ownerIds = await resolveOwnerIds(prisma, restaurant.id);
-  return ownerHasProAccess(prisma, ownerIds);
-}
-
-// Resolve the owning user(s) of a restaurant. Normally exactly one
-// RestaurantUser has `addedBy = null` (the creator). If the creator row is
-// missing (orphan), fall back to the earliest attached user so the venue can
-// still inherit PRO instead of being permanently locked out.
-async function resolveOwnerIds(
-  prisma: ProDb,
-  restaurantId: string,
-): Promise<string[]> {
-  const owners = await prisma.restaurantUser.findMany({
-    where: { restaurantId, addedBy: null },
-    select: { userId: true },
+  const hit = await prisma.restaurant.findFirst({
+    where: {
+      AND: [
+        entitledWhere(),
+        {
+          restaurantUsers: {
+            some: {
+              addedBy: null,
+              user: {
+                restaurantUsers: {
+                  some: { addedBy: null, restaurantId: restaurant.id },
+                },
+              },
+            },
+          },
+        },
+      ],
+    },
+    select: { id: true },
   });
-  if (owners.length > 0) return owners.map((o) => o.userId);
-  const earliest = await prisma.restaurantUser.findFirst({
-    where: { restaurantId },
-    orderBy: { addedAt: "asc" },
-    select: { userId: true },
-  });
-  return earliest ? [earliest.userId] : [];
+  return hit !== null;
 }
