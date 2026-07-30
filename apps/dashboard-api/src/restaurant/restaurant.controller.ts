@@ -26,6 +26,7 @@ import {
   hasProFeatures,
   ownerHasProAccess,
   restaurantHasProAccess,
+  PRO_ACCESS_SELECT,
 } from "../common/entitlements";
 import { getRequestCurrency } from "../common/geo";
 
@@ -246,18 +247,20 @@ export class RestaurantController {
         select: { userId: true },
       });
       const ownerIds = owners.map((o) => o.userId);
-      const payer = ownerIds.length
-        ? await this.prisma.restaurant.findFirst({
+      // The paying/covering venue can be entitled via an active PRO sub, a trial,
+      // legacyFullAccess, or PAST_DUE grace — so match on hasProFeatures, not a
+      // narrow ACTIVE+PRO filter, else the notice shows with no restaurant name.
+      const owned = ownerIds.length
+        ? await this.prisma.restaurant.findMany({
             where: {
               restaurantUsers: {
                 some: { userId: { in: ownerIds }, addedBy: null },
               },
-              subscriptionStatus: "ACTIVE",
-              plan: "PRO",
             },
-            select: { title: true },
+            select: { title: true, ...PRO_ACCESS_SELECT },
           })
-        : null;
+        : [];
+      const payer = owned.find((r) => r.id !== restaurantId && hasProFeatures(r));
       proSource = payer ? { title: payer.title } : null;
     }
     return {

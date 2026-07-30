@@ -96,12 +96,27 @@ export async function restaurantHasProAccess(
   },
 ): Promise<boolean> {
   if (hasProFeatures(restaurant)) return true;
+  const ownerIds = await resolveOwnerIds(prisma, restaurant.id);
+  return ownerHasProAccess(prisma, ownerIds);
+}
+
+// Resolve the owning user(s) of a restaurant. Normally exactly one
+// RestaurantUser has `addedBy = null` (the creator). If the creator row is
+// missing (orphan), fall back to the earliest attached user so the venue can
+// still inherit PRO instead of being permanently locked out.
+async function resolveOwnerIds(
+  prisma: ProDb,
+  restaurantId: string,
+): Promise<string[]> {
   const owners = await prisma.restaurantUser.findMany({
-    where: { restaurantId: restaurant.id, addedBy: null },
+    where: { restaurantId, addedBy: null },
     select: { userId: true },
   });
-  return ownerHasProAccess(
-    prisma,
-    owners.map((o) => o.userId),
-  );
+  if (owners.length > 0) return owners.map((o) => o.userId);
+  const earliest = await prisma.restaurantUser.findFirst({
+    where: { restaurantId },
+    orderBy: { addedAt: "asc" },
+    select: { userId: true },
+  });
+  return earliest ? [earliest.userId] : [];
 }

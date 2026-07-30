@@ -13,6 +13,8 @@ export type BillingSub = {
   subscriptionStatus: string | null;
   trialEndsAt?: string | null;
   currentPeriodEnd?: string | null;
+  // PRO inherited from another restaurant of the owner (account-level PRO).
+  proViaAccount?: boolean;
 } | null;
 
 function isPaidPlan(sub: BillingSub): boolean {

@@ -1831,15 +1831,19 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  const isActive = sub?.subscriptionStatus === "ACTIVE" && sub.plan !== "FREE";
  // A paid plan (BASIC/PRO) whose renewal failed → past-due banner, not a trial.
  const paidPlan = !!sub?.plan && sub.plan !== "FREE";
- const pastDue = isPastDue(sub ?? null);
- const pastDueDays = pastDueDaysLeft(sub ?? null);
- const trialEndsAt = sub?.trialEndsAt ? new Date(sub.trialEndsAt) : null;
- const trialExpired = !isActive && !paidPlan && trialEndsAt !== null && trialEndsAt <= new Date();
- const trialing = !isActive && !paidPlan && trialEndsAt !== null && trialEndsAt > new Date();
  // This restaurant's PRO is inherited from the owner's account-level PRO
  // subscription (paid on another restaurant). Hide the purchase cards — no
- // second payment needed — and show an informational notice instead.
+ // second payment needed — and show an informational notice instead. It also
+ // suppresses the "trial expired / past due / menu unavailable" warnings, which
+ // are derived from this venue's OWN row and would otherwise contradict the
+ // fully-unlocked, account-covered state.
  const coveredByAccount = !!sub?.proViaAccount;
+ const pastDue = !coveredByAccount && isPastDue(sub ?? null);
+ const pastDueDays = pastDueDaysLeft(sub ?? null);
+ const trialEndsAt = sub?.trialEndsAt ? new Date(sub.trialEndsAt) : null;
+ const trialExpired =
+ !coveredByAccount && !isActive && !paidPlan && trialEndsAt !== null && trialEndsAt <= new Date();
+ const trialing = !isActive && !paidPlan && trialEndsAt !== null && trialEndsAt > new Date();
 
  async function startCheckout(plan: "BASIC" | "PRO", cycle: "MONTHLY" | "YEARLY") {
  track(cycle === "YEARLY" ? "dash_settings_billing_subscribe_year" : "dash_settings_billing_subscribe_month");
@@ -1896,7 +1900,7 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  </div>
  ) : null}
 
- {coveredByAccount ? (
+ {coveredByAccount && !isActive ? (
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6 mb-5">
  <div className="text-xs font-medium uppercase tracking-wide text-emerald-700">{tb("active")}</div>
  <div className="text-base font-medium text-foreground mt-0.5">{tb("accountProTitle")}</div>

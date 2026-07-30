@@ -356,8 +356,12 @@ export class StripeController {
           select: { id: true },
         });
         if (byCustomer) {
+          // Attach to a restaurant the payer actually OWNS (addedBy null), not
+          // one they only manage via grant — otherwise the sub could land on
+          // someone else's venue and the payer's own restaurants wouldn't
+          // inherit the account-level PRO.
           const ru = await this.prisma.restaurantUser.findFirst({
-            where: { userId: byCustomer.id },
+            where: { userId: byCustomer.id, addedBy: null },
             orderBy: { addedAt: "asc" },
             select: { restaurantId: true },
           });
