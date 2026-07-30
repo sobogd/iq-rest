@@ -153,7 +153,10 @@ export function RestaurantsListPage({ onBack, isDemo = false }: { onBack: () => 
                     </div>
                   )}
                 </button>
-                {list.length > 1 && isPaid && !isActive && r.owned !== false && (
+                {/* Delete is gated on ownership only, NOT on PRO: an owner who
+                    lapsed from PRO must still be able to remove surplus venues.
+                    The server (deleteForUser) permits it regardless of plan. */}
+                {list.length > 1 && !isActive && r.owned !== false && (
                   <button
                     type="button"
                     onClick={() => askDelete(r.id, r.title)}
