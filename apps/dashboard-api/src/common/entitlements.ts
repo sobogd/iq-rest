@@ -58,6 +58,22 @@ export function hasProFeatures(r: {
   return !!r.trialEndsAt && r.trialEndsAt > new Date();
 }
 
+// Like `hasProFeatures` but WITHOUT the trial branch — i.e. the owner is
+// genuinely PAYING for PRO (active PRO sub, PRO-in-grace, or a grandfathered
+// legacy venue). Use this for perks a trial must NOT get or leak to secondary
+// venues (e.g. unlimited AI images). A trial FREE row returns false here.
+export function hasPaidProFeatures(r: {
+  plan: string | null;
+  subscriptionStatus: string | null;
+  currentPeriodEnd?: Date | null;
+  legacyFullAccess?: boolean | null;
+}): boolean {
+  if (r.legacyFullAccess) return true;
+  if (r.subscriptionStatus === "ACTIVE" && r.plan === "PRO") return true;
+  if (r.plan === "PRO" && inPastDueGrace(r)) return true;
+  return false;
+}
+
 // Prisma `select` fragment for the fields `hasProFeatures` needs. Spread into
 // any restaurant query that gates a PRO feature so the shape stays in sync.
 export const PRO_FEATURE_SELECT = {

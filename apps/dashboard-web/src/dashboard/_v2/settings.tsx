@@ -1843,7 +1843,8 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  const trialEndsAt = sub?.trialEndsAt ? new Date(sub.trialEndsAt) : null;
  const trialExpired =
  !coveredByAccount && !isActive && !paidPlan && trialEndsAt !== null && trialEndsAt <= new Date();
- const trialing = !isActive && !paidPlan && trialEndsAt !== null && trialEndsAt > new Date();
+ const trialing =
+ !coveredByAccount && !isActive && !paidPlan && trialEndsAt !== null && trialEndsAt > new Date();
 
  async function startCheckout(plan: "BASIC" | "PRO", cycle: "MONTHLY" | "YEARLY") {
  track(cycle === "YEARLY" ? "dash_settings_billing_subscribe_year" : "dash_settings_billing_subscribe_month");

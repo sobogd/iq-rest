@@ -34,9 +34,14 @@ export function useAiImageAccess(): AiImageAccess {
   // FREE restaurants share the free quota of 5 — mirror backend `isPaidActive`.
   const isPaid =
     !!sub && sub.subscriptionStatus === "ACTIVE" && !!sub.plan && sub.plan !== "FREE";
-  if (isPaid) return { kind: "unlimited" };
+  // The server sends `aiImagesLimit: null` for any venue entitled to unlimited
+  // AI — including a PRO owner's account-covered secondary venue whose OWN row
+  // is FREE. Honor that instead of re-deriving from the own plan (which would
+  // wrongly cap a covered venue at 5).
+  const rawLimit = sub?.aiImagesLimit;
+  if (isPaid || rawLimit === null) return { kind: "unlimited" };
   const used = sub?.aiImagesUsed ?? 0;
-  const limit = sub?.aiImagesLimit ?? 5;
+  const limit = rawLimit ?? 5;
   const remaining = Math.max(0, limit - used);
   if (remaining === 0) return { kind: "exhausted", used, limit };
   return { kind: "limited", used, limit, remaining };

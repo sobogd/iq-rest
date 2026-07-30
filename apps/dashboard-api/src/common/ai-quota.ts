@@ -1,6 +1,6 @@
 import { ForbiddenException } from "@nestjs/common";
 import { PrismaService } from "../prisma/prisma.service";
-import { restaurantHasProAccess, PRO_ACCESS_SELECT } from "./entitlements";
+import { hasPaidProFeatures, PRO_ACCESS_SELECT } from "./entitlements";
 
 export const FREE_AI_IMAGE_QUOTA = 5;
 
@@ -15,23 +15,32 @@ export function isPaidActive(r: {
   return r.subscriptionStatus === "ACTIVE" && !!r.plan && r.plan !== "FREE";
 }
 
-// Unlimited-AI entitlement including account-level PRO: a restaurant's OWN
-// active BASIC/PRO sub (isPaidActive) OR an inherited PRO from another of the
-// owner's restaurants. So a PRO owner's secondary (FREE-row) venues also get
-// unlimited AI images, matching the "PRO = everything on every venue" promise.
+// Unlimited-AI entitlement. Own row: an ACTIVE non-FREE (BASIC/PRO) sub via
+// `isPaidActive` — a TRIAL does NOT count (trials share the 5 free quota).
+// Account level: a PRO owner's secondary (FREE-row) venues inherit unlimited AI,
+// but ONLY from a genuinely PAID PRO on another venue (`hasPaidProFeatures`,
+// which excludes trials) — otherwise a trial would leak unlimited AI to every
+// venue and to itself.
 async function hasUnlimitedAi(
   prisma: PrismaService,
   restaurant: {
     id: string;
     plan: string | null;
     subscriptionStatus: string | null;
-    trialEndsAt?: Date | null;
-    currentPeriodEnd?: Date | null;
-    legacyFullAccess?: boolean | null;
   },
 ): Promise<boolean> {
   if (isPaidActive(restaurant)) return true;
-  return restaurantHasProAccess(prisma, restaurant);
+  const owners = await prisma.restaurantUser.findMany({
+    where: { restaurantId: restaurant.id, addedBy: null },
+    select: { userId: true },
+  });
+  if (owners.length === 0) return false;
+  const ownerIds = owners.map((o) => o.userId);
+  const owned = await prisma.restaurant.findMany({
+    where: { restaurantUsers: { some: { userId: { in: ownerIds }, addedBy: null } } },
+    select: PRO_ACCESS_SELECT,
+  });
+  return owned.some(hasPaidProFeatures);
 }
 
 // Atomically reserve a free-quota slot before doing the expensive Gemini call.
