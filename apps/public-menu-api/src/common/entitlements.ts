@@ -1,4 +1,4 @@
-import type { PrismaClient, Prisma } from "@iq-rest/db";
+import type { PrismaClient } from "@iq-rest/db";
 
 // PRO-feature entitlement (diner side). Mirrors the dashboard-api helper:
 // orders + reservations are PRO-only. A restaurant is entitled when it has an
@@ -65,46 +65,32 @@ export const PRO_ACCESS_SELECT = { id: true, ...PRO_FEATURE_SELECT } as const;
 
 type ProDb = Pick<PrismaClient, "restaurant" | "restaurantUser">;
 
-// Prisma `where` fragment mirroring `hasProFeatures`, pushed into SQL so the
-// account-level lookups resolve in a single indexed query. MUST stay in lockstep
-// with `hasProFeatures`. PAST_DUE grace: currentPeriodEnd > now-grace.
-function entitledWhere(): Prisma.RestaurantWhereInput {
-  const now = new Date();
-  const graceCutoff = new Date(now.getTime() - PAST_DUE_GRACE_DAYS * DAY_MS);
-  return {
-    OR: [
-      { legacyFullAccess: true },
-      { plan: "PRO", subscriptionStatus: "ACTIVE" },
-      { plan: "PRO", subscriptionStatus: "PAST_DUE", currentPeriodEnd: { gt: graceCutoff } },
-      { trialEndsAt: { gt: now } },
-    ],
-  };
-}
+// NOTE: plan/subscriptionStatus/billingCycle columns are TEXT in the prod DB
+// (drifted from the declared enums), so Prisma enum WHERE filters (`plan:"PRO"`)
+// crash at runtime (`operator does not exist: text = "Plan"`). We never filter
+// those columns in SQL — load the owner-restaurant set and apply hasProFeatures
+// in JS (plain string reads).
 
 // True if any restaurant OWNED (RestaurantUser.addedBy === null) by one of
-// `ownerIds` is entitled to PRO. One indexed query, short-circuits on first hit.
+// `ownerIds` is entitled to PRO features. Empty list → false.
 export async function ownerHasProAccess(
   prisma: ProDb,
   ownerIds: string[],
 ): Promise<boolean> {
   if (ownerIds.length === 0) return false;
-  const hit = await prisma.restaurant.findFirst({
+  const owned = await prisma.restaurant.findMany({
     where: {
-      AND: [
-        entitledWhere(),
-        { restaurantUsers: { some: { userId: { in: ownerIds }, addedBy: null } } },
-      ],
+      restaurantUsers: { some: { userId: { in: ownerIds }, addedBy: null } },
     },
-    select: { id: true },
+    select: PRO_FEATURE_SELECT,
   });
-  return hit !== null;
+  return owned.some(hasProFeatures);
 }
 
 // Account-aware entitlement for a single restaurant. Fast path returns without a
-// query when the row is entitled on its own; otherwise a single query asks
-// whether an entitled restaurant exists that is owned by an owner of this one,
-// so a PRO owner's extra (FREE-row) venues inherit PRO. Orphan rows (no
-// addedBy=null owner) fail closed.
+// query when the row is entitled on its own; otherwise resolve the owner and
+// check their venues so a PRO owner's extra (FREE-row) venues inherit PRO.
+// Orphan rows (no addedBy=null owner) fail closed.
 export async function restaurantHasProAccess(
   prisma: ProDb,
   restaurant: {
@@ -117,25 +103,12 @@ export async function restaurantHasProAccess(
   },
 ): Promise<boolean> {
   if (hasProFeatures(restaurant)) return true;
-  const hit = await prisma.restaurant.findFirst({
-    where: {
-      AND: [
-        entitledWhere(),
-        {
-          restaurantUsers: {
-            some: {
-              addedBy: null,
-              user: {
-                restaurantUsers: {
-                  some: { addedBy: null, restaurantId: restaurant.id },
-                },
-              },
-            },
-          },
-        },
-      ],
-    },
-    select: { id: true },
+  const owners = await prisma.restaurantUser.findMany({
+    where: { restaurantId: restaurant.id, addedBy: null },
+    select: { userId: true },
   });
-  return hit !== null;
+  return ownerHasProAccess(
+    prisma,
+    owners.map((o) => o.userId),
+  );
 }
