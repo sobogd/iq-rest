@@ -10,6 +10,7 @@ type TrialSub = {
   subscriptionStatus: string | null;
   trialEndsAt: string | null;
   currentPeriodEnd?: string | null;
+  proViaAccount?: boolean;
 } | null;
 
 /**

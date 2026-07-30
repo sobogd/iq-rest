@@ -1,3 +1,5 @@
+import type { PrismaClient, Prisma } from "@iq-rest/db";
+
 // PRO-feature entitlement (diner side). Mirrors the dashboard-api helper:
 // orders + reservations are PRO-only. A restaurant is entitled when it has an
 // ACTIVE PRO subscription, is inside its trial window, is a PRO plan still in
@@ -50,3 +52,90 @@ export const PRO_FEATURE_SELECT = {
   currentPeriodEnd: true,
   legacyFullAccess: true,
 } as const;
+
+// Same fields plus `id` — needed by the account-level helpers below.
+export const PRO_ACCESS_SELECT = { id: true, ...PRO_FEATURE_SELECT } as const;
+
+// ─── Account-level PRO (mirrors dashboard-api) ──────────────────────────────
+//
+// A single PRO subscription entitles ALL of an owner's restaurants (the
+// "PRO = multiple restaurants" promise). BASIC stays per-restaurant. Diner
+// side has no logged-in user, so the owner is resolved straight from the
+// restaurant row (the RestaurantUser with null `addedBy`, i.e. the creator).
+
+type ProDb = Pick<PrismaClient, "restaurant" | "restaurantUser">;
+
+// Prisma `where` fragment mirroring `hasProFeatures`, pushed into SQL so the
+// account-level lookups resolve in a single indexed query. MUST stay in lockstep
+// with `hasProFeatures`. PAST_DUE grace: currentPeriodEnd > now-grace.
+function entitledWhere(): Prisma.RestaurantWhereInput {
+  const now = new Date();
+  const graceCutoff = new Date(now.getTime() - PAST_DUE_GRACE_DAYS * DAY_MS);
+  return {
+    OR: [
+      { legacyFullAccess: true },
+      { plan: "PRO", subscriptionStatus: "ACTIVE" },
+      { plan: "PRO", subscriptionStatus: "PAST_DUE", currentPeriodEnd: { gt: graceCutoff } },
+      { trialEndsAt: { gt: now } },
+    ],
+  };
+}
+
+// True if any restaurant OWNED (RestaurantUser.addedBy === null) by one of
+// `ownerIds` is entitled to PRO. One indexed query, short-circuits on first hit.
+export async function ownerHasProAccess(
+  prisma: ProDb,
+  ownerIds: string[],
+): Promise<boolean> {
+  if (ownerIds.length === 0) return false;
+  const hit = await prisma.restaurant.findFirst({
+    where: {
+      AND: [
+        entitledWhere(),
+        { restaurantUsers: { some: { userId: { in: ownerIds }, addedBy: null } } },
+      ],
+    },
+    select: { id: true },
+  });
+  return hit !== null;
+}
+
+// Account-aware entitlement for a single restaurant. Fast path returns without a
+// query when the row is entitled on its own; otherwise a single query asks
+// whether an entitled restaurant exists that is owned by an owner of this one,
+// so a PRO owner's extra (FREE-row) venues inherit PRO. Orphan rows (no
+// addedBy=null owner) fail closed.
+export async function restaurantHasProAccess(
+  prisma: ProDb,
+  restaurant: {
+    id: string;
+    plan: string | null;
+    subscriptionStatus: string | null;
+    trialEndsAt?: Date | null;
+    currentPeriodEnd?: Date | null;
+    legacyFullAccess?: boolean | null;
+  },
+): Promise<boolean> {
+  if (hasProFeatures(restaurant)) return true;
+  const hit = await prisma.restaurant.findFirst({
+    where: {
+      AND: [
+        entitledWhere(),
+        {
+          restaurantUsers: {
+            some: {
+              addedBy: null,
+              user: {
+                restaurantUsers: {
+                  some: { addedBy: null, restaurantId: restaurant.id },
+                },
+              },
+            },
+          },
+        },
+      ],
+    },
+    select: { id: true },
+  });
+  return hit !== null;
+}

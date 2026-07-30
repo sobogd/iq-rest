@@ -126,7 +126,12 @@ function RootLayout() {
     && new Date(data.restaurant.currentPeriodEnd).getTime() + PAST_DUE_GRACE_MS <= Date.now()
     && !isDemo;
 
-  const menuBlocked = trialExpired || pastDueBlocked;
+  // Account-level PRO: if this restaurant is entitled (its own paid/trial row OR
+  // an inherited PRO from another of the owner's restaurants → `proFeatures`),
+  // the menu must never be blocked. Only genuinely-lapsed, non-covered venues go
+  // dark. Without this, a covered secondary venue with a past `trialEndsAt` would
+  // wrongly show the "menu unavailable" overlay while orders/bookings work.
+  const menuBlocked = (trialExpired || pastDueBlocked) && !data.restaurant.proFeatures;
 
   // Orders + reservations are PRO-only. For a BASIC (menu-only) restaurant the
   // menu still shows, but the order/booking surfaces are hidden. Force the

@@ -6,7 +6,7 @@ import {
 } from "@nestjs/common";
 import type { Request } from "express";
 import { PrismaService } from "../prisma/prisma.service";
-import { hasProFeatures, PRO_FEATURE_SELECT } from "./entitlements";
+import { restaurantHasProAccess, PRO_ACCESS_SELECT } from "./entitlements";
 
 // Blocks PRO-only surfaces (orders, kitchen, reservations) for restaurants that
 // aren't entitled. Place AFTER the auth guard (AuthGuard / UserOrDeviceGuard)
@@ -23,9 +23,9 @@ export class ProFeatureGuard implements CanActivate {
     if (!restaurantId) throw new ForbiddenException("feature_requires_pro");
     const restaurant = await this.prisma.restaurant.findUnique({
       where: { id: restaurantId },
-      select: PRO_FEATURE_SELECT,
+      select: PRO_ACCESS_SELECT,
     });
-    if (!restaurant || !hasProFeatures(restaurant)) {
+    if (!restaurant || !(await restaurantHasProAccess(this.prisma, restaurant))) {
       throw new ForbiddenException("feature_requires_pro");
     }
     return true;

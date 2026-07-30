@@ -1682,6 +1682,11 @@ interface SubStatus {
  currentPeriodEnd: string | null;
  billingCycle: string | null;
  trialEndsAt: string | null;
+ // PRO inherited from another restaurant of the same owner (account-level PRO).
+ // When true the billing page shows a "covered by your account" notice instead
+ // of the purchase cards. `proSource.title` names the paying restaurant.
+ proViaAccount?: boolean;
+ proSource?: { title: string } | null;
 }
 
 // Billing currencies we actually sell in (Stripe prices exist for these).
@@ -1826,10 +1831,18 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  const isActive = sub?.subscriptionStatus === "ACTIVE" && sub.plan !== "FREE";
  // A paid plan (BASIC/PRO) whose renewal failed → past-due banner, not a trial.
  const paidPlan = !!sub?.plan && sub.plan !== "FREE";
- const pastDue = isPastDue(sub ?? null);
+ // This restaurant's PRO is inherited from the owner's account-level PRO
+ // subscription (paid on another restaurant). Hide the purchase cards — no
+ // second payment needed — and show an informational notice instead. It also
+ // suppresses the "trial expired / past due / menu unavailable" warnings, which
+ // are derived from this venue's OWN row and would otherwise contradict the
+ // fully-unlocked, account-covered state.
+ const coveredByAccount = !!sub?.proViaAccount;
+ const pastDue = !coveredByAccount && isPastDue(sub ?? null);
  const pastDueDays = pastDueDaysLeft(sub ?? null);
  const trialEndsAt = sub?.trialEndsAt ? new Date(sub.trialEndsAt) : null;
- const trialExpired = !isActive && !paidPlan && trialEndsAt !== null && trialEndsAt <= new Date();
+ const trialExpired =
+ !coveredByAccount && !isActive && !paidPlan && trialEndsAt !== null && trialEndsAt <= new Date();
  const trialing = !isActive && !paidPlan && trialEndsAt !== null && trialEndsAt > new Date();
 
  async function startCheckout(plan: "BASIC" | "PRO", cycle: "MONTHLY" | "YEARLY") {
@@ -1887,6 +1900,18 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  </div>
  ) : null}
 
+ {coveredByAccount && !isActive ? (
+ <div className="bg-card border border-border rounded-2xl p-5 md:p-6 mb-5">
+ <div className="text-xs font-medium uppercase tracking-wide text-emerald-700">{tb("active")}</div>
+ <div className="text-base font-medium text-foreground mt-0.5">{tb("accountProTitle")}</div>
+ <p className="text-xs text-muted-foreground mt-1 leading-snug">
+ {sub?.proSource?.title
+ ? tb("accountProTipNamed", { restaurant: sub.proSource.title })
+ : tb("accountProTip")}
+ </p>
+ </div>
+ ) : null}
+
  {isActive && sub ? (
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6 mb-5">
  <div className="flex items-start justify-between gap-3">
@@ -1917,7 +1942,7 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  @media (min-width: 600px) { .billing-plans { grid-template-columns: 1fr 1fr; } }
  `}</style>
 
- {(["BASIC", "PRO"] as const).map((tier) => (
+ {!coveredByAccount && (["BASIC", "PRO"] as const).map((tier) => (
  <div key={tier} className="mt-2 first:mt-0">
  <div className="flex items-baseline justify-between mb-2 mt-5">
  <h3 className="text-sm font-semibold text-foreground uppercase tracking-wide">

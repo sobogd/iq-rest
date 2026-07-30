@@ -456,6 +456,22 @@ export class AuthService implements OnModuleDestroy {
     }
   }
 
+  /** True when the email's user is attached to the restaurant. Login handlers
+   *  use this to drop a stale iqr_active_restaurant_id cookie left on the API
+   *  host by a previous account in the same browser — without it every usage
+   *  event of the new account gets attributed to the old account's venue. */
+  async isMemberOfRestaurant(emailRaw: string, restaurantId: string): Promise<boolean> {
+    const email = validateEmail(emailRaw);
+    if (!email) return false;
+    const user = await this.prisma.user.findUnique({ where: { email }, select: { id: true } });
+    if (!user) return false;
+    const ru = await this.prisma.restaurantUser.findFirst({
+      where: { userId: user.id, restaurantId },
+      select: { id: true },
+    });
+    return ru !== null;
+  }
+
   /** Exchange an authorization code (from accounts.oauth2.initCodeClient popup flow)
    *  for an id_token. Uses redirect_uri="postmessage" because the popup hands the
    *  code back via window.postMessage rather than a redirect. */

@@ -22,7 +22,12 @@ import { OnboardingSeedService } from "../onboarding/onboarding-seed.service";
 import { PrismaService } from "../prisma/prisma.service";
 import { callGeminiImage, uploadGeneratedImage } from "../common/gemini-image";
 import { consumeAiImageQuota, getAiImageUsage, refundAiImageUsage } from "../common/ai-quota";
-import { hasProFeatures } from "../common/entitlements";
+import {
+  hasProFeatures,
+  ownerHasProAccess,
+  restaurantHasProAccess,
+  PRO_ACCESS_SELECT,
+} from "../common/entitlements";
 import { getRequestCurrency } from "../common/geo";
 
 const ACTIVE_RESTAURANT_COOKIE = "iqr_active_restaurant_id";
@@ -213,6 +218,7 @@ export class RestaurantController {
     const restaurant = await this.prisma.restaurant.findUnique({
       where: { id: restaurantId },
       select: {
+        id: true,
         plan: true,
         billingCycle: true,
         subscriptionStatus: true,
@@ -225,6 +231,38 @@ export class RestaurantController {
     });
     if (!restaurant) return null;
     const usage = await getAiImageUsage(this.prisma, restaurantId);
+    // PRO-feature entitlement (orders / kitchen / reservations). The SPA gates
+    // those surfaces on this single flag instead of re-deriving plan logic.
+    // Account-level: a PRO owner's other (FREE-row) restaurants inherit PRO.
+    const proFeatures = await restaurantHasProAccess(this.prisma, restaurant);
+    // When this restaurant's OWN row isn't a paid/trial PRO but it's still
+    // entitled, the entitlement comes from ANOTHER restaurant of the owner
+    // (account-level PRO). The billing page uses this to show a "covered by
+    // your account" notice instead of inviting a second purchase.
+    const proViaAccount = proFeatures && !hasProFeatures(restaurant);
+    let proSource: { title: string } | null = null;
+    if (proViaAccount) {
+      const owners = await this.prisma.restaurantUser.findMany({
+        where: { restaurantId, addedBy: null },
+        select: { userId: true },
+      });
+      const ownerIds = owners.map((o) => o.userId);
+      // The paying/covering venue can be entitled via an active PRO sub, a trial,
+      // legacyFullAccess, or PAST_DUE grace — so match on hasProFeatures, not a
+      // narrow ACTIVE+PRO filter, else the notice shows with no restaurant name.
+      const owned = ownerIds.length
+        ? await this.prisma.restaurant.findMany({
+            where: {
+              restaurantUsers: {
+                some: { userId: { in: ownerIds }, addedBy: null },
+              },
+            },
+            select: { title: true, ...PRO_ACCESS_SELECT },
+          })
+        : [];
+      const payer = owned.find((r) => r.id !== restaurantId && hasProFeatures(r));
+      proSource = payer ? { title: payer.title } : null;
+    }
     return {
       plan: restaurant.plan,
       billingCycle: restaurant.billingCycle,
@@ -232,9 +270,11 @@ export class RestaurantController {
       currentPeriodEnd: restaurant.currentPeriodEnd ? restaurant.currentPeriodEnd.toISOString() : null,
       paymentProcessing: restaurant.paymentProcessing,
       trialEndsAt: restaurant.trialEndsAt ? restaurant.trialEndsAt.toISOString() : null,
-      // PRO-feature entitlement (orders / kitchen / reservations). The SPA gates
-      // those surfaces on this single flag instead of re-deriving plan logic.
-      proFeatures: hasProFeatures(restaurant),
+      proFeatures,
+      // True when PRO is inherited from another of the owner's restaurants.
+      proViaAccount,
+      // The paying restaurant (named in the billing notice), when known.
+      proSource,
       aiImagesUsed: usage.aiImagesUsed,
       aiImagesLimit: usage.aiImagesLimit,
       // Demo accounts can't pay — hide the billing UI (the SPA gates on this).
@@ -257,11 +297,11 @@ export class RestaurantController {
     const list = await this.svc.listForUser(userId);
     return {
       activeId: restaurantId,
-      // Pre-Company-drop the dashboard SPA used this flag to gate the
-      // "+ Add restaurant" button. Per-restaurant billing makes the flag
-      // meaningless — anyone can create as many restaurants as they want.
-      // Kept in the response shape (always true) for backwards compat.
-      isPaid: true,
+      // Account-level PRO gate for the "+ Add restaurant" button: only an owner
+      // who holds PRO on any of their restaurants can create more venues. FREE/
+      // BASIC owners are limited to their single restaurant. The SPA hides the
+      // add button + shows a paid-only hint when this is false.
+      isPaid: await ownerHasProAccess(this.prisma, [userId]),
       canManageBilling: !viaGrant,
       restaurants: list,
     };

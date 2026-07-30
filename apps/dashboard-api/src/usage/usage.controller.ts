@@ -181,6 +181,19 @@ export class UsageController {
     const ACTIVE_RESTAURANT_COOKIE = "iqr_active_restaurant_id";
     let restaurantId = readCookie(req, ACTIVE_RESTAURANT_COOKIE) ?? null;
 
+    // The cookie survives account switches in the same browser (login only
+    // recently started dropping it), so a known user's events could get
+    // attributed to a venue from a previous account. Trust it only when the
+    // user is actually a member; otherwise fall through to the
+    // first-restaurant stamp below.
+    if (restaurantId && userId) {
+      const member = await this.prisma.restaurantUser.findFirst({
+        where: { userId, restaurantId },
+        select: { id: true },
+      });
+      if (!member) restaurantId = null;
+    }
+
     // A dashboard action ALWAYS belongs to a venue, but the active-restaurant
     // cookie isn't set until the user first switches/creates a restaurant — so
     // a fresh single-restaurant or demo user's early dash_* events would land

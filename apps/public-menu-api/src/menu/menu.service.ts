@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from "@nestjs/common";
 import { PrismaService } from "../prisma/prisma.service";
-import { hasProFeatures } from "../common/entitlements";
+import { restaurantHasProAccess } from "../common/entitlements";
 
 @Injectable()
 export class MenuService {
@@ -93,7 +93,10 @@ export class MenuService {
     return {
       // `proFeatures` lets the diner SPA hide the order/booking surfaces for
       // BASIC (menu-only) restaurants without re-deriving plan logic client-side.
-      restaurant: { ...restaurant, proFeatures: hasProFeatures(restaurant) },
+      restaurant: {
+        ...restaurant,
+        proFeatures: await restaurantHasProAccess(this.prisma, restaurant),
+      },
       categories,
       items: items.map((i) => ({ ...i, price: Number(i.price) })),
       tables,

@@ -3,7 +3,7 @@ import type { Request } from "express";
 import { z } from "zod";
 import { PrismaService } from "../prisma/prisma.service";
 import { OrdersNotifierService } from "./orders-notifier.service";
-import { hasProFeatures, PRO_FEATURE_SELECT } from "../common/entitlements";
+import { restaurantHasProAccess, PRO_FEATURE_SELECT } from "../common/entitlements";
 
 const orderSchema = z.object({
   slug: z.string().min(1),
@@ -71,8 +71,10 @@ export class OrdersController {
     });
     if (!restaurant || !restaurant.ordersEnabled) throw new NotFoundException("not_found");
     // Orders are a PRO feature — a BASIC (menu-only) restaurant can't take them
-    // even if `ordersEnabled` is still set from a prior PRO period.
-    if (!hasProFeatures(restaurant)) throw new NotFoundException("not_found");
+    // even if `ordersEnabled` is still set from a prior PRO period. Account-aware:
+    // a PRO owner's other venues inherit the entitlement.
+    if (!(await restaurantHasProAccess(this.prisma, restaurant)))
+      throw new NotFoundException("not_found");
 
     const mode = restaurant.orderMode;
     if ((mode === "internal" || mode === "both") && items && items.length > 0) {

@@ -1,5 +1,6 @@
 import { ForbiddenException } from "@nestjs/common";
 import { PrismaService } from "../prisma/prisma.service";
+import { restaurantHasProAccess, PRO_ACCESS_SELECT } from "./entitlements";
 
 export const FREE_AI_IMAGE_QUOTA = 5;
 
@@ -14,6 +15,25 @@ export function isPaidActive(r: {
   return r.subscriptionStatus === "ACTIVE" && !!r.plan && r.plan !== "FREE";
 }
 
+// Unlimited-AI entitlement including account-level PRO: a restaurant's OWN
+// active BASIC/PRO sub (isPaidActive) OR an inherited PRO from another of the
+// owner's restaurants. So a PRO owner's secondary (FREE-row) venues also get
+// unlimited AI images, matching the "PRO = everything on every venue" promise.
+async function hasUnlimitedAi(
+  prisma: PrismaService,
+  restaurant: {
+    id: string;
+    plan: string | null;
+    subscriptionStatus: string | null;
+    trialEndsAt?: Date | null;
+    currentPeriodEnd?: Date | null;
+    legacyFullAccess?: boolean | null;
+  },
+): Promise<boolean> {
+  if (isPaidActive(restaurant)) return true;
+  return restaurantHasProAccess(prisma, restaurant);
+}
+
 // Atomically reserve a free-quota slot before doing the expensive Gemini call.
 // Paid plans skip the reservation (no quota); free plans bump the counter
 // inside a conditional updateMany so two concurrent requests can't both pass
@@ -24,10 +44,10 @@ export async function consumeAiImageQuota(
 ): Promise<{ isPaid: boolean }> {
   const restaurant = await prisma.restaurant.findUnique({
     where: { id: restaurantId },
-    select: { plan: true, subscriptionStatus: true },
+    select: PRO_ACCESS_SELECT,
   });
   if (!restaurant) throw new ForbiddenException("Not found");
-  if (isPaidActive(restaurant)) return { isPaid: true };
+  if (await hasUnlimitedAi(prisma, restaurant)) return { isPaid: true };
 
   const reserved = await prisma.restaurant.updateMany({
     where: { id: restaurantId, imageGenerationsUsed: { lt: FREE_AI_IMAGE_QUOTA } },
@@ -53,13 +73,9 @@ export async function refundAiImageUsage(prisma: PrismaService, restaurantId: st
 export async function getAiImageUsage(prisma: PrismaService, restaurantId: string) {
   const restaurant = await prisma.restaurant.findUnique({
     where: { id: restaurantId },
-    select: {
-      imageGenerationsUsed: true,
-      plan: true,
-      subscriptionStatus: true,
-    },
+    select: { imageGenerationsUsed: true, ...PRO_ACCESS_SELECT },
   });
-  const paid = restaurant ? isPaidActive(restaurant) : false;
+  const paid = restaurant ? await hasUnlimitedAi(prisma, restaurant) : false;
   return {
     aiImagesUsed: restaurant?.imageGenerationsUsed ?? 0,
     aiImagesLimit: paid ? null : FREE_AI_IMAGE_QUOTA,
