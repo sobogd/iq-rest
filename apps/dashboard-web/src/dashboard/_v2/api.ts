@@ -206,6 +206,11 @@ export async function markOnboardingStep(step: "name" | "fill"): Promise<void> {
 export interface RestaurantListResponse {
  activeId: string;
  isPaid: boolean;
+ // Venue-cap (§5): true when the account may add another venue (trial/PRO tier
+ // and under venueLimit). The "+ Add restaurant" button disables + upsells when
+ // false. `venueLimit` is the account ceiling (default 4).
+ canAddVenue?: boolean;
+ venueLimit?: number;
  // False when the active restaurant is managed for another company via grant —
  // billing UI is hidden in that context.
  canManageBilling?: boolean;

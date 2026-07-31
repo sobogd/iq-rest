@@ -64,7 +64,7 @@ function ModeCard({
 export function RestaurantsListPage({ onBack, isDemo = false }: { onBack: () => void; isDemo?: boolean }) {
   const t = useTranslations("dashboard.restaurants");
   const tc = useTranslations("dashboard.common");
-  const { list, activeId, isPaid, switching, setActive, refresh } = useRestaurants();
+  const { list, activeId, canAddVenue, switching, setActive, refresh } = useRestaurants();
   const router = useDashboardRouter();
   const [pendingDelete, setPendingDelete] = useState<{ id: string; name: string } | null>(null);
   const [deleting, setDeleting] = useState(false);
@@ -170,8 +170,10 @@ export function RestaurantsListPage({ onBack, isDemo = false }: { onBack: () => 
           })}
 
           {/* Demo accounts can't create restaurants — hide the add affordance
-              entirely (the route is also guarded in RestaurantNewPage). */}
-          {isDemo ? null : isPaid ? (
+              entirely (the route is also guarded in RestaurantNewPage). The add
+              button shows only when the account may add a venue (§5 venue-cap:
+              trial/PRO tier, under venueLimit); otherwise an upsell notice. */}
+          {isDemo ? null : canAddVenue ? (
             <button
               type="button"
               onClick={() => {
@@ -237,7 +239,7 @@ export function RestaurantNewPage({ onBack, isDemo = false }: { onBack: () => vo
   const t = useTranslations("dashboard.restaurants");
   const router = useDashboardRouter();
   const qc = useQueryClient();
-  const { list, activeId, refresh, isPaid } = useRestaurants();
+  const { list, activeId, refresh, canAddVenue } = useRestaurants();
   const current = list.find((r) => r.id === activeId);
 
   const [name, setName] = useState("");
@@ -252,14 +254,14 @@ export function RestaurantNewPage({ onBack, isDemo = false }: { onBack: () => vo
     window.scrollTo({ top: 0, behavior: "auto" });
   }, []);
 
-  // Demo accounts can't create restaurants, and creating additional venues is a
-  // PRO-plan feature (account-level). If a FREE/BASIC or demo user reaches this
-  // page by URL, bounce back to the list (the server also 403s the create call
-  // with `restaurant_requires_pro`).
+  // Demo accounts can't create restaurants, and adding venues is a trial/PRO
+  // capability bounded by venueLimit (§5). If an account that can't add a venue
+  // reaches this page by URL, bounce back to the list (the server also 403s the
+  // create call with `venue_limit_reached`).
   useEffect(() => {
-    if (isDemo || !isPaid) router.push({ name: "settings.restaurants" });
-  }, [isDemo, isPaid, router]);
-  if (isDemo || !isPaid) return null;
+    if (isDemo || !canAddVenue) router.push({ name: "settings.restaurants" });
+  }, [isDemo, canAddVenue, router]);
+  if (isDemo || !canAddVenue) return null;
 
   // Debounce slug-preview API calls. Loading flag flips on the first keystroke
   // and back off only when the server responds (or the field is cleared).

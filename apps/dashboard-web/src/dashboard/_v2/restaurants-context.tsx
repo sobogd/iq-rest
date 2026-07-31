@@ -13,6 +13,11 @@ interface RestaurantsContextValue {
   list: ApiRestaurant[];
   activeId: string | null;
   isPaid: boolean;
+  // Venue-cap (§5): whether the account may add another venue (trial/PRO and
+  // under venueLimit). Defaults to false when the server omits it. `venueLimit`
+  // is the account ceiling.
+  canAddVenue: boolean;
+  venueLimit: number;
   // False when the active restaurant is managed for another company via grant —
   // hide billing UI. Defaults to true (owner) when the server omits it.
   canManageBilling: boolean;
@@ -72,6 +77,8 @@ export function RestaurantsProvider({ children }: { children: ReactNode }) {
       list: data?.restaurants ?? [],
       activeId: optimisticActiveId ?? data?.activeId ?? null,
       isPaid: data?.isPaid ?? false,
+      canAddVenue: data?.canAddVenue ?? false,
+      venueLimit: data?.venueLimit ?? 4,
       canManageBilling: data?.canManageBilling ?? true,
       switching,
       setActive,
