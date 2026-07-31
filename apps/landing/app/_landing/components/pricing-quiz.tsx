@@ -92,7 +92,7 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
           when tight so it never wraps. */}
       <div className="flex items-end justify-center gap-3 mb-6">
         <div className="flex flex-1 sm:flex-none flex-col items-start gap-1.5">
-          <span className="text-xs font-medium text-muted-foreground pl-1">Billing</span>
+          <span className="text-sm font-medium text-muted-foreground px-3">Billing</span>
           <div className="flex w-full sm:w-auto rounded-full border border-border bg-card p-1">
             {(["month", "year"] as const).map((c) => (
               <button
@@ -110,7 +110,7 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
         </div>
 
         <div className="flex min-w-0 flex-1 sm:flex-none flex-col items-start gap-1.5">
-          <span className="text-xs font-medium text-muted-foreground pl-1">Restaurants</span>
+          <span className="text-sm font-medium text-muted-foreground px-3">Restaurants</span>
           <div className="flex w-full sm:w-auto items-center justify-between rounded-full border border-border bg-card p-1">
             <button
               type="button"
