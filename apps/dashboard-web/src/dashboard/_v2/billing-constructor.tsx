@@ -139,10 +139,7 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
                 }`}
               >
                 <UtensilsCrossed className={`h-6 w-6 shrink-0 ${s.menuOnline ? "text-primary" : "text-muted-foreground"}`} />
-                <div className="min-w-0 flex-1">
-                  <div className="text-sm font-semibold text-foreground">Digital menu</div>
-                  <div className="text-sm text-muted-foreground leading-snug">QR menu diners scan</div>
-                </div>
+                <div className="min-w-0 flex-1 text-sm font-semibold text-foreground">Digital menu</div>
                 {price && (
                   <div className="shrink-0 text-sm font-medium tabular-nums text-foreground">{money(price.menu[k])}/mo</div>
                 )}
@@ -151,7 +148,7 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
                 </span>
               </button>
 
-              {ADDONS.map(({ key, label, hint, Icon }) => {
+              {ADDONS.map(({ key, label, Icon }) => {
                 const on = s[key];
                 const disabled = !s.menuOnline;
                 return (
@@ -165,10 +162,7 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
                     }`}
                   >
                     <Icon className={`h-6 w-6 shrink-0 ${on ? "text-primary" : "text-muted-foreground"}`} />
-                    <div className="min-w-0 flex-1">
-                      <div className="text-sm font-semibold text-foreground">{label}</div>
-                      <div className="text-sm text-muted-foreground leading-snug">{hint}</div>
-                    </div>
+                    <div className="min-w-0 flex-1 text-sm font-semibold text-foreground">{label}</div>
                     {price && (
                       <div className={`shrink-0 text-sm font-medium tabular-nums ${on ? "text-primary" : "text-muted-foreground"}`}>
                         +{money(price[key][k])}/mo
