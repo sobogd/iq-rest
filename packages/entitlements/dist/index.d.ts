@@ -41,6 +41,16 @@ export type RestaurantCapabilities = {
     kds: boolean;
     reservations: boolean;
     aiUnlimited: boolean;
+    customDomain: boolean;
+};
+export type RestaurantFeatureFlags = {
+    featMenuOnline?: boolean | null;
+    featOrders?: boolean | null;
+    featKds?: boolean | null;
+    featReservations?: boolean | null;
+    featCustomDomain?: boolean | null;
+    featAiUnlimited?: boolean | null;
+    manualAccess?: boolean | null;
 };
 export type AccountCapabilities = {
     venueLimit: number;
@@ -49,10 +59,23 @@ export type AccountCapabilities = {
 export declare function isTrialActive(account: Pick<AccountState, "trialEndsAt">): boolean;
 export declare function isProActive(sub: SubscriptionState | null): boolean;
 export declare function isBasicActive(sub: SubscriptionState | null): boolean;
+export declare function hasVenueAccess(account: AccountState, restaurant: {
+    id: string;
+    planOverride?: PlanOverride | string | null;
+    manualAccess?: boolean | null;
+}): boolean;
 export declare function getRestaurantCaps(account: AccountState, restaurant: {
     id: string;
     planOverride?: PlanOverride | string | null;
-}): RestaurantCapabilities;
+} & RestaurantFeatureFlags): RestaurantCapabilities;
+export declare function defaultFeatureFlagsForNewVenue(account: AccountState, planOverride?: PlanOverride | string | null): {
+    featMenuOnline: boolean;
+    featOrders: boolean;
+    featKds: boolean;
+    featReservations: boolean;
+    featAiUnlimited: boolean;
+    featCustomDomain: boolean;
+};
 export declare function getAccountCaps(account: AccountState): AccountCapabilities;
 export declare function accountStateFromLegacyRestaurant(r: {
     id: string;
@@ -73,6 +96,13 @@ export declare const ACCOUNT_ENTITLEMENT_SELECT: {
     readonly id: true;
     readonly planOverride: true;
     readonly accountId: true;
+    readonly featMenuOnline: true;
+    readonly featOrders: true;
+    readonly featKds: true;
+    readonly featReservations: true;
+    readonly featCustomDomain: true;
+    readonly featAiUnlimited: true;
+    readonly manualAccess: true;
     readonly account: {
         readonly select: {
             readonly trialEndsAt: true;
@@ -98,6 +128,13 @@ export type RestaurantEntitlementRow = {
     id: string;
     planOverride?: string | null;
     accountId?: string | null;
+    featMenuOnline?: boolean | null;
+    featOrders?: boolean | null;
+    featKds?: boolean | null;
+    featReservations?: boolean | null;
+    featCustomDomain?: boolean | null;
+    featAiUnlimited?: boolean | null;
+    manualAccess?: boolean | null;
     account?: {
         trialEndsAt: Date | null;
         venueLimit: number;

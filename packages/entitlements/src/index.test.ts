@@ -10,6 +10,8 @@ import {
   isBasicActive,
   getRestaurantCaps,
   getAccountCaps,
+  hasVenueAccess,
+  defaultFeatureFlagsForNewVenue,
   accountStateFromLegacyRestaurant,
   type AccountState,
 } from "./index";
@@ -100,7 +102,14 @@ describe("tier predicates", () => {
 describe("getRestaurantCaps", () => {
   it("planOverride='PRO' → full PRO regardless of subscription", () => {
     const caps = getRestaurantCaps(acct({ subscription: null }), { id: "r1", planOverride: "PRO" });
-    expect(caps).toEqual({ menuOnline: true, orders: true, kds: true, reservations: true, aiUnlimited: true });
+    expect(caps).toEqual({
+      menuOnline: true,
+      orders: true,
+      kds: true,
+      reservations: true,
+      aiUnlimited: true,
+      customDomain: false,
+    });
   });
 
   // MANDATORY golden case from the plan (§3 / Phase 0): a BASIC-paying venue
@@ -120,7 +129,14 @@ describe("getRestaurantCaps", () => {
   it("trial active → full PRO but NOT unlimited AI, for every venue", () => {
     const account = acct({ trialEndsAt: future(), subscription: null });
     const caps = getRestaurantCaps(account, { id: "r1", planOverride: null });
-    expect(caps).toEqual({ menuOnline: true, orders: true, kds: true, reservations: true, aiUnlimited: false });
+    expect(caps).toEqual({
+      menuOnline: true,
+      orders: true,
+      kds: true,
+      reservations: true,
+      aiUnlimited: false,
+      customDomain: false,
+    });
   });
 
   it("PRO active → full PRO for every venue", () => {
@@ -131,6 +147,7 @@ describe("getRestaurantCaps", () => {
       kds: true,
       reservations: true,
       aiUnlimited: true,
+      customDomain: false,
     });
   });
 
@@ -145,6 +162,7 @@ describe("getRestaurantCaps", () => {
       kds: false,
       reservations: false,
       aiUnlimited: false,
+      customDomain: false,
     });
     expect(getRestaurantCaps(account, { id: "other", planOverride: null })).toEqual({
       menuOnline: false,
@@ -152,6 +170,7 @@ describe("getRestaurantCaps", () => {
       kds: false,
       reservations: false,
       aiUnlimited: false,
+      customDomain: false,
     });
   });
 
@@ -192,6 +211,143 @@ describe("getAccountCaps", () => {
   });
   it("passes through venueLimit (enterprise raise)", () => {
     expect(getAccountCaps(acct({ venueLimit: 10 })).venueLimit).toBe(10);
+  });
+});
+
+// ─── billing-features-constructor: flag-driven "which" set ───────────────────
+
+describe("hasVenueAccess (the 'whether' gate)", () => {
+  it("granted by override / manual / trial / PRO / pinned-BASIC", () => {
+    expect(hasVenueAccess(acct({ subscription: null }), { id: "r", planOverride: "PRO" })).toBe(true);
+    expect(hasVenueAccess(acct({ subscription: null }), { id: "r", manualAccess: true })).toBe(true);
+    expect(hasVenueAccess(acct({ trialEndsAt: future() }), { id: "r" })).toBe(true);
+    expect(hasVenueAccess(acct({ subscription: { plan: "PRO", status: "ACTIVE" } }), { id: "r" })).toBe(true);
+    expect(
+      hasVenueAccess(acct({ subscription: { plan: "BASIC", status: "ACTIVE", appliesToRestaurantId: "r" } }), {
+        id: "r",
+      }),
+    ).toBe(true);
+  });
+  it("denied for a BASIC venue that isn't the pinned one, and for no-sub", () => {
+    expect(
+      hasVenueAccess(acct({ subscription: { plan: "BASIC", status: "ACTIVE", appliesToRestaurantId: "other" } }), {
+        id: "r",
+      }),
+    ).toBe(false);
+    expect(hasVenueAccess(acct({ subscription: null }), { id: "r" })).toBe(false);
+  });
+});
+
+describe("getRestaurantCaps with explicit flags", () => {
+  const proAcct = acct({ subscription: { plan: "PRO", status: "ACTIVE" } });
+
+  it("flags are authoritative once access is granted (à-la-carte)", () => {
+    // A PRO account (access granted) whose venue only bought reservations + domain.
+    expect(
+      getRestaurantCaps(proAcct, {
+        id: "r",
+        featMenuOnline: true,
+        featOrders: false,
+        featKds: false,
+        featReservations: true,
+        featCustomDomain: true,
+        featAiUnlimited: false,
+      }),
+    ).toEqual({
+      menuOnline: true,
+      orders: false,
+      kds: false,
+      reservations: true,
+      aiUnlimited: false,
+      customDomain: true,
+    });
+  });
+
+  it("no access → INACTIVE regardless of flags (flags never leak to unpaid venue)", () => {
+    expect(
+      getRestaurantCaps(acct({ subscription: null }), {
+        id: "r",
+        featMenuOnline: true,
+        featOrders: true,
+        featKds: true,
+        featReservations: true,
+        featCustomDomain: true,
+        featAiUnlimited: true,
+      }),
+    ).toEqual({
+      menuOnline: false,
+      orders: false,
+      kds: false,
+      reservations: false,
+      aiUnlimited: false,
+      customDomain: false,
+    });
+  });
+
+  it("manualAccess grants access; flags then decide the set (free comp)", () => {
+    expect(
+      getRestaurantCaps(acct({ subscription: null }), {
+        id: "r",
+        manualAccess: true,
+        featMenuOnline: true,
+        featOrders: true,
+        featKds: true,
+        featReservations: true,
+        featCustomDomain: false,
+        featAiUnlimited: true,
+      }),
+    ).toEqual({
+      menuOnline: true,
+      orders: true,
+      kds: true,
+      reservations: true,
+      aiUnlimited: true,
+      customDomain: false,
+    });
+  });
+
+  it("flag-less row falls back to tier caps (backward compat)", () => {
+    expect(getRestaurantCaps(proAcct, { id: "r" })).toEqual({
+      menuOnline: true,
+      orders: true,
+      kds: true,
+      reservations: true,
+      aiUnlimited: true,
+      customDomain: false,
+    });
+  });
+});
+
+describe("defaultFeatureFlagsForNewVenue", () => {
+  it("PRO account → full incl unlimited AI", () => {
+    expect(defaultFeatureFlagsForNewVenue(acct({ subscription: { plan: "PRO", status: "ACTIVE" } }))).toEqual({
+      featMenuOnline: true,
+      featOrders: true,
+      featKds: true,
+      featReservations: true,
+      featAiUnlimited: true,
+      featCustomDomain: false,
+    });
+  });
+  it("trial account → operational features but NOT unlimited AI", () => {
+    expect(defaultFeatureFlagsForNewVenue(acct({ trialEndsAt: future() }))).toEqual({
+      featMenuOnline: true,
+      featOrders: true,
+      featKds: true,
+      featReservations: true,
+      featAiUnlimited: false,
+      featCustomDomain: false,
+    });
+  });
+  it("no active tier → menu only", () => {
+    expect(defaultFeatureFlagsForNewVenue(acct({ subscription: null }))).toEqual({
+      featMenuOnline: true,
+      featOrders: false,
+      featKds: false,
+      featReservations: false,
+      featAiUnlimited: false,
+      featCustomDomain: false,
+    });
   });
 });
 

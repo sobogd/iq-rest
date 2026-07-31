@@ -8,7 +8,9 @@ exports.hasPaidProFeatures = hasPaidProFeatures;
 exports.isTrialActive = isTrialActive;
 exports.isProActive = isProActive;
 exports.isBasicActive = isBasicActive;
+exports.hasVenueAccess = hasVenueAccess;
 exports.getRestaurantCaps = getRestaurantCaps;
+exports.defaultFeatureFlagsForNewVenue = defaultFeatureFlagsForNewVenue;
 exports.getAccountCaps = getAccountCaps;
 exports.accountStateFromLegacyRestaurant = accountStateFromLegacyRestaurant;
 exports.accountStateFromRow = accountStateFromRow;
@@ -82,6 +84,9 @@ const FULL_PRO_CAPS = {
     kds: true,
     reservations: true,
     aiUnlimited: true,
+    // customDomain is an à-la-carte add-on, never implied by a tier → false in the
+    // tier-derived (fallback) path; the flag path reads featCustomDomain.
+    customDomain: false,
 };
 const INACTIVE_CAPS = {
     menuOnline: false,
@@ -89,6 +94,7 @@ const INACTIVE_CAPS = {
     kds: false,
     reservations: false,
     aiUnlimited: false,
+    customDomain: false,
 };
 // BASIC = live digital menu only, no operational features, no unlimited AI.
 const BASIC_CAPS = {
@@ -97,6 +103,7 @@ const BASIC_CAPS = {
     kds: false,
     reservations: false,
     aiUnlimited: false,
+    customDomain: false,
 };
 // Full PRO but earned via trial → everything except unlimited AI (§ ai-quota:
 // a trial must not get the paid-PRO AI perk).
@@ -126,14 +133,52 @@ function isBasicActive(sub) {
         return true;
     return false;
 }
-// Capabilities for one restaurant under its account. Resolution order (§3):
-//   1. planOverride==='PRO'  → full PRO, regardless of subscription (highest).
-//   2. trial active          → full PRO (minus unlimited AI) for every venue.
-//   3. PRO active            → full PRO for every venue.
-//   4. BASIC active          → BASIC only for the appliesToRestaurantId venue;
-//                              every other venue is inactive.
-//   5. otherwise             → inactive (menu offline).
-function getRestaurantCaps(account, restaurant) {
+// "Whether" gate — does this venue have ANY access right now? Access is granted
+// by (highest first): per-venue PRO override, manual comp grant, an active trial,
+// an active PRO subscription (account-wide), or an active BASIC subscription that
+// is pinned to THIS venue. No access → menu offline (INACTIVE_CAPS).
+function hasVenueAccess(account, restaurant) {
+    if (restaurant.planOverride === "PRO")
+        return true;
+    if (restaurant.manualAccess)
+        return true;
+    if (isTrialActive(account))
+        return true;
+    const sub = account.subscription;
+    if (isProActive(sub))
+        return true;
+    if (isBasicActive(sub) && sub.appliesToRestaurantId === restaurant.id)
+        return true;
+    return false;
+}
+// True when the row carries explicit persisted feature flags (the DB read path).
+// A flag-less row (unit tests, defensive callers) uses the tier fallback instead.
+function hasExplicitFlags(r) {
+    return (typeof r.featMenuOnline === "boolean" ||
+        typeof r.featOrders === "boolean" ||
+        typeof r.featKds === "boolean" ||
+        typeof r.featReservations === "boolean" ||
+        typeof r.featAiUnlimited === "boolean" ||
+        typeof r.featCustomDomain === "boolean");
+}
+// "Which" set — capabilities straight from the persisted flags. menuOnline
+// defaults on (a paid venue with no explicit menu flag is still online).
+function capsFromFlags(r) {
+    return {
+        menuOnline: r.featMenuOnline ?? true,
+        orders: !!r.featOrders,
+        kds: !!r.featKds,
+        reservations: !!r.featReservations,
+        aiUnlimited: !!r.featAiUnlimited,
+        customDomain: !!r.featCustomDomain,
+    };
+}
+// Tier-derived caps — the pre-flag behaviour, kept as the fallback for rows that
+// don't carry feature flags. Resolution order (§3):
+//   1. planOverride==='PRO' → full PRO   2. trial → full PRO minus AI
+//   3. PRO active → full PRO   4. BASIC active → BASIC on the pinned venue only
+//   5. otherwise → inactive.
+function tierCaps(account, restaurant) {
     if (restaurant.planOverride === "PRO")
         return { ...FULL_PRO_CAPS };
     if (isTrialActive(account))
@@ -142,11 +187,36 @@ function getRestaurantCaps(account, restaurant) {
     if (isProActive(sub))
         return { ...FULL_PRO_CAPS };
     if (isBasicActive(sub)) {
-        return sub.appliesToRestaurantId === restaurant.id
-            ? { ...BASIC_CAPS }
-            : { ...INACTIVE_CAPS };
+        return sub.appliesToRestaurantId === restaurant.id ? { ...BASIC_CAPS } : { ...INACTIVE_CAPS };
     }
     return { ...INACTIVE_CAPS };
+}
+// Capabilities for one restaurant under its account.
+//   whether: hasVenueAccess (override / manual / trial / PRO / pinned-BASIC)
+//   which:   persisted feature flags if present, else tier-derived (fallback).
+// No access → INACTIVE_CAPS regardless of flags (flags never leak menu/features
+// to an unpaid venue). This is the single seam the whole platform gates on.
+function getRestaurantCaps(account, restaurant) {
+    if (!hasVenueAccess(account, restaurant))
+        return { ...INACTIVE_CAPS };
+    return hasExplicitFlags(restaurant) ? capsFromFlags(restaurant) : tierCaps(account, restaurant);
+}
+// Default feature flags for a NEWLY created venue, mirroring what the account's
+// current tier would grant (so adding a venue during a trial/PRO keeps today's
+// behaviour). Operational features follow trial/PRO/override; unlimited AI is
+// paid-PRO only (never a trial). Callers persist these on the new Restaurant row.
+function defaultFeatureFlagsForNewVenue(account, planOverride) {
+    const override = planOverride === "PRO";
+    const operational = override || isTrialActive(account) || isProActive(account.subscription);
+    const paidPro = override || isProActive(account.subscription);
+    return {
+        featMenuOnline: true,
+        featOrders: operational,
+        featKds: operational,
+        featReservations: operational,
+        featAiUnlimited: paidPro,
+        featCustomDomain: false,
+    };
 }
 // Account-wide capabilities: how many venues may exist / be created.
 // canAddVenue = (trial || PRO active) && count < venueLimit. BASIC / no-sub
@@ -203,6 +273,14 @@ exports.ACCOUNT_ENTITLEMENT_SELECT = {
     id: true,
     planOverride: true,
     accountId: true,
+    // Persisted per-restaurant feature flags (billing-features-constructor).
+    featMenuOnline: true,
+    featOrders: true,
+    featKds: true,
+    featReservations: true,
+    featCustomDomain: true,
+    featAiUnlimited: true,
+    manualAccess: true,
     account: {
         select: {
             trialEndsAt: true,
@@ -253,7 +331,17 @@ function accountStateFromRow(row) {
 // caller already selected ACCOUNT_ENTITLEMENT_SELECT (e.g. public menu-by-slug).
 function restaurantCapsFromRow(row) {
     const { account, planOverride } = accountStateFromRow(row);
-    return getRestaurantCaps(account, { id: row.id, planOverride });
+    return getRestaurantCaps(account, {
+        id: row.id,
+        planOverride,
+        manualAccess: row.manualAccess,
+        featMenuOnline: row.featMenuOnline,
+        featOrders: row.featOrders,
+        featKds: row.featKds,
+        featReservations: row.featReservations,
+        featCustomDomain: row.featCustomDomain,
+        featAiUnlimited: row.featAiUnlimited,
+    });
 }
 // Account-wide caps (venueLimit / canAddVenue) from an already-loaded row.
 function accountCapsFromRow(row) {

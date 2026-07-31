@@ -2,6 +2,7 @@ import { Injectable, Logger } from "@nestjs/common";
 import { Prisma } from "@iq-rest/db";
 import { PrismaService } from "../prisma/prisma.service";
 import { isSupportedCurrency } from "../common/stripe";
+import { defaultFeatureFlagsForNewVenue } from "../common/entitlements";
 import { cuisineTemplates, SAMPLE_PREFIX, type LocaleString } from "./cuisine-templates";
 import { isReservedSlug, slugify } from "../common/reserved-slugs";
 
@@ -120,6 +121,14 @@ export class OnboardingSeedService {
           defaultLanguage: seedLocale,
           ordersEnabled: false,
           reservationsEnabled: true,
+          // billing-features-constructor: seed feature flags from the account
+          // tier (fresh trial account → operational features on, unlimited AI off).
+          ...defaultFeatureFlagsForNewVenue({
+            trialEndsAt,
+            venueLimit: account.venueLimit,
+            restaurantCount: 1,
+            subscription: null,
+          }),
           // Billing (plan/trial/currency) lives on the account (§3).
           accountId: account.id,
         },

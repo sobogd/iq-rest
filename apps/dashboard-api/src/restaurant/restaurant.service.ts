@@ -10,6 +10,7 @@ import { PrismaService } from "../prisma/prisma.service";
 import { AutoTranslateService } from "../auto-translate/auto-translate.service";
 import { isReservedSlug, slugify } from "../common/reserved-slugs";
 import { getStripe, isSupportedCurrency } from "../common/stripe";
+import { defaultFeatureFlagsForNewVenue, type AccountState } from "../common/entitlements";
 
 const HHMM = /^([01]\d|2[0-3]):[0-5]\d$/;
 const reservationDaySchema = z
@@ -407,6 +408,15 @@ export class RestaurantService {
         trialUsed: true,
       },
     });
+    // billing-features-constructor: seed the venue's feature flags from the
+    // account tier so a fresh trial venue keeps operational features (mirrors
+    // the pre-flag behaviour). First venue → trial account, no subscription.
+    const firstVenueFlags = defaultFeatureFlagsForNewVenue({
+      trialEndsAt: account.trialEndsAt,
+      venueLimit: account.venueLimit,
+      restaurantCount: 1,
+      subscription: null,
+    });
     const createData: Prisma.RestaurantUncheckedCreateInput = {
       title: rest.title || "",
       slug,
@@ -417,6 +427,7 @@ export class RestaurantService {
       startedFromScratch: true,
       ...rest,
       ...scheduleField,
+      ...firstVenueFlags,
       accountId: account.id,
     };
     const created = await this.prisma.restaurant.create({ data: createData });
@@ -476,6 +487,35 @@ export class RestaurantService {
     const ownerAccountId = ownedRestaurants.find((r) => r.accountId)?.accountId ?? null;
     if (!ownerAccountId) throw new BadRequestException("No account for owner");
 
+    // billing-features-constructor: seed the new venue's feature flags from the
+    // owner's account tier. A PRO account → full features (incl unlimited AI);
+    // trial → operational minus AI; BASIC/FREE → menu only (and the resolver
+    // gates it inactive anyway since BASIC pins a single venue).
+    const ownerAccount = await this.prisma.account.findUnique({
+      where: { id: ownerAccountId },
+      select: {
+        trialEndsAt: true,
+        venueLimit: true,
+        subscription: {
+          select: { plan: true, status: true, currentPeriodEnd: true, appliesToRestaurantId: true },
+        },
+      },
+    });
+    const ownerAccountState: AccountState = {
+      trialEndsAt: ownerAccount?.trialEndsAt ?? null,
+      venueLimit: ownerAccount?.venueLimit ?? 4,
+      restaurantCount: ownedRestaurants.length + 1,
+      subscription: ownerAccount?.subscription
+        ? {
+            plan: ownerAccount.subscription.plan,
+            status: ownerAccount.subscription.status,
+            currentPeriodEnd: ownerAccount.subscription.currentPeriodEnd ?? null,
+            appliesToRestaurantId: ownerAccount.subscription.appliesToRestaurantId ?? null,
+          }
+        : null,
+    };
+    const newVenueFlags = defaultFeatureFlagsForNewVenue(ownerAccountState);
+
     // Adding restaurants is open to everyone (no PRO gate). A newly created
     // venue starts FREE/INACTIVE and simply has no PRO features unless the owner
     // is PRO — account-level entitlement (restaurantHasProAccess) grants PRO to
@@ -516,6 +556,7 @@ export class RestaurantService {
         onboardingFillDone: true,
         // Billing lives on the account (§3): the new venue inherits the owner's
         // account entitlement via accountId. No per-restaurant plan columns.
+        ...newVenueFlags,
         accountId: ownerAccountId,
       },
     });
