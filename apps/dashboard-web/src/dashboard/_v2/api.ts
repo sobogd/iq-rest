@@ -788,12 +788,25 @@ export async function fetchSubscriptionStatus(): Promise<{
  proFeatures?: boolean;
  // Account entitlement: false → this venue is inactive (paywall/upgrade banner).
  menuOnline?: boolean;
+ // BASIC: the venue the subscription is applied to (others inactive). null = PRO/trial.
+ appliesToRestaurantId?: string | null;
  canManageBilling?: boolean;
 } | null> {
  const res = await apiFetch("/api/restaurant/subscription", {
         credentials: "include", cache: "no-store" });
  if (!res.ok) return null;
  return await res.json();
+}
+
+// BASIC venue-picker: set which single venue the account's BASIC sub applies to.
+export async function setBasicSubscriptionVenue(restaurantId: string): Promise<boolean> {
+ const res = await apiFetch("/api/restaurant/subscription/basic-venue", {
+  credentials: "include",
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ restaurantId }),
+ });
+ return res.ok;
 }
 
 export async function createCheckoutSession(

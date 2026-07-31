@@ -28,9 +28,11 @@ import {
  sendSupportMessage,
  updateRestaurant,
  updateRestaurantLanguages,
+ setBasicSubscriptionVenue,
  type ApiSupportMessage,
 } from "./api";
 import { useRestaurant } from "./restaurant-context";
+import { useRestaurants } from "./restaurants-context";
 import type { Booking, Order, Restaurant, TableEntity } from "./types";
 import { track } from "@/lib/dashboard-events";
 
@@ -1682,6 +1684,7 @@ interface SubStatus {
  currentPeriodEnd: string | null;
  billingCycle: string | null;
  trialEndsAt: string | null;
+ appliesToRestaurantId?: string | null;
 }
 
 // Billing currencies we actually sell in (Stripe prices exist for these).
@@ -1797,8 +1800,25 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  const tb = useTranslations("dashboard.settings.billing");
  const locale = useLocale();
  const restaurant = useRestaurant();
+ const { list: accountVenues } = useRestaurants();
  const [sub, setSub] = useState<SubStatus | null>(null);
+ const [switchingVenue, setSwitchingVenue] = useState(false);
  const [pendingPlan, setPendingPlan] = useState<{ plan: "BASIC" | "PRO"; cycle: "MONTHLY" | "YEARLY" } | null>(null);
+
+ // BASIC venue-picker: switch which single venue the account's BASIC sub covers.
+ async function pickBasicVenue(id: string) {
+ if (switchingVenue || id === sub?.appliesToRestaurantId) return;
+ setSwitchingVenue(true);
+ track("dash_settings_billing_basic_venue_switch");
+ try {
+ if (await setBasicSubscriptionVenue(id)) {
+ const s = await fetchSubscriptionStatus();
+ setSub(s);
+ }
+ } finally {
+ setSwitchingVenue(false);
+ }
+ }
  const [currency, setCurrency] = useState<BillingCur>(
  (BILLING_CURRENCIES as string[]).includes(restaurant.billingCurrency ?? "")
  ? (restaurant.billingCurrency as BillingCur)
@@ -1921,6 +1941,38 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  <button type="button" onClick={manage} className={secondaryBtn}>
  {tb("manage")}
  </button>
+ </div>
+ </div>
+ ) : null}
+
+ {/* BASIC venue-picker (§5): a BASIC plan covers exactly one venue; the owner
+     picks which. The others go inactive (menu offline). Switchable any time. */}
+ {sub?.plan === "BASIC" && accountVenues.length > 1 ? (
+ <div className="bg-card border border-border rounded-2xl p-5 md:p-6 mb-5">
+ <div className="text-base font-medium text-foreground">{tb("basicVenueTitle")}</div>
+ <p className="text-xs text-muted-foreground mt-1 leading-snug">{tb("basicVenueBody")}</p>
+ <div className="mt-3 space-y-2">
+ {accountVenues.map((v) => {
+ const activeVenue = v.id === sub.appliesToRestaurantId;
+ return (
+ <button
+ key={v.id}
+ type="button"
+ disabled={switchingVenue || activeVenue}
+ onClick={() => pickBasicVenue(v.id)}
+ className={`w-full flex items-center justify-between gap-3 rounded-xl border px-4 py-3 text-left transition-colors ${
+ activeVenue ? "border-primary bg-primary/5" : "border-border hover:border-input"
+ }`}
+ >
+ <span className="text-sm text-foreground min-w-0 truncate">{v.title || v.slug || v.id}</span>
+ {activeVenue ? (
+ <span className="text-[10px] px-1.5 py-0.5 rounded bg-primary/15 text-primary uppercase tracking-wide shrink-0">
+ {tb("basicVenueActive")}
+ </span>
+ ) : null}
+ </button>
+ );
+ })}
  </div>
  </div>
  ) : null}

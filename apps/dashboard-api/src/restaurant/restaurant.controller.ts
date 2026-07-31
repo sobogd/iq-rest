@@ -7,6 +7,7 @@ import {
   Get,
   HttpCode,
   HttpStatus,
+  NotFoundException,
   Param,
   Post,
   Put,
@@ -246,11 +247,46 @@ export class RestaurantController {
       proFeatures: caps.orders,
       // menuOnline drives the dashboard inactive-venue banner (account entitlement).
       menuOnline: caps.menuOnline,
+      // BASIC: which venue the subscription is applied to (others inactive). The
+      // SPA venue-picker uses this. null for PRO/trial (covers the whole account).
+      appliesToRestaurantId: sub?.appliesToRestaurantId ?? null,
       aiImagesUsed: usage.aiImagesUsed,
       aiImagesLimit: usage.aiImagesLimit,
       // Demo accounts can't pay — hide the billing UI (the SPA gates on this).
       canManageBilling: !viaGrant && !isDemo,
     };
+  }
+
+  // BASIC venue-picker (§5): choose which single venue an account's BASIC
+  // subscription applies to. The others go inactive (menu offline). Switchable
+  // any time; the Stripe price doesn't change (proration not needed).
+  @Post("restaurant/subscription/basic-venue")
+  async setBasicVenue(@Req() req: Request, @Body() body: { restaurantId: string }) {
+    const { restaurantId: activeId, viaGrant } = (req as AuthedRequest).authUser;
+    if (viaGrant) throw new ForbiddenException("Billing is managed by the restaurant owner");
+    if (!body?.restaurantId) throw new BadRequestException("restaurantId required");
+    const active = await this.prisma.restaurant.findUnique({
+      where: { id: activeId },
+      select: { accountId: true },
+    });
+    if (!active?.accountId) throw new NotFoundException("Account not found");
+    // Target must belong to the same account.
+    const target = await this.prisma.restaurant.findFirst({
+      where: { id: body.restaurantId, accountId: active.accountId },
+      select: { id: true },
+    });
+    if (!target) throw new ForbiddenException("Not your restaurant");
+    // Only meaningful for a BASIC subscription.
+    const sub = await this.prisma.subscription.findUnique({
+      where: { accountId: active.accountId },
+      select: { plan: true },
+    });
+    if (!sub || sub.plan !== "BASIC") throw new BadRequestException("Not a BASIC subscription");
+    await this.prisma.subscription.update({
+      where: { accountId: active.accountId },
+      data: { appliesToRestaurantId: target.id },
+    });
+    return { ok: true };
   }
 
   // ---- Multi-restaurant endpoints ----
