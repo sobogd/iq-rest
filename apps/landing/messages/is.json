@@ -29,7 +29,7 @@
         "noCreditCard": "14 daga ókeypis prufa. Engin kreditkort nauðsynleg.",
         "trusted": "Treyst á 500+ veitingastöðum um allan heim",
         "title": "Ertu tilbúinn að fara í stafræna heim?",
-        "subtitle": "Búðu til þinn faglega QR matseðil og veitingastaðavef á nokkrum mínútum. Ókeypis að eilífu, engin kreditkort krafist.",
+        "subtitle": "Búðu til þinn faglega QR matseðil og veitingastaðavef á nokkrum mínútum. 14 daga ókeypis prufa, engin kreditkort krafist.",
         "demo": "Skoða demo"
       },
       "benefits": [
@@ -533,7 +533,7 @@
     "perMonth": "/mánuði",
     "billedYearly": "Innheimt árlega {total}",
     "orMonthly": "Eða borgaðu {price} mánaðarlega.",
-    "forever": "Ókeypis að eilífu",
+    "forever": "14 daga ókeypis prufa",
     "popular": "Vinsælast",
     "plans": {
       "free": {
@@ -1081,7 +1081,7 @@
           "section3Title": "Save 25% with Yearly Billing",
           "section3Text": "Restaurant owners who commit to yearly billing for their QR menu and website subscription save 25% compared to monthly payments. The Growth plan drops from €4 to €3 per month, while the Pro plan goes from €7 to €6 per month when billed annually. This significant savings helps restaurants invest more in their core business while maintaining a professional digital presence. Switch between monthly and yearly billing anytime through your dashboard.",
           "benefitsTitle": "Benefits of Our Subscription Plans",
-          "benefit1": "Free plan available forever - no credit card required to start",
+          "benefit1": "14 daga ókeypis prufa - engin kreditkort þarf til að byrja",
           "benefit2": "Flexible monthly or yearly billing with 25% savings on annual plans",
           "benefit3": "Instant plan upgrades - new features activate immediately",
           "benefit4": "Secure Stripe payment processing for all transactions",
@@ -1450,7 +1450,7 @@
       },
       {
         "question": "Hvað kostar QR matseðill fyrir veitingastað eða kaffihús?",
-        "answer": "IQ Rest býður upp á sveigjanleg verðlagningu sem byrjar frá €0 að eilífu með okkar ókeypis áætlun. Þetta gerir það aðgengilegt fyrir hvaða veitingastað eða kaffihús sem er að búa til faglegan QR matseðil. Greiddar áætlanir byrja á aðeins €4/mánuði með aukafítum eins og ótakmarkaðar vörur og háþróaðar greiningar."
+        "answer": "IQ Rest byrjar með 14 daga ókeypis prufu — fullur aðgangur að öllum eiginleikum, engin kreditkort nauðsynleg. Þetta gerir hvaða veitingastað eða kaffihúsi sem er kleift að búa til faglegan QR matseðil á viðráðanlegu verði. Eftir prufuna byrja greiddar áætlanir frá aðeins 9,90 €/mánuði með eiginleikum eins og ótakmörkuðum vörum og háþróaðri greiningu."
       },
       {
         "question": "Get ég búið til vefsíðu fyrir veitingastaðinn minn án þess að kóða?",
@@ -1470,7 +1470,7 @@
       },
       {
         "question": "Get ég prófað QR matseðilllausnina ókeypis?",
-        "answer": "Já! Við bjóðum upp á alveg ókeypis áætlun fyrir veitingastaði og kaffihús til að prófa IQ Rest. Þú getur búið til stafræna matseðilvefsíðu þína með allt að 15 vörum án kostnaðar, að eilífu. Engin kreditkort þarf til að byrja. Uppfærðu aðeins þegar þú þarft fleiri aðgerðir."
+        "answer": "Já! Hver nýr aðgangur fær 14 daga ókeypis prufu með fullum aðgangi að öllum eiginleikum — engin kreditkort þarf til að byrja. Búðu til vefsíðu fyrir stafræna matseðilinn þinn og prófaðu allt, veldu svo áætlun þegar prufunni lýkur."
       },
       {
         "question": "Er IQ Rest forrit sem viðskiptavinir þurfa að sækja?",

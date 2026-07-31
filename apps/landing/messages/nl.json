@@ -29,7 +29,7 @@
         "noCreditCard": "14 dagen gratis proefperiode. Geen creditcard nodig.",
         "trusted": "Vertrouwd door meer dan 500 restaurants wereldwijd",
         "title": "Klaar om Digitaal te Gaan?",
-        "subtitle": "Maak binnen enkele minuten je professionele QR-menu en restaurantwebsite. Altijd gratis, geen creditcard vereist.",
+        "subtitle": "Maak binnen enkele minuten je professionele QR-menu en restaurantwebsite. 14 dagen gratis proefperiode, geen creditcard vereist.",
         "demo": "Bekijk demo"
       },
       "benefits": [
@@ -533,7 +533,7 @@
     "perMonth": "/maand",
     "billedYearly": "Jaarlijks gefactureerd {total}",
     "orMonthly": "Of betaal {price} maandelijks.",
-    "forever": "Voor altijd gratis",
+    "forever": "14 dagen gratis proefperiode",
     "popular": "Meest populair",
     "plans": {
       "free": {
@@ -1081,7 +1081,7 @@
           "section3Title": "Bespaar 25% Met Jaarlijkse Facturering",
           "section3Text": "Restaurant eigenaren die zich committeren aan jaarlijkse facturering voor hun QR menu en website abonnement besparen 25% vergeleken met maandelijkse betalingen. Het Growth plan daalt van €4 naar €3 per maand, terwijl het Pro plan van €7 naar €6 per maand gaat bij jaarlijkse facturering. Deze aanzienlijke besparingen helpen restaurants om meer in hun kernbedrijf te investeren terwijl ze een professionele digitale aanwezigheid behouden. Wissel op elk moment tussen maandelijkse en jaarlijkse facturering via uw dashboard.",
           "benefitsTitle": "Voordelen Van Onze Abonnementsplannen",
-          "benefit1": "Gratis plan voor altijd beschikbaar - geen creditcard vereist om te beginnen",
+          "benefit1": "14 dagen gratis proefperiode - geen creditcard vereist om te beginnen",
           "benefit2": "Flexibele maandelijkse of jaarlijkse facturering met 25% besparing op jaarlijkse plannen",
           "benefit3": "Instant plan upgrades - nieuwe functies worden onmiddellijk geactiveerd",
           "benefit4": "Veilige Stripe betalingsverwerking voor alle transacties",
@@ -1450,7 +1450,7 @@
       },
       {
         "question": "Hoeveel kost een QR-menu voor een restaurant of café?",
-        "answer": "IQ Rest biedt flexibele prijzen vanaf €0 voor altijd met ons gratis plan. Dit maakt het voor elk restaurant of café betaalbaar om een professioneel QR-menu te maken. Betaalde plannen beginnen al bij €4/maand met extra functies zoals onbeperkte items en geavanceerde analyses."
+        "answer": "IQ Rest begint met een gratis proefperiode van 14 dagen — volledige toegang tot alle functies, geen creditcard vereist. Hierdoor is het voor elk restaurant of café betaalbaar om een professioneel QR-menu te maken. Na de proefperiode beginnen de betaalde abonnementen vanaf slechts 9,90 €/maand met functies zoals onbeperkte items en geavanceerde analyses."
       },
       {
         "question": "Kan ik een website voor mijn restaurant maken zonder coderen?",
@@ -1470,7 +1470,7 @@
       },
       {
         "question": "Kan ik de QR-menuoplossing gratis uitproberen?",
-        "answer": "Ja! We bieden een volledig gratis plan voor restaurants en cafés om IQ Rest uit te proberen. U kunt uw digitale menuwebsite maken met tot 15 items zonder kosten, voor altijd. Geen creditcard vereist om te beginnen. Upgrade alleen wanneer u meer functies nodig heeft."
+        "answer": "Ja! Elk nieuw account krijgt een gratis proefperiode van 14 dagen met volledige toegang tot alle functies — geen creditcard vereist om te beginnen. Maak de website van je digitale menu en probeer alles uit, en kies daarna een abonnement wanneer de proefperiode afloopt."
       },
       {
         "question": "Is IQ Rest een app die klanten moeten downloaden?",

@@ -29,7 +29,7 @@
         "noCreditCard": "14-dnevna besplatna proba. Kreditna kartica nije potrebna.",
         "trusted": "Poverenje više od 500 restorana širom sveta",
         "title": "Spremni za digitalizaciju?",
-        "subtitle": "Kreirajte svoj profesionalni QR meni i veb sajt restorana za nekoliko minuta. Besplatno zauvek, bez potrebe za kreditnom karticom.",
+        "subtitle": "Kreirajte svoj profesionalni QR meni i veb sajt restorana za nekoliko minuta. 14-dnevna besplatna proba, bez potrebe za kreditnom karticom.",
         "demo": "Pogledaj Demo"
       },
       "benefits": [
@@ -533,7 +533,7 @@
     "perMonth": "/mj",
     "billedYearly": "Naplaćuje se godišnje {total}",
     "orMonthly": "Или плаћајте {price} месечно.",
-    "forever": "Besplatno zauvek",
+    "forever": "14-dnevna besplatna proba",
     "popular": "Najpopularnije",
     "plans": {
       "free": {
@@ -1081,7 +1081,7 @@
           "section3Title": "Uštedite 25% sa godišnjom naplatom",
           "section3Text": "Vlasnici restorana koji se obavežu na godišnju naplatu za svoju QR meni i veb stranicu pretplatu štede 25% u poređenju sa mesečnim plaćanjem. Growth plan pada sa 4 € na 3 € mesečno, dok pro plan ide od 7 € na 6 € mesečno kada se naplaćuje godišnje. Ova značajna ušteda pomaže restoranima da više ulažu u svoje Growth poslovanje dok održavaju profesionalnu digitalnu prisutnost. Prebacujte se između mesečne i godišnje naplate u bilo kojem trenutku putem vašeg kontrolnog panela.",
           "benefitsTitle": "Prednosti naših planova pretplate",
-          "benefit1": "Besplatni plan dostupan zauvek - nema potrebe za kreditnom karticom da započnete",
+          "benefit1": "14-dnevna besplatna proba - za početak nije potrebna kreditna kartica",
           "benefit2": "Fleksibilna mesečna ili godišnja naplata sa 25% uštede na godišnjim planovima",
           "benefit3": "Instant nadogradnje planova - nove karakteristike se aktiviraju odmah",
           "benefit4": "Sigurna Stripe obrada plaćanja za sve transakcije",
@@ -1450,7 +1450,7 @@
       },
       {
         "question": "Koliko košta QR meni za restoran ili kafić?",
-        "answer": "IQ Rest nudi fleksibilne cene počevši od 0 € zauvek sa našim besplatnim planom. To čini pristupačnim za svaki restoran ili kafić da kreira profesionalni QR meni. Plaćeni planovi počinju od samo 4 €/mesec sa dodatnim funkcijama kao što su neograničeni artikli i napredna analitika."
+        "answer": "IQ Rest počinje sa 14-dnevnom besplatnom probom — potpuni pristup svim funkcijama, bez kreditne kartice. To čini pristupačnim svakom restoranu ili kafiću da kreira profesionalni QR meni. Nakon probe, plaćeni planovi počinju od samo 9,90 €/mesec sa funkcijama kao što su neograničeni artikli i napredna analitika."
       },
       {
         "question": "Mogu li da kreiram veb sajt za svoj restoran bez kodiranja?",
@@ -1470,7 +1470,7 @@
       },
       {
         "question": "Mogu li besplatno isprobati rešenje za QR meni?",
-        "answer": "Da! Nudimo potpuno besplatan plan za restorane i kafiće da isprobaju IQ Rest. Možete kreirati svoj veb sajt digitalnog menija sa do 15 stavki bez ikakvih troškova, zauvek. Nema potrebe za kreditnom karticom da biste počeli. Nadogradite samo kada vam budu potrebne dodatne funkcije."
+        "answer": "Da! Svaki novi nalog dobija 14-dnevnu besplatnu probu sa potpunim pristupom svim funkcijama — za početak nije potrebna kreditna kartica. Kreirajte veb sajt svog digitalnog menija i isprobajte sve, a zatim izaberite plan kada se proba završi."
       },
       {
         "question": "Da li je IQ Rest aplikacija koju kupci treba da preuzmu?",

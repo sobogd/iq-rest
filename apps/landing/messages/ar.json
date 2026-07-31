@@ -29,7 +29,7 @@
         "noCreditCard": "تجربة مجانية لمدة 14 يومًا. لا تتطلب بطاقة ائتمان.",
         "trusted": "موثوق به من قبل أكثر من 500 مطعم حول العالم",
         "title": "هل أنت مستعد للانتقال إلى الرقمية؟",
-        "subtitle": "أنشئ قائمة QR الاحترافية وموقع مطعمك في دقائق. مجاني إلى الأبد، لا حاجة لبطاقة ائتمان.",
+        "subtitle": "أنشئ قائمة QR الاحترافية وموقع مطعمك في دقائق. تجربة مجانية لمدة 14 يومًا، لا حاجة لبطاقة ائتمان.",
         "demo": "شاهد العرض"
       },
       "benefits": [
@@ -533,7 +533,7 @@
     "perMonth": "/شهر",
     "billedYearly": "يتم الفوترة سنويًا {total}",
     "orMonthly": "أو ادفع {price} شهريًا.",
-    "forever": "مجاني للأبد",
+    "forever": "تجربة مجانية لمدة 14 يومًا",
     "popular": "الأكثر شعبية",
     "plans": {
       "free": {
@@ -1081,7 +1081,7 @@
           "section3Title": "Save 25% with Yearly Billing",
           "section3Text": "Restaurant owners who commit to yearly billing for their QR menu and website subscription save 25% compared to monthly payments. The Growth plan drops from €4 to €3 per month, while the Pro plan goes from €7 to €6 per month when billed annually. This significant savings helps restaurants invest more in their core business while maintaining a professional digital presence. Switch between monthly and yearly billing anytime through your dashboard.",
           "benefitsTitle": "Benefits of Our Subscription Plans",
-          "benefit1": "Free plan available forever - no credit card required to start",
+          "benefit1": "تجربة مجانية لمدة 14 يومًا - لا حاجة لبطاقة ائتمان للبدء",
           "benefit2": "Flexible monthly or yearly billing with 25% savings on annual plans",
           "benefit3": "Instant plan upgrades - new features activate immediately",
           "benefit4": "Secure Stripe payment processing for all transactions",
@@ -1450,7 +1450,7 @@
       },
       {
         "question": "كم تكلف قائمة QR للمطعم أو المقهى؟",
-        "answer": "IQ Rest تقدم أسعاراً مرنة تبدأ من 0€ للأبد مع خطتنا المجانية."
+        "answer": "يبدأ IQ Rest بتجربة مجانية لمدة 14 يومًا — وصول كامل إلى جميع الميزات، دون الحاجة إلى بطاقة ائتمان. هذا يجعل من الميسور لأي مطعم أو مقهى إنشاء قائمة QR احترافية. بعد التجربة، تبدأ الخطط المدفوعة من 9.90€/شهر فقط مع ميزات مثل عناصر غير محدودة وتحليلات متقدمة."
       },
       {
         "question": "هل يمكنني إنشاء موقع لمطعمي بدون برمجة؟",
@@ -1470,7 +1470,7 @@
       },
       {
         "question": "هل يمكنني تجربة حل قائمة QR مجانًا؟",
-        "answer": "نعم! نقدم خطة مجانية تمامًا للمطاعم والمقاهي لتجربة IQ Rest. يمكنك إنشاء موقع قائمتك الرقمية مع ما يصل إلى 15 عنصرًا دون أي تكلفة، إلى الأبد. لا حاجة لبطاقة ائتمان للبدء. قم بالترقية فقط عندما تحتاج إلى ميزات إضافية."
+        "answer": "نعم! يحصل كل حساب جديد على تجربة مجانية لمدة 14 يومًا مع وصول كامل إلى جميع الميزات — دون الحاجة إلى بطاقة ائتمان للبدء. أنشئ موقع قائمتك الرقمية وجرّب كل شيء، ثم اختر خطة عند انتهاء التجربة."
       },
       {
         "question": "هل IQ Rest تطبيق يحتاج العملاء لتحميله؟",

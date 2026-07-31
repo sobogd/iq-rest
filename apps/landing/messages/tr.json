@@ -29,7 +29,7 @@
         "noCreditCard": "14 günlük ücretsiz deneme. Kredi kartı gerekmez.",
         "trusted": "Dünyada 500'den fazla restoran tarafından güvenilir",
         "title": "Dijitale Geçmeye Hazır Mısınız?",
-        "subtitle": "Profesyonel QR menünüzü ve restoran web sitenizi dakikalar içinde oluşturun. Sonsuza dek ücretsiz, kredi kartı gerektirmez.",
+        "subtitle": "Profesyonel QR menünüzü ve restoran web sitenizi dakikalar içinde oluşturun. 14 günlük ücretsiz deneme, kredi kartı gerektirmez.",
         "demo": "Demoyu Görüntüle"
       },
       "benefits": [
@@ -533,7 +533,7 @@
     "perMonth": "/ay",
     "billedYearly": "Yıllık faturalandırılır {total}",
     "orMonthly": "Veya aylık {price} ödeyin.",
-    "forever": "Sonsuza dek ücretsiz",
+    "forever": "14 günlük ücretsiz deneme",
     "popular": "En Popüler",
     "plans": {
       "free": {
@@ -1081,7 +1081,7 @@
           "section3Title": "Yıllık Faturalama ile %25 Tasarruf",
           "section3Text": "QR menü ve web sitesi aboneliğiniz için yıllık faturalamayı tercih eden restoran sahipleri, aylık ödemelere kıyasla %25 tasarruf eder. Growth plan, aylık 4 €'dan 3 €'ya düşerken, Pro plan yıllık faturalamada aylık 7 €'dan 6 €'ya düşer. Bu önemli tasarruf, restoranların ana işlerine daha fazla yatırım yapmalarına yardımcı olurken profesyonel bir dijital varlık sürdürmelerini sağlar. Kontrol panelinizden istediğiniz zaman aylık ve yıllık faturalama arasında geçiş yapabilirsiniz.",
           "benefitsTitle": "Abonelik Planlarımızın Faydaları",
-          "benefit1": "Sonsuza dek mevcut ücretsiz plan - başlamak için kredi kartı gerekmez",
+          "benefit1": "14 günlük ücretsiz deneme - başlamak için kredi kartı gerekmez",
           "benefit2": "Esnek aylık veya yıllık faturalama ile yıllık planlarda %25 tasarruf",
           "benefit3": "Anında plan yükseltmeleri - yeni özellikler hemen etkinleşir",
           "benefit4": "Tüm işlemler için güvenli Stripe ödeme işleme",
@@ -1450,7 +1450,7 @@
       },
       {
         "question": "Restoran veya kafe için QR menü ne kadar?",
-        "answer": "IQ Rest, ücretsiz planımızla €0'dan başlayan esnek fiyatlandırma sunar. Bu, herhangi bir restoran veya kafenin profesyonel bir QR menü oluşturmasını uygun hale getirir. Ücretli planlar, sınırsız öğe ve gelişmiş analizler gibi ek özelliklerle sadece €4/ay'dan başlar."
+        "answer": "IQ Rest, 14 günlük ücretsiz denemeyle başlar — tüm özelliklere tam erişim, kredi kartı gerekmez. Bu, herhangi bir restoran veya kafenin profesyonel bir QR menü oluşturmasını uygun hale getirir. Denemeden sonra ücretli planlar, sınırsız öğe ve gelişmiş analizler gibi özelliklerle yalnızca 9,90 €/ay'dan başlar."
       },
       {
         "question": "Kodlama olmadan restoranım için bir web sitesi oluşturabilir miyim?",
@@ -1470,7 +1470,7 @@
       },
       {
         "question": "QR menü çözümünü ücretsiz deneyebilir miyim?",
-        "answer": "Evet! Restoranlar ve kafeler için IQ Rest'i denemeleri için tamamen ücretsiz bir plan sunuyoruz. 15 öğeye kadar dijital menü web sitenizi hiçbir maliyet olmadan, sonsuza dek oluşturabilirsiniz. Başlamak için kredi kartı gerekmez. Sadece daha fazla özelliğe ihtiyaç duyduğunuzda yükseltin."
+        "answer": "Evet! Her yeni hesap, tüm özelliklere tam erişim sağlayan 14 günlük ücretsiz deneme alır — başlamak için kredi kartı gerekmez. Dijital menü web sitenizi oluşturun ve her şeyi deneyin, ardından deneme bittiğinde bir plan seçin."
       },
       {
         "question": "IQ Rest, müşterilerin indirmesi gereken bir uygulama mı?",

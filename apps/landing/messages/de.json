@@ -29,7 +29,7 @@
         "noCreditCard": "14 Tage kostenlose Testphase. Keine Kreditkarte erforderlich.",
         "trusted": "Vertraut von über 500 Restaurants weltweit",
         "title": "Bereit für die digitale Transformation?",
-        "subtitle": "Erstellen Sie in wenigen Minuten Ihr professionelles QR-Menü und Ihre Restaurant-Website. Für immer kostenlos, keine Kreditkarte erforderlich.",
+        "subtitle": "Erstellen Sie in wenigen Minuten Ihr professionelles QR-Menü und Ihre Restaurant-Website. 14 Tage kostenlose Testphase, keine Kreditkarte erforderlich.",
         "demo": "Demo ansehen"
       },
       "benefits": [
@@ -533,7 +533,7 @@
     "perMonth": "/Monat",
     "billedYearly": "Jährlich abgerechnet {total}",
     "orMonthly": "Oder zahlen Sie {price} monatlich.",
-    "forever": "Für immer kostenlos",
+    "forever": "14 Tage kostenlose Testphase",
     "popular": "Am Beliebtesten",
     "plans": {
       "free": {
@@ -1081,7 +1081,7 @@
           "section3Title": "Sparen Sie 25 % mit jährlicher Abrechnung",
           "section3Text": "Restaurantbesitzer, die sich für eine jährliche Abrechnung für ihr QR-Menü- und Website-Abonnement entscheiden, sparen 25 % im Vergleich zu monatlichen Zahlungen. Der Growthplan sinkt von 4 € auf 3 € pro Monat, während der Pro-Plan von 7 € auf 6 € pro Monat bei jährlicher Abrechnung sinkt. Diese erheblichen Einsparungen helfen Restaurants, mehr in ihr Kerngeschäft zu investieren und gleichzeitig eine professionelle digitale Präsenz aufrechtzuerhalten. Wechseln Sie jederzeit über Ihr Dashboard zwischen monatlicher und jährlicher Abrechnung.",
           "benefitsTitle": "Vorteile unserer Abonnementpläne",
-          "benefit1": "Kostenloser Plan für immer verfügbar - keine Kreditkarte erforderlich, um zu starten",
+          "benefit1": "14 Tage kostenlose Testphase - keine Kreditkarte erforderlich, um zu starten",
           "benefit2": "Flexible monatliche oder jährliche Abrechnung mit 25 % Ersparnis bei jährlichen Plänen",
           "benefit3": "Sofortige Plan-Upgrades - neue Funktionen werden sofort aktiviert",
           "benefit4": "Sichere Stripe-Zahlungsabwicklung für alle Transaktionen",
@@ -1450,7 +1450,7 @@
       },
       {
         "question": "Wie viel kostet ein QR-Menü für ein Restaurant oder Café?",
-        "answer": "IQ Rest bietet flexible Preise ab 0 € für immer mit unserem kostenlosen Plan. Das macht es für jedes Restaurant oder Café erschwinglich, ein professionelles QR-Menü zu erstellen. Bezahlte Pläne beginnen bereits bei 4 €/Monat mit zusätzlichen Funktionen wie unbegrenzten Artikeln und erweiterten Analysen."
+        "answer": "IQ Rest beginnt mit einer 14-tägigen kostenlosen Testphase — voller Zugriff auf alle Funktionen, keine Kreditkarte erforderlich. Das macht es für jedes Restaurant oder Café erschwinglich, ein professionelles QR-Menü zu erstellen. Nach der Testphase beginnen die bezahlten Pläne bei nur 9,90 €/Monat mit Funktionen wie unbegrenzten Artikeln und erweiterten Analysen."
       },
       {
         "question": "Kann ich eine Website für mein Restaurant ohne Programmierkenntnisse erstellen?",
@@ -1470,7 +1470,7 @@
       },
       {
         "question": "Kann ich die QR-Menü-Lösung kostenlos ausprobieren?",
-        "answer": "Ja! Wir bieten einen völlig kostenlosen Plan für Restaurants und Cafés an, um IQ Rest auszuprobieren. Sie können Ihre digitale Menü-Website mit bis zu 15 Artikeln kostenlos erstellen, für immer. Keine Kreditkarte erforderlich, um zu starten. Upgrade nur, wenn Sie mehr Funktionen benötigen."
+        "answer": "Ja! Jedes neue Konto erhält eine 14-tägige kostenlose Testphase mit vollem Zugriff auf alle Funktionen — keine Kreditkarte erforderlich, um zu starten. Erstellen Sie Ihre digitale Menü-Website und probieren Sie alles aus, und wählen Sie dann einen Plan, wenn die Testphase endet."
       },
       {
         "question": "Ist IQ Rest eine App, die Kunden herunterladen müssen?",

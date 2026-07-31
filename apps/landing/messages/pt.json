@@ -29,7 +29,7 @@
         "noCreditCard": "Teste gratuito de 14 dias. Não é necessário cartão de crédito.",
         "trusted": "Confiado por mais de 500 restaurantes em todo o mundo",
         "title": "Pronto para Ir Digital?",
-        "subtitle": "Crie seu menu QR profissional e site de restaurante em minutos. Gratuito para sempre, sem necessidade de cartão de crédito.",
+        "subtitle": "Crie seu menu QR profissional e site de restaurante em minutos. Teste gratuito de 14 dias, sem necessidade de cartão de crédito.",
         "demo": "Ver Demonstração"
       },
       "benefits": [
@@ -533,7 +533,7 @@
     "perMonth": "/mês",
     "billedYearly": "Cobrado anualmente {total}",
     "orMonthly": "Ou pague {price} mensalmente.",
-    "forever": "Gratuito para sempre",
+    "forever": "Teste gratuito de 14 dias",
     "popular": "Mais Popular",
     "plans": {
       "free": {
@@ -1081,7 +1081,7 @@
           "section3Title": "Economize 25% com Cobrança Anual",
           "section3Text": "Proprietários de restaurantes que optam pela cobrança anual para sua assinatura de menu QR e site economizam 25% em comparação com pagamentos mensais. O plano Growth cai de €4 para €3 por mês, enquanto o plano Pro vai de €7 para €6 por mês quando faturado anualmente. Essa economia significativa ajuda restaurantes a investir mais em seu negócio principal enquanto mantêm uma presença digital profissional. Altere entre cobrança mensal e anual a qualquer momento através do seu painel.",
           "benefitsTitle": "Benefícios dos Nossos Planos de Assinatura",
-          "benefit1": "Plano grátis disponível para sempre - sem necessidade de cartão de crédito para começar",
+          "benefit1": "Teste gratuito de 14 dias - sem necessidade de cartão de crédito para começar",
           "benefit2": "Cobrança mensal ou anual flexível com 25% de economia em planos anuais",
           "benefit3": "Upgrades instantâneos de plano - novos recursos ativados imediatamente",
           "benefit4": "Processamento de pagamento seguro através do Stripe para todas as transações",
@@ -1450,7 +1450,7 @@
       },
       {
         "question": "Quanto custa um menu QR para um restaurante ou café?",
-        "answer": "O IQ Rest oferece preços flexíveis a partir de €0 para sempre com nosso plano gratuito. Isso torna acessível para qualquer restaurante ou café criar um menu QR profissional. Os planos pagos começam a partir de apenas €4/mês com recursos adicionais como itens ilimitados e análises avançadas."
+        "answer": "O IQ Rest começa com um teste gratuito de 14 dias — acesso completo a todos os recursos, sem necessidade de cartão de crédito. Isso torna acessível para qualquer restaurante ou café criar um menu QR profissional. Após o teste, os planos pagos começam a partir de apenas 9,90 €/mês com recursos como itens ilimitados e análises avançadas."
       },
       {
         "question": "Posso criar um site para meu restaurante sem codificação?",
@@ -1470,7 +1470,7 @@
       },
       {
         "question": "Posso experimentar a solução de menu QR gratuitamente?",
-        "answer": "Sim! Oferecemos um plano completamente gratuito para restaurantes e cafés experimentarem o IQ Rest. Você pode criar seu site de menu digital com até 15 itens sem custo, para sempre. Nenhum cartão de crédito é necessário para começar. Faça upgrade apenas quando precisar de mais recursos."
+        "answer": "Sim! Cada nova conta recebe um teste gratuito de 14 dias com acesso completo a todos os recursos — sem necessidade de cartão de crédito para começar. Crie o site do seu menu digital e experimente tudo, e depois escolha um plano quando o teste terminar."
       },
       {
         "question": "O IQ Rest é um aplicativo que os clientes precisam baixar?",

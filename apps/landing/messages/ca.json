@@ -29,7 +29,7 @@
         "noCreditCard": "Prova gratuïta de 14 dies. No es requereix targeta de crèdit.",
         "trusted": "Confiat per més de 500 restaurants a tot el món",
         "title": "Preparat per fer el pas al digital?",
-        "subtitle": "Crea el teu menú QR professional i el lloc web del teu restaurant en minuts. Gratuït per sempre, sense necessitat de targeta de crèdit.",
+        "subtitle": "Crea el teu menú QR professional i el lloc web del teu restaurant en minuts. Prova gratuïta de 14 dies, sense necessitat de targeta de crèdit.",
         "demo": "Veure Demo"
       },
       "benefits": [
@@ -533,7 +533,7 @@
     "perMonth": "/mes",
     "billedYearly": "Facturat anualment {total}",
     "orMonthly": "O pagueu {price} mensualment.",
-    "forever": "Gratuït per sempre",
+    "forever": "Prova gratuïta de 14 dies",
     "popular": "Més popular",
     "plans": {
       "free": {
@@ -1081,7 +1081,7 @@
           "section3Title": "Estalvia un 25% amb Facturació Anual",
           "section3Text": "Els propietaris de restaurants que es comprometen a la facturació anual per a la seva subscripció de menú QR i lloc web estalvien un 25% en comparació amb els pagaments mensuals. El pla Growth passa de 4€ a 3€ per mes, mentre que el pla Pro passa de 7€ a 6€ per mes quan es factura anualment. Aquest estalvi significatiu ajuda els restaurants a invertir més en el seu negoci principal mentre mantenen una presència digital professional. Canvia entre la facturació mensual i anual en qualsevol moment a través del teu tauler de control.",
           "benefitsTitle": "Beneficis dels Nostres Plans de Subscripció",
-          "benefit1": "Pla gratuït disponible per sempre - no es requereix targeta de crèdit per començar",
+          "benefit1": "Prova gratuïta de 14 dies - no es requereix targeta de crèdit per començar",
           "benefit2": "Facturació mensual o anual flexible amb un 25% d'estalvi en plans anuals",
           "benefit3": "Actualitzacions instantànies de pla - noves funcions s'activen immediatament",
           "benefit4": "Processament de pagaments segur a través de Stripe per a totes les transaccions",
@@ -1450,7 +1450,7 @@
       },
       {
         "question": "Quant costa un menú QR per a un restaurant o cafè?",
-        "answer": "IQ Rest ofereix preus flexibles a partir de 0 € per sempre amb el nostre pla gratuït. Això ho fa assequible per a qualsevol restaurant o cafè per crear un menú QR professional. Els plans de pagament comencen només a 4 €/mes amb funcions addicionals com articles il·limitats i analítiques avançades."
+        "answer": "IQ Rest comença amb una prova gratuïta de 14 dies — accés complet a totes les funcions, sense necessitat de targeta de crèdit. Això fa que sigui assequible per a qualsevol restaurant o cafè crear un menú QR professional. Després de la prova, els plans de pagament comencen des de només 9,90 €/mes amb funcions com articles il·limitats i analítiques avançades."
       },
       {
         "question": "Puc crear un lloc web per al meu restaurant sense programar?",
@@ -1470,7 +1470,7 @@
       },
       {
         "question": "Puc provar la solució de menú QR de manera gratuïta?",
-        "answer": "Sí! Oferim un pla completament gratuït per a restaurants i cafès per provar IQ Rest. Pots crear el teu lloc web de menú digital amb fins a 15 articles sense cost, per sempre. No es requereix targeta de crèdit per començar. Actualitza només quan necessitis més funcions."
+        "answer": "Sí! Cada compte nou obté una prova gratuïta de 14 dies amb accés complet a totes les funcions — sense necessitat de targeta de crèdit per començar. Crea el lloc web del teu menú digital i prova-ho tot, després tria un pla quan acabi la prova."
       },
       {
         "question": "És IQ Rest una aplicació que els clients han de descarregar?",

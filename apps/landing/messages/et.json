@@ -29,7 +29,7 @@
         "noCreditCard": "14-päevane tasuta prooviperiood. Krediitkaarti pole vaja.",
         "trusted": "Usaldavad 500+ restorani üle kogu maailma",
         "title": "Kas oled valmis digitaalseks muutuma?",
-        "subtitle": "Loo oma professionaalne QR menüü ja restorani veebisait minutitega. Igavesti tasuta, krediitkaarti ei ole vaja.",
+        "subtitle": "Loo oma professionaalne QR menüü ja restorani veebisait minutitega. 14-päevane tasuta prooviperiood, krediitkaarti ei ole vaja.",
         "demo": "Vaata demo"
       },
       "benefits": [
@@ -533,7 +533,7 @@
     "perMonth": "/kuu",
     "billedYearly": "Arveldatakse aastas {total}",
     "orMonthly": "Või maksa {price} igakuiselt.",
-    "forever": "Tasuta igavesti",
+    "forever": "14-päevane tasuta prooviperiood",
     "popular": "Kõige Populaarsem",
     "plans": {
       "free": {
@@ -1081,7 +1081,7 @@
           "section3Title": "Aastase arveldamisega säästate 25%",
           "section3Text": "Restoranide omanikud, kes valivad aastase arveldamise oma QR menüü ja veebisaidi tellimuse jaoks, säästavad 25% võrreldes igakuiste maksetega. Põhjalik plaan langeb 4 €-lt 3 €-le kuus, samas kui professionaalne plaan langeb 7 €-lt 6 €-le kuus, kui arveldatakse aastas. See märkimisväärne sääst aitab restoranidel investeerida rohkem oma Growthtegevusse, säilitades samal ajal professionaalse digitaalse kohaloleku. Vahetage igakuise ja aastase arveldamise vahel igal ajal oma armatuurlaudade kaudu.",
           "benefitsTitle": "Meie tellimuse plaanide eelised",
-          "benefit1": "Tasuta plaan igavesti saadaval - ei ole krediitkaardi nõuet, et alustada",
+          "benefit1": "14-päevane tasuta prooviperiood - alustamiseks ei ole krediitkaarti vaja",
           "benefit2": "Paindlik igakuine või aastane arveldamine, kus aastaplaanidel on 25% sääst",
           "benefit3": "Kohesed plaani uuendused - uued funktsioonid aktiveeritakse kohe",
           "benefit4": "Turvaline Stripe maksetöötlus kõigi tehingute jaoks",
@@ -1450,7 +1450,7 @@
       },
       {
         "question": "Kui palju maksab QR menüü restoranile või kohvikule?",
-        "answer": "IQ Rest pakub paindlikku hinnakujundust alates 0 € igaveseks meie tasuta plaaniga. See teeb professionaalse QR menüü loomise taskukohaseks igale restoranile või kohvikule. Tasulised plaanid algavad vaid 4 €/kuu koos täiendavate funktsioonidega nagu piiramatud tooted ja täiustatud analüütika."
+        "answer": "IQ Rest algab 14-päevase tasuta prooviperioodiga — täielik juurdepääs kõikidele funktsioonidele, krediitkaarti pole vaja. See teeb professionaalse QR menüü loomise taskukohaseks igale restoranile või kohvikule. Pärast prooviperioodi algavad tasulised plaanid vaid 9,90 €/kuu, sisaldades funktsioone nagu piiramatud tooted ja täiustatud analüütika."
       },
       {
         "question": "Kas ma saan luua veebilehe oma restoranile ilma kodeerimiseta?",
@@ -1470,7 +1470,7 @@
       },
       {
         "question": "Kas ma saan proovida QR menüü lahendust tasuta?",
-        "answer": "Jah! Me pakume täiesti tasuta plaani restoranidele ja kohvikutele, et proovida IQ Resti. Sa saad luua oma digitaalse menüü veebilehe kuni 15 tootele tasuta, igaveseks. Alustamiseks ei ole krediitkaarti vajalik. Uuenda ainult siis, kui vajad rohkem funktsioone."
+        "answer": "Jah! Iga uus konto saab 14-päevase tasuta prooviperioodi täieliku juurdepääsuga kõikidele funktsioonidele — alustamiseks pole krediitkaarti vaja. Loo oma digitaalse menüü veebisait ja proovi kõike, seejärel vali plaan, kui prooviperiood lõpeb."
       },
       {
         "question": "Kas IQ Rest on rakendus, mille kliendid peavad alla laadima?",

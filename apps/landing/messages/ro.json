@@ -29,7 +29,7 @@
         "noCreditCard": "Încercare gratuită de 14 zile. Nu este necesar un card de credit.",
         "trusted": "Apreciat de peste 500 de restaurante din întreaga lume",
         "title": "Ești pregătit să devii digital?",
-        "subtitle": "Creează-ți meniul QR profesional și site-ul restaurantului în câteva minute. Gratuit pentru totdeauna, fără card de credit necesar.",
+        "subtitle": "Creează-ți meniul QR profesional și site-ul restaurantului în câteva minute. Încercare gratuită de 14 zile, fără card de credit necesar.",
         "demo": "Vezi demo"
       },
       "benefits": [
@@ -533,7 +533,7 @@
     "perMonth": "/lună",
     "billedYearly": "Facturat anual {total}",
     "orMonthly": "Sau plătiți {price} lunar.",
-    "forever": "Gratuit pentru totdeauna",
+    "forever": "Încercare gratuită de 14 zile",
     "popular": "Cea mai populară",
     "plans": {
       "free": {
@@ -1081,7 +1081,7 @@
           "section3Title": "Save 25% with Yearly Billing",
           "section3Text": "Restaurant owners who commit to yearly billing for their QR menu and website subscription save 25% compared to monthly payments. The Growth plan drops from €4 to €3 per month, while the Pro plan goes from €7 to €6 per month when billed annually. This significant savings helps restaurants invest more in their core business while maintaining a professional digital presence. Switch between monthly and yearly billing anytime through your dashboard.",
           "benefitsTitle": "Benefits of Our Subscription Plans",
-          "benefit1": "Free plan available forever - no credit card required to start",
+          "benefit1": "Încercare gratuită de 14 zile - nu este necesar un card de credit pentru a începe",
           "benefit2": "Flexible monthly or yearly billing with 25% savings on annual plans",
           "benefit3": "Instant plan upgrades - new features activate immediately",
           "benefit4": "Secure Stripe payment processing for all transactions",
@@ -1450,7 +1450,7 @@
       },
       {
         "question": "Cât costă un meniu QR pentru un restaurant sau o cafenea?",
-        "answer": "IQ Rest oferă prețuri flexibile începând de la 0 € pentru totdeauna cu planul nostru gratuit. Acest lucru îl face accesibil pentru orice restaurant sau cafenea să creeze un meniu QR profesional. Planurile plătite încep de la doar 4 €/lună cu caracteristici suplimentare, cum ar fi articole nelimitate și analize avansate."
+        "answer": "IQ Rest începe cu o încercare gratuită de 14 zile — acces complet la toate funcțiile, fără card de credit. Acest lucru face accesibil pentru orice restaurant sau cafenea să creeze un meniu QR profesional. După încercare, planurile plătite încep de la doar 9,90 €/lună cu funcții precum articole nelimitate și analize avansate."
       },
       {
         "question": "Pot crea un site web pentru restaurantul meu fără programare?",
@@ -1470,7 +1470,7 @@
       },
       {
         "question": "Pot încerca soluția de meniu QR gratuit?",
-        "answer": "Da! Oferim un plan complet gratuit pentru restaurante și cafenele pentru a încerca IQ Rest. Puteți crea site-ul dumneavoastră de meniu digital cu până la 15 articole fără costuri, pentru totdeauna. Nu este necesară o carte de credit pentru a începe. Faceți upgrade doar când aveți nevoie de mai multe funcții."
+        "answer": "Da! Fiecare cont nou primește o încercare gratuită de 14 zile cu acces complet la toate funcțiile — fără card de credit pentru a începe. Creează site-ul meniului tău digital și încearcă totul, apoi alege un plan când se termină perioada de încercare."
       },
       {
         "question": "Este IQ Rest o aplicație pe care clienții trebuie să o descarce?",

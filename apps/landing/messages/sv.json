@@ -29,7 +29,7 @@
         "noCreditCard": "14 dagars gratis provperiod. Inget kreditkort krävs.",
         "trusted": "Betrodd av över 500 restauranger världen över",
         "title": "Redo att gå digitalt?",
-        "subtitle": "Skapa din professionella QR-meny och restaurangwebbplats på några minuter. Gratis för alltid, ingen kreditkort krävs.",
+        "subtitle": "Skapa din professionella QR-meny och restaurangwebbplats på några minuter. 14 dagars gratis provperiod, ingen kreditkort krävs.",
         "demo": "Se demo"
       },
       "benefits": [
@@ -533,7 +533,7 @@
     "perMonth": "/månad",
     "billedYearly": "Faktureras årligen {total}",
     "orMonthly": "Eller betala {price} månadsvis.",
-    "forever": "Gratis för alltid",
+    "forever": "14 dagars gratis provperiod",
     "popular": "Mest Populär",
     "plans": {
       "free": {
@@ -1081,7 +1081,7 @@
           "section3Title": "Spara 25% med årlig fakturering",
           "section3Text": "Restaurangägare som åtar sig årlig fakturering för sin QR-meny och webbplatsprenumeration sparar 25% jämfört med månatliga betalningar. Den Growth planen sjunker från €4 till €3 per månad, medan pro-planen går från €7 till €6 per månad när den faktureras årligen. Dessa betydande besparingar hjälper restauranger att investera mer i sin kärnverksamhet samtidigt som de upprätthåller en professionell digital närvaro. Växla mellan månatlig och årlig fakturering när som helst genom din instrumentpanel.",
           "benefitsTitle": "Fördelar med våra prenumerationsplaner",
-          "benefit1": "Gratis plan tillgänglig för alltid - inget kreditkort krävs för att börja",
+          "benefit1": "14 dagars gratis provperiod - inget kreditkort krävs för att börja",
           "benefit2": "Flexibel månatlig eller årlig fakturering med 25% besparingar på årliga planer",
           "benefit3": "Omedelbara planuppgraderingar - nya funktioner aktiveras omedelbart",
           "benefit4": "Säker Stripe betalningsbehandling för alla transaktioner",
@@ -1450,7 +1450,7 @@
       },
       {
         "question": "Hur mycket kostar en QR meny för en restaurang eller café?",
-        "answer": "IQ Rest erbjuder flexibla priser som börjar från €0 för alltid med vår kostnadsfria plan. Detta gör det överkomligt för alla restauranger eller caféer att skapa en professionell QR meny. Betalda planer börjar på bara €4/månad med ytterligare funktioner som obegränsade objekt och avancerad analys."
+        "answer": "IQ Rest börjar med en 14 dagars gratis provperiod — full tillgång till alla funktioner, inget kreditkort krävs. Detta gör det överkomligt för alla restauranger eller caféer att skapa en professionell QR-meny. Efter provperioden börjar de betalda planerna från bara 9,90 €/månad med funktioner som obegränsade objekt och avancerad analys."
       },
       {
         "question": "Kan jag skapa en webbplats för min restaurang utan kodning?",
@@ -1470,7 +1470,7 @@
       },
       {
         "question": "Kan jag prova QR meny-lösningen gratis?",
-        "answer": "Ja! Vi erbjuder en helt gratis plan för restauranger och caféer att prova IQ Rest. Du kan skapa din digitala menywebbplats med upp till 15 objekt utan kostnad, för alltid. Ingen kreditkort krävs för att börja. Uppgradera endast när du behöver fler funktioner."
+        "answer": "Ja! Varje nytt konto får en 14 dagars gratis provperiod med full tillgång till alla funktioner — inget kreditkort krävs för att börja. Skapa webbplatsen för din digitala meny och prova allt, och välj sedan en plan när provperioden tar slut."
       },
       {
         "question": "Är IQ Rest en app som kunder behöver ladda ner?",

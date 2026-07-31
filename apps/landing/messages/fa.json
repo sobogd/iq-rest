@@ -29,7 +29,7 @@
         "noCreditCard": "۱۴ روز آزمایشی رایگان. بدون نیاز به کارت اعتباری.",
         "trusted": "مورد اعتماد بیش از ۵۰۰ رستوران در سرتاسر جهان",
         "title": "آماده دیجیتالی شدن هستید؟",
-        "subtitle": "منوی QR حرفه‌ای و وب‌سایت رستوران خود را در عرض چند دقیقه ایجاد کنید. به صورت رایگان و برای همیشه، بدون نیاز به کارت اعتباری.",
+        "subtitle": "منوی QR حرفه‌ای و وب‌سایت رستوران خود را در عرض چند دقیقه ایجاد کنید. ۱۴ روز آزمایشی رایگان، بدون نیاز به کارت اعتباری.",
         "demo": "مشاهده نسخه نمایشی"
       },
       "benefits": [
@@ -533,7 +533,7 @@
     "perMonth": "/ماه",
     "billedYearly": "صورت‌حساب سالانه {total}",
     "orMonthly": "یا {price} به صورت ماهانه پرداخت کنید.",
-    "forever": "برای همیشه رایگان",
+    "forever": "۱۴ روز آزمایشی رایگان",
     "popular": "محبوب‌ترین",
     "plans": {
       "free": {
@@ -1081,7 +1081,7 @@
           "section3Title": "Save 25% with Yearly Billing",
           "section3Text": "Restaurant owners who commit to yearly billing for their QR menu and website subscription save 25% compared to monthly payments. The Growth plan drops from €4 to €3 per month, while the Pro plan goes from €7 to €6 per month when billed annually. This significant savings helps restaurants invest more in their core business while maintaining a professional digital presence. Switch between monthly and yearly billing anytime through your dashboard.",
           "benefitsTitle": "Benefits of Our Subscription Plans",
-          "benefit1": "Free plan available forever - no credit card required to start",
+          "benefit1": "۱۴ روز آزمایشی رایگان - برای شروع نیازی به کارت اعتباری نیست",
           "benefit2": "Flexible monthly or yearly billing with 25% savings on annual plans",
           "benefit3": "Instant plan upgrades - new features activate immediately",
           "benefit4": "Secure Stripe payment processing for all transactions",
@@ -1450,7 +1450,7 @@
       },
       {
         "question": "هزینه منوی QR برای رستوران یا کافه چقدر است؟",
-        "answer": "IQ Rest قیمت‌گذاری انعطاف‌پذیر از €۰ برای همیشه با پلن رایگان ارائه می‌دهد. این برای هر رستوران یا کافه‌ای مقرون به صرفه است. پلن‌های پولی از فقط €۴/ماه با ویژگی‌های اضافی مانند آیتم‌های نامحدود و آنالیز پیشرفته شروع می‌شوند."
+        "answer": "IQ Rest با یک دوره آزمایشی رایگان ۱۴ روزه آغاز می‌شود — دسترسی کامل به همه ویژگی‌ها، بدون نیاز به کارت اعتباری. این امر ایجاد یک منوی QR حرفه‌ای را برای هر رستوران یا کافه‌ای مقرون‌به‌صرفه می‌کند. پس از دوره آزمایشی، پلن‌های پولی تنها از ۹٫۹۰€ در ماه با ویژگی‌هایی مانند آیتم‌های نامحدود و تحلیل‌های پیشرفته شروع می‌شوند."
       },
       {
         "question": "آیا می‌توانم بدون کدنویسی وبسایت برای رستورانم ایجاد کنم؟",
@@ -1470,7 +1470,7 @@
       },
       {
         "question": "آیا می‌توانم راه‌حل منوی QR را رایگان امتحان کنم؟",
-        "answer": "بله! ما یک پلن کاملاً رایگان برای رستوران‌ها و کافه‌ها ارائه می‌دهیم تا IQ Rest را امتحان کنند. می‌توانید وبسایت منوی دیجیتال خود را با حداکثر ۱۵ آیتم بدون هزینه، برای همیشه ایجاد کنید. نیازی به کارت اعتباری برای شروع نیست. فقط وقتی به ویژگی‌های بیشتر نیاز دارید ارتقا دهید."
+        "answer": "بله! هر حساب جدید یک دوره آزمایشی رایگان ۱۴ روزه با دسترسی کامل به همه ویژگی‌ها دریافت می‌کند — برای شروع نیازی به کارت اعتباری نیست. وب‌سایت منوی دیجیتال خود را بسازید و همه چیز را امتحان کنید، سپس در پایان دوره آزمایشی یک پلن انتخاب کنید."
       },
       {
         "question": "آیا IQ Rest یک اپلیکیشن است که مشتریان باید دانلود کنند؟",

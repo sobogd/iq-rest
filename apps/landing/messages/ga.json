@@ -29,7 +29,7 @@
         "noCreditCard": "Triail saor in aisce 14 lá. Níl aon chárta creidmheasa ag teastáil.",
         "trusted": "Muinín ag 500+ bialann ar fud an domhain",
         "title": "Réidh le dul digiteach?",
-        "subtitle": "Cruthaigh do QR menu gairmiúil agus suíomh gréasáin bialann i nóiméid. Saor go deo, níl gá le cárta creidmheasa.",
+        "subtitle": "Cruthaigh do QR menu gairmiúil agus suíomh gréasáin bialann i nóiméid. Triail saor in aisce 14 lá, níl gá le cárta creidmheasa.",
         "demo": "Féach ar Demo"
       },
       "benefits": [
@@ -533,7 +533,7 @@
     "perMonth": "/mí",
     "billedYearly": "Billeáilte go bliantúil {total}",
     "orMonthly": "Nó íoc {price} go míosúil.",
-    "forever": "Saor go deo",
+    "forever": "Triail saor in aisce 14 lá",
     "popular": "Is Coitianta",
     "plans": {
       "free": {
@@ -1081,7 +1081,7 @@
           "section3Title": "Save 25% with Yearly Billing",
           "section3Text": "Restaurant owners who commit to yearly billing for their QR menu and website subscription save 25% compared to monthly payments. The Growth plan drops from €4 to €3 per month, while the Pro plan goes from €7 to €6 per month when billed annually. This significant savings helps restaurants invest more in their core business while maintaining a professional digital presence. Switch between monthly and yearly billing anytime through your dashboard.",
           "benefitsTitle": "Benefits of Our Subscription Plans",
-          "benefit1": "Free plan available forever - no credit card required to start",
+          "benefit1": "Triail saor in aisce 14 lá - níl aon chárta creidmheasa ag teastáil chun tosú",
           "benefit2": "Flexible monthly or yearly billing with 25% savings on annual plans",
           "benefit3": "Instant plan upgrades - new features activate immediately",
           "benefit4": "Secure Stripe payment processing for all transactions",
@@ -1450,7 +1450,7 @@
       },
       {
         "question": "Cé mhéad a chosnaíonn meán QR do bhialann nó caifé?",
-        "answer": "Tugann IQ Rest praghsáil solúbtha ag tosú ó €0 go deo le ár bplean saor in aisce. Déanann sé seo é inacmhainne do bhialann nó caifé ar bith chun meán QR gairmiúil a chruthú. Tosaíonn pleananna íoctha ag €4/mí le gnéithe breise cosúil le míreanna gan teorainn agus anailísí chun cinn."
+        "answer": "Tosaíonn IQ Rest le triail saor in aisce 14 lá — rochtain iomlán ar gach gné, gan gá le cárta creidmheasa. Fágann sé sin go bhfuil sé inacmhainne d'aon bhialann nó caifé meán QR gairmiúil a chruthú. Tar éis na trialach, tosaíonn pleananna íoctha ó 9,90 €/mí amháin le gnéithe cosúil le míreanna gan teorainn agus anailísíocht chun cinn."
       },
       {
         "question": "An féidir liom suíomh gréasáin a chruthú do mo bhialann gan cód a scríobh?",
@@ -1470,7 +1470,7 @@
       },
       {
         "question": "An féidir liom an réiteach meán QR a thriail saor in aisce?",
-        "answer": "Sea! Tairgimid plean go hiomlán saor in aisce do bhialanna agus caiféanna chun IQ Rest a thriail. Is féidir leat do shuíomh gréasáin meán digiteach a chruthú le suas le 15 mír gan aon chostas, go deo. Ní gá cárta creidmheasa a bheith agat chun tosú. Uasghrádaigh amháin nuair a theastaíonn níos mó gnéithe uait."
+        "answer": "Sea! Faigheann gach cuntas nua triail saor in aisce 14 lá le rochtain iomlán ar gach gné — gan gá le cárta creidmheasa chun tosú. Cruthaigh suíomh gréasáin do bhiachláir dhigitigh agus bain triail as gach rud, ansin roghnaigh plean nuair a chríochnaíonn an triail."
       },
       {
         "question": "An app é IQ Rest a gcaithfidh custaiméirí a íoslódáil?",

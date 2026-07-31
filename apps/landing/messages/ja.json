@@ -29,7 +29,7 @@
         "noCreditCard": "14日間無料トライアル。クレジットカード不要。",
         "trusted": "世界中の500以上のレストランに信頼されています",
         "title": "デジタル化の準備はできていますか？",
-        "subtitle": "プロフェッショナルなQRメニューとレストランウェブサイトを数分で作成できます。永遠に無料、クレジットカードは不要です。",
+        "subtitle": "プロフェッショナルなQRメニューとレストランウェブサイトを数分で作成できます。14日間無料トライアル、クレジットカードは不要です。",
         "demo": "デモを見る"
       },
       "benefits": [
@@ -533,7 +533,7 @@
     "perMonth": "/月",
     "billedYearly": "年間請求 {total}",
     "orMonthly": "または月額 {price} でお支払い。",
-    "forever": "永久無料",
+    "forever": "14日間無料トライアル",
     "popular": "最も人気",
     "plans": {
       "free": {
@@ -1081,7 +1081,7 @@
           "section3Title": "Save 25% with Yearly Billing",
           "section3Text": "Restaurant owners who commit to yearly billing for their QR menu and website subscription save 25% compared to monthly payments. The Growth plan drops from €4 to €3 per month, while the Pro plan goes from €7 to €6 per month when billed annually. This significant savings helps restaurants invest more in their core business while maintaining a professional digital presence. Switch between monthly and yearly billing anytime through your dashboard.",
           "benefitsTitle": "Benefits of Our Subscription Plans",
-          "benefit1": "Free plan available forever - no credit card required to start",
+          "benefit1": "14日間無料トライアル - 開始にクレジットカードは不要",
           "benefit2": "Flexible monthly or yearly billing with 25% savings on annual plans",
           "benefit3": "Instant plan upgrades - new features activate immediately",
           "benefit4": "Secure Stripe payment processing for all transactions",
@@ -1450,7 +1450,7 @@
       },
       {
         "question": "レストランやカフェのQRメニューはいくらですか？",
-        "answer": "IQ Restは無料プランで€0からの柔軟な価格設定を提供しています。"
+        "answer": "IQ Restは14日間の無料トライアルから始まります — すべての機能にフルアクセスでき、クレジットカードは不要です。これにより、どんなレストランやカフェでも手頃な価格でプロフェッショナルなQRメニューを作成できます。トライアル終了後は、無制限のアイテムや高度な分析などの機能を備えた有料プランが月額9.90ユーロから利用できます。"
       },
       {
         "question": "コーディングなしでレストランのウェブサイトを作成できますか？",
@@ -1470,7 +1470,7 @@
       },
       {
         "question": "QRメニューソリューションを無料で試すことはできますか？",
-        "answer": "はい！私たちは、レストランやカフェがIQ Restを試すための完全に無料のプランを提供しています。最大15品目のデジタルメニューウェブサイトを費用なしで永遠に作成できます。開始するのにクレジットカードは不要です。必要な機能が増えたときにのみアップグレードしてください。"
+        "answer": "はい！すべての新規アカウントは、すべての機能にフルアクセスできる14日間の無料トライアルを利用できます — 開始にクレジットカードは不要です。デジタルメニューのウェブサイトを作成してすべてをお試しいただき、トライアル終了時にプランをお選びください。"
       },
       {
         "question": "IQ Restは顧客がダウンロードする必要があるアプリですか？",

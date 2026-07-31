@@ -29,7 +29,7 @@
         "noCreditCard": "Essai gratuit de 14 jours. Aucune carte de crédit requise.",
         "trusted": "Fidèle à plus de 500 restaurants dans le monde",
         "title": "Prêt à passer au numérique ?",
-        "subtitle": "Créez votre menu QR professionnel et votre site web de restaurant en quelques minutes. Gratuit pour toujours, sans carte de crédit requise.",
+        "subtitle": "Créez votre menu QR professionnel et votre site web de restaurant en quelques minutes. Essai gratuit de 14 jours, sans carte de crédit requise.",
         "demo": "Voir la démo"
       },
       "benefits": [
@@ -533,7 +533,7 @@
     "perMonth": "/mois",
     "billedYearly": "Facturé annuellement {total}",
     "orMonthly": "Ou payez {price} mensuellement.",
-    "forever": "Gratuit pour toujours",
+    "forever": "Essai gratuit de 14 jours",
     "popular": "Le Plus Populaire",
     "plans": {
       "free": {
@@ -1081,7 +1081,7 @@
           "section3Title": "Économisez 25% avec la Facturation Annuelle",
           "section3Text": "Les propriétaires de restaurants qui s'engagent à la facturation annuelle pour leur abonnement de menu QR et de site web économisent 25% par rapport aux paiements mensuels. Le plan Growth passe de 4 € à 3 € par mois, tandis que le plan Pro passe de 7 € à 6 € par mois lorsqu'il est facturé annuellement. Ces économies significatives aident les restaurants à investir davantage dans leur cœur de métier tout en maintenant une présence numérique professionnelle. Changez entre la facturation mensuelle et annuelle à tout moment via votre tableau de bord.",
           "benefitsTitle": "Avantages de Nos Plans d'Abonnement",
-          "benefit1": "Plan gratuit disponible pour toujours - aucune carte de crédit requise pour commencer",
+          "benefit1": "Essai gratuit de 14 jours - aucune carte de crédit requise pour commencer",
           "benefit2": "Facturation mensuelle ou annuelle flexible avec 25% d'économies sur les plans annuels",
           "benefit3": "Mises à niveau de plan instantanées - nouvelles fonctionnalités activées immédiatement",
           "benefit4": "Traitement sécurisé des paiements via Stripe pour toutes les transactions",
@@ -1450,7 +1450,7 @@
       },
       {
         "question": "Combien coûte un menu QR pour un restaurant ou un café ?",
-        "answer": "IQ Rest propose des tarifs flexibles à partir de 0 € à vie avec notre plan gratuit. Cela rend abordable pour tout restaurant ou café de créer un menu QR professionnel. Les plans payants commencent à seulement 4 €/mois avec des fonctionnalités supplémentaires comme des articles illimités et des analyses avancées."
+        "answer": "IQ Rest commence par un essai gratuit de 14 jours — accès complet à toutes les fonctionnalités, aucune carte de crédit requise. Cela rend abordable pour tout restaurant ou café la création d'un menu QR professionnel. Après l'essai, les plans payants commencent à seulement 9,90 €/mois avec des fonctionnalités comme des articles illimités et des analyses avancées."
       },
       {
         "question": "Puis-je créer un site web pour mon restaurant sans coder ?",
@@ -1470,7 +1470,7 @@
       },
       {
         "question": "Puis-je essayer la solution de menu QR gratuitement ?",
-        "answer": "Oui ! Nous proposons un plan entièrement gratuit pour les restaurants et cafés afin d'essayer IQ Rest. Vous pouvez créer votre site web de menu numérique avec jusqu'à 15 articles sans frais, pour toujours. Aucune carte de crédit requise pour commencer. Mettez à niveau uniquement lorsque vous avez besoin de plus de fonctionnalités."
+        "answer": "Oui ! Chaque nouveau compte bénéficie d'un essai gratuit de 14 jours avec un accès complet à toutes les fonctionnalités — aucune carte de crédit requise pour commencer. Créez le site web de votre menu numérique et essayez tout, puis choisissez un plan à la fin de l'essai."
       },
       {
         "question": "IQ Rest est-il une application que les clients doivent télécharger ?",

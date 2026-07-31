@@ -29,7 +29,7 @@
         "noCreditCard": "14 päivän ilmainen kokeilu. Luottokorttia ei tarvita.",
         "trusted": "Luotettu yli 500 ravintolan toimesta ympäri maailmaa",
         "title": "Valmiina siirtymään digitaaliseen maailmaan?",
-        "subtitle": "Luo ammattimainen QR-menu ja ravintolan verkkosivusto minuuteissa. Ilmainen ikuisesti, ei vaadita luottokorttia.",
+        "subtitle": "Luo ammattimainen QR-menu ja ravintolan verkkosivusto minuuteissa. 14 päivän ilmainen kokeilu, ei vaadita luottokorttia.",
         "demo": "Katso demo"
       },
       "benefits": [
@@ -533,7 +533,7 @@
     "perMonth": "/kk",
     "billedYearly": "Laskutetaan vuosittain {total}",
     "orMonthly": "Tai maksa {price} kuukausittain.",
-    "forever": "Ilmainen ikuisesti",
+    "forever": "14 päivän ilmainen kokeilu",
     "popular": "Suosituin",
     "plans": {
       "free": {
@@ -1081,7 +1081,7 @@
           "section3Title": "Save 25% with Yearly Billing",
           "section3Text": "Restaurant owners who commit to yearly billing for their QR menu and website subscription save 25% compared to monthly payments. The Growth plan drops from €4 to €3 per month, while the Pro plan goes from €7 to €6 per month when billed annually. This significant savings helps restaurants invest more in their core business while maintaining a professional digital presence. Switch between monthly and yearly billing anytime through your dashboard.",
           "benefitsTitle": "Benefits of Our Subscription Plans",
-          "benefit1": "Free plan available forever - no credit card required to start",
+          "benefit1": "14 päivän ilmainen kokeilu - aloittamiseen ei tarvita luottokorttia",
           "benefit2": "Flexible monthly or yearly billing with 25% savings on annual plans",
           "benefit3": "Instant plan upgrades - new features activate immediately",
           "benefit4": "Secure Stripe payment processing for all transactions",
@@ -1450,7 +1450,7 @@
       },
       {
         "question": "Kuinka paljon QR-menu maksaa ravintolalle tai kahvilalle?",
-        "answer": "IQ Rest tarjoaa joustavaa hinnoittelua alkaen 0 € ikuisesti ilmaisella suunnitelmallamme. Tämä tekee ammattimaisen QR-menun luomisesta edullista kaikille ravintoloille ja kahviloille. Maksetut suunnitelmat alkavat vain 4 €/kk lisäominaisuuksilla, kuten rajoittamattomilla tuotteilla ja kehittyneillä analytiikoilla."
+        "answer": "IQ Rest alkaa 14 päivän ilmaisella kokeilulla — täysi pääsy kaikkiin ominaisuuksiin, luottokorttia ei tarvita. Tämä tekee ammattimaisen QR-menun luomisesta edullista kaikille ravintoloille ja kahviloille. Kokeilun jälkeen maksulliset suunnitelmat alkavat vain 9,90 €/kk ominaisuuksilla, kuten rajoittamattomat tuotteet ja kehittynyt analytiikka."
       },
       {
         "question": "Voinko luoda verkkosivuston ravintolalleni ilman koodaustaitoja?",
@@ -1470,7 +1470,7 @@
       },
       {
         "question": "Voinko kokeilla QR-menu ratkaisua ilmaiseksi?",
-        "answer": "Kyllä! Tarjoamme täysin ilmaisen suunnitelman ravintoloille ja kahviloille kokeillaksesi IQ Restiä. Voit luoda digitaalisen menuverkkosivustosi jopa 15 tuotteella ilman kustannuksia, ikuisesti. Aloittamiseen ei tarvita luottokorttia. Päivitä vain, kun tarvitset lisää ominaisuuksia."
+        "answer": "Kyllä! Jokainen uusi tili saa 14 päivän ilmaisen kokeilun, jossa on täysi pääsy kaikkiin ominaisuuksiin — aloittamiseen ei tarvita luottokorttia. Luo digitaalisen menun verkkosivusto ja kokeile kaikkea, ja valitse sitten suunnitelma, kun kokeilu päättyy."
       },
       {
         "question": "Onko IQ Rest sovellus, jonka asiakkaiden täytyy ladata?",

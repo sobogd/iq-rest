@@ -29,7 +29,7 @@
         "noCreditCard": "14-dňová bezplatná skúšobná verzia. Nevyžaduje sa žiadna kreditná karta.",
         "trusted": "Dôveryhodné viac ako 500 reštauráciami po celom svete",
         "title": "Pripravení prejsť na digitálnu formu?",
-        "subtitle": "Vytvorte si profesionálne QR menu a webovú stránku reštaurácie za pár minút. Navždy zadarmo, bez potreby kreditnej karty.",
+        "subtitle": "Vytvorte si profesionálne QR menu a webovú stránku reštaurácie za pár minút. 14-dňová bezplatná skúšobná verzia, bez potreby kreditnej karty.",
         "demo": "Pozrieť demo"
       },
       "benefits": [
@@ -533,7 +533,7 @@
     "perMonth": "/mes",
     "billedYearly": "Fakturované ročne {total}",
     "orMonthly": "Alebo plaťte {price} mesačne.",
-    "forever": "Navždy zadarmo",
+    "forever": "14-dňová bezplatná skúšobná verzia",
     "popular": "Najobľúbenejšie",
     "plans": {
       "free": {
@@ -1081,7 +1081,7 @@
           "section3Title": "Save 25% with Yearly Billing",
           "section3Text": "Restaurant owners who commit to yearly billing for their QR menu and website subscription save 25% compared to monthly payments. The Growth plan drops from €4 to €3 per month, while the Pro plan goes from €7 to €6 per month when billed annually. This significant savings helps restaurants invest more in their core business while maintaining a professional digital presence. Switch between monthly and yearly billing anytime through your dashboard.",
           "benefitsTitle": "Benefits of Our Subscription Plans",
-          "benefit1": "Free plan available forever - no credit card required to start",
+          "benefit1": "14-dňová bezplatná skúšobná verzia - na začiatok nie je potrebná kreditná karta",
           "benefit2": "Flexible monthly or yearly billing with 25% savings on annual plans",
           "benefit3": "Instant plan upgrades - new features activate immediately",
           "benefit4": "Secure Stripe payment processing for all transactions",
@@ -1450,7 +1450,7 @@
       },
       {
         "question": "Koľko stojí QR menu pre reštauráciu alebo kaviareň?",
-        "answer": "IQ Rest ponúka flexibilné ceny začínajúce od 0 € navždy s naším bezplatným plánom. To robí vytvorenie profesionálneho QR menu dostupným pre akúkoľvek reštauráciu alebo kaviareň. Platené plány začínajú len na 4 €/mesiac s ďalšími funkciami ako neobmedzené položky a pokročilé analýzy."
+        "answer": "IQ Rest začína 14-dňovou bezplatnou skúšobnou verziou — plný prístup ku všetkým funkciám, bez kreditnej karty. Vďaka tomu si každá reštaurácia alebo kaviareň môže dovoliť vytvoriť profesionálne QR menu. Po skúšobnej verzii začínajú platené plány už od 9,90 €/mesiac s funkciami ako neobmedzené položky a pokročilé analýzy."
       },
       {
         "question": "Môžem vytvoriť webovú stránku pre svoju reštauráciu bez programovania?",
@@ -1470,7 +1470,7 @@
       },
       {
         "question": "Môžem vyskúšať riešenie QR menu zadarmo?",
-        "answer": "Áno! Ponúkame úplne bezplatný plán pre reštaurácie a kaviarne, aby si mohli vyskúšať IQ Rest. Môžete vytvoriť svoju webovú stránku digitálneho menu s až 15 položkami bez nákladov, navždy. Na začiatok nie je potrebná žiadna kreditná karta. Upgradujte len vtedy, keď potrebujete viac funkcií."
+        "answer": "Áno! Každý nový účet získa 14-dňovú bezplatnú skúšobnú verziu s plným prístupom ku všetkým funkciám — na začiatok nie je potrebná kreditná karta. Vytvorte si webovú stránku digitálneho menu a vyskúšajte všetko, a po skončení skúšobnej verzie si vyberte plán."
       },
       {
         "question": "Je IQ Rest aplikácia, ktorú si zákazníci musia stiahnuť?",
