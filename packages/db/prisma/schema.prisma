@@ -13,20 +13,20 @@ datasource db {
 }
 
 model User {
-  id              String    @id @default(cuid())
-  email           String    @unique
-  otp             String?
-  otpExpiresAt    DateTime?
-  otpAttempts     Int       @default(0) // failed OTP verification attempts
-  sessionToken    String?   // hashed session token for validation
-  preferredLocale String?   // last locale the user actively used in the dashboard; drives email language
+  id                    String    @id @default(cuid())
+  email                 String    @unique
+  otp                   String?
+  otpExpiresAt          DateTime?
+  otpAttempts           Int       @default(0) // failed OTP verification attempts
+  sessionToken          String? // hashed session token for validation
+  preferredLocale       String? // last locale the user actively used in the dashboard; drives email language
   // Pre-signup context captured before OTP verify (cleared on first verify).
   // Used to seed a template restaurant for new accounts that came through the create-flow.
   pendingCuisine        String?
   pendingRestaurantName String?
   pendingCurrency       String?
-  createdAt       DateTime  @default(now())
-  updatedAt       DateTime  @updatedAt
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime  @updatedAt
 
   // Email-campaign tracking — emails go to the human, not the venue.
   emailsSent        Json?
@@ -63,7 +63,7 @@ model Session {
   createdAt DateTime  @default(now())
   expiresAt DateTime?
 
-  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId])
   @@map("sessions")
@@ -89,67 +89,67 @@ enum SubscriptionStatus {
 }
 
 model Restaurant {
-  id              String   @id @default(cuid())
-  title           String
-  subtitle        String?
-  description     String?
-  slug            String?
-  currency        String   @default("EUR")
-  source          String?
+  id               String   @id @default(cuid())
+  title            String
+  subtitle         String?
+  description      String?
+  slug             String?
+  currency         String   @default("EUR")
+  source           String?
   // "image" | "video"; null when source is unset
-  backgroundType  String?
-  accentColor     String   @default("#ED3A3A")
-  address         String?
-  x               String?
-  y               String?
+  backgroundType   String?
+  accentColor      String   @default("#ED3A3A")
+  address          String?
+  x                String?
+  y                String?
   // Google Places ID for the venue, captured by the dashboard map picker.
   // Used only to disambiguate the "Open in Google Maps" link when several
   // businesses share the same address (different floor / unit). Marker on
   // the public menu map still renders from x/y to avoid Places API cost.
-  googlePlaceId   String?
-  phone           String?
-  instagram       String?
-  whatsapp        String?
-  languages       String[] @default(["en"])
-  defaultLanguage String   @default("en")
-  hideTitle       Boolean  @default(false)
+  googlePlaceId    String?
+  phone            String?
+  instagram        String?
+  whatsapp         String?
+  languages        String[] @default(["en"])
+  defaultLanguage  String   @default("en")
+  hideTitle        Boolean  @default(false)
   // Public-menu hero: hide the description independently of the title. Kept in
   // sync with hideTitle at migration time (old hideTitle hid the whole block).
-  hideDescription Boolean  @default(false)
+  hideDescription  Boolean  @default(false)
   // Restaurant logo shown on the public-menu hero (above the name, or alone).
   // Transparent PNG/SVG/WebP recommended; uploaded via /api/upload like the
   // background. Null = no logo.
-  logoUrl         String?
+  logoUrl          String?
   // Toggle to hide an uploaded logo without deleting the file.
-  hideLogo        Boolean  @default(false)
+  hideLogo         Boolean  @default(false)
   // Hero logo size: "small" | "medium" | "large" — mirrors titleScale but
   // independent (logos often embed the name and want their own scale).
-  logoScale       String   @default("medium")
+  logoScale        String   @default("medium")
   // Public-menu visual: "flat" (current — horizontal tabs + inline dishes)
   // or "drill" (vertical list of categories → click into per-category dish screen).
   // Groups, when present, always show as a vertical drill above this layout.
-  menuLayout      String   @default("flat")
+  menuLayout       String   @default("flat")
   // Public-menu hero title/description font scale: "small" | "medium" | "large".
   // Proportional steps applied over the background image (default large).
-  titleScale      String   @default("medium")
+  titleScale       String   @default("medium")
   // Public-menu language switcher placement: "inline" (nav-list row, default
   // for existing restaurants) | "top" (globe icon over the hero). New
   // restaurants are seeded with "top".
-  languageSwitcher String  @default("inline")
+  languageSwitcher String   @default("inline")
   // Payment methods this restaurant offers — enum codes only (cash, card, ...).
   // Display strings live in dashboard locales; integrations add new codes here.
-  paymentMethods  String[] @default(["cash", "card"])
+  paymentMethods   String[] @default(["cash", "card"])
   // Free-form internal note written by admins; never shown to customers
   // or restaurant owners. Edited via the admin restaurant modal.
-  adminComment    String?
+  adminComment     String?
   // Per-restaurant overrides for the public-menu UI i18n strings (buttons,
   // headings, order/reservation copy). Shape: { [locale]: { [i18nKey]: string } }
   // e.g. { "es": { "publicMenu.order.add": "Añadir" } }. Empty / missing key
   // ⇒ the diner SPA falls back to its built-in i18n text. Edited from the
   // dashboard "Menu texts" section; the curated key list lives client-side.
-  customTexts     Json?
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
+  customTexts      Json?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
 
   // Checklist flags (set once on first user action)
   checklistMenuEdited      Boolean @default(false)
@@ -166,11 +166,11 @@ model Restaurant {
   onboardingFillDone       Boolean @default(false)
 
   // UI banners (per-restaurant dismissals)
-  scanBannerDismissed      Boolean @default(false)
+  scanBannerDismissed Boolean @default(false)
 
   // Free AI trials
-  freeTranslationsLeft      Int @default(5)
-  freeImageGenerationsLeft  Int @default(2)
+  freeTranslationsLeft     Int @default(5)
+  freeImageGenerationsLeft Int @default(2)
 
   // Monthly AI usage counters (reset manually or via cron)
   translationsUsed      Int @default(0)
@@ -196,11 +196,11 @@ model Restaurant {
   timezone               String  @default("UTC")
 
   // WhatsApp orders
-  ordersEnabled          Boolean @default(false)
-  orderNameEnabled       Boolean @default(true)
-  orderPhoneEnabled      Boolean @default(false)
-  orderAddressEnabled    Boolean @default(false)
-  orderMode              String  @default("internal") // "internal" | "whatsapp" | "both"
+  ordersEnabled       Boolean @default(false)
+  orderNameEnabled    Boolean @default(true)
+  orderPhoneEnabled   Boolean @default(false)
+  orderAddressEnabled Boolean @default(false)
+  orderMode           String  @default("internal") // "internal" | "whatsapp" | "both"
 
   // Per-restaurant billing. Each restaurant carries its own subscription —
   // creating a second restaurant means a second sub. `trialEndsAt` is
@@ -216,16 +216,33 @@ model Restaurant {
   // Transient checkout-in-progress flag (per-restaurant UI spinner). The ONLY
   // billing-ish column that stays on Restaurant — all plan/subscription/trial/
   // Stripe state moved to Account + Subscription (billing→Account migration).
-  paymentProcessing     Boolean             @default(false)
+  paymentProcessing Boolean @default(false)
 
   // ─── Account/Subscription (billing→Account migration, cutover done) ──────────
   // Billing lives entirely on the account now. Every restaurant belongs to one.
-  accountId       String
-  account         Account @relation(fields: [accountId], references: [id])
+  accountId    String
+  account      Account @relation(fields: [accountId], references: [id])
   // Per-venue PRO bypass, migrated from `legacyFullAccess`. 'PRO' → this venue
   // is full PRO regardless of the Account subscription (see @iq-rest/entitlements
   // getRestaurantCaps). Usually null.
-  planOverride    String?
+  planOverride String?
+
+  // ─── Per-restaurant feature flags (billing-features-constructor) ─────────────
+  // Which features this venue has. These become the authoritative "which" set in
+  // getRestaurantCaps once access ("whether": paid sub / trial / manualAccess) is
+  // granted. Backfilled at migration time to mirror the old plan → identical caps.
+  featMenuOnline   Boolean @default(true)
+  featOrders       Boolean @default(false)
+  featKds          Boolean @default(false)
+  featReservations Boolean @default(false)
+  featCustomDomain Boolean @default(false)
+  featAiUnlimited  Boolean @default(false)
+  // Free comp: grant this venue's features with NO active subscription (generalises
+  // planOverride). New venues + trial default to all features on (see backfill).
+  manualAccess     Boolean @default(false)
+  // Custom domain served for this venue. Flag-gated by featCustomDomain; the nginx
+  // server_name + TLS are configured manually via support (no self-serve).
+  customDomain     String? @unique
 
   tables          Table[]
   reservations    Reservation[]
@@ -270,23 +287,28 @@ model RestaurantUser {
 // Account = identity/ownership boundary. One Stripe customer + one subscription
 // per Account; all of the account's restaurants inherit its entitlement.
 model Account {
-  id               String    @id @default(cuid())
-  createdAt        DateTime  @default(now())
-  updatedAt        DateTime  @updatedAt
+  id               String          @id @default(cuid())
+  createdAt        DateTime        @default(now())
+  updatedAt        DateTime        @updatedAt
   // One Stripe customer for the whole account (not per-restaurant). Currency is
   // locked on the Stripe customer, so it is effectively locked per account.
-  stripeCustomerId String?   @unique
-  billingCurrency  String    @default("EUR")
+  stripeCustomerId String?         @unique
+  billingCurrency  String          @default("EUR")
   // Trial is one-per-account (14 days), not a per-restaurant timestamp. Once
   // used it is never re-granted (`trialUsed`).
   trialEndsAt      DateTime?
-  trialUsed        Boolean   @default(false)
+  trialUsed        Boolean         @default(false)
+  // Payer legal data for invoices (free-form, all optional; some clients have
+  // none). No validation. See BillingProfile.
+  billingProfile   BillingProfile?
+  // Invoices the owner uploads manually (read-only for the customer).
+  invoices         Invoice[]
   // Account-wide grandfather flag (rare). Per-venue legacy bypass lives on
   // Restaurant.planOverride instead — see the migration plan §3.
-  legacyFullAccess Boolean   @default(false)
+  legacyFullAccess Boolean         @default(false)
   // Ceiling on how many restaurants the account may hold/create (PRO/trial).
   // Enterprise raises this manually.
-  venueLimit       Int       @default(4)
+  venueLimit       Int             @default(4)
 
   members      AccountMember[]
   restaurants  Restaurant[]
@@ -333,9 +355,9 @@ model StripeEvent {
 model Subscription {
   id                    String    @id @default(cuid())
   accountId             String    @unique
-  plan                  String // "FREE" | "BASIC" | "PRO"
-  billingCycle          String? // "MONTHLY" | "YEARLY"
-  status                String    @default("INACTIVE") // ACTIVE | PAST_DUE | CANCELED | EXPIRED | INACTIVE
+  plan                  String // "FREE" | "BASIC" | "PRO" (cosmetic label; features live on Restaurant flags)
+  billingCycle          String? // "MONTHLY" | "YEARLY" (legacy; ad-hoc uses `interval`)
+  status                String    @default("INACTIVE") // ACTIVE | PAST_DUE | CANCELED | EXPIRED | INACTIVE | PENDING (sepa_manual)
   currentPeriodEnd      DateTime?
   stripeSubscriptionId  String?   @unique
   // BASIC: which single venue "takes" the subscription. PRO/trial = null
@@ -343,6 +365,18 @@ model Subscription {
   appliesToRestaurantId String?
   // Timestamp of the last Stripe reconcile that wrote this row (ordering guard).
   updatedFromStripeAt   DateTime?
+  // ─── billing-features-constructor: provider-agnostic ad-hoc pricing ──────────
+  // Which payment provider owns this subscription.
+  provider              String    @default("stripe") // "stripe" | "sepa_manual"
+  // Charged amount in minor units (cents) for the ad-hoc price. Null for legacy
+  // lookup-key subs (amount still lives only in Stripe there).
+  amount                Int?
+  // Charged currency (mirrors Account.billingCurrency; kept for history).
+  currency              String?
+  // Ad-hoc billing period. Supersedes billingCycle for new subs.
+  interval              String? // "month" | "year"
+  // Where the price came from: "legacy" | "custom" | "preset:<id>" | "enterprise".
+  priceProvenance       String?
   createdAt             DateTime  @default(now())
   updatedAt             DateTime  @updatedAt
 
@@ -351,14 +385,68 @@ model Subscription {
   @@map("subscriptions")
 }
 
-model Table {
+// ─── billing-features-constructor: pricing catalog (single source of truth) ────
+// One singleton row holding the whole price catalog (base menu + add-ons per
+// currency + volume-discount multipliers). Editable in the dashboard admin;
+// consumed by the landing (ISR), the dashboard billing constructor and checkout.
+// Replaces the three hardcoded price tables.
+model PricingConfig {
+  id        String   @id @default("default")
+  // Shape: {
+  //   currencies: { EUR: { menu:{mo,yr}, reservations:{mo,yr}, ordersKds:{mo,yr},
+  //                        domain:{mo,yr} }, ... },
+  //   volumeDiscounts: { "2-4": { mo, yr }, "5+": { mo, yr } }
+  // } — all amounts are major units (e.g. 9.9), converted to cents at checkout.
+  data      Json
+  updatedAt DateTime @updatedAt
+
+  @@map("pricing_config")
+}
+
+// ─── billing-features-constructor: payer legal data (for invoices) ─────────────
+// Free-form, all optional, NO validation — some clients have no tax data. Prefill
+// billingEmail from the logged-in user. Pushed to the Stripe customer when set.
+model BillingProfile {
   id           String   @id @default(cuid())
+  accountId    String   @unique
+  legalName    String? // name / company — one line
+  taxId        String? // tax number — one line, arbitrary format
+  address      String? // address — one line
+  billingEmail String?
+  updatedAt    DateTime @updatedAt
+
+  account Account @relation(fields: [accountId], references: [id], onDelete: Cascade)
+
+  @@map("billing_profiles")
+}
+
+// ─── billing-features-constructor: invoices (manual, read-only for customer) ───
+// The owner inserts rows directly in the DB with a link to the PDF. The customer
+// views them read-only in the billing section. No generation, no accounting.
+model Invoice {
+  id        String    @id @default(cuid())
+  accountId String
+  number    String? // invoice number
+  issuedAt  DateTime?
+  amount    Int? // minor units
+  currency  String?
+  fileUrl   String // link to the PDF (uploaded manually)
+  createdAt DateTime  @default(now())
+
+  account Account @relation(fields: [accountId], references: [id], onDelete: Cascade)
+
+  @@index([accountId])
+  @@map("invoices")
+}
+
+model Table {
+  id           String    @id @default(cuid())
   restaurantId String
   number       Int
   capacity     Int
   zone         String?
-  description  String?  // Free-form note shown next to the name on the table form
-  translations Json?    // { "en": { "zone": "...", "description": "..." }, "es": {...} }
+  description  String? // Free-form note shown next to the name on the table form
+  translations Json? // { "en": { "zone": "...", "description": "..." }, "es": {...} }
   imageUrl     String?
   // Hex color used on the dashboard floor map / table grid when set;
   // overrides imageUrl in dashboard rendering, ignored on the public menu.
@@ -368,20 +456,20 @@ model Table {
   y            Float?
   // Floor-map marker shape: "circle" (default) or "rect". Width/height + rotation
   // for the marker come in a later phase; today the size is capacity-derived.
-  shape        String   @default("circle")
+  shape        String    @default("circle")
   // Floor-map marker rotation in degrees (0 = upright).
-  rotation     Float    @default(0)
+  rotation     Float     @default(0)
   // Floor-map marker size as a percent of the map (0-100); null = derive from
   // capacity (legacy default). Set once the owner resizes via the handles.
   width        Float?
   height       Float?
-  isActive     Boolean  @default(true)
-  sortOrder    Int      @default(0)
+  isActive     Boolean   @default(true)
+  sortOrder    Int       @default(0)
   // Soft-delete marker. Hidden from active table lists but kept so older
   // bookings / orders can still resolve their tableId and tableNumber.
   deletedAt    DateTime?
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
 
   restaurant   Restaurant    @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
   reservations Reservation[]
@@ -396,8 +484,8 @@ model Reservation {
   restaurantId String
   tableId      String
   date         DateTime @db.Date
-  startTime    String   // "19:00"
-  duration     Int      // minutes
+  startTime    String // "19:00"
+  duration     Int // minutes
   guestName    String
   guestEmail   String
   guestPhone   String?
@@ -417,14 +505,14 @@ model Reservation {
 }
 
 model Category {
-  id           String   @id @default(cuid())
+  id           String     @id @default(cuid())
   name         String
-  translations Json?    // { "en": { "name": "..." }, "es": {...} }
-  sortOrder    Int      @default(0)
-  isActive     Boolean  @default(true)
+  translations Json? // { "en": { "name": "..." }, "es": {...} }
+  sortOrder    Int        @default(0)
+  isActive     Boolean    @default(true)
   // Group nodes have isGroup=true and contain only sub-categories (no items).
   // Leaf categories contain items and never have children.
-  isGroup      Boolean  @default(false)
+  isGroup      Boolean    @default(false)
   // Self-reference for the 2-level tree (group -> categories). Null = top-level.
   // onDelete: SetNull -> deleting a group bubbles its children to top-level.
   parentId     String?
@@ -435,8 +523,8 @@ model Category {
   // so nothing downstream breaks).
   deletedAt    DateTime?
   restaurantId String
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
 
   restaurant Restaurant @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
   items      Item[]
@@ -450,18 +538,18 @@ model Category {
 }
 
 model Item {
-  id           String   @id @default(cuid())
+  id           String    @id @default(cuid())
   name         String
   description  String?
-  translations Json?    // { "en": { "name": "...", "description": "..." }, "es": {...} }
-  price        Decimal  @db.Decimal(10, 2)
+  translations Json? // { "en": { "name": "...", "description": "..." }, "es": {...} }
+  price        Decimal   @db.Decimal(10, 2)
   imageUrl     String?
-  allergens    String[] @default([]) // Array of allergen codes: gluten, dairy, eggs, etc.
-  diets        String[] @default([]) // Array of diet/lifestyle tags: vegan, vegetarian, gluten_free, etc.
+  allergens    String[]  @default([]) // Array of allergen codes: gluten, dairy, eggs, etc.
+  diets        String[]  @default([]) // Array of diet/lifestyle tags: vegan, vegetarian, gluten_free, etc.
   // Variant groups: [{ id, name, translations, type: "single"|"multi", required, variants: [{ id, name, translations, priceDelta }] }]
   options      Json?
-  sortOrder    Int      @default(0)
-  isActive     Boolean  @default(true)
+  sortOrder    Int       @default(0)
+  isActive     Boolean   @default(true)
   // Soft-delete marker. Hidden from menu lists, but kept around so orders'
   // dishId references and historical analytics can still resolve the row.
   deletedAt    DateTime?
@@ -470,8 +558,8 @@ model Item {
   // soft-deleted and orphaned (categoryId -> null) instead of cascade-removed.
   categoryId   String?
   restaurantId String
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
 
   category   Category?  @relation(fields: [categoryId], references: [id], onDelete: SetNull)
   restaurant Restaurant @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
@@ -487,7 +575,7 @@ model PageView {
   id           String   @id @default(cuid())
   restaurantId String
   sessionId    String
-  page         String   // 'home' | 'contacts' | 'language' | 'menu'
+  page         String // 'home' | 'contacts' | 'language' | 'menu'
   language     String
   referrer     String?
   userAgent    String?
@@ -530,21 +618,21 @@ model SupportMessage {
 /// cookie when the request comes from a logged-in user; restaurantId from the
 /// active-restaurant cookie when present.
 model UsageEvent {
-  id        String   @id @default(cuid())
-  at        DateTime @default(now())
-  event     String
-  country   String   @default("XX")
-  region    String   @default("")
-  device    String?  // 'mobile' / 'tablet' / 'desktop'
-  platform  String?  // 'ios' / 'android' / 'windows' / 'macos' / 'linux' / 'other'
-  gclid     String?  // SSR-only — landing page on gclid arrival
-  ad_params String?  // JSON: { kw, term, campaign } from ValueTrack params
-  userId    String?  // server-side from iqr_session cookie when logged in
-  restaurantId String? // server-side from iqr_active_restaurant_id cookie when present
-  ip        String?  // anonymized client IP (IPv4 last octet zeroed, IPv6 truncated to /64)
-  is_google_ads Boolean @default(false) // arrival via gclid/gbraid/wbraid on the URL
-  is_facebook_ads Boolean @default(false) // arrival via fbclid on the URL (Facebook/Instagram ads)
-  is_search     Boolean @default(false) // arrival from a search engine referrer (google/bing/yandex/…)
+  id                   String   @id @default(cuid())
+  at                   DateTime @default(now())
+  event                String
+  country              String   @default("XX")
+  region               String   @default("")
+  device               String? // 'mobile' / 'tablet' / 'desktop'
+  platform             String? // 'ios' / 'android' / 'windows' / 'macos' / 'linux' / 'other'
+  gclid                String? // SSR-only — landing page on gclid arrival
+  ad_params            String? // JSON: { kw, term, campaign } from ValueTrack params
+  userId               String? // server-side from iqr_session cookie when logged in
+  restaurantId         String? // server-side from iqr_active_restaurant_id cookie when present
+  ip                   String? // anonymized client IP (IPv4 last octet zeroed, IPv6 truncated to /64)
+  is_google_ads        Boolean  @default(false) // arrival via gclid/gbraid/wbraid on the URL
+  is_facebook_ads      Boolean  @default(false) // arrival via fbclid on the URL (Facebook/Instagram ads)
+  is_search            Boolean  @default(false) // arrival from a search engine referrer (google/bing/yandex/…)
   // Identity stitched from device-fingerprint islands (anonymous pre-login
   // activity attributed to the user/restaurant that later logged in from the
   // same ip+device+platform+country+region within a <=3-day gap). Set by the
@@ -574,7 +662,7 @@ model CapiSend {
   id        String   @id @default(cuid())
   fbclid    String
   eventName String
-  status    String   // "success" | "error"
+  status    String // "success" | "error"
   response  Json?
   createdAt DateTime @default(now())
 
@@ -589,8 +677,8 @@ model CapiSend {
 model GoogleAdsSend {
   id        String   @id @default(cuid())
   gclid     String
-  eventName String   // ViewContent | InitiateCheckout | CompleteRegistration
-  status    String   // "success" | "error"
+  eventName String // ViewContent | InitiateCheckout | CompleteRegistration
+  status    String // "success" | "error"
   response  Json?
   createdAt DateTime @default(now())
 
@@ -600,35 +688,35 @@ model GoogleAdsSend {
 }
 
 model Order {
-  id              String   @id @default(cuid())
-  restaurantId    String
-  items           Json     // [{ id, name, qty, price }]
-  total           Decimal  @db.Decimal(10, 2)
-  currency        String   @default("EUR")
-  customerName    String?
-  customerPhone   String?
-  customerAddress String?
-  comment         String?
-  tableNumber     Int?
-  status          String   @default("new") // new | in_progress | completed | cancelled
+  id                String    @id @default(cuid())
+  restaurantId      String
+  items             Json // [{ id, name, qty, price }]
+  total             Decimal   @db.Decimal(10, 2)
+  currency          String    @default("EUR")
+  customerName      String?
+  customerPhone     String?
+  customerAddress   String?
+  comment           String?
+  tableNumber       Int?
+  status            String    @default("new") // new | in_progress | completed | cancelled
   // Status the order had right before being closed (completed/cancelled). Lets
   // "Return to kitchen" restore exactly that without guessing.
   statusBeforeClose String?
   // Payment method code chosen at close-time. Nullable for legacy orders.
-  paymentMethodId String?
+  paymentMethodId   String?
   // Order-level discount + total amount of (item discounts + order discount).
   // Stored separately from items so analytics queries don't need JSON parsing
   // — sum(discountTotal) over orders gives "discounts given" for a period.
   // Item-level discounts continue to live inside Order.items JSON.
-  discount        Json?
-  discountTotal   Decimal? @db.Decimal(10, 2)
+  discount          Json?
+  discountTotal     Decimal?  @db.Decimal(10, 2)
   // Soft-delete marker. Hidden from operational lists but preserved so
   // analytics (revenue, top dishes, etc.) survive a delete.
-  deletedAt       DateTime?
-  orderDate       DateTime @db.Date
-  dailyNumber     Int
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
+  deletedAt         DateTime?
+  orderDate         DateTime  @db.Date
+  dailyNumber       Int
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
 
   restaurant Restaurant @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
 
@@ -653,21 +741,21 @@ enum DeviceStatus {
 /// access — kitchen display, waiter terminal, etc. Auth is by long-lived
 /// device JWT (not user session) so a tablet survives staff turnover.
 model Device {
-  id            String       @id @default(cuid())
-  restaurantId  String
-  name          String
-  type          DeviceType
-  status        DeviceStatus @default(ACTIVE)
+  id           String       @id @default(cuid())
+  restaurantId String
+  name         String
+  type         DeviceType
+  status       DeviceStatus @default(ACTIVE)
   // Bumped on revoke; every authed request re-checks this against the JWT.
   // Mismatch / REVOKED → 401, kitchen redirects to pairing screen.
-  tokenVersion  Int          @default(1)
-  pairedAt      DateTime?
-  lastSeenAt    DateTime?
-  createdAt     DateTime     @default(now())
-  updatedAt     DateTime     @updatedAt
+  tokenVersion Int          @default(1)
+  pairedAt     DateTime?
+  lastSeenAt   DateTime?
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
 
-  restaurant    Restaurant   @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
-  pairingCode   PairingCode?
+  restaurant  Restaurant   @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
+  pairingCode PairingCode?
 
   @@index([restaurantId])
   @@map("devices")
@@ -677,37 +765,35 @@ model Device {
 /// TTL ~120s. Consumed on successful pair (usedAt set). One pending code per
 /// device at a time — regenerate replaces the row.
 model PairingCode {
-  code      String   @id
-  deviceId  String   @unique
+  code      String    @id
+  deviceId  String    @unique
   expiresAt DateTime
   usedAt    DateTime?
-  createdAt DateTime @default(now())
+  createdAt DateTime  @default(now())
 
-  device    Device   @relation(fields: [deviceId], references: [id], onDelete: Cascade)
+  device Device @relation(fields: [deviceId], references: [id], onDelete: Cascade)
 
   @@index([expiresAt])
   @@map("pairing_codes")
 }
-
-
 
 /// A person who messages us on an external channel (currently WhatsApp). One
 /// row per (channel, externalId). `watched` = pin to the inbox; `muted` = hide
 /// new messages (e.g. personal contacts like family). Soft-hidden via `muted`.
 model InboxContact {
   id            String   @id @default(cuid())
-  channel       String   // "whatsapp"
-  externalId    String   // WhatsApp phone (digits, e.g. "34123456789")
-  name          String?  // WhatsApp profile name (as received from Meta)
-  customName    String?  // admin-assigned internal name (highest display priority)
-  note          String?  // free-form admin comment about the contact
-  lang          String?  // detected language of the contact's messages
+  channel       String // "whatsapp"
+  externalId    String // WhatsApp phone (digits, e.g. "34123456789")
+  name          String? // WhatsApp profile name (as received from Meta)
+  customName    String? // admin-assigned internal name (highest display priority)
+  note          String? // free-form admin comment about the contact
+  lang          String? // detected language of the contact's messages
   watched       Boolean  @default(false)
   muted         Boolean  @default(false)
   lastMessageAt DateTime @default(now())
   createdAt     DateTime @default(now())
 
-  messages      InboxMessage[]
+  messages InboxMessage[]
 
   @@unique([channel, externalId])
   @@index([lastMessageAt])
@@ -721,15 +807,15 @@ model InboxContact {
 model InboxMessage {
   id           String   @id @default(cuid())
   contactId    String
-  direction    String   // "in" | "out"
-  body         String   // text actually sent/received (contact language)
-  lang         String?  // language of `body`
-  translatedRu String?  // Russian rendering (in: translation; out: admin original)
-  externalId   String?  // provider message id (WhatsApp wamid)
+  direction    String // "in" | "out"
+  body         String // text actually sent/received (contact language)
+  lang         String? // language of `body`
+  translatedRu String? // Russian rendering (in: translation; out: admin original)
+  externalId   String? // provider message id (WhatsApp wamid)
   status       String   @default("received") // received | sent | failed
   createdAt    DateTime @default(now())
 
-  contact      InboxContact @relation(fields: [contactId], references: [id], onDelete: Cascade)
+  contact InboxContact @relation(fields: [contactId], references: [id], onDelete: Cascade)
 
   @@index([contactId, createdAt])
   @@map("inbox_messages")
