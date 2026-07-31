@@ -24,7 +24,8 @@ import { callGeminiImage, uploadGeneratedImage } from "../common/gemini-image";
 import { consumeAiImageQuota, getAiImageUsage, refundAiImageUsage } from "../common/ai-quota";
 import {
   hasProFeatures,
-  restaurantHasProAccess,
+  getRestaurantCapsById,
+  getAccountCapsByRestaurantId,
   PRO_ACCESS_SELECT,
 } from "../common/entitlements";
 import { getRequestCurrency } from "../common/geo";
@@ -230,10 +231,10 @@ export class RestaurantController {
     });
     if (!restaurant) return null;
     const usage = await getAiImageUsage(this.prisma, restaurantId);
-    // PRO-feature entitlement (orders / kitchen / reservations). The SPA gates
+    // PRO-feature entitlement (orders / kitchen / reservations) — resolved
+    // account-side (§3), consistent with the ProFeatureGuard. The SPA gates
     // those surfaces on this single flag instead of re-deriving plan logic.
-    // Account-level: a PRO owner's other (FREE-row) restaurants inherit PRO.
-    const proFeatures = await restaurantHasProAccess(this.prisma, restaurant);
+    const proFeatures = (await getRestaurantCapsById(this.prisma, restaurantId)).orders;
     // When this restaurant's OWN row isn't a paid/trial PRO but it's still
     // entitled, the entitlement comes from ANOTHER restaurant of the owner
     // (account-level PRO). The billing page uses this to show a "covered by
@@ -294,13 +295,15 @@ export class RestaurantController {
   async list(@Req() req: Request) {
     const { userId, restaurantId, viaGrant } = (req as AuthedRequest).authUser;
     const list = await this.svc.listForUser(userId);
+    // Venue-cap (§5): only a trial/PRO account may add venues, up to venueLimit.
+    // The SPA uses `canAddVenue` to enable/disable the "+ Add restaurant" button
+    // (with an upsell when disabled). `isPaid` stays for backwards compat.
+    const accountCaps = await getAccountCapsByRestaurantId(this.prisma, restaurantId);
     return {
       activeId: restaurantId,
-      // Adding/deleting restaurants is open to everyone. A new venue starts
-      // FREE/INACTIVE and only gains PRO features if the owner is PRO (handled
-      // by account-level entitlement). Kept always-true so the SPA never hides
-      // the add/switch affordances.
       isPaid: true,
+      canAddVenue: accountCaps.canAddVenue,
+      venueLimit: accountCaps.venueLimit,
       canManageBilling: !viaGrant,
       restaurants: list,
     };
@@ -312,12 +315,17 @@ export class RestaurantController {
     @Res({ passthrough: true }) res: Response,
     @Body() body: { name: string; duplicateFromId?: string | null },
   ) {
-    const { userId, isDemo } = (req as AuthedRequest).authUser;
+    const { userId, isDemo, restaurantId } = (req as AuthedRequest).authUser;
     // Demo accounts can't create extra restaurants — their data is ephemeral
     // and the multi-restaurant flow is a paid-account feature. The SPA hides
     // the "+ Add restaurant" button for demo users; this is the server-side
     // guard against a hand-crafted request.
     if (isDemo) throw new ForbiddenException("Demo accounts cannot create restaurants");
+    // Venue-cap (§5): adding venues is a trial/PRO capability, bounded by the
+    // account's venueLimit (default 4; enterprise raised manually). BASIC / no-
+    // sub accounts can't add. Server backstop behind the SPA's disabled button.
+    const accountCaps = await getAccountCapsByRestaurantId(this.prisma, restaurantId);
+    if (!accountCaps.canAddVenue) throw new ForbiddenException("venue_limit_reached");
     const created = await this.svc.createForCompany(userId, body);
     // Auto-switch the cookie so the next request lands on the new restaurant.
     res.cookie(ACTIVE_RESTAURANT_COOKIE, created.id, {
