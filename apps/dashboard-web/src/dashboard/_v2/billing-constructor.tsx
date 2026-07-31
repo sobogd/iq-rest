@@ -7,7 +7,7 @@
 // Also renders the payer billing profile + read-only invoices. English-first.
 
 import { useEffect, useMemo, useState } from "react";
-import { UtensilsCrossed, CalendarClock, ChefHat, Globe, Check, Sparkles } from "lucide-react";
+import { UtensilsCrossed, CalendarClock, ChefHat, Globe, Check } from "lucide-react";
 import { useRestaurants } from "./restaurants-context";
 import {
   computeQuote,
@@ -124,25 +124,10 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
 
       {list.map((r) => {
         const s = sels[r.id] ?? EMPTY_SEL;
-        const allOn = s.reservations && s.ordersKds && s.domain;
         return (
           <div key={r.id} className="flex flex-col gap-3">
             {!single && (
-              <div className="flex items-center justify-between gap-2">
-                <div className="text-sm font-medium text-foreground truncate">{r.title || r.slug || r.id}</div>
-                <button
-                  type="button"
-                  onClick={() =>
-                    setSels((prev) => ({
-                      ...prev,
-                      [r.id]: { menuOnline: true, reservations: !allOn, ordersKds: !allOn, domain: !allOn },
-                    }))
-                  }
-                  className={`inline-flex items-center gap-1 text-sm font-medium ${allOn ? "text-primary" : "text-muted-foreground"}`}
-                >
-                  <Sparkles className="h-4 w-4 shrink-0" /> Everything
-                </button>
-              </div>
+              <div className="text-sm font-medium text-foreground truncate">{r.title || r.slug || r.id}</div>
             )}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5">
               {/* Menu — toggle whether this venue is billed at all */}

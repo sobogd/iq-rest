@@ -13,7 +13,7 @@
 // English-only; min font size is text-sm (micro badges aside).
 
 import { useEffect, useMemo, useState } from "react";
-import { UtensilsCrossed, CalendarClock, ChefHat, Globe, Check, Sparkles } from "lucide-react";
+import { UtensilsCrossed, CalendarClock, ChefHat, Globe, Check } from "lucide-react";
 import {
   DEFAULT_PRICING_CATALOG,
   computeAccountQuote,
@@ -73,7 +73,6 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
   }, [catalog, currency, count, cycle, feat]);
 
   const info = currencyInfo[currency] ?? currencyInfo.EUR;
-  const allOn = feat.reservations && feat.ordersKds && feat.domain;
   const discountPct = Math.round(quote.discount * 100);
   const addonPrice = (key: AddonKey) => formatMoney(pricing[key][k], currency);
 
@@ -88,38 +87,31 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
         </p>
       </div>
 
-      {/* Controls — labels are constant-width so the row never reflows */}
+      {/* Controls — a restaurants stepper (− | "N restaurants" | +) and the
+          billing cycle. The centre label has a fixed width so it never reflows. */}
       <div className="flex flex-wrap items-center justify-center gap-2.5 mb-6">
-        <div className="inline-flex items-center gap-2.5 rounded-full border border-border bg-card px-4 py-2">
-          <span className="text-sm text-muted-foreground">Restaurants</span>
+        <div className="inline-flex items-center rounded-full border border-border bg-card p-1">
           <button
             type="button"
-            aria-label="Fewer"
+            aria-label="Fewer restaurants"
             onClick={() => setCount((c) => Math.max(1, c - 1))}
-            className="h-7 w-7 rounded-full border border-input text-base leading-none hover:bg-accent"
+            className="h-8 w-8 rounded-full text-lg leading-none hover:bg-accent disabled:opacity-40"
+            disabled={count <= 1}
           >
             −
           </button>
-          <span className="w-6 text-center text-base font-semibold tabular-nums">{count}</span>
+          <span className="min-w-[8rem] text-center text-sm font-medium tabular-nums px-2">
+            {count} {count === 1 ? "restaurant" : "restaurants"}
+          </span>
           <button
             type="button"
-            aria-label="More"
+            aria-label="More restaurants"
             onClick={() => setCount((c) => Math.min(99, c + 1))}
-            className="h-7 w-7 rounded-full border border-input text-base leading-none hover:bg-accent"
+            className="h-8 w-8 rounded-full text-lg leading-none hover:bg-accent"
           >
             +
           </button>
         </div>
-
-        <button
-          type="button"
-          onClick={() => setFeat({ reservations: !allOn, ordersKds: !allOn, domain: !allOn })}
-          className={`inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium border transition-colors ${
-            allOn ? "border-primary bg-primary/10 text-primary" : "border-border bg-card hover:border-input text-foreground"
-          }`}
-        >
-          <Sparkles className="h-4 w-4 shrink-0" /> Select everything
-        </button>
 
         <div className="inline-flex rounded-full border border-border bg-card p-1">
           {(["month", "year"] as const).map((c) => (
