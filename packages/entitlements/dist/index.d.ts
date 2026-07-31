@@ -106,6 +106,7 @@ export declare const ACCOUNT_ENTITLEMENT_SELECT: {
                 readonly select: {
                     readonly plan: true;
                     readonly status: true;
+                    readonly billingCycle: true;
                     readonly currentPeriodEnd: true;
                     readonly appliesToRestaurantId: true;
                 };
@@ -133,6 +134,7 @@ export type RestaurantEntitlementRow = {
         subscription: {
             plan: string;
             status: string;
+            billingCycle?: string | null;
             currentPeriodEnd: Date | null;
             appliesToRestaurantId: string | null;
         } | null;

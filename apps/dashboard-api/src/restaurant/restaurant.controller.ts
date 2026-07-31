@@ -23,10 +23,9 @@ import { PrismaService } from "../prisma/prisma.service";
 import { callGeminiImage, uploadGeneratedImage } from "../common/gemini-image";
 import { consumeAiImageQuota, getAiImageUsage, refundAiImageUsage } from "../common/ai-quota";
 import {
-  hasProFeatures,
-  getRestaurantCapsById,
+  ACCOUNT_ENTITLEMENT_SELECT,
+  restaurantCapsFromRow,
   getAccountCapsByRestaurantId,
-  PRO_ACCESS_SELECT,
 } from "../common/entitlements";
 import { getRequestCurrency } from "../common/geo";
 
@@ -215,66 +214,42 @@ export class RestaurantController {
     // (RestaurantUser.addedBy non-null) — they see the page but can't checkout
     // / cancel on the owner's behalf.
     const { restaurantId, viaGrant, isDemo } = (req as AuthedRequest).authUser;
-    const restaurant = await this.prisma.restaurant.findUnique({
+    const row = await this.prisma.restaurant.findUnique({
       where: { id: restaurantId },
       select: {
-        id: true,
-        plan: true,
-        billingCycle: true,
-        subscriptionStatus: true,
-        currentPeriodEnd: true,
+        // Transient checkout-in-progress flag (per-restaurant UI spinner) — the
+        // one billing-ish column that stays on Restaurant (not dropped in Ph4).
         paymentProcessing: true,
-        trialEndsAt: true,
-        stripeSubscriptionId: true,
-        legacyFullAccess: true,
+        // Account + subscription (billing source of truth) + legacy fallback.
+        ...ACCOUNT_ENTITLEMENT_SELECT,
       },
     });
-    if (!restaurant) return null;
+    if (!row) return null;
     const usage = await getAiImageUsage(this.prisma, restaurantId);
-    // PRO-feature entitlement (orders / kitchen / reservations) — resolved
-    // account-side (§3), consistent with the ProFeatureGuard. The SPA gates
-    // those surfaces on this single flag instead of re-deriving plan logic.
-    const proFeatures = (await getRestaurantCapsById(this.prisma, restaurantId)).orders;
-    // When this restaurant's OWN row isn't a paid/trial PRO but it's still
-    // entitled, the entitlement comes from ANOTHER restaurant of the owner
-    // (account-level PRO). The billing page uses this to show a "covered by
-    // your account" notice instead of inviting a second purchase.
-    const proViaAccount = proFeatures && !hasProFeatures(restaurant);
-    let proSource: { title: string } | null = null;
-    if (proViaAccount) {
-      const owners = await this.prisma.restaurantUser.findMany({
-        where: { restaurantId, addedBy: null },
-        select: { userId: true },
-      });
-      const ownerIds = owners.map((o) => o.userId);
-      // The paying/covering venue can be entitled via an active PRO sub, a trial,
-      // legacyFullAccess, or PAST_DUE grace — so match on hasProFeatures, not a
-      // narrow ACTIVE+PRO filter, else the notice shows with no restaurant name.
-      const owned = ownerIds.length
-        ? await this.prisma.restaurant.findMany({
-            where: {
-              restaurantUsers: {
-                some: { userId: { in: ownerIds }, addedBy: null },
-              },
-            },
-            select: { title: true, ...PRO_ACCESS_SELECT },
-          })
-        : [];
-      const payer = owned.find((r) => r.id !== restaurantId && hasProFeatures(r));
-      proSource = payer ? { title: payer.title } : null;
-    }
+    // Entitlement + billing state resolved from the account subscription (§3).
+    const caps = restaurantCapsFromRow(row);
+    const sub = row.account?.subscription ?? null;
+    // Billing fields come from the account Subscription / Account; for an orphan
+    // row (accountId still NULL) fall back to the legacy restaurant columns.
+    const plan = sub?.plan ?? row.plan ?? null;
+    const subscriptionStatus = sub?.status ?? row.subscriptionStatus ?? null;
+    const billingCycle = sub?.billingCycle ?? null;
+    const currentPeriodEnd = sub?.currentPeriodEnd ?? row.currentPeriodEnd ?? null;
+    const trialEndsAt = row.account?.trialEndsAt ?? row.trialEndsAt ?? null;
     return {
-      plan: restaurant.plan,
-      billingCycle: restaurant.billingCycle,
-      subscriptionStatus: restaurant.subscriptionStatus,
-      currentPeriodEnd: restaurant.currentPeriodEnd ? restaurant.currentPeriodEnd.toISOString() : null,
-      paymentProcessing: restaurant.paymentProcessing,
-      trialEndsAt: restaurant.trialEndsAt ? restaurant.trialEndsAt.toISOString() : null,
-      proFeatures,
-      // True when PRO is inherited from another of the owner's restaurants.
-      proViaAccount,
-      // The paying restaurant (named in the billing notice), when known.
-      proSource,
+      plan,
+      billingCycle,
+      subscriptionStatus,
+      currentPeriodEnd: currentPeriodEnd ? currentPeriodEnd.toISOString() : null,
+      paymentProcessing: row.paymentProcessing,
+      trialEndsAt: trialEndsAt ? trialEndsAt.toISOString() : null,
+      proFeatures: caps.orders,
+      // Deprecated (billing→Account migration): coverage is native now — every
+      // venue of a PRO/trial account is entitled, so there is no "covered by
+      // another restaurant" special-case. Kept as stable false/null for older
+      // SPA bundles until they stop reading them.
+      proViaAccount: false,
+      proSource: null,
       aiImagesUsed: usage.aiImagesUsed,
       aiImagesLimit: usage.aiImagesLimit,
       // Demo accounts can't pay — hide the billing UI (the SPA gates on this).

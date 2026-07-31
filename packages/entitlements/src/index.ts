@@ -341,6 +341,7 @@ export const ACCOUNT_ENTITLEMENT_SELECT = {
         select: {
           plan: true,
           status: true,
+          billingCycle: true,
           currentPeriodEnd: true,
           appliesToRestaurantId: true,
         },
@@ -367,6 +368,7 @@ export type RestaurantEntitlementRow = {
     subscription: {
       plan: string;
       status: string;
+      billingCycle?: string | null;
       currentPeriodEnd: Date | null;
       appliesToRestaurantId: string | null;
     } | null;

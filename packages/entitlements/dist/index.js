@@ -250,6 +250,7 @@ exports.ACCOUNT_ENTITLEMENT_SELECT = {
                 select: {
                     plan: true,
                     status: true,
+                    billingCycle: true,
                     currentPeriodEnd: true,
                     appliesToRestaurantId: true,
                 },

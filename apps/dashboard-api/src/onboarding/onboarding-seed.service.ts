@@ -91,14 +91,27 @@ export class OnboardingSeedService {
     // pretty random slug (adjective-noun) instead of "restaurant1/2/3…".
     const slug = await this.generatePrettySlug();
 
+    const billingCurrency = isSupportedCurrency(currency) ? currency : "EUR";
+    // 14-day trial. In the billing→Account model this lives on the ACCOUNT (one
+    // trial per account, source of truth); the restaurant column is a dual-write
+    // mirror kept until the Phase 4 DROP.
+    const trialEndsAt = new Date(Date.now() + 14 * 24 * 60 * 60 * 1000);
+
     return this.prisma.$transaction(async (tx) => {
+      // Every new signup gets its own Account (billing boundary). It holds the
+      // trial + (later) the Stripe customer + subscription; all the owner's
+      // venues inherit its entitlement.
+      const account = await tx.account.create({
+        data: { billingCurrency, trialEndsAt, trialUsed: true },
+      });
+
       const restaurant = await tx.restaurant.create({
         data: {
           title: "",
           slug,
           currency,
           // Scandinavian menu currencies double as billing currencies; else EUR.
-          billingCurrency: isSupportedCurrency(currency) ? currency : "EUR",
+          billingCurrency,
           // Dark accent by default for newly onboarded restaurants.
           accentColor: "#1A1A1A",
           // Globe-icon language switcher over the hero for new restaurants.
@@ -109,16 +122,22 @@ export class OnboardingSeedService {
           defaultLanguage: seedLocale,
           ordersEnabled: false,
           reservationsEnabled: true,
+          // dual-write mirror (source of truth is the account above)
           plan: "FREE",
           subscriptionStatus: "INACTIVE",
-          trialEndsAt: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000),
+          trialEndsAt,
+          accountId: account.id,
         },
       });
 
       // Link the seeding user to the new restaurant via the flat access model.
-      // addedBy is null for the FIRST user of a restaurant (the creator).
+      // addedBy is null for the FIRST user of a restaurant (the creator). The
+      // AccountMember mirrors this as the account "owner".
       await tx.restaurantUser.create({
         data: { restaurantId: restaurant.id, userId, addedBy: null },
+      });
+      await tx.accountMember.create({
+        data: { accountId: account.id, userId, role: "owner" },
       });
 
       return { restaurantId: restaurant.id };

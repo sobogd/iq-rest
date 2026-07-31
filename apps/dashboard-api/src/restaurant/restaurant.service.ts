@@ -428,6 +428,12 @@ export class RestaurantService {
     });
     const ownedRestaurants = ownedRus.map((ru) => ru.restaurant);
 
+    // A new venue joins the OWNER's existing Account (billing→Account migration):
+    // one account, one subscription, all venues inherit its entitlement. The
+    // owner already owns ≥1 venue here (venue-cap requires a trial/PRO account),
+    // so the accountId is taken from their existing venues.
+    const ownerAccountId = ownedRestaurants.find((r) => r.accountId)?.accountId ?? null;
+
     // Adding restaurants is open to everyone (no PRO gate). A newly created
     // venue starts FREE/INACTIVE and simply has no PRO features unless the owner
     // is PRO — account-level entitlement (restaurantHasProAccess) grants PRO to
@@ -469,11 +475,13 @@ export class RestaurantService {
         // Name was typed in the create-restaurant form → no onboarding modals.
         onboardingNameDone: true,
         onboardingFillDone: true,
-        // Per-restaurant billing: a new (second+) restaurant starts FREE
-        // without a trial. plan/billingCycle/stripeSubscriptionId/trialEndsAt
-        // stay null — owner must check out separately for this restaurant.
+        // Per-restaurant billing (dual-write mirror until Phase 4 DROP): a new
+        // venue starts FREE/INACTIVE. Entitlement comes from the account
+        // subscription it inherits (accountId below), not these columns.
         plan: "FREE",
         subscriptionStatus: "INACTIVE",
+        // Join the owner's account so the new venue inherits its entitlement.
+        ...(ownerAccountId ? { accountId: ownerAccountId } : {}),
       },
     });
 
