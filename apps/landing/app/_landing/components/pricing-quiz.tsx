@@ -13,7 +13,7 @@
 // English-only; min font size is text-sm (micro badges aside).
 
 import { useEffect, useMemo, useState } from "react";
-import { UtensilsCrossed, CalendarClock, ChefHat, Globe, Check } from "lucide-react";
+import { UtensilsCrossed, CalendarClock, ChefHat, Globe, Check, Minus, Plus } from "lucide-react";
 import {
   DEFAULT_PRICING_CATALOG,
   computeAccountQuote,
@@ -110,22 +110,22 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
             type="button"
             aria-label="Fewer restaurants"
             onClick={() => setCount((c) => Math.max(1, c - 1))}
-            className="h-8 w-8 shrink-0 rounded-full text-lg leading-none hover:bg-accent disabled:opacity-40"
+            className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-foreground hover:bg-accent/70 disabled:opacity-40"
             disabled={count <= 1}
           >
-            −
+            <Minus className="h-4 w-4" />
           </button>
-          <span className="text-center text-sm font-medium px-2">
-            <span className="tabular-nums">{count}</span>{" "}
-            <span className="text-muted-foreground">{count === 1 ? "restaurant" : "restaurants"}</span>
+          <span className="text-center text-sm px-2">
+            <span className="text-muted-foreground">Restaurants:</span>{" "}
+            <span className="tabular-nums font-medium text-foreground">{count}</span>
           </span>
           <button
             type="button"
             aria-label="More restaurants"
             onClick={() => setCount((c) => Math.min(99, c + 1))}
-            className="h-8 w-8 shrink-0 rounded-full text-lg leading-none hover:bg-accent"
+            className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-foreground hover:bg-accent/70"
           >
-            +
+            <Plus className="h-4 w-4" />
           </button>
         </div>
       </div>
