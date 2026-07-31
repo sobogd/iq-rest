@@ -175,10 +175,11 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
         })}
       </div>
 
-      {/* Sticky price bar — stacks on mobile so any price magnitude fits and the
-          CTA never gets pushed. Sub-line is always present (fixed height). */}
-      <div className="sticky bottom-4 z-20 mt-6">
-        <div className="flex flex-col sm:flex-row sm:items-center gap-3 rounded-2xl border border-border bg-card/90 backdrop-blur px-5 py-4 shadow-lg">
+      {/* Price bar — inline (not sticky) so it never covers the cards on mobile.
+          Stacks on phones so any price magnitude fits; sub-line has a fixed
+          height so a discount appearing can't shift the layout. */}
+      <div className="mt-5">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-3 rounded-2xl border border-border bg-card px-5 py-4 shadow-sm">
           <div className="min-w-0 sm:flex-1">
             <div className="flex items-baseline gap-1 whitespace-nowrap">
               {info.symbolPosition === "before" ? <span className="text-lg text-muted-foreground">{info.symbol}</span> : null}

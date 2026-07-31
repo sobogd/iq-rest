@@ -182,10 +182,10 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
         );
       })}
 
-      {/* Sticky price bar — stacks on mobile so any magnitude fits; sub-line has
-          a fixed height so a discount appearing never shifts the layout. */}
-      <div className="sticky bottom-3 z-10">
-        <div className="flex flex-col sm:flex-row sm:items-center gap-3 rounded-2xl border border-border bg-card/90 backdrop-blur px-4 py-3 shadow-lg">
+      {/* Price bar — inline (not sticky) so it never covers the cards on mobile.
+          Stacks on phones; sub-line has a fixed height to avoid layout shift. */}
+      <div>
+        <div className="flex flex-col sm:flex-row sm:items-center gap-3 rounded-2xl border border-border bg-card px-4 py-3 shadow-sm">
           <div className="min-w-0 sm:flex-1">
             <div className="whitespace-nowrap">
               {quote ? (
