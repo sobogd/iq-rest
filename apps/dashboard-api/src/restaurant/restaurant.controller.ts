@@ -244,12 +244,8 @@ export class RestaurantController {
       paymentProcessing: row.paymentProcessing,
       trialEndsAt: trialEndsAt ? trialEndsAt.toISOString() : null,
       proFeatures: caps.orders,
-      // Deprecated (billing→Account migration): coverage is native now — every
-      // venue of a PRO/trial account is entitled, so there is no "covered by
-      // another restaurant" special-case. Kept as stable false/null for older
-      // SPA bundles until they stop reading them.
-      proViaAccount: false,
-      proSource: null,
+      // menuOnline drives the dashboard inactive-venue banner (account entitlement).
+      menuOnline: caps.menuOnline,
       aiImagesUsed: usage.aiImagesUsed,
       aiImagesLimit: usage.aiImagesLimit,
       // Demo accounts can't pay — hide the billing UI (the SPA gates on this).

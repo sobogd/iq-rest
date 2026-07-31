@@ -90,9 +90,6 @@ export function PastDueModal({ sub }: { sub: BillingSub }) {
 }
 
 function shouldShow(sub: BillingSub): boolean {
-  // Covered by the owner's account-level PRO → this venue stays fully live even
-  // if its own paid sub lapsed; don't show the payment-failed nag here.
-  if (sub?.proViaAccount) return false;
   if (!isPastDue(sub)) return false;
   // Once per day (survives reloads until the owner dismisses it).
   try {

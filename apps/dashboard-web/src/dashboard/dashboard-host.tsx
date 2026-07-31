@@ -52,11 +52,7 @@ interface SubData {
   trialEndsAt: string | null;
   currentPeriodEnd?: string | null;
   proFeatures?: boolean;
-  // PRO inherited from another restaurant of the same owner (account-level PRO).
-  // Suppresses this venue's trial/past-due nudges, which are derived from its
-  // own row and would otherwise contradict the covered state.
-  proViaAccount?: boolean;
-  proSource?: { title: string } | null;
+  menuOnline?: boolean;
   aiImagesUsed?: number;
   aiImagesLimit?: number | null;
   canManageBilling?: boolean;
@@ -182,8 +178,7 @@ export function DashboardHost() {
         trialEndsAt: sub.trialEndsAt,
         currentPeriodEnd: sub.currentPeriodEnd ?? null,
         proFeatures: sub.proFeatures ?? false,
-        proViaAccount: sub.proViaAccount ?? false,
-        proSource: sub.proSource ?? null,
+        menuOnline: sub.menuOnline ?? true,
         aiImagesUsed: sub.aiImagesUsed ?? 0,
         aiImagesLimit: sub.aiImagesLimit ?? null,
         canManageBilling: sub.canManageBilling ?? true,

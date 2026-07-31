@@ -16,10 +16,6 @@ type TrialSub = {
   plan: string | null;
   subscriptionStatus: string | null;
   trialEndsAt: string | null;
-  // PRO inherited from another restaurant of the owner (account-level PRO).
-  // When set, this venue is fully unlocked despite an expired own-row trial, so
-  // the "trial expired — choose a plan" nudge must not fire.
-  proViaAccount?: boolean;
 } | null;
 
 function todayKey(): string {
@@ -112,9 +108,6 @@ export function TrialModal({
 
 function shouldShow(sub: TrialSub, accountCreatedAt?: string | null): boolean {
   if (!sub) return false;
-  // Covered by the owner's account-level PRO (paid on another restaurant) → this
-  // venue is fully unlocked even if its own trial lapsed; don't nag to buy.
-  if (sub.proViaAccount) return false;
   // Any paid plan — including one that's PAST_DUE — is never on a trial. The
   // past-due nudge (PastDueModal) covers failed payments, not this modal.
   if (hasPaidPlan(sub)) return false;
