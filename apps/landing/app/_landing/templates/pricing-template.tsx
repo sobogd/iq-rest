@@ -3,12 +3,10 @@ import { LandingFooter } from "../components/footer";
 import { Faq } from "../components/faq";
 import { Section } from "../components/section";
 import { PageTracker } from "../components/page-tracker";
-import { PricingHero } from "../components/pricing-hero";
 import { PricingQuiz } from "../components/pricing-quiz";
 import { FinalCta } from "../components/final-cta";
 import { getHelpBanner } from "../help/registry";
 import { HelpBannerSection } from "../help/help-banner-section";
-import { stablePrefix } from "@/lib/track-keys";
 import type { LandingTexts } from "../types";
 
 // Shared markup for every per-locale pricing page. Per-locale data (the
@@ -28,18 +26,14 @@ export function PricingTemplate({
   trackPrefix: string;
 }) {
   const helpBanner = getHelpBanner(locale);
-  // Locale-stable: every pricing page collapses to l_pricing_*.
-  const prefix = stablePrefix(trackPrefix);
   return (
     <main className="relative">
       <PageTracker page="pricing" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
       <LandingHeader texts={texts.header} locale={locale} featureLinks={texts.footer.featureLinks} helpHref={helpBanner?.href} />
 
-      <Section dataSection="pricing_hero" noContainer>
-        <PricingHero locale={locale} ctaText={texts.ctaText} demoText={texts.demoText} microcopy={texts.microcopy} texts={texts.pricingHero!} trackPrefix={prefix} />
-      </Section>
-
+      {/* billing-features-constructor: the à-la-carte quiz replaces the fixed
+          Basic/Pro plan cards as the pricing hero. */}
       <Section dataSection="pricing_quiz" noContainer>
         <PricingQuiz ctaText={texts.ctaText} />
       </Section>
