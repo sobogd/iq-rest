@@ -29,7 +29,8 @@
     "rxjs": "^7.8.1",
     "ua-parser-js": "^2.0.9",
     "zod": "^3.23.8",
-    "@iq-rest/db": "workspace:*"
+    "@iq-rest/db": "workspace:*",
+    "@iq-rest/entitlements": "workspace:*"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.4.9",

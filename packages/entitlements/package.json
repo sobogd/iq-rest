@@ -1,0 +1,27 @@
+{
+  "name": "@iq-rest/entitlements",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Shared IQ Rest entitlement logic — the single source of truth for PRO-feature / capability resolution, consumed by dashboard-api, public-menu-api (and, for pure bits, the SPAs).",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@iq-rest/db": "workspace:*",
+    "typescript": "^5.7.2",
+    "vitest": "^3.0.5"
+  },
+  "files": [
+    "dist"
+  ]
+}
