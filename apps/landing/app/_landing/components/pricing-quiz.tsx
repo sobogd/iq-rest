@@ -113,7 +113,7 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
             className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-foreground hover:bg-accent/70 disabled:opacity-40"
             disabled={count <= 1}
           >
-            <Minus className="h-4 w-4" />
+            <Minus className="h-4 w-4" strokeWidth={2.75} />
           </button>
           <span className="text-center text-sm font-medium text-foreground px-2">
             Restaurants: <span className="tabular-nums">{count}</span>
@@ -124,7 +124,7 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
             onClick={() => setCount((c) => Math.min(99, c + 1))}
             className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-foreground hover:bg-accent/70"
           >
-            <Plus className="h-4 w-4" />
+            <Plus className="h-4 w-4" strokeWidth={2.75} />
           </button>
         </div>
       </div>
