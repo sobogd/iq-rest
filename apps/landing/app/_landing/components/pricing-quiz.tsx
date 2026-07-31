@@ -87,50 +87,46 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
         </p>
       </div>
 
-      {/* Controls — billing cycle + restaurants stepper on ONE row, each under a
-          small muted caption. Stepper keeps exact count; its label truncates (…)
-          when tight so it never wraps. */}
-      <div className="flex items-end justify-center gap-3 mb-6">
-        <div className="flex flex-1 sm:flex-none flex-col items-start gap-1.5">
-          <span className="text-sm font-medium text-muted-foreground px-5">Billing</span>
-          <div className="flex w-full sm:w-auto rounded-full border border-border bg-card p-1">
-            {(["month", "year"] as const).map((c) => (
-              <button
-                key={c}
-                type="button"
-                onClick={() => setCycle(c)}
-                className={`flex-1 sm:flex-none px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
-                  cycle === c ? "bg-primary text-primary-foreground" : "text-muted-foreground"
-                }`}
-              >
-                {c === "month" ? "Monthly" : "Yearly"}
-              </button>
-            ))}
-          </div>
+      {/* Controls — billing cycle + restaurants stepper on ONE row, 50/50 on
+          mobile. The word "restaurants" lives (muted) inside the counter. */}
+      <div className="flex items-center justify-center gap-3 mb-6">
+        <div className="flex flex-1 sm:flex-none w-full sm:w-auto rounded-full border border-border bg-card p-1">
+          {(["month", "year"] as const).map((c) => (
+            <button
+              key={c}
+              type="button"
+              onClick={() => setCycle(c)}
+              className={`flex-1 sm:flex-none px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                cycle === c ? "bg-primary text-primary-foreground" : "text-muted-foreground"
+              }`}
+            >
+              {c === "month" ? "Monthly" : "Yearly"}
+            </button>
+          ))}
         </div>
 
-        <div className="flex min-w-0 flex-1 sm:flex-none flex-col items-start gap-1.5">
-          <span className="text-sm font-medium text-muted-foreground px-5">Restaurants</span>
-          <div className="flex w-full sm:w-auto items-center justify-between rounded-full border border-border bg-card p-1">
-            <button
-              type="button"
-              aria-label="Fewer restaurants"
-              onClick={() => setCount((c) => Math.max(1, c - 1))}
-              className="h-8 w-8 shrink-0 rounded-full text-lg leading-none hover:bg-accent disabled:opacity-40"
-              disabled={count <= 1}
-            >
-              −
-            </button>
-            <span className="flex-1 sm:flex-none sm:min-w-[2rem] text-center text-sm font-medium tabular-nums px-2">{count}</span>
-            <button
-              type="button"
-              aria-label="More restaurants"
-              onClick={() => setCount((c) => Math.min(99, c + 1))}
-              className="h-8 w-8 shrink-0 rounded-full text-lg leading-none hover:bg-accent"
-            >
-              +
-            </button>
-          </div>
+        <div className="flex min-w-0 flex-1 sm:flex-none w-full sm:w-auto items-center justify-between rounded-full border border-border bg-card p-1">
+          <button
+            type="button"
+            aria-label="Fewer restaurants"
+            onClick={() => setCount((c) => Math.max(1, c - 1))}
+            className="h-8 w-8 shrink-0 rounded-full text-lg leading-none hover:bg-accent disabled:opacity-40"
+            disabled={count <= 1}
+          >
+            −
+          </button>
+          <span className="min-w-0 flex-1 sm:flex-none truncate text-center text-sm font-medium px-2">
+            <span className="tabular-nums">{count}</span>{" "}
+            <span className="text-muted-foreground">{count === 1 ? "restaurant" : "restaurants"}</span>
+          </span>
+          <button
+            type="button"
+            aria-label="More restaurants"
+            onClick={() => setCount((c) => Math.min(99, c + 1))}
+            className="h-8 w-8 shrink-0 rounded-full text-lg leading-none hover:bg-accent"
+          >
+            +
+          </button>
         </div>
       </div>
 
