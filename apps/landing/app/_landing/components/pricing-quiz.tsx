@@ -91,15 +91,15 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
           small muted caption. Stepper keeps exact count; its label truncates (…)
           when tight so it never wraps. */}
       <div className="flex items-end justify-center gap-3 mb-6">
-        <div className="flex flex-col items-center gap-1.5">
-          <span className="text-xs font-medium uppercase tracking-wide text-muted-foreground">Billing</span>
-          <div className="inline-flex shrink-0 rounded-full border border-border bg-card p-1">
+        <div className="flex flex-1 sm:flex-none flex-col items-center gap-1.5">
+          <span className="text-xs font-medium text-muted-foreground">Billing</span>
+          <div className="flex w-full sm:w-auto rounded-full border border-border bg-card p-1">
             {(["month", "year"] as const).map((c) => (
               <button
                 key={c}
                 type="button"
                 onClick={() => setCycle(c)}
-                className={`px-3.5 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                className={`flex-1 sm:flex-none px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
                   cycle === c ? "bg-primary text-primary-foreground" : "text-muted-foreground"
                 }`}
               >
@@ -109,9 +109,9 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
           </div>
         </div>
 
-        <div className="flex min-w-0 flex-col items-center gap-1.5">
-          <span className="text-xs font-medium uppercase tracking-wide text-muted-foreground">Restaurants</span>
-          <div className="inline-flex min-w-0 items-center rounded-full border border-border bg-card p-1">
+        <div className="flex min-w-0 flex-1 sm:flex-none flex-col items-center gap-1.5">
+          <span className="text-xs font-medium text-muted-foreground">Restaurants</span>
+          <div className="flex w-full sm:w-auto items-center justify-between rounded-full border border-border bg-card p-1">
             <button
               type="button"
               aria-label="Fewer restaurants"
@@ -121,7 +121,7 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
             >
               −
             </button>
-            <span className="min-w-0 truncate text-center text-sm font-medium tabular-nums px-2">{count}</span>
+            <span className="flex-1 sm:flex-none sm:min-w-[2rem] text-center text-sm font-medium tabular-nums px-2">{count}</span>
             <button
               type="button"
               aria-label="More restaurants"
