@@ -729,6 +729,21 @@ export class StripeController {
     // not in this paid selection (unless manually comped).
     await this.provisionAdhocFlags(restaurantId, sels);
 
+    // Enterprise (§Q1): a paid selection covering >4 venues raises the account's
+    // venue ceiling so the owner isn't blocked from managing them.
+    const billingVenues = sels.filter((s) => s.menuOnline).length;
+    if (billingVenues > 4 && (status === "ACTIVE" || status === "PAST_DUE")) {
+      const r = await this.prisma.restaurant.findUnique({
+        where: { id: restaurantId },
+        select: { accountId: true, account: { select: { venueLimit: true } } },
+      });
+      if (r?.accountId && billingVenues > (r.account?.venueLimit ?? 4)) {
+        await this.prisma.account
+          .update({ where: { id: r.accountId }, data: { venueLimit: billingVenues } })
+          .catch(() => undefined);
+      }
+    }
+
     // plan = PRO → account-wide access active; features gated by the flags above.
     await this.mirrorAccountSubscription(restaurantId, {
       plan: "PRO",

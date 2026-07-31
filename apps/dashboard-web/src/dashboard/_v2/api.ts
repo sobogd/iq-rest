@@ -844,6 +844,127 @@ export async function openBillingPortal(locale?: string): Promise<string | null>
  return data.url || null;
 }
 
+// ── billing-features-constructor: à-la-carte pricing + ad-hoc checkout ──
+
+// Per-venue feature selection sent to the quote / checkout endpoints.
+export type VenueSelectionInput = {
+ restaurantId: string;
+ menuOnline: boolean;
+ reservations: boolean;
+ ordersKds: boolean;
+ domain: boolean;
+};
+
+// The price catalog (loose shape — the SPA only reads currencies + discounts).
+export type PricingItem = { mo: number; yr: number };
+export type PricingCatalog = {
+ currencies: Record<string, { menu: PricingItem; reservations: PricingItem; ordersKds: PricingItem; domain: PricingItem }>;
+ volumeDiscounts: { "2-4": { mo: number; yr: number }; "5+": { mo: number; yr: number } };
+};
+
+export async function getPricingCatalog(): Promise<PricingCatalog | null> {
+ const res = await apiFetch("/api/pricing", { credentials: "include", cache: "no-store" }).catch(() => null);
+ if (!res || !res.ok) return null;
+ return await res.json();
+}
+
+export type BillingQuote = {
+ currency: string;
+ cycle: "month" | "year";
+ billingVenues: number;
+ discount: number;
+ subtotalPerMonth: number;
+ perMonthAfterDiscount: number;
+ amountMajor: number;
+ amountCents: number;
+};
+
+export async function computeQuote(
+ selections: VenueSelectionInput[],
+ cycle: "month" | "year",
+ currency?: string,
+): Promise<BillingQuote | null> {
+ const res = await apiFetch("/api/billing/quote", {
+  credentials: "include",
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ selections, cycle, currency }),
+ });
+ if (!res.ok) return null;
+ return await res.json();
+}
+
+// Ad-hoc checkout from a venue selection. Returns the Stripe URL (or the billing
+// page URL when changing an existing sub in place).
+export async function createAdhocCheckout(
+ selections: VenueSelectionInput[],
+ cycle: "month" | "year",
+ currency?: string,
+): Promise<string | null> {
+ const locale = typeof window !== "undefined" ? (window.location.pathname.match(/^\/([a-z]{2})\b/)?.[1] || "en") : "en";
+ const res = await apiFetch("/api/stripe/checkout", {
+  credentials: "include",
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ selections, cycle, currency, locale }),
+ });
+ if (!res.ok) {
+  console.error("Ad-hoc checkout error:", res.status, await res.text().catch(() => ""));
+  return null;
+ }
+ const data = await res.json();
+ return data.url || null;
+}
+
+// SEPA-by-invoice request (yearly only). Returns success + the amount quoted.
+export async function requestSepaInvoice(
+ selections: VenueSelectionInput[],
+ currency?: string,
+ email?: string,
+): Promise<{ success: boolean; amount?: number; currency?: string } | null> {
+ const res = await apiFetch("/api/billing/sepa-request", {
+  credentials: "include",
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ selections, currency, email }),
+ });
+ if (!res.ok) return null;
+ return await res.json();
+}
+
+export type BillingProfile = { legalName: string; taxId: string; address: string; billingEmail: string };
+
+export async function getBillingProfile(): Promise<BillingProfile | null> {
+ const res = await apiFetch("/api/billing/profile", { credentials: "include", cache: "no-store" });
+ if (!res.ok) return null;
+ return await res.json();
+}
+
+export async function saveBillingProfile(profile: BillingProfile): Promise<boolean> {
+ const res = await apiFetch("/api/billing/profile", {
+  credentials: "include",
+  method: "PUT",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(profile),
+ });
+ return res.ok;
+}
+
+export type InvoiceRow = {
+ id: string;
+ number: string | null;
+ issuedAt: string | null;
+ amount: number | null;
+ currency: string | null;
+ fileUrl: string;
+};
+
+export async function getInvoices(): Promise<InvoiceRow[]> {
+ const res = await apiFetch("/api/billing/invoices", { credentials: "include", cache: "no-store" });
+ if (!res.ok) return [];
+ return await res.json();
+}
+
 // ── Logout ──
 
 export async function logout(): Promise<void> {
