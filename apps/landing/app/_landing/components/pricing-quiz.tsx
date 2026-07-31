@@ -115,9 +115,8 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
           >
             <Minus className="h-4 w-4" />
           </button>
-          <span className="text-center text-sm px-2">
-            <span className="text-muted-foreground">Restaurants:</span>{" "}
-            <span className="tabular-nums font-medium text-foreground">{count}</span>
+          <span className="text-center text-sm font-medium text-foreground px-2">
+            Restaurants: <span className="tabular-nums">{count}</span>
           </span>
           <button
             type="button"
