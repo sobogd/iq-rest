@@ -18,6 +18,63 @@ export const PRICE_LOOKUP_KEYS = {
   PRO_YEARLY: "pro_yearly",
 } as const;
 
+// ─── billing-features-constructor: ad-hoc pricing ────────────────────────────
+// A single reusable Stripe Product that every ad-hoc Price attaches to. Ad-hoc
+// prices carry the amount; the Product is just the umbrella ("IQ Rest"). If the
+// env var is unset we lazily create/reuse one by name.
+let cachedProductId: string | null = null;
+export async function getAdhocProductId(): Promise<string> {
+  const fromEnv = process.env.STRIPE_PRODUCT_ID;
+  if (fromEnv) return fromEnv;
+  if (cachedProductId) return cachedProductId;
+  const stripe = getStripe();
+  // Reuse an existing "IQ Rest" product if present, else create one.
+  const existing = await stripe.products.search({ query: 'name:"IQ Rest"', limit: 1 }).catch(() => null);
+  if (existing && existing.data[0]) {
+    cachedProductId = existing.data[0].id;
+    return cachedProductId;
+  }
+  const product = await stripe.products.create({ name: "IQ Rest" });
+  cachedProductId = product.id;
+  return cachedProductId;
+}
+
+// Compact per-venue selection carried in Stripe subscription metadata so the
+// webhook can provision the Restaurant feature flags on payment. Encoded as a
+// bitmask per restaurant: menu=1, reservations=2, ordersKds=4, domain=8.
+export type VenueSel = {
+  restaurantId: string;
+  menuOnline: boolean;
+  reservations: boolean;
+  ordersKds: boolean;
+  domain: boolean;
+};
+
+export function encodeSelections(sels: VenueSel[]): string {
+  const obj: Record<string, number> = {};
+  for (const s of sels) {
+    obj[s.restaurantId] =
+      (s.menuOnline ? 1 : 0) | (s.reservations ? 2 : 0) | (s.ordersKds ? 4 : 0) | (s.domain ? 8 : 0);
+  }
+  return JSON.stringify(obj);
+}
+
+export function decodeSelections(encoded: string | undefined | null): VenueSel[] {
+  if (!encoded) return [];
+  try {
+    const obj = JSON.parse(encoded) as Record<string, number>;
+    return Object.entries(obj).map(([restaurantId, m]) => ({
+      restaurantId,
+      menuOnline: !!(m & 1),
+      reservations: !!(m & 2),
+      ordersKds: !!(m & 4),
+      domain: !!(m & 8),
+    }));
+  } catch {
+    return [];
+  }
+}
+
 export type PriceLookupKey = (typeof PRICE_LOOKUP_KEYS)[keyof typeof PRICE_LOOKUP_KEYS];
 
 // Billing currencies we actually price in Stripe. EUR is the base/fallback;

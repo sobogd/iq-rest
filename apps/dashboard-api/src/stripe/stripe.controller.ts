@@ -21,18 +21,49 @@ import {
   type SupportedCurrency,
   getLookupKeyWithCurrency,
   isSupportedCurrency,
+  getAdhocProductId,
+  encodeSelections,
+  decodeSelections,
+  type VenueSel,
 } from "../common/stripe";
 import { getRequestBillingCurrency } from "../common/geo";
+import {
+  DEFAULT_PRICING_CATALOG,
+  computeAccountQuote,
+  type PricingCatalog,
+  type Cycle,
+} from "@iq-rest/pricing";
 
 interface SubscriptionData {
   id: string;
   status: string;
   current_period_end?: number;
   currency?: string;
-  items: { data: Array<{ current_period_end?: number; price: { id: string; lookup_key?: string | null; currency?: string } }> };
+  items: {
+    data: Array<{
+      current_period_end?: number;
+      id?: string;
+      price: {
+        id: string;
+        lookup_key?: string | null;
+        currency?: string;
+        unit_amount?: number | null;
+        recurring?: { interval?: string | null } | null;
+      };
+    }>;
+  };
   metadata?: Record<string, string>;
   customer?: string;
 }
+
+// A per-venue selection sent by the constructor / quiz checkout.
+type CheckoutSelection = {
+  restaurantId: string;
+  menuOnline?: boolean;
+  reservations?: boolean;
+  ordersKds?: boolean;
+  domain?: boolean;
+};
 
 @Controller("stripe")
 export class StripeController {
@@ -42,7 +73,17 @@ export class StripeController {
   @UseGuards(AuthGuard)
   async createCheckout(
     @Req() req: Request,
-    @Body() body: { priceLookupKey?: string; locale?: string; currency?: string },
+    @Body()
+    body: {
+      priceLookupKey?: string;
+      locale?: string;
+      currency?: string;
+      // billing-features-constructor: ad-hoc à-la-carte checkout. When present,
+      // the amount is computed from the pricing catalog (not a lookup key) and a
+      // one-off immutable price_data drives the subscription.
+      selections?: CheckoutSelection[];
+      cycle?: string;
+    },
   ) {
     // Per-restaurant billing — checkout creates a Stripe subscription scoped
     // to the CURRENTLY ACTIVE restaurant. Each restaurant has its own sub.
@@ -67,13 +108,15 @@ export class StripeController {
     // claim, not Stripe. The billing UI is hidden for them client-side too.
     if (user.isDemo) throw new ForbiddenException("Demo accounts cannot start a subscription");
 
+    const isAdhoc = Array.isArray(body.selections) && body.selections.length > 0;
+
     const validKeys: string[] = [
       PRICE_LOOKUP_KEYS.BASIC_MONTHLY,
       PRICE_LOOKUP_KEYS.BASIC_YEARLY,
       PRICE_LOOKUP_KEYS.PRO_MONTHLY,
       PRICE_LOOKUP_KEYS.PRO_YEARLY,
     ];
-    if (!body.priceLookupKey || !validKeys.includes(body.priceLookupKey)) {
+    if (!isAdhoc && (!body.priceLookupKey || !validKeys.includes(body.priceLookupKey))) {
       throw new BadRequestException("Invalid price lookup key");
     }
 
@@ -97,11 +140,10 @@ export class StripeController {
     const baseLookupKey = body.priceLookupKey as PriceLookupKey;
     const fullLookupKey = getLookupKeyWithCurrency(baseLookupKey, currency);
 
-    // When there's already an active subscription on THIS restaurant, route to
-    // the Stripe Billing Portal so the switch shows the prorated charge before
-    // it commits. Prefer the restaurant's own customer; fall back to the legacy
-    // per-user customer for subs created before per-restaurant billing.
-    if (acctSub?.status === "ACTIVE" && acctSub.stripeSubscriptionId) {
+    // When there's already an active subscription and this is a LEGACY lookup-key
+    // switch, route to the Stripe Billing Portal (proration preview). Ad-hoc
+    // changes are handled below (subscription item swap, immediate proration).
+    if (!isAdhoc && acctSub?.status === "ACTIVE" && acctSub.stripeSubscriptionId) {
       const customer = acct?.stripeCustomerId;
       if (!customer) {
         throw new BadRequestException("Subscription is active but no Stripe customer found");
@@ -142,6 +184,83 @@ export class StripeController {
       });
     }
 
+    const appUrl = process.env.APP_URL;
+    if (!appUrl) throw new BadRequestException("APP_URL not configured");
+    const locale = body.locale || "en";
+
+    // ── Ad-hoc à-la-carte path (billing-features-constructor) ─────────────────
+    if (isAdhoc) {
+      const catalog = await this.pricingCatalog();
+      const cycle: Cycle = body.cycle === "year" || body.cycle === "yearly" ? "year" : "month";
+      const sels: VenueSel[] = body.selections!.map((s) => ({
+        restaurantId: s.restaurantId,
+        menuOnline: s.menuOnline ?? true,
+        reservations: !!s.reservations,
+        ordersKds: !!s.ordersKds,
+        domain: !!s.domain,
+      }));
+      const quote = computeAccountQuote(
+        catalog,
+        currency,
+        sels.map((s) => ({
+          menuOnline: s.menuOnline,
+          reservations: s.reservations,
+          ordersKds: s.ordersKds,
+          domain: s.domain,
+        })),
+        cycle,
+      );
+      if (quote.amountCents < 50) throw new BadRequestException("Amount too low");
+      const productId = await getAdhocProductId();
+      const selMeta = encodeSelections(sels);
+      const meta = { restaurantId: restaurant.id, userId: user.id, accountId: acct?.id ?? "", sel: selMeta, prov: "custom" };
+
+      // CHANGE an existing subscription in place → immediate proration (§Q6).
+      if (acctSub?.status === "ACTIVE" && acctSub.stripeSubscriptionId) {
+        const price = await stripe.prices.create({
+          currency: currency.toLowerCase(),
+          product: productId,
+          unit_amount: quote.amountCents,
+          recurring: { interval: cycle },
+        });
+        const stripeSub = (await stripe.subscriptions.retrieve(acctSub.stripeSubscriptionId)) as unknown as SubscriptionData;
+        const itemId = stripeSub.items.data[0]?.id;
+        await stripe.subscriptions.update(acctSub.stripeSubscriptionId, {
+          items: itemId ? [{ id: itemId, price: price.id }] : undefined,
+          proration_behavior: "always_invoice",
+          metadata: meta,
+        });
+        // The customer.subscription.updated webhook applies state + provisions flags.
+        return { url: `${appUrl}/${locale}/dashboard/settings/billing?success=true` };
+      }
+
+      // NEW subscription via Checkout with a one-off immutable price_data.
+      const session = await stripe.checkout.sessions.create({
+        customer: customerId,
+        mode: "subscription",
+        payment_method_types: ["card"],
+        line_items: [
+          {
+            price_data: {
+              currency: currency.toLowerCase(),
+              product: productId,
+              unit_amount: quote.amountCents,
+              recurring: { interval: cycle },
+            },
+            quantity: 1,
+          },
+        ],
+        success_url: `${appUrl}/${locale}/dashboard/settings/billing?success=true`,
+        cancel_url: `${appUrl}/${locale}/dashboard/settings/billing?canceled=true`,
+        subscription_data: { metadata: meta },
+        metadata: meta,
+      });
+      if (!session.url) throw new BadRequestException("Stripe did not return a checkout URL");
+      await this.prisma.restaurant.update({ where: { id: restaurant.id }, data: { paymentProcessing: true } });
+      return { url: session.url };
+    }
+
+    // ── Legacy lookup-key path ────────────────────────────────────────────────
     let prices = await stripe.prices.list({ lookup_keys: [fullLookupKey], active: true, limit: 1 });
     if (prices.data.length === 0) {
       // Fallback to base lookup key without currency suffix.
@@ -151,9 +270,6 @@ export class StripeController {
       throw new BadRequestException(`Price not found for ${fullLookupKey} or ${baseLookupKey}`);
     }
 
-    const appUrl = process.env.APP_URL;
-    if (!appUrl) throw new BadRequestException("APP_URL not configured");
-    const locale = body.locale || "en";
     const session = await stripe.checkout.sessions.create({
       customer: customerId,
       mode: "subscription",
@@ -175,6 +291,12 @@ export class StripeController {
     });
 
     return { url: session.url };
+  }
+
+  // Live pricing catalog (PricingConfig singleton) with the built-in fallback.
+  private async pricingCatalog(): Promise<PricingCatalog> {
+    const row = await this.prisma.pricingConfig.findUnique({ where: { id: "default" } }).catch(() => null);
+    return (row?.data as unknown as PricingCatalog) ?? DEFAULT_PRICING_CATALOG;
   }
 
   @Post("processing")
@@ -457,6 +579,17 @@ export class StripeController {
     const item = sub.items.data[0];
     const lookupKey = item?.price.lookup_key;
 
+    // ── Ad-hoc à-la-carte subscription (billing-features-constructor) ─────────
+    // Identified by the `sel` metadata (per-venue selection encoded at checkout).
+    // Amount/interval come from the price; the plan label is cosmetic (features
+    // live on the per-restaurant flags we provision here).
+    const selEncoded = sub.metadata?.sel;
+    if (selEncoded) {
+      await this.applyAdhocSubscription(restaurantId, sub);
+      return;
+    }
+
+
     let plan: Plan = "FREE";
     let billingCycle: BillingCycle | null = null;
     let matched = false;
@@ -549,6 +682,122 @@ export class StripeController {
     }
   }
 
+  /** Ad-hoc à-la-carte subscription: amount/interval from the price, features
+   *  from the encoded per-venue selection. The plan label is set to PRO so the
+   *  entitlement gate grants account-wide access; the per-venue feature flags
+   *  (which we provision here) decide what each venue actually gets. Venues NOT
+   *  in the paid selection (and not manually comped) are deactivated so they
+   *  don't stay online for free. */
+  private async applyAdhocSubscription(restaurantId: string, sub: SubscriptionData): Promise<void> {
+    const item = sub.items.data[0];
+    const sels = decodeSelections(sub.metadata?.sel);
+
+    let status: SubscriptionStatus = "INACTIVE";
+    switch (sub.status) {
+      case "active":
+      case "trialing":
+        status = "ACTIVE"; break;
+      case "past_due":
+        status = "PAST_DUE"; break;
+      case "canceled":
+      case "unpaid":
+        status = "CANCELED"; break;
+      case "incomplete":
+      case "incomplete_expired":
+        status = "EXPIRED"; break;
+    }
+
+    const periodEnd = item?.current_period_end ?? sub.current_period_end;
+    let currentPeriodEnd: Date | null = null;
+    if (typeof periodEnd === "number" && periodEnd > 0) {
+      const d = new Date(periodEnd * 1000);
+      if (!isNaN(d.getTime())) currentPeriodEnd = d;
+    }
+
+    const interval = item?.price.recurring?.interval === "year" ? "year" : "month";
+    const billingCycle: BillingCycle = interval === "year" ? "YEARLY" : "MONTHLY";
+    const amount = typeof item?.price.unit_amount === "number" ? item.price.unit_amount : null;
+    const subCurrency = (sub.currency ?? item?.price.currency ?? "").toUpperCase();
+    const billingCurrency = isSupportedCurrency(subCurrency) ? subCurrency : undefined;
+    const provenance = sub.metadata?.prov ?? "custom";
+
+    await this.prisma.restaurant
+      .update({ where: { id: restaurantId }, data: { paymentProcessing: false } })
+      .catch(() => undefined);
+
+    // Provision feature flags per venue, and deactivate account venues that are
+    // not in this paid selection (unless manually comped).
+    await this.provisionAdhocFlags(restaurantId, sels);
+
+    // plan = PRO → account-wide access active; features gated by the flags above.
+    await this.mirrorAccountSubscription(restaurantId, {
+      plan: "PRO",
+      billingCycle,
+      status,
+      currentPeriodEnd,
+      stripeSubscriptionId: sub.id,
+      billingCurrency,
+      customerId: typeof sub.customer === "string" ? sub.customer : null,
+      appliesToRestaurantId: null,
+      amount,
+      currency: billingCurrency,
+      interval,
+      provider: "stripe",
+      priceProvenance: provenance,
+    });
+  }
+
+  /** Write the paid selection's feature flags onto each selected venue, and turn
+   *  OFF venues in the same account that weren't paid for (and aren't comped). */
+  private async provisionAdhocFlags(restaurantId: string, sels: VenueSel[]): Promise<void> {
+    const r = await this.prisma.restaurant.findUnique({
+      where: { id: restaurantId },
+      select: { accountId: true },
+    });
+    if (!r?.accountId) return;
+    const selectedIds = new Set(sels.map((s) => s.restaurantId));
+    const venues = await this.prisma.restaurant.findMany({
+      where: { accountId: r.accountId },
+      select: { id: true, manualAccess: true },
+    });
+    await Promise.all(
+      venues.map((v) => {
+        const sel = sels.find((s) => s.restaurantId === v.id);
+        if (sel) {
+          return this.prisma.restaurant
+            .update({
+              where: { id: v.id },
+              data: {
+                featMenuOnline: sel.menuOnline,
+                featOrders: sel.ordersKds,
+                featKds: sel.ordersKds,
+                featReservations: sel.reservations,
+                featCustomDomain: sel.domain,
+                featAiUnlimited: sel.ordersKds,
+              },
+            })
+            .catch(() => undefined);
+        }
+        // Not in the paid selection. Leave manually-comped venues alone; otherwise
+        // deactivate so an unpaid venue doesn't stay online under the account sub.
+        if (v.manualAccess || selectedIds.has(v.id)) return undefined;
+        return this.prisma.restaurant
+          .update({
+            where: { id: v.id },
+            data: {
+              featMenuOnline: false,
+              featOrders: false,
+              featKds: false,
+              featReservations: false,
+              featCustomDomain: false,
+              featAiUnlimited: false,
+            },
+          })
+          .catch(() => undefined);
+      }),
+    );
+  }
+
   /** Mirror a reconciled subscription into the account-level Subscription row.
    *  PRO applies to the whole account (appliesToRestaurantId null); BASIC applies
    *  to the single paying venue. New-table-only; callers guard with .catch. */
@@ -562,6 +811,14 @@ export class StripeController {
       stripeSubscriptionId: string | null;
       billingCurrency?: string;
       customerId: string | null;
+      // billing-features-constructor extras (ad-hoc). When omitted, the legacy
+      // plan-based appliesToRestaurantId pinning is used.
+      appliesToRestaurantId?: string | null;
+      amount?: number | null;
+      currency?: string;
+      interval?: string;
+      provider?: string;
+      priceProvenance?: string;
     },
   ): Promise<void> {
     const r = await this.prisma.restaurant.findUnique({
@@ -569,7 +826,12 @@ export class StripeController {
       select: { accountId: true },
     });
     if (!r?.accountId) return;
-    const appliesToRestaurantId = s.plan === "BASIC" ? restaurantId : null;
+    const appliesToRestaurantId =
+      s.appliesToRestaurantId !== undefined
+        ? s.appliesToRestaurantId
+        : s.plan === "BASIC"
+          ? restaurantId
+          : null;
     const data = {
       plan: s.plan,
       billingCycle: s.billingCycle,
@@ -578,6 +840,11 @@ export class StripeController {
       stripeSubscriptionId: s.stripeSubscriptionId,
       appliesToRestaurantId,
       updatedFromStripeAt: new Date(),
+      ...(s.provider ? { provider: s.provider } : {}),
+      ...(s.amount !== undefined ? { amount: s.amount } : {}),
+      ...(s.currency ? { currency: s.currency } : {}),
+      ...(s.interval ? { interval: s.interval } : {}),
+      ...(s.priceProvenance ? { priceProvenance: s.priceProvenance } : {}),
     };
     await this.prisma.subscription.upsert({
       where: { accountId: r.accountId },

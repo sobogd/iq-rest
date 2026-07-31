@@ -19,6 +19,7 @@ import { UploadModule } from "./upload/upload.module";
 import { TranslateModule } from "./translate/translate.module";
 import { SupportModule } from "./support/support.module";
 import { StripeModule } from "./stripe/stripe.module";
+import { BillingModule } from "./billing/billing.module";
 import { GeoModule } from "./geo/geo.module";
 import { AnalyticsModule } from "./analytics/analytics.module";
 import { UsageModule } from "./usage/usage.module";
@@ -51,6 +52,7 @@ import { HealthController } from "./health/health.controller";
     TranslateModule,
     SupportModule,
     StripeModule,
+    BillingModule,
     GeoModule,
     AnalyticsModule,
     UsageModule,
