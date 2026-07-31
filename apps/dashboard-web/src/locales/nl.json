@@ -632,6 +632,7 @@
       "add": "Restaurant toevoegen",
       "addDesc": "Maak een ander restaurant — dupliceer dit menu of begin met een leeg restaurant.",
       "paidOnly": "Meerdere restaurants zijn beschikbaar in een betaald abonnement. Upgrade in Facturering om er meer toe te voegen.",
+      "atLimit": "Je hebt het maximum van {limit} restaurants bereikt dat in Pro is inbegrepen. Meer nodig? Neem contact op met support over een Enterprise-abonnement.",
       "newTitle": "Restaurant toevoegen",
       "newSubtitle": "Maak een ander restaurant. Kies of je start met een kopie van het huidige menu of helemaal opnieuw.",
       "startFrom": "Beginnen met",

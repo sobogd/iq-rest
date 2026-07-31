@@ -64,7 +64,7 @@ function ModeCard({
 export function RestaurantsListPage({ onBack, isDemo = false }: { onBack: () => void; isDemo?: boolean }) {
   const t = useTranslations("dashboard.restaurants");
   const tc = useTranslations("dashboard.common");
-  const { list, activeId, canAddVenue, switching, setActive, refresh } = useRestaurants();
+  const { list, activeId, isPaid, canAddVenue, venueLimit, switching, setActive, refresh } = useRestaurants();
   const router = useDashboardRouter();
   const [pendingDelete, setPendingDelete] = useState<{ id: string; name: string } | null>(null);
   const [deleting, setDeleting] = useState(false);
@@ -185,6 +185,12 @@ export function RestaurantsListPage({ onBack, isDemo = false }: { onBack: () => 
               <PlusIcon size={14} />
               {t("add")}
             </button>
+          ) : isPaid && list.length >= venueLimit ? (
+            // Paid account that hit the venue ceiling — this is not an upsell to
+            // a paid plan (they're already on it); it's the Enterprise ask.
+            <div className="p-4 bg-secondary/50 border border-border rounded-xl text-xs text-muted-foreground">
+              {t("atLimit", { limit: venueLimit })}
+            </div>
           ) : (
             <div className="p-4 bg-secondary/50 border border-border rounded-xl text-xs text-muted-foreground">
               {t("paidOnly")}

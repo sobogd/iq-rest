@@ -632,6 +632,7 @@
       "add": "Přidat restauraci",
       "addDesc": "Vytvořte další restauraci — zkopírujte toto menu nebo začněte od nuly.",
       "paidOnly": "Více restaurací je k dispozici v placeném tarifu. Upgradujte v sekci Fakturace.",
+      "atLimit": "Dosáhli jste maxima {limit} restaurací zahrnutých v Pro. Potřebujete více? Napište podpoře ohledně plánu Enterprise.",
       "newTitle": "Přidat restauraci",
       "newSubtitle": "Vytvořte další restauraci. Vyberte, zda začít kopií současného menu nebo od nuly.",
       "startFrom": "Začít od",

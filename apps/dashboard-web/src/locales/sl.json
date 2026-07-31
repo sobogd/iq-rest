@@ -632,6 +632,7 @@
       "add": "Dodaj restavracijo",
       "addDesc": "Ustvarite drugo restavracijo — podvojite ta meni ali začnite na novo.",
       "paidOnly": "Več restavracij je na voljo v plačljivem paketu. Nadgradite v razdelku Plačila, da jih dodate več.",
+      "atLimit": "Dosegli ste največje število {limit} restavracij, vključenih v paket Pro. Potrebujete več? Pišite podpori o paketu Enterprise.",
       "newTitle": "Dodaj restavracijo",
       "newSubtitle": "Ustvarite drugo restavracijo. Izberite, ali začnete s kopijo trenutnega menija ali iz nič.",
       "startFrom": "Začnite z",

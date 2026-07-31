@@ -632,6 +632,7 @@
       "add": "Tilføj restaurant",
       "addDesc": "Opret en anden restaurant — kopiér denne menu eller start fra bunden.",
       "paidOnly": "Flere restauranter er tilgængelige på en betalt plan. Opgrader under Fakturering for at tilføje flere.",
+      "atLimit": "Du har nået maksimum på {limit} restauranter inkluderet i Pro. Har du brug for flere? Skriv til supporten om en Enterprise-plan.",
       "newTitle": "Tilføj restaurant",
       "newSubtitle": "Opret en anden restaurant. Vælg, om du vil starte med en kopi af den nuværende menu eller fra bunden.",
       "startFrom": "Start fra",

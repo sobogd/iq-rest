@@ -632,6 +632,7 @@
       "add": "Adicionar restaurante",
       "addDesc": "Crie outro restaurante — duplique este menu ou comece do zero.",
       "paidOnly": "Vários restaurantes estão disponíveis no plano pago. Faça upgrade em Faturação para adicionar mais.",
+      "atLimit": "Atingiu o máximo de {limit} restaurantes incluídos no Pro. Precisa de mais? Contacte o suporte sobre um plano Enterprise.",
       "newTitle": "Adicionar restaurante",
       "newSubtitle": "Crie outro restaurante. Escolha começar com uma cópia do menu atual ou do zero.",
       "startFrom": "Começar com",

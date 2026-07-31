@@ -632,6 +632,7 @@
       "add": "Étterem hozzáadása",
       "addDesc": "Hozz létre másik éttermet — másold át ezt az étlapot, vagy kezdj a nulláról.",
       "paidOnly": "A több étterem fizetős csomagban érhető el. Frissíts a Számlázásnál, hogy többet adhass hozzá.",
+      "atLimit": "Elérted a Pro csomagban elérhető {limit} étterem maximumát. Többre van szükséged? Írj az ügyfélszolgálatnak egy Enterprise csomagról.",
       "newTitle": "Étterem hozzáadása",
       "newSubtitle": "Hozz létre másik éttermet. Válaszd, hogy a jelenlegi étlap másolatából vagy üresen indulsz.",
       "startFrom": "Indítás",

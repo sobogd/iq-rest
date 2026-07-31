@@ -632,6 +632,7 @@
       "add": "Lisää ravintola",
       "addDesc": "Luo toinen ravintola — kopioi tämä ruokalista tai aloita tyhjästä.",
       "paidOnly": "Useat ravintolat ovat saatavilla maksullisessa tilauksessa. Päivitä Laskutuksesta lisätäksesi niitä.",
+      "atLimit": "Olet saavuttanut Pro-pakettiin sisältyvän {limit} ravintolan enimmäismäärän. Tarvitsetko lisää? Ota yhteyttä tukeen Enterprise-paketista.",
       "newTitle": "Lisää ravintola",
       "newSubtitle": "Luo toinen ravintola. Valitse, aloitatko nykyisen ruokalistan kopiosta vai tyhjästä.",
       "startFrom": "Aloita",

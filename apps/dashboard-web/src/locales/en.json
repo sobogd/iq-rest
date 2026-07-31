@@ -728,6 +728,7 @@
       "add": "Add restaurant",
       "addDesc": "Create another restaurant — duplicate this menu or start blank.",
       "paidOnly": "Multiple restaurants are available on a paid plan. Upgrade in Billing to add more.",
+      "atLimit": "You've reached the maximum of {limit} restaurants included in Pro. Need more? Message support about an Enterprise plan.",
       "newTitle": "Add restaurant",
       "newSubtitle": "Create another restaurant. Pick whether to start with a copy of the current menu or from scratch.",
       "startFrom": "Start from",

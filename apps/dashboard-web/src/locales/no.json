@@ -632,6 +632,7 @@
       "add": "Legg til restaurant",
       "addDesc": "Opprett en annen restaurant — dupliser denne menyen eller start på nytt.",
       "paidOnly": "Flere restauranter er tilgjengelig i betalt plan. Oppgrader under Fakturering for å legge til flere.",
+      "atLimit": "Du har nådd maksimum på {limit} restauranter som er inkludert i Pro. Trenger du flere? Kontakt support om en Enterprise-plan.",
       "newTitle": "Legg til restaurant",
       "newSubtitle": "Opprett en annen restaurant. Velg om du vil starte med en kopi av dagens meny eller helt fra start.",
       "startFrom": "Start fra",

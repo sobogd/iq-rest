@@ -632,6 +632,7 @@
       "add": "Lisa restoran",
       "addDesc": "Loo veel üks restoran — dubleeri see menüü või alusta tühjalt.",
       "paidOnly": "Mitu restorani on saadaval tasulises plaanis. Uuenda arveldamise alt, et lisada veel.",
+      "atLimit": "Oled jõudnud Pro paketti kuuluva {limit} restorani ülempiirini. Vajad rohkem? Kirjuta toele Enterprise plaani kohta.",
       "newTitle": "Lisa restoran",
       "newSubtitle": "Loo veel üks restoran. Vali, kas alustada praeguse menüü koopiast või nullist.",
       "startFrom": "Alusta",

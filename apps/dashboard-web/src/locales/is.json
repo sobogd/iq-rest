@@ -632,6 +632,7 @@
       "add": "Bæta veitingastað við",
       "addDesc": "Stofnaðu annan veitingastað — afritaðu þennan matseðil eða byrjaðu á núlli.",
       "paidOnly": "Margir veitingastaðir eru í boði í greiddri áskrift. Uppfærðu undir Reikningar til að bæta við fleirum.",
+      "atLimit": "Þú hefur náð hámarkinu, {limit} veitingastöðum sem fylgja Pro. Þarftu fleiri? Sendu þjónustuveri skilaboð um Enterprise áskrift.",
       "newTitle": "Bæta veitingastað við",
       "newSubtitle": "Stofnaðu annan veitingastað. Veldu hvort byrja eigi með afriti af núverandi matseðli eða á núlli.",
       "startFrom": "Byrjaðu með",

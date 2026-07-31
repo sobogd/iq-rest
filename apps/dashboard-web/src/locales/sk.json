@@ -632,6 +632,7 @@
       "add": "Pridať reštauráciu",
       "addDesc": "Vytvorte ďalšiu reštauráciu — duplikujte toto menu alebo začnite od nuly.",
       "paidOnly": "Viacero reštaurácií je dostupných v platenom pláne. Upgradujte vo Fakturácii, aby ste pridali ďalšie.",
+      "atLimit": "Dosiahli ste maximum {limit} reštaurácií zahrnutých v pláne Pro. Potrebujete viac? Napíšte podpore o pláne Enterprise.",
       "newTitle": "Pridať reštauráciu",
       "newSubtitle": "Vytvorte ďalšiu reštauráciu. Vyberte, či začnete kópiou súčasného menu alebo od nuly.",
       "startFrom": "Začať od",

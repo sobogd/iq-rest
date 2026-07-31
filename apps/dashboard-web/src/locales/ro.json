@@ -632,6 +632,7 @@
       "add": "Adaugă restaurant",
       "addDesc": "Creează un alt restaurant — duplică acest meniu sau pornește de la zero.",
       "paidOnly": "Mai multe restaurante sunt disponibile într-un plan plătit. Actualizează la Facturare pentru a adăuga mai multe.",
+      "atLimit": "Ai atins numărul maxim de {limit} restaurante incluse în Pro. Ai nevoie de mai multe? Scrie echipei de asistență despre un plan Enterprise.",
       "newTitle": "Adaugă restaurant",
       "newSubtitle": "Creează un alt restaurant. Alege dacă pornești cu o copie a meniului curent sau de la zero.",
       "startFrom": "Pornește de la",

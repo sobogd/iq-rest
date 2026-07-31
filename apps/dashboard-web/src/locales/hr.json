@@ -632,6 +632,7 @@
       "add": "Dodaj restoran",
       "addDesc": "Stvori još jedan restoran — kopiraj ovaj jelovnik ili započni iznova.",
       "paidOnly": "Više restorana dostupno je u plaćenom planu. Nadogradi pod Naplata da dodaš još.",
+      "atLimit": "Dosegli ste maksimum od {limit} restorana uključenih u Pro. Trebate više? Pišite podršci o Enterprise planu.",
       "newTitle": "Dodaj restoran",
       "newSubtitle": "Stvori još jedan restoran. Odaberi želiš li započeti s kopijom trenutnog jelovnika ili od nule.",
       "startFrom": "Započni od",

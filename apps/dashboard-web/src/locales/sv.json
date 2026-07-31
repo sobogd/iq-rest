@@ -632,6 +632,7 @@
       "add": "Lägg till restaurang",
       "addDesc": "Skapa en annan restaurang — duplicera den här menyn eller börja från noll.",
       "paidOnly": "Flera restauranger är tillgängliga i ett betalt abonnemang. Uppgradera under Fakturering för att lägga till fler.",
+      "atLimit": "Du har nått maxantalet på {limit} restauranger som ingår i Pro. Behöver du fler? Kontakta supporten om ett Enterprise-abonnemang.",
       "newTitle": "Lägg till restaurang",
       "newSubtitle": "Skapa en annan restaurang. Välj om du vill börja med en kopia av nuvarande meny eller från noll.",
       "startFrom": "Börja från",

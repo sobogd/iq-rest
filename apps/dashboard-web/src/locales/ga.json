@@ -632,6 +632,7 @@
       "add": "Cuir bialann leis",
       "addDesc": "Cruthaigh bialann eile — déan dúblach den bhiachlár seo nó tosaigh ó thús.",
       "paidOnly": "Tá iliomad bialann ar fáil i bplean íoctha. Uasghrádaigh i mBilleáil chun tuilleadh a chur leis.",
+      "atLimit": "Tá uasmhéid {limit} bialann atá san áireamh i bPro bainte amach agat. Ag teastáil tuilleadh? Cuir teachtaireacht chuig an tacaíocht faoi phlean Enterprise.",
       "newTitle": "Cuir bialann leis",
       "newSubtitle": "Cruthaigh bialann eile. Pioc an dtosóidh tú le cóip den bhiachlár reatha nó ó thús.",
       "startFrom": "Tosaigh ó",

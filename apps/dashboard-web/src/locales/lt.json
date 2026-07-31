@@ -632,6 +632,7 @@
       "add": "Pridėti restoraną",
       "addDesc": "Sukurkite kitą restoraną — dubliuokite šį meniu arba pradėkite nuo nulio.",
       "paidOnly": "Keli restoranai pasiekiami mokamame plane. Atnaujinkite skiltyje Apmokestinimas, kad pridėtumėte daugiau.",
+      "atLimit": "Pasiekėte didžiausią į Pro įtrauktų restoranų skaičių – {limit}. Reikia daugiau? Parašykite palaikymo komandai dėl Enterprise plano.",
       "newTitle": "Pridėti restoraną",
       "newSubtitle": "Sukurkite kitą restoraną. Pasirinkite, ar pradėti nuo dabartinio meniu kopijos, ar nuo nulio.",
       "startFrom": "Pradėti nuo",

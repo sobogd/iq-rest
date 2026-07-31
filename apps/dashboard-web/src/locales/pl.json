@@ -632,6 +632,7 @@
       "add": "Dodaj restaurację",
       "addDesc": "Utwórz kolejną restaurację — zduplikuj to menu lub zacznij od zera.",
       "paidOnly": "Wiele restauracji jest dostępnych w płatnym planie. Zaktualizuj w Płatnościach, aby dodać więcej.",
+      "atLimit": "Osiągnąłeś maksimum {limit} restauracji w planie Pro. Potrzebujesz więcej? Napisz do wsparcia w sprawie planu Enterprise.",
       "newTitle": "Dodaj restaurację",
       "newSubtitle": "Utwórz kolejną restaurację. Wybierz, czy zacząć od kopii bieżącego menu, czy od zera.",
       "startFrom": "Zacznij od",

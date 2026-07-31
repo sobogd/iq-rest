@@ -632,6 +632,7 @@
       "add": "Pievienot restorānu",
       "addDesc": "Izveidojiet citu restorānu — dublējiet šo ēdienkarti vai sāciet no nulles.",
       "paidOnly": "Vairāki restorāni pieejami maksas plānā. Jaunināt sadaļā Norēķini, lai pievienotu vēl.",
+      "atLimit": "Esat sasniedzis maksimālo restorānu skaitu ({limit}), kas iekļauts Pro. Vajag vairāk? Rakstiet atbalsta komandai par Enterprise plānu.",
       "newTitle": "Pievienot restorānu",
       "newSubtitle": "Izveidojiet citu restorānu. Izvēlieties, vai sākt ar pašreizējās ēdienkartes kopiju, vai no nulles.",
       "startFrom": "Sākt no",

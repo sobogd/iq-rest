@@ -632,6 +632,7 @@
       "add": "Restoran ekle",
       "addDesc": "Başka bir restoran oluşturun — bu menüyü çoğaltın veya sıfırdan başlayın.",
       "paidOnly": "Birden fazla restoran ücretli planda kullanılabilir. Daha fazla eklemek için Faturalandırma'dan yükseltin.",
+      "atLimit": "Pro'ya dahil olan en fazla {limit} restorana ulaştınız. Daha fazlası mı gerekiyor? Enterprise planı hakkında destek ekibine yazın.",
       "newTitle": "Restoran ekle",
       "newSubtitle": "Başka bir restoran oluşturun. Mevcut menünün kopyasıyla mı yoksa sıfırdan mı başlayacağınızı seçin.",
       "startFrom": "Başlangıç",
