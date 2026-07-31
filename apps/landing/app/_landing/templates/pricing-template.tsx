@@ -4,6 +4,7 @@ import { Faq } from "../components/faq";
 import { Section } from "../components/section";
 import { PageTracker } from "../components/page-tracker";
 import { PricingHero } from "../components/pricing-hero";
+import { PricingQuiz } from "../components/pricing-quiz";
 import { FinalCta } from "../components/final-cta";
 import { getHelpBanner } from "../help/registry";
 import { HelpBannerSection } from "../help/help-banner-section";
@@ -37,6 +38,10 @@ export function PricingTemplate({
 
       <Section dataSection="pricing_hero" noContainer>
         <PricingHero locale={locale} ctaText={texts.ctaText} demoText={texts.demoText} microcopy={texts.microcopy} texts={texts.pricingHero!} trackPrefix={prefix} />
+      </Section>
+
+      <Section dataSection="pricing_quiz" noContainer>
+        <PricingQuiz ctaText={texts.ctaText} />
       </Section>
 
       <Section id="faq" dataSection="faq" noContainer accent>
