@@ -938,6 +938,10 @@
     },
     "proUpsell": {
       "cta": "Upgrade to PRO",
+      "menuOffline": {
+        "title": "Your public menu is offline",
+        "body": "This restaurant has no active plan, so diners can't see its menu. Choose a plan to bring it back online."
+      },
       "orders": {
         "title": "Orders are a PRO feature",
         "body": "Take and manage table orders with the PRO plan. Upgrade to start accepting orders."

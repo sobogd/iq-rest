@@ -81,6 +81,16 @@ function ShellBody(props: ShellInitialData) {
   const proFeatures = !!props.initialSub?.proFeatures;
   useOrdersStream(proFeatures ? (restaurant?.id ?? null) : null);
 
+  // Inactive venue (account entitlement): the public menu is offline (no active
+  // plan / expired trial / a BASIC plan applied to another venue). Show a
+  // persistent upgrade banner. Suppressed for demo + admin impersonation.
+  const tUpsell = useTranslations("dashboard.proUpsell");
+  const menuOffline =
+    !props.isDemo &&
+    !props.impersonatedBy &&
+    props.initialSub != null &&
+    props.initialSub.menuOnline === false;
+
   // Cheap extra safety: invalidate when the user lands on an orders/kitchen/
   // reservations view, in case the stream is mid-reconnect.
   useEffect(() => {
@@ -184,6 +194,23 @@ function ShellBody(props: ShellInitialData) {
 
   return (
     <>
+      {menuOffline ? (
+        <div className="max-w-5xl mx-auto md:px-6 pt-3">
+          <div className="flex items-center justify-between gap-3 rounded-xl border border-amber-300 bg-amber-50 px-4 py-3">
+            <div className="min-w-0">
+              <div className="text-sm font-medium text-amber-900">{tUpsell("menuOffline.title")}</div>
+              <div className="text-xs text-amber-800 leading-snug mt-0.5">{tUpsell("menuOffline.body")}</div>
+            </div>
+            <button
+              type="button"
+              onClick={() => router.push({ name: "settings.billing" })}
+              className="shrink-0 h-8 px-3 rounded-lg bg-amber-600 text-white text-xs font-medium"
+            >
+              {tUpsell("cta")}
+            </button>
+          </div>
+        </div>
+      ) : null}
       <ViewSwitch
         view={view}
         restaurant={restaurant}
