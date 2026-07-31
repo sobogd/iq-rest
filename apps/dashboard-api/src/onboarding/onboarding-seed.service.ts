@@ -110,8 +110,6 @@ export class OnboardingSeedService {
           title: "",
           slug,
           currency,
-          // Scandinavian menu currencies double as billing currencies; else EUR.
-          billingCurrency,
           // Dark accent by default for newly onboarded restaurants.
           accentColor: "#1A1A1A",
           // Globe-icon language switcher over the hero for new restaurants.
@@ -122,10 +120,7 @@ export class OnboardingSeedService {
           defaultLanguage: seedLocale,
           ordersEnabled: false,
           reservationsEnabled: true,
-          // dual-write mirror (source of truth is the account above)
-          plan: "FREE",
-          subscriptionStatus: "INACTIVE",
-          trialEndsAt,
+          // Billing (plan/trial/currency) lives on the account (§3).
           accountId: account.id,
         },
       });

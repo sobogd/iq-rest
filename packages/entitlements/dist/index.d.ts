@@ -21,31 +21,6 @@ export declare function hasPaidProFeatures(r: {
     currentPeriodEnd?: Date | null;
     legacyFullAccess?: boolean | null;
 }): boolean;
-export declare const PRO_FEATURE_SELECT: {
-    readonly plan: true;
-    readonly subscriptionStatus: true;
-    readonly trialEndsAt: true;
-    readonly currentPeriodEnd: true;
-    readonly legacyFullAccess: true;
-};
-export declare const PRO_ACCESS_SELECT: {
-    readonly plan: true;
-    readonly subscriptionStatus: true;
-    readonly trialEndsAt: true;
-    readonly currentPeriodEnd: true;
-    readonly legacyFullAccess: true;
-    readonly id: true;
-};
-type ProDb = Pick<PrismaClient, "restaurant" | "restaurantUser">;
-export declare function ownerHasProAccess(prisma: ProDb, ownerIds: string[]): Promise<boolean>;
-export declare function restaurantHasProAccess(prisma: ProDb, restaurant: {
-    id: string;
-    plan: string | null;
-    subscriptionStatus: string | null;
-    trialEndsAt?: Date | null;
-    currentPeriodEnd?: Date | null;
-    legacyFullAccess?: boolean | null;
-}): Promise<boolean>;
 export type PlanCode = "FREE" | "BASIC" | "PRO";
 export type PlanOverride = "PRO" | null;
 export type SubscriptionState = {
@@ -118,11 +93,6 @@ export declare const ACCOUNT_ENTITLEMENT_SELECT: {
             };
         };
     };
-    readonly plan: true;
-    readonly subscriptionStatus: true;
-    readonly trialEndsAt: true;
-    readonly currentPeriodEnd: true;
-    readonly legacyFullAccess: true;
 };
 export type RestaurantEntitlementRow = {
     id: string;
@@ -142,11 +112,6 @@ export type RestaurantEntitlementRow = {
             restaurants: number;
         };
     } | null;
-    plan?: string | null;
-    subscriptionStatus?: string | null;
-    trialEndsAt?: Date | null;
-    currentPeriodEnd?: Date | null;
-    legacyFullAccess?: boolean | null;
 };
 export declare function accountStateFromRow(row: RestaurantEntitlementRow): {
     account: AccountState;

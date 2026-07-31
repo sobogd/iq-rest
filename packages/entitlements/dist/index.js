@@ -1,12 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ACCOUNT_ENTITLEMENT_SELECT = exports.PRO_ACCESS_SELECT = exports.PRO_FEATURE_SELECT = exports.PAST_DUE_GRACE_DAYS = void 0;
+exports.ACCOUNT_ENTITLEMENT_SELECT = exports.PAST_DUE_GRACE_DAYS = void 0;
 exports.pastDueGraceEndMs = pastDueGraceEndMs;
 exports.inPastDueGrace = inPastDueGrace;
 exports.hasProFeatures = hasProFeatures;
 exports.hasPaidProFeatures = hasPaidProFeatures;
-exports.ownerHasProAccess = ownerHasProAccess;
-exports.restaurantHasProAccess = restaurantHasProAccess;
 exports.isTrialActive = isTrialActive;
 exports.isProActive = isProActive;
 exports.isBasicActive = isBasicActive;
@@ -77,43 +75,6 @@ function hasPaidProFeatures(r) {
     if (r.plan === "PRO" && inPastDueGrace(r))
         return true;
     return false;
-}
-// Prisma `select` fragment for the fields the legacy helpers need. Spread into
-// any restaurant query that gates a PRO feature so the shape stays in sync.
-exports.PRO_FEATURE_SELECT = {
-    plan: true,
-    subscriptionStatus: true,
-    trialEndsAt: true,
-    currentPeriodEnd: true,
-    legacyFullAccess: true,
-};
-// Same fields plus `id` — needed by the account-level helpers below.
-exports.PRO_ACCESS_SELECT = { id: true, ...exports.PRO_FEATURE_SELECT };
-// True if any restaurant OWNED (RestaurantUser.addedBy === null) by one of
-// `ownerIds` is entitled to PRO features. Empty list → false.
-async function ownerHasProAccess(prisma, ownerIds) {
-    if (ownerIds.length === 0)
-        return false;
-    const owned = await prisma.restaurant.findMany({
-        where: {
-            restaurantUsers: { some: { userId: { in: ownerIds }, addedBy: null } },
-        },
-        select: exports.PRO_FEATURE_SELECT,
-    });
-    return owned.some(hasProFeatures);
-}
-// Account-aware entitlement for a single restaurant. Fast path returns without a
-// query when the row is entitled on its own; otherwise resolve the owner and
-// check their venues so a PRO owner's extra (FREE-row) venues inherit PRO.
-// Orphan rows (no addedBy=null owner) fail closed.
-async function restaurantHasProAccess(prisma, restaurant) {
-    if (hasProFeatures(restaurant))
-        return true;
-    const owners = await prisma.restaurantUser.findMany({
-        where: { restaurantId: restaurant.id, addedBy: null },
-        select: { userId: true },
-    });
-    return ownerHasProAccess(prisma, owners.map((o) => o.userId));
 }
 const FULL_PRO_CAPS = {
     menuOnline: true,
@@ -258,15 +219,10 @@ exports.ACCOUNT_ENTITLEMENT_SELECT = {
             _count: { select: { restaurants: true } },
         },
     },
-    // legacy fallback (accountId still NULL during dual-write)
-    plan: true,
-    subscriptionStatus: true,
-    trialEndsAt: true,
-    currentPeriodEnd: true,
-    legacyFullAccess: true,
 };
-// Normalise a loaded restaurant row into (AccountState, planOverride). Uses the
-// real Account when present; otherwise falls back to the legacy columns.
+// Normalise a loaded restaurant row into (AccountState, planOverride) from its
+// Account + Subscription. A missing account (should not happen post-cutover)
+// resolves to inactive (fail closed).
 function accountStateFromRow(row) {
     if (row.account) {
         const sub = row.account.subscription;
@@ -287,15 +243,11 @@ function accountStateFromRow(row) {
             planOverride: row.planOverride ?? null,
         };
     }
-    const legacy = accountStateFromLegacyRestaurant({
-        id: row.id,
-        plan: row.plan ?? null,
-        subscriptionStatus: row.subscriptionStatus ?? null,
-        trialEndsAt: row.trialEndsAt ?? null,
-        currentPeriodEnd: row.currentPeriodEnd ?? null,
-        legacyFullAccess: row.legacyFullAccess ?? null,
-    });
-    return { account: legacy.account, planOverride: legacy.restaurant.planOverride };
+    // No account (should not happen post-cutover) → inactive, fail closed.
+    return {
+        account: { trialEndsAt: null, restaurantCount: 1, venueLimit: 4, subscription: null },
+        planOverride: row.planOverride ?? null,
+    };
 }
 // Capabilities for an already-loaded restaurant row (no query). Use when the
 // caller already selected ACCOUNT_ENTITLEMENT_SELECT (e.g. public menu-by-slug).

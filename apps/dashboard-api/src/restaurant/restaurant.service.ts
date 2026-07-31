@@ -333,9 +333,14 @@ export class RestaurantService {
   async upsert(userId: string, restaurantId: string | null, raw: Record<string, unknown>) {
     const input = pickFields(raw);
 
-    // Billing currency must be one of the supported set — drop anything else
-    // so the owner can't set an unbillable currency from the client.
-    if (input.billingCurrency !== undefined && !isSupportedCurrency(input.billingCurrency)) {
+    // Billing currency is account-level now (§3). Extract it from the settings
+    // payload, validate, and route it to the account — never to the (dropped)
+    // restaurant column.
+    let billingCurrencyUpdate: string | undefined;
+    if (input.billingCurrency !== undefined) {
+      if (isSupportedCurrency(input.billingCurrency)) {
+        billingCurrencyUpdate = input.billingCurrency as string;
+      }
       delete input.billingCurrency;
     }
 
@@ -360,6 +365,13 @@ export class RestaurantService {
         where: { id: existing.id },
         data: { ...(rest as Prisma.RestaurantUpdateInput), ...scheduleField },
       });
+      // Billing currency (account-level) — apply to the venue's account.
+      if (billingCurrencyUpdate && existing.accountId) {
+        await this.prisma.account.update({
+          where: { id: existing.accountId },
+          data: { billingCurrency: billingCurrencyUpdate },
+        }).catch(() => undefined);
+      }
       const prevLangs = existing.languages || [];
       const nextLangs = updated.languages || [];
       const added = nextLangs.filter((l) => !prevLangs.includes(l));
@@ -385,6 +397,16 @@ export class RestaurantService {
 
     const slug = rest.slug || (await this.uniqueSlug(rest.title || "rest"));
     const menuCurrency = rest.currency || "EUR";
+    // Legacy first-restaurant path (no account yet): create the owner's Account
+    // (billing→Account model) with a 14-day trial, then the restaurant under it.
+    const billingCurrency = isSupportedCurrency(menuCurrency) ? menuCurrency : "EUR";
+    const account = await this.prisma.account.create({
+      data: {
+        billingCurrency,
+        trialEndsAt: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000),
+        trialUsed: true,
+      },
+    });
     const createData: Prisma.RestaurantUncheckedCreateInput = {
       title: rest.title || "",
       slug,
@@ -395,8 +417,7 @@ export class RestaurantService {
       startedFromScratch: true,
       ...rest,
       ...scheduleField,
-      // Scandinavian menu currencies double as billing currencies; else EUR.
-      billingCurrency: isSupportedCurrency(menuCurrency) ? menuCurrency : "EUR",
+      accountId: account.id,
     };
     const created = await this.prisma.restaurant.create({ data: createData });
     // Link the calling user to the new restaurant via the flat-access model.
@@ -405,6 +426,9 @@ export class RestaurantService {
       where: { restaurantId_userId: { restaurantId: created.id, userId } },
       create: { restaurantId: created.id, userId, addedBy: null },
       update: {},
+    }).catch(() => undefined);
+    await this.prisma.accountMember.create({
+      data: { accountId: account.id, userId, role: "owner" },
     }).catch(() => undefined);
     return created;
   }
@@ -450,6 +474,7 @@ export class RestaurantService {
     // owner already owns ≥1 venue here (venue-cap requires a trial/PRO account),
     // so the accountId is taken from their existing venues.
     const ownerAccountId = ownedRestaurants.find((r) => r.accountId)?.accountId ?? null;
+    if (!ownerAccountId) throw new BadRequestException("No account for owner");
 
     // Adding restaurants is open to everyone (no PRO gate). A newly created
     // venue starts FREE/INACTIVE and simply has no PRO features unless the owner
@@ -479,9 +504,6 @@ export class RestaurantService {
         title: name,
         slug,
         currency: baseSettings?.currency ?? "EUR",
-        billingCurrency: isSupportedCurrency(baseSettings?.currency ?? "EUR")
-          ? (baseSettings?.currency ?? "EUR")
-          : "EUR",
         accentColor: baseSettings?.accentColor ?? "#000000",
         languages,
         defaultLanguage,
@@ -492,13 +514,9 @@ export class RestaurantService {
         // Name was typed in the create-restaurant form → no onboarding modals.
         onboardingNameDone: true,
         onboardingFillDone: true,
-        // Per-restaurant billing (dual-write mirror until Phase 4 DROP): a new
-        // venue starts FREE/INACTIVE. Entitlement comes from the account
-        // subscription it inherits (accountId below), not these columns.
-        plan: "FREE",
-        subscriptionStatus: "INACTIVE",
-        // Join the owner's account so the new venue inherits its entitlement.
-        ...(ownerAccountId ? { accountId: ownerAccountId } : {}),
+        // Billing lives on the account (§3): the new venue inherits the owner's
+        // account entitlement via accountId. No per-restaurant plan columns.
+        accountId: ownerAccountId,
       },
     });
 

@@ -28,10 +28,6 @@ model User {
   createdAt       DateTime  @default(now())
   updatedAt       DateTime  @updatedAt
 
-  // Billing — Stripe customer is per-human, not per-account. Multiple
-  // per-restaurant subscriptions sit under this single customer.
-  stripeCustomerId String? @unique
-
   // Email-campaign tracking — emails go to the human, not the venue.
   emailsSent        Json?
   emailUnsubscribed Boolean   @default(false)
@@ -217,32 +213,15 @@ model Restaurant {
   // crashing every filter with `operator does not exist: text = "Plan"`. Values
   // still use the enum members as string literals; the enums remain declared
   // only as reusable TS types (see stripe.controller).
-  plan                  String?
-  billingCycle          String?
-  subscriptionStatus    String              @default("INACTIVE")
-  currentPeriodEnd      DateTime?
+  // Transient checkout-in-progress flag (per-restaurant UI spinner). The ONLY
+  // billing-ish column that stays on Restaurant — all plan/subscription/trial/
+  // Stripe state moved to Account + Subscription (billing→Account migration).
   paymentProcessing     Boolean             @default(false)
-  stripeSubscriptionId  String?             @unique
-  // Stripe customer is now per-restaurant (each venue bills independently and
-  // may use a different currency). Legacy subscriptions created before this
-  // change still sit under User.stripeCustomerId; new checkouts create/reuse
-  // this one. Currency is locked per Stripe customer, so it must be per-venue.
-  stripeCustomerId      String?             @unique
-  // Billing currency for this restaurant's IQ Rest subscription (EUR/NOK/SEK/
-  // DKK). Distinct from `currency` above, which is the public-menu currency.
-  billingCurrency       String              @default("EUR")
-  trialEndsAt           DateTime?
-  // Grandfather flag: when true the restaurant keeps full PRO features
-  // (orders, kitchen/KDS, reservations) regardless of its plan. Set manually
-  // for the handful of pre-PRO-gating BASIC venues that already rely on these.
-  legacyFullAccess      Boolean             @default(false)
 
-  // ─── Account/Subscription migration (additive, Phase 1) ─────────────────────
-  // The billing columns above stay authoritative during the dual-write window
-  // (Phases 1–3) and are DROPPed in Phase 4. `accountId` is nullable now and
-  // becomes NOT NULL at cutover once every row is backfilled.
-  accountId       String?
-  account         Account? @relation(fields: [accountId], references: [id])
+  // ─── Account/Subscription (billing→Account migration, cutover done) ──────────
+  // Billing lives entirely on the account now. Every restaurant belongs to one.
+  accountId       String
+  account         Account @relation(fields: [accountId], references: [id])
   // Per-venue PRO bypass, migrated from `legacyFullAccess`. 'PRO' → this venue
   // is full PRO regardless of the Account subscription (see @iq-rest/entitlements
   // getRestaurantCaps). Usually null.

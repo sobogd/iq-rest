@@ -231,11 +231,11 @@ export class RestaurantController {
     const sub = row.account?.subscription ?? null;
     // Billing fields come from the account Subscription / Account; for an orphan
     // row (accountId still NULL) fall back to the legacy restaurant columns.
-    const plan = sub?.plan ?? row.plan ?? null;
-    const subscriptionStatus = sub?.status ?? row.subscriptionStatus ?? null;
+    const plan = sub?.plan ?? null;
+    const subscriptionStatus = sub?.status ?? null;
     const billingCycle = sub?.billingCycle ?? null;
-    const currentPeriodEnd = sub?.currentPeriodEnd ?? row.currentPeriodEnd ?? null;
-    const trialEndsAt = row.account?.trialEndsAt ?? row.trialEndsAt ?? null;
+    const currentPeriodEnd = sub?.currentPeriodEnd ?? null;
+    const trialEndsAt = row.account?.trialEndsAt ?? null;
     return {
       plan,
       billingCycle,

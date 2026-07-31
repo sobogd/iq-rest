@@ -77,73 +77,11 @@ export function hasPaidProFeatures(r: {
   return false;
 }
 
-// Prisma `select` fragment for the fields the legacy helpers need. Spread into
-// any restaurant query that gates a PRO feature so the shape stays in sync.
-export const PRO_FEATURE_SELECT = {
-  plan: true,
-  subscriptionStatus: true,
-  trialEndsAt: true,
-  currentPeriodEnd: true,
-  legacyFullAccess: true,
-} as const;
-
-// Same fields plus `id` — needed by the account-level helpers below.
-export const PRO_ACCESS_SELECT = { id: true, ...PRO_FEATURE_SELECT } as const;
-
-// ─── Layer 1b: account-level PRO (legacy, owner-scan based) ───────────────────
-//
-// A single PRO subscription entitles ALL of an owner's restaurants. BASIC stays
-// per-restaurant. Owner = the RestaurantUser with a null `addedBy` (creator).
-//
-// NOTE: plan/subscriptionStatus/billingCycle columns are TEXT in the prod DB
-// (drifted from the declared enums), so Prisma enum WHERE filters (`plan:"PRO"`)
-// crash at runtime (`operator does not exist: text = "Plan"`). We never filter
-// those columns in SQL — load the owner-restaurant set and apply hasProFeatures
-// in JS (plain string reads).
-
-type ProDb = Pick<PrismaClient, "restaurant" | "restaurantUser">;
-
-// True if any restaurant OWNED (RestaurantUser.addedBy === null) by one of
-// `ownerIds` is entitled to PRO features. Empty list → false.
-export async function ownerHasProAccess(
-  prisma: ProDb,
-  ownerIds: string[],
-): Promise<boolean> {
-  if (ownerIds.length === 0) return false;
-  const owned = await prisma.restaurant.findMany({
-    where: {
-      restaurantUsers: { some: { userId: { in: ownerIds }, addedBy: null } },
-    },
-    select: PRO_FEATURE_SELECT,
-  });
-  return owned.some(hasProFeatures);
-}
-
-// Account-aware entitlement for a single restaurant. Fast path returns without a
-// query when the row is entitled on its own; otherwise resolve the owner and
-// check their venues so a PRO owner's extra (FREE-row) venues inherit PRO.
-// Orphan rows (no addedBy=null owner) fail closed.
-export async function restaurantHasProAccess(
-  prisma: ProDb,
-  restaurant: {
-    id: string;
-    plan: string | null;
-    subscriptionStatus: string | null;
-    trialEndsAt?: Date | null;
-    currentPeriodEnd?: Date | null;
-    legacyFullAccess?: boolean | null;
-  },
-): Promise<boolean> {
-  if (hasProFeatures(restaurant)) return true;
-  const owners = await prisma.restaurantUser.findMany({
-    where: { restaurantId: restaurant.id, addedBy: null },
-    select: { userId: true },
-  });
-  return ownerHasProAccess(
-    prisma,
-    owners.map((o) => o.userId),
-  );
-}
+// NOTE (Phase 4 cutover): the legacy Prisma-coupled helpers PRO_FEATURE_SELECT /
+// PRO_ACCESS_SELECT / ownerHasProAccess / restaurantHasProAccess were removed —
+// they read the per-restaurant billing columns that no longer exist. All
+// entitlement now flows through Layer 3 (account resolver) below. The pure
+// hasProFeatures / hasPaidProFeatures above remain for the golden tests.
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Layer 2: TARGET pure capability resolver (§3 / §5 of the migration plan)
@@ -349,15 +287,11 @@ export const ACCOUNT_ENTITLEMENT_SELECT = {
       _count: { select: { restaurants: true } },
     },
   },
-  // legacy fallback (accountId still NULL during dual-write)
-  plan: true,
-  subscriptionStatus: true,
-  trialEndsAt: true,
-  currentPeriodEnd: true,
-  legacyFullAccess: true,
 } as const;
 
-// The shape produced by ACCOUNT_ENTITLEMENT_SELECT.
+// The shape produced by ACCOUNT_ENTITLEMENT_SELECT. Post-cutover every
+// restaurant has an account (accountId NOT NULL), so `account` is always present
+// at runtime; it stays optional in the type only for defensive callers.
 export type RestaurantEntitlementRow = {
   id: string;
   planOverride?: string | null;
@@ -374,16 +308,11 @@ export type RestaurantEntitlementRow = {
     } | null;
     _count?: { restaurants: number };
   } | null;
-  // legacy fallback columns
-  plan?: string | null;
-  subscriptionStatus?: string | null;
-  trialEndsAt?: Date | null;
-  currentPeriodEnd?: Date | null;
-  legacyFullAccess?: boolean | null;
 };
 
-// Normalise a loaded restaurant row into (AccountState, planOverride). Uses the
-// real Account when present; otherwise falls back to the legacy columns.
+// Normalise a loaded restaurant row into (AccountState, planOverride) from its
+// Account + Subscription. A missing account (should not happen post-cutover)
+// resolves to inactive (fail closed).
 export function accountStateFromRow(row: RestaurantEntitlementRow): {
   account: AccountState;
   planOverride: PlanOverride;
@@ -407,15 +336,11 @@ export function accountStateFromRow(row: RestaurantEntitlementRow): {
       planOverride: (row.planOverride as PlanOverride) ?? null,
     };
   }
-  const legacy = accountStateFromLegacyRestaurant({
-    id: row.id,
-    plan: row.plan ?? null,
-    subscriptionStatus: row.subscriptionStatus ?? null,
-    trialEndsAt: row.trialEndsAt ?? null,
-    currentPeriodEnd: row.currentPeriodEnd ?? null,
-    legacyFullAccess: row.legacyFullAccess ?? null,
-  });
-  return { account: legacy.account, planOverride: legacy.restaurant.planOverride };
+  // No account (should not happen post-cutover) → inactive, fail closed.
+  return {
+    account: { trialEndsAt: null, restaurantCount: 1, venueLimit: 4, subscription: null },
+    planOverride: (row.planOverride as PlanOverride) ?? null,
+  };
 }
 
 // Capabilities for an already-loaded restaurant row (no query). Use when the

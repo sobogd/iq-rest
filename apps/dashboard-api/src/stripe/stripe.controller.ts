@@ -102,7 +102,7 @@ export class StripeController {
     // it commits. Prefer the restaurant's own customer; fall back to the legacy
     // per-user customer for subs created before per-restaurant billing.
     if (acctSub?.status === "ACTIVE" && acctSub.stripeSubscriptionId) {
-      const customer = acct?.stripeCustomerId ?? user.stripeCustomerId;
+      const customer = acct?.stripeCustomerId;
       if (!customer) {
         throw new BadRequestException("Subscription is active but no Stripe customer found");
       }
@@ -134,18 +134,13 @@ export class StripeController {
       });
       customerId = customer.id;
     }
-    // Persist on the account (source of truth). Restaurant columns are kept as a
-    // dual-write mirror until the Phase 4 DROP.
+    // Persist the Stripe customer + currency on the account (source of truth, §3).
     if (acct) {
       await this.prisma.account.update({
         where: { id: acct.id },
         data: { stripeCustomerId: customerId, billingCurrency: currency },
       });
     }
-    await this.prisma.restaurant.update({
-      where: { id: restaurant.id },
-      data: { stripeCustomerId: customerId, billingCurrency: currency },
-    });
 
     let prices = await stripe.prices.list({ lookup_keys: [fullLookupKey], active: true, limit: 1 });
     if (prices.data.length === 0) {
@@ -210,7 +205,7 @@ export class StripeController {
     if (user?.isDemo) throw new ForbiddenException("Demo accounts cannot manage billing");
     // Account-level Stripe customer (§3); fall back to the legacy per-user
     // customer for subscriptions created before the account migration.
-    const customer = restaurant?.account?.stripeCustomerId ?? user?.stripeCustomerId;
+    const customer = restaurant?.account?.stripeCustomerId;
     if (!customer) {
       throw new BadRequestException("No subscription found");
     }
@@ -315,16 +310,9 @@ export class StripeController {
           if (r?.account?.subscription?.stripeSubscriptionId === sub.id) {
             await this.prisma.restaurant.update({
               where: { id: targetRestaurantId },
-              data: {
-                plan: "FREE",
-                billingCycle: null,
-                subscriptionStatus: "CANCELED",
-                currentPeriodEnd: null,
-                stripeSubscriptionId: null,
-                paymentProcessing: false,
-              },
+              data: { paymentProcessing: false },
             });
-            // Mirror cancellation into the account-level Subscription (best-effort).
+            // Cancellation → account Subscription goes FREE/CANCELED (§3).
             await this.mirrorAccountSubscription(targetRestaurantId, {
               plan: "FREE",
               billingCycle: null,
@@ -332,7 +320,7 @@ export class StripeController {
               currentPeriodEnd: null,
               stripeSubscriptionId: null,
               customerId: null,
-            }).catch((e) => console.error("account subscription mirror (delete) failed (non-fatal):", e));
+            });
           }
         }
         break;
@@ -347,8 +335,18 @@ export class StripeController {
           if (targetRestaurantId && (await this.isCurrentSub(targetRestaurantId, invoice.subscription))) {
             await this.prisma.restaurant.update({
               where: { id: targetRestaurantId },
-              data: { subscriptionStatus: "ACTIVE", paymentProcessing: false },
+              data: { paymentProcessing: false },
             });
+            const r = await this.prisma.restaurant.findUnique({
+              where: { id: targetRestaurantId },
+              select: { accountId: true },
+            });
+            if (r?.accountId) {
+              await this.prisma.subscription.updateMany({
+                where: { accountId: r.accountId },
+                data: { status: "ACTIVE", updatedFromStripeAt: new Date() },
+              });
+            }
           }
         }
         break;
@@ -358,10 +356,16 @@ export class StripeController {
         if (invoice.subscription) {
           const targetRestaurantId = await this.resolveRestaurantId(invoice.subscription, null);
           if (targetRestaurantId && (await this.isCurrentSub(targetRestaurantId, invoice.subscription))) {
-            await this.prisma.restaurant.update({
+            const r = await this.prisma.restaurant.findUnique({
               where: { id: targetRestaurantId },
-              data: { subscriptionStatus: "PAST_DUE" },
+              select: { accountId: true },
             });
+            if (r?.accountId) {
+              await this.prisma.subscription.updateMany({
+                where: { accountId: r.accountId },
+                data: { status: "PAST_DUE", updatedFromStripeAt: new Date() },
+              });
+            }
           }
         }
         break;
@@ -507,24 +511,15 @@ export class StripeController {
       );
     }
 
+    // Clear the checkout-in-progress spinner (transient per-restaurant flag).
     await this.prisma.restaurant.update({
       where: { id: restaurantId },
-      data: {
-        stripeSubscriptionId: sub.id,
-        // Only write plan/billingCycle when the price resolved to a known plan.
-        ...(matched ? { plan, billingCycle } : {}),
-        subscriptionStatus,
-        currentPeriodEnd,
-        paymentProcessing: false,
-        ...(billingCurrency ? { billingCurrency } : {}),
-      },
+      data: { paymentProcessing: false },
     });
 
-    // Dual-write mirror into the account-level Subscription (Phase 2). Best-effort
-    // and new-table-only: the Restaurant write above stays authoritative through
-    // the dual-write window, so a failure here never affects live entitlement.
-    // Only mirror recognized plans (matched) — an unrecognized price already
-    // logged loudly above and must not stamp a plan on the account either.
+    // Billing state lives on the account Subscription now (§3). Write plan/cycle
+    // only for a recognized price; an unrecognized live price still updates the
+    // status/period on the existing sub (already logged loudly above).
     if (matched) {
       await this.mirrorAccountSubscription(restaurantId, {
         plan,
@@ -534,7 +529,23 @@ export class StripeController {
         stripeSubscriptionId: sub.id,
         billingCurrency,
         customerId: typeof sub.customer === "string" ? sub.customer : null,
-      }).catch((e) => console.error("account subscription mirror failed (non-fatal):", e));
+      });
+    } else if (liveStatus) {
+      const r = await this.prisma.restaurant.findUnique({
+        where: { id: restaurantId },
+        select: { accountId: true },
+      });
+      if (r?.accountId) {
+        await this.prisma.subscription.updateMany({
+          where: { accountId: r.accountId },
+          data: {
+            status: subscriptionStatus,
+            currentPeriodEnd,
+            stripeSubscriptionId: sub.id,
+            updatedFromStripeAt: new Date(),
+          },
+        });
+      }
     }
   }
 
