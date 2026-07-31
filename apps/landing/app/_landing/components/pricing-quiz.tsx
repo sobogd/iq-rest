@@ -35,7 +35,7 @@ type AddonKey = "reservations" | "ordersKds" | "domain";
 
 const ADDONS: { key: AddonKey; label: string; hint: string; Icon: typeof CalendarClock }[] = [
   { key: "reservations", label: "Reservations", hint: "Table bookings", Icon: CalendarClock },
-  { key: "ordersKds", label: "Orders + Kitchen", hint: "Orders & kitchen display", Icon: ChefHat },
+  { key: "ordersKds", label: "Kitchen display", hint: "Orders on a kitchen screen", Icon: ChefHat },
   { key: "domain", label: "Custom domain", hint: "Your own web address", Icon: Globe },
 ];
 
@@ -89,14 +89,14 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
 
       {/* Controls — billing cycle + restaurants stepper on ONE row, 50/50 on
           mobile. The word "restaurants" lives (muted) inside the counter. */}
-      <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
-        <div className="inline-flex rounded-full border border-border bg-card p-1">
+      <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center sm:justify-center gap-3 mb-6">
+        <div className="flex w-full sm:w-auto rounded-full border border-border bg-card p-1">
           {(["month", "year"] as const).map((c) => (
             <button
               key={c}
               type="button"
               onClick={() => setCycle(c)}
-              className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
+              className={`flex-1 sm:flex-none px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
                 cycle === c ? "bg-primary text-primary-foreground" : "text-muted-foreground"
               }`}
             >
@@ -105,7 +105,7 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
           ))}
         </div>
 
-        <div className="inline-flex items-center rounded-full border border-border bg-card p-1">
+        <div className="flex w-full sm:w-auto items-center justify-between rounded-full border border-border bg-card p-1">
           <button
             type="button"
             aria-label="Fewer restaurants"
