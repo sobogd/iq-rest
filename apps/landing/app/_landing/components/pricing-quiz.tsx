@@ -87,39 +87,16 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
         </p>
       </div>
 
-      {/* Controls — a restaurants stepper (− | "N restaurants" | +) and the
-          billing cycle. The centre label has a fixed width so it never reflows. */}
-      <div className="flex flex-wrap items-center justify-center gap-2.5 mb-6">
-        <div className="inline-flex items-center rounded-full border border-border bg-card p-1">
-          <button
-            type="button"
-            aria-label="Fewer restaurants"
-            onClick={() => setCount((c) => Math.max(1, c - 1))}
-            className="h-8 w-8 rounded-full text-lg leading-none hover:bg-accent disabled:opacity-40"
-            disabled={count <= 1}
-          >
-            −
-          </button>
-          <span className="min-w-[8rem] text-center text-sm font-medium tabular-nums px-2">
-            {count} {count === 1 ? "restaurant" : "restaurants"}
-          </span>
-          <button
-            type="button"
-            aria-label="More restaurants"
-            onClick={() => setCount((c) => Math.min(99, c + 1))}
-            className="h-8 w-8 rounded-full text-lg leading-none hover:bg-accent"
-          >
-            +
-          </button>
-        </div>
-
-        <div className="inline-flex rounded-full border border-border bg-card p-1">
+      {/* Controls — billing cycle + restaurants stepper on ONE row. The stepper
+          label truncates (…) when space is tight so it never wraps. */}
+      <div className="flex items-center justify-center gap-2 mb-6">
+        <div className="inline-flex shrink-0 rounded-full border border-border bg-card p-1">
           {(["month", "year"] as const).map((c) => (
             <button
               key={c}
               type="button"
               onClick={() => setCycle(c)}
-              className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
+              className={`px-3.5 py-1.5 rounded-full text-sm font-medium transition-colors ${
                 cycle === c ? "bg-primary text-primary-foreground" : "text-muted-foreground"
               }`}
             >
@@ -127,21 +104,44 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
             </button>
           ))}
         </div>
+
+        <div className="inline-flex min-w-0 items-center rounded-full border border-border bg-card p-1">
+          <button
+            type="button"
+            aria-label="Fewer restaurants"
+            onClick={() => setCount((c) => Math.max(1, c - 1))}
+            className="h-8 w-8 shrink-0 rounded-full text-lg leading-none hover:bg-accent disabled:opacity-40"
+            disabled={count <= 1}
+          >
+            −
+          </button>
+          <span className="min-w-0 truncate text-center text-sm font-medium px-2">
+            <span className="tabular-nums">{count}</span> {count === 1 ? "restaurant" : "restaurants"}
+          </span>
+          <button
+            type="button"
+            aria-label="More restaurants"
+            onClick={() => setCount((c) => Math.min(99, c + 1))}
+            className="h-8 w-8 shrink-0 rounded-full text-lg leading-none hover:bg-accent"
+          >
+            +
+          </button>
+        </div>
       </div>
 
       {/* Feature cards — 2 columns on mobile, 4 on desktop. No transform on
           select (only color/shadow) so tapping never shifts the layout. */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-        <div className="relative flex flex-col items-start rounded-2xl border-2 border-border bg-card p-4 sm:p-5">
-          <span className="absolute top-3 right-3 text-xs font-medium uppercase tracking-wide text-muted-foreground">
-            Included
+        <div className="relative flex flex-col items-start rounded-2xl border-2 border-primary bg-primary/5 shadow-sm p-4 sm:p-5">
+          <span className="absolute top-3 right-3 flex h-5 w-5 items-center justify-center rounded-full border border-primary bg-primary text-primary-foreground">
+            <Check className="h-3.5 w-3.5" />
           </span>
           <UtensilsCrossed className="h-7 w-7 text-primary mb-3" />
-          <div className="text-sm font-semibold text-foreground">Digital menu</div>
-          <div className="hidden sm:block text-sm text-muted-foreground mt-0.5 leading-snug">QR menu diners scan</div>
-          <div className="mt-3 text-sm font-medium text-foreground tabular-nums">
+          <div className="text-sm font-semibold text-foreground pr-6">Digital menu</div>
+          <div className="hidden sm:block text-sm text-muted-foreground mt-0.5 leading-snug">Always included</div>
+          <div className="mt-3 text-sm font-medium text-primary tabular-nums">
             {formatMoney(pricing.menu[k], currency)}
-            <span className="text-muted-foreground font-normal">/mo</span>
+            <span className="font-normal opacity-70">/mo</span>
           </div>
         </div>
 
