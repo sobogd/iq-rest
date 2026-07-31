@@ -49,6 +49,11 @@ export interface RestaurantPayload {
   // PRO-feature entitlement: orders + reservations are PRO-only. When false the
   // diner sees a menu-only experience (no order/booking surfaces).
   proFeatures: boolean;
+  // Account entitlement (§3), resolved server-side. false → the diner sees the
+  // paywall overlay (inactive account: no active sub, expired/never trial, not
+  // covered by account PRO or a planOverride venue). Replaces the client-side
+  // trial/PAST_DUE re-derivation.
+  menuOnline: boolean;
 }
 
 export interface CategoryPayload {

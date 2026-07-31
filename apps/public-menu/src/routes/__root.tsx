@@ -104,34 +104,13 @@ function RootLayout() {
     return <NotFoundScreen />;
   }
 
-  // Per-restaurant billing: a restaurant is "trial-expired" when its plan is
-  // FREE (or null — i.e. never on a paid plan) and its trialEndsAt is in the
-  // past. Paid restaurants and active trials show normally. love-eatery is a
-  // demo carve-out (used in the marketing landing iframe).
+  // Menu-block is resolved account-side now (§3): the API returns `menuOnline`
+  // (false ⇒ inactive account — no active sub, expired/never trial, not covered
+  // by account PRO or a planOverride venue; PAST_DUE grace + covered secondaries
+  // are already folded in server-side). love-eatery is the marketing-landing
+  // demo iframe — never overlay it.
   const isDemo = data.restaurant.slug === "love-eatery";
-  const planActive = data.restaurant.plan && data.restaurant.plan !== "FREE";
-  const trialExpired =
-    !planActive
-    && data.restaurant.trialEndsAt !== null
-    && new Date(data.restaurant.trialEndsAt) <= new Date()
-    && !isDemo;
-
-  // Paid plan whose renewal failed: stays visible for a 3-day grace window past
-  // `currentPeriodEnd`, then the menu is blocked. Keep the 3 days in sync with
-  // PAST_DUE_GRACE_DAYS in the API entitlements helpers.
-  const PAST_DUE_GRACE_MS = 3 * 86_400_000;
-  const pastDueBlocked =
-    data.restaurant.subscriptionStatus === "PAST_DUE"
-    && data.restaurant.currentPeriodEnd !== null
-    && new Date(data.restaurant.currentPeriodEnd).getTime() + PAST_DUE_GRACE_MS <= Date.now()
-    && !isDemo;
-
-  // Account-level PRO: if this restaurant is entitled (its own paid/trial row OR
-  // an inherited PRO from another of the owner's restaurants → `proFeatures`),
-  // the menu must never be blocked. Only genuinely-lapsed, non-covered venues go
-  // dark. Without this, a covered secondary venue with a past `trialEndsAt` would
-  // wrongly show the "menu unavailable" overlay while orders/bookings work.
-  const menuBlocked = (trialExpired || pastDueBlocked) && !data.restaurant.proFeatures;
+  const menuBlocked = !data.restaurant.menuOnline && !isDemo;
 
   // Orders + reservations are PRO-only. For a BASIC (menu-only) restaurant the
   // menu still shows, but the order/booking surfaces are hidden. Force the
