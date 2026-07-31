@@ -33,6 +33,7 @@ import {
 } from "./api";
 import { useRestaurant } from "./restaurant-context";
 import { useRestaurants } from "./restaurants-context";
+import { BillingConstructor } from "./billing-constructor";
 import type { Booking, Order, Restaurant, TableEntity } from "./types";
 import { track } from "@/lib/dashboard-events";
 
@@ -2001,72 +2002,14 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  @media (min-width: 600px) { .billing-plans { grid-template-columns: 1fr 1fr; } }
  `}</style>
 
- {(isActive || !paidPlan) && (["BASIC", "PRO"] as const).map((tier) => (
- <div key={tier} className="mt-2 first:mt-0">
- <div className="flex items-baseline justify-between mb-2 mt-5">
- <h3 className="text-sm font-semibold text-foreground uppercase tracking-wide">
- {tb(tier === "BASIC" ? "planBasic" : "planPro")}
- </h3>
+ {/* billing-features-constructor: à-la-carte "build your plan" replaces the
+     fixed BASIC/PRO tiles. Per-venue feature selection → live quote → ad-hoc
+     checkout / SEPA invoice, plus billing profile + invoices. */}
+ {(isActive || !paidPlan) && (
+ <div className="bg-card border border-border rounded-2xl p-5 md:p-6 mb-5">
+ <BillingConstructor currency={currency} />
  </div>
- <div className="billing-plans">
- {(tier === "BASIC"
-   ? [
-       { plan: "BASIC" as const, cycle: "MONTHLY" as const, labelKey: "monthly" as const, priceMonthly: BILLING_PRICES[currency].BASIC.MONTHLY, periodKey: "billedMonthly" as const, badgeKey: null, highlight: false },
-       { plan: "BASIC" as const, cycle: "YEARLY" as const, labelKey: "yearly" as const, priceMonthly: BILLING_PRICES[currency].BASIC.YEARLY, periodKey: "billedYearly" as const, badgeKey: "save30" as const, highlight: true },
-     ]
-   : [
-       { plan: "PRO" as const, cycle: "MONTHLY" as const, labelKey: "monthly" as const, priceMonthly: BILLING_PRICES[currency].PRO.MONTHLY, periodKey: "billedMonthly" as const, badgeKey: null, highlight: false },
-       { plan: "PRO" as const, cycle: "YEARLY" as const, labelKey: "yearly" as const, priceMonthly: BILLING_PRICES[currency].PRO.YEARLY, periodKey: "billedYearly" as const, badgeKey: "save30" as const, highlight: true },
-     ]
- ).map((p) => {
- const isCurrent = sub?.plan === p.plan && sub?.billingCycle === p.cycle && isActive;
- return (
- <div
- key={p.plan + p.cycle}
- className={
- "relative bg-card border rounded-2xl p-5 flex flex-col " +
- (isCurrent ? "border-emerald-300" : p.highlight ? "border-primary" : "border-border")
- }
- >
- {p.badgeKey && !isCurrent ? (
- <span className="absolute -top-2 left-5 inline-flex items-center h-5 px-2 text-[10px] font-medium text-primary-foreground bg-primary-gradient rounded-full">
- {tb(p.badgeKey)}
- </span>
- ) : null}
- {isCurrent ? (
- <span className="absolute -top-2 left-5 inline-flex items-center h-5 px-2 text-[10px] font-medium text-white bg-emerald-600 rounded-full">
- {tb("current")}
- </span>
- ) : null}
-
- <div className="text-sm font-medium text-foreground">{tb(p.labelKey)}</div>
- <div className="mt-1 flex items-baseline gap-1">
- <span className="text-2xl font-medium text-foreground tabular-nums">{fmtBilling(p.priceMonthly, currency)}</span>
- <span className="text-xs text-muted-foreground">{tb("perMo")}</span>
- </div>
- <div className="text-xs text-muted-foreground mt-0.5">{tb(p.periodKey)}</div>
-
- <button
- type="button"
- onClick={() => startCheckout(p.plan, p.cycle)}
- disabled={isCurrent || pendingPlan !== null}
- className={
- "mt-4 h-10 text-sm font-medium rounded-lg transition-colors " +
- (isCurrent
- ? "bg-secondary text-muted-foreground cursor-not-allowed"
- : p.highlight
- ? "text-primary-foreground bg-primary-gradient"
- : "text-foreground bg-card border border-input")
- }
- >
- {isCurrent ? tb("currentPlan") : isActive ? tb("switch") : tb("subscribe")}
- </button>
- </div>
- );
- })}
- </div>
- </div>
- ))}
+ )}
 
  <a
  href={`https://iq-rest.com/${locale}${PRICING_SLUG_BY_LOCALE[locale] || "/pricing"}`}
