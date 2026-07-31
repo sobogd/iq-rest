@@ -89,14 +89,14 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
 
       {/* Controls — billing cycle + restaurants stepper on ONE row, 50/50 on
           mobile. The word "restaurants" lives (muted) inside the counter. */}
-      <div className="flex items-center justify-center gap-3 mb-6">
-        <div className="flex flex-1 sm:flex-none w-full sm:w-auto rounded-full border border-border bg-card p-1">
+      <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
+        <div className="inline-flex rounded-full border border-border bg-card p-1">
           {(["month", "year"] as const).map((c) => (
             <button
               key={c}
               type="button"
               onClick={() => setCycle(c)}
-              className={`flex-1 sm:flex-none px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
+              className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
                 cycle === c ? "bg-primary text-primary-foreground" : "text-muted-foreground"
               }`}
             >
@@ -105,7 +105,7 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
           ))}
         </div>
 
-        <div className="flex min-w-0 flex-1 sm:flex-none w-full sm:w-auto items-center justify-between rounded-full border border-border bg-card p-1">
+        <div className="inline-flex items-center rounded-full border border-border bg-card p-1">
           <button
             type="button"
             aria-label="Fewer restaurants"
@@ -115,7 +115,7 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
           >
             −
           </button>
-          <span className="min-w-0 flex-1 sm:flex-none truncate text-center text-sm font-medium px-2">
+          <span className="text-center text-sm font-medium px-2">
             <span className="tabular-nums">{count}</span>{" "}
             <span className="text-muted-foreground">{count === 1 ? "restaurant" : "restaurants"}</span>
           </span>
