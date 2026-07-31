@@ -84,12 +84,22 @@ export class AdminController {
         title: true,
         slug: true,
         defaultLanguage: true,
-        plan: true,
-        subscriptionStatus: true,
-        billingCycle: true,
-        trialEndsAt: true,
-        currentPeriodEnd: true,
-        stripeSubscriptionId: true,
+        // Billing is account-level now (§3): read plan/status/trial off the
+        // account Subscription + Account, not the (dropped) restaurant columns.
+        account: {
+          select: {
+            trialEndsAt: true,
+            subscription: {
+              select: {
+                plan: true,
+                status: true,
+                billingCycle: true,
+                currentPeriodEnd: true,
+                stripeSubscriptionId: true,
+              },
+            },
+          },
+        },
         adminComment: true,
         createdAt: true,
         _count: { select: { categories: true, items: true } },
@@ -153,10 +163,11 @@ export class AdminController {
 
     return {
       restaurants: restaurants.map((r) => {
-        const plan = r.plan ?? "FREE";
-        const subscriptionStatus = r.subscriptionStatus;
+        const acctSub = r.account?.subscription ?? null;
+        const plan = acctSub?.plan ?? "FREE";
+        const subscriptionStatus = acctSub?.status ?? null;
         const isManualSub =
-          subscriptionStatus === "ACTIVE" && !r.stripeSubscriptionId;
+          subscriptionStatus === "ACTIVE" && !acctSub?.stripeSubscriptionId;
         // Owner = the user with addedBy === null (falls back to the first).
         const ownerRu = r.restaurantUsers.find((ru) => ru.addedBy === null) ?? r.restaurantUsers[0];
         const sent = (ownerRu?.user.emailsSent as Record<string, unknown> | null) ?? null;
@@ -167,11 +178,11 @@ export class AdminController {
           slug: r.slug,
           defaultLanguage: r.defaultLanguage,
           plan,
-          billingCycle: r.billingCycle,
+          billingCycle: acctSub?.billingCycle ?? null,
           subscriptionStatus,
-          trialEndsAt: r.trialEndsAt ? r.trialEndsAt.toISOString() : null,
-          currentPeriodEnd: r.currentPeriodEnd ? r.currentPeriodEnd.toISOString() : null,
-          hasStripeSub: !!r.stripeSubscriptionId,
+          trialEndsAt: r.account?.trialEndsAt ? r.account.trialEndsAt.toISOString() : null,
+          currentPeriodEnd: acctSub?.currentPeriodEnd ? acctSub.currentPeriodEnd.toISOString() : null,
+          hasStripeSub: !!acctSub?.stripeSubscriptionId,
           isManualSub,
           hasAdminComment: !!(r.adminComment && r.adminComment.trim().length > 0),
           createdAt: r.createdAt.toISOString(),
@@ -214,12 +225,21 @@ export class AdminController {
         languages: true,
         defaultLanguage: true,
         reservationsEnabled: true,
-        plan: true,
-        billingCycle: true,
-        subscriptionStatus: true,
-        trialEndsAt: true,
-        currentPeriodEnd: true,
-        stripeSubscriptionId: true,
+        account: {
+          select: {
+            stripeCustomerId: true,
+            trialEndsAt: true,
+            subscription: {
+              select: {
+                plan: true,
+                status: true,
+                billingCycle: true,
+                currentPeriodEnd: true,
+                stripeSubscriptionId: true,
+              },
+            },
+          },
+        },
         paymentProcessing: true,
         adminComment: true,
         createdAt: true,
@@ -234,7 +254,6 @@ export class AdminController {
                 id: true,
                 email: true,
                 preferredLocale: true,
-                stripeCustomerId: true,
                 emailsSent: true,
                 emailUnsubscribed: true,
                 createdAt: true,
@@ -258,12 +277,12 @@ export class AdminController {
       languages: restaurant.languages,
       defaultLanguage: restaurant.defaultLanguage,
       reservationsEnabled: restaurant.reservationsEnabled,
-      plan: restaurant.plan ?? "FREE",
-      billingCycle: restaurant.billingCycle,
-      subscriptionStatus: restaurant.subscriptionStatus,
-      trialEndsAt: restaurant.trialEndsAt?.toISOString() ?? null,
-      currentPeriodEnd: restaurant.currentPeriodEnd?.toISOString() ?? null,
-      hasStripeSub: !!restaurant.stripeSubscriptionId,
+      plan: restaurant.account?.subscription?.plan ?? "FREE",
+      billingCycle: restaurant.account?.subscription?.billingCycle ?? null,
+      subscriptionStatus: restaurant.account?.subscription?.status ?? null,
+      trialEndsAt: restaurant.account?.trialEndsAt?.toISOString() ?? null,
+      currentPeriodEnd: restaurant.account?.subscription?.currentPeriodEnd?.toISOString() ?? null,
+      hasStripeSub: !!restaurant.account?.subscription?.stripeSubscriptionId,
       paymentProcessing: restaurant.paymentProcessing,
       adminComment: restaurant.adminComment,
       createdAt: restaurant.createdAt.toISOString(),
@@ -274,7 +293,8 @@ export class AdminController {
         id: ru.user.id,
         email: ru.user.email,
         preferredLocale: ru.user.preferredLocale,
-        hasStripeCustomer: !!ru.user.stripeCustomerId,
+        // Stripe customer is account-level now (§3).
+        hasStripeCustomer: !!restaurant.account?.stripeCustomerId,
         emailsSent: (ru.user.emailsSent as Record<string, string> | null) ?? null,
         emailUnsubscribed: ru.user.emailUnsubscribed,
         attachedAt: ru.addedAt.toISOString(),
@@ -397,7 +417,6 @@ export class AdminController {
         email: true,
         preferredLocale: true,
         createdAt: true,
-        stripeCustomerId: true,
         restaurantUsers: {
           select: {
             addedAt: true,
@@ -406,10 +425,15 @@ export class AdminController {
                 id: true,
                 title: true,
                 slug: true,
-                plan: true,
-                subscriptionStatus: true,
-                stripeSubscriptionId: true,
-                trialEndsAt: true,
+                account: {
+                  select: {
+                    stripeCustomerId: true,
+                    trialEndsAt: true,
+                    subscription: {
+                      select: { plan: true, status: true, stripeSubscriptionId: true },
+                    },
+                  },
+                },
               },
             },
           },
@@ -424,24 +448,24 @@ export class AdminController {
         email: u.email,
         preferredLocale: u.preferredLocale,
         createdAt: u.createdAt.toISOString(),
-        hasStripeCustomer: !!u.stripeCustomerId,
+        // Stripe customer is account-level now (§3): true if any of the user's
+        // restaurants' accounts has a customer.
+        hasStripeCustomer: u.restaurantUsers.some((ru) => !!ru.restaurant.account?.stripeCustomerId),
         restaurantsCount: u.restaurantUsers.length,
-        hasPaying: u.restaurantUsers.some(
-          (ru) =>
-            ru.restaurant.subscriptionStatus === "ACTIVE" &&
-            ru.restaurant.plan !== null &&
-            ru.restaurant.plan !== "FREE",
-        ),
+        hasPaying: u.restaurantUsers.some((ru) => {
+          const sub = ru.restaurant.account?.subscription;
+          return sub?.status === "ACTIVE" && sub.plan !== "FREE";
+        }),
         hasActiveTrial: u.restaurantUsers.some(
-          (ru) => ru.restaurant.trialEndsAt && ru.restaurant.trialEndsAt > new Date(),
+          (ru) => ru.restaurant.account?.trialEndsAt && ru.restaurant.account.trialEndsAt > new Date(),
         ),
         restaurants: u.restaurantUsers.map((ru) => ({
           id: ru.restaurant.id,
           title: ru.restaurant.title,
           slug: ru.restaurant.slug,
-          plan: ru.restaurant.plan,
-          subscriptionStatus: ru.restaurant.subscriptionStatus,
-          hasStripeSub: !!ru.restaurant.stripeSubscriptionId,
+          plan: ru.restaurant.account?.subscription?.plan ?? null,
+          subscriptionStatus: ru.restaurant.account?.subscription?.status ?? null,
+          hasStripeSub: !!ru.restaurant.account?.subscription?.stripeSubscriptionId,
         })),
       })),
     };

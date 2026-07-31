@@ -266,17 +266,34 @@ export class RestaurantService {
    *  the user from cleaning up. Idempotent: a sub already in canceled state
    *  just logs and moves on. */
   private async cancelStripeSubscriptionIfAny(restaurantId: string): Promise<void> {
+    // Billing lives on the account (§3): cancel the account's Stripe sub only
+    // when THIS venue is the one it applies to (BASIC), or it's the last venue.
     const r = await this.prisma.restaurant.findUnique({
       where: { id: restaurantId },
-      select: { stripeSubscriptionId: true },
+      select: {
+        accountId: true,
+        account: {
+          select: {
+            subscription: { select: { stripeSubscriptionId: true, appliesToRestaurantId: true } },
+            _count: { select: { restaurants: true } },
+          },
+        },
+      },
     });
-    if (!r?.stripeSubscriptionId) return;
+    const sub = r?.account?.subscription ?? null;
+    if (!sub?.stripeSubscriptionId) return;
+    // Don't cancel the account sub when deleting a non-billing venue that still
+    // has siblings — the subscription belongs to the account, not this row.
+    const appliesElsewhere =
+      sub.appliesToRestaurantId != null && sub.appliesToRestaurantId !== restaurantId;
+    const hasSiblings = (r?.account?._count?.restaurants ?? 1) > 1;
+    if (appliesElsewhere || hasSiblings) return;
     try {
-      await getStripe().subscriptions.cancel(r.stripeSubscriptionId);
+      await getStripe().subscriptions.cancel(sub.stripeSubscriptionId);
     } catch (err) {
       // No throw — proceed with delete. Customer can be reconciled later.
       this.logger.error(
-        `Stripe cancel failed for restaurant=${restaurantId} sub=${r.stripeSubscriptionId}: ${
+        `Stripe cancel failed for restaurant=${restaurantId} sub=${sub.stripeSubscriptionId}: ${
           (err as Error)?.message ?? err
         }`,
       );

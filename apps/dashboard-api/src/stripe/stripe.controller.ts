@@ -51,11 +51,18 @@ export class StripeController {
     if (viaGrant) throw new ForbiddenException("Billing is managed by the restaurant owner");
     const stripe = getStripe();
     const [restaurant, user] = await Promise.all([
-      this.prisma.restaurant.findUnique({ where: { id: restaurantId } }),
+      this.prisma.restaurant.findUnique({
+        where: { id: restaurantId },
+        include: { account: { include: { subscription: true } } },
+      }),
       this.prisma.user.findUnique({ where: { id: userId } }),
     ]);
     if (!restaurant) throw new BadRequestException("Restaurant not found");
     if (!user) throw new BadRequestException("User not found");
+    // Billing is account-level now (§3): one Stripe customer + subscription per
+    // account. Read customer/currency/sub-state off the account.
+    const acct = restaurant.account;
+    const acctSub = acct?.subscription ?? null;
     // Demo accounts can't pay — they convert via the "save your menu" email
     // claim, not Stripe. The billing UI is hidden for them client-side too.
     if (user.isDemo) throw new ForbiddenException("Demo accounts cannot start a subscription");
@@ -78,12 +85,12 @@ export class StripeController {
     const requested = isSupportedCurrency(body.currency?.toUpperCase())
       ? (body.currency!.toUpperCase() as SupportedCurrency)
       : null;
-    const stored = isSupportedCurrency(restaurant.billingCurrency)
-      ? (restaurant.billingCurrency as SupportedCurrency)
+    const stored = isSupportedCurrency(acct?.billingCurrency)
+      ? (acct!.billingCurrency as SupportedCurrency)
       : null;
     // Active sub → currency is locked to whatever the customer already pays in.
     // Otherwise the selector/cookie choice wins, then the stored value, then geo.
-    const locked = restaurant.subscriptionStatus === "ACTIVE";
+    const locked = acctSub?.status === "ACTIVE";
     const currency: SupportedCurrency = locked
       ? (stored ?? requested ?? getRequestBillingCurrency(req))
       : (requested ?? stored ?? getRequestBillingCurrency(req));
@@ -94,8 +101,8 @@ export class StripeController {
     // the Stripe Billing Portal so the switch shows the prorated charge before
     // it commits. Prefer the restaurant's own customer; fall back to the legacy
     // per-user customer for subs created before per-restaurant billing.
-    if (restaurant.subscriptionStatus === "ACTIVE" && restaurant.stripeSubscriptionId) {
-      const customer = restaurant.stripeCustomerId ?? user.stripeCustomerId;
+    if (acctSub?.status === "ACTIVE" && acctSub.stripeSubscriptionId) {
+      const customer = acct?.stripeCustomerId ?? user.stripeCustomerId;
       if (!customer) {
         throw new BadRequestException("Subscription is active but no Stripe customer found");
       }
@@ -109,11 +116,9 @@ export class StripeController {
       return { url: portal.url };
     }
 
-    // Per-restaurant Stripe customer. Reuse the restaurant's own customer if it
-    // already has one; otherwise create a fresh customer scoped to this venue
-    // (NOT the legacy per-user customer — that one may be locked to EUR by an
-    // existing sub on another restaurant).
-    let customerId = restaurant.stripeCustomerId;
+    // One Stripe customer per ACCOUNT (§3). Reuse the account's customer if it
+    // has one; otherwise create a fresh one for the account.
+    let customerId = acct?.stripeCustomerId ?? null;
     if (customerId) {
       try {
         const existing = await stripe.customers.retrieve(customerId);
@@ -125,9 +130,17 @@ export class StripeController {
     if (!customerId) {
       const customer = await stripe.customers.create({
         email: user.email,
-        metadata: { restaurantId: restaurant.id, userId: user.id },
+        metadata: { restaurantId: restaurant.id, userId: user.id, accountId: acct?.id ?? "" },
       });
       customerId = customer.id;
+    }
+    // Persist on the account (source of truth). Restaurant columns are kept as a
+    // dual-write mirror until the Phase 4 DROP.
+    if (acct) {
+      await this.prisma.account.update({
+        where: { id: acct.id },
+        data: { stripeCustomerId: customerId, billingCurrency: currency },
+      });
     }
     await this.prisma.restaurant.update({
       where: { id: restaurant.id },
@@ -188,13 +201,16 @@ export class StripeController {
     if (viaGrant) throw new ForbiddenException("Billing is managed by the restaurant owner");
     const stripe = getStripe();
     const [restaurant, user] = await Promise.all([
-      this.prisma.restaurant.findUnique({ where: { id: restaurantId } }),
+      this.prisma.restaurant.findUnique({
+        where: { id: restaurantId },
+        include: { account: true },
+      }),
       this.prisma.user.findUnique({ where: { id: userId } }),
     ]);
     if (user?.isDemo) throw new ForbiddenException("Demo accounts cannot manage billing");
-    // Prefer the restaurant's own customer; fall back to the legacy per-user
-    // customer for subscriptions created before per-restaurant billing.
-    const customer = restaurant?.stripeCustomerId ?? user?.stripeCustomerId;
+    // Account-level Stripe customer (§3); fall back to the legacy per-user
+    // customer for subscriptions created before the account migration.
+    const customer = restaurant?.account?.stripeCustomerId ?? user?.stripeCustomerId;
     if (!customer) {
       throw new BadRequestException("No subscription found");
     }
@@ -274,11 +290,12 @@ export class StripeController {
           // swap and leave two active subs (double charge).
           const r = await this.prisma.restaurant.findUnique({
             where: { id: targetRestaurantId },
-            select: { stripeSubscriptionId: true },
+            select: { account: { select: { subscription: { select: { stripeSubscriptionId: true } } } } },
           });
-          if (r?.stripeSubscriptionId && r.stripeSubscriptionId !== sub.id) {
+          const prevSubId = r?.account?.subscription?.stripeSubscriptionId ?? null;
+          if (prevSubId && prevSubId !== sub.id) {
             try {
-              await stripe.subscriptions.cancel(r.stripeSubscriptionId);
+              await stripe.subscriptions.cancel(prevSubId);
             } catch (err) {
               console.error("Cancel old sub error:", err);
             }
@@ -293,9 +310,9 @@ export class StripeController {
         if (targetRestaurantId) {
           const r = await this.prisma.restaurant.findUnique({
             where: { id: targetRestaurantId },
-            select: { stripeSubscriptionId: true },
+            select: { account: { select: { subscription: { select: { stripeSubscriptionId: true } } } } },
           });
-          if (r?.stripeSubscriptionId === sub.id) {
+          if (r?.account?.subscription?.stripeSubscriptionId === sub.id) {
             await this.prisma.restaurant.update({
               where: { id: targetRestaurantId },
               data: {
@@ -373,11 +390,16 @@ export class StripeController {
     subscriptionId: string,
     fallbackRestaurantId: string | null,
   ): Promise<string | null> {
-    const restaurant = await this.prisma.restaurant.findFirst({
+    // Prefer the account Subscription carrying this Stripe sub id → its target
+    // venue (BASIC applies to one; else the account's first restaurant).
+    const subRow = await this.prisma.subscription.findFirst({
       where: { stripeSubscriptionId: subscriptionId },
-      select: { id: true },
+      select: {
+        appliesToRestaurantId: true,
+        account: { select: { restaurants: { select: { id: true }, orderBy: { createdAt: "asc" }, take: 1 } } },
+      },
     });
-    if (restaurant) return restaurant.id;
+    if (subRow) return subRow.appliesToRestaurantId ?? subRow.account?.restaurants[0]?.id ?? null;
 
     try {
       const stripe = getStripe();
@@ -391,22 +413,12 @@ export class StripeController {
         if (r) return r.id;
       }
       if (sub.customer) {
-        const byCustomer = await this.prisma.user.findFirst({
+        // Account-level Stripe customer → the account's first restaurant.
+        const acc = await this.prisma.account.findFirst({
           where: { stripeCustomerId: sub.customer },
-          select: { id: true },
+          select: { restaurants: { select: { id: true }, orderBy: { createdAt: "asc" }, take: 1 } },
         });
-        if (byCustomer) {
-          // Attach to a restaurant the payer actually OWNS (addedBy null), not
-          // one they only manage via grant — otherwise the sub could land on
-          // someone else's venue and the payer's own restaurants wouldn't
-          // inherit the account-level PRO.
-          const ru = await this.prisma.restaurantUser.findFirst({
-            where: { userId: byCustomer.id, addedBy: null },
-            orderBy: { addedAt: "asc" },
-            select: { restaurantId: true },
-          });
-          if (ru) return ru.restaurantId;
-        }
+        if (acc?.restaurants[0]) return acc.restaurants[0].id;
       }
     } catch (err) {
       // A permanently-missing subscription (deleted) is a legitimate "no target"
@@ -429,9 +441,9 @@ export class StripeController {
   private async isCurrentSub(restaurantId: string, subscriptionId: string): Promise<boolean> {
     const r = await this.prisma.restaurant.findUnique({
       where: { id: restaurantId },
-      select: { stripeSubscriptionId: true },
+      select: { account: { select: { subscription: { select: { stripeSubscriptionId: true } } } } },
     });
-    return r?.stripeSubscriptionId === subscriptionId;
+    return r?.account?.subscription?.stripeSubscriptionId === subscriptionId;
   }
 
   private async applySubscription(
