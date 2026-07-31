@@ -50,6 +50,9 @@ model User {
   supportMessages SupportMessage[]
   sessions        Session[]
   restaurantUsers RestaurantUser[]
+  // Account membership (Account/Subscription migration). Runs alongside
+  // restaurantUsers during the dual-write window; supersedes it in Phase 4.
+  accountMembers  AccountMember[]
 
   @@index([isDemo, demoCreatedAt])
   @@map("users")
@@ -234,6 +237,17 @@ model Restaurant {
   // for the handful of pre-PRO-gating BASIC venues that already rely on these.
   legacyFullAccess      Boolean             @default(false)
 
+  // ─── Account/Subscription migration (additive, Phase 1) ─────────────────────
+  // The billing columns above stay authoritative during the dual-write window
+  // (Phases 1–3) and are DROPPed in Phase 4. `accountId` is nullable now and
+  // becomes NOT NULL at cutover once every row is backfilled.
+  accountId       String?
+  account         Account? @relation(fields: [accountId], references: [id])
+  // Per-venue PRO bypass, migrated from `legacyFullAccess`. 'PRO' → this venue
+  // is full PRO regardless of the Account subscription (see @iq-rest/entitlements
+  // getRestaurantCaps). Usually null.
+  planOverride    String?
+
   tables          Table[]
   reservations    Reservation[]
   orders          Order[]
@@ -267,6 +281,82 @@ model RestaurantUser {
   @@index([userId])
   @@index([restaurantId])
   @@map("restaurant_users")
+}
+
+// ─── Account / Subscription (billing-architecture migration) ──────────────────
+// Introduced additively in Phase 1. During the dual-write window these mirror
+// the per-restaurant billing columns on Restaurant; in Phase 3 reads switch to
+// them and in Phase 4 the old columns are dropped.
+//
+// Account = identity/ownership boundary. One Stripe customer + one subscription
+// per Account; all of the account's restaurants inherit its entitlement.
+model Account {
+  id               String    @id @default(cuid())
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+  // One Stripe customer for the whole account (not per-restaurant). Currency is
+  // locked on the Stripe customer, so it is effectively locked per account.
+  stripeCustomerId String?   @unique
+  billingCurrency  String    @default("EUR")
+  // Trial is one-per-account (14 days), not a per-restaurant timestamp. Once
+  // used it is never re-granted (`trialUsed`).
+  trialEndsAt      DateTime?
+  trialUsed        Boolean   @default(false)
+  // Account-wide grandfather flag (rare). Per-venue legacy bypass lives on
+  // Restaurant.planOverride instead — see the migration plan §3.
+  legacyFullAccess Boolean   @default(false)
+  // Ceiling on how many restaurants the account may hold/create (PRO/trial).
+  // Enterprise raises this manually.
+  venueLimit       Int       @default(4)
+
+  members      AccountMember[]
+  restaurants  Restaurant[]
+  subscription Subscription?
+
+  @@map("accounts")
+}
+
+// Account membership. `role` replaces the RestaurantUser.addedBy null/non-null
+// owner/manager convention. Access is now to the account; restaurants inherit.
+model AccountMember {
+  id        String   @id @default(cuid())
+  accountId String
+  userId    String
+  role      String // "owner" | "manager"
+  addedAt   DateTime @default(now())
+
+  account Account @relation(fields: [accountId], references: [id], onDelete: Cascade)
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([accountId, userId])
+  @@index([userId])
+  @@index([accountId])
+  @@map("account_members")
+}
+
+// Billing state, one per account. Sole writer is the Stripe reconcile path
+// (Phase 2). Values use the Plan/BillingCycle/SubscriptionStatus enum members
+// as string literals but the columns are TEXT (same drift-avoidance rule as the
+// Restaurant billing columns — never filter these in a Prisma WHERE).
+model Subscription {
+  id                    String    @id @default(cuid())
+  accountId             String    @unique
+  plan                  String // "FREE" | "BASIC" | "PRO"
+  billingCycle          String? // "MONTHLY" | "YEARLY"
+  status                String    @default("INACTIVE") // ACTIVE | PAST_DUE | CANCELED | EXPIRED | INACTIVE
+  currentPeriodEnd      DateTime?
+  stripeSubscriptionId  String?   @unique
+  // BASIC: which single venue "takes" the subscription. PRO/trial = null
+  // (applies to the whole account, up to venueLimit).
+  appliesToRestaurantId String?
+  // Timestamp of the last Stripe reconcile that wrote this row (ordering guard).
+  updatedFromStripeAt   DateTime?
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime  @updatedAt
+
+  account Account @relation(fields: [accountId], references: [id], onDelete: Cascade)
+
+  @@map("subscriptions")
 }
 
 model Table {
