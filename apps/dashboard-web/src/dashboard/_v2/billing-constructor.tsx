@@ -138,9 +138,9 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
                       [r.id]: { menuOnline: true, reservations: !allOn, ordersKds: !allOn, domain: !allOn },
                     }))
                   }
-                  className="inline-flex items-center gap-1 text-xs font-medium text-primary"
+                  className={`inline-flex items-center gap-1 text-sm font-medium ${allOn ? "text-primary" : "text-muted-foreground"}`}
                 >
-                  <Sparkles className="h-3.5 w-3.5" /> {allOn ? "All" : "Everything"}
+                  <Sparkles className="h-4 w-4 shrink-0" /> Everything
                 </button>
               </div>
             )}
@@ -149,15 +149,15 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
               <button
                 type="button"
                 onClick={() => toggle(r.id, "menuOnline")}
-                className={`relative flex flex-col items-start text-left rounded-xl border-2 p-3.5 transition-all ${
+                className={`relative flex flex-col items-start text-left rounded-xl border-2 p-4 transition-colors ${
                   s.menuOnline ? "border-primary bg-primary/5" : "border-border bg-card opacity-60 hover:opacity-100"
                 }`}
               >
                 <UtensilsCrossed className={`h-6 w-6 mb-2 ${s.menuOnline ? "text-primary" : "text-muted-foreground"}`} />
-                <div className="text-xs font-semibold text-foreground">Digital menu</div>
-                <div className="text-[11px] text-muted-foreground mt-0.5 leading-snug">QR menu</div>
+                <div className="text-sm font-semibold text-foreground">Digital menu</div>
+                <div className="hidden sm:block text-sm text-muted-foreground mt-0.5 leading-snug">QR menu</div>
                 {price && (
-                  <div className="mt-2 text-xs font-medium tabular-nums text-foreground">{money(price.menu[k])}/mo</div>
+                  <div className="mt-2 text-sm font-medium tabular-nums text-foreground">{money(price.menu[k])}/mo</div>
                 )}
               </button>
 
@@ -170,22 +170,22 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
                     type="button"
                     disabled={disabled}
                     onClick={() => toggle(r.id, key)}
-                    className={`relative flex flex-col items-start text-left rounded-xl border-2 p-3.5 transition-all active:scale-[0.99] disabled:opacity-40 ${
+                    className={`relative flex flex-col items-start text-left rounded-xl border-2 p-4 transition-colors disabled:opacity-40 ${
                       on ? "border-primary bg-primary/5 shadow-sm" : "border-border bg-card hover:border-input"
                     }`}
                   >
                     <span
-                      className={`absolute top-2.5 right-2.5 flex h-4 w-4 items-center justify-center rounded-full border ${
+                      className={`absolute top-3 right-3 flex h-5 w-5 items-center justify-center rounded-full border ${
                         on ? "border-primary bg-primary text-primary-foreground" : "border-input"
                       }`}
                     >
-                      {on ? <Check className="h-3 w-3" /> : null}
+                      {on ? <Check className="h-3.5 w-3.5" /> : null}
                     </span>
                     <Icon className={`h-6 w-6 mb-2 ${on ? "text-primary" : "text-muted-foreground"}`} />
-                    <div className="text-xs font-semibold text-foreground">{label}</div>
-                    <div className="text-[11px] text-muted-foreground mt-0.5 leading-snug">{hint}</div>
+                    <div className="text-sm font-semibold text-foreground pr-6">{label}</div>
+                    <div className="hidden sm:block text-sm text-muted-foreground mt-0.5 leading-snug">{hint}</div>
                     {price && (
-                      <div className={`mt-2 text-xs font-medium tabular-nums ${on ? "text-primary" : "text-muted-foreground"}`}>
+                      <div className={`mt-2 text-sm font-medium tabular-nums ${on ? "text-primary" : "text-muted-foreground"}`}>
                         +{money(price[key][k])}/mo
                       </div>
                     )}
@@ -197,31 +197,38 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
         );
       })}
 
-      {/* Sticky price bar */}
+      {/* Sticky price bar — stacks on mobile so any magnitude fits; sub-line has
+          a fixed height so a discount appearing never shifts the layout. */}
       <div className="sticky bottom-3 z-10">
-        <div className="flex items-center justify-between gap-3 rounded-2xl border border-border bg-card/90 backdrop-blur px-4 py-3 shadow-lg">
-          <div>
-            {quote ? (
-              <>
-                <span className="text-2xl font-semibold tabular-nums">{money(quote.amountMajor)}</span>
-                <span className="text-sm text-muted-foreground"> /{cycle === "year" ? "year" : "month"}</span>
-                {quote.discount > 0 && (
-                  <div className="text-[11px] text-emerald-500 font-medium">
-                    {Math.round(quote.discount * 100)}% volume discount · {quote.billingVenues} venues
-                  </div>
-                )}
-              </>
-            ) : (
-              <span className="text-sm text-muted-foreground">Select at least one menu</span>
-            )}
+        <div className="flex flex-col sm:flex-row sm:items-center gap-3 rounded-2xl border border-border bg-card/90 backdrop-blur px-4 py-3 shadow-lg">
+          <div className="min-w-0 sm:flex-1">
+            <div className="whitespace-nowrap">
+              {quote ? (
+                <>
+                  <span className="text-2xl font-semibold tabular-nums">{money(quote.amountMajor)}</span>
+                  <span className="text-sm text-muted-foreground"> /{cycle === "year" ? "year" : "month"}</span>
+                </>
+              ) : (
+                <span className="text-sm text-muted-foreground">Select at least one menu</span>
+              )}
+            </div>
+            <div className="text-sm h-5 leading-5">
+              {quote && quote.discount > 0 ? (
+                <span className="text-emerald-500 font-medium">
+                  {Math.round(quote.discount * 100)}% volume discount · {quote.billingVenues} venues
+                </span>
+              ) : quote ? (
+                <span className="text-muted-foreground">{cycle === "year" ? "Billed once a year" : "Billed monthly"}</span>
+              ) : null}
+            </div>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 shrink-0">
             {cycle === "year" && (
               <button
                 type="button"
                 onClick={payInvoice}
                 disabled={busy || !quote}
-                className="h-10 px-4 text-sm font-medium rounded-xl border border-input text-foreground disabled:opacity-50"
+                className="flex-1 sm:flex-none h-11 px-4 text-sm font-medium rounded-xl border border-input text-foreground disabled:opacity-50"
               >
                 SEPA invoice
               </button>
@@ -230,7 +237,7 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
               type="button"
               onClick={payCard}
               disabled={busy || !quote}
-              className="h-10 px-5 text-sm font-semibold rounded-xl text-primary-foreground bg-primary disabled:opacity-50"
+              className="flex-1 sm:flex-none h-11 px-5 text-sm font-semibold rounded-xl text-primary-foreground bg-primary disabled:opacity-50"
             >
               Pay by card
             </button>

@@ -2,10 +2,15 @@
 
 // billing-features-constructor — landing "build your plan" (card-select).
 //
-// Tap-to-select feature cards (4 across on desktop, 1 column on mobile) with a
-// live sticky price bar. Default shows the cheapest (menu-only) price so the
-// number never sticker-shocks; the buyer builds up from there. Prices come from
-// the SAME catalog as checkout (dashboard-api /api/pricing). English-only.
+// Tap-to-select feature cards. Layout is JUMP-FREE by construction:
+//  · both card states use border-2 + no transform (only color/shadow change)
+//  · the "Select everything" label never changes width
+//  · the price bar stacks on mobile (price row, full-width CTA) so any magnitude
+//    (€300 or €1,300 or 900,000 HUF) never collides with the button
+//  · the sub-line under the price is ALWAYS rendered (fixed height) so it can't
+//    push the layout when a discount appears
+// Prices come from the same catalog as checkout (dashboard-api /api/pricing).
+// English-only; min font size is text-sm (micro badges aside).
 
 import { useEffect, useMemo, useState } from "react";
 import { UtensilsCrossed, CalendarClock, ChefHat, Globe, Check, Sparkles } from "lucide-react";
@@ -29,7 +34,7 @@ type Cycle = "month" | "year";
 type AddonKey = "reservations" | "ordersKds" | "domain";
 
 const ADDONS: { key: AddonKey; label: string; hint: string; Icon: typeof CalendarClock }[] = [
-  { key: "reservations", label: "Reservations", hint: "Take table bookings", Icon: CalendarClock },
+  { key: "reservations", label: "Reservations", hint: "Table bookings", Icon: CalendarClock },
   { key: "ordersKds", label: "Orders + Kitchen", hint: "Orders & kitchen display", Icon: ChefHat },
   { key: "domain", label: "Custom domain", hint: "Your own web address", Icon: Globe },
 ];
@@ -70,18 +75,7 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
   const info = currencyInfo[currency] ?? currencyInfo.EUR;
   const allOn = feat.reservations && feat.ordersKds && feat.domain;
   const discountPct = Math.round(quote.discount * 100);
-
-  const priceNode = (
-    <span className="inline-flex items-baseline gap-1">
-      {info.symbolPosition === "before" ? <span className="text-lg text-muted-foreground">{info.symbol}</span> : null}
-      <span className="text-4xl font-semibold tracking-tight tabular-nums">{formatMoney(quote.amountMajor, currency)}</span>
-      {info.symbolPosition === "after" ? <span className="text-lg text-muted-foreground">{info.symbol}</span> : null}
-      <span className="text-sm text-muted-foreground">{cycle === "year" ? "/year" : "/month"}</span>
-    </span>
-  );
-
-  // Per-add-on contribution label (+€X/mo), reflecting the current cycle.
-  const addonPrice = (key: AddonKey) => `+${formatMoney(pricing[key][k], currency)}${info.symbolPosition === "after" ? " " + info.symbol : ""}`;
+  const addonPrice = (key: AddonKey) => formatMoney(pricing[key][k], currency);
 
   return (
     <div className="mx-auto max-w-5xl w-full">
@@ -94,9 +88,9 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
         </p>
       </div>
 
-      {/* Restaurants + everything + cycle */}
-      <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
-        <div className="inline-flex items-center gap-3 rounded-full border border-border bg-card px-4 py-2">
+      {/* Controls — labels are constant-width so the row never reflows */}
+      <div className="flex flex-wrap items-center justify-center gap-2.5 mb-6">
+        <div className="inline-flex items-center gap-2.5 rounded-full border border-border bg-card px-4 py-2">
           <span className="text-sm text-muted-foreground">Restaurants</span>
           <button
             type="button"
@@ -121,10 +115,10 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
           type="button"
           onClick={() => setFeat({ reservations: !allOn, ordersKds: !allOn, domain: !allOn })}
           className={`inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium border transition-colors ${
-            allOn ? "border-primary bg-primary/10 text-primary" : "border-border bg-card hover:border-input"
+            allOn ? "border-primary bg-primary/10 text-primary" : "border-border bg-card hover:border-input text-foreground"
           }`}
         >
-          <Sparkles className="h-4 w-4" /> {allOn ? "Everything selected" : "Select everything"}
+          <Sparkles className="h-4 w-4 shrink-0" /> Select everything
         </button>
 
         <div className="inline-flex rounded-full border border-border bg-card p-1">
@@ -143,23 +137,22 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
         </div>
       </div>
 
-      {/* Feature cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-        {/* Menu — always included */}
-        <div className="relative flex flex-col items-start rounded-2xl border-2 border-border bg-card p-5">
-          <span className="absolute top-3 right-3 inline-flex items-center gap-1 text-[10px] font-medium uppercase tracking-wide text-muted-foreground">
+      {/* Feature cards — 2 columns on mobile, 4 on desktop. No transform on
+          select (only color/shadow) so tapping never shifts the layout. */}
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        <div className="relative flex flex-col items-start rounded-2xl border-2 border-border bg-card p-4 sm:p-5">
+          <span className="absolute top-3 right-3 text-xs font-medium uppercase tracking-wide text-muted-foreground">
             Included
           </span>
           <UtensilsCrossed className="h-7 w-7 text-primary mb-3" />
           <div className="text-sm font-semibold text-foreground">Digital menu</div>
-          <div className="text-xs text-muted-foreground mt-0.5 leading-snug">QR menu diners scan &amp; browse</div>
+          <div className="hidden sm:block text-sm text-muted-foreground mt-0.5 leading-snug">QR menu diners scan</div>
           <div className="mt-3 text-sm font-medium text-foreground tabular-nums">
-            {formatMoney(pricing.menu[k], currency)} {info.symbolPosition === "after" ? info.symbol : ""}
-            <span className="text-xs text-muted-foreground font-normal">/mo</span>
+            {formatMoney(pricing.menu[k], currency)}
+            <span className="text-muted-foreground font-normal">/mo</span>
           </div>
         </div>
 
-        {/* Add-ons */}
         {ADDONS.map(({ key, label, hint, Icon }) => {
           const on = feat[key];
           return (
@@ -167,10 +160,8 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
               key={key}
               type="button"
               onClick={() => setFeat((s) => ({ ...s, [key]: !s[key] }))}
-              className={`relative flex flex-col items-start text-left rounded-2xl border-2 p-5 transition-all active:scale-[0.99] ${
-                on
-                  ? "border-primary bg-primary/5 shadow-sm -translate-y-0.5"
-                  : "border-border bg-card hover:border-input hover:-translate-y-0.5"
+              className={`relative flex flex-col items-start text-left rounded-2xl border-2 p-4 sm:p-5 transition-colors ${
+                on ? "border-primary bg-primary/5 shadow-sm" : "border-border bg-card hover:border-input"
               }`}
             >
               <span
@@ -181,23 +172,29 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
                 {on ? <Check className="h-3.5 w-3.5" /> : null}
               </span>
               <Icon className={`h-7 w-7 mb-3 ${on ? "text-primary" : "text-muted-foreground"}`} />
-              <div className="text-sm font-semibold text-foreground">{label}</div>
-              <div className="text-xs text-muted-foreground mt-0.5 leading-snug">{hint}</div>
+              <div className="text-sm font-semibold text-foreground pr-6">{label}</div>
+              <div className="hidden sm:block text-sm text-muted-foreground mt-0.5 leading-snug">{hint}</div>
               <div className={`mt-3 text-sm font-medium tabular-nums ${on ? "text-primary" : "text-muted-foreground"}`}>
-                {addonPrice(key)}
-                <span className="text-xs font-normal opacity-70">/mo</span>
+                +{addonPrice(key)}
+                <span className="font-normal opacity-70">/mo</span>
               </div>
             </button>
           );
         })}
       </div>
 
-      {/* Sticky price bar */}
+      {/* Sticky price bar — stacks on mobile so any price magnitude fits and the
+          CTA never gets pushed. Sub-line is always present (fixed height). */}
       <div className="sticky bottom-4 z-20 mt-6">
-        <div className="flex items-center justify-between gap-4 rounded-2xl border border-border bg-card/90 backdrop-blur px-5 py-4 shadow-lg">
-          <div>
-            {priceNode}
-            <div className="text-xs mt-0.5">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-3 rounded-2xl border border-border bg-card/90 backdrop-blur px-5 py-4 shadow-lg">
+          <div className="min-w-0 sm:flex-1">
+            <div className="flex items-baseline gap-1 whitespace-nowrap">
+              {info.symbolPosition === "before" ? <span className="text-lg text-muted-foreground">{info.symbol}</span> : null}
+              <span className="text-3xl font-semibold tracking-tight tabular-nums">{formatMoney(quote.amountMajor, currency)}</span>
+              {info.symbolPosition === "after" ? <span className="text-lg text-muted-foreground">{info.symbol}</span> : null}
+              <span className="text-sm text-muted-foreground">{cycle === "year" ? "/year" : "/month"}</span>
+            </div>
+            <div className="text-sm mt-0.5 h-5 leading-5">
               {discountPct > 0 ? (
                 <span className="text-emerald-500 font-medium">
                   {discountPct}% volume discount · {quote.billingVenues} restaurants
@@ -212,7 +209,7 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
           <button
             type="button"
             onClick={() => cta.onClick("l_pricing_quiz_cta")}
-            className="inline-flex items-center justify-center min-h-11 py-2.5 px-6 text-sm font-semibold text-primary-foreground bg-primary rounded-xl hover:bg-primary/90 active:scale-[0.99] transition-all whitespace-nowrap"
+            className="w-full sm:w-auto shrink-0 inline-flex items-center justify-center min-h-12 py-2.5 px-6 text-sm font-semibold text-primary-foreground bg-primary rounded-xl hover:bg-primary/90 active:scale-[0.99] transition-colors"
           >
             {cta.label}
           </button>
