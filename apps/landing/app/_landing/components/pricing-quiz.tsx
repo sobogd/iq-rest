@@ -87,45 +87,50 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
         </p>
       </div>
 
-      {/* Controls — billing cycle + restaurants stepper on ONE row. The stepper
-          label truncates (…) when space is tight so it never wraps. */}
-      <div className="flex items-center justify-center gap-2 mb-6">
-        <div className="inline-flex shrink-0 rounded-full border border-border bg-card p-1">
-          {(["month", "year"] as const).map((c) => (
-            <button
-              key={c}
-              type="button"
-              onClick={() => setCycle(c)}
-              className={`px-3.5 py-1.5 rounded-full text-sm font-medium transition-colors ${
-                cycle === c ? "bg-primary text-primary-foreground" : "text-muted-foreground"
-              }`}
-            >
-              {c === "month" ? "Monthly" : "Yearly"}
-            </button>
-          ))}
+      {/* Controls — billing cycle + restaurants stepper on ONE row, each under a
+          small muted caption. Stepper keeps exact count; its label truncates (…)
+          when tight so it never wraps. */}
+      <div className="flex items-end justify-center gap-3 mb-6">
+        <div className="flex flex-col items-center gap-1.5">
+          <span className="text-xs font-medium uppercase tracking-wide text-muted-foreground">Billing</span>
+          <div className="inline-flex shrink-0 rounded-full border border-border bg-card p-1">
+            {(["month", "year"] as const).map((c) => (
+              <button
+                key={c}
+                type="button"
+                onClick={() => setCycle(c)}
+                className={`px-3.5 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                  cycle === c ? "bg-primary text-primary-foreground" : "text-muted-foreground"
+                }`}
+              >
+                {c === "month" ? "Monthly" : "Yearly"}
+              </button>
+            ))}
+          </div>
         </div>
 
-        <div className="inline-flex min-w-0 items-center rounded-full border border-border bg-card p-1">
-          <button
-            type="button"
-            aria-label="Fewer restaurants"
-            onClick={() => setCount((c) => Math.max(1, c - 1))}
-            className="h-8 w-8 shrink-0 rounded-full text-lg leading-none hover:bg-accent disabled:opacity-40"
-            disabled={count <= 1}
-          >
-            −
-          </button>
-          <span className="min-w-0 truncate text-center text-sm font-medium px-2">
-            <span className="tabular-nums">{count}</span> {count === 1 ? "restaurant" : "restaurants"}
-          </span>
-          <button
-            type="button"
-            aria-label="More restaurants"
-            onClick={() => setCount((c) => Math.min(99, c + 1))}
-            className="h-8 w-8 shrink-0 rounded-full text-lg leading-none hover:bg-accent"
-          >
-            +
-          </button>
+        <div className="flex min-w-0 flex-col items-center gap-1.5">
+          <span className="text-xs font-medium uppercase tracking-wide text-muted-foreground">Restaurants</span>
+          <div className="inline-flex min-w-0 items-center rounded-full border border-border bg-card p-1">
+            <button
+              type="button"
+              aria-label="Fewer restaurants"
+              onClick={() => setCount((c) => Math.max(1, c - 1))}
+              className="h-8 w-8 shrink-0 rounded-full text-lg leading-none hover:bg-accent disabled:opacity-40"
+              disabled={count <= 1}
+            >
+              −
+            </button>
+            <span className="min-w-0 truncate text-center text-sm font-medium tabular-nums px-2">{count}</span>
+            <button
+              type="button"
+              aria-label="More restaurants"
+              onClick={() => setCount((c) => Math.min(99, c + 1))}
+              className="h-8 w-8 shrink-0 rounded-full text-lg leading-none hover:bg-accent"
+            >
+              +
+            </button>
+          </div>
         </div>
       </div>
 
