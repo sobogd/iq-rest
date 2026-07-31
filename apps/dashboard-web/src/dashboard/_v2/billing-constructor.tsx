@@ -129,21 +129,26 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
             {!single && (
               <div className="text-sm font-medium text-foreground truncate">{r.title || r.slug || r.id}</div>
             )}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5">
+            <div className="flex flex-col gap-2.5">
               {/* Menu — toggle whether this venue is billed at all */}
               <button
                 type="button"
                 onClick={() => toggle(r.id, "menuOnline")}
-                className={`relative flex flex-col items-start text-left rounded-xl border-2 p-4 transition-colors ${
+                className={`flex items-center gap-3 text-left rounded-xl border-2 p-3.5 transition-colors ${
                   s.menuOnline ? "border-primary bg-primary/5" : "border-border bg-card opacity-60 hover:opacity-100"
                 }`}
               >
-                <UtensilsCrossed className={`h-6 w-6 mb-2 ${s.menuOnline ? "text-primary" : "text-muted-foreground"}`} />
-                <div className="text-sm font-semibold text-foreground">Digital menu</div>
-                <div className="hidden sm:block text-sm text-muted-foreground mt-0.5 leading-snug">QR menu</div>
+                <UtensilsCrossed className={`h-6 w-6 shrink-0 ${s.menuOnline ? "text-primary" : "text-muted-foreground"}`} />
+                <div className="min-w-0 flex-1">
+                  <div className="text-sm font-semibold text-foreground">Digital menu</div>
+                  <div className="text-sm text-muted-foreground leading-snug">QR menu diners scan</div>
+                </div>
                 {price && (
-                  <div className="mt-2 text-sm font-medium tabular-nums text-foreground">{money(price.menu[k])}/mo</div>
+                  <div className="shrink-0 text-sm font-medium tabular-nums text-foreground">{money(price.menu[k])}/mo</div>
                 )}
+                <span className="shrink-0 flex h-5 w-5 items-center justify-center rounded-full border border-primary bg-primary text-primary-foreground">
+                  <Check className="h-3.5 w-3.5" />
+                </span>
               </button>
 
               {ADDONS.map(({ key, label, hint, Icon }) => {
@@ -155,25 +160,27 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
                     type="button"
                     disabled={disabled}
                     onClick={() => toggle(r.id, key)}
-                    className={`relative flex flex-col items-start text-left rounded-xl border-2 p-4 transition-colors disabled:opacity-40 ${
+                    className={`flex items-center gap-3 text-left rounded-xl border-2 p-3.5 transition-colors disabled:opacity-40 ${
                       on ? "border-primary bg-primary/5 shadow-sm" : "border-border bg-card hover:border-input"
                     }`}
                   >
+                    <Icon className={`h-6 w-6 shrink-0 ${on ? "text-primary" : "text-muted-foreground"}`} />
+                    <div className="min-w-0 flex-1">
+                      <div className="text-sm font-semibold text-foreground">{label}</div>
+                      <div className="text-sm text-muted-foreground leading-snug">{hint}</div>
+                    </div>
+                    {price && (
+                      <div className={`shrink-0 text-sm font-medium tabular-nums ${on ? "text-primary" : "text-muted-foreground"}`}>
+                        +{money(price[key][k])}/mo
+                      </div>
+                    )}
                     <span
-                      className={`absolute top-3 right-3 flex h-5 w-5 items-center justify-center rounded-full border ${
+                      className={`shrink-0 flex h-5 w-5 items-center justify-center rounded-full border ${
                         on ? "border-primary bg-primary text-primary-foreground" : "border-input"
                       }`}
                     >
                       {on ? <Check className="h-3.5 w-3.5" /> : null}
                     </span>
-                    <Icon className={`h-6 w-6 mb-2 ${on ? "text-primary" : "text-muted-foreground"}`} />
-                    <div className="text-sm font-semibold text-foreground pr-6">{label}</div>
-                    <div className="hidden sm:block text-sm text-muted-foreground mt-0.5 leading-snug">{hint}</div>
-                    {price && (
-                      <div className={`mt-2 text-sm font-medium tabular-nums ${on ? "text-primary" : "text-muted-foreground"}`}>
-                        +{money(price[key][k])}/mo
-                      </div>
-                    )}
                   </button>
                 );
               })}
