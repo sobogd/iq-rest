@@ -94,4 +94,65 @@ export declare function accountStateFromLegacyRestaurant(r: {
         planOverride: PlanOverride;
     };
 };
+export declare const ACCOUNT_ENTITLEMENT_SELECT: {
+    readonly id: true;
+    readonly planOverride: true;
+    readonly accountId: true;
+    readonly account: {
+        readonly select: {
+            readonly trialEndsAt: true;
+            readonly venueLimit: true;
+            readonly subscription: {
+                readonly select: {
+                    readonly plan: true;
+                    readonly status: true;
+                    readonly currentPeriodEnd: true;
+                    readonly appliesToRestaurantId: true;
+                };
+            };
+            readonly _count: {
+                readonly select: {
+                    readonly restaurants: true;
+                };
+            };
+        };
+    };
+    readonly plan: true;
+    readonly subscriptionStatus: true;
+    readonly trialEndsAt: true;
+    readonly currentPeriodEnd: true;
+    readonly legacyFullAccess: true;
+};
+export type RestaurantEntitlementRow = {
+    id: string;
+    planOverride?: string | null;
+    accountId?: string | null;
+    account?: {
+        trialEndsAt: Date | null;
+        venueLimit: number;
+        subscription: {
+            plan: string;
+            status: string;
+            currentPeriodEnd: Date | null;
+            appliesToRestaurantId: string | null;
+        } | null;
+        _count?: {
+            restaurants: number;
+        };
+    } | null;
+    plan?: string | null;
+    subscriptionStatus?: string | null;
+    trialEndsAt?: Date | null;
+    currentPeriodEnd?: Date | null;
+    legacyFullAccess?: boolean | null;
+};
+export declare function accountStateFromRow(row: RestaurantEntitlementRow): {
+    account: AccountState;
+    planOverride: PlanOverride;
+};
+export declare function restaurantCapsFromRow(row: RestaurantEntitlementRow): RestaurantCapabilities;
+export declare function accountCapsFromRow(row: RestaurantEntitlementRow): AccountCapabilities;
+type EntitlementDb = Pick<PrismaClient, "restaurant">;
+export declare function getRestaurantCapsById(prisma: EntitlementDb, restaurantId: string): Promise<RestaurantCapabilities>;
+export declare function getAccountCapsByRestaurantId(prisma: EntitlementDb, restaurantId: string): Promise<AccountCapabilities>;
 export {};

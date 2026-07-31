@@ -3,7 +3,7 @@ import type { Request } from "express";
 import { z } from "zod";
 import { PrismaService } from "../prisma/prisma.service";
 import { OrdersNotifierService } from "./orders-notifier.service";
-import { restaurantHasProAccess, PRO_FEATURE_SELECT } from "../common/entitlements";
+import { ACCOUNT_ENTITLEMENT_SELECT, restaurantCapsFromRow } from "../common/entitlements";
 
 const orderSchema = z.object({
   slug: z.string().min(1),
@@ -62,18 +62,17 @@ export class OrdersController {
     const restaurant = await this.prisma.restaurant.findFirst({
       where: { slug },
       select: {
-        id: true,
         ordersEnabled: true,
         orderMode: true,
         currency: true,
-        ...PRO_FEATURE_SELECT,
+        ...ACCOUNT_ENTITLEMENT_SELECT,
       },
     });
     if (!restaurant || !restaurant.ordersEnabled) throw new NotFoundException("not_found");
     // Orders are a PRO feature — a BASIC (menu-only) restaurant can't take them
-    // even if `ordersEnabled` is still set from a prior PRO period. Account-aware:
-    // a PRO owner's other venues inherit the entitlement.
-    if (!(await restaurantHasProAccess(this.prisma, restaurant)))
+    // even if `ordersEnabled` is still set from a prior PRO period. Resolved
+    // account-side (§3): only a PRO/trial/planOverride venue has `orders`.
+    if (!restaurantCapsFromRow(restaurant).orders)
       throw new NotFoundException("not_found");
 
     const mode = restaurant.orderMode;

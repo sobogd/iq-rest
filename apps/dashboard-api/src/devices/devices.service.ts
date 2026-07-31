@@ -13,7 +13,7 @@ import {
   signDeviceToken,
   verifyDeviceToken,
 } from "./device-token";
-import { restaurantHasProAccess, PRO_ACCESS_SELECT } from "../common/entitlements";
+import { getRestaurantCapsById } from "../common/entitlements";
 
 const PAIRING_CODE_TTL_MS = 2 * 60 * 1000; // 120s
 const PAIR_RATE_WINDOW_MS = 60 * 1000;
@@ -39,16 +39,11 @@ export class DevicesService {
   //
   // All kiosks (KITCHEN / WAITER / RESERVATION) are PRO-only — they drive the
   // order/kitchen/reservation surfaces, which are PRO features. Trial counts as
-  // entitled (the 14-day trial gives full access); grandfathered BASIC venues
-  // (`legacyFullAccess`) keep devices too. Per-restaurant billing.
+  // entitled; a planOverride='PRO' venue too. Resolved account-side (§3).
 
   private async assertRestaurantMayUseDevices(restaurantId: string): Promise<void> {
-    const restaurant = await this.prisma.restaurant.findUnique({
-      where: { id: restaurantId },
-      select: PRO_ACCESS_SELECT,
-    });
-    if (!restaurant) throw new NotFoundException("Restaurant not found");
-    if (!(await restaurantHasProAccess(this.prisma, restaurant))) {
+    const caps = await getRestaurantCapsById(this.prisma, restaurantId);
+    if (!caps.orders) {
       throw new ForbiddenException("devices_require_pro_plan");
     }
   }

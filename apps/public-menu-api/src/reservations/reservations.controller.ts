@@ -3,7 +3,7 @@ import { z } from "zod";
 import { PrismaService } from "../prisma/prisma.service";
 import { MailService } from "../mail/mail.service";
 import { OrdersNotifierService } from "../orders/orders-notifier.service";
-import { restaurantHasProAccess, PRO_FEATURE_SELECT } from "../common/entitlements";
+import { ACCOUNT_ENTITLEMENT_SELECT, restaurantCapsFromRow } from "../common/entitlements";
 
 const reservationSchema = z.object({
   restaurantId: z.string().min(1),
@@ -131,20 +131,19 @@ export class ReservationsController {
     const restaurant = await this.prisma.restaurant.findFirst({
       where: { slug },
       select: {
-        id: true,
         reservationsEnabled: true,
         reservationSlotMinutes: true,
         workingHoursStart: true,
         workingHoursEnd: true,
         reservationSchedule: true,
         timezone: true,
-        ...PRO_FEATURE_SELECT,
+        ...ACCOUNT_ENTITLEMENT_SELECT,
       },
     });
     if (!restaurant) throw new NotFoundException("not_found");
     // Reservations are PRO-only; a BASIC restaurant exposes no booking surface.
     if (
-      !(await restaurantHasProAccess(this.prisma, restaurant)) ||
+      !restaurantCapsFromRow(restaurant).reservations ||
       !restaurant.reservationsEnabled
     )
       throw new BadRequestException("reservations_disabled");
@@ -219,20 +218,19 @@ export class ReservationsController {
     const restaurant = await this.prisma.restaurant.findUnique({
       where: { id: restaurantId },
       select: {
-        id: true,
         title: true,
         defaultLanguage: true,
         reservationsEnabled: true,
         reservationSlotMinutes: true,
         reservationMode: true,
         restaurantUsers: { select: { user: { select: { email: true } } } },
-        ...PRO_FEATURE_SELECT,
+        ...ACCOUNT_ENTITLEMENT_SELECT,
       },
     });
     if (!restaurant) throw new NotFoundException("not_found");
     // Reservations are PRO-only; reject bookings for BASIC restaurants.
     if (
-      !(await restaurantHasProAccess(this.prisma, restaurant)) ||
+      !restaurantCapsFromRow(restaurant).reservations ||
       !restaurant.reservationsEnabled
     )
       throw new BadRequestException("reservations_disabled");

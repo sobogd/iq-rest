@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from "@nestjs/common";
 import { PrismaService } from "../prisma/prisma.service";
-import { restaurantHasProAccess } from "../common/entitlements";
+import { ACCOUNT_ENTITLEMENT_SELECT, restaurantCapsFromRow } from "../common/entitlements";
 
 @Injectable()
 export class MenuService {
@@ -10,7 +10,6 @@ export class MenuService {
     const restaurant = await this.prisma.restaurant.findFirst({
       where: { slug },
       select: {
-        id: true,
         title: true,
         description: true,
         slug: true,
@@ -46,18 +45,19 @@ export class MenuService {
         x: true,
         y: true,
         googlePlaceId: true,
-        // Per-restaurant billing — trial / plan come straight off the
-        // restaurant now (no Company hop).
-        plan: true,
-        subscriptionStatus: true,
-        trialEndsAt: true,
-        // Drives the PAST_DUE grace window (menu block + proFeatures) on both
-        // the API (hasProFeatures) and the diner SPA (__root.tsx).
-        currentPeriodEnd: true,
-        legacyFullAccess: true,
+        // Account entitlement (§3): the Account + Subscription (+ legacy columns
+        // as the orphan fallback) needed to resolve menuOnline / proFeatures
+        // server-side. One query, no per-request owner scan.
+        ...ACCOUNT_ENTITLEMENT_SELECT,
       },
     });
     if (!restaurant) throw new NotFoundException("restaurant not found");
+
+    // Resolve capabilities from the account once, server-side. `menuOnline`
+    // gates the diner paywall overlay; `proFeatures` hides the order/booking
+    // surfaces for BASIC (menu-only). The SPA consumes these directly instead of
+    // re-deriving plan logic (kills the __root.tsx duplicate).
+    const caps = restaurantCapsFromRow(restaurant);
 
     const [categories, items, tables] = await Promise.all([
       this.prisma.category.findMany({
@@ -90,12 +90,25 @@ export class MenuService {
       }),
     ]);
 
+    // Strip account internals from the public payload; keep the legacy billing
+    // fields for now (the diner SPA still reads them until it switches to
+    // menuOnline/proFeatures — they are DROPped in Phase 4).
+    const {
+      account: _account,
+      accountId: _accountId,
+      planOverride: _planOverride,
+      legacyFullAccess: _legacyFullAccess,
+      ...restaurantPublic
+    } = restaurant as typeof restaurant & Record<string, unknown>;
+
     return {
-      // `proFeatures` lets the diner SPA hide the order/booking surfaces for
-      // BASIC (menu-only) restaurants without re-deriving plan logic client-side.
+      // `menuOnline` drives the diner paywall overlay; `proFeatures` hides the
+      // order/booking surfaces for BASIC (menu-only). Both resolved account-side
+      // so the SPA doesn't re-derive plan logic.
       restaurant: {
-        ...restaurant,
-        proFeatures: await restaurantHasProAccess(this.prisma, restaurant),
+        ...restaurantPublic,
+        proFeatures: caps.orders,
+        menuOnline: caps.menuOnline,
       },
       categories,
       items: items.map((i) => ({ ...i, price: Number(i.price) })),

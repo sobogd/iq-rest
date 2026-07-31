@@ -6,7 +6,7 @@ import {
 } from "@nestjs/common";
 import type { Request } from "express";
 import { PrismaService } from "../prisma/prisma.service";
-import { restaurantHasProAccess, PRO_ACCESS_SELECT } from "./entitlements";
+import { getRestaurantCapsById } from "./entitlements";
 
 // Blocks PRO-only surfaces (orders, kitchen, reservations) for restaurants that
 // aren't entitled. Place AFTER the auth guard (AuthGuard / UserOrDeviceGuard)
@@ -21,11 +21,11 @@ export class ProFeatureGuard implements CanActivate {
     const restaurantId = (req as { authUser?: { restaurantId?: string } }).authUser
       ?.restaurantId;
     if (!restaurantId) throw new ForbiddenException("feature_requires_pro");
-    const restaurant = await this.prisma.restaurant.findUnique({
-      where: { id: restaurantId },
-      select: PRO_ACCESS_SELECT,
-    });
-    if (!restaurant || !(await restaurantHasProAccess(this.prisma, restaurant))) {
+    // Account-level entitlement (§3): orders/KDS/reservations are the PRO-tier
+    // bundle — they move together (all true for PRO/trial, all false for BASIC /
+    // inactive), so `orders` stands for "has PRO features".
+    const caps = await getRestaurantCapsById(this.prisma, restaurantId);
+    if (!caps.orders) {
       throw new ForbiddenException("feature_requires_pro");
     }
     return true;

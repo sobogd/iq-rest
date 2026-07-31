@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PRO_ACCESS_SELECT = exports.PRO_FEATURE_SELECT = exports.PAST_DUE_GRACE_DAYS = void 0;
+exports.ACCOUNT_ENTITLEMENT_SELECT = exports.PRO_ACCESS_SELECT = exports.PRO_FEATURE_SELECT = exports.PAST_DUE_GRACE_DAYS = void 0;
 exports.pastDueGraceEndMs = pastDueGraceEndMs;
 exports.inPastDueGrace = inPastDueGrace;
 exports.hasProFeatures = hasProFeatures;
@@ -13,6 +13,11 @@ exports.isBasicActive = isBasicActive;
 exports.getRestaurantCaps = getRestaurantCaps;
 exports.getAccountCaps = getAccountCaps;
 exports.accountStateFromLegacyRestaurant = accountStateFromLegacyRestaurant;
+exports.accountStateFromRow = accountStateFromRow;
+exports.restaurantCapsFromRow = restaurantCapsFromRow;
+exports.accountCapsFromRow = accountCapsFromRow;
+exports.getRestaurantCapsById = getRestaurantCapsById;
+exports.getAccountCapsByRestaurantId = getAccountCapsByRestaurantId;
 // ─────────────────────────────────────────────────────────────────────────────
 // @iq-rest/entitlements — the SINGLE source of truth for PRO-feature /
 // capability resolution. Replaces the two byte-identical copies that used to
@@ -219,4 +224,107 @@ function accountStateFromLegacyRestaurant(r) {
         },
         restaurant: { id: r.id, planOverride: r.legacyFullAccess ? "PRO" : null },
     };
+}
+// ─────────────────────────────────────────────────────────────────────────────
+// Layer 3: Prisma-backed account entitlement (Phase 3 — the live read path)
+//
+// Callers switch from the legacy per-restaurant helpers (Layer 1) to these. A
+// restaurant's capabilities are resolved from its Account + Subscription (the
+// account is the entitlement boundary; §3). During the dual-write window a
+// restaurant whose `accountId` is still NULL (orphan / not yet backfilled) falls
+// back to its legacy billing columns so nothing fails closed mid-migration.
+// ─────────────────────────────────────────────────────────────────────────────
+// Prisma `select` fragment: spread into any restaurant query that needs account
+// entitlement so the account + subscription + venue-count come along in ONE
+// query (no per-request owner scan). Includes the legacy columns as the
+// orphan-row fallback.
+exports.ACCOUNT_ENTITLEMENT_SELECT = {
+    id: true,
+    planOverride: true,
+    accountId: true,
+    account: {
+        select: {
+            trialEndsAt: true,
+            venueLimit: true,
+            subscription: {
+                select: {
+                    plan: true,
+                    status: true,
+                    currentPeriodEnd: true,
+                    appliesToRestaurantId: true,
+                },
+            },
+            _count: { select: { restaurants: true } },
+        },
+    },
+    // legacy fallback (accountId still NULL during dual-write)
+    plan: true,
+    subscriptionStatus: true,
+    trialEndsAt: true,
+    currentPeriodEnd: true,
+    legacyFullAccess: true,
+};
+// Normalise a loaded restaurant row into (AccountState, planOverride). Uses the
+// real Account when present; otherwise falls back to the legacy columns.
+function accountStateFromRow(row) {
+    if (row.account) {
+        const sub = row.account.subscription;
+        return {
+            account: {
+                trialEndsAt: row.account.trialEndsAt ?? null,
+                restaurantCount: row.account._count?.restaurants ?? 1,
+                venueLimit: row.account.venueLimit,
+                subscription: sub
+                    ? {
+                        plan: sub.plan,
+                        status: sub.status,
+                        currentPeriodEnd: sub.currentPeriodEnd ?? null,
+                        appliesToRestaurantId: sub.appliesToRestaurantId ?? null,
+                    }
+                    : null,
+            },
+            planOverride: row.planOverride ?? null,
+        };
+    }
+    const legacy = accountStateFromLegacyRestaurant({
+        id: row.id,
+        plan: row.plan ?? null,
+        subscriptionStatus: row.subscriptionStatus ?? null,
+        trialEndsAt: row.trialEndsAt ?? null,
+        currentPeriodEnd: row.currentPeriodEnd ?? null,
+        legacyFullAccess: row.legacyFullAccess ?? null,
+    });
+    return { account: legacy.account, planOverride: legacy.restaurant.planOverride };
+}
+// Capabilities for an already-loaded restaurant row (no query). Use when the
+// caller already selected ACCOUNT_ENTITLEMENT_SELECT (e.g. public menu-by-slug).
+function restaurantCapsFromRow(row) {
+    const { account, planOverride } = accountStateFromRow(row);
+    return getRestaurantCaps(account, { id: row.id, planOverride });
+}
+// Account-wide caps (venueLimit / canAddVenue) from an already-loaded row.
+function accountCapsFromRow(row) {
+    const { account } = accountStateFromRow(row);
+    return getAccountCaps(account);
+}
+// Capabilities for one restaurant by id (one indexed query). Missing row →
+// inactive (fail closed).
+async function getRestaurantCapsById(prisma, restaurantId) {
+    const row = (await prisma.restaurant.findUnique({
+        where: { id: restaurantId },
+        select: exports.ACCOUNT_ENTITLEMENT_SELECT,
+    }));
+    if (!row)
+        return { ...INACTIVE_CAPS };
+    return restaurantCapsFromRow(row);
+}
+// Account-wide caps for one restaurant's account by restaurant id.
+async function getAccountCapsByRestaurantId(prisma, restaurantId) {
+    const row = (await prisma.restaurant.findUnique({
+        where: { id: restaurantId },
+        select: exports.ACCOUNT_ENTITLEMENT_SELECT,
+    }));
+    if (!row)
+        return { venueLimit: 4, canAddVenue: false };
+    return accountCapsFromRow(row);
 }
