@@ -219,12 +219,27 @@ export class StripeController {
     const rawBody: Buffer = (req as unknown as { rawBody?: Buffer }).rawBody as Buffer;
     if (!rawBody) throw new BadRequestException("Missing raw body");
 
-    let event: { type: string; data: { object: unknown } };
+    let event: { id?: string; type: string; data: { object: unknown } };
     try {
-      event = stripe.webhooks.constructEvent(rawBody, signature, secret) as { type: string; data: { object: unknown } };
+      event = stripe.webhooks.constructEvent(rawBody, signature, secret) as { id?: string; type: string; data: { object: unknown } };
     } catch (e) {
       console.error("Webhook signature verification failed:", e);
       throw new BadRequestException("Invalid signature");
+    }
+
+    // Idempotency / replay guard (Phase 2). Best-effort: if the dedup machinery
+    // itself fails we fall through to processing, so this can never make the
+    // webhook worse than before. The seen-marker is written AFTER the switch
+    // (below), so a handler that throws for a Stripe retry is NOT recorded and
+    // gets reprocessed — no payment is silently dropped.
+    const eventId = event.id;
+    if (eventId) {
+      try {
+        const seen = await this.prisma.stripeEvent.findUnique({ where: { id: eventId } });
+        if (seen) return { received: true, deduped: true };
+      } catch (e) {
+        console.error("stripe_events dedup check failed (continuing):", e);
+      }
     }
 
     switch (event.type) {
@@ -292,6 +307,15 @@ export class StripeController {
                 paymentProcessing: false,
               },
             });
+            // Mirror cancellation into the account-level Subscription (best-effort).
+            await this.mirrorAccountSubscription(targetRestaurantId, {
+              plan: "FREE",
+              billingCycle: null,
+              status: "CANCELED",
+              currentPeriodEnd: null,
+              stripeSubscriptionId: null,
+              customerId: null,
+            }).catch((e) => console.error("account subscription mirror (delete) failed (non-fatal):", e));
           }
         }
         break;
@@ -324,6 +348,16 @@ export class StripeController {
           }
         }
         break;
+      }
+    }
+
+    // Mark the event handled (best-effort, AFTER successful processing). A unique
+    // violation from a concurrent duplicate delivery is fine to ignore.
+    if (eventId) {
+      try {
+        await this.prisma.stripeEvent.create({ data: { id: eventId, type: event.type } });
+      } catch {
+        /* already recorded / table absent — non-fatal */
       }
     }
 
@@ -473,5 +507,71 @@ export class StripeController {
         ...(billingCurrency ? { billingCurrency } : {}),
       },
     });
+
+    // Dual-write mirror into the account-level Subscription (Phase 2). Best-effort
+    // and new-table-only: the Restaurant write above stays authoritative through
+    // the dual-write window, so a failure here never affects live entitlement.
+    // Only mirror recognized plans (matched) — an unrecognized price already
+    // logged loudly above and must not stamp a plan on the account either.
+    if (matched) {
+      await this.mirrorAccountSubscription(restaurantId, {
+        plan,
+        billingCycle,
+        status: subscriptionStatus,
+        currentPeriodEnd,
+        stripeSubscriptionId: sub.id,
+        billingCurrency,
+        customerId: typeof sub.customer === "string" ? sub.customer : null,
+      }).catch((e) => console.error("account subscription mirror failed (non-fatal):", e));
+    }
+  }
+
+  /** Mirror a reconciled subscription into the account-level Subscription row.
+   *  PRO applies to the whole account (appliesToRestaurantId null); BASIC applies
+   *  to the single paying venue. New-table-only; callers guard with .catch. */
+  private async mirrorAccountSubscription(
+    restaurantId: string,
+    s: {
+      plan: Plan;
+      billingCycle: BillingCycle | null;
+      status: SubscriptionStatus;
+      currentPeriodEnd: Date | null;
+      stripeSubscriptionId: string | null;
+      billingCurrency?: string;
+      customerId: string | null;
+    },
+  ): Promise<void> {
+    const r = await this.prisma.restaurant.findUnique({
+      where: { id: restaurantId },
+      select: { accountId: true },
+    });
+    if (!r?.accountId) return;
+    const appliesToRestaurantId = s.plan === "BASIC" ? restaurantId : null;
+    const data = {
+      plan: s.plan,
+      billingCycle: s.billingCycle,
+      status: s.status,
+      currentPeriodEnd: s.currentPeriodEnd,
+      stripeSubscriptionId: s.stripeSubscriptionId,
+      appliesToRestaurantId,
+      updatedFromStripeAt: new Date(),
+    };
+    await this.prisma.subscription.upsert({
+      where: { accountId: r.accountId },
+      create: { accountId: r.accountId, ...data },
+      update: data,
+    });
+    // Keep the account's Stripe customer + currency in sync when known.
+    if (s.customerId || s.billingCurrency) {
+      await this.prisma.account
+        .update({
+          where: { id: r.accountId },
+          data: {
+            ...(s.customerId ? { stripeCustomerId: s.customerId } : {}),
+            ...(s.billingCurrency ? { billingCurrency: s.billingCurrency } : {}),
+          },
+        })
+        .catch((e) => console.error("account customer/currency sync failed (non-fatal):", e));
+    }
   }
 }

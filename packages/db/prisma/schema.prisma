@@ -334,6 +334,19 @@ model AccountMember {
   @@map("account_members")
 }
 
+// Idempotency + replay guard for Stripe webhooks (Phase 2). One row per
+// processed Stripe event id; a present row means "already handled, skip".
+// Written best-effort AFTER a webhook is processed so a failed handler still
+// retries (see stripe.controller webhook()).
+model StripeEvent {
+  id         String   @id // Stripe event id (evt_...)
+  type       String
+  receivedAt DateTime @default(now())
+
+  @@index([receivedAt])
+  @@map("stripe_events")
+}
+
 // Billing state, one per account. Sole writer is the Stripe reconcile path
 // (Phase 2). Values use the Plan/BillingCycle/SubscriptionStatus enum members
 // as string literals but the columns are TEXT (same drift-avoidance rule as the
