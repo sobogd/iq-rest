@@ -1010,25 +1010,6 @@ export async function setDefaultPaymentMethod(paymentMethodId: string): Promise<
  return res.ok;
 }
 
-export async function cancelSubscription(atPeriodEnd: boolean): Promise<boolean> {
- const res = await apiFetch("/api/billing/cancel", {
-  credentials: "include",
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ atPeriodEnd }),
- });
- return res.ok;
-}
-
-export async function resumeSubscription(): Promise<boolean> {
- const res = await apiFetch("/api/billing/resume", {
-  credentials: "include",
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: "{}",
- });
- return res.ok;
-}
 
 // ── Logout ──
 

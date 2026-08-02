@@ -386,43 +386,8 @@ export class BillingController {
     return { success: true };
   }
 
-  // Cancel — immediately or at period end. The webhook reflects the state.
-  @Post("billing/cancel")
-  @UseGuards(AuthGuard)
-  async cancel(@Req() req: Request, @Body() body: { atPeriodEnd?: boolean }) {
-    if ((req as AuthedRequest).authUser.viaGrant) {
-      throw new ForbiddenException("Billing is managed by the restaurant owner");
-    }
-    const accountId = await this.accountIdFor(req);
-    const sub = await this.prisma.subscription.findUnique({ where: { accountId } });
-    if (!sub?.stripeSubscriptionId) throw new BadRequestException("No active subscription");
-    const stripe = getStripe();
-    // Cancel at period end — the sub stays ACTIVE (paid access) until it renews,
-    // then stops. Reflect the flag in our DB right away so the UI shows
-    // "Cancels on <date>" without waiting for the webhook.
-    await stripe.subscriptions.update(sub.stripeSubscriptionId, { cancel_at_period_end: true });
-    await this.prisma.subscription
-      .update({ where: { accountId }, data: { cancelAtPeriodEnd: true } })
-      .catch(() => undefined);
-    return { success: true, atPeriodEnd: true };
-  }
-
-  // Resume a subscription that was set to cancel at period end.
-  @Post("billing/resume")
-  @UseGuards(AuthGuard)
-  async resume(@Req() req: Request) {
-    if ((req as AuthedRequest).authUser.viaGrant) {
-      throw new ForbiddenException("Billing is managed by the restaurant owner");
-    }
-    const accountId = await this.accountIdFor(req);
-    const sub = await this.prisma.subscription.findUnique({ where: { accountId } });
-    if (!sub?.stripeSubscriptionId) throw new BadRequestException("No subscription");
-    await getStripe().subscriptions.update(sub.stripeSubscriptionId, { cancel_at_period_end: false });
-    await this.prisma.subscription
-      .update({ where: { accountId }, data: { cancelAtPeriodEnd: false } })
-      .catch(() => undefined);
-    return { success: true };
-  }
+  // Cancel / resume happen in the Stripe billing portal; the webhook mirrors
+  // cancel_at_period_end back into our DB (Subscription.cancelAtPeriodEnd).
 
   // ── Admin: edit the pricing catalog ────────────────────────────────────────
   @Patch("admin/pricing")
