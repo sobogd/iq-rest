@@ -291,11 +291,11 @@ export class BillingController {
     // Sync the Stripe customer with the payer's billing profile (entered in step
     // 2) so Checkout prefills the invoice email / name / address — not the
     // account login email.
+    // Sync name/address from the profile (the email stays the account email).
     const bp = await this.prisma.billingProfile.findUnique({ where: { accountId } });
-    if (bp && (bp.billingEmail || bp.legalName || bp.address)) {
+    if (bp && (bp.legalName || bp.address)) {
       await stripe.customers
         .update(customerId, {
-          ...(bp.billingEmail ? { email: bp.billingEmail } : {}),
           ...(bp.legalName ? { name: bp.legalName } : {}),
           ...(bp.address ? { address: { line1: bp.address } } : {}),
         })

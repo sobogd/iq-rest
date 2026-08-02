@@ -1,17 +1,19 @@
 "use client";
 
-// billing-features-constructor — billing UI.
-//   No active sub → accordion: (1) pick features + cycle → Continue collapses to
-//     a summary card and (2) opens the billing-details card → Continue creates
-//     the subscription and redirects to Stripe's hosted payment page (all methods).
+// billing-features-constructor — billing UI, styled to match the dashboard.
+//   No active sub → accordion: pick features + cycle → Continue collapses to a
+//     summary and opens the billing-details card → Skip/Continue (same action)
+//     creates the subscription and redirects to Stripe Checkout. A full-screen
+//     loader covers the prep. The draft is persisted so returning from Stripe
+//     (Back) restores the filled state.
 //   Active sub → current-plan card + Change plan / Manage (Stripe portal).
-// English-first.
 
 import { useEffect, useMemo, useState } from "react";
-import { UtensilsCrossed, CalendarClock, ChefHat, Globe, Check, Loader2, Pencil } from "lucide-react";
+import { UtensilsCrossed, CalendarClock, ChefHat, Globe, Check, Pencil } from "lucide-react";
+import { computeAccountQuote, type PricingCatalog, type VenueSelection } from "@iq-rest/pricing";
 import { useRestaurants } from "./restaurants-context";
+import { inputClass, labelClass, primaryBtn, secondaryBtn } from "./tokens";
 import {
-  computeQuote,
   getPricingCatalog,
   subscribeCustom,
   fetchSubscriptionStatus,
@@ -19,10 +21,8 @@ import {
   getBillingProfile,
   saveBillingProfile,
   getInvoices,
-  type BillingQuote,
   type BillingProfile,
   type InvoiceRow,
-  type PricingCatalog,
   type VenueSelectionInput,
 } from "./api";
 
@@ -32,17 +32,17 @@ type Sel = { menuOnline: boolean; reservations: boolean; ordersKds: boolean; dom
 type Phase = "options" | "details";
 
 const EMPTY_SEL: Sel = { menuOnline: true, reservations: false, ordersKds: false, domain: false };
-const ADDONS: { key: AddonKey; label: string; Icon: typeof CalendarClock }[] = [
-  { key: "reservations", label: "Reservations", Icon: CalendarClock },
-  { key: "ordersKds", label: "Kitchen display", Icon: ChefHat },
-  { key: "domain", label: "Custom domain", Icon: Globe },
+const DRAFT_KEY = "iqr_billing_draft";
+const ADDONS: { key: AddonKey; label: string; hint: string; Icon: typeof CalendarClock }[] = [
+  { key: "reservations", label: "Reservations", hint: "Table bookings", Icon: CalendarClock },
+  { key: "ordersKds", label: "Kitchen display", hint: "Orders on a kitchen screen", Icon: ChefHat },
+  { key: "domain", label: "Custom domain", hint: "Your own web address", Icon: Globe },
 ];
 
 export function BillingConstructor({ currency = "EUR" }: { currency?: string }) {
   const { list } = useRestaurants();
   const [cycle, setCycle] = useState<Cycle>("year");
   const [sels, setSels] = useState<Record<string, Sel>>({});
-  const [quote, setQuote] = useState<BillingQuote | null>(null);
   const [catalog, setCatalog] = useState<PricingCatalog | null>(null);
   const [profile, setProfile] = useState<BillingProfile>({ legalName: "", taxId: "", address: "", billingEmail: "" });
   const [phase, setPhase] = useState<Phase>("options");
@@ -57,10 +57,32 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
       setSub(s ? { plan: s.plan, status: s.subscriptionStatus, currentPeriodEnd: s.currentPeriodEnd, cycle: s.billingCycle } : null),
     );
 
+  // Mount: load catalog + profile + sub, and restore any draft (returning from
+  // Stripe via Back lands the user on their filled selections).
   useEffect(() => {
     getPricingCatalog().then(setCatalog);
-    getBillingProfile().then((p) => p && setProfile(p));
+    getBillingProfile().then((p) => p && setProfile((prev) => ({ ...p, ...prev, legalName: p.legalName, taxId: p.taxId, address: p.address })));
     refreshSub();
+
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("success")) {
+      try { sessionStorage.removeItem(DRAFT_KEY); } catch { /* ignore */ }
+      setNotice("Payment received — activating your subscription…");
+      setTimeout(refreshSub, 1500);
+      return;
+    }
+    try {
+      const raw = sessionStorage.getItem(DRAFT_KEY);
+      if (raw) {
+        const d = JSON.parse(raw) as { sels?: Record<string, Sel>; cycle?: Cycle; phase?: Phase; profile?: BillingProfile; changing?: boolean };
+        if (d.sels) setSels(d.sels);
+        if (d.cycle) setCycle(d.cycle);
+        if (d.phase) setPhase(d.phase);
+        if (d.profile) setProfile(d.profile);
+        if (d.changing) setChanging(true);
+        if (params.get("canceled")) setNotice("Payment canceled — your selection is saved.");
+      }
+    } catch { /* ignore */ }
   }, []);
 
   useEffect(() => {
@@ -77,14 +99,22 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
   );
   const activeSelections = selections.filter((s) => s.menuOnline);
 
-  useEffect(() => {
-    let alive = true;
-    if (activeSelections.length === 0) return setQuote(null);
-    computeQuote(activeSelections, cycle, currency).then((q) => alive && setQuote(q));
-    return () => {
-      alive = false;
-    };
-  }, [selections, cycle, currency]);
+  // Local compute (same engine as the landing quiz) so messages/discounts match.
+  const venuesSel = useMemo<VenueSelection[]>(
+    () => activeSelections.map((s) => ({ menuOnline: s.menuOnline, reservations: s.reservations, ordersKds: s.ordersKds, domain: s.domain })),
+    [activeSelections],
+  );
+  const quote = useMemo(
+    () => (catalog && venuesSel.length ? computeAccountQuote(catalog, currency, venuesSel, cycle) : null),
+    [catalog, currency, venuesSel, cycle],
+  );
+  // Yearly saving vs paying monthly (shown when Monthly is selected) — like the landing.
+  const yearlySaving = useMemo(() => {
+    if (!catalog || !venuesSel.length) return 0;
+    const m = computeAccountQuote(catalog, currency, venuesSel, "month").amountMajor * 12;
+    const y = computeAccountQuote(catalog, currency, venuesSel, "year").amountMajor;
+    return Math.max(0, Math.round((m - y) * 100) / 100);
+  }, [catalog, currency, venuesSel]);
 
   const price = catalog?.currencies[currency] ?? catalog?.currencies.EUR ?? null;
   const k = cycle === "year" ? "yr" : "mo";
@@ -94,12 +124,15 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
   const single = list.length === 1;
   const subActive = sub?.status === "ACTIVE" || sub?.status === "PAST_DUE";
 
-  // Details → create the subscription, then redirect to Stripe to pay. The button
-  // stays in the loading state right up to the navigation.
+  // Skip or Continue → same action: save profile, create the subscription, then
+  // redirect to Stripe. Persist the draft first so Back returns to this state.
   const confirmAndPay = async () => {
     if (busy) return;
     setBusy(true);
     setError(null);
+    try {
+      sessionStorage.setItem(DRAFT_KEY, JSON.stringify({ sels, cycle, phase: "details", profile, changing }));
+    } catch { /* ignore */ }
     await saveBillingProfile(profile);
     const res = await subscribeCustom(activeSelections, cycle);
     if (!res) {
@@ -108,6 +141,7 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
       return;
     }
     if (res.changed) {
+      try { sessionStorage.removeItem(DRAFT_KEY); } catch { /* ignore */ }
       setBusy(false);
       setChanging(false);
       setPhase("options");
@@ -116,8 +150,7 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
       return;
     }
     if (res.redirectUrl) {
-      // Keep busy=true — we're leaving the page.
-      window.location.assign(res.redirectUrl);
+      window.location.assign(res.redirectUrl); // busy stays true — leaving the page
       return;
     }
     setBusy(false);
@@ -129,17 +162,26 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
     if (url) window.location.assign(url);
   };
 
-  // ── Active subscription → current plan + manage (unless changing) ──
+  const overlay = busy ? (
+    <div className="fixed inset-0 z-50 bg-background/70 backdrop-blur-sm flex items-center justify-center px-6">
+      <div className="flex flex-col items-center gap-3 text-center">
+        <div className="w-10 h-10 border-[3px] border-input border-t-foreground rounded-full animate-spin" />
+        <div className="text-xs text-muted-foreground">Preparing your subscription…</div>
+      </div>
+    </div>
+  ) : null;
+
+  // ── Active subscription → current plan + manage ──
   if (subActive && !changing) {
     return (
       <div className="flex flex-col gap-4">
         {notice ? <Notice text={notice} onClose={() => setNotice(null)} /> : null}
-        <div className="flex items-start justify-between gap-3 rounded-2xl border border-border bg-card p-5">
+        <div className="flex items-start justify-between gap-3 rounded-xl border border-border bg-card p-4">
           <div>
             <div className="text-xs font-medium uppercase tracking-wide text-emerald-600">
               {sub?.status === "PAST_DUE" ? "Past due" : "Active"}
             </div>
-            <div className="text-base font-medium text-foreground mt-0.5">
+            <div className="text-sm font-medium text-foreground mt-0.5">
               {sub?.plan}
               {sub?.cycle ? ` · ${sub.cycle.toLowerCase()}` : ""}
             </div>
@@ -148,19 +190,16 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
             ) : null}
           </div>
         </div>
-        <div className="flex items-center gap-3">
-          <button
-            type="button"
-            onClick={() => { setChanging(true); setPhase("options"); }}
-            className="h-11 px-5 text-sm font-semibold rounded-xl text-primary-foreground bg-primary"
-          >
+        <div className="flex items-center gap-2">
+          <button type="button" onClick={() => { setChanging(true); setPhase("options"); }} className={primaryBtn}>
             Change plan
           </button>
-          <button type="button" onClick={manage} className="h-11 px-5 text-sm rounded-xl border border-input">
+          <button type="button" onClick={manage} className={secondaryBtn}>
             Manage subscription
           </button>
         </div>
         <InvoicesList />
+        {overlay}
       </div>
     );
   }
@@ -168,20 +207,24 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
   // ── No sub (or changing) → accordion ──
   return (
     <div className="flex flex-col gap-4">
+      <div>
+        <h3 className="text-lg font-semibold text-foreground">Build your plan</h3>
+        <p className="text-sm text-muted-foreground mt-0.5">Pay only for what you use. Start with the menu and add what you need.</p>
+      </div>
       {notice ? <Notice text={notice} onClose={() => setNotice(null)} /> : null}
       {error ? <div className="text-sm text-red-600">{error}</div> : null}
 
       {/* Card 1 — options */}
       {phase === "options" ? (
-        <div className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-5">
+        <div className="flex flex-col gap-4 rounded-xl border border-border bg-card p-4 md:p-5">
           <div className="flex items-center justify-end">
-            <div className="inline-flex rounded-full border border-border bg-accent p-1">
+            <div className="inline-flex rounded-full border border-border bg-accent p-0.5">
               {(["month", "year"] as const).map((c) => (
                 <button
                   key={c}
                   type="button"
                   onClick={() => setCycle(c)}
-                  className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${
+                  className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
                     cycle === c ? "bg-primary text-primary-foreground" : "text-muted-foreground"
                   }`}
                 >
@@ -194,20 +237,23 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
           {list.map((r) => {
             const s = sels[r.id] ?? EMPTY_SEL;
             return (
-              <div key={r.id} className="flex flex-col gap-2.5">
-                {!single && <div className="text-sm font-medium text-foreground truncate">{r.title || r.slug || r.id}</div>}
+              <div key={r.id} className="flex flex-col gap-2">
+                {!single && <div className="text-xs font-medium text-muted-foreground truncate">{r.title || r.slug || r.id}</div>}
                 <button
                   type="button"
                   onClick={() => toggle(r.id, "menuOnline")}
-                  className={`flex items-center gap-3 text-left rounded-xl border-2 p-4 transition-colors ${
+                  className={`flex items-center gap-3 text-left rounded-lg border p-3 transition-colors ${
                     s.menuOnline ? "border-primary bg-primary/5" : "border-border bg-card opacity-60 hover:opacity-100"
                   }`}
                 >
-                  <UtensilsCrossed className={`h-6 w-6 shrink-0 ${s.menuOnline ? "text-primary" : "text-muted-foreground"}`} />
-                  <div className="min-w-0 flex-1 text-sm font-semibold text-foreground">Digital menu</div>
-                  {price && <div className="shrink-0 text-sm font-medium tabular-nums text-foreground">{money(price.menu[k])}/mo</div>}
+                  <UtensilsCrossed className={`h-5 w-5 shrink-0 ${s.menuOnline ? "text-primary" : "text-muted-foreground"}`} />
+                  <div className="min-w-0 flex-1">
+                    <div className="text-sm font-medium text-foreground">Digital menu</div>
+                    <div className="text-xs text-muted-foreground leading-snug">QR menu diners scan</div>
+                  </div>
+                  {price && <div className="shrink-0 text-sm tabular-nums text-foreground">{money(price.menu[k])}/mo</div>}
                 </button>
-                {ADDONS.map(({ key, label, Icon }) => {
+                {ADDONS.map(({ key, label, hint, Icon }) => {
                   const on = s[key];
                   return (
                     <button
@@ -215,23 +261,26 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
                       type="button"
                       disabled={!s.menuOnline}
                       onClick={() => toggle(r.id, key)}
-                      className={`flex items-center gap-3 text-left rounded-xl border-2 p-4 transition-colors disabled:opacity-40 ${
-                        on ? "border-primary bg-primary/5 shadow-sm" : "border-border bg-card hover:border-input"
+                      className={`flex items-center gap-3 text-left rounded-lg border p-3 transition-colors disabled:opacity-40 ${
+                        on ? "border-primary bg-primary/5" : "border-border bg-card hover:border-input"
                       }`}
                     >
-                      <Icon className={`h-6 w-6 shrink-0 ${on ? "text-primary" : "text-muted-foreground"}`} />
-                      <div className="min-w-0 flex-1 text-sm font-semibold text-foreground">{label}</div>
+                      <Icon className={`h-5 w-5 shrink-0 ${on ? "text-primary" : "text-muted-foreground"}`} />
+                      <div className="min-w-0 flex-1">
+                        <div className="text-sm font-medium text-foreground">{label}</div>
+                        <div className="text-xs text-muted-foreground leading-snug">{hint}</div>
+                      </div>
                       {price && (
-                        <div className={`shrink-0 text-sm font-medium tabular-nums ${on ? "text-primary" : "text-muted-foreground"}`}>
+                        <div className={`shrink-0 text-sm tabular-nums ${on ? "text-primary" : "text-muted-foreground"}`}>
                           +{money(price[key][k])}/mo
                         </div>
                       )}
                       <span
-                        className={`shrink-0 flex h-5 w-5 items-center justify-center rounded-full border ${
+                        className={`shrink-0 flex h-4 w-4 items-center justify-center rounded-full border ${
                           on ? "border-primary bg-primary text-primary-foreground" : "border-input"
                         }`}
                       >
-                        {on ? <Check className="h-3.5 w-3.5" /> : null}
+                        {on ? <Check className="h-3 w-3" /> : null}
                       </span>
                     </button>
                   );
@@ -240,38 +289,38 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
             );
           })}
 
-          <div className="flex items-center justify-between gap-3 border-t border-border pt-4">
+          <div className="flex items-center justify-between gap-3 border-t border-border pt-3">
             <div>
               {quote ? (
                 <>
-                  <span className="text-2xl font-semibold tabular-nums">{money(quote.amountMajor)}</span>
-                  <span className="text-sm text-muted-foreground"> /{cycle === "year" ? "year" : "month"}</span>
-                  {quote.discount > 0 ? (
-                    <div className="text-xs text-emerald-500 font-medium">
-                      {Math.round(quote.discount * 100)}% volume discount · {quote.billingVenues} venues
-                    </div>
-                  ) : null}
+                  <span className="text-xl font-semibold tabular-nums text-foreground">{money(quote.amountMajor)}</span>
+                  <span className="text-xs text-muted-foreground"> /{cycle === "year" ? "year" : "month"}</span>
+                  <div className="text-xs mt-0.5 h-4 leading-4">
+                    {cycle === "month" && yearlySaving > 0 ? (
+                      <span className="text-emerald-500 font-medium">Save {money(yearlySaving)} a year with yearly billing</span>
+                    ) : quote.discount > 0 ? (
+                      <span className="text-emerald-500 font-medium">
+                        {Math.round(quote.discount * 100)}% volume discount · {quote.billingVenues} restaurants
+                      </span>
+                    ) : (
+                      <span className="text-muted-foreground">Save up to 50% with 5+ restaurants</span>
+                    )}
+                  </div>
                 </>
               ) : (
-                <span className="text-sm text-muted-foreground">Select at least one menu</span>
+                <span className="text-xs text-muted-foreground">Select at least one menu</span>
               )}
             </div>
-            <button
-              type="button"
-              onClick={() => setPhase("details")}
-              disabled={!quote}
-              className="h-11 px-6 text-sm font-semibold rounded-xl text-primary-foreground bg-primary disabled:opacity-50"
-            >
+            <button type="button" onClick={() => setPhase("details")} disabled={!quote} className={primaryBtn + " disabled:opacity-50"}>
               Continue
             </button>
           </div>
         </div>
       ) : (
-        // Collapsed summary of the chosen plan
         <button
           type="button"
           onClick={() => { if (!busy) setPhase("options"); }}
-          className="flex items-center justify-between gap-3 rounded-2xl border border-border bg-card p-4 text-left"
+          className="flex items-center justify-between gap-3 rounded-xl border border-border bg-card p-4 text-left"
         >
           <div>
             <div className="text-xs text-muted-foreground">Your plan</div>
@@ -279,59 +328,55 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
               {quote ? `${money(quote.amountMajor)} / ${cycle === "year" ? "year" : "month"}` : "—"}
             </div>
           </div>
-          <span className="inline-flex items-center gap-1 text-sm text-primary">
-            <Pencil className="h-3.5 w-3.5" /> Edit
+          <span className="inline-flex items-center gap-1 text-xs text-primary">
+            <Pencil className="h-3 w-3" /> Edit
           </span>
         </button>
       )}
 
-      {/* Card 2 — billing details (only after options confirmed) */}
+      {/* Card 2 — billing details (optional) */}
       {phase === "details" && (
-        <div className="flex flex-col gap-3 rounded-2xl border border-border bg-card p-5">
-          <div className="text-sm font-semibold text-foreground">Billing details</div>
-          <p className="text-xs text-muted-foreground -mt-2">For your invoices. Optional — fill what you have.</p>
+        <div className="flex flex-col gap-3 rounded-xl border border-border bg-card p-4 md:p-5">
+          <div>
+            <div className="text-sm font-medium text-foreground">Billing details</div>
+            <p className="text-xs text-muted-foreground mt-0.5">Optional — for your invoices. Skip if you don't have them.</p>
+          </div>
           {(
             [
               ["legalName", "Name / company"],
               ["taxId", "Tax number"],
               ["address", "Address"],
-              ["billingEmail", "Invoice email"],
             ] as [keyof BillingProfile, string][]
           ).map(([key, label]) => (
-            <label key={key} className="flex flex-col gap-1">
-              <span className="text-xs text-muted-foreground">{label}</span>
+            <div key={key}>
+              <label className={labelClass}>{label}</label>
               <input
-                className="h-10 rounded-lg border border-input bg-card px-3 text-sm"
+                className={inputClass}
                 value={profile[key]}
                 onChange={(e) => setProfile((p) => ({ ...p, [key]: e.target.value }))}
               />
-            </label>
+            </div>
           ))}
-          <button
-            type="button"
-            onClick={confirmAndPay}
-            disabled={busy}
-            className="mt-1 h-11 px-6 text-sm font-semibold rounded-xl text-primary-foreground bg-primary disabled:opacity-70 inline-flex items-center justify-center gap-2"
-          >
-            {busy ? (
-              <>
-                <Loader2 className="h-4 w-4 animate-spin" /> Preparing payment…
-              </>
-            ) : (
-              "Continue to payment"
-            )}
-          </button>
+          <div className="flex items-center justify-end gap-2 mt-1">
+            <button type="button" onClick={confirmAndPay} disabled={busy} className={secondaryBtn}>
+              Skip
+            </button>
+            <button type="button" onClick={confirmAndPay} disabled={busy} className={primaryBtn}>
+              Continue
+            </button>
+          </div>
         </div>
       )}
 
       <InvoicesList />
+      {overlay}
     </div>
   );
 }
 
 function Notice({ text, onClose }: { text: string; onClose: () => void }) {
   return (
-    <div className="flex items-center justify-between gap-3 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-2.5 text-sm text-emerald-800">
+    <div className="flex items-center justify-between gap-3 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-2.5 text-sm text-emerald-800">
       <span>{text}</span>
       <button type="button" onClick={onClose} className="text-emerald-700">✕</button>
     </div>
@@ -345,7 +390,7 @@ function InvoicesList() {
   }, []);
   if (rows.length === 0) return null;
   return (
-    <details className="rounded-2xl border border-border bg-card p-4">
+    <details className="rounded-xl border border-border bg-card p-4">
       <summary className="text-sm font-medium cursor-pointer">My invoices ({rows.length})</summary>
       <ul className="flex flex-col gap-1.5 mt-3">
         {rows.map((r) => (
