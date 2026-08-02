@@ -583,8 +583,17 @@
         "trialActive": "Test aktiv",
         "trialEnds": "Test endet am {date}. Wählen Sie einen Tarif, um Ihre Karte verfügbar zu halten.",
         "active": "Aktiv",
+        "updatePayment": "Zahlung aktualisieren",
+        "updatePaymentTip": "Deine letzte Zahlung ist fehlgeschlagen. Aktualisiere deine Zahlungsmethode, um dein Abonnement aktiv zu halten — du musst keinen neuen Tarif kaufen.",
+        "checkoutError": "Die Zahlung für diesen Tarif und diese Währung konnte nicht gestartet werden. Bitte versuche es erneut oder kontaktiere den Support.",
+        "accountProTitle": "PRO in deinem Konto enthalten",
+        "accountProTip": "Dieses Restaurant ist durch das PRO-Abonnement deines Kontos abgedeckt. Keine separate Zahlung nötig — alle PRO-Funktionen sind hier aktiv.",
+        "accountProTipNamed": "Dieses Restaurant ist durch das PRO-Abonnement deines Kontos abgedeckt, abgerechnet über {restaurant}. Keine separate Zahlung nötig — verwalte oder kündige es in der Abrechnung dieses Restaurants.",
         "renewsOn": "Verlängert sich am {date}",
         "manage": "Verwalten",
+        "basicVenueTitle": "Aktives Lokal",
+        "basicVenueBody": "Dein Basic-Tarif deckt ein Restaurant ab. Wähle, welches aktiv ist — die anderen gehen offline, bis du auf Pro upgradest.",
+        "basicVenueActive": "Aktiv",
         "yearly": "Jährlich",
         "monthly": "Monatlich",
         "billedYearly": "jährlich abgerechnet",
@@ -602,7 +611,53 @@
         "otherCurrencyTip": "Zahlung nur in EUR. Für Zahlung in anderer Währung kontaktieren Sie den Support.",
         "pastDueTitle": "Zahlung fehlgeschlagen",
         "pastDueTip": "Wir konnten deine letzte Zahlung nicht verarbeiten. Du hast {days} Tage Zeit zu zahlen, bevor dein Menü offline geht.",
-        "pastDueBlockedTip": "Dein Menü ist offline, weil deine letzte Zahlung fehlgeschlagen ist. Zahle jetzt, um es wiederherzustellen."
+        "pastDueBlockedTip": "Dein Menü ist offline, weil deine letzte Zahlung fehlgeschlagen ist. Zahle jetzt, um es wiederherzustellen.",
+        "buildYourPlan": "Stell deinen Tarif zusammen",
+        "featMenu": "Digitale Speisekarte",
+        "featMenuShort": "Menü",
+        "featMenuHint": "QR-Menü, das Gäste scannen",
+        "featReservations": "Reservierungen",
+        "featReservationsHint": "Tischreservierungen",
+        "featKds": "Küchenmonitor",
+        "featKdsHint": "Bestellungen auf einem Küchenbildschirm",
+        "featDomain": "Eigene Domain",
+        "featDomainHint": "Deine eigene Webadresse",
+        "restaurantsLabel": "Restaurants",
+        "youHave": "du hast {count}",
+        "fewer": "Weniger",
+        "more": "Mehr",
+        "billingPeriod": "Abrechnungszeitraum",
+        "perYearWord": "Jahr",
+        "perMonthWord": "Monat",
+        "saveYearly": "Spare {amount} pro Jahr mit jährlicher Abrechnung",
+        "volumeDiscountLine": "{percent}% Mengenrabatt · {count} Restaurants",
+        "saveUpToHint": "Spare bis zu 50% mit 5+ Restaurants",
+        "continue": "Weiter",
+        "yourPlanSummary": "Dein Tarif",
+        "restaurantOne": "1 Restaurant",
+        "restaurantsMany": "{count} Restaurants",
+        "edit": "Bearbeiten",
+        "billingDetails": "Rechnungsdaten",
+        "billingDetailsHint": "Optional — für deine Rechnungen. Überspringe es, wenn du sie nicht hast.",
+        "fieldLegalName": "Name / Firma",
+        "fieldTaxId": "Steuernummer",
+        "fieldAddress": "Adresse",
+        "skip": "Überspringen",
+        "preparing": "Dein Abonnement wird vorbereitet…",
+        "statusPastDue": "Überfällig",
+        "statusCanceling": "Wird gekündigt",
+        "renews": "Verlängert sich am {date}",
+        "cancelsOn": "Endet am {date}",
+        "changePlan": "Tarif ändern",
+        "manageSubscription": "Abonnement verwalten",
+        "myInvoices": "Meine Rechnungen ({count})",
+        "customPlanTitle": "Brauchst du einen individuellen Tarif?",
+        "customPlanBody": "Viele Restaurants oder besondere Anforderungen? Schreib uns und wir stellen dir einen passenden Tarif zusammen.",
+        "customPlanWa": "Hallo! Ich hätte gerne einen individuellen Tarif für meine Restaurants.",
+        "paymentReceived": "Zahlung erhalten — dein Abonnement wird aktiviert…",
+        "subscriptionUpdated": "Abonnement aktualisiert.",
+        "errStartSubscription": "Das Abonnement konnte nicht gestartet werden. Versuche es erneut.",
+        "errOpenPayment": "Die Zahlungsseite konnte nicht geöffnet werden. Versuche es erneut."
       },
       "support": {
         "title": "Support",
@@ -631,8 +686,8 @@
       "switching": "Restaurant wird gewechselt…",
       "add": "Restaurant hinzufügen",
       "addDesc": "Erstelle ein weiteres Restaurant — dieses Menü duplizieren oder neu beginnen.",
-      "paidOnly": "Mehrere Restaurants sind im bezahlten Tarif verfügbar. Im Abrechnungsbereich upgraden, um weitere hinzuzufügen.",
-      "atLimit": "Sie haben das Maximum von {limit} Restaurants erreicht, die in Pro enthalten sind. Brauchen Sie mehr? Schreiben Sie dem Support wegen eines Enterprise-Tarifs.",
+      "paidOnly": "Um Restaurants hinzuzufügen, ist ein aktives Abonnement nötig. Stell deinen Tarif in der Abrechnung zusammen, um weitere hinzuzufügen.",
+      "atLimit": "Du hast die {limit} Restaurants erreicht, die in deinem Abonnement enthalten sind. Füge weitere Restaurants in der Abrechnung hinzu oder schreibe dem Support wegen eines individuellen Tarifs.",
       "newTitle": "Restaurant hinzufügen",
       "newSubtitle": "Erstelle ein weiteres Restaurant. Wähle, ob du mit einer Kopie des aktuellen Menüs oder neu beginnst.",
       "startFrom": "Starten mit",
@@ -869,8 +924,8 @@
       "soundDismiss": "Jetzt nicht",
       "soundPromptTitle": "Ton aktivieren?",
       "soundPromptMessage": "Browser blockieren Audio, bis du es per Tippen erlaubst. Aktiviere den Hinweiston, damit die Küche neue Bestellungen hört.",
-      "proLockedTitle": "PRO-Tarif erforderlich",
-      "proLockedBody": "Dieser Bildschirm benötigt einen aktiven PRO-Tarif. Bitte den Inhaber um ein Upgrade, um fortzufahren."
+      "proLockedTitle": "Abonnement erforderlich",
+      "proLockedBody": "Dieser Bildschirm benötigt ein aktives Abonnement mit Küchenmonitor. Bitte den Inhaber, ihn in der Abrechnung hinzuzufügen, um fortzufahren."
     },
     "devices": {
       "title": "Geräte",
@@ -920,22 +975,26 @@
       "createFailed": "Gerät konnte nicht erstellt werden"
     },
     "proUpsell": {
-      "cta": "Auf PRO upgraden",
+      "cta": "Abrechnung öffnen",
+      "menuOffline": {
+        "title": "Deine öffentliche Speisekarte ist offline",
+        "body": "Dieses Restaurant hat kein aktives Abonnement, daher können Gäste die Speisekarte nicht sehen. Stell deinen Tarif in der Abrechnung zusammen, um sie wieder online zu bringen."
+      },
       "orders": {
-        "title": "Bestellungen sind eine PRO-Funktion",
-        "body": "Nimm Tischbestellungen mit dem PRO-Tarif an und verwalte sie. Upgrade, um Bestellungen anzunehmen."
+        "title": "Bestellungen sind noch nicht in deinem Tarif",
+        "body": "Füge Küchenmonitor zu deinem Tarif hinzu, um Tischbestellungen anzunehmen und zu verwalten."
       },
       "kitchen": {
-        "title": "Der Küchenmonitor ist eine PRO-Funktion",
-        "body": "Sende Bestellungen mit dem PRO-Tarif an den Küchenbildschirm. Upgrade, um ihn zu aktivieren."
+        "title": "Der Küchenmonitor ist noch nicht in deinem Tarif",
+        "body": "Füge Küchenmonitor zu deinem Tarif hinzu, um Bestellungen an den Küchenbildschirm zu senden."
       },
       "reservations": {
-        "title": "Reservierungen sind eine PRO-Funktion",
-        "body": "Nimm Tischreservierungen mit dem PRO-Tarif an. Upgrade, um Reservierungen zu aktivieren."
+        "title": "Reservierungen sind noch nicht in deinem Tarif",
+        "body": "Füge Reservierungen zu deinem Tarif hinzu, um Tischreservierungen anzunehmen."
       },
       "devices": {
-        "title": "Geräte sind eine PRO-Funktion",
-        "body": "Verbinde Küchen-, Kellner- und Reservierungstablets mit dem PRO-Tarif. Upgrade, um Geräte zu verbinden."
+        "title": "Geräte sind noch nicht in deinem Tarif",
+        "body": "Füge Küchenmonitor oder Reservierungen zu deinem Tarif hinzu, um Küchen-, Kellner- und Reservierungstablets zu verbinden."
       }
     }
   },

@@ -583,8 +583,17 @@
         "trialActive": "Prova attiva",
         "trialEnds": "La prova termina il {date}. Scegli un piano per mantenere il menu disponibile.",
         "active": "Attivo",
+        "updatePayment": "Aggiorna pagamento",
+        "updatePaymentTip": "L'ultimo pagamento non è riuscito. Aggiorna il metodo di pagamento per mantenere attivo il tuo abbonamento — non serve acquistare un nuovo piano.",
+        "checkoutError": "Impossibile avviare il pagamento per questo piano e valuta. Riprova o contatta l'assistenza.",
+        "accountProTitle": "PRO incluso con il tuo account",
+        "accountProTip": "Questo ristorante è coperto dall'abbonamento PRO del tuo account. Non serve un pagamento separato — tutte le funzioni PRO sono attive qui.",
+        "accountProTipNamed": "Questo ristorante è coperto dall'abbonamento PRO del tuo account, fatturato su {restaurant}. Non serve un pagamento separato — gestiscilo o annullalo dalla fatturazione di quel ristorante.",
         "renewsOn": "Si rinnova il {date}",
         "manage": "Gestisci",
+        "basicVenueTitle": "Locale attivo",
+        "basicVenueBody": "Il tuo piano Basic copre un ristorante. Scegli quale è attivo — gli altri vanno offline finché non passi a Pro.",
+        "basicVenueActive": "Attivo",
         "yearly": "Annuale",
         "monthly": "Mensile",
         "billedYearly": "fatturato annualmente",
@@ -602,7 +611,53 @@
         "otherCurrencyTip": "Il pagamento è solo in EUR. Per pagare in un'altra valuta, contatta il supporto.",
         "pastDueTitle": "Pagamento non riuscito",
         "pastDueTip": "Non siamo riusciti a elaborare il tuo ultimo pagamento. Hai {days} giorni per pagare prima che il menu venga disattivato.",
-        "pastDueBlockedTip": "Il tuo menu è disattivato perché l'ultimo pagamento non è riuscito. Paga ora per ripristinarlo."
+        "pastDueBlockedTip": "Il tuo menu è disattivato perché l'ultimo pagamento non è riuscito. Paga ora per ripristinarlo.",
+        "buildYourPlan": "Crea il tuo piano",
+        "featMenu": "Menu digitale",
+        "featMenuShort": "Menu",
+        "featMenuHint": "Menu QR che i clienti scansionano",
+        "featReservations": "Prenotazioni",
+        "featReservationsHint": "Prenotazioni dei tavoli",
+        "featKds": "Monitor cucina",
+        "featKdsHint": "Ordini su uno schermo in cucina",
+        "featDomain": "Dominio personalizzato",
+        "featDomainHint": "Il tuo indirizzo web",
+        "restaurantsLabel": "Ristoranti",
+        "youHave": "ne hai {count}",
+        "fewer": "Meno",
+        "more": "Più",
+        "billingPeriod": "Periodo di fatturazione",
+        "perYearWord": "anno",
+        "perMonthWord": "mese",
+        "saveYearly": "Risparmia {amount} all'anno con la fatturazione annuale",
+        "volumeDiscountLine": "{percent}% di sconto sul volume · {count} ristoranti",
+        "saveUpToHint": "Risparmia fino al 50% con 5+ ristoranti",
+        "continue": "Continua",
+        "yourPlanSummary": "Il tuo piano",
+        "restaurantOne": "1 ristorante",
+        "restaurantsMany": "{count} ristoranti",
+        "edit": "Modifica",
+        "billingDetails": "Dati di fatturazione",
+        "billingDetailsHint": "Facoltativo — per le tue fatture. Salta se non li hai.",
+        "fieldLegalName": "Nome / azienda",
+        "fieldTaxId": "Partita IVA",
+        "fieldAddress": "Indirizzo",
+        "skip": "Salta",
+        "preparing": "Preparazione dell'abbonamento…",
+        "statusPastDue": "Scaduto",
+        "statusCanceling": "In annullamento",
+        "renews": "Si rinnova il {date}",
+        "cancelsOn": "Si annulla il {date}",
+        "changePlan": "Cambia piano",
+        "manageSubscription": "Gestisci abbonamento",
+        "myInvoices": "Le mie fatture ({count})",
+        "customPlanTitle": "Ti serve un piano su misura?",
+        "customPlanBody": "Molti ristoranti o esigenze particolari? Scrivici e prepareremo un piano su misura per te.",
+        "customPlanWa": "Ciao! Vorrei un piano su misura per i miei ristoranti.",
+        "paymentReceived": "Pagamento ricevuto — attivazione dell'abbonamento…",
+        "subscriptionUpdated": "Abbonamento aggiornato.",
+        "errStartSubscription": "Impossibile avviare l'abbonamento. Riprova.",
+        "errOpenPayment": "Impossibile aprire la pagina di pagamento. Riprova."
       },
       "support": {
         "title": "Supporto",
@@ -631,8 +686,8 @@
       "switching": "Cambio ristorante in corso…",
       "add": "Aggiungi ristorante",
       "addDesc": "Crea un altro ristorante: duplica questo menu o parti da zero.",
-      "paidOnly": "Più ristoranti sono disponibili nei piani a pagamento. Aggiorna da Fatturazione per aggiungerne.",
-      "atLimit": "Hai raggiunto il massimo di {limit} ristoranti inclusi in Pro. Ti serve di più? Scrivi all'assistenza per un piano Enterprise.",
+      "paidOnly": "Aggiungere ristoranti richiede un abbonamento attivo. Crea il tuo piano in Fatturazione per aggiungerne altri.",
+      "atLimit": "Hai raggiunto i {limit} ristoranti inclusi nel tuo abbonamento. Aggiungi altri ristoranti in Fatturazione, o scrivi all'assistenza per un piano su misura.",
       "newTitle": "Aggiungi ristorante",
       "newSubtitle": "Crea un altro ristorante. Scegli se partire da una copia del menu attuale o da zero.",
       "startFrom": "Parti da",
@@ -869,8 +924,8 @@
       "soundDismiss": "Non ora",
       "soundPromptTitle": "Attivare l'audio?",
       "soundPromptMessage": "I browser bloccano l'audio finché non tocchi per consentirlo. Attiva il suono dei nuovi ordini in modo che la cucina li senta.",
-      "proLockedTitle": "È richiesto il piano PRO",
-      "proLockedBody": "Questa schermata richiede un piano PRO attivo. Chiedi al titolare di passare a PRO per continuare."
+      "proLockedTitle": "Abbonamento richiesto",
+      "proLockedBody": "Questa schermata richiede un abbonamento attivo con Monitor cucina. Chiedi al titolare di aggiungerlo in Fatturazione per continuare."
     },
     "devices": {
       "title": "Dispositivi",
@@ -920,22 +975,26 @@
       "createFailed": "Impossibile creare il dispositivo"
     },
     "proUpsell": {
-      "cta": "Passa a PRO",
+      "cta": "Apri Fatturazione",
+      "menuOffline": {
+        "title": "Il tuo menu pubblico è offline",
+        "body": "Questo ristorante non ha un abbonamento attivo, quindi i clienti non possono vedere il menu. Crea il tuo piano in Fatturazione per rimetterlo online."
+      },
       "orders": {
-        "title": "Gli ordini sono una funzione PRO",
-        "body": "Ricevi e gestisci gli ordini al tavolo con il piano PRO. Passa a PRO per iniziare ad accettare ordini."
+        "title": "Gli ordini non sono ancora nel tuo piano",
+        "body": "Aggiungi Monitor cucina al tuo piano per ricevere e gestire gli ordini al tavolo."
       },
       "kitchen": {
-        "title": "Il monitor cucina è una funzione PRO",
-        "body": "Invia gli ordini allo schermo della cucina con il piano PRO. Passa a PRO per attivarlo."
+        "title": "Il monitor cucina non è ancora nel tuo piano",
+        "body": "Aggiungi Monitor cucina al tuo piano per inviare gli ordini allo schermo della cucina."
       },
       "reservations": {
-        "title": "Le prenotazioni sono una funzione PRO",
-        "body": "Accetta prenotazioni dei tavoli con il piano PRO. Passa a PRO per attivare le prenotazioni."
+        "title": "Le prenotazioni non sono ancora nel tuo piano",
+        "body": "Aggiungi Prenotazioni al tuo piano per accettare prenotazioni dei tavoli."
       },
       "devices": {
-        "title": "I dispositivi sono una funzione PRO",
-        "body": "Abbina tablet di cucina, cameriere e prenotazioni con il piano PRO. Passa a PRO per collegare i dispositivi."
+        "title": "I dispositivi non sono ancora nel tuo piano",
+        "body": "Aggiungi Monitor cucina o Prenotazioni al tuo piano per abbinare tablet di cucina, cameriere e prenotazioni."
       }
     }
   },

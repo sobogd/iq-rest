@@ -583,8 +583,17 @@
         "trialActive": "Essai actif",
         "trialEnds": "L'essai se termine le {date}. Choisissez un forfait pour garder votre menu disponible.",
         "active": "Actif",
+        "updatePayment": "Mettre à jour le paiement",
+        "updatePaymentTip": "Votre dernier paiement a échoué. Mettez à jour votre moyen de paiement pour maintenir votre abonnement actif — pas besoin d'acheter un nouveau forfait.",
+        "checkoutError": "Impossible de démarrer le paiement pour ce forfait et cette devise. Réessayez ou contactez le support.",
+        "accountProTitle": "PRO inclus avec votre compte",
+        "accountProTip": "Ce restaurant est couvert par l'abonnement PRO de votre compte. Aucun paiement séparé n'est nécessaire — toutes les fonctionnalités PRO sont actives ici.",
+        "accountProTipNamed": "Ce restaurant est couvert par l'abonnement PRO de votre compte, facturé sur {restaurant}. Aucun paiement séparé n'est nécessaire — gérez-le ou annulez-le depuis la facturation de ce restaurant.",
         "renewsOn": "Renouvellement le {date}",
         "manage": "Gérer",
+        "basicVenueTitle": "Établissement actif",
+        "basicVenueBody": "Votre forfait Basic couvre un restaurant. Choisissez lequel est actif — les autres passent hors ligne jusqu'à ce que vous passiez à Pro.",
+        "basicVenueActive": "Actif",
         "yearly": "Annuel",
         "monthly": "Mensuel",
         "billedYearly": "facturé annuellement",
@@ -602,7 +611,53 @@
         "otherCurrencyTip": "Le paiement est uniquement en EUR. Pour payer dans une autre devise, contactez le support.",
         "pastDueTitle": "Échec du paiement",
         "pastDueTip": "Nous n'avons pas pu traiter votre dernier paiement. Vous avez {days} jours pour payer avant la désactivation de votre menu.",
-        "pastDueBlockedTip": "Votre menu est désactivé car votre dernier paiement a échoué. Payez maintenant pour le rétablir."
+        "pastDueBlockedTip": "Votre menu est désactivé car votre dernier paiement a échoué. Payez maintenant pour le rétablir.",
+        "buildYourPlan": "Composez votre forfait",
+        "featMenu": "Menu digital",
+        "featMenuShort": "Menu",
+        "featMenuHint": "Menu QR scanné par les clients",
+        "featReservations": "Réservations",
+        "featReservationsHint": "Réservations de tables",
+        "featKds": "Écran cuisine",
+        "featKdsHint": "Commandes sur un écran en cuisine",
+        "featDomain": "Domaine personnalisé",
+        "featDomainHint": "Votre propre adresse web",
+        "restaurantsLabel": "Restaurants",
+        "youHave": "vous en avez {count}",
+        "fewer": "Moins",
+        "more": "Plus",
+        "billingPeriod": "Période de facturation",
+        "perYearWord": "an",
+        "perMonthWord": "mois",
+        "saveYearly": "Économisez {amount} par an avec la facturation annuelle",
+        "volumeDiscountLine": "{percent}% de remise sur volume · {count} restaurants",
+        "saveUpToHint": "Économisez jusqu'à 50% avec 5+ restaurants",
+        "continue": "Continuer",
+        "yourPlanSummary": "Votre forfait",
+        "restaurantOne": "1 restaurant",
+        "restaurantsMany": "{count} restaurants",
+        "edit": "Modifier",
+        "billingDetails": "Informations de facturation",
+        "billingDetailsHint": "Facultatif — pour vos factures. Passez si vous ne les avez pas.",
+        "fieldLegalName": "Nom / société",
+        "fieldTaxId": "Numéro fiscal",
+        "fieldAddress": "Adresse",
+        "skip": "Passer",
+        "preparing": "Préparation de votre abonnement…",
+        "statusPastDue": "En retard",
+        "statusCanceling": "Annulation",
+        "renews": "Se renouvelle le {date}",
+        "cancelsOn": "S'annule le {date}",
+        "changePlan": "Changer de forfait",
+        "manageSubscription": "Gérer l'abonnement",
+        "myInvoices": "Mes factures ({count})",
+        "customPlanTitle": "Besoin d'un forfait sur mesure ?",
+        "customPlanBody": "Beaucoup de restaurants ou des besoins particuliers ? Écrivez-nous et nous créerons un forfait sur mesure pour vous.",
+        "customPlanWa": "Bonjour ! J'aimerais un forfait sur mesure pour mes restaurants.",
+        "paymentReceived": "Paiement reçu — activation de votre abonnement…",
+        "subscriptionUpdated": "Abonnement mis à jour.",
+        "errStartSubscription": "Impossible de démarrer l'abonnement. Réessayez.",
+        "errOpenPayment": "Impossible d'ouvrir la page de paiement. Réessayez."
       },
       "support": {
         "title": "Support",
@@ -631,8 +686,8 @@
       "switching": "Changement de restaurant…",
       "add": "Ajouter un restaurant",
       "addDesc": "Créez un autre restaurant — dupliquez ce menu ou partez de zéro.",
-      "paidOnly": "Plusieurs restaurants sont disponibles dans une formule payante. Mettez à niveau dans Facturation pour en ajouter.",
-      "atLimit": "Vous avez atteint le maximum de {limit} restaurants inclus dans Pro. Besoin de plus ? Contactez le support au sujet d'un plan Enterprise.",
+      "paidOnly": "Ajouter des restaurants nécessite un abonnement actif. Composez votre forfait dans la facturation pour en ajouter d'autres.",
+      "atLimit": "Vous avez atteint les {limit} restaurants inclus dans votre abonnement. Ajoutez d'autres restaurants dans la facturation, ou contactez le support pour un forfait sur mesure.",
       "newTitle": "Ajouter un restaurant",
       "newSubtitle": "Créez un autre restaurant. Choisissez de partir d'une copie du menu actuel ou de zéro.",
       "startFrom": "Commencer avec",
@@ -869,8 +924,8 @@
       "soundDismiss": "Pas maintenant",
       "soundPromptTitle": "Activer le son ?",
       "soundPromptMessage": "Les navigateurs bloquent l'audio tant que vous n'avez pas appuyé pour l'autoriser. Activez le signal sonore pour que la cuisine entende les nouvelles commandes.",
-      "proLockedTitle": "Forfait PRO requis",
-      "proLockedBody": "Cet écran nécessite un forfait PRO actif. Demandez au propriétaire de passer à PRO pour continuer."
+      "proLockedTitle": "Abonnement requis",
+      "proLockedBody": "Cet écran nécessite un abonnement actif avec Écran cuisine. Demandez au propriétaire de l'ajouter dans la facturation pour continuer."
     },
     "devices": {
       "title": "Appareils",
@@ -920,22 +975,26 @@
       "createFailed": "Impossible de créer l'appareil"
     },
     "proUpsell": {
-      "cta": "Passer à PRO",
+      "cta": "Ouvrir la facturation",
+      "menuOffline": {
+        "title": "Votre menu public est hors ligne",
+        "body": "Ce restaurant n'a pas d'abonnement actif, les clients ne peuvent donc pas voir son menu. Composez votre forfait dans la facturation pour le remettre en ligne."
+      },
       "orders": {
-        "title": "Les commandes sont une fonctionnalité PRO",
-        "body": "Prenez et gérez les commandes à table avec le forfait PRO. Passez à PRO pour commencer à accepter des commandes."
+        "title": "Les commandes ne sont pas encore dans votre forfait",
+        "body": "Ajoutez Écran cuisine à votre forfait pour prendre et gérer les commandes à table."
       },
       "kitchen": {
-        "title": "L’écran cuisine est une fonctionnalité PRO",
-        "body": "Envoyez les commandes vers l’écran de cuisine avec le forfait PRO. Passez à PRO pour l’activer."
+        "title": "L'écran cuisine n'est pas encore dans votre forfait",
+        "body": "Ajoutez Écran cuisine à votre forfait pour envoyer les commandes à l'écran de la cuisine."
       },
       "reservations": {
-        "title": "Les réservations sont une fonctionnalité PRO",
-        "body": "Acceptez les réservations de tables avec le forfait PRO. Passez à PRO pour activer les réservations."
+        "title": "Les réservations ne sont pas encore dans votre forfait",
+        "body": "Ajoutez Réservations à votre forfait pour accepter les réservations de tables."
       },
       "devices": {
-        "title": "Les appareils sont une fonctionnalité PRO",
-        "body": "Associez les tablettes cuisine, salle et réservations avec le forfait PRO. Passez à PRO pour connecter des appareils."
+        "title": "Les appareils ne sont pas encore dans votre forfait",
+        "body": "Ajoutez Écran cuisine ou Réservations à votre forfait pour associer les tablettes cuisine, salle et réservations."
       }
     }
   },

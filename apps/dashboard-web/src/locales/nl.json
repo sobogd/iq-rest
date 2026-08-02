@@ -583,8 +583,17 @@
         "trialActive": "Proef actief",
         "trialEnds": "Proef eindigt op {date}. Kies een abonnement om uw menu beschikbaar te houden.",
         "active": "Actief",
+        "updatePayment": "Betaling bijwerken",
+        "updatePaymentTip": "Je laatste betaling is mislukt. Werk je betaalmethode bij om je abonnement actief te houden — je hoeft geen nieuw abonnement te kopen.",
+        "checkoutError": "Kon het afrekenen voor dit abonnement en deze valuta niet starten. Probeer het opnieuw of neem contact op met support.",
+        "accountProTitle": "PRO inbegrepen bij je account",
+        "accountProTip": "Dit restaurant valt onder het PRO-abonnement van je account. Geen aparte betaling nodig — alle PRO-functies zijn hier actief.",
+        "accountProTipNamed": "Dit restaurant valt onder het PRO-abonnement van je account, gefactureerd op {restaurant}. Geen aparte betaling nodig — beheer of annuleer het via de facturering van dat restaurant.",
         "renewsOn": "Verlengt op {date}",
         "manage": "Beheren",
+        "basicVenueTitle": "Actieve vestiging",
+        "basicVenueBody": "Je Basic-abonnement dekt één restaurant. Kies welke actief is — de andere gaan offline totdat je naar Pro upgradet.",
+        "basicVenueActive": "Actief",
         "yearly": "Jaarlijks",
         "monthly": "Maandelijks",
         "billedYearly": "jaarlijks gefactureerd",
@@ -602,7 +611,53 @@
         "otherCurrencyTip": "Betaling alleen in EUR. Voor betaling in een andere valuta, neem contact op met support.",
         "pastDueTitle": "Betaling mislukt",
         "pastDueTip": "We konden je laatste betaling niet verwerken. Je hebt {days} dagen om te betalen voordat je menu offline gaat.",
-        "pastDueBlockedTip": "Je menu is offline omdat je laatste betaling is mislukt. Betaal nu om het te herstellen."
+        "pastDueBlockedTip": "Je menu is offline omdat je laatste betaling is mislukt. Betaal nu om het te herstellen.",
+        "buildYourPlan": "Stel je abonnement samen",
+        "featMenu": "Digitaal menu",
+        "featMenuShort": "Menu",
+        "featMenuHint": "QR-menu dat gasten scannen",
+        "featReservations": "Reserveringen",
+        "featReservationsHint": "Tafelreserveringen",
+        "featKds": "Keukenscherm",
+        "featKdsHint": "Bestellingen op een keukenscherm",
+        "featDomain": "Eigen domein",
+        "featDomainHint": "Je eigen webadres",
+        "restaurantsLabel": "Restaurants",
+        "youHave": "je hebt er {count}",
+        "fewer": "Minder",
+        "more": "Meer",
+        "billingPeriod": "Factureringsperiode",
+        "perYearWord": "jaar",
+        "perMonthWord": "maand",
+        "saveYearly": "Bespaar {amount} per jaar met jaarlijkse facturering",
+        "volumeDiscountLine": "{percent}% volumekorting · {count} restaurants",
+        "saveUpToHint": "Bespaar tot 50% met 5+ restaurants",
+        "continue": "Doorgaan",
+        "yourPlanSummary": "Je abonnement",
+        "restaurantOne": "1 restaurant",
+        "restaurantsMany": "{count} restaurants",
+        "edit": "Bewerken",
+        "billingDetails": "Factuurgegevens",
+        "billingDetailsHint": "Optioneel — voor je facturen. Sla over als je ze niet hebt.",
+        "fieldLegalName": "Naam / bedrijf",
+        "fieldTaxId": "Btw-nummer",
+        "fieldAddress": "Adres",
+        "skip": "Overslaan",
+        "preparing": "Je abonnement wordt voorbereid…",
+        "statusPastDue": "Achterstallig",
+        "statusCanceling": "Wordt geannuleerd",
+        "renews": "Verlengt op {date}",
+        "cancelsOn": "Eindigt op {date}",
+        "changePlan": "Abonnement wijzigen",
+        "manageSubscription": "Abonnement beheren",
+        "myInvoices": "Mijn facturen ({count})",
+        "customPlanTitle": "Een abonnement op maat nodig?",
+        "customPlanBody": "Veel restaurants of speciale eisen? Stuur ons een bericht en we stellen een abonnement op maat voor je samen.",
+        "customPlanWa": "Hallo! Ik wil graag een abonnement op maat voor mijn restaurants.",
+        "paymentReceived": "Betaling ontvangen — je abonnement wordt geactiveerd…",
+        "subscriptionUpdated": "Abonnement bijgewerkt.",
+        "errStartSubscription": "Kon het abonnement niet starten. Probeer het opnieuw.",
+        "errOpenPayment": "Kon de betaalpagina niet openen. Probeer het opnieuw."
       },
       "support": {
         "title": "Ondersteuning",
@@ -631,8 +686,8 @@
       "switching": "Restaurant wisselen…",
       "add": "Restaurant toevoegen",
       "addDesc": "Maak een ander restaurant — dupliceer dit menu of begin met een leeg restaurant.",
-      "paidOnly": "Meerdere restaurants zijn beschikbaar in een betaald abonnement. Upgrade in Facturering om er meer toe te voegen.",
-      "atLimit": "Je hebt het maximum van {limit} restaurants bereikt dat in Pro is inbegrepen. Meer nodig? Neem contact op met support over een Enterprise-abonnement.",
+      "paidOnly": "Restaurants toevoegen vereist een actief abonnement. Stel je abonnement samen in Facturering om er meer toe te voegen.",
+      "atLimit": "Je hebt de {limit} restaurants bereikt die in je abonnement zijn inbegrepen. Voeg meer restaurants toe in Facturering, of neem contact op met support voor een abonnement op maat.",
       "newTitle": "Restaurant toevoegen",
       "newSubtitle": "Maak een ander restaurant. Kies of je start met een kopie van het huidige menu of helemaal opnieuw.",
       "startFrom": "Beginnen met",
@@ -869,8 +924,8 @@
       "soundDismiss": "Niet nu",
       "soundPromptTitle": "Geluid inschakelen?",
       "soundPromptMessage": "Browsers blokkeren audio totdat je tikt om het toe te staan. Schakel het geluid voor nieuwe bestellingen in zodat de keuken ze hoort.",
-      "proLockedTitle": "PRO-abonnement vereist",
-      "proLockedBody": "Dit scherm vereist een actief PRO-abonnement. Vraag de eigenaar om te upgraden om door te gaan."
+      "proLockedTitle": "Abonnement vereist",
+      "proLockedBody": "Dit scherm vereist een actief abonnement met Keukenscherm. Vraag de eigenaar om het toe te voegen in Facturering om door te gaan."
     },
     "devices": {
       "title": "Apparaten",
@@ -920,22 +975,26 @@
       "createFailed": "Apparaat kon niet worden aangemaakt"
     },
     "proUpsell": {
-      "cta": "Upgraden naar PRO",
+      "cta": "Facturering openen",
+      "menuOffline": {
+        "title": "Je openbare menu is offline",
+        "body": "Dit restaurant heeft geen actief abonnement, dus gasten kunnen het menu niet zien. Stel je abonnement samen in Facturering om het weer online te zetten."
+      },
       "orders": {
-        "title": "Bestellingen zijn een PRO-functie",
-        "body": "Neem tafelbestellingen aan en beheer ze met het PRO-abonnement. Upgrade om bestellingen te accepteren."
+        "title": "Bestellingen zitten nog niet in je abonnement",
+        "body": "Voeg Keukenscherm toe aan je abonnement om tafelbestellingen aan te nemen en te beheren."
       },
       "kitchen": {
-        "title": "Het keukenscherm is een PRO-functie",
-        "body": "Stuur bestellingen naar het keukenscherm met het PRO-abonnement. Upgrade om het in te schakelen."
+        "title": "Het keukenscherm zit nog niet in je abonnement",
+        "body": "Voeg Keukenscherm toe aan je abonnement om bestellingen naar het keukenscherm te sturen."
       },
       "reservations": {
-        "title": "Reserveringen zijn een PRO-functie",
-        "body": "Accepteer tafelreserveringen met het PRO-abonnement. Upgrade om reserveringen in te schakelen."
+        "title": "Reserveringen zitten nog niet in je abonnement",
+        "body": "Voeg Reserveringen toe aan je abonnement om tafelreserveringen te accepteren."
       },
       "devices": {
-        "title": "Apparaten zijn een PRO-functie",
-        "body": "Koppel keuken-, bediening- en reserveringstablets met het PRO-abonnement. Upgrade om apparaten te verbinden."
+        "title": "Apparaten zitten nog niet in je abonnement",
+        "body": "Voeg Keukenscherm of Reserveringen toe aan je abonnement om keuken-, bedienings- en reserveringstablets te koppelen."
       }
     }
   },
