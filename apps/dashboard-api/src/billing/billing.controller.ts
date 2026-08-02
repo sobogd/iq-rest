@@ -329,6 +329,10 @@ export class BillingController {
     // Price = the uniform feature set × `count` slots (volume discount applies).
     const quote = computeAccountQuote(catalog, currency, Array.from({ length: count }, () => uniform), cycle);
     if (quote.amountCents < 50) throw new BadRequestException("Amount too low");
+    // What Stripe will ACTUALLY charge, in our internal cents (major×100) — for
+    // multiple-of-100 currencies (HUF/ISK) the charge is rounded to a whole major
+    // unit, so store that (not the raw quote) to keep the card amount honest.
+    const chargedCents = fromStripeUnitAmount(toStripeUnitAmount(quote.amountCents, currency), currency);
 
     const sels: VenueSel[] = accountVenues.map((v) => ({ restaurantId: v.id, ...uniform }));
 
@@ -422,7 +426,7 @@ export class BillingController {
           where: { accountId },
           data: {
             billingCycle: cycle === "year" ? "YEARLY" : "MONTHLY",
-            amount: quote.amountCents,
+            amount: chargedCents,
             currency,
             interval: cycle,
             priceProvenance: "custom",
@@ -451,6 +455,11 @@ export class BillingController {
     const session = await stripe.checkout.sessions.create({
       mode: "subscription",
       customer: customerId,
+      // Card only (Apple/Google Pay ride on "card" in Checkout). Delayed methods
+      // (SEPA Direct Debit / some wallets) create an ACTIVE sub while the payment
+      // is still processing — that would grant PRO for days on an unpaid charge.
+      // Bank-transfer SEPA has its own manual, yearly-only flow (sepa-request).
+      payment_method_types: ["card"],
       line_items: [{ price: price.id, quantity: 1 }],
       subscription_data: { metadata: meta },
       success_url: `${appUrl}/${locale}/dashboard/settings/billing?success=1`,
@@ -497,12 +506,17 @@ export class BillingController {
     const itemId = live?.items?.data?.[0]?.id;
     if (!itemId) return { immediateMajor: null, currency, recurringMajor: quote.amountMajor };
     const product = await getAdhocProductId();
-    const price = await stripe.prices.create({
-      currency: currency.toLowerCase(),
-      product,
-      unit_amount: toStripeUnitAmount(quote.amountCents, currency),
-      recurring: { interval: cycle },
-    });
+    // Same idempotency key as the real change → reuses the identical Price
+    // object instead of minting a throwaway one on every preview.
+    const price = await stripe.prices.create(
+      {
+        currency: currency.toLowerCase(),
+        product,
+        unit_amount: toStripeUnitAmount(quote.amountCents, currency),
+        recurring: { interval: cycle },
+      },
+      { idempotencyKey: `price:${currency}:${quote.amountCents}:${cycle}` },
+    );
     const preview = await stripe.invoices
       .createPreview({
         customer: customerId,

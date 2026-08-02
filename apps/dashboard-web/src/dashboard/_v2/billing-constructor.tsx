@@ -101,9 +101,15 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
     getBillingProfile().then((p) => p && setProfile(p));
     // Sync from Stripe first (covers a missed webhook), then read our DB.
     syncBilling().then(refreshSub);
-    if (new URLSearchParams(window.location.search).get("success")) {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("success")) {
       setNotice(tb("paymentReceived"));
       setTimeout(() => syncBilling().then(refreshSub), 1500);
+      // Strip ?success (and ?canceled) so a refresh doesn't replay the notice.
+      params.delete("success");
+      params.delete("canceled");
+      const qs = params.toString();
+      window.history.replaceState(null, "", window.location.pathname + (qs ? `?${qs}` : "") + window.location.hash);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

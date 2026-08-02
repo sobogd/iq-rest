@@ -13,7 +13,7 @@ import {
  uploadFile,
 } from "./ui";
 import { TablesPage } from "./tables";
-import { inputClass, secondaryBtn } from "./tokens";
+import { inputClass } from "./tokens";
 import { isPastDue, pastDueDaysLeft } from "./billing-status";
 import { MapPicker } from "@/components/map-picker";
 import { slugify } from "./helpers";
@@ -26,11 +26,9 @@ import {
  sendSupportMessage,
  updateRestaurant,
  updateRestaurantLanguages,
- setBasicSubscriptionVenue,
  type ApiSupportMessage,
 } from "./api";
 import { useRestaurant } from "./restaurant-context";
-import { useRestaurants } from "./restaurants-context";
 import { BillingConstructor } from "./billing-constructor";
 import type { Booking, Order, Restaurant, TableEntity } from "./types";
 import { track } from "@/lib/dashboard-events";
@@ -1635,46 +1633,6 @@ export function LanguagesSettingsPage({
 
 // ── Billing ──
 
-// Locale-aware pricing slugs on the landing. Mirrors
-// soqrmenuweb/lib/locale-slug-overrides.ts "/pricing" map. Update both when
-// a locale's slug changes.
-const PRICING_SLUG_BY_LOCALE: Record<string, string> = {
-  en: "/pricing",
-  ru: "/tseny",
-  es: "/precios",
-  it: "/prezzi",
-  fr: "/tarifs",
-  de: "/preise",
-  pt: "/precos",
-  nl: "/prijzen",
-  pl: "/cennik",
-  tr: "/fiyatlar",
-  uk: "/tsiny",
-  ja: "/kakaku",
-  ko: "/gagyeok",
-  zh: "/jia-ge",
-  ar: "/asaar",
-  fa: "/ghimat",
-  cs: "/ceny",
-  sk: "/ceny",
-  hu: "/arak",
-  ro: "/preturi",
-  el: "/times",
-  bg: "/tseni",
-  hr: "/cijene",
-  sr: "/cene",
-  sl: "/cene",
-  ca: "/preus",
-  da: "/priser",
-  no: "/priser",
-  sv: "/priser",
-  fi: "/hinnat",
-  et: "/hinnad",
-  lt: "/kainos",
-  lv: "/cenas",
-  ga: "/praghsanna",
-  is: "/verd",
-};
 
 
 interface SubStatus {
@@ -1792,24 +1750,7 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  const tb = useTranslations("dashboard.settings.billing");
  const locale = useLocale();
  const restaurant = useRestaurant();
- const { list: accountVenues } = useRestaurants();
  const [sub, setSub] = useState<SubStatus | null>(null);
- const [switchingVenue, setSwitchingVenue] = useState(false);
-
- // BASIC venue-picker: switch which single venue the account's BASIC sub covers.
- async function pickBasicVenue(id: string) {
- if (switchingVenue || id === sub?.appliesToRestaurantId) return;
- setSwitchingVenue(true);
- track("dash_settings_billing_basic_venue_switch");
- try {
- if (await setBasicSubscriptionVenue(id)) {
- const s = await fetchSubscriptionStatus();
- setSub(s);
- }
- } finally {
- setSwitchingVenue(false);
- }
- }
  const [currency, setCurrency] = useState<BillingCur>(
  (BILLING_CURRENCIES as string[]).includes(restaurant.billingCurrency ?? "")
  ? (restaurant.billingCurrency as BillingCur)

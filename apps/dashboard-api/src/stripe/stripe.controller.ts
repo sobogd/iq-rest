@@ -172,7 +172,15 @@ export class StripeController {
         if (targetRestaurantId) {
           const r = await this.prisma.restaurant.findUnique({
             where: { id: targetRestaurantId },
-            select: { account: { select: { subscription: { select: { stripeSubscriptionId: true } } } } },
+            select: {
+              account: {
+                select: {
+                  id: true,
+                  subscription: { select: { stripeSubscriptionId: true } },
+                  _count: { select: { restaurants: true } },
+                },
+              },
+            },
           });
           if (r?.account?.subscription?.stripeSubscriptionId === sub.id) {
             await this.prisma.restaurant.update({
@@ -188,6 +196,13 @@ export class StripeController {
               stripeSubscriptionId: null,
               customerId: null,
             });
+            // Deflate the purchased capacity back to reality (never below the
+            // default 4, nor below venues that actually exist) so a re-subscribe
+            // re-quotes from the real count instead of a stale inflated cap.
+            const realCount = Math.max(4, r.account._count?.restaurants ?? 0);
+            await this.prisma.account
+              .update({ where: { id: r.account.id }, data: { venueLimit: realCount } })
+              .catch(() => undefined);
           }
         }
         break;

@@ -804,17 +804,6 @@ export async function fetchSubscriptionStatus(): Promise<{
  return await res.json();
 }
 
-// BASIC venue-picker: set which single venue the account's BASIC sub applies to.
-export async function setBasicSubscriptionVenue(restaurantId: string): Promise<boolean> {
- const res = await apiFetch("/api/restaurant/subscription/basic-venue", {
-  credentials: "include",
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ restaurantId }),
- });
- return res.ok;
-}
-
 export async function openBillingPortal(locale?: string): Promise<string | null> {
  const res = await apiFetch("/api/stripe/portal", {
         credentials: "include",
@@ -887,22 +876,6 @@ export async function computeQuote(
  return await res.json();
 }
 
-// SEPA-by-invoice request (yearly only). Returns success + the amount quoted.
-export async function requestSepaInvoice(
- selections: VenueSelectionInput[],
- currency?: string,
- email?: string,
-): Promise<{ success: boolean; amount?: number; currency?: string } | null> {
- const res = await apiFetch("/api/billing/sepa-request", {
-  credentials: "include",
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ selections, currency, email }),
- });
- if (!res.ok) return null;
- return await res.json();
-}
-
 export type BillingProfile = { legalName: string; taxId: string; address: string; billingEmail: string };
 
 export async function getBillingProfile(): Promise<BillingProfile | null> {
@@ -936,10 +909,10 @@ export async function getInvoices(): Promise<InvoiceRow[]> {
  return await res.json();
 }
 
-// ── Custom Stripe Elements flow (no hosted Checkout / portal) ──
+// ── Ad-hoc subscribe (hosted Stripe Checkout) ──
 
-// New sub → { clientSecret } (confirm with PaymentElement). Existing active sub
-// → { changed: true } (swapped in place, proration on the saved card).
+// New sub → { redirectUrl } to hosted Checkout. Existing active sub →
+// { changed: true } (item swapped in place, proration on the saved card).
 export async function subscribeCustom(
  features: { reservations: boolean; ordersKds: boolean; domain: boolean },
  count: number,
@@ -976,28 +949,6 @@ export async function fetchChangePreview(
  if (!res.ok) return null;
  return await res.json();
 }
-
-export async function createSetupIntent(): Promise<{ clientSecret: string } | null> {
- const res = await apiFetch("/api/billing/setup-intent", {
-  credentials: "include",
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: "{}",
- });
- if (!res.ok) return null;
- return await res.json();
-}
-
-export async function setDefaultPaymentMethod(paymentMethodId: string): Promise<boolean> {
- const res = await apiFetch("/api/billing/set-default-pm", {
-  credentials: "include",
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ paymentMethodId }),
- });
- return res.ok;
-}
-
 
 // ── Logout ──
 
