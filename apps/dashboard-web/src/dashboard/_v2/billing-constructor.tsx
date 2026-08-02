@@ -202,7 +202,7 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
             {sub?.currentPeriodEnd ? (
               <div className="text-xs text-muted-foreground mt-0.5">
                 {sub.cancelAtPeriodEnd ? "Cancels on " : "Renews "}
-                {new Date(sub.currentPeriodEnd).toLocaleDateString()}
+                {fmtDate(sub.currentPeriodEnd)}
               </div>
             ) : null}
           </div>
@@ -427,6 +427,10 @@ function EnterpriseCard() {
   );
 }
 
+function fmtDate(iso: string): string {
+  return new Date(iso).toLocaleDateString("en-US", { day: "numeric", month: "long", year: "numeric" });
+}
+
 function Notice({ text, onClose }: { text: string; onClose: () => void }) {
   return (
     <div className="flex items-center justify-between gap-3 rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-4 py-2.5 text-sm text-emerald-600 dark:text-emerald-400">
@@ -452,7 +456,7 @@ function InvoicesList() {
           <li key={r.id}>
             <a href={r.fileUrl} target="_blank" rel="noreferrer" className="text-sm text-primary">
               {r.number || r.id}
-              {r.issuedAt ? ` — ${new Date(r.issuedAt).toLocaleDateString()}` : ""}
+              {r.issuedAt ? ` — ${fmtDate(r.issuedAt)}` : ""}
               {r.amount != null ? ` — ${r.amount} ${r.currency ?? ""}` : ""}
             </a>
           </li>
