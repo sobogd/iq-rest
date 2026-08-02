@@ -602,7 +602,62 @@
         "otherCurrencyTip": "Platba pouze v EUR. Pro platbu v jiné měně kontaktujte podporu.",
         "pastDueTitle": "Platba se nezdařila",
         "pastDueTip": "Nepodařilo se zpracovat vaši poslední platbu. Máte {days} dní na zaplacení, než se menu vypne.",
-        "pastDueBlockedTip": "Vaše menu je vypnuté kvůli neúspěšné platbě. Zaplaťte nyní pro obnovení."
+        "pastDueBlockedTip": "Vaše menu je vypnuté kvůli neúspěšné platbě. Zaplaťte nyní pro obnovení.",
+        "updatePayment": "Aktualizovat platbu",
+        "updatePaymentTip": "Vaše poslední platba selhala. Aktualizujte platební metodu, aby vaše předplatné zůstalo aktivní — není třeba kupovat nový plán.",
+        "checkoutError": "Nepodařilo se zahájit platbu pro tento plán a měnu. Zkuste to prosím znovu nebo kontaktujte podporu.",
+        "accountProTitle": "PRO je součástí vašeho účtu",
+        "accountProTip": "Tato restaurace je pokryta předplatným PRO vašeho účtu. Není potřeba žádná samostatná platba — všechny funkce PRO jsou zde aktivní.",
+        "accountProTipNamed": "Tato restaurace je pokryta předplatným PRO vašeho účtu, účtovaným na {restaurant}. Není potřeba žádná samostatná platba — spravujte nebo zrušte je ve fakturaci té restaurace.",
+        "basicVenueTitle": "Aktivní provozovna",
+        "basicVenueBody": "Váš plán Basic pokrývá jednu restauraci. Vyberte, která bude aktivní — ostatní budou offline, dokud nepřejdete na Pro.",
+        "basicVenueActive": "Aktivní",
+        "buildYourPlan": "Sestavte si plán",
+        "featMenu": "Digitální menu",
+        "featMenuShort": "Menu",
+        "featMenuHint": "QR menu, které hosté skenují",
+        "featReservations": "Rezervace",
+        "featReservationsHint": "Rezervace stolů",
+        "featKds": "Kuchyňský displej",
+        "featKdsHint": "Objednávky na kuchyňské obrazovce",
+        "featDomain": "Vlastní doména",
+        "featDomainHint": "Vaše vlastní webová adresa",
+        "restaurantsLabel": "Restaurace",
+        "youHave": "máte {count}",
+        "fewer": "Méně",
+        "more": "Více",
+        "billingPeriod": "Fakturační období",
+        "perYearWord": "rok",
+        "perMonthWord": "měsíc",
+        "saveYearly": "Ušetřete {amount} ročně s roční platbou",
+        "volumeDiscountLine": "{percent}% množstevní sleva · {count} restaurací",
+        "saveUpToHint": "Ušetřete až 50% s 5+ restauracemi",
+        "continue": "Pokračovat",
+        "yourPlanSummary": "Váš plán",
+        "restaurantOne": "1 restaurace",
+        "restaurantsMany": "{count} restaurací",
+        "edit": "Upravit",
+        "billingDetails": "Fakturační údaje",
+        "billingDetailsHint": "Nepovinné — pro vaše faktury. Přeskočte, pokud je nemáte.",
+        "fieldLegalName": "Jméno / společnost",
+        "fieldTaxId": "Daňové číslo",
+        "fieldAddress": "Adresa",
+        "skip": "Přeskočit",
+        "preparing": "Připravujeme vaše předplatné…",
+        "statusPastDue": "Po splatnosti",
+        "statusCanceling": "Ruší se",
+        "renews": "Obnoví se {date}",
+        "cancelsOn": "Zruší se {date}",
+        "changePlan": "Změnit plán",
+        "manageSubscription": "Spravovat předplatné",
+        "myInvoices": "Moje faktury ({count})",
+        "customPlanTitle": "Potřebujete plán na míru?",
+        "customPlanBody": "Mnoho restaurací nebo speciální požadavky — napište nám a připravíme plán na míru.",
+        "customPlanWa": "Dobrý den! Rád bych plán na míru pro své restaurace.",
+        "paymentReceived": "Platba přijata — aktivujeme vaše předplatné…",
+        "subscriptionUpdated": "Předplatné aktualizováno.",
+        "errStartSubscription": "Předplatné se nepodařilo zahájit. Zkuste to znovu.",
+        "errOpenPayment": "Platební stránku se nepodařilo otevřít. Zkuste to znovu."
       },
       "support": {
         "title": "Podpora",
@@ -631,8 +686,8 @@
       "switching": "Přepínání restaurace…",
       "add": "Přidat restauraci",
       "addDesc": "Vytvořte další restauraci — zkopírujte toto menu nebo začněte od nuly.",
-      "paidOnly": "Více restaurací je k dispozici v placeném tarifu. Upgradujte v sekci Fakturace.",
-      "atLimit": "Dosáhli jste maxima {limit} restaurací zahrnutých v Pro. Potřebujete více? Napište podpoře ohledně plánu Enterprise.",
+      "paidOnly": "Přidávání restaurací vyžaduje aktivní předplatné. Sestavte si plán ve Fakturaci a přidejte další.",
+      "atLimit": "Dosáhli jste {limit} restaurací zahrnutých ve vašem předplatném. Přidejte další restaurace ve Fakturaci nebo napište podpoře ohledně plánu na míru.",
       "newTitle": "Přidat restauraci",
       "newSubtitle": "Vytvořte další restauraci. Vyberte, zda začít kopií současného menu nebo od nuly.",
       "startFrom": "Začít od",
@@ -869,8 +924,8 @@
       "soundDismiss": "Teď ne",
       "soundPromptTitle": "Zapnout zvuk?",
       "soundPromptMessage": "Prohlížeče blokují zvuk, dokud klepnutím nepovolíš jeho přehrávání. Zapni signál nových objednávek, aby je kuchyně slyšela.",
-      "proLockedTitle": "Vyžaduje se tarif PRO",
-      "proLockedBody": "Tato obrazovka vyžaduje aktivní tarif PRO. Požádejte majitele o přechod na PRO, abyste mohli pokračovat."
+      "proLockedTitle": "Vyžadováno předplatné",
+      "proLockedBody": "Tato obrazovka vyžaduje aktivní předplatné s Kuchyňským displejem. Požádejte majitele, aby jej přidal ve Fakturaci, abyste mohli pokračovat."
     },
     "devices": {
       "title": "Zařízení",
@@ -920,22 +975,26 @@
       "createFailed": "Zařízení nelze vytvořit"
     },
     "proUpsell": {
-      "cta": "Přejít na PRO",
+      "cta": "Otevřít fakturaci",
       "orders": {
-        "title": "Objednávky jsou funkce PRO",
-        "body": "Přijímejte a spravujte objednávky u stolů s tarifem PRO. Přejděte na PRO, abyste mohli přijímat objednávky."
+        "title": "Objednávky zatím nejsou ve vašem plánu",
+        "body": "Přidejte Kuchyňský displej do svého plánu, abyste mohli přijímat a spravovat objednávky u stolů."
       },
       "kitchen": {
-        "title": "Kuchyňská obrazovka je funkce PRO",
-        "body": "Posílejte objednávky na kuchyňskou obrazovku s tarifem PRO. Přejděte na PRO pro aktivaci."
+        "title": "Kuchyňský displej zatím není ve vašem plánu",
+        "body": "Přidejte Kuchyňský displej do svého plánu, abyste mohli posílat objednávky na kuchyňskou obrazovku."
       },
       "reservations": {
-        "title": "Rezervace jsou funkce PRO",
-        "body": "Přijímejte rezervace stolů s tarifem PRO. Přejděte na PRO pro aktivaci rezervací."
+        "title": "Rezervace zatím nejsou ve vašem plánu",
+        "body": "Přidejte Rezervace do svého plánu, abyste mohli přijímat rezervace stolů."
       },
       "devices": {
-        "title": "Zařízení jsou funkce PRO",
-        "body": "Spárujte tablety kuchyně, číšníka a rezervací s tarifem PRO. Přejděte na PRO pro připojení zařízení."
+        "title": "Zařízení zatím nejsou ve vašem plánu",
+        "body": "Přidejte Kuchyňský displej nebo Rezervace do svého plánu, abyste mohli spárovat tablety kuchyně, číšníka a rezervací."
+      },
+      "menuOffline": {
+        "title": "Vaše veřejné menu je offline",
+        "body": "Tato restaurace nemá aktivní předplatné, takže hosté nevidí její menu. Sestavte si plán ve Fakturaci a vraťte ho online."
       }
     }
   },

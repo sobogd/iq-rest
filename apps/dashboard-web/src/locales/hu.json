@@ -602,7 +602,62 @@
         "otherCurrencyTip": "A fizetés csak EUR-ban történik. Más pénznemben történő fizetéshez vegye fel a kapcsolatot az ügyfélszolgálattal.",
         "pastDueTitle": "A fizetés sikertelen",
         "pastDueTip": "Nem tudtuk feldolgozni a legutóbbi fizetését. {days} napja van fizetni, mielőtt a menü lekapcsol.",
-        "pastDueBlockedTip": "A menüje le van kapcsolva a sikertelen fizetés miatt. Fizessen most a visszaállításhoz."
+        "pastDueBlockedTip": "A menüje le van kapcsolva a sikertelen fizetés miatt. Fizessen most a visszaállításhoz.",
+        "updatePayment": "Fizetési mód frissítése",
+        "updatePaymentTip": "A legutóbbi fizetésed sikertelen volt. Frissítsd a fizetési módod, hogy az előfizetésed aktív maradjon — nem kell új csomagot venned.",
+        "checkoutError": "Nem sikerült elindítani a fizetést ehhez a csomaghoz és pénznemhez. Próbáld újra, vagy fordulj az ügyfélszolgálathoz.",
+        "accountProTitle": "A PRO a fiókodhoz jár",
+        "accountProTip": "Ezt az éttermet a fiókod PRO előfizetése fedezi. Nincs szükség külön fizetésre — minden PRO funkció aktív itt.",
+        "accountProTipNamed": "Ezt az éttermet a fiókod PRO előfizetése fedezi, amelyet a(z) {restaurant} számláz. Nincs szükség külön fizetésre — az adott étterem számlázásánál kezelheted vagy mondhatod le.",
+        "basicVenueTitle": "Aktív hely",
+        "basicVenueBody": "Az Alap csomagod egy éttermet fedez. Válaszd ki, melyik legyen élő — a többi offline lesz, amíg nem váltasz Pro csomagra.",
+        "basicVenueActive": "Aktív",
+        "buildYourPlan": "Állítsd össze a csomagod",
+        "featMenu": "Digitális étlap",
+        "featMenuShort": "Étlap",
+        "featMenuHint": "QR-étlap, amit a vendégek beolvasnak",
+        "featReservations": "Foglalások",
+        "featReservationsHint": "Asztalfoglalások",
+        "featKds": "Konyhai kijelző",
+        "featKdsHint": "Rendelések a konyhai kijelzőn",
+        "featDomain": "Saját domain",
+        "featDomainHint": "Saját webcím",
+        "restaurantsLabel": "Éttermek",
+        "youHave": "neked {count} van",
+        "fewer": "Kevesebb",
+        "more": "Több",
+        "billingPeriod": "Számlázási időszak",
+        "perYearWord": "év",
+        "perMonthWord": "hó",
+        "saveYearly": "Spórolj {amount}-t évente az éves számlázással",
+        "volumeDiscountLine": "{percent}% mennyiségi kedvezmény · {count} étterem",
+        "saveUpToHint": "Spórolj akár 50%-ot 5+ étteremmel",
+        "continue": "Tovább",
+        "yourPlanSummary": "A csomagod",
+        "restaurantOne": "1 étterem",
+        "restaurantsMany": "{count} étterem",
+        "edit": "Szerkesztés",
+        "billingDetails": "Számlázási adatok",
+        "billingDetailsHint": "Opcionális — a számláidhoz. Hagyd ki, ha nincsenek.",
+        "fieldLegalName": "Név / cég",
+        "fieldTaxId": "Adószám",
+        "fieldAddress": "Cím",
+        "skip": "Kihagyás",
+        "preparing": "Előfizetésed előkészítése…",
+        "statusPastDue": "Lejárt",
+        "statusCanceling": "Lemondás alatt",
+        "renews": "Megújul: {date}",
+        "cancelsOn": "Lemondás: {date}",
+        "changePlan": "Csomag módosítása",
+        "manageSubscription": "Előfizetés kezelése",
+        "myInvoices": "Számláim ({count})",
+        "customPlanTitle": "Egyedi csomagra van szükséged?",
+        "customPlanBody": "Sok étterem vagy különleges igények — írj nekünk, és személyre szabunk egy csomagot.",
+        "customPlanWa": "Szia! Egyedi csomagot szeretnék az éttermeimhez.",
+        "paymentReceived": "Fizetés megérkezett — előfizetésed aktiválása…",
+        "subscriptionUpdated": "Előfizetés frissítve.",
+        "errStartSubscription": "Nem sikerült elindítani az előfizetést. Próbáld újra.",
+        "errOpenPayment": "Nem sikerült megnyitni a fizetési oldalt. Próbáld újra."
       },
       "support": {
         "title": "Támogatás",
@@ -631,8 +686,8 @@
       "switching": "Étterem váltása…",
       "add": "Étterem hozzáadása",
       "addDesc": "Hozz létre másik éttermet — másold át ezt az étlapot, vagy kezdj a nulláról.",
-      "paidOnly": "A több étterem fizetős csomagban érhető el. Frissíts a Számlázásnál, hogy többet adhass hozzá.",
-      "atLimit": "Elérted a Pro csomagban elérhető {limit} étterem maximumát. Többre van szükséged? Írj az ügyfélszolgálatnak egy Enterprise csomagról.",
+      "paidOnly": "Éttermek hozzáadásához aktív előfizetés szükséges. Állítsd össze a csomagod a Számlázásnál, hogy többet adhass hozzá.",
+      "atLimit": "Elérted az előfizetésedben foglalt {limit} éttermet. Adj hozzá további éttermeket a Számlázásnál, vagy írj az ügyfélszolgálatnak egyedi csomagról.",
       "newTitle": "Étterem hozzáadása",
       "newSubtitle": "Hozz létre másik éttermet. Válaszd, hogy a jelenlegi étlap másolatából vagy üresen indulsz.",
       "startFrom": "Indítás",
@@ -869,8 +924,8 @@
       "soundDismiss": "Most nem",
       "soundPromptTitle": "Hang bekapcsolása?",
       "soundPromptMessage": "A böngészők letiltják a hangot, amíg koppintással engedélyezést nem adsz. Kapcsold be az új rendelés hangját, hogy a konyha hallja a rendeléseket.",
-      "proLockedTitle": "PRO csomag szükséges",
-      "proLockedBody": "Ehhez a képernyőhöz aktív PRO csomag szükséges. Kérd meg a tulajdonost, hogy váltson PRO-ra a folytatáshoz."
+      "proLockedTitle": "Előfizetés szükséges",
+      "proLockedBody": "Ehhez a képernyőhöz aktív előfizetés szükséges konyhai kijelzővel. Kérd meg a tulajdonost, hogy adja hozzá a Számlázásnál a folytatáshoz."
     },
     "devices": {
       "title": "Eszközök",
@@ -920,22 +975,26 @@
       "createFailed": "Az eszközt nem sikerült létrehozni"
     },
     "proUpsell": {
-      "cta": "Váltás PRO-ra",
+      "cta": "Számlázás megnyitása",
       "orders": {
-        "title": "A rendelések PRO funkció",
-        "body": "Fogadj és kezelj asztali rendeléseket a PRO csomaggal. Válts PRO-ra a rendelések fogadásához."
+        "title": "A rendelések még nincsenek a csomagodban",
+        "body": "Add hozzá a konyhai kijelzőt a csomagodhoz, hogy asztali rendeléseket fogadhass és kezelhess."
       },
       "kitchen": {
-        "title": "A konyhai kijelző PRO funkció",
-        "body": "Küldd a rendeléseket a konyhai kijelzőre a PRO csomaggal. Válts PRO-ra az aktiváláshoz."
+        "title": "A konyhai kijelző még nincs a csomagodban",
+        "body": "Add hozzá a konyhai kijelzőt a csomagodhoz, hogy a rendeléseket a konyhai kijelzőre küldd."
       },
       "reservations": {
-        "title": "A foglalások PRO funkció",
-        "body": "Fogadj asztalfoglalásokat a PRO csomaggal. Válts PRO-ra a foglalások bekapcsolásához."
+        "title": "A foglalások még nincsenek a csomagodban",
+        "body": "Add hozzá a foglalásokat a csomagodhoz, hogy asztalfoglalásokat fogadhass."
       },
       "devices": {
-        "title": "Az eszközök PRO funkció",
-        "body": "Párosíts konyhai, pincér és foglalási táblagépeket a PRO csomaggal. Válts PRO-ra az eszközök csatlakoztatásához."
+        "title": "Az eszközök még nincsenek a csomagodban",
+        "body": "Add hozzá a konyhai kijelzőt vagy a foglalásokat a csomagodhoz, hogy konyhai, pincér és foglalási táblagépeket párosíthass."
+      },
+      "menuOffline": {
+        "title": "A nyilvános étlapod offline",
+        "body": "Ennek az étteremnek nincs aktív előfizetése, így a vendégek nem látják az étlapot. Állítsd össze a csomagod a Számlázásnál, hogy újra online legyen."
       }
     }
   },

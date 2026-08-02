@@ -602,7 +602,62 @@
         "otherCurrencyTip": "Betalning sker endast i EUR. För betalning i annan valuta, kontakta supporten.",
         "pastDueTitle": "Betalningen misslyckades",
         "pastDueTip": "Vi kunde inte behandla din senaste betalning. Du har {days} dagar på dig att betala innan menyn stängs av.",
-        "pastDueBlockedTip": "Din meny är avstängd eftersom din senaste betalning misslyckades. Betala nu för att återställa den."
+        "pastDueBlockedTip": "Din meny är avstängd eftersom din senaste betalning misslyckades. Betala nu för att återställa den.",
+        "updatePayment": "Uppdatera betalning",
+        "updatePaymentTip": "Din senaste betalning misslyckades. Uppdatera din betalningsmetod för att hålla din prenumeration aktiv — du behöver inte köpa ett nytt abonnemang.",
+        "checkoutError": "Det gick inte att starta betalningen för detta abonnemang och valuta. Försök igen eller kontakta supporten.",
+        "accountProTitle": "PRO ingår i ditt konto",
+        "accountProTip": "Den här restaurangen omfattas av ditt kontos PRO-prenumeration. Ingen separat betalning behövs — alla PRO-funktioner är aktiva här.",
+        "accountProTipNamed": "Den här restaurangen omfattas av ditt kontos PRO-prenumeration, som faktureras på {restaurant}. Ingen separat betalning behövs — hantera eller avsluta den från den restaurangens fakturering.",
+        "basicVenueTitle": "Aktiv lokal",
+        "basicVenueBody": "Ditt Basic-abonnemang omfattar en restaurang. Välj vilken som ska vara aktiv — de andra går offline tills du uppgraderar till Pro.",
+        "basicVenueActive": "Aktiv",
+        "buildYourPlan": "Bygg ditt abonnemang",
+        "featMenu": "Digital meny",
+        "featMenuShort": "Meny",
+        "featMenuHint": "QR-meny som gäster skannar",
+        "featReservations": "Bokningar",
+        "featReservationsHint": "Bordsbokningar",
+        "featKds": "Köksskärm",
+        "featKdsHint": "Beställningar på en köksskärm",
+        "featDomain": "Egen domän",
+        "featDomainHint": "Din egen webbadress",
+        "restaurantsLabel": "Restauranger",
+        "youHave": "du har {count}",
+        "fewer": "Färre",
+        "more": "Fler",
+        "billingPeriod": "Faktureringsperiod",
+        "perYearWord": "år",
+        "perMonthWord": "månad",
+        "saveYearly": "Spara {amount} per år med årlig fakturering",
+        "volumeDiscountLine": "{percent}% volymrabatt · {count} restauranger",
+        "saveUpToHint": "Spara upp till 50% med 5+ restauranger",
+        "continue": "Fortsätt",
+        "yourPlanSummary": "Ditt abonnemang",
+        "restaurantOne": "1 restaurang",
+        "restaurantsMany": "{count} restauranger",
+        "edit": "Redigera",
+        "billingDetails": "Faktureringsuppgifter",
+        "billingDetailsHint": "Valfritt — för dina fakturor. Hoppa över om du inte har dem.",
+        "fieldLegalName": "Namn / företag",
+        "fieldTaxId": "Skattenummer",
+        "fieldAddress": "Adress",
+        "skip": "Hoppa över",
+        "preparing": "Förbereder din prenumeration…",
+        "statusPastDue": "Förfallen",
+        "statusCanceling": "Avslutas",
+        "renews": "Förnyas {date}",
+        "cancelsOn": "Avslutas den {date}",
+        "changePlan": "Byt abonnemang",
+        "manageSubscription": "Hantera prenumeration",
+        "myInvoices": "Mina fakturor ({count})",
+        "customPlanTitle": "Behöver du ett skräddarsytt abonnemang?",
+        "customPlanBody": "Många restauranger eller särskilda krav — skriv till oss så skräddarsyr vi ett abonnemang åt dig.",
+        "customPlanWa": "Hej! Jag skulle vilja ha ett skräddarsytt abonnemang för mina restauranger.",
+        "paymentReceived": "Betalning mottagen — aktiverar din prenumeration…",
+        "subscriptionUpdated": "Prenumerationen uppdaterad.",
+        "errStartSubscription": "Det gick inte att starta prenumerationen. Försök igen.",
+        "errOpenPayment": "Det gick inte att öppna betalningssidan. Försök igen."
       },
       "support": {
         "title": "Support",
@@ -631,8 +686,8 @@
       "switching": "Byter restaurang…",
       "add": "Lägg till restaurang",
       "addDesc": "Skapa en annan restaurang — duplicera den här menyn eller börja från noll.",
-      "paidOnly": "Flera restauranger är tillgängliga i ett betalt abonnemang. Uppgradera under Fakturering för att lägga till fler.",
-      "atLimit": "Du har nått maxantalet på {limit} restauranger som ingår i Pro. Behöver du fler? Kontakta supporten om ett Enterprise-abonnemang.",
+      "paidOnly": "Att lägga till restauranger kräver en aktiv prenumeration. Bygg ditt abonnemang under Fakturering för att lägga till fler.",
+      "atLimit": "Du har nått de {limit} restauranger som ingår i din prenumeration. Lägg till fler restauranger under Fakturering, eller kontakta supporten om ett skräddarsytt abonnemang.",
       "newTitle": "Lägg till restaurang",
       "newSubtitle": "Skapa en annan restaurang. Välj om du vill börja med en kopia av nuvarande meny eller från noll.",
       "startFrom": "Börja från",
@@ -869,8 +924,8 @@
       "soundDismiss": "Inte nu",
       "soundPromptTitle": "Aktivera ljud?",
       "soundPromptMessage": "Webbläsare blockerar ljud tills du trycker för att tillåta det. Slå på ljudet för nya beställningar så köket hör dem.",
-      "proLockedTitle": "PRO-plan krävs",
-      "proLockedBody": "Den här skärmen kräver en aktiv PRO-plan. Be ägaren att uppgradera för att fortsätta."
+      "proLockedTitle": "Prenumeration krävs",
+      "proLockedBody": "Den här skärmen kräver en aktiv prenumeration med Köksskärm. Be ägaren att lägga till den under Fakturering för att fortsätta."
     },
     "devices": {
       "title": "Enheter",
@@ -920,22 +975,26 @@
       "createFailed": "Det gick inte att skapa enheten"
     },
     "proUpsell": {
-      "cta": "Uppgradera till PRO",
+      "cta": "Öppna Fakturering",
       "orders": {
-        "title": "Beställningar är en PRO-funktion",
-        "body": "Ta emot och hantera bordsbeställningar med PRO-planen. Uppgradera för att börja ta emot beställningar."
+        "title": "Beställningar ingår inte i ditt abonnemang ännu",
+        "body": "Lägg till Köksskärm i ditt abonnemang för att ta emot och hantera bordsbeställningar."
       },
       "kitchen": {
-        "title": "Köksskärmen är en PRO-funktion",
-        "body": "Skicka beställningar till köksskärmen med PRO-planen. Uppgradera för att aktivera den."
+        "title": "Köksskärm ingår inte i ditt abonnemang ännu",
+        "body": "Lägg till Köksskärm i ditt abonnemang för att skicka beställningar till köksskärmen."
       },
       "reservations": {
-        "title": "Bokningar är en PRO-funktion",
-        "body": "Ta emot bordsbokningar med PRO-planen. Uppgradera för att aktivera bokningar."
+        "title": "Bokningar ingår inte i ditt abonnemang ännu",
+        "body": "Lägg till Bokningar i ditt abonnemang för att ta emot bordsbokningar."
       },
       "devices": {
-        "title": "Enheter är en PRO-funktion",
-        "body": "Para ihop köks-, servitörs- och bokningsplattor med PRO-planen. Uppgradera för att ansluta enheter."
+        "title": "Enheter ingår inte i ditt abonnemang ännu",
+        "body": "Lägg till Köksskärm eller Bokningar i ditt abonnemang för att para ihop köks-, servitörs- och bokningsplattor."
+      },
+      "menuOffline": {
+        "title": "Din offentliga meny är offline",
+        "body": "Den här restaurangen har ingen aktiv prenumeration, så gäster kan inte se dess meny. Bygg ditt abonnemang under Fakturering för att få den online igen."
       }
     }
   },

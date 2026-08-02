@@ -602,7 +602,62 @@
         "otherCurrencyTip": "Maksu vain EUR. Maksaaksesi muulla valuutalla, ota yhteyttä tukeen.",
         "pastDueTitle": "Maksu epäonnistui",
         "pastDueTip": "Emme voineet käsitellä viimeisintä maksuasi. Sinulla on {days} päivää aikaa maksaa ennen kuin menu suljetaan.",
-        "pastDueBlockedTip": "Menusi on poissa käytöstä epäonnistuneen maksun vuoksi. Maksa nyt palauttaaksesi sen."
+        "pastDueBlockedTip": "Menusi on poissa käytöstä epäonnistuneen maksun vuoksi. Maksa nyt palauttaaksesi sen.",
+        "updatePayment": "Päivitä maksutapa",
+        "updatePaymentTip": "Viimeisin maksusi epäonnistui. Päivitä maksutapasi pitääksesi tilauksesi aktiivisena — sinun ei tarvitse ostaa uutta pakettia.",
+        "checkoutError": "Maksun aloittaminen tälle paketille ja valuutalle epäonnistui. Yritä uudelleen tai ota yhteyttä tukeen.",
+        "accountProTitle": "PRO sisältyy tiliisi",
+        "accountProTip": "Tämä ravintola kuuluu tilisi PRO-tilaukseen. Erillistä maksua ei tarvita — kaikki PRO-ominaisuudet ovat käytössä täällä.",
+        "accountProTipNamed": "Tämä ravintola kuuluu tilisi PRO-tilaukseen, joka laskutetaan kohteesta {restaurant}. Erillistä maksua ei tarvita — hallitse tai peruuta se kyseisen ravintolan laskutuksesta.",
+        "basicVenueTitle": "Aktiivinen toimipaikka",
+        "basicVenueBody": "Basic-pakettisi kattaa yhden ravintolan. Valitse, mikä on live — muut menevät offline-tilaan, kunnes päivität Pro-tasoon.",
+        "basicVenueActive": "Aktiivinen",
+        "buildYourPlan": "Rakenna pakettisi",
+        "featMenu": "Digitaalinen ruokalista",
+        "featMenuShort": "Menu",
+        "featMenuHint": "QR-menu, jonka asiakkaat skannaavat",
+        "featReservations": "Varaukset",
+        "featReservationsHint": "Pöytävaraukset",
+        "featKds": "Keittiönäyttö",
+        "featKdsHint": "Tilaukset keittiönäytöllä",
+        "featDomain": "Oma verkkotunnus",
+        "featDomainHint": "Oma verkko-osoitteesi",
+        "restaurantsLabel": "Ravintolat",
+        "youHave": "sinulla on {count}",
+        "fewer": "Vähemmän",
+        "more": "Enemmän",
+        "billingPeriod": "Laskutuskausi",
+        "perYearWord": "vuosi",
+        "perMonthWord": "kuukausi",
+        "saveYearly": "Säästä {amount} vuodessa vuosilaskutuksella",
+        "volumeDiscountLine": "{percent}% määräalennus · {count} ravintolaa",
+        "saveUpToHint": "Säästä jopa 50% 5+ ravintolalla",
+        "continue": "Jatka",
+        "yourPlanSummary": "Pakettisi",
+        "restaurantOne": "1 ravintola",
+        "restaurantsMany": "{count} ravintolaa",
+        "edit": "Muokkaa",
+        "billingDetails": "Laskutustiedot",
+        "billingDetailsHint": "Valinnainen — laskujasi varten. Ohita, jos sinulla ei ole niitä.",
+        "fieldLegalName": "Nimi / yritys",
+        "fieldTaxId": "Verotunnus",
+        "fieldAddress": "Osoite",
+        "skip": "Ohita",
+        "preparing": "Valmistellaan tilaustasi…",
+        "statusPastDue": "Erääntynyt",
+        "statusCanceling": "Peruutetaan",
+        "renews": "Uusiutuu {date}",
+        "cancelsOn": "Peruuntuu {date}",
+        "changePlan": "Vaihda paketti",
+        "manageSubscription": "Hallitse tilausta",
+        "myInvoices": "Laskuni ({count})",
+        "customPlanTitle": "Tarvitsetko räätälöidyn paketin?",
+        "customPlanBody": "Monta ravintolaa tai erityisvaatimuksia — lähetä meille viesti, niin räätälöimme sinulle paketin.",
+        "customPlanWa": "Hei! Haluaisin räätälöidyn paketin ravintoloilleni.",
+        "paymentReceived": "Maksu vastaanotettu — aktivoidaan tilaustasi…",
+        "subscriptionUpdated": "Tilaus päivitetty.",
+        "errStartSubscription": "Tilauksen aloittaminen epäonnistui. Yritä uudelleen.",
+        "errOpenPayment": "Maksusivun avaaminen epäonnistui. Yritä uudelleen."
       },
       "support": {
         "title": "Tuki",
@@ -631,8 +686,8 @@
       "switching": "Vaihdetaan ravintolaa…",
       "add": "Lisää ravintola",
       "addDesc": "Luo toinen ravintola — kopioi tämä ruokalista tai aloita tyhjästä.",
-      "paidOnly": "Useat ravintolat ovat saatavilla maksullisessa tilauksessa. Päivitä Laskutuksesta lisätäksesi niitä.",
-      "atLimit": "Olet saavuttanut Pro-pakettiin sisältyvän {limit} ravintolan enimmäismäärän. Tarvitsetko lisää? Ota yhteyttä tukeen Enterprise-paketista.",
+      "paidOnly": "Ravintoloiden lisääminen vaatii aktiivisen tilauksen. Rakenna pakettisi Laskutuksesta lisätäksesi niitä.",
+      "atLimit": "Olet saavuttanut tilaukseesi sisältyvän {limit} ravintolan enimmäismäärän. Lisää ravintoloita Laskutuksesta tai ota yhteyttä tukeen räätälöidystä paketista.",
       "newTitle": "Lisää ravintola",
       "newSubtitle": "Luo toinen ravintola. Valitse, aloitatko nykyisen ruokalistan kopiosta vai tyhjästä.",
       "startFrom": "Aloita",
@@ -869,8 +924,8 @@
       "soundDismiss": "Ei nyt",
       "soundPromptTitle": "Otetaanko ääni käyttöön?",
       "soundPromptMessage": "Selaimet estävät äänen, kunnes napautat sallia. Ota uuden tilauksen merkkiääni käyttöön, jotta keittiö kuulee tilaukset.",
-      "proLockedTitle": "PRO-tilaus vaaditaan",
-      "proLockedBody": "Tämä näyttö vaatii aktiivisen PRO-tilauksen. Pyydä omistajaa päivittämään PRO-tasoon jatkaaksesi."
+      "proLockedTitle": "Tilaus vaaditaan",
+      "proLockedBody": "Tämä näyttö vaatii aktiivisen tilauksen, johon sisältyy Keittiönäyttö. Pyydä omistajaa lisäämään se Laskutuksesta jatkaaksesi."
     },
     "devices": {
       "title": "Laitteet",
@@ -920,22 +975,26 @@
       "createFailed": "Laitetta ei voitu luoda"
     },
     "proUpsell": {
-      "cta": "Päivitä PRO-tasoon",
+      "cta": "Avaa Laskutus",
+      "menuOffline": {
+        "title": "Julkinen ruokalistasi on offline-tilassa",
+        "body": "Tällä ravintolalla ei ole aktiivista tilausta, joten asiakkaat eivät näe sen ruokalistaa. Rakenna pakettisi Laskutuksesta saadaksesi sen takaisin verkkoon."
+      },
       "orders": {
-        "title": "Tilaukset ovat PRO-ominaisuus",
-        "body": "Ota vastaan ja hallitse pöytätilauksia PRO-tilauksella. Päivitä PRO-tasoon ottaaksesi tilauksia vastaan."
+        "title": "Tilaukset eivät vielä kuulu pakettiisi",
+        "body": "Lisää Keittiönäyttö pakettiisi ottaaksesi vastaan ja hallitaksesi pöytätilauksia."
       },
       "kitchen": {
-        "title": "Keittiönäyttö on PRO-ominaisuus",
-        "body": "Lähetä tilaukset keittiönäytölle PRO-tilauksella. Päivitä PRO-tasoon ottaaksesi sen käyttöön."
+        "title": "Keittiönäyttö ei vielä kuulu pakettiisi",
+        "body": "Lisää Keittiönäyttö pakettiisi lähettääksesi tilaukset keittiönäytölle."
       },
       "reservations": {
-        "title": "Varaukset ovat PRO-ominaisuus",
-        "body": "Ota vastaan pöytävarauksia PRO-tilauksella. Päivitä PRO-tasoon ottaaksesi varaukset käyttöön."
+        "title": "Varaukset eivät vielä kuulu pakettiisi",
+        "body": "Lisää Varaukset pakettiisi ottaaksesi vastaan pöytävarauksia."
       },
       "devices": {
-        "title": "Laitteet ovat PRO-ominaisuus",
-        "body": "Yhdistä keittiö-, tarjoilija- ja varaustabletit PRO-tilauksella. Päivitä PRO-tasoon yhdistääksesi laitteita."
+        "title": "Laitteet eivät vielä kuulu pakettiisi",
+        "body": "Lisää Keittiönäyttö tai Varaukset pakettiisi yhdistääksesi keittiö-, tarjoilija- ja varaustabletit."
       }
     }
   },

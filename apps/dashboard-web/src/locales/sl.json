@@ -602,7 +602,62 @@
         "otherCurrencyTip": "Plačilo samo v EUR. Za plačilo v drugi valuti se obrnite na podporo.",
         "pastDueTitle": "Plačilo ni uspelo",
         "pastDueTip": "Vašega zadnjega plačila nismo mogli obdelati. Za plačilo imate {days} dni, preden se meni izklopi.",
-        "pastDueBlockedTip": "Vaš meni je izklopljen zaradi neuspešnega plačila. Plačajte zdaj za obnovitev."
+        "pastDueBlockedTip": "Vaš meni je izklopljen zaradi neuspešnega plačila. Plačajte zdaj za obnovitev.",
+        "updatePayment": "Posodobi plačilo",
+        "updatePaymentTip": "Zadnje plačilo ni uspelo. Posodobite način plačila, da naročnina ostane aktivna — ni vam treba kupiti novega paketa.",
+        "checkoutError": "Blagajne za ta paket in valuto ni bilo mogoče zagnati. Poskusite znova ali se obrnite na podporo.",
+        "accountProTitle": "PRO je vključen v vaš račun",
+        "accountProTip": "To restavracijo pokriva naročnina PRO vašega računa. Ločeno plačilo ni potrebno — vse funkcije PRO so tu aktivne.",
+        "accountProTipNamed": "To restavracijo pokriva naročnina PRO vašega računa, obračunana na {restaurant}. Ločeno plačilo ni potrebno — upravljajte ali prekličite jo v obračunu te restavracije.",
+        "basicVenueTitle": "Aktivna lokacija",
+        "basicVenueBody": "Vaš paket Basic pokriva eno restavracijo. Izberite, katera je aktivna — ostale so brez povezave, dokler ne nadgradite na Pro.",
+        "basicVenueActive": "Aktivna",
+        "buildYourPlan": "Sestavite svoj paket",
+        "featMenu": "Digitalni meni",
+        "featMenuShort": "Meni",
+        "featMenuHint": "QR meni, ki ga gostje skenirajo",
+        "featReservations": "Rezervacije",
+        "featReservationsHint": "Rezervacije miz",
+        "featKds": "Kuhinjski zaslon",
+        "featKdsHint": "Naročila na kuhinjskem zaslonu",
+        "featDomain": "Domena po meri",
+        "featDomainHint": "Vaš lasten spletni naslov",
+        "restaurantsLabel": "Restavracije",
+        "youHave": "imate {count}",
+        "fewer": "Manj",
+        "more": "Več",
+        "billingPeriod": "Obdobje obračuna",
+        "perYearWord": "leto",
+        "perMonthWord": "mesec",
+        "saveYearly": "Prihranite {amount} na leto z letnim obračunom",
+        "volumeDiscountLine": "{percent} % količinski popust · {count} restavracij",
+        "saveUpToHint": "Prihranite do 50 % s 5+ restavracijami",
+        "continue": "Nadaljuj",
+        "yourPlanSummary": "Vaš paket",
+        "restaurantOne": "1 restavracija",
+        "restaurantsMany": "{count} restavracij",
+        "edit": "Uredi",
+        "billingDetails": "Podatki za obračun",
+        "billingDetailsHint": "Neobvezno — za vaše račune. Preskočite, če jih nimate.",
+        "fieldLegalName": "Ime / podjetje",
+        "fieldTaxId": "Davčna številka",
+        "fieldAddress": "Naslov",
+        "skip": "Preskoči",
+        "preparing": "Pripravljamo vašo naročnino…",
+        "statusPastDue": "Zapadlo",
+        "statusCanceling": "Preklic v teku",
+        "renews": "Obnovi se {date}",
+        "cancelsOn": "Prekliče se {date}",
+        "changePlan": "Spremeni paket",
+        "manageSubscription": "Upravljaj naročnino",
+        "myInvoices": "Moji računi ({count})",
+        "customPlanTitle": "Potrebujete paket po meri?",
+        "customPlanBody": "Veliko restavracij ali posebne zahteve — pišite nam in vam prilagodimo paket.",
+        "customPlanWa": "Pozdravljeni! Rad bi paket po meri za svoje restavracije.",
+        "paymentReceived": "Plačilo prejeto — aktiviramo vašo naročnino…",
+        "subscriptionUpdated": "Naročnina posodobljena.",
+        "errStartSubscription": "Naročnine ni bilo mogoče zagnati. Poskusite znova.",
+        "errOpenPayment": "Strani za plačilo ni bilo mogoče odpreti. Poskusite znova."
       },
       "support": {
         "title": "Podpora",
@@ -631,8 +686,8 @@
       "switching": "Preklapljanje restavracije…",
       "add": "Dodaj restavracijo",
       "addDesc": "Ustvarite drugo restavracijo — podvojite ta meni ali začnite na novo.",
-      "paidOnly": "Več restavracij je na voljo v plačljivem paketu. Nadgradite v razdelku Plačila, da jih dodate več.",
-      "atLimit": "Dosegli ste največje število {limit} restavracij, vključenih v paket Pro. Potrebujete več? Pišite podpori o paketu Enterprise.",
+      "paidOnly": "Za dodajanje restavracij je potrebna aktivna naročnina. Sestavite svoj paket v razdelku Obračun, da jih dodate več.",
+      "atLimit": "Dosegli ste {limit} restavracij, vključenih v vašo naročnino. Dodajte več restavracij v razdelku Obračun ali pišite podpori o paketu po meri.",
       "newTitle": "Dodaj restavracijo",
       "newSubtitle": "Ustvarite drugo restavracijo. Izberite, ali začnete s kopijo trenutnega menija ali iz nič.",
       "startFrom": "Začnite z",
@@ -869,8 +924,8 @@
       "soundDismiss": "Ne zdaj",
       "soundPromptTitle": "Vklopiti zvok?",
       "soundPromptMessage": "Brskalniki blokirajo zvok, dokler ga ne dovoliš s tapom. Vklopi zvok za nova naročila, da jih kuhinja sliši.",
-      "proLockedTitle": "Potrebna je naročnina PRO",
-      "proLockedBody": "Ta zaslon potrebuje aktivno naročnino PRO. Prosite lastnika za nadgradnjo na PRO za nadaljevanje."
+      "proLockedTitle": "Potrebna je naročnina",
+      "proLockedBody": "Ta zaslon potrebuje aktivno naročnino s kuhinjskim zaslonom. Prosite lastnika, da ga doda v razdelku Obračun za nadaljevanje."
     },
     "devices": {
       "title": "Naprave",
@@ -920,22 +975,26 @@
       "createFailed": "Naprave ni bilo mogoče ustvariti"
     },
     "proUpsell": {
-      "cta": "Nadgradi na PRO",
+      "cta": "Odpri Obračun",
       "orders": {
-        "title": "Naročila so funkcija PRO",
-        "body": "Sprejemajte in upravljajte naročila za mizami z naročnino PRO. Nadgradite na PRO za sprejemanje naročil."
+        "title": "Naročila še niso v vašem paketu",
+        "body": "Dodajte kuhinjski zaslon v svoj paket za sprejemanje in upravljanje naročil za mizami."
       },
       "kitchen": {
-        "title": "Kuhinjski zaslon je funkcija PRO",
-        "body": "Pošiljajte naročila na kuhinjski zaslon z naročnino PRO. Nadgradite na PRO za vklop."
+        "title": "Kuhinjski zaslon še ni v vašem paketu",
+        "body": "Dodajte kuhinjski zaslon v svoj paket za pošiljanje naročil na kuhinjski zaslon."
       },
       "reservations": {
-        "title": "Rezervacije so funkcija PRO",
-        "body": "Sprejemajte rezervacije miz z naročnino PRO. Nadgradite na PRO za vklop rezervacij."
+        "title": "Rezervacije še niso v vašem paketu",
+        "body": "Dodajte rezervacije v svoj paket za sprejemanje rezervacij miz."
       },
       "devices": {
-        "title": "Naprave so funkcija PRO",
-        "body": "Povežite tablice za kuhinjo, natakarja in rezervacije z naročnino PRO. Nadgradite na PRO za povezavo naprav."
+        "title": "Naprave še niso v vašem paketu",
+        "body": "Dodajte kuhinjski zaslon ali rezervacije v svoj paket za povezavo tablic za kuhinjo, natakarja in rezervacije."
+      },
+      "menuOffline": {
+        "title": "Vaš javni meni je brez povezave",
+        "body": "Ta restavracija nima aktivne naročnine, zato gostje ne morejo videti njenega menija. Sestavite svoj paket v razdelku Obračun, da ga znova postavite v splet."
       }
     }
   },

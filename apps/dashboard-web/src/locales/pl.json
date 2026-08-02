@@ -602,7 +602,62 @@
         "otherCurrencyTip": "Płatność tylko w EUR. Aby zapłacić w innej walucie, skontaktuj się z pomocą techniczną.",
         "pastDueTitle": "Płatność nieudana",
         "pastDueTip": "Nie mogliśmy przetworzyć Twojej ostatniej płatności. Masz {days} dni na zapłatę, zanim menu zostanie wyłączone.",
-        "pastDueBlockedTip": "Twoje menu jest wyłączone z powodu nieudanej płatności. Zapłać teraz, aby je przywrócić."
+        "pastDueBlockedTip": "Twoje menu jest wyłączone z powodu nieudanej płatności. Zapłać teraz, aby je przywrócić.",
+        "updatePayment": "Zaktualizuj płatność",
+        "updatePaymentTip": "Twoja ostatnia płatność nie powiodła się. Zaktualizuj metodę płatności, aby zachować aktywną subskrypcję — nie musisz kupować nowego planu.",
+        "checkoutError": "Nie udało się rozpocząć płatności dla tego planu i waluty. Spróbuj ponownie lub skontaktuj się ze wsparciem.",
+        "accountProTitle": "PRO w ramach Twojego konta",
+        "accountProTip": "Ta restauracja jest objęta subskrypcją PRO Twojego konta. Nie jest wymagana osobna płatność — wszystkie funkcje PRO są tutaj aktywne.",
+        "accountProTipNamed": "Ta restauracja jest objęta subskrypcją PRO Twojego konta, rozliczaną w {restaurant}. Nie jest wymagana osobna płatność — zarządzaj nią lub anuluj ją w płatnościach tej restauracji.",
+        "basicVenueTitle": "Aktywny lokal",
+        "basicVenueBody": "Twój plan Basic obejmuje jedną restaurację. Wybierz, która ma być aktywna — pozostałe będą offline, dopóki nie przejdziesz na Pro.",
+        "basicVenueActive": "Aktywna",
+        "buildYourPlan": "Zbuduj swój plan",
+        "featMenu": "Cyfrowe menu",
+        "featMenuShort": "Menu",
+        "featMenuHint": "Menu QR skanowane przez gości",
+        "featReservations": "Rezerwacje",
+        "featReservationsHint": "Rezerwacje stolików",
+        "featKds": "Ekran kuchni",
+        "featKdsHint": "Zamówienia na ekranie kuchni",
+        "featDomain": "Własna domena",
+        "featDomainHint": "Twój własny adres internetowy",
+        "restaurantsLabel": "Restauracje",
+        "youHave": "masz {count}",
+        "fewer": "Mniej",
+        "more": "Więcej",
+        "billingPeriod": "Okres rozliczeniowy",
+        "perYearWord": "rok",
+        "perMonthWord": "miesiąc",
+        "saveYearly": "Zaoszczędź {amount} rocznie przy rozliczeniu rocznym",
+        "volumeDiscountLine": "{percent}% rabatu ilościowego · {count} restauracji",
+        "saveUpToHint": "Zaoszczędź do 50% przy 5+ restauracjach",
+        "continue": "Kontynuuj",
+        "yourPlanSummary": "Twój plan",
+        "restaurantOne": "1 restauracja",
+        "restaurantsMany": "{count} restauracji",
+        "edit": "Edytuj",
+        "billingDetails": "Dane do rozliczeń",
+        "billingDetailsHint": "Opcjonalne — do Twoich faktur. Pomiń, jeśli ich nie masz.",
+        "fieldLegalName": "Imię / firma",
+        "fieldTaxId": "Numer podatkowy",
+        "fieldAddress": "Adres",
+        "skip": "Pomiń",
+        "preparing": "Przygotowujemy Twoją subskrypcję…",
+        "statusPastDue": "Zaległa płatność",
+        "statusCanceling": "Anulowanie",
+        "renews": "Odnawia się {date}",
+        "cancelsOn": "Anuluje się {date}",
+        "changePlan": "Zmień plan",
+        "manageSubscription": "Zarządzaj subskrypcją",
+        "myInvoices": "Moje faktury ({count})",
+        "customPlanTitle": "Potrzebujesz indywidualnego planu?",
+        "customPlanBody": "Wiele restauracji lub specjalne wymagania — napisz do nas, a dopasujemy plan dla Ciebie.",
+        "customPlanWa": "Cześć! Chciałbym indywidualny plan dla moich restauracji.",
+        "paymentReceived": "Płatność otrzymana — aktywujemy Twoją subskrypcję…",
+        "subscriptionUpdated": "Subskrypcja zaktualizowana.",
+        "errStartSubscription": "Nie udało się rozpocząć subskrypcji. Spróbuj ponownie.",
+        "errOpenPayment": "Nie udało się otworzyć strony płatności. Spróbuj ponownie."
       },
       "support": {
         "title": "Wsparcie",
@@ -631,8 +686,8 @@
       "switching": "Przełączanie restauracji…",
       "add": "Dodaj restaurację",
       "addDesc": "Utwórz kolejną restaurację — zduplikuj to menu lub zacznij od zera.",
-      "paidOnly": "Wiele restauracji jest dostępnych w płatnym planie. Zaktualizuj w Płatnościach, aby dodać więcej.",
-      "atLimit": "Osiągnąłeś maksimum {limit} restauracji w planie Pro. Potrzebujesz więcej? Napisz do wsparcia w sprawie planu Enterprise.",
+      "paidOnly": "Dodawanie restauracji wymaga aktywnej subskrypcji. Zbuduj swój plan w Płatnościach, aby dodać więcej.",
+      "atLimit": "Osiągnąłeś limit {limit} restauracji objętych Twoją subskrypcją. Dodaj więcej restauracji w Płatnościach lub napisz do wsparcia w sprawie indywidualnego planu.",
       "newTitle": "Dodaj restaurację",
       "newSubtitle": "Utwórz kolejną restaurację. Wybierz, czy zacząć od kopii bieżącego menu, czy od zera.",
       "startFrom": "Zacznij od",
@@ -869,8 +924,8 @@
       "soundDismiss": "Nie teraz",
       "soundPromptTitle": "Włączyć dźwięk?",
       "soundPromptMessage": "Przeglądarki blokują dźwięk, dopóki nie zezwolisz na niego dotknięciem. Włącz sygnał nowych zamówień, żeby kuchnia je słyszała.",
-      "proLockedTitle": "Wymagany plan PRO",
-      "proLockedBody": "Ten ekran wymaga aktywnego planu PRO. Poproś właściciela o przejście na PRO, aby kontynuować."
+      "proLockedTitle": "Wymagana subskrypcja",
+      "proLockedBody": "Ten ekran wymaga aktywnej subskrypcji z Ekranem kuchni. Poproś właściciela, aby dodał go w Płatnościach, aby kontynuować."
     },
     "devices": {
       "title": "Urządzenia",
@@ -920,22 +975,26 @@
       "createFailed": "Nie udało się utworzyć urządzenia"
     },
     "proUpsell": {
-      "cta": "Przejdź na PRO",
+      "cta": "Otwórz Płatności",
       "orders": {
-        "title": "Zamówienia to funkcja PRO",
-        "body": "Przyjmuj zamówienia przy stolikach i zarządzaj nimi w planie PRO. Przejdź na PRO, aby przyjmować zamówienia."
+        "title": "Zamówień nie ma jeszcze w Twoim planie",
+        "body": "Dodaj Ekran kuchni do swojego planu, aby przyjmować zamówienia przy stolikach i nimi zarządzać."
       },
       "kitchen": {
-        "title": "Ekran kuchni to funkcja PRO",
-        "body": "Wysyłaj zamówienia na ekran kuchni w planie PRO. Przejdź na PRO, aby włączyć."
+        "title": "Ekranu kuchni nie ma jeszcze w Twoim planie",
+        "body": "Dodaj Ekran kuchni do swojego planu, aby wysyłać zamówienia na ekran kuchni."
       },
       "reservations": {
-        "title": "Rezerwacje to funkcja PRO",
-        "body": "Przyjmuj rezerwacje stolików w planie PRO. Przejdź na PRO, aby włączyć rezerwacje."
+        "title": "Rezerwacji nie ma jeszcze w Twoim planie",
+        "body": "Dodaj Rezerwacje do swojego planu, aby przyjmować rezerwacje stolików."
       },
       "devices": {
-        "title": "Urządzenia to funkcja PRO",
-        "body": "Paruj tablety kuchni, kelnera i rezerwacji w planie PRO. Przejdź na PRO, aby podłączyć urządzenia."
+        "title": "Urządzeń nie ma jeszcze w Twoim planie",
+        "body": "Dodaj Ekran kuchni lub Rezerwacje do swojego planu, aby parować tablety kuchni, kelnera i rezerwacji."
+      },
+      "menuOffline": {
+        "title": "Twoje publiczne menu jest offline",
+        "body": "Ta restauracja nie ma aktywnej subskrypcji, więc goście nie widzą jej menu. Zbuduj swój plan w Płatnościach, aby przywrócić je online."
       }
     }
   },

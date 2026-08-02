@@ -602,7 +602,62 @@
         "otherCurrencyTip": "Betaling foregår kun i EUR. For betaling i anden valuta, kontakt support.",
         "pastDueTitle": "Betaling mislykkedes",
         "pastDueTip": "Vi kunne ikke behandle din seneste betaling. Du har {days} dage til at betale, før menuen lukkes ned.",
-        "pastDueBlockedTip": "Din menu er offline, fordi din seneste betaling mislykkedes. Betal nu for at gendanne den."
+        "pastDueBlockedTip": "Din menu er offline, fordi din seneste betaling mislykkedes. Betal nu for at gendanne den.",
+        "updatePayment": "Opdater betaling",
+        "updatePaymentTip": "Din seneste betaling mislykkedes. Opdater din betalingsmetode for at holde dit abonnement aktivt — du behøver ikke købe en ny plan.",
+        "checkoutError": "Kunne ikke starte betaling for denne plan og valuta. Prøv igen eller kontakt support.",
+        "accountProTitle": "PRO inkluderet med din konto",
+        "accountProTip": "Denne restaurant er dækket af din kontos PRO-abonnement. Ingen separat betaling er nødvendig — alle PRO-funktioner er aktive her.",
+        "accountProTipNamed": "Denne restaurant er dækket af din kontos PRO-abonnement, faktureret på {restaurant}. Ingen separat betaling er nødvendig — administrer eller opsig det fra den restaurants fakturering.",
+        "basicVenueTitle": "Aktivt spisested",
+        "basicVenueBody": "Din Basic-plan dækker én restaurant. Vælg hvilken der er live — de øvrige går offline, indtil du opgraderer til Pro.",
+        "basicVenueActive": "Aktiv",
+        "buildYourPlan": "Byg din plan",
+        "featMenu": "Digitalt menukort",
+        "featMenuShort": "Menu",
+        "featMenuHint": "QR-menu gæster scanner",
+        "featReservations": "Reservationer",
+        "featReservationsHint": "Bordreservationer",
+        "featKds": "Køkkenskærm",
+        "featKdsHint": "Bestillinger på en køkkenskærm",
+        "featDomain": "Eget domæne",
+        "featDomainHint": "Din egen webadresse",
+        "restaurantsLabel": "Restauranter",
+        "youHave": "du har {count}",
+        "fewer": "Færre",
+        "more": "Flere",
+        "billingPeriod": "Faktureringsperiode",
+        "perYearWord": "år",
+        "perMonthWord": "måned",
+        "saveYearly": "Spar {amount} om året med årlig fakturering",
+        "volumeDiscountLine": "{percent}% mængderabat · {count} restauranter",
+        "saveUpToHint": "Spar op til 50% med 5+ restauranter",
+        "continue": "Fortsæt",
+        "yourPlanSummary": "Din plan",
+        "restaurantOne": "1 restaurant",
+        "restaurantsMany": "{count} restauranter",
+        "edit": "Rediger",
+        "billingDetails": "Faktureringsoplysninger",
+        "billingDetailsHint": "Valgfrit — til dine fakturaer. Spring over, hvis du ikke har dem.",
+        "fieldLegalName": "Navn / virksomhed",
+        "fieldTaxId": "Skattenummer",
+        "fieldAddress": "Adresse",
+        "skip": "Spring over",
+        "preparing": "Forbereder dit abonnement…",
+        "statusPastDue": "Forfalden",
+        "statusCanceling": "Opsiges",
+        "renews": "Fornyes {date}",
+        "cancelsOn": "Opsiges den {date}",
+        "changePlan": "Skift plan",
+        "manageSubscription": "Administrer abonnement",
+        "myInvoices": "Mine fakturaer ({count})",
+        "customPlanTitle": "Brug for en skræddersyet plan?",
+        "customPlanBody": "Mange restauranter eller særlige krav — skriv til os, så skræddersyer vi en plan til dig.",
+        "customPlanWa": "Hej! Jeg vil gerne have en skræddersyet plan til mine restauranter.",
+        "paymentReceived": "Betaling modtaget — aktiverer dit abonnement…",
+        "subscriptionUpdated": "Abonnement opdateret.",
+        "errStartSubscription": "Kunne ikke starte abonnementet. Prøv igen.",
+        "errOpenPayment": "Kunne ikke åbne betalingssiden. Prøv igen."
       },
       "support": {
         "title": "Support",
@@ -631,8 +686,8 @@
       "switching": "Skifter restaurant…",
       "add": "Tilføj restaurant",
       "addDesc": "Opret en anden restaurant — kopiér denne menu eller start fra bunden.",
-      "paidOnly": "Flere restauranter er tilgængelige på en betalt plan. Opgrader under Fakturering for at tilføje flere.",
-      "atLimit": "Du har nået maksimum på {limit} restauranter inkluderet i Pro. Har du brug for flere? Skriv til supporten om en Enterprise-plan.",
+      "paidOnly": "Tilføjelse af restauranter kræver et aktivt abonnement. Byg din plan under Fakturering for at tilføje flere.",
+      "atLimit": "Du har nået de {limit} restauranter, der er inkluderet i dit abonnement. Tilføj flere restauranter under Fakturering, eller skriv til supporten om en skræddersyet plan.",
       "newTitle": "Tilføj restaurant",
       "newSubtitle": "Opret en anden restaurant. Vælg, om du vil starte med en kopi af den nuværende menu eller fra bunden.",
       "startFrom": "Start fra",
@@ -869,8 +924,8 @@
       "soundDismiss": "Ikke nu",
       "soundPromptTitle": "Aktivér lyd?",
       "soundPromptMessage": "Browsere blokerer lyd indtil du trykker for at tillade den. Slå lyden til, så køkkenet hører nye ordrer.",
-      "proLockedTitle": "PRO-abonnement kræves",
-      "proLockedBody": "Denne skærm kræver et aktivt PRO-abonnement. Bed ejeren om at opgradere for at fortsætte."
+      "proLockedTitle": "Abonnement kræves",
+      "proLockedBody": "Denne skærm kræver et aktivt abonnement med Køkkenskærm. Bed ejeren om at tilføje det under Fakturering for at fortsætte."
     },
     "devices": {
       "title": "Enheder",
@@ -920,22 +975,26 @@
       "createFailed": "Kunne ikke oprette enheden"
     },
     "proUpsell": {
-      "cta": "Opgrader til PRO",
+      "cta": "Åbn Fakturering",
+      "menuOffline": {
+        "title": "Dit offentlige menukort er offline",
+        "body": "Denne restaurant har intet aktivt abonnement, så gæster kan ikke se dens menukort. Byg din plan under Fakturering for at få den online igen."
+      },
       "orders": {
-        "title": "Bestillinger er en PRO-funktion",
-        "body": "Modtag og håndtér bordbestillinger med PRO-abonnementet. Opgrader for at modtage bestillinger."
+        "title": "Bestillinger er ikke i din plan endnu",
+        "body": "Føj Køkkenskærm til din plan for at modtage og håndtere bordbestillinger."
       },
       "kitchen": {
-        "title": "Køkkenskærmen er en PRO-funktion",
-        "body": "Send bestillinger til køkkenskærmen med PRO-abonnementet. Opgrader for at aktivere den."
+        "title": "Køkkenskærm er ikke i din plan endnu",
+        "body": "Føj Køkkenskærm til din plan for at sende bestillinger til køkkenskærmen."
       },
       "reservations": {
-        "title": "Reservationer er en PRO-funktion",
-        "body": "Modtag bordreservationer med PRO-abonnementet. Opgrader for at aktivere reservationer."
+        "title": "Reservationer er ikke i din plan endnu",
+        "body": "Føj Reservationer til din plan for at modtage bordreservationer."
       },
       "devices": {
-        "title": "Enheder er en PRO-funktion",
-        "body": "Par køkken-, tjener- og reservationstablets med PRO-abonnementet. Opgrader for at forbinde enheder."
+        "title": "Enheder er ikke i din plan endnu",
+        "body": "Føj Køkkenskærm eller Reservationer til din plan for at parre køkken-, tjener- og reservationstablets."
       }
     }
   },

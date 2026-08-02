@@ -602,7 +602,62 @@
         "otherCurrencyTip": "Platba iba v EUR. Pre platbu v inej mene kontaktujte podporu.",
         "pastDueTitle": "Platba zlyhala",
         "pastDueTip": "Nepodarilo sa nám spracovať vašu poslednú platbu. Máte {days} dní na zaplatenie, kým sa menu vypne.",
-        "pastDueBlockedTip": "Vaše menu je vypnuté kvôli neúspešnej platbe. Zaplaťte teraz pre obnovenie."
+        "pastDueBlockedTip": "Vaše menu je vypnuté kvôli neúspešnej platbe. Zaplaťte teraz pre obnovenie.",
+        "updatePayment": "Aktualizovať platbu",
+        "updatePaymentTip": "Vaša posledná platba zlyhala. Aktualizujte spôsob platby, aby vaše predplatné zostalo aktívne — nie je potrebné kupovať nový plán.",
+        "checkoutError": "Nepodarilo sa spustiť platbu pre tento plán a menu. Skúste to znova alebo kontaktujte podporu.",
+        "accountProTitle": "PRO je súčasťou vášho účtu",
+        "accountProTip": "Túto reštauráciu pokrýva PRO predplatné vášho účtu. Nie je potrebná samostatná platba — všetky funkcie PRO sú tu aktívne.",
+        "accountProTipNamed": "Túto reštauráciu pokrýva PRO predplatné vášho účtu, fakturované na {restaurant}. Nie je potrebná samostatná platba — spravujte ho alebo ho zrušte vo fakturácii tej reštaurácie.",
+        "basicVenueTitle": "Aktívna prevádzka",
+        "basicVenueBody": "Váš plán Základný pokrýva jednu reštauráciu. Vyberte, ktorá je aktívna — ostatné budú offline, kým neprejdete na Pro.",
+        "basicVenueActive": "Aktívna",
+        "buildYourPlan": "Zostavte si plán",
+        "featMenu": "Digitálne menu",
+        "featMenuShort": "Menu",
+        "featMenuHint": "QR menu, ktoré hostia skenujú",
+        "featReservations": "Rezervácie",
+        "featReservationsHint": "Rezervácie stolov",
+        "featKds": "Kuchynský displej",
+        "featKdsHint": "Objednávky na kuchynskej obrazovke",
+        "featDomain": "Vlastná doména",
+        "featDomainHint": "Vaša vlastná webová adresa",
+        "restaurantsLabel": "Reštaurácie",
+        "youHave": "máte {count}",
+        "fewer": "Menej",
+        "more": "Viac",
+        "billingPeriod": "Fakturačné obdobie",
+        "perYearWord": "rok",
+        "perMonthWord": "mesiac",
+        "saveYearly": "Ušetrite {amount} ročne s ročnou fakturáciou",
+        "volumeDiscountLine": "{percent}% množstevná zľava · {count} reštaurácií",
+        "saveUpToHint": "Ušetrite až 50% s 5+ reštauráciami",
+        "continue": "Pokračovať",
+        "yourPlanSummary": "Váš plán",
+        "restaurantOne": "1 reštaurácia",
+        "restaurantsMany": "{count} reštaurácií",
+        "edit": "Upraviť",
+        "billingDetails": "Fakturačné údaje",
+        "billingDetailsHint": "Voliteľné — pre vaše faktúry. Preskočte, ak ich nemáte.",
+        "fieldLegalName": "Meno / firma",
+        "fieldTaxId": "Daňové číslo",
+        "fieldAddress": "Adresa",
+        "skip": "Preskočiť",
+        "preparing": "Pripravujeme vaše predplatné…",
+        "statusPastDue": "Po splatnosti",
+        "statusCanceling": "Ruší sa",
+        "renews": "Obnoví sa {date}",
+        "cancelsOn": "Ruší sa {date}",
+        "changePlan": "Zmeniť plán",
+        "manageSubscription": "Spravovať predplatné",
+        "myInvoices": "Moje faktúry ({count})",
+        "customPlanTitle": "Potrebujete vlastný plán?",
+        "customPlanBody": "Veľa reštaurácií alebo osobitné požiadavky — napíšte nám a prispôsobíme plán pre vás.",
+        "customPlanWa": "Dobrý deň! Chcel by som vlastný plán pre svoje reštaurácie.",
+        "paymentReceived": "Platba prijatá — aktivujeme vaše predplatné…",
+        "subscriptionUpdated": "Predplatné aktualizované.",
+        "errStartSubscription": "Nepodarilo sa spustiť predplatné. Skúste to znova.",
+        "errOpenPayment": "Nepodarilo sa otvoriť platobnú stránku. Skúste to znova."
       },
       "support": {
         "title": "Podpora",
@@ -631,8 +686,8 @@
       "switching": "Prepínam reštauráciu…",
       "add": "Pridať reštauráciu",
       "addDesc": "Vytvorte ďalšiu reštauráciu — duplikujte toto menu alebo začnite od nuly.",
-      "paidOnly": "Viacero reštaurácií je dostupných v platenom pláne. Upgradujte vo Fakturácii, aby ste pridali ďalšie.",
-      "atLimit": "Dosiahli ste maximum {limit} reštaurácií zahrnutých v pláne Pro. Potrebujete viac? Napíšte podpore o pláne Enterprise.",
+      "paidOnly": "Pridanie reštaurácií vyžaduje aktívne predplatné. Zostavte si plán vo Fakturácii, aby ste pridali ďalšie.",
+      "atLimit": "Dosiahli ste {limit} reštaurácií zahrnutých vo vašom predplatnom. Pridajte ďalšie reštaurácie vo Fakturácii alebo napíšte podpore o vlastnom pláne.",
       "newTitle": "Pridať reštauráciu",
       "newSubtitle": "Vytvorte ďalšiu reštauráciu. Vyberte, či začnete kópiou súčasného menu alebo od nuly.",
       "startFrom": "Začať od",
@@ -869,8 +924,8 @@
       "soundDismiss": "Teraz nie",
       "soundPromptTitle": "Zapnúť zvuk?",
       "soundPromptMessage": "Prehliadače blokujú zvuk, kým ho klepnutím nepovolíte. Zapnite zvuk nových objednávok, aby ich kuchyňa počula.",
-      "proLockedTitle": "Vyžaduje sa plán PRO",
-      "proLockedBody": "Táto obrazovka vyžaduje aktívny plán PRO. Požiadajte majiteľa o prechod na PRO, aby ste mohli pokračovať."
+      "proLockedTitle": "Vyžaduje sa predplatné",
+      "proLockedBody": "Táto obrazovka vyžaduje aktívne predplatné s kuchynským displejom. Požiadajte majiteľa, aby ho pridal vo Fakturácii, aby ste mohli pokračovať."
     },
     "devices": {
       "title": "Zariadenia",
@@ -920,22 +975,26 @@
       "createFailed": "Zariadenie sa nepodarilo vytvoriť"
     },
     "proUpsell": {
-      "cta": "Prejsť na PRO",
+      "cta": "Otvoriť Fakturáciu",
       "orders": {
-        "title": "Objednávky sú funkcia PRO",
-        "body": "Prijímajte a spravujte objednávky pri stoloch s plánom PRO. Prejdite na PRO, aby ste mohli prijímať objednávky."
+        "title": "Objednávky ešte nie sú vo vašom pláne",
+        "body": "Pridajte kuchynský displej do svojho plánu, aby ste mohli prijímať a spravovať objednávky pri stoloch."
       },
       "kitchen": {
-        "title": "Kuchynská obrazovka je funkcia PRO",
-        "body": "Posielajte objednávky na kuchynskú obrazovku s plánom PRO. Prejdite na PRO pre aktiváciu."
+        "title": "Kuchynský displej ešte nie je vo vašom pláne",
+        "body": "Pridajte kuchynský displej do svojho plánu, aby ste posielali objednávky na kuchynskú obrazovku."
       },
       "reservations": {
-        "title": "Rezervácie sú funkcia PRO",
-        "body": "Prijímajte rezervácie stolov s plánom PRO. Prejdite na PRO pre aktiváciu rezervácií."
+        "title": "Rezervácie ešte nie sú vo vašom pláne",
+        "body": "Pridajte rezervácie do svojho plánu, aby ste prijímali rezervácie stolov."
       },
       "devices": {
-        "title": "Zariadenia sú funkcia PRO",
-        "body": "Spárujte tablety kuchyne, čašníka a rezervácií s plánom PRO. Prejdite na PRO pre pripojenie zariadení."
+        "title": "Zariadenia ešte nie sú vo vašom pláne",
+        "body": "Pridajte kuchynský displej alebo rezervácie do svojho plánu, aby ste spárovali kuchynské, čašnícke a rezervačné tablety."
+      },
+      "menuOffline": {
+        "title": "Vaše verejné menu je offline",
+        "body": "Táto reštaurácia nemá aktívne predplatné, takže hostia nevidia jej menu. Zostavte si plán vo Fakturácii, aby ste ho vrátili online."
       }
     }
   },

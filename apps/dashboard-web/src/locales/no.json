@@ -602,7 +602,62 @@
         "otherCurrencyTip": "Betaling skjer kun i EUR. For betaling i annen valuta, ta kontakt med support.",
         "pastDueTitle": "Betaling mislyktes",
         "pastDueTip": "Vi kunne ikke behandle din siste betaling. Du har {days} dager på deg til å betale før menyen slås av.",
-        "pastDueBlockedTip": "Menyen din er offline fordi din siste betaling mislyktes. Betal nå for å gjenopprette den."
+        "pastDueBlockedTip": "Menyen din er offline fordi din siste betaling mislyktes. Betal nå for å gjenopprette den.",
+        "updatePayment": "Oppdater betaling",
+        "updatePaymentTip": "Din siste betaling mislyktes. Oppdater betalingsmetoden din for å holde abonnementet aktivt — du trenger ikke kjøpe en ny plan.",
+        "checkoutError": "Kunne ikke starte betaling for denne planen og valutaen. Prøv igjen eller kontakt support.",
+        "accountProTitle": "PRO inkludert med kontoen din",
+        "accountProTip": "Denne restauranten dekkes av kontoens PRO-abonnement. Ingen separat betaling er nødvendig — alle PRO-funksjoner er aktive her.",
+        "accountProTipNamed": "Denne restauranten dekkes av kontoens PRO-abonnement, fakturert på {restaurant}. Ingen separat betaling er nødvendig — administrer eller avslutt det fra den restaurantens fakturering.",
+        "basicVenueTitle": "Aktivt utsalgssted",
+        "basicVenueBody": "Basic-planen din dekker én restaurant. Velg hvilken som er live — de andre går offline til du oppgraderer til Pro.",
+        "basicVenueActive": "Aktiv",
+        "buildYourPlan": "Bygg planen din",
+        "featMenu": "Digital meny",
+        "featMenuShort": "Meny",
+        "featMenuHint": "QR-meny gjester skanner",
+        "featReservations": "Reservasjoner",
+        "featReservationsHint": "Bordreservasjoner",
+        "featKds": "Kjøkkenskjerm",
+        "featKdsHint": "Bestillinger på en kjøkkenskjerm",
+        "featDomain": "Eget domene",
+        "featDomainHint": "Din egen nettadresse",
+        "restaurantsLabel": "Restauranter",
+        "youHave": "du har {count}",
+        "fewer": "Færre",
+        "more": "Flere",
+        "billingPeriod": "Faktureringsperiode",
+        "perYearWord": "år",
+        "perMonthWord": "måned",
+        "saveYearly": "Spar {amount} i året med årlig fakturering",
+        "volumeDiscountLine": "{percent}% mengderabatt · {count} restauranter",
+        "saveUpToHint": "Spar opptil 50% med 5+ restauranter",
+        "continue": "Fortsett",
+        "yourPlanSummary": "Planen din",
+        "restaurantOne": "1 restaurant",
+        "restaurantsMany": "{count} restauranter",
+        "edit": "Rediger",
+        "billingDetails": "Faktureringsdetaljer",
+        "billingDetailsHint": "Valgfritt — for fakturaene dine. Hopp over hvis du ikke har dem.",
+        "fieldLegalName": "Navn / firma",
+        "fieldTaxId": "Skattenummer",
+        "fieldAddress": "Adresse",
+        "skip": "Hopp over",
+        "preparing": "Forbereder abonnementet ditt…",
+        "statusPastDue": "Forfalt",
+        "statusCanceling": "Avsluttes",
+        "renews": "Fornyes {date}",
+        "cancelsOn": "Avsluttes {date}",
+        "changePlan": "Bytt plan",
+        "manageSubscription": "Administrer abonnement",
+        "myInvoices": "Mine fakturaer ({count})",
+        "customPlanTitle": "Trenger du en skreddersydd plan?",
+        "customPlanBody": "Mange restauranter eller spesielle behov — send oss en melding, så skreddersyr vi en plan for deg.",
+        "customPlanWa": "Hei! Jeg vil gjerne ha en skreddersydd plan for restaurantene mine.",
+        "paymentReceived": "Betaling mottatt — aktiverer abonnementet ditt…",
+        "subscriptionUpdated": "Abonnement oppdatert.",
+        "errStartSubscription": "Kunne ikke starte abonnementet. Prøv igjen.",
+        "errOpenPayment": "Kunne ikke åpne betalingssiden. Prøv igjen."
       },
       "support": {
         "title": "Support",
@@ -631,8 +686,8 @@
       "switching": "Bytter restaurant…",
       "add": "Legg til restaurant",
       "addDesc": "Opprett en annen restaurant — dupliser denne menyen eller start på nytt.",
-      "paidOnly": "Flere restauranter er tilgjengelig i betalt plan. Oppgrader under Fakturering for å legge til flere.",
-      "atLimit": "Du har nådd maksimum på {limit} restauranter som er inkludert i Pro. Trenger du flere? Kontakt support om en Enterprise-plan.",
+      "paidOnly": "Å legge til restauranter krever et aktivt abonnement. Bygg planen din under Fakturering for å legge til flere.",
+      "atLimit": "Du har nådd de {limit} restaurantene som er inkludert i abonnementet ditt. Legg til flere restauranter under Fakturering, eller kontakt support om en skreddersydd plan.",
       "newTitle": "Legg til restaurant",
       "newSubtitle": "Opprett en annen restaurant. Velg om du vil starte med en kopi av dagens meny eller helt fra start.",
       "startFrom": "Start fra",
@@ -869,8 +924,8 @@
       "soundDismiss": "Ikke nå",
       "soundPromptTitle": "Aktivere lyd?",
       "soundPromptMessage": "Nettlesere blokkerer lyd til du trykker for å tillate det. Slå på varsellyd for nye bestillinger så kjøkkenet hører dem.",
-      "proLockedTitle": "PRO-abonnement kreves",
-      "proLockedBody": "Denne skjermen krever et aktivt PRO-abonnement. Be eieren om å oppgradere for å fortsette."
+      "proLockedTitle": "Abonnement kreves",
+      "proLockedBody": "Denne skjermen krever et aktivt abonnement med Kjøkkenskjerm. Be eieren om å legge det til under Fakturering for å fortsette."
     },
     "devices": {
       "title": "Enheter",
@@ -920,22 +975,26 @@
       "createFailed": "Kunne ikke opprette enheten"
     },
     "proUpsell": {
-      "cta": "Oppgrader til PRO",
+      "cta": "Åpne Fakturering",
+      "menuOffline": {
+        "title": "Den offentlige menyen din er offline",
+        "body": "Denne restauranten har ingen aktivt abonnement, så gjester kan ikke se menyen. Bygg planen din under Fakturering for å få den online igjen."
+      },
       "orders": {
-        "title": "Bestillinger er en PRO-funksjon",
-        "body": "Ta imot og håndter bordbestillinger med PRO-abonnementet. Oppgrader for å ta imot bestillinger."
+        "title": "Bestillinger er ikke i planen din ennå",
+        "body": "Legg Kjøkkenskjerm til planen din for å ta imot og håndtere bordbestillinger."
       },
       "kitchen": {
-        "title": "Kjøkkenskjermen er en PRO-funksjon",
-        "body": "Send bestillinger til kjøkkenskjermen med PRO-abonnementet. Oppgrader for å aktivere den."
+        "title": "Kjøkkenskjerm er ikke i planen din ennå",
+        "body": "Legg Kjøkkenskjerm til planen din for å sende bestillinger til kjøkkenskjermen."
       },
       "reservations": {
-        "title": "Reservasjoner er en PRO-funksjon",
-        "body": "Ta imot bordreservasjoner med PRO-abonnementet. Oppgrader for å aktivere reservasjoner."
+        "title": "Reservasjoner er ikke i planen din ennå",
+        "body": "Legg Reservasjoner til planen din for å ta imot bordreservasjoner."
       },
       "devices": {
-        "title": "Enheter er en PRO-funksjon",
-        "body": "Koble sammen kjøkken-, servitør- og reservasjonsnettbrett med PRO-abonnementet. Oppgrader for å koble til enheter."
+        "title": "Enheter er ikke i planen din ennå",
+        "body": "Legg Kjøkkenskjerm eller Reservasjoner til planen din for å koble sammen kjøkken-, servitør- og reservasjonsnettbrett."
       }
     }
   },

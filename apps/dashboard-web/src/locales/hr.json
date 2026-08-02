@@ -602,7 +602,62 @@
         "otherCurrencyTip": "Plaćanje samo u EUR. Za plaćanje u drugoj valuti obratite se podršci.",
         "pastDueTitle": "Plaćanje nije uspjelo",
         "pastDueTip": "Nismo mogli obraditi vaše posljednje plaćanje. Imate {days} dana za plaćanje prije nego se jelovnik isključi.",
-        "pastDueBlockedTip": "Vaš jelovnik je isključen jer posljednje plaćanje nije uspjelo. Platite sada za vraćanje."
+        "pastDueBlockedTip": "Vaš jelovnik je isključen jer posljednje plaćanje nije uspjelo. Platite sada za vraćanje.",
+        "updatePayment": "Ažuriraj plaćanje",
+        "updatePaymentTip": "Vaše posljednje plaćanje nije uspjelo. Ažurirajte način plaćanja kako bi pretplata ostala aktivna — nije potrebno kupovati novi plan.",
+        "checkoutError": "Nismo mogli pokrenuti plaćanje za ovaj plan i valutu. Pokušajte ponovno ili se obratite podršci.",
+        "accountProTitle": "PRO uključen u vaš račun",
+        "accountProTip": "Ovaj restoran pokriven je PRO pretplatom vašeg računa. Nije potrebno zasebno plaćanje — sve PRO značajke su ovdje aktivne.",
+        "accountProTipNamed": "Ovaj restoran pokriven je PRO pretplatom vašeg računa, naplaćenom na {restaurant}. Nije potrebno zasebno plaćanje — upravljajte njome ili je otkažite u naplati tog restorana.",
+        "basicVenueTitle": "Aktivni lokal",
+        "basicVenueBody": "Vaš Osnovni plan pokriva jedan restoran. Odaberite koji je aktivan — ostali su offline dok ne nadogradite na Pro.",
+        "basicVenueActive": "Aktivan",
+        "buildYourPlan": "Sastavite svoj plan",
+        "featMenu": "Digitalni jelovnik",
+        "featMenuShort": "Jelovnik",
+        "featMenuHint": "QR-jelovnik koji gosti skeniraju",
+        "featReservations": "Rezervacije",
+        "featReservationsHint": "Rezervacije stolova",
+        "featKds": "Kuhinjski zaslon",
+        "featKdsHint": "Narudžbe na kuhinjskom zaslonu",
+        "featDomain": "Vlastita domena",
+        "featDomainHint": "Vaša vlastita web-adresa",
+        "restaurantsLabel": "Restorani",
+        "youHave": "imate {count}",
+        "fewer": "Manje",
+        "more": "Više",
+        "billingPeriod": "Razdoblje naplate",
+        "perYearWord": "godina",
+        "perMonthWord": "mjesec",
+        "saveYearly": "Uštedite {amount} godišnje uz godišnju naplatu",
+        "volumeDiscountLine": "{percent}% količinski popust · {count} restorana",
+        "saveUpToHint": "Uštedite do 50% uz 5+ restorana",
+        "continue": "Nastavi",
+        "yourPlanSummary": "Vaš plan",
+        "restaurantOne": "1 restoran",
+        "restaurantsMany": "{count} restorana",
+        "edit": "Uredi",
+        "billingDetails": "Podaci za naplatu",
+        "billingDetailsHint": "Neobavezno — za vaše račune. Preskočite ako ih nemate.",
+        "fieldLegalName": "Ime / tvrtka",
+        "fieldTaxId": "Porezni broj",
+        "fieldAddress": "Adresa",
+        "skip": "Preskoči",
+        "preparing": "Pripremamo vašu pretplatu…",
+        "statusPastDue": "Dospjelo",
+        "statusCanceling": "Otkazuje se",
+        "renews": "Obnavlja se {date}",
+        "cancelsOn": "Otkazuje se {date}",
+        "changePlan": "Promijeni plan",
+        "manageSubscription": "Upravljaj pretplatom",
+        "myInvoices": "Moji računi ({count})",
+        "customPlanTitle": "Trebate prilagođeni plan?",
+        "customPlanBody": "Mnogo restorana ili posebni zahtjevi — pišite nam i prilagodit ćemo plan za vas.",
+        "customPlanWa": "Bok! Želio bih prilagođeni plan za svoje restorane.",
+        "paymentReceived": "Plaćanje zaprimljeno — aktiviramo vašu pretplatu…",
+        "subscriptionUpdated": "Pretplata ažurirana.",
+        "errStartSubscription": "Nije moguće pokrenuti pretplatu. Pokušajte ponovno.",
+        "errOpenPayment": "Nije moguće otvoriti stranicu za plaćanje. Pokušajte ponovno."
       },
       "support": {
         "title": "Podrška",
@@ -631,8 +686,8 @@
       "switching": "Prebacivanje restorana…",
       "add": "Dodaj restoran",
       "addDesc": "Stvori još jedan restoran — kopiraj ovaj jelovnik ili započni iznova.",
-      "paidOnly": "Više restorana dostupno je u plaćenom planu. Nadogradi pod Naplata da dodaš još.",
-      "atLimit": "Dosegli ste maksimum od {limit} restorana uključenih u Pro. Trebate više? Pišite podršci o Enterprise planu.",
+      "paidOnly": "Dodavanje restorana zahtijeva aktivnu pretplatu. Sastavite svoj plan u Naplati da dodate još.",
+      "atLimit": "Dosegli ste {limit} restorana uključenih u vašu pretplatu. Dodajte više restorana u Naplati ili pišite podršci o prilagođenom planu.",
       "newTitle": "Dodaj restoran",
       "newSubtitle": "Stvori još jedan restoran. Odaberi želiš li započeti s kopijom trenutnog jelovnika ili od nule.",
       "startFrom": "Započni od",
@@ -869,8 +924,8 @@
       "soundDismiss": "Ne sada",
       "soundPromptTitle": "Uključiti zvuk?",
       "soundPromptMessage": "Preglednici blokiraju zvuk dok ga ne dopustite dodirom. Uključite zvuk novih narudžbi kako bi ih kuhinja čula.",
-      "proLockedTitle": "Potreban je PRO plan",
-      "proLockedBody": "Ovaj zaslon zahtijeva aktivan PRO plan. Zamolite vlasnika da prijeđe na PRO da biste nastavili."
+      "proLockedTitle": "Potrebna je pretplata",
+      "proLockedBody": "Ovaj zaslon zahtijeva aktivnu pretplatu s kuhinjskim zaslonom. Zamolite vlasnika da ga doda u Naplati kako biste nastavili."
     },
     "devices": {
       "title": "Uređaji",
@@ -920,22 +975,26 @@
       "createFailed": "Nije moguće stvoriti uređaj"
     },
     "proUpsell": {
-      "cta": "Prijeđi na PRO",
+      "cta": "Otvori Naplatu",
       "orders": {
-        "title": "Narudžbe su PRO značajka",
-        "body": "Primajte i upravljajte narudžbama za stolovima uz PRO plan. Prijeđite na PRO da biste primali narudžbe."
+        "title": "Narudžbe još nisu u vašem planu",
+        "body": "Dodajte kuhinjski zaslon u svoj plan da biste primali i upravljali narudžbama za stolom."
       },
       "kitchen": {
-        "title": "Kuhinjski zaslon je PRO značajka",
-        "body": "Šaljite narudžbe na kuhinjski zaslon uz PRO plan. Prijeđite na PRO da biste ga uključili."
+        "title": "Kuhinjski zaslon još nije u vašem planu",
+        "body": "Dodajte kuhinjski zaslon u svoj plan da biste slali narudžbe na kuhinjski zaslon."
       },
       "reservations": {
-        "title": "Rezervacije su PRO značajka",
-        "body": "Primajte rezervacije stolova uz PRO plan. Prijeđite na PRO da biste uključili rezervacije."
+        "title": "Rezervacije još nisu u vašem planu",
+        "body": "Dodajte rezervacije u svoj plan da biste primali rezervacije stolova."
       },
       "devices": {
-        "title": "Uređaji su PRO značajka",
-        "body": "Povežite tablete kuhinje, konobara i rezervacija uz PRO plan. Prijeđite na PRO da biste povezali uređaje."
+        "title": "Uređaji još nisu u vašem planu",
+        "body": "Dodajte kuhinjski zaslon ili rezervacije u svoj plan da biste uparili kuhinjske, konobarske i rezervacijske tablete."
+      },
+      "menuOffline": {
+        "title": "Vaš javni jelovnik je offline",
+        "body": "Ovaj restoran nema aktivnu pretplatu pa gosti ne mogu vidjeti njegov jelovnik. Sastavite svoj plan u Naplati da ga vratite online."
       }
     }
   },

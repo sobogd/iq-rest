@@ -602,7 +602,62 @@
         "otherCurrencyTip": "Plata se face doar în EUR. Pentru plata în altă monedă, contactați asistența.",
         "pastDueTitle": "Plata a eșuat",
         "pastDueTip": "Nu am putut procesa ultima ta plată. Ai {days} zile la dispoziție să plătești înainte ca meniul să fie dezactivat.",
-        "pastDueBlockedTip": "Meniul tău este dezactivat din cauza plății eșuate. Plătește acum pentru a-l restabili."
+        "pastDueBlockedTip": "Meniul tău este dezactivat din cauza plății eșuate. Plătește acum pentru a-l restabili.",
+        "updatePayment": "Actualizează plata",
+        "updatePaymentTip": "Ultima ta plată a eșuat. Actualizează metoda de plată pentru a menține abonamentul activ — nu e nevoie să cumperi un plan nou.",
+        "checkoutError": "Nu am putut începe plata pentru acest plan și această monedă. Încearcă din nou sau contactează asistența.",
+        "accountProTitle": "PRO inclus în contul tău",
+        "accountProTip": "Acest restaurant este acoperit de abonamentul PRO al contului tău. Nu e nevoie de o plată separată — toate funcțiile PRO sunt active aici.",
+        "accountProTipNamed": "Acest restaurant este acoperit de abonamentul PRO al contului tău, facturat pe {restaurant}. Nu e nevoie de o plată separată — gestionează-l sau anulează-l din facturarea acelui restaurant.",
+        "basicVenueTitle": "Local activ",
+        "basicVenueBody": "Planul tău Basic acoperă un singur restaurant. Alege care este activ — celelalte trec offline până când treci la Pro.",
+        "basicVenueActive": "Activ",
+        "buildYourPlan": "Construiește-ți planul",
+        "featMenu": "Meniu digital",
+        "featMenuShort": "Meniu",
+        "featMenuHint": "Meniu QR pe care îl scanează clienții",
+        "featReservations": "Rezervări",
+        "featReservationsHint": "Rezervări de mese",
+        "featKds": "Ecran de bucătărie",
+        "featKdsHint": "Comenzi pe un ecran de bucătărie",
+        "featDomain": "Domeniu personalizat",
+        "featDomainHint": "Adresa ta web proprie",
+        "restaurantsLabel": "Restaurante",
+        "youHave": "ai {count}",
+        "fewer": "Mai puține",
+        "more": "Mai multe",
+        "billingPeriod": "Perioadă de facturare",
+        "perYearWord": "an",
+        "perMonthWord": "lună",
+        "saveYearly": "Economisește {amount} pe an cu facturare anuală",
+        "volumeDiscountLine": "{percent}% reducere de volum · {count} restaurante",
+        "saveUpToHint": "Economisește până la 50% cu 5+ restaurante",
+        "continue": "Continuă",
+        "yourPlanSummary": "Planul tău",
+        "restaurantOne": "1 restaurant",
+        "restaurantsMany": "{count} restaurante",
+        "edit": "Editează",
+        "billingDetails": "Detalii de facturare",
+        "billingDetailsHint": "Opțional — pentru facturile tale. Sari peste dacă nu le ai.",
+        "fieldLegalName": "Nume / companie",
+        "fieldTaxId": "Cod fiscal",
+        "fieldAddress": "Adresă",
+        "skip": "Sari peste",
+        "preparing": "Îți pregătim abonamentul…",
+        "statusPastDue": "Restant",
+        "statusCanceling": "Se anulează",
+        "renews": "Se reînnoiește {date}",
+        "cancelsOn": "Se anulează pe {date}",
+        "changePlan": "Schimbă planul",
+        "manageSubscription": "Gestionează abonamentul",
+        "myInvoices": "Facturile mele ({count})",
+        "customPlanTitle": "Ai nevoie de un plan personalizat?",
+        "customPlanBody": "Multe restaurante sau cerințe speciale — scrie-ne și îți vom adapta un plan.",
+        "customPlanWa": "Salut! Aș dori un plan personalizat pentru restaurantele mele.",
+        "paymentReceived": "Plată primită — îți activăm abonamentul…",
+        "subscriptionUpdated": "Abonament actualizat.",
+        "errStartSubscription": "Nu am putut porni abonamentul. Încearcă din nou.",
+        "errOpenPayment": "Nu am putut deschide pagina de plată. Încearcă din nou."
       },
       "support": {
         "title": "Suport",
@@ -631,8 +686,8 @@
       "switching": "Se schimbă restaurantul…",
       "add": "Adaugă restaurant",
       "addDesc": "Creează un alt restaurant — duplică acest meniu sau pornește de la zero.",
-      "paidOnly": "Mai multe restaurante sunt disponibile într-un plan plătit. Actualizează la Facturare pentru a adăuga mai multe.",
-      "atLimit": "Ai atins numărul maxim de {limit} restaurante incluse în Pro. Ai nevoie de mai multe? Scrie echipei de asistență despre un plan Enterprise.",
+      "paidOnly": "Adăugarea de restaurante necesită un abonament activ. Construiește-ți planul în Facturare pentru a adăuga mai multe.",
+      "atLimit": "Ai atins cele {limit} restaurante incluse în abonamentul tău. Adaugă mai multe restaurante în Facturare sau scrie asistenței despre un plan personalizat.",
       "newTitle": "Adaugă restaurant",
       "newSubtitle": "Creează un alt restaurant. Alege dacă pornești cu o copie a meniului curent sau de la zero.",
       "startFrom": "Pornește de la",
@@ -869,8 +924,8 @@
       "soundDismiss": "Nu acum",
       "soundPromptTitle": "Activează sunetul?",
       "soundPromptMessage": "Browserele blochează sunetul până când atingi pentru a-l permite. Activează sunetul pentru comenzi noi pentru ca bucătăria să le audă.",
-      "proLockedTitle": "Este necesar planul PRO",
-      "proLockedBody": "Acest ecran necesită un plan PRO activ. Roagă proprietarul să treacă la PRO pentru a continua."
+      "proLockedTitle": "Abonament necesar",
+      "proLockedBody": "Acest ecran necesită un abonament activ cu Ecran de bucătărie. Roagă proprietarul să îl adauge în Facturare pentru a continua."
     },
     "devices": {
       "title": "Dispozitive",
@@ -920,22 +975,26 @@
       "createFailed": "Dispozitivul nu a putut fi creat"
     },
     "proUpsell": {
-      "cta": "Treci la PRO",
+      "cta": "Deschide Facturarea",
       "orders": {
-        "title": "Comenzile sunt o funcție PRO",
-        "body": "Preia și gestionează comenzile la masă cu planul PRO. Treci la PRO pentru a accepta comenzi."
+        "title": "Comenzile nu sunt încă în planul tău",
+        "body": "Adaugă Ecranul de bucătărie în planul tău pentru a prelua și gestiona comenzile la masă."
       },
       "kitchen": {
-        "title": "Ecranul de bucătărie este o funcție PRO",
-        "body": "Trimite comenzile către ecranul din bucătărie cu planul PRO. Treci la PRO pentru a-l activa."
+        "title": "Ecranul de bucătărie nu este încă în planul tău",
+        "body": "Adaugă Ecranul de bucătărie în planul tău pentru a trimite comenzile către ecranul din bucătărie."
       },
       "reservations": {
-        "title": "Rezervările sunt o funcție PRO",
-        "body": "Acceptă rezervări de mese cu planul PRO. Treci la PRO pentru a activa rezervările."
+        "title": "Rezervările nu sunt încă în planul tău",
+        "body": "Adaugă Rezervările în planul tău pentru a accepta rezervări de mese."
       },
       "devices": {
-        "title": "Dispozitivele sunt o funcție PRO",
-        "body": "Asociază tablete de bucătărie, ospătar și rezervări cu planul PRO. Treci la PRO pentru a conecta dispozitive."
+        "title": "Dispozitivele nu sunt încă în planul tău",
+        "body": "Adaugă Ecranul de bucătărie sau Rezervările în planul tău pentru a asocia tablete de bucătărie, ospătar și rezervări."
+      },
+      "menuOffline": {
+        "title": "Meniul tău public este offline",
+        "body": "Acest restaurant nu are un abonament activ, așa că clienții nu îi pot vedea meniul. Construiește-ți planul în Facturare pentru a-l readuce online."
       }
     }
   },

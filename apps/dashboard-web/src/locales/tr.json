@@ -602,7 +602,62 @@
         "otherCurrencyTip": "Ödeme yalnızca EUR ile yapılır. Başka bir para biriminde ödeme için destekle iletişime geçin.",
         "pastDueTitle": "Ödeme başarısız",
         "pastDueTip": "Son ödemenizi işleme alamadık. Menü devre dışı kalmadan önce ödemek için {days} gününüz var.",
-        "pastDueBlockedTip": "Son ödemeniz başarısız olduğu için menünüz devre dışı. Geri yüklemek için şimdi ödeyin."
+        "pastDueBlockedTip": "Son ödemeniz başarısız olduğu için menünüz devre dışı. Geri yüklemek için şimdi ödeyin.",
+        "updatePayment": "Ödemeyi güncelle",
+        "updatePaymentTip": "Son ödemeniz başarısız oldu. Aboneliğinizi etkin tutmak için ödeme yönteminizi güncelleyin — yeni bir plan satın almanıza gerek yok.",
+        "checkoutError": "Bu plan ve para birimi için ödeme başlatılamadı. Lütfen tekrar deneyin veya destek ekibiyle iletişime geçin.",
+        "accountProTitle": "Hesabınıza PRO dahil",
+        "accountProTip": "Bu restoran, hesabınızın PRO aboneliği kapsamındadır. Ayrı bir ödeme gerekmez — tüm PRO özellikleri burada etkindir.",
+        "accountProTipNamed": "Bu restoran, {restaurant} üzerinden faturalanan hesabınızın PRO aboneliği kapsamındadır. Ayrı bir ödeme gerekmez — o restoranın faturalandırmasından yönetin veya iptal edin.",
+        "basicVenueTitle": "Etkin mekan",
+        "basicVenueBody": "Basic planınız bir restoranı kapsar. Hangisinin aktif olduğunu seçin — Pro'ya yükseltene kadar diğerleri çevrimdışı olur.",
+        "basicVenueActive": "Etkin",
+        "buildYourPlan": "Planınızı oluşturun",
+        "featMenu": "Dijital menü",
+        "featMenuShort": "Menü",
+        "featMenuHint": "Misafirlerin taradığı QR menü",
+        "featReservations": "Rezervasyonlar",
+        "featReservationsHint": "Masa rezervasyonları",
+        "featKds": "Mutfak ekranı",
+        "featKdsHint": "Mutfak ekranında siparişler",
+        "featDomain": "Özel alan adı",
+        "featDomainHint": "Kendi web adresiniz",
+        "restaurantsLabel": "Restoranlar",
+        "youHave": "{count} tane var",
+        "fewer": "Daha az",
+        "more": "Daha fazla",
+        "billingPeriod": "Faturalandırma dönemi",
+        "perYearWord": "yıl",
+        "perMonthWord": "ay",
+        "saveYearly": "Yıllık faturalandırmayla yılda {amount} tasarruf edin",
+        "volumeDiscountLine": "%{percent} hacim indirimi · {count} restoran",
+        "saveUpToHint": "5+ restoranla %50'ye varan tasarruf",
+        "continue": "Devam et",
+        "yourPlanSummary": "Planınız",
+        "restaurantOne": "1 restoran",
+        "restaurantsMany": "{count} restoran",
+        "edit": "Düzenle",
+        "billingDetails": "Fatura bilgileri",
+        "billingDetailsHint": "İsteğe bağlı — faturalarınız için. Yoksa atlayın.",
+        "fieldLegalName": "Ad / şirket",
+        "fieldTaxId": "Vergi numarası",
+        "fieldAddress": "Adres",
+        "skip": "Atla",
+        "preparing": "Aboneliğiniz hazırlanıyor…",
+        "statusPastDue": "Vadesi geçti",
+        "statusCanceling": "İptal ediliyor",
+        "renews": "{date} tarihinde yenilenir",
+        "cancelsOn": "{date} tarihinde iptal edilir",
+        "changePlan": "Planı değiştir",
+        "manageSubscription": "Aboneliği yönet",
+        "myInvoices": "Faturalarım ({count})",
+        "customPlanTitle": "Özel bir plana mı ihtiyacınız var?",
+        "customPlanBody": "Çok sayıda restoran veya özel gereksinimler — bize yazın, size özel bir plan hazırlayalım.",
+        "customPlanWa": "Merhaba! Restoranlarım için özel bir plan istiyorum.",
+        "paymentReceived": "Ödeme alındı — aboneliğiniz etkinleştiriliyor…",
+        "subscriptionUpdated": "Abonelik güncellendi.",
+        "errStartSubscription": "Abonelik başlatılamadı. Tekrar deneyin.",
+        "errOpenPayment": "Ödeme sayfası açılamadı. Tekrar deneyin."
       },
       "support": {
         "title": "Destek",
@@ -631,8 +686,8 @@
       "switching": "Restoran değiştiriliyor…",
       "add": "Restoran ekle",
       "addDesc": "Başka bir restoran oluşturun — bu menüyü çoğaltın veya sıfırdan başlayın.",
-      "paidOnly": "Birden fazla restoran ücretli planda kullanılabilir. Daha fazla eklemek için Faturalandırma'dan yükseltin.",
-      "atLimit": "Pro'ya dahil olan en fazla {limit} restorana ulaştınız. Daha fazlası mı gerekiyor? Enterprise planı hakkında destek ekibine yazın.",
+      "paidOnly": "Restoran eklemek için etkin bir abonelik gerekir. Daha fazlasını eklemek için Faturalama'dan planınızı oluşturun.",
+      "atLimit": "Aboneliğinize dahil olan {limit} restorana ulaştınız. Faturalama'dan daha fazla restoran ekleyin veya özel bir plan için destek ekibine yazın.",
       "newTitle": "Restoran ekle",
       "newSubtitle": "Başka bir restoran oluşturun. Mevcut menünün kopyasıyla mı yoksa sıfırdan mı başlayacağınızı seçin.",
       "startFrom": "Başlangıç",
@@ -869,8 +924,8 @@
       "soundDismiss": "Şimdi değil",
       "soundPromptTitle": "Sesi aç?",
       "soundPromptMessage": "Tarayıcılar siz dokunup izin verene kadar sesi engeller. Yeni sipariş bildirim sesini açın ki mutfak siparişleri duysun.",
-      "proLockedTitle": "PRO planı gerekli",
-      "proLockedBody": "Bu ekran etkin bir PRO planı gerektirir. Devam etmek için sahibinden PRO’ya geçmesini iste."
+      "proLockedTitle": "Abonelik gerekli",
+      "proLockedBody": "Bu ekran, mutfak ekranı içeren etkin bir abonelik gerektirir. Devam etmek için sahibinden bunu Faturalama'dan eklemesini iste."
     },
     "devices": {
       "title": "Cihazlar",
@@ -920,22 +975,26 @@
       "createFailed": "Cihaz oluşturulamadı"
     },
     "proUpsell": {
-      "cta": "PRO’ya geç",
+      "cta": "Faturalama'yı aç",
       "orders": {
-        "title": "Siparişler bir PRO özelliğidir",
-        "body": "PRO planıyla masa siparişlerini al ve yönet. Sipariş almaya başlamak için PRO’ya geç."
+        "title": "Siparişler henüz planınızda yok",
+        "body": "Masa siparişlerini almak ve yönetmek için planınıza mutfak ekranı ekleyin."
       },
       "kitchen": {
-        "title": "Mutfak ekranı bir PRO özelliğidir",
-        "body": "Siparişleri PRO planıyla mutfak ekranına gönder. Etkinleştirmek için PRO’ya geç."
+        "title": "Mutfak ekranı henüz planınızda yok",
+        "body": "Siparişleri mutfak ekranına göndermek için planınıza mutfak ekranı ekleyin."
       },
       "reservations": {
-        "title": "Rezervasyonlar bir PRO özelliğidir",
-        "body": "PRO planıyla masa rezervasyonları al. Rezervasyonları açmak için PRO’ya geç."
+        "title": "Rezervasyonlar henüz planınızda yok",
+        "body": "Masa rezervasyonları almak için planınıza rezervasyonları ekleyin."
       },
       "devices": {
-        "title": "Cihazlar bir PRO özelliğidir",
-        "body": "PRO planıyla mutfak, garson ve rezervasyon tabletlerini eşle. Cihaz bağlamak için PRO’ya geç."
+        "title": "Cihazlar henüz planınızda yok",
+        "body": "Mutfak, garson ve rezervasyon tabletlerini eşlemek için planınıza mutfak ekranı veya rezervasyonları ekleyin."
+      },
+      "menuOffline": {
+        "title": "Herkese açık menünüz çevrimdışı",
+        "body": "Bu restoranın etkin aboneliği yok, bu yüzden misafirler menüsünü göremez. Tekrar çevrimiçi yapmak için Faturalama'dan planınızı oluşturun."
       }
     }
   },
