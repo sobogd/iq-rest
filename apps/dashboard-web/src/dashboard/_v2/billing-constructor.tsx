@@ -60,6 +60,9 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
   // Set while awaiting confirmation of the immediate proration charge on an
   // active-plan change (null immediateMajor = amount couldn't be previewed).
   const [pendingCharge, setPendingCharge] = useState<{ immediateMajor: number | null; currency: string } | null>(null);
+  // False until the subscription status is known once. Prevents the constructor
+  // (the sub===null default) flashing before an active/canceling plan loads.
+  const [subLoaded, setSubLoaded] = useState(false);
   const [sub, setSub] = useState<{
     status: string | null;
     currentPeriodEnd: string | null;
@@ -99,7 +102,10 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
   useEffect(() => {
     getPricingCatalog().then(setCatalog);
     getBillingProfile().then((p) => p && setProfile(p));
-    // Sync from Stripe first (covers a missed webhook), then read our DB.
+    // Read our DB FIRST (fast) and mark loaded → the correct card/constructor
+    // renders straight away, no flash. Then reconcile with Stripe in the
+    // background (covers a missed webhook) and refresh silently.
+    refreshSub().finally(() => setSubLoaded(true));
     syncBilling().then(refreshSub);
     const params = new URLSearchParams(window.location.search);
     if (params.get("success")) {
@@ -249,6 +255,17 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
       </div>
     </div>
   ) : null;
+
+  // Until the subscription status is known, show a skeleton — never the
+  // constructor — so an active/canceling plan doesn't flash the builder first.
+  if (!subLoaded) {
+    return (
+      <div className="flex flex-col gap-4" aria-busy="true">
+        <div className="h-24 rounded-xl border border-border bg-card animate-pulse" />
+        <div className="h-9 w-40 rounded-lg bg-accent animate-pulse" />
+      </div>
+    );
+  }
 
   // ── Active subscription → current plan + manage ──
   if (subActive && !changing) {
