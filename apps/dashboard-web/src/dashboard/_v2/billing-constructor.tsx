@@ -208,7 +208,24 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <button type="button" onClick={() => { setChanging(true); setPhase("options"); }} className={primaryBtn}>
+          <button
+            type="button"
+            onClick={() => {
+              // Pre-fill the constructor with the current subscription.
+              if (sub?.features) {
+                setFeat({
+                  reservations: !!sub.features.reservations,
+                  ordersKds: !!sub.features.ordersKds,
+                  domain: !!sub.features.customDomain,
+                });
+              }
+              if (sub?.venueLimit) setCount(Math.max(minCount, sub.venueLimit));
+              if (sub?.interval) setCycle(sub.interval === "year" ? "year" : "month");
+              setChanging(true);
+              setPhase("options");
+            }}
+            className={primaryBtn}
+          >
             Change plan
           </button>
           <button type="button" onClick={manage} className={secondaryBtn}>
