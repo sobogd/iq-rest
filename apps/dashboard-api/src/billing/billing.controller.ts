@@ -322,8 +322,39 @@ export class BillingController {
       expand: ["latest_invoice.payment_intent"],
       metadata: meta,
     });
-    const invoice = created.latest_invoice as { payment_intent?: { client_secret?: string } } | null;
-    return { subscriptionId: created.id, clientSecret: invoice?.payment_intent?.client_secret ?? null };
+
+    // Extract the client secret to confirm the first invoice. Handle both the
+    // classic `latest_invoice.payment_intent` and newer API's
+    // `latest_invoice.confirmation_secret`; fall back to re-fetching the invoice.
+    type InvoiceLike = {
+      id?: string;
+      payment_intent?: { client_secret?: string } | string | null;
+      confirmation_secret?: { client_secret?: string } | null;
+    };
+    const readSecret = (inv: InvoiceLike | null | undefined): string | null => {
+      if (!inv) return null;
+      const pi = inv.payment_intent;
+      if (pi && typeof pi === "object" && pi.client_secret) return pi.client_secret;
+      if (inv.confirmation_secret?.client_secret) return inv.confirmation_secret.client_secret;
+      return null;
+    };
+    let clientSecret = readSecret(created.latest_invoice as InvoiceLike | null);
+    if (!clientSecret) {
+      const invId = (created.latest_invoice as InvoiceLike | null)?.id;
+      if (invId) {
+        const inv = (await stripe.invoices
+          .retrieve(invId, { expand: ["payment_intent", "confirmation_secret"] })
+          .catch(() => null)) as InvoiceLike | null;
+        clientSecret = readSecret(inv);
+      }
+    }
+    if (!clientSecret) {
+      console.error(
+        `billing/subscribe: no client secret for sub ${created.id} (status ${created.status}); ` +
+          `latest_invoice=${JSON.stringify(created.latest_invoice)?.slice(0, 300)}`,
+      );
+    }
+    return { subscriptionId: created.id, clientSecret };
   }
 
   // SetupIntent for changing / adding a card (no charge). The frontend confirms
