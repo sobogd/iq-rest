@@ -602,7 +602,62 @@
         "otherCurrencyTip": "Mokėjimas tik EUR. Norėdami mokėti kita valiuta, susisiekite su pagalba.",
         "pastDueTitle": "Mokėjimas nepavyko",
         "pastDueTip": "Nepavyko apdoroti paskutinio mokėjimo. Turite {days} d. sumokėti, kol meniu bus išjungtas.",
-        "pastDueBlockedTip": "Jūsų meniu išjungtas dėl nepavykusio mokėjimo. Sumokėkite dabar, kad jį atkurtumėte."
+        "pastDueBlockedTip": "Jūsų meniu išjungtas dėl nepavykusio mokėjimo. Sumokėkite dabar, kad jį atkurtumėte.",
+        "updatePayment": "Atnaujinti mokėjimą",
+        "updatePaymentTip": "Paskutinis mokėjimas nepavyko. Atnaujinkite mokėjimo būdą, kad prenumerata liktų aktyvi — naujo plano pirkti nereikia.",
+        "checkoutError": "Nepavyko pradėti apmokėjimo šiam planui ir valiutai. Bandykite dar kartą arba kreipkitės į pagalbą.",
+        "accountProTitle": "PRO įtrauktas į jūsų paskyrą",
+        "accountProTip": "Šiam restoranui galioja jūsų paskyros PRO prenumerata. Atskiro mokėjimo nereikia — visos PRO funkcijos čia aktyvios.",
+        "accountProTipNamed": "Šiam restoranui galioja jūsų paskyros PRO prenumerata, apmokestinama per {restaurant}. Atskiro mokėjimo nereikia — tvarkykite arba atšaukite ją to restorano atsiskaitymo skiltyje.",
+        "basicVenueTitle": "Aktyvus restoranas",
+        "basicVenueBody": "Jūsų Basic planas apima vieną restoraną. Pasirinkite, kuris veiks — kiti bus išjungti, kol atnaujinsite į Pro.",
+        "basicVenueActive": "Aktyvus",
+        "buildYourPlan": "Sudarykite savo planą",
+        "featMenu": "Skaitmeninis meniu",
+        "featMenuShort": "Meniu",
+        "featMenuHint": "QR meniu, kurį skenuoja svečiai",
+        "featReservations": "Rezervacijos",
+        "featReservationsHint": "Stalų rezervacijos",
+        "featKds": "Virtuvės ekranas",
+        "featKdsHint": "Užsakymai virtuvės ekrane",
+        "featDomain": "Nuosavas domenas",
+        "featDomainHint": "Jūsų pačių interneto adresas",
+        "restaurantsLabel": "Restoranai",
+        "youHave": "turite {count}",
+        "fewer": "Mažiau",
+        "more": "Daugiau",
+        "billingPeriod": "Atsiskaitymo laikotarpis",
+        "perYearWord": "metai",
+        "perMonthWord": "mėnuo",
+        "saveYearly": "Sutaupykite {amount} per metus mokėdami kasmet",
+        "volumeDiscountLine": "{percent}% nuolaida už kiekį · {count} restoranai",
+        "saveUpToHint": "Sutaupykite iki 50 % su 5+ restoranais",
+        "continue": "Tęsti",
+        "yourPlanSummary": "Jūsų planas",
+        "restaurantOne": "1 restoranas",
+        "restaurantsMany": "{count} restoranai",
+        "edit": "Redaguoti",
+        "billingDetails": "Atsiskaitymo duomenys",
+        "billingDetailsHint": "Neprivaloma — jūsų sąskaitoms. Praleiskite, jei jų neturite.",
+        "fieldLegalName": "Vardas / įmonė",
+        "fieldTaxId": "Mokesčių mokėtojo kodas",
+        "fieldAddress": "Adresas",
+        "skip": "Praleisti",
+        "preparing": "Ruošiama jūsų prenumerata…",
+        "statusPastDue": "Pradelsta",
+        "statusCanceling": "Atšaukiama",
+        "renews": "Atsinaujins {date}",
+        "cancelsOn": "Atšaukiama {date}",
+        "changePlan": "Keisti planą",
+        "manageSubscription": "Tvarkyti prenumeratą",
+        "myInvoices": "Mano sąskaitos ({count})",
+        "customPlanTitle": "Reikia individualaus plano?",
+        "customPlanBody": "Daug restoranų ar ypatingi poreikiai — parašykite mums ir pritaikysime planą jums.",
+        "customPlanWa": "Sveiki! Norėčiau individualaus plano savo restoranams.",
+        "paymentReceived": "Mokėjimas gautas — aktyvinama jūsų prenumerata…",
+        "subscriptionUpdated": "Prenumerata atnaujinta.",
+        "errStartSubscription": "Nepavyko pradėti prenumeratos. Bandykite dar kartą.",
+        "errOpenPayment": "Nepavyko atidaryti mokėjimo puslapio. Bandykite dar kartą."
       },
       "support": {
         "title": "Pagalba",
@@ -631,8 +686,8 @@
       "switching": "Perjungiamas restoranas…",
       "add": "Pridėti restoraną",
       "addDesc": "Sukurkite kitą restoraną — dubliuokite šį meniu arba pradėkite nuo nulio.",
-      "paidOnly": "Keli restoranai pasiekiami mokamame plane. Atnaujinkite skiltyje Apmokestinimas, kad pridėtumėte daugiau.",
-      "atLimit": "Pasiekėte didžiausią į Pro įtrauktų restoranų skaičių – {limit}. Reikia daugiau? Parašykite palaikymo komandai dėl Enterprise plano.",
+      "paidOnly": "Restoranams pridėti reikia aktyvios prenumeratos. Sudarykite savo planą skiltyje Atsiskaitymas, kad pridėtumėte daugiau.",
+      "atLimit": "Pasiekėte {limit} restoranų, įtrauktų į jūsų prenumeratą, ribą. Pridėkite daugiau restoranų skiltyje Atsiskaitymas arba parašykite pagalbai dėl individualaus plano.",
       "newTitle": "Pridėti restoraną",
       "newSubtitle": "Sukurkite kitą restoraną. Pasirinkite, ar pradėti nuo dabartinio meniu kopijos, ar nuo nulio.",
       "startFrom": "Pradėti nuo",
@@ -869,8 +924,8 @@
       "soundDismiss": "Ne dabar",
       "soundPromptTitle": "Įjungti garsą?",
       "soundPromptMessage": "Naršyklės blokuoja garsą, kol bakstelėjate jam leisti. Įjunkite naujų užsakymų signalą, kad virtuvė girdėtų atvykstančius užsakymus.",
-      "proLockedTitle": "Reikalingas PRO planas",
-      "proLockedBody": "Šiam ekranui reikia aktyvaus PRO plano. Paprašykite savininko atnaujinti į PRO, kad tęstumėte."
+      "proLockedTitle": "Reikalinga prenumerata",
+      "proLockedBody": "Šiam ekranui reikia aktyvios prenumeratos su Virtuvės ekranu. Paprašykite savininko pridėti ją skiltyje Atsiskaitymas, kad tęstumėte."
     },
     "devices": {
       "title": "Įrenginiai",
@@ -920,22 +975,26 @@
       "createFailed": "Įrenginio sukurti nepavyko"
     },
     "proUpsell": {
-      "cta": "Atnaujinti į PRO",
+      "cta": "Atidaryti Atsiskaitymą",
+      "menuOffline": {
+        "title": "Jūsų viešas meniu neaktyvus",
+        "body": "Šis restoranas neturi aktyvios prenumeratos, todėl svečiai nemato jo meniu. Sudarykite savo planą skiltyje Atsiskaitymas, kad jį vėl įjungtumėte."
+      },
       "orders": {
-        "title": "Užsakymai yra PRO funkcija",
-        "body": "Priimkite ir tvarkykite užsakymus prie stalų su PRO planu. Atnaujinkite į PRO, kad priimtumėte užsakymus."
+        "title": "Užsakymų dar nėra jūsų plane",
+        "body": "Pridėkite Virtuvės ekraną prie savo plano, kad priimtumėte ir tvarkytumėte užsakymus prie stalų."
       },
       "kitchen": {
-        "title": "Virtuvės ekranas yra PRO funkcija",
-        "body": "Siųskite užsakymus į virtuvės ekraną su PRO planu. Atnaujinkite į PRO, kad įjungtumėte."
+        "title": "Virtuvės ekrano dar nėra jūsų plane",
+        "body": "Pridėkite Virtuvės ekraną prie savo plano, kad siųstumėte užsakymus į virtuvės ekraną."
       },
       "reservations": {
-        "title": "Rezervacijos yra PRO funkcija",
-        "body": "Priimkite stalų rezervacijas su PRO planu. Atnaujinkite į PRO, kad įjungtumėte rezervacijas."
+        "title": "Rezervacijų dar nėra jūsų plane",
+        "body": "Pridėkite Rezervacijas prie savo plano, kad priimtumėte stalų rezervacijas."
       },
       "devices": {
-        "title": "Įrenginiai yra PRO funkcija",
-        "body": "Susiekite virtuvės, padavėjo ir rezervacijų planšetes su PRO planu. Atnaujinkite į PRO, kad prijungtumėte įrenginius."
+        "title": "Įrenginių dar nėra jūsų plane",
+        "body": "Pridėkite Virtuvės ekraną arba Rezervacijas prie savo plano, kad susietumėte virtuvės, padavėjų ir rezervacijų planšetes."
       }
     }
   },

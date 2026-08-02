@@ -602,7 +602,62 @@
         "otherCurrencyTip": "El pagament és només en EUR. Per pagar en una altra moneda, contacta amb el suport.",
         "pastDueTitle": "El pagament ha fallat",
         "pastDueTip": "No hem pogut processar el teu últim pagament. Tens {days} dies per pagar abans que el menú es desconnecti.",
-        "pastDueBlockedTip": "El teu menú està desconnectat perquè l'últim pagament ha fallat. Paga ara per restaurar-lo."
+        "pastDueBlockedTip": "El teu menú està desconnectat perquè l'últim pagament ha fallat. Paga ara per restaurar-lo.",
+        "updatePayment": "Actualitza el pagament",
+        "updatePaymentTip": "L'últim pagament ha fallat. Actualitza el mètode de pagament per mantenir la subscripció activa — no cal comprar cap pla nou.",
+        "checkoutError": "No s'ha pogut iniciar el pagament per a aquest pla i moneda. Torna-ho a provar o contacta amb el suport.",
+        "accountProTitle": "PRO inclòs amb el teu compte",
+        "accountProTip": "Aquest restaurant està cobert per la subscripció PRO del teu compte. No cal cap pagament a part — totes les funcions PRO estan actives aquí.",
+        "accountProTipNamed": "Aquest restaurant està cobert per la subscripció PRO del teu compte, facturada a {restaurant}. No cal cap pagament a part — gestiona-la o cancel·la-la des de la facturació d'aquell restaurant.",
+        "basicVenueTitle": "Local actiu",
+        "basicVenueBody": "El teu pla Basic cobreix un restaurant. Tria quin està actiu — els altres es desconnecten fins que millores a Pro.",
+        "basicVenueActive": "Actiu",
+        "buildYourPlan": "Munta el teu pla",
+        "featMenu": "Menú digital",
+        "featMenuShort": "Menú",
+        "featMenuHint": "Menú QR que escanegen els clients",
+        "featReservations": "Reserves",
+        "featReservationsHint": "Reserves de taula",
+        "featKds": "Pantalla de cuina",
+        "featKdsHint": "Comandes en una pantalla de cuina",
+        "featDomain": "Domini propi",
+        "featDomainHint": "La teva pròpia adreça web",
+        "restaurantsLabel": "Restaurants",
+        "youHave": "en tens {count}",
+        "fewer": "Menys",
+        "more": "Més",
+        "billingPeriod": "Període de facturació",
+        "perYearWord": "any",
+        "perMonthWord": "mes",
+        "saveYearly": "Estalvia {amount} l'any amb la facturació anual",
+        "volumeDiscountLine": "{percent}% de descompte per volum · {count} restaurants",
+        "saveUpToHint": "Estalvia fins a un 50% amb 5+ restaurants",
+        "continue": "Continua",
+        "yourPlanSummary": "El teu pla",
+        "restaurantOne": "1 restaurant",
+        "restaurantsMany": "{count} restaurants",
+        "edit": "Edita",
+        "billingDetails": "Dades de facturació",
+        "billingDetailsHint": "Opcional — per a les teves factures. Omet-ho si no les tens.",
+        "fieldLegalName": "Nom / empresa",
+        "fieldTaxId": "Número fiscal",
+        "fieldAddress": "Adreça",
+        "skip": "Omet",
+        "preparing": "Preparant la teva subscripció…",
+        "statusPastDue": "Pagament pendent",
+        "statusCanceling": "Cancel·lant",
+        "renews": "Es renova el {date}",
+        "cancelsOn": "Es cancel·la el {date}",
+        "changePlan": "Canvia de pla",
+        "manageSubscription": "Gestiona la subscripció",
+        "myInvoices": "Les meves factures ({count})",
+        "customPlanTitle": "Necessites un pla a mida?",
+        "customPlanBody": "Molts restaurants o necessitats especials — escriu-nos i et prepararem un pla a mida.",
+        "customPlanWa": "Hola! M'agradaria un pla a mida per als meus restaurants.",
+        "paymentReceived": "Pagament rebut — activant la teva subscripció…",
+        "subscriptionUpdated": "Subscripció actualitzada.",
+        "errStartSubscription": "No s'ha pogut iniciar la subscripció. Torna-ho a provar.",
+        "errOpenPayment": "No s'ha pogut obrir la pàgina de pagament. Torna-ho a provar."
       },
       "support": {
         "title": "Suport",
@@ -631,8 +686,8 @@
       "switching": "Canviant de restaurant…",
       "add": "Afegeix restaurant",
       "addDesc": "Crea un altre restaurant: duplica aquest menú o comença de zero.",
-      "paidOnly": "Diversos restaurants estan disponibles al pla de pagament. Actualitza a Facturació per afegir-ne més.",
-      "atLimit": "Has arribat al màxim de {limit} restaurants inclosos a Pro. En necessites més? Escriu al suport sobre un pla Enterprise.",
+      "paidOnly": "Afegir restaurants requereix una subscripció activa. Munta el teu pla a Facturació per afegir-ne més.",
+      "atLimit": "Has arribat als {limit} restaurants inclosos a la teva subscripció. Afegeix més restaurants a Facturació o escriu al suport per a un pla a mida.",
       "newTitle": "Afegeix restaurant",
       "newSubtitle": "Crea un altre restaurant. Tria si vols començar amb una còpia del menú actual o des de zero.",
       "startFrom": "Comença des de",
@@ -869,8 +924,8 @@
       "soundDismiss": "Ara no",
       "soundPromptTitle": "Activar el so?",
       "soundPromptMessage": "Els navegadors bloquegen el so fins que toques per permetre'l. Activa l'avís de noves comandes perquè la cuina les senti.",
-      "proLockedTitle": "Cal el pla PRO",
-      "proLockedBody": "Aquesta pantalla necessita un pla PRO actiu. Demana al propietari que millori el pla per continuar."
+      "proLockedTitle": "Cal una subscripció",
+      "proLockedBody": "Aquesta pantalla necessita una subscripció activa amb Pantalla de cuina. Demana al propietari que l'afegeixi a Facturació per continuar."
     },
     "devices": {
       "title": "Dispositius",
@@ -920,22 +975,26 @@
       "createFailed": "No s'ha pogut crear el dispositiu"
     },
     "proUpsell": {
-      "cta": "Canvia a PRO",
+      "cta": "Obre Facturació",
+      "menuOffline": {
+        "title": "El teu menú públic està desconnectat",
+        "body": "Aquest restaurant no té cap subscripció activa, així que els clients no poden veure'n el menú. Munta el teu pla a Facturació per tornar-lo a activar."
+      },
       "orders": {
-        "title": "Les comandes són una funció PRO",
-        "body": "Rep i gestiona comandes de taula amb el pla PRO. Millora el pla per començar a acceptar comandes."
+        "title": "Les comandes encara no són al teu pla",
+        "body": "Afegeix Pantalla de cuina al teu pla per rebre i gestionar comandes de taula."
       },
       "kitchen": {
-        "title": "La pantalla de cuina és una funció PRO",
-        "body": "Envia les comandes a la pantalla de cuina amb el pla PRO. Millora el pla per activar-la."
+        "title": "La pantalla de cuina encara no és al teu pla",
+        "body": "Afegeix Pantalla de cuina al teu pla per enviar les comandes a la pantalla de cuina."
       },
       "reservations": {
-        "title": "Les reserves són una funció PRO",
-        "body": "Accepta reserves de taula amb el pla PRO. Millora el pla per activar les reserves."
+        "title": "Les reserves encara no són al teu pla",
+        "body": "Afegeix Reserves al teu pla per acceptar reserves de taula."
       },
       "devices": {
-        "title": "Els dispositius són una funció PRO",
-        "body": "Vincula tauletes de cuina, cambrer i reserves amb el pla PRO. Millora el pla per connectar dispositius."
+        "title": "Els dispositius encara no són al teu pla",
+        "body": "Afegeix Pantalla de cuina o Reserves al teu pla per vincular tauletes de cuina, cambrer i reserves."
       }
     }
   },

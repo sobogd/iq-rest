@@ -602,7 +602,62 @@
         "otherCurrencyTip": "Maksmine ainult EUR-is. Teises valuutas maksmiseks võtke ühendust toega.",
         "pastDueTitle": "Makse ebaõnnestus",
         "pastDueTip": "Me ei saanud teie viimast makset töödelda. Teil on {days} päeva aega maksta, enne kui menüü välja lülitub.",
-        "pastDueBlockedTip": "Teie menüü on väljas, kuna viimane makse ebaõnnestus. Makske kohe, et see taastada."
+        "pastDueBlockedTip": "Teie menüü on väljas, kuna viimane makse ebaõnnestus. Makske kohe, et see taastada.",
+        "updatePayment": "Uuenda makseviisi",
+        "updatePaymentTip": "Sinu viimane makse ebaõnnestus. Uuenda makseviisi, et tellimus jääks aktiivseks — uut plaani pole vaja osta.",
+        "checkoutError": "Selle plaani ja valuuta jaoks ei õnnestunud maksmist alustada. Palun proovi uuesti või võta ühendust toega.",
+        "accountProTitle": "PRO kuulub sinu konto juurde",
+        "accountProTip": "See restoran on kaetud sinu konto PRO-tellimusega. Eraldi maksmist pole vaja — kõik PRO-funktsioonid on siin aktiivsed.",
+        "accountProTipNamed": "See restoran on kaetud sinu konto PRO-tellimusega, mille arveldus käib restorani {restaurant} kaudu. Eraldi maksmist pole vaja — halda või tühista seda selle restorani arvelduse alt.",
+        "basicVenueTitle": "Aktiivne restoran",
+        "basicVenueBody": "Sinu Basic-plaan katab ühe restorani. Vali, milline on aktiivne — ülejäänud lülituvad välja, kuni uuendad Pro-le.",
+        "basicVenueActive": "Aktiivne",
+        "buildYourPlan": "Koosta oma pakett",
+        "featMenu": "Digitaalne menüü",
+        "featMenuShort": "Menüü",
+        "featMenuHint": "QR-menüü, mida kliendid skannivad",
+        "featReservations": "Broneeringud",
+        "featReservationsHint": "Lauabroneeringud",
+        "featKds": "Köögiekraan",
+        "featKdsHint": "Tellimused köögiekraanil",
+        "featDomain": "Oma domeen",
+        "featDomainHint": "Sinu enda veebiaadress",
+        "restaurantsLabel": "Restoranid",
+        "youHave": "sul on {count}",
+        "fewer": "Vähem",
+        "more": "Rohkem",
+        "billingPeriod": "Arveldusperiood",
+        "perYearWord": "aasta",
+        "perMonthWord": "kuu",
+        "saveYearly": "Säästa aastas {amount} aastase arveldusega",
+        "volumeDiscountLine": "{percent}% mahuallahindlus · {count} restorani",
+        "saveUpToHint": "Säästa kuni 50% 5+ restoraniga",
+        "continue": "Jätka",
+        "yourPlanSummary": "Sinu pakett",
+        "restaurantOne": "1 restoran",
+        "restaurantsMany": "{count} restorani",
+        "edit": "Muuda",
+        "billingDetails": "Arveldusandmed",
+        "billingDetailsHint": "Valikuline — sinu arvete jaoks. Jäta vahele, kui sul neid pole.",
+        "fieldLegalName": "Nimi / ettevõte",
+        "fieldTaxId": "Maksunumber",
+        "fieldAddress": "Aadress",
+        "skip": "Jäta vahele",
+        "preparing": "Valmistame sinu tellimust ette…",
+        "statusPastDue": "Maksmata",
+        "statusCanceling": "Tühistamisel",
+        "renews": "Uueneb {date}",
+        "cancelsOn": "Tühistatakse {date}",
+        "changePlan": "Muuda paketti",
+        "manageSubscription": "Halda tellimust",
+        "myInvoices": "Minu arved ({count})",
+        "customPlanTitle": "Vajad eripaketti?",
+        "customPlanBody": "Palju restorane või erinõuded — kirjuta meile ja koostame sulle sobiva paketi.",
+        "customPlanWa": "Tere! Sooviksin oma restoranidele eripaketti.",
+        "paymentReceived": "Makse laekus — aktiveerime sinu tellimust…",
+        "subscriptionUpdated": "Tellimus uuendatud.",
+        "errStartSubscription": "Tellimust ei õnnestunud alustada. Proovi uuesti.",
+        "errOpenPayment": "Makselehte ei õnnestunud avada. Proovi uuesti."
       },
       "support": {
         "title": "Tugi",
@@ -631,8 +686,8 @@
       "switching": "Restorani vahetamine…",
       "add": "Lisa restoran",
       "addDesc": "Loo veel üks restoran — dubleeri see menüü või alusta tühjalt.",
-      "paidOnly": "Mitu restorani on saadaval tasulises plaanis. Uuenda arveldamise alt, et lisada veel.",
-      "atLimit": "Oled jõudnud Pro paketti kuuluva {limit} restorani ülempiirini. Vajad rohkem? Kirjuta toele Enterprise plaani kohta.",
+      "paidOnly": "Restoranide lisamiseks on vaja aktiivset tellimust. Koosta oma pakett arvelduse alt, et lisada veel.",
+      "atLimit": "Oled jõudnud oma tellimusse kuuluva {limit} restorani ülempiirini. Lisa veel restorane arvelduse alt või kirjuta toele eripaketi kohta.",
       "newTitle": "Lisa restoran",
       "newSubtitle": "Loo veel üks restoran. Vali, kas alustada praeguse menüü koopiast või nullist.",
       "startFrom": "Alusta",
@@ -869,8 +924,8 @@
       "soundDismiss": "Mitte praegu",
       "soundPromptTitle": "Lülitada heli sisse?",
       "soundPromptMessage": "Brauserid blokeerivad heli, kuni puudutad selle lubamiseks. Lülita uue tellimuse helisignaal sisse, et köök kuuleks tellimusi.",
-      "proLockedTitle": "Vajalik on PRO-pakett",
-      "proLockedBody": "See ekraan vajab aktiivset PRO-paketti. Palu omanikul uuendada PRO-le, et jätkata."
+      "proLockedTitle": "Vajalik on tellimus",
+      "proLockedBody": "See ekraan vajab aktiivset tellimust koos köögiekraaniga. Palu omanikul see arvelduse alt lisada, et jätkata."
     },
     "devices": {
       "title": "Seadmed",
@@ -920,22 +975,26 @@
       "createFailed": "Seadet ei õnnestunud luua"
     },
     "proUpsell": {
-      "cta": "Uuenda PRO-le",
+      "cta": "Ava arveldus",
+      "menuOffline": {
+        "title": "Sinu avalik menüü on võrguühenduseta",
+        "body": "Sellel restoranil pole aktiivset tellimust, seega kliendid ei näe selle menüüd. Koosta oma pakett arvelduse alt, et see uuesti võrku tuua."
+      },
       "orders": {
-        "title": "Tellimused on PRO-funktsioon",
-        "body": "Võta vastu ja halda lauatellimusi PRO-paketiga. Uuenda PRO-le, et hakata tellimusi vastu võtma."
+        "title": "Tellimused pole veel sinu paketis",
+        "body": "Lisa köögiekraan oma paketti, et võtta vastu ja hallata lauatellimusi."
       },
       "kitchen": {
-        "title": "Köögiekraan on PRO-funktsioon",
-        "body": "Saada tellimused köögiekraanile PRO-paketiga. Uuenda PRO-le, et see sisse lülitada."
+        "title": "Köögiekraan pole veel sinu paketis",
+        "body": "Lisa köögiekraan oma paketti, et saata tellimused köögiekraanile."
       },
       "reservations": {
-        "title": "Broneeringud on PRO-funktsioon",
-        "body": "Võta vastu lauabroneeringuid PRO-paketiga. Uuenda PRO-le, et broneeringud sisse lülitada."
+        "title": "Broneeringud pole veel sinu paketis",
+        "body": "Lisa broneeringud oma paketti, et võtta vastu lauabroneeringuid."
       },
       "devices": {
-        "title": "Seadmed on PRO-funktsioon",
-        "body": "Seo köögi-, kelneri- ja broneeringutahvlid PRO-paketiga. Uuenda PRO-le, et seadmeid ühendada."
+        "title": "Seadmed pole veel sinu paketis",
+        "body": "Lisa köögiekraan või broneeringud oma paketti, et siduda köögi-, kelneri- ja broneeringutahvleid."
       }
     }
   },

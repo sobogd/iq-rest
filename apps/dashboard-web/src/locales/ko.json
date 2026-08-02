@@ -602,7 +602,62 @@
         "otherCurrencyTip": "결제는 EUR만 가능합니다. 다른 통화로 결제하려면 지원팀에 문의하세요.",
         "pastDueTitle": "결제 실패",
         "pastDueTip": "최근 결제를 처리하지 못했습니다. 메뉴가 중단되기 전 {days}일 이내에 결제하세요.",
-        "pastDueBlockedTip": "최근 결제 실패로 메뉴가 중단되었습니다. 지금 결제하여 복구하세요."
+        "pastDueBlockedTip": "최근 결제 실패로 메뉴가 중단되었습니다. 지금 결제하여 복구하세요.",
+        "updatePayment": "결제 업데이트",
+        "updatePaymentTip": "최근 결제가 실패했습니다. 구독을 계속 유지하려면 결제 수단을 업데이트하세요 — 새 플랜을 구매할 필요는 없습니다.",
+        "checkoutError": "이 플랜과 통화로 결제를 시작할 수 없습니다. 다시 시도하거나 지원팀에 문의하세요.",
+        "accountProTitle": "계정에 PRO 포함됨",
+        "accountProTip": "이 레스토랑은 계정의 PRO 구독으로 보장됩니다. 별도의 결제가 필요 없으며, 모든 PRO 기능이 여기에서 활성화되어 있습니다.",
+        "accountProTipNamed": "이 레스토랑은 {restaurant}에서 청구되는 계정의 PRO 구독으로 보장됩니다. 별도의 결제가 필요 없으며, 해당 레스토랑의 결제에서 관리하거나 취소할 수 있습니다.",
+        "basicVenueTitle": "활성 매장",
+        "basicVenueBody": "Basic 플랜은 레스토랑 한 곳을 보장합니다. 어느 곳을 운영할지 선택하세요 — 나머지는 Pro로 업그레이드할 때까지 오프라인이 됩니다.",
+        "basicVenueActive": "활성",
+        "buildYourPlan": "플랜 구성",
+        "featMenu": "디지털 메뉴",
+        "featMenuShort": "메뉴",
+        "featMenuHint": "손님이 스캔하는 QR 메뉴",
+        "featReservations": "예약",
+        "featReservationsHint": "테이블 예약",
+        "featKds": "주방 디스플레이",
+        "featKdsHint": "주방 화면의 주문",
+        "featDomain": "맞춤 도메인",
+        "featDomainHint": "나만의 웹 주소",
+        "restaurantsLabel": "레스토랑",
+        "youHave": "{count}개 보유",
+        "fewer": "적게",
+        "more": "많게",
+        "billingPeriod": "청구 주기",
+        "perYearWord": "년",
+        "perMonthWord": "월",
+        "saveYearly": "연간 청구로 연 {amount} 절약",
+        "volumeDiscountLine": "{percent}% 대량 할인 · {count}개 레스토랑",
+        "saveUpToHint": "레스토랑 5곳 이상이면 최대 50% 절약",
+        "continue": "계속",
+        "yourPlanSummary": "내 플랜",
+        "restaurantOne": "레스토랑 1개",
+        "restaurantsMany": "{count}개 레스토랑",
+        "edit": "편집",
+        "billingDetails": "청구 정보",
+        "billingDetailsHint": "선택 사항 — 인보이스용입니다. 없으면 건너뛰세요.",
+        "fieldLegalName": "이름 / 회사",
+        "fieldTaxId": "세금 번호",
+        "fieldAddress": "주소",
+        "skip": "건너뛰기",
+        "preparing": "구독을 준비하는 중…",
+        "statusPastDue": "연체",
+        "statusCanceling": "취소 중",
+        "renews": "{date}에 갱신",
+        "cancelsOn": "{date}에 취소",
+        "changePlan": "플랜 변경",
+        "manageSubscription": "구독 관리",
+        "myInvoices": "내 인보이스 ({count})",
+        "customPlanTitle": "맞춤 플랜이 필요하신가요?",
+        "customPlanBody": "레스토랑이 많거나 특별한 요구 사항이 있으신가요 — 메시지를 보내주시면 맞춤 플랜을 준비해 드리겠습니다.",
+        "customPlanWa": "안녕하세요! 제 레스토랑을 위한 맞춤 플랜을 원합니다.",
+        "paymentReceived": "결제가 접수되었습니다 — 구독을 활성화하는 중…",
+        "subscriptionUpdated": "구독이 업데이트되었습니다.",
+        "errStartSubscription": "구독을 시작할 수 없습니다. 다시 시도하세요.",
+        "errOpenPayment": "결제 페이지를 열 수 없습니다. 다시 시도하세요."
       },
       "support": {
         "title": "지원",
@@ -631,8 +686,8 @@
       "switching": "레스토랑 전환 중…",
       "add": "레스토랑 추가",
       "addDesc": "다른 레스토랑을 만드세요 — 이 메뉴를 복제하거나 새로 시작합니다.",
-      "paidOnly": "여러 레스토랑은 유료 요금제에서 사용할 수 있습니다. 결제에서 업그레이드해 추가하세요.",
-      "atLimit": "Pro에 포함된 최대 {limit}개 레스토랑에 도달했습니다. 더 필요하신가요? Enterprise 요금제에 대해 지원팀에 문의하세요.",
+      "paidOnly": "레스토랑을 추가하려면 활성 구독이 필요합니다. 더 추가하려면 결제에서 플랜을 구성하세요.",
+      "atLimit": "구독에 포함된 {limit}개 레스토랑에 도달했습니다. 결제에서 레스토랑을 더 추가하거나, 맞춤 플랜에 대해 지원팀에 문의하세요.",
       "newTitle": "레스토랑 추가",
       "newSubtitle": "다른 레스토랑을 만드세요. 현재 메뉴 복사본으로 시작할지 처음부터 시작할지 선택하세요.",
       "startFrom": "시작 방식",
@@ -869,8 +924,8 @@
       "soundDismiss": "나중에",
       "soundPromptTitle": "사운드를 활성화할까요?",
       "soundPromptMessage": "브라우저는 탭으로 허용할 때까지 오디오를 차단합니다. 새 주문 알림음을 켜서 주방이 들어오는 주문을 들을 수 있게 하세요.",
-      "proLockedTitle": "PRO 요금제가 필요합니다",
-      "proLockedBody": "이 화면에는 활성 PRO 요금제가 필요합니다. 계속하려면 소유자에게 업그레이드를 요청하세요."
+      "proLockedTitle": "구독이 필요합니다",
+      "proLockedBody": "이 화면에는 주방 디스플레이가 포함된 활성 구독이 필요합니다. 계속하려면 소유자에게 결제에서 추가하도록 요청하세요."
     },
     "devices": {
       "title": "기기",
@@ -920,22 +975,26 @@
       "createFailed": "기기를 생성할 수 없습니다"
     },
     "proUpsell": {
-      "cta": "PRO로 업그레이드",
+      "cta": "결제 열기",
+      "menuOffline": {
+        "title": "공개 메뉴가 오프라인입니다",
+        "body": "이 레스토랑은 활성 구독이 없어 손님이 메뉴를 볼 수 없습니다. 결제에서 플랜을 구성하여 다시 온라인으로 전환하세요."
+      },
       "orders": {
-        "title": "주문은 PRO 기능입니다",
-        "body": "PRO 요금제로 테이블 주문을 받고 관리하세요. 업그레이드하여 주문 받기를 시작하세요."
+        "title": "주문이 아직 플랜에 없습니다",
+        "body": "테이블 주문을 받고 관리하려면 플랜에 주방 디스플레이를 추가하세요."
       },
       "kitchen": {
-        "title": "주방 디스플레이는 PRO 기능입니다",
-        "body": "PRO 요금제로 주문을 주방 화면에 보내세요. 업그레이드하여 활성화하세요."
+        "title": "주방 디스플레이가 아직 플랜에 없습니다",
+        "body": "주문을 주방 화면으로 보내려면 플랜에 주방 디스플레이를 추가하세요."
       },
       "reservations": {
-        "title": "예약은 PRO 기능입니다",
-        "body": "PRO 요금제로 테이블 예약을 받으세요. 업그레이드하여 예약을 활성화하세요."
+        "title": "예약이 아직 플랜에 없습니다",
+        "body": "테이블 예약을 받으려면 플랜에 예약을 추가하세요."
       },
       "devices": {
-        "title": "기기는 PRO 기능입니다",
-        "body": "PRO 요금제로 주방, 서버, 예약 태블릿을 페어링하세요. 업그레이드하여 기기를 연결하세요."
+        "title": "기기가 아직 플랜에 없습니다",
+        "body": "주방, 서빙, 예약 태블릿을 페어링하려면 플랜에 주방 디스플레이 또는 예약을 추가하세요."
       }
     }
   },

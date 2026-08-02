@@ -602,7 +602,62 @@
         "otherCurrencyTip": "Greiðsla aðeins í EUR. Hafðu samband við þjónustuver til að greiða í annarri mynt.",
         "pastDueTitle": "Greiðsla mistókst",
         "pastDueTip": "Okkur tókst ekki að vinna síðustu greiðslu þína. Þú hefur {days} daga til að greiða áður en matseðillinn fer offline.",
-        "pastDueBlockedTip": "Matseðillinn þinn er óvirkur vegna misheppnaðrar greiðslu. Greiddu núna til að endurheimta hann."
+        "pastDueBlockedTip": "Matseðillinn þinn er óvirkur vegna misheppnaðrar greiðslu. Greiddu núna til að endurheimta hann.",
+        "updatePayment": "Uppfæra greiðslu",
+        "updatePaymentTip": "Síðasta greiðslan þín mistókst. Uppfærðu greiðslumátann til að halda áskriftinni virkri — þú þarft ekki að kaupa nýja áskrift.",
+        "checkoutError": "Tókst ekki að hefja greiðslu fyrir þessa áskrift og mynt. Reyndu aftur eða hafðu samband við þjónustuver.",
+        "accountProTitle": "PRO fylgir reikningnum þínum",
+        "accountProTip": "Þessi veitingastaður er innifalinn í PRO-áskrift reikningsins þíns. Engin sérstök greiðsla þarf — allir PRO-eiginleikar eru virkir hér.",
+        "accountProTipNamed": "Þessi veitingastaður er innifalinn í PRO-áskrift reikningsins þíns, rukkað á {restaurant}. Engin sérstök greiðsla þarf — stjórnaðu eða hættu henni í reikningagerð þess veitingastaðar.",
+        "basicVenueTitle": "Virkur staður",
+        "basicVenueBody": "Basic-áskriftin þín nær yfir einn veitingastað. Veldu hver er í loftinu — hinir fara offline þar til þú uppfærir í Pro.",
+        "basicVenueActive": "Virkur",
+        "buildYourPlan": "Settu saman áskriftina",
+        "featMenu": "Stafrænn matseðill",
+        "featMenuShort": "Matseðill",
+        "featMenuHint": "QR-matseðill sem gestir skanna",
+        "featReservations": "Bókanir",
+        "featReservationsHint": "Borðbókanir",
+        "featKds": "Eldhússkjár",
+        "featKdsHint": "Pantanir á eldhússkjá",
+        "featDomain": "Eigið lén",
+        "featDomainHint": "Þitt eigið veffang",
+        "restaurantsLabel": "Veitingastaðir",
+        "youHave": "þú átt {count}",
+        "fewer": "Færri",
+        "more": "Fleiri",
+        "billingPeriod": "Rukkunartímabil",
+        "perYearWord": "ár",
+        "perMonthWord": "mánuður",
+        "saveYearly": "Sparaðu {amount} á ári með árlegri rukkun",
+        "volumeDiscountLine": "{percent}% magnafsláttur · {count} veitingastaðir",
+        "saveUpToHint": "Sparaðu allt að 50% með 5+ veitingastöðum",
+        "continue": "Halda áfram",
+        "yourPlanSummary": "Áskriftin þín",
+        "restaurantOne": "1 veitingastaður",
+        "restaurantsMany": "{count} veitingastaðir",
+        "edit": "Breyta",
+        "billingDetails": "Reikningsupplýsingar",
+        "billingDetailsHint": "Valfrjálst — fyrir reikningana þína. Slepptu ef þú átt þær ekki.",
+        "fieldLegalName": "Nafn / fyrirtæki",
+        "fieldTaxId": "Skattnúmer",
+        "fieldAddress": "Heimilisfang",
+        "skip": "Sleppa",
+        "preparing": "Undirbý áskriftina þína…",
+        "statusPastDue": "Í vanskilum",
+        "statusCanceling": "Í uppsögn",
+        "renews": "Endurnýjast {date}",
+        "cancelsOn": "Fellur úr gildi {date}",
+        "changePlan": "Skipta um áskrift",
+        "manageSubscription": "Stjórna áskrift",
+        "myInvoices": "Reikningarnir mínir ({count})",
+        "customPlanTitle": "Þarftu sérsniðna áskrift?",
+        "customPlanBody": "Margir veitingastaðir eða sérstakar kröfur — sendu okkur skilaboð og við sérsníðum áskrift fyrir þig.",
+        "customPlanWa": "Halló! Mig langar í sérsniðna áskrift fyrir veitingastaðina mína.",
+        "paymentReceived": "Greiðsla móttekin — virkja áskriftina þína…",
+        "subscriptionUpdated": "Áskrift uppfærð.",
+        "errStartSubscription": "Tókst ekki að hefja áskriftina. Reyndu aftur.",
+        "errOpenPayment": "Tókst ekki að opna greiðslusíðuna. Reyndu aftur."
       },
       "support": {
         "title": "Stuðningur",
@@ -631,8 +686,8 @@
       "switching": "Skipti um veitingastað…",
       "add": "Bæta veitingastað við",
       "addDesc": "Stofnaðu annan veitingastað — afritaðu þennan matseðil eða byrjaðu á núlli.",
-      "paidOnly": "Margir veitingastaðir eru í boði í greiddri áskrift. Uppfærðu undir Reikningar til að bæta við fleirum.",
-      "atLimit": "Þú hefur náð hámarkinu, {limit} veitingastöðum sem fylgja Pro. Þarftu fleiri? Sendu þjónustuveri skilaboð um Enterprise áskrift.",
+      "paidOnly": "Að bæta við veitingastöðum krefst virkrar áskriftar. Settu saman áskriftina í Reikningagerð til að bæta við fleirum.",
+      "atLimit": "Þú hefur náð þeim {limit} veitingastöðum sem fylgja áskriftinni þinni. Bættu við fleiri veitingastöðum í Reikningagerð, eða sendu þjónustuveri skilaboð um sérsniðna áskrift.",
       "newTitle": "Bæta veitingastað við",
       "newSubtitle": "Stofnaðu annan veitingastað. Veldu hvort byrja eigi með afriti af núverandi matseðli eða á núlli.",
       "startFrom": "Byrjaðu með",
@@ -869,8 +924,8 @@
       "soundDismiss": "Ekki núna",
       "soundPromptTitle": "Kveikja á hljóði?",
       "soundPromptMessage": "Vafrar loka fyrir hljóð þar til þú snertir til að leyfa það. Kveiktu á hljóði fyrir nýjar pantanir svo eldhúsið heyri þær.",
-      "proLockedTitle": "PRO-áskrift krafist",
-      "proLockedBody": "Þessi skjár þarf virka PRO-áskrift. Biddu eigandann um að uppfæra í PRO til að halda áfram."
+      "proLockedTitle": "Áskrift krafist",
+      "proLockedBody": "Þessi skjár þarf virka áskrift með Eldhússkjá. Biddu eigandann um að bæta honum við í Reikningagerð til að halda áfram."
     },
     "devices": {
       "title": "Tæki",
@@ -920,22 +975,26 @@
       "createFailed": "Tókst ekki að búa til tækið"
     },
     "proUpsell": {
-      "cta": "Uppfæra í PRO",
+      "cta": "Opna Reikningagerð",
+      "menuOffline": {
+        "title": "Opinberi matseðillinn þinn er ekki í loftinu",
+        "body": "Þessi veitingastaður er ekki með virka áskrift, svo gestir sjá ekki matseðilinn hans. Settu saman áskriftina í Reikningagerð til að koma honum aftur í loftið."
+      },
       "orders": {
-        "title": "Pantanir eru PRO-eiginleiki",
-        "body": "Taktu við og stýrðu borðpöntunum með PRO-áskrift. Uppfærðu í PRO til að taka við pöntunum."
+        "title": "Pantanir eru ekki enn í áskriftinni þinni",
+        "body": "Bættu Eldhússkjá við áskriftina til að taka við og stýra borðpöntunum."
       },
       "kitchen": {
-        "title": "Eldhússkjárinn er PRO-eiginleiki",
-        "body": "Sendu pantanir á eldhússkjáinn með PRO-áskrift. Uppfærðu í PRO til að virkja hann."
+        "title": "Eldhússkjár er ekki enn í áskriftinni þinni",
+        "body": "Bættu Eldhússkjá við áskriftina til að senda pantanir á eldhússkjáinn."
       },
       "reservations": {
-        "title": "Borðpantanir eru PRO-eiginleiki",
-        "body": "Taktu við borðpöntunum með PRO-áskrift. Uppfærðu í PRO til að virkja borðpantanir."
+        "title": "Bókanir eru ekki enn í áskriftinni þinni",
+        "body": "Bættu Bókunum við áskriftina til að taka við borðbókunum."
       },
       "devices": {
-        "title": "Tæki eru PRO-eiginleiki",
-        "body": "Paraðu spjaldtölvur fyrir eldhús, þjón og bókanir með PRO-áskrift. Uppfærðu í PRO til að tengja tæki."
+        "title": "Tæki eru ekki enn í áskriftinni þinni",
+        "body": "Bættu Eldhússkjá eða Bókunum við áskriftina til að para eldhús-, þjóns- og bókunarspjaldtölvur."
       }
     }
   },

@@ -602,7 +602,62 @@
         "otherCurrencyTip": "Íocaíocht in EUR amháin. Chun íoc i n-airgeadra eile, déan teagmháil leis an tacaíocht.",
         "pastDueTitle": "Theip ar an íocaíocht",
         "pastDueTip": "Ní rabhamar in ann d'íocaíocht dheireanach a phróiseáil. Tá {days} lá agat chun íoc sula rachaidh do bhiachlár as líne.",
-        "pastDueBlockedTip": "Tá do bhiachlár as líne toisc gur theip ar d'íocaíocht dheireanach. Íoc anois chun é a athchóiriú."
+        "pastDueBlockedTip": "Tá do bhiachlár as líne toisc gur theip ar d'íocaíocht dheireanach. Íoc anois chun é a athchóiriú.",
+        "updatePayment": "Nuashonraigh íocaíocht",
+        "updatePaymentTip": "Theip ar d'íocaíocht dheireanach. Nuashonraigh do mhodh íocaíochta chun do shíntiús a choinneáil gníomhach — ní gá plean nua a cheannach.",
+        "checkoutError": "Níorbh fhéidir an t-íoc a thosú don phlean agus don airgeadra seo. Bain triail eile as nó déan teagmháil leis an tacaíocht.",
+        "accountProTitle": "PRO san áireamh le do chuntas",
+        "accountProTip": "Tá an bhialann seo clúdaithe ag síntiús PRO do chuntais. Níl aon íocaíocht ar leith ag teastáil — tá gach gné PRO gníomhach anseo.",
+        "accountProTipNamed": "Tá an bhialann seo clúdaithe ag síntiús PRO do chuntais, arna bhilleáil ar {restaurant}. Níl aon íocaíocht ar leith ag teastáil — bainistigh nó cealaigh é ó bhilleáil na bialainne sin.",
+        "basicVenueTitle": "Áit ghníomhach",
+        "basicVenueBody": "Clúdaíonn do phlean Bunúsach bialann amháin. Pioc cé acu atá beo — rachaidh na cinn eile as líne go dtí go n-uasghrádóidh tú go Pro.",
+        "basicVenueActive": "Gníomhach",
+        "buildYourPlan": "Tóg do phlean",
+        "featMenu": "Biachlár digiteach",
+        "featMenuShort": "Biachlár",
+        "featMenuHint": "Biachlár QR a scanann aíonna",
+        "featReservations": "Áirithintí",
+        "featReservationsHint": "Áirithintí boird",
+        "featKds": "Taispeáint chistine",
+        "featKdsHint": "Orduithe ar scáileán cistine",
+        "featDomain": "Fearann saincheaptha",
+        "featDomainHint": "Do sheoladh gréasáin féin",
+        "restaurantsLabel": "Bialanna",
+        "youHave": "tá {count} agat",
+        "fewer": "Níos lú",
+        "more": "Níos mó",
+        "billingPeriod": "Tréimhse bhilleála",
+        "perYearWord": "bliain",
+        "perMonthWord": "mí",
+        "saveYearly": "Sábháil {amount} sa bhliain le billeáil bhliantúil",
+        "volumeDiscountLine": "{percent}% lascaine toirte · {count} bialann",
+        "saveUpToHint": "Sábháil suas le 50% le 5+ bialann",
+        "continue": "Lean ar aghaidh",
+        "yourPlanSummary": "Do phlean",
+        "restaurantOne": "1 bhialann",
+        "restaurantsMany": "{count} bialann",
+        "edit": "Eagar",
+        "billingDetails": "Sonraí billeála",
+        "billingDetailsHint": "Roghnach — do do shonraisc. Scipeáil mura bhfuil siad agat.",
+        "fieldLegalName": "Ainm / cuideachta",
+        "fieldTaxId": "Uimhir chánach",
+        "fieldAddress": "Seoladh",
+        "skip": "Scipeáil",
+        "preparing": "Do shíntiús á ullmhú…",
+        "statusPastDue": "Thar téarma",
+        "statusCanceling": "Á chealú",
+        "renews": "Athnuaitear {date}",
+        "cancelsOn": "Cealaítear ar {date}",
+        "changePlan": "Athraigh plean",
+        "manageSubscription": "Bainistigh síntiús",
+        "myInvoices": "Mo shonraisc ({count})",
+        "customPlanTitle": "Plean saincheaptha uait?",
+        "customPlanBody": "Go leor bialanna nó riachtanais speisialta — cuir teachtaireacht chugainn agus cuirfimid plean in oiriúint duit.",
+        "customPlanWa": "Dia duit! Ba mhaith liom plean saincheaptha do mo bhialanna.",
+        "paymentReceived": "Íocaíocht faighte — do shíntiús á ghníomhachtú…",
+        "subscriptionUpdated": "Síntiús nuashonraithe.",
+        "errStartSubscription": "Níorbh fhéidir an síntiús a thosú. Bain triail eile.",
+        "errOpenPayment": "Níorbh fhéidir leathanach na híocaíochta a oscailt. Bain triail eile."
       },
       "support": {
         "title": "Tacaíocht",
@@ -631,8 +686,8 @@
       "switching": "Bialann á hathrú…",
       "add": "Cuir bialann leis",
       "addDesc": "Cruthaigh bialann eile — déan dúblach den bhiachlár seo nó tosaigh ó thús.",
-      "paidOnly": "Tá iliomad bialann ar fáil i bplean íoctha. Uasghrádaigh i mBilleáil chun tuilleadh a chur leis.",
-      "atLimit": "Tá uasmhéid {limit} bialann atá san áireamh i bPro bainte amach agat. Ag teastáil tuilleadh? Cuir teachtaireacht chuig an tacaíocht faoi phlean Enterprise.",
+      "paidOnly": "Teastaíonn síntiús gníomhach chun bialanna a chur leis. Tóg do phlean i mBilleáil chun tuilleadh a chur leis.",
+      "atLimit": "Tá na {limit} bialann atá san áireamh i do shíntiús bainte amach agat. Cuir tuilleadh bialanna leis i mBilleáil, nó cuir teachtaireacht chuig an tacaíocht faoi phlean saincheaptha.",
       "newTitle": "Cuir bialann leis",
       "newSubtitle": "Cruthaigh bialann eile. Pioc an dtosóidh tú le cóip den bhiachlár reatha nó ó thús.",
       "startFrom": "Tosaigh ó",
@@ -869,8 +924,8 @@
       "soundDismiss": "Ní anois",
       "soundPromptTitle": "Cumasaigh an fhuaim?",
       "soundPromptMessage": "Cuireann brabhsálaithe fuaim faoi chosc go dtí go bpriocfaidh tú lena chumasú. Cumasaigh fógra na n-orduithe nua ionas go gcloisfidh an chistin iad.",
-      "proLockedTitle": "Tá plean PRO ag teastáil",
-      "proLockedBody": "Teastaíonn plean PRO gníomhach don scáileán seo. Iarr ar an úinéir uasghrádú go PRO chun leanúint ar aghaidh."
+      "proLockedTitle": "Síntiús ag teastáil",
+      "proLockedBody": "Teastaíonn síntiús gníomhach le Taispeáint chistine don scáileán seo. Iarr ar an úinéir é a chur leis i mBilleáil chun leanúint ar aghaidh."
     },
     "devices": {
       "title": "Gléasanna",
@@ -920,22 +975,26 @@
       "createFailed": "Níorbh fhéidir an gléas a chruthú"
     },
     "proUpsell": {
-      "cta": "Uasghrádú go PRO",
+      "cta": "Oscail Billeáil",
+      "menuOffline": {
+        "title": "Tá do bhiachlár poiblí as líne",
+        "body": "Níl síntiús gníomhach ag an mbialann seo, mar sin ní féidir le haíonna a bhiachlár a fheiceáil. Tóg do phlean i mBilleáil chun é a chur ar líne arís."
+      },
       "orders": {
-        "title": "Is gné PRO iad orduithe",
-        "body": "Glac le horduithe boird agus bainistigh iad leis an bplean PRO. Uasghrádaigh go PRO chun orduithe a ghlacadh."
+        "title": "Níl orduithe i do phlean fós",
+        "body": "Cuir Taispeáint chistine le do phlean chun orduithe boird a ghlacadh agus a bhainistiú."
       },
       "kitchen": {
-        "title": "Is gné PRO é scáileán na cistine",
-        "body": "Seol orduithe chuig scáileán na cistine leis an bplean PRO. Uasghrádaigh go PRO chun é a chumasú."
+        "title": "Níl Taispeáint chistine i do phlean fós",
+        "body": "Cuir Taispeáint chistine le do phlean chun orduithe a sheoladh chuig scáileán na cistine."
       },
       "reservations": {
-        "title": "Is gné PRO iad áirithintí",
-        "body": "Glac le háirithintí boird leis an bplean PRO. Uasghrádaigh go PRO chun áirithintí a chumasú."
+        "title": "Níl áirithintí i do phlean fós",
+        "body": "Cuir Áirithintí le do phlean chun áirithintí boird a ghlacadh."
       },
       "devices": {
-        "title": "Is gné PRO iad gléasanna",
-        "body": "Péireáil táibléid chistine, freastalaí agus áirithinte leis an bplean PRO. Uasghrádaigh go PRO chun gléasanna a nascadh."
+        "title": "Níl gléasanna i do phlean fós",
+        "body": "Cuir Taispeáint chistine nó Áirithintí le do phlean chun táibléid chistine, freastalaí agus áirithinte a phéireáil."
       }
     }
   },

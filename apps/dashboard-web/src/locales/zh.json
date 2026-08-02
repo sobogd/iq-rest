@@ -602,7 +602,62 @@
         "otherCurrencyTip": "仅支持欧元支付。如需以其他货币支付,请联系客服。",
         "pastDueTitle": "支付失败",
         "pastDueTip": "我们无法处理您的上次付款。请在 {days} 天内付款，否则菜单将下线。",
-        "pastDueBlockedTip": "由于上次付款失败，您的菜单已下线。立即付款以恢复。"
+        "pastDueBlockedTip": "由于上次付款失败，您的菜单已下线。立即付款以恢复。",
+        "updatePayment": "更新付款",
+        "updatePaymentTip": "您的上次付款失败。请更新付款方式以保持订阅有效 — 无需购买新套餐。",
+        "checkoutError": "无法为此套餐和货币启动结账。请重试或联系客服。",
+        "accountProTitle": "您的账户已包含 PRO",
+        "accountProTip": "此餐厅已包含在您账户的 PRO 订阅中。无需单独付款 — 所有 PRO 功能在此均已启用。",
+        "accountProTipNamed": "此餐厅已包含在您账户的 PRO 订阅中，通过 {restaurant} 计费。无需单独付款 — 请在该餐厅的计费页面管理或取消。",
+        "basicVenueTitle": "启用的餐厅",
+        "basicVenueBody": "您的 Basic 套餐仅涵盖一家餐厅。请选择哪一家上线 — 其余餐厅将下线，直到您升级到 Pro。",
+        "basicVenueActive": "启用中",
+        "buildYourPlan": "搭建您的套餐",
+        "featMenu": "数字菜单",
+        "featMenuShort": "菜单",
+        "featMenuHint": "顾客扫码查看的菜单",
+        "featReservations": "预订",
+        "featReservationsHint": "桌台预订",
+        "featKds": "厨房显示屏",
+        "featKdsHint": "厨房屏幕上的订单",
+        "featDomain": "自定义域名",
+        "featDomainHint": "您专属的网址",
+        "restaurantsLabel": "餐厅",
+        "youHave": "您有 {count} 家",
+        "fewer": "减少",
+        "more": "增加",
+        "billingPeriod": "计费周期",
+        "perYearWord": "年",
+        "perMonthWord": "月",
+        "saveYearly": "选择按年计费每年可省 {amount}",
+        "volumeDiscountLine": "{percent}% 数量折扣 · {count} 家餐厅",
+        "saveUpToHint": "5 家以上餐厅最多可省 50%",
+        "continue": "继续",
+        "yourPlanSummary": "您的套餐",
+        "restaurantOne": "1 家餐厅",
+        "restaurantsMany": "{count} 家餐厅",
+        "edit": "编辑",
+        "billingDetails": "计费信息",
+        "billingDetailsHint": "可选 — 用于您的发票。如果没有可跳过。",
+        "fieldLegalName": "姓名 / 公司",
+        "fieldTaxId": "税号",
+        "fieldAddress": "地址",
+        "skip": "跳过",
+        "preparing": "正在准备您的订阅…",
+        "statusPastDue": "逾期",
+        "statusCanceling": "取消中",
+        "renews": "{date} 续订",
+        "cancelsOn": "将于 {date} 取消",
+        "changePlan": "更改套餐",
+        "manageSubscription": "管理订阅",
+        "myInvoices": "我的发票 ({count})",
+        "customPlanTitle": "需要定制套餐？",
+        "customPlanBody": "餐厅数量多或有特殊需求 — 请联系我们，我们将为您量身定制套餐。",
+        "customPlanWa": "您好！我想为我的餐厅定制一个套餐。",
+        "paymentReceived": "已收到付款 — 正在激活您的订阅…",
+        "subscriptionUpdated": "订阅已更新。",
+        "errStartSubscription": "无法启动订阅。请重试。",
+        "errOpenPayment": "无法打开付款页面。请重试。"
       },
       "support": {
         "title": "支持",
@@ -631,8 +686,8 @@
       "switching": "正在切换餐厅…",
       "add": "添加餐厅",
       "addDesc": "创建另一家餐厅 —— 复制此菜单或从零开始。",
-      "paidOnly": "多餐厅功能在付费方案中可用。请在账单中升级以添加更多。",
-      "atLimit": "您已达到 Pro 方案包含的最多 {limit} 家餐厅上限。需要更多？请就 Enterprise 方案联系客服。",
+      "paidOnly": "添加餐厅需要有效订阅。请在计费页面搭建您的套餐以添加更多。",
+      "atLimit": "您已达到订阅包含的 {limit} 家餐厅上限。请在计费页面添加更多餐厅，或联系客服咨询定制套餐。",
       "newTitle": "添加餐厅",
       "newSubtitle": "创建另一家餐厅。选择从当前菜单的副本开始，或从零开始。",
       "startFrom": "起始方式",
@@ -869,8 +924,8 @@
       "soundDismiss": "暂不",
       "soundPromptTitle": "启用声音?",
       "soundPromptMessage": "浏览器会阻止音频,直到你点按授权。请启用新订单提示音,以便厨房能听到来单。",
-      "proLockedTitle": "需要 PRO 套餐",
-      "proLockedBody": "此屏幕需要有效的 PRO 套餐。请让店主升级到 PRO 以继续。"
+      "proLockedTitle": "需要订阅",
+      "proLockedBody": "此屏幕需要包含厨房显示屏的有效订阅。请让店主在计费页面添加以继续。"
     },
     "devices": {
       "title": "设备",
@@ -920,22 +975,25 @@
       "createFailed": "无法创建设备"
     },
     "proUpsell": {
-      "cta": "升级到 PRO",
+      "cta": "打开计费",
+      "menuOffline": {
+        "body": "此餐厅没有有效订阅，顾客无法查看其菜单。请在计费页面搭建您的套餐以重新上线。"
+      },
       "orders": {
-        "title": "订单是 PRO 功能",
-        "body": "使用 PRO 套餐接收和管理餐桌订单。升级到 PRO 即可开始接单。"
+        "title": "订单尚未包含在您的套餐中",
+        "body": "在您的套餐中添加厨房显示屏，即可接收和管理桌台订单。"
       },
       "kitchen": {
-        "title": "厨房显示屏是 PRO 功能",
-        "body": "使用 PRO 套餐将订单发送到厨房显示屏。升级到 PRO 即可启用。"
+        "title": "厨房显示屏尚未包含在您的套餐中",
+        "body": "在您的套餐中添加厨房显示屏，即可将订单发送到厨房屏幕。"
       },
       "reservations": {
-        "title": "预订是 PRO 功能",
-        "body": "使用 PRO 套餐接受餐桌预订。升级到 PRO 即可启用预订。"
+        "title": "预订尚未包含在您的套餐中",
+        "body": "在您的套餐中添加预订，即可接受桌台预订。"
       },
       "devices": {
-        "title": "设备是 PRO 功能",
-        "body": "使用 PRO 套餐配对厨房、服务员和预订平板。升级到 PRO 即可连接设备。"
+        "title": "设备尚未包含在您的套餐中",
+        "body": "在您的套餐中添加厨房显示屏或预订，即可配对厨房、服务员和预订平板。"
       }
     }
   },
