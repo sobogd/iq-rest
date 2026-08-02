@@ -259,7 +259,7 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
           })}
 
           {/* Billing period selector */}
-          <div className="flex items-center justify-between gap-3 border-t border-border pt-3">
+          <div className="flex items-center justify-between gap-3">
             <span className="text-sm font-medium text-foreground">Billing period</span>
             <div className="inline-flex rounded-full border border-border bg-accent p-0.5">
               {(["month", "year"] as const).map((c) => (
