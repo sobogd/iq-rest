@@ -203,23 +203,6 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
       {/* Card 1 — options */}
       {phase === "options" ? (
         <div className="flex flex-col gap-4 rounded-xl border border-border bg-card p-4 md:p-5">
-          <div className="flex items-center justify-end">
-            <div className="inline-flex rounded-full border border-border bg-accent p-0.5">
-              {(["month", "year"] as const).map((c) => (
-                <button
-                  key={c}
-                  type="button"
-                  onClick={() => setCycle(c)}
-                  className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
-                    cycle === c ? "bg-primary text-primary-foreground" : "text-muted-foreground"
-                  }`}
-                >
-                  {c === "month" ? "Monthly" : "Yearly"}
-                </button>
-              ))}
-            </div>
-          </div>
-
           {list.map((r) => {
             const s = sels[r.id] ?? EMPTY_SEL;
             return (
@@ -274,6 +257,25 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
               </div>
             );
           })}
+
+          {/* Billing period selector */}
+          <div className="flex items-center justify-between gap-3 border-t border-border pt-3">
+            <span className="text-sm font-medium text-foreground">Billing period</span>
+            <div className="inline-flex rounded-full border border-border bg-accent p-0.5">
+              {(["month", "year"] as const).map((c) => (
+                <button
+                  key={c}
+                  type="button"
+                  onClick={() => setCycle(c)}
+                  className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+                    cycle === c ? "bg-primary text-primary-foreground" : "text-muted-foreground"
+                  }`}
+                >
+                  {c === "month" ? "Monthly" : "Yearly"}
+                </button>
+              ))}
+            </div>
+          </div>
 
           <div className="flex items-center justify-between gap-3 border-t border-border pt-3">
             <div>
