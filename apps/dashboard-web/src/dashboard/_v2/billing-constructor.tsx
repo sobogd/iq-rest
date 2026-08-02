@@ -237,24 +237,24 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
               <span className="text-sm font-medium text-foreground">Restaurants</span>
               {list.length > 0 ? <span className="text-xs text-muted-foreground ml-1">(you have {list.length})</span> : null}
             </div>
-            <div className="inline-flex items-center rounded-full border border-border bg-accent p-1">
+            <div className="inline-flex items-center rounded-full border border-border bg-accent p-0.5">
               <button
                 type="button"
                 aria-label="Fewer"
                 onClick={() => setCount((c) => Math.max(minCount, c - 1))}
                 disabled={count <= minCount}
-                className="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-primary-foreground hover:bg-primary/90 disabled:opacity-50"
+                className="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-primary-foreground hover:bg-primary/90 disabled:opacity-50"
               >
-                <Minus className="h-3.5 w-3.5" strokeWidth={2.75} />
+                <Minus className="h-3 w-3" strokeWidth={2.75} />
               </button>
-              <span className="inline-block w-8 text-center text-sm font-medium tabular-nums">{count}</span>
+              <span className="inline-block w-8 text-center text-xs font-medium tabular-nums">{count}</span>
               <button
                 type="button"
                 aria-label="More"
                 onClick={() => setCount((c) => Math.min(99, c + 1))}
-                className="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-primary-foreground hover:bg-primary/90"
+                className="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-primary-foreground hover:bg-primary/90"
               >
-                <Plus className="h-3.5 w-3.5" strokeWidth={2.75} />
+                <Plus className="h-3 w-3" strokeWidth={2.75} />
               </button>
             </div>
           </div>
