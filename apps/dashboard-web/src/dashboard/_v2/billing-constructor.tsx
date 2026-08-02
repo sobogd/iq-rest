@@ -10,7 +10,8 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { UtensilsCrossed, CalendarClock, ChefHat, Globe, Check, Pencil } from "lucide-react";
-import { computeAccountQuote, type PricingCatalog, type VenueSelection } from "@iq-rest/pricing";
+import * as pricing from "@iq-rest/pricing";
+import type { PricingCatalog, VenueSelection } from "@iq-rest/pricing";
 import { useRestaurants } from "./restaurants-context";
 import { inputClass, labelClass, primaryBtn, secondaryBtn } from "./tokens";
 import {
@@ -105,14 +106,14 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
     [activeSelections],
   );
   const quote = useMemo(
-    () => (catalog && venuesSel.length ? computeAccountQuote(catalog, currency, venuesSel, cycle) : null),
+    () => (catalog && venuesSel.length ? pricing.computeAccountQuote(catalog, currency, venuesSel, cycle) : null),
     [catalog, currency, venuesSel, cycle],
   );
   // Yearly saving vs paying monthly (shown when Monthly is selected) — like the landing.
   const yearlySaving = useMemo(() => {
     if (!catalog || !venuesSel.length) return 0;
-    const m = computeAccountQuote(catalog, currency, venuesSel, "month").amountMajor * 12;
-    const y = computeAccountQuote(catalog, currency, venuesSel, "year").amountMajor;
+    const m = pricing.computeAccountQuote(catalog, currency, venuesSel, "month").amountMajor * 12;
+    const y = pricing.computeAccountQuote(catalog, currency, venuesSel, "year").amountMajor;
     return Math.max(0, Math.round((m - y) * 100) / 100);
   }, [catalog, currency, venuesSel]);
 
