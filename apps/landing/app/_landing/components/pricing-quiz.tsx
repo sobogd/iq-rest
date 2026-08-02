@@ -66,15 +66,30 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
   const pricing: CurrencyPricing = catalog.currencies[currency] ?? catalog.currencies.EUR;
   const k = cycle === "year" ? "yr" : "mo";
 
-  const quote = useMemo(() => {
+  const venues = useMemo<VenueSelection[]>(() => {
     const sel: VenueSelection = { menuOnline: true, ...feat };
-    const venues = Array.from({ length: Math.max(1, count) }, () => sel);
-    return computeAccountQuote(catalog, currency, venues, cycle);
-  }, [catalog, currency, count, cycle, feat]);
+    return Array.from({ length: Math.max(1, count) }, () => sel);
+  }, [feat, count]);
+
+  const quote = useMemo(
+    () => computeAccountQuote(catalog, currency, venues, cycle),
+    [catalog, currency, venues, cycle],
+  );
 
   const info = currencyInfo[currency] ?? currencyInfo.EUR;
   const discountPct = Math.round(quote.discount * 100);
   const addonPrice = (key: AddonKey) => formatMoney(pricing[key][k], currency);
+
+  // Yearly saving vs paying monthly (shown when Monthly is selected).
+  const monthlyAnnual = useMemo(
+    () => computeAccountQuote(catalog, currency, venues, "month").amountMajor * 12,
+    [catalog, currency, venues],
+  );
+  const yearlyAnnual = useMemo(
+    () => computeAccountQuote(catalog, currency, venues, "year").amountMajor,
+    [catalog, currency, venues],
+  );
+  const yearlySaving = Math.max(0, Math.round((monthlyAnnual - yearlyAnnual) * 100) / 100);
 
   return (
     <div className="mx-auto max-w-5xl w-full">
@@ -87,18 +102,18 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
         </p>
       </div>
 
-      {/* Controls — each field has its label to the LEFT. Stacked full-width on
-          mobile, inline on desktop. */}
-      <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center sm:justify-center gap-3 sm:gap-8 mb-6">
-        <div className="flex items-center gap-2.5 w-full sm:w-auto">
+      {/* Controls — each field has its label to the LEFT. Centred (natural
+          width) on mobile, stacked; inline on desktop. */}
+      <div className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-3 sm:gap-8 mb-6">
+        <div className="flex items-center gap-2.5">
           <span className="shrink-0 text-sm text-muted-foreground">Billing:</span>
-          <div className="flex flex-1 sm:flex-none rounded-full border border-border bg-accent p-1">
+          <div className="flex rounded-full border border-border bg-accent p-1">
             {(["month", "year"] as const).map((c) => (
               <button
                 key={c}
                 type="button"
                 onClick={() => setCycle(c)}
-                className={`flex-1 sm:flex-none px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+                className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
                   cycle === c ? "bg-primary text-primary-foreground" : "text-muted-foreground"
                 }`}
               >
@@ -108,9 +123,9 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
           </div>
         </div>
 
-        <div className="flex items-center gap-2.5 w-full sm:w-auto">
+        <div className="flex items-center gap-2.5">
           <span className="shrink-0 text-sm text-muted-foreground">Restaurants:</span>
-          <div className="flex flex-1 sm:flex-none items-center justify-between rounded-full border border-border bg-accent p-1">
+          <div className="flex items-center justify-between rounded-full border border-border bg-accent p-1">
             <button
               type="button"
               aria-label="Fewer restaurants"
@@ -189,7 +204,11 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
               <span className="text-sm text-muted-foreground">{cycle === "year" ? "/year" : "/month"}</span>
             </div>
             <div className="text-sm mt-0.5 h-5 leading-5">
-              {discountPct > 0 ? (
+              {cycle === "month" && yearlySaving > 0 ? (
+                <span className="text-emerald-500 font-medium">
+                  Save {formatMoney(yearlySaving, currency)} a year with yearly billing
+                </span>
+              ) : discountPct > 0 ? (
                 <span className="text-emerald-500 font-medium">
                   {discountPct}% volume discount · {quote.billingVenues} restaurants
                 </span>
