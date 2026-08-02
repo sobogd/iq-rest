@@ -330,6 +330,9 @@ export class BillingController {
         items: itemId ? [{ id: itemId, price: price.id }] : undefined,
         proration_behavior: "always_invoice",
         metadata: meta,
+        // Changing the plan resumes a scheduled cancel (period-end or cancel_at).
+        cancel_at_period_end: false,
+        cancel_at: null,
       });
       // Apply the change synchronously (don't wait for the webhook) so the UI
       // reflects the new features / price / capacity immediately.
@@ -359,6 +362,7 @@ export class BillingController {
             currency,
             interval: cycle,
             priceProvenance: "custom",
+            cancelAtPeriodEnd: false,
             updatedFromStripeAt: new Date(),
           },
         })
