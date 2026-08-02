@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PricingTemplate } from "@/app/_landing/templates/pricing-template";
 import { TEXTS as DEFAULT } from "../texts";
 import { TEXTS } from "./texts";
-import { SCHEMA_PRICE_BASIC_EUR, SCHEMA_PRICE_PRO_EUR } from "@/lib/pricing";
+import { SCHEMA_PRICE_MENU_EUR } from "@/lib/pricing";
 import { SCHEMA_DATE_MODIFIED } from "@/lib/page-meta";
 
 export const dynamic = "force-static";
@@ -15,15 +15,15 @@ const PRICING_FAQ = {
   ...DEFAULT.faq,
   sub: "Cosa chiedono i ristoratori su prezzi e pagamenti. Non trovi la tua domanda? Scrivici su WhatsApp.",
   items: [
-    { q: "Qual è la differenza tra Basic e Pro?", a: "Basic include il menu digitale + QR, la traduzione con IA in 35 lingue, gli ordini dal menu (opzionali) e la gestione da qualsiasi dispositivo. Pro aggiunge il display di cucina (KDS), la prenotazione online 24/7 dei tavoli e il supporto prioritario su WhatsApp. Se non hai bisogno della parte cucina e prenotazioni, Basic copre l'essenziale." },
+    { q: "Come funziona il prezzo?", a: "Costruisci il tuo piano su misura. Il menu digitale con QR è la base — include la traduzione con IA in 35 lingue e la gestione da qualsiasi dispositivo. Poi aggiungi solo ciò che ti serve: la prenotazione dei tavoli, il display di cucina con presa degli ordini o un dominio personalizzato. Il prezzo è per ristorante e gli sconti per volume si applicano automaticamente a partire dal secondo ristorante." },
     { q: "Prendete una commissione sugli ordini?", a: "No. Ogni ordine — dal menu QR o preso da un cameriere — arriva direttamente al ristorante, senza percentuali né commissioni da aggregatore. Hai una tariffa mensile fissa e nessuna altra trattenuta." },
-    { q: "Cosa include la prova di 14 giorni?", a: "Accesso completo a tutte le funzionalità di entrambi i piani, senza carta. Trascorsi i 14 giorni l'account viene messo in pausa automaticamente se non è stato collegato un metodo di pagamento. Non ci sono addebiti automatici senza il tuo consenso." },
-    { q: "Cosa succede al termine dei 14 giorni?", a: "Se non hai collegato un metodo di pagamento, l'account viene messo in pausa automaticamente. Il pannello di amministrazione resta accessibile in sola lettura, ma il menu QR per gli ospiti e gli ordini vengono temporaneamente disattivati. Non addebitiamo mai senza il tuo consenso." },
+    { q: "Cosa include la prova di 14 giorni?", a: "Accesso completo a tutte le funzionalità, senza carta. Trascorsi i 14 giorni l'account viene messo in pausa automaticamente se non è stato collegato un metodo di pagamento. Non ci sono addebiti automatici senza il tuo consenso." },
+    { q: "Cosa succede al termine dei 14 giorni?", a: "Se non hai collegato un metodo di pagamento, l'account viene messo in pausa automaticamente. Il pannello di amministrazione resta accessibile in sola lettura, ma il menu QR per gli ospiti e la presa degli ordini vengono temporaneamente disattivati. Non addebitiamo mai senza il tuo consenso." },
     { q: "Cosa succede al menu, agli ordini e ai dati durante la pausa?", a: "Resta tutto al suo posto: menu, foto dei piatti, storico ordini, prenotazioni, impostazioni di design, statistiche. Anche se colleghi il pagamento dopo un mese o sei mesi, tutto torna esattamente com'era e non si perde nulla." },
-    { q: "I QR sui tavoli smettono di funzionare dopo la prova?", a: "Se l'account è in pausa, i QR mostrano agli ospiti un avviso «temporaneamente non disponibile». Non serve stampare nuovi QR: appena colleghi il pagamento, gli stessi codici riaprono il menu." },
-    { q: "Posso passare da Basic a Pro più avanti?", a: "Sì, il passaggio si fa con un clic dal pannello. La differenza viene proporzionata sui giorni rimanenti del periodo pagato. Anche il passaggio da Pro a Basic è disponibile — il KDS e le prenotazioni vengono disattivati, ma tutti i dati restano." },
-    { q: "Quanti ristoranti posso gestire con Pro?", a: "Pro include fino a 4 ristoranti in un unico account, tutti gestiti da un solo pannello. Gestisci un gruppo più grande? Scrivici su WhatsApp per un piano Enterprise." },
-    { q: "Che sconto c'è sul piano annuale?", a: "Circa il 30% rispetto al pagamento mensile. L'importo esatto viene mostrato al momento del pagamento nella pagina del piano." },
+    { q: "I QR sui tavoli continuano a funzionare dopo la prova?", a: "Se l'account è in pausa, i QR mostrano agli ospiti un avviso «temporaneamente non disponibile». Non serve stampare nuovi QR: appena colleghi il pagamento, gli stessi codici riaprono il menu." },
+    { q: "Posso modificare il mio piano più avanti?", a: "Sì, puoi aggiungere o rimuovere funzionalità in qualsiasi momento dal pannello. La differenza viene proporzionata sui giorni rimanenti del periodo pagato. Se rimuovi una funzionalità, viene disattivata ma tutti i suoi dati restano al loro posto." },
+    { q: "Quanti ristoranti posso gestire?", a: "Tutti quelli che ti servono — scegli il numero di ristoranti mentre costruisci il piano, gestendoli da un unico pannello. Gli sconti per volume si applicano automaticamente, fino al 50% con 5 o più ristoranti. Gestisci un gruppo più grande? Scrivici su WhatsApp per un piano su misura." },
+    { q: "Che sconto c'è sul piano annuale?", a: "Circa il 30% rispetto al pagamento mensile. L'importo esatto viene mostrato mentre costruisci il tuo piano." },
     { q: "Posso disdire l'abbonamento in qualsiasi momento?", a: "Sì, la disdetta si fa con un clic dal pannello. Dopo la disdetta l'account funziona fino alla fine del periodo pagato e poi viene messo in pausa. I dati restano e puoi tornare quando vuoi." },
     { q: "Quali metodi di pagamento accettate?", a: "Carte Visa, Mastercard e American Express tramite Stripe. Sono supportati anche Apple Pay e Google Pay. In Europa — SEPA Direct Debit con il piano annuale." },
   ],
@@ -65,8 +65,7 @@ const JSON_LD = JSON.stringify({
       dateModified: SCHEMA_DATE_MODIFIED,
       brand: { "@type": "Brand", name: "IQ Rest" },
       offers: [
-        { "@type": "Offer", name: "Basic", price: SCHEMA_PRICE_BASIC_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
-        { "@type": "Offer", name: "Pro", price: SCHEMA_PRICE_PRO_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
+        { "@type": "Offer", name: "Digital menu", price: SCHEMA_PRICE_MENU_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
       ],
     },
     {

@@ -4,7 +4,7 @@ import { TEXTS } from "./texts";
 import { CRO } from "./cro";
 import { restaurantCount } from "@/lib/restaurant-count";
 import { homeAlternates } from "@/lib/hreflang";
-import { SCHEMA_PRICE_BASIC_EUR } from "@/lib/pricing";
+import { SCHEMA_PRICE_MENU_EUR } from "@/lib/pricing";
 import { SCHEMA_DATE_MODIFIED } from "@/lib/page-meta";
 
 export const dynamic = "force-static";
@@ -42,7 +42,7 @@ const JSON_LD = JSON.stringify({
       publisher: { "@id": `${SITE}/#organization` },
       offers: {
         "@type": "Offer",
-        price: SCHEMA_PRICE_BASIC_EUR,
+        price: SCHEMA_PRICE_MENU_EUR,
         priceCurrency: "EUR",
         availability: "https://schema.org/InStock",
       },

@@ -169,44 +169,6 @@ export const TEXTS: LandingTexts = {
     button: "Beregn din plan",
   },
 
-  pricingHero: {
-    chips: ["Ingen kommission", "Ingen kontrakter", "14 dage gratis"],
-    heading: "Enkle priser.",
-    headingAccent: "Ingen overraskelser.",
-    sub: "Ét månedligt gebyr. Ingen kommission på bestillinger. Opsig når som helst.",
-    popularBadge: "Populær",
-    perMonthSuffix: "/md.",
-    whenAnnualTemplate: "årlig betaling · {total} pr. år",
-    orMonthlyTemplate: "eller {price}/md.",
-    savingsTemplate: "spar {amount} pr. år",
-    plans: {
-      basic: {
-        name: "Basic",
-        tagline: "Digitalt menukort og AI-oversættelse. Klar på 5 minutter.",
-        features: [
-          "QR-menu til hvert bord",
-          "Digitalt menukort med billeder og allergener",
-          "AI-oversættelse på 35 sprog",
-          "AI-generering af rettens billeder",
-          "Administrer fra enhver telefon eller tablet",
-        ],
-      },
-      pro: {
-        name: "Pro",
-        tagline: "Fuld kontrol over restauranten: bestillinger, køkken og reservationer.",
-        features: [
-          "Alt i Basic",
-          "Modtag bestillinger fra menuen",
-          "Tjener-app",
-          "Køkkenskærm (KDS)",
-          "Online bordreservation 24/7",
-          "Eget domæne",
-          "Prioriteret WhatsApp-support",
-        ],
-      },
-    },
-  },
-
   footer: {
     featureLinks: [
       { href: "/da/digitalt-menu-restaurant", label: "Digitalt menukort" },

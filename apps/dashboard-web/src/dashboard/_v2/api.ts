@@ -815,30 +815,6 @@ export async function setBasicSubscriptionVenue(restaurantId: string): Promise<b
  return res.ok;
 }
 
-export async function createCheckoutSession(
- plan: "BASIC" | "PRO",
- cycle: "MONTHLY" | "YEARLY",
- currency?: string,
-): Promise<string | null> {
- // priceLookupKey mirrors PRICE_LOOKUP_KEYS on the API
- // (basic_monthly, basic_yearly, pro_monthly, pro_yearly).
- const priceLookupKey = `${plan.toLowerCase()}_${cycle.toLowerCase()}`;
- const locale = typeof window !== "undefined" ? (window.location.pathname.match(/^\/([a-z]{2})\b/)?.[1] || "en") : "en";
- const res = await apiFetch("/api/stripe/checkout", {
-        credentials: "include",
- method: "POST",
- headers: { "Content-Type": "application/json" },
- body: JSON.stringify({ priceLookupKey, locale, currency }),
- });
- if (!res.ok) {
- const text = await res.text().catch(() => "");
- console.error("Checkout error:", res.status, text);
- return null;
- }
- const data = await res.json();
- return data.url || null;
-}
-
 export async function openBillingPortal(locale?: string): Promise<string | null> {
  const res = await apiFetch("/api/stripe/portal", {
         credentials: "include",
@@ -909,28 +885,6 @@ export async function computeQuote(
  });
  if (!res.ok) return null;
  return await res.json();
-}
-
-// Ad-hoc checkout from a venue selection. Returns the Stripe URL (or the billing
-// page URL when changing an existing sub in place).
-export async function createAdhocCheckout(
- selections: VenueSelectionInput[],
- cycle: "month" | "year",
- currency?: string,
-): Promise<string | null> {
- const locale = typeof window !== "undefined" ? (window.location.pathname.match(/^\/([a-z]{2})\b/)?.[1] || "en") : "en";
- const res = await apiFetch("/api/stripe/checkout", {
-  credentials: "include",
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ selections, cycle, currency, locale }),
- });
- if (!res.ok) {
-  console.error("Ad-hoc checkout error:", res.status, await res.text().catch(() => ""));
-  return null;
- }
- const data = await res.json();
- return data.url || null;
 }
 
 // SEPA-by-invoice request (yearly only). Returns success + the amount quoted.

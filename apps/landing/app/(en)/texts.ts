@@ -169,44 +169,6 @@ export const TEXTS: LandingTexts = {
     button: "Calculate your plan",
   },
 
-  pricingHero: {
-    chips: ["No commissions", "No contracts", "14 days free"],
-    heading: "Simple pricing.",
-    headingAccent: "No surprises.",
-    sub: "One monthly fee. No commission on orders. Cancel anytime.",
-    popularBadge: "Popular",
-    perMonthSuffix: "/mo",
-    whenAnnualTemplate: "billed annually · {total} per year",
-    orMonthlyTemplate: "or {price}/mo",
-    savingsTemplate: "save {amount} per year",
-    plans: {
-      basic: {
-        name: "Basic",
-        tagline: "Digital menu and AI translation. Live in 5 minutes.",
-        features: [
-          "QR menu for every table",
-          "Digital menu with photos and allergens",
-          "AI translation in 35 languages",
-          "AI dish photo generation",
-          "Manage from any phone or tablet",
-        ],
-      },
-      pro: {
-        name: "Pro",
-        tagline: "Full restaurant control: orders, kitchen and bookings.",
-        features: [
-          "Everything in Basic",
-          "Order taking from the menu",
-          "Waiter app",
-          "Kitchen display (KDS)",
-          "Online table booking 24/7",
-          "Custom domain",
-          "Priority WhatsApp support",
-        ],
-      },
-    },
-  },
-
   footer: {
     featureLinks: [
       { href: "/digital-menu-for-restaurants", label: "Digital menu" },

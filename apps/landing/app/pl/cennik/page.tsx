@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PricingTemplate } from "@/app/_landing/templates/pricing-template";
 import { TEXTS as DEFAULT } from "../texts";
 import { TEXTS } from "./texts";
-import { SCHEMA_PRICE_BASIC_EUR, SCHEMA_PRICE_PRO_EUR } from "@/lib/pricing";
+import { SCHEMA_PRICE_MENU_EUR } from "@/lib/pricing";
 import { SCHEMA_DATE_MODIFIED } from "@/lib/page-meta";
 
 export const dynamic = "force-static";
@@ -15,17 +15,17 @@ const PRICING_FAQ = {
   ...DEFAULT.faq,
   sub: "Co restauratorzy pytają o cennik i płatności. Nie znajdujesz swojego pytania? Napisz do nas na WhatsApp.",
   items: [
-    { q: "Jaka jest różnica między Basic a Pro?", a: "Basic obejmuje cyfrowe + menu QR, tłumaczenie AI na 35 języków, przyjmowanie zamówień z menu (opcjonalnie) i zarządzanie z dowolnego urządzenia. Pro dodaje ekran kuchenny (KDS) i rezerwację stolików online 24/7, plus priorytetowe wsparcie WhatsApp. Jeśli nie potrzebujesz przepływu kuchennego i rezerwacji — Basic pokrywa wszystko." },
+    { q: "Jak działa cennik?", a: "Sam budujesz swój plan. Podstawą jest cyfrowe menu QR — zawiera tłumaczenie AI na 35 języków i zarządzanie z dowolnego urządzenia. Następnie dodajesz tylko to, czego potrzebujesz: rezerwację stolików, ekran kuchenny z przyjmowaniem zamówień albo własną domenę. Cena jest naliczana za restaurację, a rabaty ilościowe stosowane są automatycznie już od drugiej restauracji." },
     { q: "Pobieracie prowizję od zamówień?", a: "Nie. Każde zamówienie — z menu QR lub przyjęte przez kelnera — trafia bezpośrednio do restauracji, bez procentów ani prowizji agregatorów. Masz stałą opłatę miesięczną i żadnych innych potrąceń." },
-    { q: "Co obejmuje 14-dniowy okres próbny?", a: "Pełny dostęp do wszystkich funkcji w obu planach, bez karty. Po 14 dniach konto jest automatycznie wstrzymane, jeśli nie podłączono metody płatności. Nie ma automatycznych obciążeń bez Twojej zgody." },
-    { q: "Co się dzieje po 14 dniach?", a: "Jeśli nie podłączono metody płatności, konto jest automatycznie wstrzymane. Panel administracyjny pozostaje dostępny w trybie tylko do odczytu, ale menu QR dla gości i przyjmowanie zamówień są tymczasowo wyłączone. Nigdy nie obciążamy bez Twojej zgody." },
-    { q: "Co dzieje się z moim menu, zamówieniami i danymi podczas wstrzymania?", a: "Wszystko jest w pełni zachowane: menu, zdjęcia dań, historia zamówień, rezerwacje, ustawienia projektu, statystyki. Podłącz płatność nawet po miesiącu lub sześciu miesiącach — wszystko wraca jak było, nic nie jest tracone." },
-    { q: "Czy kody QR na stolikach nadal będą działać po okresie próbnym?", a: "Jeśli konto jest wstrzymane, kody QR pokazują gościom komunikat „tymczasowo niedostępne“. Nie musisz drukować nowych kodów QR: gdy tylko płatność zostanie podłączona, te same kody ponownie otwierają menu." },
-    { q: "Czy mogę później przejść z Basic na Pro?", a: "Tak, aktualizacja to jedno kliknięcie w panelu administracyjnym. Dopłata jest naliczana proporcjonalnie do pozostałych dni opłaconego okresu. Obniżenie z Pro do Basic jest również dostępne — KDS i rezerwacja zostaną wyłączone, ale wszystkie dane są zachowane." },
-    { q: "Iloma restauracjami mogę zarządzać w planie Pro?", a: "Pro obejmuje do 4 restauracji w ramach jednego konta, wszystkimi zarządzasz z jednego panelu. Prowadzisz większą sieć? Napisz do nas na WhatsApp w sprawie planu Enterprise." },
-    { q: "Jaka jest roczna zniżka?", a: "Około 30% w porównaniu z planem miesięcznym. Dokładna kwota jest pokazana przy płatności na stronie planu." },
-    { q: "Czy mogę anulować subskrypcję w każdej chwili?", a: "Tak, anulowanie to jedno kliknięcie w panelu administracyjnym. Po anulowaniu konto działa do końca opłaconego okresu, a następnie jest wstrzymane. Dane są zachowane i możesz wrócić, kiedy chcesz." },
-    { q: "Jakie metody płatności akceptujecie?", a: "Visa, Mastercard i American Express przez Stripe. Apple Pay i Google Pay również są wspierane. W Europie — SEPA Direct Debit w planie rocznym." },
+    { q: "Co obejmuje 14-dniowy okres próbny?", a: "Pełny dostęp do wszystkich funkcji, bez podawania karty. Po 14 dniach konto zostaje automatycznie wstrzymane, jeśli nie podłączono metody płatności. Nie ma żadnych automatycznych obciążeń bez Twojej zgody." },
+    { q: "Co się dzieje po 14 dniach?", a: "Jeśli nie podłączono metody płatności, konto zostaje automatycznie wstrzymane. Panel administracyjny pozostaje dostępny w trybie tylko do odczytu, ale menu QR dla gości i przyjmowanie zamówień są tymczasowo wyłączone. Nigdy nie obciążamy bez Twojej zgody." },
+    { q: "Co dzieje się z moim menu, zamówieniami i danymi podczas wstrzymania?", a: "Wszystko jest w pełni zachowane: menu, zdjęcia dań, historia zamówień, rezerwacje, ustawienia projektu, statystyki. Podłącz płatność nawet po miesiącu czy pół roku — wszystko wraca w takim stanie, w jakim było, nic nie ginie." },
+    { q: "Czy kody QR na stolikach nadal będą działać po okresie próbnym?", a: "Jeśli konto jest wstrzymane, kody QR pokazują gościom informację „tymczasowo niedostępne”. Nie musisz drukować nowych kodów QR: gdy tylko podłączysz płatność, te same kody ponownie otwierają menu." },
+    { q: "Czy mogę później zmienić swój plan?", a: "Tak — możesz w każdej chwili dodawać lub usuwać funkcje w panelu administracyjnym. Różnica jest rozliczana proporcjonalnie do pozostałych dni opłaconego okresu. Jeśli usuniesz funkcję, zostaje ona wyłączona, ale wszystkie jej dane są zachowane." },
+    { q: "Iloma restauracjami mogę zarządzać?", a: "Tyloma, iloma potrzebujesz — liczbę restauracji wybierasz podczas budowania planu, a wszystkimi zarządzasz z jednego panelu. Rabaty ilościowe stosowane są automatycznie, do 50% przy 5 i więcej restauracjach. Prowadzisz większą sieć? Napisz do nas na WhatsApp w sprawie indywidualnego planu." },
+    { q: "Jaka jest roczna zniżka?", a: "Około 30% w porównaniu z rozliczeniem miesięcznym. Dokładną kwotę zobaczysz podczas budowania swojego planu." },
+    { q: "Czy mogę anulować subskrypcję w każdej chwili?", a: "Tak, anulowanie to jedno kliknięcie w panelu administracyjnym. Po anulowaniu konto działa do końca opłaconego okresu, a następnie zostaje wstrzymane. Dane są zachowane i możesz wrócić, kiedy tylko chcesz." },
+    { q: "Jakie metody płatności akceptujecie?", a: "Visa, Mastercard i American Express przez Stripe. Obsługiwane są także Apple Pay i Google Pay. W Europie — SEPA Direct Debit w planie rocznym." },
   ],
 };
 
@@ -65,8 +65,7 @@ const JSON_LD = JSON.stringify({
       dateModified: SCHEMA_DATE_MODIFIED,
       brand: { "@type": "Brand", name: "IQ Rest" },
       offers: [
-        { "@type": "Offer", name: "Basic", price: SCHEMA_PRICE_BASIC_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
-        { "@type": "Offer", name: "Pro", price: SCHEMA_PRICE_PRO_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
+        { "@type": "Offer", name: "Digital menu", price: SCHEMA_PRICE_MENU_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
       ],
     },
     {

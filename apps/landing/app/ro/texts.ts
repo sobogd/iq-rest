@@ -169,44 +169,6 @@ export const TEXTS: LandingTexts = {
     button: "Calculați-vă planul",
   },
 
-  pricingHero: {
-    chips: ["Fără comision", "Fără contracte", "14 zile gratuit"],
-    heading: "Prețuri simple.",
-    headingAccent: "Fără surprize.",
-    sub: "O singură taxă lunară. Fără comision din comenzi. Anulați oricând.",
-    popularBadge: "Popular",
-    perMonthSuffix: "/lună",
-    whenAnnualTemplate: "facturare anuală · {total} pe an",
-    orMonthlyTemplate: "sau {price}/lună",
-    savingsTemplate: "economisiți {amount} pe an",
-    plans: {
-      basic: {
-        name: "Basic",
-        tagline: "Meniu digital și traducere AI. Online în 5 minute.",
-        features: [
-          "Meniu QR pentru fiecare masă",
-          "Meniu digital cu fotografii și alergeni",
-          "Traducere AI în 35 de limbi",
-          "Generare AI de fotografii ale preparatelor",
-          "Gestionare de pe orice telefon sau tabletă",
-        ],
-      },
-      pro: {
-        name: "Pro",
-        tagline: "Control total al restaurantului: comenzi, bucătărie și rezervări.",
-        features: [
-          "Tot din Basic",
-          "Preluare comenzi din meniu",
-          "Aplicație ospătar",
-          "Display bucătărie (KDS)",
-          "Rezervare mese online 24/7",
-          "Domeniu propriu",
-          "Suport WhatsApp prioritar",
-        ],
-      },
-    },
-  },
-
   footer: {
     featureLinks: [
       { href: "/ro/meniu-digital-restaurant", label: "Meniu digital" },

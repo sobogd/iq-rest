@@ -169,44 +169,6 @@ export const TEXTS: LandingTexts = {
     button: "Bereken je abonnement",
   },
 
-  pricingHero: {
-    chips: ["Geen commissie", "Geen contracten", "14 dagen gratis"],
-    heading: "Eenvoudige prijzen.",
-    headingAccent: "Geen verrassingen.",
-    sub: "Eén maandelijkse vergoeding. Geen commissie op bestellingen. Opzegbaar wanneer je wilt.",
-    popularBadge: "Populair",
-    perMonthSuffix: "/mnd",
-    whenAnnualTemplate: "jaarlijkse facturering · {total} per jaar",
-    orMonthlyTemplate: "of {price}/mnd",
-    savingsTemplate: "bespaar {amount} per jaar",
-    plans: {
-      basic: {
-        name: "Basic",
-        tagline: "Digitale menukaart en AI-vertaling. In 5 minuten live.",
-        features: [
-          "QR menu voor elke tafel",
-          "Digitaal menu met foto's en allergenen",
-          "AI vertaling in 35 talen",
-          "AI gerechtfoto-generatie",
-          "Beheer vanaf elke telefoon of tablet",
-        ],
-      },
-      pro: {
-        name: "Pro",
-        tagline: "Volledige restaurantcontrole: bestellingen, keuken en reserveringen.",
-        features: [
-          "Alles in Basic",
-          "Bestellingen via het menu",
-          "Ober-app",
-          "Keukenscherm (KDS)",
-          "Online tafelreservering 24/7",
-          "Eigen domein",
-          "Prioriteit WhatsApp ondersteuning",
-        ],
-      },
-    },
-  },
-
   footer: {
     featureLinks: [
       { href: "/nl/digitaal-menu-restaurant", label: "Digitaal menu" },

@@ -169,44 +169,6 @@ export const TEXTS: LandingTexts = {
     button: "Aprēķiniet savu plānu",
   },
 
-  pricingHero: {
-    chips: ["Bez komisijas", "Bez līgumiem", "14 dienas bez maksas"],
-    heading: "Vienkāršas cenas.",
-    headingAccent: "Bez pārsteigumiem.",
-    sub: "Viena ikmēneša maksa. Bez procentiem no pasūtījumiem. Atceliet jebkurā laikā.",
-    popularBadge: "Populārs",
-    perMonthSuffix: "/mēn.",
-    whenAnnualTemplate: "ikgadējais rēķins · {total} gadā",
-    orMonthlyTemplate: "vai {price}/mēn.",
-    savingsTemplate: "ietaupiet {amount} gadā",
-    plans: {
-      basic: {
-        name: "Basic",
-        tagline: "Digitālā ēdienkarte un AI tulkojums. Darbojas 5 minūtēs.",
-        features: [
-          "QR ēdienkarte katram galdam",
-          "Digitālā ēdienkarte ar fotoattēliem un alergēniem",
-          "AI tulkojums 35 valodās",
-          "AI ēdienu fotoattēlu ģenerēšana",
-          "Pārvaldība no jebkura telefona vai planšetdatora",
-        ],
-      },
-      pro: {
-        name: "Pro",
-        tagline: "Pilnīga restorāna kontrole: pasūtījumi, virtuve un rezervācijas.",
-        features: [
-          "Viss no Basic",
-          "Pasūtījumu pieņemšana no ēdienkartes",
-          "Viesmīļa lietotne",
-          "Virtuves ekrāns (KDS)",
-          "Tiešsaistes galdu rezervēšana 24/7",
-          "Savs domēns",
-          "Prioritārs WhatsApp atbalsts",
-        ],
-      },
-    },
-  },
-
   footer: {
     featureLinks: [
       { href: "/lv/digitala-edienkarte-restorans", label: "Digitālā ēdienkarte" },

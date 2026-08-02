@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PricingTemplate } from "@/app/_landing/templates/pricing-template";
 import { TEXTS as DEFAULT } from "../texts";
 import { TEXTS } from "./texts";
-import { SCHEMA_PRICE_BASIC_EUR, SCHEMA_PRICE_PRO_EUR } from "@/lib/pricing";
+import { SCHEMA_PRICE_MENU_EUR } from "@/lib/pricing";
 import { SCHEMA_DATE_MODIFIED } from "@/lib/page-meta";
 
 export const dynamic = "force-static";
@@ -15,15 +15,15 @@ const PRICING_FAQ = {
   ...DEFAULT.faq,
   sub: "Restorancıların fiyatlar ve ödeme hakkında sorduğu sorular. Sorunuzu bulamadınız mı? WhatsApp'tan yazın.",
   items: [
-    { q: "Basic ile Pro arasındaki fark nedir?", a: "Basic; dijital + QR menü, 35 dile AI çevirisi, menüden sipariş alma (isteğe bağlı) ve herhangi bir cihazdan yönetim içerir. Pro, mutfak ekranı (KDS) ve 7/24 online masa rezervasyonunu ekler, ayrıca öncelikli WhatsApp desteği. Mutfak akışı ve rezervasyonlara ihtiyacınız yoksa — Basic her şeyi kapsar." },
+    { q: "Fiyatlandırma nasıl çalışıyor?", a: "Kendi planınızı siz oluşturuyorsunuz. Dijital QR menü temeldir — 35 dile AI çevirisi ve her cihazdan yönetim buna dahildir. Ardından yalnızca ihtiyacınız olanı eklersiniz: masa rezervasyonu, sipariş almalı mutfak ekranı veya özel bir alan adı. Fiyat restoran başınadır ve ikinci restorandan itibaren miktar indirimleri otomatik olarak uygulanır." },
     { q: "Siparişlerden komisyon alıyor musunuz?", a: "Hayır. Her sipariş — QR menüden veya bir garson tarafından alınan — doğrudan restorana gider, yüzde veya aracı komisyonu olmadan. Sabit bir aylık ücretiniz var ve başka kesinti yok." },
-    { q: "14 günlük deneme süresi neleri içeriyor?", a: "Her iki plandaki tüm özelliklere tam erişim, kart gerekmez. 14 gün sonra ödeme yöntemi bağlanmazsa hesap otomatik olarak duraklatılır. Onayınız olmadan otomatik tahsilat yapılmaz." },
+    { q: "14 günlük deneme süresi neleri içeriyor?", a: "Kart gerekmeden tüm özelliklere tam erişim. 14 gün sonra ödeme yöntemi bağlanmazsa hesap otomatik olarak duraklatılır. Onayınız olmadan otomatik tahsilat yapılmaz." },
     { q: "14 günden sonra ne olur?", a: "Ödeme yöntemi bağlanmazsa hesap otomatik olarak duraklatılır. Yönetim paneli salt okunur modda kullanılabilir kalır, ancak misafir QR menüsü ve sipariş alma geçici olarak devre dışı bırakılır. Asla onayınız olmadan tahsilat yapmıyoruz." },
     { q: "Duraklatma sırasında menüm, siparişlerim ve verilerim ne olur?", a: "Her şey tam olarak korunur: menü, yemek fotoğrafları, sipariş geçmişi, rezervasyonlar, tasarım ayarları, istatistikler. Bir ay veya altı ay sonra bile ödemeyi bağlayın — her şey eskisi gibi döner, hiçbir şey kaybolmaz." },
     { q: "Masalardaki QR kodları deneme süresinden sonra çalışmaya devam eder mi?", a: "Hesap duraklatılırsa QR kodları misafirlere „geçici olarak kullanılamıyor“ mesajı gösterir. Yeni QR kodları basmanıza gerek yok: ödeme bağlanır bağlanmaz aynı kodlar menüyü tekrar açar." },
-    { q: "Daha sonra Basic'ten Pro'ya geçebilir miyim?", a: "Evet, yükseltme yönetim panelinde tek tıklamadır. Ek ücret, ödenmiş dönemin kalan günlerine göre orantılı olarak hesaplanır. Pro'dan Basic'e düşürme de mevcuttur — KDS ve rezervasyon devre dışı bırakılır, ancak tüm veriler korunur." },
-    { q: "Pro'da kaç restoran yönetebilirim?", a: "Pro, tek bir hesap altında en fazla 4 restoran içerir ve hepsi tek bir yönetim panelinden yönetilir. Daha büyük bir grup mu işletiyorsunuz? Enterprise planı hakkında WhatsApp'tan bize yazın." },
-    { q: "Yıllık indirim nedir?", a: "Aylık plana kıyasla yaklaşık %30. Kesin tutar, plan sayfasında ödeme sırasında gösterilir." },
+    { q: "Planımı daha sonra değiştirebilir miyim?", a: "Evet — yönetim panelinden istediğiniz zaman özellik ekleyebilir veya çıkarabilirsiniz. Fark, ödenmiş dönemin kalan günlerine göre orantılı olarak hesaplanır. Bir özelliği çıkarırsanız kapatılır, ancak ona ait tüm veriler korunur." },
+    { q: "Kaç restoran yönetebilirim?", a: "İhtiyacınız kadar — planınızı oluştururken restoran sayısını seçin, hepsi tek bir panelden yönetilir. Miktar indirimleri otomatik olarak uygulanır, 5+ restoranda %50'ye varan indirim. Daha büyük bir grup mu işletiyorsunuz? Özel bir plan için WhatsApp'tan bize yazın." },
+    { q: "Yıllık indirim nedir?", a: "Aylık ödemeye kıyasla yaklaşık %30. Kesin tutar, planınızı oluştururken gösterilir." },
     { q: "Aboneliği istediğim zaman iptal edebilir miyim?", a: "Evet, iptal yönetim panelinde tek tıklamadır. İptal sonrası hesap, ödenmiş dönemin sonuna kadar çalışır, ardından duraklatılır. Veriler korunur ve istediğiniz zaman geri dönebilirsiniz." },
     { q: "Hangi ödeme yöntemlerini kabul ediyorsunuz?", a: "Stripe üzerinden Visa, Mastercard ve American Express. Apple Pay ve Google Pay da destekleniyor. Avrupa'da — yıllık planda SEPA Direct Debit." },
   ],
@@ -65,8 +65,7 @@ const JSON_LD = JSON.stringify({
       dateModified: SCHEMA_DATE_MODIFIED,
       brand: { "@type": "Brand", name: "IQ Rest" },
       offers: [
-        { "@type": "Offer", name: "Basic", price: SCHEMA_PRICE_BASIC_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
-        { "@type": "Offer", name: "Pro", price: SCHEMA_PRICE_PRO_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
+        { "@type": "Offer", name: "Dijital menü", price: SCHEMA_PRICE_MENU_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
       ],
     },
     {

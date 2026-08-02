@@ -169,44 +169,6 @@ export const TEXTS: LandingTexts = {
     button: "Planınızı hesaplayın",
   },
 
-  pricingHero: {
-    chips: ["Komisyon yok", "Sözleşme yok", "14 gün ücretsiz"],
-    heading: "Basit fiyatlar.",
-    headingAccent: "Sürpriz yok.",
-    sub: "Tek aylık ücret. Siparişlerden komisyon yok. İstediğiniz zaman iptal edin.",
-    popularBadge: "Popüler",
-    perMonthSuffix: "/ay",
-    whenAnnualTemplate: "yıllık faturalandırma · yılda {total}",
-    orMonthlyTemplate: "veya {price}/ay",
-    savingsTemplate: "yılda {amount} tasarruf",
-    plans: {
-      basic: {
-        name: "Basic",
-        tagline: "Dijital menü ve AI çeviri. 5 dakikada yayında.",
-        features: [
-          "Her masa için QR menü",
-          "Fotoğraflı ve alerjenli dijital menü",
-          "35 dile AI çevirisi",
-          "Yemek fotoğraflarının AI üretimi",
-          "Herhangi bir telefon veya tabletten yönetim",
-        ],
-      },
-      pro: {
-        name: "Pro",
-        tagline: "Tam restoran kontrolü: siparişler, mutfak ve rezervasyonlar.",
-        features: [
-          "Basic'teki her şey",
-          "Menüden sipariş alma",
-          "Garson uygulaması",
-          "Mutfak ekranı (KDS)",
-          "7/24 online masa rezervasyonu",
-          "Özel alan adı",
-          "Öncelikli WhatsApp desteği",
-        ],
-      },
-    },
-  },
-
   footer: {
     featureLinks: [
       { href: "/tr/dijital-menu-restoran", label: "Dijital menü" },

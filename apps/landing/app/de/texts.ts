@@ -169,44 +169,6 @@ export const TEXTS: LandingTexts = {
     button: "Tarif berechnen",
   },
 
-  pricingHero: {
-    chips: ["Keine Provision", "Keine Verträge", "14 Tage kostenlos"],
-    heading: "Einfache Preise.",
-    headingAccent: "Keine Überraschungen.",
-    sub: "Eine monatliche Gebühr. Keine Provision auf Bestellungen. Jederzeit kündbar.",
-    popularBadge: "Beliebt",
-    perMonthSuffix: "/Mon.",
-    whenAnnualTemplate: "jährliche Abrechnung · {total} pro Jahr",
-    orMonthlyTemplate: "oder {price}/Mon.",
-    savingsTemplate: "Ersparnis {amount} pro Jahr",
-    plans: {
-      basic: {
-        name: "Basic",
-        tagline: "Digitale Speisekarte und KI-Übersetzung. In 5 Minuten online.",
-        features: [
-          "QR-Speisekarte für jeden Tisch",
-          "Digitale Speisekarte mit Fotos und Allergenen",
-          "KI-Übersetzung in 35 Sprachen",
-          "KI-Generierung von Gerichtsfotos",
-          "Verwaltung von jedem Smartphone oder Tablet",
-        ],
-      },
-      pro: {
-        name: "Pro",
-        tagline: "Volle Restaurantkontrolle: Bestellungen, Küche und Reservierungen.",
-        features: [
-          "Alles aus Basic",
-          "Bestellannahme über die Karte",
-          "Kellner-App",
-          "Küchen-Display (KDS)",
-          "Online-Tischreservierung 24/7",
-          "Eigene Domain",
-          "Priorisierter WhatsApp-Support",
-        ],
-      },
-    },
-  },
-
   footer: {
     featureLinks: [
       { href: "/de/digitale-speisekarte-restaurant", label: "Digitale Speisekarte" },

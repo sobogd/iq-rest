@@ -169,44 +169,6 @@ export const TEXTS: LandingTexts = {
     button: "플랜 계산하기",
   },
 
-  pricingHero: {
-    chips: ["수수료 없음", "계약 없음", "14일 무료"],
-    heading: "간단한 요금",
-    headingAccent: "숨겨진 비용 없음",
-    sub: "월 요금 하나. 주문 수수료 없음. 언제든지 해지하세요.",
-    popularBadge: "인기",
-    perMonthSuffix: "/월",
-    whenAnnualTemplate: "연간 청구 · 연간 {total}",
-    orMonthlyTemplate: "또는 월 {price}",
-    savingsTemplate: "연간 {amount} 절약",
-    plans: {
-      basic: {
-        name: "Basic",
-        tagline: "디지털 메뉴와 AI 번역. 5분 만에 시작.",
-        features: [
-          "모든 테이블용 QR 메뉴",
-          "사진과 알레르겐이 있는 디지털 메뉴",
-          "35개 언어 AI 번역",
-          "AI 요리 사진 생성",
-          "모든 휴대폰 또는 태블릿에서 관리",
-        ],
-      },
-      pro: {
-        name: "Pro",
-        tagline: "레스토랑 전체 관리: 주문, 주방, 예약.",
-        features: [
-          "Basic의 모든 기능",
-          "메뉴에서 주문 받기",
-          "웨이터 앱",
-          "주방 디스플레이 (KDS)",
-          "온라인 테이블 예약 24/7",
-          "맞춤 도메인",
-          "우선 WhatsApp 지원",
-        ],
-      },
-    },
-  },
-
   footer: {
     featureLinks: [
       { href: "/ko/dijiteol-menyu-resutorang", label: "디지털 메뉴" },

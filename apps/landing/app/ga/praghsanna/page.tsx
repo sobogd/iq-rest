@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PricingTemplate } from "@/app/_landing/templates/pricing-template";
 import { TEXTS as DEFAULT } from "../texts";
 import { TEXTS } from "./texts";
-import { SCHEMA_PRICE_BASIC_EUR, SCHEMA_PRICE_PRO_EUR } from "@/lib/pricing";
+import { SCHEMA_PRICE_MENU_EUR } from "@/lib/pricing";
 import { SCHEMA_DATE_MODIFIED } from "@/lib/page-meta";
 
 export const dynamic = "force-static";
@@ -15,17 +15,17 @@ const PRICING_FAQ = {
   ...DEFAULT.faq,
   sub: "Cad a fhiafraíonn bialannóirí faoi phraghsanna agus íocaíocht. Nach féidir leat do cheist a fháil? Cuir teachtaireacht chugainn ar WhatsApp.",
   items: [
-    { q: "Cad é an difríocht idir Basic agus Pro?", a: "Cuimsíonn Basic an biachlár digiteach + QR, aistriúchán IS i 35 teanga, glacadh orduithe ón mbiachlár (roghnach) agus bainistíocht ó aon ghléas. Cuireann Pro an scáileán cistine (KDS) agus an curfha bord ar líne 24/7 leis, móide tacaíocht WhatsApp tosaíochta. Mura dteastaíonn sreabhadh cistine ná curfhaí uait — clúdaíonn Basic gach rud." },
-    { q: "An nglacann sibh coimisiún ar orduithe?", a: "Ní ghlacaimid. Téann gach ordú — ó bhiachlár QR nó ón bhfreastalaí — díreach chuig an mbialann, gan céatadáin ná coimisiúin comhthiomsóra. Tá táille mhíosúil sheasta agat agus gan asbhaintí eile." },
-    { q: "Cad atá san áireamh sa tréimhse trialach 14 lá?", a: "Rochtain iomlán ar gach gné sa dá phlean, gan cárta. Tar éis 14 lá cuirfear an cuntas ar shos go huathoibríoch mura bhfuil modh íocaíochta nasctha. Níl aon táillí uathoibríocha gan do thoiliú." },
-    { q: "Cad a tharlóidh tar éis na 14 lá?", a: "Mura bhfuil modh íocaíochta nasctha, cuirfear an cuntas ar shos go huathoibríoch. Fanann an painéal riaracháin ar fáil i mód léitheoireachta amháin, ach tá an biachlár QR d'aíonna agus glacadh orduithe díchumasaithe go sealadach. Ní ghearraimid riamh gan do thoiliú." },
-    { q: "Cad a tharlóidh do mo bhiachlár, orduithe agus sonraí le linn an tsosa?", a: "Coinnítear gach rud go hiomlán: biachlár, grianghraif miasa, stair orduithe, curfhaí, socruithe dearaidh, staitisticí. Nasc íocaíocht fiú mí nó sé mhí ina dhiaidh sin — filleann gach rud mar a bhí, ní chailltear tada." },
-    { q: "An oibreoidh na cóid QR ar na boird tar éis na trialach?", a: "Má tá an cuntas ar shos, taispeánann na cóid QR teachtaireacht „ar fáil go sealadach“ d'aíonna. Ní gá duit cóid QR nua a phriontáil: chomh luath agus a bheidh íocaíocht nasctha, osclaíonn na cóid céanna an biachlár arís." },
-    { q: "An féidir liom athrú ó Basic go Pro níos déanaí?", a: "Tá, déantar an t-uasghrádú le cliceáil amháin sa phainéal riaracháin. Ríomhtar an formhuirear go pro rata de réir laethanta atá fágtha den tréimhse íoctha. Tá ísliú ó Pro go Basic ar fáil freisin — díchumasófar KDS agus curfha, ach coinnítear gach sonra." },
-    { q: "Cé mhéad bialann is féidir liom a bhainistiú ar Pro?", a: "Cuimsíonn Pro suas le 4 bhialann faoi chuntas amháin, iad go léir bainistithe ó phainéal amháin. Grúpa níos mó agat? Cuir teachtaireacht chugainn ar WhatsApp faoi phlean Enterprise." },
-    { q: "Cad é an lascaine bhliantúil?", a: "Thart ar 30% i gcomparáid leis an bplean míosúil. Taispeántar an méid cruinn ag an íocaíocht ar leathanach an phlean." },
-    { q: "An féidir liom an síntiús a chealú aon uair?", a: "Tá, déantar an cealú le cliceáil amháin sa phainéal riaracháin. Tar éis an chealaithe oibríonn an cuntas go dtí deireadh na tréimhse íoctha, ansin cuirtear ar shos é. Coinnítear sonraí agus is féidir leat filleadh aon uair." },
-    { q: "Cad iad na modhanna íocaíochta a ghlacann sibh?", a: "Visa, Mastercard agus American Express trí Stripe. Tacaítear le Apple Pay agus Google Pay freisin. San Eoraip — Dochar Díreach SEPA ar an bplean bliantúil." },
+    { q: "Conas a oibríonn an praghsáil?", a: "Tógann tú do phlean féin. Is é an biachlár digiteach QR an bonn — cuimsíonn sé aistriúchán le hintleacht shaorga i 35 teanga agus bainistíocht ó aon ghléas. Ansin ní chuireann tú leis ach an méid a theastaíonn uait: áirithintí bord, an scáileán cistine le glacadh orduithe, nó fearann saincheaptha. Tá an praghas in aghaidh na bialainne, agus cuirtear lascainí toirte i bhfeidhm go huathoibríoch ón dara bhialann amach." },
+    { q: "An nglacann sibh coimisiún ar orduithe?", a: "Ní ghlacaimid. Téann gach ordú — cibé ó bhiachlár QR nó ordú a ghlacann freastalaí — díreach chuig an mbialann, gan céatadáin ná coimisiúin chomhthiomsóra. Bíonn táille mhíosúil sheasta agat gan aon asbhaintí eile." },
+    { q: "Cad atá san áireamh sa tréimhse thrialach 14 lá?", a: "Rochtain iomlán ar gach gné, gan gá le cárta. Tar éis 14 lá cuirtear an cuntas ar sos go huathoibríoch mura bhfuil modh íocaíochta ceangailte. Níl aon táillí uathoibríocha ann gan do thoiliú." },
+    { q: "Cad a tharlaíonn tar éis na 14 lá?", a: "Mura bhfuil modh íocaíochta ceangailte, cuirtear an cuntas ar sos go huathoibríoch. Fanann an painéal riaracháin ar fáil i mód léimh amháin, ach díchumasaítear an biachlár QR d'aíonna agus an glacadh orduithe go sealadach. Ní ghearraimid riamh gan do thoiliú." },
+    { q: "Cad a tharlaíonn do mo bhiachlár, orduithe agus sonraí le linn an tsosa?", a: "Coinnítear gach rud ina iomláine: an biachlár, grianghraif na miasa, stair na n-orduithe, áirithintí, socruithe dearaidh, staitisticí. Ceangail íocaíocht fiú mí nó sé mhí ina dhiaidh sin — filleann gach rud mar a bhí, ní chailltear aon rud." },
+    { q: "An oibreoidh na cóid QR ar na boird i gcónaí tar éis na trialach?", a: "Má bhíonn an cuntas ar sos, taispeánann na cóid QR teachtaireacht ‘ar fáil go sealadach’ do na haíonna. Ní gá duit cóid QR nua a phriontáil: chomh luath is a bheidh íocaíocht ceangailte, osclaíonn na cóid chéanna an biachlár arís." },
+    { q: "An féidir liom mo phlean a athrú níos déanaí?", a: "Is féidir — cuir gnéithe leis nó bain díobh am ar bith sa phainéal riaracháin. Roinntear an difríocht go pro rata de réir na laethanta atá fágtha den tréimhse íoctha. Má bhaineann tú gné, múchtar í ach coinnítear a cuid sonraí ar fad." },
+    { q: "Cé mhéad bialann is féidir liom a bhainistiú?", a: "An oiread agus a theastaíonn uait — roghnaigh líon na mbialann agus tú ag tógáil do phlean, iad go léir á mbainistiú ó aon deais amháin. Cuirtear lascainí toirte i bhfeidhm go huathoibríoch, suas le 50% as le 5+ bialann. An bhfuil grúpa níos mó á reáchtáil agat? Cuir teachtaireacht chugainn ar WhatsApp faoi phlean saincheaptha." },
+    { q: "Cad é an lascaine bhliantúil?", a: "Thart ar 30% i gcomparáid leis an íocaíocht mhíosúil. Taispeántar an méid cruinn agus tú ag tógáil do phlean." },
+    { q: "An féidir liom an síntiús a chealú am ar bith?", a: "Is féidir, is le haon chlic amháin sa phainéal riaracháin a dhéantar an cealú. Tar éis an chealaithe leanann an cuntas ag obair go dtí deireadh na tréimhse íoctha, agus ansin cuirtear ar sos é. Coinnítear na sonraí agus is féidir leat filleadh am ar bith is mian leat." },
+    { q: "Cad iad na modhanna íocaíochta a ghlacann sibh?", a: "Visa, Mastercard agus American Express trí Stripe. Tacaítear le Apple Pay agus Google Pay chomh maith. San Eoraip — SEPA Direct Debit ar an bplean bliantúil." },
   ],
 };
 
@@ -65,8 +65,7 @@ const JSON_LD = JSON.stringify({
       dateModified: SCHEMA_DATE_MODIFIED,
       brand: { "@type": "Brand", name: "IQ Rest" },
       offers: [
-        { "@type": "Offer", name: "Basic", price: SCHEMA_PRICE_BASIC_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
-        { "@type": "Offer", name: "Pro", price: SCHEMA_PRICE_PRO_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
+        { "@type": "Offer", name: "Biachlár digiteach", price: SCHEMA_PRICE_MENU_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
       ],
     },
     {

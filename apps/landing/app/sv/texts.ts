@@ -169,44 +169,6 @@ export const TEXTS: LandingTexts = {
     button: "Beräkna ditt abonnemang",
   },
 
-  pricingHero: {
-    chips: ["Ingen provision", "Inga kontrakt", "14 dagar gratis"],
-    heading: "Enkla priser.",
-    headingAccent: "Inga överraskningar.",
-    sub: "En månadsavgift. Ingen provision på beställningar. Avsluta när som helst.",
-    popularBadge: "Populär",
-    perMonthSuffix: "/mån",
-    whenAnnualTemplate: "årlig fakturering · {total} per år",
-    orMonthlyTemplate: "eller {price}/mån",
-    savingsTemplate: "spara {amount} per år",
-    plans: {
-      basic: {
-        name: "Basic",
-        tagline: "Digital meny och AI-översättning. Igång på 5 minuter.",
-        features: [
-          "QR-meny för varje bord",
-          "Digital meny med bilder och allergener",
-          "AI-översättning till 35 språk",
-          "AI-generering av rättfoton",
-          "Hantering från valfri telefon eller surfplatta",
-        ],
-      },
-      pro: {
-        name: "Pro",
-        tagline: "Full kontroll över restaurangen: beställningar, kök och bokningar.",
-        features: [
-          "Allt i Basic",
-          "Ta emot beställningar från menyn",
-          "Servitörsapp",
-          "Köksskärm (KDS)",
-          "Onlinebordsbokning 24/7",
-          "Egen domän",
-          "Prioriterad WhatsApp-support",
-        ],
-      },
-    },
-  },
-
   footer: {
     featureLinks: [
       { href: "/sv/digital-meny-restaurang", label: "Digital meny" },

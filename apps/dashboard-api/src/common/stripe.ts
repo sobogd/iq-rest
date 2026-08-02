@@ -82,14 +82,34 @@ export type PriceLookupKey = (typeof PRICE_LOOKUP_KEYS)[keyof typeof PRICE_LOOKU
 export const SUPPORTED_CURRENCIES = ["EUR", "NOK", "SEK", "DKK", "MXN", "USD", "AUD", "GBP", "PLN", "CZK", "HUF", "ISK", "CHF", "RSD", "BRL", "ARS", "COP", "CLP", "PEN", "UYU", "TRY"] as const;
 
 // Stripe zero-decimal currencies among ours: the amount IS the whole unit (no
-// ×100). Only CLP here. ISK/HUF are charged as 2-decimal (×100) with integer
-// amounts, so they need no special handling.
+// ×100). Only CLP here.
 const ZERO_DECIMAL_CURRENCIES = new Set(["CLP"]);
 
+// Stripe "special case" currencies: passed as ×100 (like a 2-decimal currency)
+// but the amount MUST be an even multiple of 100 (a whole major unit — these
+// currencies have no real minor unit). A per-item integer price is already a
+// multiple of 100 after ×100, but the volume discount (× 0.85 / 0.75) can leave
+// a non-round cents value that Stripe rejects — so we round to the nearest whole
+// major unit here. HUF is the documented case; ISK (no subunit) is defensively
+// treated the same (rounding to whole króna is economically exact regardless).
+const MULTIPLE_OF_100_CURRENCIES = new Set(["HUF", "ISK"]);
+
 // Convert our internal cents (major×100) to the amount Stripe expects for this
-// currency. Zero-decimal → divide by 100; everything else → cents unchanged.
+// currency. Zero-decimal → divide by 100; multiple-of-100 → round to whole major
+// unit (×100); everything else → cents unchanged.
 export function toStripeUnitAmount(amountCents: number, currency: string): number {
-  return ZERO_DECIMAL_CURRENCIES.has(currency.toUpperCase()) ? Math.round(amountCents / 100) : amountCents;
+  const c = currency.toUpperCase();
+  if (ZERO_DECIMAL_CURRENCIES.has(c)) return Math.round(amountCents / 100);
+  if (MULTIPLE_OF_100_CURRENCIES.has(c)) return Math.round(amountCents / 100) * 100;
+  return amountCents;
+}
+
+// Inverse of toStripeUnitAmount: convert a Stripe unit_amount BACK to our
+// internal cents (major×100), so a subscription's stored `amount` is always in
+// the same convention (and `amount / 100` renders the major value everywhere).
+// Zero-decimal amounts are whole units → ×100; all others are already cents.
+export function fromStripeUnitAmount(unitAmount: number, currency: string): number {
+  return ZERO_DECIMAL_CURRENCIES.has(currency.toUpperCase()) ? unitAmount * 100 : unitAmount;
 }
 
 export type SupportedCurrency = (typeof SUPPORTED_CURRENCIES)[number];

@@ -14,14 +14,15 @@ import type { Request } from "express";
 import type { AuthedRequest } from "../auth/auth.guard";
 import { UserOrDeviceGuard } from "../devices/user-or-device.guard";
 import { DeviceTypes } from "../devices/device-types.decorator";
-import { ProFeatureGuard } from "../common/pro-feature.guard";
+import { ReservationFeatureGuard } from "../common/pro-feature.guard";
 import { ReservationsService } from "./reservations.service";
 import { SetStatusDto } from "./dto";
 
 // Dual auth: cookie-session admin OR a paired RESERVATION device. KITCHEN /
 // WAITER tokens are rejected — only the reservation board needs this surface.
+// Gated on the RESERVATIONS capability (its own à-la-carte add-on), not orders.
 @Controller("reservations")
-@UseGuards(UserOrDeviceGuard, ProFeatureGuard)
+@UseGuards(UserOrDeviceGuard, ReservationFeatureGuard)
 @DeviceTypes("RESERVATION")
 export class ReservationsController {
   constructor(private readonly svc: ReservationsService) {}

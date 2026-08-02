@@ -30,6 +30,7 @@ import {
   type SupportedCurrency,
 } from "@/lib/country-currency-map";
 import { usePrimaryCta } from "./onboarding/use-primary-cta";
+import { analytics } from "@/lib/analytics";
 import type { PricingQuizTexts } from "../types";
 
 type Cycle = "month" | "year";
@@ -145,7 +146,10 @@ export function PricingQuiz({ ctaText, texts }: { ctaText: string; texts?: Prici
               <button
                 key={c}
                 type="button"
-                onClick={() => setCycle(c)}
+                onClick={() => {
+                  analytics.track(`l_pricing_cycle_${c}`);
+                  setCycle(c);
+                }}
                 className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
                   cycle === c ? "bg-primary text-primary-foreground" : "text-muted-foreground"
                 }`}
@@ -162,7 +166,10 @@ export function PricingQuiz({ ctaText, texts }: { ctaText: string; texts?: Prici
             <button
               type="button"
               aria-label={t.fewerAria}
-              onClick={() => setCount((c) => Math.max(1, c - 1))}
+              onClick={() => {
+                analytics.track("l_pricing_count_minus");
+                setCount((c) => Math.max(1, c - 1));
+              }}
               className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:hover:bg-primary"
               disabled={count <= 1}
             >
@@ -172,7 +179,10 @@ export function PricingQuiz({ ctaText, texts }: { ctaText: string; texts?: Prici
             <button
               type="button"
               aria-label={t.moreAria}
-              onClick={() => setCount((c) => Math.min(99, c + 1))}
+              onClick={() => {
+                analytics.track("l_pricing_count_plus");
+                setCount((c) => Math.min(99, c + 1));
+              }}
               className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
             >
               <Plus className="h-3.5 w-3.5" strokeWidth={2.75} />
@@ -187,7 +197,7 @@ export function PricingQuiz({ ctaText, texts }: { ctaText: string; texts?: Prici
         <div className="relative flex flex-col items-start rounded-2xl border-2 border-primary bg-primary/5 shadow-sm p-4 sm:p-5">
           <UtensilsCrossed className="h-7 w-7 text-primary mb-3" />
           <div className="text-sm font-semibold text-foreground pr-6">{t.menuTitle}</div>
-          <div className="hidden sm:block text-sm text-muted-foreground mt-0.5 leading-snug">{t.menuHint}</div>
+          <div className="block text-sm text-muted-foreground mt-0.5 leading-snug">{t.menuHint}</div>
           <div className="mt-3 text-sm font-medium text-primary tabular-nums">
             {formatMoney(pricing.menu[k], currency)}
             <span className="font-normal opacity-70">{t.perMonthSuffix}</span>
@@ -200,7 +210,10 @@ export function PricingQuiz({ ctaText, texts }: { ctaText: string; texts?: Prici
             <button
               key={key}
               type="button"
-              onClick={() => setFeat((s) => ({ ...s, [key]: !s[key] }))}
+              onClick={() => {
+                analytics.track(`l_pricing_addon_${key}_${on ? "off" : "on"}`);
+                setFeat((s) => ({ ...s, [key]: !s[key] }));
+              }}
               className={`relative flex flex-col items-start text-left rounded-2xl border-2 p-4 sm:p-5 transition-colors ${
                 on ? "border-primary bg-primary/5 shadow-sm" : "border-border bg-card hover:border-input"
               }`}
@@ -214,7 +227,7 @@ export function PricingQuiz({ ctaText, texts }: { ctaText: string; texts?: Prici
               </span>
               <Icon className={`h-7 w-7 mb-3 ${on ? "text-primary" : "text-muted-foreground"}`} />
               <div className="text-sm font-semibold text-foreground pr-6">{label}</div>
-              <div className="hidden sm:block text-sm text-muted-foreground mt-0.5 leading-snug">{hint}</div>
+              <div className="block text-sm text-muted-foreground mt-0.5 leading-snug">{hint}</div>
               <div className={`mt-3 text-sm font-medium tabular-nums ${on ? "text-primary" : "text-muted-foreground"}`}>
                 +{addonPrice(key)}
                 <span className="font-normal opacity-70">{t.perMonthSuffix}</span>
@@ -232,7 +245,9 @@ export function PricingQuiz({ ctaText, texts }: { ctaText: string; texts?: Prici
           <div className="min-w-0 sm:flex-1">
             <div className="flex items-baseline gap-1 whitespace-nowrap">
               {info.symbolPosition === "before" ? <span className="text-lg text-muted-foreground">{info.symbol}</span> : null}
-              <span className="text-3xl font-semibold tracking-tight tabular-nums">{formatMoney(quote.amountMajor, currency)}</span>
+              <span className="text-3xl font-semibold tracking-tight tabular-nums">
+                {quote.amountMajor.toLocaleString("en-US", { minimumFractionDigits: Number.isInteger(quote.amountMajor) ? 0 : 2, maximumFractionDigits: 2 })}
+              </span>
               {info.symbolPosition === "after" ? <span className="text-lg text-muted-foreground">{info.symbol}</span> : null}
               <span className="text-sm text-muted-foreground">{cycle === "year" ? t.perYearSuffix : t.perMonthLongSuffix}</span>
             </div>
@@ -257,7 +272,7 @@ export function PricingQuiz({ ctaText, texts }: { ctaText: string; texts?: Prici
           <button
             type="button"
             onClick={() => cta.onClick("l_pricing_quiz_cta")}
-            className="w-full sm:w-auto shrink-0 inline-flex items-center justify-center min-h-12 py-2.5 px-6 text-sm font-semibold text-primary-foreground bg-primary rounded-xl hover:bg-primary/90 active:scale-[0.99] transition-colors"
+            className="w-full sm:w-auto shrink-0 inline-flex items-center justify-center h-11 px-6 text-base font-semibold text-white bg-gradient-to-br from-[hsl(9,100%,58%)] to-[hsl(35,95%,55%)] rounded-lg hover:opacity-90 active:scale-[0.99] transition-all text-center leading-tight whitespace-nowrap"
           >
             {cta.label}
           </button>

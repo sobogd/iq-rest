@@ -169,44 +169,6 @@ export const TEXTS: LandingTexts = {
     button: "Izračunajte svoj plan",
   },
 
-  pricingHero: {
-    chips: ["Bez provizije", "Bez ugovora", "14 dana besplatno"],
-    heading: "Jednostavne cene.",
-    headingAccent: "Bez iznenađenja.",
-    sub: "Jedna mesečna naknada. Bez procenta od porudžbina. Otkažite bilo kada.",
-    popularBadge: "Popularno",
-    perMonthSuffix: "/mes.",
-    whenAnnualTemplate: "godišnji obračun · {total} godišnje",
-    orMonthlyTemplate: "ili {price}/mes.",
-    savingsTemplate: "uštedite {amount} godišnje",
-    plans: {
-      basic: {
-        name: "Basic",
-        tagline: "Дигитални мени и AI превод. Онлајн за 5 минута.",
-        features: [
-          "QR meni za svaki sto",
-          "Digitalni meni sa fotografijama i alergenima",
-          "AI prevod na 35 jezika",
-          "AI generisanje fotografija jela",
-          "Upravljanje sa bilo kog telefona ili tableta",
-        ],
-      },
-      pro: {
-        name: "Pro",
-        tagline: "Потпуна контрола ресторана: поруџбине, кухиња и резервације.",
-        features: [
-          "Sve iz Basic",
-          "Пријем поруџбина из менија",
-          "Апликација за конобара",
-          "Kuhinjski ekran (KDS)",
-          "Onlajn rezervacija stolova 24/7",
-          "Сопствени домен",
-          "Prioritetna WhatsApp podrška",
-        ],
-      },
-    },
-  },
-
   footer: {
     featureLinks: [
       { href: "/sr/digitalni-meni-restoran", label: "Digitalni meni" },

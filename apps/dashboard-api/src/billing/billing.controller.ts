@@ -27,6 +27,7 @@ import {
   getAdhocProductId,
   encodeSelections,
   toStripeUnitAmount,
+  fromStripeUnitAmount,
   isSupportedCurrency,
   type SupportedCurrency,
   type VenueSel,
@@ -177,6 +178,21 @@ export class BillingController {
     const rawSelections = body.selections ?? [];
     const venues = rawSelections.map(toSelection);
     if (venues.length === 0) throw new BadRequestException("No venues selected");
+
+    // Never clobber a live Stripe subscription. The upsert below overwrites the
+    // single per-account Subscription row; doing that while a Stripe sub is
+    // ACTIVE/PAST_DUE would null out its stripeSubscriptionId (losing the link
+    // to a sub Stripe keeps charging) and drop entitlement to PENDING. Require
+    // the owner to cancel the Stripe sub first.
+    const existing = await this.prisma.subscription.findUnique({ where: { accountId } });
+    if (
+      existing?.stripeSubscriptionId &&
+      existing.provider === "stripe" &&
+      (existing.status === "ACTIVE" || existing.status === "PAST_DUE")
+    ) {
+      throw new BadRequestException("An active subscription already exists — cancel it before requesting SEPA billing");
+    }
+
     // SEPA-by-invoice is yearly only.
     const quote = computeAccountQuote(catalog, currency, venues, "year");
 
@@ -281,7 +297,15 @@ export class BillingController {
     const catalog = await this.catalog();
     const cycle = normalizeCycle(body.cycle);
     const feat = body.features ?? {};
-    const count = Math.max(1, Math.min(99, Math.floor(body.count ?? 1)));
+
+    // Provision the uniform features onto every existing account venue; the
+    // purchased `count` becomes the venue capacity (venueLimit).
+    const accountVenues = await this.prisma.restaurant.findMany({ where: { accountId }, select: { id: true } });
+    // `count` is the number of billable slots. It can never be fewer than the
+    // venues that already exist (every one of them gets provisioned below) —
+    // otherwise the owner would pay for N slots while N+k venues go live. Clamp
+    // server-side, not just in the UI, so a crafted request can't underpay.
+    const count = Math.min(99, Math.max(accountVenues.length || 1, Math.floor(body.count ?? 1)));
     const uniform = {
       menuOnline: true,
       reservations: !!feat.reservations,
@@ -292,9 +316,6 @@ export class BillingController {
     const quote = computeAccountQuote(catalog, currency, Array.from({ length: count }, () => uniform), cycle);
     if (quote.amountCents < 50) throw new BadRequestException("Amount too low");
 
-    // Provision the uniform features onto every existing account venue; the
-    // purchased `count` becomes the venue capacity (venueLimit).
-    const accountVenues = await this.prisma.restaurant.findMany({ where: { accountId }, select: { id: true } });
     const sels: VenueSel[] = accountVenues.map((v) => ({ restaurantId: v.id, ...uniform }));
 
     const stripe = getStripe();
@@ -444,7 +465,13 @@ export class BillingController {
       cancel_at_period_end?: boolean;
       cancel_at?: number | null;
       current_period_end?: number;
-      items?: { data?: Array<{ current_period_end?: number }> };
+      currency?: string;
+      items?: {
+        data?: Array<{
+          current_period_end?: number;
+          price?: { unit_amount?: number | null; currency?: string; recurring?: { interval?: string | null } | null };
+        }>;
+      };
     } | null;
     if (!live) return { synced: false };
     const map: Record<string, string> = { active: "ACTIVE", trialing: "ACTIVE", past_due: "PAST_DUE", canceled: "CANCELED", unpaid: "CANCELED", incomplete: "EXPIRED", incomplete_expired: "EXPIRED" };
@@ -456,10 +483,27 @@ export class BillingController {
     const canceling = !!live.cancel_at_period_end || (typeof live.cancel_at === "number" && live.cancel_at * 1000 > Date.now());
     // When cancel_at is set, prefer it as the cancels-on date.
     const cancelDate = typeof live.cancel_at === "number" && live.cancel_at > 0 ? new Date(live.cancel_at * 1000) : currentPeriodEnd;
+    // Pull the amount/interval/currency off the live price too, so pre-migration
+    // subscriptions (whose `amount` was never backfilled) show a price on the
+    // current-plan card. Stored in our internal cents convention (major×100).
+    const price = live.items?.data?.[0]?.price;
+    const liveCurrency = (price?.currency ?? live.currency ?? "").toUpperCase();
+    const amount =
+      typeof price?.unit_amount === "number" ? fromStripeUnitAmount(price.unit_amount, liveCurrency) : undefined;
+    const interval =
+      price?.recurring?.interval === "year" ? "year" : price?.recurring?.interval === "month" ? "month" : undefined;
     await this.prisma.subscription
       .update({
         where: { accountId },
-        data: { status, currentPeriodEnd: canceling ? cancelDate : currentPeriodEnd, cancelAtPeriodEnd: canceling, updatedFromStripeAt: new Date() },
+        data: {
+          status,
+          currentPeriodEnd: canceling ? cancelDate : currentPeriodEnd,
+          cancelAtPeriodEnd: canceling,
+          updatedFromStripeAt: new Date(),
+          ...(amount !== undefined ? { amount } : {}),
+          ...(interval ? { interval, billingCycle: interval === "year" ? "YEARLY" : "MONTHLY" } : {}),
+          ...(isSupportedCurrency(liveCurrency) ? { currency: liveCurrency } : {}),
+        },
       })
       .catch(() => undefined);
     return { synced: true };

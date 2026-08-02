@@ -169,44 +169,6 @@ export const TEXTS: LandingTexts = {
     button: "Apskaičiuokite savo planą",
   },
 
-  pricingHero: {
-    chips: ["Be komisinio", "Be sutarčių", "14 dienų nemokamai"],
-    heading: "Paprastos kainos.",
-    headingAccent: "Jokių netikėtumų.",
-    sub: "Vienas mėnesio mokestis. Be procentų nuo užsakymų. Atšaukite bet kada.",
-    popularBadge: "Populiarus",
-    perMonthSuffix: "/mėn.",
-    whenAnnualTemplate: "metinis atsiskaitymas · {total} per metus",
-    orMonthlyTemplate: "arba {price}/mėn.",
-    savingsTemplate: "sutaupykite {amount} per metus",
-    plans: {
-      basic: {
-        name: "Basic",
-        tagline: "Skaitmeninis meniu ir AI vertimas. Veikia per 5 minutes.",
-        features: [
-          "QR meniu kiekvienam staliukui",
-          "Skaitmeninis meniu su nuotraukomis ir alergenais",
-          "AI vertimas į 35 kalbas",
-          "AI patiekalų nuotraukų generavimas",
-          "Valdymas iš bet kurio telefono ar planšetės",
-        ],
-      },
-      pro: {
-        name: "Pro",
-        tagline: "Visiška restorano kontrolė: užsakymai, virtuvė ir rezervacijos.",
-        features: [
-          "Viskas iš Basic",
-          "Užsakymų priėmimas iš meniu",
-          "Padavėjo programėlė",
-          "Virtuvės ekranas (KDS)",
-          "Internetinė staliukų rezervacija 24/7",
-          "Nuosavas domenas",
-          "Prioritetinis WhatsApp palaikymas",
-        ],
-      },
-    },
-  },
-
   footer: {
     featureLinks: [
       { href: "/lt/skaitmeninis-meniu-restoranas", label: "Skaitmeninis meniu" },

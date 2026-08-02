@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PricingTemplate } from "@/app/_landing/templates/pricing-template";
 import { TEXTS as DEFAULT } from "../texts";
 import { TEXTS } from "./texts";
-import { SCHEMA_PRICE_BASIC_EUR, SCHEMA_PRICE_PRO_EUR } from "@/lib/pricing";
+import { SCHEMA_PRICE_MENU_EUR } from "@/lib/pricing";
 import { SCHEMA_DATE_MODIFIED } from "@/lib/page-meta";
 
 export const dynamic = "force-static";
@@ -15,15 +15,15 @@ const PRICING_FAQ = {
   ...DEFAULT.faq,
   sub: "Mida restoranipidajad küsivad hindade ja maksete kohta. Ei leia oma küsimust? Kirjuta meile WhatsAppi.",
   items: [
-    { q: "Mis vahe on Basicul ja Prol?", a: "Basic sisaldab digitaalset + QR-menüüd, AI-tõlget 35 keelde, tellimuste vastuvõtmist menüüst (valikuline) ja haldust igast seadmest. Pro lisab köögiekraani (KDS) ja veebipõhise laudade broneerimise 24/7 ning eelistatud WhatsAppi toe. Kui sa ei vaja kööki ja broneerimist — Basic katab kõik." },
-    { q: "Kas võtate tellimustelt komisjoni?", a: "Ei. Iga tellimus — QR-menüüst või kelneri vastu võetud — läheb otse restorani, ilma protsendita ja ilma agregaatorite komisjonita. Sul on kindel kuutasu ja muud mahaarvamisi pole." },
-    { q: "Mida sisaldab 14-päevane prooviperiood?", a: "Täielik juurdepääs kõigile funktsioonidele mõlemas plaanis, ilma kaardita. Pärast 14 päeva pannakse konto automaatselt pausile, kui makseviisi pole ühendatud. Ilma sinu nõusolekuta ei toimu automaatseid mahaarvamisi." },
-    { q: "Mis juhtub pärast 14 päeva?", a: "Kui makseviisi pole ühendatud, pannakse konto automaatselt pausile. Halduspaneel jääb saadavaks ainult lugemise režiimis, kuid külalise QR-menüü ja tellimuste vastuvõtmine on ajutiselt välja lülitatud. Me ei nõua kunagi ilma sinu nõusolekuta." },
-    { q: "Mis juhtub menüü, tellimuste ja andmetega pausi ajal?", a: "Kõik säilib täielikult: menüü, roogade fotod, tellimuste ajalugu, broneeringud, disainisätted, statistika. Ühenda makse kasvõi kuu või poole aasta pärast — kõik naaseb sellisena, nagu oli, miski ei lähe kaotsi." },
+    { q: "Kuidas hinnastamine toimib?", a: "Sa koostad oma plaani ise. Digitaalne QR-menüü on alus — see sisaldab AI-tõlget 35 keelde ja haldust igast seadmest. Seejärel lisad ainult selle, mida vajad: laudade broneerimise, tellimuste vastuvõtmisega köögiekraani või oma domeeni. Hind on restorani kohta ning mahusoodustused rakenduvad automaatselt alates teisest restoranist." },
+    { q: "Kas võtate tellimustelt komisjoni?", a: "Ei. Iga tellimus — QR-menüüst või kelneri vastu võetud — läheb otse restorani, ilma protsendita ja ilma agregaatorite komisjonita. Sul on kindel kuutasu ja muid mahaarvamisi pole." },
+    { q: "Mida sisaldab 14-päevane prooviperiood?", a: "Täielik juurdepääs kõigile funktsioonidele, ilma kaardita. Pärast 14 päeva pannakse konto automaatselt pausile, kui makseviisi pole ühendatud. Ilma sinu nõusolekuta ei toimu automaatseid mahaarvamisi." },
+    { q: "Mis juhtub pärast 14 päeva?", a: "Kui makseviisi pole ühendatud, pannakse konto automaatselt pausile. Halduspaneel jääb saadavaks ainult lugemise režiimis, kuid külalise QR-menüü ja tellimuste vastuvõtmine on ajutiselt välja lülitatud. Me ei nõua kunagi tasu ilma sinu nõusolekuta." },
+    { q: "Mis juhtub minu menüü, tellimuste ja andmetega pausi ajal?", a: "Kõik säilib täielikult: menüü, roogade fotod, tellimuste ajalugu, broneeringud, disainisätted, statistika. Ühenda makse kasvõi kuu või poole aasta pärast — kõik naaseb sellisena, nagu oli, miski ei lähe kaotsi." },
     { q: "Kas laudadel olevad QR-koodid töötavad pärast prooviperioodi?", a: "Kui konto on pausil, näitavad QR-koodid külalistele teadet „ajutiselt pole saadaval“. Uusi QR-koode pole vaja trükkida: niipea kui makse on ühendatud, avavad samad koodid menüü uuesti." },
-    { q: "Kas saan hiljem Basicult Prole üle minna?", a: "Jah, uuendamine toimub ühe klikiga halduspaneelis. Lisatasu arvutatakse proportsionaalselt makstud perioodi järelejäänud päevade järgi. Pro-st Basicusse alandamine on samuti võimalik — KDS ja broneerimine lülitatakse välja, kuid kõik andmed säilivad." },
-    { q: "Mitut restorani saan Pro paketiga hallata?", a: "Pro sisaldab kuni 4 restorani ühe konto all, kõiki hallatakse ühest juhtpaneelist. Kas juhid suuremat gruppi? Kirjuta meile WhatsAppis Enterprise plaani kohta." },
-    { q: "Milline on aastane allahindlus?", a: "Umbes 30 % võrreldes kuiseplaaniga. Täpne summa kuvatakse maksmisel plaani lehel." },
+    { q: "Kas saan oma plaani hiljem muuta?", a: "Jah — lisa või eemalda funktsioone halduspaneelis igal ajal. Vahe arvutatakse proportsionaalselt makstud perioodi järelejäänud päevade järgi. Kui eemaldad mõne funktsiooni, lülitatakse see välja, kuid kõik selle andmed säilivad." },
+    { q: "Mitut restorani saan hallata?", a: "Nii palju, kui vajad — vali plaani koostamisel restoranide arv ja halda kõiki ühest juhtpaneelist. Mahusoodustused rakenduvad automaatselt, kuni 50% soodustust 5+ restorani puhul. Juhid suuremat gruppi? Kirjuta meile WhatsAppis kohandatud plaani kohta." },
+    { q: "Milline on aastane allahindlus?", a: "Umbes 30% võrreldes kuise arveldusega. Täpne summa kuvatakse plaani koostamisel." },
     { q: "Kas saan tellimuse igal ajal tühistada?", a: "Jah, tühistamine toimub ühe klikiga halduspaneelis. Pärast tühistamist toimib konto kuni makstud perioodi lõpuni, siis pannakse pausile. Andmed säilivad ja võid tagasi tulla, millal soovid." },
     { q: "Milliseid makseviise aktsepteerite?", a: "Visa, Mastercard ja American Express Stripe'i kaudu. Apple Pay ja Google Pay on samuti toetatud. Euroopas — SEPA Direct Debit aastaplaanil." },
   ],
@@ -65,8 +65,7 @@ const JSON_LD = JSON.stringify({
       dateModified: SCHEMA_DATE_MODIFIED,
       brand: { "@type": "Brand", name: "IQ Rest" },
       offers: [
-        { "@type": "Offer", name: "Basic", price: SCHEMA_PRICE_BASIC_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
-        { "@type": "Offer", name: "Pro", price: SCHEMA_PRICE_PRO_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
+        { "@type": "Offer", name: "Digital menu", price: SCHEMA_PRICE_MENU_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
       ],
     },
     {

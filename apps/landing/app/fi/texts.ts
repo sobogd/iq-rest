@@ -169,44 +169,6 @@ export const TEXTS: LandingTexts = {
     button: "Laske pakettisi",
   },
 
-  pricingHero: {
-    chips: ["Ei komissiota", "Ei sopimuksia", "14 päivää ilmaiseksi"],
-    heading: "Selkeät hinnat.",
-    headingAccent: "Ei yllätyksiä.",
-    sub: "Yksi kuukausimaksu. Ei komissiota tilauksista. Peruuta koska tahansa.",
-    popularBadge: "Suosittu",
-    perMonthSuffix: "/kk",
-    whenAnnualTemplate: "vuosilaskutus · {total} vuodessa",
-    orMonthlyTemplate: "tai {price}/kk",
-    savingsTemplate: "säästä {amount} vuodessa",
-    plans: {
-      basic: {
-        name: "Basic",
-        tagline: "Digitaalinen ruokalista ja AI-käännös. Käytössä 5 minuutissa.",
-        features: [
-          "QR-ruokalista jokaiseen pöytään",
-          "Digitaalinen ruokalista kuvilla ja allergeeneilla",
-          "AI-käännös 35 kielelle",
-          "AI-ruokakuvien generointi",
-          "Hallinta mistä tahansa puhelimesta tai tabletista",
-        ],
-      },
-      pro: {
-        name: "Pro",
-        tagline: "Täysi hallinta ravintolaan: tilaukset, keittiö ja varaukset.",
-        features: [
-          "Kaikki Basicista",
-          "Tilausten vastaanotto ruokalistalta",
-          "Tarjoilijasovellus",
-          "Keittiön näyttö (KDS)",
-          "Verkkopöytävaraus 24/7",
-          "Oma verkkotunnus",
-          "Prioriteetti-WhatsApp-tuki",
-        ],
-      },
-    },
-  },
-
   footer: {
     featureLinks: [
       { href: "/fi/digitaalinen-ruokalista-ravintola", label: "Digitaalinen ruokalista" },

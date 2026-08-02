@@ -75,7 +75,7 @@ export const CONTENT: FeatureContent = {
       { q: "Jak těžké je nastavení rezervací?", a: "Trvá to velmi málo. Tři kroky: (1) přidat stoly se jmény, fotkami a kapacitou, (2) zapnout režim rezervací v nastavení, (3) sdílet odkaz nebo QR kód s hosty. Plné spuštění za 5–10 minut." },
       { q: "Můžu systém rezervací použít na vlastní doméně?", a: "Ano. Podporujeme vlastní doménu s SSL certifikátem: hosté rezervují na adrese vaší restaurace (např. rezervace.vaserestaurace.cz). Pomáháme s nastavením DNS; proces trvá 5–10 minut." },
       { q: "Můžu nastavit automatické nebo ruční potvrzení?", a: "Ano, režim se nastaví v nastavení. U automatického potvrzení host dostane potvrzení ihned po odeslání formuláře a rezervace se považuje za přijatou. U ručního potvrzení dorazí požadavek do administračního panelu se stavem „čeká na potvrzení“ — manažer ji projde a potvrdí nebo zamítne. Ruční režim je užitečný při omezeném počtu stolů nebo přísné politice." },
-      { q: "Berete provizi z rezervací?", a: "Ne. Rezervace stolů je plně zahrnutá v tarifu Pro — žádné procento z hostů, žádný poplatek za slot, žádné provize agregátorů. Pevný měsíční poplatek a neomezený počet rezervací." },
+      { q: "Berete provizi z rezervací?", a: "Ne. Rezervace stolů je plně zahrnutá v doplňku Rezervace — žádné procento z hostů, žádný poplatek za slot, žádné provize agregátorů. Pevný měsíční poplatek a neomezený počet rezervací." },
     ],
   },
 };

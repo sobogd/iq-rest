@@ -49,7 +49,7 @@ export interface ShellInitialData {
   initialOrders: Order[];
   initialBookings: Booking[];
   initialTables: TableEntity[];
-  initialSub: { plan: string | null; subscriptionStatus: string | null; trialEndsAt: string | null; currentPeriodEnd?: string | null; proFeatures?: boolean; menuOnline?: boolean } | null;
+  initialSub: { plan: string | null; subscriptionStatus: string | null; trialEndsAt: string | null; currentPeriodEnd?: string | null; proFeatures?: boolean; reservationsFeature?: boolean; menuOnline?: boolean } | null;
   isAdmin: boolean;
   isDemo?: boolean;
   impersonatedBy?: string | null;
@@ -78,8 +78,13 @@ function ShellBody(props: ShellInitialData) {
   // we never open the stream — otherwise every (re)connect's "ready" event
   // invalidates orders+reservations, both 403, and the churn remounts the
   // dashboard in a tight loop (the "blinking dashboard" regression).
+  // Open the realtime stream when the venue holds ANY operational add-on —
+  // orders/KDS (proFeatures) OR reservations (its own à-la-carte capability).
+  // A reservations-only venue still needs live booking events. A fully menu-only
+  // / inactive venue opens no stream (avoids the 403-reconnect blink loop).
   const proFeatures = !!props.initialSub?.proFeatures;
-  useOrdersStream(proFeatures ? (restaurant?.id ?? null) : null);
+  const reservationsFeature = !!props.initialSub?.reservationsFeature;
+  useOrdersStream(proFeatures || reservationsFeature ? (restaurant?.id ?? null) : null);
 
   // Inactive venue (account entitlement): the public menu is offline (no active
   // plan / expired trial / a BASIC plan applied to another venue). Show a
@@ -308,7 +313,13 @@ function ViewSwitch(p: SwitchProps) {
 
   // PRO-feature gate: only lock once we know the entitlement (sub loaded) so
   // paying users never see a flash of the upsell. The backend enforces too.
-  const lockedFeature = sub != null && !sub.proFeatures ? PRO_FEATURE_VIEWS[view.name] : undefined;
+  // à-la-carte: each add-on gates on its OWN capability — orders/kitchen/devices
+  // ride proFeatures (orders==KDS), reservations is independent, so a
+  // reservations-only plan must NOT be locked out of bookings.
+  const featureAllowed = (f: ProFeature): boolean =>
+    f === "reservations" ? !!sub?.reservationsFeature : !!sub?.proFeatures;
+  const pendingFeature = sub != null ? PRO_FEATURE_VIEWS[view.name] : undefined;
+  const lockedFeature = pendingFeature && !featureAllowed(pendingFeature) ? pendingFeature : undefined;
   if (lockedFeature) {
     return <ProUpsell feature={lockedFeature} onUpgrade={() => router.push({ name: "settings.billing" })} />;
   }

@@ -169,44 +169,6 @@ export const TEXTS: LandingTexts = {
     button: "计算您的套餐",
   },
 
-  pricingHero: {
-    chips: ["无佣金", "无合同", "14 天免费"],
-    heading: "简单定价",
-    headingAccent: "没有意外",
-    sub: "每月一笔费用。订单不收佣金。随时取消。",
-    popularBadge: "热门",
-    perMonthSuffix: "/月",
-    whenAnnualTemplate: "按年计费 · 每年 {total}",
-    orMonthlyTemplate: "或 {price}/月",
-    savingsTemplate: "每年节省 {amount}",
-    plans: {
-      basic: {
-        name: "Basic",
-        tagline: "数字菜单和 AI 翻译。5 分钟上线。",
-        features: [
-          "每张餐桌的 QR 菜单",
-          "带图片和过敏原的数字菜单",
-          "AI 翻译成 35 种语言",
-          "菜品照片的 AI 生成",
-          "从任何手机或平板电脑管理",
-        ],
-      },
-      pro: {
-        name: "Pro",
-        tagline: "餐厅全面掌控：订单、厨房和预订。",
-        features: [
-          "Basic 中的所有内容",
-          "从菜单接单",
-          "服务员应用",
-          "厨房显示屏 (KDS)",
-          "24/7 在线餐桌预订",
-          "自定义域名",
-          "WhatsApp 优先支持",
-        ],
-      },
-    },
-  },
-
   footer: {
     featureLinks: [
       { href: "/zh/shu-zi-cai-dan-can-ting", label: "数字菜单" },

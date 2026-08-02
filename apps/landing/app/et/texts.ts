@@ -169,44 +169,6 @@ export const TEXTS: LandingTexts = {
     button: "Arvuta oma pakett",
   },
 
-  pricingHero: {
-    chips: ["Ilma komisjonita", "Ilma lepinguteta", "14 päeva tasuta"],
-    heading: "Lihtsad hinnad.",
-    headingAccent: "Ilma üllatusteta.",
-    sub: "Üks kuutasu. Mitte mingit protsenti tellimustelt. Tühista igal ajal.",
-    popularBadge: "Populaarne",
-    perMonthSuffix: "/k",
-    whenAnnualTemplate: "aastane arve · {total} aastas",
-    orMonthlyTemplate: "või {price}/k",
-    savingsTemplate: "säästad {amount} aastas",
-    plans: {
-      basic: {
-        name: "Basic",
-        tagline: "Digitaalne menüü ja AI-tõlge. Töökorras 5 minutiga.",
-        features: [
-          "QR-menüü igale lauale",
-          "Digitaalne menüü fotode ja allergeenidega",
-          "AI-tõlge 35 keelde",
-          "AI roogade fotode genereerimine",
-          "Halda igast telefonist või tahvelarvutist",
-        ],
-      },
-      pro: {
-        name: "Pro",
-        tagline: "Täielik kontroll restorani üle: tellimused, köök ja broneeringud.",
-        features: [
-          "Kõik Basicust",
-          "Tellimuste vastuvõtt menüüst",
-          "Kelneri rakendus",
-          "Köögiekraan (KDS)",
-          "Veebipõhine laudade broneerimine 24/7",
-          "Oma domeen",
-          "Eelistatud WhatsAppi tugi",
-        ],
-      },
-    },
-  },
-
   footer: {
     featureLinks: [
       { href: "/et/digitaalne-menuu-restoran", label: "Digitaalne menüü" },

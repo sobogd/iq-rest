@@ -169,44 +169,6 @@ export const TEXTS: LandingTexts = {
     button: "Számold ki a csomagod",
   },
 
-  pricingHero: {
-    chips: ["Jutalék nélkül", "Szerződés nélkül", "14 nap ingyenes"],
-    heading: "Egyszerű árak.",
-    headingAccent: "Nincs meglepetés.",
-    sub: "Egyetlen havi díj. Nincs jutalék a rendelésekre. Bármikor lemondható.",
-    popularBadge: "Népszerű",
-    perMonthSuffix: "/hó",
-    whenAnnualTemplate: "éves számlázás · {total} évente",
-    orMonthlyTemplate: "vagy {price}/hó",
-    savingsTemplate: "megtakarít {amount} évente",
-    plans: {
-      basic: {
-        name: "Basic",
-        tagline: "Digitális étlap és AI-fordítás. 5 perc alatt élesben.",
-        features: [
-          "QR étlap minden asztalra",
-          "Digitális étlap fotókkal és allergénekkel",
-          "AI fordítás 35 nyelvre",
-          "AI étel fotó generálás",
-          "Kezelés bármelyik telefonról vagy táblagépről",
-        ],
-      },
-      pro: {
-        name: "Pro",
-        tagline: "Teljes éttermi irányítás: rendelések, konyha és foglalások.",
-        features: [
-          "Minden a Basic-ből",
-          "Rendelésfelvétel az étlapról",
-          "Pincér app",
-          "Konyhai kijelző (KDS)",
-          "Online asztalfoglalás 24/7",
-          "Saját domain",
-          "Prioritásos WhatsApp támogatás",
-        ],
-      },
-    },
-  },
-
   footer: {
     featureLinks: [
       { href: "/hu/digitalis-etlap-etterem", label: "Digitális étlap" },

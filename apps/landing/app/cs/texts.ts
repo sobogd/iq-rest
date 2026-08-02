@@ -169,44 +169,6 @@ export const TEXTS: LandingTexts = {
     button: "Spočítejte si plán",
   },
 
-  pricingHero: {
-    chips: ["Bez provizí", "Bez smluv", "14 dní zdarma"],
-    heading: "Jednoduché ceny.",
-    headingAccent: "Žádná překvapení.",
-    sub: "Jeden měsíční poplatek. Žádné procento z objednávek. Zrušte kdykoli.",
-    popularBadge: "Oblíbený",
-    perMonthSuffix: "/měs.",
-    whenAnnualTemplate: "roční platba · {total} ročně",
-    orMonthlyTemplate: "nebo {price}/měs.",
-    savingsTemplate: "ušetřete {amount} ročně",
-    plans: {
-      basic: {
-        name: "Basic",
-        tagline: "Digitální menu a AI překlad. Spuštění za 5 minut.",
-        features: [
-          "QR menu pro každý stůl",
-          "Digitální menu s fotkami a alergeny",
-          "AI překlad do 35 jazyků",
-          "AI generování fotek jídel",
-          "Správa z jakéhokoli telefonu nebo tabletu",
-        ],
-      },
-      pro: {
-        name: "Pro",
-        tagline: "Úplná kontrola nad restaurací: objednávky, kuchyně a rezervace.",
-        features: [
-          "Vše z Basic",
-          "Příjem objednávek z menu",
-          "Aplikace pro číšníka",
-          "Kuchyňský displej (KDS)",
-          "Online rezervace stolů 24/7",
-          "Vlastní doména",
-          "Prioritní WhatsApp podpora",
-        ],
-      },
-    },
-  },
-
   footer: {
     featureLinks: [
       { href: "/cs/digitalni-menu-restaurace", label: "Digitální menu" },

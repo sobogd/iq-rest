@@ -22,7 +22,6 @@ import { CURRENCIES } from "@/lib/currencies";
 import { AVAILABLE_LANGUAGES } from "./i18n";
 import {
  fetchSubscriptionStatus,
- createCheckoutSession,
  fetchSupportMessages,
  sendSupportMessage,
  updateRestaurant,
@@ -1687,9 +1686,17 @@ interface SubStatus {
  appliesToRestaurantId?: string | null;
 }
 
-// Billing currencies we actually sell in (Stripe prices exist for these).
-type BillingCur = "EUR" | "NOK" | "SEK" | "DKK" | "MXN" | "USD" | "AUD" | "GBP" | "PLN" | "CZK" | "HUF" | "ISK" | "CHF" | "RSD";
-const BILLING_CURRENCIES: BillingCur[] = ["EUR", "NOK", "SEK", "DKK", "MXN", "USD", "AUD", "GBP", "PLN", "CZK", "HUF", "ISK", "CHF", "RSD"];
+// Billing currencies we actually price in (must match the @iq-rest/pricing
+// catalog + the API's SUPPORTED_CURRENCIES — 21 currencies). A restaurant whose
+// billingCurrency is any of these must be able to pick it here, or the
+// constructor silently falls back to EUR (charging the wrong currency).
+type BillingCur =
+ | "EUR" | "NOK" | "SEK" | "DKK" | "MXN" | "USD" | "AUD" | "GBP" | "PLN" | "CZK" | "HUF"
+ | "ISK" | "CHF" | "RSD" | "BRL" | "ARS" | "COP" | "CLP" | "PEN" | "UYU" | "TRY";
+const BILLING_CURRENCIES: BillingCur[] = [
+ "EUR", "NOK", "SEK", "DKK", "MXN", "USD", "AUD", "GBP", "PLN", "CZK", "HUF",
+ "ISK", "CHF", "RSD", "BRL", "ARS", "COP", "CLP", "PEN", "UYU", "TRY",
+];
 const CUR_META: Record<BillingCur, { symbol: string; after: boolean }> = {
  EUR: { symbol: "€", after: false },
  NOK: { symbol: "kr", after: true },
@@ -1705,29 +1712,14 @@ const CUR_META: Record<BillingCur, { symbol: string; after: boolean }> = {
  ISK: { symbol: "kr", after: true },
  CHF: { symbol: "CHF", after: true },
  RSD: { symbol: "RSD", after: true },
+ BRL: { symbol: "R$", after: false },
+ ARS: { symbol: "$", after: false },
+ COP: { symbol: "$", after: false },
+ CLP: { symbol: "$", after: false },
+ PEN: { symbol: "S/", after: false },
+ UYU: { symbol: "$U", after: false },
+ TRY: { symbol: "₺", after: false },
 };
-// Per-month display prices (yearly column shows the per-month equivalent),
-// matching the landing pricing table and the Stripe prices.
-const BILLING_PRICES: Record<BillingCur, { BASIC: { MONTHLY: string; YEARLY: string }; PRO: { MONTHLY: string; YEARLY: string } }> = {
- EUR: { BASIC: { MONTHLY: "9.90", YEARLY: "6.90" }, PRO: { MONTHLY: "31.90", YEARLY: "24.90" } },
- NOK: { BASIC: { MONTHLY: "109", YEARLY: "79" }, PRO: { MONTHLY: "349", YEARLY: "269" } },
- SEK: { BASIC: { MONTHLY: "109", YEARLY: "79" }, PRO: { MONTHLY: "349", YEARLY: "269" } },
- DKK: { BASIC: { MONTHLY: "79", YEARLY: "49" }, PRO: { MONTHLY: "239", YEARLY: "189" } },
- MXN: { BASIC: { MONTHLY: "149", YEARLY: "99" }, PRO: { MONTHLY: "449", YEARLY: "299" } },
- USD: { BASIC: { MONTHLY: "14.90", YEARLY: "9.90" }, PRO: { MONTHLY: "44.90", YEARLY: "29.90" } },
- AUD: { BASIC: { MONTHLY: "16.90", YEARLY: "11.90" }, PRO: { MONTHLY: "49.90", YEARLY: "39.90" } },
- GBP: { BASIC: { MONTHLY: "8.90", YEARLY: "5.90" }, PRO: { MONTHLY: "27.90", YEARLY: "19.90" } },
- PLN: { BASIC: { MONTHLY: "39", YEARLY: "29" }, PRO: { MONTHLY: "99", YEARLY: "75" } },
- CZK: { BASIC: { MONTHLY: "249", YEARLY: "169" }, PRO: { MONTHLY: "799", YEARLY: "619" } },
- HUF: { BASIC: { MONTHLY: "3990", YEARLY: "2790" }, PRO: { MONTHLY: "12900", YEARLY: "9900" } },
- ISK: { BASIC: { MONTHLY: "1490", YEARLY: "990" }, PRO: { MONTHLY: "4790", YEARLY: "3790" } },
- CHF: { BASIC: { MONTHLY: "9.90", YEARLY: "6.90" }, PRO: { MONTHLY: "31.90", YEARLY: "24.90" } },
- RSD: { BASIC: { MONTHLY: "1190", YEARLY: "790" }, PRO: { MONTHLY: "3790", YEARLY: "2890" } },
-};
-function fmtBilling(amount: string, cur: BillingCur): string {
- const m = CUR_META[cur];
- return m.after ? `${amount} ${m.symbol}` : `${m.symbol}${amount}`;
-}
 
 // Currency picker for the billing sub-header — same dropdown pattern as the
 // analytics period selector.
@@ -1803,7 +1795,6 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  const { list: accountVenues } = useRestaurants();
  const [sub, setSub] = useState<SubStatus | null>(null);
  const [switchingVenue, setSwitchingVenue] = useState(false);
- const [pendingPlan, setPendingPlan] = useState<{ plan: "BASIC" | "PRO"; cycle: "MONTHLY" | "YEARLY" } | null>(null);
 
  // BASIC venue-picker: switch which single venue the account's BASIC sub covers.
  async function pickBasicVenue(id: string) {
@@ -1855,28 +1846,6 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  !isActive && !paidPlan && trialEndsAt !== null && trialEndsAt <= new Date();
  const trialing =
  !isActive && !paidPlan && trialEndsAt !== null && trialEndsAt > new Date();
-
- async function startCheckout(plan: "BASIC" | "PRO", cycle: "MONTHLY" | "YEARLY") {
- track(cycle === "YEARLY" ? "dash_settings_billing_subscribe_year" : "dash_settings_billing_subscribe_month");
- setPendingPlan({ plan, cycle });
- try {
- const url = await createCheckoutSession(plan, cycle, currency);
- if (url) {
- window.location.href = url;
- return;
- }
- // Null url = backend couldn't create the session (e.g. no Stripe price for
- // this plan+currency). Don't leave the user staring at a dead button.
- track("dash_settings_billing_checkout_error");
- alert(tb("checkoutError"));
- } catch {
- track("dash_settings_billing_checkout_error");
- alert(tb("checkoutError"));
- } finally {
- setPendingPlan(null);
- }
- }
-
 
  return (
  <div>

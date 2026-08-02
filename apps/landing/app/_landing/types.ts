@@ -270,25 +270,6 @@ export type LandingTexts = {
   /** billing-features-constructor: pricing CTA block (home + feature pages). */
   pricingCta?: PricingCtaTexts;
 
-  /** LEGACY (unused since the à-la-carte constructor): copy for the old
-   *  fixed-plan `PricingHero` cards. Kept so per-locale texts.ts files stay
-   *  valid; no active template renders it. */
-  pricingHero?: {
-    chips: readonly string[];
-    heading: string;
-    headingAccent: string;
-    sub: string;
-    popularBadge: string;
-    perMonthSuffix: string;
-    whenAnnualTemplate: string;
-    orMonthlyTemplate: string;
-    savingsTemplate: string;
-    plans: {
-      basic: { name: string; tagline: string; features: readonly string[] };
-      pro: { name: string; tagline: string; features: readonly string[] };
-    };
-  };
-
   footer: {
     featureLinks: FooterLink[];
     navLinks: FooterLink[];

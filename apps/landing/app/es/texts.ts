@@ -169,44 +169,6 @@ export const TEXTS: LandingTexts = {
     button: "Calcula tu plan",
   },
 
-  pricingHero: {
-    chips: ["Sin comisiones", "Sin contratos", "14 días gratis"],
-    heading: "Precios simples.",
-    headingAccent: "Sin sorpresas.",
-    sub: "Una cuota mensual. Sin comisión sobre los pedidos. Cancela cuando quieras.",
-    popularBadge: "Más popular",
-    perMonthSuffix: "/mes",
-    whenAnnualTemplate: "con pago anual · {total} al año",
-    orMonthlyTemplate: "o {price}/mes",
-    savingsTemplate: "ahorras {amount} al año",
-    plans: {
-      basic: {
-        name: "Basic",
-        tagline: "Menú digital y traducción con IA. En marcha en 5 minutos.",
-        features: [
-          "Carta QR en cada mesa",
-          "Carta digital con fotos y alérgenos",
-          "Traducción con IA en 35 idiomas",
-          "Generación de fotos de platos con IA",
-          "Gestiona desde cualquier móvil o tableta",
-        ],
-      },
-      pro: {
-        name: "Pro",
-        tagline: "Control total del restaurante: pedidos, cocina y reservas.",
-        features: [
-          "Todo lo incluido en Basic",
-          "Pedidos desde el menú",
-          "App de camarero",
-          "Pantalla de cocina (KDS)",
-          "Reserva online de mesas 24/7",
-          "Dominio propio",
-          "Soporte prioritario por WhatsApp",
-        ],
-      },
-    },
-  },
-
   footer: {
     featureLinks: [
       { href: "/es/menu-digital-restaurantes", label: "Carta digital" },

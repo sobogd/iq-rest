@@ -169,44 +169,6 @@ export const TEXTS: LandingTexts = {
     button: "Oblicz swój plan",
   },
 
-  pricingHero: {
-    chips: ["Bez prowizji", "Bez umów", "14 dni za darmo"],
-    heading: "Proste ceny.",
-    headingAccent: "Bez niespodzianek.",
-    sub: "Jedna opłata miesięczna. Bez procentu od zamówień. Anuluj w każdej chwili.",
-    popularBadge: "Popularny",
-    perMonthSuffix: "/mies.",
-    whenAnnualTemplate: "rozliczenie roczne · {total} rocznie",
-    orMonthlyTemplate: "lub {price}/mies.",
-    savingsTemplate: "oszczędź {amount} rocznie",
-    plans: {
-      basic: {
-        name: "Basic",
-        tagline: "Cyfrowe menu i tłumaczenie AI. Gotowe w 5 minut.",
-        features: [
-          "Menu QR dla każdego stolika",
-          "Cyfrowe menu ze zdjęciami i alergenami",
-          "Tłumaczenie AI na 35 języków",
-          "Generowanie zdjęć dań przez AI",
-          "Zarządzanie z dowolnego telefonu lub tabletu",
-        ],
-      },
-      pro: {
-        name: "Pro",
-        tagline: "Pełna kontrola nad restauracją: zamówienia, kuchnia i rezerwacje.",
-        features: [
-          "Wszystko z Basic",
-          "Przyjmowanie zamówień z menu",
-          "Aplikacja kelnera",
-          "Ekran kuchenny (KDS)",
-          "Rezerwacja stolików online 24/7",
-          "Własna domena",
-          "Priorytetowe wsparcie WhatsApp",
-        ],
-      },
-    },
-  },
-
   footer: {
     featureLinks: [
       { href: "/pl/cyfrowe-menu-restauracja", label: "Cyfrowe menu" },

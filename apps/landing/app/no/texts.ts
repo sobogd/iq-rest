@@ -169,44 +169,6 @@ export const TEXTS: LandingTexts = {
     button: "Beregn planen din",
   },
 
-  pricingHero: {
-    chips: ["Ingen provisjon", "Ingen kontrakter", "14 dager gratis"],
-    heading: "Enkle priser.",
-    headingAccent: "Ingen overraskelser.",
-    sub: "Ett månedlig gebyr. Ingen provisjon på bestillinger. Avslutt når som helst.",
-    popularBadge: "Populær",
-    perMonthSuffix: "/mnd",
-    whenAnnualTemplate: "årlig fakturering · {total} per år",
-    orMonthlyTemplate: "eller {price}/mnd",
-    savingsTemplate: "spar {amount} per år",
-    plans: {
-      basic: {
-        name: "Basic",
-        tagline: "Digital meny og AI-oversettelse. På nett på 5 minutter.",
-        features: [
-          "QR-meny for hvert bord",
-          "Digital meny med bilder og allergener",
-          "AI-oversettelse til 35 språk",
-          "AI-generering av rettbilder",
-          "Administrer fra enhver telefon eller nettbrett",
-        ],
-      },
-      pro: {
-        name: "Pro",
-        tagline: "Full kontroll over restauranten: bestillinger, kjøkken og reservasjoner.",
-        features: [
-          "Alt i Basic",
-          "Ta imot bestillinger fra menyen",
-          "Servitør-app",
-          "Kjøkkenskjerm (KDS)",
-          "Online bordreservasjon 24/7",
-          "Eget domene",
-          "Prioritert WhatsApp-støtte",
-        ],
-      },
-    },
-  },
-
   footer: {
     featureLinks: [
       { href: "/no/digital-meny-restaurant", label: "Digital meny" },

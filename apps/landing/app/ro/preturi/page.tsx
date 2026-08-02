@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PricingTemplate } from "@/app/_landing/templates/pricing-template";
 import { TEXTS as DEFAULT } from "../texts";
 import { TEXTS } from "./texts";
-import { SCHEMA_PRICE_BASIC_EUR, SCHEMA_PRICE_PRO_EUR } from "@/lib/pricing";
+import { SCHEMA_PRICE_MENU_EUR } from "@/lib/pricing";
 import { SCHEMA_DATE_MODIFIED } from "@/lib/page-meta";
 
 export const dynamic = "force-static";
@@ -15,15 +15,15 @@ const PRICING_FAQ = {
   ...DEFAULT.faq,
   sub: "Ce întreabă restauratorii despre prețuri și plată. Nu găsiți întrebarea dumneavoastră? Scrieți-ne pe WhatsApp.",
   items: [
-    { q: "Care este diferența dintre Basic și Pro?", a: "Basic include meniul digital + QR, traducere AI în 35 de limbi, preluare comenzi din meniu (opțional) și gestionare de pe orice dispozitiv. Pro adaugă display-ul de bucătărie (KDS) și rezervarea mesei online 24/7, plus suport WhatsApp prioritar. Dacă nu aveți nevoie de fluxul bucătăriei și rezervări — Basic acoperă totul." },
+    { q: "Cum funcționează prețurile?", a: "Vă construiți propriul plan. Meniul digital QR este baza — include traducere AI în 35 de limbi și gestionare de pe orice dispozitiv. Apoi adăugați doar ce aveți nevoie: rezervarea meselor, display-ul de bucătărie cu preluare comenzi sau un domeniu personalizat. Prețul este per restaurant, iar reducerile de volum se aplică automat de la al doilea restaurant." },
     { q: "Percepeți comision la comenzi?", a: "Nu. Fiecare comandă — din meniu QR sau preluată de ospătar — ajunge direct la restaurant, fără procente sau comisioane de agregatori. Aveți o taxă lunară fixă și fără alte deduceri." },
-    { q: "Ce include perioada de probă de 14 zile?", a: "Acces complet la toate funcționalitățile în ambele planuri, fără card. După 14 zile contul este suspendat automat dacă nu este conectată o metodă de plată. Fără perceperi automate fără consimțământul dumneavoastră." },
+    { q: "Ce include perioada de probă de 14 zile?", a: "Acces complet la toate funcționalitățile, fără card. După 14 zile contul este suspendat automat dacă nu este conectată o metodă de plată. Fără perceperi automate fără consimțământul dumneavoastră." },
     { q: "Ce se întâmplă după cele 14 zile?", a: "Dacă nu este conectată o metodă de plată, contul este suspendat automat. Panoul de administrare rămâne disponibil în mod numai pentru citire, dar meniul QR pentru oaspeți și preluarea comenzilor sunt dezactivate temporar. Nu percepem niciodată fără consimțământul dumneavoastră." },
     { q: "Ce se întâmplă cu meniul, comenzile și datele mele în timpul pauzei?", a: "Totul este păstrat în întregime: meniu, fotografii preparate, istoric comenzi, rezervări, setări de design, statistici. Conectați plata chiar și după o lună sau șase luni — totul revine cum era, nimic nu se pierde." },
     { q: "Vor funcționa codurile QR de pe mese după perioada de probă?", a: "Dacă contul este suspendat, codurile QR afișează oaspeților mesajul „temporar indisponibil“. Nu trebuie să tipăriți coduri QR noi: imediat ce plata este conectată, aceleași coduri deschid din nou meniul." },
-    { q: "Pot trece mai târziu de la Basic la Pro?", a: "Da, upgrade-ul se face cu un singur click în panoul de administrare. Suprataxa este calculată proporțional cu zilele rămase din perioada plătită. Downgrade-ul de la Pro la Basic este de asemenea disponibil — KDS și rezervarea vor fi dezactivate, dar toate datele sunt păstrate." },
-    { q: "Câte restaurante pot gestiona în Pro?", a: "Pro include până la 4 restaurante într-un singur cont, toate gestionate dintr-un singur panou. Aveți un grup mai mare? Scrieți-ne pe WhatsApp despre un plan Enterprise." },
-    { q: "Care este reducerea anuală?", a: "Aproximativ 30% comparativ cu planul lunar. Suma exactă este afișată la plată pe pagina planului." },
+    { q: "Pot schimba planul mai târziu?", a: "Da — adăugați sau eliminați funcționalități oricând în panoul de administrare. Diferența se calculează proporțional cu zilele rămase din perioada plătită. Dacă eliminați o funcționalitate, aceasta este dezactivată, dar toate datele ei sunt păstrate." },
+    { q: "Câte restaurante pot gestiona?", a: "Câte aveți nevoie — alegeți numărul de restaurante în timp ce vă construiți planul, toate gestionate dintr-un singur panou. Reducerile de volum se aplică automat, până la 50% pentru 5 sau mai multe restaurante. Aveți un grup mai mare? Scrieți-ne pe WhatsApp despre un plan personalizat." },
+    { q: "Care este reducerea anuală?", a: "Aproximativ 30% comparativ cu planul lunar. Suma exactă este afișată în timp ce vă construiți planul." },
     { q: "Pot anula abonamentul oricând?", a: "Da, anularea se face cu un singur click în panoul de administrare. După anulare contul funcționează până la sfârșitul perioadei plătite, apoi este suspendat. Datele sunt păstrate și puteți reveni oricând doriți." },
     { q: "Ce metode de plată acceptați?", a: "Visa, Mastercard și American Express prin Stripe. Apple Pay și Google Pay sunt de asemenea suportate. În Europa — Debit Direct SEPA pentru planul anual." },
   ],
@@ -65,8 +65,7 @@ const JSON_LD = JSON.stringify({
       dateModified: SCHEMA_DATE_MODIFIED,
       brand: { "@type": "Brand", name: "IQ Rest" },
       offers: [
-        { "@type": "Offer", name: "Basic", price: SCHEMA_PRICE_BASIC_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
-        { "@type": "Offer", name: "Pro", price: SCHEMA_PRICE_PRO_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
+        { "@type": "Offer", name: "Meniu digital", price: SCHEMA_PRICE_MENU_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
       ],
     },
     {

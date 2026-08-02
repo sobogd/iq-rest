@@ -169,44 +169,6 @@ export const TEXTS: LandingTexts = {
     button: "Calcula el teu pla",
   },
 
-  pricingHero: {
-    chips: ["Sense comissions", "Sense contractes", "14 dies gratis"],
-    heading: "Preus senzills.",
-    headingAccent: "Sense sorpreses.",
-    sub: "Una quota mensual. Sense comissió sobre les comandes. Cancel·la quan vulguis.",
-    popularBadge: "Popular",
-    perMonthSuffix: "/mes",
-    whenAnnualTemplate: "facturació anual · {total} l'any",
-    orMonthlyTemplate: "o {price}/mes",
-    savingsTemplate: "estalvia {amount} l'any",
-    plans: {
-      basic: {
-        name: "Basic",
-        tagline: "Menú digital i traducció amb IA. En marxa en 5 minuts.",
-        features: [
-          "Carta QR per a cada taula",
-          "Carta digital amb fotos i al·lèrgens",
-          "Traducció IA en 35 idiomes",
-          "Generació IA de fotos de plats",
-          "Gestió des de qualsevol mòbil o tauleta",
-        ],
-      },
-      pro: {
-        name: "Pro",
-        tagline: "Control total del restaurant: comandes, cuina i reserves.",
-        features: [
-          "Tot el del Basic",
-          "Comandes des del menú",
-          "App de cambrer",
-          "Pantalla de cuina (KDS)",
-          "Reserva de taules en línia 24/7",
-          "Domini propi",
-          "Suport prioritari per WhatsApp",
-        ],
-      },
-    },
-  },
-
   footer: {
     featureLinks: [
       { href: "/ca/carta-digital-restaurant", label: "Carta digital" },

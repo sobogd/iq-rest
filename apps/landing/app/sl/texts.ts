@@ -169,44 +169,6 @@ export const TEXTS: LandingTexts = {
     button: "Izračunajte svoj paket",
   },
 
-  pricingHero: {
-    chips: ["Brez provizije", "Brez pogodb", "14 dni brezplačno"],
-    heading: "Preproste cene.",
-    headingAccent: "Brez presenečenj.",
-    sub: "Ena mesečna naročnina. Brez odstotka od naročil. Prekličite kadar koli.",
-    popularBadge: "Priljubljeno",
-    perMonthSuffix: "/mes.",
-    whenAnnualTemplate: "letno zaračunavanje · {total} letno",
-    orMonthlyTemplate: "ali {price}/mes.",
-    savingsTemplate: "prihranite {amount} letno",
-    plans: {
-      basic: {
-        name: "Basic",
-        tagline: "Digitalni meni in prevod z UI. Na spletu v 5 minutah.",
-        features: [
-          "QR jedilnik za vsako mizo",
-          "Digitalni jedilnik s fotografijami in alergeni",
-          "AI prevod v 35 jezikov",
-          "AI generiranje fotografij jedi",
-          "Upravljanje s katerega koli telefona ali tablice",
-        ],
-      },
-      pro: {
-        name: "Pro",
-        tagline: "Popoln nadzor nad restavracijo: naročila, kuhinja in rezervacije.",
-        features: [
-          "Vse iz Basic",
-          "Sprejem naročil iz menija",
-          "Aplikacija za natakarja",
-          "Kuhinjski zaslon (KDS)",
-          "Spletna rezervacija miz 24/7",
-          "Lastna domena",
-          "Prednostna WhatsApp podpora",
-        ],
-      },
-    },
-  },
-
   footer: {
     featureLinks: [
       { href: "/sl/digitalni-jedilnik-restavracija", label: "Digitalni jedilnik" },

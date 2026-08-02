@@ -17,23 +17,12 @@ import { PrismaService } from "../prisma/prisma.service";
 import {
   getStripe,
   PRICE_LOOKUP_KEYS,
-  type PriceLookupKey,
   type SupportedCurrency,
-  getLookupKeyWithCurrency,
   isSupportedCurrency,
-  getAdhocProductId,
-  encodeSelections,
   decodeSelections,
-  toStripeUnitAmount,
+  fromStripeUnitAmount,
   type VenueSel,
 } from "../common/stripe";
-import { getRequestBillingCurrency } from "../common/geo";
-import {
-  DEFAULT_PRICING_CATALOG,
-  computeAccountQuote,
-  type PricingCatalog,
-  type Cycle,
-} from "@iq-rest/pricing";
 
 interface SubscriptionData {
   id: string;
@@ -59,248 +48,9 @@ interface SubscriptionData {
   cancel_at?: number | null;
 }
 
-// A per-venue selection sent by the constructor / quiz checkout.
-type CheckoutSelection = {
-  restaurantId: string;
-  menuOnline?: boolean;
-  reservations?: boolean;
-  ordersKds?: boolean;
-  domain?: boolean;
-};
-
 @Controller("stripe")
 export class StripeController {
   constructor(private readonly prisma: PrismaService) {}
-
-  @Post("checkout")
-  @UseGuards(AuthGuard)
-  async createCheckout(
-    @Req() req: Request,
-    @Body()
-    body: {
-      priceLookupKey?: string;
-      locale?: string;
-      currency?: string;
-      // billing-features-constructor: ad-hoc à-la-carte checkout. When present,
-      // the amount is computed from the pricing catalog (not a lookup key) and a
-      // one-off immutable price_data drives the subscription.
-      selections?: CheckoutSelection[];
-      cycle?: string;
-    },
-  ) {
-    // Per-restaurant billing — checkout creates a Stripe subscription scoped
-    // to the CURRENTLY ACTIVE restaurant. Each restaurant has its own sub.
-    // The Stripe customer is per-human (User.stripeCustomerId).
-    const { userId, restaurantId, viaGrant } = (req as AuthedRequest).authUser;
-    if (viaGrant) throw new ForbiddenException("Billing is managed by the restaurant owner");
-    const stripe = getStripe();
-    const [restaurant, user] = await Promise.all([
-      this.prisma.restaurant.findUnique({
-        where: { id: restaurantId },
-        include: { account: { include: { subscription: true } } },
-      }),
-      this.prisma.user.findUnique({ where: { id: userId } }),
-    ]);
-    if (!restaurant) throw new BadRequestException("Restaurant not found");
-    if (!user) throw new BadRequestException("User not found");
-    // Billing is account-level now (§3): one Stripe customer + subscription per
-    // account. Read customer/currency/sub-state off the account.
-    const acct = restaurant.account;
-    const acctSub = acct?.subscription ?? null;
-    // Demo accounts can't pay — they convert via the "save your menu" email
-    // claim, not Stripe. The billing UI is hidden for them client-side too.
-    if (user.isDemo) throw new ForbiddenException("Demo accounts cannot start a subscription");
-
-    const isAdhoc = Array.isArray(body.selections) && body.selections.length > 0;
-
-    const validKeys: string[] = [
-      PRICE_LOOKUP_KEYS.BASIC_MONTHLY,
-      PRICE_LOOKUP_KEYS.BASIC_YEARLY,
-      PRICE_LOOKUP_KEYS.PRO_MONTHLY,
-      PRICE_LOOKUP_KEYS.PRO_YEARLY,
-    ];
-    if (!isAdhoc && (!body.priceLookupKey || !validKeys.includes(body.priceLookupKey))) {
-      throw new BadRequestException("Invalid price lookup key");
-    }
-
-    // Resolve billing currency. The restaurant's stored billingCurrency (set at
-    // onboarding / via the pricing selector) wins; an explicit body.currency or
-    // the geo-derived currency is the fallback. Currency is locked once a Stripe
-    // customer exists for the restaurant (Stripe won't mix currencies), so for
-    // an active sub we always reuse the stored one.
-    const requested = isSupportedCurrency(body.currency?.toUpperCase())
-      ? (body.currency!.toUpperCase() as SupportedCurrency)
-      : null;
-    const stored = isSupportedCurrency(acct?.billingCurrency)
-      ? (acct!.billingCurrency as SupportedCurrency)
-      : null;
-    // Active sub → currency is locked to whatever the customer already pays in.
-    // Otherwise the selector/cookie choice wins, then the stored value, then geo.
-    const locked = acctSub?.status === "ACTIVE";
-    const currency: SupportedCurrency = locked
-      ? (stored ?? requested ?? getRequestBillingCurrency(req))
-      : (requested ?? stored ?? getRequestBillingCurrency(req));
-    const baseLookupKey = body.priceLookupKey as PriceLookupKey;
-    const fullLookupKey = getLookupKeyWithCurrency(baseLookupKey, currency);
-
-    // When there's already an active subscription and this is a LEGACY lookup-key
-    // switch, route to the Stripe Billing Portal (proration preview). Ad-hoc
-    // changes are handled below (subscription item swap, immediate proration).
-    if (!isAdhoc && acctSub?.status === "ACTIVE" && acctSub.stripeSubscriptionId) {
-      const customer = acct?.stripeCustomerId;
-      if (!customer) {
-        throw new BadRequestException("Subscription is active but no Stripe customer found");
-      }
-      const appUrl = process.env.APP_URL;
-      if (!appUrl) throw new BadRequestException("APP_URL not configured");
-      const locale = body.locale || "en";
-      const portal = await stripe.billingPortal.sessions.create({
-        customer,
-        return_url: `${appUrl}/${locale}/dashboard/settings/billing`,
-      });
-      return { url: portal.url };
-    }
-
-    // One Stripe customer per ACCOUNT (§3). Reuse the account's customer if it
-    // has one; otherwise create a fresh one for the account.
-    let customerId = acct?.stripeCustomerId ?? null;
-    if (customerId) {
-      try {
-        const existing = await stripe.customers.retrieve(customerId);
-        if ((existing as { deleted?: boolean }).deleted) customerId = null;
-      } catch {
-        customerId = null;
-      }
-    }
-    if (!customerId) {
-      const customer = await stripe.customers.create({
-        email: user.email,
-        metadata: { restaurantId: restaurant.id, userId: user.id, accountId: acct?.id ?? "" },
-      });
-      customerId = customer.id;
-    }
-    // Persist the Stripe customer + currency on the account (source of truth, §3).
-    if (acct) {
-      await this.prisma.account.update({
-        where: { id: acct.id },
-        data: { stripeCustomerId: customerId, billingCurrency: currency },
-      });
-    }
-
-    const appUrl = process.env.APP_URL;
-    if (!appUrl) throw new BadRequestException("APP_URL not configured");
-    const locale = body.locale || "en";
-
-    // ── Ad-hoc à-la-carte path (billing-features-constructor) ─────────────────
-    if (isAdhoc) {
-      const catalog = await this.pricingCatalog();
-      const cycle: Cycle = body.cycle === "year" || body.cycle === "yearly" ? "year" : "month";
-      const sels: VenueSel[] = body.selections!.map((s) => ({
-        restaurantId: s.restaurantId,
-        menuOnline: s.menuOnline ?? true,
-        reservations: !!s.reservations,
-        ordersKds: !!s.ordersKds,
-        domain: !!s.domain,
-      }));
-      const quote = computeAccountQuote(
-        catalog,
-        currency,
-        sels.map((s) => ({
-          menuOnline: s.menuOnline,
-          reservations: s.reservations,
-          ordersKds: s.ordersKds,
-          domain: s.domain,
-        })),
-        cycle,
-      );
-      if (quote.amountCents < 50) throw new BadRequestException("Amount too low");
-      const productId = await getAdhocProductId();
-      const selMeta = encodeSelections(sels);
-      const meta = { restaurantId: restaurant.id, userId: user.id, accountId: acct?.id ?? "", sel: selMeta, prov: "custom" };
-
-      // CHANGE an existing subscription in place → immediate proration (§Q6).
-      if (acctSub?.status === "ACTIVE" && acctSub.stripeSubscriptionId) {
-        const price = await stripe.prices.create({
-          currency: currency.toLowerCase(),
-          product: productId,
-          unit_amount: toStripeUnitAmount(quote.amountCents, currency),
-          recurring: { interval: cycle },
-        });
-        const stripeSub = (await stripe.subscriptions.retrieve(acctSub.stripeSubscriptionId)) as unknown as SubscriptionData;
-        const itemId = stripeSub.items.data[0]?.id;
-        await stripe.subscriptions.update(acctSub.stripeSubscriptionId, {
-          items: itemId ? [{ id: itemId, price: price.id }] : undefined,
-          proration_behavior: "always_invoice",
-          metadata: meta,
-        });
-        // The customer.subscription.updated webhook applies state + provisions flags.
-        return { url: `${appUrl}/${locale}/dashboard/settings/billing?success=true` };
-      }
-
-      // NEW subscription via Checkout with a one-off immutable price_data.
-      const session = await stripe.checkout.sessions.create({
-        customer: customerId,
-        mode: "subscription",
-        payment_method_types: ["card"],
-        line_items: [
-          {
-            price_data: {
-              currency: currency.toLowerCase(),
-              product: productId,
-              unit_amount: toStripeUnitAmount(quote.amountCents, currency),
-              recurring: { interval: cycle },
-            },
-            quantity: 1,
-          },
-        ],
-        success_url: `${appUrl}/${locale}/dashboard/settings/billing?success=true`,
-        cancel_url: `${appUrl}/${locale}/dashboard/settings/billing?canceled=true`,
-        subscription_data: { metadata: meta },
-        metadata: meta,
-      });
-      if (!session.url) throw new BadRequestException("Stripe did not return a checkout URL");
-      await this.prisma.restaurant.update({ where: { id: restaurant.id }, data: { paymentProcessing: true } });
-      return { url: session.url };
-    }
-
-    // ── Legacy lookup-key path ────────────────────────────────────────────────
-    let prices = await stripe.prices.list({ lookup_keys: [fullLookupKey], active: true, limit: 1 });
-    if (prices.data.length === 0) {
-      // Fallback to base lookup key without currency suffix.
-      prices = await stripe.prices.list({ lookup_keys: [baseLookupKey], active: true, limit: 1 });
-    }
-    if (prices.data.length === 0) {
-      throw new BadRequestException(`Price not found for ${fullLookupKey} or ${baseLookupKey}`);
-    }
-
-    const session = await stripe.checkout.sessions.create({
-      customer: customerId,
-      mode: "subscription",
-      payment_method_types: ["card"],
-      line_items: [{ price: prices.data[0].id, quantity: 1 }],
-      success_url: `${appUrl}/${locale}/dashboard/settings/billing?success=true`,
-      cancel_url: `${appUrl}/${locale}/dashboard/settings/billing?canceled=true`,
-      subscription_data: { metadata: { restaurantId: restaurant.id, userId: user.id } },
-      metadata: { restaurantId: restaurant.id, userId: user.id },
-    });
-
-    if (!session.url) {
-      throw new BadRequestException("Stripe did not return a checkout URL");
-    }
-
-    await this.prisma.restaurant.update({
-      where: { id: restaurant.id },
-      data: { paymentProcessing: true },
-    });
-
-    return { url: session.url };
-  }
-
-  // Live pricing catalog (PricingConfig singleton) with the built-in fallback.
-  private async pricingCatalog(): Promise<PricingCatalog> {
-    const row = await this.prisma.pricingConfig.findUnique({ where: { id: "default" } }).catch(() => null);
-    return (row?.data as unknown as PricingCatalog) ?? DEFAULT_PRICING_CATALOG;
-  }
 
   @Post("processing")
   @UseGuards(AuthGuard)
@@ -411,24 +161,7 @@ export class StripeController {
         }
         const targetRestaurantId = await this.resolveRestaurantId(sub.id, null);
         if (targetRestaurantId) {
-          // Cancel the restaurant's PREVIOUS subscription if a different one is
-          // now taking over. Done for BOTH created AND updated (and BEFORE
-          // applySubscription overwrites stripeSubscriptionId) because Stripe
-          // doesn't guarantee event ordering — if `updated` for the new sub
-          // lands before `created`, doing this only on `created` would miss the
-          // swap and leave two active subs (double charge).
-          const r = await this.prisma.restaurant.findUnique({
-            where: { id: targetRestaurantId },
-            select: { account: { select: { subscription: { select: { stripeSubscriptionId: true } } } } },
-          });
-          const prevSubId = r?.account?.subscription?.stripeSubscriptionId ?? null;
-          if (prevSubId && prevSubId !== sub.id) {
-            try {
-              await stripe.subscriptions.cancel(prevSubId);
-            } catch (err) {
-              console.error("Cancel old sub error:", err);
-            }
-          }
+          // applySubscription cancels any superseded prev sub before mirroring.
           await this.applySubscription(targetRestaurantId, sub);
         }
         break;
@@ -584,10 +317,35 @@ export class StripeController {
     return r?.account?.subscription?.stripeSubscriptionId === subscriptionId;
   }
 
+  /** Cancel the account's PREVIOUS Stripe subscription when a different one is
+   *  taking over, BEFORE we overwrite stripeSubscriptionId. Runs for every event
+   *  that applies a subscription (checkout.session.completed AND
+   *  customer.subscription.created/updated) because Stripe does not guarantee
+   *  event ordering — if `checkout.session.completed` for the new sub lands first
+   *  and overwrites the id, a later `created`/`updated` would see prev == new and
+   *  miss the swap, leaving two active subs (double charge). */
+  private async cancelSupersededSub(restaurantId: string, newSubId: string): Promise<void> {
+    const r = await this.prisma.restaurant.findUnique({
+      where: { id: restaurantId },
+      select: { account: { select: { subscription: { select: { stripeSubscriptionId: true } } } } },
+    });
+    const prevSubId = r?.account?.subscription?.stripeSubscriptionId ?? null;
+    if (prevSubId && prevSubId !== newSubId) {
+      try {
+        await getStripe().subscriptions.cancel(prevSubId);
+      } catch (err) {
+        console.error("Cancel old sub error:", err);
+      }
+    }
+  }
+
   private async applySubscription(
     restaurantId: string,
     sub: SubscriptionData,
   ): Promise<void> {
+    // Cancel a superseded sub before mirroring overwrites stripeSubscriptionId.
+    await this.cancelSupersededSub(restaurantId, sub.id);
+
     const item = sub.items.data[0];
     const lookupKey = item?.price.lookup_key;
 
@@ -728,8 +486,14 @@ export class StripeController {
 
     const interval = item?.price.recurring?.interval === "year" ? "year" : "month";
     const billingCycle: BillingCycle = interval === "year" ? "YEARLY" : "MONTHLY";
-    const amount = typeof item?.price.unit_amount === "number" ? item.price.unit_amount : null;
     const subCurrency = (sub.currency ?? item?.price.currency ?? "").toUpperCase();
+    // Store `amount` in our internal cents convention (major×100) regardless of
+    // the currency's Stripe unit — so `amount / 100` renders correctly for
+    // zero-decimal currencies (e.g. CLP) too.
+    const amount =
+      typeof item?.price.unit_amount === "number"
+        ? fromStripeUnitAmount(item.price.unit_amount, subCurrency)
+        : null;
     const billingCurrency = isSupportedCurrency(subCurrency) ? subCurrency : undefined;
     const provenance = sub.metadata?.prov ?? "custom";
 

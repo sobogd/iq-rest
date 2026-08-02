@@ -169,44 +169,6 @@ export const TEXTS: LandingTexts = {
     button: "プランを計算",
   },
 
-  pricingHero: {
-    chips: ["手数料なし", "契約なし", "14日間無料"],
-    heading: "シンプルな料金",
-    headingAccent: "隠れた費用なし",
-    sub: "月額料金のみ。注文に手数料はかかりません。いつでも解約できます。",
-    popularBadge: "人気",
-    perMonthSuffix: "/月",
-    whenAnnualTemplate: "年間請求 · {total}/年",
-    orMonthlyTemplate: "または {price}/月",
-    savingsTemplate: "{amount}/年節約",
-    plans: {
-      basic: {
-        name: "Basic",
-        tagline: "デジタルメニューとAI翻訳。5分でオンライン。",
-        features: [
-          "すべてのテーブルにQRメニュー",
-          "写真とアレルゲン付きデジタルメニュー",
-          "AI翻訳35言語",
-          "AIによる料理写真生成",
-          "任意のスマートフォンまたはタブレットから管理",
-        ],
-      },
-      pro: {
-        name: "Pro",
-        tagline: "レストランを完全管理:注文、キッチン、予約。",
-        features: [
-          "Basicのすべて",
-          "メニューからの注文受付",
-          "ウェイターアプリ",
-          "キッチンディスプレイ(KDS)",
-          "オンラインテーブル予約24/7",
-          "独自ドメイン",
-          "優先WhatsAppサポート",
-        ],
-      },
-    },
-  },
-
   footer: {
     featureLinks: [
       { href: "/ja/dejitaru-menyu-resutoran", label: "デジタルメニュー" },

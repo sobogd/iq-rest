@@ -169,44 +169,6 @@ export const TEXTS: LandingTexts = {
     button: "Ríomh do phlean",
   },
 
-  pricingHero: {
-    chips: ["Gan choimisiún", "Gan chonarthaí", "14 lá saor in aisce"],
-    heading: "Praghsáil shimplí.",
-    headingAccent: "Gan aon iontas.",
-    sub: "Táille mhíosúil amháin. Gan choimisiún ar orduithe. Cealaigh aon uair.",
-    popularBadge: "Coitianta",
-    perMonthSuffix: "/mí",
-    whenAnnualTemplate: "bille bliantúil · {total} sa bhliain",
-    orMonthlyTemplate: "nó {price}/mí",
-    savingsTemplate: "sábháil {amount} sa bhliain",
-    plans: {
-      basic: {
-        name: "Basic",
-        tagline: "Biachlár digiteach agus aistriúchán AI. Beo i 5 nóiméad.",
-        features: [
-          "Biachlár QR do gach bord",
-          "Biachlár digiteach le grianghraif agus ailléirginí",
-          "Aistriúchán IS i 35 teanga",
-          "Cruthú grianghraf miasa le IS",
-          "Bainistigh ó aon ghuthán nó táibléad",
-        ],
-      },
-      pro: {
-        name: "Pro",
-        tagline: "Smacht iomlán ar an mbialann: orduithe, cistin agus áirithintí.",
-        features: [
-          "Gach rud sa Basic",
-          "Orduithe a ghlacadh ón mbiachlár",
-          "Aip freastalaí",
-          "Scáileán cistine (KDS)",
-          "Curfha bord ar líne 24/7",
-          "Fearann saincheaptha",
-          "Tacaíocht WhatsApp tosaíochta",
-        ],
-      },
-    },
-  },
-
   footer: {
     featureLinks: [
       { href: "/ga/biachlar-digiteach-bialann", label: "Biachlár digiteach" },

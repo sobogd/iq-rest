@@ -75,7 +75,7 @@ export const CONTENT: FeatureContent = {
       { q: "Hvor svær er reservationsopsætningen?", a: "Det tager meget kort tid. Tre trin: (1) tilføj borde med navne, billeder og kapacitet, (2) aktivér reservationstilstand i indstillingerne, (3) del linket eller QR-koden med gæsterne. Fuld lancering på 5–10 minutter." },
       { q: "Kan jeg bruge reservationssystemet på mit eget domæne?", a: "Ja. Vi understøtter et brugerdefineret domæne med SSL-certifikat: gæsterne reserverer på din restaurants adresse (f.eks. reservation.dinrestaurant.dk). Vi hjælper med DNS-opsætning; processen tager 5–10 minutter." },
       { q: "Kan jeg konfigurere automatisk eller manuel bekræftelse?", a: "Ja, tilstanden vælges i indstillingerne. Med automatisk bekræftelse modtager gæsten en bekræftelse straks efter at have indsendt formularen, og reservationen anses for accepteret. Med manuel bekræftelse lander anmodningen i administrationspanelet med status „afventer bekræftelse“ — administratoren gennemgår den og bekræfter eller afviser. Manuel tilstand er nyttig ved begrænset bordantal eller strenge gæstepolitikker." },
-      { q: "Tager I kommission af reservationerne?", a: "Nej. Bordreservation er fuldt inkluderet i Pro-abonnementet — ingen procentdel af gæster, intet gebyr pr. slot, ingen aggregator-kommissioner. Et fast månedligt gebyr og ubegrænsede reservationer." },
+      { q: "Tager I kommission af reservationerne?", a: "Nej. Bordreservation er fuldt inkluderet i Reservations-tilføjelsen — ingen procentdel af gæster, intet gebyr pr. slot, ingen aggregator-kommissioner. Et fast månedligt gebyr og ubegrænsede reservationer." },
     ],
   },
 };

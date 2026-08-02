@@ -169,44 +169,6 @@ export const TEXTS: LandingTexts = {
     button: "Calculez votre forfait",
   },
 
-  pricingHero: {
-    chips: ['Sans commission', 'Sans contrat', '14 jours gratuits'],
-    heading: 'Des tarifs simples.',
-    headingAccent: 'Sans surprise.',
-    sub: "Un forfait mensuel. Aucune commission sur les commandes. Annulez à tout moment.",
-    popularBadge: 'Populaire',
-    perMonthSuffix: '/mois',
-    whenAnnualTemplate: 'facturé annuellement · {total} par an',
-    orMonthlyTemplate: 'ou {price}/mois',
-    savingsTemplate: 'économisez {amount} par an',
-    plans: {
-      basic: {
-        name: "Basic",
-        tagline: 'Menu numérique et traduction IA. En ligne en 5 minutes.',
-        features: [
-          'Menu QR pour chaque table',
-          'Menu numérique avec photos et allergènes',
-          'Traduction IA en 35 langues',
-          'Génération IA de photos de plats',
-          "Gestion depuis n'importe quel téléphone ou tablette",
-        ],
-      },
-      pro: {
-        name: "Pro",
-        tagline: 'Contrôle complet du restaurant : commandes, cuisine et réservations.',
-        features: [
-          'Tout dans Basic',
-          'Prise de commandes depuis le menu',
-          'App serveur',
-          'Écran de cuisine (KDS)',
-          'Réservation de tables en ligne 24/7',
-          'Domaine personnalisé',
-          'Support WhatsApp prioritaire',
-        ],
-      },
-    },
-  },
-
   footer: {
     featureLinks: [
       { href: "/fr/menu-digital-restaurants", label: 'Menu numérique' },

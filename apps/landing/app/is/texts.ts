@@ -169,44 +169,6 @@ export const TEXTS: LandingTexts = {
     button: "Reiknaðu áskriftina þína",
   },
 
-  pricingHero: {
-    chips: ["Engin þóknun", "Engir samningar", "14 dagar ókeypis"],
-    heading: "Einföld verð.",
-    headingAccent: "Engin óvænt gjöld.",
-    sub: "Eitt mánaðarlegt gjald. Engin þóknun af pöntunum. Hættu hvenær sem er.",
-    popularBadge: "Vinsælt",
-    perMonthSuffix: "/mán",
-    whenAnnualTemplate: "árlegt reikningagerð · {total} á ári",
-    orMonthlyTemplate: "eða {price}/mán",
-    savingsTemplate: "sparaðu {amount} á ári",
-    plans: {
-      basic: {
-        name: "Basic",
-        tagline: "Stafrænn matseðill og gervigreindarþýðing. Tilbúið á 5 mínútum.",
-        features: [
-          "QR matseðill fyrir hvert borð",
-          "Stafrænn matseðill með myndum og ofnæmisvökum",
-          "Gervigreindar þýðing á 35 tungumál",
-          "Gervigreindar myndgerð fyrir rétti",
-          "Stjórnaðu úr hvaða síma eða spjaldtölvu sem er",
-        ],
-      },
-      pro: {
-        name: "Pro",
-        tagline: "Full stjórn á veitingastaðnum: pantanir, eldhús og bókanir.",
-        features: [
-          "Allt í Basic",
-          "Pantanir af matseðli",
-          "Þjónsforrit",
-          "Eldhússkjár (KDS)",
-          "Borðabókun á netinu 24/7",
-          "Eigið lén",
-          "Forgangs WhatsApp aðstoð",
-        ],
-      },
-    },
-  },
-
   footer: {
     featureLinks: [
       { href: "/is/stafraen-matsedill-veitingastaur", label: "Stafrænn matseðill" },

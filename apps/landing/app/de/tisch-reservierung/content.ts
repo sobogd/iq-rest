@@ -75,7 +75,7 @@ export const CONTENT: FeatureContent = {
       { q: "Wie schwer ist die Reservierungs-Einrichtung?", a: "Sie nimmt sehr wenig Zeit in Anspruch. Drei Schritte: (1) Tische mit Namen, Fotos und Kapazität hinzufügen, (2) Reservierungsmodus in den Einstellungen aktivieren, (3) Link oder QR-Code mit den Gästen teilen. Vollständiger Start in 5–10 Minuten." },
       { q: "Kann ich das Reservierungssystem auf meiner eigenen Domain nutzen?", a: "Ja. Wir unterstützen eine eigene Domain mit SSL-Zertifikat: Gäste reservieren unter der Adresse Ihres Restaurants (z. B. booking.ihrrestaurant.de). Wir helfen bei der DNS-Einrichtung; der Prozess dauert 5–10 Minuten." },
       { q: "Kann ich automatische oder manuelle Bestätigung konfigurieren?", a: "Ja, der Modus wird in den Einstellungen festgelegt. Bei automatischer Bestätigung erhält der Gast sofort nach dem Absenden des Formulars eine Bestätigung und die Reservierung gilt als angenommen. Bei manueller Bestätigung landet die Anfrage im Admin-Panel mit Status „wartet auf Bestätigung“ — der Manager prüft sie und bestätigt oder lehnt ab. Der manuelle Modus ist bei begrenzter Tischzahl oder strikten Gästerichtlinien nützlich." },
-      { q: "Berechnen Sie Provision auf Reservierungen?", a: "Nein. Die Tischreservierung ist vollständig im Pro-Tarif enthalten — keine Prozente auf Gäste, keine Gebühr pro Slot, keine Aggregator-Provisionen. Eine feste monatliche Gebühr und unbegrenzte Reservierungen." },
+      { q: "Berechnen Sie Provision auf Reservierungen?", a: "Nein. Die Tischreservierung ist vollständig im Reservierungs-Add-on enthalten — keine Prozente auf Gäste, keine Gebühr pro Slot, keine Aggregator-Provisionen. Eine feste monatliche Gebühr und unbegrenzte Reservierungen." },
     ],
   },
 };

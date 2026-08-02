@@ -53,6 +53,9 @@ interface SubData {
   currentPeriodEnd?: string | null;
   proFeatures?: boolean;
   menuOnline?: boolean;
+  // à-la-carte capabilities — orders/KDS ride `proFeatures`, reservations is its
+  // own add-on and must be gated independently.
+  features?: { menuOnline: boolean; reservations: boolean; ordersKds: boolean; customDomain: boolean };
   aiImagesUsed?: number;
   aiImagesLimit?: number | null;
   canManageBilling?: boolean;
@@ -109,6 +112,12 @@ export function DashboardHost() {
   })[0];
   const proFeatures = !!subQ.data?.proFeatures;
   const proEnabled = enabled && proFeatures;
+  // Reservations is an independent à-la-carte add-on: gate its query on the
+  // reservations capability, not orders. A reservations-only venue must load its
+  // bookings; an orders-only venue must NOT hit /reservations (it 403s). Fall
+  // back to proFeatures when the API predates the `features` payload.
+  const reservationsFeature = subQ.data?.features?.reservations ?? proFeatures;
+  const reservationsEnabled = enabled && reservationsFeature;
 
   const data = useQueries({
     queries: [
@@ -138,7 +147,7 @@ export function DashboardHost() {
       {
         queryKey: ["reservations"],
         queryFn: () => api<ApiReservation[]>("/reservations"),
-        enabled: proEnabled,
+        enabled: reservationsEnabled,
         retry: retryUnlessForbidden,
         refetchInterval: 30_000,
         refetchIntervalInBackground: true,
@@ -179,6 +188,8 @@ export function DashboardHost() {
         currentPeriodEnd: sub.currentPeriodEnd ?? null,
         proFeatures: sub.proFeatures ?? false,
         menuOnline: sub.menuOnline ?? true,
+        // reservations is a separate à-la-carte add-on — don't fold it into proFeatures.
+        reservationsFeature: sub.features?.reservations ?? sub.proFeatures ?? false,
         aiImagesUsed: sub.aiImagesUsed ?? 0,
         aiImagesLimit: sub.aiImagesLimit ?? null,
         canManageBilling: sub.canManageBilling ?? true,

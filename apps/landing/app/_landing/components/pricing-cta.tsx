@@ -3,11 +3,11 @@
 // one-liner, a geo-currency "from {price}/mo" line and a button linking to the
 // locale's /pricing page (where the full à-la-carte quiz lives).
 
-import { ArrowRight } from "lucide-react";
 import { LOCALE_SLUG_OVERRIDES } from "@/lib/locale-slug-overrides";
 import { localePath } from "@/lib/locale-paths";
 import type { PricingCtaTexts } from "../types";
 import { FromPrice, type PricingAddon } from "./from-price";
+import { LinkForward } from "./link-forward";
 
 export const EN_PRICING_CTA: PricingCtaTexts = {
   heading: "Simple, flexible pricing",
@@ -40,13 +40,13 @@ export function PricingCta({
         {t.sub}
       </p>
       <FromPrice addon={addon} template={t.fromTemplate} />
-      <a
+      <LinkForward
         href={href}
-        className="mt-6 inline-flex items-center justify-center gap-2 min-h-12 py-2.5 px-7 text-sm sm:text-base font-semibold text-primary-foreground bg-primary rounded-xl hover:bg-primary/90 active:scale-[0.99] transition-colors"
+        trackEvent="l_pricing_cta_click"
+        className="mt-6 inline-flex items-center justify-center h-11 px-6 text-base font-semibold text-white bg-gradient-to-br from-[hsl(9,100%,58%)] to-[hsl(35,95%,55%)] rounded-lg hover:opacity-90 active:scale-[0.99] transition-all text-center leading-tight whitespace-nowrap"
       >
         {t.button}
-        <ArrowRight className="h-4 w-4" />
-      </a>
+      </LinkForward>
     </div>
   );
 }

@@ -75,7 +75,7 @@ export const CONTENT: FeatureContent = {
       { q: "Com de difícil és la configuració de la reserva?", a: "Costa molt poc temps. Tres passos: (1) afegir taules amb noms, fotos i aforament, (2) activar el mode de reserva a la configuració, (3) compartir l'enllaç o el codi QR amb els clients. Posada en marxa completa en 5-10 minuts." },
       { q: "Puc fer servir el sistema de reserves al meu propi domini?", a: "Sí. Donem suport a un domini personalitzat amb certificat SSL: els clients reserven a l'adreça del teu restaurant (per exemple reserves.elteurestaurant.cat). T'ajudem amb la configuració del DNS; el procés dura entre 5 i 10 minuts." },
       { q: "Puc configurar confirmació automàtica o manual?", a: "Sí, el mode es defineix a la configuració. Amb confirmació automàtica, el client rep la confirmació immediatament en enviar el formulari i la reserva es considera acceptada. Amb confirmació manual, la sol·licitud arriba al panell d'administració amb l'estat «pendent de confirmació» — el responsable la revisa i confirma o rebutja. El mode manual és útil amb pocs llocs o polítiques estrictes." },
-      { q: "Cobreu comissió sobre les reserves?", a: "No. La reserva de taules està totalment inclosa al pla Pro — sense percentatges sobre els clients, sense quotes per franja, sense comissions d'agregadors. Una tarifa mensual fixa i reserves il·limitades." },
+      { q: "Cobreu comissió sobre les reserves?", a: "No. La reserva de taules està totalment inclosa al complement de Reserves — sense percentatges sobre els clients, sense quotes per franja, sense comissions d'agregadors. Una tarifa mensual fixa i reserves il·limitades." },
     ],
   },
 };

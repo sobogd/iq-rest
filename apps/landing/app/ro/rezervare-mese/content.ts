@@ -75,7 +75,7 @@ export const CONTENT: FeatureContent = {
       { q: "Cât de dificilă este configurarea rezervării?", a: "Durează foarte puțin timp. Trei pași: (1) adăugați mesele cu nume, fotografii și capacitate, (2) activați modul de rezervare în setări, (3) distribuiți link-ul sau codul QR oaspeților. Lansare completă în 5–10 minute." },
       { q: "Pot folosi sistemul de rezervări pe propriul domeniu?", a: "Da. Suportăm un domeniu personalizat cu certificat SSL: oaspeții rezervă la adresa restaurantului dumneavoastră (de exemplu rezervare.restaurantuldvs.ro). Vă ajutăm cu configurarea DNS; procesul durează 5–10 minute." },
       { q: "Pot configura confirmare automată sau manuală?", a: "Da, modul este setat în setări. Cu confirmare automată, oaspetele primește confirmarea imediat după trimiterea formularului și rezervarea este considerată acceptată. Cu confirmare manuală, cererea ajunge în panoul de administrare cu statusul „așteaptă confirmare“ — managerul o revizuiește și confirmă sau respinge. Modul manual este util la un număr limitat de mese sau politici stricte pentru oaspeți." },
-      { q: "Percepeți comision la rezervări?", a: "Nu. Rezervarea de mese este complet inclusă în planul Pro — fără procent de la oaspeți, fără taxă pe slot, fără comisioane de agregatori. Taxă lunară fixă și rezervări nelimitate." },
+      { q: "Percepeți comision la rezervări?", a: "Nu. Rezervarea de mese este o funcționalitate suplimentară pe care o adăugați la planul dumneavoastră — fără procent de la oaspeți, fără taxă pe slot, fără comisioane de agregatori. Taxă lunară fixă și rezervări nelimitate." },
     ],
   },
 };

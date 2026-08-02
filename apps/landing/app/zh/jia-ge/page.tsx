@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PricingTemplate } from "@/app/_landing/templates/pricing-template";
 import { TEXTS as DEFAULT } from "../texts";
 import { TEXTS } from "./texts";
-import { SCHEMA_PRICE_BASIC_EUR, SCHEMA_PRICE_PRO_EUR } from "@/lib/pricing";
+import { SCHEMA_PRICE_MENU_EUR } from "@/lib/pricing";
 import { SCHEMA_DATE_MODIFIED } from "@/lib/page-meta";
 
 export const dynamic = "force-static";
@@ -15,15 +15,15 @@ const PRICING_FAQ = {
   ...DEFAULT.faq,
   sub: "餐厅老板关于价格和付款的常见问题。找不到您的问题?在 WhatsApp 上给我们留言。",
   items: [
-    { q: "Basic 和 Pro 有什么区别?", a: "Basic 包括数字 + QR 菜单、35 种语言的 AI 翻译、从菜单接单(可选)以及从任何设备进行管理。Pro 增加了厨房显示屏 (KDS) 和 24/7 在线餐桌预订,还有 WhatsApp 优先支持。如果您不需要厨房工作流和预订 — Basic 涵盖一切。" },
+    { q: "价格是怎么计算的?", a: "您可以自由搭配属于自己的方案。数字 QR 菜单是基础 — 它包含 35 种语言的 AI 翻译以及从任何设备进行管理。然后您只需添加所需的功能:餐桌预订、带接单的厨房显示屏,或自定义域名。价格按每家餐厅计算,从第二家餐厅起自动享受批量折扣。" },
     { q: "您从订单中收取佣金吗?", a: "不。每个订单 — 来自 QR 菜单或服务员接受 — 都直接到达餐厅,没有百分比或聚合器佣金。您有一笔固定的月费,没有其他扣款。" },
-    { q: "14 天试用包含什么?", a: "两种计划中所有功能的完整访问权限,无需信用卡。14 天后,如果没有连接付款方式,账户会自动暂停。未经您同意,绝不自动扣款。" },
+    { q: "14 天试用包含什么?", a: "所有功能的完整访问权限,无需信用卡。14 天后,如果没有连接付款方式,账户会自动暂停。未经您同意,绝不自动扣款。" },
     { q: "14 天后会发生什么?", a: "如果没有连接付款方式,账户会自动暂停。管理面板仍以只读模式可用,但客人 QR 菜单和接单将暂时禁用。我们绝不在未经您同意的情况下扣款。" },
     { q: "暂停期间我的菜单、订单和数据会怎样?", a: "一切都完整保留:菜单、菜品照片、订单历史、预订、设计设置、统计数据。即使一个月或六个月后再连接付款 — 一切都会原样恢复,没有任何丢失。" },
     { q: "试用期后餐桌上的 QR 码还能使用吗?", a: "如果账户暂停,QR 码会向客人显示「暂时不可用」的占位符。您无需打印新的 QR 码:一旦连接付款,同样的 QR 码就会再次打开菜单。" },
-    { q: "我以后可以从 Basic 切换到 Pro 吗?", a: "可以,升级只需在管理面板中点击一下。附加费按已付期间的剩余天数按比例计算。也可以从 Pro 降级到 Basic — KDS 和预订将被禁用,但所有数据都会保留。" },
-    { q: "在 Pro 方案中我可以管理多少家餐厅?", a: "Pro 在一个账户下最多包含 4 家餐厅,全部通过单一管理面板进行管理。经营更大的餐饮集团?请在 WhatsApp 上就 Enterprise 方案给我们留言。" },
-    { q: "年度折扣是多少?", a: "比月度计划约低 30%。具体金额在计划页面结账时显示。" },
+    { q: "我以后可以更改我的方案吗?", a: "可以 — 随时在管理面板中添加或移除功能。差额会按已付期间的剩余天数按比例计算。如果您移除某个功能,它会被关闭,但其所有数据都会保留。" },
+    { q: "我可以管理多少家餐厅?", a: "多少都行 — 在搭配方案时选择餐厅数量,全部通过单一管理面板进行管理。批量折扣自动生效,5 家或以上餐厅最高可享 50% 折扣。经营更大的餐饮集团?请在 WhatsApp 上就定制方案给我们留言。" },
+    { q: "年度折扣是多少?", a: "比月度计划约低 30%。具体金额在您搭配方案时显示。" },
     { q: "我可以随时取消订阅吗?", a: "可以,取消只需在管理面板中点击一下。取消后,账户在已付期结束前继续工作,然后暂停。数据将保留,您可以随时回来。" },
     { q: "您接受哪些付款方式?", a: "通过 Stripe 接受 Visa、Mastercard 和 American Express。也支持 Apple Pay 和 Google Pay。在欧洲 — 年度计划支持 SEPA Direct Debit。" },
   ],
@@ -65,8 +65,7 @@ const JSON_LD = JSON.stringify({
       dateModified: SCHEMA_DATE_MODIFIED,
       brand: { "@type": "Brand", name: "IQ Rest" },
       offers: [
-        { "@type": "Offer", name: "Basic", price: SCHEMA_PRICE_BASIC_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
-        { "@type": "Offer", name: "Pro", price: SCHEMA_PRICE_PRO_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
+        { "@type": "Offer", name: "Digital menu", price: SCHEMA_PRICE_MENU_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
       ],
     },
     {

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PricingTemplate } from "@/app/_landing/templates/pricing-template";
 import { TEXTS as DEFAULT } from "../texts";
 import { TEXTS } from "./texts";
-import { SCHEMA_PRICE_BASIC_EUR, SCHEMA_PRICE_PRO_EUR } from "@/lib/pricing";
+import { SCHEMA_PRICE_MENU_EUR } from "@/lib/pricing";
 import { SCHEMA_DATE_MODIFIED } from "@/lib/page-meta";
 
 export const dynamic = "force-static";
@@ -15,15 +15,15 @@ const PRICING_FAQ = {
   ...DEFAULT.faq,
   sub: "Það sem veitingamenn spyrja um verð og greiðslu. Finnurðu ekki þína spurningu? Skrifaðu okkur á WhatsApp.",
   items: [
-    { q: "Hver er munurinn á Basic og Pro?", a: "Basic inniheldur stafrænan + QR matseðil, gervigreindar þýðingu á 35 tungumál, pantanatöku úr matseðlinum (valfrjálst) og stjórnun úr hvaða tæki sem er. Pro bætir við eldhússkjánum (KDS) og borðabókun á netinu 24/7, auk forgangs WhatsApp aðstoðar. Ef þú þarft ekki eldhúsflæði og bókanir — Basic dekkar allt." },
+    { q: "Hvernig virkar verðlagningin?", a: "Þú setur saman þína eigin áskrift. Stafræni QR matseðillinn er grunnurinn — hann inniheldur gervigreindarþýðingu á 35 tungumál og stjórnun úr hvaða tæki sem er. Síðan bætir þú aðeins við því sem þú þarft: borðabókunum, eldhússkjánum með pantanatöku eða sérsniðnu léni. Verðið er á hvern veitingastað og magnafslættir gilda sjálfkrafa frá öðrum veitingastaðnum." },
     { q: "Takið þið þóknun af pöntunum?", a: "Nei. Hver pöntun — úr QR matseðli eða tekin af þjóni — fer beint til veitingastaðarins, án prósentu eða samanafnsþóknunar. Þú ert með fast mánaðargjald og engar aðrar frádrágur." },
-    { q: "Hvað er innifalið í 14 daga prufutímabilinu?", a: "Fullur aðgangur að öllum eiginleikum í báðum áskriftum, ekkert kort krafist. Eftir 14 daga er reikningurinn settur sjálfkrafa á bið ef engin greiðsluaðferð er tengd. Engar sjálfvirkar greiðslur án þíns samþykkis." },
+    { q: "Hvað er innifalið í 14 daga prufutímabilinu?", a: "Fullur aðgangur að öllum eiginleikum, ekkert kort krafist. Eftir 14 daga er reikningurinn settur sjálfkrafa á bið ef engin greiðsluaðferð er tengd. Engar sjálfvirkar greiðslur án þíns samþykkis." },
     { q: "Hvað gerist eftir 14 daga?", a: "Ef engin greiðsluaðferð er tengd er reikningurinn settur sjálfkrafa á bið. Stjórnborðið er aðgengilegt í lesa-aðeins hami, en QR matseðill fyrir gesti og pantanataka eru tímabundið óvirk. Við rukkum aldrei án þíns samþykkis." },
     { q: "Hvað verður um matseðilinn minn, pantanir og gögn meðan á hléi stendur?", a: "Allt er varðveitt að fullu: matseðill, myndir af réttum, pantanasaga, bókanir, hönnunarstillingar, tölfræði. Tengdu greiðslu jafnvel mánuði eða sex mánuðum síðar — allt kemur til baka eins og það var, ekkert tapast." },
     { q: "Munu QR kóðar á borðunum enn virka eftir prufutímabilið?", a: "Ef reikningurinn er á bið sýna QR kóðarnir gestum skilaboðin „tímabundið ekki tiltækt“. Þú þarft ekki að prenta nýja QR kóða: um leið og greiðsla er tengd opna sömu kóðar matseðilinn aftur." },
-    { q: "Get ég skipt úr Basic í Pro síðar?", a: "Já, uppfærsla er með einum smelli í stjórnborðinu. Aukagjaldið er hlutfallslega reiknað út frá þeim dögum sem eftir eru af greidda tímabilinu. Niðurfærsla úr Pro í Basic er einnig í boði — KDS og bókun verða óvirk en öll gögn varðveitast." },
-    { q: "Hversu marga veitingastaði get ég stjórnað í Pro?", a: "Pro inniheldur allt að 4 veitingastaði undir einum reikningi, allir stjórnaðir frá einu stjórnborði. Rekur þú stærri hóp? Sendu okkur skilaboð á WhatsApp um Enterprise áskrift." },
-    { q: "Hver er árlegur afsláttur?", a: "Um 30% miðað við mánaðaráskrift. Nákvæmur fjárhæð er sýnd við greiðslu á áskriftarsíðunni." },
+    { q: "Get ég breytt áskriftinni minni síðar?", a: "Já — bættu við eða fjarlægðu eiginleika hvenær sem er í stjórnborðinu. Mismunurinn er hlutfallslega reiknaður út frá þeim dögum sem eftir eru af greidda tímabilinu. Ef þú fjarlægir eiginleika er hann slökktur en öll gögn hans varðveitast." },
+    { q: "Hversu marga veitingastaði get ég stjórnað?", a: "Eins marga og þú þarft — veldu fjölda veitingastaða þegar þú setur saman áskriftina, allir stjórnaðir frá einu stjórnborði. Magnafslættir gilda sjálfkrafa, allt að 50% afsláttur með 5+ veitingastöðum. Rekur þú stærri hóp? Sendu okkur skilaboð á WhatsApp um sérsniðna áskrift." },
+    { q: "Hver er árlegur afsláttur?", a: "Um 30% miðað við mánaðaráskrift. Nákvæm fjárhæð er sýnd þegar þú setur saman áskriftina." },
     { q: "Get ég sagt áskriftinni upp hvenær sem er?", a: "Já, uppsögn er með einum smelli í stjórnborðinu. Eftir uppsögn virkar reikningurinn til loka greidda tímabilsins, síðan er hann settur á bið. Gögn varðveitast og þú getur komið til baka hvenær sem þú vilt." },
     { q: "Hvaða greiðsluaðferðir takið þið?", a: "Visa, Mastercard og American Express í gegnum Stripe. Apple Pay og Google Pay eru einnig studd. Í Evrópu — SEPA Direct Debit á árlegri áskrift." },
   ],
@@ -65,8 +65,7 @@ const JSON_LD = JSON.stringify({
       dateModified: SCHEMA_DATE_MODIFIED,
       brand: { "@type": "Brand", name: "IQ Rest" },
       offers: [
-        { "@type": "Offer", name: "Basic", price: SCHEMA_PRICE_BASIC_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
-        { "@type": "Offer", name: "Pro", price: SCHEMA_PRICE_PRO_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
+        { "@type": "Offer", name: "Digital menu", price: SCHEMA_PRICE_MENU_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
       ],
     },
     {

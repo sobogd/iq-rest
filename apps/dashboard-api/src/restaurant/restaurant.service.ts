@@ -514,7 +514,32 @@ export class RestaurantService {
           }
         : null,
     };
-    const newVenueFlags = defaultFeatureFlagsForNewVenue(ownerAccountState);
+    // Inherit the account's PURCHASED uniform feature set from an existing venue
+    // rather than blanket-granting operational features. Every à-la-carte sub is
+    // labelled plan="PRO" regardless of what was actually bought, so
+    // defaultFeatureFlagsForNewVenue (which keys off isProActive) would hand a
+    // brand-new venue orders/kds/reservations for free even on a menu-only plan.
+    // The constructor provisions every paid venue identically, so the sibling
+    // with the most features enabled == the purchased set. Fall back to the tier
+    // default only when there is no sibling to copy (should not happen — the
+    // owner already owns ≥1 venue here).
+    const featureScore = (r: { featOrders?: boolean; featKds?: boolean; featReservations?: boolean; featAiUnlimited?: boolean }) =>
+      (r.featOrders ? 1 : 0) + (r.featKds ? 1 : 0) + (r.featReservations ? 1 : 0) + (r.featAiUnlimited ? 1 : 0);
+    const representative = ownedRestaurants
+      .filter((r) => r.accountId === ownerAccountId)
+      .slice()
+      .sort((a, b) => featureScore(b) - featureScore(a))[0];
+    const newVenueFlags = representative
+      ? {
+          featMenuOnline: true,
+          featOrders: representative.featOrders,
+          featKds: representative.featKds,
+          featReservations: representative.featReservations,
+          // customDomain is a per-venue add-on (unique domain) — never inherited.
+          featCustomDomain: false,
+          featAiUnlimited: representative.featAiUnlimited,
+        }
+      : defaultFeatureFlagsForNewVenue(ownerAccountState);
 
     // Adding restaurants is open to everyone (no PRO gate). A newly created
     // venue starts FREE/INACTIVE and simply has no PRO features unless the owner

@@ -5,7 +5,7 @@ import { LandingHeader } from "../components/header";
 import { LandingFooter } from "../components/footer";
 import { Section } from "../components/section";
 import { PageTracker } from "../components/page-tracker";
-import { PricingHero } from "../components/pricing-hero";
+import { PricingQuiz, EN_PRICING_QUIZ } from "../components/pricing-quiz";
 import { Founder } from "../components/founder";
 import { LandingHero } from "../components/landing-hero";
 import { FinalCta } from "../components/final-cta";
@@ -104,8 +104,25 @@ export function HomeTemplate({
         })}
       </div>
 
-      <Section id="pricing" dataSection="pricing_hero" noContainer className="!py-16">
-        <PricingHero locale={locale} ctaText={texts.ctaText} demoText={texts.demoText} microcopy={texts.microcopy} texts={texts.pricingHero!} trackPrefix="l_home_pricing" />
+      {/* billing-features-constructor: the à-la-carte quiz replaces the fixed
+          Basic/Pro plan cards on the home pricing section too. */}
+      <Section id="pricing" dataSection="pricing_quiz" noContainer className="!py-16">
+        <PricingQuiz ctaText={texts.ctaText} texts={texts.pricingQuiz ?? EN_PRICING_QUIZ} />
+      </Section>
+
+      <Section dataSection="pricing_enterprise" noContainer>
+        <p className="mx-auto max-w-xl text-center text-base text-muted-foreground">
+          {(texts.pricingQuiz ?? EN_PRICING_QUIZ).enterprisePre}{" "}
+          <a
+            href={`https://wa.me/998948663743?text=${encodeURIComponent((texts.pricingQuiz ?? EN_PRICING_QUIZ).enterpriseWa)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-primary underline-offset-2 hover:underline"
+          >
+            {(texts.pricingQuiz ?? EN_PRICING_QUIZ).enterpriseCta}
+          </a>{" "}
+          {(texts.pricingQuiz ?? EN_PRICING_QUIZ).enterprisePost}
+        </p>
       </Section>
 
       <Section id="founder" dataSection="founder" noContainer accent className="!py-16">

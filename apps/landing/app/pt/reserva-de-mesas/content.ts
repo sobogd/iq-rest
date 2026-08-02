@@ -75,7 +75,7 @@ export const CONTENT: FeatureContent = {
       { q: "Quão difícil é a configuração das reservas?", a: "Demora muito pouco tempo. Três passos: (1) adicionar mesas com nomes, fotos e capacidade, (2) ativar o modo de reservas nas definições, (3) partilhar o link ou código QR com os clientes. Lançamento completo em 5-10 minutos." },
       { q: "Posso usar o sistema de reservas no meu próprio domínio?", a: "Sim. Suportamos um domínio personalizado com certificado SSL: os clientes reservam na morada do teu restaurante (por exemplo reservas.oteurestaurante.pt). Ajudamos com a configuração de DNS; o processo demora 5-10 minutos." },
       { q: "Posso configurar confirmação automática ou manual?", a: "Sim, o modo é definido nas definições. Com confirmação automática, o cliente recebe uma confirmação imediatamente após submeter o formulário e a reserva considera-se aceite. Com confirmação manual, o pedido chega ao painel de admin com o estado «a aguardar confirmação» — o gestor revê-o e confirma ou recusa. O modo manual é útil quando há um número limitado de mesas ou políticas estritas para clientes." },
-      { q: "Cobram comissão sobre as reservas?", a: "Não. A reserva de mesas está totalmente incluída no plano Pro — sem percentagens sobre clientes, sem taxas por slot, sem comissões de agregadores. Um pagamento mensal fixo e reservas ilimitadas." },
+      { q: "Cobram comissão sobre as reservas?", a: "Não. A reserva de mesas é um extra que adicionas ao teu plano — sem percentagens sobre clientes, sem taxas por slot, sem comissões de agregadores. Um pagamento mensal fixo e reservas ilimitadas." },
     ],
   },
 };

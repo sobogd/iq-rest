@@ -169,44 +169,6 @@ export const TEXTS: LandingTexts = {
     button: "Izračunajte svoj plan",
   },
 
-  pricingHero: {
-    chips: ["Bez provizije", "Bez ugovora", "14 dana besplatno"],
-    heading: "Jednostavne cijene.",
-    headingAccent: "Bez iznenađenja.",
-    sub: "Jedna mjesečna naknada. Bez postotka na narudžbe. Otkažite bilo kada.",
-    popularBadge: "Popularno",
-    perMonthSuffix: "/mj.",
-    whenAnnualTemplate: "godišnje plaćanje · {total} godišnje",
-    orMonthlyTemplate: "ili {price}/mj.",
-    savingsTemplate: "uštedite {amount} godišnje",
-    plans: {
-      basic: {
-        name: "Basic",
-        tagline: "Digitalni jelovnik i AI prijevod. Online za 5 minuta.",
-        features: [
-          "QR jelovnik za svaki stol",
-          "Digitalni jelovnik s fotografijama i alergenima",
-          "AI prijevod na 35 jezika",
-          "AI generiranje fotografija jela",
-          "Upravljanje s bilo kojeg telefona ili tableta",
-        ],
-      },
-      pro: {
-        name: "Pro",
-        tagline: "Potpuna kontrola restorana: narudžbe, kuhinja i rezervacije.",
-        features: [
-          "Sve iz Basica",
-          "Primanje narudžbi iz jelovnika",
-          "Aplikacija za konobara",
-          "Kuhinjski ekran (KDS)",
-          "Online rezervacija stolova 24/7",
-          "Vlastita domena",
-          "Prioritetna WhatsApp podrška",
-        ],
-      },
-    },
-  },
-
   footer: {
     featureLinks: [
       { href: "/hr/digitalni-jelovnik-restoran", label: "Digitalni jelovnik" },
