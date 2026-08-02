@@ -744,7 +744,14 @@
         "paymentReceived": "Payment received — activating your subscription…",
         "subscriptionUpdated": "Subscription updated.",
         "errStartSubscription": "Could not start the subscription. Try again.",
-        "errOpenPayment": "Could not open the payment page. Try again."
+        "errOpenPayment": "Could not open the payment page. Try again.",
+        "confirmChangeTitle": "Confirm plan change",
+        "confirmChargeNow": "You'll be charged {amount} now (prorated for the rest of this period).",
+        "confirmChangeCredit": "You'll receive a {amount} credit toward your next invoices.",
+        "confirmChangeUnknown": "Your card will be charged a prorated amount for the rest of this period.",
+        "confirmThenRecurring": "Then {amount} / {period} going forward.",
+        "confirmPay": "Confirm",
+        "cancel": "Cancel"
       },
       "support": {
         "title": "Support",

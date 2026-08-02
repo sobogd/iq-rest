@@ -17,6 +17,7 @@ import {
   computeQuote,
   getPricingCatalog,
   subscribeCustom,
+  fetchChangePreview,
   fetchSubscriptionStatus,
   openBillingPortal,
   syncBilling,
@@ -56,6 +57,9 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
   const [busy, setBusy] = useState(false);
   const [notice, setNotice] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  // Set while awaiting confirmation of the immediate proration charge on an
+  // active-plan change (null immediateMajor = amount couldn't be previewed).
+  const [pendingCharge, setPendingCharge] = useState<{ immediateMajor: number | null; currency: string } | null>(null);
   const [sub, setSub] = useState<{
     status: string | null;
     currentPeriodEnd: string | null;
@@ -67,7 +71,12 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
     venueLimit?: number | null;
   } | null>(null);
 
-  const minCount = Math.max(1, list.length);
+  // Count ONLY the venues of the active account (owned). `list` also contains
+  // venues managed for other companies via grant (`owned === false`); including
+  // those would force the owner to buy — and pay for — slots they don't have in
+  // this account. The server bills by account venue count, so this must match.
+  const ownedCount = list.filter((r) => r.owned !== false).length;
+  const minCount = Math.max(1, ownedCount);
 
   const refreshSub = () =>
     fetchSubscriptionStatus().then((s) =>
@@ -133,10 +142,11 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
   const subActive = sub?.status === "ACTIVE" || sub?.status === "PAST_DUE";
   const venueCountLabel = (n: number) => (n === 1 ? tb("restaurantOne") : tb("restaurantsMany", { count: n }));
 
-  const confirmAndPay = async () => {
+  const doCharge = async () => {
     if (busy) return;
     setBusy(true);
     setError(null);
+    setPendingCharge(null);
     await saveBillingProfile(profile);
     const res = await subscribeCustom(feat, count, cycle);
     if (!res) {
@@ -160,6 +170,25 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
     setError(tb("errOpenPayment"));
   };
 
+  const confirmAndPay = async () => {
+    if (busy) return;
+    // Changing an ACTIVE subscription bills the saved card immediately
+    // (proration). Preview the exact amount and require an explicit confirm
+    // before charging. A brand-new subscription is paid at hosted Checkout,
+    // where Stripe shows the amount — no extra step needed.
+    if (subActive) {
+      setBusy(true);
+      setError(null);
+      const preview = await fetchChangePreview(feat, count, cycle);
+      setBusy(false);
+      setPendingCharge(
+        preview ? { immediateMajor: preview.immediateMajor, currency: preview.currency } : { immediateMajor: null, currency },
+      );
+      return;
+    }
+    await doCharge();
+  };
+
   const manage = async () => {
     const url = await openBillingPortal();
     if (url) window.location.assign(url);
@@ -170,6 +199,38 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
       <div className="flex flex-col items-center gap-3 text-center">
         <div className="w-10 h-10 border-[3px] border-input border-t-foreground rounded-full animate-spin" />
         <div className="text-xs text-muted-foreground">{tb("preparing")}</div>
+      </div>
+    </div>
+  ) : null;
+
+  // Immediate-charge confirmation before an in-place (proration) plan change.
+  const chargeDialog = pendingCharge ? (
+    <div className="fixed inset-0 z-50 bg-background/70 backdrop-blur-sm flex items-center justify-center px-6">
+      <div className="w-full max-w-sm rounded-2xl border border-border bg-card p-5 shadow-lg flex flex-col gap-3">
+        <div className="text-sm font-semibold text-foreground">{tb("confirmChangeTitle")}</div>
+        <div className="text-sm text-muted-foreground">
+          {pendingCharge.immediateMajor == null
+            ? tb("confirmChangeUnknown")
+            : pendingCharge.immediateMajor < 0
+              ? tb("confirmChangeCredit", { amount: money(Math.abs(pendingCharge.immediateMajor)) })
+              : tb("confirmChargeNow", { amount: money(pendingCharge.immediateMajor) })}
+        </div>
+        {quote ? (
+          <div className="text-xs text-muted-foreground">
+            {tb("confirmThenRecurring", {
+              amount: money(quote.amountMajor),
+              period: cycle === "year" ? tb("perYearWord") : tb("perMonthWord"),
+            })}
+          </div>
+        ) : null}
+        <div className="flex items-center gap-2 mt-1">
+          <button type="button" onClick={() => setPendingCharge(null)} className={secondaryBtn} disabled={busy}>
+            {tb("cancel")}
+          </button>
+          <button type="button" onClick={doCharge} className={primaryBtn} disabled={busy}>
+            {tb("confirmPay")}
+          </button>
+        </div>
       </div>
     </div>
   ) : null;
@@ -241,6 +302,7 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
         <InvoicesList />
         <EnterpriseCard />
         {overlay}
+        {chargeDialog}
       </div>
     );
   }
@@ -302,7 +364,7 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
           <div className="flex items-center justify-between gap-3">
             <div>
               <span className="text-sm font-medium text-foreground">{tb("restaurantsLabel")}</span>
-              {list.length > 0 ? <span className="text-xs text-muted-foreground ml-1">({tb("youHave", { count: list.length })})</span> : null}
+              {ownedCount > 0 ? <span className="text-xs text-muted-foreground ml-1">({tb("youHave", { count: ownedCount })})</span> : null}
             </div>
             <div className="inline-flex items-center rounded-full border border-border bg-accent p-0.5">
               <button
@@ -427,6 +489,7 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
       <InvoicesList />
       <EnterpriseCard />
       {overlay}
+        {chargeDialog}
     </div>
   );
 }

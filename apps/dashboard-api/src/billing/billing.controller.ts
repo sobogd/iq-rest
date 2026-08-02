@@ -32,7 +32,7 @@ import {
   type SupportedCurrency,
   type VenueSel,
 } from "../common/stripe";
-import { getRequestBillingCurrency } from "../common/geo";
+import { getTrustedBillingCurrency } from "../common/geo";
 
 // Body shape for a per-venue feature selection sent by the constructor / quiz.
 type SelectionBody = {
@@ -198,7 +198,12 @@ export class BillingController {
 
     // Record the request as a PENDING manual subscription on the account.
     const data = {
-      plan: venues.some((v) => v.ordersKds) ? "PRO" : "BASIC",
+      // Always PRO (account-wide access); the per-venue feature flags below
+      // decide WHICH features each venue keeps. A BASIC label here would pin the
+      // sub to a single venue (appliesToRestaurantId) and leave a menu-only SEPA
+      // customer with NO access on any venue — mirror the Stripe ad-hoc path,
+      // which also forces PRO.
+      plan: "PRO",
       billingCycle: "YEARLY",
       status: "PENDING",
       provider: "sepa_manual",
@@ -229,7 +234,7 @@ export class BillingController {
 
     // Pre-provision the venue feature flags (gated dark until the sub is ACTIVE),
     // so the owner only has to flip the status in the DB to light everything up.
-    await this.provisionFlags(rawSelections);
+    await this.provisionFlags(accountId, rawSelections);
 
     return { success: true, amount: quote.amountMajor, currency, interval: "year" };
   }
@@ -252,7 +257,7 @@ export class BillingController {
     if (user.isDemo) throw new ForbiddenException("Demo accounts cannot pay");
     const stripe = getStripe();
     const stored = isSupportedCurrency(acct.billingCurrency) ? (acct.billingCurrency as SupportedCurrency) : null;
-    const currency: SupportedCurrency = stored ?? getRequestBillingCurrency(req);
+    const currency: SupportedCurrency = stored ?? getTrustedBillingCurrency(req);
     let customerId = acct.stripeCustomerId ?? null;
     if (customerId) {
       try {
@@ -420,6 +425,63 @@ export class BillingController {
     return { redirectUrl: session.url };
   }
 
+  // Preview the IMMEDIATE proration charge for changing an already-active
+  // subscription to a new feature set / slot count, without committing it. The
+  // in-place swap (subscribe → proration_behavior:"always_invoice") bills the
+  // saved card the moment it runs, so the UI shows "you'll be charged X now"
+  // and asks for confirmation first. Returns immediateMajor=null when there is
+  // no active sub (a brand-new subscription is paid in full at hosted Checkout,
+  // where Stripe shows the amount). immediateMajor can be negative (downgrade
+  // credit).
+  @Post("billing/change-preview")
+  @UseGuards(AuthGuard)
+  async changePreview(
+    @Req() req: Request,
+    @Body()
+    body: { cycle?: string; features?: { reservations?: boolean; ordersKds?: boolean; domain?: boolean }; count?: number },
+  ) {
+    if ((req as AuthedRequest).authUser.viaGrant) {
+      throw new ForbiddenException("Billing is managed by the restaurant owner");
+    }
+    const { accountId, customerId, currency } = await this.getAccountStripe(req);
+    const sub = await this.prisma.subscription.findUnique({ where: { accountId } });
+    const catalog = await this.catalog();
+    const cycle = normalizeCycle(body.cycle);
+    const feat = body.features ?? {};
+    const accountVenues = await this.prisma.restaurant.count({ where: { accountId } });
+    const count = Math.min(99, Math.max(accountVenues || 1, Math.floor(body.count ?? 1)));
+    const uniform = { menuOnline: true, reservations: !!feat.reservations, ordersKds: !!feat.ordersKds, domain: !!feat.domain };
+    const quote = computeAccountQuote(catalog, currency, Array.from({ length: count }, () => uniform), cycle);
+    // No active Stripe sub → no proration to preview (full amount charged later).
+    if (!sub?.stripeSubscriptionId || sub.status !== "ACTIVE") {
+      return { immediateMajor: null, currency, recurringMajor: quote.amountMajor };
+    }
+    const stripe = getStripe();
+    const live = (await stripe.subscriptions.retrieve(sub.stripeSubscriptionId).catch(() => null)) as {
+      items?: { data?: Array<{ id?: string }> };
+    } | null;
+    const itemId = live?.items?.data?.[0]?.id;
+    if (!itemId) return { immediateMajor: null, currency, recurringMajor: quote.amountMajor };
+    const product = await getAdhocProductId();
+    const price = await stripe.prices.create({
+      currency: currency.toLowerCase(),
+      product,
+      unit_amount: toStripeUnitAmount(quote.amountCents, currency),
+      recurring: { interval: cycle },
+    });
+    const preview = await stripe.invoices
+      .createPreview({
+        customer: customerId,
+        subscription: sub.stripeSubscriptionId,
+        subscription_details: { items: [{ id: itemId, price: price.id }], proration_behavior: "always_invoice" },
+      })
+      .catch(() => null);
+    const amountDue = preview && typeof preview.amount_due === "number" ? preview.amount_due : null;
+    // fromStripeUnitAmount returns our internal cents convention (major×100).
+    const immediateMajor = amountDue != null ? fromStripeUnitAmount(amountDue, currency) / 100 : null;
+    return { immediateMajor, currency, recurringMajor: quote.amountMajor };
+  }
+
   // SetupIntent for changing / adding a card (no charge). The frontend confirms
   // it with the PaymentElement, then calls set-default-pm.
   @Post("billing/setup-intent")
@@ -576,15 +638,23 @@ export class BillingController {
 
   // Write the selected features onto each restaurant. orders+kds move together;
   // unlimited AI rides with the ordersKds add-on. Menu-only venues get menu on.
-  private async provisionFlags(selections: SelectionBody[]): Promise<void> {
+  //
+  // SECURITY: `selections` carries client-supplied restaurantIds. Never update a
+  // restaurant by raw id — scope every write to the caller's own account, or a
+  // crafted request could flip feature flags (e.g. featMenuOnline=false → dark
+  // menu) on ANY venue in the system.
+  private async provisionFlags(accountId: string, selections: SelectionBody[]): Promise<void> {
+    const owned = new Set(
+      (await this.prisma.restaurant.findMany({ where: { accountId }, select: { id: true } })).map((r) => r.id),
+    );
     await Promise.all(
       selections
-        .filter((s) => s.restaurantId)
+        .filter((s) => s.restaurantId && owned.has(s.restaurantId))
         .map((s) => {
           const sel = toSelection(s);
           return this.prisma.restaurant
-            .update({
-              where: { id: s.restaurantId! },
+            .updateMany({
+              where: { id: s.restaurantId!, accountId },
               data: {
                 featMenuOnline: sel.menuOnline,
                 featOrders: sel.ordersKds,

@@ -959,6 +959,24 @@ export async function subscribeCustom(
  return await res.json();
 }
 
+// Preview the immediate proration charge before changing an active plan.
+// immediateMajor is null when there's no active sub (new sub → paid at Checkout);
+// it can be negative (downgrade credit).
+export async function fetchChangePreview(
+ features: { reservations: boolean; ordersKds: boolean; domain: boolean },
+ count: number,
+ cycle: "month" | "year",
+): Promise<{ immediateMajor: number | null; currency: string; recurringMajor: number | null } | null> {
+ const res = await apiFetch("/api/billing/change-preview", {
+  credentials: "include",
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ features, count, cycle }),
+ });
+ if (!res.ok) return null;
+ return await res.json();
+}
+
 export async function createSetupIntent(): Promise<{ clientSecret: string } | null> {
  const res = await apiFetch("/api/billing/setup-intent", {
   credentials: "include",

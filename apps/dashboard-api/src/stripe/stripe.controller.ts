@@ -535,30 +535,39 @@ export class StripeController {
       interval,
       provider: "stripe",
       priceProvenance: provenance,
-      cancelAtPeriodEnd: !!sub.cancel_at_period_end,
+      // A scheduled cancel is expressed EITHER as cancel_at_period_end OR as a
+      // concrete cancel_at timestamp — treat both as canceling, else a portal
+      // cancel-by-date would mirror as cancelAtPeriodEnd=false and the UI would
+      // wrongly show the sub as fully active (no "Cancels on…", no Resume).
+      cancelAtPeriodEnd:
+        !!sub.cancel_at_period_end || (typeof sub.cancel_at === "number" && sub.cancel_at * 1000 > Date.now()),
     });
   }
 
-  /** Write the paid selection's feature flags onto each selected venue, and turn
-   *  OFF venues in the same account that weren't paid for (and aren't comped). */
+  /** Write the paid selection's feature flags onto each selected venue.
+   *
+   *  Only venues present in `sels` are touched. We deliberately do NOT deactivate
+   *  account venues that are absent from `sels`: the `sel` metadata is a SNAPSHOT
+   *  from checkout time, and a `customer.subscription.updated` (fires on every
+   *  renewal / card change / portal action) would otherwise darken any venue the
+   *  owner added AFTER purchasing — turning its public menu off mid-period. Venues
+   *  added later inherit the purchased feature set at creation time; unpaid
+   *  capacity is already bounded by the account venueLimit gate. */
   private async provisionAdhocFlags(restaurantId: string, sels: VenueSel[]): Promise<void> {
     const r = await this.prisma.restaurant.findUnique({
       where: { id: restaurantId },
       select: { accountId: true },
     });
     if (!r?.accountId) return;
-    const selectedIds = new Set(sels.map((s) => s.restaurantId));
-    const venues = await this.prisma.restaurant.findMany({
-      where: { accountId: r.accountId },
-      select: { id: true, manualAccess: true },
-    });
+    const accountId = r.accountId;
     await Promise.all(
-      venues.map((v) => {
-        const sel = sels.find((s) => s.restaurantId === v.id);
-        if (sel) {
-          return this.prisma.restaurant
-            .update({
-              where: { id: v.id },
+      sels
+        .filter((s) => s.restaurantId)
+        .map((sel) =>
+          // Scope to the account (the id came from metadata, not a live check).
+          this.prisma.restaurant
+            .updateMany({
+              where: { id: sel.restaurantId, accountId },
               data: {
                 featMenuOnline: sel.menuOnline,
                 featOrders: sel.ordersKds,
@@ -568,25 +577,8 @@ export class StripeController {
                 featAiUnlimited: sel.ordersKds,
               },
             })
-            .catch(() => undefined);
-        }
-        // Not in the paid selection. Leave manually-comped venues alone; otherwise
-        // deactivate so an unpaid venue doesn't stay online under the account sub.
-        if (v.manualAccess || selectedIds.has(v.id)) return undefined;
-        return this.prisma.restaurant
-          .update({
-            where: { id: v.id },
-            data: {
-              featMenuOnline: false,
-              featOrders: false,
-              featKds: false,
-              featReservations: false,
-              featCustomDomain: false,
-              featAiUnlimited: false,
-            },
-          })
-          .catch(() => undefined);
-      }),
+            .catch(() => undefined),
+        ),
     );
   }
 
