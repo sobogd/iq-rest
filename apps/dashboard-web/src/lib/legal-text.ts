@@ -258,7 +258,7 @@ export const TERMS_SECTIONS: { heading?: string; paragraphs: string[] }[] = [
   {
     heading: "3. Subscription and billing",
     paragraphs: [
-      `${COMPANY.brand} offers Free, Basic and Pro subscription plans. Paid plans are billed monthly or yearly via Stripe and renew automatically until cancelled. You may cancel at any time from your account settings; cancellation takes effect at the end of the current billing period and no refund is issued for the unused portion.`,
+      `${COMPANY.brand} offers a build-your-own subscription: a digital-menu base plus optional add-on features (such as reservations, kitchen display or a custom domain), priced per restaurant. Paid subscriptions are billed monthly or yearly via Stripe and renew automatically until cancelled. You may cancel at any time from your account settings; cancellation takes effect at the end of the current billing period and no refund is issued for the unused portion.`,
       `Prices are listed in EUR by default and may be displayed in your local currency for convenience. The amount actually charged is the EUR equivalent at your card issuer's exchange rate.`,
       `We reserve the right to change pricing with at least 30 days' notice; the new price applies from the next renewal cycle.`,
     ],
