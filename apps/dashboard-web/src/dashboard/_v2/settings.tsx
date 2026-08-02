@@ -23,7 +23,6 @@ import { AVAILABLE_LANGUAGES } from "./i18n";
 import {
  fetchSubscriptionStatus,
  createCheckoutSession,
- openBillingPortal,
  fetchSupportMessages,
  sendSupportMessage,
  updateRestaurant,
@@ -1878,14 +1877,6 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  }
  }
 
- async function manage() {
- track("dash_settings_billing_stripe_panel");
- try {
- const url = await openBillingPortal(locale);
- if (url) window.location.href = url;
- } catch {
- }
- }
 
  return (
  <div>
@@ -1939,9 +1930,6 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  </div>
  ) : null}
  </div>
- <button type="button" onClick={manage} className={secondaryBtn}>
- {tb("manage")}
- </button>
  </div>
  </div>
  ) : null}
@@ -1978,38 +1966,12 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  </div>
  ) : null}
 
- {/* PAST_DUE with the venue's own (delinquent) sub: the fix is to update the
-     card via the Stripe portal, NOT to buy a second subscription. So show a
-     "Update payment method" → portal card and hide the purchase cards below. */}
- {paidPlan && !isActive && sub ? (
- <div className="bg-card border border-border rounded-2xl p-5 md:p-6 mb-5">
- <div className="flex items-start justify-between gap-3">
- <div>
- <div className="text-base font-medium text-foreground">
- {sub.plan} · {sub.billingCycle?.toLowerCase() || "—"}
- </div>
- <div className="text-xs text-muted-foreground mt-0.5 leading-snug">{tb("updatePaymentTip")}</div>
- </div>
- <button type="button" onClick={manage} className={secondaryBtn}>
- {tb("updatePayment")}
- </button>
- </div>
- </div>
- ) : null}
-
- <style>{`
- .billing-plans { display: grid; grid-template-columns: 1fr; gap: 0.75rem; }
- @media (min-width: 600px) { .billing-plans { grid-template-columns: 1fr 1fr; } }
- `}</style>
-
- {/* billing-features-constructor: à-la-carte "build your plan" replaces the
-     fixed BASIC/PRO tiles. Per-venue feature selection → live quote → ad-hoc
-     checkout / SEPA invoice, plus billing profile + invoices. */}
- {(isActive || !paidPlan) && (
+ {/* billing-features-constructor: à-la-carte "build your plan" is the ONLY
+     billing UI — always shown (incl. after a failed/past-due payment, so the
+     user can retry a card on-page). No Stripe portal anywhere. */}
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6 mb-5">
  <BillingConstructor currency={currency} />
  </div>
- )}
 
  <a
  href={`https://iq-rest.com/${locale}${PRICING_SLUG_BY_LOCALE[locale] || "/pricing"}`}

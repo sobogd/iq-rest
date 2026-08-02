@@ -308,6 +308,12 @@ export class BillingController {
       return { changed: true };
     }
 
+    // A prior non-active (e.g. incomplete after a failed attempt) Stripe sub is
+    // superseded — cancel it so retries don't pile up dangling subscriptions.
+    if (sub?.stripeSubscriptionId) {
+      await stripe.subscriptions.cancel(sub.stripeSubscriptionId).catch(() => undefined);
+    }
+
     const created = await stripe.subscriptions.create({
       customer: customerId,
       items: [{ price: price.id }],
