@@ -98,7 +98,7 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
                 key={c}
                 type="button"
                 onClick={() => setCycle(c)}
-                className={`flex-1 sm:flex-none px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                className={`flex-1 sm:flex-none px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
                   cycle === c ? "bg-primary text-primary-foreground" : "text-muted-foreground"
                 }`}
               >
@@ -115,7 +115,7 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
               type="button"
               aria-label="Fewer restaurants"
               onClick={() => setCount((c) => Math.max(1, c - 1))}
-              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-foreground hover:bg-accent/70 disabled:opacity-40"
+              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-foreground hover:bg-accent/70"
               disabled={count <= 1}
             >
               <Minus className="h-3.5 w-3.5" strokeWidth={2.75} />
