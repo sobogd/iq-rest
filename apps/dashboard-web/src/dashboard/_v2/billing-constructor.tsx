@@ -426,7 +426,7 @@ function PriceBar({
 // Inline card form — split Elements (own-styled fields). Always a fresh card;
 // Stripe stores it on the customer only for subscription renewals (no saved-card
 // UI here). Handles 3DS via confirmCardPayment.
-const fieldBox = "h-10 rounded-lg border border-input bg-card px-3 flex items-center";
+const fieldBox = "rounded-lg border border-input bg-card px-3 py-3";
 
 function PaymentForm({ clientSecret, onDone, onBack }: { clientSecret: string; onDone: () => void; onBack: () => void }) {
   const stripe = useStripe();
@@ -482,20 +482,20 @@ function PaymentForm({ clientSecret, onDone, onBack }: { clientSecret: string; o
       <label className="flex flex-col gap-1">
         <span className="text-xs text-muted-foreground">Card number</span>
         <div className={fieldBox}>
-          <CardNumberElement options={{ style: elementStyle }} className="w-full" />
+          <CardNumberElement options={{ style: elementStyle }} />
         </div>
       </label>
       <div className="grid grid-cols-2 gap-3">
         <label className="flex flex-col gap-1">
           <span className="text-xs text-muted-foreground">Expiry</span>
           <div className={fieldBox}>
-            <CardExpiryElement options={{ style: elementStyle }} className="w-full" />
+            <CardExpiryElement options={{ style: elementStyle }} />
           </div>
         </label>
         <label className="flex flex-col gap-1">
           <span className="text-xs text-muted-foreground">CVC</span>
           <div className={fieldBox}>
-            <CardCvcElement options={{ style: elementStyle }} className="w-full" />
+            <CardCvcElement options={{ style: elementStyle }} />
           </div>
         </label>
       </div>
