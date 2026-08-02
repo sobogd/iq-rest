@@ -845,6 +845,17 @@ export async function openBillingPortal(locale?: string): Promise<string | null>
  return data.url || null;
 }
 
+// Pull the live subscription from Stripe (status / cancel-at-period-end / period)
+// so the UI is correct even if a webhook was missed.
+export async function syncBilling(): Promise<void> {
+ await apiFetch("/api/billing/sync", {
+  credentials: "include",
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: "{}",
+ }).catch(() => undefined);
+}
+
 // ── billing-features-constructor: à-la-carte pricing + ad-hoc checkout ──
 
 // Per-venue feature selection sent to the quote / checkout endpoints.

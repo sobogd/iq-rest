@@ -18,6 +18,7 @@ import {
   subscribeCustom,
   fetchSubscriptionStatus,
   openBillingPortal,
+  syncBilling,
   getBillingProfile,
   saveBillingProfile,
   getInvoices,
@@ -68,10 +69,11 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
   useEffect(() => {
     getPricingCatalog().then(setCatalog);
     getBillingProfile().then((p) => p && setProfile(p));
-    refreshSub();
+    // Sync from Stripe first (covers a missed webhook), then read our DB.
+    syncBilling().then(refreshSub);
     if (new URLSearchParams(window.location.search).get("success")) {
       setNotice("Payment received — activating your subscription…");
-      setTimeout(refreshSub, 1500);
+      setTimeout(() => syncBilling().then(refreshSub), 1500);
     }
   }, []);
 

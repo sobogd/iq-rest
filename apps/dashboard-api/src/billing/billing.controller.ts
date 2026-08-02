@@ -387,7 +387,31 @@ export class BillingController {
   }
 
   // Cancel / resume happen in the Stripe billing portal; the webhook mirrors
-  // cancel_at_period_end back into our DB (Subscription.cancelAtPeriodEnd).
+  // cancel_at_period_end back into our DB. This endpoint pulls the live sub from
+  // Stripe on demand (billing page load) so state is correct even if a webhook
+  // was missed (e.g. local dev without `stripe listen`).
+  @Post("billing/sync")
+  @UseGuards(AuthGuard)
+  async sync(@Req() req: Request) {
+    const accountId = await this.accountIdFor(req);
+    const sub = await this.prisma.subscription.findUnique({ where: { accountId } });
+    if (!sub?.stripeSubscriptionId) return { synced: false };
+    const live = (await getStripe()
+      .subscriptions.retrieve(sub.stripeSubscriptionId)
+      .catch(() => null)) as { status?: string; cancel_at_period_end?: boolean; current_period_end?: number; items?: { data?: Array<{ current_period_end?: number }> } } | null;
+    if (!live) return { synced: false };
+    const map: Record<string, string> = { active: "ACTIVE", trialing: "ACTIVE", past_due: "PAST_DUE", canceled: "CANCELED", unpaid: "CANCELED", incomplete: "EXPIRED", incomplete_expired: "EXPIRED" };
+    const status = map[live.status ?? ""] ?? "INACTIVE";
+    const ts = live.items?.data?.[0]?.current_period_end ?? live.current_period_end;
+    const currentPeriodEnd = typeof ts === "number" && ts > 0 ? new Date(ts * 1000) : null;
+    await this.prisma.subscription
+      .update({
+        where: { accountId },
+        data: { status, currentPeriodEnd, cancelAtPeriodEnd: !!live.cancel_at_period_end, updatedFromStripeAt: new Date() },
+      })
+      .catch(() => undefined);
+    return { synced: true };
+  }
 
   // ── Admin: edit the pricing catalog ────────────────────────────────────────
   @Patch("admin/pricing")
