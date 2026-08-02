@@ -277,7 +277,7 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
             </div>
           </div>
 
-          <div className="flex items-center justify-between gap-3 border-t border-border pt-3">
+          <div className="flex items-center justify-between gap-3">
             <div>
               {quote ? (
                 <>
