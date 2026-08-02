@@ -1,3 +1,4 @@
+import { DEFAULT_PRICING_CATALOG } from "@iq-rest/pricing";
 import { SupportedCurrency } from "./country-currency-map";
 
 /**
@@ -171,6 +172,11 @@ export const pricing: Record<SupportedCurrency, CurrencyPricing> = {
 // derived from the model above, so a price change propagates to all markup.
 export const SCHEMA_PRICE_BASIC_EUR = pricing.EUR.basic.yearly.toFixed(2); // "6.90"
 export const SCHEMA_PRICE_PRO_EUR = pricing.EUR.pro.yearly.toFixed(2); // "24.90"
+
+// billing-features-constructor: à-la-carte base price (digital menu, yearly
+// per-month rate) from the live catalog — the "from" price of the new model.
+// Used by the pricing pages' JSON-LD offer.
+export const SCHEMA_PRICE_MENU_EUR = DEFAULT_PRICING_CATALOG.currencies.EUR.menu.yr.toFixed(2); // "9.90"
 
 export type PlanId = "free" | "basic" | "pro";
 

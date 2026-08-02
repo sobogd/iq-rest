@@ -9,7 +9,8 @@ import { ScanSection } from "../components/scan-section";
 import { Founder } from "../components/founder";
 import { FinalCta } from "../components/final-cta";
 import { Faq } from "../components/faq";
-import { PricingHero } from "../components/pricing-hero";
+import { PricingCta } from "../components/pricing-cta";
+import type { PricingAddon } from "../components/from-price";
 import { FeatureJsonLd } from "./feature-json-ld";
 import { getHelpBanner } from "../help/registry";
 import { HelpBannerSection } from "../help/help-banner-section";
@@ -56,6 +57,18 @@ export function FeatureLandingTemplate({
       : prefix.includes("bookings")
         ? "reservations"
         : "phone";
+  // billing-features-constructor: which paid add-on this feature page sells —
+  // drives the "from {price}" line in the pricing CTA (menu base + add-on).
+  // Same locale-stable prefix tokens as demoVariant; menu/QR/domain-less pages
+  // fall back to the menu-only base price.
+  const pricingAddon: PricingAddon =
+    prefix.includes("kds") || prefix.includes("orders")
+      ? "ordersKds"
+      : prefix.includes("bookings")
+        ? "reservations"
+        : prefix.includes("domain")
+          ? "domain"
+          : null;
 
   return (
     <main className="relative">
@@ -114,20 +127,16 @@ export function FeatureLandingTemplate({
       <ScanSection texts={scan} locale={locale} accent />
       </div>
 
+      {/* billing-features-constructor: the old fixed Basic/Pro plan cards are
+          gone — a compact CTA (with a geo-currency "from" price for this
+          page's feature) links to the locale's /pricing quiz instead. */}
       <Section
         id="pricing"
-        dataSection="pricing_hero"
+        dataSection="pricing_cta"
         noContainer
         className="!py-16"
       >
-        <PricingHero
-          locale={locale}
-          ctaText={chrome.ctaText}
-          demoText={chrome.demoText}
-          microcopy={chrome.microcopy}
-          texts={chrome.pricingHero!}
-          trackPrefix={`${prefix}_pricing`}
-        />
+        <PricingCta locale={locale} texts={chrome.pricingCta} addon={pricingAddon} />
       </Section>
 
       <Section id="faq" dataSection="faq" noContainer accent className="!py-16">

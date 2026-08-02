@@ -75,7 +75,7 @@ export const CONTENT: FeatureContent = {
       { q: "How hard is the booking setup?", a: "It takes very little time. Three steps: (1) add tables with names, photos and capacity, (2) enable booking mode in settings, (3) share the link or QR code with guests. Full launch takes 5–10 minutes." },
       { q: "Can I use the booking system on my own domain?", a: "Yes. We support a custom domain with an SSL certificate: guests book on your restaurant's address (e.g. booking.yourrestaurant.com). We help with the DNS setup; the process takes 5–10 minutes." },
       { q: "Can I configure automatic or manual confirmation?", a: "Yes, the mode is set in the settings. With automatic confirmation, the guest receives a confirmation immediately after submitting the form and the booking is considered accepted. With manual confirmation, the request lands in the admin panel with 'awaiting confirmation' status — the manager reviews it and either confirms or declines. Manual mode is useful for limited table counts or strict guest policies." },
-      { q: "Do you take a commission on bookings?", a: "No. Table booking is fully included in the Pro plan — no percentage on guests, no per-slot fee, no aggregator commissions. One fixed monthly fee and unlimited bookings." },
+      { q: "Do you take a commission on bookings?", a: "No. Table booking is fully included in the Reservations add-on — no percentage on guests, no per-slot fee, no aggregator commissions. One fixed monthly fee and unlimited bookings." },
     ],
   },
 };

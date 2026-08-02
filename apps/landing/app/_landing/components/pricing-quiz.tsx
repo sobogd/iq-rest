@@ -10,7 +10,8 @@
 //  · the sub-line under the price is ALWAYS rendered (fixed height) so it can't
 //    push the layout when a discount appears
 // Prices come from the same catalog as checkout (dashboard-api /api/pricing).
-// English-only; min font size is text-sm (micro badges aside).
+// Localized via `texts` (per-locale LandingTexts.pricingQuiz, EN fallback);
+// min font size is text-sm (micro badges aside).
 
 import { useEffect, useMemo, useState } from "react";
 import { UtensilsCrossed, CalendarClock, ChefHat, Globe, Check, Minus, Plus } from "lucide-react";
@@ -29,17 +30,49 @@ import {
   type SupportedCurrency,
 } from "@/lib/country-currency-map";
 import { usePrimaryCta } from "./onboarding/use-primary-cta";
+import type { PricingQuizTexts } from "../types";
 
 type Cycle = "month" | "year";
 type AddonKey = "reservations" | "ordersKds" | "domain";
 
-const ADDONS: { key: AddonKey; label: string; hint: string; Icon: typeof CalendarClock }[] = [
-  { key: "reservations", label: "Reservations", hint: "Table bookings", Icon: CalendarClock },
-  { key: "ordersKds", label: "Kitchen display", hint: "Orders on a kitchen screen", Icon: ChefHat },
-  { key: "domain", label: "Custom domain", hint: "Your own web address", Icon: Globe },
-];
+export const EN_PRICING_QUIZ: PricingQuizTexts = {
+  heading: "Build your plan",
+  sub: "Pay only for what you use. Start with the menu and add what you need.",
+  billingLabel: "Billing:",
+  monthly: "Monthly",
+  yearly: "Yearly",
+  restaurantsLabel: "Restaurants:",
+  fewerAria: "Fewer restaurants",
+  moreAria: "More restaurants",
+  menuTitle: "Digital menu",
+  menuHint: "Always included",
+  reservationsTitle: "Reservations",
+  reservationsHint: "Table bookings",
+  kdsTitle: "Kitchen display",
+  kdsHint: "Orders on a kitchen screen",
+  domainTitle: "Custom domain",
+  domainHint: "Your own web address",
+  perMonthSuffix: "/mo",
+  perYearSuffix: "/year",
+  perMonthLongSuffix: "/month",
+  saveYearlyTemplate: "Save {amount} a year with yearly billing",
+  volumeDiscountTemplate: "{percent}% volume discount · {count} restaurants",
+  saveUpToHint: "Save up to 50% with 5+ restaurants",
+  billedYearly: "Billed once a year",
+  billedMonthly: "Billed monthly",
+  enterprisePre: "Need a custom plan or more restaurants?",
+  enterpriseCta: "Talk to us",
+  enterprisePost: "and we'll tailor one for you.",
+  enterpriseWa: "Hi! I'd like a custom plan for my restaurants.",
+};
 
-export function PricingQuiz({ ctaText }: { ctaText: string }) {
+export function PricingQuiz({ ctaText, texts }: { ctaText: string; texts?: PricingQuizTexts }) {
+  const t = texts ?? EN_PRICING_QUIZ;
+  const ADDONS: { key: AddonKey; label: string; hint: string; Icon: typeof CalendarClock }[] = [
+    { key: "reservations", label: t.reservationsTitle, hint: t.reservationsHint, Icon: CalendarClock },
+    { key: "ordersKds", label: t.kdsTitle, hint: t.kdsHint, Icon: ChefHat },
+    { key: "domain", label: t.domainTitle, hint: t.domainHint, Icon: Globe },
+  ];
   const [currency, setCurrency] = useState<SupportedCurrency>("EUR");
   const [catalog, setCatalog] = useState<PricingCatalog>(DEFAULT_PRICING_CATALOG);
   const [count, setCount] = useState(1);
@@ -95,10 +128,10 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
     <div className="mx-auto max-w-5xl w-full">
       <div className="text-center mb-8 sm:mb-10">
         <h2 className="text-[2rem] sm:text-[2.5rem] lg:text-[3rem] font-medium tracking-tight leading-[1.05] mb-3">
-          Build your plan
+          {t.heading}
         </h2>
         <p className="text-base sm:text-lg text-muted-foreground max-w-lg mx-auto leading-snug">
-          Pay only for what you use. Start with the menu and add what you need.
+          {t.sub}
         </p>
       </div>
 
@@ -106,7 +139,7 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
           width) on mobile, stacked; inline on desktop. */}
       <div className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-3 sm:gap-8 mb-6">
         <div className="flex items-center gap-2.5">
-          <span className="shrink-0 text-sm text-muted-foreground">Billing:</span>
+          <span className="shrink-0 text-sm text-muted-foreground">{t.billingLabel}</span>
           <div className="flex rounded-full border border-border bg-accent p-1">
             {(["month", "year"] as const).map((c) => (
               <button
@@ -117,18 +150,18 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
                   cycle === c ? "bg-primary text-primary-foreground" : "text-muted-foreground"
                 }`}
               >
-                {c === "month" ? "Monthly" : "Yearly"}
+                {c === "month" ? t.monthly : t.yearly}
               </button>
             ))}
           </div>
         </div>
 
         <div className="flex items-center gap-2.5">
-          <span className="shrink-0 text-sm text-muted-foreground">Restaurants:</span>
+          <span className="shrink-0 text-sm text-muted-foreground">{t.restaurantsLabel}</span>
           <div className="flex items-center justify-between rounded-full border border-border bg-accent p-1">
             <button
               type="button"
-              aria-label="Fewer restaurants"
+              aria-label={t.fewerAria}
               onClick={() => setCount((c) => Math.max(1, c - 1))}
               className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:hover:bg-primary"
               disabled={count <= 1}
@@ -138,7 +171,7 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
             <span className="inline-block w-8 text-center text-sm font-medium text-foreground tabular-nums">{count}</span>
             <button
               type="button"
-              aria-label="More restaurants"
+              aria-label={t.moreAria}
               onClick={() => setCount((c) => Math.min(99, c + 1))}
               className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
             >
@@ -153,11 +186,11 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
         <div className="relative flex flex-col items-start rounded-2xl border-2 border-primary bg-primary/5 shadow-sm p-4 sm:p-5">
           <UtensilsCrossed className="h-7 w-7 text-primary mb-3" />
-          <div className="text-sm font-semibold text-foreground pr-6">Digital menu</div>
-          <div className="hidden sm:block text-sm text-muted-foreground mt-0.5 leading-snug">Always included</div>
+          <div className="text-sm font-semibold text-foreground pr-6">{t.menuTitle}</div>
+          <div className="hidden sm:block text-sm text-muted-foreground mt-0.5 leading-snug">{t.menuHint}</div>
           <div className="mt-3 text-sm font-medium text-primary tabular-nums">
             {formatMoney(pricing.menu[k], currency)}
-            <span className="font-normal opacity-70">/mo</span>
+            <span className="font-normal opacity-70">{t.perMonthSuffix}</span>
           </div>
         </div>
 
@@ -184,7 +217,7 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
               <div className="hidden sm:block text-sm text-muted-foreground mt-0.5 leading-snug">{hint}</div>
               <div className={`mt-3 text-sm font-medium tabular-nums ${on ? "text-primary" : "text-muted-foreground"}`}>
                 +{addonPrice(key)}
-                <span className="font-normal opacity-70">/mo</span>
+                <span className="font-normal opacity-70">{t.perMonthSuffix}</span>
               </div>
             </button>
           );
@@ -201,21 +234,23 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
               {info.symbolPosition === "before" ? <span className="text-lg text-muted-foreground">{info.symbol}</span> : null}
               <span className="text-3xl font-semibold tracking-tight tabular-nums">{formatMoney(quote.amountMajor, currency)}</span>
               {info.symbolPosition === "after" ? <span className="text-lg text-muted-foreground">{info.symbol}</span> : null}
-              <span className="text-sm text-muted-foreground">{cycle === "year" ? "/year" : "/month"}</span>
+              <span className="text-sm text-muted-foreground">{cycle === "year" ? t.perYearSuffix : t.perMonthLongSuffix}</span>
             </div>
             <div className="text-sm mt-0.5 h-5 leading-5">
               {cycle === "month" && yearlySaving > 0 ? (
                 <span className="text-emerald-500 font-medium">
-                  Save {formatMoney(yearlySaving, currency)} a year with yearly billing
+                  {t.saveYearlyTemplate.replace("{amount}", formatMoney(yearlySaving, currency))}
                 </span>
               ) : discountPct > 0 ? (
                 <span className="text-emerald-500 font-medium">
-                  {discountPct}% volume discount · {quote.billingVenues} restaurants
+                  {t.volumeDiscountTemplate
+                    .replace("{percent}", String(discountPct))
+                    .replace("{count}", String(quote.billingVenues))}
                 </span>
               ) : count === 1 ? (
-                <span className="text-muted-foreground">Save up to 50% with 5+ restaurants</span>
+                <span className="text-muted-foreground">{t.saveUpToHint}</span>
               ) : (
-                <span className="text-muted-foreground">{cycle === "year" ? "Billed once a year" : "Billed monthly"}</span>
+                <span className="text-muted-foreground">{cycle === "year" ? t.billedYearly : t.billedMonthly}</span>
               )}
             </div>
           </div>

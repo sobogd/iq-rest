@@ -3,7 +3,7 @@ import { LandingFooter } from "../components/footer";
 import { Faq } from "../components/faq";
 import { Section } from "../components/section";
 import { PageTracker } from "../components/page-tracker";
-import { PricingQuiz } from "../components/pricing-quiz";
+import { PricingQuiz, EN_PRICING_QUIZ } from "../components/pricing-quiz";
 import { FinalCta } from "../components/final-cta";
 import { getHelpBanner } from "../help/registry";
 import { HelpBannerSection } from "../help/help-banner-section";
@@ -26,6 +26,7 @@ export function PricingTemplate({
   trackPrefix: string;
 }) {
   const helpBanner = getHelpBanner(locale);
+  const quiz = texts.pricingQuiz ?? EN_PRICING_QUIZ;
   return (
     <main className="relative">
       <PageTracker page="pricing" />
@@ -35,22 +36,22 @@ export function PricingTemplate({
       {/* billing-features-constructor: the à-la-carte quiz replaces the fixed
           Basic/Pro plan cards as the pricing hero. */}
       <Section dataSection="pricing_quiz" noContainer>
-        <PricingQuiz ctaText={texts.ctaText} />
+        <PricingQuiz ctaText={texts.ctaText} texts={quiz} />
       </Section>
 
       {/* Enterprise / custom-plan line */}
       <Section dataSection="pricing_enterprise" noContainer>
         <p className="mx-auto max-w-xl text-center text-base text-muted-foreground">
-          Need a custom plan or more restaurants?{" "}
+          {quiz.enterprisePre}{" "}
           <a
-            href="https://wa.me/998948663743?text=Hi!%20I'd%20like%20a%20custom%20plan%20for%20my%20restaurants."
+            href={`https://wa.me/998948663743?text=${encodeURIComponent(quiz.enterpriseWa)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="font-medium text-primary underline-offset-2 hover:underline"
           >
-            Talk to us
+            {quiz.enterpriseCta}
           </a>{" "}
-          and we'll tailor one for you.
+          {quiz.enterprisePost}
         </p>
       </Section>
 

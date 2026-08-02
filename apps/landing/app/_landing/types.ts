@@ -82,6 +82,57 @@ export type FeatureTexts = {
   };
 };
 
+/** billing-features-constructor — copy for the à-la-carte pricing quiz on the
+ *  pricing page (feature cards, price bar, enterprise line). Optional during
+ *  the per-locale rollout — locales without it fall back to English. */
+export type PricingQuizTexts = {
+  heading: string;
+  sub: string;
+  billingLabel: string;
+  monthly: string;
+  yearly: string;
+  restaurantsLabel: string;
+  fewerAria: string;
+  moreAria: string;
+  menuTitle: string;
+  menuHint: string;
+  reservationsTitle: string;
+  reservationsHint: string;
+  kdsTitle: string;
+  kdsHint: string;
+  domainTitle: string;
+  domainHint: string;
+  /** Suffix after each feature price, e.g. "/mo". */
+  perMonthSuffix: string;
+  /** Suffix after the total, e.g. "/year" | "/month". */
+  perYearSuffix: string;
+  perMonthLongSuffix: string;
+  /** "Save {amount} a year with yearly billing" — keep the {amount} placeholder. */
+  saveYearlyTemplate: string;
+  /** "{percent}% volume discount · {count} restaurants" — keep both placeholders. */
+  volumeDiscountTemplate: string;
+  saveUpToHint: string;
+  billedYearly: string;
+  billedMonthly: string;
+  /** Enterprise line under the quiz: "{pre} {cta link} {post}". */
+  enterprisePre: string;
+  enterpriseCta: string;
+  enterprisePost: string;
+  /** WhatsApp prefill message for the enterprise link. */
+  enterpriseWa: string;
+};
+
+/** billing-features-constructor — the compact pricing CTA block that replaced
+ *  the fixed Basic/Pro plan cards on home + feature pages. Links to the
+ *  locale's /pricing page. Optional — falls back to English. */
+export type PricingCtaTexts = {
+  heading: string;
+  sub: string;
+  /** "from {price}/mo" — keep the {price} placeholder. */
+  fromTemplate: string;
+  button: string;
+};
+
 export type LandingTexts = {
   htmlLang: string;
   htmlDir: "ltr" | "rtl";
@@ -213,10 +264,15 @@ export type LandingTexts = {
     cta: string;
   };
 
-  /** All copy used by the shared `PricingHero` component (chips, plan
-   *  cards, helper templates). Templates use `{total}`, `{price}` and
-   *  `{amount}` placeholders that the component replaces at render time
-   *  with the formatted EUR values. */
+  /** billing-features-constructor: à-la-carte quiz copy (pricing page). */
+  pricingQuiz?: PricingQuizTexts;
+
+  /** billing-features-constructor: pricing CTA block (home + feature pages). */
+  pricingCta?: PricingCtaTexts;
+
+  /** LEGACY (unused since the à-la-carte constructor): copy for the old
+   *  fixed-plan `PricingHero` cards. Kept so per-locale texts.ts files stay
+   *  valid; no active template renders it. */
   pricingHero?: {
     chips: readonly string[];
     heading: string;

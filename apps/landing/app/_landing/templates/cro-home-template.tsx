@@ -8,7 +8,7 @@ import { LandingHero } from "../components/landing-hero";
 import { HeroStats } from "../components/hero-stats";
 import { Section } from "../components/section";
 import { CtaButton } from "../components/cta-button";
-import { PricingHero } from "../components/pricing-hero";
+import { PricingCta } from "../components/pricing-cta";
 import { Founder } from "../components/founder";
 import { Faq } from "../components/faq";
 import { FinalCta } from "../components/final-cta";
@@ -291,10 +291,12 @@ export function CroHomeTemplate({
         </Section>
       ) : null}
 
-      {/* One plan, everything in. */}
+      {/* billing-features-constructor: à-la-carte pricing — the old fixed
+          Basic/Pro plan cards are replaced by a compact CTA (geo-currency
+          "from" price) linking to the locale's /pricing quiz. */}
       <Section id="pricing" dataSection="cro_pricing" noContainer accent={shift} className="!py-16">
         <div className="max-w-4xl mx-auto">
-          <PricingHero locale={locale} ctaText={texts.ctaText} demoText={texts.demoText} microcopy={texts.microcopy} texts={texts.pricingHero!} trackPrefix="l_cro_pricing" />
+          <PricingCta locale={locale} texts={texts.pricingCta} />
         </div>
       </Section>
 
