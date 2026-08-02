@@ -439,8 +439,10 @@ function PaymentForm({ clientSecret, onDone, onBack }: { clientSecret: string; o
   const elementStyle = useMemo(() => {
     const cs = getComputedStyle(document.documentElement);
     const hsl = (name: string, fallback: string) => {
+      // CSS var holds an HSL triplet like "0 0% 5%"; Stripe wants a valid CSS
+      // color string → comma-separated hsl().
       const v = cs.getPropertyValue(name).trim();
-      return v ? `hsl(${v})` : fallback;
+      return v ? `hsl(${v.replace(/\s+/g, ", ")})` : fallback;
     };
     return {
       base: {
