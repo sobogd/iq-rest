@@ -35,66 +35,43 @@ function volumeDiscount(discounts, n, cycle) {
     return 0;
 }
 // ─── Default catalog (seed / fallback) ───────────────────────────────────────
-// EUR is authoritative (agreed, market-justified). The other 14 billing
-// currencies are derived from the current Basic/Pro anchors (menu = Basic; the
-// Pro−Basic delta split reservations:ordersKds ≈ 9:13; domain ≈ half of Basic),
-// rounded to nice numbers. All editable later in the dashboard admin.
-const EUR_PRICING = {
-    menu: { mo: 9.9, yr: 6.9 },
-    reservations: { mo: 9.0, yr: 7.0 },
-    ordersKds: { mo: 13.0, yr: 11.0 },
-    domain: { mo: 5.0, yr: 4.0 },
+// Explicit per-currency prices (owner-approved). EUR is the reference; the rest
+// mirror its value at ≈ local FX, rounded to nice psychological numbers. 21
+// currencies. All editable later in the dashboard admin (PricingConfig row).
+// High-inflation currencies (ARS/TRY/COP/CLP) need periodic manual refresh.
+const p = (mo, yr) => ({ mo, yr });
+const cur = (menu, reservations, ordersKds, domain) => ({
+    menu: p(menu[0], menu[1]),
+    reservations: p(reservations[0], reservations[1]),
+    ordersKds: p(ordersKds[0], ordersKds[1]),
+    domain: p(domain[0], domain[1]),
+});
+const DEFAULT_CURRENCIES = {
+    // code:            menu          reservations   ordersKds      domain      (mo, yr)
+    EUR: cur([14.9, 9.9], [9, 7], [13, 11], [5, 4]),
+    USD: cur([15.9, 10.9], [9.9, 7.9], [14.9, 11.9], [5.9, 4.9]),
+    GBP: cur([12.9, 8.9], [7.9, 5.9], [11.9, 8.9], [4.9, 3.9]),
+    CHF: cur([14.9, 9.9], [9, 7], [13, 11], [5, 4]),
+    NOK: cur([169, 109], [99, 79], [149, 119], [59, 44]),
+    SEK: cur([169, 109], [99, 79], [149, 119], [59, 44]),
+    DKK: cur([109, 79], [69, 54], [99, 84], [39, 29]),
+    PLN: cur([59, 45], [39, 29], [55, 45], [25, 19]),
+    CZK: cur([379, 249], [229, 179], [329, 269], [129, 99]),
+    HUF: cur([5900, 3900], [3490, 2790], [4990, 3990], [1990, 1490]),
+    ISK: cur([2290, 1490], [1290, 990], [1990, 1490], [690, 490]),
+    MXN: cur([299, 199], [129, 89], [189, 129], [79, 49]),
+    AUD: cur([24.9, 16.9], [14.9, 10.9], [19.9, 16.9], [8.9, 5.9]),
+    RSD: cur([1790, 1190], [990, 790], [1490, 1190], [590, 390]),
+    BRL: cur([89, 59], [49, 39], [79, 59], [29, 19]),
+    COP: cur([64900, 42900], [38900, 29900], [55900, 46900], [21900, 16900]),
+    CLP: cur([15900, 9900], [9900, 6900], [13900, 11900], [4900, 3900]),
+    PEN: cur([59, 39], [35, 29], [49, 44], [19, 15]),
+    UYU: cur([649, 429], [399, 299], [559, 469], [219, 169]),
+    ARS: cur([16900, 10900], [9900, 7900], [14900, 11900], [5900, 3900]),
+    TRY: cur([549, 369], [349, 269], [499, 419], [189, 149]),
 };
-// Round to a "nice" number by magnitude (keeps foreign currencies clean).
-function niceRound(v) {
-    if (v <= 0)
-        return 0;
-    if (v >= 1000)
-        return Math.round(v / 100) * 100;
-    if (v >= 100)
-        return Math.round(v / 10) * 10;
-    if (v >= 10)
-        return Math.round(v);
-    return Math.round(v * 10) / 10;
-}
-// Basic/Pro per-month anchors (mirrors the old BILLING_PRICES / landing table).
-const ANCHORS = {
-    EUR: { basicMo: 9.9, basicYr: 6.9, proMo: 31.9, proYr: 24.9 },
-    NOK: { basicMo: 109, basicYr: 79, proMo: 349, proYr: 269 },
-    SEK: { basicMo: 109, basicYr: 79, proMo: 349, proYr: 269 },
-    DKK: { basicMo: 79, basicYr: 49, proMo: 239, proYr: 189 },
-    MXN: { basicMo: 149, basicYr: 99, proMo: 449, proYr: 299 },
-    USD: { basicMo: 14.9, basicYr: 9.9, proMo: 44.9, proYr: 29.9 },
-    AUD: { basicMo: 16.9, basicYr: 11.9, proMo: 49.9, proYr: 39.9 },
-    GBP: { basicMo: 8.9, basicYr: 5.9, proMo: 27.9, proYr: 19.9 },
-    PLN: { basicMo: 39, basicYr: 29, proMo: 99, proYr: 75 },
-    CZK: { basicMo: 249, basicYr: 169, proMo: 799, proYr: 619 },
-    HUF: { basicMo: 3990, basicYr: 2790, proMo: 12900, proYr: 9900 },
-    ISK: { basicMo: 1490, basicYr: 990, proMo: 4790, proYr: 3790 },
-    CHF: { basicMo: 9.9, basicYr: 6.9, proMo: 31.9, proYr: 24.9 },
-    RSD: { basicMo: 1190, basicYr: 790, proMo: 3790, proYr: 2890 },
-};
-function derivePricing(a) {
-    const dMo = a.proMo - a.basicMo;
-    const dYr = a.proYr - a.basicYr;
-    return {
-        menu: { mo: a.basicMo, yr: a.basicYr },
-        reservations: { mo: niceRound((dMo * 9) / 22), yr: niceRound((dYr * 9) / 22) },
-        ordersKds: { mo: niceRound((dMo * 13) / 22), yr: niceRound((dYr * 13) / 22) },
-        domain: { mo: niceRound(a.basicMo * 0.5), yr: niceRound(a.basicYr * 0.5) },
-    };
-}
-function buildDefaultCurrencies() {
-    const out = { EUR: EUR_PRICING };
-    for (const [cur, a] of Object.entries(ANCHORS)) {
-        if (cur === "EUR")
-            continue;
-        out[cur] = derivePricing(a);
-    }
-    return out;
-}
 exports.DEFAULT_PRICING_CATALOG = {
-    currencies: buildDefaultCurrencies(),
+    currencies: DEFAULT_CURRENCIES,
     volumeDiscounts: exports.DEFAULT_VOLUME_DISCOUNTS,
 };
 // ─── Quote computation ───────────────────────────────────────────────────────

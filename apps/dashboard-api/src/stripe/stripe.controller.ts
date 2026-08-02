@@ -24,6 +24,7 @@ import {
   getAdhocProductId,
   encodeSelections,
   decodeSelections,
+  toStripeUnitAmount,
   type VenueSel,
 } from "../common/stripe";
 import { getRequestBillingCurrency } from "../common/geo";
@@ -220,7 +221,7 @@ export class StripeController {
         const price = await stripe.prices.create({
           currency: currency.toLowerCase(),
           product: productId,
-          unit_amount: quote.amountCents,
+          unit_amount: toStripeUnitAmount(quote.amountCents, currency),
           recurring: { interval: cycle },
         });
         const stripeSub = (await stripe.subscriptions.retrieve(acctSub.stripeSubscriptionId)) as unknown as SubscriptionData;
@@ -244,7 +245,7 @@ export class StripeController {
             price_data: {
               currency: currency.toLowerCase(),
               product: productId,
-              unit_amount: quote.amountCents,
+              unit_amount: toStripeUnitAmount(quote.amountCents, currency),
               recurring: { interval: cycle },
             },
             quantity: 1,

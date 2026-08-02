@@ -23,39 +23,38 @@ describe("volumeDiscount", () => {
   });
 });
 
-describe("owner's exact Basic examples (EUR)", () => {
-  it("6 restaurants yearly = 248.4/yr, monthly = 44.55/mo", () => {
+describe("owner's exact Basic examples (EUR — base 14.9/9.9)", () => {
+  it("6 restaurants: yearly 9.9×6×12×0.5=356.4, monthly 14.9×6×0.75=67.05", () => {
     const venues = Array.from({ length: 6 }, () => menuOnly);
-    expect(computeAccountQuote(cat, "EUR", venues, "year").amountMajor).toBe(248.4);
-    expect(computeAccountQuote(cat, "EUR", venues, "month").amountMajor).toBe(44.55);
+    expect(computeAccountQuote(cat, "EUR", venues, "year").amountMajor).toBe(356.4);
+    expect(computeAccountQuote(cat, "EUR", venues, "month").amountMajor).toBe(67.05);
   });
-  it("3 restaurants yearly = 186.3/yr, monthly = 25.245/mo", () => {
+  it("3 restaurants: yearly 9.9×3×12×0.75=267.3, monthly 14.9×3×0.85=38.00", () => {
     const venues = Array.from({ length: 3 }, () => menuOnly);
-    expect(computeAccountQuote(cat, "EUR", venues, "year").amountMajor).toBe(186.3);
-    // 29.7 × 0.85 = 25.245
-    expect(computeAccountQuote(cat, "EUR", venues, "month").perMonthAfterDiscount).toBe(25.25);
+    expect(computeAccountQuote(cat, "EUR", venues, "year").amountMajor).toBe(267.3);
+    expect(computeAccountQuote(cat, "EUR", venues, "month").perMonthAfterDiscount).toBe(38);
   });
   it("1 restaurant → no volume discount", () => {
     expect(computeAccountQuote(cat, "EUR", [menuOnly], "month").discount).toBe(0);
-    expect(computeAccountQuote(cat, "EUR", [menuOnly], "month").amountMajor).toBe(9.9);
-    expect(computeAccountQuote(cat, "EUR", [menuOnly], "year").amountMajor).toBe(82.8);
+    expect(computeAccountQuote(cat, "EUR", [menuOnly], "month").amountMajor).toBe(14.9);
+    expect(computeAccountQuote(cat, "EUR", [menuOnly], "year").amountMajor).toBe(118.8);
   });
 });
 
 describe("à-la-carte add-ons (EUR)", () => {
   it("per-venue price = menu + selected add-ons", () => {
-    expect(computeVenuePrice(cat.currencies.EUR, menuOnly, "month")).toBe(9.9);
+    expect(computeVenuePrice(cat.currencies.EUR, menuOnly, "month")).toBe(14.9);
     expect(
       computeVenuePrice(cat.currencies.EUR, { ...menuOnly, reservations: true }, "month"),
-    ).toBe(18.9);
-    expect(computeVenuePrice(cat.currencies.EUR, { ...menuOnly, ordersKds: true }, "month")).toBe(22.9);
-    expect(computeVenuePrice(cat.currencies.EUR, { ...menuOnly, domain: true }, "month")).toBe(14.9);
+    ).toBe(23.9);
+    expect(computeVenuePrice(cat.currencies.EUR, { ...menuOnly, ordersKds: true }, "month")).toBe(27.9);
+    expect(computeVenuePrice(cat.currencies.EUR, { ...menuOnly, domain: true }, "month")).toBe(19.9);
   });
 
-  it("Pro (menu+reservations+ordersKds) reconstructs the old 31.9/24.9", () => {
+  it("Pro (menu+reservations+ordersKds) = 36.9/27.9", () => {
     const pro: VenueSelection = { menuOnline: true, reservations: true, ordersKds: true, domain: false };
-    expect(computeVenuePrice(cat.currencies.EUR, pro, "month")).toBe(31.9);
-    expect(computeVenuePrice(cat.currencies.EUR, pro, "year")).toBe(24.9);
+    expect(computeVenuePrice(cat.currencies.EUR, pro, "month")).toBe(36.9);
+    expect(computeVenuePrice(cat.currencies.EUR, pro, "year")).toBe(27.9);
   });
 
   it("mixed venues: A=reservations, B=ordersKds, C=menu; N=3 monthly ×0.85", () => {
@@ -64,8 +63,8 @@ describe("à-la-carte add-ons (EUR)", () => {
       { ...menuOnly, ordersKds: true },
       menuOnly,
     ];
-    // (18.9 + 22.9 + 9.9) = 51.7 × 0.85 = 43.945 → 43.95
-    expect(computeAccountQuote(cat, "EUR", venues, "month").perMonthAfterDiscount).toBe(43.95);
+    // (23.9 + 27.9 + 14.9) = 66.7 × 0.85 = 56.695 → 56.70
+    expect(computeAccountQuote(cat, "EUR", venues, "month").perMonthAfterDiscount).toBe(56.7);
   });
 });
 
@@ -92,9 +91,11 @@ describe("flags ⇄ selection bridge", () => {
   });
 });
 
-describe("default catalog covers the 14 billing currencies", () => {
-  it("has all anchors", () => {
-    for (const c of ["EUR", "NOK", "SEK", "DKK", "MXN", "USD", "AUD", "GBP", "PLN", "CZK", "HUF", "ISK", "CHF", "RSD"]) {
+describe("default catalog covers all 21 currencies", () => {
+  it("has every currency", () => {
+    const all = ["EUR", "USD", "GBP", "CHF", "NOK", "SEK", "DKK", "PLN", "CZK", "HUF", "ISK", "MXN", "AUD", "RSD", "BRL", "COP", "CLP", "PEN", "UYU", "ARS", "TRY"];
+    expect(all.length).toBe(21);
+    for (const c of all) {
       expect(cat.currencies[c]).toBeTruthy();
       expect(cat.currencies[c].menu.mo).toBeGreaterThan(0);
     }

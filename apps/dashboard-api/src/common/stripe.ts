@@ -79,7 +79,18 @@ export type PriceLookupKey = (typeof PRICE_LOOKUP_KEYS)[keyof typeof PRICE_LOOKU
 
 // Billing currencies we actually price in Stripe. EUR is the base/fallback;
 // NOK/SEK/DKK have currency-suffixed Stripe prices (e.g. `basic_monthly_nok`).
-export const SUPPORTED_CURRENCIES = ["EUR", "NOK", "SEK", "DKK", "MXN", "USD", "AUD", "GBP", "PLN", "CZK", "HUF", "ISK", "CHF", "RSD"] as const;
+export const SUPPORTED_CURRENCIES = ["EUR", "NOK", "SEK", "DKK", "MXN", "USD", "AUD", "GBP", "PLN", "CZK", "HUF", "ISK", "CHF", "RSD", "BRL", "ARS", "COP", "CLP", "PEN", "UYU", "TRY"] as const;
+
+// Stripe zero-decimal currencies among ours: the amount IS the whole unit (no
+// ×100). Only CLP here. ISK/HUF are charged as 2-decimal (×100) with integer
+// amounts, so they need no special handling.
+const ZERO_DECIMAL_CURRENCIES = new Set(["CLP"]);
+
+// Convert our internal cents (major×100) to the amount Stripe expects for this
+// currency. Zero-decimal → divide by 100; everything else → cents unchanged.
+export function toStripeUnitAmount(amountCents: number, currency: string): number {
+  return ZERO_DECIMAL_CURRENCIES.has(currency.toUpperCase()) ? Math.round(amountCents / 100) : amountCents;
+}
 
 export type SupportedCurrency = (typeof SUPPORTED_CURRENCIES)[number];
 
@@ -111,6 +122,13 @@ const BILLING_CURRENCY_BY_COUNTRY: Record<string, SupportedCurrency> = {
   IS: "ISK",
   CH: "CHF",
   RS: "RSD",
+  BR: "BRL",
+  AR: "ARS",
+  CO: "COP",
+  CL: "CLP",
+  PE: "PEN",
+  UY: "UYU",
+  TR: "TRY",
 };
 
 export function getCurrencyByCountry(countryCode: string | null): SupportedCurrency {
@@ -133,4 +151,11 @@ export const CURRENCY_INFO: Record<SupportedCurrency, { symbol: string; name: st
   ISK: { symbol: "kr", name: "Icelandic Króna", symbolPosition: "after", zeroDecimal: false },
   CHF: { symbol: "CHF", name: "Swiss Franc", symbolPosition: "after", zeroDecimal: false },
   RSD: { symbol: "RSD", name: "Serbian Dinar", symbolPosition: "after", zeroDecimal: false },
+  BRL: { symbol: "R$", name: "Brazilian Real", symbolPosition: "before", zeroDecimal: false },
+  ARS: { symbol: "$", name: "Argentine Peso", symbolPosition: "before", zeroDecimal: false },
+  COP: { symbol: "$", name: "Colombian Peso", symbolPosition: "before", zeroDecimal: false },
+  CLP: { symbol: "$", name: "Chilean Peso", symbolPosition: "before", zeroDecimal: true },
+  PEN: { symbol: "S/", name: "Peruvian Sol", symbolPosition: "before", zeroDecimal: false },
+  UYU: { symbol: "$U", name: "Uruguayan Peso", symbolPosition: "before", zeroDecimal: false },
+  TRY: { symbol: "₺", name: "Turkish Lira", symbolPosition: "before", zeroDecimal: false },
 };
