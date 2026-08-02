@@ -973,11 +973,12 @@ export async function subscribeCustom(
  selections: VenueSelectionInput[],
  cycle: "month" | "year",
 ): Promise<{ redirectUrl?: string | null; changed?: boolean; subscriptionId?: string } | null> {
+ const locale = typeof window !== "undefined" ? (window.location.pathname.match(/^\/([a-z]{2})\b/)?.[1] || "en") : "en";
  const res = await apiFetch("/api/billing/subscribe", {
   credentials: "include",
   method: "POST",
   headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ selections, cycle }),
+  body: JSON.stringify({ selections, cycle, locale }),
  });
  if (!res.ok) {
   console.error("subscribe error:", res.status, await res.text().catch(() => ""));

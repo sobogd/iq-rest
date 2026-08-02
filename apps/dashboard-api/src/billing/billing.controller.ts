@@ -265,7 +265,7 @@ export class BillingController {
   @UseGuards(AuthGuard)
   async subscribe(
     @Req() req: Request,
-    @Body() body: { selections?: SelectionBody[]; cycle?: string },
+    @Body() body: { selections?: SelectionBody[]; cycle?: string; locale?: string },
   ) {
     if ((req as AuthedRequest).authUser.viaGrant) {
       throw new ForbiddenException("Billing is managed by the restaurant owner");
@@ -314,34 +314,22 @@ export class BillingController {
       await stripe.subscriptions.cancel(sub.stripeSubscriptionId).catch(() => undefined);
     }
 
-    const created = await stripe.subscriptions.create({
+    // Hosted Stripe Checkout (subscription mode) — a clean pay page with every
+    // enabled method (card / wallets / PayPal / SEPA), no downloadable Stripe
+    // invoice, returns to the billing page. The sub is created on completion;
+    // the webhook provisions features from the `sel` metadata. Our own invoices
+    // are handled separately (Invoice table).
+    const appUrl = process.env.APP_URL || "";
+    const locale = body.locale || "en";
+    const session = await stripe.checkout.sessions.create({
+      mode: "subscription",
       customer: customerId,
-      items: [{ price: price.id }],
-      payment_behavior: "default_incomplete",
-      payment_settings: { save_default_payment_method: "on_subscription" },
-      expand: ["latest_invoice.payment_intent"],
-      metadata: meta,
+      line_items: [{ price: price.id, quantity: 1 }],
+      subscription_data: { metadata: meta },
+      success_url: `${appUrl}/${locale}/dashboard/settings/billing?success=1`,
+      cancel_url: `${appUrl}/${locale}/dashboard/settings/billing?canceled=1`,
     });
-
-    // The subscription is created first (default_incomplete). We then send the
-    // customer to Stripe's hosted invoice page to pay with any enabled method
-    // (card / wallets / PayPal / SEPA). Fall back to re-fetching the invoice.
-    type InvoiceLike = { id?: string; hosted_invoice_url?: string | null };
-    let redirectUrl = (created.latest_invoice as InvoiceLike | null)?.hosted_invoice_url ?? null;
-    if (!redirectUrl) {
-      const invId = (created.latest_invoice as InvoiceLike | null)?.id;
-      if (invId) {
-        const inv = (await stripe.invoices.retrieve(invId).catch(() => null)) as InvoiceLike | null;
-        redirectUrl = inv?.hosted_invoice_url ?? null;
-      }
-    }
-    if (!redirectUrl) {
-      console.error(
-        `billing/subscribe: no hosted_invoice_url for sub ${created.id} (status ${created.status}); ` +
-          `latest_invoice=${JSON.stringify(created.latest_invoice)?.slice(0, 300)}`,
-      );
-    }
-    return { subscriptionId: created.id, redirectUrl };
+    return { redirectUrl: session.url };
   }
 
   // SetupIntent for changing / adding a card (no charge). The frontend confirms
