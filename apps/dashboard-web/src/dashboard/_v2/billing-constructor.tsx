@@ -18,8 +18,6 @@ import {
   subscribeCustom,
   fetchSubscriptionStatus,
   openBillingPortal,
-  cancelSubscription,
-  resumeSubscription,
   getBillingProfile,
   saveBillingProfile,
   getInvoices,
@@ -178,34 +176,12 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
           </div>
         </div>
         <div className="flex items-center gap-2">
-          {sub?.cancelAtPeriodEnd ? (
-            <button
-              type="button"
-              onClick={async () => { if (await resumeSubscription()) { setNotice("Subscription resumed."); refreshSub(); } }}
-              className={primaryBtn}
-            >
-              Resume
-            </button>
-          ) : (
-            <button type="button" onClick={() => { setChanging(true); setPhase("options"); }} className={primaryBtn}>
-              Change plan
-            </button>
-          )}
+          <button type="button" onClick={() => { setChanging(true); setPhase("options"); }} className={primaryBtn}>
+            Change plan
+          </button>
           <button type="button" onClick={manage} className={secondaryBtn}>
             Manage subscription
           </button>
-          {!sub?.cancelAtPeriodEnd ? (
-            <button
-              type="button"
-              onClick={async () => {
-                if (!confirm("Cancel at the end of the current period? You keep access until then.")) return;
-                if (await cancelSubscription(true)) { setNotice("Subscription will cancel at the end of the period."); refreshSub(); }
-              }}
-              className="h-8 px-3 text-xs font-medium text-red-600 dark:text-red-400"
-            >
-              Cancel
-            </button>
-          ) : null}
         </div>
         <InvoicesList />
         <EnterpriseCard />
