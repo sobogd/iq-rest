@@ -25,6 +25,7 @@ import {
   subscribeCustom,
   requestSepaInvoice,
   cancelSubscription,
+  fetchSubscriptionStatus,
   getBillingProfile,
   saveBillingProfile,
   getInvoices,
@@ -59,11 +60,22 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
   const [clientSecret, setClientSecret] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [notice, setNotice] = useState<string | null>(null);
+  const [confirmCancel, setConfirmCancel] = useState(false);
+  const [sub, setSub] = useState<{ plan: string | null; status: string | null; currentPeriodEnd: string | null; cycle: string | null } | null>(null);
+
+  const refreshSub = () =>
+    fetchSubscriptionStatus().then((s) =>
+      setSub(s ? { plan: s.plan, status: s.subscriptionStatus, currentPeriodEnd: s.currentPeriodEnd, cycle: s.billingCycle } : null),
+    );
 
   useEffect(() => {
     getPricingCatalog().then(setCatalog);
     getBillingProfile().then((p) => p && setProfile(p));
+    refreshSub();
   }, []);
+
+  const subActive = sub?.status === "ACTIVE" || sub?.status === "PAST_DUE";
 
   useEffect(() => {
     setSels((prev) => {
@@ -112,8 +124,9 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
       return;
     }
     if (res.changed) {
-      alert("Subscription updated.");
       setStep(1);
+      setNotice("Subscription updated.");
+      refreshSub();
       return;
     }
     if (res.clientSecret) {
@@ -129,11 +142,16 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
     setBusy(true);
     const res = await requestSepaInvoice(activeSelections, currency);
     setBusy(false);
-    if (res?.success) alert("Request received — we'll email you an invoice to pay by SEPA transfer.");
+    if (res?.success) setNotice("Request received — we'll email you an invoice to pay by SEPA transfer.");
   };
-  const doCancel = async () => {
-    if (!confirm("Cancel the subscription at the end of the current period?")) return;
-    if (await cancelSubscription(true)) alert("Your subscription will cancel at the end of the period.");
+  const doCancelConfirmed = async () => {
+    setConfirmCancel(false);
+    if (await cancelSubscription(false)) {
+      setNotice("Subscription canceled.");
+      // Status flips via the webhook — refresh now and shortly after.
+      refreshSub();
+      setTimeout(refreshSub, 1500);
+    }
   };
 
   return (
@@ -161,13 +179,44 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
       </div>
 
       {error ? <div className="text-sm text-red-600">{error}</div> : null}
+      {notice ? (
+        <div className="flex items-center justify-between gap-3 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-2.5 text-sm text-emerald-800">
+          <span>{notice}</span>
+          <button type="button" onClick={() => setNotice(null)} className="text-emerald-700">✕</button>
+        </div>
+      ) : null}
+
+      {/* Current subscription — shown only when there is an active/past-due one */}
+      {step === 1 && subActive && (
+        <div className="flex items-start justify-between gap-3 rounded-2xl border border-border bg-card p-4">
+          <div>
+            <div className="text-xs font-medium uppercase tracking-wide text-emerald-600">
+              {sub?.status === "PAST_DUE" ? "Past due" : "Active"}
+            </div>
+            <div className="text-sm font-medium text-foreground mt-0.5">
+              {sub?.plan}
+              {sub?.cycle ? ` · ${sub.cycle.toLowerCase()}` : ""}
+            </div>
+            {sub?.currentPeriodEnd ? (
+              <div className="text-xs text-muted-foreground mt-0.5">
+                Renews {new Date(sub.currentPeriodEnd).toLocaleDateString()}
+              </div>
+            ) : null}
+          </div>
+          <button type="button" onClick={() => setConfirmCancel(true)} className="text-sm text-red-600 font-medium shrink-0">
+            Cancel
+          </button>
+        </div>
+      )}
 
       {/* ── Step 1: Plan ── */}
       {step === 1 && (
         <>
           <div className="flex items-center justify-between gap-3">
             <div>
-              <h3 className="text-base font-semibold text-foreground">Build your plan</h3>
+              <h3 className="text-base font-semibold text-foreground">
+                {subActive ? "Change your plan" : "Build your plan"}
+              </h3>
               <p className="text-xs text-muted-foreground">Pay only for what you use.</p>
             </div>
             <div className="inline-flex rounded-full border border-border bg-accent p-1">
@@ -247,9 +296,6 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
               Continue
             </button>
           </PriceBar>
-          <button type="button" onClick={doCancel} className="text-xs text-muted-foreground self-start">
-            Cancel current subscription
-          </button>
         </>
       )}
 
@@ -304,7 +350,7 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
             <PaymentForm
               clientSecret={clientSecret}
               onBack={() => setStep(2)}
-              onDone={() => { setStep(1); alert("Payment received — activating…"); }}
+              onDone={() => { setStep(1); setNotice("Payment received — activating…"); setTimeout(refreshSub, 1500); }}
             />
           </Elements>
           {cycle === "year" && (
@@ -316,6 +362,23 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
       )}
 
       <InvoicesList />
+
+      {confirmCancel ? (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4" onClick={() => setConfirmCancel(false)}>
+          <div className="w-full max-w-sm rounded-2xl bg-card border border-border p-5 shadow-xl" onClick={(e) => e.stopPropagation()}>
+            <div className="text-base font-semibold text-foreground">Cancel subscription?</div>
+            <p className="text-sm text-muted-foreground mt-1">Your features will be turned off. You can subscribe again anytime.</p>
+            <div className="flex items-center justify-end gap-2 mt-4">
+              <button type="button" onClick={() => setConfirmCancel(false)} className="h-10 px-4 text-sm rounded-lg border border-input">
+                Keep
+              </button>
+              <button type="button" onClick={doCancelConfirmed} className="h-10 px-4 text-sm font-semibold rounded-lg text-white bg-red-600">
+                Cancel subscription
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
