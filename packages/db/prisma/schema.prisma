@@ -377,6 +377,9 @@ model Subscription {
   interval              String? // "month" | "year"
   // Where the price came from: "legacy" | "custom" | "preset:<id>" | "enterprise".
   priceProvenance       String?
+  // Set when the owner cancels: the sub stays ACTIVE (paid access) until
+  // currentPeriodEnd, then stops. UI shows "Cancels on <date>".
+  cancelAtPeriodEnd     Boolean   @default(false)
   createdAt             DateTime  @default(now())
   updatedAt             DateTime  @updatedAt
 

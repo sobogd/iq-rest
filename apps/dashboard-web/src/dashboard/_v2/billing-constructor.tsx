@@ -18,6 +18,8 @@ import {
   subscribeCustom,
   fetchSubscriptionStatus,
   openBillingPortal,
+  cancelSubscription,
+  resumeSubscription,
   getBillingProfile,
   saveBillingProfile,
   getInvoices,
@@ -52,13 +54,17 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
   const [busy, setBusy] = useState(false);
   const [notice, setNotice] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [sub, setSub] = useState<{ plan: string | null; status: string | null; currentPeriodEnd: string | null; cycle: string | null } | null>(null);
+  const [sub, setSub] = useState<{ plan: string | null; status: string | null; currentPeriodEnd: string | null; cycle: string | null; cancelAtPeriodEnd: boolean } | null>(null);
 
   const minCount = Math.max(1, list.length);
 
   const refreshSub = () =>
     fetchSubscriptionStatus().then((s) =>
-      setSub(s ? { plan: s.plan, status: s.subscriptionStatus, currentPeriodEnd: s.currentPeriodEnd, cycle: s.billingCycle } : null),
+      setSub(
+        s
+          ? { plan: s.plan, status: s.subscriptionStatus, currentPeriodEnd: s.currentPeriodEnd, cycle: s.billingCycle, cancelAtPeriodEnd: !!s.cancelAtPeriodEnd }
+          : null,
+      ),
     );
 
   useEffect(() => {
@@ -152,25 +158,54 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
         {notice ? <Notice text={notice} onClose={() => setNotice(null)} /> : null}
         <div className="flex items-start justify-between gap-3 rounded-xl border border-border bg-card p-4">
           <div>
-            <div className="text-xs font-medium uppercase tracking-wide text-emerald-600">
-              {sub?.status === "PAST_DUE" ? "Past due" : "Active"}
+            <div
+              className={`text-xs font-medium uppercase tracking-wide ${
+                sub?.cancelAtPeriodEnd ? "text-amber-600 dark:text-amber-400" : sub?.status === "PAST_DUE" ? "text-red-600 dark:text-red-400" : "text-emerald-600"
+              }`}
+            >
+              {sub?.cancelAtPeriodEnd ? "Canceling" : sub?.status === "PAST_DUE" ? "Past due" : "Active"}
             </div>
             <div className="text-sm font-medium text-foreground mt-0.5">
               {sub?.plan}
               {sub?.cycle ? ` · ${sub.cycle.toLowerCase()}` : ""}
             </div>
             {sub?.currentPeriodEnd ? (
-              <div className="text-xs text-muted-foreground mt-0.5">Renews {new Date(sub.currentPeriodEnd).toLocaleDateString()}</div>
+              <div className="text-xs text-muted-foreground mt-0.5">
+                {sub.cancelAtPeriodEnd ? "Cancels on " : "Renews "}
+                {new Date(sub.currentPeriodEnd).toLocaleDateString()}
+              </div>
             ) : null}
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <button type="button" onClick={() => { setChanging(true); setPhase("options"); }} className={primaryBtn}>
-            Change plan
-          </button>
+          {sub?.cancelAtPeriodEnd ? (
+            <button
+              type="button"
+              onClick={async () => { if (await resumeSubscription()) { setNotice("Subscription resumed."); refreshSub(); } }}
+              className={primaryBtn}
+            >
+              Resume
+            </button>
+          ) : (
+            <button type="button" onClick={() => { setChanging(true); setPhase("options"); }} className={primaryBtn}>
+              Change plan
+            </button>
+          )}
           <button type="button" onClick={manage} className={secondaryBtn}>
             Manage subscription
           </button>
+          {!sub?.cancelAtPeriodEnd ? (
+            <button
+              type="button"
+              onClick={async () => {
+                if (!confirm("Cancel at the end of the current period? You keep access until then.")) return;
+                if (await cancelSubscription(true)) { setNotice("Subscription will cancel at the end of the period."); refreshSub(); }
+              }}
+              className="h-8 px-3 text-xs font-medium text-red-600 dark:text-red-400"
+            >
+              Cancel
+            </button>
+          ) : null}
         </div>
         <InvoicesList />
         <EnterpriseCard />

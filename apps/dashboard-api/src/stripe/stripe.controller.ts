@@ -55,6 +55,7 @@ interface SubscriptionData {
   };
   metadata?: Record<string, string>;
   customer?: string;
+  cancel_at_period_end?: boolean;
 }
 
 // A per-venue selection sent by the constructor / quiz checkout.
@@ -760,6 +761,7 @@ export class StripeController {
       interval,
       provider: "stripe",
       priceProvenance: provenance,
+      cancelAtPeriodEnd: !!sub.cancel_at_period_end,
     });
   }
 
@@ -835,6 +837,7 @@ export class StripeController {
       interval?: string;
       provider?: string;
       priceProvenance?: string;
+      cancelAtPeriodEnd?: boolean;
     },
   ): Promise<void> {
     const r = await this.prisma.restaurant.findUnique({
@@ -861,6 +864,7 @@ export class StripeController {
       ...(s.currency ? { currency: s.currency } : {}),
       ...(s.interval ? { interval: s.interval } : {}),
       ...(s.priceProvenance ? { priceProvenance: s.priceProvenance } : {}),
+      ...(s.cancelAtPeriodEnd !== undefined ? { cancelAtPeriodEnd: s.cancelAtPeriodEnd } : {}),
     };
     await this.prisma.subscription.upsert({
       where: { accountId: r.accountId },

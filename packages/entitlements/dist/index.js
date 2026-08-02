@@ -292,6 +292,7 @@ exports.ACCOUNT_ENTITLEMENT_SELECT = {
                     billingCycle: true,
                     currentPeriodEnd: true,
                     appliesToRestaurantId: true,
+                    cancelAtPeriodEnd: true,
                 },
             },
             _count: { select: { restaurants: true } },

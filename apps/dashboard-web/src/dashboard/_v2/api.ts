@@ -781,6 +781,7 @@ export async function fetchSubscriptionStatus(): Promise<{
  plan: string | null;
  subscriptionStatus: string | null;
  currentPeriodEnd: string | null;
+ cancelAtPeriodEnd?: boolean;
  billingCycle: string | null;
  trialEndsAt: string | null;
  // PRO-feature entitlement (orders / kitchen / reservations). The SPA gates
@@ -1015,6 +1016,16 @@ export async function cancelSubscription(atPeriodEnd: boolean): Promise<boolean>
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({ atPeriodEnd }),
+ });
+ return res.ok;
+}
+
+export async function resumeSubscription(): Promise<boolean> {
+ const res = await apiFetch("/api/billing/resume", {
+  credentials: "include",
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: "{}",
  });
  return res.ok;
 }

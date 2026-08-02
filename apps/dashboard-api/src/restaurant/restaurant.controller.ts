@@ -242,6 +242,7 @@ export class RestaurantController {
       billingCycle,
       subscriptionStatus,
       currentPeriodEnd: currentPeriodEnd ? currentPeriodEnd.toISOString() : null,
+      cancelAtPeriodEnd: sub?.cancelAtPeriodEnd ?? false,
       paymentProcessing: row.paymentProcessing,
       trialEndsAt: trialEndsAt ? trialEndsAt.toISOString() : null,
       proFeatures: caps.orders,

@@ -394,6 +394,7 @@ export const ACCOUNT_ENTITLEMENT_SELECT = {
           billingCycle: true,
           currentPeriodEnd: true,
           appliesToRestaurantId: true,
+          cancelAtPeriodEnd: true,
         },
       },
       _count: { select: { restaurants: true } },
@@ -424,6 +425,7 @@ export type RestaurantEntitlementRow = {
       billingCycle?: string | null;
       currentPeriodEnd: Date | null;
       appliesToRestaurantId: string | null;
+      cancelAtPeriodEnd?: boolean | null;
     } | null;
     _count?: { restaurants: number };
   } | null;
