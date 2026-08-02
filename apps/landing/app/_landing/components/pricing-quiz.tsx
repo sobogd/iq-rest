@@ -115,7 +115,7 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
               type="button"
               aria-label="Fewer restaurants"
               onClick={() => setCount((c) => Math.max(1, c - 1))}
-              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-foreground hover:bg-accent/70"
+              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
               disabled={count <= 1}
             >
               <Minus className="h-3.5 w-3.5" strokeWidth={2.75} />
@@ -125,7 +125,7 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
               type="button"
               aria-label="More restaurants"
               onClick={() => setCount((c) => Math.min(99, c + 1))}
-              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-foreground hover:bg-accent/70"
+              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
             >
               <Plus className="h-3.5 w-3.5" strokeWidth={2.75} />
             </button>
