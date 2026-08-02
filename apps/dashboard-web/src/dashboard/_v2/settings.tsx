@@ -1969,7 +1969,7 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  {/* billing-features-constructor: à-la-carte "build your plan" is the ONLY
      billing UI — always shown (incl. after a failed/past-due payment, so the
      user can retry a card on-page). No Stripe portal anywhere. */}
- <div className="bg-card border border-border rounded-2xl p-5 md:p-6 mb-5">
+ <div className="mb-5">
  <BillingConstructor currency={currency} />
  </div>
  </div>
