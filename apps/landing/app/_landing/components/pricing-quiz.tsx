@@ -87,45 +87,49 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
         </p>
       </div>
 
-      {/* Controls — billing cycle + restaurants stepper on ONE row, 50/50 on
-          mobile. The word "restaurants" lives (muted) inside the counter. */}
-      <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center sm:justify-center gap-3 mb-6">
-        <div className="flex w-full sm:w-auto rounded-full border border-border bg-card p-1">
-          {(["month", "year"] as const).map((c) => (
-            <button
-              key={c}
-              type="button"
-              onClick={() => setCycle(c)}
-              className={`flex-1 sm:flex-none px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
-                cycle === c ? "bg-primary text-primary-foreground" : "text-muted-foreground"
-              }`}
-            >
-              {c === "month" ? "Monthly" : "Yearly"}
-            </button>
-          ))}
+      {/* Controls — each field has its label to the LEFT. Stacked full-width on
+          mobile, inline on desktop. */}
+      <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center sm:justify-center gap-3 mb-6">
+        <div className="flex items-center gap-2.5 w-full sm:w-auto">
+          <span className="shrink-0 text-sm font-medium text-foreground">Billing</span>
+          <div className="flex flex-1 sm:flex-none rounded-full border border-border bg-card p-1">
+            {(["month", "year"] as const).map((c) => (
+              <button
+                key={c}
+                type="button"
+                onClick={() => setCycle(c)}
+                className={`flex-1 sm:flex-none px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                  cycle === c ? "bg-primary text-primary-foreground" : "text-muted-foreground"
+                }`}
+              >
+                {c === "month" ? "Monthly" : "Yearly"}
+              </button>
+            ))}
+          </div>
         </div>
 
-        <div className="flex w-full sm:w-auto items-center justify-between rounded-full border border-border bg-card p-1">
-          <button
-            type="button"
-            aria-label="Fewer restaurants"
-            onClick={() => setCount((c) => Math.max(1, c - 1))}
-            className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-foreground hover:bg-accent/70 disabled:opacity-40"
-            disabled={count <= 1}
-          >
-            <Minus className="h-3.5 w-3.5" strokeWidth={2.75} />
-          </button>
-          <span className="text-center text-sm font-medium text-foreground px-2">
-            Restaurants: <span className="tabular-nums">{count}</span>
-          </span>
-          <button
-            type="button"
-            aria-label="More restaurants"
-            onClick={() => setCount((c) => Math.min(99, c + 1))}
-            className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-foreground hover:bg-accent/70"
-          >
-            <Plus className="h-3.5 w-3.5" strokeWidth={2.75} />
-          </button>
+        <div className="flex items-center gap-2.5 w-full sm:w-auto">
+          <span className="shrink-0 text-sm font-medium text-foreground">Restaurants</span>
+          <div className="flex flex-1 sm:flex-none items-center justify-between rounded-full border border-border bg-card p-1">
+            <button
+              type="button"
+              aria-label="Fewer restaurants"
+              onClick={() => setCount((c) => Math.max(1, c - 1))}
+              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-foreground hover:bg-accent/70 disabled:opacity-40"
+              disabled={count <= 1}
+            >
+              <Minus className="h-3.5 w-3.5" strokeWidth={2.75} />
+            </button>
+            <span className="text-center text-sm font-medium text-foreground tabular-nums px-3">{count}</span>
+            <button
+              type="button"
+              aria-label="More restaurants"
+              onClick={() => setCount((c) => Math.min(99, c + 1))}
+              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-foreground hover:bg-accent/70"
+            >
+              <Plus className="h-3.5 w-3.5" strokeWidth={2.75} />
+            </button>
+          </div>
         </div>
       </div>
 
@@ -133,9 +137,6 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
           select (only color/shadow) so tapping never shifts the layout. */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
         <div className="relative flex flex-col items-start rounded-2xl border-2 border-primary bg-primary/5 shadow-sm p-4 sm:p-5">
-          <span className="absolute top-3 right-3 flex h-5 w-5 items-center justify-center rounded-full border border-primary bg-primary text-primary-foreground">
-            <Check className="h-3.5 w-3.5" />
-          </span>
           <UtensilsCrossed className="h-7 w-7 text-primary mb-3" />
           <div className="text-sm font-semibold text-foreground pr-6">Digital menu</div>
           <div className="hidden sm:block text-sm text-muted-foreground mt-0.5 leading-snug">Always included</div>
