@@ -92,7 +92,7 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
       <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center sm:justify-center gap-3 sm:gap-8 mb-6">
         <div className="flex items-center gap-2.5 w-full sm:w-auto">
           <span className="shrink-0 text-sm text-muted-foreground">Billing:</span>
-          <div className="flex flex-1 sm:flex-none rounded-full border border-border bg-card p-1">
+          <div className="flex flex-1 sm:flex-none rounded-full border border-border bg-accent p-1">
             {(["month", "year"] as const).map((c) => (
               <button
                 key={c}
