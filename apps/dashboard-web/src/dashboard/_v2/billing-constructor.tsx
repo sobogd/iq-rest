@@ -434,24 +434,32 @@ function PaymentForm({ clientSecret, onDone, onBack }: { clientSecret: string; o
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // Colours from the app's CSS theme variables (HSL triplets → hsl()). Read once;
-  // the iframe can't inherit them, so we pass concrete values.
+  // Colours from the app's CSS theme variables. Stripe only accepts hex/rgb (NOT
+  // hsl()), so resolve each var to a concrete hex via a throwaway element.
   const elementStyle = useMemo(() => {
-    const cs = getComputedStyle(document.documentElement);
-    const hsl = (name: string, fallback: string) => {
-      // CSS var holds an HSL triplet like "0 0% 5%"; Stripe wants a valid CSS
-      // color string → comma-separated hsl().
-      const v = cs.getPropertyValue(name).trim();
-      return v ? `hsl(${v.replace(/\s+/g, ", ")})` : fallback;
+    const toHex = (rgb: string): string | null => {
+      const m = rgb.match(/\d+/g);
+      if (!m || m.length < 3) return null;
+      return "#" + m.slice(0, 3).map((n) => Number(n).toString(16).padStart(2, "0")).join("");
+    };
+    const cssColor = (name: string, fallback: string): string => {
+      const v = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+      if (!v) return fallback;
+      const el = document.createElement("span");
+      el.style.color = `hsl(${v.replace(/\s+/g, ", ")})`;
+      document.body.appendChild(el);
+      const rgb = getComputedStyle(el).color;
+      el.remove();
+      return toHex(rgb) || fallback;
     };
     return {
       base: {
         fontSize: "14px",
         fontFamily: "inherit",
-        color: hsl("--foreground", "#111827"),
-        "::placeholder": { color: hsl("--muted-foreground", "#9ca3af") },
+        color: cssColor("--foreground", "#111827"),
+        "::placeholder": { color: cssColor("--muted-foreground", "#9ca3af") },
       },
-      invalid: { color: hsl("--destructive", "#dc2626") },
+      invalid: { color: cssColor("--destructive", "#dc2626") },
     };
   }, []);
 
