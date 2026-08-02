@@ -91,7 +91,7 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
           mobile, inline on desktop. */}
       <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center sm:justify-center gap-3 mb-6">
         <div className="flex items-center gap-2.5 w-full sm:w-auto">
-          <span className="shrink-0 text-sm font-medium text-foreground">Billing</span>
+          <span className="shrink-0 text-sm text-muted-foreground">Billing:</span>
           <div className="flex flex-1 sm:flex-none rounded-full border border-border bg-card p-1">
             {(["month", "year"] as const).map((c) => (
               <button
@@ -109,7 +109,7 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
         </div>
 
         <div className="flex items-center gap-2.5 w-full sm:w-auto">
-          <span className="shrink-0 text-sm font-medium text-foreground">Restaurants</span>
+          <span className="shrink-0 text-sm text-muted-foreground">Restaurants:</span>
           <div className="flex flex-1 sm:flex-none items-center justify-between rounded-full border border-border bg-card p-1">
             <button
               type="button"
@@ -120,7 +120,7 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
             >
               <Minus className="h-3.5 w-3.5" strokeWidth={2.75} />
             </button>
-            <span className="text-center text-sm font-medium text-foreground tabular-nums px-3">{count}</span>
+            <span className="inline-block min-w-[2ch] text-center text-sm font-medium text-foreground tabular-nums px-1">{count}</span>
             <button
               type="button"
               aria-label="More restaurants"
