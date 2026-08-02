@@ -326,13 +326,17 @@ export class BillingController {
     if (sub?.stripeSubscriptionId && sub.status === "ACTIVE") {
       const live = await stripe.subscriptions.retrieve(sub.stripeSubscriptionId);
       const itemId = live.items.data[0]?.id;
+      // Resume a scheduled cancel — Stripe rejects passing BOTH params, so clear
+      // whichever mechanism was used (cancel_at timestamp vs cancel_at_period_end).
+      const resume =
+        (live as { cancel_at?: number | null }).cancel_at != null
+          ? { cancel_at: null as number | null }
+          : { cancel_at_period_end: false };
       await stripe.subscriptions.update(sub.stripeSubscriptionId, {
         items: itemId ? [{ id: itemId, price: price.id }] : undefined,
         proration_behavior: "always_invoice",
         metadata: meta,
-        // Changing the plan resumes a scheduled cancel (period-end or cancel_at).
-        cancel_at_period_end: false,
-        cancel_at: null,
+        ...resume,
       });
       // Apply the change synchronously (don't wait for the webhook) so the UI
       // reflects the new features / price / capacity immediately.
