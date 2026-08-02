@@ -374,15 +374,12 @@ function EnterpriseCard() {
       href={wa}
       target="_blank"
       rel="noreferrer"
-      className="flex items-center justify-between gap-3 rounded-xl border border-dashed border-border bg-card p-4 hover:border-input transition-colors"
+      className="block rounded-xl border border-dashed border-border bg-card p-4 hover:border-input transition-colors"
     >
-      <div>
-        <div className="text-sm font-medium text-foreground">Need a custom plan?</div>
-        <div className="text-xs text-muted-foreground leading-snug">
-          Many restaurants or special requirements — message us and we'll tailor a plan for you.
-        </div>
+      <div className="text-sm font-medium text-foreground">Need a custom plan?</div>
+      <div className="text-xs text-muted-foreground leading-snug">
+        Many restaurants or special requirements — message us and we'll tailor a plan for you.
       </div>
-      <span className="text-xs font-medium text-primary shrink-0">Contact us →</span>
     </a>
   );
 }
