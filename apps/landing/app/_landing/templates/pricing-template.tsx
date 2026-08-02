@@ -38,6 +38,22 @@ export function PricingTemplate({
         <PricingQuiz ctaText={texts.ctaText} />
       </Section>
 
+      {/* Enterprise / custom-plan line */}
+      <Section dataSection="pricing_enterprise" noContainer>
+        <p className="mx-auto max-w-xl text-center text-base text-muted-foreground">
+          Need a custom plan or more restaurants?{" "}
+          <a
+            href="https://wa.me/998948663743?text=Hi!%20I'd%20like%20a%20custom%20plan%20for%20my%20restaurants."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-primary underline-offset-2 hover:underline"
+          >
+            Talk to us
+          </a>{" "}
+          and we'll tailor one for you.
+        </p>
+      </Section>
+
       <Section id="faq" dataSection="faq" noContainer accent>
         <Faq texts={faq} />
       </Section>

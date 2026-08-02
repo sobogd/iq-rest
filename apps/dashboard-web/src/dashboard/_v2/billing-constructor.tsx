@@ -173,6 +173,7 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
           </button>
         </div>
         <InvoicesList />
+        <EnterpriseCard />
         {overlay}
       </div>
     );
@@ -358,8 +359,31 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
       )}
 
       <InvoicesList />
+      <EnterpriseCard />
       {overlay}
     </div>
+  );
+}
+
+function EnterpriseCard() {
+  const wa =
+    "https://wa.me/998948663743?text=" +
+    encodeURIComponent("Hi! I'd like a custom plan for my restaurants.");
+  return (
+    <a
+      href={wa}
+      target="_blank"
+      rel="noreferrer"
+      className="flex items-center justify-between gap-3 rounded-xl border border-dashed border-border bg-card p-4 hover:border-input transition-colors"
+    >
+      <div>
+        <div className="text-sm font-medium text-foreground">Need a custom plan?</div>
+        <div className="text-xs text-muted-foreground leading-snug">
+          Many restaurants or special requirements — message us and we'll tailor a plan for you.
+        </div>
+      </div>
+      <span className="text-xs font-medium text-primary shrink-0">Contact us →</span>
+    </a>
   );
 }
 
