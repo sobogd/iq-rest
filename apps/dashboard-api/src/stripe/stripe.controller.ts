@@ -56,6 +56,7 @@ interface SubscriptionData {
   metadata?: Record<string, string>;
   customer?: string;
   cancel_at_period_end?: boolean;
+  cancel_at?: number | null;
 }
 
 // A per-venue selection sent by the constructor / quiz checkout.
@@ -402,9 +403,12 @@ export class StripeController {
         // Mirror the cancel-at-period-end flag directly (robust for both ad-hoc
         // and legacy subs, and independent of restaurant resolution). A portal
         // cancel fires this event with cancel_at_period_end=true.
-        await this.prisma.subscription
-          .updateMany({ where: { stripeSubscriptionId: sub.id }, data: { cancelAtPeriodEnd: !!sub.cancel_at_period_end } })
-          .catch(() => undefined);
+        {
+          const canceling = !!sub.cancel_at_period_end || (typeof sub.cancel_at === "number" && sub.cancel_at * 1000 > Date.now());
+          await this.prisma.subscription
+            .updateMany({ where: { stripeSubscriptionId: sub.id }, data: { cancelAtPeriodEnd: canceling } })
+            .catch(() => undefined);
+        }
         const targetRestaurantId = await this.resolveRestaurantId(sub.id, null);
         if (targetRestaurantId) {
           // Cancel the restaurant's PREVIOUS subscription if a different one is

@@ -398,16 +398,27 @@ export class BillingController {
     if (!sub?.stripeSubscriptionId) return { synced: false };
     const live = (await getStripe()
       .subscriptions.retrieve(sub.stripeSubscriptionId)
-      .catch(() => null)) as { status?: string; cancel_at_period_end?: boolean; current_period_end?: number; items?: { data?: Array<{ current_period_end?: number }> } } | null;
+      .catch(() => null)) as {
+      status?: string;
+      cancel_at_period_end?: boolean;
+      cancel_at?: number | null;
+      current_period_end?: number;
+      items?: { data?: Array<{ current_period_end?: number }> };
+    } | null;
     if (!live) return { synced: false };
     const map: Record<string, string> = { active: "ACTIVE", trialing: "ACTIVE", past_due: "PAST_DUE", canceled: "CANCELED", unpaid: "CANCELED", incomplete: "EXPIRED", incomplete_expired: "EXPIRED" };
     const status = map[live.status ?? ""] ?? "INACTIVE";
     const ts = live.items?.data?.[0]?.current_period_end ?? live.current_period_end;
     const currentPeriodEnd = typeof ts === "number" && ts > 0 ? new Date(ts * 1000) : null;
+    // The portal may express a scheduled cancel via cancel_at_period_end OR a
+    // concrete cancel_at timestamp — treat either as "canceling".
+    const canceling = !!live.cancel_at_period_end || (typeof live.cancel_at === "number" && live.cancel_at * 1000 > Date.now());
+    // When cancel_at is set, prefer it as the cancels-on date.
+    const cancelDate = typeof live.cancel_at === "number" && live.cancel_at > 0 ? new Date(live.cancel_at * 1000) : currentPeriodEnd;
     await this.prisma.subscription
       .update({
         where: { accountId },
-        data: { status, currentPeriodEnd, cancelAtPeriodEnd: !!live.cancel_at_period_end, updatedFromStripeAt: new Date() },
+        data: { status, currentPeriodEnd: canceling ? cancelDate : currentPeriodEnd, cancelAtPeriodEnd: canceling, updatedFromStripeAt: new Date() },
       })
       .catch(() => undefined);
     return { synced: true };
