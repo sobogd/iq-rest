@@ -9,7 +9,14 @@
 
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { UtensilsCrossed, CalendarClock, ChefHat, Globe, Check } from "lucide-react";
-import { Elements, PaymentElement, useElements, useStripe } from "@stripe/react-stripe-js";
+import {
+  Elements,
+  CardNumberElement,
+  CardExpiryElement,
+  CardCvcElement,
+  useElements,
+  useStripe,
+} from "@stripe/react-stripe-js";
 import { getStripe } from "./stripe";
 import { useRestaurants } from "./restaurants-context";
 import {
@@ -293,8 +300,12 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
               {money(quote.amountMajor)} / {cycle === "year" ? "year" : "month"}
             </div>
           )}
-          <Elements stripe={getStripe()} options={{ clientSecret, appearance: { theme: "stripe" } }}>
-            <PaymentForm onBack={() => setStep(2)} onDone={() => { setStep(1); alert("Payment received — activating…"); }} />
+          <Elements stripe={getStripe()}>
+            <PaymentForm
+              clientSecret={clientSecret}
+              onBack={() => setStep(2)}
+              onDone={() => { setStep(1); alert("Payment received — activating…"); }}
+            />
           </Elements>
           {cycle === "year" && (
             <button type="button" onClick={payInvoice} disabled={busy} className="text-xs text-muted-foreground self-start">
@@ -349,8 +360,21 @@ function PriceBar({
   );
 }
 
-// Inline card form (PaymentElement). Optional Stripe fields hidden.
-function PaymentForm({ onDone, onBack }: { onDone: () => void; onBack: () => void }) {
+// Inline card form — split Elements (own-styled fields). Always a fresh card;
+// Stripe stores it on the customer only for subscription renewals (no saved-card
+// UI here). Handles 3DS via confirmCardPayment.
+const ELEMENT_STYLE = {
+  base: {
+    fontSize: "14px",
+    color: "#111827",
+    fontFamily: "inherit",
+    "::placeholder": { color: "#9ca3af" },
+  },
+  invalid: { color: "#dc2626" },
+};
+const fieldBox = "h-10 rounded-lg border border-input bg-card px-3 flex items-center";
+
+function PaymentForm({ clientSecret, onDone, onBack }: { clientSecret: string; onDone: () => void; onBack: () => void }) {
   const stripe = useStripe();
   const elements = useElements();
   const [busy, setBusy] = useState(false);
@@ -358,22 +382,50 @@ function PaymentForm({ onDone, onBack }: { onDone: () => void; onBack: () => voi
 
   const pay = async () => {
     if (!stripe || !elements || busy) return;
+    const card = elements.getElement(CardNumberElement);
+    if (!card) return;
     setBusy(true);
     setError(null);
-    const { error } = await stripe.confirmPayment({ elements, redirect: "if_required" });
+    const { error, paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
+      payment_method: { card },
+    });
     if (error) {
       setError(error.message || "Payment failed");
       setBusy(false);
       return;
     }
-    onDone();
+    if (paymentIntent?.status === "succeeded" || paymentIntent?.status === "processing") {
+      onDone();
+    } else {
+      setError("Payment not completed. Try again.");
+      setBusy(false);
+    }
   };
 
   return (
-    <div className="flex flex-col gap-4">
-      <PaymentElement options={{ fields: { billingDetails: { address: "never" } } }} />
+    <div className="flex flex-col gap-3">
+      <label className="flex flex-col gap-1">
+        <span className="text-xs text-muted-foreground">Card number</span>
+        <div className={fieldBox}>
+          <CardNumberElement options={{ style: ELEMENT_STYLE }} className="w-full" />
+        </div>
+      </label>
+      <div className="grid grid-cols-2 gap-3">
+        <label className="flex flex-col gap-1">
+          <span className="text-xs text-muted-foreground">Expiry</span>
+          <div className={fieldBox}>
+            <CardExpiryElement options={{ style: ELEMENT_STYLE }} className="w-full" />
+          </div>
+        </label>
+        <label className="flex flex-col gap-1">
+          <span className="text-xs text-muted-foreground">CVC</span>
+          <div className={fieldBox}>
+            <CardCvcElement options={{ style: ELEMENT_STYLE }} className="w-full" />
+          </div>
+        </label>
+      </div>
       {error ? <div className="text-sm text-red-600">{error}</div> : null}
-      <div className="flex items-center justify-between gap-2">
+      <div className="flex items-center justify-between gap-2 mt-1">
         <button type="button" onClick={onBack} className="h-11 px-4 text-sm rounded-xl border border-input">
           Back
         </button>
