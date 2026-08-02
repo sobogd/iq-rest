@@ -1885,8 +1885,8 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  </SubpageStickyBar>
  <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4">
  <div className="mb-5">
- <div className="text-xs text-muted-foreground">{t("breadcrumb")}</div>
- <h2 className="text-xl font-medium text-foreground mt-1">{tb("title")}</h2>
+ <h2 className="text-xl font-semibold text-foreground">Build your plan</h2>
+ <p className="text-sm text-muted-foreground mt-1">Pay only for what you use. Start with the menu and add what you need.</p>
  </div>
 
  {pastDue ? (

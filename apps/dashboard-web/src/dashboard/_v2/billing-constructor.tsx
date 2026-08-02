@@ -219,10 +219,6 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
   // ── No sub (or changing) → accordion ──
   return (
     <div className="flex flex-col gap-4">
-      <div>
-        <h3 className="text-lg font-semibold text-foreground">Build your plan</h3>
-        <p className="text-sm text-muted-foreground mt-0.5">Pay only for what you use. Start with the menu and add what you need.</p>
-      </div>
       {notice ? <Notice text={notice} onClose={() => setNotice(null)} /> : null}
       {error ? <div className="text-sm text-red-600">{error}</div> : null}
 
