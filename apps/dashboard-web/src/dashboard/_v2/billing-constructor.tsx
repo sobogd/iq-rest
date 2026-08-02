@@ -4,8 +4,7 @@
 //   No active sub → accordion: pick features + cycle → Continue collapses to a
 //     summary and opens the billing-details card → Skip/Continue (same action)
 //     creates the subscription and redirects to Stripe Checkout. A full-screen
-//     loader covers the prep. The draft is persisted so returning from Stripe
-//     (Back) restores the filled state.
+//     loader covers the prep. Back from Stripe lands on the initial state.
 //   Active sub → current-plan card + Change plan / Manage (Stripe portal).
 
 import { useEffect, useMemo, useState } from "react";
@@ -34,7 +33,6 @@ type Sel = { menuOnline: boolean; reservations: boolean; ordersKds: boolean; dom
 type Phase = "options" | "details";
 
 const EMPTY_SEL: Sel = { menuOnline: true, reservations: false, ordersKds: false, domain: false };
-const DRAFT_KEY = "iqr_billing_draft";
 const ADDONS: { key: AddonKey; label: string; hint: string; Icon: typeof CalendarClock }[] = [
   { key: "reservations", label: "Reservations", hint: "Table bookings", Icon: CalendarClock },
   { key: "ordersKds", label: "Kitchen display", hint: "Orders on a kitchen screen", Icon: ChefHat },
@@ -61,32 +59,16 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
       setSub(s ? { plan: s.plan, status: s.subscriptionStatus, currentPeriodEnd: s.currentPeriodEnd, cycle: s.billingCycle } : null),
     );
 
-  // Mount: load catalog + profile + sub, and restore any draft (returning from
-  // Stripe via Back lands the user on their filled selections).
+  // Mount: load catalog + saved profile + sub. Back from Stripe simply lands on
+  // the initial state (no draft persistence) — refilling is fine.
   useEffect(() => {
     getPricingCatalog().then(setCatalog);
-    getBillingProfile().then((p) => p && setProfile((prev) => ({ ...p, ...prev, legalName: p.legalName, taxId: p.taxId, address: p.address })));
+    getBillingProfile().then((p) => p && setProfile(p));
     refreshSub();
-
-    const params = new URLSearchParams(window.location.search);
-    if (params.get("success")) {
-      try { sessionStorage.removeItem(DRAFT_KEY); } catch { /* ignore */ }
+    if (new URLSearchParams(window.location.search).get("success")) {
       setNotice("Payment received — activating your subscription…");
       setTimeout(refreshSub, 1500);
-      return;
     }
-    try {
-      const raw = sessionStorage.getItem(DRAFT_KEY);
-      if (raw) {
-        const d = JSON.parse(raw) as { sels?: Record<string, Sel>; cycle?: Cycle; phase?: Phase; profile?: BillingProfile; changing?: boolean };
-        if (d.sels) setSels(d.sels);
-        if (d.cycle) setCycle(d.cycle);
-        if (d.phase) setPhase(d.phase);
-        if (d.profile) setProfile(d.profile);
-        if (d.changing) setChanging(true);
-        if (params.get("canceled")) setNotice("Payment canceled — your selection is saved.");
-      }
-    } catch { /* ignore */ }
   }, []);
 
   useEffect(() => {
@@ -137,14 +119,11 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
   const subActive = sub?.status === "ACTIVE" || sub?.status === "PAST_DUE";
 
   // Skip or Continue → same action: save profile, create the subscription, then
-  // redirect to Stripe. Persist the draft first so Back returns to this state.
+  // redirect to Stripe.
   const confirmAndPay = async () => {
     if (busy) return;
     setBusy(true);
     setError(null);
-    try {
-      sessionStorage.setItem(DRAFT_KEY, JSON.stringify({ sels, cycle, phase: "details", profile, changing }));
-    } catch { /* ignore */ }
     await saveBillingProfile(profile);
     const res = await subscribeCustom(activeSelections, cycle);
     if (!res) {
@@ -153,7 +132,6 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
       return;
     }
     if (res.changed) {
-      try { sessionStorage.removeItem(DRAFT_KEY); } catch { /* ignore */ }
       setBusy(false);
       setChanging(false);
       setPhase("options");
