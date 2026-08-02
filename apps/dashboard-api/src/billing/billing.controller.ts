@@ -287,6 +287,21 @@ export class BillingController {
     if (quote.amountCents < 50) throw new BadRequestException("Amount too low");
 
     const stripe = getStripe();
+
+    // Sync the Stripe customer with the payer's billing profile (entered in step
+    // 2) so Checkout prefills the invoice email / name / address — not the
+    // account login email.
+    const bp = await this.prisma.billingProfile.findUnique({ where: { accountId } });
+    if (bp && (bp.billingEmail || bp.legalName || bp.address)) {
+      await stripe.customers
+        .update(customerId, {
+          ...(bp.billingEmail ? { email: bp.billingEmail } : {}),
+          ...(bp.legalName ? { name: bp.legalName } : {}),
+          ...(bp.address ? { address: { line1: bp.address } } : {}),
+        })
+        .catch(() => undefined);
+    }
+
     const product = await getAdhocProductId();
     const price = await stripe.prices.create({
       currency: currency.toLowerCase(),
