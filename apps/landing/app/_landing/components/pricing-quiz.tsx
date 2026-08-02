@@ -89,7 +89,7 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
 
       {/* Controls — each field has its label to the LEFT. Stacked full-width on
           mobile, inline on desktop. */}
-      <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center sm:justify-center gap-3 mb-6">
+      <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center sm:justify-center gap-3 sm:gap-8 mb-6">
         <div className="flex items-center gap-2.5 w-full sm:w-auto">
           <span className="shrink-0 text-sm text-muted-foreground">Billing:</span>
           <div className="flex flex-1 sm:flex-none rounded-full border border-border bg-card p-1">
@@ -120,7 +120,7 @@ export function PricingQuiz({ ctaText }: { ctaText: string }) {
             >
               <Minus className="h-3.5 w-3.5" strokeWidth={2.75} />
             </button>
-            <span className="inline-block min-w-[2ch] text-center text-sm font-medium text-foreground tabular-nums px-1">{count}</span>
+            <span className="inline-block w-8 text-center text-sm font-medium text-foreground tabular-nums">{count}</span>
             <button
               type="button"
               aria-label="More restaurants"
