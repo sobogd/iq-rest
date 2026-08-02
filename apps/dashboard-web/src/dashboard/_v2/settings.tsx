@@ -1912,59 +1912,7 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  </div>
  ) : null}
 
- {isActive && sub ? (
- <div className="bg-card border border-border rounded-2xl p-5 md:p-6 mb-5">
- <div className="flex items-start justify-between gap-3">
- <div>
- <div className="text-xs font-medium uppercase tracking-wide text-emerald-700">{tb("active")}</div>
- <div className="text-base font-medium text-foreground mt-0.5">
- {sub.plan} · {sub.billingCycle?.toLowerCase() || "—"}
- </div>
- {sub.currentPeriodEnd ? (
- <div className="text-xs text-muted-foreground mt-0.5">
- {tb("renewsOn", { date: new Date(sub.currentPeriodEnd).toLocaleDateString([], {
- day: "numeric",
- month: "long",
- year: "numeric",
- }) })}
- </div>
- ) : null}
- </div>
- </div>
- </div>
- ) : null}
-
- {/* BASIC venue-picker (§5): a BASIC plan covers exactly one venue; the owner
-     picks which. The others go inactive (menu offline). Switchable any time. */}
- {sub?.plan === "BASIC" && accountVenues.length > 1 ? (
- <div className="bg-card border border-border rounded-2xl p-5 md:p-6 mb-5">
- <div className="text-base font-medium text-foreground">{tb("basicVenueTitle")}</div>
- <p className="text-xs text-muted-foreground mt-1 leading-snug">{tb("basicVenueBody")}</p>
- <div className="mt-3 space-y-2">
- {accountVenues.map((v) => {
- const activeVenue = v.id === sub.appliesToRestaurantId;
- return (
- <button
- key={v.id}
- type="button"
- disabled={switchingVenue || activeVenue}
- onClick={() => pickBasicVenue(v.id)}
- className={`w-full flex items-center justify-between gap-3 rounded-xl border px-4 py-3 text-left transition-colors ${
- activeVenue ? "border-primary bg-primary/5" : "border-border hover:border-input"
- }`}
- >
- <span className="text-sm text-foreground min-w-0 truncate">{v.title || v.slug || v.id}</span>
- {activeVenue ? (
- <span className="text-[10px] px-1.5 py-0.5 rounded bg-primary/15 text-primary uppercase tracking-wide shrink-0">
- {tb("basicVenueActive")}
- </span>
- ) : null}
- </button>
- );
- })}
- </div>
- </div>
- ) : null}
+ {/* Current-plan / venue management now live inside the constructor. */}
 
  {/* billing-features-constructor: à-la-carte "build your plan" is the ONLY
      billing UI — always shown (incl. after a failed/past-due payment, so the
