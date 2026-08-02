@@ -1886,7 +1886,7 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4">
  <div className="mb-5">
  <div className="text-xs text-muted-foreground">{t("breadcrumb")}</div>
- <h2 className="text-xl font-medium text-foreground mt-1">Build your plan</h2>
+ <h2 className="text-xl font-medium text-foreground mt-1">{tb("buildYourPlan")}</h2>
  </div>
 
  {pastDue ? (

@@ -289,8 +289,8 @@
       "loading": "Loading…",
       "failedToLoad": "Failed to load kitchen data",
       "retry": "Retry",
-      "proLockedTitle": "PRO plan required",
-      "proLockedBody": "This screen needs an active PRO plan. Ask the owner to upgrade to continue."
+      "proLockedTitle": "Subscription required",
+      "proLockedBody": "This screen needs an active subscription with Kitchen display. Ask the owner to add it in Billing to continue."
     },
     "devices": {
       "title": "Devices",
@@ -698,7 +698,53 @@
         "otherCurrencyTip": "Payment is in EUR only. To pay in another currency, please contact support.",
         "pastDueTitle": "Payment failed",
         "pastDueTip": "We couldn't process your last payment. You have {days} days to pay before your menu goes offline.",
-        "pastDueBlockedTip": "Your menu is offline because your last payment failed. Pay now to restore it."
+        "pastDueBlockedTip": "Your menu is offline because your last payment failed. Pay now to restore it.",
+        "buildYourPlan": "Build your plan",
+        "featMenu": "Digital menu",
+        "featMenuShort": "Menu",
+        "featMenuHint": "QR menu diners scan",
+        "featReservations": "Reservations",
+        "featReservationsHint": "Table bookings",
+        "featKds": "Kitchen display",
+        "featKdsHint": "Orders on a kitchen screen",
+        "featDomain": "Custom domain",
+        "featDomainHint": "Your own web address",
+        "restaurantsLabel": "Restaurants",
+        "youHave": "you have {count}",
+        "fewer": "Fewer",
+        "more": "More",
+        "billingPeriod": "Billing period",
+        "perYearWord": "year",
+        "perMonthWord": "month",
+        "saveYearly": "Save {amount} a year with yearly billing",
+        "volumeDiscountLine": "{percent}% volume discount · {count} restaurants",
+        "saveUpToHint": "Save up to 50% with 5+ restaurants",
+        "continue": "Continue",
+        "yourPlanSummary": "Your plan",
+        "restaurantOne": "1 restaurant",
+        "restaurantsMany": "{count} restaurants",
+        "edit": "Edit",
+        "billingDetails": "Billing details",
+        "billingDetailsHint": "Optional — for your invoices. Skip if you don't have them.",
+        "fieldLegalName": "Name / company",
+        "fieldTaxId": "Tax number",
+        "fieldAddress": "Address",
+        "skip": "Skip",
+        "preparing": "Preparing your subscription…",
+        "statusPastDue": "Past due",
+        "statusCanceling": "Canceling",
+        "renews": "Renews {date}",
+        "cancelsOn": "Cancels on {date}",
+        "changePlan": "Change plan",
+        "manageSubscription": "Manage subscription",
+        "myInvoices": "My invoices ({count})",
+        "customPlanTitle": "Need a custom plan?",
+        "customPlanBody": "Many restaurants or special requirements — message us and we'll tailor a plan for you.",
+        "customPlanWa": "Hi! I'd like a custom plan for my restaurants.",
+        "paymentReceived": "Payment received — activating your subscription…",
+        "subscriptionUpdated": "Subscription updated.",
+        "errStartSubscription": "Could not start the subscription. Try again.",
+        "errOpenPayment": "Could not open the payment page. Try again."
       },
       "support": {
         "title": "Support",
@@ -727,8 +773,8 @@
       "switching": "Switching restaurant…",
       "add": "Add restaurant",
       "addDesc": "Create another restaurant — duplicate this menu or start blank.",
-      "paidOnly": "Multiple restaurants are available on a paid plan. Upgrade in Billing to add more.",
-      "atLimit": "You've reached the maximum of {limit} restaurants included in Pro. Need more? Message support about an Enterprise plan.",
+      "paidOnly": "Adding restaurants requires an active subscription. Build your plan in Billing to add more.",
+      "atLimit": "You've reached the {limit} restaurants included in your subscription. Add more restaurants in Billing, or message support about a custom plan.",
       "newTitle": "Add restaurant",
       "newSubtitle": "Create another restaurant. Pick whether to start with a copy of the current menu or from scratch.",
       "startFrom": "Start from",
@@ -941,26 +987,26 @@
       "cancelled": "Cancelled"
     },
     "proUpsell": {
-      "cta": "Upgrade to PRO",
+      "cta": "Open Billing",
       "menuOffline": {
         "title": "Your public menu is offline",
-        "body": "This restaurant has no active plan, so diners can't see its menu. Choose a plan to bring it back online."
+        "body": "This restaurant has no active subscription, so diners can't see its menu. Build your plan in Billing to bring it back online."
       },
       "orders": {
-        "title": "Orders are a PRO feature",
-        "body": "Take and manage table orders with the PRO plan. Upgrade to start accepting orders."
+        "title": "Orders aren't in your plan yet",
+        "body": "Add Kitchen display to your plan to take and manage table orders."
       },
       "kitchen": {
-        "title": "Kitchen Display is a PRO feature",
-        "body": "Send orders to the kitchen screen with the PRO plan. Upgrade to enable it."
+        "title": "Kitchen display isn't in your plan yet",
+        "body": "Add Kitchen display to your plan to send orders to the kitchen screen."
       },
       "reservations": {
-        "title": "Reservations are a PRO feature",
-        "body": "Accept table bookings with the PRO plan. Upgrade to enable reservations."
+        "title": "Reservations aren't in your plan yet",
+        "body": "Add Reservations to your plan to accept table bookings."
       },
       "devices": {
-        "title": "Devices are a PRO feature",
-        "body": "Pair kitchen, waiter and reservation tablets with the PRO plan. Upgrade to connect devices."
+        "title": "Devices aren't in your plan yet",
+        "body": "Add Kitchen display or Reservations to your plan to pair kitchen, waiter and reservation tablets."
       }
     }
   },

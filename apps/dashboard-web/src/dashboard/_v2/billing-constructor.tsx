@@ -8,8 +8,9 @@
 //   Active sub → current-plan card + Change plan / Manage (Stripe portal).
 // One uniform plan × N restaurant slots (N = purchased venue capacity).
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { UtensilsCrossed, CalendarClock, ChefHat, Globe, Check, Pencil, Minus, Plus } from "lucide-react";
+import { useTranslations, useLocale } from "@/lib/i18n-compat";
 import { useRestaurants } from "./restaurants-context";
 import { inputClass, labelClass, primaryBtn, secondaryBtn } from "./tokens";
 import {
@@ -33,13 +34,15 @@ type AddonKey = "reservations" | "ordersKds" | "domain";
 type Feat = { reservations: boolean; ordersKds: boolean; domain: boolean };
 type Phase = "options" | "details";
 
-const ADDONS: { key: AddonKey; label: string; hint: string; Icon: typeof CalendarClock }[] = [
-  { key: "reservations", label: "Reservations", hint: "Table bookings", Icon: CalendarClock },
-  { key: "ordersKds", label: "Kitchen display", hint: "Orders on a kitchen screen", Icon: ChefHat },
-  { key: "domain", label: "Custom domain", hint: "Your own web address", Icon: Globe },
+const ADDONS: { key: AddonKey; labelKey: string; hintKey: string; Icon: typeof CalendarClock }[] = [
+  { key: "reservations", labelKey: "featReservations", hintKey: "featReservationsHint", Icon: CalendarClock },
+  { key: "ordersKds", labelKey: "featKds", hintKey: "featKdsHint", Icon: ChefHat },
+  { key: "domain", labelKey: "featDomain", hintKey: "featDomainHint", Icon: Globe },
 ];
 
 export function BillingConstructor({ currency = "EUR" }: { currency?: string }) {
+  const tb = useTranslations("dashboard.settings.billing");
+  const locale = useLocale();
   const { list } = useRestaurants();
   const [cycle, setCycle] = useState<Cycle>("year");
   const [feat, setFeat] = useState<Feat>({ reservations: false, ordersKds: false, domain: false });
@@ -90,9 +93,10 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
     // Sync from Stripe first (covers a missed webhook), then read our DB.
     syncBilling().then(refreshSub);
     if (new URLSearchParams(window.location.search).get("success")) {
-      setNotice("Payment received — activating your subscription…");
+      setNotice(tb("paymentReceived"));
       setTimeout(() => syncBilling().then(refreshSub), 1500);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Never buy fewer slots than the restaurants you already have.
@@ -127,6 +131,7 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
   const k = cycle === "year" ? "yr" : "mo";
   const money = (v: number) => `${currency === "EUR" ? "€" : ""}${v}${currency !== "EUR" ? " " + currency : ""}`;
   const subActive = sub?.status === "ACTIVE" || sub?.status === "PAST_DUE";
+  const venueCountLabel = (n: number) => (n === 1 ? tb("restaurantOne") : tb("restaurantsMany", { count: n }));
 
   const confirmAndPay = async () => {
     if (busy) return;
@@ -136,14 +141,14 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
     const res = await subscribeCustom(feat, count, cycle);
     if (!res) {
       setBusy(false);
-      setError("Could not start the subscription. Try again.");
+      setError(tb("errStartSubscription"));
       return;
     }
     if (res.changed) {
       setBusy(false);
       setChanging(false);
       setPhase("options");
-      setNotice("Subscription updated.");
+      setNotice(tb("subscriptionUpdated"));
       refreshSub();
       return;
     }
@@ -152,7 +157,7 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
       return;
     }
     setBusy(false);
-    setError("Could not open the payment page. Try again.");
+    setError(tb("errOpenPayment"));
   };
 
   const manage = async () => {
@@ -164,7 +169,7 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
     <div className="fixed inset-0 z-50 bg-background/70 backdrop-blur-sm flex items-center justify-center px-6">
       <div className="flex flex-col items-center gap-3 text-center">
         <div className="w-10 h-10 border-[3px] border-input border-t-foreground rounded-full animate-spin" />
-        <div className="text-xs text-muted-foreground">Preparing your subscription…</div>
+        <div className="text-xs text-muted-foreground">{tb("preparing")}</div>
       </div>
     </div>
   ) : null;
@@ -181,28 +186,29 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
                 sub?.cancelAtPeriodEnd ? "text-amber-600 dark:text-amber-400" : sub?.status === "PAST_DUE" ? "text-red-600 dark:text-red-400" : "text-emerald-600"
               }`}
             >
-              {sub?.cancelAtPeriodEnd ? "Canceling" : sub?.status === "PAST_DUE" ? "Past due" : "Active"}
+              {sub?.cancelAtPeriodEnd ? tb("statusCanceling") : sub?.status === "PAST_DUE" ? tb("statusPastDue") : tb("active")}
             </div>
             <div className="text-sm font-medium text-foreground mt-0.5">
               {[
-                "Menu",
-                sub?.features?.reservations ? "Reservations" : null,
-                sub?.features?.ordersKds ? "Kitchen display" : null,
-                sub?.features?.customDomain ? "Custom domain" : null,
+                tb("featMenuShort"),
+                sub?.features?.reservations ? tb("featReservations") : null,
+                sub?.features?.ordersKds ? tb("featKds") : null,
+                sub?.features?.customDomain ? tb("featDomain") : null,
               ]
                 .filter(Boolean)
                 .join(" · ")}
             </div>
             <div className="text-xs text-muted-foreground mt-0.5">
-              {sub?.venueLimit ? `${sub.venueLimit} restaurant${sub.venueLimit > 1 ? "s" : ""}` : ""}
+              {sub?.venueLimit ? venueCountLabel(sub.venueLimit) : ""}
               {sub?.amount != null
-                ? ` · ${sub.currency === "EUR" ? "€" : ""}${sub.amount}${sub.currency && sub.currency !== "EUR" ? " " + sub.currency : ""}/${sub.interval === "year" ? "year" : "month"}`
+                ? ` · ${sub.currency === "EUR" ? "€" : ""}${sub.amount}${sub.currency && sub.currency !== "EUR" ? " " + sub.currency : ""}/${sub.interval === "year" ? tb("perYearWord") : tb("perMonthWord")}`
                 : ""}
             </div>
             {sub?.currentPeriodEnd ? (
               <div className="text-xs text-muted-foreground mt-0.5">
-                {sub.cancelAtPeriodEnd ? "Cancels on " : "Renews "}
-                {fmtDate(sub.currentPeriodEnd)}
+                {sub.cancelAtPeriodEnd
+                  ? tb("cancelsOn", { date: fmtDate(sub.currentPeriodEnd, locale) })
+                  : tb("renews", { date: fmtDate(sub.currentPeriodEnd, locale) })}
               </div>
             ) : null}
           </div>
@@ -226,10 +232,10 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
             }}
             className={primaryBtn}
           >
-            Change plan
+            {tb("changePlan")}
           </button>
           <button type="button" onClick={manage} className={secondaryBtn}>
-            Manage subscription
+            {tb("manageSubscription")}
           </button>
         </div>
         <InvoicesList />
@@ -254,12 +260,12 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
             <div className="flex items-center gap-3 rounded-lg border border-primary bg-primary/5 p-3">
               <UtensilsCrossed className="h-5 w-5 shrink-0 text-primary" />
               <div className="min-w-0 flex-1">
-                <div className="text-sm font-medium text-foreground">Digital menu</div>
-                <div className="text-xs text-muted-foreground leading-snug">QR menu diners scan</div>
+                <div className="text-sm font-medium text-foreground">{tb("featMenu")}</div>
+                <div className="text-xs text-muted-foreground leading-snug">{tb("featMenuHint")}</div>
               </div>
-              {price && <div className="shrink-0 text-sm tabular-nums text-foreground">{money(price.menu[k])}/mo</div>}
+              {price && <div className="shrink-0 text-sm tabular-nums text-foreground">{money(price.menu[k])}{tb("perMo")}</div>}
             </div>
-            {ADDONS.map(({ key, label, hint, Icon }) => {
+            {ADDONS.map(({ key, labelKey, hintKey, Icon }) => {
               const on = feat[key];
               return (
                 <button
@@ -272,12 +278,12 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
                 >
                   <Icon className={`h-5 w-5 shrink-0 ${on ? "text-primary" : "text-muted-foreground"}`} />
                   <div className="min-w-0 flex-1">
-                    <div className="text-sm font-medium text-foreground">{label}</div>
-                    <div className="text-xs text-muted-foreground leading-snug">{hint}</div>
+                    <div className="text-sm font-medium text-foreground">{tb(labelKey)}</div>
+                    <div className="text-xs text-muted-foreground leading-snug">{tb(hintKey)}</div>
                   </div>
                   {price && (
                     <div className={`shrink-0 text-sm tabular-nums ${on ? "text-primary" : "text-muted-foreground"}`}>
-                      +{money(price[key][k])}/mo
+                      +{money(price[key][k])}{tb("perMo")}
                     </div>
                   )}
                   <span
@@ -295,13 +301,13 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
           {/* Restaurants count */}
           <div className="flex items-center justify-between gap-3">
             <div>
-              <span className="text-sm font-medium text-foreground">Restaurants</span>
-              {list.length > 0 ? <span className="text-xs text-muted-foreground ml-1">(you have {list.length})</span> : null}
+              <span className="text-sm font-medium text-foreground">{tb("restaurantsLabel")}</span>
+              {list.length > 0 ? <span className="text-xs text-muted-foreground ml-1">({tb("youHave", { count: list.length })})</span> : null}
             </div>
             <div className="inline-flex items-center rounded-full border border-border bg-accent p-0.5">
               <button
                 type="button"
-                aria-label="Fewer"
+                aria-label={tb("fewer")}
                 onClick={() => setCount((c) => Math.max(minCount, c - 1))}
                 disabled={count <= minCount}
                 className="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-primary-foreground hover:bg-primary/90 disabled:opacity-50"
@@ -311,7 +317,7 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
               <span className="inline-block w-8 text-center text-xs font-medium tabular-nums">{count}</span>
               <button
                 type="button"
-                aria-label="More"
+                aria-label={tb("more")}
                 onClick={() => setCount((c) => Math.min(99, c + 1))}
                 className="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-primary-foreground hover:bg-primary/90"
               >
@@ -322,7 +328,7 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
 
           {/* Billing period */}
           <div className="flex items-center justify-between gap-3">
-            <span className="text-sm font-medium text-foreground">Billing period</span>
+            <span className="text-sm font-medium text-foreground">{tb("billingPeriod")}</span>
             <div className="inline-flex rounded-full border border-border bg-accent p-0.5">
               {(["month", "year"] as const).map((c) => (
                 <button
@@ -333,7 +339,7 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
                     cycle === c ? "bg-primary text-primary-foreground" : "text-muted-foreground"
                   }`}
                 >
-                  {c === "month" ? "Monthly" : "Yearly"}
+                  {c === "month" ? tb("monthly") : tb("yearly")}
                 </button>
               ))}
             </div>
@@ -345,16 +351,16 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
               {quote ? (
                 <>
                   <span className="text-xl font-semibold tabular-nums text-foreground">{money(quote.amountMajor)}</span>
-                  <span className="text-xs text-muted-foreground"> /{cycle === "year" ? "year" : "month"}</span>
+                  <span className="text-xs text-muted-foreground"> /{cycle === "year" ? tb("perYearWord") : tb("perMonthWord")}</span>
                   <div className="text-xs mt-0.5 h-4 leading-4">
                     {cycle === "month" && yearlySaving > 0 ? (
-                      <span className="text-emerald-500 font-medium">Save {money(yearlySaving)} a year with yearly billing</span>
+                      <span className="text-emerald-500 font-medium">{tb("saveYearly", { amount: money(yearlySaving) })}</span>
                     ) : quote.discount > 0 ? (
                       <span className="text-emerald-500 font-medium">
-                        {Math.round(quote.discount * 100)}% volume discount · {quote.billingVenues} restaurants
+                        {tb("volumeDiscountLine", { percent: Math.round(quote.discount * 100), count: quote.billingVenues })}
                       </span>
                     ) : (
-                      <span className="text-muted-foreground">Save up to 50% with 5+ restaurants</span>
+                      <span className="text-muted-foreground">{tb("saveUpToHint")}</span>
                     )}
                   </div>
                 </>
@@ -363,7 +369,7 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
               )}
             </div>
             <button type="button" onClick={() => setPhase("details")} disabled={!quote} className={primaryBtn + " disabled:opacity-50"}>
-              Continue
+              {tb("continue")}
             </button>
           </div>
         </div>
@@ -374,13 +380,13 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
           className="flex items-center justify-between gap-3 rounded-xl border border-border bg-card p-4 text-left"
         >
           <div>
-            <div className="text-xs text-muted-foreground">Your plan · {count} restaurant{count > 1 ? "s" : ""}</div>
+            <div className="text-xs text-muted-foreground">{tb("yourPlanSummary")} · {venueCountLabel(count)}</div>
             <div className="text-sm font-medium text-foreground">
-              {quote ? `${money(quote.amountMajor)} / ${cycle === "year" ? "year" : "month"}` : "—"}
+              {quote ? `${money(quote.amountMajor)} / ${cycle === "year" ? tb("perYearWord") : tb("perMonthWord")}` : "—"}
             </div>
           </div>
           <span className="inline-flex items-center gap-1 text-xs text-primary">
-            <Pencil className="h-3 w-3" /> Edit
+            <Pencil className="h-3 w-3" /> {tb("edit")}
           </span>
         </button>
       )}
@@ -388,14 +394,14 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
       {phase === "details" && (
         <div className="flex flex-col gap-3 rounded-xl border border-border bg-card p-4 md:p-5">
           <div>
-            <div className="text-sm font-medium text-foreground">Billing details</div>
-            <p className="text-xs text-muted-foreground mt-0.5">Optional — for your invoices. Skip if you don't have them.</p>
+            <div className="text-sm font-medium text-foreground">{tb("billingDetails")}</div>
+            <p className="text-xs text-muted-foreground mt-0.5">{tb("billingDetailsHint")}</p>
           </div>
           {(
             [
-              ["legalName", "Name / company"],
-              ["taxId", "Tax number"],
-              ["address", "Address"],
+              ["legalName", tb("fieldLegalName")],
+              ["taxId", tb("fieldTaxId")],
+              ["address", tb("fieldAddress")],
             ] as [keyof BillingProfile, string][]
           ).map(([key, label]) => (
             <div key={key}>
@@ -409,10 +415,10 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
           ))}
           <div className="flex items-center justify-end gap-2 mt-1">
             <button type="button" onClick={confirmAndPay} disabled={busy} className={secondaryBtn}>
-              Skip
+              {tb("skip")}
             </button>
             <button type="button" onClick={confirmAndPay} disabled={busy} className={primaryBtn}>
-              Continue
+              {tb("continue")}
             </button>
           </div>
         </div>
@@ -426,9 +432,10 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
 }
 
 function EnterpriseCard() {
+  const tb = useTranslations("dashboard.settings.billing");
   const wa =
     "https://wa.me/998948663743?text=" +
-    encodeURIComponent("Hi! I'd like a custom plan for my restaurants.");
+    encodeURIComponent(tb("customPlanWa"));
   return (
     <a
       href={wa}
@@ -436,16 +443,16 @@ function EnterpriseCard() {
       rel="noreferrer"
       className="block rounded-xl border border-dashed border-border bg-card p-4 hover:border-input transition-colors"
     >
-      <div className="text-sm font-medium text-foreground">Need a custom plan?</div>
+      <div className="text-sm font-medium text-foreground">{tb("customPlanTitle")}</div>
       <div className="text-xs text-muted-foreground leading-snug">
-        Many restaurants or special requirements — message us and we'll tailor a plan for you.
+        {tb("customPlanBody")}
       </div>
     </a>
   );
 }
 
-function fmtDate(iso: string): string {
-  return new Date(iso).toLocaleDateString("en-US", { day: "numeric", month: "long", year: "numeric" });
+function fmtDate(iso: string, locale?: string): string {
+  return new Date(iso).toLocaleDateString(locale || "en-US", { day: "numeric", month: "long", year: "numeric" });
 }
 
 function Notice({ text, onClose }: { text: string; onClose: () => void }) {
@@ -460,6 +467,8 @@ function Notice({ text, onClose }: { text: string; onClose: () => void }) {
 }
 
 function InvoicesList() {
+  const tb = useTranslations("dashboard.settings.billing");
+  const locale = useLocale();
   const [rows, setRows] = useState<InvoiceRow[]>([]);
   useEffect(() => {
     getInvoices().then(setRows);
@@ -467,13 +476,13 @@ function InvoicesList() {
   if (rows.length === 0) return null;
   return (
     <details className="rounded-xl border border-border bg-card p-4">
-      <summary className="text-sm font-medium cursor-pointer">My invoices ({rows.length})</summary>
+      <summary className="text-sm font-medium cursor-pointer">{tb("myInvoices", { count: rows.length })}</summary>
       <ul className="flex flex-col gap-1.5 mt-3">
         {rows.map((r) => (
           <li key={r.id}>
             <a href={r.fileUrl} target="_blank" rel="noreferrer" className="text-sm text-primary">
               {r.number || r.id}
-              {r.issuedAt ? ` — ${fmtDate(r.issuedAt)}` : ""}
+              {r.issuedAt ? ` — ${fmtDate(r.issuedAt, locale)}` : ""}
               {r.amount != null ? ` — ${r.amount} ${r.currency ?? ""}` : ""}
             </a>
           </li>
