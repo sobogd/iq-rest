@@ -243,6 +243,13 @@ export class RestaurantController {
       subscriptionStatus,
       currentPeriodEnd: currentPeriodEnd ? currentPeriodEnd.toISOString() : null,
       cancelAtPeriodEnd: sub?.cancelAtPeriodEnd ?? false,
+      // What the subscription actually includes (features + price + capacity),
+      // shown instead of the cosmetic plan label.
+      features: { menuOnline: caps.menuOnline, reservations: caps.reservations, ordersKds: caps.kds || caps.orders, customDomain: caps.customDomain },
+      amount: sub?.amount != null ? sub.amount / 100 : null,
+      currency: sub?.currency ?? null,
+      interval: sub?.interval ?? null,
+      venueLimit: row.account?.venueLimit ?? null,
       paymentProcessing: row.paymentProcessing,
       trialEndsAt: trialEndsAt ? trialEndsAt.toISOString() : null,
       proFeatures: caps.orders,

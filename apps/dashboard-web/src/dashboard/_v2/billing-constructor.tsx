@@ -53,7 +53,16 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
   const [busy, setBusy] = useState(false);
   const [notice, setNotice] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [sub, setSub] = useState<{ plan: string | null; status: string | null; currentPeriodEnd: string | null; cycle: string | null; cancelAtPeriodEnd: boolean } | null>(null);
+  const [sub, setSub] = useState<{
+    status: string | null;
+    currentPeriodEnd: string | null;
+    cancelAtPeriodEnd: boolean;
+    features?: { menuOnline: boolean; reservations: boolean; ordersKds: boolean; customDomain: boolean };
+    amount?: number | null;
+    currency?: string | null;
+    interval?: string | null;
+    venueLimit?: number | null;
+  } | null>(null);
 
   const minCount = Math.max(1, list.length);
 
@@ -61,7 +70,16 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
     fetchSubscriptionStatus().then((s) =>
       setSub(
         s
-          ? { plan: s.plan, status: s.subscriptionStatus, currentPeriodEnd: s.currentPeriodEnd, cycle: s.billingCycle, cancelAtPeriodEnd: !!s.cancelAtPeriodEnd }
+          ? {
+              status: s.subscriptionStatus,
+              currentPeriodEnd: s.currentPeriodEnd,
+              cancelAtPeriodEnd: !!s.cancelAtPeriodEnd,
+              features: s.features,
+              amount: s.amount,
+              currency: s.currency,
+              interval: s.interval,
+              venueLimit: s.venueLimit,
+            }
           : null,
       ),
     );
@@ -166,8 +184,20 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
               {sub?.cancelAtPeriodEnd ? "Canceling" : sub?.status === "PAST_DUE" ? "Past due" : "Active"}
             </div>
             <div className="text-sm font-medium text-foreground mt-0.5">
-              {sub?.plan}
-              {sub?.cycle ? ` · ${sub.cycle.toLowerCase()}` : ""}
+              {[
+                "Menu",
+                sub?.features?.reservations ? "Reservations" : null,
+                sub?.features?.ordersKds ? "Kitchen display" : null,
+                sub?.features?.customDomain ? "Custom domain" : null,
+              ]
+                .filter(Boolean)
+                .join(" · ")}
+            </div>
+            <div className="text-xs text-muted-foreground mt-0.5">
+              {sub?.venueLimit ? `${sub.venueLimit} restaurant${sub.venueLimit > 1 ? "s" : ""}` : ""}
+              {sub?.amount != null
+                ? ` · ${sub.currency === "EUR" ? "€" : ""}${sub.amount}${sub.currency && sub.currency !== "EUR" ? " " + sub.currency : ""}/${sub.interval === "year" ? "year" : "month"}`
+                : ""}
             </div>
             {sub?.currentPeriodEnd ? (
               <div className="text-xs text-muted-foreground mt-0.5">

@@ -783,6 +783,11 @@ export async function fetchSubscriptionStatus(): Promise<{
  currentPeriodEnd: string | null;
  cancelAtPeriodEnd?: boolean;
  billingCycle: string | null;
+ features?: { menuOnline: boolean; reservations: boolean; ordersKds: boolean; customDomain: boolean };
+ amount?: number | null;
+ currency?: string | null;
+ interval?: string | null;
+ venueLimit?: number | null;
  trialEndsAt: string | null;
  // PRO-feature entitlement (orders / kitchen / reservations). The SPA gates
  // those surfaces on this single flag instead of re-deriving plan logic.
