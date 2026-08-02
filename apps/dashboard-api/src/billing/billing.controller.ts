@@ -331,6 +331,39 @@ export class BillingController {
         proration_behavior: "always_invoice",
         metadata: meta,
       });
+      // Apply the change synchronously (don't wait for the webhook) so the UI
+      // reflects the new features / price / capacity immediately.
+      await Promise.all(
+        accountVenues.map((v) =>
+          this.prisma.restaurant
+            .update({
+              where: { id: v.id },
+              data: {
+                featMenuOnline: true,
+                featOrders: uniform.ordersKds,
+                featKds: uniform.ordersKds,
+                featReservations: uniform.reservations,
+                featCustomDomain: uniform.domain,
+                featAiUnlimited: uniform.ordersKds,
+              },
+            })
+            .catch(() => undefined),
+        ),
+      );
+      await this.prisma.subscription
+        .update({
+          where: { accountId },
+          data: {
+            billingCycle: cycle === "year" ? "YEARLY" : "MONTHLY",
+            amount: quote.amountCents,
+            currency,
+            interval: cycle,
+            priceProvenance: "custom",
+            updatedFromStripeAt: new Date(),
+          },
+        })
+        .catch(() => undefined);
+      await this.prisma.account.update({ where: { id: accountId }, data: { venueLimit: count } }).catch(() => undefined);
       return { changed: true };
     }
 
