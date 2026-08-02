@@ -730,17 +730,17 @@ export class StripeController {
     // not in this paid selection (unless manually comped).
     await this.provisionAdhocFlags(restaurantId, sels);
 
-    // Enterprise (§Q1): a paid selection covering >4 venues raises the account's
-    // venue ceiling so the owner isn't blocked from managing them.
-    const billingVenues = sels.filter((s) => s.menuOnline).length;
-    if (billingVenues > 4 && (status === "ACTIVE" || status === "PAST_DUE")) {
+    // Purchased capacity → the account's venue limit (how many restaurants the
+    // owner can have). `cap` is the count of slots bought in the constructor.
+    const cap = Number(sub.metadata?.cap);
+    if (Number.isFinite(cap) && cap >= 1 && (status === "ACTIVE" || status === "PAST_DUE")) {
       const r = await this.prisma.restaurant.findUnique({
         where: { id: restaurantId },
-        select: { accountId: true, account: { select: { venueLimit: true } } },
+        select: { accountId: true },
       });
-      if (r?.accountId && billingVenues > (r.account?.venueLimit ?? 4)) {
+      if (r?.accountId) {
         await this.prisma.account
-          .update({ where: { id: r.accountId }, data: { venueLimit: billingVenues } })
+          .update({ where: { id: r.accountId }, data: { venueLimit: Math.floor(cap) } })
           .catch(() => undefined);
       }
     }

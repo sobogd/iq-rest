@@ -265,7 +265,14 @@ export class BillingController {
   @UseGuards(AuthGuard)
   async subscribe(
     @Req() req: Request,
-    @Body() body: { selections?: SelectionBody[]; cycle?: string; locale?: string },
+    @Body()
+    body: {
+      cycle?: string;
+      locale?: string;
+      // Uniform plan: one feature set applied to `count` restaurant slots.
+      features?: { reservations?: boolean; ordersKds?: boolean; domain?: boolean };
+      count?: number;
+    },
   ) {
     if ((req as AuthedRequest).authUser.viaGrant) {
       throw new ForbiddenException("Billing is managed by the restaurant owner");
@@ -273,18 +280,22 @@ export class BillingController {
     const { accountId, customerId, currency } = await this.getAccountStripe(req);
     const catalog = await this.catalog();
     const cycle = normalizeCycle(body.cycle);
-    const rawSels = body.selections ?? [];
-    const sels: VenueSel[] = rawSels.map((s) => ({
-      restaurantId: s.restaurantId ?? "",
-      menuOnline: s.menuOnline ?? true,
-      reservations: !!s.reservations,
-      ordersKds: !!s.ordersKds,
-      domain: !!s.domain,
-    }));
-    const active = sels.filter((s) => s.menuOnline);
-    if (active.length === 0) throw new BadRequestException("No venues selected");
-    const quote = computeAccountQuote(catalog, currency, active.map(toSelection), cycle);
+    const feat = body.features ?? {};
+    const count = Math.max(1, Math.min(99, Math.floor(body.count ?? 1)));
+    const uniform = {
+      menuOnline: true,
+      reservations: !!feat.reservations,
+      ordersKds: !!feat.ordersKds,
+      domain: !!feat.domain,
+    };
+    // Price = the uniform feature set × `count` slots (volume discount applies).
+    const quote = computeAccountQuote(catalog, currency, Array.from({ length: count }, () => uniform), cycle);
     if (quote.amountCents < 50) throw new BadRequestException("Amount too low");
+
+    // Provision the uniform features onto every existing account venue; the
+    // purchased `count` becomes the venue capacity (venueLimit).
+    const accountVenues = await this.prisma.restaurant.findMany({ where: { accountId }, select: { id: true } });
+    const sels: VenueSel[] = accountVenues.map((v) => ({ restaurantId: v.id, ...uniform }));
 
     const stripe = getStripe();
 
@@ -309,7 +320,7 @@ export class BillingController {
       unit_amount: toStripeUnitAmount(quote.amountCents, currency),
       recurring: { interval: cycle },
     });
-    const meta = { accountId, sel: encodeSelections(sels.filter((s) => s.restaurantId)), prov: "custom" };
+    const meta = { accountId, sel: encodeSelections(sels.filter((s) => s.restaurantId)), prov: "custom", cap: String(count) };
 
     const sub = await this.prisma.subscription.findUnique({ where: { accountId } });
     if (sub?.stripeSubscriptionId && sub.status === "ACTIVE") {

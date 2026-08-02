@@ -970,7 +970,8 @@ export async function getInvoices(): Promise<InvoiceRow[]> {
 // New sub → { clientSecret } (confirm with PaymentElement). Existing active sub
 // → { changed: true } (swapped in place, proration on the saved card).
 export async function subscribeCustom(
- selections: VenueSelectionInput[],
+ features: { reservations: boolean; ordersKds: boolean; domain: boolean },
+ count: number,
  cycle: "month" | "year",
 ): Promise<{ redirectUrl?: string | null; changed?: boolean; subscriptionId?: string } | null> {
  const locale = typeof window !== "undefined" ? (window.location.pathname.match(/^\/([a-z]{2})\b/)?.[1] || "en") : "en";
@@ -978,7 +979,7 @@ export async function subscribeCustom(
   credentials: "include",
   method: "POST",
   headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ selections, cycle, locale }),
+  body: JSON.stringify({ features, count, cycle, locale }),
  });
  if (!res.ok) {
   console.error("subscribe error:", res.status, await res.text().catch(() => ""));
