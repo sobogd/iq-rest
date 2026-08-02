@@ -1,20 +1,22 @@
 "use client";
 
-// billing-features-constructor — the "build your plan" constructor (card-select).
-//
-// Per-venue feature cards (tap to toggle) → live quote (/api/billing/quote) →
-// ad-hoc card checkout or SEPA-by-invoice (yearly). Mirrors the landing quiz.
-// Also renders the payer billing profile + read-only invoices. English-first.
+// billing-features-constructor — the "build your plan" constructor as a stepper.
+//   Step 1 Plan     — per-venue feature cards + cycle → live price
+//   Step 2 Details  — payer billing profile (legal data)
+//   Step 3 Payment  — inline Stripe PaymentElement (saved cards + add-new,
+//                     SCA handled), or SEPA-by-invoice (yearly)
+// No hosted Checkout, no Stripe portal, no separate card modal. English-first.
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { UtensilsCrossed, CalendarClock, ChefHat, Globe, Check } from "lucide-react";
+import { Elements, PaymentElement, useElements, useStripe } from "@stripe/react-stripe-js";
+import { getStripe } from "./stripe";
 import { useRestaurants } from "./restaurants-context";
 import {
   computeQuote,
   getPricingCatalog,
   subscribeCustom,
   requestSepaInvoice,
-  createSetupIntent,
   cancelSubscription,
   getBillingProfile,
   saveBillingProfile,
@@ -25,34 +27,37 @@ import {
   type PricingCatalog,
   type VenueSelectionInput,
 } from "./api";
-import { PaymentModal } from "./payment-modal";
 
 type Cycle = "month" | "year";
 type AddonKey = "reservations" | "ordersKds" | "domain";
 type Sel = { menuOnline: boolean; reservations: boolean; ordersKds: boolean; domain: boolean };
+type Step = 1 | 2 | 3;
 
 const EMPTY_SEL: Sel = { menuOnline: true, reservations: false, ordersKds: false, domain: false };
 
-const ADDONS: { key: AddonKey; label: string; hint: string; Icon: typeof CalendarClock }[] = [
-  { key: "reservations", label: "Reservations", hint: "Table bookings", Icon: CalendarClock },
-  { key: "ordersKds", label: "Orders + Kitchen", hint: "Orders & KDS", Icon: ChefHat },
-  { key: "domain", label: "Custom domain", hint: "Your web address", Icon: Globe },
+const ADDONS: { key: AddonKey; label: string; Icon: typeof CalendarClock }[] = [
+  { key: "reservations", label: "Reservations", Icon: CalendarClock },
+  { key: "ordersKds", label: "Kitchen display", Icon: ChefHat },
+  { key: "domain", label: "Custom domain", Icon: Globe },
 ];
 
 export function BillingConstructor({ currency = "EUR" }: { currency?: string }) {
   const { list } = useRestaurants();
+  const [step, setStep] = useState<Step>(1);
   const [cycle, setCycle] = useState<Cycle>("year");
   const [sels, setSels] = useState<Record<string, Sel>>({});
   const [quote, setQuote] = useState<BillingQuote | null>(null);
   const [catalog, setCatalog] = useState<PricingCatalog | null>(null);
+  const [profile, setProfile] = useState<BillingProfile>({ legalName: "", taxId: "", address: "", billingEmail: "" });
+  const [clientSecret, setClientSecret] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
-  const [modal, setModal] = useState<{ mode: "payment" | "setup"; clientSecret: string } | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     getPricingCatalog().then(setCatalog);
+    getBillingProfile().then((p) => p && setProfile(p));
   }, []);
 
-  // Seed a selection per venue (menu on by default).
   useEffect(() => {
     setSels((prev) => {
       const next = { ...prev };
@@ -79,25 +84,39 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
     };
   }, [selections, cycle, currency]);
 
-  const toggle = (id: string, key: keyof Sel) =>
-    setSels((prev) => ({ ...prev, [id]: { ...(prev[id] ?? EMPTY_SEL), [key]: !(prev[id] ?? EMPTY_SEL)[key] } }));
-
   const price = catalog?.currencies[currency] ?? catalog?.currencies.EUR ?? null;
   const k = cycle === "year" ? "yr" : "mo";
   const money = (v: number) => `${currency === "EUR" ? "€" : ""}${v}${currency !== "EUR" ? " " + currency : ""}`;
+  const toggle = (id: string, key: keyof Sel) =>
+    setSels((prev) => ({ ...prev, [id]: { ...(prev[id] ?? EMPTY_SEL), [key]: !(prev[id] ?? EMPTY_SEL)[key] } }));
+  const single = list.length === 1;
 
-  const payCard = async () => {
-    if (busy || activeSelections.length === 0) return;
+  // Step 2 → 3: save the billing profile, create the subscription, get the
+  // PaymentIntent client secret for the inline PaymentElement.
+  const goToPayment = async () => {
+    if (busy) return;
     setBusy(true);
+    setError(null);
+    await saveBillingProfile(profile);
     const res = await subscribeCustom(activeSelections, cycle);
     setBusy(false);
-    if (!res) return;
-    if (res.changed) {
-      alert("Subscription updated.");
+    if (!res) {
+      setError("Could not start the subscription. Try again.");
       return;
     }
-    if (res.clientSecret) setModal({ mode: "payment", clientSecret: res.clientSecret });
+    if (res.changed) {
+      alert("Subscription updated.");
+      setStep(1);
+      return;
+    }
+    if (res.clientSecret) {
+      setClientSecret(res.clientSecret);
+      setStep(3);
+    } else {
+      setError("No payment required.");
+    }
   };
+
   const payInvoice = async () => {
     if (busy || activeSelections.length === 0) return;
     setBusy(true);
@@ -105,211 +124,269 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
     setBusy(false);
     if (res?.success) alert("Request received — we'll email you an invoice to pay by SEPA transfer.");
   };
-  const changeCard = async () => {
-    const r = await createSetupIntent();
-    if (r?.clientSecret) setModal({ mode: "setup", clientSecret: r.clientSecret });
-  };
   const doCancel = async () => {
     if (!confirm("Cancel the subscription at the end of the current period?")) return;
-    const ok = await cancelSubscription(true);
-    if (ok) alert("Your subscription will cancel at the end of the period.");
+    if (await cancelSubscription(true)) alert("Your subscription will cancel at the end of the period.");
   };
-
-  const single = list.length === 1;
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="flex items-center justify-between gap-3">
-        <div>
-          <h3 className="text-base font-semibold text-foreground">Build your plan</h3>
-          <p className="text-xs text-muted-foreground">Pay only for what you use.</p>
-        </div>
-        <div className="inline-flex rounded-full border border-border bg-card p-1">
-          {(["month", "year"] as const).map((c) => (
-            <button
-              key={c}
-              type="button"
-              onClick={() => setCycle(c)}
-              className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${
-                cycle === c ? "bg-primary text-primary-foreground" : "text-muted-foreground"
-              }`}
-            >
-              {c === "month" ? "Monthly" : "Yearly"}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {list.map((r) => {
-        const s = sels[r.id] ?? EMPTY_SEL;
-        return (
-          <div key={r.id} className="flex flex-col gap-3">
-            {!single && (
-              <div className="text-sm font-medium text-foreground truncate">{r.title || r.slug || r.id}</div>
-            )}
-            <div className="flex flex-col gap-2.5">
-              {/* Menu — toggle whether this venue is billed at all */}
-              <button
-                type="button"
-                onClick={() => toggle(r.id, "menuOnline")}
-                className={`flex items-center gap-3 text-left rounded-xl border-2 p-3.5 transition-colors ${
-                  s.menuOnline ? "border-primary bg-primary/5" : "border-border bg-card opacity-60 hover:opacity-100"
+      {/* Stepper header */}
+      <div className="flex items-center gap-2 text-xs">
+        {(["Plan", "Details", "Payment"] as const).map((label, i) => {
+          const n = (i + 1) as Step;
+          const active = step === n;
+          const done = step > n;
+          return (
+            <div key={label} className="flex items-center gap-2">
+              <span
+                className={`flex h-6 w-6 items-center justify-center rounded-full text-[11px] font-semibold ${
+                  active ? "bg-primary text-primary-foreground" : done ? "bg-primary/20 text-primary" : "bg-accent text-muted-foreground"
                 }`}
               >
-                <UtensilsCrossed className={`h-6 w-6 shrink-0 ${s.menuOnline ? "text-primary" : "text-muted-foreground"}`} />
-                <div className="min-w-0 flex-1 text-sm font-semibold text-foreground">Digital menu</div>
-                {price && (
-                  <div className="shrink-0 text-sm font-medium tabular-nums text-foreground">{money(price.menu[k])}/mo</div>
-                )}
-                <span className="shrink-0 flex h-5 w-5 items-center justify-center rounded-full border border-primary bg-primary text-primary-foreground">
-                  <Check className="h-3.5 w-3.5" />
-                </span>
-              </button>
+                {done ? <Check className="h-3.5 w-3.5" /> : n}
+              </span>
+              <span className={active ? "font-medium text-foreground" : "text-muted-foreground"}>{label}</span>
+              {i < 2 ? <span className="w-6 h-px bg-border" /> : null}
+            </div>
+          );
+        })}
+      </div>
 
-              {ADDONS.map(({ key, label, Icon }) => {
-                const on = s[key];
-                const disabled = !s.menuOnline;
-                return (
+      {error ? <div className="text-sm text-red-600">{error}</div> : null}
+
+      {/* ── Step 1: Plan ── */}
+      {step === 1 && (
+        <>
+          <div className="flex items-center justify-between gap-3">
+            <div>
+              <h3 className="text-base font-semibold text-foreground">Build your plan</h3>
+              <p className="text-xs text-muted-foreground">Pay only for what you use.</p>
+            </div>
+            <div className="inline-flex rounded-full border border-border bg-accent p-1">
+              {(["month", "year"] as const).map((c) => (
+                <button
+                  key={c}
+                  type="button"
+                  onClick={() => setCycle(c)}
+                  className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${
+                    cycle === c ? "bg-primary text-primary-foreground" : "text-muted-foreground"
+                  }`}
+                >
+                  {c === "month" ? "Monthly" : "Yearly"}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {list.map((r) => {
+            const s = sels[r.id] ?? EMPTY_SEL;
+            return (
+              <div key={r.id} className="flex flex-col gap-2.5">
+                {!single && <div className="text-sm font-medium text-foreground truncate">{r.title || r.slug || r.id}</div>}
+                <div className="flex flex-col gap-2.5">
                   <button
-                    key={key}
                     type="button"
-                    disabled={disabled}
-                    onClick={() => toggle(r.id, key)}
-                    className={`flex items-center gap-3 text-left rounded-xl border-2 p-3.5 transition-colors disabled:opacity-40 ${
-                      on ? "border-primary bg-primary/5 shadow-sm" : "border-border bg-card hover:border-input"
+                    onClick={() => toggle(r.id, "menuOnline")}
+                    className={`flex items-center gap-3 text-left rounded-xl border-2 p-4 transition-colors ${
+                      s.menuOnline ? "border-primary bg-primary/5" : "border-border bg-card opacity-60 hover:opacity-100"
                     }`}
                   >
-                    <Icon className={`h-6 w-6 shrink-0 ${on ? "text-primary" : "text-muted-foreground"}`} />
-                    <div className="min-w-0 flex-1 text-sm font-semibold text-foreground">{label}</div>
-                    {price && (
-                      <div className={`shrink-0 text-sm font-medium tabular-nums ${on ? "text-primary" : "text-muted-foreground"}`}>
-                        +{money(price[key][k])}/mo
-                      </div>
-                    )}
-                    <span
-                      className={`shrink-0 flex h-5 w-5 items-center justify-center rounded-full border ${
-                        on ? "border-primary bg-primary text-primary-foreground" : "border-input"
-                      }`}
-                    >
-                      {on ? <Check className="h-3.5 w-3.5" /> : null}
-                    </span>
+                    <UtensilsCrossed className={`h-6 w-6 shrink-0 ${s.menuOnline ? "text-primary" : "text-muted-foreground"}`} />
+                    <div className="min-w-0 flex-1 text-sm font-semibold text-foreground">Digital menu</div>
+                    {price && <div className="shrink-0 text-sm font-medium tabular-nums text-foreground">{money(price.menu[k])}/mo</div>}
                   </button>
-                );
-              })}
-            </div>
-          </div>
-        );
-      })}
+                  {ADDONS.map(({ key, label, Icon }) => {
+                    const on = s[key];
+                    return (
+                      <button
+                        key={key}
+                        type="button"
+                        disabled={!s.menuOnline}
+                        onClick={() => toggle(r.id, key)}
+                        className={`flex items-center gap-3 text-left rounded-xl border-2 p-4 transition-colors disabled:opacity-40 ${
+                          on ? "border-primary bg-primary/5 shadow-sm" : "border-border bg-card hover:border-input"
+                        }`}
+                      >
+                        <Icon className={`h-6 w-6 shrink-0 ${on ? "text-primary" : "text-muted-foreground"}`} />
+                        <div className="min-w-0 flex-1 text-sm font-semibold text-foreground">{label}</div>
+                        {price && (
+                          <div className={`shrink-0 text-sm font-medium tabular-nums ${on ? "text-primary" : "text-muted-foreground"}`}>
+                            +{money(price[key][k])}/mo
+                          </div>
+                        )}
+                        <span
+                          className={`shrink-0 flex h-5 w-5 items-center justify-center rounded-full border ${
+                            on ? "border-primary bg-primary text-primary-foreground" : "border-input"
+                          }`}
+                        >
+                          {on ? <Check className="h-3.5 w-3.5" /> : null}
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
 
-      {/* Price bar — inline (not sticky) so it never covers the cards on mobile.
-          Stacks on phones; sub-line has a fixed height to avoid layout shift. */}
-      <div>
-        <div className="flex flex-col sm:flex-row sm:items-center gap-3 rounded-2xl border border-border bg-card px-4 py-3 shadow-sm">
-          <div className="min-w-0 sm:flex-1">
-            <div className="whitespace-nowrap">
-              {quote ? (
-                <>
-                  <span className="text-2xl font-semibold tabular-nums">{money(quote.amountMajor)}</span>
-                  <span className="text-sm text-muted-foreground"> /{cycle === "year" ? "year" : "month"}</span>
-                </>
-              ) : (
-                <span className="text-sm text-muted-foreground">Select at least one menu</span>
-              )}
-            </div>
-            <div className="text-sm h-5 leading-5">
-              {quote && quote.discount > 0 ? (
-                <span className="text-emerald-500 font-medium">
-                  {Math.round(quote.discount * 100)}% volume discount · {quote.billingVenues} venues
-                </span>
-              ) : quote ? (
-                <span className="text-muted-foreground">{cycle === "year" ? "Billed once a year" : "Billed monthly"}</span>
-              ) : null}
-            </div>
-          </div>
-          <div className="flex items-center gap-2 shrink-0">
-            {cycle === "year" && (
-              <button
-                type="button"
-                onClick={payInvoice}
-                disabled={busy || !quote}
-                className="flex-1 sm:flex-none h-11 px-4 text-sm font-medium rounded-xl border border-input text-foreground disabled:opacity-50"
-              >
-                SEPA invoice
-              </button>
-            )}
+          <PriceBar quote={quote} cycle={cycle} money={money}>
             <button
               type="button"
-              onClick={payCard}
-              disabled={busy || !quote}
-              className="flex-1 sm:flex-none h-11 px-5 text-sm font-semibold rounded-xl text-primary-foreground bg-primary disabled:opacity-50"
+              onClick={() => setStep(2)}
+              disabled={!quote}
+              className="h-11 px-6 text-sm font-semibold rounded-xl text-primary-foreground bg-primary disabled:opacity-50"
             >
-              Pay by card
+              Continue
+            </button>
+          </PriceBar>
+          <button type="button" onClick={doCancel} className="text-xs text-muted-foreground self-start">
+            Cancel current subscription
+          </button>
+        </>
+      )}
+
+      {/* ── Step 2: Details ── */}
+      {step === 2 && (
+        <>
+          <h3 className="text-base font-semibold text-foreground">Billing details</h3>
+          <p className="text-xs text-muted-foreground -mt-4">For your invoices. Optional — fill what you have.</p>
+          {(
+            [
+              ["legalName", "Name / company"],
+              ["taxId", "Tax number"],
+              ["address", "Address"],
+              ["billingEmail", "Invoice email"],
+            ] as [keyof BillingProfile, string][]
+          ).map(([key, label]) => (
+            <label key={key} className="flex flex-col gap-1">
+              <span className="text-xs text-muted-foreground">{label}</span>
+              <input
+                className="h-10 rounded-lg border border-input bg-card px-3 text-sm"
+                value={profile[key]}
+                onChange={(e) => setProfile((p) => ({ ...p, [key]: e.target.value }))}
+              />
+            </label>
+          ))}
+          <div className="flex items-center justify-between gap-2">
+            <button type="button" onClick={() => setStep(1)} className="h-11 px-4 text-sm rounded-xl border border-input">
+              Back
+            </button>
+            <button
+              type="button"
+              onClick={goToPayment}
+              disabled={busy}
+              className="h-11 px-6 text-sm font-semibold rounded-xl text-primary-foreground bg-primary disabled:opacity-50"
+            >
+              {busy ? "…" : "Continue to payment"}
             </button>
           </div>
-        </div>
-      </div>
+        </>
+      )}
 
-      {/* Manage — card + cancel, all in-app (no Stripe portal) */}
-      <div className="flex items-center gap-4 text-sm">
-        <button type="button" onClick={changeCard} className="text-primary font-medium">
-          Update card
-        </button>
-        <button type="button" onClick={doCancel} className="text-muted-foreground">
-          Cancel subscription
-        </button>
-      </div>
+      {/* ── Step 3: Payment ── */}
+      {step === 3 && clientSecret && (
+        <>
+          <h3 className="text-base font-semibold text-foreground">Payment</h3>
+          {quote && (
+            <div className="text-sm text-muted-foreground -mt-4">
+              {money(quote.amountMajor)} / {cycle === "year" ? "year" : "month"}
+            </div>
+          )}
+          <Elements stripe={getStripe()} options={{ clientSecret, appearance: { theme: "stripe" } }}>
+            <PaymentForm onBack={() => setStep(2)} onDone={() => { setStep(1); alert("Payment received — activating…"); }} />
+          </Elements>
+          {cycle === "year" && (
+            <button type="button" onClick={payInvoice} disabled={busy} className="text-xs text-muted-foreground self-start">
+              Or pay by SEPA invoice instead
+            </button>
+          )}
+        </>
+      )}
 
-      <BillingProfileForm />
       <InvoicesList />
-
-      {modal ? (
-        <PaymentModal
-          mode={modal.mode}
-          clientSecret={modal.clientSecret}
-          onDone={() => {
-            setModal(null);
-            alert(modal.mode === "payment" ? "Payment received — activating…" : "Card saved.");
-          }}
-          onClose={() => setModal(null)}
-        />
-      ) : null}
     </div>
   );
 }
 
-function BillingProfileForm() {
-  const [profile, setProfile] = useState<BillingProfile>({ legalName: "", taxId: "", address: "", billingEmail: "" });
-  const [saved, setSaved] = useState(false);
-  useEffect(() => {
-    getBillingProfile().then((p) => p && setProfile(p));
-  }, []);
-  const save = async () => setSaved(await saveBillingProfile(profile));
-  const field = (key: keyof BillingProfile, label: string) => (
-    <label className="flex flex-col gap-1">
-      <span className="text-xs text-muted-foreground">{label}</span>
-      <input
-        className="h-10 rounded-lg border border-input bg-card px-3 text-sm"
-        value={profile[key]}
-        onChange={(e) => {
-          setSaved(false);
-          setProfile((p) => ({ ...p, [key]: e.target.value }));
-        }}
-      />
-    </label>
-  );
+// Inline price summary bar (not sticky).
+function PriceBar({
+  quote,
+  cycle,
+  money,
+  children,
+}: {
+  quote: BillingQuote | null;
+  cycle: Cycle;
+  money: (v: number) => string;
+  children: ReactNode;
+}) {
   return (
-    <details className="rounded-2xl border border-border bg-card p-4">
-      <summary className="text-sm font-medium cursor-pointer">Billing details (for invoices)</summary>
-      <div className="flex flex-col gap-3 mt-3">
-        {field("legalName", "Name / company")}
-        {field("taxId", "Tax number")}
-        {field("address", "Address")}
-        {field("billingEmail", "Invoice email")}
-        <button type="button" onClick={save} className="h-10 px-4 text-sm font-medium rounded-lg border border-input self-start">
-          {saved ? "Saved ✓" : "Save"}
+    <div className="flex flex-col sm:flex-row sm:items-center gap-3 rounded-2xl border border-border bg-card px-4 py-3 shadow-sm">
+      <div className="min-w-0 sm:flex-1">
+        {quote ? (
+          <>
+            <div className="whitespace-nowrap">
+              <span className="text-2xl font-semibold tabular-nums">{money(quote.amountMajor)}</span>
+              <span className="text-sm text-muted-foreground"> /{cycle === "year" ? "year" : "month"}</span>
+            </div>
+            <div className="text-sm h-5 leading-5">
+              {quote.discount > 0 ? (
+                <span className="text-emerald-500 font-medium">
+                  {Math.round(quote.discount * 100)}% volume discount · {quote.billingVenues} venues
+                </span>
+              ) : (
+                <span className="text-muted-foreground">{cycle === "year" ? "Billed once a year" : "Billed monthly"}</span>
+              )}
+            </div>
+          </>
+        ) : (
+          <span className="text-sm text-muted-foreground">Select at least one menu</span>
+        )}
+      </div>
+      {children}
+    </div>
+  );
+}
+
+// Inline card form (PaymentElement). Optional Stripe fields hidden.
+function PaymentForm({ onDone, onBack }: { onDone: () => void; onBack: () => void }) {
+  const stripe = useStripe();
+  const elements = useElements();
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const pay = async () => {
+    if (!stripe || !elements || busy) return;
+    setBusy(true);
+    setError(null);
+    const { error } = await stripe.confirmPayment({ elements, redirect: "if_required" });
+    if (error) {
+      setError(error.message || "Payment failed");
+      setBusy(false);
+      return;
+    }
+    onDone();
+  };
+
+  return (
+    <div className="flex flex-col gap-4">
+      <PaymentElement options={{ fields: { billingDetails: { address: "never" } } }} />
+      {error ? <div className="text-sm text-red-600">{error}</div> : null}
+      <div className="flex items-center justify-between gap-2">
+        <button type="button" onClick={onBack} className="h-11 px-4 text-sm rounded-xl border border-input">
+          Back
+        </button>
+        <button
+          type="button"
+          onClick={pay}
+          disabled={busy || !stripe}
+          className="h-11 px-6 text-sm font-semibold rounded-xl text-primary-foreground bg-primary disabled:opacity-50"
+        >
+          {busy ? "Processing…" : "Pay"}
         </button>
       </div>
-    </details>
+    </div>
   );
 }
 
