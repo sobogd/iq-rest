@@ -350,11 +350,12 @@ export class StripeController {
     const lookupKey = item?.price.lookup_key;
 
     // ── Ad-hoc à-la-carte subscription (billing-features-constructor) ─────────
-    // Identified by the `sel` metadata (per-venue selection encoded at checkout).
+    // Identified by the `sel` (per-venue) or `uf` (uniform bitmask) metadata.
     // Amount/interval come from the price; the plan label is cosmetic (features
-    // live on the per-restaurant flags we provision here).
-    const selEncoded = sub.metadata?.sel;
-    if (selEncoded) {
+    // live on the per-restaurant flags we provision here). `uf` is the fallback
+    // for big accounts where the per-venue `sel` would blow Stripe's 500-char
+    // metadata limit — the feature set is uniform, so one bitmask suffices.
+    if (sub.metadata?.sel || sub.metadata?.uf) {
       await this.applyAdhocSubscription(restaurantId, sub);
       return;
     }
@@ -460,7 +461,29 @@ export class StripeController {
    *  don't stay online for free. */
   private async applyAdhocSubscription(restaurantId: string, sub: SubscriptionData): Promise<void> {
     const item = sub.items.data[0];
-    const sels = decodeSelections(sub.metadata?.sel);
+    let sels = decodeSelections(sub.metadata?.sel);
+    // Fallback: no per-venue `sel` (dropped to stay under Stripe's metadata
+    // limit) → expand the uniform `uf` bitmask across every current account venue.
+    const uf = Number(sub.metadata?.uf);
+    if (sels.length === 0 && Number.isFinite(uf)) {
+      const r = await this.prisma.restaurant.findUnique({
+        where: { id: restaurantId },
+        select: { accountId: true },
+      });
+      if (r?.accountId) {
+        const venues = await this.prisma.restaurant.findMany({
+          where: { accountId: r.accountId },
+          select: { id: true },
+        });
+        sels = venues.map((v) => ({
+          restaurantId: v.id,
+          menuOnline: !!(uf & 1),
+          reservations: !!(uf & 2),
+          ordersKds: !!(uf & 4),
+          domain: !!(uf & 8),
+        }));
+      }
+    }
 
     let status: SubscriptionStatus = "INACTIVE";
     switch (sub.status) {
@@ -501,8 +524,8 @@ export class StripeController {
       .update({ where: { id: restaurantId }, data: { paymentProcessing: false } })
       .catch(() => undefined);
 
-    // Provision feature flags per venue, and deactivate account venues that are
-    // not in this paid selection (unless manually comped).
+    // Provision feature flags for each paid venue (venues absent from the
+    // selection are left untouched — see provisionAdhocFlags).
     await this.provisionAdhocFlags(restaurantId, sels);
 
     // Purchased capacity → the account's venue limit (how many restaurants the

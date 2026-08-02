@@ -99,6 +99,9 @@ export class BillingController {
   @Get("billing/profile")
   @UseGuards(AuthGuard)
   async getProfile(@Req() req: Request) {
+    if ((req as AuthedRequest).authUser.viaGrant) {
+      throw new ForbiddenException("Billing is managed by the restaurant owner");
+    }
     const accountId = await this.accountIdFor(req);
     const [profile, user] = await Promise.all([
       this.prisma.billingProfile.findUnique({ where: { accountId } }),
@@ -144,6 +147,9 @@ export class BillingController {
   @Get("billing/invoices")
   @UseGuards(AuthGuard)
   async listInvoices(@Req() req: Request) {
+    if ((req as AuthedRequest).authUser.viaGrant) {
+      throw new ForbiddenException("Billing is managed by the restaurant owner");
+    }
     const accountId = await this.accountIdFor(req);
     const rows = await this.prisma.invoice.findMany({
       where: { accountId },
@@ -305,7 +311,10 @@ export class BillingController {
 
     // Provision the uniform features onto every existing account venue; the
     // purchased `count` becomes the venue capacity (venueLimit).
-    const accountVenues = await this.prisma.restaurant.findMany({ where: { accountId }, select: { id: true } });
+    const accountVenues = await this.prisma.restaurant.findMany({
+      where: { accountId },
+      select: { id: true, manualAccess: true },
+    });
     // `count` is the number of billable slots. It can never be fewer than the
     // venues that already exist (every one of them gets provisioned below) —
     // otherwise the owner would pay for N slots while N+k venues go live. Clamp
@@ -340,13 +349,27 @@ export class BillingController {
     }
 
     const product = await getAdhocProductId();
-    const price = await stripe.prices.create({
-      currency: currency.toLowerCase(),
-      product,
-      unit_amount: toStripeUnitAmount(quote.amountCents, currency),
-      recurring: { interval: cycle },
-    });
-    const meta = { accountId, sel: encodeSelections(sels.filter((s) => s.restaurantId)), prov: "custom", cap: String(count) };
+    // Reuse an identical (currency, amount, interval) price across retries and
+    // owners rather than minting a fresh Price object each call.
+    const price = await stripe.prices.create(
+      {
+        currency: currency.toLowerCase(),
+        product,
+        unit_amount: toStripeUnitAmount(quote.amountCents, currency),
+        recurring: { interval: cycle },
+      },
+      { idempotencyKey: `price:${currency}:${quote.amountCents}:${cycle}` },
+    );
+    // The uniform feature set as a compact bitmask (menu|res|kds|domain). The
+    // webhook applies it to EVERY current account venue, so we don't need the
+    // per-venue `sel` list — and a big account (16+ venues) would otherwise blow
+    // Stripe's 500-char metadata limit. `sel` stays as a belt-and-braces hint but
+    // is dropped when it would overflow.
+    const ufBits =
+      (uniform.menuOnline ? 1 : 0) | (uniform.reservations ? 2 : 0) | (uniform.ordersKds ? 4 : 0) | (uniform.domain ? 8 : 0);
+    const encodedSel = encodeSelections(sels.filter((s) => s.restaurantId));
+    const meta: Record<string, string> = { accountId, uf: String(ufBits), prov: "custom", cap: String(count) };
+    if (encodedSel.length <= 450) meta.sel = encodedSel;
 
     const sub = await this.prisma.subscription.findUnique({ where: { accountId } });
     if (sub?.stripeSubscriptionId && sub.status === "ACTIVE") {
@@ -358,30 +381,41 @@ export class BillingController {
         (live as { cancel_at?: number | null }).cancel_at != null
           ? { cancel_at: null as number | null }
           : { cancel_at_period_end: false };
-      await stripe.subscriptions.update(sub.stripeSubscriptionId, {
-        items: itemId ? [{ id: itemId, price: price.id }] : undefined,
-        proration_behavior: "always_invoice",
-        metadata: meta,
-        ...resume,
-      });
+      // Idempotency: a double-submit / retry within the same ~minute for the
+      // same target state collapses to ONE proration invoice instead of two.
+      // The minute bucket still lets a genuine later re-change go through.
+      const bucket = Math.floor(Date.now() / 60000);
+      await stripe.subscriptions.update(
+        sub.stripeSubscriptionId,
+        {
+          items: itemId ? [{ id: itemId, price: price.id }] : undefined,
+          proration_behavior: "always_invoice",
+          metadata: meta,
+          ...resume,
+        },
+        { idempotencyKey: `subchange:${accountId}:${quote.amountCents}:${cycle}:${count}:${ufBits}:${bucket}` },
+      );
       // Apply the change synchronously (don't wait for the webhook) so the UI
-      // reflects the new features / price / capacity immediately.
+      // reflects the new features / price / capacity immediately. Skip manually
+      // comped venues — their access is a free grant, not part of this plan.
       await Promise.all(
-        accountVenues.map((v) =>
-          this.prisma.restaurant
-            .update({
-              where: { id: v.id },
-              data: {
-                featMenuOnline: true,
-                featOrders: uniform.ordersKds,
-                featKds: uniform.ordersKds,
-                featReservations: uniform.reservations,
-                featCustomDomain: uniform.domain,
-                featAiUnlimited: uniform.ordersKds,
-              },
-            })
-            .catch(() => undefined),
-        ),
+        accountVenues
+          .filter((v) => !v.manualAccess)
+          .map((v) =>
+            this.prisma.restaurant
+              .update({
+                where: { id: v.id },
+                data: {
+                  featMenuOnline: true,
+                  featOrders: uniform.ordersKds,
+                  featKds: uniform.ordersKds,
+                  featReservations: uniform.reservations,
+                  featCustomDomain: uniform.domain,
+                  featAiUnlimited: uniform.ordersKds,
+                },
+              })
+              .catch(() => undefined),
+          ),
       );
       await this.prisma.subscription
         .update({
@@ -487,6 +521,9 @@ export class BillingController {
   @Post("billing/setup-intent")
   @UseGuards(AuthGuard)
   async setupIntent(@Req() req: Request) {
+    if ((req as AuthedRequest).authUser.viaGrant) {
+      throw new ForbiddenException("Billing is managed by the restaurant owner");
+    }
     const { customerId } = await this.getAccountStripe(req);
     const si = await getStripe().setupIntents.create({ customer: customerId, payment_method_types: ["card"] });
     return { clientSecret: si.client_secret };
@@ -495,6 +532,9 @@ export class BillingController {
   @Post("billing/set-default-pm")
   @UseGuards(AuthGuard)
   async setDefaultPm(@Req() req: Request, @Body() body: { paymentMethodId?: string }) {
+    if ((req as AuthedRequest).authUser.viaGrant) {
+      throw new ForbiddenException("Billing is managed by the restaurant owner");
+    }
     if (!body.paymentMethodId) throw new BadRequestException("paymentMethodId required");
     const { accountId, customerId } = await this.getAccountStripe(req);
     const stripe = getStripe();
@@ -517,6 +557,9 @@ export class BillingController {
   @Post("billing/sync")
   @UseGuards(AuthGuard)
   async sync(@Req() req: Request) {
+    if ((req as AuthedRequest).authUser.viaGrant) {
+      throw new ForbiddenException("Billing is managed by the restaurant owner");
+    }
     const accountId = await this.accountIdFor(req);
     const sub = await this.prisma.subscription.findUnique({ where: { accountId } });
     if (!sub?.stripeSubscriptionId) return { synced: false };
@@ -577,6 +620,29 @@ export class BillingController {
   async setPricing(@Body() body: PricingCatalog) {
     if (!body || typeof body !== "object" || !body.currencies || !body.volumeDiscounts) {
       throw new BadRequestException("Invalid pricing catalog");
+    }
+    // Validate VALUES, not just shape. computeAccountQuote falls back to EUR when
+    // a currency is missing, so a catalog without EUR (or with a broken/negative
+    // price) would 500 every quote + subscribe. Fail the save instead.
+    const eur = body.currencies.EUR;
+    if (!eur) throw new BadRequestException("Pricing catalog must include EUR");
+    const items = ["menu", "reservations", "ordersKds", "domain"] as const;
+    for (const [code, cur] of Object.entries(body.currencies)) {
+      if (!cur || typeof cur !== "object") throw new BadRequestException(`Invalid pricing for ${code}`);
+      for (const item of items) {
+        const p = cur[item];
+        if (!p || typeof p.mo !== "number" || typeof p.yr !== "number" || p.mo < 0 || p.yr < 0 || !Number.isFinite(p.mo) || !Number.isFinite(p.yr)) {
+          throw new BadRequestException(`Invalid ${item} price for ${code}`);
+        }
+      }
+    }
+    for (const tier of ["2-4", "5+"] as const) {
+      const d = body.volumeDiscounts[tier];
+      for (const k of ["mo", "yr"] as const) {
+        if (!d || typeof d[k] !== "number" || d[k] < 0 || d[k] >= 1) {
+          throw new BadRequestException(`Invalid volume discount for tier ${tier}`);
+        }
+      }
     }
     await this.prisma.pricingConfig.upsert({
       where: { id: "default" },

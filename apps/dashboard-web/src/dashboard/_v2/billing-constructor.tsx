@@ -138,7 +138,16 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
 
   const price = catalog?.currencies[currency] ?? catalog?.currencies.EUR ?? null;
   const k = cycle === "year" ? "yr" : "mo";
-  const money = (v: number) => `${currency === "EUR" ? "€" : ""}${v}${currency !== "EUR" ? " " + currency : ""}`;
+  // Proper currency formatting (symbol placement, decimals, thousands
+  // separators, zero-decimal currencies) via Intl instead of raw concatenation.
+  const fmtMoney = (v: number, cur: string) => {
+    try {
+      return new Intl.NumberFormat(locale || "en", { style: "currency", currency: cur }).format(v);
+    } catch {
+      return `${v} ${cur}`;
+    }
+  };
+  const money = (v: number) => fmtMoney(v, currency);
   const subActive = sub?.status === "ACTIVE" || sub?.status === "PAST_DUE";
   const venueCountLabel = (n: number) => (n === 1 ? tb("restaurantOne") : tb("restaurantsMany", { count: n }));
 
@@ -262,7 +271,7 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
             <div className="text-xs text-muted-foreground mt-0.5">
               {sub?.venueLimit ? venueCountLabel(sub.venueLimit) : ""}
               {sub?.amount != null
-                ? ` · ${sub.currency === "EUR" ? "€" : ""}${sub.amount}${sub.currency && sub.currency !== "EUR" ? " " + sub.currency : ""}/${sub.interval === "year" ? tb("perYearWord") : tb("perMonthWord")}`
+                ? ` · ${fmtMoney(sub.amount, sub.currency || currency)}/${sub.interval === "year" ? tb("perYearWord") : tb("perMonthWord")}`
                 : ""}
             </div>
             {sub?.currentPeriodEnd ? (
