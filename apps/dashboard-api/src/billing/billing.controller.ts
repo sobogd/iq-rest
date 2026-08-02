@@ -22,6 +22,16 @@ import {
 import { AuthGuard, type AuthedRequest } from "../auth/auth.guard";
 import { AdminGuard } from "../admin/admin.guard";
 import { PrismaService } from "../prisma/prisma.service";
+import {
+  getStripe,
+  getAdhocProductId,
+  encodeSelections,
+  toStripeUnitAmount,
+  isSupportedCurrency,
+  type SupportedCurrency,
+  type VenueSel,
+} from "../common/stripe";
+import { getRequestBillingCurrency } from "../common/geo";
 
 // Body shape for a per-venue feature selection sent by the constructor / quiz.
 type SelectionBody = {
@@ -206,6 +216,155 @@ export class BillingController {
     await this.provisionFlags(rawSelections);
 
     return { success: true, amount: quote.amountMajor, currency, interval: "year" };
+  }
+
+  // ── Custom Stripe Elements flow (no hosted Checkout / no billing portal) ────
+
+  // Resolve the account + its Stripe customer (creating one if missing).
+  private async getAccountStripe(
+    req: Request,
+  ): Promise<{ accountId: string; customerId: string; currency: SupportedCurrency }> {
+    const { userId, restaurantId } = (req as AuthedRequest).authUser;
+    const restaurant = await this.prisma.restaurant.findUnique({
+      where: { id: restaurantId },
+      include: { account: true },
+    });
+    const acct = restaurant?.account;
+    if (!acct) throw new BadRequestException("No account");
+    const user = await this.prisma.user.findUnique({ where: { id: userId }, select: { email: true, isDemo: true } });
+    if (!user) throw new BadRequestException("No user");
+    if (user.isDemo) throw new ForbiddenException("Demo accounts cannot pay");
+    const stripe = getStripe();
+    const stored = isSupportedCurrency(acct.billingCurrency) ? (acct.billingCurrency as SupportedCurrency) : null;
+    const currency: SupportedCurrency = stored ?? getRequestBillingCurrency(req);
+    let customerId = acct.stripeCustomerId ?? null;
+    if (customerId) {
+      try {
+        const ex = await stripe.customers.retrieve(customerId);
+        if ((ex as { deleted?: boolean }).deleted) customerId = null;
+      } catch {
+        customerId = null;
+      }
+    }
+    if (!customerId) {
+      const c = await stripe.customers.create({ email: user.email, metadata: { accountId: acct.id, userId } });
+      customerId = c.id;
+    }
+    await this.prisma.account.update({
+      where: { id: acct.id },
+      data: { stripeCustomerId: customerId, billingCurrency: currency },
+    });
+    return { accountId: acct.id, customerId, currency };
+  }
+
+  // Create OR change a subscription. New sub → default_incomplete + returns the
+  // PaymentIntent client_secret for the PaymentElement to confirm (SCA handled
+  // there). Existing active sub → swap items in place (proration charged to the
+  // saved card), no card entry needed.
+  @Post("billing/subscribe")
+  @UseGuards(AuthGuard)
+  async subscribe(
+    @Req() req: Request,
+    @Body() body: { selections?: SelectionBody[]; cycle?: string },
+  ) {
+    if ((req as AuthedRequest).authUser.viaGrant) {
+      throw new ForbiddenException("Billing is managed by the restaurant owner");
+    }
+    const { accountId, customerId, currency } = await this.getAccountStripe(req);
+    const catalog = await this.catalog();
+    const cycle = normalizeCycle(body.cycle);
+    const rawSels = body.selections ?? [];
+    const sels: VenueSel[] = rawSels.map((s) => ({
+      restaurantId: s.restaurantId ?? "",
+      menuOnline: s.menuOnline ?? true,
+      reservations: !!s.reservations,
+      ordersKds: !!s.ordersKds,
+      domain: !!s.domain,
+    }));
+    const active = sels.filter((s) => s.menuOnline);
+    if (active.length === 0) throw new BadRequestException("No venues selected");
+    const quote = computeAccountQuote(catalog, currency, active.map(toSelection), cycle);
+    if (quote.amountCents < 50) throw new BadRequestException("Amount too low");
+
+    const stripe = getStripe();
+    const product = await getAdhocProductId();
+    const price = await stripe.prices.create({
+      currency: currency.toLowerCase(),
+      product,
+      unit_amount: toStripeUnitAmount(quote.amountCents, currency),
+      recurring: { interval: cycle },
+    });
+    const meta = { accountId, sel: encodeSelections(sels.filter((s) => s.restaurantId)), prov: "custom" };
+
+    const sub = await this.prisma.subscription.findUnique({ where: { accountId } });
+    if (sub?.stripeSubscriptionId && sub.status === "ACTIVE") {
+      const live = await stripe.subscriptions.retrieve(sub.stripeSubscriptionId);
+      const itemId = live.items.data[0]?.id;
+      await stripe.subscriptions.update(sub.stripeSubscriptionId, {
+        items: itemId ? [{ id: itemId, price: price.id }] : undefined,
+        proration_behavior: "always_invoice",
+        metadata: meta,
+      });
+      return { changed: true };
+    }
+
+    const created = await stripe.subscriptions.create({
+      customer: customerId,
+      items: [{ price: price.id }],
+      payment_behavior: "default_incomplete",
+      payment_settings: { save_default_payment_method: "on_subscription" },
+      expand: ["latest_invoice.payment_intent"],
+      metadata: meta,
+    });
+    const invoice = created.latest_invoice as { payment_intent?: { client_secret?: string } } | null;
+    return { subscriptionId: created.id, clientSecret: invoice?.payment_intent?.client_secret ?? null };
+  }
+
+  // SetupIntent for changing / adding a card (no charge). The frontend confirms
+  // it with the PaymentElement, then calls set-default-pm.
+  @Post("billing/setup-intent")
+  @UseGuards(AuthGuard)
+  async setupIntent(@Req() req: Request) {
+    const { customerId } = await this.getAccountStripe(req);
+    const si = await getStripe().setupIntents.create({ customer: customerId, payment_method_types: ["card"] });
+    return { clientSecret: si.client_secret };
+  }
+
+  @Post("billing/set-default-pm")
+  @UseGuards(AuthGuard)
+  async setDefaultPm(@Req() req: Request, @Body() body: { paymentMethodId?: string }) {
+    if (!body.paymentMethodId) throw new BadRequestException("paymentMethodId required");
+    const { accountId, customerId } = await this.getAccountStripe(req);
+    const stripe = getStripe();
+    await stripe.customers.update(customerId, {
+      invoice_settings: { default_payment_method: body.paymentMethodId },
+    });
+    const sub = await this.prisma.subscription.findUnique({ where: { accountId } });
+    if (sub?.stripeSubscriptionId) {
+      await stripe.subscriptions
+        .update(sub.stripeSubscriptionId, { default_payment_method: body.paymentMethodId })
+        .catch(() => undefined);
+    }
+    return { success: true };
+  }
+
+  // Cancel — immediately or at period end. The webhook reflects the state.
+  @Post("billing/cancel")
+  @UseGuards(AuthGuard)
+  async cancel(@Req() req: Request, @Body() body: { atPeriodEnd?: boolean }) {
+    if ((req as AuthedRequest).authUser.viaGrant) {
+      throw new ForbiddenException("Billing is managed by the restaurant owner");
+    }
+    const accountId = await this.accountIdFor(req);
+    const sub = await this.prisma.subscription.findUnique({ where: { accountId } });
+    if (!sub?.stripeSubscriptionId) throw new BadRequestException("No active subscription");
+    const stripe = getStripe();
+    if (body.atPeriodEnd) {
+      await stripe.subscriptions.update(sub.stripeSubscriptionId, { cancel_at_period_end: true });
+    } else {
+      await stripe.subscriptions.cancel(sub.stripeSubscriptionId);
+    }
+    return { success: true, atPeriodEnd: !!body.atPeriodEnd };
   }
 
   // ── Admin: edit the pricing catalog ────────────────────────────────────────
