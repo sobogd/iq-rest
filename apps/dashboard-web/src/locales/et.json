@@ -657,7 +657,14 @@
         "paymentReceived": "Makse laekus — aktiveerime sinu tellimust…",
         "subscriptionUpdated": "Tellimus uuendatud.",
         "errStartSubscription": "Tellimust ei õnnestunud alustada. Proovi uuesti.",
-        "errOpenPayment": "Makselehte ei õnnestunud avada. Proovi uuesti."
+        "errOpenPayment": "Makselehte ei õnnestunud avada. Proovi uuesti.",
+        "confirmChangeTitle": "Kinnita paketi muutmine",
+        "confirmChargeNow": "Sinult võetakse nüüd {amount} (proportsionaalselt selle perioodi ülejäänud osa eest).",
+        "confirmChangeCredit": "Saad {amount} krediiti oma järgmiste arvete katteks.",
+        "confirmChangeUnknown": "Sinu kaardilt võetakse proportsionaalne summa selle perioodi ülejäänud osa eest.",
+        "confirmThenRecurring": "Seejärel {amount} / {period} edaspidi.",
+        "confirmPay": "Kinnita",
+        "cancel": "Tühista"
       },
       "support": {
         "title": "Tugi",

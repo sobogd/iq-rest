@@ -657,7 +657,14 @@
         "paymentReceived": "Plată primită — îți activăm abonamentul…",
         "subscriptionUpdated": "Abonament actualizat.",
         "errStartSubscription": "Nu am putut porni abonamentul. Încearcă din nou.",
-        "errOpenPayment": "Nu am putut deschide pagina de plată. Încearcă din nou."
+        "errOpenPayment": "Nu am putut deschide pagina de plată. Încearcă din nou.",
+        "confirmChangeTitle": "Confirmă schimbarea planului",
+        "confirmChargeNow": "Vei fi taxat cu {amount} acum (proporțional pentru restul acestei perioade).",
+        "confirmChangeCredit": "Vei primi un credit de {amount} pentru următoarele facturi.",
+        "confirmChangeUnknown": "Cardul tău va fi taxat cu o sumă proporțională pentru restul acestei perioade.",
+        "confirmThenRecurring": "Apoi {amount} / {period} în continuare.",
+        "confirmPay": "Confirmă",
+        "cancel": "Anulează"
       },
       "support": {
         "title": "Suport",

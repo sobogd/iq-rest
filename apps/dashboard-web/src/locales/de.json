@@ -657,7 +657,14 @@
         "paymentReceived": "Zahlung erhalten — dein Abonnement wird aktiviert…",
         "subscriptionUpdated": "Abonnement aktualisiert.",
         "errStartSubscription": "Das Abonnement konnte nicht gestartet werden. Versuche es erneut.",
-        "errOpenPayment": "Die Zahlungsseite konnte nicht geöffnet werden. Versuche es erneut."
+        "errOpenPayment": "Die Zahlungsseite konnte nicht geöffnet werden. Versuche es erneut.",
+        "confirmChangeTitle": "Tarifwechsel bestätigen",
+        "confirmChargeNow": "Dir werden jetzt {amount} berechnet (anteilig für den Rest dieses Zeitraums).",
+        "confirmChangeCredit": "Du erhältst ein Guthaben von {amount} für deine nächsten Rechnungen.",
+        "confirmChangeUnknown": "Deiner Karte wird ein anteiliger Betrag für den Rest dieses Zeitraums berechnet.",
+        "confirmThenRecurring": "Danach {amount} / {period} fortlaufend.",
+        "confirmPay": "Bestätigen",
+        "cancel": "Abbrechen"
       },
       "support": {
         "title": "Support",

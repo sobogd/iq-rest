@@ -657,7 +657,14 @@
         "paymentReceived": "Betaling ontvangen — je abonnement wordt geactiveerd…",
         "subscriptionUpdated": "Abonnement bijgewerkt.",
         "errStartSubscription": "Kon het abonnement niet starten. Probeer het opnieuw.",
-        "errOpenPayment": "Kon de betaalpagina niet openen. Probeer het opnieuw."
+        "errOpenPayment": "Kon de betaalpagina niet openen. Probeer het opnieuw.",
+        "confirmChangeTitle": "Abonnementswijziging bevestigen",
+        "confirmChargeNow": "Er wordt nu {amount} in rekening gebracht (naar rato voor de rest van deze periode).",
+        "confirmChangeCredit": "Je ontvangt een tegoed van {amount} voor je volgende facturen.",
+        "confirmChangeUnknown": "Er wordt een bedrag naar rato voor de rest van deze periode van je kaart afgeschreven.",
+        "confirmThenRecurring": "Daarna {amount} / {period} doorlopend.",
+        "confirmPay": "Bevestigen",
+        "cancel": "Annuleren"
       },
       "support": {
         "title": "Ondersteuning",

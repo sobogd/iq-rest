@@ -657,7 +657,14 @@
         "paymentReceived": "Plaćanje zaprimljeno — aktiviramo vašu pretplatu…",
         "subscriptionUpdated": "Pretplata ažurirana.",
         "errStartSubscription": "Nije moguće pokrenuti pretplatu. Pokušajte ponovno.",
-        "errOpenPayment": "Nije moguće otvoriti stranicu za plaćanje. Pokušajte ponovno."
+        "errOpenPayment": "Nije moguće otvoriti stranicu za plaćanje. Pokušajte ponovno.",
+        "confirmChangeTitle": "Potvrdite promjenu plana",
+        "confirmChargeNow": "Sada će vam biti naplaćeno {amount} (razmjerno za ostatak tekućeg razdoblja).",
+        "confirmChangeCredit": "Primit ćete kredit od {amount} za sljedeće račune.",
+        "confirmChangeUnknown": "S vaše kartice naplatit će se razmjeran iznos za ostatak tekućeg razdoblja.",
+        "confirmThenRecurring": "Zatim {amount} / {period} nadalje.",
+        "confirmPay": "Potvrdi",
+        "cancel": "Odustani"
       },
       "support": {
         "title": "Podrška",

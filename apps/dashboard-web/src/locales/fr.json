@@ -657,7 +657,14 @@
         "paymentReceived": "Paiement reçu — activation de votre abonnement…",
         "subscriptionUpdated": "Abonnement mis à jour.",
         "errStartSubscription": "Impossible de démarrer l'abonnement. Réessayez.",
-        "errOpenPayment": "Impossible d'ouvrir la page de paiement. Réessayez."
+        "errOpenPayment": "Impossible d'ouvrir la page de paiement. Réessayez.",
+        "confirmChangeTitle": "Confirmer le changement de forfait",
+        "confirmChargeNow": "Vous serez débité de {amount} maintenant (au prorata du reste de cette période).",
+        "confirmChangeCredit": "Vous recevrez un crédit de {amount} sur vos prochaines factures.",
+        "confirmChangeUnknown": "Un montant au prorata du reste de cette période sera prélevé sur votre carte.",
+        "confirmThenRecurring": "Puis {amount} / {period} par la suite.",
+        "confirmPay": "Confirmer",
+        "cancel": "Annuler"
       },
       "support": {
         "title": "Support",

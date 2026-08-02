@@ -657,7 +657,14 @@
         "paymentReceived": "Pagamento ricevuto — attivazione dell'abbonamento…",
         "subscriptionUpdated": "Abbonamento aggiornato.",
         "errStartSubscription": "Impossibile avviare l'abbonamento. Riprova.",
-        "errOpenPayment": "Impossibile aprire la pagina di pagamento. Riprova."
+        "errOpenPayment": "Impossibile aprire la pagina di pagamento. Riprova.",
+        "confirmChangeTitle": "Conferma il cambio di piano",
+        "confirmChargeNow": "Ti verrà addebitato {amount} ora (proporzionato al resto di questo periodo).",
+        "confirmChangeCredit": "Riceverai un credito di {amount} per le tue prossime fatture.",
+        "confirmChangeUnknown": "Sulla tua carta verrà addebitato un importo proporzionato al resto di questo periodo.",
+        "confirmThenRecurring": "Poi {amount} / {period} in seguito.",
+        "confirmPay": "Conferma",
+        "cancel": "Annulla"
       },
       "support": {
         "title": "Supporto",

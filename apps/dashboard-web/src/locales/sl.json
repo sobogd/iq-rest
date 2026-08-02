@@ -657,7 +657,14 @@
         "paymentReceived": "Plačilo prejeto — aktiviramo vašo naročnino…",
         "subscriptionUpdated": "Naročnina posodobljena.",
         "errStartSubscription": "Naročnine ni bilo mogoče zagnati. Poskusite znova.",
-        "errOpenPayment": "Strani za plačilo ni bilo mogoče odpreti. Poskusite znova."
+        "errOpenPayment": "Strani za plačilo ni bilo mogoče odpreti. Poskusite znova.",
+        "confirmChangeTitle": "Potrdite spremembo paketa",
+        "confirmChargeNow": "Zdaj vam bo zaračunano {amount} (sorazmerno za preostanek tekočega obdobja).",
+        "confirmChangeCredit": "Prejeli boste dobropis v višini {amount} za naslednje račune.",
+        "confirmChangeUnknown": "Vaša kartica bo bremenjena za sorazmeren znesek za preostanek tekočega obdobja.",
+        "confirmThenRecurring": "Nato {amount} / {period} naprej.",
+        "confirmPay": "Potrdi",
+        "cancel": "Prekliči"
       },
       "support": {
         "title": "Podpora",

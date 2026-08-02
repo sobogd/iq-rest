@@ -657,7 +657,14 @@
         "paymentReceived": "Pagamento recebido — a ativar a sua subscrição…",
         "subscriptionUpdated": "Subscrição atualizada.",
         "errStartSubscription": "Não foi possível iniciar a subscrição. Tente novamente.",
-        "errOpenPayment": "Não foi possível abrir a página de pagamento. Tente novamente."
+        "errOpenPayment": "Não foi possível abrir a página de pagamento. Tente novamente.",
+        "confirmChangeTitle": "Confirmar mudança de plano",
+        "confirmChargeNow": "Serão cobrados {amount} agora (proporcional ao restante deste período).",
+        "confirmChangeCredit": "Receberá um crédito de {amount} para as suas próximas faturas.",
+        "confirmChangeUnknown": "Será cobrado no seu cartão um valor proporcional ao restante deste período.",
+        "confirmThenRecurring": "Depois {amount} / {period} de forma recorrente.",
+        "confirmPay": "Confirmar",
+        "cancel": "Cancelar"
       },
       "support": {
         "title": "Suporte",

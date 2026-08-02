@@ -657,7 +657,14 @@
         "paymentReceived": "Betalning mottagen — aktiverar din prenumeration…",
         "subscriptionUpdated": "Prenumerationen uppdaterad.",
         "errStartSubscription": "Det gick inte att starta prenumerationen. Försök igen.",
-        "errOpenPayment": "Det gick inte att öppna betalningssidan. Försök igen."
+        "errOpenPayment": "Det gick inte att öppna betalningssidan. Försök igen.",
+        "confirmChangeTitle": "Bekräfta ändring av abonnemang",
+        "confirmChargeNow": "Du debiteras {amount} nu (proportionellt för resten av den här perioden).",
+        "confirmChangeCredit": "Du får en kredit på {amount} mot dina kommande fakturor.",
+        "confirmChangeUnknown": "Ditt kort debiteras ett proportionellt belopp för resten av den här perioden.",
+        "confirmThenRecurring": "Därefter {amount} / {period} framöver.",
+        "confirmPay": "Bekräfta",
+        "cancel": "Avbryt"
       },
       "support": {
         "title": "Support",

@@ -657,7 +657,14 @@
         "paymentReceived": "Greiðsla móttekin — virkja áskriftina þína…",
         "subscriptionUpdated": "Áskrift uppfærð.",
         "errStartSubscription": "Tókst ekki að hefja áskriftina. Reyndu aftur.",
-        "errOpenPayment": "Tókst ekki að opna greiðslusíðuna. Reyndu aftur."
+        "errOpenPayment": "Tókst ekki að opna greiðslusíðuna. Reyndu aftur.",
+        "confirmChangeTitle": "Staðfesta breytingu á áskrift",
+        "confirmChargeNow": "Nú verður {amount} skuldfært af kortinu þínu (hlutfallslega fyrir það sem eftir er af þessu tímabili).",
+        "confirmChangeCredit": "Þú færð inneign að fjárhæð {amount} upp í næstu reikninga.",
+        "confirmChangeUnknown": "Kortið þitt verður skuldfært um hlutfallslega fjárhæð fyrir það sem eftir er af þessu tímabili.",
+        "confirmThenRecurring": "Síðan {amount} / {period} áfram.",
+        "confirmPay": "Staðfesta",
+        "cancel": "Hætta við"
       },
       "support": {
         "title": "Stuðningur",

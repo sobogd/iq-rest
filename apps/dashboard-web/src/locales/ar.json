@@ -657,7 +657,14 @@
         "paymentReceived": "تم استلام الدفعة — جارٍ تفعيل اشتراكك…",
         "subscriptionUpdated": "تم تحديث الاشتراك.",
         "errStartSubscription": "تعذّر بدء الاشتراك. حاول مرة أخرى.",
-        "errOpenPayment": "تعذّر فتح صفحة الدفع. حاول مرة أخرى."
+        "errOpenPayment": "تعذّر فتح صفحة الدفع. حاول مرة أخرى.",
+        "confirmChangeTitle": "تأكيد تغيير الخطة",
+        "confirmChargeNow": "سيتم خصم {amount} الآن (محسوبة بالتناسب لبقية هذه الفترة).",
+        "confirmChangeCredit": "ستحصل على رصيد {amount} يُطبَّق على فواتيرك القادمة.",
+        "confirmChangeUnknown": "سيتم خصم مبلغ محسوب بالتناسب من بطاقتك لبقية هذه الفترة.",
+        "confirmThenRecurring": "ثم {amount} / {period} بعد ذلك.",
+        "confirmPay": "تأكيد",
+        "cancel": "إلغاء"
       },
       "support": {
         "title": "الدعم",

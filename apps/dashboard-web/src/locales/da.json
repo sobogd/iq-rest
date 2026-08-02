@@ -657,7 +657,14 @@
         "paymentReceived": "Betaling modtaget — aktiverer dit abonnement…",
         "subscriptionUpdated": "Abonnement opdateret.",
         "errStartSubscription": "Kunne ikke starte abonnementet. Prøv igen.",
-        "errOpenPayment": "Kunne ikke åbne betalingssiden. Prøv igen."
+        "errOpenPayment": "Kunne ikke åbne betalingssiden. Prøv igen.",
+        "confirmChangeTitle": "Bekræft ændring af abonnement",
+        "confirmChargeNow": "Du bliver opkrævet {amount} nu (forholdsmæssigt for resten af denne periode).",
+        "confirmChangeCredit": "Du modtager en kredit på {amount} til dine kommende fakturaer.",
+        "confirmChangeUnknown": "Dit kort bliver opkrævet et forholdsmæssigt beløb for resten af denne periode.",
+        "confirmThenRecurring": "Derefter {amount} / {period} fremover.",
+        "confirmPay": "Bekræft",
+        "cancel": "Annuller"
       },
       "support": {
         "title": "Support",

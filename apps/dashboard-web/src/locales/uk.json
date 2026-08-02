@@ -657,7 +657,14 @@
         "paymentReceived": "Платіж отримано — активуємо вашу підписку…",
         "subscriptionUpdated": "Підписку оновлено.",
         "errStartSubscription": "Не вдалося розпочати підписку. Спробуйте ще раз.",
-        "errOpenPayment": "Не вдалося відкрити сторінку оплати. Спробуйте ще раз."
+        "errOpenPayment": "Не вдалося відкрити сторінку оплати. Спробуйте ще раз.",
+        "confirmChangeTitle": "Підтвердьте зміну тарифу",
+        "confirmChargeNow": "Зараз буде списано {amount} (пропорційно за решту поточного періоду).",
+        "confirmChangeCredit": "Ви отримаєте {amount} у рахунок наступних платежів.",
+        "confirmChangeUnknown": "З вашої картки буде списано пропорційну суму за решту поточного періоду.",
+        "confirmThenRecurring": "Далі — {amount} / {period}.",
+        "confirmPay": "Підтвердити",
+        "cancel": "Скасувати"
       },
       "support": {
         "title": "Підтримка",

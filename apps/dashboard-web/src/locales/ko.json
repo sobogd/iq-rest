@@ -657,7 +657,14 @@
         "paymentReceived": "결제가 접수되었습니다 — 구독을 활성화하는 중…",
         "subscriptionUpdated": "구독이 업데이트되었습니다.",
         "errStartSubscription": "구독을 시작할 수 없습니다. 다시 시도하세요.",
-        "errOpenPayment": "결제 페이지를 열 수 없습니다. 다시 시도하세요."
+        "errOpenPayment": "결제 페이지를 열 수 없습니다. 다시 시도하세요.",
+        "confirmChangeTitle": "요금제 변경 확인",
+        "confirmChargeNow": "지금 {amount}가 청구됩니다(이번 기간의 남은 기간만큼 일할 계산).",
+        "confirmChangeCredit": "다음 청구서에 사용할 수 있는 {amount} 크레딧이 적립됩니다.",
+        "confirmChangeUnknown": "이번 기간의 남은 기간에 대해 일할 계산된 금액이 카드로 청구됩니다.",
+        "confirmThenRecurring": "이후에는 {amount} / {period}로 청구됩니다.",
+        "confirmPay": "확인",
+        "cancel": "취소"
       },
       "support": {
         "title": "지원",

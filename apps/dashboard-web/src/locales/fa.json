@@ -657,7 +657,14 @@
         "paymentReceived": "پرداخت دریافت شد — در حال فعال‌سازی اشتراک شما…",
         "subscriptionUpdated": "اشتراک به‌روزرسانی شد.",
         "errStartSubscription": "شروع اشتراک ممکن نشد. دوباره تلاش کنید.",
-        "errOpenPayment": "باز کردن صفحه پرداخت ممکن نشد. دوباره تلاش کنید."
+        "errOpenPayment": "باز کردن صفحه پرداخت ممکن نشد. دوباره تلاش کنید.",
+        "confirmChangeTitle": "تأیید تغییر پلن",
+        "confirmChargeNow": "مبلغ {amount} هم‌اکنون از شما دریافت می‌شود (به‌نسبت باقیمانده این دوره).",
+        "confirmChangeCredit": "اعتباری معادل {amount} برای فاکتورهای بعدی شما اعمال می‌شود.",
+        "confirmChangeUnknown": "مبلغی متناسب با باقیمانده این دوره از کارت شما دریافت می‌شود.",
+        "confirmThenRecurring": "سپس {amount} / {period} از این پس.",
+        "confirmPay": "تأیید",
+        "cancel": "انصراف"
       },
       "support": {
         "title": "پشتیبانی",

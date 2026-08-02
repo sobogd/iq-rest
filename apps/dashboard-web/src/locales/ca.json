@@ -657,7 +657,14 @@
         "paymentReceived": "Pagament rebut — activant la teva subscripció…",
         "subscriptionUpdated": "Subscripció actualitzada.",
         "errStartSubscription": "No s'ha pogut iniciar la subscripció. Torna-ho a provar.",
-        "errOpenPayment": "No s'ha pogut obrir la pàgina de pagament. Torna-ho a provar."
+        "errOpenPayment": "No s'ha pogut obrir la pàgina de pagament. Torna-ho a provar.",
+        "confirmChangeTitle": "Confirmar el canvi de pla",
+        "confirmChargeNow": "Se't cobrarà {amount} ara (prorratejat per la resta d'aquest període).",
+        "confirmChangeCredit": "Rebràs un crèdit de {amount} per a les teves properes factures.",
+        "confirmChangeUnknown": "Es cobrarà a la teva targeta un import prorratejat per la resta d'aquest període.",
+        "confirmThenRecurring": "Després {amount} / {period} de manera recurrent.",
+        "confirmPay": "Confirmar",
+        "cancel": "Cancel·lar"
       },
       "support": {
         "title": "Suport",

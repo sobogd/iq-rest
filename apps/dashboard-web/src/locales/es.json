@@ -657,7 +657,14 @@
         "paymentReceived": "Pago recibido — activando tu suscripción…",
         "subscriptionUpdated": "Suscripción actualizada.",
         "errStartSubscription": "No se pudo iniciar la suscripción. Inténtalo de nuevo.",
-        "errOpenPayment": "No se pudo abrir la página de pago. Inténtalo de nuevo."
+        "errOpenPayment": "No se pudo abrir la página de pago. Inténtalo de nuevo.",
+        "confirmChangeTitle": "Confirmar cambio de plan",
+        "confirmChargeNow": "Se te cobrará {amount} ahora (prorrateado por el resto de este periodo).",
+        "confirmChangeCredit": "Recibirás un crédito de {amount} para tus próximas facturas.",
+        "confirmChangeUnknown": "Se cobrará a tu tarjeta un importe prorrateado por el resto de este periodo.",
+        "confirmThenRecurring": "Después {amount} / {period} de forma recurrente.",
+        "confirmPay": "Confirmar",
+        "cancel": "Cancelar"
       },
       "support": {
         "title": "Soporte",

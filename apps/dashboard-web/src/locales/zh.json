@@ -657,7 +657,14 @@
         "paymentReceived": "已收到付款 — 正在激活您的订阅…",
         "subscriptionUpdated": "订阅已更新。",
         "errStartSubscription": "无法启动订阅。请重试。",
-        "errOpenPayment": "无法打开付款页面。请重试。"
+        "errOpenPayment": "无法打开付款页面。请重试。",
+        "confirmChangeTitle": "确认套餐变更",
+        "confirmChargeNow": "现在将向您收取 {amount}（按本周期剩余时间按比例计算）。",
+        "confirmChangeCredit": "您将获得 {amount} 的抵扣额，用于抵扣后续账单。",
+        "confirmChangeUnknown": "将按本周期剩余时间按比例向您的卡收取相应金额。",
+        "confirmThenRecurring": "之后为 {amount} / {period}。",
+        "confirmPay": "确认",
+        "cancel": "取消"
       },
       "support": {
         "title": "支持",

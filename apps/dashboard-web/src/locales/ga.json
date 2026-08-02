@@ -657,7 +657,14 @@
         "paymentReceived": "Íocaíocht faighte — do shíntiús á ghníomhachtú…",
         "subscriptionUpdated": "Síntiús nuashonraithe.",
         "errStartSubscription": "Níorbh fhéidir an síntiús a thosú. Bain triail eile.",
-        "errOpenPayment": "Níorbh fhéidir leathanach na híocaíochta a oscailt. Bain triail eile."
+        "errOpenPayment": "Níorbh fhéidir leathanach na híocaíochta a oscailt. Bain triail eile.",
+        "confirmChangeTitle": "Deimhnigh athrú an phlean",
+        "confirmChargeNow": "Gearrfar {amount} ort anois (cionroinnte don chuid eile den tréimhse seo).",
+        "confirmChangeCredit": "Gheobhaidh tú creidmheas {amount} i gcoinne do chéad sonraisc eile.",
+        "confirmChangeUnknown": "Gearrfar méid cionroinnte ar do chárta don chuid eile den tréimhse seo.",
+        "confirmThenRecurring": "Ansin {amount} / {period} as seo amach.",
+        "confirmPay": "Deimhnigh",
+        "cancel": "Cealaigh"
       },
       "support": {
         "title": "Tacaíocht",

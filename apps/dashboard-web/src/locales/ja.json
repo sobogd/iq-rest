@@ -657,7 +657,14 @@
         "paymentReceived": "お支払いを受領しました — サブスクリプションを有効化中…",
         "subscriptionUpdated": "サブスクリプションを更新しました。",
         "errStartSubscription": "サブスクリプションを開始できませんでした。もう一度お試しください。",
-        "errOpenPayment": "お支払いページを開けませんでした。もう一度お試しください。"
+        "errOpenPayment": "お支払いページを開けませんでした。もう一度お試しください。",
+        "confirmChangeTitle": "プラン変更の確認",
+        "confirmChargeNow": "今すぐ {amount} が請求されます（今期の残り期間分を日割り計算）。",
+        "confirmChangeCredit": "次回以降の請求に充当される {amount} のクレジットが付与されます。",
+        "confirmChangeUnknown": "今期の残り期間分の日割り金額がカードに請求されます。",
+        "confirmThenRecurring": "以降は {amount} / {period} となります。",
+        "confirmPay": "確認",
+        "cancel": "キャンセル"
       },
       "support": {
         "title": "サポート",

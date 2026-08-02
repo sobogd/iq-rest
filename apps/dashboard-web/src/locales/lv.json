@@ -657,7 +657,14 @@
         "paymentReceived": "Maksājums saņemts — aktivizē jūsu abonementu…",
         "subscriptionUpdated": "Abonements atjaunināts.",
         "errStartSubscription": "Neizdevās sākt abonementu. Mēģiniet vēlreiz.",
-        "errOpenPayment": "Neizdevās atvērt maksājuma lapu. Mēģiniet vēlreiz."
+        "errOpenPayment": "Neizdevās atvērt maksājuma lapu. Mēģiniet vēlreiz.",
+        "confirmChangeTitle": "Apstipriniet plāna maiņu",
+        "confirmChargeNow": "No jums tagad tiks iekasēti {amount} (proporcionāli par šī perioda atlikušo daļu).",
+        "confirmChangeCredit": "Jūs saņemsiet {amount} kredītu nākamajiem rēķiniem.",
+        "confirmChangeUnknown": "No jūsu kartes tiks iekasēta proporcionāla summa par šī perioda atlikušo daļu.",
+        "confirmThenRecurring": "Pēc tam turpmāk {amount} / {period}.",
+        "confirmPay": "Apstiprināt",
+        "cancel": "Atcelt"
       },
       "support": {
         "title": "Atbalsts",

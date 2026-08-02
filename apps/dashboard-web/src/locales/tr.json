@@ -657,7 +657,14 @@
         "paymentReceived": "Ödeme alındı — aboneliğiniz etkinleştiriliyor…",
         "subscriptionUpdated": "Abonelik güncellendi.",
         "errStartSubscription": "Abonelik başlatılamadı. Tekrar deneyin.",
-        "errOpenPayment": "Ödeme sayfası açılamadı. Tekrar deneyin."
+        "errOpenPayment": "Ödeme sayfası açılamadı. Tekrar deneyin.",
+        "confirmChangeTitle": "Plan değişikliğini onayla",
+        "confirmChargeNow": "Şimdi {amount} tutarında ücret alınacak (bu dönemin kalanı için orantılı olarak).",
+        "confirmChangeCredit": "Sonraki faturalarınıza mahsup edilmek üzere {amount} tutarında kredi alacaksınız.",
+        "confirmChangeUnknown": "Kartınızdan bu dönemin kalanı için orantılı bir tutar tahsil edilecek.",
+        "confirmThenRecurring": "Ardından {amount} / {period} devam edecek.",
+        "confirmPay": "Onayla",
+        "cancel": "İptal"
       },
       "support": {
         "title": "Destek",

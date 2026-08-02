@@ -657,7 +657,14 @@
         "paymentReceived": "Płatność otrzymana — aktywujemy Twoją subskrypcję…",
         "subscriptionUpdated": "Subskrypcja zaktualizowana.",
         "errStartSubscription": "Nie udało się rozpocząć subskrypcji. Spróbuj ponownie.",
-        "errOpenPayment": "Nie udało się otworzyć strony płatności. Spróbuj ponownie."
+        "errOpenPayment": "Nie udało się otworzyć strony płatności. Spróbuj ponownie.",
+        "confirmChangeTitle": "Potwierdź zmianę planu",
+        "confirmChargeNow": "Zostanie teraz pobrana kwota {amount} (proporcjonalnie za pozostałą część tego okresu).",
+        "confirmChangeCredit": "Otrzymasz środki w wysokości {amount} na poczet kolejnych faktur.",
+        "confirmChangeUnknown": "Z Twojej karty zostanie pobrana proporcjonalna kwota za pozostałą część tego okresu.",
+        "confirmThenRecurring": "Następnie {amount} / {period}.",
+        "confirmPay": "Potwierdź",
+        "cancel": "Anuluj"
       },
       "support": {
         "title": "Wsparcie",

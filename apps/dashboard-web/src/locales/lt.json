@@ -657,7 +657,14 @@
         "paymentReceived": "Mokėjimas gautas — aktyvinama jūsų prenumerata…",
         "subscriptionUpdated": "Prenumerata atnaujinta.",
         "errStartSubscription": "Nepavyko pradėti prenumeratos. Bandykite dar kartą.",
-        "errOpenPayment": "Nepavyko atidaryti mokėjimo puslapio. Bandykite dar kartą."
+        "errOpenPayment": "Nepavyko atidaryti mokėjimo puslapio. Bandykite dar kartą.",
+        "confirmChangeTitle": "Patvirtinkite plano keitimą",
+        "confirmChargeNow": "Iš jūsų dabar bus nuskaičiuota {amount} (proporcingai už likusią šio laikotarpio dalį).",
+        "confirmChangeCredit": "Gausite {amount} kreditą būsimoms sąskaitoms.",
+        "confirmChangeUnknown": "Nuo jūsų kortelės bus nuskaičiuota proporcinga suma už likusią šio laikotarpio dalį.",
+        "confirmThenRecurring": "Vėliau {amount} / {period}.",
+        "confirmPay": "Patvirtinti",
+        "cancel": "Atšaukti"
       },
       "support": {
         "title": "Pagalba",

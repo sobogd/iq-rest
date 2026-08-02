@@ -657,7 +657,14 @@
         "paymentReceived": "Fizetés megérkezett — előfizetésed aktiválása…",
         "subscriptionUpdated": "Előfizetés frissítve.",
         "errStartSubscription": "Nem sikerült elindítani az előfizetést. Próbáld újra.",
-        "errOpenPayment": "Nem sikerült megnyitni a fizetési oldalt. Próbáld újra."
+        "errOpenPayment": "Nem sikerült megnyitni a fizetési oldalt. Próbáld újra.",
+        "confirmChangeTitle": "Csomagváltás megerősítése",
+        "confirmChargeNow": "Most {amount} összeget számítunk fel (arányosan az időszak hátralévő részére).",
+        "confirmChangeCredit": "{amount} jóváírást kapsz a következő számláidra.",
+        "confirmChangeUnknown": "A kártyádat arányos összeggel terheljük meg az időszak hátralévő részére.",
+        "confirmThenRecurring": "Ezután {amount} / {period}.",
+        "confirmPay": "Megerősítés",
+        "cancel": "Mégse"
       },
       "support": {
         "title": "Támogatás",

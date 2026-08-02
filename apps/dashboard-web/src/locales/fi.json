@@ -657,7 +657,14 @@
         "paymentReceived": "Maksu vastaanotettu — aktivoidaan tilaustasi…",
         "subscriptionUpdated": "Tilaus päivitetty.",
         "errStartSubscription": "Tilauksen aloittaminen epäonnistui. Yritä uudelleen.",
-        "errOpenPayment": "Maksusivun avaaminen epäonnistui. Yritä uudelleen."
+        "errOpenPayment": "Maksusivun avaaminen epäonnistui. Yritä uudelleen.",
+        "confirmChangeTitle": "Vahvista tilauksen muutos",
+        "confirmChargeNow": "Sinulta veloitetaan {amount} nyt (suhteutettuna tämän jakson loppuosaan).",
+        "confirmChangeCredit": "Saat {amount} hyvityksen seuraaviin laskuihisi.",
+        "confirmChangeUnknown": "Kortiltasi veloitetaan suhteutettu summa tämän jakson loppuosalta.",
+        "confirmThenRecurring": "Tämän jälkeen {amount} / {period} jatkossa.",
+        "confirmPay": "Vahvista",
+        "cancel": "Peruuta"
       },
       "support": {
         "title": "Tuki",

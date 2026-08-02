@@ -657,7 +657,14 @@
         "paymentReceived": "Platba prijatá — aktivujeme vaše predplatné…",
         "subscriptionUpdated": "Predplatné aktualizované.",
         "errStartSubscription": "Nepodarilo sa spustiť predplatné. Skúste to znova.",
-        "errOpenPayment": "Nepodarilo sa otvoriť platobnú stránku. Skúste to znova."
+        "errOpenPayment": "Nepodarilo sa otvoriť platobnú stránku. Skúste to znova.",
+        "confirmChangeTitle": "Potvrďte zmenu plánu",
+        "confirmChargeNow": "Teraz vám bude účtované {amount} (pomerne za zvyšok aktuálneho obdobia).",
+        "confirmChangeCredit": "Získate kredit {amount} na ďalšie faktúry.",
+        "confirmChangeUnknown": "Z vašej karty bude účtovaná pomerná suma za zvyšok aktuálneho obdobia.",
+        "confirmThenRecurring": "Potom {amount} / {period} ďalej.",
+        "confirmPay": "Potvrdiť",
+        "cancel": "Zrušiť"
       },
       "support": {
         "title": "Podpora",
