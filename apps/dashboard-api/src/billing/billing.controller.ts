@@ -401,6 +401,14 @@ export class BillingController {
       await stripe.subscriptions.update(sub.stripeSubscriptionId, { cancel_at_period_end: true });
     } else {
       await stripe.subscriptions.cancel(sub.stripeSubscriptionId);
+      // Reflect immediately in our DB (don't wait for the webhook) so the UI
+      // stops showing an active plan / "renews" date right away.
+      await this.prisma.subscription
+        .update({
+          where: { accountId },
+          data: { status: "CANCELED", plan: "FREE", currentPeriodEnd: null, stripeSubscriptionId: null, updatedFromStripeAt: new Date() },
+        })
+        .catch(() => undefined);
     }
     return { success: true, atPeriodEnd: !!body.atPeriodEnd };
   }

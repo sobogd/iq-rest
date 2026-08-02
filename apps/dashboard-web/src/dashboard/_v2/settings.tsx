@@ -1890,16 +1890,16 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  </div>
 
  {pastDue ? (
- <div className="bg-red-50 border border-red-200 rounded-2xl p-4 mb-5">
- <div className="text-sm font-medium text-red-800">{tb("pastDueTitle")}</div>
- <p className="text-xs text-red-700 mt-1 leading-snug">
+ <div className="bg-red-500/10 border border-red-500/30 rounded-2xl p-4 mb-5">
+ <div className="text-sm font-medium text-red-600 dark:text-red-400">{tb("pastDueTitle")}</div>
+ <p className="text-xs text-red-600/80 dark:text-red-400/80 mt-1 leading-snug">
  {pastDueDays > 0 ? tb("pastDueTip", { days: pastDueDays }) : tb("pastDueBlockedTip")}
  </p>
  </div>
  ) : trialExpired ? (
- <div className="bg-red-50 border border-red-200 rounded-2xl p-4 mb-5">
- <div className="text-sm font-medium text-red-800">{tb("menuUnavailable")}</div>
- <p className="text-xs text-red-700 mt-1 leading-snug">
+ <div className="bg-red-500/10 border border-red-500/30 rounded-2xl p-4 mb-5">
+ <div className="text-sm font-medium text-red-600 dark:text-red-400">{tb("menuUnavailable")}</div>
+ <p className="text-xs text-red-600/80 dark:text-red-400/80 mt-1 leading-snug">
  {tb("menuUnavailableTip")}
  </p>
  </div>
