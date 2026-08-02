@@ -399,6 +399,12 @@ export class StripeController {
       case "customer.subscription.created":
       case "customer.subscription.updated": {
         const sub = event.data.object as unknown as SubscriptionData;
+        // Mirror the cancel-at-period-end flag directly (robust for both ad-hoc
+        // and legacy subs, and independent of restaurant resolution). A portal
+        // cancel fires this event with cancel_at_period_end=true.
+        await this.prisma.subscription
+          .updateMany({ where: { stripeSubscriptionId: sub.id }, data: { cancelAtPeriodEnd: !!sub.cancel_at_period_end } })
+          .catch(() => undefined);
         const targetRestaurantId = await this.resolveRestaurantId(sub.id, null);
         if (targetRestaurantId) {
           // Cancel the restaurant's PREVIOUS subscription if a different one is
