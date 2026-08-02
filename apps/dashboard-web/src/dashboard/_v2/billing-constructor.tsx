@@ -17,7 +17,6 @@ import {
   useElements,
   useStripe,
 } from "@stripe/react-stripe-js";
-import type { StripeElementsOptions } from "@stripe/stripe-js";
 import { getStripe } from "./stripe";
 import { useRestaurants } from "./restaurants-context";
 import {
@@ -347,7 +346,7 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
               {money(quote.amountMajor)} / {cycle === "year" ? "year" : "month"}
             </div>
           )}
-          <Elements stripe={getStripe()} options={{ disableLink: true } as unknown as StripeElementsOptions}>
+          <Elements stripe={getStripe()}>
             <PaymentForm
               clientSecret={clientSecret}
               onBack={() => setStep(2)}
