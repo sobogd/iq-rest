@@ -1972,23 +1972,6 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  <div className="bg-card border border-border rounded-2xl p-5 md:p-6 mb-5">
  <BillingConstructor currency={currency} />
  </div>
-
- <a
- href={`https://iq-rest.com/${locale}${PRICING_SLUG_BY_LOCALE[locale] || "/pricing"}`}
- target="_blank"
- rel="noopener noreferrer"
- className="block mt-5 text-sm font-medium text-primary"
- onClick={() => track("dash_settings_billing_pricing_link")}
- >
- {tb("comparePlans")}
- </a>
-
- <p className="text-xs text-muted-foreground mt-3 leading-snug">
- {tb("otherCurrencyTip")}
- </p>
- <p className="text-xs text-muted-foreground mt-2 leading-snug">
- {tb("cancelTip")}
- </p>
  </div>
  </div>
  );

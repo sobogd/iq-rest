@@ -323,38 +323,25 @@ export class BillingController {
       metadata: meta,
     });
 
-    // Extract the client secret to confirm the first invoice. Handle both the
-    // classic `latest_invoice.payment_intent` and newer API's
-    // `latest_invoice.confirmation_secret`; fall back to re-fetching the invoice.
-    type InvoiceLike = {
-      id?: string;
-      payment_intent?: { client_secret?: string } | string | null;
-      confirmation_secret?: { client_secret?: string } | null;
-    };
-    const readSecret = (inv: InvoiceLike | null | undefined): string | null => {
-      if (!inv) return null;
-      const pi = inv.payment_intent;
-      if (pi && typeof pi === "object" && pi.client_secret) return pi.client_secret;
-      if (inv.confirmation_secret?.client_secret) return inv.confirmation_secret.client_secret;
-      return null;
-    };
-    let clientSecret = readSecret(created.latest_invoice as InvoiceLike | null);
-    if (!clientSecret) {
+    // The subscription is created first (default_incomplete). We then send the
+    // customer to Stripe's hosted invoice page to pay with any enabled method
+    // (card / wallets / PayPal / SEPA). Fall back to re-fetching the invoice.
+    type InvoiceLike = { id?: string; hosted_invoice_url?: string | null };
+    let redirectUrl = (created.latest_invoice as InvoiceLike | null)?.hosted_invoice_url ?? null;
+    if (!redirectUrl) {
       const invId = (created.latest_invoice as InvoiceLike | null)?.id;
       if (invId) {
-        const inv = (await stripe.invoices
-          .retrieve(invId, { expand: ["payment_intent", "confirmation_secret"] })
-          .catch(() => null)) as InvoiceLike | null;
-        clientSecret = readSecret(inv);
+        const inv = (await stripe.invoices.retrieve(invId).catch(() => null)) as InvoiceLike | null;
+        redirectUrl = inv?.hosted_invoice_url ?? null;
       }
     }
-    if (!clientSecret) {
+    if (!redirectUrl) {
       console.error(
-        `billing/subscribe: no client secret for sub ${created.id} (status ${created.status}); ` +
+        `billing/subscribe: no hosted_invoice_url for sub ${created.id} (status ${created.status}); ` +
           `latest_invoice=${JSON.stringify(created.latest_invoice)?.slice(0, 300)}`,
       );
     }
-    return { subscriptionId: created.id, clientSecret };
+    return { subscriptionId: created.id, redirectUrl };
   }
 
   // SetupIntent for changing / adding a card (no charge). The frontend confirms

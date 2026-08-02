@@ -972,7 +972,7 @@ export async function getInvoices(): Promise<InvoiceRow[]> {
 export async function subscribeCustom(
  selections: VenueSelectionInput[],
  cycle: "month" | "year",
-): Promise<{ clientSecret?: string | null; changed?: boolean; subscriptionId?: string } | null> {
+): Promise<{ redirectUrl?: string | null; changed?: boolean; subscriptionId?: string } | null> {
  const res = await apiFetch("/api/billing/subscribe", {
   credentials: "include",
   method: "POST",
