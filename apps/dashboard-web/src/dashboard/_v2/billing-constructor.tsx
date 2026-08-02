@@ -17,6 +17,7 @@ import {
   useElements,
   useStripe,
 } from "@stripe/react-stripe-js";
+import type { StripeElementsOptions } from "@stripe/stripe-js";
 import { getStripe } from "./stripe";
 import { useRestaurants } from "./restaurants-context";
 import {
@@ -346,7 +347,7 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
               {money(quote.amountMajor)} / {cycle === "year" ? "year" : "month"}
             </div>
           )}
-          <Elements stripe={getStripe()}>
+          <Elements stripe={getStripe()} options={{ disableLink: true } as unknown as StripeElementsOptions}>
             <PaymentForm
               clientSecret={clientSecret}
               onBack={() => setStep(2)}
@@ -426,15 +427,6 @@ function PriceBar({
 // Inline card form — split Elements (own-styled fields). Always a fresh card;
 // Stripe stores it on the customer only for subscription renewals (no saved-card
 // UI here). Handles 3DS via confirmCardPayment.
-const ELEMENT_STYLE = {
-  base: {
-    fontSize: "14px",
-    color: "#111827",
-    fontFamily: "inherit",
-    "::placeholder": { color: "#9ca3af" },
-  },
-  invalid: { color: "#dc2626" },
-};
 const fieldBox = "h-10 rounded-lg border border-input bg-card px-3 flex items-center";
 
 function PaymentForm({ clientSecret, onDone, onBack }: { clientSecret: string; onDone: () => void; onBack: () => void }) {
@@ -442,6 +434,25 @@ function PaymentForm({ clientSecret, onDone, onBack }: { clientSecret: string; o
   const elements = useElements();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  // Colours from the app's CSS theme variables (HSL triplets → hsl()). Read once;
+  // the iframe can't inherit them, so we pass concrete values.
+  const elementStyle = useMemo(() => {
+    const cs = getComputedStyle(document.documentElement);
+    const hsl = (name: string, fallback: string) => {
+      const v = cs.getPropertyValue(name).trim();
+      return v ? `hsl(${v})` : fallback;
+    };
+    return {
+      base: {
+        fontSize: "14px",
+        fontFamily: "inherit",
+        color: hsl("--foreground", "#111827"),
+        "::placeholder": { color: hsl("--muted-foreground", "#9ca3af") },
+      },
+      invalid: { color: hsl("--destructive", "#dc2626") },
+    };
+  }, []);
 
   const pay = async () => {
     if (!stripe || !elements || busy) return;
@@ -470,20 +481,20 @@ function PaymentForm({ clientSecret, onDone, onBack }: { clientSecret: string; o
       <label className="flex flex-col gap-1">
         <span className="text-xs text-muted-foreground">Card number</span>
         <div className={fieldBox}>
-          <CardNumberElement options={{ style: ELEMENT_STYLE }} className="w-full" />
+          <CardNumberElement options={{ style: elementStyle }} className="w-full" />
         </div>
       </label>
       <div className="grid grid-cols-2 gap-3">
         <label className="flex flex-col gap-1">
           <span className="text-xs text-muted-foreground">Expiry</span>
           <div className={fieldBox}>
-            <CardExpiryElement options={{ style: ELEMENT_STYLE }} className="w-full" />
+            <CardExpiryElement options={{ style: elementStyle }} className="w-full" />
           </div>
         </label>
         <label className="flex flex-col gap-1">
           <span className="text-xs text-muted-foreground">CVC</span>
           <div className={fieldBox}>
-            <CardCvcElement options={{ style: ELEMENT_STYLE }} className="w-full" />
+            <CardCvcElement options={{ style: elementStyle }} className="w-full" />
           </div>
         </label>
       </div>
