@@ -130,6 +130,7 @@ write("dashboard-web", {
   VITE_ADMIN_EMAIL_DOMAIN: E.ADMIN_EMAIL_DOMAIN,
   VITE_GOOGLE_MAPS_API_KEY: E.GOOGLE_MAPS_API_KEY,
   VITE_OPTIONS_ENABLED: E.VITE_OPTIONS_ENABLED,
+  VITE_STRIPE_PUBLISHABLE_KEY: E.STRIPE_PUBLISHABLE_KEY,
 });
 
 // ----------------------------- public-menu ------------------------------

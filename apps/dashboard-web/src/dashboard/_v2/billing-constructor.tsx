@@ -12,8 +12,10 @@ import { useRestaurants } from "./restaurants-context";
 import {
   computeQuote,
   getPricingCatalog,
-  createAdhocCheckout,
+  subscribeCustom,
   requestSepaInvoice,
+  createSetupIntent,
+  cancelSubscription,
   getBillingProfile,
   saveBillingProfile,
   getInvoices,
@@ -23,6 +25,7 @@ import {
   type PricingCatalog,
   type VenueSelectionInput,
 } from "./api";
+import { PaymentModal } from "./payment-modal";
 
 type Cycle = "month" | "year";
 type AddonKey = "reservations" | "ordersKds" | "domain";
@@ -43,6 +46,7 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
   const [quote, setQuote] = useState<BillingQuote | null>(null);
   const [catalog, setCatalog] = useState<PricingCatalog | null>(null);
   const [busy, setBusy] = useState(false);
+  const [modal, setModal] = useState<{ mode: "payment" | "setup"; clientSecret: string } | null>(null);
 
   useEffect(() => {
     getPricingCatalog().then(setCatalog);
@@ -85,9 +89,14 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
   const payCard = async () => {
     if (busy || activeSelections.length === 0) return;
     setBusy(true);
-    const url = await createAdhocCheckout(activeSelections, cycle, currency);
-    if (url) window.location.assign(url);
-    else setBusy(false);
+    const res = await subscribeCustom(activeSelections, cycle);
+    setBusy(false);
+    if (!res) return;
+    if (res.changed) {
+      alert("Subscription updated.");
+      return;
+    }
+    if (res.clientSecret) setModal({ mode: "payment", clientSecret: res.clientSecret });
   };
   const payInvoice = async () => {
     if (busy || activeSelections.length === 0) return;
@@ -95,6 +104,15 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
     const res = await requestSepaInvoice(activeSelections, currency);
     setBusy(false);
     if (res?.success) alert("Request received — we'll email you an invoice to pay by SEPA transfer.");
+  };
+  const changeCard = async () => {
+    const r = await createSetupIntent();
+    if (r?.clientSecret) setModal({ mode: "setup", clientSecret: r.clientSecret });
+  };
+  const doCancel = async () => {
+    if (!confirm("Cancel the subscription at the end of the current period?")) return;
+    const ok = await cancelSubscription(true);
+    if (ok) alert("Your subscription will cancel at the end of the period.");
   };
 
   const single = list.length === 1;
@@ -231,8 +249,30 @@ export function BillingConstructor({ currency = "EUR" }: { currency?: string }) 
         </div>
       </div>
 
+      {/* Manage — card + cancel, all in-app (no Stripe portal) */}
+      <div className="flex items-center gap-4 text-sm">
+        <button type="button" onClick={changeCard} className="text-primary font-medium">
+          Update card
+        </button>
+        <button type="button" onClick={doCancel} className="text-muted-foreground">
+          Cancel subscription
+        </button>
+      </div>
+
       <BillingProfileForm />
       <InvoicesList />
+
+      {modal ? (
+        <PaymentModal
+          mode={modal.mode}
+          clientSecret={modal.clientSecret}
+          onDone={() => {
+            setModal(null);
+            alert(modal.mode === "payment" ? "Payment received — activating…" : "Card saved.");
+          }}
+          onClose={() => setModal(null)}
+        />
+      ) : null}
     </div>
   );
 }

@@ -965,6 +965,58 @@ export async function getInvoices(): Promise<InvoiceRow[]> {
  return await res.json();
 }
 
+// ── Custom Stripe Elements flow (no hosted Checkout / portal) ──
+
+// New sub → { clientSecret } (confirm with PaymentElement). Existing active sub
+// → { changed: true } (swapped in place, proration on the saved card).
+export async function subscribeCustom(
+ selections: VenueSelectionInput[],
+ cycle: "month" | "year",
+): Promise<{ clientSecret?: string | null; changed?: boolean; subscriptionId?: string } | null> {
+ const res = await apiFetch("/api/billing/subscribe", {
+  credentials: "include",
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ selections, cycle }),
+ });
+ if (!res.ok) {
+  console.error("subscribe error:", res.status, await res.text().catch(() => ""));
+  return null;
+ }
+ return await res.json();
+}
+
+export async function createSetupIntent(): Promise<{ clientSecret: string } | null> {
+ const res = await apiFetch("/api/billing/setup-intent", {
+  credentials: "include",
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: "{}",
+ });
+ if (!res.ok) return null;
+ return await res.json();
+}
+
+export async function setDefaultPaymentMethod(paymentMethodId: string): Promise<boolean> {
+ const res = await apiFetch("/api/billing/set-default-pm", {
+  credentials: "include",
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ paymentMethodId }),
+ });
+ return res.ok;
+}
+
+export async function cancelSubscription(atPeriodEnd: boolean): Promise<boolean> {
+ const res = await apiFetch("/api/billing/cancel", {
+  credentials: "include",
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ atPeriodEnd }),
+ });
+ return res.ok;
+}
+
 // ── Logout ──
 
 export async function logout(): Promise<void> {
