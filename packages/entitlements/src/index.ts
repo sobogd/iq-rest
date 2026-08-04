@@ -24,21 +24,41 @@ import type { PrismaClient } from "@iq-rest/db";
 export const PAST_DUE_GRACE_DAYS = 3;
 const DAY_MS = 86_400_000;
 
+// One billing interval in days (approximate — a whole-day model is enough for a
+// coarse 3-day grace window). Unknown / null interval → assume monthly. Accepts
+// both the new ad-hoc `interval` ("month"/"year") and the legacy `billingCycle`
+// ("MONTHLY"/"YEARLY").
+const INTERVAL_DAYS: Record<string, number> = { month: 30, MONTHLY: 30, year: 365, YEARLY: 365 };
+
+// Start (ms) of the CURRENT — now unpaid — Stripe period: currentPeriodEnd minus
+// one billing interval. On a failed renewal Stripe advances `current_period_end`
+// to the new (unpaid) period, so that timestamp is NOT the moment access should
+// wind down; the renewal that FAILED sits at the period START. Grace runs from
+// here, not from the (future) end.
+function pastDuePeriodStartMs(currentPeriodEnd: Date, interval?: string | null): number {
+  const days = (interval && INTERVAL_DAYS[interval]) || 30;
+  return currentPeriodEnd.getTime() - days * DAY_MS;
+}
+
 // ─── Layer 1: legacy per-restaurant entitlement (behaviour-preserving) ───────
 
 // Millisecond deadline of the PAST_DUE grace window, or null when not PAST_DUE.
+// Anchored to the failed renewal (period START = currentPeriodEnd − one interval),
+// NOT to the future currentPeriodEnd Stripe leaves on the row during dunning.
 export function pastDueGraceEndMs(r: {
   subscriptionStatus: string | null;
   currentPeriodEnd?: Date | null;
+  interval?: string | null;
 }): number | null {
   if (r.subscriptionStatus !== "PAST_DUE" || !r.currentPeriodEnd) return null;
-  return new Date(r.currentPeriodEnd).getTime() + PAST_DUE_GRACE_DAYS * DAY_MS;
+  return pastDuePeriodStartMs(new Date(r.currentPeriodEnd), r.interval) + PAST_DUE_GRACE_DAYS * DAY_MS;
 }
 
 // True while a PAST_DUE subscription is still inside its grace window.
 export function inPastDueGrace(r: {
   subscriptionStatus: string | null;
   currentPeriodEnd?: Date | null;
+  interval?: string | null;
 }): boolean {
   const end = pastDueGraceEndMs(r);
   return end !== null && end > Date.now();
@@ -103,6 +123,9 @@ export type SubscriptionState = {
   plan: PlanCode | string | null;
   status: string | null; // ACTIVE | PAST_DUE | CANCELED | INACTIVE | ...
   currentPeriodEnd?: Date | null;
+  // Billing interval ("month"/"year" or legacy "MONTHLY"/"YEARLY"). Used to
+  // anchor the PAST_DUE grace window to the failed renewal (period start).
+  interval?: string | null;
   // BASIC: which single venue "takes" the subscription. PRO/trial = null.
   appliesToRestaurantId?: string | null;
 };
@@ -187,7 +210,10 @@ export function isTrialActive(account: Pick<AccountState, "trialEndsAt">): boole
 export function isProActive(sub: SubscriptionState | null): boolean {
   if (!sub) return false;
   if (sub.status === "ACTIVE" && sub.plan === "PRO") return true;
-  if (sub.plan === "PRO" && inPastDueGrace({ subscriptionStatus: sub.status, currentPeriodEnd: sub.currentPeriodEnd }))
+  if (
+    sub.plan === "PRO" &&
+    inPastDueGrace({ subscriptionStatus: sub.status, currentPeriodEnd: sub.currentPeriodEnd, interval: sub.interval })
+  )
     return true;
   return false;
 }
@@ -197,7 +223,10 @@ export function isProActive(sub: SubscriptionState | null): boolean {
 export function isBasicActive(sub: SubscriptionState | null): boolean {
   if (!sub) return false;
   if (sub.status === "ACTIVE" && sub.plan === "BASIC") return true;
-  if (sub.plan === "BASIC" && inPastDueGrace({ subscriptionStatus: sub.status, currentPeriodEnd: sub.currentPeriodEnd }))
+  if (
+    sub.plan === "BASIC" &&
+    inPastDueGrace({ subscriptionStatus: sub.status, currentPeriodEnd: sub.currentPeriodEnd, interval: sub.interval })
+  )
     return true;
   return false;
 }
@@ -456,6 +485,9 @@ export function accountStateFromRow(row: RestaurantEntitlementRow): {
               plan: sub.plan,
               status: sub.status,
               currentPeriodEnd: sub.currentPeriodEnd ?? null,
+              // New ad-hoc `interval`, falling back to the legacy `billingCycle`
+              // — anchors the PAST_DUE grace window to the failed renewal.
+              interval: sub.interval ?? sub.billingCycle ?? null,
               appliesToRestaurantId: sub.appliesToRestaurantId ?? null,
             }
           : null,

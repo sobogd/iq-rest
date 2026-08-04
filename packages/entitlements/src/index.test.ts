@@ -19,6 +19,10 @@ import {
 const DAY = 86_400_000;
 const future = (days = 30) => new Date(Date.now() + days * DAY);
 const past = (days = 30) => new Date(Date.now() - days * DAY);
+// currentPeriodEnd for a MONTHLY sub whose renewal failed `days` ago. Stripe
+// advances current_period_end to the (unpaid) new period on the failed renewal,
+// so it sits ~30d AFTER the failure. Grace is anchored to the failure, not here.
+const monthlyCpeFailedDaysAgo = (days: number) => new Date(Date.now() - days * DAY + 30 * DAY);
 
 // ─── Layer 1: legacy per-restaurant helpers (behaviour-preserving) ───────────
 
@@ -27,15 +31,28 @@ describe("PAST_DUE grace", () => {
     expect(pastDueGraceEndMs({ subscriptionStatus: "ACTIVE", currentPeriodEnd: future() })).toBeNull();
     expect(pastDueGraceEndMs({ subscriptionStatus: "PAST_DUE", currentPeriodEnd: null })).toBeNull();
   });
-  it("adds PAST_DUE_GRACE_DAYS to currentPeriodEnd", () => {
-    const cpe = new Date("2026-01-01T00:00:00Z");
+  it("anchors grace to the failed renewal (currentPeriodEnd − one interval + grace)", () => {
+    const cpe = new Date("2026-02-01T00:00:00Z");
+    // monthly: period start = cpe − 30d, grace ends 3d after that.
+    expect(pastDueGraceEndMs({ subscriptionStatus: "PAST_DUE", currentPeriodEnd: cpe, interval: "month" })).toBe(
+      cpe.getTime() - 30 * DAY + PAST_DUE_GRACE_DAYS * DAY,
+    );
+    // yearly subtracts 365d; legacy "MONTHLY"/"YEARLY" map the same; unknown → monthly.
+    expect(pastDueGraceEndMs({ subscriptionStatus: "PAST_DUE", currentPeriodEnd: cpe, interval: "year" })).toBe(
+      cpe.getTime() - 365 * DAY + PAST_DUE_GRACE_DAYS * DAY,
+    );
     expect(pastDueGraceEndMs({ subscriptionStatus: "PAST_DUE", currentPeriodEnd: cpe })).toBe(
-      cpe.getTime() + PAST_DUE_GRACE_DAYS * DAY,
+      cpe.getTime() - 30 * DAY + PAST_DUE_GRACE_DAYS * DAY,
     );
   });
   it("inPastDueGrace true just inside, false past the window", () => {
-    expect(inPastDueGrace({ subscriptionStatus: "PAST_DUE", currentPeriodEnd: past(1) })).toBe(true);
-    expect(inPastDueGrace({ subscriptionStatus: "PAST_DUE", currentPeriodEnd: past(10) })).toBe(false);
+    // Failed 1d ago → still in the 3-day grace; failed 10d ago → expired. Note
+    // both use a FUTURE currentPeriodEnd (Stripe's dunning behaviour) — the old
+    // code, keyed on currentPeriodEnd, wrongly kept these online the whole period.
+    expect(inPastDueGrace({ subscriptionStatus: "PAST_DUE", currentPeriodEnd: monthlyCpeFailedDaysAgo(1) })).toBe(true);
+    expect(inPastDueGrace({ subscriptionStatus: "PAST_DUE", currentPeriodEnd: monthlyCpeFailedDaysAgo(10) })).toBe(
+      false,
+    );
   });
 });
 
@@ -47,8 +64,8 @@ describe("hasProFeatures", () => {
     expect(hasProFeatures({ plan: "PRO", subscriptionStatus: "ACTIVE" })).toBe(true);
   });
   it("PRO in PAST_DUE grace is entitled; past grace is not", () => {
-    expect(hasProFeatures({ plan: "PRO", subscriptionStatus: "PAST_DUE", currentPeriodEnd: past(1) })).toBe(true);
-    expect(hasProFeatures({ plan: "PRO", subscriptionStatus: "PAST_DUE", currentPeriodEnd: past(10) })).toBe(false);
+    expect(hasProFeatures({ plan: "PRO", subscriptionStatus: "PAST_DUE", currentPeriodEnd: monthlyCpeFailedDaysAgo(1) })).toBe(true);
+    expect(hasProFeatures({ plan: "PRO", subscriptionStatus: "PAST_DUE", currentPeriodEnd: monthlyCpeFailedDaysAgo(10) })).toBe(false);
   });
   it("unexpired trial is entitled; expired is not", () => {
     expect(hasProFeatures({ plan: "FREE", subscriptionStatus: null, trialEndsAt: future() })).toBe(true);
@@ -87,14 +104,15 @@ describe("tier predicates", () => {
   });
   it("isProActive incl grace", () => {
     expect(isProActive({ plan: "PRO", status: "ACTIVE" })).toBe(true);
-    expect(isProActive({ plan: "PRO", status: "PAST_DUE", currentPeriodEnd: past(1) })).toBe(true);
-    expect(isProActive({ plan: "PRO", status: "PAST_DUE", currentPeriodEnd: past(10) })).toBe(false);
+    expect(isProActive({ plan: "PRO", status: "PAST_DUE", currentPeriodEnd: monthlyCpeFailedDaysAgo(1) })).toBe(true);
+    expect(isProActive({ plan: "PRO", status: "PAST_DUE", currentPeriodEnd: monthlyCpeFailedDaysAgo(10) })).toBe(false);
     expect(isProActive({ plan: "BASIC", status: "ACTIVE" })).toBe(false);
     expect(isProActive(null)).toBe(false);
   });
   it("isBasicActive incl grace", () => {
     expect(isBasicActive({ plan: "BASIC", status: "ACTIVE" })).toBe(true);
-    expect(isBasicActive({ plan: "BASIC", status: "PAST_DUE", currentPeriodEnd: past(1) })).toBe(true);
+    expect(isBasicActive({ plan: "BASIC", status: "PAST_DUE", currentPeriodEnd: monthlyCpeFailedDaysAgo(1) })).toBe(true);
+    expect(isBasicActive({ plan: "BASIC", status: "PAST_DUE", currentPeriodEnd: monthlyCpeFailedDaysAgo(10) })).toBe(false);
     expect(isBasicActive({ plan: "PRO", status: "ACTIVE" })).toBe(false);
   });
 });

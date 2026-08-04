@@ -8,11 +8,19 @@
 const DAY_MS = 86_400_000;
 export const PAST_DUE_GRACE_DAYS = 3;
 
+// One billing interval in days (coarse — enough for a 3-day grace window). Both
+// the new ad-hoc `interval` ("month"/"year") and the legacy `billingCycle`
+// ("MONTHLY"/"YEARLY") map here; unknown/absent → monthly. Keep in sync with the
+// API entitlements helper.
+const INTERVAL_DAYS: Record<string, number> = { month: 30, MONTHLY: 30, year: 365, YEARLY: 365 };
+
 export type BillingSub = {
   plan: string | null;
   subscriptionStatus: string | null;
   trialEndsAt?: string | null;
   currentPeriodEnd?: string | null;
+  interval?: string | null;
+  billingCycle?: string | null;
 } | null;
 
 function isPaidPlan(sub: BillingSub): boolean {
@@ -35,9 +43,14 @@ export function isPastDue(sub: BillingSub): boolean {
 }
 
 // Millisecond deadline of the PAST_DUE grace window, or null when not PAST_DUE.
+// Anchored to the failed renewal (period START = currentPeriodEnd − one
+// interval), NOT the future currentPeriodEnd Stripe leaves on the row during
+// dunning — otherwise grace would never expire while the period is unpaid.
 export function pastDueGraceEndMs(sub: BillingSub): number | null {
   if (!isPastDue(sub) || !sub!.currentPeriodEnd) return null;
-  return new Date(sub!.currentPeriodEnd).getTime() + PAST_DUE_GRACE_DAYS * DAY_MS;
+  const key = sub!.interval ?? sub!.billingCycle;
+  const days = (key && INTERVAL_DAYS[key]) || 30;
+  return new Date(sub!.currentPeriodEnd).getTime() - days * DAY_MS + PAST_DUE_GRACE_DAYS * DAY_MS;
 }
 
 // True while a PAST_DUE subscription is still inside its grace window (menu +
