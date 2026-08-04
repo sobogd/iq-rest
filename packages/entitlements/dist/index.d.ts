@@ -3,10 +3,12 @@ export declare const PAST_DUE_GRACE_DAYS = 3;
 export declare function pastDueGraceEndMs(r: {
     subscriptionStatus: string | null;
     currentPeriodEnd?: Date | null;
+    interval?: string | null;
 }): number | null;
 export declare function inPastDueGrace(r: {
     subscriptionStatus: string | null;
     currentPeriodEnd?: Date | null;
+    interval?: string | null;
 }): boolean;
 export declare function hasProFeatures(r: {
     plan: string | null;
@@ -27,6 +29,7 @@ export type SubscriptionState = {
     plan: PlanCode | string | null;
     status: string | null;
     currentPeriodEnd?: Date | null;
+    interval?: string | null;
     appliesToRestaurantId?: string | null;
 };
 export type AccountState = {
