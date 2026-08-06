@@ -152,13 +152,12 @@ function isBasicActive(sub) {
     return false;
 }
 // "Whether" gate — does this venue have ANY access right now? Access is granted
-// by (highest first): per-venue PRO override, manual comp grant, an active trial,
-// an active PRO subscription (account-wide), or an active BASIC subscription that
-// is pinned to THIS venue. No access → menu offline (INACTIVE_CAPS).
+// by (highest first): per-venue PRO override, an active trial, an active PRO
+// subscription (account-wide), or an active BASIC subscription that is pinned to
+// THIS venue. No access → menu offline (INACTIVE_CAPS). (Free comps are done via
+// a manually-set ACTIVE subscription now — the manualAccess bypass was removed.)
 function hasVenueAccess(account, restaurant) {
     if (restaurant.planOverride === "PRO")
-        return true;
-    if (restaurant.manualAccess)
         return true;
     if (isTrialActive(account))
         return true;
@@ -298,7 +297,6 @@ exports.ACCOUNT_ENTITLEMENT_SELECT = {
     featReservations: true,
     featCustomDomain: true,
     featAiUnlimited: true,
-    manualAccess: true,
     account: {
         select: {
             trialEndsAt: true,
@@ -359,7 +357,6 @@ function restaurantCapsFromRow(row) {
     return getRestaurantCaps(account, {
         id: row.id,
         planOverride,
-        manualAccess: row.manualAccess,
         featMenuOnline: row.featMenuOnline,
         featOrders: row.featOrders,
         featKds: row.featKds,

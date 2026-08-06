@@ -313,7 +313,7 @@ export class BillingController {
     // purchased `count` becomes the venue capacity (venueLimit).
     const accountVenues = await this.prisma.restaurant.findMany({
       where: { accountId },
-      select: { id: true, manualAccess: true },
+      select: { id: true },
     });
     // `count` is the number of billable slots. It can never be fewer than the
     // venues that already exist (every one of them gets provisioned below) —
@@ -400,11 +400,9 @@ export class BillingController {
         { idempotencyKey: `subchange:${accountId}:${quote.amountCents}:${cycle}:${count}:${ufBits}:${bucket}` },
       );
       // Apply the change synchronously (don't wait for the webhook) so the UI
-      // reflects the new features / price / capacity immediately. Skip manually
-      // comped venues — their access is a free grant, not part of this plan.
+      // reflects the new features / price / capacity immediately.
       await Promise.all(
         accountVenues
-          .filter((v) => !v.manualAccess)
           .map((v) =>
             this.prisma.restaurant
               .update({
@@ -679,7 +677,6 @@ export class BillingController {
       featReservations?: boolean;
       featCustomDomain?: boolean;
       featAiUnlimited?: boolean;
-      manualAccess?: boolean;
       customDomain?: string | null;
     },
   ) {
@@ -693,7 +690,6 @@ export class BillingController {
       "featReservations",
       "featCustomDomain",
       "featAiUnlimited",
-      "manualAccess",
     ] as const) {
       if (typeof body[k] === "boolean") data[k] = body[k];
     }

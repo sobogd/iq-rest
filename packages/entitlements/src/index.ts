@@ -158,8 +158,6 @@ export type RestaurantFeatureFlags = {
   featReservations?: boolean | null;
   featCustomDomain?: boolean | null;
   featAiUnlimited?: boolean | null;
-  // Free comp: grant this venue's features with no active subscription.
-  manualAccess?: boolean | null;
 };
 
 export type AccountCapabilities = {
@@ -232,15 +230,15 @@ export function isBasicActive(sub: SubscriptionState | null): boolean {
 }
 
 // "Whether" gate — does this venue have ANY access right now? Access is granted
-// by (highest first): per-venue PRO override, manual comp grant, an active trial,
-// an active PRO subscription (account-wide), or an active BASIC subscription that
-// is pinned to THIS venue. No access → menu offline (INACTIVE_CAPS).
+// by (highest first): per-venue PRO override, an active trial, an active PRO
+// subscription (account-wide), or an active BASIC subscription that is pinned to
+// THIS venue. No access → menu offline (INACTIVE_CAPS). (Free comps are done via
+// a manually-set ACTIVE subscription now — the manualAccess bypass was removed.)
 export function hasVenueAccess(
   account: AccountState,
-  restaurant: { id: string; planOverride?: PlanOverride | string | null; manualAccess?: boolean | null },
+  restaurant: { id: string; planOverride?: PlanOverride | string | null },
 ): boolean {
   if (restaurant.planOverride === "PRO") return true;
-  if (restaurant.manualAccess) return true;
   if (isTrialActive(account)) return true;
   const sub = account.subscription;
   if (isProActive(sub)) return true;
@@ -411,7 +409,6 @@ export const ACCOUNT_ENTITLEMENT_SELECT = {
   featReservations: true,
   featCustomDomain: true,
   featAiUnlimited: true,
-  manualAccess: true,
   account: {
     select: {
       trialEndsAt: true,
@@ -447,7 +444,6 @@ export type RestaurantEntitlementRow = {
   featReservations?: boolean | null;
   featCustomDomain?: boolean | null;
   featAiUnlimited?: boolean | null;
-  manualAccess?: boolean | null;
   account?: {
     trialEndsAt: Date | null;
     venueLimit: number;
@@ -509,7 +505,6 @@ export function restaurantCapsFromRow(row: RestaurantEntitlementRow): Restaurant
   return getRestaurantCaps(account, {
     id: row.id,
     planOverride,
-    manualAccess: row.manualAccess,
     featMenuOnline: row.featMenuOnline,
     featOrders: row.featOrders,
     featKds: row.featKds,

@@ -235,9 +235,8 @@ describe("getAccountCaps", () => {
 // ─── billing-features-constructor: flag-driven "which" set ───────────────────
 
 describe("hasVenueAccess (the 'whether' gate)", () => {
-  it("granted by override / manual / trial / PRO / pinned-BASIC", () => {
+  it("granted by override / trial / PRO / pinned-BASIC", () => {
     expect(hasVenueAccess(acct({ subscription: null }), { id: "r", planOverride: "PRO" })).toBe(true);
-    expect(hasVenueAccess(acct({ subscription: null }), { id: "r", manualAccess: true })).toBe(true);
     expect(hasVenueAccess(acct({ trialEndsAt: future() }), { id: "r" })).toBe(true);
     expect(hasVenueAccess(acct({ subscription: { plan: "PRO", status: "ACTIVE" } }), { id: "r" })).toBe(true);
     expect(
@@ -298,28 +297,6 @@ describe("getRestaurantCaps with explicit flags", () => {
       kds: false,
       reservations: false,
       aiUnlimited: false,
-      customDomain: false,
-    });
-  });
-
-  it("manualAccess grants access; flags then decide the set (free comp)", () => {
-    expect(
-      getRestaurantCaps(acct({ subscription: null }), {
-        id: "r",
-        manualAccess: true,
-        featMenuOnline: true,
-        featOrders: true,
-        featKds: true,
-        featReservations: true,
-        featCustomDomain: false,
-        featAiUnlimited: true,
-      }),
-    ).toEqual({
-      menuOnline: true,
-      orders: true,
-      kds: true,
-      reservations: true,
-      aiUnlimited: true,
       customDomain: false,
     });
   });

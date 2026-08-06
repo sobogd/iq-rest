@@ -53,7 +53,6 @@ export type RestaurantFeatureFlags = {
     featReservations?: boolean | null;
     featCustomDomain?: boolean | null;
     featAiUnlimited?: boolean | null;
-    manualAccess?: boolean | null;
 };
 export type AccountCapabilities = {
     venueLimit: number;
@@ -65,7 +64,6 @@ export declare function isBasicActive(sub: SubscriptionState | null): boolean;
 export declare function hasVenueAccess(account: AccountState, restaurant: {
     id: string;
     planOverride?: PlanOverride | string | null;
-    manualAccess?: boolean | null;
 }): boolean;
 export declare function getRestaurantCaps(account: AccountState, restaurant: {
     id: string;
@@ -105,7 +103,6 @@ export declare const ACCOUNT_ENTITLEMENT_SELECT: {
     readonly featReservations: true;
     readonly featCustomDomain: true;
     readonly featAiUnlimited: true;
-    readonly manualAccess: true;
     readonly account: {
         readonly select: {
             readonly trialEndsAt: true;
@@ -141,7 +138,6 @@ export type RestaurantEntitlementRow = {
     featReservations?: boolean | null;
     featCustomDomain?: boolean | null;
     featAiUnlimited?: boolean | null;
-    manualAccess?: boolean | null;
     account?: {
         trialEndsAt: Date | null;
         venueLimit: number;
