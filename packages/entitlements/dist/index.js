@@ -99,7 +99,6 @@ const FULL_PRO_CAPS = {
     orders: true,
     kds: true,
     reservations: true,
-    aiUnlimited: true,
     // customDomain is an à-la-carte add-on, never implied by a tier → false in the
     // tier-derived (fallback) path; the flag path reads featCustomDomain.
     customDomain: false,
@@ -109,21 +108,19 @@ const INACTIVE_CAPS = {
     orders: false,
     kds: false,
     reservations: false,
-    aiUnlimited: false,
     customDomain: false,
 };
-// BASIC = live digital menu only, no operational features, no unlimited AI.
+// BASIC = live digital menu only, no operational features.
 const BASIC_CAPS = {
     menuOnline: true,
     orders: false,
     kds: false,
     reservations: false,
-    aiUnlimited: false,
     customDomain: false,
 };
-// Full PRO but earned via trial → everything except unlimited AI (§ ai-quota:
-// a trial must not get the paid-PRO AI perk).
-const TRIAL_PRO_CAPS = { ...FULL_PRO_CAPS, aiUnlimited: false };
+// A trial gets the full operational set (same as paid PRO now that the
+// unlimited-AI perk no longer exists).
+const TRIAL_PRO_CAPS = { ...FULL_PRO_CAPS };
 function isTrialActive(account) {
     return !!account.trialEndsAt && account.trialEndsAt > new Date();
 }
@@ -175,7 +172,6 @@ function hasExplicitFlags(r) {
         typeof r.featOrders === "boolean" ||
         typeof r.featKds === "boolean" ||
         typeof r.featReservations === "boolean" ||
-        typeof r.featAiUnlimited === "boolean" ||
         typeof r.featCustomDomain === "boolean");
 }
 // "Which" set — capabilities straight from the persisted flags. menuOnline
@@ -186,7 +182,6 @@ function capsFromFlags(r) {
         orders: !!r.featOrders,
         kds: !!r.featKds,
         reservations: !!r.featReservations,
-        aiUnlimited: !!r.featAiUnlimited,
         customDomain: !!r.featCustomDomain,
     };
 }
@@ -220,18 +215,16 @@ function getRestaurantCaps(account, restaurant) {
 }
 // Default feature flags for a NEWLY created venue, mirroring what the account's
 // current tier would grant (so adding a venue during a trial/PRO keeps today's
-// behaviour). Operational features follow trial/PRO/override; unlimited AI is
-// paid-PRO only (never a trial). Callers persist these on the new Restaurant row.
+// behaviour). Operational features follow trial/PRO/override. Callers persist
+// these on the new Restaurant row.
 function defaultFeatureFlagsForNewVenue(account, planOverride) {
     const override = planOverride === "PRO";
     const operational = override || isTrialActive(account) || isProActive(account.subscription);
-    const paidPro = override || isProActive(account.subscription);
     return {
         featMenuOnline: true,
         featOrders: operational,
         featKds: operational,
         featReservations: operational,
-        featAiUnlimited: paidPro,
         featCustomDomain: false,
     };
 }
@@ -296,7 +289,6 @@ exports.ACCOUNT_ENTITLEMENT_SELECT = {
     featKds: true,
     featReservations: true,
     featCustomDomain: true,
-    featAiUnlimited: true,
     account: {
         select: {
             trialEndsAt: true,
@@ -362,7 +354,6 @@ function restaurantCapsFromRow(row) {
         featKds: row.featKds,
         featReservations: row.featReservations,
         featCustomDomain: row.featCustomDomain,
-        featAiUnlimited: row.featAiUnlimited,
     });
 }
 // Account-wide caps (venueLimit / canAddVenue) from an already-loaded row.

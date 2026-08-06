@@ -231,7 +231,6 @@ export class AdminController {
         featKds: true,
         featReservations: true,
         featCustomDomain: true,
-        featAiUnlimited: true,
         account: {
           select: {
             stripeCustomerId: true,
@@ -290,7 +289,6 @@ export class AdminController {
       featKds: restaurant.featKds,
       featReservations: restaurant.featReservations,
       featCustomDomain: restaurant.featCustomDomain,
-      featAiUnlimited: restaurant.featAiUnlimited,
       plan: restaurant.account?.subscription?.plan ?? "FREE",
       billingCycle: restaurant.account?.subscription?.billingCycle ?? null,
       subscriptionStatus: restaurant.account?.subscription?.status ?? null,

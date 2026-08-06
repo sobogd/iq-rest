@@ -59,5 +59,4 @@ export declare function flagsFromSelection(sel: VenueSelection): {
     featKds: boolean;
     featReservations: boolean;
     featCustomDomain: boolean;
-    featAiUnlimited: boolean;
 };

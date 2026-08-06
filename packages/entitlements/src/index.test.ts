@@ -125,7 +125,6 @@ describe("getRestaurantCaps", () => {
       orders: true,
       kds: true,
       reservations: true,
-      aiUnlimited: true,
       customDomain: false,
     });
   });
@@ -141,10 +140,9 @@ describe("getRestaurantCaps", () => {
     expect(caps.orders).toBe(true);
     expect(caps.kds).toBe(true);
     expect(caps.reservations).toBe(true);
-    expect(caps.aiUnlimited).toBe(true);
   });
 
-  it("trial active → full PRO but NOT unlimited AI, for every venue", () => {
+  it("trial active → full operational caps for every venue", () => {
     const account = acct({ trialEndsAt: future(), subscription: null });
     const caps = getRestaurantCaps(account, { id: "r1", planOverride: null });
     expect(caps).toEqual({
@@ -152,7 +150,6 @@ describe("getRestaurantCaps", () => {
       orders: true,
       kds: true,
       reservations: true,
-      aiUnlimited: false,
       customDomain: false,
     });
   });
@@ -164,7 +161,6 @@ describe("getRestaurantCaps", () => {
       orders: true,
       kds: true,
       reservations: true,
-      aiUnlimited: true,
       customDomain: false,
     });
   });
@@ -179,7 +175,6 @@ describe("getRestaurantCaps", () => {
       orders: false,
       kds: false,
       reservations: false,
-      aiUnlimited: false,
       customDomain: false,
     });
     expect(getRestaurantCaps(account, { id: "other", planOverride: null })).toEqual({
@@ -187,7 +182,6 @@ describe("getRestaurantCaps", () => {
       orders: false,
       kds: false,
       reservations: false,
-      aiUnlimited: false,
       customDomain: false,
     });
   });
@@ -268,14 +262,12 @@ describe("getRestaurantCaps with explicit flags", () => {
         featKds: false,
         featReservations: true,
         featCustomDomain: true,
-        featAiUnlimited: false,
       }),
     ).toEqual({
       menuOnline: true,
       orders: false,
       kds: false,
       reservations: true,
-      aiUnlimited: false,
       customDomain: true,
     });
   });
@@ -289,14 +281,12 @@ describe("getRestaurantCaps with explicit flags", () => {
         featKds: true,
         featReservations: true,
         featCustomDomain: true,
-        featAiUnlimited: true,
       }),
     ).toEqual({
       menuOnline: false,
       orders: false,
       kds: false,
       reservations: false,
-      aiUnlimited: false,
       customDomain: false,
     });
   });
@@ -307,7 +297,6 @@ describe("getRestaurantCaps with explicit flags", () => {
       orders: true,
       kds: true,
       reservations: true,
-      aiUnlimited: true,
       customDomain: false,
     });
   });
@@ -320,7 +309,6 @@ describe("defaultFeatureFlagsForNewVenue", () => {
       featOrders: true,
       featKds: true,
       featReservations: true,
-      featAiUnlimited: true,
       featCustomDomain: false,
     });
   });
@@ -330,7 +318,6 @@ describe("defaultFeatureFlagsForNewVenue", () => {
       featOrders: true,
       featKds: true,
       featReservations: true,
-      featAiUnlimited: false,
       featCustomDomain: false,
     });
   });
@@ -340,7 +327,6 @@ describe("defaultFeatureFlagsForNewVenue", () => {
       featOrders: false,
       featKds: false,
       featReservations: false,
-      featAiUnlimited: false,
       featCustomDomain: false,
     });
   });

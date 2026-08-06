@@ -612,7 +612,6 @@ export class StripeController {
                 featKds: sel.ordersKds,
                 featReservations: sel.reservations,
                 featCustomDomain: sel.domain,
-                featAiUnlimited: sel.ordersKds,
               },
             })
             .catch(() => undefined),

@@ -44,7 +44,6 @@ interface RestaurantDetail {
   featKds: boolean;
   featReservations: boolean;
   featCustomDomain: boolean;
-  featAiUnlimited: boolean;
   plan: string;
   billingCycle: string | null;
   subscriptionStatus: string;
@@ -102,15 +101,13 @@ type FeatureKey =
   | "featOrders"
   | "featKds"
   | "featReservations"
-  | "featCustomDomain"
-  | "featAiUnlimited";
+  | "featCustomDomain";
 
 // Entitlement feature toggles shown in the admin restaurant page. These are the
 // "which features" set; they only take effect while the venue has access
 // (active/grace subscription or trial) — see hasVenueAccess in @iq-rest/entitlements.
 // Only the operationally-gating flags are exposed here. featCustomDomain (served
-// by nginx, configured manually — the flag is just a pricing line) and
-// featAiUnlimited (only lifts the AI-image free cap) are intentionally omitted.
+// by nginx, configured manually — the flag is just a pricing line) is omitted.
 const FEATURE_TOGGLES: { key: FeatureKey; label: string; hint: string }[] = [
   { key: "featMenuOnline", label: "Menu online", hint: "Public menu visible to diners" },
   { key: "featOrders", label: "Orders", hint: "In-menu ordering" },

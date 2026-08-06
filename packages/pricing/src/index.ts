@@ -194,15 +194,13 @@ export function selectionFromFlags(flags: {
   };
 }
 
-// The feature flags a VenueSelection provisions (orders + kds move together;
-// aiUnlimited rides with the ordersKds/Pro add-on).
+// The feature flags a VenueSelection provisions (orders + kds move together).
 export function flagsFromSelection(sel: VenueSelection): {
   featMenuOnline: boolean;
   featOrders: boolean;
   featKds: boolean;
   featReservations: boolean;
   featCustomDomain: boolean;
-  featAiUnlimited: boolean;
 } {
   return {
     featMenuOnline: sel.menuOnline,
@@ -210,6 +208,5 @@ export function flagsFromSelection(sel: VenueSelection): {
     featKds: sel.ordersKds,
     featReservations: sel.reservations,
     featCustomDomain: sel.domain,
-    featAiUnlimited: sel.ordersKds,
   };
 }

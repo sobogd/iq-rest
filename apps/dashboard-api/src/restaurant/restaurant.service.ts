@@ -523,8 +523,8 @@ export class RestaurantService {
     // with the most features enabled == the purchased set. Fall back to the tier
     // default only when there is no sibling to copy (should not happen — the
     // owner already owns ≥1 venue here).
-    const featureScore = (r: { featOrders?: boolean; featKds?: boolean; featReservations?: boolean; featAiUnlimited?: boolean }) =>
-      (r.featOrders ? 1 : 0) + (r.featKds ? 1 : 0) + (r.featReservations ? 1 : 0) + (r.featAiUnlimited ? 1 : 0);
+    const featureScore = (r: { featOrders?: boolean; featKds?: boolean; featReservations?: boolean }) =>
+      (r.featOrders ? 1 : 0) + (r.featKds ? 1 : 0) + (r.featReservations ? 1 : 0);
     const representative = ownedRestaurants
       .filter((r) => r.accountId === ownerAccountId)
       .slice()
@@ -537,7 +537,6 @@ export class RestaurantService {
           featReservations: representative.featReservations,
           // customDomain is a per-venue add-on (unique domain) — never inherited.
           featCustomDomain: false,
-          featAiUnlimited: representative.featAiUnlimited,
         }
       : defaultFeatureFlagsForNewVenue(ownerAccountState);
 

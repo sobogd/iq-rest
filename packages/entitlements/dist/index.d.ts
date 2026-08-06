@@ -43,7 +43,6 @@ export type RestaurantCapabilities = {
     orders: boolean;
     kds: boolean;
     reservations: boolean;
-    aiUnlimited: boolean;
     customDomain: boolean;
 };
 export type RestaurantFeatureFlags = {
@@ -52,7 +51,6 @@ export type RestaurantFeatureFlags = {
     featKds?: boolean | null;
     featReservations?: boolean | null;
     featCustomDomain?: boolean | null;
-    featAiUnlimited?: boolean | null;
 };
 export type AccountCapabilities = {
     venueLimit: number;
@@ -74,7 +72,6 @@ export declare function defaultFeatureFlagsForNewVenue(account: AccountState, pl
     featOrders: boolean;
     featKds: boolean;
     featReservations: boolean;
-    featAiUnlimited: boolean;
     featCustomDomain: boolean;
 };
 export declare function getAccountCaps(account: AccountState): AccountCapabilities;
@@ -102,7 +99,6 @@ export declare const ACCOUNT_ENTITLEMENT_SELECT: {
     readonly featKds: true;
     readonly featReservations: true;
     readonly featCustomDomain: true;
-    readonly featAiUnlimited: true;
     readonly account: {
         readonly select: {
             readonly trialEndsAt: true;
@@ -137,7 +133,6 @@ export type RestaurantEntitlementRow = {
     featKds?: boolean | null;
     featReservations?: boolean | null;
     featCustomDomain?: boolean | null;
-    featAiUnlimited?: boolean | null;
     account?: {
         trialEndsAt: Date | null;
         venueLimit: number;

@@ -413,7 +413,6 @@ export class BillingController {
                   featKds: uniform.ordersKds,
                   featReservations: uniform.reservations,
                   featCustomDomain: uniform.domain,
-                  featAiUnlimited: uniform.ordersKds,
                 },
               })
               .catch(() => undefined),
@@ -676,7 +675,6 @@ export class BillingController {
       featKds?: boolean;
       featReservations?: boolean;
       featCustomDomain?: boolean;
-      featAiUnlimited?: boolean;
       customDomain?: string | null;
     },
   ) {
@@ -689,7 +687,6 @@ export class BillingController {
       "featKds",
       "featReservations",
       "featCustomDomain",
-      "featAiUnlimited",
     ] as const) {
       if (typeof body[k] === "boolean") data[k] = body[k];
     }
@@ -737,7 +734,6 @@ export class BillingController {
                 featKds: sel.ordersKds,
                 featReservations: sel.reservations,
                 featCustomDomain: sel.domain,
-                featAiUnlimited: sel.ordersKds,
               },
             })
             .catch(() => undefined);

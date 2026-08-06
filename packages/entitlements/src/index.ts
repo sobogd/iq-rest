@@ -143,7 +143,6 @@ export type RestaurantCapabilities = {
   orders: boolean;
   kds: boolean;
   reservations: boolean;
-  aiUnlimited: boolean; // paid PRO only — a trial does NOT get unlimited AI
   customDomain: boolean; // serve this venue on its own domain (flag-gated)
 };
 
@@ -157,7 +156,6 @@ export type RestaurantFeatureFlags = {
   featKds?: boolean | null;
   featReservations?: boolean | null;
   featCustomDomain?: boolean | null;
-  featAiUnlimited?: boolean | null;
 };
 
 export type AccountCapabilities = {
@@ -170,7 +168,6 @@ const FULL_PRO_CAPS: RestaurantCapabilities = {
   orders: true,
   kds: true,
   reservations: true,
-  aiUnlimited: true,
   // customDomain is an à-la-carte add-on, never implied by a tier → false in the
   // tier-derived (fallback) path; the flag path reads featCustomDomain.
   customDomain: false,
@@ -181,23 +178,21 @@ const INACTIVE_CAPS: RestaurantCapabilities = {
   orders: false,
   kds: false,
   reservations: false,
-  aiUnlimited: false,
   customDomain: false,
 };
 
-// BASIC = live digital menu only, no operational features, no unlimited AI.
+// BASIC = live digital menu only, no operational features.
 const BASIC_CAPS: RestaurantCapabilities = {
   menuOnline: true,
   orders: false,
   kds: false,
   reservations: false,
-  aiUnlimited: false,
   customDomain: false,
 };
 
-// Full PRO but earned via trial → everything except unlimited AI (§ ai-quota:
-// a trial must not get the paid-PRO AI perk).
-const TRIAL_PRO_CAPS: RestaurantCapabilities = { ...FULL_PRO_CAPS, aiUnlimited: false };
+// A trial gets the full operational set (same as paid PRO now that the
+// unlimited-AI perk no longer exists).
+const TRIAL_PRO_CAPS: RestaurantCapabilities = { ...FULL_PRO_CAPS };
 
 export function isTrialActive(account: Pick<AccountState, "trialEndsAt">): boolean {
   return !!account.trialEndsAt && account.trialEndsAt > new Date();
@@ -254,7 +249,6 @@ function hasExplicitFlags(r: RestaurantFeatureFlags): boolean {
     typeof r.featOrders === "boolean" ||
     typeof r.featKds === "boolean" ||
     typeof r.featReservations === "boolean" ||
-    typeof r.featAiUnlimited === "boolean" ||
     typeof r.featCustomDomain === "boolean"
   );
 }
@@ -267,7 +261,6 @@ function capsFromFlags(r: RestaurantFeatureFlags): RestaurantCapabilities {
     orders: !!r.featOrders,
     kds: !!r.featKds,
     reservations: !!r.featReservations,
-    aiUnlimited: !!r.featAiUnlimited,
     customDomain: !!r.featCustomDomain,
   };
 }
@@ -309,8 +302,8 @@ export function getRestaurantCaps(
 
 // Default feature flags for a NEWLY created venue, mirroring what the account's
 // current tier would grant (so adding a venue during a trial/PRO keeps today's
-// behaviour). Operational features follow trial/PRO/override; unlimited AI is
-// paid-PRO only (never a trial). Callers persist these on the new Restaurant row.
+// behaviour). Operational features follow trial/PRO/override. Callers persist
+// these on the new Restaurant row.
 export function defaultFeatureFlagsForNewVenue(
   account: AccountState,
   planOverride?: PlanOverride | string | null,
@@ -319,18 +312,15 @@ export function defaultFeatureFlagsForNewVenue(
   featOrders: boolean;
   featKds: boolean;
   featReservations: boolean;
-  featAiUnlimited: boolean;
   featCustomDomain: boolean;
 } {
   const override = planOverride === "PRO";
   const operational = override || isTrialActive(account) || isProActive(account.subscription);
-  const paidPro = override || isProActive(account.subscription);
   return {
     featMenuOnline: true,
     featOrders: operational,
     featKds: operational,
     featReservations: operational,
-    featAiUnlimited: paidPro,
     featCustomDomain: false,
   };
 }
@@ -408,7 +398,6 @@ export const ACCOUNT_ENTITLEMENT_SELECT = {
   featKds: true,
   featReservations: true,
   featCustomDomain: true,
-  featAiUnlimited: true,
   account: {
     select: {
       trialEndsAt: true,
@@ -443,7 +432,6 @@ export type RestaurantEntitlementRow = {
   featKds?: boolean | null;
   featReservations?: boolean | null;
   featCustomDomain?: boolean | null;
-  featAiUnlimited?: boolean | null;
   account?: {
     trialEndsAt: Date | null;
     venueLimit: number;
@@ -510,7 +498,6 @@ export function restaurantCapsFromRow(row: RestaurantEntitlementRow): Restaurant
     featKds: row.featKds,
     featReservations: row.featReservations,
     featCustomDomain: row.featCustomDomain,
-    featAiUnlimited: row.featAiUnlimited,
   });
 }
 
