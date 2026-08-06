@@ -225,6 +225,13 @@ export class AdminController {
         languages: true,
         defaultLanguage: true,
         reservationsEnabled: true,
+        // Per-restaurant entitlement feature flags (admin toggles).
+        featMenuOnline: true,
+        featOrders: true,
+        featKds: true,
+        featReservations: true,
+        featCustomDomain: true,
+        featAiUnlimited: true,
         account: {
           select: {
             stripeCustomerId: true,
@@ -277,6 +284,13 @@ export class AdminController {
       languages: restaurant.languages,
       defaultLanguage: restaurant.defaultLanguage,
       reservationsEnabled: restaurant.reservationsEnabled,
+      // Entitlement feature flags — drive the admin feature toggles.
+      featMenuOnline: restaurant.featMenuOnline,
+      featOrders: restaurant.featOrders,
+      featKds: restaurant.featKds,
+      featReservations: restaurant.featReservations,
+      featCustomDomain: restaurant.featCustomDomain,
+      featAiUnlimited: restaurant.featAiUnlimited,
       plan: restaurant.account?.subscription?.plan ?? "FREE",
       billingCycle: restaurant.account?.subscription?.billingCycle ?? null,
       subscriptionStatus: restaurant.account?.subscription?.status ?? null,

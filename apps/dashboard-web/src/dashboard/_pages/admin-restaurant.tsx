@@ -9,7 +9,7 @@ import {
   Trash2,
 } from "lucide-react";
 import { apiUrl } from "@/lib/api";
-import { Select, SubpageStickyBar } from "../_v2/ui";
+import { Select, SubpageStickyBar, ToggleSwitch } from "../_v2/ui";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
 import { getMenuUrl } from "@/lib/menu-url";
 import { useDashboardRouter } from "../_spa/router";
@@ -39,6 +39,12 @@ interface RestaurantDetail {
   languages: string[];
   defaultLanguage: string | null;
   reservationsEnabled: boolean;
+  featMenuOnline: boolean;
+  featOrders: boolean;
+  featKds: boolean;
+  featReservations: boolean;
+  featCustomDomain: boolean;
+  featAiUnlimited: boolean;
   plan: string;
   billingCycle: string | null;
   subscriptionStatus: string;
@@ -91,6 +97,26 @@ const EMAIL_TEMPLATES: EmailTemplate[] = [
   },
 ];
 
+type FeatureKey =
+  | "featMenuOnline"
+  | "featOrders"
+  | "featKds"
+  | "featReservations"
+  | "featCustomDomain"
+  | "featAiUnlimited";
+
+// Entitlement feature toggles shown in the admin restaurant page. These are the
+// "which features" set; they only take effect while the venue has access
+// (active/grace subscription or trial) — see hasVenueAccess in @iq-rest/entitlements.
+const FEATURE_TOGGLES: { key: FeatureKey; label: string; hint: string }[] = [
+  { key: "featMenuOnline", label: "Menu online", hint: "Public menu visible to diners" },
+  { key: "featOrders", label: "Orders", hint: "In-menu ordering" },
+  { key: "featKds", label: "Kitchen display", hint: "KDS board for the kitchen" },
+  { key: "featReservations", label: "Reservations", hint: "Table booking" },
+  { key: "featCustomDomain", label: "Custom domain", hint: "Serve on the venue's own domain" },
+  { key: "featAiUnlimited", label: "Unlimited AI", hint: "No AI image / translation caps" },
+];
+
 interface Props {
   restaurantId: string;
   /** When provided, used instead of the router-based back nav (modal mode). */
@@ -136,6 +162,7 @@ export function AdminRestaurantPage({ restaurantId, onClose }: Props) {
   const [deleting, setDeleting] = useState(false);
   const [commentDraft, setCommentDraft] = useState("");
   const [savingComment, setSavingComment] = useState(false);
+  const [savingFeature, setSavingFeature] = useState<string | null>(null);
 
   const fetchRestaurant = useCallback(async () => {
     try {
@@ -182,6 +209,31 @@ export function AdminRestaurantPage({ restaurantId, onClose }: Props) {
       setAlert({ title: "Save failed", message: "Network error" });
     } finally {
       setSavingComment(false);
+    }
+  }
+
+  // Toggle one entitlement feature flag (admin-only). Optimistic; reverts on error.
+  async function saveFeature(key: FeatureKey, value: boolean) {
+    if (savingFeature) return;
+    setSavingFeature(key);
+    setRestaurant((prev) => (prev ? { ...prev, [key]: value } : prev));
+    try {
+      const res = await fetch(apiUrl(`/api/admin/restaurant/${restaurantId}/features`), {
+        method: "PATCH",
+        credentials: "include",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ [key]: value }),
+      });
+      if (!res.ok) {
+        setRestaurant((prev) => (prev ? { ...prev, [key]: !value } : prev));
+        const j = await res.json().catch(() => ({}));
+        setAlert({ title: "Save failed", message: j.message || j.error || "Could not save." });
+      }
+    } catch {
+      setRestaurant((prev) => (prev ? { ...prev, [key]: !value } : prev));
+      setAlert({ title: "Save failed", message: "Network error" });
+    } finally {
+      setSavingFeature(null);
     }
   }
 
@@ -396,6 +448,26 @@ export function AdminRestaurantPage({ restaurantId, onClose }: Props) {
                 </span>
               </div>
             ))}
+          </div>
+
+          <div className="bg-card border border-border rounded-xl overflow-hidden">
+            <div className="px-4 py-2.5 border-b border-border text-xs font-semibold text-muted-foreground">
+              Features
+            </div>
+            <div className="divide-y divide-border">
+              {FEATURE_TOGGLES.map((f) => {
+                const on = restaurant[f.key];
+                return (
+                  <div key={f.key} className="flex items-center justify-between gap-3 px-4 py-2.5">
+                    <div className="min-w-0">
+                      <div className="text-xs text-foreground">{f.label}</div>
+                      <div className="text-[11px] text-muted-foreground">{f.hint}</div>
+                    </div>
+                    <ToggleSwitch checked={on} onChange={() => saveFeature(f.key, !on)} />
+                  </div>
+                );
+              })}
+            </div>
           </div>
 
           {restaurant.users.length > 0 ? (
