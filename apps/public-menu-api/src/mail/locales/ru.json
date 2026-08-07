@@ -1,5 +1,5 @@
 {
-  "guestSubject": "Ваша бронь в {restaurant}",
+  "guestSubject": "Ваша бронь в ресторане {restaurant}",
   "guestGreeting": "Здравствуйте, {name}!",
   "guestConfirmed": "Ваша бронь подтверждена!",
   "guestPending": "Ваш запрос на бронирование получен и ожидает подтверждения.",

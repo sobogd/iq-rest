@@ -9,11 +9,11 @@
   "guests": "Gjester",
   "table": "Bord",
   "notes": "Merknader",
-  "guestOutro": "Hvis du trenger å gjøre endringer, vennligst kontakt restauranten direkte.",
+  "guestOutro": "Hvis du trenger å gjøre endringer, kan du kontakte restauranten direkte.",
   "signature": "Med vennlig hilsen,<br>{restaurant}",
   "ownerSubject": "Ny reservasjon fra {name}",
   "ownerGreeting": "Ny reservasjon!",
-  "ownerBody": "En ny reservasjon er gjort på din restaurant.",
+  "ownerBody": "Det er gjort en ny reservasjon på restauranten din.",
   "ownerCta": "Se reservasjoner",
-  "ownerSignature": "Med vennlig hilsen,<br>IQ Rest Team"
+  "ownerSignature": "Med vennlig hilsen,<br>IQ Rest-teamet"
 }

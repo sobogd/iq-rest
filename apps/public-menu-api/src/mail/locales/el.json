@@ -1,6 +1,6 @@
 {
   "guestSubject": "Η κράτησή σας στο {restaurant}",
-  "guestGreeting": "Γεια σας {name},",
+  "guestGreeting": "Γεια σας, {name},",
   "guestConfirmed": "Η κράτησή σας επιβεβαιώθηκε!",
   "guestPending": "Το αίτημα κράτησής σας ελήφθη και αναμένει επιβεβαίωση.",
   "details": "Λεπτομέρειες κράτησης:",

@@ -13,7 +13,7 @@
   "signature": "Med venlig hilsen,<br>{restaurant}",
   "ownerSubject": "Ny reservation fra {name}",
   "ownerGreeting": "Ny reservation!",
-  "ownerBody": "En ny reservation er foretaget på din restaurant.",
+  "ownerBody": "Der er foretaget en ny reservation på din restaurant.",
   "ownerCta": "Se reservationer",
-  "ownerSignature": "Med venlig hilsen,<br>IQ Rest Team"
+  "ownerSignature": "Med venlig hilsen,<br>IQ Rest-teamet"
 }

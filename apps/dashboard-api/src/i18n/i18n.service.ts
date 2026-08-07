@@ -41,8 +41,9 @@ import zh from "./zh.json";
 
 interface Bundle {
   companyDefaultName: string;
-  otpEmail: { subject: string; greeting: string; intro: string; expiry: string };
-  supportEmail: { subject: string; greeting: string; body: string; cta: string; signature: string };
+  otpEmail: { subject: string; title: string; intro: string; expiry: string };
+  supportEmail: { subject: string; title: string; body: string; cta: string };
+  email: { openDashboard: string; needHelp: string; helpCenter: string };
 }
 
 const BUNDLES: Record<string, Bundle> = {

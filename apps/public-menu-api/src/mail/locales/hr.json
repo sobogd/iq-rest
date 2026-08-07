@@ -1,6 +1,6 @@
 {
-  "guestSubject": "Vaša rezervacija u {restaurant}",
-  "guestGreeting": "Pozdrav {name},",
+  "guestSubject": "Vaša rezervacija u restoranu {restaurant}",
+  "guestGreeting": "Pozdrav, {name},",
   "guestConfirmed": "Vaša rezervacija je potvrđena!",
   "guestPending": "Vaš zahtjev za rezervaciju je zaprimljen i čeka potvrdu.",
   "details": "Detalji rezervacije:",
@@ -15,5 +15,5 @@
   "ownerGreeting": "Nova rezervacija!",
   "ownerBody": "Nova rezervacija je napravljena u vašem restoranu.",
   "ownerCta": "Pregledaj rezervacije",
-  "ownerSignature": "S poštovanjem,<br>IQ Rest Tim"
+  "ownerSignature": "S poštovanjem,<br>Tim IQ Rest"
 }

@@ -2,15 +2,19 @@
   "companyDefaultName": "Mano restoranas",
   "otpEmail": {
     "subject": "Jūsų kodas: {code}",
-    "greeting": "Sveiki,",
-    "intro": "Naudokite šį kodą, kad prisijungtumėte prie IQ Rest.",
-    "expiry": "Galioja 5 minutes."
+    "title": "Sveiki atvykę į IQ Rest",
+    "intro": "Prisijunkite naudodami šį kodą:",
+    "expiry": "Kodas galioja 5 minutes. Jei jo neprašėte, tiesiog ignoruokite šį laišką."
   },
   "supportEmail": {
-    "subject": "Gavote naują žinutę iš IQ Rest palaikymo komandos",
-    "greeting": "Sveiki!",
-    "body": "Gavote naują žinutę iš mūsų palaikymo komandos. Norėdami ją peržiūrėti, patikrinkite savo valdymo skydelį.",
-    "cta": "Atidaryti palaikymo pokalbį",
-    "signature": "Linkėjimai,<br>IQ Rest komanda"
+    "subject": "Nauja žinutė iš IQ Rest palaikymo komandos",
+    "title": "Nauja žinutė iš palaikymo komandos",
+    "body": "Mūsų palaikymo komanda atsiuntė jums naują žinutę. Atidarykite palaikymo pokalbį valdymo skydelyje, kad ją perskaitytumėte ir atsakytumėte.",
+    "cta": "Atidaryti palaikymo pokalbį"
+  },
+  "email": {
+    "openDashboard": "Atidaryti valdymo skydelį",
+    "needHelp": "Reikia pagalbos?",
+    "helpCenter": "Apsilankykite mūsų pagalbos centre"
   }
 }

@@ -1,6 +1,6 @@
 {
   "guestSubject": "Jūsu rezervācija restorānā {restaurant}",
-  "guestGreeting": "Sveiki {name},",
+  "guestGreeting": "Sveiki, {name},",
   "guestConfirmed": "Jūsu rezervācija ir apstiprināta!",
   "guestPending": "Jūsu rezervācijas pieprasījums ir saņemts un gaida apstiprinājumu.",
   "details": "Rezervācijas informācija:",

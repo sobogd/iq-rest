@@ -9,11 +9,11 @@
   "guests": "Gäster",
   "table": "Bord",
   "notes": "Anteckningar",
-  "guestOutro": "Om du behöver göra ändringar, vänligen kontakta restaurangen direkt.",
+  "guestOutro": "Om du behöver göra ändringar är du välkommen att kontakta restaurangen direkt.",
   "signature": "Med vänliga hälsningar,<br>{restaurant}",
   "ownerSubject": "Ny bokning från {name}",
   "ownerGreeting": "Ny bokning!",
   "ownerBody": "En ny bokning har gjorts på din restaurang.",
   "ownerCta": "Visa bokningar",
-  "ownerSignature": "Med vänliga hälsningar,<br>IQ Rest Team"
+  "ownerSignature": "Med vänliga hälsningar,<br>IQ Rest-teamet"
 }

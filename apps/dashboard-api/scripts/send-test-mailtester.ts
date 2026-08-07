@@ -29,7 +29,7 @@ function loadEnv(file: string): Record<string, string> {
 }
 
 function logoMark(): string {
-  return `<div style="text-align:center;margin:0 0 28px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Inter,sans-serif;font-size:32px;font-weight:900;letter-spacing:-1px;line-height:1"><span style="color:#1a1a1a">IQ </span><span style="color:#FF6229">Rest</span></div>`;
+  return `<img src="https://iq-rest.com/logo.png" width="126" height="46" alt="IQ Rest" style="display:block;margin:0 auto 28px;border:0" />`;
 }
 
 function pick(kind: string, locale: string) {

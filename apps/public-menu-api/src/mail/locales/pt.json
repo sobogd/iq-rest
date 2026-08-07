@@ -6,7 +6,7 @@
   "details": "Detalhes da reserva:",
   "date": "Data",
   "time": "Hora",
-  "guests": "Convidados",
+  "guests": "Pessoas",
   "table": "Mesa",
   "notes": "Notas",
   "guestOutro": "Se precisar de fazer alguma alteração, por favor contacte diretamente o restaurante.",
@@ -15,5 +15,5 @@
   "ownerGreeting": "Nova reserva!",
   "ownerBody": "Uma nova reserva foi feita no seu restaurante.",
   "ownerCta": "Ver reservas",
-  "ownerSignature": "Com os melhores cumprimentos,<br>Equipe IQ Rest"
+  "ownerSignature": "Com os melhores cumprimentos,<br>Equipa IQ Rest"
 }

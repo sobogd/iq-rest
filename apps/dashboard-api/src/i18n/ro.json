@@ -1,16 +1,20 @@
 {
-  "companyDefaultName": "Restaurantul Meu",
+  "companyDefaultName": "Restaurantul meu",
   "otpEmail": {
     "subject": "Codul tău: {code}",
-    "greeting": "Salut,",
-    "intro": "Folosește acest cod pentru a te conecta la IQ Rest.",
-    "expiry": "Expiră în 5 minute."
+    "title": "Bine ai venit la IQ Rest",
+    "intro": "Folosește acest cod pentru a te conecta:",
+    "expiry": "Codul este valabil 5 minute. Dacă nu l-ai solicitat, poți ignora acest e-mail."
   },
   "supportEmail": {
-    "subject": "Ai un mesaj nou de la Suport IQ Rest",
-    "greeting": "Salut!",
-    "body": "Ai un mesaj nou de la echipa noastră de suport. Te rugăm să verifici panoul de control pentru a-l vizualiza.",
-    "cta": "Deschide chatul de suport",
-    "signature": "Cu bine,<br>Echipa IQ Rest"
+    "subject": "Mesaj nou de la suportul IQ Rest",
+    "title": "Mesaj nou de la suport",
+    "body": "Echipa noastră de suport ți-a trimis un mesaj nou. Deschide chatul de suport din panoul de control pentru a-l citi și a răspunde.",
+    "cta": "Deschide chatul de suport"
+  },
+  "email": {
+    "openDashboard": "Deschide panoul de control",
+    "needHelp": "Ai nevoie de ajutor?",
+    "helpCenter": "Vizitează centrul nostru de ajutor"
   }
 }

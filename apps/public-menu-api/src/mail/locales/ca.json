@@ -9,7 +9,7 @@
   "guests": "Comensals",
   "table": "Taula",
   "notes": "Notes",
-  "guestOutro": "Si necessites fer algun canvi, si us plau contacta directament amb el restaurant.",
+  "guestOutro": "Si necessites fer algun canvi, posa't en contacte directament amb el restaurant.",
   "signature": "Salutacions,<br>{restaurant}",
   "ownerSubject": "Nova reserva de {name}",
   "ownerGreeting": "Nova reserva!",

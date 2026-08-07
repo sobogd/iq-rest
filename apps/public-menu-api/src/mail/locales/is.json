@@ -1,5 +1,5 @@
 {
-  "guestSubject": "Bókunin þín á {restaurant}",
+  "guestSubject": "Bókunin þín hjá {restaurant}",
   "guestGreeting": "Hæ {name},",
   "guestConfirmed": "Bókunin þín er staðfest!",
   "guestPending": "Bókunarbeiðni þín hefur verið móttekin og bíður staðfestingar.",

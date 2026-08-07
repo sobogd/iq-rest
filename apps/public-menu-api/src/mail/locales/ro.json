@@ -1,6 +1,6 @@
 {
   "guestSubject": "Rezervarea dumneavoastră la {restaurant}",
-  "guestGreeting": "Bună {name},",
+  "guestGreeting": "Bună ziua, {name},",
   "guestConfirmed": "Rezervarea dumneavoastră este confirmată!",
   "guestPending": "Cererea dumneavoastră de rezervare a fost primită și așteaptă confirmare.",
   "details": "Detalii rezervare:",

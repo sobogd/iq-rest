@@ -2,15 +2,19 @@
   "companyDefaultName": "Mans uzņēmums",
   "otpEmail": {
     "subject": "Jūsu kods: {code}",
-    "greeting": "Sveiki,",
-    "intro": "Izmantojiet šo kodu, lai pierakstītos IQ Rest.",
-    "expiry": "Termiņš beigsies pēc 5 minūtēm."
+    "title": "Laipni lūdzam IQ Rest",
+    "intro": "Izmantojiet šo kodu, lai pierakstītos:",
+    "expiry": "Kods ir derīgs 5 minūtes. Ja jūs to nepieprasījāt, vienkārši ignorējiet šo e-pastu."
   },
   "supportEmail": {
-    "subject": "Jums ir jauna ziņa no IQ Rest atbalsta dienesta",
-    "greeting": "Sveiki!",
-    "body": "Jums ir jauna ziņa no mūsu atbalsta komandas. Lūdzu, pārbaudiet savu informācijas paneli, lai to apskatītu.",
-    "cta": "Atvērt atbalsta tērzēšanu",
-    "signature": "Ar sveicieniem,<br>IQ Rest komanda"
+    "subject": "Jauna ziņa no IQ Rest atbalsta dienesta",
+    "title": "Jauna ziņa no atbalsta dienesta",
+    "body": "Mūsu atbalsta komanda jums ir nosūtījusi jaunu ziņu. Atveriet atbalsta tērzēšanu savā panelī, lai to izlasītu un atbildētu.",
+    "cta": "Atvērt atbalsta tērzēšanu"
+  },
+  "email": {
+    "openDashboard": "Atvērt paneli",
+    "needHelp": "Nepieciešama palīdzība?",
+    "helpCenter": "Apmeklējiet mūsu palīdzības centru"
   }
 }

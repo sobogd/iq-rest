@@ -2,15 +2,19 @@
   "companyDefaultName": "Moj restoran",
   "otpEmail": {
     "subject": "Vaš kod: {code}",
-    "greeting": "Pozdrav,",
-    "intro": "Koristite ovaj kod za prijavu na IQ Rest.",
-    "expiry": "Istječe za 5 minuta."
+    "title": "Dobro došli u IQ Rest",
+    "intro": "Upotrijebite ovaj kod za prijavu:",
+    "expiry": "Kod vrijedi 5 minuta. Ako ga niste zatražili, jednostavno zanemarite ovu e-poruku."
   },
   "supportEmail": {
-    "subject": "Imate novu poruku od IQ Rest podrške",
-    "greeting": "Bok!",
-    "body": "Imate novu poruku od našeg tima za podršku. Molimo provjerite svoju nadzornu ploču kako biste je vidjeli.",
-    "cta": "Otvori chat podrške",
-    "signature": "Lijep pozdrav,<br>IQ Rest tim"
+    "subject": "Nova poruka od podrške IQ Rest",
+    "title": "Nova poruka od podrške",
+    "body": "Naš tim za podršku poslao vam je novu poruku. Otvorite chat podrške na svojoj nadzornoj ploči da biste je pročitali i odgovorili.",
+    "cta": "Otvori chat podrške"
+  },
+  "email": {
+    "openDashboard": "Otvori nadzornu ploču",
+    "needHelp": "Trebate pomoć?",
+    "helpCenter": "Posjetite naš centar za pomoć"
   }
 }

@@ -1,7 +1,7 @@
 {
   "guestSubject": "Foglalásod a {restaurant} étteremben",
   "guestGreeting": "Szia {name}!",
-  "guestConfirmed": "A foglalásod megerősítve!",
+  "guestConfirmed": "A foglalásodat megerősítettük!",
   "guestPending": "A foglalási kérelmed megérkezett és megerősítésre vár.",
   "details": "Foglalás részletei:",
   "date": "Dátum",
@@ -15,5 +15,5 @@
   "ownerGreeting": "Új foglalás!",
   "ownerBody": "Új foglalás érkezett az éttermedbe.",
   "ownerCta": "Foglalások megtekintése",
-  "ownerSignature": "Üdvözlettel,<br>IQ Rest csapat"
+  "ownerSignature": "Üdvözlettel,<br>Az IQ Rest csapata"
 }

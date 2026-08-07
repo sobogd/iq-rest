@@ -2,15 +2,19 @@
   "companyDefaultName": "Mon Restaurant",
   "otpEmail": {
     "subject": "Votre code : {code}",
-    "greeting": "Bonjour,",
-    "intro": "Utilisez ce code pour vous connecter à IQ Rest.",
-    "expiry": "Expire dans 5 minutes."
+    "title": "Bienvenue sur IQ Rest",
+    "intro": "Utilisez ce code pour vous connecter :",
+    "expiry": "Le code expire dans 5 minutes. Si vous n'êtes pas à l'origine de cette demande, ignorez simplement cet e-mail."
   },
   "supportEmail": {
-    "subject": "Vous avez un nouveau message du support IQ Rest",
-    "greeting": "Bonjour !",
-    "body": "Vous avez un nouveau message de notre équipe de support. Veuillez consulter votre tableau de bord pour le voir.",
-    "cta": "Ouvrir le chat du support",
-    "signature": "Cordialement,<br>L'équipe IQ Rest"
+    "subject": "Nouveau message du support IQ Rest",
+    "title": "Nouveau message du support",
+    "body": "Notre équipe de support vous a envoyé un nouveau message. Ouvrez le chat du support dans votre tableau de bord pour le lire et y répondre.",
+    "cta": "Ouvrir le chat du support"
+  },
+  "email": {
+    "openDashboard": "Ouvrir le tableau de bord",
+    "needHelp": "Besoin d'aide ?",
+    "helpCenter": "Consultez notre centre d'aide"
   }
 }

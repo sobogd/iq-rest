@@ -2,15 +2,19 @@
   "companyDefaultName": "El meu restaurant",
   "otpEmail": {
     "subject": "El teu codi: {code}",
-    "greeting": "Hola,",
-    "intro": "Fes servir aquest codi per iniciar sessió a IQ Rest.",
-    "expiry": "Caduca en 5 minuts."
+    "title": "Et donem la benvinguda a IQ Rest",
+    "intro": "Fes servir aquest codi per iniciar sessió:",
+    "expiry": "El codi caduca en 5 minuts. Si no l'has sol·licitat, simplement ignora aquest correu."
   },
   "supportEmail": {
-    "subject": "Tens un missatge nou del suport d'IQ Rest",
-    "greeting": "Hola!",
-    "body": "Tens un missatge nou del nostre equip de suport. Si us plau, consulta el teu tauler de control per veure'l.",
-    "cta": "Obre el xat de suport",
-    "signature": "Salutacions,<br>L'equip d'IQ Rest"
+    "subject": "Nou missatge del suport d'IQ Rest",
+    "title": "Nou missatge del suport",
+    "body": "El nostre equip de suport t'ha enviat un missatge nou. Obre el xat de suport al teu tauler per llegir-lo i respondre.",
+    "cta": "Obre el xat de suport"
+  },
+  "email": {
+    "openDashboard": "Obre el tauler",
+    "needHelp": "Necessites ajuda?",
+    "helpCenter": "Visita el nostre centre d'ajuda"
   }
 }

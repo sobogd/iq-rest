@@ -20,7 +20,7 @@ export const MENU_ALMOST_READY: Record<string, T> = {
   ar: {
     subject: "مطعمك على IQ Rest لم يكتمل إعداده بعد",
     greeting: "مرحبًا،",
-    body: "بدأت إعداد مطعمك على IQ Rest لكنك لم تنهِه بعد. لكي تفتح قائمتك للضيوف، يكفي أن تضيف أطباقك، وتُعد الطاولات ورمز QR، وإن رغبت — الطلبات أونلاين والحجوزات وشاشة المطبخ. وصولك التجريبي مُفعّل بالفعل.",
+    body: "بدأت إعداد مطعمك على IQ Rest لكنك لم تنهِه بعد. لكي تفتح قائمتك للضيوف، يكفي أن تضيف أطباقك، وتُعد الطاولات ورمز QR، وإن رغبت — الطلبات عبر الإنترنت والحجوزات وشاشة المطبخ. وصولك التجريبي مُفعّل بالفعل.",
     cta: "متابعة الإعداد",
     help: "إن واجهتك أي أسئلة أثناء الإعداد، فقط رد على هذا البريد وسأساعدك.",
     closing: "يسعدني مساعدتك على إكمال الإعداد.",
@@ -47,7 +47,7 @@ export const MENU_ALMOST_READY: Record<string, T> = {
   cs: {
     subject: "Vaše restaurace na IQ Rest ještě není plně nastavená",
     greeting: "Dobrý den,",
-    body: "Začali jste nastavovat svou restauraci na IQ Rest, ale ještě jste neskončili. Abyste menu otevřeli hostům, stačí přidat jídla, nastavit stoly a QR kód a podle potřeby i online objednávky, rezervace a kuchyňskou obrazovku. Zkušební přístup už máte aktivní.",
+    body: "Začali jste nastavovat svou restauraci na IQ Rest, ale ještě jste to nedokončili. Abyste menu otevřeli hostům, stačí přidat jídla, nastavit stoly a QR kód a podle potřeby i online objednávky, rezervace a kuchyňskou obrazovku. Zkušební přístup už máte aktivní.",
     cta: "Pokračovat v nastavení",
     help: "Pokud při nastavení narazíte na otázky, stačí odpovědět na tento e-mail — rád pomůžu.",
     closing: "Rád vám pomůžu nastavení dokončit.",
@@ -119,7 +119,7 @@ export const MENU_ALMOST_READY: Record<string, T> = {
   fi: {
     subject: "Ravintolasi IQ Restissä ei ole vielä valmiiksi määritetty",
     greeting: "Hei,",
-    body: "Aloitit ravintolasi käyttöönoton IQ Restissä, mutta et ole vielä valmis. Jotta voit avata valikon vieraille, sinun tarvitsee vielä lisätä annokset, määrittää pöydät ja QR-koodi sekä halutessasi verkkotilaukset, varaukset ja keittiönäyttö. Kokeilukäyttösi on jo aktiivinen.",
+    body: "Aloitit ravintolasi käyttöönoton IQ Restissä, mutta et ole vielä valmis. Jotta voit avata ruokalistan vieraille, sinun tarvitsee vielä lisätä annokset, määrittää pöydät ja QR-koodi sekä halutessasi verkkotilaukset, varaukset ja keittiönäyttö. Kokeilukäyttösi on jo aktiivinen.",
     cta: "Jatka käyttöönottoa",
     help: "Jos käyttöönotossa herää kysymyksiä, vastaa vain tähän viestiin — autan mielelläni.",
     closing: "Autan mielelläni saamaan käyttöönoton valmiiksi.",
@@ -128,7 +128,7 @@ export const MENU_ALMOST_READY: Record<string, T> = {
   fr: {
     subject: "Votre restaurant sur IQ Rest n'est pas encore entièrement configuré",
     greeting: "Bonjour,",
-    body: "Vous avez commencé à configurer votre restaurant sur IQ Rest mais vous n'avez pas encore terminé. Pour ouvrir votre menu aux clients, il reste à ajouter vos plats, configurer les tables et le code QR et, si vous le souhaitez, les commandes en ligne, les réservations et l'écran cuisine. Votre accès d'essai est déjà actif.",
+    body: "Vous avez commencé à configurer votre restaurant sur IQ Rest mais vous n'avez pas encore terminé. Pour ouvrir votre menu aux clients, il reste à ajouter vos plats, configurer les tables et le code QR et, si vous le souhaitez, les commandes en ligne, les réservations et l'écran de cuisine. Votre accès d'essai est déjà actif.",
     cta: "Continuer la configuration",
     help: "Si des questions surgissent pendant la configuration, répondez simplement à cet e-mail — je vous aiderai.",
     closing: "Je serai ravi de vous aider à terminer la configuration.",
@@ -173,9 +173,9 @@ export const MENU_ALMOST_READY: Record<string, T> = {
   it: {
     subject: "Il tuo ristorante su IQ Rest non è ancora configurato del tutto",
     greeting: "Ciao,",
-    body: "Hai iniziato a configurare il tuo ristorante su IQ Rest ma non hai ancora finito. Per aprire il menu ai clienti basta aggiungere i piatti, configurare i tavoli e il codice QR e, se vuoi, gli ordini online, le prenotazioni e lo schermo cucina. Il tuo accesso di prova è già attivo.",
+    body: "Hai iniziato a configurare il tuo ristorante su IQ Rest ma non hai ancora finito. Per aprire il menu ai clienti basta aggiungere i piatti, configurare i tavoli e il codice QR e, se vuoi, gli ordini online, le prenotazioni e lo schermo della cucina. Il tuo accesso di prova è già attivo.",
     cta: "Continua la configurazione",
-    help: "Se ti vengono dubbi durante la configurazione, rispondi a questa email e ti aiuto.",
+    help: "Se ti viene qualche dubbio durante la configurazione, rispondi a questa email e ti aiuto.",
     closing: "Sarò felice di aiutarti a completare la configurazione.",
     signature: "Cordiali saluti,<br>Bogdan<br>IQ Rest | iq-rest.com",
   },
@@ -186,11 +186,11 @@ export const MENU_ALMOST_READY: Record<string, T> = {
     cta: "設定を続ける",
     help: "設定中にご不明な点があれば、このメールに返信してください。お手伝いします。",
     closing: "設定を最後まで進めるお手伝いをいたします。",
-    signature: "敬具<br>Bogdan<br>IQ Rest | iq-rest.com",
+    signature: "よろしくお願いいたします。<br>Bogdan<br>IQ Rest | iq-rest.com",
   },
   ko: {
     subject: "IQ Rest의 식당 설정이 아직 완료되지 않았습니다",
-    greeting: "안녕하세요,",
+    greeting: "안녕하세요.",
     body: "IQ Rest에서 식당 설정을 시작하셨지만 아직 끝내지 않으셨습니다. 메뉴를 손님에게 공개하시려면 메뉴 항목을 추가하고, 테이블과 QR 코드를 설정하고, 원하시면 온라인 주문, 예약, 주방 디스플레이를 설정하시면 됩니다. 체험 이용은 이미 활성화되어 있습니다.",
     cta: "설정 계속하기",
     help: "설정 중에 궁금한 점이 생기면 이 이메일에 답장만 주세요. 도와드리겠습니다.",
@@ -258,7 +258,7 @@ export const MENU_ALMOST_READY: Record<string, T> = {
     cta: "Continuă configurarea",
     help: "Dacă apar întrebări în timpul configurării, doar răspunde la acest e-mail — te ajut cu plăcere.",
     closing: "Te ajut cu plăcere să finalizezi configurarea.",
-    signature: "Cu stimă,<br>Bogdan<br>IQ Rest | iq-rest.com",
+    signature: "Numai bine,<br>Bogdan<br>IQ Rest | iq-rest.com",
   },
   ru: {
     subject: "Ваш ресторан в IQ Rest ещё не настроен до конца",
@@ -272,7 +272,7 @@ export const MENU_ALMOST_READY: Record<string, T> = {
   sk: {
     subject: "Vaša reštaurácia na IQ Rest ešte nie je úplne nastavená",
     greeting: "Dobrý deň,",
-    body: "Začali ste nastavovať svoju reštauráciu na IQ Rest, ale ešte ste neskončili. Aby ste menu otvorili hosťom, zostáva pridať jedlá, nastaviť stoly a QR kód a podľa potreby aj online objednávky, rezervácie a kuchynskú obrazovku. Skúšobný prístup už máte aktívny.",
+    body: "Začali ste nastavovať svoju reštauráciu na IQ Rest, ale ešte ste to nedokončili. Aby ste menu otvorili hosťom, zostáva pridať jedlá, nastaviť stoly a QR kód a podľa potreby aj online objednávky, rezervácie a kuchynskú obrazovku. Skúšobný prístup už máte aktívny.",
     cta: "Pokračovať v nastavení",
     help: "Ak sa pri nastavovaní vyskytnú otázky, stačí odpovedať na tento e-mail — rád pomôžem.",
     closing: "Rád vám pomôžem nastavenie dokončiť.",
@@ -297,7 +297,7 @@ export const MENU_ALMOST_READY: Record<string, T> = {
     signature: "Срдачан поздрав,<br>Богдан<br>IQ Rest | iq-rest.com",
   },
   sv: {
-    subject: "Din restaurang på IQ Rest är inte färdig att använda än",
+    subject: "Din restaurang på IQ Rest är inte färdiginställd än",
     greeting: "Hej,",
     body: "Du har börjat ställa in din restaurang på IQ Rest men är inte klar än. För att öppna menyn för gästerna återstår bara att lägga till rätterna, ställa in bord och QR-koden och, om du vill, onlinebeställningar, bokningar och köksskärmen. Din provåtkomst är redan aktiv.",
     cta: "Fortsätt konfigurationen",
@@ -326,11 +326,11 @@ export const MENU_ALMOST_READY: Record<string, T> = {
   zh: {
     subject: "您在 IQ Rest 的餐厅尚未设置完成",
     greeting: "您好,",
-    body: "您已开始在 IQ Rest 设置餐厅,但还没有完成。要把菜单开放给客人,只需添加菜品、设置餐桌和 QR 码,如有需要再设置在线点单、预订和厨房显示屏即可。您的试用权限已经开通。",
+    body: "您已开始在 IQ Rest 设置餐厅,但还没有完成。要把菜单开放给客人,只需添加菜品、设置餐桌和二维码,如有需要再设置在线点单、预订和厨房显示屏即可。您的试用权限已经开通。",
     cta: "继续设置",
     help: "设置过程中如有任何疑问,直接回复这封邮件即可,我会帮您处理。",
     closing: "我很乐意帮您完成设置。",
-    signature: "此致,<br>Bogdan<br>IQ Rest | iq-rest.com",
+    signature: "祝好,<br>Bogdan<br>IQ Rest | iq-rest.com",
   },
 };
 

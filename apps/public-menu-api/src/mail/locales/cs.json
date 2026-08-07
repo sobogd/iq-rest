@@ -1,6 +1,6 @@
 {
-  "guestSubject": "Vaše rezervace v {restaurant}",
-  "guestGreeting": "Dobrý den {name},",
+  "guestSubject": "Vaše rezervace v restauraci {restaurant}",
+  "guestGreeting": "Dobrý den, {name},",
   "guestConfirmed": "Vaše rezervace je potvrzena!",
   "guestPending": "Váš požadavek na rezervaci byl přijat a čeká na potvrzení.",
   "details": "Podrobnosti rezervace:",

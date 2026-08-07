@@ -1,5 +1,5 @@
 {
-  "guestSubject": "Ваше бронювання в {restaurant}",
+  "guestSubject": "Ваше бронювання в ресторані {restaurant}",
   "guestGreeting": "Вітаємо, {name}!",
   "guestConfirmed": "Ваше бронювання підтверджено!",
   "guestPending": "Ваш запит на бронювання отримано та очікує підтвердження.",

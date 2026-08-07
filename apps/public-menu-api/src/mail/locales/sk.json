@@ -1,6 +1,6 @@
 {
-  "guestSubject": "Vaša rezervácia v {restaurant}",
-  "guestGreeting": "Dobrý deň {name},",
+  "guestSubject": "Vaša rezervácia v reštaurácii {restaurant}",
+  "guestGreeting": "Dobrý deň, {name},",
   "guestConfirmed": "Vaša rezervácia je potvrdená!",
   "guestPending": "Vaša žiadosť o rezerváciu bola prijatá a čaká na potvrdenie.",
   "details": "Podrobnosti rezervácie:",
@@ -9,11 +9,11 @@
   "guests": "Hostia",
   "table": "Stôl",
   "notes": "Poznámky",
-  "guestOutro": "Ak potrebujete vykonať zmeny, prosím kontaktujte priamo reštauráciu.",
+  "guestOutro": "Ak potrebujete vykonať zmeny, kontaktujte, prosím, priamo reštauráciu.",
   "signature": "S pozdravom,<br>{restaurant}",
   "ownerSubject": "Nová rezervácia od {name}",
   "ownerGreeting": "Nová rezervácia!",
-  "ownerBody": "Vo vašej reštaurácii bola vykonaná nová rezervácia.",
+  "ownerBody": "Vo vašej reštaurácii bola vytvorená nová rezervácia.",
   "ownerCta": "Zobraziť rezervácie",
   "ownerSignature": "S pozdravom,<br>Tím IQ Rest"
 }

@@ -1,6 +1,6 @@
 {
-  "guestSubject": "{restaurant} 예약 확인",
-  "guestGreeting": "안녕하세요 {name}님,",
+  "guestSubject": "{restaurant} 예약 안내",
+  "guestGreeting": "안녕하세요, {name}님",
   "guestConfirmed": "예약이 확정되었습니다!",
   "guestPending": "예약 요청이 접수되었으며 확인을 기다리고 있습니다.",
   "details": "예약 상세 정보:",

@@ -38,8 +38,8 @@ export const PAYMENT_FAILED: Record<string, T> = {
     subject: "El pagament ha fallat — actualitza la teva targeta",
     greeting: "Hola,",
     body: "No hem pogut processar el teu últim pagament d'IQ Rest. Actualitza les dades de la teva targeta i torna a provar el pagament per mantenir el teu restaurant en funcionament. Si el pagament no es completa, el teu restaurant es desactivarà d'aquí a 3 dies.",
-    cta: "Actualitzar el pagament",
-    help: "Si tens qualsevol problema, sempre pots escriure al nostre suport — només respon a aquest correu.",
+    cta: "Actualitza el pagament",
+    help: "Si tens cap problema, sempre pots escriure al nostre suport — només respon a aquest correu.",
     closing: "Gràcies per fer servir IQ Rest.",
     signature: "Salutacions,<br>Bogdan<br>IQ Rest | iq-rest.com",
   },
@@ -93,7 +93,7 @@ export const PAYMENT_FAILED: Record<string, T> = {
     greeting: "Hola,",
     body: "No pudimos procesar tu último pago de IQ Rest. Actualiza los datos de tu tarjeta y vuelve a intentar el pago para mantener tu restaurante en funcionamiento. Si el pago no se completa, tu restaurante se desactivará en 3 días.",
     cta: "Actualizar pago",
-    help: "Si tienes cualquier problema, siempre puedes escribir a nuestro soporte — solo responde a este correo.",
+    help: "Si tienes algún problema, siempre puedes escribir a nuestro soporte — solo responde a este correo.",
     closing: "Gracias por usar IQ Rest.",
     signature: "Saludos,<br>Bogdan<br>IQ Rest | iq-rest.com",
   },
@@ -121,7 +121,7 @@ export const PAYMENT_FAILED: Record<string, T> = {
     body: "Emme voineet käsitellä viimeisintä IQ Rest -maksuasi. Päivitä korttitietosi ja yritä maksua uudelleen, jotta ravintolasi pysyy toiminnassa. Jos maksu ei mene läpi, ravintolasi suljetaan 3 päivän kuluttua.",
     cta: "Päivitä maksu",
     help: "Jos sinulla on ongelmia, voit aina ottaa yhteyttä tukeemme — vastaa vain tähän sähköpostiin.",
-    closing: "Kiitos, että käytät IQ Restia.",
+    closing: "Kiitos, että käytät IQ Restiä.",
     signature: "Ystävällisin terveisin,<br>Bogdan<br>IQ Rest | iq-rest.com",
   },
   fr: {
@@ -163,7 +163,7 @@ export const PAYMENT_FAILED: Record<string, T> = {
   is: {
     subject: "Greiðsla mistókst — uppfærðu kortið þitt",
     greeting: "Halló,",
-    body: "Við gátum ekki unnið úr síðustu IQ Rest greiðslunni þinni. Vinsamlegast uppfærðu kortaupplýsingarnar þínar og reyndu greiðsluna aftur til að halda veitingastaðnum þínum í gangi. Ef greiðslan gengur ekki í gegn verður veitingastaðurinn þinn tekinn úr sambandi eftir 3 daga.",
+    body: "Við gátum ekki unnið úr síðustu IQ Rest-greiðslunni þinni. Vinsamlegast uppfærðu kortaupplýsingarnar þínar og reyndu greiðsluna aftur til að halda veitingastaðnum þínum í gangi. Ef greiðslan gengur ekki í gegn verður veitingastaðurinn þinn tekinn úr sambandi eftir 3 daga.",
     cta: "Uppfæra greiðslu",
     help: "Ef þú lendir í einhverjum vandræðum geturðu alltaf haft samband við þjónustuna okkar — svaraðu bara þessum tölvupósti.",
     closing: "Takk fyrir að nota IQ Rest.",
@@ -174,8 +174,8 @@ export const PAYMENT_FAILED: Record<string, T> = {
     greeting: "Ciao,",
     body: "Non siamo riusciti a elaborare il tuo ultimo pagamento IQ Rest. Aggiorna i dati della tua carta e riprova il pagamento per mantenere attivo il tuo ristorante. Se il pagamento non va a buon fine, il tuo ristorante verrà disattivato tra 3 giorni.",
     cta: "Aggiorna pagamento",
-    help: "Se hai qualsiasi problema, puoi sempre contattare il nostro supporto — basta rispondere a questa email.",
-    closing: "Grazie per usare IQ Rest.",
+    help: "Se hai qualche problema, puoi sempre contattare il nostro supporto — ti basta rispondere a questa email.",
+    closing: "Grazie per aver scelto IQ Rest.",
     signature: "Cordiali saluti,<br>Bogdan<br>IQ Rest | iq-rest.com",
   },
   ja: {
@@ -185,7 +185,7 @@ export const PAYMENT_FAILED: Record<string, T> = {
     cta: "支払いを更新",
     help: "何かお困りのことがあれば、いつでもサポートにご連絡いただけます。このメールに返信してください。",
     closing: "IQ Rest をご利用いただきありがとうございます。",
-    signature: "よろしくお願いいたします、<br>Bogdan<br>IQ Rest | iq-rest.com",
+    signature: "よろしくお願いいたします。<br>Bogdan<br>IQ Rest | iq-rest.com",
   },
   ko: {
     subject: "결제에 실패했습니다 — 카드 정보를 업데이트하세요",
@@ -194,7 +194,7 @@ export const PAYMENT_FAILED: Record<string, T> = {
     cta: "결제 업데이트",
     help: "문제가 있으시면 언제든지 저희 지원팀에 문의하실 수 있습니다 — 이 이메일에 회신해 주세요.",
     closing: "IQ Rest를 이용해 주셔서 감사합니다.",
-    signature: "감사합니다,<br>Bogdan<br>IQ Rest | iq-rest.com",
+    signature: "감사합니다.<br>Bogdan<br>IQ Rest | iq-rest.com",
   },
   lt: {
     subject: "Mokėjimas nepavyko — atnaujinkite savo kortelę",
@@ -279,7 +279,7 @@ export const PAYMENT_FAILED: Record<string, T> = {
   },
   sl: {
     subject: "Plačilo ni uspelo — posodobi svojo kartico",
-    greeting: "Pozdravljeni,",
+    greeting: "Živjo,",
     body: "Nismo mogli obdelati tvojega zadnjega plačila v IQ Rest. Prosimo, posodobi podatke o kartici in ponovno poskusi s plačilom, da bo tvoja restavracija še naprej delovala. Če plačilo ne bo uspešno, bo tvoja restavracija čez 3 dni izklopljena.",
     cta: "Posodobi plačilo",
     help: "Če imaš kakršne koli težave, se lahko vedno obrneš na našo podporo — samo odgovori na to e-pošto.",
@@ -323,13 +323,13 @@ export const PAYMENT_FAILED: Record<string, T> = {
     signature: "З повагою,<br>Богдан<br>IQ Rest | iq-rest.com",
   },
   zh: {
-    subject: "支付失败 — 请更新您的银行卡",
-    greeting: "您好,",
+    subject: "支付失败——请更新您的银行卡",
+    greeting: "您好，",
     body: "我们无法处理您最近的 IQ Rest 付款。请更新您的银行卡信息并重新尝试付款，以保持您的餐厅正常运营。如果付款未能完成，您的餐厅将在 3 天后被停用。",
     cta: "更新付款",
-    help: "如果您遇到任何问题，随时可以联系我们的支持团队 — 只需回复此邮件即可。",
+    help: "如果您遇到任何问题，随时可以联系我们的支持团队——只需回复此邮件即可。",
     closing: "感谢您使用 IQ Rest。",
-    signature: "此致,<br>Bogdan<br>IQ Rest | iq-rest.com",
+    signature: "此致，<br>Bogdan<br>IQ Rest | iq-rest.com",
   },
 };
 

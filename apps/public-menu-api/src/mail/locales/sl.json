@@ -1,6 +1,6 @@
 {
-  "guestSubject": "Vaša rezervacija v {restaurant}",
-  "guestGreeting": "Pozdravljeni {name},",
+  "guestSubject": "Vaša rezervacija v restavraciji {restaurant}",
+  "guestGreeting": "Pozdravljeni, {name},",
   "guestConfirmed": "Vaša rezervacija je potrjena!",
   "guestPending": "Vaša zahteva za rezervacijo je bila prejeta in čaka na potrditev.",
   "details": "Podrobnosti rezervacije:",
@@ -9,7 +9,7 @@
   "guests": "Gostje",
   "table": "Miza",
   "notes": "Opombe",
-  "guestOutro": "Če morate narediti spremembe, se obrnite neposredno na restavracijo.",
+  "guestOutro": "Če želite rezervacijo spremeniti, se obrnite neposredno na restavracijo.",
   "signature": "Lep pozdrav,<br>{restaurant}",
   "ownerSubject": "Nova rezervacija od {name}",
   "ownerGreeting": "Nova rezervacija!",

@@ -1,16 +1,20 @@
 {
-  "companyDefaultName": "Mitt Företag",
+  "companyDefaultName": "Mitt företag",
   "otpEmail": {
     "subject": "Din kod: {code}",
-    "greeting": "Hej,",
-    "intro": "Använd den här koden för att logga in på IQ Rest.",
-    "expiry": "Går ut om 5 minuter."
+    "title": "Välkommen till IQ Rest",
+    "intro": "Använd den här koden för att logga in:",
+    "expiry": "Koden är giltig i 5 minuter. Om du inte har begärt den kan du bara ignorera det här mejlet."
   },
   "supportEmail": {
-    "subject": "Du har ett nytt meddelande från IQ Rest Support",
-    "greeting": "Hej!",
-    "body": "Du har ett nytt meddelande från vårt supportteam. Vänligen kontrollera din kontrollpanel för att se det.",
-    "cta": "Öppna supportchatten",
-    "signature": "Med vänliga hälsningar,<br>IQ Rest-teamet"
+    "subject": "Nytt meddelande från IQ Rest-supporten",
+    "title": "Nytt meddelande från supporten",
+    "body": "Vårt supportteam har skickat ett nytt meddelande till dig. Öppna supportchatten i din kontrollpanel för att läsa och svara.",
+    "cta": "Öppna supportchatten"
+  },
+  "email": {
+    "openDashboard": "Öppna kontrollpanelen",
+    "needHelp": "Behöver du hjälp?",
+    "helpCenter": "Besök vårt hjälpcenter"
   }
 }

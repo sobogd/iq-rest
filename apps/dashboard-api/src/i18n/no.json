@@ -1,16 +1,20 @@
 {
-  "companyDefaultName": "Min Restaurant",
+  "companyDefaultName": "Min restaurant",
   "otpEmail": {
     "subject": "Din kode: {code}",
-    "greeting": "Hei,",
-    "intro": "Bruk denne koden for å logge inn på IQ Rest.",
-    "expiry": "Utløper om 5 minutter."
+    "title": "Velkommen til IQ Rest",
+    "intro": "Bruk denne koden for å logge inn:",
+    "expiry": "Koden er gyldig i 5 minutter. Hvis du ikke ba om den, kan du bare se bort fra denne e-posten."
   },
   "supportEmail": {
-    "subject": "Du har en ny melding fra IQ Rest Support",
-    "greeting": "Hei!",
-    "body": "Du har en ny melding fra vårt supportteam. Vennligst sjekk dashbordet ditt for å se den.",
-    "cta": "Åpne support-chat",
-    "signature": "Hilsen,<br>IQ Rest-teamet"
+    "subject": "Ny melding fra IQ Rest-support",
+    "title": "Ny melding fra support",
+    "body": "Supportteamet vårt har sendt deg en ny melding. Åpne support-chatten i dashbordet for å lese den og svare.",
+    "cta": "Åpne support-chat"
+  },
+  "email": {
+    "openDashboard": "Åpne dashbordet",
+    "needHelp": "Trenger du hjelp?",
+    "helpCenter": "Besøk hjelpesenteret vårt"
   }
 }

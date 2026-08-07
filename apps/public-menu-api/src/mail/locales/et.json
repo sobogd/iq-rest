@@ -1,6 +1,6 @@
 {
   "guestSubject": "Teie broneering restoranis {restaurant}",
-  "guestGreeting": "Tere {name},",
+  "guestGreeting": "Tere, {name},",
   "guestConfirmed": "Teie broneering on kinnitatud!",
   "guestPending": "Teie broneeringutaotlus on vastu võetud ja ootab kinnitust.",
   "details": "Broneeringu üksikasjad:",
@@ -11,7 +11,7 @@
   "notes": "Märkused",
   "guestOutro": "Kui soovite muudatusi teha, võtke palun otse restoraniga ühendust.",
   "signature": "Lugupidamisega,<br>{restaurant}",
-  "ownerSubject": "Uus broneering kasutajalt {name}",
+  "ownerSubject": "Uus broneering külaliselt {name}",
   "ownerGreeting": "Uus broneering!",
   "ownerBody": "Teie restoranis on tehtud uus broneering.",
   "ownerCta": "Vaata broneeringuid",

@@ -1,16 +1,20 @@
 {
-  "companyDefaultName": "Oma Yritys",
+  "companyDefaultName": "Oma yritys",
   "otpEmail": {
     "subject": "Koodisi: {code}",
-    "greeting": "Hei,",
-    "intro": "Käytä tätä koodia kirjautuaksesi IQ Rest -palveluun.",
-    "expiry": "Vanhenee 5 minuutin kuluttua."
+    "title": "Tervetuloa IQ Rest -palveluun",
+    "intro": "Kirjaudu sisään tällä koodilla:",
+    "expiry": "Koodi on voimassa 5 minuuttia. Jos et pyytänyt koodia, voit jättää tämän viestin huomiotta."
   },
   "supportEmail": {
-    "subject": "Sinulla on uusi viesti IQ Rest -tuesta",
-    "greeting": "Hei!",
-    "body": "Tukitiimiltämme on uusi viesti sinulle. Tarkista viesti hallintapaneelistasi.",
-    "cta": "Avaa tukikeskustelu",
-    "signature": "Terveisin,<br>IQ Rest -tiimi"
+    "subject": "Uusi viesti IQ Rest -tuesta",
+    "title": "Uusi viesti tuesta",
+    "body": "Tukitiimimme on lähettänyt sinulle uuden viestin. Avaa tukikeskustelu hallintapaneelissa, niin voit lukea viestin ja vastata siihen.",
+    "cta": "Avaa tukikeskustelu"
+  },
+  "email": {
+    "openDashboard": "Avaa hallintapaneeli",
+    "needHelp": "Tarvitsetko apua?",
+    "helpCenter": "Tutustu ohjekeskukseemme"
   }
 }
