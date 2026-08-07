@@ -34,7 +34,7 @@ DSN=$(grep -h "^DATABASE_URL" /home/deploy/apps/iq-rest-dashboard-api/.env | hea
 psql "$DSN" -At -F $'\t' \
   -c "SET default_transaction_read_only=on;" \
   -c "SELECT r.slug,
-             COALESCE(s.plan,'FREE'),
+             CASE WHEN s.status IS NULL THEN 'FREE' ELSE 'PAID' END,
              COALESCE(s.status,'INACTIVE'),
              (SELECT count(*) FROM items i WHERE i.\"restaurantId\"=r.id AND i.\"deletedAt\" IS NULL)
       FROM restaurants r
