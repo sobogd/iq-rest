@@ -75,7 +75,7 @@ export class MailService implements OnModuleDestroy {
    *  recolor it together with the rest of the copy. SVG is not an option —
    *  Gmail strips it. Must stay a public absolute URL. */
   private logoImg(): string {
-    return `<div style="text-align:center;margin:0 0 28px"><img src="https://iq-rest.com/logo-square.png" width="44" height="44" alt="IQ Rest" style="vertical-align:middle;border:0;border-radius:10px" /><span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:27px;font-weight:700;letter-spacing:-0.5px;color:#1a1a1a;vertical-align:middle;padding:0 10px">Rest</span></div>`;
+    return `<div style="text-align:center;margin:0 0 28px"><img src="https://iq-rest.com/icon-512.png" width="44" height="44" alt="IQ Rest" style="vertical-align:middle;border:0" /><span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:27px;font-weight:700;letter-spacing:-0.5px;color:#1a1a1a;vertical-align:middle;padding:0 10px">Rest</span></div>`;
   }
 
   /** Public help-center URL on the landing for a locale (en lives unprefixed). */
