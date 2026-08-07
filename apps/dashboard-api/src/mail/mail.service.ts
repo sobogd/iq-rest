@@ -212,6 +212,27 @@ export class MailService implements OnModuleDestroy {
     return this.config.get<string>("DASHBOARD_URL") || "https://dashboard.iq-rest.com";
   }
 
+  /** Welcome email for a Meta Lead Ads lead (EN-only campaign — no locale).
+   *  The lead-form thank-you screen promises this email; the CTA carries
+   *  ?auth=signup so the landing auto-opens registration. */
+  async sendLeadWelcome({ email, venueType }: { email: string; venueType?: string | null }): Promise<void> {
+    const landing = (this.config.get<string>("LANDING_URL") || "https://iq-rest.com").replace(/\/$/, "");
+    const venue = venueType && venueType !== "other" ? venueType.replace(/_/g, " ") : "restaurant";
+    await this.sendPersonalEmail({
+      kind: "lead_welcome",
+      email,
+      subject: "Your IQ Rest account is one click away",
+      dir: "ltr",
+      greeting: "Hi there!",
+      body: `Thanks for your interest in IQ Rest. Here's your link to set up your ${venue} — QR menu, online reservations and a kitchen display, ready in about 10 minutes. Free to start, no card required.`,
+      help: "If you have any questions about setting up your QR menu, website, bookings, or anything else — just reply to this email. I'm here to help.",
+      closing: "Looking forward to working with you!",
+      cta: "Create my account",
+      ctaUrl: `${landing}/?auth=signup&from=email&ec=lead_welcome`,
+      helpFooterLocale: "en",
+    });
+  }
+
   /** Personal welcome email — manually triggered from the admin panel.
    *  Name-less; CTA opens the dashboard. */
   async sendWelcomePersonal({ email, locale }: { email: string; locale: string }): Promise<void> {

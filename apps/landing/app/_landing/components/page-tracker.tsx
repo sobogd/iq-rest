@@ -5,7 +5,6 @@ import { analytics } from "@/lib/analytics";
 import { readBillingCurrencyFromDocument } from "@/lib/country-currency-map";
 
 const GCLID_REGEX = /^[A-Za-z0-9_-]{1,256}$/;
-const FBCLID_REGEX = /^[A-Za-z0-9_.-]{1,512}$/;
 
 // Minimum gap between two consecutive view events for the same section.
 // Stops a single slow scroll near the section's edge from firing dozens
@@ -24,10 +23,14 @@ function sanitizeEventPart(s: string): string {
     .replace(/^_+|_+$/g, "");
 }
 
-// Only the paid click ids keep dedicated `l_gclid_`/`l_fbclid_` events — their
-// raw value (case + . -, up to 512 chars) and server-side semantics (bot-filter
-// bypass, is_*_ads flags, CAPI fbc) can't survive the generic a-z0-9_ channel.
-// Everything else (incl. `from`) goes through the universal l_param_ pass.
+// Only the Google click ids keep a dedicated raw-value event — their raw value
+// (case + -, up to 256 chars) and server-side semantics (bot-filter bypass,
+// is_google_ads flag) can't survive the generic a-z0-9_ channel. `fbclid` is
+// listed ONLY to keep it out of the generic l_param_ pass: we deliberately do
+// NOT track or store it anymore (client-privacy decision, 2026-08-07) — it is
+// stripped from the URL with the rest of the query and never leaves the
+// browser. Everything else (incl. `from`) goes through the universal l_param_
+// pass.
 const HANDLED_PARAMS = new Set(["gclid", "gbraid", "wbraid", "fbclid"]);
 
 // Fire a `l_param_<name>__<value>` event for every other URL query param (the
@@ -51,24 +54,16 @@ function fireAllParamsAndClean(): void {
   window.history.replaceState({}, "", newUrl);
 }
 
-// Paid click ids ride the unified `l_param_<name>__<value>` namespace too, but
-// the value is the RAW id (case + . - preserved, NOT sanitized) — the server
-// accepts these via a dedicated permissive regex, sets is_*_ads, and bypasses
-// the bot filter. CAPI/admin parse the id back by stripping the fixed prefix.
+// Google click ids ride the unified `l_param_<name>__<value>` namespace too,
+// but the value is the RAW id (case + - preserved, NOT sanitized) — the server
+// accepts these via a dedicated permissive regex, sets is_google_ads, and
+// bypasses the bot filter. Admin parses the id back by stripping the prefix.
 function fireGclidEvent(): void {
   const sp = new URLSearchParams(window.location.search);
   const gclid = sp.get("gclid") || sp.get("gbraid") || sp.get("wbraid");
   if (!gclid || !GCLID_REGEX.test(gclid)) return;
 
   analytics.track(`l_param_gclid__${gclid}`);
-}
-
-function fireFbclidEvent(): void {
-  const sp = new URLSearchParams(window.location.search);
-  const fbclid = sp.get("fbclid");
-  if (!fbclid || !FBCLID_REGEX.test(fbclid)) return;
-
-  analytics.track(`l_param_fbclid__${fbclid}`);
 }
 
 function fireCurrencyEvent(): void {
@@ -97,9 +92,8 @@ interface PageTrackerProps {
 export function PageTracker({ page }: PageTrackerProps) {
   useEffect(() => {
     fireGclidEvent();
-    fireFbclidEvent();
     // Generic catch-all for every other URL param (incl. `from`), then strip
-    // the whole query.
+    // the whole query. fbclid is skipped on purpose — see HANDLED_PARAMS.
     fireAllParamsAndClean();
     analytics.track(`l_page_${page}`);
     fireCurrencyEvent();

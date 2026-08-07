@@ -119,6 +119,16 @@ function setGeoCookies(request: NextRequest, response: NextResponse): void {
   });
 }
 
+// Query string minus `fbclid`. We deliberately drop Meta's click id at the
+// door (client-privacy decision, 2026-08-07): it is never stored, tracked or
+// echoed back — utm/gclid pass through untouched.
+function searchSansFbclid(request: NextRequest): string {
+  const sp = new URLSearchParams(request.nextUrl.search);
+  sp.delete("fbclid");
+  const qs = sp.toString();
+  return qs ? `?${qs}` : "";
+}
+
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
@@ -131,7 +141,7 @@ export default function middleware(request: NextRequest) {
       ? preferred
       : detectLocaleByCountry(request);
     const target = new URL(locale === "en" ? "/" : `/${locale}`, request.url);
-    target.search = request.nextUrl.search; // preserve fbclid/utm/gclid
+    target.search = searchSansFbclid(request); // preserve utm/gclid, drop fbclid
     const response = NextResponse.redirect(target, 302);
     setGeoCookies(request, response);
     return response;
@@ -148,7 +158,7 @@ export default function middleware(request: NextRequest) {
       ? preferred
       : detectLocaleByCountry(request);
     const target = new URL(swapLocale(enPath, locale), request.url);
-    target.search = request.nextUrl.search; // preserve fbclid/utm/gclid
+    target.search = searchSansFbclid(request); // preserve utm/gclid, drop fbclid
     const response = NextResponse.redirect(target, 302);
     setGeoCookies(request, response);
     return response;
@@ -165,7 +175,7 @@ export default function middleware(request: NextRequest) {
   // bare-locale-match block below, otherwise /en falls through to a 404.
   if (pathname === "/en") {
     const target = new URL("/", request.url);
-    target.search = request.nextUrl.search;
+    target.search = searchSansFbclid(request);
     const response = NextResponse.redirect(target, 301);
     setGeoCookies(request, response);
     return response;
@@ -174,7 +184,7 @@ export default function middleware(request: NextRequest) {
     const sub = pathname.slice(3);
     if (EN_ROOT_SLUGS.has(sub)) {
       const target = new URL(sub, request.url);
-      target.search = request.nextUrl.search;
+      target.search = searchSansFbclid(request);
       const response = NextResponse.redirect(target, 301);
       setGeoCookies(request, response);
       return response;
