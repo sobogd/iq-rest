@@ -29,6 +29,7 @@ import type {
   ApiTable,
 } from "./_v2/api";
 import { isAdminEmail } from "@/lib/admin";
+import { trackEvent } from "@/lib/analytics";
 import { useTheme } from "@/components/theme-provider";
 
 interface AuthCheck {
@@ -62,9 +63,40 @@ interface SubData {
   canManageBilling?: boolean;
 }
 
+// Email links land with ?from=email&ec=<campaign>. Consume them once on boot:
+// fire d_param_<name>__<value> usage events (mirrors the landing's l_param_
+// pass) and strip ONLY these two params — the rest of the query string belongs
+// to SPA routing (?demo= etc).
+const ATTRIBUTION_PARAMS = ["from", "ec"];
+function consumeAttributionParams(): void {
+  const sp = new URLSearchParams(window.location.search);
+  if (!ATTRIBUTION_PARAMS.some((k) => sp.get(k))) return;
+  for (const k of ATTRIBUTION_PARAMS) {
+    const raw = sp.get(k);
+    sp.delete(k);
+    if (!raw) continue;
+    const v = raw
+      .toLowerCase()
+      .replace(/[^a-z0-9_]+/g, "_")
+      .replace(/_+/g, "_")
+      .replace(/^_+|_+$/g, "");
+    if (v) trackEvent(`d_param_${k}__${v}`.slice(0, 64));
+  }
+  const qs = sp.toString();
+  window.history.replaceState(
+    {},
+    "",
+    window.location.pathname + (qs ? `?${qs}` : "") + window.location.hash,
+  );
+}
+
 export function DashboardHost() {
   const { locale } = useParams({ strict: false }) as { locale?: string };
   const { setTheme } = useTheme();
+
+  useEffect(() => {
+    consumeAttributionParams();
+  }, []);
 
   const auth = useQueries({
     queries: [

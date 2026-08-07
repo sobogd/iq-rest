@@ -84,10 +84,10 @@ export class MailService implements OnModuleDestroy {
     return seg === "en" ? "https://iq-rest.com/help" : `https://iq-rest.com/${seg}/help`;
   }
 
-  /** Universal branded layout: logo, centered title, content, optional orange
-   *  CTA button, grey footer (help link + copyright). Used by OTP, support and
-   *  admin notifications; the personal "Bogdan" campaign emails intentionally
-   *  keep their plain letter-like shape. */
+  /** Universal flat layout — no card, no background: the email sits on the
+   *  client's own theme, same shape as the personal letters. Logo, title,
+   *  content, optional orange CTA button, optional small help line at the
+   *  end. Used by OTP, support and admin notifications. */
   private renderLayout(opts: {
     dir: "rtl" | "ltr";
     title: string;
@@ -99,24 +99,21 @@ export class MailService implements OnModuleDestroy {
       ? `<div style="margin:28px 0 0"><a href="${opts.cta.url}" style="display:inline-block;background:#FF6229;color:#ffffff;text-decoration:none;font-size:16px;font-weight:600;padding:13px 28px;border-radius:10px">${opts.cta.label}</a></div>`
       : "";
     return `
-      <div dir="${opts.dir}" style="background:#f6f6f4;padding:32px 12px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#1a1a1a">
-        <div style="max-width:520px;margin:0 auto;background:#ffffff;border-radius:16px;padding:36px 28px">
-          ${this.logoImg()}
-          <h1 style="font-size:22px;font-weight:700;line-height:1.4;margin:0 0 16px">${opts.title}</h1>
-          ${opts.contentHtml}
-          ${button}
-        </div>
-        <div style="max-width:520px;margin:0 auto;padding:20px 8px;font-size:13px;line-height:1.8;color:#8a8a8a">
-          ${opts.footerHtml ?? ""}
-          <div>© IQ Rest · <a href="https://iq-rest.com" style="color:#8a8a8a">iq-rest.com</a></div>
-        </div>
+      <div dir="${opts.dir}" style="max-width:520px;margin:0 auto;padding:32px 20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#1a1a1a">
+        ${this.logoImg()}
+        <h1 style="font-size:22px;font-weight:700;line-height:1.4;margin:0 0 16px">${opts.title}</h1>
+        ${opts.contentHtml}
+        ${button}
+        ${opts.footerHtml ?? ""}
       </div>`;
   }
 
-  /** Localized footer line with the help-center link. */
-  private localizedFooter(locale: string): string {
+  /** Small grey in-letter help line with the localized help-center link.
+   *  `ec` (email campaign) rides the URL as ?from=email&ec=… — the landing's
+   *  page-tracker turns every query param into an l_param_ usage event. */
+  private localizedFooter(locale: string, ec: string): string {
     const t = this.i18n.bundle(locale).email;
-    return `<div>${t.needHelp} <a href="${this.helpUrl(locale)}" style="color:#FF6229;font-weight:600">${t.helpCenter}</a></div>`;
+    return `<p style="font-size:13px;line-height:1.6;margin:28px 0 0;color:#8a8a8a">${t.needHelp} <a href="${this.helpUrl(locale)}?from=email&ec=${ec}" style="color:#FF6229;font-weight:600">${t.helpCenter}</a></p>`;
   }
 
   async sendOtp({ email, code, locale }: SendOtpOptions): Promise<void> {
@@ -185,7 +182,7 @@ export class MailService implements OnModuleDestroy {
     const buttonText = hasCta ? `${opts.cta}: ${opts.ctaUrl}\n\n` : "";
     const e = opts.helpFooterLocale ? this.i18n.bundle(opts.helpFooterLocale).email : null;
     const helpFooter = e
-      ? `<p style="font-size:13px;line-height:1.6;margin:28px 0 0;color:#8a8a8a">${e.needHelp} <a href="${this.helpUrl(opts.helpFooterLocale!)}" style="color:#FF6229;font-weight:600">${e.helpCenter}</a></p>`
+      ? `<p style="font-size:13px;line-height:1.6;margin:28px 0 0;color:#8a8a8a">${e.needHelp} <a href="${this.helpUrl(opts.helpFooterLocale!)}?from=email&ec=${opts.kind}" style="color:#FF6229;font-weight:600">${e.helpCenter}</a></p>`
       : "";
     const helpFooterText = e ? `\n\n${e.needHelp} ${e.helpCenter}: ${this.helpUrl(opts.helpFooterLocale!)}` : "";
 
@@ -229,7 +226,7 @@ export class MailService implements OnModuleDestroy {
       help: t.help,
       closing: t.closing,
       cta: t.cta,
-      ctaUrl: this.dashboardUrl(),
+      ctaUrl: `${this.dashboardUrl()}?from=email&ec=welcome_personal`,
       helpFooterLocale: locale,
     });
   }
@@ -248,7 +245,7 @@ export class MailService implements OnModuleDestroy {
       help: t.help,
       closing: t.closing,
       cta: t.cta,
-      ctaUrl: this.dashboardUrl(),
+      ctaUrl: `${this.dashboardUrl()}?from=email&ec=menu_almost_ready`,
     });
   }
 
@@ -286,7 +283,7 @@ export class MailService implements OnModuleDestroy {
           <p style="font-size:16px;line-height:1.7;margin:0 0 12px">${opts.body}</p>
           <p style="font-size:13px;line-height:1.6;margin:0;color:#666">${opts.help}</p>`,
         cta: { label: opts.cta, url: opts.ctaUrl },
-        footerHtml: this.localizedFooter(opts.locale),
+        footerHtml: this.localizedFooter(opts.locale, opts.kind),
       }),
       text: `${opts.title}\n\n${opts.body}\n\n${opts.cta}: ${opts.ctaUrl}\n\n${opts.help}\n\n${bundle.email.needHelp} ${bundle.email.helpCenter}: ${this.helpUrl(opts.locale)}`,
     });
@@ -305,7 +302,7 @@ export class MailService implements OnModuleDestroy {
       body: t.body,
       help: t.help,
       cta: t.cta,
-      ctaUrl: `${this.dashboardUrl()}/settings/billing`,
+      ctaUrl: `${this.dashboardUrl()}/settings/billing?from=email&ec=trial_ending`,
       dir: isTrialEndingRtl(locale) ? "rtl" : "ltr",
     });
   }
@@ -327,7 +324,7 @@ export class MailService implements OnModuleDestroy {
       body: t.body,
       help: t.help,
       cta: t.cta,
-      ctaUrl: `${this.dashboardUrl()}/settings/billing`,
+      ctaUrl: `${this.dashboardUrl()}/settings/billing?from=email&ec=payment_failed`,
       dir: isPaymentFailedRtl(locale) ? "rtl" : "ltr",
     });
   }
@@ -481,7 +478,7 @@ export class MailService implements OnModuleDestroy {
     const t = bundle.supportEmail;
     const dir = this.i18n.isRtl(locale) ? "rtl" : "ltr";
     const appUrl = (this.config.get<string>("APP_URL") || "https://dashboard.iq-rest.com").replace(/\/$/, "");
-    const ctaUrl = `${appUrl}/${this.i18n.urlLocale(locale)}/dashboard/settings/support?from=email`;
+    const ctaUrl = `${appUrl}/${this.i18n.urlLocale(locale)}/dashboard/settings/support?from=email&ec=support_reply`;
 
     await transporter.sendMail({
       from: this.cachedFrom ?? cfg.from,
@@ -492,7 +489,7 @@ export class MailService implements OnModuleDestroy {
         title: t.title,
         contentHtml: `<p style="font-size:16px;line-height:1.7;margin:0">${t.body}</p>`,
         cta: { label: t.cta, url: ctaUrl },
-        footerHtml: this.localizedFooter(locale),
+        footerHtml: this.localizedFooter(locale, "support_reply"),
       }),
       text: `${t.title}\n\n${t.body}\n\n${t.cta}: ${ctaUrl}\n\n${bundle.email.needHelp} ${bundle.email.helpCenter}: ${this.helpUrl(locale)}`,
     });

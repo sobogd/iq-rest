@@ -44,7 +44,7 @@ function isHiddenEvent(name: string): boolean {
   return (
     /^l_page_/.test(name) ||
     /^l_currency_/.test(name) ||
-    /^l_param_/.test(name) ||
+    /^[ld]_param_/.test(name) ||
     /^l_from_/.test(name) ||
     /^l_(gclid|gbraid|wbraid|fbclid)_/.test(name)
   );
@@ -239,7 +239,7 @@ export function UsageSessionPage({ id }: { id: string }) {
     if (cm) currency = cm[1].toUpperCase();
   }
 
-  // URL params captured on the landing as l_param_<name>__<value> events —
+  // URL params captured on the landing (l_param_) or dashboard (d_param_) —
   // surfaced as "Name: Value" chips (deduped, keeps first seen).
   const paramChips: Array<{ key: string; label: string }> = [];
   {
@@ -248,8 +248,8 @@ export function UsageSessionPage({ id }: { id: string }) {
       if (seen.has(e.event)) continue;
       // Paid click ids ride l_param_ too but are shown via the G/FB chips and
       // the gclid id block — keep them out of the generic name:value chips.
-      if (/^l_param_(?:gclid|fbclid)__/.test(e.event)) continue;
-      const m = /^l_param_(.+?)__(.+)$/.exec(e.event);
+      if (/^[ld]_param_(?:gclid|fbclid)__/.test(e.event)) continue;
+      const m = /^[ld]_param_(.+?)__(.+)$/.exec(e.event);
       if (m) {
         seen.add(e.event);
         paramChips.push({ key: e.event, label: `${titleizeSeg(m[1])}: ${titleizeSeg(m[2])}` });
