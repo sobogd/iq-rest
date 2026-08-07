@@ -99,7 +99,7 @@ export class MailService implements OnModuleDestroy {
       ? `<div style="margin:28px 0 0"><a href="${opts.cta.url}" style="display:inline-block;background:#FF6229;color:#ffffff;text-decoration:none;font-size:16px;font-weight:600;padding:13px 28px;border-radius:10px">${opts.cta.label}</a></div>`
       : "";
     return `
-      <div dir="${opts.dir}" style="max-width:520px;margin:0 auto;padding:32px 20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#1a1a1a">
+      <div dir="${opts.dir}" style="padding:32px 20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#1a1a1a">
         ${this.logoImg()}
         <p style="font-size:17px;line-height:1.7;margin:0 0 20px">${opts.title}</p>
         ${opts.contentHtml}
@@ -192,7 +192,7 @@ export class MailService implements OnModuleDestroy {
       // action; mailto variant needs no endpoint — replies land in support.
       headers: { "List-Unsubscribe": "<mailto:support@iq-rest.com?subject=unsubscribe>" },
       html: `
-        <div dir="${opts.dir}" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:520px;margin:0 auto;padding:32px 20px;color:#1a1a1a">
+        <div dir="${opts.dir}" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:32px 20px;color:#1a1a1a">
           ${this.logoImg()}
           <p style="font-size:17px;line-height:1.7;margin:0 0 20px">${opts.greeting}</p>
           <p style="font-size:17px;line-height:1.7;margin:0 0 ${hasCta ? "24px" : "20px"}">${opts.body}</p>
@@ -377,7 +377,7 @@ export class MailService implements OnModuleDestroy {
       to: email,
       subject: sub,
       html: `
-        <div dir="${dir}" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:520px;margin:0 auto;padding:32px 20px;color:#1a1a1a">
+        <div dir="${dir}" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:32px 20px;color:#1a1a1a">
           ${this.logoImg()}
           <p style="font-size:20px;font-weight:600;line-height:1.5;margin:0 0 20px">${greeting}</p>
           <p style="font-size:17px;line-height:1.7;margin:0 0 20px">${body}</p>

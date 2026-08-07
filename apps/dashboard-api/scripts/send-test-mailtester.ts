@@ -60,7 +60,7 @@ async function main() {
     subject: t.subject,
     headers: { "List-Unsubscribe": "<mailto:support@iq-rest.com?subject=unsubscribe>" },
     html: `
-        <div dir="${dir}" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:520px;margin:0 auto;padding:32px 20px;color:#1a1a1a">
+        <div dir="${dir}" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:32px 20px;color:#1a1a1a">
           ${logoMark()}
           <p style="font-size:17px;line-height:1.7;margin:0 0 20px">${t.greeting}</p>
           <p style="font-size:17px;line-height:1.7;margin:0 0 24px">${t.body}</p>
