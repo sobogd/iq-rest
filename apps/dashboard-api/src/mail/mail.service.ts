@@ -153,9 +153,10 @@ export class MailService implements OnModuleDestroy {
   }
 
   /** Shared renderer for the personal "Bogdan" emails (welcome,
-   *  setup-incomplete, trial-ending). Builds the HTML + text, an optional CTA
-   *  button and the List-Unsubscribe header, then sends. Name-less by design —
-   *  many owners never set a restaurant title. */
+   *  setup-incomplete). Plain letter-like shape on purpose — these trade on a
+   *  founder-to-owner relationship, not brand chrome. Builds the HTML + text,
+   *  an optional CTA button and the List-Unsubscribe header, then sends.
+   *  Name-less by design — many owners never set a restaurant title. */
   private async sendPersonalEmail(opts: {
     kind: string;
     email: string;
@@ -245,42 +246,83 @@ export class MailService implements OnModuleDestroy {
     });
   }
 
-  /** Trial-ending reminder — sent 1 day before trial expiry. Name-less; CTA
-   *  opens the billing page. */
+  /** Billing notices (trial-ending, payment-failed) use the universal branded
+   *  layout — these are about an action, not the founder relationship. Keeps
+   *  List-Unsubscribe so Gmail/Apple Mail still offer a native opt-out. */
+  private async sendBillingNotice(opts: {
+    kind: string;
+    email: string;
+    locale: string;
+    subject: string;
+    title: string;
+    body: string;
+    help: string;
+    cta: string;
+    ctaUrl: string;
+    dir: "rtl" | "ltr";
+  }): Promise<void> {
+    const cfg = this.smtpConfig();
+    if (!cfg) {
+      this.logger.warn(`SMTP not configured — ${opts.kind} skipped`);
+      return;
+    }
+    const transporter = await this.getTransporter(cfg);
+    const bundle = this.i18n.bundle(opts.locale);
+    await transporter.sendMail({
+      from: this.cachedFrom ?? cfg.from,
+      to: opts.email,
+      subject: opts.subject,
+      headers: { "List-Unsubscribe": "<mailto:support@iq-rest.com?subject=unsubscribe>" },
+      html: this.renderLayout({
+        dir: opts.dir,
+        title: opts.title,
+        contentHtml: `
+          <p style="font-size:16px;line-height:1.7;margin:0 0 12px;text-align:center">${opts.body}</p>
+          <p style="font-size:13px;line-height:1.6;margin:0;color:#666;text-align:center">${opts.help}</p>`,
+        cta: { label: opts.cta, url: opts.ctaUrl },
+        footerHtml: this.localizedFooter(opts.locale),
+      }),
+      text: `${opts.title}\n\n${opts.body}\n\n${opts.cta}: ${opts.ctaUrl}\n\n${opts.help}\n\n${bundle.email.needHelp} ${bundle.email.helpCenter}: ${this.helpUrl(opts.locale)}`,
+    });
+  }
+
+  /** Trial-ending reminder — sent 1 day before trial expiry. CTA opens the
+   *  billing page. */
   async sendTrialEnding({ email, locale }: { email: string; locale: string }): Promise<void> {
     const t = pickTrialEnding(locale);
-    await this.sendPersonalEmail({
+    await this.sendBillingNotice({
       kind: "trial_ending",
       email,
+      locale,
       subject: t.subject,
-      dir: isTrialEndingRtl(locale) ? "rtl" : "ltr",
-      greeting: t.greeting,
+      title: t.subject,
       body: t.body,
       help: t.help,
-      closing: t.closing,
-      signature: t.signature,
       cta: t.cta,
       ctaUrl: `${this.dashboardUrl()}/settings/billing`,
+      dir: isTrialEndingRtl(locale) ? "rtl" : "ltr",
     });
   }
 
   /** Payment-failed / dunning reminder — manually triggered from the admin
-   *  panel after a charge fails. Name-less; CTA opens the billing page so the
-   *  owner can update their card and retry. */
+   *  panel after a charge fails. CTA opens the billing page so the owner can
+   *  update their card and retry. */
   async sendPaymentFailed({ email, locale }: { email: string; locale: string }): Promise<void> {
     const t = pickPaymentFailed(locale);
-    await this.sendPersonalEmail({
+    // Subjects follow a "problem — action" shape in every locale; the short
+    // problem half doubles as the card title.
+    const title = t.subject.split("—")[0].trim();
+    await this.sendBillingNotice({
       kind: "payment_failed",
       email,
+      locale,
       subject: t.subject,
-      dir: isPaymentFailedRtl(locale) ? "rtl" : "ltr",
-      greeting: t.greeting,
+      title,
       body: t.body,
       help: t.help,
-      closing: t.closing,
-      signature: t.signature,
       cta: t.cta,
       ctaUrl: `${this.dashboardUrl()}/settings/billing`,
+      dir: isPaymentFailedRtl(locale) ? "rtl" : "ltr",
     });
   }
 

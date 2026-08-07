@@ -3,14 +3,13 @@
 // from MailService.sendPersonalEmail. SMTP creds are read from
 // soqrmenuweb/.env (the shared source of truth) — nothing is printed.
 //
-// Run: npx ts-node scripts/send-test-mailtester.ts <to-address> [welcome|menu|trial]
+// Run: npx ts-node scripts/send-test-mailtester.ts <to-address> [welcome|menu]
 
 import { readFileSync } from "fs";
 import { resolve } from "path";
 import nodemailer from "nodemailer";
 import { pickMenuAlmostReady, isRtl as marRtl } from "../src/mail/templates/menu-almost-ready";
 import { pickWelcomePersonal, isRtl as welcomeRtl } from "../src/mail/templates/welcome-personal";
-import { pickTrialEnding, isRtl as trialRtl } from "../src/mail/templates/trial-ending";
 
 const DASH = "https://dashboard.iq-rest.com";
 
@@ -34,14 +33,13 @@ function logoMark(): string {
 
 function pick(kind: string, locale: string) {
   if (kind === "welcome") return { t: pickWelcomePersonal(locale), dir: welcomeRtl(locale) ? "rtl" : "ltr", url: DASH };
-  if (kind === "trial") return { t: pickTrialEnding(locale), dir: trialRtl(locale) ? "rtl" : "ltr", url: `${DASH}/settings/billing` };
   return { t: pickMenuAlmostReady(locale), dir: marRtl(locale) ? "rtl" : "ltr", url: DASH };
 }
 
 async function main() {
   const to = process.argv[2];
   const kind = process.argv[3] || "menu";
-  if (!to) throw new Error("usage: ts-node scripts/send-test-mailtester.ts <to-address> [welcome|menu|trial]");
+  if (!to) throw new Error("usage: ts-node scripts/send-test-mailtester.ts <to-address> [welcome|menu]");
 
   const env = loadEnv(resolve(__dirname, "../../soqrmenuweb/.env"));
   const host = env.SMTP_HOST;
