@@ -28,7 +28,7 @@ function loadEnv(file: string): Record<string, string> {
 }
 
 function logoMark(): string {
-  return `<div style="text-align:center;margin:0 0 28px"><img src="https://iq-rest.com/icon-512.png" width="44" height="44" alt="IQ Rest" style="vertical-align:middle;border:0" /><span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:27px;font-weight:700;letter-spacing:-0.5px;color:#1a1a1a;vertical-align:middle;padding:0 10px">Rest</span></div>`;
+  return `<div style="margin:0 0 28px"><img src="https://iq-rest.com/icon-512.png" width="44" height="44" alt="IQ Rest" style="vertical-align:middle;border:0" /><span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:27px;font-weight:700;letter-spacing:-0.5px;color:#1a1a1a;vertical-align:middle;padding:0 10px">Rest</span></div>`;
 }
 
 function pick(kind: string, locale: string) {

@@ -75,7 +75,7 @@ export class MailService implements OnModuleDestroy {
    *  recolor it together with the rest of the copy. SVG is not an option —
    *  Gmail strips it. Must stay a public absolute URL. */
   private logoImg(): string {
-    return `<div style="text-align:center;margin:0 0 28px"><img src="https://iq-rest.com/icon-512.png" width="44" height="44" alt="IQ Rest" style="vertical-align:middle;border:0" /><span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:27px;font-weight:700;letter-spacing:-0.5px;color:#1a1a1a;vertical-align:middle;padding:0 10px">Rest</span></div>`;
+    return `<div style="margin:0 0 28px"><img src="https://iq-rest.com/icon-512.png" width="44" height="44" alt="IQ Rest" style="vertical-align:middle;border:0" /><span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:27px;font-weight:700;letter-spacing:-0.5px;color:#1a1a1a;vertical-align:middle;padding:0 10px">Rest</span></div>`;
   }
 
   /** Public help-center URL on the landing for a locale (en lives unprefixed). */
@@ -96,17 +96,17 @@ export class MailService implements OnModuleDestroy {
     footerHtml?: string;
   }): string {
     const button = opts.cta
-      ? `<div style="text-align:center;margin:28px 0 0"><a href="${opts.cta.url}" style="display:inline-block;background:#FF6229;color:#ffffff;text-decoration:none;font-size:16px;font-weight:600;padding:13px 28px;border-radius:10px">${opts.cta.label}</a></div>`
+      ? `<div style="margin:28px 0 0"><a href="${opts.cta.url}" style="display:inline-block;background:#FF6229;color:#ffffff;text-decoration:none;font-size:16px;font-weight:600;padding:13px 28px;border-radius:10px">${opts.cta.label}</a></div>`
       : "";
     return `
       <div dir="${opts.dir}" style="background:#f6f6f4;padding:32px 12px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#1a1a1a">
         <div style="max-width:520px;margin:0 auto;background:#ffffff;border-radius:16px;padding:36px 28px">
           ${this.logoImg()}
-          <h1 style="font-size:22px;font-weight:700;line-height:1.4;margin:0 0 16px;text-align:center">${opts.title}</h1>
+          <h1 style="font-size:22px;font-weight:700;line-height:1.4;margin:0 0 16px">${opts.title}</h1>
           ${opts.contentHtml}
           ${button}
         </div>
-        <div style="max-width:520px;margin:0 auto;padding:20px 8px;text-align:center;font-size:13px;line-height:1.8;color:#8a8a8a">
+        <div style="max-width:520px;margin:0 auto;padding:20px 8px;font-size:13px;line-height:1.8;color:#8a8a8a">
           ${opts.footerHtml ?? ""}
           <div>© IQ Rest · <a href="https://iq-rest.com" style="color:#8a8a8a">iq-rest.com</a></div>
         </div>
@@ -141,11 +141,11 @@ export class MailService implements OnModuleDestroy {
         dir,
         title: t.title,
         contentHtml: `
-          <p style="font-size:16px;line-height:1.7;margin:0 0 8px;text-align:center">${t.intro}</p>
+          <p style="font-size:16px;line-height:1.7;margin:0 0 8px">${t.intro}</p>
           <div style="margin:20px 0;padding:24px;background:#f5f5f5;border-radius:12px;text-align:center">
             <span style="font-size:36px;font-weight:bold;letter-spacing:8px">${code}</span>
           </div>
-          <p style="font-size:13px;line-height:1.6;margin:0;color:#666;text-align:center">${t.expiry}</p>`,
+          <p style="font-size:13px;line-height:1.6;margin:0;color:#666">${t.expiry}</p>`,
         cta: { label: bundle.email.openDashboard, url: this.dashboardUrl() },
         footerHtml: this.localizedFooter(locale),
       }),
@@ -274,8 +274,8 @@ export class MailService implements OnModuleDestroy {
         dir: opts.dir,
         title: opts.title,
         contentHtml: `
-          <p style="font-size:16px;line-height:1.7;margin:0 0 12px;text-align:center">${opts.body}</p>
-          <p style="font-size:13px;line-height:1.6;margin:0;color:#666;text-align:center">${opts.help}</p>`,
+          <p style="font-size:16px;line-height:1.7;margin:0 0 12px">${opts.body}</p>
+          <p style="font-size:13px;line-height:1.6;margin:0;color:#666">${opts.help}</p>`,
         cta: { label: opts.cta, url: opts.ctaUrl },
         footerHtml: this.localizedFooter(opts.locale),
       }),
@@ -422,7 +422,7 @@ export class MailService implements OnModuleDestroy {
         dir: "ltr",
         title: "New support message",
         contentHtml: `
-          <p style="font-size:15px;line-height:1.6;margin:0 0 8px;color:#666;text-align:center">From <strong>${userEmail}</strong> at <strong>${companyName}</strong></p>
+          <p style="font-size:15px;line-height:1.6;margin:0 0 8px;color:#666">From <strong>${userEmail}</strong> at <strong>${companyName}</strong></p>
           <div style="margin:20px 0 0;padding:20px;background:#f5f5f5;border-radius:12px;font-size:15px;line-height:1.6;white-space:pre-wrap">${safeMessage}</div>`,
         cta: { label: "Open admin dashboard", url: adminUrl },
       }),
@@ -453,7 +453,7 @@ export class MailService implements OnModuleDestroy {
       html: this.renderLayout({
         dir: "ltr",
         title: "Unread inbox messages",
-        contentHtml: `<p style="font-size:15px;line-height:1.6;margin:0;text-align:center">You have <strong>${label}</strong> waiting in the admin inbox.</p>`,
+        contentHtml: `<p style="font-size:15px;line-height:1.6;margin:0">You have <strong>${label}</strong> waiting in the admin inbox.</p>`,
         cta: { label: "Open inbox", url: inboxUrl },
       }),
       text: `You have ${label} waiting in the admin inbox.\n\nInbox: ${inboxUrl}`,
@@ -481,7 +481,7 @@ export class MailService implements OnModuleDestroy {
       html: this.renderLayout({
         dir,
         title: t.title,
-        contentHtml: `<p style="font-size:16px;line-height:1.7;margin:0;text-align:center">${t.body}</p>`,
+        contentHtml: `<p style="font-size:16px;line-height:1.7;margin:0">${t.body}</p>`,
         cta: { label: t.cta, url: ctaUrl },
         footerHtml: this.localizedFooter(locale),
       }),
