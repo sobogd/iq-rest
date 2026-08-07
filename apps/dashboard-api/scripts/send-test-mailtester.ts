@@ -28,7 +28,7 @@ function loadEnv(file: string): Record<string, string> {
 }
 
 function logoMark(): string {
-  return `<img src="https://iq-rest.com/logo.png" width="126" height="46" alt="IQ Rest" style="display:block;margin:0 auto 28px;border:0" />`;
+  return `<div style="text-align:center;margin:0 0 28px"><img src="https://iq-rest.com/logo-square.png" width="44" height="44" alt="IQ Rest" style="vertical-align:middle;border:0;border-radius:10px" /><span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:27px;font-weight:700;letter-spacing:-0.5px;color:#1a1a1a;vertical-align:middle;padding:0 10px">Rest</span></div>`;
 }
 
 function pick(kind: string, locale: string) {
@@ -66,11 +66,10 @@ async function main() {
           <p style="font-size:17px;line-height:1.7;margin:0 0 24px">${t.body}</p>
           ${button}
           <p style="font-size:17px;line-height:1.7;margin:0 0 20px">${t.help}</p>
-          <p style="font-size:17px;line-height:1.7;margin:0 0 20px">${t.closing}</p>
-          <p style="font-size:15px;margin:0;color:#1a1a1a">${t.signature}</p>
+          <p style="font-size:17px;line-height:1.7;margin:0">${t.closing}</p>
         </div>
       `,
-    text: `${t.greeting}\n\n${t.body}\n\n${t.cta}: ${url}\n\n${t.help}\n\n${t.closing}\n\n${t.signature.replace(/<br>/g, "\n")}`,
+    text: `${t.greeting}\n\n${t.body}\n\n${t.cta}: ${url}\n\n${t.help}\n\n${t.closing}`,
   });
 
   console.log("sent:", kind, info.messageId, "->", to);

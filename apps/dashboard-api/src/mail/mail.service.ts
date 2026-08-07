@@ -70,11 +70,12 @@ export class MailService implements OnModuleDestroy {
     return this.transporterPromise;
   }
 
-  /** Brand logo for email headers — the real image asset served by the
-   *  landing (must stay a public absolute URL: email clients can't reach
-   *  anything else). 1408×512 source rendered at 126×46. */
+  /** Brand mark for email headers, dark-mode-safe: the orange square is an
+   *  image (survives any theme), "Rest" is real HTML text so Gmail/Apple Mail
+   *  recolor it together with the rest of the copy. SVG is not an option —
+   *  Gmail strips it. Must stay a public absolute URL. */
   private logoImg(): string {
-    return `<img src="https://iq-rest.com/logo.png" width="126" height="46" alt="IQ Rest" style="display:block;margin:0 auto 28px;border:0" />`;
+    return `<div style="text-align:center;margin:0 0 28px"><img src="https://iq-rest.com/logo-square.png" width="44" height="44" alt="IQ Rest" style="vertical-align:middle;border:0;border-radius:10px" /><span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:27px;font-weight:700;letter-spacing:-0.5px;color:#1a1a1a;vertical-align:middle;padding:0 10px">Rest</span></div>`;
   }
 
   /** Public help-center URL on the landing for a locale (en lives unprefixed). */
@@ -166,7 +167,6 @@ export class MailService implements OnModuleDestroy {
     body: string;
     help: string;
     closing: string;
-    signature: string;
     cta?: string;
     ctaUrl?: string;
   }): Promise<void> {
@@ -196,11 +196,10 @@ export class MailService implements OnModuleDestroy {
           <p style="font-size:17px;line-height:1.7;margin:0 0 ${hasCta ? "24px" : "20px"}">${opts.body}</p>
           ${button}
           <p style="font-size:17px;line-height:1.7;margin:0 0 20px">${opts.help}</p>
-          <p style="font-size:17px;line-height:1.7;margin:0 0 20px">${opts.closing}</p>
-          <p style="font-size:15px;margin:0;color:#1a1a1a">${opts.signature}</p>
+          <p style="font-size:17px;line-height:1.7;margin:0">${opts.closing}</p>
         </div>
       `,
-      text: `${opts.greeting}\n\n${opts.body}\n\n${buttonText}${opts.help}\n\n${opts.closing}\n\n${opts.signature.replace(/<br>/g, "\n")}`,
+      text: `${opts.greeting}\n\n${opts.body}\n\n${buttonText}${opts.help}\n\n${opts.closing}`,
     });
   }
 
@@ -221,7 +220,6 @@ export class MailService implements OnModuleDestroy {
       body: t.body,
       help: t.help,
       closing: t.closing,
-      signature: t.signature,
       cta: t.cta,
       ctaUrl: this.dashboardUrl(),
     });
@@ -240,7 +238,6 @@ export class MailService implements OnModuleDestroy {
       body: t.body,
       help: t.help,
       closing: t.closing,
-      signature: t.signature,
       cta: t.cta,
       ctaUrl: this.dashboardUrl(),
     });
