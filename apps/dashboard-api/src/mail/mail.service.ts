@@ -101,7 +101,7 @@ export class MailService implements OnModuleDestroy {
     return `
       <div dir="${opts.dir}" style="max-width:520px;margin:0 auto;padding:32px 20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#1a1a1a">
         ${this.logoImg()}
-        <h1 style="font-size:22px;font-weight:700;line-height:1.4;margin:0 0 16px">${opts.title}</h1>
+        <p style="font-size:17px;line-height:1.7;margin:0 0 20px">${opts.title}</p>
         ${opts.contentHtml}
         ${button}
         ${opts.footerHtml ?? ""}
@@ -139,9 +139,7 @@ export class MailService implements OnModuleDestroy {
         title: t.title,
         contentHtml: `
           <p style="font-size:16px;line-height:1.7;margin:0 0 8px">${t.intro}</p>
-          <div style="margin:20px 0;padding:24px;background:#f5f5f5;border-radius:12px;text-align:center">
-            <span style="font-size:36px;font-weight:bold;letter-spacing:8px">${code}</span>
-          </div>
+          <div style="margin:24px 0;font-size:40px;font-weight:700;letter-spacing:8px">${code}</div>
           <p style="font-size:13px;line-height:1.6;margin:0;color:#666">${t.expiry}</p>`,
         // No CTA on purpose: the reader isn't signed in yet — a dashboard
         // button would just bounce them to the landing.
