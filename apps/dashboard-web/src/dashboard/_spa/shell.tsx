@@ -49,7 +49,7 @@ export interface ShellInitialData {
   initialOrders: Order[];
   initialBookings: Booking[];
   initialTables: TableEntity[];
-  initialSub: { plan: string | null; subscriptionStatus: string | null; trialEndsAt: string | null; currentPeriodEnd?: string | null; proFeatures?: boolean; reservationsFeature?: boolean; menuOnline?: boolean } | null;
+  initialSub: { plan: string | null; subscriptionStatus: string | null; trialEndsAt: string | null; currentPeriodEnd?: string | null; pastDueSince?: string | null; interval?: string | null; proFeatures?: boolean; reservationsFeature?: boolean; menuOnline?: boolean } | null;
   isAdmin: boolean;
   isDemo?: boolean;
   impersonatedBy?: string | null;
@@ -235,23 +235,23 @@ function ShellBody(props: ShellInitialData) {
         refreshMenu={refreshMenu}
       />
       {/* First-run modals: onboarding (name → fill → scan), then the daily
-          trial reminder — sequenced so the trial modal is always last.
-          Suppressed under admin impersonation: these are gated on the visited
-          restaurant's own flags, so an admin logging into someone else's
-          restaurant would otherwise get onboarding / trial prompts that aren't
-          theirs. */}
-      {props.impersonatedBy ? null : (
-        <FirstRunModals
-          key={restaurant.id}
-          restaurantName={restaurant.name}
-          onboardingNameDone={props.onboardingNameDone ?? true}
-          onboardingFillDone={props.onboardingFillDone ?? true}
-          existingRealItemsCount={realItemsCount}
-          onRefresh={refreshMenu}
-          sub={props.initialSub}
-          accountCreatedAt={props.accountCreatedAt ?? null}
-        />
-      )}
+          trial reminder + the past-due nudge — sequenced so the billing modals
+          are always last. Rendered under admin impersonation too, on purpose:
+          logging in as a restaurant is how an admin reviews exactly what that
+          owner sees first (onboarding / trial / past-due). The daily-dismiss
+          localStorage flags are cleared when impersonation starts (see
+          admin-restaurant handleImpersonate) so a modal the admin dismissed on
+          their own account still shows for the impersonated one. */}
+      <FirstRunModals
+        key={restaurant.id}
+        restaurantName={restaurant.name}
+        onboardingNameDone={props.onboardingNameDone ?? true}
+        onboardingFillDone={props.onboardingFillDone ?? true}
+        existingRealItemsCount={realItemsCount}
+        onRefresh={refreshMenu}
+        sub={props.initialSub}
+        accountCreatedAt={props.accountCreatedAt ?? null}
+      />
     </>
   );
 }

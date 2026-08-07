@@ -56,12 +56,22 @@ function pastDuePeriodStartMs(currentPeriodEnd, interval) {
 }
 // ─── Layer 1: legacy per-restaurant entitlement (behaviour-preserving) ───────
 // Millisecond deadline of the PAST_DUE grace window, or null when not PAST_DUE.
-// Anchored to the failed renewal (period START = currentPeriodEnd − one interval),
-// NOT to the future currentPeriodEnd Stripe leaves on the row during dunning.
+// Anchored on `pastDueSince` — the EXACT moment the renewal first failed, stamped
+// by the Stripe webhook / reconcile. Falls back to the interval-derived period
+// START (currentPeriodEnd − one interval) for rows not yet backfilled with a
+// pastDueSince. Never uses the future currentPeriodEnd Stripe leaves on the row
+// during dunning (that would keep grace open for the whole unpaid period).
 function pastDueGraceEndMs(r) {
-    if (r.subscriptionStatus !== "PAST_DUE" || !r.currentPeriodEnd)
+    if (r.subscriptionStatus !== "PAST_DUE")
         return null;
-    return pastDuePeriodStartMs(new Date(r.currentPeriodEnd), r.interval) + exports.PAST_DUE_GRACE_DAYS * DAY_MS;
+    const anchorMs = r.pastDueSince
+        ? new Date(r.pastDueSince).getTime()
+        : r.currentPeriodEnd
+            ? pastDuePeriodStartMs(new Date(r.currentPeriodEnd), r.interval)
+            : null;
+    if (anchorMs === null)
+        return null;
+    return anchorMs + exports.PAST_DUE_GRACE_DAYS * DAY_MS;
 }
 // True while a PAST_DUE subscription is still inside its grace window.
 function inPastDueGrace(r) {
@@ -132,7 +142,12 @@ function isProActive(sub) {
     if (sub.status === "ACTIVE" && sub.plan === "PRO")
         return true;
     if (sub.plan === "PRO" &&
-        inPastDueGrace({ subscriptionStatus: sub.status, currentPeriodEnd: sub.currentPeriodEnd, interval: sub.interval }))
+        inPastDueGrace({
+            subscriptionStatus: sub.status,
+            pastDueSince: sub.pastDueSince,
+            currentPeriodEnd: sub.currentPeriodEnd,
+            interval: sub.interval,
+        }))
         return true;
     return false;
 }
@@ -144,7 +159,12 @@ function isBasicActive(sub) {
     if (sub.status === "ACTIVE" && sub.plan === "BASIC")
         return true;
     if (sub.plan === "BASIC" &&
-        inPastDueGrace({ subscriptionStatus: sub.status, currentPeriodEnd: sub.currentPeriodEnd, interval: sub.interval }))
+        inPastDueGrace({
+            subscriptionStatus: sub.status,
+            pastDueSince: sub.pastDueSince,
+            currentPeriodEnd: sub.currentPeriodEnd,
+            interval: sub.interval,
+        }))
         return true;
     return false;
 }
@@ -299,6 +319,7 @@ exports.ACCOUNT_ENTITLEMENT_SELECT = {
                     status: true,
                     billingCycle: true,
                     currentPeriodEnd: true,
+                    pastDueSince: true,
                     appliesToRestaurantId: true,
                     cancelAtPeriodEnd: true,
                     amount: true,
@@ -327,8 +348,10 @@ function accountStateFromRow(row) {
                         status: sub.status,
                         currentPeriodEnd: sub.currentPeriodEnd ?? null,
                         // New ad-hoc `interval`, falling back to the legacy `billingCycle`
-                        // — anchors the PAST_DUE grace window to the failed renewal.
+                        // — the FALLBACK grace anchor when pastDueSince is absent.
                         interval: sub.interval ?? sub.billingCycle ?? null,
+                        // Exact failed-renewal moment — the primary PAST_DUE grace anchor.
+                        pastDueSince: sub.pastDueSince ?? null,
                         appliesToRestaurantId: sub.appliesToRestaurantId ?? null,
                     }
                     : null,

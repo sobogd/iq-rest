@@ -51,6 +51,8 @@ interface SubData {
   subscriptionStatus: string | null;
   trialEndsAt: string | null;
   currentPeriodEnd?: string | null;
+  pastDueSince?: string | null;
+  interval?: string | null;
   proFeatures?: boolean;
   menuOnline?: boolean;
   // à-la-carte capabilities — orders/KDS ride `proFeatures`, reservations is its
@@ -186,6 +188,8 @@ export function DashboardHost() {
         subscriptionStatus: sub.subscriptionStatus,
         trialEndsAt: sub.trialEndsAt,
         currentPeriodEnd: sub.currentPeriodEnd ?? null,
+        pastDueSince: sub.pastDueSince ?? null,
+        interval: sub.interval ?? null,
         proFeatures: sub.proFeatures ?? false,
         menuOnline: sub.menuOnline ?? true,
         // reservations is a separate à-la-carte add-on — don't fold it into proFeatures.

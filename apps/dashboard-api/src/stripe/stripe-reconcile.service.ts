@@ -47,6 +47,7 @@ export class StripeReconcileService {
         id: true,
         status: true,
         currentPeriodEnd: true,
+        pastDueSince: true,
         stripeSubscriptionId: true,
       },
     });
@@ -67,13 +68,27 @@ export class StripeReconcileService {
         const periodTs = live.items?.data?.[0]?.current_period_end ?? live.current_period_end;
         const currentPeriodEnd =
           typeof periodTs === "number" && periodTs > 0 ? new Date(periodTs * 1000) : null;
+        // PAST_DUE grace anchor (pastDueSince): keep an existing one; stamp now
+        // only when THIS reconcile is the one catching the ACTIVE→PAST_DUE
+        // transition (a webhook was missed). An already-PAST_DUE row with a null
+        // anchor is left untouched — the one-off Stripe backfill fills the real
+        // first-failure date; inventing "now" here would race it and be wrong
+        // (the entitlements grace falls back to the period-start heuristic mean-
+        // while, so access is still bounded).
+        let pastDueSince: Date | null;
+        if (status === "PAST_DUE") {
+          pastDueSince = sub.pastDueSince ?? (sub.status !== "PAST_DUE" ? new Date() : null);
+        } else {
+          pastDueSince = null;
+        }
         const drift =
           status !== sub.status ||
-          (currentPeriodEnd?.getTime() ?? 0) !== (sub.currentPeriodEnd?.getTime() ?? 0);
+          (currentPeriodEnd?.getTime() ?? 0) !== (sub.currentPeriodEnd?.getTime() ?? 0) ||
+          (pastDueSince?.getTime() ?? 0) !== (sub.pastDueSince?.getTime() ?? 0);
         if (drift) {
           await this.prisma.subscription.update({
             where: { id: sub.id },
-            data: { status, currentPeriodEnd, updatedFromStripeAt: new Date() },
+            data: { status, currentPeriodEnd, pastDueSince, updatedFromStripeAt: new Date() },
           });
           healed++;
         }
@@ -84,7 +99,12 @@ export class StripeReconcileService {
           await this.prisma.subscription
             .update({
               where: { id: sub.id },
-              data: { status: "CANCELED", stripeSubscriptionId: null, updatedFromStripeAt: new Date() },
+              data: {
+                status: "CANCELED",
+                pastDueSince: null,
+                stripeSubscriptionId: null,
+                updatedFromStripeAt: new Date(),
+              },
             })
             .catch(() => undefined);
           healed++;

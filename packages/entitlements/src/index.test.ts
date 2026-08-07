@@ -54,6 +54,48 @@ describe("PAST_DUE grace", () => {
       false,
     );
   });
+  it("pastDueSince (exact) takes priority over the interval heuristic", () => {
+    const failed = new Date("2026-02-01T00:00:00Z");
+    // Exact anchor = pastDueSince + grace, ignoring currentPeriodEnd/interval.
+    expect(
+      pastDueGraceEndMs({
+        subscriptionStatus: "PAST_DUE",
+        pastDueSince: failed,
+        currentPeriodEnd: future(20),
+        interval: "year",
+      }),
+    ).toBe(failed.getTime() + PAST_DUE_GRACE_DAYS * DAY);
+    // 1d after the exact failure → in grace; 10d after → expired. currentPeriodEnd
+    // is far in the future both times (Stripe dunning), proving it's ignored.
+    expect(
+      inPastDueGrace({ subscriptionStatus: "PAST_DUE", pastDueSince: past(1), currentPeriodEnd: future(20) }),
+    ).toBe(true);
+    expect(
+      inPastDueGrace({ subscriptionStatus: "PAST_DUE", pastDueSince: past(10), currentPeriodEnd: future(20) }),
+    ).toBe(false);
+  });
+  it("falls back to the interval heuristic when pastDueSince is absent (un-backfilled)", () => {
+    const cpe = new Date("2026-02-01T00:00:00Z");
+    expect(
+      pastDueGraceEndMs({ subscriptionStatus: "PAST_DUE", pastDueSince: null, currentPeriodEnd: cpe, interval: "month" }),
+    ).toBe(cpe.getTime() - 30 * DAY + PAST_DUE_GRACE_DAYS * DAY);
+  });
+});
+
+describe("isProActive/isBasicActive anchor on pastDueSince", () => {
+  it("PRO past-due 10d after exact failure is inactive despite future currentPeriodEnd", () => {
+    expect(
+      isProActive({ plan: "PRO", status: "PAST_DUE", pastDueSince: past(10), currentPeriodEnd: future(20) }),
+    ).toBe(false);
+    expect(
+      isProActive({ plan: "PRO", status: "PAST_DUE", pastDueSince: past(1), currentPeriodEnd: future(20) }),
+    ).toBe(true);
+  });
+  it("BASIC past-due beyond grace by pastDueSince is inactive", () => {
+    expect(
+      isBasicActive({ plan: "BASIC", status: "PAST_DUE", pastDueSince: past(10), currentPeriodEnd: future(20) }),
+    ).toBe(false);
+  });
 });
 
 describe("hasProFeatures", () => {

@@ -224,10 +224,8 @@ export class StripeController {
               select: { accountId: true },
             });
             if (r?.accountId) {
-              await this.prisma.subscription.updateMany({
-                where: { accountId: r.accountId },
-                data: { status: "ACTIVE", updatedFromStripeAt: new Date() },
-              });
+              // Payment cleared → ACTIVE, and the PAST_DUE anchor is reset.
+              await this.writeAccountSubStatus(r.accountId, "ACTIVE");
             }
           }
         }
@@ -243,10 +241,8 @@ export class StripeController {
               select: { accountId: true },
             });
             if (r?.accountId) {
-              await this.prisma.subscription.updateMany({
-                where: { accountId: r.accountId },
-                data: { status: "PAST_DUE", updatedFromStripeAt: new Date() },
-              });
+              // First failure stamps pastDueSince; retries keep the original.
+              await this.writeAccountSubStatus(r.accountId, "PAST_DUE");
             }
           }
         }
@@ -320,6 +316,32 @@ export class StripeController {
       throw err;
     }
     return null;
+  }
+
+  /** PAST_DUE grace anchor. Set on the FIRST transition to PAST_DUE, kept across
+   *  Stripe's payment retries, cleared to null once the sub leaves PAST_DUE. The
+   *  grace window is `pastDueSince + PAST_DUE_GRACE_DAYS` (see @iq-rest/entitlements)
+   *  — an EXACT first-failure timestamp, replacing the interval-derived heuristic. */
+  private pastDueAnchor(status: SubscriptionStatus, existing: Date | null): Date | null {
+    if (status !== "PAST_DUE") return null;
+    return existing ?? new Date();
+  }
+
+  /** Write a status onto the account's Subscription, maintaining the PAST_DUE
+   *  anchor. Used by the invoice fast-paths (payment succeeded / failed). */
+  private async writeAccountSubStatus(accountId: string, status: SubscriptionStatus): Promise<void> {
+    const existing = await this.prisma.subscription.findUnique({
+      where: { accountId },
+      select: { pastDueSince: true },
+    });
+    await this.prisma.subscription.updateMany({
+      where: { accountId },
+      data: {
+        status,
+        pastDueSince: this.pastDueAnchor(status, existing?.pastDueSince ?? null),
+        updatedFromStripeAt: new Date(),
+      },
+    });
   }
 
   /** True if `subscriptionId` is still the restaurant's current subscription.
@@ -455,10 +477,15 @@ export class StripeController {
         select: { accountId: true },
       });
       if (r?.accountId) {
+        const existing = await this.prisma.subscription.findUnique({
+          where: { accountId: r.accountId },
+          select: { pastDueSince: true },
+        });
         await this.prisma.subscription.updateMany({
           where: { accountId: r.accountId },
           data: {
             status: subscriptionStatus,
+            pastDueSince: this.pastDueAnchor(subscriptionStatus, existing?.pastDueSince ?? null),
             currentPeriodEnd,
             stripeSubscriptionId: sub.id,
             updatedFromStripeAt: new Date(),
@@ -648,6 +675,10 @@ export class StripeController {
       select: { accountId: true },
     });
     if (!r?.accountId) return;
+    const existing = await this.prisma.subscription.findUnique({
+      where: { accountId: r.accountId },
+      select: { pastDueSince: true },
+    });
     const appliesToRestaurantId =
       s.appliesToRestaurantId !== undefined
         ? s.appliesToRestaurantId
@@ -659,6 +690,8 @@ export class StripeController {
       billingCycle: s.billingCycle,
       status: s.status,
       currentPeriodEnd: s.currentPeriodEnd,
+      // First PAST_DUE stamps the anchor; retries keep it; recovery clears it.
+      pastDueSince: this.pastDueAnchor(s.status, existing?.pastDueSince ?? null),
       stripeSubscriptionId: s.stripeSubscriptionId,
       appliesToRestaurantId,
       updatedFromStripeAt: new Date(),

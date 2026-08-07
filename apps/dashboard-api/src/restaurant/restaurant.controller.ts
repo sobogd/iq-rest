@@ -242,6 +242,8 @@ export class RestaurantController {
       billingCycle,
       subscriptionStatus,
       currentPeriodEnd: currentPeriodEnd ? currentPeriodEnd.toISOString() : null,
+      // First-failure anchor for the PAST_DUE grace countdown (past-due modal).
+      pastDueSince: sub?.pastDueSince ? sub.pastDueSince.toISOString() : null,
       cancelAtPeriodEnd: sub?.cancelAtPeriodEnd ?? false,
       // What the subscription actually includes (features + price + capacity),
       // shown instead of the cosmetic plan label.

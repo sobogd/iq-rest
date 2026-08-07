@@ -359,6 +359,12 @@ model Subscription {
   billingCycle          String? // "MONTHLY" | "YEARLY" (legacy; ad-hoc uses `interval`)
   status                String    @default("INACTIVE") // ACTIVE | PAST_DUE | CANCELED | EXPIRED | INACTIVE | PENDING (sepa_manual)
   currentPeriodEnd      DateTime?
+  // Exact moment the renewal FIRST failed (first PAST_DUE transition). The grace
+  // window is anchored on this — the old interval-derived period-start heuristic
+  // (currentPeriodEnd − one interval) stays only as a fallback for rows not yet
+  // backfilled. Set on the first PAST_DUE transition, kept across Stripe retries,
+  // cleared to null once payment succeeds. See @iq-rest/entitlements.
+  pastDueSince          DateTime?
   stripeSubscriptionId  String?   @unique
   // BASIC: which single venue "takes" the subscription. PRO/trial = null
   // (applies to the whole account, up to venueLimit).

@@ -2,11 +2,13 @@ import type { PrismaClient } from "@iq-rest/db";
 export declare const PAST_DUE_GRACE_DAYS = 3;
 export declare function pastDueGraceEndMs(r: {
     subscriptionStatus: string | null;
+    pastDueSince?: Date | null;
     currentPeriodEnd?: Date | null;
     interval?: string | null;
 }): number | null;
 export declare function inPastDueGrace(r: {
     subscriptionStatus: string | null;
+    pastDueSince?: Date | null;
     currentPeriodEnd?: Date | null;
     interval?: string | null;
 }): boolean;
@@ -30,6 +32,7 @@ export type SubscriptionState = {
     status: string | null;
     currentPeriodEnd?: Date | null;
     interval?: string | null;
+    pastDueSince?: Date | null;
     appliesToRestaurantId?: string | null;
 };
 export type AccountState = {
@@ -109,6 +112,7 @@ export declare const ACCOUNT_ENTITLEMENT_SELECT: {
                     readonly status: true;
                     readonly billingCycle: true;
                     readonly currentPeriodEnd: true;
+                    readonly pastDueSince: true;
                     readonly appliesToRestaurantId: true;
                     readonly cancelAtPeriodEnd: true;
                     readonly amount: true;
@@ -141,6 +145,7 @@ export type RestaurantEntitlementRow = {
             status: string;
             billingCycle?: string | null;
             currentPeriodEnd: Date | null;
+            pastDueSince?: Date | null;
             appliesToRestaurantId: string | null;
             cancelAtPeriodEnd?: boolean | null;
             amount?: number | null;

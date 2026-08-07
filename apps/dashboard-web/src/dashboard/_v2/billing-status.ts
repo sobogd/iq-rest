@@ -21,6 +21,8 @@ export type BillingSub = {
   currentPeriodEnd?: string | null;
   interval?: string | null;
   billingCycle?: string | null;
+  // Exact first-failure moment — the primary grace anchor (see pastDueGraceEndMs).
+  pastDueSince?: string | null;
 } | null;
 
 function isPaidPlan(sub: BillingSub): boolean {
@@ -43,11 +45,16 @@ export function isPastDue(sub: BillingSub): boolean {
 }
 
 // Millisecond deadline of the PAST_DUE grace window, or null when not PAST_DUE.
-// Anchored to the failed renewal (period START = currentPeriodEnd − one
-// interval), NOT the future currentPeriodEnd Stripe leaves on the row during
-// dunning — otherwise grace would never expire while the period is unpaid.
+// Anchored on `pastDueSince` — the EXACT moment the renewal first failed. Falls
+// back to the interval-derived period START (currentPeriodEnd − one interval) for
+// rows not yet backfilled. Never the future currentPeriodEnd Stripe leaves on the
+// row during dunning. Mirrors @iq-rest/entitlements pastDueGraceEndMs.
 export function pastDueGraceEndMs(sub: BillingSub): number | null {
-  if (!isPastDue(sub) || !sub!.currentPeriodEnd) return null;
+  if (!isPastDue(sub)) return null;
+  if (sub!.pastDueSince) {
+    return new Date(sub!.pastDueSince).getTime() + PAST_DUE_GRACE_DAYS * DAY_MS;
+  }
+  if (!sub!.currentPeriodEnd) return null;
   const key = sub!.interval ?? sub!.billingCycle;
   const days = (key && INTERVAL_DAYS[key]) || 30;
   return new Date(sub!.currentPeriodEnd).getTime() - days * DAY_MS + PAST_DUE_GRACE_DAYS * DAY_MS;

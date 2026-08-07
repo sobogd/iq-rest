@@ -10,6 +10,8 @@ type TrialSub = {
   subscriptionStatus: string | null;
   trialEndsAt: string | null;
   currentPeriodEnd?: string | null;
+  pastDueSince?: string | null;
+  interval?: string | null;
 } | null;
 
 /**

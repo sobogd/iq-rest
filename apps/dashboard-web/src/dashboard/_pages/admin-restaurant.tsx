@@ -270,6 +270,17 @@ export function AdminRestaurantPage({ restaurantId, onClose }: Props) {
         body: JSON.stringify({ userId: owner.id }),
       });
       if (res.ok) {
+        // Reset the once-per-day dismiss flags so the trial / past-due modals
+        // show for the impersonated restaurant even if the admin already
+        // dismissed them on their own account today (they're origin-scoped, so
+        // shared across the impersonation). Lets the admin review the owner's
+        // first-run experience.
+        try {
+          localStorage.removeItem("dash_past_due_modal_shown");
+          localStorage.removeItem("dash_trial_modal_shown");
+        } catch {
+          // ignore storage errors
+        }
         window.location.assign("/");
       } else {
         const data = await res.json().catch(() => ({}));
