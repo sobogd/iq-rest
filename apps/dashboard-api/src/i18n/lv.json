@@ -2,8 +2,7 @@
   "companyDefaultName": "Mans uzņēmums",
   "otpEmail": {
     "subject": "Jūsu kods: {code}",
-    "title": "Laipni lūdzam IQ Rest",
-    "intro": "Izmantojiet šo kodu, lai pierakstītos:",
+    "intro": "Šeit ir jūsu vienreizējais kods, lai pierakstītos IQ Rest:",
     "expiry": "Kods ir derīgs 5 minūtes. Ja jūs to nepieprasījāt, vienkārši ignorējiet šo e-pastu."
   },
   "supportEmail": {

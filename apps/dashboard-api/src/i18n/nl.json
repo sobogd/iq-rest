@@ -2,8 +2,7 @@
   "companyDefaultName": "Mijn restaurant",
   "otpEmail": {
     "subject": "Je code: {code}",
-    "title": "Welkom bij IQ Rest",
-    "intro": "Gebruik deze code om in te loggen:",
+    "intro": "Hier is je eenmalige code om in te loggen bij IQ Rest:",
     "expiry": "De code is 5 minuten geldig. Heb je deze niet aangevraagd? Negeer deze e-mail dan gewoon."
   },
   "supportEmail": {

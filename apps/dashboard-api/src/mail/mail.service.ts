@@ -90,7 +90,7 @@ export class MailService implements OnModuleDestroy {
    *  end. Used by OTP, support and admin notifications. */
   private renderLayout(opts: {
     dir: "rtl" | "ltr";
-    title: string;
+    title?: string;
     contentHtml: string;
     cta?: { label: string; url: string };
     footerHtml?: string;
@@ -98,10 +98,13 @@ export class MailService implements OnModuleDestroy {
     const button = opts.cta
       ? `<div style="margin:28px 0 0"><a href="${opts.cta.url}" style="display:inline-block;background:#FF6229;color:#ffffff;text-decoration:none;font-size:16px;font-weight:600;padding:13px 28px;border-radius:10px">${opts.cta.label}</a></div>`
       : "";
+    const title = opts.title
+      ? `<p style="font-size:17px;line-height:1.7;margin:0 0 20px">${opts.title}</p>`
+      : "";
     return `
       <div dir="${opts.dir}" style="padding:32px 20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#1a1a1a">
         ${this.logoImg()}
-        <p style="font-size:17px;line-height:1.7;margin:0 0 20px">${opts.title}</p>
+        ${title}
         ${opts.contentHtml}
         ${button}
         ${opts.footerHtml ?? ""}
@@ -136,15 +139,14 @@ export class MailService implements OnModuleDestroy {
       subject,
       html: this.renderLayout({
         dir,
-        title: t.title,
         contentHtml: `
-          <p style="font-size:16px;line-height:1.7;margin:0 0 8px">${t.intro}</p>
+          <p style="font-size:17px;line-height:1.7;margin:0">${t.intro}</p>
           <div style="margin:24px 0;font-size:40px;font-weight:700;letter-spacing:8px">${code}</div>
           <p style="font-size:13px;line-height:1.6;margin:0;color:#666">${t.expiry}</p>`,
         // No CTA on purpose: the reader isn't signed in yet — a dashboard
         // button would just bounce them to the landing.
       }),
-      text: `${t.title}\n\n${t.intro}\n\n${code}\n\n${t.expiry}`,
+      text: `${t.intro}\n\n${code}\n\n${t.expiry}`,
     });
   }
 

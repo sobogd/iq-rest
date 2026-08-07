@@ -41,7 +41,7 @@ import zh from "./zh.json";
 
 interface Bundle {
   companyDefaultName: string;
-  otpEmail: { subject: string; title: string; intro: string; expiry: string };
+  otpEmail: { subject: string; intro: string; expiry: string };
   supportEmail: { subject: string; title: string; body: string; cta: string };
   email: { openDashboard: string; needHelp: string; helpCenter: string };
 }

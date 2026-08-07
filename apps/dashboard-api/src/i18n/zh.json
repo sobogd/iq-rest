@@ -2,8 +2,7 @@
   "companyDefaultName": "我的餐厅",
   "otpEmail": {
     "subject": "您的验证码：{code}",
-    "title": "欢迎使用 IQ Rest",
-    "intro": "请使用以下验证码登录：",
+    "intro": "这是您登录 IQ Rest 的一次性验证码：",
     "expiry": "验证码 5 分钟内有效。如果这不是您本人的操作，请忽略此邮件。"
   },
   "supportEmail": {

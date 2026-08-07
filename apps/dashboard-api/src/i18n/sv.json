@@ -2,8 +2,7 @@
   "companyDefaultName": "Mitt företag",
   "otpEmail": {
     "subject": "Din kod: {code}",
-    "title": "Välkommen till IQ Rest",
-    "intro": "Använd den här koden för att logga in:",
+    "intro": "Här är din engångskod för att logga in på IQ Rest:",
     "expiry": "Koden är giltig i 5 minuter. Om du inte har begärt den kan du bara ignorera det här mejlet."
   },
   "supportEmail": {

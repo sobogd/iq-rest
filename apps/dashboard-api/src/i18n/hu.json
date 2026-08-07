@@ -2,8 +2,7 @@
   "companyDefaultName": "Éttermem",
   "otpEmail": {
     "subject": "A kódod: {code}",
-    "title": "Üdvözlünk az IQ Rest rendszerében",
-    "intro": "Ezzel a kóddal tudsz bejelentkezni:",
+    "intro": "Íme az egyszer használatos kódod az IQ Rest rendszerébe való bejelentkezéshez:",
     "expiry": "A kód 5 percig érvényes. Ha nem te kérted, egyszerűen hagyd figyelmen kívül ezt az e-mailt."
   },
   "supportEmail": {

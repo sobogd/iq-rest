@@ -2,8 +2,7 @@
   "companyDefaultName": "Il Mio Ristorante",
   "otpEmail": {
     "subject": "Il tuo codice: {code}",
-    "title": "Benvenuto su IQ Rest",
-    "intro": "Usa questo codice per accedere:",
+    "intro": "Ecco il tuo codice monouso per accedere a IQ Rest:",
     "expiry": "Il codice scade tra 5 minuti. Se non l'hai richiesto, ignora semplicemente questa email."
   },
   "supportEmail": {

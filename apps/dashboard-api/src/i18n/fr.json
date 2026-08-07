@@ -2,8 +2,7 @@
   "companyDefaultName": "Mon Restaurant",
   "otpEmail": {
     "subject": "Votre code : {code}",
-    "title": "Bienvenue sur IQ Rest",
-    "intro": "Utilisez ce code pour vous connecter :",
+    "intro": "Voici votre code à usage unique pour vous connecter à IQ Rest :",
     "expiry": "Le code expire dans 5 minutes. Si vous n'êtes pas à l'origine de cette demande, ignorez simplement cet e-mail."
   },
   "supportEmail": {

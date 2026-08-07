@@ -2,8 +2,7 @@
   "companyDefaultName": "My Company",
   "otpEmail": {
     "subject": "Your code: {code}",
-    "title": "Welcome to IQ Rest",
-    "intro": "Use this code to sign in:",
+    "intro": "Here's your one-time code to sign in to IQ Rest:",
     "expiry": "The code expires in 5 minutes. If you didn't request it, just ignore this email."
   },
   "supportEmail": {

@@ -2,8 +2,7 @@
   "companyDefaultName": "Minu ettevõte",
   "otpEmail": {
     "subject": "Teie kood: {code}",
-    "title": "Tere tulemast IQ Resti",
-    "intro": "Sisselogimiseks kasutage seda koodi:",
+    "intro": "Siin on teie ühekordne kood IQ Resti sisselogimiseks:",
     "expiry": "Kood kehtib 5 minutit. Kui te seda ei taotlenud, ignoreerige lihtsalt seda kirja."
   },
   "supportEmail": {

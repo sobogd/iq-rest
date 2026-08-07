@@ -2,8 +2,7 @@
   "companyDefaultName": "Můj podnik",
   "otpEmail": {
     "subject": "Váš kód: {code}",
-    "title": "Vítejte v IQ Rest",
-    "intro": "Pro přihlášení použijte tento kód:",
+    "intro": "Zde je váš jednorázový kód pro přihlášení do IQ Rest:",
     "expiry": "Kód platí 5 minut. Pokud jste o něj nežádali, tento e-mail jednoduše ignorujte."
   },
   "supportEmail": {

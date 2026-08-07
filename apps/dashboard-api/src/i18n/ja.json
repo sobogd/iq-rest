@@ -2,8 +2,7 @@
   "companyDefaultName": "マイレストラン",
   "otpEmail": {
     "subject": "認証コード：{code}",
-    "title": "IQ Restへようこそ",
-    "intro": "以下のコードを使用してサインインしてください。",
+    "intro": "IQ Rest にサインインするためのワンタイムコードはこちらです。",
     "expiry": "コードの有効期限は5分です。お心当たりがない場合は、このメールを無視してください。"
   },
   "supportEmail": {

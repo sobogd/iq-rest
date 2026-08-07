@@ -2,8 +2,7 @@
   "companyDefaultName": "Fyrirtækið mitt",
   "otpEmail": {
     "subject": "Kóðinn þinn: {code}",
-    "title": "Velkomin í IQ Rest",
-    "intro": "Notaðu þennan kóða til að skrá þig inn:",
+    "intro": "Hér er einnota kóðinn þinn til að skrá þig inn á IQ Rest:",
     "expiry": "Kóðinn rennur út eftir 5 mínútur. Ef þú baðst ekki um hann geturðu hunsað þennan tölvupóst."
   },
   "supportEmail": {

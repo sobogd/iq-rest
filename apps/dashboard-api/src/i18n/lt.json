@@ -2,8 +2,7 @@
   "companyDefaultName": "Mano restoranas",
   "otpEmail": {
     "subject": "Jūsų kodas: {code}",
-    "title": "Sveiki atvykę į IQ Rest",
-    "intro": "Prisijunkite naudodami šį kodą:",
+    "intro": "Štai jūsų vienkartinis kodas prisijungti prie IQ Rest:",
     "expiry": "Kodas galioja 5 minutes. Jei jo neprašėte, tiesiog ignoruokite šį laišką."
   },
   "supportEmail": {

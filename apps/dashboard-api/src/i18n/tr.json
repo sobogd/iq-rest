@@ -2,8 +2,7 @@
   "companyDefaultName": "Restoranım",
   "otpEmail": {
     "subject": "Kodunuz: {code}",
-    "title": "IQ Rest'e hoş geldiniz",
-    "intro": "Giriş yapmak için bu kodu kullanın:",
+    "intro": "IQ Rest'e giriş yapmak için tek kullanımlık kodunuz:",
     "expiry": "Kod 5 dakika boyunca geçerlidir. Bu kodu siz talep etmediyseniz bu e-postayı görmezden gelebilirsiniz."
   },
   "supportEmail": {

@@ -2,8 +2,7 @@
   "companyDefaultName": "Moja restavracija",
   "otpEmail": {
     "subject": "Vaša koda: {code}",
-    "title": "Dobrodošli v IQ Rest",
-    "intro": "Za prijavo uporabite to kodo:",
+    "intro": "Tukaj je vaša enkratna koda za prijavo v IQ Rest:",
     "expiry": "Koda velja 5 minut. Če je niste zahtevali, to sporočilo preprosto prezrite."
   },
   "supportEmail": {

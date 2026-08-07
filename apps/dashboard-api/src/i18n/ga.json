@@ -2,8 +2,7 @@
   "companyDefaultName": "Mo Chuideachta",
   "otpEmail": {
     "subject": "Do chód: {code}",
-    "title": "Fáilte chuig IQ Rest",
-    "intro": "Úsáid an cód seo chun síniú isteach:",
+    "intro": "Seo é do chód aonuaire chun síniú isteach in IQ Rest:",
     "expiry": "Rachaidh an cód in éag i gceann 5 nóiméad. Murar iarr tú é, déan neamhaird den ríomhphost seo."
   },
   "supportEmail": {

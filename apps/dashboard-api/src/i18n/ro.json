@@ -2,8 +2,7 @@
   "companyDefaultName": "Restaurantul meu",
   "otpEmail": {
     "subject": "Codul tău: {code}",
-    "title": "Bine ai venit la IQ Rest",
-    "intro": "Folosește acest cod pentru a te conecta:",
+    "intro": "Iată codul tău de unică folosință pentru a te conecta la IQ Rest:",
     "expiry": "Codul este valabil 5 minute. Dacă nu l-ai solicitat, poți ignora acest e-mail."
   },
   "supportEmail": {

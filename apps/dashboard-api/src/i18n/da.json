@@ -2,8 +2,7 @@
   "companyDefaultName": "Min restaurant",
   "otpEmail": {
     "subject": "Din kode: {code}",
-    "title": "Velkommen til IQ Rest",
-    "intro": "Brug denne kode til at logge ind:",
+    "intro": "Her er din engangskode til at logge ind på IQ Rest:",
     "expiry": "Koden er gyldig i 5 minutter. Hvis du ikke har anmodet om den, kan du bare ignorere denne mail."
   },
   "supportEmail": {

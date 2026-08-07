@@ -2,8 +2,7 @@
   "companyDefaultName": "우리 가게",
   "otpEmail": {
     "subject": "인증 코드: {code}",
-    "title": "IQ Rest에 오신 것을 환영합니다",
-    "intro": "아래 코드를 사용하여 로그인해 주세요.",
+    "intro": "IQ Rest 로그인용 일회용 코드입니다:",
     "expiry": "코드는 5분 동안 유효합니다. 직접 요청하지 않으셨다면 이 이메일을 무시해 주세요."
   },
   "supportEmail": {

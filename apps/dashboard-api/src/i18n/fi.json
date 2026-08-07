@@ -2,8 +2,7 @@
   "companyDefaultName": "Oma yritys",
   "otpEmail": {
     "subject": "Koodisi: {code}",
-    "title": "Tervetuloa IQ Rest -palveluun",
-    "intro": "Kirjaudu sisään tällä koodilla:",
+    "intro": "Tässä on kertakäyttöinen koodisi IQ Rest -palveluun kirjautumista varten:",
     "expiry": "Koodi on voimassa 5 minuuttia. Jos et pyytänyt koodia, voit jättää tämän viestin huomiotta."
   },
   "supportEmail": {
