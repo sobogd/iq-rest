@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 import dynamic from "next/dynamic";
 
 // Lazy-loaded so the wizard JS isn't part of the landing's initial bundle.
@@ -29,6 +29,24 @@ export function OnboardingModalProvider({ children }: { children: ReactNode }) {
     setIsOpen(true);
   }, []);
   const close = useCallback(() => setIsOpen(false), []);
+
+  // ?auth=signup|signin|create auto-opens the modal — used as the ad lead-form
+  // thank-you link so the tap lands straight in registration.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const auth = params.get("auth");
+    if (!auth) return;
+    const mode: OnboardingMode | null =
+      auth === "signup" || auth === "register" ? "register"
+      : auth === "signin" ? "signin"
+      : auth === "create" ? "create"
+      : null;
+    if (!mode) return;
+    open(mode);
+    params.delete("auth");
+    const qs = params.toString();
+    window.history.replaceState(null, "", window.location.pathname + (qs ? `?${qs}` : "") + window.location.hash);
+  }, [open]);
 
   const value = useMemo(() => ({ open, close, isOpen, mode }), [open, close, isOpen, mode]);
 
