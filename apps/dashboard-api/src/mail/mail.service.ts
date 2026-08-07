@@ -146,10 +146,10 @@ export class MailService implements OnModuleDestroy {
             <span style="font-size:36px;font-weight:bold;letter-spacing:8px">${code}</span>
           </div>
           <p style="font-size:13px;line-height:1.6;margin:0;color:#666">${t.expiry}</p>`,
-        cta: { label: bundle.email.openDashboard, url: this.dashboardUrl() },
-        footerHtml: this.localizedFooter(locale),
+        // No CTA on purpose: the reader isn't signed in yet — a dashboard
+        // button would just bounce them to the landing.
       }),
-      text: `${t.title}\n\n${t.intro}\n\n${code}\n\n${t.expiry}\n\n${bundle.email.openDashboard}: ${this.dashboardUrl()}\n${bundle.email.needHelp} ${bundle.email.helpCenter}: ${this.helpUrl(locale)}`,
+      text: `${t.title}\n\n${t.intro}\n\n${code}\n\n${t.expiry}`,
     });
   }
 
@@ -169,6 +169,8 @@ export class MailService implements OnModuleDestroy {
     closing: string;
     cta?: string;
     ctaUrl?: string;
+    /** When set, appends the localized "Need help? → Help Center" line. */
+    helpFooterLocale?: string;
   }): Promise<void> {
     const cfg = this.smtpConfig();
     if (!cfg) {
@@ -181,6 +183,11 @@ export class MailService implements OnModuleDestroy {
       ? `<p style="margin:0 0 24px"><a href="${opts.ctaUrl}" style="display:inline-block;background:#FF6229;color:#ffffff;text-decoration:none;font-size:16px;font-weight:600;padding:12px 24px;border-radius:8px">${opts.cta}</a></p>`
       : "";
     const buttonText = hasCta ? `${opts.cta}: ${opts.ctaUrl}\n\n` : "";
+    const e = opts.helpFooterLocale ? this.i18n.bundle(opts.helpFooterLocale).email : null;
+    const helpFooter = e
+      ? `<p style="font-size:13px;line-height:1.6;margin:28px 0 0;color:#8a8a8a">${e.needHelp} <a href="${this.helpUrl(opts.helpFooterLocale!)}" style="color:#FF6229;font-weight:600">${e.helpCenter}</a></p>`
+      : "";
+    const helpFooterText = e ? `\n\n${e.needHelp} ${e.helpCenter}: ${this.helpUrl(opts.helpFooterLocale!)}` : "";
 
     await transporter.sendMail({
       from: this.cachedFrom ?? cfg.from,
@@ -197,9 +204,10 @@ export class MailService implements OnModuleDestroy {
           ${button}
           <p style="font-size:17px;line-height:1.7;margin:0 0 20px">${opts.help}</p>
           <p style="font-size:17px;line-height:1.7;margin:0">${opts.closing}</p>
+          ${helpFooter}
         </div>
       `,
-      text: `${opts.greeting}\n\n${opts.body}\n\n${buttonText}${opts.help}\n\n${opts.closing}`,
+      text: `${opts.greeting}\n\n${opts.body}\n\n${buttonText}${opts.help}\n\n${opts.closing}${helpFooterText}`,
     });
   }
 
@@ -222,6 +230,7 @@ export class MailService implements OnModuleDestroy {
       closing: t.closing,
       cta: t.cta,
       ctaUrl: this.dashboardUrl(),
+      helpFooterLocale: locale,
     });
   }
 
