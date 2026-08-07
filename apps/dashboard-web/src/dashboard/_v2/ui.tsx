@@ -932,7 +932,7 @@ export function SubscriptionChip({
  sub,
  onClick,
 }: {
- sub: { plan: string | null; subscriptionStatus: string | null; trialEndsAt: string | null } | null;
+ sub: { subscriptionStatus: string | null; trialEndsAt: string | null } | null;
  onClick: () => void;
 }) {
  const tsub = useTranslations("dashboard.subscriptionChip");
@@ -940,16 +940,15 @@ export function SubscriptionChip({
  let cls = "bg-secondary text-foreground border-border";
 
  if (sub) {
- const isActive = sub.subscriptionStatus === "ACTIVE" && sub.plan && sub.plan !== "FREE";
- // A paid plan whose payment failed — never a "trial", show a past-due chip.
+ const isActive = sub.subscriptionStatus === "ACTIVE";
+ // A paid subscription whose payment failed — never a "trial", show a past-due chip.
  const pastDue = isPastDue(sub);
- const paidPlan = !!sub.plan && sub.plan !== "FREE";
+ const paidPlan = isActive || sub.subscriptionStatus === "PAST_DUE";
  const trialEndsAt = sub.trialEndsAt ? new Date(sub.trialEndsAt) : null;
  const trialing = !isActive && !paidPlan && trialEndsAt !== null && trialEndsAt > new Date();
  const trialExpired = !isActive && !paidPlan && trialEndsAt !== null && trialEndsAt <= new Date();
 
- if (isActive && sub.plan) {
- label = sub.plan.charAt(0) + sub.plan.slice(1).toLowerCase();
+ if (isActive) {
  cls = "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-emerald-500/30";
  } else if (pastDue) {
  label = tsub("pastDue");

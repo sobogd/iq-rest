@@ -97,7 +97,6 @@ export class MenuService {
       account: _account,
       accountId: _accountId,
       planOverride: _planOverride,
-      legacyFullAccess: _legacyFullAccess,
       ...restaurantPublic
     } = restaurant as typeof restaurant & Record<string, unknown>;
 

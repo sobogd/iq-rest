@@ -77,7 +77,7 @@ describe("flags ⇄ selection bridge", () => {
       domain: false,
     });
   });
-  it("flagsFromSelection provisions orders+kds+ai together", () => {
+  it("flagsFromSelection provisions orders+kds together", () => {
     expect(
       flagsFromSelection({ menuOnline: true, reservations: false, ordersKds: true, domain: false }),
     ).toEqual({
@@ -86,7 +86,6 @@ describe("flags ⇄ selection bridge", () => {
       featKds: true,
       featReservations: false,
       featCustomDomain: false,
-      featAiUnlimited: true,
     });
   });
 });

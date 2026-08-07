@@ -11,12 +11,11 @@ import {
   UseGuards,
 } from "@nestjs/common";
 import type { Request } from "express";
-import { Plan, BillingCycle, SubscriptionStatus } from "@iq-rest/db";
+import { BillingCycle, SubscriptionStatus } from "@iq-rest/db";
 import { AuthGuard, type AuthedRequest } from "../auth/auth.guard";
 import { PrismaService } from "../prisma/prisma.service";
 import {
   getStripe,
-  PRICE_LOOKUP_KEYS,
   type SupportedCurrency,
   isSupportedCurrency,
   decodeSelections,
@@ -187,9 +186,8 @@ export class StripeController {
               where: { id: targetRestaurantId },
               data: { paymentProcessing: false },
             });
-            // Cancellation → account Subscription goes FREE/CANCELED (§3).
+            // Cancellation → account Subscription goes CANCELED.
             await this.mirrorAccountSubscription(targetRestaurantId, {
-              plan: "FREE",
               billingCycle: null,
               status: "CANCELED",
               currentPeriodEnd: null,
@@ -272,16 +270,15 @@ export class StripeController {
     subscriptionId: string,
     fallbackRestaurantId: string | null,
   ): Promise<string | null> {
-    // Prefer the account Subscription carrying this Stripe sub id → its target
-    // venue (BASIC applies to one; else the account's first restaurant).
+    // Prefer the account Subscription carrying this Stripe sub id → the account's
+    // first restaurant (the subscription is account-wide).
     const subRow = await this.prisma.subscription.findFirst({
       where: { stripeSubscriptionId: subscriptionId },
       select: {
-        appliesToRestaurantId: true,
         account: { select: { restaurants: { select: { id: true }, orderBy: { createdAt: "asc" }, take: 1 } } },
       },
     });
-    if (subRow) return subRow.appliesToRestaurantId ?? subRow.account?.restaurants[0]?.id ?? null;
+    if (subRow) return subRow.account?.restaurants[0]?.id ?? null;
 
     try {
       const stripe = getStripe();
@@ -384,73 +381,32 @@ export class StripeController {
     await this.cancelSupersededSub(restaurantId, sub.id);
 
     const item = sub.items.data[0];
-    const lookupKey = item?.price.lookup_key;
 
     // ── Ad-hoc à-la-carte subscription (billing-features-constructor) ─────────
     // Identified by the `sel` (per-venue) or `uf` (uniform bitmask) metadata.
-    // Amount/interval come from the price; the plan label is cosmetic (features
-    // live on the per-restaurant flags we provision here). `uf` is the fallback
-    // for big accounts where the per-venue `sel` would blow Stripe's 500-char
-    // metadata limit — the feature set is uniform, so one bitmask suffices.
+    // Amount/interval come from the price; features live on the per-restaurant
+    // flags we provision there.
     if (sub.metadata?.sel || sub.metadata?.uf) {
       await this.applyAdhocSubscription(restaurantId, sub);
       return;
     }
 
-
-    let plan: Plan = "FREE";
-    let billingCycle: BillingCycle | null = null;
-    let matched = false;
-    if (lookupKey) {
-      if (lookupKey.startsWith(PRICE_LOOKUP_KEYS.BASIC_MONTHLY)) {
-        plan = "BASIC"; billingCycle = "MONTHLY"; matched = true;
-      } else if (lookupKey.startsWith(PRICE_LOOKUP_KEYS.BASIC_YEARLY)) {
-        plan = "BASIC"; billingCycle = "YEARLY"; matched = true;
-      } else if (lookupKey.startsWith(PRICE_LOOKUP_KEYS.PRO_MONTHLY)) {
-        plan = "PRO"; billingCycle = "MONTHLY"; matched = true;
-      } else if (lookupKey.startsWith(PRICE_LOOKUP_KEYS.PRO_YEARLY)) {
-        plan = "PRO"; billingCycle = "YEARLY"; matched = true;
-      }
-    }
-
-    let subscriptionStatus: SubscriptionStatus = "INACTIVE";
-    switch (sub.status) {
-      case "active":
-      case "trialing":
-        subscriptionStatus = "ACTIVE"; break;
-      case "past_due":
-        subscriptionStatus = "PAST_DUE"; break;
-      case "canceled":
-      case "unpaid":
-        subscriptionStatus = "CANCELED"; break;
-      case "incomplete":
-      case "incomplete_expired":
-        subscriptionStatus = "EXPIRED"; break;
-    }
-
+    // Legacy grandfathered subscription (old fixed-price lookup_key, no ad-hoc
+    // metadata). There is no plan tier anymore — just reconcile status / period /
+    // interval onto the account Subscription. The venue's persisted feat* flags
+    // (unchanged) decide what it can do; access is gated on the status.
+    const status = this.mapStripeStatus(sub.status);
     const periodEnd = item?.current_period_end ?? sub.current_period_end;
     let currentPeriodEnd: Date | null = null;
     if (typeof periodEnd === "number" && periodEnd > 0) {
       const d = new Date(periodEnd * 1000);
       if (!isNaN(d.getTime())) currentPeriodEnd = d;
     }
-
+    const interval = item?.price.recurring?.interval === "year" ? "year" : "month";
+    const billingCycle: BillingCycle = interval === "year" ? "YEARLY" : "MONTHLY";
     // Stripe reports the subscription currency in lowercase ISO (e.g. "nok").
     const subCurrency = (sub.currency ?? item?.price.currency ?? "").toUpperCase();
     const billingCurrency = isSupportedCurrency(subCurrency) ? subCurrency : undefined;
-
-    // Misconfigured Stripe price: a live sub whose lookup_key maps to no known
-    // plan. Do NOT silently stamp plan=FREE over the restaurant (that would mean
-    // "charged but no PRO"). Log loudly for a human to fix the price, and leave
-    // plan/billingCycle untouched (write only status/period/customer).
-    const liveStatus = subscriptionStatus === "ACTIVE" || subscriptionStatus === "PAST_DUE";
-    if (!matched && liveStatus) {
-      console.error(
-        `applySubscription: unrecognized price lookup_key "${lookupKey ?? "<none>"}" ` +
-          `for sub ${sub.id} (restaurant ${restaurantId}, status ${sub.status}). ` +
-          `Plan NOT changed — fix the Stripe price lookup_key.`,
-      );
-    }
 
     // Clear the checkout-in-progress spinner (transient per-restaurant flag).
     await this.prisma.restaurant.update({
@@ -458,40 +414,33 @@ export class StripeController {
       data: { paymentProcessing: false },
     });
 
-    // Billing state lives on the account Subscription now (§3). Write plan/cycle
-    // only for a recognized price; an unrecognized live price still updates the
-    // status/period on the existing sub (already logged loudly above).
-    if (matched) {
-      await this.mirrorAccountSubscription(restaurantId, {
-        plan,
-        billingCycle,
-        status: subscriptionStatus,
-        currentPeriodEnd,
-        stripeSubscriptionId: sub.id,
-        billingCurrency,
-        customerId: typeof sub.customer === "string" ? sub.customer : null,
-      });
-    } else if (liveStatus) {
-      const r = await this.prisma.restaurant.findUnique({
-        where: { id: restaurantId },
-        select: { accountId: true },
-      });
-      if (r?.accountId) {
-        const existing = await this.prisma.subscription.findUnique({
-          where: { accountId: r.accountId },
-          select: { pastDueSince: true },
-        });
-        await this.prisma.subscription.updateMany({
-          where: { accountId: r.accountId },
-          data: {
-            status: subscriptionStatus,
-            pastDueSince: this.pastDueAnchor(subscriptionStatus, existing?.pastDueSince ?? null),
-            currentPeriodEnd,
-            stripeSubscriptionId: sub.id,
-            updatedFromStripeAt: new Date(),
-          },
-        });
-      }
+    await this.mirrorAccountSubscription(restaurantId, {
+      billingCycle,
+      status,
+      currentPeriodEnd,
+      stripeSubscriptionId: sub.id,
+      billingCurrency,
+      customerId: typeof sub.customer === "string" ? sub.customer : null,
+      interval,
+    });
+  }
+
+  /** Map a Stripe subscription status string to our SubscriptionStatus. */
+  private mapStripeStatus(stripeStatus: string): SubscriptionStatus {
+    switch (stripeStatus) {
+      case "active":
+      case "trialing":
+        return "ACTIVE";
+      case "past_due":
+        return "PAST_DUE";
+      case "canceled":
+      case "unpaid":
+        return "CANCELED";
+      case "incomplete":
+      case "incomplete_expired":
+        return "EXPIRED";
+      default:
+        return "INACTIVE";
     }
   }
 
@@ -527,20 +476,7 @@ export class StripeController {
       }
     }
 
-    let status: SubscriptionStatus = "INACTIVE";
-    switch (sub.status) {
-      case "active":
-      case "trialing":
-        status = "ACTIVE"; break;
-      case "past_due":
-        status = "PAST_DUE"; break;
-      case "canceled":
-      case "unpaid":
-        status = "CANCELED"; break;
-      case "incomplete":
-      case "incomplete_expired":
-        status = "EXPIRED"; break;
-    }
+    const status = this.mapStripeStatus(sub.status);
 
     const periodEnd = item?.current_period_end ?? sub.current_period_end;
     let currentPeriodEnd: Date | null = null;
@@ -585,16 +521,15 @@ export class StripeController {
       }
     }
 
-    // plan = PRO → account-wide access active; features gated by the flags above.
+    // Account-wide access is active while the status is paying; the per-venue
+    // flags provisioned above decide what each venue actually gets.
     await this.mirrorAccountSubscription(restaurantId, {
-      plan: "PRO",
       billingCycle,
       status,
       currentPeriodEnd,
       stripeSubscriptionId: sub.id,
       billingCurrency,
       customerId: typeof sub.customer === "string" ? sub.customer : null,
-      appliesToRestaurantId: null,
       amount,
       currency: billingCurrency,
       interval,
@@ -647,21 +582,18 @@ export class StripeController {
   }
 
   /** Mirror a reconciled subscription into the account-level Subscription row.
-   *  PRO applies to the whole account (appliesToRestaurantId null); BASIC applies
-   *  to the single paying venue. New-table-only; callers guard with .catch. */
+   *  The subscription is account-wide (no plan tier). New-table-only; callers
+   *  guard with .catch. */
   private async mirrorAccountSubscription(
     restaurantId: string,
     s: {
-      plan: Plan;
       billingCycle: BillingCycle | null;
       status: SubscriptionStatus;
       currentPeriodEnd: Date | null;
       stripeSubscriptionId: string | null;
       billingCurrency?: string;
       customerId: string | null;
-      // billing-features-constructor extras (ad-hoc). When omitted, the legacy
-      // plan-based appliesToRestaurantId pinning is used.
-      appliesToRestaurantId?: string | null;
+      // billing-features-constructor extras (ad-hoc).
       amount?: number | null;
       currency?: string;
       interval?: string;
@@ -679,21 +611,13 @@ export class StripeController {
       where: { accountId: r.accountId },
       select: { pastDueSince: true },
     });
-    const appliesToRestaurantId =
-      s.appliesToRestaurantId !== undefined
-        ? s.appliesToRestaurantId
-        : s.plan === "BASIC"
-          ? restaurantId
-          : null;
     const data = {
-      plan: s.plan,
       billingCycle: s.billingCycle,
       status: s.status,
       currentPeriodEnd: s.currentPeriodEnd,
       // First PAST_DUE stamps the anchor; retries keep it; recovery clears it.
       pastDueSince: this.pastDueAnchor(s.status, existing?.pastDueSince ?? null),
       stripeSubscriptionId: s.stripeSubscriptionId,
-      appliesToRestaurantId,
       updatedFromStripeAt: new Date(),
       ...(s.provider ? { provider: s.provider } : {}),
       ...(s.amount !== undefined ? { amount: s.amount } : {}),

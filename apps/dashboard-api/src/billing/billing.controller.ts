@@ -202,14 +202,10 @@ export class BillingController {
     // SEPA-by-invoice is yearly only.
     const quote = computeAccountQuote(catalog, currency, venues, "year");
 
-    // Record the request as a PENDING manual subscription on the account.
+    // Record the request as a PENDING manual subscription on the account. The
+    // subscription is account-wide; the per-venue feature flags decide WHICH
+    // features each venue keeps.
     const data = {
-      // Always PRO (account-wide access); the per-venue feature flags below
-      // decide WHICH features each venue keeps. A BASIC label here would pin the
-      // sub to a single venue (appliesToRestaurantId) and leave a menu-only SEPA
-      // customer with NO access on any venue — mirror the Stripe ad-hoc path,
-      // which also forces PRO.
-      plan: "PRO",
       billingCycle: "YEARLY",
       status: "PENDING",
       provider: "sepa_manual",
@@ -219,7 +215,6 @@ export class BillingController {
       priceProvenance: "custom",
       currentPeriodEnd: null,
       stripeSubscriptionId: null,
-      appliesToRestaurantId: null,
       updatedFromStripeAt: null,
     };
     await this.prisma.subscription.upsert({

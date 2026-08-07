@@ -3,35 +3,27 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ACCOUNT_ENTITLEMENT_SELECT = exports.PAST_DUE_GRACE_DAYS = void 0;
 exports.pastDueGraceEndMs = pastDueGraceEndMs;
 exports.inPastDueGrace = inPastDueGrace;
-exports.hasProFeatures = hasProFeatures;
-exports.hasPaidProFeatures = hasPaidProFeatures;
 exports.isTrialActive = isTrialActive;
-exports.isProActive = isProActive;
-exports.isBasicActive = isBasicActive;
+exports.isPaidActive = isPaidActive;
 exports.hasVenueAccess = hasVenueAccess;
 exports.getRestaurantCaps = getRestaurantCaps;
 exports.defaultFeatureFlagsForNewVenue = defaultFeatureFlagsForNewVenue;
 exports.getAccountCaps = getAccountCaps;
-exports.accountStateFromLegacyRestaurant = accountStateFromLegacyRestaurant;
 exports.accountStateFromRow = accountStateFromRow;
 exports.restaurantCapsFromRow = restaurantCapsFromRow;
 exports.accountCapsFromRow = accountCapsFromRow;
 exports.getRestaurantCapsById = getRestaurantCapsById;
 exports.getAccountCapsByRestaurantId = getAccountCapsByRestaurantId;
 // ─────────────────────────────────────────────────────────────────────────────
-// @iq-rest/entitlements — the SINGLE source of truth for PRO-feature /
-// capability resolution. Replaces the two byte-identical copies that used to
-// live at apps/dashboard-api/src/common/entitlements.ts and
-// apps/public-menu-api/src/common/entitlements.ts (both now re-export this).
+// @iq-rest/entitlements — the SINGLE source of truth for capability resolution.
+// Re-exported by both APIs (apps/*/src/common/entitlements.ts).
 //
-// Two layers live here:
-//   1. LEGACY per-restaurant helpers (hasProFeatures, grace, account-inherit) —
-//      unchanged behaviour, still driven by the per-restaurant billing columns.
-//      These stay live through Phases 1–3 (dual-write) and are deleted in Ph4.
-//   2. The TARGET pure capability resolver (getRestaurantCaps/getAccountCaps,
-//      §3 of the migration plan) — pure functions over a normalised
-//      AccountState, no Prisma. Not consumed yet (wired in Phase 3); locked by
-//      the golden tests now so the refactor lands against a fixed contract.
+// Access ("whether" a venue is live) is gated on the account SUBSCRIPTION STATUS
+// (+ trial + per-venue planOverride) — there is no plan-tier concept anymore
+// (PRO/BASIC/FREE were retired for à-la-carte per-feature pricing). WHICH
+// features a live venue gets come entirely from its persisted feat* flags. The
+// resolver is pure (no Prisma); callers build AccountState from the Account +
+// Subscription rows (accountStateFromRow).
 // ─────────────────────────────────────────────────────────────────────────────
 // After a payment fails the subscription goes PAST_DUE; the restaurant keeps
 // full access (menu online + PRO features) for this many days past the failed
@@ -54,7 +46,7 @@ function pastDuePeriodStartMs(currentPeriodEnd, interval) {
     const days = (interval && INTERVAL_DAYS[interval]) || 30;
     return currentPeriodEnd.getTime() - days * DAY_MS;
 }
-// ─── Layer 1: legacy per-restaurant entitlement (behaviour-preserving) ───────
+// ─── PAST_DUE grace window ───────────────────────────────────────────────────
 // Millisecond deadline of the PAST_DUE grace window, or null when not PAST_DUE.
 // Anchored on `pastDueSince` — the EXACT moment the renewal first failed, stamped
 // by the Stripe webhook / reconcile. Falls back to the interval-derived period
@@ -78,32 +70,6 @@ function inPastDueGrace(r) {
     const end = pastDueGraceEndMs(r);
     return end !== null && end > Date.now();
 }
-// Central PRO-feature entitlement check. A restaurant gets orders/KDS/
-// reservations when ANY of: legacy grandfather flag, active PRO sub, PRO plan
-// still inside PAST_DUE grace, or an unexpired 14-day trial.
-function hasProFeatures(r) {
-    if (r.legacyFullAccess)
-        return true;
-    if (r.subscriptionStatus === "ACTIVE" && r.plan === "PRO")
-        return true;
-    // A PRO plan whose renewal just failed keeps its PRO features during grace.
-    if (r.plan === "PRO" && inPastDueGrace(r))
-        return true;
-    return !!r.trialEndsAt && r.trialEndsAt > new Date();
-}
-// Like `hasProFeatures` but WITHOUT the trial branch — i.e. the owner is
-// genuinely PAYING for PRO (active PRO sub, PRO-in-grace, or a grandfathered
-// legacy venue). Use this for perks a trial must NOT get or leak to secondary
-// venues (e.g. unlimited AI images). A trial FREE row returns false here.
-function hasPaidProFeatures(r) {
-    if (r.legacyFullAccess)
-        return true;
-    if (r.subscriptionStatus === "ACTIVE" && r.plan === "PRO")
-        return true;
-    if (r.plan === "PRO" && inPastDueGrace(r))
-        return true;
-    return false;
-}
 const FULL_PRO_CAPS = {
     menuOnline: true,
     orders: true,
@@ -120,70 +86,37 @@ const INACTIVE_CAPS = {
     reservations: false,
     customDomain: false,
 };
-// BASIC = live digital menu only, no operational features.
-const BASIC_CAPS = {
-    menuOnline: true,
-    orders: false,
-    kds: false,
-    reservations: false,
-    customDomain: false,
-};
-// A trial gets the full operational set (same as paid PRO now that the
-// unlimited-AI perk no longer exists).
+// A trial gets the full operational set (same as a paid sub).
 const TRIAL_PRO_CAPS = { ...FULL_PRO_CAPS };
 function isTrialActive(account) {
     return !!account.trialEndsAt && account.trialEndsAt > new Date();
 }
-// True while the account's subscription counts as an active PRO (active PRO, or
-// PRO still inside PAST_DUE grace).
-function isProActive(sub) {
+// True while the account's subscription is paying (ACTIVE, or still inside the
+// PAST_DUE grace window). There is no plan tier anymore — any active/grace
+// subscription grants account-wide access; feat* flags decide the feature set.
+function isPaidActive(sub) {
     if (!sub)
         return false;
-    if (sub.status === "ACTIVE" && sub.plan === "PRO")
+    if (sub.status === "ACTIVE")
         return true;
-    if (sub.plan === "PRO" &&
-        inPastDueGrace({
-            subscriptionStatus: sub.status,
-            pastDueSince: sub.pastDueSince,
-            currentPeriodEnd: sub.currentPeriodEnd,
-            interval: sub.interval,
-        }))
-        return true;
-    return false;
-}
-// True while the account's subscription is an active BASIC (active, or BASIC in
-// PAST_DUE grace — same grace policy as PRO).
-function isBasicActive(sub) {
-    if (!sub)
-        return false;
-    if (sub.status === "ACTIVE" && sub.plan === "BASIC")
-        return true;
-    if (sub.plan === "BASIC" &&
-        inPastDueGrace({
-            subscriptionStatus: sub.status,
-            pastDueSince: sub.pastDueSince,
-            currentPeriodEnd: sub.currentPeriodEnd,
-            interval: sub.interval,
-        }))
-        return true;
-    return false;
+    return inPastDueGrace({
+        subscriptionStatus: sub.status,
+        pastDueSince: sub.pastDueSince,
+        currentPeriodEnd: sub.currentPeriodEnd,
+        interval: sub.interval,
+    });
 }
 // "Whether" gate — does this venue have ANY access right now? Access is granted
-// by (highest first): per-venue PRO override, an active trial, an active PRO
-// subscription (account-wide), or an active BASIC subscription that is pinned to
-// THIS venue. No access → menu offline (INACTIVE_CAPS). (Free comps are done via
-// a manually-set ACTIVE subscription now — the manualAccess bypass was removed.)
+// by (highest first): per-venue full-access override, an active trial, or a
+// paying account subscription (account-wide). No access → menu offline
+// (INACTIVE_CAPS). Free comps are done via planOverride or a manually-set ACTIVE
+// subscription.
 function hasVenueAccess(account, restaurant) {
     if (restaurant.planOverride === "PRO")
         return true;
     if (isTrialActive(account))
         return true;
-    const sub = account.subscription;
-    if (isProActive(sub))
-        return true;
-    if (isBasicActive(sub) && sub.appliesToRestaurantId === restaurant.id)
-        return true;
-    return false;
+    return isPaidActive(account.subscription);
 }
 // True when the row carries explicit persisted feature flags (the DB read path).
 // A flag-less row (unit tests, defensive callers) uses the tier fallback instead.
@@ -205,27 +138,16 @@ function capsFromFlags(r) {
         customDomain: !!r.featCustomDomain,
     };
 }
-// Tier-derived caps — the pre-flag behaviour, kept as the fallback for rows that
-// don't carry feature flags. Resolution order (§3):
-//   1. planOverride==='PRO' → full PRO   2. trial → full PRO minus AI
-//   3. PRO active → full PRO   4. BASIC active → BASIC on the pinned venue only
-//   5. otherwise → inactive.
+// Access-derived caps — the fallback for rows that don't carry feature flags
+// (unit tests / defensive callers). Any granted access → full operational set;
+// no access → inactive. Real DB rows always carry feat* flags and use
+// capsFromFlags instead.
 function tierCaps(account, restaurant) {
-    if (restaurant.planOverride === "PRO")
-        return { ...FULL_PRO_CAPS };
-    if (isTrialActive(account))
-        return { ...TRIAL_PRO_CAPS };
-    const sub = account.subscription;
-    if (isProActive(sub))
-        return { ...FULL_PRO_CAPS };
-    if (isBasicActive(sub)) {
-        return sub.appliesToRestaurantId === restaurant.id ? { ...BASIC_CAPS } : { ...INACTIVE_CAPS };
-    }
-    return { ...INACTIVE_CAPS };
+    return hasVenueAccess(account, restaurant) ? { ...FULL_PRO_CAPS } : { ...INACTIVE_CAPS };
 }
 // Capabilities for one restaurant under its account.
-//   whether: hasVenueAccess (override / manual / trial / PRO / pinned-BASIC)
-//   which:   persisted feature flags if present, else tier-derived (fallback).
+//   whether: hasVenueAccess (override / trial / paid subscription)
+//   which:   persisted feature flags if present, else access-derived (fallback).
 // No access → INACTIVE_CAPS regardless of flags (flags never leak menu/features
 // to an unpaid venue). This is the single seam the whole platform gates on.
 function getRestaurantCaps(account, restaurant) {
@@ -239,7 +161,7 @@ function getRestaurantCaps(account, restaurant) {
 // these on the new Restaurant row.
 function defaultFeatureFlagsForNewVenue(account, planOverride) {
     const override = planOverride === "PRO";
-    const operational = override || isTrialActive(account) || isProActive(account.subscription);
+    const operational = override || isTrialActive(account) || isPaidActive(account.subscription);
     return {
         featMenuOnline: true,
         featOrders: operational,
@@ -249,56 +171,25 @@ function defaultFeatureFlagsForNewVenue(account, planOverride) {
     };
 }
 // Account-wide capabilities: how many venues may exist / be created.
-// canAddVenue = (trial || PRO active) && count < venueLimit. BASIC / no-sub
+// canAddVenue = (trial || paid subscription) && count < venueLimit. No-sub
 // accounts cannot add venues (the create gate for the very first venue is
 // handled at onboarding, not here).
 function getAccountCaps(account) {
     const count = account.restaurantCount ?? 0;
-    const unlimitedTier = isTrialActive(account) || isProActive(account.subscription);
+    const unlimitedTier = isTrialActive(account) || isPaidActive(account.subscription);
     return {
         venueLimit: account.venueLimit,
         canAddVenue: unlimitedTier && count < account.venueLimit,
     };
 }
-// Adapter: build an AccountState from a single legacy restaurant row (today's
-// per-restaurant billing columns). Lets the target resolver run against current
-// data before the Account/Subscription tables exist. In Phase 3 the caller
-// builds AccountState from the real Account + Subscription instead.
-//
-// legacyFullAccess maps to planOverride='PRO' on the restaurant, so it is passed
-// through on the restaurant side, not the account side (per §3: per-venue, not
-// account-wide). Here we surface it via the returned `planOverride`.
-function accountStateFromLegacyRestaurant(r) {
-    return {
-        account: {
-            trialEndsAt: r.trialEndsAt ?? null,
-            restaurantCount: 1,
-            venueLimit: r.venueLimit ?? 4,
-            subscription: r.plan == null
-                ? null
-                : {
-                    plan: r.plan,
-                    status: r.subscriptionStatus,
-                    currentPeriodEnd: r.currentPeriodEnd ?? null,
-                    appliesToRestaurantId: r.plan === "BASIC" ? r.id : null,
-                },
-        },
-        restaurant: { id: r.id, planOverride: r.legacyFullAccess ? "PRO" : null },
-    };
-}
 // ─────────────────────────────────────────────────────────────────────────────
-// Layer 3: Prisma-backed account entitlement (Phase 3 — the live read path)
-//
-// Callers switch from the legacy per-restaurant helpers (Layer 1) to these. A
-// restaurant's capabilities are resolved from its Account + Subscription (the
-// account is the entitlement boundary; §3). During the dual-write window a
-// restaurant whose `accountId` is still NULL (orphan / not yet backfilled) falls
-// back to its legacy billing columns so nothing fails closed mid-migration.
+// Prisma-backed account entitlement (the live read path). A restaurant's
+// capabilities are resolved from its Account + Subscription (the account is the
+// entitlement boundary).
 // ─────────────────────────────────────────────────────────────────────────────
 // Prisma `select` fragment: spread into any restaurant query that needs account
 // entitlement so the account + subscription + venue-count come along in ONE
-// query (no per-request owner scan). Includes the legacy columns as the
-// orphan-row fallback.
+// query (no per-request owner scan).
 exports.ACCOUNT_ENTITLEMENT_SELECT = {
     id: true,
     planOverride: true,
@@ -315,12 +206,10 @@ exports.ACCOUNT_ENTITLEMENT_SELECT = {
             venueLimit: true,
             subscription: {
                 select: {
-                    plan: true,
                     status: true,
                     billingCycle: true,
                     currentPeriodEnd: true,
                     pastDueSince: true,
-                    appliesToRestaurantId: true,
                     cancelAtPeriodEnd: true,
                     amount: true,
                     currency: true,
@@ -344,7 +233,6 @@ function accountStateFromRow(row) {
                 venueLimit: row.account.venueLimit,
                 subscription: sub
                     ? {
-                        plan: sub.plan,
                         status: sub.status,
                         currentPeriodEnd: sub.currentPeriodEnd ?? null,
                         // New ad-hoc `interval`, falling back to the legacy `billingCycle`
@@ -352,7 +240,6 @@ function accountStateFromRow(row) {
                         interval: sub.interval ?? sub.billingCycle ?? null,
                         // Exact failed-renewal moment — the primary PAST_DUE grace anchor.
                         pastDueSince: sub.pastDueSince ?? null,
-                        appliesToRestaurantId: sub.appliesToRestaurantId ?? null,
                     }
                     : null,
             },

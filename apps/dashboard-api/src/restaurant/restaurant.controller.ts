@@ -230,23 +230,19 @@ export class RestaurantController {
     // Entitlement + billing state resolved from the account subscription (§3).
     const caps = restaurantCapsFromRow(row);
     const sub = row.account?.subscription ?? null;
-    // Billing fields come from the account Subscription / Account; for an orphan
-    // row (accountId still NULL) fall back to the legacy restaurant columns.
-    const plan = sub?.plan ?? null;
+    // Billing fields come from the account Subscription / Account.
     const subscriptionStatus = sub?.status ?? null;
     const billingCycle = sub?.billingCycle ?? null;
     const currentPeriodEnd = sub?.currentPeriodEnd ?? null;
     const trialEndsAt = row.account?.trialEndsAt ?? null;
     return {
-      plan,
       billingCycle,
       subscriptionStatus,
       currentPeriodEnd: currentPeriodEnd ? currentPeriodEnd.toISOString() : null,
       // First-failure anchor for the PAST_DUE grace countdown (past-due modal).
       pastDueSince: sub?.pastDueSince ? sub.pastDueSince.toISOString() : null,
       cancelAtPeriodEnd: sub?.cancelAtPeriodEnd ?? false,
-      // What the subscription actually includes (features + price + capacity),
-      // shown instead of the cosmetic plan label.
+      // What the subscription actually includes (features + price + capacity).
       features: { menuOnline: caps.menuOnline, reservations: caps.reservations, ordersKds: caps.kds || caps.orders, customDomain: caps.customDomain },
       amount: sub?.amount != null ? sub.amount / 100 : null,
       currency: sub?.currency ?? null,
@@ -257,46 +253,11 @@ export class RestaurantController {
       proFeatures: caps.orders,
       // menuOnline drives the dashboard inactive-venue banner (account entitlement).
       menuOnline: caps.menuOnline,
-      // BASIC: which venue the subscription is applied to (others inactive). The
-      // SPA venue-picker uses this. null for PRO/trial (covers the whole account).
-      appliesToRestaurantId: sub?.appliesToRestaurantId ?? null,
       aiImagesUsed: usage.aiImagesUsed,
       aiImagesLimit: usage.aiImagesLimit,
       // Demo accounts can't pay — hide the billing UI (the SPA gates on this).
       canManageBilling: !viaGrant && !isDemo,
     };
-  }
-
-  // BASIC venue-picker (§5): choose which single venue an account's BASIC
-  // subscription applies to. The others go inactive (menu offline). Switchable
-  // any time; the Stripe price doesn't change (proration not needed).
-  @Post("restaurant/subscription/basic-venue")
-  async setBasicVenue(@Req() req: Request, @Body() body: { restaurantId: string }) {
-    const { restaurantId: activeId, viaGrant } = (req as AuthedRequest).authUser;
-    if (viaGrant) throw new ForbiddenException("Billing is managed by the restaurant owner");
-    if (!body?.restaurantId) throw new BadRequestException("restaurantId required");
-    const active = await this.prisma.restaurant.findUnique({
-      where: { id: activeId },
-      select: { accountId: true },
-    });
-    if (!active?.accountId) throw new NotFoundException("Account not found");
-    // Target must belong to the same account.
-    const target = await this.prisma.restaurant.findFirst({
-      where: { id: body.restaurantId, accountId: active.accountId },
-      select: { id: true },
-    });
-    if (!target) throw new ForbiddenException("Not your restaurant");
-    // Only meaningful for a BASIC subscription.
-    const sub = await this.prisma.subscription.findUnique({
-      where: { accountId: active.accountId },
-      select: { plan: true },
-    });
-    if (!sub || sub.plan !== "BASIC") throw new BadRequestException("Not a BASIC subscription");
-    await this.prisma.subscription.update({
-      where: { accountId: active.accountId },
-      data: { appliesToRestaurantId: target.id },
-    });
-    return { ok: true };
   }
 
   // ---- Multi-restaurant endpoints ----

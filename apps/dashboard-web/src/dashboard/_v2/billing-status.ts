@@ -15,7 +15,6 @@ export const PAST_DUE_GRACE_DAYS = 3;
 const INTERVAL_DAYS: Record<string, number> = { month: 30, MONTHLY: 30, year: 365, YEARLY: 365 };
 
 export type BillingSub = {
-  plan: string | null;
   subscriptionStatus: string | null;
   trialEndsAt?: string | null;
   currentPeriodEnd?: string | null;
@@ -25,23 +24,19 @@ export type BillingSub = {
   pastDueSince?: string | null;
 } | null;
 
-function isPaidPlan(sub: BillingSub): boolean {
-  return !!sub && !!sub.plan && sub.plan !== "FREE";
-}
-
-// Non-FREE plan that is either ACTIVE or PAST_DUE. Used to SUPPRESS trial UI —
+// A subscription that is either ACTIVE or PAST_DUE. Used to SUPPRESS trial UI —
 // a paying customer (even one whose last payment failed) is never on a trial.
+// (There is no plan tier anymore — access is gated purely on the status.)
 export function hasPaidPlan(sub: BillingSub): boolean {
   return (
-    isPaidPlan(sub) &&
-    (sub!.subscriptionStatus === "ACTIVE" || sub!.subscriptionStatus === "PAST_DUE")
+    !!sub && (sub.subscriptionStatus === "ACTIVE" || sub.subscriptionStatus === "PAST_DUE")
   );
 }
 
-// The subscription's last renewal failed and it's a paid plan → show the
-// past-due nudge instead of any trial UI.
+// The subscription's last renewal failed → show the past-due nudge instead of
+// any trial UI.
 export function isPastDue(sub: BillingSub): boolean {
-  return isPaidPlan(sub) && sub!.subscriptionStatus === "PAST_DUE";
+  return !!sub && sub.subscriptionStatus === "PAST_DUE";
 }
 
 // Millisecond deadline of the PAST_DUE grace window, or null when not PAST_DUE.

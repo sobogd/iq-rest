@@ -13,7 +13,6 @@ const SHOWN_KEY = "dash_trial_modal_shown";
 const DAY_MS = 86_400_000;
 
 type TrialSub = {
-  plan: string | null;
   subscriptionStatus: string | null;
   trialEndsAt: string | null;
 } | null;

@@ -23,7 +23,6 @@ interface UserRow {
     id: string;
     title: string;
     slug: string | null;
-    plan: string | null;
     subscriptionStatus: string;
     hasStripeSub: boolean;
   }[];
@@ -99,7 +98,7 @@ export function AdminUsersPage({ onBack }: { onBack: () => void }) {
                             >
                               <span className="flex-1 truncate font-medium">{r.title}</span>
                               <span className={r.subscriptionStatus === "ACTIVE" ? "text-emerald-600" : "text-muted-foreground"}>
-                                {r.plan ?? "FREE"} · {r.subscriptionStatus}
+                                {r.subscriptionStatus ?? "FREE"}
                                 {r.hasStripeSub ? " · Stripe" : ""}
                               </span>
                             </button>

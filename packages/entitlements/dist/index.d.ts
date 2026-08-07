@@ -12,28 +12,12 @@ export declare function inPastDueGrace(r: {
     currentPeriodEnd?: Date | null;
     interval?: string | null;
 }): boolean;
-export declare function hasProFeatures(r: {
-    plan: string | null;
-    subscriptionStatus: string | null;
-    trialEndsAt?: Date | null;
-    currentPeriodEnd?: Date | null;
-    legacyFullAccess?: boolean | null;
-}): boolean;
-export declare function hasPaidProFeatures(r: {
-    plan: string | null;
-    subscriptionStatus: string | null;
-    currentPeriodEnd?: Date | null;
-    legacyFullAccess?: boolean | null;
-}): boolean;
-export type PlanCode = "FREE" | "BASIC" | "PRO";
 export type PlanOverride = "PRO" | null;
 export type SubscriptionState = {
-    plan: PlanCode | string | null;
     status: string | null;
     currentPeriodEnd?: Date | null;
     interval?: string | null;
     pastDueSince?: Date | null;
-    appliesToRestaurantId?: string | null;
 };
 export type AccountState = {
     trialEndsAt?: Date | null;
@@ -60,8 +44,7 @@ export type AccountCapabilities = {
     canAddVenue: boolean;
 };
 export declare function isTrialActive(account: Pick<AccountState, "trialEndsAt">): boolean;
-export declare function isProActive(sub: SubscriptionState | null): boolean;
-export declare function isBasicActive(sub: SubscriptionState | null): boolean;
+export declare function isPaidActive(sub: SubscriptionState | null): boolean;
 export declare function hasVenueAccess(account: AccountState, restaurant: {
     id: string;
     planOverride?: PlanOverride | string | null;
@@ -78,21 +61,6 @@ export declare function defaultFeatureFlagsForNewVenue(account: AccountState, pl
     featCustomDomain: boolean;
 };
 export declare function getAccountCaps(account: AccountState): AccountCapabilities;
-export declare function accountStateFromLegacyRestaurant(r: {
-    id: string;
-    plan: string | null;
-    subscriptionStatus: string | null;
-    trialEndsAt?: Date | null;
-    currentPeriodEnd?: Date | null;
-    legacyFullAccess?: boolean | null;
-    venueLimit?: number;
-}): {
-    account: AccountState;
-    restaurant: {
-        id: string;
-        planOverride: PlanOverride;
-    };
-};
 export declare const ACCOUNT_ENTITLEMENT_SELECT: {
     readonly id: true;
     readonly planOverride: true;
@@ -108,12 +76,10 @@ export declare const ACCOUNT_ENTITLEMENT_SELECT: {
             readonly venueLimit: true;
             readonly subscription: {
                 readonly select: {
-                    readonly plan: true;
                     readonly status: true;
                     readonly billingCycle: true;
                     readonly currentPeriodEnd: true;
                     readonly pastDueSince: true;
-                    readonly appliesToRestaurantId: true;
                     readonly cancelAtPeriodEnd: true;
                     readonly amount: true;
                     readonly currency: true;
@@ -141,12 +107,10 @@ export type RestaurantEntitlementRow = {
         trialEndsAt: Date | null;
         venueLimit: number;
         subscription: {
-            plan: string;
             status: string;
             billingCycle?: string | null;
             currentPeriodEnd: Date | null;
             pastDueSince?: Date | null;
-            appliesToRestaurantId: string | null;
             cancelAtPeriodEnd?: boolean | null;
             amount?: number | null;
             currency?: string | null;

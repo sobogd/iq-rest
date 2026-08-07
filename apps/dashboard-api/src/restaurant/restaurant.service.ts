@@ -267,15 +267,15 @@ export class RestaurantService {
    *  the user from cleaning up. Idempotent: a sub already in canceled state
    *  just logs and moves on. */
   private async cancelStripeSubscriptionIfAny(restaurantId: string): Promise<void> {
-    // Billing lives on the account (§3): cancel the account's Stripe sub only
-    // when THIS venue is the one it applies to (BASIC), or it's the last venue.
+    // Billing lives on the account: the subscription is account-wide, so only
+    // cancel the Stripe sub when this is the account's LAST venue.
     const r = await this.prisma.restaurant.findUnique({
       where: { id: restaurantId },
       select: {
         accountId: true,
         account: {
           select: {
-            subscription: { select: { stripeSubscriptionId: true, appliesToRestaurantId: true } },
+            subscription: { select: { stripeSubscriptionId: true } },
             _count: { select: { restaurants: true } },
           },
         },
@@ -283,12 +283,10 @@ export class RestaurantService {
     });
     const sub = r?.account?.subscription ?? null;
     if (!sub?.stripeSubscriptionId) return;
-    // Don't cancel the account sub when deleting a non-billing venue that still
-    // has siblings — the subscription belongs to the account, not this row.
-    const appliesElsewhere =
-      sub.appliesToRestaurantId != null && sub.appliesToRestaurantId !== restaurantId;
+    // Don't cancel the account sub when sibling venues remain — the subscription
+    // belongs to the account, not this row.
     const hasSiblings = (r?.account?._count?.restaurants ?? 1) > 1;
-    if (appliesElsewhere || hasSiblings) return;
+    if (hasSiblings) return;
     try {
       await getStripe().subscriptions.cancel(sub.stripeSubscriptionId);
     } catch (err) {
@@ -488,16 +486,15 @@ export class RestaurantService {
     if (!ownerAccountId) throw new BadRequestException("No account for owner");
 
     // billing-features-constructor: seed the new venue's feature flags from the
-    // owner's account tier. A PRO account → full features (incl unlimited AI);
-    // trial → operational minus AI; BASIC/FREE → menu only (and the resolver
-    // gates it inactive anyway since BASIC pins a single venue).
+    // owner's account. A paid/trial account grants operational features; no
+    // subscription → menu only (and the resolver gates it inactive anyway).
     const ownerAccount = await this.prisma.account.findUnique({
       where: { id: ownerAccountId },
       select: {
         trialEndsAt: true,
         venueLimit: true,
         subscription: {
-          select: { plan: true, status: true, currentPeriodEnd: true, appliesToRestaurantId: true },
+          select: { status: true, currentPeriodEnd: true },
         },
       },
     });
@@ -507,17 +504,15 @@ export class RestaurantService {
       restaurantCount: ownedRestaurants.length + 1,
       subscription: ownerAccount?.subscription
         ? {
-            plan: ownerAccount.subscription.plan,
             status: ownerAccount.subscription.status,
             currentPeriodEnd: ownerAccount.subscription.currentPeriodEnd ?? null,
-            appliesToRestaurantId: ownerAccount.subscription.appliesToRestaurantId ?? null,
           }
         : null,
     };
     // Inherit the account's PURCHASED uniform feature set from an existing venue
-    // rather than blanket-granting operational features. Every à-la-carte sub is
-    // labelled plan="PRO" regardless of what was actually bought, so
-    // defaultFeatureFlagsForNewVenue (which keys off isProActive) would hand a
+    // rather than blanket-granting operational features. Every à-la-carte sub
+    // grants account-wide access regardless of what was actually bought, so
+    // defaultFeatureFlagsForNewVenue (which keys off isPaidActive) would hand a
     // brand-new venue orders/kds/reservations for free even on a menu-only plan.
     // The constructor provisions every paid venue identically, so the sibling
     // with the most features enabled == the purchased set. Fall back to the tier

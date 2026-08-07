@@ -69,12 +69,6 @@ model Session {
   @@map("sessions")
 }
 
-enum Plan {
-  FREE
-  BASIC
-  PRO
-}
-
 enum BillingCycle {
   MONTHLY
   YEARLY
@@ -229,17 +223,13 @@ model Restaurant {
 
   // ─── Per-restaurant feature flags (billing-features-constructor) ─────────────
   // Which features this venue has. These become the authoritative "which" set in
-  // getRestaurantCaps once access ("whether": paid sub / trial / manualAccess) is
+  // getRestaurantCaps once access ("whether": paid sub / trial / planOverride) is
   // granted. Backfilled at migration time to mirror the old plan → identical caps.
   featMenuOnline   Boolean @default(true)
   featOrders       Boolean @default(false)
   featKds          Boolean @default(false)
   featReservations Boolean @default(false)
   featCustomDomain Boolean @default(false)
-  featAiUnlimited  Boolean @default(false)
-  // Free comp: grant this venue's features with NO active subscription (generalises
-  // planOverride). New venues + trial default to all features on (see backfill).
-  manualAccess     Boolean @default(false)
   // Custom domain served for this venue. Flag-gated by featCustomDomain; the nginx
   // server_name + TLS are configured manually via support (no self-serve).
   customDomain     String? @unique
@@ -303,9 +293,6 @@ model Account {
   billingProfile   BillingProfile?
   // Invoices the owner uploads manually (read-only for the customer).
   invoices         Invoice[]
-  // Account-wide grandfather flag (rare). Per-venue legacy bypass lives on
-  // Restaurant.planOverride instead — see the migration plan §3.
-  legacyFullAccess Boolean         @default(false)
   // Ceiling on how many restaurants the account may hold/create (PRO/trial).
   // Enterprise raises this manually.
   venueLimit       Int             @default(4)
@@ -355,7 +342,6 @@ model StripeEvent {
 model Subscription {
   id                    String    @id @default(cuid())
   accountId             String    @unique
-  plan                  String // "FREE" | "BASIC" | "PRO" (cosmetic label; features live on Restaurant flags)
   billingCycle          String? // "MONTHLY" | "YEARLY" (legacy; ad-hoc uses `interval`)
   status                String    @default("INACTIVE") // ACTIVE | PAST_DUE | CANCELED | EXPIRED | INACTIVE | PENDING (sepa_manual)
   currentPeriodEnd      DateTime?
@@ -366,9 +352,6 @@ model Subscription {
   // cleared to null once payment succeeds. See @iq-rest/entitlements.
   pastDueSince          DateTime?
   stripeSubscriptionId  String?   @unique
-  // BASIC: which single venue "takes" the subscription. PRO/trial = null
-  // (applies to the whole account, up to venueLimit).
-  appliesToRestaurantId String?
   // Timestamp of the last Stripe reconcile that wrote this row (ordering guard).
   updatedFromStripeAt   DateTime?
   // ─── billing-features-constructor: provider-agnostic ad-hoc pricing ──────────

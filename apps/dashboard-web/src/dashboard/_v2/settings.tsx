@@ -1636,12 +1636,10 @@ export function LanguagesSettingsPage({
 
 
 interface SubStatus {
- plan: string | null;
  subscriptionStatus: string | null;
  currentPeriodEnd: string | null;
  billingCycle: string | null;
  trialEndsAt: string | null;
- appliesToRestaurantId?: string | null;
 }
 
 // Billing currencies we actually price in (must match the @iq-rest/pricing
@@ -1775,10 +1773,10 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  track("dash_settings_billing_currency_change");
  }
 
- const isActive = sub?.subscriptionStatus === "ACTIVE" && sub.plan !== "FREE";
- // A paid plan (BASIC/PRO) whose renewal failed → past-due banner, not a trial.
- const paidPlan = !!sub?.plan && sub.plan !== "FREE";
- // Billing is account-level now: plan/status come straight off the account
+ const isActive = sub?.subscriptionStatus === "ACTIVE";
+ // A paid subscription whose renewal failed → past-due banner, not a trial.
+ const paidPlan = isActive || sub?.subscriptionStatus === "PAST_DUE";
+ // Billing is account-level: status comes straight off the account
  // subscription, so there is no "covered by another restaurant" special-case.
  const pastDue = isPastDue(sub ?? null);
  const pastDueDays = pastDueDaysLeft(sub ?? null);

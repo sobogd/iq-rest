@@ -6,7 +6,6 @@ import { TrialModal } from "./trial-modal";
 import { PastDueModal } from "./past-due-modal";
 
 type TrialSub = {
-  plan: string | null;
   subscriptionStatus: string | null;
   trialEndsAt: string | null;
   currentPeriodEnd?: string | null;

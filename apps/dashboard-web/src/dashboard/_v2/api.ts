@@ -778,7 +778,6 @@ export async function sendSupportMessage(message: string): Promise<ApiSupportMes
 // ── Subscription / Stripe ──
 
 export async function fetchSubscriptionStatus(): Promise<{
- plan: string | null;
  subscriptionStatus: string | null;
  currentPeriodEnd: string | null;
  cancelAtPeriodEnd?: boolean;
@@ -789,13 +788,11 @@ export async function fetchSubscriptionStatus(): Promise<{
  interval?: string | null;
  venueLimit?: number | null;
  trialEndsAt: string | null;
- // PRO-feature entitlement (orders / kitchen / reservations). The SPA gates
- // those surfaces on this single flag instead of re-deriving plan logic.
+ // Feature entitlement (orders / kitchen / reservations). The SPA gates those
+ // surfaces on this single flag instead of re-deriving billing logic.
  proFeatures?: boolean;
  // Account entitlement: false → this venue is inactive (paywall/upgrade banner).
  menuOnline?: boolean;
- // BASIC: the venue the subscription is applied to (others inactive). null = PRO/trial.
- appliesToRestaurantId?: string | null;
  canManageBilling?: boolean;
 } | null> {
  const res = await apiFetch("/api/restaurant/subscription", {

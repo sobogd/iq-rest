@@ -17,7 +17,6 @@ interface RestaurantRow {
   title: string;
   slug: string | null;
   defaultLanguage: string | null;
-  plan: string | null;
   subscriptionStatus: string;
   trialEndsAt: string | null;
   scansToday: number;
@@ -114,16 +113,14 @@ export function AdminRestaurantsPage({ onBack }: { onBack: () => void }) {
                   : null;
               const active = r.subscriptionStatus === "ACTIVE";
               const subChipColor =
-                active && r.plan === "BASIC"
-                  ? "bg-blue-500/10 text-blue-600 dark:text-blue-400"
-                  : active
+                active
                   ? "bg-emerald-500/10 text-emerald-700 dark:text-emerald-400"
                   : trialActive
                   ? "bg-orange-500/10 text-orange-600 dark:text-orange-400"
                   : r.subscriptionStatus === "PAST_DUE"
                   ? "bg-red-500/10 text-red-600 dark:text-red-400"
                   : "bg-secondary text-muted-foreground";
-              const subLabel = active ? r.plan || "Active" : trialActive ? "Trial" : r.subscriptionStatus;
+              const subLabel = active ? "Active" : trialActive ? "Trial" : r.subscriptionStatus;
               const scansChipColor =
                 r.scansToday > 0
                   ? "bg-emerald-500/10 text-emerald-700 dark:text-emerald-400"

@@ -11,13 +11,6 @@ export function getStripe(): InstanceType<typeof Stripe> {
   return stripeInstance;
 }
 
-export const PRICE_LOOKUP_KEYS = {
-  BASIC_MONTHLY: "basic_monthly",
-  BASIC_YEARLY: "basic_yearly",
-  PRO_MONTHLY: "pro_monthly",
-  PRO_YEARLY: "pro_yearly",
-} as const;
-
 // ─── billing-features-constructor: ad-hoc pricing ────────────────────────────
 // A single reusable Stripe Product that every ad-hoc Price attaches to. Ad-hoc
 // prices carry the amount; the Product is just the umbrella ("IQ Rest"). If the
@@ -75,8 +68,6 @@ export function decodeSelections(encoded: string | undefined | null): VenueSel[]
   }
 }
 
-export type PriceLookupKey = (typeof PRICE_LOOKUP_KEYS)[keyof typeof PRICE_LOOKUP_KEYS];
-
 // Billing currencies we actually price in Stripe. EUR is the base/fallback;
 // NOK/SEK/DKK have currency-suffixed Stripe prices (e.g. `basic_monthly_nok`).
 export const SUPPORTED_CURRENCIES = ["EUR", "NOK", "SEK", "DKK", "MXN", "USD", "AUD", "GBP", "PLN", "CZK", "HUF", "ISK", "CHF", "RSD", "BRL", "ARS", "COP", "CLP", "PEN", "UYU", "TRY"] as const;
@@ -116,14 +107,6 @@ export type SupportedCurrency = (typeof SUPPORTED_CURRENCIES)[number];
 
 export function isSupportedCurrency(c: string | null | undefined): c is SupportedCurrency {
   return !!c && (SUPPORTED_CURRENCIES as readonly string[]).includes(c);
-}
-
-// EUR keeps the plain lookup key (`basic_monthly`); other currencies append a
-// lowercase suffix (`basic_monthly_nok`). Stripe must have a price with that
-// exact lookup_key — the checkout falls back to the plain key if missing.
-export function getLookupKeyWithCurrency(baseKey: PriceLookupKey, currency: SupportedCurrency): string {
-  if (currency === "EUR") return baseKey;
-  return `${baseKey}_${currency.toLowerCase()}`;
 }
 
 // Billing currency by country: only the Scandinavian trio map to their krone;

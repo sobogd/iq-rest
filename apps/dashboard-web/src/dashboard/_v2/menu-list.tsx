@@ -28,7 +28,6 @@ import type { Category, Dish } from "./types";
 import { track } from "@/lib/dashboard-events";
 
 interface SubData {
- plan: string | null;
  subscriptionStatus: string | null;
  trialEndsAt: string | null;
 }
@@ -113,7 +112,7 @@ export function MenuList({
  useEffect(() => {
  if (!initialSub) {
  fetchSubscriptionStatus().then((s) => {
- if (s) setSub({ plan: s.plan, subscriptionStatus: s.subscriptionStatus, trialEndsAt: s.trialEndsAt });
+ if (s) setSub({ subscriptionStatus: s.subscriptionStatus, trialEndsAt: s.trialEndsAt });
  });
  }
  }, [initialSub]);

@@ -49,7 +49,7 @@ export interface ShellInitialData {
   initialOrders: Order[];
   initialBookings: Booking[];
   initialTables: TableEntity[];
-  initialSub: { plan: string | null; subscriptionStatus: string | null; trialEndsAt: string | null; currentPeriodEnd?: string | null; pastDueSince?: string | null; interval?: string | null; proFeatures?: boolean; reservationsFeature?: boolean; menuOnline?: boolean } | null;
+  initialSub: { subscriptionStatus: string | null; trialEndsAt: string | null; currentPeriodEnd?: string | null; pastDueSince?: string | null; interval?: string | null; proFeatures?: boolean; reservationsFeature?: boolean; menuOnline?: boolean } | null;
   isAdmin: boolean;
   isDemo?: boolean;
   impersonatedBy?: string | null;

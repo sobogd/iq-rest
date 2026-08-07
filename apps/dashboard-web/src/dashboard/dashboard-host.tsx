@@ -47,7 +47,6 @@ interface AuthCheck {
 }
 
 interface SubData {
-  plan: string | null;
   subscriptionStatus: string | null;
   trialEndsAt: string | null;
   currentPeriodEnd?: string | null;
@@ -184,7 +183,6 @@ export function DashboardHost() {
   const sub = subQ.data;
   const initialSub = sub
     ? {
-        plan: sub.plan,
         subscriptionStatus: sub.subscriptionStatus,
         trialEndsAt: sub.trialEndsAt,
         currentPeriodEnd: sub.currentPeriodEnd ?? null,

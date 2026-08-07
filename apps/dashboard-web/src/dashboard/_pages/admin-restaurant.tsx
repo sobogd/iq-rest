@@ -44,7 +44,6 @@ interface RestaurantDetail {
   featKds: boolean;
   featReservations: boolean;
   featCustomDomain: boolean;
-  plan: string;
   billingCycle: string | null;
   subscriptionStatus: string;
   trialEndsAt: string | null;
@@ -353,14 +352,16 @@ export function AdminRestaurantPage({ restaurantId, onClose }: Props) {
   }
 
   const title = restaurant.title || "No name";
-  const planLabel = `${restaurant.plan}${restaurant.subscriptionStatus === "ACTIVE" ? " (Active)" : ""}`;
+  const subLabel = restaurant.subscriptionStatus ?? "FREE";
+  const isPaidSub =
+    restaurant.subscriptionStatus === "ACTIVE" || restaurant.subscriptionStatus === "PAST_DUE";
   const restaurantRows: { label: string; value: string }[] = [
-    { label: "Plan", value: planLabel },
+    { label: "Subscription", value: subLabel },
     { label: "Created", value: formatDate(restaurant.createdAt, true) },
     { label: "Categories", value: String(restaurant.categoriesCount) },
     { label: "Items", value: String(restaurant.itemsCount) },
   ];
-  if (restaurant.plan !== "FREE") {
+  if (isPaidSub) {
     if (restaurant.billingCycle) restaurantRows.push({ label: "Billing", value: restaurant.billingCycle });
     if (restaurant.currentPeriodEnd) restaurantRows.push({ label: "Period Ends", value: formatDate(restaurant.currentPeriodEnd) });
   }

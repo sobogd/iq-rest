@@ -84,14 +84,13 @@ export class AdminController {
         title: true,
         slug: true,
         defaultLanguage: true,
-        // Billing is account-level now (§3): read plan/status/trial off the
-        // account Subscription + Account, not the (dropped) restaurant columns.
+        // Billing is account-level: read status/trial off the account
+        // Subscription + Account.
         account: {
           select: {
             trialEndsAt: true,
             subscription: {
               select: {
-                plan: true,
                 status: true,
                 billingCycle: true,
                 currentPeriodEnd: true,
@@ -164,7 +163,6 @@ export class AdminController {
     return {
       restaurants: restaurants.map((r) => {
         const acctSub = r.account?.subscription ?? null;
-        const plan = acctSub?.plan ?? "FREE";
         const subscriptionStatus = acctSub?.status ?? null;
         const isManualSub =
           subscriptionStatus === "ACTIVE" && !acctSub?.stripeSubscriptionId;
@@ -177,7 +175,6 @@ export class AdminController {
           title: r.title,
           slug: r.slug,
           defaultLanguage: r.defaultLanguage,
-          plan,
           billingCycle: acctSub?.billingCycle ?? null,
           subscriptionStatus,
           trialEndsAt: r.account?.trialEndsAt ? r.account.trialEndsAt.toISOString() : null,
@@ -237,7 +234,6 @@ export class AdminController {
             trialEndsAt: true,
             subscription: {
               select: {
-                plan: true,
                 status: true,
                 billingCycle: true,
                 currentPeriodEnd: true,
@@ -289,7 +285,6 @@ export class AdminController {
       featKds: restaurant.featKds,
       featReservations: restaurant.featReservations,
       featCustomDomain: restaurant.featCustomDomain,
-      plan: restaurant.account?.subscription?.plan ?? "FREE",
       billingCycle: restaurant.account?.subscription?.billingCycle ?? null,
       subscriptionStatus: restaurant.account?.subscription?.status ?? null,
       trialEndsAt: restaurant.account?.trialEndsAt?.toISOString() ?? null,
@@ -442,7 +437,7 @@ export class AdminController {
                     stripeCustomerId: true,
                     trialEndsAt: true,
                     subscription: {
-                      select: { plan: true, status: true, stripeSubscriptionId: true },
+                      select: { status: true, stripeSubscriptionId: true },
                     },
                   },
                 },
@@ -466,7 +461,7 @@ export class AdminController {
         restaurantsCount: u.restaurantUsers.length,
         hasPaying: u.restaurantUsers.some((ru) => {
           const sub = ru.restaurant.account?.subscription;
-          return sub?.status === "ACTIVE" && sub.plan !== "FREE";
+          return sub?.status === "ACTIVE";
         }),
         hasActiveTrial: u.restaurantUsers.some(
           (ru) => ru.restaurant.account?.trialEndsAt && ru.restaurant.account.trialEndsAt > new Date(),
@@ -475,7 +470,6 @@ export class AdminController {
           id: ru.restaurant.id,
           title: ru.restaurant.title,
           slug: ru.restaurant.slug,
-          plan: ru.restaurant.account?.subscription?.plan ?? null,
           subscriptionStatus: ru.restaurant.account?.subscription?.status ?? null,
           hasStripeSub: !!ru.restaurant.account?.subscription?.stripeSubscriptionId,
         })),

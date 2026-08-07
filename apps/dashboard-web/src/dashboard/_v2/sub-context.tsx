@@ -3,7 +3,6 @@
 import { createContext, useContext, ReactNode } from "react";
 
 export type Sub = {
-  plan: string | null;
   subscriptionStatus: string | null;
   trialEndsAt: string | null;
   aiImagesUsed?: number;
@@ -30,14 +29,12 @@ export type AiImageAccess =
 
 export function useAiImageAccess(): AiImageAccess {
   const sub = useSub();
-  // Only an ACTIVE non-FREE subscription unlocks unlimited AI images. Trial and
-  // FREE restaurants share the free quota of 5 — mirror backend `isPaidActive`.
-  const isPaid =
-    !!sub && sub.subscriptionStatus === "ACTIVE" && !!sub.plan && sub.plan !== "FREE";
+  // Only an ACTIVE subscription unlocks unlimited AI images. Trial and unpaid
+  // restaurants share the free quota of 5 — mirror backend `isPaidActive`.
+  const isPaid = !!sub && sub.subscriptionStatus === "ACTIVE";
   // The server sends `aiImagesLimit: null` for any venue entitled to unlimited
-  // AI — including a PRO owner's account-covered secondary venue whose OWN row
-  // is FREE. Honor that instead of re-deriving from the own plan (which would
-  // wrongly cap a covered venue at 5).
+  // AI — including a paid owner's account-covered secondary venue. Honor that
+  // instead of re-deriving (which would wrongly cap a covered venue at 5).
   const rawLimit = sub?.aiImagesLimit;
   if (isPaid || rawLimit === null) return { kind: "unlimited" };
   const used = sub?.aiImagesUsed ?? 0;
