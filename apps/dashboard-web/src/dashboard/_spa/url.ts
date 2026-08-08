@@ -67,6 +67,8 @@ export function viewToPath(view: View): string {
       return "/dashboard/settings/admin/usage";
     case "settings.admin.usageSession":
       return `/dashboard/settings/admin/usage/session/${view.id}`;
+    case "settings.admin.leads":
+      return "/dashboard/settings/admin/leads";
     case "settings.admin.inbox":
       return "/dashboard/settings/admin/inbox";
     case "settings.admin.inboxThread":
@@ -138,6 +140,7 @@ export function pathToView(path: string): View {
   if (adminRestaurantMatch) return { name: "settings.admin.restaurant", id: adminRestaurantMatch[1] };
   if (stripped === "/dashboard/settings/admin/restaurants") return { name: "settings.admin.restaurants" };
   if (stripped === "/dashboard/settings/admin/users") return { name: "settings.admin.users" };
+  if (stripped === "/dashboard/settings/admin/leads") return { name: "settings.admin.leads" };
   const usageSessionMatch = stripped.match(/^\/dashboard\/settings\/admin\/usage\/session\/([^/]+)$/);
   if (usageSessionMatch) return { name: "settings.admin.usageSession", id: usageSessionMatch[1] };
   if (stripped === "/dashboard/settings/admin/usage") return { name: "settings.admin.usage" };

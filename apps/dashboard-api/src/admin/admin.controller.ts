@@ -21,6 +21,7 @@ import { Prisma } from "@iq-rest/db";
 import { PrismaService } from "../prisma/prisma.service";
 import { AdminGuard } from "./admin.guard";
 import { UsageStitchService } from "./usage-stitch.service";
+import { AdminLeadsService } from "./leads.service";
 import { analyzeSession } from "./usage-analyze";
 import { AuthService } from "../auth/auth.service";
 import { MailService } from "../mail/mail.service";
@@ -51,7 +52,26 @@ export class AdminController {
     private readonly devices: DevicesService,
     private readonly restaurants: RestaurantService,
     private readonly stitch: UsageStitchService,
+    private readonly leads: AdminLeadsService,
   ) {}
+
+  // ────────────────── META LEADS ──────────────────
+
+  // All Meta Lead Ads leads (pulled live from the Graph API) with form answers
+  // and our send/account state. The admin sends welcomes by hand from here —
+  // the leadgen webhook was retired on purpose (see AdminLeadsService).
+  @Get("leads")
+  listLeads() {
+    return this.leads.list();
+  }
+
+  // Create the lead's account (if missing) + send the personal welcome with
+  // the permanent auto-login link.
+  @Post("leads/:leadgenId/send-welcome")
+  @HttpCode(HttpStatus.OK)
+  sendLeadWelcome(@Param("leadgenId") leadgenId: string) {
+    return this.leads.sendWelcome(leadgenId);
+  }
 
   // ────────────────── DEVICES ──────────────────
 

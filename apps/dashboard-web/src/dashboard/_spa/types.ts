@@ -33,6 +33,7 @@ export type View =
   | { name: "settings.admin.restaurant"; id: string }
   | { name: "settings.admin.usage" }
   | { name: "settings.admin.usageSession"; id: string }
+  | { name: "settings.admin.leads" }
   | { name: "settings.admin.inbox" }
   | { name: "settings.admin.inboxThread"; id: string }
   | { name: "category.new"; group?: string }

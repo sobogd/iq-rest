@@ -26,7 +26,6 @@ import { UsageModule } from "./usage/usage.module";
 import { AdminModule } from "./admin/admin.module";
 import { ScanMenuModule } from "./scan-menu/scan-menu.module";
 import { InboxModule } from "./inbox/inbox.module";
-import { MetaLeadsModule } from "./meta-leads/meta-leads.module";
 import { HealthController } from "./health/health.controller";
 
 @Module({
@@ -60,7 +59,6 @@ import { HealthController } from "./health/health.controller";
     AdminModule,
     ScanMenuModule,
     InboxModule,
-    MetaLeadsModule,
   ],
   controllers: [HealthController],
   providers: [{ provide: APP_GUARD, useClass: ThrottlerGuard }],

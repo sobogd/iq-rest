@@ -68,6 +68,9 @@ function AdminToolbar({ router }: { router: ReturnType<typeof useDashboardRouter
       <button type="button" onClick={() => router.push({ name: "settings.admin.usage" })} className={btn}>
         Usage
       </button>
+      <button type="button" onClick={() => router.push({ name: "settings.admin.leads" })} className={btn}>
+        Leads
+      </button>
       <button type="button" onClick={() => router.push({ name: "settings.admin.inbox" })} className={btn}>
         Inbox
       </button>
