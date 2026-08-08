@@ -18,6 +18,7 @@ import {
 import { FileInterceptor } from "@nestjs/platform-express";
 import { PutObjectCommand } from "@aws-sdk/client-s3";
 import sharp from "sharp";
+import heicConvert from "heic-convert";
 import type { Request } from "express";
 import { Prisma } from "@iq-rest/db";
 import { PrismaService } from "../prisma/prisma.service";
@@ -64,13 +65,26 @@ export class InboxController {
 
     // WhatsApp only accepts image/jpeg and image/png as image messages — iPhone
     // HEIC/HEIF and webp get accepted by the API but silently never delivered.
-    // Normalise every image to JPEG so it always arrives.
+    // Normalise every image to JPEG so it always arrives. HEIC/HEIF can't be
+    // decoded by our sharp/libheif build (HEVC plugin missing), so use the
+    // pure-JS heic-convert for those and sharp for everything else.
     let body: Buffer = file.buffer;
     let mime = srcMime;
     let ext = file.originalname.split(".").pop()?.toLowerCase() || srcMime.split("/")[1] || "bin";
-    if (type === "image" && srcMime !== "image/png") {
+    const isHeic = /image\/(heic|heif)/i.test(srcMime) || /\.(heic|heif)$/i.test(file.originalname);
+    if (type === "image" && (isHeic || srcMime !== "image/png")) {
       try {
-        body = await sharp(file.buffer).rotate().jpeg({ quality: 85 }).toBuffer();
+        // HEIC/HEIF: decode with the pure-JS decoder first (our sharp lacks the
+        // HEVC plugin), then hand the JPEG to sharp for orientation + resize.
+        const decoded = isHeic
+          ? Buffer.from(await heicConvert({ buffer: file.buffer, format: "JPEG", quality: 0.9 }))
+          : file.buffer;
+        // Cap dimensions so the result stays well under WhatsApp's 5 MB image limit.
+        body = await sharp(decoded)
+          .rotate()
+          .resize(2000, 2000, { fit: "inside", withoutEnlargement: true })
+          .jpeg({ quality: 85 })
+          .toBuffer();
         mime = "image/jpeg";
         ext = "jpg";
       } catch (e) {
