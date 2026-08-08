@@ -4,20 +4,11 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { Star, EyeOff, Pencil, Trash2, Paperclip, X, FileText, Play } from "lucide-react";
 import { apiUrl } from "@/lib/api";
 import { SendIcon, RefreshIcon } from "../_v2/icons";
-import { SubpageStickyBar, uploadFile } from "../_v2/ui";
 import { useDashboardRouter } from "../_spa/router";
 import { AVAILABLE_LANGUAGES } from "../_v2/i18n";
 
 const LANG_FLAG = new Map(AVAILABLE_LANGUAGES.map((l) => [l.code, l.flag]));
 const LANG_LABEL = new Map(AVAILABLE_LANGUAGES.map((l) => [l.code, l.label]));
-
-// Map a picked file's MIME type to a WhatsApp media category.
-function mediaCategory(mime: string): Attachment["type"] {
-  if (mime.startsWith("image/")) return "image";
-  if (mime.startsWith("video/")) return "video";
-  if (mime.startsWith("audio/")) return "audio";
-  return "document";
-}
 
 interface Contact {
   id: string;
@@ -277,8 +268,18 @@ export function AdminInboxThreadPage({ threadId }: { threadId: string }) {
   }
 
   return (
-    <div className="flex flex-col h-[calc(100dvh-var(--topbar-h,0px))]">
-      <SubpageStickyBar onBack={() => router.push({ name: "settings.admin.inbox" })} hideSave>
+    <div className="flex flex-col -mx-4 md:-mx-6 -mt-5 md:-mt-4 overflow-hidden bg-background h-[calc(100dvh-5rem-env(safe-area-inset-bottom))] md:h-[calc(100dvh-var(--topbar-h,0px))]">
+      {/* Pinned top bar: back + thread actions. */}
+      <div className="shrink-0 h-14 flex items-center gap-2 px-4 md:px-6 bg-subheader/90 backdrop-blur-md border-b border-border">
+        <button
+          type="button"
+          onClick={() => router.push({ name: "settings.admin.inbox" })}
+          className="inline-flex items-center gap-1 h-8 px-2.5 text-xs font-medium text-muted-foreground bg-secondary rounded-md shrink-0"
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6" /></svg>
+          Back
+        </button>
+        <div className="flex-1" />
         {contact && !isInternal ? (
           <>
             <button
@@ -316,11 +317,12 @@ export function AdminInboxThreadPage({ threadId }: { threadId: string }) {
         >
           <RefreshIcon size={14} className={loading ? "animate-spin" : ""} />
         </button>
-      </SubpageStickyBar>
+      </div>
 
-      <div className="flex-1 min-h-0 w-full max-w-3xl mx-auto flex flex-col">
-        {contact ? (
-          <div className="shrink-0 px-4 pt-4 pb-2">
+      {/* Pinned contact header (phone + name + info). */}
+      {contact ? (
+        <div className="shrink-0 px-4 md:px-6 py-2.5 border-b border-border/60 bg-card/40">
+          <div className="w-full max-w-3xl mx-auto">
             <div className="flex items-center gap-2">
               <span className="text-base" title={contact.lang || ""}>{LANG_FLAG.get(contact.lang || "") || "🌐"}</span>
               <span className="text-sm font-medium text-foreground truncate">{contact.name}</span>
@@ -340,8 +342,11 @@ export function AdminInboxThreadPage({ threadId }: { threadId: string }) {
             </div>
             {contact.note ? <div className="text-[11px] text-muted-foreground mt-1 italic">{contact.note}</div> : null}
           </div>
-        ) : null}
+        </div>
+      ) : null}
 
+      {/* Centered fill: scrollable messages + pinned composer. */}
+      <div className="flex-1 min-h-0 w-full max-w-3xl mx-auto flex flex-col">
         <div ref={scrollRef} className="flex-1 min-h-0 overflow-y-auto px-3 md:px-4 py-3 space-y-3">
           {loading && messages.length === 0 ? (
             <div className="h-full flex items-center justify-center text-sm text-muted-foreground">Loading…</div>
