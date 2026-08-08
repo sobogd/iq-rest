@@ -17,6 +17,7 @@ import {
 } from "@nestjs/common";
 import { FileInterceptor } from "@nestjs/platform-express";
 import { PutObjectCommand } from "@aws-sdk/client-s3";
+import sharp from "sharp";
 import type { Request } from "express";
 import { Prisma } from "@iq-rest/db";
 import { PrismaService } from "../prisma/prisma.service";
@@ -55,15 +56,31 @@ export class InboxController {
   @UseInterceptors(FileInterceptor("file", { limits: { fileSize: INBOX_MAX_UPLOAD_BYTES } }))
   async upload(@UploadedFile() file: Express.Multer.File) {
     if (!file) throw new BadRequestException("No file provided");
-    const mime = file.mimetype || "application/octet-stream";
-    const type: OutMediaType = mime.startsWith("image/")
+    const srcMime = file.mimetype || "application/octet-stream";
+    const type: OutMediaType = srcMime.startsWith("image/")
       ? "image"
-      : mime.startsWith("video/")
+      : srcMime.startsWith("video/")
         ? "video"
-        : mime.startsWith("audio/")
+        : srcMime.startsWith("audio/")
           ? "audio"
           : "document";
-    const ext = file.originalname.split(".").pop()?.toLowerCase() || mime.split("/")[1] || "bin";
+
+    // WhatsApp only accepts image/jpeg and image/png as image messages — iPhone
+    // HEIC/HEIF and webp get accepted by the API but silently never delivered.
+    // Normalise every image to JPEG so it always arrives.
+    let body: Buffer = file.buffer;
+    let mime = srcMime;
+    let ext = file.originalname.split(".").pop()?.toLowerCase() || srcMime.split("/")[1] || "bin";
+    if (type === "image" && srcMime !== "image/png") {
+      try {
+        body = await sharp(file.buffer).rotate().jpeg({ quality: 85 }).toBuffer();
+        mime = "image/jpeg";
+        ext = "jpg";
+      } catch (e) {
+        throw new BadRequestException(`Unsupported image: ${String(e)}`);
+      }
+    }
+
     const timestamp = Date.now();
     const rand = Math.random().toString(36).substring(2, 8);
     const key = s3Key("inbox", "out", `${timestamp}-${rand}.${ext}`);
@@ -71,7 +88,7 @@ export class InboxController {
       new PutObjectCommand({
         Bucket: s3Bucket,
         Key: key,
-        Body: file.buffer,
+        Body: body,
         ContentType: mime,
         ACL: "public-read",
       }),
