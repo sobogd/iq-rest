@@ -11,8 +11,12 @@ import {
   Post,
   Query,
   Req,
+  UploadedFile,
   UseGuards,
+  UseInterceptors,
 } from "@nestjs/common";
+import { FileInterceptor } from "@nestjs/platform-express";
+import { PutObjectCommand } from "@aws-sdk/client-s3";
 import type { Request } from "express";
 import { Prisma } from "@iq-rest/db";
 import { PrismaService } from "../prisma/prisma.service";
@@ -21,6 +25,9 @@ import type { AuthedRequest } from "../auth/auth.guard";
 import { MailService } from "../mail/mail.service";
 import { WhatsappService } from "./whatsapp.service";
 import { translateText } from "../common/gemini-translate";
+import { s3Client, s3Bucket, s3Key, getPublicUrl } from "../upload/s3";
+
+const INBOX_MAX_UPLOAD_BYTES = 90 * 1024 * 1024; // WhatsApp allows up to 100 MB documents
 
 /** Unified admin inbox: WhatsApp contacts + internal support threads, both
  *  opened and answered here. WhatsApp threads carry the auto-translation flow;
@@ -39,6 +46,37 @@ export class InboxController {
   @Get("config")
   config() {
     return { whatsapp: this.wa.isConfigured() };
+  }
+
+  /** Upload an outbound attachment (any type) to S3 and return a public URL the
+   *  WhatsApp Cloud API can fetch. Separate from the menu-photo /upload endpoint
+   *  because that one only accepts images/videos and re-encodes images. */
+  @Post("upload")
+  @UseInterceptors(FileInterceptor("file", { limits: { fileSize: INBOX_MAX_UPLOAD_BYTES } }))
+  async upload(@UploadedFile() file: Express.Multer.File) {
+    if (!file) throw new BadRequestException("No file provided");
+    const mime = file.mimetype || "application/octet-stream";
+    const type: OutMediaType = mime.startsWith("image/")
+      ? "image"
+      : mime.startsWith("video/")
+        ? "video"
+        : mime.startsWith("audio/")
+          ? "audio"
+          : "document";
+    const ext = file.originalname.split(".").pop()?.toLowerCase() || mime.split("/")[1] || "bin";
+    const timestamp = Date.now();
+    const rand = Math.random().toString(36).substring(2, 8);
+    const key = s3Key("inbox", "out", `${timestamp}-${rand}.${ext}`);
+    await s3Client.send(
+      new PutObjectCommand({
+        Bucket: s3Bucket,
+        Key: key,
+        Body: file.buffer,
+        ContentType: mime,
+        ACL: "public-read",
+      }),
+    );
+    return { url: getPublicUrl(key), type, mime, name: file.originalname || null };
   }
 
   /** Unified thread list, newest activity first. filter: all | watched | new | muted. */
@@ -91,7 +129,7 @@ export class InboxController {
         muted: c.muted,
         unread: !!lastIn && (!readAt || lastIn > readAt),
         lastAt: c.lastMessageAt.toISOString(),
-        lastPreview: last ? (last.direction === "in" ? last.translatedRu || last.body : last.translatedRu || last.body) : "",
+        lastPreview: last ? (last.translatedRu || last.body || (last.mediaType ? `📎 ${last.mediaType}` : "")) : "",
         lastFromMe: last ? last.direction === "out" : false,
       };
     });
@@ -222,6 +260,10 @@ export class InboxController {
         body: m.body,
         lang: m.lang,
         translatedRu: m.translatedRu,
+        mediaUrl: m.mediaUrl,
+        mediaType: m.mediaType,
+        mediaMime: m.mediaMime,
+        mediaName: m.mediaName,
         status: m.status,
         createdAt: m.createdAt.toISOString(),
       })),
@@ -232,15 +274,19 @@ export class InboxController {
    *  WITHOUT sending — lets the admin verify before delivery. Both channels. */
   @Post("threads/:id/preview")
   @HttpCode(HttpStatus.OK)
-  async preview(@Param("id") id: string, @Body() body: { ru?: string }) {
+  async preview(@Param("id") id: string, @Body() body: { ru?: string; lang?: string }) {
     const thread = this.parseThread(id);
     const ru = (body?.ru ?? "").trim();
     if (!ru) throw new BadRequestException("ru text required");
 
+    // The admin may override the target language for this reply; otherwise use
+    // the contact's detected language (internal threads use the owner's locale).
+    const override = (body?.lang ?? "").trim();
     const target =
-      thread.channel === "internal"
+      override ||
+      (thread.channel === "internal"
         ? await this.internalLang(thread.key)
-        : (await this.requireContact(thread.key)).lang || "en";
+        : (await this.requireContact(thread.key)).lang || "en");
     let text = ru;
     if (target !== "ru") {
       try {
@@ -260,7 +306,7 @@ export class InboxController {
   async send(
     @Req() req: Request,
     @Param("id") id: string,
-    @Body() body: { ru?: string; text?: string },
+    @Body() body: SendBody,
   ) {
     const thread = this.parseThread(id);
     if (thread.channel === "internal") {
@@ -269,14 +315,16 @@ export class InboxController {
 
     const contactId = thread.key;
     const ru = (body?.ru ?? "").trim();
-    if (!ru) throw new BadRequestException("ru text required");
+    const media = this.parseMedia(body?.media);
+    if (!ru && !media) throw new BadRequestException("ru text or media required");
     const contact = await this.prisma.inboxContact.findUnique({ where: { id: contactId } });
     if (!contact) throw new NotFoundException("Thread not found");
 
-    const target = contact.lang || "en";
+    // Target language: explicit override → contact's detected language → en.
+    const target = (body?.lang ?? "").trim() || contact.lang || "en";
     const approved = (body?.text ?? "").trim();
     let outText = approved || ru;
-    if (!approved && target !== "ru") {
+    if (ru && !approved && target !== "ru") {
       try {
         outText = await translateText(ru, target, "ru");
       } catch {
@@ -284,14 +332,20 @@ export class InboxController {
       }
     }
 
-    const result = await this.wa.sendText(contact.externalId, outText);
+    const result = media
+      ? await this.wa.sendMedia(contact.externalId, media.type, media.url, outText, media.name ?? undefined)
+      : await this.wa.sendText(contact.externalId, outText);
     const msg = await this.prisma.inboxMessage.create({
       data: {
         contactId,
         direction: "out",
         body: outText,
         lang: target,
-        translatedRu: ru,
+        translatedRu: ru || null,
+        mediaUrl: media?.url ?? null,
+        mediaType: media?.type ?? null,
+        mediaMime: media?.mime ?? null,
+        mediaName: media?.name ?? null,
         externalId: result.wamid ?? null,
         status: result.ok ? "sent" : "failed",
       },
@@ -307,10 +361,29 @@ export class InboxController {
       direction: "out",
       body: outText,
       lang: target,
-      translatedRu: ru,
+      translatedRu: ru || null,
+      mediaUrl: media?.url ?? null,
+      mediaType: media?.type ?? null,
+      mediaMime: media?.mime ?? null,
+      mediaName: media?.name ?? null,
       status: msg.status,
       createdAt: msg.createdAt.toISOString(),
     };
+  }
+
+  /** Validate an outbound media attachment; only our own S3 URLs are allowed
+   *  (SSRF guard — WhatsApp fetches the link, so it must be a trusted origin). */
+  private parseMedia(m: SendBody["media"]): OutMedia | null {
+    if (!m || typeof m.url !== "string" || !m.url) return null;
+    const prefix = process.env.S3_HOST ? `${process.env.S3_HOST}/` : null;
+    if (!prefix || !m.url.startsWith(prefix)) {
+      throw new BadRequestException("media url must be an uploaded file");
+    }
+    const type = m.type;
+    if (type !== "image" && type !== "video" && type !== "audio" && type !== "document") {
+      throw new BadRequestException("invalid media type");
+    }
+    return { url: m.url, type, mime: m.mime ?? null, name: m.name ?? null };
   }
 
   /** Internal support reply: the admin writes Russian; translate it to the
@@ -461,4 +534,20 @@ export class InboxController {
     if (!id.startsWith("wa:")) throw new BadRequestException("WhatsApp thread id required");
     return id.slice(3);
   }
+}
+
+type OutMediaType = "image" | "video" | "audio" | "document";
+
+interface OutMedia {
+  url: string;
+  type: OutMediaType;
+  mime: string | null;
+  name: string | null;
+}
+
+interface SendBody {
+  ru?: string;
+  text?: string;
+  lang?: string;
+  media?: { url?: string; type?: string; mime?: string | null; name?: string | null };
 }

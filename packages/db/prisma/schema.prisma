@@ -800,9 +800,13 @@ model InboxMessage {
   id           String   @id @default(cuid())
   contactId    String
   direction    String // "in" | "out"
-  body         String // text actually sent/received (contact language)
+  body         String // text actually sent/received (contact language); may be empty for media-only
   lang         String? // language of `body`
   translatedRu String? // Russian rendering (in: translation; out: admin original)
+  mediaUrl     String? // S3 public URL of an attached file (image/video/audio/document/sticker)
+  mediaType    String? // image | video | audio | document | sticker
+  mediaMime    String? // original MIME type (e.g. image/jpeg, audio/ogg)
+  mediaName    String? // original file name for documents (WhatsApp `filename`)
   externalId   String? // provider message id (WhatsApp wamid)
   status       String   @default("received") // received | sent | failed
   createdAt    DateTime @default(now())
