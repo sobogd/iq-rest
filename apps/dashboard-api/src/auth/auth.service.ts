@@ -436,6 +436,34 @@ export class AuthService implements OnModuleDestroy {
     return { token: row.token, email: row.email };
   }
 
+  /** Mint a permanent auto-login token for an admin-sent welcome email. Backed
+   *  by a regular `Session` row with `expiresAt: null` (resolveSession already
+   *  treats null as never-expiring), so the emailed link keeps working forever
+   *  and the token doubles as the session cookie value once installed. The
+   *  link is reusable by design — the same email can log the owner in again
+   *  on another device/day. */
+  async createEmailLoginSession(userId: string): Promise<string> {
+    const token = generateSessionToken();
+    await this.prisma.session.create({
+      data: { userId, tokenHash: hashSessionToken(token), userAgent: "email-login-link", expiresAt: null },
+    });
+    return token;
+  }
+
+  /** Validate an email-login token (NOT single-use, unlike handoff codes).
+   *  Returns the token + owner email to install as cookies, or null when the
+   *  token is unknown, expired, or orphaned. */
+  async resolveEmailLoginToken(token: string | undefined): Promise<{ token: string; email: string } | null> {
+    if (!token) return null;
+    const row = await this.prisma.session.findUnique({
+      where: { tokenHash: hashSessionToken(token) },
+      select: { expiresAt: true, user: { select: { email: true } } },
+    });
+    if (!row || (row.expiresAt !== null && row.expiresAt < new Date())) return null;
+    if (!row.user?.email) return null;
+    return { token, email: row.user.email };
+  }
+
   async logout(email: string | undefined, cookieValue?: string): Promise<void> {
     if (!email) return;
     if (cookieValue) {

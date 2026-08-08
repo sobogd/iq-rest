@@ -595,7 +595,10 @@ export class AdminController {
     const locale = requestedLocale || user.preferredLocale || restaurant?.defaultLanguage || "en";
 
     if (template === "welcome_personal") {
-      await this.mail.sendWelcomePersonal({ email: user.email, locale });
+      // The CTA is a one-click auto-login link: a permanent Session-backed
+      // token, installed as cookies by the SPA's /<locale>/auth page.
+      const loginToken = await this.auth.createEmailLoginSession(user.id);
+      await this.mail.sendWelcomePersonal({ email: user.email, locale, loginToken });
     } else if (template === "trial_ending") {
       await this.mail.sendTrialEnding({ email: user.email, locale });
     } else if (template === "payment_failed") {

@@ -65,6 +65,14 @@ export class HandoffDto {
   ott!: string;
 }
 
+// Permanent auto-login token from an admin-sent welcome email (Session row
+// with null expiresAt). Reusable, unlike the one-time handoff code above.
+export class EmailLoginDto {
+  @IsString()
+  @Length(16, 256)
+  token!: string;
+}
+
 // Apple posts these fields (application/x-www-form-urlencoded) to the
 // redirect URI. `user` is a JSON string sent only on the user's FIRST
 // authorization; everything else is present every time.

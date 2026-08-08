@@ -14,7 +14,7 @@ import {
 import { ConfigService } from "@nestjs/config";
 import type { Request, Response } from "express";
 import { AuthService } from "./auth.service";
-import { AppleCallbackDto, GoogleAuthDto, HandoffDto, SendOtpDto, VerifyOtpDto } from "./dto";
+import { AppleCallbackDto, EmailLoginDto, GoogleAuthDto, HandoffDto, SendOtpDto, VerifyOtpDto } from "./dto";
 import { authCookieOptions } from "../common/session-utils";
 import { getRequestCurrency } from "../common/geo";
 
@@ -249,6 +249,28 @@ export class AuthController {
   @HttpCode(HttpStatus.OK)
   async handoff(@Body() dto: HandoffDto, @Req() req: Request, @Res({ passthrough: true }) res: Response) {
     const result = await this.auth.consumeHandoff(dto.ott);
+    if (!result) throw new UnauthorizedException();
+    const domain = this.config.get<string>("COOKIE_DOMAIN") || undefined;
+    const opts = authCookieOptions(domain);
+    res.cookie(SESSION_COOKIE, result.token, opts);
+    res.cookie(EMAIL_COOKIE, result.email, { ...opts, httpOnly: false });
+    res.cookie(LEGACY_SESSION_COOKIE, result.token, opts);
+    res.cookie(LEGACY_EMAIL_COOKIE, result.email, { ...opts, httpOnly: false });
+    await this.dropStaleActiveRestaurant(req, res, result.email);
+    return { ok: true, email: result.email };
+  }
+
+  /**
+   * Exchange a permanent email-login token (minted when the admin sends the
+   * personal welcome email) for the session cookies. Same first-party-XHR
+   * shape as /handoff, but the token is reusable and never expires — the
+   * "Open dashboard" link in the email must keep working on any later click,
+   * from any device. The SPA calls this from /<locale>/auth#lt=<token>.
+   */
+  @Post("email-login")
+  @HttpCode(HttpStatus.OK)
+  async emailLogin(@Body() dto: EmailLoginDto, @Req() req: Request, @Res({ passthrough: true }) res: Response) {
+    const result = await this.auth.resolveEmailLoginToken(dto.token);
     if (!result) throw new UnauthorizedException();
     const domain = this.config.get<string>("COOKIE_DOMAIN") || undefined;
     const opts = authCookieOptions(domain);

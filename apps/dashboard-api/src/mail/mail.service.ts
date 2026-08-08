@@ -234,9 +234,23 @@ export class MailService implements OnModuleDestroy {
   }
 
   /** Personal welcome email — manually triggered from the admin panel.
-   *  Name-less; CTA opens the dashboard. */
-  async sendWelcomePersonal({ email, locale }: { email: string; locale: string }): Promise<void> {
+   *  Name-less; CTA opens the dashboard. With `loginToken` the CTA goes
+   *  through the SPA's /<locale>/auth page, which installs the session via
+   *  POST /auth/email-login — one click, no OTP. The token rides in the URL
+   *  fragment so it never reaches server logs or Referer headers. */
+  async sendWelcomePersonal({
+    email,
+    locale,
+    loginToken,
+  }: {
+    email: string;
+    locale: string;
+    loginToken?: string;
+  }): Promise<void> {
     const t = pickWelcomePersonal(locale);
+    const ctaUrl = loginToken
+      ? `${this.dashboardUrl()}/${locale}/auth?from=email&ec=welcome_personal#lt=${loginToken}`
+      : `${this.dashboardUrl()}?from=email&ec=welcome_personal`;
     await this.sendPersonalEmail({
       kind: "welcome_personal",
       email,
@@ -247,7 +261,7 @@ export class MailService implements OnModuleDestroy {
       help: t.help,
       closing: t.closing,
       cta: t.cta,
-      ctaUrl: `${this.dashboardUrl()}?from=email&ec=welcome_personal`,
+      ctaUrl,
       helpFooterLocale: locale,
     });
   }
