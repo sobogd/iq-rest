@@ -57,13 +57,10 @@ export class InboxController {
   async upload(@UploadedFile() file: Express.Multer.File) {
     if (!file) throw new BadRequestException("No file provided");
     const srcMime = file.mimetype || "application/octet-stream";
-    const type: OutMediaType = srcMime.startsWith("image/")
-      ? "image"
-      : srcMime.startsWith("video/")
-        ? "video"
-        : srcMime.startsWith("audio/")
-          ? "audio"
-          : "document";
+    // Images go as WhatsApp image messages (jpeg/png only). Everything else —
+    // video, audio, pdf, anything — is sent as a document, which WhatsApp
+    // accepts regardless of codec/type (no transcoding needed).
+    const type: OutMediaType = srcMime.startsWith("image/") ? "image" : "document";
 
     // WhatsApp only accepts image/jpeg and image/png as image messages — iPhone
     // HEIC/HEIF and webp get accepted by the API but silently never delivered.
