@@ -2,13 +2,17 @@ import { Injectable, Logger } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 import { Prisma } from "@iq-rest/db";
 import { PrismaService } from "../prisma/prisma.service";
+import { AuthService } from "../auth/auth.service";
 import { MailService } from "../mail/mail.service";
+import { OnboardingSeedService } from "../onboarding/onboarding-seed.service";
 
 /** Meta Lead Ads webhook processing: on a `leadgen` change, pull the lead's
- *  field_data from the Graph API and send the welcome email with the signup
- *  link. This is the privacy-mode replacement for pixel/CAPI attribution —
- *  the ONLY thing we do with a lead is email them; nothing is sent back to
- *  Meta and no click ids are stored.
+ *  field_data from the Graph API, create the account right away (User + empty
+ *  template restaurant, same seed as a plain-login signup) and send the SAME
+ *  personal welcome email the admin panel sends (welcome_personal), with a
+ *  permanent auto-login link — the lead lands in their dashboard in one click,
+ *  no OTP. This is the privacy-mode replacement for pixel/CAPI attribution —
+ *  nothing is sent back to Meta and no click ids are stored.
  *
  *  Env: META_DEVELOPER_TOKEN (page token lookup), META_APP_SECRET (webhook
  *  signature), WHATSAPP_VERIFY_TOKEN (reused as the GET-verify token so the
@@ -21,7 +25,9 @@ export class MetaLeadsService {
   constructor(
     private readonly prisma: PrismaService,
     private readonly config: ConfigService,
+    private readonly auth: AuthService,
     private readonly mail: MailService,
+    private readonly seed: OnboardingSeedService,
   ) {}
 
   get verifyToken(): string {
@@ -78,11 +84,53 @@ export class MetaLeadsService {
 
       const field = (name: string): string | null =>
         lead.field_data?.find((f) => f.name === name)?.values?.[0] ?? null;
-      const email = field("email");
+      const rawEmail = field("email");
       const venueType = field("venue_type");
-      if (!email) throw new Error("lead has no email field");
+      if (!rawEmail) throw new Error("lead has no email field");
+      const email = rawEmail.trim().toLowerCase();
 
-      await this.mail.sendLeadWelcome({ email, venueType });
+      // Find-or-create the account so the auto-login link has somewhere to
+      // land. New leads get the same empty template restaurant a plain-login
+      // signup gets (idempotent — an existing user keeps their venues).
+      let user = await this.prisma.user.findUnique({
+        where: { email },
+        select: { id: true, emailUnsubscribed: true, preferredLocale: true, emailsSent: true },
+      });
+      if (!user) {
+        user = await this.prisma.user.create({
+          data: { email, preferredLocale: "en" },
+          select: { id: true, emailUnsubscribed: true, preferredLocale: true, emailsSent: true },
+        });
+      }
+      if (user.emailUnsubscribed) {
+        this.logger.warn(`lead ${leadgenId} (${email}) is unsubscribed — welcome skipped`);
+        await this.prisma.capiSend.create({
+          data: {
+            fbclid: journalKey,
+            eventName: "lead_welcome",
+            status: "success",
+            response: { venueType, skipped: "unsubscribed" } as Prisma.InputJsonValue,
+          },
+        });
+        return;
+      }
+      // Campaign is EN-only; currency is unknown at lead time → EUR default.
+      await this.seed.seedEmptyRestaurant({ userId: user.id, currency: "EUR", locale: "en" });
+
+      const locale = user.preferredLocale || "en";
+      const loginToken = await this.auth.createEmailLoginSession(user.id);
+      await this.mail.sendWelcomePersonal({ email, locale, loginToken });
+
+      // Mirror the admin panel's send-tracking so the admin UI shows the
+      // welcome as already sent for this user.
+      const sent =
+        user.emailsSent && typeof user.emailsSent === "object" && !Array.isArray(user.emailsSent)
+          ? (user.emailsSent as Record<string, string>)
+          : {};
+      await this.prisma.user.update({
+        where: { id: user.id },
+        data: { emailsSent: { ...sent, welcome_personal: new Date().toISOString() } },
+      });
 
       await this.prisma.capiSend.create({
         data: {
