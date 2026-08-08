@@ -47,7 +47,15 @@ export class InboxController {
 
   @Get("config")
   config() {
-    return { whatsapp: this.wa.isConfigured() };
+    return { whatsapp: this.wa.isConfigured(), templates: !!this.wa.wabaId };
+  }
+
+  /** Approved WhatsApp message templates (for messaging outside the 24h window). */
+  @Get("templates")
+  async templates() {
+    const r = await this.wa.listTemplates();
+    if (!r.ok) throw new BadRequestException({ message: "Templates unavailable", response: r.error });
+    return { templates: r.templates ?? [] };
   }
 
   /** Upload an outbound attachment (any type) to S3 and return a public URL the
@@ -414,6 +422,74 @@ export class InboxController {
     return { url: m.url, type, mime: m.mime ?? null, name: m.name ?? null };
   }
 
+  /** Send an approved template to a WhatsApp contact — the only way to open a
+   *  conversation outside the 24h window. `bodyText` is the client-rendered
+   *  preview stored for display; the structured params drive the actual send. */
+  @Post("threads/:id/send-template")
+  @HttpCode(HttpStatus.OK)
+  async sendTemplate(@Param("id") id: string, @Body() body: SendTemplateBody) {
+    const thread = this.parseThread(id);
+    if (thread.channel !== "whatsapp") throw new BadRequestException("Templates are WhatsApp-only");
+    const name = (body?.name ?? "").trim();
+    const language = (body?.language ?? "").trim();
+    if (!name || !language) throw new BadRequestException("template name and language required");
+
+    const contact = await this.prisma.inboxContact.findUnique({ where: { id: thread.key } });
+    if (!contact) throw new NotFoundException("Thread not found");
+
+    // Build the Graph `components` from the runtime params.
+    const components: Array<Record<string, unknown>> = [];
+    let headerMediaUrl: string | null = null;
+    const header = body?.headerParams ?? [];
+    if (header.length) {
+      const parameters = header.map((p) => {
+        if (p.type === "text") return { type: "text", text: p.text ?? "" };
+        const link = (p.link ?? "").trim();
+        const prefix = process.env.S3_HOST ? `${process.env.S3_HOST}/` : null;
+        if (!prefix || !link.startsWith(prefix)) throw new BadRequestException("header media must be an uploaded file");
+        headerMediaUrl = link;
+        return { type: p.type, [p.type]: { link } };
+      });
+      components.push({ type: "header", parameters });
+    }
+    const bodyParams = body?.bodyParams ?? [];
+    if (bodyParams.length) {
+      components.push({ type: "body", parameters: bodyParams.map((t) => ({ type: "text", text: t })) });
+    }
+
+    const result = await this.wa.sendTemplate(contact.externalId, name, language, components);
+    const stored = (body?.bodyText ?? "").trim() || `[template: ${name}]`;
+    const msg = await this.prisma.inboxMessage.create({
+      data: {
+        contactId: contact.id,
+        direction: "out",
+        body: stored,
+        lang: language,
+        translatedRu: stored,
+        mediaUrl: headerMediaUrl,
+        mediaType: headerMediaUrl ? (header.find((h) => h.type !== "text")?.type ?? null) : null,
+        externalId: result.wamid ?? null,
+        status: result.ok ? "sent" : "failed",
+      },
+    });
+    await this.prisma.inboxContact.update({ where: { id: contact.id }, data: { lastMessageAt: new Date() } });
+    await this.markRead(id);
+    if (!result.ok) throw new BadRequestException({ message: "Template send failed", response: result.error });
+    return {
+      id: msg.id,
+      direction: "out",
+      body: stored,
+      lang: language,
+      translatedRu: stored,
+      mediaUrl: headerMediaUrl,
+      mediaType: msg.mediaType,
+      mediaMime: null,
+      mediaName: null,
+      status: msg.status,
+      createdAt: msg.createdAt.toISOString(),
+    };
+  }
+
   /** Internal support reply: the admin writes Russian; translate it to the
    *  owner's language, persist as an admin message (owner-language `message`,
    *  Russian original in `translatedRu`) and email the owner. */
@@ -578,4 +654,12 @@ interface SendBody {
   text?: string;
   lang?: string;
   media?: { url?: string; type?: string; mime?: string | null; name?: string | null };
+}
+
+interface SendTemplateBody {
+  name?: string;
+  language?: string;
+  bodyText?: string; // client-rendered preview stored for display
+  bodyParams?: string[];
+  headerParams?: Array<{ type: "text" | "image" | "video" | "document"; text?: string; link?: string }>;
 }

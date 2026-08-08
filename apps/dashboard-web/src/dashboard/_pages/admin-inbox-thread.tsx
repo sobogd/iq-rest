@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
-import { Star, EyeOff, Pencil, Trash2, Paperclip, X, FileText, Play } from "lucide-react";
+import { Star, EyeOff, Pencil, Trash2, Paperclip, X, FileText, Play, MessageSquare } from "lucide-react";
 import { apiUrl } from "@/lib/api";
 import { SendIcon, RefreshIcon } from "../_v2/icons";
 import { useDashboardRouter } from "../_spa/router";
@@ -46,6 +46,34 @@ interface Attachment {
   name: string | null;
 }
 
+interface TplComponent {
+  type: "HEADER" | "BODY" | "FOOTER" | "BUTTONS";
+  format?: "TEXT" | "IMAGE" | "VIDEO" | "DOCUMENT" | "LOCATION";
+  text?: string;
+  buttons?: Array<{ type: string; text?: string }>;
+}
+
+interface WaTemplate {
+  name: string;
+  status: string;
+  category: string;
+  language: string;
+  components: TplComponent[];
+}
+
+// Highest {{n}} placeholder index in a template string (0 = no variables).
+function placeholderCount(text: string | undefined): number {
+  if (!text) return 0;
+  let max = 0;
+  for (const m of text.matchAll(/\{\{\s*(\d+)\s*\}\}/g)) max = Math.max(max, Number(m[1]));
+  return max;
+}
+
+// Replace {{1}}, {{2}}… with the provided values (falls back to the placeholder).
+function fillPlaceholders(text: string, vars: string[]): string {
+  return text.replace(/\{\{\s*(\d+)\s*\}\}/g, (_, n) => vars[Number(n) - 1] || `{{${n}}}`);
+}
+
 export function AdminInboxThreadPage({ threadId }: { threadId: string }) {
   const router = useDashboardRouter();
   // Internal support threads (id "int:<restaurantId>") skip the WhatsApp
@@ -62,6 +90,13 @@ export function AdminInboxThreadPage({ threadId }: { threadId: string }) {
   const [langQuery, setLangQuery] = useState("");
   const [attachment, setAttachment] = useState<Attachment | null>(null);
   const [uploading, setUploading] = useState(false);
+  const [tplOpen, setTplOpen] = useState(false);
+  const [templates, setTemplates] = useState<WaTemplate[] | null>(null);
+  const [tplSel, setTplSel] = useState<WaTemplate | null>(null);
+  const [tplBodyVars, setTplBodyVars] = useState<string[]>([]);
+  const [tplHeaderVars, setTplHeaderVars] = useState<string[]>([]);
+  const [tplHeaderMedia, setTplHeaderMedia] = useState<Attachment | null>(null);
+  const [tplSending, setTplSending] = useState(false);
   const [showOriginal, setShowOriginal] = useState<Set<string>>(new Set());
   const [editing, setEditing] = useState<{ customName: string; note: string } | null>(null);
   const [savingEdit, setSavingEdit] = useState(false);
@@ -69,6 +104,7 @@ export function AdminInboxThreadPage({ threadId }: { threadId: string }) {
   const lastIdRef = useRef<string | null>(null);
   const taRef = useRef<HTMLTextAreaElement>(null);
   const fileRef = useRef<HTMLInputElement>(null);
+  const tplHeaderFileRef = useRef<HTMLInputElement>(null);
 
   const load = useCallback(async (silent = false) => {
     if (!silent) setLoading(true);
@@ -209,6 +245,91 @@ export function AdminInboxThreadPage({ threadId }: { threadId: string }) {
       }
     } finally {
       setSending(false);
+    }
+  }
+
+  // Open the templates modal and lazily load approved templates.
+  async function openTemplates() {
+    setTplOpen(true);
+    setTplSel(null);
+    if (templates) return;
+    try {
+      const res = await fetch(apiUrl(`/api/admin/inbox/templates`), { credentials: "include" });
+      if (res.ok) {
+        const j = (await res.json()) as { templates: WaTemplate[] };
+        setTemplates(j.templates ?? []);
+      } else {
+        const j = await res.json().catch(() => ({}));
+        window.alert(j.message || "Templates unavailable");
+        setTemplates([]);
+      }
+    } catch {
+      setTemplates([]);
+    }
+  }
+
+  function pickTemplate(t: WaTemplate) {
+    const bodyText = t.components.find((c) => c.type === "BODY")?.text ?? "";
+    const header = t.components.find((c) => c.type === "HEADER");
+    const headerText = header?.format === "TEXT" ? header.text : "";
+    setTplSel(t);
+    setTplBodyVars(new Array(placeholderCount(bodyText)).fill(""));
+    setTplHeaderVars(new Array(placeholderCount(headerText)).fill(""));
+    setTplHeaderMedia(null);
+  }
+
+  async function onPickTplHeader(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    e.target.value = "";
+    if (!file) return;
+    const fd = new FormData();
+    fd.append("file", file);
+    const res = await fetch(apiUrl(`/api/admin/inbox/upload`), { method: "POST", credentials: "include", body: fd });
+    if (res.ok) setTplHeaderMedia((await res.json()) as Attachment);
+    else {
+      const j = await res.json().catch(() => ({}));
+      window.alert(j.message || "Upload failed");
+    }
+  }
+
+  async function submitTemplate() {
+    if (!tplSel || tplSending) return;
+    const header = tplSel.components.find((c) => c.type === "HEADER");
+    const bodyComp = tplSel.components.find((c) => c.type === "BODY");
+    // Build header params: media header needs an uploaded file; text header needs its vars.
+    const headerParams: Array<{ type: string; text?: string; link?: string }> = [];
+    if (header?.format && header.format !== "TEXT" && header.format !== "LOCATION") {
+      if (!tplHeaderMedia) { window.alert("This template needs a header file"); return; }
+      headerParams.push({ type: header.format.toLowerCase(), link: tplHeaderMedia.url });
+    } else if (header?.format === "TEXT") {
+      tplHeaderVars.forEach((v) => headerParams.push({ type: "text", text: v }));
+    }
+    const bodyText = bodyComp?.text ? fillPlaceholders(bodyComp.text, tplBodyVars) : `[template: ${tplSel.name}]`;
+    setTplSending(true);
+    try {
+      const res = await fetch(apiUrl(`/api/admin/inbox/threads/${encodeURIComponent(threadId)}/send-template`), {
+        method: "POST",
+        credentials: "include",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: tplSel.name,
+          language: tplSel.language,
+          bodyText,
+          bodyParams: tplBodyVars,
+          headerParams: headerParams.length ? headerParams : undefined,
+        }),
+      });
+      if (res.ok) {
+        const sent = (await res.json()) as Msg;
+        setMessages((m) => [...m, sent]);
+        setTplOpen(false);
+        setTplSel(null);
+      } else {
+        const j = await res.json().catch(() => ({}));
+        window.alert(j.message || "Template send failed");
+      }
+    } finally {
+      setTplSending(false);
     }
   }
 
@@ -384,6 +505,17 @@ export function AdminInboxThreadPage({ threadId }: { threadId: string }) {
 
         <div className="shrink-0 flex items-start gap-2 p-3">
           <input ref={fileRef} type="file" className="hidden" onChange={onPickFile} />
+          {!isInternal ? (
+            <button
+              type="button"
+              onClick={() => void openTemplates()}
+              disabled={sending}
+              className="shrink-0 h-10 w-10 inline-flex items-center justify-center bg-secondary rounded-lg text-muted-foreground hover:text-foreground disabled:opacity-60"
+              title="Send a template (outside 24h window)"
+            >
+              <MessageSquare className="w-4 h-4" />
+            </button>
+          ) : null}
           <button
             type="button"
             onClick={() => fileRef.current?.click()}
@@ -533,6 +665,103 @@ export function AdminInboxThreadPage({ threadId }: { threadId: string }) {
                 </button>
               ))}
             </div>
+          </div>
+        </div>
+      ) : null}
+
+      {tplOpen ? (
+        <div className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-black/40" onClick={() => setTplOpen(false)}>
+          <div className="w-full max-w-md bg-card border border-border rounded-xl p-4 space-y-3 flex flex-col max-h-[85vh]" onClick={(e) => e.stopPropagation()}>
+            {!tplSel ? (
+              <>
+                <div className="text-sm font-medium text-foreground">Send a template</div>
+                <div className="text-[11px] text-muted-foreground">Use an approved template to message a contact outside the 24-hour window.</div>
+                <div className="flex-1 min-h-0 overflow-y-auto -mx-1 px-1 space-y-1.5">
+                  {templates === null ? (
+                    <div className="py-8 text-center text-sm text-muted-foreground">Loading…</div>
+                  ) : templates.length === 0 ? (
+                    <div className="py-8 text-center text-sm text-muted-foreground">No approved templates</div>
+                  ) : (
+                    templates.map((t) => {
+                      const bodyPrev = t.components.find((c) => c.type === "BODY")?.text ?? "";
+                      return (
+                        <button
+                          key={`${t.name}:${t.language}`}
+                          type="button"
+                          onClick={() => pickTemplate(t)}
+                          className="w-full text-left p-2.5 bg-secondary rounded-lg hover:bg-muted"
+                        >
+                          <div className="flex items-center gap-2">
+                            <span className="text-sm font-medium text-foreground truncate">{t.name}</span>
+                            <span className="text-[10px] uppercase text-muted-foreground">{t.language}</span>
+                            <span className="ml-auto text-[10px] uppercase text-muted-foreground">{t.category}</span>
+                          </div>
+                          <div className="text-[11px] text-muted-foreground mt-1 line-clamp-2">{bodyPrev}</div>
+                        </button>
+                      );
+                    })
+                  )}
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="flex items-center gap-2">
+                  <button type="button" onClick={() => setTplSel(null)} className="text-xs text-muted-foreground hover:text-foreground">← Back</button>
+                  <span className="text-sm font-medium text-foreground truncate">{tplSel.name}</span>
+                  <span className="ml-auto text-[10px] uppercase text-muted-foreground">{tplSel.language}</span>
+                </div>
+                <div className="flex-1 min-h-0 overflow-y-auto -mx-1 px-1 space-y-3">
+                  {(() => {
+                    const header = tplSel.components.find((c) => c.type === "HEADER");
+                    const isMediaHeader = !!header?.format && header.format !== "TEXT" && header.format !== "LOCATION";
+                    return (
+                      <>
+                        {isMediaHeader ? (
+                          <div className="space-y-1">
+                            <label className="text-[11px] text-muted-foreground">Header {header!.format!.toLowerCase()}</label>
+                            <input ref={tplHeaderFileRef} type="file" className="hidden" onChange={onPickTplHeader} />
+                            {tplHeaderMedia ? (
+                              <div className="flex items-center gap-2 text-xs text-foreground">
+                                {tplHeaderMedia.type === "image" ? <img src={tplHeaderMedia.url} alt="" className="w-10 h-10 rounded object-cover" /> : <FileText className="w-4 h-4" />}
+                                <span className="truncate max-w-[180px]">{tplHeaderMedia.name || tplHeaderMedia.type}</span>
+                                <button type="button" onClick={() => setTplHeaderMedia(null)} className="text-muted-foreground hover:text-foreground"><X className="w-4 h-4" /></button>
+                              </div>
+                            ) : (
+                              <button type="button" onClick={() => tplHeaderFileRef.current?.click()} className="h-8 px-3 text-xs bg-secondary rounded-lg text-foreground hover:bg-muted">Upload file</button>
+                            )}
+                          </div>
+                        ) : null}
+                        {tplHeaderVars.map((v, i) => (
+                          <div key={`h${i}`} className="space-y-1">
+                            <label className="text-[11px] text-muted-foreground">Header {`{{${i + 1}}}`}</label>
+                            <input value={v} onChange={(e) => setTplHeaderVars((p) => p.map((x, j) => (j === i ? e.target.value : x)))} className="w-full h-9 px-3 text-sm text-foreground bg-secondary border border-input rounded-lg focus:outline-none" />
+                          </div>
+                        ))}
+                        {tplBodyVars.map((v, i) => (
+                          <div key={`b${i}`} className="space-y-1">
+                            <label className="text-[11px] text-muted-foreground">Variable {`{{${i + 1}}}`}</label>
+                            <input value={v} onChange={(e) => setTplBodyVars((p) => p.map((x, j) => (j === i ? e.target.value : x)))} className="w-full h-9 px-3 text-sm text-foreground bg-secondary border border-input rounded-lg focus:outline-none" />
+                          </div>
+                        ))}
+                        <div className="space-y-1">
+                          <label className="text-[11px] text-muted-foreground">Preview</label>
+                          <div className="px-3 py-2 text-sm text-foreground bg-secondary rounded-lg whitespace-pre-wrap">
+                            {fillPlaceholders(tplSel.components.find((c) => c.type === "BODY")?.text ?? "", tplBodyVars)}
+                          </div>
+                        </div>
+                      </>
+                    );
+                  })()}
+                </div>
+                <div className="flex justify-end gap-2">
+                  <button type="button" onClick={() => setTplOpen(false)} disabled={tplSending} className="h-8 px-3 text-xs font-medium bg-secondary text-foreground rounded-lg hover:bg-muted disabled:opacity-60">Cancel</button>
+                  <button type="button" onClick={() => void submitTemplate()} disabled={tplSending} className="h-8 px-3 text-xs font-medium text-primary-foreground bg-primary-gradient rounded-lg disabled:opacity-60 inline-flex items-center gap-1.5">
+                    {tplSending ? <span className="w-3 h-3 border-2 border-white/40 border-t-white rounded-full animate-spin" /> : <SendIcon size={12} />}
+                    Send
+                  </button>
+                </div>
+              </>
+            )}
           </div>
         </div>
       ) : null}

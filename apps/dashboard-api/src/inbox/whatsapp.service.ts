@@ -14,6 +14,10 @@ export class WhatsappService {
     return this.config.get<string>("WHATSAPP_VERIFY_TOKEN") || "";
   }
 
+  get wabaId(): string {
+    return this.config.get<string>("WHATSAPP_WABA_ID") || "";
+  }
+
   get appSecret(): string {
     return this.config.get<string>("WHATSAPP_APP_SECRET") || "";
   }
@@ -80,6 +84,48 @@ export class WhatsappService {
     }
   }
 
+  /** Send an approved message template (the only way to message a contact
+   *  outside the 24h customer-service window). `components` are the runtime
+   *  parameter fills (header media/text + body variables). */
+  async sendTemplate(
+    toPhone: string,
+    name: string,
+    langCode: string,
+    components: unknown[],
+  ): Promise<{ ok: boolean; wamid?: string; error?: unknown }> {
+    return this.sendMessage(toPhone, {
+      type: "template",
+      template: {
+        name,
+        language: { code: langCode },
+        ...(components.length ? { components } : {}),
+      },
+    });
+  }
+
+  /** List APPROVED message templates on the WhatsApp Business Account. */
+  async listTemplates(): Promise<{ ok: boolean; templates?: WaTemplate[]; error?: unknown }> {
+    const token = this.config.get<string>("WHATSAPP_TOKEN");
+    const waba = this.wabaId;
+    if (!token || !waba) return { ok: false, error: "WhatsApp templates not configured (WHATSAPP_WABA_ID)" };
+    try {
+      const res = await fetch(
+        `https://graph.facebook.com/v21.0/${waba}/message_templates?fields=name,status,category,language,components&limit=200`,
+        { headers: { Authorization: `Bearer ${token}` } },
+      );
+      const json = (await res.json().catch(() => ({}))) as { data?: WaTemplate[]; error?: unknown };
+      if (!res.ok) {
+        this.logger.warn(`WhatsApp templates list failed (${res.status}): ${JSON.stringify(json)}`);
+        return { ok: false, error: json.error ?? json };
+      }
+      const templates = (json.data ?? []).filter((t) => t.status === "APPROVED");
+      return { ok: true, templates };
+    } catch (e) {
+      this.logger.error(`WhatsApp templates list error: ${String(e)}`);
+      return { ok: false, error: String(e) };
+    }
+  }
+
   /** Resolve a WhatsApp media id to a (short-lived) download URL + mime. */
   async getMediaUrl(mediaId: string): Promise<{ url: string; mime?: string } | null> {
     const token = this.config.get<string>("WHATSAPP_TOKEN");
@@ -117,4 +163,19 @@ export class WhatsappService {
       return null;
     }
   }
+}
+
+export interface WaTemplateComponent {
+  type: "HEADER" | "BODY" | "FOOTER" | "BUTTONS";
+  format?: "TEXT" | "IMAGE" | "VIDEO" | "DOCUMENT" | "LOCATION";
+  text?: string;
+  buttons?: Array<{ type: string; text?: string; url?: string; phone_number?: string }>;
+}
+
+export interface WaTemplate {
+  name: string;
+  status: string;
+  category: string;
+  language: string;
+  components: WaTemplateComponent[];
 }
