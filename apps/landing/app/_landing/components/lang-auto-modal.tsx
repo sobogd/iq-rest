@@ -90,7 +90,8 @@ export function LangAutoModal() {
     // Nothing to choose between → don't bother the user with a one-option modal.
     if (unique.length <= 1) return;
     setSuggestions(unique);
-    analytics.track("l_langmodal_open");
+    // Suffix = the exact list of locales offered, e.g. l_langmodal_open_es_en_fr.
+    analytics.track(`l_langmodal_open_${unique.join("_")}`);
   }, [initialSearch]);
 
   if (!suggestions) return null;
