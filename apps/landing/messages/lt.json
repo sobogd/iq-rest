@@ -2115,5 +2115,9 @@
     "unifiedSubtitle": "Prisijunkite arba sukurkite paskyrą — be slaptažodžio.",
     "tryDemo": "Išbandykite dabar — be registracijos",
     "tryDemoHint": "Nereikia el. pašto · duomenys neišsaugomi"
+  },
+  "langModal": {
+    "title": "Pasirinkite kalbą",
+    "subtitle": "Pasirinkite kalbą, kuria norite tęsti."
   }
 }

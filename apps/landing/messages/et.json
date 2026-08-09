@@ -2115,5 +2115,9 @@
     "unifiedSubtitle": "Logi sisse või loo konto — parooli pole vaja.",
     "tryDemo": "Proovi kohe — ilma registreerimiseta",
     "tryDemoHint": "E-posti pole vaja · andmeid ei salvestata"
+  },
+  "langModal": {
+    "title": "Valige oma keel",
+    "subtitle": "Valige keel, milles soovite jätkata."
   }
 }

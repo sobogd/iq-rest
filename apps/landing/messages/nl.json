@@ -2115,5 +2115,9 @@
     "unifiedSubtitle": "Log in of maak een account — geen wachtwoord nodig.",
     "tryDemo": "Probeer nu — geen account nodig",
     "tryDemoHint": "Geen e-mail · gegevens niet opgeslagen"
+  },
+  "langModal": {
+    "title": "Kies je taal",
+    "subtitle": "Selecteer de taal waarin je wilt verdergaan."
   }
 }

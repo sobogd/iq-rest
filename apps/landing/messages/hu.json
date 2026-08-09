@@ -2115,5 +2115,9 @@
     "unifiedSubtitle": "Jelentkezz be vagy hozz létre fiókot — jelszó nélkül.",
     "tryDemo": "Próbáld ki most — regisztráció nélkül",
     "tryDemoHint": "Nincs e-mail · az adatok nem mentődnek"
+  },
+  "langModal": {
+    "title": "Válaszd ki a nyelved",
+    "subtitle": "Válaszd ki a nyelvet, amelyen folytatni szeretnéd."
   }
 }

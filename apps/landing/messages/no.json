@@ -2115,5 +2115,9 @@
     "unifiedSubtitle": "Logg inn eller opprett en konto — ingen passord nødvendig.",
     "tryDemo": "Prøv nå — ingen registrering",
     "tryDemoHint": "Ingen e-post · data lagres ikke"
+  },
+  "langModal": {
+    "title": "Velg språket ditt",
+    "subtitle": "Velg språket du vil fortsette på."
   }
 }

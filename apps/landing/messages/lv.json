@@ -2115,5 +2115,9 @@
     "unifiedSubtitle": "Piesakieties vai izveidojiet kontu — bez paroles.",
     "tryDemo": "Izmēģiniet tūlīt — bez reģistrācijas",
     "tryDemoHint": "Bez e-pasta · dati netiek saglabāti"
+  },
+  "langModal": {
+    "title": "Izvēlieties valodu",
+    "subtitle": "Izvēlieties valodu, kurā vēlaties turpināt."
   }
 }

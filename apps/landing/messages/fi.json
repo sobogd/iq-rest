@@ -2115,5 +2115,9 @@
     "unifiedSubtitle": "Kirjaudu sisään tai luo tili — ei salasanaa.",
     "tryDemo": "Kokeile heti — ilman rekisteröitymistä",
     "tryDemoHint": "Ei sähköpostia · tietoja ei tallenneta"
+  },
+  "langModal": {
+    "title": "Valitse kielesi",
+    "subtitle": "Valitse kieli, jolla haluat jatkaa."
   }
 }

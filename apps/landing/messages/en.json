@@ -2103,5 +2103,9 @@
     "unifiedSubtitle": "Sign in or create your account — no password needed.",
     "tryDemo": "Try it now — no signup",
     "tryDemoHint": "No email needed · data not saved"
+  },
+  "langModal": {
+    "title": "Choose your language",
+    "subtitle": "Select the language you want to continue in."
   }
 }

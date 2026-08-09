@@ -2115,5 +2115,9 @@
     "unifiedSubtitle": "Sínigh isteach nó cruthaigh cuntas — gan pasfhocal.",
     "tryDemo": "Bain triail as anois — gan chlárú",
     "tryDemoHint": "Gan ríomhphost · ní shábháiltear sonraí"
+  },
+  "langModal": {
+    "title": "Roghnaigh do theanga",
+    "subtitle": "Roghnaigh an teanga inar mhaith leat leanúint ar aghaidh."
   }
 }

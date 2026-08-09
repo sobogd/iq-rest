@@ -2115,5 +2115,9 @@
     "unifiedSubtitle": "Conectează-te sau creează un cont — fără parolă.",
     "tryDemo": "Încearcă acum — fără înregistrare",
     "tryDemoHint": "Fără e-mail · datele nu se salvează"
+  },
+  "langModal": {
+    "title": "Alege-ți limba",
+    "subtitle": "Selectează limba în care vrei să continui."
   }
 }

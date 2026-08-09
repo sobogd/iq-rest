@@ -2115,5 +2115,9 @@
     "unifiedSubtitle": "Inicia la sessió o crea el teu compte — sense contrasenya.",
     "tryDemo": "Prova-ho ara — sense registre",
     "tryDemoHint": "Sense correu · les dades no es desen"
+  },
+  "langModal": {
+    "title": "Tria el teu idioma",
+    "subtitle": "Selecciona l'idioma en què vols continuar."
   }
 }

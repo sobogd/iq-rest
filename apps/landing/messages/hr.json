@@ -2115,5 +2115,9 @@
     "unifiedSubtitle": "Prijavite se ili izradite račun — bez lozinke.",
     "tryDemo": "Isprobaj odmah — bez registracije",
     "tryDemoHint": "Bez e-pošte · podaci se ne spremaju"
+  },
+  "langModal": {
+    "title": "Odaberite svoj jezik",
+    "subtitle": "Odaberite jezik na kojem želite nastaviti."
   }
 }

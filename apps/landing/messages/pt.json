@@ -2115,5 +2115,9 @@
     "unifiedSubtitle": "Entre ou crie a sua conta — sem palavra-passe.",
     "tryDemo": "Experimente já — sem registo",
     "tryDemoHint": "Sem email · os dados não são guardados"
+  },
+  "langModal": {
+    "title": "Escolha seu idioma",
+    "subtitle": "Selecione o idioma em que você quer continuar."
   }
 }

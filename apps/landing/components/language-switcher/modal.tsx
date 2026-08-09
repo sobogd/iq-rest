@@ -1,8 +1,10 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { LANGUAGE_NAMES, LANGUAGE_CODES } from "@/app/_landing/lib/language-names";
 import { LinkForward } from "@/app/_landing/components/link-forward";
+import { swapLocale } from "@/lib/locale-slug-overrides";
 
 interface LanguageSwitcherModalProps {
   open: boolean;
@@ -12,9 +14,13 @@ interface LanguageSwitcherModalProps {
   title: string;
 }
 
-/** Modal grid of every supported language. Clicking a tile navigates to the same site at the
- *  picked locale (root path of that locale). Replaces the standalone /languages page. */
+/** Modal grid of every supported language. Clicking a tile navigates to the SAME page at the
+ *  picked locale — swapLocale honours per-locale SEO slugs (e.g. /de/preise → /it/prezzi) and
+ *  falls back to the locale home when the page has no counterpart. Replaces /languages. */
 export function LanguageSwitcherModal({ open, onClose, currentLocale, title }: LanguageSwitcherModalProps) {
+  // Full pathname incl. the locale prefix (next/navigation, NOT next-intl's
+  // stripped variant) — swapLocale needs the prefix to detect the source locale.
+  const pathname = usePathname();
   return (
     <Dialog open={open} onOpenChange={(o) => { if (!o) onClose(); }}>
       <DialogContent
@@ -33,7 +39,7 @@ export function LanguageSwitcherModal({ open, onClose, currentLocale, title }: L
               return (
                 <LinkForward
                   key={code}
-                  href={`/${code}`}
+                  href={swapLocale(pathname, code)}
                   prefetch={false}
                   className={
                     "flex items-center gap-2 px-3 py-2 rounded-md text-sm transition-colors " +

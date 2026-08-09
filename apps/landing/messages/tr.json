@@ -2115,5 +2115,9 @@
     "unifiedSubtitle": "Giriş yap veya hesap oluştur — şifre gerekmez.",
     "tryDemo": "Hemen dene — kayıt yok",
     "tryDemoHint": "E-posta gerekmez · veriler kaydedilmez"
+  },
+  "langModal": {
+    "title": "Dilinizi seçin",
+    "subtitle": "Devam etmek istediğiniz dili seçin."
   }
 }

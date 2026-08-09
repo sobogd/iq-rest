@@ -2115,5 +2115,9 @@
     "unifiedSubtitle": "Skráðu þig inn eða stofnaðu reikning — ekkert lykilorð.",
     "tryDemo": "Prófaðu núna — engin skráning",
     "tryDemoHint": "Enginn tölvupóstur · gögn eru ekki vistuð"
+  },
+  "langModal": {
+    "title": "Veldu tungumálið þitt",
+    "subtitle": "Veldu tungumálið sem þú vilt halda áfram á."
   }
 }

@@ -5,6 +5,7 @@ import { routing, rtlLocales } from "@/i18n/routing";
 import "../globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { OnboardingModalProvider } from "@/app/_landing/components/onboarding/onboarding-modal-provider";
+import { LangAutoModal } from "@/app/_landing/components/lang-auto-modal";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -53,6 +54,7 @@ export default async function LocaleLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider messages={messages}>
+            <LangAutoModal />
             <OnboardingModalProvider>
               {children}
             </OnboardingModalProvider>

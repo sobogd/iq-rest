@@ -2115,5 +2115,9 @@
     "unifiedSubtitle": "Zaloguj się lub załóż konto — bez hasła.",
     "tryDemo": "Wypróbuj teraz — bez rejestracji",
     "tryDemoHint": "Bez e-maila · dane nie są zapisywane"
+  },
+  "langModal": {
+    "title": "Wybierz swój język",
+    "subtitle": "Wybierz język, w którym chcesz kontynuować."
   }
 }

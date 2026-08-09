@@ -2115,5 +2115,9 @@
     "unifiedSubtitle": "Log ind eller opret en konto — ingen adgangskode nødvendig.",
     "tryDemo": "Prøv nu — ingen tilmelding",
     "tryDemoHint": "Ingen e-mail · data gemmes ikke"
+  },
+  "langModal": {
+    "title": "Vælg dit sprog",
+    "subtitle": "Vælg det sprog, du vil fortsætte på."
   }
 }

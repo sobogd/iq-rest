@@ -2115,5 +2115,9 @@
     "unifiedSubtitle": "登录或创建账户 — 无需密码。",
     "tryDemo": "立即试用 — 无需注册",
     "tryDemoHint": "无需邮箱 · 数据不会保存"
+  },
+  "langModal": {
+    "title": "选择您的语言",
+    "subtitle": "选择您要继续使用的语言。"
   }
 }
