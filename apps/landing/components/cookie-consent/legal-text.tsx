@@ -25,20 +25,24 @@ export const OPERATOR = {
 // Backwards-compat alias used by the rest of the file.
 export const COMPANY = OPERATOR;
 
-/** Cookie Policy modal body. Plain text segments rendered with paragraph spacing. */
+/** Cookie Policy modal body. Plain text segments rendered with paragraph spacing.
+ *  Scope: the MAIN site (iq-rest.com + dashboard) only. */
 export const COOKIE_POLICY_TITLE = "Cookie Policy";
+
+// Cookie revision date is independent of the other legal documents.
+export const COOKIE_LAST_UPDATED = "August 10, 2026";
 
 export const COOKIE_POLICY_SECTIONS: { heading?: string; paragraphs: string[] }[] = [
   {
     paragraphs: [
-      `Last updated: ${OPERATOR.lastUpdated}`,
-      `This Cookie Policy explains how ${OPERATOR.brand} — a service operated by ${OPERATOR.legalName}, ${OPERATOR.status} ("${OPERATOR.brand}", "we", "us") — uses cookies and similar technologies on the ${OPERATOR.brand} website at ${OPERATOR.domain} ("the Site"). It should be read together with our Terms of Service.`,
+      `Last updated: ${COOKIE_LAST_UPDATED}`,
+      `This Cookie Policy explains how ${OPERATOR.brand} — a service operated by ${OPERATOR.legalName}, ${OPERATOR.status} ("${OPERATOR.brand}", "we", "us") — uses cookies and similar technologies on the main ${OPERATOR.brand} website at ${OPERATOR.domain} and the dashboard ("the Site"). This policy should be read together with our Terms of Service.`,
     ],
   },
   {
     heading: "1. What cookies are",
     paragraphs: [
-      `Cookies are small text files that a website places on your device when you visit. They allow the site to remember your choices, keep you signed in, and understand how the site is used. We only use cookies that are strictly necessary to operate the Site, so no cookie consent banner is shown.`,
+      `Cookies are small text files that a website places on your device when you visit. They allow the site to remember your choices, keep you signed in, and understand how the site is used. On the Site we only use cookies that are strictly necessary to operate it, so no cookie consent banner is shown.`,
     ],
   },
   {
@@ -50,30 +54,29 @@ export const COOKIE_POLICY_SECTIONS: { heading?: string; paragraphs: string[] }[
   {
     heading: "3. Strictly necessary cookies",
     paragraphs: [
-      `These are the only cookies we set. They are required to operate the Site and the dashboard — without them you would not be able to sign in, navigate language-specific pages, or place orders. They are set automatically and do not require consent under Article 5(3) of the ePrivacy Directive (the "strictly necessary" exemption).`,
-      `Examples of strictly necessary cookies we use:`,
+      `These are the only cookies the Site sets. They are required to sign you in, show the right language, and display prices in the right currency. They are set automatically and do not require consent under Article 5(3) of the ePrivacy Directive (the "strictly necessary" exemption).`,
+      `The cookies we use on the Site:`,
       `• iqr_session, iqr_email — keep you signed in to the dashboard`,
-      `• sqr_session_id — identifies the visitor's browsing session on the public QR menu so cart contents persist between pages`,
-      `• geo_country, geo_region, geo_city, geo_ip, geo_ua — country detected from your IP via Cloudflare; used to pick the best language and currency`,
-      `• currency — your selected currency for pricing display`,
+      `• geo_country, geo_locale, geo_currency — country detected from your IP via Cloudflare, and the language and billing currency derived from it`,
+      `• NEXT_LOCALE — remembers the language you explicitly chose`,
     ],
   },
   {
-    heading: "4. Analytics — no cookies on your device",
+    heading: "4. Analytics on the Site — no cookies on your device",
     paragraphs: [
-      `We measure how the Site is used through anonymous first-party events sent to our own server. No analytics-specific cookie is stored on your device, no cross-site identifier exists, and the events cannot be linked back to you as an individual. Each event records only the action name (e.g. "l_pricing_view"), the moment it occurred, and approximate geo (country and region from your IP via Cloudflare). Lawful under ePrivacy because nothing is written to your device beyond the strictly necessary cookies above.`,
+      `We measure how the main website is used through anonymous first-party events sent to our own server. On the Site, no analytics-specific cookie is stored on your device, no cross-site identifier exists, and the events cannot be linked back to you as an individual. Each event records only the action name (e.g. "l_pricing_view"), the moment it occurred, and approximate geo (country and region from your IP via Cloudflare). Lawful under ePrivacy because nothing is written to your device beyond the strictly necessary cookies above.`,
     ],
   },
   {
-    heading: "5. Google Ads attribution (gclid)",
+    heading: "5. Ad-click identifiers (gclid, fbclid)",
     paragraphs: [
-      `If you arrive via a Google Ads click, the click identifier (gclid) is included in the URL by Google. We store this gclid in our own database for up to 90 days and use it to upload conversion events back to Google Ads (server-to-server) so we can measure which ads work. This processing relies on our legitimate interest in evaluating advertising effectiveness (GDPR Art. 6(1)(f)). It does not require a cookie banner because no cookie is set on your device for this purpose. You may object to this processing at any time by emailing ${OPERATOR.contactEmail} with the gclid from your original ad-click URL.`,
+      `If you arrive at the Site by clicking one of our own ads, the ad platform includes a click identifier in the URL (Google Ads: gclid; Meta: fbclid). We store this identifier in our own database for up to 90 days and use it to report conversions back to the ad platform (server-to-server) so we can measure which ads work. This relies on our legitimate interest in evaluating advertising effectiveness (GDPR Art. 6(1)(f)). It does not require a cookie banner because no cookie is set on your device for this purpose. You may object at any time by emailing ${OPERATOR.contactEmail} with the click identifier from your original ad URL.`,
     ],
   },
   {
     heading: "6. No marketing or third-party trackers",
     paragraphs: [
-      `We do not use advertising cookies, retargeting pixels, third-party marketing trackers, Google Analytics, Facebook Pixel, Hotjar, or similar services. The only data we send to Google is server-to-server conversion uploads via the gclid mechanism described above.`,
+      `We do not use advertising cookies, retargeting pixels, third-party marketing trackers, Google Analytics, Facebook Pixel, Hotjar, or similar services. The only advertising-related data leaving our servers is the server-to-server conversion reporting described above.`,
     ],
   },
   {
@@ -135,7 +138,6 @@ export const PRIVACY_POLICY_SECTIONS: { heading?: string; paragraphs: string[] }
       `Connected devices — if you pair tablets (kitchen display, waiter board, reservation board): device name, device type, and last-seen time. No personal data of the staff using the tablet is collected.`,
       `Support and messaging — content of messages you exchange with our support team, including messages sent over WhatsApp if you contact us there.`,
       `Usage tracking — tracking only, without personal data: anonymous first-party events consisting of an action name (e.g. "pricing_view"), a timestamp, and an approximate region (country/region derived from IP). No name, no email, no cross-site identifier — the events cannot identify you as a person. See section 5.`,
-      `Public-menu technical data — when guests open a QR menu: a random session id, page slug, language, and standard technical request data used for abuse prevention and the scan counter shown in your dashboard. Not linked to any person.`,
     ],
   },
   {
@@ -162,7 +164,7 @@ export const PRIVACY_POLICY_SECTIONS: { heading?: string; paragraphs: string[] }
   {
     heading: "5. Usage tracking — no personal data",
     paragraphs: [
-      `We measure how the Service is used with our own first-party events stored in our own database. Tracking is limited to what happened, not who did it: each event records an action name, the moment it occurred, and an approximate region. No analytics cookie is placed on your device, no advertising identifier is created, no data is shared with any analytics company, and the events contain no personal data.`,
+      `We measure how the main website and the dashboard are used with our own first-party events stored in our own database. Tracking is limited to what happened, not who did it: each event records an action name, the moment it occurred, and an approximate region. No analytics cookie is placed on your device, no advertising identifier is created, no data is shared with any analytics company, and the events contain no personal data.`,
       `Actions performed inside your own dashboard while signed in may additionally be associated with your account — solely so we can help you in support cases and detect abuse, never for advertising.`,
     ],
   },
