@@ -229,118 +229,139 @@ export const PRIVACY_POLICY_SECTIONS: { heading?: string; paragraphs: string[] }
   },
 ];
 
-/** Terms of Service modal body. Adapted from a standard SaaS template. */
+/** Terms of Service modal body. Structure follows common restaurant-SaaS terms
+ *  (modular per-venue subscription, guest/diner carve-out, AI-assist disclaimer,
+ *  data-processing clause, EU consumer carve-outs). */
 export const TERMS_TITLE = "Terms of Service";
+
+// Terms revision date is independent of the shared OPERATOR.lastUpdated used by
+// the Cookie/Privacy documents.
+export const TERMS_LAST_UPDATED = "August 9, 2026";
 
 export const TERMS_SECTIONS: { heading?: string; paragraphs: string[] }[] = [
   {
     paragraphs: [
-      `Last updated: ${OPERATOR.lastUpdated}`,
+      `Last updated: ${TERMS_LAST_UPDATED}`,
     ],
   },
   {
     heading: "Overview",
     paragraphs: [
-      `${OPERATOR.brand} is a software-as-a-service platform that lets restaurants create QR menus, accept online orders, manage table reservations, and view analytics ("the Service"). It is provided through the website at ${OPERATOR.domain} and operated by ${OPERATOR.legalName}, ${OPERATOR.status}, with fiscal address at ${OPERATOR.fiscalAddress} (Tax ID: ${OPERATOR.taxId}) ("${OPERATOR.brand}", "we", "us").`,
+      `${OPERATOR.brand} is a software-as-a-service platform that lets restaurants create digital QR menus, accept orders, manage table reservations, run kitchen and waiter displays, and view analytics ("the Service"). It is provided through the website at ${OPERATOR.domain} and its subdomains, and operated by ${OPERATOR.legalName}, ${OPERATOR.status}, with fiscal address at ${OPERATOR.fiscalAddress} (Tax ID: ${OPERATOR.taxId}) ("${OPERATOR.brand}", "we", "us").`,
       `By visiting our site or using the Service, you accept these Terms of Service ("Terms"). If you do not agree to all of these Terms, please do not use the site or the Service.`,
-      `These Terms apply to all visitors and users, including restaurants subscribing to the Service and end customers scanning QR menus.`,
+      `These Terms apply to all visitors and users: restaurants and their staff subscribing to the Service ("Venues") and end customers browsing menus, placing orders, or making reservations ("Guests").`,
+      `If you use the Service as a consumer, nothing in these Terms limits or excludes any rights you have under mandatory consumer-protection law that cannot be waived by contract.`,
     ],
   },
   {
     heading: "1. Eligibility and accounts",
     paragraphs: [
       `You must be at least 18 years old (or the age of majority in your jurisdiction) to register for an account. By registering you confirm that the information you provide is accurate and that you are entitled to bind any business you sign up on behalf of.`,
-      `You are responsible for safeguarding your sign-in credentials and for any activity that takes place under your account.`,
+      `You are responsible for safeguarding access to your account and for any activity that takes place under it, including activity by staff members you invite. Notify us immediately at ${OPERATOR.contactEmail} if you suspect unauthorized access.`,
     ],
   },
   {
     heading: "2. Acceptable use",
     paragraphs: [
-      `You agree not to use the Service for any unlawful purpose; not to upload malicious code, viruses, or content that infringes third-party rights; not to attempt to circumvent rate limits, security controls, or quotas; and not to scrape, mirror, or otherwise systematically extract data from the Service in ways not provided by official APIs.`,
+      `You agree not to use the Service for any unlawful purpose; not to upload malicious code, viruses, or content that is illegal, misleading, or infringes third-party rights; not to attempt to circumvent rate limits, security controls, quotas, or billing; and not to scrape, mirror, or otherwise systematically extract data from the Service.`,
       `Violation of these rules may result in immediate suspension or termination of your account.`,
     ],
   },
   {
-    heading: "3. Subscription and billing",
+    heading: "3. Free trial, subscription and billing",
     paragraphs: [
-      `${COMPANY.brand} offers Free, Basic and Pro subscription plans. Paid plans are billed monthly or yearly via Stripe and renew automatically until cancelled. You may cancel at any time from your account settings; cancellation takes effect at the end of the current billing period and no refund is issued for the unused portion.`,
-      `Prices are listed in EUR by default and may be displayed in your local currency for convenience. The amount actually charged is the EUR equivalent at your card issuer's exchange rate.`,
-      `We reserve the right to change pricing with at least 30 days' notice; the new price applies from the next renewal cycle.`,
+      `Free trial. New accounts receive a free trial period (currently 14 days) with full access to the Service. No payment card is required to start the trial.`,
+      `Modular pricing. You build your own plan: the digital QR menu is the base, and you add only the features you need (such as table reservations, the kitchen display with order taking, or a custom domain). The price is calculated per restaurant, and volume discounts apply automatically from the second restaurant on the same account. The exact recurring price, billing interval, and currency are always shown to you before you confirm the purchase.`,
+      `Billing. Subscriptions are billed monthly or yearly and renew automatically until cancelled. Yearly billing carries a discount over monthly billing. Payments are processed securely by our payment provider (Stripe); we never receive or store your full card details. Where agreed individually, we may instead invoice you for payment by bank transfer.`,
+      `No commission. We do not charge any commission or percentage on orders placed through the Service. Your only cost is the subscription fee.`,
+      `Cancellation. You may cancel at any time from your account settings. Cancellation takes effect at the end of the current billing period; the Service remains available until then. We do not refund the unused portion of a billing period, except where mandatory consumer law provides otherwise.`,
+      `Pause. If your subscription ends or lapses, your public menu goes offline, but your data — menu, photos, order history, reservations, settings, statistics — is preserved in full. Subscribing again restores everything as it was.`,
+      `Price changes. We may change pricing with at least 30 days' notice; the new price applies from your next renewal. If you do not agree with a price change, you may cancel before it takes effect.`,
     ],
   },
   {
     heading: "4. Your content",
     paragraphs: [
-      `You retain ownership of all content you upload to the Service (menu items, photos, restaurant details, etc.). By uploading you grant us a limited, non-exclusive license to host, store, transmit, display and back up that content for the sole purpose of providing the Service to you and your end customers.`,
-      `You are solely responsible for ensuring that your content does not infringe any third-party rights and complies with applicable food labelling, allergen, and pricing regulations in your jurisdiction.`,
+      `You retain ownership of all content you upload to the Service (menu items, photos, restaurant details, etc.). By uploading you grant us a limited, non-exclusive license to host, store, transmit, display and back up that content for the sole purpose of providing the Service to you and your Guests.`,
+      `You are solely responsible for ensuring that your content is accurate, does not infringe any third-party rights, and complies with applicable food labelling, allergen, pricing, and consumer-information regulations in your jurisdiction.`,
     ],
   },
   {
-    heading: "5. Service availability and modifications",
+    heading: "5. AI-assisted features",
+    paragraphs: [
+      `Some features of the Service use artificial intelligence to save you time — for example, importing a menu from photos and automatic translation of menu content into other languages.`,
+      `AI-generated output may contain errors or omissions. It is provided as a draft for your review: you are responsible for checking and correcting imported or translated content — in particular dish names, prices, and allergen information — before publishing it to Guests.`,
+    ],
+  },
+  {
+    heading: "6. Guests (end customers)",
+    paragraphs: [
+      `Guests may browse menus, place orders, and request reservations without creating an account. Any order or reservation made through the Service is a transaction between the Guest and the Venue: the Venue alone is responsible for accepting, preparing, and fulfilling orders and reservations, for the quality and safety of its food and service, and for the accuracy of its menu, prices, and allergen information.`,
+      `${OPERATOR.brand} provides the software platform only and is not a party to any transaction between a Guest and a Venue.`,
+    ],
+  },
+  {
+    heading: "7. Data, privacy and hosting",
+    paragraphs: [
+      `All customer data — accounts, menu content, orders, reservations, and analytics — is stored on our own servers located in the European Union, under our direct control. We do not use third-party analytics or advertising trackers on the Service.`,
+      `Where Guests submit personal data to a Venue through the Service (for example when placing an order or booking a table), the Venue is the controller of that data and we process it on the Venue's behalf, solely to provide the Service, in accordance with our Privacy Policy.`,
+      `For full details on how personal data and cookies are handled, see our Privacy Policy and Cookie Policy, which form part of these Terms.`,
+    ],
+  },
+  {
+    heading: "8. Service availability and modifications",
     paragraphs: [
       `We aim for high availability but make no guarantee of uninterrupted, error-free operation. We may perform scheduled maintenance with prior notice when possible.`,
       `We reserve the right to modify, suspend, or discontinue any part of the Service at any time, with reasonable notice for material changes affecting paid features.`,
     ],
   },
   {
-    heading: "6. Data, privacy and hosting",
-    paragraphs: [
-      `All customer data is stored on servers operated by ${COMPANY.hostingProvider}. We do not transfer personal data outside the European Economic Area for processing.`,
-      `We do not use Google Analytics, PostHog, Facebook Pixel, or any other third-party analytics or marketing tracker. Our analytics is fully first-party and runs on our own infrastructure.`,
-      `For details on how we handle personal data and cookies, see our Privacy Policy and Cookie Policy.`,
-    ],
-  },
-  {
-    heading: "7. Third-party services",
-    paragraphs: [
-      `The Service integrates with third-party providers for specific functions: Stripe for payment processing, Google reCAPTCHA for spam protection, AWS S3 for image storage. By using the Service you also accept the terms of these providers as far as they apply to your interactions with them.`,
-    ],
-  },
-  {
-    heading: "8. Intellectual property",
+    heading: "9. Intellectual property",
     paragraphs: [
       `The ${OPERATOR.brand} name, logo, code, designs, and any other materials provided through the Service (excluding content you upload) are the intellectual property of ${OPERATOR.legalName} and protected by applicable copyright and trademark laws.`,
     ],
   },
   {
-    heading: "9. Disclaimer of warranties",
+    heading: "10. Disclaimer of warranties",
     paragraphs: [
       `The Service is provided "as is" and "as available" without warranties of any kind, express or implied. We do not warrant that the Service will be uninterrupted, error-free, or that any defects will be corrected. Your use of the Service is at your own risk.`,
     ],
   },
   {
-    heading: "10. Limitation of liability",
+    heading: "11. Limitation of liability",
     paragraphs: [
       `To the maximum extent permitted by law, ${OPERATOR.legalName} shall not be liable for any indirect, incidental, special, consequential or punitive damages, lost profits, lost revenue, lost data, or business interruption arising out of or in connection with the Service. Total liability for any claim arising under these Terms is limited to the amount you paid in the 12 months preceding the claim, or EUR 100, whichever is greater.`,
+      `Nothing in these Terms excludes or limits liability that cannot be excluded or limited under applicable law, including liability for wilful misconduct or gross negligence, or the statutory rights of consumers.`,
     ],
   },
   {
-    heading: "11. Indemnification",
+    heading: "12. Indemnification",
     paragraphs: [
       `You agree to indemnify and hold ${OPERATOR.legalName} harmless from any claim or demand made by any third party due to your breach of these Terms or your violation of any law or third-party rights.`,
     ],
   },
   {
-    heading: "12. Termination",
+    heading: "13. Termination",
     paragraphs: [
       `Either party may terminate this agreement at any time. You may terminate by closing your account from the dashboard. We may terminate immediately and without notice for breach of these Terms, suspected fraud, abuse, or illegal activity.`,
-      `Upon termination, your right to access the Service ends immediately. We will retain a backup of your data for up to 30 days, after which it is permanently deleted.`,
+      `Upon termination, your right to access the Service ends immediately. We will retain a backup of your data for up to 30 days, after which it is permanently deleted, except for records we are required to retain by law (such as invoicing data under Spanish tax law).`,
     ],
   },
   {
-    heading: "13. Governing law",
+    heading: "14. Governing law and jurisdiction",
     paragraphs: [
-      `These Terms are governed by the laws of the Kingdom of Spain. Any dispute arising from these Terms shall be settled in the competent courts of ${OPERATOR.fiscalAddress}.`,
+      `These Terms are governed by the laws of the Kingdom of Spain. Any dispute arising from these Terms shall be settled in the competent courts of the city of Oviedo, Spain.`,
+      `If you are a consumer resident in the European Union, this clause does not deprive you of the protection of mandatory provisions of the law of your country of residence, nor of your right to bring or defend proceedings in the courts of that country.`,
     ],
   },
   {
-    heading: "14. Changes to these Terms",
+    heading: "15. Changes to these Terms",
     paragraphs: [
       `We may update these Terms from time to time. The most current version is always available on this page. Material changes will be communicated via email or in-app notice at least 30 days before they take effect. Continued use of the Service after the change constitutes acceptance of the revised Terms.`,
     ],
   },
   {
-    heading: "15. Contact",
+    heading: "16. Contact",
     paragraphs: [
       `Questions about these Terms can be sent to ${OPERATOR.contactEmail}.`,
     ],
