@@ -100,11 +100,16 @@ export const COOKIE_POLICY_SECTIONS: { heading?: string; paragraphs: string[] }[
  *  per GDPR Article 13/14 transparency requirements. */
 export const PRIVACY_POLICY_TITLE = "Privacy Policy";
 
+// Privacy revision date is independent of the shared OPERATOR.lastUpdated used by
+// the Cookie Policy.
+export const PRIVACY_LAST_UPDATED = "August 10, 2026";
+
 export const PRIVACY_POLICY_SECTIONS: { heading?: string; paragraphs: string[] }[] = [
   {
     paragraphs: [
-      `Last updated: ${OPERATOR.lastUpdated}`,
-      `This Privacy Policy explains how ${OPERATOR.brand} — a service operated by ${OPERATOR.legalName}, ${OPERATOR.status}, with fiscal address at ${OPERATOR.fiscalAddress} (Tax ID: ${OPERATOR.taxId}) ("${OPERATOR.brand}", "we", "us") — collects, uses, stores and protects your personal data when you use the ${OPERATOR.brand} platform at ${OPERATOR.domain}.`,
+      `Last updated: ${PRIVACY_LAST_UPDATED}`,
+      `This Privacy Policy explains how ${OPERATOR.brand} — a service operated by ${OPERATOR.legalName}, ${OPERATOR.status}, with fiscal address at ${OPERATOR.fiscalAddress} (Tax ID: ${OPERATOR.taxId}) ("${OPERATOR.brand}", "we", "us") — collects, uses, stores and protects your personal data when you use the ${OPERATOR.brand} platform at ${OPERATOR.domain} and its subdomains.`,
+      `The short version: everything you and your guests enter into the Service lives in our own database, on our own servers in the European Union. We run no third-party analytics or advertising trackers, and our own usage tracking contains no personal data.`,
       `We comply with the General Data Protection Regulation (GDPR), the Spanish Organic Law on Data Protection and Guarantee of Digital Rights (LOPDGDD), and the ePrivacy Directive.`,
     ],
   },
@@ -112,85 +117,102 @@ export const PRIVACY_POLICY_SECTIONS: { heading?: string; paragraphs: string[] }
     heading: "1. Data Controller",
     paragraphs: [
       `${OPERATOR.brand} is operated by ${OPERATOR.legalName}, ${OPERATOR.status}, who is the data controller responsible for your personal data (Tax ID: ${OPERATOR.taxId}, fiscal address ${OPERATOR.fiscalAddress}).`,
+      `For guest data submitted to a specific restaurant through the Service (orders, reservations), the restaurant is the data controller and we act as its processor — see section 7 of the Terms of Service.`,
       `For any privacy inquiries, including the exercise of your data subject rights, contact ${OPERATOR.contactEmail}.`,
     ],
   },
   {
     heading: "2. Data we collect",
     paragraphs: [
-      `We collect only the data needed to operate the Service. Categories below cover everything stored in our database.`,
-      `Account data — when you register: email address (used for OTP authentication and operational notices); preferred dashboard locale; the cuisine type and restaurant name you provide during the signup wizard.`,
-      `Authentication data — short-lived one-time codes (OTPs), hashed session tokens, count of failed verification attempts. We use passwordless email + Google OAuth; no passwords are stored.`,
-      `Business profile — your company name, subscription plan, and Stripe customer/subscription identifiers (used to bill you).`,
-      `Restaurant profile — restaurant name, subtitle, description, slug, currency, brand color, cover image, postal address, geo coordinates, phone number, Instagram handle, WhatsApp number, languages and default language, working hours, table count.`,
-      `Menu content — categories, dishes (name, description, price, photo, allergens, options, translations), tables (number, capacity, zone, position).`,
+      `We collect only the data needed to operate the Service. The categories below cover everything stored in our database.`,
+      `Account data — when you register: email address (used for one-time-code sign-in and operational notices); preferred dashboard language; the cuisine type and restaurant name you provide during signup.`,
+      `Authentication data — short-lived one-time codes (OTPs), hashed session tokens, count of failed verification attempts. Sign-in is passwordless (email code, Google, or Apple); no passwords are stored.`,
+      `Billing data — your subscription status, selected features and billing interval, and Stripe customer/subscription identifiers. Payment cards are handled entirely by Stripe; we never see or store card details.`,
+      `Restaurant profile — restaurant name, subtitle, description, public address (slug), currency, brand color, cover image, postal address, geo coordinates, phone number, Instagram handle, WhatsApp number, languages, working hours, timezone, table and reservation settings.`,
+      `Menu content — categories, dishes (name, description, price, photo, allergens, options, translations), tables (number, capacity, zone, floor position).`,
       `Reservations — for each booking: guest name, guest email, guest phone (optional), party size, date, time, duration, table assignment, status, internal notes.`,
-      `Orders — for each public order: customer name (optional), customer phone (optional), delivery address (optional), comment, table number, items ordered, total amount, currency, status.`,
-      `Support messages — content of messages you exchange with our support team.`,
-      `Analytics & technical data — anonymous first-party events (action name, timestamp, country and region derived from your IP via Cloudflare). No analytics-specific cookie is stored on your device.`,
-      `Google Ads attribution — when you arrive via a Google Ads click, we store the click identifier (gclid) for up to 90 days to upload conversion events back to Google Ads (server-to-server). Processed under legitimate interest; you may object at any time by emailing ${OPERATOR.contactEmail}.`,
-      `Public-menu page views — when guests scan a QR code: anonymous session id, page slug, language, referrer, IP, User-Agent. Used for scan-count limits and the analytics dashboard you see.`,
-      `Payment data — handled by Stripe; we never see or store full card details. We hold only the Stripe customer/subscription IDs and high-level subscription state.`,
+      `Orders — for each order: customer name (optional), customer phone (optional), comment, table number, items ordered, discounts, total amount, currency, status.`,
+      `Connected devices — if you pair tablets (kitchen display, waiter board, reservation board): device name, device type, and last-seen time. No personal data of the staff using the tablet is collected.`,
+      `Support and messaging — content of messages you exchange with our support team, including messages sent over WhatsApp if you contact us there.`,
+      `Usage tracking — tracking only, without personal data: anonymous first-party events consisting of an action name (e.g. "pricing_view"), a timestamp, and an approximate region (country/region derived from IP). No name, no email, no cross-site identifier — the events cannot identify you as a person. See section 5.`,
+      `Public-menu technical data — when guests open a QR menu: a random session id, page slug, language, and standard technical request data used for abuse prevention and the scan counter shown in your dashboard. Not linked to any person.`,
     ],
   },
   {
     heading: "3. Legal basis for processing",
     paragraphs: [
       `Each category is processed under one of the legal bases in GDPR Article 6:`,
-      `Contract performance (Art. 6(1)(b)) — account data, authentication data, business profile, restaurant profile, menu content, reservations, orders, support messages, payment data. Required to provide the Service you signed up for.`,
-      `Legitimate interest (Art. 6(1)(f)) — anonymous first-party analytics, short-term operational logs, fraud and abuse prevention, Google Ads conversion attribution via gclid. Balanced against your rights; you can object at any time by emailing ${OPERATOR.contactEmail}.`,
+      `Contract performance (Art. 6(1)(b)) — account data, authentication data, billing data, restaurant profile, menu content, reservations, orders, connected devices, support messages. Required to provide the Service you signed up for.`,
+      `Legitimate interest (Art. 6(1)(f)) — anonymous usage tracking, short-term operational logs, fraud and abuse prevention, measurement of our own advertising (section 6). Balanced against your rights; you can object at any time by emailing ${OPERATOR.contactEmail}.`,
       `Legal obligation (Art. 6(1)(c)) — invoicing data we are required to retain by Spanish tax law.`,
     ],
   },
   {
     heading: "4. How we use your data",
     paragraphs: [
-      `Provide and maintain the Service: create your dashboard account and restaurant pages, generate QR codes, run the public menu, process orders and reservations.`,
-      `Authenticate you: send OTP codes by email, validate Google OAuth tokens, manage sessions.`,
+      `Provide and maintain the Service: run your dashboard and public menu pages, generate QR codes, process orders and reservations, power kitchen and waiter displays.`,
+      `Authenticate you: send sign-in codes by email, validate Google/Apple sign-in, manage sessions.`,
       `Bill you: process subscription payments through Stripe, send invoices.`,
+      `Assist you with AI features: if you import a menu from photos or use automatic translation, the images or menu text you submit are processed by an AI model to produce the draft menu or translation. The results are stored only in your own menu.`,
       `Communicate with you: account and service notices, support replies, important changes to the Service. We do not send marketing emails without your separate consent.`,
-      `Improve the platform: anonymous first-party usage analytics, debugging, performance monitoring.`,
+      `Improve the platform: anonymous usage tracking, debugging, performance monitoring.`,
       `Comply with legal obligations: tax records, regulatory reporting when required.`,
     ],
   },
   {
-    heading: "5. Where data is stored",
+    heading: "5. Usage tracking — no personal data",
     paragraphs: [
-      `All customer data — your account, restaurant content, orders, reservations, analytics — is stored on a single dedicated server operated by ${OPERATOR.hostingProvider}. Data does not leave the European Union.`,
+      `We measure how the Service is used with our own first-party events stored in our own database. Tracking is limited to what happened, not who did it: each event records an action name, the moment it occurred, and an approximate region. No analytics cookie is placed on your device, no advertising identifier is created, no data is shared with any analytics company, and the events contain no personal data.`,
+      `Actions performed inside your own dashboard while signed in may additionally be associated with your account — solely so we can help you in support cases and detect abuse, never for advertising.`,
+    ],
+  },
+  {
+    heading: "6. Advertising measurement (ad-click identifiers)",
+    paragraphs: [
+      `If you arrive at our site by clicking one of our own ads, the ad platform appends a click identifier to the URL (Google Ads: gclid; Meta: fbclid). We store that identifier in our own database and, if you later sign up, report the conversion back to the ad platform server-to-server so we can tell which ads work. No pixel, tag, or tracker from these platforms runs on our site, and the identifier is not linked to your name or email in these reports.`,
+      `This processing relies on our legitimate interest in measuring our own advertising (GDPR Art. 6(1)(f)). You may object at any time by emailing ${OPERATOR.contactEmail} (include the click identifier from your original ad URL if you want past attribution excluded).`,
+    ],
+  },
+  {
+    heading: "7. Where data is stored",
+    paragraphs: [
+      `All customer data — your account, restaurant content, orders, reservations, usage events — is stored in one place: our own database on a dedicated server operated for us by ${OPERATOR.hostingProvider}, under our direct control. Primary processing does not leave the European Union.`,
       `Backups are encrypted and stored in the same EU region.`,
       `Data is encrypted in transit using TLS and at rest using disk-level encryption.`,
     ],
   },
   {
-    heading: "6. Third parties we share data with",
+    heading: "8. Service providers",
     paragraphs: [
-      `We share data with the minimum number of third parties necessary to operate the Service:`,
-      `Stripe, Inc. — payment processing. Receives your billing email, billing address (if provided), and the amount and product of each transaction. Stripe is a separate data controller for payment data. Privacy: https://stripe.com/privacy`,
-      `Hetzner Online GmbH — server hosting (Nuremberg, Germany). Acts as a data processor under a Data Processing Agreement; cannot access database contents in normal operation.`,
-      `Google LLC — (a) if you sign in with Google, receives only the standard OAuth scope (email, name, picture); same data Google already has on you. (b) For visitors arriving from Google Ads, we upload conversion events to the Google Ads API (server-to-server) using the gclid from your URL — no client-side tracker is loaded.`,
-      `Cloudflare, Inc. — CDN and DDoS protection. Sees inbound HTTP requests including your IP address and User-Agent. Acts as a data processor.`,
-      `We do not sell or rent your personal data to anyone. We do not use Google Analytics, PostHog, Facebook Pixel, Mixpanel, Amplitude, or any other third-party analytics or advertising tracker.`,
+      `We do not sell, rent, or share your personal data with anyone for their own purposes, and we run no third-party analytics or advertising trackers. A small number of infrastructure providers are technically necessary to deliver the Service:`,
+      `Stripe — payment processing. Receives your billing email and the amount and product of each transaction. Privacy: https://stripe.com/privacy`,
+      `Hetzner Online GmbH — hosts our server (Germany, EU). A data processor under a Data Processing Agreement; cannot access database contents in normal operation.`,
+      `Cloudflare — CDN and DDoS protection in front of our server; sees inbound requests as any network carrier does. A data processor.`,
+      `Google — only in three narrow cases: if you choose "Sign in with Google" (standard OAuth: email, name, picture); if you use the AI menu-import or translation features (the submitted images/text are processed by Google's AI API and not used to train models); and server-to-server ad-conversion reports described in section 6.`,
+      `Apple — only if you choose "Sign in with Apple" (standard OAuth scope).`,
+      `Meta — only if you message us on WhatsApp (WhatsApp relays the messages, as with any WhatsApp conversation) and for the server-to-server ad-conversion reports described in section 6.`,
     ],
   },
   {
-    heading: "7. International data transfers",
+    heading: "9. International data transfers",
     paragraphs: [
-      `All primary processing happens within the European Union. The third-party processors above (Stripe, Cloudflare, Google) may transfer data to the United States; in those cases the transfers are covered by the EU-US Data Privacy Framework or by Standard Contractual Clauses.`,
+      `All primary processing happens within the European Union. Where a provider listed above (Stripe, Cloudflare, Google, Apple, Meta) transfers data to the United States, the transfer is covered by the EU-US Data Privacy Framework or by Standard Contractual Clauses.`,
     ],
   },
   {
-    heading: "8. How long we keep your data",
+    heading: "10. How long we keep your data",
     paragraphs: [
       `Account data — for as long as your account is active. Within 30 days of account deletion, all personal data is permanently removed from our database. Backups are overwritten within 90 days.`,
       `OTPs — deleted immediately on successful verification or after 15 minutes (whichever comes first).`,
-      `Reservations and orders — retained for as long as you keep your restaurant active in the Service, then removed with the account.`,
-      `Analytics events — retained for up to 24 months in aggregated form; raw per-session events are pruned after 90 days.`,
+      `Reservations and orders — retained for as long as you keep your restaurant in the Service (they power your order history and statistics), then removed with the account.`,
+      `Anonymous usage events — retained without a fixed limit; they contain no personal data.`,
+      `Ad-click identifiers — used for conversion reporting for up to 90 days after the click.`,
       `Invoicing data — retained for 6 years as required by Spanish tax law (Ley General Tributaria).`,
       `Support messages — retained for 24 months after the last reply.`,
     ],
   },
   {
-    heading: "9. Your rights",
+    heading: "11. Your rights",
     paragraphs: [
       `Under the GDPR you have the right to:`,
       `Access — request a copy of the personal data we hold about you.`,
@@ -198,31 +220,31 @@ export const PRIVACY_POLICY_SECTIONS: { heading?: string; paragraphs: string[] }
       `Erasure ("right to be forgotten") — request deletion of your data; we will comply unless retention is required by law.`,
       `Restriction — pause processing while a complaint is investigated.`,
       `Portability — receive your data in a structured, machine-readable format and transfer it to another provider.`,
-      `Object — object to processing based on legitimate interest, including anonymous analytics and Google Ads attribution. Email ${OPERATOR.contactEmail} (include the gclid from your original ad-click URL if you want to exclude past Google Ads attribution).`,
+      `Object — object to processing based on legitimate interest, including advertising measurement (section 6). Email ${OPERATOR.contactEmail}.`,
       `Lodge a complaint — file a complaint with the Spanish data protection authority, the Agencia Española de Protección de Datos (AEPD), at www.aepd.es.`,
       `To exercise any of these rights, email ${OPERATOR.contactEmail}. We respond within 30 days.`,
     ],
   },
   {
-    heading: "10. Children",
+    heading: "12. Children",
     paragraphs: [
       `The Service is not intended for individuals under 18. We do not knowingly collect personal data from children. If you believe a child has provided us data, contact us and we will remove it.`,
     ],
   },
   {
-    heading: "11. Security",
+    heading: "13. Security",
     paragraphs: [
       `We apply technical and organizational measures appropriate to the risk: TLS for all traffic, encryption at rest, hashed session tokens, rate-limiting, automated backups, restricted server access, and regular dependency updates. No system is 100% secure; if we become aware of a personal-data breach affecting you, we will notify you and the AEPD within 72 hours as required by GDPR Article 33.`,
     ],
   },
   {
-    heading: "12. Changes to this policy",
+    heading: "14. Changes to this policy",
     paragraphs: [
       `We may update this Privacy Policy from time to time. The "Last updated" date at the top reflects the most recent revision. Continued use of the Service after a change constitutes acceptance.`,
     ],
   },
   {
-    heading: "13. Contact",
+    heading: "15. Contact",
     paragraphs: [
       `Questions, complaints, or requests regarding this Privacy Policy can be sent to ${OPERATOR.contactEmail}. We respond within 30 days.`,
     ],
