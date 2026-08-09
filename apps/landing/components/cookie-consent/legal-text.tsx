@@ -19,17 +19,13 @@ export const OPERATOR = {
   fiscalAddress: "Calle Boca Del Rio 2, 1A, Oviedo, 33010, Asturias, Spain",
   taxId: "ESZ1894474S",
   hostingProvider: "Hetzner Online GmbH, Nuremberg, Germany",
-  lastUpdated: "May 27, 2026",
 };
-
-// Backwards-compat alias used by the rest of the file.
-export const COMPANY = OPERATOR;
 
 /** Cookie Policy modal body. Plain text segments rendered with paragraph spacing.
  *  Scope: the MAIN site (iq-rest.com + dashboard) only. */
 export const COOKIE_POLICY_TITLE = "Cookie Policy";
 
-// Cookie revision date is independent of the other legal documents.
+// Each document carries its own revision date.
 export const COOKIE_LAST_UPDATED = "August 10, 2026";
 
 export const COOKIE_POLICY_SECTIONS: { heading?: string; paragraphs: string[] }[] = [
@@ -103,8 +99,6 @@ export const COOKIE_POLICY_SECTIONS: { heading?: string; paragraphs: string[] }[
  *  per GDPR Article 13/14 transparency requirements. */
 export const PRIVACY_POLICY_TITLE = "Privacy Policy";
 
-// Privacy revision date is independent of the shared OPERATOR.lastUpdated used by
-// the Cookie Policy.
 export const PRIVACY_LAST_UPDATED = "August 10, 2026";
 
 export const PRIVACY_POLICY_SECTIONS: { heading?: string; paragraphs: string[] }[] = [
@@ -258,9 +252,7 @@ export const PRIVACY_POLICY_SECTIONS: { heading?: string; paragraphs: string[] }
  *  data-processing clause, EU consumer carve-outs). */
 export const TERMS_TITLE = "Terms of Service";
 
-// Terms revision date is independent of the shared OPERATOR.lastUpdated used by
-// the Cookie/Privacy documents.
-export const TERMS_LAST_UPDATED = "August 9, 2026";
+export const TERMS_LAST_UPDATED = "August 10, 2026";
 
 export const TERMS_SECTIONS: { heading?: string; paragraphs: string[] }[] = [
   {
