@@ -16,6 +16,7 @@ import { LandingFooter } from "../components/footer";
 import { getHelpBanner } from "../help/registry";
 import { HelpBannerSection } from "../help/help-banner-section";
 import type { LandingTexts } from "../types";
+import { featureLabel } from "@/lib/track-keys";
 
 // ── CRO copy shape ──────────────────────────────────────────────────────────
 // Only the conversion-page-specific strings live here; shared sections (header,
@@ -84,11 +85,13 @@ const FEATURE_LINK_MAP = [0, 3, 2, 1];
 // Each benefit's live demo board: [menu, kitchen, reservations, orders].
 const DEMO_VARIANTS: DemoVariant[] = ["phone", "tablet", "reservations", "orders"];
 
-// Same order again, as words. Event names are read by a person reconstructing a
-// visit, and "Benefit 2 demo" tells them nothing — "Kitchen display demo" does.
-// Kept next to the arrays above so the three stay in step.
-const BENEFIT_LABELS = ["Digital menu", "Kitchen display", "Table booking", "Order taking"];
-const benefitLabel = (i: number) => BENEFIT_LABELS[i] ?? `Benefit ${i + 1}`;
+// The same order once more, as feature tokens. Event names are read by a
+// person reconstructing a visit, and "Benefit 2" tells them nothing — this is
+// what turns the section, its demo button and its details link into
+// "Kitchen display". Kept next to the arrays above so all three stay in step.
+const BENEFIT_KEYS = ["digital", "kds", "bookings", "orders"];
+const benefitKey = (i: number) => BENEFIT_KEYS[i] ?? `benefit_${i + 1}`;
+const benefitLabel = (i: number) => featureLabel(benefitKey(i));
 
 // Shared markup for every per-locale home page — visually identical to the
 // original `/all-in-one` test page. Per-locale data (copy + SEO) stays in each
@@ -184,7 +187,7 @@ export function CroHomeTemplate({
           const reverse = i % 2 === 1;
           const href = featureLinks[FEATURE_LINK_MAP[i]]?.href ?? "#";
           return (
-            <Section key={b.tag} dataSection={`cro_benefit_${i}`} noContainer accent={(i % 2 === 0) !== shift} className="!py-16">
+            <Section key={b.tag} dataSection={`benefit_${benefitKey(i)}`} noContainer accent={(i % 2 === 0) !== shift} className="!py-16">
               <div className="grid grid-cols-1 gap-8 lg:gap-16 lg:grid-cols-2 lg:items-center max-w-6xl mx-auto">
                 <div className={`flex flex-col items-center text-center ${reverse ? "lg:order-2 lg:items-start lg:text-start" : "lg:items-end lg:text-end"}`}>
                   <div className="inline-flex items-center gap-2 text-primary mb-4">

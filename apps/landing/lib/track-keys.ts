@@ -218,6 +218,57 @@ const FEATURE_LABEL: Record<string, string> = {
   home: "Home",
 };
 
+/** Separators to spaces, first letter up — an unmapped token still reads like
+ *  a label instead of like a database key. */
+function humanize(token: string): string {
+  const words = token.replace(/[_-]+/g, " ").trim();
+  return words ? words.charAt(0).toUpperCase() + words.slice(1) : "";
+}
+
 export function featureLabel(key: string): string {
-  return FEATURE_LABEL[key] || key.replace(/[_-]+/g, " ").trim() || "Feature";
+  return FEATURE_LABEL[key] || humanize(key) || "Feature";
+}
+
+/**
+ * Human label for a `data-section` token, used to name section-view events.
+ *
+ * The tokens are DOM hooks first ("cro_bundle_intro", "benefit_kds"), and the
+ * template prefix plus the raw slug mean nothing to whoever reads a visit
+ * timeline. Feature sections resolve through featureLabel so a section, its
+ * demo button and its details link all say "Kitchen display".
+ */
+const SECTION_LABEL: Record<string, string> = {
+  hero: "Hero",
+  hero_stats: "Trust stats",
+  trust: "Trust stats",
+  feature_trust: "Trust stats",
+  scan: "Menu scan",
+  platform: "Hardware and platform",
+  bundle_intro: "What's included",
+  activities: "Activities",
+  how: "How it works",
+  subfeatures: "Subfeatures",
+  pricing: "Pricing",
+  pricing_quiz: "Pricing quiz",
+  pricing_enterprise: "Enterprise pricing",
+  pricing_cta: "Pricing CTA",
+  founder: "Founder",
+  faq: "FAQ",
+  final_cta: "Final CTA",
+  footer: "Footer",
+};
+
+export function sectionLabel(raw: string): string {
+  // `cro_` is the name of the home-page template, not of anything a visitor
+  // can see; stripping it also collapses cro_faq and faq onto one label.
+  const token = raw.replace(/^cro_/, "");
+  // The explicit map wins over the feature pattern: "feature_trust" is the
+  // trust strip on a feature page, not a feature called "trust".
+  const mapped = SECTION_LABEL[token];
+  if (mapped) return mapped;
+  const feature = /^(?:benefit|feature)_(.+)$/.exec(token);
+  if (feature) return featureLabel(feature[1]);
+  const help = /^help_(.+)$/.exec(token);
+  if (help) return `Help: ${humanize(help[1])}`;
+  return humanize(token);
 }

@@ -12,6 +12,15 @@ import { FinalCta } from "../components/final-cta";
 import { getHelpBanner } from "../help/registry";
 import { HelpBannerSection } from "../help/help-banner-section";
 import type { LandingTexts } from "../types";
+import { featureKeyFromHref } from "@/lib/track-keys";
+
+// Each feature card links to its own feature page, so the href identifies the
+// card in a way the localised title and tag cannot — that is what makes the
+// section event read "Kitchen display section" in every locale. The positional
+// fallback only fires for a card that has no link at all.
+function featureSection(href: string | undefined, index: number): string {
+  return href ? `feature_${featureKeyFromHref(href)}` : `feature_card_${index + 1}`;
+}
 
 export type HomeHero = { title: string; titleAccent: string; sub: string; imageAlt: string };
 
@@ -66,7 +75,7 @@ export function HomeTemplate({
           const image = item.tag ? featureImages[item.tag] : undefined;
           const reverse = i % 2 === 1;
           return (
-            <Section key={item.title} dataSection={`feature_${i}`} noContainer accent={i % 2 === 1}>
+            <Section key={item.title} dataSection={featureSection(item.href, i)} noContainer accent={i % 2 === 1}>
               <div className="w-full lg:min-h-[70dvh] flex items-center py-8 sm:py-16 lg:py-0">
                 <div className={`grid grid-cols-1 gap-10 lg:gap-14 xl:gap-20 lg:grid-cols-2 lg:items-center w-full ${reverse ? "lg:[&>*:first-child]:order-2" : ""}`}>
                   <div className="flex flex-col items-center text-center lg:items-start lg:text-start">

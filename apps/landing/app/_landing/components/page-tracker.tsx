@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { analytics, isValidPageLabel, searchReferrerHost, type TrackCtx } from "@/lib/analytics";
 import { readBillingCurrencyFromDocument } from "@/lib/country-currency-map";
+import { sectionLabel } from "@/lib/track-keys";
 
 const GCLID_REGEX = /^[A-Za-z0-9_-]{1,256}$/;
 const FBCLID_REGEX = /^[A-Za-z0-9_.-]{1,512}$/;
@@ -126,7 +127,7 @@ export function PageTracker({ page }: PageTrackerProps) {
           const last = lastFiredAt.get(name) ?? 0;
           if (now - last < SECTION_THROTTLE_MS) continue;
           lastFiredAt.set(name, now);
-          const label = toLabel(name);
+          const label = sectionLabel(name);
           if (label) analytics.track("Show", `${label} section`);
         }
       },
