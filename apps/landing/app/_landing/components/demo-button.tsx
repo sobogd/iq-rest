@@ -139,12 +139,12 @@ export function DemoButton({
   const handleOpen = () => {
     setOpen(true);
     setLoading(true);
-    analytics.track("Click", `${trackName} Open`);
+    analytics.track("Click", `${trackName} open`);
   };
 
   const handleClose = () => {
     setOpen(false);
-    analytics.track("Click", `${trackName} Close`);
+    analytics.track("Click", `${trackName} close`);
   };
 
   const iframeSrc =

@@ -94,7 +94,7 @@ export function LangAutoModal() {
     if (unique.length <= 1) return;
     setSuggestions(unique);
     // Suffix = the exact list of locales offered, e.g. "Lang Modal es en fr".
-    analytics.track("Show", `Lang Modal ${unique.join(" ")}`);
+    analytics.track("Show", `Language prompt (${unique.join(" ")})`);
   }, [initialSearch]);
 
   if (!suggestions) return null;
@@ -104,7 +104,7 @@ export function LangAutoModal() {
       open
       onOpenChange={(o) => {
         if (o) return;
-        analytics.track("Click", "Lang Modal Close");
+        analytics.track("Click", "Language prompt close");
         setSuggestions(null);
       }}
     >
@@ -130,7 +130,7 @@ export function LangAutoModal() {
                 href={localizedHref(locale)}
                 onClick={() => {
                   rememberLocale(locale);
-                  analytics.track("Click", `Lang Modal Pick ${locale}`);
+                  analytics.track("Click", `Language prompt pick ${locale}`);
                   // Plain anchor to another locale — full document navigation.
                   analytics.flush();
                 }}

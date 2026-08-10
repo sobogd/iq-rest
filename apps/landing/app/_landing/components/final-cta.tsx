@@ -35,7 +35,7 @@ export function FinalCta({ texts, ctaText, demoText, microcopy, locale, demoVari
           align="center"
           stackMobile
           trackName="Final CTA"
-          extra={<DemoButton text={demoText} locale={locale} trackName="Final CTA Demo" createText={ctaText} variant={demoVariant} className="!h-11 !min-h-0 !py-0 !px-6 !text-base !font-semibold" />}
+          extra={<DemoButton text={demoText} locale={locale} trackName="Final CTA demo" createText={ctaText} variant={demoVariant} className="!h-11 !min-h-0 !py-0 !px-6 !text-base !font-semibold" />}
         />
       </div>
     </div>

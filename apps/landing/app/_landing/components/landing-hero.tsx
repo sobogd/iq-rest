@@ -184,7 +184,7 @@ export function LandingHero({
             <DemoButton
               text={demoText}
               locale={locale}
-              trackName={`${primaryTrack} Demo`}
+              trackName={`${primaryTrack} demo`}
               variant={demoVariant}
               className={`h-11 px-6 !text-base !font-semibold !text-white !bg-white/10 hover:!bg-white/20 backdrop-blur !border-white/30 ${demoHideMobile ? "!hidden sm:!inline-flex" : ""}`}
             />

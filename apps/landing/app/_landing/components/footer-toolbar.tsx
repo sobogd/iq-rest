@@ -27,7 +27,7 @@ export function FooterToolbar({ locale, navClassName = "" }: FooterToolbarProps)
         <button
           type="button"
           onClick={() => {
-            analytics.track("Click", "Footer Language");
+            analytics.track("Click", "Footer language switcher");
             setLangOpen(true);
           }}
           className="hover:text-foreground transition-colors"
@@ -38,7 +38,7 @@ export function FooterToolbar({ locale, navClassName = "" }: FooterToolbarProps)
           href={`/${locale}/privacy`}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => analytics.track("Click", "Footer Privacy Policy")}
+          onClick={() => analytics.track("Click", "Footer privacy policy")}
           className="hover:text-foreground transition-colors"
         >
           {cookieTexts.privacyPolicyLink}
@@ -47,7 +47,7 @@ export function FooterToolbar({ locale, navClassName = "" }: FooterToolbarProps)
           href={`/${locale}/cookies`}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => analytics.track("Click", "Footer Cookie Policy")}
+          onClick={() => analytics.track("Click", "Footer cookie policy")}
           className="hover:text-foreground transition-colors"
         >
           {cookieTexts.cookiePolicyLink}
@@ -56,7 +56,7 @@ export function FooterToolbar({ locale, navClassName = "" }: FooterToolbarProps)
           href={`/${locale}/terms`}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => analytics.track("Click", "Footer Terms")}
+          onClick={() => analytics.track("Click", "Footer terms")}
           className="hover:text-foreground transition-colors"
         >
           {cookieTexts.termsLink}

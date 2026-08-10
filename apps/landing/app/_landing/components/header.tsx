@@ -14,7 +14,7 @@ import { dashboardUrl } from "@/lib/dashboard-url";
 import { LOCALE_SLUG_OVERRIDES } from "@/lib/locale-slug-overrides";
 import { localeHome, localePath } from "@/lib/locale-paths";
 import { analytics } from "@/lib/analytics";
-import { featureKeyFromHref } from "@/lib/track-keys";
+import { featureKeyFromHref, featureLabel } from "@/lib/track-keys";
 import type { LandingTexts } from "../types";
 
 interface HeaderProps {
@@ -129,7 +129,7 @@ export function LandingHeader({
         <div className={`flex items-center justify-between gap-3 h-16 sm:h-20 ${isHero ? "text-white" : "text-foreground"}`}>
           <LinkForward
             href={homeHref}
-            trackName="Header Logo"
+            trackName="Header logo"
             className="flex items-center gap-1.5 text-lg sm:text-xl font-semibold tracking-tight shrink-0"
           >
             <LogoIcon className="h-8 w-8 sm:h-9 sm:w-9" />
@@ -143,18 +143,18 @@ export function LandingHeader({
                       key={link.href}
                       href={link.href}
                       prefetch={false}
-                      trackName={`Header Nav ${featureKeyFromHref(link.href)}`}
+                      trackName={`Header nav: ${featureLabel(featureKeyFromHref(link.href))}`}
                       className={navClass(isLinkActive(link.href))}
                     >
                       {link.label}
                     </LinkForward>
                   ))
                 : (
-                  <LinkForward href={anchor("features")} trackName="Header Nav Features" className={navClass(false)}>
+                  <LinkForward href={anchor("features")} trackName="Header nav: features" className={navClass(false)}>
                     {texts.navFeatures}
                   </LinkForward>
                 )}
-              <LinkForward href={pricingHref} trackName="Header Nav Pricing" className={navClass(pricingActive)}>
+              <LinkForward href={pricingHref} trackName="Header nav: pricing" className={navClass(pricingActive)}>
                 {texts.navPricing}
               </LinkForward>
             </nav>
@@ -175,7 +175,7 @@ export function LandingHeader({
                     href={dashHref}
                     aria-label={texts.signIn}
                     onClick={() => {
-                      analytics.track("Click", "Header Dashboard");
+                      analytics.track("Click", "Header dashboard");
                       // Plain anchor to another origin — flush before unload.
                       analytics.flush();
                     }}
@@ -189,7 +189,7 @@ export function LandingHeader({
                     type="button"
                     aria-label={texts.signIn}
                     onClick={() => {
-                      analytics.track("Click", "Header SignIn");
+                      analytics.track("Click", "Header sign in");
                       modal.open("signin");
                     }}
                     className={`inline-flex items-center justify-center h-9 w-9 lg:w-auto lg:px-4 text-sm font-semibold rounded-lg transition-colors whitespace-nowrap ${iconBtn}`}
@@ -203,7 +203,7 @@ export function LandingHeader({
                     href={helpHref}
                     aria-label="Help"
                     onClick={() => {
-                      analytics.track("Click", "Header Help");
+                      analytics.track("Click", "Header help");
                       // Plain anchor — full document navigation, not a soft route change.
                       analytics.flush();
                     }}
@@ -216,7 +216,7 @@ export function LandingHeader({
                   type="button"
                   aria-label={cookieTexts.languageSwitcher}
                   onClick={() => {
-                    analytics.track("Click", "Header Language");
+                    analytics.track("Click", "Header language switcher");
                     setLangOpen(true);
                   }}
                   className={`inline-flex items-center justify-center h-9 w-9 rounded-lg transition-colors ${iconBtn}`}
@@ -232,7 +232,7 @@ export function LandingHeader({
                 aria-label="Menu"
                 aria-expanded={menuOpen}
                 onClick={() => {
-                  analytics.track("Click", `Header Burger ${menuOpen ? "Close" : "Open"}`);
+                  analytics.track("Click", `Header menu ${menuOpen ? "close" : "open"}`);
                   setMenuOpen((v) => !v);
                 }}
                 className={`lg:hidden inline-flex items-center justify-center h-9 w-9 rounded-lg transition-colors ${iconBtn}`}
@@ -247,7 +247,7 @@ export function LandingHeader({
                           key={link.href}
                           href={link.href}
                           prefetch={false}
-                          trackName={`Header Menu ${featureKeyFromHref(link.href)}`}
+                          trackName={`Mobile menu: ${featureLabel(featureKeyFromHref(link.href))}`}
                           className="text-sm font-medium px-3 py-2 rounded-lg hover:bg-muted/50 transition-colors"
                           onClick={closeMenu}
                         >
@@ -257,7 +257,7 @@ export function LandingHeader({
                     : (
                       <LinkForward
                         href={anchor("features")}
-                        trackName="Header Menu Features"
+                        trackName="Mobile menu: features"
                         className="text-sm font-medium px-3 py-2 rounded-lg hover:bg-muted/50 transition-colors"
                         onClick={closeMenu}
                       >
@@ -267,7 +267,7 @@ export function LandingHeader({
                   <LinkForward
                     href={pricingHref}
                     prefetch={false}
-                    trackName="Header Menu Pricing"
+                    trackName="Mobile menu: pricing"
                     className="text-sm font-medium px-3 py-2 rounded-lg hover:bg-muted/50 transition-colors"
                     onClick={closeMenu}
                   >

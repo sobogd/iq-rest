@@ -84,6 +84,12 @@ const FEATURE_LINK_MAP = [0, 3, 2, 1];
 // Each benefit's live demo board: [menu, kitchen, reservations, orders].
 const DEMO_VARIANTS: DemoVariant[] = ["phone", "tablet", "reservations", "orders"];
 
+// Same order again, as words. Event names are read by a person reconstructing a
+// visit, and "Benefit 2 demo" tells them nothing — "Kitchen display demo" does.
+// Kept next to the arrays above so the three stay in step.
+const BENEFIT_LABELS = ["Digital menu", "Kitchen display", "Table booking", "Order taking"];
+const benefitLabel = (i: number) => BENEFIT_LABELS[i] ?? `Benefit ${i + 1}`;
+
 // Shared markup for every per-locale home page — visually identical to the
 // original `/all-in-one` test page. Per-locale data (copy + SEO) stays in each
 // `page.tsx`; only this layout is centralised.
@@ -128,7 +134,7 @@ export function CroHomeTemplate({
         primaryTrack="Hero CTA"
         secondaryLabel={cro.seeIncluded}
         secondaryHref="#bundle"
-        secondaryTrack="Hero Features"
+        secondaryTrack="Hero see included"
         secondaryHideMobile
         microcopy={texts.microcopy}
         heightClass=""
@@ -201,12 +207,12 @@ export function CroHomeTemplate({
                       text={texts.demoText}
                       locale={locale}
                       variant={DEMO_VARIANTS[i]}
-                      trackName={`Benefit ${i + 1} Demo`}
+                      trackName={`${benefitLabel(i)} demo`}
                       className="!text-base"
                     />
                     <LinkForward
                       href={href}
-                      trackName={`Benefit ${i + 1} Details`}
+                      trackName={`${benefitLabel(i)} details link`}
                       className="inline-flex items-center gap-1.5 text-base font-medium text-primary hover:gap-2.5 transition-all"
                     >
                       {cro.seeDetails}
@@ -261,7 +267,7 @@ export function CroHomeTemplate({
               ))}
             </div>
             <div className="mt-10 sm:mt-12 flex justify-center">
-              <CtaButton text={texts.homeCtaText} microcopy={texts.microcopy} locale={locale} align="center" trackName="Mid CTA" />
+              <CtaButton text={texts.homeCtaText} microcopy={texts.microcopy} locale={locale} align="center" trackName="Mid page CTA" />
             </div>
           </div>
         </Section>

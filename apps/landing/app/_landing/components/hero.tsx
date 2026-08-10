@@ -84,7 +84,7 @@ export function Hero({
               locale={locale}
               align="center-mobile"
               trackName="Hero CTA"
-              extra={<DemoButton text={demoText} locale={locale} trackName="Hero Demo" createText={ctaText} variant={demoVariant} />}
+              extra={<DemoButton text={demoText} locale={locale} trackName="Hero demo" createText={ctaText} variant={demoVariant} />}
             />
           </div>
         </div>

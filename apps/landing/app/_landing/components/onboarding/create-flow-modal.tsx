@@ -96,7 +96,7 @@ export function CreateFlowModal({
   // Already-authenticated visitors who land on the modal get bounced to the dashboard.
   useEffect(() => {
     if (!open) return;
-    analytics.track("Show", `Auth Modal ${mode}`);
+    analytics.track("Show", `Auth modal (${mode === "signin" ? "sign in" : "signup"})`);
     closeReasonRef.current = "x";
     let cancelled = false;
     fetch(dashboardApi("/api/auth/check"), { credentials: "include", cache: "no-store" })
@@ -122,7 +122,7 @@ export function CreateFlowModal({
       open={open}
       onOpenChange={(o) => {
         if (o) return;
-        analytics.track("Click", `Auth Modal Close ${closeReasonRef.current} ${mode}`);
+        analytics.track("Click", `Auth modal close (${closeReasonRef.current === "auth" ? "signed in" : "dismissed"}, ${mode === "signin" ? "sign in" : "signup"})`);
         onClose();
       }}
     >

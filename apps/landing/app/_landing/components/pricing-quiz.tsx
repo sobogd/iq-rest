@@ -37,6 +37,14 @@ import type { PricingQuizTexts } from "../types";
 type Cycle = "month" | "year";
 type AddonKey = "reservations" | "ordersKds" | "domain";
 
+// The keys are code identifiers ("ordersKds"); event names are read by a human
+// scanning a timeline, so they carry words instead.
+const ADDON_LABEL: Record<AddonKey, string> = {
+  reservations: "reservations",
+  ordersKds: "orders and kitchen display",
+  domain: "own domain",
+};
+
 export const EN_PRICING_QUIZ: PricingQuizTexts = {
   heading: "Build your plan",
   sub: "Pay only for what you use. Start with the menu and add what you need.",
@@ -154,7 +162,7 @@ export function PricingQuiz({ ctaText, texts }: { ctaText: string; texts?: Prici
                 key={c}
                 type="button"
                 onClick={() => {
-                  analytics.track("Click", `Pricing Cycle ${c}`);
+                  analytics.track("Click", `Billing cycle ${c}`);
                   setCycle(c);
                 }}
                 className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
@@ -174,7 +182,7 @@ export function PricingQuiz({ ctaText, texts }: { ctaText: string; texts?: Prici
               type="button"
               aria-label={t.fewerAria}
               onClick={() => {
-                analytics.track("Click", "Pricing Count Minus");
+                analytics.track("Click", "Venue count minus");
                 setCount((c) => Math.max(1, c - 1));
               }}
               className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:hover:bg-primary"
@@ -187,7 +195,7 @@ export function PricingQuiz({ ctaText, texts }: { ctaText: string; texts?: Prici
               type="button"
               aria-label={t.moreAria}
               onClick={() => {
-                analytics.track("Click", "Pricing Count Plus");
+                analytics.track("Click", "Venue count plus");
                 setCount((c) => Math.min(99, c + 1));
               }}
               className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
@@ -218,7 +226,7 @@ export function PricingQuiz({ ctaText, texts }: { ctaText: string; texts?: Prici
               key={key}
               type="button"
               onClick={() => {
-                analytics.track("Click", `Pricing Addon ${key} ${on ? "Off" : "On"}`);
+                analytics.track("Click", `Addon ${ADDON_LABEL[key]} ${on ? "off" : "on"}`);
                 setFeat((s) => ({ ...s, [key]: !s[key] }));
               }}
               className={`relative flex flex-col items-start text-left rounded-2xl border-2 p-4 sm:p-5 transition-colors ${

@@ -198,3 +198,26 @@ export function featureKeyFromHref(href: string): string {
   if (slug === "help") return "help";
   return FEATURE_BY_SLUG[slug] || slug.replace(/[^a-z0-9]+/gi, "_").toLowerCase();
 }
+
+/**
+ * Human label for a feature token, for use inside analytics event names.
+ *
+ * Event names are read by a person scanning a visit timeline, so "Kitchen
+ * display demo" has to win over "Benefit 2 Demo" or "kds". Anything unmapped
+ * falls back to the token with separators turned into spaces rather than
+ * disappearing — an unfamiliar name is still better than a silent gap.
+ */
+const FEATURE_LABEL: Record<string, string> = {
+  digital: "Digital menu",
+  qr: "QR menu",
+  kds: "Kitchen display",
+  orders: "Order taking",
+  bookings: "Table booking",
+  pricing: "Pricing",
+  help: "Help",
+  home: "Home",
+};
+
+export function featureLabel(key: string): string {
+  return FEATURE_LABEL[key] || key.replace(/[_-]+/g, " ").trim() || "Feature";
+}

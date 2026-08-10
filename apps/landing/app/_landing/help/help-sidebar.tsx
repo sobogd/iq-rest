@@ -12,7 +12,7 @@ export function HelpSidebar({ items }: { items: { id: string; title: string }[] 
           <li key={s.id}>
             <a
               href={`#${s.id}`}
-              onClick={() => analytics.track("Click", `Help Nav ${s.id}`)}
+              onClick={() => analytics.track("Click", `Help nav: ${s.id}`)}
               className="block py-1.5 px-3 text-[14px] text-muted-foreground hover:text-foreground rounded-md hover:bg-card/60 transition-colors"
             >
               {s.title}

@@ -55,7 +55,7 @@ export function HomeTemplate({
         primaryTrack="Hero CTA"
         secondaryLabel={texts.header.viewFeatures}
         secondaryHref="#features"
-        secondaryTrack="Hero Features"
+        secondaryTrack="Hero see features"
         microcopy={texts.microcopy}
         imageSrc="/landing/feature-allergens.webp"
         imageAlt={hero.imageAlt}

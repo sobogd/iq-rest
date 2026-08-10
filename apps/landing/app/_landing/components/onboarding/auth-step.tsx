@@ -55,7 +55,7 @@ type SignupContext = { cuisine?: CuisineKey; restaurantName: string };
 type Screen = "email" | "verify";
 
 function redirectAfterAuth(locale: string, legacyDashboard: boolean) {
-  // The "Auth Verify Success" event is the conversion — it must leave the
+  // The "Code accepted" event is the conversion — it must leave the
   // browser before the document is torn down by the redirect.
   analytics.flush();
   if (legacyDashboard) {
@@ -83,7 +83,7 @@ export function AuthStep({
 
   const switchMode = () => {
     const next = isRegister ? "signin" : "register";
-    analytics.track("Click", `Auth Switch ${next}`);
+    analytics.track("Click", `Switch to ${next === "signin" ? "sign in" : "signup"}`);
     setMode(next);
     setStatus("idle");
     setErrorMessage("");
@@ -115,7 +115,7 @@ export function AuthStep({
 
   const handleGoogleClick = () => {
     if (!GOOGLE_CLIENT_ID) return;
-    analytics.track("Click", "Auth Google");
+    analytics.track("Click", "Sign in with Google");
     const state = encodeState({ locale, signupContext: signupContext ?? undefined });
     const params = new URLSearchParams({
       client_id: GOOGLE_CLIENT_ID,
@@ -133,7 +133,7 @@ export function AuthStep({
 
   const handleAppleClick = () => {
     if (!APPLE_SERVICES_ID) return;
-    analytics.track("Click", "Auth Apple");
+    analytics.track("Click", "Sign in with Apple");
     const state = encodeState({ locale, signupContext: signupContext ?? undefined });
     // scope name+email forces response_mode=form_post — Apple POSTs the
     // callback (and sends the name only on the first authorization). The
@@ -152,10 +152,10 @@ export function AuthStep({
   };
 
   const handleContinue = async () => {
-    analytics.track("Click", "Auth Email Submit");
+    analytics.track("Click", "Email submit");
     const trimmed = email.trim().toLowerCase();
     if (!isValidEmail(trimmed)) {
-      analytics.track("Show", "Auth Email Invalid");
+      analytics.track("Show", "Email invalid");
       setErrorMessage(t("errors.emailInvalid"));
       setStatus("error");
       return;
@@ -171,7 +171,7 @@ export function AuthStep({
       });
       const data = await res.json();
       if (res.ok) {
-        analytics.track("Show", "Auth OTP Sent");
+        analytics.track("Show", "Code sent");
         setCode(Array(CODE_LENGTH).fill(""));
         setCooldown(RESEND_COOLDOWN);
         setStatus("idle");
@@ -187,7 +187,7 @@ export function AuthStep({
   };
 
   const handleVerify = async () => {
-    analytics.track("Click", "Auth Verify Submit");
+    analytics.track("Click", "Code submit");
     const otp = code.join("");
     if (otp.length !== CODE_LENGTH) return;
     setStatus("loading");
@@ -201,7 +201,7 @@ export function AuthStep({
       });
       const data = await res.json();
       if (res.ok) {
-        analytics.track("Show", "Auth Verify Success");
+        analytics.track("Show", "Code accepted");
         redirectAfterAuth(locale, !!data.legacyDashboard);
       } else {
         const key = ERROR_MAP[data.error];
@@ -217,7 +217,7 @@ export function AuthStep({
   };
 
   const handleResend = async () => {
-    analytics.track("Click", "Auth Resend");
+    analytics.track("Click", "Resend code");
     if (cooldown > 0 || resendStatus === "loading") return;
     setResendStatus("loading");
     setErrorMessage("");
@@ -246,7 +246,7 @@ export function AuthStep({
   };
 
   const handleChangeEmail = () => {
-    analytics.track("Click", "Auth Change Email");
+    analytics.track("Click", "Change email");
     setCode(Array(CODE_LENGTH).fill(""));
     setScreen("email");
     setStatus("idle");
@@ -309,7 +309,7 @@ export function AuthStep({
           placeholder={t("emailPlaceholder")}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          onFocus={() => analytics.track("Focus", "Auth Email")}
+          onFocus={() => analytics.track("Focus", "Email field")}
           disabled={status === "loading"}
           className="w-full h-12 px-4 text-base text-foreground bg-background border border-border rounded-xl placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors"
         />
@@ -363,7 +363,7 @@ export function AuthStep({
               href={`/${locale}/terms`}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => analytics.track("Click", "Auth Terms")}
+              onClick={() => analytics.track("Click", "Terms link")}
               className="text-foreground/80 hover:text-foreground underline underline-offset-2 transition-colors"
             >
               {t("consent.terms")}
@@ -373,7 +373,7 @@ export function AuthStep({
               href={`/${locale}/privacy`}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => analytics.track("Click", "Auth Privacy")}
+              onClick={() => analytics.track("Click", "Privacy link")}
               className="text-foreground/80 hover:text-foreground underline underline-offset-2 transition-colors"
             >
               {t("consent.privacy")}
@@ -470,7 +470,7 @@ function VerifyScreen({
         maxLength={CODE_LENGTH}
         value={joined}
         onChange={(e) => setFromString(e.target.value)}
-        onFocus={() => analytics.track("Focus", "Auth OTP")}
+        onFocus={() => analytics.track("Focus", "Code field")}
         onKeyDown={(e) => {
           if (e.key === "Enter" && canVerify) onVerify();
         }}

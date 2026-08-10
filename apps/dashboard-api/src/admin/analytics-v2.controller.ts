@@ -140,7 +140,10 @@ export class AnalyticsV2AdminController {
           (array_agg(e.page ORDER BY e.at ASC))[1] AS first_page,
           -- COUNT over an empty set is 0, so those need no default — but
           -- bool_or over an empty set is NULL, and the UI types these boolean.
-          COALESCE(bool_or(e.action = 'Show' AND e.name LIKE 'Auth Modal%'), false) AS has_modal,
+          -- Matches the landing's signup-modal event name; LIKE is
+          -- case-sensitive in Postgres, so this literal has to track the
+          -- client string exactly (app/_landing/components/onboarding).
+          COALESCE(bool_or(e.action = 'Show' AND e.name LIKE 'Auth modal (%'), false) AS has_modal,
           COALESCE(bool_or(e.action = 'Register'), false) AS has_register
         FROM events_new e
         WHERE e."sessionId" = s.id
@@ -284,7 +287,7 @@ export class AnalyticsV2AdminController {
         eventCount: events.length,
         pageCount: new Set(events.map((e) => e.page)).size,
         firstPage: events[0]?.page ?? null,
-        hasModal: events.some((e) => e.action === "Show" && e.name.startsWith("Auth Modal")),
+        hasModal: events.some((e) => e.action === "Show" && e.name.startsWith("Auth modal (")),
         hasRegister: events.some((e) => e.action === "Register"),
         // venueIds keeps the order of `events` (ascending `at`), i.e. first
         // venue touched first — the same rule the session list applies.

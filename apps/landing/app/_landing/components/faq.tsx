@@ -31,7 +31,7 @@ export function Faq({ texts, centered = false }: FaqProps) {
           href={wa}
           target="_blank"
           rel="noopener noreferrer"
-          trackName="FAQ WhatsApp"
+          trackName="FAQ WhatsApp link"
           className="inline-flex items-center justify-center gap-2 min-h-11 py-2 px-6 rounded-lg bg-[#0F766E] text-white text-sm font-semibold leading-tight hover:opacity-90 active:scale-[0.99] transition-all"
         >
           <MessageCircle className="h-4 w-4" />

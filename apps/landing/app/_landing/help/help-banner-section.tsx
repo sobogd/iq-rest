@@ -18,7 +18,7 @@ export function HelpBannerSection({ banner, source, accent = true }: { banner: H
         <p className="text-base sm:text-lg lg:text-xl text-muted-foreground/70 mb-7 leading-snug">{banner.sub}</p>
         <Link
           href={banner.href}
-          onClick={() => analytics.track("Click", `Help Banner ${source}`)}
+          onClick={() => analytics.track("Click", `Help banner (${source})`)}
           className="group inline-flex items-center justify-center gap-1.5 h-11 px-6 text-base font-semibold text-foreground bg-transparent border border-border rounded-lg hover:bg-muted hover:border-foreground/40 active:scale-[0.99] transition-all whitespace-nowrap"
         >
           {banner.cta}

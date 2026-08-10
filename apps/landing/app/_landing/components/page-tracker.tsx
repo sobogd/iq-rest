@@ -81,10 +81,10 @@ function trackDocumentFacts(): void {
   documentFactsSent = true;
 
   const lang = (document.documentElement.lang || "").toLowerCase();
-  if (/^[a-z]{2,8}$/.test(lang)) analytics.track("Show", `Locale ${lang}`);
+  if (/^[a-z]{2,8}$/.test(lang)) analytics.track("Show", `Page language ${lang}`);
 
   const currency = readBillingCurrencyFromDocument();
-  if (CURRENCY_REGEX.test(currency)) analytics.track("Show", `Currency ${currency}`);
+  if (CURRENCY_REGEX.test(currency)) analytics.track("Show", `Shown currency ${currency}`);
 }
 
 interface PageTrackerProps {
@@ -108,7 +108,7 @@ export function PageTracker({ page }: PageTrackerProps) {
     documentCtxSent = true;
     // The pageview carries the attribution ctx — the server applies it to the
     // session first-write-wins.
-    analytics.track("Show", "Page", attribution);
+    analytics.track("Show", "Pageview", attribution);
     trackDocumentFacts();
 
     // Re-fires on every viewport (re-)entry so the server timeline shows
@@ -127,7 +127,7 @@ export function PageTracker({ page }: PageTrackerProps) {
           if (now - last < SECTION_THROTTLE_MS) continue;
           lastFiredAt.set(name, now);
           const label = toLabel(name);
-          if (label) analytics.track("Show", label);
+          if (label) analytics.track("Show", `${label} section`);
         }
       },
       { threshold: 0.5 },
