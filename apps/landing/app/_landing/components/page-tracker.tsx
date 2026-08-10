@@ -93,7 +93,12 @@ function createScrollReach() {
   let deepestLabel: string | null = null;
   let deepestTop = -1;
   let maxPercent = 0;
-  let sent = false;
+  // Highest quarter already reported. Progress is emitted as the visitor
+  // crosses each quarter rather than only when they leave: the exit signal is
+  // the least reliable moment on mobile (a swiped-away tab may deliver nothing
+  // at all), and a scroll that produced no row until the page died looked like
+  // no scroll at all. Bounded to four rows per pageview by construction.
+  let sentBucket = -1;
 
   const measure = () => {
     const viewportTop = window.scrollY;
@@ -123,13 +128,12 @@ function createScrollReach() {
     }
   };
 
-  const send = () => {
-    if (sent) return;
-    sent = true;
-    measure();
-    // Round DOWN to a quarter: "made it past halfway" is a claim we can stand
-    // behind, "reached 63%" is noise from the viewport height.
-    const bucket = Math.min(100, Math.floor(maxPercent / 25) * 25);
+  // Round DOWN to a quarter: "made it past halfway" is a claim we can stand
+  // behind, "reached 63%" is noise from the viewport height.
+  const bucketNow = () => Math.min(100, Math.floor(maxPercent / 25) * 25);
+
+  const emit = (bucket: number) => {
+    sentBucket = bucket;
     const name =
       startLabel && deepestLabel && startLabel !== deepestLabel
         ? `${startLabel} - ${deepestLabel} (${bucket}%)`
@@ -139,7 +143,29 @@ function createScrollReach() {
     analytics.track("Scroll", name);
   };
 
-  return { measure, send };
+  /** Called on every (coalesced) scroll frame. */
+  const progress = () => {
+    measure();
+    const bucket = bucketNow();
+    if (bucket > sentBucket && bucket > 0) emit(bucket);
+  };
+
+  /** Called when the pageview ends. Reports the final depth if it is deeper
+   *  than whatever was already sent, and — critically — flushes.
+   *
+   *  The flush is not optional. The transport registers its own pagehide /
+   *  visibilitychange handlers when the module loads, i.e. BEFORE this
+   *  component mounts, so on the way out it drains the queue first and this
+   *  event would be enqueued onto a page that is already gone. Flushing here
+   *  beacons it regardless of listener order. */
+  const finish = () => {
+    measure();
+    const bucket = bucketNow();
+    if (bucket > sentBucket || sentBucket < 0) emit(bucket);
+    analytics.flush();
+  };
+
+  return { progress, finish };
 }
 
 interface PageTrackerProps {
@@ -175,24 +201,30 @@ export function PageTracker({ page }: PageTrackerProps) {
       if (frame) return;
       frame = requestAnimationFrame(() => {
         frame = 0;
-        reach.measure();
+        reach.progress();
       });
     };
-    reach.measure();
+    reach.progress();
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll, { passive: true });
-    // Two exits, and both are needed: pagehide covers closing the tab or
-    // following a link out (the transport beacons what is buffered), the effect
-    // cleanup covers a soft navigation, where pagehide never fires. `send` is
-    // idempotent, so the pair can't double-count.
-    window.addEventListener("pagehide", reach.send);
+    // Three exits, and all three are needed. On mobile a tab is usually swiped
+    // away or backgrounded, which fires visibilitychange and often no pagehide
+    // at all; desktop link-outs fire pagehide; a soft navigation fires neither
+    // and only unmounts. finish() reports at most one extra row, so overlapping
+    // signals cannot double-count.
+    const onHide = () => {
+      if (document.visibilityState === "hidden") reach.finish();
+    };
+    window.addEventListener("pagehide", reach.finish);
+    document.addEventListener("visibilitychange", onHide);
 
     return () => {
       if (frame) cancelAnimationFrame(frame);
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
-      window.removeEventListener("pagehide", reach.send);
-      reach.send();
+      window.removeEventListener("pagehide", reach.finish);
+      document.removeEventListener("visibilitychange", onHide);
+      reach.finish();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page, pathname]);
