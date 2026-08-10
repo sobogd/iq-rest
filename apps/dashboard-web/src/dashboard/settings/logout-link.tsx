@@ -5,6 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { ChevronRightIcon } from "../_v2/icons";
 import { logout } from "../_v2/api";
 import { track } from "@/lib/dashboard-events";
+import { flushEvents } from "@/lib/analytics";
 import { landingUrl } from "@/lib/landing-url";
 
 export function LogoutLink() {
@@ -13,8 +14,12 @@ export function LogoutLink() {
  const [busy, setBusy] = useState(false);
 
  async function handle() {
- track("dash_settings_click_logout");
  if (busy) return;
+ track("Click", "Logout");
+ // The server resolves the identity of a batch from the session cookie, so
+ // anything still buffered when logout() kills it would be filed as an
+ // anonymous visit. Ship it while we are still signed in.
+ flushEvents();
  setBusy(true);
  try {
  await logout();

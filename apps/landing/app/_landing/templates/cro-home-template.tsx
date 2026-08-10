@@ -125,10 +125,10 @@ export function CroHomeTemplate({
         titleAccent={cro.hero.titleAccent}
         sub={cro.hero.sub}
         primaryLabel={texts.homeCtaText}
-        primaryTrack="l_cro_hero_cta_click"
+        primaryTrack="Hero CTA"
         secondaryLabel={cro.seeIncluded}
         secondaryHref="#bundle"
-        secondaryTrack="l_cro_hero_features_click"
+        secondaryTrack="Hero Features"
         secondaryHideMobile
         microcopy={texts.microcopy}
         heightClass=""
@@ -201,12 +201,12 @@ export function CroHomeTemplate({
                       text={texts.demoText}
                       locale={locale}
                       variant={DEMO_VARIANTS[i]}
-                      trackEvent={`l_cro_benefit_${i}_demo`}
+                      trackName={`Benefit ${i + 1} Demo`}
                       className="!text-base"
                     />
                     <LinkForward
                       href={href}
-                      trackEvent={`l_cro_benefit_${i}_details`}
+                      trackName={`Benefit ${i + 1} Details`}
                       className="inline-flex items-center gap-1.5 text-base font-medium text-primary hover:gap-2.5 transition-all"
                     >
                       {cro.seeDetails}
@@ -261,7 +261,7 @@ export function CroHomeTemplate({
               ))}
             </div>
             <div className="mt-10 sm:mt-12 flex justify-center">
-              <CtaButton text={texts.homeCtaText} microcopy={texts.microcopy} locale={locale} align="center" trackEvent="l_cro_midcta_cta_click" />
+              <CtaButton text={texts.homeCtaText} microcopy={texts.microcopy} locale={locale} align="center" trackName="Mid CTA" />
             </div>
           </div>
         </Section>

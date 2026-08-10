@@ -29,7 +29,7 @@ export function PastDueModal({ sub }: { sub: BillingSub }) {
   const [open, setOpen] = useState<boolean>(() => shouldShow(sub));
 
   useEffect(() => {
-    if (open) track("dash_past_due_modal_open");
+    if (open) track("Show", "Past due modal");
   }, [open]);
 
   if (!sub || !isPastDue(sub)) return null;
@@ -46,12 +46,12 @@ export function PastDueModal({ sub }: { sub: BillingSub }) {
   };
 
   const hide = () => {
-    track("dash_past_due_modal_dismiss");
+    track("Click", "Past due modal dismiss");
     markShownToday();
     setOpen(false);
   };
   const goBilling = () => {
-    track("dash_past_due_modal_pay");
+    track("Click", "Past due modal pay");
     markShownToday();
     setOpen(false);
     router.push({ name: "settings.billing", from: "menu" });

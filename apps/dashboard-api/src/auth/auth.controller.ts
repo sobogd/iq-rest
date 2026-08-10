@@ -17,6 +17,7 @@ import { AuthService } from "./auth.service";
 import { AppleCallbackDto, EmailLoginDto, GoogleAuthDto, HandoffDto, SendOtpDto, VerifyOtpDto } from "./dto";
 import { authCookieOptions } from "../common/session-utils";
 import { getRequestCurrency } from "../common/geo";
+import { ConversionV2Service } from "../analytics-v2/conversion-v2.service";
 
 const SESSION_COOKIE = "iqr_session";
 const EMAIL_COOKIE = "iqr_email";
@@ -36,7 +37,11 @@ const ACTIVE_RESTAURANT_COOKIE = "iqr_active_restaurant_id";
 export class AuthController {
   private readonly logger = new Logger(AuthController.name);
 
-  constructor(private readonly auth: AuthService, private readonly config: ConfigService) {}
+  constructor(
+    private readonly auth: AuthService,
+    private readonly config: ConfigService,
+    private readonly conversions: ConversionV2Service,
+  ) {}
 
   @Post("send-otp")
   @HttpCode(HttpStatus.OK)
@@ -56,7 +61,7 @@ export class AuthController {
   @Post("verify-otp")
   @HttpCode(HttpStatus.OK)
   async verifyOtp(@Body() dto: VerifyOtpDto, @Req() req: Request, @Res({ passthrough: true }) res: Response) {
-    const { token, onboardingStep, isNewUser, legacyDashboard } = await this.auth.verifyOtp(dto.email, dto.code);
+    const { token, userId, onboardingStep, isNewUser, registered, legacyDashboard } = await this.auth.verifyOtp(dto.email, dto.code);
     const domain = this.config.get<string>("COOKIE_DOMAIN") || undefined;
     const opts = authCookieOptions(domain);
     res.cookie(SESSION_COOKIE, token, opts);
@@ -64,6 +69,10 @@ export class AuthController {
     res.cookie(LEGACY_SESSION_COOKIE, token, opts);
     res.cookie(LEGACY_EMAIL_COOKIE, dto.email, { ...opts, httpOnly: false });
     await this.dropStaleActiveRestaurant(req, res, dto.email);
+    // `registered`, NOT `isNewUser`: the latter means "no restaurant yet →
+    // needs onboarding", and a genuine signup is seeded during verifyOtp, so it
+    // comes back false. See the note in AuthService.verifyOtp.
+    if (registered) this.conversions.onRegistration(req, userId, dto.email, "OTP");
     return { ok: true, onboardingStep, isNewUser, legacyDashboard };
   }
 
@@ -94,6 +103,9 @@ export class AuthController {
     res.cookie(LEGACY_SESSION_COOKIE, result.token, opts);
     res.cookie(LEGACY_EMAIL_COOKIE, result.email, { ...opts, httpOnly: false });
     await this.dropStaleActiveRestaurant(req, res, result.email);
+    if (result.isNewUser) {
+      this.conversions.onRegistration(req, result.userId, result.email, "Google");
+    }
     return {
       ok: true,
       email: result.email,
@@ -150,6 +162,9 @@ export class AuthController {
         currency,
         locale || acceptLang || null,
       );
+      if (result.isNewUser) {
+        this.conversions.onRegistration(req, result.userId, result.email, "Google");
+      }
       // We do NOT set the session cookie on this redirect response — in-app
       // webviews and Safari ITP routinely drop a cookie set by a domain that
       // only appears as a mid-redirect intermediary. Instead hand a one-time
@@ -226,6 +241,9 @@ export class AuthController {
         currency,
         locale || acceptLang || null,
       );
+      if (result.isNewUser) {
+        this.conversions.onRegistration(req, result.userId, result.email, "Apple");
+      }
       // Same one-time-code handoff as the Google callback — see the note there.
       // Apple's form_post lands here cross-site, so a cookie set on this
       // response is even more likely to be dropped by the browser.

@@ -1,0 +1,321 @@
+import { Injectable, Logger } from "@nestjs/common";
+import { Cron, CronExpression } from "@nestjs/schedule";
+import { ConfigService } from "@nestjs/config";
+import { Prisma, SessionNew } from "@iq-rest/db";
+import { GoogleAdsApi, enums } from "google-ads-api";
+import { createHash } from "crypto";
+import type { Request } from "express";
+import { PrismaService } from "../prisma/prisma.service";
+import { AnalyticsSaltService } from "./salt.service";
+import { VisitService } from "./visit.service";
+import { sessionHash } from "./session-hash";
+import { clientIp, clientUa, hashEntropy, visitSeed, type VisitSeed } from "./request-facts";
+
+// The v2 pipeline reports exactly ONE conversion to both ad networks: the
+// completed registration. No ViewContent / InitiateCheckout / demo events.
+const EVENT_NAME = "CompleteRegistration";
+// Give up on a (session, network) after this many error rows. The hourly sweep
+// keeps retrying until then, within a 7-day window — both ad networks reject
+// conversions much older than the click anyway.
+const MAX_ERRORS = 8;
+const SWEEP_WINDOW_DAYS = 7;
+// Safety valve on the hourly sweep: the candidate set is "registrations from
+// the last week that carry a click id and have no success row yet", which is
+// tiny in practice. A cap keeps a data anomaly from turning the cron into a
+// long-running loop against the ad APIs.
+const SWEEP_MAX_SESSIONS = 500;
+/** Marks a visit as one where a registration actually happened. Written by
+ *  handleRegistration; the sweep refuses to report a conversion without it. */
+const REGISTER_ACTION = "Register";
+
+function hashField(value: string): string {
+  return createHash("sha256").update(value.trim().toLowerCase()).digest("hex");
+}
+
+function isDemoEmail(email: string | null | undefined): boolean {
+  return !!email && (email === "demo@iq-rest.com" || email.startsWith("demo+"));
+}
+
+export type RegistrationSource = "OTP" | "Google" | "Apple";
+
+@Injectable()
+export class ConversionV2Service {
+  private readonly logger = new Logger(ConversionV2Service.name);
+  private customerCache: ReturnType<GoogleAdsApi["Customer"]> | null = null;
+  private sweepRunning = false;
+
+  constructor(
+    private readonly prisma: PrismaService,
+    private readonly config: ConfigService,
+    private readonly salt: AnalyticsSaltService,
+    private readonly visits: VisitService,
+  ) {}
+
+  /**
+   * Fire-and-forget hook for the auth endpoints: a brand-new account was just
+   * created by this request. Links the anonymous visit to the account
+   * (same-visit stitch), records the registration event, and — when the visit
+   * carries a paid click id — sends the conversion instantly.
+   *
+   * Takes the whole request so the visit is derived exactly the way the ingest
+   * controller derives it; hashing a different set of facts here would land the
+   * registration on a different visit than the pageviews that produced it.
+   */
+  onRegistration(req: Request, userId: string, email: string, source: RegistrationSource): void {
+    const facts = {
+      ip: clientIp(req),
+      ua: clientUa(req),
+      entropy: hashEntropy(req),
+      seed: visitSeed(req),
+    };
+    void this.handleRegistration(facts, userId, email, source).catch((e) =>
+      this.logger.error(`registration conversion failed for ${userId}: ${String(e)}`),
+    );
+  }
+
+  private async handleRegistration(
+    facts: { ip: string; ua: string; entropy: string; seed: VisitSeed },
+    userId: string,
+    email: string,
+    source: RegistrationSource,
+  ): Promise<void> {
+    const now = new Date();
+    const hash = sessionHash(await this.salt.getSalt(), facts.ip, facts.ua, facts.entropy);
+    // Promotes the anonymous visit in place, so the ad click that started it
+    // keeps its events and its firstAt. If there is no live visit (tracking
+    // blocked, or the signup came in from somewhere we never saw), a row is
+    // created from this request's own facts rather than an empty placeholder.
+    const session = await this.visits.resolveVisit(hash, userId, facts.seed, now);
+
+    const link = await this.prisma.restaurantUser.findFirst({
+      where: { userId },
+      orderBy: { addedAt: "asc" },
+      select: { restaurantId: true },
+    });
+    await this.prisma.eventNew.create({
+      data: {
+        sessionId: session.id,
+        page: "Auth",
+        action: REGISTER_ACTION,
+        name: source,
+        restaurantId: link?.restaurantId ?? null,
+      },
+    });
+
+    if (!session.aid || isDemoEmail(email)) return;
+    await this.sendForSession(session, email, userId);
+  }
+
+  /** Send the registration conversion for a session to its ad network, unless
+   *  the journal says it already succeeded or is given up on. */
+  private async sendForSession(session: SessionNew, email: string | null, userId: string | null): Promise<void> {
+    if (!session.aid || !session.atype) return;
+    const network = session.atype === "F" ? "meta" : "google";
+
+    const journal = await this.prisma.conversionSendNew.findMany({
+      where: { sessionId: session.id, network },
+      select: { status: true },
+    });
+    if (journal.some((j) => j.status === "success")) return;
+    if (journal.filter((j) => j.status === "error").length >= MAX_ERRORS) return;
+
+    try {
+      if (network === "meta") await this.sendMeta(session, email, userId);
+      else await this.sendGoogle(session, email);
+    } catch (e) {
+      this.logger.warn(`${network} conversion send failed for session ${session.id}: ${String(e)}`);
+    }
+  }
+
+  private async sendMeta(session: SessionNew, email: string | null, userId: string | null): Promise<void> {
+    const token = this.config.get<string>("FB_ADS_TOKEN");
+    const pixelId = this.config.get<string>("FB_ADS_PIXEL_ID");
+    if (!token || !pixelId || !session.aid) return;
+
+    const clickMs = session.clickAt ? session.clickAt.getTime() : Date.now();
+    const userData: Record<string, unknown> = { fbc: `fb.1.${clickMs}.${session.aid}` };
+    if (email) userData.em = [hashField(email)];
+    if (userId) userData.external_id = [hashField(userId)];
+    const sourceUrl =
+      (this.config.get<string>("LANDING_URL") || "https://iq-rest.com").replace(/\/$/, "") + "/";
+
+    let status = "error";
+    let response: unknown = {};
+    try {
+      const res = await fetch(
+        `https://graph.facebook.com/v21.0/${pixelId}/events?access_token=${token}`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            data: [
+              {
+                event_name: EVENT_NAME,
+                event_time: Math.floor(Date.now() / 1000),
+                // Stable per-click id so Meta dedups our own retries.
+                event_id: createHash("sha256").update(`${session.aid}:${EVENT_NAME}`).digest("hex"),
+                action_source: "website",
+                event_source_url: sourceUrl,
+                user_data: userData,
+              },
+            ],
+          }),
+        },
+      );
+      response = await res.json().catch(() => ({}));
+      status = res.ok ? "success" : "error";
+    } catch (e) {
+      response = { error: String(e) };
+    }
+    await this.prisma.conversionSendNew.create({
+      data: { sessionId: session.id, network: "meta", status, response: response as Prisma.InputJsonValue },
+    });
+    if (status === "success") this.logger.log(`meta ${EVENT_NAME} sent for session ${session.id}`);
+  }
+
+  /** Format a timestamp for Google's conversion_date_time:
+   *  "yyyy-MM-dd HH:mm:ss+HH:MM" in Europe/Madrid (the account timezone). */
+  private madridDateTime(ms: number): string {
+    const d = new Date(ms);
+    const parts = new Intl.DateTimeFormat("en-CA", {
+      timeZone: "Europe/Madrid",
+      year: "numeric", month: "2-digit", day: "2-digit",
+      hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false,
+    }).formatToParts(d);
+    const p = (t: string) => parts.find((x) => x.type === t)!.value;
+    const asUtc = Date.UTC(+p("year"), +p("month") - 1, +p("day"), +p("hour") === 24 ? 0 : +p("hour"), +p("minute"), +p("second"));
+    const offMin = Math.round((asUtc - Math.floor(ms / 1000) * 1000) / 60000);
+    const sign = offMin >= 0 ? "+" : "-";
+    const abs = Math.abs(offMin);
+    const oh = String(Math.floor(abs / 60)).padStart(2, "0");
+    const om = String(abs % 60).padStart(2, "0");
+    const hh = p("hour") === "24" ? "00" : p("hour");
+    return `${p("year")}-${p("month")}-${p("day")} ${hh}:${p("minute")}:${p("second")}${sign}${oh}:${om}`;
+  }
+
+  private getCustomer() {
+    if (this.customerCache) return this.customerCache;
+    const client = new GoogleAdsApi({
+      client_id: this.config.get<string>("GOOGLE_ADS_CLIENT_ID")!,
+      client_secret: this.config.get<string>("GOOGLE_ADS_CLIENT_SECRET")!,
+      developer_token: this.config.get<string>("GOOGLE_ADS_DEVELOPER_TOKEN")!,
+    });
+    this.customerCache = client.Customer({
+      customer_id: this.config.get<string>("GOOGLE_ADS_CUSTOMER_ID")!,
+      login_customer_id: this.config.get<string>("GOOGLE_ADS_LOGIN_CUSTOMER_ID"),
+      refresh_token: this.config.get<string>("GOOGLE_ADS_REFRESH_TOKEN")!,
+    });
+    return this.customerCache;
+  }
+
+  private async sendGoogle(session: SessionNew, email: string | null): Promise<void> {
+    const cid = this.config.get<string>("GOOGLE_ADS_CUSTOMER_ID");
+    const actionId = this.config.get<string>("GOOGLE_ADS_CONVERSION_ACTION_ID");
+    if (
+      !cid ||
+      !actionId ||
+      !this.config.get<string>("GOOGLE_ADS_REFRESH_TOKEN") ||
+      !this.config.get<string>("GOOGLE_ADS_DEVELOPER_TOKEN") ||
+      !session.aid
+    )
+      return;
+
+    // gclid / gbraid / wbraid are distinct fields on ClickConversion — iOS
+    // clicks arrive as gbraid/wbraid and are lost if uploaded as gclid.
+    const idField =
+      session.aidField === "gbraid" || session.aidField === "wbraid" ? session.aidField : "gclid";
+    const conversion: Record<string, unknown> = {
+      [idField]: session.aid,
+      conversion_action: `customers/${cid}/conversionActions/${actionId}`,
+      conversion_date_time: this.madridDateTime(Date.now()),
+    };
+    if (email) {
+      conversion.user_identifiers = [
+        { hashed_email: hashField(email), user_identifier_source: enums.UserIdentifierSource.FIRST_PARTY },
+      ];
+    }
+
+    let status = "error";
+    let response: unknown = {};
+    try {
+      const res = await this.getCustomer().conversionUploads.uploadClickConversions({
+        customer_id: cid,
+        conversions: [conversion],
+        partial_failure: true,
+      } as never);
+      const pf = (res as { partial_failure_error?: unknown }).partial_failure_error;
+      status = pf ? "error" : "success";
+      response = pf
+        ? { partial_failure_error: pf }
+        : { results: (res as { results?: unknown }).results ?? [] };
+    } catch (e) {
+      response = { error: String(e) };
+    }
+    await this.prisma.conversionSendNew.create({
+      data: { sessionId: session.id, network: "google", status, response: response as Prisma.InputJsonValue },
+    });
+    if (status === "success") this.logger.log(`google ${EVENT_NAME} sent for session ${session.id}`);
+  }
+
+  /**
+   * Hourly safety net: instant sends that failed (network blip, Meta/Google
+   * 5xx) are retried while the raw click id is still alive (7 days).
+   *
+   * The candidate filter matters as much as the retry. "Signed in and carries a
+   * click id" is NOT a registration — an existing customer who clicks a
+   * retargeting ad matches it, and reporting that as CompleteRegistration
+   * inflates conversions and poisons smart bidding on both networks. Only
+   * visits that actually recorded a Register event qualify, and only while they
+   * have no success row yet.
+   */
+  @Cron(CronExpression.EVERY_HOUR)
+  async sweep(): Promise<void> {
+    if (this.sweepRunning) return;
+    this.sweepRunning = true;
+    try {
+      const since = new Date(Date.now() - SWEEP_WINDOW_DAYS * 24 * 3600_000);
+      const candidates = await this.prisma.sessionNew.findMany({
+        where: {
+          userId: { not: null },
+          aid: { not: null },
+          firstAt: { gte: since },
+          events: { some: { action: REGISTER_ACTION } },
+        },
+        orderBy: { firstAt: "asc" },
+        take: SWEEP_MAX_SESSIONS,
+      });
+      if (candidates.length === 0) return;
+
+      // Two batched lookups instead of two queries per candidate.
+      const ids = candidates.map((s) => s.id);
+      const settled = new Set(
+        (
+          await this.prisma.conversionSendNew.findMany({
+            where: { sessionId: { in: ids }, status: "success" },
+            select: { sessionId: true },
+          })
+        ).map((r) => r.sessionId),
+      );
+      const userIds = [...new Set(candidates.map((s) => s.userId!))];
+      const users = new Map(
+        (
+          await this.prisma.user.findMany({
+            where: { id: { in: userIds } },
+            select: { id: true, email: true, isDemo: true },
+          })
+        ).map((u) => [u.id, u]),
+      );
+
+      for (const session of candidates) {
+        if (settled.has(session.id)) continue;
+        const user = users.get(session.userId!);
+        if (!user || user.isDemo || isDemoEmail(user.email)) continue;
+        await this.sendForSession(session, user.email, session.userId);
+      }
+    } catch (e) {
+      this.logger.error(`conversion sweep failed: ${String(e)}`);
+    } finally {
+      this.sweepRunning = false;
+    }
+  }
+}

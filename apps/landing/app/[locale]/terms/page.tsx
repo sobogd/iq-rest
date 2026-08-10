@@ -18,6 +18,7 @@ export default async function TermsPage({
       title={TERMS_TITLE}
       sections={TERMS_SECTIONS}
       locale={locale}
+      trackPage="terms"
     />
   );
 }

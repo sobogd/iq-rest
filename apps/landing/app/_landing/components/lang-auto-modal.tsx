@@ -18,10 +18,10 @@ import { analytics } from "@/lib/analytics";
  *   • `lang=<locale>`  → immediately redirect to that locale's homepage.
  *
  * The query string is captured SYNCHRONOUSLY in a useState initializer — it must
- * be read before PageTracker's mount effect strips every param from the URL
- * (child effects run before this layout-level component's own effect). The
- * params themselves are left in place so PageTracker still fires its
- * `l_param_lang__*` / `l_param_from__*` analytics events before cleaning.
+ * be read before PageTracker's mount effect strips every param from the URL,
+ * and the render pass always runs ahead of any effect. This component is
+ * mounted AFTER the page in the tree so PageTracker's effect (which sets the
+ * analytics page label) has already run by the time we track anything here.
  */
 
 /** Same page in the target locale — swapLocale honours per-locale SEO slugs
@@ -75,6 +75,7 @@ export function LangAutoModal() {
       rememberLocale(explicit);
       params.delete("lang");
       const qs = params.toString();
+      analytics.flush();
       window.location.replace(localizedHref(explicit) + (qs ? `?${qs}` : ""));
       return;
     }
@@ -92,8 +93,8 @@ export function LangAutoModal() {
     // Nothing to choose between → don't bother the user with a one-option modal.
     if (unique.length <= 1) return;
     setSuggestions(unique);
-    // Suffix = the exact list of locales offered, e.g. l_langmodal_open_es_en_fr.
-    analytics.track(`l_langmodal_open_${unique.join("_")}`);
+    // Suffix = the exact list of locales offered, e.g. "Lang Modal es en fr".
+    analytics.track("Show", `Lang Modal ${unique.join(" ")}`);
   }, [initialSearch]);
 
   if (!suggestions) return null;
@@ -103,7 +104,7 @@ export function LangAutoModal() {
       open
       onOpenChange={(o) => {
         if (o) return;
-        analytics.track("l_langmodal_close");
+        analytics.track("Click", "Lang Modal Close");
         setSuggestions(null);
       }}
     >
@@ -129,7 +130,9 @@ export function LangAutoModal() {
                 href={localizedHref(locale)}
                 onClick={() => {
                   rememberLocale(locale);
-                  analytics.track(`l_langmodal_pick_${locale}`);
+                  analytics.track("Click", `Lang Modal Pick ${locale}`);
+                  // Plain anchor to another locale — full document navigation.
+                  analytics.flush();
                 }}
                 className="w-full h-12 text-base font-medium text-foreground bg-background border border-border rounded-xl hover:border-foreground active:scale-[0.99] transition-all flex items-center justify-center gap-3 cursor-pointer"
               >

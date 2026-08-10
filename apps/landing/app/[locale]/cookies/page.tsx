@@ -18,6 +18,7 @@ export default async function CookiesPage({
       title={COOKIE_POLICY_TITLE}
       sections={COOKIE_POLICY_SECTIONS}
       locale={locale}
+      trackPage="cookies"
     />
   );
 }

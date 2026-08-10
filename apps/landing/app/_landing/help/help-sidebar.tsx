@@ -2,7 +2,7 @@
 
 import { analytics } from "@/lib/analytics";
 
-// Sticky in-page navigation. Each anchor click fires l_help_nav_<id> so we can
+// Sticky in-page navigation. Each anchor click fires "Help Nav <id>" so we can
 // see which sections users jump to.
 export function HelpSidebar({ items }: { items: { id: string; title: string }[] }) {
   return (
@@ -12,7 +12,7 @@ export function HelpSidebar({ items }: { items: { id: string; title: string }[] 
           <li key={s.id}>
             <a
               href={`#${s.id}`}
-              onClick={() => analytics.track(`l_help_nav_${s.id}`)}
+              onClick={() => analytics.track("Click", `Help Nav ${s.id}`)}
               className="block py-1.5 px-3 text-[14px] text-muted-foreground hover:text-foreground rounded-md hover:bg-card/60 transition-colors"
             >
               {s.title}

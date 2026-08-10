@@ -52,10 +52,10 @@ export function HomeTemplate({
         titleAccent={hero.titleAccent}
         sub={hero.sub}
         primaryLabel={texts.homeCtaText}
-        primaryTrack="l_home_hero_cta_click"
+        primaryTrack="Hero CTA"
         secondaryLabel={texts.header.viewFeatures}
         secondaryHref="#features"
-        secondaryTrack="l_home_hero_features_click"
+        secondaryTrack="Hero Features"
         microcopy={texts.microcopy}
         imageSrc="/landing/feature-allergens.webp"
         imageAlt={hero.imageAlt}

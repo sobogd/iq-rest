@@ -18,8 +18,12 @@ export async function LandingI18nWrap({
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
       <BrandSchema />
-      <LangAutoModal />
       <OnboardingModalProvider>{children}</OnboardingModalProvider>
+      {/* After the page, not before: effects flush children-first, so this
+          ordering guarantees PageTracker has published the page label before
+          the modal fires its own events. It renders into a portal, so the
+          position in the tree has no visual effect. */}
+      <LangAutoModal />
     </NextIntlClientProvider>
   );
 }

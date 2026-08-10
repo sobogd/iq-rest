@@ -116,7 +116,7 @@ export function CategoryForm({
  const [alert, setAlert] = useState<{ title: string; message: string } | null>(null);
 
  async function save() {
- track("dash_category_click_save");
+ track("Click", "Category save");
  if (saving) return;
  if (namePrimary.length === 0) {
  setAlert({
@@ -148,21 +148,21 @@ export function CategoryForm({
  }
  onSavedRedirect();
  } catch (err) {
- track("dash_category_save_error", { error: String(err) });
+ track("Error", "Category save");
  setSaveErrorOpen(true);
  setSaving(false);
  }
  }
 
  async function confirmDelete() {
- track("dash_category_click_delete");
+ track("Click", "Category delete");
  if (!category) return;
  setDeleting(true);
  try {
  await deleteCategory(category.id);
  onDeletedRedirect();
  } catch (err) {
- showApiError(err, "dash_category_delete");
+ showApiError(err, "Category delete");
  setDeleting(false);
  setConfirmOpen(false);
  }
@@ -176,7 +176,7 @@ export function CategoryForm({
  <div>
  <EditPageHeader
  onBack={() => {
- track("dash_category_click_back");
+ track("Click", "Category back");
  if (isDirty && !saving) { setUnsavedOpen(true); return; }
  onBack();
  }}
@@ -188,8 +188,8 @@ export function CategoryForm({
  onSave={save}
  canSave={!saving}
  saving={saving}
- onLangsOpen={() => track("dash_category_click_langs")}
- onLangSelect={() => track("dash_category_click_lang")}
+ onLangsOpen={() => track("Click", "Category languages")}
+ onLangSelect={() => track("Click", "Category language")}
  />
 
  <div className="max-w-5xl mx-auto md:px-6">
@@ -203,7 +203,7 @@ export function CategoryForm({
  languages={languages}
  onChange={(v) => setForm((f) => ({ ...f, name: v }))}
  placeholder={t("namePlaceholder")}
- onFocus={() => track("dash_category_focus_name_input")}
+ onFocus={() => track("Focus", "Category name")}
  />
 
  {!editingGroup && availableGroups.length > 0 ? (
@@ -560,7 +560,7 @@ export function DishForm({
  }
  return savedId;
  } catch (err) {
- track("dash_item_save_error", { error: String(err) });
+ track("Error", "Item save");
  setSaveErrorOpen(true);
  setSaving(false);
  return null;
@@ -568,7 +568,7 @@ export function DishForm({
  }
 
  async function save() {
- track("dash_item_click_save");
+ track("Click", "Item save");
  await persist("list");
  }
 
@@ -578,12 +578,12 @@ export function DishForm({
  // before opening, which meant every option click cost a full dish
  // auto-translate cycle.
  function handleAddOption() {
- track("dash_item_click_add_option");
+ track("Click", "Item add option");
  setOptionModal({ kind: "new" });
  }
 
  function handleEditOption(optId: string) {
- track("dash_item_click_edit_option");
+ track("Click", "Item edit option");
  setOptionModal({ kind: "edit", id: optId });
  }
 
@@ -597,14 +597,14 @@ export function DishForm({
  void router;
 
  async function confirmDelete() {
- track("dash_item_click_delete");
+ track("Click", "Item delete");
  if (!dish) return;
  setDeleting(true);
  try {
  await deleteItem(dish.id);
  onDeletedRedirect();
  } catch (err) {
- showApiError(err, "dash_item_delete");
+ showApiError(err, "Item delete");
  setDeleting(false);
  setConfirmOpen(false);
  }
@@ -614,7 +614,7 @@ export function DishForm({
  // Can't duplicate an orphaned dish — there's no category to place the copy
  // in. (The duplicate button is hidden for the No-category bucket anyway.)
  if (!dish || !dish.categoryId || duplicating) return;
- track("dash_item_click_duplicate");
+ track("Click", "Item duplicate");
  setDuplicating(true);
  const copySuffix = " (" + tc("copy", { defaultValue: "copy" }) + ")";
  const newName: Ml = { ...dish.name };
@@ -645,7 +645,7 @@ export function DishForm({
  });
  onSavedRedirect(created.id);
  } catch (err) {
- showApiError(err, "dash_item_duplicate");
+ showApiError(err, "Item duplicate");
  setDuplicating(false);
  }
  }
@@ -659,7 +659,7 @@ export function DishForm({
  <div>
  <EditPageHeader
  onBack={() => {
- track("dash_item_click_back");
+ track("Click", "Item back");
  if (isDirty && !saving) { setUnsavedOpen(true); return; }
  onBack();
  }}
@@ -671,8 +671,8 @@ export function DishForm({
  onSave={save}
  canSave={!saving}
  saving={saving}
- onLangsOpen={() => track("dash_item_click_langs")}
- onLangSelect={() => track("dash_item_click_lang")}
+ onLangsOpen={() => track("Click", "Item languages")}
+ onLangSelect={() => track("Click", "Item language")}
  />
 
  <div className="max-w-5xl mx-auto md:px-6 space-y-3">
@@ -682,9 +682,9 @@ export function DishForm({
  <PhotoPicker
  url={form.photoUrl}
  onChange={(url) => setForm((f) => ({ ...f, photoUrl: url }))}
- onAiClick={() => { track("dash_item_click_generate_photo"); setAiOpen(true); }}
- onAddClick={() => track("dash_item_click_add_photo")}
- onRemoveClick={() => track("dash_item_click_delete_photo")}
+ onAiClick={() => { track("Click", "Item generate photo"); setAiOpen(true); }}
+ onAddClick={() => track("Click", "Item add photo")}
+ onRemoveClick={() => track("Click", "Item delete photo")}
  inputId="dish-photo"
  width="w-full"
  height="aspect-square"
@@ -702,7 +702,7 @@ export function DishForm({
  languages={languages}
  onChange={(v) => setForm((f) => ({ ...f, name: v }))}
  placeholder={t("namePlaceholder")}
- onFocus={() => track("dash_item_focus_name_input")}
+ onFocus={() => track("Focus", "Item name")}
  />
  </div>
  <div className="w-24 shrink-0">
@@ -717,7 +717,7 @@ export function DishForm({
  placeholder={t("pricePlaceholder")}
  value={form.price}
  onChange={(e) => setForm((f) => ({ ...f, price: sanitizePriceInput(e.target.value) }))}
- onFocus={() => track("dash_item_focus_price_input")}
+ onFocus={() => track("Focus", "Item price")}
  className={inputClass + " pl-3 pr-8 tabular-nums"}
  />
  <span className="absolute top-1 right-1 w-8 h-8 inline-flex items-center justify-center text-sm text-muted-foreground pointer-events-none">
@@ -736,7 +736,7 @@ export function DishForm({
  onChange={(v) => setForm((f) => ({ ...f, description: v }))}
  placeholder={t("descPlaceholder")}
  multiline
- onFocus={() => track("dash_item_focus_description_input")}
+ onFocus={() => track("Focus", "Item description")}
  />
  </div>
  </div>
@@ -760,7 +760,7 @@ export function DishForm({
  key={d.code}
  type="button"
  onClick={() => {
- track(form.diets.includes(d.code) ? "dash_item_click_diet_off" : "dash_item_click_diet_on");
+ track("Toggle", form.diets.includes(d.code) ? "Item diet off" : "Item diet on");
  toggleDiet(d.code);
  }}
  className={
@@ -796,7 +796,7 @@ export function DishForm({
  key={a.code}
  type="button"
  onClick={() => {
- track(form.allergens.includes(a.code) ? "dash_item_click_allergen_off" : "dash_item_click_allergen_on");
+ track("Toggle", form.allergens.includes(a.code) ? "Item allergen off" : "Item allergen on");
  toggleAllergen(a.code);
  }}
  className={
@@ -841,7 +841,7 @@ export function DishForm({
  <ToggleSwitch
  checked={form.visible}
  onChange={() => {
- track("dash_item_click_visible_toggle");
+ track("Toggle", "Item visible");
  setForm((f) => ({ ...f, visible: !f.visible }));
  }}
  />
@@ -897,7 +897,7 @@ export function DishForm({
  title={t("aiTitle")}
  defaultPrompt={pickAnyMlValue(form.name, defaultLang)}
  aspect="square"
- eventPrefix="dash_item"
+ namePrefix="Item"
  />
 
  <UnsavedChangesDialog
@@ -1214,7 +1214,7 @@ export function OptionForm({
  return { ...f, variants: next };
  });
  } catch (err) {
- showApiError(err, "dash_option_translate_variants");
+ showApiError(err, "Option translate variants");
  } finally {
  setTranslatingAll(false);
  }
@@ -1268,7 +1268,7 @@ export function OptionForm({
  await persistDishOptions(dish, nextOptions, defaultLang);
  onSavedRedirect?.();
  } catch (err) {
- showApiError(err, isNew ? "dash_option_create" : "dash_option_update");
+ showApiError(err, isNew ? "Option create" : "Option update");
  setSaving(false);
  }
  }
@@ -1292,7 +1292,7 @@ export function OptionForm({
  await persistDishOptions(dish, nextOptions, defaultLang);
  onDeletedRedirect?.();
  } catch (err) {
- showApiError(err, "dash_option_delete");
+ showApiError(err, "Option delete");
  setDeleting(false);
  setConfirmOpen(false);
  }

@@ -39,7 +39,7 @@ export function MenuPreviewModal({ menuUrl, children, className, open: controlle
   useScrollLock(open);
 
   const handleClose = () => {
-    track("dash_menu_preview_close");
+    track("Click", "Menu preview close");
     setOpen(false);
   };
 

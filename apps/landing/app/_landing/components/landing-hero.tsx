@@ -184,7 +184,7 @@ export function LandingHero({
             <DemoButton
               text={demoText}
               locale={locale}
-              trackEvent={`${primaryTrack}_demo`}
+              trackName={`${primaryTrack} Demo`}
               variant={demoVariant}
               className={`h-11 px-6 !text-base !font-semibold !text-white !bg-white/10 hover:!bg-white/20 backdrop-blur !border-white/30 ${demoHideMobile ? "!hidden sm:!inline-flex" : ""}`}
             />
@@ -192,7 +192,11 @@ export function LandingHero({
           {secondaryLabel ? (
             <a
               href={secondaryHref}
-              onClick={() => secondaryTrack && analytics.track(secondaryTrack)}
+              onClick={() => {
+                if (secondaryTrack) analytics.track("Click", secondaryTrack);
+                // Plain anchor — the document is replaced, so drain the buffer.
+                analytics.flush();
+              }}
               className={`inline-flex items-center justify-center h-11 px-6 text-base font-semibold text-white bg-white/10 hover:bg-white/20 backdrop-blur border border-white/30 rounded-lg transition-colors whitespace-nowrap ${secondaryHideMobile ? "hidden sm:inline-flex" : ""} ${secondaryPinRight ? "sm:ml-auto" : ""}`}
             >
               {secondaryLabel}

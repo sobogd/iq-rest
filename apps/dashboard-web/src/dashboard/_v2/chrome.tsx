@@ -18,22 +18,13 @@ import { track } from "@/lib/dashboard-events";
 import { useDashboardRouter } from "../_spa/router";
 import type { View } from "../_spa/types";
 
-const HEADER_NAV_EVENT: Record<TabId, string> = {
- menu: "dash_header_nav_menu",
- reservations: "dash_header_nav_booking",
- orders: "dash_header_nav_orders",
- kitchen: "dash_header_nav_kitchen",
- analytics: "dash_header_nav_analytics",
- settings: "dash_header_nav_settings",
-};
-
-const BOTTOM_NAV_EVENT: Record<TabId, string> = {
- menu: "dash_bottom_bar_nav_menu",
- reservations: "dash_bottom_bar_nav_booking",
- orders: "dash_bottom_bar_nav_orders",
- kitchen: "dash_bottom_bar_nav_kitchen",
- analytics: "dash_bottom_bar_nav_analytics",
- settings: "dash_bottom_bar_nav_settings",
+const NAV_NAME: Record<TabId, string> = {
+  menu: "menu",
+  reservations: "booking",
+  orders: "orders",
+  kitchen: "kitchen",
+  analytics: "analytics",
+  settings: "settings",
 };
 
 interface NavTab {
@@ -206,7 +197,7 @@ function TopNav({ activeTab, t }: { activeTab: TabId; t: (k: NavTab["labelKey"])
  key={tab.id}
  type="button"
  onClick={() => {
- track(HEADER_NAV_EVENT[tab.id]);
+ track("Click", `Nav ${NAV_NAME[tab.id]}`);
  router.resetTo(tab.view);
  }}
  className={"h-9 px-3 text-sm font-medium rounded-lg transition-colors inline-flex items-center " + cls}
@@ -238,7 +229,7 @@ function BottomNav({ activeTab }: { activeTab: TabId }) {
  type="button"
  aria-label={t(tab.labelKey)}
  onClick={() => {
- track(BOTTOM_NAV_EVENT[tab.id]);
+ track("Click", `Bottom nav ${NAV_NAME[tab.id]}`);
  router.resetTo(tab.view);
  }}
  className={"flex-1 flex items-center justify-center py-4 transition-colors " + cls}

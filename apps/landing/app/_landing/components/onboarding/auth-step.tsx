@@ -55,6 +55,9 @@ type SignupContext = { cuisine?: CuisineKey; restaurantName: string };
 type Screen = "email" | "verify";
 
 function redirectAfterAuth(locale: string, legacyDashboard: boolean) {
+  // The "Auth Verify Success" event is the conversion — it must leave the
+  // browser before the document is torn down by the redirect.
+  analytics.flush();
   if (legacyDashboard) {
     // Legacy users land on the old monolith dashboard, which lives on iq-rest.com.
     window.location.assign(`/${locale}/dashboard`);
@@ -80,7 +83,7 @@ export function AuthStep({
 
   const switchMode = () => {
     const next = isRegister ? "signin" : "register";
-    analytics.track(`l_onb_switch_${next}`);
+    analytics.track("Click", `Auth Switch ${next}`);
     setMode(next);
     setStatus("idle");
     setErrorMessage("");
@@ -112,7 +115,7 @@ export function AuthStep({
 
   const handleGoogleClick = () => {
     if (!GOOGLE_CLIENT_ID) return;
-    analytics.track("l_onb_google_click");
+    analytics.track("Click", "Auth Google");
     const state = encodeState({ locale, signupContext: signupContext ?? undefined });
     const params = new URLSearchParams({
       client_id: GOOGLE_CLIENT_ID,
@@ -124,12 +127,13 @@ export function AuthStep({
       include_granted_scopes: "true",
       state,
     });
+    analytics.flush();
     window.location.assign(`https://accounts.google.com/o/oauth2/v2/auth?${params.toString()}`);
   };
 
   const handleAppleClick = () => {
     if (!APPLE_SERVICES_ID) return;
-    analytics.track("l_onb_apple_click");
+    analytics.track("Click", "Auth Apple");
     const state = encodeState({ locale, signupContext: signupContext ?? undefined });
     // scope name+email forces response_mode=form_post — Apple POSTs the
     // callback (and sends the name only on the first authorization). The
@@ -143,14 +147,15 @@ export function AuthStep({
       scope: "name email",
       state,
     });
+    analytics.flush();
     window.location.assign(`https://appleid.apple.com/auth/authorize?${params.toString()}`);
   };
 
   const handleContinue = async () => {
-    analytics.track("l_onb_email_submit");
+    analytics.track("Click", "Auth Email Submit");
     const trimmed = email.trim().toLowerCase();
     if (!isValidEmail(trimmed)) {
-      analytics.track("l_onb_email_invalid");
+      analytics.track("Show", "Auth Email Invalid");
       setErrorMessage(t("errors.emailInvalid"));
       setStatus("error");
       return;
@@ -166,7 +171,7 @@ export function AuthStep({
       });
       const data = await res.json();
       if (res.ok) {
-        analytics.track("l_onb_otp_sent");
+        analytics.track("Show", "Auth OTP Sent");
         setCode(Array(CODE_LENGTH).fill(""));
         setCooldown(RESEND_COOLDOWN);
         setStatus("idle");
@@ -182,7 +187,7 @@ export function AuthStep({
   };
 
   const handleVerify = async () => {
-    analytics.track("l_onb_verify_submit");
+    analytics.track("Click", "Auth Verify Submit");
     const otp = code.join("");
     if (otp.length !== CODE_LENGTH) return;
     setStatus("loading");
@@ -196,7 +201,7 @@ export function AuthStep({
       });
       const data = await res.json();
       if (res.ok) {
-        analytics.track("l_onb_verify_success");
+        analytics.track("Show", "Auth Verify Success");
         redirectAfterAuth(locale, !!data.legacyDashboard);
       } else {
         const key = ERROR_MAP[data.error];
@@ -212,7 +217,7 @@ export function AuthStep({
   };
 
   const handleResend = async () => {
-    analytics.track("l_onb_resend_click");
+    analytics.track("Click", "Auth Resend");
     if (cooldown > 0 || resendStatus === "loading") return;
     setResendStatus("loading");
     setErrorMessage("");
@@ -241,7 +246,7 @@ export function AuthStep({
   };
 
   const handleChangeEmail = () => {
-    analytics.track("l_onb_change_email_click");
+    analytics.track("Click", "Auth Change Email");
     setCode(Array(CODE_LENGTH).fill(""));
     setScreen("email");
     setStatus("idle");
@@ -304,7 +309,7 @@ export function AuthStep({
           placeholder={t("emailPlaceholder")}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          onFocus={() => analytics.track("l_onb_email_focus")}
+          onFocus={() => analytics.track("Focus", "Auth Email")}
           disabled={status === "loading"}
           className="w-full h-12 px-4 text-base text-foreground bg-background border border-border rounded-xl placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors"
         />
@@ -358,7 +363,7 @@ export function AuthStep({
               href={`/${locale}/terms`}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => analytics.track("l_onb_open_terms")}
+              onClick={() => analytics.track("Click", "Auth Terms")}
               className="text-foreground/80 hover:text-foreground underline underline-offset-2 transition-colors"
             >
               {t("consent.terms")}
@@ -368,7 +373,7 @@ export function AuthStep({
               href={`/${locale}/privacy`}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => analytics.track("l_onb_open_privacy")}
+              onClick={() => analytics.track("Click", "Auth Privacy")}
               className="text-foreground/80 hover:text-foreground underline underline-offset-2 transition-colors"
             >
               {t("consent.privacy")}
@@ -465,7 +470,7 @@ function VerifyScreen({
         maxLength={CODE_LENGTH}
         value={joined}
         onChange={(e) => setFromString(e.target.value)}
-        onFocus={() => analytics.track("l_onb_otp_focus")}
+        onFocus={() => analytics.track("Focus", "Auth OTP")}
         onKeyDown={(e) => {
           if (e.key === "Enter" && canVerify) onVerify();
         }}

@@ -1234,7 +1234,7 @@ export function ShareModal({
  const qrCanvasRef = useRef<HTMLCanvasElement | null>(null);
 
  function copyLink() {
- track("dash_menu_share_copy");
+ track("Click", "Share copy link");
  if (navigator.clipboard?.writeText) {
  navigator.clipboard
  .writeText(fullUrl)
@@ -1247,7 +1247,7 @@ export function ShareModal({
  }
 
  function downloadQr() {
- track("dash_menu_share_download");
+ track("Click", "Share download QR");
  const canvas = qrCanvasRef.current;
  if (!canvas) return;
  canvas.toBlob((blob) => {
@@ -1264,12 +1264,12 @@ export function ShareModal({
  }
 
  function openInNewTab() {
- track("dash_menu_share_open_menu");
+ track("Click", "Share open menu");
  window.open(fullUrl, "_blank", "noopener,noreferrer");
  }
 
  const handleClose = () => {
- track("dash_menu_share_close");
+ track("Click", "Share close");
  onClose();
  };
 
@@ -1278,7 +1278,7 @@ export function ShareModal({
  <div className="flex justify-center">
  <div
  className="w-[180px] h-[180px] p-5 bg-white rounded-2xl shadow-[0_8px_24px_rgba(0,0,0,0.12)]"
- onClick={() => track("dash_menu_share_qr_image")}
+ onClick={() => track("Click", "Share QR image")}
  >
  <QRCodeCanvas
  value={fullUrl}
@@ -1305,7 +1305,7 @@ export function ShareModal({
  <div className="mt-5 flex items-center justify-between gap-2 p-3 bg-secondary border border-border rounded-lg">
  <span
  className="text-xs text-muted-foreground truncate"
- onClick={() => track("dash_menu_share_link_input")}
+ onClick={() => track("Click", "Share link")}
  >{fullUrl.replace(/^https?:\/\//, "")}</span>
  <button
  type="button"
@@ -1607,7 +1607,7 @@ export function AiImageModal({
  defaultPrompt,
  aspect = "square",
  extraBody,
- eventPrefix,
+ namePrefix,
 }: {
  open: boolean;
  onClose: () => void;
@@ -1618,7 +1618,8 @@ export function AiImageModal({
  defaultPrompt?: string;
  aspect?: "square" | "portrait";
  extraBody?: Record<string, unknown>;
- eventPrefix?: string;
+ /** Human label of the surface hosting the generator, e.g. "Item". */
+ namePrefix?: string;
 }) {
  const tc = useTranslations("dashboard.common");
  const ta = useTranslations("dashboard.ai");
@@ -1639,7 +1640,7 @@ export function AiImageModal({
  }, [open, defaultPrompt]);
 
  async function generate() {
- if (eventPrefix) track(`${eventPrefix}_generate_photo_click_generate`);
+ if (namePrefix) track("Click", `${namePrefix} photo generate`);
  if (!prompt.trim()) return;
  setStatus("loading");
  setError(null);
@@ -1676,7 +1677,7 @@ export function AiImageModal({
  }
 
  function useImage() {
- if (eventPrefix) track(`${eventPrefix}_generate_photo_click_use`);
+ if (namePrefix) track("Click", `${namePrefix} photo use`);
  if (resultUrl) {
  onUse(resultUrl);
  onClose();
@@ -1684,11 +1685,11 @@ export function AiImageModal({
  }
 
  const handleClose = () => {
- if (eventPrefix) track(`${eventPrefix}_generate_photo_click_close`);
+ if (namePrefix) track("Click", `${namePrefix} photo close`);
  onClose();
  };
  const handleCancel = () => {
- if (eventPrefix) track(`${eventPrefix}_generate_photo_click_cancel`);
+ if (namePrefix) track("Click", `${namePrefix} photo cancel`);
  onClose();
  };
 
@@ -1740,7 +1741,7 @@ export function AiImageModal({
  placeholder={placeholder || ta("promptPlaceholder")}
  value={prompt}
  onChange={(e) => setPrompt(e.target.value)}
- onFocus={() => { if (eventPrefix) track(`${eventPrefix}_generate_photo_focus_description`); }}
+ onFocus={() => { if (namePrefix) track("Focus", `${namePrefix} photo description`); }}
  disabled={isLoading}
  className={inputClass + " h-auto py-2 resize-none"}
  />

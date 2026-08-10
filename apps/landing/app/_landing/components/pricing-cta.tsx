@@ -42,7 +42,7 @@ export function PricingCta({
       <FromPrice addon={addon} template={t.fromTemplate} />
       <LinkForward
         href={href}
-        trackEvent="l_pricing_cta_click"
+        trackName="Pricing CTA"
         className="mt-6 inline-flex items-center justify-center h-11 px-6 text-base font-semibold text-white bg-gradient-to-br from-[hsl(9,100%,58%)] to-[hsl(35,95%,55%)] rounded-lg hover:opacity-90 active:scale-[0.99] transition-all text-center leading-tight whitespace-nowrap"
       >
         {t.button}

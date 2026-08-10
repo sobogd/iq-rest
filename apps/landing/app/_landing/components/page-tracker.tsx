@@ -1,11 +1,14 @@
 "use client";
 
 import { useEffect } from "react";
-import { analytics } from "@/lib/analytics";
+import { usePathname } from "next/navigation";
+import { analytics, isValidPageLabel, searchReferrerHost, type TrackCtx } from "@/lib/analytics";
 import { readBillingCurrencyFromDocument } from "@/lib/country-currency-map";
 
 const GCLID_REGEX = /^[A-Za-z0-9_-]{1,256}$/;
 const FBCLID_REGEX = /^[A-Za-z0-9_.-]{1,512}$/;
+const FROM_REGEX = /^[A-Za-z0-9_.-]{1,64}$/;
+const CURRENCY_REGEX = /^[A-Z]{3}$/;
 
 // Minimum gap between two consecutive view events for the same section.
 // Stops a single slow scroll near the section's edge from firing dozens
@@ -13,97 +16,100 @@ const FBCLID_REGEX = /^[A-Za-z0-9_.-]{1,512}$/;
 // a new one.
 const SECTION_THROTTLE_MS = 1500;
 
-// Sanitize an arbitrary string to the API event charset (a-z0-9_), collapsing
-// any underscore run to a single `_` so a double underscore `__` can be used
-// as an unambiguous name/value separator (parts never contain `__`).
-function sanitizeEventPart(s: string): string {
-  return s
-    .toLowerCase()
-    .replace(/[^a-z0-9_]+/g, "_")
-    .replace(/_+/g, "_")
-    .replace(/^_+|_+$/g, "");
+// Document-scoped (not pageview-scoped) facts. They describe the visit, not
+// the route, so re-sending them on every client-side navigation would inflate
+// the counts without adding information. Module scope is exactly the lifetime
+// we want: reset on a real document load, kept across soft navigations.
+let documentCtxSent = false;
+let documentFactsSent = false;
+
+/** "home" → "Home", "qr-menu" → "Qr Menu" — page keys stay locale-stable
+ *  short slugs at the call sites, the label is derived. */
+function toLabel(slug: string): string {
+  return slug
+    .split(/[-_ ]+/)
+    .filter(Boolean)
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
 }
 
-// Only the paid click ids keep dedicated `l_gclid_`/`l_fbclid_` events — their
-// raw value (case + . -, up to 512 chars) and server-side semantics (bot-filter
-// bypass, is_*_ads flags, CAPI fbc) can't survive the generic a-z0-9_ channel.
-// Everything else (incl. `from`) goes through the universal l_param_ pass.
-const HANDLED_PARAMS = new Set(["gclid", "gbraid", "wbraid", "fbclid"]);
-
-// Fire a `l_param_<name>__<value>` event for every other URL query param (the
-// double underscore `__` separates name from value unambiguously — single
-// underscores inside either part are kept), then strip ALL params from the URL
-// so a reload doesn't double-count. Runs AFTER the dedicated gclid/fbclid
-// handlers (they read their params first).
-function fireAllParamsAndClean(): void {
-  const sp = new URLSearchParams(window.location.search);
-  if ([...sp.keys()].length === 0) return;
-
-  for (const [key, value] of sp.entries()) {
-    if (HANDLED_PARAMS.has(key.toLowerCase())) continue;
-    const k = sanitizeEventPart(key);
-    const v = sanitizeEventPart(value);
-    if (!k || !v) continue;
-    analytics.track(`l_param_${k}__${v}`.slice(0, 64));
-  }
-
-  const newUrl = window.location.pathname + window.location.hash;
-  window.history.replaceState({}, "", newUrl);
+/** Page label with a guaranteed-valid result. An empty or malformed `page`
+ *  (e.g. a feature page whose trackPrefix collapses to "") is rejected by the
+ *  server per-batch, taking every unrelated event in the batch down with it. */
+function toPageLabel(slug: string): string {
+  const label = toLabel(slug);
+  return isValidPageLabel(label) ? label : "Landing";
 }
 
-// Paid click ids ride the unified `l_param_<name>__<value>` namespace too, but
-// the value is the RAW id (case + . - preserved, NOT sanitized) — the server
-// accepts these via a dedicated permissive regex, sets is_*_ads, and bypasses
-// the bot filter. CAPI/admin parse the id back by stripping the fixed prefix.
-function fireGclidEvent(): void {
+/** Collect session-attribution params (paid click ids, ?from=, search
+ *  referrer) from the URL, then strip the ENTIRE query string so a reload
+ *  doesn't re-send them. Must run before any other tracking on the page. */
+function collectCtxAndCleanUrl(): TrackCtx | undefined {
+  const ctx: TrackCtx = {};
   const sp = new URLSearchParams(window.location.search);
-  const gclid = sp.get("gclid") || sp.get("gbraid") || sp.get("wbraid");
-  if (!gclid || !GCLID_REGEX.test(gclid)) return;
 
-  analytics.track(`l_param_gclid__${gclid}`);
-}
-
-function fireFbclidEvent(): void {
-  const sp = new URLSearchParams(window.location.search);
   const fbclid = sp.get("fbclid");
-  if (!fbclid || !FBCLID_REGEX.test(fbclid)) return;
+  if (fbclid && FBCLID_REGEX.test(fbclid)) ctx.fbclid = fbclid;
+  for (const key of ["gclid", "gbraid", "wbraid"] as const) {
+    const v = sp.get(key);
+    if (v && GCLID_REGEX.test(v)) ctx[key] = v;
+  }
+  const from = sp.get("from");
+  if (from && FROM_REGEX.test(from)) ctx.from = from;
+  const ref = searchReferrerHost();
+  if (ref) ctx.ref = ref;
 
-  analytics.track(`l_param_fbclid__${fbclid}`);
+  if ([...sp.keys()].length > 0) {
+    window.history.replaceState({}, "", window.location.pathname + window.location.hash);
+  }
+  return Object.keys(ctx).length > 0 ? ctx : undefined;
 }
 
-function fireCurrencyEvent(): void {
-  // Geo-determined billing currency (from the geo_currency cookie, EUR default).
-  // Lowercase: the API's generic-event regex is /^[a-z0-9_]{1,64}$/, so an
-  // uppercase currency (e.g. "EUR") would be rejected and the event dropped.
-  analytics.track(`l_currency_${readBillingCurrencyFromDocument().toLowerCase()}`);
+/** Click ids / ?from= only ever come from a fresh entry URL, so seeing one
+ *  means a genuinely new attribution — worth sending even mid-visit. `ref` is
+ *  derived from document.referrer, which survives soft navigations and would
+ *  otherwise re-attribute the session on every route change. */
+function hasFreshAttribution(ctx: TrackCtx): boolean {
+  return Boolean(ctx.fbclid || ctx.gclid || ctx.gbraid || ctx.wbraid || ctx.from);
 }
 
-function fireLocaleEvent(): void {
-  // Language the page actually rendered in — read from <html lang="…">, set by
-  // each per-locale layout (root group is "en"). Fires `l_locale_<lang>` so we
-  // can see which language visitors land on, alongside the currency event.
-  // Guarded to the API's /^[a-z0-9_]{1,64}$/ event regex.
+/** One-per-document measurements: rendered locale (can differ from the
+ *  Accept-Language the server stores) and the geo-derived billing currency
+ *  that drives every price on the page. */
+function trackDocumentFacts(): void {
+  if (documentFactsSent) return;
+  documentFactsSent = true;
+
   const lang = (document.documentElement.lang || "").toLowerCase();
-  if (!/^[a-z]{2,8}$/.test(lang)) return;
-  analytics.track(`l_locale_${lang}`);
+  if (/^[a-z]{2,8}$/.test(lang)) analytics.track("Show", `Locale ${lang}`);
+
+  const currency = readBillingCurrencyFromDocument();
+  if (CURRENCY_REGEX.test(currency)) analytics.track("Show", `Currency ${currency}`);
 }
 
 interface PageTrackerProps {
-  /** Locale-stable page key (e.g. "home", "pricing", "help", "kds"). Fires
-   *  `l_page_<page>` so the event aggregates across every language version. */
+  /** Locale-stable page key (e.g. "home", "pricing", "help", "kds"). Becomes
+   *  the `page` of every event fired while this page is mounted. */
   page: string;
 }
 
 export function PageTracker({ page }: PageTrackerProps) {
+  // Keyed on the real pathname, not on `page`: two routes can share a page key
+  // (locale variants of the same feature), and a `[page]`-only dependency
+  // would skip the second pageview and leave the IntersectionObserver bound to
+  // the unmounted route's DOM.
+  const pathname = usePathname();
+
   useEffect(() => {
-    fireGclidEvent();
-    fireFbclidEvent();
-    // Generic catch-all for every other URL param (incl. `from`), then strip
-    // the whole query.
-    fireAllParamsAndClean();
-    analytics.track(`l_page_${page}`);
-    fireCurrencyEvent();
-    fireLocaleEvent();
+    analytics.setPage(toPageLabel(page));
+
+    const ctx = collectCtxAndCleanUrl();
+    const attribution = ctx && (!documentCtxSent || hasFreshAttribution(ctx)) ? ctx : undefined;
+    documentCtxSent = true;
+    // The pageview carries the attribution ctx — the server applies it to the
+    // session first-write-wins.
+    analytics.track("Show", "Page", attribution);
+    trackDocumentFacts();
 
     // Re-fires on every viewport (re-)entry so the server timeline shows
     // the full scroll path — `hero → features → footer → features → ...`.
@@ -120,17 +126,44 @@ export function PageTracker({ page }: PageTrackerProps) {
           const last = lastFiredAt.get(name) ?? 0;
           if (now - last < SECTION_THROTTLE_MS) continue;
           lastFiredAt.set(name, now);
-          analytics.track(`l_section_view_${name}`);
+          const label = toLabel(name);
+          if (label) analytics.track("Show", label);
         }
       },
       { threshold: 0.5 },
     );
 
-    document.querySelectorAll("[data-section]").forEach((el) => observer.observe(el));
+    const seen = new WeakSet<Element>();
+    const observeSections = () => {
+      document.querySelectorAll("[data-section]").forEach((el) => {
+        if (seen.has(el)) return;
+        seen.add(el);
+        observer.observe(el);
+      });
+    };
+    observeSections();
 
-    return () => observer.disconnect();
+    // Sections can mount after this effect (client-only islands, conditionally
+    // rendered blocks, modals) — a single query at mount would never see them.
+    // Coalesced into one rescan per frame so DOM-heavy pages don't pay for a
+    // querySelectorAll on every mutation record.
+    let rescan = 0;
+    const mutations = new MutationObserver(() => {
+      if (rescan) return;
+      rescan = requestAnimationFrame(() => {
+        rescan = 0;
+        observeSections();
+      });
+    });
+    mutations.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      if (rescan) cancelAnimationFrame(rescan);
+      mutations.disconnect();
+      observer.disconnect();
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [page]);
+  }, [page, pathname]);
 
   return null;
 }

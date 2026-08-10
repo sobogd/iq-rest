@@ -130,7 +130,6 @@ export default function PricingPage() {
       texts={DEFAULT}
       faq={PRICING_FAQ}
       jsonLd={JSON_LD}
-      trackPrefix="l_ru_pricing_hero"
     />
   );
 }

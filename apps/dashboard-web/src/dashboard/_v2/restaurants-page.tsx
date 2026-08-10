@@ -76,7 +76,7 @@ export function RestaurantsListPage({ onBack, isDemo = false }: { onBack: () => 
   // Demo accounts can't add restaurants — record that one reached the place
   // where the "+ Add restaurant" button would be (upsell-intent signal).
   useEffect(() => {
-    if (isDemo) track("dash_restaurants_add_blocked_demo");
+    if (isDemo) track("Show", "Restaurant add blocked demo");
   }, [isDemo]);
 
   const onSwitch = async (id: string) => {
@@ -177,7 +177,7 @@ export function RestaurantsListPage({ onBack, isDemo = false }: { onBack: () => 
             <button
               type="button"
               onClick={() => {
-                track("dash_restaurant_add_click");
+                track("Click", "Restaurant add");
                 router.push({ name: "settings.restaurants.new" });
               }}
               className="w-full mt-2.5 h-11 text-sm font-medium text-muted-foreground/60 border border-dashed border-input rounded-xl flex items-center justify-center gap-2 transition-colors"
@@ -307,7 +307,7 @@ export function RestaurantNewPage({ onBack, isDemo = false }: { onBack: () => vo
         name: name.trim(),
         duplicateFromId: mode === "duplicate" && current ? current.id : null,
       });
-      track(mode === "duplicate" ? "dash_restaurant_create_duplicate" : "dash_restaurant_create_blank");
+      track("Click", mode === "duplicate" ? "Restaurant create duplicate" : "Restaurant create blank");
       // Backend set cookie + auto-switched active restaurant. Invalidate every
       // restaurant-scoped query so subsequent fetches use the new id, then
       // refetch the restaurants list and navigate back to it.

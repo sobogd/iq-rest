@@ -176,7 +176,7 @@ export function AnalyticsClient() {
               months={months}
               period={period}
               onChange={(p) => {
-                track("dash_analytics_click_select_period");
+                track("Click", "Analytics period selector");
                 setPeriod(p);
               }}
             />
@@ -195,7 +195,7 @@ export function AnalyticsClient() {
           <div className="space-y-4">
             {stats.orders ? (
               <>
-                <OrdersKpis orders={stats.orders} onOpenOrders={() => { track("dash_analytics_click_orders_card"); setOrdersModalOpen(true); }} />
+                <OrdersKpis orders={stats.orders} onOpenOrders={() => { track("Click", "Analytics orders card"); setOrdersModalOpen(true); }} />
                 {period !== "today" ? (
                   <RevenueByDayChart
                     byDay={stats.orders.byDay}
@@ -268,10 +268,10 @@ function PeriodDropdown({
       <button
         type="button"
         onClick={() => {
-          setOpen((v) => {
-            if (!v) track("dash_analytics_click_period");
-            return !v;
-          });
+          // Tracked outside the updater: React may re-run an updater
+          // (StrictMode, a replayed render) and the event would double.
+          if (!open) track("Click", "Analytics period");
+          setOpen((v) => !v);
         }}
         className="inline-flex items-center gap-1 h-8 px-2.5 text-xs font-medium bg-secondary text-foreground rounded-md transition-colors"
         aria-haspopup="listbox"

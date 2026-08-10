@@ -3,14 +3,13 @@ import i18n from "@/i18n";
 import { ApiError } from "./api";
 import { track } from "./dashboard-events";
 
-// Shows a generic, translated error toast and emits a tracking event whose
-// name encodes the backend error so it shows up directly in the admin
-// activity log: `dash_error_{status}_{slug}`.
+// Shows a generic, translated error toast and records an Error event whose
+// name encodes what failed and why — "Item save 409 slug_taken" — so the exact
+// cause is readable straight from the admin timeline.
 //
-// The slug is the backend message trimmed/sanitised — combinatorial explosion
-// is a known trade-off; we choose it because the user wants to see the exact
-// failure cause without opening event payloads in the admin panel.
-export function showApiError(err: unknown, action: string): void {
+// The slug is the backend message trimmed/sanitised; combinatorial explosion is
+// a known trade-off, taken deliberately.
+export function showApiError(err: unknown, label: string): void {
   // i18next is configured with a single `translation` namespace whose value
   // is the locale's whole JSON — so the namespace argument is omitted and the
   // full dotted path is passed to `t()`. The previous `getFixedT(null, "ns")`
@@ -28,16 +27,15 @@ export function showApiError(err: unknown, action: string): void {
   }
 
   const slug = sanitiseForEventName(message);
-  // Cap event name at 120 chars — analytics backends usually balk past that.
-  const eventName = `dash_error_${status || "net"}_${slug}`.slice(0, 120);
-  track(eventName, { action, status, message });
+  // The ingest endpoint caps names at 120 chars.
+  track("Error", `${label} ${status || "net"} ${slug}`.slice(0, 120));
 
   toast.error(t("dashboard.common.genericErrorTitle") as string, {
     description: t("dashboard.common.genericErrorMessage") as string,
   });
 
   // eslint-disable-next-line no-console
-  console.error(`[api] ${action} failed:`, err);
+  console.error(`[api] ${label} failed:`, err);
 }
 
 function sanitiseForEventName(input: string): string {

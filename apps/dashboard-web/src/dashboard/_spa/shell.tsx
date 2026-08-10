@@ -36,8 +36,8 @@ import { FirstRunModals } from "../_v2/first-run-modals";
 import { AdminRestaurantsPage } from "../_pages/admin-restaurants";
 import { AdminUsersPage } from "../_pages/admin-users";
 import { AdminRestaurantPage } from "../_pages/admin-restaurant";
-import { UsagePage } from "../_pages/usage";
-import { UsageSessionPage } from "../_pages/usage-session";
+import { TrafficPage } from "../_pages/traffic";
+import { TrafficSessionPage } from "../_pages/traffic-session";
 import { AdminLeadsPage } from "../_pages/admin-leads";
 import { AdminInboxPage } from "../_pages/admin-inbox";
 import { AdminInboxThreadPage } from "../_pages/admin-inbox-thread";
@@ -450,10 +450,10 @@ function ViewSwitch(p: SwitchProps) {
       return <AdminUsersPage onBack={backToSettings} />;
     case "settings.admin.restaurant":
       return <AdminRestaurantPage restaurantId={view.id} />;
-    case "settings.admin.usage":
-      return <UsagePage />;
-    case "settings.admin.usageSession":
-      return <UsageSessionPage id={view.id} />;
+    case "settings.admin.traffic":
+      return <TrafficPage restaurantId={view.restaurantId} />;
+    case "settings.admin.trafficSession":
+      return <TrafficSessionPage id={view.id} restaurantId={view.restaurantId} />;
     case "settings.admin.leads":
       return <AdminLeadsPage onBack={backToSettings} />;
     case "settings.admin.inbox":

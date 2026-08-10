@@ -18,7 +18,7 @@ interface CtaButtonProps {
   locale: string;
   layout?: "default" | "sticky";
   align?: "start" | "end" | "center-mobile" | "center";
-  trackEvent?: string;
+  trackName?: string;
   extra?: React.ReactNode;
   /** On mobile, stack the primary CTA and `extra` button vertically. */
   stackMobile?: boolean;
@@ -32,7 +32,7 @@ export function CtaButton({
   microcopy = "",
   layout = "default",
   align = "start",
-  trackEvent = "l_cta_click",
+  trackName = "CTA",
   extra,
   stackMobile = false,
   fullWidth = false,
@@ -63,7 +63,7 @@ export function CtaButton({
       <div className={`flex ${fullWidth ? "flex-row w-full" : stackMobile ? `flex-col w-full sm:w-auto sm:flex-row ${align === "start" ? "items-start sm:items-center" : align === "end" ? "items-end sm:items-center" : "items-center"}` : "flex-row flex-wrap items-center"} gap-3 ${rowJustify}`}>
         <button
           type="button"
-          onClick={() => cta.onClick(trackEvent)}
+          onClick={() => cta.onClick(trackName)}
           className={`${baseClass} ${fullWidth ? "w-full" : isSticky ? "w-full sm:w-auto" : "w-auto"}`}
         >
           {cta.label}

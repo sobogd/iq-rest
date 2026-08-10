@@ -1,5 +1,7 @@
 "use client";
 
+import { analytics } from "@/lib/analytics";
+
 /** Back button for legal pages. Behaviour:
  *  - Tab has prior history (user clicked from somewhere) → window.history.back()
  *  - Tab opened directly (target="_blank" — history.length === 1) → window.close()
@@ -8,6 +10,8 @@
 export function LegalBackButton({ locale }: { locale: string }) {
   const onClick = () => {
     if (typeof window === "undefined") return;
+    // Every branch below tears the document down (back / close / assign).
+    analytics.flush();
     if (window.history.length > 1) {
       window.history.back();
       return;

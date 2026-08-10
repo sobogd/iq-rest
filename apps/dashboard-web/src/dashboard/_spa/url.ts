@@ -63,10 +63,18 @@ export function viewToPath(view: View): string {
       return "/dashboard/settings/admin/users";
     case "settings.admin.restaurant":
       return `/dashboard/settings/admin/restaurants/${view.id}`;
-    case "settings.admin.usage":
-      return "/dashboard/settings/admin/usage";
-    case "settings.admin.usageSession":
-      return `/dashboard/settings/admin/usage/session/${view.id}`;
+    case "settings.admin.traffic":
+      return (
+        "/dashboard/settings/admin/traffic" +
+        (view.restaurantId ? `?rid=${encodeURIComponent(view.restaurantId)}` : "")
+      );
+    case "settings.admin.trafficSession":
+      // `rid` is the venue the list was filtered by when this visit was opened;
+      // it is what Back restores, so it has to survive a reload too.
+      return (
+        `/dashboard/settings/admin/traffic/session/${view.id}` +
+        (view.restaurantId ? `?rid=${encodeURIComponent(view.restaurantId)}` : "")
+      );
     case "settings.admin.leads":
       return "/dashboard/settings/admin/leads";
     case "settings.admin.inbox":
@@ -141,9 +149,28 @@ export function pathToView(path: string): View {
   if (stripped === "/dashboard/settings/admin/restaurants") return { name: "settings.admin.restaurants" };
   if (stripped === "/dashboard/settings/admin/users") return { name: "settings.admin.users" };
   if (stripped === "/dashboard/settings/admin/leads") return { name: "settings.admin.leads" };
-  const usageSessionMatch = stripped.match(/^\/dashboard\/settings\/admin\/usage\/session\/([^/]+)$/);
-  if (usageSessionMatch) return { name: "settings.admin.usageSession", id: usageSessionMatch[1] };
-  if (stripped === "/dashboard/settings/admin/usage") return { name: "settings.admin.usage" };
+  const trafficSessionMatch = stripped.match(/^\/dashboard\/settings\/admin\/traffic\/session\/([^/]+)$/);
+  if (trafficSessionMatch) {
+    const rid = params.get("rid");
+    return rid
+      ? { name: "settings.admin.trafficSession", id: trafficSessionMatch[1], restaurantId: rid }
+      : { name: "settings.admin.trafficSession", id: trafficSessionMatch[1] };
+  }
+  if (stripped === "/dashboard/settings/admin/traffic") {
+    // `rid` scopes the screen to one venue; without reading it back a reload
+    // or a shared link would silently widen to global traffic.
+    const rid = params.get("rid");
+    return rid ? { name: "settings.admin.traffic", restaurantId: rid } : { name: "settings.admin.traffic" };
+  }
+  // Legacy "/admin/usage" was the previous name of this screen. Its per-session
+  // ids came from the retired UsageEvent table and cannot be resolved against
+  // analytics v2, so an old deep link lands on the traffic list, not a 404.
+  if (
+    stripped === "/dashboard/settings/admin/usage" ||
+    stripped.startsWith("/dashboard/settings/admin/usage/")
+  ) {
+    return { name: "settings.admin.traffic" };
+  }
   // Legacy "/messages" admin paths now live under the unified inbox; redirect
   // the old per-restaurant thread to its inbox thread id.
   const msgThreadMatch = stripped.match(/^\/dashboard\/settings\/admin\/messages\/([^/]+)$/);

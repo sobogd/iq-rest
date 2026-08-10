@@ -18,6 +18,7 @@ export default async function PrivacyPage({
       title={PRIVACY_POLICY_TITLE}
       sections={PRIVACY_POLICY_SECTIONS}
       locale={locale}
+      trackPage="privacy"
     />
   );
 }

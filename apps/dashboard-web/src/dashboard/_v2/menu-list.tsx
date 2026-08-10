@@ -181,14 +181,14 @@ export function MenuList({
  topLevelGroups.some((g) => openIds[g.id] !== false);
 
  function toggleCategory(id: string) {
- setOpenIds((p) => {
- const next = !p[id];
- track(next ? "dash_menu_category_expand" : "dash_menu_category_collapse");
- return { ...p, [id]: next };
- });
+ // Tracked outside the updater: React may re-run an updater (StrictMode, a
+ // replayed render) and the event would be counted twice.
+ const willOpen = !openIds[id];
+ track("Click", willOpen ? "Menu category expand" : "Menu category collapse");
+ setOpenIds((p) => ({ ...p, [id]: !p[id] }));
  }
  function expandAll() {
- track("dash_menu_expand");
+ track("Click", "Menu expand all");
  setOpenIds((prev) => {
  const next = { ...prev };
  scopedLeaves.forEach((c) => { next[c.id] = true; });
@@ -197,7 +197,7 @@ export function MenuList({
  });
  }
  function collapseAll() {
- track("dash_menu_collapse");
+ track("Click", "Menu collapse all");
  setOpenIds((prev) => {
  const next = { ...prev };
  scopedLeaves.forEach((c) => { next[c.id] = false; });
@@ -228,7 +228,7 @@ export function MenuList({
  const isAbort = (e: unknown) => (e as { name?: string } | null)?.name === "AbortError";
 
  async function moveGroup(idx: number, dir: number) {
- track(dir < 0 ? "dash_menu_group_sort_up" : "dash_menu_group_sort_down");
+ track("Sort", dir < 0 ? "Menu group up" : "Menu group down");
  const reordered = moveItem(topLevelGroups, idx, dir);
  const idToOrder = new Map(reordered.map((g, i) => [g.id, i]));
  setCategories((cats) =>
@@ -249,7 +249,7 @@ export function MenuList({
 
  async function moveCategory(siblings: Category[], idx: number, dir: number) {
  // Reorder happens within the passed sibling list (per-group or ungrouped).
- track(dir < 0 ? "dash_menu_category_sort_up" : "dash_menu_category_sort_down");
+ track("Sort", dir < 0 ? "Menu category up" : "Menu category down");
  const reorderedSiblings = moveItem(siblings, idx, dir);
  const idToOrder = new Map(reorderedSiblings.map((c, i) => [c.id, i]));
  setCategories((cats) =>
@@ -269,7 +269,7 @@ export function MenuList({
  }
 
  async function moveDish(categoryId: string, idx: number, dir: number) {
- track(dir < 0 ? "dash_menu_item_sort_up" : "dash_menu_item_sort_down");
+ track("Sort", dir < 0 ? "Menu item up" : "Menu item down");
  const cat = categories.find((c) => c.id === categoryId);
  if (!cat) return;
  const reordered = moveItem(cat.dishes, idx, dir);
@@ -287,7 +287,7 @@ export function MenuList({
  }
 
  async function toggleDishVisible(categoryId: string, dishId: string) {
- track("dash_menu_item_click");
+ track("Click", "Menu item visibility");
  const cat = categories.find((c) => c.id === categoryId);
  const dish = cat?.dishes.find((d) => d.id === dishId);
  if (!dish) return;
@@ -357,13 +357,13 @@ export function MenuList({
  {menuUrl ? (
  <PreviewButton
  url={menuUrl}
- onOpen={() => track("dash_menu_preview_open")}
+ onOpen={() => track("Click", "Menu preview open")}
  />
  ) : null}
  {menuUrl ? (
  <ShareButton
  onClick={() => {
- track("dash_menu_share_open");
+ track("Click", "Share open");
  setShareOpen(true);
  }}
  />
@@ -401,7 +401,7 @@ export function MenuList({
  <button
  type="button"
  onClick={() => {
- track("dash_menu_add_category");
+ track("Click", "Menu add category");
  router.push({ name: "category.new" });
  }}
  className={primaryBtn + " inline-flex items-center gap-1.5"}
@@ -462,7 +462,7 @@ export function MenuList({
  moveDish={moveDish}
  toggleDishVisible={toggleDishVisible}
  onEditGroup={() => {
- track("dash_menu_group_edit");
+ track("Click", "Menu group edit");
  router.push({ name: "group.edit", id: g.id });
  }}
  />
@@ -475,7 +475,7 @@ export function MenuList({
  <button
  type="button"
  onClick={() => {
- track("dash_menu_add_category");
+ track("Click", "Menu add category");
  router.push({ name: "category.new" });
  }}
  className="inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
@@ -486,7 +486,7 @@ export function MenuList({
  <button
  type="button"
  onClick={() => {
- track("dash_menu_add_group");
+ track("Click", "Menu add group");
  router.push({ name: "group.new" });
  }}
  className="inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
@@ -660,13 +660,13 @@ function CategoryAccordion({
  role="button"
  tabIndex={0}
  onClick={() => {
- track("dash_menu_category_click");
+ track("Click", "Menu category");
  onToggle();
  }}
  onKeyDown={(e) => {
  if (e.key === "Enter" || e.key === " ") {
  e.preventDefault();
- track("dash_menu_category_click");
+ track("Click", "Menu category");
  onToggle();
  }
  }}
@@ -713,7 +713,7 @@ function CategoryAccordion({
  type="button"
  onClick={(e) => {
  e.stopPropagation();
- track("dash_menu_category_edit");
+ track("Click", "Menu category edit");
  router.push({ name: "category.edit", id: category.id });
  }}
  className={iconBtn}
@@ -752,7 +752,7 @@ function CategoryAccordion({
  <button
  type="button"
  onClick={() => {
- track("dash_menu_add_item");
+ track("Click", "Menu add item");
  router.push({ name: "item.new", categoryId: category.id });
  }}
  className="w-full flex items-center gap-2 pl-2 pr-3 py-2 text-sm text-muted-foreground/60 transition-colors border-t border-border"
@@ -794,7 +794,7 @@ function DishRow({
  "flex items-center gap-2.5 pl-2 pr-3 py-2 transition-colors cursor-pointer select-none";
  const dimCls = dish.visible ? "" : "opacity-50";
  const openDish = () => {
- track("dash_menu_item_click");
+ track("Click", "Menu item open");
  router.push({ name: "item.edit", id: dish.id });
  };
  return (
@@ -856,7 +856,7 @@ function DishRow({
  type="button"
  onClick={(e) => {
  e.stopPropagation();
- track("dash_menu_item_edit");
+ track("Click", "Menu item edit");
  router.push({ name: "item.edit", id: dish.id });
  }}
  className={iconBtn}

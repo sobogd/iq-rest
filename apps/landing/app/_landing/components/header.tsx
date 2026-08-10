@@ -129,7 +129,7 @@ export function LandingHeader({
         <div className={`flex items-center justify-between gap-3 h-16 sm:h-20 ${isHero ? "text-white" : "text-foreground"}`}>
           <LinkForward
             href={homeHref}
-            trackEvent="l_header_logo_click"
+            trackName="Header Logo"
             className="flex items-center gap-1.5 text-lg sm:text-xl font-semibold tracking-tight shrink-0"
           >
             <LogoIcon className="h-8 w-8 sm:h-9 sm:w-9" />
@@ -143,18 +143,18 @@ export function LandingHeader({
                       key={link.href}
                       href={link.href}
                       prefetch={false}
-                      trackEvent={`l_header_nav_${featureKeyFromHref(link.href)}_click`}
+                      trackName={`Header Nav ${featureKeyFromHref(link.href)}`}
                       className={navClass(isLinkActive(link.href))}
                     >
                       {link.label}
                     </LinkForward>
                   ))
                 : (
-                  <LinkForward href={anchor("features")} trackEvent="l_header_nav_features_click" className={navClass(false)}>
+                  <LinkForward href={anchor("features")} trackName="Header Nav Features" className={navClass(false)}>
                     {texts.navFeatures}
                   </LinkForward>
                 )}
-              <LinkForward href={pricingHref} trackEvent="l_header_nav_pricing_click" className={navClass(pricingActive)}>
+              <LinkForward href={pricingHref} trackName="Header Nav Pricing" className={navClass(pricingActive)}>
                 {texts.navPricing}
               </LinkForward>
             </nav>
@@ -174,7 +174,11 @@ export function LandingHeader({
                   <a
                     href={dashHref}
                     aria-label={texts.signIn}
-                    onClick={() => analytics.track("l_header_dashboard_click")}
+                    onClick={() => {
+                      analytics.track("Click", "Header Dashboard");
+                      // Plain anchor to another origin — flush before unload.
+                      analytics.flush();
+                    }}
                     className={`inline-flex items-center justify-center h-9 w-9 lg:w-auto lg:px-4 text-sm font-semibold rounded-lg transition-colors whitespace-nowrap ${iconBtn}`}
                   >
                     <LogIn className="h-5 w-5 lg:hidden" />
@@ -185,7 +189,7 @@ export function LandingHeader({
                     type="button"
                     aria-label={texts.signIn}
                     onClick={() => {
-                      analytics.track("l_header_signin_click");
+                      analytics.track("Click", "Header SignIn");
                       modal.open("signin");
                     }}
                     className={`inline-flex items-center justify-center h-9 w-9 lg:w-auto lg:px-4 text-sm font-semibold rounded-lg transition-colors whitespace-nowrap ${iconBtn}`}
@@ -198,7 +202,11 @@ export function LandingHeader({
                   <a
                     href={helpHref}
                     aria-label="Help"
-                    onClick={() => analytics.track("l_header_help_click")}
+                    onClick={() => {
+                      analytics.track("Click", "Header Help");
+                      // Plain anchor — full document navigation, not a soft route change.
+                      analytics.flush();
+                    }}
                     className={`inline-flex items-center justify-center h-9 w-9 rounded-lg transition-colors ${iconBtn}`}
                   >
                     <HelpCircle className="h-5 w-5" />
@@ -208,7 +216,7 @@ export function LandingHeader({
                   type="button"
                   aria-label={cookieTexts.languageSwitcher}
                   onClick={() => {
-                    analytics.track("l_header_language_click");
+                    analytics.track("Click", "Header Language");
                     setLangOpen(true);
                   }}
                   className={`inline-flex items-center justify-center h-9 w-9 rounded-lg transition-colors ${iconBtn}`}
@@ -224,7 +232,7 @@ export function LandingHeader({
                 aria-label="Menu"
                 aria-expanded={menuOpen}
                 onClick={() => {
-                  analytics.track(`l_header_burger_${menuOpen ? "close" : "open"}`);
+                  analytics.track("Click", `Header Burger ${menuOpen ? "Close" : "Open"}`);
                   setMenuOpen((v) => !v);
                 }}
                 className={`lg:hidden inline-flex items-center justify-center h-9 w-9 rounded-lg transition-colors ${iconBtn}`}
@@ -239,7 +247,7 @@ export function LandingHeader({
                           key={link.href}
                           href={link.href}
                           prefetch={false}
-                          trackEvent={`l_header_menu_${featureKeyFromHref(link.href)}_click`}
+                          trackName={`Header Menu ${featureKeyFromHref(link.href)}`}
                           className="text-sm font-medium px-3 py-2 rounded-lg hover:bg-muted/50 transition-colors"
                           onClick={closeMenu}
                         >
@@ -249,7 +257,7 @@ export function LandingHeader({
                     : (
                       <LinkForward
                         href={anchor("features")}
-                        trackEvent="l_header_menu_features_click"
+                        trackName="Header Menu Features"
                         className="text-sm font-medium px-3 py-2 rounded-lg hover:bg-muted/50 transition-colors"
                         onClick={closeMenu}
                       >
@@ -259,7 +267,7 @@ export function LandingHeader({
                   <LinkForward
                     href={pricingHref}
                     prefetch={false}
-                    trackEvent="l_header_menu_pricing_click"
+                    trackName="Header Menu Pricing"
                     className="text-sm font-medium px-3 py-2 rounded-lg hover:bg-muted/50 transition-colors"
                     onClick={closeMenu}
                   >

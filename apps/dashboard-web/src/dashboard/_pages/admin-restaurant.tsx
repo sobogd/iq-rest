@@ -13,7 +13,6 @@ import { Select, SubpageStickyBar, ToggleSwitch } from "../_v2/ui";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
 import { getMenuUrl } from "@/lib/menu-url";
 import { useDashboardRouter } from "../_spa/router";
-import { encodeSessionId, type SessionData } from "./usage-shared";
 
 interface RestaurantUser {
   id: string;
@@ -383,29 +382,7 @@ export function AdminRestaurantPage({ restaurantId, onClose }: Props) {
   const ownerHandle = owner?.email.split("@")[0] ?? "";
   const iconBtn = "h-8 w-8 inline-flex items-center justify-center bg-secondary rounded-md text-muted-foreground hover:text-foreground disabled:opacity-60";
   function openSession() {
-    const now = Date.now();
-    const from = new Date(now - 30 * 86_400_000).toISOString();
-    const to = new Date(now).toISOString();
-    const sd: SessionData = {
-      kind: "r",
-      rid: restaurantId,
-      ipkey: null,
-      hasIp: false,
-      country: "",
-      region: null,
-      firstAt: from,
-      lastAt: to,
-      eventCount: 0,
-      hasGoogle: false,
-      hasFacebook: false,
-      latestFbclid: null,
-      latestFbTs: null,
-      userLabel: null,
-      restaurantLabel: title,
-      from,
-      to,
-    };
-    router.push({ name: "settings.admin.usageSession", id: encodeSessionId(sd) });
+    router.push({ name: "settings.admin.traffic", restaurantId });
   }
 
   const headerActions = (

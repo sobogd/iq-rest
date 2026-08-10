@@ -222,7 +222,7 @@ export function OrdersPage({
  // copy back through the cache. On failure we just toast; the next
  // SSE/poll event corrects the optimistic state.
  } catch (err) {
- showApiError(err, "patchOrder");
+ showApiError(err, "Order patch");
  }
  }
 
@@ -234,7 +234,7 @@ export function OrdersPage({
  }
 
  function removeItem(orderId: string, itemId: string) {
- track("dash_orders_order_remove_item");
+ track("Click", "Order remove item");
  const order = orders.find((o) => o.id === orderId);
  if (!order) return;
  const items = order.items.filter((it) => it.id !== itemId);
@@ -242,7 +242,7 @@ export function OrdersPage({
  }
 
  function duplicateItem(orderId: string, itemId: string) {
- track("dash_orders_order_duplicate_item");
+ track("Click", "Order duplicate item");
  const order = orders.find((o) => o.id === orderId);
  if (!order) return;
  const src = order.items.find((it) => it.id === itemId);
@@ -258,7 +258,7 @@ export function OrdersPage({
  }
 
  function completeOrder(orderId: string, paymentMethodId: string | null) {
- track("dash_orders_order_complete_order");
+ track("Click", "Order complete");
  persistOrder(orderId, { status: "completed", paymentMethodId });
  const stillHasOrders = activeTableId
  ? activeOrders.some((o) => o.id !== orderId && o.tableId === activeTableId)
@@ -271,7 +271,7 @@ export function OrdersPage({
  }
 
  async function removeOrder(orderId: string) {
- track("dash_orders_order_delete_order");
+ track("Click", "Order delete");
  setOrders((all) => all.filter((o) => o.id !== orderId));
  const stillHasOrders = activeTableId
  ? activeOrders.some((o) => o.id !== orderId && o.tableId === activeTableId)
@@ -282,7 +282,7 @@ export function OrdersPage({
  try {
  await deleteOrder(orderId);
  } catch (err) {
- showApiError(err, "deleteOrder");
+ showApiError(err, "Order delete");
  }
  }
 
@@ -318,7 +318,7 @@ export function OrdersPage({
  setOrders((all) => [...all, newOrder]);
  return newOrder;
  } catch (err) {
- showApiError(err, "createOrder");
+ showApiError(err, "Order create");
  return null;
  } finally {
  setCreating(false);
@@ -326,7 +326,7 @@ export function OrdersPage({
  }
 
  async function handleChangeTable(orderId: string, table: TableEntity) {
- track("dash_orders_order_change_table");
+ track("Click", "Order change table");
  setOrders((all) =>
  all.map((o) =>
  o.id === orderId ? { ...o, tableId: table.id, tableNumber: table.number } : o,
@@ -337,12 +337,12 @@ export function OrdersPage({
  try {
  await patchOrder(orderId, { tableNumber: table.number });
  } catch (err) {
- showApiError(err, "changeTable");
+ showApiError(err, "Order change table");
  }
  }
 
  async function handleSplit(orderId: string, itemIds: string[]) {
- track("dash_orders_order_split");
+ track("Click", "Order split");
  const source = orders.find((o) => o.id === orderId);
  if (!source) return;
  const idSet = new Set(itemIds);
@@ -378,12 +378,12 @@ export function OrdersPage({
  ]);
  setView({ kind: "list" });
  } catch (err) {
- showApiError(err, "splitOrder");
+ showApiError(err, "Order split");
  }
  }
 
  async function handleAddItem(itemData: { options: OrderItemOptionSnapshot[]; notes: string }, dish: Dish) {
- track("dash_orders_order_save_item");
+ track("Click", "Order save item");
  const currentView = view;
  if (!currentView || currentView.kind !== "addItem") return;
  let orderId = currentView.orderId;
@@ -431,7 +431,7 @@ export function OrdersPage({
  orders={activeTableOrders}
  currencySymbol={currencySymbol}
  onSelect={(orderId) => {
- track("dash_orders_click_order");
+ track("Click", "Order open");
  setView({ kind: "order", orderId });
  }}
  />
@@ -584,7 +584,7 @@ export function OrdersPage({
  <button
  type="button"
  onClick={() => {
- track("dash_orders_order_add_item");
+ track("Click", "Order add item");
  setView({
  kind: "addItem",
  orderId: currentOrder.id,
@@ -656,7 +656,7 @@ export function OrdersPage({
  // place orders — render a list-only view with a "New order" button that
  // skips table selection entirely.
  function startTablelessOrder() {
- track("dash_orders_click_new_no_table");
+ track("Click", "Order new without table");
  setActiveTableId(NO_TABLE);
  setOpenedFrom("list");
  setView({ kind: "addItem", orderId: null, step: "category" });
@@ -668,7 +668,7 @@ export function OrdersPage({
  selectedId={null}
  onSelectTable={(id) => {
  if (!id) return;
- track("dash_orders_click_table");
+ track("Click", "Orders table");
  openTable(id);
  }}
  occupiedIds={occupiedIds}
@@ -1243,7 +1243,7 @@ function AddItemView({
  key={d.id}
  type="button"
  onClick={() => {
- track("dash_orders_order_select_item");
+ track("Click", "Order select item");
  goConfigure(cat.id, d.id);
  }}
  className="w-full text-left flex items-center justify-between gap-3 px-5 py-3 transition-colors"
@@ -1278,7 +1278,7 @@ function AddItemView({
  key={c.id}
  type="button"
  onClick={() => {
- track("dash_orders_order_select_category");
+ track("Click", "Order select category");
  goDish(c.id);
  }}
  className="w-full text-left flex items-center justify-between gap-3 px-5 py-3 transition-colors"
@@ -1700,7 +1700,7 @@ function NotesTextarea({
  id="item-notes"
  value={value}
  onChange={(e) => onChange(e.target.value)}
- onFocus={() => track("dash_orders_order_focus_note")}
+ onFocus={() => track("Focus", "Order note")}
  placeholder={placeholder}
  className="w-full bg-transparent border-0 outline-none resize-none text-sm text-foreground placeholder:text-muted-foreground p-0 m-0"
  style={{ minHeight: 50 }}
@@ -1963,7 +1963,7 @@ function ItemMoreMenu({
  type="button"
  onClick={() => {
  setOpen(false);
- track("dash_orders_order_status_click");
+ track("Click", "Order status");
  onStatusChange(s);
  }}
  className="w-full flex items-center gap-2 px-3 h-9 text-left text-xs font-medium text-foreground transition-colors"

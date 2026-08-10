@@ -663,6 +663,119 @@ model CapiSend {
   @@map("capi_sends")
 }
 
+// ---------------------------------------------------------------------------
+// Analytics v2 (landing) — cookieless salt-hash sessions. Nothing is stored on
+// the visitor's device; the session key is sha256(dailySalt + ip + ua) computed
+// server-side, so a visitor is linkable for at most one salt-day. Raw IP and
+// raw user-agent are never persisted. Coexists with UsageEvent until the old
+// pipeline is retired.
+// ---------------------------------------------------------------------------
+
+// Singleton row (id = "current") holding the active hash salt. Rotated daily at
+// 04:00 Europe/Madrid (lowest-traffic hour for the EU audience); the previous
+// salt is destroyed by the overwrite, which is what makes old session hashes
+// permanently unlinkable.
+model AnalyticsSalt {
+  id        String   @id
+  value     String
+  rotatedAt DateTime
+
+  @@map("analytics_salt")
+}
+
+// One row = one VISIT: a device hash (see AnalyticsSalt) plus an identity, cut
+// after 30 minutes of silence. The hash also changes with the daily salt, so
+// the same person tomorrow is unlinkable unless they sign in. Device/geo/click
+// attribution live here so event rows stay minimal.
+model SessionNew {
+  id String @id @default(cuid())
+  // Dedup key of one visit: sha256(hash | userId ?? "" | start-minute). The raw
+  // `hash` cannot be unique — two logged-out colleagues behind one NAT with the
+  // same UA share it and must not share a visit row once one of them logs in,
+  // and the same device starts a NEW visit after 30 minutes of silence. The
+  // start-minute bucket is what makes two racing "start a visit" requests
+  // converge on one row instead of inserting two.
+  visitKey String @unique
+  hash     String
+  firstAt  DateTime @default(now())
+  lastAt  DateTime @default(now())
+  device  String? // 'mobile' | 'tablet' | 'desktop'
+  os      String? // 'ios' | 'android' | 'windows' | 'macos' | 'linux' | 'other'
+  country String   @default("XX")
+  region  String   @default("")
+  city    String   @default("")
+  lang    String? // full Accept-Language primary tag, e.g. "es-ES"
+  from    String? // ?from= campaign tag, first-write-wins
+  ref     String? // first-touch referrer host (search-engine detection)
+  // Paid click id. aid holds the raw click id; atype ('F' | 'G') drives source
+  // aggregation; aidField remembers which URL param carried it ('fbclid' |
+  // 'gclid' | 'gbraid' | 'wbraid') because Google's upload API needs the exact
+  // field.
+  aid      String?
+  atype    String?
+  aidField String?
+  clickAt  DateTime? // when the click id arrived — Meta fbc timestamp
+  // Identity of the visit. Stamped as soon as a session cookie resolves, so a
+  // visit that starts anonymous is promoted in place (pre-login events keep
+  // their row). Visits of the same human on other days are separate rows that
+  // the admin groups by userId — anonymous rows across salt-days stay
+  // unlinkable by construction.
+  userId String?
+  // How many anonymous rows were folded into this one (same device logged out
+  // and back in within a salt-day).
+  mergeCount Int @default(0)
+
+  events EventNew[]
+
+  @@index([firstAt])
+  @@index([userId])
+  // Ingest looks up the LIVE visit for a device hash (lastAt inside the 30-min
+  // idle window), so the timestamp belongs in the index; the admin list sorts a
+  // 30-day window by lastAt.
+  @@index([hash, lastAt])
+  @@index([lastAt])
+  @@index([atype, firstAt])
+  @@map("sessions_new")
+}
+
+// Everything about the device/geo/source lives on the session; the event row
+// carries only what can change between two events of the same visit.
+model EventNew {
+  id        String   @id @default(cuid())
+  sessionId String
+  page      String // "Home", "Pricing", "Dashboard", …
+  action    String // "Show" | "Click" | "Register" | …
+  name      String // "Hero", "Header SignIn", …
+  // Active venue at the moment of the event (membership-validated). Per-event
+  // rather than per-visit because a multi-venue owner switches mid-visit.
+  restaurantId String?
+  at           DateTime @default(now())
+
+  session SessionNew @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+
+  @@index([sessionId, at])
+  @@index([page, action, at])
+  @@index([restaurantId, at])
+  @@index([at])
+  @@map("events_new")
+}
+
+// Journal of instant conversion sends (Meta CAPI / Google Ads) for the v2
+// pipeline. Keyed by session — no raw click id is duplicated here. A success
+// row blocks re-sending; error rows feed the hourly retry sweep.
+model ConversionSendNew {
+  id        String   @id @default(cuid())
+  sessionId String
+  network   String // "meta" | "google"
+  status    String // "success" | "error"
+  response  Json?
+  createdAt DateTime @default(now())
+
+  @@index([sessionId, network, status])
+  @@index([createdAt])
+  @@map("conversion_sends_new")
+}
+
 // Journal of Google Ads offline (gclid) conversion uploads. Google analogue of
 // CapiSend: one row per (gclid, eventName) upload attempt; a row with
 // status="success" blocks re-sending the same conversion for the same click.

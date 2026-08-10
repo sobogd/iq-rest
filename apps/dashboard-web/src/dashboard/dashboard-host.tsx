@@ -64,9 +64,8 @@ interface SubData {
 }
 
 // Email links land with ?from=email&ec=<campaign>. Consume them once on boot:
-// fire d_param_<name>__<value> usage events (mirrors the landing's l_param_
-// pass) and strip ONLY these two params — the rest of the query string belongs
-// to SPA routing (?demo= etc).
+// record the arrival as its own event and strip ONLY these two params — the
+// rest of the query string belongs to SPA routing (?demo= etc).
 const ATTRIBUTION_PARAMS = ["from", "ec"];
 function consumeAttributionParams(): void {
   const sp = new URLSearchParams(window.location.search);
@@ -80,7 +79,8 @@ function consumeAttributionParams(): void {
       .replace(/[^a-z0-9_]+/g, "_")
       .replace(/_+/g, "_")
       .replace(/^_+|_+$/g, "");
-    if (v) trackEvent(`d_param_${k}__${v}`.slice(0, 64));
+    // ?ec= marks a click from a lifecycle email, ?from= any other campaign.
+    if (v) trackEvent("Open", (k === "ec" ? `Email ${v}` : `From ${v}`).slice(0, 100));
   }
   const qs = sp.toString();
   window.history.replaceState(

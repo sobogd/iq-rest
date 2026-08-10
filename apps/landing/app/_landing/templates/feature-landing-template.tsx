@@ -91,7 +91,7 @@ export function FeatureLandingTemplate({
         title={hero.headline}
         sub={hero.sub}
         primaryLabel={hero.cta}
-        primaryTrack={`${prefix}_hero_cta`}
+        primaryTrack="Hero CTA"
         demoText={chrome.demoText}
         demoVariant={demoVariant}
         microcopy={chrome.microcopy}

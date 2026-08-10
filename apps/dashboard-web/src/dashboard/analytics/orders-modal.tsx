@@ -132,7 +132,7 @@ export function OrdersListModal({ period, currency, onClose }: ListProps) {
 
   function exportCsv() {
     if (sorted.length === 0) return;
-    track("dash_analytics_orders_export_csv");
+    track("Click", "Analytics export CSV");
     // CSV cell helper — RFC 4180-style escaping for cells containing comma,
     // quote, or newline. Excel/Sheets open this fine; the BOM up-front
     // forces UTF-8 detection for non-Latin content (cyrillic, arabic, ...).
@@ -225,7 +225,7 @@ export function OrdersListModal({ period, currency, onClose }: ListProps) {
               <button
                 key={o.id}
                 type="button"
-                onClick={() => { track("dash_analytics_click_order_row"); setSelected(o); }}
+                onClick={() => { track("Click", "Analytics order row"); setSelected(o); }}
                 className="w-full bg-card border border-border rounded-xl p-3 text-left hover:border-muted-foreground/40 transition-colors flex items-center gap-3"
               >
                 <div className="flex-1 min-w-0">
@@ -292,7 +292,7 @@ function OrderDetailModal({ order, currency, onClose, onReopened }: DetailProps)
 
   async function reopen() {
     if (busy) return;
-    track("dash_analytics_order_reopen");
+    track("Click", "Analytics reopen order");
     setBusy(true);
     try {
       const res = await fetch(apiUrl(`/api/orders/${order.id}/reopen`), {

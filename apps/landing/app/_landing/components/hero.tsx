@@ -83,8 +83,8 @@ export function Hero({
               microcopy={microcopy}
               locale={locale}
               align="center-mobile"
-              trackEvent="l_hero_cta_click"
-              extra={<DemoButton text={demoText} locale={locale} trackEvent="l_hero_demo" createText={ctaText} variant={demoVariant} />}
+              trackName="Hero CTA"
+              extra={<DemoButton text={demoText} locale={locale} trackName="Hero Demo" createText={ctaText} variant={demoVariant} />}
             />
           </div>
         </div>

@@ -123,8 +123,8 @@ export function ReservationsPage({
  }
 
  async function setBookingStatus(id: string, status: Booking["status"]) {
-  if (status === "confirmed") track("dash_booking_accept");
-  else if (status === "cancelled") track("dash_booking_reject");
+  if (status === "confirmed") track("Click", "Booking accept");
+  else if (status === "cancelled") track("Click", "Booking reject");
   const before = bookings;
   setBookings((bks) => bks.map((b) => (b.id === id ? { ...b, status } : b)));
   if (demoMode) return;
@@ -162,10 +162,10 @@ export function ReservationsPage({
    >
     <div className={(kioskLayout ? "w-full" : "max-w-5xl mx-auto md:px-6 w-full") + " flex items-center justify-between gap-3"}>
      <div className="flex items-center rounded-lg border border-border bg-card overflow-hidden">
-      <ViewBtn active={view === "month"} onClick={() => { track("dash_booking_view_month"); setView("month"); }}>
+      <ViewBtn active={view === "month"} onClick={() => { track("Click", "Booking month view"); setView("month"); }}>
        {t("viewMonth")}
       </ViewBtn>
-      <ViewBtn active={view === "day"} onClick={() => { track("dash_booking_view_day"); setView("day"); }}>
+      <ViewBtn active={view === "day"} onClick={() => { track("Click", "Booking day view"); setView("day"); }}>
        {t("viewDay")}
       </ViewBtn>
      </div>
@@ -200,7 +200,7 @@ export function ReservationsPage({
         focusDate={focusDate}
         bookings={monthBookings}
         onClickDay={(d) => {
-         track("dash_booking_drill_to_day");
+         track("Click", "Booking day drilldown");
          setFocusDate(d);
          setView("day");
         }}

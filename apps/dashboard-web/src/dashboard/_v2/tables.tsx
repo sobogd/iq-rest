@@ -560,7 +560,7 @@ export function TablesPage({
  }
 
  async function addTable() {
- track("dash_settings_tables_click_add");
+ track("Click", "Tables add");
  const number = tables.reduce((m, tbl) => Math.max(m, tbl.number || 0), 0) + 1;
  // New table = a copy of the currently selected one (shape/size/color/seats),
  // nudged ~12% so it doesn't sit exactly on top of the original.
@@ -620,7 +620,7 @@ export function TablesPage({
  });
  }
 
- const goBack = () => { flush(); track("dash_settings_tables_click_back"); onBack(); };
+ const goBack = () => { flush(); track("Click", "Tables back"); onBack(); };
 
  return (
  <div>
@@ -674,7 +674,7 @@ export function TablesPage({
  <FloorMap
  tables={tables}
  selectedId={selectedId}
- onSelectTable={(id) => { if (id) { track("dash_settings_tables_click_table"); setSelectedId(id); } }}
+ onSelectTable={(id) => { if (id) { track("Click", "Tables table"); setSelectedId(id); } }}
  onMove={(x, y) => patchSelected({ x, y })}
  onRotate={(deg) => patchSelected({ rotation: deg })}
  onResize={(width, height) => patchSelected({ width, height })}
@@ -793,7 +793,7 @@ export function TableFormPage({
  }
 
  async function save() {
- track("dash_settings_table_click_save");
+ track("Click", "Table save");
  if (saving) return;
  setSaving(true);
  try {
@@ -888,7 +888,7 @@ export function TableFormPage({
 
  return (
  <div>
- <SubpageStickyBar onBack={() => { track("dash_settings_table_click_back"); onBack(); }} onSave={save} canSave={!saving} />
+ <SubpageStickyBar onBack={() => { track("Click", "Table back"); onBack(); }} onSave={save} canSave={!saving} />
 
  <div className="max-w-2xl md:max-w-5xl mx-auto md:px-6 pt-5 md:pt-4 min-w-0">
  <div className="mb-5">
@@ -912,7 +912,7 @@ export function TableFormPage({
  : [...tables, draft]}
  selectedId={draft.id}
  onSelectTable={() => {}}
- onPickPosition={(x, y) => { track("dash_settings_table_click_map"); setDraft((d) => ({ ...d, x, y })); }}
+ onPickPosition={(x, y) => { track("Click", "Table map"); setDraft((d) => ({ ...d, x, y })); }}
  onMove={(x, y) => setDraft((d) => ({ ...d, x, y }))}
  onRotate={(deg) => setDraft((d) => ({ ...d, rotation: deg }))}
  onResize={(width, height) => setDraft((d) => ({ ...d, width, height }))}
@@ -998,8 +998,8 @@ function TableSettings({
  value={table.number}
  min={1}
  onChange={(n) => onChange({ number: n })}
- onPlus={() => track("dash_settings_table_number_plus")}
- onMinus={() => track("dash_settings_table_number_minus")}
+ onPlus={() => track("Click", "Table number plus")}
+ onMinus={() => track("Click", "Table number minus")}
  />
  </div>
  <div className="flex-1 min-w-0">
@@ -1009,8 +1009,8 @@ function TableSettings({
  min={1}
  max={20}
  onChange={(n) => onChange({ capacity: n })}
- onPlus={() => track("dash_settings_table_seats_plus")}
- onMinus={() => track("dash_settings_table_seats_minus")}
+ onPlus={() => track("Click", "Table seats plus")}
+ onMinus={() => track("Click", "Table seats minus")}
  />
  </div>
  </div>
@@ -1026,7 +1026,7 @@ function TableSettings({
  type="text"
  value={table.name}
  onChange={(e) => onChange({ name: e.target.value })}
- onFocus={() => track("dash_settings_table_focus_name")}
+ onFocus={() => track("Focus", "Table name")}
  placeholder={t("namePlaceholder")}
  className={inputClass}
  />
@@ -1037,8 +1037,8 @@ function TableSettings({
  <PhotoPicker
  url={table.photoUrl}
  onChange={(url) => onChange({ photoUrl: url })}
- onAddClick={() => track("dash_settings_table_add_photo")}
- onRemoveClick={() => track("dash_settings_table_delete_photo")}
+ onAddClick={() => track("Click", "Table add photo")}
+ onRemoveClick={() => track("Click", "Table delete photo")}
  inputId={"table-photo-" + table.id}
  width="w-full"
  height="h-32"
@@ -1086,7 +1086,7 @@ function TableColorPicker({
  {value ? (
  <button
  type="button"
- onClick={() => { track("dash_settings_table_color_clear"); onChange(null); }}
+ onClick={() => { track("Click", "Table color clear"); onChange(null); }}
  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
  >
  {t("colorClear")}
@@ -1101,7 +1101,7 @@ function TableColorPicker({
  <button
  key={c}
  type="button"
- onClick={() => { track("dash_settings_table_color_pick"); onChange(c); }}
+ onClick={() => { track("Click", "Table color pick"); onChange(c); }}
  className={
  "w-full aspect-square rounded-full transition-all " +
  (selected ? "ring-2 ring-offset-2 ring-foreground" : "")
@@ -1128,7 +1128,7 @@ function TableColorPicker({
  ref={colorPickerRef}
  type="color"
  value={value || "#000000"}
- onChange={(e) => { track("dash_settings_table_color_pick"); onChange(e.target.value); }}
+ onChange={(e) => { track("Click", "Table color pick"); onChange(e.target.value); }}
  className="absolute opacity-0 pointer-events-none w-0 h-0"
  aria-hidden="true"
  />

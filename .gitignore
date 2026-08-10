@@ -35,3 +35,13 @@ apps/*/node_modules/.prisma/
 
 # packages/db generated prisma client
 packages/*/generated/
+
+# Local env backups and Playwright artefacts must never be committed —
+# they carry DATABASE_URL and live session cookies.
+*.env.bak*
+.env.bak*
+e2e/node_modules/
+e2e/.auth/
+e2e/playwright-report/
+e2e/test-results/
+.claude/worktrees/

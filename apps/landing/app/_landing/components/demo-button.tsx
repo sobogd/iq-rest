@@ -29,8 +29,8 @@ export type DemoVariant = "phone" | "tablet" | "orders" | "reservations";
 interface DemoButtonProps {
   text: string;
   locale: string;
-  /** Base name like `l_hero_demo` — `_open` and `_close` are appended automatically. */
-  trackEvent?: string;
+  /** Base event name like "Hero Demo" — " Open" and " Close" are appended. */
+  trackName?: string;
   className?: string;
   /** When set, renders a primary "create menu" CTA under the device preview
    *  inside the demo modal — turns the demo from a dead-end into a conversion
@@ -69,7 +69,7 @@ function demoUrlFor(board: DemoBoard, locale: string): string {
 export function DemoButton({
   text,
   locale,
-  trackEvent = "l_demo",
+  trackName = "Demo",
   className = "",
   variant = "phone",
 }: DemoButtonProps) {
@@ -139,12 +139,12 @@ export function DemoButton({
   const handleOpen = () => {
     setOpen(true);
     setLoading(true);
-    analytics.track(`${trackEvent}_open`);
+    analytics.track("Click", `${trackName} Open`);
   };
 
   const handleClose = () => {
     setOpen(false);
-    analytics.track(`${trackEvent}_close`);
+    analytics.track("Click", `${trackName} Close`);
   };
 
   const iframeSrc =

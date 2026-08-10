@@ -7,8 +7,8 @@ import { analytics } from "@/lib/analytics";
 interface LinkForwardProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "onClick"> {
   href: string;
   children: ReactNode;
-  /** Fires once on click; tracks via the shared analytics sink. Optional. */
-  trackEvent?: string;
+  /** Event name fired as a Click on press ("Header Nav Pricing"). Optional. */
+  trackName?: string;
   /** Called after the analytics track, before navigation. Use for state side
    *  effects only — don't try to cancel navigation from here. */
   onClick?: (e: MouseEvent<HTMLAnchorElement>) => void;
@@ -31,17 +31,22 @@ function isHashOnly(href: string): boolean {
 export function LinkForward({
   href,
   children,
-  trackEvent,
+  trackName,
   onClick,
   prefetch = false,
   ...rest
 }: LinkForwardProps) {
+  const isAbsolute = /^https?:/i.test(href);
+
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
-    if (trackEvent) analytics.track(trackEvent);
+    if (trackName) analytics.track("Click", trackName);
+    // Absolute URLs leave the document; hash fragments and mailto:/tel: don't,
+    // and NextLink paths are soft navigations that keep the buffer alive.
+    if (isAbsolute && !rest.target) analytics.flush();
     onClick?.(e);
   };
 
-  if (isHashOnly(href) || isOpaqueProtocol(href) || /^https?:/i.test(href)) {
+  if (isHashOnly(href) || isOpaqueProtocol(href) || isAbsolute) {
     return (
       <a href={href} onClick={handleClick} {...rest}>
         {children}

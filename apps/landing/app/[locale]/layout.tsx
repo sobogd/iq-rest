@@ -54,10 +54,13 @@ export default async function LocaleLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider messages={messages}>
-            <LangAutoModal />
             <OnboardingModalProvider>
               {children}
             </OnboardingModalProvider>
+            {/* After the page, not before: effects flush children-first, so
+                PageTracker has published the page label before this modal
+                fires its own events. Portal-rendered — order is invisible. */}
+            <LangAutoModal />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

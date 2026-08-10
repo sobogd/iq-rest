@@ -200,7 +200,7 @@ export function KitchenPage({
         .then(release)
         .catch((err) => {
           rollbackOrder(orderId, snapshotItems);
-          showApiError(err, "kitchenItemStatus");
+          showApiError(err, "Kitchen item status");
           release();
         });
     }, 300);

@@ -96,7 +96,7 @@ export function CreateFlowModal({
   // Already-authenticated visitors who land on the modal get bounced to the dashboard.
   useEffect(() => {
     if (!open) return;
-    analytics.track(`l_onb_open_${mode}`);
+    analytics.track("Show", `Auth Modal ${mode}`);
     closeReasonRef.current = "x";
     let cancelled = false;
     fetch(dashboardApi("/api/auth/check"), { credentials: "include", cache: "no-store" })
@@ -104,6 +104,7 @@ export function CreateFlowModal({
       .then((data) => {
         if (cancelled || !data?.authenticated) return;
         const locale = (typeof document !== "undefined" && document.documentElement.lang) || "en";
+        analytics.flush();
         if (data.legacyDashboard) {
           window.location.assign(`/${locale}/dashboard`);
           return;
@@ -121,7 +122,7 @@ export function CreateFlowModal({
       open={open}
       onOpenChange={(o) => {
         if (o) return;
-        analytics.track(`l_onb_close_${closeReasonRef.current}_${mode}`);
+        analytics.track("Click", `Auth Modal Close ${closeReasonRef.current} ${mode}`);
         onClose();
       }}
     >

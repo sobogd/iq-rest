@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { LandingHeader } from "@/app/_landing/components/header";
 import { LandingFooter } from "@/app/_landing/components/footer";
 import { LandingI18nWrap } from "@/app/_landing/components/landing-i18n-wrap";
+import { PageTracker } from "@/app/_landing/components/page-tracker";
 import { TEXTS } from "./(en)/texts";
 
 // Global not-found — App Router renders this for any unmatched URL that
@@ -35,6 +36,9 @@ export default async function NotFound() {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange storageKey="iq-rest-theme-v2">
           <LandingI18nWrap locale={LOCALE}>
             <main className="relative">
+              {/* Own page bucket — header/footer clicks from a 404 would
+                  otherwise be attributed to whatever page ran before it. */}
+              <PageTracker page="not-found" />
               <LandingHeader
                 texts={TEXTS.header}
                 locale={LOCALE}

@@ -1,15 +1,52 @@
 import { dashboardApi } from "./dashboard-url";
 
+// Analytics v2: every event is a page/action/name triple ("Home" / "Click" /
+// "Header SignIn") POSTed to dashboard-api /api/v2/e. The server derives the
+// cookieless session (salt-hash of ip+ua) — nothing is stored on the visitor's
+// device. The first event of a visit carries ctx (paid click ids, ?from=,
+// search referrer host) so the session row can be attributed.
+//
+// Two wire details are load-bearing:
+//   • `/api/v2/e` — the readable `/track` path is on every ad-blocker list.
+//     The server still answers `/api/v2/track` for older cached bundles.
+//   • `text/plain` body — keeps the POST a CORS-*simple* request, so the
+//     browser skips the OPTIONS preflight. A preflight would double the
+//     latency and is itself frequently blocked; it also cannot be sent by
+//     `navigator.sendBeacon`, which we rely on during unload.
+const ENDPOINT = "/api/v2/e";
+const CONTENT_TYPE = "text/plain;charset=UTF-8";
+
 const SEARCH_HOST_REGEX =
   /(?:^|\.)(google|bing|yandex|duckduckgo|yahoo|baidu|ecosia|qwant|startpage|mojeek|brave)\.[a-z.]+$/i;
 
-// Stamp the search-engine referrer onto the first event of a tab's session
-// only. Subsequent track() calls (section observers, SPA navigations to other
-// landing pages) skip the lookup so we don't fan out the same is_search row
-// across an entire visit. Resets on full page reload — acceptable.
-let referrerConsumed = false;
+// Mirrors the server-side validation. An event that fails it rejects the WHOLE
+// batch, so a bad page label would silently kill unrelated events — clamp at
+// the source instead.
+const PAGE_REGEX = /^[A-Za-z0-9][A-Za-z0-9 _\-./+]{0,63}$/;
 
-function searchReferrerHost(): string | null {
+/** True when `label` is accepted by the server as a page/action value. */
+export function isValidPageLabel(label: string): boolean {
+  return PAGE_REGEX.test(label);
+}
+
+export interface TrackCtx {
+  fbclid?: string;
+  gclid?: string;
+  gbraid?: string;
+  wbraid?: string;
+  from?: string;
+  ref?: string;
+}
+
+// Current page label, set by PageTracker on mount so deep components (header,
+// footer, auth modal) don't need the page threaded through props.
+let currentPage = "Landing";
+
+export function setTrackPage(page: string): void {
+  currentPage = isValidPageLabel(page) ? page : "Landing";
+}
+
+export function searchReferrerHost(): string | null {
   try {
     const ref = document.referrer;
     if (!ref) return null;
@@ -25,33 +62,204 @@ function searchReferrerHost(): string | null {
 //   - the build is production (deployed), OR
 //   - the developer has explicitly opted into tracking by setting
 //     NEXT_PUBLIC_DASHBOARD_API_BASE (e.g. pointing at a local
-//     dashboard-api on http://localhost:3000) — in which case events go
-//     to that override host instead.
+//     dashboard-api on http://localhost:8003).
 const TRACKING_ENABLED =
   process.env.NODE_ENV === "production" ||
   Boolean(process.env.NEXT_PUBLIC_DASHBOARD_API_BASE);
 
-function track(event: string): void {
+// Events are buffered and posted in batches: one request instead of ten when a
+// visitor clicks through quickly, one identity resolution per batch on the
+// server, and enough headroom under the endpoint's 10 req/s burst limit.
+const FLUSH_MS = 2000;
+// Server hard-caps a batch at 50; stay well under so a burst still fits.
+const MAX_BATCH = 20;
+// Upper bound on the buffer while retries are pending. On overflow the OLDEST
+// events go — the newest ones describe what the visitor is doing right now.
+const MAX_QUEUE = 100;
+// Only transient failures are retried, and only a few times: a visitor on a
+// flaky connection should not accumulate an unbounded retry tail.
+const RETRY_DELAYS_MS = [2000, 5000, 15000];
+
+interface QueuedEvent {
+  page: string;
+  action: string;
+  name: string;
+  /** Epoch ms of when the event happened, not when it is sent — a retried or
+   *  beaconed batch must not collapse onto its delivery time. The server
+   *  accepts [now-6h, now+60s]. */
+  ts: number;
+}
+
+interface Batch {
+  events: QueuedEvent[];
+  ctx?: TrackCtx;
+}
+
+let queue: QueuedEvent[] = [];
+let pendingCtx: TrackCtx | undefined;
+let flushTimer: ReturnType<typeof setTimeout> | null = null;
+let retryTimer: ReturnType<typeof setTimeout> | null = null;
+let inFlight = false;
+let retryAttempt = 0;
+
+function serialize(events: QueuedEvent[], ctx?: TrackCtx): string {
+  return JSON.stringify({ events, ...(ctx ? { ctx } : {}) });
+}
+
+function clearTimer(timer: ReturnType<typeof setTimeout> | null): null {
+  if (timer) clearTimeout(timer);
+  return null;
+}
+
+function takeBatch(): Batch | null {
+  if (queue.length === 0) return null;
+  const events = queue.slice(0, MAX_BATCH);
+  queue = queue.slice(MAX_BATCH);
+  const ctx = pendingCtx;
+  pendingCtx = undefined;
+  return { events, ctx };
+}
+
+/** Put a failed batch back at the FRONT of the queue so ordering survives a
+ *  retry, and restore its ctx. */
+function requeue(batch: Batch): void {
+  queue = batch.events.concat(queue);
+  // Merge *under* whatever arrived meanwhile: a click id collected after the
+  // failed send is fresher and must win.
+  if (batch.ctx) pendingCtx = { ...batch.ctx, ...pendingCtx };
+  trimQueue();
+}
+
+function trimQueue(): void {
+  if (queue.length > MAX_QUEUE) queue = queue.slice(queue.length - MAX_QUEUE);
+}
+
+function scheduleFlush(): void {
+  if (flushTimer || inFlight || retryTimer) return;
+  flushTimer = setTimeout(send, FLUSH_MS);
+}
+
+function onFailure(batch: Batch): void {
+  requeue(batch);
+  if (retryAttempt >= RETRY_DELAYS_MS.length) {
+    // Backoff ladder exhausted. Keep the events buffered anyway — the next
+    // track() or the unload beacon still gets a shot at delivering them.
+    retryAttempt = 0;
+    return;
+  }
+  const delay = RETRY_DELAYS_MS[retryAttempt];
+  retryAttempt += 1;
+  retryTimer = setTimeout(() => {
+    retryTimer = null;
+    send();
+  }, delay);
+}
+
+function send(): void {
+  flushTimer = clearTimer(flushTimer);
+  if (inFlight || retryTimer) return;
+  const batch = takeBatch();
+  if (!batch) return;
+  inFlight = true;
+  fetch(dashboardApi(ENDPOINT), {
+    method: "POST",
+    headers: { "Content-Type": CONTENT_TYPE },
+    body: serialize(batch.events, batch.ctx),
+    credentials: "include",
+    // Survives the tab closing mid-flight.
+    keepalive: true,
+  })
+    .then((res) => {
+      inFlight = false;
+      // 400 means the payload itself is invalid — a retry replays the exact
+      // same bytes, so drop it instead of looping. Everything else (5xx, 429,
+      // proxy hiccup) is transient and worth another attempt.
+      if (res.ok || res.status === 400) {
+        retryAttempt = 0;
+        if (queue.length > 0) scheduleFlush();
+        return;
+      }
+      onFailure(batch);
+    })
+    .catch(() => {
+      inFlight = false;
+      onFailure(batch);
+    });
+}
+
+function beacon(body: string): boolean {
+  try {
+    return navigator.sendBeacon(
+      dashboardApi(ENDPOINT),
+      new Blob([body], { type: CONTENT_TYPE }),
+    );
+  } catch {
+    return false;
+  }
+}
+
+/** Unload path: the document is going away, so there is nobody left to retry.
+ *  Drain everything buffered in beacon-sized chunks and forget it. Also used
+ *  for the explicit pre-navigation flush() — a beacon is the only send that
+ *  the browser guarantees to complete after the document is discarded. */
+function flushOnUnload(): void {
+  flushTimer = clearTimer(flushTimer);
+  retryTimer = clearTimer(retryTimer);
+  let ctx = pendingCtx;
+  pendingCtx = undefined;
+  while (queue.length > 0) {
+    const events = queue.slice(0, MAX_BATCH);
+    queue = queue.slice(MAX_BATCH);
+    const body = serialize(events, ctx);
+    // Only the first chunk carries ctx — the server applies it first-write-wins.
+    ctx = undefined;
+    if (!beacon(body)) {
+      // Beacon refused (unsupported, or over the UA's queue limit) — a
+      // keepalive fetch is the next best fire-and-forget option.
+      fetch(dashboardApi(ENDPOINT), {
+        method: "POST",
+        headers: { "Content-Type": CONTENT_TYPE },
+        body,
+        credentials: "include",
+        keepalive: true,
+      }).catch(() => {});
+    }
+  }
+}
+
+function track(action: string, name: string, ctx?: TrackCtx): void {
   if (typeof window === "undefined") return;
   if (!TRACKING_ENABLED) {
     if (typeof console !== "undefined") {
-      console.debug(`[analytics:disabled] ${event}`);
+      console.debug(`[analytics:disabled] ${currentPage}/${action}/${name}`, ctx ?? "");
     }
     return;
   }
-  let qs = "";
-  if (!referrerConsumed) {
-    referrerConsumed = true;
-    const host = searchReferrerHost();
-    if (host) qs = `?r=${encodeURIComponent(host)}`;
+  queue.push({ page: currentPage, action, name, ts: Date.now() });
+  if (ctx) pendingCtx = { ...pendingCtx, ...ctx };
+  trimQueue();
+
+  if (queue.length >= MAX_BATCH) {
+    send();
+    return;
   }
-  fetch(dashboardApi(`/api/track/${encodeURIComponent(event)}${qs}`), {
-    method: "POST",
-    credentials: "include",
-    keepalive: true,
-  }).catch(() => {});
+  scheduleFlush();
+}
+
+// Registered once at module load rather than lazily inside track(): a visitor
+// who leaves right after the pageview would otherwise never have had a hook
+// installed, losing the whole visit.
+if (typeof window !== "undefined" && TRACKING_ENABLED) {
+  // pagehide fires on iOS Safari where unload does not.
+  window.addEventListener("pagehide", flushOnUnload);
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "hidden") flushOnUnload();
+  });
 }
 
 export const analytics = {
   track,
+  setPage: setTrackPage,
+  /** Force-send the buffer — call right before a full-page navigation. */
+  flush: flushOnUnload,
 };

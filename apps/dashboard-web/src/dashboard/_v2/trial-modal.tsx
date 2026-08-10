@@ -43,7 +43,7 @@ export function TrialModal({
   const [open, setOpen] = useState<boolean>(() => shouldShow(sub, accountCreatedAt));
 
   useEffect(() => {
-    if (open) track("dash_trial_modal_open");
+    if (open) track("Show", "Trial modal");
   }, [open]);
 
   if (!sub) return null;
@@ -64,12 +64,12 @@ export function TrialModal({
   };
 
   const hide = () => {
-    track("dash_trial_modal_dismiss");
+    track("Click", "Trial modal dismiss");
     markShownToday();
     setOpen(false);
   };
   const goPlans = () => {
-    track("dash_trial_modal_upgrade");
+    track("Click", "Trial modal upgrade");
     markShownToday();
     setOpen(false);
     router.push({ name: "settings.billing", from: "menu" });

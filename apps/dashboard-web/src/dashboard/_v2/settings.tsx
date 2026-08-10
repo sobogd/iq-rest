@@ -93,7 +93,7 @@ export function AboutSettingsPage({
  const canSave = draft.name.trim().length > 0;
 
  async function save() {
- track("dash_settings_about_save");
+ track("Click", "About save");
  if (!canSave) return;
  try {
  await updateRestaurant({
@@ -113,7 +113,7 @@ export function AboutSettingsPage({
 
  return (
  <div>
- <SubpageStickyBar onBack={() => { track("dash_settings_about_back"); onBack(); }} onSave={save} canSave={canSave} />
+ <SubpageStickyBar onBack={() => { track("Click", "About back"); onBack(); }} onSave={save} canSave={canSave} />
  <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4">
  <div className="mb-5">
  <div className="text-xs text-muted-foreground">{t("breadcrumb")}</div>
@@ -126,7 +126,7 @@ export function AboutSettingsPage({
  type="text"
  value={draft.name}
  onChange={(e) => setDraft((d) => ({ ...d, name: e.target.value }))}
- onFocus={() => track("dash_settings_about_focus_name")}
+ onFocus={() => track("Focus", "About name")}
  placeholder={ta("titlePlaceholder")}
  className={inputClass}
  />
@@ -136,7 +136,7 @@ export function AboutSettingsPage({
  type="text"
  value={draft.subtitle}
  onChange={(e) => setDraft((d) => ({ ...d, subtitle: e.target.value }))}
- onFocus={() => track("dash_settings_about_focus_description")}
+ onFocus={() => track("Focus", "About description")}
  placeholder={ta("subtitlePlaceholder")}
  className={inputClass}
  />
@@ -170,7 +170,7 @@ export function ContactsSettingsPage({
  }, []);
 
  async function save() {
- track("dash_settings_contacts_save");
+ track("Click", "Contacts save");
  try {
  await updateRestaurant({
  phone: draft.contacts.phone.trim() || null,
@@ -203,7 +203,7 @@ export function ContactsSettingsPage({
 
  return (
  <div>
- <SubpageStickyBar onBack={() => { track("dash_settings_contacts_back"); onBack(); }} onSave={save} canSave />
+ <SubpageStickyBar onBack={() => { track("Click", "Contacts back"); onBack(); }} onSave={save} canSave />
  <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4">
  <div className="mb-5">
  <div className="text-xs text-muted-foreground">{t("breadcrumb")}</div>
@@ -222,7 +222,7 @@ export function ContactsSettingsPage({
  type="tel"
  value={draft.contacts.phone}
  onChange={(e) => setDraft((d) => ({ ...d, contacts: { ...d.contacts, phone: e.target.value } }))}
- onFocus={() => track("dash_settings_contacts_focus_phone")}
+ onFocus={() => track("Focus", "Contacts phone")}
  placeholder={tc("phonePlaceholder")}
  className={inputClass}
  />
@@ -240,7 +240,7 @@ export function ContactsSettingsPage({
  contacts: { ...d.contacts, instagram: e.target.value.replace(/^@/, "") },
  }))
  }
- onFocus={() => track("dash_settings_contacts_focus_instagram")}
+ onFocus={() => track("Focus", "Contacts Instagram")}
  placeholder={tc("instagramPlaceholder")}
  className={inputClass + " pl-7"}
  />
@@ -252,7 +252,7 @@ export function ContactsSettingsPage({
  type="tel"
  value={draft.contacts.whatsapp}
  onChange={(e) => setDraft((d) => ({ ...d, contacts: { ...d.contacts, whatsapp: e.target.value } }))}
- onFocus={() => track("dash_settings_contacts_focus_whatsapp")}
+ onFocus={() => track("Focus", "Contacts WhatsApp")}
  placeholder={tc("phonePlaceholder")}
  className={inputClass}
  />
@@ -269,7 +269,7 @@ export function ContactsSettingsPage({
  lat={draft.location.lat ?? undefined}
  lng={draft.location.lng ?? undefined}
  onLocationSelect={(lat, lng, placeId) => {
- track("dash_settings_contacts_location_change");
+ track("Change", "Contacts location");
  setDraft((d) => ({ ...d, location: { ...d.location, lat, lng, placeId } }));
  }}
  />
@@ -355,7 +355,7 @@ export function BrandingSettingsPage({
  const validSlug = /^[a-z0-9-]{2,40}$/.test(draft.slug);
 
  function copySlugUrl() {
-   track("dash_settings_branding_copy_url");
+   track("Click", "Branding copy URL");
    const fullUrl = getMenuUrl(draft.slug);
    if (navigator.clipboard?.writeText) {
      navigator.clipboard.writeText(fullUrl).then(() => {
@@ -370,7 +370,7 @@ export function BrandingSettingsPage({
  }, []);
 
  async function save() {
- track("dash_settings_branding_save");
+ track("Click", "Branding save");
  const trimmedName = draft.name.trim();
  const trimmedSlug = (draft.slug || "").trim();
  if (!trimmedName) return;
@@ -417,7 +417,7 @@ export function BrandingSettingsPage({
  }
 
  async function handleBackground(e: React.ChangeEvent<HTMLInputElement>) {
- track("dash_settings_branding_click_add_photo");
+ track("Click", "Branding add photo");
  const file = e.target.files?.[0];
  if (!file) return;
  // file.type is sometimes empty (Safari/iOS, some Android cameras), so
@@ -437,13 +437,13 @@ export function BrandingSettingsPage({
  }
 
  function removeBackground() {
- track("dash_settings_branding_click_delete_photo");
+ track("Click", "Branding delete photo");
  setDraft((d) => ({ ...d, backgroundUrl: null, backgroundType: null }));
  if (fileInputRef.current) fileInputRef.current.value = "";
  }
 
  async function handleLogo(e: React.ChangeEvent<HTMLInputElement>) {
- track("dash_settings_branding_click_add_logo");
+ track("Click", "Branding add logo");
  const file = e.target.files?.[0];
  if (!file) return;
  setLogoUploading(true);
@@ -461,7 +461,7 @@ export function BrandingSettingsPage({
  }
 
  function removeLogo() {
- track("dash_settings_branding_click_delete_logo");
+ track("Click", "Branding delete logo");
  setDraft((d) => ({ ...d, logoUrl: null }));
  if (logoInputRef.current) logoInputRef.current.value = "";
  }
@@ -470,7 +470,7 @@ export function BrandingSettingsPage({
  const canSave = draft.name.trim().length > 0 && validSlug;
  return (
  <div>
- <SubpageStickyBar onBack={() => { track("dash_settings_branding_back"); onBack(); }} onSave={save} canSave={canSave} />
+ <SubpageStickyBar onBack={() => { track("Click", "Branding back"); onBack(); }} onSave={save} canSave={canSave} />
  <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4">
  <div className="mb-5">
  <div className="text-xs text-muted-foreground">{t("breadcrumb")}</div>
@@ -483,7 +483,7 @@ export function BrandingSettingsPage({
  type="text"
  value={draft.name}
  onChange={(e) => setDraft((d) => ({ ...d, name: e.target.value }))}
- onFocus={() => track("dash_settings_about_focus_name")}
+ onFocus={() => track("Focus", "Branding name")}
  placeholder={ta("titlePlaceholder")}
  className={inputClass}
  />
@@ -493,7 +493,7 @@ export function BrandingSettingsPage({
  type="text"
  value={draft.subtitle}
  onChange={(e) => setDraft((d) => ({ ...d, subtitle: e.target.value }))}
- onFocus={() => track("dash_settings_about_focus_description")}
+ onFocus={() => track("Focus", "Branding description")}
  placeholder={ta("subtitlePlaceholder")}
  className={inputClass}
  />
@@ -504,7 +504,7 @@ export function BrandingSettingsPage({
  type="text"
  value={draft.slug}
  onChange={(e) => setDraft((d) => ({ ...d, slug: slugify(e.target.value) }))}
- onFocus={() => track("dash_settings_general_focus_link")}
+ onFocus={() => track("Focus", "Branding link")}
  placeholder={tg("slugPlaceholder")}
  className="flex-1 min-w-0 h-full pl-3 text-sm text-foreground bg-transparent border-0 placeholder:text-muted-foreground focus:outline-none"
  />
@@ -544,7 +544,7 @@ export function BrandingSettingsPage({
  key={c}
  type="button"
  onClick={() => {
- track("dash_settings_branding_click_color");
+ track("Click", "Branding color");
  setDraft((d) => ({ ...d, accentColor: c }));
  }}
  className={
@@ -575,7 +575,7 @@ export function BrandingSettingsPage({
  ref={colorPickerRef}
  type="color"
  value={draft.accentColor}
- onChange={(e) => { track("dash_settings_branding_click_color"); setDraft((d) => ({ ...d, accentColor: e.target.value })); }}
+ onChange={(e) => { track("Click", "Branding color"); setDraft((d) => ({ ...d, accentColor: e.target.value })); }}
  className="absolute opacity-0 pointer-events-none w-0 h-0"
  aria-hidden="true"
  />
@@ -590,7 +590,7 @@ export function BrandingSettingsPage({
  </div>
  <ToggleSwitch
  checked={draft.showTitleOnHomepage}
- onChange={() => { track("dash_settings_branding_toggle_visible"); setDraft((d) => ({ ...d, showTitleOnHomepage: !d.showTitleOnHomepage })); }}
+ onChange={() => { track("Toggle", "Branding visible"); setDraft((d) => ({ ...d, showTitleOnHomepage: !d.showTitleOnHomepage })); }}
  />
  </label>
  <label className="flex items-center justify-between gap-3 cursor-pointer select-none mt-4">
@@ -602,7 +602,7 @@ export function BrandingSettingsPage({
  </div>
  <ToggleSwitch
  checked={draft.showDescriptionOnHomepage}
- onChange={() => { track("dash_settings_branding_toggle_description"); setDraft((d) => ({ ...d, showDescriptionOnHomepage: !d.showDescriptionOnHomepage })); }}
+ onChange={() => { track("Toggle", "Branding description visible"); setDraft((d) => ({ ...d, showDescriptionOnHomepage: !d.showDescriptionOnHomepage })); }}
  />
  </label>
  </div>
@@ -611,7 +611,7 @@ export function BrandingSettingsPage({
  <div className="text-sm font-medium text-foreground">{tb("backgroundLabel")}</div>
  <button
  type="button"
- onClick={() => { track("dash_settings_branding_click_generate_photo"); setAiOpen(true); }}
+ onClick={() => { track("Click", "Branding generate photo"); setAiOpen(true); }}
  className="inline-flex items-center gap-1 text-[11px] font-medium text-muted-foreground transition-colors"
  >
  <SparklesIcon size={11} />
@@ -749,7 +749,7 @@ export function BrandingSettingsPage({
  </div>
  <ToggleSwitch
  checked={draft.showLogoOnHomepage}
- onChange={() => { track("dash_settings_branding_toggle_logo"); setDraft((d) => ({ ...d, showLogoOnHomepage: !d.showLogoOnHomepage })); }}
+ onChange={() => { track("Toggle", "Branding logo"); setDraft((d) => ({ ...d, showLogoOnHomepage: !d.showLogoOnHomepage })); }}
  />
  </label>
  <div className="text-sm font-medium text-foreground mt-4 mb-1">
@@ -766,7 +766,7 @@ export function BrandingSettingsPage({
  key={opt}
  type="button"
  onClick={() => {
- track(`dash_settings_branding_logo_scale_${opt}`);
+ track("Change", `Branding logo scale ${opt}`);
  setDraft((d) => ({ ...d, logoScale: opt }));
  }}
  className={
@@ -809,7 +809,7 @@ export function BrandingSettingsPage({
  key={opt}
  type="button"
  onClick={() => {
- track(`dash_settings_branding_title_scale_${opt}`);
+ track("Change", `Branding title scale ${opt}`);
  setDraft((d) => ({ ...d, titleScale: opt }));
  }}
  className={
@@ -849,7 +849,7 @@ export function BrandingSettingsPage({
  key={opt}
  type="button"
  onClick={() => {
- track(`dash_settings_branding_lang_switcher_${opt}`);
+ track("Change", `Branding language switcher ${opt}`);
  setDraft((d) => ({ ...d, languageSwitcher: opt }));
  }}
  className={
@@ -882,7 +882,7 @@ export function BrandingSettingsPage({
  key={opt}
  type="button"
  onClick={() => {
- track(`dash_settings_branding_layout_${opt}`);
+ track("Change", `Branding layout ${opt}`);
  setDraft((d) => ({ ...d, menuLayout: opt }));
  }}
  className={
@@ -918,7 +918,7 @@ export function BrandingSettingsPage({
  open={aiOpen}
  onClose={() => setAiOpen(false)}
  onUse={(url) => setDraft((d) => ({ ...d, backgroundUrl: url, backgroundType: "image" }))}
- eventPrefix="dash_settings_branding"
+ namePrefix="Branding"
  endpoint="/api/restaurant/generate-background"
  title={tb("aiTitle")}
  placeholder={tb("aiPlaceholder")}
@@ -952,7 +952,7 @@ export function GeneralSettingsPage({
  }, []);
 
  async function save() {
- track("dash_settings_general_save");
+ track("Click", "General save");
  try {
  await updateRestaurant({ currency: draft.currency, timezone: draft.timezone });
  } catch {
@@ -968,7 +968,7 @@ export function GeneralSettingsPage({
 
  return (
  <div>
- <SubpageStickyBar onBack={() => { track("dash_settings_general_back"); onBack(); }} onSave={save} canSave />
+ <SubpageStickyBar onBack={() => { track("Click", "General back"); onBack(); }} onSave={save} canSave />
  <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4">
  <div className="mb-5">
  <div className="text-xs text-muted-foreground">{t("breadcrumb")}</div>
@@ -980,7 +980,7 @@ export function GeneralSettingsPage({
  id="gen-currency"
  value={draft.currency}
  onChange={(next) => {
- track("dash_settings_general_currency_change", { currency: next });
+ track("Change", `General currency ${next}`);
  setDraft((d) => ({ ...d, currency: next }));
  }}
  options={CURRENCIES.map((c) => ({
@@ -997,7 +997,7 @@ export function GeneralSettingsPage({
  id="gen-timezone"
  value={draft.timezone}
  onChange={(next) => {
- track("dash_settings_general_change_timezone", { tz: next });
+ track("Change", `General timezone ${next}`);
  setDraft((d) => ({ ...d, timezone: next }));
  }}
  options={TIMEZONE_OPTIONS.map((tz) => ({ value: tz, label: tz }))}
@@ -1034,7 +1034,7 @@ export function OrderSettingsPage({
  const canSave = !draft.acceptOrders || hasMode;
 
  async function save() {
- track("dash_settings_orders_save");
+ track("Click", "Order settings save");
  if (!canSave) return;
  const orderMode =
  draft.modes.internal && draft.modes.whatsapp
@@ -1066,7 +1066,7 @@ export function OrderSettingsPage({
 
  return (
  <div>
- <SubpageStickyBar onBack={() => { track("dash_settings_orders_back"); onBack(); }} onSave={save} canSave={canSave} />
+ <SubpageStickyBar onBack={() => { track("Click", "Order settings back"); onBack(); }} onSave={save} canSave={canSave} />
  <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4">
  <div className="mb-5">
  <div className="text-xs text-muted-foreground">{t("breadcrumb")}</div>
@@ -1083,7 +1083,7 @@ export function OrderSettingsPage({
  <ToggleSwitch
  checked={draft.acceptOrders}
  onChange={() => {
- track("dash_settings_orders_toggle_accept");
+ track("Toggle", "Order settings accept");
  setDraft((d) => ({ ...d, acceptOrders: !d.acceptOrders }));
  }}
  />
@@ -1101,7 +1101,7 @@ export function OrderSettingsPage({
  <div className="text-sm text-foreground">{to("internal")}</div>
  <ToggleSwitch
  checked={draft.modes.internal}
- onChange={() => { track("dash_settings_orders_toggle_internal"); setDraft((d) => ({ ...d, modes: { ...d.modes, internal: !d.modes.internal } })); }}
+ onChange={() => { track("Toggle", "Order settings internal"); setDraft((d) => ({ ...d, modes: { ...d.modes, internal: !d.modes.internal } })); }}
  />
  </label>
  <div className="border-t border-border my-2.5" />
@@ -1109,7 +1109,7 @@ export function OrderSettingsPage({
  <div className="text-sm text-foreground">{to("whatsapp")}</div>
  <ToggleSwitch
  checked={draft.modes.whatsapp}
- onChange={() => { track("dash_settings_orders_toggle_whatsapp"); setDraft((d) => ({ ...d, modes: { ...d.modes, whatsapp: !d.modes.whatsapp } })); }}
+ onChange={() => { track("Toggle", "Order settings WhatsApp"); setDraft((d) => ({ ...d, modes: { ...d.modes, whatsapp: !d.modes.whatsapp } })); }}
  />
  </label>
  {!hasMode ? <p className="text-xs text-red-600 mt-2">{to("modeError")}</p> : null}
@@ -1132,7 +1132,7 @@ export function OrderSettingsPage({
  <ToggleSwitch
  checked={draft.requiredFields[key]}
  onChange={() => {
- track(`dash_settings_orders_toggle_${key}`);
+ track("Toggle", `Order settings field ${key}`);
  setDraft((d) => ({
  ...d,
  requiredFields: { ...d.requiredFields, [key]: !d.requiredFields[key] },
@@ -1160,7 +1160,7 @@ export function OrderSettingsPage({
  <ToggleSwitch
  checked={paymentDraft.includes(code)}
  onChange={() => {
- track(`dash_settings_orders_toggle_pm_${code}`);
+ track("Toggle", `Order settings payment ${code}`);
  togglePayment(code);
  }}
  />
@@ -1209,7 +1209,7 @@ export function BookingSettingsPage({
  const canSave = !draft.enabled || dayErrors.every((e) => e === null);
 
  async function save() {
- track("dash_settings_booking_save");
+ track("Click", "Booking settings save");
  if (!canSave) return;
  // Keep legacy workingHoursStart/End in sync with the first open day so
  // public-menu fallback (reservationSchedule null) still picks something.
@@ -1243,7 +1243,7 @@ export function BookingSettingsPage({
 
  return (
  <div>
- <SubpageStickyBar onBack={() => { track("dash_settings_booking_back"); onBack(); }} onSave={save} canSave={canSave} />
+ <SubpageStickyBar onBack={() => { track("Click", "Booking settings back"); onBack(); }} onSave={save} canSave={canSave} />
  <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4">
  <div className="mb-5">
  <div className="text-xs text-muted-foreground">{t("breadcrumb")}</div>
@@ -1260,7 +1260,7 @@ export function BookingSettingsPage({
  <ToggleSwitch
  checked={draft.enabled}
  onChange={() => {
- track("dash_settings_booking_toggle_enable");
+ track("Toggle", "Booking settings enable");
  setDraft((d) => ({ ...d, enabled: !d.enabled }));
  }}
  />
@@ -1279,7 +1279,7 @@ export function BookingSettingsPage({
  <Select<string>
  value={draft.approval}
  onChange={(next) => {
- track("dash_settings_booking_change_mode", { mode: next });
+ track("Change", `Booking settings mode ${next}`);
  setDraft((d) => ({ ...d, approval: next as "auto" | "manual" }));
  }}
  className="w-32"
@@ -1304,7 +1304,7 @@ export function BookingSettingsPage({
  <Select<string>
  value={String(draft.duration)}
  onChange={(next) => {
- track("dash_settings_booking_change_duration");
+ track("Change", "Booking settings duration");
  setDraft((d) => ({ ...d, duration: parseInt(next, 10) }));
  }}
  className="w-24"
@@ -1398,7 +1398,7 @@ function ScheduleDayRow({
  <ToggleSwitch
  checked={!day.closed}
  onChange={() => {
- track("dash_settings_booking_toggle_day", { idx });
+ track("Toggle", "Booking settings day");
  onChange({ closed: !day.closed });
  }}
  />
@@ -1430,7 +1430,7 @@ function ScheduleDayRow({
  <ToggleSwitch
  checked={lunchEnabled}
  onChange={() => {
- track("dash_settings_booking_toggle_lunch", { idx });
+ track("Toggle", "Booking settings lunch break");
  if (lunchEnabled) {
  onChange({ lunchFrom: null, lunchTo: null });
  } else {
@@ -1498,7 +1498,7 @@ export function LanguagesSettingsPage({
  const canSave = draft.languages.length > 0 && draft.languages.includes(draft.defaultLang) && !saving;
 
  async function save() {
- track("dash_settings_langs_save");
+ track("Click", "Languages save");
  if (!canSave) return;
  const addedLangs = draft.languages.filter((l) => !restaurant.languages.includes(l));
  const willBackfill = addedLangs.length > 0;
@@ -1524,9 +1524,11 @@ export function LanguagesSettingsPage({
  }
 
  function toggleLang(code: string) {
+ // Tracked outside the updater: React may re-run an updater (StrictMode, a
+ // replayed render) and the event would be counted twice.
+ track("Toggle", draft.languages.includes(code) ? "Language off" : "Language on");
  setDraft((d) => {
  const isOn = d.languages.includes(code);
- track(isOn ? "dash_settings_langs_lang_off" : "dash_settings_langs_lang_on");
  const next = isOn ? d.languages.filter((c) => c !== code) : [...d.languages, code];
  let nextDefault = d.defaultLang;
  if (isOn && code === d.defaultLang) nextDefault = next[0] || "";
@@ -1537,7 +1539,7 @@ export function LanguagesSettingsPage({
 
  return (
  <div>
- <SubpageStickyBar onBack={() => { track("dash_settings_langs_back"); onBack(); }} onSave={save} canSave={canSave} />
+ <SubpageStickyBar onBack={() => { track("Click", "Languages back"); onBack(); }} onSave={save} canSave={canSave} />
  <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4">
  <div className="mb-5 flex items-start justify-between gap-3">
  <div>
@@ -1588,7 +1590,7 @@ export function LanguagesSettingsPage({
  id="lang-default"
  value={draft.defaultLang}
  onChange={(next) => {
- track("dash_settings_langs_change_default");
+ track("Change", "Default language");
  setDraft((d) => ({ ...d, defaultLang: next }));
  }}
  disabled={draft.languages.length === 0}
@@ -1757,7 +1759,7 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
 
  useEffect(() => {
  window.scrollTo({ top: 0, behavior: "auto" });
- fetchSubscriptionStatus().then((s) => setSub(s)).catch(() => track("dash_error_fetch"));
+ fetchSubscriptionStatus().then((s) => setSub(s)).catch(() => track("Error", "Billing load"));
  }, []);
 
  // Switching currency: persist to the restaurant (so checkout + landing read
@@ -1770,7 +1772,7 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
  document.cookie = `geo_currency=${c}; path=/; max-age=${60 * 60 * 24 * 365}; samesite=lax`;
  } catch { /* ignore */ }
  void updateRestaurant({ billingCurrency: c }).catch(() => undefined);
- track("dash_settings_billing_currency_change");
+ track("Change", "Billing currency");
  }
 
  const isActive = sub?.subscriptionStatus === "ACTIVE";
@@ -1788,7 +1790,7 @@ export function BillingSettingsPage({ onBack }: { onBack: () => void }) {
 
  return (
  <div>
- <SubpageStickyBar onBack={() => { track("dash_settings_billing_back"); onBack(); }} hideSave>
+ <SubpageStickyBar onBack={() => { track("Click", "Billing back"); onBack(); }} hideSave>
  <CurrencyDropdown value={currency} onChange={changeCurrency} disabled={paidPlan} />
  </SubpageStickyBar>
  <div className="max-w-5xl mx-auto md:px-6 pt-5 md:pt-4">
@@ -1857,7 +1859,7 @@ export function SupportPage({ onBack }: { onBack: () => void }) {
  .then((msgs) => {
  if (!cancelled) setMessages(msgs);
  })
- .catch(() => track("dash_error_fetch"));
+ .catch(() => track("Error", "Support load"));
  return () => {
  cancelled = true;
  };
@@ -1890,7 +1892,7 @@ export function SupportPage({ onBack }: { onBack: () => void }) {
  }, [messages]);
 
  async function send() {
- track("dash_settings_support_send");
+ track("Click", "Support send");
  const text = input.trim();
  if (!text || sending) return;
  setSending(true);
@@ -1918,12 +1920,12 @@ export function SupportPage({ onBack }: { onBack: () => void }) {
  <div
  className="flex flex-col h-[calc(100dvh-var(--topbar-h,0px)-116px)] md:h-[calc(100dvh-var(--topbar-h,0px)-56px)]"
  >
- <SubpageStickyBar onBack={() => { track("dash_settings_support_back"); onBack(); }} hideSave>
+ <SubpageStickyBar onBack={() => { track("Click", "Support back"); onBack(); }} hideSave>
  <a
  href={`https://wa.me/${SUPPORT_WHATSAPP}`}
  target="_blank"
  rel="noopener noreferrer"
- onClick={() => track("dash_settings_support_whatsapp")}
+ onClick={() => track("Click", "Support WhatsApp")}
  className="h-8 px-2.5 text-xs font-medium text-white bg-[#25D366] rounded-md transition-colors inline-flex items-center gap-1.5"
  >
  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
@@ -1954,7 +1956,7 @@ export function SupportPage({ onBack }: { onBack: () => void }) {
  ref={taRef}
  value={input}
  onChange={(e) => setInput(e.target.value)}
- onFocus={() => track("dash_settings_support_focus")}
+ onFocus={() => track("Focus", "Support message")}
  onKeyDown={onInputKeyDown}
  placeholder={ts("placeholder")}
  className="w-full h-[90px] px-4 py-3 text-sm leading-5 text-foreground bg-card border border-border rounded-2xl placeholder:text-muted-foreground focus:outline-none transition-colors resize-none box-border"

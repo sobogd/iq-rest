@@ -27,7 +27,7 @@ function fireFromAndClean(): void {
     // sessionStorage blocked — fall through, accept a possible double-fire.
   }
 
-  trackEvent(`dash_from_${source}`);
+  trackEvent("Open", `From ${source}`);
 
   sp.delete("from");
   const qs = sp.toString();

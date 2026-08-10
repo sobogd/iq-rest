@@ -35,6 +35,10 @@ async function bootstrap() {
   // consumes the stream twice and breaks every POST/PATCH with a body.
   app.useBodyParser("json", { limit: "500mb" });
   app.useBodyParser("urlencoded", { limit: "500mb", extended: true });
+  // Analytics batches are posted as text/plain so the request stays CORS-simple
+  // (no preflight) and can be handed to navigator.sendBeacon while the page is
+  // being torn down. Small limit — nothing else uses this content type.
+  app.useBodyParser("text", { type: ["text/plain"], limit: "128kb" });
 
   const corsOrigins = (config.get<string>("CORS_ORIGINS") || "")
     .split(",")

@@ -15,21 +15,22 @@ interface CardDef {
   view: View;
   titleKey: string;
   descKey: string;
-  event: string;
+  /** Human label used in the tracking event name. */
+  tab: string;
 }
 
 const CARDS: CardDef[] = [
-  { view: { name: "settings.branding" }, titleKey: "branding", descKey: "brandingDesc", event: "dash_settings_click_tab_brand" },
-  { view: { name: "settings.contacts" }, titleKey: "contacts", descKey: "contactsDesc", event: "dash_settings_click_tab_contacts" },
-  { view: { name: "settings.general" }, titleKey: "general", descKey: "generalDesc", event: "dash_settings_click_tab_general" },
-  { view: { name: "settings.tables" }, titleKey: "tables", descKey: "tablesDesc", event: "dash_settings_click_tab_tables" },
-  { view: { name: "settings.devices" }, titleKey: "devices", descKey: "devicesDesc", event: "dash_settings_click_tab_devices" },
-  { view: { name: "settings.orders" }, titleKey: "orders", descKey: "ordersDesc", event: "dash_settings_click_tab_orders" },
-  { view: { name: "settings.bookings" }, titleKey: "bookings", descKey: "bookingsDesc", event: "dash_settings_click_tab_bookings" },
-  { view: { name: "settings.languages" }, titleKey: "languages", descKey: "languagesDesc", event: "dash_settings_click_tab_langs" },
-  { view: { name: "settings.customTexts" }, titleKey: "customTexts", descKey: "customTextsDesc", event: "dash_settings_click_tab_customtexts" },
-  { view: { name: "settings.billing" }, titleKey: "billing", descKey: "billingDesc", event: "dash_settings_click_tab_billing" },
-  { view: { name: "settings.support" }, titleKey: "support", descKey: "supportDesc", event: "dash_settings_click_tab_support" },
+  { view: { name: "settings.branding" }, titleKey: "branding", descKey: "brandingDesc", tab: "brand" },
+  { view: { name: "settings.contacts" }, titleKey: "contacts", descKey: "contactsDesc", tab: "contacts" },
+  { view: { name: "settings.general" }, titleKey: "general", descKey: "generalDesc", tab: "general" },
+  { view: { name: "settings.tables" }, titleKey: "tables", descKey: "tablesDesc", tab: "tables" },
+  { view: { name: "settings.devices" }, titleKey: "devices", descKey: "devicesDesc", tab: "devices" },
+  { view: { name: "settings.orders" }, titleKey: "orders", descKey: "ordersDesc", tab: "orders" },
+  { view: { name: "settings.bookings" }, titleKey: "bookings", descKey: "bookingsDesc", tab: "bookings" },
+  { view: { name: "settings.languages" }, titleKey: "languages", descKey: "languagesDesc", tab: "languages" },
+  { view: { name: "settings.customTexts" }, titleKey: "customTexts", descKey: "customTextsDesc", tab: "custom texts" },
+  { view: { name: "settings.billing" }, titleKey: "billing", descKey: "billingDesc", tab: "billing" },
+  { view: { name: "settings.support" }, titleKey: "support", descKey: "supportDesc", tab: "support" },
 ];
 
 function AdminToolbar({ router }: { router: ReturnType<typeof useDashboardRouter> }) {
@@ -65,8 +66,8 @@ function AdminToolbar({ router }: { router: ReturnType<typeof useDashboardRouter
       <button type="button" onClick={() => router.push({ name: "settings.admin.users" })} className={btn}>
         Users
       </button>
-      <button type="button" onClick={() => router.push({ name: "settings.admin.usage" })} className={btn}>
-        Usage
+      <button type="button" onClick={() => router.push({ name: "settings.admin.traffic" })} className={btn}>
+        Traffic
       </button>
       <button type="button" onClick={() => router.push({ name: "settings.admin.leads" })} className={btn}>
         Leads
@@ -163,7 +164,7 @@ export function SettingsHubView({
             key={card.titleKey}
             type="button"
             onClick={() => {
-              track(card.event);
+              track("Click", `Settings tab ${card.tab}`);
               router.push(card.view);
             }}
             className="w-full text-left p-4 bg-card border border-border rounded-xl transition-colors flex items-center justify-between gap-3"

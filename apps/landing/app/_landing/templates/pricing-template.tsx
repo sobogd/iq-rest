@@ -10,20 +10,19 @@ import { HelpBannerSection } from "../help/help-banner-section";
 import type { LandingTexts } from "../types";
 
 // Shared markup for every per-locale pricing page. Per-locale data (the
-// pricing FAQ, JSON-LD, the analytics track prefix) stays in each `page.tsx`
-// and is passed in. `texts` is the locale's home TEXTS (header/footer/hero).
+// pricing FAQ, JSON-LD) stays in each `page.tsx` and is passed in. `texts` is
+// the locale's home TEXTS (header/footer/hero). The analytics page key is
+// locale-stable ("pricing") and hardcoded below.
 export function PricingTemplate({
   locale,
   texts,
   faq,
   jsonLd,
-  trackPrefix,
 }: {
   locale: string;
   texts: LandingTexts;
   faq: LandingTexts["faq"];
   jsonLd: string;
-  trackPrefix: string;
 }) {
   const helpBanner = getHelpBanner(locale);
   const quiz = texts.pricingQuiz ?? EN_PRICING_QUIZ;

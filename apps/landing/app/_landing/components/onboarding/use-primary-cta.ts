@@ -10,7 +10,7 @@ type PrimaryCta = {
   /** True once we've confirmed the visitor has a valid session. */
   authenticated: boolean;
   /** Click handler — opens modal for guests, navigates to dashboard for signed-in. */
-  onClick: (trackEvent?: string) => void;
+  onClick: (trackName?: string) => void;
   /** Label to show on the primary CTA. */
   label: string;
   /** Plain dashboard URL — useful when rendering as <a href> for SEO. */
@@ -28,9 +28,12 @@ export function usePrimaryCta(defaultLabel: string): PrimaryCta {
     ? `/${locale}/dashboard`
     : `${dashboardUrl()}/${locale}/dashboard`;
 
-  const onClick = (trackEvent?: string) => {
-    if (trackEvent) analytics.track(trackEvent);
+  const onClick = (trackName?: string) => {
+    if (trackName) analytics.track("Click", trackName);
     if (auth.authenticated) {
+      // Cross-origin hop — get the buffered events out before the document is
+      // discarded, otherwise the click that converted is the one we lose.
+      analytics.flush();
       window.location.assign(dashHref);
     } else {
       // Onboarding (cuisine + name) is temporarily skipped — open the auth step

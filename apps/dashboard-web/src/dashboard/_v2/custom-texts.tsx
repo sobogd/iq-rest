@@ -149,7 +149,7 @@ export function CustomTextsSettingsPage({ onBack }: { onBack: () => void }) {
 
  async function save() {
  if (saving) return;
- track("dash_settings_custom_texts_save");
+ track("Click", "Custom texts save");
  setSaving(true);
  try {
  await updateCustomTexts(toCustomTexts(byKey));
@@ -164,7 +164,7 @@ export function CustomTextsSettingsPage({ onBack }: { onBack: () => void }) {
  // default-language values, then gap-fill every other enabled language.
  async function doTranslateAll() {
  if (translating || saving) return;
- track("dash_settings_custom_texts_translate");
+ track("Click", "Custom texts translate");
  setTranslating(true);
  try {
  await updateCustomTexts(toCustomTexts(byKey));

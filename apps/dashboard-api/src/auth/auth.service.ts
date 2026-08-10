@@ -30,6 +30,10 @@ const SEND_LIMIT_WINDOW = 15 * 60 * 1000;
 const SEND_LIMIT_MAX = 5;
 const VERIFY_LIMIT_WINDOW = 15 * 60 * 1000;
 const VERIFY_LIMIT_MAX = 10;
+// How recently the account row must have been created for a first successful
+// OTP verify to count as a registration (the row is written on send-otp, so a
+// real signup is minutes old). Guards the ad-conversion hook — see verifyOtp.
+const SIGNUP_MAX_AGE_MS = 24 * 60 * 60 * 1000;
 
 // Legacy in-landing dashboard at iq-rest.com/<locale>/dashboard was torn down
 // on 2026-05-28 — the path now 301s to dashboard.iq-rest.com. Keep
@@ -248,7 +252,7 @@ export class AuthService implements OnModuleDestroy {
     return seeded;
   }
 
-  async verifyOtp(emailRaw: string, code: string): Promise<{ token: string; userId: string; onboardingStep: number; isNewUser: boolean; legacyDashboard: boolean }> {
+  async verifyOtp(emailRaw: string, code: string): Promise<{ token: string; userId: string; onboardingStep: number; isNewUser: boolean; registered: boolean; legacyDashboard: boolean }> {
     const email = validateEmail(emailRaw);
     if (!email || !code) throw new BadRequestException("Email and code required");
 
@@ -329,6 +333,16 @@ export class AuthService implements OnModuleDestroy {
       userId: user.id,
       onboardingStep: finalStep,
       isNewUser: !hasRestaurant,
+      // "This verify completed a signup". `isNewUser` is NOT it: it means
+      // "still has no restaurant" → needs onboarding, and a real new user gets
+      // seeded right above and so comes out false.
+      //
+      // Seeding alone is not it either. It happens exactly once per account,
+      // but an account that registered months ago and abandoned onboarding gets
+      // seeded on its *next* login — reporting that as a fresh registration
+      // sends a bogus conversion to the ad networks. The account row is created
+      // back on send-otp, so a genuine signup is always minutes old here.
+      registered: seeded && Date.now() - user.createdAt.getTime() < SIGNUP_MAX_AGE_MS,
       legacyDashboard,
     };
   }

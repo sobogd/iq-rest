@@ -154,7 +154,7 @@ export function PricingQuiz({ ctaText, texts }: { ctaText: string; texts?: Prici
                 key={c}
                 type="button"
                 onClick={() => {
-                  analytics.track(`l_pricing_cycle_${c}`);
+                  analytics.track("Click", `Pricing Cycle ${c}`);
                   setCycle(c);
                 }}
                 className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
@@ -174,7 +174,7 @@ export function PricingQuiz({ ctaText, texts }: { ctaText: string; texts?: Prici
               type="button"
               aria-label={t.fewerAria}
               onClick={() => {
-                analytics.track("l_pricing_count_minus");
+                analytics.track("Click", "Pricing Count Minus");
                 setCount((c) => Math.max(1, c - 1));
               }}
               className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:hover:bg-primary"
@@ -187,7 +187,7 @@ export function PricingQuiz({ ctaText, texts }: { ctaText: string; texts?: Prici
               type="button"
               aria-label={t.moreAria}
               onClick={() => {
-                analytics.track("l_pricing_count_plus");
+                analytics.track("Click", "Pricing Count Plus");
                 setCount((c) => Math.min(99, c + 1));
               }}
               className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
@@ -218,7 +218,7 @@ export function PricingQuiz({ ctaText, texts }: { ctaText: string; texts?: Prici
               key={key}
               type="button"
               onClick={() => {
-                analytics.track(`l_pricing_addon_${key}_${on ? "off" : "on"}`);
+                analytics.track("Click", `Pricing Addon ${key} ${on ? "Off" : "On"}`);
                 setFeat((s) => ({ ...s, [key]: !s[key] }));
               }}
               className={`relative flex flex-col items-start text-left rounded-2xl border-2 p-4 sm:p-5 transition-colors ${
