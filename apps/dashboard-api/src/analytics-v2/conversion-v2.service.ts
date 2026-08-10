@@ -9,7 +9,7 @@ import { PrismaService } from "../prisma/prisma.service";
 import { AnalyticsSaltService } from "./salt.service";
 import { VisitService } from "./visit.service";
 import { sessionHash } from "./session-hash";
-import { clientIp, clientUa, hashEntropy, visitSeed, type VisitSeed } from "./request-facts";
+import { clientNetwork, clientUa, hashEntropy, visitSeed, type VisitSeed } from "./request-facts";
 
 // The v2 pipeline reports exactly ONE conversion to both ad networks: the
 // completed registration. No ViewContent / InitiateCheckout / demo events.
@@ -63,7 +63,7 @@ export class ConversionV2Service {
    */
   onRegistration(req: Request, userId: string, email: string, source: RegistrationSource): void {
     const facts = {
-      ip: clientIp(req),
+      network: clientNetwork(req),
       ua: clientUa(req),
       entropy: hashEntropy(req),
       seed: visitSeed(req),
@@ -74,13 +74,13 @@ export class ConversionV2Service {
   }
 
   private async handleRegistration(
-    facts: { ip: string; ua: string; entropy: string; seed: VisitSeed },
+    facts: { network: string; ua: string; entropy: string; seed: VisitSeed },
     userId: string,
     email: string,
     source: RegistrationSource,
   ): Promise<void> {
     const now = new Date();
-    const hash = sessionHash(await this.salt.getSalt(), facts.ip, facts.ua, facts.entropy);
+    const hash = sessionHash(await this.salt.getSalt(), facts.network, facts.ua, facts.entropy);
     // Promotes the anonymous visit in place, so the ad click that started it
     // keeps its events and its firstAt. If there is no live visit (tracking
     // blocked, or the signup came in from somewhere we never saw), a row is

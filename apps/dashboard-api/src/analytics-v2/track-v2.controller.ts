@@ -6,7 +6,7 @@ import { PrismaService } from "../prisma/prisma.service";
 import { AnalyticsSaltService } from "./salt.service";
 import { VisitService } from "./visit.service";
 import { VisitorIdentityService } from "./identity.service";
-import { clientIp, clientUa, hashEntropy, visitSeed } from "./request-facts";
+import { clientNetwork, clientUa, hashEntropy, visitSeed } from "./request-facts";
 import { sessionHash } from "./session-hash";
 
 // page / action / name: short human-readable English labels ("Home", "Click",
@@ -192,8 +192,8 @@ export class TrackV2Controller {
 
     // Raw IP and raw UA live only on this stack frame — hashed and derived,
     // never stored.
-    const ip = clientIp(req);
-    const hash = sessionHash(await this.salt.getSalt(), ip, ua, hashEntropy(req));
+    const network = clientNetwork(req);
+    const hash = sessionHash(await this.salt.getSalt(), network, ua, hashEntropy(req));
 
     const session = await this.visits.resolveVisit(hash, who.userId, visitSeed(req), now);
 

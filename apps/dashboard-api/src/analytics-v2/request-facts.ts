@@ -22,6 +22,39 @@ export function clientIp(req: Request): string {
   return raw.split(",")[0]?.trim() || "";
 }
 
+/**
+ * Network the client is on, rather than its exact address: IPv4 keeps the /24,
+ * IPv6 the /64.
+ *
+ * The full address is not stable enough to identify a visit. A phone on a
+ * mobile network hands out temporary IPv6 addresses whose low 64 bits rotate
+ * between connections, so three page loads six seconds apart arrived as three
+ * different addresses — and therefore three different hashes, splitting one
+ * visitor into three visits. The /64 is the part the carrier actually assigns
+ * and it survives that rotation. Coarsening also means the hash input is no
+ * longer a single device's address, which is the direction privacy wants
+ * anyway; the entropy lost here is paid back by the locale and geo in
+ * hashEntropy().
+ */
+export function clientNetwork(req: Request): string {
+  const ip = clientIp(req);
+  if (!ip) return "";
+  if (ip.includes(":")) {
+    const bare = ip.split("%")[0]; // drop any zone id
+    const [head, tail] = bare.includes("::") ? bare.split("::", 2) : [bare, null];
+    const left = head ? head.split(":") : [];
+    if (tail === null) return left.slice(0, 4).join(":");
+    // "::" stands for a run of zero groups. Expanding it matters: leaving an
+    // abbreviated address alone would keep the volatile low bits in the hash
+    // for exactly the addresses that abbreviate.
+    const right = tail ? tail.split(":") : [];
+    const zeros = Math.max(0, 8 - left.length - right.length);
+    return [...left, ...Array(zeros).fill("0"), ...right].slice(0, 4).join(":");
+  }
+  const octets = ip.split(".");
+  return octets.length === 4 ? octets.slice(0, 3).join(".") : ip;
+}
+
 export function clientUa(req: Request): string {
   const v = req.headers["user-agent"];
   return typeof v === "string" ? v : "";

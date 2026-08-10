@@ -80,92 +80,103 @@ function trackCurrency(): void {
   analytics.track("Currency", currency);
 }
 
-/** Scroll reach, as ONE event per pageview instead of a per-section stream.
+/** How long the page must sit still before a scroll counts as finished. Long
+ *  enough to ride out momentum scrolling on a phone, short enough that two
+ *  deliberate swipes are two events. */
+const SCROLL_SETTLE_MS = 500;
+/** Hard cap per pageview. Someone flicking up and down a long page produces
+ *  real transitions, but not an unbounded number of rows. */
+const MAX_SCROLL_EVENTS = 40;
+
+/**
+ * Scroll as movement between sections: every time the page settles somewhere
+ * new, one event named "Hero - Kitchen display".
  *
- *  The old per-section events cost eight rows a pageview and answered a
- *  question nobody asked ("was this block on screen at 14:22:03?"). What is
- *  actually useful is how far down the page the visitor got — and, because a
- *  deep link or a restored scroll position can start them mid-page, where they
- *  started. Hence "Hero - Kitchen display (75%)".
+ * The previous version reported a depth percentage and only when the deepest
+ * quarter increased, which meant scrolling back up produced nothing at all and
+ * sections that did not happen to straddle a 25% boundary were never named. The
+ * unit here is the gesture, not the page: where the visitor was, where they
+ * came to rest, in whichever direction.
  */
-function createScrollReach() {
-  let startLabel: string | null = null;
-  let deepestLabel: string | null = null;
-  let deepestTop = -1;
-  let maxPercent = 0;
-  // Highest quarter already reported. Progress is emitted as the visitor
-  // crosses each quarter rather than only when they leave: the exit signal is
-  // the least reliable moment on mobile (a swiped-away tab may deliver nothing
-  // at all), and a scroll that produced no row until the page died looked like
-  // no scroll at all. Bounded to four rows per pageview by construction.
-  let sentBucket = -1;
+function createScrollTracker() {
+  let settled: string | null = null;
+  let sent = 0;
+  let timer: ReturnType<typeof setTimeout> | null = null;
 
-  const measure = () => {
-    const viewportTop = window.scrollY;
-    const viewportBottom = viewportTop + window.innerHeight;
+  /** The section the viewport is looking at = the one containing its middle.
+   *  Using the centre rather than the top edge keeps the answer stable while a
+   *  section boundary drifts past the top of the screen. */
+  const currentSection = (): string | null => {
+    const els = Array.from(document.querySelectorAll<HTMLElement>("[data-section]")).filter(
+      (el) => el.dataset.section,
+    );
+    if (els.length === 0) return null;
+
+    // At the very bottom, name the last section outright. A short footer never
+    // reaches the middle of the screen, so the centre rule alone would report
+    // the block above it as the end of every scroll to the end of the page.
     const scrollable = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
-    if (scrollable > 0) {
-      maxPercent = Math.max(maxPercent, Math.min(100, (viewportBottom / scrollable) * 100));
+    if (window.scrollY + window.innerHeight >= scrollable - 2) {
+      const last = els[els.length - 1].dataset.section;
+      return last ? sectionLabel(last) : null;
     }
-    for (const el of Array.from(document.querySelectorAll<HTMLElement>("[data-section]"))) {
-      const token = el.dataset.section;
-      if (!token) continue;
-      const top = el.getBoundingClientRect().top + viewportTop;
-      const bottom = top + el.offsetHeight;
-      // Where the visitor STARTED is whatever was on screen at the first
-      // measurement — not simply the first section in the document. An anchor
-      // link (#pricing) or a restored scroll position drops them mid-page, and
-      // the sections above were never seen.
-      if (startLabel === null && bottom >= viewportTop && top <= viewportBottom) {
-        startLabel = sectionLabel(token);
-      }
-      // "Reached" = the section's top edge has come into view.
-      if (top > viewportBottom) continue;
-      if (top >= deepestTop) {
-        deepestTop = top;
-        deepestLabel = sectionLabel(token);
+
+    const centre = window.scrollY + window.innerHeight / 2;
+    let best: string | null = null;
+    let bestTop = -Infinity;
+    for (const el of els) {
+      const top = el.getBoundingClientRect().top + window.scrollY;
+      if (top > centre) continue;
+      // Sections are laid out in document order, but a nested one can appear
+      // later with a smaller top — take the lowest section that starts above
+      // the centre.
+      if (top > bestTop) {
+        bestTop = top;
+        best = sectionLabel(el.dataset.section!);
       }
     }
+    // Scrolled above the first section (rubber-banding, sticky header offset).
+    return best ?? sectionLabel(els[0].dataset.section!);
   };
 
-  // Round DOWN to a quarter: "made it past halfway" is a claim we can stand
-  // behind, "reached 63%" is noise from the viewport height.
-  const bucketNow = () => Math.min(100, Math.floor(maxPercent / 25) * 25);
-
-  const emit = (bucket: number) => {
-    sentBucket = bucket;
-    const name =
-      startLabel && deepestLabel && startLabel !== deepestLabel
-        ? `${startLabel} - ${deepestLabel} (${bucket}%)`
-        : deepestLabel
-          ? `${deepestLabel} (${bucket}%)`
-          : `Depth ${bucket}%`;
-    analytics.track("Scroll", name);
+  const settle = () => {
+    if (timer) {
+      clearTimeout(timer);
+      timer = null;
+    }
+    const now = currentSection();
+    if (!now) return;
+    if (settled && now !== settled && sent < MAX_SCROLL_EVENTS) {
+      sent += 1;
+      analytics.track("Scroll", `${settled} - ${now}`);
+    }
+    settled = now;
   };
 
-  /** Called on every (coalesced) scroll frame. */
-  const progress = () => {
-    measure();
-    const bucket = bucketNow();
-    if (bucket > sentBucket && bucket > 0) emit(bucket);
+  /** Called on every (coalesced) scroll frame: restart the settle countdown. */
+  const onMove = () => {
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(settle, SCROLL_SETTLE_MS);
   };
 
-  /** Called when the pageview ends. Reports the final depth if it is deeper
-   *  than whatever was already sent, and — critically — flushes.
+  /** Where the visitor entered the page — an anchor link or a restored
+   *  position means that is not necessarily the top. */
+  const begin = () => {
+    settled = currentSection();
+  };
+
+  /** The pageview is ending: close any scroll still in flight and push it out.
    *
    *  The flush is not optional. The transport registers its own pagehide /
    *  visibilitychange handlers when the module loads, i.e. BEFORE this
-   *  component mounts, so on the way out it drains the queue first and this
-   *  event would be enqueued onto a page that is already gone. Flushing here
-   *  beacons it regardless of listener order. */
+   *  component mounts, so on the way out it drains the queue first and an event
+   *  queued here would sit on a document that is already gone. */
   const finish = () => {
-    measure();
-    const bucket = bucketNow();
-    if (bucket > sentBucket || sentBucket < 0) emit(bucket);
+    settle();
     analytics.flush();
   };
 
-  return { progress, finish };
+  return { begin, onMove, finish };
 }
 
 interface PageTrackerProps {
@@ -193,7 +204,8 @@ export function PageTracker({ page }: PageTrackerProps) {
     analytics.track("Show", "Pageview", attribution);
     if (page === "pricing") trackCurrency();
 
-    const reach = createScrollReach();
+    const scroll = createScrollTracker();
+    scroll.begin();
     // rAF-coalesced: a scroll fires dozens of events per second and each
     // measurement walks the sections and reads layout.
     let frame = 0;
@@ -201,30 +213,26 @@ export function PageTracker({ page }: PageTrackerProps) {
       if (frame) return;
       frame = requestAnimationFrame(() => {
         frame = 0;
-        reach.progress();
+        scroll.onMove();
       });
     };
-    reach.progress();
     window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll, { passive: true });
     // Three exits, and all three are needed. On mobile a tab is usually swiped
     // away or backgrounded, which fires visibilitychange and often no pagehide
     // at all; desktop link-outs fire pagehide; a soft navigation fires neither
-    // and only unmounts. finish() reports at most one extra row, so overlapping
-    // signals cannot double-count.
+    // and only unmounts.
     const onHide = () => {
-      if (document.visibilityState === "hidden") reach.finish();
+      if (document.visibilityState === "hidden") scroll.finish();
     };
-    window.addEventListener("pagehide", reach.finish);
+    window.addEventListener("pagehide", scroll.finish);
     document.addEventListener("visibilitychange", onHide);
 
     return () => {
       if (frame) cancelAnimationFrame(frame);
       window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-      window.removeEventListener("pagehide", reach.finish);
+      window.removeEventListener("pagehide", scroll.finish);
       document.removeEventListener("visibilitychange", onHide);
-      reach.finish();
+      scroll.finish();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page, pathname]);
