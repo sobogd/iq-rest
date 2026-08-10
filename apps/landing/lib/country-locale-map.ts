@@ -1,4 +1,4 @@
-import { Locale } from "@/i18n/routing";
+import { Locale, locales } from "@/i18n/routing";
 
 /**
  * Маппинг код страны (ISO 3166-1 alpha-2) → язык
@@ -240,6 +240,41 @@ export function isCatalanRegion(region: string | null, city: string | null): boo
   const tokens = [region, city].filter(Boolean).map((s) => (s as string).toLowerCase().trim());
   if (tokens.length === 0) return false;
   return tokens.some((t) => CATALAN_REGION_TOKENS.some((c) => t.includes(c)));
+}
+
+// Language subtags that don't literally match a locale folder but map onto one.
+const BASE_LANG_ALIASES: Record<string, Locale> = {
+  nb: "no", // Norwegian Bokmål
+  nn: "no", // Norwegian Nynorsk
+};
+
+/**
+ * Пик локали из Accept-Language: перебираем языки в порядке q-веса и берём
+ * первый, чей базовый subtag ("pt" из "pt-BR") — поддерживаемая локаль.
+ * Язык браузера — прямой сигнал о языке пользователя, в отличие от страны IP
+ * (экспаты, туристы, VPN, двуязычные страны).
+ */
+export function getLocaleByAcceptLanguage(header: string | null): Locale | null {
+  if (!header) return null;
+  const entries = header
+    .split(",")
+    .map((part) => {
+      const [tag, ...params] = part.trim().split(";");
+      let q = 1;
+      for (const p of params) {
+        const m = p.trim().match(/^q=([0-9.]+)$/i);
+        if (m) q = parseFloat(m[1]);
+      }
+      return { tag: tag.trim().toLowerCase(), q: Number.isFinite(q) ? q : 0 };
+    })
+    .filter((e) => e.tag && e.tag !== "*" && e.q > 0)
+    .sort((a, b) => b.q - a.q);
+  for (const { tag } of entries) {
+    const base = tag.split("-")[0];
+    const mapped = BASE_LANG_ALIASES[base] ?? base;
+    if ((locales as readonly string[]).includes(mapped)) return mapped as Locale;
+  }
+  return null;
 }
 
 /** Same as getLocaleByCountry but bumps ES → ca when the visitor sits in Catalonia. */

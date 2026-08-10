@@ -5,6 +5,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { LANGUAGE_NAMES, LANGUAGE_CODES } from "@/app/_landing/lib/language-names";
 import { LinkForward } from "@/app/_landing/components/link-forward";
 import { swapLocale } from "@/lib/locale-slug-overrides";
+import { rememberLocale } from "@/lib/remember-locale";
 
 interface LanguageSwitcherModalProps {
   open: boolean;
@@ -41,6 +42,7 @@ export function LanguageSwitcherModal({ open, onClose, currentLocale, title }: L
                   key={code}
                   href={swapLocale(pathname, code)}
                   prefetch={false}
+                  onClick={() => rememberLocale(code)}
                   className={
                     "flex items-center gap-2 px-3 py-2 rounded-md text-sm transition-colors " +
                     (isActive

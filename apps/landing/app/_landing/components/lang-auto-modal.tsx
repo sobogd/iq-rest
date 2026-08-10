@@ -6,6 +6,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { locales, type Locale } from "@/i18n/routing";
 import { LANGUAGE_NAMES } from "@/app/_landing/lib/language-names";
 import { swapLocale } from "@/lib/locale-slug-overrides";
+import { rememberLocale } from "@/lib/remember-locale";
 import { analytics } from "@/lib/analytics";
 
 /**
@@ -71,6 +72,7 @@ export function LangAutoModal() {
     // keeping the other params (fbclid/utm/from) so tracking fires there.
     const explicit = asLocale(lang);
     if (explicit) {
+      rememberLocale(explicit);
       params.delete("lang");
       const qs = params.toString();
       window.location.replace(localizedHref(explicit) + (qs ? `?${qs}` : ""));
@@ -125,7 +127,10 @@ export function LangAutoModal() {
               <a
                 key={locale}
                 href={localizedHref(locale)}
-                onClick={() => analytics.track(`l_langmodal_pick_${locale}`)}
+                onClick={() => {
+                  rememberLocale(locale);
+                  analytics.track(`l_langmodal_pick_${locale}`);
+                }}
                 className="w-full h-12 text-base font-medium text-foreground bg-background border border-border rounded-xl hover:border-foreground active:scale-[0.99] transition-all flex items-center justify-center gap-3 cursor-pointer"
               >
                 {LANGUAGE_NAMES[locale]}

@@ -1,7 +1,11 @@
 import createMiddleware from "next-intl/middleware";
 import { NextRequest, NextResponse } from "next/server";
 import { routing, locales, Locale } from "./i18n/routing";
-import { getLocaleByCountryAndRegion } from "./lib/country-locale-map";
+import {
+  getLocaleByCountryAndRegion,
+  getLocaleByAcceptLanguage,
+  isCatalanRegion,
+} from "./lib/country-locale-map";
 import { getCurrencyByCountry } from "./lib/country-currency-map";
 import { HOME_META, lastModifiedFor } from "./lib/page-meta";
 import { isGone } from "./lib/gone-paths";
@@ -78,6 +82,29 @@ function detectLocaleByCountry(request: NextRequest): Locale {
 }
 
 /**
+ * Полное определение локали для редиректов: язык браузера (Accept-Language)
+ * приоритетнее страны IP — FB/Google таргетят объявления по языку, и
+ * англоязычный экспат в Испании должен попадать на EN-страницу, а не /es.
+ * Страна — fallback, когда язык браузера не поддерживается; затем en.
+ */
+function detectLocale(request: NextRequest): Locale {
+  const byLang = getLocaleByAcceptLanguage(request.headers.get("accept-language"));
+  if (byLang) {
+    // Сохраняем каталонский спец-кейс: es-браузер физически в Каталонии → ca
+    // (паритет со старым geo-only поведением).
+    if (
+      byLang === "es" &&
+      getCountry(request)?.toUpperCase() === "ES" &&
+      isCatalanRegion(request.headers.get("cf-region"), request.headers.get("cf-ipcity"))
+    ) {
+      return "ca" as Locale;
+    }
+    return byLang;
+  }
+  return detectLocaleByCountry(request);
+}
+
+/**
  * Записывает geo-куки:
  *   geo_country — страна из Cloudflare (используется dashboard и map-picker).
  *   geo_locale  — вычисленный locale (используется client-side
@@ -129,7 +156,7 @@ export default function middleware(request: NextRequest) {
     const preferred = request.cookies.get("NEXT_LOCALE")?.value as Locale | undefined;
     const locale = (preferred && locales.includes(preferred))
       ? preferred
-      : detectLocaleByCountry(request);
+      : detectLocale(request);
     const target = new URL(locale === "en" ? "/" : `/${locale}`, request.url);
     target.search = request.nextUrl.search; // preserve fbclid/utm/gclid
     const response = NextResponse.redirect(target, 302);
@@ -146,8 +173,14 @@ export default function middleware(request: NextRequest) {
     const preferred = request.cookies.get("NEXT_LOCALE")?.value as Locale | undefined;
     const locale = (preferred && locales.includes(preferred))
       ? preferred
-      : detectLocaleByCountry(request);
-    const target = new URL(swapLocale(enPath, locale), request.url);
+      : detectLocale(request);
+    // Опечатка/неизвестный слаг в ссылке объявления → локальный home вместо
+    // 404 (swapLocale пропустил бы неизвестный путь как есть).
+    const known = enPath === "/" || EN_ROOT_SLUGS.has(enPath);
+    const localizedPath = known
+      ? swapLocale(enPath, locale)
+      : locale === "en" ? "/" : `/${locale}`;
+    const target = new URL(localizedPath, request.url);
     target.search = request.nextUrl.search; // preserve fbclid/utm/gclid
     const response = NextResponse.redirect(target, 302);
     setGeoCookies(request, response);
@@ -218,7 +251,7 @@ export default function middleware(request: NextRequest) {
     const preferredLocale = request.cookies.get("NEXT_LOCALE")?.value as Locale | undefined;
     const targetLocale = (preferredLocale && locales.includes(preferredLocale))
       ? preferredLocale
-      : detectLocaleByCountry(request);
+      : detectLocale(request);
     if (targetLocale === "en") {
       const response = NextResponse.next();
       setGeoCookies(request, response);
