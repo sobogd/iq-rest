@@ -7,8 +7,9 @@
 //  · the "Select everything" label never changes width
 //  · the price bar stacks on mobile (price row, full-width CTA) so any magnitude
 //    (€300 or €1,300 or 900,000 HUF) never collides with the button
-//  · the sub-line under the price is ALWAYS rendered (fixed height) so it can't
-//    push the layout when a discount appears
+//  · the sub-line under the price is ALWAYS rendered (min-height) so it can't
+//    push the layout when a discount appears; the big number is always the
+//    per-month price, the actual billed total lives in the sub-line
 // Prices come from the same catalog as checkout (dashboard-api /api/pricing).
 // Localized via `texts` (per-locale LandingTexts.pricingQuiz, EN fallback);
 // min font size is text-sm (micro badges aside).
@@ -124,6 +125,12 @@ export function PricingQuiz({ ctaText, texts }: { ctaText: string; texts?: Prici
     [catalog, currency, venues],
   );
   const yearlySaving = Math.max(0, Math.round((monthlyAnnual - yearlyAnnual) * 100) / 100);
+
+  // The big number is ALWAYS the per-month price (yearly total looks scary);
+  // the actual billed amount lives in the sub-line ("Billed …: X/year").
+  const monthlyDisplay =
+    cycle === "year" ? Math.round((quote.amountMajor / 12) * 100) / 100 : quote.amountMajor;
+  const billedSuffix = cycle === "year" ? t.perYearSuffix : t.perMonthLongSuffix;
 
   return (
     <div className="mx-auto max-w-5xl w-full">
@@ -246,27 +253,34 @@ export function PricingQuiz({ ctaText, texts }: { ctaText: string; texts?: Prici
             <div className="flex items-baseline gap-1 whitespace-nowrap">
               {info.symbolPosition === "before" ? <span className="text-lg text-muted-foreground">{info.symbol}</span> : null}
               <span className="text-3xl font-semibold tracking-tight tabular-nums">
-                {quote.amountMajor.toLocaleString("en-US", { minimumFractionDigits: Number.isInteger(quote.amountMajor) ? 0 : 2, maximumFractionDigits: 2 })}
+                {monthlyDisplay.toLocaleString("en-US", { minimumFractionDigits: Number.isInteger(monthlyDisplay) ? 0 : 2, maximumFractionDigits: 2 })}
               </span>
               {info.symbolPosition === "after" ? <span className="text-lg text-muted-foreground">{info.symbol}</span> : null}
-              <span className="text-sm text-muted-foreground">{cycle === "year" ? t.perYearSuffix : t.perMonthLongSuffix}</span>
+              <span className="text-sm text-muted-foreground">{t.perMonthLongSuffix}</span>
             </div>
-            <div className="text-sm mt-0.5 h-5 leading-5">
+            <div className="text-sm mt-0.5 min-h-5 leading-5">
+              <span className="text-muted-foreground">
+                {cycle === "year" ? t.billedYearly : t.billedMonthly}: {formatMoney(quote.amountMajor, currency)}
+                {billedSuffix}
+              </span>
               {cycle === "month" && yearlySaving > 0 ? (
                 <span className="text-emerald-500 font-medium">
+                  {" · "}
                   {t.saveYearlyTemplate.replace("{amount}", formatMoney(yearlySaving, currency))}
                 </span>
               ) : discountPct > 0 ? (
                 <span className="text-emerald-500 font-medium">
+                  {" · "}
                   {t.volumeDiscountTemplate
                     .replace("{percent}", String(discountPct))
                     .replace("{count}", String(quote.billingVenues))}
                 </span>
               ) : count === 1 ? (
-                <span className="text-muted-foreground">{t.saveUpToHint}</span>
-              ) : (
-                <span className="text-muted-foreground">{cycle === "year" ? t.billedYearly : t.billedMonthly}</span>
-              )}
+                <span className="text-muted-foreground">
+                  {" · "}
+                  {t.saveUpToHint}
+                </span>
+              ) : null}
             </div>
           </div>
           <button
