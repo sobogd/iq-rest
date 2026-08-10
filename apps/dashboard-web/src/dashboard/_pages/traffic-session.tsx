@@ -254,6 +254,11 @@ function Timeline({ data }: { data: TrafficSessionDetail }) {
                 {e.action}
               </span>
               <span className="text-foreground min-w-0 truncate">{e.name}</span>
+              {e.locale ? (
+                <span className="text-[10px] text-muted-foreground bg-secondary rounded px-1.5 py-0.5 shrink-0 uppercase">
+                  {e.locale}
+                </span>
+              ) : null}
               {e.restaurantTitle ? (
                 <span
                   className="ml-auto shrink-0 text-[10px] text-muted-foreground bg-secondary rounded px-1.5 py-0.5 max-w-[140px] truncate"

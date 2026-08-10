@@ -749,7 +749,11 @@ model EventNew {
   // Active venue at the moment of the event (membership-validated). Per-event
   // rather than per-visit because a multi-venue owner switches mid-visit.
   restaurantId String?
-  at           DateTime @default(now())
+  // Locale the page was rendered in ("es"), as opposed to SessionNew.lang,
+  // which is the browser's Accept-Language. Per-event for the same reason as
+  // the venue: a visit can move between locales.
+  locale String?
+  at     DateTime @default(now())
 
   session SessionNew @relation(fields: [sessionId], references: [id], onDelete: Cascade)
 

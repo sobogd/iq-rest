@@ -12,12 +12,17 @@ import { sessionHash } from "./session-hash";
 // page / action / name: short human-readable English labels ("Home", "Click",
 // "Header SignIn"). Free-form by design — no enums.
 const LABEL_REGEX = /^[A-Za-z0-9][A-Za-z0-9 _\-./+]{0,63}$/;
-// Names carry the detail (error slugs especially), so they get more room.
-const NAME_REGEX = /^[A-Za-z0-9][A-Za-z0-9 _\-./+()#:,']{0,119}$/;
+// Names carry the detail (error slugs especially), so they get more room. `%`
+// is in the set because scroll-depth names read "Hero - Pricing (75%)".
+const NAME_REGEX = /^[A-Za-z0-9][A-Za-z0-9 _\-./+()#:,'%]{0,119}$/;
 const FBCLID_REGEX = /^[A-Za-z0-9_.-]{1,512}$/;
 const GCLID_REGEX = /^[A-Za-z0-9_-]{1,256}$/;
 const FROM_REGEX = /^[A-Za-z0-9_.-]{1,64}$/;
 const HOST_REGEX = /^[a-z0-9.-]{1,253}$/i;
+// Rendered locale of the page the event happened on. Landing locales are plain
+// two-letter codes; the bound is generous so a regional variant would still
+// pass rather than silently drop the whole event's locale.
+const LOCALE_REGEX = /^[a-z]{2}(?:-[a-z]{2})?$/i;
 const MAX_EVENTS_PER_BATCH = 50;
 const MAX_BODY_CHARS = 64_000;
 
@@ -54,6 +59,9 @@ interface RawEvent {
   /** Epoch ms the event actually happened, stamped by the client. Batching
    *  means the request time says nothing about when the events occurred. */
   ts?: unknown;
+  /** Locale the page was rendered in. Per-event, not per-batch: a batch can
+   *  survive a locale switch. */
+  loc?: unknown;
 }
 
 interface TrackBody extends RawEvent {
@@ -74,6 +82,7 @@ interface ParsedEvent {
   action: string;
   name: string;
   at: Date | null;
+  locale: string | null;
 }
 
 /** Pick the paid click id out of ctx. fbclid wins over the Google family (a URL
@@ -100,7 +109,9 @@ function parseEvent(raw: RawEvent, now: Date): ParsedEvent | null {
   const action = typeof raw.action === "string" && LABEL_REGEX.test(raw.action) ? raw.action : null;
   const name = typeof raw.name === "string" && NAME_REGEX.test(raw.name) ? raw.name : null;
   if (!page || !action || !name) return null;
-  return { page, action, name, at: parseTs(raw.ts, now) };
+  const locale =
+    typeof raw.loc === "string" && LOCALE_REGEX.test(raw.loc) ? raw.loc.toLowerCase() : null;
+  return { page, action, name, at: parseTs(raw.ts, now), locale };
 }
 
 /** The transport sends `text/plain` so the request stays CORS-simple (no
@@ -202,6 +213,7 @@ export class TrackV2Controller {
         action: e.action,
         name: e.name,
         restaurantId: who.restaurantId,
+        locale: e.locale,
         at: e.at ?? new Date(now.getTime() + i),
       })),
     });

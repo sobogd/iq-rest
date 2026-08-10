@@ -57,6 +57,8 @@ export interface TrafficEvent {
   name: string;
   restaurantId: string | null;
   restaurantTitle: string | null;
+  /** Locale the page was rendered in, per event — a visit can cross locales. */
+  locale: string | null;
   at: string;
 }
 

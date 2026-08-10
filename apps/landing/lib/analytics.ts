@@ -41,9 +41,17 @@ export interface TrackCtx {
 // Current page label, set by PageTracker on mount so deep components (header,
 // footer, auth modal) don't need the page threaded through props.
 let currentPage = "Landing";
+// Rendered locale of the page the visitor is on. Stamped per event rather than
+// per visit: one visit can cross locales (the language prompt moves a visitor
+// from /en to /es), and a per-visit value would describe only the first page.
+let currentLocale: string | undefined;
 
 export function setTrackPage(page: string): void {
   currentPage = isValidPageLabel(page) ? page : "Landing";
+}
+
+export function setTrackLocale(locale: string): void {
+  currentLocale = /^[a-z]{2}(?:-[a-z]{2})?$/i.test(locale) ? locale.toLowerCase() : undefined;
 }
 
 export function searchReferrerHost(): string | null {
@@ -88,6 +96,8 @@ interface QueuedEvent {
    *  beaconed batch must not collapse onto its delivery time. The server
    *  accepts [now-6h, now+60s]. */
   ts: number;
+  /** Rendered locale at the moment of the event. */
+  loc?: string;
 }
 
 interface Batch {
@@ -235,7 +245,7 @@ function track(action: string, name: string, ctx?: TrackCtx): void {
     }
     return;
   }
-  queue.push({ page: currentPage, action, name, ts: Date.now() });
+  queue.push({ page: currentPage, action, name, ts: Date.now(), ...(currentLocale ? { loc: currentLocale } : {}) });
   if (ctx) pendingCtx = { ...pendingCtx, ...ctx };
   trimQueue();
 

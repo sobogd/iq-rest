@@ -223,7 +223,7 @@ export class AnalyticsV2AdminController {
       this.prisma.eventNew.findMany({
         where: { sessionId: id },
         orderBy: { at: "asc" },
-        select: { id: true, page: true, action: true, name: true, at: true, restaurantId: true },
+        select: { id: true, page: true, action: true, name: true, at: true, restaurantId: true, locale: true },
       }),
       this.prisma.conversionSendNew.findMany({
         where: { sessionId: id },
