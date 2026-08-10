@@ -8,12 +8,10 @@ import { AuthStep } from "./auth-step";
 
 /**
  * Unified entry modal. Onboarding (cuisine + name steps) is removed — every
- * landing CTA opens the same single auth screen with a demo button on top and
- * Google / Apple / Email below. Sign-in and registration are the same flow
- * (passwordless find-or-create), so the copy is intentionally universal.
- *
- * `mode` is kept for backward compatibility with existing call sites but no
- * longer branches the UI — there is only one view now.
+ * landing CTA opens the same single auth screen. The backend flow is one
+ * passwordless find-or-create, but the COPY is split by intent: CTA buttons
+ * open the "register" preset (value prop + consent + trust line), the header
+ * "Sign in" opens the bare "signin" preset. A footer link switches presets.
  */
 export function CreateFlowModal({
   open,
@@ -42,6 +40,10 @@ export function CreateFlowModal({
   useEffect(() => {
     if (!open || typeof window === "undefined") return;
     const vv = window.visualViewport;
+    // Focus-pinning is a workaround for MOBILE keyboards only. On desktop the
+    // viewport never shrinks, so the focus fallback used to fire and yank the
+    // dialog to the top on every input focus — gate it to touch devices.
+    const touchDevice = window.matchMedia("(pointer: coarse)").matches;
     let focused = false;
     const apply = () => {
       const el = contentRef.current;
@@ -50,7 +52,7 @@ export function CreateFlowModal({
       const offset = vv?.offsetTop ?? 0;
       const viewportShrank = vv ? vv.height < window.innerHeight - 100 : false;
       el.style.maxHeight = `${h - 24}px`;
-      if (focused && !viewportShrank) {
+      if (touchDevice && focused && !viewportShrank) {
         // Webview that won't resize: pin to the top so the field clears the keyboard.
         el.style.top = `${offset + 12}px`;
         el.style.transform = "translate(-50%, 0)";
@@ -136,7 +138,7 @@ export function CreateFlowModal({
         className="max-w-md p-0 gap-0 bg-background border-border overflow-y-auto"
       >
         <div className="p-6 sm:p-8">
-          <AuthStep signupContext={null} variant="unified" />
+          <AuthStep signupContext={null} variant={mode === "signin" ? "signin" : "register"} />
         </div>
       </DialogContent>
     </Dialog>

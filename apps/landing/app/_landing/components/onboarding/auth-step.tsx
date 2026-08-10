@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { Loader2, ChevronLeft } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import { dashboardApi, dashboardApiBase, dashboardUrl } from "@/lib/dashboard-url";
 import { analytics } from "@/lib/analytics";
 import type { CuisineKey } from "./cuisine";
@@ -65,22 +65,28 @@ function redirectAfterAuth(locale: string, legacyDashboard: boolean) {
 
 export function AuthStep({
   signupContext,
-  variant = "signin",
+  variant = "register",
 }: {
   signupContext: SignupContext | null;
-  /** "unified" → single login-or-register screen with a demo button (landing default);
-   *  "register" → fresh-signup copy; "signin" → returning-user copy. */
-  variant?: "signin" | "register" | "unified";
+  /** Initial copy preset: "register" → signup copy with consent + trust line
+   *  (CTA buttons); "signin" → bare returning-user copy (header link). The
+   *  backend flow is identical — a footer link lets the user switch presets. */
+  variant?: "signin" | "register";
 }) {
   const t = useTranslations("auth");
   const locale = useLocale();
-  const isRegister = variant === "register";
-  const isUnified = variant === "unified";
+  const [mode, setMode] = useState<"signin" | "register">(variant);
+  const isRegister = mode === "register";
+
+  const switchMode = () => {
+    const next = isRegister ? "signin" : "register";
+    analytics.track(`l_onb_switch_${next}`);
+    setMode(next);
+    setStatus("idle");
+    setErrorMessage("");
+  };
 
   const [screen, setScreen] = useState<Screen>("email");
-  // The "email" screen opens on a method choice (Google / Apple / Email).
-  // The email input form is revealed only after the user picks "email".
-  const [emailOpen, setEmailOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [code, setCode] = useState<string[]>(Array(CODE_LENGTH).fill(""));
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
@@ -96,7 +102,6 @@ export function AuthStep({
   useEffect(() => {
     if (isInAppWebView()) {
       setInApp(true);
-      setEmailOpen(true);
     }
   }, []);
   useEffect(() => {
@@ -239,7 +244,6 @@ export function AuthStep({
     analytics.track("l_onb_change_email_click");
     setCode(Array(CODE_LENGTH).fill(""));
     setScreen("email");
-    setEmailOpen(true);
     setStatus("idle");
     setErrorMessage("");
   };
@@ -266,22 +270,12 @@ export function AuthStep({
       <h2 className="text-2xl sm:text-3xl font-medium tracking-tight leading-tight mb-2">
         {signupContext
           ? t("titleWithName", { name: signupContext.restaurantName })
-          : isUnified
-            ? t("unifiedTitle")
-            : isRegister
-              ? t("registerTitle")
-              : t("signInTitle")}
+          : isRegister
+            ? t("registerTitle")
+            : t("signInTitle")}
       </h2>
       <p className="text-sm sm:text-base text-muted-foreground leading-snug mb-6">
-        {isUnified
-          ? t("unifiedSubtitle")
-          : emailOpen
-            ? signupContext
-              ? t("subtitle")
-              : isRegister
-                ? t("registerSubtitle")
-                : t("signInSubtitle")
-            : t("chooseSubtitle")}
+        {signupContext ? t("subtitle") : isRegister ? t("registerSubtitle") : t("signInSubtitle")}
       </p>
 
       {status === "error" && errorMessage && (
@@ -290,113 +284,108 @@ export function AuthStep({
         </div>
       )}
 
-      {emailOpen ? (
+      {/* Email-first (variant A): the primary path is a single email field —
+          it converts best once submitted, so we surface it immediately with no
+          extra "choose a method" click. Google/Apple sit below as a secondary
+          row. In-app webviews (which block Google/Apple OAuth) hide that row. */}
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleContinue();
+        }}
+      >
+        <input
+          id="onboarding-email"
+          aria-label={t("emailLabel")}
+          type="email"
+          inputMode="email"
+          autoComplete="email"
+          required
+          placeholder={t("emailPlaceholder")}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          onFocus={() => analytics.track("l_onb_email_focus")}
+          disabled={status === "loading"}
+          className="w-full h-12 px-4 text-base text-foreground bg-background border border-border rounded-xl placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors"
+        />
+
+        <button
+          type="submit"
+          disabled={status === "loading"}
+          className="mt-4 h-12 w-full text-base font-semibold text-white bg-gradient-to-br from-[hsl(9,100%,58%)] to-[hsl(35,95%,55%)] rounded-xl hover:opacity-90 active:scale-[0.99] transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+        >
+          {status === "loading" && <Loader2 className="h-4 w-4 animate-spin" />}
+          {isRegister ? t("registerButton") : t("signInButton")}
+        </button>
+      </form>
+
+      {!inApp && (
         <>
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              handleContinue();
-            }}
-          >
-            <label htmlFor="onboarding-email" className="block text-sm font-medium text-foreground mb-2 tracking-tight">
-              {t("emailLabel")}
-            </label>
-            <input
-              id="onboarding-email"
-              type="email"
-              inputMode="email"
-              autoComplete="email"
-              required
-              autoFocus
-              placeholder={t("emailPlaceholder")}
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              onFocus={() => analytics.track("l_onb_email_focus")}
-              disabled={status === "loading"}
-              className="w-full h-12 px-4 text-base text-foreground bg-background border border-border rounded-xl placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors"
-            />
+          <div className="flex items-center gap-3 my-3">
+            <span className="h-px flex-1 bg-border" />
+            <span className="text-sm text-muted-foreground">{t("or")}</span>
+            <span className="h-px flex-1 bg-border" />
+          </div>
 
-            <button
-              type="submit"
-              disabled={status === "loading"}
-              className="mt-4 h-12 w-full text-base font-semibold text-white bg-gradient-to-br from-[hsl(9,100%,58%)] to-[hsl(35,95%,55%)] rounded-xl hover:opacity-90 active:scale-[0.99] transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-            >
-              {status === "loading" && <Loader2 className="h-4 w-4 animate-spin" />}
-              {t("continueEmail")}
-            </button>
-          </form>
-
-          {/* No way back to Google/Apple in a webview — they don't work there. */}
-          {!inApp && (
+          <div className="grid grid-cols-2 gap-3">
             <button
               type="button"
-              onClick={() => {
-                setEmailOpen(false);
-                setStatus("idle");
-                setErrorMessage("");
-              }}
-              className="w-full inline-flex items-center justify-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors mt-3 cursor-pointer"
+              onClick={handleGoogleClick}
+              className="h-12 text-base font-medium text-foreground bg-background border border-border rounded-xl hover:border-foreground active:scale-[0.99] transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
-              <ChevronLeft className="h-4 w-4" />
-              {t("changeMethod")}
+              <GoogleIcon />
+              Google
             </button>
-          )}
+
+            <button
+              type="button"
+              onClick={handleAppleClick}
+              className="h-12 text-base font-medium text-foreground bg-background border border-border rounded-xl hover:border-foreground active:scale-[0.99] transition-all flex items-center justify-center gap-2 cursor-pointer"
+            >
+              <AppleIcon />
+              Apple
+            </button>
+          </div>
         </>
-      ) : (
-        <div className="flex flex-col gap-3">
-          <button
-            type="button"
-            onClick={handleGoogleClick}
-            className="w-full h-12 text-base font-medium text-foreground bg-background border border-border rounded-xl hover:border-foreground active:scale-[0.99] transition-all flex items-center justify-center gap-3 cursor-pointer"
-          >
-            <GoogleIcon />
-            {t("continueGoogle")}
-          </button>
-
-          <button
-            type="button"
-            onClick={handleAppleClick}
-            className="w-full h-12 text-base font-medium text-foreground bg-background border border-border rounded-xl hover:border-foreground active:scale-[0.99] transition-all flex items-center justify-center gap-3 cursor-pointer"
-          >
-            <AppleIcon />
-            {t("continueApple")}
-          </button>
-
-          <button
-            type="button"
-            onClick={() => {
-              analytics.track("l_onb_email_option_click");
-              setEmailOpen(true);
-            }}
-            className="w-full h-12 text-base font-medium text-foreground bg-background border border-border rounded-xl hover:border-foreground active:scale-[0.99] transition-all flex items-center justify-center gap-3 cursor-pointer"
-          >
-            <EmailIcon />
-            {t("emailOption")}
-          </button>
-        </div>
       )}
 
-      <p className="text-xs text-muted-foreground leading-snug text-center mt-5">
-        {t("consent.text")}{" "}
-        <a
-          href={`/${locale}/terms`}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={() => analytics.track("l_onb_open_terms")}
-          className="text-foreground/80 hover:text-foreground underline underline-offset-2 transition-colors"
+      {/* Register preset carries the legal copy; sign-in stays bare. */}
+      {isRegister && (
+        <>
+          <p className="text-xs text-muted-foreground leading-snug text-center mt-5">
+            {t("consent.text")}{" "}
+            <a
+              href={`/${locale}/terms`}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => analytics.track("l_onb_open_terms")}
+              className="text-foreground/80 hover:text-foreground underline underline-offset-2 transition-colors"
+            >
+              {t("consent.terms")}
+            </a>{" "}
+            {t("consent.and")}{" "}
+            <a
+              href={`/${locale}/privacy`}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => analytics.track("l_onb_open_privacy")}
+              className="text-foreground/80 hover:text-foreground underline underline-offset-2 transition-colors"
+            >
+              {t("consent.privacy")}
+            </a>
+          </p>
+        </>
+      )}
+
+      <p className="text-xs text-muted-foreground leading-snug text-center mt-3">
+        {isRegister ? t("switchHaveAccount") : t("switchNoAccount")}{" "}
+        <button
+          type="button"
+          onClick={switchMode}
+          className="text-foreground/80 hover:text-foreground underline underline-offset-2 transition-colors cursor-pointer"
         >
-          {t("consent.terms")}
-        </a>{" "}
-        {t("consent.and")}{" "}
-        <a
-          href={`/${locale}/privacy`}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={() => analytics.track("l_onb_open_privacy")}
-          className="text-foreground/80 hover:text-foreground underline underline-offset-2 transition-colors"
-        >
-          {t("consent.privacy")}
-        </a>
+          {isRegister ? t("switchSignIn") : t("switchCreate")}
+        </button>
       </p>
     </div>
   );
@@ -546,11 +535,3 @@ function AppleIcon() {
   );
 }
 
-function EmailIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <rect x="2" y="4" width="20" height="16" rx="2" />
-      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-    </svg>
-  );
-}
