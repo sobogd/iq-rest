@@ -90,16 +90,21 @@ const MAX_SCROLL_EVENTS = 40;
 
 /**
  * Scroll as movement between sections: every time the page settles somewhere
- * new, one event named "Hero - Kitchen display".
+ * new, one event — "Scroll down" / "Scroll up" for the action, the section it
+ * came to rest on for the name.
+ *
+ * Direction is the action rather than part of the name so the two can be
+ * counted separately, and only the destination is named: the section it left
+ * is the destination of the event before it, so recording both would say the
+ * same thing twice.
  *
  * The previous version reported a depth percentage and only when the deepest
  * quarter increased, which meant scrolling back up produced nothing at all and
- * sections that did not happen to straddle a 25% boundary were never named. The
- * unit here is the gesture, not the page: where the visitor was, where they
- * came to rest, in whichever direction.
+ * sections that did not happen to straddle a 25% boundary were never named.
  */
 function createScrollTracker() {
   let settled: string | null = null;
+  let settledY = 0;
   let sent = 0;
   let timer: ReturnType<typeof setTimeout> | null = null;
 
@@ -145,12 +150,14 @@ function createScrollTracker() {
       timer = null;
     }
     const now = currentSection();
+    const y = window.scrollY;
     if (!now) return;
     if (settled && now !== settled && sent < MAX_SCROLL_EVENTS) {
       sent += 1;
-      analytics.track("Scroll", `${settled} - ${now}`);
+      analytics.track(y >= settledY ? "Scroll down" : "Scroll up", now);
     }
     settled = now;
+    settledY = y;
   };
 
   /** Called on every (coalesced) scroll frame: restart the settle countdown. */
@@ -163,6 +170,7 @@ function createScrollTracker() {
    *  position means that is not necessarily the top. */
   const begin = () => {
     settled = currentSection();
+    settledY = window.scrollY;
   };
 
   /** The pageview is ending: close any scroll still in flight and push it out.
