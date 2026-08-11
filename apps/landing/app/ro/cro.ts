@@ -9,15 +9,78 @@ import {
   QrCode,
   Smartphone,
   Palette,
+  Rocket,
+  MessagesSquare,
+  ClipboardList,
+  WheatOff,
+  SlidersHorizontal,
+  Users,
 } from "lucide-react";
-import type { CroCopy } from "@/app/_landing/templates/cro-home-template";
+import type { CroCopyV2 } from "@/app/_landing/templates/cro-home-template-v2";
 
-export const CRO: CroCopy = {
+export const CRO: CroCopyV2 = {
   hero: {
     verticals: ["Restaurante","Cafenele","Baruri","Pizzerii"],
     title: "Restaurantul tău, digital",
     titleAccent: "în 5 min",
     sub: "Meniu digital, ecran de bucătărie și rezervări 24/7 — tot ce are nevoie restaurantul tău, gata în 5 minute.",
+  },
+
+  heroV2: {
+    verticals: [
+      { icon: "restaurant", label: "Restaurante" },
+      { icon: "cafe", label: "Cafenele" },
+      { icon: "bar", label: "Baruri" },
+      { icon: "pizza", label: "Pizzerii" },
+    ],
+    title: "Tot ce îi trebuie",
+    titleAccent: "restaurantului tău!",
+    sub: "Configurează procesele în 10 minute: lansează meniul online, optimizează bucătăria și ține evidența ocupării meselor.",
+    primaryLabel: "Începe gratuit",
+    demoLabel: "Vezi demo",
+    mockups: {
+      kds: { src: "/landing/hero-card-kds.webp", alt: "Tabletă cu display de bucătărie: comenzi pe mese, în coloane cu statusuri" },
+      reservations: { src: "/landing/hero-card-reservation.webp", alt: "Tabletă cu calendarul rezervărilor: vedere lunară și rezervări în așteptarea confirmării" },
+      phone1: { src: "/landing/hero-card-menu.webp", alt: "Telefon cu pagina principală a site-ului unui restaurant: fotografie, rezervări și meniu online" },
+      phone2: { src: "/landing/hero-card-dish.webp", alt: "Telefon cu pagina unui preparat: fotografie, preț și etichete de alergeni" },
+    },
+  },
+
+  heroCards: [
+    { Icon: Rocket, title: "Funcțional în 10 minute", sub: "Fără echipamente scumpe și configurări lungi" },
+    { Icon: MessagesSquare, title: "Suport rapid", sub: "Răspundem pe chat în câteva ore" },
+    { Icon: Globe, title: "Alegerea a {count} localuri", sub: "Restaurante și cafenele din peste 15 țări au încredere în noi" },
+    { Icon: Palette, title: "100% brandul tău", sub: "Adaptăm designul și interfața la stilul localului tău" },
+  ],
+
+  menu: {
+    heading: "Site web și meniu digital",
+    sub: {
+      link: "Mai mult decât un meniu QR!",
+      rest: " Primești un site complet, cu design unic, pagină de contact și rezervări de mese.",
+    },
+    moreLabel: "Află mai multe",
+    mockupAlt: "Două telefoane: pagina principală a site-ului unui restaurant și pagina unui preparat",
+    bullets: [
+      { Icon: Languages, title: "Traducere automată în 35 de limbi", sub: "Servește oaspeții străini fără bariere lingvistice — traducerea automată face totul" },
+      { Icon: ClipboardList, title: "Comenzi direct de la masă", sub: "Simplifică serviciul: primește comenzi de la mese rapid și fără ospătar" },
+      { Icon: WheatOff, title: "Alergeni și diete", sub: "Marchează alergenii și preferințele (vegan, picant), ca oaspeții să aleagă ușor și în siguranță" },
+    ],
+  },
+
+  reservations: {
+    heading: "Rezervarea meselor",
+    sub: {
+      link: "Rezervări inteligente de mese!",
+      rest: " Un sistem automat de rezervări care urmărește singur mesele libere și programul tău.",
+    },
+    moreLabel: "Află mai multe",
+    mockupAlt: "Tabletă cu calendarul rezervărilor: mese pe zile și intervale orare",
+    bullets: [
+      { Icon: CalendarCheck, title: "Hartă clară a rezervărilor", sub: "Un grafic vizual pe zile și mese — locurile libere se văd dintr-o privire" },
+      { Icon: SlidersHorizontal, title: "Setări flexibile", sub: "Stabilește programul, durata intervalelor, fotografiile meselor și adună dorințele oaspeților" },
+      { Icon: Users, title: "Controlul fluxului de oaspeți", sub: "Alege modul de lucru cu rezervările și păstrează controlul total asupra fluxului de oaspeți" },
+    ],
   },
 
   heroMicrocopy: "{count} restaurante · 14 zile gratis · Fără card",

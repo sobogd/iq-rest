@@ -9,15 +9,78 @@ import {
   QrCode,
   Smartphone,
   Palette,
+  Rocket,
+  MessagesSquare,
+  ClipboardList,
+  WheatOff,
+  SlidersHorizontal,
+  Users,
 } from "lucide-react";
-import type { CroCopy } from "@/app/_landing/templates/cro-home-template";
+import type { CroCopyV2 } from "@/app/_landing/templates/cro-home-template-v2";
 
-export const CRO: CroCopy = {
+export const CRO: CroCopyV2 = {
   hero: {
     verticals: ["Restauranter","Kafeer","Barer","Pizzeriaer"],
     title: "Din restaurant, digital",
     titleAccent: "på 5 min",
     sub: "Digital meny, kjøkkenskjerm og bordbestilling 24/7 — alt restauranten din trenger, klart på 5 minutter.",
+  },
+
+  heroV2: {
+    verticals: [
+      { icon: "restaurant", label: "Restauranter" },
+      { icon: "cafe", label: "Kaféer" },
+      { icon: "bar", label: "Barer" },
+      { icon: "pizza", label: "Pizzeriaer" },
+    ],
+    title: "Alt til",
+    titleAccent: "din restaurant!",
+    sub: "Sett opp prosessene på 10 minutter: lanser onlinemenyen, effektiviser kjøkkenet og hold oversikt over bordene.",
+    primaryLabel: "Start gratis",
+    demoLabel: "Se demo",
+    mockups: {
+      kds: { src: "/landing/hero-card-kds.webp", alt: "Nettbrett med kjøkkendisplay: bestillinger per bord i kolonner med status" },
+      reservations: { src: "/landing/hero-card-reservation.webp", alt: "Nettbrett med bookingkalender: månedsvisning og reservasjoner som venter på bekreftelse" },
+      phone1: { src: "/landing/hero-card-menu.webp", alt: "Telefon med forsiden til en restaurantnettside: foto, reservasjoner og onlinemeny" },
+      phone2: { src: "/landing/hero-card-dish.webp", alt: "Telefon med en rettside: foto, pris og allergenmerking" },
+    },
+  },
+
+  heroCards: [
+    { Icon: Rocket, title: "I gang på 10 minutter", sub: "Uten dyrt utstyr og langt oppsett" },
+    { Icon: MessagesSquare, title: "Rask support", sub: "Vi svarer i chatten i løpet av få timer" },
+    { Icon: Globe, title: "Valget til {count} steder", sub: "Restauranter og kaféer i over 15 land stoler på oss" },
+    { Icon: Palette, title: "100 % ditt varemerke", sub: "Vi tilpasser design og grensesnitt til stilen på stedet ditt" },
+  ],
+
+  menu: {
+    heading: "Nettside og digital meny",
+    sub: {
+      link: "Mer enn en QR-meny!",
+      rest: " Få en komplett nettside med unikt design, kontaktside og bordreservasjon.",
+    },
+    moreLabel: "Les mer",
+    mockupAlt: "To telefoner: forsiden til en restaurantnettside og en rettside",
+    bullets: [
+      { Icon: Languages, title: "Automatisk oversettelse til 35 språk", sub: "Betjen utenlandske gjester uten språkbarriere — den automatiske oversettelsen ordner alt" },
+      { Icon: ClipboardList, title: "Bestillinger rett fra bordet", sub: "Forenkle serveringen: ta imot bestillinger fra bordene raskt og uten servitør" },
+      { Icon: WheatOff, title: "Allergener og dietter", sub: "Merk allergener og preferanser (vegansk, sterk) slik at gjestene velger enkelt og trygt" },
+    ],
+  },
+
+  reservations: {
+    heading: "Bordreservasjon",
+    sub: {
+      link: "Smart bordreservasjon!",
+      rest: " Et automatisk reservasjonssystem som selv holder styr på ledige bord og timeplanen din.",
+    },
+    moreLabel: "Les mer",
+    mockupAlt: "Nettbrett med bookingkalender: bord per dag og tidsluke",
+    bullets: [
+      { Icon: CalendarCheck, title: "Oversiktlig bookingkart", sub: "Et rutenett per dag og bord — ledige plasser ser du med én gang" },
+      { Icon: SlidersHorizontal, title: "Fleksible innstillinger", sub: "Angi åpningstider, lukelengde og bordbilder, og samle inn ønsker fra gjestene" },
+      { Icon: Users, title: "Kontroll på gjesteflyten", sub: "Velg hvordan reservasjoner håndteres, og behold full kontroll på gjesteflyten" },
+    ],
   },
 
   heroMicrocopy: "{count} restauranter · 14 dager gratis · Uten kort",

@@ -9,15 +9,78 @@ import {
   QrCode,
   Smartphone,
   Palette,
+  Rocket,
+  MessagesSquare,
+  ClipboardList,
+  WheatOff,
+  SlidersHorizontal,
+  Users,
 } from "lucide-react";
-import type { CroCopy } from "@/app/_landing/templates/cro-home-template";
+import type { CroCopyV2 } from "@/app/_landing/templates/cro-home-template-v2";
 
-export const CRO: CroCopy = {
+export const CRO: CroCopyV2 = {
   hero: {
     verticals: ["Veitingastaðir","Kaffihús","Barir","Pítsustaðir"],
     title: "Veitingastaður, stafrænn",
     titleAccent: "á 5 mínútum",
     sub: "Stafrænn matseðill, eldhússkjár og bókanir 24/7 — allt sem veitingastaðurinn þarf, tilbúið á 5 mínútum.",
+  },
+
+  heroV2: {
+    verticals: [
+      { icon: "restaurant", label: "Veitingastaðir" },
+      { icon: "cafe", label: "Kaffihús" },
+      { icon: "bar", label: "Barir" },
+      { icon: "pizza", label: "Pizzustaðir" },
+    ],
+    title: "Allt sem",
+    titleAccent: "staðurinn þinn þarf!",
+    sub: "Settu upp ferlana á 10 mínútum: opnaðu netmatseðilinn, straumlínulagaðu eldhúsið og fylgstu með borðanýtingu.",
+    primaryLabel: "Byrjaðu frítt",
+    demoLabel: "Skoða sýnishorn",
+    mockups: {
+      kds: { src: "/landing/hero-card-kds.webp", alt: "Spjaldtölva með eldhússkjá: pantanir eftir borðum í dálkum með stöðu" },
+      reservations: { src: "/landing/hero-card-reservation.webp", alt: "Spjaldtölva með bókunardagatali: mánaðaryfirlit og bókanir sem bíða staðfestingar" },
+      phone1: { src: "/landing/hero-card-menu.webp", alt: "Sími með forsíðu veitingastaðavefs: mynd, bókanir og netmatseðill" },
+      phone2: { src: "/landing/hero-card-dish.webp", alt: "Sími með réttasíðu: mynd, verð og ofnæmisvaldamerkingar" },
+    },
+  },
+
+  heroCards: [
+    { Icon: Rocket, title: "Komið í gang á 10 mínútum", sub: "Enginn dýr búnaður og engin löng uppsetning" },
+    { Icon: MessagesSquare, title: "Snögg aðstoð", sub: "Við svörum í spjalli innan fárra klukkustunda" },
+    { Icon: Globe, title: "Val {count} staða", sub: "Veitingastaðir og kaffihús í yfir 15 löndum treysta okkur" },
+    { Icon: Palette, title: "100% þitt vörumerki", sub: "Við lögum hönnun og viðmót að stíl staðarins þíns" },
+  ],
+
+  menu: {
+    heading: "Vefsíða og stafrænn matseðill",
+    sub: {
+      link: "Meira en QR-matseðill!",
+      rest: " Fáðu fullbúna vefsíðu með einstakri hönnun, tengiliðasíðu og borðabókun.",
+    },
+    moreLabel: "Fræðast meira",
+    mockupAlt: "Tveir símar: forsíða veitingastaðavefs og réttasíða",
+    bullets: [
+      { Icon: Languages, title: "Sjálfvirk þýðing á 35 tungumál", sub: "Þjónaðu erlendum gestum án tungumálahindrana — sjálfvirka þýðingin sér um allt" },
+      { Icon: ClipboardList, title: "Pantanir beint frá borði", sub: "Einfaldaðu þjónustuna: taktu við pöntunum frá borðum, hratt og án þjóns" },
+      { Icon: WheatOff, title: "Ofnæmisvaldar og mataræði", sub: "Merktu ofnæmisvalda og óskir (vegan, sterkt) svo gestir velji auðveldlega og örugglega" },
+    ],
+  },
+
+  reservations: {
+    heading: "Borðabókanir",
+    sub: {
+      link: "Snjallar borðabókanir!",
+      rest: " Sjálfvirkt bókunarkerfi sem fylgist sjálft með lausum borðum og tímaáætlun þinni.",
+    },
+    moreLabel: "Fræðast meira",
+    mockupAlt: "Spjaldtölva með bókunardagatali: borð eftir dögum og tímabilum",
+    bullets: [
+      { Icon: CalendarCheck, title: "Skýrt bókunaryfirlit", sub: "Myndrænt skipulag eftir dögum og borðum — laus sæti sjást strax" },
+      { Icon: SlidersHorizontal, title: "Sveigjanlegar stillingar", sub: "Stilltu opnunartíma, lengd tímabila og myndir af borðum, og safnaðu óskum gesta" },
+      { Icon: Users, title: "Stjórn á gestaflæði", sub: "Veldu hvernig bókanir eru meðhöndlaðar og haltu fullri stjórn á gestaflæðinu" },
+    ],
   },
 
   heroMicrocopy: "{count} veitingastaðir · 14 dagar frítt · Ekkert kort",

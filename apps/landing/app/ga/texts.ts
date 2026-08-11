@@ -35,6 +35,8 @@ export const TEXTS: LandingTexts = {
     signIn: "Sínigh isteach",
     viewFeatures: "Féach ar ghnéithe",
     cta: "Bain triail as saor in aisce",
+    navProducts: "Gnéithe",
+    navGuide: "Treoir",
   },
 
   hero: {

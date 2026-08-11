@@ -1,7 +1,7 @@
 import { LandingHeader } from "../components/header";
 import { LandingFooter } from "../components/footer";
-import { Section } from "../components/section";
 import { PageTracker } from "../components/page-tracker";
+import { NARROW, PAGE, Band } from "../components/shell";
 import type { LandingTexts } from "../types";
 import type { Block, HelpDoc } from "./types";
 import { HelpSidebar } from "./help-sidebar";
@@ -62,14 +62,21 @@ export function HelpView({
 }) {
   const { tipLabel, noteLabel } = doc;
   return (
-    <main className="relative">
+    <main className={PAGE}>
       <PageTracker page="help" />
-      <LandingHeader texts={texts.header} locale={locale} featureLinks={texts.footer.featureLinks} />
+      <LandingHeader
+        texts={texts.header}
+        locale={locale}
+        featureLinks={texts.footer.featureLinks}
+        containerClass={NARROW}
+        compact
+        navLayout="grouped"
+      />
 
-      <Section dataSection="help" noContainer className="!pt-10 md:!pt-12 !pb-16">
-        <div className="mx-auto max-w-6xl px-4 md:px-6">
-          <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-2">{doc.h1}</h1>
-          <p className="text-muted-foreground mb-8 md:mb-10">{doc.intro}</p>
+      <Band section="help">
+        <div>
+          <h1 className="text-[2rem] sm:text-[2.5rem] font-medium tracking-tight leading-[1.05] mb-3">{doc.h1}</h1>
+          <p className="text-sm sm:text-base text-muted-foreground/80 leading-relaxed mb-8 md:mb-10">{doc.intro}</p>
 
           <div className="grid md:grid-cols-[240px_1fr] gap-8 md:gap-12">
             <HelpSidebar items={doc.sections.map((s) => ({ id: s.id, title: s.title }))} />
@@ -88,11 +95,13 @@ export function HelpView({
             </div>
           </div>
         </div>
-      </Section>
+      </Band>
 
-      <Section as="footer" dataSection="footer" noContainer className="!py-6 sm:!py-8 bg-muted/30 border-t border-border">
-        <LandingFooter texts={texts.footer} headerTexts={texts.header} locale={locale} />
-      </Section>
+      <footer data-section="footer" className="w-full">
+        <div className={NARROW}>
+          <LandingFooter texts={texts.footer} headerTexts={texts.header} locale={locale} />
+        </div>
+      </footer>
     </main>
   );
 }

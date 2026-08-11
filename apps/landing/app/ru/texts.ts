@@ -29,11 +29,14 @@ export const TEXTS: LandingTexts = {
   header: {
     navFeatures: "Возможности",
     navHow: "Как это работает",
-    navPricing: "Цены",
+    navPricing: "Тарифы",
     navFaq: "Вопросы",
     signIn: "Войти",
     viewFeatures: "Посмотреть функции",
-    cta: "Попробовать бесплатно",
+    cta: "Начать бесплатно",
+    navProducts: "Возможности",
+    navGuide: "Инструкция",
+    navAbout: "О компании",
   },
 
   hero: {

@@ -35,6 +35,8 @@ export const TEXTS: LandingTexts = {
     signIn: "Skráning",
     viewFeatures: "Skoða eiginleika",
     cta: "Prófaðu frítt",
+    navProducts: "Eiginleikar",
+    navGuide: "Leiðbeiningar",
   },
 
   hero: {

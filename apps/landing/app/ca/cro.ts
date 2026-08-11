@@ -9,15 +9,78 @@ import {
   QrCode,
   Smartphone,
   Palette,
+  Rocket,
+  MessagesSquare,
+  ClipboardList,
+  WheatOff,
+  SlidersHorizontal,
+  Users,
 } from "lucide-react";
-import type { CroCopy } from "@/app/_landing/templates/cro-home-template";
+import type { CroCopyV2 } from "@/app/_landing/templates/cro-home-template-v2";
 
-export const CRO: CroCopy = {
+export const CRO: CroCopyV2 = {
   hero: {
     verticals: ["Restaurants","Cafeteries","Bars","Pizzeries"],
     title: "El teu restaurant, digital",
     titleAccent: "en 5 min",
     sub: "Carta digital, pantalla de cuina i reserves 24/7 — tot el que necessita el teu restaurant, llest en 5 minuts.",
+  },
+
+  heroV2: {
+    verticals: [
+      { icon: "restaurant", label: "Restaurants" },
+      { icon: "cafe", label: "Cafeteries" },
+      { icon: "bar", label: "Bars" },
+      { icon: "pizza", label: "Pizzeries" },
+    ],
+    title: "Tot el que necessita",
+    titleAccent: "el teu restaurant!",
+    sub: "Configura els processos en 10 minuts: llança el menú en línia, optimitza la cuina i controla l'ocupació de les taules.",
+    primaryLabel: "Comença gratis",
+    demoLabel: "Veure demo",
+    mockups: {
+      kds: { src: "/landing/hero-card-kds.webp", alt: "Tauleta amb la pantalla de cuina: comandes per taula en columnes amb estats" },
+      reservations: { src: "/landing/hero-card-reservation.webp", alt: "Tauleta amb el calendari de reserves: vista mensual i reserves pendents de confirmar" },
+      phone1: { src: "/landing/hero-card-menu.webp", alt: "Mòbil amb la pàgina principal del web d'un restaurant: foto, reserves i menú en línia" },
+      phone2: { src: "/landing/hero-card-dish.webp", alt: "Mòbil amb la fitxa d'un plat: foto, preu i etiquetes d'al·lèrgens" },
+    },
+  },
+
+  heroCards: [
+    { Icon: Rocket, title: "En marxa en 10 minuts", sub: "Sense equips cars ni configuracions llargues" },
+    { Icon: MessagesSquare, title: "Suport ràpid", sub: "Responem pel xat en poques hores" },
+    { Icon: Globe, title: "L'elecció de {count} locals", sub: "Restaurants i cafeteries de més de 15 països confien en nosaltres" },
+    { Icon: Palette, title: "100% amb la teva marca", sub: "Adaptem el disseny i la interfície a l'estil del teu local" },
+  ],
+
+  menu: {
+    heading: "Web i menú digital",
+    sub: {
+      link: "Més que un menú QR!",
+      rest: " Aconsegueix un web complet amb disseny únic, pàgina de contacte i reserva de taules.",
+    },
+    moreLabel: "Saber-ne més",
+    mockupAlt: "Dos mòbils: la pàgina principal del web d'un restaurant i la pàgina d'un plat",
+    bullets: [
+      { Icon: Languages, title: "Traducció automàtica a 35 idiomes", sub: "Atén els clients estrangers sense barrera d'idioma: la traducció automàtica ho fa tot" },
+      { Icon: ClipboardList, title: "Comandes des de la taula", sub: "Simplifica el servei: rep comandes des de la taula, ràpid i sense cambrer" },
+      { Icon: WheatOff, title: "Al·lèrgens i dietes", sub: "Marca al·lèrgens i preferències (vegà, picant) perquè triar sigui fàcil i segur" },
+    ],
+  },
+
+  reservations: {
+    heading: "Reserva de taules",
+    sub: {
+      link: "Reserves intel·ligents de taules!",
+      rest: " Un sistema automàtic de reserves que controla tot sol les taules lliures i el teu horari.",
+    },
+    moreLabel: "Saber-ne més",
+    mockupAlt: "Tauleta amb el calendari de reserves: taules per dia i franja horària",
+    bullets: [
+      { Icon: CalendarCheck, title: "Mapa de reserves clar", sub: "Un quadre visual per dies i taules: els llocs lliures es veuen d'un cop d'ull" },
+      { Icon: SlidersHorizontal, title: "Configuració flexible", sub: "Defineix horaris, durada de les franges, fotos de les taules i recull peticions dels clients" },
+      { Icon: Users, title: "Control del flux de clients", sub: "Tria com gestionar les reserves i controla del tot el flux de clients" },
+    ],
   },
 
   heroMicrocopy: "{count} restaurants · 14 dies gratis · Sense targeta",

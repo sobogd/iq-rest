@@ -9,15 +9,78 @@ import {
   QrCode,
   Smartphone,
   Palette,
+  Rocket,
+  MessagesSquare,
+  ClipboardList,
+  WheatOff,
+  SlidersHorizontal,
+  Users,
 } from "lucide-react";
-import type { CroCopy } from "@/app/_landing/templates/cro-home-template";
+import type { CroCopyV2 } from "@/app/_landing/templates/cro-home-template-v2";
 
-export const CRO: CroCopy = {
+export const CRO: CroCopyV2 = {
   hero: {
     verticals: ["Restoranai","Kavinės","Barai","Picerijos"],
     title: "Restoranas skaitmeninis",
     titleAccent: "per 5 min",
     sub: "Skaitmeninis meniu, virtuvės ekranas ir rezervacija 24/7 — viskas, ko reikia restoranui, per 5 minutes.",
+  },
+
+  heroV2: {
+    verticals: [
+      { icon: "restaurant", label: "Restoranai" },
+      { icon: "cafe", label: "Kavinės" },
+      { icon: "bar", label: "Barai" },
+      { icon: "pizza", label: "Picerijos" },
+    ],
+    title: "Viskas, ko reikia",
+    titleAccent: "jūsų restoranui!",
+    sub: "Sutvarkykite procesus per 10 minučių: paleiskite internetinį meniu, optimizuokite virtuvės darbą ir sekite staliukų užimtumą.",
+    primaryLabel: "Pradėti nemokamai",
+    demoLabel: "Žiūrėti demo",
+    mockups: {
+      kds: { src: "/landing/hero-card-kds.webp", alt: "Planšetė su virtuvės ekranu: užsakymai pagal staliukus stulpeliuose su būsenomis" },
+      reservations: { src: "/landing/hero-card-reservation.webp", alt: "Planšetė su rezervacijų kalendoriumi: mėnesio vaizdas ir patvirtinimo laukiančios rezervacijos" },
+      phone1: { src: "/landing/hero-card-menu.webp", alt: "Telefonas su restorano svetainės pagrindiniu puslapiu: nuotrauka, rezervacijos ir internetinis meniu" },
+      phone2: { src: "/landing/hero-card-dish.webp", alt: "Telefonas su patiekalo puslapiu: nuotrauka, kaina ir alergenų žymos" },
+    },
+  },
+
+  heroCards: [
+    { Icon: Rocket, title: "Paleidimas per 10 minučių", sub: "Be brangios įrangos ir ilgo diegimo" },
+    { Icon: MessagesSquare, title: "Greita pagalba", sub: "Pokalbiuose atsakome per kelias valandas" },
+    { Icon: Globe, title: "{count} įstaigų pasirinkimas", sub: "Mumis pasitiki restoranai ir kavinės daugiau nei 15 šalių" },
+    { Icon: Palette, title: "100 % jūsų prekės ženklas", sub: "Dizainą ir sąsają pritaikome jūsų įstaigos stiliui" },
+  ],
+
+  menu: {
+    heading: "Svetainė ir skaitmeninis meniu",
+    sub: {
+      link: "Daugiau nei QR meniu!",
+      rest: " Gaukite visavertę svetainę su unikaliu dizainu, kontaktais ir staliukų rezervacija.",
+    },
+    moreLabel: "Sužinoti daugiau",
+    mockupAlt: "Du telefonai: restorano svetainės pagrindinis puslapis ir patiekalo puslapis",
+    bullets: [
+      { Icon: Languages, title: "Automatinis vertimas į 35 kalbas", sub: "Aptarnaukite užsienio svečius be kalbos barjero — automatinis vertimas padarys viską" },
+      { Icon: ClipboardList, title: "Užsakymai tiesiai nuo staliuko", sub: "Supaprastinkite aptarnavimą: priimkite užsakymus nuo staliukų greitai ir be padavėjo" },
+      { Icon: WheatOff, title: "Alergenai ir dietos", sub: "Žymėkite alergenus ir pomėgius (veganiška, aštru), kad svečiai rinktųsi lengvai ir saugiai" },
+    ],
+  },
+
+  reservations: {
+    heading: "Staliukų rezervacija",
+    sub: {
+      link: "Išmani staliukų rezervacija!",
+      rest: " Automatinė rezervacijų sistema, kuri pati seka laisvus staliukus ir jūsų grafiką.",
+    },
+    moreLabel: "Sužinoti daugiau",
+    mockupAlt: "Planšetė su rezervacijų kalendoriumi: staliukai pagal dienas ir laiko intervalus",
+    bullets: [
+      { Icon: CalendarCheck, title: "Aiškus rezervacijų žemėlapis", sub: "Vaizdus grafikas pagal dienas ir staliukus — laisvos vietos matomos iš karto" },
+      { Icon: SlidersHorizontal, title: "Lankstūs nustatymai", sub: "Nustatykite darbo laiką, intervalų trukmę, staliukų nuotraukas ir rinkite svečių pageidavimus" },
+      { Icon: Users, title: "Svečių srauto valdymas", sub: "Pasirinkite patogų rezervacijų režimą ir visiškai kontroliuokite svečių srautą" },
+    ],
   },
 
   heroMicrocopy: "{count} restoranai · 14 dienų nemokamai · Be kortelės",

@@ -9,15 +9,78 @@ import {
   QrCode,
   Smartphone,
   Palette,
+  Rocket,
+  MessagesSquare,
+  ClipboardList,
+  WheatOff,
+  SlidersHorizontal,
+  Users,
 } from "lucide-react";
-import type { CroCopy } from "@/app/_landing/templates/cro-home-template";
+import type { CroCopyV2 } from "@/app/_landing/templates/cro-home-template-v2";
 
-export const CRO: CroCopy = {
+export const CRO: CroCopyV2 = {
   hero: {
     verticals: ["Restauranger","Kaféer","Barer","Pizzerior"],
     title: "Din restaurang, digital",
     titleAccent: "på 5 min",
     sub: "Digital meny, köksskärm och bordsbokning 24/7 — allt din restaurang behöver, klart på 5 minuter.",
+  },
+
+  heroV2: {
+    verticals: [
+      { icon: "restaurant", label: "Restauranger" },
+      { icon: "cafe", label: "Kaféer" },
+      { icon: "bar", label: "Barer" },
+      { icon: "pizza", label: "Pizzerior" },
+    ],
+    title: "Allt din",
+    titleAccent: "restaurang behöver!",
+    sub: "Sätt upp era processer på 10 minuter: lansera onlinemenyn, effektivisera köket och håll koll på bordsbeläggningen.",
+    primaryLabel: "Börja gratis",
+    demoLabel: "Se demo",
+    mockups: {
+      kds: { src: "/landing/hero-card-kds.webp", alt: "Surfplatta med köksdisplay: beställningar per bord i kolumner med status" },
+      reservations: { src: "/landing/hero-card-reservation.webp", alt: "Surfplatta med bokningskalender: månadsvy och bokningar som väntar på bekräftelse" },
+      phone1: { src: "/landing/hero-card-menu.webp", alt: "Telefon med startsidan för en restaurangwebbplats: foto, bokningar och onlinemeny" },
+      phone2: { src: "/landing/hero-card-dish.webp", alt: "Telefon med en maträttssida: foto, pris och allergenmärkning" },
+    },
+  },
+
+  heroCards: [
+    { Icon: Rocket, title: "Igång på 10 minuter", sub: "Ingen dyr utrustning, ingen lång installation" },
+    { Icon: MessagesSquare, title: "Snabb support", sub: "Vi svarar i chatten inom några timmar" },
+    { Icon: Globe, title: "Valet för {count} verksamheter", sub: "Restauranger och kaféer i över 15 länder litar på oss" },
+    { Icon: Palette, title: "100 % ditt varumärke", sub: "Vi anpassar design och gränssnitt efter din verksamhets stil" },
+  ],
+
+  menu: {
+    heading: "Webbplats och digital meny",
+    sub: {
+      link: "Mer än en QR-meny!",
+      rest: " Få en komplett webbplats med unik design, kontaktsida och bordsbokning.",
+    },
+    moreLabel: "Läs mer",
+    mockupAlt: "Två telefoner: startsidan för en restaurangwebbplats och en maträttssida",
+    bullets: [
+      { Icon: Languages, title: "Automatisk översättning till 35 språk", sub: "Betjäna utländska gäster utan språkbarriär — den automatiska översättningen sköter allt" },
+      { Icon: ClipboardList, title: "Beställningar direkt från bordet", sub: "Förenkla servicen: ta emot beställningar från borden, snabbt och utan servitör" },
+      { Icon: WheatOff, title: "Allergener och dieter", sub: "Markera allergener och preferenser (veganskt, starkt) så att gästerna väljer enkelt och tryggt" },
+    ],
+  },
+
+  reservations: {
+    heading: "Bordsbokning",
+    sub: {
+      link: "Smart bordsbokning!",
+      rest: " Ett automatiskt bokningssystem som självt håller koll på lediga bord och ditt schema.",
+    },
+    moreLabel: "Läs mer",
+    mockupAlt: "Surfplatta med bokningskalender: bord per dag och tidslucka",
+    bullets: [
+      { Icon: CalendarCheck, title: "Tydlig bokningskarta", sub: "Ett rutnät per dag och bord — lediga platser syns direkt" },
+      { Icon: SlidersHorizontal, title: "Flexibla inställningar", sub: "Ställ in öppettider, luckornas längd och bordsfoton, och samla in gästernas önskemål" },
+      { Icon: Users, title: "Kontroll över gästflödet", sub: "Välj hur bokningar hanteras och behåll full kontroll över gästflödet" },
+    ],
   },
 
   heroMicrocopy: "{count} restauranger · 14 dagar gratis · Inget kort",

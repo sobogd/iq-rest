@@ -9,15 +9,78 @@ import {
   QrCode,
   Smartphone,
   Palette,
+  Rocket,
+  MessagesSquare,
+  ClipboardList,
+  WheatOff,
+  SlidersHorizontal,
+  Users,
 } from "lucide-react";
-import type { CroCopy } from "@/app/_landing/templates/cro-home-template";
+import type { CroCopyV2 } from "@/app/_landing/templates/cro-home-template-v2";
 
-export const CRO: CroCopy = {
+export const CRO: CroCopyV2 = {
   hero: {
     verticals: ["Restaurants","Cafés","Bars","Pizzerias"],
     title: "Votre restaurant, digital",
     titleAccent: "en 5 min.",
     sub: "Menu digital, écran de cuisine et réservations 24/7 — tout ce qu'il faut à votre restaurant, prêt en 5 minutes.",
+  },
+
+  heroV2: {
+    verticals: [
+      { icon: "restaurant", label: "Restaurants" },
+      { icon: "cafe", label: "Cafés" },
+      { icon: "bar", label: "Bars" },
+      { icon: "pizza", label: "Pizzerias" },
+    ],
+    title: "Tout ce qu'il faut",
+    titleAccent: "à votre restaurant !",
+    sub: "Configurez vos processus en 10 minutes : lancez le menu en ligne, optimisez la cuisine et suivez l'occupation des tables.",
+    primaryLabel: "Commencer gratuitement",
+    demoLabel: "Voir la démo",
+    mockups: {
+      kds: { src: "/landing/hero-card-kds.webp", alt: "Tablette avec l'écran cuisine : commandes par table en colonnes avec statuts" },
+      reservations: { src: "/landing/hero-card-reservation.webp", alt: "Tablette avec le calendrier des réservations : vue mensuelle et réservations en attente de confirmation" },
+      phone1: { src: "/landing/hero-card-menu.webp", alt: "Téléphone avec la page d'accueil du site d'un restaurant : photo, réservations et menu en ligne" },
+      phone2: { src: "/landing/hero-card-dish.webp", alt: "Téléphone avec la fiche d'un plat : photo, prix et étiquettes d'allergènes" },
+    },
+  },
+
+  heroCards: [
+    { Icon: Rocket, title: "Lancé en 10 minutes", sub: "Sans matériel coûteux ni longue configuration" },
+    { Icon: MessagesSquare, title: "Support réactif", sub: "Nous répondons par chat en quelques heures" },
+    { Icon: Globe, title: "Le choix de {count} établissements", sub: "Des restaurants et cafés de plus de 15 pays nous font confiance" },
+    { Icon: Palette, title: "100 % à votre image", sub: "Design et interface adaptés au style de votre établissement" },
+  ],
+
+  menu: {
+    heading: "Site web et menu digital",
+    sub: {
+      link: "Plus qu'un menu QR !",
+      rest: " Obtenez un site complet avec design unique, page de contact et réservation de tables.",
+    },
+    moreLabel: "En savoir plus",
+    mockupAlt: "Deux téléphones : la page d'accueil du site d'un restaurant et la page d'un plat",
+    bullets: [
+      { Icon: Languages, title: "Traduction automatique en 35 langues", sub: "Servez les clients étrangers sans barrière de langue — la traduction automatique s'occupe de tout" },
+      { Icon: ClipboardList, title: "Commandes depuis la table", sub: "Simplifiez le service : recevez les commandes depuis la table, vite et sans serveur" },
+      { Icon: WheatOff, title: "Allergènes et régimes", sub: "Indiquez allergènes et préférences (végan, épicé) pour un choix simple et sûr" },
+    ],
+  },
+
+  reservations: {
+    heading: "Réservation de tables",
+    sub: {
+      link: "Réservation intelligente !",
+      rest: " Un système de réservation automatique qui surveille seul les tables libres et vos horaires.",
+    },
+    moreLabel: "En savoir plus",
+    mockupAlt: "Tablette avec le calendrier des réservations : tables par jour et par créneau",
+    bullets: [
+      { Icon: CalendarCheck, title: "Plan des réservations clair", sub: "Une grille par jour et par table — les créneaux libres se voient d'un coup d'œil" },
+      { Icon: SlidersHorizontal, title: "Réglages flexibles", sub: "Horaires, durée des créneaux, photos des tables et demandes des clients" },
+      { Icon: Users, title: "Maîtrise du flux de clients", sub: "Choisissez votre mode de gestion des réservations et gardez le contrôle du flux" },
+    ],
   },
 
   heroMicrocopy: "{count} restaurants · 14 jours gratuits · Sans carte",

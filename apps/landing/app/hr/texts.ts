@@ -35,6 +35,8 @@ export const TEXTS: LandingTexts = {
     signIn: "Prijava",
     viewFeatures: "Pogledaj značajke",
     cta: "Isprobajte besplatno",
+    navProducts: "Funkcije",
+    navGuide: "Upute",
   },
 
   hero: {

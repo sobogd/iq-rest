@@ -35,6 +35,8 @@ export const TEXTS: LandingTexts = {
     signIn: "Giriş yap",
     viewFeatures: "Özellikleri gör",
     cta: "Ücretsiz deneyin",
+    navProducts: "Özellikler",
+    navGuide: "Kılavuz",
   },
 
   hero: {

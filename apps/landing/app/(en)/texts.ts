@@ -35,6 +35,8 @@ export const TEXTS: LandingTexts = {
     signIn: "Sign in",
     viewFeatures: "View features",
     cta: "Try it for free",
+    navProducts: "Features",
+    navGuide: "Guide",
   },
 
   hero: {

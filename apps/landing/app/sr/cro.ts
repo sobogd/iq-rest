@@ -9,15 +9,78 @@ import {
   QrCode,
   Smartphone,
   Palette,
+  Rocket,
+  MessagesSquare,
+  ClipboardList,
+  WheatOff,
+  SlidersHorizontal,
+  Users,
 } from "lucide-react";
-import type { CroCopy } from "@/app/_landing/templates/cro-home-template";
+import type { CroCopyV2 } from "@/app/_landing/templates/cro-home-template-v2";
 
-export const CRO: CroCopy = {
+export const CRO: CroCopyV2 = {
   hero: {
     verticals: ["Ресторани","Кафићи","Барови","Пицерије"],
     title: "Vaš restoran, digitalno",
     titleAccent: "za 5 min",
     sub: "Digitalni meni, kuhinjski ekran i rezervacije 24/7 — sve za restoran, spremno za 5 minuta.",
+  },
+
+  heroV2: {
+    verticals: [
+      { icon: "restaurant", label: "Ресторани" },
+      { icon: "cafe", label: "Кафићи" },
+      { icon: "bar", label: "Барови" },
+      { icon: "pizza", label: "Пицерије" },
+    ],
+    title: "Све што вашем",
+    titleAccent: "ресторану треба!",
+    sub: "Подесите процесе за 10 минута: покрените онлајн мени, оптимизујте рад кухиње и пратите заузетост столова.",
+    primaryLabel: "Почните бесплатно",
+    demoLabel: "Погледајте демо",
+    mockups: {
+      kds: { src: "/landing/hero-card-kds.webp", alt: "Таблет са кухињским екраном: поруџбине по столовима у колонама са статусима" },
+      reservations: { src: "/landing/hero-card-reservation.webp", alt: "Таблет са календаром резервација: месечни приказ и резервације које чекају потврду" },
+      phone1: { src: "/landing/hero-card-menu.webp", alt: "Телефон са почетном страницом сајта ресторана: фотографија, резервације и онлајн мени" },
+      phone2: { src: "/landing/hero-card-dish.webp", alt: "Телефон са страницом јела: фотографија, цена и ознаке алергена" },
+    },
+  },
+
+  heroCards: [
+    { Icon: Rocket, title: "Покретање за 10 минута", sub: "Без скупе опреме и дугог подешавања" },
+    { Icon: MessagesSquare, title: "Брза подршка", sub: "У чету одговарамо у року од неколико сати" },
+    { Icon: Globe, title: "Избор {count} локала", sub: "Верују нам ресторани и кафићи у више од 15 земаља" },
+    { Icon: Palette, title: "100% ваш бренд", sub: "Дизајн и интерфејс прилагођавамо стилу вашег локала" },
+  ],
+
+  menu: {
+    heading: "Сајт и дигитални мени",
+    sub: {
+      link: "Више од QR менија!",
+      rest: " Добијте потпун сајт са јединственим дизајном, контактима и резервацијом столова.",
+    },
+    moreLabel: "Сазнајте више",
+    mockupAlt: "Два телефона: почетна страница сајта ресторана и страница јела",
+    bullets: [
+      { Icon: Languages, title: "Аутоматски превод на 35 језика", sub: "Услужујте стране госте без језичке баријере — аутоматски превод све ради сам" },
+      { Icon: ClipboardList, title: "Поруџбине директно са стола", sub: "Поједноставите услугу: примајте поруџбине са столова брзо и без конобара" },
+      { Icon: WheatOff, title: "Алергени и дијете", sub: "Означите алергене и преференције (вегански, љуто) како би гости бирали лако и безбедно" },
+    ],
+  },
+
+  reservations: {
+    heading: "Резервација столова",
+    sub: {
+      link: "Паметна резервација столова!",
+      rest: " Аутоматски систем резервација који сам прати слободне столове и ваш распоред.",
+    },
+    moreLabel: "Сазнајте више",
+    mockupAlt: "Таблет са календаром резервација: столови по данима и терминима",
+    bullets: [
+      { Icon: CalendarCheck, title: "Прегледна мапа резервација", sub: "Јасан распоред по данима и столовима — слободна места се виде одмах" },
+      { Icon: SlidersHorizontal, title: "Флексибилна подешавања", sub: "Подесите радно време, трајање термина, фотографије столова и прикупљајте жеље гостију" },
+      { Icon: Users, title: "Контрола протока гостију", sub: "Изаберите начин рада са резервацијама и потпуно контролишите проток гостију" },
+    ],
   },
 
   heroMicrocopy: "{count} ресторана · 14 дана бесплатно · Без картице",

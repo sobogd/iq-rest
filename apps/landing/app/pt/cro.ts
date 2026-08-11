@@ -9,15 +9,78 @@ import {
   QrCode,
   Smartphone,
   Palette,
+  Rocket,
+  MessagesSquare,
+  ClipboardList,
+  WheatOff,
+  SlidersHorizontal,
+  Users,
 } from "lucide-react";
-import type { CroCopy } from "@/app/_landing/templates/cro-home-template";
+import type { CroCopyV2 } from "@/app/_landing/templates/cro-home-template-v2";
 
-export const CRO: CroCopy = {
+export const CRO: CroCopyV2 = {
   hero: {
     verticals: ["Restaurantes","Cafés","Bares","Pizzarias"],
     title: "O seu restaurante, digital",
     titleAccent: "em 5 min.",
     sub: "Menu digital, ecrã de cozinha e reservas 24/7 — tudo o que o seu restaurante precisa, pronto em 5 minutos.",
+  },
+
+  heroV2: {
+    verticals: [
+      { icon: "restaurant", label: "Restaurantes" },
+      { icon: "cafe", label: "Cafés" },
+      { icon: "bar", label: "Bares" },
+      { icon: "pizza", label: "Pizzarias" },
+    ],
+    title: "Tudo o que o seu",
+    titleAccent: "restaurante precisa!",
+    sub: "Configure os processos em 10 minutos: lance o menu online, otimize a cozinha e acompanhe a ocupação das mesas.",
+    primaryLabel: "Começar grátis",
+    demoLabel: "Ver demo",
+    mockups: {
+      kds: { src: "/landing/hero-card-kds.webp", alt: "Tablet com o display de cozinha: pedidos por mesa em colunas com estados" },
+      reservations: { src: "/landing/hero-card-reservation.webp", alt: "Tablet com o calendário de reservas: vista mensal e reservas à espera de confirmação" },
+      phone1: { src: "/landing/hero-card-menu.webp", alt: "Telefone com a página inicial do site de um restaurante: foto, reservas e menu online" },
+      phone2: { src: "/landing/hero-card-dish.webp", alt: "Telefone com a página de um prato: foto, preço e etiquetas de alérgenos" },
+    },
+  },
+
+  heroCards: [
+    { Icon: Rocket, title: "A funcionar em 10 minutos", sub: "Sem equipamento caro nem configurações demoradas" },
+    { Icon: MessagesSquare, title: "Suporte rápido", sub: "Respondemos no chat em poucas horas" },
+    { Icon: Globe, title: "A escolha de {count} estabelecimentos", sub: "Restaurantes e cafés em mais de 15 países confiam em nós" },
+    { Icon: Palette, title: "100% com a sua marca", sub: "Adaptamos o design e a interface ao estilo do seu estabelecimento" },
+  ],
+
+  menu: {
+    heading: "Site e menu digital",
+    sub: {
+      link: "Mais do que um menu QR!",
+      rest: " Tenha um site completo com design único, página de contactos e reserva de mesas.",
+    },
+    moreLabel: "Saber mais",
+    mockupAlt: "Dois telefones: a página inicial do site de um restaurante e a página de um prato",
+    bullets: [
+      { Icon: Languages, title: "Tradução automática para 35 idiomas", sub: "Atenda clientes estrangeiros sem barreira de idioma — a tradução automática faz tudo" },
+      { Icon: ClipboardList, title: "Pedidos diretamente da mesa", sub: "Simplifique o serviço: receba pedidos da mesa, rápido e sem empregado" },
+      { Icon: WheatOff, title: "Alérgenos e dietas", sub: "Marque alérgenos e preferências (vegano, picante) para uma escolha fácil e segura" },
+    ],
+  },
+
+  reservations: {
+    heading: "Reserva de mesas",
+    sub: {
+      link: "Reservas inteligentes de mesas!",
+      rest: " Um sistema de reservas automático que controla sozinho as mesas livres e o seu horário.",
+    },
+    moreLabel: "Saber mais",
+    mockupAlt: "Tablet com o calendário de reservas: mesas por dia e por horário",
+    bullets: [
+      { Icon: CalendarCheck, title: "Mapa de reservas claro", sub: "Uma grelha por dias e mesas — os lugares livres veem-se num relance" },
+      { Icon: SlidersHorizontal, title: "Configuração flexível", sub: "Defina horários, duração dos períodos, fotos das mesas e recolha pedidos dos clientes" },
+      { Icon: Users, title: "Controlo do fluxo de clientes", sub: "Escolha como gerir as reservas e mantenha o controlo total do fluxo" },
+    ],
   },
 
   heroMicrocopy: "{count} restaurantes · 14 dias grátis · Sem cartão",

@@ -9,15 +9,78 @@ import {
   QrCode,
   Smartphone,
   Palette,
+  Rocket,
+  MessagesSquare,
+  ClipboardList,
+  WheatOff,
+  SlidersHorizontal,
+  Users,
 } from "lucide-react";
-import type { CroCopy } from "@/app/_landing/templates/cro-home-template";
+import type { CroCopyV2 } from "@/app/_landing/templates/cro-home-template-v2";
 
-export const CRO: CroCopy = {
+export const CRO: CroCopyV2 = {
   hero: {
     verticals: ["Ravintolat","Kahvilat","Baarit","Pizzeriat"],
     title: "Digitaalinen ravintola",
     titleAccent: "5 minuutissa",
     sub: "Digitaalinen ruokalista, keittiönäyttö ja ajanvaraus 24/7 — kaikki mitä ravintolasi tarvitsee, 5 minuutissa.",
+  },
+
+  heroV2: {
+    verticals: [
+      { icon: "restaurant", label: "Ravintolat" },
+      { icon: "cafe", label: "Kahvilat" },
+      { icon: "bar", label: "Baarit" },
+      { icon: "pizza", label: "Pizzeriat" },
+    ],
+    title: "Kaikki mitä",
+    titleAccent: "ravintolasi tarvitsee!",
+    sub: "Määritä prosessit 10 minuutissa: julkaise verkkomenu, tehosta keittiön työtä ja pidä pöytien varaustilanne hallinnassa.",
+    primaryLabel: "Aloita ilmaiseksi",
+    demoLabel: "Katso demo",
+    mockups: {
+      kds: { src: "/landing/hero-card-kds.webp", alt: "Tabletti keittiönäytöllä: tilaukset pöydittäin sarakkeissa tiloineen" },
+      reservations: { src: "/landing/hero-card-reservation.webp", alt: "Tabletti varauskalenterilla: kuukausinäkymä ja vahvistusta odottavat varaukset" },
+      phone1: { src: "/landing/hero-card-menu.webp", alt: "Puhelin, jossa ravintolan verkkosivuston etusivu: kuva, varaukset ja verkkomenu" },
+      phone2: { src: "/landing/hero-card-dish.webp", alt: "Puhelin, jossa annossivu: kuva, hinta ja allergeenimerkinnät" },
+    },
+  },
+
+  heroCards: [
+    { Icon: Rocket, title: "Käytössä 10 minuutissa", sub: "Ei kalliita laitteita eikä pitkää käyttöönottoa" },
+    { Icon: MessagesSquare, title: "Nopea tuki", sub: "Vastaamme chatissa muutamassa tunnissa" },
+    { Icon: Globe, title: "{count} ravintolan valinta", sub: "Meihin luottavat ravintolat ja kahvilat yli 15 maassa" },
+    { Icon: Palette, title: "100 % sinun brändisi", sub: "Sovitamme ulkoasun ja käyttöliittymän ravintolasi tyyliin" },
+  ],
+
+  menu: {
+    heading: "Verkkosivusto ja digitaalinen menu",
+    sub: {
+      link: "Enemmän kuin QR-menu!",
+      rest: " Saat täysimittaisen sivuston, jossa on oma ilme, yhteystiedot ja pöytävaraukset.",
+    },
+    moreLabel: "Lue lisää",
+    mockupAlt: "Kaksi puhelinta: ravintolan verkkosivuston etusivu ja annossivu",
+    bullets: [
+      { Icon: Languages, title: "Automaattinen käännös 35 kielelle", sub: "Palvele ulkomaisia vieraita ilman kielimuuria — automaattinen käännös hoitaa kaiken" },
+      { Icon: ClipboardList, title: "Tilaukset suoraan pöydästä", sub: "Kevennä palvelua: vastaanota tilaukset pöydistä nopeasti ja ilman tarjoilijaa" },
+      { Icon: WheatOff, title: "Allergeenit ja ruokavaliot", sub: "Merkitse allergeenit ja mieltymykset (vegaaninen, tulinen), jotta valinta on helppoa ja turvallista" },
+    ],
+  },
+
+  reservations: {
+    heading: "Pöytävaraukset",
+    sub: {
+      link: "Älykäs pöytävaraus!",
+      rest: " Automaattinen varausjärjestelmä, joka seuraa itse vapaita pöytiä ja aikataulujasi.",
+    },
+    moreLabel: "Lue lisää",
+    mockupAlt: "Tabletti varauskalenterilla: pöydät päivittäin ja aikaväleittäin",
+    bullets: [
+      { Icon: CalendarCheck, title: "Selkeä varauskartta", sub: "Havainnollinen ruudukko päivittäin ja pöydittäin — vapaat paikat näkyvät heti" },
+      { Icon: SlidersHorizontal, title: "Joustavat asetukset", sub: "Määritä aukioloajat, aikavälien pituus ja pöytien kuvat sekä kerää vieraiden toiveet" },
+      { Icon: Users, title: "Vierasvirran hallinta", sub: "Valitse sopiva varausten käsittelytapa ja pidä vierasvirta täysin hallinnassa" },
+    ],
   },
 
   heroMicrocopy: "{count} ravintolaa · 14 päivää ilmaiseksi · Ei korttia",

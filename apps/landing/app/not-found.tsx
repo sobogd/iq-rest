@@ -4,6 +4,7 @@ import { LandingHeader } from "@/app/_landing/components/header";
 import { LandingFooter } from "@/app/_landing/components/footer";
 import { LandingI18nWrap } from "@/app/_landing/components/landing-i18n-wrap";
 import { PageTracker } from "@/app/_landing/components/page-tracker";
+import { NARROW, PAGE } from "@/app/_landing/components/shell";
 import { TEXTS } from "./(en)/texts";
 
 // Global not-found — App Router renders this for any unmatched URL that
@@ -33,7 +34,7 @@ export default async function NotFound() {
     <html lang={LOCALE} dir="ltr" translate="no" suppressHydrationWarning>
       <body className="min-h-dvh bg-background text-foreground antialiased tracking-tight">
         <LandingI18nWrap locale={LOCALE}>
-          <main className="relative">
+          <main className={PAGE}>
             {/* Own page bucket — header/footer clicks from a 404 would
                 otherwise be attributed to whatever page ran before it. */}
             <PageTracker page="not-found" />
@@ -42,9 +43,12 @@ export default async function NotFound() {
               locale={LOCALE}
               useLocalAnchors={false}
               featureLinks={TEXTS.footer.featureLinks}
+              containerClass={NARROW}
+              compact
+              navLayout="grouped"
             />
 
-            <section className="px-5 py-24 sm:py-32">
+            <section className="w-full px-5 py-20 sm:py-28">
               <div className="max-w-2xl mx-auto text-center">
                 <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground mb-3">
                   404
@@ -64,12 +68,11 @@ export default async function NotFound() {
               </div>
             </section>
 
-            <LandingFooter
-              texts={TEXTS.footer}
-              headerTexts={TEXTS.header}
-              locale={LOCALE}
-             
-            />
+            <footer className="w-full">
+              <div className={NARROW}>
+                <LandingFooter texts={TEXTS.footer} headerTexts={TEXTS.header} locale={LOCALE} />
+              </div>
+            </footer>
           </main>
         </LandingI18nWrap>
       </body>

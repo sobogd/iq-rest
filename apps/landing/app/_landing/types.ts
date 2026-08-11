@@ -165,6 +165,15 @@ export type LandingTexts = {
     navFaq: string;
     signIn: string;
     cta: string;
+    /** Label of the products dropdown in the grouped (v2 home) header.
+     *  Falls back to `navFeatures` for locales that haven't set it. */
+    navProducts?: string;
+    /** Label of the help-guide link in the grouped header.
+     *  Falls back to `navHow`. */
+    navGuide?: string;
+    /** Label of the about-page link. Rendered only when the template passes an
+     *  `aboutHref`, so locales without the page never show it. */
+    navAbout?: string;
     /** Secondary hero CTA — scrolls to the features section ("View features"). */
     viewFeatures: string;
   };

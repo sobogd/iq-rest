@@ -9,15 +9,78 @@ import {
   QrCode,
   Smartphone,
   Palette,
+  Rocket,
+  MessagesSquare,
+  ClipboardList,
+  WheatOff,
+  SlidersHorizontal,
+  Users,
 } from "lucide-react";
-import type { CroCopy } from "@/app/_landing/templates/cro-home-template";
+import type { CroCopyV2 } from "@/app/_landing/templates/cro-home-template-v2";
 
-export const CRO: CroCopy = {
+export const CRO: CroCopyV2 = {
   hero: {
     verticals: ["Restaurants","Cafés","Bars","Pizzeria's"],
     title: "Jouw restaurant, digitaal",
     titleAccent: "in 5 min",
     sub: "Digitale menukaart, keukenscherm en reserveringen 24/7 — alles voor je restaurant, klaar in 5 minuten.",
+  },
+
+  heroV2: {
+    verticals: [
+      { icon: "restaurant", label: "Restaurants" },
+      { icon: "cafe", label: "Cafés" },
+      { icon: "bar", label: "Bars" },
+      { icon: "pizza", label: "Pizzeria's" },
+    ],
+    title: "Alles voor",
+    titleAccent: "jouw restaurant!",
+    sub: "Richt je processen in 10 minuten in: lanceer het online menu, optimaliseer de keuken en houd de tafelbezetting bij.",
+    primaryLabel: "Gratis beginnen",
+    demoLabel: "Bekijk demo",
+    mockups: {
+      kds: { src: "/landing/hero-card-kds.webp", alt: "Tablet met keukendisplay: bestellingen per tafel in kolommen met statussen" },
+      reservations: { src: "/landing/hero-card-reservation.webp", alt: "Tablet met reserveringskalender: maandoverzicht en reserveringen in afwachting van bevestiging" },
+      phone1: { src: "/landing/hero-card-menu.webp", alt: "Telefoon met de homepage van een restaurantwebsite: foto, reserveringen en het online menu" },
+      phone2: { src: "/landing/hero-card-dish.webp", alt: "Telefoon met een gerechtpagina: foto, prijs en allergenenlabels" },
+    },
+  },
+
+  heroCards: [
+    { Icon: Rocket, title: "Live in 10 minuten", sub: "Geen dure hardware, geen lange installatie" },
+    { Icon: MessagesSquare, title: "Snelle support", sub: "We reageren binnen een paar uur via de chat" },
+    { Icon: Globe, title: "De keuze van {count} zaken", sub: "Restaurants en cafés in 15+ landen vertrouwen op ons" },
+    { Icon: Palette, title: "100% jouw merk", sub: "Design en interface passen we aan de stijl van jouw zaak aan" },
+  ],
+
+  menu: {
+    heading: "Website en digitaal menu",
+    sub: {
+      link: "Meer dan een QR-menu!",
+      rest: " Krijg een volwaardige website met uniek design, contactpagina en tafelreserveringen.",
+    },
+    moreLabel: "Meer weten",
+    mockupAlt: "Twee telefoons: de homepage van een restaurantwebsite en een gerechtpagina",
+    bullets: [
+      { Icon: Languages, title: "Automatische vertaling naar 35 talen", sub: "Bedien buitenlandse gasten zonder taalbarrière — de automatische vertaling regelt alles" },
+      { Icon: ClipboardList, title: "Bestellen vanaf tafel", sub: "Vereenvoudig de service: ontvang bestellingen rechtstreeks vanaf tafel, snel en zonder ober" },
+      { Icon: WheatOff, title: "Allergenen en diëten", sub: "Markeer allergenen en voorkeuren (vegan, pittig) zodat gasten makkelijk en veilig kiezen" },
+    ],
+  },
+
+  reservations: {
+    heading: "Tafels reserveren",
+    sub: {
+      link: "Slim tafels reserveren!",
+      rest: " Een automatisch reserveringssysteem dat zelf vrije tafels en jouw rooster bijhoudt.",
+    },
+    moreLabel: "Meer weten",
+    mockupAlt: "Tablet met reserveringskalender: tafels per dag en tijdslot",
+    bullets: [
+      { Icon: CalendarCheck, title: "Overzichtelijke reserveringskaart", sub: "Een raster per dag en tafel — vrije plekken zie je in één oogopslag" },
+      { Icon: SlidersHorizontal, title: "Flexibele instellingen", sub: "Stel openingstijden, slotduur en tafelfoto's in en verzamel wensen van gasten" },
+      { Icon: Users, title: "Grip op de gastenstroom", sub: "Kies hoe je reserveringen afhandelt en houd de gastenstroom volledig onder controle" },
+    ],
   },
 
   heroMicrocopy: "{count} restaurants · 14 dagen gratis · Geen kaart",

@@ -35,6 +35,8 @@ export const TEXTS: LandingTexts = {
     signIn: "Kirjaudu sisään",
     viewFeatures: "Katso ominaisuudet",
     cta: "Kokeile ilmaiseksi",
+    navProducts: "Ominaisuudet",
+    navGuide: "Ohje",
   },
 
   hero: {

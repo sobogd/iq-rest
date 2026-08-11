@@ -9,15 +9,78 @@ import {
   QrCode,
   Smartphone,
   Palette,
+  Rocket,
+  MessagesSquare,
+  ClipboardList,
+  WheatOff,
+  SlidersHorizontal,
+  Users,
 } from "lucide-react";
-import type { CroCopy } from "@/app/_landing/templates/cro-home-template";
+import type { CroCopyV2 } from "@/app/_landing/templates/cro-home-template-v2";
 
-export const CRO: CroCopy = {
+export const CRO: CroCopyV2 = {
   hero: {
     verticals: ["Restaurace","Kavárny","Bary","Pizzerie"],
     title: "Vaše restaurace, digitálně",
     titleAccent: "za 5 min",
     sub: "Digitální menu, kuchyňský displej a rezervace 24/7 — vše pro restauraci, hotové za 5 minut.",
+  },
+
+  heroV2: {
+    verticals: [
+      { icon: "restaurant", label: "Restaurace" },
+      { icon: "cafe", label: "Kavárny" },
+      { icon: "bar", label: "Bary" },
+      { icon: "pizza", label: "Pizzerie" },
+    ],
+    title: "Vše, co vaše",
+    titleAccent: "restaurace potřebuje!",
+    sub: "Nastavte procesy za 10 minut: spusťte online menu, zefektivněte kuchyni a mějte přehled o obsazenosti stolů.",
+    primaryLabel: "Začít zdarma",
+    demoLabel: "Zobrazit demo",
+    mockups: {
+      kds: { src: "/landing/hero-card-kds.webp", alt: "Tablet s kuchyňským displejem: objednávky podle stolů ve sloupcích se stavy" },
+      reservations: { src: "/landing/hero-card-reservation.webp", alt: "Tablet s kalendářem rezervací: měsíční přehled a rezervace čekající na potvrzení" },
+      phone1: { src: "/landing/hero-card-menu.webp", alt: "Telefon s úvodní stránkou webu restaurace: fotka, rezervace a online menu" },
+      phone2: { src: "/landing/hero-card-dish.webp", alt: "Telefon s kartou pokrmu: fotka, cena a štítky alergenů" },
+    },
+  },
+
+  heroCards: [
+    { Icon: Rocket, title: "Spuštění za 10 minut", sub: "Bez drahého vybavení a dlouhého nastavování" },
+    { Icon: MessagesSquare, title: "Rychlá podpora", sub: "Na chatu odpovídáme během několika hodin" },
+    { Icon: Globe, title: "Volba {count} podniků", sub: "Důvěřují nám restaurace a kavárny ve více než 15 zemích" },
+    { Icon: Palette, title: "100% ve vašem stylu", sub: "Design i rozhraní přizpůsobíme stylu vašeho podniku" },
+  ],
+
+  menu: {
+    heading: "Web a digitální menu",
+    sub: {
+      link: "Víc než QR menu!",
+      rest: " Získejte plnohodnotný web s jedinečným designem, kontakty a rezervací stolů.",
+    },
+    moreLabel: "Zjistit více",
+    mockupAlt: "Dva telefony: úvodní stránka webu restaurace a stránka pokrmu",
+    bullets: [
+      { Icon: Languages, title: "Automatický překlad do 35 jazyků", sub: "Obsluhujte zahraniční hosty bez jazykové bariéry — automatický překlad zařídí vše" },
+      { Icon: ClipboardList, title: "Objednávky přímo od stolu", sub: "Zjednodušte obsluhu: přijímejte objednávky od stolů rychle a bez číšníka" },
+      { Icon: WheatOff, title: "Alergeny a diety", sub: "Označujte alergeny a preference (veganské, pálivé), aby hosté vybírali snadno a bezpečně" },
+    ],
+  },
+
+  reservations: {
+    heading: "Rezervace stolů",
+    sub: {
+      link: "Chytrá rezervace stolů!",
+      rest: " Automatický rezervační systém, který sám hlídá volné stoly a váš rozvrh.",
+    },
+    moreLabel: "Zjistit více",
+    mockupAlt: "Tablet s kalendářem rezervací: stoly podle dnů a časových slotů",
+    bullets: [
+      { Icon: CalendarCheck, title: "Přehledná mapa rezervací", sub: "Názorný rozvrh podle dnů a stolů — volná místa vidíte na první pohled" },
+      { Icon: SlidersHorizontal, title: "Flexibilní nastavení", sub: "Nastavte otevírací dobu, délku slotů, fotky stolů a sbírejte přání hostů" },
+      { Icon: Users, title: "Řízení toku hostů", sub: "Zvolte si režim práce s rezervacemi a mějte tok hostů plně pod kontrolou" },
+    ],
   },
 
   heroMicrocopy: "{count} restaurací · 14 dní zdarma · Bez karty",

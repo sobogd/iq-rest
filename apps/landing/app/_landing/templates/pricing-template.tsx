@@ -1,18 +1,17 @@
 import { LandingHeader } from "../components/header";
 import { LandingFooter } from "../components/footer";
 import { Faq } from "../components/faq";
-import { Section } from "../components/section";
 import { PageTracker } from "../components/page-tracker";
 import { PricingQuiz, EN_PRICING_QUIZ } from "../components/pricing-quiz";
 import { FinalCta } from "../components/final-cta";
+import { NARROW, PAGE, Band } from "../components/shell";
 import { getHelpBanner } from "../help/registry";
-import { HelpBannerSection } from "../help/help-banner-section";
+import { HelpBannerCta } from "../help/help-banner-cta";
 import type { LandingTexts } from "../types";
 
-// Shared markup for every per-locale pricing page. Per-locale data (the
-// pricing FAQ, JSON-LD) stays in each `page.tsx` and is passed in. `texts` is
-// the locale's home TEXTS (header/footer/hero). The analytics page key is
-// locale-stable ("pricing") and hardcoded below.
+// Shared markup for every per-locale pricing page, in the same shell as the
+// v2 home: grouped compact header, one 1000px column, plain Bands. Per-locale
+// data (the pricing FAQ, JSON-LD) stays in each `page.tsx` and is passed in.
 export function PricingTemplate({
   locale,
   texts,
@@ -27,19 +26,26 @@ export function PricingTemplate({
   const helpBanner = getHelpBanner(locale);
   const quiz = texts.pricingQuiz ?? EN_PRICING_QUIZ;
   return (
-    <main className="relative">
+    <main className={PAGE}>
       <PageTracker page="pricing" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
-      <LandingHeader texts={texts.header} locale={locale} featureLinks={texts.footer.featureLinks} helpHref={helpBanner?.href} />
+      <LandingHeader
+        texts={texts.header}
+        locale={locale}
+        featureLinks={texts.footer.featureLinks}
+        helpHref={helpBanner?.href}
+        containerClass={NARROW}
+        compact
+        navLayout="grouped"
+      />
 
-      {/* billing-features-constructor: the à-la-carte quiz replaces the fixed
-          Basic/Pro plan cards as the pricing hero. */}
-      <Section dataSection="pricing_quiz" noContainer>
+      {/* The à-la-carte quiz is the pricing hero. */}
+      <Band section="pricing_quiz">
         <PricingQuiz ctaText={texts.ctaText} texts={quiz} />
-      </Section>
+      </Band>
 
       {/* Enterprise / custom-plan line */}
-      <Section dataSection="pricing_enterprise" noContainer>
+      <Band section="pricing_enterprise">
         <p className="mx-auto max-w-xl text-center text-base text-muted-foreground">
           {quiz.enterprisePre}{" "}
           <a
@@ -52,13 +58,13 @@ export function PricingTemplate({
           </a>{" "}
           {quiz.enterprisePost}
         </p>
-      </Section>
+      </Band>
 
-      <Section id="faq" dataSection="faq" noContainer accent>
+      <Band section="faq" id="faq">
         <Faq texts={faq} />
-      </Section>
+      </Band>
 
-      <Section dataSection="final_cta" noContainer className="!py-16">
+      <Band section="final_cta">
         <FinalCta
           texts={texts.finalCta}
           ctaText={texts.ctaText}
@@ -66,13 +72,24 @@ export function PricingTemplate({
           microcopy={texts.microcopy}
           locale={locale}
         />
-      </Section>
+      </Band>
 
-      {helpBanner ? <HelpBannerSection banner={helpBanner} source="pricing" /> : null}
+      {helpBanner ? (
+        <Band section="help_banner" id="help-banner">
+          <HelpBannerCta banner={helpBanner} source="pricing" />
+        </Band>
+      ) : null}
 
-      <Section as="footer" dataSection="footer" noContainer className="!py-6 sm:!py-8">
-        <LandingFooter texts={texts.footer} headerTexts={texts.header} locale={locale} />
-      </Section>
+      <footer data-section="footer" className="w-full">
+        <div className={NARROW}>
+          <LandingFooter
+            texts={texts.footer}
+            headerTexts={texts.header}
+            locale={locale}
+            helpHref={helpBanner?.href}
+          />
+        </div>
+      </footer>
     </main>
   );
 }

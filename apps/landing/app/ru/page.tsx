@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { CroHomeTemplate } from "@/app/_landing/templates/cro-home-template";
+import { CroHomeTemplateV2 } from "@/app/_landing/templates/cro-home-template-v2";
 import { TEXTS } from "./texts";
 import { CRO } from "./cro";
 import { restaurantCount } from "@/lib/restaurant-count";
@@ -87,7 +87,13 @@ export default function HomePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON_LD }} />
-      <CroHomeTemplate locale={LOCALE} texts={TEXTS} cro={CRO} count={restaurantCount()} />
+      <CroHomeTemplateV2
+        locale={LOCALE}
+        texts={TEXTS}
+        cro={CRO}
+        count={restaurantCount()}
+        aboutHref={`/${LOCALE}/o-kompanii`}
+      />
     </>
   );
 }

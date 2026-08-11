@@ -9,15 +9,78 @@ import {
   QrCode,
   Smartphone,
   Palette,
+  Rocket,
+  MessagesSquare,
+  ClipboardList,
+  WheatOff,
+  SlidersHorizontal,
+  Users,
 } from "lucide-react";
-import type { CroCopy } from "@/app/_landing/templates/cro-home-template";
+import type { CroCopyV2 } from "@/app/_landing/templates/cro-home-template-v2";
 
-export const CRO: CroCopy = {
+export const CRO: CroCopyV2 = {
   hero: {
     verticals: ["Restorāni","Kafejnīcas","Bāri","Picērijas"],
     title: "Restorāns digitāli",
     titleAccent: "5 minūtēs",
     sub: "Digitāla ēdienkarte, virtuves ekrāns un rezervācija 24/7 — viss, kas restorānam vajadzīgs, 5 minūtēs.",
+  },
+
+  heroV2: {
+    verticals: [
+      { icon: "restaurant", label: "Restorāni" },
+      { icon: "cafe", label: "Kafejnīcas" },
+      { icon: "bar", label: "Bāri" },
+      { icon: "pizza", label: "Picērijas" },
+    ],
+    title: "Viss, kas nepieciešams",
+    titleAccent: "jūsu restorānam!",
+    sub: "Iestatiet procesus 10 minūtēs: palaidiet tiešsaistes ēdienkarti, optimizējiet virtuves darbu un sekojiet galdiņu noslodzei.",
+    primaryLabel: "Sākt bez maksas",
+    demoLabel: "Skatīt demo",
+    mockups: {
+      kds: { src: "/landing/hero-card-kds.webp", alt: "Planšete ar virtuves displeju: pasūtījumi pa galdiņiem kolonnās ar statusiem" },
+      reservations: { src: "/landing/hero-card-reservation.webp", alt: "Planšete ar rezervāciju kalendāru: mēneša skats un apstiprinājumu gaidošas rezervācijas" },
+      phone1: { src: "/landing/hero-card-menu.webp", alt: "Tālrunis ar restorāna vietnes sākumlapu: foto, rezervācijas un tiešsaistes ēdienkarte" },
+      phone2: { src: "/landing/hero-card-dish.webp", alt: "Tālrunis ar ēdiena lapu: foto, cena un alergēnu atzīmes" },
+    },
+  },
+
+  heroCards: [
+    { Icon: Rocket, title: "Darbībā 10 minūtēs", sub: "Bez dārga aprīkojuma un ilgas iestatīšanas" },
+    { Icon: MessagesSquare, title: "Ātrs atbalsts", sub: "Čatā atbildam dažu stundu laikā" },
+    { Icon: Globe, title: "{count} vietu izvēle", sub: "Mums uzticas restorāni un kafejnīcas vairāk nekā 15 valstīs" },
+    { Icon: Palette, title: "100 % jūsu zīmols", sub: "Dizainu un saskarni pielāgojam jūsu vietas stilam" },
+  ],
+
+  menu: {
+    heading: "Vietne un digitālā ēdienkarte",
+    sub: {
+      link: "Vairāk nekā QR ēdienkarte!",
+      rest: " Iegūstiet pilnvērtīgu vietni ar unikālu dizainu, kontaktiem un galdiņu rezervāciju.",
+    },
+    moreLabel: "Uzzināt vairāk",
+    mockupAlt: "Divi tālruņi: restorāna vietnes sākumlapa un ēdiena lapa",
+    bullets: [
+      { Icon: Languages, title: "Automātisks tulkojums 35 valodās", sub: "Apkalpojiet ārvalstu viesus bez valodas barjeras — automātiskais tulkojums izdarīs visu" },
+      { Icon: ClipboardList, title: "Pasūtījumi tieši no galdiņa", sub: "Vienkāršojiet apkalpošanu: pieņemiet pasūtījumus no galdiņiem ātri un bez viesmīļa" },
+      { Icon: WheatOff, title: "Alergēni un diētas", sub: "Atzīmējiet alergēnus un preferences (vegānisks, ass), lai viesi izvēlētos viegli un droši" },
+    ],
+  },
+
+  reservations: {
+    heading: "Galdiņu rezervācija",
+    sub: {
+      link: "Vieda galdiņu rezervācija!",
+      rest: " Automātiska rezervāciju sistēma, kas pati seko brīvajiem galdiņiem un jūsu grafikam.",
+    },
+    moreLabel: "Uzzināt vairāk",
+    mockupAlt: "Planšete ar rezervāciju kalendāru: galdiņi pa dienām un laika intervāliem",
+    bullets: [
+      { Icon: CalendarCheck, title: "Pārskatāma rezervāciju karte", sub: "Uzskatāms grafiks pa dienām un galdiņiem — brīvās vietas redzamas uzreiz" },
+      { Icon: SlidersHorizontal, title: "Elastīgi iestatījumi", sub: "Iestatiet darba laiku, intervālu ilgumu, galdiņu fotoattēlus un apkopojiet viesu vēlmes" },
+      { Icon: Users, title: "Viesu plūsmas kontrole", sub: "Izvēlieties ērtu rezervāciju režīmu un pilnībā kontrolējiet viesu plūsmu" },
+    ],
   },
 
   heroMicrocopy: "{count} restorāni · 14 dienas bez maksas · Bez kartes",

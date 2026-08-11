@@ -35,6 +35,8 @@ export const TEXTS: LandingTexts = {
     signIn: "Bejelentkezés",
     viewFeatures: "Funkciók megtekintése",
     cta: "Próbáld ki ingyen",
+    navProducts: "Funkciók",
+    navGuide: "Útmutató",
   },
 
   hero: {

@@ -9,15 +9,78 @@ import {
   QrCode,
   Smartphone,
   Palette,
+  Rocket,
+  MessagesSquare,
+  ClipboardList,
+  WheatOff,
+  SlidersHorizontal,
+  Users,
 } from "lucide-react";
-import type { CroCopy } from "@/app/_landing/templates/cro-home-template";
+import type { CroCopyV2 } from "@/app/_landing/templates/cro-home-template-v2";
 
-export const CRO: CroCopy = {
+export const CRO: CroCopyV2 = {
   hero: {
     verticals: ["Bialanna","Caiféanna","Beáir","Píotsaíochtaí"],
     title: "Do bhialann, digiteach",
     titleAccent: "i 5 nóiméad",
     sub: "Biachlár digiteach, scáileán cistine agus áirithintí 24/7 — gach rud a theastaíonn ó do bhialann, réidh i 5 nóiméad.",
+  },
+
+  heroV2: {
+    verticals: [
+      { icon: "restaurant", label: "Bialanna" },
+      { icon: "cafe", label: "Caiféanna" },
+      { icon: "bar", label: "Beáir" },
+      { icon: "pizza", label: "Pizzerias" },
+    ],
+    title: "Gach rud a theastaíonn",
+    titleAccent: "ó do bhialann!",
+    sub: "Cuir do phróisis ar bun i 10 nóiméad: seol an biachlár ar líne, cuir bail ar an gcistin agus coinnigh súil ar na boird.",
+    primaryLabel: "Tosaigh saor in aisce",
+    demoLabel: "Féach ar an taispeántas",
+    mockups: {
+      kds: { src: "/landing/hero-card-kds.webp", alt: "Táibléad leis an scáileán cistine: orduithe de réir boird i gcolúin le stádais" },
+      reservations: { src: "/landing/hero-card-reservation.webp", alt: "Táibléad le féilire na n-áirithintí: amharc míosúil agus áirithintí ag fanacht le deimhniú" },
+      phone1: { src: "/landing/hero-card-menu.webp", alt: "Fón le leathanach baile suíomh gréasáin bialainne: grianghraf, áirithintí agus biachlár ar líne" },
+      phone2: { src: "/landing/hero-card-dish.webp", alt: "Fón le leathanach mias: grianghraf, praghas agus lipéid ailléirgíní" },
+    },
+  },
+
+  heroCards: [
+    { Icon: Rocket, title: "Beo i 10 nóiméad", sub: "Gan trealamh costasach ná socrú fada" },
+    { Icon: MessagesSquare, title: "Tacaíocht thapa", sub: "Freagraímid sa chomhrá laistigh de chúpla uair an chloig" },
+    { Icon: Globe, title: "Rogha {count} áit", sub: "Tá muinín ag bialanna agus caiféanna i mbreis is 15 tír asainn" },
+    { Icon: Palette, title: "100% do bhrandasa", sub: "Cuirimid an dearadh agus an comhéadan in oiriúint do stíl d'áite" },
+  ],
+
+  menu: {
+    heading: "Suíomh gréasáin agus biachlár digiteach",
+    sub: {
+      link: "Níos mó ná biachlár QR!",
+      rest: " Faigh suíomh gréasáin iomlán le dearadh uathúil, leathanach teagmhála agus áirithint bord.",
+    },
+    moreLabel: "Tuilleadh eolais",
+    mockupAlt: "Dhá fhón: leathanach baile suíomh gréasáin bialainne agus leathanach mias",
+    bullets: [
+      { Icon: Languages, title: "Aistriúchán uathoibríoch go 35 teanga", sub: "Freastail ar chuairteoirí iasachta gan bhac teanga — déanann an t-aistriúchán uathoibríoch gach rud" },
+      { Icon: ClipboardList, title: "Orduithe díreach ón mbord", sub: "Simpligh an tseirbhís: glac orduithe ón mbord go tapa gan fhreastalaí" },
+      { Icon: WheatOff, title: "Ailléirginí agus aistí bia", sub: "Marcáil ailléirginí agus roghanna (vegan, spíosrach) le go roghnóidh aíonna go héasca agus go sábháilte" },
+    ],
+  },
+
+  reservations: {
+    heading: "Áirithint bord",
+    sub: {
+      link: "Áirithint chliste bord!",
+      rest: " Córas áirithinte uathoibríoch a choinníonn súil é féin ar bhoird shaora agus ar do sceideal.",
+    },
+    moreLabel: "Tuilleadh eolais",
+    mockupAlt: "Táibléad le féilire na n-áirithintí: boird de réir lae agus sliotán ama",
+    bullets: [
+      { Icon: CalendarCheck, title: "Léarscáil shoiléir áirithintí", sub: "Greille de réir lae agus boird — feictear na spásanna saora ar an toirt" },
+      { Icon: SlidersHorizontal, title: "Socruithe solúbtha", sub: "Socraigh uaireanta oscailte, fad na sliotán agus grianghraif na mbord, agus bailigh iarratais aíonna" },
+      { Icon: Users, title: "Smacht ar shreabhadh aíonna", sub: "Roghnaigh conas a láimhseáiltear áirithintí agus coinnigh lánsmacht ar shreabhadh na n-aíonna" },
+    ],
   },
 
   heroMicrocopy: "{count} bialann · 14 lá saor · Gan chárta",

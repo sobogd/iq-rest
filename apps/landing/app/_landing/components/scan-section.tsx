@@ -6,23 +6,15 @@ import type { LandingTexts } from "../types";
 interface ScanSectionProps {
   texts: LandingTexts["scan"];
   locale: string;
-  /** Paint the same accent gradient + hairline border as an accent Section,
-   *  so this banner participates in the page's alternating background. */
+  /** Kept for old call sites; the banner no longer paints its own chrome. */
   accent?: boolean;
 }
 
-export function ScanSection({ texts, accent }: ScanSectionProps) {
+// Chrome-less banner — the page's Band provides column and spacing.
+export function ScanSection({ texts }: ScanSectionProps) {
   const cta = usePrimaryCta(texts.cta);
   return (
-    <section
-      id="scan"
-      data-section="scan"
-      className={`scroll-mt-16 w-full px-4 sm:px-6 lg:px-10 xl:px-14 py-16 ${
-        accent
-          ? "bg-gradient-to-br from-primary/10 via-primary/[0.03] to-primary/[0.03] border-y border-border/40"
-          : ""
-      }`}
-    >
+    <div id="scan" className="scroll-mt-16 w-full">
       <div className="flex flex-col items-center text-center gap-6 max-w-4xl lg:max-w-5xl mx-auto">
         <div className="min-w-0">
           <h2 className="text-[2rem] sm:text-[2.5rem] lg:text-[3rem] xl:text-[3.25rem] font-medium tracking-tight leading-[1.05] mb-3">
@@ -45,6 +37,6 @@ export function ScanSection({ texts, accent }: ScanSectionProps) {
           </button>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

@@ -1,9 +1,7 @@
 import { LandingHeader } from "../components/header";
 import { LandingFooter } from "../components/footer";
-import { LandingHero } from "../components/landing-hero";
-import { Section } from "../components/section";
+import { FeatureHeroCard } from "../components/feature-hero-card";
 import { FeatureCard } from "../components/feature-card";
-import { HeroStats } from "../components/hero-stats";
 import { PageTracker } from "../components/page-tracker";
 import { ScanSection } from "../components/scan-section";
 import { Founder } from "../components/founder";
@@ -11,11 +9,11 @@ import { FinalCta } from "../components/final-cta";
 import { Faq } from "../components/faq";
 import { PricingCta } from "../components/pricing-cta";
 import type { PricingAddon } from "../components/from-price";
+import { NARROW, PAGE, Band } from "../components/shell";
 import { FeatureJsonLd } from "./feature-json-ld";
 import { getHelpBanner } from "../help/registry";
-import { HelpBannerSection } from "../help/help-banner-section";
+import { HelpBannerCta } from "../help/help-banner-cta";
 import { stablePrefix, featureKey } from "@/lib/track-keys";
-import { restaurantCount } from "@/lib/restaurant-count";
 import type { LandingTexts } from "../types";
 import type { FeatureContent } from "./types";
 
@@ -26,30 +24,20 @@ interface FeatureLandingTemplateProps {
   chrome: LandingTexts;
 }
 
-// Single render for the standard feature landing page. Used by every
-// feature page in every locale. Order: header → hero → scan → subFeatures
-// (alternating accent, alternating image side) → pricing → faq → founder →
-// finalCta → footer. Accent rhythm starts from `hero` (accent); `scan` is
-// plain, the first subFeature is accent, and so on; pricing, faq, founder,
-// finalCta and footer continue the alternation parity-correctly.
-export function FeatureLandingTemplate({
-  content,
-  chrome,
-}: FeatureLandingTemplateProps) {
-  const { locale, subFeatures, hero, scan, faq, trackPrefix, hideFeatureHeading, featureHeading } = content;
+// Single render for the standard feature landing page, in the same shell as
+// the v2 home: grouped compact header, one 1000px column, plain Bands with a
+// single gap between them. Order: hero card → subFeatures → scan → pricing →
+// faq → founder → finalCta → help banner → footer.
+export function FeatureLandingTemplate({ content, chrome }: FeatureLandingTemplateProps) {
+  const { locale, subFeatures, hero, scan, faq, trackPrefix, hideFeatureHeading, featureHeading } =
+    content;
   const featureIntro = featureHeading ?? chrome.featureHighlights;
   // Locale-stable prefix/page so every language version fires the same events.
   const prefix = stablePrefix(trackPrefix);
   const page = featureKey(trackPrefix);
   const helpBanner = getHelpBanner(locale);
-  // Live restaurant counter for the trust strip (build-time, like the home page).
-  const count = restaurantCount();
-  const countLabel = count.toLocaleString(locale);
-  // Board feature pages embed the real dashboard board (landscape tablet
-  // frame) instead of the phone menu preview, so the demo matches the
-  // feature. `trackPrefix` carries a locale-stable token on every locale's
-  // content (e.g. l_kds / l_en_kds, l_orders, l_bookings) — no per-locale
-  // edit needed. Menu/QR pages keep the phone preview.
+  // Board feature pages open the dashboard board demo (landscape tablet)
+  // instead of the phone menu preview, so the demo matches the feature.
   const demoVariant = prefix.includes("kds")
     ? "tablet"
     : prefix.includes("orders")
@@ -57,10 +45,8 @@ export function FeatureLandingTemplate({
       : prefix.includes("bookings")
         ? "reservations"
         : "phone";
-  // billing-features-constructor: which paid add-on this feature page sells —
-  // drives the "from {price}" line in the pricing CTA (menu base + add-on).
-  // Same locale-stable prefix tokens as demoVariant; menu/QR/domain-less pages
-  // fall back to the menu-only base price.
+  // Which paid add-on this feature page sells — drives the "from {price}" line
+  // in the pricing CTA (menu base + add-on).
   const pricingAddon: PricingAddon =
     prefix.includes("kds") || prefix.includes("orders")
       ? "ordersKds"
@@ -71,75 +57,60 @@ export function FeatureLandingTemplate({
           : null;
 
   return (
-    <main className="relative">
+    <main className={PAGE}>
       <PageTracker page={page} />
       <FeatureJsonLd content={content} />
       <LandingHeader
         texts={chrome.header}
         locale={locale}
         featureLinks={chrome.footer.featureLinks}
-        useLocalAnchors
-        revealOnScroll
-      />
-
-      <LandingHero
-        locale={locale}
-        headerTexts={chrome.header}
-        featureLinks={chrome.footer.featureLinks}
         helpHref={helpBanner?.href}
-        verticals={chrome.hero.verticals}
-        title={hero.headline}
-        sub={hero.sub}
-        primaryLabel={hero.cta}
-        primaryTrack="Hero CTA"
-        demoText={chrome.demoText}
-        demoVariant={demoVariant}
-        microcopy={chrome.microcopy}
-        imageSrc={hero.imageSrc}
-        imageAlt={hero.imageAlt}
-        heightClass=""
-        overlayClass="bg-black/25"
-        centered
+        useLocalAnchors
+        containerClass={NARROW}
+        compact
+        navLayout="grouped"
       />
 
-      {/* Trust strip — shared HeroStats, same four product numbers as the homepage. */}
-      <HeroStats trust={chrome.trust ?? []} countLabel={countLabel} dataSection="feature_trust" />
+      <Band section="hero">
+        <FeatureHeroCard
+          locale={locale}
+          verticals={chrome.hero.verticals}
+          title={hero.headline}
+          sub={hero.sub}
+          primaryLabel={hero.cta}
+          demoText={chrome.demoText}
+          demoVariant={demoVariant}
+          image={hero.imageSrc ? { src: hero.imageSrc, alt: hero.imageAlt ?? "" } : undefined}
+        />
+      </Band>
 
-      <div id="features">
-      <Section dataSection="subfeatures" noContainer className="!py-16">
+      <Band section="subfeatures" id="features">
         {featureIntro && !hideFeatureHeading ? (
-          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-            <h2 className="text-[2rem] sm:text-[2.5rem] lg:text-[3rem] font-medium tracking-tight leading-[1.05] mb-4">
+          <div className="max-w-3xl mb-6 sm:mb-8">
+            <h2 className="text-[2rem] sm:text-[2.5rem] font-medium tracking-tight leading-[1.05] mb-3">
               {featureIntro.heading}
             </h2>
-            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground/70 leading-snug">
+            <p className="text-sm sm:text-base text-muted-foreground/80 leading-relaxed">
               {featureIntro.sub}
             </p>
           </div>
         ) : null}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {subFeatures.map((row) => (
             <FeatureCard key={row.heading} row={row} />
           ))}
         </div>
-      </Section>
+      </Band>
 
-      <ScanSection texts={scan} locale={locale} accent />
-      </div>
+      <Band section="scan">
+        <ScanSection texts={scan} locale={locale} />
+      </Band>
 
-      {/* billing-features-constructor: the old fixed Basic/Pro plan cards are
-          gone — a compact CTA (with a geo-currency "from" price for this
-          page's feature) links to the locale's /pricing quiz instead. */}
-      <Section
-        id="pricing"
-        dataSection="pricing_cta"
-        noContainer
-        className="!py-16"
-      >
+      <Band section="pricing_cta" id="pricing">
         <PricingCta locale={locale} texts={chrome.pricingCta} addon={pricingAddon} />
-      </Section>
+      </Band>
 
-      <Section id="faq" dataSection="faq" noContainer accent className="!py-16">
+      <Band section="faq" id="faq">
         <Faq
           texts={{
             ...chrome.faq,
@@ -147,18 +118,13 @@ export function FeatureLandingTemplate({
             items: [...faq.items],
           }}
         />
-      </Section>
+      </Band>
 
-      <Section
-        id="founder"
-        dataSection="founder"
-        noContainer
-        className="!py-16"
-      >
+      <Band section="founder" id="founder">
         <Founder texts={chrome.founder} />
-      </Section>
+      </Band>
 
-      <Section dataSection="final_cta" noContainer accent className="!py-16">
+      <Band section="final_cta">
         <FinalCta
           texts={chrome.finalCta}
           ctaText={hero.cta}
@@ -167,24 +133,24 @@ export function FeatureLandingTemplate({
           locale={locale}
           demoVariant={demoVariant}
         />
-      </Section>
+      </Band>
 
-      {helpBanner ? <HelpBannerSection banner={helpBanner} source="feature" accent={false} /> : null}
+      {helpBanner ? (
+        <Band section="help_banner" id="help-banner">
+          <HelpBannerCta banner={helpBanner} source="feature" />
+        </Band>
+      ) : null}
 
-      <Section
-        as="footer"
-        dataSection="footer"
-        noContainer
-        accent
-        className="!py-6 sm:!py-8"
-      >
-        <LandingFooter
-          texts={chrome.footer}
-          headerTexts={chrome.header}
-          locale={locale}
-         
-        />
-      </Section>
+      <footer data-section="footer" className="w-full">
+        <div className={NARROW}>
+          <LandingFooter
+            texts={chrome.footer}
+            headerTexts={chrome.header}
+            locale={locale}
+            helpHref={helpBanner?.href}
+          />
+        </div>
+      </footer>
     </main>
   );
 }

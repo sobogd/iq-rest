@@ -9,15 +9,78 @@ import {
   QrCode,
   Smartphone,
   Palette,
+  Rocket,
+  MessagesSquare,
+  ClipboardList,
+  WheatOff,
+  SlidersHorizontal,
+  Users,
 } from "lucide-react";
-import type { CroCopy } from "@/app/_landing/templates/cro-home-template";
+import type { CroCopyV2 } from "@/app/_landing/templates/cro-home-template-v2";
 
-export const CRO: CroCopy = {
+export const CRO: CroCopyV2 = {
   hero: {
     verticals: ["Restoranid","Kohvikud","Baarid","Pitsabaarid"],
     title: "Sinu restoran digitaalseks",
     titleAccent: "5 minutiga",
     sub: "Digitaalne menüü, köögiekraan ja broneerimine 24/7 — kõik, mida su restoran vajab, valmis 5 minutiga.",
+  },
+
+  heroV2: {
+    verticals: [
+      { icon: "restaurant", label: "Restoranid" },
+      { icon: "cafe", label: "Kohvikud" },
+      { icon: "bar", label: "Baarid" },
+      { icon: "pizza", label: "Pitsakohad" },
+    ],
+    title: "Kõik, mida sinu",
+    titleAccent: "restoran vajab!",
+    sub: "Seadista protsessid 10 minutiga: käivita veebimenüü, optimeeri köögi tööd ja hoia laudade täituvusel silma peal.",
+    primaryLabel: "Alusta tasuta",
+    demoLabel: "Vaata demot",
+    mockups: {
+      kds: { src: "/landing/hero-card-kds.webp", alt: "Tahvelarvuti köögiekraaniga: tellimused laudade kaupa veergudes koos staatustega" },
+      reservations: { src: "/landing/hero-card-reservation.webp", alt: "Tahvelarvuti broneeringute kalendriga: kuuvaade ja kinnitust ootavad broneeringud" },
+      phone1: { src: "/landing/hero-card-menu.webp", alt: "Telefon restorani veebilehe avalehega: foto, broneeringud ja veebimenüü" },
+      phone2: { src: "/landing/hero-card-dish.webp", alt: "Telefon roa lehega: foto, hind ja allergeenimärgised" },
+    },
+  },
+
+  heroCards: [
+    { Icon: Rocket, title: "Töövalmis 10 minutiga", sub: "Ilma kalli riistvara ja pika seadistamiseta" },
+    { Icon: MessagesSquare, title: "Kiire tugi", sub: "Vastame vestluses mõne tunni jooksul" },
+    { Icon: Globe, title: "{count} koha valik", sub: "Meid usaldavad restoranid ja kohvikud enam kui 15 riigis" },
+    { Icon: Palette, title: "100% sinu bränd", sub: "Kohandame disaini ja liidese sinu koha stiili järgi" },
+  ],
+
+  menu: {
+    heading: "Veebileht ja digimenüü",
+    sub: {
+      link: "Rohkem kui QR-menüü!",
+      rest: " Saad täisväärtusliku veebilehe ainulaadse disaini, kontaktilehe ja lauabroneeringutega.",
+    },
+    moreLabel: "Loe lähemalt",
+    mockupAlt: "Kaks telefoni: restorani veebilehe avaleht ja roa leht",
+    bullets: [
+      { Icon: Languages, title: "Automaattõlge 35 keelde", sub: "Teeninda välismaiseid külalisi keelebarjäärita — automaattõlge teeb kõik ise" },
+      { Icon: ClipboardList, title: "Tellimused otse laualt", sub: "Lihtsusta teenindust: võta tellimusi laudadelt vastu kiiresti ja ilma teenindajata" },
+      { Icon: WheatOff, title: "Allergeenid ja dieedid", sub: "Märgi allergeenid ja eelistused (vegan, vürtsikas), et külalised valiksid lihtsalt ja turvaliselt" },
+    ],
+  },
+
+  reservations: {
+    heading: "Laudade broneerimine",
+    sub: {
+      link: "Nutikas lauabroneering!",
+      rest: " Automaatne broneerimissüsteem, mis jälgib ise vabu laudu ja sinu graafikut.",
+    },
+    moreLabel: "Loe lähemalt",
+    mockupAlt: "Tahvelarvuti broneeringute kalendriga: lauad päevade ja ajavahemike kaupa",
+    bullets: [
+      { Icon: CalendarCheck, title: "Selge broneeringute kaart", sub: "Ülevaatlik graafik päevade ja laudade kaupa — vabad kohad on kohe näha" },
+      { Icon: SlidersHorizontal, title: "Paindlikud seaded", sub: "Määra lahtiolekuajad, aegade pikkus ja laudade fotod ning kogu külaliste soove" },
+      { Icon: Users, title: "Külastajavoo juhtimine", sub: "Vali sobiv broneeringute režiim ja hoia külastajavoog täielikult kontrolli all" },
+    ],
   },
 
   heroMicrocopy: "{count} restorani · 14 päeva tasuta · Kaardita",

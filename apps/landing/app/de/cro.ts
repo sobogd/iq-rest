@@ -9,15 +9,78 @@ import {
   QrCode,
   Smartphone,
   Palette,
+  Rocket,
+  MessagesSquare,
+  ClipboardList,
+  WheatOff,
+  SlidersHorizontal,
+  Users,
 } from "lucide-react";
-import type { CroCopy } from "@/app/_landing/templates/cro-home-template";
+import type { CroCopyV2 } from "@/app/_landing/templates/cro-home-template-v2";
 
-export const CRO: CroCopy = {
+export const CRO: CroCopyV2 = {
   hero: {
     verticals: ["Restaurants","Cafés","Bars","Pizzerien"],
     title: "Dein Restaurant, digital",
     titleAccent: "in 5 Min.",
     sub: "Digitale Speisekarte, Küchen-Display und Buchungen rund um die Uhr — alles fürs Restaurant, in 5 Minuten startklar.",
+  },
+
+  heroV2: {
+    verticals: [
+      { icon: "restaurant", label: "Restaurants" },
+      { icon: "cafe", label: "Cafés" },
+      { icon: "bar", label: "Bars" },
+      { icon: "pizza", label: "Pizzerien" },
+    ],
+    title: "Alles, was Ihr",
+    titleAccent: "Restaurant braucht!",
+    sub: "Richten Sie Ihre Abläufe in 10 Minuten ein: Online-Speisekarte starten, Küche optimieren, Tischbelegung im Blick behalten.",
+    primaryLabel: "Kostenlos starten",
+    demoLabel: "Demo ansehen",
+    mockups: {
+      kds: { src: "/landing/hero-card-kds.webp", alt: "Tablet mit Küchendisplay: Bestellungen pro Tisch in Spalten mit Status" },
+      reservations: { src: "/landing/hero-card-reservation.webp", alt: "Tablet mit Reservierungskalender: Monatsansicht und unbestätigte Reservierungen" },
+      phone1: { src: "/landing/hero-card-menu.webp", alt: "Smartphone mit der Startseite einer Restaurant-Website: Foto, Reservierungen und Online-Speisekarte" },
+      phone2: { src: "/landing/hero-card-dish.webp", alt: "Smartphone mit einer Gerichtseite: Foto, Preis und Allergen-Kennzeichnung" },
+    },
+  },
+
+  heroCards: [
+    { Icon: Rocket, title: "Startklar in 10 Minuten", sub: "Ohne teure Hardware und lange Einrichtung" },
+    { Icon: MessagesSquare, title: "Schneller Support", sub: "Wir antworten im Chat innerhalb weniger Stunden" },
+    { Icon: Globe, title: "Die Wahl von {count} Betrieben", sub: "Restaurants und Cafés in über 15 Ländern vertrauen uns" },
+    { Icon: Palette, title: "100 % Ihre Marke", sub: "Design und Oberfläche passen wir an den Stil Ihres Lokals an" },
+  ],
+
+  menu: {
+    heading: "Website und digitale Speisekarte",
+    sub: {
+      link: "Mehr als eine QR-Speisekarte!",
+      rest: " Eine vollwertige Website mit eigenem Design, Kontaktseite und Tischreservierung.",
+    },
+    moreLabel: "Mehr erfahren",
+    mockupAlt: "Zwei Smartphones: Startseite einer Restaurant-Website und eine Gerichtseite",
+    bullets: [
+      { Icon: Languages, title: "Automatische Übersetzung in 35 Sprachen", sub: "Bedienen Sie internationale Gäste ohne Sprachbarriere — die Übersetzung läuft automatisch" },
+      { Icon: ClipboardList, title: "Bestellungen direkt vom Tisch", sub: "Entlasten Sie den Service: Bestellungen kommen direkt vom Tisch, schnell und ohne Kellner" },
+      { Icon: WheatOff, title: "Allergene und Diäten", sub: "Kennzeichnen Sie Allergene und Vorlieben (vegan, scharf), damit Gäste sicher und einfach wählen" },
+    ],
+  },
+
+  reservations: {
+    heading: "Tischreservierung",
+    sub: {
+      link: "Intelligente Tischreservierung!",
+      rest: " Ein automatisches Reservierungssystem, das freie Tische und Ihre Zeiten selbst im Blick behält.",
+    },
+    moreLabel: "Mehr erfahren",
+    mockupAlt: "Tablet mit Reservierungskalender: Tische nach Tag und Zeitfenster",
+    bullets: [
+      { Icon: CalendarCheck, title: "Übersichtlicher Belegungsplan", sub: "Ein Raster nach Tagen und Tischen — freie Plätze auf einen Blick" },
+      { Icon: SlidersHorizontal, title: "Flexible Einstellungen", sub: "Öffnungszeiten, Slot-Dauer und Tischfotos festlegen, Gästewünsche erfassen" },
+      { Icon: Users, title: "Gästefluss steuern", sub: "Wählen Sie den passenden Reservierungsmodus und behalten Sie den Gästefluss im Griff" },
+    ],
   },
 
   heroMicrocopy: "{count} Restaurants · 14 Tage gratis · Keine Karte",

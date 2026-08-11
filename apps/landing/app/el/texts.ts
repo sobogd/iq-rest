@@ -35,6 +35,8 @@ export const TEXTS: LandingTexts = {
     signIn: "Σύνδεση",
     viewFeatures: "Δείτε τις λειτουργίες",
     cta: "Δοκιμάστε δωρεάν",
+    navProducts: "Δυνατότητες",
+    navGuide: "Οδηγός",
   },
 
   hero: {
