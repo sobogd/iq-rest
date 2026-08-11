@@ -163,7 +163,7 @@ export function LandingHeader({
             {minimal ? (
               <button
                 type="button"
-                onClick={() => cta.onClick("l_header_cta_click")}
+                onClick={() => cta.onClick("Header CTA")}
                 className="inline-flex items-center justify-center h-9 px-4 text-sm font-semibold text-white bg-gradient-to-br from-[hsl(9,100%,58%)] to-[hsl(35,95%,55%)] rounded-lg hover:opacity-90 active:scale-[0.99] transition-all whitespace-nowrap"
               >
                 {cta.label}

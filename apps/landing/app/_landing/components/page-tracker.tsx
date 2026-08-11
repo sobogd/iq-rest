@@ -55,7 +55,15 @@ function collectCtxAndCleanUrl(): TrackCtx | undefined {
   if (ref) ctx.ref = ref;
 
   if ([...sp.keys()].length > 0) {
-    window.history.replaceState({}, "", window.location.pathname + window.location.hash);
+    // Preserve the existing state object. Passing a fresh {} overwrites the App
+    // Router's internal history state, and Back onto this entry then finds
+    // nothing to restore and falls back to a full document reload — on the ad
+    // entry page, which is the one entry that must stay cheap.
+    window.history.replaceState(
+      window.history.state,
+      "",
+      window.location.pathname + window.location.hash,
+    );
   }
   return Object.keys(ctx).length > 0 ? ctx : undefined;
 }
@@ -149,6 +157,11 @@ function createScrollTracker() {
       clearTimeout(timer);
       timer = null;
     }
+    // A modal locks body scroll, which collapses the scrollable height to about
+    // one viewport while scrollY keeps its old value — the bottom-of-page rule
+    // below would then read as "reached the footer" from wherever the visitor
+    // happened to be. Nothing they do inside a modal is a scroll gesture.
+    if (document.body.style.overflow === "hidden") return;
     const now = currentSection();
     const y = window.scrollY;
     if (!now) return;
@@ -214,8 +227,8 @@ export function PageTracker({ page }: PageTrackerProps) {
 
     const scroll = createScrollTracker();
     scroll.begin();
-    // rAF-coalesced: a scroll fires dozens of events per second and each
-    // measurement walks the sections and reads layout.
+    // rAF-coalesced: a scroll fires dozens of events per second, and there is
+    // no point restarting the settle countdown more than once per frame.
     let frame = 0;
     const onScroll = () => {
       if (frame) return;
@@ -234,11 +247,24 @@ export function PageTracker({ page }: PageTrackerProps) {
     };
     window.addEventListener("pagehide", scroll.finish);
     document.addEventListener("visibilitychange", onHide);
+    // Back-navigation on Safari (and increasingly elsewhere) restores the page
+    // from bfcache: the document is reused, so this effect never re-runs and
+    // the return visit would otherwise leave no trace at all. The attribution
+    // ctx is deliberately not re-sent — the visit already carries it.
+    const onShow = (event: PageTransitionEvent) => {
+      if (!event.persisted) return;
+      analytics.setPage(toPageLabel(page));
+      setTrackLocale(document.documentElement.lang || "");
+      analytics.track("Show", "Pageview");
+      scroll.begin();
+    };
+    window.addEventListener("pageshow", onShow);
 
     return () => {
       if (frame) cancelAnimationFrame(frame);
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("pagehide", scroll.finish);
+      window.removeEventListener("pageshow", onShow);
       document.removeEventListener("visibilitychange", onHide);
       scroll.finish();
     };

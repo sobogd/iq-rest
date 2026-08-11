@@ -120,24 +120,38 @@ export class VisitService {
     return merged;
   }
 
+  /** updateMany, not update: a concurrent batch may have folded this row away
+   *  between the read and the write, and `update` would throw P2025 and 500 a
+   *  request whose only job was to bump a timestamp. */
   private async touch(id: string, now: Date): Promise<void> {
-    await this.prisma.sessionNew.update({ where: { id }, data: { lastAt: now } });
+    await this.prisma.sessionNew.updateMany({ where: { id }, data: { lastAt: now } });
   }
 
   /** First-write-wins enrichment: a later event in the same visit may be the
    *  first to carry a click id / from / ref. Never overwrites a set value. */
   async enrich(session: SessionNew, attr: VisitAttribution, now: Date): Promise<void> {
-    const data: Prisma.SessionNewUpdateInput = {};
+    // Each field is written under a "still empty" condition instead of being
+    // decided from the `session` object, which was read before any concurrent
+    // batch got its write in. Otherwise two batches racing to be first with a
+    // click id both see null and the loser overwrites the winner.
     if (attr.aid && !session.aid) {
-      data.aid = attr.aid.aid;
-      data.atype = attr.aid.atype;
-      data.aidField = attr.aid.aidField;
-      data.clickAt = now;
+      await this.prisma.sessionNew.updateMany({
+        where: { id: session.id, aid: null },
+        data: { aid: attr.aid.aid, atype: attr.aid.atype, aidField: attr.aid.aidField, clickAt: now },
+      });
     }
-    if (attr.from && !session.from) data.from = attr.from;
-    if (attr.ref && !session.ref) data.ref = attr.ref;
-    if (Object.keys(data).length === 0) return;
-    await this.prisma.sessionNew.update({ where: { id: session.id }, data });
+    if (attr.from && !session.from) {
+      await this.prisma.sessionNew.updateMany({
+        where: { id: session.id, from: null },
+        data: { from: attr.from },
+      });
+    }
+    if (attr.ref && !session.ref) {
+      await this.prisma.sessionNew.updateMany({
+        where: { id: session.id, ref: null },
+        data: { ref: attr.ref },
+      });
+    }
   }
 }
 

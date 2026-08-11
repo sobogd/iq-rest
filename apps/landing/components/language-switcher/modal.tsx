@@ -42,6 +42,7 @@ export function LanguageSwitcherModal({ open, onClose, currentLocale, title }: L
                   key={code}
                   href={swapLocale(pathname, code)}
                   prefetch={false}
+                  trackName={`Language pick ${code}`}
                   onClick={() => rememberLocale(code)}
                   className={
                     "flex items-center gap-2 px-3 py-2 rounded-md text-sm transition-colors " +

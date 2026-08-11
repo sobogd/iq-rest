@@ -36,18 +36,39 @@ export function clientIp(req: Request): string {
  * anyway; the entropy lost here is paid back by the locale and geo in
  * hashEntropy().
  */
+const IPV4 = /^\d{1,3}(?:\.\d{1,3}){3}$/;
+const IPV4_WITH_PORT = /^\d{1,3}(?:\.\d{1,3}){3}:\d{1,5}$/;
+
+/** "0db8" and "db8" are the same group; without this they would hash as two
+ *  different networks. */
+function normaliseGroup(group: string): string {
+  const trimmed = group.replace(/^0+/, "");
+  return trimmed === "" ? "0" : trimmed.toLowerCase();
+}
+
 export function clientNetwork(req: Request): string {
-  const ip = clientIp(req);
-  if (!ip) return "";
+  const raw = clientIp(req);
+  if (!raw) return "";
+  // "1.2.3.4:5678" — an x-forwarded-for hop may carry a port. Left in, it would
+  // make every request its own network and therefore its own visit.
+  const ip = IPV4_WITH_PORT.test(raw) ? raw.slice(0, raw.lastIndexOf(":")) : raw;
   if (ip.includes(":")) {
     const bare = ip.split("%")[0]; // drop any zone id
+    // IPv4-mapped IPv6 ("::ffff:203.0.113.9"), which is what req.ip returns on
+    // a dual-stack listener whenever the Cloudflare header is absent. Treating
+    // it as IPv6 would keep only the leading zero groups, collapsing every such
+    // visitor onto the single prefix "0:0:0:0" — one shared bucket for all of
+    // them. It is an IPv4 address, so it gets the IPv4 rule.
+    const mapped = bare.split(":").pop() ?? "";
+    if (IPV4.test(mapped)) return mapped.split(".").slice(0, 3).join(".");
+
     const [head, tail] = bare.includes("::") ? bare.split("::", 2) : [bare, null];
-    const left = head ? head.split(":") : [];
+    const left = (head ? head.split(":") : []).map(normaliseGroup);
     if (tail === null) return left.slice(0, 4).join(":");
     // "::" stands for a run of zero groups. Expanding it matters: leaving an
     // abbreviated address alone would keep the volatile low bits in the hash
     // for exactly the addresses that abbreviate.
-    const right = tail ? tail.split(":") : [];
+    const right = (tail ? tail.split(":") : []).map(normaliseGroup);
     const zeros = Math.max(0, 8 - left.length - right.length);
     return [...left, ...Array(zeros).fill("0"), ...right].slice(0, 4).join(":");
   }

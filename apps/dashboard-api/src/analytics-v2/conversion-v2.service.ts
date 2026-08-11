@@ -27,6 +27,11 @@ const SWEEP_MAX_SESSIONS = 500;
 /** Marks a visit as one where a registration actually happened. Written by
  *  handleRegistration; the sweep refuses to report a conversion without it. */
 const REGISTER_ACTION = "Register";
+/** How far back a registration may reach for the click that produced it. Long
+ *  enough to cover "clicked the ad, went to fetch the emailed code, came back",
+ *  short enough that it cannot pick up an unrelated click from hours earlier on
+ *  a shared network. */
+const CLICK_LOOKBACK_MS = 2 * 3600_000;
 
 function hashField(value: string): string {
   return createHash("sha256").update(value.trim().toLowerCase()).digest("hex");
@@ -87,6 +92,7 @@ export class ConversionV2Service {
     // created from this request's own facts rather than an empty placeholder.
     const session = await this.visits.resolveVisit(hash, userId, facts.seed, now);
 
+
     const link = await this.prisma.restaurantUser.findFirst({
       where: { userId },
       orderBy: { addedAt: "asc" },
@@ -102,8 +108,55 @@ export class ConversionV2Service {
       },
     });
 
-    if (!session.aid || isDemoEmail(email)) return;
-    await this.sendForSession(session, email, userId);
+    const user = await this.prisma.user.findUnique({ where: { id: userId }, select: { isDemo: true } });
+    // The sweep already refuses demo accounts on both counts; the instant path
+    // used to check only the address, so a DB-flagged demo with a real-looking
+    // address still reported a conversion.
+    if (user?.isDemo || isDemoEmail(email)) return;
+
+    const attributed = session.aid ? session : await this.borrowClick(session, hash, now);
+    if (!attributed) return;
+    await this.sendForSession(attributed, email, userId);
+  }
+
+  /**
+   * A registration can land on a visit that carries no click id: visits are cut
+   * after 30 idle minutes, and someone who clicks an ad, waits for the OTP mail
+   * and signs up an hour later registers on a second visit. The click sits on
+   * the first one, so without this the conversion is simply never reported —
+   * and the sweep cannot rescue it either, because it needs the click id and
+   * the Register event on the same row.
+   *
+   * The lookup is by device hash, which only exists within one salt-day, so
+   * this cannot reach across days — the same boundary the rest of the pipeline
+   * respects.
+   */
+  private async borrowClick(session: SessionNew, hash: string, now: Date): Promise<SessionNew | null> {
+    const earlier = await this.prisma.sessionNew.findFirst({
+      where: {
+        hash,
+        aid: { not: null },
+        id: { not: session.id },
+        clickAt: { gte: new Date(now.getTime() - CLICK_LOOKBACK_MS) },
+      },
+      orderBy: { clickAt: "desc" },
+    });
+    if (!earlier?.aid) return null;
+
+    // Stamp it onto the registration's own visit so the admin shows the source
+    // on the row that has the Register event, and so the hourly sweep can pick
+    // this up if the instant send fails.
+    const updated = await this.prisma.sessionNew.update({
+      where: { id: session.id },
+      data: {
+        aid: earlier.aid,
+        atype: earlier.atype,
+        aidField: earlier.aidField,
+        clickAt: earlier.clickAt,
+      },
+    });
+    this.logger.log(`visit ${session.id} inherited the click from ${earlier.id}`);
+    return updated;
   }
 
   /** Send the registration conversion for a session to its ad network, unless
@@ -167,10 +220,21 @@ export class ConversionV2Service {
     } catch (e) {
       response = { error: String(e) };
     }
-    await this.prisma.conversionSendNew.create({
-      data: { sessionId: session.id, network: "meta", status, response: response as Prisma.InputJsonValue },
-    });
+    await this.journal(session.id, "meta", status, response);
     if (status === "success") this.logger.log(`meta ${EVENT_NAME} sent for session ${session.id}`);
+  }
+
+  /** Record the attempt. Swallows its own failure on purpose — but loudly: the
+   *  error counter that eventually gives up on a session lives in this table,
+   *  so a silently missing row would mean retrying that session forever. */
+  private async journal(sessionId: string, network: string, status: string, response: unknown): Promise<void> {
+    try {
+      await this.prisma.conversionSendNew.create({
+        data: { sessionId, network, status, response: response as Prisma.InputJsonValue },
+      });
+    } catch (e) {
+      this.logger.error(`could not journal the ${network} send for session ${sessionId}: ${String(e)}`);
+    }
   }
 
   /** Format a timestamp for Google's conversion_date_time:
@@ -251,9 +315,7 @@ export class ConversionV2Service {
     } catch (e) {
       response = { error: String(e) };
     }
-    await this.prisma.conversionSendNew.create({
-      data: { sessionId: session.id, network: "google", status, response: response as Prisma.InputJsonValue },
-    });
+    await this.journal(session.id, "google", status, response);
     if (status === "success") this.logger.log(`google ${EVENT_NAME} sent for session ${session.id}`);
   }
 
@@ -274,28 +336,34 @@ export class ConversionV2Service {
     this.sweepRunning = true;
     try {
       const since = new Date(Date.now() - SWEEP_WINDOW_DAYS * 24 * 3600_000);
+      // Sessions already reported. This has to constrain the candidate query
+      // itself: filtering after `take` meant that once the window held more
+      // than SWEEP_MAX_SESSIONS registrations, every sweep spent its whole
+      // budget re-reading the oldest (already successful) ones and a recent
+      // failure was never retried again.
+      const settledIds = (
+        await this.prisma.conversionSendNew.findMany({
+          where: { status: "success", createdAt: { gte: since } },
+          select: { sessionId: true },
+          distinct: ["sessionId"],
+        })
+      ).map((r) => r.sessionId);
+
       const candidates = await this.prisma.sessionNew.findMany({
         where: {
           userId: { not: null },
           aid: { not: null },
           firstAt: { gte: since },
           events: { some: { action: REGISTER_ACTION } },
+          ...(settledIds.length ? { id: { notIn: settledIds } } : {}),
         },
-        orderBy: { firstAt: "asc" },
+        // Newest first: a fresh registration is the one whose click id is still
+        // inside both networks' upload window.
+        orderBy: { firstAt: "desc" },
         take: SWEEP_MAX_SESSIONS,
       });
       if (candidates.length === 0) return;
 
-      // Two batched lookups instead of two queries per candidate.
-      const ids = candidates.map((s) => s.id);
-      const settled = new Set(
-        (
-          await this.prisma.conversionSendNew.findMany({
-            where: { sessionId: { in: ids }, status: "success" },
-            select: { sessionId: true },
-          })
-        ).map((r) => r.sessionId),
-      );
       const userIds = [...new Set(candidates.map((s) => s.userId!))];
       const users = new Map(
         (
@@ -307,7 +375,6 @@ export class ConversionV2Service {
       );
 
       for (const session of candidates) {
-        if (settled.has(session.id)) continue;
         const user = users.get(session.userId!);
         if (!user || user.isDemo || isDemoEmail(user.email)) continue;
         await this.sendForSession(session, user.email, session.userId);

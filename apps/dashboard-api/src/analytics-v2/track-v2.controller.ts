@@ -97,6 +97,14 @@ function resolveAid(ctx: TrackCtx): Aid | null {
   return null;
 }
 
+/** Buffered events arrive together; spacing the fallbacks 1ms apart keeps them
+ *  in the order the visitor produced them. */
+function clampToVisit(at: Date | null, firstAt: Date, now: Date, index: number): Date {
+  const fallback = new Date(now.getTime() + index);
+  if (!at) return fallback;
+  return at < firstAt ? firstAt : at;
+}
+
 function parseTs(raw: unknown, now: Date): Date | null {
   if (typeof raw !== "number" || !Number.isFinite(raw)) return null;
   const delta = now.getTime() - raw;
@@ -205,8 +213,7 @@ export class TrackV2Controller {
 
     await this.prisma.eventNew.createMany({
       // Clients stamp each event with the moment it happened; a batch can sit
-      // in the buffer for seconds (longer if it had to be retried). Events with
-      // no usable stamp fall back to arrival order, 1ms apart.
+      // in the buffer for seconds (longer if it had to be retried).
       data: events.map((e, i) => ({
         sessionId: session.id,
         page: e.page,
@@ -214,7 +221,12 @@ export class TrackV2Controller {
         name: e.name,
         restaurantId: who.restaurantId,
         locale: e.locale,
-        at: e.at ?? new Date(now.getTime() + i),
+        // Client time, but never before the visit it lands on. A buffer that
+        // survived a long offline stretch arrives with timestamps from a visit
+        // that has since been closed by the 30-minute cut, and an event dated
+        // before its own session's firstAt corrupts every "first page" and
+        // first-touch-venue aggregate the admin computes by ordering on `at`.
+        at: clampToVisit(e.at, session.firstAt, now, i),
       })),
     });
   }

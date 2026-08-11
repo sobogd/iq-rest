@@ -87,6 +87,12 @@ const MAX_QUEUE = 100;
 // Only transient failures are retried, and only a few times: a visitor on a
 // flaky connection should not accumulate an unbounded retry tail.
 const RETRY_DELAYS_MS = [2000, 5000, 15000];
+// After the ladder is exhausted, keep a slow heartbeat rather than parking the
+// buffer with nothing scheduled to send it. A visitor who then simply reads the
+// page for two minutes would otherwise have their events sit until the queue
+// cap started discarding them — oldest first, i.e. the pageview carrying the ad
+// attribution goes before anything else.
+const RETRY_PARK_MS = 60_000;
 
 interface QueuedEvent {
   page: string;
@@ -151,14 +157,9 @@ function scheduleFlush(): void {
 
 function onFailure(batch: Batch): void {
   requeue(batch);
-  if (retryAttempt >= RETRY_DELAYS_MS.length) {
-    // Backoff ladder exhausted. Keep the events buffered anyway — the next
-    // track() or the unload beacon still gets a shot at delivering them.
-    retryAttempt = 0;
-    return;
-  }
-  const delay = RETRY_DELAYS_MS[retryAttempt];
-  retryAttempt += 1;
+  const exhausted = retryAttempt >= RETRY_DELAYS_MS.length;
+  const delay = exhausted ? RETRY_PARK_MS : RETRY_DELAYS_MS[retryAttempt];
+  retryAttempt = exhausted ? 0 : retryAttempt + 1;
   retryTimer = setTimeout(() => {
     retryTimer = null;
     send();
@@ -215,6 +216,9 @@ function beacon(body: string): boolean {
 function flushOnUnload(): void {
   flushTimer = clearTimer(flushTimer);
   retryTimer = clearTimer(retryTimer);
+  // The ladder belongs to the failure it was climbing; leaving it part-way
+  // means the next transient error starts near the top and gives up early.
+  retryAttempt = 0;
   let ctx = pendingCtx;
   pendingCtx = undefined;
   while (queue.length > 0) {
