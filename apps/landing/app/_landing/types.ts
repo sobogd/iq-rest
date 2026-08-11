@@ -1,22 +1,3 @@
-import type { LucideIcon } from "lucide-react";
-
-export type FeatureItem = {
-  Icon: LucideIcon;
-  title: string;
-  desc: string;
-  tag?: string;
-  /** Optional deep-link target for this feature card. When set, the card
-   *  title becomes a clickable anchor pointing at the corresponding
-   *  feature landing page. */
-  href?: string;
-};
-
-export type StepItem = {
-  n: string;
-  t: string;
-  d: string;
-};
-
 export type FaqItem = {
   q: string;
   a: string;
@@ -198,29 +179,12 @@ export type LandingTexts = {
     headlineSuffix?: string;
   };
 
-  features: {
-    heading: string;
-    headingAccent: string;
-    sub: string;
-    items: FeatureItem[];
-  };
-
   founder: {
     eyebrow: string;
     quoteStart: string;
     quoteAccent: string;
     sign: string;
     photoAlt: string;
-  };
-
-  how: {
-    heading: string;
-    /** Optional accent fragment shown after `heading` with the gradient
-     *  treatment (same as final-cta / pricing / faq). Locales that don't
-     *  set it render a plain single-colour heading. */
-    headingAccent?: string;
-    sub: string;
-    steps: StepItem[];
   };
 
   pricing: {

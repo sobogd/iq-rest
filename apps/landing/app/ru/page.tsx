@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
-import { CroHomeTemplateV2 } from "@/app/_landing/templates/cro-home-template-v2";
-import { TEXTS } from "./texts";
-import { CRO } from "./cro";
+import { CroHomeTemplateV2, type CroCopyV2 } from "@/app/_landing/templates/cro-home-template-v2";
+import type { LandingTexts } from "@/app/_landing/types";
+import TEXTS_JSON from "./texts.json";
+import CRO_JSON from "./cro.json";
 import { restaurantCount } from "@/lib/restaurant-count";
 import { homeAlternates } from "@/lib/hreflang";
 import { SCHEMA_PRICE_MENU_EUR } from "@/lib/pricing";
 import { SCHEMA_DATE_MODIFIED } from "@/lib/page-meta";
+
+const TEXTS = TEXTS_JSON as unknown as LandingTexts;
+const CRO = CRO_JSON as unknown as CroCopyV2;
 
 export const dynamic = "force-static";
 export const revalidate = false;

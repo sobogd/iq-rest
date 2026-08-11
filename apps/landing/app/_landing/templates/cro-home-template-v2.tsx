@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight, Cpu, MonitorSmartphone, type LucideIcon } from "lucide-react";
+import { ArrowRight, Cpu, MonitorSmartphone } from "lucide-react";
 import { LinkForward } from "../components/link-forward";
 import { DemoButton, type DemoVariant } from "../components/demo-button";
 import { PageTracker } from "../components/page-tracker";
@@ -17,16 +17,14 @@ import { getHelpBanner } from "../help/registry";
 import { HelpBannerCta } from "../help/help-banner-cta";
 import type { LandingTexts } from "../types";
 import { featureLabel } from "@/lib/track-keys";
-import type { CroCopy } from "./cro-home-template";
+import { getIcon, type IconKey } from "../lib/icons";
 
-// V2 home template — same page as `CroHomeTemplate` below the fold, but the
-// full-bleed photo hero + trust strip are replaced by the light two-column
-// hero with the device slider and a four-card benefit strip (emoji cards).
-// Locales migrate one by one by switching their page.tsx to this template
-// and adding the `v2` fields to their CRO copy.
+// V2 home template — the light two-column hero with the device slider and a
+// four-card benefit strip (emoji cards), followed by the feature/benefit/
+// activity bands below the fold.
 
 export type CroCardV2 = {
-  Icon: LucideIcon;
+  icon: IconKey;
   /** Tailwind colour class for the icon. */
   iconClass?: string;
   title: string;
@@ -42,7 +40,7 @@ export type CroSpotlight = {
   sub: { link: string; rest: string };
   /** Label of the outline button next to the demo — same target as the link. */
   moreLabel: string;
-  bullets: { Icon: LucideIcon; title: string; sub: string }[];
+  bullets: { icon: IconKey; title: string; sub: string }[];
 };
 
 export type CroMenuSection = CroSpotlight & {
@@ -54,12 +52,45 @@ export type CroReservationsSection = CroSpotlight & {
   mockupAlt: string;
 };
 
-export type CroCopyV2 = CroCopy & {
+export type CroBenefit = {
+  icon: IconKey;
+  tag: string;
+  title: string;
+  bullets: string[];
+  image: string;
+  imageAlt: string;
+};
+
+export type CroActivityGroup = { icon: IconKey; tag: string; bullets: string[] };
+
+export type CroCopyV2 = {
   heroV2: HeroV2Copy;
   /** Four benefit cards right under the hero (launch / support / trust / brand). */
   heroCards: CroCardV2[];
   menu: CroMenuSection;
   reservations: CroReservationsSection;
+  bundle: { heading: string; headingAccent: string; sub: string };
+  benefits: CroBenefit[];
+  /** Per-benefit "learn more" link label. */
+  seeDetails: string;
+  /** Hardware + run-anywhere reassurance band, shown right after the hero
+   *  cards — kills the "do I need to buy hardware?" objection early.
+   *  Optional; locales without it skip the band. */
+  platform?: {
+    hardwareTitle: string;
+    hardwareSub: string;
+    anywhereTitle: string;
+    anywhereSub: string;
+  };
+  /** Three activity groups — guest, kitchen, management — each a column of
+   *  one-line value bullets, framing the product as one system that covers
+   *  the whole restaurant. Optional; locales without it skip the band. */
+  activities?: {
+    heading: string;
+    headingAccent: string;
+    sub: string;
+    groups: CroActivityGroup[];
+  };
 };
 
 // The demo is the primary, brand-gradient button; "learn more" the quiet
@@ -114,15 +145,18 @@ function FeatureCard({
         </div>
 
         <ul className="flex flex-col gap-5">
-          {copy.bullets.map((b) => (
-            <li key={b.title} className="flex items-start gap-3">
-              <b.Icon className="h-7 w-7 shrink-0 text-primary" strokeWidth={1.75} />
-              <div>
-                <h3 className="font-semibold text-base">{b.title}</h3>
-                <p className="text-sm text-muted-foreground/80 leading-relaxed">{b.sub}</p>
-              </div>
-            </li>
-          ))}
+          {copy.bullets.map((b) => {
+            const Icon = getIcon(b.icon);
+            return (
+              <li key={b.title} className="flex items-start gap-3">
+                <Icon className="h-7 w-7 shrink-0 text-primary" strokeWidth={1.75} />
+                <div>
+                  <h3 className="font-semibold text-base">{b.title}</h3>
+                  <p className="text-sm text-muted-foreground/80 leading-relaxed">{b.sub}</p>
+                </div>
+              </li>
+            );
+          })}
         </ul>
 
         {/* Header pairing repeated: a button for the demo, a bare link for the
@@ -191,18 +225,21 @@ export function CroHomeTemplateV2({
         {/* Cards with an outline only — no fill, so the band stays as light as
             the rest of the page. */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {cro.heroCards.map((c) => (
-            <div
-              key={c.title}
-              className="flex flex-col gap-1.5 rounded-2xl border border-border p-5 sm:p-6"
-            >
-              <c.Icon className={`h-7 w-7 mb-1 ${c.iconClass ?? "text-primary"}`} strokeWidth={1.75} />
-              {/* Not a heading: the band sits between the h1 and the first h2,
-                  so an h3 here would skip a level in the outline. */}
-              <p className="font-semibold text-base">{withCount(c.title)}</p>
-              <p className="text-sm text-muted-foreground/80 leading-relaxed">{withCount(c.sub)}</p>
-            </div>
-          ))}
+          {cro.heroCards.map((c) => {
+            const Icon = getIcon(c.icon);
+            return (
+              <div
+                key={c.title}
+                className="flex flex-col gap-1.5 rounded-2xl border border-border p-5 sm:p-6"
+              >
+                <Icon className={`h-7 w-7 mb-1 ${c.iconClass ?? "text-primary"}`} strokeWidth={1.75} />
+                {/* Not a heading: the band sits between the h1 and the first h2,
+                    so an h3 here would skip a level in the outline. */}
+                <p className="font-semibold text-base">{withCount(c.title)}</p>
+                <p className="text-sm text-muted-foreground/80 leading-relaxed">{withCount(c.sub)}</p>
+              </div>
+            );
+          })}
         </div>
       </Band>
 
@@ -313,12 +350,13 @@ export function CroHomeTemplateV2({
       {cro.benefits.map((b, i) => {
           const reverse = i % 2 === 1;
           const href = featureLinks[FEATURE_LINK_MAP[i]]?.href ?? "#";
+          const Icon = getIcon(b.icon);
           return (
             <Band key={b.tag} section={`benefit_${benefitKey(i)}`}>
               <div className="grid grid-cols-1 gap-8 lg:gap-16 lg:grid-cols-2 lg:items-center">
                 <div className={`flex flex-col items-center text-center ${reverse ? "lg:order-2 lg:items-start lg:text-start" : "lg:items-end lg:text-end"}`}>
                   <div className="inline-flex items-center gap-2 text-primary mb-4">
-                    <b.Icon className="h-5 w-5" strokeWidth={2} />
+                    <Icon className="h-5 w-5" strokeWidth={2} />
                     <span className="text-[11px] uppercase tracking-widest font-medium">{b.tag}</span>
                   </div>
                   <h3 className="text-[1.6rem] sm:text-3xl lg:text-[2.25rem] font-medium tracking-tight leading-[1.1] mb-5">
@@ -374,10 +412,12 @@ export function CroHomeTemplateV2({
               <p className="text-base sm:text-lg text-muted-foreground/70 leading-snug max-w-2xl mx-auto">{cro.activities.sub}</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
-              {cro.activities.groups.map((g) => (
+              {cro.activities.groups.map((g) => {
+                const Icon = getIcon(g.icon);
+                return (
                 <div key={g.tag} className="flex flex-col rounded-xl border border-border/40 p-6 sm:p-8">
                   <div className="inline-flex items-center gap-2 text-primary mb-5">
-                    <g.Icon className="h-5 w-5" strokeWidth={2} />
+                    <Icon className="h-5 w-5" strokeWidth={2} />
                     <span className="text-[11px] uppercase tracking-widest font-medium">{g.tag}</span>
                   </div>
                   <ul className="flex flex-col gap-3">
@@ -389,7 +429,8 @@ export function CroHomeTemplateV2({
                     ))}
                   </ul>
                 </div>
-              ))}
+                );
+              })}
             </div>
             <div className="mt-10 sm:mt-12 flex justify-center">
               <CtaButton text={texts.homeCtaText} microcopy={texts.microcopy} locale={locale} align="center" trackName="Mid page CTA" />

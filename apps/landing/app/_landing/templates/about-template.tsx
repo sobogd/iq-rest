@@ -1,5 +1,4 @@
 import Image from "next/image";
-import type { LucideIcon } from "lucide-react";
 import { LandingHeader } from "../components/header";
 import { LandingFooter } from "../components/footer";
 import { PageTracker } from "../components/page-tracker";
@@ -7,6 +6,7 @@ import { LinkForward } from "../components/link-forward";
 import { getHelpBanner } from "../help/registry";
 import { NARROW, PAGE } from "../components/shell";
 import type { LandingTexts } from "../types";
+import { getIcon, type IconKey } from "../lib/icons";
 
 // About page. Same construction as the v2 home: one 1000px column, plain
 // sections separated by a single gap, everything inside outline cards.
@@ -16,7 +16,7 @@ import type { LandingTexts } from "../types";
 const WHATSAPP_NUMBER = "998948663743";
 
 export type AboutContact = {
-  Icon: LucideIcon;
+  icon: IconKey;
   title: string;
   /** Displayed value; `href` turns it into a link, `wa` builds the WhatsApp one. */
   value: string;
@@ -156,12 +156,13 @@ export function AboutTemplate({
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {copy.contacts.map((c) => {
               const href = c.wa ? wa : c.href;
+              const Icon = getIcon(c.icon);
               return (
                 <div
                   key={c.title}
                   className="flex flex-col gap-2 rounded-2xl border border-border p-5 sm:p-6"
                 >
-                  <c.Icon className="h-7 w-7 mb-1 text-primary" strokeWidth={1.75} />
+                  <Icon className="h-7 w-7 mb-1 text-primary" strokeWidth={1.75} />
                   <p className="font-semibold text-base">{c.title}</p>
                   {href ? (
                     <LinkForward

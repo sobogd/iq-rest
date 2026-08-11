@@ -5,11 +5,14 @@ import { LandingFooter } from "@/app/_landing/components/footer";
 import { LandingI18nWrap } from "@/app/_landing/components/landing-i18n-wrap";
 import { PageTracker } from "@/app/_landing/components/page-tracker";
 import { NARROW, PAGE } from "@/app/_landing/components/shell";
-import { TEXTS } from "./(en)/texts";
+import type { LandingTexts } from "@/app/_landing/types";
+import TEXTS_JSON from "./ru/texts.json";
+
+const TEXTS = TEXTS_JSON as unknown as LandingTexts;
 
 // Global not-found — App Router renders this for any unmatched URL that
 // wasn't caught by middleware (410 list lives in middleware.ts).
-// We default to English chrome because the missing URL has no locale
+// We default to ru chrome because the missing URL has no locale
 // context we can trust; the header includes the language switcher so
 // visitors can re-orient.
 export const metadata = {
@@ -22,7 +25,7 @@ export const metadata = {
 // rarely-hit 404 page.
 export const dynamic = "force-dynamic";
 
-const LOCALE = "en";
+const LOCALE = "ru";
 
 // The root app/layout.tsx is a pass-through (returns `children` directly so
 // per-locale layouts own their own <html>/<body>). Because no per-locale

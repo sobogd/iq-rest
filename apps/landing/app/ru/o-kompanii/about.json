@@ -1,0 +1,49 @@
+{
+  "heading": "Из своего кафе",
+  "headingAccent": "в платформу для ресторанов",
+  "story": {
+    "photo": { "src": "/contacts.webp" },
+    "paragraphs": [
+      "Сегодня платформа работает каждый день в {count} заведениях — от кофеен на пять столов до сетей в нескольких городах. Данные хранятся на серверах в Германии, а на вопросы в поддержке отвечаем лично."
+    ],
+    "sign": "Богдан Соколов"
+  },
+  "facts": [
+    { "value": "2022", "label": "год основания платформы" },
+    { "value": "{count}", "label": "заведений работают с IQ Rest" },
+    { "value": "15", "label": "стран, где есть наши клиенты" }
+  ],
+  "waPrefill": "Здравствуйте, у меня вопрос об IQ Rest",
+  "contacts": [
+    {
+      "icon": "Mail",
+      "title": "Почта",
+      "value": "support@iq-rest.com",
+      "href": "mailto:support@iq-rest.com",
+      "note": "Счета, документы, вопросы по данным."
+    },
+    {
+      "icon": "MessageCircle",
+      "title": "WhatsApp",
+      "value": "+998 94 866 37 43",
+      "wa": true,
+      "note": "Покажем демо, поможем с настройкой."
+    },
+    {
+      "icon": "Clock",
+      "title": "Время ответа",
+      "value": "Пн–Вс, 9:00–21:00 CET",
+      "note": "Отвечаем в течение нескольких часов."
+    }
+  ],
+  "legal": {
+    "rows": [
+      { "label": "Оператор сервиса", "value": "Bogdan Sokolov" },
+      { "label": "Правовая форма", "value": "Autónomo (España)" },
+      { "label": "Налоговый номер (NIF)", "value": "ESZ1894474S" },
+      { "label": "Адрес", "value": "Calle Boca del Río 2, 33010 Oviedo, Asturias, España" },
+      { "label": "Домен", "value": "https://iq-rest.com" },
+      { "label": "Хостинг данных", "value": "Hetzner Online GmbH, Nuremberg, Germany" }
+    ]
+  }
+}

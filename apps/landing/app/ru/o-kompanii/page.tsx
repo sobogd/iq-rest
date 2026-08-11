@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Mail, MessageCircle, Clock } from "lucide-react";
 import { AboutTemplate, type AboutCopy } from "@/app/_landing/templates/about-template";
-import { TEXTS } from "../texts";
+import type { LandingTexts } from "@/app/_landing/types";
+import TEXTS_JSON from "../texts.json";
+import ABOUT_JSON from "./about.json";
 import { restaurantCount } from "@/lib/restaurant-count";
 import { SCHEMA_DATE_MODIFIED } from "@/lib/page-meta";
 
@@ -12,60 +13,20 @@ const LOCALE = "ru";
 const SITE = "https://iq-rest.com";
 const PAGE_URL = `${SITE}/${LOCALE}/o-kompanii`;
 
+const TEXTS = TEXTS_JSON as unknown as LandingTexts;
+const ABOUT = ABOUT_JSON as unknown as AboutCopy;
+
 // Operator data is the same set the Privacy Policy publishes
 // (components/cookie-consent/legal-text.tsx → OPERATOR); this page just puts it
 // where a customer looks for it before paying.
+// Story, photo and signature come from the shared founder copy — the same
+// text the home page quotes, so it stays in one place across 35 locales.
 const COPY: AboutCopy = {
-  heading: "Из своего кафе",
-  headingAccent: "в платформу для ресторанов",
-  // Story, photo and signature come from the shared founder copy — the same
-  // text the home page quotes, so it stays in one place across 35 locales.
+  ...ABOUT,
   story: {
-    photo: { src: "/contacts.webp", alt: TEXTS.founder.photoAlt },
-    paragraphs: [
-      `${TEXTS.founder.quoteStart} ${TEXTS.founder.quoteAccent}`,
-      "Сегодня платформа работает каждый день в {count} заведениях — от кофеен на пять столов до сетей в нескольких городах. Данные хранятся на серверах в Германии, а на вопросы в поддержке отвечаем лично.",
-    ],
-    sign: "Богдан Соколов",
-  },
-
-  facts: [
-    { value: "2022", label: "год основания платформы" },
-    { value: "{count}", label: "заведений работают с IQ Rest" },
-    { value: "15", label: "стран, где есть наши клиенты" },
-  ],
-  waPrefill: "Здравствуйте, у меня вопрос об IQ Rest",
-  contacts: [
-    {
-      Icon: Mail,
-      title: "Почта",
-      value: "support@iq-rest.com",
-      href: "mailto:support@iq-rest.com",
-      note: "Счета, документы, вопросы по данным.",
-    },
-    {
-      Icon: MessageCircle,
-      title: "WhatsApp",
-      value: "+998 94 866 37 43",
-      wa: true,
-      note: "Покажем демо, поможем с настройкой.",
-    },
-    {
-      Icon: Clock,
-      title: "Время ответа",
-      value: "Пн–Вс, 9:00–21:00 CET",
-      note: "Отвечаем в течение нескольких часов.",
-    },
-  ],
-  legal: {
-    rows: [
-      { label: "Оператор сервиса", value: "Bogdan Sokolov" },
-      { label: "Правовая форма", value: "Autónomo (España)" },
-      { label: "Налоговый номер (NIF)", value: "ESZ1894474S" },
-      { label: "Адрес", value: "Calle Boca del Río 2, 33010 Oviedo, Asturias, España" },
-      { label: "Домен", value: "https://iq-rest.com" },
-      { label: "Хостинг данных", value: "Hetzner Online GmbH, Nuremberg, Germany" },
-    ],
+    ...ABOUT.story,
+    photo: ABOUT.story.photo ? { ...ABOUT.story.photo, alt: TEXTS.founder.photoAlt } : undefined,
+    paragraphs: [`${TEXTS.founder.quoteStart} ${TEXTS.founder.quoteAccent}`, ...ABOUT.story.paragraphs],
   },
 };
 

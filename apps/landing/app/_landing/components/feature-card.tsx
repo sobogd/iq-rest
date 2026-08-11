@@ -1,11 +1,12 @@
 import { Check } from "lucide-react";
 import type { FeatureSubFeature } from "../templates/types";
+import { getIcon } from "../lib/icons";
 
 // One feature card: icon chip + heading + checkmark bullets. The eyebrow/label
 // and image fields on the row are intentionally not rendered (the label
 // duplicated the heading; images were dropped for the text-only grid).
 export function FeatureCard({ row }: { row: FeatureSubFeature }) {
-  const Icon = row.icon;
+  const Icon = getIcon(row.icon);
   return (
     <article className="h-full flex flex-col rounded-2xl bg-gradient-to-br from-primary/10 via-primary/[0.03] to-primary/[0.03] ring-1 ring-border/50 shadow-xl overflow-hidden">
       <div className="flex flex-col flex-1 p-5 sm:p-6">

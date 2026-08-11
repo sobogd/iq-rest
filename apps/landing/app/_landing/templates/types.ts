@@ -1,4 +1,4 @@
-import type { LucideIcon } from "lucide-react";
+import type { IconKey } from "../lib/icons";
 
 // Single, locale-agnostic content shape for a feature landing page. Layout
 // lives in `feature-landing-template.tsx` — this file describes *what* to
@@ -36,7 +36,7 @@ export interface FeatureScan {
 }
 
 export interface FeatureSubFeature {
-  icon: LucideIcon;
+  icon: IconKey;
   eyebrow: string;
   heading: string;
   body: string;
