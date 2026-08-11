@@ -3,7 +3,6 @@ import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing, rtlLocales } from "@/i18n/routing";
 import "../globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
 import { OnboardingModalProvider } from "@/app/_landing/components/onboarding/onboarding-modal-provider";
 import { LangAutoModal } from "@/app/_landing/components/lang-auto-modal";
 import type { Metadata } from "next";
@@ -48,21 +47,15 @@ export default async function LocaleLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd).replace(/</g, "\\u003c") }}
         />
-        <ThemeProvider
-          attribute="class"
-          forcedTheme="dark"
-          disableTransitionOnChange
-        >
-          <NextIntlClientProvider messages={messages}>
-            <OnboardingModalProvider>
-              {children}
-            </OnboardingModalProvider>
-            {/* After the page, not before: effects flush children-first, so
-                PageTracker has published the page label before this modal
-                fires its own events. Portal-rendered — order is invisible. */}
-            <LangAutoModal />
-          </NextIntlClientProvider>
-        </ThemeProvider>
+        <NextIntlClientProvider messages={messages}>
+          <OnboardingModalProvider>
+            {children}
+          </OnboardingModalProvider>
+          {/* After the page, not before: effects flush children-first, so
+              PageTracker has published the page label before this modal
+              fires its own events. Portal-rendered — order is invisible. */}
+          <LangAutoModal />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
 import { LandingHeader } from "@/app/_landing/components/header";
 import { LandingFooter } from "@/app/_landing/components/footer";
 import { LandingI18nWrap } from "@/app/_landing/components/landing-i18n-wrap";
@@ -33,48 +32,46 @@ export default async function NotFound() {
   return (
     <html lang={LOCALE} dir="ltr" translate="no" suppressHydrationWarning>
       <body className="min-h-dvh bg-background text-foreground antialiased tracking-tight">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange storageKey="iq-rest-theme-v2">
-          <LandingI18nWrap locale={LOCALE}>
-            <main className="relative">
-              {/* Own page bucket — header/footer clicks from a 404 would
-                  otherwise be attributed to whatever page ran before it. */}
-              <PageTracker page="not-found" />
-              <LandingHeader
-                texts={TEXTS.header}
-                locale={LOCALE}
-                useLocalAnchors={false}
-                featureLinks={TEXTS.footer.featureLinks}
-              />
+        <LandingI18nWrap locale={LOCALE}>
+          <main className="relative">
+            {/* Own page bucket — header/footer clicks from a 404 would
+                otherwise be attributed to whatever page ran before it. */}
+            <PageTracker page="not-found" />
+            <LandingHeader
+              texts={TEXTS.header}
+              locale={LOCALE}
+              useLocalAnchors={false}
+              featureLinks={TEXTS.footer.featureLinks}
+            />
 
-              <section className="px-5 py-24 sm:py-32">
-                <div className="max-w-2xl mx-auto text-center">
-                  <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground mb-3">
-                    404
-                  </p>
-                  <h1 className="text-4xl sm:text-5xl font-medium tracking-tight mb-4">
-                    Page not found
-                  </h1>
-                  <p className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed">
-                    The page you were looking for doesn&apos;t exist or was moved.
-                  </p>
-                  <Link
-                    href="/"
-                    className="inline-flex h-11 px-6 items-center justify-center rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
-                  >
-                    Go to homepage
-                  </Link>
-                </div>
-              </section>
+            <section className="px-5 py-24 sm:py-32">
+              <div className="max-w-2xl mx-auto text-center">
+                <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground mb-3">
+                  404
+                </p>
+                <h1 className="text-4xl sm:text-5xl font-medium tracking-tight mb-4">
+                  Page not found
+                </h1>
+                <p className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed">
+                  The page you were looking for doesn&apos;t exist or was moved.
+                </p>
+                <Link
+                  href="/"
+                  className="inline-flex h-11 px-6 items-center justify-center rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
+                >
+                  Go to homepage
+                </Link>
+              </div>
+            </section>
 
-              <LandingFooter
-                texts={TEXTS.footer}
-                headerTexts={TEXTS.header}
-                locale={LOCALE}
-               
-              />
-            </main>
-          </LandingI18nWrap>
-        </ThemeProvider>
+            <LandingFooter
+              texts={TEXTS.footer}
+              headerTexts={TEXTS.header}
+              locale={LOCALE}
+             
+            />
+          </main>
+        </LandingI18nWrap>
       </body>
     </html>
   );

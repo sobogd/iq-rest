@@ -1,8 +1,3 @@
-/* Jost = free, self-loading Futura-like webfont. Loads everywhere (phone /
- * prod / browsers without Futura). On macOS the local Futura wins (see the
- * font-family stack below), matching the FB ad creatives exactly. */
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -65,38 +60,42 @@ html {
     --sidebar-ring: 16 100% 42%;
   }
 
-  .dark {
-    /* Warm dark palette matched to the FB ad creatives:
-     * bg #1A1612 (rgb 26,22,18), ink #f7f3ec, subink #a59c8f */
-    --background: 30 18% 9%;
-    --foreground: 40 38% 95%;
-    --card: 30 18% 9%;
-    --card-foreground: 40 38% 95%;
-    --popover: 30 18% 9%;
-    --popover-foreground: 40 38% 95%;
-    --primary: 16 100% 58%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 30 12% 15%;
-    --muted-foreground: 36 11% 60%;
-    --accent: 30 12% 15%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-    --success: 131 100% 58%;
-    --success-foreground: 0 0% 100%;
-    --border: 0 0% 12%;
-    --input: 0 0% 18%;
-    --ring: 16 100% 58%;
-    --sidebar-background: 0 0% 10%;
-    --sidebar-foreground: 0 0% 96%;
-    --sidebar-primary: 16 100% 58%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 16%;
-    --sidebar-accent-foreground: 0 0% 96%;
-    --sidebar-border: 0 0% 16%;
-    --sidebar-ring: 16 100% 58%;
+  /* Theme follows the OS: no JS, no stored preference. The media query is
+   * live — flipping the system theme restyles the page instantly. */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      /* Warm dark palette matched to the FB ad creatives:
+       * bg #1A1612 (rgb 26,22,18), ink #f7f3ec, subink #a59c8f */
+      --background: 30 18% 9%;
+      --foreground: 40 38% 95%;
+      --card: 30 18% 9%;
+      --card-foreground: 40 38% 95%;
+      --popover: 30 18% 9%;
+      --popover-foreground: 40 38% 95%;
+      --primary: 16 100% 58%;
+      --primary-foreground: 0 0% 100%;
+      --secondary: 0 0% 15%;
+      --secondary-foreground: 0 0% 98%;
+      --muted: 30 12% 15%;
+      --muted-foreground: 36 11% 60%;
+      --accent: 30 12% 15%;
+      --accent-foreground: 0 0% 98%;
+      --destructive: 0 84% 60%;
+      --destructive-foreground: 0 0% 100%;
+      --success: 131 100% 58%;
+      --success-foreground: 0 0% 100%;
+      --border: 0 0% 12%;
+      --input: 0 0% 18%;
+      --ring: 16 100% 58%;
+      --sidebar-background: 0 0% 10%;
+      --sidebar-foreground: 0 0% 96%;
+      --sidebar-primary: 16 100% 58%;
+      --sidebar-primary-foreground: 0 0% 100%;
+      --sidebar-accent: 0 0% 16%;
+      --sidebar-accent-foreground: 0 0% 96%;
+      --sidebar-border: 0 0% 16%;
+      --sidebar-ring: 16 100% 58%;
+    }
   }
 
   * {
@@ -107,27 +106,27 @@ html {
     @apply bg-background text-foreground;
   }
 
-  /* Force Futura (matched to the FB ad creatives) across the whole site.
-   * Explicit rule wins over Tailwind preflight; Jost is the web fallback. */
   html,
   body {
-    font-family: "Futura", "Jost", "Century Gothic", system-ui, sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
 
   /* Section-stripe — slightly darker than the default bg-muted/20 (which
    * renders nearly white over the page background). Light theme only;
    * dark theme keeps Tailwind's default. Targets <section>/<footer>
    * wrappers; cards inside <div>s unaffected. */
-  html:not(.dark) section.bg-muted\/20,
-  html:not(.dark) footer.bg-muted\/20 {
-    background-color: hsl(0 0% 97%);
-  }
+  @media (prefers-color-scheme: light) {
+    section.bg-muted\/20,
+    footer.bg-muted\/20 {
+      background-color: hsl(0 0% 97%);
+    }
 
-  /* Cards inside a darkened section-stripe (above) need contrast to stay
-   * visible. Force them to the page background colour so they read as
-   * white cards on the muted stripe. Light theme only. */
-  html:not(.dark) section.bg-muted\/20 .bg-muted\/20 {
-    background-color: hsl(var(--background));
+    /* Cards inside a darkened section-stripe (above) need contrast to stay
+     * visible. Force them to the page background colour so they read as
+     * white cards on the muted stripe. */
+    section.bg-muted\/20 .bg-muted\/20 {
+      background-color: hsl(var(--background));
+    }
   }
 
 

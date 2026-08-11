@@ -1,6 +1,5 @@
 import type { Viewport } from "next";
 import "../globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
 import { LandingI18nWrap } from "@/app/_landing/components/landing-i18n-wrap";
 
 export const viewport: Viewport = {
@@ -10,7 +9,7 @@ export const viewport: Viewport = {
   userScalable: true,
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+    { media: "(prefers-color-scheme: dark)", color: "#1a1612" },
   ],
 };
 
@@ -18,9 +17,7 @@ export default async function LandingLayout({ children }: { children: React.Reac
   return (
     <html lang="pl" dir="ltr" translate="no" suppressHydrationWarning>
       <body className="min-h-dvh bg-background text-foreground antialiased tracking-tight">
-        <ThemeProvider attribute="class" forcedTheme="dark" disableTransitionOnChange storageKey="iq-rest-theme-v2">
-          <LandingI18nWrap locale="pl">{children}</LandingI18nWrap>
-        </ThemeProvider>
+        <LandingI18nWrap locale="pl">{children}</LandingI18nWrap>
       </body>
     </html>
   );

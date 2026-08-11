@@ -2,7 +2,7 @@ import type { Config } from "tailwindcss";
 import tailwindcssAnimate from "tailwindcss-animate";
 
 const config: Config = {
-  darkMode: ["class"],
+  darkMode: "media",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -11,10 +11,7 @@ const config: Config = {
   theme: {
   	extend: {
   		fontFamily: {
-  			// Match the FB ad creatives (make_square/story.js use "Futura").
-  			// Futura is a system font on macOS; Jost is the free Futura-like
-  			// web fallback for everyone else.
-  			sans: ['Futura', 'Jost', '"Century Gothic"', 'system-ui', 'sans-serif'],
+  			sans: ['system-ui', '-apple-system', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'],
   		},
   		colors: {
   			border: 'hsl(var(--border))',
