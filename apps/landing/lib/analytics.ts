@@ -262,7 +262,15 @@ function flushOnUnload(): void {
   }
 }
 
-function track(action: string, name: string, ctx?: TrackCtx): void {
+export interface TrackOptions {
+  /** Skip the 2s buffer and post right now. For page-entry events (Pageview):
+   *  a visitor who bounces inside the buffer window would otherwise leave no
+   *  trace, and everything after the pageview waits on its visit token. Later
+   *  interaction events still batch as usual. */
+  instant?: boolean;
+}
+
+function track(action: string, name: string, ctx?: TrackCtx, opts?: TrackOptions): void {
   if (typeof window === "undefined") return;
   if (!TRACKING_ENABLED) {
     if (typeof console !== "undefined") {
@@ -274,7 +282,7 @@ function track(action: string, name: string, ctx?: TrackCtx): void {
   if (ctx) pendingCtx = { ...pendingCtx, ...ctx };
   trimQueue();
 
-  if (queue.length >= MAX_BATCH) {
+  if (queue.length >= MAX_BATCH || opts?.instant) {
     send();
     return;
   }

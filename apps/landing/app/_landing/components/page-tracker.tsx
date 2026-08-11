@@ -221,8 +221,10 @@ export function PageTracker({ page }: PageTrackerProps) {
     const attribution = ctx && (!documentCtxSent || hasFreshAttribution(ctx)) ? ctx : undefined;
     documentCtxSent = true;
     // The pageview carries the attribution ctx — the server applies it to the
-    // session first-write-wins.
-    analytics.track("Show", "Pageview", attribution);
+    // session first-write-wins. Instant: it must not sit out the 2s buffer —
+    // a quick bounce would lose the whole visit, and the response carries the
+    // visit token every later batch wants.
+    analytics.track("Show", "Pageview", attribution, { instant: true });
     if (page === "pricing") trackCurrency();
 
     const scroll = createScrollTracker();
@@ -255,7 +257,7 @@ export function PageTracker({ page }: PageTrackerProps) {
       if (!event.persisted) return;
       analytics.setPage(toPageLabel(page));
       setTrackLocale(document.documentElement.lang || "");
-      analytics.track("Show", "Pageview");
+      analytics.track("Show", "Pageview", undefined, { instant: true });
       scroll.begin();
     };
     window.addEventListener("pageshow", onShow);

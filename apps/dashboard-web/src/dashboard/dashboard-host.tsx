@@ -80,7 +80,7 @@ function consumeAttributionParams(): void {
       .replace(/_+/g, "_")
       .replace(/^_+|_+$/g, "");
     // ?ec= marks a click from a lifecycle email, ?from= any other campaign.
-    if (v) trackEvent("Open", (k === "ec" ? `Email ${v}` : `From ${v}`).slice(0, 100));
+    if (v) trackEvent("Open", (k === "ec" ? `Email ${v}` : `From ${v}`).slice(0, 100), undefined, { instant: true });
   }
   const qs = sp.toString();
   window.history.replaceState(

@@ -238,9 +238,16 @@ if (typeof window !== "undefined" && !isKioskHost()) {
   });
 }
 
+export interface TrackOptions {
+  /** Skip the 2s buffer and post right now. For page-entry events (the boot
+   *  "Open / From|Email" arrivals): they must not wait out the buffer, and
+   *  their response seeds the visit token every later batch rides on. */
+  instant?: boolean;
+}
+
 /** Record one interaction. `action` is the verb ("Click", "Show", "Focus",
  *  "Save", "Toggle", "Open", "Error"), `name` the human-readable target. */
-export function trackEvent(action: string, name: string, ctx?: TrackCtx): void {
+export function trackEvent(action: string, name: string, ctx?: TrackCtx, opts?: TrackOptions): void {
   if (typeof window === "undefined") return;
   // KDS / waiter / reservation tablets are deliberately silent.
   if (isKioskHost()) return;
@@ -254,9 +261,9 @@ export function trackEvent(action: string, name: string, ctx?: TrackCtx): void {
   if (queue.length > MAX_QUEUE) queue = queue.slice(queue.length - MAX_QUEUE);
   if (ctx) pendingCtx = { ...pendingCtx, ...ctx };
 
-  if (queue.length >= MAX_BATCH) {
-    // A full batch goes out over the retryable path, not the beacon — this is
-    // an ordinary flush, not a page teardown.
+  if (queue.length >= MAX_BATCH || opts?.instant) {
+    // Goes out over the retryable path, not the beacon — this is an ordinary
+    // flush, not a page teardown.
     clearTimers();
     send();
     return;
