@@ -67,7 +67,7 @@ interface SessionListRow {
   conv_network: string | null;
 }
 
-@Controller("admin/v2")
+@Controller("admin")
 @UseGuards(AdminGuard)
 export class AnalyticsV2AdminController {
   constructor(private readonly prisma: PrismaService) {}

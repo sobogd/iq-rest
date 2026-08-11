@@ -16,25 +16,6 @@ export function dashboardUrl(path: string = ""): string {
   return DASHBOARD_BASE.replace(/\/$/, "") + cleanPath;
 }
 
-/**
- * Use this to perform a navigation that may cross origins. Preserves analytics
- * sessionId via querystring so the dashboard adopts the same id.
- */
-export function navigateToDashboard(path: string = "") {
-  if (typeof window === "undefined") return;
-  const url = new URL(dashboardUrl(path), window.location.origin);
-  // Forward analytics sessionId so server-set cookie isn't required.
-  try {
-    const sid =
-      localStorage.getItem("analytics_session_id") ||
-      sessionStorage.getItem("analytics_session_id");
-    if (sid) url.searchParams.set("sid", sid);
-  } catch {
-    // ignore
-  }
-  window.location.assign(url.toString());
-}
-
 /** Base URL for the dashboard backend API. */
 export function dashboardApiBase(): string {
   return DASHBOARD_API_BASE.replace(/\/$/, "");

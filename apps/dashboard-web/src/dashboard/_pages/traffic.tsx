@@ -106,7 +106,7 @@ function TrafficList({
         to: new Date().toISOString(),
       });
       if (restaurantId) qs.set("restaurantId", restaurantId);
-      const res = await fetch(apiUrl(`/api/admin/v2/sessions?${qs.toString()}`), {
+      const res = await fetch(apiUrl(`/api/admin/sessions?${qs.toString()}`), {
         credentials: "include",
         signal: ac.signal,
       });
@@ -176,7 +176,7 @@ function TrafficList({
     setDeleting(true);
     setDeleteError(null);
     try {
-      const res = await fetch(apiUrl("/api/admin/v2/sessions/delete"), {
+      const res = await fetch(apiUrl("/api/admin/sessions/delete"), {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },

@@ -1,19 +1,18 @@
 import { dashboardApi } from "./dashboard-url";
 
 // Analytics v2: every event is a page/action/name triple ("Home" / "Click" /
-// "Header SignIn") POSTed to dashboard-api /api/v2/e. The server derives the
+// "Header SignIn") POSTed to dashboard-api /api/e. The server derives the
 // cookieless session (salt-hash of ip+ua) — nothing is stored on the visitor's
 // device. The first event of a visit carries ctx (paid click ids, ?from=,
 // search referrer host) so the session row can be attributed.
 //
 // Two wire details are load-bearing:
-//   • `/api/v2/e` — the readable `/track` path is on every ad-blocker list.
-//     The server still answers `/api/v2/track` for older cached bundles.
+//   • `/api/e` — a readable "track"-style path is on every ad-blocker list.
 //   • `text/plain` body — keeps the POST a CORS-*simple* request, so the
 //     browser skips the OPTIONS preflight. A preflight would double the
 //     latency and is itself frequently blocked; it also cannot be sent by
 //     `navigator.sendBeacon`, which we rely on during unload.
-const ENDPOINT = "/api/v2/e";
+const ENDPOINT = "/api/e";
 const CONTENT_TYPE = "text/plain;charset=UTF-8";
 
 const SEARCH_HOST_REGEX =
@@ -117,9 +116,21 @@ let flushTimer: ReturnType<typeof setTimeout> | null = null;
 let retryTimer: ReturnType<typeof setTimeout> | null = null;
 let inFlight = false;
 let retryAttempt = 0;
+// Visit continuation token from the last ingest response. Lives ONLY in this
+// module variable — never in a cookie or any storage, so nothing is persisted
+// on the visitor's device and the pipeline stays consentless. Echoing it on
+// the next batch pins the batch to the same visit even when the device hash
+// flaps mid-visit (mobile IP prefix / Cloudflare geo changing between
+// requests). Dies with the page; a fresh load simply starts token-less and the
+// server falls back to the hash.
+let visitToken: string | null = null;
 
 function serialize(events: QueuedEvent[], ctx?: TrackCtx): string {
-  return JSON.stringify({ events, ...(ctx ? { ctx } : {}) });
+  return JSON.stringify({
+    events,
+    ...(ctx ? { ctx } : {}),
+    ...(visitToken ? { tok: visitToken } : {}),
+  });
 }
 
 function clearTimer(timer: ReturnType<typeof setTimeout> | null): null {
@@ -186,6 +197,16 @@ function send(): void {
       // same bytes, so drop it instead of looping. Everything else (5xx, 429,
       // proxy hiccup) is transient and worth another attempt.
       if (res.ok || res.status === 400) {
+        if (res.ok) {
+          // The server answers with a fresh visit continuation token.
+          void res
+            .json()
+            .then((d: unknown) => {
+              const v = (d as { v?: unknown } | null)?.v;
+              if (typeof v === "string") visitToken = v;
+            })
+            .catch(() => {});
+        }
         retryAttempt = 0;
         if (queue.length > 0) scheduleFlush();
         return;

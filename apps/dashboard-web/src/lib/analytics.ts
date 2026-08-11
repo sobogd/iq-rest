@@ -2,19 +2,19 @@ import { apiUrl } from "@/lib/api";
 import { isKioskHost } from "@/lib/device-mode";
 
 // Analytics v2: every event is a page/action/name/ts quad POSTed to
-// dashboard-api /api/v2/e. The whole dashboard reports under one page
+// dashboard-api /api/e. The whole dashboard reports under one page
 // ("Dashboard") — the name carries the detail — so the admin can filter the
 // product surface with a single predicate.
 //
 // Wire shape is deliberately CORS-*simple*: text/plain body (a JSON string) so
-// the browser never fires an OPTIONS preflight, and a short opaque path — the
-// old /api/v2/track is blocked by common ad-blocker filter lists.
+// the browser never fires an OPTIONS preflight, and a short opaque path —
+// readable "track"-style paths are blocked by common ad-blocker filter lists.
 //
 // The server derives the visit itself (salt-hash of ip+ua, promoted to the
 // signed-in identity via the session cookie); nothing is stored on the device.
 
 const PAGE = "Dashboard";
-const ENDPOINT = "/api/v2/e";
+const ENDPOINT = "/api/e";
 const CONTENT_TYPE = "text/plain;charset=UTF-8";
 
 const SEARCH_HOST_REGEX =
@@ -69,9 +69,19 @@ let flushTimer: ReturnType<typeof setTimeout> | null = null;
 let retryTimer: ReturnType<typeof setTimeout> | null = null;
 let sending = false;
 let retries = 0;
+// Visit continuation token from the last ingest response. Lives ONLY in this
+// module variable — never in a cookie or any storage (the pipeline stays
+// consentless). Echoed on every batch so a mid-visit device-hash flap (mobile
+// IP prefix / Cloudflare geo changing between requests) cannot split the
+// visit. Dies with the page; the server falls back to the hash.
+let visitToken: string | null = null;
 
 function body(events: QueuedEvent[], ctx: TrackCtx | undefined): string {
-  return JSON.stringify({ events, ...(ctx ? { ctx } : {}) });
+  return JSON.stringify({
+    events,
+    ...(ctx ? { ctx } : {}),
+    ...(visitToken ? { tok: visitToken } : {}),
+  });
 }
 
 /** Timer callback: the handle is spent, so clear it before sending — the
@@ -137,6 +147,14 @@ function send(): void {
   })
     .then((res) => {
       if (res.ok) {
+        // The server answers with a fresh visit continuation token.
+        void res
+          .json()
+          .then((d: unknown) => {
+            const v = (d as { v?: unknown } | null)?.v;
+            if (typeof v === "string") visitToken = v;
+          })
+          .catch(() => {});
         retries = 0;
         return;
       }
@@ -174,25 +192,38 @@ export function flushEvents(): void {
  *  retried — there is nothing left to retry from. */
 function flushOnUnload(): void {
   clearTimers();
-  if (queue.length === 0) return;
-  const events = queue.slice(0, MAX_SERVER_BATCH);
-  const ctx = pendingCtx;
-  let queued = false;
-  try {
-    queued = navigator.sendBeacon(
-      apiUrl(ENDPOINT),
-      new Blob([body(events, ctx)], { type: "text/plain" }),
-    );
-  } catch {
-    queued = false;
-  }
-  if (queued) {
+  // Drain the WHOLE queue in server-sized chunks — a single beacon tops out at
+  // MAX_SERVER_BATCH, and anything left behind has nobody to send it once the
+  // document is gone. Only the first chunk carries ctx (first-write-wins
+  // server-side anyway).
+  let ctx = pendingCtx;
+  pendingCtx = undefined;
+  while (queue.length > 0) {
+    const events = queue.slice(0, MAX_SERVER_BATCH);
     queue = queue.slice(MAX_SERVER_BATCH);
-    pendingCtx = undefined;
-    return;
+    const payload = body(events, ctx);
+    ctx = undefined;
+    let queued = false;
+    try {
+      queued = navigator.sendBeacon(
+        apiUrl(ENDPOINT),
+        new Blob([payload], { type: "text/plain" }),
+      );
+    } catch {
+      queued = false;
+    }
+    if (!queued) {
+      // No beacon (or it refused the payload): keepalive fetch is the last
+      // fire-and-forget option that can outlive the document.
+      fetch(apiUrl(ENDPOINT), {
+        method: "POST",
+        headers: { "Content-Type": CONTENT_TYPE },
+        body: payload,
+        credentials: "include",
+        keepalive: true,
+      }).catch(() => {});
+    }
   }
-  // No beacon (or it refused the payload): keepalive fetch is the fallback.
-  send();
 }
 
 if (typeof window !== "undefined" && !isKioskHost()) {

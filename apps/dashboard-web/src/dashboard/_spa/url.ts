@@ -163,8 +163,9 @@ export function pathToView(path: string): View {
     return rid ? { name: "settings.admin.traffic", restaurantId: rid } : { name: "settings.admin.traffic" };
   }
   // Legacy "/admin/usage" was the previous name of this screen. Its per-session
-  // ids came from the retired UsageEvent table and cannot be resolved against
-  // analytics v2, so an old deep link lands on the traffic list, not a 404.
+  // ids came from the old usage_events table (dropped 2026-08-11) and cannot be
+  // resolved against analytics v2, so an old deep link lands on the traffic
+  // list, not a 404.
   if (
     stripped === "/dashboard/settings/admin/usage" ||
     stripped.startsWith("/dashboard/settings/admin/usage/")

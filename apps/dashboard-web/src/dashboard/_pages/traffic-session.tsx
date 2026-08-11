@@ -37,7 +37,7 @@ export function TrafficSessionPage({ id, restaurantId }: { id: string; restauran
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(apiUrl(`/api/admin/v2/sessions/${encodeURIComponent(id)}`), {
+      const res = await fetch(apiUrl(`/api/admin/sessions/${encodeURIComponent(id)}`), {
         credentials: "include",
       });
       if (!res.ok) {
@@ -69,7 +69,7 @@ export function TrafficSessionPage({ id, restaurantId }: { id: string; restauran
     setDeleting(true);
     setDeleteError(null);
     try {
-      const res = await fetch(apiUrl("/api/admin/v2/sessions/delete"), {
+      const res = await fetch(apiUrl("/api/admin/sessions/delete"), {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },

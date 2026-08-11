@@ -1,6 +1,5 @@
 import { BadRequestException, Injectable, Logger, NotFoundException } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
-import { Prisma } from "@iq-rest/db";
 import { PrismaService } from "../prisma/prisma.service";
 import { AuthService } from "../auth/auth.service";
 import { MailService } from "../mail/mail.service";
@@ -13,11 +12,12 @@ import { OnboardingSeedService } from "../onboarding/onboarding-seed.service";
  *  as templated, one that lands mid-morning reads as a human.
  *
  *  Leads are pulled live from the Graph API (they are never mirrored to our
- *  DB); send state comes from the CapiSend journal (`fbclid="leadgen:<id>"`,
- *  eventName "lead_welcome" — kept from the webhook era so history carries
- *  over) plus User.emailsSent. Sending reuses the same account-creation path
- *  a plain-login signup takes: find-or-create User + empty template
- *  restaurant, then welcome_personal with a permanent auto-login link. */
+ *  DB); send state comes from the LeadWelcomeSend journal plus
+ *  User.emailsSent (the belt that survived the old capi_sends journal being
+ *  dropped with the legacy analytics). Sending reuses the same
+ *  account-creation path a plain-login signup takes: find-or-create User +
+ *  empty template restaurant, then welcome_personal with a permanent
+ *  auto-login link. */
 @Injectable()
 export class AdminLeadsService {
   private readonly logger = new Logger(AdminLeadsService.name);
@@ -94,13 +94,13 @@ export class AdminLeadsService {
         where: { email: { in: [...emails] } },
         select: { email: true, emailsSent: true, restaurantUsers: { take: 1, select: { id: true } } },
       }),
-      this.prisma.capiSend.findMany({
-        where: { eventName: "lead_welcome", status: "success", fbclid: { in: raw.map((l) => `leadgen:${l.id}`) } },
-        select: { fbclid: true, createdAt: true },
+      this.prisma.leadWelcomeSend.findMany({
+        where: { leadgenId: { in: raw.map((l) => l.id) } },
+        select: { leadgenId: true, createdAt: true },
       }),
     ]);
     const userByEmail = new Map(users.map((u) => [u.email, u]));
-    const sentByKey = new Map(journal.map((j) => [j.fbclid, j.createdAt]));
+    const sentByKey = new Map(journal.map((j) => [j.leadgenId, j.createdAt]));
 
     const leads = rows
       .map(({ lead, fields, email }): AdminLeadRow => {
@@ -109,7 +109,7 @@ export class AdminLeadsService {
           user?.emailsSent && typeof user.emailsSent === "object" && !Array.isArray(user.emailsSent)
             ? (user.emailsSent as Record<string, string>).welcome_personal ?? null
             : null;
-        const journalSent = sentByKey.get(`leadgen:${lead.id}`);
+        const journalSent = sentByKey.get(lead.id);
         return {
           leadgenId: lead.id,
           createdTime: lead.created_time ?? null,
@@ -131,9 +131,8 @@ export class AdminLeadsService {
   /** Create the lead's account (if missing) and send the personal welcome with
    *  the permanent auto-login link. Refuses a double-send. */
   async sendWelcome(leadgenId: string): Promise<{ ok: true; email: string; sentAt: string }> {
-    const journalKey = `leadgen:${leadgenId}`;
-    const done = await this.prisma.capiSend.findFirst({
-      where: { fbclid: journalKey, eventName: "lead_welcome", status: "success" },
+    const done = await this.prisma.leadWelcomeSend.findUnique({
+      where: { leadgenId },
       select: { id: true },
     });
     if (done) throw new BadRequestException("Welcome already sent for this lead");
@@ -164,6 +163,15 @@ export class AdminLeadsService {
     }
     if (user.emailUnsubscribed) throw new BadRequestException("User unsubscribed");
 
+    // Second dedup layer: the per-user welcome stamp. The journal above is
+    // per-LEAD; this catches the same human arriving through two lead forms —
+    // and it survived the old journal being dropped with the legacy analytics.
+    const priorSent =
+      user.emailsSent && typeof user.emailsSent === "object" && !Array.isArray(user.emailsSent)
+        ? (user.emailsSent as Record<string, string>).welcome_personal
+        : undefined;
+    if (priorSent) throw new BadRequestException("Welcome already sent to this email");
+
     // Campaign is EN-only; currency is unknown at lead time → EUR default.
     await this.seed.seedEmptyRestaurant({ userId: user.id, currency: "EUR", locale: "en" });
 
@@ -180,13 +188,8 @@ export class AdminLeadsService {
       where: { id: user.id },
       data: { emailsSent: { ...sent, welcome_personal: sentAt } },
     });
-    await this.prisma.capiSend.create({
-      data: {
-        fbclid: journalKey,
-        eventName: "lead_welcome",
-        status: "success",
-        response: { venueType, via: "admin" } as Prisma.InputJsonValue,
-      },
+    await this.prisma.leadWelcomeSend.create({
+      data: { leadgenId, venueType },
     });
     this.logger.log(`lead ${leadgenId} welcome sent to ${email}`);
     return { ok: true, email, sentAt };

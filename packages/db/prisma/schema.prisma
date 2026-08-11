@@ -603,72 +603,25 @@ model SupportMessage {
   @@map("support_messages")
 }
 
-/// Unified analytics. Replaces the old PulseEvent + Session + AnalyticsEvent.
-/// Anonymous by default (event + at + country + region + device + platform).
-/// gclid is set only by SSR (server-pulse from /app/<locale>/page.tsx on landing
-/// arrival with ?gclid=...). userId is attached server-side from the auth
-/// cookie when the request comes from a logged-in user; restaurantId from the
-/// active-restaurant cookie when present.
-model UsageEvent {
-  id                   String   @id @default(cuid())
-  at                   DateTime @default(now())
-  event                String
-  country              String   @default("XX")
-  region               String   @default("")
-  device               String? // 'mobile' / 'tablet' / 'desktop'
-  platform             String? // 'ios' / 'android' / 'windows' / 'macos' / 'linux' / 'other'
-  gclid                String? // SSR-only — landing page on gclid arrival
-  ad_params            String? // JSON: { kw, term, campaign } from ValueTrack params
-  userId               String? // server-side from iqr_session cookie when logged in
-  restaurantId         String? // server-side from iqr_active_restaurant_id cookie when present
-  ip                   String? // anonymized client IP (IPv4 last octet zeroed, IPv6 truncated to /64)
-  is_google_ads        Boolean  @default(false) // arrival via gclid/gbraid/wbraid on the URL
-  is_facebook_ads      Boolean  @default(false) // arrival via fbclid on the URL (Facebook/Instagram ads)
-  is_search            Boolean  @default(false) // arrival from a search engine referrer (google/bing/yandex/…)
-  // Identity stitched from device-fingerprint islands (anonymous pre-login
-  // activity attributed to the user/restaurant that later logged in from the
-  // same ip+device+platform+country+region within a <=3-day gap). Set by the
-  // stitching pass; only ever populated on otherwise-anonymous events.
-  stitchedUserId       String?
-  stitchedRestaurantId String?
-  // Manual admin attribution of a session to a restaurant. Highest precedence;
-  // never touched by the stitching pass.
-  manualRestaurantId   String?
-
-  @@index([at])
-  @@index([event, at])
-  @@index([userId, at])
-  @@index([restaurantId, at])
-  @@index([stitchedRestaurantId])
-  @@index([gclid])
-  @@index([is_google_ads, at])
-  @@index([is_facebook_ads, at])
-  @@index([is_search, at])
-  @@map("usage_events")
-}
-
-// Journal of manual Meta CAPI sends. One row per (fbclid, eventName) attempt;
-// a row with status="success" blocks re-sending the same event for the same
-// click. Replaces the old UsageEvent.fbSentEvents array.
-model CapiSend {
+// Journal of manual Meta Lead-Ads welcome sends (admin Leads page). One row
+// per lead, written only on success; the unique leadgenId is the double-send
+// guard (belt: User.emailsSent.welcome_personal). Replaces the retired
+// CapiSend journal the leads page used to piggyback on.
+model LeadWelcomeSend {
   id        String   @id @default(cuid())
-  fbclid    String
-  eventName String
-  status    String // "success" | "error"
-  response  Json?
+  leadgenId String   @unique
+  venueType String?
   createdAt DateTime @default(now())
 
-  @@index([fbclid])
-  @@index([fbclid, eventName, status])
-  @@map("capi_sends")
+  @@map("lead_welcome_sends")
 }
 
 // ---------------------------------------------------------------------------
 // Analytics v2 (landing) — cookieless salt-hash sessions. Nothing is stored on
 // the visitor's device; the session key is sha256(dailySalt + ip + ua) computed
 // server-side, so a visitor is linkable for at most one salt-day. Raw IP and
-// raw user-agent are never persisted. Coexists with UsageEvent until the old
-// pipeline is retired.
+// raw user-agent are never persisted. The old usage_events/capi_sends/
+// google_ads_sends pipeline was dropped 2026-08-11 (rows archived offline).
 // ---------------------------------------------------------------------------
 
 // Singleton row (id = "current") holding the active hash salt. Rotated daily at
@@ -778,22 +731,6 @@ model ConversionSendNew {
   @@index([sessionId, network, status])
   @@index([createdAt])
   @@map("conversion_sends_new")
-}
-
-// Journal of Google Ads offline (gclid) conversion uploads. Google analogue of
-// CapiSend: one row per (gclid, eventName) upload attempt; a row with
-// status="success" blocks re-sending the same conversion for the same click.
-model GoogleAdsSend {
-  id        String   @id @default(cuid())
-  gclid     String
-  eventName String // ViewContent | InitiateCheckout | CompleteRegistration
-  status    String // "success" | "error"
-  response  Json?
-  createdAt DateTime @default(now())
-
-  @@index([gclid])
-  @@index([gclid, eventName, status])
-  @@map("google_ads_sends")
 }
 
 model Order {

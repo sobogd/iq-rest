@@ -84,6 +84,42 @@ export class VisitService {
     }
   }
 
+  /**
+   * Continue the exact visit a client-echoed token points at. Bypasses the
+   * device hash entirely — this is the fix for mid-visit hash flaps (mobile
+   * network prefix / Cloudflare region changing between batches). Returns null
+   * when the row is gone, idle-expired, or belongs to a DIFFERENT signed-in
+   * account than the caller (signed out mid-visit, or a shared browser switched
+   * accounts) — the caller then falls back to the hash path.
+   */
+  async continueVisit(sessionId: string, userId: string | null, now: Date): Promise<SessionNew | null> {
+    const row = await this.prisma.sessionNew.findUnique({ where: { id: sessionId } });
+    if (!row || row.lastAt.getTime() < now.getTime() - VISIT_IDLE_MS) return null;
+
+    if (row.userId === userId) {
+      await this.touch(row.id, now);
+      return { ...row, lastAt: now };
+    }
+
+    if (row.userId === null && userId) {
+      // Signed in mid-visit: promote in place, exactly like the hash path.
+      const key = visitKey(row.hash, userId, row.firstAt);
+      try {
+        return await this.prisma.sessionNew.update({
+          where: { id: row.id },
+          data: { userId, visitKey: key, lastAt: now },
+        });
+      } catch (e) {
+        if (!isUniqueViolation(e)) throw e;
+        const won = await this.prisma.sessionNew.findUnique({ where: { visitKey: key } });
+        if (won) return won;
+        return null;
+      }
+    }
+
+    return null;
+  }
+
   /** Move an anonymous row's events onto the signed-in row and drop it. */
   private async fold(anon: SessionNew, target: SessionNew, now: Date): Promise<SessionNew> {
     const [, , merged] = await this.prisma.$transaction([
