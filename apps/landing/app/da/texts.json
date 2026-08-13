@@ -1,0 +1,261 @@
+{
+  "htmlLang": "da",
+  "htmlDir": "ltr",
+  "meta": {
+    "title": "Digital menu, køkkenskærm og bordbestilling — IQ Rest",
+    "description": "Driv din restaurant fra én app: flersproget digital menu, køkkenskærm og bordbestilling 24/7. Kom i gang på 5 minutter. 14 dage gratis, intet kort kræves.",
+    "canonical": "https://iq-rest.com/da",
+    "ogLocale": "da_DK",
+    "ogTitle": "Digital menu, køkkenskærm og bordbestilling",
+    "ogDescription": "Driv din restaurant fra én app: flersproget digital menu, køkkenskærm og bordbestilling 24/7. Kom i gang på 5 minutter. 14 dage gratis, intet kort kræves."
+  },
+  "jsonLd": {
+    "appName": "IQ Rest — Platform til restaurantdrift"
+  },
+  "ctaText": "Prøv gratis",
+  "homeCtaText": "Prøv gratis",
+  "trust": [
+    {
+      "kind": "num",
+      "value": 35,
+      "label": "Menusprog"
+    },
+    {
+      "kind": "text",
+      "value": "24/7",
+      "label": "Online bordbestilling"
+    },
+    {
+      "kind": "num",
+      "value": 5,
+      "suffix": " min",
+      "label": "For at komme i gang"
+    },
+    {
+      "kind": "count",
+      "label": "Restauranter bruger os"
+    }
+  ],
+  "demoText": "Åbn demo",
+  "microcopy": "14 dage gratis · Intet kreditkort · Opsig når som helst",
+  "header": {
+    "navFeatures": "Funktioner",
+    "navHow": "Sådan virker det",
+    "navPricing": "Priser",
+    "navFaq": "FAQ",
+    "signIn": "Log ind",
+    "viewFeatures": "Se funktioner",
+    "cta": "Start gratis",
+    "navProducts": "Funktioner",
+    "navGuide": "Guide",
+    "navAbout": "Om os",
+    "menuFeaturesHeading": "Funktioner",
+    "menuInfoHeading": "Information"
+  },
+  "hero": {
+    "verticals": [
+      "Restauranter",
+      "Caféer",
+      "Barer",
+      "Hoteller",
+      "Pizzeriaer"
+    ],
+    "headline": "Digital menu til din restaurant.\nKlar på 5 minutter.",
+    "sub": "En digital menu til din restaurant på 5 minutter. Alt er inkluderet: nem opsætning uden kodning, AI-genkendelse af trykte menuer, QR-koder til bordene og bestilling uden provision.",
+    "dynamicHeadlines": [
+      "0 % i provision.",
+      "35 sprog med AI.",
+      "Online bestilling.",
+      "Bordbestilling 24/7.",
+      "Premium design."
+    ],
+    "painBullets": [
+      "0 % i provision: hver bestilling går direkte til restauranten.",
+      "AI-oversættelse til 35 sprog — turister forstår menuen og bestiller mere.",
+      "Bordbestilling 24/7: gæsterne booker selv bord, så I undgår opkald i travle perioder.",
+      "Fleksible priser: ændringer i menuen træder i kraft med det samme."
+    ],
+    "rating": "Over 500 restauranter i mere end 30 lande"
+  },
+  "founder": {
+    "eyebrow": "Bygget af restauratører",
+    "quoteStart": "Min kone og jeg drev vores egen café og kender hverdagen i branchen indefra: bestillinger, bordreservationer, betjening på gulvet og arbejdet i køkkenet. Vi manglede ét samlet værktøj — moderne, nemt at sætte op og overskueligt ved første øjekast —",
+    "quoteAccent": "sådan opstod idéen til den platform, vi nu bygger til andre restauratører.",
+    "sign": "Bogdan Sokolov · stifter, tidligere caféeejer",
+    "photoAlt": "Bogdan Sokolov, stifter af IQ Rest"
+  },
+  "pricing": {
+    "badge": "Ingen provision · Ingen binding",
+    "heading": "Én pakke.",
+    "headingAccent": "Alt inkluderet.",
+    "sub": "QR-menu, ordrehåndtering, AI-oversættelse, restaurantens hjemmeside og bordbestilling. Én gennemskuelig månedlig betaling.",
+    "monthlyLabel": "Månedlig",
+    "yearlyLabel": "Årlig",
+    "saveBadge": "Spar 25 %",
+    "perMonth": "pr. måned",
+    "billedAnnually": "Faktureres årligt: {total}",
+    "youSave": "Du sparer {amount}",
+    "trust": {
+      "secure": "Sikker betaling via Stripe",
+      "noCommitment": "Ingen binding",
+      "quick": "Aktivering på få minutter",
+      "restaurants": "Over 500 restauranter"
+    }
+  },
+  "faq": {
+    "eyebrow": "Har du stadig spørgsmål?",
+    "heading": "Ofte stillede",
+    "headingAccent": "spørgsmål",
+    "sub": "Hvad restauratører oftest spørger om, inden de opretter sig. Kan du ikke finde dit svar — skriv til os på WhatsApp. Rigtige mennesker svarer, ikke en bot.",
+    "whatsappCta": "Skriv til os på WhatsApp",
+    "whatsappPrefill": "Hej, jeg har et spørgsmål om IQ Rest",
+    "items": [
+      {
+        "q": "Hvad inkluderer prøveperioden, og hvad sker der, når den slutter?",
+        "a": "I 14 dage får du adgang til alle platformens funktioner, uden at du skal indtaste et kreditkort. Hvis der ikke tilføjes en betalingsmetode efter 14 dage, sættes kontoen automatisk på pause. Vi trækker aldrig penge uden din accept. Du kan tilføje betaling senere og fortsætte, hvor du slap. Det kræver kun ét klik at opsige et abonnement."
+      },
+      {
+        "q": "Tager I provision af bestillinger?",
+        "a": "Nej, vi tager ikke en procentdel af bestillingerne. Alle ordrer fra QR-menuen går direkte til restauranten, uden gebyrer til mellemmænd. Du betaler en fast månedlig pris — og intet andet."
+      },
+      {
+        "q": "Skal gæsterne installere en app, og kræver det tekniske færdigheder af os?",
+        "a": "Gæsterne behøver ingen app: de peger blot telefonens kamera mod QR-koden, og menuen åbner i browseren. Restauranten behøver heller ingen teknisk viden — kontrolpanelet kører direkte i browseren på en telefon, tablet eller computer. Alt foregår med klik og træk-og-slip, uden kodning."
+      },
+      {
+        "q": "Hvor hurtigt træder ændringer i menuen i kraft — priser, nye retter?",
+        "a": "Med det samme. Ændringer foretaget fra din telefon vises for gæsterne på få sekunder. Det tager få klik at tilføje en ny ret: navn, pris, foto. Ingen grund til at genoptrykke papirmenuer eller bruge en designer."
+      },
+      {
+        "q": "Hvor mange sprog understøttes?",
+        "a": "Der understøttes 35 sprog med automatisk AI-oversættelse. Én handling — og hele menuen er oversat. AI'en forstår den kulinariske kontekst, så retternes navne og beskrivelser lyder naturlige på alle sprog. Turister bestiller med større sikkerhed, når de forstår, hvad retten indeholder."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Klar på 10 minutter. ",
+    "headingAccent": "14 dages fuld adgang.",
+    "sub": "Intet kort kræves, opsig når som helst. {count} restauranter bruger os allerede. Du skal kun bruge en e-mail."
+  },
+  "featureHighlights": {
+    "heading": "Alt er inkluderet",
+    "sub": "Funktioner, der gør gæster til bestillinger — i alle pakker, uden ekstra omkostninger."
+  },
+  "scan": {
+    "heading": "Har du en papirmenu eller en PDF?",
+    "headingAccent": "AI digitaliserer den på 60 sekunder.",
+    "sub": "Upload et foto eller dokument — AI genkender automatisk kategorier, retter og priser.",
+    "cta": "Scan menu →"
+  },
+  "pricingQuiz": {
+    "heading": "Sammensæt din pakke ",
+    "sub": "Start med menuen — tilføj bordbestilling, køkkenskærm og et domæne, når du har brug for det.",
+    "billingLabel": "Fakturering:",
+    "monthly": "Månedlig",
+    "yearly": "Årlig",
+    "restaurantsLabel": "Restauranter:",
+    "fewerAria": "Færre restauranter",
+    "moreAria": "Flere restauranter",
+    "menuTitle": "Menu og hjemmeside",
+    "menuHint": "Altid inkluderet",
+    "reservationsTitle": "Bordbestillingssystem",
+    "reservationsHint": "Bordreservationer",
+    "kdsTitle": "Køkkenskærm",
+    "kdsHint": "Ordrer på skærmen i køkkenet",
+    "domainTitle": "Domænenavn",
+    "domainHint": "Din egen webadresse",
+    "perMonthSuffix": "/md",
+    "perYearSuffix": "/år",
+    "perMonthLongSuffix": "/måned",
+    "saveYearlyTemplate": "Spar {amount} om året med årlig fakturering",
+    "volumeDiscountTemplate": "Rabat på {percent} %",
+    "saveUpToHint": "Spar op til 50 % ved 5+ restauranter",
+    "billedYearly": "Faktureres én gang årligt",
+    "billedMonthly": "Faktureres månedligt",
+    "enterprisePre": "Brug for en skræddersyet aftale?",
+    "enterpriseCta": "Skriv til os",
+    "enterprisePost": "så sammensætter vi en til dig.",
+    "enterpriseWa": "Hej! Jeg har brug for en skræddersyet aftale til mine restauranter.",
+    "headingAccent": "til din restaurant",
+    "multiplePre": "Brug for flere restauranter?",
+    "multipleCta": "Vis muligheder",
+    "restaurantOne": "restaurant",
+    "restaurantFew": "restauranter",
+    "restaurantMany": "restauranter",
+    "multipleChangePre": "Andet antal restauranter?",
+    "multipleChangeCta": "Skift"
+  },
+  "pricingCta": {
+    "heading": "Enkle, fleksible priser",
+    "sub": "Betal kun for de funktioner, du har brug for — sammensæt din pakke på et minut.",
+    "fromTemplate": "fra {price}/md",
+    "button": "Sammensæt min pakke"
+  },
+  "footer": {
+    "copyrightTemplate": "© {year} IQ Rest. Alle rettigheder forbeholdes.",
+    "featuresHeading": "Funktioner",
+    "featureLinks": [
+      {
+        "href": "/ru/tsifrovoe-menyu",
+        "label": "Digital menu"
+      },
+      {
+        "href": "/ru/priem-zakazov-restoran",
+        "label": "Ordrehåndtering"
+      },
+      {
+        "href": "/ru/bronirovanie-stolov",
+        "label": "Bordbestilling"
+      },
+      {
+        "href": "/ru/kds-kuhonnyy-displey",
+        "label": "Køkkenskærm"
+      }
+    ],
+    "infoHeading": "Information",
+    "legalHeading": "Juridisk",
+    "currencyHeading": "Valuta"
+  },
+  "common": {
+    "close": "Luk",
+    "menu": "Menu",
+    "help": "Hjælp"
+  },
+  "auth": {
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "Indtast din e-mail",
+    "or": "eller",
+    "continueGoogle": "Fortsæt med Google",
+    "continueApple": "Fortsæt med Apple",
+    "consent": {
+      "line": "Ved at fortsætte accepterer du vores <terms>Servicevilkår</terms>. Se, hvordan vi håndterer data i vores <privacy>Privatlivspolitik</privacy>."
+    },
+    "signInTitle": "Velkommen tilbage",
+    "signInSubtitle": "Indtast din e-mail — vi sender en 6-cifret loginkode.",
+    "signInButton": "Log ind",
+    "registerTitle": "Opret din konto",
+    "registerSubtitle": "14 dage gratis, intet kort kræves. Vi sender en loginkode til din e-mail — ingen adgangskode, ingen formularer.",
+    "registerButton": "Opret konto",
+    "switchSignIn": "Log ind",
+    "switchCreate": "Opret konto",
+    "verifyTitle": "Tjek din e-mail",
+    "verifySubtitle": "Vi har sendt en 6-cifret kode til {email}.",
+    "verifyCodeLabel": "Bekræftelseskode",
+    "checkSpam": "Kan du ikke se e-mailen? Tjek dit spamfilter.",
+    "verifyButton": "Fortsæt",
+    "resendCode": "Send kode igen",
+    "resendSent": "Kode sendt",
+    "changeEmail": "Brug en anden e-mail",
+    "metaSignIn": "Log ind",
+    "metaRegister": "Opret konto",
+    "errors": {
+      "emailInvalid": "Indtast en gyldig e-mail.",
+      "sendFailed": "Kunne ikke sende koden. Prøv igen.",
+      "verifyFailed": "Kunne ikke bekræfte koden. Prøv igen.",
+      "codeExpired": "Koden er udløbet. Anmod om en ny.",
+      "noCode": "Koden blev ikke fundet eller er udløbet. Anmod om en ny.",
+      "invalidCode": "Ugyldig kode. Prøv igen.",
+      "tooManyAttempts": "For mange forsøg. Vent lidt og prøv igen."
+    }
+  }
+}

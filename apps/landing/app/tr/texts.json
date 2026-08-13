@@ -1,0 +1,261 @@
+{
+  "htmlLang": "tr",
+  "htmlDir": "ltr",
+  "meta": {
+    "title": "Dijital Menü, Mutfak Ekranı ve Rezervasyon — IQ Rest",
+    "description": "Restoranınızı tek uygulamadan yönetin: çok dilli dijital menü, mutfak ekranı ve 7/24 rezervasyon. 5 dakikada kurun. 14 gün ücretsiz, kredi kartı gerekmez.",
+    "canonical": "https://iq-rest.com/tr",
+    "ogLocale": "tr_TR",
+    "ogTitle": "Dijital Menü, Mutfak Ekranı ve Rezervasyon",
+    "ogDescription": "Restoranınızı tek uygulamadan yönetin: çok dilli dijital menü, mutfak ekranı ve 7/24 rezervasyon. 5 dakikada kurun. 14 gün ücretsiz, kredi kartı gerekmez."
+  },
+  "jsonLd": {
+    "appName": "IQ Rest — Restoran Yönetim Platformu"
+  },
+  "ctaText": "Ücretsiz deneyin",
+  "homeCtaText": "Ücretsiz deneyin",
+  "trust": [
+    {
+      "kind": "num",
+      "value": 35,
+      "label": "Menü dili"
+    },
+    {
+      "kind": "text",
+      "value": "24/7",
+      "label": "Online rezervasyon"
+    },
+    {
+      "kind": "num",
+      "value": 5,
+      "suffix": " dk",
+      "label": "Kurulum süresi"
+    },
+    {
+      "kind": "count",
+      "label": "Bizi tercih eden restoran"
+    }
+  ],
+  "demoText": "Demoyu incele",
+  "microcopy": "14 gün ücretsiz · Kredi kartı gerekmez · İstediğiniz zaman iptal edin",
+  "header": {
+    "navFeatures": "Özellikler",
+    "navHow": "Nasıl çalışır?",
+    "navPricing": "Fiyatlandırma",
+    "navFaq": "SSS",
+    "signIn": "Giriş yap",
+    "viewFeatures": "Özellikleri incele",
+    "cta": "Ücretsiz başla",
+    "navProducts": "Özellikler",
+    "navGuide": "Rehber",
+    "navAbout": "Hakkımızda",
+    "menuFeaturesHeading": "Özellikler",
+    "menuInfoHeading": "Bilgi"
+  },
+  "hero": {
+    "verticals": [
+      "Restoranlar",
+      "Kafeler",
+      "Barlar",
+      "Oteller",
+      "Pizzacılar"
+    ],
+    "headline": "Restoranınız için dijital menü.\n5 dakikada hazır.",
+    "sub": "Restoranınız için 5 dakikada dijital menü. Her şey dahil: kodsuz düzenleyici, basılı menüleri yapay zeka ile tanıma, masa QR kodları ve komisyonsuz sipariş.",
+    "dynamicHeadlines": [
+      "%0 komisyon.",
+      "Yapay zeka ile 35 dil.",
+      "Online sipariş.",
+      "7/24 rezervasyon.",
+      "Premium tasarım."
+    ],
+    "painBullets": [
+      "%0 komisyon: her sipariş doğrudan restorana gelir.",
+      "Yapay zeka ile 35 dile çeviri — turistler menüyü anlar ve daha çok sipariş verir.",
+      "7/24 rezervasyon: misafirler masalarını kendileri ayırır, yoğun saatlerde telefon trafiği biter.",
+      "Esnek fiyatlandırma: menüdeki değişiklikler anında güncellenir."
+    ],
+    "rating": "30'dan fazla ülkede 500'ü aşkın restoran"
+  },
+  "founder": {
+    "eyebrow": "Restorancılar tarafından geliştirildi",
+    "quoteStart": "Eşimle kendi kafemizi işlettik ve restoranın günlük temposunu içeriden biliyoruz: sipariş alma, rezervasyonlar, salon ve mutfak operasyonları. Kurulumu kolay, modern ve ilk bakışta anlaşılır tek bir araç istedik —",
+    "quoteAccent": "şu an diğer restorancılar için geliştirdiğimiz platform fikri işte böyle doğdu.",
+    "sign": "Bogdan Sokolov · kurucu, eski kafe işletmecisi",
+    "photoAlt": "Bogdan Sokolov, IQ Rest kurucusu"
+  },
+  "pricing": {
+    "badge": "Komisyon yok · Sözleşme yok",
+    "heading": "Tek paket.",
+    "headingAccent": "Her şey dahil.",
+    "sub": "QR menü, sipariş alma, yapay zeka çevirisi, restoran web sitesi ve rezervasyon. Şeffaf, tek bir aylık ödeme.",
+    "monthlyLabel": "Aylık",
+    "yearlyLabel": "Yıllık",
+    "saveBadge": "%25 Tasarruf",
+    "perMonth": "aylık",
+    "billedAnnually": "Yıllık faturalandırılır: {total}",
+    "youSave": "{amount} tasarruf edersiniz",
+    "trust": {
+      "secure": "Stripe ile güvenli ödeme",
+      "noCommitment": "Taahhüt yok",
+      "quick": "Dakikalar içinde aktivasyon",
+      "restaurants": "500'den fazla restoran"
+    }
+  },
+  "faq": {
+    "eyebrow": "Hâlâ sorularınız mı var?",
+    "heading": "Sıkça sorulan",
+    "headingAccent": "sorular",
+    "sub": "Restorancıların kayıt olmadan önce en çok sorduğu sorular. Cevabınızı bulamadıysanız WhatsApp'tan yazın, bot değil gerçek ekibimiz yanıtlasın.",
+    "whatsappCta": "WhatsApp'tan yazın",
+    "whatsappPrefill": "Merhaba, IQ Rest hakkında bir sorum var",
+    "items": [
+      {
+        "q": "Deneme süresi neleri kapsıyor ve bittiğinde ne oluyor?",
+        "a": "14 gün boyunca platformun tüm özelliklerine kredi kartı gerekmeden erişirsiniz. 14 günün sonunda ödeme yöntemi eklenmezse hesap otomatik olarak duraklatılır. Onayınız olmadan asla ücret çekmeyiz. Daha sonra ödeme ekleyip kaldığınız yerden devam edebilirsiniz. Abonelik iptali tek tıkla yapılır."
+      },
+      {
+        "q": "Siparişlerden komisyon alıyor musunuz?",
+        "a": "Hayır, siparişlerden yüzde almıyoruz. QR menüden gelen tüm siparişler aracı komisyonu olmadan doğrudan restorana düşer. Sadece sabit bir aylık ücret ödersiniz, başka hiçbir şey değil."
+      },
+      {
+        "q": "Misafirlerin uygulama indirmesi gerekiyor mu ve teknik bilgiye ihtiyacımız var mı?",
+        "a": "Misafirlerin uygulama indirmesine gerek yok: telefonlarının kamerasını QR koda okutmaları yeterli, menü tarayıcıda açılır. Restoranın da teknik bilgiye ihtiyacı yoktur — yönetim paneli telefon, tablet veya bilgisayarda doğrudan tarayıcı üzerinden çalışır. Her şey tıklama ve sürükle-bırak ile yapılır, kodlama yoktur."
+      },
+      {
+        "q": "Menüdeki değişiklikler — fiyatlar, yeni yemekler — ne kadar sürede güncellenir?",
+        "a": "Anında. Telefonunuzdan yaptığınız değişiklikler saniyeler içinde misafirlerin ekranına yansır. Yeni bir yemek eklemek birkaç dokunuş sürer: isim, fiyat, fotoğraf. Kağıt menüleri yeniden bastırmaya veya tasarımcıya gerek kalmaz."
+      },
+      {
+        "q": "Kaç dil destekleniyor?",
+        "a": "Yapay zeka destekli otomatik çeviri ile 35 dil destekleniyor. Tek bir işlemle tüm menü çevrilir. Yapay zeka mutfak terimlerini anlar, bu sayede yemek isimleri ve açıklamaları her dilde doğal durur. Turistler yemeğin içeriğini anladıklarında çok daha rahat sipariş verir."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "10 dakikada hazır. ",
+    "headingAccent": "14 gün tam erişim.",
+    "sub": "Kart gerekmez, istediğiniz zaman iptal edin. {count} restoran bize güveniyor. Başlamak için sadece e-posta adresiniz yeterli."
+  },
+  "featureHighlights": {
+    "heading": "Her şey dahil",
+    "sub": "Misafirleri siparişe dönüştüren özellikler — her pakette, ek ücret olmadan."
+  },
+  "scan": {
+    "heading": "Kağıt veya PDF menünüz mü var?",
+    "headingAccent": "Yapay zeka 60 saniyede dijitalleştirir.",
+    "sub": "Bir fotoğraf veya belge yükleyin — yapay zeka kategorileri, yemekleri ve fiyatları otomatik olarak tanır.",
+    "cta": "Menüyü tara →"
+  },
+  "pricingQuiz": {
+    "heading": "Paketinizi oluşturun",
+    "sub": "Menü ile başlayın — rezervasyon, mutfak ekranı ve alan adını ihtiyacınız oldukça ekleyin.",
+    "billingLabel": "Faturalandırma:",
+    "monthly": "Aylık",
+    "yearly": "Yıllık",
+    "restaurantsLabel": "Restoran sayısı:",
+    "fewerAria": "Daha az restoran",
+    "moreAria": "Daha fazla restoran",
+    "menuTitle": "Menü ve web sitesi",
+    "menuHint": "Her zaman dahil",
+    "reservationsTitle": "Rezervasyon sistemi",
+    "reservationsHint": "Masa rezervasyonları",
+    "kdsTitle": "Mutfak ekranı",
+    "kdsHint": "Siparişler mutfak ekranında",
+    "domainTitle": "Alan adı",
+    "domainHint": "Kendi web adresiniz",
+    "perMonthSuffix": "/ay",
+    "perYearSuffix": "/yıl",
+    "perMonthLongSuffix": "/ay",
+    "saveYearlyTemplate": "Yıllık ödemeyle yılda {amount} tasarruf edin",
+    "volumeDiscountTemplate": "%{percent} indirim",
+    "saveUpToHint": "5 ve üzeri restoranda %50'ye varan indirim",
+    "billedYearly": "Yılda bir kez faturalandırılır",
+    "billedMonthly": "Aylık faturalandırılır",
+    "enterprisePre": "Özel bir pakete mi ihtiyacınız var?",
+    "enterpriseCta": "Bize yazın",
+    "enterprisePost": "size uygun bir plan hazırlayalım.",
+    "enterpriseWa": "Merhaba! Restoranlarım için özel bir pakete ihtiyacım var.",
+    "headingAccent": "restoranınız için",
+    "multiplePre": "Daha fazla restoran mı ekleyeceksiniz?",
+    "multipleCta": "Seçenekleri gör",
+    "restaurantOne": "restoran",
+    "restaurantFew": "restoran",
+    "restaurantMany": "restoran",
+    "multipleChangePre": "Farklı sayıda restoran mı?",
+    "multipleChangeCta": "Değiştir"
+  },
+  "pricingCta": {
+    "heading": "Basit, esnek fiyatlandırma",
+    "sub": "Sadece ihtiyacınız olan özellikler için ödeme yapın — paketinizi bir dakikada oluşturun.",
+    "fromTemplate": "{price}/ay'dan başlayan fiyatlarla",
+    "button": "Paketimi oluştur"
+  },
+  "footer": {
+    "copyrightTemplate": "© {year} IQ Rest. Tüm hakları saklıdır.",
+    "featuresHeading": "Özellikler",
+    "featureLinks": [
+      {
+        "href": "/tr/dijital-menu",
+        "label": "Dijital menü"
+      },
+      {
+        "href": "/tr/restoran-siparis-sistemi",
+        "label": "Sipariş alma"
+      },
+      {
+        "href": "/tr/masa-rezervasyonu",
+        "label": "Rezervasyon"
+      },
+      {
+        "href": "/tr/kds-mutfak-ekrani",
+        "label": "Mutfak ekranı"
+      }
+    ],
+    "infoHeading": "Bilgi",
+    "legalHeading": "Yasal",
+    "currencyHeading": "Para Birimi"
+  },
+  "common": {
+    "close": "Kapat",
+    "menu": "Menü",
+    "help": "Yardım"
+  },
+  "auth": {
+    "emailLabel": "E-posta",
+    "emailPlaceholder": "E-posta adresinizi girin",
+    "or": "veya",
+    "continueGoogle": "Google ile devam et",
+    "continueApple": "Apple ile devam et",
+    "consent": {
+      "line": "Devam ederek <terms>Kullanım Şartları</terms>'nı kabul etmiş olursunuz. Verilerinizi nasıl işlediğimizi <privacy>Gizlilik Politikası</privacy> sayfamızdan inceleyebilirsiniz."
+    },
+    "signInTitle": "Tekrar hoş geldiniz",
+    "signInSubtitle": "E-posta adresinizi girin — size 6 haneli bir giriş kodu göndereceğiz.",
+    "signInButton": "Giriş yap",
+    "registerTitle": "Hesabınızı oluşturun",
+    "registerSubtitle": "14 gün ücretsiz, kart gerekmez. Size bir giriş kodu göndereceğiz — şifre yok, form yok.",
+    "registerButton": "Hesap oluştur",
+    "switchSignIn": "Giriş yap",
+    "switchCreate": "Kayıt ol",
+    "verifyTitle": "E-postanızı kontrol edin",
+    "verifySubtitle": "{email} adresine 6 haneli bir kod gönderdik.",
+    "verifyCodeLabel": "Doğrulama kodu",
+    "checkSpam": "E-postayı göremediniz mi? Spam klasörünüzü kontrol edin.",
+    "verifyButton": "Devam et",
+    "resendCode": "Kodu tekrar gönder",
+    "resendSent": "Kod gönderildi",
+    "changeEmail": "Farklı bir e-posta kullan",
+    "metaSignIn": "Giriş yap",
+    "metaRegister": "Hesap oluştur",
+    "errors": {
+      "emailInvalid": "Geçerli bir e-posta adresi girin.",
+      "sendFailed": "Kod gönderilemedi. Lütfen tekrar deneyin.",
+      "verifyFailed": "Kod doğrulanamadı. Lütfen tekrar deneyin.",
+      "codeExpired": "Kodun süresi doldu. Yeni bir kod isteyin.",
+      "noCode": "Kod bulunamadı veya süresi doldu. Yeni bir kod isteyin.",
+      "invalidCode": "Geçersiz kod. Lütfen tekrar deneyin.",
+      "tooManyAttempts": "Çok fazla deneme yaptınız. Lütfen bekleyip tekrar deneyin."
+    }
+  }
+}

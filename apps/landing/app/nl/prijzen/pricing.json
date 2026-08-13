@@ -1,0 +1,59 @@
+{
+  "breadcrumbLabel": "Prijzen",
+  "meta": {
+    "title": "Prijzen — Stel je restaurantpakket samen vanaf 9,90 €/mnd | IQ Rest",
+    "description": "Stel je pakket samen uit modules: QR-menu met AI-vertaling, bestellingen opnemen, tafelreserveringen, keukenscherm. Vanaf 9,90 €/mnd per restaurant, volumekortingen. 14 dagen gratis, geen creditcard, altijd opzegbaar.",
+    "canonical": "https://iq-rest.com/nl/prijzen",
+    "ogLocale": "nl_NL",
+    "ogTitle": "Prijzen — Stel je restaurantpakket samen",
+    "ogDescription": "Een modulair pakket vanaf 9,90 €/mnd: QR-menu, bestellingen, reserveringen, KDS. Volumekortingen, geen verborgen kosten. 14 dagen gratis."
+  },
+  "faqSub": "Veelgestelde vragen van restaurants over prijzen en betaling. Staat je vraag er niet tussen — stuur ons een bericht via WhatsApp.",
+  "faqItems": [
+    {
+      "q": "Hoe is de prijs opgebouwd?",
+      "a": "Je stelt je pakket samen uit modules. De basis is een QR-menu met AI-vertaling in 35 talen en beheer vanaf elk apparaat. Voeg daarna toe wat je nodig hebt: tafelreserveringen, het keukenscherm, je eigen domein. Prijzen zijn per restaurant, met volumekortingen vanaf de tweede vestiging."
+    },
+    {
+      "q": "Is er een commissie op bestellingen?",
+      "a": "Nee. Bestellingen via het QR-menu en van de bediening gaan direct naar het restaurant. Je betaalt alleen een vaste maandelijkse prijs."
+    },
+    {
+      "q": "Hoe werkt de proefperiode?",
+      "a": "14 dagen volledige toegang tot elke functie, geen creditcard nodig. Als er aan het eind geen betaling is ingesteld, wordt het account gepauzeerd: het dashboard blijft beschikbaar in alleen-lezen modus, terwijl het gastenmenu en bestellingen opnemen worden uitgeschakeld. Er zijn geen automatische afschrijvingen."
+    },
+    {
+      "q": "Wat gebeurt er met mijn gegevens als het account gepauzeerd is?",
+      "a": "Alles blijft bewaard: menu, foto's, bestelgeschiedenis, reserveringen, instellingen, statistieken. Stel de betaling zelfs zes maanden later in — alles komt precies zo terug als het was."
+    },
+    {
+      "q": "Moet ik de QR-codes opnieuw printen?",
+      "a": "Nee. Terwijl het account gepauzeerd is, tonen de codes een \"tijdelijk niet beschikbaar\" melding; zodra de betaling is ingesteld, openen dezelfde codes het menu weer."
+    },
+    {
+      "q": "Kan ik mijn pakket wijzigen?",
+      "a": "Ja, op elk moment vanuit het dashboard. Het verschil wordt naar rato berekend over de resterende dagen van de betaalde periode. Een uitgeschakelde functie behoudt zijn gegevens."
+    },
+    {
+      "q": "Hoeveel restaurants kan ik koppelen?",
+      "a": "Zoveel als je wilt, allemaal beheerd vanuit één dashboard. Volumekortingen tot 50% bij 5+ restaurants. Voor grote ketens — een pakket op maat via WhatsApp."
+    },
+    {
+      "q": "Wat is de korting op het jaarabonnement?",
+      "a": "Ongeveer 30% vergeleken met maandelijkse facturering. Het exacte bedrag wordt getoond tijdens het samenstellen van je pakket."
+    },
+    {
+      "q": "Hoe kan ik mijn abonnement opzeggen?",
+      "a": "Met één klik vanuit het dashboard. Het account werkt tot het einde van de betaalde periode, daarna wordt het gepauzeerd. Je gegevens blijven bewaard."
+    },
+    {
+      "q": "Welke betaalmethoden accepteren jullie?",
+      "a": "Visa, Mastercard, American Express, Apple Pay, Google Pay — via Stripe. In Europa ondersteunt het jaarabonnement ook SEPA-incasso."
+    }
+  ],
+  "finalCta": {
+    "heading": "Eén prijs. Nul risico. ",
+    "headingAccent": "14 dagen volledige toegang.",
+    "sub": "Geen creditcard nodig, altijd opzegbaar — gebruikt door {count} restaurants. Je hebt alleen een e-mailadres nodig om te beginnen."
+  }
+}

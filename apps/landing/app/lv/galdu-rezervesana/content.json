@@ -1,0 +1,206 @@
+{
+  "locale": "lv",
+  "slug": "galdu-rezervesana",
+  "trackPrefix": "l_bookings",
+  "meta": {
+    "title": "24/7 Galdiņu rezervācija restorāniem | IQ Rest",
+    "description": "24/7 galdiņu rezervācija jūsu restorānam: viesi paši rezervē galdiņus caur QR ēdienkarti vai mājaslapu. Kalendārs pa galdiņiem, automātiski apstiprinājumi un atgādinājumi. Nekādu tālruņa zvanu, neviens viesis netiek palaists garām. 14 dienas bez maksas.",
+    "canonical": "https://iq-rest.com/lv/galdu-rezervesana",
+    "ogLocale": "lv_LV",
+    "ogTitle": "24/7 Galdiņu rezervācija — Viesi rezervē paši",
+    "ogDescription": "Viesi rezervē galdiņus caur QR ēdienkarti vai mājaslapu. Kalendārs, automātiski apstiprinājumi, atgādinājumi. Neviens viesis netiek palaists garām.",
+    "brandLine": "IQ Rest — Restorānu galdiņu rezervācija"
+  },
+  "hero": {
+    "headline": "Galdiņu rezervācija 24/7,",
+    "cta": "Iestatīt galdiņu rezervācijas",
+    "sub": "Viesi rezervē 24/7 caur QR ēdienkarti vai saiti. Kalendārs pa galdiņiem, auto-apstiprinājumi un atgādinājumi.",
+    "headlineAccent": "bez tālruņa zvaniem",
+    "demoLabel": "Demo: rezervāciju kalendārs",
+    "tablet": {
+      "src": "/landing/hero-card-reservation.webp",
+      "alt": "Planšetdators ar rezervāciju kalendāru: mēneša skats un apstiprinājumu gaidošo rezervāciju saraksts"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restorāniem"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kafejnīcām"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bāriem"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Viesnīcām"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Picērijām"
+    }
+  ],
+  "scan": {
+    "heading": "Palaidiet galdiņu rezervācijas",
+    "headingAccent": "5 minūtēs.",
+    "sub": "Pieslēdziet kalendāru, pievienojiet galdiņus ar fotoattēliem un vietu skaitu — viesi sāks rezervēt tajā pašā dienā.",
+    "cta": "Ieslēgt rezervācijas"
+  },
+  "subFeatures": [
+    {
+      "icon": "CalendarPlus",
+      "eyebrow": "Rezervācijas veidlapa",
+      "heading": "Viesi rezervē paši — pēc datuma, laika un personu skaita.",
+      "body": "Viesis atver QR ēdienkarti vai tiešo saiti, izvēlas datumu, laiku un cilvēku skaitu — un uzreiz redz pieejamos galdiņus: ar fotoattēlu, aprakstu (terase, pie loga, dīvāns pie bāra) un vietu skaitu. Apstiprinājums tiek nosūtīts automātiski e-pastā un WhatsApp.",
+      "bullets": [
+        "Galdiņa izvēle pēc fotoattēla, apraksta un vietu skaita.",
+        "Automātisks apstiprinājums un atgādinājums stundu pirms vizītes.",
+        "Minimāla veidlapa: vārds, tālrunis, personu skaits."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-form.webp",
+        "alt": "Viesis rezervē restorāna galdiņu no tālruņa: izvēlas datumu, laiku, personu skaitu un galdiņu"
+      }
+    },
+    {
+      "icon": "CalendarDays",
+      "eyebrow": "Rezervāciju kalendārs",
+      "heading": "Kalendārs pa dienām un galdiņiem — viss pārskatāms vienā mirklī.",
+      "body": "Vadības panelī ir rezervāciju kalendārs, kas sadalīts pa galdiņiem, dienām, nedēļām un mēnešiem. Brīvie laiki, aizņemtie galdiņi, apstiprinātās un gaidošās rezervācijas — viss redzams vienā ekrānā. Darbojas planšetdatorā zālē un klēpjdatorā birojā.",
+      "bullets": [
+        "Dienas, nedēļas un mēneša skati.",
+        "Sadalījums pa galdiņiem: kurš, kad, cik viesu.",
+        "Pārcelt, atcelt vai apstiprināt rezervāciju — ar vienu pieskārienu no tālruņa."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-calendar.webp",
+        "alt": "Rezervāciju kalendārs IQ Rest vadības panelī divos planšetdatoros: dienas režģis pa galdiņiem un mēneša kalendārs"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Ko restorānu īpašnieki jautā par galdiņu rezervācijām IQ Rest. Ja jūsu jautājuma nav sarakstā — rakstiet mums WhatsApp.",
+    "items": [
+      {
+        "q": "Vai varu izvēlēties dienas un laikus, kad rezervācija ir pieejama?",
+        "a": "Jā. Vadības panelī varat iestatīt grafiku katrai nedēļas dienai: rezervāciju laikus un pārtraukumu starp pusdienām un vakariņām. Varat arī uz laiku pilnībā izslēgt rezervācijas — viesi redzēs, ka tiešsaistes rezervācija nav pieejama."
+      },
+      {
+        "q": "Vai varu augšupielādēt katra galdiņa fotoattēlu?",
+        "a": "Jā. Katram galdiņam ir fotoattēls, vietu skaits un zona (terase, pie loga, bārs). Viesi precīzi redz, kuru galdiņu viņi rezervē, un izdara apzinātu izvēli."
+      },
+      {
+        "q": "Vai varu ierobežot viesu skaitu pie galdiņa?",
+        "a": "Jā. Katram galdiņam ir noteikts vietu skaits — sistēma piedāvā viesiem tikai piemērotus galdiņus un neļauj sešu personu kompānijai rezervēt divvietīgu galdiņu."
+      },
+      {
+        "q": "Cik grūti ir iestatīt rezervācijas?",
+        "a": "Trīs soļi: pievienojiet galdiņus ar fotoattēliem un vietu skaitu, ieslēdziet rezervāciju režīmu iestatījumos un kopīgojiet saiti vai QR kodu. Palaišana aizņem 5–10 minūtes."
+      },
+      {
+        "q": "Vai varu iestatīt automātisku vai manuālu rezervācijas apstiprināšanu?",
+        "a": "Jā, režīmu izvēlas iestatījumos. Ar automātisko apstiprināšanu viesis saņem apstiprinājumu uzreiz pēc veidlapas iesniegšanas. Ar manuālo režīmu pieprasījums panelī parādās kā \"gaida apstiprinājumu\" — menedžeris to apstiprina vai noraida. Manuālais režīms ir noderīgs, ja galdiņu skaits ir ierobežots."
+      },
+      {
+        "q": "Vai jūs iekasējat maksu par katru rezervāciju?",
+        "a": "Nav nekādu maksu: rezervācijas ir iekļautas abonementā — nekādu procentu no viesiem, nekādu maksu par rezervāciju, nekādu starpnieku. Fiksēts maksājums un neierobežots rezervāciju skaits."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Rezervācijas 10 minūtēs. ",
+    "headingAccent": "14 dienas pilna pieeja.",
+    "sub": "Karte nav nepieciešama, atceliet jebkurā laikā. {count} restorāni kopā ar mums atslogo savu zāles darbinieku darbu. Viss, kas vajadzīgs, ir e-pasts."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Viesi rezervē paši",
+      "sub": "Datums, laiks un personu skaits — no QR ēdienkartes vai tiešās saites, jebkurā diennakts laikā. Sistēma rāda tikai brīvos laikus.",
+      "bullets": [
+        {
+          "icon": "CalendarPlus",
+          "title": "Rezervācija 24/7",
+          "sub": "Viesi rezervē naktī vai brīvdienās — nekādu zvanu, nekādas gaidīšanas uz atbildi"
+        },
+        {
+          "icon": "Users",
+          "title": "Galdiņš atbilstoši personu skaitam",
+          "sub": "Sistēma pati piemeklē piemērotu galdiņu pēc vietu skaita"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Minimāla veidlapa",
+          "sub": "Vārds, tālrunis un personu skaits — veidlapas aizpildīšana aizņem pusminūti"
+        }
+      ]
+    },
+    {
+      "heading": "Kalendārs pa dienām un galdiņiem",
+      "sub": "Visas rezervācijas vienā kalendārā: redziet, kas ir brīvs, kas apstiprināts un kurš ieradīsies.",
+      "bullets": [
+        {
+          "icon": "CalendarDays",
+          "title": "Diena, nedēļa, mēnesis",
+          "sub": "Pārslēdziet skatus un plānojiet sēdvietas iepriekš"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Sadalījums pa galdiņiem",
+          "sub": "Kurš, kad un cik viesu — katram galdiņam"
+        },
+        {
+          "icon": "Smartphone",
+          "title": "Pārvaldiet no tālruņa",
+          "sub": "Pārcelt, atcelt vai apstiprināt rezervāciju — ar vienu pieskārienu"
+        }
+      ]
+    },
+    {
+      "heading": "Grafiks un režīmi",
+      "sub": "Iestatiet rezervāciju grafiku katrai nedēļas dienai, intervāla ilgumu un apstiprināšanas režīmu.",
+      "bullets": [
+        {
+          "icon": "Clock",
+          "title": "Grafiks katrai dienai",
+          "sub": "Atsevišķs darba laiks katrai nedēļas dienai, ieskaitot pārtraukumu starp pusdienām un vakariņām"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Intervāla ilgums",
+          "sub": "Iestatiet rezervācijas intervālu atbilstoši jūsu vietas formātam"
+        },
+        {
+          "icon": "CalendarCheck",
+          "title": "Automātiski vai manuāli",
+          "sub": "Apstipriniet katru rezervāciju paši vai ieslēdziet automātisko apstiprināšanu"
+        }
+      ]
+    },
+    {
+      "heading": "Paziņojumi bez manuāla darba",
+      "sub": "Sistēma informē viesi un jūsu komandu — e-pasts un rezervāciju ekrāns atjaunojas uzreiz.",
+      "bullets": [
+        {
+          "icon": "Mail",
+          "title": "E-pasts viesim",
+          "sub": "Rezervācijas apstiprinājums tiek nosūtīts e-pastā automātiski"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Paziņojums restorānam",
+          "sub": "Īpašnieki saņem e-pastu par katru jaunu rezervāciju"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Rezervāciju ekrāns pie ieejas",
+          "sub": "Saimnieka planšetdators rāda jaunas rezervācijas reāllaikā"
+        }
+      ]
+    }
+  ]
+}

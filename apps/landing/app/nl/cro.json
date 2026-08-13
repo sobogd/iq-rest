@@ -1,0 +1,289 @@
+{
+  "heroV2": {
+    "verticals": [
+      {
+        "icon": "restaurant",
+        "label": "Restaurants"
+      },
+      {
+        "icon": "cafe",
+        "label": "Cafés"
+      },
+      {
+        "icon": "bar",
+        "label": "Bars"
+      },
+      {
+        "icon": "hotel",
+        "label": "Hotels"
+      },
+      {
+        "icon": "pizza",
+        "label": "Pizzeria's"
+      }
+    ],
+    "title": "Alles wat je restaurant",
+    "titleAccent": "nodig heeft!",
+    "sub": "Regel je zaken in 10 minuten: lanceer een online menu, stroomlijn de keuken en beheer je tafels.",
+    "primaryLabel": "Gratis beginnen",
+    "demoLabel": "Demo menu bekijken",
+    "mockups": {
+      "kds": {
+        "src": "/landing/hero-card-kds.webp",
+        "alt": "Tablet met een keukenscherm: bestellingen per tafel in kolommen met statussen"
+      },
+      "reservations": {
+        "src": "/landing/hero-card-reservation.webp",
+        "alt": "Tablet met een reserveringskalender: maandoverzicht en een lijst met reserveringen die wachten op bevestiging"
+      },
+      "phone1": {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Telefoon met de homepage van een restaurantwebsite: foto's, reserveringen en toegang tot het online menu"
+      },
+      "phone2": {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Telefoon met een gerecht: foto, prijs en allergenen"
+      }
+    }
+  },
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Live in 10 minuten",
+      "sub": "Geen dure hardware nodig en geen lange installatie"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Snelle support",
+      "sub": "We reageren binnen een paar uur via de chat"
+    },
+    {
+      "icon": "Globe",
+      "title": "Gekozen door {count} zaken",
+      "sub": "Gebruikt door restaurants en koffiezaken in 15+ landen"
+    },
+    {
+      "icon": "Palette",
+      "title": "100% in jouw huisstijl",
+      "sub": "We passen het design en de interface aan de stijl van je zaak aan"
+    }
+  ],
+  "menu": {
+    "heading": "Website en digitaal menu",
+    "sub": {
+      "link": "Meer dan een QR-menu!",
+      "rest": " Krijg een complete website met een uniek design, contactgegevens en tafelreserveringen."
+    },
+    "moreLabel": "Meer over het menu",
+    "demoLabel": "Demo: het menu zoals gasten het zien",
+    "mockupAlt": "Telefoon met de homepage van een restaurantwebsite en een telefoon met een gerecht",
+    "bullets": [
+      {
+        "icon": "Languages",
+        "title": "Automatische vertaling in 35 talen",
+        "sub": "Bedien internationale gasten zonder taalbarrière — de automatische vertaling regelt alles"
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "Bestellingen direct vanaf de tafel",
+        "sub": "Maak het jezelf makkelijk — neem snel bestellingen op aan tafel, zonder dat er bediening nodig is"
+      },
+      {
+        "icon": "WheatOff",
+        "title": "Allergenen en dieetwensen",
+        "sub": "Geef allergenen en dieetvoorkeuren (vegan, pittig) aan, zodat gasten makkelijker en veiliger kunnen kiezen"
+      }
+    ]
+  },
+  "reservations": {
+    "heading": "Tafelreserveringen",
+    "sub": {
+      "link": "Slimme tafelreserveringen!",
+      "rest": " Een geautomatiseerd systeem dat zelf bijhoudt welke tafels vrij zijn en rekening houdt met je planning."
+    },
+    "moreLabel": "Meer over reserveringen",
+    "demoLabel": "Demo: reserveringskalender",
+    "mockupAlt": "Tablet met een reserveringskalender: tafels per dag en tijdslot",
+    "bullets": [
+      {
+        "icon": "CalendarCheck",
+        "title": "Duidelijk reserveringsoverzicht",
+        "sub": "Een visuele planning per dag en per tafel — zie direct waar en wanneer er plek is"
+      },
+      {
+        "icon": "SlidersHorizontal",
+        "title": "Flexibele instellingen",
+        "sub": "Stel openingstijden, duur van een reservering en tafelfoto's in, en verzamel speciale wensen van gasten"
+      },
+      {
+        "icon": "Users",
+        "title": "Beheer de stroom gasten",
+        "sub": "Kies de reserveringsmethode die bij je past en houd volledige controle over de drukte"
+      }
+    ]
+  },
+  "orders": {
+    "heading": "Bestellingen opnemen aan tafel",
+    "sub": {
+      "link": "Bestellingen direct naar de keuken!",
+      "rest": " Een bestelling van de tafel of van de bediening staat direct op het keukenscherm — geen papieren bonnetjes, geen wachttijden."
+    },
+    "moreLabel": "Meer over bestellingen",
+    "demoLabel": "Demo: bestelscherm",
+    "mockupSrc": "/landing/feature-orders-modal.webp",
+    "mockupAlt": "Tablet met een openstaande bestelling: lijst met gerechten en acties — tafel wijzigen, rekening splitsen, korting toevoegen",
+    "bullets": [
+      {
+        "icon": "ShoppingCart",
+        "title": "Gast of bediening",
+        "sub": "Gasten bestellen aan tafel via een QR-code, de bediening via hun eigen telefoon of tablet"
+      },
+      {
+        "icon": "Map",
+        "title": "Plattegrond met statussen",
+        "sub": "Tafels op de plattegrond hebben een kleurcode per status — zie in één oogopslag wie op een bestelling wacht en waar je naartoe moet"
+      },
+      {
+        "icon": "Receipt",
+        "title": "Rekening splitsen",
+        "sub": "Splits een bestelling tussen gasten en sluit tafels af zonder gedoe bij het afrekenen"
+      }
+    ]
+  },
+  "kds": {
+    "heading": "Keukenscherm (KDS)",
+    "sub": {
+      "link": "Een keuken die synchroon loopt!",
+      "rest": " Bestellingen vanuit de zaak en het QR-menu verschijnen direct op het scherm van de kok — inclusief opmerkingen, allergenen en een timer."
+    },
+    "moreLabel": "Meer over KDS",
+    "demoLabel": "Demo: keukenscherm",
+    "mockupAlt": "Tablet met een keukenscherm: bestellingen per tafel in kolommen met statussen",
+    "bullets": [
+      {
+        "icon": "LayoutGrid",
+        "title": "Schermen per werkplek",
+        "sub": "Aparte tablets voor de warme kant, bar en patisserie — iedereen ziet alleen zijn eigen gerechten"
+      },
+      {
+        "icon": "Timer",
+        "title": "Statussen en timer",
+        "sub": "Kolommen voor in bereiding / klaar / geserveerd en de verstreken tijd per bestelling — pas de status aan met één tik"
+      },
+      {
+        "icon": "ShieldAlert",
+        "title": "Allergenen en opmerkingen",
+        "sub": "Allergenen en opmerkingen van gasten worden uitgelicht — zo mist de kok niets belangrijks"
+      }
+    ]
+  },
+  "bundle": {
+    "heading": "Alles waar je restaurant op draait.",
+    "headingAccent": "In één app.",
+    "sub": "Menu, keuken en reserveringen op één plek — modern, snel en gebouwd voor hoe het er in de horeca echt aan toe gaat. Geen extra kosten per functie."
+  },
+  "benefits": [
+    {
+      "icon": "Languages",
+      "tag": "Digitaal menu",
+      "title": "Een menu dat verkoopt.",
+      "bullets": [
+        "35 talen met AI",
+        "Premium design",
+        "Prijzen direct bijgewerkt"
+      ],
+      "image": "/landing/feature-design.webp",
+      "imageAlt": "Twee telefoons op een tafeltje in een café: het startscherm van het digitaal menu en een contactpagina met plattegrond"
+    },
+    {
+      "icon": "ChefHat",
+      "tag": "Keukenscherm",
+      "title": "Kook sneller zonder iets te missen.",
+      "bullets": [
+        "Direct op het scherm",
+        "Opmerkingen en allergenen",
+        "Tablet of telefoon"
+      ],
+      "image": "/landing/feature-kds-cards.webp",
+      "imageAlt": "Een tablet op de bar toont het keukenscherm met bestellingen per tafel"
+    },
+    {
+      "icon": "CalendarCheck",
+      "tag": "Reserveringen",
+      "title": "Reserveringen op de automatische piloot.",
+      "bullets": [
+        "Reserveren zonder bellen",
+        "Automatische bevestiging",
+        "Kalender per tafel"
+      ],
+      "image": "/landing/feature-booking-calendar.webp",
+      "imageAlt": "Twee tablets met de reserveringskalender: een dagoverzicht per tafel en een maandoverzicht"
+    },
+    {
+      "icon": "Receipt",
+      "tag": "Bestellingen aan tafel",
+      "title": "Bestellingen direct naar de keuken.",
+      "bullets": [
+        "Gast of bediening",
+        "Direct naar de keuken",
+        "Zet het aan wanneer je wilt"
+      ],
+      "image": "/landing/feature-orders-map.webp",
+      "imageAlt": "Tablet met het bestelscherm: een lijst met bestellingen en een plattegrond met kleurcodes voor de tafels."
+    }
+  ],
+  "seeDetails": "Meer informatie",
+  "platform": {
+    "hardwareTitle": "Gebruik je eigen hardware",
+    "hardwareSub": "Je hoeft bij ons geen apparatuur te kopen. Gebruik gewoon de telefoons, tablets en computers die je al hebt.",
+    "anywhereTitle": "Werkt overal",
+    "anywhereSub": "Telefoon, tablet, laptop, pc. Android, iOS, Windows, Mac, Linux. In elke moderne browser, zonder installatie."
+  },
+  "activities": {
+    "heading": "Eén systeem —",
+    "headingAccent": "je hele restaurant.",
+    "sub": "Snellere service, meer rust in de keuken, lagere kosten en gasten die terugkomen — allemaal in één platform.",
+    "groups": [
+      {
+        "icon": "Smartphone",
+        "tag": "Aan tafel — gast",
+        "bullets": [
+          "QR-menu in 35 talen",
+          "Bestellen zonder op de bediening te wachten",
+          "Bediening roepen of de rekening vragen",
+          "24/7 een tafel reserveren",
+          "Unieke QR-code voor elke tafel",
+          "Geen app nodig — opent in de browser",
+          "Allergenen en dieetwensen om te filteren"
+        ]
+      },
+      {
+        "icon": "ChefHat",
+        "tag": "In de keuken",
+        "bullets": [
+          "Bestellingen direct op het scherm",
+          "Kolommen voor in bereiding / klaar / geserveerd",
+          "Allergenen en opmerkingen uitgelicht",
+          "Tablet of telefoon — geen papieren bonnetjes"
+        ]
+      },
+      {
+        "icon": "ChartColumn",
+        "tag": "Management",
+        "bullets": [
+          "Menu en prijzen aanpassen — direct zichtbaar",
+          "AI-vertaling met één klik",
+          "Verkoopanalyses en rapportages",
+          "Meerdere restaurants in één account",
+          "AI digitaliseert een papieren menu in 60 seconden",
+          "Je eigen domeinnaam met SSL"
+        ]
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Het complete platform in 10 minuten. ",
+    "headingAccent": "14 dagen volledige toegang.",
+    "sub": "Menu, bestellingen, reserveringen en keuken — geen creditcard, altijd opzegbaar; gebruikt door {count} restaurants, je hebt alleen een e-mailadres nodig."
+  }
+}

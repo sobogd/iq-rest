@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
-import { locales } from '@/i18n/routing'
+import { locales } from '@/lib/locales'
 import { FEATURE_PAGES, HOME_META, PARTIAL_FEATURE_PAGES, type PageMeta } from '@/lib/page-meta'
-import { LOCALE_SLUG_OVERRIDES } from '@/lib/locale-slug-overrides'
+import { LOCALE_SLUG_OVERRIDES, localizedHref } from '@/lib/locale-slug-overrides'
 import { localeHome, localePath } from '@/lib/locale-paths'
 import { HELP_LOCALES } from '@/app/_landing/help/registry'
 
@@ -84,17 +84,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   })
 
-  // Help guide. Same slug ("help") across locales; rolled out per locale via
-  // the help registry (HELP_LOCALES). Emitted only for translated locales.
+  // Help guide. Localized slug per locale (e.g. /it/guida); rolled out per
+  // locale via the help registry (HELP_LOCALES). Emitted only for translated
+  // locales, using the same slug source of truth as the pages themselves.
   if (HELP_LOCALES.length > 0) {
     const languages: Record<string, string> = {}
     HELP_LOCALES.forEach((loc) => {
-      languages[loc] = `${baseUrl}${localePath(loc, 'help')}`
+      languages[loc] = `${baseUrl}${localizedHref('/help', loc)}`
     })
     languages['x-default'] = languages[HELP_LOCALES[0]]
     HELP_LOCALES.forEach((loc) => {
       sitemapEntries.push({
-        url: `${baseUrl}${localePath(loc, 'help')}`,
+        url: `${baseUrl}${localizedHref('/help', loc)}`,
         lastModified: new Date(),
         changeFrequency: 'monthly',
         priority: 0.5,

@@ -8,7 +8,7 @@
 //   - xx home  → https://iq-rest.com/<locale>
 //   - feature  → https://iq-rest.com[/<locale>]/<localized-slug>
 
-import { locales } from "@/i18n/routing";
+import { locales } from "@/lib/locales";
 import { LOCALE_SLUG_OVERRIDES } from "@/lib/locale-slug-overrides";
 import { localePath } from "@/lib/locale-paths";
 

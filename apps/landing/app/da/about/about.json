@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "Om IQ Rest — Hvem vi er, kontakt og juridiske oplysninger",
+    "description": "Hvem står bag IQ Rest, hvordan du kontakter os, og tjenesteudbyderens oplysninger: e-mail, WhatsApp, juridisk information.",
+    "canonical": "https://iq-rest.com/da/about",
+    "ogLocale": "da_DK",
+    "ogTitle": "Om IQ Rest",
+    "ogDescription": "Hvem står bag IQ Rest, supportkontakt og tjenesteudbyderens juridiske oplysninger."
+  },
+  "heading": "Fra vores egen café",
+  "headingAccent": "til en platform for restauranter",
+  "story": {
+    "photo": {
+      "src": "/contacts.webp"
+    },
+    "paragraphs": [
+      "I dag kører platformen hver dag på {count} steder — fra kaffebarer med fem borde til kæder på tværs af flere byer. Data gemmes på servere i Tyskland, og supportspørgsmål besvares personligt."
+    ],
+    "sign": "Bogdan Sokolov"
+  },
+  "facts": [
+    {
+      "value": "2022",
+      "label": "året platformen blev grundlagt"
+    },
+    {
+      "value": "{count}",
+      "label": "steder kører på IQ Rest"
+    },
+    {
+      "value": "15",
+      "label": "lande hvor vores kunder befinder sig"
+    }
+  ],
+  "waPrefill": "Hej, jeg har et spørgsmål om IQ Rest",
+  "contacts": [
+    {
+      "icon": "Mail",
+      "title": "E-mail",
+      "value": "support@iq-rest.com",
+      "href": "mailto:support@iq-rest.com",
+      "note": "Fakturaer, dokumenter, spørgsmål om data."
+    },
+    {
+      "icon": "MessageCircle",
+      "title": "WhatsApp",
+      "value": "+998 94 866 37 43",
+      "wa": true,
+      "note": "Vi viser dig en demo og hjælper med opsætningen."
+    },
+    {
+      "icon": "Clock",
+      "title": "Svartid",
+      "value": "Man–søn, 9:00–21:00 CET",
+      "note": "Vi svarer inden for et par timer."
+    }
+  ],
+  "legal": {
+    "rows": [
+      {
+        "label": "Tjenesteudbyder",
+        "value": "Bogdan Sokolov"
+      },
+      {
+        "label": "Selskabsform",
+        "value": "Autónomo (Spanien)"
+      },
+      {
+        "label": "CVR-nr. (NIF)",
+        "value": "ESZ1894474S"
+      },
+      {
+        "label": "Adresse",
+        "value": "Calle Boca del Río 2, 33010 Oviedo, Asturias, Spanien"
+      },
+      {
+        "label": "Domæne",
+        "value": "https://iq-rest.com"
+      },
+      {
+        "label": "Datahosting",
+        "value": "Hetzner Online GmbH, Nürnberg, Tyskland"
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Du har hørt vores historie. ",
+    "headingAccent": "Begynd at skrive din egen — 14 dage gratis.",
+    "sub": "Intet kort kræves, opsig når som helst. Ligesom {count} restauranter kan du regne med os. Du skal kun bruge en e-mail."
+  }
+}

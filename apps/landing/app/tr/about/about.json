@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "IQ Rest Hakkında — Biz Kimiz, İletişim ve Yasal Bilgiler",
+    "description": "IQ Rest'in arkasında kim var, bize nasıl ulaşabilirsiniz ve hizmet sağlayıcının detayları: e-posta, WhatsApp, yasal bilgiler.",
+    "canonical": "https://iq-rest.com/tr/about",
+    "ogLocale": "tr_TR",
+    "ogTitle": "IQ Rest Hakkında",
+    "ogDescription": "IQ Rest'in arkasında kim var, destek iletişim bilgileri ve hizmet sağlayıcının yasal detayları."
+  },
+  "heading": "Kendi kafemizden",
+  "headingAccent": "restoranlar için bir platforma",
+  "story": {
+    "photo": {
+      "src": "/contacts.webp"
+    },
+    "paragraphs": [
+      "Bugün platform her gün {count} mekanda çalışıyor — beş masalı kahve dükkanlarından birkaç şehre yayılmış zincirlere kadar. Veriler Almanya'daki sunucularda saklanıyor ve destek soruları bizzat yanıtlanıyor."
+    ],
+    "sign": "Bogdan Sokolov"
+  },
+  "facts": [
+    {
+      "value": "2022",
+      "label": "platformun kurulduğu yıl"
+    },
+    {
+      "value": "{count}",
+      "label": "IQ Rest kullanan mekan"
+    },
+    {
+      "value": "15",
+      "label": "müşterilerimizin bulunduğu ülke"
+    }
+  ],
+  "waPrefill": "Merhaba, IQ Rest hakkında bir sorum var",
+  "contacts": [
+    {
+      "icon": "Mail",
+      "title": "E-posta",
+      "value": "support@iq-rest.com",
+      "href": "mailto:support@iq-rest.com",
+      "note": "Faturalar, belgeler, veri soruları."
+    },
+    {
+      "icon": "MessageCircle",
+      "title": "WhatsApp",
+      "value": "+998 94 866 37 43",
+      "wa": true,
+      "note": "Size bir demo sunalım ve kuruluma yardımcı olalım."
+    },
+    {
+      "icon": "Clock",
+      "title": "Yanıt süresi",
+      "value": "Pzt–Paz, 09:00–21:00 CET",
+      "note": "Birkaç saat içinde yanıt veriyoruz."
+    }
+  ],
+  "legal": {
+    "rows": [
+      {
+        "label": "Hizmet sağlayıcı",
+        "value": "Bogdan Sokolov"
+      },
+      {
+        "label": "Hukuki statü",
+        "value": "Autónomo (España)"
+      },
+      {
+        "label": "Vergi No (NIF)",
+        "value": "ESZ1894474S"
+      },
+      {
+        "label": "Adres",
+        "value": "Calle Boca del Río 2, 33010 Oviedo, Asturias, España"
+      },
+      {
+        "label": "Alan adı",
+        "value": "https://iq-rest.com"
+      },
+      {
+        "label": "Veri barındırma",
+        "value": "Hetzner Online GmbH, Nuremberg, Germany"
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Bizim hikayemizi duydunuz. ",
+    "headingAccent": "Kendi hikayenizi yazmaya başlayın — 14 gün ücretsiz.",
+    "sub": "Kart gerekmez, istediğiniz zaman iptal edin. {count} restoran gibi siz de bize güvenebilirsiniz. Başlamak için sadece e-posta adresiniz yeterli."
+  }
+}

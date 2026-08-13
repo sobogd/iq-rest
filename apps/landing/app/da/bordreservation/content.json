@@ -1,0 +1,206 @@
+{
+  "locale": "da",
+  "slug": "bordreservation",
+  "trackPrefix": "l_bookings",
+  "meta": {
+    "title": "Bordbestilling 24/7 til restauranter | IQ Rest",
+    "description": "Bordbestilling 24/7 til din restaurant: gæsterne booker selv bord via QR-menuen eller hjemmesiden. Kalender pr. bord, automatiske bekræftelser og påmindelser. Ingen telefonopkald, ingen mistede gæster. 14 dage gratis.",
+    "canonical": "https://iq-rest.com/da/bordreservation",
+    "ogLocale": "da_DK",
+    "ogTitle": "Bordbestilling 24/7 — Gæsterne booker selv",
+    "ogDescription": "Gæsterne booker bord via QR-menuen eller hjemmesiden. Kalender, automatiske bekræftelser, påmindelser. Ikke en eneste gæst går tabt.",
+    "brandLine": "IQ Rest — Bordbestilling til restauranter"
+  },
+  "hero": {
+    "headline": "Bordbestilling 24/7,",
+    "cta": "Opsæt bordbestilling",
+    "sub": "Gæsterne booker 24/7 via QR-menuen eller et link. Kalender pr. bord, automatiske bekræftelser og påmindelser.",
+    "headlineAccent": "ingen telefonopkald",
+    "demoLabel": "Demo: reservationskalender",
+    "tablet": {
+      "src": "/landing/hero-card-reservation.webp",
+      "alt": "Tablet med en reservationskalender: månedsvisning og en liste over bookinger, der afventer bekræftelse"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restauranter"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Caféer"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barer"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hoteller"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzeriaer"
+    }
+  ],
+  "scan": {
+    "heading": "Lancér bordbestilling",
+    "headingAccent": "på 5 minutter.",
+    "sub": "Tilslut kalenderen, tilføj borde med fotos og siddepladser — gæsterne begynder at booke samme dag.",
+    "cta": "Aktivér bordbestilling"
+  },
+  "subFeatures": [
+    {
+      "icon": "CalendarPlus",
+      "eyebrow": "Bookingformular",
+      "heading": "Gæsterne booker selv — efter dato, tid og antal personer.",
+      "body": "Gæsten åbner QR-menuen eller et direkte link, vælger dato, tid og antal personer — og ser med det samme de ledige borde: med et foto, beskrivelse (terrasse, ved vinduet, sofa i baren) og kapacitet. En bekræftelse sendes automatisk via e-mail og WhatsApp.",
+      "bullets": [
+        "Valg af bord efter foto, beskrivelse og kapacitet.",
+        "Automatisk bekræftelse og en påmindelse en time før besøget.",
+        "En minimal formular: navn, telefon, antal personer."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-form.webp",
+        "alt": "En gæst booker et restaurantbord fra en telefon: vælger dato, tid, antal personer og bord"
+      }
+    },
+    {
+      "icon": "CalendarDays",
+      "eyebrow": "Reservationskalender",
+      "heading": "En kalender pr. dag og bord — alt er synligt på et sekund.",
+      "body": "Kontrolpanelet har en reservationskalender opdelt efter bord, dag, uge og måned. Ledige tider, optagede borde, bekræftede og afventende bookinger vises alle på én skærm. Fungerer på en tablet på gulvet og en bærbar på kontoret.",
+      "bullets": [
+        "Dags-, uge- og månedsvisninger.",
+        "Opdeling pr. bord: hvem, hvornår, hvor mange gæster.",
+        "Ombook, annullér eller bekræft en booking — med ét tryk fra din telefon."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-calendar.webp",
+        "alt": "Reservationskalenderen i IQ Rest-kontrolpanelet på to tablets: et dagligt gitter pr. bord og en månedlig kalender"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Hvad restauratører spørger om vedrørende bordbestilling i IQ Rest. Hvis dit spørgsmål ikke er på listen — skriv til os på WhatsApp.",
+    "items": [
+      {
+        "q": "Kan jeg vælge de dage og tidspunkter, hvor booking er tilgængelig?",
+        "a": "Ja. I kontrolpanelet kan du angive en tidsplan pr. ugedag: bookingtider og en pause mellem frokost og aften. Du kan også slå bordbestilling midlertidigt helt fra — gæsterne vil se, at online booking ikke er tilgængelig."
+      },
+      {
+        "q": "Kan jeg uploade et foto af hvert bord?",
+        "a": "Ja. Hvert bord har et foto, en kapacitet og en zone (terrasse, ved vinduet, bar). Gæsterne ser præcis, hvilket bord de reserverer, og træffer et informeret valg."
+      },
+      {
+        "q": "Kan jeg begrænse antallet af gæster pr. bord?",
+        "a": "Ja. Hvert bord har en fastsat kapacitet — systemet tilbyder kun gæsterne passende borde og blokerer et tomandsbord fra at blive booket af et selskab på seks."
+      },
+      {
+        "q": "Hvor svært er det at sætte bordbestilling op?",
+        "a": "Tre trin: tilføj borde med fotos og kapacitet, aktivér bookingtilstand i indstillingerne, og del linket eller QR-koden. Lanceringen tager 5–10 minutter."
+      },
+      {
+        "q": "Kan jeg indstille automatisk eller manuel bekræftelse af bookinger?",
+        "a": "Ja, tilstanden vælges i indstillingerne. Med automatisk bekræftelse bekræftes gæsten lige efter indsendelse af formularen. Med manuel vises anmodningen i panelet som \"afventer bekræftelse\" — en manager bekræfter eller afviser den. Manuel tilstand er praktisk, når der er få borde tilbage."
+      },
+      {
+        "q": "Tager I et gebyr pr. booking?",
+        "a": "Der er ingen gebyrer: bordbestilling er inkluderet i abonnementet — ingen procentdel fra gæsterne, ingen gebyrer pr. booking, ingen mellemmænd. En fast betaling og ubegrænsede bookinger."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Bordbestilling på 10 minutter. ",
+    "headingAccent": "14 dages fuld adgang.",
+    "sub": "Intet kort kræves, opsig når som helst. {count} restauranter letter byrden i receptionen med os. Du skal kun bruge en e-mail."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Gæsterne booker selv",
+      "sub": "Dato, tid og antal personer — fra QR-menuen eller et direkte link, på ethvert tidspunkt af døgnet. Systemet viser kun ledige tider.",
+      "bullets": [
+        {
+          "icon": "CalendarPlus",
+          "title": "Booking 24/7",
+          "sub": "Gæsterne booker om natten eller i weekenden — ingen opkald, ingen ventetid på svar"
+        },
+        {
+          "icon": "Users",
+          "title": "Et bord der passer til selskabet",
+          "sub": "Systemet vælger selv et passende bord ud fra kapacitet"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "En minimal formular",
+          "sub": "Navn, telefon og antal personer — formularen tager et halvt minut"
+        }
+      ]
+    },
+    {
+      "heading": "En kalender pr. dag og bord",
+      "sub": "Alle bookinger i én kalender: se hvad der er ledigt, hvad der er bekræftet, og hvem der kommer.",
+      "bullets": [
+        {
+          "icon": "CalendarDays",
+          "title": "Dag, uge, måned",
+          "sub": "Skift visninger og planlæg bordplanen på forhånd"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Opdeling pr. bord",
+          "sub": "Hvem, hvornår og for hvor mange gæster — for hvert bord"
+        },
+        {
+          "icon": "Smartphone",
+          "title": "Styr det fra din telefon",
+          "sub": "Ombook, annullér eller bekræft en booking — med ét tryk"
+        }
+      ]
+    },
+    {
+      "heading": "Tidsplan og tilstande",
+      "sub": "Indstil bookingtidsplanen pr. ugedag, varigheden og bekræftelsestilstanden.",
+      "bullets": [
+        {
+          "icon": "Clock",
+          "title": "Tidsplan pr. dag",
+          "sub": "Separate tider for hver ugedag, inklusiv en pause mellem frokost og aften"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Varighed",
+          "sub": "Indstil bookingintervallet, så det passer til dit steds format"
+        },
+        {
+          "icon": "CalendarCheck",
+          "title": "Automatisk eller manuelt",
+          "sub": "Bekræft hver booking selv, eller slå automatisk bekræftelse til"
+        }
+      ]
+    },
+    {
+      "heading": "Notifikationer uden manuelt arbejde",
+      "sub": "Systemet holder gæsten og dit team informeret — e-mail og reservationsskærmen opdateres med det samme.",
+      "bullets": [
+        {
+          "icon": "Mail",
+          "title": "E-mail til gæsten",
+          "sub": "En bookingbekræftelse sendes automatisk via e-mail"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Notifikation til restauranten",
+          "sub": "Ejerne får en e-mail om hver ny booking"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "En reservationsskærm ved indgangen",
+          "sub": "Værtens tablet viser nye bookinger i realtid"
+        }
+      ]
+    }
+  ]
+}

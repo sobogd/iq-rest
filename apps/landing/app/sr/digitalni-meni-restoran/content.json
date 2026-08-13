@@ -1,0 +1,332 @@
+{
+  "locale": "sr",
+  "slug": "digitalni-meni-restoran",
+  "trackPrefix": "l_digital",
+  "meta": {
+    "title": "Digitalni meni za restorane | IQ Rest",
+    "description": "Digitalni meni za vaš restoran: online meni sa slikama, alergenima, AI prevodom i ažuriranjem cena u realnom vremenu. 14 dana besplatno, bez kreditne kartice.",
+    "canonical": "https://iq-rest.com/sr/digitalni-meni-restoran",
+    "ogLocale": "sr_RS",
+    "ogTitle": "Digitalni meni za restorane",
+    "ogDescription": "Online verzija vašeg papirnog menija sa slikama, alergenima i AI prevodom. Cene se ažuriraju u realnom vremenu.",
+    "brandLine": "IQ Rest — Digitalni meni za restorane"
+  },
+  "hero": {
+    "headline": "Digitalni meni i sajt",
+    "headlineAccent": "za vaš restoran",
+    "cta": "Napravite digitalni meni",
+    "demoLabel": "Demo: meni kako ga gosti vide",
+    "sub": "Pokrenite za 10 minuta: primajte porudžbine sa stola, menjajte cene u hodu i dobijajte rezervacije direktno bez provizije.",
+    "phones": [
+      {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Telefon sa početnom stranicom sajta restorana: slike, rezervacije i pristup online meniju"
+      },
+      {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Telefon sa karticom jela: slika, cena i oznake alergena"
+      }
+    ]
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restorani"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kafići"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barovi"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hoteli"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Picerije"
+    }
+  ],
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Meni za 10 minuta",
+      "sub": "Bez programera i dugog podešavanja"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Brza podrška",
+      "sub": "Pomažemo vam da podesite meni u četu za par sati"
+    },
+    {
+      "icon": "Globe",
+      "title": "Bira nas {count} lokala",
+      "sub": "Digitalni meniji i sajtovi za restorane u 15+ zemalja"
+    },
+    {
+      "icon": "Palette",
+      "title": "Vaš domen i brend",
+      "sub": "Meni na vašoj adresi, a ne na deljenom kreatoru sajtova"
+    }
+  ],
+  "scan": {
+    "heading": "Imate papirni meni ili PDF?",
+    "headingAccent": "AI ga digitalizuje za 60 sekundi.",
+    "sub": "Otpremite sliku ili dokument — AI automatski prepoznaje kategorije, jela i cene.",
+    "cta": "Skeniraj meni"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "AI prevod",
+      "heading": "Meni na 35 jezika",
+      "body": "Jedan QR — 35 jezika. AI prevodi sa kulinarskim kontekstom, tako da jela zvuče prirodno. Turisti poručuju sa više sigurnosti.",
+      "bullets": [
+        "35 jezika uključeno u pretplatu",
+        "Kulinarski AI umesto Google-a",
+        "Promena jezika jednim dodirom"
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Dva gosta čitaju isti digitalni meni na različitim jezicima na svojim telefonima"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Alergeni",
+      "heading": "Alergeni i ishrana na svakom jelu",
+      "body": "Označite gluten, laktozu, orašaste plodove, veganske i bezglutenske opcije. Gosti filtriraju meni po svojim potrebama i poručuju bez brige.",
+      "bullets": [
+        "14 kategorija alergena",
+        "Oznake za vegansko i bez glutena",
+        "Filter menija po ograničenjima u ishrani"
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Gost filtrira meni po alergenima na telefonu dok vlasnik uređuje listu alergena na tabletu"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Dizajn i brend",
+      "heading": "Premium meni na vašem domenu",
+      "body": "Video pozadina na početnom ekranu, vaš dizajn i kontakt stranica sa mapom i društvenim mrežama — na vašem domenu, a ne PDF.",
+      "bullets": [
+        "Video pozadina i premium dizajn",
+        "Vaš sopstveni domen sa SSL-om",
+        "Kontakti, mapa, društvene mreže"
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Dva telefona na stolu u kafiću: početni ekran menija sa video pozadinom i kontakt stranica sa mapom"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Porudžbine",
+      "heading": "Online porudžbine bez provizije",
+      "body": "Gosti poručuju iz menija ili direktno na WhatsApp — porudžbina ide u salu ili kuhinju, 0% od vašeg prometa.",
+      "bullets": [
+        "Iz menija ili preko WhatsApp-a",
+        "U salu ili kuhinju, 0%",
+        "Uključuje se u podešavanjima"
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Dva telefona na stolu: korpa sa porudžbinom i potvrda uspešne porudžbine"
+      }
+    },
+    {
+      "icon": "CalendarCheck",
+      "eyebrow": "Rezervacije",
+      "heading": "Rezervacije stolova 24/7",
+      "body": "Gosti sami rezervišu sto preko menija ili linka, vi vidite kalendar po stolovima i potvrđujete automatski ili ručno.",
+      "bullets": [
+        "Gosti sami rezervišu",
+        "Kalendar za sve stolove",
+        "Automatska ili ručna potvrda"
+      ]
+    },
+    {
+      "icon": "MonitorSmartphone",
+      "eyebrow": "Menadžment",
+      "heading": "Upravljajte odakle god želite",
+      "body": "Admin panel radi u pregledaču — telefon, tablet ili PC. Ništa se ne instalira, spremno za rad za par minuta.",
+      "bullets": [
+        "Bilo koji uređaj, bilo koji pregledač",
+        "Ništa se ne instalira",
+        "Spremno za par minuta"
+      ]
+    }
+  ],
+  "faq": {
+    "sub": "Šta ugostitelji pitaju o digitalnom meniju u IQ Rest-u. Ako vaše pitanje nije na listi — pišite nam na WhatsApp.",
+    "items": [
+      {
+        "q": "Da li mi je potrebno tehničko znanje ili iskustvo sa CMS-om?",
+        "a": "Nisu potrebne posebne veštine. Sve u admin panelu zahteva par klikova — bez kodiranja, bez rada sa izvornim fajlovima. Dodavanje jela traje par sekundi: naziv, cena, slika. Kompletno podešavanje menija obično staje u 30–60 minuta."
+      },
+      {
+        "q": "Šta je IQ Rest digitalni meni?",
+        "a": "To je online verzija vašeg menija dostupna gostima preko QR koda ili direktnog linka: slike jela, cene, alergeni, AI prevod na 35 jezika i ažuriranja u realnom vremenu. Meni radi na našim serverima — nema softvera za instalaciju ili održavanje, dovoljan je pregledač."
+      },
+      {
+        "q": "Da li gosti moraju da imaju aplikaciju ili posebnu opremu?",
+        "a": "Gost usmeri kameru telefona na QR kod — meni se otvara u pregledaču, bez instalacije. Admin panel takođe radi u svakom modernom pregledaču: telefonu, tabletu ili laptopu. QR kodovi se štampaju na običnom kancelarijskom štampaču."
+      },
+      {
+        "q": "Mogu li da postavim meni na svoj domen?",
+        "a": "Da. Meni se povezuje sa vašim domenom uz SSL sertifikat — gosti vide adresu vašeg restorana, na primer meni.vasrestoran.rs. Naša podrška rešava podešavanje domena i sertifikata; potrebno je samo da obezbedite DNS zapis."
+      },
+      {
+        "q": "Mogu li da upravljam sa više restorana sa jednog naloga?",
+        "a": "Da. Dodajte lokale na jedan nalog: svaki ima svoj meni, dizajn, QR kodove i analitiku, a prebacivanje između njih se radi jednim klikom. Broj lokala zavisi od vaše pretplate."
+      },
+      {
+        "q": "Koliko je teško podesiti meni od nule?",
+        "a": "Tri koraka: napravite kategorije, dodajte jela sa cenama i slikama, odštampajte QR kodove za stolove. Ako imate papirni meni ili PDF, otpremite ga — AI prepoznaje kategorije, nazive i cene i automatski popunjava kartice. Osnovni meni se pokreće za 5 minuta; potpuno podešavanje zavisi od broja stavki."
+      },
+      {
+        "q": "Kakvu podršku pružate?",
+        "a": "Odgovaramo na WhatsApp-u i email-u tokom radnog vremena. Pomažemo oko početnog podešavanja, povezivanja domena i dizajna menija. Ako vam treba demo ili vođeno podešavanje — pišite nam."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Vaš meni online za 10 minuta. ",
+    "headingAccent": "14 dana punog pristupa.",
+    "sub": "Bez kartice, otkažite bilo kada. {count} restorana nam veruje sa svojim menijima i sajtovima. Potrebna vam je samo email adresa."
+  },
+  "spotlights": [
+    {
+      "heading": "Meni na 35 jezika",
+      "sub": "Gosti otvaraju meni na svom maternjem jeziku. AI prevodi nazive jela, opise, kategorije i opcije uzimajući u obzir kulinarski kontekst.",
+      "bullets": [
+        {
+          "icon": "Globe",
+          "title": "35 jezika u pretplati",
+          "sub": "Evropski i azijski jezici su uključeni — bez doplate po jeziku"
+        },
+        {
+          "icon": "Timer",
+          "title": "Prevedeno pri čuvanju",
+          "sub": "Dodajte ili izmenite jelo — prevodi na sve jezike menija su odmah spremni"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Ručne izmene su zaštićene",
+          "sub": "Prevod koji ručno ispravite je zaključan, i AI ga nikada ne prepisuje"
+        }
+      ]
+    },
+    {
+      "heading": "Alergeni i ishrana na svakom jelu",
+      "sub": "Dodajte oznake alergena i ishrane na karticu jela — gosti ih vide u meniju i filtriraju jela po svojim ograničenjima.",
+      "bullets": [
+        {
+          "icon": "WheatOff",
+          "title": "14 kategorija alergena",
+          "sub": "Kompletna lista po EU regulativi: gluten, orašasti plodovi, laktoza, plodovi mora i drugo"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "13 oznaka ishrane",
+          "sub": "Vegansko, vegetarijansko, bez glutena, halal, košer, ljuto i druge oznake"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Filter jednim dodirom",
+          "sub": "Gosti biraju svoja ograničenja — meni prikazuje samo odgovarajuća jela"
+        }
+      ]
+    },
+    {
+      "heading": "Premium meni na vašem domenu",
+      "sub": "Foto ili video pozadina na početnom ekranu, vaša boja brenda i logo — meni izgleda kao vaš sajt, a ne PDF, i radi na vašem domenu.",
+      "bullets": [
+        {
+          "icon": "Palette",
+          "title": "Dizajn u vašem brendu",
+          "sub": "Video ili slika na početnom ekranu, akcentna boja i logo — podesite bez dizajnera"
+        },
+        {
+          "icon": "Globe",
+          "title": "Vaš sopstveni domen sa SSL-om",
+          "sub": "Meni se otvara na vašoj adresi preko sigurne veze"
+        },
+        {
+          "icon": "Map",
+          "title": "Kontakti i mapa",
+          "sub": "Stranica sa vašom adresom, radnim vremenom, mapom i društvenim mrežama — kompletan sajt restorana"
+        }
+      ]
+    },
+    {
+      "heading": "Online porudžbine bez provizije",
+      "sub": "Gost poručuje sa stola — porudžbina se odmah pojavljuje u kontrolnoj tabli i na kuhinjskom ekranu. Platforma uzima 0% od vašeg prometa.",
+      "bullets": [
+        {
+          "icon": "ShoppingCart",
+          "title": "Iz menija ili preko WhatsApp-a",
+          "sub": "Porudžbina kroz sistem ili poruka na vaš WhatsApp — izaberite režim u podešavanjima"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Pravo u kuhinju",
+          "sub": "Nova porudžbina se pojavljuje na kuhinjskom ekranu i uređaju konobara bez odlaganja"
+        },
+        {
+          "icon": "Receipt",
+          "title": "0% provizije",
+          "sub": "Plaćanje ostaje između vas i gosta — platforma ne zadržava ništa od vaših porudžbina"
+        }
+      ]
+    },
+    {
+      "heading": "Rezervacije stolova 24/7",
+      "sub": "Gosti rezervišu sto direktno iz menija u bilo koje vreme. Sistem proverava zahtev u odnosu na vaš raspored i slobodne stolove.",
+      "bullets": [
+        {
+          "icon": "CalendarCheck",
+          "title": "Kalendar po stolovima",
+          "sub": "Sistem uparuje sto sa brojem gostiju i prikazuje rezervacije po danima i stolovima"
+        },
+        {
+          "icon": "CalendarDays",
+          "title": "Automatski ili ručno",
+          "sub": "Potvrdite svaku rezervaciju sami ili uključite automatsku potvrdu"
+        },
+        {
+          "icon": "Mail",
+          "title": "Emailovi za gosta i za vas",
+          "sub": "Gost dobija potvrdu na email, vlasnici dobijaju obaveštenje o novoj rezervaciji"
+        }
+      ]
+    },
+    {
+      "heading": "Upravljajte odakle god želite",
+      "sub": "Kontrolna tabla radi u pregledaču na telefonu, tabletu ili računaru. Izmene se gostima prikazuju odmah.",
+      "bullets": [
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Bilo koji uređaj",
+          "sub": "Telefon, tablet ili PC — dovoljan je pregledač, bez instalacije"
+        },
+        {
+          "icon": "Timer",
+          "title": "Izmene u hodu",
+          "sub": "Promena cene, stop-lista ili skriveno jelo primenjuju se odmah, bez objavljivanja ili čekanja"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Opcije jela",
+          "sub": "Veličine, dodaci i varijante sa cenom — gosti sami sastavljaju svoje jelo"
+        }
+      ]
+    }
+  ],
+  "hideFeatureHeading": true
+}

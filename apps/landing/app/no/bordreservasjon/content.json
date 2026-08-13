@@ -1,0 +1,206 @@
+{
+  "locale": "no",
+  "slug": "bordreservasjon",
+  "trackPrefix": "l_bookings",
+  "meta": {
+    "title": "Bordbestilling 24/7 for restauranter | IQ Rest",
+    "description": "Bordbestilling 24/7 for restauranten din: gjestene booker bord selv via QR-menyen eller nettsiden. Kalender per bord, automatiske bekreftelser og påminnelser. Ingen telefoner, ingen tapte gjester. 14 dager gratis.",
+    "canonical": "https://iq-rest.com/no/bordreservasjon",
+    "ogLocale": "nb_NO",
+    "ogTitle": "Bordbestilling 24/7 — Gjestene booker selv",
+    "ogDescription": "Gjestene booker bord via QR-menyen eller nettsiden. Kalender, automatiske bekreftelser, påminnelser. Ikke en eneste gjest går tapt.",
+    "brandLine": "IQ Rest — Bordbestilling for restauranter"
+  },
+  "hero": {
+    "headline": "Bordbestilling 24/7,",
+    "cta": "Sett opp bordbestilling",
+    "sub": "Gjestene bestiller 24/7 via QR-menyen eller en lenke. Kalender per bord, automatiske bekreftelser og påminnelser.",
+    "headlineAccent": "ingen telefoner",
+    "demoLabel": "Demo: reservasjonskalender",
+    "tablet": {
+      "src": "/landing/hero-card-reservation.webp",
+      "alt": "Nettbrett med reservasjonskalender: månedsvisning og en liste over bestillinger som venter på bekreftelse"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restauranter"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kafeer"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barer"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hoteller"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzeriaer"
+    }
+  ],
+  "scan": {
+    "heading": "Lanser bordbestilling",
+    "headingAccent": "på 5 minutter.",
+    "sub": "Koble til kalenderen, legg til bord med bilder og kapasitet — gjestene begynner å booke samme dag.",
+    "cta": "Aktiver bordbestilling"
+  },
+  "subFeatures": [
+    {
+      "icon": "CalendarPlus",
+      "eyebrow": "Bestillingsskjema",
+      "heading": "Gjestene bestiller selv — etter dato, tid og antall personer.",
+      "body": "Gjesten åpner QR-menyen eller en direkte lenke, velger dato, tid og antall personer — og ser umiddelbart ledige bord: med bilde, beskrivelse (terrasse, ved vinduet, sofa i baren) og kapasitet. En bekreftelse sendes automatisk på e-post og WhatsApp.",
+      "bullets": [
+        "Valg av bord etter bilde, beskrivelse og kapasitet.",
+        "Automatisk bekreftelse og en påminnelse en time før besøket.",
+        "Et enkelt skjema: navn, telefon, antall personer."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-form.webp",
+        "alt": "En gjest booker et restaurantbord fra mobilen: velger dato, tid, antall personer og bord"
+      }
+    },
+    {
+      "icon": "CalendarDays",
+      "eyebrow": "Reservasjonskalender",
+      "heading": "En kalender per dag og bord — full oversikt på et sekund.",
+      "body": "Kontrollpanelet har en reservasjonskalender delt inn etter bord, dag, uke og måned. Ledige tider, opptatte bord, bekreftede og ventende bestillinger vises på én skjerm. Fungerer på et nettbrett på gulvet og en bærbar PC på kontoret.",
+      "bullets": [
+        "Dags-, ukes- og månedsvisning.",
+        "Oversikt per bord: hvem, når, hvor mange gjester.",
+        "Flytt, avlys eller bekreft en bestilling — med ett trykk fra mobilen."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-calendar.webp",
+        "alt": "Reservasjonskalenderen i IQ Rest-kontrollpanelet på to nettbrett: en daglig oversikt per bord og en månedskalender"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Det restaurantdrivere spør om når det gjelder bordbestilling i IQ Rest. Finner du ikke spørsmålet ditt — send oss en melding på WhatsApp.",
+    "items": [
+      {
+        "q": "Kan jeg velge hvilke dager og tider bestilling er tilgjengelig?",
+        "a": "Ja. I kontrollpanelet kan du sette opp en timeplan per ukedag: åpningstider for bestilling og en pause mellom lunsj og middag. Du kan også slå av reservasjoner midlertidig — gjestene vil se at bestilling på nett ikke er tilgjengelig."
+      },
+      {
+        "q": "Kan jeg laste opp et bilde av hvert bord?",
+        "a": "Ja. Hvert bord har et bilde, en kapasitet og en sone (terrasse, ved vinduet, bar). Gjestene ser nøyaktig hvilket bord de reserverer og tar et informert valg."
+      },
+      {
+        "q": "Kan jeg begrense antall gjester per bord?",
+        "a": "Ja. Hvert bord har en fastsatt kapasitet — systemet tilbyr gjestene bare bord som passer, og forhindrer at et tomannsbord blir booket av et selskap på seks."
+      },
+      {
+        "q": "Hvor vanskelig er det å sette opp bordbestilling?",
+        "a": "Tre trinn: legg til bord med bilder og kapasitet, slå på bookingmodus i innstillingene, og del lenken eller QR-koden. Lanseringen tar 5–10 minutter."
+      },
+      {
+        "q": "Kan jeg velge automatisk eller manuell bekreftelse?",
+        "a": "Ja, modusen velges i innstillingene. Med automatisk bekreftelse får gjesten bekreftelse rett etter at skjemaet er sendt inn. Med manuell bekreftelse dukker forespørselen opp i panelet som \"venter på bekreftelse\" — en leder bekrefter eller avslår den. Manuell modus er praktisk når det er få bord igjen."
+      },
+      {
+        "q": "Tar dere et gebyr per bestilling?",
+        "a": "Det er ingen gebyrer: bordbestilling er inkludert i abonnementet — ingen prosentandel fra gjestene, ingen gebyrer per reservasjon, ingen mellomledd. En fast betaling og ubegrenset antall bestillinger."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Bordbestilling på 10 minutter. ",
+    "headingAccent": "14 dager med full tilgang.",
+    "sub": "Krever ikke kort, avbryt når som helst. {count} restauranter sparer tid i døra med oss. Alt du trenger er en e-postadresse."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Gjestene bestiller selv",
+      "sub": "Dato, tid og antall personer — fra QR-menyen eller en direkte lenke, når som helst på døgnet. Systemet viser bare ledige tider.",
+      "bullets": [
+        {
+          "icon": "CalendarPlus",
+          "title": "Bestilling 24/7",
+          "sub": "Gjestene booker om natten eller i helgen — ingen telefoner, ingen venting på svar"
+        },
+        {
+          "icon": "Users",
+          "title": "Et bord tilpasset antall personer",
+          "sub": "Systemet velger selv et passende bord basert på kapasitet"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Et enkelt skjema",
+          "sub": "Navn, telefon og antall personer — skjemaet tar et halvt minutt"
+        }
+      ]
+    },
+    {
+      "heading": "En kalender per dag og bord",
+      "sub": "Alle bestillinger i én kalender: se hva som er ledig, hva som er bekreftet og hvem som kommer.",
+      "bullets": [
+        {
+          "icon": "CalendarDays",
+          "title": "Dag, uke, måned",
+          "sub": "Bytt visning og planlegg bordplasseringen på forhånd"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Oversikt per bord",
+          "sub": "Hvem, når og for hvor mange gjester — for hvert bord"
+        },
+        {
+          "icon": "Smartphone",
+          "title": "Administrer fra mobilen",
+          "sub": "Flytt, avlys eller bekreft en bestilling — med ett trykk"
+        }
+      ]
+    },
+    {
+      "heading": "Timeplan og moduser",
+      "sub": "Sett opp timeplanen for bestilling per ukedag, varighet på reservasjonen og bekreftelsesmodus.",
+      "bullets": [
+        {
+          "icon": "Clock",
+          "title": "Timeplan per dag",
+          "sub": "Egne åpningstider for hver ukedag, inkludert en pause mellom lunsj og middag"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Varighet på reservasjon",
+          "sub": "Sett tidsintervallet slik at det passer stedets format"
+        },
+        {
+          "icon": "CalendarCheck",
+          "title": "Automatisk eller manuelt",
+          "sub": "Bekreft hver bestilling selv eller slå på automatisk bekreftelse"
+        }
+      ]
+    },
+    {
+      "heading": "Varsler uten manuelt arbeid",
+      "sub": "Systemet holder gjesten og teamet ditt oppdatert — e-post og reservasjonskjermen oppdateres umiddelbart.",
+      "bullets": [
+        {
+          "icon": "Mail",
+          "title": "E-post til gjesten",
+          "sub": "En bekreftelse sendes automatisk på e-post"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Varsel til restauranten",
+          "sub": "Eierne får en e-post om hver nye bestilling"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "En reservasjonskjerm ved inngangen",
+          "sub": "Nettbrettet i døra viser nye bestillinger i sanntid"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,289 @@
+{
+  "heroV2": {
+    "verticals": [
+      {
+        "icon": "restaurant",
+        "label": "Restaurante"
+      },
+      {
+        "icon": "cafe",
+        "label": "Cafenele"
+      },
+      {
+        "icon": "bar",
+        "label": "Baruri"
+      },
+      {
+        "icon": "hotel",
+        "label": "Hoteluri"
+      },
+      {
+        "icon": "pizza",
+        "label": "Pizzerii"
+      }
+    ],
+    "title": "Tot ce are nevoie",
+    "titleAccent": "restaurantul tău!",
+    "sub": "Configurează-ți fluxul de lucru în 10 minute: lansează un meniu online, organizează bucătăria și gestionează rezervările.",
+    "primaryLabel": "Începe gratuit",
+    "demoLabel": "Vezi meniul demo",
+    "mockups": {
+      "kds": {
+        "src": "/landing/hero-card-kds.webp",
+        "alt": "Tabletă cu ecran KDS pentru bucătărie: comenzi pe mese în coloane cu statusuri"
+      },
+      "reservations": {
+        "src": "/landing/hero-card-reservation.webp",
+        "alt": "Tabletă cu calendar de rezervări: vizualizare lunară și o listă de rezervări care așteaptă confirmarea"
+      },
+      "phone1": {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Telefon cu pagina principală a site-ului unui restaurant: fotografii, rezervări și acces la meniul online"
+      },
+      "phone2": {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Telefon cu pagina unui preparat: fotografie, preț și etichete pentru alergeni"
+      }
+    }
+  },
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Gata în 10 minute",
+      "sub": "Fără echipamente scumpe și fără configurări complicate"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Suport rapid",
+      "sub": "Răspundem pe chat în câteva ore"
+    },
+    {
+      "icon": "Globe",
+      "title": "Ales de {count} locații",
+      "sub": "Folosit de restaurante și cafenele din 15+ țări"
+    },
+    {
+      "icon": "Palette",
+      "title": "100% pe brandul tău",
+      "sub": "Adaptăm designul și interfața la stilul locației tale"
+    }
+  ],
+  "menu": {
+    "heading": "Site web și meniu digital",
+    "sub": {
+      "link": "Mai mult decât un meniu QR!",
+      "rest": " Primești un site complet cu design unic, date de contact și rezervări de mese."
+    },
+    "moreLabel": "Mai multe despre meniu",
+    "demoLabel": "Demo: meniul văzut de oaspeți",
+    "mockupAlt": "Telefon cu site-ul unui restaurant și telefon cu pagina unui preparat",
+    "bullets": [
+      {
+        "icon": "Languages",
+        "title": "Traducere automată în 35 de limbi",
+        "sub": "Servește oaspeții străini fără bariere lingvistice — traducerea automată rezolvă totul"
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "Comenzi direct de la masă",
+        "sub": "Simplifică fluxul — preia comenzile de la mese rapid, fără să fie nevoie de ospătar"
+      },
+      {
+        "icon": "WheatOff",
+        "title": "Alergeni și diete",
+        "sub": "Etichetează alergenii și preferințele alimentare (vegan, picant) ca oaspeții să aleagă mai ușor și mai sigur"
+      }
+    ]
+  },
+  "reservations": {
+    "heading": "Rezervări mese",
+    "sub": {
+      "link": "Rezervări inteligente!",
+      "rest": " Un sistem automat de rezervări care ține evidența meselor libere și a programului tău."
+    },
+    "moreLabel": "Mai multe despre rezervări",
+    "demoLabel": "Demo: calendarul de rezervări",
+    "mockupAlt": "Tabletă cu calendar de rezervări: mese pe zile și intervale orare",
+    "bullets": [
+      {
+        "icon": "CalendarCheck",
+        "title": "Hartă clară a rezervărilor",
+        "sub": "Un program vizual pe zile și mese — vezi instantaneu unde și când ai locuri libere"
+      },
+      {
+        "icon": "SlidersHorizontal",
+        "title": "Configurare flexibilă",
+        "sub": "Setează programul, durata rezervării și fotografiile meselor, și colectează cerințele oaspeților"
+      },
+      {
+        "icon": "Users",
+        "title": "Gestionarea fluxului de clienți",
+        "sub": "Alege modul de rezervare care ți se potrivește și păstrează controlul total asupra sălii"
+      }
+    ]
+  },
+  "orders": {
+    "heading": "Preluarea comenzilor la masă",
+    "sub": {
+      "link": "Comenzi direct în bucătărie!",
+      "rest": " O comandă de la masă sau de la ospătar ajunge instantaneu pe ecranul din bucătărie — fără bonuri de hârtie, fără așteptare."
+    },
+    "moreLabel": "Mai multe despre comenzi",
+    "demoLabel": "Demo: ecranul de comenzi",
+    "mockupSrc": "/landing/feature-orders-modal.webp",
+    "mockupAlt": "Tabletă cu o comandă deschisă: lista de preparate și acțiuni — schimbă masa, împarte nota, adaugă reducere",
+    "bullets": [
+      {
+        "icon": "ShoppingCart",
+        "title": "Oaspete sau ospătar",
+        "sub": "Oaspeții comandă de la masă prin codul QR, ospătarii de pe telefon sau tabletă"
+      },
+      {
+        "icon": "Map",
+        "title": "Harta meselor cu statusuri",
+        "sub": "Mesele de pe hartă sunt colorate în funcție de status — vezi dintr-o privire cine așteaptă comanda și unde trebuie să mergi"
+      },
+      {
+        "icon": "Receipt",
+        "title": "Împărțirea notei de plată",
+        "sub": "Împarte comanda între oaspeți și închide mesele fără încurcături la plată"
+      }
+    ]
+  },
+  "kds": {
+    "heading": "Sistem KDS pentru bucătărie",
+    "sub": {
+      "link": "O bucătărie sincronizată!",
+      "rest": " Comenzile din sală și din meniul QR apar instantaneu pe ecranul bucătarului — cu mențiuni, alergeni și cronometru."
+    },
+    "moreLabel": "Mai multe despre KDS",
+    "demoLabel": "Demo: ecranul din bucătărie",
+    "mockupAlt": "Tabletă cu ecran KDS: comenzi pe mese în coloane cu statusuri",
+    "bullets": [
+      {
+        "icon": "LayoutGrid",
+        "title": "Ecrane pe secții",
+        "sub": "Tablete separate pentru secția caldă, bar și cofetărie — fiecare vede doar preparatele sale"
+      },
+      {
+        "icon": "Timer",
+        "title": "Statusuri și cronometru",
+        "sub": "Coloane pentru În lucru / Gata / Servit și timpul scurs per comandă — schimbi statusul dintr-o atingere"
+      },
+      {
+        "icon": "ShieldAlert",
+        "title": "Alergeni și comentarii",
+        "sub": "Alergenii și mențiunile oaspeților sunt evidențiate — bucătarul nu va rata nimic important"
+      }
+    ]
+  },
+  "bundle": {
+    "heading": "Tot ce face restaurantul tău să funcționeze.",
+    "headingAccent": "Într-o singură aplicație.",
+    "sub": "Meniu, bucătărie și rezervări într-un singur loc — modern, rapid și gândit pentru modul în care lucrează restaurantele. Fără taxe ascunse sau prețuri pe funcționalitate."
+  },
+  "benefits": [
+    {
+      "icon": "Languages",
+      "tag": "Meniu digital",
+      "title": "Un meniu care vinde.",
+      "bullets": [
+        "35 de limbi cu AI",
+        "Design premium",
+        "Prețurile se actualizează instant"
+      ],
+      "image": "/landing/feature-design.webp",
+      "imageAlt": "Două telefoane pe o masă de cafenea: ecranul de pornire al meniului digital și pagina de contact cu hartă"
+    },
+    {
+      "icon": "ChefHat",
+      "tag": "Ecran pentru bucătărie",
+      "title": "Gătești mai repede fără să ratezi nimic.",
+      "bullets": [
+        "Direct pe ecran",
+        "Mențiuni și alergeni",
+        "Tabletă sau telefon"
+      ],
+      "image": "/landing/feature-kds-cards.webp",
+      "imageAlt": "O tabletă pe bar afișează ecranul KDS cu comenzile pe mese"
+    },
+    {
+      "icon": "CalendarCheck",
+      "tag": "Rezervări",
+      "title": "Rezervări pe pilot automat.",
+      "bullets": [
+        "Rezervare fără telefoane",
+        "Confirmare automată",
+        "Calendar pe mese"
+      ],
+      "image": "/landing/feature-booking-calendar.webp",
+      "imageAlt": "Două tablete cu calendarul de rezervări: vizualizare zilnică pe mese și vizualizare lunară"
+    },
+    {
+      "icon": "Receipt",
+      "tag": "Comenzi la masă",
+      "title": "Comenzi direct în bucătărie.",
+      "bullets": [
+        "Oaspete sau ospătar",
+        "Direct în bucătărie",
+        "Activezi când vrei"
+      ],
+      "image": "/landing/feature-orders-map.webp",
+      "imageAlt": "Tabletă cu ecranul de comenzi: o listă de comenzi și harta meselor colorată după status."
+    }
+  ],
+  "seeDetails": "Află mai multe",
+  "platform": {
+    "hardwareTitle": "Folosește propriile echipamente",
+    "hardwareSub": "Nu te obligăm să cumperi hardware de la noi. Folosește telefoanele, tabletele și computerele pe care le ai deja.",
+    "anywhereTitle": "Funcționează oriunde",
+    "anywhereSub": "Telefon, tabletă, laptop, PC. Android, iOS, Windows, Mac, Linux. În orice browser modern, fără instalare."
+  },
+  "activities": {
+    "heading": "Un singur sistem —",
+    "headingAccent": "pentru tot restaurantul.",
+    "sub": "Servire mai rapidă, o bucătărie mai liniștită, costuri reduse și oaspeți care revin — totul într-o singură platformă.",
+    "groups": [
+      {
+        "icon": "Smartphone",
+        "tag": "La masă — oaspete",
+        "bullets": [
+          "Meniu QR în 35 de limbi",
+          "Comandă fără să aștepte ospătarul",
+          "Cheamă ospătarul sau cere nota",
+          "Rezervare masă 24/7",
+          "Cod QR unic pentru fiecare masă",
+          "Fără aplicație — se deschide în browser",
+          "Etichete pentru alergeni și diete pentru filtrare"
+        ]
+      },
+      {
+        "icon": "ChefHat",
+        "tag": "În bucătărie",
+        "bullets": [
+          "Comenzi pe ecran instantaneu",
+          "Coloane În lucru / Gata / Servit",
+          "Alergeni și comentarii evidențiate",
+          "Tabletă sau telefon — fără bonuri de hârtie"
+        ]
+      },
+      {
+        "icon": "ChartColumn",
+        "tag": "Management",
+        "bullets": [
+          "Modificări de meniu și prețuri — instant",
+          "Traducere AI cu un click",
+          "Analiză vânzări și rapoarte",
+          "Mai multe locații într-un singur cont",
+          "AI-ul digitalizează meniul tipărit în 60 de secunde",
+          "Domeniu propriu cu certificat SSL"
+        ]
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Toată platforma în 10 minute. ",
+    "headingAccent": "14 zile de acces complet.",
+    "sub": "Meniu, comenzi, rezervări și bucătărie — fără card, anulezi oricând; folosit de {count} restaurante, ai nevoie doar de o adresă de email."
+  }
+}

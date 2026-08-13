@@ -1,0 +1,289 @@
+{
+  "heroV2": {
+    "verticals": [
+      {
+        "icon": "restaurant",
+        "label": "Restaurants"
+      },
+      {
+        "icon": "cafe",
+        "label": "Cafeteries"
+      },
+      {
+        "icon": "bar",
+        "label": "Bars"
+      },
+      {
+        "icon": "hotel",
+        "label": "Hotels"
+      },
+      {
+        "icon": "pizza",
+        "label": "Pizzeries"
+      }
+    ],
+    "title": "Tot el que el teu restaurant",
+    "titleAccent": "necessita",
+    "sub": "Configura l'operativa en 10 minuts: llança la carta online, organitza la cuina i gestiona les taules.",
+    "primaryLabel": "Comença gratis",
+    "demoLabel": "Veure carta de prova",
+    "mockups": {
+      "kds": {
+        "src": "/landing/hero-card-kds.webp",
+        "alt": "Tauleta amb una pantalla de cuina: comandes per taula en columnes amb estats"
+      },
+      "reservations": {
+        "src": "/landing/hero-card-reservation.webp",
+        "alt": "Tauleta amb un calendari de reserves: vista mensual i llista de reserves pendents de confirmació"
+      },
+      "phone1": {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Mòbil amb la pàgina principal del web d'un restaurant: fotos, reserves i accés a la carta online"
+      },
+      "phone2": {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Mòbil amb la fitxa d'un plat: foto, preu i etiquetes d'al·lèrgens"
+      }
+    }
+  },
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "En marxa en 10 minuts",
+      "sub": "Sense comprar equips cars ni configuracions llargues"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Suport ràpid",
+      "sub": "Responem pel xat en qüestió d'hores"
+    },
+    {
+      "icon": "Globe",
+      "title": "Escollit per {count} locals",
+      "sub": "Restaurants i cafeteries de més de 15 països confien en nosaltres"
+    },
+    {
+      "icon": "Palette",
+      "title": "100% la teva marca",
+      "sub": "Adaptem el disseny i la interfície a l'estil del teu local"
+    }
+  ],
+  "menu": {
+    "heading": "Web i carta digital",
+    "sub": {
+      "link": "Més que una carta QR.",
+      "rest": " Aconsegueix un web complet amb un disseny únic, dades de contacte i reserva de taules."
+    },
+    "moreLabel": "Més sobre la carta",
+    "demoLabel": "Demo: la carta tal com la veuen els clients",
+    "mockupAlt": "Mòbil amb la pàgina principal del web d'un restaurant i mòbil amb la fitxa d'un plat",
+    "bullets": [
+      {
+        "icon": "Languages",
+        "title": "Traducció automàtica a 35 idiomes",
+        "sub": "Atén clients internacionals sense barreres idiomàtiques: la traducció automàtica s'encarrega de tot"
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "Comandes directes des de la taula",
+        "sub": "Simplifica l'operativa: rep comandes des de les taules ràpidament, sense necessitat de cambrer"
+      },
+      {
+        "icon": "WheatOff",
+        "title": "Al·lèrgens i dietes",
+        "sub": "Marca els al·lèrgens i preferències dietètiques (vegà, picant) perquè els clients triïn amb més facilitat i seguretat"
+      }
+    ]
+  },
+  "reservations": {
+    "heading": "Reserva de taules",
+    "sub": {
+      "link": "Reserves intel·ligents.",
+      "rest": " Un sistema de reserves automatitzat que controla les taules lliures i els teus horaris per si sol."
+    },
+    "moreLabel": "Més sobre les reserves",
+    "demoLabel": "Demo: calendari de reserves",
+    "mockupAlt": "Tauleta amb un calendari de reserves: taules per dia i franja horària",
+    "bullets": [
+      {
+        "icon": "CalendarCheck",
+        "title": "Mapa de reserves clar",
+        "sub": "Un horari visual per dia i taula: veuràs a l'instant on i quan hi ha lloc"
+      },
+      {
+        "icon": "SlidersHorizontal",
+        "title": "Configuració flexible",
+        "sub": "Ajusta els horaris d'obertura, la durada dels torns i les fotos de les taules, i recull les peticions dels clients"
+      },
+      {
+        "icon": "Users",
+        "title": "Gestió del flux de clients",
+        "sub": "Tria el mode de reserva que millor s'adapti a tu i mantén el control total del flux de comensals"
+      }
+    ]
+  },
+  "orders": {
+    "heading": "Presa de comandes a taula",
+    "sub": {
+      "link": "Comandes directes a cuina.",
+      "rest": " Una comanda des de la taula o del cambrer arriba a la pantalla de cuina a l'instant: sense tiquets de paper ni esperes."
+    },
+    "moreLabel": "Més sobre les comandes",
+    "demoLabel": "Demo: pantalla de comandes",
+    "mockupSrc": "/landing/feature-orders-modal.webp",
+    "mockupAlt": "Tauleta amb una comanda oberta: llista de plats i accions de la comanda (canviar taula, dividir compte, afegir descompte)",
+    "bullets": [
+      {
+        "icon": "ShoppingCart",
+        "title": "Client o cambrer",
+        "sub": "Els clients demanen des de la taula via codi QR; els cambrers, des del seu mòbil o tauleta"
+      },
+      {
+        "icon": "Map",
+        "title": "Plànol de sala amb estats",
+        "sub": "Les taules del plànol tenen colors segons el seu estat: veuràs d'un cop d'ull qui espera una comanda i on has d'anar"
+      },
+      {
+        "icon": "Receipt",
+        "title": "Dividir el compte",
+        "sub": "Divideix una comanda entre els comensals i tanca taules sense embolics a l'hora de pagar"
+      }
+    ]
+  },
+  "kds": {
+    "heading": "Pantalla de cuina (KDS)",
+    "sub": {
+      "link": "Una cuina sincronitzada.",
+      "rest": " Les comandes de la sala i de la carta QR apareixen a la pantalla del cuiner a l'instant, amb notes, al·lèrgens i un temporitzador."
+    },
+    "moreLabel": "Més sobre el KDS",
+    "demoLabel": "Demo: pantalla de cuina",
+    "mockupAlt": "Tauleta amb una pantalla de cuina: comandes per taula en columnes amb estats",
+    "bullets": [
+      {
+        "icon": "LayoutGrid",
+        "title": "Pantalles per partida",
+        "sub": "Tauletes separades per a la partida de calents, la barra i les postres: cadascú veu només els seus plats"
+      },
+      {
+        "icon": "Timer",
+        "title": "Estats i temporitzador",
+        "sub": "Columnes de Pendent / A cuina / Llest i temps transcorregut per comanda: l'estat canvia amb un sol toc"
+      },
+      {
+        "icon": "ShieldAlert",
+        "title": "Al·lèrgens i comentaris",
+        "sub": "Els avisos d'al·lèrgens i les notes dels clients queden ressaltats: al cuiner no se li escaparà cap detall important"
+      }
+    ]
+  },
+  "bundle": {
+    "heading": "Tot el que fa funcionar el teu restaurant.",
+    "headingAccent": "En una sola app.",
+    "sub": "Carta, cuina i reserves en un sol lloc: modern, ràpid i pensat per a com treballen els restaurants de veritat. Sense quotes addicionals ni preus per funcionalitat."
+  },
+  "benefits": [
+    {
+      "icon": "Languages",
+      "tag": "Carta digital",
+      "title": "Una carta que ven.",
+      "bullets": [
+        "35 idiomes amb IA",
+        "Disseny prèmium",
+        "Els preus s'actualitzen a l'instant"
+      ],
+      "image": "/landing/feature-design.webp",
+      "imageAlt": "Dos mòbils sobre la taula d'una cafeteria: la pantalla de benvinguda de la carta digital i la pàgina de contacte amb un mapa"
+    },
+    {
+      "icon": "ChefHat",
+      "tag": "Pantalla de cuina",
+      "title": "Cuina més ràpid sense oblidar res.",
+      "bullets": [
+        "Directe a la pantalla",
+        "Notes i al·lèrgens",
+        "Tauleta o mòbil"
+      ],
+      "image": "/landing/feature-kds-cards.webp",
+      "imageAlt": "Una tauleta a la barra mostra la pantalla de cuina amb les comandes per taula"
+    },
+    {
+      "icon": "CalendarCheck",
+      "tag": "Reserves",
+      "title": "Reserves en pilot automàtic.",
+      "bullets": [
+        "Reserves sense trucades",
+        "Confirmació automàtica",
+        "Calendari per taula"
+      ],
+      "image": "/landing/feature-booking-calendar.webp",
+      "imageAlt": "Dues tauletes mostren el calendari de reserves: una vista diària per taula i una vista mensual"
+    },
+    {
+      "icon": "Receipt",
+      "tag": "Comandes a taula",
+      "title": "Comandes directes a cuina.",
+      "bullets": [
+        "Client o cambrer",
+        "Directe a cuina",
+        "Activa-ho quan vulguis"
+      ],
+      "image": "/landing/feature-orders-map.webp",
+      "imageAlt": "Tauleta amb la pantalla de comandes: una llista de comandes i un plànol de sala amb les taules per colors."
+    }
+  ],
+  "seeDetails": "Més informació",
+  "platform": {
+    "hardwareTitle": "Fes-ho servir amb els teus propis dispositius",
+    "hardwareSub": "No t'obliguem a comprar-nos cap equip. Utilitza els mòbils, tauletes i ordinadors que ja tens.",
+    "anywhereTitle": "Funciona a qualsevol lloc",
+    "anywhereSub": "Mòbil, tauleta, portàtil, PC. Android, iOS, Windows, Mac, Linux. En qualsevol navegador modern, sense instal·lar res."
+  },
+  "activities": {
+    "heading": "Un sol sistema:",
+    "headingAccent": "tot el teu restaurant.",
+    "sub": "Un servei més ràpid, una cuina més tranquil·la, menys costos i clients que repeteixen: tot en una mateixa plataforma.",
+    "groups": [
+      {
+        "icon": "Smartphone",
+        "tag": "A la taula: el client",
+        "bullets": [
+          "Carta QR en 35 idiomes",
+          "Demanar sense esperar el cambrer",
+          "Cridar el cambrer o demanar el compte",
+          "Reserva de taules 24/7",
+          "Codi QR únic per a cada taula",
+          "Sense app: s'obre al navegador",
+          "Etiquetes d'al·lèrgens i dietes per filtrar"
+        ]
+      },
+      {
+        "icon": "ChefHat",
+        "tag": "A la cuina",
+        "bullets": [
+          "Comandes a la pantalla a l'instant",
+          "Columnes de Pendent / A cuina / Llest",
+          "Al·lèrgens i comentaris ressaltats",
+          "Tauleta o mòbil: adeu als tiquets de paper"
+        ]
+      },
+      {
+        "icon": "ChartColumn",
+        "tag": "Gestió",
+        "bullets": [
+          "Canvis a la carta i preus a l'instant",
+          "Traducció per IA amb un clic",
+          "Analítica de vendes i informes",
+          "Múltiples restaurants en un sol compte",
+          "La IA digitalitza una carta de paper en 60 segons",
+          "El teu propi domini amb SSL"
+        ]
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Tota la plataforma en 10 minuts. ",
+    "headingAccent": "14 dies d'accés complet.",
+    "sub": "Carta, comandes, reserves i cuina: sense targeta, cancel·la quan vulguis. {count} restaurants ja confien en nosaltres, només necessites un correu."
+  }
+}

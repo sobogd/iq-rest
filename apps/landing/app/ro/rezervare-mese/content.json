@@ -1,0 +1,206 @@
+{
+  "locale": "ro",
+  "slug": "rezervare-mese",
+  "trackPrefix": "l_bookings",
+  "meta": {
+    "title": "Rezervări mese 24/7 pentru restaurante | IQ Rest",
+    "description": "Rezervări mese 24/7 pentru restaurantul tău: oaspeții își rezervă singuri masa prin meniul QR sau site. Calendar pe mese, confirmări automate și mementouri. Fără telefoane, fără oaspeți ratați. 14 zile gratuit.",
+    "canonical": "https://iq-rest.com/ro/rezervare-mese",
+    "ogLocale": "ro_RO",
+    "ogTitle": "Rezervări mese 24/7 — Oaspeții rezervă singuri",
+    "ogDescription": "Oaspeții rezervă mese prin meniul QR sau site. Calendar, confirmări automate, mementouri. Niciun oaspete ratat.",
+    "brandLine": "IQ Rest — Rezervări mese restaurant"
+  },
+  "hero": {
+    "headline": "Rezervări mese 24/7,",
+    "cta": "Configurează rezervările",
+    "sub": "Oaspeții rezervă 24/7 prin meniul QR sau un link. Calendar pe mese, confirmări automate și mementouri.",
+    "headlineAccent": "fără telefoane",
+    "demoLabel": "Demo: calendarul de rezervări",
+    "tablet": {
+      "src": "/landing/hero-card-reservation.webp",
+      "alt": "Tabletă cu calendar de rezervări: vizualizare lunară și o listă de rezervări care așteaptă confirmarea"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurante"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafenele"
+    },
+    {
+      "icon": "Martini",
+      "label": "Baruri"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hoteluri"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerii"
+    }
+  ],
+  "scan": {
+    "heading": "Lansează rezervările de mese",
+    "headingAccent": "în 5 minute.",
+    "sub": "Conectează calendarul, adaugă mesele cu fotografii și capacitate — oaspeții încep să rezerve în aceeași zi.",
+    "cta": "Activează rezervările"
+  },
+  "subFeatures": [
+    {
+      "icon": "CalendarPlus",
+      "eyebrow": "Formular de rezervare",
+      "heading": "Oaspeții rezervă singuri — după dată, oră și număr de persoane.",
+      "body": "Oaspetele deschide meniul QR sau un link direct, alege o dată, o oră și numărul de persoane — și vede instantaneu mesele disponibile: cu fotografie, descriere (terasă, la geam, canapea la bar) și capacitate. O confirmare este trimisă automat pe email și WhatsApp.",
+      "bullets": [
+        "Selecția mesei după fotografie, descriere și capacitate.",
+        "Confirmare automată și un memento cu o oră înainte de vizită.",
+        "Un formular minim: nume, telefon, număr de persoane."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-form.webp",
+        "alt": "Un oaspete rezervă o masă la restaurant de pe telefon: alegând data, ora, numărul de persoane și masa"
+      }
+    },
+    {
+      "icon": "CalendarDays",
+      "eyebrow": "Calendar de rezervări",
+      "heading": "Un calendar pe zile și mese — totul vizibil într-o secundă.",
+      "body": "Panoul de administrare are un calendar de rezervări defalcat pe mese, zile, săptămâni și luni. Intervalele libere, mesele ocupate, rezervările confirmate și în așteptare apar toate pe un singur ecran. Funcționează pe o tabletă în sală și pe un laptop în birou.",
+      "bullets": [
+        "Vizualizări pe zi, săptămână și lună.",
+        "Defalcare pe mese: cine, când, câți oaspeți.",
+        "Reprogramează, anulează sau confirmă o rezervare — dintr-o atingere de pe telefon."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-calendar.webp",
+        "alt": "Calendarul de rezervări în panoul IQ Rest pe două tablete: o grilă zilnică pe mese și un calendar lunar"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Ce întreabă proprietarii de restaurante despre rezervările de mese în IQ Rest. Dacă nu găsești întrebarea ta — scrie-ne pe WhatsApp.",
+    "items": [
+      {
+        "q": "Pot alege zilele și orele în care rezervarea este disponibilă?",
+        "a": "Da. Panoul de administrare îți permite să setezi un program pe zilele săptămânii: orele de rezervare și o pauză între prânz și cină. De asemenea, poți opri complet rezervările temporar — oaspeții vor vedea că rezervarea online este indisponibilă."
+      },
+      {
+        "q": "Pot încărca o fotografie pentru fiecare masă?",
+        "a": "Da. Fiecare masă are o fotografie, o capacitate și o zonă (terasă, la geam, bar). Oaspeții văd exact ce masă rezervă și fac o alegere informată."
+      },
+      {
+        "q": "Pot limita numărul de oaspeți la o masă?",
+        "a": "Da. Fiecare masă are o capacitate setată — sistemul oferă oaspeților doar mesele potrivite și blochează rezervarea unei mese de două persoane de către un grup de șase."
+      },
+      {
+        "q": "Cât de greu este să configurezi rezervările?",
+        "a": "Trei pași: adaugi mesele cu fotografii și capacitate, activezi modul de rezervare din setări și distribui linkul sau codul QR. Lansarea durează 5–10 minute."
+      },
+      {
+        "q": "Pot seta confirmarea automată sau manuală a rezervărilor?",
+        "a": "Da, modul se alege din setări. Cu confirmarea automată, oaspetele primește confirmarea imediat după trimiterea formularului. Cu cea manuală, cererea apare în panou ca „în așteptarea confirmării” — un manager o confirmă sau o respinge. Modul manual este util când mesele sunt limitate."
+      },
+      {
+        "q": "Percepeți o taxă pe rezervare?",
+        "a": "Nu există taxe: rezervările sunt incluse în abonament — fără procente de la oaspeți, fără taxe pe interval, fără intermediari. O plată fixă și rezervări nelimitate."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Rezervări în 10 minute. ",
+    "headingAccent": "14 zile de acces complet.",
+    "sub": "Fără card, anulezi oricând. {count} restaurante își iau presiunea de pe recepție cu noi. Ai nevoie doar de o adresă de email."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Oaspeții rezervă singuri",
+      "sub": "Dată, oră și număr de persoane — din meniul QR sau dintr-un link direct, la orice oră din zi. Sistemul arată doar intervalele disponibile.",
+      "bullets": [
+        {
+          "icon": "CalendarPlus",
+          "title": "Rezervare 24/7",
+          "sub": "Oaspeții rezervă noaptea sau în weekend — fără telefoane, fără să aștepte un răspuns"
+        },
+        {
+          "icon": "Users",
+          "title": "O masă potrivită pentru grup",
+          "sub": "Sistemul alege singur o masă potrivită după capacitate"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Un formular minim",
+          "sub": "Nume, telefon și număr de persoane — formularul durează o jumătate de minut"
+        }
+      ]
+    },
+    {
+      "heading": "Un calendar pe zile și mese",
+      "sub": "Toate rezervările într-un singur calendar: vezi ce e liber, ce e confirmat și cine urmează să vină.",
+      "bullets": [
+        {
+          "icon": "CalendarDays",
+          "title": "Zi, săptămână, lună",
+          "sub": "Schimbă vizualizările și planifică așezarea la mese în avans"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Defalcare pe mese",
+          "sub": "Cine, când și pentru câți oaspeți — pentru fiecare masă"
+        },
+        {
+          "icon": "Smartphone",
+          "title": "Gestionează de pe telefon",
+          "sub": "Reprogramează, anulează sau confirmă o rezervare — dintr-o atingere"
+        }
+      ]
+    },
+    {
+      "heading": "Program și moduri",
+      "sub": "Setează programul de rezervări pe zilele săptămânii, durata intervalului și modul de confirmare.",
+      "bullets": [
+        {
+          "icon": "Clock",
+          "title": "Program pe zile",
+          "sub": "Ore separate pentru fiecare zi a săptămânii, inclusiv o pauză între prânz și cină"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Durata intervalului",
+          "sub": "Setează intervalul de rezervare pentru a se potrivi formatului locației tale"
+        },
+        {
+          "icon": "CalendarCheck",
+          "title": "Automat sau manual",
+          "sub": "Confirmă fiecare rezervare tu însuți sau activează confirmarea automată"
+        }
+      ]
+    },
+    {
+      "heading": "Notificări fără muncă manuală",
+      "sub": "Sistemul ține oaspetele și echipa ta la curent — emailul și ecranul de rezervări se actualizează instantaneu.",
+      "bullets": [
+        {
+          "icon": "Mail",
+          "title": "Email către oaspete",
+          "sub": "O confirmare a rezervării este trimisă automat prin email"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Notificare către restaurant",
+          "sub": "Proprietarii primesc un email despre fiecare rezervare nouă"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Un ecran de rezervări la intrare",
+          "sub": "Tableta recepției arată rezervările noi în timp real"
+        }
+      ]
+    }
+  ]
+}

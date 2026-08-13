@@ -1,10 +1,10 @@
 "use client";
 
-import { useLocale } from "next-intl";
+import { useRouter } from "next/navigation";
+import { useLandingLocale } from "../../lib/landing-strings";
 import { dashboardUrl } from "@/lib/dashboard-url";
 import { analytics } from "@/lib/analytics";
 import { useLandingAuth } from "./use-landing-auth";
-import { useOnboardingModal } from "./onboarding-modal-provider";
 
 type PrimaryCta = {
   /** True once we've confirmed the visitor has a valid session. */
@@ -18,11 +18,11 @@ type PrimaryCta = {
 };
 
 /** Single source of truth for the primary CTA on the landing.
- *  Guest → opens the onboarding modal. Signed-in → goes to the dashboard. */
+ *  Guest → navigates to the auth page. Signed-in → goes to the dashboard. */
 export function usePrimaryCta(defaultLabel: string): PrimaryCta {
   const auth = useLandingAuth();
-  const modal = useOnboardingModal();
-  const locale = useLocale();
+  const router = useRouter();
+  const locale = useLandingLocale();
 
   const dashHref = auth.legacyDashboard
     ? `/${locale}/dashboard`
@@ -36,9 +36,9 @@ export function usePrimaryCta(defaultLabel: string): PrimaryCta {
       analytics.flush();
       window.location.assign(dashHref);
     } else {
-      // Onboarding (cuisine + name) is temporarily skipped — open the auth step
-      // directly with register copy. The API seeds a default "My restaurant".
-      modal.open("register");
+      // Onboarding (cuisine + name) is temporarily skipped — the auth page
+      // opens directly with register copy. The API seeds a default "My restaurant".
+      router.push(`/${locale}/register`);
     }
   };
 

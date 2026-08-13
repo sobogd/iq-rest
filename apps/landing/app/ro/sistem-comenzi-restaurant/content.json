@@ -1,0 +1,236 @@
+{
+  "locale": "ro",
+  "slug": "sistem-comenzi-restaurant",
+  "trackPrefix": "l_orders",
+  "meta": {
+    "title": "Preluare comenzi restaurant — Oaspeți și Ospătari | IQ Rest",
+    "description": "Preluarea comenzilor de pe telefon sau tabletă: harta meselor, împărțirea notei, statusuri, opțiuni și comentarii. Oaspeții comandă de la masă, ospătarii preiau comenzi pe propriul dispozitiv. 14 zile gratuit.",
+    "canonical": "https://iq-rest.com/ro/sistem-comenzi-restaurant",
+    "ogLocale": "ro_RO",
+    "ogTitle": "Preluare comenzi restaurant — Oaspeți și Ospătari",
+    "ogDescription": "Un oaspete la masă sau un ospătar pe telefon — comanda ajunge instantaneu în bucătărie. Harta meselor, împărțirea notei, statusuri, opțiuni și comentarii.",
+    "brandLine": "IQ Rest — Preluare comenzi restaurant"
+  },
+  "hero": {
+    "headline": "Comenzi de la masă —",
+    "cta": "Configurează comenzile online",
+    "sub": "Oaspeții comandă la masă sau ospătarii de pe orice dispozitiv — direct în bucătărie. Harta meselor, împărțirea notei de plată.",
+    "headlineAccent": "direct în bucătărie",
+    "demoLabel": "Demo: ecranul de comenzi",
+    "tablet": {
+      "src": "/landing/feature-orders-modal.webp",
+      "alt": "Tabletă cu o comandă deschisă: lista de preparate și acțiuni — schimbă masa, împarte nota, adaugă reducere"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurante"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafenele"
+    },
+    {
+      "icon": "Martini",
+      "label": "Baruri"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hoteluri"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerii"
+    }
+  ],
+  "scan": {
+    "heading": "Configurează sistemul de preluare a comenzilor",
+    "headingAccent": "în 5 minute.",
+    "sub": "Scanează un meniu tipărit sau un PDF — AI-ul recunoaște preparatele, prețurile și categoriile. Conectează o tabletă în sală și începe să preiei comenzi de la mese.",
+    "cta": "Scanează meniul"
+  },
+  "subFeatures": [
+    {
+      "icon": "Map",
+      "eyebrow": "Listă și harta meselor",
+      "heading": "O listă de comenzi lângă harta meselor.",
+      "body": "Toate comenzile active sunt afișate în dreapta: status, total, ora plasării și numărul de articole. În stânga este harta meselor: mesele sunt colorate după status — liberă, ocupată, necesită atenție. Apăsând pe o masă se deschide comanda, apăsând pe un card se deschide vizualizarea detaliată. Fără să schimbi ecranele.",
+      "bullets": [
+        "Harta meselor: mese colorate după statusul comenzii.",
+        "Lista de comenzi alături — total, timp și număr de articole.",
+        "Apăsând pe o masă se deschide comanda sau se creează una nouă."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-map.webp",
+        "alt": "Tabletă la stația ospătarului: o listă de comenzi și harta meselor colorate"
+      }
+    },
+    {
+      "icon": "ClipboardList",
+      "eyebrow": "Cardul comenzii",
+      "heading": "Cardul comenzii: statusuri, duplicare și ștergere — dintr-o atingere.",
+      "body": "Fiecare articol are propriul status (În așteptare / În lucru / Gata / Servit) — bucătăria și ospătarul văd aceeași imagine în timp real. Apăsând pe punct se deschide un meniu de acțiuni: schimbă statusul, duplică articolul cu aceleași modificatoare și opțiuni, sau șterge-l. Totul se întâmplă direct din cardul comenzii.",
+      "bullets": [
+        "Status per articol: În așteptare / În lucru / Gata / Servit.",
+        "Duplică un articol dintr-o atingere — cu aceleași opțiuni incluse.",
+        "Șterge un articol direct din cardul comenzii."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-detail.webp",
+        "alt": "Tabletă cu un card detaliat de comandă: statusurile preparatelor, duplicarea și ștergerea articolelor"
+      }
+    },
+    {
+      "icon": "Receipt",
+      "eyebrow": "Împărțirea notei",
+      "heading": "Împărțirea notei de plată când oaspeții plătesc separat.",
+      "body": "Oaspeții decid să plătească separat — bifează articolele care merg pe noua notă; restul rămân pe cea curentă. Sistemul afișează ambele totaluri imediat. O atingere pe „Împarte comanda” — și ai două comenzi independente cu totaluri corecte, ambele rămânând la masa lor.",
+      "bullets": [
+        "Selectează articolele de împărțit folosind bife.",
+        "Totalul notei noi și al celei rămase apare instantaneu.",
+        "O atingere — și comanda este împărțită fără calcule manuale."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-split.webp",
+        "alt": "Tabletă pe o masă de restaurant: împărțirea notei între oaspeți"
+      }
+    },
+    {
+      "icon": "Smartphone",
+      "eyebrow": "Preluare comenzi de pe mobil",
+      "heading": "Adăugarea articolelor de pe telefon — în trei pași.",
+      "body": "Ospătarii nu sunt legați de un singur dispozitiv: deschid ecranul de preluare a comenzilor pe propriul telefon și adaugă un articol în trei pași — aleg categoria, aleg preparatul, aleg opțiunile (mărime, grad de gătire, sosuri și ingrediente extra). Prețul se recalculează automat. Un comentariu pentru bucătărie se adaugă la ultimul pas.",
+      "bullets": [
+        "Trei pași: categorie → preparat → opțiuni.",
+        "Opțiuni (mărime, extra, ingrediente) cu prețuri dintr-o atingere.",
+        "Un câmp de comentarii la pasul final."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-mobile.webp",
+        "alt": "Patru telefoane arătând pașii de adăugare a unui articol la comandă: categorie, preparat, mărime, comentariu"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Ce întreabă proprietarii de restaurante despre preluarea comenzilor în IQ Rest. Dacă nu găsești întrebarea ta — scrie-ne pe WhatsApp.",
+    "items": [
+      {
+        "q": "Pot lucra mai mulți ospătari simultan de pe dispozitive diferite?",
+        "a": "Da. Fiecare ospătar își conectează propriul dispozitiv și vede aceleași mese, comenzi și statusuri în timp real. O modificare făcută de unul apare instantaneu pentru ceilalți — fără conflicte sau blocaje."
+      },
+      {
+        "q": "Pot folosi ospătarii dispozitivele personale?",
+        "a": "Da. Ecranul de comenzi rulează în browser — nu trebuie instalat nimic. Un telefon sau o tabletă se conectează cu un cod din 6 cifre din panoul de administrare, iar accesul este revocat cu o atingere la sfârșitul turei."
+      },
+      {
+        "q": "Pot adăuga opțiuni obligatorii la preparate (mărime, grad de gătire)?",
+        "a": "Da. Un preparat poate avea oricâte grupuri de opțiuni — obligatorii („Mărime”: Mic / Mediu / Mare) și opționale („Grad de gătire”: în sânge / mediu / bine făcut). Opțiunile influențează prețul. La un grup obligatoriu, sistemul cere o alegere — eliminând greșelile."
+      },
+      {
+        "q": "Pot adăuga comentarii și articole extra la un preparat?",
+        "a": "Da. Ultimul pas are un câmp de comentarii („fără ceapă”, „alergie la nuci”). Extra-urile sunt configurate ca opțiuni cu preț („+ Sos BBQ”, „+ Pâine”). Comentariile apar pe ecranul din bucătărie, evidențiate color."
+      },
+      {
+        "q": "Există statistici pentru comenzi?",
+        "a": "Da. Secțiunea de analiză arată încasările pe zile, bonul mediu și cele mai vândute preparate. Aceste date te ajută să planifici turele și achizițiile."
+      },
+      {
+        "q": "Pot fi împărțite comenzile?",
+        "a": "Da. Bifează articolele care merg pe o notă nouă — ambele totaluri se recalculează automat, fără calcule manuale și fără să schimbi secțiunile."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Comenzi în 10 minute. ",
+    "headingAccent": "14 zile de acces complet.",
+    "sub": "Fără card, anulezi oricând. {count} restaurante preiau comenzi cu noi. Ai nevoie doar de o adresă de email."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Harta meselor și lista de comenzi",
+      "sub": "Comenzile active lângă harta meselor: mesele sunt colorate după status, iar o atingere deschide o comandă sau creează una nouă.",
+      "bullets": [
+        {
+          "icon": "Map",
+          "title": "Mese după status",
+          "sub": "Libere, ocupate, necesită atenție — vizibile dintr-o privire"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Listă de comenzi active",
+          "sub": "Total, ora plasării și numărul de articole pentru fiecare comandă"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Comandă nouă de pe hartă",
+          "sub": "Apăsând pe o masă liberă se deschide direct preluarea comenzii"
+        }
+      ]
+    },
+    {
+      "heading": "Un status pentru fiecare articol",
+      "sub": "Bucătăria și ospătarul văd aceeași imagine: fiecare preparat are propriul status — de la plasat la servit.",
+      "bullets": [
+        {
+          "icon": "Timer",
+          "title": "Statusuri per preparat",
+          "sub": "În așteptare, În lucru, Gata, Servit — per articol, nu per comandă"
+        },
+        {
+          "icon": "Receipt",
+          "title": "Duplicare articol",
+          "sub": "Repetă un preparat cu aceleași opțiuni dintr-o atingere"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Modificări pe loc",
+          "sub": "Șterge un articol direct din cardul comenzii"
+        }
+      ]
+    },
+    {
+      "heading": "Împărțirea notei de plată",
+      "sub": "Oaspeții plătesc separat — bifează articolele și ele se mută pe o notă nouă. Totalurile se recalculează instantaneu.",
+      "bullets": [
+        {
+          "icon": "Receipt",
+          "title": "Bife per articol",
+          "sub": "Alege preparatele pentru nota nouă; restul rămân pe cea curentă"
+        },
+        {
+          "icon": "ChartColumn",
+          "title": "Totaluri afișate imediat",
+          "sub": "Nota nouă și cea rămasă sunt calculate automat"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "O singură atingere",
+          "sub": "Comanda este împărțită fără calcule manuale sau calculator"
+        }
+      ]
+    },
+    {
+      "heading": "Preluare comenzi de pe telefonul ospătarului",
+      "sub": "Ospătarii preiau o comandă pe propriul dispozitiv în trei pași: categorie, preparat, opțiuni.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Orice dispozitiv",
+          "sub": "Un telefon sau o tabletă cu browser — fără instalare"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Opțiuni cu preț",
+          "sub": "Mărime, extra-toppinguri și variante cu preț dintr-o atingere"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Comentarii la preparate",
+          "sub": "Cerințele oaspeților sunt adăugate la pasul final — bucătăria le vede imediat"
+        }
+      ]
+    }
+  ]
+}

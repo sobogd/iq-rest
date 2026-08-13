@@ -1,0 +1,59 @@
+{
+  "breadcrumbLabel": "Cennik",
+  "meta": {
+    "title": "Cennik — Zbuduj plan dla restauracji od 9.90 €/mc | IQ Rest",
+    "description": "Zbuduj swój plan z modułów: menu QR z tłumaczeniem AI, zamówienia, rezerwacje stolików, ekran kuchenny. Od 9.90 €/mc za lokal, zniżki ilościowe. 14 dni za darmo, bez karty.",
+    "canonical": "https://iq-rest.com/pl/cennik",
+    "ogLocale": "pl_PL",
+    "ogTitle": "Cennik — Zbuduj plan dla swojej restauracji",
+    "ogDescription": "Modułowy plan od 9.90 €/mc: menu QR, zamówienia, rezerwacje, KDS. Zniżki ilościowe, bez ukrytych opłat. 14 dni za darmo."
+  },
+  "faqSub": "Najczęstsze pytania restauratorów o cennik i płatności. Jeśli nie widzisz swojego — napisz do nas na WhatsApp.",
+  "faqItems": [
+    {
+      "q": "Jak skonstruowany jest cennik?",
+      "a": "Budujesz swój plan z modułów. Podstawą jest menu QR z tłumaczeniem AI na 35 języków i zarządzaniem z dowolnego urządzenia. Następnie dodajesz to, czego potrzebujesz: rezerwacje stolików, ekran kuchenny, własną domenę. Ceny podane są za jeden lokal, ze zniżkami ilościowymi od drugiego lokalu."
+    },
+    {
+      "q": "Czy pobieracie prowizję od zamówień?",
+      "a": "Nie. Zamówienia z menu QR i od kelnerów trafiają bezpośrednio do restauracji. Płacisz tylko stałą cenę miesięczną."
+    },
+    {
+      "q": "Jak działa okres próbny?",
+      "a": "14 dni pełnego dostępu do wszystkich funkcji, bez podawania karty. Jeśli do końca tego czasu nie ustawisz płatności, konto zostanie wstrzymane: panel pozostanie dostępny w trybie tylko do odczytu, a menu dla gości i przyjmowanie zamówień zostaną wyłączone. Nie ma automatycznych obciążeń."
+    },
+    {
+      "q": "Co dzieje się z moimi danymi po wstrzymaniu konta?",
+      "a": "Wszystko zostaje zachowane: menu, zdjęcia, historia zamówień, rezerwacje, ustawienia, statystyki. Możesz ustawić płatność nawet pół roku później — wszystko wróci dokładnie do takiego stanu, w jakim było."
+    },
+    {
+      "q": "Czy będę musiał ponownie drukować kody QR?",
+      "a": "Nie. W czasie wstrzymania kody pokazują komunikat \"tymczasowo niedostępne\"; po opłaceniu te same kody znów otwierają menu."
+    },
+    {
+      "q": "Czy mogę zmienić swój plan?",
+      "a": "Tak, w dowolnym momencie z poziomu panelu. Różnica w cenie jest proporcjonalnie rozliczana na pozostałe dni opłaconego okresu. Wyłączona funkcja zachowuje swoje dane."
+    },
+    {
+      "q": "Ile lokali mogę podłączyć?",
+      "a": "Tyle, ile chcesz, zarządzanych z jednego panelu. Zniżki ilościowe sięgają 50% przy 5+ lokalach. Dla dużych sieci — indywidualny plan przez WhatsApp."
+    },
+    {
+      "q": "Jaka jest zniżka przy planie rocznym?",
+      "a": "Około 30% w porównaniu do płatności miesięcznej. Dokładna kwota jest widoczna podczas budowania planu."
+    },
+    {
+      "q": "Jak mogę anulować subskrypcję?",
+      "a": "Jednym kliknięciem w panelu. Konto działa do końca opłaconego okresu, po czym zostaje wstrzymane. Twoje dane są zachowane."
+    },
+    {
+      "q": "Jakie metody płatności akceptujecie?",
+      "a": "Visa, Mastercard, American Express, Apple Pay, Google Pay — przez Stripe. W Europie plan roczny obsługuje również polecenie zapłaty SEPA."
+    }
+  ],
+  "finalCta": {
+    "heading": "Jedna cena. Zero ryzyka. ",
+    "headingAccent": "14 dni pełnego dostępu.",
+    "sub": "Bez podawania karty, zrezygnuj w dowolnej chwili — wybrało nas {count} lokali. Wystarczy e-mail, by zacząć."
+  }
+}

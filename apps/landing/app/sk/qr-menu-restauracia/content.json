@@ -1,0 +1,151 @@
+{
+  "locale": "sk",
+  "slug": "qr-menu-restauracia",
+  "trackPrefix": "l_sk_qr",
+  "featureHeading": {
+    "heading": "Nielen QR kód",
+    "sub": "Všetko, čím sa jedno naskenovanie stane pre vašich hostí a obsluhu."
+  },
+  "meta": {
+    "title": "QR menu pre reštaurácie | IQ Rest",
+    "description": "QR menu pre reštaurácie: hostia naskenujú QR kód na stole, otvoria menu v prehliadači a objednajú si vo svojom jazyku. 14 dní zadarmo, bez karty.",
+    "canonical": "https://iq-rest.com/sk/qr-menu-restauracia",
+    "ogLocale": "sk_SK",
+    "ogTitle": "QR menu pre reštaurácie",
+    "ogDescription": "QR kód na stole, menu v telefóne — fotky, alergény, 35 jazykov a aktualizácie v reálnom čase.",
+    "brandLine": "IQ Rest — QR menu pre reštaurácie"
+  },
+  "hero": {
+    "headline": "QR menu:\nnaskenuj a objednaj",
+    "cta": "Vytvoriť QR menu",
+    "sub": "Hostia naskenujú QR kód na stole, prezerajú si fotky a alergény v 35 jazykoch a objednávajú — bez aplikácií."
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Reštaurácie"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kaviarne"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bary"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotely"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerie"
+    }
+  ],
+  "scan": {
+    "heading": "Už máte papierové menu alebo PDF?",
+    "headingAccent": "AI ho zmení na QR menu za 60 sekúnd.",
+    "sub": "Nahrajte fotku menu alebo PDF — AI rozpozná kategórie, jedlá a ceny a prepojí ich priamo do vášho QR menu.",
+    "cta": "Vytvoriť QR menu"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "Jeden QR kód, 35 jazykov",
+      "heading": "Jeden QR kód, menu v 35 jazykoch.",
+      "body": "Hostia naskenujú QR kód a vyberú si svoj jazyk: preklad robí AI s kulinárskym citom, nie bežný prekladač. Už žiadne samostatné turistické menu alebo rozhádzané papiere na stole.",
+      "bullets": [
+        "Jeden vytlačený QR kód pokrýva 35 jazykov, zahrnutých v predplatnom.",
+        "AI hovorí jazykom jedla — názvy jedál znejú prirodzene v každom jazyku.",
+        "Hostia si prepínajú jazyky priamo v menu, bez opätovného skenovania QR kódu."
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Dvaja hostia skenujú rovnaký QR kód zo stola a čítajú menu v rôznych jazykoch"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Alergény v QR menu",
+      "heading": "Alergény a diéty priamo v QR menu.",
+      "body": "Každé jedlo v menu za QR kódom môže mať označenie: lepok, laktóza, orechy, morské plody, vegánske a bezlepkové možnosti. Hostia si vyfiltrujú jedlá podľa svojich obmedzení vo svojom telefóne, bez toho, aby sa pýtali personálu.",
+      "bullets": [
+        "14 kategórií alergénov na úrovni jedla.",
+        "Označenie vegánskych, vegetariánskych a bezlepkových jedál jedným kliknutím v paneli.",
+        "Hostia si filtrujú QR menu podľa vlastných obmedzení."
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Hosť filtruje QR menu podľa alergénov na telefóne, zatiaľ čo majiteľ upravuje zoznam na tablete"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Viac ako len QR",
+      "heading": "QR menu vo forme webu reštaurácie.",
+      "body": "Po naskenovaní kódu hostia nepristanú na nudnom PDF: uvidia úvodnú obrazovku s videom alebo pútavou fotkou, popisom podniku a stránkou s kontaktmi, mapou, telefónnymi číslami a sociálnymi sieťami. QR kód sa stáva online vizitkou vašej reštaurácie.",
+      "bullets": [
+        "Video v pozadí alebo pútavá fotka na úvodnej obrazovke QR menu.",
+        "Priestor na príbeh vášho podniku a každej kategórie.",
+        "Zabudovaná stránka kontaktov: mapa, telefón, Instagram, WhatsApp."
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Dva telefóny na stole: úvodná obrazovka QR menu s videom v pozadí a stránka kontaktov s mapou"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Objednávky z QR menu · voliteľné",
+      "heading": "Z QR kódu si hostia môžu aj objednať.",
+      "body": "Okrem prezerania menu sa QR menu môže stať kanálom na objednávanie: hostia pridajú jedlá do košíka a odošlú požiadavku. Objednávka sa dostane k čašníkovi na rajóne, na váš WhatsApp alebo na obrazovku v kuchyni. Túto funkciu môžete kedykoľvek zapnúť a vypnúť v nastaveniach.",
+      "bullets": [
+        "Košík, poznámky a odoslanie objednávky priamo z QR kódu.",
+        "Objednávka okamžite dorazí na rajón, WhatsApp alebo obrazovku v kuchyni.",
+        "Zapnite si funkciu podľa hodín, poschodí alebo konkrétnych podnikov."
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Dva telefóny na stole: košík vytvorený z QR menu a potvrdenie o odoslanej objednávke"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Na čo sa majitelia podnikov pýtajú ohľadom QR menu IQ Rest. Nenašli ste svoju otázku? Napíšte nám na WhatsApp.",
+    "items": [
+      {
+        "q": "Ako funguje QR menu IQ Rest?",
+        "a": "Každý stôl má vytlačený QR kód. Hostia ho naskenujú fotoaparátom v telefóne a v prehliadači sa im otvorí menu reštaurácie — fotky, popisy, alergény a aktuálne ceny. Žiadna aplikácia na stiahnutie pre hostí ani personál."
+      },
+      {
+        "q": "Potrebujem technické znalosti na vytvorenie QR menu?",
+        "a": "Nie. Panel funguje na princípe klikania a presúvania, žiadny kód ani zložité nastavovanie. Pridanie jedla trvá sekundy: názov, cena, fotka. Počiatočné nastavenie zvyčajne trvá 30 minút až hodinu; ak už máte PDF menu, AI ho prevedie automaticky."
+      },
+      {
+        "q": "Musia si hostia inštalovať aplikáciu, aby si prečítali QR kód?",
+        "a": "Nie. Zabudovaný fotoaparát v iPhone a Androide rozpozná QR kód za pár sekúnd a otvorí menu priamo v prehliadači. Administrácia tiež funguje v každom modernom prehliadači — na telefóne, tablete alebo notebooku."
+      },
+      {
+        "q": "Ako sa tlačia QR kódy na stoly?",
+        "a": "QR kódy sa generujú automaticky v paneli (jeden pre každý stôl alebo jeden pre celý podnik) a stiahnu sa ako PDF pripravené na tlač. Stačí vám bežná tlačiareň a stojan: držiak, nálepka alebo podpivník."
+      },
+      {
+        "q": "Môžem použiť vlastnú doménu pre QR menu?",
+        "a": "Áno. Podporujeme doménu vašej reštaurácie s SSL certifikátom (napríklad menu.vasarestaracia.sk): keď hostia naskenujú QR kód, vidia adresu vašej reštaurácie, nie generickú subdoménu. Nastavenie DNS trvá 5–10 minút a my vás ním prevedieme."
+      },
+      {
+        "q": "Môžem spravovať QR kódy pre viacero reštaurácií z jedného účtu?",
+        "a": "Áno, na požiadanie. Jeden účet môže spájať viacero podnikov, každý s vlastnými QR kódmi, menu, dizajnom a analytikou. Napíšte nám na WhatsApp a my vám zapneme režim pre viacero podnikov."
+      },
+      {
+        "q": "Je ťažké spustiť QR menu od nuly?",
+        "a": "Tri kroky: (1) vytvorte kategórie; (2) pridajte jedlá s názvom, cenou a fotkou; (3) vytlačte QR kódy a umiestnite ich na stoly. Ak už máte papierové menu alebo PDF, nahrajte ho — AI rozpozná kategórie a ceny a vyplní karty. Základné menu môže byť online za 5 minút."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "QR menu za 10 minút. ",
+    "headingAccent": "14 dní plného prístupu.",
+    "sub": "Bez karty, zrušenie kedykoľvek. Dôveruje nám {count} podnikov. Stačí e-mail — a žiadne aplikácie pre vašich hostí."
+  }
+}

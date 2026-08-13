@@ -1,0 +1,289 @@
+{
+  "heroV2": {
+    "verticals": [
+      {
+        "icon": "restaurant",
+        "label": "Restoranlar"
+      },
+      {
+        "icon": "cafe",
+        "label": "Kafeler"
+      },
+      {
+        "icon": "bar",
+        "label": "Barlar"
+      },
+      {
+        "icon": "hotel",
+        "label": "Oteller"
+      },
+      {
+        "icon": "pizza",
+        "label": "Pizzacılar"
+      }
+    ],
+    "title": "Restoranınızın ihtiyacı olan",
+    "titleAccent": "her şey!",
+    "sub": "Operasyonunuzu 10 dakikada kurun: online menünüzü yayınlayın, mutfağı hızlandırın ve masa düzenini yönetin.",
+    "primaryLabel": "Ücretsiz başla",
+    "demoLabel": "Demo menüyü incele",
+    "mockups": {
+      "kds": {
+        "src": "/landing/hero-card-kds.webp",
+        "alt": "Mutfak ekranı açık tablet: masalara göre sütunlar ve durum bildirimleri"
+      },
+      "reservations": {
+        "src": "/landing/hero-card-reservation.webp",
+        "alt": "Rezervasyon takvimi açık tablet: aylık görünüm ve onay bekleyen rezervasyonlar"
+      },
+      "phone1": {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Restoran web sitesi ana sayfası açık telefon: fotoğraflar, rezervasyon ve online menüye erişim"
+      },
+      "phone2": {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Yemek kartı açık telefon: fotoğraf, fiyat ve alerjen etiketleri"
+      }
+    }
+  },
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "10 dakikada hazır",
+      "sub": "Pahalı donanımlar satın almaya veya uzun kurulumlara gerek yok"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Hızlı destek",
+      "sub": "Sohbet üzerinden birkaç saat içinde yanıt veriyoruz"
+    },
+    {
+      "icon": "Globe",
+      "title": "{count} mekanın tercihi",
+      "sub": "15'ten fazla ülkede restoran ve kafeler bize güveniyor"
+    },
+    {
+      "icon": "Palette",
+      "title": "%100 markanıza uygun",
+      "sub": "Tasarımı ve arayüzü mekanınızın tarzına göre uyarlıyoruz"
+    }
+  ],
+  "menu": {
+    "heading": "Web sitesi ve dijital menü",
+    "sub": {
+      "link": "Bir QR menüden çok daha fazlası!",
+      "rest": " Özgün tasarımı, iletişim bilgileri ve masa rezervasyonu olan tam kapsamlı bir web sitesine sahip olun."
+    },
+    "moreLabel": "Menü hakkında daha fazla bilgi",
+    "demoLabel": "Demo: misafirlerin gözünden menü",
+    "mockupAlt": "Restoran web sitesi ana sayfası ve yemek sayfası açık telefonlar",
+    "bullets": [
+      {
+        "icon": "Languages",
+        "title": "35 dile otomatik çeviri",
+        "sub": "Yabancı misafirlerinize dil engeli olmadan hizmet verin — otomatik çeviri her şeyi halleder"
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "Doğrudan masadan sipariş",
+        "sub": "Operasyonunuzu hafifletin — garsona gerek kalmadan masalardan hızlıca sipariş alın"
+      },
+      {
+        "icon": "WheatOff",
+        "title": "Alerjenler ve diyetler",
+        "sub": "Misafirlerin daha kolay ve güvenli seçim yapabilmesi için alerjenleri ve beslenme tercihlerini (vegan, acı) etiketleyin"
+      }
+    ]
+  },
+  "reservations": {
+    "heading": "Masa rezervasyonları",
+    "sub": {
+      "link": "Akıllı masa rezervasyonu!",
+      "rest": " Müsait masaları ve programınızı kendi kendine takip eden otomatik bir rezervasyon sistemi."
+    },
+    "moreLabel": "Rezervasyonlar hakkında daha fazla bilgi",
+    "demoLabel": "Demo: rezervasyon takvimi",
+    "mockupAlt": "Rezervasyon takvimi açık tablet: gün ve saat dilimlerine göre masalar",
+    "bullets": [
+      {
+        "icon": "CalendarCheck",
+        "title": "Net rezervasyon planı",
+        "sub": "Gün ve masaya göre görsel bir program — nerede ve ne zaman yer olduğunu anında görün"
+      },
+      {
+        "icon": "SlidersHorizontal",
+        "title": "Esnek rezervasyon ayarları",
+        "sub": "Çalışma saatlerini, rezervasyon sürelerini ve masa fotoğraflarını ayarlayın, misafir taleplerini toplayın"
+      },
+      {
+        "icon": "Users",
+        "title": "Misafir akışı yönetimi",
+        "sub": "Size uygun rezervasyon modunu seçin ve misafir akışının kontrolünü tamamen elinizde tutun"
+      }
+    ]
+  },
+  "orders": {
+    "heading": "Masadan sipariş alma",
+    "sub": {
+      "link": "Siparişler doğrudan mutfağa!",
+      "rest": " Masadan veya garsondan alınan sipariş anında mutfak ekranına düşer — kağıt adisyon yok, bekleme yok."
+    },
+    "moreLabel": "Siparişler hakkında daha fazla bilgi",
+    "demoLabel": "Demo: sipariş ekranı",
+    "mockupSrc": "/landing/feature-orders-modal.webp",
+    "mockupAlt": "Açık bir siparişin olduğu tablet: yemek listesi ve masa değiştirme, hesap bölme, indirim ekleme gibi işlemler",
+    "bullets": [
+      {
+        "icon": "ShoppingCart",
+        "title": "Misafir veya garson",
+        "sub": "Misafirler QR kod ile masadan, garsonlar ise kendi telefon veya tabletlerinden sipariş girer"
+      },
+      {
+        "icon": "Map",
+        "title": "Durum renkleriyle masa planı",
+        "sub": "Haritadaki masalar durumlarına göre renklendirilir — kimin sipariş beklediğini ve nereye gitmeniz gerektiğini bir bakışta görün"
+      },
+      {
+        "icon": "Receipt",
+        "title": "Hesap bölme",
+        "sub": "Hesabı misafirler arasında paylaştırın ve ödeme karışıklığı yaşamadan masaları kapatın"
+      }
+    ]
+  },
+  "kds": {
+    "heading": "Mutfak Ekranı Sistemi (KDS)",
+    "sub": {
+      "link": "Senkronize çalışan bir mutfak!",
+      "rest": " Salondan ve QR menüden gelen siparişler anında aşçının ekranında belirir — notlar, alerjenler ve zamanlayıcı ile birlikte."
+    },
+    "moreLabel": "KDS hakkında daha fazla bilgi",
+    "demoLabel": "Demo: mutfak ekranı",
+    "mockupAlt": "Mutfak ekranı açık tablet: masalara göre sütunlar ve durumlar",
+    "bullets": [
+      {
+        "icon": "LayoutGrid",
+        "title": "Bölümlere göre ekranlar",
+        "sub": "Sıcak mutfak, bar ve pastane için ayrı tabletler — her bölüm sadece kendi yemeklerini görür"
+      },
+      {
+        "icon": "Timer",
+        "title": "Durumlar ve zamanlayıcı",
+        "sub": "Hazırlanıyor / Hazır / Servis Edildi sütunları ve sipariş başına geçen süre — tek dokunuşla durum değiştirme"
+      },
+      {
+        "icon": "ShieldAlert",
+        "title": "Alerjenler ve notlar",
+        "sub": "Alerjen uyarıları ve misafir notları renkli vurgulanır — aşçı önemli hiçbir detayı kaçırmaz"
+      }
+    ]
+  },
+  "bundle": {
+    "heading": "Restoranınızın ihtiyaç duyduğu her şey.",
+    "headingAccent": "Tek uygulamada.",
+    "sub": "Menü, mutfak ve rezervasyonlar tek bir yerde — modern, hızlı ve restoranların gerçek işleyişine uygun tasarlandı. Eklenti ücreti veya özellik başına fiyatlandırma yok."
+  },
+  "benefits": [
+    {
+      "icon": "Languages",
+      "tag": "Dijital menü",
+      "title": "Satan bir menü.",
+      "bullets": [
+        "Yapay zeka ile 35 dil",
+        "Premium tasarım",
+        "Anında güncellenen fiyatlar"
+      ],
+      "image": "/landing/feature-design.webp",
+      "imageAlt": "Kafede bir masada iki telefon: dijital menü karşılama ekranı ve haritalı iletişim sayfası"
+    },
+    {
+      "icon": "ChefHat",
+      "tag": "Mutfak ekranı",
+      "title": "Hiçbir şeyi kaçırmadan daha hızlı pişirin.",
+      "bullets": [
+        "Doğrudan ekrana",
+        "Notlar ve alerjenler",
+        "Tablet veya telefon"
+      ],
+      "image": "/landing/feature-kds-cards.webp",
+      "imageAlt": "Bar bankosunda duran bir tablet, masalara göre siparişleri gösteren mutfak ekranını sergiliyor"
+    },
+    {
+      "icon": "CalendarCheck",
+      "tag": "Rezervasyonlar",
+      "title": "Otopilotta rezervasyonlar.",
+      "bullets": [
+        "Telefonsuz rezervasyon",
+        "Otomatik onay",
+        "Masaya göre takvim"
+      ],
+      "image": "/landing/feature-booking-calendar.webp",
+      "imageAlt": "Rezervasyon takvimini gösteren iki tablet: masalara göre günlük görünüm ve aylık görünüm"
+    },
+    {
+      "icon": "Receipt",
+      "tag": "Masadan siparişler",
+      "title": "Siparişler doğrudan mutfağa.",
+      "bullets": [
+        "Misafir veya garson",
+        "Doğrudan mutfağa",
+        "İstediğiniz zaman aktifleştirin"
+      ],
+      "image": "/landing/feature-orders-map.webp",
+      "imageAlt": "Sipariş ekranı açık tablet: sipariş listesi ve renk kodlu masalarla salon planı."
+    }
+  ],
+  "seeDetails": "Daha fazla bilgi",
+  "platform": {
+    "hardwareTitle": "Kendi cihazlarınızda kullanın",
+    "hardwareSub": "Sizi bizden donanım satın almaya zorlamıyoruz. Zaten sahip olduğunuz telefon, tablet ve bilgisayarları kullanın.",
+    "anywhereTitle": "Her yerde çalışır",
+    "anywhereSub": "Telefon, tablet, dizüstü veya masaüstü bilgisayar. Android, iOS, Windows, Mac, Linux. Kurulum gerektirmeden tüm modern tarayıcılarda."
+  },
+  "activities": {
+    "heading": "Tek sistem —",
+    "headingAccent": "tüm restoranınız.",
+    "sub": "Daha hızlı servis, daha sakin bir mutfak, daha düşük maliyetler ve geri dönen misafirler — hepsi tek bir platformda.",
+    "groups": [
+      {
+        "icon": "Smartphone",
+        "tag": "Masada — misafir",
+        "bullets": [
+          "35 dilde QR menü",
+          "Garson beklemeden sipariş",
+          "Garson çağır veya hesap iste",
+          "7/24 masa rezervasyonu",
+          "Her masa için özel QR kod",
+          "Uygulama gerekmez — tarayıcıda açılır",
+          "Filtreleme için alerjen ve diyet etiketleri"
+        ]
+      },
+      {
+        "icon": "ChefHat",
+        "tag": "Mutfakta",
+        "bullets": [
+          "Siparişler anında ekranda",
+          "Hazırlanıyor / Hazır / Servis Edildi sütunları",
+          "Alerjenler ve notlar vurgulanır",
+          "Tablet veya telefon — kağıt adisyon yok"
+        ]
+      },
+      {
+        "icon": "ChartColumn",
+        "tag": "Yönetim",
+        "bullets": [
+          "Menü ve fiyat güncellemeleri — anında",
+          "Tek tıkla yapay zeka çevirisi",
+          "Satış analizleri ve raporlar",
+          "Tek hesapta birden fazla restoran",
+          "Yapay zeka kağıt menüyü 60 saniyede dijitalleştirir",
+          "SSL sertifikalı kendi alan adınız"
+        ]
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Tüm platform 10 dakikada hazır. ",
+    "headingAccent": "14 gün tam erişim.",
+    "sub": "Menü, siparişler, rezervasyon ve mutfak — kart gerekmez, istediğiniz zaman iptal edin; {count} restoran bize güveniyor, başlamak için sadece e-posta adresiniz yeterli."
+  }
+}

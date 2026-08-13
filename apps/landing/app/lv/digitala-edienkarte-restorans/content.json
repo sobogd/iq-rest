@@ -1,0 +1,332 @@
+{
+  "locale": "lv",
+  "slug": "digitala-edienkarte-restorans",
+  "trackPrefix": "l_digital",
+  "meta": {
+    "title": "Digitālā ēdienkarte restorāniem | IQ Rest",
+    "description": "Digitālā ēdienkarte jūsu restorānam: tiešsaistes ēdienkarte ar fotoattēliem, alergēniem, AI tulkojumu un cenu atjauninājumiem reāllaikā. 14 dienas bez maksas, kredītkarte nav nepieciešama.",
+    "canonical": "https://iq-rest.com/lv/digitala-edienkarte-restorans",
+    "ogLocale": "lv_LV",
+    "ogTitle": "Digitālā ēdienkarte restorāniem",
+    "ogDescription": "Jūsu papīra ēdienkartes tiešsaistes versija ar fotoattēliem, alergēniem un AI tulkojumu. Cenas atjaunojas reāllaikā.",
+    "brandLine": "IQ Rest — Digitālā ēdienkarte restorāniem"
+  },
+  "hero": {
+    "headline": "Digitālā ēdienkarte un mājaslapa",
+    "headlineAccent": "jūsu restorānam",
+    "cta": "Izveidot digitālo ēdienkarti",
+    "demoLabel": "Demo: ēdienkarte, kā to redz viesi",
+    "sub": "Palaidiet 10 minūtēs: pieņemiet pasūtījumus no galdiņa, mainiet cenas lidojumā un saņemiet rezervācijas tieši, bez komisijas maksām.",
+    "phones": [
+      {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Tālrunis ar restorāna mājaslapas sākumlapu: fotoattēli, rezervācijas un piekļuve tiešsaistes ēdienkartei"
+      },
+      {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Tālrunis ar ēdiena kartīti: foto, cena un alergēnu norādes"
+      }
+    ]
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restorāniem"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kafejnīcām"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bāriem"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Viesnīcām"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Picērijām"
+    }
+  ],
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Ēdienkarte 10 minūtēs",
+      "sub": "Bez programmētājiem un ilgas iestatīšanas"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Ātrs atbalsts",
+      "sub": "Mēs palīdzēsim iestatīt ēdienkarti čatā pāris stundu laikā"
+    },
+    {
+      "icon": "Globe",
+      "title": "Izvēlas {count} vietas",
+      "sub": "Digitālās ēdienkartes un mājaslapas restorāniem 15+ valstīs"
+    },
+    {
+      "icon": "Palette",
+      "title": "Jūsu domēns un zīmols",
+      "sub": "Ēdienkarte jūsu adresē, nevis kopējā platformā"
+    }
+  ],
+  "scan": {
+    "heading": "Ir papīra ēdienkarte vai PDF?",
+    "headingAccent": "AI to digitalizēs 60 sekundēs.",
+    "sub": "Augšupielādējiet fotoattēlu vai dokumentu — AI automātiski atpazīs kategorijas, ēdienus un cenas.",
+    "cta": "Skenēt ēdienkarti"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "AI tulkojums",
+      "heading": "Ēdienkarte 35 valodās",
+      "body": "Viens QR — 35 valodas. AI tulko, ņemot vērā kulinārijas kontekstu, tāpēc ēdieni skan dabiski. Tūristi pasūta drošāk.",
+      "bullets": [
+        "35 valodas iekļautas abonementā",
+        "Kulinārijas AI Google vietā",
+        "Valodu pārslēgšana ar vienu pieskārienu"
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Divi viesi lasa vienu un to pašu digitālo ēdienkarti dažādās valodās savos tālruņos"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Alergēni",
+      "heading": "Alergēni un uztura norādes katram ēdienam",
+      "body": "Atzīmējiet glutēnu, laktozi, riekstus, vegāniskas un bezglutēna opcijas. Viesi filtrē ēdienkarti atbilstoši savām vajadzībām un pasūta ar mierīgu prātu.",
+      "bullets": [
+        "14 alergēnu kategorijas",
+        "Vegāniskas un bezglutēna norādes",
+        "Ēdienkartes filtrs pēc uztura ierobežojumiem"
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Viesis tālrunī filtrē ēdienkarti pēc alergēniem, kamēr restorāna īpašnieks rediģē alergēnu sarakstu planšetdatorā"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Dizains un zīmols",
+      "heading": "Premium ēdienkarte jūsu domēnā",
+      "body": "Video fons sākuma ekrānā, jūsu dizains un kontaktu lapa ar karti un sociālo tīklu saitēm — jūsu domēnā, nevis PDF fails.",
+      "bullets": [
+        "Video fons un premium dizains",
+        "Sava domēna adrese ar SSL",
+        "Kontakti, karte, sociālie tīkli"
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Divi tālruņi uz kafejnīcas galdiņa: ēdienkartes sākuma ekrāns ar video fonu un kontaktu lapa ar karti"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Pasūtījumi",
+      "heading": "Tiešsaistes pasūtījumi bez komisijas maksas",
+      "body": "Viesi pasūta no ēdienkartes vai tieši WhatsApp — pasūtījums nonāk zālē vai virtuvē, 0% no jūsu ieņēmumiem.",
+      "bullets": [
+        "No ēdienkartes vai caur WhatsApp",
+        "Uz zāli vai virtuvi, 0%",
+        "Ieslēdzams iestatījumos"
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Divi tālruņi uz galdiņa: grozs ar pasūtījumu un veiksmīga pasūtījuma apstiprinājums"
+      }
+    },
+    {
+      "icon": "CalendarCheck",
+      "eyebrow": "Rezervācijas",
+      "heading": "Galdiņu rezervācija 24/7",
+      "body": "Viesi paši rezervē galdiņu caur ēdienkarti vai saiti, jūs redzat kalendāru pa galdiņiem un apstiprināt automātiski vai manuāli.",
+      "bullets": [
+        "Viesi rezervē paši",
+        "Kalendārs visiem galdiņiem",
+        "Automātiska vai manuāla apstiprināšana"
+      ]
+    },
+    {
+      "icon": "MonitorSmartphone",
+      "eyebrow": "Vadība",
+      "heading": "Pārvaldiet no jebkurienes",
+      "body": "Vadības panelis darbojas pārlūkprogrammā — tālrunī, planšetdatorā vai datorā. Nekas nav jāinstalē, gatavs darbam dažu minūšu laikā.",
+      "bullets": [
+        "Jebkura ierīce, jebkura pārlūkprogramma",
+        "Nekas nav jāinstalē",
+        "Gatavs darbam minūšu laikā"
+      ]
+    }
+  ],
+  "faq": {
+    "sub": "Ko restorānu īpašnieki jautā par IQ Rest digitālo ēdienkarti. Ja jūsu jautājuma nav sarakstā — rakstiet mums WhatsApp.",
+    "items": [
+      {
+        "q": "Vai man nepieciešamas tehniskas zināšanas vai pieredze ar CMS?",
+        "a": "Īpašas prasmes nav nepieciešamas. Viss vadības panelī tiek paveikts ar pāris klikšķiem — nekādas programmēšanas vai darba ar izejas failiem. Ēdiena pievienošana prasa sekundes: nosaukums, cena, fotoattēls. Pilna ēdienkartes iestatīšana parasti aizņem 30–60 minūtes."
+      },
+      {
+        "q": "Kas ir IQ Rest digitālā ēdienkarte?",
+        "a": "Tā ir jūsu ēdienkartes tiešsaistes versija, kas viesiem pieejama caur QR kodu vai tiešo saiti: ēdienu fotoattēli, cenas, alergēni, AI tulkojums 35 valodās un atjauninājumi reāllaikā. Ēdienkarte darbojas mūsu serveros — nav jāinstalē vai jāuztur programmatūra, pietiek ar pārlūkprogrammu."
+      },
+      {
+        "q": "Vai viesiem nepieciešama lietotne vai īpašs aprīkojums?",
+        "a": "Viesis pavērš tālruņa kameru pret QR kodu — ēdienkarte atveras pārlūkprogrammā, bez instalēšanas. Arī vadības panelis darbojas jebkurā modernā pārlūkprogrammā: tālrunī, planšetdatorā vai klēpjdatorā. QR kodus var izdrukāt ar parastu biroja printeri."
+      },
+      {
+        "q": "Vai varu izvietot ēdienkarti savā domēnā?",
+        "a": "Jā. Ēdienkarte tiek piesaistīta jūsu domēnam ar SSL sertifikātu — viesi redz jūsu restorāna adresi, piemēram, menu.jusurestorans.lv. Mūsu atbalsta komanda parūpēsies par domēna un sertifikāta iestatīšanu; jums tikai jānorāda DNS ieraksts."
+      },
+      {
+        "q": "Vai varu pārvaldīt vairākus restorānus no viena konta?",
+        "a": "Jā. Pievienojiet vietas vienam kontam: katrai ir sava ēdienkarte, dizains, QR kodi un analītika, un pārslēgšanās starp tām prasa vienu klikšķi. Vietu skaits ir atkarīgs no jūsu abonementa."
+      },
+      {
+        "q": "Cik grūti ir iestatīt ēdienkarti no nulles?",
+        "a": "Trīs soļi: izveidojiet kategorijas, pievienojiet ēdienus ar cenām un fotoattēliem, izdrukājiet QR kodus galdiņiem. Ja jums ir papīra ēdienkarte vai PDF, augšupielādējiet to — AI atpazīst kategorijas, nosaukumus un cenas un automātiski aizpilda kartītes. Pamata ēdienkarte ir gatava 5 minūtēs; pilna iestatīšana ir atkarīga no vienumu skaita."
+      },
+      {
+        "q": "Kādu atbalstu jūs sniedzat?",
+        "a": "Mēs atbildam WhatsApp un e-pastā darba laikā. Mēs palīdzam ar sākotnējo iestatīšanu, domēna pieslēgšanu un ēdienkartes dizainu. Ja nepieciešama demonstrācija vai palīdzība sākumā — rakstiet mums."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Jūsu ēdienkarte tiešsaistē 10 minūtēs. ",
+    "headingAccent": "14 dienas pilna pieeja.",
+    "sub": "Karte nav nepieciešama, atceliet jebkurā laikā. {count} restorāni uztic mums savas ēdienkartes un mājaslapas. Viss, kas vajadzīgs, ir e-pasts."
+  },
+  "spotlights": [
+    {
+      "heading": "Ēdienkarte 35 valodās",
+      "sub": "Viesi atver ēdienkarti savā dzimtajā valodā. AI tulko ēdienu nosaukumus, aprakstus, kategorijas un variācijas, ņemot vērā kulinārijas kontekstu.",
+      "bullets": [
+        {
+          "icon": "Globe",
+          "title": "35 valodas abonementā",
+          "sub": "Eiropas un Āzijas valodas ir iekļautas — bez papildu maksas par valodu"
+        },
+        {
+          "icon": "Timer",
+          "title": "Tiek iztulkots saglabājot",
+          "sub": "Pievienojiet vai rediģējiet ēdienu — tulkojumi visās ēdienkartes valodās ir gatavi uzreiz"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Manuālie labojumi ir aizsargāti",
+          "sub": "Ar roku labots tulkojums tiek bloķēts, un AI to nekad nepārraksta"
+        }
+      ]
+    },
+    {
+      "heading": "Alergēni un uztura norādes katram ēdienam",
+      "sub": "Pievienojiet alergēnu un uztura norādes ēdiena kartītei — viesi tās redz ēdienkartē un filtrē ēdienus atbilstoši saviem ierobežojumiem.",
+      "bullets": [
+        {
+          "icon": "WheatOff",
+          "title": "14 alergēnu kategorijas",
+          "sub": "Pilns ES regulas saraksts: glutēns, rieksti, laktoze, jūras veltes un citi"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "13 uztura norādes",
+          "sub": "Vegānisks, veģetārs, bezglutēna, halal, košera, ass un citas diētas atzīmes"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Filtrs ar vienu pieskārienu",
+          "sub": "Viesi izvēlas savus ierobežojumus — ēdienkarte parāda tikai piemērotos ēdienus"
+        }
+      ]
+    },
+    {
+      "heading": "Premium ēdienkarte jūsu domēnā",
+      "sub": "Foto vai video fons sākuma ekrānā, jūsu zīmola krāsa un logotips — ēdienkarte izskatās kā jūsu mājaslapa, nevis PDF, un darbojas jūsu domēnā.",
+      "bullets": [
+        {
+          "icon": "Palette",
+          "title": "Zīmolam atbilstošs dizains",
+          "sub": "Video vai foto sākuma ekrānā, akcenta krāsa un logotips — iestatiet bez dizainera"
+        },
+        {
+          "icon": "Globe",
+          "title": "Sava domēna adrese ar SSL",
+          "sub": "Ēdienkarte atveras jūsu adresē, izmantojot drošu savienojumu"
+        },
+        {
+          "icon": "Map",
+          "title": "Kontakti un karte",
+          "sub": "Lapa ar jūsu adresi, darba laiku, karti un sociālo tīklu saitēm — pilnvērtīga restorāna mājaslapa"
+        }
+      ]
+    },
+    {
+      "heading": "Tiešsaistes pasūtījumi bez komisijas maksas",
+      "sub": "Viesis veic pasūtījumu no galdiņa — tas uzreiz parādās vadības panelī un virtuves ekrānā. Platforma ietur 0% no jūsu ieņēmumiem.",
+      "bullets": [
+        {
+          "icon": "ShoppingCart",
+          "title": "No ēdienkartes vai caur WhatsApp",
+          "sub": "Pasūtījums sistēmā vai ziņa jūsu WhatsApp — izvēlieties režīmu iestatījumos"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Tieši uz virtuvi",
+          "sub": "Jauns pasūtījums parādās virtuves ekrānā un viesmīļa ierīcē bez kavēšanās"
+        },
+        {
+          "icon": "Receipt",
+          "title": "0% komisija",
+          "sub": "Maksājums paliek starp jums un viesi — platforma nepatur neko no jūsu pasūtījumiem"
+        }
+      ]
+    },
+    {
+      "heading": "Galdiņu rezervācija 24/7",
+      "sub": "Viesi rezervē galdiņu tieši no ēdienkartes jebkurā laikā. Sistēma pārbauda pieprasījumu atbilstoši jūsu grafikam un brīvajiem galdiņiem.",
+      "bullets": [
+        {
+          "icon": "CalendarCheck",
+          "title": "Kalendārs pa galdiņiem",
+          "sub": "Sistēma piemeklē galdiņu atbilstoši personu skaitam un rāda rezervācijas pa dienām un galdiņiem"
+        },
+        {
+          "icon": "CalendarDays",
+          "title": "Automātiski vai manuāli",
+          "sub": "Apstipriniet katru rezervāciju paši vai ieslēdziet automātisko apstiprināšanu"
+        },
+        {
+          "icon": "Mail",
+          "title": "E-pasti viesim un jums",
+          "sub": "Viesis saņem apstiprinājumu e-pastā, īpašnieki saņem paziņojumu par jaunu rezervāciju"
+        }
+      ]
+    },
+    {
+      "heading": "Pārvaldiet no jebkurienes",
+      "sub": "Vadības panelis darbojas pārlūkprogrammā tālrunī, planšetdatorā vai datorā. Izmaiņas viesiem parādās uzreiz.",
+      "bullets": [
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Jebkura ierīce",
+          "sub": "Tālrunis, planšetdators vai dators — pietiek ar pārlūkprogrammu, instalēšana nav nepieciešama"
+        },
+        {
+          "icon": "Timer",
+          "title": "Labojumi lidojumā",
+          "sub": "Cenas maiņa, stop lapa vai paslēpts ēdiens stājas spēkā uzreiz, bez publicēšanas vai gaidīšanas"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Ēdienu variācijas",
+          "sub": "Izmēri, piedevas un variācijas ar cenām — viesi paši komplektē savu ēdienu"
+        }
+      ]
+    }
+  ],
+  "hideFeatureHeading": true
+}

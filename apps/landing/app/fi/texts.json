@@ -1,0 +1,261 @@
+{
+  "htmlLang": "fi",
+  "htmlDir": "ltr",
+  "meta": {
+    "title": "Digitaalinen ruokalista, keittiönäyttö ja pöytävaraukset — IQ Rest",
+    "description": "Pyöritä ravintolaasi yhdestä sovelluksesta: monikielinen digitaalinen ruokalista, keittiönäyttö ja 24/7 pöytävaraukset. Käyttövalmis 5 minuutissa. 14 päivää ilmaiseksi, ei luottokorttia.",
+    "canonical": "https://iq-rest.com/fi",
+    "ogLocale": "fi_FI",
+    "ogTitle": "Digitaalinen ruokalista, keittiönäyttö ja pöytävaraukset",
+    "ogDescription": "Pyöritä ravintolaasi yhdestä sovelluksesta: monikielinen digitaalinen ruokalista, keittiönäyttö ja 24/7 pöytävaraukset. Käyttövalmis 5 minuutissa. 14 päivää ilmaiseksi, ei luottokorttia."
+  },
+  "jsonLd": {
+    "appName": "IQ Rest — Ravintolan hallinta-alusta"
+  },
+  "ctaText": "Kokeile ilmaiseksi",
+  "homeCtaText": "Kokeile ilmaiseksi",
+  "trust": [
+    {
+      "kind": "num",
+      "value": 35,
+      "label": "Kielivaihtoehtoa"
+    },
+    {
+      "kind": "text",
+      "value": "24/7",
+      "label": "Pöytävaraukset verkossa"
+    },
+    {
+      "kind": "num",
+      "value": 5,
+      "suffix": " min",
+      "label": "Käyttöönotto"
+    },
+    {
+      "kind": "count",
+      "label": "Ravintolaa mukana"
+    }
+  ],
+  "demoText": "Katso demo",
+  "microcopy": "14 päivää ilmaiseksi · Ei luottokorttia · Peruuta milloin tahansa",
+  "header": {
+    "navFeatures": "Ominaisuudet",
+    "navHow": "Näin se toimii",
+    "navPricing": "Hinnasto",
+    "navFaq": "UKK",
+    "signIn": "Kirjaudu sisään",
+    "viewFeatures": "Katso ominaisuudet",
+    "cta": "Aloita ilmaiseksi",
+    "navProducts": "Ominaisuudet",
+    "navGuide": "Opas",
+    "navAbout": "Meistä",
+    "menuFeaturesHeading": "Ominaisuudet",
+    "menuInfoHeading": "Tietoa"
+  },
+  "hero": {
+    "verticals": [
+      "Ravintolat",
+      "Kahvilat",
+      "Baarit",
+      "Hotellit",
+      "Pizzeriat"
+    ],
+    "headline": "Digitaalinen ruokalista ravintolaasi.\nKäyttövalmis 5 minuutissa.",
+    "sub": "Digitaalinen ruokalista ravintolaasi 5 minuutissa. Kaikki sisältyy: helppo muokkain, painettujen ruokalistojen tekoälytunnistus, pöytien QR-koodit ja tilaukset ilman välityspalkkioita.",
+    "dynamicHeadlines": [
+      "0 % välityspalkkio.",
+      "35 kieltä tekoälyllä.",
+      "Verkkotilaukset.",
+      "24/7 pöytävaraukset.",
+      "Huipputason design."
+    ],
+    "painBullets": [
+      "0 % välityspalkkio: jokainen tilaus menee suoraan ravintolalle.",
+      "Tekoälykäännös 35 kielelle — turistit ymmärtävät ruokalistan ja tilaavat enemmän.",
+      "24/7 pöytävaraukset: asiakkaat varaavat itse pöytänsä, ei puhelinrumbaa ruuhka-aikaan.",
+      "Joustava hinnoittelu: ruokalistan muutokset päivittyvät välittömästi."
+    ],
+    "rating": "Yli 500 ravintolaa yli 30 maassa"
+  },
+  "founder": {
+    "eyebrow": "Ravintoloitsijoiden kehittämä",
+    "quoteStart": "Pyöritimme vaimoni kanssa omaa kahvilaa ja tunnemme ravintola-arjen sisältäpäin: tilausten vastaanoton, pöytävaraukset, salin ja keittiön toiminnot. Halusimme yhden työkalun — modernin, helposti käyttöönotettavan ja heti ymmärrettävän —",
+    "quoteAccent": "näin syntyi idea alustasta, jota nyt kehitämme muille ravintoloitsijoille.",
+    "sign": "Bogdan Sokolov · perustaja, entinen kahvilayrittäjä",
+    "photoAlt": "Bogdan Sokolov, IQ Restin perustaja"
+  },
+  "pricing": {
+    "badge": "Ei välityspalkkioita · Ei sitovia sopimuksia",
+    "heading": "Yksi tilaus.",
+    "headingAccent": "Kaikki sisältyy.",
+    "sub": "QR-ruokalista, tilausten vastaanotto, tekoälykäännökset, ravintolan verkkosivut ja pöytävaraukset. Yksi selkeä kuukausimaksu.",
+    "monthlyLabel": "Kuukausittain",
+    "yearlyLabel": "Vuosittain",
+    "saveBadge": "Säästä 25 %",
+    "perMonth": "kuukaudessa",
+    "billedAnnually": "Laskutetaan vuosittain: {total}",
+    "youSave": "Säästät {amount}",
+    "trust": {
+      "secure": "Turvallinen maksu Stripen kautta",
+      "noCommitment": "Ei sitoutumista",
+      "quick": "Käyttövalmis minuuteissa",
+      "restaurants": "Yli 500 ravintolaa"
+    }
+  },
+  "faq": {
+    "eyebrow": "Jäikö jokin mietityttämään?",
+    "heading": "Usein kysytyt",
+    "headingAccent": "kysymykset",
+    "sub": "Mitä ravintoloitsijat kysyvät useimmiten ennen rekisteröitymistä. Jos et löydä vastausta — laita viestiä WhatsAppissa. Meillä vastaa oikea ihminen, ei botti.",
+    "whatsappCta": "Laita viestiä WhatsAppissa",
+    "whatsappPrefill": "Hei, minulla on kysyttävää IQ Restistä",
+    "items": [
+      {
+        "q": "Mitä kokeilujakso sisältää ja mitä sen jälkeen tapahtuu?",
+        "a": "Saat 14 päivän ajaksi käyttöösi alustan kaikki ominaisuudet ilman luottokorttia. Jos et lisää maksutapaa 14 päivän kuluessa, tili asetetaan automaattisesti tauolle. Emme koskaan veloita sinua ilman suostumustasi. Voit lisätä maksutavan myöhemmin ja jatkaa suoraan siitä, mihin jäit. Tilauksen peruminen onnistuu yhdellä klikkauksella."
+      },
+      {
+        "q": "Otatteko välityspalkkiota tilauksista?",
+        "a": "Emme ota prosenttiosuutta tilauksista. Kaikki QR-ruokalistan kautta tulevat tilaukset menevät lyhentämättöminä ravintolalle ilman tilaussovellusten välistävetoja. Maksat vain kiinteän kuukausimaksun — et muuta."
+      },
+      {
+        "q": "Tarvitsevatko asiakkaat sovelluksen, ja vaatiiko käyttö teknistä osaamista?",
+        "a": "Asiakkaat eivät tarvitse sovellusta: he vain osoittavat puhelimen kameralla QR-koodia, ja ruokalista aukeaa selaimeen. Myöskään ravintola ei tarvitse teknistä erityisosaamista — hallintapaneeli toimii suoraan selaimessa puhelimella, tabletilla tai tietokoneella. Kaikki hoituu klikkaamalla ja raahaamalla, koodausta ei tarvita."
+      },
+      {
+        "q": "Kuinka nopeasti ruokalistan muutokset — kuten hinnat ja uudet annokset — päivittyvät?",
+        "a": "Välittömästi. Puhelimella tekemäsi muutokset näkyvät asiakkaille sekunneissa. Uuden annoksen lisääminen vaatii vain muutaman napautuksen: nimi, hinta, kuva. Paperisia ruokalistoja ei tarvitse painaa uudelleen, etkä tarvitse graafikkoa."
+      },
+      {
+        "q": "Kuinka monta kieltä on tuettuna?",
+        "a": "Tuemme 35 kieltä automaattisella tekoälykäännöksellä. Yksi klikkaus — ja koko ruokalista on käännetty. Tekoäly ymmärtää ruokasanastoa, joten annosten nimet ja kuvaukset kuulostavat luonnollisilta jokaisella kielellä. Turistit tilaavat rohkeammin, kun he ymmärtävät, mitä annos sisältää."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Käyttövalmis 10 minuutissa. ",
+    "headingAccent": "14 päivän täysi käyttöoikeus.",
+    "sub": "Ei luottokorttia, peruuta milloin tahansa. {count} ravintolan luottama. Tarvitset vain sähköpostiosoitteen."
+  },
+  "featureHighlights": {
+    "heading": "Kaikki sisältyy",
+    "sub": "Ominaisuudet, jotka muuttavat asiakkaat tilauksiksi — jokaisessa paketissa, ilman lisämaksua."
+  },
+  "scan": {
+    "heading": "Onko sinulla paperinen ruokalista tai PDF?",
+    "headingAccent": "Tekoäly digitoi sen 60 sekunnissa.",
+    "sub": "Lataa kuva tai tiedosto — tekoäly tunnistaa kategoriat, annokset ja hinnat automaattisesti.",
+    "cta": "Skannaa ruokalista →"
+  },
+  "pricingQuiz": {
+    "heading": "Kokoa pakettisi ",
+    "sub": "Aloita ruokalistasta — lisää pöytävaraukset, keittiönäyttö ja verkkotunnus silloin kun niitä tarvitset.",
+    "billingLabel": "Laskutus:",
+    "monthly": "Kuukausittain",
+    "yearly": "Vuosittain",
+    "restaurantsLabel": "Ravintoloita:",
+    "fewerAria": "Vähemmän ravintoloita",
+    "moreAria": "Enemmän ravintoloita",
+    "menuTitle": "Ruokalista ja verkkosivut",
+    "menuHint": "Sisältyy aina",
+    "reservationsTitle": "Pöytävarausjärjestelmä",
+    "reservationsHint": "Pöytävaraukset",
+    "kdsTitle": "Keittiönäyttö",
+    "kdsHint": "Tilaukset keittiön ruudulla",
+    "domainTitle": "Verkkotunnus",
+    "domainHint": "Oma verkko-osoitteesi",
+    "perMonthSuffix": "/kk",
+    "perYearSuffix": "/v",
+    "perMonthLongSuffix": "/kuukausi",
+    "saveYearlyTemplate": "Säästä {amount} vuodessa vuosilaskutuksella",
+    "volumeDiscountTemplate": "{percent} % alennus",
+    "saveUpToHint": "Säästä jopa 50 % yli 5 ravintolalla",
+    "billedYearly": "Laskutetaan kerran vuodessa",
+    "billedMonthly": "Laskutetaan kuukausittain",
+    "enterprisePre": "Tarvitsetko räätälöidyn ratkaisun?",
+    "enterpriseCta": "Laita viestiä",
+    "enterprisePost": "niin räätälöimme sinulle sopivan paketin.",
+    "enterpriseWa": "Hei! Tarvitsen räätälöidyn paketin ravintoloilleni.",
+    "headingAccent": "ravintolallesi",
+    "multiplePre": "Useampi ravintola?",
+    "multipleCta": "Katso vaihtoehdot",
+    "restaurantOne": "ravintola",
+    "restaurantFew": "ravintolaa",
+    "restaurantMany": "ravintolaa",
+    "multipleChangePre": "Eri määrä ravintoloita?",
+    "multipleChangeCta": "Muuta"
+  },
+  "pricingCta": {
+    "heading": "Yksinkertainen, joustava hinnoittelu",
+    "sub": "Maksa vain niistä ominaisuuksista, joita tarvitset — kokoa pakettisi minuutissa.",
+    "fromTemplate": "alkaen {price}/kk",
+    "button": "Kokoa pakettini"
+  },
+  "footer": {
+    "copyrightTemplate": "© {year} IQ Rest. Kaikki oikeudet pidätetään.",
+    "featuresHeading": "Ominaisuudet",
+    "featureLinks": [
+      {
+        "href": "/ru/tsifrovoe-menyu",
+        "label": "Digitaalinen ruokalista"
+      },
+      {
+        "href": "/ru/priem-zakazov-restoran",
+        "label": "Tilausten vastaanotto"
+      },
+      {
+        "href": "/ru/bronirovanie-stolov",
+        "label": "Pöytävaraukset"
+      },
+      {
+        "href": "/ru/kds-kuhonnyy-displey",
+        "label": "Keittiönäyttö"
+      }
+    ],
+    "infoHeading": "Tietoa",
+    "legalHeading": "Lakitiedot",
+    "currencyHeading": "Valuutta"
+  },
+  "common": {
+    "close": "Sulje",
+    "menu": "Valikko",
+    "help": "Apua"
+  },
+  "auth": {
+    "emailLabel": "Sähköposti",
+    "emailPlaceholder": "Syötä sähköpostiosoitteesi",
+    "or": "tai",
+    "continueGoogle": "Jatka Googlella",
+    "continueApple": "Jatka Applella",
+    "consent": {
+      "line": "Jatkamalla hyväksyt <terms>käyttöehdot</terms>. Katso miten käsittelemme tietojasi <privacy>tietosuojaselosteestamme</privacy>."
+    },
+    "signInTitle": "Tervetuloa takaisin",
+    "signInSubtitle": "Syötä sähköpostiosoitteesi — lähetämme sinulle 6-numeroisen kirjautumiskoodin.",
+    "signInButton": "Kirjaudu sisään",
+    "registerTitle": "Luo tili",
+    "registerSubtitle": "14 päivää ilmaiseksi, ei luottokorttia. Lähetämme sinulle kirjautumiskoodin sähköpostitse — ei salasanoja, ei lomakkeita.",
+    "registerButton": "Luo tili",
+    "switchSignIn": "Kirjaudu sisään",
+    "switchCreate": "Rekisteröidy",
+    "verifyTitle": "Tarkista sähköpostisi",
+    "verifySubtitle": "Lähetimme 6-numeroisen koodin osoitteeseen {email}.",
+    "verifyCodeLabel": "Vahvistuskoodi",
+    "checkSpam": "Etkö näe sähköpostia? Tarkista roskapostikansio.",
+    "verifyButton": "Jatka",
+    "resendCode": "Lähetä koodi uudelleen",
+    "resendSent": "Koodi lähetetty",
+    "changeEmail": "Käytä toista sähköpostiosoitetta",
+    "metaSignIn": "Kirjaudu sisään",
+    "metaRegister": "Luo tili",
+    "errors": {
+      "emailInvalid": "Syötä kelvollinen sähköpostiosoite.",
+      "sendFailed": "Koodin lähetys epäonnistui. Yritä uudelleen.",
+      "verifyFailed": "Koodin vahvistus epäonnistui. Yritä uudelleen.",
+      "codeExpired": "Koodi on vanhentunut. Pyydä uusi koodi.",
+      "noCode": "Koodia ei löytynyt tai se on vanhentunut. Pyydä uusi koodi.",
+      "invalidCode": "Virheellinen koodi. Yritä uudelleen.",
+      "tooManyAttempts": "Liian monta yritystä. Odota hetki ja yritä uudelleen."
+    }
+  }
+}

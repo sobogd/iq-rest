@@ -1,0 +1,236 @@
+{
+  "locale": "pt",
+  "slug": "sistema-de-pedidos-restaurante",
+  "trackPrefix": "l_orders",
+  "meta": {
+    "title": "Receção de pedidos no restaurante — Cliente e empregado | IQ Rest",
+    "description": "Receção de pedidos no restaurante a partir do telemóvel ou tablet: planta da sala, divisão da conta, estados, opções e comentários. O cliente pede na mesa, o empregado regista no seu dispositivo. 14 dias grátis.",
+    "canonical": "https://iq-rest.com/pt/sistema-de-pedidos-restaurante",
+    "ogLocale": "pt_PT",
+    "ogTitle": "Receção de pedidos no restaurante — Cliente e empregado",
+    "ogDescription": "O cliente na mesa ou o empregado no telemóvel — o pedido chega de imediato à cozinha. Planta da sala, divisão da conta, estados, opções e comentários.",
+    "brandLine": "IQ Rest — Receção de pedidos no restaurante"
+  },
+  "hero": {
+    "headline": "Pedidos da mesa —",
+    "cta": "Configurar pedidos online",
+    "sub": "O cliente pede na mesa ou o empregado em qualquer dispositivo — direto para a cozinha. Planta da sala, divisão da conta.",
+    "headlineAccent": "direto para a cozinha",
+    "demoLabel": "Demo: ecrã de pedidos",
+    "tablet": {
+      "src": "/landing/feature-orders-modal.webp",
+      "alt": "Tablet com um pedido aberto: lista de pratos e ações — mudar de mesa, dividir o pedido, desconto"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurantes"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafés"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bares"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotéis"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzarias"
+    }
+  ],
+  "scan": {
+    "heading": "Instale o sistema de receção de pedidos",
+    "headingAccent": "em 5 minutos.",
+    "sub": "Digitalize a ementa em papel ou PDF — a IA reconhece pratos, preços e categorias. Ligue um tablet na sala e comece a receber pedidos das mesas.",
+    "cta": "Digitalizar ementa"
+  },
+  "subFeatures": [
+    {
+      "icon": "Map",
+      "eyebrow": "Lista e planta da sala",
+      "heading": "Lista de pedidos ao lado da planta da sala.",
+      "body": "Todos os pedidos ativos aparecem à direita: estado, total, hora de registo e número de itens. À esquerda, a planta da sala: as mesas ganham cor consoante o estado — livre, ocupada, precisa de atenção. Um toque na mesa abre o pedido; um toque no cartão abre a vista detalhada. Sem alternar entre ecrãs.",
+      "bullets": [
+        "Planta da sala: mesas coloridas segundo o estado do pedido.",
+        "Lista de pedidos ao lado — total, hora, número de itens.",
+        "Um toque na mesa abre o pedido ou cria um novo."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-map.webp",
+        "alt": "Tablet na estação do empregado: lista de pedidos e planta da sala com mesas coloridas"
+      }
+    },
+    {
+      "icon": "ClipboardList",
+      "eyebrow": "Ficha do pedido",
+      "heading": "Ficha do pedido: estados, duplicação e remoção — com um toque.",
+      "body": "Cada item tem o seu próprio estado (Pending / Cooking / Ready / Served) — a cozinha e o empregado veem a mesma imagem em tempo real. Um toque no ponto abre o menu de ações: mudança de estado, duplicação do item com os mesmos modificadores e opções, remoção. Todas as ações se fazem diretamente na ficha do pedido.",
+      "bullets": [
+        "Estado de cada item: Pending / Cooking / Ready / Served.",
+        "Duplicação do item com um toque — com as mesmas opções.",
+        "Remoção do item diretamente na ficha do pedido."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-detail.webp",
+        "alt": "Tablet com a ficha detalhada do pedido: estados dos pratos, duplicação e remoção de itens"
+      }
+    },
+    {
+      "icon": "Receipt",
+      "eyebrow": "Divisão da conta",
+      "heading": "Divisão da conta quando os clientes pagam separadamente.",
+      "body": "Os clientes decidiram pagar em separado — assinale com as caixas de seleção os itens que passam para a nova conta; os restantes ficam na atual. O sistema mostra logo os dois totais. Um toque em «Split order» — e tem dois pedidos independentes com totais corretos, ambos mantidos nas suas mesas.",
+      "bullets": [
+        "Seleção dos itens a dividir através de caixas de seleção.",
+        "O total da nova conta e da restante aparece de imediato.",
+        "Um toque — e o pedido fica dividido sem recálculo manual."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-split.webp",
+        "alt": "Tablet numa mesa de restaurante: divisão da conta entre os clientes"
+      }
+    },
+    {
+      "icon": "Smartphone",
+      "eyebrow": "Registo no telemóvel",
+      "heading": "Adicionar itens a partir do telemóvel — em três passos.",
+      "body": "O empregado não está preso a um único dispositivo: abre a secção de receção de pedidos no seu telemóvel e adiciona um item em três passos — escolha da categoria, escolha do prato, escolha das opções (tamanho, ponto de cozedura, molhos e ingredientes extra). O preço recalcula-se automaticamente. O comentário para a cozinha adiciona-se no último passo.",
+      "bullets": [
+        "Três passos: categoria → prato → opções.",
+        "Opções (tamanho, extras, ingredientes) com preço num clique.",
+        "Campo de comentário no passo final."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-mobile.webp",
+        "alt": "Quatro telemóveis com os passos de adição de um item ao pedido: categoria, prato, tamanho, comentário"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "O que os restauradores perguntam sobre a receção de pedidos na IQ Rest. Se a sua pergunta não está na lista, escreva-nos no WhatsApp.",
+    "items": [
+      {
+        "q": "Podem vários empregados trabalhar em simultâneo em dispositivos diferentes?",
+        "a": "Sim. Cada empregado liga o seu dispositivo e vê as mesmas mesas, pedidos e estados em tempo real. Uma alteração feita por um aparece de imediato aos restantes — sem conflitos nem bloqueios."
+      },
+      {
+        "q": "Os empregados podem trabalhar nos seus dispositivos pessoais?",
+        "a": "Sim. O ecrã de pedidos funciona no navegador — não é preciso instalar nada. O telemóvel ou tablet liga-se com um código de seis dígitos do painel; no fim do turno, o acesso revoga-se com um toque."
+      },
+      {
+        "q": "É possível adicionar opções obrigatórias aos pratos (tamanho, ponto de cozedura)?",
+        "a": "Sim. Cada prato pode ter qualquer número de grupos de opções — obrigatórios («Tamanho»: Small / Medium / Big) e opcionais («Ponto»: rare / medium / well done). As opções influenciam o preço. Num grupo obrigatório, o sistema pede que se escolha uma variante — isto elimina erros."
+      },
+      {
+        "q": "É possível indicar comentários e itens adicionais num prato?",
+        "a": "Sim. No último passo há um campo de comentário («sem cebola», «alergia a frutos secos»). Os extras registam-se como opções com suplemento («+ Molho barbecue», «+ Pão»). Os comentários são visíveis no ecrã de cozinha e destacados com cor."
+      },
+      {
+        "q": "Há estatísticas dos pedidos?",
+        "a": "Sim. Na secção de análise — receita por dia, ticket médio e pratos mais populares. Estes dados ajudam a planear turnos e compras."
+      },
+      {
+        "q": "É possível dividir pedidos?",
+        "a": "Sim. Assinale os itens que passam para a nova conta — os totais de ambas as contas recalculam-se automaticamente, sem cálculos manuais nem mudanças de secção."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Pedidos em 10 minutos. ",
+    "headingAccent": "14 dias de acesso total.",
+    "sub": "Não precisa de cartão, cancele a qualquer momento. {count} restaurantes já enviam pedidos para a cozinha. Só precisa de um email."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Planta da sala e lista de pedidos",
+      "sub": "Pedidos ativos ao lado da planta da sala: as mesas ganham cor consoante o estado; um toque abre o pedido ou cria um novo.",
+      "bullets": [
+        {
+          "icon": "Map",
+          "title": "Mesas por estado",
+          "sub": "Livre, ocupada, precisa de atenção — vê-se num relance"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Lista de pedidos ativos",
+          "sub": "Total, hora de registo e número de itens de cada pedido"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Novo pedido a partir da planta",
+          "sub": "Um toque numa mesa livre abre logo o registo do pedido"
+        }
+      ]
+    },
+    {
+      "heading": "Estado de cada item",
+      "sub": "A cozinha e o empregado veem a mesma imagem: cada prato com o seu estado — do registado ao servido.",
+      "bullets": [
+        {
+          "icon": "Timer",
+          "title": "Estados por prato",
+          "sub": "Pending, Cooking, Ready, Served — por item, não pelo pedido inteiro"
+        },
+        {
+          "icon": "Receipt",
+          "title": "Duplicação de item",
+          "sub": "Repita um prato com as mesmas opções com um toque"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Correções no local",
+          "sub": "Remoção do item diretamente na ficha do pedido"
+        }
+      ]
+    },
+    {
+      "heading": "Divisão da conta",
+      "sub": "Os clientes pagam separadamente — assinale os itens com as caixas de seleção e eles passam para uma nova conta. Os totais recalculam-se de imediato.",
+      "bullets": [
+        {
+          "icon": "Receipt",
+          "title": "Caixas de seleção por item",
+          "sub": "Escolha os pratos para a nova conta; os restantes ficam na atual"
+        },
+        {
+          "icon": "ChartColumn",
+          "title": "Totais logo visíveis",
+          "sub": "A nova conta e a restante calculam-se automaticamente"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Um toque",
+          "sub": "O pedido fica dividido sem recálculo manual nem calculadora"
+        }
+      ]
+    },
+    {
+      "heading": "Registo no telemóvel do empregado",
+      "sub": "O empregado regista o pedido no seu dispositivo em três passos: categoria, prato, opções.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Qualquer dispositivo",
+          "sub": "Telemóvel ou tablet com navegador — sem instalação"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Opções com suplemento",
+          "sub": "Tamanho, extras e variantes do prato com preço num clique"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Comentário no prato",
+          "sub": "Os pedidos especiais do cliente adicionam-se no passo final — a cozinha vê-os logo"
+        }
+      ]
+    }
+  ]
+}

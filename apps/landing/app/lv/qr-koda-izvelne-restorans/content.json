@@ -1,0 +1,151 @@
+{
+  "locale": "lv",
+  "slug": "qr-koda-izvelne-restorans",
+  "trackPrefix": "l_lv_qr",
+  "featureHeading": {
+    "heading": "Vairāk nekā tikai QR kods",
+    "sub": "Viss, par ko kļūst viens skenējums jūsu viesiem un zāles darbiniekiem."
+  },
+  "meta": {
+    "title": "QR Ēdienkarte restorāniem | IQ Rest",
+    "description": "QR ēdienkarte restorāniem: viesi skenē QR kodu uz galdiņa, atver ēdienkarti pārlūkprogrammā un pasūta savā valodā. 14 dienas bez maksas, karte nav nepieciešama.",
+    "canonical": "https://iq-rest.com/lv/qr-koda-izvelne-restorans",
+    "ogLocale": "lv_LV",
+    "ogTitle": "QR Ēdienkarte restorāniem",
+    "ogDescription": "QR uz galdiņa, ēdienkarte tālrunī — fotoattēli, alergēni, 35 valodas un atjauninājumi reāllaikā.",
+    "brandLine": "IQ Rest — QR Ēdienkarte restorāniem"
+  },
+  "hero": {
+    "headline": "QR ēdienkarte:\nskenēt un pasūtīt",
+    "cta": "Izveidot QR ēdienkarti",
+    "sub": "Viesi skenē QR kodu uz galdiņa, pārlūko fotoattēlus un alergēnus 35 valodās un pasūta — lietotnes nav nepieciešamas."
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restorāniem"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kafejnīcām"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bāriem"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Viesnīcām"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Picērijām"
+    }
+  ],
+  "scan": {
+    "heading": "Jau ir papīra ēdienkarte vai PDF?",
+    "headingAccent": "AI to pārvērš par QR ēdienkarti 60 sekundēs.",
+    "sub": "Augšupielādējiet ēdienkartes fotoattēlu vai PDF — AI atpazīst kategorijas, ēdienus un cenas un pievieno tos tieši jūsu QR ēdienkartei.",
+    "cta": "Izveidot QR ēdienkarti"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "Viens QR, 35 valodas",
+      "heading": "Viens QR kods, ēdienkarte 35 valodās.",
+      "body": "Viesi skenē QR un izvēlas savu valodu: tulkojumu veic AI, ņemot vērā kulinārijas nianses, nevis parasts tulkotājs. Vairs nekādu atsevišķu tūristu ēdienkaršu vai izmētātu lapu uz galdiņa.",
+      "bullets": [
+        "Viens izdrukāts QR kods aptver 35 valodas, kas iekļautas abonementā.",
+        "AI runā ēdiena valodā — ēdienu nosaukumi skan dabiski katrā valodā.",
+        "Viesi pārslēdz valodas ēdienkartē, neskenējot QR kodu vēlreiz."
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Divi viesi skenē vienu un to pašu QR kodu no galdiņa un lasa ēdienkarti dažādās valodās"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Alergēni QR ēdienkartē",
+      "heading": "Alergēni un uztura norādes QR ēdienkartē.",
+      "body": "Katram ēdienam aiz QR koda var būt atzīmes: glutēns, laktoze, rieksti, jūras veltes, vegāniskas un bezglutēna opcijas. Viesi filtrē ēdienus atbilstoši saviem ierobežojumiem no sava tālruņa, nejautājot personālam.",
+      "bullets": [
+        "14 alergēnu kategorijas ēdienu līmenī.",
+        "Vegāniskas, veģetāras un bezglutēna atzīmes ar vienu klikšķi panelī.",
+        "Viesi filtrē QR ēdienkarti pēc saviem ierobežojumiem."
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Viesis tālrunī filtrē QR ēdienkarti pēc alergēniem, kamēr īpašnieks rediģē sarakstu planšetdatorā"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Vairāk nekā tikai QR",
+      "heading": "QR ēdienkarte kā restorāna mājaslapa.",
+      "body": "Pēc koda noskenēšanas viesi nenonāk pie plakana PDF: viņi redz sākuma ekrānu ar video vai iespaidīgu fotoattēlu, vietas aprakstu un kontaktu lapu ar karti, tālruņa numuriem un sociālo tīklu saitēm. QR kļūst par jūsu restorāna vizītkarti tiešsaistē.",
+      "bullets": [
+        "Fona video vai iespaidīgs fotoattēls QR ēdienkartes sākuma ekrānā.",
+        "Vieta, kur pastāstīt par savu restorānu un katru kategoriju.",
+        "Iebūvēta kontaktu lapa: karte, tālrunis, Instagram, WhatsApp."
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Divi tālruņi uz galdiņa: QR ēdienkartes sākuma ekrāns ar fona video un kontaktu lapa ar karti"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Pasūtījumi no QR · pēc izvēles",
+      "heading": "No QR koda viesi var arī pasūtīt.",
+      "body": "Papildus ēdienkartes pārlūkošanai QR var kļūt par pasūtījumu kanālu: viesi pievieno ēdienus grozam un nosūta pieprasījumu. Pasūtījums nonāk pie viesmīļa zālē, jūsu WhatsApp vai virtuves ekrānā. Šo funkciju var ieslēgt un izslēgt iestatījumos, kad vien nepieciešams.",
+      "bullets": [
+        "Grozs, komentāri un pasūtījuma nosūtīšana tieši no QR skenējuma.",
+        "Pasūtījums uzreiz nonāk zālē, WhatsApp vai virtuves ekrānā.",
+        "Ieslēdziet funkciju noteiktās stundās, stāvos vai konkrētos restorānos."
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Divi tālruņi uz galdiņa: grozs, kas izveidots no QR ēdienkartes, un nosūtīta pasūtījuma apstiprinājums"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Ko restorānu īpašnieki jautā par IQ Rest QR ēdienkarti. Nevarat atrast savu jautājumu? Rakstiet mums WhatsApp.",
+    "items": [
+      {
+        "q": "Kā darbojas IQ Rest QR ēdienkarte?",
+        "a": "Uz katra galdiņa ir izdrukāts QR kods. Viesi to noskenē ar tālruņa kameru, un pārlūkprogrammā atveras restorāna ēdienkarte — fotoattēli, apraksti, alergēni un aktuālās cenas. Viesiem vai personālam nav jālejupielādē nekādas lietotnes."
+      },
+      {
+        "q": "Vai man ir vajadzīgas tehniskas zināšanas, lai izveidotu QR ēdienkarti?",
+        "a": "Nē. Panelis darbojas ar klikšķiem un vilkšanu, bez programmēšanas vai sarežģītas konfigurācijas. Ēdiena pievienošana prasa sekundes: nosaukums, cena, fotoattēls. Sākotnējā iestatīšana parasti aizņem 30 minūtes līdz stundai; ja jums jau ir PDF ēdienkarte, AI to konvertēs automātiski."
+      },
+      {
+        "q": "Vai viesiem jāinstalē lietotne, lai nolasītu QR?",
+        "a": "Nē. Iebūvētā iPhone un Android kamera atpazīst QR kodu dažu sekunžu laikā un atver ēdienkarti tieši pārlūkprogrammā. Arī vadības panelis darbojas jebkurā modernā pārlūkprogrammā — tālrunī, planšetdatorā vai klēpjdatorā."
+      },
+      {
+        "q": "Kā tiek izdrukāti galdiņu QR kodi?",
+        "a": "QR kodi tiek ģenerēti automātiski panelī (viens katram galdiņam vai viens visai vietai) un lejupielādēti kā drukai gatavs PDF. Biroja printeris un statīvs ir viss, kas jums nepieciešams: turētājs, uzlīme vai paliktnis."
+      },
+      {
+        "q": "Vai varu izmantot savu domēnu QR ēdienkartei?",
+        "a": "Jā. Mēs atbalstām jūsu restorāna domēnu ar SSL sertifikātu (piemēram, menu.jusurestorans.lv): kad viesi skenē QR, viņi redz jūsu restorāna adresi, nevis vispārīgu apakšdomēnu. DNS iestatīšana aizņem 5–10 minūtes, un mēs jums palīdzēsim to izdarīt."
+      },
+      {
+        "q": "Vai varu pārvaldīt QR kodus vairākiem restorāniem no viena konta?",
+        "a": "Jā, pēc pieprasījuma. Viens konts var apvienot vairākas vietas, katrai no tām ir savi QR kodi, ēdienkarte, dizains un analītika. Rakstiet mums WhatsApp, un mēs ieslēgsim vairāku restorānu režīmu."
+      },
+      {
+        "q": "Vai ir grūti palaist QR ēdienkarti no nulles?",
+        "a": "Trīs soļi: (1) izveidojiet kategorijas; (2) pievienojiet ēdienus ar nosaukumu, cenu un fotoattēlu; (3) izdrukājiet QR kodus un novietojiet tos uz galdiņiem. Ja jums jau ir papīra ēdienkarte vai PDF, augšupielādējiet to — AI atpazīst kategorijas un cenas un aizpilda kartītes. Pamata ēdienkarte var būt tiešsaistē 5 minūtēs."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "QR ēdienkarte 10 minūtēs. ",
+    "headingAccent": "14 dienas pilna pieeja.",
+    "sub": "Karte nav nepieciešama, atceliet jebkurā laikā. Mums uzticas {count} restorāni. Tikai e-pasts — un nekādu lietotņu jūsu viesiem."
+  }
+}

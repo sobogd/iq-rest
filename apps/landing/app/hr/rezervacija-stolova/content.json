@@ -1,0 +1,206 @@
+{
+  "locale": "hr",
+  "slug": "rezervacija-stolova",
+  "trackPrefix": "l_bookings",
+  "meta": {
+    "title": "0-24 Rezervacije stolova za restorane | IQ Rest",
+    "description": "0-24 rezervacije stolova za vaš restoran: gosti sami rezerviraju stolove putem QR jelovnika ili web stranice. Kalendar po stolovima, automatske potvrde i podsjetnici. Bez telefonskih poziva, bez propuštenih gostiju. 14 dana besplatno.",
+    "canonical": "https://iq-rest.com/hr/rezervacija-stolova",
+    "ogLocale": "hr_HR",
+    "ogTitle": "0-24 Rezervacije stolova — Gosti sami rezerviraju",
+    "ogDescription": "Gosti rezerviraju stolove putem QR jelovnika ili web stranice. Kalendar, automatske potvrde, podsjetnici. Niti jedan gost nije propušten.",
+    "brandLine": "IQ Rest — Rezervacije stolova za restorane"
+  },
+  "hero": {
+    "headline": "Rezervacije stolova 0-24,",
+    "cta": "Postavi rezervacije stolova",
+    "sub": "Gosti rezerviraju 0-24 putem QR jelovnika ili poveznice. Kalendar po stolovima, automatske potvrde i podsjetnici.",
+    "headlineAccent": "bez telefonskih poziva",
+    "demoLabel": "Demo: kalendar rezervacija",
+    "tablet": {
+      "src": "/landing/hero-card-reservation.webp",
+      "alt": "Tablet s kalendarom rezervacija: mjesečni prikaz i popis rezervacija koje čekaju potvrdu"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restorani"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kafići"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barovi"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hoteli"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerije"
+    }
+  ],
+  "scan": {
+    "heading": "Pokrenite rezervacije stolova",
+    "headingAccent": "u 5 minuta.",
+    "sub": "Povežite kalendar, dodajte stolove s fotografijama i brojem mjesta — gosti počinju rezervirati istog dana.",
+    "cta": "Uključi rezervacije"
+  },
+  "subFeatures": [
+    {
+      "icon": "CalendarPlus",
+      "eyebrow": "Obrazac za rezervaciju",
+      "heading": "Gosti rezerviraju sami — prema datumu, vremenu i broju osoba.",
+      "body": "Gost otvara QR jelovnik ili izravnu poveznicu, bira datum, vrijeme i broj osoba — i odmah vidi slobodne stolove: s fotografijom, opisom (terasa, uz prozor, separe) i brojem mjesta. Potvrda se šalje automatski putem e-maila i WhatsAppa.",
+      "bullets": [
+        "Odabir stola prema fotografiji, opisu i broju mjesta.",
+        "Automatska potvrda i podsjetnik sat vremena prije dolaska.",
+        "Minimalan obrazac: ime, telefon, broj osoba."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-form.webp",
+        "alt": "Gost rezervira stol u restoranu s telefona: biranje datuma, vremena, broja osoba i stola"
+      }
+    },
+    {
+      "icon": "CalendarDays",
+      "eyebrow": "Kalendar rezervacija",
+      "heading": "Kalendar po danima i stolovima — sve vidljivo u sekundi.",
+      "body": "Administracija ima kalendar rezervacija razvrstan po stolovima, danima, tjednima i mjesecima. Slobodni termini, zauzeti stolovi, potvrđene rezervacije i one na čekanju prikazuju se na jednom ekranu. Radi na tabletu u sali i na laptopu u uredu.",
+      "bullets": [
+        "Dnevni, tjedni i mjesečni prikaz.",
+        "Pregled po stolovima: tko, kada, koliko gostiju.",
+        "Premjestite, otkažite ili potvrdite rezervaciju — jednim dodirom s telefona."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-calendar.webp",
+        "alt": "Kalendar rezervacija u IQ Rest administraciji na dva tableta: dnevni prikaz po stolovima i mjesečni kalendar"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Što ugostitelji pitaju o rezervacijama stolova u IQ Restu. Ako vašeg pitanja nema na popisu — pošaljite nam poruku na WhatsApp.",
+    "items": [
+      {
+        "q": "Mogu li odabrati dane i vrijeme kada su rezervacije dostupne?",
+        "a": "Da. Administracija vam omogućuje postavljanje rasporeda po danima u tjednu: vrijeme za rezervacije i pauzu između ručka i večere. Također možete privremeno potpuno isključiti rezervacije — gosti će vidjeti da online rezervacije nisu dostupne."
+      },
+      {
+        "q": "Mogu li učitati fotografiju svakog stola?",
+        "a": "Da. Svaki stol ima fotografiju, broj mjesta i zonu (terasa, uz prozor, šank). Gosti točno vide koji stol rezerviraju i donose informiranu odluku."
+      },
+      {
+        "q": "Mogu li ograničiti broj gostiju po stolu?",
+        "a": "Da. Svaki stol ima zadani broj mjesta — sustav gostima nudi samo odgovarajuće stolove i sprječava da stol za dvoje rezervira grupa od šestero."
+      },
+      {
+        "q": "Koliko je teško postaviti rezervacije?",
+        "a": "Tri koraka: dodajte stolove s fotografijama i brojem mjesta, uključite način rezervacija u postavkama i podijelite poveznicu ili QR kod. Pokretanje traje 5–10 minuta."
+      },
+      {
+        "q": "Mogu li postaviti automatsku ili ručnu potvrdu rezervacija?",
+        "a": "Da, način rada bira se u postavkama. Kod automatske potvrde gost je potvrđen odmah nakon slanja obrasca. Kod ručne, zahtjev se u administraciji pojavljuje kao \"čeka potvrdu\" — voditelj ga potvrđuje ili odbija. Ručni način je koristan kada je broj stolova ograničen."
+      },
+      {
+        "q": "Naplaćujete li naknadu po rezervaciji?",
+        "a": "Nema naknada: rezervacije su uključene u pretplatu — bez postotka od gostiju, bez naplate po terminu, bez posrednika. Fiksno plaćanje i neograničene rezervacije."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Rezervacije u 10 minuta. ",
+    "headingAccent": "14 dana punog pristupa.",
+    "sub": "Bez kartice, otkažite bilo kada. {count} restorana rasteretilo je svoje osoblje s nama. Sve što trebate je e-mail adresa."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Gosti rezerviraju sami",
+      "sub": "Datum, vrijeme i broj osoba — s QR jelovnika ili izravne poveznice, u bilo koje doba dana. Sustav prikazuje samo slobodne termine.",
+      "bullets": [
+        {
+          "icon": "CalendarPlus",
+          "title": "Rezervacije 0-24",
+          "sub": "Gosti rezerviraju noću ili vikendom — bez poziva, bez čekanja na odgovor"
+        },
+        {
+          "icon": "Users",
+          "title": "Stol prilagođen broju osoba",
+          "sub": "Sustav samostalno pronalazi odgovarajući stol prema broju mjesta"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Minimalan obrazac",
+          "sub": "Ime, telefon i broj osoba — ispunjavanje obrasca traje pola minute"
+        }
+      ]
+    },
+    {
+      "heading": "Kalendar po danima i stolovima",
+      "sub": "Sve rezervacije u jednom kalendaru: vidite što je slobodno, što je potvrđeno i tko dolazi.",
+      "bullets": [
+        {
+          "icon": "CalendarDays",
+          "title": "Dan, tjedan, mjesec",
+          "sub": "Mijenjajte prikaze i planirajte raspored unaprijed"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Pregled po stolovima",
+          "sub": "Tko, kada i za koliko gostiju — za svaki stol"
+        },
+        {
+          "icon": "Smartphone",
+          "title": "Upravljajte s telefona",
+          "sub": "Premjestite, otkažite ili potvrdite rezervaciju — jednim dodirom"
+        }
+      ]
+    },
+    {
+      "heading": "Raspored i načini rada",
+      "sub": "Postavite raspored rezervacija po danima u tjednu, trajanje termina i način potvrde.",
+      "bullets": [
+        {
+          "icon": "Clock",
+          "title": "Raspored po danima",
+          "sub": "Zasebno radno vrijeme za svaki dan u tjednu, uključujući pauzu između ručka i večere"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Trajanje termina",
+          "sub": "Postavite interval rezervacija koji odgovara formatu vašeg objekta"
+        },
+        {
+          "icon": "CalendarCheck",
+          "title": "Automatski ili ručno",
+          "sub": "Potvrdite svaku rezervaciju sami ili uključite automatsku potvrdu"
+        }
+      ]
+    },
+    {
+      "heading": "Obavijesti bez ručnog rada",
+      "sub": "Sustav obavještava gosta i vaš tim — e-mail i ekran za rezervacije ažuriraju se odmah.",
+      "bullets": [
+        {
+          "icon": "Mail",
+          "title": "E-mail gostu",
+          "sub": "Potvrda rezervacije šalje se automatski putem e-maila"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Obavijest restoranu",
+          "sub": "Vlasnici dobivaju e-mail o svakoj novoj rezervaciji"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Ekran za rezervacije na ulazu",
+          "sub": "Tablet na ulazu prikazuje nove rezervacije u stvarnom vremenu"
+        }
+      ]
+    }
+  ]
+}

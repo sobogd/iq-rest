@@ -1,0 +1,289 @@
+{
+  "heroV2": {
+    "verticals": [
+      {
+        "icon": "restaurant",
+        "label": "Restaurants"
+      },
+      {
+        "icon": "cafe",
+        "label": "Cafés"
+      },
+      {
+        "icon": "bar",
+        "label": "Bars"
+      },
+      {
+        "icon": "hotel",
+        "label": "Hotels"
+      },
+      {
+        "icon": "pizza",
+        "label": "Pizzerias"
+      }
+    ],
+    "title": "Everything your restaurant",
+    "titleAccent": "needs!",
+    "sub": "Set up your operations in 10 minutes: launch an online menu, streamline the kitchen and manage seating.",
+    "primaryLabel": "Start for free",
+    "demoLabel": "View demo menu",
+    "mockups": {
+      "kds": {
+        "src": "/landing/hero-card-kds.webp",
+        "alt": "Tablet with a kitchen display: orders by table in columns with statuses"
+      },
+      "reservations": {
+        "src": "/landing/hero-card-reservation.webp",
+        "alt": "Tablet with a reservation calendar: month view and a list of bookings awaiting confirmation"
+      },
+      "phone1": {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Phone with a restaurant website homepage: photos, reservations and access to the online menu"
+      },
+      "phone2": {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Phone with a dish card: photo, price and allergen labels"
+      }
+    }
+  },
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Live in 10 minutes",
+      "sub": "No expensive hardware to buy and no lengthy setup"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Fast support",
+      "sub": "We respond in chat within a few hours"
+    },
+    {
+      "icon": "Globe",
+      "title": "Chosen by {count} venues",
+      "sub": "Trusted by restaurants and coffee shops in 15+ countries"
+    },
+    {
+      "icon": "Palette",
+      "title": "100% on brand",
+      "sub": "We adapt the design and interface to match your venue's style"
+    }
+  ],
+  "menu": {
+    "heading": "Website and digital menu",
+    "sub": {
+      "link": "More than a QR menu!",
+      "rest": " Get a full website with a unique design, contact details and table reservations."
+    },
+    "moreLabel": "More about the menu",
+    "demoLabel": "Demo: the menu as guests see it",
+    "mockupAlt": "Phone with a restaurant website homepage and phone with a dish page",
+    "bullets": [
+      {
+        "icon": "Languages",
+        "title": "Auto-translation into 35 languages",
+        "sub": "Serve international guests without a language barrier — automatic translation handles it all"
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "Orders straight from the table",
+        "sub": "Simplify your operations — take orders from tables quickly, no waiter required"
+      },
+      {
+        "icon": "WheatOff",
+        "title": "Allergens and diets",
+        "sub": "Label allergens and dietary preferences (vegan, spicy) so guests can choose food more easily and safely"
+      }
+    ]
+  },
+  "reservations": {
+    "heading": "Table reservations",
+    "sub": {
+      "link": "Smart table reservations!",
+      "rest": " An automated booking system that tracks available tables and your schedule on its own."
+    },
+    "moreLabel": "More about reservations",
+    "demoLabel": "Demo: reservation calendar",
+    "mockupAlt": "Tablet with a reservation calendar: tables by day and time slot",
+    "bullets": [
+      {
+        "icon": "CalendarCheck",
+        "title": "Clear reservation map",
+        "sub": "A visual schedule by day and table — instantly see where and when seats are available"
+      },
+      {
+        "icon": "SlidersHorizontal",
+        "title": "Flexible booking setup",
+        "sub": "Configure opening hours, slot duration and table photos, and collect guest requests"
+      },
+      {
+        "icon": "Users",
+        "title": "Guest flow management",
+        "sub": "Choose the booking mode that suits you and keep full control of guest flow"
+      }
+    ]
+  },
+  "orders": {
+    "heading": "Tableside order taking",
+    "sub": {
+      "link": "Orders straight to the kitchen!",
+      "rest": " An order from the table or from a waiter lands on the kitchen display instantly — no paper tickets, no waiting."
+    },
+    "moreLabel": "More about orders",
+    "demoLabel": "Demo: orders screen",
+    "mockupSrc": "/landing/feature-orders-modal.webp",
+    "mockupAlt": "Tablet with an open order: dish list and order actions — change table, split order, add discount",
+    "bullets": [
+      {
+        "icon": "ShoppingCart",
+        "title": "Guest or waiter",
+        "sub": "Guests order from the table via QR code, waiters from their phone or tablet"
+      },
+      {
+        "icon": "Map",
+        "title": "Floor map with statuses",
+        "sub": "Tables on the map are color-coded by status — see at a glance who is waiting for an order and where to go next"
+      },
+      {
+        "icon": "Receipt",
+        "title": "Bill splitting",
+        "sub": "Split an order between guests and close tables without payment mix-ups"
+      }
+    ]
+  },
+  "kds": {
+    "heading": "Kitchen Display System (KDS)",
+    "sub": {
+      "link": "A kitchen in sync!",
+      "rest": " Orders from the floor and the QR menu appear on the cook's screen instantly — with notes, allergens and a timer."
+    },
+    "moreLabel": "More about KDS",
+    "demoLabel": "Demo: kitchen screen",
+    "mockupAlt": "Tablet with a kitchen display: orders by table in columns with statuses",
+    "bullets": [
+      {
+        "icon": "LayoutGrid",
+        "title": "Screens by station",
+        "sub": "Separate tablets for the hot line, bar and pastry station — each sees only its own dishes"
+      },
+      {
+        "icon": "Timer",
+        "title": "Statuses and timer",
+        "sub": "Cooking / ready / served columns and elapsed time per order — status changes with one tap"
+      },
+      {
+        "icon": "ShieldAlert",
+        "title": "Allergens and comments",
+        "sub": "Allergen flags and guest notes are highlighted — the cook won't miss anything important"
+      }
+    ]
+  },
+  "bundle": {
+    "heading": "Everything your restaurant runs on.",
+    "headingAccent": "In one app.",
+    "sub": "Menu, kitchen and reservations in one place — modern, fast and built for how restaurants actually work. No add-on fees or per-feature pricing."
+  },
+  "benefits": [
+    {
+      "icon": "Languages",
+      "tag": "Digital menu",
+      "title": "A menu that sells.",
+      "bullets": [
+        "35 languages with AI",
+        "Premium design",
+        "Prices update instantly"
+      ],
+      "image": "/landing/feature-design.webp",
+      "imageAlt": "Two phones on a café table: the digital menu welcome screen and a contact page with a map"
+    },
+    {
+      "icon": "ChefHat",
+      "tag": "Kitchen display",
+      "title": "Cook faster without missing a thing.",
+      "bullets": [
+        "Straight to the screen",
+        "Notes and allergens",
+        "Tablet or phone"
+      ],
+      "image": "/landing/feature-kds-cards.webp",
+      "imageAlt": "A tablet on a bar counter shows the kitchen display with orders by table"
+    },
+    {
+      "icon": "CalendarCheck",
+      "tag": "Reservations",
+      "title": "Reservations on autopilot.",
+      "bullets": [
+        "Booking without phone calls",
+        "Auto-confirmation",
+        "Calendar by table"
+      ],
+      "image": "/landing/feature-booking-calendar.webp",
+      "imageAlt": "Two tablets showing the reservation calendar: a daily view by table and a monthly view"
+    },
+    {
+      "icon": "Receipt",
+      "tag": "Tableside orders",
+      "title": "Orders straight to the kitchen.",
+      "bullets": [
+        "Guest or waiter",
+        "Straight to the kitchen",
+        "Enable it whenever you want"
+      ],
+      "image": "/landing/feature-orders-map.webp",
+      "imageAlt": "Tablet with the orders screen: a list of orders and a color-coded floor map with tables."
+    }
+  ],
+  "seeDetails": "Learn more",
+  "platform": {
+    "hardwareTitle": "Run it on your own hardware",
+    "hardwareSub": "We don't make you buy hardware from us. Use the phones, tablets and computers you already have.",
+    "anywhereTitle": "Works anywhere",
+    "anywhereSub": "Phone, tablet, laptop, PC. Android, iOS, Windows, Mac, Linux. In any modern browser, no installation."
+  },
+  "activities": {
+    "heading": "One system —",
+    "headingAccent": "your whole restaurant.",
+    "sub": "Faster service, a calmer kitchen, lower costs and guests who come back — all in one platform.",
+    "groups": [
+      {
+        "icon": "Smartphone",
+        "tag": "At the table — guest",
+        "bullets": [
+          "QR menu in 35 languages",
+          "Order without waiting for a waiter",
+          "Call a waiter or request the bill",
+          "Table booking 24/7",
+          "Unique QR code for every table",
+          "No app needed — opens in the browser",
+          "Allergen and diet labels for filtering"
+        ]
+      },
+      {
+        "icon": "ChefHat",
+        "tag": "In the kitchen",
+        "bullets": [
+          "Orders on screen instantly",
+          "Cooking / ready / served columns",
+          "Allergens and comments highlighted",
+          "Tablet or phone — no paper tickets"
+        ]
+      },
+      {
+        "icon": "ChartColumn",
+        "tag": "Management",
+        "bullets": [
+          "Menu and price edits — instant",
+          "AI translation in one click",
+          "Sales analytics and reports",
+          "Multiple restaurants in one account",
+          "AI digitizes a paper menu in 60 seconds",
+          "Your own domain with SSL"
+        ]
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "The whole platform in 10 minutes. ",
+    "headingAccent": "14 days of full access.",
+    "sub": "Menu, orders, reservations and kitchen — no card, cancel anytime; trusted by {count} restaurants, all you need is an email."
+  }
+}

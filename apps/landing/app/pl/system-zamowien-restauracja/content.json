@@ -1,0 +1,236 @@
+{
+  "locale": "pl",
+  "slug": "system-zamowien-restauracja",
+  "trackPrefix": "l_orders",
+  "meta": {
+    "title": "Przyjmowanie zamówień w restauracji — Gość i Kelner | IQ Rest",
+    "description": "Przyjmowanie zamówień z telefonu lub tabletu: plan sali, dzielenie rachunku, statusy, opcje i uwagi. Goście zamawiają ze stolika, kelnerzy na własnym urządzeniu. 14 dni za darmo.",
+    "canonical": "https://iq-rest.com/pl/system-zamowien-restauracja",
+    "ogLocale": "pl_PL",
+    "ogTitle": "Przyjmowanie zamówień — Gość i Kelner",
+    "ogDescription": "Gość przy stoliku lub kelner z telefonem — zamówienie od razu trafia do kuchni. Plan sali, dzielenie rachunku, statusy, opcje i uwagi.",
+    "brandLine": "IQ Rest — Przyjmowanie zamówień w restauracji"
+  },
+  "hero": {
+    "headline": "Zamówienia ze stolika —",
+    "cta": "Uruchom zamówienia online",
+    "sub": "Goście zamawiają przy stoliku, a kelnerzy z dowolnego urządzenia — prosto do kuchni. Plan sali, dzielenie rachunku.",
+    "headlineAccent": "prosto do kuchni",
+    "demoLabel": "Demo: ekran zamówień",
+    "tablet": {
+      "src": "/landing/feature-orders-modal.webp",
+      "alt": "Tablet z otwartym zamówieniem: lista dań i akcje — zmiana stolika, podział rachunku, rabat"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restauracje"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kawiarnie"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bary"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotele"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerie"
+    }
+  ],
+  "scan": {
+    "heading": "Uruchom system zamówień",
+    "headingAccent": "w 5 minut.",
+    "sub": "Zeskanuj papierowe menu lub PDF — AI rozpozna dania, ceny i kategorie. Podłącz tablet na sali i zacznij przyjmować zamówienia ze stolików.",
+    "cta": "Skanuj menu"
+  },
+  "subFeatures": [
+    {
+      "icon": "Map",
+      "eyebrow": "Lista i plan sali",
+      "heading": "Lista zamówień obok planu sali.",
+      "body": "Wszystkie aktywne zamówienia są widoczne po prawej: status, suma, czas złożenia i liczba pozycji. Po lewej stronie jest plan sali: stoliki mają kolory zależne od statusu — wolne, zajęte, wymagające uwagi. Kliknięcie w stolik otwiera jego zamówienie, kliknięcie w kartę otwiera szczegóły. Bez przełączania między ekranami.",
+      "bullets": [
+        "Plan sali: stoliki oznaczone kolorami według statusu zamówienia.",
+        "Lista zamówień obok — suma, czas i liczba pozycji.",
+        "Kliknięcie w stolik otwiera zamówienie lub tworzy nowe."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-map.webp",
+        "alt": "Tablet na stanowisku kelnerskim: lista zamówień i plan sali z kolorowymi stolikami"
+      }
+    },
+    {
+      "icon": "ClipboardList",
+      "eyebrow": "Karta zamówienia",
+      "heading": "Karta zamówienia: statusy, powielanie i usuwanie — jednym kliknięciem.",
+      "body": "Każda pozycja ma swój własny status (Oczekujące / W przygotowaniu / Gotowe / Wydane) — kuchnia i kelner widzą to samo w czasie rzeczywistym. Kliknięcie w kropkę otwiera menu akcji: zmień status, powiel pozycję z tymi samymi modyfikatorami i opcjami, lub usuń. Wszystko dzieje się bezpośrednio w karcie zamówienia.",
+      "bullets": [
+        "Status dla każdej pozycji: Oczekujące / W przygotowaniu / Gotowe / Wydane.",
+        "Powiel pozycję jednym kliknięciem — razem z opcjami.",
+        "Usuń pozycję prosto z karty zamówienia."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-detail.webp",
+        "alt": "Tablet ze szczegółową kartą zamówienia: statusy dań, powielanie i usuwanie pozycji"
+      }
+    },
+    {
+      "icon": "Receipt",
+      "eyebrow": "Dzielenie rachunku",
+      "heading": "Dzielenie rachunku, gdy goście płacą osobno.",
+      "body": "Goście chcą zapłacić osobno — zaznacz pozycje, które trafią na nowy rachunek; reszta zostaje na obecnym. System od razu pokazuje obie sumy. Jedno kliknięcie w \"Podziel zamówienie\" — i masz dwa niezależne zamówienia z poprawnymi kwotami, oba przypisane do tego samego stolika.",
+      "bullets": [
+        "Wybierz pozycje do podziału za pomocą pól wyboru.",
+        "Sumy nowego i pozostałego rachunku pojawiają się natychmiast.",
+        "Jedno kliknięcie — i zamówienie jest podzielone bez ręcznego liczenia."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-split.webp",
+        "alt": "Tablet na stoliku w restauracji: dzielenie rachunku między gośćmi"
+      }
+    },
+    {
+      "icon": "Smartphone",
+      "eyebrow": "Mobilne wprowadzanie",
+      "heading": "Dodawanie pozycji z telefonu — w trzech krokach.",
+      "body": "Kelnerzy nie są przywiązani do jednego urządzenia: otwierają ekran zamówień na własnym telefonie i dodają pozycję w trzech krokach — wybierz kategorię, wybierz danie, wybierz opcje (rozmiar, stopień wysmażenia, dodatkowe sosy i składniki). Cena przelicza się automatycznie. Uwaga dla kuchni dodawana jest na ostatnim etapie.",
+      "bullets": [
+        "Trzy kroki: kategoria → danie → opcje.",
+        "Opcje (rozmiar, dodatki, składniki) z cenami pod jednym kliknięciem.",
+        "Pole na uwagi na ostatnim etapie."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-mobile.webp",
+        "alt": "Cztery telefony pokazujące kroki dodawania pozycji do zamówienia: kategoria, danie, rozmiar, uwaga"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "O co pytają restauratorzy w związku z przyjmowaniem zamówień w IQ Rest. Jeśli nie ma tu Twojego pytania — napisz do nas na WhatsApp.",
+    "items": [
+      {
+        "q": "Czy kilku kelnerów może pracować jednocześnie na różnych urządzeniach?",
+        "a": "Tak. Każdy kelner podłącza własne urządzenie i widzi te same stoliki, zamówienia i statusy w czasie rzeczywistym. Zmiana wprowadzona przez jednego pojawia się natychmiast u pozostałych — bez konfliktów i blokowania."
+      },
+      {
+        "q": "Czy kelnerzy mogą używać prywatnych urządzeń?",
+        "a": "Tak. Ekran zamówień działa w przeglądarce — nic nie trzeba instalować. Telefon lub tablet łączy się za pomocą 6-cyfrowego kodu z panelu, a dostęp można cofnąć jednym kliknięciem po zakończeniu zmiany."
+      },
+      {
+        "q": "Czy mogę dodać obowiązkowe opcje do dań (rozmiar, stopień wysmażenia)?",
+        "a": "Tak. Danie może mieć dowolną liczbę grup opcji — obowiązkowe (\"Rozmiar\": Mały / Średni / Duży) i opcjonalne (\"Stopień wysmażenia\": rare / medium / well done). Opcje wpływają na cenę. Przy grupie obowiązkowej system wymusza wybór — co eliminuje pomyłki."
+      },
+      {
+        "q": "Czy mogę dodać uwagi i dodatki do dania?",
+        "a": "Tak. Na ostatnim etapie jest pole na uwagi (\"bez cebuli\", \"alergia na orzechy\"). Dodatki ustawia się jako płatne opcje (\"+ Sos BBQ\", \"+ Pieczywo\"). Uwagi pojawiają się na ekranie kuchennym, wyróżnione kolorem."
+      },
+      {
+        "q": "Czy są statystyki zamówień?",
+        "a": "Tak. Sekcja analityki pokazuje przychody według dni, średni rachunek i najlepiej sprzedające się dania. Te dane pomagają planować zmiany i zakupy."
+      },
+      {
+        "q": "Czy zamówienia można dzielić?",
+        "a": "Tak. Zaznacz pozycje, które mają trafić na nowy rachunek — obie sumy przeliczą się automatycznie, bez ręcznego liczenia i bez skakania po sekcjach."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Zamówienia w 10 minut. ",
+    "headingAccent": "14 dni pełnego dostępu.",
+    "sub": "Bez podawania karty, zrezygnuj w dowolnej chwili. {count} lokali przyjmuje zamówienia z nami. Wystarczy adres e-mail."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Plan sali i lista zamówień",
+      "sub": "Aktywne zamówienia obok planu sali: stoliki mają kolory zależne od statusu, a kliknięcie otwiera zamówienie lub tworzy nowe.",
+      "bullets": [
+        {
+          "icon": "Map",
+          "title": "Stoliki według statusu",
+          "sub": "Wolne, zajęte, wymagające uwagi — widoczne na pierwszy rzut oka"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Lista aktywnych zamówień",
+          "sub": "Suma, czas złożenia i liczba pozycji dla każdego zamówienia"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Nowe zamówienie z mapy",
+          "sub": "Kliknięcie w wolny stolik od razu otwiera wprowadzanie zamówienia"
+        }
+      ]
+    },
+    {
+      "heading": "Status dla każdej pozycji",
+      "sub": "Kuchnia i kelner widzą to samo: każde danie ma swój własny status — od przyjęcia do wydania.",
+      "bullets": [
+        {
+          "icon": "Timer",
+          "title": "Statusy dla każdego dania",
+          "sub": "Oczekujące, W przygotowaniu, Gotowe, Wydane — dla pozycji, nie dla całego zamówienia"
+        },
+        {
+          "icon": "Receipt",
+          "title": "Powielanie pozycji",
+          "sub": "Powtórz danie z tymi samymi opcjami jednym kliknięciem"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Edycja w locie",
+          "sub": "Usuń pozycję bezpośrednio z karty zamówienia"
+        }
+      ]
+    },
+    {
+      "heading": "Dzielenie rachunku",
+      "sub": "Goście płacą osobno — zaznacz pozycje, a trafią na nowy rachunek. Sumy przeliczają się natychmiast.",
+      "bullets": [
+        {
+          "icon": "Receipt",
+          "title": "Pola wyboru dla pozycji",
+          "sub": "Wybierz dania na nowy rachunek; reszta zostaje na obecnym"
+        },
+        {
+          "icon": "ChartColumn",
+          "title": "Sumy widoczne od razu",
+          "sub": "Nowy i pozostały rachunek są obliczane automatycznie"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Jedno kliknięcie",
+          "sub": "Zamówienie jest podzielone bez ręcznego liczenia i kalkulatora"
+        }
+      ]
+    },
+    {
+      "heading": "Wprowadzanie zamówień z telefonu kelnera",
+      "sub": "Kelnerzy przyjmują zamówienie na własnym urządzeniu w trzech krokach: kategoria, danie, opcje.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Dowolne urządzenie",
+          "sub": "Telefon lub tablet z przeglądarką — bez instalacji"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Płatne opcje",
+          "sub": "Rozmiar, dodatki i warianty dań z cenami pod jednym kliknięciem"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Uwagi do dań",
+          "sub": "Prośby gości dodawane są na ostatnim etapie — kuchnia widzi je od razu"
+        }
+      ]
+    }
+  ]
+}

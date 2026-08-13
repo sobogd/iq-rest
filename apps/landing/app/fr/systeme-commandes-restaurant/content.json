@@ -1,0 +1,236 @@
+{
+  "locale": "fr",
+  "slug": "systeme-commandes-restaurant",
+  "trackPrefix": "l_orders",
+  "meta": {
+    "title": "Prise de commandes au restaurant — Client et serveur | IQ Rest",
+    "description": "Prise de commandes au restaurant depuis un téléphone ou une tablette : plan de salle, addition partagée, statuts, options et commentaires. Le client commande à table, le serveur depuis son appareil. 14 jours gratuits.",
+    "canonical": "https://iq-rest.com/fr/systeme-commandes-restaurant",
+    "ogLocale": "fr_FR",
+    "ogTitle": "Prise de commandes au restaurant — Client et serveur",
+    "ogDescription": "Le client à table ou le serveur depuis son téléphone — la commande part instantanément en cuisine. Plan de salle, addition partagée, statuts, options et commentaires.",
+    "brandLine": "IQ Rest — Prise de commandes au restaurant"
+  },
+  "hero": {
+    "headline": "Les commandes à table —",
+    "cta": "Configurer les commandes en ligne",
+    "sub": "Le client commande à table ou le serveur depuis n'importe quel appareil — direction la cuisine. Plan de salle, addition partagée.",
+    "headlineAccent": "direct en cuisine",
+    "demoLabel": "Démo : écran des commandes",
+    "tablet": {
+      "src": "/landing/feature-orders-modal.webp",
+      "alt": "Tablette avec une commande ouverte : liste des plats et actions — changer de table, diviser la commande, remise"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurants"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafés"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bars"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hôtels"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerias"
+    }
+  ],
+  "scan": {
+    "heading": "Installez le système de prise de commandes",
+    "headingAccent": "en 5 minutes.",
+    "sub": "Scannez votre menu papier ou PDF — l'IA reconnaît les plats, les prix et les catégories. Connectez une tablette en salle et commencez à prendre les commandes aux tables.",
+    "cta": "Scanner le menu"
+  },
+  "subFeatures": [
+    {
+      "icon": "Map",
+      "eyebrow": "Liste et plan de salle",
+      "heading": "La liste des commandes à côté du plan de salle.",
+      "body": "Toutes les commandes actives s'affichent à droite : statut, montant, heure de saisie et nombre d'articles. À gauche, le plan de salle : les tables sont colorées selon leur statut — libre, occupée, attention requise. Un appui sur une table ouvre la commande, un appui sur une carte ouvre la vue détaillée. Sans naviguer entre les écrans.",
+      "bullets": [
+        "Plan de salle : tables colorées selon le statut de la commande.",
+        "Liste des commandes à côté — montant, heure, nombre d'articles.",
+        "Un appui sur une table ouvre la commande ou en crée une nouvelle."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-map.webp",
+        "alt": "Tablette au poste du serveur : liste des commandes et plan de salle avec tables en couleur"
+      }
+    },
+    {
+      "icon": "ClipboardList",
+      "eyebrow": "Fiche de commande",
+      "heading": "Fiche de commande : statuts, duplication et suppression — en un appui.",
+      "body": "Chaque article a son propre statut (Pending / Cooking / Ready / Served) — la cuisine et le serveur voient la même image en temps réel. Un appui sur le point ouvre le menu d'actions : changement de statut, duplication de l'article avec les mêmes modificateurs et options, suppression. Toutes les actions se font directement dans la fiche de commande.",
+      "bullets": [
+        "Statut de chaque article : Pending / Cooking / Ready / Served.",
+        "Duplication d'un article en un appui — avec les mêmes options.",
+        "Suppression d'un article directement depuis la fiche de commande."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-detail.webp",
+        "alt": "Tablette avec la fiche détaillée d'une commande : statuts des plats, duplication et suppression d'articles"
+      }
+    },
+    {
+      "icon": "Receipt",
+      "eyebrow": "Addition partagée",
+      "heading": "L'addition partagée, quand les clients paient séparément.",
+      "body": "Vos clients décident de payer séparément ? Cochez les articles qui partent sur la nouvelle addition, les autres restent sur l'addition en cours. Le système affiche aussitôt les deux montants. Un appui sur « Split order » — et vous avez deux commandes indépendantes avec des totaux corrects, toutes deux rattachées à leurs tables.",
+      "bullets": [
+        "Sélection des articles à séparer à l'aide de cases à cocher.",
+        "Le montant de la nouvelle addition et de celle qui reste s'affiche instantanément.",
+        "Un appui — et la commande est divisée sans recalcul manuel."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-split.webp",
+        "alt": "Tablette sur une table de restaurant : partage de l'addition entre les clients"
+      }
+    },
+    {
+      "icon": "Smartphone",
+      "eyebrow": "Ajout mobile",
+      "heading": "Ajouter des articles depuis un téléphone — en trois actions.",
+      "body": "Le serveur n'est pas lié à un seul appareil : il ouvre la section de prise de commandes sur son téléphone et ajoute un article en trois étapes — choix de la catégorie, choix du plat, choix des options (taille, cuisson, sauces et ingrédients supplémentaires). Le prix se recalcule automatiquement. Le commentaire pour la cuisine s'ajoute à la dernière étape.",
+      "bullets": [
+        "Trois étapes : catégorie → plat → options.",
+        "Options (taille, suppléments, ingrédients) avec prix en un clic.",
+        "Champ de commentaire à l'étape finale."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-mobile.webp",
+        "alt": "Quatre téléphones avec les étapes d'ajout d'un article à la commande : catégorie, plat, taille, commentaire"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Ce que les restaurateurs demandent sur la prise de commandes dans IQ Rest. Votre question n'est pas dans la liste ? Écrivez-nous sur WhatsApp.",
+    "items": [
+      {
+        "q": "Plusieurs serveurs peuvent-ils travailler en même temps sur des appareils différents ?",
+        "a": "Oui. Chaque serveur connecte son appareil et voit les mêmes tables, commandes et statuts en temps réel. Une modification faite par l'un apparaît immédiatement chez les autres — sans conflits ni blocages."
+      },
+      {
+        "q": "Les serveurs peuvent-ils travailler depuis leurs appareils personnels ?",
+        "a": "Oui. L'écran des commandes fonctionne dans le navigateur — rien à installer. Le téléphone ou la tablette se connecte avec un code à six chiffres généré dans le tableau de bord ; en fin de service, l'accès se révoque en un appui."
+      },
+      {
+        "q": "Peut-on ajouter des options obligatoires aux plats (taille, cuisson) ?",
+        "a": "Oui. Chaque plat peut avoir autant de groupes d'options que nécessaire — obligatoires (« Taille » : Small / Medium / Big) et facultatifs (« Cuisson » : rare / medium / well done). Les options influent sur le prix. Pour un groupe obligatoire, le système demande de choisir une variante — cela élimine les erreurs."
+      },
+      {
+        "q": "Peut-on ajouter des commentaires et des suppléments à un plat ?",
+        "a": "Oui. À la dernière étape, un champ de commentaire est disponible (« sans oignon », « allergie aux fruits à coque »). Les suppléments se configurent comme des options avec majoration (« + Sauce barbecue », « + Pain »). Les commentaires sont visibles sur l'écran de cuisine et mis en évidence par une couleur."
+      },
+      {
+        "q": "Y a-t-il des statistiques sur les commandes ?",
+        "a": "Oui. Dans la section analytique : chiffre d'affaires par jour, ticket moyen et plats les plus populaires. Ces données aident à planifier les services et les achats."
+      },
+      {
+        "q": "Peut-on diviser les commandes ?",
+        "a": "Oui. Cochez les articles qui partent sur une nouvelle addition — les montants des deux additions se recalculent automatiquement, sans calcul manuel ni navigation entre les sections."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Les commandes en 10 minutes. ",
+    "headingAccent": "14 jours d'accès complet.",
+    "sub": "Sans carte bancaire, annulation à tout moment. {count} restaurants envoient déjà leurs commandes en cuisine. Seul un email est nécessaire."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Plan de salle et liste des commandes",
+      "sub": "Les commandes actives à côté du plan de salle : les tables sont colorées selon leur statut, un appui ouvre la commande ou en crée une nouvelle.",
+      "bullets": [
+        {
+          "icon": "Map",
+          "title": "Tables par statut",
+          "sub": "Libre, occupée, attention requise — visible d'un seul coup d'œil"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Liste des commandes actives",
+          "sub": "Montant, heure de saisie et nombre d'articles pour chaque commande"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Nouvelle commande depuis le plan",
+          "sub": "Un appui sur une table libre ouvre directement la prise de commande"
+        }
+      ]
+    },
+    {
+      "heading": "Un statut pour chaque article",
+      "sub": "La cuisine et le serveur voient la même image : chaque plat avec son statut — de la saisie au service.",
+      "bullets": [
+        {
+          "icon": "Timer",
+          "title": "Statuts par plat",
+          "sub": "Pending, Cooking, Ready, Served — par article, pas pour la commande entière"
+        },
+        {
+          "icon": "Receipt",
+          "title": "Duplication d'article",
+          "sub": "Répétez un plat avec les mêmes options en un appui"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Corrections sur place",
+          "sub": "Suppression d'un article directement depuis la fiche de commande"
+        }
+      ]
+    },
+    {
+      "heading": "Addition partagée",
+      "sub": "Les clients paient séparément — cochez les articles, et ils partent sur une nouvelle addition. Les montants se recalculent instantanément.",
+      "bullets": [
+        {
+          "icon": "Receipt",
+          "title": "Cases à cocher par article",
+          "sub": "Choisissez les plats pour la nouvelle addition, les autres restent sur l'actuelle"
+        },
+        {
+          "icon": "ChartColumn",
+          "title": "Montants visibles aussitôt",
+          "sub": "La nouvelle addition et celle qui reste se calculent automatiquement"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Un seul appui",
+          "sub": "La commande est divisée sans recalcul manuel ni calculatrice"
+        }
+      ]
+    },
+    {
+      "heading": "Prise de commande sur le téléphone du serveur",
+      "sub": "Le serveur prend la commande depuis son appareil en trois étapes : catégorie, plat, options.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "N'importe quel appareil",
+          "sub": "Téléphone ou tablette avec navigateur — aucune installation requise"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Options avec majoration",
+          "sub": "Taille, suppléments et variantes du plat avec prix en un clic"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Commentaire sur le plat",
+          "sub": "Les souhaits du client s'ajoutent à l'étape finale — la cuisine les voit aussitôt"
+        }
+      ]
+    }
+  ]
+}

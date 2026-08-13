@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "درباره IQ Rest — ما کیستیم، تماس و اطلاعات حقوقی",
+    "description": "چه کسی پشت IQ Rest است، چگونه با ما تماس بگیرید و اطلاعات اپراتور سرویس: ایمیل، WhatsApp، اطلاعات حقوقی.",
+    "canonical": "https://iq-rest.com/fa/about",
+    "ogLocale": "fa_IR",
+    "ogTitle": "درباره IQ Rest",
+    "ogDescription": "چه کسی پشت IQ Rest است، راه‌های تماس با پشتیبانی و اطلاعات حقوقی اپراتور سرویس."
+  },
+  "heading": "از کافه خودمان",
+  "headingAccent": "تا پلتفرمی برای رستوران‌ها",
+  "story": {
+    "photo": {
+      "src": "/contacts.webp"
+    },
+    "paragraphs": [
+      "امروز این پلتفرم هر روز در {count} مجموعه اجرا می‌شود — از کافه‌های پنج میزه تا رستوران‌های زنجیره‌ای در چندین شهر. داده‌ها روی سرورهایی در آلمان ذخیره می‌شوند و به سوالات پشتیبانی شخصاً پاسخ داده می‌شود."
+    ],
+    "sign": "بوگدان سوکولوف"
+  },
+  "facts": [
+    {
+      "value": "2022",
+      "label": "سال تاسیس پلتفرم"
+    },
+    {
+      "value": "{count}",
+      "label": "مجموعه فعال روی IQ Rest"
+    },
+    {
+      "value": "15",
+      "label": "کشوری که مشتریان ما در آن‌ها هستند"
+    }
+  ],
+  "waPrefill": "سلام، من درباره IQ Rest سوالی داشتم",
+  "contacts": [
+    {
+      "icon": "Mail",
+      "title": "ایمیل",
+      "value": "support@iq-rest.com",
+      "href": "mailto:support@iq-rest.com",
+      "note": "فاکتورها، مدارک، سوالات مربوط به داده‌ها."
+    },
+    {
+      "icon": "MessageCircle",
+      "title": "WhatsApp",
+      "value": "+998 94 866 37 43",
+      "wa": true,
+      "note": "ما به شما دمو نشان می‌دهیم و در راه‌اندازی کمک می‌کنیم."
+    },
+    {
+      "icon": "Clock",
+      "title": "زمان پاسخگویی",
+      "value": "دوشنبه–یکشنبه، ۹:۰۰–۲۱:۰۰ به وقت اروپای مرکزی",
+      "note": "ما در عرض چند ساعت پاسخ می‌دهیم."
+    }
+  ],
+  "legal": {
+    "rows": [
+      {
+        "label": "اپراتور سرویس",
+        "value": "بوگدان سوکولوف"
+      },
+      {
+        "label": "نوع حقوقی",
+        "value": "Autónomo (España)"
+      },
+      {
+        "label": "شماره مالیاتی (NIF)",
+        "value": "ESZ1894474S"
+      },
+      {
+        "label": "آدرس",
+        "value": "Calle Boca del Río 2, 33010 Oviedo, Asturias, España"
+      },
+      {
+        "label": "دامنه",
+        "value": "https://iq-rest.com"
+      },
+      {
+        "label": "میزبانی داده‌ها",
+        "value": "Hetzner Online GmbH, Nuremberg, Germany"
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "داستان ما را شنیدید. ",
+    "headingAccent": "داستان خود را شروع کنید — ۱۴ روز رایگان.",
+    "sub": "بدون نیاز به کارت بانکی، لغو در هر زمان. مانند {count} رستوران دیگر، می‌توانید روی ما حساب کنید. فقط به یک ایمیل نیاز دارید."
+  }
+}

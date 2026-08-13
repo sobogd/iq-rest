@@ -1,0 +1,59 @@
+{
+  "breadcrumbLabel": "Prezzi",
+  "meta": {
+    "title": "Prezzi — configuratore del piano per ristoranti da 9.90 €/mese | IQ Rest",
+    "description": "Componete il piano con i moduli: menù QR con traduzione AI, ricezione ordini, prenotazione tavoli, display di cucina. Prezzo per ristorante da 9.90 €/mese, sconti sui volumi. 14 giorni gratis, senza carta, disdetta in qualsiasi momento.",
+    "canonical": "https://iq-rest.com/it/prezzi",
+    "ogLocale": "it_IT",
+    "ogTitle": "Prezzi — configuratore del piano per ristoranti",
+    "ogDescription": "Piano a moduli da 9.90 €/mese: menù QR, ordini, prenotazioni, KDS. Sconti sui volumi, nessun costo nascosto. 14 giorni gratis."
+  },
+  "faqSub": "Le domande frequenti dei ristoranti su prezzi e pagamenti. Non trovate la vostra? Scriveteci su WhatsApp.",
+  "faqItems": [
+    {
+      "q": "Come è strutturato il prezzo?",
+      "a": "Il piano si compone di moduli. La base è il menù QR con traduzione AI in 35 lingue e gestione da qualsiasi dispositivo. Poi aggiungete ciò che serve: prenotazione tavoli, display di cucina, dominio proprio. Il prezzo si calcola per ristorante; dal secondo in poi si applicano sconti sui volumi."
+    },
+    {
+      "q": "C'è una commissione sugli ordini?",
+      "a": "No. Gli ordini dal menù QR e dai camerieri arrivano direttamente al ristorante. Pagate solo un canone mensile fisso."
+    },
+    {
+      "q": "Come funziona il periodo di prova?",
+      "a": "14 giorni di accesso completo a tutte le funzioni, senza carta di credito. Se al termine il pagamento non è attivato, l'account viene messo in pausa: il pannello resta accessibile in sola lettura, mentre il menù per gli ospiti e la ricezione degli ordini vengono disattivati. Nessun addebito automatico."
+    },
+    {
+      "q": "Cosa succede ai dati durante la pausa?",
+      "a": "Tutto viene conservato: menù, foto, storico degli ordini, prenotazioni, impostazioni, statistiche. Attivate il pagamento anche dopo sei mesi: tutto tornerà come prima."
+    },
+    {
+      "q": "Bisognerà ristampare i codici QR?",
+      "a": "No. Durante la pausa i codici mostrano un avviso «temporaneamente non disponibile»; dopo l'attivazione del pagamento gli stessi codici aprono di nuovo il menù."
+    },
+    {
+      "q": "Si può cambiare piano?",
+      "a": "Sì, in qualsiasi momento dal pannello. La differenza viene ricalcolata in proporzione ai giorni rimanenti del periodo pagato. Una funzione disattivata conserva i propri dati."
+    },
+    {
+      "q": "Quanti ristoranti si possono collegare?",
+      "a": "Quanti volete, con gestione da un unico pannello. Sconti sui volumi fino al 50% con 5+ ristoranti. Per le grandi catene è previsto un piano personalizzato via WhatsApp."
+    },
+    {
+      "q": "Qual è lo sconto sul piano annuale?",
+      "a": "Circa il 30% rispetto al pagamento mensile. L'importo esatto è visibile durante la composizione del piano."
+    },
+    {
+      "q": "Come si annulla l'abbonamento?",
+      "a": "Con un clic dal pannello. L'account resta attivo fino alla fine del periodo pagato, poi viene messo in pausa. I dati vengono conservati."
+    },
+    {
+      "q": "Quali metodi di pagamento sono accettati?",
+      "a": "Visa, Mastercard, American Express, Apple Pay, Google Pay — tramite Stripe. In Europa, sul piano annuale, anche SEPA Direct Debit."
+    }
+  ],
+  "finalCta": {
+    "heading": "Un solo prezzo. Zero rischi. ",
+    "headingAccent": "14 giorni di accesso completo.",
+    "sub": "Nessuna carta richiesta, disdetta in qualsiasi momento — {count} ristoranti si affidano a noi. Per iniziare basta un'email."
+  }
+}

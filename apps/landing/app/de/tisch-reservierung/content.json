@@ -1,0 +1,206 @@
+{
+  "locale": "de",
+  "slug": "tisch-reservierung",
+  "trackPrefix": "l_bookings",
+  "meta": {
+    "title": "24/7-Tischreservierungen für Restaurants | IQ Rest",
+    "description": "24/7-Tischreservierungen für Ihr Restaurant: Gäste buchen Tische selbst über die QR-Speisekarte oder Website. Kalender nach Tisch, automatische Bestätigungen und Erinnerungen. Keine Anrufe, keine verpassten Gäste. 14 Tage kostenlos.",
+    "canonical": "https://iq-rest.com/de/tisch-reservierung",
+    "ogLocale": "de_DE",
+    "ogTitle": "24/7-Tischreservierungen — Gäste buchen selbst",
+    "ogDescription": "Gäste buchen Tische über die QR-Speisekarte oder Website. Kalender, automatische Bestätigungen, Erinnerungen. Kein Gast wird verpasst.",
+    "brandLine": "IQ Rest — Tischreservierungen für Restaurants"
+  },
+  "hero": {
+    "headline": "Tischreservierungen 24/7,",
+    "cta": "Tischreservierungen einrichten",
+    "sub": "Gäste buchen 24/7 über die QR-Speisekarte oder einen Link. Kalender nach Tisch, automatische Bestätigungen und Erinnerungen.",
+    "headlineAccent": "keine Anrufe",
+    "demoLabel": "Demo: Reservierungskalender",
+    "tablet": {
+      "src": "/landing/hero-card-reservation.webp",
+      "alt": "Tablet mit einem Reservierungskalender: Monatsansicht und eine Liste der zu bestätigenden Buchungen"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurants"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafés"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bars"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotels"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerien"
+    }
+  ],
+  "scan": {
+    "heading": "Starten Sie mit Tischreservierungen",
+    "headingAccent": "in 5 Minuten.",
+    "sub": "Verbinden Sie den Kalender, fügen Sie Tische mit Fotos und Sitzplätzen hinzu — Gäste können noch am selben Tag buchen.",
+    "cta": "Reservierungen aktivieren"
+  },
+  "subFeatures": [
+    {
+      "icon": "CalendarPlus",
+      "eyebrow": "Buchungsformular",
+      "heading": "Gäste buchen selbst — nach Datum, Uhrzeit und Personenanzahl.",
+      "body": "Der Gast öffnet die QR-Speisekarte oder einen Direktlink, wählt Datum, Uhrzeit und Personenanzahl — und sieht sofort die freien Tische: mit Foto, Beschreibung (Terrasse, am Fenster, Sofa an der Bar) und Kapazität. Eine Bestätigung wird automatisch per E-Mail und WhatsApp gesendet.",
+      "bullets": [
+        "Tischauswahl nach Foto, Beschreibung und Kapazität.",
+        "Automatische Bestätigung und eine Erinnerung eine Stunde vor dem Besuch.",
+        "Ein minimales Formular: Name, Telefon, Personenanzahl."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-form.webp",
+        "alt": "Ein Gast bucht einen Restauranttisch über das Handy: Auswahl von Datum, Uhrzeit, Personenanzahl und Tisch"
+      }
+    },
+    {
+      "icon": "CalendarDays",
+      "eyebrow": "Reservierungskalender",
+      "heading": "Ein Kalender nach Tag und Tisch — alles in einer Sekunde sichtbar.",
+      "body": "Das Dashboard bietet einen Reservierungskalender, aufgeteilt nach Tisch, Tag, Woche und Monat. Freie Zeiten, besetzte Tische, bestätigte und ausstehende Buchungen erscheinen alle auf einem Bildschirm. Funktioniert auf einem Tablet im Gastraum und einem Laptop im Büro.",
+      "bullets": [
+        "Tages-, Wochen- und Monatsansichten.",
+        "Aufschlüsselung nach Tisch: wer, wann, wie viele Gäste.",
+        "Eine Buchung verschieben, stornieren oder bestätigen — mit einem Tippen auf dem Handy."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-calendar.webp",
+        "alt": "Der Reservierungskalender im IQ Rest Dashboard auf zwei Tablets: eine Tagesansicht nach Tisch und eine Monatsansicht"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Was Gastronomen zu Tischreservierungen in IQ Rest fragen. Wenn Ihre Frage nicht dabei ist — schreiben Sie uns auf WhatsApp.",
+    "items": [
+      {
+        "q": "Kann ich die Tage und Zeiten auswählen, an denen gebucht werden kann?",
+        "a": "Ja. Im Dashboard können Sie einen Zeitplan pro Wochentag festlegen: Buchungszeiten und eine Pause zwischen Mittag- und Abendessen. Sie können Reservierungen auch vorübergehend ganz abschalten — Gäste sehen dann, dass die Online-Buchung nicht verfügbar ist."
+      },
+      {
+        "q": "Kann ich ein Foto von jedem Tisch hochladen?",
+        "a": "Ja. Jeder Tisch hat ein Foto, eine Kapazität und einen Bereich (Terrasse, am Fenster, Bar). Gäste sehen genau, welchen Tisch sie reservieren und treffen eine bewusste Entscheidung."
+      },
+      {
+        "q": "Kann ich die Anzahl der Gäste pro Tisch begrenzen?",
+        "a": "Ja. Jeder Tisch hat eine festgelegte Kapazität — das System bietet Gästen nur passende Tische an und verhindert, dass ein Zweiertisch von einer Sechsergruppe gebucht wird."
+      },
+      {
+        "q": "Wie schwer ist es, Reservierungen einzurichten?",
+        "a": "Drei Schritte: Tische mit Fotos und Kapazität hinzufügen, den Buchungsmodus in den Einstellungen aktivieren und den Link oder QR-Code teilen. Der Start dauert 5–10 Minuten."
+      },
+      {
+        "q": "Kann ich automatische oder manuelle Buchungsbestätigungen einstellen?",
+        "a": "Ja, der Modus wird in den Einstellungen gewählt. Bei automatischer Bestätigung wird der Gast direkt nach dem Absenden des Formulars bestätigt. Bei manueller Bestätigung erscheint die Anfrage im Dashboard als \"Ausstehend\" — ein Manager bestätigt oder lehnt sie ab. Der manuelle Modus ist praktisch, wenn die Tische knapp sind."
+      },
+      {
+        "q": "Berechnen Sie eine Gebühr pro Buchung?",
+        "a": "Es gibt keine Gebühren: Reservierungen sind im Abo enthalten — kein Prozentsatz von Gästen, keine Gebühren pro Platz, keine Vermittler. Ein fester Betrag und unbegrenzte Buchungen."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Reservierungen in 10 Minuten. ",
+    "headingAccent": "14 Tage voller Zugriff.",
+    "sub": "Keine Kreditkarte nötig, jederzeit kündbar. {count} Restaurants entlasten mit uns ihren Empfang. Sie brauchen nur eine E-Mail-Adresse."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Gäste buchen selbst",
+      "sub": "Datum, Uhrzeit und Personenanzahl — über die QR-Speisekarte oder einen Direktlink, zu jeder Tageszeit. Das System zeigt nur verfügbare Zeiten an.",
+      "bullets": [
+        {
+          "icon": "CalendarPlus",
+          "title": "Buchung 24/7",
+          "sub": "Gäste buchen nachts oder am Wochenende — keine Anrufe, kein Warten auf eine Antwort"
+        },
+        {
+          "icon": "Users",
+          "title": "Ein Tisch passend zur Gruppengröße",
+          "sub": "Das System wählt selbstständig einen passenden Tisch nach Kapazität aus"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Ein minimales Formular",
+          "sub": "Name, Telefon und Personenanzahl — das Formular dauert eine halbe Minute"
+        }
+      ]
+    },
+    {
+      "heading": "Ein Kalender nach Tag und Tisch",
+      "sub": "Alle Buchungen in einem Kalender: Sehen Sie, was frei ist, was bestätigt wurde und wer kommt.",
+      "bullets": [
+        {
+          "icon": "CalendarDays",
+          "title": "Tag, Woche, Monat",
+          "sub": "Wechseln Sie die Ansichten und planen Sie die Sitzplätze im Voraus"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Aufschlüsselung nach Tisch",
+          "sub": "Wer, wann und für wie viele Gäste — für jeden Tisch"
+        },
+        {
+          "icon": "Smartphone",
+          "title": "Verwaltung über das Handy",
+          "sub": "Eine Buchung verschieben, stornieren oder bestätigen — mit einem Fingertipp"
+        }
+      ]
+    },
+    {
+      "heading": "Zeitplan und Modi",
+      "sub": "Legen Sie den Buchungsplan pro Wochentag, die Dauer der Zeitfenster und den Bestätigungsmodus fest.",
+      "bullets": [
+        {
+          "icon": "Clock",
+          "title": "Zeitplan pro Tag",
+          "sub": "Eigene Zeiten für jeden Wochentag, inklusive einer Pause zwischen Mittag- und Abendessen"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Dauer der Zeitfenster",
+          "sub": "Passen Sie das Buchungsintervall an das Format Ihres Betriebs an"
+        },
+        {
+          "icon": "CalendarCheck",
+          "title": "Automatisch oder manuell",
+          "sub": "Bestätigen Sie jede Buchung selbst oder aktivieren Sie die automatische Bestätigung"
+        }
+      ]
+    },
+    {
+      "heading": "Benachrichtigungen ohne Handarbeit",
+      "sub": "Das System hält den Gast und Ihr Team auf dem Laufenden — E-Mails und der Reservierungsbildschirm aktualisieren sich sofort.",
+      "bullets": [
+        {
+          "icon": "Mail",
+          "title": "E-Mail an den Gast",
+          "sub": "Eine Buchungsbestätigung wird automatisch per E-Mail gesendet"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Benachrichtigung ans Restaurant",
+          "sub": "Inhaber erhalten eine E-Mail über jede neue Buchung"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Ein Reservierungsbildschirm am Empfang",
+          "sub": "Das Empfangs-Tablet zeigt neue Buchungen in Echtzeit"
+        }
+      ]
+    }
+  ]
+}

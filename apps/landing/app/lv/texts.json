@@ -1,0 +1,261 @@
+{
+  "htmlLang": "lv",
+  "htmlDir": "ltr",
+  "meta": {
+    "title": "Digitālā ēdienkarte, virtuves ekrāns un rezervācijas — IQ Rest",
+    "description": "Vadiet restorānu no vienas lietotnes: daudzvalodu digitālā ēdienkarte, virtuves ekrāns un 24/7 rezervācijas. Palaidiet 5 minūtēs. 14 dienas bez maksas, karte nav nepieciešama.",
+    "canonical": "https://iq-rest.com/lv",
+    "ogLocale": "lv_LV",
+    "ogTitle": "Digitālā ēdienkarte, virtuves ekrāns un rezervācijas",
+    "ogDescription": "Vadiet restorānu no vienas lietotnes: daudzvalodu digitālā ēdienkarte, virtuves ekrāns un 24/7 rezervācijas. Palaidiet 5 minūtēs. 14 dienas bez maksas, karte nav nepieciešama."
+  },
+  "jsonLd": {
+    "appName": "IQ Rest — Restorānu vadības platforma"
+  },
+  "ctaText": "Izmēģināt bez maksas",
+  "homeCtaText": "Izmēģināt bez maksas",
+  "trust": [
+    {
+      "kind": "num",
+      "value": 35,
+      "label": "Ēdienkartes valodas"
+    },
+    {
+      "kind": "text",
+      "value": "24/7",
+      "label": "Tiešsaistes rezervācijas"
+    },
+    {
+      "kind": "num",
+      "value": 5,
+      "suffix": " min",
+      "label": "Līdz palaišanai"
+    },
+    {
+      "kind": "count",
+      "label": "Restorāni kopā ar mums"
+    }
+  ],
+  "demoText": "Atvērt demo",
+  "microcopy": "14 dienas bez maksas · Bez kredītkartes · Atceliet jebkurā laikā",
+  "header": {
+    "navFeatures": "Iespējas",
+    "navHow": "Kā tas strādā",
+    "navPricing": "Cenas",
+    "navFaq": "Biežāk uzdotie jautājumi",
+    "signIn": "Pierakstīties",
+    "viewFeatures": "Skatīt iespējas",
+    "cta": "Sākt bez maksas",
+    "navProducts": "Iespējas",
+    "navGuide": "Ceļvedis",
+    "navAbout": "Par mums",
+    "menuFeaturesHeading": "Iespējas",
+    "menuInfoHeading": "Informācija"
+  },
+  "hero": {
+    "verticals": [
+      "Restorāniem",
+      "Kafejnīcām",
+      "Bāriem",
+      "Viesnīcām",
+      "Picērijām"
+    ],
+    "headline": "Digitālā ēdienkarte jūsu restorānam.\nGatava 5 minūtēs.",
+    "sub": "Digitālā ēdienkarte jūsu restorānam 5 minūtēs. Viss iekļauts: ērts redaktors, drukāto ēdienkaršu atpazīšana ar AI, QR kodi galdiņiem un pasūtījumi bez komisijas maksas.",
+    "dynamicHeadlines": [
+      "0% komisija.",
+      "35 valodas ar AI.",
+      "Tiešsaistes pasūtījumi.",
+      "24/7 rezervācijas.",
+      "Premium dizains."
+    ],
+    "painBullets": [
+      "0% komisija: katrs pasūtījums nonāk tieši restorānā.",
+      "AI tulkojums 35 valodās — tūristi saprot ēdienkarti un pasūta vairāk.",
+      "24/7 rezervācijas: viesi paši rezervē galdiņus, nekādu zvanu sastrēgumstundās.",
+      "Elastīga cenu politika: izmaiņas ēdienkartē stājas spēkā nekavējoties."
+    ],
+    "rating": "Vairāk nekā 500 restorānu 30+ valstīs"
+  },
+  "founder": {
+    "eyebrow": "Radījuši restorānu īpašnieki",
+    "quoteStart": "Mēs ar sievu vadījām savu kafejnīcu un zinām restorānu ikdienu no iekšpuses: pasūtījumu pieņemšanu, rezervācijas, darbu zālē un virtuvē. Mēs gribējām vienu rīku — modernu, viegli iestatāmu un uzreiz saprotamu —",
+    "quoteAccent": "tā radās ideja par platformu, ko tagad attīstām citiem restorānu īpašniekiem.",
+    "sign": "Bogdans Sokolovs · dibinātājs, bijušais kafejnīcas īpašnieks",
+    "photoAlt": "Bogdans Sokolovs, IQ Rest dibinātājs"
+  },
+  "pricing": {
+    "badge": "Bez komisijas maksas · Bez līgumiem",
+    "heading": "Viens plāns.",
+    "headingAccent": "Viss iekļauts.",
+    "sub": "QR ēdienkarte, pasūtījumu pieņemšana, AI tulkojums, restorāna mājaslapa un rezervācijas. Viens caurskatāms ikmēneša maksājums.",
+    "monthlyLabel": "Mēnesī",
+    "yearlyLabel": "Gadā",
+    "saveBadge": "Ietaupiet 25%",
+    "perMonth": "mēnesī",
+    "billedAnnually": "Rēķins reizi gadā: {total}",
+    "youSave": "Jūs ietaupāt {amount}",
+    "trust": {
+      "secure": "Droši maksājumi caur Stripe",
+      "noCommitment": "Bez saistībām",
+      "quick": "Aktivizācija dažu minūšu laikā",
+      "restaurants": "Vairāk nekā 500 restorānu"
+    }
+  },
+  "faq": {
+    "eyebrow": "Vēl ir jautājumi?",
+    "heading": "Biežāk uzdotie",
+    "headingAccent": "jautājumi",
+    "sub": "Ko restorānu īpašnieki jautā visbiežāk pirms reģistrēšanās. Ja neatradāt atbildi — rakstiet mums WhatsApp, atbildēs reāls darbinieks, nevis robots.",
+    "whatsappCta": "Rakstiet mums WhatsApp",
+    "whatsappPrefill": "Sveiki, man ir jautājums par IQ Rest",
+    "items": [
+      {
+        "q": "Kas iekļauts izmēģinājuma periodā un kas notiek pēc tā beigām?",
+        "a": "14 dienas jums ir pieeja visām platformas funkcijām, nepievienojot kredītkarti. Ja pēc 14 dienām maksājuma veids nav pievienots, konts tiek automātiski apturēts. Mēs nekad neiekasējam maksu bez jūsu piekrišanas. Maksājumu varat pievienot vēlāk un turpināt darbu no vietas, kur apstājāties. Abonementa atcelšana prasa vienu klikšķi."
+      },
+      {
+        "q": "Vai jūs ieturat komisiju no pasūtījumiem?",
+        "a": "Nē, mēs neņemam procentus no pasūtījumiem. Visi pasūtījumi no QR ēdienkartes nonāk tieši restorānā, bez agregatoru komisijām. Jūs maksājat fiksētu mēneša maksu — un tas arī viss."
+      },
+      {
+        "q": "Vai viesiem jāinstalē lietotne, un vai mums nepieciešamas tehniskas zināšanas?",
+        "a": "Viesiem lietotne nav nepieciešama: viņi vienkārši pavērš tālruņa kameru pret QR kodu, un ēdienkarte atveras pārlūkprogrammā. Arī restorānam nav vajadzīgas tehniskas zināšanas — vadības panelis darbojas pārlūkprogrammā tālrunī, planšetdatorā vai klēpjdatorā. Viss tiek paveikts ar klikšķiem un vilkšanu, bez programmēšanas."
+      },
+      {
+        "q": "Cik ātri stājas spēkā izmaiņas ēdienkartē — cenas, jauni ēdieni?",
+        "a": "Nekavējoties. Izmaiņas, kas veiktas no tālruņa, viesiem parādās dažu sekunžu laikā. Jauna ēdiena pievienošana prasa dažus pieskārienus: nosaukums, cena, fotoattēls. Nav jāpārdrukā papīra ēdienkartes un nav vajadzīgs dizainers."
+      },
+      {
+        "q": "Cik valodu tiek atbalstītas?",
+        "a": "Tiek atbalstītas 35 valodas ar AI automātisko tulkojumu. Viena darbība — un visa ēdienkarte ir iztulkota. AI saprot kulinārijas kontekstu, tāpēc ēdienu nosaukumi un apraksti skan dabiski katrā valodā. Tūristi pasūta drošāk, ja saprot, kas ir ēdienā."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Gatavs darbam 10 minūtēs. ",
+    "headingAccent": "14 dienas pilna pieeja.",
+    "sub": "Karte nav nepieciešama, atceliet jebkurā laikā. Mums uzticas {count} restorāni. Viss, kas vajadzīgs, ir e-pasts."
+  },
+  "featureHighlights": {
+    "heading": "Viss iekļauts",
+    "sub": "Funkcijas, kas pārvērš viesus pasūtījumos — katrā plānā, bez papildu maksas."
+  },
+  "scan": {
+    "heading": "Ir papīra ēdienkarte vai PDF?",
+    "headingAccent": "AI to digitalizēs 60 sekundēs.",
+    "sub": "Augšupielādējiet fotoattēlu vai dokumentu — AI automātiski atpazīs kategorijas, ēdienus un cenas.",
+    "cta": "Skenēt ēdienkarti →"
+  },
+  "pricingQuiz": {
+    "heading": "Izveidojiet plānu ",
+    "sub": "Sāciet ar ēdienkarti — pievienojiet rezervācijas, virtuves ekrānu un domēnu, kad vien tas nepieciešams.",
+    "billingLabel": "Norēķini:",
+    "monthly": "Mēnesī",
+    "yearly": "Gadā",
+    "restaurantsLabel": "Restorāni:",
+    "fewerAria": "Mazāk restorānu",
+    "moreAria": "Vairāk restorānu",
+    "menuTitle": "Ēdienkarte un mājaslapa",
+    "menuHint": "Vienmēr iekļauts",
+    "reservationsTitle": "Rezervāciju sistēma",
+    "reservationsHint": "Galdiņu rezervācijas",
+    "kdsTitle": "Virtuves ekrāns",
+    "kdsHint": "Pasūtījumi virtuves ekrānā",
+    "domainTitle": "Domēna vārds",
+    "domainHint": "Jūsu pašu interneta adrese",
+    "perMonthSuffix": "/mēn.",
+    "perYearSuffix": "/gadā",
+    "perMonthLongSuffix": "/mēnesī",
+    "saveYearlyTemplate": "Ietaupiet {amount} gadā ar gada maksu",
+    "volumeDiscountTemplate": "{percent}% atlaide",
+    "saveUpToHint": "Ietaupiet līdz 50%, ja jums ir 5+ restorāni",
+    "billedYearly": "Rēķins reizi gadā",
+    "billedMonthly": "Rēķins reizi mēnesī",
+    "enterprisePre": "Nepieciešams individuāls plāns?",
+    "enterpriseCta": "Rakstiet mums",
+    "enterprisePost": "un mēs to pielāgosim jums.",
+    "enterpriseWa": "Sveiki! Man nepieciešams individuāls plāns maniem restorāniem.",
+    "headingAccent": "savam restorānam",
+    "multiplePre": "Vairāk restorānu?",
+    "multipleCta": "Skatīt iespējas",
+    "restaurantOne": "restorāns",
+    "restaurantFew": "restorāni",
+    "restaurantMany": "restorānu",
+    "multipleChangePre": "Cits restorānu skaits?",
+    "multipleChangeCta": "Mainīt"
+  },
+  "pricingCta": {
+    "heading": "Vienkāršas un elastīgas cenas",
+    "sub": "Maksājiet tikai par nepieciešamajām funkcijām — izveidojiet savu plānu minūtes laikā.",
+    "fromTemplate": "no {price}/mēn.",
+    "button": "Izveidot plānu"
+  },
+  "footer": {
+    "copyrightTemplate": "© {year} IQ Rest. Visas tiesības aizsargātas.",
+    "featuresHeading": "Iespējas",
+    "featureLinks": [
+      {
+        "href": "/lv/digitala-edienkarte",
+        "label": "Digitālā ēdienkarte"
+      },
+      {
+        "href": "/lv/pasutijumu-pienemsana",
+        "label": "Pasūtījumu pieņemšana"
+      },
+      {
+        "href": "/lv/galdinu-rezervacija",
+        "label": "Rezervācijas"
+      },
+      {
+        "href": "/lv/kds-virtuves-ekrans",
+        "label": "Virtuves ekrāns"
+      }
+    ],
+    "infoHeading": "Informācija",
+    "legalHeading": "Juridiskā informācija",
+    "currencyHeading": "Valūta"
+  },
+  "common": {
+    "close": "Aizvērt",
+    "menu": "Ēdienkarte",
+    "help": "Palīdzība"
+  },
+  "auth": {
+    "emailLabel": "E-pasts",
+    "emailPlaceholder": "Ievadiet savu e-pastu",
+    "or": "vai",
+    "continueGoogle": "Turpināt ar Google",
+    "continueApple": "Turpināt ar Apple",
+    "consent": {
+      "line": "Turpinot, jūs piekrītat <terms>Lietošanas noteikumiem</terms>. Uzziniet, kā mēs apstrādājam datus mūsu <privacy>Privātuma politikā</privacy>."
+    },
+    "signInTitle": "Esiet sveicināti atpakaļ",
+    "signInSubtitle": "Ievadiet savu e-pastu — mēs nosūtīsim 6 ciparu pierakstīšanās kodu.",
+    "signInButton": "Pierakstīties",
+    "registerTitle": "Izveidojiet kontu",
+    "registerSubtitle": "14 dienas bez maksas, karte nav nepieciešama. Mēs nosūtīsim pierakstīšanās kodu uz e-pastu — bez parolēm un garām veidlapām.",
+    "registerButton": "Izveidot kontu",
+    "switchSignIn": "Pierakstīties",
+    "switchCreate": "Reģistrēties",
+    "verifyTitle": "Pārbaudiet e-pastu",
+    "verifySubtitle": "Mēs nosūtījām 6 ciparu kodu uz {email}.",
+    "verifyCodeLabel": "Apstiprinājuma kods",
+    "checkSpam": "Neredzat e-pastu? Pārbaudiet mēstuļu mapi.",
+    "verifyButton": "Turpināt",
+    "resendCode": "Nosūtīt kodu vēlreiz",
+    "resendSent": "Kods nosūtīts",
+    "changeEmail": "Izmantot citu e-pastu",
+    "metaSignIn": "Pierakstīties",
+    "metaRegister": "Izveidot kontu",
+    "errors": {
+      "emailInvalid": "Ievadiet derīgu e-pastu.",
+      "sendFailed": "Neizdevās nosūtīt kodu. Lūdzu, mēģiniet vēlreiz.",
+      "verifyFailed": "Neizdevās apstiprināt kodu. Lūdzu, mēģiniet vēlreiz.",
+      "codeExpired": "Koda derīguma termiņš ir beidzies. Pieprasiet jaunu.",
+      "noCode": "Kods nav atrasts vai tam beidzies termiņš. Pieprasiet jaunu.",
+      "invalidCode": "Nederīgs kods. Lūdzu, mēģiniet vēlreiz.",
+      "tooManyAttempts": "Pārāk daudz mēģinājumu. Lūdzu, uzgaidiet un mēģiniet vēlreiz."
+    }
+  }
+}

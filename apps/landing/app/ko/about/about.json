@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "IQ Rest 소개 — 회사 소개, 연락처 및 법적 고지",
+    "description": "IQ Rest를 만드는 사람들, 문의 방법 및 서비스 운영자 정보: 이메일, WhatsApp, 법적 고지.",
+    "canonical": "https://iq-rest.com/ko/about",
+    "ogLocale": "ko_KR",
+    "ogTitle": "IQ Rest 소개",
+    "ogDescription": "IQ Rest를 만드는 사람들, 고객 지원 연락처 및 서비스 운영자의 법적 고지."
+  },
+  "heading": "우리가 운영하던 카페에서",
+  "headingAccent": "레스토랑 플랫폼이 되기까지",
+  "story": {
+    "photo": {
+      "src": "/contacts.webp"
+    },
+    "paragraphs": [
+      "오늘도 이 플랫폼은 5개 테이블의 작은 카페부터 여러 도시에 지점을 둔 프랜차이즈까지 {count}개 매장에서 매일 사용되고 있습니다. 데이터는 독일의 안전한 서버에 보관되며, 모든 고객 지원 문의는 담당자가 직접 확인하고 답변해 드립니다."
+    ],
+    "sign": "Bogdan Sokolov"
+  },
+  "facts": [
+    {
+      "value": "2022",
+      "label": "플랫폼 설립 연도"
+    },
+    {
+      "value": "{count}",
+      "label": "IQ Rest 사용 매장 수"
+    },
+    {
+      "value": "15",
+      "label": "서비스 이용 국가 수"
+    }
+  ],
+  "waPrefill": "안녕하세요, IQ Rest에 대해 문의드립니다",
+  "contacts": [
+    {
+      "icon": "Mail",
+      "title": "이메일",
+      "value": "support@iq-rest.com",
+      "href": "mailto:support@iq-rest.com",
+      "note": "청구서, 서류, 데이터 관련 문의."
+    },
+    {
+      "icon": "MessageCircle",
+      "title": "WhatsApp",
+      "value": "+998 94 866 37 43",
+      "wa": true,
+      "note": "데모 시연 및 초기 설정을 도와드립니다."
+    },
+    {
+      "icon": "Clock",
+      "title": "운영 시간",
+      "value": "월~일, 9:00~21:00 (CET 기준)",
+      "note": "문의 시 몇 시간 내로 답변해 드립니다."
+    }
+  ],
+  "legal": {
+    "rows": [
+      {
+        "label": "서비스 운영자",
+        "value": "Bogdan Sokolov"
+      },
+      {
+        "label": "사업자 형태",
+        "value": "Autónomo (España)"
+      },
+      {
+        "label": "사업자 등록번호 (NIF)",
+        "value": "ESZ1894474S"
+      },
+      {
+        "label": "주소",
+        "value": "Calle Boca del Río 2, 33010 Oviedo, Asturias, España"
+      },
+      {
+        "label": "도메인",
+        "value": "https://iq-rest.com"
+      },
+      {
+        "label": "데이터 호스팅",
+        "value": "Hetzner Online GmbH, Nuremberg, Germany"
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "저희의 이야기를 들려드렸습니다. ",
+    "headingAccent": "이제 사장님의 이야기를 시작하세요 — 14일 무료 체험.",
+    "sub": "카드 등록 불필요, 언제든 해지 가능. {count}개 매장처럼 저희를 믿고 맡겨주세요. 이메일만 있으면 바로 시작할 수 있습니다."
+  }
+}

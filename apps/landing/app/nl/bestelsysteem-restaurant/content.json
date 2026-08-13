@@ -1,0 +1,236 @@
+{
+  "locale": "nl",
+  "slug": "bestelsysteem-restaurant",
+  "trackPrefix": "l_orders",
+  "meta": {
+    "title": "Bestellingen opnemen in het restaurant — Gast en Bediening | IQ Rest",
+    "description": "Bestellingen opnemen vanaf een telefoon of tablet: plattegrond, rekening splitsen, statussen, opties en opmerkingen. Gasten bestellen aan tafel, bediening neemt bestellingen op via hun eigen apparaat. 14 dagen gratis.",
+    "canonical": "https://iq-rest.com/nl/bestelsysteem-restaurant",
+    "ogLocale": "nl_NL",
+    "ogTitle": "Bestellingen opnemen in het restaurant — Gast en Bediening",
+    "ogDescription": "Een gast aan tafel of de bediening via een telefoon — de bestelling gaat direct naar de keuken. Plattegrond, rekening splitsen, statussen, opties en opmerkingen.",
+    "brandLine": "IQ Rest — Bestellingen opnemen in het restaurant"
+  },
+  "hero": {
+    "headline": "Bestellingen vanaf de tafel —",
+    "cta": "Online bestellen instellen",
+    "sub": "Gasten bestellen aan tafel of de bediening via elk apparaat — direct naar de keuken. Plattegrond, rekening splitsen.",
+    "headlineAccent": "direct naar de keuken",
+    "demoLabel": "Demo: bestelscherm",
+    "tablet": {
+      "src": "/landing/feature-orders-modal.webp",
+      "alt": "Tablet met een openstaande bestelling: lijst met gerechten en acties — tafel wijzigen, rekening splitsen, korting toevoegen"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurants"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafés"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bars"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotels"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzeria's"
+    }
+  ],
+  "scan": {
+    "heading": "Stel je bestelsysteem in",
+    "headingAccent": "in 5 minuten.",
+    "sub": "Scan een papieren menu of een PDF — AI herkent gerechten, prijzen en categorieën. Koppel een tablet in de zaak en begin met het opnemen van bestellingen aan tafel.",
+    "cta": "Menu scannen"
+  },
+  "subFeatures": [
+    {
+      "icon": "Map",
+      "eyebrow": "Lijst en plattegrond",
+      "heading": "Een bestellijst naast de plattegrond.",
+      "body": "Alle actieve bestellingen staan aan de rechterkant: status, totaalbedrag, besteltijd en aantal items. Aan de linkerkant staat de plattegrond: tafels hebben een kleurcode per status — leeg, bezet, heeft aandacht nodig. Tik op een tafel om de bestelling te openen, tik op een kaart voor de details. Geen gewissel tussen schermen.",
+      "bullets": [
+        "Plattegrond: tafels met kleurcode per bestelstatus.",
+        "Bestellijst ernaast — totaalbedrag, tijd en aantal items.",
+        "Tik op een tafel om de bestelling te openen of een nieuwe aan te maken."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-map.webp",
+        "alt": "Tablet bij een werkstation van de bediening: een bestellijst en een plattegrond met kleurcodes voor de tafels"
+      }
+    },
+    {
+      "icon": "ClipboardList",
+      "eyebrow": "Bestelkaart",
+      "heading": "De bestelkaart: statussen, dupliceren en verwijderen — met één tik.",
+      "body": "Elk item heeft zijn eigen status (Wachtend / In bereiding / Klaar / Geserveerd) — de keuken en de bediening zien in realtime hetzelfde. Tik op de stip om een actiemenu te openen: wijzig de status, dupliceer het item met dezelfde opties, of verwijder het. Alles gebeurt direct in de bestelkaart.",
+      "bullets": [
+        "Status per item: Wachtend / In bereiding / Klaar / Geserveerd.",
+        "Dupliceer een item met één tik — inclusief dezelfde opties.",
+        "Verwijder een item direct vanuit de bestelkaart."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-detail.webp",
+        "alt": "Tablet met een gedetailleerde bestelkaart: statussen, dupliceren en verwijderen van items"
+      }
+    },
+    {
+      "icon": "Receipt",
+      "eyebrow": "Rekening splitsen",
+      "heading": "Rekening splitsen voor als gasten apart betalen.",
+      "body": "Gasten besluiten apart te betalen — vink de items aan die naar de nieuwe rekening gaan; de rest blijft op de huidige staan. Het systeem toont direct beide totalen. Eén tik op \"Bestelling splitsen\" — en je hebt twee onafhankelijke bestellingen met de juiste totalen, die beide op hun tafel blijven staan.",
+      "bullets": [
+        "Selecteer items om te splitsen met vinkjes.",
+        "De totalen van de nieuwe en resterende rekening verschijnen direct.",
+        "Eén tik — en de bestelling is gesplitst zonder handmatig rekenwerk."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-split.webp",
+        "alt": "Tablet op een restauranttafel: de rekening splitsen tussen gasten"
+      }
+    },
+    {
+      "icon": "Smartphone",
+      "eyebrow": "Mobiel bestellingen invoeren",
+      "heading": "Items toevoegen vanaf een telefoon — in drie stappen.",
+      "body": "De bediening is niet gebonden aan één apparaat: ze openen het bestelscherm op hun eigen telefoon en voegen een item toe in drie stappen — kies een categorie, kies een gerecht, kies opties (formaat, garing, extra sauzen en ingrediënten). De prijs wordt automatisch berekend. Bij de laatste stap kan een opmerking voor de keuken worden toegevoegd.",
+      "bullets": [
+        "Drie stappen: categorie → gerecht → opties.",
+        "Opties (formaat, extra's, ingrediënten) met prijzen in één tik.",
+        "Een veld voor opmerkingen bij de laatste stap."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-mobile.webp",
+        "alt": "Vier telefoons die de stappen tonen van het toevoegen van een item aan een bestelling: categorie, gerecht, formaat, opmerking"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Wat restauranthouders vragen over bestellingen opnemen in IQ Rest. Staat je vraag er niet tussen — stuur ons een bericht via WhatsApp.",
+    "items": [
+      {
+        "q": "Kunnen meerdere medewerkers tegelijkertijd op verschillende apparaten werken?",
+        "a": "Ja. Elke medewerker koppelt zijn eigen apparaat en ziet in realtime dezelfde tafels, bestellingen en statussen. Een wijziging van de één is direct zichtbaar voor de ander — geen conflicten of blokkades."
+      },
+      {
+        "q": "Kan de bediening hun eigen telefoon gebruiken?",
+        "a": "Ja. Het bestelscherm werkt in de browser — er hoeft niets geïnstalleerd te worden. Een telefoon of tablet wordt gekoppeld met een 6-cijferige code uit het dashboard, en de toegang kan aan het eind van de dienst met één tik worden ingetrokken."
+      },
+      {
+        "q": "Kan ik verplichte opties aan gerechten toevoegen (formaat, garing)?",
+        "a": "Ja. Een gerecht kan een onbeperkt aantal optiegroepen hebben — verplicht (\"Formaat\": Klein / Middel / Groot) en optioneel (\"Garing\": rare / medium / well done). Opties hebben invloed op de prijs. Bij een verplichte groep vraagt het systeem om een keuze — zo voorkom je fouten."
+      },
+      {
+        "q": "Kan ik opmerkingen en extra's aan een gerecht toevoegen?",
+        "a": "Ja. De laatste stap heeft een veld voor opmerkingen (\"geen ui\", \"notenallergie\"). Extra's stel je in als opties met een meerprijs (\"+ BBQ saus\", \"+ Brood\"). Opmerkingen verschijnen op het keukenscherm, uitgelicht in kleur."
+      },
+      {
+        "q": "Zijn er statistieken van bestellingen?",
+        "a": "Ja. De analysesectie toont de omzet per dag, de gemiddelde bestelwaarde en de best verkopende gerechten. Deze data helpt je bij het plannen van diensten en inkopen."
+      },
+      {
+        "q": "Kunnen bestellingen worden gesplitst?",
+        "a": "Ja. Vink de items aan die naar een nieuwe rekening gaan — beide totalen worden automatisch berekend, geen handmatig rekenwerk en geen gewissel tussen schermen."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Bestellingen in 10 minuten. ",
+    "headingAccent": "14 dagen volledige toegang.",
+    "sub": "Geen creditcard nodig, altijd opzegbaar. {count} restaurants nemen bestellingen op met ons systeem. Je hebt alleen een e-mailadres nodig."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Plattegrond en bestellijst",
+      "sub": "Actieve bestellingen naast de plattegrond: tafels hebben een kleurcode per status, en met een tik open je een bestelling of maak je een nieuwe aan.",
+      "bullets": [
+        {
+          "icon": "Map",
+          "title": "Tafels per status",
+          "sub": "Leeg, bezet, heeft aandacht nodig — in één oogopslag zichtbaar"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Lijst met actieve bestellingen",
+          "sub": "Totaalbedrag, besteltijd en aantal items voor elke bestelling"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Nieuwe bestelling vanaf de plattegrond",
+          "sub": "Tik op een vrije tafel om direct een bestelling in te voeren"
+        }
+      ]
+    },
+    {
+      "heading": "Een status voor elk item",
+      "sub": "De keuken en de bediening zien hetzelfde: elk gerecht heeft zijn eigen status — van geplaatst tot geserveerd.",
+      "bullets": [
+        {
+          "icon": "Timer",
+          "title": "Statussen per gerecht",
+          "sub": "Wachtend, In bereiding, Klaar, Geserveerd — per item, niet per bestelling"
+        },
+        {
+          "icon": "Receipt",
+          "title": "Item dupliceren",
+          "sub": "Herhaal een gerecht met dezelfde opties met één tik"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Direct aanpassen",
+          "sub": "Verwijder een item direct vanuit de bestelkaart"
+        }
+      ]
+    },
+    {
+      "heading": "Rekening splitsen",
+      "sub": "Gasten betalen apart — vink de items aan en ze verplaatsen naar een nieuwe rekening. Totalen worden direct berekend.",
+      "bullets": [
+        {
+          "icon": "Receipt",
+          "title": "Vinkjes per item",
+          "sub": "Kies de gerechten voor de nieuwe rekening; de rest blijft op de huidige staan"
+        },
+        {
+          "icon": "ChartColumn",
+          "title": "Totalen direct zichtbaar",
+          "sub": "De nieuwe en resterende rekeningen worden automatisch berekend"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Eén tik",
+          "sub": "De bestelling wordt gesplitst zonder handmatig rekenwerk of rekenmachine"
+        }
+      ]
+    },
+    {
+      "heading": "Bestellingen invoeren vanaf de telefoon van de bediening",
+      "sub": "De bediening neemt een bestelling op via hun eigen apparaat in drie stappen: categorie, gerecht, opties.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Elk apparaat",
+          "sub": "Een telefoon of tablet met een browser — geen installatie nodig"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Opties met prijzen",
+          "sub": "Formaat, extra's en varianten met een meerprijs in één tik"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Opmerkingen bij gerechten",
+          "sub": "Wensen van gasten worden bij de laatste stap toegevoegd — de keuken ziet ze direct"
+        }
+      ]
+    }
+  ]
+}

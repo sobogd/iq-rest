@@ -1,0 +1,151 @@
+{
+  "locale": "hu",
+  "slug": "qr-kod-etlap-etterem",
+  "trackPrefix": "l_hu_qr",
+  "featureHeading": {
+    "heading": "Nem csak egy QR-kód",
+    "sub": "Minden, amivé egyetlen beolvasás válhat a vendégeid és a pályád számára."
+  },
+  "meta": {
+    "title": "QR Étlap Éttermeknek | IQ Rest",
+    "description": "QR étlap éttermeknek: a vendégek beolvassák a QR-kódot az asztalon, megnyitják az étlapot a böngészőjükben, és a saját nyelvükön rendelnek. 14 nap ingyen, bankkártya nélkül.",
+    "canonical": "https://iq-rest.com/hu/qr-kod-etlap-etterem",
+    "ogLocale": "hu_HU",
+    "ogTitle": "QR Étlap Éttermeknek",
+    "ogDescription": "Egy QR az asztalon, az étlap a telefonon — fotók, allergének, 35 nyelv és valós idejű frissítések.",
+    "brandLine": "IQ Rest — QR Étlap Éttermeknek"
+  },
+  "hero": {
+    "headline": "QR étlap:\nolvasd be és rendelj",
+    "cta": "QR étlap készítése",
+    "sub": "A vendégek beolvassák a QR-t az asztalon, böngészik a fotókat és az allergéneket 35 nyelven, és rendelnek — nincs szükség alkalmazásokra."
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Éttermek"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kávézók"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bárok"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Szállodák"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzériák"
+    }
+  ],
+  "scan": {
+    "heading": "Már van papír étlapod vagy PDF-ed?",
+    "headingAccent": "Az MI 60 másodperc alatt QR étlappá alakítja.",
+    "sub": "Tölts fel egy fotót az étlapról vagy egy PDF-et — az MI felismeri a kategóriákat, az ételeket és az árakat, és egyenesen a QR étlapodhoz kapcsolja őket.",
+    "cta": "QR étlap készítése"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "Egy QR, 35 nyelv",
+      "heading": "Egy QR-kód, étlap 35 nyelven.",
+      "body": "A vendégek beolvassák a QR-t és kiválasztják a nyelvüket: a fordítást az MI végzi gasztronómiai érzékkel, nem egy általános fordító. Nincs több külön turista étlap vagy szétszórt lapok az asztalon.",
+      "bullets": [
+        "Egy kinyomtatott QR lefedi a 35 nyelvet, ami benne van az előfizetésben.",
+        "Az MI beszéli az ételek nyelvét — az ételek nevei minden nyelven természetesen hangzanak.",
+        "A vendégek az étlapon belül váltanak nyelvet, a QR újraolvasása nélkül."
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Két vendég ugyanazt a QR-kódot olvassa be az asztalról, és különböző nyelveken olvassa az étlapot"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Allergének a QR-ban",
+      "heading": "Allergének és diétás jelölések a QR étlapon belül.",
+      "body": "A QR mögötti étlapon minden étel kaphat jelöléseket: glutén, laktóz, mogyorófélék, tenger gyümölcsei, vegán és gluténmentes opciók. A vendégek a telefonjukról szűrik az ételeket a saját korlátozásaik szerint, anélkül, hogy a személyzetet kérdeznék.",
+      "bullets": [
+        "14 allergén kategória étel szinten.",
+        "Vegán, vegetáriánus és gluténmentes jelölések egy kattintással a felületen.",
+        "A vendégek a saját korlátozásaik alapján szűrik a QR étlapot."
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Egy vendég allergének szerint szűri a QR étlapot a telefonján, miközben a tulajdonos a listát szerkeszti egy tableten"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Több, mint egy QR",
+      "heading": "Egy QR étlap, ami úgy néz ki, mint egy éttermi weboldal.",
+      "body": "A kód beolvasása után a vendégek nem egy lapos PDF-re érkeznek: egy kezdőképernyőt látnak videóval vagy lenyűgöző fotóval, a hely leírásával és egy kapcsolati oldallal, ahol térkép, telefonszámok és közösségi linkek találhatók. A QR az éttermed online bejáratává válik.",
+      "bullets": [
+        "Háttérvideó vagy lenyűgöző fotó a QR étlap kezdőképernyőjén.",
+        "Hely, hogy elmeséld a helyed és minden kategória történetét.",
+        "Beépített kapcsolati oldal: térkép, telefon, Instagram, WhatsApp."
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Két telefon egy asztalon: a QR étlap kezdőképernyője háttérvideóval és egy kapcsolati oldal térképpel"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Rendelés a QR-ból · opcionális",
+      "heading": "A QR-kódból a vendégek rendelhetnek is.",
+      "body": "Az étlap böngészésén túl a QR étlap rendelési csatornává is válhat: a vendégek kosárba teszik az ételeket és elküldik a kérést. A rendelés eléri a pincért a pályán, a WhatsAppodat vagy a konyhai képernyőt. A funkció a beállításokban bármikor ki- és bekapcsolható.",
+      "bullets": [
+        "Kosár, megjegyzések és rendelés leadása közvetlenül a QR beolvasásából.",
+        "A rendelés azonnal eléri a pályát, a WhatsAppot vagy a konyhai képernyőt.",
+        "Kapcsold be a funkciót órák, szintek vagy adott éttermek szerint."
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Két telefon egy asztalon: egy QR étlapból létrehozott kosár és egy leadott rendelés visszaigazolása"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Amit a vendéglátósok az IQ Rest QR étlapról kérdeznek. Nem találod a kérdésed? Írj nekünk WhatsAppon.",
+    "items": [
+      {
+        "q": "Hogyan működik az IQ Rest QR étlap?",
+        "a": "Minden asztalon van egy nyomtatott QR-kód. A vendégek beolvassák a telefonjuk kamerájával, és a böngésző megnyitja az étterem étlapját — fotók, leírások, allergének és naprakész árak. Sem a vendégeknek, sem a személyzetnek nem kell alkalmazást letöltenie."
+      },
+      {
+        "q": "Szükségem van technikai tudásra egy QR étlap létrehozásához?",
+        "a": "Nem. A felület kattintásokkal és húzással működik, nincs kódolás vagy bonyolult konfiguráció. Egy étel hozzáadása másodpercekbe telik: név, ár, fotó. A kezdeti beállítás általában 30 perctől egy óráig tart; ha már van PDF étlapod, az MI automatikusan konvertálja."
+      },
+      {
+        "q": "A vendégeknek le kell tölteniük egy alkalmazást a QR olvasásához?",
+        "a": "Nem. A beépített iPhone és Android kamera másodpercek alatt felismeri a QR-kódot, és megnyitja az étlapot közvetlenül a böngészőben. Az admin felület is bármilyen modern böngészőben működik — telefonon, tableten vagy laptopon."
+      },
+      {
+        "q": "Hogyan nyomtathatók ki az asztali QR-kódok?",
+        "a": "A QR-kódok automatikusan generálódnak a felületen (asztalonként egy vagy egy az egész helyre), és nyomdakész PDF-ként letölthetők. Egy irodai nyomtató és egy állvány az egész, amire szükséged van: egy tartó, egy matrica vagy egy poháralátét."
+      },
+      {
+        "q": "Használhatom a saját domainemet a QR étlaphoz?",
+        "a": "Igen. Támogatjuk az éttermed domainjét SSL-tanúsítvánnyal (például etlap.azettermed.hu): amikor a vendégek beolvassák a QR-t, az éttermed címét látják, nem egy általános aldomaint. A DNS beállítása 5–10 percet vesz igénybe, és végigvezetünk rajta."
+      },
+      {
+        "q": "Kezelhetek QR-kódokat több étteremhez egy fiókból?",
+        "a": "Igen, kérésre. Egy fiók több vendéglátóhelyet is összefoghat, mindegyik saját QR-kódokkal, étlappal, dizájnnal és analitikával. Írj nekünk WhatsAppon, és bekapcsoljuk a több éttermes módot."
+      },
+      {
+        "q": "Nehéz elindítani egy QR étlapot a nulláról?",
+        "a": "Három lépés: (1) hozz létre kategóriákat; (2) add hozzá az ételeket névvel, árral és fotóval; (3) nyomtasd ki a QR-kódokat és helyezd el őket az asztalokon. Ha már van papír étlapod vagy PDF-ed, töltsd fel — az MI felismeri a kategóriákat és az árakat, és kitölti a kártyákat. Egy alap étlap 5 perc alatt online lehet."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "QR étlap 10 perc alatt. ",
+    "headingAccent": "14 nap teljes hozzáférés.",
+    "sub": "Nincs szükség bankkártyára, bármikor lemondható. {count} étterem bízik bennünk. Csak egy e-mail — és nincsenek alkalmazások a vendégeidnek."
+  }
+}

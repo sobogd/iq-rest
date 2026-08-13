@@ -1,0 +1,151 @@
+{
+  "locale": "fi",
+  "slug": "qr-koodi-ruokalista-ravintola",
+  "trackPrefix": "l_fi_qr",
+  "featureHeading": {
+    "heading": "Ei pelkkä QR-koodi",
+    "sub": "Kaikki mitä yksi skannaus tarjoaa asiakkaillesi ja salillesi."
+  },
+  "meta": {
+    "title": "QR-ruokalista ravintoloille | IQ Rest",
+    "description": "QR-ruokalista ravintoloille: asiakkaat skannaavat pöydässä olevan QR-koodin, avaavat ruokalistan selaimessaan ja tilaavat omalla kielellään. 14 päivää ilmaiseksi, ei luottokorttia.",
+    "canonical": "https://iq-rest.com/fi/qr-koodi-ruokalista-ravintola",
+    "ogLocale": "fi_FI",
+    "ogTitle": "QR-ruokalista ravintoloille",
+    "ogDescription": "QR pöydässä, ruokalista puhelimessa — kuvat, allergeenit, 35 kieltä ja reaaliaikaiset päivitykset.",
+    "brandLine": "IQ Rest — QR-ruokalista ravintoloille"
+  },
+  "hero": {
+    "headline": "QR-ruokalista:\nskannaa ja tilaa",
+    "cta": "Luo QR-ruokalista",
+    "sub": "Asiakkaat skannaavat pöydän QR-koodin, selaavat kuvia ja allergeeneja 35 kielellä ja tilaavat — ilman sovelluksia."
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Ravintolat"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kahvilat"
+    },
+    {
+      "icon": "Martini",
+      "label": "Baarit"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotellit"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzeriat"
+    }
+  ],
+  "scan": {
+    "heading": "Onko sinulla jo paperinen ruokalista tai PDF?",
+    "headingAccent": "Tekoäly tekee siitä QR-ruokalistan 60 sekunnissa.",
+    "sub": "Lataa kuva ruokalistasta tai PDF — tekoäly tunnistaa kategoriat, annokset ja hinnat ja yhdistää ne suoraan QR-ruokalistaasi.",
+    "cta": "Luo QR-ruokalista"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "Yksi QR, 35 kieltä",
+      "heading": "Yksi QR-koodi, ruokalista 35 kielellä.",
+      "body": "Asiakkaat skannaavat QR-koodin ja valitsevat kielensä: käännöksen tekee tekoäly ruokasanastoa ymmärtäen, ei geneerinen kääntäjä. Ei enää erillisiä turistimenuja tai irrallisia lappuja pöydissä.",
+      "bullets": [
+        "Yksi painettu QR kattaa 35 kieltä, sisältyy tilaukseen.",
+        "Tekoäly puhuu ruoan kieltä — annosten nimet kuulostavat luonnollisilta joka kielellä.",
+        "Asiakkaat vaihtavat kieltä ruokalistan sisällä, ilman QR-koodin uudelleenskannausta."
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Kaksi asiakasta skannaa saman QR-koodin pöydästä ja lukee ruokalistaa eri kielillä"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Allergeenit QR-koodissa",
+      "heading": "Allergeenit ja ruokavaliomerkinnät QR-ruokalistassa.",
+      "body": "Jokaisessa QR-koodin takana olevassa annoksessa voi olla merkinnät: gluteeni, laktoosi, pähkinät, merenelävät, vegaaniset ja gluteenittomat vaihtoehdot. Asiakkaat suodattavat annoksia rajoitustensa mukaan puhelimestaan, kysymättä henkilökunnalta.",
+      "bullets": [
+        "14 allergeenikategoriaa annostasolla.",
+        "Vegaaninen, kasvisruoka ja gluteeniton -merkinnät yhdellä klikkauksella paneelissa.",
+        "Asiakkaat suodattavat QR-ruokalistaa omien rajoitustensa mukaan."
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Asiakas suodattaa QR-ruokalistaa allergeenien mukaan puhelimella, kun taas omistaja muokkaa listaa tabletilla"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Enemmän kuin pelkkä QR",
+      "heading": "QR-ruokalista, joka näyttää ravintolan verkkosivulta.",
+      "body": "Koodin skannaamisen jälkeen asiakkaat eivät päädy litteään PDF-tiedostoon: he näkevät aloitusnäytön videolla tai näyttävällä kuvalla, kuvauksen ravintolasta sekä yhteystietosivun kartalla, puhelinnumeroilla ja some-linkeillä. QR-koodista tulee ravintolasi digitaalinen etuovi.",
+      "bullets": [
+        "Taustavideo tai näyttävä kuva QR-ruokalistan aloitusnäytöllä.",
+        "Tilaa kertoa ravintolasi ja jokaisen kategorian tarina.",
+        "Sisäänrakennettu yhteystietosivu: kartta, puhelin, Instagram, WhatsApp."
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Kaksi puhelinta pöydällä: QR-ruokalistan aloitusnäyttö taustavideolla ja yhteystietosivu kartalla"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Tilaa QR-koodilla · valinnainen",
+      "heading": "QR-koodin kautta asiakkaat voivat myös tilata.",
+      "body": "Ruokalistan selaamisen lisäksi QR-ruokalistasta voi tulla tilauskanava: asiakkaat lisäävät annoksia ostoskoriin ja lähettävät tilauksen. Tilaus saapuu tarjoilijalle saliin, WhatsAppiisi tai keittiönäytölle. Ominaisuuden voi kytkeä päälle ja pois asetuksista tarpeen mukaan.",
+      "bullets": [
+        "Ostoskori, kommentit ja tilauksen lähetys suoraan QR-skannauksesta.",
+        "Tilaus saapuu heti saliin, WhatsAppiin tai keittiönäytölle.",
+        "Ota ominaisuus käyttöön kellonaikojen, kerrosten tai tiettyjen ravintoloiden mukaan."
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Kaksi puhelinta pöydällä: QR-ruokalistasta luotu ostoskori ja lähetetyn tilauksen vahvistus"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Mitä ravintoloitsijat kysyvät IQ Restin QR-ruokalistasta. Etkö löydä kysymystäsi? Laita viestiä WhatsAppissa.",
+    "items": [
+      {
+        "q": "Miten IQ Restin QR-ruokalista toimii?",
+        "a": "Jokaisessa pöydässä on painettu QR-koodi. Asiakkaat skannaavat sen puhelimensa kameralla, ja selain avaa ravintolan ruokalistan — kuvat, kuvaukset, allergeenit ja ajantasaiset hinnat. Asiakkaiden tai henkilökunnan ei tarvitse ladata sovellusta."
+      },
+      {
+        "q": "Tarvitsenko teknistä osaamista QR-ruokalistan luomiseen?",
+        "a": "Et. Paneeli toimii klikkaamalla ja raahaamalla, ei koodia tai monimutkaisia asetuksia. Annoksen lisääminen vie sekunteja: nimi, hinta, kuva. Alkuasetukset vievät yleensä 30 minuutista tuntiin; jos sinulla on jo PDF-ruokalista, tekoäly muuntaa sen automaattisesti."
+      },
+      {
+        "q": "Tarvitsevatko asiakkaat sovelluksen QR-koodin lukemiseen?",
+        "a": "Eivät. iPhonen ja Androidin sisäänrakennettu kamera tunnistaa QR-koodin sekunneissa ja avaa ruokalistan suoraan selaimessa. Myös hallintapaneeli toimii missä tahansa modernissa selaimessa — puhelimella, tabletilla tai kannettavalla."
+      },
+      {
+        "q": "Miten pöytien QR-koodit tulostetaan?",
+        "a": "QR-koodit luodaan automaattisesti paneelissa (yksi per pöytä tai yksi koko ravintolalle) ja ladataan tulostusvalmiina PDF-tiedostona. Toimistotulostin ja teline riittävät: pöytäkolmio, tarra tai lasinalunen."
+      },
+      {
+        "q": "Voinko käyttää omaa verkkotunnustani QR-ruokalistalle?",
+        "a": "Kyllä. Tuemme ravintolasi verkkotunnusta SSL-varmenteella (esimerkiksi menu.sinunravintolasi.fi): kun asiakkaat skannaavat QR-koodin, he näkevät ravintolasi osoitteen, eivät geneeristä aliverkkotunnusta. DNS-asetusten teko vie 5–10 minuuttia ja opastamme sinut sen läpi."
+      },
+      {
+        "q": "Voinko hallinnoida usean ravintolan QR-koodeja yhdellä tilillä?",
+        "a": "Kyllä, pyynnöstä. Yksi tili voi yhdistää useita toimipisteitä, joilla jokaisella on omat QR-koodinsa, ruokalistansa, ilmeensä ja analytiikkansa. Laita viestiä WhatsAppissa, niin kytkemme moniravintolatilan päälle."
+      },
+      {
+        "q": "Onko QR-ruokalistan pystyttäminen alusta asti vaikeaa?",
+        "a": "Kolme vaihetta: (1) luo kategoriat; (2) lisää annokset nimellä, hinnalla ja kuvalla; (3) tulosta QR-koodit ja laita ne pöytiin. Jos sinulla on jo paperinen ruokalista tai PDF, lataa se — tekoäly tunnistaa kategoriat ja hinnat ja täyttää kortit. Perusruokalista voi olla verkossa 5 minuutissa."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "QR-ruokalista 10 minuutissa. ",
+    "headingAccent": "14 päivän täysi käyttöoikeus.",
+    "sub": "Ei luottokorttia, peruuta milloin tahansa. {count} ravintolan luottama. Vain sähköpostiosoite — ja ei sovelluksia asiakkaillesi."
+  }
+}

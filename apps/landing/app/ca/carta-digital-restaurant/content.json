@@ -1,0 +1,332 @@
+{
+  "locale": "ca",
+  "slug": "carta-digital-restaurant",
+  "trackPrefix": "l_digital",
+  "meta": {
+    "title": "Carta digital per a restaurants | IQ Rest",
+    "description": "Carta digital per al teu restaurant: una carta online amb fotos, al·lèrgens, traducció per IA i actualització de preus en temps real. 14 dies gratis, sense targeta.",
+    "canonical": "https://iq-rest.com/ca/carta-digital-restaurant",
+    "ogLocale": "ca_ES",
+    "ogTitle": "Carta digital per a restaurants",
+    "ogDescription": "La versió online de la teva carta de paper amb fotos, al·lèrgens i traducció per IA. Els preus s'actualitzen en temps real.",
+    "brandLine": "IQ Rest — Carta digital per a restaurants"
+  },
+  "hero": {
+    "headline": "Carta digital i web",
+    "headlineAccent": "per al teu restaurant",
+    "cta": "Crear una carta digital",
+    "demoLabel": "Demo: la carta tal com la veuen els clients",
+    "sub": "En marxa en 10 minuts: rep comandes des de la taula, actualitza els preus al moment i gestiona les reserves directament sense comissions.",
+    "phones": [
+      {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Mòbil amb la pàgina principal del web d'un restaurant: fotos, reserves i accés a la carta online"
+      },
+      {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Mòbil amb la fitxa d'un plat: foto, preu i etiquetes d'al·lèrgens"
+      }
+    ]
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurants"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafeteries"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bars"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotels"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzeries"
+    }
+  ],
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Una carta en 10 minuts",
+      "sub": "Sense programadors ni configuracions llargues"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Suport ràpid",
+      "sub": "T'ajudem a configurar la carta pel xat en un parell d'hores"
+    },
+    {
+      "icon": "Globe",
+      "title": "Escollit per {count} locals",
+      "sub": "Cartes digitals i webs per a restaurants de més de 15 països"
+    },
+    {
+      "icon": "Palette",
+      "title": "El teu propi domini i marca",
+      "sub": "Una carta a la teva pròpia adreça, no en un creador de webs compartit"
+    }
+  ],
+  "scan": {
+    "heading": "Tens la carta en paper o PDF?",
+    "headingAccent": "La IA la digitalitza en 60 segons.",
+    "sub": "Puja una foto o un document: la IA reconeix categories, plats i preus automàticament.",
+    "cta": "Escanejar carta"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "Traducció per IA",
+      "heading": "Una carta en 35 idiomes",
+      "body": "Un sol QR, 35 idiomes. La IA tradueix tenint en compte el context culinari perquè els plats sonin naturals. Els turistes demanen amb més confiança.",
+      "bullets": [
+        "35 idiomes inclosos a la subscripció",
+        "IA culinària en lloc de Google",
+        "Canvi d'idioma amb un sol toc"
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Dos clients llegint la mateixa carta digital en diferents idiomes als seus propis mòbils"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Al·lèrgens",
+      "heading": "Al·lèrgens i dietes a cada plat",
+      "body": "Marca el gluten, la lactosa, els fruits secs i les opcions veganes i sense gluten. Els clients filtren la carta segons les seves necessitats i demanen amb total tranquil·litat.",
+      "bullets": [
+        "14 categories d'al·lèrgens",
+        "Etiquetes de vegà i sense gluten",
+        "Filtre a la carta per restriccions dietètiques"
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Un client filtra la carta per al·lèrgens al mòbil mentre el restaurador edita la llista d'al·lèrgens en una tauleta"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Disseny i marca",
+      "heading": "Una carta prèmium al teu propi domini",
+      "body": "Un vídeo de fons a la pantalla de benvinguda, el teu propi disseny i una pàgina de contacte amb mapa i xarxes socials: al teu domini, no en un PDF.",
+      "bullets": [
+        "Vídeo de fons i disseny prèmium",
+        "El teu propi domini amb SSL",
+        "Contacte, mapa i xarxes socials"
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Dos mòbils sobre la taula d'una cafeteria: la pantalla d'inici de la carta amb un vídeo de fons i una pàgina de contacte amb un mapa"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Comandes",
+      "heading": "Comandes online sense comissions",
+      "body": "Els clients demanen des de la carta o directament per WhatsApp: la comanda arriba a la sala o a la cuina, i tu et quedes el 100% dels ingressos.",
+      "bullets": [
+        "Des de la carta o per WhatsApp",
+        "A la sala o a la cuina, 0% de comissió",
+        "S'activa des de la configuració"
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Dos mòbils sobre una taula: un carretó amb una comanda i la confirmació d'una comanda feta amb èxit"
+      }
+    },
+    {
+      "icon": "CalendarCheck",
+      "eyebrow": "Reserves",
+      "heading": "Reserva de taules 24/7",
+      "body": "Els clients reserven la taula ells mateixos a través de la carta o d'un enllaç; tu veus un calendari per taula i confirmes automàticament o manualment.",
+      "bullets": [
+        "Els clients reserven ells mateixos",
+        "Calendari de totes les taules",
+        "Confirmació automàtica o manual"
+      ]
+    },
+    {
+      "icon": "MonitorSmartphone",
+      "eyebrow": "Gestió",
+      "heading": "Gestiona-ho des de qualsevol lloc",
+      "body": "El panell d'administració funciona al navegador: mòbil, tauleta o PC. No cal instal·lar res, a punt en minuts.",
+      "bullets": [
+        "Qualsevol dispositiu, qualsevol navegador",
+        "Sense instal·lar res",
+        "En marxa en minuts"
+      ]
+    }
+  ],
+  "faq": {
+    "sub": "El que pregunten els restauradors sobre la carta digital d'IQ Rest. Si no trobes la teva pregunta, escriu-nos per WhatsApp.",
+    "items": [
+      {
+        "q": "Necessito coneixements tècnics o experiència amb CMS?",
+        "a": "No cal cap coneixement especial. Tot al panell d'administració es fa amb un parell de clics: sense programar ni treballar amb fitxers complexos. Afegir un plat triga segons: nom, preu, foto. Configurar una carta completa sol portar entre 30 i 60 minuts."
+      },
+      {
+        "q": "Què és la carta digital d'IQ Rest?",
+        "a": "És una versió online de la teva carta, disponible per als clients mitjançant un codi QR o un enllaç directe: fotos dels plats, preus, al·lèrgens, traducció per IA a 35 idiomes i actualitzacions en temps real. La carta funciona als nostres servidors: no cal instal·lar ni mantenir cap programari, només necessites un navegador."
+      },
+      {
+        "q": "Els clients necessiten una app o algun equip especial?",
+        "a": "El client apunta amb la càmera del mòbil al codi QR i la carta s'obre al navegador, sense instal·lar res. El panell d'administració també funciona en qualsevol navegador modern: mòbil, tauleta o portàtil. Els codis QR es poden imprimir amb una impressora normal d'oficina."
+      },
+      {
+        "q": "Puc tenir la carta al meu propi domini?",
+        "a": "Sí. La carta es connecta al teu domini amb un certificat SSL: els clients veuen l'adreça del teu restaurant, per exemple carta.elteurestaurant.com. El nostre suport s'encarrega de configurar el domini i el certificat; només ens has de facilitar un registre DNS."
+      },
+      {
+        "q": "Puc gestionar diversos restaurants des d'un sol compte?",
+        "a": "Sí. Afegeix locals a un únic compte: cadascun té la seva pròpia carta, disseny, codis QR i analítica, i pots canviar d'un a l'altre amb un sol clic. El nombre de locals depèn de la teva subscripció."
+      },
+      {
+        "q": "És difícil configurar una carta des de zero?",
+        "a": "Són tres passos: crea les categories, afegeix els plats amb preus i fotos, i imprimeix els codis QR per a les taules. Si tens la carta en paper o PDF, puja-la: la IA reconeix les categories, els noms i els preus, i omple les fitxes automàticament. Una carta bàsica està en marxa en 5 minuts; la configuració completa depèn de la quantitat de plats."
+      },
+      {
+        "q": "Quin suport oferiu?",
+        "a": "Responem per WhatsApp i correu electrònic en horari laboral. T'ajudem amb la configuració inicial, la connexió del teu domini i el disseny de la carta. Si necessites una demo o ajuda per començar, escriu-nos."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "La teva carta online en 10 minuts. ",
+    "headingAccent": "14 dies d'accés complet.",
+    "sub": "Sense targeta, cancel·la quan vulguis. {count} restaurants ens confien les seves cartes i webs. Només necessites un correu."
+  },
+  "spotlights": [
+    {
+      "heading": "Una carta en 35 idiomes",
+      "sub": "Els clients obren la carta en el seu idioma matern. La IA tradueix els noms dels plats, les descripcions, les categories i les opcions tenint en compte el context culinari.",
+      "bullets": [
+        {
+          "icon": "Globe",
+          "title": "35 idiomes a la subscripció",
+          "sub": "Idiomes europeus i asiàtics inclosos: sense cost addicional per idioma"
+        },
+        {
+          "icon": "Timer",
+          "title": "Traducció en desar",
+          "sub": "Afegeix o edita un plat i les traduccions a tots els idiomes de la carta estaran llestes al moment"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Les edicions manuals estan protegides",
+          "sub": "Si corregeixes una traducció a mà, queda bloquejada i la IA no la sobreescriurà mai"
+        }
+      ]
+    },
+    {
+      "heading": "Al·lèrgens i dietes a cada plat",
+      "sub": "Afegeix etiquetes d'al·lèrgens i dietes a la fitxa d'un plat: els clients les veuran a la carta i podran filtrar els plats segons les seves restriccions.",
+      "bullets": [
+        {
+          "icon": "WheatOff",
+          "title": "14 categories d'al·lèrgens",
+          "sub": "La llista completa de la normativa europea: gluten, fruits secs, lactosa, marisc i més"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "13 etiquetes dietètiques",
+          "sub": "Vegà, vegetarià, sense gluten, halal, kosher, picant i altres indicadors"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Filtre amb un sol toc",
+          "sub": "Els clients seleccionen les seves restriccions i la carta només mostra els plats adequats"
+        }
+      ]
+    },
+    {
+      "heading": "Una carta prèmium al teu propi domini",
+      "sub": "Una foto o vídeo de fons a la pantalla de benvinguda, el color de la teva marca i el teu logotip: la carta sembla la teva pàgina web, no un PDF, i funciona al teu domini.",
+      "bullets": [
+        {
+          "icon": "Palette",
+          "title": "Disseny amb la teva marca",
+          "sub": "Vídeo o foto a la pantalla d'inici, un color d'accent i el logotip: configura-ho sense necessitat de dissenyador"
+        },
+        {
+          "icon": "Globe",
+          "title": "El teu propi domini amb SSL",
+          "sub": "La carta s'obre a la teva adreça mitjançant una connexió segura"
+        },
+        {
+          "icon": "Map",
+          "title": "Contacte i mapa",
+          "sub": "Una pàgina amb la teva adreça, horaris, mapa i xarxes socials: un web complet per al restaurant"
+        }
+      ]
+    },
+    {
+      "heading": "Comandes online sense comissions",
+      "sub": "Un client fa una comanda des de la taula i apareix a l'instant al panell i a la pantalla de cuina. La plataforma es queda el 0% dels teus ingressos.",
+      "bullets": [
+        {
+          "icon": "ShoppingCart",
+          "title": "Des de la carta o per WhatsApp",
+          "sub": "Una comanda integrada al sistema o un missatge al teu WhatsApp: tria el mode a la configuració"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Directe a cuina",
+          "sub": "Una nova comanda apareix a la pantalla de cuina i al dispositiu del cambrer sense retards"
+        },
+        {
+          "icon": "Receipt",
+          "title": "0% de comissió",
+          "sub": "El pagament queda entre tu i el client: la plataforma no es queda res de les teves comandes"
+        }
+      ]
+    },
+    {
+      "heading": "Reserva de taules 24/7",
+      "sub": "Els clients reserven taula directament des de la carta a qualsevol hora. El sistema comprova la petició amb els teus horaris i les taules lliures.",
+      "bullets": [
+        {
+          "icon": "CalendarCheck",
+          "title": "Calendari per taula",
+          "sub": "El sistema assigna una taula segons el nombre de comensals i mostra les reserves per dia i taula"
+        },
+        {
+          "icon": "CalendarDays",
+          "title": "Automàtic o manual",
+          "sub": "Confirma cada reserva tu mateix o activa la confirmació automàtica"
+        },
+        {
+          "icon": "Mail",
+          "title": "Correus per al client i per a tu",
+          "sub": "El client rep una confirmació per correu i els propietaris reben un avís de nova reserva"
+        }
+      ]
+    },
+    {
+      "heading": "Gestiona-ho des de qualsevol lloc",
+      "sub": "El panell funciona al navegador d'un mòbil, tauleta o ordinador. Els canvis apareixen per als clients a l'instant.",
+      "bullets": [
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Qualsevol dispositiu",
+          "sub": "Mòbil, tauleta o PC: només cal un navegador, sense instal·lar res"
+        },
+        {
+          "icon": "Timer",
+          "title": "Edicions al moment",
+          "sub": "Un canvi de preu, un plat fora de carta o un plat ocult s'apliquen a l'instant, sense esperes"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Opcions dels plats",
+          "sub": "Mides, extres i variants amb preu: els clients es munten el plat ells mateixos"
+        }
+      ]
+    }
+  ],
+  "hideFeatureHeading": true
+}

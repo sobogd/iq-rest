@@ -1,0 +1,206 @@
+{
+  "locale": "sl",
+  "slug": "rezervacija-miz",
+  "trackPrefix": "l_bookings",
+  "meta": {
+    "title": "Rezervacije miz 24/7 za restavracije | IQ Rest",
+    "description": "Rezervacije miz 24/7 za vašo restavracijo: gosti sami rezervirajo mize prek QR menija ali spletne strani. Koledar po mizah, samodejne potrditve in opomniki. Brez klicev, brez spregledanih gostov. 14 dni brezplačno.",
+    "canonical": "https://iq-rest.com/sl/rezervacija-miz",
+    "ogLocale": "sl_SI",
+    "ogTitle": "Rezervacije miz 24/7 — Gosti rezervirajo sami",
+    "ogDescription": "Gosti rezervirajo mize prek QR menija ali spletne strani. Koledar, samodejne potrditve, opomniki. Niti en gost ni spregledan.",
+    "brandLine": "IQ Rest — Rezervacije miz za restavracije"
+  },
+  "hero": {
+    "headline": "Rezervacije miz 24/7,",
+    "cta": "Nastavi rezervacije miz",
+    "sub": "Gosti rezervirajo 24/7 prek QR menija ali povezave. Koledar po mizah, samodejne potrditve in opomniki.",
+    "headlineAccent": "brez telefonskih klicev",
+    "demoLabel": "Demo: koledar rezervacij",
+    "tablet": {
+      "src": "/landing/hero-card-reservation.webp",
+      "alt": "Tablica s koledarjem rezervacij: mesečni pogled in seznam rezervacij, ki čakajo na potrditev"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restavracije"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kavarne"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bari"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hoteli"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Picerije"
+    }
+  ],
+  "scan": {
+    "heading": "Zaženite rezervacije miz",
+    "headingAccent": "v 5 minutah.",
+    "sub": "Povežite koledar, dodajte mize s fotografijami in kapaciteto — gosti začnejo rezervirati še isti dan.",
+    "cta": "Omogoči rezervacije"
+  },
+  "subFeatures": [
+    {
+      "icon": "CalendarPlus",
+      "eyebrow": "Obrazec za rezervacijo",
+      "heading": "Gosti rezervirajo sami — po datumu, uri in številu oseb.",
+      "body": "Gost odpre QR meni ali neposredno povezavo, izbere datum, uro in število oseb — in takoj vidi proste mize: s fotografijo, opisom (terasa, ob oknu, kavč pri šanku) in kapaciteto. Potrditev se pošlje samodejno po e-pošti in WhatsAppu.",
+      "bullets": [
+        "Izbira mize po fotografiji, opisu in kapaciteti.",
+        "Samodejna potrditev in opomnik eno uro pred obiskom.",
+        "Minimalen obrazec: ime, telefon, število oseb."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-form.webp",
+        "alt": "Gost na telefonu rezervira mizo v restavraciji: izbira datuma, ure, števila oseb in mize"
+      }
+    },
+    {
+      "icon": "CalendarDays",
+      "eyebrow": "Koledar rezervacij",
+      "heading": "Koledar po dnevih in mizah — vse vidno v sekundi.",
+      "body": "Nadzorna plošča ima koledar rezervacij, razdeljen po mizah, dnevih, tednih in mesecih. Prosti termini, zasedene mize, potrjene in čakajoče rezervacije so prikazane na enem zaslonu. Deluje na tablici v strežbi in na prenosniku v pisarni.",
+      "bullets": [
+        "Pogledi po dnevih, tednih in mesecih.",
+        "Razdelitev po mizah: kdo, kdaj, koliko gostov.",
+        "Prestavite, prekličite ali potrdite rezervacijo — z enim dotikom s telefona."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-calendar.webp",
+        "alt": "Koledar rezervacij v nadzorni plošči IQ Rest na dveh tablicah: dnevni prikaz po mizah in mesečni koledar"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Kaj gostince najpogosteje zanima o rezervacijah miz v IQ Rest. Če vašega vprašanja ni na seznamu — pišite nam na WhatsApp.",
+    "items": [
+      {
+        "q": "Ali lahko izberem dneve in ure, ko so rezervacije na voljo?",
+        "a": "Da. Nadzorna plošča vam omogoča nastavitev urnika za vsak dan v tednu: ure za rezervacije in premor med kosilom in večerjo. Rezervacije lahko tudi začasno v celoti izklopite — gosti bodo videli, da spletne rezervacije niso na voljo."
+      },
+      {
+        "q": "Ali lahko naložim fotografijo vsake mize?",
+        "a": "Da. Vsaka miza ima fotografijo, kapaciteto in cono (terasa, ob oknu, šank). Gosti natančno vidijo, katero mizo rezervirajo, in se lažje odločijo."
+      },
+      {
+        "q": "Ali lahko omejim število gostov na mizo?",
+        "a": "Da. Vsaka miza ima določeno kapaciteto — sistem gostom ponudi samo ustrezne mize in prepreči, da bi skupina šestih oseb rezervirala mizo za dva."
+      },
+      {
+        "q": "Kako težko je nastaviti rezervacije?",
+        "a": "Trije koraki: dodajte mize s fotografijami in kapaciteto, vklopite način rezervacij v nastavitvah in delite povezavo ali QR kodo. Zagon traja 5–10 minut."
+      },
+      {
+        "q": "Ali lahko nastavim samodejno ali ročno potrjevanje rezervacij?",
+        "a": "Da, način izberete v nastavitvah. Pri samodejni potrditvi je gost potrjen takoj po oddaji obrazca. Pri ročni potrditvi se zahtevek v plošči prikaže kot \"čaka na potrditev\" — vodja ga potrdi ali zavrne. Ročni način je priročen, ko je število miz omejeno."
+      },
+      {
+        "q": "Ali zaračunavate provizijo na rezervacijo?",
+        "a": "Ni provizij: rezervacije so vključene v naročnino — brez odstotkov od gostov, brez stroškov na termin, brez posrednikov. Fiksno plačilo in neomejeno število rezervacij."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Rezervacije v 10 minutah. ",
+    "headingAccent": "14 dni polnega dostopa.",
+    "sub": "Brez kreditne kartice, prekličite kadarkoli. {count} restavracij z nami razbremeni svojo strežbo. Potrebujete le e-pošto."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Gosti rezervirajo sami",
+      "sub": "Datum, ura in število oseb — iz QR menija ali prek neposredne povezave, kadarkoli v dnevu. Sistem prikaže samo proste termine.",
+      "bullets": [
+        {
+          "icon": "CalendarPlus",
+          "title": "Rezervacije 24/7",
+          "sub": "Gosti rezervirajo ponoči ali ob koncu tedna — brez klicev in čakanja na odgovor"
+        },
+        {
+          "icon": "Users",
+          "title": "Miza, prilagojena številu oseb",
+          "sub": "Sistem sam izbere ustrezno mizo glede na kapaciteto"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Minimalen obrazec",
+          "sub": "Ime, telefon in število oseb — izpolnjevanje vzame pol minute"
+        }
+      ]
+    },
+    {
+      "heading": "Koledar po dnevih in mizah",
+      "sub": "Vse rezervacije v enem koledarju: poglejte, kaj je prosto, kaj je potrjeno in kdo prihaja.",
+      "bullets": [
+        {
+          "icon": "CalendarDays",
+          "title": "Dan, teden, mesec",
+          "sub": "Preklapljajte med pogledi in vnaprej načrtujte razporeditev"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Razdelitev po mizah",
+          "sub": "Kdo, kdaj in za koliko gostov — za vsako mizo"
+        },
+        {
+          "icon": "Smartphone",
+          "title": "Upravljajte s telefona",
+          "sub": "Prestavite, prekličite ali potrdite rezervacijo — z enim dotikom"
+        }
+      ]
+    },
+    {
+      "heading": "Urnik in načini",
+      "sub": "Nastavite urnik rezervacij za vsak dan v tednu, dolžino termina in način potrjevanja.",
+      "bullets": [
+        {
+          "icon": "Clock",
+          "title": "Urnik po dnevih",
+          "sub": "Ločene ure za vsak dan v tednu, vključno s premorom med kosilom in večerjo"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Dolžina termina",
+          "sub": "Nastavite interval rezervacij, ki ustreza formatu vašega lokala"
+        },
+        {
+          "icon": "CalendarCheck",
+          "title": "Samodejno ali ročno",
+          "sub": "Vsako rezervacijo potrdite sami ali pa vklopite samodejno potrjevanje"
+        }
+      ]
+    },
+    {
+      "heading": "Obvestila brez ročnega dela",
+      "sub": "Sistem obvešča gosta in vašo ekipo — e-pošta in zaslon z rezervacijami se posodobita takoj.",
+      "bullets": [
+        {
+          "icon": "Mail",
+          "title": "E-pošta za gosta",
+          "sub": "Potrditev rezervacije se samodejno pošlje po e-pošti"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Obvestilo za restavracijo",
+          "sub": "Lastniki prejmejo e-pošto o vsaki novi rezervaciji"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Zaslon z rezervacijami na vhodu",
+          "sub": "Tablica v strežbi prikazuje nove rezervacije v realnem času"
+        }
+      ]
+    }
+  ]
+}

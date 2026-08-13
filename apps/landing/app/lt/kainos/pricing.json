@@ -1,0 +1,59 @@
+{
+  "breadcrumbLabel": "Kainos",
+  "meta": {
+    "title": "Kainos — Susikurkite restorano planą nuo 9,90 €/mėn. | IQ Rest",
+    "description": "Susikurkite planą iš modulių: QR meniu su AI vertimu, užsakymų priėmimas, staliukų rezervacijos, virtuvės ekranas. Nuo 9,90 €/mėn. vienam restoranui, kiekio nuolaidos. 14 dienų nemokamai, be kortelės, atšaukite bet kada.",
+    "canonical": "https://iq-rest.com/lt/kainos",
+    "ogLocale": "lt_LT",
+    "ogTitle": "Kainos — Susikurkite restorano planą",
+    "ogDescription": "Modulinis planas nuo 9,90 €/mėn.: QR meniu, užsakymai, rezervacijos, KDS. Kiekio nuolaidos, jokių paslėptų mokesčių. 14 dienų nemokamai."
+  },
+  "faqSub": "Dažniausi restoranų klausimai apie kainas ir apmokėjimą. Nerandate savojo – parašykite mums WhatsApp.",
+  "faqItems": [
+    {
+      "q": "Kaip sudaroma kaina?",
+      "a": "Jūs patys susikuriate planą iš modulių. Pagrindas yra QR meniu su AI vertimu į 35 kalbas ir valdymu iš bet kurio įrenginio. Tada pridedate tai, ko reikia: staliukų rezervacijas, virtuvės ekraną, nuosavą domeną. Kaina skaičiuojama vienam restoranui, su kiekio nuolaidomis pradedant nuo antrojo."
+    },
+    {
+      "q": "Ar yra komisiniai nuo užsakymų?",
+      "a": "Ne. Užsakymai iš QR meniu ir iš padavėjų keliauja tiesiai restoranui. Mokate tik fiksuotą mėnesinę kainą."
+    },
+    {
+      "q": "Kaip veikia bandomasis laikotarpis?",
+      "a": "14 dienų pilnos prieigos prie visų funkcijų, nereikia banko kortelės. Jei iki pabaigos mokėjimas nenustatomas, paskyra pristabdoma: skydelis lieka prieinamas tik peržiūros režimu, o svečių meniu ir užsakymų priėmimas išjungiami. Jokių automatinių nuskaitymų nėra."
+    },
+    {
+      "q": "Kas nutinka mano duomenims, kai paskyra pristabdyta?",
+      "a": "Viskas išsaugoma: meniu, nuotraukos, užsakymų istorija, rezervacijos, nustatymai, statistika. Nustatykite mokėjimą net po pusmečio – viskas grįš tiksliai taip, kaip buvo."
+    },
+    {
+      "q": "Ar reikės iš naujo spausdinti QR kodus?",
+      "a": "Ne. Kol paskyra pristabdyta, kodai rodo pranešimą „laikinai nepasiekiama“; nustačius mokėjimą, tie patys kodai vėl atidaro meniu."
+    },
+    {
+      "q": "Ar galiu pakeisti savo planą?",
+      "a": "Taip, bet kuriuo metu iš valdymo skydelio. Skirtumas proporcingai paskirstomas likusioms apmokėto laikotarpio dienoms. Išjungta funkcija išlaiko savo duomenis."
+    },
+    {
+      "q": "Kiek restoranų galiu prijungti?",
+      "a": "Kiek tik norite, visi valdomi iš vieno skydelio. Kiekio nuolaidos iki 50 % turint 5+ restoranus. Dideliems tinklams – individualus planas per WhatsApp."
+    },
+    {
+      "q": "Kokia nuolaida metiniam planui?",
+      "a": "Apie 30 % lyginant su mėnesiniu atsiskaitymu. Tiksli suma rodoma kuriant planą."
+    },
+    {
+      "q": "Kaip atšaukti prenumeratą?",
+      "a": "Vienu paspaudimu iš skydelio. Paskyra veikia iki apmokėto laikotarpio pabaigos, tada ji pristabdoma. Jūsų duomenys išsaugomi."
+    },
+    {
+      "q": "Kokius mokėjimo būdus priimate?",
+      "a": "Visa, Mastercard, American Express, Apple Pay, Google Pay – per Stripe. Europoje metinis planas taip pat palaiko SEPA tiesioginį debetą."
+    }
+  ],
+  "finalCta": {
+    "heading": "Viena kaina. Nulio rizikos. ",
+    "headingAccent": "14 dienų pilnos prieigos.",
+    "sub": "Kortelės nereikia, atšaukite bet kada – mumis pasitiki {count} restoranų. Viskas, ko reikia pradžiai, tai el. paštas."
+  }
+}

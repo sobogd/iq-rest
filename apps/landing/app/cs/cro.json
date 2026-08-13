@@ -1,0 +1,289 @@
+{
+  "heroV2": {
+    "verticals": [
+      {
+        "icon": "restaurant",
+        "label": "Restaurace"
+      },
+      {
+        "icon": "cafe",
+        "label": "Kavárny"
+      },
+      {
+        "icon": "bar",
+        "label": "Bary"
+      },
+      {
+        "icon": "hotel",
+        "label": "Hotely"
+      },
+      {
+        "icon": "pizza",
+        "label": "Pizzerie"
+      }
+    ],
+    "title": "Vše, co váš podnik",
+    "titleAccent": "potřebuje!",
+    "sub": "Nastavte si provoz za 10 minut: spusťte online menu, zrychlete kuchyň a získejte přehled o rezervacích.",
+    "primaryLabel": "Začít zdarma",
+    "demoLabel": "Zobrazit ukázkové menu",
+    "mockups": {
+      "kds": {
+        "src": "/landing/hero-card-kds.webp",
+        "alt": "Tablet s kuchyňským displejem: objednávky podle stolů ve sloupcích se stavy"
+      },
+      "reservations": {
+        "src": "/landing/hero-card-reservation.webp",
+        "alt": "Tablet s rezervačním kalendářem: měsíční pohled a seznam rezervací čekajících na potvrzení"
+      },
+      "phone1": {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Telefon s úvodní stránkou webu podniku: fotky, rezervace a přístup k online menu"
+      },
+      "phone2": {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Telefon s detailem jídla: fotka, cena a štítky alergenů"
+      }
+    }
+  },
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Spuštěno za 10 minut",
+      "sub": "Žádný drahý hardware a zdlouhavé nastavování"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Rychlá podpora",
+      "sub": "Na chatu odpovídáme do několika hodin"
+    },
+    {
+      "icon": "Globe",
+      "title": "Vybralo si nás {count} podniků",
+      "sub": "Důvěřují nám restaurace a kavárny ve více než 15 zemích"
+    },
+    {
+      "icon": "Palette",
+      "title": "100% ve vašem stylu",
+      "sub": "Design a rozhraní přizpůsobíme vizuálu vašeho podniku"
+    }
+  ],
+  "menu": {
+    "heading": "Web a digitální menu",
+    "sub": {
+      "link": "Víc než jen QR menu!",
+      "rest": " Získáte plnohodnotný web s vlastním designem, kontakty a rezervacemi stolů."
+    },
+    "moreLabel": "Více o menu",
+    "demoLabel": "Demo: menu pohledem hosta",
+    "mockupAlt": "Telefon s úvodní stránkou webu podniku a telefon s detailem jídla",
+    "bullets": [
+      {
+        "icon": "Languages",
+        "title": "Automatický překlad do 35 jazyků",
+        "sub": "Obslužte zahraniční hosty bez jazykové bariéry — automatický překlad se o vše postará"
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "Objednávky přímo od stolu",
+        "sub": "Zjednodušte si provoz — přijímejte objednávky od stolů rychle a bez číšníka"
+      },
+      {
+        "icon": "WheatOff",
+        "title": "Alergeny a diety",
+        "sub": "Označte alergeny a diety (vegan, pálivé), aby si hosté mohli vybrat jídlo snadněji a bezpečněji"
+      }
+    ]
+  },
+  "reservations": {
+    "heading": "Rezervace stolů",
+    "sub": {
+      "link": "Chytré rezervace stolů!",
+      "rest": " Automatizovaný rezervační systém, který sám hlídá volné stoly a vaši kapacitu."
+    },
+    "moreLabel": "Více o rezervacích",
+    "demoLabel": "Demo: rezervační kalendář",
+    "mockupAlt": "Tablet s rezervačním kalendářem: stoly podle dnů a časových oken",
+    "bullets": [
+      {
+        "icon": "CalendarCheck",
+        "title": "Přehledná mapa rezervací",
+        "sub": "Vizuální harmonogram podle dnů a stolů — hned vidíte, kde a kdy je volno"
+      },
+      {
+        "icon": "SlidersHorizontal",
+        "title": "Flexibilní nastavení rezervací",
+        "sub": "Nastavte si otevírací dobu, délku rezervace i fotky stolů a sbírejte požadavky hostů"
+      },
+      {
+        "icon": "Users",
+        "title": "Řízení toku hostů",
+        "sub": "Vyberte si režim rezervací, který vám vyhovuje, a mějte plnou kontrolu nad obsazeností"
+      }
+    ]
+  },
+  "orders": {
+    "heading": "Objednávání od stolu",
+    "sub": {
+      "link": "Objednávky rovnou do kuchyně!",
+      "rest": " Objednávka od stolu nebo od číšníka se okamžitě objeví na displeji v kuchyni — žádné papírové lístky, žádné čekání."
+    },
+    "moreLabel": "Více o objednávkách",
+    "demoLabel": "Demo: obrazovka objednávek",
+    "mockupSrc": "/landing/feature-orders-modal.webp",
+    "mockupAlt": "Tablet s otevřenou objednávkou: seznam jídel a akce — změna stolu, rozdělení účtu, přidání slevy",
+    "bullets": [
+      {
+        "icon": "ShoppingCart",
+        "title": "Host nebo číšník",
+        "sub": "Hosté objednávají od stolu přes QR kód, číšníci ze svého telefonu nebo tabletu"
+      },
+      {
+        "icon": "Map",
+        "title": "Plán stolů se stavy",
+        "sub": "Stoly na plánku jsou barevně odlišené podle stavu — na první pohled vidíte, kdo čeká na jídlo a kam jít dřív"
+      },
+      {
+        "icon": "Receipt",
+        "title": "Rozdělení účtu",
+        "sub": "Rozdělte účet mezi hosty a uzavřete stůl bez zmatků při placení"
+      }
+    ]
+  },
+  "kds": {
+    "heading": "Kuchyňský displej (KDS)",
+    "sub": {
+      "link": "Kuchyně, která šlape!",
+      "rest": " Objednávky z placu a QR menu se okamžitě zobrazí na obrazovce kuchaře — s poznámkami, alergeny a časovačem."
+    },
+    "moreLabel": "Více o KDS",
+    "demoLabel": "Demo: obrazovka do kuchyně",
+    "mockupAlt": "Tablet s kuchyňským displejem: objednávky podle stolů ve sloupcích se stavy",
+    "bullets": [
+      {
+        "icon": "LayoutGrid",
+        "title": "Obrazovky podle sekcí",
+        "sub": "Samostatné tablety pro teplou kuchyni, bar a cukrárnu — každý vidí jen svá jídla"
+      },
+      {
+        "icon": "Timer",
+        "title": "Stavy a časovač",
+        "sub": "Sloupce Připravuje se / Hotovo / Vydáno a čas od objednání — změna stavu jedním kliknutím"
+      },
+      {
+        "icon": "ShieldAlert",
+        "title": "Alergeny a poznámky",
+        "sub": "Štítky alergenů a poznámky hostů jsou barevně zvýrazněné — kuchař nic důležitého nepřehlédne"
+      }
+    ]
+  },
+  "bundle": {
+    "heading": "Vše, na čem váš podnik běží.",
+    "headingAccent": "V jedné aplikaci.",
+    "sub": "Menu, kuchyně a rezervace na jednom místě — moderní, rychlé a postavené pro reálný provoz. Žádné skryté poplatky ani platby za jednotlivé funkce."
+  },
+  "benefits": [
+    {
+      "icon": "Languages",
+      "tag": "Digitální menu",
+      "title": "Menu, které prodává.",
+      "bullets": [
+        "35 jazyků díky AI",
+        "Prémiový design",
+        "Ceny se aktualizují okamžitě"
+      ],
+      "image": "/landing/feature-design.webp",
+      "imageAlt": "Dva telefony na stole v kavárně: úvodní obrazovka digitálního menu a kontaktní stránka s mapou"
+    },
+    {
+      "icon": "ChefHat",
+      "tag": "Kuchyňský displej",
+      "title": "Vařte rychleji a na nic nezapomeňte.",
+      "bullets": [
+        "Rovnou na obrazovku",
+        "Poznámky a alergeny",
+        "Tablet nebo telefon"
+      ],
+      "image": "/landing/feature-kds-cards.webp",
+      "imageAlt": "Tablet na barovém pultu ukazuje kuchyňský displej s objednávkami podle stolů"
+    },
+    {
+      "icon": "CalendarCheck",
+      "tag": "Rezervace",
+      "title": "Rezervace na autopilota.",
+      "bullets": [
+        "Rezervace bez telefonátů",
+        "Automatické potvrzování",
+        "Kalendář podle stolů"
+      ],
+      "image": "/landing/feature-booking-calendar.webp",
+      "imageAlt": "Dva tablety s rezervačním kalendářem: denní pohled podle stolů a měsíční přehled"
+    },
+    {
+      "icon": "Receipt",
+      "tag": "Objednávky od stolu",
+      "title": "Objednávky rovnou do kuchyně.",
+      "bullets": [
+        "Host nebo číšník",
+        "Přímo do kuchyně",
+        "Zapněte, kdykoliv potřebujete"
+      ],
+      "image": "/landing/feature-orders-map.webp",
+      "imageAlt": "Tablet s obrazovkou objednávek: seznam objednávek a barevně odlišený plán stolů."
+    }
+  ],
+  "seeDetails": "Zjistit více",
+  "platform": {
+    "hardwareTitle": "Použijte vlastní hardware",
+    "hardwareSub": "Nenutíme vás kupovat naše zařízení. Použijte telefony, tablety a počítače, které už máte.",
+    "anywhereTitle": "Funguje kdekoliv",
+    "anywhereSub": "Telefon, tablet, notebook, PC. Android, iOS, Windows, Mac, Linux. V jakémkoliv moderním prohlížeči, bez instalace."
+  },
+  "activities": {
+    "heading": "Jeden systém —",
+    "headingAccent": "celý váš podnik.",
+    "sub": "Rychlejší obsluha, klidnější kuchyně, nižší náklady a hosté, kteří se vrací — vše v jedné platformě.",
+    "groups": [
+      {
+        "icon": "Smartphone",
+        "tag": "U stolu — host",
+        "bullets": [
+          "QR menu ve 35 jazycích",
+          "Objednání bez čekání na číšníka",
+          "Přivolání obsluhy nebo žádost o účet",
+          "Rezervace stolu 24/7",
+          "Unikátní QR kód pro každý stůl",
+          "Bez aplikace — otevře se v prohlížeči",
+          "Štítky alergenů a diet pro filtrování"
+        ]
+      },
+      {
+        "icon": "ChefHat",
+        "tag": "V kuchyni",
+        "bullets": [
+          "Objednávky na obrazovce okamžitě",
+          "Sloupce Připravuje se / Hotovo / Vydáno",
+          "Barevně zvýrazněné alergeny a poznámky",
+          "Tablet nebo telefon — žádné papírové lístky"
+        ]
+      },
+      {
+        "icon": "ChartColumn",
+        "tag": "Vedení podniku",
+        "bullets": [
+          "Úpravy menu a cen — okamžitě",
+          "AI překlad jedním kliknutím",
+          "Analytika prodejů a reporty",
+          "Více podniků pod jedním účtem",
+          "AI zdigitalizuje papírové menu za 60 vteřin",
+          "Vlastní doména s SSL"
+        ]
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Celá platforma za 10 minut. ",
+    "headingAccent": "14 dní plného přístupu.",
+    "sub": "Menu, objednávky, rezervace a kuchyně — bez karty, zrušení kdykoliv; důvěřuje nám {count} podniků, stačí vám jen e-mail."
+  }
+}

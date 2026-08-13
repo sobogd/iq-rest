@@ -1,0 +1,289 @@
+{
+  "heroV2": {
+    "verticals": [
+      {
+        "icon": "restaurant",
+        "label": "Restoranai"
+      },
+      {
+        "icon": "cafe",
+        "label": "Kavinės"
+      },
+      {
+        "icon": "bar",
+        "label": "Barai"
+      },
+      {
+        "icon": "hotel",
+        "label": "Viešbučiai"
+      },
+      {
+        "icon": "pizza",
+        "label": "Picerijos"
+      }
+    ],
+    "title": "Viskas, ko jūsų restoranui",
+    "titleAccent": "reikia!",
+    "sub": "Susitvarkykite procesus per 10 minučių: paleiskite meniu internete, optimizuokite virtuvės darbą ir valdykite staliukų užimtumą.",
+    "primaryLabel": "Pradėti nemokamai",
+    "demoLabel": "Žiūrėti demonstracinį meniu",
+    "mockups": {
+      "kds": {
+        "src": "/landing/hero-card-kds.webp",
+        "alt": "Planšetė su virtuvės ekranu: užsakymai pagal staliukus stulpeliuose su statusais"
+      },
+      "reservations": {
+        "src": "/landing/hero-card-reservation.webp",
+        "alt": "Planšetė su rezervacijų kalendoriumi: mėnesio rodinys ir laukiančių patvirtinimo rezervacijų sąrašas"
+      },
+      "phone1": {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Telefonas su restorano svetainės pagrindiniu puslapiu: nuotraukos, rezervacijos ir prieiga prie meniu internete"
+      },
+      "phone2": {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Telefonas su patiekalo kortele: nuotrauka, kaina ir alergenų žymos"
+      }
+    }
+  },
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Veikia po 10 minučių",
+      "sub": "Nereikia pirkti brangios įrangos ar ilgai konfigūruoti"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Greitas palaikymas",
+      "sub": "Į žinutes atsakome per kelias valandas"
+    },
+    {
+      "icon": "Globe",
+      "title": "Pasirinko {count} vietų",
+      "sub": "Mumis pasitiki restoranai ir kavinės 15+ šalių"
+    },
+    {
+      "icon": "Palette",
+      "title": "100 % jūsų prekės ženklo stilius",
+      "sub": "Pritaikome dizainą ir sąsają prie jūsų vietos stiliaus"
+    }
+  ],
+  "menu": {
+    "heading": "Svetainė ir skaitmeninis meniu",
+    "sub": {
+      "link": "Daugiau nei QR meniu!",
+      "rest": " Gaukite pilną svetainę su unikaliu dizainu, kontaktais ir staliukų rezervacijomis."
+    },
+    "moreLabel": "Daugiau apie meniu",
+    "demoLabel": "Demo: meniu, kokį jį mato svečiai",
+    "mockupAlt": "Telefonas su restorano svetainės pagrindiniu puslapiu ir telefonas su patiekalo puslapiu",
+    "bullets": [
+      {
+        "icon": "Languages",
+        "title": "Automatinis vertimas į 35 kalbas",
+        "sub": "Aptarnaukite užsienio svečius be kalbos barjero – automatinis vertimas viskuo pasirūpins"
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "Užsakymai tiesiai nuo staliuko",
+        "sub": "Supaprastinkite procesus – greitai priimkite užsakymus nuo staliukų, padavėjo nereikia"
+      },
+      {
+        "icon": "WheatOff",
+        "title": "Alergenai ir mitybos žymos",
+        "sub": "Pažymėkite alergenus ir mitybos ypatumus (veganiška, aštru), kad svečiai galėtų lengviau ir saugiau išsirinkti maistą"
+      }
+    ]
+  },
+  "reservations": {
+    "heading": "Staliukų rezervacijos",
+    "sub": {
+      "link": "Išmanios staliukų rezervacijos!",
+      "rest": " Automatinė rezervacijų sistema, kuri pati seka laisvus staliukus ir jūsų tvarkaraštį."
+    },
+    "moreLabel": "Daugiau apie rezervacijas",
+    "demoLabel": "Demo: rezervacijų kalendorius",
+    "mockupAlt": "Planšetė su rezervacijų kalendoriumi: staliukai pagal dienas ir laiko intervalus",
+    "bullets": [
+      {
+        "icon": "CalendarCheck",
+        "title": "Aiškus rezervacijų planas",
+        "sub": "Vizualus tvarkaraštis pagal dienas ir staliukus – iškart matykite, kur ir kada yra laisvų vietų"
+      },
+      {
+        "icon": "SlidersHorizontal",
+        "title": "Lankstūs rezervacijų nustatymai",
+        "sub": "Nustatykite darbo valandas, vizito trukmę ir staliukų nuotraukas bei rinkite svečių pageidavimus"
+      },
+      {
+        "icon": "Users",
+        "title": "Svečių srauto valdymas",
+        "sub": "Pasirinkite jums tinkantį rezervacijų režimą ir išlaikykite pilną svečių srauto kontrolę"
+      }
+    ]
+  },
+  "orders": {
+    "heading": "Užsakymų priėmimas prie staliuko",
+    "sub": {
+      "link": "Užsakymai tiesiai į virtuvę!",
+      "rest": " Užsakymas nuo staliuko ar iš padavėjo akimirksniu atsiranda virtuvės ekrane – jokių popierinių čekių, jokio laukimo."
+    },
+    "moreLabel": "Daugiau apie užsakymus",
+    "demoLabel": "Demo: užsakymų ekranas",
+    "mockupSrc": "/landing/feature-orders-modal.webp",
+    "mockupAlt": "Planšetė su atidarytu užsakymu: patiekalų sąrašas ir užsakymo veiksmai – pakeisti staliuką, padalinti užsakymą, pridėti nuolaidą",
+    "bullets": [
+      {
+        "icon": "ShoppingCart",
+        "title": "Svečias arba padavėjas",
+        "sub": "Svečiai užsisako nuo staliuko per QR kodą, padavėjai – iš savo telefono ar planšetės"
+      },
+      {
+        "icon": "Map",
+        "title": "Salės planas su statusais",
+        "sub": "Staliukai plane nuspalvinti pagal statusą – iškart matykite, kas laukia užsakymo ir kur eiti toliau"
+      },
+      {
+        "icon": "Receipt",
+        "title": "Sąskaitos padalijimas",
+        "sub": "Padalinkite užsakymą tarp svečių ir uždarykite staliukus be painiavos su mokėjimais"
+      }
+    ]
+  },
+  "kds": {
+    "heading": "Virtuvės ekranų sistema (KDS)",
+    "sub": {
+      "link": "Sinchronizuotas virtuvės darbas!",
+      "rest": " Užsakymai iš salės ir QR meniu akimirksniu atsiranda virėjo ekrane – su pastabomis, alergenais ir laikmačiu."
+    },
+    "moreLabel": "Daugiau apie KDS",
+    "demoLabel": "Demo: virtuvės ekranas",
+    "mockupAlt": "Planšetė su virtuvės ekranu: užsakymai pagal staliukus stulpeliuose su statusais",
+    "bullets": [
+      {
+        "icon": "LayoutGrid",
+        "title": "Ekranai pagal stotis",
+        "sub": "Atskiri ekranai karštųjų patiekalų zonai, barui ir konditerijai – kiekviena stotis mato tik savo patiekalus"
+      },
+      {
+        "icon": "Timer",
+        "title": "Statusai ir laikmatis",
+        "sub": "Gaminama / paruošta / patiekta stulpeliai ir praėjęs laikas kiekvienam užsakymui – statusas keičiamas vienu paspaudimu"
+      },
+      {
+        "icon": "ShieldAlert",
+        "title": "Alergenai ir komentarai",
+        "sub": "Alergenų žymos ir svečių pastabos paryškintos – virėjas nepraleis nieko svarbaus"
+      }
+    ]
+  },
+  "bundle": {
+    "heading": "Viskas, ant ko laikosi jūsų restoranas.",
+    "headingAccent": "Vienoje programėlėje.",
+    "sub": "Meniu, virtuvė ir rezervacijos vienoje vietoje – modernu, greita ir sukurta taip, kaip iš tikrųjų dirba restoranai. Jokių papildomų mokesčių už atskiras funkcijas."
+  },
+  "benefits": [
+    {
+      "icon": "Languages",
+      "tag": "Skaitmeninis meniu",
+      "title": "Meniu, kuris parduoda.",
+      "bullets": [
+        "35 kalbos su AI",
+        "Premium dizainas",
+        "Kainos atsinaujina akimirksniu"
+      ],
+      "image": "/landing/feature-design.webp",
+      "imageAlt": "Du telefonai ant kavinės staliuko: skaitmeninio meniu pasisveikinimo ekranas ir kontaktų puslapis su žemėlapiu"
+    },
+    {
+      "icon": "ChefHat",
+      "tag": "Virtuvės ekranas",
+      "title": "Gaminkite greičiau ir nieko nepraleiskite.",
+      "bullets": [
+        "Tiesiai į ekraną",
+        "Pastabos ir alergenai",
+        "Planšetė arba telefonas"
+      ],
+      "image": "/landing/feature-kds-cards.webp",
+      "imageAlt": "Planšetė ant baro stalo rodo virtuvės ekraną su užsakymais pagal staliukus"
+    },
+    {
+      "icon": "CalendarCheck",
+      "tag": "Rezervacijos",
+      "title": "Rezervacijos autopilotu.",
+      "bullets": [
+        "Rezervacijos be skambučių",
+        "Automatinis patvirtinimas",
+        "Kalendorius pagal staliukus"
+      ],
+      "image": "/landing/feature-booking-calendar.webp",
+      "imageAlt": "Dvi planšetės su rezervacijų kalendoriumi: dienos rodinys pagal staliukus ir mėnesio rodinys"
+    },
+    {
+      "icon": "Receipt",
+      "tag": "Užsakymai prie staliuko",
+      "title": "Užsakymai tiesiai į virtuvę.",
+      "bullets": [
+        "Svečias arba padavėjas",
+        "Tiesiai į virtuvę",
+        "Įjunkite, kai tik prireiks"
+      ],
+      "image": "/landing/feature-orders-map.webp",
+      "imageAlt": "Planšetė su užsakymų ekranu: užsakymų sąrašas ir spalvomis pažymėtas salės planas su staliukais."
+    }
+  ],
+  "seeDetails": "Sužinoti daugiau",
+  "platform": {
+    "hardwareTitle": "Naudokite savo įrangą",
+    "hardwareSub": "Mes neverčiame pirkti įrangos iš mūsų. Naudokite telefonus, planšetes ir kompiuterius, kuriuos jau turite.",
+    "anywhereTitle": "Veikia bet kur",
+    "anywhereSub": "Telefonas, planšetė, nešiojamas ar stacionarus kompiuteris. Android, iOS, Windows, Mac, Linux. Bet kurioje modernioje naršyklėje, be jokio diegimo."
+  },
+  "activities": {
+    "heading": "Viena sistema –",
+    "headingAccent": "visas jūsų restoranas.",
+    "sub": "Greitesnis aptarnavimas, ramesnė virtuvė, mažesnės išlaidos ir sugrįžtantys svečiai – viskas vienoje platformoje.",
+    "groups": [
+      {
+        "icon": "Smartphone",
+        "tag": "Prie staliuko – svečias",
+        "bullets": [
+          "QR meniu 35 kalbomis",
+          "Užsakymai nelaukiant padavėjo",
+          "Iškviesti padavėją arba paprašyti sąskaitos",
+          "Staliukų rezervacija 24/7",
+          "Unikalus QR kodas kiekvienam staliukui",
+          "Nereikia programėlės – atsidaro naršyklėje",
+          "Alergenų ir mitybos žymos filtravimui"
+        ]
+      },
+      {
+        "icon": "ChefHat",
+        "tag": "Virtuvėje",
+        "bullets": [
+          "Užsakymai ekrane akimirksniu",
+          "Gaminama / paruošta / patiekta stulpeliai",
+          "Alergenai ir komentarai paryškinti",
+          "Planšetė ar telefonas – jokių popierinių čekių"
+        ]
+      },
+      {
+        "icon": "ChartColumn",
+        "tag": "Valdymas",
+        "bullets": [
+          "Meniu ir kainų keitimas – akimirksniu",
+          "AI vertimas vienu paspaudimu",
+          "Pardavimų analitika ir ataskaitos",
+          "Keli restoranai vienoje paskyroje",
+          "AI suskaitmenina popierinį meniu per 60 sekundžių",
+          "Jūsų nuosavas domenas su SSL"
+        ]
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Visa platforma per 10 minučių. ",
+    "headingAccent": "14 dienų pilnos prieigos.",
+    "sub": "Meniu, užsakymai, rezervacijos ir virtuvė – be kortelės, atšaukite bet kada; mumis pasitiki {count} restoranų, viskas, ko reikia, tai el. paštas."
+  }
+}

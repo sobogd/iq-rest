@@ -1,0 +1,261 @@
+{
+  "htmlLang": "hu",
+  "htmlDir": "ltr",
+  "meta": {
+    "title": "Digitális étlap, konyhai kijelző és asztalfoglalás — IQ Rest",
+    "description": "Irányítsd az éttermed egyetlen alkalmazásból: többnyelvű digitális étlap, konyhai kijelző és 0-24 asztalfoglalás. Indulás 5 perc alatt. 14 nap ingyen, bankkártya nélkül.",
+    "canonical": "https://iq-rest.com/hu",
+    "ogLocale": "hu_HU",
+    "ogTitle": "Digitális étlap, konyhai kijelző és asztalfoglalás",
+    "ogDescription": "Irányítsd az éttermed egyetlen alkalmazásból: többnyelvű digitális étlap, konyhai kijelző és 0-24 asztalfoglalás. Indulás 5 perc alatt. 14 nap ingyen, bankkártya nélkül."
+  },
+  "jsonLd": {
+    "appName": "IQ Rest — Étteremkezelő platform"
+  },
+  "ctaText": "Próbáld ki ingyen",
+  "homeCtaText": "Próbáld ki ingyen",
+  "trust": [
+    {
+      "kind": "num",
+      "value": 35,
+      "label": "Étlap nyelvek"
+    },
+    {
+      "kind": "text",
+      "value": "0-24",
+      "label": "Online asztalfoglalás"
+    },
+    {
+      "kind": "num",
+      "value": 5,
+      "suffix": " perc",
+      "label": "Az indulásig"
+    },
+    {
+      "kind": "count",
+      "label": "Étterem használja"
+    }
+  ],
+  "demoText": "Demó megtekintése",
+  "microcopy": "14 nap ingyen · Nincs bankkártya · Bármikor lemondható",
+  "header": {
+    "navFeatures": "Funkciók",
+    "navHow": "Hogyan működik",
+    "navPricing": "Árak",
+    "navFaq": "GYIK",
+    "signIn": "Bejelentkezés",
+    "viewFeatures": "Funkciók megtekintése",
+    "cta": "Ingyenes kezdés",
+    "navProducts": "Funkciók",
+    "navGuide": "Útmutató",
+    "navAbout": "Rólunk",
+    "menuFeaturesHeading": "Funkciók",
+    "menuInfoHeading": "Információ"
+  },
+  "hero": {
+    "verticals": [
+      "Éttermek",
+      "Kávézók",
+      "Bárok",
+      "Szállodák",
+      "Pizzériák"
+    ],
+    "headline": "Digitális étlap az éttermednek.\nIndulás 5 perc alatt.",
+    "sub": "Digitális étlap az éttermednek 5 perc alatt. Minden benne van: kódolás nélküli szerkesztő, nyomtatott étlapok MI-alapú felismerése, asztali QR-kódok és jutalékmentes rendelés.",
+    "dynamicHeadlines": [
+      "0% jutalék.",
+      "35 nyelv MI-vel.",
+      "Online rendelés.",
+      "0-24 asztalfoglalás.",
+      "Prémium dizájn."
+    ],
+    "painBullets": [
+      "0% jutalék: minden rendelés egyenesen az étteremhez fut be.",
+      "MI fordítás 35 nyelvre — a turisták is értik az étlapot, és többet rendelnek.",
+      "0-24 asztalfoglalás: a vendégek maguk foglalnak, nincsenek telefonhívások csúcsidőben.",
+      "Rugalmas árazás: az étlap módosításai azonnal élesednek."
+    ],
+    "rating": "Több mint 500 étterem 30+ országban"
+  },
+  "founder": {
+    "eyebrow": "Vendéglátósok építették",
+    "quoteStart": "A feleségemmel saját kávézót vezettünk, és belülről ismerjük a vendéglátós mindennapokat: rendelésfelvétel, asztalfoglalás, a pálya és a konyha működése. Egyetlen eszközt akartunk — modernet, könnyen beállíthatót és első pillantásra átláthatót —",
+    "quoteAccent": "így született meg a platform ötlete, amit most más vendéglátósoknak építünk.",
+    "sign": "Bogdan Sokolov · alapító, egykori kávézótulajdonos",
+    "photoAlt": "Bogdan Sokolov, az IQ Rest alapítója"
+  },
+  "pricing": {
+    "badge": "Nincs jutalék · Nincs hűségidő",
+    "heading": "Egyetlen csomag.",
+    "headingAccent": "Minden benne van.",
+    "sub": "QR étlap, rendelésfelvétel, MI fordítás, éttermi weboldal és asztalfoglalás. Egyetlen, átlátható havidíj.",
+    "monthlyLabel": "Havi",
+    "yearlyLabel": "Éves",
+    "saveBadge": "25% kedvezmény",
+    "perMonth": "havonta",
+    "billedAnnually": "Évente számlázva: {total}",
+    "youSave": "Megtakarítás: {amount}",
+    "trust": {
+      "secure": "Biztonságos fizetés a Stripe-on keresztül",
+      "noCommitment": "Nincs hűségidő",
+      "quick": "Aktiválás perceken belül",
+      "restaurants": "Több mint 500 étterem"
+    }
+  },
+  "faq": {
+    "eyebrow": "Maradtak kérdéseid?",
+    "heading": "Gyakran ismételt",
+    "headingAccent": "kérdések",
+    "sub": "Amit a vendéglátósok a leggyakrabban kérdeznek regisztráció előtt. Ha nem találod a választ — írj nekünk WhatsAppon, hús-vér emberek válaszolnak, nem botok.",
+    "whatsappCta": "Írj nekünk WhatsAppon",
+    "whatsappPrefill": "Szia, kérdésem lenne az IQ Resttel kapcsolatban",
+    "items": [
+      {
+        "q": "Mit tartalmaz a próbaidőszak és mi történik utána?",
+        "a": "14 napig a platform minden funkciójához hozzáférsz, bankkártya megadása nélkül. Ha a 14 nap letelte után nem adsz meg fizetési módot, a fiók automatikusan szüneteltetésre kerül. Soha nem vonunk le pénzt a beleegyezésed nélkül. Később is megadhatod a fizetési adatokat, és onnan folytathatod, ahol abbahagytad. Az előfizetés lemondása egyetlen kattintás."
+      },
+      {
+        "q": "Vontok le jutalékot a rendelésekből?",
+        "a": "Nem, nem kérünk százalékot a rendelések után. A QR étlapról érkező minden rendelés közvetlenül az étteremhez fut be, közvetítői díjak nélkül. Egy fix havidíjat fizetsz — és semmi mást."
+      },
+      {
+        "q": "A vendégeknek le kell tölteniük egy alkalmazást, és nekünk kellenek technikai ismeretek?",
+        "a": "A vendégeknek nem kell alkalmazás: egyszerűen a QR-kódra irányítják a telefonjuk kameráját, és az étlap megnyílik a böngészőben. Az étteremnek sincs szüksége technikai tudásra — az admin felület közvetlenül a böngészőben fut telefonon, tableten vagy laptopon. Minden kattintásokkal és húzással működik, kódolás nélkül."
+      },
+      {
+        "q": "Milyen gyorsan élesednek az étlap módosításai — árak, új ételek?",
+        "a": "Azonnal. A telefonról végzett módosítások másodperceken belül megjelennek a vendégeknek. Egy új étel hozzáadása néhány érintés: név, ár, fotó. Nem kell újra nyomtatni a papír étlapokat, és nincs szükség grafikusra."
+      },
+      {
+        "q": "Hány nyelvet támogat a rendszer?",
+        "a": "35 nyelvet támogatunk MI-alapú automatikus fordítással. Egyetlen gombnyomás — és a teljes étlap le van fordítva. Az MI érti a gasztronómiai kontextust, így az ételek nevei és leírásai minden nyelven természetesen hangzanak. A turisták magabiztosabban rendelnek, ha értik, mi van az ételben."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Indulás 10 perc alatt. ",
+    "headingAccent": "14 nap teljes hozzáférés.",
+    "sub": "Nincs szükség bankkártyára, bármikor lemondható. {count} étterem használja. Csak egy e-mail cím kell hozzá."
+  },
+  "featureHighlights": {
+    "heading": "Minden benne van",
+    "sub": "Funkciók, amikből rendelés lesz — minden csomagban, felár nélkül."
+  },
+  "scan": {
+    "heading": "Van nyomtatott vagy PDF étlapod?",
+    "headingAccent": "Az MI 60 másodperc alatt digitalizálja.",
+    "sub": "Tölts fel egy fotót vagy dokumentumot — az MI automatikusan felismeri a kategóriákat, az ételeket és az árakat.",
+    "cta": "Étlap beolvasása →"
+  },
+  "pricingQuiz": {
+    "heading": "Állítsd össze a csomagod ",
+    "sub": "Kezdd az étlappal — add hozzá az asztalfoglalást, a konyhai kijelzőt és a domaint, amikor csak szükséged van rájuk.",
+    "billingLabel": "Számlázás:",
+    "monthly": "Havi",
+    "yearly": "Éves",
+    "restaurantsLabel": "Éttermek:",
+    "fewerAria": "Kevesebb étterem",
+    "moreAria": "Több étterem",
+    "menuTitle": "Étlap és weboldal",
+    "menuHint": "Mindig benne van",
+    "reservationsTitle": "Asztalfoglalási rendszer",
+    "reservationsHint": "Asztalfoglalások kezelése",
+    "kdsTitle": "Konyhai kijelző",
+    "kdsHint": "Rendelések a konyhai képernyőn",
+    "domainTitle": "Domain név",
+    "domainHint": "Saját webcím",
+    "perMonthSuffix": "/hó",
+    "perYearSuffix": "/év",
+    "perMonthLongSuffix": "/hónap",
+    "saveYearlyTemplate": "Spórolj évi {amount}-t éves számlázással",
+    "volumeDiscountTemplate": "{percent}% kedvezmény",
+    "saveUpToHint": "Akár 50% kedvezmény 5+ étterem esetén",
+    "billedYearly": "Évente egyszer számlázva",
+    "billedMonthly": "Havonta számlázva",
+    "enterprisePre": "Egyedi csomagra van szükséged?",
+    "enterpriseCta": "Írj nekünk",
+    "enterprisePost": "és személyre szabjuk neked.",
+    "enterpriseWa": "Szia! Egyedi csomagra lenne szükségem az éttermeimhez.",
+    "headingAccent": "az éttermednek",
+    "multiplePre": "Több éttermed van?",
+    "multipleCta": "Lehetőségek megtekintése",
+    "restaurantOne": "étterem",
+    "restaurantFew": "étterem",
+    "restaurantMany": "étterem",
+    "multipleChangePre": "Más számú étterem?",
+    "multipleChangeCta": "Módosítás"
+  },
+  "pricingCta": {
+    "heading": "Egyszerű, rugalmas árazás",
+    "sub": "Csak azokért a funkciókért fizess, amiket használsz — állítsd össze a csomagod egy perc alatt.",
+    "fromTemplate": "{price}/hó-tól",
+    "button": "Csomag összeállítása"
+  },
+  "footer": {
+    "copyrightTemplate": "© {year} IQ Rest. Minden jog fenntartva.",
+    "featuresHeading": "Funkciók",
+    "featureLinks": [
+      {
+        "href": "/ru/tsifrovoe-menyu",
+        "label": "Digitális étlap"
+      },
+      {
+        "href": "/ru/priem-zakazov-restoran",
+        "label": "Rendelésfelvétel"
+      },
+      {
+        "href": "/ru/bronirovanie-stolov",
+        "label": "Asztalfoglalás"
+      },
+      {
+        "href": "/ru/kds-kuhonnyy-displey",
+        "label": "Konyhai kijelző"
+      }
+    ],
+    "infoHeading": "Információ",
+    "legalHeading": "Jogi információk",
+    "currencyHeading": "Pénznem"
+  },
+  "common": {
+    "close": "Bezárás",
+    "menu": "Menü",
+    "help": "Súgó"
+  },
+  "auth": {
+    "emailLabel": "E-mail cím",
+    "emailPlaceholder": "Add meg az e-mail címed",
+    "or": "vagy",
+    "continueGoogle": "Folytatás Google-fiókkal",
+    "continueApple": "Folytatás Apple-fiókkal",
+    "consent": {
+      "line": "A folytatással elfogadod az <terms>Általános Szerződési Feltételeket</terms>. Az adatok kezeléséről az <privacy>Adatvédelmi Tájékoztatóban</privacy> olvashatsz."
+    },
+    "signInTitle": "Üdv újra itt",
+    "signInSubtitle": "Add meg az e-mail címed — küldünk egy 6 számjegyű belépési kódot.",
+    "signInButton": "Bejelentkezés",
+    "registerTitle": "Fiók létrehozása",
+    "registerSubtitle": "14 nap ingyen, bankkártya nélkül. Küldünk egy belépési kódot e-mailben — nincsenek jelszavak és űrlapok.",
+    "registerButton": "Fiók létrehozása",
+    "switchSignIn": "Bejelentkezés",
+    "switchCreate": "Regisztráció",
+    "verifyTitle": "Ellenőrizd az e-mail fiókod",
+    "verifySubtitle": "Elküldtünk egy 6 számjegyű kódot ide: {email}.",
+    "verifyCodeLabel": "Ellenőrző kód",
+    "checkSpam": "Nem találod az e-mailt? Nézd meg a spam mappában is.",
+    "verifyButton": "Folytatás",
+    "resendCode": "Kód újraküldése",
+    "resendSent": "Kód elküldve",
+    "changeEmail": "Másik e-mail cím használata",
+    "metaSignIn": "Bejelentkezés",
+    "metaRegister": "Fiók létrehozása",
+    "errors": {
+      "emailInvalid": "Adj meg egy érvényes e-mail címet.",
+      "sendFailed": "Nem sikerült elküldeni a kódot. Kérjük, próbáld újra.",
+      "verifyFailed": "Nem sikerült ellenőrizni a kódot. Kérjük, próbáld újra.",
+      "codeExpired": "A kód lejárt. Kérj újat.",
+      "noCode": "A kód nem található vagy lejárt. Kérj újat.",
+      "invalidCode": "Érvénytelen kód. Kérjük, próbáld újra.",
+      "tooManyAttempts": "Túl sok próbálkozás. Kérjük, várj egy kicsit, majd próbáld újra."
+    }
+  }
+}

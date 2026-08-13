@@ -1,0 +1,206 @@
+{
+  "locale": "hr",
+  "slug": "kuhinjski-ekran",
+  "trackPrefix": "l_kds",
+  "meta": {
+    "title": "Kuhinjski ekran (KDS) za restorane — Narudžbe na ekranu kuhara | IQ Rest",
+    "description": "KDS kuhinjski ekran za restorane: narudžbe iz sale i s QR jelovnika idu izravno na ekran kuhara. Stupci po stolovima, statusi Na čekanju / Priprema / Gotovo / Posluženo, filteri po radnim jedinicama. Radi na tabletu ili telefonu.",
+    "canonical": "https://iq-rest.com/hr/kuhinjski-ekran",
+    "ogLocale": "hr_HR",
+    "ogTitle": "Kuhinjski ekran (KDS) — Narudžbe izravno na ekranu kuhara",
+    "ogDescription": "Narudžbe iz sale na ekranu kuhara. Stupci po stolovima, statusi i mjerač vremena. Jedan dodir mijenja status.",
+    "brandLine": "IQ Rest — Kuhinjski ekran za restorane"
+  },
+  "hero": {
+    "headline": "Kuhinjski ekran (KDS):",
+    "cta": "Postavi kuhinjski ekran",
+    "sub": "Narudžbe stižu na kuhinjski ekran odmah: napomene, alergeni i mjerač vremena. Status se mijenja jednim dodirom.",
+    "headlineAccent": "narudžbe izravno kuharu",
+    "demoLabel": "Demo: kuhinjski ekran",
+    "tablet": {
+      "src": "/landing/hero-card-kds.webp",
+      "alt": "Tablet s kuhinjskim ekranom: narudžbe po stolovima u stupcima sa statusima"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restorani"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kafići"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barovi"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hoteli"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerije"
+    }
+  ],
+  "scan": {
+    "heading": "Postavite kuhinjski ekran",
+    "headingAccent": "u 5 minuta.",
+    "sub": "Skenirajte papirnati jelovnik ili PDF — AI prepoznaje jela, kategorije i alergene. Povežite tablet u kuhinji i počnite primati narudžbe.",
+    "cta": "Skeniraj jelovnik"
+  },
+  "subFeatures": [
+    {
+      "icon": "LayoutGrid",
+      "eyebrow": "Kontrola i filteri",
+      "heading": "Više ekrana po radnim jedinicama: kuhinja i šank.",
+      "body": "Postavite zasebne tablete za toplu kuhinju, šank ili slastice — svaki ekran prikazuje samo jela koja mu pripadaju. Filteri po statusu (Na čekanju / Priprema / Gotovo / Posluženo) i po kategoriji smanjuju gužvu: kuhari rade samo s onim što pripada njihovoj jedinici.",
+      "bullets": [
+        "Više KDS ekrana s filterima po kategorijama jela.",
+        "Filter statusa: samo u pripremi i gotovo.",
+        "Svaka radna jedinica vidi samo svoj tok narudžbi."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-filters.webp",
+        "alt": "Tablet na stalku na pultu restoranske kuhinje — KDS filtriran prema statusu jela"
+      }
+    },
+    {
+      "icon": "Timer",
+      "eyebrow": "Kartice i mjerač vremena",
+      "heading": "Jedan dodir mijenja status. Napomene i alergeni su istaknuti bojom.",
+      "body": "Kartica jela prikazuje odabrane opcije (bez luka, dobro pečeno), napomene gostiju, alergene i mjerač vremena koji teče od trenutka narudžbe. Dodir na karticu pomiče status: Na čekanju → Priprema → Gotovo → Posluženo. Popis se automatski sortira prema prioritetu vremena.",
+      "bullets": [
+        "Dodirnite karticu — status se odmah pomiče.",
+        "Opcije, napomene i alergeni istaknuti bojom.",
+        "Sortirano po prioritetu: jela koja najduže čekaju idu na vrh."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-cards.webp",
+        "alt": "Tablet na stalku na šanku restorana — KDS s karticama narudžbi po stolovima"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Što ugostitelji pitaju o kuhinjskom ekranu u IQ Restu. Ako vašeg pitanja nema na popisu — pošaljite nam poruku na WhatsApp.",
+    "items": [
+      {
+        "q": "Koje statuse imaju stavke u kuhinji?",
+        "a": "Četiri statusa: Na čekanju — narudžba je predana i čeka; Priprema — jelo se priprema; Gotovo — spremno za preuzimanje; Posluženo — dostavljeno gostu. Dodir na karticu pomiče je u sljedeći status, bez izbornika ili potvrda."
+      },
+      {
+        "q": "Mogu li postaviti nekoliko KDS ekrana na različitim radnim jedinicama?",
+        "a": "Da. Jedan tablet na toploj kuhinji, drugi na šanku, treći kod slastica — svaki sa svojim filterom kategorija jela. Svi ekrani ostaju sinkronizirani: status promijenjen na jednom ažurira se na ostalima."
+      },
+      {
+        "q": "Na čemu pokrećem KDS — trebam li poseban tablet?",
+        "a": "KDS radi u svakom modernom pregledniku. Tablet na stalku na pultu odgovara velikoj kuhinji; pametni telefon dovoljan je za manji objekt. Nije potrebna posebna oprema ni instalacija: uređaj se povezuje pomoću 6-znamenkastog koda iz nadzorne ploče."
+      },
+      {
+        "q": "Odakle dolaze narudžbe na kuhinjski ekran?",
+        "a": "Iz svih izvora: gost predaje narudžbu putem QR jelovnika na stolu, ili je konobar zaprima na svom uređaju. Narudžbe automatski stižu na KDS, s brojem stola. Nema ručnog ponovnog unosa s blagajne."
+      },
+      {
+        "q": "Što prikazuje kartica narudžbe?",
+        "a": "Naziv jela, odabrane opcije (bez luka, dobro pečeno), napomenu gosta, alergene, status i mjerač vremena koji teče od trenutka narudžbe. Kartice se sortiraju po prioritetu: što jelo duže čeka, to je više u stupcu."
+      },
+      {
+        "q": "Mogu li se kartice na ekranu filtrirati?",
+        "a": "Da. Dva filtera: po statusu (na primjer, samo Na čekanju i Priprema) i po kategoriji (pića na šank, topla jela u kuhinju). Postavke se spremaju po uređaju, tako da svaka radna jedinica radi sa svojim setom."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Kuhinja bez papira u 10 minuta. ",
+    "headingAccent": "14 dana punog pristupa.",
+    "sub": "Bez kartice, otkažite bilo kada. Vjeruje nam {count} restorana. Sve što trebate je e-mail adresa — i narudžbe stižu izravno na kuhinjski ekran."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Ekrani po radnim jedinicama",
+      "sub": "Zasebni tableti za toplu kuhinju, šank i slastice — svaki ekran prikazuje samo svoja jela.",
+      "bullets": [
+        {
+          "icon": "LayoutGrid",
+          "title": "Filter po kategorijama",
+          "sub": "Dodijelite svakom ekranu njegove kategorije iz jelovnika"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Zaseban tok po jedinici",
+          "sub": "Kuhinja i šank rade paralelno bez međusobnog ometanja"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Filter statusa",
+          "sub": "Prikažite samo ono što se priprema ili je spremno za preuzimanje"
+        }
+      ]
+    },
+    {
+      "heading": "Statusi jednim dodirom",
+      "sub": "Dodir na karticu pomiče jelo u sljedeći status. Kuhinja i konobar vide istu sliku.",
+      "bullets": [
+        {
+          "icon": "ClipboardList",
+          "title": "Status po stavci",
+          "sub": "Priprema, gotovo, posluženo — po jelu, ne po narudžbi"
+        },
+        {
+          "icon": "Timer",
+          "title": "Mjerač vremena od trenutka narudžbe",
+          "sub": "Pogledajte koliko dugo jelo čeka — ona koja najduže čekaju idu na vrh"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "Alergeni i napomene",
+          "sub": "Opcije, napomene gostiju i alergeni istaknuti bojom"
+        }
+      ]
+    },
+    {
+      "heading": "Narudžbe stižu odmah",
+      "sub": "Narudžba gosta s QR jelovnika ili od konobara pojavljuje se na ekranu u trenutku predaje, bez osvježavanja stranice.",
+      "bullets": [
+        {
+          "icon": "Rocket",
+          "title": "Odmah na ekranu",
+          "sub": "Stalna veza — kartica se pojavljuje iste sekunde kada je narudžba predana"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Svi izvori u jednom toku",
+          "sub": "Narudžbe gostiju i konobara stižu na jedan ekran s brojem stola"
+        },
+        {
+          "icon": "Map",
+          "title": "Broj stola na kartici",
+          "sub": "Kuhinja vidi kamo jelo ide; konobar vidi gdje se očekuje"
+        }
+      ]
+    },
+    {
+      "heading": "Povezano u par minuta",
+      "sub": "Kuhinjski ekran radi u pregledniku na bilo kojem tabletu ili telefonu — povezuje se 6-znamenkastim kodom.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Tablet ili telefon",
+          "sub": "Preglednik je dovoljan — ne morate kupovati posebnu opremu"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Kod za uparivanje",
+          "sub": "Unesite 6-znamenkasti kod iz nadzorne ploče — uređaj je povezan s kuhinjom"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Ukidanje pristupa",
+          "sub": "Tablet je izgubljen ili zamijenjen — odspojite ga iz nadzorne ploče jednim dodirom"
+        }
+      ]
+    }
+  ]
+}

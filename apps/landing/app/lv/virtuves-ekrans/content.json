@@ -1,0 +1,206 @@
+{
+  "locale": "lv",
+  "slug": "virtuves-ekrans",
+  "trackPrefix": "l_kds",
+  "meta": {
+    "title": "KDS Virtuves ekrāns restorāniem — Pasūtījumi pavāra ekrānā | IQ Rest",
+    "description": "KDS virtuves ekrāns restorāniem: pasūtījumi no zāles un QR ēdienkartes nonāk tieši pavāra ekrānā. Kolonnas pa galdiņiem, Gaida / Gatavo / Gatavs / Pasniegts statusi, filtri pa cehiem. Darbojas planšetdatorā vai tālrunī.",
+    "canonical": "https://iq-rest.com/lv/virtuves-ekrans",
+    "ogLocale": "lv_LV",
+    "ogTitle": "KDS Virtuves ekrāns — Pasūtījumi tieši pavāra ekrānā",
+    "ogDescription": "Pasūtījumi no zāles pavāra ekrānā. Kolonnas pa galdiņiem, statusi un taimeris. Viens pieskāriens maina statusu.",
+    "brandLine": "IQ Rest — Virtuves ekrāns restorāniem"
+  },
+  "hero": {
+    "headline": "KDS virtuves ekrāns:",
+    "cta": "Iestatīt virtuves ekrānu",
+    "sub": "Pasūtījumi virtuves ekrānā nonāk uzreiz: piezīmes, alergēni un taimeris. Statusa maiņa ar vienu pieskārienu.",
+    "headlineAccent": "pasūtījumi tieši pie pavāra",
+    "demoLabel": "Demo: virtuves ekrāns",
+    "tablet": {
+      "src": "/landing/hero-card-kds.webp",
+      "alt": "Planšetdators ar virtuves ekrānu: pasūtījumi pa galdiņiem kolonnās ar statusiem"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restorāniem"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kafejnīcām"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bāriem"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Viesnīcām"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Picērijām"
+    }
+  ],
+  "scan": {
+    "heading": "Iestatiet virtuves ekrānu",
+    "headingAccent": "5 minūtēs.",
+    "sub": "Skenējiet papīra ēdienkarti vai PDF — AI atpazīst ēdienus, kategorijas un alergēnus. Pieslēdziet planšetdatoru virtuvē un sāciet saņemt pasūtījumus.",
+    "cta": "Skenēt ēdienkarti"
+  },
+  "subFeatures": [
+    {
+      "icon": "LayoutGrid",
+      "eyebrow": "Kontrole un filtri",
+      "heading": "Vairāki ekrāni pa cehiem: virtuve un bārs.",
+      "body": "Iestatiet atsevišķus planšetdatorus karstajam ceham, bāram vai konditorejai — katrs ekrāns rāda tikai tam piederīgos ēdienus. Filtri pēc statusa (Gaida / Gatavo / Gatavs / Pasniegts) un pēc kategorijas novērš haosu: pavāri strādā tikai ar to, kas attiecas uz viņu staciju.",
+      "bullets": [
+        "Vairāki KDS ekrāni ar ēdienu kategoriju filtriem.",
+        "Statusa filtrs: tikai gatavošanā un gatavs.",
+        "Katrs cehs redz tikai savu pasūtījumu plūsmu."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-filters.webp",
+        "alt": "Planšetdators uz misiņa statīva restorāna virtuvē — KDS filtrēts pēc ēdiena statusa"
+      }
+    },
+    {
+      "icon": "Timer",
+      "eyebrow": "Kartītes un taimeris",
+      "heading": "Viens pieskāriens maina statusu. Komentāri un alergēni ir izcelti krāsā.",
+      "body": "Ēdiena kartīte rāda izvēlētās piedevas (bez sīpoliem, well done), viesu komentārus, alergēnus un taimeri, kas darbojas kopš pasūtījuma veikšanas. Pieskaroties kartītei, statuss virzās uz priekšu: Gaida → Gatavo → Gatavs → Pasniegts. Saraksts automātiski kārtojas pēc laika prioritātes.",
+      "bullets": [
+        "Pieskarieties kartītei — statuss mainās uzreiz.",
+        "Piedevas, komentāri un alergēni izcelti krāsā.",
+        "Kārtots pēc prioritātes: visilgāk gaidošie ēdieni paceļas uz augšu."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-cards.webp",
+        "alt": "Planšetdators uz misiņa statīva restorāna bārā — KDS ar pasūtījumu kartītēm pa galdiņiem"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Ko restorānu īpašnieki jautā par IQ Rest virtuves ekrānu. Ja jūsu jautājuma nav sarakstā — rakstiet mums WhatsApp.",
+    "items": [
+      {
+        "q": "Kādi statusi ir virtuves vienumiem?",
+        "a": "Četri statusi: Gaida — pasūtījums ir veikts un gaida; Gatavo — ēdiens tiek gatavots; Gatavs — gatavs paņemšanai; Pasniegts — piegādāts viesim. Pieskaroties kartītei, statuss pāriet uz nākamo, bez izvēlnēm vai apstiprinājumiem."
+      },
+      {
+        "q": "Vai varu iestatīt vairākus KDS ekrānus dažādos virtuves cehos?",
+        "a": "Jā. Viens planšetdators karstajā cehā, otrs bārā, trešais konditorejā — katrs ar savu ēdienu kategorijas filtru. Visi ekrāni ir sinhronizēti: statuss, kas mainīts vienā, atjaunojas arī pārējos."
+      },
+      {
+        "q": "Uz kā darbojas KDS — vai man vajadzīgs īpašs planšetdators?",
+        "a": "KDS darbojas jebkurā modernā pārlūkprogrammā. Planšetdators uz statīva pie sadales loga ir piemērots lielai virtuvei; viedtālrunis derēs nelielai vietai. Nav nepieciešama īpaša aparatūra vai instalēšana: ierīce tiek pieslēgta ar sešu ciparu kodu no vadības paneļa."
+      },
+      {
+        "q": "No kurienes nāk pasūtījumi virtuves ekrānā?",
+        "a": "No visiem avotiem: viesis veic pasūtījumu caur galdiņa QR ēdienkarti, vai viesmīlis to pieņem savā ierīcē. Pasūtījumi KDS nonāk automātiski, ar galdiņa numuru. Nav nepieciešama manuāla pārrakstīšana no kases sistēmas."
+      },
+      {
+        "q": "Ko rāda pasūtījuma kartīte?",
+        "a": "Ēdiena nosaukumu, izvēlētās piedevas (bez sīpoliem, well done), viesa komentāru, alergēnus, statusu un taimeri, kas darbojas kopš pasūtījuma veikšanas. Kartītes kārtojas pēc prioritātes: jo ilgāk ēdiens gaida, jo augstāk tas atrodas kolonnā."
+      },
+      {
+        "q": "Vai kartītes ekrānā var filtrēt?",
+        "a": "Jā. Divi filtri: pēc statusa (piemēram, tikai Gaida un Gatavo) un pēc kategorijas (dzērieni uz bāru, karstie ēdieni uz virtuvi). Iestatījumi tiek saglabāti katrai ierīcei atsevišķi, tāpēc katrs cehs strādā ar savu komplektu."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Virtuve bez papīra čemodāniem 10 minūtēs. ",
+    "headingAccent": "14 dienas pilna pieeja.",
+    "sub": "Karte nav nepieciešama, atceliet jebkurā laikā. Mums uzticas {count} restorāni. Viss, kas vajadzīgs, ir e-pasts — un pasūtījumi nonāk tieši virtuves ekrānā."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Ekrāni pa cehiem",
+      "sub": "Atsevišķi planšetdatori karstajam ceham, bāram un konditorejai — katrs ekrāns rāda tikai savus ēdienus.",
+      "bullets": [
+        {
+          "icon": "LayoutGrid",
+          "title": "Kategoriju filtrs",
+          "sub": "Piešķiriet katram ekrānam savas ēdienkartes kategorijas"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Plūsma katram ceham",
+          "sub": "Virtuve un bārs strādā paralēli, netraucējot viens otram"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Statusu filtrs",
+          "sub": "Rādiet tikai to, kas tiek gatavots vai ir gatavs paņemšanai"
+        }
+      ]
+    },
+    {
+      "heading": "Statusi ar vienu pieskārienu",
+      "sub": "Pieskāriens kartītei pārvieto ēdienu uz nākamo statusu. Virtuve un viesmīlis redz vienu un to pašu ainu.",
+      "bullets": [
+        {
+          "icon": "ClipboardList",
+          "title": "Statuss katram vienumam",
+          "sub": "Gatavo, gatavs, pasniegts — katram ēdienam, nevis pasūtījumam"
+        },
+        {
+          "icon": "Timer",
+          "title": "Taimeris no pasūtījuma brīža",
+          "sub": "Redziet, cik ilgi ēdiens ir gaidījis — visilgāk gaidošie paceļas uz augšu"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "Alergēni un komentāri",
+          "sub": "Piedevas, viesu piezīmes un alergēni izcelti krāsā"
+        }
+      ]
+    },
+    {
+      "heading": "Pasūtījumi nonāk uzreiz",
+      "sub": "Viesa pasūtījums no QR ēdienkartes vai no viesmīļa parādās ekrānā tajā pašā mirklī, kad tas veikts, bez lapas pārlādēšanas.",
+      "bullets": [
+        {
+          "icon": "Rocket",
+          "title": "Ekrānā uzreiz",
+          "sub": "Pastāvīgs savienojums — kartīte parādās tajā pašā sekundē, kad pasūtījums ir veikts"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Visi avoti vienā plūsmā",
+          "sub": "Viesu un viesmīļu pasūtījumi nonāk vienā ekrānā ar galdiņa numuru"
+        },
+        {
+          "icon": "Map",
+          "title": "Galdiņa numurs uz kartītes",
+          "sub": "Virtuve redz, kur ēdiens dodas; viesmīlis redz, kur tas tiek gaidīts"
+        }
+      ]
+    },
+    {
+      "heading": "Pieslēgts dažu minūšu laikā",
+      "sub": "Virtuves ekrāns darbojas pārlūkprogrammā jebkurā planšetdatorā vai tālrunī — pieslēdzams ar sešu ciparu kodu.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Planšetdators vai tālrunis",
+          "sub": "Pietiek ar pārlūkprogrammu — nav jāpērk īpaša aparatūra"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Savienošanas kods",
+          "sub": "Ievadiet sešu ciparu kodu no vadības paneļa — ierīce ir piesaistīta virtuvei"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Piekļuves atsaukšana",
+          "sub": "Planšetdators pazaudēts vai nomainīts — atvienojiet to no vadības paneļa ar vienu pieskārienu"
+        }
+      ]
+    }
+  ]
+}

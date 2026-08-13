@@ -1,0 +1,332 @@
+{
+  "locale": "tr",
+  "slug": "dijital-menu-restoran",
+  "trackPrefix": "l_digital",
+  "meta": {
+    "title": "Restoranlar İçin Dijital Menü | IQ Rest",
+    "description": "Restoranınız için dijital menü: fotoğraflar, alerjenler, yapay zeka çevirisi ve anlık fiyat güncellemeleriyle online bir menü. 14 gün ücretsiz, kredi kartı gerekmez.",
+    "canonical": "https://iq-rest.com/tr/dijital-menu-restoran",
+    "ogLocale": "tr_TR",
+    "ogTitle": "Restoranlar İçin Dijital Menü",
+    "ogDescription": "Kağıt menünüzün fotoğraflar, alerjenler ve yapay zeka çevirisi içeren online versiyonu. Fiyatlar anında güncellenir.",
+    "brandLine": "IQ Rest — Restoranlar İçin Dijital Menü"
+  },
+  "hero": {
+    "headline": "Restoranınız için",
+    "headlineAccent": "dijital menü ve web sitesi",
+    "cta": "Dijital menü oluştur",
+    "demoLabel": "Demo: misafirlerin gözünden menü",
+    "sub": "10 dakikada kurun: masadan sipariş alın, fiyatları anında güncelleyin ve komisyon ödemeden doğrudan rezervasyon alın.",
+    "phones": [
+      {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Restoran web sitesi ana sayfası açık telefon: fotoğraflar, rezervasyon ve online menüye erişim"
+      },
+      {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Yemek kartı açık telefon: fotoğraf, fiyat ve alerjen etiketleri"
+      }
+    ]
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restoranlar"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kafeler"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barlar"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Oteller"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzacılar"
+    }
+  ],
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "10 dakikada menü",
+      "sub": "Yazılımcıya veya uzun kurulumlara gerek yok"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Hızlı destek",
+      "sub": "Menünüzü kurmanıza sohbet üzerinden birkaç saat içinde yardımcı oluyoruz"
+    },
+    {
+      "icon": "Globe",
+      "title": "{count} mekanın tercihi",
+      "sub": "15'ten fazla ülkede restoranlar için dijital menüler ve web siteleri"
+    },
+    {
+      "icon": "Palette",
+      "title": "Kendi alan adınız ve markanız",
+      "sub": "Ortak bir site oluşturucu yerine kendi adresinizde bir menü"
+    }
+  ],
+  "scan": {
+    "heading": "Kağıt veya PDF menünüz mü var?",
+    "headingAccent": "Yapay zeka 60 saniyede dijitalleştirir.",
+    "sub": "Bir fotoğraf veya belge yükleyin — yapay zeka kategorileri, yemekleri ve fiyatları otomatik olarak tanır.",
+    "cta": "Menüyü tara"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "Yapay zeka çevirisi",
+      "heading": "35 dilde menü",
+      "body": "Tek QR — 35 dil. Yapay zeka mutfak bağlamını dikkate alarak çeviri yapar, böylece yemekler doğal duyulur. Turistler daha güvenle sipariş verir.",
+      "bullets": [
+        "Aboneliğe dahil 35 dil",
+        "Google yerine mutfak odaklı yapay zeka",
+        "Tek dokunuşla dil değiştirme"
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Aynı dijital menüyü kendi telefonlarında farklı dillerde okuyan iki misafir"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Alerjenler",
+      "heading": "Her yemekte alerjen ve diyet bilgisi",
+      "body": "Glüten, laktoz, kuruyemiş, vegan ve glütensiz seçenekleri etiketleyin. Misafirler menüyü ihtiyaçlarına göre filtreler ve gönül rahatlığıyla sipariş verir.",
+      "bullets": [
+        "14 alerjen kategorisi",
+        "Vegan ve glütensiz etiketleri",
+        "Beslenme kısıtlamalarına göre menü filtresi"
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Bir misafir telefonda menüyü alerjenlere göre filtrelerken, işletmeci tablette alerjen listesini düzenliyor"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Tasarım ve marka",
+      "heading": "Kendi alan adınızda premium bir menü",
+      "body": "Karşılama ekranında video arka planı, kendi tasarımınız ve harita ile sosyal medya bağlantılarını içeren bir iletişim sayfası — PDF değil, kendi alan adınızda.",
+      "bullets": [
+        "Video arka planı ve premium tasarım",
+        "SSL sertifikalı kendi alan adınız",
+        "İletişim, harita, sosyal medya bağlantıları"
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Kafede bir masada iki telefon: video arka planlı menü ana ekranı ve haritalı iletişim sayfası"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Siparişler",
+      "heading": "Komisyonsuz online sipariş",
+      "body": "Misafirler menüden veya doğrudan WhatsApp üzerinden sipariş verir — sipariş salona veya mutfağa düşer, cironuzdan %0 kesinti.",
+      "bullets": [
+        "Menüden veya WhatsApp üzerinden",
+        "Salona veya mutfağa, %0 komisyon",
+        "Ayarlardan aktifleştirilebilir"
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Masada iki telefon: siparişin olduğu bir sepet ve başarılı sipariş onayı"
+      }
+    },
+    {
+      "icon": "CalendarCheck",
+      "eyebrow": "Rezervasyonlar",
+      "heading": "7/24 masa rezervasyonu",
+      "body": "Misafirler menüden veya bir bağlantı üzerinden masalarını kendileri ayırır, siz masaya göre takvimi görür ve otomatik veya manuel olarak onaylarsınız.",
+      "bullets": [
+        "Misafirler kendi rezervasyonunu yapar",
+        "Tüm masalar için takvim",
+        "Otomatik veya manuel onay"
+      ]
+    },
+    {
+      "icon": "MonitorSmartphone",
+      "eyebrow": "Yönetim",
+      "heading": "Her yerden yönetin",
+      "body": "Yönetim paneli tarayıcıda çalışır — telefon, tablet veya bilgisayar. Kurulum gerektirmez, dakikalar içinde kullanıma hazır.",
+      "bullets": [
+        "Her cihaz, her tarayıcı",
+        "Kurulum yok",
+        "Dakikalar içinde hazır"
+      ]
+    }
+  ],
+  "faq": {
+    "sub": "Restorancıların IQ Rest dijital menüsü hakkında sordukları. Sorunuz listede yoksa — bize WhatsApp'tan yazın.",
+    "items": [
+      {
+        "q": "Teknik bilgiye veya CMS tecrübesine ihtiyacım var mı?",
+        "a": "Özel bir beceri gerekmez. Yönetim panelindeki her şey birkaç dokunuşla halledilir — kodlama veya kaynak dosyalarla uğraşmak yok. Bir yemek eklemek saniyeler sürer: isim, fiyat, fotoğraf. Tam bir menü kurulumu genellikle 30–60 dakika içinde biter."
+      },
+      {
+        "q": "IQ Rest dijital menü nedir?",
+        "a": "Menünüzün misafirlere QR kod veya doğrudan bir bağlantı aracılığıyla sunulan online versiyonudur: yemek fotoğrafları, fiyatlar, alerjenler, 35 dile yapay zeka çevirisi ve anlık güncellemeler. Menü bizim sunucularımızda çalışır — kurmanız veya bakımını yapmanız gereken bir yazılım yoktur, sadece bir tarayıcı yeterlidir."
+      },
+      {
+        "q": "Misafirlerin bir uygulama veya özel ekipman indirmesi gerekiyor mu?",
+        "a": "Misafir telefonunun kamerasını QR koda okutur — menü tarayıcıda açılır, kurulum gerekmez. Yönetim paneli de telefon, tablet veya dizüstü bilgisayardaki herhangi bir modern tarayıcıda çalışır. QR kodları standart bir ofis yazıcısında basılabilir."
+      },
+      {
+        "q": "Menüyü kendi alan adımda barındırabilir miyim?",
+        "a": "Evet. Menü, SSL sertifikası ile alan adınıza bağlanır — misafirler restoranınızın adresini görür, örneğin menu.restoraniniz.com. Destek ekibimiz alan adı ve sertifika kurulumunu halleder; sizin sadece bir DNS kaydı sağlamanız yeterlidir."
+      },
+      {
+        "q": "Tek hesaptan birden fazla restoranı yönetebilir miyim?",
+        "a": "Evet. Tek bir hesaba birden fazla mekan ekleyebilirsiniz: her birinin kendi menüsü, tasarımı, QR kodları ve analizleri olur ve aralarında geçiş yapmak tek tıkla mümkündür. Mekan sayısı aboneliğinize bağlıdır."
+      },
+      {
+        "q": "Sıfırdan bir menü kurmak ne kadar zor?",
+        "a": "Üç adım: kategorileri oluşturun, fiyat ve fotoğraflarla yemekleri ekleyin, masalar için QR kodları yazdırın. Kağıt veya PDF menünüz varsa yükleyin — yapay zeka kategorileri, isimleri ve fiyatları tanıyıp kartları otomatik doldurur. Temel bir menü 5 dakikada yayına girer; tam kurulum ürün sayısına bağlıdır."
+      },
+      {
+        "q": "Nasıl bir destek sağlıyorsunuz?",
+        "a": "Mesai saatleri içinde WhatsApp ve e-posta üzerinden yanıt veriyoruz. İlk kurulumda, alan adınızı bağlamada ve menü tasarımında yardımcı oluyoruz. Demo veya rehberli bir kuruluma ihtiyacınız varsa — bize yazın."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Menünüz 10 dakikada yayında. ",
+    "headingAccent": "14 gün tam erişim.",
+    "sub": "Kart gerekmez, istediğiniz zaman iptal edin. {count} restoran menüleri ve web siteleri için bize güveniyor. Başlamak için sadece e-posta adresiniz yeterli."
+  },
+  "spotlights": [
+    {
+      "heading": "35 dilde menü",
+      "sub": "Misafirler menüyü kendi anadillerinde açar. Yapay zeka yemek isimlerini, açıklamaları, kategorileri ve seçenekleri mutfak bağlamını dikkate alarak çevirir.",
+      "bullets": [
+        {
+          "icon": "Globe",
+          "title": "Aboneliğe dahil 35 dil",
+          "sub": "Avrupa ve Asya dilleri dahil — dil başına ek ücret yok"
+        },
+        {
+          "icon": "Timer",
+          "title": "Kaydedildiğinde çevrilir",
+          "sub": "Bir yemek ekleyin veya düzenleyin — tüm menü dillerindeki çeviriler anında hazır olur"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Manuel düzenlemeler korunur",
+          "sub": "Elle düzelttiğiniz bir çeviri kilitlenir ve yapay zeka asla üzerine yazmaz"
+        }
+      ]
+    },
+    {
+      "heading": "Her yemekte alerjenler ve diyetler",
+      "sub": "Yemek kartına alerjen ve diyet etiketleri ekleyin — misafirler bunları menüde görür ve yemekleri kendi kısıtlamalarına göre filtreler.",
+      "bullets": [
+        {
+          "icon": "WheatOff",
+          "title": "14 alerjen kategorisi",
+          "sub": "Tam AB mevzuatı listesi: glüten, kuruyemiş, laktoz, deniz ürünleri ve daha fazlası"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "13 diyet etiketi",
+          "sub": "Vegan, vejetaryen, glütensiz, helal, koşer, acı ve diğer beslenme etiketleri"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Tek dokunuşla filtre",
+          "sub": "Misafirler kısıtlamalarını seçer — menü sadece uygun yemekleri gösterir"
+        }
+      ]
+    },
+    {
+      "heading": "Kendi alan adınızda premium bir menü",
+      "sub": "Karşılama ekranında fotoğraf veya video arka planı, marka renginiz ve logonuz — menü bir PDF gibi değil, web siteniz gibi görünür ve kendi alan adınızda çalışır.",
+      "bullets": [
+        {
+          "icon": "Palette",
+          "title": "Markanıza uygun tasarım",
+          "sub": "Ana ekranda video veya fotoğraf, vurgu rengi ve logo — tasarımcı olmadan kurun"
+        },
+        {
+          "icon": "Globe",
+          "title": "SSL sertifikalı kendi alan adınız",
+          "sub": "Menü, güvenli bir bağlantı üzerinden kendi adresinizde açılır"
+        },
+        {
+          "icon": "Map",
+          "title": "İletişim ve harita",
+          "sub": "Adresiniz, çalışma saatleriniz, harita ve sosyal medya bağlantılarınızı içeren bir sayfa — tam kapsamlı bir restoran web sitesi"
+        }
+      ]
+    },
+    {
+      "heading": "Komisyonsuz online siparişler",
+      "sub": "Misafir masadan sipariş verir — sipariş anında panelde ve mutfak ekranında belirir. Platform cironuzdan %0 kesinti yapar.",
+      "bullets": [
+        {
+          "icon": "ShoppingCart",
+          "title": "Menüden veya WhatsApp üzerinden",
+          "sub": "Sistem içi sipariş veya WhatsApp'ınıza mesaj — modu ayarlardan seçin"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Doğrudan mutfağa",
+          "sub": "Yeni bir sipariş mutfak ekranında ve garsonun cihazında gecikmesiz görünür"
+        },
+        {
+          "icon": "Receipt",
+          "title": "%0 komisyon",
+          "sub": "Ödeme siz ve misafir arasında kalır — platform siparişlerinizden hiçbir pay almaz"
+        }
+      ]
+    },
+    {
+      "heading": "7/24 masa rezervasyonu",
+      "sub": "Misafirler istedikleri zaman doğrudan menüden masa ayırır. Sistem, talebi programınız ve müsait masalarınızla karşılaştırır.",
+      "bullets": [
+        {
+          "icon": "CalendarCheck",
+          "title": "Masaya göre takvim",
+          "sub": "Sistem, kişi sayısına uygun bir masa eşleştirir ve rezervasyonları gün ve masaya göre gösterir"
+        },
+        {
+          "icon": "CalendarDays",
+          "title": "Otomatik veya manuel",
+          "sub": "Her rezervasyonu kendiniz onaylayın veya otomatik onayı açın"
+        },
+        {
+          "icon": "Mail",
+          "title": "Misafire ve size e-posta",
+          "sub": "Misafir e-posta ile onay alır, işletmecilere yeni rezervasyon bildirimi gider"
+        }
+      ]
+    },
+    {
+      "heading": "Her yerden yönetin",
+      "sub": "Yönetim paneli telefon, tablet veya bilgisayarda tarayıcı üzerinden çalışır. Değişiklikler misafirlere anında yansır.",
+      "bullets": [
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Her cihaz",
+          "sub": "Telefon, tablet veya bilgisayar — sadece bir tarayıcı yeterli, kurulum gerekmez"
+        },
+        {
+          "icon": "Timer",
+          "title": "Anında güncellemeler",
+          "sub": "Fiyat değişikliği, tükenenler listesi veya gizlenen bir yemek anında uygulanır, yayınlama veya bekleme yok"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Yemek seçenekleri",
+          "sub": "Porsiyonlar, ekstralar ve fiyatlandırılmış varyasyonlar — misafirler kendi yemeklerini kendileri oluşturur"
+        }
+      ]
+    }
+  ],
+  "hideFeatureHeading": true
+}

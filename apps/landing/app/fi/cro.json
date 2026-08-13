@@ -1,0 +1,289 @@
+{
+  "heroV2": {
+    "verticals": [
+      {
+        "icon": "restaurant",
+        "label": "Ravintolat"
+      },
+      {
+        "icon": "cafe",
+        "label": "Kahvilat"
+      },
+      {
+        "icon": "bar",
+        "label": "Baarit"
+      },
+      {
+        "icon": "hotel",
+        "label": "Hotellit"
+      },
+      {
+        "icon": "pizza",
+        "label": "Pizzeriat"
+      }
+    ],
+    "title": "Kaikki mitä ravintolasi",
+    "titleAccent": "tarvitsee!",
+    "sub": "Laita toiminnot kuntoon 10 minuutissa: julkaise verkkoruokalista, sujuvoita keittiön työtä ja hallinnoi pöytävarauksia.",
+    "primaryLabel": "Aloita ilmaiseksi",
+    "demoLabel": "Katso demo-ruokalista",
+    "mockups": {
+      "kds": {
+        "src": "/landing/hero-card-kds.webp",
+        "alt": "Tabletti ja keittiönäyttö: tilaukset pöydittäin sarakkeissa tilatietojen kera"
+      },
+      "reservations": {
+        "src": "/landing/hero-card-reservation.webp",
+        "alt": "Tabletti ja varauskalenteri: kuukausinäkymä ja lista vahvistusta odottavista varauksista"
+      },
+      "phone1": {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Puhelin ja ravintolan verkkosivujen etusivu: kuvia, pöytävaraukset ja pääsy verkkoruokalistaan"
+      },
+      "phone2": {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Puhelin ja annoskortti: kuva, hinta ja allergeenimerkinnät"
+      }
+    }
+  },
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Käyttövalmis 10 minuutissa",
+      "sub": "Ei kalliita laitehankintoja tai pitkällistä asennusta"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Nopea tuki",
+      "sub": "Vastaamme chatissa muutaman tunnin sisällä"
+    },
+    {
+      "icon": "Globe",
+      "title": "{count} ravintolan valinta",
+      "sub": "Ravintoloiden ja kahviloiden luottama yli 15 maassa"
+    },
+    {
+      "icon": "Palette",
+      "title": "100 % brändisi mukainen",
+      "sub": "Mukautamme ulkoasun ja käyttöliittymän ravintolasi tyyliin sopivaksi"
+    }
+  ],
+  "menu": {
+    "heading": "Verkkosivut ja digitaalinen ruokalista",
+    "sub": {
+      "link": "Enemmän kuin pelkkä QR-ruokalista!",
+      "rest": " Saat täydet verkkosivut uniikilla ilmeellä, yhteystiedoilla ja pöytävarauksilla."
+    },
+    "moreLabel": "Lisää ruokalistasta",
+    "demoLabel": "Demo: ruokalista asiakkaan silmin",
+    "mockupAlt": "Puhelin, jossa ravintolan verkkosivujen etusivu, ja puhelin, jossa annossivu",
+    "bullets": [
+      {
+        "icon": "Languages",
+        "title": "Automaattinen käännös 35 kielelle",
+        "sub": "Palvele kansainvälisiä asiakkaita ilman kielimuuria — automaattinen käännös hoitaa kaiken"
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "Tilaukset suoraan pöydästä",
+        "sub": "Yksinkertaista toimintaa — ota tilaukset pöydistä nopeasti, ilman tarjoilijaa"
+      },
+      {
+        "icon": "WheatOff",
+        "title": "Allergeenit ja ruokavaliot",
+        "sub": "Merkitse allergeenit ja ruokavaliot (vegaaninen, tulinen), jotta asiakkaat voivat valita ruokansa helpommin ja turvallisemmin"
+      }
+    ]
+  },
+  "reservations": {
+    "heading": "Pöytävaraukset",
+    "sub": {
+      "link": "Fiksut pöytävaraukset!",
+      "rest": " Automaattinen varausjärjestelmä, joka pitää kirjaa vapaista pöydistä ja aikatauluista puolestasi."
+    },
+    "moreLabel": "Lisää pöytävarauksista",
+    "demoLabel": "Demo: varauskalenteri",
+    "mockupAlt": "Tabletti ja varauskalenteri: pöydät päivän ja kellonajan mukaan",
+    "bullets": [
+      {
+        "icon": "CalendarCheck",
+        "title": "Selkeä varauskalenteri",
+        "sub": "Visuaalinen aikataulu päivän ja pöydän mukaan — näet heti, missä ja milloin on tilaa"
+      },
+      {
+        "icon": "SlidersHorizontal",
+        "title": "Joustavat varausasetukset",
+        "sub": "Määritä aukioloajat, varauksen kesto ja pöytien kuvat, sekä kerää asiakkaiden toiveet"
+      },
+      {
+        "icon": "Users",
+        "title": "Asiakasvirran hallinta",
+        "sub": "Valitse sinulle sopiva varausmalli ja pidä asiakasvirta täysin hallinnassa"
+      }
+    ]
+  },
+  "orders": {
+    "heading": "Tilausten vastaanotto pöydistä",
+    "sub": {
+      "link": "Tilaukset suoraan keittiöön!",
+      "rest": " Tilaus pöydästä tai tarjoilijalta siirtyy keittiönäytölle välittömästi — ei paperikuitteja, ei odottelua."
+    },
+    "moreLabel": "Lisää tilauksista",
+    "demoLabel": "Demo: tilausnäkymä",
+    "mockupSrc": "/landing/feature-orders-modal.webp",
+    "mockupAlt": "Tabletti ja avoin tilaus: annoslista ja toiminnot — vaihda pöytää, jaa tilaus, lisää alennus",
+    "bullets": [
+      {
+        "icon": "ShoppingCart",
+        "title": "Asiakas tai tarjoilija",
+        "sub": "Asiakkaat tilaavat pöydästä QR-koodilla, tarjoilijat omalta puhelimeltaan tai tabletiltaan"
+      },
+      {
+        "icon": "Map",
+        "title": "Salikartta tilatiedoilla",
+        "sub": "Pöydät on värikoodattu tilan mukaan — näet yhdellä vilkaisulla, kuka odottaa tilausta ja minne mennä seuraavaksi"
+      },
+      {
+        "icon": "Receipt",
+        "title": "Laskun jakaminen",
+        "sub": "Jaa tilaus asiakkaiden kesken ja päätä pöydät ilman sekaannuksia maksuissa"
+      }
+    ]
+  },
+  "kds": {
+    "heading": "KDS-keittiönäyttö",
+    "sub": {
+      "link": "Keittiö synkassa!",
+      "rest": " Salin ja QR-ruokalistan tilaukset ilmestyvät kokin ruudulle välittömästi — huomioiden, allergeenien ja ajastimen kera."
+    },
+    "moreLabel": "Lisää keittiönäytöstä",
+    "demoLabel": "Demo: keittiönäyttö",
+    "mockupAlt": "Tabletti ja keittiönäyttö: tilaukset pöydittäin sarakkeissa tilatietojen kera",
+    "bullets": [
+      {
+        "icon": "LayoutGrid",
+        "title": "Näytöt työpisteittäin",
+        "sub": "Omat tabletit lämpimälle keittiölle, baarille ja leipomopisteelle — jokainen näkee vain omat annoksensa"
+      },
+      {
+        "icon": "Timer",
+        "title": "Tilat ja ajastin",
+        "sub": "Odottaa / valmistuksessa / valmis -sarakkeet ja kulunut aika tilauskohtaisesti — tila vaihtuu yhdellä napautuksella"
+      },
+      {
+        "icon": "ShieldAlert",
+        "title": "Allergeenit ja kommentit",
+        "sub": "Allergeenit ja asiakkaiden toiveet on korostettu — kokilta ei jää mitään tärkeää huomaamatta"
+      }
+    ]
+  },
+  "bundle": {
+    "heading": "Kaikki millä ravintolasi pyörii.",
+    "headingAccent": "Yhdessä sovelluksessa.",
+    "sub": "Ruokalista, keittiö ja pöytävaraukset yhdessä paikassa — moderni, nopea ja suunniteltu ravintoloiden todelliseen arkeen. Ei piilokuluja tai ominaisuuskohtaista hinnoittelua."
+  },
+  "benefits": [
+    {
+      "icon": "Languages",
+      "tag": "Digitaalinen ruokalista",
+      "title": "Ruokalista, joka myy.",
+      "bullets": [
+        "35 kieltä tekoälyllä",
+        "Huipputason design",
+        "Hinnat päivittyvät heti"
+      ],
+      "image": "/landing/feature-design.webp",
+      "imageAlt": "Kaksi puhelinta kahvilan pöydällä: digitaalisen ruokalistan aloitusnäyttö ja yhteystietosivu kartalla"
+    },
+    {
+      "icon": "ChefHat",
+      "tag": "Keittiönäyttö",
+      "title": "Kokkaa nopeammin ilman, että mitään jää huomaamatta.",
+      "bullets": [
+        "Suoraan ruudulle",
+        "Huomiot ja allergeenit",
+        "Tabletti tai puhelin"
+      ],
+      "image": "/landing/feature-kds-cards.webp",
+      "imageAlt": "Baaritiskillä oleva tabletti näyttää keittiönäytön, jossa tilaukset ovat pöydittäin"
+    },
+    {
+      "icon": "CalendarCheck",
+      "tag": "Pöytävaraukset",
+      "title": "Pöytävaraukset automaattiohjauksella.",
+      "bullets": [
+        "Varaukset ilman puheluita",
+        "Automaattinen vahvistus",
+        "Kalenteri pöydittäin"
+      ],
+      "image": "/landing/feature-booking-calendar.webp",
+      "imageAlt": "Kaksi tablettia näyttää varauskalenterin: päivänäkymä pöydittäin ja kuukausinäkymä"
+    },
+    {
+      "icon": "Receipt",
+      "tag": "Tilaukset pöydistä",
+      "title": "Tilaukset suoraan keittiöön.",
+      "bullets": [
+        "Asiakas tai tarjoilija",
+        "Suoraan keittiöön",
+        "Ota käyttöön silloin kun haluat"
+      ],
+      "image": "/landing/feature-orders-map.webp",
+      "imageAlt": "Tabletti ja tilausnäkymä: lista tilauksista ja värikoodattu salikartta pöytineen."
+    }
+  ],
+  "seeDetails": "Lue lisää",
+  "platform": {
+    "hardwareTitle": "Käytä omilla laitteillasi",
+    "hardwareSub": "Emme pakota sinua ostamaan laitteita meiltä. Käytä niitä puhelimia, tabletteja ja tietokoneita, joita sinulla jo on.",
+    "anywhereTitle": "Toimii missä vain",
+    "anywhereSub": "Puhelin, tabletti, kannettava, PC. Android, iOS, Windows, Mac, Linux. Kaikissa moderneissa selaimissa, ei asennusta."
+  },
+  "activities": {
+    "heading": "Yksi järjestelmä —",
+    "headingAccent": "koko ravintolasi.",
+    "sub": "Nopeampi palvelu, rauhallisempi keittiö, pienemmät kulut ja asiakkaat, jotka palaavat uudelleen — kaikki yhdellä alustalla.",
+    "groups": [
+      {
+        "icon": "Smartphone",
+        "tag": "Pöydässä — asiakas",
+        "bullets": [
+          "QR-ruokalista 35 kielellä",
+          "Tilaa odottamatta tarjoilijaa",
+          "Kutsu tarjoilija tai pyydä lasku",
+          "Pöytävaraukset 24/7",
+          "Uniikki QR-koodi joka pöydälle",
+          "Ei sovellusta — aukeaa selaimeen",
+          "Allergeeni- ja ruokavaliomerkinnät suodatukseen"
+        ]
+      },
+      {
+        "icon": "ChefHat",
+        "tag": "Keittiössä",
+        "bullets": [
+          "Tilaukset ruudulla välittömästi",
+          "Odottaa / valmistuksessa / valmis -sarakkeet",
+          "Allergeenit ja kommentit korostettu",
+          "Tabletti tai puhelin — ei paperikuitteja"
+        ]
+      },
+      {
+        "icon": "ChartColumn",
+        "tag": "Hallinta",
+        "bullets": [
+          "Ruokalistan ja hintojen muokkaus — välitön",
+          "Tekoälykäännös yhdellä klikkauksella",
+          "Myyntianalytiikka ja raportit",
+          "Useita ravintoloita yhdellä tilillä",
+          "Tekoäly digitoi paperisen ruokalistan 60 sekunnissa",
+          "Oma verkkotunnus SSL-suojauksella"
+        ]
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Koko alusta käyttöön 10 minuutissa. ",
+    "headingAccent": "14 päivän täysi käyttöoikeus.",
+    "sub": "Ruokalista, tilaukset, pöytävaraukset ja keittiö — ei luottokorttia, peruuta milloin tahansa; {count} ravintolan luottama, tarvitset vain sähköpostiosoitteen."
+  }
+}

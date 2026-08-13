@@ -4,9 +4,7 @@ import { Faq } from "../components/faq";
 import { PageTracker } from "../components/page-tracker";
 import { PricingQuiz, EN_PRICING_QUIZ } from "../components/pricing-quiz";
 import { FinalCta } from "../components/final-cta";
-import { NARROW, PAGE, Band } from "../components/shell";
-import { getHelpBanner } from "../help/registry";
-import { HelpBannerCta } from "../help/help-banner-cta";
+import { PAGE, Band, Content } from "../components/shell";
 import type { LandingTexts } from "../types";
 
 // Shared markup for every per-locale pricing page, in the same shell as the
@@ -17,13 +15,15 @@ export function PricingTemplate({
   texts,
   faq,
   jsonLd,
+  count,
 }: {
   locale: string;
   texts: LandingTexts;
   faq: LandingTexts["faq"];
   jsonLd: string;
+  /** Live restaurant count, for "{count}" in the final CTA's sub line. */
+  count?: number;
 }) {
-  const helpBanner = getHelpBanner(locale);
   const quiz = texts.pricingQuiz ?? EN_PRICING_QUIZ;
   return (
     <main className={PAGE}>
@@ -33,63 +33,33 @@ export function PricingTemplate({
         texts={texts.header}
         locale={locale}
         featureLinks={texts.footer.featureLinks}
-        helpHref={helpBanner?.href}
-        containerClass={NARROW}
         compact
         navLayout="grouped"
       />
 
-      {/* The à-la-carte quiz is the pricing hero. */}
-      <Band section="pricing_quiz">
-        <PricingQuiz ctaText={texts.ctaText} texts={quiz} />
-      </Band>
-
-      {/* Enterprise / custom-plan line */}
-      <Band section="pricing_enterprise">
-        <p className="mx-auto max-w-xl text-center text-base text-muted-foreground">
-          {quiz.enterprisePre}{" "}
-          <a
-            href={`https://wa.me/998948663743?text=${encodeURIComponent(quiz.enterpriseWa)}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-medium text-primary underline-offset-2 hover:underline"
-          >
-            {quiz.enterpriseCta}
-          </a>{" "}
-          {quiz.enterprisePost}
-        </p>
-      </Band>
-
-      <Band section="faq" id="faq">
-        <Faq texts={faq} />
-      </Band>
-
-      <Band section="final_cta">
-        <FinalCta
-          texts={texts.finalCta}
-          ctaText={texts.ctaText}
-          demoText={texts.demoText}
-          microcopy={texts.microcopy}
-          locale={locale}
-        />
-      </Band>
-
-      {helpBanner ? (
-        <Band section="help_banner" id="help-banner">
-          <HelpBannerCta banner={helpBanner} source="pricing" />
+      <Content>
+        {/* The à-la-carte quiz is the pricing hero. */}
+        <Band section="pricing_quiz">
+          <PricingQuiz ctaText={texts.ctaText} texts={quiz} />
         </Band>
-      ) : null}
 
-      <footer data-section="footer" className="w-full">
-        <div className={NARROW}>
-          <LandingFooter
-            texts={texts.footer}
-            headerTexts={texts.header}
+        <Band section="faq" id="faq">
+          <Faq texts={faq} />
+        </Band>
+
+        <Band section="final_cta">
+          <FinalCta
+            texts={texts.finalCta}
+            ctaText={texts.ctaText}
+            demoText={texts.demoText}
+            microcopy={texts.microcopy}
             locale={locale}
-            helpHref={helpBanner?.href}
+            count={count}
           />
-        </div>
-      </footer>
+        </Band>
+      </Content>
+
+      <LandingFooter texts={texts.footer} headerTexts={texts.header} locale={locale} routeKey="/pricing" />
     </main>
   );
 }

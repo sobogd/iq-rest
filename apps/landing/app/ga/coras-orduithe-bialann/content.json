@@ -1,0 +1,236 @@
+{
+  "locale": "ga",
+  "slug": "coras-orduithe-bialann",
+  "trackPrefix": "l_orders",
+  "meta": {
+    "title": "Glacadh Orduithe Bialainne — Aoi agus Freastalaí | IQ Rest",
+    "description": "Glacadh orduithe bialainne ó fhón nó táibléad: léarscáil urláir, bille a roinnt, stádais, roghanna agus tuairimí. Ordaíonn aíonna ón mbord, glacann freastalaithe orduithe ar a ngléas féin. 14 lá saor in aisce.",
+    "canonical": "https://iq-rest.com/ga/coras-orduithe-bialann",
+    "ogLocale": "ga_IE",
+    "ogTitle": "Glacadh Orduithe Bialainne — Aoi agus Freastalaí",
+    "ogDescription": "Aoi ag an mbord nó freastalaí ar fhón — sroicheann an t-ordú an chistin láithreach. Léarscáil urláir, bille a roinnt, stádais, roghanna agus tuairimí.",
+    "brandLine": "IQ Rest — Glacadh Orduithe Bialainne"
+  },
+  "hero": {
+    "headline": "Orduithe ón mbord —",
+    "cta": "Socraigh orduithe ar líne",
+    "sub": "Ordaíonn aíonna ag an mbord nó freastalaithe ó aon ghléas — díreach chuig an gcistin. Léarscáil urláir, bille a roinnt.",
+    "headlineAccent": "díreach chuig an gcistin",
+    "demoLabel": "Taispeántas: scáileán orduithe",
+    "tablet": {
+      "src": "/landing/feature-orders-modal.webp",
+      "alt": "Táibléad le hordú oscailte: liosta miasa agus gníomhartha orduithe — athraigh bord, roinn ordú, cuir lascaine leis"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Bialanna"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Caiféanna"
+    },
+    {
+      "icon": "Martini",
+      "label": "Beáir"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Óstáin"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerias"
+    }
+  ],
+  "scan": {
+    "heading": "Socraigh do chóras orduithe",
+    "headingAccent": "in 5 nóiméad.",
+    "sub": "Scan biachlár páipéir nó PDF — aithníonn AI miasa, praghsanna agus catagóirí. Nasc táibléad ar an urlár agus tosaigh ag glacadh orduithe ó na boird.",
+    "cta": "Scan an biachlár"
+  },
+  "subFeatures": [
+    {
+      "icon": "Map",
+      "eyebrow": "Liosta agus léarscáil urláir",
+      "heading": "Liosta orduithe in aice leis an léarscáil urláir.",
+      "body": "Taispeántar gach ordú gníomhach ar dheis: stádas, iomlán, am curtha agus líon na míreanna. Ar chlé tá an léarscáil urláir: tá dathchódú ar bhoird de réir stádais — folamh, áitithe, aird ag teastáil. Osclaíonn tapáil ar bhord a ordú, osclaíonn tapáil ar chárta an t-amharc mionsonraithe. Níl aon aistriú idir scáileáin.",
+      "bullets": [
+        "Léarscáil urláir: boird dathchódaithe de réir stádas an ordaithe.",
+        "Liosta orduithe taobh leis — iomlán, am agus líon na míreanna.",
+        "Osclaíonn tapáil ar bhord an t-ordú nó cruthaíonn sé ceann nua."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-map.webp",
+        "alt": "Táibléad ag stáisiún freastalaí: liosta orduithe agus léarscáil urláir le boird dathchódaithe"
+      }
+    },
+    {
+      "icon": "ClipboardList",
+      "eyebrow": "Cárta ordaithe",
+      "heading": "An cárta ordaithe: stádais, dúbailt agus baint — le tapáil amháin.",
+      "body": "Tá a stádas féin ag gach mír (Ag feitheamh / Ag cócaireacht / Réidh / Seirbheáilte) — feiceann an chistin agus an freastalaí an pictiúr céanna i bhfíor-am. Osclaíonn tapáil ar an bponc roghchlár gnímh: athraigh stádas, déan an mhír a dhúbailt leis na mionathraitheoirí agus roghanna céanna, nó bain é. Tarlaíonn gach rud díreach taobh istigh den chárta ordaithe.",
+      "bullets": [
+        "Stádas in aghaidh na míre: Ag feitheamh / Ag cócaireacht / Réidh / Seirbheáilte.",
+        "Déan mír a dhúbailt le tapáil amháin — na roghanna céanna san áireamh.",
+        "Bain mír díreach ón gcárta ordaithe."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-detail.webp",
+        "alt": "Táibléad le cárta ordaithe mionsonraithe: stádais miasa, míreanna a dhúbailt agus a bhaint"
+      }
+    },
+    {
+      "icon": "Receipt",
+      "eyebrow": "Bille a roinnt",
+      "heading": "Bille a roinnt nuair a íocann aíonna ar leithligh.",
+      "body": "Socraíonn aíonna íoc ar leithligh — seiceáil na míreanna a théann chuig an mbille nua; fanann an chuid eile ar an gceann reatha. Taispeánann an córas an dá iomlán láithreach. Tapáil amháin ar \"Roinn ordú\" — agus tá dhá ordú neamhspleácha agat le hiomláin chearta, an dá cheann ag fanacht ar a mboird.",
+      "bullets": [
+        "Roghnaigh míreanna le roinnt ag úsáid boscaí seiceála.",
+        "Feictear iomláin an bhille nua agus an bhille atá fágtha láithreach.",
+        "Tapáil amháin — agus roinntear an t-ordú gan aon mhatamaitic láimhe."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-split.webp",
+        "alt": "Táibléad ar bhord bialainne: an bille a roinnt idir aíonna"
+      }
+    },
+    {
+      "icon": "Smartphone",
+      "eyebrow": "Iontráil orduithe soghluaiste",
+      "heading": "Míreanna a chur leis ó fhón — i dtrí chéim.",
+      "body": "Níl freastalaithe ceangailte le gléas amháin: osclaíonn siad an scáileán orduithe ar a bhfón féin agus cuireann siad mír leis i dtrí chéim — roghnaigh catagóir, roghnaigh mias, roghnaigh roghanna (méid, leibhéal cócaireachta, anlainn agus comhábhair bhreise). Déantar an praghas a athríomh go huathoibríoch. Cuirtear tuairim cistine leis ag an gcéim dheireanach.",
+      "bullets": [
+        "Trí chéim: catagóir → mias → roghanna.",
+        "Roghanna (méid, breiseáin, comhábhair) le praghsáil i dtapáil amháin.",
+        "Réimse tuairime ag an gcéim dheireanach."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-mobile.webp",
+        "alt": "Ceithre fhón ag taispeáint na gcéimeanna chun mír a chur le hordú: catagóir, mias, méid, tuairim"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Na rudaí a fhiafraíonn úinéirí bialainne faoi ghlacadh orduithe in IQ Rest. Mura bhfuil do cheist liostaithe — seol teachtaireacht chugainn ar WhatsApp.",
+    "items": [
+      {
+        "q": "An féidir le roinnt freastalaithe oibriú ag an am céanna ó ghléasanna éagsúla?",
+        "a": "Is féidir. Nascann gach freastalaí a ghléas féin agus feiceann sé na boird, na horduithe agus na stádais chéanna i bhfíor-am. Feictear athrú a dhéanann duine amháin láithreach do na cinn eile — gan aon choinbhleachtaí ná glasáil."
+      },
+      {
+        "q": "An féidir le freastalaithe a ngléasanna pearsanta a úsáid?",
+        "a": "Is féidir. Ritheann an scáileán orduithe sa bhrabhsálaí — níl aon rud le suiteáil. Nascann fón nó táibléad le cód sé dhigit ón bpainéal, agus cúlghairtear rochtain le tapáil amháin ag deireadh an tseala."
+      },
+      {
+        "q": "An féidir liom roghanna riachtanacha a chur le miasa (méid, leibhéal cócaireachta)?",
+        "a": "Is féidir. Is féidir aon líon grúpaí roghanna a bheith ag mias — riachtanach (\"Méid\": Beag / Meánach / Mór) agus roghnach (\"Leibhéal cócaireachta\": amh / meánach / dea-chócaráilte). Bíonn tionchar ag roghanna ar an bpraghas. Le grúpa riachtanach, iarrann an córas rogha — rud a chuireann deireadh le botúin."
+      },
+      {
+        "q": "An féidir liom tuairimí agus míreanna breise a chur le mias?",
+        "a": "Is féidir. Tá réimse tuairime ag an gcéim dheireanach (\"gan oinniúin\", \"ailléirge cnónna\"). Socraítear breiseáin mar roghanna praghsáilte (\"+ Anlann BBQ\", \"+ Arán\"). Feictear tuairimí ar an scáileán cistine, aibhsithe i ndath."
+      },
+      {
+        "q": "An bhfuil staitisticí orduithe ann?",
+        "a": "Tá. Taispeánann an rannóg anailísíochta ioncam de réir lae, meánticéad agus na miasa is fearr a dhíoltar. Cabhraíonn na sonraí seo leat sealanna agus ceannach a phleanáil."
+      },
+      {
+        "q": "An féidir orduithe a roinnt?",
+        "a": "Is féidir. Seiceáil na míreanna a théann chuig bille nua — déanann an dá iomlán athríomh go huathoibríoch, gan aon mhatamaitic láimhe agus gan aon léim idir rannóga."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Orduithe in 10 nóiméad. ",
+    "headingAccent": "14 lá de rochtain iomlán.",
+    "sub": "Ní gá cárta, cealaigh am ar bith. Glacann {count} bialann orduithe cistine linn. Níl uait ach ríomhphost."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Léarscáil urláir agus liosta orduithe",
+      "sub": "Orduithe gníomhacha in aice leis an léarscáil urláir: tá dathchódú ar bhoird de réir stádais, agus osclaíonn tapáil ordú nó cruthaíonn sé ceann nua.",
+      "bullets": [
+        {
+          "icon": "Map",
+          "title": "Boird de réir stádais",
+          "sub": "Folamh, áitithe, aird ag teastáil — le feiceáil sracfhéachaint"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Liosta orduithe gníomhacha",
+          "sub": "Iomlán, am curtha agus líon na míreanna do gach ordú"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Ordú nua ón léarscáil",
+          "sub": "Osclaíonn tapáil ar bhord saor iontráil ordaithe láithreach"
+        }
+      ]
+    },
+    {
+      "heading": "Stádas do gach mír",
+      "sub": "Feiceann an chistin agus an freastalaí an pictiúr céanna: tá a stádas féin ag gach mias — ó curtha go seirbheáilte.",
+      "bullets": [
+        {
+          "icon": "Timer",
+          "title": "Stádais in aghaidh na miasa",
+          "sub": "Ag feitheamh, Ag cócaireacht, Réidh, Seirbheáilte — in aghaidh na míre, ní in aghaidh an ordaithe"
+        },
+        {
+          "icon": "Receipt",
+          "title": "Mír a dhúbailt",
+          "sub": "Déan mias a athdhéanamh leis na roghanna céanna in aon tapáil amháin"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Eagarthóireacht san áit",
+          "sub": "Bain mír díreach ón gcárta ordaithe"
+        }
+      ]
+    },
+    {
+      "heading": "Bille a roinnt",
+      "sub": "Íocann aíonna ar leithligh — seiceáil na míreanna agus bogann siad chuig bille nua. Déanann iomláin athríomh láithreach.",
+      "bullets": [
+        {
+          "icon": "Receipt",
+          "title": "Boscaí seiceála in aghaidh na míre",
+          "sub": "Roghnaigh na miasa don bhille nua; fanann an chuid eile ar an gceann reatha"
+        },
+        {
+          "icon": "ChartColumn",
+          "title": "Iomláin a thaispeántar láithreach",
+          "sub": "Ríomhtar na billí nua agus na billí atá fágtha go huathoibríoch"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Tapáil amháin",
+          "sub": "Roinntear an t-ordú gan matamaitic láimhe nó áireamhán"
+        }
+      ]
+    },
+    {
+      "heading": "Iontráil orduithe ó fhón an fhreastalaí",
+      "sub": "Glacann freastalaithe ordú ar a ngléas féin i dtrí chéim: catagóir, mias, roghanna.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Aon ghléas",
+          "sub": "Fón nó táibléad le brabhsálaí — níl aon suiteáil ag teastáil"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Roghanna praghsáilte",
+          "sub": "Méid, breiseáin agus leaganacha miasa le praghsáil i dtapáil amháin"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Tuairimí miasa",
+          "sub": "Cuirtear iarratais aíonna leis ag an gcéim dheireanach — feiceann an chistin iad láithreach"
+        }
+      ]
+    }
+  ]
+}

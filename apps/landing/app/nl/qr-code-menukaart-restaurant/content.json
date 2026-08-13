@@ -1,0 +1,151 @@
+{
+  "locale": "nl",
+  "slug": "qr-code-menukaart-restaurant",
+  "trackPrefix": "l_nl_qr",
+  "featureHeading": {
+    "heading": "Niet zomaar een QR-code",
+    "sub": "Alles wat één scan betekent voor je gasten en je zaak."
+  },
+  "meta": {
+    "title": "QR-menu voor Restaurants | IQ Rest",
+    "description": "QR-menu voor restaurants: gasten scannen de QR-code op tafel, openen het menu in hun browser en bestellen in hun eigen taal. 14 dagen gratis, geen creditcard nodig.",
+    "canonical": "https://iq-rest.com/nl/qr-code-menukaart-restaurant",
+    "ogLocale": "nl_NL",
+    "ogTitle": "QR-menu voor Restaurants",
+    "ogDescription": "Een QR op tafel, het menu op de telefoon — foto's, allergenen, 35 talen en realtime updates.",
+    "brandLine": "IQ Rest — QR-menu voor Restaurants"
+  },
+  "hero": {
+    "headline": "QR-menu:\nscannen en bestellen",
+    "cta": "Maak een QR-menu",
+    "sub": "Gasten scannen de QR op tafel, bekijken foto's en allergenen in 35 talen en bestellen — geen apps nodig."
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurants"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafés"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bars"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotels"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzeria's"
+    }
+  ],
+  "scan": {
+    "heading": "Heb je al een papieren menu of een PDF?",
+    "headingAccent": "AI maakt er in 60 seconden een QR-menu van.",
+    "sub": "Upload een foto van het menu of een PDF — AI herkent categorieën, gerechten en prijzen en koppelt ze direct aan je QR-menu.",
+    "cta": "Maak een QR-menu"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "Eén QR, 35 talen",
+      "heading": "Eén QR-code, een menu in 35 talen.",
+      "body": "Gasten scannen de QR en kiezen hun taal: de vertaling wordt gedaan door AI met culinair gevoel, niet door een standaard vertaalmachine. Geen aparte toeristenmenu's of losse blaadjes meer op tafel.",
+      "bullets": [
+        "Eén geprinte QR dekt 35 talen, inbegrepen in het abonnement.",
+        "De AI spreekt de taal van eten — gerechten klinken natuurlijk in elke taal.",
+        "Gasten wisselen van taal in het menu, zonder de QR opnieuw te scannen."
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Twee gasten scannen dezelfde QR-code vanaf tafel en lezen het menu in verschillende talen"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Allergenen in de QR",
+      "heading": "Allergenen en dieetlabels in het QR-menu.",
+      "body": "Elk gerecht in het menu achter de QR kan labels hebben: gluten, lactose, noten, zeevruchten, vegan en glutenvrije opties. Gasten filteren gerechten op hun dieetwensen via hun telefoon, zonder het personeel te hoeven vragen.",
+      "bullets": [
+        "14 allergenencategorieën op gerechtniveau.",
+        "Vegan, vegetarisch en glutenvrij labels met één klik in het dashboard.",
+        "Gasten filteren het QR-menu op hun eigen dieetwensen."
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Een gast filtert het QR-menu op allergenen op een telefoon, terwijl de eigenaar de lijst bewerkt op een tablet"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Meer dan alleen een QR",
+      "heading": "Een QR-menu in de stijl van een restaurantwebsite.",
+      "body": "Na het scannen van de code komen gasten niet op een platte PDF: ze zien een startscherm met een video of opvallende foto, een beschrijving van de zaak en een contactpagina met plattegrond, telefoonnummers en social links. De QR wordt de online voordeur van je restaurant.",
+      "bullets": [
+        "Een achtergrondvideo of opvallende foto op het startscherm van het QR-menu.",
+        "Ruimte om het verhaal van je zaak en elke categorie te vertellen.",
+        "Een ingebouwde contactpagina: plattegrond, telefoon, Instagram, WhatsApp."
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Twee telefoons op tafel: het startscherm van het QR-menu met een achtergrondvideo en een contactpagina met plattegrond"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Bestellen via de QR · optioneel",
+      "heading": "Via de QR-code kunnen gasten ook bestellen.",
+      "body": "Naast het bekijken van het menu, kan het QR-menu ook een bestelkanaal worden: gasten voegen gerechten toe aan hun winkelmandje en versturen de bestelling. De bestelling bereikt de bediening, je WhatsApp of het keukenscherm. Deze functie kan in de instellingen worden in- en uitgeschakeld wanneer dat nodig is.",
+      "bullets": [
+        "Een winkelmandje, opmerkingen en bestellingen direct vanuit de QR-scan.",
+        "De bestelling bereikt direct de bediening, WhatsApp of het keukenscherm.",
+        "Schakel de functie in per tijdstip, verdieping of specifiek restaurant."
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Twee telefoons op tafel: een winkelmandje aangemaakt vanuit het QR-menu en een bevestiging van een verzonden bestelling"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Wat restauranthouders vragen over het IQ Rest QR-menu. Staat je vraag er niet tussen? Stuur ons een bericht via WhatsApp.",
+    "items": [
+      {
+        "q": "Hoe werkt het IQ Rest QR-menu?",
+        "a": "Elke tafel heeft een geprinte QR-code. Gasten scannen deze met de camera van hun telefoon, en de browser opent het menu van het restaurant — foto's, beschrijvingen, allergenen en actuele prijzen. Geen app om te downloaden voor gasten of personeel."
+      },
+      {
+        "q": "Heb ik technische kennis nodig om een QR-menu te maken?",
+        "a": "Nee. Het dashboard werkt met klikken en slepen, geen code of ingewikkelde instellingen. Een gerecht toevoegen duurt seconden: naam, prijs, foto. De eerste setup duurt meestal 30 minuten tot een uur; als je al een PDF-menu hebt, zet AI dit automatisch om."
+      },
+      {
+        "q": "Moeten gasten een app installeren om de QR te lezen?",
+        "a": "Nee. De ingebouwde camera van iPhone en Android herkent de QR-code binnen enkele seconden en opent het menu direct in de browser. Het dashboard werkt ook in elke moderne browser — telefoon, tablet of laptop."
+      },
+      {
+        "q": "Hoe worden de QR-codes voor op tafel geprint?",
+        "a": "QR-codes worden automatisch gegenereerd in het dashboard (één per tafel of één voor de hele zaak) en gedownload als een printklare PDF. Een kantoorprinter en een houder zijn alles wat je nodig hebt: een standaard, een sticker of een bierviltje."
+      },
+      {
+        "q": "Kan ik mijn eigen domein gebruiken voor het QR-menu?",
+        "a": "Ja. We ondersteunen het domein van je restaurant met een SSL-certificaat (bijvoorbeeld menu.jouwrestaurant.nl): wanneer gasten de QR scannen, zien ze het adres van jouw restaurant, niet een algemeen subdomein. DNS instellen duurt 5–10 minuten en we begeleiden je hierbij."
+      },
+      {
+        "q": "Kan ik QR-codes voor meerdere restaurants beheren vanuit één account?",
+        "a": "Ja, op aanvraag. Eén account kan meerdere zaken samenbrengen, elk met hun eigen QR-codes, menu, design en statistieken. Stuur ons een bericht via WhatsApp en we schakelen de multi-restaurant modus in."
+      },
+      {
+        "q": "Is het moeilijk om een QR-menu vanaf nul te lanceren?",
+        "a": "Drie stappen: (1) maak categorieën aan; (2) voeg gerechten toe met een naam, prijs en foto; (3) print de QR-codes en plaats ze op de tafels. Als je al een papieren menu of een PDF hebt, upload deze dan — AI herkent categorieën en prijzen en vult de kaarten in. Een basis-menu kan in 5 minuten online staan."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Een QR-menu in 10 minuten. ",
+    "headingAccent": "14 dagen volledige toegang.",
+    "sub": "Geen creditcard nodig, altijd opzegbaar. Gebruikt door {count} restaurants. Alleen een e-mailadres — en geen apps voor je gasten."
+  }
+}

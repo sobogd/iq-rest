@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { routing } from "@/i18n/routing";
+import { locales } from "@/lib/locales";
 import { notFound } from "next/navigation";
 
 export const viewport: Viewport = {
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
 };
 
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
+  return locales.map((locale) => ({ locale }));
 }
 
 export default function RootLayout({

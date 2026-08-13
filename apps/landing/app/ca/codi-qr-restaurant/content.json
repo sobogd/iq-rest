@@ -1,0 +1,151 @@
+{
+  "locale": "ca",
+  "slug": "codi-qr-restaurant",
+  "trackPrefix": "l_ca_qr",
+  "featureHeading": {
+    "heading": "No és només un codi QR",
+    "sub": "Tot allò en què es converteix un simple escaneig per als teus clients i la teva sala."
+  },
+  "meta": {
+    "title": "Carta QR per a restaurants | IQ Rest",
+    "description": "Carta QR per a restaurants: els clients escanegen el codi QR de la taula, obren la carta al navegador i demanen en el seu propi idioma. 14 dies gratis, sense targeta.",
+    "canonical": "https://iq-rest.com/ca/codi-qr-restaurant",
+    "ogLocale": "ca_ES",
+    "ogTitle": "Carta QR per a restaurants",
+    "ogDescription": "Un QR a la taula, la carta al mòbil: fotos, al·lèrgens, 35 idiomes i actualitzacions en temps real.",
+    "brandLine": "IQ Rest — Carta QR per a restaurants"
+  },
+  "hero": {
+    "headline": "Carta QR:\nescanejar i demanar",
+    "cta": "Crear una carta QR",
+    "sub": "Els clients escanegen el QR de la taula, miren fotos i al·lèrgens en 35 idiomes i fan la comanda: sense necessitat d'apps."
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurants"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafeteries"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bars"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotels"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzeries"
+    }
+  ],
+  "scan": {
+    "heading": "Ja tens una carta en paper o PDF?",
+    "headingAccent": "La IA la converteix en una carta QR en 60 segons.",
+    "sub": "Puja una foto de la carta o un PDF: la IA reconeix categories, plats i preus i els connecta directament a la teva carta QR.",
+    "cta": "Crear una carta QR"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "Un QR, 35 idiomes",
+      "heading": "Un codi QR, una carta en 35 idiomes.",
+      "body": "Els clients escanegen el QR i trien el seu idioma: la traducció la fa una IA amb sensibilitat culinària, no un traductor genèric. S'han acabat les cartes per a turistes separades o els fulls escampats per la taula.",
+      "bullets": [
+        "Un QR imprès cobreix 35 idiomes, inclosos a la subscripció.",
+        "La IA parla l'idioma del menjar: els noms dels plats sonen naturals en qualsevol idioma.",
+        "Els clients canvien d'idioma dins la carta, sense haver de tornar a escanejar el QR."
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Dos clients escanegen el mateix codi QR des de la taula i llegeixen la carta en diferents idiomes"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Al·lèrgens al QR",
+      "heading": "Al·lèrgens i etiquetes dietètiques dins la carta QR.",
+      "body": "Cada plat de la carta darrere del QR pot portar etiquetes: gluten, lactosa, fruits secs, marisc, opcions veganes i sense gluten. Els clients filtren els plats segons les seves restriccions des del mòbil, sense haver de preguntar al personal.",
+      "bullets": [
+        "14 categories d'al·lèrgens a nivell de plat.",
+        "Etiquetes de vegà, vegetarià i sense gluten amb un sol clic al panell.",
+        "Els clients filtren la carta QR segons les seves pròpies restriccions."
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Un client filtra la carta QR per al·lèrgens al mòbil mentre el propietari edita la llista en una tauleta"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Més que un simple QR",
+      "heading": "Una carta QR amb l'estil de la web d'un restaurant.",
+      "body": "Després d'escanejar el codi, els clients no van a parar a un PDF pla: veuen una pantalla de benvinguda amb un vídeo o una foto atractiva, una descripció del local i una pàgina de contacte amb mapa, telèfons i xarxes socials. El QR es converteix en la porta d'entrada online del teu restaurant.",
+      "bullets": [
+        "Un vídeo de fons o una foto atractiva a la pantalla d'inici de la carta QR.",
+        "Espai per explicar la història del teu local i de cada categoria.",
+        "Una pàgina de contacte integrada: mapa, telèfon, Instagram, WhatsApp."
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Dos mòbils sobre una taula: la pantalla d'inici de la carta QR amb un vídeo de fons i una pàgina de contacte amb un mapa"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Comandes des del QR · opcional",
+      "heading": "Des del codi QR, els clients també poden demanar.",
+      "body": "Més enllà de mirar la carta, la carta QR es pot convertir en un canal de comandes: els clients afegeixen plats al carretó i envien la petició. La comanda arriba a un cambrer a la sala, al teu WhatsApp o a la pantalla de cuina. Aquesta funcionalitat es pot activar i desactivar a la configuració sempre que calgui.",
+      "bullets": [
+        "Un carretó, comentaris i enviament de comandes directament des de l'escaneig del QR.",
+        "La comanda arriba a l'instant a la sala, a WhatsApp o a la pantalla de cuina.",
+        "Activa la funcionalitat per hores, zones o restaurants concrets."
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Dos mòbils sobre una taula: un carretó creat des de la carta QR i una confirmació de comanda enviada"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "El que pregunten els restauradors sobre la carta QR d'IQ Rest. No trobes la teva pregunta? Escriu-nos per WhatsApp.",
+    "items": [
+      {
+        "q": "Com funciona la carta QR d'IQ Rest?",
+        "a": "Cada taula té un codi QR imprès. Els clients l'escanegen amb la càmera del mòbil i el navegador obre la carta del restaurant: fotos, descripcions, al·lèrgens i preus actualitzats. Ni els clients ni el personal han de descarregar cap app."
+      },
+      {
+        "q": "Necessito coneixements tècnics per crear una carta QR?",
+        "a": "No. El panell funciona amb clics i arrossegant elements, sense codi ni configuracions complexes. Afegir un plat triga segons: nom, preu, foto. La configuració inicial sol portar entre 30 minuts i una hora; si ja tens una carta en PDF, la IA la converteix automàticament."
+      },
+      {
+        "q": "Els clients han d'instal·lar alguna app per llegir el QR?",
+        "a": "No. La càmera integrada de l'iPhone i l'Android reconeix el codi QR en segons i obre la carta directament al navegador. El panell d'administració també funciona en qualsevol navegador modern: mòbil, tauleta o portàtil."
+      },
+      {
+        "q": "Com s'imprimeixen els codis QR de les taules?",
+        "a": "Els codis QR es generen automàticament al panell (un per taula o un per a tot el local) i es descarreguen com a PDF llest per imprimir. Només necessites una impressora d'oficina i un suport: un portacartes, un adhesiu o un sotagot."
+      },
+      {
+        "q": "Puc utilitzar el meu propi domini per a la carta QR?",
+        "a": "Sí. Suportem el domini del teu restaurant amb un certificat SSL (per exemple carta.elteurestaurant.com): quan els clients escanegen el QR, veuen l'adreça del teu restaurant, no un subdomini genèric. La configuració dels DNS triga 5–10 minuts i et guiem durant el procés."
+      },
+      {
+        "q": "Puc gestionar els codis QR de diversos restaurants des d'un sol compte?",
+        "a": "Sí, a petició. Un compte pot agrupar diversos locals, cadascun amb els seus propis codis QR, carta, disseny i analítica. Escriu-nos per WhatsApp i t'activarem el mode multirestaurant."
+      },
+      {
+        "q": "És difícil llançar una carta QR des de zero?",
+        "a": "Són tres passos: (1) crea les categories; (2) afegeix els plats amb nom, preu i foto; (3) imprimeix els codis QR i posa'ls a les taules. Si ja tens una carta en paper o PDF, puja-la: la IA reconeix les categories i els preus i omple les fitxes. Una carta bàsica pot estar online en 5 minuts."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Una carta QR en 10 minuts. ",
+    "headingAccent": "14 dies d'accés complet.",
+    "sub": "Sense targeta, cancel·la quan vulguis. {count} restaurants confien en nosaltres. Només un correu, i cap app per als teus clients."
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "locale": "et",
+  "slug": "laudade-broneerimine",
+  "trackPrefix": "l_bookings",
+  "meta": {
+    "title": "24/7 laua broneerimine restoranidele | IQ Rest",
+    "description": "24/7 laua broneerimine sinu restoranile: külalised broneerivad laudu ise QR-menüü või veebilehe kaudu. Kalender laudade kaupa, automaatsed kinnitused ja meeldetuletused. Ei mingeid telefonikõnesid, ükski külaline ei jää märkamata. 14 päeva tasuta.",
+    "canonical": "https://iq-rest.com/et/laudade-broneerimine",
+    "ogLocale": "et_EE",
+    "ogTitle": "24/7 laua broneerimine — külalised broneerivad ise",
+    "ogDescription": "Külalised broneerivad laudu QR-menüü või veebilehe kaudu. Kalender, automaatsed kinnitused, meeldetuletused. Ükski külaline ei jää märkamata.",
+    "brandLine": "IQ Rest — Restorani laudade broneerimine"
+  },
+  "hero": {
+    "headline": "Laua broneerimine 24/7,",
+    "cta": "Seadista laua broneerimine",
+    "sub": "Külalised broneerivad 24/7 QR-menüü või lingi kaudu. Kalender laudade kaupa, automaatsed kinnitused ja meeldetuletused.",
+    "headlineAccent": "ilma telefonikõnedeta",
+    "demoLabel": "Demo: broneerimiskalender",
+    "tablet": {
+      "src": "/landing/hero-card-reservation.webp",
+      "alt": "Tahvelarvuti broneerimiskalendriga: kuu vaade ja kinnitamist ootavate broneeringute nimekiri"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restoranidele"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kohvikutele"
+    },
+    {
+      "icon": "Martini",
+      "label": "Baaridele"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotellidele"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pitseriatele"
+    }
+  ],
+  "scan": {
+    "heading": "Käivita laua broneerimine",
+    "headingAccent": "5 minutiga.",
+    "sub": "Ühenda kalender, lisa lauad koos fotode ja istekohtade arvuga — külalised hakkavad broneerima samal päeval.",
+    "cta": "Lülita broneeringud sisse"
+  },
+  "subFeatures": [
+    {
+      "icon": "CalendarPlus",
+      "eyebrow": "Broneerimisvorm",
+      "heading": "Külalised broneerivad ise — kuupäeva, kellaaja ja inimeste arvu järgi.",
+      "body": "Külaline avab QR-menüü või otselingi, valib kuupäeva, kellaaja ja inimeste arvu — ning näeb kohe vabu laudu: koos foto, kirjelduse (terrass, akna all, diivan baaris) ja mahutavusega. Kinnitus saadetakse automaatselt e-posti ja WhatsAppi teel.",
+      "bullets": [
+        "Laua valik foto, kirjelduse ja mahutavuse järgi.",
+        "Automaatne kinnitus ja meeldetuletus tund enne külastust.",
+        "Minimaalne vorm: nimi, telefon, inimeste arv."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-form.webp",
+        "alt": "Külaline broneerib telefonist restorani laua: valib kuupäeva, kellaaja, inimeste arvu ja laua"
+      }
+    },
+    {
+      "icon": "CalendarDays",
+      "eyebrow": "Broneerimiskalender",
+      "heading": "Kalender päevade ja laudade kaupa — kõik on nähtav sekundiga.",
+      "body": "Halduspaneelis on broneerimiskalender jaotatud laudade, päevade, nädalate ja kuude kaupa. Vabad ajad, hõivatud lauad, kinnitatud ja ootel broneeringud on kõik ühel ekraanil. Töötab tahvelarvutis saalis ja sülearvutis kontoris.",
+      "bullets": [
+        "Päeva, nädala ja kuu vaated.",
+        "Jaotus laudade kaupa: kes, millal, mitu külalist.",
+        "Muuda aega, tühista või kinnita broneering — ühe nupuvajutusega telefonist."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-calendar.webp",
+        "alt": "Broneerimiskalender IQ Resti halduspaneelis kahel tahvelarvutil: päevavaade laudade kaupa ja kuuvaade"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Mida restoranipidajad IQ Resti laua broneerimise kohta küsivad. Kui sinu küsimust pole nimekirjas — kirjuta meile WhatsAppi.",
+    "items": [
+      {
+        "q": "Kas ma saan valida päevi ja kellaaegu, millal broneerimine on saadaval?",
+        "a": "Jah. Halduspaneel võimaldab seadistada graafiku iga nädalapäeva kohta: broneerimisajad ja paus lõuna- ja õhtusöögi vahel. Samuti saad broneeringud ajutiselt täielikult välja lülitada — külalised näevad, et online broneerimine pole saadaval."
+      },
+      {
+        "q": "Kas ma saan üles laadida foto igast lauast?",
+        "a": "Jah. Igal laual on foto, mahutavus ja tsoon (terrass, akna all, baar). Külalised näevad täpselt, millise laua nad broneerivad, ja teevad teadliku valiku."
+      },
+      {
+        "q": "Kas ma saan piirata külaliste arvu laua kohta?",
+        "a": "Jah. Igal laual on määratud mahutavus — süsteem pakub külalistele ainult sobivaid laudu ja blokeerib kahekohalise laua broneerimise kuueliikmelise seltskonna poolt."
+      },
+      {
+        "q": "Kui keeruline on broneeringuid seadistada?",
+        "a": "Kolm sammu: lisa lauad koos fotode ja mahutavusega, lülita seadetes sisse broneerimisrežiim ning jaga linki või QR-koodi. Käivitamine võtab 5–10 minutit."
+      },
+      {
+        "q": "Kas ma saan seadistada automaatse või käsitsi broneeringu kinnitamise?",
+        "a": "Jah, režiimi saab valida seadetest. Automaatse kinnituse korral kinnitatakse külalise broneering kohe pärast vormi esitamist. Käsitsi režiimis ilmub soov paneeli kui \"ootab kinnitust\" — juhataja kinnitab või lükkab selle tagasi. Käsitsi režiim on mugav, kui laudu on piiratud koguses."
+      },
+      {
+        "q": "Kas te võtate tasu iga broneeringu pealt?",
+        "a": "Tasusid ei ole: broneeringud on hinna sees — ei mingit protsenti külalistelt, ei mingeid tasusid broneeringu kohta, ei mingeid vahendajaid. Fikseeritud makse ja piiramatu arv broneeringuid."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Broneeringud 10 minutiga. ",
+    "headingAccent": "14 päeva täisligipääsu.",
+    "sub": "Kaarti pole vaja, tühista igal ajal. {count} restorani on meiega vähendanud oma vastuvõtulaua koormust. Alustamiseks on vaja vaid e-posti aadressi."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Külalised broneerivad ise",
+      "sub": "Kuupäev, kellaaeg ja inimeste arv — QR-menüüst või otselingilt, igal kellaajal. Süsteem näitab ainult vabu aegu.",
+      "bullets": [
+        {
+          "icon": "CalendarPlus",
+          "title": "Broneerimine 24/7",
+          "sub": "Külalised broneerivad öösel või nädalavahetusel — ei mingeid kõnesid ega vastuse ootamist"
+        },
+        {
+          "icon": "Users",
+          "title": "Laud vastavalt inimeste arvule",
+          "sub": "Süsteem valib ise sobiva laua vastavalt mahutavusele"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Minimaalne vorm",
+          "sub": "Nimi, telefon ja inimeste arv — vormi täitmine võtab pool minutit"
+        }
+      ]
+    },
+    {
+      "heading": "Kalender päevade ja laudade kaupa",
+      "sub": "Kõik broneeringud ühes kalendris: vaata, mis on vaba, mis on kinnitatud ja kes on tulemas.",
+      "bullets": [
+        {
+          "icon": "CalendarDays",
+          "title": "Päev, nädal, kuu",
+          "sub": "Vaheta vaateid ja planeeri kohtade paigutust ette"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Jaotus laudade kaupa",
+          "sub": "Kes, millal ja mitmele külalisele — iga laua kohta"
+        },
+        {
+          "icon": "Smartphone",
+          "title": "Halda oma telefonist",
+          "sub": "Muuda aega, tühista või kinnita broneering — ühe nupuvajutusega"
+        }
+      ]
+    },
+    {
+      "heading": "Graafik ja režiimid",
+      "sub": "Määra broneerimisgraafik iga nädalapäeva kohta, broneeringu kestus ja kinnitamise režiim.",
+      "bullets": [
+        {
+          "icon": "Clock",
+          "title": "Päevapõhine graafik",
+          "sub": "Eraldi kellaajad igale nädalapäevale, sealhulgas paus lõuna- ja õhtusöögi vahel"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Broneeringu kestus",
+          "sub": "Määra broneerimisintervall vastavalt oma koha formaadile"
+        },
+        {
+          "icon": "CalendarCheck",
+          "title": "Automaatne või käsitsi",
+          "sub": "Kinnita iga broneering ise või lülita sisse automaatne kinnitamine"
+        }
+      ]
+    },
+    {
+      "heading": "Teavitused ilma käsitööta",
+      "sub": "Süsteem hoiab külalist ja sinu meeskonda kursis — e-kiri ja broneerimisekraan uuenevad koheselt.",
+      "bullets": [
+        {
+          "icon": "Mail",
+          "title": "E-kiri külalisele",
+          "sub": "Broneeringu kinnitus saadetakse automaatselt e-posti teel"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Teavitus restoranile",
+          "sub": "Omanikud saavad iga uue broneeringu kohta e-kirja"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Broneerimisekraan sissepääsu juures",
+          "sub": "Vastuvõtu tahvelarvuti näitab uusi broneeringuid reaalajas"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "breadcrumbLabel": "Ceník",
+  "meta": {
+    "title": "Ceník — Sestavte si tarif pro restauraci od 9,90 €/měs | IQ Rest",
+    "description": "Sestavte si tarif z modulů: QR menu s AI překladem, příjem objednávek, rezervace stolů, kuchyňský displej. Od 9,90 €/měs za podnik, množstevní slevy. 14 dní zdarma, bez karty, zrušení kdykoliv.",
+    "canonical": "https://iq-rest.com/cs/ceny",
+    "ogLocale": "cs_CZ",
+    "ogTitle": "Ceník — Sestavte si tarif pro restauraci",
+    "ogDescription": "Modulární tarif od 9,90 €/měs: QR menu, objednávky, rezervace, KDS. Množstevní slevy, žádné skryté poplatky. 14 dní zdarma."
+  },
+  "faqSub": "Časté dotazy z restaurací ohledně cen a plateb. Nenašli jste ten svůj — napište nám na WhatsApp.",
+  "faqItems": [
+    {
+      "q": "Jak je strukturovaná cena?",
+      "a": "Tarif si sestavíte z modulů. Základem je QR menu s AI překladem do 35 jazyků a správou z jakéhokoliv zařízení. Pak si přidáte, co potřebujete: rezervace stolů, kuchyňský displej, vlastní doménu. Cena je za podnik, s množstevními slevami od druhého podniku."
+    },
+    {
+      "q": "Je tam provize z objednávek?",
+      "a": "Ne. Objednávky z QR menu a od číšníků jdou přímo podniku. Platíte jen fixní měsíční cenu."
+    },
+    {
+      "q": "Jak funguje zkušební verze?",
+      "a": "14 dní plného přístupu ke všem funkcím, bez nutnosti zadávat platební kartu. Pokud do konce nenastavíte platbu, účet se pozastaví: panel zůstane dostupný v režimu pouze pro čtení, zatímco menu pro hosty a příjem objednávek se vypnou. K žádným automatickým platbám nedochází."
+    },
+    {
+      "q": "Co se stane s mými daty během pozastavení?",
+      "a": "Všechno zůstává: menu, fotky, historie objednávek, rezervace, nastavení, statistiky. Nastavte platbu klidně i za půl roku — všechno se vrátí přesně tak, jak to bylo."
+    },
+    {
+      "q": "Budu muset znovu tisknout QR kódy?",
+      "a": "Ne. Během pozastavení kódy ukazují upozornění „dočasně nedostupné“; jakmile nastavíte platbu, stejné kódy menu znovu otevřou."
+    },
+    {
+      "q": "Můžu změnit svůj tarif?",
+      "a": "Ano, kdykoliv z panelu. Rozdíl se poměrně rozpočítá na zbývající dny placeného období. Vypnutá funkce si zachová svá data."
+    },
+    {
+      "q": "Kolik podniků si můžu připojit?",
+      "a": "Kolik chcete, všechny spravujete z jednoho panelu. Množstevní slevy až 50 % při 5 a více podnicích. Pro velké sítě — tarif na míru přes WhatsApp."
+    },
+    {
+      "q": "Jaká je sleva u ročního tarifu?",
+      "a": "Zhruba 30 % oproti měsíční fakturaci. Přesná částka se ukáže při sestavování tarifu."
+    },
+    {
+      "q": "Jak zruším předplatné?",
+      "a": "Jedním kliknutím z panelu. Účet funguje do konce placeného období, pak se pozastaví. Vaše data zůstanou zachována."
+    },
+    {
+      "q": "Jaké platební metody přijímáte?",
+      "a": "Visa, Mastercard, American Express, Apple Pay, Google Pay — přes Stripe. V Evropě roční tarif podporuje také SEPA inkaso."
+    }
+  ],
+  "finalCta": {
+    "heading": "Jedna cena. Nulové riziko. ",
+    "headingAccent": "14 dní plného přístupu.",
+    "sub": "Bez karty, zrušení kdykoliv — důvěřuje nám {count} podniků. K začátku stačí jen e-mail."
+  }
+}

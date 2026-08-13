@@ -1,0 +1,206 @@
+{
+  "locale": "lt",
+  "slug": "virtuves-ekranas",
+  "trackPrefix": "l_kds",
+  "meta": {
+    "title": "Virtuvės ekranų sistema (KDS) restoranams — Užsakymai virėjo ekrane | IQ Rest",
+    "description": "KDS virtuvės ekranas restoranams: užsakymai iš salės ir QR meniu keliauja tiesiai į virėjo ekraną. Stulpeliai pagal staliukus, Laukia / Gaminama / Paruošta / Patiekta statusai, stočių filtrai. Veikia planšetėje ar telefone.",
+    "canonical": "https://iq-rest.com/lt/virtuves-ekranas",
+    "ogLocale": "lt_LT",
+    "ogTitle": "Virtuvės ekranų sistema (KDS) — Užsakymai tiesiai į virėjo ekraną",
+    "ogDescription": "Užsakymai iš salės virėjo ekrane. Stulpeliai pagal staliukus, statusai ir laikmatis. Statusas keičiamas vienu paspaudimu.",
+    "brandLine": "IQ Rest — Virtuvės ekranas restoranams"
+  },
+  "hero": {
+    "headline": "Virtuvės ekranų sistema (KDS):",
+    "cta": "Nustatyti virtuvės ekraną",
+    "sub": "Užsakymai pasiekia virtuvės ekraną akimirksniu: pastabos, alergenai ir laikmatis. Statusas keičiamas vienu paspaudimu.",
+    "headlineAccent": "užsakymai tiesiai virėjui",
+    "demoLabel": "Demo: virtuvės ekranas",
+    "tablet": {
+      "src": "/landing/hero-card-kds.webp",
+      "alt": "Planšetė su virtuvės ekranu: užsakymai pagal staliukus stulpeliuose su statusais"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restoranai"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kavinės"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barai"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Viešbučiai"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Picerijos"
+    }
+  ],
+  "scan": {
+    "heading": "Nustatyti virtuvės ekraną",
+    "headingAccent": "per 5 minutes.",
+    "sub": "Nuskenuokite popierinį meniu ar PDF – AI atpažins patiekalus, kategorijas ir alergenus. Prijunkite planšetę virtuvėje ir pradėkite gauti užsakymus.",
+    "cta": "Skenuoti meniu"
+  },
+  "subFeatures": [
+    {
+      "icon": "LayoutGrid",
+      "eyebrow": "Valdymas ir filtrai",
+      "heading": "Keli ekranai pagal stotis: virtuvė ir baras.",
+      "body": "Paruoškite atskiras planšetes karštųjų patiekalų zonai, barui ar konditerijai – kiekvienas ekranas rodo tik jam priklausančius patiekalus. Filtrai pagal statusą (Laukia / Gaminama / Paruošta / Patiekta) ir pagal kategoriją pašalina netvarką: virėjai dirba tik su tuo, kas priklauso jų stočiai.",
+      "bullets": [
+        "Keli KDS ekranai su patiekalų kategorijų filtrais.",
+        "Statuso filtras: tik gaminama ir paruošta.",
+        "Kiekviena stotis mato tik savo užsakymų srautą."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-filters.webp",
+        "alt": "Planšetė ant žalvarinio stovo restorano virtuvėje – KDS filtruojamas pagal patiekalų statusą"
+      }
+    },
+    {
+      "icon": "Timer",
+      "eyebrow": "Kortelės ir laikmatis",
+      "heading": "Vienas paspaudimas pakeičia statusą. Komentarai ir alergenai paryškinti spalva.",
+      "body": "Patiekalo kortelė rodo pasirinktas opcijas (be svogūnų, gerai iškeptas), svečių komentarus, alergenus ir laikmatį, veikiantį nuo užsakymo pateikimo. Paspaudus kortelę statusas pasikeičia: Laukia → Gaminama → Paruošta → Patiekta. Sąrašas automatiškai rūšiuojamas pagal laiko prioritetą.",
+      "bullets": [
+        "Paspauskite kortelę – statusas pasikeičia akimirksniu.",
+        "Pasirinkimai, komentarai ir alergenai paryškinti spalva.",
+        "Rūšiuojama pagal prioritetą: ilgiausiai laukiantys patiekalai kyla į viršų."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-cards.webp",
+        "alt": "Planšetė ant žalvarinio stovo restorano bare – KDS su užsakymų kortelėmis pagal staliukus"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Ko restoranų savininkai klausia apie virtuvės ekraną IQ Rest. Jei jūsų klausimo nėra – parašykite mums WhatsApp.",
+    "items": [
+      {
+        "q": "Kokius statusus turi patiekalai virtuvėje?",
+        "a": "Keturi statusai: Laukia – užsakymas pateiktas ir laukia; Gaminama – patiekalas ruošiamas; Paruošta – paruošta atsiimti; Patiekta – pristatyta svečiui. Paspaudus kortelę pereinama prie kito statuso, jokių meniu ar patvirtinimų."
+      },
+      {
+        "q": "Ar galiu nustatyti kelis KDS ekranus skirtingose virtuvės stotyse?",
+        "a": "Taip. Viena planšetė karštųjų patiekalų zonoje, kita bare, trečia konditerijoje – kiekviena su savo patiekalų kategorijų filtru. Visi ekranai sinchronizuojami: viename pakeistas statusas atsinaujina ir kituose."
+      },
+      {
+        "q": "Kur veikia KDS – ar man reikia specialios planšetės?",
+        "a": "KDS veikia bet kurioje modernioje naršyklėje. Planšetė ant stovo puikiai tinka didelei virtuvei; išmanusis telefonas tinka mažai vietai. Nereikia jokios specialios įrangos ar diegimo: įrenginys prijungiamas su šešių skaitmenų kodu iš valdymo skydelio."
+      },
+      {
+        "q": "Iš kur atkeliauja užsakymai į virtuvės ekraną?",
+        "a": "Iš visų šaltinių: svečio, pateikiančio užsakymą per staliuko QR meniu, arba padavėjo, priimančio jį savo įrenginyje. Užsakymai KDS pasiekia automatiškai, su staliuko numeriu. Jokio rankinio pervedimo iš kasos."
+      },
+      {
+        "q": "Ką rodo užsakymo kortelė?",
+        "a": "Patiekalo pavadinimą, pasirinktas opcijas (be svogūnų, gerai iškeptas), svečio komentarą, alergenus, statusą ir laikmatį, veikiantį nuo užsakymo pateikimo. Kortelės rūšiuojamos pagal prioritetą: kuo ilgiau patiekalas laukia, tuo aukščiau jis yra stulpelyje."
+      },
+      {
+        "q": "Ar galima filtruoti korteles ekrane?",
+        "a": "Taip. Du filtrai: pagal statusą (pavyzdžiui, tik Laukia ir Gaminama) ir pagal kategoriją (gėrimai į barą, karštieji patiekalai į virtuvę). Nustatymai išsaugomi kiekvienam įrenginiui, todėl kiekviena stotis dirba su savo rinkiniu."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Virtuvė be popieriaus per 10 minučių. ",
+    "headingAccent": "14 dienų pilnos prieigos.",
+    "sub": "Kortelės nereikia, atšaukite bet kada. Mumis pasitiki {count} restoranų. Viskas, ko reikia, tai el. paštas – ir užsakymai keliauja tiesiai į virtuvės ekraną."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Ekranai pagal stotis",
+      "sub": "Atskiri ekranai karštųjų patiekalų zonai, barui ir konditerijai – kiekvienas ekranas rodo tik savo patiekalus.",
+      "bullets": [
+        {
+          "icon": "LayoutGrid",
+          "title": "Kategorijų filtras",
+          "sub": "Priskirkite kiekvienam ekranui jo meniu kategorijas"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Srautas kiekvienai stočiai",
+          "sub": "Virtuvė ir baras dirba lygiagrečiai, netrukdydami vieni kitiems"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Statuso filtras",
+          "sub": "Rodykite tik tai, kas gaminama arba paruošta atsiimti"
+        }
+      ]
+    },
+    {
+      "heading": "Statusai vienu paspaudimu",
+      "sub": "Paspaudimas ant kortelės perkelia patiekalą į kitą statusą. Virtuvė ir padavėjas mato tą patį vaizdą.",
+      "bullets": [
+        {
+          "icon": "ClipboardList",
+          "title": "Statusas kiekvienam patiekalui",
+          "sub": "Gaminama, paruošta, patiekta – kiekvienam patiekalui, ne visam užsakymui"
+        },
+        {
+          "icon": "Timer",
+          "title": "Laikmatis nuo užsakymo momento",
+          "sub": "Matykite, kiek laiko patiekalas laukia – ilgiausiai laukiantys kyla į viršų"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "Alergenai ir komentarai",
+          "sub": "Pasirinkimai, svečių pastabos ir alergenai paryškinti spalva"
+        }
+      ]
+    },
+    {
+      "heading": "Užsakymai atkeliauja akimirksniu",
+      "sub": "Svečio užsakymas iš QR meniu arba iš padavėjo atsiranda ekrane tą pačią akimirką, kai pateikiamas, be puslapio perkrovimo.",
+      "bullets": [
+        {
+          "icon": "Rocket",
+          "title": "Ekrane akimirksniu",
+          "sub": "Nuolatinis ryšys – kortelė atsiranda tą pačią sekundę, kai pateikiamas užsakymas"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Visi šaltiniai viename sraute",
+          "sub": "Svečių ir padavėjų užsakymai atkeliauja į vieną ekraną su staliuko numeriu"
+        },
+        {
+          "icon": "Map",
+          "title": "Staliuko numeris kortelėje",
+          "sub": "Virtuvė mato, kur keliauja patiekalas; padavėjas mato, kur jo laukiama"
+        }
+      ]
+    },
+    {
+      "heading": "Prijungiama per kelias minutes",
+      "sub": "Virtuvės ekranas veikia naršyklėje bet kurioje planšetėje ar telefone – prijungiama šešių skaitmenų kodu.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Planšetė arba telefonas",
+          "sub": "Užtenka naršyklės – nereikia pirkti specialios įrangos"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Susiejimo kodas",
+          "sub": "Įveskite šešių skaitmenų kodą iš valdymo skydelio – įrenginys susietas su virtuve"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Prieigos atšaukimas",
+          "sub": "Planšetė pamesta ar pakeista – atjunkite ją iš valdymo skydelio vienu paspaudimu"
+        }
+      ]
+    }
+  ]
+}

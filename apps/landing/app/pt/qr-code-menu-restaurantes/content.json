@@ -1,0 +1,151 @@
+{
+  "locale": "pt",
+  "slug": "qr-code-menu-restaurantes",
+  "trackPrefix": "l_pt_qr",
+  "featureHeading": {
+    "heading": "Não é apenas um código QR",
+    "sub": "Tudo em que um único scan se transforma para os clientes e a sala."
+  },
+  "meta": {
+    "title": "Ementa QR para restaurantes | IQ Rest",
+    "description": "Ementa QR para restaurantes: o cliente lê o código QR na mesa, abre a ementa no navegador e pede na sua língua. 14 dias grátis, sem cartão.",
+    "canonical": "https://iq-rest.com/pt/qr-code-menu-restaurantes",
+    "ogLocale": "pt_PT",
+    "ogTitle": "Ementa QR para restaurantes",
+    "ogDescription": "QR na mesa, ementa no telemóvel — fotos, alergénios, 35 idiomas e atualizações em tempo real.",
+    "brandLine": "IQ Rest — Ementa QR para restaurantes"
+  },
+  "hero": {
+    "headline": "Ementa QR:\nler e pedir",
+    "cta": "Criar ementa QR",
+    "sub": "O cliente lê o QR na mesa, vê fotos e alergénios em 35 idiomas e faz o pedido — sem aplicações."
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurantes"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafés"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bares"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotéis"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzarias"
+    }
+  ],
+  "scan": {
+    "heading": "Já tem uma ementa em papel ou PDF?",
+    "headingAccent": "A IA transforma-a numa ementa QR em 60 segundos.",
+    "sub": "Carregue uma foto da ementa ou um PDF — a IA reconhece categorias, pratos e preços e liga-os logo à ementa QR.",
+    "cta": "Criar ementa QR"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "Um QR, 35 idiomas",
+      "heading": "Um código QR, ementa em 35 idiomas.",
+      "body": "O cliente lê o QR e escolhe a sua língua: a tradução é feita por uma IA com sensibilidade culinária, não por um tradutor comum. Deixam de ser precisas ementas separadas para turistas e folhas soltas na mesa.",
+      "bullets": [
+        "Uma única impressão do QR cobre 35 idiomas, incluída na subscrição.",
+        "A IA entende a linguagem culinária — os nomes dos pratos soam naturais em cada idioma.",
+        "O cliente muda de idioma dentro da ementa, sem voltar a ler o QR."
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Dois clientes leem o mesmo código QR da mesa e consultam a ementa em idiomas diferentes"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Alergénios no QR",
+      "heading": "Alergénios e etiquetas dietéticas dentro da ementa QR.",
+      "body": "Cada prato da ementa ligada ao QR pode ter etiquetas: glúten, lactose, frutos secos, marisco, opções veganas e sem glúten. O cliente filtra no telemóvel os pratos segundo as suas restrições, sem perguntar ao pessoal.",
+      "bullets": [
+        "14 categorias de alergénios ao nível do prato.",
+        "Etiquetas vegano, vegetariano e sem glúten com um clique no painel.",
+        "O cliente filtra a ementa QR segundo as suas restrições."
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Cliente filtra a ementa QR por alergénios no telemóvel enquanto o proprietário edita a lista no tablet"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Mais do que um simples QR",
+      "heading": "Ementa QR com o aspeto do site do restaurante.",
+      "body": "Depois de ler o código, o cliente não cai num PDF plano: vê um ecrã de boas-vindas com vídeo ou uma foto vistosa, a descrição do estabelecimento e uma página de contactos com mapa, telefones e redes sociais. O QR torna-se a porta de entrada online do restaurante.",
+      "bullets": [
+        "Vídeo de fundo ou foto vistosa no ecrã inicial da ementa QR.",
+        "Espaço para apresentar o conceito do estabelecimento e de cada categoria.",
+        "Página de contactos integrada: mapa, telefone, Instagram, WhatsApp."
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Dois telemóveis na mesa: ecrã inicial da ementa QR com vídeo de fundo e página de contactos com mapa"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Pedido a partir do QR · opcional",
+      "heading": "A partir do código QR, o cliente também pode pedir.",
+      "body": "Além de consultar a ementa, a ementa QR pode tornar-se um canal de pedidos: o cliente adiciona pratos ao carrinho e envia o pedido. O pedido chega ao empregado na sala, ao WhatsApp ou ao ecrã da cozinha. A funcionalidade ativa-se e desativa-se nas definições conforme necessário.",
+      "bullets": [
+        "Carrinho, comentários e envio do pedido diretamente a partir da leitura do QR.",
+        "O pedido chega de imediato à sala, ao WhatsApp ou ao ecrã da cozinha.",
+        "A funcionalidade pode ativar-se por horas, salas ou restaurantes específicos."
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Dois telemóveis na mesa: carrinho criado a partir da ementa QR e confirmação do pedido enviado"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "O que os restauradores perguntam sobre a ementa QR da IQ Rest. Não encontrou a sua pergunta? Escreva-nos no WhatsApp.",
+    "items": [
+      {
+        "q": "Como funciona a ementa QR da IQ Rest?",
+        "a": "Em cada mesa há um código QR impresso. O cliente lê-o com a câmara do telemóvel e o navegador abre a ementa do restaurante — fotos, descrições, alergénios e preços atualizados. Não é preciso descarregar nenhuma aplicação, nem para o cliente nem para o pessoal."
+      },
+      {
+        "q": "São precisas competências técnicas para criar uma ementa QR?",
+        "a": "Não. O painel funciona com cliques e arrastar, sem código nem configurações complicadas. Adicionar um prato leva alguns segundos: nome, preço, foto. A configuração inicial demora normalmente entre 30 minutos e uma hora; se já tem a ementa em PDF, a IA converte-a automaticamente."
+      },
+      {
+        "q": "Os clientes têm de instalar uma aplicação para ler o QR?",
+        "a": "Não. A câmara integrada do iPhone e do Android reconhece o código QR em segundos e abre a ementa diretamente no navegador. O painel de administração também funciona em qualquer navegador moderno — telemóvel, tablet ou portátil."
+      },
+      {
+        "q": "Como se imprimem os códigos QR para as mesas?",
+        "a": "Os códigos QR geram-se automaticamente no painel (um por mesa ou um para todo o estabelecimento) e descarregam-se num PDF pronto a imprimir. Basta uma impressora de escritório e um suporte: expositor, autocolante ou base de copos."
+      },
+      {
+        "q": "É possível usar um domínio próprio para a ementa QR?",
+        "a": "Sim. Suportamos o domínio do restaurante com certificado SSL (por exemplo menu.vashrestoran.ru): quando o cliente lê o QR, vê o endereço do seu restaurante, não um subdomínio genérico. A configuração do DNS leva 5 a 10 minutos e acompanhamo-lo no processo."
+      },
+      {
+        "q": "Posso gerir os códigos QR de vários restaurantes numa só conta?",
+        "a": "Sim, a pedido. Uma conta pode reunir vários estabelecimentos, cada um com os seus códigos QR, ementa, design e estatísticas. Escreva-nos no WhatsApp e ativamos o modo multirrestaurante."
+      },
+      {
+        "q": "É complicado lançar uma ementa QR de raiz?",
+        "a": "Três passos: (1) crie as categorias; (2) adicione os pratos com nome, preço e foto; (3) imprima os QR e coloque-os nas mesas. Se já tem a ementa em papel ou PDF, carregue-a — a IA reconhece as categorias e os preços e preenche as fichas. Uma ementa básica pode estar online em 5 minutos."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Ementa QR em 10 minutos. ",
+    "headingAccent": "14 dias de acesso total.",
+    "sub": "Não precisa de cartão, cancele a qualquer momento. {count} restaurantes confiam em nós. Só um email — e nenhuma aplicação para os clientes."
+  }
+}

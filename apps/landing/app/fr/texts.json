@@ -1,0 +1,261 @@
+{
+  "htmlLang": "fr",
+  "htmlDir": "ltr",
+  "meta": {
+    "title": "Menu digital, écran de cuisine et réservations — IQ Rest",
+    "description": "Gérez votre restaurant depuis une seule application : menu digital multilingue, écran de cuisine et réservations 24h/24. Lancement en 5 minutes. 14 jours gratuits, sans carte bancaire.",
+    "canonical": "https://iq-rest.com/fr",
+    "ogLocale": "fr_FR",
+    "ogTitle": "Menu digital, écran de cuisine et réservations",
+    "ogDescription": "Gérez votre restaurant depuis une seule application : menu digital multilingue, écran de cuisine et réservations 24h/24. Lancement en 5 minutes. 14 jours gratuits, sans carte bancaire."
+  },
+  "jsonLd": {
+    "appName": "IQ Rest — Plateforme de gestion de restaurant"
+  },
+  "ctaText": "Essayer gratuitement",
+  "homeCtaText": "Essayer gratuitement",
+  "trust": [
+    {
+      "kind": "num",
+      "value": 35,
+      "label": "Langues dans le menu"
+    },
+    {
+      "kind": "text",
+      "value": "24/7",
+      "label": "Réservations en ligne"
+    },
+    {
+      "kind": "num",
+      "value": 5,
+      "suffix": " min",
+      "label": "Pour le lancement"
+    },
+    {
+      "kind": "count",
+      "label": "Restaurants avec nous"
+    }
+  ],
+  "demoText": "Ouvrir la démo",
+  "microcopy": "14 jours gratuits · Sans carte bancaire · Annulation à tout moment",
+  "header": {
+    "navFeatures": "Fonctionnalités",
+    "navHow": "Comment ça marche",
+    "navPricing": "Tarifs",
+    "navFaq": "Questions",
+    "signIn": "Se connecter",
+    "viewFeatures": "Voir les fonctionnalités",
+    "cta": "Commencer gratuitement",
+    "navProducts": "Fonctionnalités",
+    "navGuide": "Guide",
+    "navAbout": "À propos",
+    "menuFeaturesHeading": "Fonctionnalités",
+    "menuInfoHeading": "Informations"
+  },
+  "hero": {
+    "verticals": [
+      "Restaurants",
+      "Cafés",
+      "Bars",
+      "Hôtels",
+      "Pizzerias"
+    ],
+    "headline": "Menu digital pour votre restaurant.\nLancement en 5 minutes.",
+    "sub": "Un menu digital pour votre restaurant en 5 minutes. Tout est inclus : éditeur sans programmation, reconnaissance IA du menu papier, QR codes sur les tables et prise de commandes sans commission.",
+    "dynamicHeadlines": [
+      "0 % de commission.",
+      "35 langues avec l'IA.",
+      "Commandes en ligne.",
+      "Réservations 24h/24.",
+      "Design premium."
+    ],
+    "painBullets": [
+      "0 % de commission : toutes les commandes arrivent directement au restaurant.",
+      "Traduction en 35 langues avec l'IA — les touristes comprennent la carte et commandent davantage.",
+      "Réservation 24h/24 : vos clients réservent leur table eux-mêmes, sans appels aux heures de pointe.",
+      "Prix flexibles : les modifications du menu prennent effet instantanément."
+    ],
+    "rating": "Plus de 500 restaurants dans plus de 30 pays"
+  },
+  "founder": {
+    "eyebrow": "Créé par des restaurateurs",
+    "quoteStart": "Avec ma femme, nous avons dirigé notre propre café et nous connaissons de l'intérieur le quotidien d'un restaurant : prise de commandes, réservations, gestion de la salle et de la cuisine. Nous voulions un outil unique — moderne, simple à mettre en place et compréhensible au premier regard —",
+    "quoteAccent": "c'est ainsi qu'est née l'idée de la plateforme que nous développons pour d'autres restaurateurs.",
+    "sign": "Bogdan Sokolov · fondateur, ancien propriétaire de café",
+    "photoAlt": "Bogdan Sokolov, fondateur d'IQ Rest"
+  },
+  "pricing": {
+    "badge": "Sans commission · Sans engagement",
+    "heading": "Un seul tarif.",
+    "headingAccent": "Tout inclus.",
+    "sub": "Menu QR, prise de commandes, traduction IA, site web du restaurant et réservations. Un seul paiement mensuel transparent.",
+    "monthlyLabel": "Mensuel",
+    "yearlyLabel": "Annuel",
+    "saveBadge": "Économisez 25 %",
+    "perMonth": "par mois",
+    "billedAnnually": "Facturation annuelle : {total}",
+    "youSave": "Vous économisez {amount}",
+    "trust": {
+      "secure": "Paiement sécurisé via Stripe",
+      "noCommitment": "Sans engagement",
+      "quick": "Activation en quelques minutes",
+      "restaurants": "Plus de 500 restaurants"
+    }
+  },
+  "faq": {
+    "eyebrow": "Encore des questions ?",
+    "heading": "Questions",
+    "headingAccent": "fréquentes",
+    "sub": "Ce que les restaurateurs demandent le plus souvent avant de se lancer. Vous ne trouvez pas votre réponse ? Écrivez-nous sur WhatsApp — ce sont des personnes qui répondent, pas un bot.",
+    "whatsappCta": "Écrire sur WhatsApp",
+    "whatsappPrefill": "Bonjour, j'ai une question au sujet d'IQ Rest",
+    "items": [
+      {
+        "q": "Que comprend la période d'essai et que se passe-t-il ensuite ?",
+        "a": "Pendant 14 jours, vous avez accès à toutes les fonctionnalités de la plateforme, sans enregistrer de carte bancaire. Si aucun moyen de paiement n'est ajouté au bout de 14 jours, le compte est automatiquement mis en pause. Nous ne prélevons jamais d'argent sans votre accord. Vous pouvez ajouter un moyen de paiement plus tard et reprendre là où vous vous étiez arrêté. L'annulation de l'abonnement se fait en un clic."
+      },
+      {
+        "q": "Prenez-vous une commission sur les commandes ?",
+        "a": "Non, nous ne prenons aucun pourcentage sur les commandes. Toutes les commandes passées via le menu QR arrivent directement au restaurant, sans commission d'agrégateur. Vous payez un abonnement mensuel fixe — et rien d'autre."
+      },
+      {
+        "q": "Les clients doivent-ils installer une application, et faut-il des compétences techniques ?",
+        "a": "Aucune application n'est nécessaire pour vos clients : il suffit de pointer l'appareil photo du smartphone sur le QR code, et le menu s'ouvre dans le navigateur. Côté restaurant, aucune compétence technique n'est requise non plus — le panneau d'administration fonctionne directement dans le navigateur, sur téléphone, tablette ou ordinateur portable. Tout se fait par clics et glisser-déposer, sans programmation."
+      },
+      {
+        "q": "En combien de temps les modifications du menu — prix, ajout de plats — sont-elles appliquées ?",
+        "a": "Instantanément. Les modifications effectuées depuis votre téléphone apparaissent chez vos clients en quelques secondes. Ajouter un nouveau plat ne prend que quelques clics : nom, prix, photo. Sans réimprimer le menu papier et sans faire appel à un designer."
+      },
+      {
+        "q": "Combien de langues sont prises en charge ?",
+        "a": "35 langues sont prises en charge avec une traduction automatique basée sur l'intelligence artificielle. Une seule action — et tout le menu est traduit. L'IA tient compte du contexte culinaire : les noms et les descriptions des plats sonnent naturellement dans toutes les langues. Les touristes commandent avec plus d'assurance quand ils comprennent la composition des plats."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Lancement en 10 minutes. ",
+    "headingAccent": "14 jours d'accès complet.",
+    "sub": "Sans carte bancaire, annulation à tout moment. {count} restaurants nous font confiance. Seul un email est nécessaire."
+  },
+  "featureHighlights": {
+    "heading": "Tout est inclus",
+    "sub": "Les fonctionnalités qui transforment vos clients en commandes — dans chaque formule, sans supplément."
+  },
+  "scan": {
+    "heading": "Vous avez un menu papier ou un PDF ?",
+    "headingAccent": "L'IA le numérise en 60 secondes.",
+    "sub": "Téléchargez une photo ou un document — l'IA reconnaît automatiquement les catégories, les plats et les prix.",
+    "cta": "Scanner le menu →"
+  },
+  "pricingQuiz": {
+    "heading": "Composez votre formule ",
+    "sub": "Commencez par le menu — ajoutez les réservations, la cuisine et le domaine quand vous en aurez besoin.",
+    "billingLabel": "Facturation :",
+    "monthly": "Mensuelle",
+    "yearly": "Annuelle",
+    "restaurantsLabel": "Restaurants :",
+    "fewerAria": "Moins de restaurants",
+    "moreAria": "Plus de restaurants",
+    "menuTitle": "Menu et site web",
+    "menuHint": "Toujours inclus",
+    "reservationsTitle": "Système de réservation",
+    "reservationsHint": "Réservation de tables",
+    "kdsTitle": "Écran de cuisine",
+    "kdsHint": "Commandes sur l'écran de cuisine",
+    "domainTitle": "Nom de domaine",
+    "domainHint": "Votre propre adresse web",
+    "perMonthSuffix": "/mois",
+    "perYearSuffix": "/an",
+    "perMonthLongSuffix": "/mois",
+    "saveYearlyTemplate": "Économisez {amount} par an avec la facturation annuelle",
+    "volumeDiscountTemplate": "Remise de {percent} %",
+    "saveUpToHint": "Économisez jusqu'à 50 % à partir de 5 restaurants",
+    "billedYearly": "Facturation une fois par an",
+    "billedMonthly": "Facturation mensuelle",
+    "enterprisePre": "Besoin d'une formule sur mesure ?",
+    "enterpriseCta": "Écrivez-nous",
+    "enterprisePost": "et nous la composerons pour vous.",
+    "enterpriseWa": "Bonjour ! J'ai besoin d'une formule sur mesure pour mes restaurants.",
+    "headingAccent": "adaptée à votre restaurant",
+    "multiplePre": "Besoin de plus de restaurants ?",
+    "multipleCta": "Voir les options",
+    "restaurantOne": "restaurant",
+    "restaurantFew": "restaurants",
+    "restaurantMany": "restaurants",
+    "multipleChangePre": "Un autre nombre de restaurants ?",
+    "multipleChangeCta": "Modifier"
+  },
+  "pricingCta": {
+    "heading": "Des tarifs simples et flexibles",
+    "sub": "Ne payez que pour les fonctionnalités dont vous avez besoin — composez votre formule en une minute.",
+    "fromTemplate": "à partir de {price}/mois",
+    "button": "Calculer ma formule"
+  },
+  "footer": {
+    "copyrightTemplate": "© {year} IQ Rest. Tous droits réservés.",
+    "featuresHeading": "Fonctionnalités",
+    "featureLinks": [
+      {
+        "href": "/ru/tsifrovoe-menyu",
+        "label": "Menu digital"
+      },
+      {
+        "href": "/ru/priem-zakazov-restoran",
+        "label": "Prise de commandes"
+      },
+      {
+        "href": "/ru/bronirovanie-stolov",
+        "label": "Réservations"
+      },
+      {
+        "href": "/ru/kds-kuhonnyy-displey",
+        "label": "Écran de cuisine"
+      }
+    ],
+    "infoHeading": "Informations",
+    "legalHeading": "Documents",
+    "currencyHeading": "Devise"
+  },
+  "common": {
+    "close": "Fermer",
+    "menu": "Menu",
+    "help": "Aide"
+  },
+  "auth": {
+    "emailLabel": "Email",
+    "emailPlaceholder": "Saisissez votre email",
+    "or": "ou",
+    "continueGoogle": "Continuer avec Google",
+    "continueApple": "Continuer avec Apple",
+    "consent": {
+      "line": "En continuant, vous acceptez les <terms>Conditions d'utilisation</terms>. Le traitement de vos données est décrit dans la <privacy>Politique de confidentialité</privacy>."
+    },
+    "signInTitle": "Content de vous revoir",
+    "signInSubtitle": "Saisissez votre email — nous vous enverrons un code à 6 chiffres pour vous connecter.",
+    "signInButton": "Se connecter",
+    "registerTitle": "Créez votre compte",
+    "registerSubtitle": "14 jours gratuits, sans carte bancaire. Nous vous enverrons un code de connexion par email — sans mot de passe ni formulaires.",
+    "registerButton": "Créer un compte",
+    "switchSignIn": "Se connecter",
+    "switchCreate": "S'inscrire",
+    "verifyTitle": "Vérifiez votre boîte mail",
+    "verifySubtitle": "Nous avons envoyé un code à 6 chiffres à {email}.",
+    "verifyCodeLabel": "Code de vérification",
+    "checkSpam": "Vous ne voyez pas l'email ? Vérifiez votre dossier spam.",
+    "verifyButton": "Continuer",
+    "resendCode": "Renvoyer le code",
+    "resendSent": "Code envoyé",
+    "changeEmail": "Utiliser un autre email",
+    "metaSignIn": "Connexion",
+    "metaRegister": "Créer un compte",
+    "errors": {
+      "emailInvalid": "Saisissez un email valide.",
+      "sendFailed": "Impossible d'envoyer le code. Veuillez réessayer.",
+      "verifyFailed": "Impossible de vérifier le code. Veuillez réessayer.",
+      "codeExpired": "Le code a expiré. Demandez-en un nouveau.",
+      "noCode": "Code introuvable ou expiré. Demandez-en un nouveau.",
+      "invalidCode": "Code incorrect. Veuillez réessayer.",
+      "tooManyAttempts": "Trop de tentatives. Patientez, puis réessayez."
+    }
+  }
+}

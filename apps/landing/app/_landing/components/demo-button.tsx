@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { X, Loader2 } from "lucide-react";
 import { analytics } from "@/lib/analytics";
+import { useCommonTexts } from "../lib/landing-strings";
 
 // Logical viewport width the demo is rendered at inside the iframe. The
 // iframe keeps this fixed width and is scaled down to fit the device frame,
@@ -73,6 +74,7 @@ export function DemoButton({
   className = "",
   variant = "phone",
 }: DemoButtonProps) {
+  const common = useCommonTexts();
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   // Phone viewport → render the tablet KDS demo at a narrower logical width
@@ -196,7 +198,7 @@ export function DemoButton({
                 <button
                   type="button"
                   onClick={handleClose}
-                  aria-label="Close"
+                  aria-label={common.close}
                   className="fixed top-4 right-4 text-white hover:text-gray-300 transition-colors z-[60]"
                 >
                   <X className="w-8 h-8" />
@@ -241,7 +243,7 @@ export function DemoButton({
                 <button
                   type="button"
                   onClick={handleClose}
-                  aria-label="Close"
+                  aria-label={common.close}
                   className="fixed top-4 right-4 text-white hover:text-gray-300 transition-colors z-[60]"
                 >
                   <X className="w-8 h-8" />

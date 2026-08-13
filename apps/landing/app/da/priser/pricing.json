@@ -1,0 +1,59 @@
+{
+  "breadcrumbLabel": "Priser",
+  "meta": {
+    "title": "Priser — Sammensæt din restaurantpakke fra 9.90 €/md | IQ Rest",
+    "description": "Sammensæt din pakke af moduler: QR-menu med AI-oversættelse, ordrehåndtering, bordbestilling, køkkenskærm. Fra 9.90 €/md pr. restaurant, mængderabat. 14 dage gratis, intet kort, opsig når som helst.",
+    "canonical": "https://iq-rest.com/da/priser",
+    "ogLocale": "da_DK",
+    "ogTitle": "Priser — Sammensæt din restaurantpakke",
+    "ogDescription": "En modulær pakke fra 9.90 €/md: QR-menu, ordrer, bordbestilling, KDS. Mængderabat, ingen skjulte gebyrer. 14 dage gratis."
+  },
+  "faqSub": "Almindelige spørgsmål fra restauranter om priser og betaling. Kan du ikke finde dit — skriv til os på WhatsApp.",
+  "faqItems": [
+    {
+      "q": "Hvordan er prisen bygget op?",
+      "a": "Du sammensætter din pakke af moduler. Basen er en QR-menu med AI-oversættelse til 35 sprog og administration fra enhver enhed. Tilføj derefter det, du har brug for: bordbestilling, køkkenskærmen, dit eget domæne. Prisen er pr. restaurant, med mængderabat fra den anden."
+    },
+    {
+      "q": "Er der provision på bestillinger?",
+      "a": "Nej. Ordrer fra QR-menuen og fra tjenere går direkte til restauranten. Du betaler kun en fast månedlig pris."
+    },
+    {
+      "q": "Hvordan fungerer prøveperioden?",
+      "a": "14 dages fuld adgang til alle funktioner, intet kreditkort nødvendigt. Hvis betalingen ikke er sat op ved udløbet, sættes kontoen på pause: panelet forbliver tilgængeligt i skrivebeskyttet tilstand, mens gæstemenuen og ordrehåndteringen slås fra. Der er ingen automatiske trækninger."
+    },
+    {
+      "q": "Hvad sker der med mine data, mens kontoen er på pause?",
+      "a": "Alt gemmes: menu, fotos, ordrehistorik, bookinger, indstillinger, statistik. Sæt betalingen op, selv seks måneder senere — alt vender tilbage præcis, som det var."
+    },
+    {
+      "q": "Skal jeg genoptrykke QR-koderne?",
+      "a": "Nej. Mens kontoen er på pause, viser koderne en meddelelse om, at menuen er \"midlertidigt utilgængelig\"; når betalingen er sat op, åbner de samme koder menuen igen."
+    },
+    {
+      "q": "Kan jeg ændre min pakke?",
+      "a": "Ja, når som helst fra panelet. Forskellen beregnes forholdsmæssigt over de resterende dage af den betalte periode. En deaktiveret funktion beholder sine data."
+    },
+    {
+      "q": "Hvor mange restauranter kan jeg tilslutte?",
+      "a": "Så mange du vil, alle administreret fra ét panel. Mængderabat op til 50 % ved 5+ restauranter. For store kæder — en skræddersyet aftale via WhatsApp."
+    },
+    {
+      "q": "Hvad er rabatten på årsplanen?",
+      "a": "Omkring 30 % sammenlignet med månedlig fakturering. Det præcise beløb vises, mens du sammensætter din pakke."
+    },
+    {
+      "q": "Hvordan opsiger jeg mit abonnement?",
+      "a": "Med ét klik fra panelet. Kontoen fungerer indtil udgangen af den betalte periode, hvorefter den sættes på pause. Dine data gemmes."
+    },
+    {
+      "q": "Hvilke betalingsmetoder accepterer I?",
+      "a": "Visa, Mastercard, American Express, Apple Pay, Google Pay — via Stripe. I Europa understøtter årsplanen også SEPA Direct Debit."
+    }
+  ],
+  "finalCta": {
+    "heading": "Én pris. Nul risiko. ",
+    "headingAccent": "14 dages fuld adgang.",
+    "sub": "Intet kort kræves, opsig når som helst — {count} restauranter bruger os allerede. Det kræver kun en e-mail at starte."
+  }
+}

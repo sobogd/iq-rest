@@ -1,0 +1,151 @@
+{
+  "locale": "hr",
+  "slug": "qr-meni-restoran",
+  "trackPrefix": "l_hr_qr",
+  "featureHeading": {
+    "heading": "Ne samo QR kod",
+    "sub": "Sve što jedno skeniranje postaje za vaše goste i vašu salu."
+  },
+  "meta": {
+    "title": "QR jelovnik za restorane | IQ Rest",
+    "description": "QR jelovnik za restorane: gosti skeniraju QR kod na stolu, otvaraju jelovnik u pregledniku i naručuju na svom jeziku. 14 dana besplatno, bez kartice.",
+    "canonical": "https://iq-rest.com/hr/qr-meni-restoran",
+    "ogLocale": "hr_HR",
+    "ogTitle": "QR jelovnik za restorane",
+    "ogDescription": "QR na stolu, jelovnik na telefonu — fotografije, alergeni, 35 jezika i ažuriranja u stvarnom vremenu.",
+    "brandLine": "IQ Rest — QR jelovnik za restorane"
+  },
+  "hero": {
+    "headline": "QR jelovnik:\nskeniraj i naruči",
+    "cta": "Izradi QR jelovnik",
+    "sub": "Gosti skeniraju QR na stolu, pregledavaju fotografije i alergene na 35 jezika i naručuju — bez aplikacija."
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restorani"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kafići"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barovi"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hoteli"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerije"
+    }
+  ],
+  "scan": {
+    "heading": "Već imate papirnati jelovnik ili PDF?",
+    "headingAccent": "AI ga pretvara u QR jelovnik u 60 sekundi.",
+    "sub": "Učitajte fotografiju jelovnika ili PDF — AI prepoznaje kategorije, jela i cijene te ih izravno povezuje s vašim QR jelovnikom.",
+    "cta": "Izradi QR jelovnik"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "Jedan QR, 35 jezika",
+      "heading": "Jedan QR kod, jelovnik na 35 jezika.",
+      "body": "Gosti skeniraju QR i biraju svoj jezik: prijevod radi AI s kulinarskim osjećajem, a ne običan prevoditelj. Nema više posebnih turističkih jelovnika ili razbacanih papira po stolu.",
+      "bullets": [
+        "Jedan ispisani QR pokriva 35 jezika, uključeno u pretplatu.",
+        "AI govori jezikom hrane — nazivi jela zvuče prirodno na svakom jeziku.",
+        "Gosti mijenjaju jezike unutar jelovnika, bez ponovnog skeniranja QR koda."
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Dva gosta skeniraju isti QR kod sa stola i čitaju jelovnik na različitim jezicima"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Alergeni u QR-u",
+      "heading": "Alergeni i oznake prehrane unutar QR jelovnika.",
+      "body": "Svako jelo u jelovniku iza QR koda može imati oznake: gluten, laktoza, orašasti plodovi, plodovi mora, veganske i bezglutenske opcije. Gosti filtriraju jela prema svojim ograničenjima sa svog telefona, bez ispitivanja osoblja.",
+      "bullets": [
+        "14 kategorija alergena na razini jela.",
+        "Oznake za vegansko, vegetarijansko i bez glutena jednim klikom u administraciji.",
+        "Gosti filtriraju QR jelovnik prema vlastitim ograničenjima."
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Gost filtrira QR jelovnik po alergenima na telefonu dok vlasnik uređuje popis na tabletu"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Više od običnog QR-a",
+      "heading": "QR jelovnik u stilu web stranice restorana.",
+      "body": "Nakon skeniranja koda, gosti ne dolaze na običan PDF: vide početni ekran s videom ili upečatljivom fotografijom, opisom objekta i kontakt stranicom s kartom, brojevima telefona i društvenim mrežama. QR postaje ulazna vrata vašeg restorana na internetu.",
+      "bullets": [
+        "Video u pozadini ili upečatljiva fotografija na početnom ekranu QR jelovnika.",
+        "Prostor za priču o vašem objektu i svakoj kategoriji.",
+        "Ugrađena kontakt stranica: karta, telefon, Instagram, WhatsApp."
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Dva telefona na stolu: početni ekran QR jelovnika s videom u pozadini i kontakt stranica s kartom"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Naručivanje s QR-a · opcionalno",
+      "heading": "S QR koda gosti mogu i naručivati.",
+      "body": "Osim pregledavanja jelovnika, QR jelovnik može postati kanal za naručivanje: gosti dodaju jela u košaricu i šalju zahtjev. Narudžba stiže konobaru u salu, na vaš WhatsApp ili na kuhinjski ekran. Ova se mogućnost može uključiti i isključiti u postavkama kada god zatreba.",
+      "bullets": [
+        "Košarica, napomene i slanje narudžbe izravno iz QR skeniranja.",
+        "Narudžba odmah stiže u salu, na WhatsApp ili na kuhinjski ekran.",
+        "Uključite ovu mogućnost po satima, katovima ili za određene restorane."
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Dva telefona na stolu: košarica kreirana iz QR jelovnika i potvrda predane narudžbe"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Što ugostitelji pitaju o IQ Rest QR jelovniku. Ne nalazite svoje pitanje? Pošaljite nam poruku na WhatsApp.",
+    "items": [
+      {
+        "q": "Kako radi IQ Rest QR jelovnik?",
+        "a": "Svaki stol ima ispisani QR kod. Gosti ga skeniraju kamerom telefona, a preglednik otvara jelovnik restorana — fotografije, opise, alergene i ažurne cijene. Nema aplikacija za preuzimanje za goste ili osoblje."
+      },
+      {
+        "q": "Trebaju li mi tehnička znanja za izradu QR jelovnika?",
+        "a": "Ne. Administracija radi na klikove i povlačenje, bez koda ili složenih postavki. Dodavanje jela traje nekoliko sekundi: naziv, cijena, fotografija. Početno postavljanje obično traje 30 minuta do sat vremena; ako već imate PDF jelovnik, AI ga automatski pretvara."
+      },
+      {
+        "q": "Trebaju li gosti instalirati aplikaciju za čitanje QR-a?",
+        "a": "Ne. Ugrađena kamera na iPhoneu i Androidu prepoznaje QR kod u sekundi i otvara jelovnik izravno u pregledniku. Administracija također radi u svakom modernom pregledniku — na telefonu, tabletu ili laptopu."
+      },
+      {
+        "q": "Kako se ispisuju QR kodovi za stolove?",
+        "a": "QR kodovi se automatski generiraju u administraciji (jedan po stolu ili jedan za cijeli objekt) i preuzimaju kao PDF spreman za ispis. Običan uredski pisač i stalak su sve što vam treba: držač, naljepnica ili podmetač."
+      },
+      {
+        "q": "Mogu li koristiti vlastitu domenu za QR jelovnik?",
+        "a": "Da. Podržavamo domenu vašeg restorana sa SSL certifikatom (na primjer menu.vasrestoran.com): kada gosti skeniraju QR, vide adresu vašeg restorana, a ne generičku poddomenu. Postavljanje DNS-a traje 5–10 minuta i vodimo vas kroz to."
+      },
+      {
+        "q": "Mogu li upravljati QR kodovima za više restorana s jednog računa?",
+        "a": "Da, na zahtjev. Jedan račun može okupiti više objekata, svaki sa svojim QR kodovima, jelovnikom, dizajnom i analitikom. Pošaljite nam poruku na WhatsApp i uključit ćemo način rada za više restorana."
+      },
+      {
+        "q": "Je li teško pokrenuti QR jelovnik od nule?",
+        "a": "Tri koraka: (1) kreirajte kategorije; (2) dodajte jela s nazivom, cijenom i fotografijom; (3) ispišite QR kodove i postavite ih na stolove. Ako već imate papirnati jelovnik ili PDF, učitajte ga — AI prepoznaje kategorije i cijene te ispunjava kartice. Osnovni jelovnik može biti online u 5 minuta."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "QR jelovnik u 10 minuta. ",
+    "headingAccent": "14 dana punog pristupa.",
+    "sub": "Bez kartice, otkažite bilo kada. Vjeruje nam {count} restorana. Samo e-mail — i bez aplikacija za vaše goste."
+  }
+}

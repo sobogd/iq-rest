@@ -1,0 +1,261 @@
+{
+  "htmlLang": "ro",
+  "htmlDir": "ltr",
+  "meta": {
+    "title": "Meniu digital, KDS și rezervări — IQ Rest",
+    "description": "Gestionează-ți restaurantul dintr-o singură aplicație: meniu digital multilingv, KDS și rezervări 24/7. Gata în 5 minute. 14 zile gratuit, fără card.",
+    "canonical": "https://iq-rest.com/ro",
+    "ogLocale": "ro_RO",
+    "ogTitle": "Meniu digital, KDS și rezervări",
+    "ogDescription": "Gestionează-ți restaurantul dintr-o singură aplicație: meniu digital multilingv, KDS și rezervări 24/7. Gata în 5 minute. 14 zile gratuit, fără card."
+  },
+  "jsonLd": {
+    "appName": "IQ Rest — Platformă de Management pentru Restaurante"
+  },
+  "ctaText": "Încearcă gratuit",
+  "homeCtaText": "Încearcă gratuit",
+  "trust": [
+    {
+      "kind": "num",
+      "value": 35,
+      "label": "Limbi pentru meniu"
+    },
+    {
+      "kind": "text",
+      "value": "24/7",
+      "label": "Rezervări online"
+    },
+    {
+      "kind": "num",
+      "value": 5,
+      "suffix": " min",
+      "label": "Pentru lansare"
+    },
+    {
+      "kind": "count",
+      "label": "Restaurante care ne folosesc"
+    }
+  ],
+  "demoText": "Vezi demo",
+  "microcopy": "14 zile gratuit · Fără card bancar · Anulezi oricând",
+  "header": {
+    "navFeatures": "Funcționalități",
+    "navHow": "Cum funcționează",
+    "navPricing": "Prețuri",
+    "navFaq": "Întrebări frecvente",
+    "signIn": "Autentificare",
+    "viewFeatures": "Vezi funcționalitățile",
+    "cta": "Începe gratuit",
+    "navProducts": "Funcționalități",
+    "navGuide": "Ghid",
+    "navAbout": "Despre noi",
+    "menuFeaturesHeading": "Funcționalități",
+    "menuInfoHeading": "Informații"
+  },
+  "hero": {
+    "verticals": [
+      "Restaurante",
+      "Cafenele",
+      "Baruri",
+      "Hoteluri",
+      "Pizzerii"
+    ],
+    "headline": "Meniu digital pentru restaurantul tău.\nOnline în 5 minute.",
+    "sub": "Un meniu digital pentru restaurant în 5 minute. Totul inclus: editor simplu, recunoaștere AI a meniurilor tipărite, coduri QR pe mese și comenzi fără comision.",
+    "dynamicHeadlines": [
+      "0% comision.",
+      "35 de limbi cu AI.",
+      "Comenzi online.",
+      "Rezervări 24/7.",
+      "Design premium."
+    ],
+    "painBullets": [
+      "0% comision: fiecare comandă ajunge direct la restaurant.",
+      "Traducere AI în 35 de limbi — turiștii înțeleg meniul și comandă mai mult.",
+      "Rezervări 24/7: oaspeții își rezervă singuri masa, fără telefoane în orele de vârf.",
+      "Prețuri flexibile: modificările din meniu se aplică instantaneu."
+    ],
+    "rating": "Peste 500 de restaurante din 30+ țări"
+  },
+  "founder": {
+    "eyebrow": "Creat de antreprenori HoReCa",
+    "quoteStart": "Eu și soția mea am avut propria cafenea și știm cum arată o zi în HoReCa pe dinăuntru: preluarea comenzilor, rezervările, sala și bucătăria. Ne-am dorit o singură aplicație — modernă, ușor de configurat și clară de la prima vedere —",
+    "quoteAccent": "așa a apărut ideea platformei pe care o dezvoltăm acum pentru alți proprietari de restaurante.",
+    "sign": "Bogdan Sokolov · fondator, fost proprietar de cafenea",
+    "photoAlt": "Bogdan Sokolov, fondatorul IQ Rest"
+  },
+  "pricing": {
+    "badge": "Fără comisioane · Fără contracte",
+    "heading": "Un singur abonament.",
+    "headingAccent": "Totul inclus.",
+    "sub": "Meniu QR, preluare comenzi, traducere AI, site pentru restaurant și rezervări. O singură plată lunară transparentă.",
+    "monthlyLabel": "Lunar",
+    "yearlyLabel": "Anual",
+    "saveBadge": "Economisești 25%",
+    "perMonth": "pe lună",
+    "billedAnnually": "Facturat anual: {total}",
+    "youSave": "Economisești {amount}",
+    "trust": {
+      "secure": "Plată securizată prin Stripe",
+      "noCommitment": "Fără perioadă contractuală",
+      "quick": "Activare în câteva minute",
+      "restaurants": "Peste 500 de restaurante"
+    }
+  },
+  "faq": {
+    "eyebrow": "Mai ai întrebări?",
+    "heading": "Întrebări",
+    "headingAccent": "frecvente",
+    "sub": "Ce întreabă cel mai des proprietarii de restaurante înainte să-și facă un cont. Dacă nu găsești răspunsul — scrie-ne pe WhatsApp, îți răspunde un om, nu un robot.",
+    "whatsappCta": "Scrie-ne pe WhatsApp",
+    "whatsappPrefill": "Salut, am o întrebare despre IQ Rest",
+    "items": [
+      {
+        "q": "Ce include perioada de probă și ce se întâmplă după ce expiră?",
+        "a": "Timp de 14 zile ai acces la toate funcționalitățile platformei, fără să introduci un card bancar. Dacă nu adaugi o metodă de plată după cele 14 zile, contul este pus automat pe pauză. Nu te taxăm niciodată fără acordul tău. Poți adăuga cardul mai târziu și vei relua exact de unde ai rămas. Anularea abonamentului se face cu un singur click."
+      },
+      {
+        "q": "Percepeți comision din comenzi?",
+        "a": "Nu, nu luăm niciun procent din comenzi. Toate comenzile din meniul QR ajung direct la restaurant, fără taxe de platformă. Plătești un abonament lunar fix — și nimic altceva."
+      },
+      {
+        "q": "Oaspeții trebuie să instaleze o aplicație? Avem nevoie de cunoștințe tehnice?",
+        "a": "Oaspeții nu au nevoie de aplicație: pur și simplu scanează codul QR cu camera telefonului și meniul se deschide în browser. Nici restaurantul nu are nevoie de cunoștințe tehnice — panoul de administrare funcționează direct în browser pe telefon, tabletă sau laptop. Totul se face din câteva atingeri, fără programare."
+      },
+      {
+        "q": "Cât de repede se aplică modificările din meniu — prețuri, preparate noi?",
+        "a": "Instantaneu. Modificările făcute de pe telefon apar pentru oaspeți în câteva secunde. Adăugarea unui preparat nou durează câteva secunde: nume, preț, fotografie. Nu mai trebuie să retipărești meniuri și nu ai nevoie de designer."
+      },
+      {
+        "q": "Câte limbi sunt suportate?",
+        "a": "Sunt suportate 35 de limbi prin traducere automată cu AI. O singură acțiune — și tot meniul este tradus. AI-ul înțelege contextul culinar, așa că numele și descrierile preparatelor sună natural în fiecare limbă. Turiștii comandă cu mai multă încredere când înțeleg ce conține un preparat."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Gata de lansare în 10 minute. ",
+    "headingAccent": "14 zile de acces complet.",
+    "sub": "Fără card, anulezi oricând. Folosit de {count} restaurante. Ai nevoie doar de o adresă de email."
+  },
+  "featureHighlights": {
+    "heading": "Totul inclus",
+    "sub": "Funcționalități care transformă oaspeții în comenzi — în orice abonament, fără costuri suplimentare."
+  },
+  "scan": {
+    "heading": "Ai un meniu tipărit sau un PDF?",
+    "headingAccent": "AI-ul îl digitalizează în 60 de secunde.",
+    "sub": "Încarcă o fotografie sau un document — AI-ul recunoaște automat categoriile, preparatele și prețurile.",
+    "cta": "Scanează meniul →"
+  },
+  "pricingQuiz": {
+    "heading": "Configurează-ți abonamentul ",
+    "sub": "Începe cu meniul — adaugă rezervările, KDS-ul și un domeniu web oricând ai nevoie.",
+    "billingLabel": "Facturare:",
+    "monthly": "Lunar",
+    "yearly": "Anual",
+    "restaurantsLabel": "Restaurante:",
+    "fewerAria": "Mai puține restaurante",
+    "moreAria": "Mai multe restaurante",
+    "menuTitle": "Meniu și site web",
+    "menuHint": "Inclus mereu",
+    "reservationsTitle": "Sistem de rezervări",
+    "reservationsHint": "Rezervări mese",
+    "kdsTitle": "Ecran pentru bucătărie",
+    "kdsHint": "Comenzi pe ecranul din bucătărie",
+    "domainTitle": "Nume de domeniu",
+    "domainHint": "Adresa ta web proprie",
+    "perMonthSuffix": "/lună",
+    "perYearSuffix": "/an",
+    "perMonthLongSuffix": "/lună",
+    "saveYearlyTemplate": "Economisești {amount} pe an cu plata anuală",
+    "volumeDiscountTemplate": "Reducere {percent}%",
+    "saveUpToHint": "Economisești până la 50% pentru 5+ restaurante",
+    "billedYearly": "Facturat o dată pe an",
+    "billedMonthly": "Facturat lunar",
+    "enterprisePre": "Ai nevoie de un plan personalizat?",
+    "enterpriseCta": "Scrie-ne",
+    "enterprisePost": "și vom crea unul pentru tine.",
+    "enterpriseWa": "Salut! Am nevoie de un plan personalizat pentru restaurantele mele.",
+    "headingAccent": "pentru restaurantul tău",
+    "multiplePre": "Ai mai multe locații?",
+    "multipleCta": "Vezi opțiunile",
+    "restaurantOne": "restaurant",
+    "restaurantFew": "restaurante",
+    "restaurantMany": "restaurante",
+    "multipleChangePre": "Alt număr de restaurante?",
+    "multipleChangeCta": "Modifică"
+  },
+  "pricingCta": {
+    "heading": "Prețuri simple și flexibile",
+    "sub": "Plătești doar pentru ce folosești — configurează-ți abonamentul într-un minut.",
+    "fromTemplate": "de la {price}/lună",
+    "button": "Configurează abonamentul"
+  },
+  "footer": {
+    "copyrightTemplate": "© {year} IQ Rest. Toate drepturile rezervate.",
+    "featuresHeading": "Funcționalități",
+    "featureLinks": [
+      {
+        "href": "/ru/tsifrovoe-menyu",
+        "label": "Meniu digital"
+      },
+      {
+        "href": "/ru/priem-zakazov-restoran",
+        "label": "Preluare comenzi"
+      },
+      {
+        "href": "/ru/bronirovanie-stolov",
+        "label": "Rezervări"
+      },
+      {
+        "href": "/ru/kds-kuhonnyy-displey",
+        "label": "Ecran bucătărie (KDS)"
+      }
+    ],
+    "infoHeading": "Informații",
+    "legalHeading": "Legal",
+    "currencyHeading": "Monedă"
+  },
+  "common": {
+    "close": "Închide",
+    "menu": "Meniu",
+    "help": "Ajutor"
+  },
+  "auth": {
+    "emailLabel": "Email",
+    "emailPlaceholder": "Introdu adresa de email",
+    "or": "sau",
+    "continueGoogle": "Continuă cu Google",
+    "continueApple": "Continuă cu Apple",
+    "consent": {
+      "line": "Prin continuare, accepți <terms>Termenii și Condițiile</terms>. Vezi cum gestionăm datele în <privacy>Politica de Confidențialitate</privacy>."
+    },
+    "signInTitle": "Bine ai revenit",
+    "signInSubtitle": "Introdu adresa de email — îți vom trimite un cod de acces din 6 cifre.",
+    "signInButton": "Autentificare",
+    "registerTitle": "Creează un cont",
+    "registerSubtitle": "14 zile gratuit, fără card. Îți vom trimite un cod de acces pe email — fără parole, fără formulare.",
+    "registerButton": "Creează cont",
+    "switchSignIn": "Autentificare",
+    "switchCreate": "Creare cont",
+    "verifyTitle": "Verifică-ți emailul",
+    "verifySubtitle": "Am trimis un cod din 6 cifre la {email}.",
+    "verifyCodeLabel": "Cod de verificare",
+    "checkSpam": "Nu găsești emailul? Verifică dosarul Spam.",
+    "verifyButton": "Continuă",
+    "resendCode": "Retrimite codul",
+    "resendSent": "Cod trimis",
+    "changeEmail": "Folosește alt email",
+    "metaSignIn": "Autentificare",
+    "metaRegister": "Creare cont",
+    "errors": {
+      "emailInvalid": "Introdu o adresă de email validă.",
+      "sendFailed": "Eroare la trimiterea codului. Te rugăm să încerci din nou.",
+      "verifyFailed": "Eroare la verificarea codului. Te rugăm să încerci din nou.",
+      "codeExpired": "Codul a expirat. Solicită altul.",
+      "noCode": "Codul nu a fost găsit sau a expirat. Solicită altul.",
+      "invalidCode": "Cod invalid. Te rugăm să încerci din nou.",
+      "tooManyAttempts": "Prea multe încercări. Așteaptă puțin și încearcă din nou."
+    }
+  }
+}

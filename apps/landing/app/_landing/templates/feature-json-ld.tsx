@@ -4,8 +4,12 @@ import { SCHEMA_DATE_MODIFIED } from "@/lib/page-meta";
 
 const SITE = "https://iq-rest.com";
 
-// Single JSON-LD block per feature page: BreadcrumbList + SoftwareApplication
-// + FAQPage. Server-rendered as a static <script> — no runtime cost.
+// Single JSON-LD block per feature page: BreadcrumbList + SoftwareApplication.
+// Organization + WebSite are emitted once globally by <BrandSchema> (landing
+// layout) and referenced here by @id via publisher — no duplicate node. The
+// FAQ is NOT emitted here either: <Faq> already bakes schema.org FAQPage
+// microdata into the DOM (faq.tsx), so a JSON-LD FAQPage would duplicate it on
+// the same URL. Server-rendered as a static <script> — no runtime cost.
 export function FeatureJsonLd({ content }: { content: FeatureContent }) {
   const localePath = `${SITE}/${content.locale}`;
   const pagePath = content.meta.canonical;
@@ -14,13 +18,6 @@ export function FeatureJsonLd({ content }: { content: FeatureContent }) {
   const data = {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "Organization",
-        "@id": `${SITE}/#organization`,
-        name: "IQ Rest",
-        url: SITE,
-        logo: `${SITE}/logo.png`,
-      },
       {
         "@type": "BreadcrumbList",
         itemListElement: [
@@ -45,14 +42,6 @@ export function FeatureJsonLd({ content }: { content: FeatureContent }) {
           availability: "https://schema.org/InStock",
           url: pagePath,
         },
-      },
-      {
-        "@type": "FAQPage",
-        mainEntity: content.faq.items.map((item) => ({
-          "@type": "Question",
-          name: item.q,
-          acceptedAnswer: { "@type": "Answer", text: item.a },
-        })),
       },
     ],
   };

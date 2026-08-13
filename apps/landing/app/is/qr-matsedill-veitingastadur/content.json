@@ -1,0 +1,151 @@
+{
+  "locale": "is",
+  "slug": "qr-matsedill-veitingastadur",
+  "trackPrefix": "l_is_qr",
+  "featureHeading": {
+    "heading": "Ekki bara QR kóði",
+    "sub": "Allt sem ein skönnun getur gert fyrir gestina þína og salinn."
+  },
+  "meta": {
+    "title": "QR matseðill fyrir veitingastaði | IQ Rest",
+    "description": "QR matseðill fyrir veitingastaði: gestir skanna QR kóðann á borðinu, opna matseðilinn í vafranum og panta á sínu eigin tungumáli. 14 dagar frítt, engin kortakrafa.",
+    "canonical": "https://iq-rest.com/is/qr-matsedill-veitingastadur",
+    "ogLocale": "is_IS",
+    "ogTitle": "QR matseðill fyrir veitingastaði",
+    "ogDescription": "QR á borðinu, matseðillinn í símanum — myndir, ofnæmisvaldar, 35 tungumál og uppfærslur í rauntíma.",
+    "brandLine": "IQ Rest — QR matseðill fyrir veitingastaði"
+  },
+  "hero": {
+    "headline": "QR matseðill:\nskanna og panta",
+    "cta": "Búa til QR matseðil",
+    "sub": "Gestir skanna QR á borðinu, skoða myndir og ofnæmisvalda á 35 tungumálum og panta — engin smáforrit nauðsynleg."
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Veitingastaðir"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kaffihús"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barir"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hótel"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pítsustaðir"
+    }
+  ],
+  "scan": {
+    "heading": "Ertu nú þegar með prentaðan matseðil eða PDF?",
+    "headingAccent": "Gervigreindin breytir honum í QR matseðil á 60 sekúndum.",
+    "sub": "Hladdu upp mynd af matseðlinum eða PDF — gervigreindin greinir flokka, rétti og verð og tengir þá beint við QR matseðilinn þinn.",
+    "cta": "Búa til QR matseðil"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "Einn QR, 35 tungumál",
+      "heading": "Einn QR kóði, matseðill á 35 tungumálum.",
+      "body": "Gestir skanna QR og velja sitt tungumál: þýðingin er gerð af gervigreind með matreiðsluskilningi, ekki venjulegri þýðingarvél. Engir fleiri sérstakir ferðamannamatseðlar eða blöð á víð og dreif um borðið.",
+      "bullets": [
+        "Einn prentaður QR kóði nær yfir 35 tungumál, innifalið í áskriftinni.",
+        "Gervigreindin talar tungumál matarins — nöfn á réttum hljóma eðlilega á öllum tungumálum.",
+        "Gestir skipta um tungumál inni í matseðlinum, án þess að skanna QR kóðann aftur."
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Tveir gestir skanna sama QR kóðann á borðinu og lesa matseðilinn á mismunandi tungumálum"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Ofnæmisvaldar í QR",
+      "heading": "Ofnæmisvaldar og mataræði inni í QR matseðlinum.",
+      "body": "Hver réttur á matseðlinum bak við QR kóðann getur haft merkingar: glúten, laktósi, hnetur, sjávarfang, vegan og glútenfríir valmöguleikar. Gestir sía rétti eftir sínum þörfum í símanum sínum, án þess að spyrja starfsfólkið.",
+      "bullets": [
+        "14 flokkar ofnæmisvalda á hverjum rétti.",
+        "Vegan, grænmetis og glútenfríar merkingar með einum smelli í stjórnborðinu.",
+        "Gestir sía QR matseðilinn eftir sínum eigin takmörkunum."
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Gestur síar QR matseðilinn eftir ofnæmisvöldum í síma á meðan eigandinn breytir listanum á spjaldtölvu"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Meira en bara QR",
+      "heading": "QR matseðill í útliti vefsíðu.",
+      "body": "Eftir að hafa skannað kóðann lenda gestir ekki á flötu PDF skjali: þeir sjá upphafsskjá með myndbandi eða fallegri mynd, lýsingu á staðnum og tengiliðasíðu með korti, símanúmerum og samfélagsmiðlum. QR kóðinn verður andlit veitingastaðarins á netinu.",
+      "bullets": [
+        "Myndband eða falleg mynd í bakgrunni á upphafsskjá QR matseðilsins.",
+        "Pláss til að segja sögu staðarins og hvers flokks.",
+        "Innbyggð tengiliðasíða: kort, sími, Instagram, WhatsApp."
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Tveir símar á borði: upphafsskjár QR matseðils með myndbandi í bakgrunni og tengiliðasíða með korti"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Pantað af QR · valfrjálst",
+      "heading": "Gestir geta líka pantað af QR kóðanum.",
+      "body": "Auk þess að skoða matseðilinn getur QR matseðillinn orðið pantanarás: gestir bæta réttum í körfuna og senda beiðnina. Pöntunin berst til þjóns í salnum, á WhatsApp eða á eldhússkjáinn. Hægt er að kveikja og slökkva á þessu í stillingum þegar þörf krefur.",
+      "bullets": [
+        "Karfa, athugasemdir og pöntun send beint af QR skönnuninni.",
+        "Pöntunin berst samstundis í salinn, á WhatsApp eða á eldhússkjáinn.",
+        "Kveiktu á þessu eftir klukkutímum, hæðum eða ákveðnum veitingastöðum."
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Tveir símar á borði: karfa búin til úr QR matseðlinum og staðfesting á sendri pöntun"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Það sem veitingamenn spyrja um IQ Rest QR matseðilinn. Finnurðu ekki spurninguna þína? Sendu okkur skilaboð á WhatsApp.",
+    "items": [
+      {
+        "q": "Hvernig virkar IQ Rest QR matseðillinn?",
+        "a": "Hvert borð hefur prentaðan QR kóða. Gestir skanna hann með myndavél símans og vafrinn opnar matseðil veitingastaðarins — myndir, lýsingar, ofnæmisvaldar og uppfærð verð. Ekkert smáforrit til að sækja fyrir gesti eða starfsfólk."
+      },
+      {
+        "q": "Þarf ég tækniþekkingu til að búa til QR matseðil?",
+        "a": "Nei. Stjórnborðið virkar með því að smella og draga, engin forritun eða flókin uppsetning. Það tekur sekúndur að bæta við rétti: nafn, verð, mynd. Upphafleg uppsetning tekur venjulega 30 mínútur til klukkutíma; ef þú ert nú þegar með PDF matseðil breytir gervigreindin honum sjálfkrafa."
+      },
+      {
+        "q": "Þurfa gestir að setja upp smáforrit til að lesa QR kóðann?",
+        "a": "Nei. Innbyggða myndavélin í iPhone og Android greinir QR kóðann á nokkrum sekúndum og opnar matseðilinn beint í vafranum. Stjórnborðið virkar líka í öllum nútímavöfrum — síma, spjaldtölvu eða fartölvu."
+      },
+      {
+        "q": "Hvernig eru QR kóðarnir fyrir borðin prentaðir?",
+        "a": "QR kóðar eru búnir til sjálfkrafa í stjórnborðinu (einn fyrir hvert borð eða einn fyrir allan staðinn) og sóttir sem tilbúið PDF skjal til prentunar. Skrifstofuprentari og standur eru allt sem þú þarft: standur, límmiði eða glasamotta."
+      },
+      {
+        "q": "Get ég notað mitt eigið lén fyrir QR matseðilinn?",
+        "a": "Já. Við styðjum lén veitingastaðarins þíns með SSL skírteini (til dæmis matsedill.veitingastadurinnthinn.is): þegar gestir skanna QR kóðann sjá þeir vefslóð veitingastaðarins þíns, ekki almennt undirlén. DNS uppsetning tekur 5–10 mínútur og við leiðbeinum þér í gegnum hana."
+      },
+      {
+        "q": "Get ég stjórnað QR kóðum fyrir nokkra veitingastaði úr einum aðgangi?",
+        "a": "Já, eftir beiðni. Einn aðgangur getur sameinað nokkra staði, hver með sína eigin QR kóða, matseðil, hönnun og greiningar. Sendu okkur skilaboð á WhatsApp og við kveikjum á fjölkerfisstillingu."
+      },
+      {
+        "q": "Er erfitt að opna QR matseðil frá grunni?",
+        "a": "Þrjú skref: (1) búðu til flokka; (2) bættu við réttum með nafni, verði og mynd; (3) prentaðu QR kóðana og settu þá á borðin. Ef þú ert nú þegar með prentaðan matseðil eða PDF, hladdu honum upp — gervigreindin greinir flokka og verð og fyllir út spjöldin. Einfaldur matseðill getur verið kominn á netið á 5 mínútum."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "QR matseðill á 10 mínútum. ",
+    "headingAccent": "14 daga fullur aðgangur.",
+    "sub": "Ekkert kort þarf, hættu hvenær sem er. {count} veitingastaðir treysta okkur. Bara netfang — og engin smáforrit fyrir gestina þína."
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "breadcrumbLabel": "Cjenik",
+  "meta": {
+    "title": "Cjenik — Složite paket za svoj restoran već od 9.90 €/mj | IQ Rest",
+    "description": "Složite svoj paket od modula: QR jelovnik s AI prijevodom, zaprimanje narudžbi, rezervacije stolova, kuhinjski ekran. Od 9.90 €/mj po restoranu, popusti na količinu. 14 dana besplatno, bez kartice, otkažite bilo kada.",
+    "canonical": "https://iq-rest.com/hr/cijene",
+    "ogLocale": "hr_HR",
+    "ogTitle": "Cjenik — Složite paket za svoj restoran",
+    "ogDescription": "Modularni paket već od 9.90 €/mj: QR jelovnik, narudžbe, rezervacije, KDS. Popusti na količinu, bez skrivenih naknada. 14 dana besplatno."
+  },
+  "faqSub": "Česta pitanja restorana o cijenama i plaćanju. Ako ne nalazite svoje — pošaljite nam poruku na WhatsApp.",
+  "faqItems": [
+    {
+      "q": "Kako je strukturirana cijena?",
+      "a": "Sami slažete svoj paket od modula. Osnova je QR jelovnik s AI prijevodom na 35 jezika i upravljanjem s bilo kojeg uređaja. Zatim dodajete ono što vam treba: rezervacije stolova, kuhinjski ekran, vlastitu domenu. Cijena je po restoranu, uz popuste na količinu koji kreću od drugog objekta."
+    },
+    {
+      "q": "Postoji li provizija na narudžbe?",
+      "a": "Ne. Narudžbe s QR jelovnika i od konobara idu izravno restoranu. Plaćate samo fiksnu mjesečnu cijenu."
+    },
+    {
+      "q": "Kako funkcionira probni rok?",
+      "a": "14 dana punog pristupa svim mogućnostima, bez kreditne kartice. Ako plaćanje nije postavljeno do kraja roka, račun se pauzira: administracija ostaje dostupna samo za pregled, dok se jelovnik za goste i zaprimanje narudžbi isključuju. Nema automatskih naplata."
+    },
+    {
+      "q": "Što se događa s mojim podacima dok je račun pauziran?",
+      "a": "Sve je sačuvano: jelovnik, fotografije, povijest narudžbi, rezervacije, postavke, statistika. Postavite plaćanje čak i šest mjeseci kasnije — sve se vraća točno onako kako je bilo."
+    },
+    {
+      "q": "Hoću li morati ponovno ispisati QR kodove?",
+      "a": "Ne. Dok je račun pauziran, kodovi prikazuju obavijest \"privremeno nedostupno\"; čim se plaćanje postavi, isti kodovi ponovno otvaraju jelovnik."
+    },
+    {
+      "q": "Mogu li promijeniti svoj paket?",
+      "a": "Da, u bilo kojem trenutku iz administracije. Razlika se proporcionalno obračunava za preostale dane plaćenog razdoblja. Isključena mogućnost zadržava svoje podatke."
+    },
+    {
+      "q": "Koliko restorana mogu povezati?",
+      "a": "Koliko god želite, a svima upravljate iz jedne administracije. Popusti na količinu do 50% za 5+ restorana. Za velike lance — prilagođeni paket putem WhatsAppa."
+    },
+    {
+      "q": "Koliki je popust na godišnji paket?",
+      "a": "Oko 30% u usporedbi s mjesečnom naplatom. Točan iznos prikazuje se dok slažete svoj paket."
+    },
+    {
+      "q": "Kako mogu otkazati pretplatu?",
+      "a": "Jednim klikom iz administracije. Račun radi do kraja plaćenog razdoblja, a zatim se pauzira. Vaši podaci ostaju sačuvani."
+    },
+    {
+      "q": "Koje načine plaćanja prihvaćate?",
+      "a": "Visa, Mastercard, American Express, Apple Pay, Google Pay — putem Stripea. U Europi, godišnji paket podržava i SEPA izravno terećenje."
+    }
+  ],
+  "finalCta": {
+    "heading": "Jedna cijena. Nula rizika. ",
+    "headingAccent": "14 dana punog pristupa.",
+    "sub": "Bez kartice, otkažite bilo kada — vjeruje nam {count} restorana. Za početak je dovoljna samo e-mail adresa."
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "locale": "sv",
+  "slug": "qr-kod-meny-restaurang",
+  "trackPrefix": "l_sv_qr",
+  "featureHeading": {
+    "heading": "Inte bara en QR-kod",
+    "sub": "Allt en enda skanning blir för dina gäster och din matsal."
+  },
+  "meta": {
+    "title": "QR-meny för restauranger | IQ Rest",
+    "description": "QR-meny för restauranger: gästerna skannar QR-koden på bordet, öppnar menyn i webbläsaren och beställer på sitt eget språk. 14 dagar gratis, inget kort krävs.",
+    "canonical": "https://iq-rest.com/sv/qr-kod-meny-restaurang",
+    "ogLocale": "sv_SE",
+    "ogTitle": "QR-meny för restauranger",
+    "ogDescription": "En QR-kod på bordet, menyn i mobilen — bilder, allergener, 35 språk och uppdateringar i realtid.",
+    "brandLine": "IQ Rest — QR-meny för restauranger"
+  },
+  "hero": {
+    "headline": "QR-meny:\nskanna och beställ",
+    "cta": "Skapa en QR-meny",
+    "sub": "Gästerna skannar QR-koden på bordet, bläddrar bland bilder och allergener på 35 språk och beställer — inga appar behövs."
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restauranger"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Caféer"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barer"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotell"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerior"
+    }
+  ],
+  "scan": {
+    "heading": "Har du redan en pappersmeny eller PDF?",
+    "headingAccent": "AI förvandlar den till en QR-meny på 60 sekunder.",
+    "sub": "Ladda upp ett foto av menyn eller en PDF — AI känner igen kategorier, rätter och priser och kopplar dem direkt till din QR-meny.",
+    "cta": "Skapa en QR-meny"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "En QR, 35 språk",
+      "heading": "En QR-kod, en meny på 35 språk.",
+      "body": "Gästerna skannar QR-koden och väljer sitt språk: översättningen görs av AI med känsla för matlagning, inte en allmän översättare. Inga fler separata turistmenyer eller lösa papper på bordet.",
+      "bullets": [
+        "En utskriven QR-kod täcker 35 språk, som ingår i prenumerationen.",
+        "AI:n talar matens språk — rätternas namn låter naturliga på alla språk.",
+        "Gästerna byter språk inuti menyn, utan att behöva skanna QR-koden igen."
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Två gäster skannar samma QR-kod från bordet och läser menyn på olika språk"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Allergener i QR-menyn",
+      "heading": "Allergener och specialkost inuti QR-menyn.",
+      "body": "Varje rätt i menyn bakom QR-koden kan ha märkningar: gluten, laktos, nötter, skaldjur, veganska och glutenfria alternativ. Gästerna filtrerar rätterna efter sina behov i mobilen, utan att behöva fråga personalen.",
+      "bullets": [
+        "14 allergenkategorier på rättnivå.",
+        "Märkning för veganskt, vegetariskt och glutenfritt med ett klick i panelen.",
+        "Gästerna filtrerar QR-menyn efter sina egna preferenser."
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "En gäst filtrerar QR-menyn efter allergener i mobilen medan ägaren redigerar listan på en surfplatta"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Mer än bara en QR-kod",
+      "heading": "En QR-meny designad som en restauranghemsida.",
+      "body": "Efter att ha skannat koden hamnar gästerna inte på en platt PDF: de ser en startskärm med en video eller ett snyggt foto, en beskrivning av verksamheten och en kontaktsida med karta, telefonnummer och sociala medier. QR-koden blir din restaurangs entré online.",
+      "bullets": [
+        "En bakgrundsvideo eller ett snyggt foto på QR-menyns startskärm.",
+        "Utrymme att berätta din verksamhets historia och om varje kategori.",
+        "En inbyggd kontaktsida: karta, telefon, Instagram, WhatsApp."
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Två mobiler på ett bord: QR-menyns startskärm med en bakgrundsvideo och en kontaktsida med karta"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Beställ från QR-koden · valfritt",
+      "heading": "Från QR-koden kan gästerna också beställa.",
+      "body": "Utöver att bläddra i menyn kan QR-menyn bli en beställningskanal: gästerna lägger rätter i varukorgen och skickar iväg den. Beställningen når en servitör i matsalen, din WhatsApp eller köksskärmen. Funktionen kan slås på och av i inställningarna när det behövs.",
+      "bullets": [
+        "En varukorg, kommentarer och beställning direkt från QR-skanningen.",
+        "Beställningen når direkt till matsalen, WhatsApp eller köksskärmen.",
+        "Aktivera funktionen efter klockslag, våningsplan eller specifika restauranger."
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Två mobiler på ett bord: en varukorg skapad från QR-menyn och en bekräftelse på en skickad beställning"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Vad krögare frågar om IQ Rests QR-meny. Hittar du inte din fråga? Skicka ett meddelande på WhatsApp.",
+    "items": [
+      {
+        "q": "Hur fungerar IQ Rests QR-meny?",
+        "a": "Varje bord har en utskriven QR-kod. Gästerna skannar den med mobilkameran, och webbläsaren öppnar restaurangens meny — bilder, beskrivningar, allergener och aktuella priser. Ingen app behöver laddas ner av gäster eller personal."
+      },
+      {
+        "q": "Behöver jag tekniska kunskaper för att skapa en QR-meny?",
+        "a": "Nej. Panelen fungerar med klick och dra-och-släpp, ingen kod eller krånglig konfiguration. Att lägga till en rätt tar sekunder: namn, pris, bild. Första uppsättningen tar oftast 30 minuter till en timme; om du redan har en PDF-meny konverterar AI:n den automatiskt."
+      },
+      {
+        "q": "Behöver gästerna installera en app för att läsa QR-koden?",
+        "a": "Nej. Den inbyggda kameran i iPhone och Android känner igen QR-koden på sekunder och öppnar menyn direkt i webbläsaren. Adminpanelen fungerar också i valfri modern webbläsare — mobil, surfplatta eller laptop."
+      },
+      {
+        "q": "Hur skrivs QR-koderna ut för borden?",
+        "a": "QR-koderna genereras automatiskt i panelen (en per bord eller en för hela verksamheten) och laddas ner som en utskriftsklar PDF. En kontorsskrivare och ett ställ är allt du behöver: en hållare, ett klistermärke eller ett glasunderlägg."
+      },
+      {
+        "q": "Kan jag använda min egen domän för QR-menyn?",
+        "a": "Ja. Vi stöder din restaurangs domän med ett SSL-certifikat (till exempel meny.dinrestaurang.se): när gästerna skannar QR-koden ser de din restaurangs adress, inte en allmän underdomän. DNS-inställningen tar 5–10 minuter och vi guidar dig igenom den."
+      },
+      {
+        "q": "Kan jag hantera QR-koder för flera restauranger från ett konto?",
+        "a": "Ja, på begäran. Ett konto kan samla flera verksamheter, var och en med sina egna QR-koder, meny, design och statistik. Skicka ett meddelande på WhatsApp så aktiverar vi läget för flera restauranger."
+      },
+      {
+        "q": "Är det svårt att lansera en QR-meny från grunden?",
+        "a": "Tre steg: (1) skapa kategorier; (2) lägg till rätter med namn, pris och bild; (3) skriv ut QR-koderna och placera dem på borden. Om du redan har en pappersmeny eller PDF, ladda upp den — AI känner igen kategorier och priser och fyller i korten. En enkel meny kan vara online på 5 minuter."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "En QR-meny på 10 minuter. ",
+    "headingAccent": "14 dagar med full tillgång.",
+    "sub": "Inget kort krävs, avsluta när du vill. Används av {count} restauranger. Bara en e-postadress — och inga appar för dina gäster."
+  }
+}

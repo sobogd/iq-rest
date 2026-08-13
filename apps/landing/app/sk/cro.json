@@ -1,0 +1,289 @@
+{
+  "heroV2": {
+    "verticals": [
+      {
+        "icon": "restaurant",
+        "label": "Reštaurácie"
+      },
+      {
+        "icon": "cafe",
+        "label": "Kaviarne"
+      },
+      {
+        "icon": "bar",
+        "label": "Bary"
+      },
+      {
+        "icon": "hotel",
+        "label": "Hotely"
+      },
+      {
+        "icon": "pizza",
+        "label": "Pizzerie"
+      }
+    ],
+    "title": "Všetko, čo váš podnik",
+    "titleAccent": "potrebuje!",
+    "sub": "Nastavte si prevádzku za 10 minút: spustite online menu, zrýchlite kuchyňu a spravujte usádzanie hostí.",
+    "primaryLabel": "Začať zadarmo",
+    "demoLabel": "Pozrieť demo menu",
+    "mockups": {
+      "kds": {
+        "src": "/landing/hero-card-kds.webp",
+        "alt": "Tablet s kuchynským displejom: objednávky podľa stolov v stĺpcoch so statusmi"
+      },
+      "reservations": {
+        "src": "/landing/hero-card-reservation.webp",
+        "alt": "Tablet s rezervačným kalendárom: mesačný náhľad a zoznam rezervácií čakajúcich na potvrdenie"
+      },
+      "phone1": {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Telefón s domovskou stránkou webu reštaurácie: fotky, rezervácie a prístup k online menu"
+      },
+      "phone2": {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Telefón s kartou jedla: fotka, cena a označenie alergénov"
+      }
+    }
+  },
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Hotové za 10 minút",
+      "sub": "Žiadny drahý hardvér ani zdĺhavé nastavovanie"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Rýchla podpora",
+      "sub": "Na chate odpovedáme do niekoľkých hodín"
+    },
+    {
+      "icon": "Globe",
+      "title": "Vybralo si nás {count} podnikov",
+      "sub": "Dôverujú nám reštaurácie a kaviarne vo viac ako 15 krajinách"
+    },
+    {
+      "icon": "Palette",
+      "title": "100 % vo vašom štýle",
+      "sub": "Dizajn a rozhranie prispôsobíme značke vášho podniku"
+    }
+  ],
+  "menu": {
+    "heading": "Web a digitálne menu",
+    "sub": {
+      "link": "Viac ako len QR menu!",
+      "rest": " Získajte plnohodnotný web s vlastným dizajnom, kontaktmi a rezerváciami stolov."
+    },
+    "moreLabel": "Viac o menu",
+    "demoLabel": "Demo: menu z pohľadu hosťa",
+    "mockupAlt": "Telefón s domovskou stránkou webu reštaurácie a telefón so stránkou jedla",
+    "bullets": [
+      {
+        "icon": "Languages",
+        "title": "Automatický preklad do 35 jazykov",
+        "sub": "Obslúžte zahraničných hostí bez jazykovej bariéry — automatický preklad sa o všetko postará"
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "Objednávky priamo od stola",
+        "sub": "Zjednodušte si prevádzku — prijímajte objednávky od stolov rýchlo a bez čakania na čašníka"
+      },
+      {
+        "icon": "WheatOff",
+        "title": "Alergény a diéty",
+        "sub": "Označte alergény a diéty (vegan, pikantné), aby si hostia vyberali jedlo jednoduchšie a bezpečnejšie"
+      }
+    ]
+  },
+  "reservations": {
+    "heading": "Rezervácie stolov",
+    "sub": {
+      "link": "Inteligentné rezervácie stolov!",
+      "rest": " Automatizovaný rezervačný systém, ktorý sám sleduje voľné stoly a váš harmonogram."
+    },
+    "moreLabel": "Viac o rezerváciách",
+    "demoLabel": "Demo: rezervačný kalendár",
+    "mockupAlt": "Tablet s rezervačným kalendárom: stoly podľa dní a časových blokov",
+    "bullets": [
+      {
+        "icon": "CalendarCheck",
+        "title": "Prehľadná mapa rezervácií",
+        "sub": "Vizuálny harmonogram podľa dní a stolov — okamžite vidíte, kde a kedy je voľno"
+      },
+      {
+        "icon": "SlidersHorizontal",
+        "title": "Flexibilné nastavenie rezervácií",
+        "sub": "Nastavte si otváracie hodiny, dĺžku rezervácie, fotky stolov a zbierajte požiadavky hostí"
+      },
+      {
+        "icon": "Users",
+        "title": "Riadenie toku hostí",
+        "sub": "Vyberte si režim rezervácií, ktorý vám vyhovuje, a majte plnú kontrolu nad príchodom hostí"
+      }
+    ]
+  },
+  "orders": {
+    "heading": "Prijímanie objednávok od stola",
+    "sub": {
+      "link": "Objednávky priamo do kuchyne!",
+      "rest": " Objednávka od stola alebo od čašníka sa okamžite zobrazí na kuchynskom displeji — žiadne papierové lístky ani čakanie."
+    },
+    "moreLabel": "Viac o objednávkach",
+    "demoLabel": "Demo: obrazovka objednávok",
+    "mockupSrc": "/landing/feature-orders-modal.webp",
+    "mockupAlt": "Tablet s otvorenou objednávkou: zoznam jedál a akcie — zmeniť stôl, rozdeliť účet, pridať zľavu",
+    "bullets": [
+      {
+        "icon": "ShoppingCart",
+        "title": "Hosť alebo čašník",
+        "sub": "Hostia objednávajú od stola cez QR kód, čašníci zo svojho telefónu alebo tabletu"
+      },
+      {
+        "icon": "Map",
+        "title": "Mapa stolov so statusmi",
+        "sub": "Stoly na mape sú farebne odlíšené podľa statusu — na prvý pohľad vidíte, kto čaká na objednávku a kam ísť ďalej"
+      },
+      {
+        "icon": "Receipt",
+        "title": "Rozdelenie účtu",
+        "sub": "Rozdeľte objednávku medzi hostí a uzatvárajte stoly bez zmätkov pri platení"
+      }
+    ]
+  },
+  "kds": {
+    "heading": "Kuchynský displej (KDS)",
+    "sub": {
+      "link": "Zosynchronizovaná kuchyňa!",
+      "rest": " Objednávky z rajónu a z QR menu sa okamžite zobrazia na obrazovke kuchára — s poznámkami, alergénmi a časovačom."
+    },
+    "moreLabel": "Viac o KDS",
+    "demoLabel": "Demo: obrazovka do kuchyne",
+    "mockupAlt": "Tablet s kuchynským displejom: objednávky podľa stolov v stĺpcoch so statusmi",
+    "bullets": [
+      {
+        "icon": "LayoutGrid",
+        "title": "Obrazovky podľa sekcií",
+        "sub": "Samostatné tablety pre teplú kuchyňu, bar a cukráreň — každý vidí len svoje jedlá"
+      },
+      {
+        "icon": "Timer",
+        "title": "Statusy a časovač",
+        "sub": "Stĺpce Čaká / Pripravuje sa / Hotové a čas od objednania — zmena statusu jedným dotykom"
+      },
+      {
+        "icon": "ShieldAlert",
+        "title": "Alergény a poznámky",
+        "sub": "Alergény a poznámky hostí sú farebne zvýraznené — kuchárovi neunikne nič dôležité"
+      }
+    ]
+  },
+  "bundle": {
+    "heading": "Všetko, na čom beží váš podnik.",
+    "headingAccent": "V jednej aplikácii.",
+    "sub": "Menu, kuchyňa a rezervácie na jednom mieste — moderné, rýchle a postavené pre reálnu prevádzku. Žiadne skryté poplatky ani cenník za jednotlivé funkcie."
+  },
+  "benefits": [
+    {
+      "icon": "Languages",
+      "tag": "Digitálne menu",
+      "title": "Menu, ktoré predáva.",
+      "bullets": [
+        "35 jazykov s AI",
+        "Prémiový dizajn",
+        "Okamžitá aktualizácia cien"
+      ],
+      "image": "/landing/feature-design.webp",
+      "imageAlt": "Dva telefóny na stole v kaviarni: úvodná obrazovka digitálneho menu a stránka kontaktov s mapou"
+    },
+    {
+      "icon": "ChefHat",
+      "tag": "Kuchynský displej",
+      "title": "Varte rýchlejšie a na nič nezabudnite.",
+      "bullets": [
+        "Priamo na obrazovku",
+        "Poznámky a alergény",
+        "Tablet alebo telefón"
+      ],
+      "image": "/landing/feature-kds-cards.webp",
+      "imageAlt": "Tablet na barovom pulte zobrazuje kuchynský displej s objednávkami podľa stolov"
+    },
+    {
+      "icon": "CalendarCheck",
+      "tag": "Rezervácie",
+      "title": "Rezervácie na autopilota.",
+      "bullets": [
+        "Rezervácie bez telefonátov",
+        "Automatické potvrdzovanie",
+        "Kalendár podľa stolov"
+      ],
+      "image": "/landing/feature-booking-calendar.webp",
+      "imageAlt": "Dva tablety zobrazujúce rezervačný kalendár: denný náhľad podľa stolov a mesačný náhľad"
+    },
+    {
+      "icon": "Receipt",
+      "tag": "Objednávky od stola",
+      "title": "Objednávky priamo do kuchyne.",
+      "bullets": [
+        "Hosť alebo čašník",
+        "Priamo do kuchyne",
+        "Zapnite si to, kedy chcete"
+      ],
+      "image": "/landing/feature-orders-map.webp",
+      "imageAlt": "Tablet s obrazovkou objednávok: zoznam objednávok a farebne odlíšená mapa stolov."
+    }
+  ],
+  "seeDetails": "Zistiť viac",
+  "platform": {
+    "hardwareTitle": "Použite vlastný hardvér",
+    "hardwareSub": "Nenútime vás kupovať náš hardvér. Použite telefóny, tablety a počítače, ktoré už máte.",
+    "anywhereTitle": "Funguje kdekoľvek",
+    "anywhereSub": "Telefón, tablet, notebook, PC. Android, iOS, Windows, Mac, Linux. V každom modernom prehliadači, bez inštalácie."
+  },
+  "activities": {
+    "heading": "Jeden systém —",
+    "headingAccent": "celý váš podnik.",
+    "sub": "Rýchlejšia obsluha, pokojnejšia kuchyňa, nižšie náklady a hostia, ktorí sa vracajú — všetko v jednej platforme.",
+    "groups": [
+      {
+        "icon": "Smartphone",
+        "tag": "Pri stole — hosť",
+        "bullets": [
+          "QR menu v 35 jazykoch",
+          "Objednávka bez čakania na čašníka",
+          "Privolanie obsluhy alebo žiadosť o účet",
+          "Rezervácia stola 24/7",
+          "Unikátny QR kód pre každý stôl",
+          "Bez aplikácie — otvorí sa v prehliadači",
+          "Označenie alergénov a diét pre filtrovanie"
+        ]
+      },
+      {
+        "icon": "ChefHat",
+        "tag": "V kuchyni",
+        "bullets": [
+          "Objednávky okamžite na obrazovke",
+          "Stĺpce Čaká / Pripravuje sa / Hotové",
+          "Zvýraznené alergény a poznámky",
+          "Tablet alebo telefón — žiadne papierové lístky"
+        ]
+      },
+      {
+        "icon": "ChartColumn",
+        "tag": "Manažment",
+        "bullets": [
+          "Úprava menu a cien — okamžite",
+          "AI preklad jedným kliknutím",
+          "Analytika predaja a reporty",
+          "Viacero podnikov v jednom účte",
+          "AI zdigitalizuje papierové menu za 60 sekúnd",
+          "Vlastná doména s SSL"
+        ]
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Celá platforma za 10 minút. ",
+    "headingAccent": "14 dní plného prístupu.",
+    "sub": "Menu, objednávky, rezervácie a kuchyňa — bez karty, zrušenie kedykoľvek; dôveruje nám {count} podnikov, stačí vám len e-mail."
+  }
+}

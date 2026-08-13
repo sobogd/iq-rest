@@ -1,0 +1,206 @@
+{
+  "locale": "fi",
+  "slug": "keittion-naytto",
+  "trackPrefix": "l_kds",
+  "meta": {
+    "title": "KDS-keittiönäyttö ravintoloille — Tilaukset kokin ruudulla | IQ Rest",
+    "description": "KDS-keittiönäyttö ravintoloille: tilaukset salista ja QR-ruokalistalta menevät suoraan kokin ruudulle. Sarakkeet pöydittäin, Odottaa / Valmistuksessa / Valmis / Tarjoiltu -tilat, suodattimet työpisteittäin. Toimii tabletilla tai puhelimella.",
+    "canonical": "https://iq-rest.com/fi/keittion-naytto",
+    "ogLocale": "fi_FI",
+    "ogTitle": "KDS-keittiönäyttö — Tilaukset suoraan kokin ruudulle",
+    "ogDescription": "Tilaukset salista kokin ruudulle. Sarakkeet pöydittäin, tilat ja ajastin. Tila vaihtuu yhdellä napautuksella.",
+    "brandLine": "IQ Rest — Keittiönäyttö ravintoloille"
+  },
+  "hero": {
+    "headline": "KDS-keittiönäyttö:",
+    "cta": "Ota keittiönäyttö käyttöön",
+    "sub": "Tilaukset saapuvat keittiön ruudulle välittömästi: huomiot, allergeenit ja ajastin. Tila vaihtuu yhdellä napautuksella.",
+    "headlineAccent": "tilaukset suoraan kokille",
+    "demoLabel": "Demo: keittiönäyttö",
+    "tablet": {
+      "src": "/landing/hero-card-kds.webp",
+      "alt": "Tabletti ja keittiönäyttö: tilaukset pöydittäin sarakkeissa tilatietojen kera"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Ravintolat"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kahvilat"
+    },
+    {
+      "icon": "Martini",
+      "label": "Baarit"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotellit"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzeriat"
+    }
+  ],
+  "scan": {
+    "heading": "Laita keittiönäyttö kuntoon",
+    "headingAccent": "5 minuutissa.",
+    "sub": "Skannaa paperinen ruokalista tai PDF — tekoäly tunnistaa annokset, kategoriat ja allergeenit. Yhdistä tabletti keittiössä ja aloita tilausten vastaanotto.",
+    "cta": "Skannaa ruokalista"
+  },
+  "subFeatures": [
+    {
+      "icon": "LayoutGrid",
+      "eyebrow": "Hallinta ja suodattimet",
+      "heading": "Useita näyttöjä työpisteittäin: keittiö ja baari.",
+      "body": "Aseta omat tabletit lämpimälle keittiölle, baarille tai leipomopisteelle — jokainen näyttö näyttää vain sille kuuluvat annokset. Suodattimet tilan (Odottaa / Valmistuksessa / Valmis / Tarjoiltu) ja kategorian mukaan pitävät ruudun selkeänä: kokit työskentelevät vain oman pisteensä tilausten kanssa.",
+      "bullets": [
+        "Useita KDS-näyttöjä annoskategoriasuodattimilla.",
+        "Tilasuodatin: vain valmistuksessa ja valmiina olevat.",
+        "Jokainen työpiste näkee vain oman tilausvirtansa."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-filters.webp",
+        "alt": "Tabletti messinkitelineessä ravintolan keittiön luukulla — KDS suodatettuna annoksen tilan mukaan"
+      }
+    },
+    {
+      "icon": "Timer",
+      "eyebrow": "Kortit ja ajastin",
+      "heading": "Tila vaihtuu yhdellä napautuksella. Kommentit ja allergeenit on värikorostettu.",
+      "body": "Annoskortti näyttää tehdyt valinnat (ei sipulia, kypsä), asiakkaan kommentit, allergeenit ja ajastimen, joka käy tilauksen jättöhetkestä alkaen. Kortin napauttaminen siirtää tilaa eteenpäin: Odottaa → Valmistuksessa → Valmis → Tarjoiltu. Lista järjestäytyy automaattisesti aikaprioriteetin mukaan.",
+      "bullets": [
+        "Napauta korttia — tila siirtyy heti eteenpäin.",
+        "Valinnat, kommentit ja allergeenit värikorostettu.",
+        "Järjestetty prioriteetin mukaan: pisimpään odottaneet annokset nousevat ylimmäksi."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-cards.webp",
+        "alt": "Tabletti messinkitelineessä ravintolan baaritiskillä — KDS tilauskorteilla pöydittäin"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Mitä ravintoloitsijat kysyvät IQ Restin keittiönäytöstä. Jos kysymystäsi ei löydy — laita viestiä WhatsAppissa.",
+    "items": [
+      {
+        "q": "Mitä tiloja keittiön annoksilla on?",
+        "a": "Neljä tilaa: Odottaa — tilaus on tehty ja odottaa; Valmistuksessa — annosta valmistetaan; Valmis — valmiina noudettavaksi; Tarjoiltu — toimitettu asiakkaalle. Kortin napauttaminen siirtää sen seuraavaan tilaan, ilman valikoita tai vahvistuksia."
+      },
+      {
+        "q": "Voinko asettaa useita KDS-näyttöjä eri keittiön työpisteisiin?",
+        "a": "Kyllä. Yksi tabletti lämpimälle keittiölle, toinen baariin, kolmas leipomopisteelle — jokaisella oma annoskategoriasuodattimensa. Kaikki näytöt pysyvät synkassa: yhdessä muutettu tila päivittyy muihin."
+      },
+      {
+        "q": "Millä laitteella KDS toimii — tarvitsenko erikoistabletin?",
+        "a": "KDS toimii missä tahansa modernissa selaimessa. Telineessä oleva tabletti keittiön luukulla sopii isoon keittiöön; älypuhelin toimii pienessä paikassa. Erikoislaitteita tai asennusta ei tarvita: laite yhdistetään 6-numeroisella koodilla hallintapaneelista."
+      },
+      {
+        "q": "Mistä tilaukset tulevat keittiönäytölle?",
+        "a": "Kaikista lähteistä: asiakkaan tehdessä tilauksen pöydän QR-ruokalistan kautta, tai tarjoilijan ottaessa sen omalla laitteellaan. Tilaukset saapuvat KDS:ään automaattisesti pöytänumeron kera. Ei manuaalista uudelleennäppäilyä kassajärjestelmästä."
+      },
+      {
+        "q": "Mitä tilauskortti näyttää?",
+        "a": "Annoksen nimen, tehdyt valinnat (ei sipulia, kypsä), asiakkaan kommentin, allergeenit, tilan ja ajastimen, joka käy tilauksen jättöhetkestä alkaen. Kortit järjestyvät prioriteetin mukaan: mitä kauemmin annos odottaa, sitä ylempänä se on sarakkeessa."
+      },
+      {
+        "q": "Voiko ruudun kortteja suodattaa?",
+        "a": "Kyllä. Kaksi suodatinta: tilan mukaan (esimerkiksi vain Odottaa ja Valmistuksessa) ja kategorian mukaan (juomat baariin, lämpimät ruoat keittiöön). Asetukset tallennetaan laitekohtaisesti, joten jokainen työpiste toimii omalla kokoonpanollaan."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Paperiton keittiö 10 minuutissa. ",
+    "headingAccent": "14 päivän täysi käyttöoikeus.",
+    "sub": "Ei luottokorttia, peruuta milloin tahansa. {count} ravintolan luottama. Tarvitset vain sähköpostiosoitteen — ja tilaukset laskeutuvat suoraan keittiön ruudulle."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Näytöt työpisteittäin",
+      "sub": "Omat tabletit lämpimälle keittiölle, baarille ja leipomopisteelle — jokainen näyttö näyttää vain omat annoksensa.",
+      "bullets": [
+        {
+          "icon": "LayoutGrid",
+          "title": "Kategoriasuodatin",
+          "sub": "Määritä jokaiselle näytölle omat ruokalistan kategoriat"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Oma tilausvirta per piste",
+          "sub": "Keittiö ja baari työskentelevät rinnakkain ilman, että ne ovat toistensa tiellä"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Tilasuodatin",
+          "sub": "Näytä vain se, mikä on valmistuksessa tai valmiina noudettavaksi"
+        }
+      ]
+    },
+    {
+      "heading": "Tilan vaihto yhdellä napautuksella",
+      "sub": "Kortin napautus siirtää annoksen seuraavaan tilaan. Keittiö ja tarjoilija näkevät saman tilanteen.",
+      "bullets": [
+        {
+          "icon": "ClipboardList",
+          "title": "Tila per tuote",
+          "sub": "Valmistuksessa, valmis, tarjoiltu — annoskohtaisesti, ei tilauskohtaisesti"
+        },
+        {
+          "icon": "Timer",
+          "title": "Ajastin tilaushetkestä alkaen",
+          "sub": "Näe kuinka kauan annos on odottanut — pisimpään odottaneet nousevat ylimmäksi"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "Allergeenit ja kommentit",
+          "sub": "Valinnat, asiakkaan huomiot ja allergeenit on värikorostettu"
+        }
+      ]
+    },
+    {
+      "heading": "Tilaukset laskeutuvat heti",
+      "sub": "Asiakkaan tilaus QR-ruokalistalta tai tarjoilijalta ilmestyy ruudulle heti kun se on tehty, ilman sivun päivitystä.",
+      "bullets": [
+        {
+          "icon": "Rocket",
+          "title": "Ruudulla välittömästi",
+          "sub": "Jatkuva yhteys — kortti ilmestyy sekunnissa tilauksen tekemisestä"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Kaikki lähteet yhdessä virrassa",
+          "sub": "Asiakkaan ja tarjoilijan tilaukset saapuvat samalle ruudulle pöytänumeron kera"
+        },
+        {
+          "icon": "Map",
+          "title": "Pöytänumero kortissa",
+          "sub": "Keittiö näkee minne annos menee; tarjoilija näkee missä sitä odotetaan"
+        }
+      ]
+    },
+    {
+      "heading": "Yhdistetty minuuteissa",
+      "sub": "Keittiönäyttö toimii selaimessa millä tahansa tabletilla tai puhelimella — yhdistetään 6-numeroisella koodilla.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Tabletti tai puhelin",
+          "sub": "Selain riittää — ei tarvetta ostaa erikoislaitteita"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Yhdistämiskoodi",
+          "sub": "Syötä 6-numeroinen koodi hallintapaneelista — laite on linkitetty keittiöön"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Pääsyn peruminen",
+          "sub": "Tabletti katosi tai vaihtui — katkaise yhteys hallintapaneelista yhdellä napautuksella"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,289 @@
+{
+  "heroV2": {
+    "verticals": [
+      {
+        "icon": "restaurant",
+        "label": "Restorāniem"
+      },
+      {
+        "icon": "cafe",
+        "label": "Kafejnīcām"
+      },
+      {
+        "icon": "bar",
+        "label": "Bāriem"
+      },
+      {
+        "icon": "hotel",
+        "label": "Viesnīcām"
+      },
+      {
+        "icon": "pizza",
+        "label": "Picērijām"
+      }
+    ],
+    "title": "Viss jūsu restorāna",
+    "titleAccent": "darbībai.",
+    "sub": "Sagatavojiet visu darbam 10 minūtēs: palaidiet tiešsaistes ēdienkarti, sakārtojiet virtuves darbu un pārvaldiet galdiņu rezervācijas.",
+    "primaryLabel": "Sākt bez maksas",
+    "demoLabel": "Skatīt demo ēdienkarti",
+    "mockups": {
+      "kds": {
+        "src": "/landing/hero-card-kds.webp",
+        "alt": "Planšetdators ar virtuves ekrānu: pasūtījumi pa galdiņiem kolonnās ar statusiem"
+      },
+      "reservations": {
+        "src": "/landing/hero-card-reservation.webp",
+        "alt": "Planšetdators ar rezervāciju kalendāru: mēneša skats un apstiprinājumu gaidošo rezervāciju saraksts"
+      },
+      "phone1": {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Tālrunis ar restorāna mājaslapas sākumlapu: fotoattēli, rezervācijas un piekļuve tiešsaistes ēdienkartei"
+      },
+      "phone2": {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Tālrunis ar ēdiena kartīti: foto, cena un alergēnu norādes"
+      }
+    }
+  },
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Gatavs darbam 10 minūtēs",
+      "sub": "Nav jāpērk dārga aparatūra un nav ilgstošas iestatīšanas"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Ātrs atbalsts",
+      "sub": "Mēs atbildam čatā dažu stundu laikā"
+    },
+    {
+      "icon": "Globe",
+      "title": "Izvēlas {count} vietas",
+      "sub": "Mums uzticas restorāni un kafejnīcas 15+ valstīs"
+    },
+    {
+      "icon": "Palette",
+      "title": "100% jūsu zīmols",
+      "sub": "Mēs pielāgojam dizainu un saskarni jūsu vietas stilam"
+    }
+  ],
+  "menu": {
+    "heading": "Mājaslapa un digitālā ēdienkarte",
+    "sub": {
+      "link": "Vairāk nekā QR ēdienkarte.",
+      "rest": " Iegūstiet pilnvērtīgu mājaslapu ar unikālu dizainu, kontaktinformāciju un galdiņu rezervāciju."
+    },
+    "moreLabel": "Vairāk par ēdienkarti",
+    "demoLabel": "Demo: ēdienkarte, kā to redz viesi",
+    "mockupAlt": "Tālrunis ar restorāna mājaslapas sākumlapu un tālrunis ar ēdiena lapu",
+    "bullets": [
+      {
+        "icon": "Languages",
+        "title": "Auto-tulkojums 35 valodās",
+        "sub": "Apkalpojiet ārvalstu viesus bez valodas barjeras — automātiskais tulkojums paveiks visu"
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "Pasūtījumi tieši no galdiņa",
+        "sub": "Vienkāršojiet darbu — pieņemiet pasūtījumus no galdiņiem ātri, bez viesmīļa klātbūtnes"
+      },
+      {
+        "icon": "WheatOff",
+        "title": "Alergēni un diētas",
+        "sub": "Atzīmējiet alergēnus un uztura norādes (vegānisks, ass), lai viesi varētu izvēlēties ēdienu vieglāk un drošāk"
+      }
+    ]
+  },
+  "reservations": {
+    "heading": "Galdiņu rezervācijas",
+    "sub": {
+      "link": "Gudras galdiņu rezervācijas.",
+      "rest": " Automatizēta rezervāciju sistēma, kas pati seko līdzi brīvajiem galdiņiem un jūsu grafikam."
+    },
+    "moreLabel": "Vairāk par rezervācijām",
+    "demoLabel": "Demo: rezervāciju kalendārs",
+    "mockupAlt": "Planšetdators ar rezervāciju kalendāru: galdiņi pa dienām un laikiem",
+    "bullets": [
+      {
+        "icon": "CalendarCheck",
+        "title": "Pārskatāms rezervāciju plāns",
+        "sub": "Vizuāls grafiks pa dienām un galdiņiem — uzreiz redziet, kur un kad ir brīvas vietas"
+      },
+      {
+        "icon": "SlidersHorizontal",
+        "title": "Elastīgi rezervāciju iestatījumi",
+        "sub": "Iestatiet darba laiku, intervāla ilgumu un galdiņu fotoattēlus, kā arī apkopojiet viesu vēlmes"
+      },
+      {
+        "icon": "Users",
+        "title": "Viesu plūsmas vadība",
+        "sub": "Izvēlieties sev piemērotāko rezervāciju režīmu un saglabājiet pilnu kontroli pār viesu plūsmu"
+      }
+    ]
+  },
+  "orders": {
+    "heading": "Pasūtījumu pieņemšana zālē",
+    "sub": {
+      "link": "Pasūtījumi tieši uz virtuvi.",
+      "rest": " Pasūtījums no galdiņa vai no viesmīļa uzreiz nonāk virtuves ekrānā — nekādu papīra čeku un gaidīšanas."
+    },
+    "moreLabel": "Vairāk par pasūtījumiem",
+    "demoLabel": "Demo: pasūtījumu ekrāns",
+    "mockupSrc": "/landing/feature-orders-modal.webp",
+    "mockupAlt": "Planšetdators ar atvērtu pasūtījumu: ēdienu saraksts un darbības — mainīt galdiņu, dalīt rēķinu, pievienot atlaidi",
+    "bullets": [
+      {
+        "icon": "ShoppingCart",
+        "title": "Viesis vai viesmīlis",
+        "sub": "Viesi pasūta no galdiņa caur QR kodu, viesmīļi — no sava tālruņa vai planšetdatora"
+      },
+      {
+        "icon": "Map",
+        "title": "Zāles plāns ar statusiem",
+        "sub": "Galdiņi plānā ir iekrāsoti pēc statusa — vienā mirklī redziet, kurš gaida pasūtījumu un kurp doties tālāk"
+      },
+      {
+        "icon": "Receipt",
+        "title": "Rēķina sadalīšana",
+        "sub": "Sadaliet pasūtījumu starp viesiem un aizveriet galdiņus bez pārpratumiem ar apmaksu"
+      }
+    ]
+  },
+  "kds": {
+    "heading": "Virtuves ekrāns (KDS)",
+    "sub": {
+      "link": "Virtuve, kas strādā vienā ritmā.",
+      "rest": " Pasūtījumi no zāles un QR ēdienkartes pavāra ekrānā parādās uzreiz — ar piezīmēm, alergēniem un taimeri."
+    },
+    "moreLabel": "Vairāk par KDS",
+    "demoLabel": "Demo: virtuves ekrāns",
+    "mockupAlt": "Planšetdators ar virtuves ekrānu: pasūtījumi pa galdiņiem kolonnās ar statusiem",
+    "bullets": [
+      {
+        "icon": "LayoutGrid",
+        "title": "Ekrāni pa cehiem",
+        "sub": "Atsevišķi planšetdatori karstajam ceham, bāram un konditorejai — katrs redz tikai savus ēdienus"
+      },
+      {
+        "icon": "Timer",
+        "title": "Statusi un taimeris",
+        "sub": "Gaida / gatavo / gatavs kolonnas un pagājušais laiks katram pasūtījumam — statusa maiņa ar vienu pieskārienu"
+      },
+      {
+        "icon": "ShieldAlert",
+        "title": "Alergēni un komentāri",
+        "sub": "Alergēnu atzīmes un viesu piezīmes ir izceltas — pavārs nepalaidīs garām neko svarīgu"
+      }
+    ]
+  },
+  "bundle": {
+    "heading": "Viss jūsu restorāna darbībai.",
+    "headingAccent": "Vienā lietotnē.",
+    "sub": "Ēdienkarte, virtuve un rezervācijas vienuviet — moderni, ātri un veidoti tā, kā restorāni reāli strādā. Nekādu papildu maksu par atsevišķām funkcijām."
+  },
+  "benefits": [
+    {
+      "icon": "Languages",
+      "tag": "Digitālā ēdienkarte",
+      "title": "Ēdienkarte, kas pārdod.",
+      "bullets": [
+        "35 valodas ar AI",
+        "Premium dizains",
+        "Cenas atjaunojas uzreiz"
+      ],
+      "image": "/landing/feature-design.webp",
+      "imageAlt": "Divi tālruņi uz kafejnīcas galdiņa: digitālās ēdienkartes sākuma ekrāns un kontaktu lapa ar karti"
+    },
+    {
+      "icon": "ChefHat",
+      "tag": "Virtuves ekrāns",
+      "title": "Gatavojiet ātrāk, neko nepalaidot garām.",
+      "bullets": [
+        "Tieši uz ekrāna",
+        "Piezīmes un alergēni",
+        "Planšetdators vai tālrunis"
+      ],
+      "image": "/landing/feature-kds-cards.webp",
+      "imageAlt": "Planšetdators uz bāra letes rāda virtuves ekrānu ar pasūtījumiem pa galdiņiem"
+    },
+    {
+      "icon": "CalendarCheck",
+      "tag": "Rezervācijas",
+      "title": "Rezervācijas autopilotā.",
+      "bullets": [
+        "Rezervēšana bez zvaniem",
+        "Auto-apstiprināšana",
+        "Kalendārs pa galdiņiem"
+      ],
+      "image": "/landing/feature-booking-calendar.webp",
+      "imageAlt": "Divi planšetdatori rāda rezervāciju kalendāru: dienas skats pa galdiņiem un mēneša skats"
+    },
+    {
+      "icon": "Receipt",
+      "tag": "Pasūtījumi zālē",
+      "title": "Pasūtījumi tieši uz virtuvi.",
+      "bullets": [
+        "Viesis vai viesmīlis",
+        "Tieši uz virtuvi",
+        "Ieslēdziet, kad vien vēlaties"
+      ],
+      "image": "/landing/feature-orders-map.webp",
+      "imageAlt": "Planšetdators ar pasūtījumu ekrānu: pasūtījumu saraksts un iekrāsots zāles plāns ar galdiņiem."
+    }
+  ],
+  "seeDetails": "Uzzināt vairāk",
+  "platform": {
+    "hardwareTitle": "Izmantojiet savas ierīces",
+    "hardwareSub": "Mēs nespiežam jūs pirkt aparatūru no mums. Izmantojiet tālruņus, planšetdatorus un datorus, kas jums jau ir.",
+    "anywhereTitle": "Darbojas jebkur",
+    "anywhereSub": "Tālrunis, planšetdators, klēpjdators, dators. Android, iOS, Windows, Mac, Linux. Jebkurā modernā pārlūkprogrammā, bez instalēšanas."
+  },
+  "activities": {
+    "heading": "Viena sistēma —",
+    "headingAccent": "viss restorāns.",
+    "sub": "Ātrāka apkalpošana, mierīgāka virtuve, zemākas izmaksas un viesi, kas atgriežas — viss vienā platformā.",
+    "groups": [
+      {
+        "icon": "Smartphone",
+        "tag": "Pie galdiņa — viesis",
+        "bullets": [
+          "QR ēdienkarte 35 valodās",
+          "Pasūtījums bez viesmīļa gaidīšanas",
+          "Izsaukt viesmīli vai palūgt rēķinu",
+          "Galdiņu rezervācija 24/7",
+          "Unikāls QR kods katram galdiņam",
+          "Nav vajadzīga lietotne — atveras pārlūkprogrammā",
+          "Alergēnu un uztura norādes filtrēšanai"
+        ]
+      },
+      {
+        "icon": "ChefHat",
+        "tag": "Virtuvē",
+        "bullets": [
+          "Pasūtījumi ekrānā uzreiz",
+          "Gaida / gatavo / gatavs kolonnas",
+          "Alergēni un komentāri izcelti",
+          "Planšetdators vai tālrunis — nekādu papīra čeku"
+        ]
+      },
+      {
+        "icon": "ChartColumn",
+        "tag": "Vadība",
+        "bullets": [
+          "Ēdienkartes un cenu labojumi — uzreiz",
+          "AI tulkojums ar vienu klikšķi",
+          "Pārdošanas analītika un atskaites",
+          "Vairāki restorāni vienā kontā",
+          "AI digitalizē papīra ēdienkarti 60 sekundēs",
+          "Sava domēna adrese ar SSL"
+        ]
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Visa platforma 10 minūtēs. ",
+    "headingAccent": "14 dienas pilna pieeja.",
+    "sub": "Ēdienkarte, pasūtījumi, rezervācijas un virtuve — karte nav nepieciešama, atceliet jebkurā laikā; mums uzticas {count} restorāni, viss, kas vajadzīgs, ir e-pasts."
+  }
+}

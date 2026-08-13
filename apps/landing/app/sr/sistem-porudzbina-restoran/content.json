@@ -1,0 +1,236 @@
+{
+  "locale": "sr",
+  "slug": "sistem-porudzbina-restoran",
+  "trackPrefix": "l_orders",
+  "meta": {
+    "title": "Prijem porudžbina u restoranu — Gost i konobar | IQ Rest",
+    "description": "Prijem porudžbina sa telefona ili tableta: mapa stolova, deljenje računa, statusi, opcije i napomene. Gosti poručuju sa stola, konobari na svom uređaju. 14 dana besplatno.",
+    "canonical": "https://iq-rest.com/sr/sistem-porudzbina-restoran",
+    "ogLocale": "sr_RS",
+    "ogTitle": "Prijem porudžbina u restoranu — Gost i konobar",
+    "ogDescription": "Gost za stolom ili konobar na telefonu — porudžbina odmah stiže u kuhinju. Mapa stolova, deljenje računa, statusi, opcije i napomene.",
+    "brandLine": "IQ Rest — Prijem porudžbina u restoranu"
+  },
+  "hero": {
+    "headline": "Porudžbine sa stola —",
+    "cta": "Podesite online poručivanje",
+    "sub": "Gosti poručuju za stolom ili konobari sa bilo kog uređaja — pravo u kuhinju. Mapa stolova, deljenje računa.",
+    "headlineAccent": "pravo u kuhinju",
+    "demoLabel": "Demo: ekran za porudžbine",
+    "tablet": {
+      "src": "/landing/feature-orders-modal.webp",
+      "alt": "Tablet sa otvorenom porudžbinom: lista jela i akcije — promena stola, deljenje računa, dodavanje popusta"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restorani"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kafići"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barovi"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hoteli"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Picerije"
+    }
+  ],
+  "scan": {
+    "heading": "Podesite sistem za prijem porudžbina",
+    "headingAccent": "za 5 minuta.",
+    "sub": "Skenirajte papirni meni ili PDF — AI prepoznaje jela, cene i kategorije. Povežite tablet u sali i počnite sa prijemom porudžbina sa stolova.",
+    "cta": "Skeniraj meni"
+  },
+  "subFeatures": [
+    {
+      "icon": "Map",
+      "eyebrow": "Lista i mapa stolova",
+      "heading": "Lista porudžbina pored mape stolova.",
+      "body": "Sve aktivne porudžbine su prikazane desno: status, ukupno, vreme poručivanja i broj stavki. Levo je mapa stolova: stolovi su označeni bojama po statusu — prazan, zauzet, traži pažnju. Klik na sto otvara porudžbinu, klik na karticu otvara detaljan prikaz. Nema prebacivanja između ekrana.",
+      "bullets": [
+        "Mapa stolova: stolovi označeni bojama po statusu porudžbine.",
+        "Lista porudžbina pored — ukupno, vreme i broj stavki.",
+        "Klik na sto otvara porudžbinu ili kreira novu."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-map.webp",
+        "alt": "Tablet na stanici konobara: lista porudžbina i mapa stolova označena bojama"
+      }
+    },
+    {
+      "icon": "ClipboardList",
+      "eyebrow": "Kartica porudžbine",
+      "heading": "Kartica porudžbine: statusi, dupliranje i brisanje — jednim dodirom.",
+      "body": "Svaka stavka ima svoj status (Na čekanju / Priprema se / Spremno / Posluženo) — kuhinja i konobar vide istu sliku u realnom vremenu. Klik na tačku otvara meni akcija: promena statusa, dupliranje stavke sa istim dodacima i opcijama, ili brisanje. Sve se dešava direktno unutar kartice porudžbine.",
+      "bullets": [
+        "Status po stavci: Na čekanju / Priprema se / Spremno / Posluženo.",
+        "Duplirajte stavku jednim dodirom — iste opcije su uključene.",
+        "Obrišite stavku direktno iz kartice porudžbine."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-detail.webp",
+        "alt": "Tablet sa detaljnom karticom porudžbine: statusi jela, dupliranje i brisanje stavki"
+      }
+    },
+    {
+      "icon": "Receipt",
+      "eyebrow": "Deljenje računa",
+      "heading": "Deljenje računa kada gosti plaćaju odvojeno.",
+      "body": "Gosti odluče da plate odvojeno — označite stavke koje idu na novi račun; ostale ostaju na trenutnom. Sistem odmah prikazuje oba iznosa. Jedan klik na \"Podeli porudžbinu\" — i imate dve nezavisne porudžbine sa tačnim iznosima, obe ostaju na svojim stolovima.",
+      "bullets": [
+        "Izaberite stavke za deljenje pomoću polja za potvrdu.",
+        "Novi i preostali iznosi računa se pojavljuju odmah.",
+        "Jedan klik — i porudžbina je podeljena bez ručnog računanja."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-split.webp",
+        "alt": "Tablet na stolu u restoranu: deljenje računa između gostiju"
+      }
+    },
+    {
+      "icon": "Smartphone",
+      "eyebrow": "Mobilni unos porudžbina",
+      "heading": "Dodavanje stavki sa telefona — u tri koraka.",
+      "body": "Konobari nisu vezani za jedan uređaj: otvaraju ekran za porudžbine na svom telefonu i dodaju stavku u tri koraka — biraju kategoriju, biraju jelo, biraju opcije (veličina, pečenost, dodatni sosevi i sastojci). Cena se automatski preračunava. Napomena za kuhinju se dodaje u poslednjem koraku.",
+      "bullets": [
+        "Tri koraka: kategorija → jelo → opcije.",
+        "Opcije (veličina, dodaci, sastojci) sa cenama na jedan klik.",
+        "Polje za napomenu u poslednjem koraku."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-mobile.webp",
+        "alt": "Četiri telefona prikazuju korake dodavanja stavke u porudžbinu: kategorija, jelo, veličina, napomena"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Šta ugostitelji pitaju o prijemu porudžbina u IQ Rest-u. Ako vaše pitanje nije na listi — pišite nam na WhatsApp.",
+    "items": [
+      {
+        "q": "Mogu li više konobara raditi istovremeno sa različitih uređaja?",
+        "a": "Da. Svaki konobar povezuje svoj uređaj i vidi iste stolove, porudžbine i statuse u realnom vremenu. Izmena koju napravi jedan odmah se prikazuje ostalima — bez konflikata ili blokiranja."
+      },
+      {
+        "q": "Mogu li konobari koristiti svoje lične uređaje?",
+        "a": "Da. Ekran za porudžbine radi u pregledaču — ništa se ne instalira. Telefon ili tablet se povezuje pomoću šestocifrenog koda iz kontrolne table, a pristup se ukida jednim klikom na kraju smene."
+      },
+      {
+        "q": "Mogu li dodati obavezne opcije za jela (veličina, pečenost)?",
+        "a": "Da. Jelo može imati bilo koji broj grupa opcija — obavezne (\"Veličina\": Mala / Srednja / Velika) i opcione (\"Pečenost\": slabo / srednje / dobro pečeno). Opcije utiču na cenu. Kod obavezne grupe, sistem traži izbor — eliminišući greške."
+      },
+      {
+        "q": "Mogu li dodati napomene i dodatne stavke uz jelo?",
+        "a": "Da. Poslednji korak ima polje za napomenu (\"bez luka\", \"alergija na orahe\"). Dodaci se podešavaju kao opcije sa cenom (\"+ BBQ sos\", \"+ Hleb\"). Napomene se pojavljuju na kuhinjskom ekranu, istaknute bojom."
+      },
+      {
+        "q": "Da li postoji statistika porudžbina?",
+        "a": "Da. Sekcija za analitiku prikazuje promet po danima, prosečan račun i najprodavanija jela. Ovi podaci vam pomažu u planiranju smena i nabavke."
+      },
+      {
+        "q": "Mogu li se porudžbine deliti?",
+        "a": "Da. Označite stavke koje idu na novi račun — oba iznosa se automatski preračunavaju, bez ručnog računanja i prebacivanja između sekcija."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Porudžbine za 10 minuta. ",
+    "headingAccent": "14 dana punog pristupa.",
+    "sub": "Bez kartice, otkažite bilo kada. {count} restorana prima porudžbine za kuhinju sa nama. Potrebna vam je samo email adresa."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Mapa stolova i lista porudžbina",
+      "sub": "Aktivne porudžbine pored mape stolova: stolovi su označeni bojama po statusu, a klik otvara porudžbinu ili kreira novu.",
+      "bullets": [
+        {
+          "icon": "Map",
+          "title": "Stolovi po statusu",
+          "sub": "Prazan, zauzet, traži pažnju — vidljivo na prvi pogled"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Lista aktivnih porudžbina",
+          "sub": "Ukupno, vreme poručivanja i broj stavki za svaku porudžbinu"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Nova porudžbina sa mape",
+          "sub": "Klik na slobodan sto odmah otvara unos porudžbine"
+        }
+      ]
+    },
+    {
+      "heading": "Status za svaku stavku",
+      "sub": "Kuhinja i konobar vide istu sliku: svako jelo nosi svoj status — od poručenog do posluženog.",
+      "bullets": [
+        {
+          "icon": "Timer",
+          "title": "Statusi po jelu",
+          "sub": "Na čekanju, Priprema se, Spremno, Posluženo — po stavci, ne po porudžbini"
+        },
+        {
+          "icon": "Receipt",
+          "title": "Dupliranje stavke",
+          "sub": "Ponovite jelo sa istim opcijama jednim dodirom"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Izmene na licu mesta",
+          "sub": "Obrišite stavku direktno iz kartice porudžbine"
+        }
+      ]
+    },
+    {
+      "heading": "Deljenje računa",
+      "sub": "Gosti plaćaju odvojeno — označite stavke i one prelaze na novi račun. Iznosi se odmah preračunavaju.",
+      "bullets": [
+        {
+          "icon": "Receipt",
+          "title": "Polja za potvrdu po stavci",
+          "sub": "Izaberite jela za novi račun; ostala ostaju na trenutnom"
+        },
+        {
+          "icon": "ChartColumn",
+          "title": "Iznosi prikazani odmah",
+          "sub": "Novi i preostali račun se automatski računaju"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Jedan dodir",
+          "sub": "Porudžbina je podeljena bez ručnog računanja ili kalkulatora"
+        }
+      ]
+    },
+    {
+      "heading": "Unos porudžbine sa telefona konobara",
+      "sub": "Konobari primaju porudžbinu na svom uređaju u tri koraka: kategorija, jelo, opcije.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Bilo koji uređaj",
+          "sub": "Telefon ili tablet sa pregledačem — bez instalacije"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Opcije sa cenom",
+          "sub": "Veličina, dodaci i varijante jela sa cenama na jedan klik"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Napomene za jelo",
+          "sub": "Zahtevi gostiju se dodaju u poslednjem koraku — kuhinja ih odmah vidi"
+        }
+      ]
+    }
+  ]
+}

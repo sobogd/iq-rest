@@ -1,0 +1,206 @@
+{
+  "locale": "ca",
+  "slug": "pantalla-de-cuina",
+  "trackPrefix": "l_kds",
+  "meta": {
+    "title": "Pantalla de cuina (KDS) per a restaurants — Comandes a la pantalla del cuiner | IQ Rest",
+    "description": "Una pantalla de cuina KDS per a restaurants: les comandes de la sala i de la carta QR van directes a la pantalla del cuiner. Columnes per taula, estats Pendent / A cuina / Llest / Servit, filtres per partida. Funciona en tauleta o mòbil.",
+    "canonical": "https://iq-rest.com/ca/pantalla-de-cuina",
+    "ogLocale": "ca_ES",
+    "ogTitle": "Pantalla de cuina (KDS) — Comandes directes a la pantalla del cuiner",
+    "ogDescription": "Comandes de la sala a la pantalla del cuiner. Columnes per taula, estats i temporitzador. Un sol toc canvia l'estat.",
+    "brandLine": "IQ Rest — Pantalla de cuina per a restaurants"
+  },
+  "hero": {
+    "headline": "Pantalla de cuina (KDS):",
+    "cta": "Configurar la pantalla de cuina",
+    "sub": "Les comandes arriben a la pantalla de cuina a l'instant: notes, al·lèrgens i un temporitzador. L'estat canvia amb un sol toc.",
+    "headlineAccent": "comandes directes al cuiner",
+    "demoLabel": "Demo: pantalla de cuina",
+    "tablet": {
+      "src": "/landing/hero-card-kds.webp",
+      "alt": "Tauleta amb una pantalla de cuina: comandes per taula en columnes amb estats"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurants"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafeteries"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bars"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotels"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzeries"
+    }
+  ],
+  "scan": {
+    "heading": "Configura la pantalla de cuina",
+    "headingAccent": "en 5 minuts.",
+    "sub": "Escaneja una carta de paper o un PDF: la IA reconeix els plats, les categories i els al·lèrgens. Connecta una tauleta a la cuina i comença a rebre comandes.",
+    "cta": "Escanejar carta"
+  },
+  "subFeatures": [
+    {
+      "icon": "LayoutGrid",
+      "eyebrow": "Control i filtres",
+      "heading": "Múltiples pantalles per partida: cuina i barra.",
+      "body": "Configura tauletes separades per a la partida de calents, la barra o les postres: cada pantalla mostra només els plats que li corresponen. Els filtres per estat (Pendent / A cuina / Llest / Servit) i per categoria posen ordre: els cuiners només treballen amb el que pertany a la seva partida.",
+      "bullets": [
+        "Múltiples pantalles KDS amb filtres per categoria de plat.",
+        "Filtre d'estat: només el que s'està cuinant o ja està llest.",
+        "Cada partida veu només el seu propi flux de comandes."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-filters.webp",
+        "alt": "Tauleta en un suport de llautó al passa-plats d'una cuina de restaurant: un KDS filtrat per estat dels plats"
+      }
+    },
+    {
+      "icon": "Timer",
+      "eyebrow": "Targetes i temporitzador",
+      "heading": "Un sol toc canvia l'estat. Comentaris i al·lèrgens ressaltats en color.",
+      "body": "La fitxa d'un plat mostra les opcions seleccionades (sense ceba, molt fet), els comentaris del client, els al·lèrgens i un temporitzador que corre des que es va fer la comanda. En tocar la targeta s'avança l'estat: Pendent → A cuina → Llest → Servit. La llista s'ordena automàticament per prioritat de temps.",
+      "bullets": [
+        "Toca una targeta i l'estat avança a l'instant.",
+        "Opcions, comentaris i al·lèrgens ressaltats en color.",
+        "Ordenat per prioritat: els plats que porten més temps esperant pugen a dalt de tot."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-cards.webp",
+        "alt": "Tauleta en un suport de llautó a la barra d'un restaurant: un KDS amb targetes de comanda per taula"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "El que pregunten els restauradors sobre la pantalla de cuina a IQ Rest. Si no trobes la teva pregunta, escriu-nos per WhatsApp.",
+    "items": [
+      {
+        "q": "Quins estats tenen els articles a la cuina?",
+        "a": "Quatre estats: Pendent (la comanda s'ha fet i està en espera); A cuina (el plat s'està preparant); Llest (a punt per recollir); Servit (entregat al client). En tocar la targeta s'avança al següent estat, sense menús ni confirmacions."
+      },
+      {
+        "q": "Puc configurar diverses pantalles KDS en diferents partides de la cuina?",
+        "a": "Sí. Una tauleta a la partida de calents, una altra a la barra i una tercera a les postres: cadascuna amb el seu propi filtre de categories de plats. Totes les pantalles es mantenen sincronitzades: un estat canviat en una s'actualitza a la resta."
+      },
+      {
+        "q": "En quin dispositiu funciona el KDS? Necessito una tauleta especial?",
+        "a": "El KDS funciona en qualsevol navegador modern. Una tauleta en un suport al passa-plats és ideal per a una cuina gran; un telèfon intel·ligent serveix per a un local petit. No cal cap equip especial ni instal·lació: el dispositiu es connecta amb un codi de sis xifres des del panell d'administració."
+      },
+      {
+        "q": "D'on surten les comandes a la pantalla de cuina?",
+        "a": "De qualsevol font: un client que fa una comanda a través de la carta QR de la taula, o un cambrer que la pren des del seu propi dispositiu. Les comandes arriben al KDS automàticament, amb el número de taula. No cal tornar-les a introduir manualment des d'un TPV."
+      },
+      {
+        "q": "Què mostra la targeta d'una comanda?",
+        "a": "El nom del plat, les opcions seleccionades (sense ceba, molt fet), el comentari del client, els al·lèrgens, l'estat i un temporitzador que corre des que es va fer la comanda. Les targetes s'ordenen per prioritat: com més temps espera un plat, més amunt se situa a la columna."
+      },
+      {
+        "q": "Es poden filtrar les targetes a la pantalla?",
+        "a": "Sí. Hi ha dos filtres: per estat (per exemple, només Pendent i A cuina) i per categoria (begudes a la barra, plats calents a la cuina). La configuració es desa per dispositiu, de manera que cada partida treballa amb el seu propi conjunt de plats."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Una cuina sense paper en 10 minuts. ",
+    "headingAccent": "14 dies d'accés complet.",
+    "sub": "Sense targeta, cancel·la quan vulguis. {count} restaurants confien en nosaltres. Només necessites un correu, i les comandes arribaran directes a la pantalla de cuina."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Pantalles per partida",
+      "sub": "Tauletes separades per a la partida de calents, la barra i les postres: cada pantalla mostra només els seus propis plats.",
+      "bullets": [
+        {
+          "icon": "LayoutGrid",
+          "title": "Filtre de categories",
+          "sub": "Assigna a cada pantalla les seves pròpies categories de la carta"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Un flux per partida",
+          "sub": "La cuina i la barra treballen en paral·lel sense destorbar-se"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Filtre d'estat",
+          "sub": "Mostra només el que s'està cuinant o està a punt per recollir"
+        }
+      ]
+    },
+    {
+      "heading": "Estats amb un sol toc",
+      "sub": "Un toc a la targeta mou el plat al següent estat. La cuina i el cambrer veuen el mateix.",
+      "bullets": [
+        {
+          "icon": "ClipboardList",
+          "title": "Un estat per article",
+          "sub": "A cuina, llest, servit: per plat, no per comanda"
+        },
+        {
+          "icon": "Timer",
+          "title": "Un temporitzador des del moment de la comanda",
+          "sub": "Mira quant de temps porta esperant un plat: els que porten més temps pugen a dalt"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "Al·lèrgens i comentaris",
+          "sub": "Opcions, notes dels clients i al·lèrgens ressaltats en color"
+        }
+      ]
+    },
+    {
+      "heading": "Les comandes arriben a l'instant",
+      "sub": "La comanda d'un client des de la carta QR o d'un cambrer apareix a la pantalla en el moment que es fa, sense haver de refrescar la pàgina.",
+      "bullets": [
+        {
+          "icon": "Rocket",
+          "title": "A la pantalla a l'instant",
+          "sub": "Una connexió constant: la targeta apareix al segon de fer-se la comanda"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Totes les fonts en un sol flux",
+          "sub": "Les comandes de clients i cambrers arriben a la mateixa pantalla amb el número de taula"
+        },
+        {
+          "icon": "Map",
+          "title": "Número de taula a la targeta",
+          "sub": "La cuina veu cap a on va el plat; el cambrer veu on l'esperen"
+        }
+      ]
+    },
+    {
+      "heading": "Connectat en minuts",
+      "sub": "La pantalla de cuina funciona al navegador de qualsevol tauleta o mòbil, i es connecta amb un codi de sis xifres.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Tauleta o mòbil",
+          "sub": "N'hi ha prou amb un navegador: no cal comprar equips especials"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Codi de vinculació",
+          "sub": "Introdueix el codi de sis xifres des del panell i el dispositiu quedarà enllaçat a la cuina"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Revocació d'accés",
+          "sub": "Has perdut o canviat la tauleta? Desconnecta-la des del panell amb un sol toc"
+        }
+      ]
+    }
+  ]
+}

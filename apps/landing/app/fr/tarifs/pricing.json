@@ -1,0 +1,59 @@
+{
+  "breadcrumbLabel": "Tarifs",
+  "meta": {
+    "title": "Tarifs — composez votre formule restaurant dès 9.90 €/mois | IQ Rest",
+    "description": "Composez votre formule à partir de modules : menu QR avec traduction IA, prise de commandes, réservation de tables, écran de cuisine. Prix par restaurant dès 9.90 €/mois, remises sur volume. 14 jours gratuits, sans carte bancaire, annulation à tout moment.",
+    "canonical": "https://iq-rest.com/fr/tarifs",
+    "ogLocale": "fr_FR",
+    "ogTitle": "Tarifs — composez votre formule restaurant",
+    "ogDescription": "Une formule à base de modules dès 9.90 €/mois : menu QR, commandes, réservations, KDS. Remises sur volume, sans frais cachés. 14 jours gratuits."
+  },
+  "faqSub": "Questions fréquentes des restaurants sur les tarifs et le paiement. Vous ne trouvez pas la vôtre ? Écrivez-nous sur WhatsApp.",
+  "faqItems": [
+    {
+      "q": "Comment le prix est-il construit ?",
+      "a": "La formule se compose de modules. La base — le menu QR avec traduction IA en 35 langues et gestion depuis n'importe quel appareil. Ensuite, vous ajoutez ce qu'il vous faut : réservation de tables, écran de cuisine, votre propre domaine. Le prix se calcule par restaurant ; dès le deuxième, des remises sur volume s'appliquent."
+    },
+    {
+      "q": "Y a-t-il une commission sur les commandes ?",
+      "a": "Non. Les commandes du menu QR et des serveurs arrivent directement au restaurant. Vous ne payez que le prix mensuel fixe."
+    },
+    {
+      "q": "Comment fonctionne la période d'essai ?",
+      "a": "14 jours d'accès complet à toutes les fonctionnalités, sans carte bancaire. Si aucun paiement n'est activé à l'échéance, le compte est mis en pause : le panneau reste accessible en lecture seule, le menu client et la prise de commandes sont désactivés. Aucun prélèvement automatique."
+    },
+    {
+      "q": "Qu'advient-il des données pendant la pause ?",
+      "a": "Tout est conservé : menu, photos, historique des commandes, réservations, réglages, statistiques. Activez le paiement même six mois plus tard — tout revient comme avant."
+    },
+    {
+      "q": "Faudra-t-il réimprimer les QR codes ?",
+      "a": "Non. Pendant la pause, les codes affichent un message « temporairement indisponible » ; une fois le paiement activé, les mêmes codes rouvrent le menu."
+    },
+    {
+      "q": "Peut-on changer de formule ?",
+      "a": "Oui, à tout moment depuis le panneau. La différence est recalculée au prorata des jours restants de la période payée. Une fonction désactivée conserve ses données."
+    },
+    {
+      "q": "Combien de restaurants peut-on connecter ?",
+      "a": "Autant que vous voulez, avec une gestion depuis un seul panneau. Remises sur volume jusqu'à 50 % à partir de 5 restaurants. Pour les grandes chaînes — formule sur mesure via WhatsApp."
+    },
+    {
+      "q": "Quelle est la remise sur la formule annuelle ?",
+      "a": "Environ 30 % par rapport au paiement mensuel. Le montant exact s'affiche lors de la composition de la formule."
+    },
+    {
+      "q": "Comment annuler l'abonnement ?",
+      "a": "En un clic depuis le panneau. Le compte fonctionne jusqu'à la fin de la période payée, puis est mis en pause. Les données sont conservées."
+    },
+    {
+      "q": "Quels sont les moyens de paiement ?",
+      "a": "Visa, Mastercard, American Express, Apple Pay, Google Pay — via Stripe. En Europe, sur la formule annuelle, également le prélèvement SEPA."
+    }
+  ],
+  "finalCta": {
+    "heading": "Un seul prix. Zéro risque. ",
+    "headingAccent": "14 jours d'accès complet.",
+    "sub": "Sans carte bancaire, annulation à tout moment — {count} restaurants nous font confiance. Pour démarrer, seul un email est nécessaire."
+  }
+}

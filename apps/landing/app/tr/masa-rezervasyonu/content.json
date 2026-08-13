@@ -1,0 +1,206 @@
+{
+  "locale": "tr",
+  "slug": "masa-rezervasyonu",
+  "trackPrefix": "l_bookings",
+  "meta": {
+    "title": "Restoranlar İçin 7/24 Masa Rezervasyonu | IQ Rest",
+    "description": "Restoranınız için 7/24 masa rezervasyonu: misafirler QR menü veya web sitesi üzerinden masalarını kendileri ayırır. Masaya göre takvim, otomatik onaylar ve hatırlatıcılar. Telefon trafiği yok, kaçan misafir yok. 14 gün ücretsiz.",
+    "canonical": "https://iq-rest.com/tr/masa-rezervasyonu",
+    "ogLocale": "tr_TR",
+    "ogTitle": "7/24 Masa Rezervasyonu — Misafirler Kendileri Ayırsın",
+    "ogDescription": "Misafirler QR menü veya web sitesi üzerinden masa ayırır. Takvim, otomatik onaylar, hatırlatıcılar. Tek bir misafiri bile kaçırmayın.",
+    "brandLine": "IQ Rest — Restoran Masa Rezervasyonu"
+  },
+  "hero": {
+    "headline": "7/24 masa rezervasyonu,",
+    "cta": "Masa rezervasyonunu kur",
+    "sub": "Misafirler QR menü veya bir bağlantı üzerinden 7/24 rezervasyon yapar. Masaya göre takvim, otomatik onaylar ve hatırlatıcılar.",
+    "headlineAccent": "telefon trafiği yok",
+    "demoLabel": "Demo: rezervasyon takvimi",
+    "tablet": {
+      "src": "/landing/hero-card-reservation.webp",
+      "alt": "Rezervasyon takvimi açık tablet: aylık görünüm ve onay bekleyen rezervasyonlar"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restoranlar"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kafeler"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barlar"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Oteller"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzacılar"
+    }
+  ],
+  "scan": {
+    "heading": "Masa rezervasyonlarını",
+    "headingAccent": "5 dakikada başlatın.",
+    "sub": "Takvimi bağlayın, fotoğrafları ve oturma kapasiteleriyle masaları ekleyin — misafirler aynı gün rezervasyon yapmaya başlasın.",
+    "cta": "Rezervasyonları aktifleştir"
+  },
+  "subFeatures": [
+    {
+      "icon": "CalendarPlus",
+      "eyebrow": "Rezervasyon formu",
+      "heading": "Misafirler kendileri ayırır — tarih, saat ve kişi sayısına göre.",
+      "body": "Misafir QR menüyü veya doğrudan bir bağlantıyı açar, tarih, saat ve kişi sayısını seçer — ve anında müsait masaları görür: fotoğrafı, açıklaması (teras, cam kenarı, barda loca) ve kapasitesiyle birlikte. E-posta ve WhatsApp ile otomatik olarak bir onay gönderilir.",
+      "bullets": [
+        "Fotoğraf, açıklama ve kapasiteye göre masa seçimi.",
+        "Otomatik onay ve ziyaretten bir saat önce hatırlatıcı.",
+        "Minimal bir form: isim, telefon, kişi sayısı."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-form.webp",
+        "alt": "Bir misafir telefondan restoran masası ayırıyor: tarih, saat, kişi sayısı ve masa seçimi"
+      }
+    },
+    {
+      "icon": "CalendarDays",
+      "eyebrow": "Rezervasyon takvimi",
+      "heading": "Gün ve masaya göre takvim — her şey saniyeler içinde görünür.",
+      "body": "Yönetim panelinde masa, gün, hafta ve aya göre ayrılmış bir rezervasyon takvimi bulunur. Boş saatler, dolu masalar, onaylanmış ve bekleyen rezervasyonların hepsi tek ekranda görünür. Salondaki bir tablette veya ofisteki bir dizüstü bilgisayarda çalışır.",
+      "bullets": [
+        "Gün, hafta ve ay görünümleri.",
+        "Masaya göre dağılım: kim, ne zaman, kaç misafir.",
+        "Bir rezervasyonu yeniden planlayın, iptal edin veya onaylayın — telefonunuzdan tek dokunuşla."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-calendar.webp",
+        "alt": "İki tablette IQ Rest yönetim panelindeki rezervasyon takvimi: masalara göre günlük görünüm ve aylık takvim"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Restorancıların IQ Rest'te masa rezervasyonları hakkında sordukları. Sorunuz listede yoksa — bize WhatsApp'tan yazın.",
+    "items": [
+      {
+        "q": "Rezervasyonun açık olduğu gün ve saatleri seçebilir miyim?",
+        "a": "Evet. Yönetim paneli, haftanın her günü için bir program belirlemenizi sağlar: rezervasyon saatleri ve öğle ile akşam yemeği arası mola. Ayrıca rezervasyonları geçici olarak tamamen kapatabilirsiniz — misafirler online rezervasyonun kullanılamadığını görecektir."
+      },
+      {
+        "q": "Her masanın fotoğrafını yükleyebilir miyim?",
+        "a": "Evet. Her masanın bir fotoğrafı, kapasitesi ve bölgesi (teras, cam kenarı, bar) vardır. Misafirler tam olarak hangi masayı ayırdıklarını görür ve bilinçli bir seçim yapar."
+      },
+      {
+        "q": "Masa başına misafir sayısını sınırlayabilir miyim?",
+        "a": "Evet. Her masanın belirlenmiş bir kapasitesi vardır — sistem misafirlere sadece uygun masaları sunar ve iki kişilik bir masanın altı kişilik bir grup tarafından ayırtılmasını engeller."
+      },
+      {
+        "q": "Rezervasyonları kurmak ne kadar zor?",
+        "a": "Üç adım: fotoğrafları ve kapasiteleriyle masaları ekleyin, ayarlardan rezervasyon modunu açın ve bağlantıyı veya QR kodu paylaşın. Kurulum 5–10 dakika sürer."
+      },
+      {
+        "q": "Otomatik veya manuel rezervasyon onayı ayarlayabilir miyim?",
+        "a": "Evet, mod ayarlardan seçilir. Otomatik onayda misafir formu gönderdikten hemen sonra onaylanır. Manuel modda ise talep panelde \"onay bekliyor\" olarak görünür — bir yönetici onaylar veya reddeder. Manuel mod, masalar sınırlı olduğunda kullanışlıdır."
+      },
+      {
+        "q": "Rezervasyon başına ücret alıyor musunuz?",
+        "a": "Hiçbir ücret yoktur: rezervasyonlar aboneliğe dahildir — misafirlerden yüzde alınmaz, işlem başına ücret kesilmez, aracı yoktur. Sabit bir ödeme ve sınırsız rezervasyon."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Rezervasyonlar 10 dakikada hazır. ",
+    "headingAccent": "14 gün tam erişim.",
+    "sub": "Kart gerekmez, istediğiniz zaman iptal edin. {count} restoran karşılama bankosunun yükünü bizimle hafifletiyor. Başlamak için sadece e-posta adresiniz yeterli."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Misafirler kendileri ayırır",
+      "sub": "Tarih, saat ve kişi sayısı — QR menüden veya doğrudan bir bağlantıdan, günün her saati. Sistem sadece müsait saatleri gösterir.",
+      "bullets": [
+        {
+          "icon": "CalendarPlus",
+          "title": "7/24 rezervasyon",
+          "sub": "Misafirler gece veya hafta sonu rezervasyon yapar — arama yok, yanıt bekleme yok"
+        },
+        {
+          "icon": "Users",
+          "title": "Kişi sayısına uygun masa",
+          "sub": "Sistem, kapasiteye göre uygun bir masayı kendi seçer"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Minimal bir form",
+          "sub": "İsim, telefon ve kişi sayısı — form yarım dakika sürer"
+        }
+      ]
+    },
+    {
+      "heading": "Gün ve masaya göre takvim",
+      "sub": "Tüm rezervasyonlar tek takvimde: neyin boş olduğunu, neyin onaylandığını ve kimin geleceğini görün.",
+      "bullets": [
+        {
+          "icon": "CalendarDays",
+          "title": "Gün, hafta, ay",
+          "sub": "Görünümleri değiştirin ve oturma düzenini önceden planlayın"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Masaya göre dağılım",
+          "sub": "Kim, ne zaman ve kaç misafir için — her masa için"
+        },
+        {
+          "icon": "Smartphone",
+          "title": "Telefonunuzdan yönetin",
+          "sub": "Bir rezervasyonu yeniden planlayın, iptal edin veya onaylayın — tek dokunuşla"
+        }
+      ]
+    },
+    {
+      "heading": "Program ve modlar",
+      "sub": "Haftanın her günü için rezervasyon programını, aralık süresini ve onay modunu ayarlayın.",
+      "bullets": [
+        {
+          "icon": "Clock",
+          "title": "Günlük program",
+          "sub": "Öğle ve akşam yemeği arası mola dahil, haftanın her günü için ayrı saatler"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Aralık süresi",
+          "sub": "Mekanınızın formatına uyması için rezervasyon aralığını belirleyin"
+        },
+        {
+          "icon": "CalendarCheck",
+          "title": "Otomatik veya manuel",
+          "sub": "Her rezervasyonu kendiniz onaylayın veya otomatik onayı açın"
+        }
+      ]
+    },
+    {
+      "heading": "Manuel iş yükü olmadan bildirimler",
+      "sub": "Sistem misafiri ve ekibinizi bilgilendirir — e-posta ve rezervasyon ekranı anında güncellenir.",
+      "bullets": [
+        {
+          "icon": "Mail",
+          "title": "Misafire e-posta",
+          "sub": "Rezervasyon onayı otomatik olarak e-posta ile gönderilir"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Restorana bildirim",
+          "sub": "İşletmeciler her yeni rezervasyon için bir e-posta alır"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Girişte rezervasyon ekranı",
+          "sub": "Karşılama tableti yeni rezervasyonları gerçek zamanlı gösterir"
+        }
+      ]
+    }
+  ]
+}

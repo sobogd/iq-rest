@@ -1,0 +1,151 @@
+{
+  "locale": "tr",
+  "slug": "qr-kod-menu-restoran",
+  "trackPrefix": "l_tr_qr",
+  "featureHeading": {
+    "heading": "Sadece bir QR kod değil",
+    "sub": "Tek bir taramanın misafirleriniz ve salonunuz için dönüştüğü her şey."
+  },
+  "meta": {
+    "title": "Restoranlar İçin QR Menü | IQ Rest",
+    "description": "Restoranlar için QR menü: misafirler masadaki QR kodu okutur, menüyü tarayıcılarında açar ve kendi dillerinde sipariş verir. 14 gün ücretsiz, kart gerekmez.",
+    "canonical": "https://iq-rest.com/tr/qr-kod-menu-restoran",
+    "ogLocale": "tr_TR",
+    "ogTitle": "Restoranlar İçin QR Menü",
+    "ogDescription": "Masada bir QR, telefonda menü — fotoğraflar, alerjenler, 35 dil ve anlık güncellemeler.",
+    "brandLine": "IQ Rest — Restoranlar İçin QR Menü"
+  },
+  "hero": {
+    "headline": "QR menü:\nokut ve sipariş ver",
+    "cta": "QR menü oluştur",
+    "sub": "Misafirler masadaki QR'ı okutur, 35 dilde fotoğrafları ve alerjenleri inceler ve sipariş verir — uygulama gerekmez."
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restoranlar"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kafeler"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barlar"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Oteller"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzacılar"
+    }
+  ],
+  "scan": {
+    "heading": "Zaten kağıt veya PDF menünüz var mı?",
+    "headingAccent": "Yapay zeka onu 60 saniyede QR menüye dönüştürür.",
+    "sub": "Menünün bir fotoğrafını veya PDF'ini yükleyin — yapay zeka kategorileri, yemekleri ve fiyatları tanır ve bunları doğrudan QR menünüze bağlar.",
+    "cta": "QR menü oluştur"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "Tek QR, 35 dil",
+      "heading": "Tek QR kod, 35 dilde menü.",
+      "body": "Misafirler QR'ı okutur ve dillerini seçer: çeviri sıradan bir çevirmenle değil, mutfak duyarlılığına sahip yapay zeka ile yapılır. Artık ayrı turist menülerine veya masada dağınık kağıtlara son.",
+      "bullets": [
+        "Aboneliğe dahil 35 dili kapsayan tek bir basılı QR.",
+        "Yapay zeka yemeğin dilinden anlar — yemek isimleri her dilde doğal duyulur.",
+        "Misafirler QR'ı tekrar okutmadan menü içinde dil değiştirir."
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Aynı QR kodu masadan okutup menüyü kendi telefonlarında farklı dillerde okuyan iki misafir"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "QR içinde alerjenler",
+      "heading": "QR menünün içinde alerjenler ve diyet etiketleri.",
+      "body": "QR'ın arkasındaki menüde her yemek etiket taşıyabilir: glüten, laktoz, kuruyemiş, deniz ürünleri, vegan ve glütensiz seçenekler. Misafirler personele sormadan, kendi telefonlarından yemekleri kısıtlamalarına göre filtreler.",
+      "bullets": [
+        "Yemek bazında 14 alerjen kategorisi.",
+        "Panelde tek tıkla vegan, vejetaryen ve glütensiz etiketleri.",
+        "Misafirler QR menüyü kendi kısıtlamalarına göre filtreler."
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Bir misafir telefonda QR menüyü alerjenlere göre filtrelerken, işletmeci tablette listeyi düzenliyor"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Bir QR'dan fazlası",
+      "heading": "Restoran web sitesi tarzında bir QR menü.",
+      "body": "Kodu okuttuktan sonra misafirler düz bir PDF'e düşmez: video veya çarpıcı bir fotoğraf içeren bir karşılama ekranı, mekanın açıklaması ve harita, telefon numaraları ile sosyal medya bağlantılarını içeren bir iletişim sayfası görürler. QR, restoranınızın internetteki ön kapısı haline gelir.",
+      "bullets": [
+        "QR menü başlangıç ekranında arka plan videosu veya çarpıcı bir fotoğraf.",
+        "Mekanınızın ve her kategorinin hikayesini anlatacak alan.",
+        "Yerleşik bir iletişim sayfası: harita, telefon, Instagram, WhatsApp."
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Masada iki telefon: arka plan videosu olan QR menü başlangıç ekranı ve haritalı iletişim sayfası"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "QR'dan sipariş · isteğe bağlı",
+      "heading": "Misafirler QR koddan sipariş de verebilir.",
+      "body": "Menüye göz atmanın ötesinde, QR menü bir sipariş kanalına dönüşebilir: misafirler yemekleri sepete ekler ve talebi gönderir. Sipariş salondaki bir garsona, WhatsApp'ınıza veya mutfak ekranına ulaşır. Bu özellik ayarlardan istendiği zaman açılıp kapatılabilir.",
+      "bullets": [
+        "Doğrudan QR taramasından sepet, notlar ve sipariş gönderimi.",
+        "Sipariş anında salona, WhatsApp'a veya mutfak ekranına ulaşır.",
+        "Özelliği saatlere, katlara veya belirli restoranlara göre aktifleştirin."
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Masada iki telefon: QR menüden oluşturulmuş bir sepet ve gönderilen siparişin onayı"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Restorancıların IQ Rest QR menüsü hakkında sordukları. Sorunuzu bulamadınız mı? Bize WhatsApp'tan yazın.",
+    "items": [
+      {
+        "q": "IQ Rest QR menüsü nasıl çalışır?",
+        "a": "Her masada basılı bir QR kod bulunur. Misafirler telefon kamerasıyla okutur ve tarayıcıda restoranın menüsü açılır — fotoğraflar, açıklamalar, alerjenler ve güncel fiyatlar. Misafirler veya personel için indirilecek bir uygulama yoktur."
+      },
+      {
+        "q": "QR menü oluşturmak için teknik bilgiye ihtiyacım var mı?",
+        "a": "Hayır. Panel tıklama ve sürükle-bırak ile çalışır, kod veya karmaşık yapılandırma yoktur. Bir yemek eklemek saniyeler sürer: isim, fiyat, fotoğraf. İlk kurulum genellikle 30 dakika ile bir saat arası sürer; zaten bir PDF menünüz varsa, yapay zeka onu otomatik olarak dönüştürür."
+      },
+      {
+        "q": "Misafirlerin QR'ı okutmak için bir uygulama indirmesi gerekiyor mu?",
+        "a": "Hayır. Yerleşik iPhone ve Android kamerası QR kodu saniyeler içinde tanır ve menüyü doğrudan tarayıcıda açar. Yönetim paneli de herhangi bir modern tarayıcıda çalışır — telefon, tablet veya dizüstü bilgisayar."
+      },
+      {
+        "q": "Masa QR kodları nasıl yazdırılır?",
+        "a": "QR kodları panelde otomatik olarak oluşturulur (her masa için bir tane veya tüm mekan için tek bir tane) ve baskıya hazır bir PDF olarak indirilir. Bir ofis yazıcısı ve bir stant yeterlidir: bir tutucu, bir çıkartma veya bir bardak altlığı."
+      },
+      {
+        "q": "QR menü için kendi alan adımı kullanabilir miyim?",
+        "a": "Evet. Restoranınızın alan adını SSL sertifikasıyla destekliyoruz (örneğin menu.restoraniniz.com): misafirler QR'ı okuttuğunda sıradan bir alt alan adı değil, restoranınızın adresini görür. DNS kurulumu 5–10 dakika sürer ve size bu konuda rehberlik ederiz."
+      },
+      {
+        "q": "Tek bir hesaptan birkaç restoranın QR kodlarını yönetebilir miyim?",
+        "a": "Evet, talep üzerine. Tek bir hesap, her birinin kendi QR kodları, menüsü, tasarımı ve analizleri olan birkaç mekanı bir araya getirebilir. Bize WhatsApp'tan yazın, çoklu restoran modunu aktifleştirelim."
+      },
+      {
+        "q": "Sıfırdan bir QR menü başlatmak zor mu?",
+        "a": "Üç adım: (1) kategorileri oluşturun; (2) isim, fiyat ve fotoğrafla yemekleri ekleyin; (3) QR kodları yazdırıp masalara yerleştirin. Zaten kağıt veya PDF menünüz varsa yükleyin — yapay zeka kategorileri ve fiyatları tanıyıp kartları doldurur. Temel bir menü 5 dakikada yayına girebilir."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "10 dakikada QR menü. ",
+    "headingAccent": "14 gün tam erişim.",
+    "sub": "Kart gerekmez, istediğiniz zaman iptal edin. {count} restoran bize güveniyor. Sadece bir e-posta yeterli — ve misafirleriniz için uygulama yok."
+  }
+}

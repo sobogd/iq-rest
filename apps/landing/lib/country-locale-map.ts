@@ -1,4 +1,4 @@
-import { Locale, locales } from "@/i18n/routing";
+import { Locale, locales } from "@/lib/locales";
 
 /**
  * Маппинг код страны (ISO 3166-1 alpha-2) → язык

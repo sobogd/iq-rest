@@ -1,0 +1,332 @@
+{
+  "locale": "is",
+  "slug": "stafraen-matsedill-veitingastaur",
+  "trackPrefix": "l_digital",
+  "meta": {
+    "title": "Stafrænn matseðill fyrir veitingastaði | IQ Rest",
+    "description": "Stafrænn matseðill fyrir veitingastaðinn: matseðill á netinu með myndum, ofnæmisvöldum, gervigreindarþýðingum og verðuppfærslum í rauntíma. 14 dagar frítt, engin kortakrafa.",
+    "canonical": "https://iq-rest.com/is/stafraen-matsedill-veitingastaur",
+    "ogLocale": "is_IS",
+    "ogTitle": "Stafrænn matseðill fyrir veitingastaði",
+    "ogDescription": "Stafræn útgáfa af prentaða matseðlinum með myndum, ofnæmisvöldum og gervigreindarþýðingum. Verð uppfærist í rauntíma.",
+    "brandLine": "IQ Rest — Stafrænn matseðill fyrir veitingastaði"
+  },
+  "hero": {
+    "headline": "Stafrænn matseðill og vefsíða",
+    "headlineAccent": "fyrir veitingastaðinn",
+    "cta": "Búa til stafrænan matseðil",
+    "demoLabel": "Prufa: matseðillinn eins og gestir sjá hann",
+    "sub": "Tilbúið á 10 mínútum: taktu við pöntunum frá borðinu, uppfærðu verð samstundis og taktu við bókunum beint án þóknunar.",
+    "phones": [
+      {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Sími með forsíðu vefsíðu veitingastaðar: myndir, borðabókanir og aðgangur að matseðli á netinu"
+      },
+      {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Sími með réttaspjaldi: mynd, verð og merkingar ofnæmisvalda"
+      }
+    ]
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Veitingastaðir"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kaffihús"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barir"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hótel"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pítsustaðir"
+    }
+  ],
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Matseðill á 10 mínútum",
+      "sub": "Engir forritarar og engin flókin uppsetning"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Hröð þjónusta",
+      "sub": "Við hjálpum þér að setja upp matseðilinn í netspjalli á nokkrum klukkutímum"
+    },
+    {
+      "icon": "Globe",
+      "title": "Valið af {count} stöðum",
+      "sub": "Stafrænir matseðlar og vefsíður fyrir veitingastaði í 15+ löndum"
+    },
+    {
+      "icon": "Palette",
+      "title": "Þitt eigið lén og vörumerki",
+      "sub": "Matseðill á þinni eigin vefslóð, ekki á sameiginlegri vefsíðu"
+    }
+  ],
+  "scan": {
+    "heading": "Ertu með prentaðan matseðil eða PDF?",
+    "headingAccent": "Gervigreindin gerir hann stafrænan á 60 sekúndum.",
+    "sub": "Hladdu upp mynd eða skjali — gervigreindin greinir flokka, rétti og verð sjálfkrafa.",
+    "cta": "Skanna matseðil"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "Gervigreindarþýðingar",
+      "heading": "Matseðill á 35 tungumálum",
+      "body": "Einn QR — 35 tungumál. Gervigreindin þýðir með matreiðslusamhengi í huga, svo réttir hljóma eðlilega. Ferðamenn panta af meira öryggi.",
+      "bullets": [
+        "35 tungumál innifalin í áskriftinni",
+        "Matreiðslugervigreind í stað Google",
+        "Skiptu um tungumál með einum smelli"
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Tveir gestir lesa sama stafræna matseðilinn á mismunandi tungumálum í sínum eigin símum"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Ofnæmisvaldar",
+      "heading": "Ofnæmisvaldar og mataræði á hverjum rétti",
+      "body": "Merktu glúten, laktósa, hnetur, vegan og glútenfrítt. Gestir sía matseðilinn eftir sínum þörfum og panta áhyggjulausir.",
+      "bullets": [
+        "14 flokkar ofnæmisvalda",
+        "Vegan og glútenfríar merkingar",
+        "Sía á matseðli eftir mataræði"
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Gestur síar matseðilinn eftir ofnæmisvöldum í síma á meðan veitingamaður breytir listanum á spjaldtölvu"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Hönnun og vörumerki",
+      "heading": "Hágæða matseðill á þínu eigin léni",
+      "body": "Myndband í bakgrunni á upphafsskjá, þín eigin hönnun og tengiliðasíða með korti og samfélagsmiðlum — á þínu léni, ekki PDF.",
+      "bullets": [
+        "Myndband í bakgrunni og hágæða hönnun",
+        "Þitt eigið lén með SSL",
+        "Tengiliðir, kort, samfélagsmiðlar"
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Tveir símar á kaffihúsaborði: upphafsskjár matseðils með myndbandi í bakgrunni og tengiliðasíða með korti"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Pantanir",
+      "heading": "Pantanir á netinu án þóknunar",
+      "body": "Gestir panta af matseðlinum eða beint í WhatsApp — pöntunin fer í salinn eða eldhúsið, 0% af þínum tekjum.",
+      "bullets": [
+        "Af matseðlinum eða í gegnum WhatsApp",
+        "Í salinn eða eldhúsið, 0%",
+        "Kveikt á þessu í stillingum"
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Tveir símar á borði: karfa með pöntun og staðfesting á vel heppnaðri pöntun"
+      }
+    },
+    {
+      "icon": "CalendarCheck",
+      "eyebrow": "Borðabókanir",
+      "heading": "Borðabókanir allan sólarhringinn",
+      "body": "Gestir bóka borð sjálfir í gegnum matseðilinn eða hlekk, þú sérð dagatal eftir borðum og staðfestir sjálfkrafa eða handvirkt.",
+      "bullets": [
+        "Gestir bóka sjálfir",
+        "Dagatal fyrir öll borð",
+        "Sjálfvirk eða handvirk staðfesting"
+      ]
+    },
+    {
+      "icon": "MonitorSmartphone",
+      "eyebrow": "Stjórnun",
+      "heading": "Stjórnaðu hvaðan sem er",
+      "body": "Stjórnborðið keyrir í vafranum — síma, spjaldtölvu eða tölvu. Ekkert að setja upp, tilbúið á nokkrum mínútum.",
+      "bullets": [
+        "Hvaða tæki sem er, hvaða vafri sem er",
+        "Ekkert að setja upp",
+        "Tilbúið á nokkrum mínútum"
+      ]
+    }
+  ],
+  "faq": {
+    "sub": "Það sem veitingamenn spyrja um stafræna matseðilinn í IQ Rest. Ef spurningin þín er ekki á listanum — sendu okkur skilaboð á WhatsApp.",
+    "items": [
+      {
+        "q": "Þarf ég tækniþekkingu eða reynslu af vefumsjónarkerfum?",
+        "a": "Engin sérstök kunnátta nauðsynleg. Allt í stjórnborðinu tekur örfáa smelli — engin forritun, engin vinna með frumkóða. Það tekur sekúndur að bæta við rétti: nafn, verð, mynd. Uppsetning á heilum matseðli tekur venjulega 30–60 mínútur."
+      },
+      {
+        "q": "Hvað er IQ Rest stafrænn matseðill?",
+        "a": "Það er netútgáfa af matseðlinum þínum sem gestir nálgast í gegnum QR kóða eða beinan hlekk: myndir af réttum, verð, ofnæmisvaldar, gervigreindarþýðingar á 35 tungumál og uppfærslur í rauntíma. Matseðillinn keyrir á okkar netþjónum — það þarf ekki að setja upp eða viðhalda neinum hugbúnaði, vafri er allt sem þú þarft."
+      },
+      {
+        "q": "Þurfa gestir smáforrit eða sérstakan búnað?",
+        "a": "Gestur beinir myndavél símans að QR kóðanum — matseðillinn opnast í vafranum, engin uppsetning. Stjórnborðið virkar líka í öllum nútímavöfrum: síma, spjaldtölvu eða fartölvu. QR kóðar eru prentaðir á venjulegan skrifstofuprentara."
+      },
+      {
+        "q": "Get ég hýst matseðilinn á mínu eigin léni?",
+        "a": "Já. Matseðillinn tengist léninu þínu með SSL skírteini — gestir sjá vefslóð veitingastaðarins þíns, til dæmis matsedill.veitingastadurinnthinn.is. Þjónustuverið okkar sér um uppsetningu á léni og skírteini; það eina sem þú þarft að gera er að setja upp DNS færslu."
+      },
+      {
+        "q": "Get ég stjórnað mörgum veitingastöðum úr einum aðgangi?",
+        "a": "Já. Bættu stöðum við einn aðgang: hver hefur sinn eigin matseðil, hönnun, QR kóða og greiningar, og það tekur einn smell að skipta á milli þeirra. Fjöldi staða fer eftir áskriftinni þinni."
+      },
+      {
+        "q": "Hversu erfitt er að setja upp matseðil frá grunni?",
+        "a": "Þrjú skref: búðu til flokka, bættu við réttum með verði og myndum, prentaðu QR kóða fyrir borðin. Ef þú ert með prentaðan matseðil eða PDF, hladdu honum upp — gervigreindin greinir flokka, nöfn og verð og fyllir út spjöldin sjálfkrafa. Einfaldur matseðill er tilbúinn á 5 mínútum; full uppsetning fer eftir fjölda rétta."
+      },
+      {
+        "q": "Hvaða þjónustu veitið þið?",
+        "a": "Við svörum á WhatsApp og í tölvupósti á vinnutíma. Við hjálpum til við uppsetningu, tengingu við lénið þitt og hönnun matseðilsins. Ef þig vantar kynningu eða aðstoð við að byrja — sendu okkur skilaboð."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Matseðillinn þinn á netinu á 10 mínútum. ",
+    "headingAccent": "14 daga fullur aðgangur.",
+    "sub": "Ekkert kort þarf, hættu hvenær sem er. {count} veitingastaðir treysta okkur fyrir matseðlum sínum og vefsíðum. Það eina sem þú þarft er netfang."
+  },
+  "spotlights": [
+    {
+      "heading": "Matseðill á 35 tungumálum",
+      "sub": "Gestir opna matseðilinn á sínu móðurmáli. Gervigreindin þýðir nöfn á réttum, lýsingar, flokka og valmöguleika með matreiðslusamhengi í huga.",
+      "bullets": [
+        {
+          "icon": "Globe",
+          "title": "35 tungumál í áskriftinni",
+          "sub": "Evrópsk og asísk tungumál innifalin — ekkert aukagjald per tungumál"
+        },
+        {
+          "icon": "Timer",
+          "title": "Þýtt um leið og vistað er",
+          "sub": "Bættu við eða breyttu rétti — þýðingar á öll tungumál matseðilsins eru tilbúnar strax"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Handvirkar breytingar eru verndaðar",
+          "sub": "Þýðing sem þú lagfærir handvirkt er læst og gervigreindin skrifar aldrei yfir hana"
+        }
+      ]
+    },
+    {
+      "heading": "Ofnæmisvaldar og mataræði á hverjum rétti",
+      "sub": "Bættu merkingum fyrir ofnæmisvalda og mataræði við réttaspjaldið — gestir sjá þær á matseðlinum og sía rétti eftir sínum þörfum.",
+      "bullets": [
+        {
+          "icon": "WheatOff",
+          "title": "14 flokkar ofnæmisvalda",
+          "sub": "Fullur listi samkvæmt ESB reglugerð: glúten, hnetur, laktósi, sjávarfang og fleira"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "13 merkingar fyrir mataræði",
+          "sub": "Vegan, grænmetis, glútenfrítt, halal, kosher, sterkt og aðrar merkingar"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Sía með einum smelli",
+          "sub": "Gestir velja sínar takmarkanir — matseðillinn sýnir aðeins viðeigandi rétti"
+        }
+      ]
+    },
+    {
+      "heading": "Hágæða matseðill á þínu eigin léni",
+      "sub": "Mynd eða myndband í bakgrunni á upphafsskjá, þinn vörumerkjalitur og lógó — matseðillinn lítur út eins og vefsíðan þín, ekki PDF, og keyrir á þínu léni.",
+      "bullets": [
+        {
+          "icon": "Palette",
+          "title": "Hönnun í þínum stíl",
+          "sub": "Myndband eða mynd á upphafsskjá, áherslulitur og lógó — sett upp án hönnuðar"
+        },
+        {
+          "icon": "Globe",
+          "title": "Þitt eigið lén með SSL",
+          "sub": "Matseðillinn opnast á þinni vefslóð yfir örugga tengingu"
+        },
+        {
+          "icon": "Map",
+          "title": "Tengiliðir og kort",
+          "sub": "Síða með heimilisfangi, opnunartíma, korti og samfélagsmiðlum — fullbúin vefsíða veitingastaðar"
+        }
+      ]
+    },
+    {
+      "heading": "Pantanir á netinu án þóknunar",
+      "sub": "Gestur leggur inn pöntun frá borðinu — hún birtist samstundis í stjórnborðinu og á eldhússkjánum. Kerfið tekur 0% af þínum tekjum.",
+      "bullets": [
+        {
+          "icon": "ShoppingCart",
+          "title": "Af matseðlinum eða í gegnum WhatsApp",
+          "sub": "Pöntun í kerfinu eða skilaboð á WhatsApp — veldu fyrirkomulag í stillingum"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Beint í eldhúsið",
+          "sub": "Ný pöntun birtist á eldhússkjánum og tæki þjónsins án tafar"
+        },
+        {
+          "icon": "Receipt",
+          "title": "0% þóknun",
+          "sub": "Greiðslan er á milli þín og gestsins — kerfið tekur ekkert af þínum pöntunum"
+        }
+      ]
+    },
+    {
+      "heading": "Borðabókanir allan sólarhringinn",
+      "sub": "Gestir bóka borð beint af matseðlinum hvenær sem er. Kerfið ber beiðnina saman við dagskrána þína og laus borð.",
+      "bullets": [
+        {
+          "icon": "CalendarCheck",
+          "title": "Dagatal eftir borðum",
+          "sub": "Kerfið finnur borð sem hentar fjölda gesta og sýnir bókanir eftir dögum og borðum"
+        },
+        {
+          "icon": "CalendarDays",
+          "title": "Sjálfvirkt eða handvirkt",
+          "sub": "Staðfestu hverja bókun sjálf(ur) eða kveiktu á sjálfvirkri staðfestingu"
+        },
+        {
+          "icon": "Mail",
+          "title": "Tölvupóstar til gestsins og til þín",
+          "sub": "Gesturinn fær staðfestingu í tölvupósti, eigendur fá tilkynningu um nýja bókun"
+        }
+      ]
+    },
+    {
+      "heading": "Stjórnaðu hvaðan sem er",
+      "sub": "Stjórnborðið keyrir í vafranum á síma, spjaldtölvu eða tölvu. Breytingar birtast gestum samstundis.",
+      "bullets": [
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Hvaða tæki sem er",
+          "sub": "Sími, spjaldtölva eða tölva — vafri er allt sem þarf, engin uppsetning nauðsynleg"
+        },
+        {
+          "icon": "Timer",
+          "title": "Breytingar á augabragði",
+          "sub": "Verðbreyting, uppselt eða falinn réttur tekur gildi samstundis, engin bið"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Valmöguleikar fyrir rétti",
+          "sub": "Stærðir, viðbætur og verðlagðar útgáfur — gestir setja réttinn saman sjálfir"
+        }
+      ]
+    }
+  ],
+  "hideFeatureHeading": true
+}

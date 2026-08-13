@@ -1,0 +1,289 @@
+{
+  "heroV2": {
+    "verticals": [
+      {
+        "icon": "restaurant",
+        "label": "Restaurants"
+      },
+      {
+        "icon": "cafe",
+        "label": "Cafés"
+      },
+      {
+        "icon": "bar",
+        "label": "Bars"
+      },
+      {
+        "icon": "hotel",
+        "label": "Hotels"
+      },
+      {
+        "icon": "pizza",
+        "label": "Pizzerien"
+      }
+    ],
+    "title": "Alles, was Ihr Restaurant",
+    "titleAccent": "braucht!",
+    "sub": "Richten Sie Ihre Abläufe in 10 Minuten ein: Starten Sie eine Online-Speisekarte, optimieren Sie die Küche und verwalten Sie die Sitzplätze.",
+    "primaryLabel": "Kostenlos starten",
+    "demoLabel": "Demo-Speisekarte ansehen",
+    "mockups": {
+      "kds": {
+        "src": "/landing/hero-card-kds.webp",
+        "alt": "Tablet mit einem Küchenmonitor: Bestellungen nach Tisch in Spalten mit Status"
+      },
+      "reservations": {
+        "src": "/landing/hero-card-reservation.webp",
+        "alt": "Tablet mit einem Reservierungskalender: Monatsansicht und eine Liste der zu bestätigenden Buchungen"
+      },
+      "phone1": {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Handy mit der Startseite einer Restaurant-Website: Fotos, Reservierungen und Zugang zur Online-Speisekarte"
+      },
+      "phone2": {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Handy mit einer Gerichtkarte: Foto, Preis und Allergen-Labels"
+      }
+    }
+  },
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Startklar in 10 Minuten",
+      "sub": "Keine teure Hardware und keine langwierige Einrichtung"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Schneller Support",
+      "sub": "Wir antworten im Chat innerhalb weniger Stunden"
+    },
+    {
+      "icon": "Globe",
+      "title": "Von {count} Betrieben gewählt",
+      "sub": "Restaurants und Cafés in 15+ Ländern vertrauen uns"
+    },
+    {
+      "icon": "Palette",
+      "title": "100 % im eigenen Design",
+      "sub": "Wir passen Design und Oberfläche an den Stil Ihres Betriebs an"
+    }
+  ],
+  "menu": {
+    "heading": "Website und digitale Speisekarte",
+    "sub": {
+      "link": "Mehr als eine QR-Speisekarte!",
+      "rest": " Erhalten Sie eine vollständige Website mit einzigartigem Design, Kontaktdaten und Tischreservierungen."
+    },
+    "moreLabel": "Mehr zur Speisekarte",
+    "demoLabel": "Demo: Die Speisekarte aus Gästesicht",
+    "mockupAlt": "Handy mit der Startseite einer Restaurant-Website und Handy mit einer Gerichtseite",
+    "bullets": [
+      {
+        "icon": "Languages",
+        "title": "Auto-Übersetzung in 35 Sprachen",
+        "sub": "Bedienen Sie internationale Gäste ohne Sprachbarriere — die automatische Übersetzung erledigt alles"
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "Bestellungen direkt vom Tisch",
+        "sub": "Vereinfachen Sie Ihre Abläufe — nehmen Sie Bestellungen am Tisch schnell auf, ganz ohne Servicekraft"
+      },
+      {
+        "icon": "WheatOff",
+        "title": "Allergene und Ernährungsweisen",
+        "sub": "Kennzeichnen Sie Allergene und Ernährungsweisen (vegan, scharf), damit Gäste einfacher und sicherer wählen können"
+      }
+    ]
+  },
+  "reservations": {
+    "heading": "Tischreservierungen",
+    "sub": {
+      "link": "Smarte Tischreservierungen!",
+      "rest": " Ein automatisiertes Buchungssystem, das freie Tische und Ihren Zeitplan selbstständig im Blick behält."
+    },
+    "moreLabel": "Mehr zu Reservierungen",
+    "demoLabel": "Demo: Reservierungskalender",
+    "mockupAlt": "Tablet mit einem Reservierungskalender: Tische nach Tag und Zeitfenster",
+    "bullets": [
+      {
+        "icon": "CalendarCheck",
+        "title": "Übersichtlicher Reservierungsplan",
+        "sub": "Ein visueller Zeitplan nach Tag und Tisch — sehen Sie sofort, wo und wann Plätze frei sind"
+      },
+      {
+        "icon": "SlidersHorizontal",
+        "title": "Flexible Buchungseinstellungen",
+        "sub": "Konfigurieren Sie Öffnungszeiten, Dauer der Zeitfenster und Tischfotos und erfassen Sie Gästewünsche"
+      },
+      {
+        "icon": "Users",
+        "title": "Gästestrom-Management",
+        "sub": "Wählen Sie den passenden Buchungsmodus und behalten Sie die volle Kontrolle über den Gästestrom"
+      }
+    ]
+  },
+  "orders": {
+    "heading": "Bestellannahme am Tisch",
+    "sub": {
+      "link": "Bestellungen direkt in die Küche!",
+      "rest": " Eine Bestellung vom Tisch oder vom Kellner landet sofort auf dem Küchenmonitor — keine Papierzettel, keine Wartezeiten."
+    },
+    "moreLabel": "Mehr zu Bestellungen",
+    "demoLabel": "Demo: Bestellbildschirm",
+    "mockupSrc": "/landing/feature-orders-modal.webp",
+    "mockupAlt": "Tablet mit einer offenen Bestellung: Gerichtliste und Aktionen — Tisch wechseln, Bestellung splitten, Rabatt hinzufügen",
+    "bullets": [
+      {
+        "icon": "ShoppingCart",
+        "title": "Gast oder Servicekraft",
+        "sub": "Gäste bestellen am Tisch per QR-Code, Servicekräfte über ihr Handy oder Tablet"
+      },
+      {
+        "icon": "Map",
+        "title": "Tischplan mit Status",
+        "sub": "Tische auf dem Plan sind nach Status farblich markiert — sehen Sie auf einen Blick, wer auf eine Bestellung wartet und wo Sie als Nächstes hinmüssen"
+      },
+      {
+        "icon": "Receipt",
+        "title": "Rechnungen splitten",
+        "sub": "Teilen Sie eine Bestellung unter Gästen auf und schließen Sie Tische ohne Zahlungschaos"
+      }
+    ]
+  },
+  "kds": {
+    "heading": "Küchenmonitor (KDS)",
+    "sub": {
+      "link": "Eine Küche im Takt!",
+      "rest": " Bestellungen aus dem Gastraum und der QR-Speisekarte erscheinen sofort auf dem Bildschirm des Kochs — mit Notizen, Allergenen und Timer."
+    },
+    "moreLabel": "Mehr zum KDS",
+    "demoLabel": "Demo: Küchenbildschirm",
+    "mockupAlt": "Tablet mit einem Küchenmonitor: Bestellungen nach Tisch in Spalten mit Status",
+    "bullets": [
+      {
+        "icon": "LayoutGrid",
+        "title": "Bildschirme nach Posten",
+        "sub": "Eigene Tablets für warme Küche, Bar und Patisserie — jeder sieht nur seine eigenen Gerichte"
+      },
+      {
+        "icon": "Timer",
+        "title": "Status und Timer",
+        "sub": "Spalten für In Zubereitung / Fertig / Serviert und die verstrichene Zeit pro Bestellung — Statuswechsel mit einem Fingertipp"
+      },
+      {
+        "icon": "ShieldAlert",
+        "title": "Allergene und Kommentare",
+        "sub": "Allergene und Gästenotizen sind farblich hervorgehoben — der Koch übersieht nichts Wichtiges"
+      }
+    ]
+  },
+  "bundle": {
+    "heading": "Alles, womit Ihr Restaurant läuft.",
+    "headingAccent": "In einer App.",
+    "sub": "Speisekarte, Küche und Reservierungen an einem Ort — modern, schnell und für den echten Gastro-Alltag gemacht. Keine Zusatzgebühren oder Preise pro Funktion."
+  },
+  "benefits": [
+    {
+      "icon": "Languages",
+      "tag": "Digitale Speisekarte",
+      "title": "Eine Speisekarte, die verkauft.",
+      "bullets": [
+        "35 Sprachen mit KI",
+        "Premium-Design",
+        "Preise aktualisieren sich sofort"
+      ],
+      "image": "/landing/feature-design.webp",
+      "imageAlt": "Zwei Handys auf einem Café-Tisch: die Startseite der digitalen Speisekarte und eine Kontaktseite mit Karte"
+    },
+    {
+      "icon": "ChefHat",
+      "tag": "Küchenmonitor",
+      "title": "Schneller kochen, ohne etwas zu übersehen.",
+      "bullets": [
+        "Direkt auf den Bildschirm",
+        "Notizen und Allergene",
+        "Tablet oder Handy"
+      ],
+      "image": "/landing/feature-kds-cards.webp",
+      "imageAlt": "Ein Tablet auf einem Bartresen zeigt den Küchenmonitor mit Bestellungen nach Tisch"
+    },
+    {
+      "icon": "CalendarCheck",
+      "tag": "Reservierungen",
+      "title": "Reservierungen auf Autopilot.",
+      "bullets": [
+        "Buchen ohne Anrufe",
+        "Automatische Bestätigung",
+        "Kalender nach Tisch"
+      ],
+      "image": "/landing/feature-booking-calendar.webp",
+      "imageAlt": "Zwei Tablets zeigen den Reservierungskalender: eine Tagesansicht nach Tisch und eine Monatsansicht"
+    },
+    {
+      "icon": "Receipt",
+      "tag": "Bestellannahme am Tisch",
+      "title": "Bestellungen direkt in die Küche.",
+      "bullets": [
+        "Gast oder Servicekraft",
+        "Direkt in die Küche",
+        "Jederzeit aktivierbar"
+      ],
+      "image": "/landing/feature-orders-map.webp",
+      "imageAlt": "Tablet mit dem Bestellbildschirm: eine Liste von Bestellungen und ein farblich markierter Tischplan."
+    }
+  ],
+  "seeDetails": "Mehr erfahren",
+  "platform": {
+    "hardwareTitle": "Nutzen Sie Ihre eigene Hardware",
+    "hardwareSub": "Wir zwingen Sie nicht, Hardware bei uns zu kaufen. Nutzen Sie die Handys, Tablets und Computer, die Sie bereits haben.",
+    "anywhereTitle": "Funktioniert überall",
+    "anywhereSub": "Handy, Tablet, Laptop, PC. Android, iOS, Windows, Mac, Linux. In jedem modernen Browser, keine Installation."
+  },
+  "activities": {
+    "heading": "Ein System —",
+    "headingAccent": "Ihr ganzes Restaurant.",
+    "sub": "Schnellerer Service, eine ruhigere Küche, geringere Kosten und Gäste, die wiederkommen — alles auf einer Plattform.",
+    "groups": [
+      {
+        "icon": "Smartphone",
+        "tag": "Am Tisch — Gast",
+        "bullets": [
+          "QR-Speisekarte in 35 Sprachen",
+          "Bestellen ohne auf den Service zu warten",
+          "Service rufen oder Rechnung anfordern",
+          "Tischreservierung 24/7",
+          "Eigener QR-Code für jeden Tisch",
+          "Keine App nötig — öffnet sich im Browser",
+          "Allergen- und Ernährungs-Filter"
+        ]
+      },
+      {
+        "icon": "ChefHat",
+        "tag": "In der Küche",
+        "bullets": [
+          "Bestellungen sofort auf dem Bildschirm",
+          "Spalten für In Zubereitung / Fertig / Serviert",
+          "Allergene und Kommentare hervorgehoben",
+          "Tablet oder Handy — keine Papierzettel"
+        ]
+      },
+      {
+        "icon": "ChartColumn",
+        "tag": "Management",
+        "bullets": [
+          "Speisekarte und Preise ändern — sofort online",
+          "KI-Übersetzung mit einem Klick",
+          "Umsatzanalysen und Berichte",
+          "Mehrere Restaurants in einem Konto",
+          "KI digitalisiert eine Papierkarte in 60 Sekunden",
+          "Eigene Domain mit SSL"
+        ]
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Die gesamte Plattform in 10 Minuten. ",
+    "headingAccent": "14 Tage voller Zugriff.",
+    "sub": "Speisekarte, Bestellungen, Reservierungen und Küche — keine Kreditkarte, jederzeit kündbar; {count} Restaurants vertrauen uns, Sie brauchen nur eine E-Mail-Adresse."
+  }
+}

@@ -62,7 +62,7 @@ function Device({
       ? `${cq(frame)} ${cq(frame)} 0`
       : cq(frame);
   return (
-    <div className={`w-full ${className}`} style={{ containerType: "inline-size" }}>
+    <div className={className} style={{ containerType: "inline-size" }}>
       <div
         className="relative w-full shadow-2xl"
         style={{ background: BODY, padding: pad, borderRadius: corners(outer) }}
@@ -96,7 +96,7 @@ export function Phone({
   ratio = "170 / 289",
   cropBottom = false,
   cropTop = false,
-  className = "",
+  className = "w-full",
   sizes = "(max-width: 1024px) 45vw, 320px",
 }: {
   image: MockupImage;
@@ -104,6 +104,9 @@ export function Phone({
   ratio?: string;
   cropBottom?: boolean;
   cropTop?: boolean;
+  /** Overrides the default `w-full` — pass a width utility when the device
+   *  isn't meant to fill its positioning wrapper (e.g. two side-by-side in
+   *  one box). */
   className?: string;
   sizes?: string;
 }) {
@@ -126,12 +129,16 @@ export function Phone({
 // ── Single tablet ───────────────────────────────────────────────────────────
 export function Tablet({
   image,
+  cropBottom = false,
   priority = false,
-  className = "",
+  className = "w-full",
   sizes = "(max-width: 1024px) 90vw, 520px",
 }: {
   image: MockupImage;
+  cropBottom?: boolean;
   priority?: boolean;
+  /** Overrides the default `w-full` — pass a width utility when the tablet
+   *  isn't meant to fill its positioning wrapper. */
   className?: string;
   sizes?: string;
 }) {
@@ -143,6 +150,7 @@ export function Tablet({
       frame={11}
       radius={16}
       dot={false}
+      cropBottom={cropBottom}
       priority={priority}
       className={className}
       sizes={sizes}

@@ -1,0 +1,206 @@
+{
+  "locale": "en",
+  "slug": "table-booking-system",
+  "trackPrefix": "l_bookings",
+  "meta": {
+    "title": "24/7 Table Reservations for Restaurants | IQ Rest",
+    "description": "24/7 table reservations for your restaurant: guests book tables themselves via the QR menu or website. Calendar by table, automatic confirmations and reminders. No phone calls, no missed guests. 14 days free.",
+    "canonical": "https://iq-rest.com/table-booking-system",
+    "ogLocale": "en_US",
+    "ogTitle": "24/7 Table Reservations — Guests Book Themselves",
+    "ogDescription": "Guests book tables via the QR menu or website. Calendar, automatic confirmations, reminders. Not a single guest missed.",
+    "brandLine": "IQ Rest — Restaurant Table Reservations"
+  },
+  "hero": {
+    "headline": "Table bookings 24/7,",
+    "cta": "Set up table reservations",
+    "sub": "Guests book 24/7 via the QR menu or a link. Calendar by table, auto-confirmations and reminders.",
+    "headlineAccent": "no phone calls",
+    "demoLabel": "Demo: reservation calendar",
+    "tablet": {
+      "src": "/landing/hero-card-reservation.webp",
+      "alt": "Tablet with a reservation calendar: month view and a list of bookings awaiting confirmation"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurants"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafés"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bars"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotels"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerias"
+    }
+  ],
+  "scan": {
+    "heading": "Launch table reservations",
+    "headingAccent": "in 5 minutes.",
+    "sub": "Connect the calendar, add tables with photos and seating capacity — guests start booking the same day.",
+    "cta": "Enable reservations"
+  },
+  "subFeatures": [
+    {
+      "icon": "CalendarPlus",
+      "eyebrow": "Booking form",
+      "heading": "Guests book themselves — by date, time and party size.",
+      "body": "The guest opens the QR menu or a direct link, picks a date, time and number of people — and instantly sees the available tables: with a photo, description (terrace, by the window, sofa at the bar) and capacity. A confirmation is sent automatically by email and WhatsApp.",
+      "bullets": [
+        "Table selection by photo, description and capacity.",
+        "Automatic confirmation and a reminder one hour before the visit.",
+        "A minimal form: name, phone, party size."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-form.webp",
+        "alt": "A guest books a restaurant table from a phone: choosing the date, time, party size and table"
+      }
+    },
+    {
+      "icon": "CalendarDays",
+      "eyebrow": "Reservation calendar",
+      "heading": "A calendar by day and table — everything visible in a second.",
+      "body": "The admin panel has a reservation calendar broken down by table, day, week and month. Free slots, occupied tables, confirmed and pending bookings all appear on one screen. Works on a tablet on the floor and a laptop in the office.",
+      "bullets": [
+        "Day, week and month views.",
+        "Breakdown by table: who, when, how many guests.",
+        "Reschedule, cancel or confirm a booking — with one tap from your phone."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-calendar.webp",
+        "alt": "The reservation calendar in the IQ Rest admin panel on two tablets: a daily grid by table and a monthly calendar"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "What restaurateurs ask about table reservations in IQ Rest. If your question isn't listed — message us on WhatsApp.",
+    "items": [
+      {
+        "q": "Can I choose the days and times when booking is available?",
+        "a": "Yes. The admin panel lets you set a schedule per day of the week: booking hours and a break between lunch and dinner. You can also temporarily switch reservations off entirely — guests will see that online booking is unavailable."
+      },
+      {
+        "q": "Can I upload a photo of each table?",
+        "a": "Yes. Every table has a photo, a capacity and a zone (terrace, by the window, bar). Guests see exactly which table they're reserving and make an informed choice."
+      },
+      {
+        "q": "Can I limit the number of guests per table?",
+        "a": "Yes. Every table has a set capacity — the system offers guests only suitable tables and blocks a two-seater from being booked by a party of six."
+      },
+      {
+        "q": "How hard is it to set up reservations?",
+        "a": "Three steps: add tables with photos and capacity, enable booking mode in settings, and share the link or QR code. Launch takes 5–10 minutes."
+      },
+      {
+        "q": "Can I set automatic or manual booking confirmation?",
+        "a": "Yes, the mode is chosen in settings. With automatic confirmation the guest is confirmed right after submitting the form. With manual, the request appears in the panel as \"pending confirmation\" — a manager confirms or declines it. Manual mode is handy when tables are limited."
+      },
+      {
+        "q": "Do you charge a fee per booking?",
+        "a": "There are no fees: reservations are included in the subscription — no percentage from guests, no per-slot charges, no middlemen. A fixed payment and unlimited bookings."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Reservations in 10 minutes. ",
+    "headingAccent": "14 days of full access.",
+    "sub": "No card needed, cancel anytime. {count} restaurants take the load off their front desk with us. All you need is an email."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Guests book themselves",
+      "sub": "Date, time and party size — from the QR menu or a direct link, at any time of day. The system shows only available slots.",
+      "bullets": [
+        {
+          "icon": "CalendarPlus",
+          "title": "Booking 24/7",
+          "sub": "Guests book at night or on the weekend — no calls, no waiting for a reply"
+        },
+        {
+          "icon": "Users",
+          "title": "A table matched to party size",
+          "sub": "The system picks a suitable table by capacity on its own"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "A minimal form",
+          "sub": "Name, phone and party size — the form takes half a minute"
+        }
+      ]
+    },
+    {
+      "heading": "A calendar by day and table",
+      "sub": "All bookings in one calendar: see what's free, what's confirmed and who's coming.",
+      "bullets": [
+        {
+          "icon": "CalendarDays",
+          "title": "Day, week, month",
+          "sub": "Switch views and plan seating in advance"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Breakdown by table",
+          "sub": "Who, when and for how many guests — for every table"
+        },
+        {
+          "icon": "Smartphone",
+          "title": "Manage from your phone",
+          "sub": "Reschedule, cancel or confirm a booking — with one tap"
+        }
+      ]
+    },
+    {
+      "heading": "Schedule and modes",
+      "sub": "Set the booking schedule per day of the week, the slot duration and the confirmation mode.",
+      "bullets": [
+        {
+          "icon": "Clock",
+          "title": "Per-day schedule",
+          "sub": "Separate hours for each day of the week, including a break between lunch and dinner"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Slot duration",
+          "sub": "Set the booking interval to fit your venue's format"
+        },
+        {
+          "icon": "CalendarCheck",
+          "title": "Auto or manual",
+          "sub": "Confirm each booking yourself or turn on auto-confirmation"
+        }
+      ]
+    },
+    {
+      "heading": "Notifications without manual work",
+      "sub": "The system keeps the guest and your team informed — email and the reservation screen update instantly.",
+      "bullets": [
+        {
+          "icon": "Mail",
+          "title": "Email to the guest",
+          "sub": "A booking confirmation is sent by email automatically"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Notification to the restaurant",
+          "sub": "Owners get an email about every new booking"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "A reservation screen at the entrance",
+          "sub": "The host tablet shows new bookings in real time"
+        }
+      ]
+    }
+  ]
+}

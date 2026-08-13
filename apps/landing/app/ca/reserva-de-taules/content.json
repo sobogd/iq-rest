@@ -1,0 +1,206 @@
+{
+  "locale": "ca",
+  "slug": "reserva-de-taules",
+  "trackPrefix": "l_bookings",
+  "meta": {
+    "title": "Reserva de taules 24/7 per a restaurants | IQ Rest",
+    "description": "Reserva de taules 24/7 per al teu restaurant: els clients reserven taula ells mateixos a través de la carta QR o el web. Calendari per taula, confirmacions automàtiques i recordatoris. Sense trucades, cap client perdut. 14 dies gratis.",
+    "canonical": "https://iq-rest.com/ca/reserva-de-taules",
+    "ogLocale": "ca_ES",
+    "ogTitle": "Reserva de taules 24/7 — Els clients reserven ells mateixos",
+    "ogDescription": "Els clients reserven taula a través de la carta QR o el web. Calendari, confirmacions automàtiques, recordatoris. Cap client perdut.",
+    "brandLine": "IQ Rest — Reserva de taules per a restaurants"
+  },
+  "hero": {
+    "headline": "Reserva de taules 24/7,",
+    "cta": "Configurar reserva de taules",
+    "sub": "Els clients reserven 24/7 a través de la carta QR o un enllaç. Calendari per taula, confirmacions automàtiques i recordatoris.",
+    "headlineAccent": "sense trucades",
+    "demoLabel": "Demo: calendari de reserves",
+    "tablet": {
+      "src": "/landing/hero-card-reservation.webp",
+      "alt": "Tauleta amb un calendari de reserves: vista mensual i llista de reserves pendents de confirmació"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurants"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafeteries"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bars"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotels"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzeries"
+    }
+  ],
+  "scan": {
+    "heading": "Llança les reserves de taules",
+    "headingAccent": "en 5 minuts.",
+    "sub": "Connecta el calendari, afegeix les taules amb fotos i capacitat, i els clients començaran a reservar el mateix dia.",
+    "cta": "Activar reserves"
+  },
+  "subFeatures": [
+    {
+      "icon": "CalendarPlus",
+      "eyebrow": "Formulari de reserva",
+      "heading": "Els clients reserven ells mateixos: per data, hora i nombre de comensals.",
+      "body": "El client obre la carta QR o un enllaç directe, tria una data, una hora i el nombre de persones, i veu a l'instant les taules lliures: amb foto, descripció (terrassa, al costat de la finestra, sofà a la barra) i capacitat. S'envia una confirmació automàtica per correu electrònic i WhatsApp.",
+      "bullets": [
+        "Selecció de taula per foto, descripció i capacitat.",
+        "Confirmació automàtica i recordatori una hora abans de la visita.",
+        "Un formulari mínim: nom, telèfon i nombre de comensals."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-form.webp",
+        "alt": "Un client reserva una taula de restaurant des del mòbil: triant la data, l'hora, el nombre de comensals i la taula"
+      }
+    },
+    {
+      "icon": "CalendarDays",
+      "eyebrow": "Calendari de reserves",
+      "heading": "Un calendari per dia i taula: tot a la vista en un segon.",
+      "body": "El panell d'administració té un calendari de reserves desglossat per taula, dia, setmana i mes. Les franges lliures, les taules ocupades, les reserves confirmades i les pendents apareixen en una sola pantalla. Funciona en una tauleta a la sala i en un portàtil a l'oficina.",
+      "bullets": [
+        "Vistes de dia, setmana i mes.",
+        "Desglossament per taula: qui, quan i quants comensals.",
+        "Reprograma, cancel·la o confirma una reserva amb un sol toc des del mòbil."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-calendar.webp",
+        "alt": "El calendari de reserves al panell d'IQ Rest en dues tauletes: una graella diària per taula i un calendari mensual"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "El que pregunten els restauradors sobre la reserva de taules a IQ Rest. Si no trobes la teva pregunta, escriu-nos per WhatsApp.",
+    "items": [
+      {
+        "q": "Puc triar els dies i les hores en què es pot reservar?",
+        "a": "Sí. El panell d'administració et permet configurar un horari per a cada dia de la setmana: hores de reserva i una pausa entre el dinar i el sopar. També pots desactivar temporalment les reserves per complet: els clients veuran que la reserva online no està disponible."
+      },
+      {
+        "q": "Puc pujar una foto de cada taula?",
+        "a": "Sí. Cada taula té una foto, una capacitat i una zona (terrassa, al costat de la finestra, barra). Els clients veuen exactament quina taula estan reservant i prenen una decisió informada."
+      },
+      {
+        "q": "Puc limitar el nombre de comensals per taula?",
+        "a": "Sí. Cada taula té una capacitat establerta: el sistema només ofereix als clients les taules adequades i bloqueja que un grup de sis reservi una taula de dos."
+      },
+      {
+        "q": "És difícil configurar les reserves?",
+        "a": "Són tres passos: afegeix les taules amb fotos i capacitat, activa el mode de reserves a la configuració, i comparteix l'enllaç o el codi QR. Es posa en marxa en 5–10 minuts."
+      },
+      {
+        "q": "Puc configurar la confirmació de reserves com a automàtica o manual?",
+        "a": "Sí, el mode es tria a la configuració. Amb la confirmació automàtica, la reserva del client es confirma just després d'enviar el formulari. Amb la manual, la petició apareix al panell com a \"pendent de confirmació\" i un encarregat la confirma o la rebutja. El mode manual és molt útil quan hi ha poques taules disponibles."
+      },
+      {
+        "q": "Cobren alguna comissió per reserva?",
+        "a": "No hi ha comissions: les reserves estan incloses a la subscripció. Sense percentatges per comensal, sense cobraments per franja horària i sense intermediaris. Un pagament fix i reserves il·limitades."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Reserves en 10 minuts. ",
+    "headingAccent": "14 dies d'accés complet.",
+    "sub": "Sense targeta, cancel·la quan vulguis. {count} restaurants ja alliberen la seva recepció amb nosaltres. Només necessites un correu."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Els clients reserven ells mateixos",
+      "sub": "Data, hora i nombre de comensals: des de la carta QR o un enllaç directe, a qualsevol hora del dia. El sistema només mostra les franges lliures.",
+      "bullets": [
+        {
+          "icon": "CalendarPlus",
+          "title": "Reserves 24/7",
+          "sub": "Els clients reserven a la nit o el cap de setmana: sense trucades ni esperar resposta"
+        },
+        {
+          "icon": "Users",
+          "title": "Una taula adaptada al grup",
+          "sub": "El sistema tria per si sol una taula adequada segons la capacitat"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Un formulari mínim",
+          "sub": "Nom, telèfon i nombre de comensals: el formulari es completa en mig minut"
+        }
+      ]
+    },
+    {
+      "heading": "Un calendari per dia i taula",
+      "sub": "Totes les reserves en un sol calendari: mira què està lliure, què està confirmat i qui vindrà.",
+      "bullets": [
+        {
+          "icon": "CalendarDays",
+          "title": "Dia, setmana, mes",
+          "sub": "Canvia de vista i planifica l'ocupació de la sala per endavant"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Desglossament per taula",
+          "sub": "Qui, quan i per a quants comensals: per a cada taula"
+        },
+        {
+          "icon": "Smartphone",
+          "title": "Gestiona-ho des del mòbil",
+          "sub": "Reprograma, cancel·la o confirma una reserva amb un sol toc"
+        }
+      ]
+    },
+    {
+      "heading": "Horaris i modes",
+      "sub": "Configura l'horari de reserves per a cada dia de la setmana, la durada dels torns i el mode de confirmació.",
+      "bullets": [
+        {
+          "icon": "Clock",
+          "title": "Horari per dia",
+          "sub": "Hores separades per a cada dia de la setmana, incloent-hi una pausa entre el dinar i el sopar"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Durada del torn",
+          "sub": "Estableix l'interval de reserva per adaptar-lo al format del teu local"
+        },
+        {
+          "icon": "CalendarCheck",
+          "title": "Automàtic o manual",
+          "sub": "Confirma cada reserva tu mateix o activa la confirmació automàtica"
+        }
+      ]
+    },
+    {
+      "heading": "Notificacions sense feina manual",
+      "sub": "El sistema manté informats el client i el teu equip: el correu i la pantalla de reserves s'actualitzen a l'instant.",
+      "bullets": [
+        {
+          "icon": "Mail",
+          "title": "Correu per al client",
+          "sub": "S'envia una confirmació de reserva per correu automàticament"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Notificació per al restaurant",
+          "sub": "Els propietaris reben un correu per cada nova reserva"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Pantalla de reserves a l'entrada",
+          "sub": "La tauleta de recepció mostra les noves reserves en temps real"
+        }
+      ]
+    }
+  ]
+}

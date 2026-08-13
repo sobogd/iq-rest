@@ -1,0 +1,261 @@
+{
+  "htmlLang": "et",
+  "htmlDir": "ltr",
+  "meta": {
+    "title": "Digimenüü, köögiekraan ja broneeringud — IQ Rest",
+    "description": "Juhi oma restorani ühest rakendusest: mitmekeelne digimenüü, köögiekraan ja 24/7 broneeringud. Käivita 5 minutiga. 14 päeva tasuta, kaarti pole vaja.",
+    "canonical": "https://iq-rest.com/et",
+    "ogLocale": "et_EE",
+    "ogTitle": "Digimenüü, köögiekraan ja broneeringud",
+    "ogDescription": "Juhi oma restorani ühest rakendusest: mitmekeelne digimenüü, köögiekraan ja 24/7 broneeringud. Käivita 5 minutiga. 14 päeva tasuta, kaarti pole vaja."
+  },
+  "jsonLd": {
+    "appName": "IQ Rest — Restoranihaldusplatvorm"
+  },
+  "ctaText": "Proovi tasuta",
+  "homeCtaText": "Proovi tasuta",
+  "trust": [
+    {
+      "kind": "num",
+      "value": 35,
+      "label": "Menüü keelt"
+    },
+    {
+      "kind": "text",
+      "value": "24/7",
+      "label": "Online broneeringud"
+    },
+    {
+      "kind": "num",
+      "value": 5,
+      "suffix": " min",
+      "label": "Käivitamiseni"
+    },
+    {
+      "kind": "count",
+      "label": "Restorani on meiega"
+    }
+  ],
+  "demoText": "Ava demo",
+  "microcopy": "14 päeva tasuta · Krediitkaarti pole vaja · Tühista igal ajal",
+  "header": {
+    "navFeatures": "Võimalused",
+    "navHow": "Kuidas see töötab",
+    "navPricing": "Hinnakiri",
+    "navFaq": "KKK",
+    "signIn": "Logi sisse",
+    "viewFeatures": "Vaata võimalusi",
+    "cta": "Alusta tasuta",
+    "navProducts": "Võimalused",
+    "navGuide": "Juhend",
+    "navAbout": "Meist",
+    "menuFeaturesHeading": "Võimalused",
+    "menuInfoHeading": "Info"
+  },
+  "hero": {
+    "verticals": [
+      "Restoranidele",
+      "Kohvikutele",
+      "Baaridele",
+      "Hotellidele",
+      "Pitseriatele"
+    ],
+    "headline": "Digimenüü sinu restoranile.\nValmis 5 minutiga.",
+    "sub": "Digimenüü sinu restoranile 5 minutiga. Kõik on hinna sees: koodivaba haldus, paberist menüüde tuvastamine tehisintellektiga, laudade QR-koodid ja vahendustasuta tellimused.",
+    "dynamicHeadlines": [
+      "0% vahendustasu.",
+      "35 keelt tehisintellektiga.",
+      "Online tellimused.",
+      "24/7 broneeringud.",
+      "Esinduslik disain."
+    ],
+    "painBullets": [
+      "0% vahendustasu: iga tellimus jõuab otse restorani.",
+      "Tehisintellektiga tõlge 35 keelde — turistid saavad menüüst aru ja tellivad rohkem.",
+      "24/7 broneeringud: külalised broneerivad laudu ise, tipptunnil pole vaja telefonile vastata.",
+      "Paindlik hinnakujundus: menüümuudatused jõustuvad kohe."
+    ],
+    "rating": "Üle 500 restorani rohkem kui 30 riigis"
+  },
+  "founder": {
+    "eyebrow": "Restoranipidajate loodud",
+    "quoteStart": "Pidasime abikaasaga oma kohvikut ja teame restorani argipäeva seestpoolt: tellimuste vastuvõtmine, broneeringud, saali- ja köögitöö. Otsisime ühte tööriista — kaasaegset, lihtsalt seadistatavat ja esmapilgul arusaadavat —",
+    "quoteAccent": "nii sündiski idee platvormist, mida me nüüd teistele restoranipidajatele arendame.",
+    "sign": "Bogdan Sokolov · asutaja, endine kohvikuomanik",
+    "photoAlt": "Bogdan Sokolov, IQ Resti asutaja"
+  },
+  "pricing": {
+    "badge": "Ei mingeid vahendustasusid ega lepinguid",
+    "heading": "Üks pakett.",
+    "headingAccent": "Kõik on hinna sees.",
+    "sub": "QR-menüü, tellimuste vastuvõtmine, tehisintellektiga tõlge, restorani veebileht ja broneeringud. Üks läbipaistev kuutasu.",
+    "monthlyLabel": "Kuu",
+    "yearlyLabel": "Aasta",
+    "saveBadge": "Säästa 25%",
+    "perMonth": "kuus",
+    "billedAnnually": "Aastane arveldus: {total}",
+    "youSave": "Säästad {amount}",
+    "trust": {
+      "secure": "Turvaline makse Stripe'i kaudu",
+      "noCommitment": "Ei mingeid kohustusi",
+      "quick": "Aktiveerimine minutitega",
+      "restaurants": "Üle 500 restorani"
+    }
+  },
+  "faq": {
+    "eyebrow": "On veel küsimusi?",
+    "heading": "Korduma kippuvad",
+    "headingAccent": "küsimused",
+    "sub": "Mida restoranipidajad enne liitumist kõige sagedamini küsivad. Kui sa ei leia oma küsimusele vastust — kirjuta meile WhatsAppi, vastab päris inimene, mitte robot.",
+    "whatsappCta": "Kirjuta meile WhatsAppi",
+    "whatsappPrefill": "Tere, mul on küsimus IQ Resti kohta",
+    "items": [
+      {
+        "q": "Mida prooviperiood sisaldab ja mis saab pärast selle lõppu?",
+        "a": "14 päeva jooksul on sul ligipääs platvormi kõigile funktsioonidele, krediitkaarti pole vaja. Kui 14 päeva möödudes makseviisi ei lisata, peatatakse konto automaatselt. Me ei võta kunagi tasu ilma sinu nõusolekuta. Saad makseviisi hiljem lisada ja jätkata sealt, kus pooleli jäid. Tellimuse tühistamine käib ühe klõpsuga."
+      },
+      {
+        "q": "Kas te võtate tellimustelt vahendustasu?",
+        "a": "Ei, me ei võta tellimustelt protsenti. Kõik QR-menüüst tulevad tellimused jõuavad otse restorani, ilma vahendusplatvormide tasudeta. Maksad vaid fikseeritud kuutasu — ja ei midagi muud."
+      },
+      {
+        "q": "Kas külalised peavad rakenduse alla laadima ja kas meil on vaja tehnilisi oskusi?",
+        "a": "Külalistel pole rakendust vaja: nad suunavad lihtsalt telefonikaamera QR-koodile ja menüü avaneb brauseris. Ka restoranil pole vaja tehnilisi teadmisi — halduspaneel töötab otse telefoni, tahvelarvuti või sülearvuti brauseris. Kõik käib paari nupuvajutusega, koodi kirjutada pole vaja."
+      },
+      {
+        "q": "Kui kiiresti menüümuudatused jõustuvad — hinnad, uued toidud?",
+        "a": "Koheselt. Telefonist tehtud muudatused on külalistele nähtavad sekunditega. Uue toidu lisamine võtab vaid hetke: nimi, hind, foto. Paberist menüüsid pole vaja uuesti trükkida ja disainerit pole tarvis."
+      },
+      {
+        "q": "Mitut keelt toetatakse?",
+        "a": "Tehisintellektiga automaattõlge toetab 35 keelt. Üks liigutus — ja kogu menüü on tõlgitud. Tehisintellekt mõistab kulinaarset konteksti, nii et toitude nimed ja kirjeldused kõlavad igas keeles loomulikult. Turistid tellivad julgemalt, kui nad saavad aru, mis toidu sees on."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Valmis 10 minutiga. ",
+    "headingAccent": "14 päeva täisligipääsu.",
+    "sub": "Kaarti pole vaja, tühista igal ajal. Meid usaldab {count} restorani. Alustamiseks on vaja vaid e-posti aadressi."
+  },
+  "featureHighlights": {
+    "heading": "Kõik on hinna sees",
+    "sub": "Funktsioonid, mis toovad külalistelt tellimusi — igas paketis, ilma lisatasuta."
+  },
+  "scan": {
+    "heading": "Sul on paberist menüü või PDF?",
+    "headingAccent": "Tehisintellekt digitaliseerib selle 60 sekundiga.",
+    "sub": "Laadi üles foto või dokument — tehisintellekt tuvastab kategooriad, toidud ja hinnad automaatselt.",
+    "cta": "Skanni menüü →"
+  },
+  "pricingQuiz": {
+    "heading": "Pane oma pakett kokku ",
+    "sub": "Alusta menüüst — lisa broneeringud, köögiekraan ja domeen siis, kui neid vajad.",
+    "billingLabel": "Arveldus:",
+    "monthly": "Kuu",
+    "yearly": "Aasta",
+    "restaurantsLabel": "Restoranid:",
+    "fewerAria": "Vähem restorane",
+    "moreAria": "Rohkem restorane",
+    "menuTitle": "Menüü ja veebileht",
+    "menuHint": "Alati hinna sees",
+    "reservationsTitle": "Broneerimissüsteem",
+    "reservationsHint": "Laudade broneerimine",
+    "kdsTitle": "Köögiekraan",
+    "kdsHint": "Tellimused koka ekraanil",
+    "domainTitle": "Domeeninimi",
+    "domainHint": "Sinu enda veebiaadress",
+    "perMonthSuffix": "/kuu",
+    "perYearSuffix": "/aasta",
+    "perMonthLongSuffix": "/kuus",
+    "saveYearlyTemplate": "Säästa aastase arveldusega {amount} aastas",
+    "volumeDiscountTemplate": "{percent}% soodustust",
+    "saveUpToHint": "Säästa kuni 50%, kui sul on 5+ restorani",
+    "billedYearly": "Arveldatakse kord aastas",
+    "billedMonthly": "Arveldatakse kord kuus",
+    "enterprisePre": "Vajad erilahendust?",
+    "enterpriseCta": "Kirjuta meile",
+    "enterprisePost": "ja paneme sulle sobiva paketi kokku.",
+    "enterpriseWa": "Tere! Soovin oma restoranidele erilahendust.",
+    "headingAccent": "oma restoranile",
+    "multiplePre": "Vajad rohkem restorane?",
+    "multipleCta": "Vaata valikuid",
+    "restaurantOne": "restoran",
+    "restaurantFew": "restorani",
+    "restaurantMany": "restorani",
+    "multipleChangePre": "Erinev arv restorane?",
+    "multipleChangeCta": "Muuda"
+  },
+  "pricingCta": {
+    "heading": "Lihtne ja paindlik hinnakujundus",
+    "sub": "Maksa ainult nende funktsioonide eest, mida vajad — pane oma pakett kokku minutiga.",
+    "fromTemplate": "alates {price}/kuu",
+    "button": "Pane pakett kokku"
+  },
+  "footer": {
+    "copyrightTemplate": "© {year} IQ Rest. Kõik õigused kaitstud.",
+    "featuresHeading": "Võimalused",
+    "featureLinks": [
+      {
+        "href": "/ru/tsifrovoe-menyu",
+        "label": "Digimenüü"
+      },
+      {
+        "href": "/ru/priem-zakazov-restoran",
+        "label": "Tellimuste vastuvõtmine"
+      },
+      {
+        "href": "/ru/bronirovanie-stolov",
+        "label": "Broneeringud"
+      },
+      {
+        "href": "/ru/kds-kuhonnyy-displey",
+        "label": "Köögiekraan"
+      }
+    ],
+    "infoHeading": "Info",
+    "legalHeading": "Juriidiline info",
+    "currencyHeading": "Valuuta"
+  },
+  "common": {
+    "close": "Sulge",
+    "menu": "Menüü",
+    "help": "Abi"
+  },
+  "auth": {
+    "emailLabel": "E-post",
+    "emailPlaceholder": "Sisesta oma e-posti aadress",
+    "or": "või",
+    "continueGoogle": "Jätka Google'iga",
+    "continueApple": "Jätka Apple'iga",
+    "consent": {
+      "line": "Jätkates nõustud <terms>kasutustingimustega</terms>. Vaata, kuidas me andmeid töötleme meie <privacy>privaatsuspoliitikast</privacy>."
+    },
+    "signInTitle": "Tere tulemast tagasi",
+    "signInSubtitle": "Sisesta oma e-posti aadress — saadame sulle 6-kohalise sisselogimiskoodi.",
+    "signInButton": "Logi sisse",
+    "registerTitle": "Loo konto",
+    "registerSubtitle": "14 päeva tasuta, kaarti pole vaja. Saadame sisselogimiskoodi e-postile — ei mingeid paroole ega ankeete.",
+    "registerButton": "Loo konto",
+    "switchSignIn": "Logi sisse",
+    "switchCreate": "Loo konto",
+    "verifyTitle": "Kontrolli oma postkasti",
+    "verifySubtitle": "Saatsime 6-kohalise koodi aadressile {email}.",
+    "verifyCodeLabel": "Kinnituskood",
+    "checkSpam": "Ei näe kirja? Kontrolli rämpsposti kausta.",
+    "verifyButton": "Jätka",
+    "resendCode": "Saada kood uuesti",
+    "resendSent": "Kood saadetud",
+    "changeEmail": "Kasuta teist e-posti aadressi",
+    "metaSignIn": "Logi sisse",
+    "metaRegister": "Loo konto",
+    "errors": {
+      "emailInvalid": "Sisesta korrektne e-posti aadress.",
+      "sendFailed": "Koodi saatmine ebaõnnestus. Palun proovi uuesti.",
+      "verifyFailed": "Koodi kinnitamine ebaõnnestus. Palun proovi uuesti.",
+      "codeExpired": "Kood on aegunud. Küsi uus kood.",
+      "noCode": "Koodi ei leitud või see on aegunud. Küsi uus kood.",
+      "invalidCode": "Vigane kood. Palun proovi uuesti.",
+      "tooManyAttempts": "Liiga palju katseid. Palun oota ja proovi uuesti."
+    }
+  }
+}

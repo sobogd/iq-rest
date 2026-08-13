@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "Faoi IQ Rest — Cé Muid Féin, Teagmhálacha agus Sonraí Dlíthiúla",
+    "description": "Cé atá taobh thiar de IQ Rest, conas teagmháil a dhéanamh linn agus sonraí oibreoir na seirbhíse: ríomhphost, WhatsApp, eolas dlíthiúil.",
+    "canonical": "https://iq-rest.com/ga/about",
+    "ogLocale": "ga_IE",
+    "ogTitle": "Faoi IQ Rest",
+    "ogDescription": "Cé atá taobh thiar de IQ Rest, teagmhálacha tacaíochta agus sonraí dlíthiúla oibreoir na seirbhíse."
+  },
+  "heading": "Ónár gcaifé féin",
+  "headingAccent": "go hardán do bhialanna",
+  "story": {
+    "photo": {
+      "src": "/contacts.webp"
+    },
+    "paragraphs": [
+      "Inniu ritheann an t-ardán gach lá i {count} ionad — ó shiopaí caifé cúig bhord go slabhraí ar fud roinnt cathracha. Stóráiltear sonraí ar fhreastalaithe sa Ghearmáin, agus freagraítear ceisteanna tacaíochta go pearsanta."
+    ],
+    "sign": "Bogdan Sokolov"
+  },
+  "facts": [
+    {
+      "value": "2022",
+      "label": "bliain a bunaíodh an t-ardán"
+    },
+    {
+      "value": "{count}",
+      "label": "ionad a ritheann ar IQ Rest"
+    },
+    {
+      "value": "15",
+      "label": "tír ina bhfuil ár gcliaint"
+    }
+  ],
+  "waPrefill": "Dia duit, tá ceist agam faoi IQ Rest",
+  "contacts": [
+    {
+      "icon": "Mail",
+      "title": "Ríomhphost",
+      "value": "support@iq-rest.com",
+      "href": "mailto:support@iq-rest.com",
+      "note": "Sonraisc, cáipéisí, ceisteanna sonraí."
+    },
+    {
+      "icon": "MessageCircle",
+      "title": "WhatsApp",
+      "value": "+998 94 866 37 43",
+      "wa": true,
+      "note": "Taispeánfaimid taispeántas duit agus cabhróimid le socrú."
+    },
+    {
+      "icon": "Clock",
+      "title": "Am freagartha",
+      "value": "Luan–Domh, 9:00–21:00 CET",
+      "note": "Freagraímid laistigh de chúpla uair an chloig."
+    }
+  ],
+  "legal": {
+    "rows": [
+      {
+        "label": "Oibreoir seirbhíse",
+        "value": "Bogdan Sokolov"
+      },
+      {
+        "label": "Foirm dhlíthiúil",
+        "value": "Autónomo (España)"
+      },
+      {
+        "label": "Uimhir Chánach (NIF)",
+        "value": "ESZ1894474S"
+      },
+      {
+        "label": "Seoladh",
+        "value": "Calle Boca del Río 2, 33010 Oviedo, Asturias, España"
+      },
+      {
+        "label": "Fearann",
+        "value": "https://iq-rest.com"
+      },
+      {
+        "label": "Óstáil sonraí",
+        "value": "Hetzner Online GmbH, Nuremberg, an Ghearmáin"
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Tá ár scéal cloiste agat. ",
+    "headingAccent": "Tosaigh ag scríobh do cheannsa — 14 lá saor in aisce.",
+    "sub": "Ní gá cárta, cealaigh am ar bith. Cosúil le {count} bialann, is féidir leat brath orainn. Níl uait ach ríomhphost."
+  }
+}

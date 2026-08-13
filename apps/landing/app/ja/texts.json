@@ -1,0 +1,261 @@
+{
+  "htmlLang": "ja",
+  "htmlDir": "ltr",
+  "meta": {
+    "title": "デジタルメニュー、KDS、ネット予約 — IQ Rest",
+    "description": "1つのアプリで飲食店を管理：多言語デジタルメニュー、KDS、24時間ネット予約。最短5分で導入可能。14日間無料トライアル、クレジットカード不要。",
+    "canonical": "https://iq-rest.com/ja",
+    "ogLocale": "ja_JP",
+    "ogTitle": "デジタルメニュー、KDS、ネット予約",
+    "ogDescription": "1つのアプリで飲食店を管理：多言語デジタルメニュー、KDS、24時間ネット予約。最短5分で導入可能。14日間無料トライアル、クレジットカード不要。"
+  },
+  "jsonLd": {
+    "appName": "IQ Rest — 飲食店向け管理プラットフォーム"
+  },
+  "ctaText": "無料で試す",
+  "homeCtaText": "無料で試す",
+  "trust": [
+    {
+      "kind": "num",
+      "value": 35,
+      "label": "対応言語"
+    },
+    {
+      "kind": "text",
+      "value": "24/7",
+      "label": "ネット予約"
+    },
+    {
+      "kind": "num",
+      "value": 5,
+      "suffix": " 分",
+      "label": "導入まで"
+    },
+    {
+      "kind": "count",
+      "label": "導入店舗数"
+    }
+  ],
+  "demoText": "デモを見る",
+  "microcopy": "14日間無料 · クレジットカード不要 · いつでもキャンセル可能",
+  "header": {
+    "navFeatures": "機能",
+    "navHow": "仕組み",
+    "navPricing": "料金プラン",
+    "navFaq": "よくある質問",
+    "signIn": "ログイン",
+    "viewFeatures": "機能を見る",
+    "cta": "無料で始める",
+    "navProducts": "機能",
+    "navGuide": "ガイド",
+    "navAbout": "運営会社",
+    "menuFeaturesHeading": "機能",
+    "menuInfoHeading": "インフォメーション"
+  },
+  "hero": {
+    "verticals": [
+      "レストラン",
+      "カフェ",
+      "バー",
+      "ホテル",
+      "ピザ屋"
+    ],
+    "headline": "飲食店のデジタルメニューを\n最短5分で導入。",
+    "sub": "最短5分でデジタルメニューを作成。ノーコード編集、紙のメニューのAI読み取り、テーブル用QRコード、手数料ゼロのオーダー機能など、必要なものがすべて揃っています。",
+    "dynamicHeadlines": [
+      "販売手数料0円。",
+      "AIによる35言語翻訳。",
+      "モバイルオーダー対応。",
+      "24時間ネット予約。",
+      "洗練されたデザイン。"
+    ],
+    "painBullets": [
+      "販売手数料0円：売上はすべて店舗の利益になります。",
+      "AIが35言語に自動翻訳：インバウンド客もメニューを理解でき、注文単価が上がります。",
+      "24時間ネット予約：お客様自身で予約できるため、ピーク時の電話対応が減ります。",
+      "柔軟な価格設定：メニューの変更は即座に反映されます。"
+    ],
+    "rating": "世界30ヶ国以上、500店舗以上の飲食店が導入"
+  },
+  "founder": {
+    "eyebrow": "飲食店経営者による開発",
+    "quoteStart": "妻と一緒にカフェを経営していた私たちは、オーダー取り、予約管理、ホールとキッチンの連携など、飲食店の日常を内側から熟知しています。モダンで設定が簡単、そして一目でわかるシンプルなツールが欲しい——",
+    "quoteAccent": "それが、私たちが他の飲食店経営者のためにこのプラットフォームを開発したきっかけです。",
+    "sign": "Bogdan Sokolov · 創業者、元カフェオーナー",
+    "photoAlt": "IQ Rest創業者、Bogdan Sokolov"
+  },
+  "pricing": {
+    "badge": "販売手数料なし · 契約期間の縛りなし",
+    "heading": "シンプルなワンプラン。",
+    "headingAccent": "すべてコミコミ。",
+    "sub": "QRメニュー、オーダー受付、AI翻訳、店舗ウェブサイト、ネット予約。分かりやすい月額料金のみ。",
+    "monthlyLabel": "月払い",
+    "yearlyLabel": "年払い",
+    "saveBadge": "25%オフ",
+    "perMonth": "月額",
+    "billedAnnually": "年払い一括：{total}",
+    "youSave": "{amount} お得",
+    "trust": {
+      "secure": "Stripeによる安全な決済",
+      "noCommitment": "契約期間の縛りなし",
+      "quick": "数分で利用開始",
+      "restaurants": "500店舗以上が導入"
+    }
+  },
+  "faq": {
+    "eyebrow": "ご不明な点がありますか？",
+    "heading": "よくある",
+    "headingAccent": "質問",
+    "sub": "導入前に飲食店の方からよくいただく質問です。解決しない場合はWhatsAppでお問い合わせください。ボットではなくスタッフが直接お答えします。",
+    "whatsappCta": "WhatsAppで問い合わせる",
+    "whatsappPrefill": "こんにちは、IQ Restについて質問があります。",
+    "items": [
+      {
+        "q": "トライアルの内容と終了後の流れは？",
+        "a": "14日間、クレジットカード登録なしで全機能をご利用いただけます。14日経過後に支払い方法が追加されていない場合、アカウントは自動的に一時停止されます。同意なしに課金されることはありません。後から支払い設定を行えば、そのまま再開できます。解約も1クリックで完了します。"
+      },
+      {
+        "q": "注文に手数料はかかりますか？",
+        "a": "いいえ、注文ごとの手数料は一切いただきません。QRメニューからの注文はすべて直接店舗に入り、プラットフォーム手数料は0円です。固定の月額料金のみでご利用いただけます。"
+      },
+      {
+        "q": "お客様はアプリをインストールする必要がありますか？また、専門的な知識は必要ですか？",
+        "a": "お客様はアプリ不要です。スマホのカメラでQRコードを読み取るだけで、ブラウザ上にメニューが表示されます。店舗側にも専門知識は不要です。管理画面はスマホ、タブレット、PCのブラウザで動作し、タップとドラッグ＆ドロップだけで操作できます。"
+      },
+      {
+        "q": "価格や新メニューの変更はどのくらいで反映されますか？",
+        "a": "即座に反映されます。スマホから変更すると、数秒後にはお客様の画面に表示されます。新メニューの追加も、名前、価格、写真を登録するだけ。紙のメニューを刷り直す必要も、デザイナーに依頼する必要もありません。"
+      },
+      {
+        "q": "何ヶ国語に対応していますか？",
+        "a": "AIによる自動翻訳で35言語に対応しています。ワンアクションでメニュー全体を翻訳します。AIが料理の文脈を理解するため、どの言語でも自然な料理名や説明になります。インバウンド客も料理の内容がわかるため、安心して注文できます。"
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "最短10分で導入。",
+    "headingAccent": "14日間フルアクセス。",
+    "sub": "クレジットカード不要、いつでもキャンセル可能。{count}店舗の飲食店に選ばれています。メールアドレスのみで始められます。"
+  },
+  "featureHighlights": {
+    "heading": "すべて標準搭載",
+    "sub": "お客様を注文に導く機能が、追加料金なしですべてのプランに含まれています。"
+  },
+  "scan": {
+    "heading": "紙のメニューやPDFをお持ちですか？",
+    "headingAccent": "AIが60秒でデジタル化します。",
+    "sub": "写真やドキュメントをアップロードするだけで、AIがカテゴリ、料理名、価格を自動的に認識します。",
+    "cta": "メニューをスキャンする →"
+  },
+  "pricingQuiz": {
+    "heading": "プランを組み立てる",
+    "sub": "まずはメニューから始め、必要に応じてネット予約、KDS、独自ドメインを追加できます。",
+    "billingLabel": "お支払い方法：",
+    "monthly": "月払い",
+    "yearly": "年払い",
+    "restaurantsLabel": "店舗数：",
+    "fewerAria": "店舗数を減らす",
+    "moreAria": "店舗数を増やす",
+    "menuTitle": "メニューとウェブサイト",
+    "menuHint": "基本機能（常に含まれます）",
+    "reservationsTitle": "予約システム",
+    "reservationsHint": "ネット予約の受付",
+    "kdsTitle": "KDS（キッチンディスプレイ）",
+    "kdsHint": "厨房モニターでの注文管理",
+    "domainTitle": "独自ドメイン",
+    "domainHint": "店舗専用のウェブアドレス",
+    "perMonthSuffix": "/月",
+    "perYearSuffix": "/年",
+    "perMonthLongSuffix": "/月",
+    "saveYearlyTemplate": "年払いで年間 {amount} お得",
+    "volumeDiscountTemplate": "{percent}% オフ",
+    "saveUpToHint": "5店舗以上のご利用で最大50%オフ",
+    "billedYearly": "年1回払い",
+    "billedMonthly": "月払い",
+    "enterprisePre": "カスタマイズされたプランが必要ですか？",
+    "enterpriseCta": "お問い合わせ",
+    "enterprisePost": "店舗に合わせたプランをご提案します。",
+    "enterpriseWa": "こんにちは！複数店舗向けのカスタムプランについて相談したいです。",
+    "headingAccent": "店舗に合わせて",
+    "multiplePre": "さらに店舗を追加しますか？",
+    "multipleCta": "オプションを見る",
+    "restaurantOne": "店舗",
+    "restaurantFew": "店舗",
+    "restaurantMany": "店舗",
+    "multipleChangePre": "店舗数を変更しますか？",
+    "multipleChangeCta": "変更する"
+  },
+  "pricingCta": {
+    "heading": "シンプルで柔軟な料金体系",
+    "sub": "必要な機能にだけ支払う。1分で最適なプランが完成します。",
+    "fromTemplate": "月額 {price} から",
+    "button": "プランを作成する"
+  },
+  "footer": {
+    "copyrightTemplate": "© {year} IQ Rest. All rights reserved.",
+    "featuresHeading": "機能",
+    "featureLinks": [
+      {
+        "href": "/ru/tsifrovoe-menyu",
+        "label": "デジタルメニュー"
+      },
+      {
+        "href": "/ru/priem-zakazov-restoran",
+        "label": "オーダーシステム"
+      },
+      {
+        "href": "/ru/bronirovanie-stolov",
+        "label": "ネット予約"
+      },
+      {
+        "href": "/ru/kds-kuhonnyy-displey",
+        "label": "KDS（キッチンディスプレイ）"
+      }
+    ],
+    "infoHeading": "インフォメーション",
+    "legalHeading": "法的情報",
+    "currencyHeading": "通貨"
+  },
+  "common": {
+    "close": "閉じる",
+    "menu": "メニュー",
+    "help": "ヘルプ"
+  },
+  "auth": {
+    "emailLabel": "メールアドレス",
+    "emailPlaceholder": "メールアドレスを入力",
+    "or": "または",
+    "continueGoogle": "Googleで続ける",
+    "continueApple": "Appleで続ける",
+    "consent": {
+      "line": "続行することで、<terms>利用規約</terms>に同意したことになります。データの取り扱いについては<privacy>プライバシーポリシー</privacy>をご覧ください。"
+    },
+    "signInTitle": "お帰りなさい",
+    "signInSubtitle": "メールアドレスを入力してください。6桁のログインコードを送信します。",
+    "signInButton": "ログイン",
+    "registerTitle": "アカウント作成",
+    "registerSubtitle": "14日間無料、クレジットカード不要。パスワードや面倒な入力フォームなしで、ログインコードをメールでお送りします。",
+    "registerButton": "アカウントを作成する",
+    "switchSignIn": "ログイン",
+    "switchCreate": "新規登録",
+    "verifyTitle": "メールを確認してください",
+    "verifySubtitle": "{email} に6桁のコードを送信しました。",
+    "verifyCodeLabel": "認証コード",
+    "checkSpam": "メールが届かない場合は、迷惑メールフォルダをご確認ください。",
+    "verifyButton": "続ける",
+    "resendCode": "コードを再送信",
+    "resendSent": "コードを送信しました",
+    "changeEmail": "別のメールアドレスを使用する",
+    "metaSignIn": "ログイン",
+    "metaRegister": "アカウント作成",
+    "errors": {
+      "emailInvalid": "有効なメールアドレスを入力してください。",
+      "sendFailed": "コードの送信に失敗しました。もう一度お試しください。",
+      "verifyFailed": "コードの認証に失敗しました。もう一度お試しください。",
+      "codeExpired": "コードの有効期限が切れています。新しいコードをリクエストしてください。",
+      "noCode": "コードが見つからないか、有効期限が切れています。新しいコードをリクエストしてください。",
+      "invalidCode": "無効なコードです。もう一度お試しください。",
+      "tooManyAttempts": "試行回数が多すぎます。しばらくしてからもう一度お試しください。"
+    }
+  }
+}

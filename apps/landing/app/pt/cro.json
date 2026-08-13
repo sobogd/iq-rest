@@ -1,0 +1,289 @@
+{
+  "heroV2": {
+    "verticals": [
+      {
+        "icon": "restaurant",
+        "label": "Restaurantes"
+      },
+      {
+        "icon": "cafe",
+        "label": "Cafés"
+      },
+      {
+        "icon": "bar",
+        "label": "Bares"
+      },
+      {
+        "icon": "hotel",
+        "label": "Hotéis"
+      },
+      {
+        "icon": "pizza",
+        "label": "Pizzarias"
+      }
+    ],
+    "title": "Tudo o que o seu restaurante",
+    "titleAccent": "precisa!",
+    "sub": "Configure os processos em 10 minutos: lance a ementa online, otimize o trabalho da cozinha e a gestão da sala.",
+    "primaryLabel": "Começar grátis",
+    "demoLabel": "Ver ementa demo",
+    "mockups": {
+      "kds": {
+        "src": "/landing/hero-card-kds.webp",
+        "alt": "Tablet com ecrã de cozinha: pedidos por mesa em colunas com estados"
+      },
+      "reservations": {
+        "src": "/landing/hero-card-reservation.webp",
+        "alt": "Tablet com calendário de reservas: vista mensal e lista de reservas a aguardar confirmação"
+      },
+      "phone1": {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Telemóvel com a página inicial do site do restaurante: fotos, reservas e acesso à ementa online"
+      },
+      "phone2": {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Telemóvel com a ficha de um prato: foto, preço e etiquetas de alergénios"
+      }
+    }
+  },
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Arranque em 10 minutos",
+      "sub": "Sem comprar equipamento caro nem configurações demoradas"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Suporte rápido",
+      "sub": "Respondemos no chat em poucas horas"
+    },
+    {
+      "icon": "Globe",
+      "title": "A escolha de {count} estabelecimentos",
+      "sub": "Restaurantes e cafés em mais de 15 países confiam em nós"
+    },
+    {
+      "icon": "Palette",
+      "title": "100% com a sua marca",
+      "sub": "Adaptamos o design e a interface ao estilo do seu estabelecimento"
+    }
+  ],
+  "menu": {
+    "heading": "Site e ementa digital",
+    "sub": {
+      "link": "Mais do que uma ementa QR!",
+      "rest": " Tenha um site completo com design exclusivo, contactos e reserva de mesas."
+    },
+    "moreLabel": "Saber mais sobre a ementa",
+    "demoLabel": "Demo: a ementa vista pelo cliente",
+    "mockupAlt": "Telemóvel com a página inicial do site do restaurante e telemóvel com a página de um prato",
+    "bullets": [
+      {
+        "icon": "Languages",
+        "title": "Tradução automática para 35 idiomas",
+        "sub": "Atenda clientes estrangeiros sem barreira linguística — a tradução automática trata de tudo"
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "Pedidos diretamente das mesas",
+        "sub": "Simplifique o trabalho do estabelecimento — receba pedidos das mesas com rapidez e sem intervenção do empregado"
+      },
+      {
+        "icon": "WheatOff",
+        "title": "Alergénios e dietas",
+        "sub": "Assinale alergénios e preferências alimentares (vegano, picante) para que os clientes escolham com mais facilidade e segurança"
+      }
+    ]
+  },
+  "reservations": {
+    "heading": "Reserva de mesas",
+    "sub": {
+      "link": "Reservas de mesas inteligentes!",
+      "rest": " Sistema de reservas automático que acompanha sozinho as mesas livres e o seu horário."
+    },
+    "moreLabel": "Saber mais sobre reservas",
+    "demoLabel": "Demo: calendário de reservas",
+    "mockupAlt": "Tablet com calendário de reservas: mesas por dia e por período horário",
+    "bullets": [
+      {
+        "icon": "CalendarCheck",
+        "title": "Mapa de reservas prático",
+        "sub": "Grelha clara por dias e mesas — vê-se logo onde e a que horas há lugares livres"
+      },
+      {
+        "icon": "SlidersHorizontal",
+        "title": "Configuração flexível das reservas",
+        "sub": "Defina o horário de funcionamento, a duração dos períodos, fotos das mesas e recolha os pedidos especiais dos clientes"
+      },
+      {
+        "icon": "Users",
+        "title": "Gestão do fluxo de clientes",
+        "sub": "Escolha o modo de gestão de reservas mais conveniente e controle totalmente o fluxo de clientes"
+      }
+    ]
+  },
+  "orders": {
+    "heading": "Receção de pedidos das mesas",
+    "sub": {
+      "link": "Pedidos diretos para a cozinha!",
+      "rest": " O pedido feito na mesa ou pelo empregado chega instantaneamente ao ecrã de cozinha — sem talões em papel nem esperas."
+    },
+    "moreLabel": "Saber mais sobre pedidos",
+    "demoLabel": "Demo: ecrã de pedidos",
+    "mockupSrc": "/landing/feature-orders-modal.webp",
+    "mockupAlt": "Tablet com um pedido aberto: lista de pratos e ações — mudar de mesa, dividir o pedido, desconto",
+    "bullets": [
+      {
+        "icon": "ShoppingCart",
+        "title": "Cliente ou empregado",
+        "sub": "O cliente pede na mesa através do código QR, o empregado — no seu telemóvel ou tablet"
+      },
+      {
+        "icon": "Map",
+        "title": "Planta da sala com estados",
+        "sub": "As mesas na planta ganham cor consoante o estado — vê-se logo onde esperam o pedido e onde é preciso ir"
+      },
+      {
+        "icon": "Receipt",
+        "title": "Divisão da conta",
+        "sub": "Divida o pedido entre os clientes e feche as mesas sem confusões no pagamento"
+      }
+    ]
+  },
+  "kds": {
+    "heading": "Ecrã de cozinha (KDS)",
+    "sub": {
+      "link": "A cozinha num ritmo único!",
+      "rest": " Os pedidos da sala e da ementa QR aparecem no ecrã do cozinheiro de imediato — com notas, alergénios e temporizador."
+    },
+    "moreLabel": "Saber mais sobre o KDS",
+    "demoLabel": "Demo: ecrã da cozinha",
+    "mockupAlt": "Tablet com ecrã de cozinha: pedidos por mesa em colunas com estados",
+    "bullets": [
+      {
+        "icon": "LayoutGrid",
+        "title": "Ecrãs por zonas",
+        "sub": "Tablets separados para a cozinha quente, o bar e a pastelaria — cada um vê apenas os seus pratos"
+      },
+      {
+        "icon": "Timer",
+        "title": "Estados e temporizador",
+        "sub": "Colunas «em preparação, pronto, servido» e o tempo de cada pedido — o estado muda com um toque"
+      },
+      {
+        "icon": "ShieldAlert",
+        "title": "Alergénios e comentários",
+        "sub": "As etiquetas de alergénios e as notas do cliente estão destacadas — o cozinheiro não perde nada de importante"
+      }
+    ]
+  },
+  "bundle": {
+    "heading": "Tudo o que sustenta o seu restaurante.",
+    "headingAccent": "Numa única aplicação.",
+    "sub": "Ementa, cozinha e reservas num só lugar — moderno, rápido e pensado para como os restaurantes realmente funcionam. Sem custos extra nem pagamento por funcionalidade."
+  },
+  "benefits": [
+    {
+      "icon": "Languages",
+      "tag": "Ementa digital",
+      "title": "Uma ementa que vende.",
+      "bullets": [
+        "35 idiomas com IA",
+        "Design premium",
+        "Preços alterados de imediato"
+      ],
+      "image": "/landing/feature-design.webp",
+      "imageAlt": "Dois telemóveis numa mesa de café: ecrã de boas-vindas da ementa digital e página de contactos com mapa"
+    },
+    {
+      "icon": "ChefHat",
+      "tag": "Ecrã de cozinha",
+      "title": "Cozinhe mais depressa, sem perder nada.",
+      "bullets": [
+        "Logo no ecrã",
+        "Notas e alergénios",
+        "Tablet ou telemóvel"
+      ],
+      "image": "/landing/feature-kds-cards.webp",
+      "imageAlt": "Tablet num balcão de bar a mostrar o ecrã de cozinha com pedidos por mesa"
+    },
+    {
+      "icon": "CalendarCheck",
+      "tag": "Reservas",
+      "title": "Reservas em piloto automático.",
+      "bullets": [
+        "Reservas sem chamadas",
+        "Confirmação automática",
+        "Calendário por mesas"
+      ],
+      "image": "/landing/feature-booking-calendar.webp",
+      "imageAlt": "Dois tablets mostram o calendário de reservas: vista diária por mesas e vista mensal"
+    },
+    {
+      "icon": "Receipt",
+      "tag": "Pedidos na mesa",
+      "title": "Pedidos diretos para a cozinha.",
+      "bullets": [
+        "Cliente ou empregado",
+        "Direto para a cozinha",
+        "Ative quando quiser"
+      ],
+      "image": "/landing/feature-orders-map.webp",
+      "imageAlt": "Tablet com o ecrã de pedidos: lista de pedidos e planta da sala com mesas por cores."
+    }
+  ],
+  "seeDetails": "Saber mais",
+  "platform": {
+    "hardwareTitle": "Trabalhe com o seu próprio equipamento",
+    "hardwareSub": "Não o obrigamos a comprar hardware. Use os telemóveis, tablets e computadores que já tem.",
+    "anywhereTitle": "Funciona em qualquer lugar",
+    "anywhereSub": "Telemóvel, tablet, portátil, PC. Android, iOS, Windows, Mac, Linux. Em qualquer navegador moderno, sem instalação."
+  },
+  "activities": {
+    "heading": "Um sistema —",
+    "headingAccent": "todo o restaurante.",
+    "sub": "Serviço mais rápido, cozinha mais tranquila, custos mais baixos e um cliente que volta — tudo numa só plataforma.",
+    "groups": [
+      {
+        "icon": "Smartphone",
+        "tag": "Na mesa — o cliente",
+        "bullets": [
+          "Ementa QR em 35 idiomas",
+          "Pedido sem esperar pelo empregado",
+          "Chamar o empregado ou pedir a conta",
+          "Reserva de mesa 24/7",
+          "Código QR único para cada mesa",
+          "O cliente não precisa de aplicação — abre no navegador",
+          "Etiquetas de alergénios e dietas para filtrar"
+        ]
+      },
+      {
+        "icon": "ChefHat",
+        "tag": "Na cozinha",
+        "bullets": [
+          "Pedidos no ecrã de imediato",
+          "Colunas em preparação / pronto / servido",
+          "Alergénios e comentários destacados",
+          "Tablet ou telemóvel — sem talões em papel"
+        ]
+      },
+      {
+        "icon": "ChartColumn",
+        "tag": "Gestão",
+        "bullets": [
+          "Alterações à ementa e aos preços — de imediato",
+          "Tradução por IA num clique",
+          "Análise de vendas e relatórios",
+          "Vários restaurantes numa só conta",
+          "A IA digitaliza a ementa em papel em 60 segundos",
+          "Domínio próprio com SSL"
+        ]
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Toda a plataforma em 10 minutos. ",
+    "headingAccent": "14 dias de acesso total.",
+    "sub": "Ementa, pedidos, reservas e cozinha — sem cartão, com cancelamento a qualquer momento; {count} restaurantes confiam em nós, só precisa de um email."
+  }
+}

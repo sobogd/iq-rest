@@ -1,0 +1,261 @@
+{
+  "htmlLang": "ga",
+  "htmlDir": "ltr",
+  "meta": {
+    "title": "Biachlár Digiteach, Scáileán Cistine agus Áirithintí — IQ Rest",
+    "description": "Bainistigh do bhialann ó aip amháin: biachlár digiteach ilteangach, scáileán cistine agus áirithintí 24/7. Seol in 5 nóiméad. 14 lá saor in aisce, ní gá cárta.",
+    "canonical": "https://iq-rest.com/ga",
+    "ogLocale": "ga_IE",
+    "ogTitle": "Biachlár Digiteach, Scáileán Cistine agus Áirithintí",
+    "ogDescription": "Bainistigh do bhialann ó aip amháin: biachlár digiteach ilteangach, scáileán cistine agus áirithintí 24/7. Seol in 5 nóiméad. 14 lá saor in aisce, ní gá cárta."
+  },
+  "jsonLd": {
+    "appName": "IQ Rest — Ardán Bainistíochta Bialainne"
+  },
+  "ctaText": "Bain triail as saor in aisce",
+  "homeCtaText": "Bain triail as saor in aisce",
+  "trust": [
+    {
+      "kind": "num",
+      "value": 35,
+      "label": "Teangacha biachláir"
+    },
+    {
+      "kind": "text",
+      "value": "24/7",
+      "label": "Áirithintí ar líne"
+    },
+    {
+      "kind": "num",
+      "value": 5,
+      "suffix": " nóim",
+      "label": "Chun seoladh"
+    },
+    {
+      "kind": "count",
+      "label": "Bialanna linn"
+    }
+  ],
+  "demoText": "Féach ar an taispeántas",
+  "microcopy": "14 lá saor in aisce · Ní gá cárta creidmheasa · Cealaigh am ar bith",
+  "header": {
+    "navFeatures": "Gnéithe",
+    "navHow": "Conas a oibríonn sé",
+    "navPricing": "Praghsáil",
+    "navFaq": "Ceisteanna Coitianta",
+    "signIn": "Sínigh isteach",
+    "viewFeatures": "Féach ar na gnéithe",
+    "cta": "Tosaigh saor in aisce",
+    "navProducts": "Gnéithe",
+    "navGuide": "Treoir",
+    "navAbout": "Fúinn",
+    "menuFeaturesHeading": "Gnéithe",
+    "menuInfoHeading": "Eolas"
+  },
+  "hero": {
+    "verticals": [
+      "Bialanna",
+      "Caiféanna",
+      "Beáir",
+      "Óstáin",
+      "Pizzerias"
+    ],
+    "headline": "Biachlár digiteach do do bhialann.\nBeo in 5 nóiméad.",
+    "sub": "Biachlár digiteach do do bhialann in 5 nóiméad. Gach rud san áireamh: eagarthóir gan chód, aithint AI ar bhiachláir chlóite, cóid QR boird agus orduithe gan choimisiún.",
+    "dynamicHeadlines": [
+      "Coimisiún 0%.",
+      "35 teanga le AI.",
+      "Orduithe ar líne.",
+      "Áirithintí 24/7.",
+      "Dearadh den scoth."
+    ],
+    "painBullets": [
+      "Coimisiún 0%: téann gach ordú díreach chuig an mbialann.",
+      "Aistriúchán AI go 35 teanga — tuigeann turasóirí an biachlár agus ordaíonn siad níos mó.",
+      "Áirithintí 24/7: cuireann aíonna boird in áirithe iad féin, gan aon ghlaonna le linn buaic-amanna.",
+      "Praghsáil sholúbtha: cuirtear athruithe ar an mbiachlár i bhfeidhm láithreach."
+    ],
+    "rating": "Níos mó ná 500 bialann i 30+ tír"
+  },
+  "founder": {
+    "eyebrow": "Tógtha ag úinéirí bialainne",
+    "quoteStart": "Bhí ár gcaifé féin ag mo bhean chéile agus agam féin agus tá a fhios againn conas a oibríonn an bhialann ón taobh istigh: glacadh orduithe, áirithintí, obair urláir agus cistine. Theastaigh uainn uirlis amháin — nua-aimseartha, éasca le socrú agus soiléir ar an gcéad amharc —",
+    "quoteAccent": "sin mar a tháinig an smaoineamh don ardán a thógaimid anois d'úinéirí bialainne eile.",
+    "sign": "Bogdan Sokolov · bunaitheoir, iar-úinéir caifé",
+    "photoAlt": "Bogdan Sokolov, bunaitheoir IQ Rest"
+  },
+  "pricing": {
+    "badge": "Gan aon choimisiún · Gan aon chonarthaí",
+    "heading": "Plean amháin.",
+    "headingAccent": "Gach rud san áireamh.",
+    "sub": "Biachlár QR, glacadh orduithe, aistriúchán AI, suíomh gréasáin bialainne agus áirithintí. Íocaíocht mhíosúil thrédhearcach amháin.",
+    "monthlyLabel": "Míosúil",
+    "yearlyLabel": "Bliantúil",
+    "saveBadge": "Sábháil 25%",
+    "perMonth": "in aghaidh na míosa",
+    "billedAnnually": "Billeáilte in aghaidh na bliana: {total}",
+    "youSave": "Sábhálann tú {amount}",
+    "trust": {
+      "secure": "Íocaíocht shlán trí Stripe",
+      "noCommitment": "Gan aon tiomantas",
+      "quick": "Gníomhachtú i nóiméid",
+      "restaurants": "Níos mó ná 500 bialann"
+    }
+  },
+  "faq": {
+    "eyebrow": "An bhfuil ceisteanna agat fós?",
+    "heading": "Ceisteanna",
+    "headingAccent": "coitianta",
+    "sub": "Na rudaí is minice a fhiafraíonn úinéirí bialainne sula gcláraíonn siad. Mura bhfaigheann tú do fhreagra — seol teachtaireacht chugainn ar WhatsApp, freagraíonn foireann fhíor, ní róbat.",
+    "whatsappCta": "Seol teachtaireacht chugainn ar WhatsApp",
+    "whatsappPrefill": "Dia duit, tá ceist agam faoi IQ Rest",
+    "items": [
+      {
+        "q": "Cad atá san áireamh sa triail agus cad a tharlaíonn ina dhiaidh?",
+        "a": "Ar feadh 14 lá faigheann tú rochtain ar gach gné den ardán, gan aon chárta creidmheasa ag teastáil. Mura gcuirtear modh íocaíochta leis tar éis 14 lá, cuirtear an cuntas ar sos go huathoibríoch. Ní ghearrfaimid táille ort riamh gan do thoiliú. Is féidir leat íocaíocht a chur leis níos déanaí agus leanúint ar aghaidh go díreach ón áit ar fhág tú. Tógann sé cliceáil amháin chun síntiús a chealú."
+      },
+      {
+        "q": "An ngearrann sibh coimisiún ar orduithe?",
+        "a": "Ní ghearrann, ní thógaimid céatadán de na horduithe. Téann gach ordú ón mbiachlár QR díreach chuig an mbialann, gan aon táillí idirghabhálaí. Íocann tú táille mhíosúil sheasta — agus sin é."
+      },
+      {
+        "q": "An gá d'aíonna aip a shuiteáil, agus an dteastaíonn scileanna teicniúla uainn?",
+        "a": "Ní gá d'aíonna aip: ní dhéanann siad ach ceamara a bhfóin a dhíriú ar an gcód QR agus osclaítear an biachlár sa bhrabhsálaí. Níl saineolas teicniúil ag teastáil ón mbialann ach an oiread — ritheann an painéal riaracháin díreach sa bhrabhsálaí ar fhón, táibléad nó ríomhaire glúine. Déantar gach rud le tapálacha agus tarraingt-agus-scaoil, gan aon chódú."
+      },
+      {
+        "q": "Cé chomh tapa agus a chuirtear athruithe ar an mbiachlár i bhfeidhm — praghsanna, miasa nua?",
+        "a": "Láithreach. Feictear athruithe a dhéantar ó do fhón d'aíonna laistigh de shoicindí. Tógann sé cúpla tapáil chun mias nua a chur leis: ainm, praghas, grianghraf. Ní gá biachláir pháipéir a athphriontáil agus níl dearthóir ag teastáil."
+      },
+      {
+        "q": "Cé mhéad teanga a dtacaítear leo?",
+        "a": "Tacaítear le 35 teanga le haistriúchán uathoibríoch cumhachtaithe ag AI. Gníomh amháin — agus aistrítear an biachlár ar fad. Tuigeann an AI an comhthéacs cócaireachta, agus mar sin bíonn ainmneacha agus tuairiscí miasa nádúrtha i ngach teanga. Ordaíonn turasóirí le níos mó muiníne nuair a thuigeann siad cad atá i mias."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Beo in 10 nóiméad. ",
+    "headingAccent": "14 lá de rochtain iomlán.",
+    "sub": "Ní gá cárta, cealaigh am ar bith. Iontaofa ag {count} bialann. Níl uait ach ríomhphost."
+  },
+  "featureHighlights": {
+    "heading": "Gach rud san áireamh",
+    "sub": "Gnéithe a dhéanann orduithe d'aíonna — i ngach plean, gan aon chostas breise."
+  },
+  "scan": {
+    "heading": "An bhfuil biachlár páipéir nó PDF agat?",
+    "headingAccent": "Déanann AI é a dhigitiú in 60 soicind.",
+    "sub": "Uaslódáil grianghraf nó cáipéis — aithníonn AI catagóirí, miasa agus praghsanna go huathoibríoch.",
+    "cta": "Scan an biachlár →"
+  },
+  "pricingQuiz": {
+    "heading": "Tóg plean ",
+    "sub": "Tosaigh leis an mbiachlár — cuir áirithintí, an scáileán cistine agus fearann leis aon uair a theastaíonn siad uait.",
+    "billingLabel": "Billeáil:",
+    "monthly": "Míosúil",
+    "yearly": "Bliantúil",
+    "restaurantsLabel": "Bialanna:",
+    "fewerAria": "Níos lú bialanna",
+    "moreAria": "Níos mó bialanna",
+    "menuTitle": "Biachlár agus suíomh gréasáin",
+    "menuHint": "San áireamh i gcónaí",
+    "reservationsTitle": "Córas áirithinte",
+    "reservationsHint": "Áirithintí boird",
+    "kdsTitle": "Scáileán cistine",
+    "kdsHint": "Orduithe ar scáileán na cistine",
+    "domainTitle": "Ainm fearainn",
+    "domainHint": "Do sheoladh gréasáin féin",
+    "perMonthSuffix": "/mí",
+    "perYearSuffix": "/bl",
+    "perMonthLongSuffix": "/mí",
+    "saveYearlyTemplate": "Sábháil {amount} in aghaidh na bliana le billeáil bhliantúil",
+    "volumeDiscountTemplate": "{percent}% de thalamh",
+    "saveUpToHint": "Sábháil suas le 50% le 5+ bialann",
+    "billedYearly": "Billeáilte uair sa bhliain",
+    "billedMonthly": "Billeáilte go míosúil",
+    "enterprisePre": "An dteastaíonn plean saincheaptha uait?",
+    "enterpriseCta": "Seol teachtaireacht chugainn",
+    "enterprisePost": "agus cuirfimid ceann in oiriúint duit.",
+    "enterpriseWa": "Dia duit! Teastaíonn plean saincheaptha uaim do mo bhialanna.",
+    "headingAccent": "do do bhialann",
+    "multiplePre": "An dteastaíonn níos mó bialanna uait?",
+    "multipleCta": "Taispeáin roghanna",
+    "restaurantOne": "bialann",
+    "restaurantFew": "bialanna",
+    "restaurantMany": "bialanna",
+    "multipleChangePre": "Líon difriúil bialanna?",
+    "multipleChangeCta": "Athraigh"
+  },
+  "pricingCta": {
+    "heading": "Praghsáil shimplí, sholúbtha",
+    "sub": "Ná hÍoc ach as na gnéithe a theastaíonn uait — tóg do phlean i nóiméad.",
+    "fromTemplate": "ó {price}/mí",
+    "button": "Tóg mo phlean"
+  },
+  "footer": {
+    "copyrightTemplate": "© {year} IQ Rest. Gach ceart ar cosaint.",
+    "featuresHeading": "Gnéithe",
+    "featureLinks": [
+      {
+        "href": "/ru/tsifrovoe-menyu",
+        "label": "Biachlár digiteach"
+      },
+      {
+        "href": "/ru/priem-zakazov-restoran",
+        "label": "Glacadh orduithe"
+      },
+      {
+        "href": "/ru/bronirovanie-stolov",
+        "label": "Áirithintí"
+      },
+      {
+        "href": "/ru/kds-kuhonnyy-displey",
+        "label": "Scáileán cistine"
+      }
+    ],
+    "infoHeading": "Eolas",
+    "legalHeading": "Dlíthiúil",
+    "currencyHeading": "Airgeadra"
+  },
+  "common": {
+    "close": "Dún",
+    "menu": "Biachlár",
+    "help": "Cabhair"
+  },
+  "auth": {
+    "emailLabel": "Ríomhphost",
+    "emailPlaceholder": "Cuir isteach do ríomhphost",
+    "or": "nó",
+    "continueGoogle": "Lean ar aghaidh le Google",
+    "continueApple": "Lean ar aghaidh le Apple",
+    "consent": {
+      "line": "Trí leanúint ar aghaidh, glacann tú leis na <terms>Téarmaí Seirbhíse</terms>. Féach conas a láimhseálaimid sonraí inár <privacy>bPolasaí Príobháideachais</privacy>."
+    },
+    "signInTitle": "Fáilte ar ais",
+    "signInSubtitle": "Cuir isteach do ríomhphost — seolfaimid cód sínithe isteach 6 dhigit.",
+    "signInButton": "Sínigh isteach",
+    "registerTitle": "Cruthaigh do chuntas",
+    "registerSubtitle": "14 lá saor in aisce, ní gá cárta. Seolfaimid cód sínithe isteach chugat i ríomhphost — gan pasfhocal, gan foirmeacha.",
+    "registerButton": "Cruthaigh cuntas",
+    "switchSignIn": "Sínigh isteach",
+    "switchCreate": "Cláraigh",
+    "verifyTitle": "Seiceáil do ríomhphost",
+    "verifySubtitle": "Sheolamar cód 6 dhigit chuig {email}.",
+    "verifyCodeLabel": "Cód fíoraithe",
+    "checkSpam": "Ní fheiceann tú an ríomhphost? Seiceáil d'fhillteán turscair.",
+    "verifyButton": "Lean ar aghaidh",
+    "resendCode": "Athsheol an cód",
+    "resendSent": "Cód seolta",
+    "changeEmail": "Úsáid ríomhphost eile",
+    "metaSignIn": "Sínigh isteach",
+    "metaRegister": "Cruthaigh cuntas",
+    "errors": {
+      "emailInvalid": "Cuir isteach ríomhphost bailí.",
+      "sendFailed": "Theip ar sheoladh an chóid. Bain triail eile as le do thoil.",
+      "verifyFailed": "Theip ar fhíorú an chóid. Bain triail eile as le do thoil.",
+      "codeExpired": "Tá an cód imithe in éag. Iarr ceann nua.",
+      "noCode": "Cód gan aimsiú nó imithe in éag. Iarr ceann nua.",
+      "invalidCode": "Cód neamhbhailí. Bain triail eile as le do thoil.",
+      "tooManyAttempts": "An iomarca iarrachtaí. Fan go fóill agus bain triail eile as."
+    }
+  }
+}

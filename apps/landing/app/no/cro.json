@@ -1,0 +1,289 @@
+{
+  "heroV2": {
+    "verticals": [
+      {
+        "icon": "restaurant",
+        "label": "Restauranter"
+      },
+      {
+        "icon": "cafe",
+        "label": "Kafeer"
+      },
+      {
+        "icon": "bar",
+        "label": "Barer"
+      },
+      {
+        "icon": "hotel",
+        "label": "Hoteller"
+      },
+      {
+        "icon": "pizza",
+        "label": "Pizzeriaer"
+      }
+    ],
+    "title": "Alt restauranten din",
+    "titleAccent": "trenger!",
+    "sub": "Sett opp driften på 10 minutter: lanser en meny på nett, få flyt på kjøkkenet og hold oversikt over bordene.",
+    "primaryLabel": "Start gratis",
+    "demoLabel": "Se demomeny",
+    "mockups": {
+      "kds": {
+        "src": "/landing/hero-card-kds.webp",
+        "alt": "Nettbrett med kjøkkenskjerm: bestillinger per bord i kolonner med statuser"
+      },
+      "reservations": {
+        "src": "/landing/hero-card-reservation.webp",
+        "alt": "Nettbrett med reservasjonskalender: månedsvisning og en liste over bestillinger som venter på bekreftelse"
+      },
+      "phone1": {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Mobil med forsiden til en restaurantnettside: bilder, bordbestilling og tilgang til menyen på nett"
+      },
+      "phone2": {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Mobil med et rettekort: bilde, pris og allergener"
+      }
+    }
+  },
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Klar på 10 minutter",
+      "sub": "Ingen dyr maskinvare å kjøpe og ingen langvarig oppsett"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Rask support",
+      "sub": "Vi svarer i chatten i løpet av noen timer"
+    },
+    {
+      "icon": "Globe",
+      "title": "Valgt av {count} steder",
+      "sub": "Brukes av restauranter og kaffebarer i 15+ land"
+    },
+    {
+      "icon": "Palette",
+      "title": "100 % din merkevare",
+      "sub": "Vi tilpasser designet og grensesnittet til stilen på stedet ditt"
+    }
+  ],
+  "menu": {
+    "heading": "Nettside og digital meny",
+    "sub": {
+      "link": "Mer enn en QR-meny!",
+      "rest": " Få en komplett nettside med unikt design, kontaktinfo og bordbestilling."
+    },
+    "moreLabel": "Mer om menyen",
+    "demoLabel": "Demo: menyen slik gjestene ser den",
+    "mockupAlt": "Mobil med forsiden til en restaurantnettside og mobil med en rett",
+    "bullets": [
+      {
+        "icon": "Languages",
+        "title": "Automatisk oversettelse til 35 språk",
+        "sub": "Server internasjonale gjester uten språkbarriere — automatisk oversettelse fikser alt"
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "Bestillinger rett fra bordet",
+        "sub": "Gjør driften enklere — ta imot bestillinger fra bordene raskt, uten å bruke servitør"
+      },
+      {
+        "icon": "WheatOff",
+        "title": "Allergener og dietter",
+        "sub": "Merk allergener og kostholdshensyn (vegansk, sterk) slik at gjestene kan velge mat enklere og tryggere"
+      }
+    ]
+  },
+  "reservations": {
+    "heading": "Bordbestilling",
+    "sub": {
+      "link": "Smarte bordreservasjoner!",
+      "rest": " Et automatisk bookingsystem som holder styr på ledige bord og timeplanen din helt av seg selv."
+    },
+    "moreLabel": "Mer om bordbestilling",
+    "demoLabel": "Demo: reservasjonskalender",
+    "mockupAlt": "Nettbrett med reservasjonskalender: bord per dag og tidsluke",
+    "bullets": [
+      {
+        "icon": "CalendarCheck",
+        "title": "Oversiktlig bordkart",
+        "sub": "En visuell timeplan per dag og bord — se umiddelbart hvor og når det er ledig"
+      },
+      {
+        "icon": "SlidersHorizontal",
+        "title": "Fleksibelt oppsett",
+        "sub": "Sett opp åpningstider, varighet på reservasjoner og bilder av bordene, og ta imot ønsker fra gjestene"
+      },
+      {
+        "icon": "Users",
+        "title": "Full kontroll på gjesteflyten",
+        "sub": "Velg den bookingmodusen som passer deg, og behold full kontroll over gjesteflyten"
+      }
+    ]
+  },
+  "orders": {
+    "heading": "Bestillinger ved bordet",
+    "sub": {
+      "link": "Bestillinger rett til kjøkkenet!",
+      "rest": " En bestilling fra bordet eller fra en servitør lander på kjøkkenskjermen med én gang — ingen papirlapper, ingen venting."
+    },
+    "moreLabel": "Mer om bestillinger",
+    "demoLabel": "Demo: bestillingsskjerm",
+    "mockupSrc": "/landing/feature-orders-modal.webp",
+    "mockupAlt": "Nettbrett med en åpen bestilling: liste over retter og handlinger — bytt bord, del bestilling, legg til rabatt",
+    "bullets": [
+      {
+        "icon": "ShoppingCart",
+        "title": "Gjest eller servitør",
+        "sub": "Gjestene bestiller fra bordet via QR-kode, servitørene fra sin egen mobil eller nettbrett"
+      },
+      {
+        "icon": "Map",
+        "title": "Bordkart med statuser",
+        "sub": "Bordene på kartet er fargekodet etter status — se med én gang hvem som venter på mat og hvor du skal gå neste gang"
+      },
+      {
+        "icon": "Receipt",
+        "title": "Dele regningen",
+        "sub": "Del en bestilling mellom gjestene og lukk bord uten rot med betalingen"
+      }
+    ]
+  },
+  "kds": {
+    "heading": "Kjøkkenskjerm (KDS)",
+    "sub": {
+      "link": "Et kjøkken i takt!",
+      "rest": " Bestillinger fra gulvet og QR-menyen dukker opp på kokkens skjerm umiddelbart — med notater, allergener og tidtaker."
+    },
+    "moreLabel": "Mer om KDS",
+    "demoLabel": "Demo: kjøkkenskjerm",
+    "mockupAlt": "Nettbrett med kjøkkenskjerm: bestillinger per bord i kolonner med statuser",
+    "bullets": [
+      {
+        "icon": "LayoutGrid",
+        "title": "Skjermer etter stasjon",
+        "sub": "Egne nettbrett for varmtkjøkken, bar og dessertstasjon — hver stasjon ser bare sine egne retter"
+      },
+      {
+        "icon": "Timer",
+        "title": "Statuser og tidtaker",
+        "sub": "Kolonner for tilberedes / klar / servert og medgått tid per bestilling — endre status med ett trykk"
+      },
+      {
+        "icon": "ShieldAlert",
+        "title": "Allergener og kommentarer",
+        "sub": "Allergener og notater fra gjesten er uthevet — kokken går ikke glipp av noe viktig"
+      }
+    ]
+  },
+  "bundle": {
+    "heading": "Alt restauranten din drives på.",
+    "headingAccent": "I én app.",
+    "sub": "Meny, kjøkken og bordbestilling på ett sted — moderne, raskt og bygget for hvordan restauranter faktisk fungerer. Ingen skjulte gebyrer eller prising per funksjon."
+  },
+  "benefits": [
+    {
+      "icon": "Languages",
+      "tag": "Digital meny",
+      "title": "En meny som selger.",
+      "bullets": [
+        "35 språk med AI",
+        "Førsteklasses design",
+        "Priser oppdateres umiddelbart"
+      ],
+      "image": "/landing/feature-design.webp",
+      "imageAlt": "To mobiler på et kafébord: velkomstskjermen til den digitale menyen og en kontaktside med kart"
+    },
+    {
+      "icon": "ChefHat",
+      "tag": "Kjøkkenskjerm",
+      "title": "Lag mat raskere uten å gå glipp av noe.",
+      "bullets": [
+        "Rett på skjermen",
+        "Notater og allergener",
+        "Nettbrett eller mobil"
+      ],
+      "image": "/landing/feature-kds-cards.webp",
+      "imageAlt": "Et nettbrett på en bardisk viser kjøkkenskjermen med bestillinger per bord"
+    },
+    {
+      "icon": "CalendarCheck",
+      "tag": "Bordbestilling",
+      "title": "Reservasjoner på autopilot.",
+      "bullets": [
+        "Bestilling uten telefoner",
+        "Automatisk bekreftelse",
+        "Kalender per bord"
+      ],
+      "image": "/landing/feature-booking-calendar.webp",
+      "imageAlt": "To nettbrett som viser reservasjonskalenderen: en dagsvisning per bord og en månedsvisning"
+    },
+    {
+      "icon": "Receipt",
+      "tag": "Bestillinger ved bordet",
+      "title": "Bestillinger rett til kjøkkenet.",
+      "bullets": [
+        "Gjest eller servitør",
+        "Rett til kjøkkenet",
+        "Slå det på når du vil"
+      ],
+      "image": "/landing/feature-orders-map.webp",
+      "imageAlt": "Nettbrett med bestillingsskjermen: en liste over bestillinger og et fargekodet bordkart."
+    }
+  ],
+  "seeDetails": "Les mer",
+  "platform": {
+    "hardwareTitle": "Kjør det på din egen maskinvare",
+    "hardwareSub": "Vi tvinger deg ikke til å kjøpe maskinvare fra oss. Bruk mobilene, nettbrettene og datamaskinene du allerede har.",
+    "anywhereTitle": "Fungerer overalt",
+    "anywhereSub": "Mobil, nettbrett, bærbar PC, stasjonær PC. Android, iOS, Windows, Mac, Linux. I alle moderne nettlesere, ingen installasjon."
+  },
+  "activities": {
+    "heading": "Ett system —",
+    "headingAccent": "hele restauranten din.",
+    "sub": "Raskere service, et roligere kjøkken, lavere kostnader og gjester som kommer tilbake — alt i én plattform.",
+    "groups": [
+      {
+        "icon": "Smartphone",
+        "tag": "Ved bordet — gjest",
+        "bullets": [
+          "QR-meny på 35 språk",
+          "Bestill uten å vente på servitør",
+          "Tilkall servitør eller be om regningen",
+          "Bordbestilling 24/7",
+          "Unik QR-kode for hvert bord",
+          "Ingen app kreves — åpnes i nettleseren",
+          "Allergener og dietter for filtrering"
+        ]
+      },
+      {
+        "icon": "ChefHat",
+        "tag": "På kjøkkenet",
+        "bullets": [
+          "Bestillinger på skjerm umiddelbart",
+          "Kolonner for tilberedes / klar / servert",
+          "Allergener og kommentarer uthevet",
+          "Nettbrett eller mobil — ingen papirlapper"
+        ]
+      },
+      {
+        "icon": "ChartColumn",
+        "tag": "Administrasjon",
+        "bullets": [
+          "Endre meny og priser — umiddelbart",
+          "AI-oversettelse med ett klikk",
+          "Salgsstatistikk og rapporter",
+          "Flere restauranter på én konto",
+          "AI digitaliserer en papirmeny på 60 sekunder",
+          "Ditt eget domene med SSL"
+        ]
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Hele plattformen på 10 minutter. ",
+    "headingAccent": "14 dager med full tilgang.",
+    "sub": "Meny, bestillinger, bordreservasjoner og kjøkken — krever ikke kort, avbryt når som helst; {count} restauranter bruker oss, alt du trenger er en e-postadresse."
+  }
+}

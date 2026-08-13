@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "O IQ Rest — Kto sme, kontakty a právne informácie",
+    "description": "Kto stojí za IQ Rest, ako nás kontaktovať a údaje o prevádzkovateľovi služby: e-mail, WhatsApp, právne informácie.",
+    "canonical": "https://iq-rest.com/sk/about",
+    "ogLocale": "sk_SK",
+    "ogTitle": "O IQ Rest",
+    "ogDescription": "Kto stojí za IQ Rest, kontakty na podporu a právne informácie o prevádzkovateľovi služby."
+  },
+  "heading": "Od vlastnej kaviarne",
+  "headingAccent": "k platforme pre reštaurácie",
+  "story": {
+    "photo": {
+      "src": "/contacts.webp"
+    },
+    "paragraphs": [
+      "Dnes platforma beží každý deň v {count} podnikoch — od kaviarní s piatimi stolmi až po siete vo viacerých mestách. Dáta sú uložené na serveroch v Nemecku a na otázky podpory odpovedáme osobne."
+    ],
+    "sign": "Bogdan Sokolov"
+  },
+  "facts": [
+    {
+      "value": "2022",
+      "label": "rok založenia platformy"
+    },
+    {
+      "value": "{count}",
+      "label": "podnikov beží na IQ Rest"
+    },
+    {
+      "value": "15",
+      "label": "krajín, kde sú naši klienti"
+    }
+  ],
+  "waPrefill": "Dobrý deň, mám otázku ohľadom IQ Rest",
+  "contacts": [
+    {
+      "icon": "Mail",
+      "title": "E-mail",
+      "value": "support@iq-rest.com",
+      "href": "mailto:support@iq-rest.com",
+      "note": "Faktúry, dokumenty, otázky ohľadom dát."
+    },
+    {
+      "icon": "MessageCircle",
+      "title": "WhatsApp",
+      "value": "+998 94 866 37 43",
+      "wa": true,
+      "note": "Ukážeme vám demo a pomôžeme s nastavením."
+    },
+    {
+      "icon": "Clock",
+      "title": "Čas odozvy",
+      "value": "Po–Ne, 9:00–21:00 SEČ",
+      "note": "Odpovedáme do niekoľkých hodín."
+    }
+  ],
+  "legal": {
+    "rows": [
+      {
+        "label": "Prevádzkovateľ služby",
+        "value": "Bogdan Sokolov"
+      },
+      {
+        "label": "Právna forma",
+        "value": "Autónomo (Španielsko)"
+      },
+      {
+        "label": "Daňové identifikačné číslo (NIF)",
+        "value": "ESZ1894474S"
+      },
+      {
+        "label": "Adresa",
+        "value": "Calle Boca del Río 2, 33010 Oviedo, Asturias, España"
+      },
+      {
+        "label": "Doména",
+        "value": "https://iq-rest.com"
+      },
+      {
+        "label": "Ukladanie dát",
+        "value": "Hetzner Online GmbH, Norimberg, Nemecko"
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Poznáte náš príbeh. ",
+    "headingAccent": "Začnite písať ten svoj — 14 dní zadarmo.",
+    "sub": "Bez karty, zrušenie kedykoľvek. Rovnako ako {count} podnikov, aj vy sa na nás môžete spoľahnúť. Stačí vám len e-mail."
+  }
+}

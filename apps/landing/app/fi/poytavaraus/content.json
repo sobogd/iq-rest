@@ -1,0 +1,206 @@
+{
+  "locale": "fi",
+  "slug": "poytavaraus",
+  "trackPrefix": "l_bookings",
+  "meta": {
+    "title": "24/7 Pöytävaraukset ravintoloille | IQ Rest",
+    "description": "24/7 pöytävaraukset ravintolaasi: asiakkaat varaavat pöydät itse QR-ruokalistan tai verkkosivujen kautta. Kalenteri pöydittäin, automaattiset vahvistukset ja muistutukset. Ei puheluita, ei menetettyjä asiakkaita. 14 päivää ilmaiseksi.",
+    "canonical": "https://iq-rest.com/fi/poytavaraus",
+    "ogLocale": "fi_FI",
+    "ogTitle": "24/7 Pöytävaraukset — Asiakkaat varaavat itse",
+    "ogDescription": "Asiakkaat varaavat pöydät QR-ruokalistan tai verkkosivujen kautta. Kalenteri, automaattiset vahvistukset, muistutukset. Yksikään asiakas ei mene sivu suun.",
+    "brandLine": "IQ Rest — Ravintolan pöytävaraukset"
+  },
+  "hero": {
+    "headline": "Pöytävaraukset 24/7,",
+    "cta": "Ota pöytävaraukset käyttöön",
+    "sub": "Asiakkaat varaavat 24/7 QR-ruokalistan tai linkin kautta. Kalenteri pöydittäin, automaattiset vahvistukset ja muistutukset.",
+    "headlineAccent": "ei puhelinrumbaa",
+    "demoLabel": "Demo: varauskalenteri",
+    "tablet": {
+      "src": "/landing/hero-card-reservation.webp",
+      "alt": "Tabletti ja varauskalenteri: kuukausinäkymä ja lista vahvistusta odottavista varauksista"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Ravintolat"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kahvilat"
+    },
+    {
+      "icon": "Martini",
+      "label": "Baarit"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotellit"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzeriat"
+    }
+  ],
+  "scan": {
+    "heading": "Käynnistä pöytävaraukset",
+    "headingAccent": "5 minuutissa.",
+    "sub": "Yhdistä kalenteri, lisää pöydät kuvineen ja asiakaspaikkoineen — asiakkaat voivat aloittaa varaamisen samana päivänä.",
+    "cta": "Ota varaukset käyttöön"
+  },
+  "subFeatures": [
+    {
+      "icon": "CalendarPlus",
+      "eyebrow": "Varauslomake",
+      "heading": "Asiakkaat varaavat itse — päivän, ajan ja henkilömäärän mukaan.",
+      "body": "Asiakas avaa QR-ruokalistan tai suoran linkin, valitsee päivän, ajan ja henkilömäärän — ja näkee heti vapaat pöydät: kuvan, kuvauksen (terassi, ikkunapöytä, sohva baarissa) ja kapasiteetin kera. Vahvistus lähetetään automaattisesti sähköpostitse ja WhatsAppilla.",
+      "bullets": [
+        "Pöydän valinta kuvan, kuvauksen ja kapasiteetin perusteella.",
+        "Automaattinen vahvistus ja muistutus tuntia ennen vierailua.",
+        "Minimaalinen lomake: nimi, puhelinnumero, henkilömäärä."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-form.webp",
+        "alt": "Asiakas varaa ravintolapöydän puhelimella: päivän, ajan, henkilömäärän ja pöydän valinta"
+      }
+    },
+    {
+      "icon": "CalendarDays",
+      "eyebrow": "Varauskalenteri",
+      "heading": "Kalenteri päivän ja pöydän mukaan — kaikki näkyvillä sekunnissa.",
+      "body": "Hallintapaneelissa on varauskalenteri jaoteltuna pöydän, päivän, viikon ja kuukauden mukaan. Vapaat ajat, varatut pöydät, vahvistetut ja odottavat varaukset näkyvät kaikki yhdellä ruudulla. Toimii tabletilla salissa ja kannettavalla toimistossa.",
+      "bullets": [
+        "Päivä-, viikko- ja kuukausinäkymät.",
+        "Erittely pöydittäin: kuka, milloin, kuinka monta asiakasta.",
+        "Siirrä, peruuta tai vahvista varaus — yhdellä napautuksella puhelimestasi."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-calendar.webp",
+        "alt": "Varauskalenteri IQ Restin hallintapaneelissa kahdella tabletilla: päiväruudukko pöydittäin ja kuukausikalenteri"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Mitä ravintoloitsijat kysyvät IQ Restin pöytävarauksista. Jos kysymystäsi ei löydy — laita viestiä WhatsAppissa.",
+    "items": [
+      {
+        "q": "Voinko valita päivät ja ajat, jolloin varaus on mahdollista?",
+        "a": "Kyllä. Hallintapaneelissa voit asettaa aikataulun viikonpäivittäin: varausajat ja tauon lounaan ja illallisen välillä. Voit myös kytkeä varaukset tilapäisesti kokonaan pois päältä — asiakkaat näkevät, että verkkovaraus ei ole saatavilla."
+      },
+      {
+        "q": "Voinko ladata kuvan jokaisesta pöydästä?",
+        "a": "Kyllä. Jokaisella pöydällä on kuva, kapasiteetti ja alue (terassi, ikkunan vieressä, baari). Asiakkaat näkevät tarkalleen, minkä pöydän he varaavat, ja tekevät tietoisen valinnan."
+      },
+      {
+        "q": "Voinko rajoittaa asiakkaiden määrää per pöytä?",
+        "a": "Kyllä. Jokaisella pöydällä on määritetty kapasiteetti — järjestelmä tarjoaa asiakkaille vain sopivia pöytiä ja estää kuuden hengen seuruetta varaamasta kahden hengen pöytää."
+      },
+      {
+        "q": "Kuinka vaikeaa varausten käyttöönotto on?",
+        "a": "Kolme vaihetta: lisää pöydät kuvineen ja kapasiteetteineen, laita varausominaisuus päälle asetuksista, ja jaa linkki tai QR-koodi. Käyttöönotto vie 5–10 minuuttia."
+      },
+      {
+        "q": "Voinko asettaa varaukset vahvistumaan automaattisesti tai manuaalisesti?",
+        "a": "Kyllä, tila valitaan asetuksista. Automaattisella vahvistuksella asiakas saa vahvistuksen heti lomakkeen lähettämisen jälkeen. Manuaalisessa tilassa pyyntö näkyy paneelissa tilassa \"odottaa vahvistusta\" — vuoropäällikkö vahvistaa tai hylkää sen. Manuaalinen tila on kätevä, kun pöytiä on rajoitetusti."
+      },
+      {
+        "q": "Veloitatteko maksun per varaus?",
+        "a": "Maksuja ei ole: pöytävaraukset sisältyvät tilaukseen — ei prosenttiosuutta asiakkaista, ei varauskohtaisia kuluja, ei välikäsiä. Kiinteä maksu ja rajattomasti varauksia."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Varaukset kuntoon 10 minuutissa. ",
+    "headingAccent": "14 päivän täysi käyttöoikeus.",
+    "sub": "Ei luottokorttia, peruuta milloin tahansa. {count} ravintolaa keventää vastaanottonsa työtaakkaa kanssamme. Tarvitset vain sähköpostiosoitteen."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Asiakkaat varaavat itse",
+      "sub": "Päivä, aika ja henkilömäärä — QR-ruokalistalta tai suorasta linkistä, mihin vuorokaudenaikaan tahansa. Järjestelmä näyttää vain vapaat ajat.",
+      "bullets": [
+        {
+          "icon": "CalendarPlus",
+          "title": "Varaukset 24/7",
+          "sub": "Asiakkaat varaavat yöllä tai viikonloppuna — ei puheluita, ei vastauksen odottelua"
+        },
+        {
+          "icon": "Users",
+          "title": "Pöytä seurueen koon mukaan",
+          "sub": "Järjestelmä valitsee sopivan pöydän kapasiteetin perusteella itsenäisesti"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Minimaalinen lomake",
+          "sub": "Nimi, puhelinnumero ja henkilömäärä — lomakkeen täyttö vie puoli minuuttia"
+        }
+      ]
+    },
+    {
+      "heading": "Kalenteri päivän ja pöydän mukaan",
+      "sub": "Kaikki varaukset yhdessä kalenterissa: näe mikä on vapaana, mikä on vahvistettu ja kuka on tulossa.",
+      "bullets": [
+        {
+          "icon": "CalendarDays",
+          "title": "Päivä, viikko, kuukausi",
+          "sub": "Vaihda näkymiä ja suunnittele pöytäjärjestys ennakkoon"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Erittely pöydittäin",
+          "sub": "Kuka, milloin ja kuinka monelle asiakkaalle — jokaiselle pöydälle"
+        },
+        {
+          "icon": "Smartphone",
+          "title": "Hallinnoi puhelimella",
+          "sub": "Siirrä, peruuta tai vahvista varaus — yhdellä napautuksella"
+        }
+      ]
+    },
+    {
+      "heading": "Aikataulu ja tilat",
+      "sub": "Aseta varausaikataulu viikonpäivittäin, varauksen kesto ja vahvistustapa.",
+      "bullets": [
+        {
+          "icon": "Clock",
+          "title": "Päiväkohtainen aikataulu",
+          "sub": "Omat kellonajat jokaiselle viikonpäivälle, mukaan lukien tauko lounaan ja illallisen välillä"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Varauksen kesto",
+          "sub": "Aseta varausväli ravintolasi konseptiin sopivaksi"
+        },
+        {
+          "icon": "CalendarCheck",
+          "title": "Automaattinen tai manuaalinen",
+          "sub": "Vahvista jokainen varaus itse tai laita automaattinen vahvistus päälle"
+        }
+      ]
+    },
+    {
+      "heading": "Ilmoitukset ilman manuaalista työtä",
+      "sub": "Järjestelmä pitää asiakkaan ja tiimisi ajan tasalla — sähköposti ja varausnäyttö päivittyvät välittömästi.",
+      "bullets": [
+        {
+          "icon": "Mail",
+          "title": "Sähköposti asiakkaalle",
+          "sub": "Varausvahvistus lähetetään sähköpostitse automaattisesti"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Ilmoitus ravintolalle",
+          "sub": "Omistajat saavat sähköpostin jokaisesta uudesta varauksesta"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Varausnäyttö vastaanotossa",
+          "sub": "Vastaanoton tabletti näyttää uudet varaukset reaaliajassa"
+        }
+      ]
+    }
+  ]
+}

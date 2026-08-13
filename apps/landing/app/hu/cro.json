@@ -1,0 +1,289 @@
+{
+  "heroV2": {
+    "verticals": [
+      {
+        "icon": "restaurant",
+        "label": "Éttermek"
+      },
+      {
+        "icon": "cafe",
+        "label": "Kávézók"
+      },
+      {
+        "icon": "bar",
+        "label": "Bárok"
+      },
+      {
+        "icon": "hotel",
+        "label": "Szállodák"
+      },
+      {
+        "icon": "pizza",
+        "label": "Pizzériák"
+      }
+    ],
+    "title": "Minden, amire az éttermednek",
+    "titleAccent": "szüksége van!",
+    "sub": "Állítsd be a rendszert 10 perc alatt: indíts online étlapot, gyorsítsd fel a konyhát és kezeld az asztalfoglalásokat.",
+    "primaryLabel": "Ingyenes kezdés",
+    "demoLabel": "Demó étlap megtekintése",
+    "mockups": {
+      "kds": {
+        "src": "/landing/hero-card-kds.webp",
+        "alt": "Tablet konyhai kijelzővel: rendelések asztalonként oszlopokban, státuszokkal"
+      },
+      "reservations": {
+        "src": "/landing/hero-card-reservation.webp",
+        "alt": "Tablet asztalfoglalási naptárral: havi nézet és a megerősítésre váró foglalások listája"
+      },
+      "phone1": {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Telefon egy éttermi weboldal kezdőlapjával: fotók, asztalfoglalás és hozzáférés az online étlaphoz"
+      },
+      "phone2": {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Telefon egy étel aloldalával: fotó, ár és allergén jelölések"
+      }
+    }
+  },
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Indulás 10 perc alatt",
+      "sub": "Nem kell drága hardvert venni és nincs hosszas beállítás"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Gyors ügyfélszolgálat",
+      "sub": "Chaten néhány órán belül válaszolunk"
+    },
+    {
+      "icon": "Globe",
+      "title": "{count} vendéglátóhely választása",
+      "sub": "Éttermek és kávézók használják 15+ országban"
+    },
+    {
+      "icon": "Palette",
+      "title": "100% saját arculat",
+      "sub": "A dizájnt és a felületet a vendéglátóhelyed stílusához igazítjuk"
+    }
+  ],
+  "menu": {
+    "heading": "Weboldal és digitális étlap",
+    "sub": {
+      "link": "Több, mint egy QR étlap!",
+      "rest": " Kapj egy teljes weboldalt egyedi dizájnnal, elérhetőségekkel és asztalfoglalással."
+    },
+    "moreLabel": "Bővebben az étlapról",
+    "demoLabel": "Demó: az étlap, ahogy a vendégek látják",
+    "mockupAlt": "Telefon egy éttermi weboldal kezdőlapjával és egy másik telefon egy étel aloldalával",
+    "bullets": [
+      {
+        "icon": "Languages",
+        "title": "Automatikus fordítás 35 nyelvre",
+        "sub": "Szolgáld ki a külföldi vendégeket nyelvi akadályok nélkül — az automatikus fordítás mindent megold"
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "Rendelések egyenesen az asztaltól",
+        "sub": "Egyszerűsítsd a működést — vegyél fel rendeléseket az asztaloktól gyorsan, pincér nélkül"
+      },
+      {
+        "icon": "WheatOff",
+        "title": "Allergének és diéták",
+        "sub": "Jelöld az allergéneket és a diétás preferenciákat (vegán, csípős), hogy a vendégek könnyebben és biztonságosabban válasszanak"
+      }
+    ]
+  },
+  "reservations": {
+    "heading": "Asztalfoglalás",
+    "sub": {
+      "link": "Okos asztalfoglalás!",
+      "rest": " Egy automatizált foglalási rendszer, ami magától követi a szabad asztalokat és a beosztásodat."
+    },
+    "moreLabel": "Bővebben az asztalfoglalásról",
+    "demoLabel": "Demó: asztalfoglalási naptár",
+    "mockupAlt": "Tablet asztalfoglalási naptárral: asztalok napok és idősávok szerint",
+    "bullets": [
+      {
+        "icon": "CalendarCheck",
+        "title": "Átlátható foglalási térkép",
+        "sub": "Vizuális beosztás napok és asztalok szerint — azonnal látod, hol és mikor van szabad hely"
+      },
+      {
+        "icon": "SlidersHorizontal",
+        "title": "Rugalmas foglalási beállítások",
+        "sub": "Állítsd be a nyitvatartást, az idősávok hosszát és az asztalok fotóit, és gyűjtsd be a vendégek kéréseit"
+      },
+      {
+        "icon": "Users",
+        "title": "Vendégáramlás kezelése",
+        "sub": "Válaszd ki a neked megfelelő foglalási módot, és tartsd teljes kontroll alatt a vendégáramlást"
+      }
+    ]
+  },
+  "orders": {
+    "heading": "Rendelésfelvétel az asztalnál",
+    "sub": {
+      "link": "Rendelések egyenesen a konyhára!",
+      "rest": " Az asztaltól vagy a pincértől érkező rendelés azonnal megjelenik a konyhai kijelzőn — nincsenek papírblokkok és várakozás."
+    },
+    "moreLabel": "Bővebben a rendelésekről",
+    "demoLabel": "Demó: rendelési képernyő",
+    "mockupSrc": "/landing/feature-orders-modal.webp",
+    "mockupAlt": "Tablet egy nyitott rendeléssel: ételek listája és rendelési műveletek — asztal módosítása, számlabontás, kedvezmény hozzáadása",
+    "bullets": [
+      {
+        "icon": "ShoppingCart",
+        "title": "Vendég vagy pincér",
+        "sub": "A vendégek az asztaltól rendelnek QR-kóddal, a pincérek pedig a saját telefonjukról vagy tabletjükről"
+      },
+      {
+        "icon": "Map",
+        "title": "Asztaltérkép státuszokkal",
+        "sub": "A térképen lévő asztalok státusz szerint színkódoltak — egy pillantással látod, ki vár rendelésre, és hova kell menni legközelebb"
+      },
+      {
+        "icon": "Receipt",
+        "title": "Számlabontás",
+        "sub": "Bontsd szét a rendelést a vendégek között, és zárd le az asztalokat fizetési kavarodás nélkül"
+      }
+    ]
+  },
+  "kds": {
+    "heading": "Konyhai kijelző (KDS)",
+    "sub": {
+      "link": "Szinkronban lévő konyha!",
+      "rest": " A pályáról és a QR étlapról érkező rendelések azonnal megjelennek a szakács képernyőjén — megjegyzésekkel, allergénekkel és időzítővel."
+    },
+    "moreLabel": "Bővebben a KDS-ről",
+    "demoLabel": "Demó: konyhai képernyő",
+    "mockupAlt": "Tablet konyhai kijelzővel: rendelések asztalonként oszlopokban, státuszokkal",
+    "bullets": [
+      {
+        "icon": "LayoutGrid",
+        "title": "Képernyők pályarészenként",
+        "sub": "Külön tabletek a melegkonyhának, a pultnak és a cukrászatnak — mindenki csak a saját ételeit látja"
+      },
+      {
+        "icon": "Timer",
+        "title": "Státuszok és időzítő",
+        "sub": "Függőben / készül / kész oszlopok és a rendelés óta eltelt idő — a státusz egy érintéssel változik"
+      },
+      {
+        "icon": "ShieldAlert",
+        "title": "Allergének és megjegyzések",
+        "sub": "Az allergén jelölések és a vendégek kérései kiemelve jelennek meg — a szakács nem hagy ki semmi fontosat"
+      }
+    ]
+  },
+  "bundle": {
+    "heading": "Minden, ami az éttermed működéséhez kell.",
+    "headingAccent": "Egyetlen alkalmazásban.",
+    "sub": "Étlap, konyha és asztalfoglalás egy helyen — modern, gyors és arra tervezték, ahogy az éttermek valójában működnek. Nincsenek rejtett költségek vagy funkciónkénti felárak."
+  },
+  "benefits": [
+    {
+      "icon": "Languages",
+      "tag": "Digitális étlap",
+      "title": "Étlap, ami elad.",
+      "bullets": [
+        "35 nyelv MI-vel",
+        "Prémium dizájn",
+        "Az árak azonnal frissülnek"
+      ],
+      "image": "/landing/feature-design.webp",
+      "imageAlt": "Két telefon egy kávézó asztalán: a digitális étlap kezdőképernyője és egy kapcsolati oldal térképpel"
+    },
+    {
+      "icon": "ChefHat",
+      "tag": "Konyhai kijelző",
+      "title": "Főzz gyorsabban, anélkül, hogy bármit kihagynál.",
+      "bullets": [
+        "Egyenesen a képernyőre",
+        "Megjegyzések és allergének",
+        "Tablet vagy telefon"
+      ],
+      "image": "/landing/feature-kds-cards.webp",
+      "imageAlt": "Egy tablet a pulton a konyhai kijelzőt mutatja, asztalonkénti rendelésekkel"
+    },
+    {
+      "icon": "CalendarCheck",
+      "tag": "Asztalfoglalás",
+      "title": "Asztalfoglalás robotpilótán.",
+      "bullets": [
+        "Foglalás telefonhívások nélkül",
+        "Automatikus megerősítés",
+        "Naptár asztalonként"
+      ],
+      "image": "/landing/feature-booking-calendar.webp",
+      "imageAlt": "Két tablet asztalfoglalási naptárral: napi nézet asztalonként és havi nézet"
+    },
+    {
+      "icon": "Receipt",
+      "tag": "Rendelés az asztalnál",
+      "title": "Rendelések egyenesen a konyhára.",
+      "bullets": [
+        "Vendég vagy pincér",
+        "Egyenesen a konyhára",
+        "Kapcsold be, amikor csak akarod"
+      ],
+      "image": "/landing/feature-orders-map.webp",
+      "imageAlt": "Tablet rendelési képernyővel: rendelések listája és színkódolt asztaltérkép."
+    }
+  ],
+  "seeDetails": "Tudj meg többet",
+  "platform": {
+    "hardwareTitle": "Használd a saját eszközeiden",
+    "hardwareSub": "Nem kötelezünk drága hardverek vásárlására. Használd a már meglévő telefonokat, tableteket és számítógépeket.",
+    "anywhereTitle": "Bárhol működik",
+    "anywhereSub": "Telefon, tablet, laptop, PC. Android, iOS, Windows, Mac, Linux. Bármilyen modern böngészőben, telepítés nélkül."
+  },
+  "activities": {
+    "heading": "Egyetlen rendszer —",
+    "headingAccent": "az egész éttermed.",
+    "sub": "Gyorsabb kiszolgálás, nyugodtabb konyha, alacsonyabb költségek és visszatérő vendégek — mindez egyetlen platformon.",
+    "groups": [
+      {
+        "icon": "Smartphone",
+        "tag": "Az asztalnál — vendég",
+        "bullets": [
+          "QR étlap 35 nyelven",
+          "Rendelés pincérre várás nélkül",
+          "Pincér hívása vagy számla kérése",
+          "0-24 asztalfoglalás",
+          "Egyedi QR-kód minden asztalhoz",
+          "Nincs szükség alkalmazásra — a böngészőben nyílik meg",
+          "Allergén és diétás jelölések a szűréshez"
+        ]
+      },
+      {
+        "icon": "ChefHat",
+        "tag": "A konyhán",
+        "bullets": [
+          "Rendelések azonnal a képernyőn",
+          "Függőben / készül / kész oszlopok",
+          "Allergének és megjegyzések kiemelve",
+          "Tablet vagy telefon — nincsenek papírblokkok"
+        ]
+      },
+      {
+        "icon": "ChartColumn",
+        "tag": "Menedzsment",
+        "bullets": [
+          "Étlap és árak módosítása — azonnal",
+          "MI fordítás egy kattintással",
+          "Értékesítési analitika és riportok",
+          "Több étterem egy fiókban",
+          "Az MI 60 másodperc alatt digitalizálja a papír étlapot",
+          "Saját domain SSL-lel"
+        ]
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "A teljes platform 10 perc alatt. ",
+    "headingAccent": "14 nap teljes hozzáférés.",
+    "sub": "Étlap, rendelések, asztalfoglalás és konyha — nincs bankkártya, bármikor lemondható; {count} étterem használja, csak egy e-mail cím kell hozzá."
+  }
+}

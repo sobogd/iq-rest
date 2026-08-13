@@ -1,0 +1,236 @@
+{
+  "locale": "de",
+  "slug": "restaurant-bestellsystem",
+  "trackPrefix": "l_orders",
+  "meta": {
+    "title": "Bestellannahme im Restaurant — Gast und Service | IQ Rest",
+    "description": "Bestellannahme im Restaurant über Handy oder Tablet: Tischplan, Rechnungen splitten, Status, Optionen und Kommentare. Gäste bestellen am Tisch, Servicekräfte auf dem eigenen Gerät. 14 Tage kostenlos.",
+    "canonical": "https://iq-rest.com/de/restaurant-bestellsystem",
+    "ogLocale": "de_DE",
+    "ogTitle": "Bestellannahme im Restaurant — Gast und Service",
+    "ogDescription": "Ein Gast am Tisch oder der Service auf dem Handy — die Bestellung erreicht die Küche sofort. Tischplan, Rechnungen splitten, Status, Optionen und Kommentare.",
+    "brandLine": "IQ Rest — Bestellannahme im Restaurant"
+  },
+  "hero": {
+    "headline": "Bestellungen vom Tisch —",
+    "cta": "Online-Bestellungen einrichten",
+    "sub": "Gäste bestellen am Tisch oder der Service über ein beliebiges Gerät — direkt in die Küche. Tischplan, Rechnungen splitten.",
+    "headlineAccent": "direkt in die Küche",
+    "demoLabel": "Demo: Bestellbildschirm",
+    "tablet": {
+      "src": "/landing/feature-orders-modal.webp",
+      "alt": "Tablet mit einer offenen Bestellung: Gerichtliste und Aktionen — Tisch wechseln, Bestellung splitten, Rabatt hinzufügen"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurants"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafés"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bars"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotels"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerien"
+    }
+  ],
+  "scan": {
+    "heading": "Richten Sie Ihr Bestellsystem ein",
+    "headingAccent": "in 5 Minuten.",
+    "sub": "Scannen Sie eine Papierkarte oder ein PDF — die KI erkennt Gerichte, Preise und Kategorien. Verbinden Sie ein Tablet im Gastraum und nehmen Sie Bestellungen an den Tischen auf.",
+    "cta": "Speisekarte scannen"
+  },
+  "subFeatures": [
+    {
+      "icon": "Map",
+      "eyebrow": "Liste und Tischplan",
+      "heading": "Eine Bestellliste neben dem Tischplan.",
+      "body": "Alle aktiven Bestellungen werden rechts angezeigt: Status, Summe, Bestellzeit und Artikelanzahl. Links ist der Tischplan: Tische sind nach Status farblich markiert — leer, besetzt, braucht Aufmerksamkeit. Ein Tippen auf einen Tisch öffnet die Bestellung, ein Tippen auf eine Karte öffnet die Detailansicht. Kein Wechseln zwischen Bildschirmen.",
+      "bullets": [
+        "Tischplan: Tische nach Bestellstatus farblich markiert.",
+        "Bestellliste daneben — Summe, Zeit und Artikelanzahl.",
+        "Ein Tippen auf einen Tisch öffnet die Bestellung oder erstellt eine neue."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-map.webp",
+        "alt": "Tablet an einer Servicestation: eine Bestellliste und ein Tischplan mit farblich markierten Tischen"
+      }
+    },
+    {
+      "icon": "ClipboardList",
+      "eyebrow": "Bestellkarte",
+      "heading": "Die Bestellkarte: Status, Duplizieren und Entfernen — mit einem Fingertipp.",
+      "body": "Jeder Artikel hat seinen eigenen Status (Wartend / In Zubereitung / Fertig / Serviert) — die Küche und der Service sehen dasselbe Bild in Echtzeit. Ein Tippen auf den Punkt öffnet ein Aktionsmenü: Status ändern, Artikel mit denselben Optionen duplizieren oder entfernen. Alles passiert direkt in der Bestellkarte.",
+      "bullets": [
+        "Status pro Artikel: Wartend / In Zubereitung / Fertig / Serviert.",
+        "Artikel mit einem Tippen duplizieren — inklusive gleicher Optionen.",
+        "Artikel direkt aus der Bestellkarte entfernen."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-detail.webp",
+        "alt": "Tablet mit einer detaillierten Bestellkarte: Status, Duplizieren und Entfernen von Artikeln"
+      }
+    },
+    {
+      "icon": "Receipt",
+      "eyebrow": "Rechnungen splitten",
+      "heading": "Rechnungen splitten, wenn Gäste getrennt zahlen.",
+      "body": "Gäste möchten getrennt zahlen — markieren Sie die Artikel für die neue Rechnung; der Rest bleibt auf der aktuellen. Das System zeigt sofort beide Summen an. Ein Tippen auf \"Bestellung splitten\" — und Sie haben zwei unabhängige Bestellungen mit korrekten Summen, die beide an ihrem Tisch bleiben.",
+      "bullets": [
+        "Wählen Sie Artikel zum Splitten über Checkboxen aus.",
+        "Die Summen der neuen und verbleibenden Rechnung erscheinen sofort.",
+        "Ein Tippen — und die Bestellung ist aufgeteilt, ganz ohne Kopfrechnen."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-split.webp",
+        "alt": "Tablet auf einem Restauranttisch: Rechnungen zwischen Gästen splitten"
+      }
+    },
+    {
+      "icon": "Smartphone",
+      "eyebrow": "Mobile Bestellannahme",
+      "heading": "Artikel übers Handy hinzufügen — in drei Schritten.",
+      "body": "Servicekräfte sind nicht an ein einziges Gerät gebunden: Sie öffnen den Bestellbildschirm auf ihrem eigenen Handy und fügen einen Artikel in drei Schritten hinzu — Kategorie wählen, Gericht wählen, Optionen wählen (Größe, Garstufe, extra Saucen und Zutaten). Der Preis wird automatisch neu berechnet. Ein Kommentar für die Küche wird im letzten Schritt hinzugefügt.",
+      "bullets": [
+        "Drei Schritte: Kategorie → Gericht → Optionen.",
+        "Optionen (Größe, Extras, Zutaten) mit Preisen per Fingertipp.",
+        "Ein Kommentarfeld im letzten Schritt."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-mobile.webp",
+        "alt": "Vier Handys zeigen die Schritte beim Hinzufügen eines Artikels: Kategorie, Gericht, Größe, Kommentar"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Was Gastronomen zur Bestellannahme in IQ Rest fragen. Wenn Ihre Frage nicht dabei ist — schreiben Sie uns auf WhatsApp.",
+    "items": [
+      {
+        "q": "Können mehrere Servicekräfte gleichzeitig von verschiedenen Geräten arbeiten?",
+        "a": "Ja. Jede Servicekraft verbindet ihr eigenes Gerät und sieht dieselben Tische, Bestellungen und Status in Echtzeit. Eine Änderung von einem wird sofort für die anderen sichtbar — keine Konflikte oder Sperrungen."
+      },
+      {
+        "q": "Können Servicekräfte ihre eigenen Geräte nutzen?",
+        "a": "Ja. Der Bestellbildschirm läuft im Browser — nichts zu installieren. Ein Handy oder Tablet wird mit einem sechsstelligen Code aus dem Dashboard verbunden, und der Zugriff wird am Ende der Schicht mit einem Klick entzogen."
+      },
+      {
+        "q": "Kann ich erforderliche Optionen zu Gerichten hinzufügen (Größe, Garstufe)?",
+        "a": "Ja. Ein Gericht kann beliebig viele Optionsgruppen haben — erforderliche (\"Größe\": Klein / Mittel / Groß) und optionale (\"Garstufe\": rare / medium / well done). Optionen beeinflussen den Preis. Bei einer erforderlichen Gruppe fragt das System nach einer Auswahl — das vermeidet Fehler."
+      },
+      {
+        "q": "Kann ich Kommentare und Extras zu einem Gericht hinzufügen?",
+        "a": "Ja. Der letzte Schritt hat ein Kommentarfeld (\"keine Zwiebeln\", \"Nussallergie\"). Extras werden als kostenpflichtige Optionen eingerichtet (\"+ BBQ-Sauce\", \"+ Brot\"). Kommentare erscheinen farblich hervorgehoben auf dem Küchenmonitor."
+      },
+      {
+        "q": "Gibt es Bestellstatistiken?",
+        "a": "Ja. Der Analysebereich zeigt den Umsatz nach Tag, den Durchschnittsbon und die meistverkauften Gerichte. Diese Daten helfen Ihnen bei der Schichtplanung und beim Einkauf."
+      },
+      {
+        "q": "Können Bestellungen gesplittet werden?",
+        "a": "Ja. Markieren Sie die Artikel, die auf eine neue Rechnung gehen — beide Summen werden automatisch neu berechnet, kein Kopfrechnen und kein Hin- und Herspringen zwischen Bereichen."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Bestellungen in 10 Minuten. ",
+    "headingAccent": "14 Tage voller Zugriff.",
+    "sub": "Keine Kreditkarte nötig, jederzeit kündbar. {count} Restaurants nehmen Küchenbestellungen mit uns auf. Sie brauchen nur eine E-Mail-Adresse."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Tischplan und Bestellliste",
+      "sub": "Aktive Bestellungen neben dem Tischplan: Tische sind nach Status farblich markiert, und ein Tippen öffnet eine Bestellung oder erstellt eine neue.",
+      "bullets": [
+        {
+          "icon": "Map",
+          "title": "Tische nach Status",
+          "sub": "Leer, besetzt, braucht Aufmerksamkeit — auf einen Blick sichtbar"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Aktive Bestellliste",
+          "sub": "Summe, Bestellzeit und Artikelanzahl für jede Bestellung"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Neue Bestellung aus dem Plan",
+          "sub": "Ein Tippen auf einen freien Tisch öffnet sofort die Bestellannahme"
+        }
+      ]
+    },
+    {
+      "heading": "Ein Status für jeden Artikel",
+      "sub": "Die Küche und der Service sehen dasselbe Bild: Jedes Gericht hat seinen eigenen Status — von bestellt bis serviert.",
+      "bullets": [
+        {
+          "icon": "Timer",
+          "title": "Status pro Gericht",
+          "sub": "Wartend, In Zubereitung, Fertig, Serviert — pro Artikel, nicht pro Bestellung"
+        },
+        {
+          "icon": "Receipt",
+          "title": "Artikel duplizieren",
+          "sub": "Ein Gericht mit denselben Optionen mit einem Tippen wiederholen"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Direkte Bearbeitung",
+          "sub": "Einen Artikel direkt aus der Bestellkarte entfernen"
+        }
+      ]
+    },
+    {
+      "heading": "Rechnungen splitten",
+      "sub": "Gäste zahlen getrennt — markieren Sie die Artikel und sie wandern auf eine neue Rechnung. Summen werden sofort neu berechnet.",
+      "bullets": [
+        {
+          "icon": "Receipt",
+          "title": "Checkboxen pro Artikel",
+          "sub": "Wählen Sie die Gerichte für die neue Rechnung; der Rest bleibt auf der aktuellen"
+        },
+        {
+          "icon": "ChartColumn",
+          "title": "Summen werden sofort angezeigt",
+          "sub": "Die neue und verbleibende Rechnung werden automatisch berechnet"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Ein Fingertipp",
+          "sub": "Die Bestellung wird ohne Kopfrechnen oder Taschenrechner gesplittet"
+        }
+      ]
+    },
+    {
+      "heading": "Bestellannahme über das Handy der Servicekraft",
+      "sub": "Servicekräfte nehmen eine Bestellung auf ihrem eigenen Gerät in drei Schritten auf: Kategorie, Gericht, Optionen.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Jedes Gerät",
+          "sub": "Ein Handy oder Tablet mit Browser — keine Installation erforderlich"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Kostenpflichtige Optionen",
+          "sub": "Größe, Extras und Gerichtvarianten mit Preisen per Fingertipp"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Gericht-Kommentare",
+          "sub": "Gästewünsche werden im letzten Schritt hinzugefügt — die Küche sieht sie sofort"
+        }
+      ]
+    }
+  ]
+}

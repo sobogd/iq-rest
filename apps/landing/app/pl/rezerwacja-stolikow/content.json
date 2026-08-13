@@ -1,0 +1,206 @@
+{
+  "locale": "pl",
+  "slug": "rezerwacja-stolikow",
+  "trackPrefix": "l_bookings",
+  "meta": {
+    "title": "Rezerwacje stolików 24/7 dla restauracji | IQ Rest",
+    "description": "Rezerwacje stolików 24/7 dla Twojej restauracji: goście sami rezerwują stoliki przez menu QR lub stronę. Kalendarz, automatyczne potwierdzenia i przypomnienia. Bez telefonów. 14 dni za darmo.",
+    "canonical": "https://iq-rest.com/pl/rezerwacja-stolikow",
+    "ogLocale": "pl_PL",
+    "ogTitle": "Rezerwacje stolików 24/7 — Goście rezerwują sami",
+    "ogDescription": "Goście rezerwują stoliki przez menu QR lub stronę. Kalendarz, automatyczne potwierdzenia, przypomnienia. Żaden gość nie zostanie pominięty.",
+    "brandLine": "IQ Rest — Rezerwacje stolików w restauracji"
+  },
+  "hero": {
+    "headline": "Rezerwacje stolików 24/7,",
+    "cta": "Uruchom rezerwacje stolików",
+    "sub": "Goście rezerwują 24/7 przez menu QR lub link. Kalendarz dla stolików, automatyczne potwierdzenia i przypomnienia.",
+    "headlineAccent": "bez dzwonienia",
+    "demoLabel": "Demo: kalendarz rezerwacji",
+    "tablet": {
+      "src": "/landing/hero-card-reservation.webp",
+      "alt": "Tablet z kalendarzem rezerwacji: widok miesiąca i lista rezerwacji oczekujących na potwierdzenie"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restauracje"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kawiarnie"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bary"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotele"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerie"
+    }
+  ],
+  "scan": {
+    "heading": "Uruchom rezerwacje stolików",
+    "headingAccent": "w 5 minut.",
+    "sub": "Podłącz kalendarz, dodaj stoliki ze zdjęciami i liczbą miejsc — goście zaczną rezerwować jeszcze tego samego dnia.",
+    "cta": "Włącz rezerwacje"
+  },
+  "subFeatures": [
+    {
+      "icon": "CalendarPlus",
+      "eyebrow": "Formularz rezerwacji",
+      "heading": "Goście rezerwują sami — wybierają datę, godzinę i liczbę osób.",
+      "body": "Gość otwiera menu QR lub bezpośredni link, wybiera datę, godzinę i liczbę osób — i od razu widzi dostępne stoliki: ze zdjęciem, opisem (taras, przy oknie, kanapa na barze) i liczbą miejsc. Potwierdzenie wysyłane jest automatycznie na e-mail i WhatsApp.",
+      "bullets": [
+        "Wybór stolika na podstawie zdjęcia, opisu i liczby miejsc.",
+        "Automatyczne potwierdzenie i przypomnienie na godzinę przed wizytą.",
+        "Minimalistyczny formularz: imię, telefon, liczba osób."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-form.webp",
+        "alt": "Gość rezerwuje stolik w restauracji z telefonu: wybór daty, godziny, liczby osób i stolika"
+      }
+    },
+    {
+      "icon": "CalendarDays",
+      "eyebrow": "Kalendarz rezerwacji",
+      "heading": "Kalendarz z podziałem na dni i stoliki — wszystko widoczne w sekundę.",
+      "body": "W panelu administracyjnym znajduje się kalendarz rezerwacji z podziałem na stoliki, dni, tygodnie i miesiące. Wolne terminy, zajęte stoliki, potwierdzone i oczekujące rezerwacje pojawiają się na jednym ekranie. Działa na tablecie na sali i na laptopie w biurze.",
+      "bullets": [
+        "Widok dnia, tygodnia i miesiąca.",
+        "Podział na stoliki: kto, kiedy, na ile osób.",
+        "Przełóż, anuluj lub potwierdź rezerwację — jednym kliknięciem z telefonu."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-calendar.webp",
+        "alt": "Kalendarz rezerwacji w panelu IQ Rest na dwóch tabletach: siatka dzienna dla stolików i kalendarz miesięczny"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "O co pytają restauratorzy w związku z rezerwacjami stolików w IQ Rest. Jeśli nie ma tu Twojego pytania — napisz do nas na WhatsApp.",
+    "items": [
+      {
+        "q": "Czy mogę wybrać dni i godziny, w których rezerwacja jest dostępna?",
+        "a": "Tak. W panelu możesz ustawić grafik dla każdego dnia tygodnia: godziny rezerwacji i przerwę między lunchem a kolacją. Możesz też tymczasowo całkowicie wyłączyć rezerwacje — goście zobaczą, że rezerwacja online jest niedostępna."
+      },
+      {
+        "q": "Czy mogę wgrać zdjęcie każdego stolika?",
+        "a": "Tak. Każdy stolik ma zdjęcie, liczbę miejsc i strefę (taras, przy oknie, bar). Goście widzą dokładnie, który stolik rezerwują i dokonują świadomego wyboru."
+      },
+      {
+        "q": "Czy mogę ograniczyć liczbę gości przy stoliku?",
+        "a": "Tak. Każdy stolik ma ustaloną pojemność — system proponuje gościom tylko odpowiednie stoliki i blokuje możliwość rezerwacji dwuosobowego stolika przez grupę sześcioosobową."
+      },
+      {
+        "q": "Jak trudno jest ustawić rezerwacje?",
+        "a": "Trzy kroki: dodaj stoliki ze zdjęciami i liczbą miejsc, włącz tryb rezerwacji w ustawieniach i udostępnij link lub kod QR. Uruchomienie zajmuje 5–10 minut."
+      },
+      {
+        "q": "Czy mogę ustawić automatyczne lub ręczne potwierdzanie rezerwacji?",
+        "a": "Tak, tryb wybiera się w ustawieniach. Przy automatycznym potwierdzaniu gość otrzymuje potwierdzenie od razu po wysłaniu formularza. Przy ręcznym, prośba pojawia się w panelu jako \"oczekująca na potwierdzenie\" — menedżer ją zatwierdza lub odrzuca. Tryb ręczny przydaje się, gdy liczba stolików jest ograniczona."
+      },
+      {
+        "q": "Czy pobieracie opłatę za każdą rezerwację?",
+        "a": "Nie ma żadnych opłat: rezerwacje są wliczone w subskrypcję — bez procentu od gości, bez opłat za rezerwację, bez pośredników. Stała opłata i nielimitowane rezerwacje."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Rezerwacje w 10 minut. ",
+    "headingAccent": "14 dni pełnego dostępu.",
+    "sub": "Bez podawania karty, zrezygnuj w dowolnej chwili. {count} lokali odciąża swoją obsługę z nami. Wystarczy adres e-mail."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Goście rezerwują sami",
+      "sub": "Data, godzina i liczba osób — z menu QR lub bezpośredniego linku, o dowolnej porze. System pokazuje tylko wolne terminy.",
+      "bullets": [
+        {
+          "icon": "CalendarPlus",
+          "title": "Rezerwacja 24/7",
+          "sub": "Goście rezerwują w nocy lub w weekend — bez dzwonienia i czekania na odpowiedź"
+        },
+        {
+          "icon": "Users",
+          "title": "Stolik dopasowany do grupy",
+          "sub": "System sam dobiera odpowiedni stolik na podstawie liczby miejsc"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Minimalistyczny formularz",
+          "sub": "Imię, telefon i liczba osób — wypełnienie formularza zajmuje pół minuty"
+        }
+      ]
+    },
+    {
+      "heading": "Kalendarz z podziałem na dni i stoliki",
+      "sub": "Wszystkie rezerwacje w jednym kalendarzu: zobacz, co jest wolne, co potwierdzone i kto przyjdzie.",
+      "bullets": [
+        {
+          "icon": "CalendarDays",
+          "title": "Dzień, tydzień, miesiąc",
+          "sub": "Przełączaj widoki i planuj rozsadzenie gości z wyprzedzeniem"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Podział na stoliki",
+          "sub": "Kto, kiedy i na ile osób — dla każdego stolika"
+        },
+        {
+          "icon": "Smartphone",
+          "title": "Zarządzaj z telefonu",
+          "sub": "Przełóż, anuluj lub potwierdź rezerwację — jednym kliknięciem"
+        }
+      ]
+    },
+    {
+      "heading": "Grafik i tryby",
+      "sub": "Ustaw godziny rezerwacji dla każdego dnia tygodnia, czas trwania wizyty i tryb potwierdzania.",
+      "bullets": [
+        {
+          "icon": "Clock",
+          "title": "Grafik na każdy dzień",
+          "sub": "Osobne godziny dla każdego dnia tygodnia, w tym przerwa między lunchem a kolacją"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Czas trwania rezerwacji",
+          "sub": "Ustaw interwał rezerwacji dopasowany do formatu Twojego lokalu"
+        },
+        {
+          "icon": "CalendarCheck",
+          "title": "Automatycznie lub ręcznie",
+          "sub": "Potwierdzaj każdą rezerwację samodzielnie lub włącz automatyczne potwierdzenia"
+        }
+      ]
+    },
+    {
+      "heading": "Powiadomienia bez ręcznej pracy",
+      "sub": "System informuje gościa i Twój zespół — e-maile i ekran rezerwacji aktualizują się natychmiast.",
+      "bullets": [
+        {
+          "icon": "Mail",
+          "title": "E-mail do gościa",
+          "sub": "Potwierdzenie rezerwacji wysyłane jest automatycznie na e-mail"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Powiadomienie do restauracji",
+          "sub": "Właściciele dostają e-mail o każdej nowej rezerwacji"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Ekran rezerwacji na wejściu",
+          "sub": "Tablet na wejściu pokazuje nowe rezerwacje w czasie rzeczywistym"
+        }
+      ]
+    }
+  ]
+}

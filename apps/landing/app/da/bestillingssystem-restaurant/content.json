@@ -1,0 +1,236 @@
+{
+  "locale": "da",
+  "slug": "bestillingssystem-restaurant",
+  "trackPrefix": "l_orders",
+  "meta": {
+    "title": "Ordrehåndtering i restauranten — Gæst og tjener | IQ Rest",
+    "description": "Ordrehåndtering fra en telefon eller tablet: bordplan, deling af regningen, statusser, valgmuligheder og kommentarer. Gæsterne bestiller fra bordet, tjenerne tager imod bestillinger på deres egen enhed. 14 dage gratis.",
+    "canonical": "https://iq-rest.com/da/bestillingssystem-restaurant",
+    "ogLocale": "da_DK",
+    "ogTitle": "Ordrehåndtering i restauranten — Gæst og tjener",
+    "ogDescription": "En gæst ved bordet eller en tjener på en telefon — ordren rammer køkkenet med det samme. Bordplan, deling af regningen, statusser, valgmuligheder og kommentarer.",
+    "brandLine": "IQ Rest — Ordrehåndtering i restauranten"
+  },
+  "hero": {
+    "headline": "Bestillinger fra bordet —",
+    "cta": "Opsæt online bestilling",
+    "sub": "Gæsterne bestiller ved bordet, eller tjenerne fra enhver enhed — direkte til køkkenet. Bordplan, deling af regningen.",
+    "headlineAccent": "direkte til køkkenet",
+    "demoLabel": "Demo: ordreskærm",
+    "tablet": {
+      "src": "/landing/feature-orders-modal.webp",
+      "alt": "Tablet med en åben ordre: liste over retter og handlinger — skift bord, del regningen, tilføj rabat"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restauranter"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Caféer"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barer"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hoteller"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzeriaer"
+    }
+  ],
+  "scan": {
+    "heading": "Sæt dit ordresystem op",
+    "headingAccent": "på 5 minutter.",
+    "sub": "Scan en papirmenu eller en PDF — AI genkender retter, priser og kategorier. Tilslut en tablet på gulvet, og begynd at tage imod bestillinger fra bordene.",
+    "cta": "Scan menu"
+  },
+  "subFeatures": [
+    {
+      "icon": "Map",
+      "eyebrow": "Liste og bordplan",
+      "heading": "En ordreliste ved siden af bordplanen.",
+      "body": "Alle aktive ordrer vises til højre: status, total, bestillingstidspunkt og antal varer. Til venstre er bordplanen: bordene er farvekodede efter status — tomme, optagede, kræver opmærksomhed. Et tryk på et bord åbner ordren, et tryk på et kort åbner detaljevisningen. Ingen skift mellem skærme.",
+      "bullets": [
+        "Bordplan: borde farvekodet efter ordrestatus.",
+        "Ordreliste ved siden af — total, tid og antal varer.",
+        "Et tryk på et bord åbner ordren eller opretter en ny."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-map.webp",
+        "alt": "Tablet ved en tjenerstation: en ordreliste og en bordplan med farvekodede borde"
+      }
+    },
+    {
+      "icon": "ClipboardList",
+      "eyebrow": "Ordrekort",
+      "heading": "Ordrekortet: statusser, duplikering og sletning — med ét tryk.",
+      "body": "Hver vare har sin egen status (Afventer / Tilberedes / Klar / Serveret) — køkkenet og tjeneren ser det samme billede i realtid. Et tryk på prikken åbner en handlingsmenu: skift status, duplikér varen med de samme tilvalg, eller slet den. Alt sker direkte i ordrekortet.",
+      "bullets": [
+        "Status pr. vare: Afventer / Tilberedes / Klar / Serveret.",
+        "Duplikér en vare med ét tryk — inklusiv de samme tilvalg.",
+        "Slet en vare direkte fra ordrekortet."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-detail.webp",
+        "alt": "Tablet med et detaljeret ordrekort: statusser på retter, duplikering og sletning af varer"
+      }
+    },
+    {
+      "icon": "Receipt",
+      "eyebrow": "Deling af regningen",
+      "heading": "Deling af regningen, når gæsterne betaler hver for sig.",
+      "body": "Gæsterne beslutter at betale hver for sig — markér de varer, der skal på den nye regning; resten bliver på den nuværende. Systemet viser begge totaler med det samme. Ét tryk på \"Del ordre\" — og du har to uafhængige ordrer med korrekte totaler, som begge bliver på deres borde.",
+      "bullets": [
+        "Vælg varer til deling med afkrydsningsfelter.",
+        "Totalen for den nye og den resterende regning vises med det samme.",
+        "Ét tryk — og ordren er delt uden manuel udregning."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-split.webp",
+        "alt": "Tablet på et restaurantbord: deling af regningen mellem gæster"
+      }
+    },
+    {
+      "icon": "Smartphone",
+      "eyebrow": "Mobil ordreindtastning",
+      "heading": "Tilføjelse af varer fra en telefon — i tre trin.",
+      "body": "Tjenerne er ikke bundet til én enhed: de åbner ordreskærmen på deres egen telefon og tilføjer en vare i tre trin — vælg kategori, vælg ret, vælg tilvalg (størrelse, stegning, ekstra saucer og ingredienser). Prisen genberegnes automatisk. En kommentar til køkkenet tilføjes i det sidste trin.",
+      "bullets": [
+        "Tre trin: kategori → ret → tilvalg.",
+        "Tilvalg (størrelse, ekstra, ingredienser) med priser med ét tryk.",
+        "Et kommentarfelt i det sidste trin."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-mobile.webp",
+        "alt": "Fire telefoner, der viser trinnene for at tilføje en vare til en ordre: kategori, ret, størrelse, kommentar"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Hvad restauratører spørger om vedrørende ordrehåndtering i IQ Rest. Hvis dit spørgsmål ikke er på listen — skriv til os på WhatsApp.",
+    "items": [
+      {
+        "q": "Kan flere tjenere arbejde samtidigt fra forskellige enheder?",
+        "a": "Ja. Hver tjener tilslutter sin egen enhed og ser de samme borde, ordrer og statusser i realtid. En ændring foretaget af én vises med det samme for de andre — ingen konflikter eller låste skærme."
+      },
+      {
+        "q": "Kan tjenerne bruge deres egne enheder?",
+        "a": "Ja. Ordreskærmen kører i browseren — intet at installere. En telefon eller tablet tilsluttes med en sekscifret kode fra kontrolpanelet, og adgangen fjernes med ét tryk ved vagtens afslutning."
+      },
+      {
+        "q": "Kan jeg tilføje obligatoriske valg til retter (størrelse, stegning)?",
+        "a": "Ja. En ret kan have et vilkårligt antal valggrupper — obligatoriske (\"Størrelse\": Lille / Mellem / Stor) og valgfrie (\"Stegning\": rare / medium / well done). Valgene påvirker prisen. Ved en obligatorisk gruppe beder systemet om et valg — hvilket eliminerer fejl."
+      },
+      {
+        "q": "Kan jeg tilføje kommentarer og ekstra varer til en ret?",
+        "a": "Ja. Det sidste trin har et kommentarfelt (\"ingen løg\", \"nøddeallergi\"). Ekstra varer sættes op som tilvalg med pris (\"+ BBQ-sauce\", \"+ Brød\"). Kommentarer vises på køkkenskærmen, fremhævet med farve."
+      },
+      {
+        "q": "Er der ordrestatistik?",
+        "a": "Ja. Analysedelen viser omsætning pr. dag, gennemsnitlig bon og de bedst sælgende retter. Disse data hjælper dig med at planlægge vagter og indkøb."
+      },
+      {
+        "q": "Kan ordrer deles?",
+        "a": "Ja. Markér de varer, der skal på en ny regning — begge totaler genberegnes automatisk, ingen manuel udregning og ingen skift mellem sektioner."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Ordrer på 10 minutter. ",
+    "headingAccent": "14 dages fuld adgang.",
+    "sub": "Intet kort kræves, opsig når som helst. {count} restauranter tager imod køkkenordrer med os. Du skal kun bruge en e-mail."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Bordplan og ordreliste",
+      "sub": "Aktive ordrer ved siden af bordplanen: bordene er farvekodede efter status, og et tryk åbner en ordre eller opretter en ny.",
+      "bullets": [
+        {
+          "icon": "Map",
+          "title": "Borde efter status",
+          "sub": "Tomme, optagede, kræver opmærksomhed — synligt med et hurtigt blik"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Liste over aktive ordrer",
+          "sub": "Total, bestillingstidspunkt og antal varer for hver ordre"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Ny ordre fra kortet",
+          "sub": "Et tryk på et ledigt bord åbner ordreindtastningen med det samme"
+        }
+      ]
+    },
+    {
+      "heading": "En status for hver vare",
+      "sub": "Køkkenet og tjeneren ser det samme billede: hver ret har sin egen status — fra bestilt til serveret.",
+      "bullets": [
+        {
+          "icon": "Timer",
+          "title": "Status pr. ret",
+          "sub": "Afventer, Tilberedes, Klar, Serveret — pr. vare, ikke pr. ordre"
+        },
+        {
+          "icon": "Receipt",
+          "title": "Duplikering af varer",
+          "sub": "Gentag en ret med de samme tilvalg med ét tryk"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Redigering på stedet",
+          "sub": "Slet en vare direkte fra ordrekortet"
+        }
+      ]
+    },
+    {
+      "heading": "Deling af regningen",
+      "sub": "Gæsterne betaler hver for sig — markér varerne, og de flyttes til en ny regning. Totalerne genberegnes med det samme.",
+      "bullets": [
+        {
+          "icon": "Receipt",
+          "title": "Afkrydsningsfelter pr. vare",
+          "sub": "Vælg de retter, der skal på den nye regning; resten bliver på den nuværende"
+        },
+        {
+          "icon": "ChartColumn",
+          "title": "Totaler vises med det samme",
+          "sub": "Den nye og den resterende regning beregnes automatisk"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Ét tryk",
+          "sub": "Ordren deles uden manuel udregning eller lommeregner"
+        }
+      ]
+    },
+    {
+      "heading": "Ordreindtastning fra tjenerens telefon",
+      "sub": "Tjenerne tager imod en bestilling på deres egen enhed i tre trin: kategori, ret, tilvalg.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Enhver enhed",
+          "sub": "En telefon eller tablet med en browser — ingen installation nødvendig"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Tilvalg med pris",
+          "sub": "Størrelse, ekstra og varianter af retter med pris med ét tryk"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Kommentarer til retter",
+          "sub": "Gæsternes ønsker tilføjes i det sidste trin — køkkenet ser dem med det samme"
+        }
+      ]
+    }
+  ]
+}

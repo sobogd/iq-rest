@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "من نحن — فريق IQ Rest، جهات الاتصال والتفاصيل القانونية",
+    "description": "من يقف خلف IQ Rest، كيف تتواصل معنا وتفاصيل مشغل الخدمة: البريد الإلكتروني، WhatsApp، والمعلومات القانونية.",
+    "canonical": "https://iq-rest.com/ar/about",
+    "ogLocale": "en_US",
+    "ogTitle": "من نحن — IQ Rest",
+    "ogDescription": "من يقف خلف IQ Rest، جهات الاتصال للدعم والتفاصيل القانونية لمشغل الخدمة."
+  },
+  "heading": "من مقهانا الخاص",
+  "headingAccent": "إلى منصة للمطاعم",
+  "story": {
+    "photo": {
+      "src": "/contacts.webp"
+    },
+    "paragraphs": [
+      "تعمل المنصة اليوم في {count} مكان — من مقاهٍ بخمس طاولات إلى سلاسل عبر عدة مدن. تُحفظ البيانات على خوادم في ألمانيا، وتُجاب أسئلة الدعم شخصياً."
+    ],
+    "sign": "بوغدان سوكولوف"
+  },
+  "facts": [
+    {
+      "value": "2022",
+      "label": "سنة تأسيس المنصة"
+    },
+    {
+      "value": "{count}",
+      "label": "أماكن تعمل على IQ Rest"
+    },
+    {
+      "value": "15",
+      "label": "دولة يتواجد فيها عملاؤنا"
+    }
+  ],
+  "waPrefill": "مرحباً، لدي سؤال حول IQ Rest",
+  "contacts": [
+    {
+      "icon": "Mail",
+      "title": "البريد الإلكتروني",
+      "value": "support@iq-rest.com",
+      "href": "mailto:support@iq-rest.com",
+      "note": "الفواتير، المستندات، أسئلة البيانات."
+    },
+    {
+      "icon": "MessageCircle",
+      "title": "WhatsApp",
+      "value": "+998 94 866 37 43",
+      "wa": true,
+      "note": "سنعرض لك المنصة ونساعدك في الإعداد."
+    },
+    {
+      "icon": "Clock",
+      "title": "وقت الاستجابة",
+      "value": "الاثنين–الأحد، 9:00–21:00 بتوقيت وسط أوروبا",
+      "note": "نرد خلال ساعات قليلة."
+    }
+  ],
+  "legal": {
+    "rows": [
+      {
+        "label": "مشغل الخدمة",
+        "value": "بوغدان سوكولوف"
+      },
+      {
+        "label": "الشكل القانوني",
+        "value": "Autónomo (España)"
+      },
+      {
+        "label": "الرقم الضريبي (NIF)",
+        "value": "ESZ1894474S"
+      },
+      {
+        "label": "العنوان",
+        "value": "Calle Boca del Río 2, 33010 Oviedo, Asturias, España"
+      },
+      {
+        "label": "النطاق",
+        "value": "https://iq-rest.com"
+      },
+      {
+        "label": "استضافة البيانات",
+        "value": "Hetzner Online GmbH, Nuremberg, Germany"
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "لقد سمعت قصتنا. ",
+    "headingAccent": "ابدأ بكتابة قصتك — 14 يوماً مجاناً.",
+    "sub": "بدون بطاقة ائتمان، ألغِ في أي وقت. مثل {count} مطعم، يمكنك الاعتماد علينا. كل ما تحتاجه هو بريد إلكتروني."
+  }
+}

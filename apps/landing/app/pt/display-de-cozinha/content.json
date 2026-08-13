@@ -1,0 +1,206 @@
+{
+  "locale": "pt",
+  "slug": "display-de-cozinha",
+  "trackPrefix": "l_kds",
+  "meta": {
+    "title": "Ecrã de cozinha (KDS) para restaurante — Pedidos no ecrã do cozinheiro | IQ Rest",
+    "description": "Ecrã de cozinha KDS para restaurante: pedidos da sala e da ementa QR diretamente no ecrã do cozinheiro. Colunas por mesa, estados Pending / Cooking / Ready / Served, filtros por zona. Funciona em tablet e telemóvel.",
+    "canonical": "https://iq-rest.com/pt/display-de-cozinha",
+    "ogLocale": "pt_PT",
+    "ogTitle": "Ecrã de cozinha (KDS) — Pedidos diretos no ecrã do cozinheiro",
+    "ogDescription": "Pedidos da sala no ecrã do cozinheiro. Colunas por mesa, estados e temporizador. Um toque muda o estado.",
+    "brandLine": "IQ Rest — Ecrã de cozinha para restaurante"
+  },
+  "hero": {
+    "headline": "Ecrã de cozinha (KDS):",
+    "cta": "Configurar ecrã de cozinha",
+    "sub": "Os pedidos chegam ao ecrã da cozinha de imediato: notas, alergénios e temporizador. Mudança de estado com um toque.",
+    "headlineAccent": "pedidos diretos ao cozinheiro",
+    "demoLabel": "Demo: ecrã da cozinha",
+    "tablet": {
+      "src": "/landing/hero-card-kds.webp",
+      "alt": "Tablet com ecrã de cozinha: pedidos por mesa em colunas com estados"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurantes"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafés"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bares"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotéis"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzarias"
+    }
+  ],
+  "scan": {
+    "heading": "Instale o ecrã de cozinha",
+    "headingAccent": "em 5 minutos.",
+    "sub": "Digitalize a ementa em papel ou PDF — a IA reconhece pratos, categorias e alergénios. Ligue um tablet na cozinha e comece a receber pedidos.",
+    "cta": "Digitalizar ementa"
+  },
+  "subFeatures": [
+    {
+      "icon": "LayoutGrid",
+      "eyebrow": "Gestão e filtros",
+      "heading": "Vários ecrãs por zonas: cozinha e bar.",
+      "body": "Instale tablets separados na cozinha quente, no bar ou na pastelaria — cada ecrã mostra apenas os pratos que lhe dizem respeito. Os filtros por estado (Pending / Cooking / Ready / Served) e por categoria retiram o que não interessa do ecrã: o cozinheiro trabalha apenas com o que pertence à sua zona.",
+      "bullets": [
+        "Vários ecrãs KDS com filtro por categoria de pratos.",
+        "Filtro por estado: apenas em preparação e pronto.",
+        "Cada zona vê apenas o seu fluxo de pedidos."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-filters.webp",
+        "alt": "Tablet num suporte de latão no passe da cozinha de um restaurante — KDS com filtro por estado dos pratos"
+      }
+    },
+    {
+      "icon": "Timer",
+      "eyebrow": "Cartões e temporizador",
+      "heading": "Um toque muda o estado. Comentários e alergénios destacados com cor.",
+      "body": "O cartão do prato mostra as opções escolhidas (sem cebola, well done), os comentários do cliente, os alergénios e um temporizador desde o momento do pedido. Um toque no cartão passa ao estado seguinte: Pending → Cooking → Ready → Served. A lista ordena-se automaticamente por prioridade de tempo.",
+      "bullets": [
+        "Um toque no cartão — mudança de estado imediata.",
+        "Opções, comentários e alergénios destacados com cor.",
+        "Ordenação por prioridade: quem espera há mais tempo sobe."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-cards.webp",
+        "alt": "Tablet num suporte de latão no balcão do bar de um restaurante — KDS com cartões de pedidos por mesa"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "O que os restauradores perguntam sobre o ecrã de cozinha na IQ Rest. Se a sua pergunta não está na lista, escreva-nos no WhatsApp.",
+    "items": [
+      {
+        "q": "Que estados têm os itens na cozinha?",
+        "a": "Quatro estados: Pending — o pedido foi registado e aguarda; Cooking — o prato está em preparação; Ready — pronto para sair; Served — entregue ao cliente. Um toque no cartão passa ao estado seguinte, sem menus nem confirmações."
+      },
+      {
+        "q": "É possível colocar vários ecrãs KDS em zonas diferentes da cozinha?",
+        "a": "Sim. Um tablet na cozinha quente, outro no bar, um terceiro na pastelaria — cada um com o seu filtro por categorias de pratos. Todos os ecrãs estão sincronizados: um estado alterado num deles atualiza-se nos restantes."
+      },
+      {
+        "q": "Em que dispositivo corre o KDS — é preciso um tablet especial?",
+        "a": "O KDS funciona em qualquer navegador moderno. Para uma cozinha grande serve um tablet num suporte junto ao passe; para um estabelecimento pequeno, um smartphone. Não é preciso equipamento especial nem instalação: o dispositivo liga-se com um código de seis dígitos do painel."
+      },
+      {
+        "q": "De onde chegam os pedidos ao ecrã da cozinha?",
+        "a": "De todas as origens: o cliente fez o pedido através da ementa QR na mesa ou o empregado registou-o no seu dispositivo. Os pedidos chegam ao KDS automaticamente, com o número da mesa. Não é preciso transferi-los manualmente do POS."
+      },
+      {
+        "q": "O que aparece no cartão do pedido?",
+        "a": "O nome do prato, as opções escolhidas (sem cebola, well done), o comentário do cliente, os alergénios, o estado e um temporizador desde o momento do pedido. Os cartões ordenam-se por prioridade: quanto mais tempo o prato espera, mais acima fica na coluna."
+      },
+      {
+        "q": "É possível filtrar os cartões no ecrã?",
+        "a": "Sim. Dois filtros: por estado (por exemplo, apenas Pending e Cooking) e por categoria (bebidas para o bar, pratos quentes para a cozinha). As definições ficam guardadas em cada dispositivo, por isso cada zona trabalha com o seu conjunto."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Cozinha sem papel em 10 minutos. ",
+    "headingAccent": "14 dias de acesso total.",
+    "sub": "Não precisa de cartão, cancele a qualquer momento. {count} restaurantes confiam em nós. Só precisa de um email — e os pedidos aparecem logo no ecrã da cozinha."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Ecrãs por zonas",
+      "sub": "Tablets separados para a cozinha quente, o bar e a pastelaria — cada ecrã mostra apenas os seus pratos.",
+      "bullets": [
+        {
+          "icon": "LayoutGrid",
+          "title": "Filtro por categorias",
+          "sub": "Atribua a cada ecrã as suas categorias da ementa"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Fluxo próprio por zona",
+          "sub": "A cozinha e o bar trabalham em paralelo, sem se atrapalharem"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Filtro por estado",
+          "sub": "Mostre apenas o que está em preparação ou pronto para sair"
+        }
+      ]
+    },
+    {
+      "heading": "Estados com um toque",
+      "sub": "Um toque no cartão passa o prato ao estado seguinte. A cozinha e o empregado veem a mesma imagem.",
+      "bullets": [
+        {
+          "icon": "ClipboardList",
+          "title": "Estado de cada item",
+          "sub": "Em preparação, pronto, servido — por prato individual, não pelo pedido inteiro"
+        },
+        {
+          "icon": "Timer",
+          "title": "Temporizador desde o pedido",
+          "sub": "Vê-se há quanto tempo o prato espera — os que esperam há mais tempo sobem"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "Alergénios e comentários",
+          "sub": "Opções, notas do cliente e alergénios destacados com cor"
+        }
+      ]
+    },
+    {
+      "heading": "Os pedidos chegam de imediato",
+      "sub": "O pedido do cliente da ementa QR ou do empregado aparece no ecrã no momento do registo, sem atualizar a página.",
+      "bullets": [
+        {
+          "icon": "Rocket",
+          "title": "No ecrã de imediato",
+          "sub": "Ligação permanente — o cartão aparece no segundo do pedido"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Todas as origens num só fluxo",
+          "sub": "Os pedidos dos clientes e dos empregados chegam a um único ecrã com o número da mesa"
+        },
+        {
+          "icon": "Map",
+          "title": "Número da mesa no cartão",
+          "sub": "A cozinha vê para onde levar o prato, o empregado — onde o esperam"
+        }
+      ]
+    },
+    {
+      "heading": "Ligação em minutos",
+      "sub": "O ecrã da cozinha funciona no navegador, em qualquer tablet ou telemóvel — ligação com um código de seis dígitos.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Tablet ou telemóvel",
+          "sub": "Basta um navegador — não é preciso comprar equipamento especial"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Código de ligação",
+          "sub": "Introduza o código de seis dígitos do painel — o dispositivo fica associado à cozinha"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Revogação do acesso",
+          "sub": "O tablet perdeu-se ou foi substituído — desligue-o no painel com um toque"
+        }
+      ]
+    }
+  ]
+}

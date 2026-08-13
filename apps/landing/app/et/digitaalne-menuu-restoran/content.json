@@ -1,0 +1,332 @@
+{
+  "locale": "et",
+  "slug": "digitaalne-menuu-restoran",
+  "trackPrefix": "l_digital",
+  "meta": {
+    "title": "Digimenüü restoranidele | IQ Rest",
+    "description": "Digimenüü sinu restoranile: veebimenüü fotode, allergeenide, tehisintellektiga tõlke ja reaalajas hinna uuendustega. 14 päeva tasuta, krediitkaarti pole vaja.",
+    "canonical": "https://iq-rest.com/et/digitaalne-menuu-restoran",
+    "ogLocale": "et_EE",
+    "ogTitle": "Digimenüü restoranidele",
+    "ogDescription": "Sinu paberist menüü veebiversioon fotode, allergeenide ja tehisintellektiga tõlkega. Hinnad uuenevad reaalajas.",
+    "brandLine": "IQ Rest — Digimenüü restoranidele"
+  },
+  "hero": {
+    "headline": "Digimenüü ja veebileht",
+    "headlineAccent": "sinu restoranile",
+    "cta": "Loo digimenüü",
+    "demoLabel": "Demo: menüü nii, nagu külalised seda näevad",
+    "sub": "Käivita 10 minutiga: võta tellimusi lauast, uuenda hindu käigupealt ja võta broneeringuid vastu otse ilma vahendustasudeta.",
+    "phones": [
+      {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Telefon restorani veebilehe avalehega: fotod, broneeringud ja ligipääs veebimenüüle"
+      },
+      {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Telefon toidukaardiga: foto, hind ja allergeenide märgised"
+      }
+    ]
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restoranidele"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kohvikutele"
+    },
+    {
+      "icon": "Martini",
+      "label": "Baaridele"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotellidele"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pitseriatele"
+    }
+  ],
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Menüü 10 minutiga",
+      "sub": "Pole vaja arendajaid ega pikka seadistamist"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Kiire klienditugi",
+      "sub": "Aitame sul menüü vestlusaknas paari tunniga üles seada"
+    },
+    {
+      "icon": "Globe",
+      "title": "Valitud {count} koha poolt",
+      "sub": "Digimenüüd ja veebilehed restoranidele rohkem kui 15 riigis"
+    },
+    {
+      "icon": "Palette",
+      "title": "Sinu enda domeen ja bränd",
+      "sub": "Menüü sinu enda aadressil, mitte jagatud platvormil"
+    }
+  ],
+  "scan": {
+    "heading": "Sul on paberist menüü või PDF?",
+    "headingAccent": "Tehisintellekt digitaliseerib selle 60 sekundiga.",
+    "sub": "Laadi üles foto või dokument — tehisintellekt tuvastab kategooriad, toidud ja hinnad automaatselt.",
+    "cta": "Skanni menüü"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "Tehisintellektiga tõlge",
+      "heading": "Menüü 35 keeles",
+      "body": "Üks QR — 35 keelt. Tehisintellekt tõlgib, arvestades kulinaarset konteksti, nii et toidud kõlavad loomulikult. Turistid tellivad julgemalt.",
+      "bullets": [
+        "35 keelt on hinna sees",
+        "Kulinaarne tehisintellekt Google'i asemel",
+        "Vaheta keelt ühe nupuvajutusega"
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Kaks külalist loevad sama digimenüüd erinevates keeltes oma telefonidest"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Allergeenid",
+      "heading": "Allergeenid ja toitumiseelistused igal toidul",
+      "body": "Märgi gluteen, laktoos, pähklid, vegan ja gluteenivaba. Külalised filtreerivad menüüd vastavalt oma vajadustele ja tellivad rahuliku südamega.",
+      "bullets": [
+        "14 allergeenide kategooriat",
+        "Vegan ja gluteenivabad märgised",
+        "Menüü filter toitumispiirangute järgi"
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Külaline filtreerib menüüd allergeenide järgi telefonis, samal ajal kui restoranipidaja muudab allergeenide nimekirja tahvelarvutis"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Disain ja bränd",
+      "heading": "Esinduslik menüü sinu enda domeenil",
+      "body": "Videotaust avalehel, sinu enda disain ja kontaktide leht koos kaardi ja sotsiaalmeedia linkidega — sinu domeenil, mitte PDF-ina.",
+      "bullets": [
+        "Videotaust ja esinduslik disain",
+        "Sinu enda domeen koos SSL-iga",
+        "Kontaktid, kaart, sotsiaalmeedia lingid"
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Kaks telefoni kohviku laual: menüü avaleht videotaustaga ja kontaktide leht koos kaardiga"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Tellimused",
+      "heading": "Online tellimused ilma vahendustasudeta",
+      "body": "Külalised tellivad menüüst või otse WhatsAppis — tellimus jõuab saali või kööki, 0% vahendustasu.",
+      "bullets": [
+        "Menüüst või WhatsAppi kaudu",
+        "Saali või kööki, 0%",
+        "Lülita sisse seadetest"
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Kaks telefoni laual: ostukorv tellimusega ja eduka tellimuse kinnitus"
+      }
+    },
+    {
+      "icon": "CalendarCheck",
+      "eyebrow": "Broneeringud",
+      "heading": "Laua broneerimine 24/7",
+      "body": "Külalised broneerivad laua ise menüü või lingi kaudu, sina näed kalendrit laudade kaupa ja kinnitad automaatselt või käsitsi.",
+      "bullets": [
+        "Külalised broneerivad ise",
+        "Kalender üle kõigi laudade",
+        "Automaatne või käsitsi kinnitamine"
+      ]
+    },
+    {
+      "icon": "MonitorSmartphone",
+      "eyebrow": "Juhtimine",
+      "heading": "Halda igalt poolt",
+      "body": "Halduspaneel töötab brauseris — telefonis, tahvelarvutis või arvutis. Midagi pole vaja paigaldada, valmis kasutamiseks minutitega.",
+      "bullets": [
+        "Iga seade, iga brauser",
+        "Paigaldada pole vaja",
+        "Valmis minutitega"
+      ]
+    }
+  ],
+  "faq": {
+    "sub": "Mida restoranipidajad IQ Resti digimenüü kohta küsivad. Kui sinu küsimust pole nimekirjas — kirjuta meile WhatsAppi.",
+    "items": [
+      {
+        "q": "Kas mul on vaja tehnilisi oskusi või CMS-i kogemust?",
+        "a": "Erilisi oskusi pole vaja. Kõik halduspaneelis käib paari nupuvajutusega — koodi kirjutada pole vaja. Toidu lisamine võtab sekundeid: nimi, hind, foto. Täielik menüü seadistamine mahub tavaliselt 30–60 minuti sisse."
+      },
+      {
+        "q": "Mis on IQ Resti digimenüü?",
+        "a": "See on sinu menüü veebiversioon, mis on külalistele kättesaadav QR-koodi või otselingi kaudu: toidufotod, hinnad, allergeenid, tehisintellektiga tõlge 35 keelde ja reaalajas uuendused. Menüü töötab meie serverites — tarkvara pole vaja paigaldada ega hooldada, piisab vaid brauserist."
+      },
+      {
+        "q": "Kas külalistel on vaja rakendust või eriseadmeid?",
+        "a": "Külaline suunab oma telefonikaamera QR-koodile — menüü avaneb brauseris, paigaldada pole vaja. Halduspaneel töötab samuti igas kaasaegses brauseris: telefonis, tahvelarvutis või sülearvutis. QR-koodid saab printida tavalise kontoriprinteriga."
+      },
+      {
+        "q": "Kas ma saan menüüd hoida oma domeenil?",
+        "a": "Jah. Menüü ühendatakse sinu domeeniga SSL-sertifikaadi abil — külalised näevad sinu restorani aadressi, näiteks menu.sinurestoran.ee. Meie klienditugi aitab domeeni ja sertifikaadi seadistamisega; sul on vaja vaid lisada DNS-kirje."
+      },
+      {
+        "q": "Kas ma saan ühel kontol hallata mitut restorani?",
+        "a": "Jah. Lisa ühele kontole mitu asukohta: igal on oma menüü, disain, QR-koodid ja analüütika ning nende vahel vahetamine käib ühe klõpsuga. Asukohtade arv sõltub sinu paketist."
+      },
+      {
+        "q": "Kui keeruline on menüüd nullist üles seada?",
+        "a": "Kolm sammu: loo kategooriad, lisa toidud hindade ja fotodega, prindi laudadele QR-koodid. Kui sul on paberist menüü või PDF, laadi see üles — tehisintellekt tuvastab kategooriad, nimed ja hinnad ning täidab kaardid automaatselt. Baasmenüü saab valmis 5 minutiga; täielik seadistamine sõltub toodete arvust."
+      },
+      {
+        "q": "Millist tuge te pakute?",
+        "a": "Vastame tööajal WhatsAppis ja e-posti teel. Aitame esmase seadistamise, domeeni ühendamise ja menüü disainiga. Kui vajad demot või juhendatud sisseelamist — kirjuta meile."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Sinu menüü veebis 10 minutiga. ",
+    "headingAccent": "14 päeva täisligipääsu.",
+    "sub": "Kaarti pole vaja, tühista igal ajal. {count} restorani usaldab meile oma menüüd ja veebilehed. Alustamiseks on vaja vaid e-posti aadressi."
+  },
+  "spotlights": [
+    {
+      "heading": "Menüü 35 keeles",
+      "sub": "Külalised avavad menüü oma emakeeles. Tehisintellekt tõlgib toitude nimed, kirjeldused, kategooriad ja valikud, arvestades kulinaarset konteksti.",
+      "bullets": [
+        {
+          "icon": "Globe",
+          "title": "35 keelt on hinna sees",
+          "sub": "Euroopa ja Aasia keeled on kaasas — ilma lisatasuta keele kohta"
+        },
+        {
+          "icon": "Timer",
+          "title": "Tõlgitakse salvestamisel",
+          "sub": "Lisa või muuda toitu — tõlked igasse menüü keelde on kohe valmis"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Käsitsi tehtud muudatused on kaitstud",
+          "sub": "Käsitsi parandatud tõlge lukustatakse ja tehisintellekt ei kirjuta seda kunagi üle"
+        }
+      ]
+    },
+    {
+      "heading": "Allergeenid ja toitumiseelistused igal toidul",
+      "sub": "Lisa toidukaardile allergeenide ja toitumiseelistuste märgised — külalised näevad neid menüüs ja saavad toite filtreerida vastavalt oma piirangutele.",
+      "bullets": [
+        {
+          "icon": "WheatOff",
+          "title": "14 allergeenide kategooriat",
+          "sub": "Täielik EL-i nõuetele vastav nimekiri: gluteen, pähklid, laktoos, mereannid ja muud"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "13 toitumiseelistuse märgist",
+          "sub": "Vegan, taimetoitlane, gluteenivaba, halal, koššer, vürtsikas ja muud märgised"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Filter ühe nupuvajutusega",
+          "sub": "Külalised valivad oma piirangud — menüü näitab ainult sobivaid toite"
+        }
+      ]
+    },
+    {
+      "heading": "Esinduslik menüü sinu enda domeenil",
+      "sub": "Foto- või videotaust avalehel, sinu brändi värv ja logo — menüü näeb välja nagu sinu veebileht, mitte PDF, ja töötab sinu domeenil.",
+      "bullets": [
+        {
+          "icon": "Palette",
+          "title": "Brändile vastav disain",
+          "sub": "Video või foto avalehel, aktsentvärv ja logo — seadista ilma disainerita"
+        },
+        {
+          "icon": "Globe",
+          "title": "Sinu enda domeen koos SSL-iga",
+          "sub": "Menüü avaneb sinu aadressil turvalise ühenduse kaudu"
+        },
+        {
+          "icon": "Map",
+          "title": "Kontaktid ja kaart",
+          "sub": "Leht sinu aadressi, lahtiolekuaegade, kaardi ja sotsiaalmeedia linkidega — täisväärtuslik restorani veebileht"
+        }
+      ]
+    },
+    {
+      "heading": "Online tellimused ilma vahendustasudeta",
+      "sub": "Külaline esitab tellimuse lauast — see ilmub koheselt halduspaneelis ja köögiekraanil. Platvorm ei võta sinu tulust 0%.",
+      "bullets": [
+        {
+          "icon": "ShoppingCart",
+          "title": "Menüüst või WhatsAppi kaudu",
+          "sub": "Süsteemisisene tellimus või sõnum sinu WhatsAppi — vali režiim seadetest"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Otse kööki",
+          "sub": "Uus tellimus ilmub köögiekraanile ja teenindaja seadmesse viivituseta"
+        },
+        {
+          "icon": "Receipt",
+          "title": "0% vahendustasu",
+          "sub": "Makse jääb sinu ja külalise vahele — platvorm ei võta tellimustelt midagi"
+        }
+      ]
+    },
+    {
+      "heading": "Laua broneerimine 24/7",
+      "sub": "Külalised broneerivad laua otse menüüst igal ajal. Süsteem kontrollib soovi vastavalt sinu graafikule ja vabadele laudadele.",
+      "bullets": [
+        {
+          "icon": "CalendarCheck",
+          "title": "Kalender laudade kaupa",
+          "sub": "Süsteem sobitab laua seltskonna suurusega ja näitab broneeringuid päevade ja laudade kaupa"
+        },
+        {
+          "icon": "CalendarDays",
+          "title": "Automaatne või käsitsi",
+          "sub": "Kinnita iga broneering ise või lülita sisse automaatne kinnitamine"
+        },
+        {
+          "icon": "Mail",
+          "title": "E-kirjad külalisele ja sulle",
+          "sub": "Külaline saab e-posti teel kinnituse, omanikud saavad uue broneeringu teavituse"
+        }
+      ]
+    },
+    {
+      "heading": "Halda igalt poolt",
+      "sub": "Halduspaneel töötab brauseris telefonis, tahvelarvutis või arvutis. Muudatused on külalistele koheselt nähtavad.",
+      "bullets": [
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Iga seade",
+          "sub": "Telefon, tahvelarvuti või arvuti — piisab vaid brauserist, paigaldada pole vaja"
+        },
+        {
+          "icon": "Timer",
+          "title": "Muudatused käigupealt",
+          "sub": "Hinnamuutus, stop-list või peidetud toit rakendub koheselt, ilma avaldamise või ootamiseta"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Toidu valikud",
+          "sub": "Suurused, lisandid ja erineva hinnaga variandid — külalised panevad oma toidu ise kokku"
+        }
+      ]
+    }
+  ],
+  "hideFeatureHeading": true
+}

@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "Apie IQ Rest — Kas mes esame, kontaktai ir teisinė informacija",
+    "description": "Kas stovi už IQ Rest, kaip su mumis susisiekti ir paslaugos operatoriaus duomenys: el. paštas, WhatsApp, teisinė informacija.",
+    "canonical": "https://iq-rest.com/lt/about",
+    "ogLocale": "lt_LT",
+    "ogTitle": "Apie IQ Rest",
+    "ogDescription": "Kas stovi už IQ Rest, palaikymo kontaktai ir paslaugos operatoriaus teisinė informacija."
+  },
+  "heading": "Nuo nuosavos kavinės",
+  "headingAccent": "iki platformos restoranams",
+  "story": {
+    "photo": {
+      "src": "/contacts.webp"
+    },
+    "paragraphs": [
+      "Šiandien platforma kasdien veikia {count} vietų – nuo penkių staliukų kavinių iki tinklų keliuose miestuose. Duomenys saugomi serveriuose Vokietijoje, o į palaikymo klausimus atsakoma asmeniškai."
+    ],
+    "sign": "Bogdanas Sokolovas"
+  },
+  "facts": [
+    {
+      "value": "2022",
+      "label": "metai, kai įkurta platforma"
+    },
+    {
+      "value": "{count}",
+      "label": "vietų naudoja IQ Rest"
+    },
+    {
+      "value": "15",
+      "label": "šalių, kuriose yra mūsų klientai"
+    }
+  ],
+  "waPrefill": "Sveiki, turiu klausimą apie IQ Rest",
+  "contacts": [
+    {
+      "icon": "Mail",
+      "title": "El. paštas",
+      "value": "support@iq-rest.com",
+      "href": "mailto:support@iq-rest.com",
+      "note": "Sąskaitos, dokumentai, klausimai apie duomenis."
+    },
+    {
+      "icon": "MessageCircle",
+      "title": "WhatsApp",
+      "value": "+998 94 866 37 43",
+      "wa": true,
+      "note": "Parodysime demo versiją ir padėsime su nustatymais."
+    },
+    {
+      "icon": "Clock",
+      "title": "Atsakymo laikas",
+      "value": "Pr–S, 9:00–21:00 CET",
+      "note": "Atsakome per kelias valandas."
+    }
+  ],
+  "legal": {
+    "rows": [
+      {
+        "label": "Paslaugos operatorius",
+        "value": "Bogdan Sokolov"
+      },
+      {
+        "label": "Teisinė forma",
+        "value": "Autónomo (España)"
+      },
+      {
+        "label": "Mokesčių mokėtojo kodas (NIF)",
+        "value": "ESZ1894474S"
+      },
+      {
+        "label": "Adresas",
+        "value": "Calle Boca del Río 2, 33010 Oviedo, Asturias, España"
+      },
+      {
+        "label": "Domenas",
+        "value": "https://iq-rest.com"
+      },
+      {
+        "label": "Duomenų priegloba",
+        "value": "Hetzner Online GmbH, Nuremberg, Germany"
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Išgirdote mūsų istoriją. ",
+    "headingAccent": "Pradėkite rašyti savąją – 14 dienų nemokamai.",
+    "sub": "Kortelės nereikia, atšaukite bet kada. Kaip ir {count} restoranų, galite mumis pasikliauti. Viskas, ko reikia, tai el. paštas."
+  }
+}

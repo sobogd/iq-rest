@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "IQ Restについて — 運営会社、お問い合わせ、法的情報",
+    "description": "IQ Restの開発背景、お問い合わせ先、サービス運営者の法的情報：メール、WhatsApp、法的詳細。",
+    "canonical": "https://iq-rest.com/ja/about",
+    "ogLocale": "ja_JP",
+    "ogTitle": "IQ Restについて",
+    "ogDescription": "IQ Restの開発背景、サポートの連絡先、サービス運営者の法的情報。"
+  },
+  "heading": "自分たちのカフェから",
+  "headingAccent": "飲食店向けプラットフォームへ",
+  "story": {
+    "photo": {
+      "src": "/contacts.webp"
+    },
+    "paragraphs": [
+      "現在、このプラットフォームは5卓の小さなカフェから複数都市に展開するチェーン店まで、毎日 {count} 店舗で稼働しています。データはドイツのサーバーで安全に保管され、サポートのお問い合わせにはスタッフが直接お答えしています。"
+    ],
+    "sign": "Bogdan Sokolov"
+  },
+  "facts": [
+    {
+      "value": "2022",
+      "label": "プラットフォーム設立年"
+    },
+    {
+      "value": "{count}",
+      "label": "IQ Rest導入店舗数"
+    },
+    {
+      "value": "15",
+      "label": "クライアントの展開国数"
+    }
+  ],
+  "waPrefill": "こんにちは、IQ Restについて質問があります。",
+  "contacts": [
+    {
+      "icon": "Mail",
+      "title": "メール",
+      "value": "support@iq-rest.com",
+      "href": "mailto:support@iq-rest.com",
+      "note": "請求書、書類、データに関するお問い合わせ。"
+    },
+    {
+      "icon": "MessageCircle",
+      "title": "WhatsApp",
+      "value": "+998 94 866 37 43",
+      "wa": true,
+      "note": "デモのご案内や初期設定をサポートします。"
+    },
+    {
+      "icon": "Clock",
+      "title": "対応時間",
+      "value": "月〜日、9:00〜21:00（CET）",
+      "note": "数時間以内に返信いたします。"
+    }
+  ],
+  "legal": {
+    "rows": [
+      {
+        "label": "サービス運営者",
+        "value": "Bogdan Sokolov"
+      },
+      {
+        "label": "法的形態",
+        "value": "Autónomo (España)"
+      },
+      {
+        "label": "納税者番号 (NIF)",
+        "value": "ESZ1894474S"
+      },
+      {
+        "label": "所在地",
+        "value": "Calle Boca del Río 2, 33010 Oviedo, Asturias, España"
+      },
+      {
+        "label": "ドメイン",
+        "value": "https://iq-rest.com"
+      },
+      {
+        "label": "データホスティング",
+        "value": "Hetzner Online GmbH, Nuremberg, Germany"
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "私たちのストーリーをお読みいただきありがとうございます。",
+    "headingAccent": "次はあなたの店舗で — 14日間無料でお試しください。",
+    "sub": "クレジットカード不要、いつでもキャンセル可能。{count}店舗の飲食店と同じように、私たちにお任せください。メールアドレスのみで始められます。"
+  }
+}

@@ -1,0 +1,332 @@
+{
+  "locale": "hu",
+  "slug": "digitalis-etlap-etterem",
+  "trackPrefix": "l_digital",
+  "meta": {
+    "title": "Digitális étlap éttermeknek | IQ Rest",
+    "description": "Digitális étlap az éttermednek: online étlap fotókkal, allergénekkel, MI fordítással és valós idejű ármódosítással. 14 nap ingyen, bankkártya nélkül.",
+    "canonical": "https://iq-rest.com/hu/digitalis-etlap-etterem",
+    "ogLocale": "hu_HU",
+    "ogTitle": "Digitális étlap éttermeknek",
+    "ogDescription": "A papír étlapod online verziója fotókkal, allergénekkel és MI fordítással. Az árak valós időben frissülnek.",
+    "brandLine": "IQ Rest — Digitális étlap éttermeknek"
+  },
+  "hero": {
+    "headline": "Digitális étlap és weboldal",
+    "headlineAccent": "az éttermednek",
+    "cta": "Digitális étlap készítése",
+    "demoLabel": "Demó: az étlap, ahogy a vendégek látják",
+    "sub": "Indulás 10 perc alatt: vegyél fel rendeléseket az asztaltól, frissítsd az árakat menet közben, és fogadj asztalfoglalásokat közvetlenül, jutalékok nélkül.",
+    "phones": [
+      {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Telefon egy éttermi weboldal kezdőlapjával: fotók, asztalfoglalás és hozzáférés az online étlaphoz"
+      },
+      {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Telefon egy étel aloldalával: fotó, ár és allergén jelölések"
+      }
+    ]
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Éttermek"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kávézók"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bárok"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Szállodák"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzériák"
+    }
+  ],
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Étlap 10 perc alatt",
+      "sub": "Nincsenek fejlesztők és nincs hosszas beállítás"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Gyors ügyfélszolgálat",
+      "sub": "Chaten segítünk beállítani az étlapodat pár órán belül"
+    },
+    {
+      "icon": "Globe",
+      "title": "{count} vendéglátóhely választása",
+      "sub": "Digitális étlapok és weboldalak éttermeknek 15+ országban"
+    },
+    {
+      "icon": "Palette",
+      "title": "Saját domain és arculat",
+      "sub": "Étlap a saját címeden, nem egy megosztott weboldal-építőn"
+    }
+  ],
+  "scan": {
+    "heading": "Van nyomtatott vagy PDF étlapod?",
+    "headingAccent": "Az MI 60 másodperc alatt digitalizálja.",
+    "sub": "Tölts fel egy fotót vagy dokumentumot — az MI automatikusan felismeri a kategóriákat, az ételeket és az árakat.",
+    "cta": "Étlap beolvasása"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "MI fordítás",
+      "heading": "Étlap 35 nyelven",
+      "body": "Egy QR — 35 nyelv. Az MI a gasztronómiai kontextust figyelembe véve fordít, így az ételek természetesen hangzanak. A turisták magabiztosabban rendelnek.",
+      "bullets": [
+        "35 nyelv az előfizetésben",
+        "Gasztronómiai MI a Google helyett",
+        "Nyelvváltás egy érintéssel"
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Két vendég ugyanazt a digitális étlapot olvassa különböző nyelveken a saját telefonján"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Allergének",
+      "heading": "Allergének és diétás jelölések minden ételnél",
+      "body": "Jelöld a glutént, laktózt, mogyoróféléket, a vegán és gluténmentes opciókat. A vendégek a saját igényeik szerint szűrik az étlapot, és nyugodtan rendelnek.",
+      "bullets": [
+        "14 allergén kategória",
+        "Vegán és gluténmentes jelölések",
+        "Étlapszűrő diétás korlátozások alapján"
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Egy vendég allergének szerint szűri az étlapot a telefonján, miközben a vendéglátós az allergénlistát szerkeszti egy tableten"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Dizájn és arculat",
+      "heading": "Prémium étlap a saját domaineden",
+      "body": "Videós háttér a kezdőképernyőn, saját dizájn és egy kapcsolati oldal térképpel és közösségi linkekkel — a saját domaineden, nem egy PDF-ben.",
+      "bullets": [
+        "Videós háttér és prémium dizájn",
+        "Saját domain SSL-lel",
+        "Kapcsolat, térkép, közösségi linkek"
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Két telefon egy kávézó asztalán: az étlap kezdőképernyője videós háttérrel és egy kapcsolati oldal térképpel"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Rendelések",
+      "heading": "Online rendelések jutalék nélkül",
+      "body": "A vendégek az étlapról vagy egyenesen WhatsAppon rendelnek — a rendelés a pályára vagy a konyhára fut be, a bevételed 0%-áért.",
+      "bullets": [
+        "Az étlapról vagy WhatsAppon keresztül",
+        "A pályára vagy a konyhára, 0%",
+        "A beállításokban bekapcsolható"
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Két telefon egy asztalon: egy kosár a rendeléssel és egy sikeres rendelés visszaigazolása"
+      }
+    },
+    {
+      "icon": "CalendarCheck",
+      "eyebrow": "Asztalfoglalás",
+      "heading": "Asztalfoglalás 0-24",
+      "body": "A vendégek maguk foglalnak asztalt az étlapon vagy egy linken keresztül, te pedig egy asztalonkénti naptárat látsz, és automatikusan vagy manuálisan hagyod jóvá.",
+      "bullets": [
+        "A vendégek maguk foglalnak",
+        "Naptár az összes asztalra",
+        "Automatikus vagy kézi jóváhagyás"
+      ]
+    },
+    {
+      "icon": "MonitorSmartphone",
+      "eyebrow": "Menedzsment",
+      "heading": "Kezeld bárhonnan",
+      "body": "Az admin felület a böngészőben fut — telefonon, tableten vagy PC-n. Semmit sem kell telepíteni, perceken belül használatra kész.",
+      "bullets": [
+        "Bármilyen eszköz, bármilyen böngésző",
+        "Semmit sem kell telepíteni",
+        "Indulás perceken belül"
+      ]
+    }
+  ],
+  "faq": {
+    "sub": "Amit a vendéglátósok az IQ Rest digitális étlapról kérdeznek. Ha nem találod a kérdésed — írj nekünk WhatsAppon.",
+    "items": [
+      {
+        "q": "Szükségem van technikai tudásra vagy CMS tapasztalatra?",
+        "a": "Nincs szükség semmilyen speciális tudásra. Az admin felületen minden pár érintéssel működik — nincs kódolás, nem kell forrásfájlokkal dolgozni. Egy étel hozzáadása másodpercekbe telik: név, ár, fotó. Egy teljes étlap beállítása általában 30–60 perc alatt megvan."
+      },
+      {
+        "q": "Mi az az IQ Rest digitális étlap?",
+        "a": "Ez a papír étlapod online verziója, amit a vendégek QR-kóddal vagy egy közvetlen linken érnek el: ételfotók, árak, allergének, MI fordítás 35 nyelvre és valós idejű frissítések. Az étlap a mi szervereinken fut — nem kell szoftvert telepíteni vagy karbantartani, csak egy böngészőre van szükséged."
+      },
+      {
+        "q": "A vendégeknek kell alkalmazás vagy speciális eszköz?",
+        "a": "A vendég a telefonja kameráját a QR-kódra irányítja — az étlap megnyílik a böngészőben, telepítés nélkül. Az admin felület is bármilyen modern böngészőben működik: telefonon, tableten vagy laptopon. A QR-kódokat egy sima irodai nyomtatóval is kinyomtathatod."
+      },
+      {
+        "q": "Használhatom az étlapot a saját domainemen?",
+        "a": "Igen. Az étlap SSL-tanúsítvánnyal csatlakozik a domainedhez — a vendégek az éttermed címét látják, például etlap.azettermed.hu. Az ügyfélszolgálatunk elvégzi a domain és a tanúsítvány beállítását; neked csak egy DNS-rekordot kell megadnod."
+      },
+      {
+        "q": "Kezelhetek több éttermet egy fiókból?",
+        "a": "Igen. Adj hozzá több vendéglátóhelyet egyetlen fiókhoz: mindegyiknek saját étlapja, dizájnja, QR-kódjai és analitikája van, a váltás köztük pedig egy kattintás. A helyek száma az előfizetésedtől függ."
+      },
+      {
+        "q": "Milyen nehéz a nulláról beállítani egy étlapot?",
+        "a": "Három lépés: hozz létre kategóriákat, add hozzá az ételeket árakkal és fotókkal, nyomtasd ki a QR-kódokat az asztalokra. Ha van papír étlapod vagy PDF-ed, töltsd fel — az MI felismeri a kategóriákat, neveket és árakat, és automatikusan kitölti a kártyákat. Egy alap étlap 5 perc alatt elindul; a teljes beállítás az ételek számától függ."
+      },
+      {
+        "q": "Milyen támogatást nyújtotok?",
+        "a": "Munkaidőben WhatsAppon és e-mailben válaszolunk. Segítünk a kezdeti beállításban, a domain csatlakoztatásában és az étlap dizájnjában. Ha demóra vagy vezetett beállításra van szükséged — írj nekünk."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Az étlapod online 10 perc alatt. ",
+    "headingAccent": "14 nap teljes hozzáférés.",
+    "sub": "Nincs szükség bankkártyára, bármikor lemondható. {count} étterem bízta ránk az étlapját és weboldalát. Csak egy e-mail cím kell hozzá."
+  },
+  "spotlights": [
+    {
+      "heading": "Étlap 35 nyelven",
+      "sub": "A vendégek a saját anyanyelvükön nyitják meg az étlapot. Az MI a gasztronómiai kontextust figyelembe véve fordítja le az ételek neveit, leírásait, a kategóriákat és az opciókat.",
+      "bullets": [
+        {
+          "icon": "Globe",
+          "title": "35 nyelv az előfizetésben",
+          "sub": "Európai és ázsiai nyelvek is benne vannak — nincs felár nyelvenként"
+        },
+        {
+          "icon": "Timer",
+          "title": "Fordítás mentéskor",
+          "sub": "Adj hozzá vagy módosíts egy ételt — a fordítások minden nyelvre azonnal elkészülnek"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "A kézi módosítások védettek",
+          "sub": "A kézzel javított fordítás zárolva van, az MI soha nem írja felül"
+        }
+      ]
+    },
+    {
+      "heading": "Allergének és diétás jelölések minden ételnél",
+      "sub": "Adj hozzá allergén és diétás jelöléseket az ételkártyához — a vendégek látják ezeket az étlapon, és a saját korlátozásaik szerint szűrhetik az ételeket.",
+      "bullets": [
+        {
+          "icon": "WheatOff",
+          "title": "14 allergén kategória",
+          "sub": "A teljes EU-szabályozás szerinti lista: glutén, mogyorófélék, laktóz, tenger gyümölcsei és még sok más"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "13 diétás jelölés",
+          "sub": "Vegán, vegetáriánus, gluténmentes, halal, kóser, csípős és egyéb diétás címkék"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Szűrés egy érintéssel",
+          "sub": "A vendégek kiválasztják a korlátozásaikat — az étlap csak a megfelelő ételeket mutatja"
+        }
+      ]
+    },
+    {
+      "heading": "Prémium étlap a saját domaineden",
+      "sub": "Fotó vagy videó háttér a kezdőképernyőn, a saját márkaszíned és logód — az étlap úgy néz ki, mint a weboldalad, nem mint egy PDF, és a saját domaineden fut.",
+      "bullets": [
+        {
+          "icon": "Palette",
+          "title": "Saját arculat",
+          "sub": "Videó vagy fotó a kezdőképernyőn, kiemelő szín és logó — grafikus nélkül beállítható"
+        },
+        {
+          "icon": "Globe",
+          "title": "Saját domain SSL-lel",
+          "sub": "Az étlap a te címeden nyílik meg, biztonságos kapcsolaton keresztül"
+        },
+        {
+          "icon": "Map",
+          "title": "Kapcsolat és térkép",
+          "sub": "Egy oldal a címeddel, nyitvatartással, térképpel és közösségi linkekkel — egy teljes éttermi weboldal"
+        }
+      ]
+    },
+    {
+      "heading": "Online rendelések jutalék nélkül",
+      "sub": "A vendég leadja a rendelést az asztaltól — az azonnal megjelenik a vezérlőpulton és a konyhai képernyőn. A platform a bevételed 0%-át kéri.",
+      "bullets": [
+        {
+          "icon": "ShoppingCart",
+          "title": "Az étlapról vagy WhatsAppon",
+          "sub": "Rendszeren belüli rendelés vagy üzenet a WhatsAppodra — válaszd ki a módot a beállításokban"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Egyenesen a konyhára",
+          "sub": "Az új rendelés késedelem nélkül megjelenik a konyhai képernyőn és a pincér eszközén"
+        },
+        {
+          "icon": "Receipt",
+          "title": "0% jutalék",
+          "sub": "A fizetés közted és a vendég között marad — a platform semmit sem tart meg a rendeléseidből"
+        }
+      ]
+    },
+    {
+      "heading": "Asztalfoglalás 0-24",
+      "sub": "A vendégek bármikor foglalhatnak asztalt közvetlenül az étlapról. A rendszer összeveti a kérést a beosztásoddal és a szabad asztalokkal.",
+      "bullets": [
+        {
+          "icon": "CalendarCheck",
+          "title": "Naptár asztalonként",
+          "sub": "A rendszer a társaság méretéhez igazítja az asztalt, és napok, illetve asztalok szerint mutatja a foglalásokat"
+        },
+        {
+          "icon": "CalendarDays",
+          "title": "Automatikus vagy kézi",
+          "sub": "Hagyd jóvá minden foglalást magad, vagy kapcsold be az automatikus megerősítést"
+        },
+        {
+          "icon": "Mail",
+          "title": "E-mailek a vendégnek és neked",
+          "sub": "A vendég e-mailben kap visszaigazolást, a tulajdonosok pedig értesítést az új foglalásról"
+        }
+      ]
+    },
+    {
+      "heading": "Kezeld bárhonnan",
+      "sub": "A vezérlőpult a böngészőben fut telefonon, tableten vagy számítógépen. A változtatások azonnal megjelennek a vendégeknek.",
+      "bullets": [
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Bármilyen eszköz",
+          "sub": "Telefon, tablet vagy PC — elég egy böngésző, nincs szükség telepítésre"
+        },
+        {
+          "icon": "Timer",
+          "title": "Módosítások menet közben",
+          "sub": "Egy árváltozás, stoplista vagy elrejtett étel azonnal élesedik, nem kell közzétenni vagy várni"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Étel opciók",
+          "sub": "Méretek, feltétek és árazott változatok — a vendégek maguk állítják össze az ételüket"
+        }
+      ]
+    }
+  ],
+  "hideFeatureHeading": true
+}

@@ -1,0 +1,151 @@
+{
+  "locale": "ro",
+  "slug": "meniu-qr-cod-restaurant",
+  "trackPrefix": "l_ro_qr",
+  "featureHeading": {
+    "heading": "Nu doar un cod QR",
+    "sub": "Tot ce devine o simplă scanare pentru oaspeții tăi și pentru sală."
+  },
+  "meta": {
+    "title": "Meniu QR pentru restaurante | IQ Rest",
+    "description": "Meniu QR pentru restaurante: oaspeții scanează codul QR de pe masă, deschid meniul în browser și comandă în limba lor. 14 zile gratuit, fără card.",
+    "canonical": "https://iq-rest.com/ro/meniu-qr-cod-restaurant",
+    "ogLocale": "ro_RO",
+    "ogTitle": "Meniu QR pentru restaurante",
+    "ogDescription": "Un QR pe masă, meniul pe telefon — fotografii, alergeni, 35 de limbi și actualizări în timp real.",
+    "brandLine": "IQ Rest — Meniu QR pentru restaurante"
+  },
+  "hero": {
+    "headline": "Meniu QR:\nscanează și comandă",
+    "cta": "Creează un meniu QR",
+    "sub": "Oaspeții scanează QR-ul de pe masă, răsfoiesc fotografiile și alergenii în 35 de limbi și comandă — fără aplicații."
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurante"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafenele"
+    },
+    {
+      "icon": "Martini",
+      "label": "Baruri"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hoteluri"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerii"
+    }
+  ],
+  "scan": {
+    "heading": "Ai deja un meniu tipărit sau un PDF?",
+    "headingAccent": "AI-ul îl transformă într-un meniu QR în 60 de secunde.",
+    "sub": "Încarcă o fotografie a meniului sau un PDF — AI-ul recunoaște categoriile, preparatele și prețurile și le conectează direct la meniul tău QR.",
+    "cta": "Creează un meniu QR"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "Un QR, 35 de limbi",
+      "heading": "Un singur cod QR, un meniu în 35 de limbi.",
+      "body": "Oaspeții scanează QR-ul și își aleg limba: traducerea este făcută de AI cu sensibilitate culinară, nu de un traducător generic. Gata cu meniurile separate pentru turiști sau foile împrăștiate pe masă.",
+      "bullets": [
+        "Un QR tipărit acoperă 35 de limbi, incluse în abonament.",
+        "AI-ul vorbește limba mâncării — numele preparatelor sună natural în fiecare limbă.",
+        "Oaspeții schimbă limba în interiorul meniului, fără să rescaneze QR-ul."
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Doi oaspeți scanează același cod QR de pe masă și citesc meniul în limbi diferite"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Alergeni în QR",
+      "heading": "Alergeni și etichete alimentare în meniul QR.",
+      "body": "Fiecare preparat din meniul din spatele QR-ului poate avea etichete: gluten, lactoză, nuci, fructe de mare, opțiuni vegane și fără gluten. Oaspeții filtrează preparatele după restricțiile lor de pe telefon, fără să întrebe personalul.",
+      "bullets": [
+        "14 categorii de alergeni la nivel de preparat.",
+        "Etichete vegan, vegetarian și fără gluten cu un click în panou.",
+        "Oaspeții filtrează meniul QR după propriile restricții."
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Un oaspete filtrează meniul QR după alergeni pe telefon, în timp ce proprietarul editează lista pe o tabletă"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Mai mult decât un QR",
+      "heading": "Un meniu QR cu aspect de site web pentru restaurant.",
+      "body": "După scanarea codului, oaspeții nu ajung pe un PDF plat: văd un ecran de pornire cu un video sau o fotografie de impact, o descriere a locației și o pagină de contact cu hartă, numere de telefon și linkuri sociale. QR-ul devine ușa de intrare online a restaurantului tău.",
+      "bullets": [
+        "Un video de fundal sau o fotografie de impact pe ecranul de pornire al meniului QR.",
+        "Spațiu pentru a spune povestea locației tale și a fiecărei categorii.",
+        "O pagină de contact integrată: hartă, telefon, Instagram, WhatsApp."
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Două telefoane pe masă: ecranul de pornire al meniului QR cu un video de fundal și o pagină de contact cu hartă"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Comandă din QR · opțional",
+      "heading": "Din codul QR, oaspeții pot și comanda.",
+      "body": "Dincolo de răsfoirea meniului, meniul QR poate deveni un canal de comenzi: oaspeții adaugă preparate în coș și trimit cererea. Comanda ajunge la un ospătar în sală, pe WhatsApp-ul tău sau pe ecranul din bucătărie. Funcționalitatea poate fi activată și dezactivată din setări oricând este nevoie.",
+      "bullets": [
+        "Un coș, comentarii și trimiterea comenzii direct din scanarea QR-ului.",
+        "Comanda ajunge instantaneu în sală, pe WhatsApp sau pe ecranul din bucătărie.",
+        "Activează funcționalitatea pe ore, etaje sau anumite restaurante."
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Două telefoane pe masă: un coș creat din meniul QR și confirmarea unei comenzi trimise"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Ce întreabă proprietarii de restaurante despre meniul QR IQ Rest. Nu găsești întrebarea ta? Scrie-ne pe WhatsApp.",
+    "items": [
+      {
+        "q": "Cum funcționează meniul QR IQ Rest?",
+        "a": "Fiecare masă are un cod QR tipărit. Oaspeții îl scanează cu camera telefonului, iar browserul deschide meniul restaurantului — fotografii, descrieri, alergeni și prețuri actualizate. Nicio aplicație de descărcat pentru oaspeți sau personal."
+      },
+      {
+        "q": "Am nevoie de cunoștințe tehnice pentru a crea un meniu QR?",
+        "a": "Nu. Panoul funcționează cu clickuri, fără cod sau configurări complexe. Adăugarea unui preparat durează câteva secunde: nume, preț, fotografie. Configurarea inițială durează de obicei 30 de minute până la o oră; dacă ai deja un meniu PDF, AI-ul îl convertește automat."
+      },
+      {
+        "q": "Oaspeții trebuie să instaleze o aplicație pentru a citi QR-ul?",
+        "a": "Nu. Camera integrată din iPhone și Android recunoaște codul QR în câteva secunde și deschide meniul direct în browser. Panoul de administrare funcționează de asemenea în orice browser modern — telefon, tabletă sau laptop."
+      },
+      {
+        "q": "Cum se tipăresc codurile QR pentru mese?",
+        "a": "Codurile QR sunt generate automat în panou (unul pe masă sau unul pentru toată locația) și descărcate ca PDF gata de tipar. O imprimantă de birou și un suport sunt tot ce ai nevoie: un suport din plexiglas, un autocolant sau un suport de pahar."
+      },
+      {
+        "q": "Pot folosi propriul domeniu pentru meniul QR?",
+        "a": "Da. Suportăm domeniul restaurantului tău cu un certificat SSL (de exemplu meniu.restaurantultau.ro): când oaspeții scanează QR-ul, văd adresa restaurantului tău, nu un subdomeniu generic. Configurarea DNS durează 5–10 minute și te ghidăm pas cu pas."
+      },
+      {
+        "q": "Pot gestiona coduri QR pentru mai multe restaurante dintr-un singur cont?",
+        "a": "Da, la cerere. Un cont poate reuni mai multe locații, fiecare cu propriile coduri QR, meniu, design și statistici. Scrie-ne pe WhatsApp și vom activa modul multi-restaurant."
+      },
+      {
+        "q": "E greu să lansezi un meniu QR de la zero?",
+        "a": "Trei pași: (1) creezi categoriile; (2) adaugi preparatele cu nume, preț și fotografie; (3) tipărești codurile QR și le pui pe mese. Dacă ai deja un meniu tipărit sau un PDF, încarcă-l — AI-ul recunoaște categoriile și prețurile și completează cardurile. Un meniu de bază poate fi online în 5 minute."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Un meniu QR în 10 minute. ",
+    "headingAccent": "14 zile de acces complet.",
+    "sub": "Fără card, anulezi oricând. Folosit de {count} restaurante. Doar un email — și fără aplicații pentru oaspeții tăi."
+  }
+}

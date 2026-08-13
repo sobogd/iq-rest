@@ -1,0 +1,206 @@
+{
+  "locale": "fr",
+  "slug": "ecran-cuisine",
+  "trackPrefix": "l_kds",
+  "meta": {
+    "title": "Écran de cuisine (KDS) pour restaurant — Les commandes sur l'écran du cuisinier | IQ Rest",
+    "description": "Écran de cuisine KDS pour restaurant : les commandes de la salle et du menu QR arrivent directement sur l'écran du cuisinier. Colonnes par table, statuts Pending / Cooking / Ready / Served, filtres par zone. Fonctionne sur tablette et téléphone.",
+    "canonical": "https://iq-rest.com/fr/ecran-cuisine",
+    "ogLocale": "fr_FR",
+    "ogTitle": "Écran de cuisine (KDS) — Les commandes droit sur l'écran du cuisinier",
+    "ogDescription": "Les commandes de la salle sur l'écran du cuisinier. Colonnes par table, statuts et minuteur. Un appui change le statut.",
+    "brandLine": "IQ Rest — Écran de cuisine pour restaurant"
+  },
+  "hero": {
+    "headline": "Écran de cuisine (KDS) :",
+    "cta": "Configurer l'écran de cuisine",
+    "sub": "Les commandes arrivent instantanément sur l'écran de cuisine : notes, allergènes et minuteur. Changement de statut en un geste.",
+    "headlineAccent": "les commandes droit au cuisinier",
+    "demoLabel": "Démo : écran de cuisine",
+    "tablet": {
+      "src": "/landing/hero-card-kds.webp",
+      "alt": "Tablette avec l'écran de cuisine : commandes par table en colonnes avec statuts"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurants"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafés"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bars"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hôtels"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerias"
+    }
+  ],
+  "scan": {
+    "heading": "Installez l'écran de cuisine",
+    "headingAccent": "en 5 minutes.",
+    "sub": "Scannez votre menu papier ou PDF — l'IA reconnaît les plats, les catégories et les allergènes. Connectez une tablette en cuisine et commencez à recevoir les commandes.",
+    "cta": "Scanner le menu"
+  },
+  "subFeatures": [
+    {
+      "icon": "LayoutGrid",
+      "eyebrow": "Gestion et filtres",
+      "heading": "Plusieurs écrans par zone : cuisine et bar.",
+      "body": "Installez des tablettes distinctes au poste chaud, au bar ou en pâtisserie — chaque écran n'affiche que les plats qui le concernent. Les filtres par statut (Pending / Cooking / Ready / Served) et par catégorie éliminent le superflu de l'écran : le cuisinier ne travaille qu'avec ce qui relève de son poste.",
+      "bullets": [
+        "Plusieurs écrans KDS avec filtre par catégorie de plats.",
+        "Filtre par statut : seulement en préparation et prêt.",
+        "Chaque zone ne voit que son propre flux de commandes."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-filters.webp",
+        "alt": "Tablette sur un support en laiton au passe d'une cuisine de restaurant — KDS avec filtre par statut des plats"
+      }
+    },
+    {
+      "icon": "Timer",
+      "eyebrow": "Cartes et minuteur",
+      "heading": "Un appui change le statut. Commentaires et allergènes mis en évidence par la couleur.",
+      "body": "La carte du plat affiche les options choisies (sans oignon, well done), les commentaires du client, les allergènes et un minuteur depuis la commande. Un appui sur la carte fait passer au statut suivant : Pending → Cooking → Ready → Served. La liste se trie automatiquement par priorité de temps.",
+      "bullets": [
+        "Un appui sur la carte — le statut change instantanément.",
+        "Options, commentaires et allergènes mis en évidence par la couleur.",
+        "Tri par priorité : les plats qui attendent le plus remontent."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-cards.webp",
+        "alt": "Tablette sur un support en laiton au comptoir du bar d'un restaurant — KDS avec cartes de commandes par table"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Ce que les restaurateurs demandent sur l'écran de cuisine dans IQ Rest. Votre question n'est pas dans la liste ? Écrivez-nous sur WhatsApp.",
+    "items": [
+      {
+        "q": "Quels sont les statuts des articles en cuisine ?",
+        "a": "Quatre statuts : Pending — la commande est reçue et attend ; Cooking — le plat est en préparation ; Ready — prêt à être servi ; Served — remis au client. Un appui sur la carte fait passer au statut suivant, sans menus ni confirmations."
+      },
+      {
+        "q": "Peut-on installer plusieurs écrans KDS dans différentes zones de la cuisine ?",
+        "a": "Oui. Une tablette au poste chaud, une autre au bar, une troisième en pâtisserie — chacune avec son filtre par catégories de plats. Tous les écrans sont synchronisés : un statut modifié sur l'un se met à jour sur les autres."
+      },
+      {
+        "q": "Sur quoi faire tourner le KDS — faut-il une tablette spéciale ?",
+        "a": "Le KDS fonctionne dans tout navigateur moderne. Pour une grande cuisine, une tablette sur support au passe convient ; pour un petit établissement, un smartphone suffit. Aucun équipement spécial ni installation : l'appareil se connecte avec un code à six chiffres généré dans le tableau de bord."
+      },
+      {
+        "q": "D'où viennent les commandes qui arrivent sur l'écran de cuisine ?",
+        "a": "De toutes les sources : le client a commandé via le menu QR à table ou le serveur a pris la commande depuis son appareil. Les commandes arrivent sur le KDS automatiquement, avec le numéro de table. Aucun report manuel depuis la caisse n'est nécessaire."
+      },
+      {
+        "q": "Qu'affiche la carte d'une commande ?",
+        "a": "Le nom du plat, les options choisies (sans oignon, well done), le commentaire du client, les allergènes, le statut et un minuteur depuis la commande. Les cartes se trient par priorité : plus un plat attend, plus il remonte dans la colonne."
+      },
+      {
+        "q": "Peut-on filtrer les cartes à l'écran ?",
+        "a": "Oui. Deux filtres : par statut (par exemple, seulement Pending et Cooking) et par catégorie (les boissons au bar, le chaud en cuisine). Les réglages sont mémorisés sur chaque appareil, chaque zone travaille donc avec sa propre sélection."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Une cuisine sans papier en 10 minutes. ",
+    "headingAccent": "14 jours d'accès complet.",
+    "sub": "Sans carte bancaire, annulation à tout moment. {count} restaurants nous font confiance. Seul un email est nécessaire — et les commandes arrivent droit sur l'écran de cuisine."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Des écrans par zone",
+      "sub": "Des tablettes distinctes pour le poste chaud, le bar et la pâtisserie — chaque écran n'affiche que ses plats.",
+      "bullets": [
+        {
+          "icon": "LayoutGrid",
+          "title": "Filtre par catégories",
+          "sub": "Attribuez à chaque écran ses propres catégories du menu"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Un flux propre à chaque zone",
+          "sub": "La cuisine et le bar travaillent en parallèle sans se gêner"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Filtre par statut",
+          "sub": "N'affichez que ce qui est en préparation ou prêt à être servi"
+        }
+      ]
+    },
+    {
+      "heading": "Les statuts en un appui",
+      "sub": "Un appui sur la carte fait passer le plat au statut suivant. La cuisine et le serveur voient la même image.",
+      "bullets": [
+        {
+          "icon": "ClipboardList",
+          "title": "Un statut pour chaque article",
+          "sub": "En préparation, prêt, servi — pour chaque plat séparément, pas pour la commande entière"
+        },
+        {
+          "icon": "Timer",
+          "title": "Minuteur depuis la commande",
+          "sub": "Vous voyez depuis combien de temps le plat attend — les plus anciens remontent"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "Allergènes et commentaires",
+          "sub": "Options, notes du client et allergènes mis en évidence par la couleur"
+        }
+      ]
+    },
+    {
+      "heading": "Les commandes tombent instantanément",
+      "sub": "La commande du client via le menu QR ou du serveur apparaît à l'écran au moment de la saisie, sans recharger la page.",
+      "bullets": [
+        {
+          "icon": "Rocket",
+          "title": "Instantanément à l'écran",
+          "sub": "Connexion permanente — la carte apparaît à la seconde même de la commande"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Toutes les sources en un flux",
+          "sub": "Les commandes des clients et des serveurs arrivent sur un seul écran avec le numéro de table"
+        },
+        {
+          "icon": "Map",
+          "title": "Le numéro de table sur la carte",
+          "sub": "La cuisine sait où porter le plat, le serveur sait où on l'attend"
+        }
+      ]
+    },
+    {
+      "heading": "Connexion en quelques minutes",
+      "sub": "L'écran de cuisine fonctionne dans le navigateur, sur toute tablette ou téléphone — connexion par code à six chiffres.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Tablette ou téléphone",
+          "sub": "Un navigateur suffit — inutile d'acheter du matériel spécial"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Code de connexion",
+          "sub": "Saisissez le code à six chiffres du tableau de bord — l'appareil est rattaché à la cuisine"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Révocation de l'accès",
+          "sub": "Tablette perdue ou remplacée — déconnectez-la depuis le tableau de bord en un appui"
+        }
+      ]
+    }
+  ]
+}

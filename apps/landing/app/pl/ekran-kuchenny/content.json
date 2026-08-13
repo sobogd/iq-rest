@@ -1,0 +1,206 @@
+{
+  "locale": "pl",
+  "slug": "ekran-kuchenny",
+  "trackPrefix": "l_kds",
+  "meta": {
+    "title": "Ekran kuchenny (KDS) dla restauracji — Zamówienia na ekranie kucharza | IQ Rest",
+    "description": "Ekran kuchenny KDS dla restauracji: zamówienia z sali i menu QR trafiają prosto na ekran kucharza. Kolumny dla stolików, statusy Oczekujące / W przygotowaniu / Gotowe / Wydane, filtry stanowisk. Działa na tablecie lub telefonie.",
+    "canonical": "https://iq-rest.com/pl/ekran-kuchenny",
+    "ogLocale": "pl_PL",
+    "ogTitle": "Ekran kuchenny (KDS) — Zamówienia prosto na ekran kucharza",
+    "ogDescription": "Zamówienia z sali na ekranie kucharza. Kolumny dla stolików, statusy i stoper. Jedno kliknięcie zmienia status.",
+    "brandLine": "IQ Rest — Ekran kuchenny dla restauracji"
+  },
+  "hero": {
+    "headline": "Ekran kuchenny (KDS):",
+    "cta": "Uruchom ekran kuchenny",
+    "sub": "Zamówienia natychmiast trafiają na ekran w kuchni: uwagi, alergeny i stoper. Zmiana statusu jednym kliknięciem.",
+    "headlineAccent": "zamówienia prosto do kucharza",
+    "demoLabel": "Demo: ekran w kuchni",
+    "tablet": {
+      "src": "/landing/hero-card-kds.webp",
+      "alt": "Tablet z ekranem kuchennym: zamówienia przypisane do stolików w kolumnach ze statusami"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restauracje"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kawiarnie"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bary"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotele"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerie"
+    }
+  ],
+  "scan": {
+    "heading": "Uruchom ekran kuchenny",
+    "headingAccent": "w 5 minut.",
+    "sub": "Zeskanuj papierowe menu lub PDF — AI rozpozna dania, kategorie i alergeny. Podłącz tablet w kuchni i zacznij odbierać zamówienia.",
+    "cta": "Skanuj menu"
+  },
+  "subFeatures": [
+    {
+      "icon": "LayoutGrid",
+      "eyebrow": "Kontrola i filtry",
+      "heading": "Wiele ekranów dla stanowisk: kuchnia i bar.",
+      "body": "Ustaw osobne tablety na wydawce, barze lub cukierni — każdy ekran pokazuje tylko dania, które do niego należą. Filtry według statusu (Oczekujące / W przygotowaniu / Gotowe / Wydane) i kategorii porządkują widok: kucharze pracują tylko z tym, co należy do ich stanowiska.",
+      "bullets": [
+        "Wiele ekranów KDS z filtrami kategorii dań.",
+        "Filtr statusu: tylko w przygotowaniu i gotowe.",
+        "Każde stanowisko widzi tylko swój przepływ zamówień."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-filters.webp",
+        "alt": "Tablet na mosiężnym stojaku na wydawce w restauracji — KDS przefiltrowany po statusie dania"
+      }
+    },
+    {
+      "icon": "Timer",
+      "eyebrow": "Karty i stoper",
+      "heading": "Jedno kliknięcie zmienia status. Uwagi i alergeny są wyróżnione kolorem.",
+      "body": "Karta dania pokazuje wybrane opcje (bez cebuli, dobrze wysmażone), uwagi gości, alergeny i stoper odliczający czas od złożenia zamówienia. Kliknięcie w kartę zmienia status: Oczekujące → W przygotowaniu → Gotowe → Wydane. Lista sortuje się automatycznie według priorytetu czasu.",
+      "bullets": [
+        "Kliknij kartę — status zmienia się natychmiast.",
+        "Opcje, uwagi i alergeny wyróżnione kolorem.",
+        "Sortowanie po priorytecie: najdłużej oczekujące dania wędrują na górę."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-cards.webp",
+        "alt": "Tablet na mosiężnym stojaku na barze w restauracji — KDS z kartami zamówień dla stolików"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "O co pytają restauratorzy w związku z ekranem kuchennym w IQ Rest. Jeśli nie ma tu Twojego pytania — napisz do nas na WhatsApp.",
+    "items": [
+      {
+        "q": "Jakie statusy mają pozycje w kuchni?",
+        "a": "Cztery statusy: Oczekujące — zamówienie zostało złożone i czeka; W przygotowaniu — danie jest robione; Gotowe — gotowe do odbioru; Wydane — dostarczone gościowi. Kliknięcie w kartę przechodzi do następnego statusu, bez menu i potwierdzeń."
+      },
+      {
+        "q": "Czy mogę ustawić kilka ekranów KDS na różnych stanowiskach w kuchni?",
+        "a": "Tak. Jeden tablet na kuchni gorącej, drugi na barze, trzeci na cukierni — każdy z własnym filtrem kategorii dań. Wszystkie ekrany są zsynchronizowane: status zmieniony na jednym aktualizuje się na pozostałych."
+      },
+      {
+        "q": "Na czym uruchomić KDS — czy potrzebuję specjalnego tabletu?",
+        "a": "KDS działa w każdej nowoczesnej przeglądarce. Tablet na stojaku na wydawce sprawdzi się w dużej kuchni; smartfon wystarczy w małym lokalu. Nie potrzeba specjalnego sprzętu ani instalacji: urządzenie łączy się za pomocą 6-cyfrowego kodu z panelu."
+      },
+      {
+        "q": "Skąd biorą się zamówienia na ekranie kuchennym?",
+        "a": "Ze wszystkich źródeł: od gościa składającego zamówienie przez menu QR na stoliku, lub od kelnera przyjmującego je na swoim urządzeniu. Zamówienia trafiają na KDS automatycznie, z numerem stolika. Bez ręcznego przepisywania z POSa."
+      },
+      {
+        "q": "Co pokazuje karta zamówienia?",
+        "a": "Nazwę dania, wybrane opcje (bez cebuli, dobrze wysmażone), uwagę gościa, alergeny, status i stoper odliczający czas od złożenia zamówienia. Karty sortują się według priorytetu: im dłużej danie czeka, tym wyżej znajduje się w kolumnie."
+      },
+      {
+        "q": "Czy można filtrować karty na ekranie?",
+        "a": "Tak. Dwa filtry: według statusu (np. tylko Oczekujące i W przygotowaniu) oraz według kategorii (napoje na bar, dania gorące na kuchnię). Ustawienia zapisują się dla każdego urządzenia, więc każde stanowisko pracuje ze swoim zestawem."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Kuchnia bez papieru w 10 minut. ",
+    "headingAccent": "14 dni pełnego dostępu.",
+    "sub": "Bez podawania karty, zrezygnuj w dowolnej chwili. Wybrało nas {count} lokali. Wystarczy adres e-mail — a zamówienia trafią prosto na ekran w kuchni."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Ekrany dla stanowisk",
+      "sub": "Osobne tablety na wydawce, barze i cukierni — każdy ekran pokazuje tylko swoje dania.",
+      "bullets": [
+        {
+          "icon": "LayoutGrid",
+          "title": "Filtr kategorii",
+          "sub": "Przypisz każdemu ekranowi własne kategorie menu"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Przepływ dla stanowiska",
+          "sub": "Kuchnia i bar pracują równolegle, nie wchodząc sobie w drogę"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Filtr statusów",
+          "sub": "Pokaż tylko to, co jest w przygotowaniu lub gotowe do odbioru"
+        }
+      ]
+    },
+    {
+      "heading": "Statusy jednym kliknięciem",
+      "sub": "Kliknięcie w kartę przenosi danie do kolejnego statusu. Kuchnia i kelner widzą to samo.",
+      "bullets": [
+        {
+          "icon": "ClipboardList",
+          "title": "Status dla każdej pozycji",
+          "sub": "W przygotowaniu, gotowe, wydane — dla dania, nie dla całego zamówienia"
+        },
+        {
+          "icon": "Timer",
+          "title": "Stoper od momentu zamówienia",
+          "sub": "Zobacz, jak długo danie czeka — najdłużej oczekujące wędrują na górę"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "Alergeny i uwagi",
+          "sub": "Opcje, notatki gości i alergeny wyróżnione kolorem"
+        }
+      ]
+    },
+    {
+      "heading": "Zamówienia trafiają natychmiast",
+      "sub": "Zamówienie gościa z menu QR lub od kelnera pojawia się na ekranie w momencie złożenia, bez odświeżania strony.",
+      "bullets": [
+        {
+          "icon": "Rocket",
+          "title": "Na ekranie natychmiast",
+          "sub": "Stałe połączenie — karta pojawia się w sekundę po złożeniu zamówienia"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Wszystkie źródła w jednym strumieniu",
+          "sub": "Zamówienia od gości i kelnerów trafiają na jeden ekran z numerem stolika"
+        },
+        {
+          "icon": "Map",
+          "title": "Numer stolika na karcie",
+          "sub": "Kuchnia wie, gdzie idzie danie; kelner wie, gdzie jest oczekiwane"
+        }
+      ]
+    },
+    {
+      "heading": "Połączenie w kilka minut",
+      "sub": "Ekran kuchenny działa w przeglądarce na dowolnym tablecie lub telefonie — łączony za pomocą 6-cyfrowego kodu.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Tablet lub telefon",
+          "sub": "Wystarczy przeglądarka — bez kupowania specjalnego sprzętu"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Kod parowania",
+          "sub": "Wpisz 6-cyfrowy kod z panelu — urządzenie jest połączone z kuchnią"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Cofnięcie dostępu",
+          "sub": "Zgubiony lub wymieniony tablet — odłącz go z panelu jednym kliknięciem"
+        }
+      ]
+    }
+  ]
+}

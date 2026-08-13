@@ -1,0 +1,206 @@
+{
+  "locale": "ro",
+  "slug": "display-bucatarie",
+  "trackPrefix": "l_kds",
+  "meta": {
+    "title": "Sistem KDS pentru restaurante — Comenzi pe ecranul bucătarului | IQ Rest",
+    "description": "Un ecran KDS pentru bucătăria restaurantului: comenzile din sală și din meniul QR merg direct pe ecranul bucătarului. Coloane pe mese, statusuri În așteptare / În lucru / Gata / Servit, filtre pe secții. Rulează pe tabletă sau telefon.",
+    "canonical": "https://iq-rest.com/ro/display-bucatarie",
+    "ogLocale": "ro_RO",
+    "ogTitle": "Sistem KDS — Comenzi direct pe ecranul bucătarului",
+    "ogDescription": "Comenzile din sală pe ecranul bucătarului. Coloane pe mese, statusuri și un cronometru. O atingere schimbă statusul.",
+    "brandLine": "IQ Rest — Ecran pentru bucătăria restaurantului"
+  },
+  "hero": {
+    "headline": "Sistem KDS pentru bucătărie:",
+    "cta": "Configurează ecranul pentru bucătărie",
+    "sub": "Comenzile ajung instantaneu pe ecranul din bucătărie: mențiuni, alergeni și cronometru. Statusul se schimbă dintr-o atingere.",
+    "headlineAccent": "comenzi direct la bucătar",
+    "demoLabel": "Demo: ecranul din bucătărie",
+    "tablet": {
+      "src": "/landing/hero-card-kds.webp",
+      "alt": "Tabletă cu ecran KDS: comenzi pe mese în coloane cu statusuri"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurante"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafenele"
+    },
+    {
+      "icon": "Martini",
+      "label": "Baruri"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hoteluri"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerii"
+    }
+  ],
+  "scan": {
+    "heading": "Configurează ecranul pentru bucătărie",
+    "headingAccent": "în 5 minute.",
+    "sub": "Scanează un meniu tipărit sau un PDF — AI-ul recunoaște preparatele, categoriile și alergenii. Conectează o tabletă în bucătărie și începe să primești comenzi.",
+    "cta": "Scanează meniul"
+  },
+  "subFeatures": [
+    {
+      "icon": "LayoutGrid",
+      "eyebrow": "Control și filtre",
+      "heading": "Mai multe ecrane pe secții: bucătărie și bar.",
+      "body": "Configurează tablete separate pentru secția caldă, bar sau cofetărie — fiecare ecran arată doar preparatele care îi aparțin. Filtrele după status (În așteptare / În lucru / Gata / Servit) și după categorie fac ordine: bucătarii lucrează doar cu ce ține de secția lor.",
+      "bullets": [
+        "Mai multe ecrane KDS cu filtre pe categorii de preparate.",
+        "Filtru de status: doar în lucru și gata.",
+        "Fiecare secție vede doar propriul flux de comenzi."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-filters.webp",
+        "alt": "Tabletă pe un suport la pasul de servire din bucătărie — un KDS filtrat după statusul preparatelor"
+      }
+    },
+    {
+      "icon": "Timer",
+      "eyebrow": "Carduri și cronometru",
+      "heading": "O atingere schimbă statusul. Comentariile și alergenii sunt evidențiate color.",
+      "body": "Cardul unui preparat arată opțiunile selectate (fără ceapă, bine făcut), comentariile oaspeților, alergenii și un cronometru pornit din momentul plasării comenzii. Apăsând pe card avansezi statusul: În așteptare → În lucru → Gata → Servit. Lista se sortează automat după prioritatea de timp.",
+      "bullets": [
+        "Atinge un card — statusul avansează instantaneu.",
+        "Opțiunile, comentariile și alergenii evidențiate color.",
+        "Sortate după prioritate: preparatele care așteaptă cel mai mult urcă în top."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-cards.webp",
+        "alt": "Tabletă pe un suport pe barul unui restaurant — un KDS cu carduri de comenzi pe mese"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Ce întreabă proprietarii de restaurante despre ecranul pentru bucătărie din IQ Rest. Dacă nu găsești întrebarea ta — scrie-ne pe WhatsApp.",
+    "items": [
+      {
+        "q": "Ce statusuri au preparatele în bucătărie?",
+        "a": "Patru statusuri: În așteptare — comanda este plasată și așteaptă; În lucru — preparatul este în curs de gătire; Gata — gata de preluare; Servit — livrat oaspetelui. Apăsând pe card avansezi la următorul status, fără meniuri sau confirmări."
+      },
+      {
+        "q": "Pot configura mai multe ecrane KDS în secții diferite ale bucătăriei?",
+        "a": "Da. O tabletă la secția caldă, alta la bar, a treia la cofetărie — fiecare cu propriul filtru de categorii. Toate ecranele rămân sincronizate: un status schimbat pe unul se actualizează pe restul."
+      },
+      {
+        "q": "Pe ce rulez KDS-ul — am nevoie de o tabletă specială?",
+        "a": "KDS-ul rulează în orice browser modern. O tabletă pe un suport la pasul de servire este potrivită pentru o bucătărie mare; un smartphone funcționează pentru o locație mică. Nu este nevoie de hardware special sau instalare: dispozitivul se conectează cu un cod din 6 cifre din panou."
+      },
+      {
+        "q": "De unde vin comenzile pe ecranul din bucătărie?",
+        "a": "Din toate sursele: un oaspete care plasează o comandă prin meniul QR de la masă, sau un ospătar care o preia pe propriul dispozitiv. Comenzile ajung automat în KDS, cu numărul mesei. Fără reintroducere manuală dintr-un POS."
+      },
+      {
+        "q": "Ce arată un card de comandă?",
+        "a": "Numele preparatului, opțiunile selectate (fără ceapă, bine făcut), comentariul oaspetelui, alergenii, statusul și un cronometru pornit de la plasarea comenzii. Cardurile se sortează după prioritate: cu cât un preparat așteaptă mai mult, cu atât stă mai sus în coloană."
+      },
+      {
+        "q": "Pot fi filtrate cardurile de pe ecran?",
+        "a": "Da. Două filtre: după status (de exemplu, doar În așteptare și În lucru) și după categorie (băuturi la bar, preparate calde la bucătărie). Setările se salvează pe fiecare dispozitiv, deci fiecare secție lucrează cu propriul set."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "O bucătărie fără hârtii în 10 minute. ",
+    "headingAccent": "14 zile de acces complet.",
+    "sub": "Fără card, anulezi oricând. Folosit de {count} restaurante. Ai nevoie doar de un email — și comenzile ajung direct pe ecranul din bucătărie."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Ecrane pe secții",
+      "sub": "Tablete separate pentru secția caldă, bar și cofetărie — fiecare ecran arată doar preparatele sale.",
+      "bullets": [
+        {
+          "icon": "LayoutGrid",
+          "title": "Filtru de categorii",
+          "sub": "Atribuie fiecărui ecran propriile categorii din meniu"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Un flux pe secție",
+          "sub": "Bucătăria și barul lucrează în paralel fără să se încurce reciproc"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Filtru de status",
+          "sub": "Afișează doar ce este în lucru sau gata de preluare"
+        }
+      ]
+    },
+    {
+      "heading": "Statusuri dintr-o atingere",
+      "sub": "O atingere pe un card mută preparatul la următorul status. Bucătăria și ospătarul văd aceeași imagine.",
+      "bullets": [
+        {
+          "icon": "ClipboardList",
+          "title": "Un status per articol",
+          "sub": "În lucru, gata, servit — per preparat, nu per comandă"
+        },
+        {
+          "icon": "Timer",
+          "title": "Un cronometru din momentul comenzii",
+          "sub": "Vezi cât a așteptat un preparat — cele care așteaptă cel mai mult urcă în top"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "Alergeni și comentarii",
+          "sub": "Opțiunile, notele oaspeților și alergenii evidențiate color"
+        }
+      ]
+    },
+    {
+      "heading": "Comenzile ajung instantaneu",
+      "sub": "Comanda unui oaspete din meniul QR sau de la un ospătar apare pe ecran în momentul în care este plasată, fără reîncărcarea paginii.",
+      "bullets": [
+        {
+          "icon": "Rocket",
+          "title": "Pe ecran instantaneu",
+          "sub": "O conexiune permanentă — cardul apare în secunda în care comanda este plasată"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Toate sursele într-un singur flux",
+          "sub": "Comenzile oaspeților și ale ospătarilor sosesc pe un singur ecran cu numărul mesei"
+        },
+        {
+          "icon": "Map",
+          "title": "Numărul mesei pe card",
+          "sub": "Bucătăria vede unde merge preparatul; ospătarul vede unde este așteptat"
+        }
+      ]
+    },
+    {
+      "heading": "Conectat în câteva minute",
+      "sub": "Ecranul pentru bucătărie rulează în browser pe orice tabletă sau telefon — conectat cu un cod din 6 cifre.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Tabletă sau telefon",
+          "sub": "Un browser este suficient — fără hardware special de cumpărat"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Cod de asociere",
+          "sub": "Introdu codul din 6 cifre din panou — dispozitivul este legat la bucătărie"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Revocarea accesului",
+          "sub": "Tabletă pierdută sau înlocuită — deconecteaz-o din panou dintr-o atingere"
+        }
+      ]
+    }
+  ]
+}

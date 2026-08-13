@@ -1,0 +1,206 @@
+{
+  "locale": "is",
+  "slug": "eldhus-skjar",
+  "trackPrefix": "l_kds",
+  "meta": {
+    "title": "Eldhússkjár (KDS) fyrir veitingastaði — Pantanir á skjá kokksins | IQ Rest",
+    "description": "KDS eldhússkjár fyrir veitingastaði: pantanir úr sal og af QR matseðli fara beint á skjá kokksins. Dálkar eftir borðum, staða (Bíður / Í vinnslu / Tilbúið / Afgreitt), síur eftir vinnustöðvum. Keyrir á spjaldtölvu eða síma.",
+    "canonical": "https://iq-rest.com/is/eldhus-skjar",
+    "ogLocale": "is_IS",
+    "ogTitle": "Eldhússkjár (KDS) — Pantanir beint á skjá kokksins",
+    "ogDescription": "Pantanir úr sal beint á skjá kokksins. Dálkar eftir borðum, staða og tímamælir. Einn smellur breytir stöðunni.",
+    "brandLine": "IQ Rest — Eldhússkjár fyrir veitingastaði"
+  },
+  "hero": {
+    "headline": "Eldhússkjár (KDS):",
+    "cta": "Setja upp eldhússkjá",
+    "sub": "Pantanir berast á eldhússkjáinn samstundis: athugasemdir, ofnæmisvaldar og tímamælir. Staðan breytist með einum smelli.",
+    "headlineAccent": "pantanir beint til kokksins",
+    "demoLabel": "Prufa: eldhússkjár",
+    "tablet": {
+      "src": "/landing/hero-card-kds.webp",
+      "alt": "Spjaldtölva með eldhússkjá: pantanir eftir borðum í dálkum með stöðu"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Veitingastaðir"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kaffihús"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barir"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hótel"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pítsustaðir"
+    }
+  ],
+  "scan": {
+    "heading": "Settu upp eldhússkjáinn",
+    "headingAccent": "á 5 mínútum.",
+    "sub": "Skannaðu prentaðan matseðil eða PDF — gervigreindin greinir rétti, flokka og ofnæmisvalda. Tengdu spjaldtölvu í eldhúsinu og byrjaðu að taka við pöntunum.",
+    "cta": "Skanna matseðil"
+  },
+  "subFeatures": [
+    {
+      "icon": "LayoutGrid",
+      "eyebrow": "Stjórnun og síur",
+      "heading": "Margir skjáir eftir vinnustöðvum: eldhús og bar.",
+      "body": "Settu upp aðskildar spjaldtölvur fyrir heita matinn, barinn eða eftirréttina — hver skjár sýnir aðeins þá rétti sem tilheyra honum. Síur eftir stöðu (Bíður / Í vinnslu / Tilbúið / Afgreitt) og eftir flokkum hreinsa til á skjánum: kokkar vinna aðeins með það sem tilheyrir þeirra vinnustöð.",
+      "bullets": [
+        "Margir KDS skjáir með síum fyrir réttaflokka.",
+        "Stöðusía: aðeins í vinnslu og tilbúið.",
+        "Hver vinnustöð sér aðeins sitt eigið flæði pantana."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-filters.webp",
+        "alt": "Spjaldtölva á standi á afgreiðsluborði í eldhúsi — KDS síað eftir stöðu rétta"
+      }
+    },
+    {
+      "icon": "Timer",
+      "eyebrow": "Spjöld og tímamælir",
+      "heading": "Einn smellur breytir stöðunni. Athugasemdir og ofnæmisvaldar eru litamerkt.",
+      "body": "Réttaspjald sýnir valda valmöguleika (enginn laukur, vel steikt), athugasemdir gesta, ofnæmisvalda og tímamæli sem telur frá því pöntunin var gerð. Ef smellt er á spjaldið færist staðan áfram: Bíður → Í vinnslu → Tilbúið → Afgreitt. Listinn raðar sér sjálfkrafa eftir forgangi.",
+      "bullets": [
+        "Smelltu á spjald — staðan færist áfram samstundis.",
+        "Valmöguleikar, athugasemdir og ofnæmisvaldar litamerkt.",
+        "Raðað eftir forgangi: þeir réttir sem hafa beðið lengst færast efst."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-cards.webp",
+        "alt": "Spjaldtölva á standi á barborði — KDS með pöntunarspjöldum eftir borðum"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Það sem veitingamenn spyrja um eldhússkjáinn í IQ Rest. Ef spurningin þín er ekki á listanum — sendu okkur skilaboð á WhatsApp.",
+    "items": [
+      {
+        "q": "Hvaða stöðu geta réttir í eldhúsinu haft?",
+        "a": "Fjórar stöður: Bíður — pöntunin er komin inn og bíður; Í vinnslu — verið er að elda réttinn; Tilbúið — tilbúið til afgreiðslu; Afgreitt — komið til gestsins. Ef smellt er á spjaldið færist það á næstu stöðu, án valmynda eða staðfestinga."
+      },
+      {
+        "q": "Get ég sett upp nokkra KDS skjái á mismunandi vinnustöðvum í eldhúsinu?",
+        "a": "Já. Ein spjaldtölva fyrir heita matinn, önnur á barnum, sú þriðja fyrir eftirréttina — hver með sína eigin síu fyrir réttaflokka. Allir skjáir samstillast: ef stöðu er breytt á einum uppfærist hún á hinum."
+      },
+      {
+        "q": "Á hverju keyri ég KDS — þarf ég sérstaka spjaldtölvu?",
+        "a": "KDS keyrir í öllum nútímavöfrum. Spjaldtölva á standi við afgreiðsluborðið hentar stóru eldhúsi; snjallsími dugar fyrir minni staði. Enginn sérstakur vélbúnaður eða uppsetning nauðsynleg: tækið tengist með sex stafa kóða úr stjórnborðinu."
+      },
+      {
+        "q": "Hvaðan koma pantanirnar á eldhússkjáinn?",
+        "a": "Úr öllum áttum: frá gesti sem pantar í gegnum QR matseðilinn á borðinu, eða frá þjóni sem tekur við henni í sínu eigin tæki. Pantanir berast sjálfkrafa á KDS, með borðnúmeri. Engin handvirk innsláttur úr kassakerfi."
+      },
+      {
+        "q": "Hvað sést á pöntunarspjaldi?",
+        "a": "Nafn réttarins, valdir valmöguleikar (enginn laukur, vel steikt), athugasemd gestsins, ofnæmisvaldar, staðan og tímamælir sem telur frá því pöntunin var gerð. Spjöldin raðast eftir forgangi: því lengur sem réttur bíður, því ofar er hann í dálkinum."
+      },
+      {
+        "q": "Er hægt að sía spjöldin á skjánum?",
+        "a": "Já. Tvær síur: eftir stöðu (til dæmis aðeins Bíður og Í vinnslu) og eftir flokki (drykkir á barinn, heitir réttir í eldhúsið). Stillingar vistast á hverju tæki, svo hver vinnustöð vinnur með sitt eigið flæði."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Pappírslaust eldhús á 10 mínútum. ",
+    "headingAccent": "14 daga fullur aðgangur.",
+    "sub": "Ekkert kort þarf, hættu hvenær sem er. {count} veitingastaðir treysta okkur. Það eina sem þú þarft er netfang — og pantanir lenda beint á eldhússkjánum."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Skjáir eftir vinnustöðvum",
+      "sub": "Aðskildar spjaldtölvur fyrir heita matinn, barinn og eftirréttina — hver skjár sýnir aðeins sína rétti.",
+      "bullets": [
+        {
+          "icon": "LayoutGrid",
+          "title": "Sía eftir flokkum",
+          "sub": "Úthlutaðu hverjum skjá sínum eigin flokkum af matseðlinum"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Flæði fyrir hverja stöð",
+          "sub": "Eldhús og bar vinna samhliða án þess að þvælast fyrir hvort öðru"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Stöðusía",
+          "sub": "Sýndu aðeins það sem er í vinnslu eða tilbúið til afgreiðslu"
+        }
+      ]
+    },
+    {
+      "heading": "Staða með einum smelli",
+      "sub": "Smellur á spjald færir réttinn á næstu stöðu. Eldhúsið og þjónninn sjá sömu mynd.",
+      "bullets": [
+        {
+          "icon": "ClipboardList",
+          "title": "Staða fyrir hvern rétt",
+          "sub": "Í vinnslu, tilbúið, afgreitt — fyrir hvern rétt, ekki pöntunina í heild"
+        },
+        {
+          "icon": "Timer",
+          "title": "Tímamælir frá pöntun",
+          "sub": "Sjáðu hversu lengi réttur hefur beðið — þeir sem hafa beðið lengst færast efst"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "Ofnæmisvaldar og athugasemdir",
+          "sub": "Valmöguleikar, séróskir gesta og ofnæmisvaldar litamerkt"
+        }
+      ]
+    },
+    {
+      "heading": "Pantanir lenda samstundis",
+      "sub": "Pöntun gests af QR matseðlinum eða frá þjóni birtist á skjánum um leið og hún er gerð, án þess að endurhlaða síðuna.",
+      "bullets": [
+        {
+          "icon": "Rocket",
+          "title": "Á skjánum samstundis",
+          "sub": "Stöðug tenging — spjaldið birtist á sömu sekúndu og pantað er"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Allar pantanir í einu flæði",
+          "sub": "Pantanir frá gestum og þjónum berast á einn skjá með borðnúmeri"
+        },
+        {
+          "icon": "Map",
+          "title": "Borðnúmer á spjaldinu",
+          "sub": "Eldhúsið sér hvert rétturinn fer; þjónninn sér hvar hans er beðið"
+        }
+      ]
+    },
+    {
+      "heading": "Tengt á nokkrum mínútum",
+      "sub": "Eldhússkjárinn keyrir í vafranum á hvaða spjaldtölvu eða síma sem er — tengt með sex stafa kóða.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Spjaldtölva eða sími",
+          "sub": "Vafri dugar — enginn sérstakur vélbúnaður nauðsynlegur"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Tengingarkóði",
+          "sub": "Sláðu inn sex stafa kóðann úr stjórnborðinu — tækið er tengt við eldhúsið"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Afturköllun aðgangs",
+          "sub": "Spjaldtölva týnd eða endurnýjuð — aftengdu hana úr stjórnborðinu með einum smelli"
+        }
+      ]
+    }
+  ]
+}

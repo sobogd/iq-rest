@@ -1,0 +1,332 @@
+{
+  "locale": "ro",
+  "slug": "meniu-digital-restaurant",
+  "trackPrefix": "l_digital",
+  "meta": {
+    "title": "Meniu digital pentru restaurante | IQ Rest",
+    "description": "Meniu digital pentru restaurantul tău: meniu online cu fotografii, alergeni, traducere AI și actualizare a prețurilor în timp real. 14 zile gratuit, fără card.",
+    "canonical": "https://iq-rest.com/ro/meniu-digital-restaurant",
+    "ogLocale": "ro_RO",
+    "ogTitle": "Meniu digital pentru restaurante",
+    "ogDescription": "Versiunea online a meniului tău tipărit cu fotografii, alergeni și traducere AI. Prețurile se actualizează în timp real.",
+    "brandLine": "IQ Rest — Meniu digital pentru restaurante"
+  },
+  "hero": {
+    "headline": "Meniu digital și site web",
+    "headlineAccent": "pentru restaurantul tău",
+    "cta": "Creează un meniu digital",
+    "demoLabel": "Demo: meniul văzut de oaspeți",
+    "sub": "Lansează în 10 minute: preia comenzi de la masă, actualizează prețurile pe loc și primește rezervări direct, fără comisioane.",
+    "phones": [
+      {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Telefon cu site-ul unui restaurant: fotografii, rezervări și acces la meniul online"
+      },
+      {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Telefon cu pagina unui preparat: fotografie, preț și etichete pentru alergeni"
+      }
+    ]
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurante"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafenele"
+    },
+    {
+      "icon": "Martini",
+      "label": "Baruri"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hoteluri"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerii"
+    }
+  ],
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Un meniu în 10 minute",
+      "sub": "Fără programatori și fără configurări complicate"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Suport rapid",
+      "sub": "Te ajutăm să-ți configurezi meniul pe chat în câteva ore"
+    },
+    {
+      "icon": "Globe",
+      "title": "Ales de {count} locații",
+      "sub": "Meniuri digitale și site-uri pentru restaurante din 15+ țări"
+    },
+    {
+      "icon": "Palette",
+      "title": "Domeniu și brand propriu",
+      "sub": "Un meniu pe adresa ta web, nu pe un constructor de site-uri comun"
+    }
+  ],
+  "scan": {
+    "heading": "Ai un meniu tipărit sau un PDF?",
+    "headingAccent": "AI-ul îl digitalizează în 60 de secunde.",
+    "sub": "Încarcă o fotografie sau un document — AI-ul recunoaște automat categoriile, preparatele și prețurile.",
+    "cta": "Scanează meniul"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "Traducere AI",
+      "heading": "Un meniu în 35 de limbi",
+      "body": "Un singur QR — 35 de limbi. AI-ul traduce ținând cont de contextul culinar, astfel încât preparatele sună natural. Turiștii comandă cu mai multă încredere.",
+      "bullets": [
+        "35 de limbi incluse în abonament",
+        "AI culinar în loc de Google Translate",
+        "Schimbi limba dintr-o atingere"
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Doi oaspeți citesc același meniu digital în limbi diferite pe propriile telefoane"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Alergeni",
+      "heading": "Alergeni și diete pentru fiecare preparat",
+      "body": "Etichetează glutenul, lactoza, nucile, opțiunile vegane și fără gluten. Oaspeții filtrează meniul după nevoile lor și comandă fără griji.",
+      "bullets": [
+        "14 categorii de alergeni",
+        "Etichete vegan și fără gluten",
+        "Filtru de meniu pentru restricții alimentare"
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Un oaspete filtrează meniul după alergeni pe telefon, în timp ce proprietarul editează lista de alergeni pe o tabletă"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Design și brand",
+      "heading": "Un meniu premium pe propriul domeniu web",
+      "body": "Un fundal video pe ecranul de pornire, designul tău și o pagină de contact cu hartă și linkuri de social media — pe domeniul tău, nu un simplu PDF.",
+      "bullets": [
+        "Fundal video și design premium",
+        "Domeniu propriu cu certificat SSL",
+        "Contact, hartă, rețele sociale"
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Două telefoane pe o masă de cafenea: ecranul principal al meniului cu fundal video și o pagină de contact cu hartă"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Comenzi",
+      "heading": "Comenzi online fără comisioane",
+      "body": "Oaspeții comandă din meniu sau direct pe WhatsApp — comanda ajunge în sală sau în bucătărie, 0% comision din încasări.",
+      "bullets": [
+        "Din meniu sau prin WhatsApp",
+        "În sală sau bucătărie, 0% comision",
+        "Se activează din setări"
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Două telefoane pe masă: un coș cu o comandă și confirmarea unei comenzi trimise cu succes"
+      }
+    },
+    {
+      "icon": "CalendarCheck",
+      "eyebrow": "Rezervări",
+      "heading": "Rezervări mese 24/7",
+      "body": "Oaspeții își rezervă singuri masa din meniu sau de pe un link, tu vezi un calendar pe mese și confirmi automat sau manual.",
+      "bullets": [
+        "Oaspeții rezervă singuri",
+        "Calendar pentru toate mesele",
+        "Confirmare automată sau manuală"
+      ]
+    },
+    {
+      "icon": "MonitorSmartphone",
+      "eyebrow": "Management",
+      "heading": "Gestionează de oriunde",
+      "body": "Panoul de administrare funcționează în browser — telefon, tabletă sau PC. Nu instalezi nimic, ești gata în câteva minute.",
+      "bullets": [
+        "Orice dispozitiv, orice browser",
+        "Fără instalare",
+        "Online în câteva minute"
+      ]
+    }
+  ],
+  "faq": {
+    "sub": "Ce întreabă proprietarii de restaurante despre meniul digital IQ Rest. Dacă nu găsești întrebarea ta — scrie-ne pe WhatsApp.",
+    "items": [
+      {
+        "q": "Am nevoie de cunoștințe tehnice sau experiență cu platforme CMS?",
+        "a": "Nu sunt necesare cunoștințe speciale. Totul în panoul de administrare se face din câteva atingeri — fără cod, fără fișiere sursă. Adăugarea unui preparat durează câteva secunde: nume, preț, fotografie. Configurarea completă a unui meniu durează de obicei 30–60 de minute."
+      },
+      {
+        "q": "Ce este meniul digital IQ Rest?",
+        "a": "Este o versiune online a meniului tău, disponibilă pentru oaspeți prin cod QR sau link direct: fotografii ale preparatelor, prețuri, alergeni, traducere AI în 35 de limbi și actualizări în timp real. Meniul rulează pe serverele noastre — nu trebuie să instalezi sau să întreții niciun software, ai nevoie doar de un browser."
+      },
+      {
+        "q": "Oaspeții au nevoie de o aplicație sau echipament special?",
+        "a": "Oaspetele îndreaptă camera telefonului spre codul QR — meniul se deschide în browser, fără instalare. Panoul de administrare funcționează de asemenea în orice browser modern: telefon, tabletă sau laptop. Codurile QR se pot tipări la o imprimantă obișnuită."
+      },
+      {
+        "q": "Pot găzdui meniul pe propriul domeniu web?",
+        "a": "Da. Meniul se conectează la domeniul tău cu un certificat SSL — oaspeții văd adresa restaurantului tău, de exemplu meniu.restaurantultau.ro. Suportul nostru se ocupă de configurarea domeniului și a certificatului; trebuie doar să ne oferi o înregistrare DNS."
+      },
+      {
+        "q": "Pot gestiona mai multe restaurante dintr-un singur cont?",
+        "a": "Da. Adaugă locații într-un singur cont: fiecare are propriul meniu, design, coduri QR și statistici, iar trecerea de la una la alta se face cu un click. Numărul de locații depinde de abonamentul tău."
+      },
+      {
+        "q": "Cât de greu este să configurezi un meniu de la zero?",
+        "a": "Trei pași: creezi categoriile, adaugi preparatele cu prețuri și fotografii, tipărești codurile QR pentru mese. Dacă ai un meniu tipărit sau un PDF, încarcă-l — AI-ul recunoaște categoriile, numele și prețurile și completează automat cardurile. Un meniu de bază se lansează în 5 minute; configurarea completă depinde de numărul de preparate."
+      },
+      {
+        "q": "Ce fel de suport oferiți?",
+        "a": "Răspundem pe WhatsApp și prin email în timpul orelor de program. Te ajutăm cu configurarea inițială, conectarea domeniului și designul meniului. Dacă ai nevoie de un demo sau de asistență la implementare — scrie-ne."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Meniul tău online în 10 minute. ",
+    "headingAccent": "14 zile de acces complet.",
+    "sub": "Fără card, anulezi oricând. {count} restaurante ne-au încredințat meniurile și site-urile lor. Ai nevoie doar de o adresă de email."
+  },
+  "spotlights": [
+    {
+      "heading": "Un meniu în 35 de limbi",
+      "sub": "Oaspeții deschid meniul în limba lor maternă. AI-ul traduce numele preparatelor, descrierile, categoriile și opțiunile ținând cont de contextul culinar.",
+      "bullets": [
+        {
+          "icon": "Globe",
+          "title": "35 de limbi în abonament",
+          "sub": "Limbi europene și asiatice incluse — fără costuri suplimentare per limbă"
+        },
+        {
+          "icon": "Timer",
+          "title": "Tradus la salvare",
+          "sub": "Adaugă sau editează un preparat — traducerile în toate limbile meniului sunt gata imediat"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Modificările manuale sunt protejate",
+          "sub": "O traducere pe care o corectezi manual este blocată, iar AI-ul nu o va suprascrie niciodată"
+        }
+      ]
+    },
+    {
+      "heading": "Alergeni și diete pentru fiecare preparat",
+      "sub": "Adaugă etichete pentru alergeni și diete pe cardul preparatului — oaspeții le văd în meniu și filtrează preparatele în funcție de restricțiile lor.",
+      "bullets": [
+        {
+          "icon": "WheatOff",
+          "title": "14 categorii de alergeni",
+          "sub": "Lista completă conform reglementărilor UE: gluten, nuci, lactoză, fructe de mare și altele"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "13 etichete alimentare",
+          "sub": "Vegan, vegetarian, fără gluten, halal, cușer, picant și alte etichete"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Filtru dintr-o atingere",
+          "sub": "Oaspeții își selectează restricțiile — meniul afișează doar preparatele potrivite"
+        }
+      ]
+    },
+    {
+      "heading": "Un meniu premium pe propriul domeniu web",
+      "sub": "Un fundal foto sau video pe ecranul de pornire, culoarea brandului tău și logo-ul — meniul arată ca site-ul tău, nu ca un PDF, și rulează pe domeniul tău.",
+      "bullets": [
+        {
+          "icon": "Palette",
+          "title": "Design pe brandul tău",
+          "sub": "Video sau fotografie pe ecranul principal, o culoare de accent și logo — configurat fără designer"
+        },
+        {
+          "icon": "Globe",
+          "title": "Domeniu propriu cu certificat SSL",
+          "sub": "Meniul se deschide la adresa ta printr-o conexiune securizată"
+        },
+        {
+          "icon": "Map",
+          "title": "Contact și hartă",
+          "sub": "O pagină cu adresa, programul de funcționare, harta și linkurile sociale — un site complet pentru restaurant"
+        }
+      ]
+    },
+    {
+      "heading": "Comenzi online fără comisioane",
+      "sub": "Un oaspete plasează o comandă de la masă — aceasta apare instantaneu în panou și pe ecranul din bucătărie. Platforma reține 0% din încasări.",
+      "bullets": [
+        {
+          "icon": "ShoppingCart",
+          "title": "Din meniu sau prin WhatsApp",
+          "sub": "O comandă în sistem sau un mesaj pe WhatsApp-ul tău — alegi modul din setări"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Direct în bucătărie",
+          "sub": "O comandă nouă apare pe ecranul din bucătărie și pe dispozitivul ospătarului fără întârziere"
+        },
+        {
+          "icon": "Receipt",
+          "title": "0% comision",
+          "sub": "Plata rămâne între tine și oaspete — platforma nu reține nimic din comenzile tale"
+        }
+      ]
+    },
+    {
+      "heading": "Rezervări mese 24/7",
+      "sub": "Oaspeții rezervă o masă direct din meniu, la orice oră. Sistemul verifică cererea în funcție de programul tău și de mesele disponibile.",
+      "bullets": [
+        {
+          "icon": "CalendarCheck",
+          "title": "Calendar pe mese",
+          "sub": "Sistemul asociază o masă cu numărul de persoane și afișează rezervările pe zile și mese"
+        },
+        {
+          "icon": "CalendarDays",
+          "title": "Automat sau manual",
+          "sub": "Confirmă fiecare rezervare tu însuți sau activează confirmarea automată"
+        },
+        {
+          "icon": "Mail",
+          "title": "Emailuri către oaspete și către tine",
+          "sub": "Oaspetele primește o confirmare pe email, proprietarii primesc o notificare de rezervare nouă"
+        }
+      ]
+    },
+    {
+      "heading": "Gestionează de oriunde",
+      "sub": "Panoul de control rulează în browser pe telefon, tabletă sau computer. Modificările apar pentru oaspeți instantaneu.",
+      "bullets": [
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Orice dispozitiv",
+          "sub": "Telefon, tabletă sau PC — un browser este tot ce ai nevoie, fără instalare"
+        },
+        {
+          "icon": "Timer",
+          "title": "Modificări pe loc",
+          "sub": "O schimbare de preț, un preparat indisponibil sau ascuns se aplică instantaneu, fără publicare sau așteptare"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Opțiuni pentru preparate",
+          "sub": "Mărimi, extra-toppinguri și variante cu preț — oaspeții își configurează singuri preparatul"
+        }
+      ]
+    }
+  ],
+  "hideFeatureHeading": true
+}

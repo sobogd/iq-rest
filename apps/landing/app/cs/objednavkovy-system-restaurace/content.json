@@ -1,0 +1,236 @@
+{
+  "locale": "cs",
+  "slug": "objednavkovy-system-restaurace",
+  "trackPrefix": "l_orders",
+  "meta": {
+    "title": "Příjem objednávek v restauraci — Host a Číšník | IQ Rest",
+    "description": "Příjem objednávek z telefonu nebo tabletu: plán stolů, rozdělení účtu, stavy, možnosti a poznámky. Hosté objednávají od stolu, číšníci ze svého zařízení. 14 dní zdarma.",
+    "canonical": "https://iq-rest.com/cs/objednavkovy-system-restaurace",
+    "ogLocale": "cs_CZ",
+    "ogTitle": "Příjem objednávek v restauraci — Host a Číšník",
+    "ogDescription": "Host u stolu nebo číšník s telefonem — objednávka je hned v kuchyni. Plán stolů, rozdělení účtu, stavy, možnosti a poznámky.",
+    "brandLine": "IQ Rest — Příjem objednávek v restauraci"
+  },
+  "hero": {
+    "headline": "Objednávky od stolu —",
+    "cta": "Nastavit online objednávání",
+    "sub": "Hosté objednávají u stolu nebo číšníci z jakéhokoliv zařízení — rovnou do kuchyně. Plán stolů, rozdělení účtu.",
+    "headlineAccent": "rovnou do kuchyně",
+    "demoLabel": "Demo: obrazovka objednávek",
+    "tablet": {
+      "src": "/landing/feature-orders-modal.webp",
+      "alt": "Tablet s otevřenou objednávkou: seznam jídel a akce — změna stolu, rozdělení účtu, přidání slevy"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurace"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kavárny"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bary"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotely"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerie"
+    }
+  ],
+  "scan": {
+    "heading": "Nastavte si systém objednávek",
+    "headingAccent": "za 5 minut.",
+    "sub": "Naskenujte papírové menu nebo PDF — AI rozpozná jídla, ceny a kategorie. Připojte tablet na plac a začněte přijímat objednávky od stolů.",
+    "cta": "Naskenovat menu"
+  },
+  "subFeatures": [
+    {
+      "icon": "Map",
+      "eyebrow": "Seznam a plán stolů",
+      "heading": "Seznam objednávek vedle plánu stolů.",
+      "body": "Všechny aktivní objednávky jsou vpravo: stav, celková částka, čas a počet položek. Vlevo je plán stolů: stoly jsou barevně odlišené podle stavu — prázdný, obsazený, vyžaduje pozornost. Kliknutím na stůl se otevře jeho objednávka, kliknutím na kartu se otevře detail. Žádné přepínání obrazovek.",
+      "bullets": [
+        "Plán stolů: stoly barevně odlišené podle stavu objednávky.",
+        "Seznam objednávek vedle — částka, čas a počet položek.",
+        "Kliknutím na stůl se otevře objednávka nebo vytvoří nová."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-map.webp",
+        "alt": "Tablet na stanici pro číšníky: seznam objednávek a plán stolů s barevně odlišenými stoly"
+      }
+    },
+    {
+      "icon": "ClipboardList",
+      "eyebrow": "Karta objednávky",
+      "heading": "Karta objednávky: stavy, kopírování a mazání — jedním kliknutím.",
+      "body": "Každá položka má svůj vlastní stav (Čeká / Připravuje se / Hotovo / Vydáno) — kuchyně i číšník vidí stejný obrázek v reálném čase. Kliknutím na tečku se otevře menu akcí: změna stavu, duplikování položky se stejnými úpravami a možnostmi, nebo její smazání. Vše se děje přímo v kartě objednávky.",
+      "bullets": [
+        "Stav u každé položky: Čeká / Připravuje se / Hotovo / Vydáno.",
+        "Duplikování položky jedním kliknutím — včetně vybraných možností.",
+        "Smazání položky přímo z karty objednávky."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-detail.webp",
+        "alt": "Tablet s detailní kartou objednávky: stavy jídel, duplikování a mazání položek"
+      }
+    },
+    {
+      "icon": "Receipt",
+      "eyebrow": "Rozdělení účtu",
+      "heading": "Rozdělení účtu, když hosté platí zvlášť.",
+      "body": "Hosté se rozhodnou platit zvlášť — zaškrtněte položky, které jdou na nový účet; zbytek zůstane na současném. Systém okamžitě ukáže obě částky. Jedno kliknutí na „Rozdělit objednávku“ — a máte dvě nezávislé objednávky se správnými částkami, obě zůstávají na svém stole.",
+      "bullets": [
+        "Vyberte položky k rozdělení pomocí zaškrtávacích políček.",
+        "Částky nového i zbývajícího účtu se objeví okamžitě.",
+        "Jedno kliknutí — a objednávka je rozdělena bez ručního počítání."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-split.webp",
+        "alt": "Tablet na stole v restauraci: rozdělení účtu mezi hosty"
+      }
+    },
+    {
+      "icon": "Smartphone",
+      "eyebrow": "Mobilní zadávání",
+      "heading": "Přidávání položek z telefonu — ve třech krocích.",
+      "body": "Číšníci nejsou vázáni na jedno zařízení: otevřou si obrazovku objednávek na svém vlastním telefonu a přidají položku ve třech krocích — výběr kategorie, výběr jídla, výběr možností (velikost, propečení, omáčky navíc a přísady). Cena se přepočítá automaticky. V posledním kroku se přidá poznámka pro kuchyň.",
+      "bullets": [
+        "Tři kroky: kategorie → jídlo → možnosti.",
+        "Možnosti (velikost, přísady) s cenou na jedno kliknutí.",
+        "Pole pro poznámku v posledním kroku."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-mobile.webp",
+        "alt": "Čtyři telefony ukazující kroky přidání položky do objednávky: kategorie, jídlo, velikost, poznámka"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Na co se majitelé podniků ptají ohledně příjmu objednávek v IQ Rest. Nenašli jste svůj dotaz — napište nám na WhatsApp.",
+    "items": [
+      {
+        "q": "Může pracovat více číšníků současně z různých zařízení?",
+        "a": "Ano. Každý číšník si připojí své zařízení a vidí stejné stoly, objednávky a stavy v reálném čase. Změna provedená jedním se okamžitě ukáže ostatním — žádné konflikty ani blokování."
+      },
+      {
+        "q": "Mohou číšníci používat svá osobní zařízení?",
+        "a": "Ano. Obrazovka objednávek běží v prohlížeči — nic se neinstaluje. Telefon nebo tablet se připojí pomocí šestimístného kódu z administrace a přístup lze na konci směny zrušit jedním kliknutím."
+      },
+      {
+        "q": "Můžu k jídlům přidat povinné možnosti (velikost, propečení)?",
+        "a": "Ano. Jídlo může mít libovolný počet skupin možností — povinné („Velikost“: Malá / Střední / Velká) a volitelné („Propečení“: rare / medium / well done). Možnosti ovlivňují cenu. U povinné skupiny si systém vyžádá výběr — čímž se eliminují chyby."
+      },
+      {
+        "q": "Můžu k jídlu přidat poznámky a položky navíc?",
+        "a": "Ano. Poslední krok obsahuje pole pro poznámku („bez cibule“, „alergie na ořechy“). Položky navíc se nastavují jako placené možnosti („+ BBQ omáčka“, „+ Pečivo“). Poznámky se objeví na kuchyňském displeji, barevně zvýrazněné."
+      },
+      {
+        "q": "Jsou k dispozici statistiky objednávek?",
+        "a": "Ano. Sekce analytiky ukazuje tržby podle dnů, průměrnou útratu a nejprodávanější jídla. Tato data vám pomohou plánovat směny a nákupy."
+      },
+      {
+        "q": "Dají se objednávky rozdělit?",
+        "a": "Ano. Zaškrtněte položky, které jdou na nový účet — obě částky se automaticky přepočítají, žádné ruční počítání a žádné přeskakování mezi sekcemi."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Objednávky za 10 minut. ",
+    "headingAccent": "14 dní plného přístupu.",
+    "sub": "Bez karty, zrušení kdykoliv. {count} podniků s námi přijímá objednávky do kuchyně. Stačí vám jen e-mail."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Plán stolů a seznam objednávek",
+      "sub": "Aktivní objednávky vedle plánu stolů: stoly jsou barevně odlišené podle stavu a kliknutím otevřete objednávku nebo vytvoříte novou.",
+      "bullets": [
+        {
+          "icon": "Map",
+          "title": "Stoly podle stavu",
+          "sub": "Prázdný, obsazený, vyžaduje pozornost — viditelné na první pohled"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Seznam aktivních objednávek",
+          "sub": "Celková částka, čas zadání a počet položek u každé objednávky"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Nová objednávka z mapy",
+          "sub": "Kliknutím na volný stůl se rovnou otevře zadávání objednávky"
+        }
+      ]
+    },
+    {
+      "heading": "Stav pro každou položku",
+      "sub": "Kuchyně i číšník vidí stejný obrázek: každé jídlo má svůj vlastní stav — od zadání až po vydání.",
+      "bullets": [
+        {
+          "icon": "Timer",
+          "title": "Stavy u každého jídla",
+          "sub": "Čeká, Připravuje se, Hotovo, Vydáno — pro každou položku, ne pro celou objednávku"
+        },
+        {
+          "icon": "Receipt",
+          "title": "Duplikování položky",
+          "sub": "Zopakujte jídlo se stejnými možnostmi jedním kliknutím"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Úpravy na místě",
+          "sub": "Smažte položku přímo z karty objednávky"
+        }
+      ]
+    },
+    {
+      "heading": "Rozdělení účtu",
+      "sub": "Hosté platí zvlášť — zaškrtněte položky a přesunou se na nový účet. Částky se přepočítají okamžitě.",
+      "bullets": [
+        {
+          "icon": "Receipt",
+          "title": "Zaškrtávací políčka u položek",
+          "sub": "Vyberte jídla pro nový účet; zbytek zůstane na současném"
+        },
+        {
+          "icon": "ChartColumn",
+          "title": "Částky se ukážou okamžitě",
+          "sub": "Nový i zbývající účet se spočítají automaticky"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Jedno kliknutí",
+          "sub": "Objednávka se rozdělí bez ručního počítání nebo kalkulačky"
+        }
+      ]
+    },
+    {
+      "heading": "Zadávání objednávek z telefonu číšníka",
+      "sub": "Číšníci přijímají objednávku na svém vlastním zařízení ve třech krocích: kategorie, jídlo, možnosti.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Jakékoliv zařízení",
+          "sub": "Telefon nebo tablet s prohlížečem — bez nutnosti instalace"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Možnosti s cenou",
+          "sub": "Velikost, přísady a varianty jídel s cenou na jedno kliknutí"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Poznámky k jídlu",
+          "sub": "Požadavky hostů se přidávají v posledním kroku — kuchyně je hned vidí"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "locale": "sl",
+  "slug": "sistem-narocanja-restavracija",
+  "trackPrefix": "l_orders",
+  "meta": {
+    "title": "Sprejemanje naročil v restavraciji — Gost in natakar | IQ Rest",
+    "description": "Sprejemanje naročil s telefona ali tablice: tloris miz, delitev računa, statusi, opcije in opombe. Gosti naročajo z mize, natakarji na svoji napravi. 14 dni brezplačno.",
+    "canonical": "https://iq-rest.com/sl/sistem-narocanja-restavracija",
+    "ogLocale": "sl_SI",
+    "ogTitle": "Sprejemanje naročil v restavraciji — Gost in natakar",
+    "ogDescription": "Gost pri mizi ali natakar na telefonu — naročilo takoj doseže kuhinjo. Tloris miz, delitev računa, statusi, opcije in opombe.",
+    "brandLine": "IQ Rest — Sprejemanje naročil v restavraciji"
+  },
+  "hero": {
+    "headline": "Naročila z mize —",
+    "cta": "Nastavi spletno naročanje",
+    "sub": "Gosti naročajo pri mizi ali natakarji s katerekoli naprave — naravnost v kuhinjo. Tloris miz, delitev računa.",
+    "headlineAccent": "naravnost v kuhinjo",
+    "demoLabel": "Demo: zaslon z naročili",
+    "tablet": {
+      "src": "/landing/feature-orders-modal.webp",
+      "alt": "Tablica z odprtim naročilom: seznam jedi in dejanja — sprememba mize, delitev naročila, dodajanje popusta"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restavracije"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kavarne"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bari"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hoteli"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Picerije"
+    }
+  ],
+  "scan": {
+    "heading": "Nastavite sistem za sprejemanje naročil",
+    "headingAccent": "v 5 minutah.",
+    "sub": "Skenirajte papirnati meni ali PDF — AI prepozna jedi, cene in kategorije. Povežite tablico v strežbi in začnite sprejemati naročila z miz.",
+    "cta": "Skeniraj meni"
+  },
+  "subFeatures": [
+    {
+      "icon": "Map",
+      "eyebrow": "Seznam in tloris miz",
+      "heading": "Seznam naročil ob tlorisu miz.",
+      "body": "Vsa aktivna naročila so prikazana na desni: status, znesek, čas oddaje in število postavk. Na levi je tloris miz: mize so barvno označene po statusu — prazna, zasedena, potrebuje pozornost. Dotik mize odpre njeno naročilo, dotik kartice odpre podroben pogled. Brez preklapljanja med zasloni.",
+      "bullets": [
+        "Tloris miz: mize so barvno označene po statusu naročila.",
+        "Seznam naročil ob strani — znesek, čas in število postavk.",
+        "Dotik mize odpre naročilo ali ustvari novega."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-map.webp",
+        "alt": "Tablica na postaji za natakarje: seznam naročil in tloris miz z barvno označenimi mizami"
+      }
+    },
+    {
+      "icon": "ClipboardList",
+      "eyebrow": "Kartica naročila",
+      "heading": "Kartica naročila: statusi, podvajanje in brisanje — z enim dotikom.",
+      "body": "Vsaka postavka ima svoj status (V čakanju / V pripravi / Pripravljeno / Postreženo) — kuhinja in natakar vidita isto sliko v realnem času. Dotik pike odpre meni dejanj: sprememba statusa, podvajanje postavke z istimi dodatki in opcijami ali brisanje. Vse se zgodi neposredno na kartici naročila.",
+      "bullets": [
+        "Status za vsako postavko: V čakanju / V pripravi / Pripravljeno / Postreženo.",
+        "Podvajanje postavke z enim dotikom — vključno z opcijami.",
+        "Brisanje postavke neposredno s kartice naročila."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-detail.webp",
+        "alt": "Tablica s podrobno kartico naročila: statusi jedi, podvajanje in brisanje postavk"
+      }
+    },
+    {
+      "icon": "Receipt",
+      "eyebrow": "Delitev računa",
+      "heading": "Delitev računa, ko gosti plačujejo ločeno.",
+      "body": "Gosti se odločijo za ločeno plačilo — označite postavke, ki gredo na nov račun; ostale ostanejo na trenutnem. Sistem takoj prikaže oba zneska. En dotik na \"Razdeli naročilo\" — in imate dve neodvisni naročili s pravimi zneski, obe ostaneta na svoji mizi.",
+      "bullets": [
+        "Izberite postavke za delitev s potrditvenimi polji.",
+        "Zneska novega in preostalega računa se prikažeta takoj.",
+        "En dotik — in naročilo je razdeljeno brez ročnega računanja."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-split.webp",
+        "alt": "Tablica na mizi v restavraciji: delitev računa med gosti"
+      }
+    },
+    {
+      "icon": "Smartphone",
+      "eyebrow": "Mobilni vnos naročil",
+      "heading": "Dodajanje postavk s telefona — v treh korakih.",
+      "body": "Natakarji niso vezani na eno napravo: zaslon za sprejemanje naročil odprejo na svojem telefonu in dodajo postavko v treh korakih — izbira kategorije, izbira jedi, izbira opcij (velikost, stopnja pečenosti, dodatne omake in sestavine). Cena se preračuna samodejno. Opomba za kuhinjo se doda v zadnjem koraku.",
+      "bullets": [
+        "Trije koraki: kategorija → jed → opcije.",
+        "Opcije (velikost, dodatki, sestavine) s cenami na en dotik.",
+        "Polje za opombe v zadnjem koraku."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-mobile.webp",
+        "alt": "Štirje telefoni prikazujejo korake dodajanja postavke v naročilo: kategorija, jed, velikost, opomba"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Kaj gostince najpogosteje zanima o sprejemanju naročil v IQ Rest. Če vašega vprašanja ni na seznamu — pišite nam na WhatsApp.",
+    "items": [
+      {
+        "q": "Ali lahko več natakarjev hkrati dela na različnih napravah?",
+        "a": "Da. Vsak natakar poveže svojo napravo in v realnem času vidi iste mize, naročila in statuse. Sprememba, ki jo naredi eden, se takoj prikaže ostalim — brez konfliktov ali zaklepanja."
+      },
+      {
+        "q": "Ali lahko natakarji uporabljajo svoje osebne naprave?",
+        "a": "Da. Zaslon za naročila deluje v brskalniku — ničesar ni treba namestiti. Telefon ali tablica se poveže s šestmestno kodo iz nadzorne plošče, dostop pa se ob koncu izmene prekliče z enim dotikom."
+      },
+      {
+        "q": "Ali lahko jedem dodam obvezne opcije (velikost, stopnja pečenosti)?",
+        "a": "Da. Jed ima lahko poljubno število skupin opcij — obvezne (\"Velikost\": Mala / Srednja / Velika) in neobvezne (\"Stopnja pečenosti\": rare / medium / well done). Opcije vplivajo na ceno. Pri obvezni skupini sistem zahteva izbiro — s tem se izognete napakam."
+      },
+      {
+        "q": "Ali lahko jedi dodam opombe in dodatke?",
+        "a": "Da. Zadnji korak ima polje za opombe (\"brez čebule\", \"alergija na oreščke\"). Dodatki so nastavljeni kot plačljive opcije (\"+ BBQ omaka\", \"+ Kruh\"). Opombe se prikažejo na kuhinjskem zaslonu, barvno izpostavljene."
+      },
+      {
+        "q": "Ali obstaja statistika naročil?",
+        "a": "Da. Razdelek z analitiko prikazuje prihodke po dnevih, povprečen znesek računa in najbolje prodajane jedi. Ti podatki vam pomagajo pri načrtovanju izmen in nabave."
+      },
+      {
+        "q": "Ali se naročila lahko razdelijo?",
+        "a": "Da. Označite postavke, ki gredo na nov račun — oba zneska se preračunata samodejno, brez ročnega računanja in brez preklapljanja med razdelki."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Naročila v 10 minutah. ",
+    "headingAccent": "14 dni polnega dostopa.",
+    "sub": "Brez kreditne kartice, prekličite kadarkoli. {count} restavracij sprejema naročila za kuhinjo z nami. Potrebujete le e-pošto."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Tloris miz in seznam naročil",
+      "sub": "Aktivna naročila ob tlorisu miz: mize so barvno označene po statusu, dotik pa odpre naročilo ali ustvari novega.",
+      "bullets": [
+        {
+          "icon": "Map",
+          "title": "Mize po statusu",
+          "sub": "Prazna, zasedena, potrebuje pozornost — vidno na prvi pogled"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Seznam aktivnih naročil",
+          "sub": "Znesek, čas oddaje in število postavk za vsako naročilo"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Novo naročilo s tlorisa",
+          "sub": "Dotik proste mize takoj odpre vnos naročila"
+        }
+      ]
+    },
+    {
+      "heading": "Status za vsako postavko",
+      "sub": "Kuhinja in natakar vidita isto sliko: vsaka jed ima svoj status — od oddaje do postrežbe.",
+      "bullets": [
+        {
+          "icon": "Timer",
+          "title": "Statusi po jedeh",
+          "sub": "V čakanju, V pripravi, Pripravljeno, Postreženo — za vsako postavko, ne za celotno naročilo"
+        },
+        {
+          "icon": "Receipt",
+          "title": "Podvajanje postavk",
+          "sub": "Ponovite jed z istimi opcijami z enim dotikom"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Urejanje na mestu",
+          "sub": "Odstranite postavko neposredno s kartice naročila"
+        }
+      ]
+    },
+    {
+      "heading": "Delitev računa",
+      "sub": "Gosti plačujejo ločeno — označite postavke in premaknejo se na nov račun. Zneski se preračunajo takoj.",
+      "bullets": [
+        {
+          "icon": "Receipt",
+          "title": "Potrditvena polja za postavke",
+          "sub": "Izberite jedi za nov račun; ostale ostanejo na trenutnem"
+        },
+        {
+          "icon": "ChartColumn",
+          "title": "Takojšen prikaz zneskov",
+          "sub": "Novi in preostali račun se izračunata samodejno"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "En dotik",
+          "sub": "Naročilo je razdeljeno brez ročnega računanja ali kalkulatorja"
+        }
+      ]
+    },
+    {
+      "heading": "Vnos naročila z natakarjevega telefona",
+      "sub": "Natakarji sprejmejo naročilo na svoji napravi v treh korakih: kategorija, jed, opcije.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Katerakoli naprava",
+          "sub": "Telefon ali tablica z brskalnikom — brez namestitve"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Plačljive opcije",
+          "sub": "Velikost, dodatki in različice jedi s cenami na en dotik"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Opombe k jedem",
+          "sub": "Želje gostov se dodajo v zadnjem koraku — kuhinja jih vidi takoj"
+        }
+      ]
+    }
+  ]
+}

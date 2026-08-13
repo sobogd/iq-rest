@@ -1,0 +1,236 @@
+{
+  "locale": "et",
+  "slug": "tellimissusteem-restoran",
+  "trackPrefix": "l_orders",
+  "meta": {
+    "title": "Tellimuste vastuvõtmine — külaline ja teenindaja | IQ Rest",
+    "description": "Restorani tellimuste vastuvõtmine telefonist või tahvelarvutist: saaliplaan, arve jagamine, staatused, lisavalikud ja kommentaarid. Külalised tellivad lauast, teenindajad võtavad tellimusi oma seadmest. 14 päeva tasuta.",
+    "canonical": "https://iq-rest.com/et/tellimissusteem-restoran",
+    "ogLocale": "et_EE",
+    "ogTitle": "Tellimuste vastuvõtmine — külaline ja teenindaja",
+    "ogDescription": "Külaline lauas või teenindaja telefonis — tellimus jõuab kohe kööki. Saaliplaan, arve jagamine, staatused, lisavalikud ja kommentaarid.",
+    "brandLine": "IQ Rest — Tellimuste vastuvõtmine restoranis"
+  },
+  "hero": {
+    "headline": "Tellimused lauast —",
+    "cta": "Seadista online tellimused",
+    "sub": "Külalised tellivad lauas või teenindajad igast seadmest — otse kööki. Saaliplaan, arve jagamine.",
+    "headlineAccent": "otse kööki",
+    "demoLabel": "Demo: tellimuste ekraan",
+    "tablet": {
+      "src": "/landing/feature-orders-modal.webp",
+      "alt": "Tahvelarvuti avatud tellimusega: toitude nimekiri ja tellimuse toimingud — muuda lauda, jaga arve, lisa soodustus"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restoranidele"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kohvikutele"
+    },
+    {
+      "icon": "Martini",
+      "label": "Baaridele"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotellidele"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pitseriatele"
+    }
+  ],
+  "scan": {
+    "heading": "Seadista tellimuste vastuvõtmise süsteem",
+    "headingAccent": "5 minutiga.",
+    "sub": "Skanni paberist menüü või PDF — tehisintellekt tuvastab toidud, hinnad ja kategooriad. Ühenda tahvelarvuti saalis ja hakka laudadest tellimusi vastu võtma.",
+    "cta": "Skanni menüü"
+  },
+  "subFeatures": [
+    {
+      "icon": "Map",
+      "eyebrow": "Nimekiri ja saaliplaan",
+      "heading": "Tellimuste nimekiri saaliplaani kõrval.",
+      "body": "Kõik aktiivsed tellimused on näha paremal: staatus, summa, esitamise aeg ja toodete arv. Vasakul on saaliplaan: lauad on värvitud vastavalt staatusele — tühi, hõivatud, vajab tähelepanu. Lauale vajutades avaneb selle tellimus, kaardile vajutades avaneb detailvaade. Ekraanide vahel pole vaja hüpata.",
+      "bullets": [
+        "Saaliplaan: lauad on värvitud vastavalt tellimuse staatusele.",
+        "Tellimuste nimekiri kõrval — summa, aeg ja toodete arv.",
+        "Lauale vajutades avaneb tellimus või luuakse uus."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-map.webp",
+        "alt": "Tahvelarvuti teenindaja tööjaamas: tellimuste nimekiri ja värvikoodidega saaliplaan"
+      }
+    },
+    {
+      "icon": "ClipboardList",
+      "eyebrow": "Tellimuse kaart",
+      "heading": "Tellimuse kaart: staatused, dubleerimine ja eemaldamine — ühe nupuvajutusega.",
+      "body": "Igal tootel on oma staatus (Ootel / Töös / Valmis / Serveeritud) — köök ja teenindaja näevad sama pilti reaalajas. Täpile vajutades avaneb toimingute menüü: muuda staatust, dubleeri toode samade lisandite ja valikutega või eemalda see. Kõik toimub otse tellimuse kaardil.",
+      "bullets": [
+        "Tootepõhine staatus: Ootel / Töös / Valmis / Serveeritud.",
+        "Dubleeri toode ühe nupuvajutusega — koos samade valikutega.",
+        "Eemalda toode otse tellimuse kaardilt."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-detail.webp",
+        "alt": "Tahvelarvuti detailse tellimuse kaardiga: toitude staatused, dubleerimine ja eemaldamine"
+      }
+    },
+    {
+      "icon": "Receipt",
+      "eyebrow": "Arve jagamine",
+      "heading": "Arve jagamine, kui külalised maksavad eraldi.",
+      "body": "Külalised soovivad maksta eraldi — märgi linnukesega tooted, mis lähevad uuele arvele; ülejäänud jäävad praegusele. Süsteem näitab kohe mõlemat summat. Üks vajutus nupule \"Jaga tellimus\" — ja sul on kaks eraldiseisvat tellimust õigete summadega, mõlemad jäävad oma lauale.",
+      "bullets": [
+        "Vali tooted jagamiseks märkeruutude abil.",
+        "Uue ja järelejäänud arve summad ilmuvad koheselt.",
+        "Üks vajutus — ja tellimus on jagatud ilma käsitsi arvutamata."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-split.webp",
+        "alt": "Tahvelarvuti restorani laual: arve jagamine külaliste vahel"
+      }
+    },
+    {
+      "icon": "Smartphone",
+      "eyebrow": "Mobiilne tellimuste sisestamine",
+      "heading": "Toodete lisamine telefonist — kolme sammuga.",
+      "body": "Teenindajad pole seotud ühe seadmega: nad avavad tellimuste ekraani oma telefonis ja lisavad toote kolme sammuga — vali kategooria, vali toit, vali lisandid (suurus, küpsusaste, lisakastmed ja koostisosad). Hind arvutatakse automaatselt ümber. Köögi kommentaar lisatakse viimase sammuna.",
+      "bullets": [
+        "Kolm sammu: kategooria → toit → lisavalikud.",
+        "Lisavalikud (suurus, lisandid, koostisosad) koos hinnastamisega ühe nupuvajutusega.",
+        "Kommentaariväli viimasel sammul."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-mobile.webp",
+        "alt": "Neli telefoni näitavad toote lisamise samme tellimusele: kategooria, toit, suurus, kommentaar"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Mida restoranipidajad IQ Resti tellimuste vastuvõtmise kohta küsivad. Kui sinu küsimust pole nimekirjas — kirjuta meile WhatsAppi.",
+    "items": [
+      {
+        "q": "Kas mitu teenindajat saavad töötada samaaegselt erinevatest seadmetest?",
+        "a": "Jah. Iga teenindaja ühendab oma seadme ja näeb samu laudu, tellimusi ja staatuseid reaalajas. Ühe tehtud muudatus ilmub koheselt ka teistele — ei mingeid konflikte ega lukustumist."
+      },
+      {
+        "q": "Kas teenindajad saavad kasutada oma isiklikke seadmeid?",
+        "a": "Jah. Tellimuste ekraan töötab brauseris — midagi pole vaja paigaldada. Telefon või tahvelarvuti ühendatakse halduspaneelist saadud kuuekohalise koodiga ja ligipääsu saab vahetuse lõpus ühe nupuvajutusega tühistada."
+      },
+      {
+        "q": "Kas ma saan lisada toitudele kohustuslikke valikuid (suurus, küpsusaste)?",
+        "a": "Jah. Toidul võib olla ükskõik kui palju valikugruppe — kohustuslikud (\"Suurus\": Väike / Keskmine / Suur) ja valikulised (\"Küpsusaste\": rare / medium / well done). Valikud mõjutavad hinda. Kohustusliku grupi puhul küsib süsteem valikut — välistades vead."
+      },
+      {
+        "q": "Kas ma saan toidule lisada kommentaare ja lisandeid?",
+        "a": "Jah. Viimasel sammul on kommentaariväli (\"ilma sibulata\", \"pähkliallergia\"). Lisandid seadistatakse hinnastatud valikutena (\"+ BBQ kaste\", \"+ Leib\"). Kommentaarid ilmuvad köögiekraanile värviliselt esile tõstetuna."
+      },
+      {
+        "q": "Kas tellimuste statistika on olemas?",
+        "a": "Jah. Analüütika jaotis näitab käivet päevade lõikes, keskmist arvet ja enimmüüdud toite. Need andmed aitavad planeerida vahetusi ja sisseoste."
+      },
+      {
+        "q": "Kas tellimusi saab jagada?",
+        "a": "Jah. Märgi linnukesega tooted, mis lähevad uuele arvele — mõlemad summad arvutatakse automaatselt ümber, ilma käsitsi arvutamata ja jaotiste vahel hüppamata."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Tellimused 10 minutiga. ",
+    "headingAccent": "14 päeva täisligipääsu.",
+    "sub": "Kaarti pole vaja, tühista igal ajal. {count} restorani võtab meiega köögitellimusi vastu. Alustamiseks on vaja vaid e-posti aadressi."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Saaliplaan ja tellimuste nimekiri",
+      "sub": "Aktiivsed tellimused saaliplaani kõrval: lauad on värvitud vastavalt staatusele ning vajutus avab tellimuse või loob uue.",
+      "bullets": [
+        {
+          "icon": "Map",
+          "title": "Lauad staatuse järgi",
+          "sub": "Tühi, hõivatud, vajab tähelepanu — nähtav ühe pilguga"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Aktiivsete tellimuste nimekiri",
+          "sub": "Summa, esitamise aeg ja toodete arv iga tellimuse kohta"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Uus tellimus plaanilt",
+          "sub": "Vabale lauale vajutamine avab kohe tellimuse sisestamise"
+        }
+      ]
+    },
+    {
+      "heading": "Staatus igale tootele",
+      "sub": "Köök ja teenindaja näevad sama pilti: igal toidul on oma staatus — alates esitamisest kuni serveerimiseni.",
+      "bullets": [
+        {
+          "icon": "Timer",
+          "title": "Tootepõhised staatused",
+          "sub": "Ootel, Töös, Valmis, Serveeritud — toote, mitte tellimuse kaupa"
+        },
+        {
+          "icon": "Receipt",
+          "title": "Toote dubleerimine",
+          "sub": "Korda toitu samade valikutega ühe nupuvajutusega"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Muudatused kohapeal",
+          "sub": "Eemalda toode otse tellimuse kaardilt"
+        }
+      ]
+    },
+    {
+      "heading": "Arve jagamine",
+      "sub": "Külalised maksavad eraldi — märgi tooted ja need liiguvad uuele arvele. Summad arvutatakse koheselt ümber.",
+      "bullets": [
+        {
+          "icon": "Receipt",
+          "title": "Tootepõhised märkeruudud",
+          "sub": "Vali toidud uuele arvele; ülejäänud jäävad praegusele"
+        },
+        {
+          "icon": "ChartColumn",
+          "title": "Summad on kohe näha",
+          "sub": "Uus ja järelejäänud arve arvutatakse automaatselt"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Üks nupuvajutus",
+          "sub": "Tellimus jagatakse ilma käsitsi arvutamata või kalkulaatorita"
+        }
+      ]
+    },
+    {
+      "heading": "Tellimuse sisestamine teenindaja telefonist",
+      "sub": "Teenindajad võtavad tellimuse vastu oma seadmest kolme sammuga: kategooria, toit, valikud.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Iga seade",
+          "sub": "Telefon või tahvelarvuti brauseriga — paigaldada pole vaja"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Hinnastatud valikud",
+          "sub": "Suurus, lisandid ja toidu variandid koos hinnastamisega ühe nupuvajutusega"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Toidu kommentaarid",
+          "sub": "Külaliste erisoovid lisatakse viimasel sammul — köök näeb neid kohe"
+        }
+      ]
+    }
+  ]
+}

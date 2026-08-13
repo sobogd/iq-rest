@@ -1,0 +1,59 @@
+{
+  "breadcrumbLabel": "Priser",
+  "meta": {
+    "title": "Priser — Bygg ditt restaurangpaket från 9,90 €/mån | IQ Rest",
+    "description": "Bygg ditt paket av moduler: QR-meny med AI-översättning, beställningshantering, bordsbokning, köksskärm. Från 9,90 €/mån per restaurang, mängdrabatt. 14 dagar gratis, inget kort, avsluta när du vill.",
+    "canonical": "https://iq-rest.com/sv/priser",
+    "ogLocale": "sv_SE",
+    "ogTitle": "Priser — Bygg ditt restaurangpaket",
+    "ogDescription": "Ett modulärt paket från 9,90 €/mån: QR-meny, beställningar, bordsbokning, KDS. Mängdrabatt, inga dolda avgifter. 14 dagar gratis."
+  },
+  "faqSub": "Vanliga frågor från restauranger om priser och betalning. Hittar du inte din — skicka ett meddelande på WhatsApp.",
+  "faqItems": [
+    {
+      "q": "Hur är priset uppbyggt?",
+      "a": "Du bygger ditt paket av moduler. Grunden är en QR-meny med AI-översättning till 35 språk och hantering från valfri enhet. Lägg sedan till det du behöver: bordsbokning, köksskärm, din egen domän. Priset är per restaurang, med mängdrabatt från och med den andra."
+    },
+    {
+      "q": "Är det någon provision på beställningarna?",
+      "a": "Nej. Beställningar från QR-menyn och från servitörer går direkt till restaurangen. Du betalar bara ett fast månadspris."
+    },
+    {
+      "q": "Hur fungerar provperioden?",
+      "a": "14 dagar med full tillgång till alla funktioner, inget kreditkort behövs. Om betalning inte ställs in i slutet pausas kontot: panelen förblir tillgänglig i läsläge, medan gästmenyn och beställningshanteringen stängs av. Det sker inga automatiska dragningar."
+    },
+    {
+      "q": "Vad händer med min data medan kontot är pausat?",
+      "a": "Allt sparas: meny, bilder, beställningshistorik, bokningar, inställningar, statistik. Ställ in betalningen även sex månader senare — allt kommer tillbaka precis som det var."
+    },
+    {
+      "q": "Måste jag skriva ut QR-koderna på nytt?",
+      "a": "Nej. Medan kontot är pausat visar koderna ett meddelande om att menyn är \"tillfälligt otillgänglig\"; när betalningen är inställd öppnar samma koder menyn igen."
+    },
+    {
+      "q": "Kan jag byta paket?",
+      "a": "Ja, när som helst från panelen. Mellanskillnaden fördelas över de återstående dagarna av den betalda perioden. En inaktiverad funktion behåller sin data."
+    },
+    {
+      "q": "Hur många restauranger kan jag koppla?",
+      "a": "Så många du vill, alla hanteras från en och samma panel. Mängdrabatt upp till 50 % med 5+ restauranger. För stora kedjor — ett anpassat paket via WhatsApp."
+    },
+    {
+      "q": "Vad är rabatten på årspaketet?",
+      "a": "Ungefär 30 % jämfört med månadsfakturering. Den exakta summan visas när du bygger ditt paket."
+    },
+    {
+      "q": "Hur avslutar jag min prenumeration?",
+      "a": "Med ett klick från panelen. Kontot fungerar fram till slutet av den betalda perioden, sedan pausas det. Din data sparas."
+    },
+    {
+      "q": "Vilka betalningsmetoder accepterar ni?",
+      "a": "Visa, Mastercard, American Express, Apple Pay, Google Pay — via Stripe. I Europa stöder årspaketet även SEPA autogiro."
+    }
+  ],
+  "finalCta": {
+    "heading": "Ett pris. Noll risk. ",
+    "headingAccent": "14 dagar med full tillgång.",
+    "sub": "Inget kort krävs, avsluta när du vill — används av {count} restauranger. Allt som krävs för att starta är en e-postadress."
+  }
+}

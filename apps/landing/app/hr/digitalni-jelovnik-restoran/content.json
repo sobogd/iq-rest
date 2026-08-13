@@ -1,0 +1,332 @@
+{
+  "locale": "hr",
+  "slug": "digitalni-jelovnik-restoran",
+  "trackPrefix": "l_digital",
+  "meta": {
+    "title": "Digitalni jelovnik za restorane | IQ Rest",
+    "description": "Digitalni jelovnik za vaš restoran: online jelovnik s fotografijama, alergenima, AI prijevodom i ažuriranjem cijena u stvarnom vremenu. 14 dana besplatno, bez kreditne kartice.",
+    "canonical": "https://iq-rest.com/hr/digitalni-jelovnik-restoran",
+    "ogLocale": "hr_HR",
+    "ogTitle": "Digitalni jelovnik za restorane",
+    "ogDescription": "Online verzija vašeg papirnatog jelovnika s fotografijama, alergenima i AI prijevodom. Cijene se ažuriraju u stvarnom vremenu.",
+    "brandLine": "IQ Rest — Digitalni jelovnik za restorane"
+  },
+  "hero": {
+    "headline": "Digitalni jelovnik i web stranica",
+    "headlineAccent": "za vaš restoran",
+    "cta": "Izradi digitalni jelovnik",
+    "demoLabel": "Demo: jelovnik kako ga vide gosti",
+    "sub": "Pokrenite u 10 minuta: zaprimajte narudžbe sa stola, mijenjajte cijene u hodu i primajte rezervacije izravno bez provizija.",
+    "phones": [
+      {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Telefon s početnom stranicom restorana: fotografije, rezervacije i pristup online jelovniku"
+      },
+      {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Telefon s karticom jela: fotografija, cijena i oznake alergena"
+      }
+    ]
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restorani"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kafići"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barovi"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hoteli"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerije"
+    }
+  ],
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Jelovnik u 10 minuta",
+      "sub": "Bez programera i dugotrajnog postavljanja"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Brza podrška",
+      "sub": "Pomažemo vam postaviti jelovnik putem chata unutar par sati"
+    },
+    {
+      "icon": "Globe",
+      "title": "Odabralo nas je {count} objekata",
+      "sub": "Digitalni jelovnici i web stranice za restorane u 15+ zemalja"
+    },
+    {
+      "icon": "Palette",
+      "title": "Vaša vlastita domena i brend",
+      "sub": "Jelovnik na vašoj adresi, a ne na zajedničkoj platformi"
+    }
+  ],
+  "scan": {
+    "heading": "Imate papirnati jelovnik ili PDF?",
+    "headingAccent": "AI ga digitalizira u 60 sekundi.",
+    "sub": "Učitajte fotografiju ili dokument — AI automatski prepoznaje kategorije, jela i cijene.",
+    "cta": "Skeniraj jelovnik"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "AI prijevod",
+      "heading": "Jelovnik na 35 jezika",
+      "body": "Jedan QR — 35 jezika. AI prevodi uzimajući u obzir kulinarski kontekst, tako da jela zvuče prirodno. Turisti naručuju s više sigurnosti.",
+      "bullets": [
+        "35 jezika uključeno u pretplatu",
+        "Kulinarski AI umjesto Google prevoditelja",
+        "Promjena jezika jednim dodirom"
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Dva gosta čitaju isti digitalni jelovnik na različitim jezicima na svojim telefonima"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Alergeni",
+      "heading": "Alergeni i prehrana na svakom jelu",
+      "body": "Označite gluten, laktozu, orašaste plodove, veganske i bezglutenske opcije. Gosti filtriraju jelovnik prema svojim potrebama i naručuju bez brige.",
+      "bullets": [
+        "14 kategorija alergena",
+        "Oznake za vegansko i bez glutena",
+        "Filtriranje jelovnika prema prehrambenim ograničenjima"
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Gost filtrira jelovnik po alergenima na telefonu dok vlasnik uređuje popis alergena na tabletu"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Dizajn i brend",
+      "heading": "Vrhunski jelovnik na vašoj domeni",
+      "body": "Video pozadina na početnom ekranu, vaš vlastiti dizajn i kontakt stranica s kartom i društvenim mrežama — na vašoj domeni, a ne kao PDF.",
+      "bullets": [
+        "Video pozadina i vrhunski dizajn",
+        "Vaša vlastita domena sa SSL-om",
+        "Kontakti, karta, društvene mreže"
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Dva telefona na stolu kafića: početni ekran jelovnika s video pozadinom i kontakt stranica s kartom"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Narudžbe",
+      "heading": "Online narudžbe bez provizija",
+      "body": "Gosti naručuju iz jelovnika ili izravno putem WhatsAppa — narudžba stiže u salu ili kuhinju, uz 0% provizije na vaš prihod.",
+      "bullets": [
+        "Iz jelovnika ili putem WhatsAppa",
+        "U salu ili kuhinju, 0% provizije",
+        "Uključuje se u postavkama"
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Dva telefona na stolu: košarica s narudžbom i potvrda uspješne narudžbe"
+      }
+    },
+    {
+      "icon": "CalendarCheck",
+      "eyebrow": "Rezervacije",
+      "heading": "Rezervacije stolova 0-24",
+      "body": "Gosti sami rezerviraju stol putem jelovnika ili poveznice, vi vidite kalendar po stolovima i potvrđujete automatski ili ručno.",
+      "bullets": [
+        "Gosti sami rezerviraju",
+        "Kalendar za sve stolove",
+        "Automatska ili ručna potvrda"
+      ]
+    },
+    {
+      "icon": "MonitorSmartphone",
+      "eyebrow": "Upravljanje",
+      "heading": "Upravljajte s bilo kojeg mjesta",
+      "body": "Administracija radi u pregledniku — na telefonu, tabletu ili PC-u. Ništa se ne instalira, spremno za rad u par minuta.",
+      "bullets": [
+        "Bilo koji uređaj, bilo koji preglednik",
+        "Bez instalacije",
+        "Spremno u par minuta"
+      ]
+    }
+  ],
+  "faq": {
+    "sub": "Što ugostitelji pitaju o digitalnom jelovniku u IQ Restu. Ako vašeg pitanja nema na popisu — pošaljite nam poruku na WhatsApp.",
+    "items": [
+      {
+        "q": "Trebaju li mi tehnička znanja ili iskustvo s CMS-om?",
+        "a": "Nisu potrebna posebna znanja. Sve u administraciji rješava se s par klikova — bez kodiranja i rada s izvornim datotekama. Dodavanje jela traje nekoliko sekundi: naziv, cijena, fotografija. Kompletno postavljanje jelovnika obično stane u 30–60 minuta."
+      },
+      {
+        "q": "Što je IQ Rest digitalni jelovnik?",
+        "a": "To je online verzija vašeg jelovnika dostupna gostima putem QR koda ili izravne poveznice: fotografije jela, cijene, alergeni, AI prijevod na 35 jezika i ažuriranja u stvarnom vremenu. Jelovnik radi na našim poslužiteljima — nema softvera za instalaciju ili održavanje, dovoljan je samo preglednik."
+      },
+      {
+        "q": "Trebaju li gosti aplikaciju ili posebnu opremu?",
+        "a": "Gost usmjeri kameru telefona na QR kod — jelovnik se otvara u pregledniku, bez instalacije. Administracija također radi u svakom modernom pregledniku: na telefonu, tabletu ili laptopu. QR kodovi se ispisuju na običnom uredskom pisaču."
+      },
+      {
+        "q": "Mogu li postaviti jelovnik na vlastitu domenu?",
+        "a": "Da. Jelovnik se povezuje s vašom domenom uz SSL certifikat — gosti vide adresu vašeg restorana, na primjer menu.vasrestoran.com. Naša podrška rješava postavljanje domene i certifikata; vi trebate samo osigurati DNS zapis."
+      },
+      {
+        "q": "Mogu li upravljati s više restorana s jednog računa?",
+        "a": "Da. Dodajte objekte na jedan račun: svaki ima svoj jelovnik, dizajn, QR kodove i analitiku, a prebacivanje između njih zahtijeva jedan klik. Broj objekata ovisi o vašoj pretplati."
+      },
+      {
+        "q": "Koliko je teško postaviti jelovnik od nule?",
+        "a": "Tri koraka: kreirajte kategorije, dodajte jela s cijenama i fotografijama, ispišite QR kodove za stolove. Ako imate papirnati jelovnik ili PDF, učitajte ga — AI prepoznaje kategorije, nazive i cijene te automatski ispunjava kartice. Osnovni jelovnik pokreće se u 5 minuta; potpuno postavljanje ovisi o broju stavaka."
+      },
+      {
+        "q": "Kakvu podršku pružate?",
+        "a": "Odgovaramo na WhatsAppu i putem e-maila tijekom radnog vremena. Pomažemo s početnim postavljanjem, povezivanjem vaše domene i dizajnom jelovnika. Trebate demo ili vođeno uvođenje — javite nam se."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Vaš online jelovnik u 10 minuta. ",
+    "headingAccent": "14 dana punog pristupa.",
+    "sub": "Bez kartice, otkažite bilo kada. {count} restorana povjerilo nam je svoje jelovnike i web stranice. Sve što trebate je e-mail adresa."
+  },
+  "spotlights": [
+    {
+      "heading": "Jelovnik na 35 jezika",
+      "sub": "Gosti otvaraju jelovnik na svom materinjem jeziku. AI prevodi nazive jela, opise, kategorije i opcije uzimajući u obzir kulinarski kontekst.",
+      "bullets": [
+        {
+          "icon": "Globe",
+          "title": "35 jezika u pretplati",
+          "sub": "Uključeni europski i azijski jezici — bez dodatne naplate po jeziku"
+        },
+        {
+          "icon": "Timer",
+          "title": "Prevedeno pri spremanju",
+          "sub": "Dodajte ili uredite jelo — prijevodi na sve jezike jelovnika spremni su odmah"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Ručne izmjene su zaštićene",
+          "sub": "Prijevod koji ručno ispravite je zaključan i AI ga nikada neće prepisati"
+        }
+      ]
+    },
+    {
+      "heading": "Alergeni i prehrana na svakom jelu",
+      "sub": "Dodajte oznake alergena i prehrane na karticu jela — gosti ih vide u jelovniku i filtriraju jela prema svojim ograničenjima.",
+      "bullets": [
+        {
+          "icon": "WheatOff",
+          "title": "14 kategorija alergena",
+          "sub": "Cijeli popis prema EU regulativi: gluten, orašasti plodovi, laktoza, plodovi mora i drugo"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "13 oznaka prehrane",
+          "sub": "Vegansko, vegetarijansko, bez glutena, halal, košer, ljuto i druge oznake"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Filter jednim dodirom",
+          "sub": "Gosti odabiru svoja ograničenja — jelovnik prikazuje samo odgovarajuća jela"
+        }
+      ]
+    },
+    {
+      "heading": "Vrhunski jelovnik na vašoj domeni",
+      "sub": "Fotografija ili video u pozadini na početnom ekranu, vaša boja brenda i logotip — jelovnik izgleda kao vaša web stranica, a ne kao PDF, i radi na vašoj domeni.",
+      "bullets": [
+        {
+          "icon": "Palette",
+          "title": "Dizajn u stilu brenda",
+          "sub": "Video ili fotografija na početnom ekranu, naglašena boja i logotip — postavite bez dizajnera"
+        },
+        {
+          "icon": "Globe",
+          "title": "Vaša vlastita domena sa SSL-om",
+          "sub": "Jelovnik se otvara na vašoj adresi preko sigurne veze"
+        },
+        {
+          "icon": "Map",
+          "title": "Kontakti i karta",
+          "sub": "Stranica s vašom adresom, radnim vremenom, kartom i poveznicama na društvene mreže — potpuna web stranica restorana"
+        }
+      ]
+    },
+    {
+      "heading": "Online narudžbe bez provizija",
+      "sub": "Gost predaje narudžbu sa stola — ona se odmah pojavljuje u nadzornoj ploči i na kuhinjskom ekranu. Platforma uzima 0% vašeg prihoda.",
+      "bullets": [
+        {
+          "icon": "ShoppingCart",
+          "title": "Iz jelovnika ili putem WhatsAppa",
+          "sub": "Narudžba unutar sustava ili poruka na vaš WhatsApp — odaberite način u postavkama"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Ravno u kuhinju",
+          "sub": "Nova narudžba pojavljuje se na kuhinjskom ekranu i uređaju konobara bez odgode"
+        },
+        {
+          "icon": "Receipt",
+          "title": "0% provizije",
+          "sub": "Plaćanje ostaje između vas i gosta — platforma ne uzima ništa od vaših narudžbi"
+        }
+      ]
+    },
+    {
+      "heading": "Rezervacije stolova 0-24",
+      "sub": "Gosti rezerviraju stol izravno iz jelovnika u bilo koje vrijeme. Sustav provjerava zahtjev prema vašem rasporedu i slobodnim stolovima.",
+      "bullets": [
+        {
+          "icon": "CalendarCheck",
+          "title": "Kalendar po stolovima",
+          "sub": "Sustav pronalazi stol prema broju osoba i prikazuje rezervacije po danima i stolovima"
+        },
+        {
+          "icon": "CalendarDays",
+          "title": "Automatski ili ručno",
+          "sub": "Potvrdite svaku rezervaciju sami ili uključite automatsku potvrdu"
+        },
+        {
+          "icon": "Mail",
+          "title": "E-mailovi gostu i vama",
+          "sub": "Gost dobiva e-mail potvrdu, a vlasnici obavijest o novoj rezervaciji"
+        }
+      ]
+    },
+    {
+      "heading": "Upravljajte s bilo kojeg mjesta",
+      "sub": "Nadzorna ploča radi u pregledniku na telefonu, tabletu ili računalu. Promjene su gostima vidljive odmah.",
+      "bullets": [
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Bilo koji uređaj",
+          "sub": "Telefon, tablet ili PC — preglednik je sve što vam treba, bez instalacije"
+        },
+        {
+          "icon": "Timer",
+          "title": "Izmjene u hodu",
+          "sub": "Promjena cijene, stop-lista ili skriveno jelo primjenjuje se odmah, bez objavljivanja ili čekanja"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Opcije jela",
+          "sub": "Veličine, dodaci i varijante s cijenom — gosti sami slažu svoje jelo"
+        }
+      ]
+    }
+  ],
+  "hideFeatureHeading": true
+}

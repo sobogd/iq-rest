@@ -1,0 +1,289 @@
+{
+  "heroV2": {
+    "verticals": [
+      {
+        "icon": "restaurant",
+        "label": "Restorani"
+      },
+      {
+        "icon": "cafe",
+        "label": "Kafići"
+      },
+      {
+        "icon": "bar",
+        "label": "Barovi"
+      },
+      {
+        "icon": "hotel",
+        "label": "Hoteli"
+      },
+      {
+        "icon": "pizza",
+        "label": "Pizzerije"
+      }
+    ],
+    "title": "Sve što vaš restoran",
+    "titleAccent": "treba!",
+    "sub": "Postavite poslovanje u 10 minuta: pokrenite online jelovnik, organizirajte kuhinju i upravljajte rezervacijama.",
+    "primaryLabel": "Započnite besplatno",
+    "demoLabel": "Pogledaj demo jelovnik",
+    "mockups": {
+      "kds": {
+        "src": "/landing/hero-card-kds.webp",
+        "alt": "Tablet s kuhinjskim ekranom: narudžbe po stolovima u stupcima sa statusima"
+      },
+      "reservations": {
+        "src": "/landing/hero-card-reservation.webp",
+        "alt": "Tablet s kalendarom rezervacija: mjesečni prikaz i popis rezervacija koje čekaju potvrdu"
+      },
+      "phone1": {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Telefon s početnom stranicom restorana: fotografije, rezervacije i pristup online jelovniku"
+      },
+      "phone2": {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Telefon s karticom jela: fotografija, cijena i oznake alergena"
+      }
+    }
+  },
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Spremno za 10 minuta",
+      "sub": "Bez kupnje skupe opreme i dugotrajnog postavljanja"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Brza podrška",
+      "sub": "Odgovaramo u chatu unutar nekoliko sati"
+    },
+    {
+      "icon": "Globe",
+      "title": "Odabralo nas je {count} objekata",
+      "sub": "Vjeruju nam restorani i kafići u 15+ zemalja"
+    },
+    {
+      "icon": "Palette",
+      "title": "100% u vašem stilu",
+      "sub": "Prilagođavamo dizajn i sučelje stilu vašeg objekta"
+    }
+  ],
+  "menu": {
+    "heading": "Web stranica i digitalni jelovnik",
+    "sub": {
+      "link": "Više od QR jelovnika!",
+      "rest": " Dobivate potpunu web stranicu s jedinstvenim dizajnom, kontakt podacima i rezervacijama stolova."
+    },
+    "moreLabel": "Više o jelovniku",
+    "demoLabel": "Demo: jelovnik kako ga vide gosti",
+    "mockupAlt": "Telefon s početnom stranicom restorana i telefon sa stranicom jela",
+    "bullets": [
+      {
+        "icon": "Languages",
+        "title": "Automatski prijevod na 35 jezika",
+        "sub": "Uslužite strane goste bez jezične barijere — automatski prijevod rješava sve"
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "Narudžbe izravno sa stola",
+        "sub": "Pojednostavite poslovanje — brzo zaprimajte narudžbe sa stolova, bez potrebe za konobarom"
+      },
+      {
+        "icon": "WheatOff",
+        "title": "Alergeni i prehrana",
+        "sub": "Označite alergene i prehrambene navike (vegansko, ljuto) kako bi gosti lakše i sigurnije birali hranu"
+      }
+    ]
+  },
+  "reservations": {
+    "heading": "Rezervacije stolova",
+    "sub": {
+      "link": "Pametne rezervacije stolova!",
+      "rest": " Automatizirani sustav rezervacija koji samostalno prati slobodne stolove i vaš raspored."
+    },
+    "moreLabel": "Više o rezervacijama",
+    "demoLabel": "Demo: kalendar rezervacija",
+    "mockupAlt": "Tablet s kalendarom rezervacija: stolovi po danima i terminima",
+    "bullets": [
+      {
+        "icon": "CalendarCheck",
+        "title": "Jasan pregled rezervacija",
+        "sub": "Vizualni raspored po danima i stolovima — odmah vidite gdje i kada ima slobodnih mjesta"
+      },
+      {
+        "icon": "SlidersHorizontal",
+        "title": "Fleksibilne postavke rezervacija",
+        "sub": "Postavite radno vrijeme, trajanje termina i fotografije stolova te prikupljajte napomene gostiju"
+      },
+      {
+        "icon": "Users",
+        "title": "Upravljanje protokom gostiju",
+        "sub": "Odaberite način rezervacija koji vam odgovara i zadržite potpunu kontrolu nad dolascima"
+      }
+    ]
+  },
+  "orders": {
+    "heading": "Zaprimanje narudžbi za stolom",
+    "sub": {
+      "link": "Narudžbe ravno u kuhinju!",
+      "rest": " Narudžba sa stola ili od konobara istog trena stiže na kuhinjski ekran — bez papirnatih blokića i čekanja."
+    },
+    "moreLabel": "Više o narudžbama",
+    "demoLabel": "Demo: ekran za narudžbe",
+    "mockupSrc": "/landing/feature-orders-modal.webp",
+    "mockupAlt": "Tablet s otvorenom narudžbom: popis jela i akcije — promjena stola, dijeljenje računa, dodavanje popusta",
+    "bullets": [
+      {
+        "icon": "ShoppingCart",
+        "title": "Gost ili konobar",
+        "sub": "Gosti naručuju sa stola putem QR koda, a konobari sa svog telefona ili tableta"
+      },
+      {
+        "icon": "Map",
+        "title": "Tlocrt stolova sa statusima",
+        "sub": "Stolovi na tlocrtu označeni su bojama prema statusu — jednim pogledom vidite tko čeka narudžbu i kamo dalje"
+      },
+      {
+        "icon": "Receipt",
+        "title": "Dijeljenje računa",
+        "sub": "Podijelite narudžbu među gostima i zatvorite stolove bez zbrke s plaćanjem"
+      }
+    ]
+  },
+  "kds": {
+    "heading": "Kuhinjski ekran (KDS)",
+    "sub": {
+      "link": "Kuhinja u savršenom ritmu!",
+      "rest": " Narudžbe iz sale i s QR jelovnika odmah se pojavljuju na ekranu kuhara — s napomenama, alergenima i mjeračem vremena."
+    },
+    "moreLabel": "Više o KDS-u",
+    "demoLabel": "Demo: kuhinjski ekran",
+    "mockupAlt": "Tablet s kuhinjskim ekranom: narudžbe po stolovima u stupcima sa statusima",
+    "bullets": [
+      {
+        "icon": "LayoutGrid",
+        "title": "Ekrani po radnim jedinicama",
+        "sub": "Zasebni tableti za toplu kuhinju, šank i slastice — svatko vidi samo svoja jela"
+      },
+      {
+        "icon": "Timer",
+        "title": "Statusi i mjerač vremena",
+        "sub": "Stupci priprema / gotovo / posluženo i prolazno vrijeme po narudžbi — status se mijenja jednim dodirom"
+      },
+      {
+        "icon": "ShieldAlert",
+        "title": "Alergeni i napomene",
+        "sub": "Oznake alergena i napomene gostiju su istaknute — kuharu neće promaknuti ništa važno"
+      }
+    ]
+  },
+  "bundle": {
+    "heading": "Sve na čemu vaš restoran radi.",
+    "headingAccent": "U jednoj aplikaciji.",
+    "sub": "Jelovnik, kuhinja i rezervacije na jednom mjestu — moderno, brzo i prilagođeno stvarnom radu restorana. Bez skrivenih naknada ili naplate po modulu."
+  },
+  "benefits": [
+    {
+      "icon": "Languages",
+      "tag": "Digitalni jelovnik",
+      "title": "Jelovnik koji prodaje.",
+      "bullets": [
+        "35 jezika uz AI",
+        "Vrhunski dizajn",
+        "Cijene se ažuriraju odmah"
+      ],
+      "image": "/landing/feature-design.webp",
+      "imageAlt": "Dva telefona na stolu kafića: početni ekran digitalnog jelovnika i kontakt stranica s kartom"
+    },
+    {
+      "icon": "ChefHat",
+      "tag": "Kuhinjski ekran",
+      "title": "Kuhajte brže bez propusta.",
+      "bullets": [
+        "Izravno na ekran",
+        "Napomene i alergeni",
+        "Tablet ili telefon"
+      ],
+      "image": "/landing/feature-kds-cards.webp",
+      "imageAlt": "Tablet na šanku prikazuje kuhinjski ekran s narudžbama po stolovima"
+    },
+    {
+      "icon": "CalendarCheck",
+      "tag": "Rezervacije",
+      "title": "Rezervacije na autopilotu.",
+      "bullets": [
+        "Rezervacije bez telefonskih poziva",
+        "Automatska potvrda",
+        "Kalendar po stolovima"
+      ],
+      "image": "/landing/feature-booking-calendar.webp",
+      "imageAlt": "Dva tableta prikazuju kalendar rezervacija: dnevni prikaz po stolovima i mjesečni prikaz"
+    },
+    {
+      "icon": "Receipt",
+      "tag": "Zaprimanje narudžbi",
+      "title": "Narudžbe idu ravno u kuhinju.",
+      "bullets": [
+        "Gost ili konobar",
+        "Ravno u kuhinju",
+        "Uključite kada god želite"
+      ],
+      "image": "/landing/feature-orders-map.webp",
+      "imageAlt": "Tablet s ekranom za narudžbe: popis narudžbi i tlocrt s označenim stolovima."
+    }
+  ],
+  "seeDetails": "Saznajte više",
+  "platform": {
+    "hardwareTitle": "Koristite vlastitu opremu",
+    "hardwareSub": "Ne tjeramo vas da kupujete našu opremu. Koristite telefone, tablete i računala koja već imate.",
+    "anywhereTitle": "Radi svugdje",
+    "anywhereSub": "Telefon, tablet, laptop, PC. Android, iOS, Windows, Mac, Linux. U svakom modernom pregledniku, bez instalacije."
+  },
+  "activities": {
+    "heading": "Jedan sustav —",
+    "headingAccent": "vaš cijeli restoran.",
+    "sub": "Brža usluga, mirnija kuhinja, niži troškovi i gosti koji se vraćaju — sve na jednoj platformi.",
+    "groups": [
+      {
+        "icon": "Smartphone",
+        "tag": "Za stolom — gost",
+        "bullets": [
+          "QR jelovnik na 35 jezika",
+          "Naručivanje bez čekanja konobara",
+          "Poziv konobaru ili traženje računa",
+          "Rezervacija stolova 0-24",
+          "Jedinstveni QR kod za svaki stol",
+          "Bez aplikacije — otvara se u pregledniku",
+          "Oznake alergena i prehrane za filtriranje"
+        ]
+      },
+      {
+        "icon": "ChefHat",
+        "tag": "U kuhinji",
+        "bullets": [
+          "Narudžbe odmah na ekranu",
+          "Stupci priprema / gotovo / posluženo",
+          "Istaknuti alergeni i napomene",
+          "Tablet ili telefon — bez papirnatih narudžbi"
+        ]
+      },
+      {
+        "icon": "ChartColumn",
+        "tag": "Upravljanje",
+        "bullets": [
+          "Izmjene jelovnika i cijena — trenutne",
+          "AI prijevod jednim klikom",
+          "Analitika prodaje i izvještaji",
+          "Više restorana na jednom računu",
+          "AI digitalizira papirnati jelovnik u 60 sekundi",
+          "Vlastita domena sa SSL-om"
+        ]
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Cijela platforma u 10 minuta. ",
+    "headingAccent": "14 dana punog pristupa.",
+    "sub": "Jelovnik, narudžbe, rezervacije i kuhinja — bez kartice, otkažite bilo kada; vjeruje nam {count} restorana, dovoljna je samo e-mail adresa."
+  }
+}

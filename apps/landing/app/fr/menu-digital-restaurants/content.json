@@ -1,0 +1,332 @@
+{
+  "locale": "fr",
+  "slug": "menu-digital-restaurants",
+  "trackPrefix": "l_digital",
+  "meta": {
+    "title": "Menu digital pour restaurant | IQ Rest",
+    "description": "Menu digital pour restaurant : carte en ligne avec photos, allergènes, traduction IA et mise à jour des prix en temps réel. 14 jours gratuits, sans carte bancaire.",
+    "canonical": "https://iq-rest.com/fr/menu-digital-restaurants",
+    "ogLocale": "fr_FR",
+    "ogTitle": "Menu digital pour restaurant",
+    "ogDescription": "La version en ligne de votre menu papier avec photos, allergènes et traduction IA. Mise à jour des prix en temps réel.",
+    "brandLine": "IQ Rest — Menu digital pour restaurant"
+  },
+  "hero": {
+    "headline": "Menu digital et site web",
+    "headlineAccent": "pour votre restaurant",
+    "cta": "Créer un menu digital",
+    "demoLabel": "Démo : le menu vu par le client",
+    "sub": "Lancez-vous en 10 minutes : prenez les commandes à table, modifiez les prix à la volée et recevez les réservations en direct, sans commission.",
+    "phones": [
+      {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Téléphone avec la page d'accueil du site du restaurant : photos, réservations et accès au menu en ligne"
+      },
+      {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Téléphone avec la fiche d'un plat : photo, prix et étiquettes d'allergènes"
+      }
+    ]
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurants"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafés"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bars"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hôtels"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerias"
+    }
+  ],
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Un menu en 10 minutes",
+      "sub": "Sans développeurs ni configuration interminable"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Support réactif",
+      "sub": "Nous vous aidons à configurer votre menu par chat en quelques heures"
+    },
+    {
+      "icon": "Globe",
+      "title": "Le choix de {count} établissements",
+      "sub": "Menu digital et site web pour des restaurants dans plus de 15 pays"
+    },
+    {
+      "icon": "Palette",
+      "title": "Votre domaine et votre marque",
+      "sub": "Un menu à votre adresse, pas dans un constructeur générique"
+    }
+  ],
+  "scan": {
+    "heading": "Vous avez un menu papier ou un PDF ?",
+    "headingAccent": "L'IA le numérise en 60 secondes.",
+    "sub": "Téléchargez une photo ou un document — l'IA reconnaît automatiquement les catégories, les plats et les prix.",
+    "cta": "Scanner le menu"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "Traduction IA",
+      "heading": "Un menu en 35 langues",
+      "body": "Un seul QR — 35 langues. L'IA traduit en tenant compte du contexte culinaire, les plats sonnent donc naturellement. Les touristes commandent avec plus d'assurance.",
+      "bullets": [
+        "35 langues incluses dans l'abonnement",
+        "Une IA culinaire plutôt que Google",
+        "Changement de langue d'un simple geste"
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Deux clients lisent le même menu digital dans des langues différentes sur leurs propres téléphones"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Allergènes",
+      "heading": "Allergènes et régimes dans les plats",
+      "body": "Indiquez gluten, lactose, fruits à coque, végan et sans gluten. Le client filtre le menu selon ses besoins et commande sereinement.",
+      "bullets": [
+        "14 catégories d'allergènes",
+        "Étiquettes végan et sans gluten",
+        "Filtre du menu selon les restrictions"
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Un client filtre le menu par allergènes sur son téléphone, le restaurateur modifie la liste des allergènes sur une tablette"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Design et marque",
+      "heading": "Un menu premium sur votre propre domaine",
+      "body": "Fond vidéo à l'accueil, votre design et une page de contacts avec carte et réseaux sociaux — sur votre domaine, pas dans un PDF.",
+      "bullets": [
+        "Fond vidéo et design premium",
+        "Votre domaine avec SSL",
+        "Coordonnées, carte, réseaux sociaux"
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Deux téléphones sur une table de café : écran d'accueil du menu avec fond vidéo et page de contacts avec carte"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Commandes",
+      "heading": "Commandes en ligne sans commission",
+      "body": "Le client commande depuis le menu ou directement sur WhatsApp — la commande arrive en salle ou en cuisine, 0 % sur le chiffre d'affaires.",
+      "bullets": [
+        "Depuis le menu ou via WhatsApp",
+        "En salle ou en cuisine, 0 %",
+        "Activation dans les réglages"
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Deux téléphones sur une table : panier avec la commande et confirmation d'une commande validée"
+      }
+    },
+    {
+      "icon": "CalendarCheck",
+      "eyebrow": "Réservations",
+      "heading": "Réservation de tables 24h/24",
+      "body": "Vos clients réservent leur table eux-mêmes via le menu ou un lien, vous voyez le calendrier par table et confirmez automatiquement ou manuellement.",
+      "bullets": [
+        "Le client réserve lui-même",
+        "Calendrier de toutes les tables",
+        "Confirmation auto ou manuelle"
+      ]
+    },
+    {
+      "icon": "MonitorSmartphone",
+      "eyebrow": "Gestion",
+      "heading": "Gérez depuis n'importe où",
+      "body": "Le panneau d'administration fonctionne dans le navigateur — téléphone, tablette ou PC. Rien à installer, lancement en quelques minutes.",
+      "bullets": [
+        "N'importe quel appareil, un navigateur",
+        "Rien à installer",
+        "Lancement en quelques minutes"
+      ]
+    }
+  ],
+  "faq": {
+    "sub": "Ce que les restaurateurs demandent sur le menu digital d'IQ Rest. Votre question n'est pas dans la liste ? Écrivez-nous sur WhatsApp.",
+    "items": [
+      {
+        "q": "Faut-il des compétences techniques ou une expérience des CMS ?",
+        "a": "Aucune compétence particulière n'est requise. Toutes les actions dans le panneau de gestion se font en quelques clics — sans programmation ni manipulation de code. Ajouter un plat prend quelques secondes : nom, prix, photo. La configuration complète du menu tient généralement en 30 à 60 minutes."
+      },
+      {
+        "q": "Qu'est-ce que le menu digital IQ Rest ?",
+        "a": "La version en ligne de votre carte, accessible aux clients via un QR code ou un lien direct : photos des plats, prix, allergènes, traduction IA en 35 langues et mises à jour en temps réel. Le menu fonctionne sur nos serveurs — aucun logiciel à installer ou à maintenir, un navigateur suffit."
+      },
+      {
+        "q": "Les clients ont-ils besoin d'une application ou d'un équipement particulier ?",
+        "a": "Le client pointe l'appareil photo de son smartphone sur le QR code — le menu s'ouvre dans le navigateur, sans installation. Le panneau de gestion fonctionne lui aussi dans tout navigateur moderne : téléphone, tablette ou ordinateur portable. Les QR codes s'impriment sur une imprimante de bureau ordinaire."
+      },
+      {
+        "q": "Peut-on héberger le menu sur son propre domaine ?",
+        "a": "Oui. Le menu se connecte à votre domaine avec un certificat SSL — vos clients voient l'adresse du restaurant, par exemple menu.votrerestaurant.com. Notre support prend en charge la configuration du domaine et du certificat ; il ne vous faudra qu'un enregistrement DNS."
+      },
+      {
+        "q": "Peut-on gérer plusieurs restaurants depuis un seul compte ?",
+        "a": "Oui. Ajoutez vos établissements dans un même compte : chacun a son menu, son design, ses QR codes et ses statistiques, et vous passez de l'un à l'autre en un clic. Le nombre d'établissements dépend de votre abonnement."
+      },
+      {
+        "q": "Est-il compliqué de configurer un menu de zéro ?",
+        "a": "Trois étapes : créez les catégories, ajoutez les plats avec prix et photos, imprimez les QR codes pour les tables. Vous avez un menu papier ou un PDF ? Chargez-le dans le système : l'IA reconnaît les catégories, les noms et les prix et remplit les fiches automatiquement. Un menu de base se lance en 5 minutes ; la configuration complète dépend du nombre de références."
+      },
+      {
+        "q": "Quel support est prévu ?",
+        "a": "Nous répondons sur WhatsApp et par email pendant les heures ouvrées. Nous vous aidons pour la configuration initiale, la connexion du domaine et le design du menu. Besoin d'une démo ou d'un accompagnement au lancement ? Écrivez-nous."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Un menu en ligne en 10 minutes. ",
+    "headingAccent": "14 jours d'accès complet.",
+    "sub": "Sans carte bancaire, annulation à tout moment. {count} restaurants nous confient leurs menus et leurs sites. Seul un email est nécessaire."
+  },
+  "spotlights": [
+    {
+      "heading": "Un menu en 35 langues",
+      "sub": "Le client ouvre le menu dans sa langue maternelle. L'IA traduit les noms, les descriptions, les catégories et les options des plats en tenant compte du contexte culinaire.",
+      "bullets": [
+        {
+          "icon": "Globe",
+          "title": "35 langues dans l'abonnement",
+          "sub": "Langues européennes et asiatiques incluses — sans supplément pour chaque langue"
+        },
+        {
+          "icon": "Timer",
+          "title": "Traduction à l'enregistrement",
+          "sub": "Vous ajoutez ou modifiez un plat — les traductions dans toutes les langues du menu sont prêtes aussitôt"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Vos corrections sont protégées",
+          "sub": "Une traduction corrigée à la main est verrouillée, l'IA ne la réécrit plus"
+        }
+      ]
+    },
+    {
+      "heading": "Allergènes et régimes dans les plats",
+      "sub": "Indiquez les allergènes et les étiquettes alimentaires dans la fiche du plat — le client les voit dans le menu et filtre les plats selon ses restrictions.",
+      "bullets": [
+        {
+          "icon": "WheatOff",
+          "title": "14 catégories d'allergènes",
+          "sub": "La liste complète selon la réglementation européenne : gluten, fruits à coque, lactose, fruits de mer et autres"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "13 étiquettes alimentaires",
+          "sub": "Végan, végétarien, sans gluten, halal, casher, épicé et autres mentions"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Filtre en un geste",
+          "sub": "Le client sélectionne ses restrictions — le menu n'affiche que les plats adaptés"
+        }
+      ]
+    },
+    {
+      "heading": "Un menu premium sur votre propre domaine",
+      "sub": "Fond photo ou vidéo à l'accueil, couleur de marque et logo — le menu ressemble à votre site web, pas à un PDF, et fonctionne sur votre domaine.",
+      "bullets": [
+        {
+          "icon": "Palette",
+          "title": "Un design à votre image",
+          "sub": "Vidéo ou photo sur l'écran d'accueil, couleur d'accent et logo — sans faire appel à un designer"
+        },
+        {
+          "icon": "Globe",
+          "title": "Votre domaine avec SSL",
+          "sub": "Le menu s'ouvre à votre adresse, avec une connexion sécurisée"
+        },
+        {
+          "icon": "Map",
+          "title": "Coordonnées et carte",
+          "sub": "Une page avec adresse, horaires, carte et réseaux sociaux — un vrai site de restaurant"
+        }
+      ]
+    },
+    {
+      "heading": "Commandes en ligne sans commission",
+      "sub": "Le client passe commande depuis sa table — elle apparaît instantanément dans le tableau de bord et sur l'écran de cuisine. La plateforme prend 0 % sur le chiffre d'affaires.",
+      "bullets": [
+        {
+          "icon": "ShoppingCart",
+          "title": "Depuis le menu ou via WhatsApp",
+          "sub": "Commande dans le système ou par message sur votre WhatsApp — le mode se choisit dans les réglages"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Directement en cuisine",
+          "sub": "La nouvelle commande apparaît sans délai sur l'écran de cuisine et chez le serveur"
+        },
+        {
+          "icon": "Receipt",
+          "title": "0 % de commission",
+          "sub": "Le paiement reste entre vous et le client — la plateforme ne retient rien sur les commandes"
+        }
+      ]
+    },
+    {
+      "heading": "Réservation de tables 24h/24",
+      "sub": "Le client réserve sa table directement depuis le menu, à toute heure. Le système compare la demande avec vos horaires et les tables disponibles.",
+      "bullets": [
+        {
+          "icon": "CalendarCheck",
+          "title": "Calendrier par table",
+          "sub": "Le système choisit lui-même la table selon le nombre de convives et affiche les réservations par jour et par table"
+        },
+        {
+          "icon": "CalendarDays",
+          "title": "Auto ou manuel",
+          "sub": "Confirmez chaque réservation vous-même ou activez la confirmation automatique"
+        },
+        {
+          "icon": "Mail",
+          "title": "Emails pour le client et pour vous",
+          "sub": "Le client reçoit une confirmation par email, les propriétaires une notification pour chaque nouvelle réservation"
+        }
+      ]
+    },
+    {
+      "heading": "Gérez depuis n'importe où",
+      "sub": "Le tableau de bord fonctionne dans le navigateur, sur téléphone, tablette et ordinateur. Les modifications apparaissent instantanément chez vos clients.",
+      "bullets": [
+        {
+          "icon": "MonitorSmartphone",
+          "title": "N'importe quel appareil",
+          "sub": "Téléphone, tablette ou PC — un navigateur suffit, aucune installation requise"
+        },
+        {
+          "icon": "Timer",
+          "title": "Modifications à la volée",
+          "sub": "Prix, rupture ou masquage d'un plat s'appliquent immédiatement, sans publication ni attente"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Options des plats",
+          "sub": "Tailles, suppléments et variantes avec majoration — le client compose son plat lui-même"
+        }
+      ]
+    }
+  ],
+  "hideFeatureHeading": true
+}

@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "关于 IQ Rest — 我们是谁、联系方式与法律信息",
+    "description": "IQ Rest 背后的团队、如何联系我们以及服务运营商的详细信息：邮箱、WhatsApp、法律信息。",
+    "canonical": "https://iq-rest.com/zh/about",
+    "ogLocale": "zh_CN",
+    "ogTitle": "关于 IQ Rest",
+    "ogDescription": "IQ Rest 背后的团队、客服联系方式及服务运营商的法律信息。"
+  },
+  "heading": "从我们自己的咖啡馆",
+  "headingAccent": "到为餐厅打造的平台",
+  "story": {
+    "photo": {
+      "src": "/contacts.webp"
+    },
+    "paragraphs": [
+      "如今，该平台每天在 {count} 家门店运行——从只有五张桌子的咖啡馆到跨越多个城市的连锁店。数据存储在德国的服务器上，客服问题均由真人亲自解答。"
+    ],
+    "sign": "Bogdan Sokolov"
+  },
+  "facts": [
+    {
+      "value": "2022",
+      "label": "平台成立年份"
+    },
+    {
+      "value": "{count}",
+      "label": "家门店使用 IQ Rest"
+    },
+    {
+      "value": "15",
+      "label": "个国家有我们的客户"
+    }
+  ],
+  "waPrefill": "你好，我有一个关于 IQ Rest 的问题",
+  "contacts": [
+    {
+      "icon": "Mail",
+      "title": "邮箱",
+      "value": "support@iq-rest.com",
+      "href": "mailto:support@iq-rest.com",
+      "note": "发票、文档、数据问题。"
+    },
+    {
+      "icon": "MessageCircle",
+      "title": "WhatsApp",
+      "value": "+998 94 866 37 43",
+      "wa": true,
+      "note": "我们将为您演示并协助设置。"
+    },
+    {
+      "icon": "Clock",
+      "title": "响应时间",
+      "value": "周一至周日，9:00–21:00 CET",
+      "note": "我们在几个小时内回复。"
+    }
+  ],
+  "legal": {
+    "rows": [
+      {
+        "label": "服务运营商",
+        "value": "Bogdan Sokolov"
+      },
+      {
+        "label": "法律形式",
+        "value": "Autónomo (España)"
+      },
+      {
+        "label": "税号 (NIF)",
+        "value": "ESZ1894474S"
+      },
+      {
+        "label": "地址",
+        "value": "Calle Boca del Río 2, 33010 Oviedo, Asturias, España"
+      },
+      {
+        "label": "域名",
+        "value": "https://iq-rest.com"
+      },
+      {
+        "label": "数据托管",
+        "value": "Hetzner Online GmbH, Nuremberg, Germany"
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "您已经了解了我们的故事。 ",
+    "headingAccent": "开始书写您的故事——免费试用14天。",
+    "sub": "无需绑卡，随时取消。就像 {count} 家餐厅一样，您可以信赖我们。只需一个邮箱即可开始。"
+  }
+}

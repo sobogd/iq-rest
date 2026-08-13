@@ -1,10 +1,13 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useLocale, useTranslations } from "next-intl";
 import { Loader2 } from "lucide-react";
 import { dashboardApi, dashboardApiBase, dashboardUrl } from "@/lib/dashboard-url";
+import { localePath } from "@/lib/locale-paths";
 import { analytics } from "@/lib/analytics";
+import { BTN_BOX, PRIMARY_FILL } from "../shell";
+import { useAuthTexts, useLandingLocale } from "../../lib/landing-strings";
+import type { AuthTexts } from "../../types";
 import type { CuisineKey } from "./cuisine";
 
 
@@ -19,11 +22,11 @@ const APPLE_SERVICES_ID =
 const CODE_LENGTH = 6;
 const RESEND_COOLDOWN = 60;
 
-const ERROR_MAP: Record<string, string> = {
-  CODE_EXPIRED: "errors.codeExpired",
-  NO_CODE: "errors.noCode",
-  INVALID_CODE: "errors.invalidCode",
-  TOO_MANY_ATTEMPTS: "errors.tooManyAttempts",
+const ERROR_MAP: Record<string, keyof AuthTexts["errors"]> = {
+  CODE_EXPIRED: "codeExpired",
+  NO_CODE: "noCode",
+  INVALID_CODE: "invalidCode",
+  TOO_MANY_ATTEMPTS: "tooManyAttempts",
 };
 
 const isValidEmail = (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
@@ -68,26 +71,21 @@ function redirectAfterAuth(locale: string, legacyDashboard: boolean) {
 
 export function AuthStep({
   signupContext,
-  variant = "register",
+  mode,
+  onStepChange,
 }: {
   signupContext: SignupContext | null;
-  /** Initial copy preset: "register" → signup copy with consent + trust line
-   *  (CTA buttons); "signin" → bare returning-user copy (header link). The
-   *  backend flow is identical — a footer link lets the user switch presets. */
-  variant?: "signin" | "register";
+  /** Controlled by the auth page's switcher: "register" → signup copy;
+   *  "signin" → bare returning-user copy. The backend flow is identical. */
+  mode: "signin" | "register";
+  /** Reports the current screen + email up to <AuthHero> so its copy column
+   *  can show the matching title (verify title/subtitle on the OTP screen
+   *  instead of the sign-in/register one). */
+  onStepChange?: (step: { screen: Screen; email: string }) => void;
 }) {
-  const t = useTranslations("auth");
-  const locale = useLocale();
-  const [mode, setMode] = useState<"signin" | "register">(variant);
+  const t = useAuthTexts();
+  const locale = useLandingLocale();
   const isRegister = mode === "register";
-
-  const switchMode = () => {
-    const next = isRegister ? "signin" : "register";
-    analytics.track("Click", `Switch to ${next === "signin" ? "sign in" : "signup"}`);
-    setMode(next);
-    setStatus("idle");
-    setErrorMessage("");
-  };
 
   const [screen, setScreen] = useState<Screen>("email");
   const [email, setEmail] = useState("");
@@ -112,6 +110,27 @@ export function AuthStep({
     const timer = setTimeout(() => setCooldown((c) => c - 1), 1000);
     return () => clearTimeout(timer);
   }, [cooldown]);
+  useEffect(() => {
+    onStepChange?.({ screen, email });
+  }, [screen, email, onStepChange]);
+
+  // Flipping the switcher mid-OTP would otherwise leave a stale code screen
+  // (and email) hanging around for the other mode — reset back to a clean
+  // email screen whenever sign-in/register changes. Skipped on mount (the
+  // ref starts equal to the first `mode`) so it doesn't clobber the initial
+  // state.
+  const prevModeRef = useRef(mode);
+  useEffect(() => {
+    if (prevModeRef.current === mode) return;
+    prevModeRef.current = mode;
+    setScreen("email");
+    setEmail("");
+    setCode(Array(CODE_LENGTH).fill(""));
+    setStatus("idle");
+    setErrorMessage("");
+    setCooldown(0);
+    setResendStatus("idle");
+  }, [mode]);
 
   const handleGoogleClick = () => {
     if (!GOOGLE_CLIENT_ID) return;
@@ -156,7 +175,7 @@ export function AuthStep({
     const trimmed = email.trim().toLowerCase();
     if (!isValidEmail(trimmed)) {
       analytics.track("Show", "Email invalid");
-      setErrorMessage(t("errors.emailInvalid"));
+      setErrorMessage(t.errors.emailInvalid);
       setStatus("error");
       return;
     }
@@ -177,11 +196,11 @@ export function AuthStep({
         setStatus("idle");
         setScreen("verify");
       } else {
-        setErrorMessage(data.error || t("errors.sendFailed"));
+        setErrorMessage(data.error || t.errors.sendFailed);
         setStatus("error");
       }
     } catch {
-      setErrorMessage(t("errors.sendFailed"));
+      setErrorMessage(t.errors.sendFailed);
       setStatus("error");
     }
   };
@@ -205,12 +224,12 @@ export function AuthStep({
         redirectAfterAuth(locale, !!data.legacyDashboard);
       } else {
         const key = ERROR_MAP[data.error];
-        setErrorMessage(key ? t(key) : t("errors.verifyFailed"));
+        setErrorMessage(key ? t.errors[key] : t.errors.verifyFailed);
         setStatus("error");
         setCode(Array(CODE_LENGTH).fill(""));
       }
     } catch {
-      setErrorMessage(t("errors.verifyFailed"));
+      setErrorMessage(t.errors.verifyFailed);
       setStatus("error");
       setCode(Array(CODE_LENGTH).fill(""));
     }
@@ -235,12 +254,12 @@ export function AuthStep({
         setTimeout(() => setResendStatus("idle"), 3000);
       } else {
         setResendStatus("idle");
-        setErrorMessage(t("errors.sendFailed"));
+        setErrorMessage(t.errors.sendFailed);
         setStatus("error");
       }
     } catch {
       setResendStatus("idle");
-      setErrorMessage(t("errors.sendFailed"));
+      setErrorMessage(t.errors.sendFailed);
       setStatus("error");
     }
   };
@@ -256,7 +275,6 @@ export function AuthStep({
   if (screen === "verify") {
     return (
       <VerifyScreen
-        email={email}
         code={code}
         setCode={setCode}
         onVerify={handleVerify}
@@ -272,17 +290,6 @@ export function AuthStep({
 
   return (
     <div>
-      <h2 className="text-2xl sm:text-3xl font-medium tracking-tight leading-tight mb-2">
-        {signupContext
-          ? t("titleWithName", { name: signupContext.restaurantName })
-          : isRegister
-            ? t("registerTitle")
-            : t("signInTitle")}
-      </h2>
-      <p className="text-sm sm:text-base text-muted-foreground leading-snug mb-6">
-        {signupContext ? t("subtitle") : isRegister ? t("registerSubtitle") : t("signInSubtitle")}
-      </p>
-
       {status === "error" && errorMessage && (
         <div className="mb-4 p-3 bg-red-500/10 border border-red-500/40 rounded-xl text-red-400 text-sm leading-snug">
           {errorMessage}
@@ -301,26 +308,26 @@ export function AuthStep({
       >
         <input
           id="onboarding-email"
-          aria-label={t("emailLabel")}
+          aria-label={t.emailLabel}
           type="email"
           inputMode="email"
           autoComplete="email"
           required
-          placeholder={t("emailPlaceholder")}
+          placeholder={t.emailPlaceholder}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           onFocus={() => analytics.track("Focus", "Email field")}
           disabled={status === "loading"}
-          className="w-full h-12 px-4 text-base text-foreground bg-background border border-border rounded-xl placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors"
+          className="w-full h-10 px-4 text-sm text-foreground bg-background/60 border border-border rounded-lg placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors"
         />
 
         <button
           type="submit"
           disabled={status === "loading"}
-          className="mt-4 h-12 w-full text-base font-semibold text-white bg-gradient-to-br from-[hsl(9,100%,58%)] to-[hsl(35,95%,55%)] rounded-xl hover:opacity-90 active:scale-[0.99] transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+          className={`mt-4 w-full ${BTN_BOX} ${PRIMARY_FILL} hover:opacity-90 active:scale-[0.99] transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2`}
         >
           {status === "loading" && <Loader2 className="h-4 w-4 animate-spin" />}
-          {isRegister ? t("registerButton") : t("signInButton")}
+          {isRegister ? t.registerButton : t.signInButton}
         </button>
       </form>
 
@@ -328,76 +335,98 @@ export function AuthStep({
         <>
           <div className="flex items-center gap-3 my-3">
             <span className="h-px flex-1 bg-border" />
-            <span className="text-sm text-muted-foreground">{t("or")}</span>
+            <span className="text-sm text-muted-foreground">{t.or}</span>
             <span className="h-px flex-1 bg-border" />
           </div>
 
-          <div className="grid grid-cols-2 gap-3">
+          {/* Google/Apple branding guidelines both require the full
+              "Continue with …" label next to the logo — never the bare
+              brand name — so the buttons stack instead of sharing a row. */}
+          <div className="flex flex-col gap-3">
             <button
               type="button"
               onClick={handleGoogleClick}
-              className="h-12 text-base font-medium text-foreground bg-background border border-border rounded-xl hover:border-foreground active:scale-[0.99] transition-all flex items-center justify-center gap-2 cursor-pointer"
+              className={`${BTN_BOX} text-foreground bg-background/60 border border-border hover:bg-muted active:scale-[0.99] transition-all flex items-center justify-center gap-2 cursor-pointer`}
             >
               <GoogleIcon />
-              Google
+              {t.continueGoogle}
             </button>
 
             <button
               type="button"
               onClick={handleAppleClick}
-              className="h-12 text-base font-medium text-foreground bg-background border border-border rounded-xl hover:border-foreground active:scale-[0.99] transition-all flex items-center justify-center gap-2 cursor-pointer"
+              className={`${BTN_BOX} text-foreground bg-background/60 border border-border hover:bg-muted active:scale-[0.99] transition-all flex items-center justify-center gap-2 cursor-pointer`}
             >
               <AppleIcon />
-              Apple
+              {t.continueApple}
             </button>
           </div>
         </>
       )}
 
-      {/* Register preset carries the legal copy; sign-in stays bare. */}
-      {isRegister && (
-        <>
-          <p className="text-xs text-muted-foreground leading-snug text-center mt-5">
-            {t("consent.text")}{" "}
-            <a
-              href={`/${locale}/terms`}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => analytics.track("Click", "Terms link")}
-              className="text-foreground/80 hover:text-foreground underline underline-offset-2 transition-colors"
-            >
-              {t("consent.terms")}
-            </a>{" "}
-            {t("consent.and")}{" "}
-            <a
-              href={`/${locale}/privacy`}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => analytics.track("Click", "Privacy link")}
-              className="text-foreground/80 hover:text-foreground underline underline-offset-2 transition-colors"
-            >
-              {t("consent.privacy")}
-            </a>
-          </p>
-        </>
-      )}
-
-      <p className="text-xs text-muted-foreground leading-snug text-center mt-3">
-        {isRegister ? t("switchHaveAccount") : t("switchNoAccount")}{" "}
-        <button
-          type="button"
-          onClick={switchMode}
-          className="text-foreground/80 hover:text-foreground underline underline-offset-2 transition-colors cursor-pointer"
-        >
-          {isRegister ? t("switchSignIn") : t("switchCreate")}
-        </button>
-      </p>
+      <AuthConsent className="mt-4 text-center" />
     </div>
   );
 }
 
+/** Clickwrap notice shown next to the auth actions: acceptance of the Terms
+ *  at the moment of registration; the Privacy Policy is referenced as
+ *  information (GDPR Art. 13 notice), not as something the user "agrees" to. */
+export function AuthConsent({ className }: { className?: string }) {
+  const t = useAuthTexts();
+  const locale = useLandingLocale();
+  const link = (href: string) => ({
+    href,
+    target: "_blank",
+    rel: "noopener noreferrer",
+    className: "underline underline-offset-2 hover:text-foreground transition-colors",
+  });
+
+  // consent.line keeps the <terms>…</terms> / <privacy>…</privacy> tags from
+  // the old messages format; split keeps [text, tag, inner, text, …] triples.
+  const chunks = t.consent.line.split(/<(terms|privacy)>(.*?)<\/\1>/g);
+  return (
+    <p className={`text-xs text-muted-foreground leading-snug ${className ?? ""}`}>
+      {chunks.map((chunk, i) => {
+        if (i % 3 === 1) return null;
+        if (i % 3 === 2) {
+          const href = localePath(locale, chunks[i - 1] === "terms" ? "/terms" : "/privacy");
+          return (
+            <a key={i} {...link(href)}>
+              {chunk}
+            </a>
+          );
+        }
+        return <span key={i}>{chunk}</span>;
+      })}
+    </p>
+  );
+}
+
+/** The verify screen's subtitle ("We sent a 6-digit code to {email}"), with
+ *  the email bolded — shared between <AuthHero>'s copy column (where the
+ *  verify title/subtitle now live) and anywhere else that needs the same
+ *  markup. */
+export function VerifySubtitle({ email, className }: { email: string; className?: string }) {
+  const t = useAuthTexts();
+  const parts = t.verifySubtitle.split("{email}");
+  return (
+    <p className={className}>
+      {parts.map((part, i) =>
+        i < parts.length - 1 ? (
+          <span key={i}>
+            {part}
+            <span className="text-foreground font-medium">{email}</span>
+          </span>
+        ) : (
+          <span key={i}>{part}</span>
+        ),
+      )}
+    </p>
+  );
+}
+
 function VerifyScreen({
-  email,
   code,
   setCode,
   onVerify,
@@ -408,7 +437,6 @@ function VerifyScreen({
   cooldown,
   resendStatus,
 }: {
-  email: string;
   code: string[];
   setCode: (c: string[]) => void;
   onVerify: () => void;
@@ -419,7 +447,7 @@ function VerifyScreen({
   cooldown: number;
   resendStatus: "idle" | "loading" | "sent";
 }) {
-  const t = useTranslations("auth");
+  const t = useAuthTexts();
   const joined = code.join("");
   const canVerify = joined.length === CODE_LENGTH;
 
@@ -433,37 +461,19 @@ function VerifyScreen({
     }
   };
 
-  const parts = t("verifySubtitle", { email }).split(email);
-
   return (
     <div>
-      <h2 className="text-2xl sm:text-3xl font-medium tracking-tight leading-tight mb-2">
-        {t("verifyTitle")}
-      </h2>
-      <p className="text-sm sm:text-base text-muted-foreground leading-snug mb-6">
-        {parts.map((part, i) =>
-          i < parts.length - 1 ? (
-            <span key={i}>
-              {part}
-              <span className="text-foreground font-medium">{email}</span>
-            </span>
-          ) : (
-            <span key={i}>{part}</span>
-          ),
-        )}
-      </p>
-
+      {/* Title/subtitle moved to the hero's copy column (see <AuthHero>) —
+          this screen starts straight at the code field. */}
       {status === "error" && errorMessage && (
         <div className="mb-4 p-3 bg-red-500/10 border border-red-500/40 rounded-xl text-red-400 text-sm leading-snug">
           {errorMessage}
         </div>
       )}
 
-      <label htmlFor="onboarding-otp" className="block text-sm font-medium text-foreground mb-2 tracking-tight">
-        {t("verifyCodeLabel")}
-      </label>
       <input
         id="onboarding-otp"
+        aria-label={t.verifyCodeLabel}
         type="text"
         inputMode="numeric"
         autoComplete="one-time-code"
@@ -475,47 +485,55 @@ function VerifyScreen({
           if (e.key === "Enter" && canVerify) onVerify();
         }}
         disabled={status === "loading"}
-        placeholder="••••••"
-        className="w-full h-14 px-4 text-center text-2xl font-semibold text-foreground bg-background border border-border rounded-xl focus:outline-none focus:border-foreground transition-colors tabular-nums tracking-[0.4em] placeholder:tracking-[0.4em] placeholder:text-muted-foreground/40 disabled:opacity-50"
+        placeholder="123456"
+        className="w-full h-10 px-4 text-sm text-foreground bg-background/60 border border-border rounded-lg placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors disabled:opacity-50"
       />
-
-      <p className="text-xs text-muted-foreground mt-3">{t("checkSpam")}</p>
 
       <button
         type="button"
         onClick={onVerify}
         disabled={!canVerify || status === "loading"}
-        className="mt-6 h-12 w-full text-base font-semibold text-white bg-gradient-to-br from-[hsl(9,100%,58%)] to-[hsl(35,95%,55%)] rounded-xl hover:opacity-90 active:scale-[0.99] transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:active:scale-100 flex items-center justify-center gap-2"
+        className={`mt-4 w-full ${BTN_BOX} ${PRIMARY_FILL} hover:opacity-90 active:scale-[0.99] transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:active:scale-100 flex items-center justify-center gap-2`}
       >
         {status === "loading" && <Loader2 className="h-4 w-4 animate-spin" />}
-        {t("verifyButton")}
+        {t.verifyButton}
       </button>
 
-      <div className="flex items-center justify-between mt-5">
+      <div className="flex items-center gap-3 my-3">
+        <span className="h-px flex-1 bg-border" />
+        <span className="text-sm text-muted-foreground">{t.or}</span>
+        <span className="h-px flex-1 bg-border" />
+      </div>
+
+      {/* Same outline treatment as the Google/Apple buttons on the email
+          screen — these are secondary actions off the same visual family. */}
+      <div className="flex flex-col gap-3">
         <button
           type="button"
           onClick={onChangeEmail}
-          className="text-xs font-medium text-muted-foreground hover:text-foreground tracking-tight transition-colors flex items-center gap-1"
+          className={`${BTN_BOX} text-foreground bg-background/60 border border-border hover:bg-muted active:scale-[0.99] transition-all flex items-center justify-center gap-2 cursor-pointer`}
         >
-          ← {t("changeEmail")}
+          {t.changeEmail}
         </button>
         <button
           type="button"
           onClick={onResend}
           disabled={cooldown > 0 || resendStatus === "loading"}
-          className="text-xs font-medium text-foreground hover:text-foreground/70 tracking-tight transition-colors disabled:text-muted-foreground disabled:cursor-not-allowed flex items-center gap-1"
+          className={`${BTN_BOX} text-foreground bg-background/60 border border-border hover:bg-muted active:scale-[0.99] transition-all flex items-center justify-center gap-2 cursor-pointer disabled:text-muted-foreground disabled:cursor-not-allowed disabled:active:scale-100`}
         >
           {resendStatus === "loading" ? (
-            <Loader2 className="h-3 w-3 animate-spin" />
+            <Loader2 className="h-4 w-4 animate-spin" />
           ) : resendStatus === "sent" ? (
-            t("resendSent")
+            t.resendSent
           ) : cooldown > 0 ? (
-            `${t("resendCode")} (${cooldown}s)`
+            `${t.resendCode} (${cooldown}s)`
           ) : (
-            t("resendCode")
+            t.resendCode
           )}
         </button>
       </div>
+
+      <p className="text-xs text-muted-foreground mt-4 text-center">{t.checkSpam}</p>
     </div>
   );
 }

@@ -1,3 +1,6 @@
+import { locales } from "@/lib/locales";
+import { localePath } from "@/lib/locale-paths";
+
 // Per-locale slug overrides for the five shared routes that exist on every
 // locale: digital-menu, order-taking, bookings, kitchen-display, pricing.
 //
@@ -244,7 +247,38 @@ export const LOCALE_SLUG_OVERRIDES: Record<string, Record<string, string>> = {
     ga: "/praghsanna",
     is: "/verd",
   },
+
+  // About / company page — localized slug per language (SEO). Only the locales
+  // that ship a built page are listed; others fall back to the route key.
+  "/about": {
+    ru: "/o-kompanii",
+    en: "/about",
+    es: "/sobre-nosotros",
+    fr: "/a-propos",
+    it: "/chi-siamo",
+    pt: "/sobre-nos",
+  },
+
+  // Help guide — localized slug per language (SEO). Same rollout rule as above.
+  "/help": {
+    ru: "/help",
+    en: "/help",
+    es: "/ayuda",
+    fr: "/aide",
+    it: "/guida",
+    pt: "/ajuda",
+  },
 };
+
+// Auth + legal routes share ONE slug across every locale (login/register live
+// under app/[locale]/(auth); privacy/terms/cookies under app/[locale]). They
+// are registered here so the mapping is the single source of truth for every
+// page type — swapLocale/canonicalisation/deep-links treat them uniformly.
+for (const route of ["/login", "/register", "/privacy", "/terms", "/cookies"]) {
+  LOCALE_SLUG_OVERRIDES[route] = Object.fromEntries(
+    (locales as readonly string[]).map((l) => [l, route]),
+  );
+}
 
 /**
  * Translate a path from one locale to another, honouring per-locale slug
@@ -282,9 +316,138 @@ export function swapLocale(pathname: string, target: string): string {
     const matchedAsShared = rest === sharedRoute && !byLocale[currentLocale];
     if (!matchedAsOverride && !matchedAsShared) continue;
 
-    if (byLocale[target]) return targetPath(target, byLocale[target]);
+    if (byLocale[target]) {
+      // auth/legal are always prefixed, even for English.
+      if (ALWAYS_PREFIXED.has(sharedRoute)) return `/${target}${byLocale[target]}`;
+      return targetPath(target, byLocale[target]);
+    }
     return targetHome(target);
   }
 
   return targetPath(target, rest);
+}
+
+// ---------------------------------------------------------------------------
+// Registry helpers — the mapping above is the single source of truth for every
+// inter-page link, locale switch, slug canonicalisation and ad deep-link.
+// ---------------------------------------------------------------------------
+
+/** The localized slug (leading slash) for a route key in a locale, or the
+ *  route key itself when the locale ships no override. */
+export function slugForRoute(routeKey: string, locale: string): string {
+  return LOCALE_SLUG_OVERRIDES[routeKey]?.[locale] ?? routeKey;
+}
+
+// Routes that live under `app/[locale]/…` (auth + legal) are ALWAYS prefixed —
+// including English (there is no un-prefixed `(en)` variant of these). Marketing
+// routes, by contrast, serve English at the root. localizedHref/swapLocale honour
+// this so e.g. EN privacy is `/en/privacy`, not `/privacy`.
+const ALWAYS_PREFIXED = new Set([
+  "/login",
+  "/register",
+  "/privacy",
+  "/terms",
+  "/cookies",
+]);
+
+/** True when a route lives under app/[locale]/… (auth/legal) and is therefore
+ *  prefixed even for English. */
+export function isAlwaysPrefixed(routeKey: string): boolean {
+  return ALWAYS_PREFIXED.has(routeKey);
+}
+
+// EN root slugs for MARKETING routes only — auth/legal are never served at the
+// root, so they must NOT be treated as `/`-level English pages. Consumed by
+// middleware to recognise root-served pages and legacy `/en/<slug>` redirects.
+export const EN_ROOT_SLUGS: ReadonlySet<string> = new Set(
+  Object.entries(LOCALE_SLUG_OVERRIDES)
+    .filter(([key]) => !ALWAYS_PREFIXED.has(key))
+    .map(([, m]) => m.en)
+    .filter((v): v is string => !!v),
+);
+
+/** Full path for a route key in a locale (marketing: en → unprefixed, others →
+ *  /<locale>; auth/legal: always /<locale>). */
+export function localizedHref(routeKey: string, locale: string): string {
+  const slug = slugForRoute(routeKey, locale);
+  if (ALWAYS_PREFIXED.has(routeKey)) return `/${locale}${slug}`;
+  return localePath(locale, slug);
+}
+
+// The four home/nav feature links, in the fixed order every locale's
+// `texts.footer.featureLinks` array uses. Hrefs are derived from the mapping so
+// they never point at a stale hardcoded locale (the JSON only carries labels).
+export const FEATURE_LINK_ROUTES = [
+  "/digital-menu",
+  "/order-taking",
+  "/bookings",
+  "/kitchen-display",
+] as const;
+
+/** Re-point a locale's feature-link list at the correct localized hrefs,
+ *  keeping each JSON-supplied label. */
+export function localizedFeatureLinks<T extends { href: string; label: string }>(
+  locale: string,
+  links: T[],
+): { href: string; label: string }[] {
+  return links.map((l, i) =>
+    FEATURE_LINK_ROUTES[i]
+      ? { href: localizedHref(FEATURE_LINK_ROUTES[i], locale), label: l.label }
+      : { href: l.href, label: l.label },
+  );
+}
+
+// Reverse index: every localized slug (across all locales) → its route key.
+// Built after the identical-route assignment so auth/legal slugs are included.
+const SLUG_TO_ROUTE: Map<string, string> = (() => {
+  const m = new Map<string, string>();
+  for (const [routeKey, byLocale] of Object.entries(LOCALE_SLUG_OVERRIDES)) {
+    for (const slug of Object.values(byLocale)) m.set(slug, routeKey);
+  }
+  return m;
+})();
+
+/** Route key owning a slug in ANY locale. Accepts with/without leading slash. */
+export function routeKeyFromSlug(slug: string): string | undefined {
+  const s = slug.startsWith("/") ? slug : `/${slug}`;
+  return SLUG_TO_ROUTE.get(s);
+}
+
+/** Route key for a full pathname (strips a leading /<locale>). Returns "/" for
+ *  a locale home, the shared route key for a known page, or undefined. */
+export function routeKeyFromPath(pathname: string): string | undefined {
+  const seg = pathname.split("/").filter(Boolean);
+  const firstIsLocale =
+    seg.length > 0 && (locales as readonly string[]).includes(seg[0]);
+  const rest = firstIsLocale ? `/${seg.slice(1).join("/")}` : `/${seg.join("/")}`;
+  if (rest === "/") return "/";
+  return SLUG_TO_ROUTE.get(rest);
+}
+
+/**
+ * Slug-canonicalisation for middleware. Given the locale segment of a URL and
+ * the remaining path (`/slug`), if `rest` is a known route slug that is NOT the
+ * correct slug for `locale`, returns the corrected full path to 301 to;
+ * otherwise null (already canonical or not a known route).
+ *
+ *   canonicalSlugRedirect("it", "/menu-digital-restaurantes")
+ *     → "/it/menu-digitale-ristoranti"   (es slug under it → it's own slug)
+ *   canonicalSlugRedirect("it", "/menu-digitale-ristoranti") → null
+ */
+export function canonicalSlugRedirect(locale: string, rest: string): string | null {
+  const routeKey = SLUG_TO_ROUTE.get(rest);
+  if (!routeKey) return null;
+  const correct = slugForRoute(routeKey, locale);
+  if (correct === rest) return null;
+  return localePath(locale, correct);
+}
+
+/**
+ * Ad deep-link resolver (`/d/<slug>`). Resolves a slug in ANY language to the
+ * equivalent page in `locale`. Unknown slug → locale home (never a 404).
+ */
+export function deepLinkPath(slug: string, locale: string): string {
+  const routeKey = routeKeyFromSlug(slug);
+  if (!routeKey) return locale === "en" ? "/" : `/${locale}`;
+  return localizedHref(routeKey, locale);
 }

@@ -1,0 +1,236 @@
+{
+  "locale": "hu",
+  "slug": "rendelesi-rendszer-etterem",
+  "trackPrefix": "l_orders",
+  "meta": {
+    "title": "Éttermi rendelésfelvétel — Vendég és Pincér | IQ Rest",
+    "description": "Éttermi rendelésfelvétel telefonról vagy tabletről: asztaltérkép, számlabontás, státuszok, opciók és megjegyzések. A vendégek az asztaltól rendelnek, a pincérek a saját eszközükön veszik fel a rendelést. 14 nap ingyen.",
+    "canonical": "https://iq-rest.com/hu/rendelesi-rendszer-etterem",
+    "ogLocale": "hu_HU",
+    "ogTitle": "Éttermi rendelésfelvétel — Vendég és Pincér",
+    "ogDescription": "A vendég az asztalnál vagy a pincér a telefonon — a rendelés azonnal a konyhára fut be. Asztaltérkép, számlabontás, státuszok, opciók és megjegyzések.",
+    "brandLine": "IQ Rest — Éttermi rendelésfelvétel"
+  },
+  "hero": {
+    "headline": "Rendelések az asztaltól —",
+    "cta": "Online rendelés beállítása",
+    "sub": "A vendégek az asztalnál rendelnek, vagy a pincérek bármilyen eszközről — egyenesen a konyhára. Asztaltérkép, számlabontás.",
+    "headlineAccent": "egyenesen a konyhára",
+    "demoLabel": "Demó: rendelési képernyő",
+    "tablet": {
+      "src": "/landing/feature-orders-modal.webp",
+      "alt": "Tablet egy nyitott rendeléssel: ételek listája és rendelési műveletek — asztal módosítása, számlabontás, kedvezmény hozzáadása"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Éttermek"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kávézók"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bárok"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Szállodák"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzériák"
+    }
+  ],
+  "scan": {
+    "heading": "Állítsd be a rendelésfelvételi rendszered",
+    "headingAccent": "5 perc alatt.",
+    "sub": "Olvasd be a papír étlapot vagy egy PDF-et — az MI felismeri az ételeket, árakat és kategóriákat. Csatlakoztass egy tabletet a pályán, és kezdd el felvenni a rendeléseket az asztaloktól.",
+    "cta": "Étlap beolvasása"
+  },
+  "subFeatures": [
+    {
+      "icon": "Map",
+      "eyebrow": "Lista és asztaltérkép",
+      "heading": "Rendelési lista az asztaltérkép mellett.",
+      "body": "Minden aktív rendelés a jobb oldalon látható: státusz, végösszeg, leadás ideje és a tételek száma. A bal oldalon az asztaltérkép található: az asztalok státusz szerint színkódoltak — üres, foglalt, figyelmet igényel. Az asztalra koppintva megnyílik a rendelés, a kártyára koppintva pedig a részletes nézet. Nem kell ugrálni a képernyők között.",
+      "bullets": [
+        "Asztaltérkép: az asztalok rendelési státusz szerint színkódolva.",
+        "Rendelési lista mellette — végösszeg, idő és tételek száma.",
+        "Egy asztalra koppintva megnyílik a rendelés, vagy újat hoz létre."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-map.webp",
+        "alt": "Tablet egy pincérpultnál: rendelési lista és asztaltérkép színkódolt asztalokkal"
+      }
+    },
+    {
+      "icon": "ClipboardList",
+      "eyebrow": "Rendelési kártya",
+      "heading": "A rendelési kártya: státuszok, duplikálás és törlés — egy érintéssel.",
+      "body": "Minden tételnek saját státusza van (Függőben / Készül / Kész / Felszolgálva) — a konyha és a pincér ugyanazt a képet látja valós időben. A pontra koppintva megnyílik a műveleti menü: státusz módosítása, a tétel duplikálása ugyanazokkal a módosítókkal és opciókkal, vagy törlés. Minden közvetlenül a rendelési kártyán történik.",
+      "bullets": [
+        "Tételenkénti státusz: Függőben / Készül / Kész / Felszolgálva.",
+        "Tétel duplikálása egy érintéssel — az opciókkal együtt.",
+        "Tétel törlése közvetlenül a rendelési kártyáról."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-detail.webp",
+        "alt": "Tablet egy részletes rendelési kártyával: ételek státusza, tételek duplikálása és törlése"
+      }
+    },
+    {
+      "icon": "Receipt",
+      "eyebrow": "Számlabontás",
+      "heading": "Számlabontás, amikor a vendégek külön fizetnek.",
+      "body": "A vendégek úgy döntenek, hogy külön fizetnek — jelöld be azokat a tételeket, amik az új számlára kerülnek; a többi a jelenlegin marad. A rendszer azonnal mutatja mindkét végösszeget. Egy érintés a \"Rendelés szétbontása\" gombon — és máris két független rendelésed van a helyes végösszegekkel, mindkettő a saját asztalán maradva.",
+      "bullets": [
+        "Válaszd ki a szétbontandó tételeket a jelölőnégyzetekkel.",
+        "Az új és a megmaradó számla végösszege azonnal megjelenik.",
+        "Egy érintés — és a rendelés szét van bontva, kézi számolás nélkül."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-split.webp",
+        "alt": "Tablet egy éttermi asztalon: a számla szétbontása a vendégek között"
+      }
+    },
+    {
+      "icon": "Smartphone",
+      "eyebrow": "Mobil rendelésfelvétel",
+      "heading": "Tételek hozzáadása telefonról — három lépésben.",
+      "body": "A pincérek nincsenek egyetlen eszközhöz kötve: megnyitják a rendelésfelvételi képernyőt a saját telefonjukon, és három lépésben hozzáadnak egy tételt — kategória kiválasztása, étel kiválasztása, opciók kiválasztása (méret, sütési fokozat, extra szószok és feltétek). Az ár automatikusan újraszámolódik. Az utolsó lépésnél konyhai megjegyzés is hozzáadható.",
+      "bullets": [
+        "Három lépés: kategória → étel → opciók.",
+        "Opciók (méret, feltétek, összetevők) árazással egy érintéssel.",
+        "Megjegyzés mező az utolsó lépésnél."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-mobile.webp",
+        "alt": "Négy telefon, amik egy tétel rendeléshez adásának lépéseit mutatják: kategória, étel, méret, megjegyzés"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Amit a vendéglátósok a rendelésfelvételről kérdeznek az IQ Restben. Ha nem találod a kérdésed — írj nekünk WhatsAppon.",
+    "items": [
+      {
+        "q": "Több pincér is dolgozhat egyszerre különböző eszközökről?",
+        "a": "Igen. Minden pincér csatlakoztatja a saját eszközét, és ugyanazokat az asztalokat, rendeléseket és státuszokat látja valós időben. Az egyikük által végzett módosítás azonnal megjelenik a többieknél — nincsenek ütközések vagy zárolások."
+      },
+      {
+        "q": "A pincérek használhatják a saját eszközeiket?",
+        "a": "Igen. A rendelési képernyő a böngészőben fut — semmit sem kell telepíteni. A telefon vagy tablet egy hatjegyű kóddal csatlakozik a vezérlőpultból, és a hozzáférés a műszak végén egy érintéssel visszavonható."
+      },
+      {
+        "q": "Hozzáadhatok kötelező opciókat az ételekhez (méret, sütési fokozat)?",
+        "a": "Igen. Egy ételnek bármennyi opciócsoportja lehet — kötelező (\"Méret\": Kicsi / Közepes / Nagy) és választható (\"Sütési fokozat\": rare / medium / well done). Az opciók befolyásolják az árat. Kötelező csoport esetén a rendszer kéri a választást — kiküszöbölve a hibákat."
+      },
+      {
+        "q": "Hozzáadhatok megjegyzéseket és extra tételeket egy ételhez?",
+        "a": "Igen. Az utolsó lépésnél van egy megjegyzés mező (\"hagyma nélkül\", \"mogyoróallergia\"). Az extrák árazott opciókként vannak beállítva (\"+ BBQ szósz\", \"+ Kenyér\"). A megjegyzések megjelennek a konyhai kijelzőn, színnel kiemelve."
+      },
+      {
+        "q": "Van rendelési statisztika?",
+        "a": "Igen. Az analitika rész mutatja a napi bevételt, az átlagos kosárértéket és a legjobban fogyó ételeket. Ezek az adatok segítenek a műszakok és a beszerzés tervezésében."
+      },
+      {
+        "q": "Szét lehet bontani a rendeléseket?",
+        "a": "Igen. Jelöld be azokat a tételeket, amik egy új számlára kerülnek — mindkét végösszeg automatikusan újraszámolódik, nincs kézi számolás és nem kell ugrálni a menüpontok között."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Rendelések 10 perc alatt. ",
+    "headingAccent": "14 nap teljes hozzáférés.",
+    "sub": "Nincs szükség bankkártyára, bármikor lemondható. {count} étterem veszi fel a konyhai rendeléseket velünk. Csak egy e-mail cím kell hozzá."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Asztaltérkép és rendelési lista",
+      "sub": "Aktív rendelések az asztaltérkép mellett: az asztalok státusz szerint színkódoltak, és egy érintéssel megnyitható a rendelés vagy új hozható létre.",
+      "bullets": [
+        {
+          "icon": "Map",
+          "title": "Asztalok státusz szerint",
+          "sub": "Üres, foglalt, figyelmet igényel — egy pillantással látható"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Aktív rendelési lista",
+          "sub": "Végösszeg, leadás ideje és a tételek száma minden rendelésnél"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Új rendelés a térképről",
+          "sub": "Egy szabad asztalra koppintva azonnal megnyílik a rendelésfelvétel"
+        }
+      ]
+    },
+    {
+      "heading": "Státusz minden tételhez",
+      "sub": "A konyha és a pincér ugyanazt a képet látja: minden ételnek saját státusza van — a leadástól a felszolgálásig.",
+      "bullets": [
+        {
+          "icon": "Timer",
+          "title": "Étel szintű státuszok",
+          "sub": "Függőben, Készül, Kész, Felszolgálva — tételenként, nem rendelésenként"
+        },
+        {
+          "icon": "Receipt",
+          "title": "Tétel duplikálása",
+          "sub": "Ismételj meg egy ételt ugyanazokkal az opciókkal egy érintéssel"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Helyben történő módosítások",
+          "sub": "Törölj egy tételt közvetlenül a rendelési kártyáról"
+        }
+      ]
+    },
+    {
+      "heading": "Számlabontás",
+      "sub": "A vendégek külön fizetnek — jelöld be a tételeket, és azok egy új számlára kerülnek. A végösszegek azonnal újraszámolódnak.",
+      "bullets": [
+        {
+          "icon": "Receipt",
+          "title": "Tételenkénti jelölőnégyzetek",
+          "sub": "Válaszd ki az ételeket az új számlához; a többi a jelenlegin marad"
+        },
+        {
+          "icon": "ChartColumn",
+          "title": "Azonnal látható végösszegek",
+          "sub": "Az új és a megmaradó számla automatikusan kiszámolásra kerül"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Egy érintés",
+          "sub": "A rendelés kézi számolás vagy számológép nélkül szétbontható"
+        }
+      ]
+    },
+    {
+      "heading": "Rendelésfelvétel a pincér telefonjáról",
+      "sub": "A pincérek a saját eszközükön veszik fel a rendelést három lépésben: kategória, étel, opciók.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Bármilyen eszköz",
+          "sub": "Egy telefon vagy tablet böngészővel — nincs szükség telepítésre"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Árazott opciók",
+          "sub": "Méret, feltétek és étel változatok árazással egy érintéssel"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Étel megjegyzések",
+          "sub": "A vendégek kérései az utolsó lépésnél adhatók hozzá — a konyha azonnal látja őket"
+        }
+      ]
+    }
+  ]
+}

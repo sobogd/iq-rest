@@ -1,0 +1,59 @@
+{
+  "breadcrumbLabel": "Preus",
+  "meta": {
+    "title": "Preus — Crea el pla per al teu restaurant des de 9,90 €/mes | IQ Rest",
+    "description": "Crea el teu pla per mòduls: carta QR amb traducció per IA, presa de comandes, reserva de taules, pantalla de cuina. Des de 9,90 €/mes per restaurant, descomptes per volum. 14 dies gratis, sense targeta, cancel·la quan vulguis.",
+    "canonical": "https://iq-rest.com/ca/preus",
+    "ogLocale": "ca_ES",
+    "ogTitle": "Preus — Crea el pla per al teu restaurant",
+    "ogDescription": "Un pla modular des de 9,90 €/mes: carta QR, comandes, reserves, KDS. Descomptes per volum, sense quotes ocultes. 14 dies gratis."
+  },
+  "faqSub": "Preguntes habituals dels restaurants sobre preus i pagaments. Si no trobes la teva, escriu-nos per WhatsApp.",
+  "faqItems": [
+    {
+      "q": "Com s'estructura el preu?",
+      "a": "Crees el teu pla per mòduls. La base és una carta QR amb traducció per IA a 35 idiomes i gestió des de qualsevol dispositiu. Després hi afegeixes el que necessitis: reserva de taules, la pantalla de cuina, el teu propi domini. El preu és per restaurant, amb descomptes per volum a partir del segon."
+    },
+    {
+      "q": "Hi ha comissió per les comandes?",
+      "a": "No. Les comandes de la carta QR i dels cambrers van directament al restaurant. Només pagues un preu mensual fix."
+    },
+    {
+      "q": "Com funciona el període de prova?",
+      "a": "14 dies d'accés complet a totes les funcionalitats, sense necessitat de targeta de crèdit. Si no s'ha configurat el pagament al final del període, el compte es pausa: el panell continua disponible en mode de només lectura, mentre que la carta per als clients i la presa de comandes es desactiven. No hi ha cobraments automàtics."
+    },
+    {
+      "q": "Què passa amb les meves dades mentre el compte està pausat?",
+      "a": "Es conserva tot: carta, fotos, historial de comandes, reserves, configuració, estadístiques. Si configures el pagament fins i tot sis mesos després, tot torna a estar exactament com estava."
+    },
+    {
+      "q": "Hauré de tornar a imprimir els codis QR?",
+      "a": "No. Mentre el compte està pausat, els codis mostren un avís de \"temporalment no disponible\"; un cop configurat el pagament, els mateixos codis tornen a obrir la carta."
+    },
+    {
+      "q": "Puc canviar de pla?",
+      "a": "Sí, en qualsevol moment des del panell. La diferència es prorrata sobre els dies restants del període pagat. Una funcionalitat desactivada conserva les seves dades."
+    },
+    {
+      "q": "Quants restaurants puc connectar?",
+      "a": "Tants com vulguis, tots gestionats des d'un sol panell. Descomptes per volum de fins al 50% a partir de 5 restaurants. Per a grans cadenes, fem un pla a mida via WhatsApp."
+    },
+    {
+      "q": "Quin és el descompte del pla anual?",
+      "a": "Aproximadament un 30% respecte a la facturació mensual. L'import exacte es mostra mentre crees el teu pla."
+    },
+    {
+      "q": "Com cancel·lo la meva subscripció?",
+      "a": "Amb un sol clic des del panell. El compte funciona fins al final del període pagat, i després es pausa. Les teves dades es conserven."
+    },
+    {
+      "q": "Quins mètodes de pagament accepteu?",
+      "a": "Visa, Mastercard, American Express, Apple Pay, Google Pay, a través de Stripe. A Europa, el pla anual també admet deutes directes SEPA."
+    }
+  ],
+  "finalCta": {
+    "heading": "Un sol preu. Risc zero. ",
+    "headingAccent": "14 dies d'accés complet.",
+    "sub": "Sense targeta, cancel·la quan vulguis: {count} restaurants ja confien en nosaltres. Només necessites un correu per començar."
+  }
+}

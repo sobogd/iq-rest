@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "Az IQ Restről — Kik vagyunk, Kapcsolat és Jogi Adatok",
+    "description": "Kik állnak az IQ Rest mögött, hogyan érhetsz el minket és a szolgáltató adatai: e-mail, WhatsApp, jogi információk.",
+    "canonical": "https://iq-rest.com/hu/about",
+    "ogLocale": "hu_HU",
+    "ogTitle": "Az IQ Restről",
+    "ogDescription": "Kik állnak az IQ Rest mögött, ügyfélszolgálati elérhetőségek és a szolgáltató jogi adatai."
+  },
+  "heading": "A saját kávézónktól",
+  "headingAccent": "egy éttermi platformig",
+  "story": {
+    "photo": {
+      "src": "/contacts.webp"
+    },
+    "paragraphs": [
+      "Ma a platform minden nap {count} vendéglátóhelyen fut — az ötasztalos kávézóktól a több városban jelen lévő láncokig. Az adatokat németországi szervereken tároljuk, és a támogatási kérdésekre személyesen válaszolunk."
+    ],
+    "sign": "Bogdan Sokolov"
+  },
+  "facts": [
+    {
+      "value": "2022",
+      "label": "a platform alapításának éve"
+    },
+    {
+      "value": "{count}",
+      "label": "vendéglátóhely fut az IQ Resten"
+    },
+    {
+      "value": "15",
+      "label": "ország, ahol ügyfeleink vannak"
+    }
+  ],
+  "waPrefill": "Szia, kérdésem lenne az IQ Resttel kapcsolatban",
+  "contacts": [
+    {
+      "icon": "Mail",
+      "title": "E-mail",
+      "value": "support@iq-rest.com",
+      "href": "mailto:support@iq-rest.com",
+      "note": "Számlák, dokumentumok, adatokkal kapcsolatos kérdések."
+    },
+    {
+      "icon": "MessageCircle",
+      "title": "WhatsApp",
+      "value": "+998 94 866 37 43",
+      "wa": true,
+      "note": "Mutatunk egy demót és segítünk a beállításban."
+    },
+    {
+      "icon": "Clock",
+      "title": "Válaszidő",
+      "value": "Hétfő–Vasárnap, 9:00–21:00 CET",
+      "note": "Néhány órán belül válaszolunk."
+    }
+  ],
+  "legal": {
+    "rows": [
+      {
+        "label": "Szolgáltató",
+        "value": "Bogdan Sokolov"
+      },
+      {
+        "label": "Cégforma",
+        "value": "Autónomo (España)"
+      },
+      {
+        "label": "Adószám (NIF)",
+        "value": "ESZ1894474S"
+      },
+      {
+        "label": "Cím",
+        "value": "Calle Boca del Río 2, 33010 Oviedo, Asturias, España"
+      },
+      {
+        "label": "Domain",
+        "value": "https://iq-rest.com"
+      },
+      {
+        "label": "Adattárolás",
+        "value": "Hetzner Online GmbH, Nürnberg, Németország"
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Hallottad a mi történetünket. ",
+    "headingAccent": "Kezdd el írni a tiédet — 14 nap ingyen.",
+    "sub": "Nincs szükség bankkártyára, bármikor lemondható. Ahogy {count} étterem, te is számíthatsz ránk. Csak egy e-mail cím kell hozzá."
+  }
+}

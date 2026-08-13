@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "Despre IQ Rest — Cine suntem, Contact și Detalii Legale",
+    "description": "Cine se află în spatele IQ Rest, cum ne poți contacta și detaliile operatorului serviciului: email, WhatsApp, informații legale.",
+    "canonical": "https://iq-rest.com/ro/about",
+    "ogLocale": "ro_RO",
+    "ogTitle": "Despre IQ Rest",
+    "ogDescription": "Cine se află în spatele IQ Rest, contacte de suport și detaliile legale ale operatorului serviciului."
+  },
+  "heading": "De la propria cafenea",
+  "headingAccent": "la o platformă pentru restaurante",
+  "story": {
+    "photo": {
+      "src": "/contacts.webp"
+    },
+    "paragraphs": [
+      "Astăzi, platforma rulează zilnic în {count} locații — de la cafenele cu cinci mese până la lanțuri din mai multe orașe. Datele sunt stocate pe servere din Germania, iar întrebările de suport primesc răspuns personal."
+    ],
+    "sign": "Bogdan Sokolov"
+  },
+  "facts": [
+    {
+      "value": "2022",
+      "label": "anul fondării platformei"
+    },
+    {
+      "value": "{count}",
+      "label": "locații care folosesc IQ Rest"
+    },
+    {
+      "value": "15",
+      "label": "țări în care se află clienții noștri"
+    }
+  ],
+  "waPrefill": "Salut, am o întrebare despre IQ Rest",
+  "contacts": [
+    {
+      "icon": "Mail",
+      "title": "Email",
+      "value": "support@iq-rest.com",
+      "href": "mailto:support@iq-rest.com",
+      "note": "Facturi, documente, întrebări despre date."
+    },
+    {
+      "icon": "MessageCircle",
+      "title": "WhatsApp",
+      "value": "+998 94 866 37 43",
+      "wa": true,
+      "note": "Îți arătăm un demo și te ajutăm cu configurarea."
+    },
+    {
+      "icon": "Clock",
+      "title": "Timp de răspuns",
+      "value": "Luni–Dum, 9:00–21:00 CET",
+      "note": "Răspundem în câteva ore."
+    }
+  ],
+  "legal": {
+    "rows": [
+      {
+        "label": "Operator serviciu",
+        "value": "Bogdan Sokolov"
+      },
+      {
+        "label": "Formă juridică",
+        "value": "Autónomo (España)"
+      },
+      {
+        "label": "Cod fiscal (NIF)",
+        "value": "ESZ1894474S"
+      },
+      {
+        "label": "Adresă",
+        "value": "Calle Boca del Río 2, 33010 Oviedo, Asturias, España"
+      },
+      {
+        "label": "Domeniu",
+        "value": "https://iq-rest.com"
+      },
+      {
+        "label": "Găzduire date",
+        "value": "Hetzner Online GmbH, Nuremberg, Germany"
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Ai aflat povestea noastră. ",
+    "headingAccent": "Începe să o scrii pe a ta — 14 zile gratuit.",
+    "sub": "Fără card, anulezi oricând. La fel ca {count} restaurante, te poți baza pe noi. Ai nevoie doar de un email."
+  }
+}

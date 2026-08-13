@@ -1,0 +1,261 @@
+{
+  "htmlLang": "ca",
+  "htmlDir": "ltr",
+  "meta": {
+    "title": "Carta digital, pantalla de cuina i reserves — IQ Rest",
+    "description": "Gestiona el teu restaurant des d'una sola app: carta digital multilingüe, pantalla de cuina i reserves 24/7. En marxa en 5 minuts. 14 dies gratis, sense targeta.",
+    "canonical": "https://iq-rest.com/ca",
+    "ogLocale": "ca_ES",
+    "ogTitle": "Carta digital, pantalla de cuina i reserves",
+    "ogDescription": "Gestiona el teu restaurant des d'una sola app: carta digital multilingüe, pantalla de cuina i reserves 24/7. En marxa en 5 minuts. 14 dies gratis, sense targeta."
+  },
+  "jsonLd": {
+    "appName": "IQ Rest — Plataforma de gestió per a restaurants"
+  },
+  "ctaText": "Prova-ho gratis",
+  "homeCtaText": "Prova-ho gratis",
+  "trust": [
+    {
+      "kind": "num",
+      "value": 35,
+      "label": "Idiomes a la carta"
+    },
+    {
+      "kind": "text",
+      "value": "24/7",
+      "label": "Reserves online"
+    },
+    {
+      "kind": "num",
+      "value": 5,
+      "suffix": " min",
+      "label": "Per començar"
+    },
+    {
+      "kind": "count",
+      "label": "Restaurants amb nosaltres"
+    }
+  ],
+  "demoText": "Veure demo",
+  "microcopy": "14 dies gratis · Sense targeta de crèdit · Cancel·la quan vulguis",
+  "header": {
+    "navFeatures": "Funcionalitats",
+    "navHow": "Com funciona",
+    "navPricing": "Preus",
+    "navFaq": "Preguntes freqüents",
+    "signIn": "Inicia sessió",
+    "viewFeatures": "Veure funcionalitats",
+    "cta": "Comença gratis",
+    "navProducts": "Funcionalitats",
+    "navGuide": "Guia",
+    "navAbout": "Sobre nosaltres",
+    "menuFeaturesHeading": "Funcionalitats",
+    "menuInfoHeading": "Informació"
+  },
+  "hero": {
+    "verticals": [
+      "Restaurants",
+      "Cafeteries",
+      "Bars",
+      "Hotels",
+      "Pizzeries"
+    ],
+    "headline": "La carta digital per al teu restaurant.\nEn marxa en 5 minuts.",
+    "sub": "Una carta digital per al teu restaurant en 5 minuts. Tot inclòs: editor sense codi, reconeixement per IA de cartes impreses, codis QR per a les taules i comandes sense comissions.",
+    "dynamicHeadlines": [
+      "0% de comissió.",
+      "35 idiomes amb IA.",
+      "Comandes online.",
+      "Reserves 24/7.",
+      "Disseny prèmium."
+    ],
+    "painBullets": [
+      "0% de comissió: cada comanda va directa al restaurant.",
+      "Traducció per IA a 35 idiomes: els turistes entenen la carta i demanen més.",
+      "Reserves 24/7: els clients reserven la taula ells mateixos, sense trucades en hores punta.",
+      "Preus flexibles: els canvis a la carta s'apliquen a l'instant."
+    ],
+    "rating": "Més de 500 restaurants en més de 30 països"
+  },
+  "founder": {
+    "eyebrow": "Creat per restauradors",
+    "quoteStart": "La meva dona i jo teníem la nostra pròpia cafeteria i coneixem el dia a dia d'un restaurant des de dins: prendre comandes, reserves, la feina a la sala i a la cuina. Volíem una única eina, moderna, fàcil de configurar i clara a primera vista,",
+    "quoteAccent": "i així va néixer la idea de la plataforma que ara desenvolupem per a altres restauradors.",
+    "sign": "Bogdan Sokolov · fundador, antic propietari d'una cafeteria",
+    "photoAlt": "Bogdan Sokolov, fundador d'IQ Rest"
+  },
+  "pricing": {
+    "badge": "Sense comissions · Sense contractes de permanència",
+    "heading": "Un sol pla.",
+    "headingAccent": "Tot inclòs.",
+    "sub": "Carta QR, presa de comandes, traducció per IA, web del restaurant i reserves. Un únic pagament mensual transparent.",
+    "monthlyLabel": "Mensual",
+    "yearlyLabel": "Anual",
+    "saveBadge": "Estalvia un 25%",
+    "perMonth": "al mes",
+    "billedAnnually": "Facturació anual: {total}",
+    "youSave": "Estalvies {amount}",
+    "trust": {
+      "secure": "Pagament segur via Stripe",
+      "noCommitment": "Sense permanència",
+      "quick": "Activació en minuts",
+      "restaurants": "Més de 500 restaurants"
+    }
+  },
+  "faq": {
+    "eyebrow": "Encara tens dubtes?",
+    "heading": "Preguntes",
+    "headingAccent": "freqüents",
+    "sub": "El que més pregunten els restauradors abans de registrar-se. Si no trobes la teva resposta, escriu-nos per WhatsApp; et respondrà una persona del nostre equip, no un bot.",
+    "whatsappCta": "Escriu-nos per WhatsApp",
+    "whatsappPrefill": "Hola, tinc un dubte sobre IQ Rest",
+    "items": [
+      {
+        "q": "Què inclou el període de prova i què passa quan acaba?",
+        "a": "Durant 14 dies tens accés a totes les funcionalitats de la plataforma, sense necessitat d'introduir cap targeta de crèdit. Si passats els 14 dies no has afegit cap mètode de pagament, el compte es pausa automàticament. Mai et cobrarem sense el teu consentiment. Pots afegir el pagament més endavant i continuar exactament on ho vas deixar. Cancel·lar la subscripció requereix només un clic."
+      },
+      {
+        "q": "Cobren alguna comissió per les comandes?",
+        "a": "No, no ens quedem cap percentatge de les comandes. Totes les comandes de la carta QR van directament al restaurant, sense comissions d'intermediaris. Pagues una quota mensual fixa, i res més."
+      },
+      {
+        "q": "Els clients han d'instal·lar alguna app? Calen coneixements tècnics?",
+        "a": "Els clients no necessiten cap app: només han d'apuntar amb la càmera del mòbil al codi QR i la carta s'obre al navegador. El restaurant tampoc necessita coneixements tècnics; el panell d'administració funciona directament al navegador des d'un mòbil, tauleta o ordinador. Tot es fa amb clics i arrossegant elements, sense programar."
+      },
+      {
+        "q": "Quant triguen a aplicar-se els canvis a la carta (preus, plats nous)?",
+        "a": "A l'instant. Els canvis que fas des del mòbil apareixen per als clients en qüestió de segons. Afegir un plat nou són un parell de clics: nom, preu, foto. S'ha acabat reimprimir cartes de paper o dependre d'un dissenyador."
+      },
+      {
+        "q": "Quants idiomes suporta?",
+        "a": "Suportem 35 idiomes amb traducció automàtica mitjançant IA. Amb una sola acció, tota la carta queda traduïda. La IA entén el context culinari, de manera que els noms i les descripcions dels plats sonen naturals en cada idioma. Els turistes demanen amb més confiança quan entenen què porta cada plat."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "En marxa en 10 minuts. ",
+    "headingAccent": "14 dies d'accés complet.",
+    "sub": "Sense targeta, cancel·la quan vulguis. {count} restaurants ja confien en nosaltres. Només necessites un correu electrònic."
+  },
+  "featureHighlights": {
+    "heading": "Tot inclòs",
+    "sub": "Funcionalitats que converteixen comensals en comandes: en tots els plans, sense cost addicional."
+  },
+  "scan": {
+    "heading": "Tens la carta en paper o PDF?",
+    "headingAccent": "La IA la digitalitza en 60 segons.",
+    "sub": "Puja una foto o un document: la IA reconeix categories, plats i preus automàticament.",
+    "cta": "Escanejar carta →"
+  },
+  "pricingQuiz": {
+    "heading": "Crea el teu pla ",
+    "sub": "Comença amb la carta i afegeix les reserves, la pantalla de cuina i un domini quan ho necessitis.",
+    "billingLabel": "Facturació:",
+    "monthly": "Mensual",
+    "yearly": "Anual",
+    "restaurantsLabel": "Restaurants:",
+    "fewerAria": "Menys restaurants",
+    "moreAria": "Més restaurants",
+    "menuTitle": "Carta i pàgina web",
+    "menuHint": "Sempre inclòs",
+    "reservationsTitle": "Sistema de reserves",
+    "reservationsHint": "Reserva de taules",
+    "kdsTitle": "Pantalla de cuina",
+    "kdsHint": "Comandes a la pantalla de cuina",
+    "domainTitle": "Nom de domini",
+    "domainHint": "La teva pròpia adreça web",
+    "perMonthSuffix": "/mes",
+    "perYearSuffix": "/any",
+    "perMonthLongSuffix": "/mes",
+    "saveYearlyTemplate": "Estalvia {amount} a l'any amb la facturació anual",
+    "volumeDiscountTemplate": "{percent}% de descompte",
+    "saveUpToHint": "Estalvia fins a un 50% a partir de 5 restaurants",
+    "billedYearly": "Facturació un cop a l'any",
+    "billedMonthly": "Facturació mensual",
+    "enterprisePre": "Necessites un pla a mida?",
+    "enterpriseCta": "Escriu-nos",
+    "enterprisePost": "i te'n prepararem un.",
+    "enterpriseWa": "Hola! Necessito un pla a mida per als meus restaurants.",
+    "headingAccent": "per al teu restaurant",
+    "multiplePre": "Tens més restaurants?",
+    "multipleCta": "Veure opcions",
+    "restaurantOne": "restaurant",
+    "restaurantFew": "restaurants",
+    "restaurantMany": "restaurants",
+    "multipleChangePre": "Un altre nombre de restaurants?",
+    "multipleChangeCta": "Canviar"
+  },
+  "pricingCta": {
+    "heading": "Preus simples i flexibles",
+    "sub": "Paga només per les funcionalitats que necessites. Crea el teu pla en un minut.",
+    "fromTemplate": "des de {price}/mes",
+    "button": "Crear el meu pla"
+  },
+  "footer": {
+    "copyrightTemplate": "© {year} IQ Rest. Tots els drets reservats.",
+    "featuresHeading": "Funcionalitats",
+    "featureLinks": [
+      {
+        "href": "/ru/tsifrovoe-menyu",
+        "label": "Carta digital"
+      },
+      {
+        "href": "/ru/priem-zakazov-restoran",
+        "label": "Presa de comandes"
+      },
+      {
+        "href": "/ru/bronirovanie-stolov",
+        "label": "Reserves"
+      },
+      {
+        "href": "/ru/kds-kuhonnyy-displey",
+        "label": "Pantalla de cuina"
+      }
+    ],
+    "infoHeading": "Informació",
+    "legalHeading": "Legal",
+    "currencyHeading": "Moneda"
+  },
+  "common": {
+    "close": "Tancar",
+    "menu": "Carta",
+    "help": "Ajuda"
+  },
+  "auth": {
+    "emailLabel": "Correu electrònic",
+    "emailPlaceholder": "Introdueix el teu correu",
+    "or": "o",
+    "continueGoogle": "Continuar amb Google",
+    "continueApple": "Continuar amb Apple",
+    "consent": {
+      "line": "En continuar, acceptes les <terms>Condicions del servei</terms>. Consulta com tractem les dades a la nostra <privacy>Política de privacitat</privacy>."
+    },
+    "signInTitle": "Benvingut de nou",
+    "signInSubtitle": "Introdueix el teu correu i t'enviarem un codi d'accés de 6 xifres.",
+    "signInButton": "Iniciar sessió",
+    "registerTitle": "Crea el teu compte",
+    "registerSubtitle": "14 dies gratis, sense targeta. T'enviarem un codi d'accés per correu: sense contrasenyes ni formularis.",
+    "registerButton": "Crear compte",
+    "switchSignIn": "Iniciar sessió",
+    "switchCreate": "Registrar-se",
+    "verifyTitle": "Revisa el teu correu",
+    "verifySubtitle": "Hem enviat un codi de 6 xifres a {email}.",
+    "verifyCodeLabel": "Codi de verificació",
+    "checkSpam": "No veus el correu? Revisa la carpeta de correu brossa.",
+    "verifyButton": "Continuar",
+    "resendCode": "Tornar a enviar el codi",
+    "resendSent": "Codi enviat",
+    "changeEmail": "Utilitzar un altre correu",
+    "metaSignIn": "Iniciar sessió",
+    "metaRegister": "Crear compte",
+    "errors": {
+      "emailInvalid": "Introdueix un correu vàlid.",
+      "sendFailed": "No s'ha pogut enviar el codi. Torna-ho a provar.",
+      "verifyFailed": "No s'ha pogut verificar el codi. Torna-ho a provar.",
+      "codeExpired": "El codi ha caducat. Demana'n un de nou.",
+      "noCode": "Codi no trobat o caducat. Demana'n un de nou.",
+      "invalidCode": "Codi incorrecte. Torna-ho a provar.",
+      "tooManyAttempts": "Massa intents. Espera uns minuts i torna-ho a provar."
+    }
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "locale": "pt",
+  "slug": "reserva-de-mesas",
+  "trackPrefix": "l_bookings",
+  "meta": {
+    "title": "Reserva de mesas 24/7 para restaurante | IQ Rest",
+    "description": "Reserva de mesas 24/7 no restaurante: os clientes reservam sozinhos através da ementa QR ou do site. Calendário por mesas, confirmações automáticas e lembretes. Sem chamadas, nenhum cliente perdido. 14 dias grátis.",
+    "canonical": "https://iq-rest.com/pt/reserva-de-mesas",
+    "ogLocale": "pt_PT",
+    "ogTitle": "Reserva de mesas 24/7 — os clientes reservam sozinhos",
+    "ogDescription": "Os clientes reservam mesas através da ementa QR ou do site. Calendário, confirmações automáticas, lembretes. Nenhum cliente perdido.",
+    "brandLine": "IQ Rest — Reserva de mesas no restaurante"
+  },
+  "hero": {
+    "headline": "Reserva de mesas 24/7,",
+    "cta": "Configurar reserva de mesas",
+    "sub": "Os clientes reservam 24/7 através da ementa QR ou de uma ligação. Calendário por mesas, confirmações automáticas e lembretes.",
+    "headlineAccent": "sem chamadas",
+    "demoLabel": "Demo: calendário de reservas",
+    "tablet": {
+      "src": "/landing/hero-card-reservation.webp",
+      "alt": "Tablet com calendário de reservas: vista mensal e lista de reservas a aguardar confirmação"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurantes"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafés"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bares"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotéis"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzarias"
+    }
+  ],
+  "scan": {
+    "heading": "Lance a reserva de mesas",
+    "headingAccent": "em 5 minutos.",
+    "sub": "Ative o calendário, adicione as mesas com fotografias e lotação — os clientes começam a reservar no próprio dia.",
+    "cta": "Ativar reservas"
+  },
+  "subFeatures": [
+    {
+      "icon": "CalendarPlus",
+      "eyebrow": "Formulário de reserva",
+      "heading": "Os clientes reservam sozinhos — por data, hora e número de pessoas.",
+      "body": "O cliente abre a ementa QR ou uma ligação direta, escolhe a data, a hora e o número de pessoas — e vê logo as mesas livres: com fotografia, descrição (esplanada, junto à janela, sofá ao bar) e lotação. A confirmação é enviada automaticamente por email e WhatsApp.",
+      "bullets": [
+        "Escolha da mesa por fotografia, descrição e lotação.",
+        "Confirmação automática e lembrete uma hora antes da visita.",
+        "Formulário com o mínimo de campos: nome, telefone, número de pessoas."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-form.webp",
+        "alt": "Cliente reserva uma mesa no restaurante a partir do telemóvel: escolha de data, hora, número de pessoas e mesa"
+      }
+    },
+    {
+      "icon": "CalendarDays",
+      "eyebrow": "Calendário de reservas",
+      "heading": "Calendário por dias e mesas — tudo visível num segundo.",
+      "body": "No painel de administração, um calendário de reservas com divisão por mesas, dias, semanas e meses. Períodos livres, mesas ocupadas, reservas confirmadas e por confirmar num único ecrã. Funciona no tablet da sala e no portátil do escritório.",
+      "bullets": [
+        "Vista por dias, semanas e meses.",
+        "Divisão por mesas: quem, quando, quantas pessoas.",
+        "Alterar, cancelar e confirmar reservas — com um toque no telemóvel."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-calendar.webp",
+        "alt": "Calendário de reservas no painel de administração da IQ Rest em dois tablets: grelha diária por mesas e calendário mensal"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "O que os restauradores perguntam sobre a reserva de mesas na IQ Rest. Se a sua pergunta não está na lista, escreva-nos no WhatsApp.",
+    "items": [
+      {
+        "q": "Posso escolher os dias e as horas em que as reservas estão disponíveis?",
+        "a": "Sim. No painel de gestão define-se o horário por dia da semana: as horas de receção de reservas e a pausa entre o almoço e o jantar. As reservas podem ser desativadas temporariamente por completo — os clientes verão que a marcação online está indisponível."
+      },
+      {
+        "q": "É possível carregar uma fotografia de cada mesa?",
+        "a": "Sim. Cada mesa tem fotografia, lotação e zona (esplanada, junto à janela, bar). O cliente vê exatamente que mesa está a reservar e faz uma escolha informada."
+      },
+      {
+        "q": "É possível limitar o número de pessoas por mesa?",
+        "a": "Sim. Cada mesa tem uma lotação definida — o sistema propõe aos clientes apenas mesas adequadas e bloqueia a reserva de uma mesa de dois para um grupo de seis."
+      },
+      {
+        "q": "É difícil configurar as reservas?",
+        "a": "Três passos: adicione as mesas com fotografias e lotação, ative o modo de reservas nas definições, publique a ligação ou o código QR. O arranque leva 5 a 10 minutos."
+      },
+      {
+        "q": "É possível configurar a confirmação automática ou manual das reservas?",
+        "a": "Sim, o modo escolhe-se nas definições. No automático, o cliente recebe a confirmação logo após enviar o formulário. No manual, o pedido aparece no painel com o estado «a aguardar confirmação» — o gestor confirma-o ou rejeita-o. O modo manual é útil quando o número de mesas é limitado."
+      },
+      {
+        "q": "Cobram comissão por cada reserva?",
+        "a": "Não há comissões: as reservas estão incluídas na subscrição — sem percentagem sobre os clientes, taxas por período nem intermediários. Pagamento fixo e número ilimitado de reservas."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Reservas em 10 minutos. ",
+    "headingAccent": "14 dias de acesso total.",
+    "sub": "Não precisa de cartão, cancele a qualquer momento. {count} restaurantes já aliviaram a receção. Só precisa de um email."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "O cliente reserva sozinho",
+      "sub": "Data, hora e número de pessoas — a partir da ementa QR ou de uma ligação direta, a qualquer hora do dia. O sistema mostra apenas os períodos disponíveis.",
+      "bullets": [
+        {
+          "icon": "CalendarPlus",
+          "title": "Reserva 24/7",
+          "sub": "O cliente reserva de noite ou ao fim de semana — sem chamadas nem espera por resposta"
+        },
+        {
+          "icon": "Users",
+          "title": "Mesa segundo o número de pessoas",
+          "sub": "O sistema escolhe sozinho a mesa adequada pela lotação"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Mínimo de campos",
+          "sub": "Nome, telefone e número de pessoas — o formulário preenche-se em meio minuto"
+        }
+      ]
+    },
+    {
+      "heading": "Calendário por dias e mesas",
+      "sub": "Todas as reservas num só calendário: vê-se o que está livre, o que está confirmado e quem vai chegar.",
+      "bullets": [
+        {
+          "icon": "CalendarDays",
+          "title": "Dia, semana, mês",
+          "sub": "Mude a escala e planeie a ocupação com antecedência"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Divisão por mesas",
+          "sub": "Quem, quando e para quantas pessoas — por cada mesa"
+        },
+        {
+          "icon": "Smartphone",
+          "title": "Gestão a partir do telemóvel",
+          "sub": "Alterar, cancelar e confirmar reservas — com um toque"
+        }
+      ]
+    },
+    {
+      "heading": "Horários e modos",
+      "sub": "Configure o horário de receção de reservas por dia da semana, a duração dos períodos e o modo de confirmação.",
+      "bullets": [
+        {
+          "icon": "Clock",
+          "title": "Horário por dia",
+          "sub": "Horas próprias para cada dia da semana, incluindo a pausa entre o almoço e o jantar"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Duração do período",
+          "sub": "Defina o intervalo de reserva à medida do formato do estabelecimento"
+        },
+        {
+          "icon": "CalendarCheck",
+          "title": "Automático ou manual",
+          "sub": "Confirme cada reserva pessoalmente ou ative a confirmação automática"
+        }
+      ]
+    },
+    {
+      "heading": "Notificações sem trabalho manual",
+      "sub": "O sistema mantém o cliente e a equipa informados — o email e o ecrã de reservas atualizam-se de imediato.",
+      "bullets": [
+        {
+          "icon": "Mail",
+          "title": "Email para o cliente",
+          "sub": "A confirmação da reserva segue automaticamente por email"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Notificação ao restaurante",
+          "sub": "Os proprietários recebem um email por cada nova reserva"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Ecrã de reservas à entrada",
+          "sub": "O tablet da hostess mostra as novas reservas em tempo real"
+        }
+      ]
+    }
+  ]
+}

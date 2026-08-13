@@ -1,0 +1,289 @@
+{
+  "heroV2": {
+    "verticals": [
+      {
+        "icon": "restaurant",
+        "label": "Restaurants"
+      },
+      {
+        "icon": "cafe",
+        "label": "Cafés"
+      },
+      {
+        "icon": "bar",
+        "label": "Bars"
+      },
+      {
+        "icon": "hotel",
+        "label": "Hôtels"
+      },
+      {
+        "icon": "pizza",
+        "label": "Pizzerias"
+      }
+    ],
+    "title": "Tout ce qu'il faut",
+    "titleAccent": "à votre restaurant !",
+    "sub": "Organisez vos processus en 10 minutes : lancez le menu en ligne, optimisez le travail de la cuisine et la gestion des tables.",
+    "primaryLabel": "Commencer gratuitement",
+    "demoLabel": "Voir le menu de démonstration",
+    "mockups": {
+      "kds": {
+        "src": "/landing/hero-card-kds.webp",
+        "alt": "Tablette avec l'écran de cuisine : commandes par table en colonnes avec statuts"
+      },
+      "reservations": {
+        "src": "/landing/hero-card-reservation.webp",
+        "alt": "Tablette avec le calendrier des réservations : vue mensuelle et liste des réservations en attente de confirmation"
+      },
+      "phone1": {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Téléphone avec la page d'accueil du site du restaurant : photos, réservations et accès au menu en ligne"
+      },
+      "phone2": {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Téléphone avec la fiche d'un plat : photo, prix et étiquettes d'allergènes"
+      }
+    }
+  },
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Lancement en 10 minutes",
+      "sub": "Sans matériel coûteux ni configuration interminable"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Support réactif",
+      "sub": "Nous répondons rapidement dans le chat, en quelques heures"
+    },
+    {
+      "icon": "Globe",
+      "title": "Le choix de {count} établissements",
+      "sub": "Des restaurants et cafés dans plus de 15 pays nous font confiance"
+    },
+    {
+      "icon": "Palette",
+      "title": "100 % à votre image",
+      "sub": "Nous adaptons le design et l'interface au style de votre établissement"
+    }
+  ],
+  "menu": {
+    "heading": "Site web et menu digital",
+    "sub": {
+      "link": "Bien plus qu'un menu QR !",
+      "rest": " Obtenez un vrai site web avec un design unique, vos coordonnées et la réservation de tables."
+    },
+    "moreLabel": "En savoir plus sur le menu",
+    "demoLabel": "Démo : le menu vu par le client",
+    "mockupAlt": "Téléphone avec la page d'accueil du site du restaurant et téléphone avec la page d'un plat",
+    "bullets": [
+      {
+        "icon": "Languages",
+        "title": "Traduction automatique en 35 langues",
+        "sub": "Servez vos clients étrangers sans barrière linguistique — la traduction automatique s'occupe de tout"
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "Commandes directement depuis les tables",
+        "sub": "Simplifiez le travail de votre établissement — prenez les commandes des tables rapidement et sans intervention du serveur"
+      },
+      {
+        "icon": "WheatOff",
+        "title": "Allergènes et régimes",
+        "sub": "Indiquez les allergènes et les préférences alimentaires (végan, épicé) pour que vos clients choisissent plus facilement et en toute sécurité"
+      }
+    ]
+  },
+  "reservations": {
+    "heading": "Réservation de tables",
+    "sub": {
+      "link": "La réservation de tables intelligente !",
+      "rest": " Un système de réservation automatique qui surveille lui-même les tables disponibles et vos horaires."
+    },
+    "moreLabel": "En savoir plus sur les réservations",
+    "demoLabel": "Démo : calendrier des réservations",
+    "mockupAlt": "Tablette avec le calendrier des réservations : tables par jour et par créneau horaire",
+    "bullets": [
+      {
+        "icon": "CalendarCheck",
+        "title": "Une carte des réservations pratique",
+        "sub": "Un planning visuel par jour et par table — vous voyez d'un coup d'œil où et à quelle heure il reste des places"
+      },
+      {
+        "icon": "SlidersHorizontal",
+        "title": "Configuration flexible des réservations",
+        "sub": "Réglez les horaires, la durée des créneaux, ajoutez des photos de tables et recueillez les souhaits de vos clients"
+      },
+      {
+        "icon": "Users",
+        "title": "Gestion du flux de clients",
+        "sub": "Choisissez le mode de gestion des réservations qui vous convient et gardez le contrôle total du flux de clients"
+      }
+    ]
+  },
+  "orders": {
+    "heading": "Prise de commandes à table",
+    "sub": {
+      "link": "Les commandes filent droit en cuisine !",
+      "rest": " Une commande passée à table ou par le serveur arrive instantanément sur l'écran de cuisine — sans tickets papier ni attente."
+    },
+    "moreLabel": "En savoir plus sur les commandes",
+    "demoLabel": "Démo : écran des commandes",
+    "mockupSrc": "/landing/feature-orders-modal.webp",
+    "mockupAlt": "Tablette avec une commande ouverte : liste des plats et actions — changer de table, diviser la commande, remise",
+    "bullets": [
+      {
+        "icon": "ShoppingCart",
+        "title": "Client ou serveur",
+        "sub": "Le client commande à table via le QR code, le serveur depuis son téléphone ou sa tablette"
+      },
+      {
+        "icon": "Map",
+        "title": "Plan de salle avec statuts",
+        "sub": "Les tables sont colorées selon leur statut — vous voyez immédiatement où l'on attend une commande et où il faut passer"
+      },
+      {
+        "icon": "Receipt",
+        "title": "Addition partagée",
+        "sub": "Divisez la commande entre les clients et encaissez les tables sans confusion au moment de payer"
+      }
+    ]
+  },
+  "kds": {
+    "heading": "Écran de cuisine (KDS)",
+    "sub": {
+      "link": "La cuisine au même rythme !",
+      "rest": " Les commandes de la salle et du menu QR apparaissent instantanément sur l'écran du cuisinier — avec les notes, les allergènes et le minuteur."
+    },
+    "moreLabel": "En savoir plus sur le KDS",
+    "demoLabel": "Démo : écran de cuisine",
+    "mockupAlt": "Tablette avec l'écran de cuisine : commandes par table en colonnes avec statuts",
+    "bullets": [
+      {
+        "icon": "LayoutGrid",
+        "title": "Écrans par zone",
+        "sub": "Des tablettes distinctes pour le poste chaud, le bar et la pâtisserie — chacun ne voit que ses plats"
+      },
+      {
+        "icon": "Timer",
+        "title": "Statuts et minuteur",
+        "sub": "Colonnes « en préparation, prêt, servi » et temps par commande — le statut change en un clic"
+      },
+      {
+        "icon": "ShieldAlert",
+        "title": "Allergènes et commentaires",
+        "sub": "Les allergènes et les notes du client sont mis en évidence — le cuisinier ne rate rien d'important"
+      }
+    ]
+  },
+  "bundle": {
+    "heading": "Tout ce qui fait tourner votre restaurant.",
+    "headingAccent": "Dans une seule application.",
+    "sub": "Menu, cuisine et réservations au même endroit — moderne, rapide et pensé pour le fonctionnement réel des restaurants. Sans supplément ni paiement à la fonctionnalité."
+  },
+  "benefits": [
+    {
+      "icon": "Languages",
+      "tag": "Menu digital",
+      "title": "Un menu qui vend.",
+      "bullets": [
+        "35 langues avec l'IA",
+        "Design premium",
+        "Prix modifiés instantanément"
+      ],
+      "image": "/landing/feature-design.webp",
+      "imageAlt": "Deux téléphones sur une table de café : écran d'accueil du menu digital et page de contacts avec carte"
+    },
+    {
+      "icon": "ChefHat",
+      "tag": "Écran de cuisine",
+      "title": "Cuisinez plus vite, sans rien oublier.",
+      "bullets": [
+        "Directement à l'écran",
+        "Notes et allergènes",
+        "Tablette ou téléphone"
+      ],
+      "image": "/landing/feature-kds-cards.webp",
+      "imageAlt": "Une tablette sur le comptoir du bar affiche l'écran de cuisine avec les commandes par table"
+    },
+    {
+      "icon": "CalendarCheck",
+      "tag": "Réservations",
+      "title": "Des réservations en pilote automatique.",
+      "bullets": [
+        "Réservation sans appels",
+        "Confirmation automatique",
+        "Calendrier par table"
+      ],
+      "image": "/landing/feature-booking-calendar.webp",
+      "imageAlt": "Deux tablettes affichent le calendrier des réservations : vue journalière par table et vue mensuelle"
+    },
+    {
+      "icon": "Receipt",
+      "tag": "Commandes à table",
+      "title": "Les commandes filent droit en cuisine.",
+      "bullets": [
+        "Client ou serveur",
+        "Directement en cuisine",
+        "Activez quand vous voulez"
+      ],
+      "image": "/landing/feature-orders-map.webp",
+      "imageAlt": "Tablette avec l'écran des commandes : liste des commandes et plan de salle avec tables en couleur."
+    }
+  ],
+  "seeDetails": "En savoir plus",
+  "platform": {
+    "hardwareTitle": "Travaillez sur votre propre matériel",
+    "hardwareSub": "Nous ne vous obligeons pas à acheter du matériel chez nous. Utilisez les téléphones, tablettes et ordinateurs que vous avez déjà.",
+    "anywhereTitle": "Fonctionne partout",
+    "anywhereSub": "Téléphone, tablette, ordinateur portable, PC. Android, iOS, Windows, Mac, Linux. Dans tout navigateur moderne, sans installation."
+  },
+  "activities": {
+    "heading": "Un seul système —",
+    "headingAccent": "tout le restaurant.",
+    "sub": "Un service plus rapide, une cuisine plus sereine, des coûts réduits et des clients qui reviennent — le tout sur une seule plateforme.",
+    "groups": [
+      {
+        "icon": "Smartphone",
+        "tag": "À table — le client",
+        "bullets": [
+          "Menu QR en 35 langues",
+          "Commande sans attendre le serveur",
+          "Appel du serveur ou demande de l'addition",
+          "Réservation de table 24h/24",
+          "QR code unique pour chaque table",
+          "Aucune application nécessaire — tout s'ouvre dans le navigateur",
+          "Étiquettes d'allergènes et de régimes pour filtrer"
+        ]
+      },
+      {
+        "icon": "ChefHat",
+        "tag": "En cuisine",
+        "bullets": [
+          "Commandes instantanément à l'écran",
+          "Colonnes en préparation / prêt / servi",
+          "Allergènes et commentaires mis en évidence",
+          "Tablette ou téléphone — sans tickets papier"
+        ]
+      },
+      {
+        "icon": "ChartColumn",
+        "tag": "Gestion",
+        "bullets": [
+          "Modifications du menu et des prix — instantanées",
+          "Traduction IA en un clic",
+          "Analyse des ventes et rapports",
+          "Plusieurs restaurants dans un seul compte",
+          "L'IA numérise votre menu papier en 60 secondes",
+          "Votre propre domaine avec SSL"
+        ]
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Toute la plateforme en 10 minutes. ",
+    "headingAccent": "14 jours d'accès complet.",
+    "sub": "Menu, commandes, réservations et cuisine — sans carte bancaire, annulation à tout moment ; {count} restaurants nous font confiance, seul un email est nécessaire."
+  }
+}

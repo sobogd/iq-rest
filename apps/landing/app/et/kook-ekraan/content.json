@@ -1,0 +1,206 @@
+{
+  "locale": "et",
+  "slug": "kook-ekraan",
+  "trackPrefix": "l_kds",
+  "meta": {
+    "title": "Köögiekraan (KDS) restoranidele — tellimused koka ekraanil | IQ Rest",
+    "description": "KDS köögiekraan restoranidele: saalist ja QR-menüüst tulnud tellimused lähevad otse koka ekraanile. Veerud laudade kaupa, Ootel / Töös / Valmis / Serveeritud staatused, tööjaamade filtrid. Töötab tahvelarvutis või telefonis.",
+    "canonical": "https://iq-rest.com/et/kook-ekraan",
+    "ogLocale": "et_EE",
+    "ogTitle": "Köögiekraan (KDS) — tellimused otse koka ekraanile",
+    "ogDescription": "Tellimused saalist koka ekraanil. Veerud laudade kaupa, staatused ja taimer. Üks nupuvajutus muudab staatust.",
+    "brandLine": "IQ Rest — Köögiekraan restoranidele"
+  },
+  "hero": {
+    "headline": "Köögiekraan (KDS):",
+    "cta": "Seadista köögiekraan",
+    "sub": "Tellimused jõuavad köögiekraanile koheselt: märkused, allergeenid ja taimer. Staatus muutub ühe nupuvajutusega.",
+    "headlineAccent": "tellimused otse kokale",
+    "demoLabel": "Demo: köögiekraan",
+    "tablet": {
+      "src": "/landing/hero-card-kds.webp",
+      "alt": "Tahvelarvuti köögiekraaniga: tellimused laudade kaupa veergudes koos staatustega"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restoranidele"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kohvikutele"
+    },
+    {
+      "icon": "Martini",
+      "label": "Baaridele"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotellidele"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pitseriatele"
+    }
+  ],
+  "scan": {
+    "heading": "Seadista köögiekraan",
+    "headingAccent": "5 minutiga.",
+    "sub": "Skanni paberist menüü või PDF — tehisintellekt tuvastab toidud, kategooriad ja allergeenid. Ühenda tahvelarvuti köögis ja hakka tellimusi vastu võtma.",
+    "cta": "Skanni menüü"
+  },
+  "subFeatures": [
+    {
+      "icon": "LayoutGrid",
+      "eyebrow": "Kontroll ja filtrid",
+      "heading": "Mitu ekraani tööjaamade kaupa: köök ja baar.",
+      "body": "Seadista eraldi tahvelarvutid kuuma köögi, baari või kondiitri jaoks — iga ekraan näitab ainult talle kuuluvaid toite. Filtrid staatuse (Ootel / Töös / Valmis / Serveeritud) ja kategooria järgi hoiavad pildi selgena: kokad töötavad ainult sellega, mis kuulub nende tööjaama.",
+      "bullets": [
+        "Mitu KDS-ekraani toidukategooriate filtritega.",
+        "Staatuse filter: ainult töös ja valmis.",
+        "Iga tööjaam näeb ainult oma tellimuste voogu."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-filters.webp",
+        "alt": "Tahvelarvuti messingist alusel restorani köögi väljastusletil — KDS filtreeritud toidu staatuse järgi"
+      }
+    },
+    {
+      "icon": "Timer",
+      "eyebrow": "Kaardid ja taimer",
+      "heading": "Üks nupuvajutus muudab staatust. Kommentaarid ja allergeenid on värviliselt esile tõstetud.",
+      "body": "Toidukaart näitab valitud lisandeid (ilma sibulata, well done), külalise kommentaare, allergeene ja taimerit, mis jookseb alates tellimuse esitamisest. Kaardile vajutamine viib staatuse edasi: Ootel → Töös → Valmis → Serveeritud. Nimekiri sorteerib end automaatselt ajaprioriteedi järgi.",
+      "bullets": [
+        "Vajuta kaardile — staatus liigub kohe edasi.",
+        "Valikud, kommentaarid ja allergeenid on värviliselt esile tõstetud.",
+        "Sorteeritud prioriteedi järgi: kõige kauem oodanud toidud tõusevad tippu."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-cards.webp",
+        "alt": "Tahvelarvuti messingist alusel restorani baariletil — KDS tellimuste kaartidega laudade kaupa"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Mida restoranipidajad IQ Resti köögiekraani kohta küsivad. Kui sinu küsimust pole nimekirjas — kirjuta meile WhatsAppi.",
+    "items": [
+      {
+        "q": "Millised staatused on köögitellimustel?",
+        "a": "Neli staatust: Ootel — tellimus on esitatud ja ootab; Töös — toitu valmistatakse; Valmis — valmis väljastamiseks; Serveeritud — külalisele viidud. Kaardile vajutamine viib järgmisse staatusesse, ilma menüüde või kinnitusteta."
+      },
+      {
+        "q": "Kas ma saan seadistada mitu KDS-ekraani erinevatesse köögi tööjaamadesse?",
+        "a": "Jah. Üks tahvelarvuti kuumas köögis, teine baaris, kolmas kondiitris — igaühel oma toidukategooria filter. Kõik ekraanid püsivad sünkroonis: ühel muudetud staatus uueneb ka teistel."
+      },
+      {
+        "q": "Mille peal KDS töötab — kas mul on vaja spetsiaalset tahvelarvutit?",
+        "a": "KDS töötab igas kaasaegses brauseris. Tahvelarvuti alusel väljastusletil sobib suurde kööki; nutitelefon sobib väiksemasse kohta. Spetsiaalset riistvara ega paigaldamist pole vaja: seade ühendatakse halduspaneelist saadud kuuekohalise koodiga."
+      },
+      {
+        "q": "Kust tulevad tellimused köögiekraanile?",
+        "a": "Kõigist allikatest: külaline esitab tellimuse laua QR-menüü kaudu või teenindaja võtab selle vastu oma seadmest. Tellimused jõuavad KDS-i automaatselt, koos laua numbriga. Käsitsi kassast uuesti sisestamist pole vaja."
+      },
+      {
+        "q": "Mida tellimuse kaart näitab?",
+        "a": "Toidu nime, valitud lisandeid (ilma sibulata, well done), külalise kommentaari, allergeene, staatust ja taimerit, mis jookseb alates tellimuse esitamisest. Kaardid sorteeritakse prioriteedi järgi: mida kauem toit ootab, seda kõrgemal see veerus on."
+      },
+      {
+        "q": "Kas ekraanil olevaid kaarte saab filtreerida?",
+        "a": "Jah. Kaks filtrit: staatuse järgi (näiteks ainult Ootel ja Töös) ja kategooria järgi (joogid baari, soojad toidud kööki). Seaded salvestatakse seadme põhiselt, nii et iga tööjaam töötab oma komplektiga."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Paberivaba köök 10 minutiga. ",
+    "headingAccent": "14 päeva täisligipääsu.",
+    "sub": "Kaarti pole vaja, tühista igal ajal. Meid usaldab {count} restorani. Vaja on vaid e-posti aadressi — ja tellimused jõuavad otse köögiekraanile."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Ekraanid tööjaamade kaupa",
+      "sub": "Eraldi tahvelarvutid kuuma köögi, baari ja kondiitri jaoks — iga ekraan näitab ainult oma toite.",
+      "bullets": [
+        {
+          "icon": "LayoutGrid",
+          "title": "Kategooria filter",
+          "sub": "Määra igale ekraanile oma menüü kategooriad"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Voog tööjaama kohta",
+          "sub": "Köök ja baar töötavad paralleelselt, ilma et nad üksteist segaksid"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Staatuse filter",
+          "sub": "Näita ainult seda, mis on töös või valmis väljastamiseks"
+        }
+      ]
+    },
+    {
+      "heading": "Staatused ühe nupuvajutusega",
+      "sub": "Vajutus kaardile viib toidu järgmisse staatusesse. Köök ja teenindaja näevad sama pilti.",
+      "bullets": [
+        {
+          "icon": "ClipboardList",
+          "title": "Staatus toote kohta",
+          "sub": "Töös, valmis, serveeritud — toidu, mitte tellimuse kaupa"
+        },
+        {
+          "icon": "Timer",
+          "title": "Taimer tellimuse hetkest",
+          "sub": "Vaata, kui kaua on toit oodanud — kõige kauem oodanud tõusevad tippu"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "Allergeenid ja kommentaarid",
+          "sub": "Valikud, külaliste märkused ja allergeenid on värviliselt esile tõstetud"
+        }
+      ]
+    },
+    {
+      "heading": "Tellimused jõuavad koheselt",
+      "sub": "Külalise tellimus QR-menüüst või teenindajalt ilmub ekraanile selle esitamise hetkel, ilma lehte värskendamata.",
+      "bullets": [
+        {
+          "icon": "Rocket",
+          "title": "Koheselt ekraanil",
+          "sub": "Pidev ühendus — kaart ilmub sekundi murdosa jooksul pärast tellimuse esitamist"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Kõik allikad ühes voos",
+          "sub": "Külaliste ja teenindajate tellimused saabuvad ühele ekraanile koos laua numbriga"
+        },
+        {
+          "icon": "Map",
+          "title": "Laua number kaardil",
+          "sub": "Köök näeb, kuhu toit läheb; teenindaja näeb, kus seda oodatakse"
+        }
+      ]
+    },
+    {
+      "heading": "Ühendatud minutitega",
+      "sub": "Köögiekraan töötab brauseris igas tahvelarvutis või telefonis — ühendatakse kuuekohalise koodiga.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Tahvelarvuti või telefon",
+          "sub": "Brauserist piisab — spetsiaalset riistvara pole vaja osta"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Ühendamiskood",
+          "sub": "Sisesta halduspaneelist saadud kuuekohaline kood — seade on köögiga seotud"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Ligipääsu tühistamine",
+          "sub": "Tahvelarvuti kadus või vahetati välja — ühenda see halduspaneelist lahti ühe nupuvajutusega"
+        }
+      ]
+    }
+  ]
+}

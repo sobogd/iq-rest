@@ -1,0 +1,261 @@
+{
+  "htmlLang": "is",
+  "htmlDir": "ltr",
+  "meta": {
+    "title": "Stafrænn matseðill, eldhússkjár og borðabókanir — IQ Rest",
+    "description": "Rektu veitingastaðinn úr einu smáforriti: fjöltyngdur stafrænn matseðill, eldhússkjár og borðabókanir allan sólarhringinn. Tilbúið á 5 mínútum. 14 dagar frítt, engin kortakrafa.",
+    "canonical": "https://iq-rest.com/is",
+    "ogLocale": "is_IS",
+    "ogTitle": "Stafrænn matseðill, eldhússkjár og borðabókanir",
+    "ogDescription": "Rektu veitingastaðinn úr einu smáforriti: fjöltyngdur stafrænn matseðill, eldhússkjár og borðabókanir allan sólarhringinn. Tilbúið á 5 mínútum. 14 dagar frítt, engin kortakrafa."
+  },
+  "jsonLd": {
+    "appName": "IQ Rest — Stjórnkerfi fyrir veitingastaði"
+  },
+  "ctaText": "Prófaðu frítt",
+  "homeCtaText": "Prófaðu frítt",
+  "trust": [
+    {
+      "kind": "num",
+      "value": 35,
+      "label": "Tungumál á matseðli"
+    },
+    {
+      "kind": "text",
+      "value": "24/7",
+      "label": "Borðabókanir á netinu"
+    },
+    {
+      "kind": "num",
+      "value": 5,
+      "suffix": " mín",
+      "label": "Uppsetning"
+    },
+    {
+      "kind": "count",
+      "label": "Veitingastaðir sem nota kerfið"
+    }
+  ],
+  "demoText": "Skoða prufu",
+  "microcopy": "14 dagar frítt · Ekkert greiðslukort · Hættu hvenær sem er",
+  "header": {
+    "navFeatures": "Virkni",
+    "navHow": "Hvernig þetta virkar",
+    "navPricing": "Verðskrá",
+    "navFaq": "Algengar spurningar",
+    "signIn": "Skrá inn",
+    "viewFeatures": "Skoða virkni",
+    "cta": "Byrjaðu frítt",
+    "navProducts": "Virkni",
+    "navGuide": "Leiðbeiningar",
+    "navAbout": "Um okkur",
+    "menuFeaturesHeading": "Virkni",
+    "menuInfoHeading": "Upplýsingar"
+  },
+  "hero": {
+    "verticals": [
+      "Veitingastaðir",
+      "Kaffihús",
+      "Barir",
+      "Hótel",
+      "Pítsustaðir"
+    ],
+    "headline": "Stafrænn matseðill fyrir veitingastaðinn.\nTilbúinn á 5 mínútum.",
+    "sub": "Stafrænn matseðill fyrir veitingastaðinn á 5 mínútum. Allt innifalið: einfalt stjórnborð, gervigreind sem les prentaða matseðla, QR kóðar á borð og pantanir án þóknunar.",
+    "dynamicHeadlines": [
+      "0% þóknun.",
+      "35 tungumál með gervigreind.",
+      "Pantanir á netinu.",
+      "Borðabókanir allan sólarhringinn.",
+      "Hágæða hönnun."
+    ],
+    "painBullets": [
+      "0% þóknun: hver pöntun fer beint til veitingastaðarins.",
+      "Gervigreind þýðir yfir á 35 tungumál — ferðamenn skilja matseðilinn og panta meira.",
+      "Borðabókanir allan sólarhringinn: gestir bóka sjálfir, engin símtöl á álagstímum.",
+      "Sveigjanleg verðlagning: breytingar á matseðli taka gildi samstundis."
+    ],
+    "rating": "Yfir 500 veitingastaðir í 30+ löndum"
+  },
+  "founder": {
+    "eyebrow": "Hannað af veitingafólki",
+    "quoteStart": "Við hjónin rákum eigið kaffihús og þekkjum daglegan rekstur af eigin raun: móttöku pantana, borðabókanir, þjónustu og eldhús. Okkur vantaði eitt tól — nútímalegt, auðvelt í uppsetningu og skýrt við fyrstu sýn —",
+    "quoteAccent": "þannig kviknaði hugmyndin að kerfinu sem við þróum nú fyrir aðra veitingamenn.",
+    "sign": "Bogdan Sokolov · stofnandi, fyrrum kaffihúsaeigandi",
+    "photoAlt": "Bogdan Sokolov, stofnandi IQ Rest"
+  },
+  "pricing": {
+    "badge": "Engin þóknun · Enginn binditími",
+    "heading": "Ein áskrift.",
+    "headingAccent": "Allt innifalið.",
+    "sub": "QR matseðill, móttaka pantana, gervigreindarþýðingar, vefsíða og borðabókanir. Ein skýr mánaðarleg greiðsla.",
+    "monthlyLabel": "Mánaðarlega",
+    "yearlyLabel": "Árlega",
+    "saveBadge": "Sparaðu 25%",
+    "perMonth": "á mánuði",
+    "billedAnnually": "Gjaldfært árlega: {total}",
+    "youSave": "Þú sparar {amount}",
+    "trust": {
+      "secure": "Örugg greiðsla í gegnum Stripe",
+      "noCommitment": "Enginn binditími",
+      "quick": "Virkjað á nokkrum mínútum",
+      "restaurants": "Yfir 500 veitingastaðir"
+    }
+  },
+  "faq": {
+    "eyebrow": "Ertu með spurningar?",
+    "heading": "Algengar",
+    "headingAccent": "spurningar",
+    "sub": "Það sem veitingamenn spyrja oftast að áður en þeir skrá sig. Ef þú finnur ekki svarið — sendu okkur skilaboð á WhatsApp, raunverulegt fólk svarar, ekki vélmenni.",
+    "whatsappCta": "Senda skilaboð á WhatsApp",
+    "whatsappPrefill": "Hæ, ég er með spurningu um IQ Rest",
+    "items": [
+      {
+        "q": "Hvað er innifalið í prufutímabilinu og hvað gerist þegar því lýkur?",
+        "a": "Í 14 daga færðu aðgang að öllum eiginleikum kerfisins, án þess að gefa upp greiðslukort. Ef engum greiðslumáta er bætt við eftir 14 daga er aðganginum sjálfkrafa fryst. Við rukkum aldrei án þíns samþykkis. Þú getur bætt við greiðslumáta síðar og haldið áfram þar sem frá var horfið. Það tekur einn smell að segja upp áskrift."
+      },
+      {
+        "q": "Takið þið þóknun af pöntunum?",
+        "a": "Nei, við tökum enga prósentu af pöntunum. Allar pantanir af QR matseðlinum fara beint til veitingastaðarins, án auka gjalda. Þú greiðir fast mánaðargjald — og ekkert annað."
+      },
+      {
+        "q": "Þurfa gestir að sækja smáforrit og þurfum við tækniþekkingu?",
+        "a": "Gestir þurfa ekki smáforrit: þeir beina einfaldlega myndavélinni að QR kóðanum og matseðillinn opnast í vafranum. Veitingastaðurinn þarf heldur enga tækniþekkingu — stjórnborðið keyrir beint í vafranum á síma, spjaldtölvu eða tölvu. Allt er gert með því að smella og draga, engin forritun."
+      },
+      {
+        "q": "Hversu fljótt taka breytingar á matseðli gildi — verð, nýir réttir?",
+        "a": "Samstundis. Breytingar sem þú gerir í símanum birtast gestum á nokkrum sekúndum. Það tekur örfáa smelli að bæta við nýjum rétti: nafn, verð, mynd. Það þarf ekki að endurprenta matseðla og engan hönnuð."
+      },
+      {
+        "q": "Hversu mörg tungumál eru studd?",
+        "a": "35 tungumál eru studd með sjálfvirkum gervigreindarþýðingum. Ein aðgerð — og allur matseðillinn er þýddur. Gervigreindin skilur matreiðslusamhengi, svo nöfn og lýsingar á réttum hljóma eðlilega á öllum tungumálum. Ferðamenn panta af meira öryggi þegar þeir skilja hvað er í matnum."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Tilbúið á 10 mínútum. ",
+    "headingAccent": "14 daga fullur aðgangur.",
+    "sub": "Ekkert kort þarf, hættu hvenær sem er. {count} veitingastaðir treysta okkur. Það eina sem þú þarft er netfang."
+  },
+  "featureHighlights": {
+    "heading": "Allt innifalið",
+    "sub": "Virkni sem breytir gestum í pantanir — í öllum áskriftum, án aukakostnaðar."
+  },
+  "scan": {
+    "heading": "Ertu með prentaðan matseðil eða PDF?",
+    "headingAccent": "Gervigreindin gerir hann stafrænan á 60 sekúndum.",
+    "sub": "Hladdu upp mynd eða skjali — gervigreindin greinir flokka, rétti og verð sjálfkrafa.",
+    "cta": "Skanna matseðil →"
+  },
+  "pricingQuiz": {
+    "heading": "Settu saman áskrift ",
+    "sub": "Byrjaðu á matseðlinum — bættu við borðabókunum, eldhússkjá og léni þegar þér hentar.",
+    "billingLabel": "Gjaldfærsla:",
+    "monthly": "Mánaðarlega",
+    "yearly": "Árlega",
+    "restaurantsLabel": "Veitingastaðir:",
+    "fewerAria": "Færri veitingastaðir",
+    "moreAria": "Fleiri veitingastaðir",
+    "menuTitle": "Matseðill og vefsíða",
+    "menuHint": "Alltaf innifalið",
+    "reservationsTitle": "Borðabókanakerfi",
+    "reservationsHint": "Bókanir á borðum",
+    "kdsTitle": "Eldhússkjár",
+    "kdsHint": "Pantanir á skjá í eldhúsi",
+    "domainTitle": "Lén",
+    "domainHint": "Þín eigin vefslóð",
+    "perMonthSuffix": "/mán",
+    "perYearSuffix": "/ár",
+    "perMonthLongSuffix": "/mánuði",
+    "saveYearlyTemplate": "Sparaðu {amount} á ári með árlegri gjaldfærslu",
+    "volumeDiscountTemplate": "{percent}% afsláttur",
+    "saveUpToHint": "Sparaðu allt að 50% með 5+ veitingastöðum",
+    "billedYearly": "Gjaldfært einu sinni á ári",
+    "billedMonthly": "Gjaldfært mánaðarlega",
+    "enterprisePre": "Þarftu sérsniðna áskrift?",
+    "enterpriseCta": "Sendu okkur skilaboð",
+    "enterprisePost": "og við sníðum hana að þínum þörfum.",
+    "enterpriseWa": "Hæ! Mig vantar sérsniðna áskrift fyrir veitingastaðina mína.",
+    "headingAccent": "fyrir veitingastaðinn þinn",
+    "multiplePre": "Þarftu fleiri veitingastaði?",
+    "multipleCta": "Sýna valmöguleika",
+    "restaurantOne": "veitingastaður",
+    "restaurantFew": "veitingastaðir",
+    "restaurantMany": "veitingastaðir",
+    "multipleChangePre": "Annar fjöldi veitingastaða?",
+    "multipleChangeCta": "Breyta"
+  },
+  "pricingCta": {
+    "heading": "Einföld og sveigjanleg verðskrá",
+    "sub": "Greiddu aðeins fyrir það sem þú þarft — settu saman áskrift á einni mínútu.",
+    "fromTemplate": "frá {price}/mán",
+    "button": "Settu saman áskrift"
+  },
+  "footer": {
+    "copyrightTemplate": "© {year} IQ Rest. Allur réttur áskilinn.",
+    "featuresHeading": "Virkni",
+    "featureLinks": [
+      {
+        "href": "/ru/tsifrovoe-menyu",
+        "label": "Stafrænn matseðill"
+      },
+      {
+        "href": "/ru/priem-zakazov-restoran",
+        "label": "Móttaka pantana"
+      },
+      {
+        "href": "/ru/bronirovanie-stolov",
+        "label": "Borðabókanir"
+      },
+      {
+        "href": "/ru/kds-kuhonnyy-displey",
+        "label": "Eldhússkjár"
+      }
+    ],
+    "infoHeading": "Upplýsingar",
+    "legalHeading": "Lagalegt",
+    "currencyHeading": "Gjaldmiðill"
+  },
+  "common": {
+    "close": "Loka",
+    "menu": "Matseðill",
+    "help": "Hjálp"
+  },
+  "auth": {
+    "emailLabel": "Netfang",
+    "emailPlaceholder": "Sláðu inn netfang",
+    "or": "eða",
+    "continueGoogle": "Halda áfram með Google",
+    "continueApple": "Halda áfram með Apple",
+    "consent": {
+      "line": "Með því að halda áfram samþykkir þú <terms>Notkunarskilmála</terms>. Sjáðu hvernig við meðhöndlum gögn í <privacy>Persónuverndarstefnu</privacy> okkar."
+    },
+    "signInTitle": "Velkomin(n) aftur",
+    "signInSubtitle": "Sláðu inn netfang — við sendum þér 6 stafa innskráningarkóða.",
+    "signInButton": "Skrá inn",
+    "registerTitle": "Búa til aðgang",
+    "registerSubtitle": "14 dagar frítt, engin kortakrafa. Við sendum þér innskráningarkóða í tölvupósti — engin lykilorð, engin eyðublöð.",
+    "registerButton": "Búa til aðgang",
+    "switchSignIn": "Skrá inn",
+    "switchCreate": "Nýskráning",
+    "verifyTitle": "Athugaðu tölvupóstinn þinn",
+    "verifySubtitle": "Við sendum 6 stafa kóða á {email}.",
+    "verifyCodeLabel": "Staðfestingarkóði",
+    "checkSpam": "Sérðu ekki póstinn? Athugaðu ruslpóstinn.",
+    "verifyButton": "Halda áfram",
+    "resendCode": "Senda kóða aftur",
+    "resendSent": "Kóði sendur",
+    "changeEmail": "Nota annað netfang",
+    "metaSignIn": "Skrá inn",
+    "metaRegister": "Búa til aðgang",
+    "errors": {
+      "emailInvalid": "Sláðu inn gilt netfang.",
+      "sendFailed": "Ekki tókst að senda kóðann. Vinsamlegast reyndu aftur.",
+      "verifyFailed": "Ekki tókst að staðfesta kóðann. Vinsamlegast reyndu aftur.",
+      "codeExpired": "Kóðinn er útrunninn. Biddu um nýjan.",
+      "noCode": "Kóði fannst ekki eða er útrunninn. Biddu um nýjan.",
+      "invalidCode": "Ógildur kóði. Vinsamlegast reyndu aftur.",
+      "tooManyAttempts": "Of margar tilraunir. Vinsamlegast hinkraðu og reyndu aftur."
+    }
+  }
+}

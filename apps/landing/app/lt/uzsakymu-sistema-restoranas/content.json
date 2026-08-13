@@ -1,0 +1,236 @@
+{
+  "locale": "lt",
+  "slug": "uzsakymu-sistema-restoranas",
+  "trackPrefix": "l_orders",
+  "meta": {
+    "title": "Užsakymų priėmimas restorane — Svečias ir padavėjas | IQ Rest",
+    "description": "Užsakymų priėmimas iš telefono ar planšetės: salės planas, sąskaitos padalijimas, statusai, pasirinkimai ir komentarai. Svečiai užsisako nuo staliuko, padavėjai priima užsakymus savo įrenginyje. 14 dienų nemokamai.",
+    "canonical": "https://iq-rest.com/lt/uzsakymu-sistema-restoranas",
+    "ogLocale": "lt_LT",
+    "ogTitle": "Užsakymų priėmimas restorane — Svečias ir padavėjas",
+    "ogDescription": "Svečias prie staliuko arba padavėjas telefone – užsakymas akimirksniu pasiekia virtuvę. Salės planas, sąskaitos padalijimas, statusai, pasirinkimai ir komentarai.",
+    "brandLine": "IQ Rest — Užsakymų priėmimas restorane"
+  },
+  "hero": {
+    "headline": "Užsakymai nuo staliuko –",
+    "cta": "Nustatyti užsakymus internetu",
+    "sub": "Svečiai užsisako prie staliuko arba padavėjai iš bet kurio įrenginio – tiesiai į virtuvę. Salės planas, sąskaitos padalijimas.",
+    "headlineAccent": "tiesiai į virtuvę",
+    "demoLabel": "Demo: užsakymų ekranas",
+    "tablet": {
+      "src": "/landing/feature-orders-modal.webp",
+      "alt": "Planšetė su atidarytu užsakymu: patiekalų sąrašas ir užsakymo veiksmai – pakeisti staliuką, padalinti užsakymą, pridėti nuolaidą"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restoranai"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kavinės"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barai"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Viešbučiai"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Picerijos"
+    }
+  ],
+  "scan": {
+    "heading": "Paruoškite užsakymų priėmimo sistemą",
+    "headingAccent": "per 5 minutes.",
+    "sub": "Nuskenuokite popierinį meniu ar PDF – AI atpažins patiekalus, kainas ir kategorijas. Prijunkite planšetę salėje ir pradėkite priimti užsakymus nuo staliukų.",
+    "cta": "Skenuoti meniu"
+  },
+  "subFeatures": [
+    {
+      "icon": "Map",
+      "eyebrow": "Sąrašas ir salės planas",
+      "heading": "Užsakymų sąrašas šalia salės plano.",
+      "body": "Visi aktyvūs užsakymai rodomi dešinėje: statusas, suma, pateikimo laikas ir patiekalų skaičius. Kairėje yra salės planas: staliukai nuspalvinti pagal statusą – tuščias, užimtas, reikalauja dėmesio. Paspaudus ant staliuko atidaromas jo užsakymas, paspaudus ant kortelės atidaromas detalus vaizdas. Jokio perjunginėjimo tarp ekranų.",
+      "bullets": [
+        "Salės planas: staliukai nuspalvinti pagal užsakymo statusą.",
+        "Užsakymų sąrašas šalia – suma, laikas ir patiekalų skaičius.",
+        "Paspaudus ant staliuko atidaromas užsakymas arba sukuriamas naujas."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-map.webp",
+        "alt": "Planšetė padavėjo stotyje: užsakymų sąrašas ir salės planas su spalvomis pažymėtais staliukais"
+      }
+    },
+    {
+      "icon": "ClipboardList",
+      "eyebrow": "Užsakymo kortelė",
+      "heading": "Užsakymo kortelė: statusai, dubliavimas ir pašalinimas – vienu paspaudimu.",
+      "body": "Kiekvienas patiekalas turi savo statusą (Laukia / Gaminama / Paruošta / Patiekta) – virtuvė ir padavėjas mato tą patį vaizdą realiu laiku. Paspaudus tašką atidaromas veiksmų meniu: pakeisti statusą, dubliuoti patiekalą su tais pačiais priedais ir pasirinkimais, arba jį pašalinti. Viskas vyksta pačioje užsakymo kortelėje.",
+      "bullets": [
+        "Statusas kiekvienam patiekalui: Laukia / Gaminama / Paruošta / Patiekta.",
+        "Dubliuokite patiekalą vienu paspaudimu – su tais pačiais pasirinkimais.",
+        "Pašalinkite patiekalą tiesiai iš užsakymo kortelės."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-detail.webp",
+        "alt": "Planšetė su detalia užsakymo kortele: patiekalų statusai, dubliavimas ir pašalinimas"
+      }
+    },
+    {
+      "icon": "Receipt",
+      "eyebrow": "Sąskaitos padalijimas",
+      "heading": "Sąskaitos padalijimas, kai svečiai moka atskirai.",
+      "body": "Svečiai nusprendžia mokėti atskirai – pažymėkite patiekalus, kurie keliauja į naują sąskaitą; likę lieka dabartinėje. Sistema iškart parodo abi sumas. Vienas paspaudimas „Padalinti užsakymą“ – ir turite du nepriklausomus užsakymus su teisingomis sumomis, abu lieka prie savo staliukų.",
+      "bullets": [
+        "Pasirinkite dalijamus patiekalus naudodami žymimuosius langelius.",
+        "Naujos ir likusios sąskaitos sumos atsiranda akimirksniu.",
+        "Vienas paspaudimas – ir užsakymas padalintas be jokio skaičiavimo ranka."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-split.webp",
+        "alt": "Planšetė ant restorano staliuko: sąskaitos padalijimas tarp svečių"
+      }
+    },
+    {
+      "icon": "Smartphone",
+      "eyebrow": "Mobili užsakymų registracija",
+      "heading": "Patiekalų pridėjimas iš telefono – trimis žingsniais.",
+      "body": "Padavėjai nėra pririšti prie vieno įrenginio: jie atidaro užsakymų priėmimo ekraną savo telefone ir prideda patiekalą trimis žingsniais – pasirenka kategoriją, pasirenka patiekalą, pasirenka opcijas (dydį, iškepimo lygį, papildomus padažus ir ingredientus). Kaina perskaičiuojama automatiškai. Komentaras virtuvei pridedamas paskutiniame žingsnyje.",
+      "bullets": [
+        "Trys žingsniai: kategorija → patiekalas → pasirinkimai.",
+        "Pasirinkimai (dydis, priedai, ingredientai) su kainomis vienu paspaudimu.",
+        "Komentaro laukas paskutiniame žingsnyje."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-mobile.webp",
+        "alt": "Keturi telefonai, rodantys patiekalo pridėjimo į užsakymą žingsnius: kategorija, patiekalas, dydis, komentaras"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Ko restoranų savininkai klausia apie užsakymų priėmimą IQ Rest. Jei jūsų klausimo nėra – parašykite mums WhatsApp.",
+    "items": [
+      {
+        "q": "Ar keli padavėjai gali dirbti vienu metu iš skirtingų įrenginių?",
+        "a": "Taip. Kiekvienas padavėjas prijungia savo įrenginį ir mato tuos pačius staliukus, užsakymus ir statusus realiu laiku. Vieno padavėjo atliktas pakeitimas akimirksniu matomas kitiems – jokių konfliktų ar blokavimų."
+      },
+      {
+        "q": "Ar padavėjai gali naudoti savo asmeninius įrenginius?",
+        "a": "Taip. Užsakymų ekranas veikia naršyklėje – nereikia nieko diegti. Telefonas ar planšetė prijungiama su šešių skaitmenų kodu iš valdymo skydelio, o prieiga atšaukiama vienu paspaudimu pamainos pabaigoje."
+      },
+      {
+        "q": "Ar galiu pridėti privalomus pasirinkimus patiekalams (dydis, iškepimo lygis)?",
+        "a": "Taip. Patiekalas gali turėti bet kiek pasirinkimų grupių – privalomų („Dydis“: Mažas / Vidutinis / Didelis) ir neprivalomų („Iškepimo lygis“: rare / medium / well done). Pasirinkimai keičia kainą. Esant privalomai grupei, sistema prašo pasirinkti – taip išvengiama klaidų."
+      },
+      {
+        "q": "Ar galiu pridėti komentarus ir papildomus priedus prie patiekalo?",
+        "a": "Taip. Paskutiniame žingsnyje yra komentaro laukas („be svogūnų“, „alergija riešutams“). Priedai nustatomi kaip apmokestinami pasirinkimai („+ BBQ padažas“, „+ Duona“). Komentarai atsiranda virtuvės ekrane, paryškinti spalva."
+      },
+      {
+        "q": "Ar yra užsakymų statistika?",
+        "a": "Taip. Analitikos skiltyje rodomos pajamos pagal dienas, vidutinis krepšelis ir perkamiausi patiekalai. Šie duomenys padeda planuoti pamainas ir pirkimus."
+      },
+      {
+        "q": "Ar galima padalinti užsakymus?",
+        "a": "Taip. Pažymėkite patiekalus, kurie keliauja į naują sąskaitą – abi sumos perskaičiuojamos automatiškai, jokio skaičiavimo ranka ir jokio šokinėjimo tarp skilčių."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Užsakymai per 10 minučių. ",
+    "headingAccent": "14 dienų pilnos prieigos.",
+    "sub": "Kortelės nereikia, atšaukite bet kada. {count} restoranų priima virtuvės užsakymus su mumis. Viskas, ko reikia, tai el. paštas."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Salės planas ir užsakymų sąrašas",
+      "sub": "Aktyvūs užsakymai šalia salės plano: staliukai nuspalvinti pagal statusą, o paspaudimas atidaro užsakymą arba sukuria naują.",
+      "bullets": [
+        {
+          "icon": "Map",
+          "title": "Staliukai pagal statusą",
+          "sub": "Tuščias, užimtas, reikalauja dėmesio – matoma iš pirmo žvilgsnio"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Aktyvių užsakymų sąrašas",
+          "sub": "Suma, pateikimo laikas ir patiekalų skaičius kiekvienam užsakymui"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Naujas užsakymas iš plano",
+          "sub": "Paspaudus laisvą staliuką iškart atidaromas užsakymo įvedimas"
+        }
+      ]
+    },
+    {
+      "heading": "Statusas kiekvienam patiekalui",
+      "sub": "Virtuvė ir padavėjas mato tą patį vaizdą: kiekvienas patiekalas turi savo statusą – nuo pateikto iki patiekto.",
+      "bullets": [
+        {
+          "icon": "Timer",
+          "title": "Statusai pagal patiekalą",
+          "sub": "Laukia, Gaminama, Paruošta, Patiekta – kiekvienam patiekalui, ne visam užsakymui"
+        },
+        {
+          "icon": "Receipt",
+          "title": "Patiekalo dubliavimas",
+          "sub": "Pakartokite patiekalą su tais pačiais pasirinkimais vienu paspaudimu"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Redagavimas vietoje",
+          "sub": "Pašalinkite patiekalą tiesiai iš užsakymo kortelės"
+        }
+      ]
+    },
+    {
+      "heading": "Sąskaitos padalijimas",
+      "sub": "Svečiai moka atskirai – pažymėkite patiekalus ir jie persikels į naują sąskaitą. Sumos perskaičiuojamos akimirksniu.",
+      "bullets": [
+        {
+          "icon": "Receipt",
+          "title": "Žymimieji langeliai patiekalams",
+          "sub": "Pasirinkite patiekalus naujai sąskaitai; likę lieka dabartinėje"
+        },
+        {
+          "icon": "ChartColumn",
+          "title": "Sumos rodomos iškart",
+          "sub": "Nauja ir likusi sąskaitos apskaičiuojamos automatiškai"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Vienas paspaudimas",
+          "sub": "Užsakymas padalinamas be skaičiavimo ranka ar skaičiuotuvo"
+        }
+      ]
+    },
+    {
+      "heading": "Užsakymo įvedimas iš padavėjo telefono",
+      "sub": "Padavėjai priima užsakymą savo įrenginyje trimis žingsniais: kategorija, patiekalas, pasirinkimai.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Bet koks įrenginys",
+          "sub": "Telefonas ar planšetė su naršykle – nereikia nieko diegti"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Apmokestinami pasirinkimai",
+          "sub": "Dydis, priedai ir patiekalo variantai su kainomis vienu paspaudimu"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Komentarai patiekalui",
+          "sub": "Svečių pageidavimai pridedami paskutiniame žingsnyje – virtuvė juos mato iškart"
+        }
+      ]
+    }
+  ]
+}

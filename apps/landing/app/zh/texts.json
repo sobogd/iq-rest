@@ -1,0 +1,261 @@
+{
+  "htmlLang": "zh-CN",
+  "htmlDir": "ltr",
+  "meta": {
+    "title": "电子菜单、后厨显示与预订系统 — IQ Rest",
+    "description": "一个系统搞定餐厅运营：多语言电子菜单、后厨显示与全天候预订。5分钟即可上线。免费试用14天，无需绑定信用卡。",
+    "canonical": "https://iq-rest.com/zh",
+    "ogLocale": "zh_CN",
+    "ogTitle": "电子菜单、后厨显示与预订系统",
+    "ogDescription": "一个系统搞定餐厅运营：多语言电子菜单、后厨显示与全天候预订。5分钟即可上线。免费试用14天，无需绑定信用卡。"
+  },
+  "jsonLd": {
+    "appName": "IQ Rest — 餐厅管理平台"
+  },
+  "ctaText": "免费试用",
+  "homeCtaText": "免费试用",
+  "trust": [
+    {
+      "kind": "num",
+      "value": 35,
+      "label": "菜单语言"
+    },
+    {
+      "kind": "text",
+      "value": "24/7",
+      "label": "在线预订"
+    },
+    {
+      "kind": "num",
+      "value": 5,
+      "suffix": " 分钟",
+      "label": "即可上线"
+    },
+    {
+      "kind": "count",
+      "label": "合作餐厅"
+    }
+  ],
+  "demoText": "查看演示",
+  "microcopy": "免费试用14天 · 无需信用卡 · 随时取消",
+  "header": {
+    "navFeatures": "功能",
+    "navHow": "工作原理",
+    "navPricing": "价格",
+    "navFaq": "常见问题",
+    "signIn": "登录",
+    "viewFeatures": "查看功能",
+    "cta": "免费开始",
+    "navProducts": "功能",
+    "navGuide": "指南",
+    "navAbout": "关于我们",
+    "menuFeaturesHeading": "功能",
+    "menuInfoHeading": "信息"
+  },
+  "hero": {
+    "verticals": [
+      "餐厅",
+      "咖啡馆",
+      "酒吧",
+      "酒店",
+      "披萨店"
+    ],
+    "headline": "专为餐厅打造的电子菜单。\n5分钟即可上线。",
+    "sub": "5分钟为您的餐厅生成电子菜单。包含所有必备功能：无代码编辑器、AI识别纸质菜单、桌面QR码以及零抽成点餐。",
+    "dynamicHeadlines": [
+      "0抽成。",
+      "AI支持35种语言。",
+      "在线点餐。",
+      "全天候预订。",
+      "高级设计。"
+    ],
+    "painBullets": [
+      "0抽成：所有订单收入全归餐厅。",
+      "AI翻译成35种语言——外国游客也能看懂菜单，点得更多。",
+      "全天候预订：顾客自助订座，高峰期免接电话。",
+      "灵活定价：修改菜单即时生效。"
+    ],
+    "rating": "覆盖30多个国家的500多家餐厅"
+  },
+  "founder": {
+    "eyebrow": "由餐饮人打造",
+    "quoteStart": "我和妻子曾经营过自己的咖啡馆，深知餐厅日常运营的痛点：点餐、预订、前厅和后厨管理。我们想要一个现代、易于设置且一目了然的工具——",
+    "quoteAccent": "这就是我们现在为其他餐饮同行打造这个平台的初衷。",
+    "sign": "Bogdan Sokolov · 创始人，前咖啡馆老板",
+    "photoAlt": "IQ Rest 创始人 Bogdan Sokolov"
+  },
+  "pricing": {
+    "badge": "无抽成 · 无合约",
+    "heading": "一个套餐。",
+    "headingAccent": "包含所有功能。",
+    "sub": "QR菜单、点餐、AI翻译、餐厅网站和预订系统。每月固定费用，价格透明。",
+    "monthlyLabel": "按月",
+    "yearlyLabel": "按年",
+    "saveBadge": "立省25%",
+    "perMonth": "每月",
+    "billedAnnually": "按年计费：{total}",
+    "youSave": "为您节省 {amount}",
+    "trust": {
+      "secure": "通过Stripe安全支付",
+      "noCommitment": "无强制绑定",
+      "quick": "几分钟即可激活",
+      "restaurants": "超过500家餐厅"
+    }
+  },
+  "faq": {
+    "eyebrow": "还有疑问？",
+    "heading": "常见",
+    "headingAccent": "问题",
+    "sub": "餐饮老板在注册前最常问的问题。如果没找到答案——请在WhatsApp上联系我们，真人客服回复，绝非机器人。",
+    "whatsappCta": "在WhatsApp上联系我们",
+    "whatsappPrefill": "你好，我有一个关于 IQ Rest 的问题",
+    "items": [
+      {
+        "q": "试用期包含哪些内容？结束后会怎样？",
+        "a": "在14天内，您可以免费使用平台的所有功能，无需提供信用卡。如果14天后未添加支付方式，账户将自动暂停。未经您的同意，我们绝不会扣费。您可以稍后添加支付方式并继续使用。取消订阅只需点击一下即可。"
+      },
+      {
+        "q": "你们会从订单中抽成吗？",
+        "a": "不，我们不抽取订单提成。所有来自QR菜单的订单都直接归餐厅所有，没有平台费用。您只需支付固定的月费——仅此而已。"
+      },
+      {
+        "q": "顾客需要下载应用吗？我们需要技术背景吗？",
+        "a": "顾客不需要下载应用：只需用手机摄像头扫描QR码，菜单就会在浏览器中打开。餐厅也不需要技术专长——管理后台直接在手机、平板或电脑的浏览器中运行。一切操作都通过点击和拖拽完成，无需写代码。"
+      },
+      {
+        "q": "修改菜单（如价格、新菜品）多久能生效？",
+        "a": "即时生效。您在手机上所做的更改几秒钟后就会显示给顾客。添加新菜品只需几步：名称、价格、照片。无需重新印制纸质菜单，也不需要设计师。"
+      },
+      {
+        "q": "支持多少种语言？",
+        "a": "通过AI自动翻译支持35种语言。只需一步操作——整个菜单即可完成翻译。AI能理解餐饮语境，因此菜品名称和描述在每种语言中听起来都很自然。当游客清楚菜品内容时，点餐会更放心。"
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "10分钟即可上线。 ",
+    "headingAccent": "14天完整功能体验。",
+    "sub": "无需绑卡，随时取消。已有 {count} 家餐厅选择我们。只需一个邮箱即可开始。"
+  },
+  "featureHighlights": {
+    "heading": "包含所有功能",
+    "sub": "将顾客转化为订单的功能——包含在所有套餐中，无需额外付费。"
+  },
+  "scan": {
+    "heading": "有纸质菜单或PDF？",
+    "headingAccent": "AI在60秒内将其数字化。",
+    "sub": "上传照片或文档——AI会自动识别分类、菜品和价格。",
+    "cta": "扫描菜单 →"
+  },
+  "pricingQuiz": {
+    "heading": "定制套餐 ",
+    "sub": "从菜单开始——随时根据需要添加预订系统、后厨显示和独立域名。",
+    "billingLabel": "计费周期：",
+    "monthly": "按月",
+    "yearly": "按年",
+    "restaurantsLabel": "餐厅数量：",
+    "fewerAria": "减少餐厅数量",
+    "moreAria": "增加餐厅数量",
+    "menuTitle": "菜单与网站",
+    "menuHint": "基础必含",
+    "reservationsTitle": "预订系统",
+    "reservationsHint": "桌位预订",
+    "kdsTitle": "后厨显示",
+    "kdsHint": "后厨屏幕接单",
+    "domainTitle": "独立域名",
+    "domainHint": "您专属的网址",
+    "perMonthSuffix": "/月",
+    "perYearSuffix": "/年",
+    "perMonthLongSuffix": "/月",
+    "saveYearlyTemplate": "按年计费每年可省 {amount}",
+    "volumeDiscountTemplate": "立减 {percent}%",
+    "saveUpToHint": "5家以上餐厅最高可省50%",
+    "billedYearly": "每年计费一次",
+    "billedMonthly": "按月计费",
+    "enterprisePre": "需要定制套餐？",
+    "enterpriseCta": "联系我们",
+    "enterprisePost": "我们将为您量身定制。",
+    "enterpriseWa": "你好！我需要为我的餐厅定制套餐。",
+    "headingAccent": "专为您的餐厅打造",
+    "multiplePre": "需要添加更多餐厅？",
+    "multipleCta": "显示选项",
+    "restaurantOne": "家餐厅",
+    "restaurantFew": "家餐厅",
+    "restaurantMany": "家餐厅",
+    "multipleChangePre": "餐厅数量不同？",
+    "multipleChangeCta": "更改"
+  },
+  "pricingCta": {
+    "heading": "简单灵活的定价",
+    "sub": "只为需要的功能付费——一分钟内定制您的套餐。",
+    "fromTemplate": "{price}/月起",
+    "button": "定制我的套餐"
+  },
+  "footer": {
+    "copyrightTemplate": "© {year} IQ Rest. 保留所有权利。",
+    "featuresHeading": "功能",
+    "featureLinks": [
+      {
+        "href": "/ru/tsifrovoe-menyu",
+        "label": "电子菜单"
+      },
+      {
+        "href": "/ru/priem-zakazov-restoran",
+        "label": "点餐系统"
+      },
+      {
+        "href": "/ru/bronirovanie-stolov",
+        "label": "桌位预订"
+      },
+      {
+        "href": "/ru/kds-kuhonnyy-displey",
+        "label": "后厨显示"
+      }
+    ],
+    "infoHeading": "信息",
+    "legalHeading": "法律信息",
+    "currencyHeading": "货币"
+  },
+  "common": {
+    "close": "关闭",
+    "menu": "菜单",
+    "help": "帮助"
+  },
+  "auth": {
+    "emailLabel": "邮箱",
+    "emailPlaceholder": "输入您的邮箱",
+    "or": "或",
+    "continueGoogle": "通过 Google 继续",
+    "continueApple": "通过 Apple 继续",
+    "consent": {
+      "line": "继续即表示您接受<terms>服务条款</terms>。请在我们的<privacy>隐私政策</privacy>中了解我们如何处理数据。"
+    },
+    "signInTitle": "欢迎回来",
+    "signInSubtitle": "输入您的邮箱——我们将发送一个6位数的登录验证码。",
+    "signInButton": "登录",
+    "registerTitle": "创建您的账户",
+    "registerSubtitle": "免费试用14天，无需绑卡。我们会将登录验证码发到您的邮箱——无需密码，无需填表。",
+    "registerButton": "创建账户",
+    "switchSignIn": "登录",
+    "switchCreate": "注册",
+    "verifyTitle": "检查您的邮箱",
+    "verifySubtitle": "我们已将6位数验证码发送至 {email}。",
+    "verifyCodeLabel": "验证码",
+    "checkSpam": "没收到邮件？请检查您的垃圾邮件文件夹。",
+    "verifyButton": "继续",
+    "resendCode": "重新发送验证码",
+    "resendSent": "验证码已发送",
+    "changeEmail": "使用其他邮箱",
+    "metaSignIn": "登录",
+    "metaRegister": "创建账户",
+    "errors": {
+      "emailInvalid": "请输入有效的邮箱地址。",
+      "sendFailed": "验证码发送失败。请重试。",
+      "verifyFailed": "验证码验证失败。请重试。",
+      "codeExpired": "验证码已过期。请重新获取。",
+      "noCode": "未找到验证码或已过期。请重新获取。",
+      "invalidCode": "验证码无效。请重试。",
+      "tooManyAttempts": "尝试次数过多。请稍后再试。"
+    }
+  }
+}

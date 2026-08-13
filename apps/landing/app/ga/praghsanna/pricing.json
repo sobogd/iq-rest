@@ -1,0 +1,59 @@
+{
+  "breadcrumbLabel": "Praghsáil",
+  "meta": {
+    "title": "Praghsáil — Tóg Do Phlean Bialainne ó 9.90 €/mí | IQ Rest",
+    "description": "Tóg do phlean ó mhodúil: biachlár QR le haistriúchán AI, glacadh orduithe, áirithintí boird, scáileán cistine. Ó 9.90 €/mí in aghaidh na bialainne, lascainí toirte. 14 lá saor in aisce, gan cárta, cealaigh am ar bith.",
+    "canonical": "https://iq-rest.com/ga/praghsanna",
+    "ogLocale": "ga_IE",
+    "ogTitle": "Praghsáil — Tóg Do Phlean Bialainne",
+    "ogDescription": "Plean modúlach ó 9.90 €/mí: biachlár QR, orduithe, áirithintí, KDS. Lascainí toirte, gan aon táillí i bhfolach. 14 lá saor in aisce."
+  },
+  "faqSub": "Ceisteanna coitianta ó bhialanna faoi phraghsáil agus íocaíocht. Mura bhfaigheann tú do cheannsa — seol teachtaireacht chugainn ar WhatsApp.",
+  "faqItems": [
+    {
+      "q": "Conas a thógtar an praghas?",
+      "a": "Tógann tú do phlean ó mhodúil. Is é an bonn biachlár QR le haistriúchán AI go 35 teanga agus bainistíocht ó aon ghléas. Ansin cuir leis an méid a theastaíonn uait: áirithintí boird, an scáileán cistine, d'fhearann féin. Tá praghsáil in aghaidh na bialainne, le lascainí toirte ag tosú ón dara ceann."
+    },
+    {
+      "q": "An bhfuil coimisiún ar orduithe?",
+      "a": "Níl. Téann orduithe ón mbiachlár QR agus ó fhreastalaithe go díreach chuig an mbialann. Ní íocann tú ach praghas míosúil seasta."
+    },
+    {
+      "q": "Conas a oibríonn an triail?",
+      "a": "14 lá de rochtain iomlán ar gach gné, gan aon chárta creidmheasa ag teastáil. Mura bhfuil íocaíocht socraithe faoin deireadh, cuirtear an cuntas ar sos: fanann an painéal ar fáil i mód amharc-amháin, agus múchtar biachlár na n-aíonna agus glacadh orduithe. Níl aon mhuirir uathoibríocha ann."
+    },
+    {
+      "q": "Cad a tharlaíonn do mo shonraí agus iad ar sos?",
+      "a": "Coinnítear gach rud: biachlár, grianghraif, stair orduithe, áirithintí, socruithe, staitisticí. Socraigh íocaíocht fiú sé mhí ina dhiaidh sin — tagann gach rud ar ais go díreach mar a bhí sé."
+    },
+    {
+      "q": "An mbeidh orm na cóid QR a athphriontáil?",
+      "a": "Ní bheidh. Agus iad ar sos, taispeánann na cóid fógra \"níl ar fáil go sealadach\"; nuair a bheidh íocaíocht socraithe, osclaíonn na cóid chéanna an biachlár arís."
+    },
+    {
+      "q": "An féidir liom mo phlean a athrú?",
+      "a": "Is féidir, ag am ar bith ón bpainéal. Déantar an difríocht a ríomh de réir na laethanta atá fágtha den tréimhse íoctha. Coinníonn gné dhíchumasaithe a cuid sonraí."
+    },
+    {
+      "q": "Cé mhéad bialann is féidir liom a nascadh?",
+      "a": "An oiread agus is mian leat, iad ar fad á mbainistiú ó phainéal amháin. Lascainí toirte suas le 50% le 5+ bialann. Do shlabhraí móra — plean saincheaptha trí WhatsApp."
+    },
+    {
+      "q": "Cad é an lascaine ar an bplean bliantúil?",
+      "a": "Thart ar 30% i gcomparáid le billeáil mhíosúil. Taispeántar an méid cruinn agus tú ag tógáil do phlean."
+    },
+    {
+      "q": "Conas a chealaím mo shíntiús?",
+      "a": "In aon chliceáil amháin ón bpainéal. Oibríonn an cuntas go dtí deireadh na tréimhse íoctha, ansin cuirtear ar sos é. Coinnítear do shonraí."
+    },
+    {
+      "q": "Cad iad na modhanna íocaíochta a ghlacann sibh leo?",
+      "a": "Visa, Mastercard, American Express, Apple Pay, Google Pay — trí Stripe. San Eoraip, tacaíonn an plean bliantúil le Dochar Díreach SEPA freisin."
+    }
+  ],
+  "finalCta": {
+    "heading": "Praghas amháin. Nialas riosca. ",
+    "headingAccent": "14 lá de rochtain iomlán.",
+    "sub": "Ní gá cárta, cealaigh am ar bith — iontaofa ag {count} bialann. Níl uait ach ríomhphost chun tosú."
+  }
+}

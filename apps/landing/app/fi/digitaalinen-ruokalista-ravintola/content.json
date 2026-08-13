@@ -1,0 +1,332 @@
+{
+  "locale": "fi",
+  "slug": "digitaalinen-ruokalista-ravintola",
+  "trackPrefix": "l_digital",
+  "meta": {
+    "title": "Digitaalinen ruokalista ravintoloille | IQ Rest",
+    "description": "Digitaalinen ruokalista ravintolaasi: verkkoruokalista kuvilla, allergeeneilla, tekoälykäännöksillä ja reaaliaikaisilla hintapäivityksillä. 14 päivää ilmaiseksi, ei luottokorttia.",
+    "canonical": "https://iq-rest.com/fi/digitaalinen-ruokalista-ravintola",
+    "ogLocale": "fi_FI",
+    "ogTitle": "Digitaalinen ruokalista ravintoloille",
+    "ogDescription": "Verkkoversio paperisesta ruokalistastasi kuvilla, allergeeneilla ja tekoälykäännöksillä. Hinnat päivittyvät reaaliajassa.",
+    "brandLine": "IQ Rest — Digitaalinen ruokalista ravintoloille"
+  },
+  "hero": {
+    "headline": "Digitaalinen ruokalista ja verkkosivut",
+    "headlineAccent": "ravintolallesi",
+    "cta": "Luo digitaalinen ruokalista",
+    "demoLabel": "Demo: ruokalista asiakkaan silmin",
+    "sub": "Käyttövalmis 10 minuutissa: ota vastaan tilauksia pöydistä, päivitä hintoja lennosta ja vastaanota pöytävarauksia suoraan ilman välityspalkkioita.",
+    "phones": [
+      {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Puhelin ja ravintolan verkkosivujen etusivu: kuvia, pöytävaraukset ja pääsy verkkoruokalistaan"
+      },
+      {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Puhelin ja annoskortti: kuva, hinta ja allergeenimerkinnät"
+      }
+    ]
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Ravintolat"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kahvilat"
+    },
+    {
+      "icon": "Martini",
+      "label": "Baarit"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotellit"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzeriat"
+    }
+  ],
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Ruokalista 10 minuutissa",
+      "sub": "Ei koodareita tai pitkällistä asennusta"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Nopea tuki",
+      "sub": "Autamme ruokalistan pystytyksessä chatissa parin tunnin sisällä"
+    },
+    {
+      "icon": "Globe",
+      "title": "{count} ravintolan valinta",
+      "sub": "Digitaalisia ruokalistoja ja verkkosivuja ravintoloille yli 15 maassa"
+    },
+    {
+      "icon": "Palette",
+      "title": "Oma verkkotunnus ja brändi",
+      "sub": "Ruokalista omassa osoitteessasi, ei jaetulla alustalla"
+    }
+  ],
+  "scan": {
+    "heading": "Onko sinulla paperinen ruokalista tai PDF?",
+    "headingAccent": "Tekoäly digitoi sen 60 sekunnissa.",
+    "sub": "Lataa kuva tai tiedosto — tekoäly tunnistaa kategoriat, annokset ja hinnat automaattisesti.",
+    "cta": "Skannaa ruokalista"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "Tekoälykäännös",
+      "heading": "Ruokalista 35 kielellä",
+      "body": "Yksi QR — 35 kieltä. Tekoäly kääntää tekstit ruokasanastoa ymmärtäen, joten annokset kuulostavat luonnollisilta. Turistit tilaavat rohkeammin.",
+      "bullets": [
+        "35 kieltä sisältyy tilaukseen",
+        "Kulinaarinen tekoäly Google Kääntäjän sijaan",
+        "Vaihda kieltä yhdellä napautuksella"
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Kaksi asiakasta lukee samaa digitaalista ruokalistaa eri kielillä omista puhelimistaan"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Allergeenit",
+      "heading": "Allergeenit ja ruokavaliot joka annoksessa",
+      "body": "Merkitse gluteeni, laktoosi, pähkinät, sekä vegaaniset ja gluteenittomat vaihtoehdot. Asiakkaat suodattavat ruokalistan tarpeidensa mukaan ja tilaavat turvallisin mielin.",
+      "bullets": [
+        "14 allergeenikategoriaa",
+        "Vegaaninen ja gluteeniton -merkinnät",
+        "Ruokalistan suodatus ruokavalion mukaan"
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Asiakas suodattaa ruokalistaa allergeenien mukaan puhelimella, kun taas ravintoloitsija muokkaa allergeenilistaa tabletilla"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Design ja brändi",
+      "heading": "Huipputason ruokalista omalla verkkotunnuksella",
+      "body": "Videotausta aloitusnäytöllä, oma ilmeesi ja yhteystietosivu kartalla ja some-linkeillä — omalla verkkotunnuksellasi, ei PDF-tiedostona.",
+      "bullets": [
+        "Videotausta ja huipputason design",
+        "Oma verkkotunnus SSL-suojauksella",
+        "Yhteystiedot, kartta, some-linkit"
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Kaksi puhelinta kahvilan pöydällä: ruokalistan aloitusnäyttö videotaustalla ja yhteystietosivu kartalla"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Tilaukset",
+      "heading": "Verkkotilaukset ilman välityspalkkioita",
+      "body": "Asiakkaat tilaavat ruokalistalta tai suoraan WhatsAppissa — tilaus menee saliin tai keittiöön, 0 % välityspalkkiolla.",
+      "bullets": [
+        "Ruokalistalta tai WhatsAppin kautta",
+        "Saliin tai keittiöön, 0 %",
+        "Kytkettävissä päälle asetuksista"
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Kaksi puhelinta pöydällä: ostoskori tilauksineen ja onnistuneen tilauksen vahvistus"
+      }
+    },
+    {
+      "icon": "CalendarCheck",
+      "eyebrow": "Pöytävaraukset",
+      "heading": "Pöytävaraukset 24/7",
+      "body": "Asiakkaat varaavat pöydän itse ruokalistan tai linkin kautta, sinä näet kalenterin pöydittäin ja vahvistat varaukset automaattisesti tai manuaalisesti.",
+      "bullets": [
+        "Asiakkaat varaavat itse",
+        "Kalenteri kaikille pöydille",
+        "Automaattinen tai manuaalinen vahvistus"
+      ]
+    },
+    {
+      "icon": "MonitorSmartphone",
+      "eyebrow": "Hallinta",
+      "heading": "Hallinnoi mistä tahansa",
+      "body": "Hallintapaneeli toimii selaimessa — puhelimella, tabletilla tai PC:llä. Mitään ei tarvitse asentaa, käyttövalmis minuuteissa.",
+      "bullets": [
+        "Mikä tahansa laite, mikä tahansa selain",
+        "Ei asennettavaa",
+        "Käyttövalmis minuuteissa"
+      ]
+    }
+  ],
+  "faq": {
+    "sub": "Mitä ravintoloitsijat kysyvät IQ Restin digitaalisesta ruokalistasta. Jos kysymystäsi ei löydy — laita viestiä WhatsAppissa.",
+    "items": [
+      {
+        "q": "Tarvitsenko teknistä osaamista tai kokemusta julkaisujärjestelmistä?",
+        "a": "Erityistaitoja ei tarvita. Kaikki hallintapaneelissa hoituu parilla napautuksella — ei koodausta, ei tiedostojen pyörittelyä. Annoksen lisääminen vie sekunteja: nimi, hinta, kuva. Koko ruokalistan pystytys vie yleensä 30–60 minuuttia."
+      },
+      {
+        "q": "Mikä on IQ Restin digitaalinen ruokalista?",
+        "a": "Se on verkkoversio ruokalistastasi, joka on asiakkaiden saatavilla QR-koodilla tai suoralla linkillä: annoskuvat, hinnat, allergeenit, tekoälykäännös 35 kielelle ja reaaliaikaiset päivitykset. Ruokalista pyörii meidän palvelimillamme — mitään ohjelmistoja ei tarvitse asentaa tai ylläpitää, selain riittää."
+      },
+      {
+        "q": "Tarvitsevatko asiakkaat sovelluksen tai erikoislaitteita?",
+        "a": "Asiakas osoittaa puhelimen kameralla QR-koodia — ruokalista aukeaa selaimeen, ei asennusta. Hallintapaneeli toimii myös missä tahansa modernissa selaimessa: puhelimella, tabletilla tai kannettavalla. QR-koodit voi tulostaa tavallisella toimistotulostimella."
+      },
+      {
+        "q": "Voinko käyttää ruokalistaa omalla verkkotunnuksellani?",
+        "a": "Kyllä. Ruokalista yhdistetään verkkotunnukseesi SSL-varmenteella — asiakkaat näkevät ravintolasi osoitteen, esimerkiksi menu.sinunravintolasi.fi. Tukemme hoitaa verkkotunnuksen ja varmenteen asennuksen; sinun tarvitsee vain lisätä DNS-tietue."
+      },
+      {
+        "q": "Voinko hallinnoida useita ravintoloita yhdellä tilillä?",
+        "a": "Kyllä. Voit lisätä useita toimipisteitä yhdelle tilille: jokaisella on oma ruokalistansa, ilmeensä, QR-koodinsa ja analytiikkansa, ja niiden välillä vaihtaminen onnistuu yhdellä klikkauksella. Toimipisteiden määrä riippuu tilauksestasi."
+      },
+      {
+        "q": "Kuinka vaikeaa ruokalistan pystyttäminen alusta asti on?",
+        "a": "Kolme vaihetta: luo kategoriat, lisää annokset hintoineen ja kuvineen, tulosta QR-koodit pöytiin. Jos sinulla on paperinen ruokalista tai PDF, lataa se järjestelmään — tekoäly tunnistaa kategoriat, nimet ja hinnat ja täyttää kortit automaattisesti. Perusruokalista on julkaisuvalmis 5 minuutissa; koko pystytys riippuu annosten määrästä."
+      },
+      {
+        "q": "Millaista tukea tarjoatte?",
+        "a": "Vastaamme WhatsAppissa ja sähköpostitse työaikana. Autamme alkuasetuksissa, verkkotunnuksen yhdistämisessä ja ruokalistan ulkoasussa. Jos tarvitset demon tai opastetun käyttöönoton — laita viestiä."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Ruokalistasi verkossa 10 minuutissa. ",
+    "headingAccent": "14 päivän täysi käyttöoikeus.",
+    "sub": "Ei luottokorttia, peruuta milloin tahansa. {count} ravintolaa luottaa meihin ruokalistansa ja verkkosivujensa osalta. Tarvitset vain sähköpostiosoitteen."
+  },
+  "spotlights": [
+    {
+      "heading": "Ruokalista 35 kielellä",
+      "sub": "Asiakkaat avaavat ruokalistan äidinkielellään. Tekoäly kääntää annosten nimet, kuvaukset, kategoriat ja valinnat ruokasanastoa ymmärtäen.",
+      "bullets": [
+        {
+          "icon": "Globe",
+          "title": "35 kieltä sisältyy tilaukseen",
+          "sub": "Eurooppalaiset ja aasialaiset kielet mukana — ei lisämaksua per kieli"
+        },
+        {
+          "icon": "Timer",
+          "title": "Kääntyy tallennettaessa",
+          "sub": "Lisää tai muokkaa annosta — käännökset kaikille ruokalistan kielille ovat heti valmiina"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Manuaaliset muokkaukset on suojattu",
+          "sub": "Käsin korjaamasi käännös lukitaan, eikä tekoäly koskaan ylikirjoita sitä"
+        }
+      ]
+    },
+    {
+      "heading": "Allergeenit ja ruokavaliot joka annoksessa",
+      "sub": "Lisää allergeeni- ja ruokavaliomerkinnät annoskorttiin — asiakkaat näkevät ne ruokalistassa ja voivat suodattaa annoksia rajoitustensa mukaan.",
+      "bullets": [
+        {
+          "icon": "WheatOff",
+          "title": "14 allergeenikategoriaa",
+          "sub": "Täysi EU-asetuksen mukainen lista: gluteeni, pähkinät, laktoosi, merenelävät ja muut"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "13 ruokavaliomerkintää",
+          "sub": "Vegaaninen, kasvisruoka, gluteeniton, halal, kosher, tulinen ja muut ruokavaliotunnisteet"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Suodatus yhdellä napautuksella",
+          "sub": "Asiakkaat valitsevat rajoituksensa — ruokalista näyttää vain sopivat annokset"
+        }
+      ]
+    },
+    {
+      "heading": "Huipputason ruokalista omalla verkkotunnuksella",
+      "sub": "Kuva- tai videotausta aloitusnäytöllä, brändisi väri ja logo — ruokalista näyttää verkkosivultasi, ei PDF-tiedostolta, ja pyörii omassa osoitteessasi.",
+      "bullets": [
+        {
+          "icon": "Palette",
+          "title": "Brändin mukainen design",
+          "sub": "Video tai kuva etusivulla, korostusväri ja logo — aseta kuntoon ilman graafikkoa"
+        },
+        {
+          "icon": "Globe",
+          "title": "Oma verkkotunnus SSL-suojauksella",
+          "sub": "Ruokalista aukeaa osoitteessasi turvallisen yhteyden yli"
+        },
+        {
+          "icon": "Map",
+          "title": "Yhteystiedot ja kartta",
+          "sub": "Sivu, josta löytyy osoitteesi, aukioloajat, kartta ja some-linkit — täydet ravintolan verkkosivut"
+        }
+      ]
+    },
+    {
+      "heading": "Verkkotilaukset ilman välityspalkkioita",
+      "sub": "Asiakas tekee tilauksen pöydästä — se ilmestyy välittömästi hallintapaneeliin ja keittiönäytölle. Alusta ei ota 0 % osuutta myynnistäsi.",
+      "bullets": [
+        {
+          "icon": "ShoppingCart",
+          "title": "Ruokalistalta tai WhatsAppin kautta",
+          "sub": "Tilaus järjestelmän sisällä tai viesti WhatsAppiisi — valitse toimintatapa asetuksista"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Suoraan keittiöön",
+          "sub": "Uusi tilaus ilmestyy keittiönäytölle ja tarjoilijan laitteelle viiveettä"
+        },
+        {
+          "icon": "Receipt",
+          "title": "0 % välityspalkkio",
+          "sub": "Maksu pysyy sinun ja asiakkaan välisenä — alusta ei pidätä mitään tilauksistasi"
+        }
+      ]
+    },
+    {
+      "heading": "Pöytävaraukset 24/7",
+      "sub": "Asiakkaat varaavat pöydän suoraan ruokalistalta mihin aikaan tahansa. Järjestelmä tarkistaa pyynnön aikatauluasi ja vapaita pöytiä vasten.",
+      "bullets": [
+        {
+          "icon": "CalendarCheck",
+          "title": "Kalenteri pöydittäin",
+          "sub": "Järjestelmä yhdistää pöydän seurueen kokoon ja näyttää varaukset päivän ja pöydän mukaan"
+        },
+        {
+          "icon": "CalendarDays",
+          "title": "Automaattinen tai manuaalinen",
+          "sub": "Vahvista jokainen varaus itse tai laita automaattinen vahvistus päälle"
+        },
+        {
+          "icon": "Mail",
+          "title": "Sähköpostit asiakkaalle ja sinulle",
+          "sub": "Asiakas saa sähköpostivahvistuksen, omistajat saavat ilmoituksen uudesta varauksesta"
+        }
+      ]
+    },
+    {
+      "heading": "Hallinnoi mistä tahansa",
+      "sub": "Hallintapaneeli toimii selaimessa puhelimella, tabletilla tai tietokoneella. Muutokset näkyvät asiakkaille välittömästi.",
+      "bullets": [
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Mikä tahansa laite",
+          "sub": "Puhelin, tabletti tai PC — selain riittää, ei vaadi asennusta"
+        },
+        {
+          "icon": "Timer",
+          "title": "Muokkaukset lennosta",
+          "sub": "Hinnanmuutos, stop-lista tai piilotettu annos päivittyy heti, ilman julkaisuviivettä"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Annosten lisävalinnat",
+          "sub": "Koot, lisukkeet ja maksulliset vaihtoehdot — asiakkaat kokoavat annoksensa itse"
+        }
+      ]
+    }
+  ],
+  "hideFeatureHeading": true
+}

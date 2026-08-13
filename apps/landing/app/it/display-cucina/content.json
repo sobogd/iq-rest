@@ -1,0 +1,206 @@
+{
+  "locale": "it",
+  "slug": "display-cucina",
+  "trackPrefix": "l_kds",
+  "meta": {
+    "title": "Display cucina (KDS) per ristoranti — Ordini sullo schermo del cuoco | IQ Rest",
+    "description": "Display cucina KDS per ristoranti: gli ordini dalla sala e dal menù QR arrivano subito sullo schermo del cuoco. Colonne per tavolo, stati Pending / Cooking / Ready / Served, filtri per zona. Funziona su tablet e telefono.",
+    "canonical": "https://iq-rest.com/it/display-cucina",
+    "ogLocale": "it_IT",
+    "ogTitle": "Display cucina (KDS) — Ordini subito sullo schermo del cuoco",
+    "ogDescription": "Gli ordini dalla sala sullo schermo del cuoco. Colonne per tavolo, stati e timer. Un tocco cambia lo stato.",
+    "brandLine": "IQ Rest — Display cucina per ristoranti"
+  },
+  "hero": {
+    "headline": "Display cucina (KDS):",
+    "cta": "Configura il display cucina",
+    "sub": "Gli ordini arrivano sullo schermo della cucina all'istante: note, allergeni e timer. Cambio di stato con un tocco.",
+    "headlineAccent": "gli ordini subito al cuoco",
+    "demoLabel": "Demo: schermata della cucina",
+    "tablet": {
+      "src": "/landing/hero-card-kds.webp",
+      "alt": "Tablet con il display cucina: ordini per tavolo in colonne con gli stati"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Ristoranti"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Caffè"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bar"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotel"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerie"
+    }
+  ],
+  "scan": {
+    "heading": "Installa il display cucina",
+    "headingAccent": "in 5 minuti.",
+    "sub": "Scansiona il menù cartaceo o il PDF — l'AI riconosce piatti, categorie e allergeni. Collega un tablet in cucina e inizia a ricevere gli ordini.",
+    "cta": "Scansiona il menù"
+  },
+  "subFeatures": [
+    {
+      "icon": "LayoutGrid",
+      "eyebrow": "Gestione e filtri",
+      "heading": "Più schermi per zone: cucina e bar.",
+      "body": "Installa tablet separati per la cucina calda, il bar o la pasticceria — ogni schermo mostra solo i piatti che gli competono. I filtri per stato (Pending / Cooking / Ready / Served) e per categoria eliminano il superfluo dallo schermo: il cuoco lavora solo con ciò che riguarda la sua postazione.",
+      "bullets": [
+        "Più schermi KDS con filtro per categoria di piatti.",
+        "Filtro per stato: solo in preparazione e pronto.",
+        "Ogni zona vede solo il proprio flusso di ordini."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-filters.webp",
+        "alt": "Tablet su un supporto in ottone al pass della cucina di un ristorante — KDS con filtro per stato dei piatti"
+      }
+    },
+    {
+      "icon": "Timer",
+      "eyebrow": "Schede e timer",
+      "heading": "Un tocco cambia lo stato. Commenti e allergeni evidenziati a colori.",
+      "body": "La scheda del piatto mostra le opzioni scelte (senza cipolla, well done), i commenti dell'ospite, gli allergeni e il timer dal momento dell'ordine. Un tocco sulla scheda fa passare allo stato successivo: Pending → Cooking → Ready → Served. L'elenco si ordina automaticamente per priorità di tempo.",
+      "bullets": [
+        "Un tocco sulla scheda — passaggio di stato immediato.",
+        "Opzioni, commenti e allergeni evidenziati a colori.",
+        "Ordinamento per priorità: i piatti in attesa da più tempo salgono in alto."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-cards.webp",
+        "alt": "Tablet su un supporto in ottone sul bancone del bar di un ristorante — KDS con le schede degli ordini per tavolo"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Le domande dei ristoratori sul display cucina in IQ Rest. Se la tua domanda non è nell'elenco, scrivici su WhatsApp.",
+    "items": [
+      {
+        "q": "Quali sono gli stati delle voci in cucina?",
+        "a": "Quattro stati: Pending — l'ordine è stato ricevuto ed è in attesa; Cooking — il piatto è in preparazione; Ready — pronto per l'uscita; Served — consegnato all'ospite. Un tocco sulla scheda fa passare allo stato successivo, senza menù né conferme."
+      },
+      {
+        "q": "Si possono installare più schermi KDS in zone diverse della cucina?",
+        "a": "Sì. Un tablet sulla cucina calda, un altro al bar, un terzo in pasticceria — ognuno con il proprio filtro per categorie di piatti. Tutti gli schermi sono sincronizzati: uno stato modificato su uno si aggiorna sugli altri."
+      },
+      {
+        "q": "Su cosa gira il KDS — serve un tablet particolare?",
+        "a": "Il KDS funziona in qualsiasi browser moderno. Per una cucina grande va bene un tablet su supporto al pass, per un locale piccolo uno smartphone. Non servono attrezzature dedicate né installazioni: il dispositivo si collega con un codice a sei cifre dal pannello."
+      },
+      {
+        "q": "Da dove arrivano gli ordini sullo schermo della cucina?",
+        "a": "Da tutte le fonti: l'ospite ha inviato l'ordine dal menù QR al tavolo oppure il cameriere lo ha ricevuto dal proprio dispositivo. Gli ordini arrivano sul KDS automaticamente, con il numero del tavolo. Non serve alcun trasferimento manuale dal POS."
+      },
+      {
+        "q": "Cosa mostra la scheda dell'ordine?",
+        "a": "Nome del piatto, opzioni scelte (senza cipolla, well done), commento dell'ospite, allergeni, stato e timer dal momento dell'ordine. Le schede si ordinano per priorità: più a lungo un piatto attende, più in alto sale nella colonna."
+      },
+      {
+        "q": "Si possono filtrare le schede sullo schermo?",
+        "a": "Sì. Due filtri: per stato (ad esempio solo Pending e Cooking) e per categoria (bevande al bar, piatti caldi in cucina). Le impostazioni si salvano su ciascun dispositivo, così ogni zona lavora con il proprio set."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Cucina senza carta in 10 minuti. ",
+    "headingAccent": "14 giorni di accesso completo.",
+    "sub": "Nessuna carta richiesta, disdici quando vuoi. {count} ristoranti si fidano di noi. Serve solo l'email — e gli ordini arrivano subito sullo schermo della cucina."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Schermi per zone",
+      "sub": "Tablet separati per la cucina calda, il bar e la pasticceria — ogni schermo mostra solo i propri piatti.",
+      "bullets": [
+        {
+          "icon": "LayoutGrid",
+          "title": "Filtro per categorie",
+          "sub": "Assegna a ogni schermo le proprie categorie del menù"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Un flusso per ogni zona",
+          "sub": "Cucina e bar lavorano in parallelo senza intralciarsi"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Filtro per stato",
+          "sub": "Mostra solo ciò che è in preparazione o pronto per l'uscita"
+        }
+      ]
+    },
+    {
+      "heading": "Stati con un solo tocco",
+      "sub": "Un tocco sulla scheda porta il piatto allo stato successivo. Cucina e cameriere vedono la stessa situazione.",
+      "bullets": [
+        {
+          "icon": "ClipboardList",
+          "title": "Stato di ogni voce",
+          "sub": "In preparazione, pronto, servito — per ogni piatto, non per l'intero ordine"
+        },
+        {
+          "icon": "Timer",
+          "title": "Timer dal momento dell'ordine",
+          "sub": "Si vede da quanto tempo il piatto attende — quelli in attesa da più tempo salgono in alto"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "Allergeni e commenti",
+          "sub": "Opzioni, note dell'ospite e allergeni evidenziati a colori"
+        }
+      ]
+    },
+    {
+      "heading": "Gli ordini arrivano all'istante",
+      "sub": "L'ordine dell'ospite dal menù QR o dal cameriere compare sullo schermo nel momento dell'invio, senza ricaricare la pagina.",
+      "bullets": [
+        {
+          "icon": "Rocket",
+          "title": "Istantaneamente sullo schermo",
+          "sub": "Connessione persistente — la scheda compare nel secondo stesso dell'ordine"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Tutte le fonti in un unico flusso",
+          "sub": "Gli ordini degli ospiti e dei camerieri arrivano su un unico schermo con il numero del tavolo"
+        },
+        {
+          "icon": "Map",
+          "title": "Numero del tavolo sulla scheda",
+          "sub": "La cucina vede dove portare il piatto, il cameriere dove lo aspettano"
+        }
+      ]
+    },
+    {
+      "heading": "Collegamento in pochi minuti",
+      "sub": "La schermata della cucina funziona nel browser su qualsiasi tablet o telefono — collegamento con un codice a sei cifre.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Tablet o telefono",
+          "sub": "Basta un browser — non serve comprare attrezzature dedicate"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Codice di collegamento",
+          "sub": "Inserisci il codice a sei cifre dal pannello — il dispositivo è collegato alla cucina"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Revoca dell'accesso",
+          "sub": "Il tablet si è perso o è stato sostituito — scollegalo dal pannello con un tocco"
+        }
+      ]
+    }
+  ]
+}

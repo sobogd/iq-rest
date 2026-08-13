@@ -1,0 +1,206 @@
+{
+  "locale": "hu",
+  "slug": "konyhai-kijelzo",
+  "trackPrefix": "l_kds",
+  "meta": {
+    "title": "Konyhai Kijelző (KDS) Éttermeknek — Rendelések a Szakács Képernyőjén | IQ Rest",
+    "description": "KDS konyhai kijelző éttermeknek: a pályáról és a QR étlapról érkező rendelések egyenesen a szakács képernyőjére mennek. Oszlopok asztalonként, Függőben / Készül / Kész / Felszolgálva státuszok, pályarész szűrők. Tableten vagy telefonon fut.",
+    "canonical": "https://iq-rest.com/hu/konyhai-kijelzo",
+    "ogLocale": "hu_HU",
+    "ogTitle": "Konyhai Kijelző (KDS) — Rendelések Egyenesen a Szakács Képernyőjére",
+    "ogDescription": "Rendelések a pályáról a szakács képernyőjén. Oszlopok asztalonként, státuszok és időzítő. Egy érintés megváltoztatja a státuszt.",
+    "brandLine": "IQ Rest — Konyhai kijelző éttermeknek"
+  },
+  "hero": {
+    "headline": "Konyhai Kijelző (KDS):",
+    "cta": "Konyhai kijelző beállítása",
+    "sub": "A rendelések azonnal elérik a konyhai képernyőt: megjegyzések, allergének és időzítő. A státusz egy érintéssel változik.",
+    "headlineAccent": "rendelések egyenesen a szakácshoz",
+    "demoLabel": "Demó: konyhai képernyő",
+    "tablet": {
+      "src": "/landing/hero-card-kds.webp",
+      "alt": "Tablet konyhai kijelzővel: rendelések asztalonként oszlopokban, státuszokkal"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Éttermek"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kávézók"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bárok"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Szállodák"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzériák"
+    }
+  ],
+  "scan": {
+    "heading": "Állítsd be a konyhai kijelzőt",
+    "headingAccent": "5 perc alatt.",
+    "sub": "Olvasd be a papír étlapot vagy egy PDF-et — az MI felismeri az ételeket, kategóriákat és allergéneket. Csatlakoztass egy tabletet a konyhán, és kezdd el fogadni a rendeléseket.",
+    "cta": "Étlap beolvasása"
+  },
+  "subFeatures": [
+    {
+      "icon": "LayoutGrid",
+      "eyebrow": "Irányítás és szűrők",
+      "heading": "Több képernyő pályarészenként: konyha és pult.",
+      "body": "Állíts be külön tableteket a melegkonyhának, a pultnak vagy a cukrászatnak — minden képernyő csak a hozzá tartozó ételeket mutatja. A státusz (Függőben / Készül / Kész / Felszolgálva) és kategória szerinti szűrők megszüntetik a káoszt: a szakácsok csak azzal dolgoznak, ami a saját pályarészükhöz tartozik.",
+      "bullets": [
+        "Több KDS képernyő ételkategória-szűrőkkel.",
+        "Státusz szűrő: csak ami készül és kész.",
+        "Minden pályarész csak a saját rendelési folyamatát látja."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-filters.webp",
+        "alt": "Tablet egy réz állványon az éttermi konyha passzánál — egy KDS ételstátusz szerint szűrve"
+      }
+    },
+    {
+      "icon": "Timer",
+      "eyebrow": "Kártyák és időzítő",
+      "heading": "Egy érintés megváltoztatja a státuszt. A megjegyzések és allergének színnel kiemelve.",
+      "body": "Egy ételkártya mutatja a kiválasztott opciókat (hagyma nélkül, jól átsütve), a vendég megjegyzéseit, az allergéneket és egy időzítőt, ami a rendelés leadása óta ketyeg. A kártyára koppintva a státusz előrelép: Függőben → Készül → Kész → Felszolgálva. A lista automatikusan időprioritás szerint rendezi magát.",
+      "bullets": [
+        "Koppints egy kártyára — a státusz azonnal előrelép.",
+        "Opciók, megjegyzések és allergének színnel kiemelve.",
+        "Prioritás szerinti rendezés: a legrégebben várakozó ételek kerülnek felülre."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-cards.webp",
+        "alt": "Tablet egy réz állványon az éttermi pulton — egy KDS rendelési kártyákkal asztalonként"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Amit a vendéglátósok a konyhai kijelzőről kérdeznek az IQ Restben. Ha nem találod a kérdésed — írj nekünk WhatsAppon.",
+    "items": [
+      {
+        "q": "Milyen státuszaik vannak a konyhai tételeknek?",
+        "a": "Négy státusz: Függőben — a rendelés le van adva és várakozik; Készül — az étel készítése folyamatban van; Kész — átvételre kész; Felszolgálva — kivíve a vendégnek. A kártyára koppintva a következő státuszba lép, menük és megerősítések nélkül."
+      },
+      {
+        "q": "Beállíthatok több KDS képernyőt a különböző konyhai pályarészeken?",
+        "a": "Igen. Egy tablet a melegkonyhán, egy másik a pultnál, egy harmadik a cukrászaton — mindegyik saját ételkategória-szűrővel. Minden képernyő szinkronban marad: az egyiken megváltoztatott státusz frissül a többin is."
+      },
+      {
+        "q": "Min futtassam a KDS-t — szükségem van egy speciális tabletre?",
+        "a": "A KDS bármilyen modern böngészőben fut. Egy állványra tett tablet a passznál megfelel egy nagy konyhának; egy okostelefon is működik egy kis helyen. Nincs szükség speciális hardverre vagy telepítésre: az eszköz egy hatjegyű kóddal csatlakozik a vezérlőpultból."
+      },
+      {
+        "q": "Honnan jönnek a rendelések a konyhai képernyőre?",
+        "a": "Minden forrásból: a vendég leadja a rendelést az asztali QR étlapon keresztül, vagy a pincér felveszi a saját eszközén. A rendelések automatikusan elérik a KDS-t, az asztalszámmal együtt. Nincs kézi újra-bevitel a kasszából."
+      },
+      {
+        "q": "Mit mutat egy rendelési kártya?",
+        "a": "Az étel nevét, a kiválasztott opciókat (hagyma nélkül, jól átsütve), a vendég megjegyzését, az allergéneket, a státuszt és egy időzítőt, ami a rendelés leadása óta ketyeg. A kártyák prioritás szerint rendeződnek: minél tovább vár egy étel, annál feljebb kerül az oszlopban."
+      },
+      {
+        "q": "Szűrhetők a kártyák a képernyőn?",
+        "a": "Igen. Két szűrő van: státusz szerint (például csak Függőben és Készül) és kategória szerint (italok a pultba, meleg ételek a konyhára). A beállítások eszközönként mentődnek, így minden pályarész a saját készletével dolgozik."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Papírmentes konyha 10 perc alatt. ",
+    "headingAccent": "14 nap teljes hozzáférés.",
+    "sub": "Nincs szükség bankkártyára, bármikor lemondható. {count} étterem bízik bennünk. Csak egy e-mail cím kell hozzá — és a rendelések egyenesen a konyhai képernyőre futnak be."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Képernyők pályarészenként",
+      "sub": "Külön tabletek a melegkonyhának, a pultnak és a cukrászatnak — minden képernyő csak a saját ételeit mutatja.",
+      "bullets": [
+        {
+          "icon": "LayoutGrid",
+          "title": "Kategória szűrő",
+          "sub": "Rendelj minden képernyőhöz saját étlap kategóriákat"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Folyamat pályarészenként",
+          "sub": "A konyha és a pult párhuzamosan dolgozik anélkül, hogy zavarnák egymást"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Státusz szűrő",
+          "sub": "Mutasd csak azt, ami készül vagy átvételre kész"
+        }
+      ]
+    },
+    {
+      "heading": "Státuszváltás egy érintéssel",
+      "sub": "Egy érintés a kártyán a következő státuszba mozgatja az ételt. A konyha és a pincér ugyanazt a képet látja.",
+      "bullets": [
+        {
+          "icon": "ClipboardList",
+          "title": "Státusz tételenként",
+          "sub": "Készül, kész, felszolgálva — ételenként, nem rendelésenként"
+        },
+        {
+          "icon": "Timer",
+          "title": "Időzítő a rendelés pillanatától",
+          "sub": "Lásd, mióta vár egy étel — a legrégebben várakozók kerülnek felülre"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "Allergének és megjegyzések",
+          "sub": "Opciók, vendég megjegyzések és allergének színnel kiemelve"
+        }
+      ]
+    },
+    {
+      "heading": "A rendelések azonnal befutnak",
+      "sub": "A vendég rendelése a QR étlapról vagy a pincértől a leadás pillanatában megjelenik a képernyőn, oldalfrissítés nélkül.",
+      "bullets": [
+        {
+          "icon": "Rocket",
+          "title": "Azonnal a képernyőn",
+          "sub": "Folyamatos kapcsolat — a kártya abban a másodpercben megjelenik, ahogy a rendelést leadják"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Minden forrás egy folyamatban",
+          "sub": "A vendég és a pincér rendelései egy képernyőre érkeznek az asztalszámmal együtt"
+        },
+        {
+          "icon": "Map",
+          "title": "Asztalszám a kártyán",
+          "sub": "A konyha látja, hova megy az étel; a pincér látja, hol várják"
+        }
+      ]
+    },
+    {
+      "heading": "Csatlakoztatás perceken belül",
+      "sub": "A konyhai képernyő a böngészőben fut bármilyen tableten vagy telefonon — egy hatjegyű kóddal csatlakoztatva.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Tablet vagy telefon",
+          "sub": "Egy böngésző elég — nem kell speciális hardvert venni"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Párosító kód",
+          "sub": "Írd be a hatjegyű kódot a vezérlőpultból — az eszköz hozzá van kapcsolva a konyhához"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Hozzáférés visszavonása",
+          "sub": "Elveszett vagy lecserélt tablet — válaszd le a vezérlőpultból egy érintéssel"
+        }
+      ]
+    }
+  ]
+}

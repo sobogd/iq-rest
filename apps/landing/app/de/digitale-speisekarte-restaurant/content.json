@@ -1,0 +1,332 @@
+{
+  "locale": "de",
+  "slug": "digitale-speisekarte-restaurant",
+  "trackPrefix": "l_digital",
+  "meta": {
+    "title": "Digitale Speisekarte für Restaurants | IQ Rest",
+    "description": "Digitale Speisekarte für Ihr Restaurant: eine Online-Speisekarte mit Fotos, Allergenen, KI-Übersetzung und Preis-Updates in Echtzeit. 14 Tage kostenlos, keine Kreditkarte nötig.",
+    "canonical": "https://iq-rest.com/de/digitale-speisekarte-restaurant",
+    "ogLocale": "de_DE",
+    "ogTitle": "Digitale Speisekarte für Restaurants",
+    "ogDescription": "Eine Online-Version Ihrer Papierkarte mit Fotos, Allergenen und KI-Übersetzung. Preise aktualisieren sich in Echtzeit.",
+    "brandLine": "IQ Rest — Digitale Speisekarte für Restaurants"
+  },
+  "hero": {
+    "headline": "Digitale Speisekarte und Website",
+    "headlineAccent": "für Ihr Restaurant",
+    "cta": "Digitale Speisekarte erstellen",
+    "demoLabel": "Demo: Die Speisekarte aus Gästesicht",
+    "sub": "Startklar in 10 Minuten: Nehmen Sie Bestellungen am Tisch an, aktualisieren Sie Preise in Echtzeit und erhalten Sie Reservierungen direkt und ohne Provisionen.",
+    "phones": [
+      {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Handy mit der Startseite einer Restaurant-Website: Fotos, Reservierungen und Zugang zur Online-Speisekarte"
+      },
+      {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Handy mit einer Gerichtkarte: Foto, Preis und Allergen-Labels"
+      }
+    ]
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurants"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafés"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bars"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotels"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerien"
+    }
+  ],
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Eine Speisekarte in 10 Minuten",
+      "sub": "Keine Entwickler und keine langwierige Einrichtung"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Schneller Support",
+      "sub": "Wir helfen Ihnen im Chat innerhalb weniger Stunden bei der Einrichtung"
+    },
+    {
+      "icon": "Globe",
+      "title": "Von {count} Betrieben gewählt",
+      "sub": "Digitale Speisekarten und Websites für Restaurants in 15+ Ländern"
+    },
+    {
+      "icon": "Palette",
+      "title": "Ihre eigene Domain und Marke",
+      "sub": "Eine Speisekarte unter Ihrer eigenen Adresse, nicht auf einem geteilten Baukasten"
+    }
+  ],
+  "scan": {
+    "heading": "Haben Sie eine Papierkarte oder ein PDF?",
+    "headingAccent": "Die KI digitalisiert sie in 60 Sekunden.",
+    "sub": "Laden Sie ein Foto oder Dokument hoch — die KI erkennt Kategorien, Gerichte und Preise automatisch.",
+    "cta": "Speisekarte scannen"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "KI-Übersetzung",
+      "heading": "Eine Speisekarte in 35 Sprachen",
+      "body": "Ein QR-Code — 35 Sprachen. Die KI übersetzt mit kulinarischem Kontext, sodass Gerichte natürlich klingen. Touristen bestellen selbstbewusster.",
+      "bullets": [
+        "35 Sprachen im Abo enthalten",
+        "Kulinarische KI statt Google Translate",
+        "Sprachwechsel mit einem Fingertipp"
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Zwei Gäste lesen dieselbe digitale Speisekarte in verschiedenen Sprachen auf ihren eigenen Handys"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Allergene",
+      "heading": "Allergene und Ernährungsweisen bei jedem Gericht",
+      "body": "Kennzeichnen Sie Gluten, Laktose, Nüsse, vegan und glutenfrei. Gäste filtern die Karte nach ihren Bedürfnissen und bestellen unbesorgt.",
+      "bullets": [
+        "14 Allergen-Kategorien",
+        "Vegan- und Glutenfrei-Labels",
+        "Speisekarten-Filter nach Ernährungsweise"
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Ein Gast filtert die Speisekarte nach Allergenen auf dem Handy, während der Inhaber die Allergenliste auf einem Tablet bearbeitet"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Design und Marke",
+      "heading": "Eine Premium-Speisekarte auf Ihrer eigenen Domain",
+      "body": "Ein Video-Hintergrund auf der Startseite, Ihr eigenes Design und eine Kontaktseite mit Karte und Social-Media-Links — auf Ihrer Domain, nicht als PDF.",
+      "bullets": [
+        "Video-Hintergrund und Premium-Design",
+        "Ihre eigene Domain mit SSL",
+        "Kontakte, Karte, Social-Media-Links"
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Zwei Handys auf einem Café-Tisch: die Startseite der Speisekarte mit einem Video-Hintergrund und eine Kontaktseite mit Karte"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Bestellungen",
+      "heading": "Online-Bestellungen ohne Provisionen",
+      "body": "Gäste bestellen über die Speisekarte oder direkt in WhatsApp — die Bestellung geht an den Service oder in die Küche, 0 % Provision.",
+      "bullets": [
+        "Aus der Speisekarte oder via WhatsApp",
+        "An den Service oder die Küche, 0 % Provision",
+        "In den Einstellungen aktivierbar"
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Zwei Handys auf einem Tisch: ein Warenkorb mit einer Bestellung und eine erfolgreiche Bestellbestätigung"
+      }
+    },
+    {
+      "icon": "CalendarCheck",
+      "eyebrow": "Reservierungen",
+      "heading": "Tischreservierungen 24/7",
+      "body": "Gäste buchen selbst einen Tisch über die Speisekarte oder einen Link, Sie sehen einen Kalender nach Tisch und bestätigen automatisch oder manuell.",
+      "bullets": [
+        "Gäste buchen selbstständig",
+        "Kalender für alle Tische",
+        "Automatische oder manuelle Bestätigung"
+      ]
+    },
+    {
+      "icon": "MonitorSmartphone",
+      "eyebrow": "Management",
+      "heading": "Verwaltung von überall",
+      "body": "Das Dashboard läuft im Browser — Handy, Tablet oder PC. Nichts zu installieren, in Minuten startklar.",
+      "bullets": [
+        "Jedes Gerät, jeder Browser",
+        "Keine Installation nötig",
+        "In Minuten startklar"
+      ]
+    }
+  ],
+  "faq": {
+    "sub": "Was Gastronomen zur digitalen Speisekarte in IQ Rest fragen. Wenn Ihre Frage nicht dabei ist — schreiben Sie uns auf WhatsApp.",
+    "items": [
+      {
+        "q": "Brauche ich technisches Wissen oder CMS-Erfahrung?",
+        "a": "Keine besonderen Kenntnisse erforderlich. Alles im Dashboard funktioniert mit ein paar Fingertipps — kein Programmieren, keine Arbeit mit Quelldateien. Ein Gericht hinzuzufügen dauert Sekunden: Name, Preis, Foto. Die komplette Einrichtung der Speisekarte dauert meist 30–60 Minuten."
+      },
+      {
+        "q": "Was ist die digitale Speisekarte von IQ Rest?",
+        "a": "Es ist eine Online-Version Ihrer Speisekarte, die für Gäste per QR-Code oder Direktlink erreichbar ist: Fotos der Gerichte, Preise, Allergene, KI-Übersetzung in 35 Sprachen und Echtzeit-Updates. Die Speisekarte läuft auf unseren Servern — es muss keine Software installiert oder gewartet werden, ein Browser reicht völlig aus."
+      },
+      {
+        "q": "Brauchen Gäste eine App oder spezielle Geräte?",
+        "a": "Ein Gast richtet seine Handykamera auf den QR-Code — die Speisekarte öffnet sich im Browser, keine Installation. Auch das Dashboard funktioniert in jedem modernen Browser: Handy, Tablet oder Laptop. QR-Codes können auf einem normalen Bürodrucker gedruckt werden."
+      },
+      {
+        "q": "Kann ich die Speisekarte auf meiner eigenen Domain hosten?",
+        "a": "Ja. Die Speisekarte wird mit einem SSL-Zertifikat mit Ihrer Domain verbunden — Gäste sehen die Adresse Ihres Restaurants, zum Beispiel menu.ihrrestaurant.de. Unser Support kümmert sich um die Einrichtung von Domain und Zertifikat; Sie müssen nur einen DNS-Eintrag hinterlegen."
+      },
+      {
+        "q": "Kann ich mehrere Restaurants über ein Konto verwalten?",
+        "a": "Ja. Fügen Sie Betriebe zu einem einzigen Konto hinzu: Jeder hat seine eigene Speisekarte, sein eigenes Design, eigene QR-Codes und Analysen. Der Wechsel zwischen den Betrieben erfordert nur einen Klick. Die Anzahl der Betriebe hängt von Ihrem Abo ab."
+      },
+      {
+        "q": "Wie schwer ist es, eine Speisekarte von Grund auf neu einzurichten?",
+        "a": "Drei Schritte: Kategorien erstellen, Gerichte mit Preisen und Fotos hinzufügen, QR-Codes für die Tische ausdrucken. Wenn Sie eine Papierkarte oder ein PDF haben, laden Sie es hoch — die KI erkennt Kategorien, Namen und Preise und füllt die Einträge automatisch aus. Eine einfache Speisekarte ist in 5 Minuten online; die vollständige Einrichtung hängt von der Anzahl der Artikel ab."
+      },
+      {
+        "q": "Welchen Support bieten Sie an?",
+        "a": "Wir antworten während der Arbeitszeiten auf WhatsApp und per E-Mail. Wir helfen bei der Ersteinrichtung, der Verbindung Ihrer Domain und dem Design der Speisekarte. Wenn Sie eine Demo oder eine geführte Einführung brauchen — schreiben Sie uns."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Ihre Speisekarte in 10 Minuten online. ",
+    "headingAccent": "14 Tage voller Zugriff.",
+    "sub": "Keine Kreditkarte nötig, jederzeit kündbar. {count} Restaurants vertrauen uns ihre Speisekarten und Websites an. Sie brauchen nur eine E-Mail-Adresse."
+  },
+  "spotlights": [
+    {
+      "heading": "Eine Speisekarte in 35 Sprachen",
+      "sub": "Gäste öffnen die Speisekarte in ihrer Muttersprache. Die KI übersetzt Gerichte, Beschreibungen, Kategorien und Optionen mit kulinarischem Kontext.",
+      "bullets": [
+        {
+          "icon": "Globe",
+          "title": "35 Sprachen im Abo enthalten",
+          "sub": "Europäische und asiatische Sprachen inklusive — kein Aufpreis pro Sprache"
+        },
+        {
+          "icon": "Timer",
+          "title": "Übersetzt beim Speichern",
+          "sub": "Fügen Sie ein Gericht hinzu oder bearbeiten Sie es — Übersetzungen in alle Sprachen sind sofort fertig"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Manuelle Änderungen sind geschützt",
+          "sub": "Eine von Ihnen manuell korrigierte Übersetzung wird gesperrt und die KI überschreibt sie nicht mehr"
+        }
+      ]
+    },
+    {
+      "heading": "Allergene und Ernährungsweisen bei jedem Gericht",
+      "sub": "Fügen Sie Allergen- und Ernährungs-Labels zu einer Gerichtkarte hinzu — Gäste sehen sie in der Speisekarte und filtern Gerichte nach ihren Einschränkungen.",
+      "bullets": [
+        {
+          "icon": "WheatOff",
+          "title": "14 Allergen-Kategorien",
+          "sub": "Die komplette Liste nach EU-Verordnung: Gluten, Nüsse, Laktose, Meeresfrüchte und mehr"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "13 Ernährungs-Labels",
+          "sub": "Vegan, vegetarisch, glutenfrei, halal, koscher, scharf und weitere Ernährungs-Tags"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Filter mit einem Klick",
+          "sub": "Gäste wählen ihre Einschränkungen — die Speisekarte zeigt nur passende Gerichte"
+        }
+      ]
+    },
+    {
+      "heading": "Eine Premium-Speisekarte auf Ihrer eigenen Domain",
+      "sub": "Ein Foto- oder Video-Hintergrund auf der Startseite, Ihre Markenfarbe und Ihr Logo — die Speisekarte sieht aus wie Ihre Website, nicht wie ein PDF, und läuft auf Ihrer Domain.",
+      "bullets": [
+        {
+          "icon": "Palette",
+          "title": "Design im eigenen Branding",
+          "sub": "Video oder Foto auf der Startseite, eine Akzentfarbe und Logo — Einrichtung ohne Designer"
+        },
+        {
+          "icon": "Globe",
+          "title": "Ihre eigene Domain mit SSL",
+          "sub": "Die Speisekarte öffnet sich unter Ihrer Adresse über eine sichere Verbindung"
+        },
+        {
+          "icon": "Map",
+          "title": "Kontakte und Karte",
+          "sub": "Eine Seite mit Ihrer Adresse, Öffnungszeiten, Karte und Social-Media-Links — eine komplette Restaurant-Website"
+        }
+      ]
+    },
+    {
+      "heading": "Online-Bestellungen ohne Provisionen",
+      "sub": "Ein Gast bestellt vom Tisch — die Bestellung erscheint sofort im Dashboard und auf dem Küchenbildschirm. Die Plattform behält 0 % von Ihrem Umsatz.",
+      "bullets": [
+        {
+          "icon": "ShoppingCart",
+          "title": "Aus der Speisekarte oder via WhatsApp",
+          "sub": "Eine Bestellung im System oder eine Nachricht an Ihr WhatsApp — wählen Sie den Modus in den Einstellungen"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Direkt in die Küche",
+          "sub": "Eine neue Bestellung erscheint ohne Verzögerung auf dem Küchenbildschirm und dem Gerät der Servicekraft"
+        },
+        {
+          "icon": "Receipt",
+          "title": "0 % Provision",
+          "sub": "Die Bezahlung bleibt zwischen Ihnen und dem Gast — die Plattform behält nichts von Ihren Bestellungen"
+        }
+      ]
+    },
+    {
+      "heading": "Tischreservierungen 24/7",
+      "sub": "Gäste buchen jederzeit einen Tisch direkt über die Speisekarte. Das System prüft die Anfrage anhand Ihres Zeitplans und der freien Tische.",
+      "bullets": [
+        {
+          "icon": "CalendarCheck",
+          "title": "Kalender nach Tisch",
+          "sub": "Das System weist der Gruppengröße einen passenden Tisch zu und zeigt Buchungen nach Tag und Tisch an"
+        },
+        {
+          "icon": "CalendarDays",
+          "title": "Automatisch oder manuell",
+          "sub": "Bestätigen Sie jede Buchung selbst oder aktivieren Sie die automatische Bestätigung"
+        },
+        {
+          "icon": "Mail",
+          "title": "E-Mails an den Gast und an Sie",
+          "sub": "Der Gast erhält eine E-Mail-Bestätigung, Inhaber bekommen eine Benachrichtigung über neue Buchungen"
+        }
+      ]
+    },
+    {
+      "heading": "Verwaltung von überall",
+      "sub": "Das Dashboard läuft im Browser auf einem Handy, Tablet oder Computer. Änderungen sind für Gäste sofort sichtbar.",
+      "bullets": [
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Jedes Gerät",
+          "sub": "Handy, Tablet oder PC — ein Browser reicht, keine Installation erforderlich"
+        },
+        {
+          "icon": "Timer",
+          "title": "Änderungen in Echtzeit",
+          "sub": "Eine Preisänderung, Stop-List oder ein ausgeblendetes Gericht wird sofort übernommen, ohne Veröffentlichen oder Warten"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Gericht-Optionen",
+          "sub": "Größen, Extras und kostenpflichtige Varianten — Gäste stellen sich ihr Gericht selbst zusammen"
+        }
+      ]
+    }
+  ],
+  "hideFeatureHeading": true
+}

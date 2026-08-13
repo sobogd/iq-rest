@@ -1,0 +1,236 @@
+{
+  "locale": "ca",
+  "slug": "sistema-comandes-restaurant",
+  "trackPrefix": "l_orders",
+  "meta": {
+    "title": "Presa de comandes: comensals i cambrers | IQ Rest",
+    "description": "Presa de comandes des d'un mòbil o tauleta: plànol de sala, comptes separats, estats, opcions i comentaris. Els clients demanen des de la taula, els cambrers des del seu dispositiu. 14 dies gratis.",
+    "canonical": "https://iq-rest.com/ca/sistema-comandes-restaurant",
+    "ogLocale": "ca_ES",
+    "ogTitle": "Presa de comandes: comensals i cambrers",
+    "ogDescription": "Un client a la taula o un cambrer amb el mòbil: la comanda arriba a cuina a l'instant. Plànol de sala, comptes separats, estats, opcions i comentaris.",
+    "brandLine": "IQ Rest — Presa de comandes per a restaurants"
+  },
+  "hero": {
+    "headline": "Comandes des de la taula:",
+    "cta": "Configurar comandes online",
+    "sub": "Els clients demanen a la taula o els cambrers des de qualsevol dispositiu: directe a cuina. Plànol de sala i comptes separats.",
+    "headlineAccent": "directes a cuina",
+    "demoLabel": "Demo: pantalla de comandes",
+    "tablet": {
+      "src": "/landing/feature-orders-modal.webp",
+      "alt": "Tauleta amb una comanda oberta: llista de plats i accions de la comanda (canviar taula, dividir compte, afegir descompte)"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurants"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafeteries"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bars"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotels"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzeries"
+    }
+  ],
+  "scan": {
+    "heading": "Configura el teu sistema de comandes",
+    "headingAccent": "en 5 minuts.",
+    "sub": "Escaneja una carta de paper o un PDF: la IA reconeix els plats, els preus i les categories. Connecta una tauleta a la sala i comença a rebre comandes de les taules.",
+    "cta": "Escanejar carta"
+  },
+  "subFeatures": [
+    {
+      "icon": "Map",
+      "eyebrow": "Llista i plànol de sala",
+      "heading": "Llista de comandes al costat del plànol de sala.",
+      "body": "Totes les comandes actives es mostren a la dreta: estat, total, hora i nombre d'articles. A l'esquerra hi ha el plànol de sala: les taules tenen colors segons el seu estat (buida, ocupada, requereix atenció). Si toques una taula s'obre la seva comanda; si toques una targeta s'obre la vista detallada. Sense canviar de pantalla.",
+      "bullets": [
+        "Plànol de sala: taules per colors segons l'estat de la comanda.",
+        "Llista de comandes al costat: total, hora i nombre d'articles.",
+        "Tocar una taula obre la comanda o en crea una de nova."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-map.webp",
+        "alt": "Tauleta a l'estació d'un cambrer: llista de comandes i plànol de sala amb taules per colors"
+      }
+    },
+    {
+      "icon": "ClipboardList",
+      "eyebrow": "Fitxa de comanda",
+      "heading": "La fitxa de comanda: estats, duplicar i eliminar amb un sol toc.",
+      "body": "Cada article té el seu propi estat (Pendent / A cuina / Llest / Servit): la cuina i el cambrer veuen el mateix en temps real. Si toques el punt, s'obre un menú d'accions: canviar l'estat, duplicar l'article amb els mateixos modificadors i opcions, o eliminar-lo. Tot passa dins la mateixa fitxa de la comanda.",
+      "bullets": [
+        "Estat per article: Pendent / A cuina / Llest / Servit.",
+        "Duplica un article amb un sol toc, incloent-hi les opcions.",
+        "Elimina un article directament des de la fitxa de la comanda."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-detail.webp",
+        "alt": "Tauleta amb una fitxa de comanda detallada: estats dels plats, duplicar i eliminar articles"
+      }
+    },
+    {
+      "icon": "Receipt",
+      "eyebrow": "Comptes separats",
+      "heading": "Comptes separats quan els clients paguen cadascú el seu.",
+      "body": "Els clients decideixen pagar per separat: marca els articles que van al nou compte; la resta es queden a l'actual. El sistema mostra els dos totals immediatament. Un toc a \"Dividir comanda\" i ja tens dues comandes independents amb els totals correctes, totes dues a la mateixa taula.",
+      "bullets": [
+        "Selecciona els articles per separar utilitzant les caselles.",
+        "Els totals del compte nou i del restant apareixen a l'instant.",
+        "Un sol toc i la comanda es divideix sense fer càlculs manuals."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-split.webp",
+        "alt": "Tauleta sobre la taula d'un restaurant: dividint el compte entre els clients"
+      }
+    },
+    {
+      "icon": "Smartphone",
+      "eyebrow": "Comandes des del mòbil",
+      "heading": "Afegir articles des del mòbil en tres passos.",
+      "body": "Els cambrers no estan lligats a un sol dispositiu: obren la pantalla de comandes al seu propi mòbil i afegeixen un article en tres passos (tria una categoria, tria un plat, tria les opcions: mida, punt de cocció, salses extres i ingredients). El preu es recalcula automàticament. A l'últim pas s'afegeix un comentari per a cuina.",
+      "bullets": [
+        "Tres passos: categoria → plat → opcions.",
+        "Opcions (mida, extres, ingredients) amb preu en un sol toc.",
+        "Un camp de comentaris a l'últim pas."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-mobile.webp",
+        "alt": "Quatre mòbils mostrant els passos per afegir un article a una comanda: categoria, plat, mida, comentari"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "El que pregunten els restauradors sobre la presa de comandes a IQ Rest. Si no trobes la teva pregunta, escriu-nos per WhatsApp.",
+    "items": [
+      {
+        "q": "Poden treballar diversos cambrers alhora des de diferents dispositius?",
+        "a": "Sí. Cada cambrer connecta el seu propi dispositiu i veu les mateixes taules, comandes i estats en temps real. Un canvi fet per un apareix a l'instant per a la resta: sense conflictes ni bloquejos."
+      },
+      {
+        "q": "Els cambrers poden utilitzar els seus propis dispositius?",
+        "a": "Sí. La pantalla de comandes funciona al navegador, no cal instal·lar res. Un mòbil o tauleta es connecta amb un codi de sis xifres des del panell d'administració, i l'accés es revoca amb un sol clic al final del torn."
+      },
+      {
+        "q": "Puc afegir opcions obligatòries als plats (mida, punt de cocció)?",
+        "a": "Sí. Un plat pot tenir qualsevol nombre de grups d'opcions: obligatòries (\"Mida\": Petita / Mitjana / Gran) i opcionals (\"Punt de cocció\": poc fet / al punt / molt fet). Les opcions afecten el preu. Amb un grup obligatori, el sistema demana que es triï una opció, evitant així errors."
+      },
+      {
+        "q": "Puc afegir comentaris i extres a un plat?",
+        "a": "Sí. L'últim pas té un camp de comentaris (\"sense ceba\", \"al·lèrgia als fruits secs\"). Els extres es configuren com a opcions amb preu (\"+ Salsa barbacoa\", \"+ Pa\"). Els comentaris apareixen a la pantalla de cuina, ressaltats en color."
+      },
+      {
+        "q": "Hi ha estadístiques de les comandes?",
+        "a": "Sí. La secció d'analítica mostra els ingressos per dia, el tiquet mitjà i els plats més venuts. Aquestes dades t'ajuden a planificar els torns i les compres."
+      },
+      {
+        "q": "Es poden dividir les comandes?",
+        "a": "Sí. Marca els articles que van a un compte nou: els dos totals es recalculen automàticament, sense fer càlculs a mà ni saltar entre seccions."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Comandes en 10 minuts. ",
+    "headingAccent": "14 dies d'accés complet.",
+    "sub": "Sense targeta, cancel·la quan vulguis. {count} restaurants ja prenen comandes amb nosaltres. Només necessites un correu."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Plànol de sala i llista de comandes",
+      "sub": "Les comandes actives al costat del plànol de sala: les taules tenen colors segons el seu estat, i amb un toc s'obre una comanda o se'n crea una de nova.",
+      "bullets": [
+        {
+          "icon": "Map",
+          "title": "Taules per estat",
+          "sub": "Buida, ocupada, requereix atenció: visible d'un cop d'ull"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Llista de comandes actives",
+          "sub": "Total, hora i nombre d'articles per a cada comanda"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Nova comanda des del plànol",
+          "sub": "En tocar una taula lliure s'obre directament la presa de comandes"
+        }
+      ]
+    },
+    {
+      "heading": "Un estat per a cada article",
+      "sub": "La cuina i el cambrer veuen el mateix: cada plat té el seu propi estat, des que es demana fins que se serveix.",
+      "bullets": [
+        {
+          "icon": "Timer",
+          "title": "Estats per plat",
+          "sub": "Pendent, A cuina, Llest, Servit: per article, no per comanda"
+        },
+        {
+          "icon": "Receipt",
+          "title": "Duplicar articles",
+          "sub": "Repeteix un plat amb les mateixes opcions amb un sol toc"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Edicions directes",
+          "sub": "Elimina un article directament des de la fitxa de la comanda"
+        }
+      ]
+    },
+    {
+      "heading": "Comptes separats",
+      "sub": "Els clients paguen per separat: marca els articles i passen a un compte nou. Els totals es recalculen a l'instant.",
+      "bullets": [
+        {
+          "icon": "Receipt",
+          "title": "Caselles per article",
+          "sub": "Tria els plats per al nou compte; la resta es queden a l'actual"
+        },
+        {
+          "icon": "ChartColumn",
+          "title": "Totals al moment",
+          "sub": "El compte nou i el restant es calculen automàticament"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Un sol toc",
+          "sub": "La comanda es divideix sense fer càlculs manuals ni necessitar calculadora"
+        }
+      ]
+    },
+    {
+      "heading": "Presa de comandes des del mòbil del cambrer",
+      "sub": "Els cambrers prenen nota des del seu propi dispositiu en tres passos: categoria, plat, opcions.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Qualsevol dispositiu",
+          "sub": "Un mòbil o tauleta amb navegador: no cal instal·lar res"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Opcions amb preu",
+          "sub": "Mida, extres i variants de plats amb preu en un sol toc"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Comentaris als plats",
+          "sub": "Les peticions dels clients s'afegeixen a l'últim pas: la cuina les veu de seguida"
+        }
+      ]
+    }
+  ]
+}

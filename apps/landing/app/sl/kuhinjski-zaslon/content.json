@@ -1,0 +1,206 @@
+{
+  "locale": "sl",
+  "slug": "kuhinjski-zaslon",
+  "trackPrefix": "l_kds",
+  "meta": {
+    "title": "Kuhinjski zaslon (KDS) za restavracije — Naročila na zaslonu kuharja | IQ Rest",
+    "description": "KDS kuhinjski zaslon za restavracije: naročila iz strežbe in QR menija gredo naravnost na zaslon kuharja. Stolpci po mizah, statusi V čakanju / V pripravi / Pripravljeno / Postreženo, filtri po postajah. Deluje na tablici ali telefonu.",
+    "canonical": "https://iq-rest.com/sl/kuhinjski-zaslon",
+    "ogLocale": "sl_SI",
+    "ogTitle": "Kuhinjski zaslon (KDS) — Naročila naravnost na zaslon kuharja",
+    "ogDescription": "Naročila iz strežbe na zaslonu kuharja. Stolpci po mizah, statusi in štoparica. En dotik spremeni status.",
+    "brandLine": "IQ Rest — Kuhinjski zaslon za restavracije"
+  },
+  "hero": {
+    "headline": "Kuhinjski zaslon (KDS):",
+    "cta": "Nastavi kuhinjski zaslon",
+    "sub": "Naročila takoj dosežejo kuhinjski zaslon: opombe, alergeni in štoparica. Sprememba statusa z enim dotikom.",
+    "headlineAccent": "naročila naravnost do kuharja",
+    "demoLabel": "Demo: kuhinjski zaslon",
+    "tablet": {
+      "src": "/landing/hero-card-kds.webp",
+      "alt": "Tablica s kuhinjskim zaslonom: naročila po mizah v stolpcih s statusi"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restavracije"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kavarne"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bari"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hoteli"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Picerije"
+    }
+  ],
+  "scan": {
+    "heading": "Nastavite kuhinjski zaslon",
+    "headingAccent": "v 5 minutah.",
+    "sub": "Skenirajte papirnati meni ali PDF — AI prepozna jedi, kategorije in alergene. Povežite tablico v kuhinji in začnite prejemati naročila.",
+    "cta": "Skeniraj meni"
+  },
+  "subFeatures": [
+    {
+      "icon": "LayoutGrid",
+      "eyebrow": "Nadzor in filtri",
+      "heading": "Več zaslonov po postajah: kuhinja in šank.",
+      "body": "Nastavite ločene tablice za toplo kuhinjo, šank ali slaščičarno — vsak zaslon prikazuje samo jedi, ki mu pripadajo. Filtri po statusu (V čakanju / V pripravi / Pripravljeno / Postreženo) in kategoriji preprečujejo zmedo: kuharji delajo samo s tem, kar pripada njihovi postaji.",
+      "bullets": [
+        "Več KDS zaslonov s filtri po kategorijah jedi.",
+        "Filter po statusu: samo v pripravi in pripravljeno.",
+        "Vsaka postaja vidi samo svoj tok naročil."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-filters.webp",
+        "alt": "Tablica na medeninastem stojalu na izdajnem pultu v kuhinji — KDS, filtriran po statusu jedi"
+      }
+    },
+    {
+      "icon": "Timer",
+      "eyebrow": "Kartice in štoparica",
+      "heading": "En dotik spremeni status. Opombe in alergeni so barvno izpostavljeni.",
+      "body": "Kartica jedi prikazuje izbrane opcije (brez čebule, dobro pečeno), opombe gostov, alergene in štoparico, ki teče od oddaje naročila. Dotik kartice premakne status: V čakanju → V pripravi → Pripravljeno → Postreženo. Seznam se samodejno razvršča po časovni prioriteti.",
+      "bullets": [
+        "Dotik kartice — status se takoj premakne.",
+        "Opcije, opombe in alergeni so barvno izpostavljeni.",
+        "Razvrščeno po prioriteti: jedi z najdaljšim čakanjem se pomaknejo na vrh."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-cards.webp",
+        "alt": "Tablica na medeninastem stojalu na šanku restavracije — KDS s karticami naročil po mizah"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Kaj gostince najpogosteje zanima o kuhinjskem zaslonu v IQ Rest. Če vašega vprašanja ni na seznamu — pišite nam na WhatsApp.",
+    "items": [
+      {
+        "q": "Kakšne statuse imajo jedi v kuhinji?",
+        "a": "Štirje statusi: V čakanju — naročilo je oddano in čaka; V pripravi — jed se pripravlja; Pripravljeno — pripravljeno za prevzem; Postreženo — dostavljeno gostu. Dotik kartice premakne jed v naslednji status, brez menijev ali potrjevanj."
+      },
+      {
+        "q": "Ali lahko nastavim več KDS zaslonov na različnih postajah v kuhinji?",
+        "a": "Da. Ena tablica na topli kuhinji, druga za šankom, tretja v slaščičarni — vsaka s svojim filtrom po kategorijah jedi. Vsi zasloni so sinhronizirani: status, spremenjen na enem, se posodobi na ostalih."
+      },
+      {
+        "q": "Na čem deluje KDS — ali potrebujem posebno tablico?",
+        "a": "KDS deluje v vsakem sodobnem brskalniku. Tablica na stojalu na izdajnem pultu ustreza veliki kuhinji; pametni telefon zadostuje za manjši lokal. Ni potrebna posebna strojna oprema ali namestitev: naprava se poveže s šestmestno kodo iz nadzorne plošče."
+      },
+      {
+        "q": "Od kod prihajajo naročila na kuhinjski zaslon?",
+        "a": "Iz vseh virov: od gosta, ki odda naročilo prek QR menija na mizi, ali od natakarja, ki ga sprejme na svoji napravi. Naročila samodejno dosežejo KDS, skupaj s številko mize. Brez ročnega prepisovanja iz blagajne."
+      },
+      {
+        "q": "Kaj prikazuje kartica naročila?",
+        "a": "Ime jedi, izbrane opcije (brez čebule, dobro pečeno), opombo gosta, alergene, status in štoparico, ki teče od oddaje naročila. Kartice se razvrščajo po prioriteti: dlje kot jed čaka, višje je v stolpcu."
+      },
+      {
+        "q": "Ali je mogoče kartice na zaslonu filtrirati?",
+        "a": "Da. Dva filtra: po statusu (na primer, samo V čakanju in V pripravi) in po kategoriji (pijače za šank, tople jedi za kuhinjo). Nastavitve se shranijo na napravo, tako da vsaka postaja dela s svojim naborom."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Kuhinja brez papirja v 10 minutah. ",
+    "headingAccent": "14 dni polnega dostopa.",
+    "sub": "Brez kreditne kartice, prekličite kadarkoli. Zaupa nam {count} restavracij. Potrebujete le e-pošto — in naročila pristanejo naravnost na kuhinjskem zaslonu."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Zasloni po postajah",
+      "sub": "Ločene tablice za toplo kuhinjo, šank in slaščičarno — vsak zaslon prikazuje samo svoje jedi.",
+      "bullets": [
+        {
+          "icon": "LayoutGrid",
+          "title": "Filter po kategorijah",
+          "sub": "Vsakemu zaslonu dodelite njegove kategorije menija"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Tok za vsako postajo",
+          "sub": "Kuhinja in šank delata vzporedno, ne da bi si bila v napoto"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Filter po statusu",
+          "sub": "Prikažite samo tisto, kar se pripravlja ali je pripravljeno za prevzem"
+        }
+      ]
+    },
+    {
+      "heading": "Statusi z enim dotikom",
+      "sub": "Dotik kartice premakne jed v naslednji status. Kuhinja in natakar vidita isto sliko.",
+      "bullets": [
+        {
+          "icon": "ClipboardList",
+          "title": "Status za vsako postavko",
+          "sub": "V pripravi, pripravljeno, postreženo — za vsako jed, ne za celotno naročilo"
+        },
+        {
+          "icon": "Timer",
+          "title": "Štoparica od trenutka naročila",
+          "sub": "Poglejte, kako dolgo jed čaka — tiste z najdaljšim čakanjem se pomaknejo na vrh"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "Alergeni in opombe",
+          "sub": "Opcije, opombe gostov in alergeni so barvno izpostavljeni"
+        }
+      ]
+    },
+    {
+      "heading": "Naročila pristanejo takoj",
+      "sub": "Naročilo gosta iz QR menija ali od natakarja se prikaže na zaslonu v trenutku oddaje, brez osveževanja strani.",
+      "bullets": [
+        {
+          "icon": "Rocket",
+          "title": "Na zaslonu takoj",
+          "sub": "Stalna povezava — kartica se prikaže v sekundi, ko je naročilo oddano"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Vsi viri v enem toku",
+          "sub": "Naročila gostov in natakarjev prispejo na en zaslon s številko mize"
+        },
+        {
+          "icon": "Map",
+          "title": "Številka mize na kartici",
+          "sub": "Kuhinja vidi, kam gre jed; natakar vidi, kje jo pričakujejo"
+        }
+      ]
+    },
+    {
+      "heading": "Povezano v nekaj minutah",
+      "sub": "Kuhinjski zaslon deluje v brskalniku na katerikoli tablici ali telefonu — poveže se s šestmestno kodo.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Tablica ali telefon",
+          "sub": "Brskalnik zadostuje — ni treba kupovati posebne opreme"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Koda za seznanjanje",
+          "sub": "Vnesite šestmestno kodo iz nadzorne plošče — naprava je povezana s kuhinjo"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Preklic dostopa",
+          "sub": "Izgubljena ali zamenjana tablica — odklopite jo iz nadzorne plošče z enim dotikom"
+        }
+      ]
+    }
+  ]
+}

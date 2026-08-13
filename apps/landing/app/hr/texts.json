@@ -1,0 +1,261 @@
+{
+  "htmlLang": "hr",
+  "htmlDir": "ltr",
+  "meta": {
+    "title": "Digitalni jelovnik, kuhinjski ekran i rezervacije — IQ Rest",
+    "description": "Vodite restoran iz jedne aplikacije: višejezični digitalni jelovnik, kuhinjski ekran i 0-24 rezervacije. Pokrenite u 5 minuta. 14 dana besplatno, bez kartice.",
+    "canonical": "https://iq-rest.com/hr",
+    "ogLocale": "hr_HR",
+    "ogTitle": "Digitalni jelovnik, kuhinjski ekran i rezervacije",
+    "ogDescription": "Vodite restoran iz jedne aplikacije: višejezični digitalni jelovnik, kuhinjski ekran i 0-24 rezervacije. Pokrenite u 5 minuta. 14 dana besplatno, bez kartice."
+  },
+  "jsonLd": {
+    "appName": "IQ Rest — Platforma za upravljanje restoranom"
+  },
+  "ctaText": "Isprobajte besplatno",
+  "homeCtaText": "Isprobajte besplatno",
+  "trust": [
+    {
+      "kind": "num",
+      "value": 35,
+      "label": "Jezika u jelovniku"
+    },
+    {
+      "kind": "text",
+      "value": "0-24",
+      "label": "Online rezervacije"
+    },
+    {
+      "kind": "num",
+      "value": 5,
+      "suffix": " min",
+      "label": "Za pokretanje"
+    },
+    {
+      "kind": "count",
+      "label": "Restorana uz nas"
+    }
+  ],
+  "demoText": "Otvori demo",
+  "microcopy": "14 dana besplatno · Bez kreditne kartice · Otkažite bilo kada",
+  "header": {
+    "navFeatures": "Značajke",
+    "navHow": "Kako radi",
+    "navPricing": "Cjenik",
+    "navFaq": "Česta pitanja",
+    "signIn": "Prijava",
+    "viewFeatures": "Pregled mogućnosti",
+    "cta": "Započnite besplatno",
+    "navProducts": "Mogućnosti",
+    "navGuide": "Vodič",
+    "navAbout": "O nama",
+    "menuFeaturesHeading": "Mogućnosti",
+    "menuInfoHeading": "Informacije"
+  },
+  "hero": {
+    "verticals": [
+      "Restorani",
+      "Kafići",
+      "Barovi",
+      "Hoteli",
+      "Pizzerije"
+    ],
+    "headline": "Digitalni jelovnik za vaš restoran.\nSpreman u 5 minuta.",
+    "sub": "Digitalni jelovnik za vaš restoran u 5 minuta. Sve je uključeno: jednostavan uređivač, AI prepoznavanje tiskanih jelovnika, QR kodovi za stolove i naručivanje bez provizije.",
+    "dynamicHeadlines": [
+      "0% provizije.",
+      "35 jezika uz AI.",
+      "Online naručivanje.",
+      "0-24 rezervacije.",
+      "Vrhunski dizajn."
+    ],
+    "painBullets": [
+      "0% provizije: svaka narudžba ide izravno restoranu.",
+      "AI prijevod na 35 jezika — turisti razumiju jelovnik i naručuju više.",
+      "0-24 rezervacije: gosti sami rezerviraju stolove, bez poziva tijekom gužve.",
+      "Fleksibilne cijene: promjene u jelovniku vidljive su odmah."
+    ],
+    "rating": "Više od 500 restorana u 30+ zemalja"
+  },
+  "founder": {
+    "eyebrow": "Izradili ugostitelji",
+    "quoteStart": "Supruga i ja vodili smo vlastiti kafić i znamo kako izgleda radni dan u ugostiteljstvu iznutra: zaprimanje narudžbi, rezervacije, rad u sali i kuhinji. Htjeli smo jedan alat — moderan, jednostavan za postavljanje i jasan na prvi pogled —",
+    "quoteAccent": "tako se rodila ideja za platformu koju sada gradimo za druge ugostitelje.",
+    "sign": "Bogdan Sokolov · osnivač, bivši vlasnik kafića",
+    "photoAlt": "Bogdan Sokolov, osnivač IQ Resta"
+  },
+  "pricing": {
+    "badge": "Bez provizija · Bez ugovora",
+    "heading": "Jedan paket.",
+    "headingAccent": "Sve uključeno.",
+    "sub": "QR jelovnik, zaprimanje narudžbi, AI prijevod, web stranica restorana i rezervacije. Jedno transparentno mjesečno plaćanje.",
+    "monthlyLabel": "Mjesečno",
+    "yearlyLabel": "Godišnje",
+    "saveBadge": "Uštedite 25%",
+    "perMonth": "mjesečno",
+    "billedAnnually": "Godišnja naplata: {total}",
+    "youSave": "Štedite {amount}",
+    "trust": {
+      "secure": "Sigurno plaćanje putem Stripea",
+      "noCommitment": "Bez obveze",
+      "quick": "Aktivacija u par minuta",
+      "restaurants": "Više od 500 restorana"
+    }
+  },
+  "faq": {
+    "eyebrow": "Imate još pitanja?",
+    "heading": "Česta",
+    "headingAccent": "pitanja",
+    "sub": "Što ugostitelji najčešće pitaju prije registracije. Ako ne nalazite odgovor — pošaljite nam poruku na WhatsApp, odgovaraju stvarni ljudi, a ne botovi.",
+    "whatsappCta": "Javite nam se na WhatsApp",
+    "whatsappPrefill": "Poštovani, imam pitanje o IQ Restu",
+    "items": [
+      {
+        "q": "Što uključuje probni rok i što se događa nakon njega?",
+        "a": "Tijekom 14 dana imate pristup svim mogućnostima platforme, bez potrebe za kreditnom karticom. Ako nakon 14 dana ne dodate način plaćanja, račun se automatski pauzira. Nikada vam ne naplaćujemo bez vašeg pristanka. Plaćanje možete dodati kasnije i nastaviti točno tamo gdje ste stali. Otkazivanje pretplate zahtijeva samo jedan klik."
+      },
+      {
+        "q": "Uzimate li proviziju na narudžbe?",
+        "a": "Ne, ne uzimamo postotak od narudžbi. Sve narudžbe s QR jelovnika idu izravno restoranu, bez naknada posrednika. Plaćate fiksnu mjesečnu naknadu — i ništa više."
+      },
+      {
+        "q": "Trebaju li gosti instalirati aplikaciju i trebaju li nam tehnička znanja?",
+        "a": "Gosti ne trebaju aplikaciju: jednostavno usmjere kameru telefona na QR kod i jelovnik se otvara u pregledniku. Restoranu također ne treba tehničko predznanje — administracija radi izravno u pregledniku na telefonu, tabletu ili laptopu. Sve se radi klikovima i povlačenjem, bez kodiranja."
+      },
+      {
+        "q": "Koliko brzo se primjenjuju promjene u jelovniku — cijene, nova jela?",
+        "a": "Odmah. Promjene napravljene s vašeg telefona gostima su vidljive u roku od nekoliko sekundi. Dodavanje novog jela zahtijeva par klikova: naziv, cijena, fotografija. Nema ponovnog tiskanja papirnatih jelovnika i ne treba vam dizajner."
+      },
+      {
+        "q": "Koliko je jezika podržano?",
+        "a": "Podržano je 35 jezika uz automatski AI prijevod. Jedan klik — i cijeli jelovnik je preveden. AI razumije kulinarski kontekst, pa nazivi i opisi jela zvuče prirodno na svakom jeziku. Turisti naručuju s više sigurnosti kada razumiju što je u jelu."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Spremni za 10 minuta. ",
+    "headingAccent": "14 dana punog pristupa.",
+    "sub": "Bez kartice, otkažite bilo kada. Vjeruje nam {count} restorana. Sve što trebate je e-mail adresa."
+  },
+  "featureHighlights": {
+    "heading": "Sve je uključeno",
+    "sub": "Mogućnosti koje pretvaraju goste u narudžbe — u svakom paketu, bez dodatnih troškova."
+  },
+  "scan": {
+    "heading": "Imate papirnati jelovnik ili PDF?",
+    "headingAccent": "AI ga digitalizira u 60 sekundi.",
+    "sub": "Učitajte fotografiju ili dokument — AI automatski prepoznaje kategorije, jela i cijene.",
+    "cta": "Skeniraj jelovnik →"
+  },
+  "pricingQuiz": {
+    "heading": "Složite svoj paket ",
+    "sub": "Počnite s jelovnikom — dodajte rezervacije, kuhinjski ekran i domenu kada god vam zatrebaju.",
+    "billingLabel": "Naplata:",
+    "monthly": "Mjesečno",
+    "yearly": "Godišnje",
+    "restaurantsLabel": "Restorani:",
+    "fewerAria": "Manje restorana",
+    "moreAria": "Više restorana",
+    "menuTitle": "Jelovnik i web stranica",
+    "menuHint": "Uvijek uključeno",
+    "reservationsTitle": "Sustav za rezervacije",
+    "reservationsHint": "Rezervacije stolova",
+    "kdsTitle": "Kuhinjski ekran",
+    "kdsHint": "Narudžbe na ekranu u kuhinji",
+    "domainTitle": "Domena",
+    "domainHint": "Vaša vlastita web adresa",
+    "perMonthSuffix": "/mj",
+    "perYearSuffix": "/god",
+    "perMonthLongSuffix": "/mjesečno",
+    "saveYearlyTemplate": "Uštedite {amount} godišnje uz godišnju naplatu",
+    "volumeDiscountTemplate": "{percent}% popusta",
+    "saveUpToHint": "Uštedite do 50% s 5+ restorana",
+    "billedYearly": "Naplaćuje se jednom godišnje",
+    "billedMonthly": "Naplaćuje se mjesečno",
+    "enterprisePre": "Trebate prilagođeni paket?",
+    "enterpriseCta": "Javite nam se",
+    "enterprisePost": "i složit ćemo ga za vas.",
+    "enterpriseWa": "Poštovani! Trebam prilagođeni paket za svoje restorane.",
+    "headingAccent": "za vaš restoran",
+    "multiplePre": "Trebate više restorana?",
+    "multipleCta": "Prikaži opcije",
+    "restaurantOne": "restoran",
+    "restaurantFew": "restorana",
+    "restaurantMany": "restorana",
+    "multipleChangePre": "Drugačiji broj restorana?",
+    "multipleChangeCta": "Promijeni"
+  },
+  "pricingCta": {
+    "heading": "Jednostavne, fleksibilne cijene",
+    "sub": "Plaćate samo one mogućnosti koje trebate — složite svoj paket u minuti.",
+    "fromTemplate": "od {price}/mj",
+    "button": "Složi moj paket"
+  },
+  "footer": {
+    "copyrightTemplate": "© {year} IQ Rest. Sva prava pridržana.",
+    "featuresHeading": "Mogućnosti",
+    "featureLinks": [
+      {
+        "href": "/hr/digitalni-jelovnik",
+        "label": "Digitalni jelovnik"
+      },
+      {
+        "href": "/hr/zaprimanje-narudzbi",
+        "label": "Zaprimanje narudžbi"
+      },
+      {
+        "href": "/hr/rezervacije-stolova",
+        "label": "Rezervacije"
+      },
+      {
+        "href": "/hr/kds-kuhinjski-ekran",
+        "label": "Kuhinjski ekran"
+      }
+    ],
+    "infoHeading": "Informacije",
+    "legalHeading": "Pravne informacije",
+    "currencyHeading": "Valuta"
+  },
+  "common": {
+    "close": "Zatvori",
+    "menu": "Izbornik",
+    "help": "Pomoć"
+  },
+  "auth": {
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "Unesite svoj e-mail",
+    "or": "ili",
+    "continueGoogle": "Nastavi s Googleom",
+    "continueApple": "Nastavi s Appleom",
+    "consent": {
+      "line": "Nastavkom prihvaćate <terms>Uvjete korištenja</terms>. Pogledajte kako postupamo s podacima u našim <privacy>Pravilima privatnosti</privacy>."
+    },
+    "signInTitle": "Dobrodošli natrag",
+    "signInSubtitle": "Unesite e-mail — poslat ćemo vam 6-znamenkasti kod za prijavu.",
+    "signInButton": "Prijava",
+    "registerTitle": "Izradite račun",
+    "registerSubtitle": "14 dana besplatno, bez kartice. Poslat ćemo vam kod za prijavu na e-mail — bez lozinki, bez obrazaca.",
+    "registerButton": "Izradi račun",
+    "switchSignIn": "Prijava",
+    "switchCreate": "Registracija",
+    "verifyTitle": "Provjerite svoj e-mail",
+    "verifySubtitle": "Poslali smo 6-znamenkasti kod na {email}.",
+    "verifyCodeLabel": "Kod za potvrdu",
+    "checkSpam": "Ne vidite e-mail? Provjerite mapu s neželjenom poštom (spam).",
+    "verifyButton": "Nastavi",
+    "resendCode": "Pošalji kod ponovno",
+    "resendSent": "Kod je poslan",
+    "changeEmail": "Koristi drugu e-mail adresu",
+    "metaSignIn": "Prijava",
+    "metaRegister": "Izradi račun",
+    "errors": {
+      "emailInvalid": "Unesite ispravnu e-mail adresu.",
+      "sendFailed": "Slanje koda nije uspjelo. Pokušajte ponovno.",
+      "verifyFailed": "Provjera koda nije uspjela. Pokušajte ponovno.",
+      "codeExpired": "Kod je istekao. Zatražite novi.",
+      "noCode": "Kod nije pronađen ili je istekao. Zatražite novi.",
+      "invalidCode": "Neispravan kod. Pokušajte ponovno.",
+      "tooManyAttempts": "Previše pokušaja. Pričekajte i pokušajte ponovno."
+    }
+  }
+}

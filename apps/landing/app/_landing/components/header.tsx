@@ -1,20 +1,20 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { usePathname } from "next/navigation";
-import { ChevronDown, Globe, HelpCircle, LogIn, Menu, X } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
+import { ChevronDown, HelpCircle, LogIn, Menu, X } from "lucide-react";
 import { LogoIcon } from "./logo-icon";
 import { LinkForward } from "./link-forward";
 import { usePrimaryCta } from "./onboarding/use-primary-cta";
-import { useOnboardingModal } from "./onboarding/onboarding-modal-provider";
 import { useLandingAuth } from "./onboarding/use-landing-auth";
-import { getCookieTexts } from "@/app/_landing/lib/cookie-texts";
-import { LanguageSwitcherModal } from "@/components/language-switcher/modal";
 import { dashboardUrl } from "@/lib/dashboard-url";
-import { LOCALE_SLUG_OVERRIDES } from "@/lib/locale-slug-overrides";
+import { LOCALE_SLUG_OVERRIDES, localizedHref, localizedFeatureLinks } from "@/lib/locale-slug-overrides";
 import { localeHome, localePath } from "@/lib/locale-paths";
 import { analytics } from "@/lib/analytics";
 import { featureKeyFromHref, featureLabel } from "@/lib/track-keys";
+import { helpHref as guideHrefFor } from "../help/registry";
+import { NARROW } from "./shell";
+import { useCommonTexts } from "../lib/landing-strings";
 import type { LandingTexts } from "../types";
 
 interface HeaderProps {
@@ -31,15 +31,8 @@ interface HeaderProps {
   /** `solid` (default): opaque sticky/fixed bar on a light background.
    *  `hero`: transparent, white, in-flow bar rendered over the hero image. */
   variant?: "solid" | "hero";
-  /** Help guide URL for this locale; when set, a "?" icon shows before the
-   *  language switcher. Computed server-side by the template so the client
-   *  bundle doesn't pull in every locale's help doc. */
-  helpHref?: string;
-  /** About page URL for this locale; the slug differs per locale, so the
-   *  template passes it in rather than the header guessing it. */
-  aboutHref?: string;
-  /** Inner wrapper classes — override to align the bar with a page that uses a
-   *  narrower content column than the default full-bleed one. */
+  /** Inner wrapper classes — defaults to the shared `Container` column
+   *  (`NARROW`), same box every page's `Content` uses. */
   containerClass?: string;
   /** Shorter bar with a smaller logo and nav — for the narrow-column home. */
   compact?: boolean;
@@ -61,9 +54,7 @@ export function LandingHeader({
   featureLinks,
   revealOnScroll = false,
   variant = "solid",
-  helpHref,
-  aboutHref,
-  containerClass = "w-full px-4 sm:px-6 lg:px-10 xl:px-14",
+  containerClass = NARROW,
   compact = false,
   navLayout = "flat",
 }: HeaderProps) {
@@ -73,6 +64,7 @@ export function LandingHeader({
   // always renders in its minimal form (CTA + burger, no nav/sign-in/globe).
   const minimal = !isHero && revealOnScroll;
 
+  const common = useCommonTexts();
   const [revealed, setRevealed] = useState(!revealOnScroll);
   useEffect(() => {
     if (!revealOnScroll) return;
@@ -82,11 +74,11 @@ export function LandingHeader({
     return () => window.removeEventListener("scroll", onScroll);
   }, [revealOnScroll]);
 
-  const cookieTexts = getCookieTexts(locale);
   const dashHref = `${dashboardUrl()}/${locale}/dashboard`;
   const cta = usePrimaryCta(texts.cta);
   const auth = useLandingAuth();
-  const modal = useOnboardingModal();
+  const router = useRouter();
+  const goToSignIn = () => router.push(`/${locale}/login`);
 
   const pathname = usePathname() || "";
   const homeHref = localeHome(locale);
@@ -95,7 +87,12 @@ export function LandingHeader({
   const anchor = (id: string) => (useLocal ? `#${id}` : `${homeHref}#${id}`);
   const pricingSlug = LOCALE_SLUG_OVERRIDES["/pricing"]?.[locale];
   const pricingHref = pricingSlug ? localePath(locale, pricingSlug) : anchor("pricing");
-  const hasFeatureLinks = !!featureLinks && featureLinks.length > 0;
+  // Feature-link hrefs come from the slug mapping (JSON carries labels only),
+  // so the nav never points at a stale /ru/… slug on non-ru locales.
+  const productLinks = featureLinks ? localizedFeatureLinks(locale, featureLinks) : undefined;
+  const hasFeatureLinks = !!productLinks && productLinks.length > 0;
+  const helpHref = guideHrefFor(locale);
+  const aboutHref = localizedHref("/about", locale);
 
   const normalizedPath = pathname.replace(/\/$/, "");
   const isLinkActive = (href: string) => normalizedPath === href.replace(/\/$/, "");
@@ -104,7 +101,6 @@ export function LandingHeader({
     : false;
 
   const [menuOpen, setMenuOpen] = useState(false);
-  const [langOpen, setLangOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
   const closeMenu = () => setMenuOpen(false);
 
@@ -149,12 +145,18 @@ export function LandingHeader({
     return () => window.removeEventListener("resize", measure);
   }, [grouped, productsOpen]);
 
-  // Close the burger dropdown on outside click / Escape.
+  // Close the burger dropdown on outside click / Escape. The grouped panel is
+  // a sibling of the bar (it hangs off the header like the desktop products
+  // panel), so the outside check has to consult both refs.
   const menuRef = useRef<HTMLDivElement>(null);
+  const mobilePanelRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (!menuOpen) return;
     const onDown = (e: PointerEvent) => {
-      if (menuRef.current && !menuRef.current.contains(e.target as Node)) setMenuOpen(false);
+      const t = e.target as Node;
+      if (menuRef.current?.contains(t)) return;
+      if (mobilePanelRef.current?.contains(t)) return;
+      setMenuOpen(false);
     };
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") setMenuOpen(false);
@@ -180,15 +182,24 @@ export function LandingHeader({
   // light fade under the pointer.
   const groupedNavClass = "inline-flex items-center transition-opacity hover:opacity-70";
 
-  const barBg = "bg-background/85 backdrop-blur";
+  // Backdrop-blur on desktop only: on iOS a blurred sticky element un-sticks
+  // during downward scroll (WebKit re-layouts it a frame behind the blur
+  // repaint) and only catches up the instant you scroll back up — so mobile
+  // keeps a solid bg and skips the per-frame blur repaint entirely.
+  const barBg = "bg-background lg:bg-background/85 lg:backdrop-blur-md";
 
   // The shell carries position/stacking only; the skin (tint, blur, hairline)
   // sits on an inner element so the products panel can be a sibling of it and
-  // run its own backdrop-filter.
+  // run its own backdrop-filter. `translateZ(0)` forces the bar onto its own
+  // compositor layer — on iOS Safari a plain `sticky` element can otherwise
+  // un-stick for a frame during downward scroll (WebKit repaints it a beat
+  // behind the rest of the page) and only catch up once you scroll back up.
   const shellClass = isHero
     ? "relative z-30 w-full"
-    : `${revealOnScroll ? "fixed" : "sticky"} top-0 inset-x-0 z-40 transition-transform duration-300 ${
-        revealed ? "translate-y-0" : "-translate-y-full"
+    : `${revealOnScroll ? "fixed" : "sticky"} top-0 inset-x-0 z-40${
+        revealOnScroll
+          ? ` transition-transform duration-300 ${revealed ? "translate-y-0" : "-translate-y-full"}`
+          : " [transform:translateZ(0)]"
       }`;
   const skinClass = isHero ? "" : `border-b border-border ${barBg}`;
 
@@ -247,33 +258,29 @@ export function LandingHeader({
                   {texts.navPricing}
                 </LinkForward>
 
-                {helpHref ? (
-                  <a
-                    href={helpHref}
-                    onClick={() => {
-                      analytics.track("Click", "Header nav: guide");
-                      analytics.flush();
-                    }}
-                    className={`self-stretch ${groupedNavClass}`}
-                  >
-                    {guideLabel}
-                  </a>
-                ) : null}
+                <a
+                  href={helpHref}
+                  onClick={() => {
+                    analytics.track("Click", "Header nav: guide");
+                    analytics.flush();
+                  }}
+                  className={`self-stretch ${groupedNavClass}`}
+                >
+                  {guideLabel}
+                </a>
 
-                {aboutHref && aboutLabel ? (
-                  <LinkForward
-                    href={aboutHref}
-                    trackName="Header nav: about"
-                    className={`self-stretch ${groupedNavClass}`}
-                  >
-                    {aboutLabel}
-                  </LinkForward>
-                ) : null}
+                <LinkForward
+                  href={aboutHref}
+                  trackName="Header nav: about"
+                  className={`self-stretch ${groupedNavClass}`}
+                >
+                  {aboutLabel}
+                </LinkForward>
               </nav>
             ) : (
             <nav className={`hidden lg:flex items-center font-semibold mr-auto ${compact ? "gap-5 text-sm ml-7" : "gap-7 text-base ml-8"}`}>
               {hasFeatureLinks
-                ? featureLinks!.map((link) => (
+                ? productLinks!.map((link) => (
                     <LinkForward
                       key={link.href}
                       href={link.href}
@@ -323,7 +330,7 @@ export function LandingHeader({
                     type="button"
                     onClick={() => {
                       analytics.track("Click", "Header sign in");
-                      modal.open("signin");
+                      goToSignIn();
                     }}
                     className={`hidden lg:inline-flex items-center text-sm font-semibold ${groupedNavClass}`}
                     >
@@ -360,7 +367,7 @@ export function LandingHeader({
                     aria-label={texts.signIn}
                     onClick={() => {
                       analytics.track("Click", "Header sign in");
-                      modal.open("signin");
+                      goToSignIn();
                     }}
                     className={`inline-flex items-center justify-center h-9 w-9 lg:w-auto lg:px-4 text-sm font-semibold rounded-lg transition-colors whitespace-nowrap ${iconBtn}`}
                   >
@@ -368,31 +375,18 @@ export function LandingHeader({
                     <span className="hidden lg:inline">{texts.signIn}</span>
                   </button>
                 )}
-                {helpHref ? (
-                  <a
-                    href={helpHref}
-                    aria-label="Help"
-                    onClick={() => {
-                      analytics.track("Click", "Header help");
-                      // Plain anchor — full document navigation, not a soft route change.
-                      analytics.flush();
-                    }}
-                    className={`inline-flex items-center justify-center h-9 w-9 rounded-lg transition-colors ${iconBtn}`}
-                  >
-                    <HelpCircle className="h-5 w-5" />
-                  </a>
-                ) : null}
-                <button
-                  type="button"
-                  aria-label={cookieTexts.languageSwitcher}
+                <a
+                  href={helpHref}
+                  aria-label={common.help}
                   onClick={() => {
-                    analytics.track("Click", "Header language switcher");
-                    setLangOpen(true);
+                    analytics.track("Click", "Header help");
+                    // Plain anchor — full document navigation, not a soft route change.
+                    analytics.flush();
                   }}
                   className={`inline-flex items-center justify-center h-9 w-9 rounded-lg transition-colors ${iconBtn}`}
                 >
-                  <Globe className="h-5 w-5" />
-                </button>
+                  <HelpCircle className="h-5 w-5" />
+                </a>
               </>
             )}
 
@@ -403,7 +397,7 @@ export function LandingHeader({
             <div className="relative lg:hidden" ref={menuRef}>
               <button
                 type="button"
-                aria-label="Menu"
+                aria-label={common.menu}
                 aria-expanded={menuOpen}
                 onClick={() => {
                   analytics.track("Click", `Header menu ${menuOpen ? "close" : "open"}`);
@@ -413,31 +407,31 @@ export function LandingHeader({
               >
                 {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
               </button>
-              {menuOpen ? (
+              {menuOpen && !grouped ? (
                 <div className="absolute right-0 top-full mt-2 min-w-[220px] bg-background text-foreground border border-border rounded-2xl shadow-xl p-2 flex flex-col z-50">
-                  {hasFeatureLinks
-                    ? featureLinks!.map((link) => (
-                        <LinkForward
-                          key={link.href}
-                          href={link.href}
-                          prefetch={false}
-                          trackName={`Mobile menu: ${featureLabel(featureKeyFromHref(link.href))}`}
-                          className="text-sm font-medium px-3 py-2 rounded-lg hover:bg-muted/50 transition-colors"
-                          onClick={closeMenu}
-                        >
-                          {link.label}
-                        </LinkForward>
-                      ))
-                    : (
+                  {hasFeatureLinks ? (
+                    productLinks!.map((link) => (
                       <LinkForward
-                        href={anchor("features")}
-                        trackName="Mobile menu: features"
+                        key={link.href}
+                        href={link.href}
+                        prefetch={false}
+                        trackName={`Mobile menu: ${featureLabel(featureKeyFromHref(link.href))}`}
                         className="text-sm font-medium px-3 py-2 rounded-lg hover:bg-muted/50 transition-colors"
                         onClick={closeMenu}
                       >
-                        {texts.navFeatures}
+                        {link.label}
                       </LinkForward>
-                    )}
+                    ))
+                  ) : (
+                    <LinkForward
+                      href={anchor("features")}
+                      trackName="Mobile menu: features"
+                      className="text-sm font-medium px-3 py-2 rounded-lg hover:bg-muted/50 transition-colors"
+                      onClick={closeMenu}
+                    >
+                      {texts.navFeatures}
+                    </LinkForward>
+                  )}
                   <LinkForward
                     href={pricingHref}
                     prefetch={false}
@@ -447,49 +441,6 @@ export function LandingHeader({
                   >
                     {texts.navPricing}
                   </LinkForward>
-                  {grouped && helpHref ? (
-                    <a
-                      href={helpHref}
-                      onClick={() => {
-                        analytics.track("Click", "Mobile menu: guide");
-                        analytics.flush();
-                        closeMenu();
-                      }}
-                      className="text-sm font-medium px-3 py-2 rounded-lg hover:bg-muted/50 transition-colors"
-                    >
-                      {guideLabel}
-                    </a>
-                  ) : null}
-                  {aboutHref && aboutLabel ? (
-                    <LinkForward
-                      href={aboutHref}
-                      prefetch={false}
-                      trackName="Mobile menu: about"
-                      className="text-sm font-medium px-3 py-2 rounded-lg hover:bg-muted/50 transition-colors"
-                      onClick={closeMenu}
-                    >
-                      {aboutLabel}
-                    </LinkForward>
-                  ) : null}
-                  {grouped ? (
-                    <button
-                      type="button"
-                      onClick={() => {
-                        closeMenu();
-                        if (auth.authenticated) {
-                          analytics.track("Click", "Mobile menu: dashboard");
-                          analytics.flush();
-                          window.location.href = dashHref;
-                          return;
-                        }
-                        analytics.track("Click", "Mobile menu: sign in");
-                        modal.open("signin");
-                      }}
-                      className="text-sm font-medium text-start px-3 py-2 rounded-lg hover:bg-muted/50 transition-colors"
-                    >
-                      {texts.signIn}
-                    </button>
-                  ) : null}
                 </div>
               ) : null}
             </div>
@@ -497,6 +448,95 @@ export function LandingHeader({
         </div>
       </div>
       </div>
+
+      {/* Mobile burger panel — same design language as the desktop products
+          panel below: hangs off the bar's bottom edge, same tint, no top
+          border, rounded only at the bottom, slides down from behind the bar.
+          Content is a flat link list split by two muted group headings. */}
+      {grouped ? (
+        <div
+          ref={mobilePanelRef}
+          className={`lg:hidden absolute right-4 sm:right-6 top-full flex flex-col min-w-[220px] py-3 rounded-b-xl border-x border-b border-border ${barBg} shadow-lg transition-all duration-200 ${
+            menuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none"
+          }`}
+        >
+          {hasFeatureLinks ? (
+            <>
+              {texts.menuFeaturesHeading ? (
+                <p className="px-5 pt-1 pb-1.5 text-xs font-semibold text-muted-foreground">
+                  {texts.menuFeaturesHeading}
+                </p>
+              ) : null}
+              {productLinks!.map((link) => (
+                <LinkForward
+                  key={link.href}
+                  href={link.href}
+                  prefetch={false}
+                  trackName={`Mobile menu: ${featureLabel(featureKeyFromHref(link.href))}`}
+                  className="px-5 py-2.5 text-sm font-semibold hover:bg-muted/50 transition-colors"
+                  onClick={closeMenu}
+                >
+                  {link.label}
+                </LinkForward>
+              ))}
+            </>
+          ) : null}
+
+          {texts.menuInfoHeading ? (
+            <p className="px-5 pt-3 pb-1.5 text-xs font-semibold text-muted-foreground">
+              {texts.menuInfoHeading}
+            </p>
+          ) : null}
+          <LinkForward
+            href={pricingHref}
+            prefetch={false}
+            trackName="Mobile menu: pricing"
+            className="px-5 py-2.5 text-sm font-semibold hover:bg-muted/50 transition-colors"
+            onClick={closeMenu}
+          >
+            {texts.navPricing}
+          </LinkForward>
+          <a
+            href={helpHref}
+            onClick={() => {
+              analytics.track("Click", "Mobile menu: guide");
+              analytics.flush();
+              closeMenu();
+            }}
+            className="px-5 py-2.5 text-sm font-semibold hover:bg-muted/50 transition-colors"
+          >
+            {guideLabel}
+          </a>
+          {aboutLabel ? (
+            <LinkForward
+              href={aboutHref}
+              prefetch={false}
+              trackName="Mobile menu: about"
+              className="px-5 py-2.5 text-sm font-semibold hover:bg-muted/50 transition-colors"
+              onClick={closeMenu}
+            >
+              {aboutLabel}
+            </LinkForward>
+          ) : null}
+          <button
+            type="button"
+            onClick={() => {
+              closeMenu();
+              if (auth.authenticated) {
+                analytics.track("Click", "Mobile menu: dashboard");
+                analytics.flush();
+                window.location.href = dashHref;
+                return;
+              }
+              analytics.track("Click", "Mobile menu: sign in");
+              goToSignIn();
+            }}
+            className="px-5 py-2.5 text-sm font-semibold text-start hover:bg-muted/50 transition-colors"
+          >
+            {texts.signIn}
+          </button>
+        </div>
+      ) : null}
 
       {/* Products panel — an outgrowth of the bar: it starts at the bar's bottom
           edge, wears the same tint/blur/hairline, has no top border and is
@@ -512,7 +552,7 @@ export function LandingHeader({
             productsOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none"
           }`}
         >
-          {featureLinks!.map((link) => (
+          {productLinks!.map((link) => (
             <LinkForward
               key={link.href}
               href={link.href}
@@ -526,15 +566,6 @@ export function LandingHeader({
           ))}
         </div>
       ) : null}
-
-      {grouped ? null : (
-        <LanguageSwitcherModal
-          open={langOpen}
-          onClose={() => setLangOpen(false)}
-          currentLocale={locale}
-          title={cookieTexts.languageSwitcher}
-        />
-      )}
     </header>
   );
 }

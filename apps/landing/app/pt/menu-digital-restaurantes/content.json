@@ -1,0 +1,332 @@
+{
+  "locale": "pt",
+  "slug": "menu-digital-restaurantes",
+  "trackPrefix": "l_digital",
+  "meta": {
+    "title": "Ementa digital para restaurante | IQ Rest",
+    "description": "Ementa digital para restaurante: carta online com fotografias, alergénios, tradução por IA e atualização de preços em tempo real. 14 dias grátis, sem cartão bancário.",
+    "canonical": "https://iq-rest.com/pt/menu-digital-restaurantes",
+    "ogLocale": "pt_PT",
+    "ogTitle": "Ementa digital para restaurante",
+    "ogDescription": "Versão online da ementa em papel, com fotografias, alergénios e tradução por IA. Atualização de preços em tempo real.",
+    "brandLine": "IQ Rest — Ementa digital para restaurante"
+  },
+  "hero": {
+    "headline": "Ementa digital e site",
+    "headlineAccent": "para o seu restaurante",
+    "cta": "Criar ementa digital",
+    "demoLabel": "Demo: a ementa vista pelo cliente",
+    "sub": "Arranque em 10 minutos: receba pedidos na mesa, atualize preços na hora e receba reservas diretas sem comissões.",
+    "phones": [
+      {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Telemóvel com a página inicial do site do restaurante: fotos, reservas e acesso à ementa online"
+      },
+      {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Telemóvel com a ficha de um prato: foto, preço e etiquetas de alergénios"
+      }
+    ]
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurantes"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafés"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bares"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotéis"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzarias"
+    }
+  ],
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Ementa em 10 minutos",
+      "sub": "Sem programadores nem configurações demoradas"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Suporte rápido",
+      "sub": "Ajudamos a configurar a ementa no chat em poucas horas"
+    },
+    {
+      "icon": "Globe",
+      "title": "A escolha de {count} estabelecimentos",
+      "sub": "Ementa digital e site para restaurantes em mais de 15 países"
+    },
+    {
+      "icon": "Palette",
+      "title": "Domínio e marca próprios",
+      "sub": "A ementa no seu endereço, não num construtor genérico"
+    }
+  ],
+  "scan": {
+    "heading": "Tem uma ementa em papel ou PDF?",
+    "headingAccent": "A IA digitaliza-a em 60 segundos.",
+    "sub": "Carregue uma foto ou um documento — a IA reconhece categorias, pratos e preços automaticamente.",
+    "cta": "Digitalizar ementa"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "Tradução por IA",
+      "heading": "Ementa em 35 idiomas",
+      "body": "Um QR — 35 idiomas. A IA traduz tendo em conta a gastronomia, por isso os pratos soam naturais. Os turistas pedem com mais confiança.",
+      "bullets": [
+        "35 idiomas incluídos na subscrição",
+        "IA culinária em vez do Google",
+        "Mudança de idioma com um toque"
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Dois clientes leem a mesma ementa digital em idiomas diferentes nos seus telemóveis"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Alergénios",
+      "heading": "Alergénios e dietas nos pratos",
+      "body": "Assinale glúten, lactose, frutos secos, vegano e sem glúten. O cliente filtra a ementa à sua medida e pede com tranquilidade.",
+      "bullets": [
+        "14 categorias de alergénios",
+        "Etiquetas vegan e gluten-free",
+        "Filtro da ementa por restrições"
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Cliente filtra a ementa por alergénios no telemóvel, o restaurador edita a lista de alergénios no tablet"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Design e marca",
+      "heading": "Ementa premium no seu domínio",
+      "body": "Vídeo de fundo na entrada, design próprio e página de contactos com mapa e redes sociais — no seu domínio, não num PDF.",
+      "bullets": [
+        "Vídeo de fundo e design premium",
+        "Domínio próprio com SSL",
+        "Contactos, mapa, redes sociais"
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Dois telemóveis numa mesa de café: ecrã principal da ementa com vídeo de fundo e página de contactos com mapa"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Pedidos",
+      "heading": "Pedidos online sem comissões",
+      "body": "O cliente pede a partir da ementa ou diretamente no WhatsApp — o pedido chega à sala ou à cozinha, 0% sobre a faturação.",
+      "bullets": [
+        "Pela ementa ou no WhatsApp",
+        "Para a sala ou a cozinha, 0%",
+        "Ativa-se nas definições"
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Dois telemóveis na mesa: carrinho com o pedido e confirmação de um pedido concluído com sucesso"
+      }
+    },
+    {
+      "icon": "CalendarCheck",
+      "eyebrow": "Reservas",
+      "heading": "Reserva de mesas 24/7",
+      "body": "Os clientes reservam a mesa sozinhos através da ementa ou de uma ligação; vê o calendário por mesas e confirma automática ou manualmente.",
+      "bullets": [
+        "O cliente reserva sozinho",
+        "Calendário de todas as mesas",
+        "Confirmação automática ou manual"
+      ]
+    },
+    {
+      "icon": "MonitorSmartphone",
+      "eyebrow": "Gestão",
+      "heading": "Faça a gestão de onde quiser",
+      "body": "O painel de administração funciona no navegador — telemóvel, tablet ou PC. Não é preciso instalar nada, arranque em minutos.",
+      "bullets": [
+        "Qualquer dispositivo, navegador",
+        "Nada para instalar",
+        "Arranque em minutos"
+      ]
+    }
+  ],
+  "faq": {
+    "sub": "O que os restauradores perguntam sobre a ementa digital da IQ Rest. Se a sua pergunta não está na lista, escreva-nos no WhatsApp.",
+    "items": [
+      {
+        "q": "São precisas competências técnicas ou experiência com CMS?",
+        "a": "Não são precisas competências especiais. Todas as ações no painel de gestão fazem-se em poucos toques — sem programação nem trabalho com código. Adicionar um prato leva alguns segundos: nome, preço, fotografia. A configuração completa da ementa cabe normalmente em 30 a 60 minutos."
+      },
+      {
+        "q": "O que é a ementa digital da IQ Rest?",
+        "a": "É a versão online da sua carta, acessível aos clientes por código QR ou ligação direta: fotografias dos pratos, preços, alergénios, tradução por IA para 35 idiomas e atualizações em tempo real. A ementa funciona nos nossos servidores — não é preciso instalar nem manter software, basta um navegador."
+      },
+      {
+        "q": "Os clientes precisam de aplicação ou de equipamento especial?",
+        "a": "O cliente aponta a câmara do telemóvel para o código QR e a ementa abre no navegador, sem instalação. O painel de gestão também funciona em qualquer navegador moderno: telemóvel, tablet ou portátil. Os códigos QR imprimem-se numa impressora de escritório comum."
+      },
+      {
+        "q": "É possível colocar a ementa num domínio próprio?",
+        "a": "Sim. A ementa liga-se ao seu domínio com certificado SSL — os clientes veem o endereço do restaurante, por exemplo menu.oseurestaurante.com. A configuração do domínio e do certificado fica a cargo do nosso suporte; de si só é precisa uma entrada DNS."
+      },
+      {
+        "q": "É possível gerir vários restaurantes numa só conta?",
+        "a": "Sim. Adicione estabelecimentos a uma única conta: cada um tem a sua ementa, design, códigos QR e estatísticas, e a mudança entre eles faz-se num clique. O número de estabelecimentos depende da sua subscrição."
+      },
+      {
+        "q": "É difícil configurar a ementa de raiz?",
+        "a": "Três passos: crie as categorias, adicione os pratos com preços e fotos, imprima os códigos QR para as mesas. Se tem uma ementa em papel ou PDF, carregue-a no sistema: a IA reconhece categorias, nomes e preços e preenche as fichas automaticamente. Uma ementa básica arranca em 5 minutos; a configuração completa depende do número de itens."
+      },
+      {
+        "q": "Que suporte está previsto?",
+        "a": "Respondemos no WhatsApp e por email em horário de trabalho. Ajudamos com a configuração inicial, a ligação do domínio e o design da ementa. Se precisa de uma demonstração ou de acompanhamento no arranque, escreva-nos."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Ementa online em 10 minutos. ",
+    "headingAccent": "14 dias de acesso total.",
+    "sub": "Não precisa de cartão, cancele a qualquer momento. {count} restaurantes confiam-nos as suas ementas e sites. Só precisa de um email."
+  },
+  "spotlights": [
+    {
+      "heading": "Ementa em 35 idiomas",
+      "sub": "O cliente abre a ementa na sua língua materna. A IA traduz nomes, descrições, categorias e opções dos pratos tendo em conta o contexto culinário.",
+      "bullets": [
+        {
+          "icon": "Globe",
+          "title": "35 idiomas na subscrição",
+          "sub": "Idiomas europeus e asiáticos incluídos — sem custo extra por cada idioma adicional"
+        },
+        {
+          "icon": "Timer",
+          "title": "Tradução ao guardar",
+          "sub": "Adicionou ou alterou um prato — as traduções para todos os idiomas da ementa ficam prontas de imediato"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Correções manuais protegidas",
+          "sub": "Uma tradução corrigida à mão fica fixada e a IA deixa de a reescrever"
+        }
+      ]
+    },
+    {
+      "heading": "Alergénios e dietas nos pratos",
+      "sub": "Assinale alergénios e etiquetas dietéticas na ficha do prato — o cliente vê-os na ementa e filtra os pratos segundo as suas restrições.",
+      "bullets": [
+        {
+          "icon": "WheatOff",
+          "title": "14 categorias de alergénios",
+          "sub": "Lista completa segundo o regulamento da UE: glúten, frutos secos, lactose, marisco e outros"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "13 etiquetas dietéticas",
+          "sub": "Vegan, vegetariano, sem glúten, halal, kosher, picante e outras etiquetas alimentares"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Filtro com um toque",
+          "sub": "O cliente escolhe as suas restrições e a ementa mostra apenas os pratos adequados"
+        }
+      ]
+    },
+    {
+      "heading": "Ementa premium no seu domínio",
+      "sub": "Foto ou vídeo de fundo na entrada, cor da marca e logótipo — a ementa parece o seu site, não um PDF, e funciona no seu domínio.",
+      "bullets": [
+        {
+          "icon": "Palette",
+          "title": "Design à medida da marca",
+          "sub": "Vídeo ou foto no ecrã principal, cor de destaque e logótipo — configura-se sem designer"
+        },
+        {
+          "icon": "Globe",
+          "title": "Domínio próprio com SSL",
+          "sub": "A ementa abre no seu endereço, com ligação segura"
+        },
+        {
+          "icon": "Map",
+          "title": "Contactos e mapa",
+          "sub": "Página com morada, horário, mapa e redes sociais — um verdadeiro site de restaurante"
+        }
+      ]
+    },
+    {
+      "heading": "Pedidos online sem comissões",
+      "sub": "O cliente faz o pedido a partir da mesa — aparece de imediato no painel e no ecrã da cozinha. A plataforma cobra 0% sobre a faturação.",
+      "bullets": [
+        {
+          "icon": "ShoppingCart",
+          "title": "Pela ementa ou no WhatsApp",
+          "sub": "Pedido dentro do sistema ou por mensagem para o seu WhatsApp — o modo escolhe-se nas definições"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Direto para a cozinha",
+          "sub": "O novo pedido aparece no ecrã da cozinha e no do empregado sem demora"
+        },
+        {
+          "icon": "Receipt",
+          "title": "0% de comissão",
+          "sub": "O pagamento fica entre si e o cliente — a plataforma não retém nada dos pedidos"
+        }
+      ]
+    },
+    {
+      "heading": "Reserva de mesas 24/7",
+      "sub": "O cliente reserva a mesa diretamente na ementa, a qualquer hora. O sistema confronta o pedido com o horário e as mesas livres.",
+      "bullets": [
+        {
+          "icon": "CalendarCheck",
+          "title": "Calendário por mesas",
+          "sub": "O sistema escolhe a mesa segundo o número de pessoas e mostra as reservas por dias e mesas"
+        },
+        {
+          "icon": "CalendarDays",
+          "title": "Automático ou manual",
+          "sub": "Confirme cada reserva pessoalmente ou ative a confirmação automática"
+        },
+        {
+          "icon": "Mail",
+          "title": "Emails para o cliente e para si",
+          "sub": "O cliente recebe a confirmação por email, os proprietários — uma notificação de cada nova reserva"
+        }
+      ]
+    },
+    {
+      "heading": "Faça a gestão de onde quiser",
+      "sub": "O painel funciona no navegador, no telemóvel, tablet e computador. As alterações chegam aos clientes de imediato.",
+      "bullets": [
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Qualquer dispositivo",
+          "sub": "Telemóvel, tablet ou PC — basta um navegador, sem instalação"
+        },
+        {
+          "icon": "Timer",
+          "title": "Alterações na hora",
+          "sub": "Preço, indisponibilidade ou ocultação de um prato aplicam-se de imediato, sem publicação nem espera"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Opções dos pratos",
+          "sub": "Tamanhos, extras e variantes com suplemento — o cliente monta o prato como quer"
+        }
+      ]
+    }
+  ],
+  "hideFeatureHeading": true
+}

@@ -1,0 +1,206 @@
+{
+  "locale": "it",
+  "slug": "prenotazione-tavoli",
+  "trackPrefix": "l_bookings",
+  "meta": {
+    "title": "Prenotazione dei tavoli 24/7 per ristoranti | IQ Rest",
+    "description": "Prenotazione dei tavoli 24/7 al ristorante: gli ospiti riservano i tavoli da soli tramite menù QR o sito. Calendario per tavoli, conferme automatiche e promemoria. Senza telefonate, nessun ospite perso. 14 giorni gratis.",
+    "canonical": "https://iq-rest.com/it/prenotazione-tavoli",
+    "ogLocale": "it_IT",
+    "ogTitle": "Prenotazione dei tavoli 24/7 — gli ospiti prenotano da soli",
+    "ogDescription": "Gli ospiti prenotano i tavoli tramite menù QR o sito. Calendario, conferme automatiche, promemoria. Nessun cliente perso.",
+    "brandLine": "IQ Rest — Prenotazione dei tavoli al ristorante"
+  },
+  "hero": {
+    "headline": "Prenotazioni 24/7,",
+    "cta": "Configura la prenotazione dei tavoli",
+    "sub": "Gli ospiti prenotano 24/7 tramite menù QR o link. Calendario per tavoli, conferme automatiche e promemoria.",
+    "headlineAccent": "senza telefonate",
+    "demoLabel": "Demo: calendario delle prenotazioni",
+    "tablet": {
+      "src": "/landing/hero-card-reservation.webp",
+      "alt": "Tablet con il calendario delle prenotazioni: vista mensile ed elenco delle prenotazioni in attesa di conferma"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Ristoranti"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Caffè"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bar"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotel"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerie"
+    }
+  ],
+  "scan": {
+    "heading": "Attiva la prenotazione dei tavoli",
+    "headingAccent": "in 5 minuti.",
+    "sub": "Collega il calendario, aggiungi i tavoli con foto e capienza — gli ospiti iniziano a prenotare lo stesso giorno.",
+    "cta": "Attiva le prenotazioni"
+  },
+  "subFeatures": [
+    {
+      "icon": "CalendarPlus",
+      "eyebrow": "Modulo di prenotazione",
+      "heading": "Gli ospiti prenotano da soli — per data, ora e numero di persone.",
+      "body": "L'ospite apre il menù QR o il link diretto, sceglie data, ora e numero di persone — e vede subito i tavoli liberi: con foto, descrizione (terrazza, vicino alla finestra, divano al bar) e capienza. La conferma viene inviata automaticamente via email e su WhatsApp.",
+      "bullets": [
+        "Scelta del tavolo per foto, descrizione e capienza.",
+        "Conferma automatica e promemoria un'ora prima della visita.",
+        "Modulo con il minimo dei campi: nome, telefono, numero di ospiti."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-form.webp",
+        "alt": "Un ospite prenota un tavolo al ristorante dal telefono: scelta di data, ora, numero di persone e tavolo"
+      }
+    },
+    {
+      "icon": "CalendarDays",
+      "eyebrow": "Calendario delle prenotazioni",
+      "heading": "Calendario per giorni e tavoli — tutto visibile in un secondo.",
+      "body": "Nel pannello di amministrazione c'è il calendario delle prenotazioni suddiviso per tavoli, giorni, settimane e mesi. Slot liberi, tavoli occupati, prenotazioni confermate e non confermate sono visualizzati su un'unica schermata. Funziona sul tablet in sala e sul laptop in ufficio.",
+      "bullets": [
+        "Vista per giorni, settimane e mesi.",
+        "Suddivisione per tavoli: chi, quando, quanti ospiti.",
+        "Spostamento, annullamento e conferma della prenotazione — con un tocco dal telefono."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-calendar.webp",
+        "alt": "Calendario delle prenotazioni nel pannello di amministrazione IQ Rest su due tablet: griglia giornaliera per tavoli e calendario mensile"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Le domande dei ristoratori sulla prenotazione dei tavoli in IQ Rest. Se la tua domanda non è nell'elenco, scrivici su WhatsApp.",
+    "items": [
+      {
+        "q": "Posso scegliere i giorni e gli orari in cui è disponibile la prenotazione?",
+        "a": "Sì. Nel pannello di gestione si configura il calendario per giorno della settimana: orari di ricezione delle prenotazioni e pausa tra pranzo e cena. La prenotazione si può anche disattivare temporaneamente del tutto — gli ospiti vedranno che la prenotazione online non è disponibile."
+      },
+      {
+        "q": "Si può caricare una foto per ogni tavolo?",
+        "a": "Sì. Ogni tavolo ha una foto, una capienza e una zona (terrazza, vicino alla finestra, bar). L'ospite vede esattamente quale tavolo sta riservando e fa una scelta consapevole."
+      },
+      {
+        "q": "Si può limitare il numero di ospiti per tavolo?",
+        "a": "Sì. Per ogni tavolo è impostata la capienza — il sistema propone agli ospiti solo i tavoli adatti e blocca la prenotazione di un tavolo da due per una compagnia di sei persone."
+      },
+      {
+        "q": "Quanto è difficile configurare le prenotazioni?",
+        "a": "Tre passaggi: aggiungi i tavoli con foto e capienza, attiva la modalità prenotazioni nelle impostazioni, pubblica il link o il codice QR. L'attivazione richiede 5–10 minuti."
+      },
+      {
+        "q": "Si può impostare la conferma automatica o manuale della prenotazione?",
+        "a": "Sì, la modalità si sceglie nelle impostazioni. Con quella automatica l'ospite riceve la conferma subito dopo l'invio del modulo. Con quella manuale la richiesta compare nel pannello con lo stato «in attesa di conferma» — il responsabile la conferma o la rifiuta. La modalità manuale è comoda quando i tavoli sono pochi."
+      },
+      {
+        "q": "Applicate una commissione su ogni prenotazione?",
+        "a": "Nessuna commissione: la prenotazione è inclusa nell'abbonamento — senza percentuali sugli ospiti, costi per slot o intermediari. Canone fisso e numero illimitato di prenotazioni."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Prenotazioni attive in 10 minuti. ",
+    "headingAccent": "14 giorni di accesso completo.",
+    "sub": "Nessuna carta richiesta, disdici quando vuoi. {count} ristoranti hanno alleggerito la reception. Serve solo l'email."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "L'ospite prenota da solo",
+      "sub": "Data, ora e numero di persone — dal menù QR o dal link diretto, a qualsiasi ora. Il sistema mostra solo gli slot disponibili.",
+      "bullets": [
+        {
+          "icon": "CalendarPlus",
+          "title": "Prenotazioni 24/7",
+          "sub": "L'ospite prenota di notte o nel weekend — senza telefonate né attese di risposta"
+        },
+        {
+          "icon": "Users",
+          "title": "Tavolo in base al numero di persone",
+          "sub": "Il sistema seleziona da solo il tavolo adatto per capienza"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Il minimo dei campi",
+          "sub": "Nome, telefono e numero di ospiti — il modulo si compila in mezzo minuto"
+        }
+      ]
+    },
+    {
+      "heading": "Calendario per giorni e tavoli",
+      "sub": "Tutte le prenotazioni in un unico calendario: si vede dove c'è posto, cosa è confermato e chi arriverà.",
+      "bullets": [
+        {
+          "icon": "CalendarDays",
+          "title": "Giorno, settimana, mese",
+          "sub": "Cambia la scala e pianifica in anticipo la disposizione dei posti"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Suddivisione per tavoli",
+          "sub": "Chi, quando e per quanti ospiti — per ogni tavolo"
+        },
+        {
+          "icon": "Smartphone",
+          "title": "Gestione dal telefono",
+          "sub": "Spostamento, annullamento e conferma della prenotazione con un solo tocco"
+        }
+      ]
+    },
+    {
+      "heading": "Orari e modalità",
+      "sub": "Imposta il calendario di ricezione delle prenotazioni per giorno della settimana, la durata dello slot e il metodo di conferma.",
+      "bullets": [
+        {
+          "icon": "Clock",
+          "title": "Orari per giorno",
+          "sub": "Orari distinti per ogni giorno della settimana, inclusa la pausa tra pranzo e cena"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Durata dello slot",
+          "sub": "Imposta l'intervallo di prenotazione in base al formato del locale"
+        },
+        {
+          "icon": "CalendarCheck",
+          "title": "Automatico o manuale",
+          "sub": "Conferma ogni prenotazione di persona o attiva la conferma automatica"
+        }
+      ]
+    },
+    {
+      "heading": "Notifiche senza lavoro manuale",
+      "sub": "Il sistema tiene aggiornati da solo l'ospite e il team — l'email e la schermata delle prenotazioni si aggiornano all'istante.",
+      "bullets": [
+        {
+          "icon": "Mail",
+          "title": "Email all'ospite",
+          "sub": "La conferma della prenotazione parte via email automaticamente"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Notifica al ristorante",
+          "sub": "I titolari ricevono un'email per ogni nuova prenotazione"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Schermata delle prenotazioni all'ingresso",
+          "sub": "Il tablet della hostess mostra le nuove prenotazioni in tempo reale"
+        }
+      ]
+    }
+  ]
+}

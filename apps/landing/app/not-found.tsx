@@ -4,7 +4,7 @@ import { LandingHeader } from "@/app/_landing/components/header";
 import { LandingFooter } from "@/app/_landing/components/footer";
 import { LandingI18nWrap } from "@/app/_landing/components/landing-i18n-wrap";
 import { PageTracker } from "@/app/_landing/components/page-tracker";
-import { NARROW, PAGE } from "@/app/_landing/components/shell";
+import { PAGE, Content } from "@/app/_landing/components/shell";
 import type { LandingTexts } from "@/app/_landing/types";
 import TEXTS_JSON from "./ru/texts.json";
 
@@ -46,36 +46,33 @@ export default async function NotFound() {
               locale={LOCALE}
               useLocalAnchors={false}
               featureLinks={TEXTS.footer.featureLinks}
-              containerClass={NARROW}
               compact
               navLayout="grouped"
             />
 
-            <section className="w-full px-5 py-20 sm:py-28">
-              <div className="max-w-2xl mx-auto text-center">
-                <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground mb-3">
-                  404
-                </p>
-                <h1 className="text-4xl sm:text-5xl font-medium tracking-tight mb-4">
-                  Page not found
-                </h1>
-                <p className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed">
-                  The page you were looking for doesn&apos;t exist or was moved.
-                </p>
-                <Link
-                  href="/"
-                  className="inline-flex h-11 px-6 items-center justify-center rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
-                >
-                  Go to homepage
-                </Link>
-              </div>
-            </section>
+            <Content>
+              <section className="py-20 sm:py-28">
+                <div className="max-w-2xl mx-auto text-center">
+                  <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground mb-3">
+                    404
+                  </p>
+                  <h1 className="text-4xl sm:text-5xl font-medium tracking-tight mb-4">
+                    Page not found
+                  </h1>
+                  <p className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed">
+                    The page you were looking for doesn&apos;t exist or was moved.
+                  </p>
+                  <Link
+                    href="/"
+                    className="inline-flex h-11 px-6 items-center justify-center rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
+                  >
+                    Go to homepage
+                  </Link>
+                </div>
+              </section>
+            </Content>
 
-            <footer className="w-full">
-              <div className={NARROW}>
-                <LandingFooter texts={TEXTS.footer} headerTexts={TEXTS.header} locale={LOCALE} />
-              </div>
-            </footer>
+            <LandingFooter texts={TEXTS.footer} headerTexts={TEXTS.header} locale={LOCALE} />
           </main>
         </LandingI18nWrap>
       </body>

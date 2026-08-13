@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "title": "Chi siamo — IQ Rest: l'azienda, i contatti e i dati legali",
+    "description": "Chi c'è dietro IQ Rest, come contattarci e i dati dell'operatore del servizio: email, WhatsApp, informazioni legali.",
+    "canonical": "https://iq-rest.com/it/chi-siamo",
+    "ogLocale": "it_IT",
+    "ogTitle": "Chi siamo — IQ Rest",
+    "ogDescription": "Chi c'è dietro IQ Rest, i contatti del supporto e i dati dell'operatore del servizio."
+  },
+  "heading": "Dal proprio locale",
+  "headingAccent": "a una piattaforma per ristoranti",
+  "story": {
+    "photo": {
+      "src": "/contacts.webp"
+    },
+    "paragraphs": [
+      "Oggi la piattaforma lavora ogni giorno in {count} locali — dalle caffetterie con cinque tavoli alle catene presenti in più città. I dati sono conservati su server in Germania e alle richieste di supporto rispondiamo personalmente."
+    ],
+    "sign": "Bogdan Sokolov"
+  },
+  "facts": [
+    {
+      "value": "2022",
+      "label": "anno di fondazione della piattaforma"
+    },
+    {
+      "value": "{count}",
+      "label": "locali lavorano con IQ Rest"
+    },
+    {
+      "value": "15",
+      "label": "paesi in cui abbiamo clienti"
+    }
+  ],
+  "waPrefill": "Salve, ho una domanda su IQ Rest",
+  "contactsHeading": "Come contattarci",
+  "contacts": [
+    {
+      "icon": "Mail",
+      "title": "Email",
+      "value": "support@iq-rest.com",
+      "href": "mailto:support@iq-rest.com",
+      "note": "Fatture, documenti, richieste sui dati."
+    },
+    {
+      "icon": "MessageCircle",
+      "title": "WhatsApp",
+      "value": "+998 94 866 37 43",
+      "wa": true,
+      "note": "Mostriamo una demo e aiutiamo con la configurazione."
+    },
+    {
+      "icon": "Clock",
+      "title": "Tempi di risposta",
+      "value": "Lun–Dom, 9:00–21:00 CET",
+      "note": "Rispondiamo entro poche ore."
+    }
+  ],
+  "legalHeading": "Dati dell'operatore",
+  "legal": {
+    "rows": [
+      {
+        "label": "Operatore del servizio",
+        "value": "Bogdan Sokolov"
+      },
+      {
+        "label": "Forma giuridica",
+        "value": "Autónomo (España)"
+      },
+      {
+        "label": "Codice fiscale (NIF)",
+        "value": "ESZ1894474S"
+      },
+      {
+        "label": "Indirizzo",
+        "value": "Calle Boca del Río 2, 33010 Oviedo, Asturias, España"
+      },
+      {
+        "label": "Dominio",
+        "value": "https://iq-rest.com"
+      },
+      {
+        "label": "Hosting dei dati",
+        "value": "Hetzner Online GmbH, Nuremberg, Germany"
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Avete conosciuto la nostra storia. ",
+    "headingAccent": "Scrivete la vostra — 14 giorni gratis.",
+    "sub": "Nessuna carta richiesta, disdetta in qualsiasi momento. Come {count} ristoranti, potete fidarvi di noi. Basta un'email."
+  }
+}

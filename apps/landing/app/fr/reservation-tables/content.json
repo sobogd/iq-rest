@@ -1,0 +1,206 @@
+{
+  "locale": "fr",
+  "slug": "reservation-tables",
+  "trackPrefix": "l_bookings",
+  "meta": {
+    "title": "Réservation de tables 24h/24 pour restaurant | IQ Rest",
+    "description": "Réservation de tables 24h/24 au restaurant : vos clients réservent eux-mêmes via le menu QR ou le site web. Calendrier par table, confirmations automatiques et rappels. Sans appels, aucun client perdu. 14 jours gratuits.",
+    "canonical": "https://iq-rest.com/fr/reservation-tables",
+    "ogLocale": "fr_FR",
+    "ogTitle": "Réservation de tables 24h/24 — vos clients réservent eux-mêmes",
+    "ogDescription": "Vos clients réservent leur table via le menu QR ou le site. Calendrier, confirmations automatiques, rappels. Aucun client perdu.",
+    "brandLine": "IQ Rest — Réservation de tables au restaurant"
+  },
+  "hero": {
+    "headline": "Réservation de tables 24h/24,",
+    "cta": "Configurer la réservation de tables",
+    "sub": "Vos clients réservent 24h/24 via le menu QR ou un lien. Calendrier par table, confirmations automatiques et rappels.",
+    "headlineAccent": "sans appels",
+    "demoLabel": "Démo : calendrier des réservations",
+    "tablet": {
+      "src": "/landing/hero-card-reservation.webp",
+      "alt": "Tablette avec le calendrier des réservations : vue mensuelle et liste des réservations en attente de confirmation"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurants"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafés"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bars"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hôtels"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerias"
+    }
+  ],
+  "scan": {
+    "heading": "Lancez la réservation de tables",
+    "headingAccent": "en 5 minutes.",
+    "sub": "Activez le calendrier, ajoutez vos tables avec photos et capacité — vos clients commencent à réserver le jour même.",
+    "cta": "Activer les réservations"
+  },
+  "subFeatures": [
+    {
+      "icon": "CalendarPlus",
+      "eyebrow": "Formulaire de réservation",
+      "heading": "Vos clients réservent eux-mêmes — par date, heure et nombre de couverts.",
+      "body": "Le client ouvre le menu QR ou un lien direct, choisit la date, l'heure et le nombre de personnes — et voit aussitôt les tables disponibles : avec photo, description (terrasse, près de la fenêtre, banquette au bar) et capacité. La confirmation part automatiquement par email et sur WhatsApp.",
+      "bullets": [
+        "Choix de la table d'après la photo, la description et la capacité.",
+        "Confirmation automatique et rappel une heure avant la visite.",
+        "Un minimum de champs dans le formulaire : nom, téléphone, nombre de convives."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-form.webp",
+        "alt": "Un client réserve une table au restaurant depuis son téléphone : choix de la date, de l'heure, du nombre de convives et de la table"
+      }
+    },
+    {
+      "icon": "CalendarDays",
+      "eyebrow": "Calendrier des réservations",
+      "heading": "Un calendrier par jour et par table — tout est visible en une seconde.",
+      "body": "Dans le panneau d'administration, le calendrier des réservations est ventilé par table, jour, semaine et mois. Créneaux libres, tables occupées, réservations confirmées et en attente s'affichent sur un seul écran. Fonctionne sur une tablette en salle comme sur un ordinateur portable au bureau.",
+      "bullets": [
+        "Affichage par jour, semaine et mois.",
+        "Ventilation par table : qui, quand, combien de convives.",
+        "Report, annulation et confirmation d'une réservation — en un appui depuis le téléphone."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-calendar.webp",
+        "alt": "Calendrier des réservations dans le panneau d'administration IQ Rest sur deux tablettes : grille journalière par table et calendrier mensuel"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Ce que les restaurateurs demandent sur la réservation de tables dans IQ Rest. Votre question n'est pas dans la liste ? Écrivez-nous sur WhatsApp.",
+    "items": [
+      {
+        "q": "Puis-je choisir les jours et les horaires où la réservation est disponible ?",
+        "a": "Oui. Dans le panneau de gestion, vous réglez un planning par jour de la semaine : les heures d'acceptation des réservations et la pause entre le déjeuner et le dîner. La réservation peut aussi être désactivée temporairement dans son ensemble — vos clients verront que la réservation en ligne n'est pas disponible."
+      },
+      {
+        "q": "Peut-on ajouter une photo pour chaque table ?",
+        "a": "Oui. Chaque table a sa photo, sa capacité et sa zone (terrasse, près de la fenêtre, bar). Le client voit exactement quelle table il réserve et fait un choix éclairé."
+      },
+      {
+        "q": "Peut-on limiter le nombre de convives par table ?",
+        "a": "Oui. Chaque table a une capacité définie — le système ne propose aux clients que des tables adaptées et bloque la réservation d'une table de deux pour un groupe de six."
+      },
+      {
+        "q": "Est-il compliqué de configurer les réservations ?",
+        "a": "Trois étapes : ajoutez vos tables avec photos et capacité, activez le mode réservation dans les réglages, placez le lien ou le QR code. Le lancement prend 5 à 10 minutes."
+      },
+      {
+        "q": "Peut-on choisir entre confirmation automatique et manuelle ?",
+        "a": "Oui, le mode se choisit dans les réglages. En automatique, le client reçoit la confirmation dès l'envoi du formulaire. En manuel, la demande apparaît dans le panneau avec le statut « en attente de confirmation » — le responsable la confirme ou la refuse. Le mode manuel est pratique quand le nombre de tables est limité."
+      },
+      {
+        "q": "Prenez-vous une commission sur chaque réservation ?",
+        "a": "Aucune commission : la réservation est incluse dans l'abonnement — sans pourcentage sur les clients, ni frais par créneau, ni intermédiaires. Un paiement fixe et un nombre illimité de réservations."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Les réservations en 10 minutes. ",
+    "headingAccent": "14 jours d'accès complet.",
+    "sub": "Sans carte bancaire, annulation à tout moment. {count} restaurants ont déjà soulagé leur accueil. Seul un email est nécessaire."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Le client réserve lui-même",
+      "sub": "Date, heure et nombre de convives — depuis le menu QR ou par lien direct, à toute heure. Le système n'affiche que les créneaux disponibles.",
+      "bullets": [
+        {
+          "icon": "CalendarPlus",
+          "title": "Réservation 24h/24",
+          "sub": "Le client réserve la nuit ou le week-end — sans appels ni attente de réponse"
+        },
+        {
+          "icon": "Users",
+          "title": "Une table selon le nombre de convives",
+          "sub": "Le système choisit lui-même la table adaptée selon la capacité"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Un minimum de champs",
+          "sub": "Nom, téléphone et nombre de convives — le formulaire se remplit en trente secondes"
+        }
+      ]
+    },
+    {
+      "heading": "Calendrier par jour et par table",
+      "sub": "Toutes les réservations dans un seul calendrier : vous voyez ce qui est libre, ce qui est confirmé et qui va venir.",
+      "bullets": [
+        {
+          "icon": "CalendarDays",
+          "title": "Jour, semaine, mois",
+          "sub": "Changez d'échelle et planifiez le placement à l'avance"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Ventilation par table",
+          "sub": "Qui, quand et pour combien de convives — pour chaque table"
+        },
+        {
+          "icon": "Smartphone",
+          "title": "Gestion depuis le téléphone",
+          "sub": "Report, annulation et confirmation d'une réservation — en un appui"
+        }
+      ]
+    },
+    {
+      "heading": "Horaires et modes",
+      "sub": "Réglez le planning d'acceptation des réservations par jour de la semaine, la durée des créneaux et le mode de confirmation.",
+      "bullets": [
+        {
+          "icon": "Clock",
+          "title": "Planning par jour",
+          "sub": "Des horaires distincts pour chaque jour de la semaine, y compris la pause entre le déjeuner et le dîner"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Durée des créneaux",
+          "sub": "Définissez le pas de réservation selon le format de votre établissement"
+        },
+        {
+          "icon": "CalendarCheck",
+          "title": "Auto ou manuel",
+          "sub": "Confirmez chaque réservation vous-même ou activez la confirmation automatique"
+        }
+      ]
+    },
+    {
+      "heading": "Des notifications sans travail manuel",
+      "sub": "Le système tient lui-même le client et l'équipe informés — les emails et l'écran des réservations se mettent à jour instantanément.",
+      "bullets": [
+        {
+          "icon": "Mail",
+          "title": "Email au client",
+          "sub": "La confirmation de réservation part automatiquement par email"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Notification au restaurant",
+          "sub": "Les propriétaires reçoivent un email pour chaque nouvelle réservation"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Écran des réservations à l'entrée",
+          "sub": "La tablette de l'hôtesse affiche les nouvelles réservations en temps réel"
+        }
+      ]
+    }
+  ]
+}

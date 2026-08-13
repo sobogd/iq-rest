@@ -1,0 +1,261 @@
+{
+  "htmlLang": "nl",
+  "htmlDir": "ltr",
+  "meta": {
+    "title": "Digitaal menu, keukenscherm en reserveringen — IQ Rest",
+    "description": "Run je restaurant vanuit één app: meertalig digitaal menu, keukenscherm en 24/7 reserveringen. Live in 5 minuten. 14 dagen gratis, geen creditcard nodig.",
+    "canonical": "https://iq-rest.com/nl",
+    "ogLocale": "nl_NL",
+    "ogTitle": "Digitaal menu, keukenscherm en reserveringen",
+    "ogDescription": "Run je restaurant vanuit één app: meertalig digitaal menu, keukenscherm en 24/7 reserveringen. Live in 5 minuten. 14 dagen gratis, geen creditcard nodig."
+  },
+  "jsonLd": {
+    "appName": "IQ Rest — Platform voor restaurantbeheer"
+  },
+  "ctaText": "Gratis proberen",
+  "homeCtaText": "Gratis proberen",
+  "trust": [
+    {
+      "kind": "num",
+      "value": 35,
+      "label": "Menutalen"
+    },
+    {
+      "kind": "text",
+      "value": "24/7",
+      "label": "Online reserveringen"
+    },
+    {
+      "kind": "num",
+      "value": 5,
+      "suffix": " min",
+      "label": "Om live te gaan"
+    },
+    {
+      "kind": "count",
+      "label": "Restaurants die ons gebruiken"
+    }
+  ],
+  "demoText": "Demo bekijken",
+  "microcopy": "14 dagen gratis · Geen creditcard · Altijd opzegbaar",
+  "header": {
+    "navFeatures": "Functies",
+    "navHow": "Hoe het werkt",
+    "navPricing": "Prijzen",
+    "navFaq": "FAQ",
+    "signIn": "Inloggen",
+    "viewFeatures": "Functies bekijken",
+    "cta": "Gratis beginnen",
+    "navProducts": "Functies",
+    "navGuide": "Gids",
+    "navAbout": "Over ons",
+    "menuFeaturesHeading": "Functies",
+    "menuInfoHeading": "Informatie"
+  },
+  "hero": {
+    "verticals": [
+      "Restaurants",
+      "Cafés",
+      "Bars",
+      "Hotels",
+      "Pizzeria's"
+    ],
+    "headline": "Digitaal menu voor je restaurant.\nLive in 5 minuten.",
+    "sub": "Een digitaal menu voor je restaurant in 5 minuten. Alles inbegrepen: makkelijk te beheren, AI-herkenning van geprinte menu's, QR-codes voor op tafel en bestellen zonder commissie.",
+    "dynamicHeadlines": [
+      "0% commissie.",
+      "35 talen met AI.",
+      "Online bestellen.",
+      "24/7 reserveringen.",
+      "Premium design."
+    ],
+    "painBullets": [
+      "0% commissie: elke bestelling gaat direct naar het restaurant.",
+      "AI-vertaling in 35 talen — toeristen begrijpen het menu en bestellen meer.",
+      "24/7 reserveringen: gasten reserveren zelf een tafel, geen telefoontjes tijdens de spits.",
+      "Flexibele prijzen: aanpassingen in het menu zijn direct zichtbaar."
+    ],
+    "rating": "Meer dan 500 restaurants in 30+ landen"
+  },
+  "founder": {
+    "eyebrow": "Gebouwd door horecaondernemers",
+    "quoteStart": "Mijn vrouw en ik runden ons eigen café en kennen de dagelijkse praktijk van binnenuit: bestellingen opnemen, reserveringen, de bediening en de keuken. We wilden één systeem — modern, makkelijk in te stellen en in één oogopslag duidelijk —",
+    "quoteAccent": "zo ontstond het idee voor het platform dat we nu voor andere restauranthouders bouwen.",
+    "sign": "Bogdan Sokolov · oprichter, voormalig café-eigenaar",
+    "photoAlt": "Bogdan Sokolov, oprichter van IQ Rest"
+  },
+  "pricing": {
+    "badge": "Geen commissies · Geen contracten",
+    "heading": "Eén pakket.",
+    "headingAccent": "Alles inbegrepen.",
+    "sub": "QR-menu, bestellingen opnemen, AI-vertaling, restaurantwebsite en reserveringen. Eén duidelijk maandelijks bedrag.",
+    "monthlyLabel": "Maandelijks",
+    "yearlyLabel": "Jaarlijks",
+    "saveBadge": "Bespaar 25%",
+    "perMonth": "per maand",
+    "billedAnnually": "Jaarlijks gefactureerd: {total}",
+    "youSave": "Je bespaart {amount}",
+    "trust": {
+      "secure": "Veilige betaling via Stripe",
+      "noCommitment": "Nergens aan vast",
+      "quick": "Binnen enkele minuten actief",
+      "restaurants": "Meer dan 500 restaurants"
+    }
+  },
+  "faq": {
+    "eyebrow": "Nog vragen?",
+    "heading": "Veelgestelde",
+    "headingAccent": "vragen",
+    "sub": "Wat restauranthouders het vaakst vragen voordat ze zich aanmelden. Staat je vraag er niet tussen, stuur ons dan een bericht via WhatsApp. Je krijgt antwoord van een echt persoon, niet van een bot.",
+    "whatsappCta": "Stuur ons een bericht via WhatsApp",
+    "whatsappPrefill": "Hallo, ik heb een vraag over IQ Rest",
+    "items": [
+      {
+        "q": "Wat houdt de proefperiode in en wat gebeurt er daarna?",
+        "a": "Je krijgt 14 dagen toegang tot alle functies van het platform, zonder dat je een creditcard nodig hebt. Als je na 14 dagen geen betaalmethode toevoegt, wordt het account automatisch gepauzeerd. We brengen nooit kosten in rekening zonder jouw toestemming. Je kunt later een betaalmethode toevoegen en direct verdergaan waar je gebleven was. Een abonnement opzeggen kan met één klik."
+      },
+      {
+        "q": "Houden jullie een commissie in op bestellingen?",
+        "a": "Nee, we vragen geen percentage per bestelling. Alle bestellingen via het QR-menu gaan direct naar het restaurant, zonder extra kosten van tussenpartijen. Je betaalt een vast bedrag per maand — en verder niets."
+      },
+      {
+        "q": "Moeten gasten een app installeren en hebben we technische kennis nodig?",
+        "a": "Gasten hebben geen app nodig: ze scannen de QR-code met hun camera en het menu opent in de browser. Het restaurant heeft ook geen technische kennis nodig — het dashboard werkt gewoon in de browser op een telefoon, tablet of laptop. Alles werkt met tikken en slepen, zonder code."
+      },
+      {
+        "q": "Hoe snel zijn aanpassingen in het menu zichtbaar — zoals prijzen of nieuwe gerechten?",
+        "a": "Direct. Aanpassingen die je op je telefoon doet, zijn binnen enkele seconden zichtbaar voor gasten. Een nieuw gerecht toevoegen kost maar een paar tikken: naam, prijs, foto. Je hoeft geen papieren menu's meer te printen en hebt geen ontwerper nodig."
+      },
+      {
+        "q": "Hoeveel talen worden ondersteund?",
+        "a": "Er worden 35 talen ondersteund met automatische AI-vertaling. Eén druk op de knop en het hele menu is vertaald. De AI begrijpt de culinaire context, zodat namen van gerechten en beschrijvingen in elke taal natuurlijk klinken. Toeristen bestellen sneller als ze precies begrijpen wat er in een gerecht zit."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Live in 10 minuten. ",
+    "headingAccent": "14 dagen volledige toegang.",
+    "sub": "Geen creditcard nodig, altijd opzegbaar. Gebruikt door {count} restaurants. Je hebt alleen een e-mailadres nodig."
+  },
+  "featureHighlights": {
+    "heading": "Alles inbegrepen",
+    "sub": "Functies die gasten omzetten in bestellingen — in elk pakket, zonder extra kosten."
+  },
+  "scan": {
+    "heading": "Heb je een papieren menu of een PDF?",
+    "headingAccent": "AI digitaliseert het in 60 seconden.",
+    "sub": "Upload een foto of document — AI herkent automatisch categorieën, gerechten en prijzen.",
+    "cta": "Menu scannen →"
+  },
+  "pricingQuiz": {
+    "heading": "Stel je pakket samen ",
+    "sub": "Begin met het menu — voeg reserveringen, het keukenscherm en een domeinnaam toe wanneer je ze nodig hebt.",
+    "billingLabel": "Facturering:",
+    "monthly": "Maandelijks",
+    "yearly": "Jaarlijks",
+    "restaurantsLabel": "Restaurants:",
+    "fewerAria": "Minder restaurants",
+    "moreAria": "Meer restaurants",
+    "menuTitle": "Menu en website",
+    "menuHint": "Altijd inbegrepen",
+    "reservationsTitle": "Reserveringssysteem",
+    "reservationsHint": "Tafelreserveringen",
+    "kdsTitle": "Keukenscherm",
+    "kdsHint": "Bestellingen op het scherm in de keuken",
+    "domainTitle": "Domeinnaam",
+    "domainHint": "Je eigen webadres",
+    "perMonthSuffix": "/mnd",
+    "perYearSuffix": "/jr",
+    "perMonthLongSuffix": "/maand",
+    "saveYearlyTemplate": "Bespaar {amount} per jaar met jaarlijkse facturering",
+    "volumeDiscountTemplate": "{percent}% korting",
+    "saveUpToHint": "Bespaar tot 50% bij 5+ restaurants",
+    "billedYearly": "Jaarlijks gefactureerd",
+    "billedMonthly": "Maandelijks gefactureerd",
+    "enterprisePre": "Een pakket op maat nodig?",
+    "enterpriseCta": "Stuur ons een bericht",
+    "enterprisePost": "en we maken een passend voorstel.",
+    "enterpriseWa": "Hallo! Ik heb een pakket op maat nodig voor mijn restaurants.",
+    "headingAccent": "voor je restaurant",
+    "multiplePre": "Meer restaurants nodig?",
+    "multipleCta": "Bekijk de opties",
+    "restaurantOne": "restaurant",
+    "restaurantFew": "restaurants",
+    "restaurantMany": "restaurants",
+    "multipleChangePre": "Ander aantal restaurants?",
+    "multipleChangeCta": "Wijzigen"
+  },
+  "pricingCta": {
+    "heading": "Eenvoudige, flexibele prijzen",
+    "sub": "Betaal alleen voor de functies die je nodig hebt — stel je pakket samen in één minuut.",
+    "fromTemplate": "vanaf {price}/mnd",
+    "button": "Mijn pakket samenstellen"
+  },
+  "footer": {
+    "copyrightTemplate": "© {year} IQ Rest. Alle rechten voorbehouden.",
+    "featuresHeading": "Functies",
+    "featureLinks": [
+      {
+        "href": "/ru/tsifrovoe-menyu",
+        "label": "Digitaal menu"
+      },
+      {
+        "href": "/ru/priem-zakazov-restoran",
+        "label": "Bestellingen opnemen"
+      },
+      {
+        "href": "/ru/bronirovanie-stolov",
+        "label": "Reserveringen"
+      },
+      {
+        "href": "/ru/kds-kuhonnyy-displey",
+        "label": "Keukenscherm"
+      }
+    ],
+    "infoHeading": "Informatie",
+    "legalHeading": "Juridisch",
+    "currencyHeading": "Valuta"
+  },
+  "common": {
+    "close": "Sluiten",
+    "menu": "Menu",
+    "help": "Help"
+  },
+  "auth": {
+    "emailLabel": "E-mailadres",
+    "emailPlaceholder": "Vul je e-mailadres in",
+    "or": "of",
+    "continueGoogle": "Doorgaan met Google",
+    "continueApple": "Doorgaan met Apple",
+    "consent": {
+      "line": "Door door te gaan, ga je akkoord met de <terms>Algemene Voorwaarden</terms>. Bekijk hoe we met gegevens omgaan in ons <privacy>Privacybeleid</privacy>."
+    },
+    "signInTitle": "Welkom terug",
+    "signInSubtitle": "Vul je e-mailadres in — we sturen je een 6-cijferige inlogcode.",
+    "signInButton": "Inloggen",
+    "registerTitle": "Maak je account aan",
+    "registerSubtitle": "14 dagen gratis, geen creditcard nodig. We sturen je een inlogcode per e-mail — geen wachtwoord, geen formulieren.",
+    "registerButton": "Account aanmaken",
+    "switchSignIn": "Inloggen",
+    "switchCreate": "Aanmelden",
+    "verifyTitle": "Check je e-mail",
+    "verifySubtitle": "We hebben een 6-cijferige code naar {email} gestuurd.",
+    "verifyCodeLabel": "Verificatiecode",
+    "checkSpam": "Zie je de e-mail niet? Check je spamfolder.",
+    "verifyButton": "Doorgaan",
+    "resendCode": "Code opnieuw sturen",
+    "resendSent": "Code verstuurd",
+    "changeEmail": "Ander e-mailadres gebruiken",
+    "metaSignIn": "Inloggen",
+    "metaRegister": "Account aanmaken",
+    "errors": {
+      "emailInvalid": "Vul een geldig e-mailadres in.",
+      "sendFailed": "Code versturen mislukt. Probeer het opnieuw.",
+      "verifyFailed": "Code verifiëren mislukt. Probeer het opnieuw.",
+      "codeExpired": "De code is verlopen. Vraag een nieuwe aan.",
+      "noCode": "Code niet gevonden of verlopen. Vraag een nieuwe aan.",
+      "invalidCode": "Ongeldige code. Probeer het opnieuw.",
+      "tooManyAttempts": "Te veel pogingen. Wacht even en probeer het opnieuw."
+    }
+  }
+}

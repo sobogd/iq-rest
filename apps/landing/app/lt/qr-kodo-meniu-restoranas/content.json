@@ -1,0 +1,151 @@
+{
+  "locale": "lt",
+  "slug": "qr-kodo-meniu-restoranas",
+  "trackPrefix": "l_lt_qr",
+  "featureHeading": {
+    "heading": "Ne tik QR kodas",
+    "sub": "Kuo vienas nuskenavimas tampa jūsų svečiams ir jūsų salei."
+  },
+  "meta": {
+    "title": "QR meniu restoranams | IQ Rest",
+    "description": "QR meniu restoranams: svečiai nuskenuoja QR kodą ant staliuko, atidaro meniu naršyklėje ir užsisako savo kalba. 14 dienų nemokamai, kortelės nereikia.",
+    "canonical": "https://iq-rest.com/lt/qr-kodo-meniu-restoranas",
+    "ogLocale": "lt_LT",
+    "ogTitle": "QR meniu restoranams",
+    "ogDescription": "QR kodas ant staliuko, meniu telefone – nuotraukos, alergenai, 35 kalbos ir atnaujinimai realiu laiku.",
+    "brandLine": "IQ Rest — QR meniu restoranams"
+  },
+  "hero": {
+    "headline": "QR meniu:\nnuskenuokite ir užsisakykite",
+    "cta": "Sukurti QR meniu",
+    "sub": "Svečiai nuskenuoja QR kodą ant staliuko, naršo nuotraukas ir alergenus 35 kalbomis ir užsisako – jokių programėlių nereikia."
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restoranai"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kavinės"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barai"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Viešbučiai"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Picerijos"
+    }
+  ],
+  "scan": {
+    "heading": "Jau turite popierinį meniu ar PDF?",
+    "headingAccent": "AI paverčia jį QR meniu per 60 sekundžių.",
+    "sub": "Įkelkite meniu nuotrauką ar PDF – AI atpažįsta kategorijas, patiekalus ir kainas bei perkelia juos tiesiai į jūsų QR meniu.",
+    "cta": "Sukurti QR meniu"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "Vienas QR, 35 kalbos",
+      "heading": "Vienas QR kodas, meniu 35 kalbomis.",
+      "body": "Svečiai nuskenuoja QR kodą ir pasirenka savo kalbą: vertimą atlieka AI, turintis kulinarinį pajautimą, o ne paprastas vertėjas. Daugiau jokių atskirų turistinių meniu ar išmėtytų lapų ant staliuko.",
+      "bullets": [
+        "Vienas atspausdintas QR apima 35 kalbas, įskaičiuotas į prenumeratą.",
+        "AI kalba maisto kalba – patiekalų pavadinimai skamba natūraliai kiekviena kalba.",
+        "Svečiai keičia kalbas pačiame meniu, nereikia iš naujo skenuoti QR kodo."
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Du svečiai nuskenuoja tą patį QR kodą nuo staliuko ir skaito meniu skirtingomis kalbomis"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Alergenai QR meniu",
+      "heading": "Alergenai ir mitybos žymos QR meniu viduje.",
+      "body": "Kiekvienas patiekalas meniu už QR kodo gali turėti žymas: gliutenas, laktozė, riešutai, jūros gėrybės, veganiški ir begliuteniai pasirinkimai. Svečiai filtruoja patiekalus pagal savo apribojimus iš savo telefono, neklausinėdami personalo.",
+      "bullets": [
+        "14 alergenų kategorijų patiekalo lygyje.",
+        "Veganiškos, vegetariškos ir begliutenės žymos vienu paspaudimu skydelyje.",
+        "Svečiai filtruoja QR meniu pagal savo apribojimus."
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Svečias filtruoja QR meniu pagal alergenus telefone, kol savininkas redaguoja sąrašą planšetėje"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Daugiau nei tik QR",
+      "heading": "QR meniu, atrodantis kaip restorano svetainė.",
+      "body": "Nuskenavę kodą, svečiai nepatenka į paprastą PDF: jie mato pasisveikinimo ekraną su vaizdo įrašu ar įspūdinga nuotrauka, vietos aprašymu ir kontaktų puslapiu su žemėlapiu, telefonų numeriais ir socialinėmis nuorodomis. QR tampa jūsų restorano durimis internete.",
+      "bullets": [
+        "Vaizdo įrašas ar įspūdinga nuotrauka QR meniu pradžios ekrane.",
+        "Erdvė papasakoti jūsų vietos ir kiekvienos kategorijos istoriją.",
+        "Integruotas kontaktų puslapis: žemėlapis, telefonas, Instagram, WhatsApp."
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Du telefonai ant stalo: QR meniu pradžios ekranas su vaizdo įrašo fonu ir kontaktų puslapis su žemėlapiu"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Užsakymas iš QR · neprivaloma",
+      "heading": "Iš QR kodo svečiai gali ir užsisakyti.",
+      "body": "Be meniu naršymo, QR meniu gali tapti užsakymų kanalu: svečiai prideda patiekalus į krepšelį ir išsiunčia užklausą. Užsakymas pasiekia padavėją salėje, jūsų WhatsApp arba virtuvės ekraną. Šią funkciją galima įjungti ir išjungti nustatymuose, kai tik prireikia.",
+      "bullets": [
+        "Krepšelis, komentarai ir užsakymo pateikimas tiesiai iš QR nuskenavimo.",
+        "Užsakymas akimirksniu pasiekia salę, WhatsApp arba virtuvės ekraną.",
+        "Įjunkite funkciją pagal valandas, aukštus ar konkrečius restoranus."
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Du telefonai ant stalo: krepšelis, sukurtas iš QR meniu, ir pateikto užsakymo patvirtinimas"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Ko restoranų savininkai klausia apie IQ Rest QR meniu. Nerandate savo klausimo? Parašykite mums WhatsApp.",
+    "items": [
+      {
+        "q": "Kaip veikia IQ Rest QR meniu?",
+        "a": "Kiekvienas staliukas turi atspausdintą QR kodą. Svečiai jį nuskenuoja telefono kamera, ir naršyklėje atsidaro restorano meniu – nuotraukos, aprašymai, alergenai ir aktualios kainos. Nei svečiams, nei personalui nereikia siųstis jokios programėlės."
+      },
+      {
+        "q": "Ar man reikia techninių žinių, kad sukurčiau QR meniu?",
+        "a": "Ne. Skydelis veikia paspaudimais ir tempimu, jokio programavimo ar sudėtingo konfigūravimo. Patiekalo pridėjimas trunka kelias sekundes: pavadinimas, kaina, nuotrauka. Pradinis nustatymas paprastai užtrunka nuo 30 minučių iki valandos; jei jau turite PDF meniu, AI jį konvertuos automatiškai."
+      },
+      {
+        "q": "Ar svečiams reikia įdiegti programėlę, kad nuskenuotų QR?",
+        "a": "Ne. Integruota iPhone ir Android kamera atpažįsta QR kodą per sekundę ir atidaro meniu tiesiai naršyklėje. Valdymo skydelis taip pat veikia bet kurioje modernioje naršyklėje – telefone, planšetėje ar kompiuteryje."
+      },
+      {
+        "q": "Kaip atspausdinami QR kodai staliukams?",
+        "a": "QR kodai sugeneruojami automatiškai skydelyje (po vieną kiekvienam staliukui arba vienas visai vietai) ir atsisiunčiami kaip spausdinimui paruoštas PDF. Užtenka biuro spausdintuvo ir stovelio: laikiklio, lipduko ar padėkliuko."
+      },
+      {
+        "q": "Ar galiu naudoti savo domeną QR meniu?",
+        "a": "Taip. Mes palaikome jūsų restorano domeną su SSL sertifikatu (pavyzdžiui, meniu.jusu-restoranas.lt): kai svečiai nuskenuoja QR, jie mato jūsų restorano adresą, o ne bendrą subdomeną. DNS nustatymas užtrunka 5–10 minučių ir mes jums padėsime tai padaryti."
+      },
+      {
+        "q": "Ar galiu valdyti QR kodus keliems restoranams iš vienos paskyros?",
+        "a": "Taip, pagal pageidavimą. Viena paskyra gali apjungti kelias vietas, kiekviena su savo QR kodais, meniu, dizainu ir analitika. Parašykite mums WhatsApp ir mes įjungsime kelių restoranų režimą."
+      },
+      {
+        "q": "Ar sunku paleisti QR meniu nuo nulio?",
+        "a": "Trys žingsniai: (1) sukurkite kategorijas; (2) pridėkite patiekalus su pavadinimu, kaina ir nuotrauka; (3) atspausd) atspausdinkite QR kodus ir padėkite juos ant staliukų. Jei jau turite popierinį meniu ar PDF, įkelkite jį – AI atpažins kategorijas bei kainas ir užpildys korteles. Paprastas meniu gali veikti internete per 5 minutes."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "QR meniu per 10 minučių. ",
+    "headingAccent": "14 dienų pilnos prieigos.",
+    "sub": "Kortelės nereikia, atšaukite bet kada. Mumis pasitiki {count} restoranų. Tik el. paštas – ir jokių programėlių jūsų svečiams."
+  }
+}

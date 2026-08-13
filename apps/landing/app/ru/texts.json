@@ -9,6 +9,9 @@
     "ogTitle": "Цифровое меню, кухонный дисплей и брони",
     "ogDescription": "Управляйте рестораном из одного приложения: многоязычное цифровое меню, кухонный дисплей и брони 24/7. Запуск за 5 минут. 14 дней бесплатно, без карты."
   },
+  "jsonLd": {
+    "appName": "IQ Rest — Платформа управления рестораном"
+  },
   "ctaText": "Попробовать бесплатно",
   "homeCtaText": "Попробовать бесплатно",
   "trust": [
@@ -33,7 +36,7 @@
       "label": "Ресторанов с нами"
     }
   ],
-  "demoText": "Посмотреть демо",
+  "demoText": "Открыть демо",
   "microcopy": "14 дней бесплатно · Без банковской карты · Отмена в любой момент",
   "header": {
     "navFeatures": "Возможности",
@@ -45,7 +48,9 @@
     "cta": "Начать бесплатно",
     "navProducts": "Возможности",
     "navGuide": "Инструкция",
-    "navAbout": "О компании"
+    "navAbout": "О компании",
+    "menuFeaturesHeading": "Возможности",
+    "menuInfoHeading": "Информация"
   },
   "hero": {
     "verticals": [
@@ -100,7 +105,7 @@
   "faq": {
     "eyebrow": "Остались вопросы?",
     "heading": "Часто задаваемые",
-    "headingAccent": "вопросы.",
+    "headingAccent": "вопросы",
     "sub": "Что чаще всего спрашивают рестораторы перед подключением. Если не нашли ответ — напишите нам в WhatsApp, отвечают сотрудники, а не бот.",
     "whatsappCta": "Написать в WhatsApp",
     "whatsappPrefill": "Здравствуйте, у меня вопрос об IQ Rest",
@@ -128,9 +133,9 @@
     ]
   },
   "finalCta": {
-    "heading": "Запуск за 5 минут.",
-    "headingAccent": "14 дней бесплатно.",
-    "sub": "Без банковской карты, отмена в любой момент. Присоединяйтесь к более чем 500 ресторанам, уже работающим на IQ Rest."
+    "heading": "Запуск за 10 минут. ",
+    "headingAccent": "14 дней полного доступа.",
+    "sub": "Карта не нужна, отмена в любой момент. Нам доверяют {count} ресторанов. Нужен только email."
   },
   "featureHighlights": {
     "heading": "Всё включено",
@@ -143,34 +148,42 @@
     "cta": "Сканировать меню →"
   },
   "pricingQuiz": {
-    "heading": "Соберите свой план",
-    "sub": "Платите только за то, чем пользуетесь. Начните с меню и добавьте то, что нужно.",
+    "heading": "Соберите план ",
+    "sub": "Начните с меню — бронирования, кухню и домен добавите, когда понадобятся.",
     "billingLabel": "Оплата:",
     "monthly": "Ежемесячно",
     "yearly": "Ежегодно",
-    "restaurantsLabel": "Рестораны:",
+    "restaurantsLabel": "Ресторанов:",
     "fewerAria": "Меньше ресторанов",
     "moreAria": "Больше ресторанов",
-    "menuTitle": "Цифровое меню",
+    "menuTitle": "Меню и вебсайт",
     "menuHint": "Всегда включено",
-    "reservationsTitle": "Бронирования",
+    "reservationsTitle": "Система резервации",
     "reservationsHint": "Бронирование столов",
-    "kdsTitle": "Экран кухни",
+    "kdsTitle": "Кухонный дисплей",
     "kdsHint": "Заказы на кухонном экране",
-    "domainTitle": "Свой домен",
+    "domainTitle": "Доменное имя",
     "domainHint": "Ваш собственный веб-адрес",
     "perMonthSuffix": "/мес",
     "perYearSuffix": "/год",
     "perMonthLongSuffix": "/месяц",
     "saveYearlyTemplate": "Экономьте {amount} в год при годовой оплате",
-    "volumeDiscountTemplate": "Скидка за объём {percent}% · {count} ресторанов",
+    "volumeDiscountTemplate": "Скидка {percent}%",
     "saveUpToHint": "Экономьте до 50% с 5+ ресторанами",
     "billedYearly": "Оплата раз в год",
     "billedMonthly": "Ежемесячная оплата",
-    "enterprisePre": "Нужен индивидуальный план или больше ресторанов?",
+    "enterprisePre": "Нужен индивидуальный план?",
     "enterpriseCta": "Напишите нам",
     "enterprisePost": "и мы подберём его под вас.",
-    "enterpriseWa": "Здравствуйте! Мне нужен индивидуальный план для моих ресторанов."
+    "enterpriseWa": "Здравствуйте! Мне нужен индивидуальный план для моих ресторанов.",
+    "headingAccent": "под свой ресторан",
+    "multiplePre": "Нужно больше ресторанов?",
+    "multipleCta": "Показать опции",
+    "restaurantOne": "ресторан",
+    "restaurantFew": "ресторана",
+    "restaurantMany": "ресторанов",
+    "multipleChangePre": "Другое количество ресторанов?",
+    "multipleChangeCta": "Изменить"
   },
   "pricingCta": {
     "heading": "Простые и гибкие цены",
@@ -179,6 +192,8 @@
     "button": "Рассчитать план"
   },
   "footer": {
+    "copyrightTemplate": "© {year} IQ Rest. Все права защищены.",
+    "featuresHeading": "Возможности",
     "featureLinks": [
       {
         "href": "/ru/tsifrovoe-menyu",
@@ -190,27 +205,57 @@
       },
       {
         "href": "/ru/bronirovanie-stolov",
-        "label": "Бронирование столов"
+        "label": "Бронирование"
       },
       {
         "href": "/ru/kds-kuhonnyy-displey",
         "label": "Кухонный дисплей"
       }
     ],
-    "navLinks": [
-      {
-        "href": "/ru/tseny",
-        "label": "Цены"
-      },
-      {
-        "href": "#faq",
-        "label": "Вопросы"
-      },
-      {
-        "href": "/ru/languages",
-        "label": "Сменить язык"
-      }
-    ],
-    "copyrightTemplate": "© {year} IQ Rest. Все права защищены."
+    "infoHeading": "Информация",
+    "legalHeading": "Документы",
+    "currencyHeading": "Валюта"
+  },
+  "common": {
+    "close": "Закрыть",
+    "menu": "Меню",
+    "help": "Помощь"
+  },
+  "auth": {
+    "emailLabel": "Email",
+    "emailPlaceholder": "Введите ваш email",
+    "or": "или",
+    "continueGoogle": "Продолжить с Google",
+    "continueApple": "Продолжить с Apple",
+    "consent": {
+      "line": "Продолжая, вы принимаете <terms>Условия использования</terms>. Как мы обрабатываем данные — в <privacy>Политике конфиденциальности</privacy>."
+    },
+    "signInTitle": "С возвращением",
+    "signInSubtitle": "Введите email — пришлём 6-значный код для входа.",
+    "signInButton": "Войти",
+    "registerTitle": "Создайте аккаунт",
+    "registerSubtitle": "14 дней бесплатно, карта не нужна. Пришлём на почту код для входа — без пароля и анкет.",
+    "registerButton": "Создать аккаунт",
+    "switchSignIn": "Войти",
+    "switchCreate": "Регистрация",
+    "verifyTitle": "Проверьте почту",
+    "verifySubtitle": "Мы отправили 6-значный код на {email}.",
+    "verifyCodeLabel": "Код подтверждения",
+    "checkSpam": "Не видите письмо? Проверьте папку «Спам».",
+    "verifyButton": "Продолжить",
+    "resendCode": "Отправить ещё раз",
+    "resendSent": "Код отправлен",
+    "changeEmail": "Использовать другой email",
+    "metaSignIn": "Вход",
+    "metaRegister": "Создать аккаунт",
+    "errors": {
+      "emailInvalid": "Введите корректный email.",
+      "sendFailed": "Не удалось отправить код. Попробуйте ещё раз.",
+      "verifyFailed": "Не удалось проверить код. Попробуйте ещё раз.",
+      "codeExpired": "Срок действия кода истёк. Запросите новый.",
+      "noCode": "Код не найден или истёк. Запросите новый.",
+      "invalidCode": "Неверный код. Попробуйте ещё раз.",
+      "tooManyAttempts": "Слишком много попыток. Подождите и повторите."
+    }
   }
 }

@@ -1,0 +1,289 @@
+{
+  "heroV2": {
+    "verticals": [
+      {
+        "icon": "restaurant",
+        "label": "Restauracje"
+      },
+      {
+        "icon": "cafe",
+        "label": "Kawiarnie"
+      },
+      {
+        "icon": "bar",
+        "label": "Bary"
+      },
+      {
+        "icon": "hotel",
+        "label": "Hotele"
+      },
+      {
+        "icon": "pizza",
+        "label": "Pizzerie"
+      }
+    ],
+    "title": "Wszystko, czego potrzebuje",
+    "titleAccent": "Twój lokal!",
+    "sub": "Uporządkuj pracę w 10 minut: uruchom menu online, przyspiesz wydawkę i zarządzaj rezerwacjami.",
+    "primaryLabel": "Zacznij za darmo",
+    "demoLabel": "Zobacz demo menu",
+    "mockups": {
+      "kds": {
+        "src": "/landing/hero-card-kds.webp",
+        "alt": "Tablet z ekranem kuchennym: zamówienia przypisane do stolików w kolumnach ze statusami"
+      },
+      "reservations": {
+        "src": "/landing/hero-card-reservation.webp",
+        "alt": "Tablet z kalendarzem rezerwacji: widok miesiąca i lista rezerwacji oczekujących na potwierdzenie"
+      },
+      "phone1": {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Telefon ze stroną główną restauracji: zdjęcia, rezerwacje i dostęp do menu online"
+      },
+      "phone2": {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Telefon z kartą dania: zdjęcie, cena i oznaczenia alergenów"
+      }
+    }
+  },
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Gotowe w 10 minut",
+      "sub": "Bez kupowania drogiego sprzętu i długiej konfiguracji"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Szybkie wsparcie",
+      "sub": "Odpowiadamy na czacie w kilka godzin"
+    },
+    {
+      "icon": "Globe",
+      "title": "Wybrało nas {count} lokali",
+      "sub": "Korzystają z nas restauracje i kawiarnie w 15+ krajach"
+    },
+    {
+      "icon": "Palette",
+      "title": "100% w Twoim stylu",
+      "sub": "Dopasowujemy design i interfejs do charakteru Twojego lokalu"
+    }
+  ],
+  "menu": {
+    "heading": "Strona www i cyfrowe menu",
+    "sub": {
+      "link": "Więcej niż menu QR!",
+      "rest": " Zyskujesz pełną stronę ze spersonalizowanym wyglądem, danymi kontaktowymi i rezerwacją stolików."
+    },
+    "moreLabel": "Więcej o menu",
+    "demoLabel": "Demo: menu oczami gości",
+    "mockupAlt": "Telefon ze stroną główną restauracji i telefon z kartą dania",
+    "bullets": [
+      {
+        "icon": "Languages",
+        "title": "Automatyczne tłumaczenie na 35 języków",
+        "sub": "Obsługuj gości z zagranicy bez bariery językowej — automatyczne tłumaczenie robi to za Ciebie"
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "Zamówienia prosto ze stolika",
+        "sub": "Uporządkuj pracę — przyjmuj zamówienia od gości szybko, bez wzywania kelnera"
+      },
+      {
+        "icon": "WheatOff",
+        "title": "Alergeny i diety",
+        "sub": "Oznacz alergeny i preferencje (wegańskie, ostre), by goście mogli łatwiej i bezpieczniej wybierać dania"
+      }
+    ]
+  },
+  "reservations": {
+    "heading": "Rezerwacje stolików",
+    "sub": {
+      "link": "Mądre zarządzanie rezerwacjami!",
+      "rest": " Zautomatyzowany system, który sam pilnuje wolnych stolików i Twojego grafiku."
+    },
+    "moreLabel": "Więcej o rezerwacjach",
+    "demoLabel": "Demo: kalendarz rezerwacji",
+    "mockupAlt": "Tablet z kalendarzem rezerwacji: stoliki z podziałem na dni i godziny",
+    "bullets": [
+      {
+        "icon": "CalendarCheck",
+        "title": "Przejrzysty plan rezerwacji",
+        "sub": "Wizualny grafik z podziałem na dni i stoliki — od razu widzisz, gdzie i kiedy są wolne miejsca"
+      },
+      {
+        "icon": "SlidersHorizontal",
+        "title": "Elastyczne ustawienia",
+        "sub": "Skonfiguruj godziny otwarcia, czas trwania rezerwacji i zdjęcia stolików, zbieraj też uwagi od gości"
+      },
+      {
+        "icon": "Users",
+        "title": "Kontrola przepływu gości",
+        "sub": "Wybierz tryb rezerwacji, który Ci odpowiada i miej pełną kontrolę nad ruchem w lokalu"
+      }
+    ]
+  },
+  "orders": {
+    "heading": "Przyjmowanie zamówień na sali",
+    "sub": {
+      "link": "Zamówienia prosto na kuchnię!",
+      "rest": " Zamówienie od gościa lub kelnera natychmiast trafia na ekran kuchenny — bez papierowych bonów i czekania."
+    },
+    "moreLabel": "Więcej o zamówieniach",
+    "demoLabel": "Demo: ekran zamówień",
+    "mockupSrc": "/landing/feature-orders-modal.webp",
+    "mockupAlt": "Tablet z otwartym zamówieniem: lista dań i akcje — zmiana stolika, podział rachunku, rabat",
+    "bullets": [
+      {
+        "icon": "ShoppingCart",
+        "title": "Gość lub kelner",
+        "sub": "Goście zamawiają ze stolika przez kod QR, kelnerzy ze swojego telefonu lub tabletu"
+      },
+      {
+        "icon": "Map",
+        "title": "Plan sali ze statusami",
+        "sub": "Stoliki na mapie mają kolory zależne od statusu — od razu widzisz, kto czeka na zamówienie i gdzie podejść"
+      },
+      {
+        "icon": "Receipt",
+        "title": "Dzielenie rachunku",
+        "sub": "Rozdziel zamówienie między gości i zamykaj stoliki bez pomyłek przy płatności"
+      }
+    ]
+  },
+  "kds": {
+    "heading": "Ekran kuchenny (KDS)",
+    "sub": {
+      "link": "Zgrana kuchnia!",
+      "rest": " Zamówienia z sali i menu QR pojawiają się na ekranie kucharza natychmiast — z uwagami, alergenami i stoperem."
+    },
+    "moreLabel": "Więcej o KDS",
+    "demoLabel": "Demo: ekran w kuchni",
+    "mockupAlt": "Tablet z ekranem kuchennym: zamówienia przypisane do stolików w kolumnach ze statusami",
+    "bullets": [
+      {
+        "icon": "LayoutGrid",
+        "title": "Ekrany dla stanowisk",
+        "sub": "Osobne tablety na wydawce, barze i cukierni — każdy widzi tylko swoje dania"
+      },
+      {
+        "icon": "Timer",
+        "title": "Statusy i stoper",
+        "sub": "Kolumny w przygotowaniu / gotowe / wydane i czas od przyjęcia zamówienia — zmiana statusu jednym kliknięciem"
+      },
+      {
+        "icon": "ShieldAlert",
+        "title": "Alergeny i uwagi",
+        "sub": "Oznaczenia alergenów i prośby gości są wyróżnione — kucharz nie przeoczy niczego ważnego"
+      }
+    ]
+  },
+  "bundle": {
+    "heading": "Wszystko, na czym opiera się Twój lokal.",
+    "headingAccent": "W jednej aplikacji.",
+    "sub": "Menu, kuchnia i rezerwacje w jednym miejscu — nowoczesne, szybkie i stworzone pod realia gastronomii. Bez ukrytych opłat i dopłat za pojedyncze funkcje."
+  },
+  "benefits": [
+    {
+      "icon": "Languages",
+      "tag": "Cyfrowe menu",
+      "title": "Menu, które sprzedaje.",
+      "bullets": [
+        "35 języków dzięki AI",
+        "Nowoczesny design",
+        "Ceny aktualizowane natychmiast"
+      ],
+      "image": "/landing/feature-design.webp",
+      "imageAlt": "Dwa telefony na kawiarnianym stoliku: ekran powitalny cyfrowego menu i strona kontaktowa z mapą"
+    },
+    {
+      "icon": "ChefHat",
+      "tag": "Ekran kuchenny",
+      "title": "Gotuj szybciej i bez pomyłek.",
+      "bullets": [
+        "Prosto na ekran",
+        "Uwagi i alergeny",
+        "Tablet lub telefon"
+      ],
+      "image": "/landing/feature-kds-cards.webp",
+      "imageAlt": "Tablet na barze wyświetla ekran kuchenny z zamówieniami przypisanymi do stolików"
+    },
+    {
+      "icon": "CalendarCheck",
+      "tag": "Rezerwacje",
+      "title": "Rezerwacje na autopilocie.",
+      "bullets": [
+        "Rezerwacje bez dzwonienia",
+        "Automatyczne potwierdzenia",
+        "Kalendarz z podziałem na stoliki"
+      ],
+      "image": "/landing/feature-booking-calendar.webp",
+      "imageAlt": "Dwa tablety z kalendarzem rezerwacji: widok dzienny dla stolików i widok miesięczny"
+    },
+    {
+      "icon": "Receipt",
+      "tag": "Zamówienia na sali",
+      "title": "Zamówienia prosto na kuchnię.",
+      "bullets": [
+        "Gość lub kelner",
+        "Prosto na kuchnię",
+        "Włącz, kiedy potrzebujesz"
+      ],
+      "image": "/landing/feature-orders-map.webp",
+      "imageAlt": "Tablet z ekranem zamówień: lista zamówień i mapa sali z kolorowymi stolikami."
+    }
+  ],
+  "seeDetails": "Dowiedz się więcej",
+  "platform": {
+    "hardwareTitle": "Korzystaj na własnym sprzęcie",
+    "hardwareSub": "Nie zmuszamy do kupowania od nas sprzętu. Używaj telefonów, tabletów i komputerów, które już masz.",
+    "anywhereTitle": "Działa wszędzie",
+    "anywhereSub": "Telefon, tablet, laptop, PC. Android, iOS, Windows, Mac, Linux. W każdej nowoczesnej przeglądarce, bez instalacji."
+  },
+  "activities": {
+    "heading": "Jeden system —",
+    "headingAccent": "cała restauracja.",
+    "sub": "Szybsza obsługa, spokojniejsza kuchnia, niższe koszty i goście, którzy wracają — wszystko na jednej platformie.",
+    "groups": [
+      {
+        "icon": "Smartphone",
+        "tag": "Przy stoliku — gość",
+        "bullets": [
+          "Menu QR w 35 językach",
+          "Zamawianie bez czekania na kelnera",
+          "Wezwanie kelnera lub prośba o rachunek",
+          "Rezerwacja stolika 24/7",
+          "Unikalny kod QR dla każdego stolika",
+          "Bez aplikacji — otwiera się w przeglądarce",
+          "Oznaczenia alergenów i diet do filtrowania"
+        ]
+      },
+      {
+        "icon": "ChefHat",
+        "tag": "W kuchni",
+        "bullets": [
+          "Zamówienia na ekranie natychmiast",
+          "Kolumny w przygotowaniu / gotowe / wydane",
+          "Wyróżnione alergeny i uwagi",
+          "Tablet lub telefon — bez papierowych bonów"
+        ]
+      },
+      {
+        "icon": "ChartColumn",
+        "tag": "Zarządzanie",
+        "bullets": [
+          "Edycja menu i cen — natychmiast",
+          "Tłumaczenie AI jednym kliknięciem",
+          "Analityka sprzedaży i raporty",
+          "Wiele lokali na jednym koncie",
+          "AI przenosi papierowe menu w 60 sekund",
+          "Własna domena z certyfikatem SSL"
+        ]
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Cała platforma w 10 minut. ",
+    "headingAccent": "14 dni pełnego dostępu.",
+    "sub": "Menu, zamówienia, rezerwacje i kuchnia — bez podawania karty, zrezygnuj w dowolnej chwili; wybrało nas {count} lokali, wystarczy adres e-mail."
+  }
+}

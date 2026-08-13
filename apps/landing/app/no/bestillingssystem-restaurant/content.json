@@ -1,0 +1,236 @@
+{
+  "locale": "no",
+  "slug": "bestillingssystem-restaurant",
+  "trackPrefix": "l_orders",
+  "meta": {
+    "title": "Ordremottak for restaurant — Gjest og servitør | IQ Rest",
+    "description": "Ordremottak for restaurant fra mobil eller nettbrett: bordkart, deling av regning, statuser, tilvalg og kommentarer. Gjestene bestiller fra bordet, servitørene tar imot bestillinger på sin egen enhet. 14 dager gratis.",
+    "canonical": "https://iq-rest.com/no/bestillingssystem-restaurant",
+    "ogLocale": "nb_NO",
+    "ogTitle": "Ordremottak for restaurant — Gjest og servitør",
+    "ogDescription": "En gjest ved bordet eller en servitør på mobilen — bestillingen når kjøkkenet umiddelbart. Bordkart, deling av regning, statuser, tilvalg og kommentarer.",
+    "brandLine": "IQ Rest — Ordremottak for restaurant"
+  },
+  "hero": {
+    "headline": "Bestillinger fra bordet —",
+    "cta": "Sett opp ordremottak",
+    "sub": "Gjestene bestiller ved bordet eller servitørene fra valgfri enhet — rett til kjøkkenet. Bordkart, deling av regning.",
+    "headlineAccent": "rett til kjøkkenet",
+    "demoLabel": "Demo: bestillingsskjerm",
+    "tablet": {
+      "src": "/landing/feature-orders-modal.webp",
+      "alt": "Nettbrett med en åpen bestilling: liste over retter og handlinger — bytt bord, del bestilling, legg til rabatt"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restauranter"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kafeer"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barer"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hoteller"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzeriaer"
+    }
+  ],
+  "scan": {
+    "heading": "Sett opp ordremottaket ditt",
+    "headingAccent": "på 5 minutter.",
+    "sub": "Skann en papirmeny eller PDF — AI gjenkjenner retter, priser og kategorier. Koble til et nettbrett på gulvet og begynn å ta imot bestillinger fra bordene.",
+    "cta": "Skann meny"
+  },
+  "subFeatures": [
+    {
+      "icon": "Map",
+      "eyebrow": "Liste og bordkart",
+      "heading": "En bestillingsliste ved siden av bordkartet.",
+      "body": "Alle aktive bestillinger vises til høyre: status, total, tidspunkt og antall varer. Til venstre er bordkartet: bordene er fargekodet etter status — ledig, opptatt, trenger oppmerksomhet. Trykk på et bord for å åpne bestillingen, trykk på et kort for detaljert visning. Du slipper å bytte mellom skjermer.",
+      "bullets": [
+        "Bordkart: bordene er fargekodet etter bestillingsstatus.",
+        "Bestillingsliste ved siden av — total, tid og antall varer.",
+        "Trykk på et bord for å åpne bestillingen eller opprette en ny."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-map.webp",
+        "alt": "Nettbrett på en servitørstasjon: en bestillingsliste og et bordkart med fargekodede bord"
+      }
+    },
+    {
+      "icon": "ClipboardList",
+      "eyebrow": "Bestillingskort",
+      "heading": "Bestillingskortet: statuser, duplisering og sletting — med ett trykk.",
+      "body": "Hver vare har sin egen status (Venter / Tilberedes / Klar / Servert) — kjøkkenet og servitøren ser det samme bildet i sanntid. Trykk på prikken for å åpne en handlingsmeny: endre status, dupliser varen med samme tilvalg, eller slett den. Alt skjer rett i bestillingskortet.",
+      "bullets": [
+        "Status per vare: Venter / Tilberedes / Klar / Servert.",
+        "Dupliser en vare med ett trykk — inkludert tilvalg.",
+        "Slett en vare rett fra bestillingskortet."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-detail.webp",
+        "alt": "Nettbrett med et detaljert bestillingskort: statuser på retter, duplisering og sletting av varer"
+      }
+    },
+    {
+      "icon": "Receipt",
+      "eyebrow": "Dele regningen",
+      "heading": "Dele regningen når gjestene betaler hver for seg.",
+      "body": "Gjestene vil betale hver for seg — kryss av for varene som skal på den nye regningen; resten blir stående på den nåværende. Systemet viser begge totalene umiddelbart. Ett trykk på \"Del bestilling\" — og du har to uavhengige bestillinger med riktige totaler, som begge blir stående på bordet.",
+      "bullets": [
+        "Velg varer som skal deles ved hjelp av avmerkingsbokser.",
+        "Totalen for den nye og gjenværende regningen vises umiddelbart.",
+        "Ett trykk — og bestillingen er delt uten manuell regning."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-split.webp",
+        "alt": "Nettbrett på et restaurantbord: deling av regningen mellom gjester"
+      }
+    },
+    {
+      "icon": "Smartphone",
+      "eyebrow": "Bestilling fra mobil",
+      "heading": "Legg til varer fra mobilen — i tre trinn.",
+      "body": "Servitørene er ikke bundet til én enhet: de åpner bestillingsskjermen på sin egen mobil og legger til en vare i tre trinn — velg kategori, velg rett, velg tilvalg (størrelse, stekegrad, ekstra sauser og ingredienser). Prisen regnes ut automatisk. En kommentar til kjøkkenet legges til i siste trinn.",
+      "bullets": [
+        "Tre trinn: kategori → rett → tilvalg.",
+        "Tilvalg (størrelse, ekstra, ingredienser) med pris med ett trykk.",
+        "Et kommentarfelt i siste trinn."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-mobile.webp",
+        "alt": "Fire mobiler som viser trinnene for å legge til en vare i en bestilling: kategori, rett, størrelse, kommentar"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Det restaurantdrivere spør om når det gjelder ordremottak i IQ Rest. Finner du ikke spørsmålet ditt — send oss en melding på WhatsApp.",
+    "items": [
+      {
+        "q": "Kan flere servitører jobbe samtidig fra forskjellige enheter?",
+        "a": "Ja. Hver servitør kobler til sin egen enhet og ser de samme bordene, bestillingene og statusene i sanntid. En endring gjort av én vises umiddelbart for de andre — ingen konflikter eller låsing."
+      },
+      {
+        "q": "Kan servitørene bruke sine egne mobiler?",
+        "a": "Ja. Bestillingsskjermen kjører i nettleseren — ingenting å installere. En mobil eller et nettbrett kobles til med en sekssifret kode fra kontrollpanelet, og tilgangen fjernes med ett trykk ved slutten av skiftet."
+      },
+      {
+        "q": "Kan jeg legge til obligatoriske tilvalg på retter (størrelse, stekegrad)?",
+        "a": "Ja. En rett kan ha et ubegrenset antall tilvalgsgrupper — obligatoriske (\"Størrelse\": Liten / Medium / Stor) og valgfrie (\"Stekegrad\": rå / medium / godt stekt). Tilvalg påvirker prisen. Med en obligatorisk gruppe ber systemet om et valg — noe som eliminerer feil."
+      },
+      {
+        "q": "Kan jeg legge til kommentarer og ekstra varer til en rett?",
+        "a": "Ja. Det siste trinnet har et kommentarfelt (\"ingen løk\", \"nøtteallergi\"). Ekstrautstyr settes opp som prisede tilvalg (\"+ BBQ-saus\", \"+ Brød\"). Kommentarer vises på kjøkkenskjermen, uthevet med farger."
+      },
+      {
+        "q": "Finnes det bestillingsstatistikk?",
+        "a": "Ja. Statistikkdelen viser omsetning per dag, gjennomsnittlig regning og mest solgte retter. Disse dataene hjelper deg med å planlegge skift og innkjøp."
+      },
+      {
+        "q": "Kan bestillinger deles?",
+        "a": "Ja. Kryss av for varene som skal på en ny regning — begge totalene regnes ut automatisk, ingen manuell regning og ingen bytting mellom seksjoner."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Bestillinger på 10 minutter. ",
+    "headingAccent": "14 dager med full tilgang.",
+    "sub": "Krever ikke kort, avbryt når som helst. {count} restauranter tar imot bestillinger med oss. Alt du trenger er en e-postadresse."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Bordkart og bestillingsliste",
+      "sub": "Aktive bestillinger ved siden av bordkartet: bordene er fargekodet etter status, og et trykk åpner en bestilling eller oppretter en ny.",
+      "bullets": [
+        {
+          "icon": "Map",
+          "title": "Bord etter status",
+          "sub": "Ledig, opptatt, trenger oppmerksomhet — synlig med et blikk"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Aktiv bestillingsliste",
+          "sub": "Total, tidspunkt og antall varer for hver bestilling"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Ny bestilling fra kartet",
+          "sub": "Trykk på et ledig bord for å starte en bestilling med én gang"
+        }
+      ]
+    },
+    {
+      "heading": "En status for hver vare",
+      "sub": "Kjøkkenet og servitøren ser det samme bildet: hver rett har sin egen status — fra bestilt til servert.",
+      "bullets": [
+        {
+          "icon": "Timer",
+          "title": "Statuser per rett",
+          "sub": "Venter, Tilberedes, Klar, Servert — per vare, ikke per bestilling"
+        },
+        {
+          "icon": "Receipt",
+          "title": "Duplisering av vare",
+          "sub": "Gjenta en rett med de samme tilvalgene med ett trykk"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Endringer på stedet",
+          "sub": "Slett en vare rett fra bestillingskortet"
+        }
+      ]
+    },
+    {
+      "heading": "Dele regningen",
+      "sub": "Gjestene betaler hver for seg — kryss av for varene, så flyttes de til en ny regning. Totalene regnes ut umiddelbart.",
+      "bullets": [
+        {
+          "icon": "Receipt",
+          "title": "Avmerkingsbokser per vare",
+          "sub": "Velg rettene for den nye regningen; resten blir stående på den nåværende"
+        },
+        {
+          "icon": "ChartColumn",
+          "title": "Totaler vises umiddelbart",
+          "sub": "Den nye og gjenværende regningen beregnes automatisk"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Ett trykk",
+          "sub": "Bestillingen deles uten manuell regning eller kalkulator"
+        }
+      ]
+    },
+    {
+      "heading": "Bestilling fra servitørens mobil",
+      "sub": "Servitørene tar imot en bestilling på sin egen enhet i tre trinn: kategori, rett, tilvalg.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Hvilken som helst enhet",
+          "sub": "En mobil eller et nettbrett med nettleser — ingen installasjon kreves"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Prisede tilvalg",
+          "sub": "Størrelse, ekstrautstyr og varianter med pris med ett trykk"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Kommentarer til retten",
+          "sub": "Gjestens ønsker legges til i siste trinn — kjøkkenet ser dem med én gang"
+        }
+      ]
+    }
+  ]
+}

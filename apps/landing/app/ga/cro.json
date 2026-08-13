@@ -1,0 +1,289 @@
+{
+  "heroV2": {
+    "verticals": [
+      {
+        "icon": "restaurant",
+        "label": "Bialanna"
+      },
+      {
+        "icon": "cafe",
+        "label": "Caiféanna"
+      },
+      {
+        "icon": "bar",
+        "label": "Beáir"
+      },
+      {
+        "icon": "hotel",
+        "label": "Óstáin"
+      },
+      {
+        "icon": "pizza",
+        "label": "Pizzerias"
+      }
+    ],
+    "title": "Gach rud a theastaíonn",
+    "titleAccent": "ó do bhialann!",
+    "sub": "Socraigh d'oibríochtaí in 10 nóiméad: seol biachlár ar líne, eagraigh an chistin agus bainistigh suíocháin.",
+    "primaryLabel": "Tosaigh saor in aisce",
+    "demoLabel": "Féach ar an mbiachlár taispeántais",
+    "mockups": {
+      "kds": {
+        "src": "/landing/hero-card-kds.webp",
+        "alt": "Táibléad le scáileán cistine: orduithe de réir boird i gcolúin le stádais"
+      },
+      "reservations": {
+        "src": "/landing/hero-card-reservation.webp",
+        "alt": "Táibléad le féilire áirithinte: amharc míosa agus liosta áirithintí ag feitheamh le deimhniú"
+      },
+      "phone1": {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Fón le leathanach baile suíomh gréasáin bialainne: grianghraif, áirithintí agus rochtain ar an mbiachlár ar líne"
+      },
+      "phone2": {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Fón le cárta miasa: grianghraf, praghas agus lipéid ailléirginí"
+      }
+    }
+  },
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Beo in 10 nóiméad",
+      "sub": "Níl aon chrua-earraí daora le ceannach agus níl aon socrú fada ann"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Tacaíocht thapa",
+      "sub": "Freagraímid sa chomhrá laistigh de chúpla uair an chloig"
+    },
+    {
+      "icon": "Globe",
+      "title": "Roghnaithe ag {count} ionad",
+      "sub": "Iontaofa ag bialanna agus siopaí caifé i 15+ tír"
+    },
+    {
+      "icon": "Palette",
+      "title": "100% ar bhranda",
+      "sub": "Cuirimid an dearadh agus an comhéadan in oiriúint do stíl d'ionaid"
+    }
+  ],
+  "menu": {
+    "heading": "Suíomh gréasáin agus biachlár digiteach",
+    "sub": {
+      "link": "Níos mó ná biachlár QR!",
+      "rest": " Faigh suíomh gréasáin iomlán le dearadh uathúil, sonraí teagmhála agus áirithintí boird."
+    },
+    "moreLabel": "Tuilleadh faoin mbiachlár",
+    "demoLabel": "Taispeántas: an biachlár mar a fheiceann aíonna é",
+    "mockupAlt": "Fón le leathanach baile suíomh gréasáin bialainne agus fón le leathanach miasa",
+    "bullets": [
+      {
+        "icon": "Languages",
+        "title": "Uath-aistriúchán go 35 teanga",
+        "sub": "Freastal ar aíonna idirnáisiúnta gan bhac teanga — déanann aistriúchán uathoibríoch é ar fad"
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "Orduithe díreach ón mbord",
+        "sub": "Déan d'oibríochtaí níos simplí — glac orduithe ó bhoird go tapa, níl freastalaí ag teastáil"
+      },
+      {
+        "icon": "WheatOff",
+        "title": "Ailléirginí agus aistí bia",
+        "sub": "Lipéadaigh ailléirginí agus roghanna aiste bia (veigeánach, spíosrach) ionas gur féidir le haíonna bia a roghnú níos éasca agus níos sábháilte"
+      }
+    ]
+  },
+  "reservations": {
+    "heading": "Áirithintí boird",
+    "sub": {
+      "link": "Áirithintí boird cliste!",
+      "rest": " Córas áirithinte uathoibrithe a rianaíonn boird atá ar fáil agus do sceideal as féin."
+    },
+    "moreLabel": "Tuilleadh faoi áirithintí",
+    "demoLabel": "Taispeántas: féilire áirithinte",
+    "mockupAlt": "Táibléad le féilire áirithinte: boird de réir lae agus sliotán ama",
+    "bullets": [
+      {
+        "icon": "CalendarCheck",
+        "title": "Léarscáil áirithinte shoiléir",
+        "sub": "Sceideal amhairc de réir lae agus boird — feic láithreach cá bhfuil agus cathain a bhíonn suíocháin ar fáil"
+      },
+      {
+        "icon": "SlidersHorizontal",
+        "title": "Socrú áirithinte solúbtha",
+        "sub": "Cumraigh uaireanta oscailte, fad sliotán agus grianghraif boird, agus bailigh iarratais ó aíonna"
+      },
+      {
+        "icon": "Users",
+        "title": "Bainistíocht sreabhadh aíonna",
+        "sub": "Roghnaigh an modh áirithinte a oireann duit agus coinnigh smacht iomlán ar shreabhadh aíonna"
+      }
+    ]
+  },
+  "orders": {
+    "heading": "Glacadh orduithe ag an mbord",
+    "sub": {
+      "link": "Orduithe díreach chuig an gcistin!",
+      "rest": " Sroicheann ordú ón mbord nó ó fhreastalaí an scáileán cistine láithreach — gan aon ticéid pháipéir, gan aon feitheamh."
+    },
+    "moreLabel": "Tuilleadh faoi orduithe",
+    "demoLabel": "Taispeántas: scáileán orduithe",
+    "mockupSrc": "/landing/feature-orders-modal.webp",
+    "mockupAlt": "Táibléad le hordú oscailte: liosta miasa agus gníomhartha orduithe — athraigh bord, roinn ordú, cuir lascaine leis",
+    "bullets": [
+      {
+        "icon": "ShoppingCart",
+        "title": "Aoi nó freastalaí",
+        "sub": "Ordaíonn aíonna ón mbord trí chód QR, freastalaithe óna bhfón nó táibléad"
+      },
+      {
+        "icon": "Map",
+        "title": "Léarscáil urláir le stádais",
+        "sub": "Tá dathchódú ar bhoird ar an léarscáil de réir stádais — feic sracfhéachaint cé atá ag fanacht le hordú agus cá háit le dul ina dhiaidh sin"
+      },
+      {
+        "icon": "Receipt",
+        "title": "Bille a roinnt",
+        "sub": "Roinn ordú idir aíonna agus dún boird gan aon mhearbhall íocaíochta"
+      }
+    ]
+  },
+  "kds": {
+    "heading": "Scáileán Cistine (KDS)",
+    "sub": {
+      "link": "Cistin ar aon dul!",
+      "rest": " Feictear orduithe ón urlár agus ón mbiachlár QR ar scáileán an chócaire láithreach — le nótaí, ailléirginí agus lasc-amadóir."
+    },
+    "moreLabel": "Tuilleadh faoi KDS",
+    "demoLabel": "Taispeántas: scáileán cistine",
+    "mockupAlt": "Táibléad le scáileán cistine: orduithe de réir boird i gcolúin le stádais",
+    "bullets": [
+      {
+        "icon": "LayoutGrid",
+        "title": "Scáileáin de réir stáisiúin",
+        "sub": "Táibléid ar leith don líne the, don bheár agus don stáisiún taosráin — ní fheiceann gach ceann ach a mhiasa féin"
+      },
+      {
+        "icon": "Timer",
+        "title": "Stádais agus lasc-amadóir",
+        "sub": "Colúin ag cócaireacht / réidh / seirbheáilte agus an t-am atá caite in aghaidh an ordaithe — athraíonn stádas le tapáil amháin"
+      },
+      {
+        "icon": "ShieldAlert",
+        "title": "Ailléirginí agus tuairimí",
+        "sub": "Aibhsítear bratacha ailléirginí agus nótaí aíonna — ní chaillfidh an cócaire aon rud tábhachtach"
+      }
+    ]
+  },
+  "bundle": {
+    "heading": "Gach rud a ritheann do bhialann.",
+    "headingAccent": "In aip amháin.",
+    "sub": "Biachlár, cistin agus áirithintí in aon áit amháin — nua-aimseartha, tapa agus tógtha don chaoi a n-oibríonn bialanna i ndáiríre. Gan aon táillí breise ná praghsáil in aghaidh na gné."
+  },
+  "benefits": [
+    {
+      "icon": "Languages",
+      "tag": "Biachlár digiteach",
+      "title": "Biachlár a dhíolann.",
+      "bullets": [
+        "35 teanga le AI",
+        "Dearadh den scoth",
+        "Nuashonraítear praghsanna láithreach"
+      ],
+      "image": "/landing/feature-design.webp",
+      "imageAlt": "Dhá fhón ar bhord caifé: scáileán fáilte an bhiachláir dhigitigh agus leathanach teagmhála le léarscáil"
+    },
+    {
+      "icon": "ChefHat",
+      "tag": "Scáileán cistine",
+      "title": "Cócaráil níos tapa gan aon rud a chailleadh.",
+      "bullets": [
+        "Díreach chuig an scáileán",
+        "Nótaí agus ailléirginí",
+        "Táibléad nó fón"
+      ],
+      "image": "/landing/feature-kds-cards.webp",
+      "imageAlt": "Taispeánann táibléad ar chuntar beáir an scáileán cistine le horduithe de réir boird"
+    },
+    {
+      "icon": "CalendarCheck",
+      "tag": "Áirithintí",
+      "title": "Áirithintí uathoibrithe.",
+      "bullets": [
+        "Áirithint gan ghlaonna gutháin",
+        "Uath-dheimhniú",
+        "Féilire de réir boird"
+      ],
+      "image": "/landing/feature-booking-calendar.webp",
+      "imageAlt": "Dhá tháibléad ag taispeáint an fhéilire áirithinte: amharc laethúil de réir boird agus amharc míosúil"
+    },
+    {
+      "icon": "Receipt",
+      "tag": "Orduithe ag an mbord",
+      "title": "Orduithe díreach chuig an gcistin.",
+      "bullets": [
+        "Aoi nó freastalaí",
+        "Díreach chuig an gcistin",
+        "Cumasaigh é aon uair is mian leat"
+      ],
+      "image": "/landing/feature-orders-map.webp",
+      "imageAlt": "Táibléad le scáileán na n-orduithe: liosta orduithe agus léarscáil urláir dathchódaithe le boird."
+    }
+  ],
+  "seeDetails": "Faigh tuilleadh eolais",
+  "platform": {
+    "hardwareTitle": "Rith é ar do chrua-earraí féin",
+    "hardwareSub": "Ní chuirimid iallach ort crua-earraí a cheannach uainn. Úsáid na fóin, na táibléid agus na ríomhairí atá agat cheana féin.",
+    "anywhereTitle": "Oibríonn sé áit ar bith",
+    "anywhereSub": "Fón, táibléad, ríomhaire glúine, ríomhaire. Android, iOS, Windows, Mac, Linux. In aon bhrabhsálaí nua-aimseartha, gan suiteáil."
+  },
+  "activities": {
+    "heading": "Córas amháin —",
+    "headingAccent": "do bhialann ar fad.",
+    "sub": "Seirbhís níos tapa, cistin níos ciúine, costais níos ísle agus aíonna a fhilleann — ar fad in ardán amháin.",
+    "groups": [
+      {
+        "icon": "Smartphone",
+        "tag": "Ag an mbord — aoi",
+        "bullets": [
+          "Biachlár QR i 35 teanga",
+          "Ordaigh gan fanacht le freastalaí",
+          "Glaoigh ar fhreastalaí nó iarr an bille",
+          "Áirithint boird 24/7",
+          "Cód QR uathúil do gach bord",
+          "Níl aip ag teastáil — osclaítear sa bhrabhsálaí",
+          "Lipéid ailléirginí agus aiste bia le haghaidh scagtha"
+        ]
+      },
+      {
+        "icon": "ChefHat",
+        "tag": "Sa chistin",
+        "bullets": [
+          "Orduithe ar an scáileán láithreach",
+          "Colúin ag cócaireacht / réidh / seirbheáilte",
+          "Ailléirginí agus tuairimí aibhsithe",
+          "Táibléad nó fón — gan aon ticéid pháipéir"
+        ]
+      },
+      {
+        "icon": "ChartColumn",
+        "tag": "Bainistíocht",
+        "bullets": [
+          "Eagarthóireacht ar bhiachlár agus praghsanna — láithreach",
+          "Aistriúchán AI in aon chliceáil amháin",
+          "Anailísíocht díolacháin agus tuarascálacha",
+          "Bialanna iomadúla i gcuntas amháin",
+          "Déanann AI biachlár páipéir a dhigitiú in 60 soicind",
+          "D'fhearann féin le SSL"
+        ]
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "An t-ardán iomlán in 10 nóiméad. ",
+    "headingAccent": "14 lá de rochtain iomlán.",
+    "sub": "Biachlár, orduithe, áirithintí agus cistin — ní gá cárta, cealaigh am ar bith; iontaofa ag {count} bialann, níl uait ach ríomhphost."
+  }
+}

@@ -1,10 +1,10 @@
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { routing, rtlLocales } from "@/i18n/routing";
+import { locales, rtlLocales } from "@/lib/locales";
 import "../globals.css";
-import { OnboardingModalProvider } from "@/app/_landing/components/onboarding/onboarding-modal-provider";
-import { LangAutoModal } from "@/app/_landing/components/lang-auto-modal";
+import { LegacyAuthRedirect } from "@/app/_landing/components/onboarding/legacy-auth-redirect";
+import { CurrencyProvider } from "@/app/_landing/lib/currency-context";
+import { getLandingChrome } from "@/app/_landing/lib/landing-chrome";
+import { LandingStringsProvider } from "@/app/_landing/lib/landing-strings";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
+  return locales.map((locale) => ({ locale }));
 }
 
 export default async function LocaleLayout({
@@ -26,11 +26,11 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
 
-  if (!routing.locales.includes(locale as any)) {
+  if (!(locales as readonly string[]).includes(locale)) {
     notFound();
   }
 
-  const messages = await getMessages();
+  const chrome = await getLandingChrome(locale);
 
   const websiteJsonLd = {
     "@context": "https://schema.org",
@@ -47,15 +47,12 @@ export default async function LocaleLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd).replace(/</g, "\\u003c") }}
         />
-        <NextIntlClientProvider messages={messages}>
-          <OnboardingModalProvider>
+        <LandingStringsProvider value={{ locale, common: chrome.common, auth: chrome.auth }}>
+          <CurrencyProvider>
             {children}
-          </OnboardingModalProvider>
-          {/* After the page, not before: effects flush children-first, so
-              PageTracker has published the page label before this modal
-              fires its own events. Portal-rendered — order is invisible. */}
-          <LangAutoModal />
-        </NextIntlClientProvider>
+          </CurrencyProvider>
+          <LegacyAuthRedirect locale={locale} />
+        </LandingStringsProvider>
       </body>
     </html>
   );

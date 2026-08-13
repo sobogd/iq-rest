@@ -1,0 +1,289 @@
+{
+  "heroV2": {
+    "verticals": [
+      {
+        "icon": "restaurant",
+        "label": "餐厅"
+      },
+      {
+        "icon": "cafe",
+        "label": "咖啡馆"
+      },
+      {
+        "icon": "bar",
+        "label": "酒吧"
+      },
+      {
+        "icon": "hotel",
+        "label": "酒店"
+      },
+      {
+        "icon": "pizza",
+        "label": "披萨店"
+      }
+    ],
+    "title": "您的餐厅所需的",
+    "titleAccent": "一切！",
+    "sub": "10分钟内完成运营设置：上线电子菜单，理顺后厨流程，管理桌位预订。",
+    "primaryLabel": "免费开始",
+    "demoLabel": "查看演示菜单",
+    "mockups": {
+      "kds": {
+        "src": "/landing/hero-card-kds.webp",
+        "alt": "显示后厨系统的平板电脑：按桌台分列显示订单及状态"
+      },
+      "reservations": {
+        "src": "/landing/hero-card-reservation.webp",
+        "alt": "显示预订日历的平板电脑：月视图及待确认预订列表"
+      },
+      "phone1": {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "显示餐厅网站主页的手机：照片、预订及电子菜单入口"
+      },
+      "phone2": {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "显示菜品详情的手机：照片、价格及过敏原标签"
+      }
+    }
+  },
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "10分钟即可上线",
+      "sub": "无需购买昂贵的硬件，无需漫长的设置"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "快速支持",
+      "sub": "我们在几个小时内通过聊天回复"
+    },
+    {
+      "icon": "Globe",
+      "title": "被 {count} 家门店选择",
+      "sub": "获得超过15个国家的餐厅和咖啡馆的信任"
+    },
+    {
+      "icon": "Palette",
+      "title": "100%契合品牌",
+      "sub": "我们调整设计和界面以匹配您门店的风格"
+    }
+  ],
+  "menu": {
+    "heading": "网站与电子菜单",
+    "sub": {
+      "link": "不仅仅是QR菜单！",
+      "rest": " 获得一个拥有独特设计、联系方式和桌位预订功能的完整网站。"
+    },
+    "moreLabel": "了解更多菜单功能",
+    "demoLabel": "演示：顾客视角的菜单",
+    "mockupAlt": "显示餐厅网站主页的手机和显示菜品页面的手机",
+    "bullets": [
+      {
+        "icon": "Languages",
+        "title": "自动翻译成35种语言",
+        "sub": "无语言障碍接待国际顾客——自动翻译搞定一切"
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "桌台直接点餐",
+        "sub": "简化运营——快速完成桌台点餐，无需服务员介入"
+      },
+      {
+        "icon": "WheatOff",
+        "title": "过敏原与饮食偏好",
+        "sub": "标注过敏原和饮食偏好（纯素、微辣），让顾客点餐更轻松安全"
+      }
+    ]
+  },
+  "reservations": {
+    "heading": "桌位预订",
+    "sub": {
+      "link": "智能桌位预订！",
+      "rest": " 自动追踪空闲桌位和营业时间的预订系统。"
+    },
+    "moreLabel": "了解更多预订功能",
+    "demoLabel": "演示：预订日历",
+    "mockupAlt": "显示预订日历的平板电脑：按日期和时间段显示的桌位",
+    "bullets": [
+      {
+        "icon": "CalendarCheck",
+        "title": "清晰的预订图表",
+        "sub": "按日期和桌台显示的可视化时间表——空闲座位一目了然"
+      },
+      {
+        "icon": "SlidersHorizontal",
+        "title": "灵活的预订设置",
+        "sub": "配置营业时间、时间段长度和桌台照片，并收集顾客的特殊要求"
+      },
+      {
+        "icon": "Users",
+        "title": "客流管理",
+        "sub": "选择适合您的预订模式，全面掌控客流"
+      }
+    ]
+  },
+  "orders": {
+    "heading": "桌边点餐",
+    "sub": {
+      "link": "订单直达后厨！",
+      "rest": " 顾客扫码或服务员录入的订单即时显示在后厨屏幕上——告别纸质小票，无需等待。"
+    },
+    "moreLabel": "了解更多点餐功能",
+    "demoLabel": "演示：点餐屏幕",
+    "mockupSrc": "/landing/feature-orders-modal.webp",
+    "mockupAlt": "显示当前订单的平板电脑：菜品列表及订单操作——换桌、拆单、添加折扣",
+    "bullets": [
+      {
+        "icon": "ShoppingCart",
+        "title": "顾客或服务员",
+        "sub": "顾客通过桌面QR码点餐，服务员通过手机或平板录单"
+      },
+      {
+        "icon": "Map",
+        "title": "带状态的餐厅平面图",
+        "sub": "平面图上的桌台按状态显示不同颜色——谁在等餐、接下来去哪一目了然"
+      },
+      {
+        "icon": "Receipt",
+        "title": "分开结账",
+        "sub": "为顾客拆分订单，结账清台不出错"
+      }
+    ]
+  },
+  "kds": {
+    "heading": "后厨显示系统 (KDS)",
+    "sub": {
+      "link": "后厨同步协作！",
+      "rest": " 前厅和QR菜单的订单即时显示在厨师屏幕上——包含备注、过敏原和计时器。"
+    },
+    "moreLabel": "了解更多KDS功能",
+    "demoLabel": "演示：后厨屏幕",
+    "mockupAlt": "显示后厨系统的平板电脑：按桌台分列显示订单及状态",
+    "bullets": [
+      {
+        "icon": "LayoutGrid",
+        "title": "按档口分屏",
+        "sub": "热菜区、吧台和甜品区配备独立平板——每个档口只看自己的菜品"
+      },
+      {
+        "icon": "Timer",
+        "title": "状态与计时器",
+        "sub": "制作中 / 已出餐 / 已上菜分列显示及订单耗时——点击即可更改状态"
+      },
+      {
+        "icon": "ShieldAlert",
+        "title": "过敏原与备注",
+        "sub": "高亮显示过敏原标签和顾客备注——厨师不会错过任何重要信息"
+      }
+    ]
+  },
+  "bundle": {
+    "heading": "餐厅运营所需的一切。",
+    "headingAccent": "尽在一个系统。",
+    "sub": "菜单、后厨和预订集中管理——现代、快速，专为餐厅实际工作流程打造。无附加费或按功能单独收费。"
+  },
+  "benefits": [
+    {
+      "icon": "Languages",
+      "tag": "电子菜单",
+      "title": "能带货的菜单。",
+      "bullets": [
+        "AI支持35种语言",
+        "高级设计",
+        "价格即时更新"
+      ],
+      "image": "/landing/feature-design.webp",
+      "imageAlt": "咖啡桌上的两部手机：电子菜单欢迎界面和带地图的联系页面"
+    },
+    {
+      "icon": "ChefHat",
+      "tag": "后厨显示",
+      "title": "出餐更快，绝不漏单。",
+      "bullets": [
+        "直达屏幕",
+        "备注与过敏原",
+        "平板或手机"
+      ],
+      "image": "/landing/feature-kds-cards.webp",
+      "imageAlt": "吧台上的平板电脑显示按桌台排列的后厨订单"
+    },
+    {
+      "icon": "CalendarCheck",
+      "tag": "预订系统",
+      "title": "预订自动管理。",
+      "bullets": [
+        "免电话预订",
+        "自动确认",
+        "按桌台显示的日历"
+      ],
+      "image": "/landing/feature-booking-calendar.webp",
+      "imageAlt": "显示预订日历的两台平板电脑：按桌台显示的日视图和月视图"
+    },
+    {
+      "icon": "Receipt",
+      "tag": "桌边点餐",
+      "title": "订单直达后厨。",
+      "bullets": [
+        "顾客或服务员",
+        "直达后厨",
+        "随时开启"
+      ],
+      "image": "/landing/feature-orders-map.webp",
+      "imageAlt": "显示点餐屏幕的平板电脑：订单列表和按状态标记颜色的平面图。"
+    }
+  ],
+  "seeDetails": "了解更多",
+  "platform": {
+    "hardwareTitle": "在您现有的硬件上运行",
+    "hardwareSub": "我们不强制推销硬件。直接使用您现有的手机、平板和电脑即可。",
+    "anywhereTitle": "随时随地可用",
+    "anywhereSub": "手机、平板、笔记本、台式机。Android、iOS、Windows、Mac、Linux。在任何现代浏览器中均可使用，无需安装。"
+  },
+  "activities": {
+    "heading": "一个系统——",
+    "headingAccent": "搞定整个餐厅。",
+    "sub": "服务更快，后厨更有序，成本更低，回头客更多——尽在一个平台。",
+    "groups": [
+      {
+        "icon": "Smartphone",
+        "tag": "在餐桌——顾客",
+        "bullets": [
+          "35种语言的QR菜单",
+          "点餐无需等待服务员",
+          "呼叫服务员或要求结账",
+          "全天候桌位预订",
+          "每桌专属QR码",
+          "无需下载应用——浏览器直接打开",
+          "过敏原和饮食偏好标签方便筛选"
+        ]
+      },
+      {
+        "icon": "ChefHat",
+        "tag": "在后厨",
+        "bullets": [
+          "订单即时上屏",
+          "制作中 / 已出餐 / 已上菜分列显示",
+          "高亮显示过敏原和备注",
+          "平板或手机——告别纸质小票"
+        ]
+      },
+      {
+        "icon": "ChartColumn",
+        "tag": "管理",
+        "bullets": [
+          "修改菜单和价格——即时生效",
+          "一键AI翻译",
+          "销售分析与报表",
+          "一个账户管理多家餐厅",
+          "AI在60秒内将纸质菜单数字化",
+          "带SSL证书的独立域名"
+        ]
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "10分钟上线整个平台。 ",
+    "headingAccent": "14天完整功能体验。",
+    "sub": "菜单、点餐、预订和后厨——无需绑卡，随时取消；已有 {count} 家餐厅选择我们，只需一个邮箱即可开始。"
+  }
+}

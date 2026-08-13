@@ -1,0 +1,59 @@
+{
+  "breadcrumbLabel": "Cenas",
+  "meta": {
+    "title": "Cenas — Izveidojiet restorāna plānu no 9.90 €/mēn. | IQ Rest",
+    "description": "Izveidojiet savu plānu no moduļiem: QR ēdienkarte ar AI tulkojumu, pasūtījumu pieņemšana, galdiņu rezervācijas, virtuves ekrāns. No 9.90 €/mēn. par restorānu, apjoma atlaides. 14 dienas bez maksas, bez kartes, atceliet jebkurā laikā.",
+    "canonical": "https://iq-rest.com/lv/cenas",
+    "ogLocale": "lv_LV",
+    "ogTitle": "Cenas — Izveidojiet restorāna plānu",
+    "ogDescription": "Modulārs plāns no 9.90 €/mēn.: QR ēdienkarte, pasūtījumi, rezervācijas, KDS. Apjoma atlaides, nekādu slēptu maksu. 14 dienas bez maksas."
+  },
+  "faqSub": "Biežākie restorānu jautājumi par cenām un apmaksu. Neatradāt savējo — rakstiet mums WhatsApp.",
+  "faqItems": [
+    {
+      "q": "Kā veidojas cena?",
+      "a": "Jūs izveidojat savu plānu no moduļiem. Bāze ir QR ēdienkarte ar AI tulkojumu 35 valodās un vadību no jebkuras ierīces. Pēc tam pievienojiet nepieciešamo: galdiņu rezervācijas, virtuves ekrānu, savu domēnu. Cena ir par restorānu, ar apjoma atlaidēm, sākot no otrā."
+    },
+    {
+      "q": "Vai ir komisijas maksa par pasūtījumiem?",
+      "a": "Nē. Pasūtījumi no QR ēdienkartes un no viesmīļiem nonāk tieši restorānā. Jūs maksājat tikai fiksētu mēneša maksu."
+    },
+    {
+      "q": "Kā darbojas izmēģinājuma periods?",
+      "a": "14 dienas pilna pieeja visām funkcijām, kredītkarte nav nepieciešama. Ja līdz beigām apmaksa nav iestatīta, konts tiek apturēts: panelis paliek pieejams skatīšanās režīmā, bet viesu ēdienkarte un pasūtījumu pieņemšana tiek izslēgta. Nav nekādu automātisku maksājumu."
+    },
+    {
+      "q": "Kas notiek ar maniem datiem, kamēr konts ir apturēts?",
+      "a": "Viss tiek saglabāts: ēdienkarte, fotoattēli, pasūtījumu vēsture, rezervācijas, iestatījumi, statistika. Iestatiet apmaksu kaut vai pēc sešiem mēnešiem — viss atgriezīsies tieši tāds, kāds tas bija."
+    },
+    {
+      "q": "Vai man būs jāpārdrukā QR kodi?",
+      "a": "Nē. Kamēr konts ir apturēts, kodi rāda paziņojumu \"īslaicīgi nav pieejams\"; tiklīdz apmaksa ir iestatīta, tie paši kodi atkal atver ēdienkarti."
+    },
+    {
+      "q": "Vai varu mainīt savu plānu?",
+      "a": "Jā, jebkurā laikā no paneļa. Starpība tiek proporcionāli aprēķināta par atlikušajām apmaksātā perioda dienām. Atslēgta funkcija saglabā savus datus."
+    },
+    {
+      "q": "Cik restorānus varu pieslēgt?",
+      "a": "Cik vien vēlaties, visi tiek pārvaldīti no viena paneļa. Apjoma atlaides līdz 50%, ja jums ir 5+ restorāni. Lielām ķēdēm — individuāls plāns caur WhatsApp."
+    },
+    {
+      "q": "Kāda ir atlaide gada plānam?",
+      "a": "Aptuveni 30% salīdzinājumā ar ikmēneša norēķiniem. Precīza summa ir redzama, veidojot plānu."
+    },
+    {
+      "q": "Kā es varu atcelt abonementu?",
+      "a": "Ar vienu klikšķi no paneļa. Konts darbojas līdz apmaksātā perioda beigām, pēc tam tas tiek apturēts. Jūsu dati tiek saglabāti."
+    },
+    {
+      "q": "Kādus maksājumu veidus jūs pieņemat?",
+      "a": "Visa, Mastercard, American Express, Apple Pay, Google Pay — caur Stripe. Eiropā gada plāns atbalsta arī SEPA Direct Debit."
+    }
+  ],
+  "finalCta": {
+    "heading": "Viena cena. Nekāda riska. ",
+    "headingAccent": "14 dienas pilna pieeja.",
+    "sub": "Karte nav nepieciešama, atceliet jebkurā laikā — mums uzticas {count} restorāni. Viss, kas vajadzīgs, lai sāktu, ir e-pasts."
+  }
+}

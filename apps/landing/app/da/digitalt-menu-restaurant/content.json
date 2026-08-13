@@ -1,0 +1,332 @@
+{
+  "locale": "da",
+  "slug": "digitalt-menu-restaurant",
+  "trackPrefix": "l_digital",
+  "meta": {
+    "title": "Digital menu til restauranter | IQ Rest",
+    "description": "Digital menu til din restaurant: en online menu med fotos, allergener, AI-oversættelse og prisopdateringer i realtid. 14 dage gratis, intet kreditkort kræves.",
+    "canonical": "https://iq-rest.com/da/digitalt-menu-restaurant",
+    "ogLocale": "da_DK",
+    "ogTitle": "Digital menu til restauranter",
+    "ogDescription": "En online version af din papirmenu med fotos, allergener og AI-oversættelse. Priser opdateres i realtid.",
+    "brandLine": "IQ Rest — Digital menu til restauranter"
+  },
+  "hero": {
+    "headline": "Digital menu og hjemmeside",
+    "headlineAccent": "til din restaurant",
+    "cta": "Opret en digital menu",
+    "demoLabel": "Demo: menuen, som gæsterne ser den",
+    "sub": "Klar på 10 minutter: tag imod bestillinger fra bordet, opdatér priser løbende og modtag bookinger direkte uden provision.",
+    "phones": [
+      {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Telefon med en restaurants hjemmeside: fotos, bordbestilling og adgang til online menuen"
+      },
+      {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Telefon med en ret: foto, pris og allergenmærkater"
+      }
+    ]
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restauranter"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Caféer"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barer"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hoteller"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzeriaer"
+    }
+  ],
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "En menu på 10 minutter",
+      "sub": "Ingen udviklere og ingen langvarig opsætning"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Hurtig support",
+      "sub": "Vi hjælper dig med at sætte din menu op i chatten inden for et par timer"
+    },
+    {
+      "icon": "Globe",
+      "title": "Valgt af {count} steder",
+      "sub": "Digitale menuer og hjemmesider til restauranter i mere end 15 lande"
+    },
+    {
+      "icon": "Palette",
+      "title": "Dit eget domæne og brand",
+      "sub": "En menu på din egen adresse, ikke på en delt platform"
+    }
+  ],
+  "scan": {
+    "heading": "Har du en papirmenu eller en PDF?",
+    "headingAccent": "AI digitaliserer den på 60 sekunder.",
+    "sub": "Upload et foto eller dokument — AI genkender automatisk kategorier, retter og priser.",
+    "cta": "Scan menu"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "AI-oversættelse",
+      "heading": "En menu på 35 sprog",
+      "body": "Én QR-kode — 35 sprog. AI'en oversætter med forståelse for den kulinariske kontekst, så retterne lyder naturlige. Turister bestiller med større sikkerhed.",
+      "bullets": [
+        "35 sprog inkluderet i abonnementet",
+        "Kulinarisk AI i stedet for Google",
+        "Skift sprog med ét tryk"
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "To gæster læser den samme digitale menu på forskellige sprog på deres egne telefoner"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Allergener",
+      "heading": "Allergener og diæter på hver ret",
+      "body": "Mærk gluten, laktose, nødder, vegansk og glutenfri. Gæsterne filtrerer menuen efter deres behov og bestiller trygt.",
+      "bullets": [
+        "14 allergenkategorier",
+        "Veganske og glutenfri mærkater",
+        "Menufilter efter diætbehov"
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "En gæst filtrerer menuen efter allergener på en telefon, mens en restauratør redigerer allergenlisten på en tablet"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Design og brand",
+      "heading": "En premium menu på dit eget domæne",
+      "body": "En videobaggrund på velkomstskærmen, dit eget design og en kontaktside med kort og sociale links — på dit domæne, ikke en PDF.",
+      "bullets": [
+        "Videobaggrund og premium design",
+        "Dit eget domæne med SSL",
+        "Kontakt, kort, sociale links"
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "To telefoner på et cafébord: menuens startskærm med en videobaggrund og en kontaktside med et kort"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Bestillinger",
+      "heading": "Online bestillinger uden provision",
+      "body": "Gæsterne bestiller fra menuen eller direkte i WhatsApp — ordren går til gulvet eller køkkenet, og det koster 0 % af din omsætning.",
+      "bullets": [
+        "Fra menuen eller via WhatsApp",
+        "Til gulvet eller køkkenet, 0 %",
+        "Aktiveres i indstillingerne"
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "To telefoner på et bord: en indkøbskurv med en ordre og en bekræftelse på en gennemført ordre"
+      }
+    },
+    {
+      "icon": "CalendarCheck",
+      "eyebrow": "Bordbestilling",
+      "heading": "Bordbestilling 24/7",
+      "body": "Gæsterne booker selv et bord via menuen eller et link, du ser en kalender pr. bord og bekræfter automatisk eller manuelt.",
+      "bullets": [
+        "Gæsterne booker selv",
+        "Kalender over alle borde",
+        "Automatisk eller manuel bekræftelse"
+      ]
+    },
+    {
+      "icon": "MonitorSmartphone",
+      "eyebrow": "Administration",
+      "heading": "Styr det hele overalt",
+      "body": "Kontrolpanelet kører i browseren — telefon, tablet eller pc. Intet at installere, klar på få minutter.",
+      "bullets": [
+        "Enhver enhed, enhver browser",
+        "Intet at installere",
+        "Klar på få minutter"
+      ]
+    }
+  ],
+  "faq": {
+    "sub": "Hvad restauratører spørger om vedrørende den digitale menu i IQ Rest. Hvis dit spørgsmål ikke er på listen — skriv til os på WhatsApp.",
+    "items": [
+      {
+        "q": "Kræver det tekniske færdigheder eller CMS-erfaring?",
+        "a": "Der kræves ingen særlige færdigheder. Alt i kontrolpanelet klares med et par klik — ingen kodning, ingen kildekoder. Det tager sekunder at tilføje en ret: navn, pris, foto. En fuld opsætning af menuen tager normalt 30–60 minutter."
+      },
+      {
+        "q": "Hvad er IQ Rest digital menu?",
+        "a": "Det er en online version af din menu, som gæsterne kan tilgå via en QR-kode eller et direkte link: fotos af retter, priser, allergener, AI-oversættelse til 35 sprog og opdateringer i realtid. Menuen kører på vores servere — der er ingen software at installere eller vedligeholde, du skal kun bruge en browser."
+      },
+      {
+        "q": "Skal gæsterne bruge en app eller særligt udstyr?",
+        "a": "En gæst peger telefonens kamera mod QR-koden — menuen åbner i browseren, ingen installation. Kontrolpanelet fungerer også i enhver moderne browser: telefon, tablet eller bærbar. QR-koderne kan printes på en almindelig kontorprinter."
+      },
+      {
+        "q": "Kan jeg have menuen på mit eget domæne?",
+        "a": "Ja. Menuen forbindes til dit domæne med et SSL-certifikat — gæsterne ser din restaurants adresse, for eksempel menu.dinrestaurant.dk. Vores support tager sig af opsætningen af domæne og certifikat; du skal blot angive en DNS-record."
+      },
+      {
+        "q": "Kan jeg administrere flere restauranter fra én konto?",
+        "a": "Ja. Tilføj flere steder til en enkelt konto: hvert sted har sin egen menu, design, QR-koder og statistik, og du skifter mellem dem med ét klik. Antallet af steder afhænger af dit abonnement."
+      },
+      {
+        "q": "Hvor svært er det at sætte en menu op fra bunden?",
+        "a": "Tre trin: opret kategorier, tilføj retter med priser og fotos, print QR-koder til bordene. Hvis du har en papirmenu eller en PDF, uploader du den bare — AI genkender kategorier, navne og priser og udfylder kortene automatisk. En basis-menu er klar på 5 minutter; en fuld opsætning afhænger af antallet af retter."
+      },
+      {
+        "q": "Hvilken support tilbyder I?",
+        "a": "Vi svarer på WhatsApp og e-mail i arbejdstiden. Vi hjælper med den indledende opsætning, tilslutning af dit domæne og design af menuen. Har du brug for en demo eller hjælp til at komme i gang — skriv til os."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Din menu online på 10 minutter. ",
+    "headingAccent": "14 dages fuld adgang.",
+    "sub": "Intet kort kræves, opsig når som helst. {count} restauranter betror os deres menuer og hjemmesider. Du skal kun bruge en e-mail."
+  },
+  "spotlights": [
+    {
+      "heading": "En menu på 35 sprog",
+      "sub": "Gæsterne åbner menuen på deres modersmål. AI oversætter retternes navne, beskrivelser, kategorier og valgmuligheder med forståelse for den kulinariske kontekst.",
+      "bullets": [
+        {
+          "icon": "Globe",
+          "title": "35 sprog i abonnementet",
+          "sub": "Europæiske og asiatiske sprog er inkluderet — ingen ekstra betaling pr. sprog"
+        },
+        {
+          "icon": "Timer",
+          "title": "Oversættes når du gemmer",
+          "sub": "Tilføj eller rediger en ret — oversættelser til alle menuens sprog er klar med det samme"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Manuelle ændringer er beskyttet",
+          "sub": "En oversættelse, du retter manuelt, låses, og AI'en overskriver den aldrig"
+        }
+      ]
+    },
+    {
+      "heading": "Allergener og diæter på hver ret",
+      "sub": "Tilføj allergen- og diætmærkater på en ret — gæsterne ser dem i menuen og filtrerer retterne efter deres behov.",
+      "bullets": [
+        {
+          "icon": "WheatOff",
+          "title": "14 allergenkategorier",
+          "sub": "Den fulde liste ifølge EU-regler: gluten, nødder, laktose, fisk og skaldyr m.m."
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "13 diætmærkater",
+          "sub": "Vegansk, vegetarisk, glutenfri, halal, kosher, stærk og andre diætmærkater"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Filtrering med ét tryk",
+          "sub": "Gæsterne vælger deres behov — menuen viser kun de retter, der passer"
+        }
+      ]
+    },
+    {
+      "heading": "En premium menu på dit eget domæne",
+      "sub": "En foto- eller videobaggrund på velkomstskærmen, din brandfarve og dit logo — menuen ligner din hjemmeside, ikke en PDF, og kører på dit domæne.",
+      "bullets": [
+        {
+          "icon": "Palette",
+          "title": "Design der matcher dit brand",
+          "sub": "Video eller foto på startskærmen, en accentfarve og logo — opsætning uden en designer"
+        },
+        {
+          "icon": "Globe",
+          "title": "Dit eget domæne med SSL",
+          "sub": "Menuen åbner på din adresse via en sikker forbindelse"
+        },
+        {
+          "icon": "Map",
+          "title": "Kontakt og kort",
+          "sub": "En side med din adresse, åbningstider, kort og sociale links — en komplet restaurant-hjemmeside"
+        }
+      ]
+    },
+    {
+      "heading": "Online bestillinger uden provision",
+      "sub": "En gæst afgiver en bestilling fra bordet — den vises med det samme i kontrolpanelet og på køkkenskærmen. Platformen tager 0 % af din omsætning.",
+      "bullets": [
+        {
+          "icon": "ShoppingCart",
+          "title": "Fra menuen eller via WhatsApp",
+          "sub": "En bestilling i systemet eller en besked til din WhatsApp — vælg tilstand i indstillingerne"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Direkte til køkkenet",
+          "sub": "En ny bestilling vises på køkkenskærmen og tjenerens enhed uden forsinkelse"
+        },
+        {
+          "icon": "Receipt",
+          "title": "0 % i provision",
+          "sub": "Betalingen foregår mellem dig og gæsten — platformen beholder intet fra dine ordrer"
+        }
+      ]
+    },
+    {
+      "heading": "Bordbestilling 24/7",
+      "sub": "Gæsterne booker selv et bord direkte fra menuen, når som helst. Systemet tjekker anmodningen op mod din tidsplan og ledige borde.",
+      "bullets": [
+        {
+          "icon": "CalendarCheck",
+          "title": "Kalender pr. bord",
+          "sub": "Systemet matcher et bord med antallet af gæster og viser bookinger pr. dag og bord"
+        },
+        {
+          "icon": "CalendarDays",
+          "title": "Automatisk eller manuelt",
+          "sub": "Bekræft hver booking selv, eller slå automatisk bekræftelse til"
+        },
+        {
+          "icon": "Mail",
+          "title": "E-mails til gæsten og til dig",
+          "sub": "Gæsten får en bekræftelse på e-mail, ejerne får en notifikation om en ny booking"
+        }
+      ]
+    },
+    {
+      "heading": "Styr det hele overalt",
+      "sub": "Kontrolpanelet kører i browseren på en telefon, tablet eller computer. Ændringer vises for gæsterne med det samme.",
+      "bullets": [
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Enhver enhed",
+          "sub": "Telefon, tablet eller pc — en browser er alt, hvad der kræves, ingen installation nødvendig"
+        },
+        {
+          "icon": "Timer",
+          "title": "Ændringer på farten",
+          "sub": "En prisændring, stop-liste eller skjult ret gælder med det samme, uden publicering eller ventetid"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Valgmuligheder for retter",
+          "sub": "Størrelser, tilkøb og varianter med pris — gæsterne sammensætter selv deres ret"
+        }
+      ]
+    }
+  ],
+  "hideFeatureHeading": true
+}

@@ -1,6 +1,5 @@
-import createMiddleware from "next-intl/middleware";
 import { NextRequest, NextResponse } from "next/server";
-import { routing, locales, Locale } from "./i18n/routing";
+import { locales, Locale } from "./lib/locales";
 import {
   getLocaleByCountryAndRegion,
   getLocaleByAcceptLanguage,
@@ -9,13 +8,12 @@ import {
 import { getCurrencyByCountry } from "./lib/country-currency-map";
 import { HOME_META, lastModifiedFor } from "./lib/page-meta";
 import { isGone } from "./lib/gone-paths";
-import { LOCALE_SLUG_OVERRIDES, swapLocale } from "./lib/locale-slug-overrides";
-
-const EN_ROOT_SLUGS: ReadonlySet<string> = new Set(
-  Object.values(LOCALE_SLUG_OVERRIDES)
-    .map((m) => m.en)
-    .filter((v): v is string => !!v),
-);
+import {
+  LOCALE_SLUG_OVERRIDES,
+  EN_ROOT_SLUGS,
+  canonicalSlugRedirect,
+  deepLinkPath,
+} from "./lib/locale-slug-overrides";
 
 // Minimal HTML body for HTTP 410. Search engines look at the status code,
 // not the body — keep it tiny but human-readable in case anyone lands here.
@@ -42,11 +40,29 @@ function goneResponse(pathname: string): NextResponse {
   });
 }
 
-const intlMiddleware = createMiddleware(routing);
-
 // Create regex pattern for all locales
 const localePattern = locales.join("|");
 const localeRegex = new RegExp(`^/(${localePattern})(/|$)`);
+
+// Replaces next-intl's `createMiddleware` `Link` response header (hreflang
+// alternates, https://developers.google.com/search/docs/specialty/international/localized-versions)
+// for every request that reaches this point — by then `pathname` always
+// carries a valid locale prefix (bare `/`, unprefixed paths and the EN root
+// are all handled earlier). `localePrefix: "always"` in the old config meant
+// every locale — including `en` — got a `/<locale>` alternate entry, even
+// though EN itself is actually served unprefixed at `/`; kept byte-identical
+// here rather than "fixed", since that's the SEO signal already indexed.
+function alternateLinksHeader(request: NextRequest, pathname: string): string {
+  const host = request.headers.get("x-forwarded-host") ?? request.headers.get("host");
+  const protocol = request.headers.get("x-forwarded-proto") ?? request.nextUrl.protocol.replace(":", "");
+  const normalizedPathname = pathname.replace(localeRegex, "/").replace(/(.)\/$/, "$1");
+  const links = locales.map((locale) => {
+    const path = normalizedPathname === "/" ? `/${locale}` : `/${locale}${normalizedPathname}`;
+    const url = `${protocol}://${host}${path}`;
+    return `<${url}>; rel="alternate"; hreflang="${locale}"`;
+  });
+  return links.join(", ");
+}
 
 const GEO_COUNTRY_COOKIE = "geo_country";
 const GEO_LOCALE_COOKIE = "geo_locale";
@@ -138,12 +154,18 @@ function setGeoCookies(request: NextRequest, response: NextResponse): void {
   // X-Currency header — currency must be a direct function of the detected
   // country, not a separately-derived value that can drift (that drift is how
   // a Swede ended up billed in USD).
-  const billingCurrency = getCurrencyByCountry(cfCountry);
-  response.cookies.set(GEO_CURRENCY_COOKIE, billingCurrency, {
-    path: "/",
-    maxAge: 60 * 60 * 24 * 7,
-    sameSite: "lax",
-  });
+  // Set once, then leave alone: the pricing page's currency selector
+  // (app/api/currency) writes the same cookie when the visitor picks a
+  // currency explicitly, and that pick must survive future navigations
+  // instead of being overwritten back to the geo default on every request.
+  if (!request.cookies.get(GEO_CURRENCY_COOKIE)?.value) {
+    const billingCurrency = getCurrencyByCountry(cfCountry);
+    response.cookies.set(GEO_CURRENCY_COOKIE, billingCurrency, {
+      path: "/",
+      maxAge: 60 * 60 * 24 * 7,
+      sameSite: "lax",
+    });
+  }
 }
 
 export default function middleware(request: NextRequest) {
@@ -169,17 +191,17 @@ export default function middleware(request: NextRequest) {
   // swapLocale handles en→root, missing override→locale home (never a 404).
   // 302 (geo-dependent, must not be cached); respects NEXT_LOCALE for returners.
   if (pathname === "/d" || pathname.startsWith("/d/")) {
-    const enPath = pathname.slice(2) || "/"; // "/d/<slug>" → "/<slug>"
+    const slug = pathname.slice(2) || "/"; // "/d/<slug>" → "/<slug>", "/d" → "/"
     const preferred = request.cookies.get("NEXT_LOCALE")?.value as Locale | undefined;
     const locale = (preferred && locales.includes(preferred))
       ? preferred
       : detectLocale(request);
-    // Опечатка/неизвестный слаг в ссылке объявления → локальный home вместо
-    // 404 (swapLocale пропустил бы неизвестный путь как есть).
-    const known = enPath === "/" || EN_ROOT_SLUGS.has(enPath);
-    const localizedPath = known
-      ? swapLocale(enPath, locale)
-      : locale === "en" ? "/" : `/${locale}`;
+    // Accept the deep-link slug in ANY language (not just EN): resolve its page
+    // TYPE and emit the equivalent slug in the geo/preferred locale. Unknown
+    // slug → locale home (never a 404).
+    const localizedPath = slug === "/"
+      ? (locale === "en" ? "/" : `/${locale}`)
+      : deepLinkPath(slug, locale);
     const target = new URL(localizedPath, request.url);
     target.search = request.nextUrl.search; // preserve fbclid/utm/gclid
     const response = NextResponse.redirect(target, 302);
@@ -214,12 +236,37 @@ export default function middleware(request: NextRequest) {
     }
   }
 
+  // Slug canonicalisation: a known route slug served under the WRONG locale
+  // (the ES slug under /it, or any localized slug at the EN root) 301s to that
+  // locale's own slug for the same page —
+  // /it/menu-digital-restaurantes → /it/menu-digitale-ristoranti. Keeps deep
+  // links and mistyped locale swaps on the right page instead of 404.
+  {
+    const seg = pathname.split("/").filter(Boolean);
+    const firstIsLocale =
+      seg.length > 0 && (locales as readonly string[]).includes(seg[0]);
+    const urlLocale = firstIsLocale ? seg[0] : "en";
+    const rest = firstIsLocale ? `/${seg.slice(1).join("/")}` : `/${seg.join("/")}`;
+    if (rest !== "/") {
+      const corrected = canonicalSlugRedirect(urlLocale, rest);
+      if (corrected && corrected !== pathname) {
+        const target = new URL(corrected, request.url);
+        target.search = request.nextUrl.search;
+        const response = NextResponse.redirect(target, 301);
+        setGeoCookies(request, response);
+        return response;
+      }
+    }
+  }
+
   // Per-locale custom landings replace the locale-routed main page (e.g. /es, /it).
-  // Match ONLY the bare locale path so sub-routes like /it/contacts keep going through next-intl.
+  // Match ONLY the bare locale path so sub-routes like /it/contacts fall through
+  // to the app/[locale] tree below instead.
   // `/en` is already handled above (301 → /), so it never reaches this match.
   const onlyLocaleMatch = pathname.match(/^\/([a-z]{2})$/);
   if (onlyLocaleMatch && (locales as readonly string[]).includes(onlyLocaleMatch[1])) {
     const response = NextResponse.next();
+    response.headers.set("x-pathname", pathname);
     response.headers.set("Last-Modified", new Date(HOME_META.lastModified).toUTCString());
     response.headers.set("Content-Language", onlyLocaleMatch[1]);
     setGeoCookies(request, response);
@@ -241,6 +288,7 @@ export default function middleware(request: NextRequest) {
       Object.entries(LOCALE_SLUG_OVERRIDES).find(([, m]) => m.en === pathname)?.[0] ?? pathname,
     );
     if (lm) response.headers.set("Last-Modified", new Date(lm).toUTCString());
+    response.headers.set("x-pathname", pathname);
     response.headers.set("Content-Language", "en");
     setGeoCookies(request, response);
     return response;
@@ -270,8 +318,11 @@ export default function middleware(request: NextRequest) {
     return NextResponse.redirect("https://love-eatery.iq-rest.com", 301);
   }
 
-  // Use next-intl middleware for locale handling
-  const response = intlMiddleware(request);
+  // By this point pathname is always locale-prefixed with a known locale
+  // (see the redirect-without-prefix block above) — plain passthrough plus
+  // the hreflang alternates next-intl's middleware used to set.
+  const response = NextResponse.next();
+  response.headers.set("Link", alternateLinksHeader(request, pathname));
 
   // Add pathname to headers for SSR components
   response.headers.set("x-pathname", request.nextUrl.pathname);

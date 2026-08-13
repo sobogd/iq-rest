@@ -1,0 +1,59 @@
+{
+  "breadcrumbLabel": "Cenik",
+  "meta": {
+    "title": "Cenik — Sestavite paket za restavracijo od 9,90 €/mes | IQ Rest",
+    "description": "Sestavite paket iz modulov: QR meni z AI prevodom, sprejemanje naročil, rezervacije miz, kuhinjski zaslon. Od 9,90 €/mes na restavracijo, količinski popusti. 14 dni brezplačno, brez kartice, prekličite kadarkoli.",
+    "canonical": "https://iq-rest.com/sl/cene",
+    "ogLocale": "sl_SI",
+    "ogTitle": "Cenik — Sestavite paket za restavracijo",
+    "ogDescription": "Modularni paket od 9,90 €/mes: QR meni, naročila, rezervacije, KDS. Količinski popusti, brez skritih stroškov. 14 dni brezplačno."
+  },
+  "faqSub": "Pogosta vprašanja restavracij o cenah in plačilu. Če ne najdete svojega — pišite nam na WhatsApp.",
+  "faqItems": [
+    {
+      "q": "Kako je sestavljena cena?",
+      "a": "Svoj paket sestavite iz modulov. Osnova je QR meni z AI prevodom v 35 jezikov in upravljanjem s katerekoli naprave. Nato dodate, kar potrebujete: rezervacije miz, kuhinjski zaslon, lastno domeno. Cena velja na restavracijo, s količinskimi popusti, ki se začnejo pri drugi restavraciji."
+    },
+    {
+      "q": "Ali obstaja provizija od naročil?",
+      "a": "Ne. Naročila iz QR menija in od natakarjev gredo neposredno v restavracijo. Plačate samo fiksno mesečno ceno."
+    },
+    {
+      "q": "Kako deluje preizkusno obdobje?",
+      "a": "14 dni polnega dostopa do vseh funkcij, brez kreditne kartice. Če do konca obdobja ne nastavite plačila, se račun začasno ustavi: plošča ostane na voljo v načinu samo za branje, meni za goste in sprejemanje naročil pa se izklopita. Ni samodejnih bremenitev."
+    },
+    {
+      "q": "Kaj se zgodi z mojimi podatki med začasno ustavitvijo?",
+      "a": "Vse se ohrani: meni, fotografije, zgodovina naročil, rezervacije, nastavitve, statistika. Plačilo lahko nastavite tudi šest mesecev kasneje — vse se vrne točno tako, kot je bilo."
+    },
+    {
+      "q": "Ali bom moral ponovno natisniti QR kode?",
+      "a": "Ne. Med začasno ustavitvijo kode prikazujejo obvestilo \"začasno ni na voljo\"; ko je plačilo nastavljeno, iste kode ponovno odprejo meni."
+    },
+    {
+      "q": "Ali lahko spremenim svoj paket?",
+      "a": "Da, kadarkoli v nadzorni plošči. Razlika v ceni se sorazmerno porazdeli na preostale dni plačanega obdobja. Izklopljena funkcija ohrani svoje podatke."
+    },
+    {
+      "q": "Koliko restavracij lahko povežem?",
+      "a": "Kolikor želite, vse upravljate iz ene plošče. Količinski popusti do 50 % pri 5+ restavracijah. Za velike verige — paket po meri prek WhatsAppa."
+    },
+    {
+      "q": "Kakšen je popust pri letnem paketu?",
+      "a": "Približno 30 % v primerjavi z mesečnim obračunom. Točen znesek se prikaže med sestavljanjem vašega paketa."
+    },
+    {
+      "q": "Kako prekličem naročnino?",
+      "a": "Z enim klikom v nadzorni plošči. Račun deluje do konca plačanega obdobja, nato se začasno ustavi. Vaši podatki se ohranijo."
+    },
+    {
+      "q": "Katere načine plačila sprejemate?",
+      "a": "Visa, Mastercard, American Express, Apple Pay, Google Pay — prek storitve Stripe. V Evropi letni paket podpira tudi SEPA direktno bremenitev."
+    }
+  ],
+  "finalCta": {
+    "heading": "Ena cena. Nič tveganja. ",
+    "headingAccent": "14 dni polnega dostopa.",
+    "sub": "Brez kreditne kartice, prekličite kadarkoli — zaupa nam {count} restavracij. Za začetek potrebujete le e-pošto."
+  }
+}

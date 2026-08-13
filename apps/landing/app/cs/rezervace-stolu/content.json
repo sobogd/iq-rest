@@ -1,0 +1,206 @@
+{
+  "locale": "cs",
+  "slug": "rezervace-stolu",
+  "trackPrefix": "l_bookings",
+  "meta": {
+    "title": "Rezervace stolů 24/7 pro restaurace | IQ Rest",
+    "description": "Rezervace stolů 24/7 pro vaši restauraci: hosté si stoly rezervují sami přes QR menu nebo web. Kalendář podle stolů, automatická potvrzení a připomenutí. Žádné telefonáty, žádní ztracení hosté. 14 dní zdarma.",
+    "canonical": "https://iq-rest.com/cs/rezervace-stolu",
+    "ogLocale": "cs_CZ",
+    "ogTitle": "Rezervace stolů 24/7 — Hosté si rezervují sami",
+    "ogDescription": "Hosté si rezervují stoly přes QR menu nebo web. Kalendář, automatická potvrzení, připomenutí. Ani jeden ztracený host.",
+    "brandLine": "IQ Rest — Rezervace stolů pro restaurace"
+  },
+  "hero": {
+    "headline": "Rezervace stolů 24/7,",
+    "cta": "Nastavit rezervace stolů",
+    "sub": "Hosté rezervují 24/7 přes QR menu nebo odkaz. Kalendář podle stolů, automatická potvrzení a připomenutí.",
+    "headlineAccent": "bez telefonátů",
+    "demoLabel": "Demo: rezervační kalendář",
+    "tablet": {
+      "src": "/landing/hero-card-reservation.webp",
+      "alt": "Tablet s rezervačním kalendářem: měsíční pohled a seznam rezervací čekajících na potvrzení"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurace"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kavárny"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bary"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotely"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerie"
+    }
+  ],
+  "scan": {
+    "heading": "Spusťte rezervace stolů",
+    "headingAccent": "za 5 minut.",
+    "sub": "Připojte kalendář, přidejte stoly s fotkami a kapacitou — hosté začnou rezervovat ještě dnes.",
+    "cta": "Zapnout rezervace"
+  },
+  "subFeatures": [
+    {
+      "icon": "CalendarPlus",
+      "eyebrow": "Rezervační formulář",
+      "heading": "Hosté si rezervují sami — podle data, času a počtu osob.",
+      "body": "Host si otevře QR menu nebo přímý odkaz, vybere datum, čas a počet osob — a okamžitě vidí volné stoly: s fotkou, popisem (terasa, u okna, gauč na baru) a kapacitou. Potvrzení se odešle automaticky e-mailem a na WhatsApp.",
+      "bullets": [
+        "Výběr stolu podle fotky, popisu a kapacity.",
+        "Automatické potvrzení a připomenutí hodinu před návštěvou.",
+        "Minimální formulář: jméno, telefon, počet osob."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-form.webp",
+        "alt": "Host si rezervuje stůl v restauraci z telefonu: výběr data, času, počtu osob a stolu"
+      }
+    },
+    {
+      "icon": "CalendarDays",
+      "eyebrow": "Rezervační kalendář",
+      "heading": "Kalendář podle dnů a stolů — vše viditelné během vteřiny.",
+      "body": "V administraci je rezervační kalendář rozdělený podle stolů, dnů, týdnů a měsíců. Volná okna, obsazené stoly, potvrzené i čekající rezervace se zobrazí na jedné obrazovce. Funguje na tabletu na place i na notebooku v kanceláři.",
+      "bullets": [
+        "Denní, týdenní a měsíční pohledy.",
+        "Rozpis podle stolů: kdo, kdy, kolik hostů.",
+        "Přeplánování, zrušení nebo potvrzení rezervace — jedním kliknutím z telefonu."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-calendar.webp",
+        "alt": "Rezervační kalendář v administraci IQ Rest na dvou tabletech: denní mřížka podle stolů a měsíční kalendář"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Na co se majitelé podniků ptají ohledně rezervací stolů v IQ Rest. Nenašli jste svůj dotaz — napište nám na WhatsApp.",
+    "items": [
+      {
+        "q": "Můžu si vybrat dny a časy, kdy jsou rezervace dostupné?",
+        "a": "Ano. V administraci si nastavíte harmonogram pro každý den v týdnu: hodiny pro rezervace a pauzu mezi obědy a večeřemi. Rezervace můžete také dočasně úplně vypnout — hosté uvidí, že online rezervace nejsou k dispozici."
+      },
+      {
+        "q": "Můžu nahrát fotku každého stolu?",
+        "a": "Ano. Každý stůl má fotku, kapacitu a zónu (terasa, u okna, bar). Hosté přesně vidí, který stůl si rezervují, a mohou si informovaně vybrat."
+      },
+      {
+        "q": "Můžu omezit počet hostů u stolu?",
+        "a": "Ano. Každý stůl má nastavenou kapacitu — systém hostům nabízí jen vhodné stoly a zablokuje možnost, aby si stůl pro dva rezervovala skupina šesti lidí."
+      },
+      {
+        "q": "Jak těžké je nastavit rezervace?",
+        "a": "Tři kroky: přidejte stoly s fotkami a kapacitou, zapněte režim rezervací v nastavení a sdílejte odkaz nebo QR kód. Spuštění zabere 5–10 minut."
+      },
+      {
+        "q": "Můžu nastavit automatické nebo ruční potvrzování rezervací?",
+        "a": "Ano, režim si vyberete v nastavení. Při automatickém potvrzování je host potvrzen hned po odeslání formuláře. Při ručním se požadavek objeví v panelu jako „čeká na potvrzení“ — manažer ho potvrdí nebo zamítne. Ruční režim se hodí, když máte omezený počet stolů."
+      },
+      {
+        "q": "Účtujete si poplatek za každou rezervaci?",
+        "a": "Žádné poplatky nejsou: rezervace jsou součástí předplatného — žádná procenta z hostů, žádné poplatky za rezervaci, žádní prostředníci. Fixní platba a neomezené rezervace."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Rezervace za 10 minut. ",
+    "headingAccent": "14 dní plného přístupu.",
+    "sub": "Bez karty, zrušení kdykoliv. {count} podniků s námi ulehčuje práci své obsluze. Stačí vám jen e-mail."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Hosté si rezervují sami",
+      "sub": "Datum, čas a počet osob — z QR menu nebo přes přímý odkaz, v kteroukoliv denní dobu. Systém ukazuje jen volná okna.",
+      "bullets": [
+        {
+          "icon": "CalendarPlus",
+          "title": "Rezervace 24/7",
+          "sub": "Hosté rezervují i v noci nebo o víkendu — žádné telefony, žádné čekání na odpověď"
+        },
+        {
+          "icon": "Users",
+          "title": "Stůl podle počtu osob",
+          "sub": "Systém sám vybere vhodný stůl podle kapacity"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Minimální formulář",
+          "sub": "Jméno, telefon a počet osob — vyplnění zabere půl minuty"
+        }
+      ]
+    },
+    {
+      "heading": "Kalendář podle dnů a stolů",
+      "sub": "Všechny rezervace v jednom kalendáři: podívejte se, co je volné, co je potvrzené a kdo přijde.",
+      "bullets": [
+        {
+          "icon": "CalendarDays",
+          "title": "Den, týden, měsíc",
+          "sub": "Přepínejte pohledy a plánujte obsazenost dopředu"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Rozpis podle stolů",
+          "sub": "Kdo, kdy a pro kolik hostů — u každého stolu"
+        },
+        {
+          "icon": "Smartphone",
+          "title": "Správa z telefonu",
+          "sub": "Přeplánování, zrušení nebo potvrzení rezervace — jedním kliknutím"
+        }
+      ]
+    },
+    {
+      "heading": "Harmonogram a režimy",
+      "sub": "Nastavte si rezervační harmonogram pro každý den v týdnu, délku rezervace a režim potvrzování.",
+      "bullets": [
+        {
+          "icon": "Clock",
+          "title": "Harmonogram podle dnů",
+          "sub": "Samostatné hodiny pro každý den v týdnu, včetně pauzy mezi obědy a večeřemi"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Délka rezervace",
+          "sub": "Nastavte si interval rezervace tak, aby vyhovoval formátu vašeho podniku"
+        },
+        {
+          "icon": "CalendarCheck",
+          "title": "Automaticky nebo ručně",
+          "sub": "Potvrďte každou rezervaci sami, nebo zapněte automatické potvrzování"
+        }
+      ]
+    },
+    {
+      "heading": "Upozornění bez ruční práce",
+      "sub": "Systém informuje hosta i váš tým — e-mail a obrazovka rezervací se aktualizují okamžitě.",
+      "bullets": [
+        {
+          "icon": "Mail",
+          "title": "E-mail hostovi",
+          "sub": "Potvrzení rezervace se odesílá e-mailem automaticky"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Upozornění podniku",
+          "sub": "Majitelům přijde e-mail o každé nové rezervaci"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Obrazovka rezervací u vchodu",
+          "sub": "Tablet hostesky ukazuje nové rezervace v reálném čase"
+        }
+      ]
+    }
+  ]
+}

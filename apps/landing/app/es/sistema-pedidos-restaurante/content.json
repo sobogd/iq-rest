@@ -1,0 +1,236 @@
+{
+  "locale": "es",
+  "slug": "sistema-pedidos-restaurante",
+  "trackPrefix": "l_orders",
+  "meta": {
+    "title": "Toma de comandas en el restaurante — comensal y camarero | IQ Rest",
+    "description": "Toma de comandas en el restaurante desde el teléfono o la tableta: plano de la sala, división de la cuenta, estados, opciones y comentarios. El comensal pide desde la mesa; el camarero, desde su dispositivo. 14 días gratis.",
+    "canonical": "https://iq-rest.com/es/sistema-pedidos-restaurante",
+    "ogLocale": "es_ES",
+    "ogTitle": "Toma de comandas en el restaurante — comensal y camarero",
+    "ogDescription": "El comensal desde la mesa o el camarero desde el teléfono: el pedido llega al momento a cocina. Plano de la sala, división de la cuenta, estados, opciones y comentarios.",
+    "brandLine": "IQ Rest — Toma de comandas en el restaurante"
+  },
+  "hero": {
+    "headline": "Pedidos desde la mesa,",
+    "cta": "Configurar pedidos online",
+    "sub": "El comensal pide en la mesa o el camarero desde cualquier dispositivo: directo a cocina. Plano de la sala y división de la cuenta.",
+    "headlineAccent": "directos a cocina",
+    "demoLabel": "Demo: pantalla de pedidos",
+    "tablet": {
+      "src": "/landing/feature-orders-modal.webp",
+      "alt": "Tableta con un pedido abierto: lista de platos y acciones — cambiar de mesa, dividir el pedido, descuento"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurantes"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafeterías"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bares"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hoteles"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerías"
+    }
+  ],
+  "scan": {
+    "heading": "Instale el sistema de toma de comandas",
+    "headingAccent": "en 5 minutos.",
+    "sub": "Escanee el menú en papel o el PDF: la IA reconoce platos, precios y categorías. Conecte una tableta en la sala y empiece a recibir pedidos desde las mesas.",
+    "cta": "Escanear menú"
+  },
+  "subFeatures": [
+    {
+      "icon": "Map",
+      "eyebrow": "Lista y plano de la sala",
+      "heading": "La lista de pedidos junto al plano de la sala.",
+      "body": "Todos los pedidos activos aparecen a la derecha: estado, importe, hora de creación y número de referencias. A la izquierda, el plano de la sala: las mesas se colorean según el estado — libre, ocupada, requiere atención. Un toque en la mesa abre el pedido; un toque en la tarjeta, la vista detallada. Sin cambiar de pantalla.",
+      "bullets": [
+        "Plano de la sala: mesas coloreadas según el estado del pedido.",
+        "Lista de pedidos al lado: importe, hora y número de referencias.",
+        "Un toque en la mesa abre el pedido o crea uno nuevo."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-map.webp",
+        "alt": "Tableta en la estación del camarero: lista de pedidos y plano de la sala con mesas de colores"
+      }
+    },
+    {
+      "icon": "ClipboardList",
+      "eyebrow": "Ficha del pedido",
+      "heading": "Ficha del pedido: estados, duplicado y eliminación con un solo toque.",
+      "body": "Cada referencia tiene su propio estado (Pending / Cooking / Ready / Served): la cocina y el camarero ven la misma imagen en tiempo real. Un toque en el punto abre el menú de acciones: cambiar el estado, duplicar la referencia con los mismos modificadores y opciones, o eliminarla. Todas las acciones se hacen directamente en la ficha del pedido.",
+      "bullets": [
+        "Estado de cada referencia: Pending / Cooking / Ready / Served.",
+        "Duplicado de una referencia con un solo toque, con las mismas opciones.",
+        "Eliminación de la referencia directamente desde la ficha del pedido."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-detail.webp",
+        "alt": "Tableta con la ficha detallada de un pedido: estados de los platos, duplicado y eliminación de referencias"
+      }
+    },
+    {
+      "icon": "Receipt",
+      "eyebrow": "División de la cuenta",
+      "heading": "División de la cuenta cuando los comensales pagan por separado.",
+      "body": "Si los comensales deciden pagar por separado, marque con casillas las referencias que pasan al nuevo ticket; el resto se queda en el actual. El sistema muestra ambos importes al momento. Un toque en «Split order» y tiene dos pedidos independientes con los totales correctos, ambos asignados a sus mesas.",
+      "bullets": [
+        "Selección de las referencias a separar mediante casillas.",
+        "El importe del nuevo ticket y del restante se muestra al instante.",
+        "Un solo toque y el pedido queda dividido sin recálculos manuales."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-split.webp",
+        "alt": "Tableta sobre la mesa del restaurante: división de la cuenta entre comensales"
+      }
+    },
+    {
+      "icon": "Smartphone",
+      "eyebrow": "Añadir desde el móvil",
+      "heading": "Añadir referencias desde el teléfono, en tres pasos.",
+      "body": "El camarero no está atado a un solo dispositivo: abre la sección de toma de comandas en su teléfono y añade una referencia en tres pasos — elegir la categoría, elegir el plato y elegir las opciones (tamaño, punto de cocción, salsas e ingredientes adicionales). El precio se recalcula automáticamente. El comentario para la cocina se añade en el último paso.",
+      "bullets": [
+        "Tres pasos: categoría → plato → opciones.",
+        "Opciones (tamaño, extras, ingredientes) con precio en un solo clic.",
+        "Campo de comentario en el paso final."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-mobile.webp",
+        "alt": "Cuatro teléfonos con los pasos para añadir una referencia al pedido: categoría, plato, tamaño y comentario"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Lo que preguntan los hosteleros sobre la toma de comandas en IQ Rest. Si su pregunta no está en la lista, escríbanos por WhatsApp.",
+    "items": [
+      {
+        "q": "¿Pueden trabajar varios camareros a la vez desde dispositivos distintos?",
+        "a": "Sí. Cada camarero conecta su propio dispositivo y ve las mismas mesas, pedidos y estados en tiempo real. Un cambio hecho por uno aparece de inmediato para los demás, sin conflictos ni bloqueos."
+      },
+      {
+        "q": "¿Pueden los camareros trabajar desde sus dispositivos personales?",
+        "a": "Sí. La pantalla de pedidos funciona en el navegador: no hay que instalar nada. El teléfono o la tableta se conecta con un código de seis dígitos generado en el panel y, al terminar el turno, el acceso se revoca con un solo toque."
+      },
+      {
+        "q": "¿Se pueden añadir opciones obligatorias a los platos (tamaño, punto de cocción)?",
+        "a": "Sí. En cada plato se configura cualquier número de grupos de opciones: obligatorios («Tamaño»: Small / Medium / Big) y opcionales («Punto de cocción»: rare / medium / well done). Las opciones afectan al precio. Si el grupo es obligatorio, el sistema pedirá elegir una variante, lo que evita errores."
+      },
+      {
+        "q": "¿Se pueden indicar comentarios y añadidos a un plato?",
+        "a": "Sí. En el último paso hay un campo de comentario («sin cebolla», «alergia a los frutos secos»). Los añadidos se configuran como opciones con suplemento («+ Salsa barbacoa», «+ Pan»). Los comentarios se ven en la pantalla de cocina y aparecen resaltados en color."
+      },
+      {
+        "q": "¿Hay estadísticas de los pedidos?",
+        "a": "Sí. En la sección de analítica: facturación por días, ticket medio y platos más populares. Estos datos ayudan a planificar los turnos y las compras."
+      },
+      {
+        "q": "¿Se pueden dividir los pedidos?",
+        "a": "Sí. Marque las referencias que pasan al nuevo ticket: los importes de ambos tickets se recalculan automáticamente, sin cálculos manuales ni cambiar de sección."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Pedidos en 10 minutos. ",
+    "headingAccent": "14 días de acceso completo.",
+    "sub": "Sin tarjeta y con cancelación en cualquier momento. {count} restaurantes ya envían sus comandas a cocina. Solo hace falta un email."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Plano de la sala y lista de pedidos",
+      "sub": "Los pedidos activos junto al plano de la sala: las mesas se colorean según su estado y un toque abre el pedido o crea uno nuevo.",
+      "bullets": [
+        {
+          "icon": "Map",
+          "title": "Mesas por estado",
+          "sub": "Libre, ocupada o requiere atención: se ve de un vistazo"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Lista de pedidos activos",
+          "sub": "Importe, hora de creación y número de referencias de cada pedido"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Nuevo pedido desde el plano",
+          "sub": "Un toque en una mesa libre abre directamente la toma de la comanda"
+        }
+      ]
+    },
+    {
+      "heading": "Estado de cada referencia",
+      "sub": "La cocina y el camarero ven la misma imagen: cada plato con su propio estado, desde aceptado hasta servido.",
+      "bullets": [
+        {
+          "icon": "Timer",
+          "title": "Estados por plato",
+          "sub": "Pending, Cooking, Ready, Served: por referencia, no por el pedido completo"
+        },
+        {
+          "icon": "Receipt",
+          "title": "Duplicado de referencias",
+          "sub": "Repita un plato con las mismas opciones con un solo toque"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Cambios sobre la marcha",
+          "sub": "Elimine referencias directamente desde la ficha del pedido"
+        }
+      ]
+    },
+    {
+      "heading": "División de la cuenta",
+      "sub": "Si los comensales pagan por separado, marque las referencias con casillas y pasan al nuevo ticket. Los importes se recalculan al instante.",
+      "bullets": [
+        {
+          "icon": "Receipt",
+          "title": "Casillas por referencia",
+          "sub": "Elija los platos del nuevo ticket; el resto se queda en el actual"
+        },
+        {
+          "icon": "ChartColumn",
+          "title": "Importes visibles al momento",
+          "sub": "El nuevo ticket y el restante se calculan automáticamente"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Un solo toque",
+          "sub": "El pedido queda dividido sin recálculos manuales ni calculadora"
+        }
+      ]
+    },
+    {
+      "heading": "Comandas desde el teléfono del camarero",
+      "sub": "El camarero toma la comanda desde su dispositivo en tres pasos: categoría, plato y opciones.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Cualquier dispositivo",
+          "sub": "Un teléfono o una tableta con navegador: sin instalar nada"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Opciones con suplemento",
+          "sub": "Tamaño, extras y variantes del plato con precio en un solo clic"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Comentario al plato",
+          "sub": "Las peticiones del comensal se añaden en el paso final y la cocina las ve al momento"
+        }
+      ]
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 import { LandingHeader } from "../components/header";
 import { LandingFooter } from "../components/footer";
 import { PageTracker } from "../components/page-tracker";
-import { NARROW, PAGE, Band } from "../components/shell";
+import { PAGE, Band, Content } from "../components/shell";
 import type { LandingTexts } from "../types";
 import type { Block, HelpDoc } from "./types";
 import { HelpSidebar } from "./help-sidebar";
@@ -68,23 +68,28 @@ export function HelpView({
         texts={texts.header}
         locale={locale}
         featureLinks={texts.footer.featureLinks}
-        containerClass={NARROW}
         compact
         navLayout="grouped"
       />
 
-      <Band section="help">
-        <div>
-          <h1 className="text-[2rem] sm:text-[2.5rem] font-medium tracking-tight leading-[1.05] mb-3">{doc.h1}</h1>
-          <p className="text-sm sm:text-base text-muted-foreground/80 leading-relaxed mb-8 md:mb-10">{doc.intro}</p>
+      <Content>
+        <Band section="help">
+          {/* Same big card as the FAQ block: tinted sticky column on the LEFT
+              (title / intro / table of contents), plain column on the RIGHT
+              (the guide sections). */}
+          <div className="rounded-2xl border border-border grid grid-cols-1 lg:grid-cols-[2fr_3fr]">
+            <div className="rounded-t-2xl lg:rounded-t-none lg:rounded-l-2xl bg-[hsl(28_48%_93%)] dark:bg-[hsl(28_15%_13%)]">
+              <div className="flex flex-col items-start text-start lg:sticky lg:top-16 gap-3 p-5 sm:p-6">
+                <h1 className="text-2xl sm:text-[1.75rem] font-medium tracking-tight leading-[1.15]">{doc.h1}</h1>
+                <p className="text-sm sm:text-base text-muted-foreground/80 leading-relaxed">{doc.intro}</p>
+                <HelpSidebar items={doc.sections.map((s) => ({ id: s.id, title: s.title }))} />
+              </div>
+            </div>
 
-          <div className="grid md:grid-cols-[240px_1fr] gap-8 md:gap-12">
-            <HelpSidebar items={doc.sections.map((s) => ({ id: s.id, title: s.title }))} />
-
-            <div className="min-w-0">
+            <div className="min-w-0 flex flex-col gap-10 p-5 sm:p-6">
               {doc.sections.map((s) => (
-                <section key={s.id} id={s.id} data-section={`help_${s.id}`} className="scroll-mt-24 mb-12">
-                  <h2 className="text-2xl font-semibold tracking-tight mb-4 pb-2 border-b border-border">
+                <section key={s.id} id={s.id} data-section={`help_${s.id}`} className="scroll-mt-24">
+                  <h2 className="text-xl sm:text-2xl font-semibold tracking-tight mb-4 pb-2 border-b border-border">
                     {s.title}
                   </h2>
                   {s.blocks.map((b, i) => (
@@ -94,14 +99,10 @@ export function HelpView({
               ))}
             </div>
           </div>
-        </div>
-      </Band>
+        </Band>
+      </Content>
 
-      <footer data-section="footer" className="w-full">
-        <div className={NARROW}>
-          <LandingFooter texts={texts.footer} headerTexts={texts.header} locale={locale} />
-        </div>
-      </footer>
+      <LandingFooter texts={texts.footer} headerTexts={texts.header} locale={locale} routeKey="/help" />
     </main>
   );
 }

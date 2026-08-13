@@ -1,0 +1,206 @@
+{
+  "locale": "is",
+  "slug": "bord-bokun",
+  "trackPrefix": "l_bookings",
+  "meta": {
+    "title": "Borðabókanir allan sólarhringinn | IQ Rest",
+    "description": "Borðabókanir allan sólarhringinn fyrir veitingastaðinn: gestir bóka borð sjálfir í gegnum QR matseðilinn eða vefsíðuna. Dagatal eftir borðum, sjálfvirkar staðfestingar og áminningar. Engin símtöl, engir misstir gestir. 14 dagar frítt.",
+    "canonical": "https://iq-rest.com/is/bord-bokun",
+    "ogLocale": "is_IS",
+    "ogTitle": "Borðabókanir allan sólarhringinn — Gestir bóka sjálfir",
+    "ogDescription": "Gestir bóka borð í gegnum QR matseðil eða vefsíðu. Dagatal, sjálfvirkar staðfestingar, áminningar. Ekki einn gestur missir af borði.",
+    "brandLine": "IQ Rest — Borðabókanir"
+  },
+  "hero": {
+    "headline": "Borðabókanir allan sólarhringinn,",
+    "cta": "Setja upp borðabókanir",
+    "sub": "Gestir bóka allan sólarhringinn í gegnum QR matseðil eða hlekk. Dagatal eftir borðum, sjálfvirkar staðfestingar og áminningar.",
+    "headlineAccent": "engin símtöl",
+    "demoLabel": "Prufa: bókanadagatal",
+    "tablet": {
+      "src": "/landing/hero-card-reservation.webp",
+      "alt": "Spjaldtölva með bókanadagatali: mánaðaryfirlit og listi yfir bókanir sem bíða staðfestingar"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Veitingastaðir"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kaffihús"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barir"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hótel"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pítsustaðir"
+    }
+  ],
+  "scan": {
+    "heading": "Opnaðu fyrir borðabókanir",
+    "headingAccent": "á 5 mínútum.",
+    "sub": "Tengdu dagatalið, bættu við borðum með myndum og fjölda sæta — gestir byrja að bóka samdægurs.",
+    "cta": "Virkja bókanir"
+  },
+  "subFeatures": [
+    {
+      "icon": "CalendarPlus",
+      "eyebrow": "Bókunarform",
+      "heading": "Gestir bóka sjálfir — eftir dagsetningu, tíma og fjölda.",
+      "body": "Gesturinn opnar QR matseðilinn eða beinan hlekk, velur dagsetningu, tíma og fjölda gesta — og sér strax laus borð: með mynd, lýsingu (verönd, við gluggann, sófi við barinn) og fjölda sæta. Staðfesting er send sjálfkrafa í tölvupósti og á WhatsApp.",
+      "bullets": [
+        "Val á borði eftir mynd, lýsingu og fjölda sæta.",
+        "Sjálfvirk staðfesting og áminning klukkustund fyrir komu.",
+        "Einfalt form: nafn, sími, fjöldi gesta."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-form.webp",
+        "alt": "Gestur bókar borð á veitingastað úr síma: velur dagsetningu, tíma, fjölda og borð"
+      }
+    },
+    {
+      "icon": "CalendarDays",
+      "eyebrow": "Bókanadagatal",
+      "heading": "Dagatal eftir dögum og borðum — allt sýnilegt á sekúndubroti.",
+      "body": "Í stjórnborðinu er bókanadagatal flokkað eftir borðum, dögum, vikum og mánuðum. Lausir tímar, frátekin borð, staðfestar bókanir og þær sem bíða staðfestingar birtast allar á einum skjá. Virkar á spjaldtölvu í salnum og fartölvu á skrifstofunni.",
+      "bullets": [
+        "Yfirlit fyrir dag, viku og mánuð.",
+        "Sundurliðun eftir borðum: hver, hvenær, hversu margir gestir.",
+        "Færa, hætta við eða staðfesta bókun — með einum smelli úr símanum."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-calendar.webp",
+        "alt": "Bókanadagatalið í IQ Rest stjórnborðinu á tveimur spjaldtölvum: daglegt yfirlit eftir borðum og mánaðarlegt dagatal"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Það sem veitingamenn spyrja um borðabókanir í IQ Rest. Ef spurningin þín er ekki á listanum — sendu okkur skilaboð á WhatsApp.",
+    "items": [
+      {
+        "q": "Get ég valið hvaða daga og tíma er hægt að bóka?",
+        "a": "Já. Í stjórnborðinu geturðu sett upp dagskrá fyrir hvern vikudag: bókanatíma og hlé á milli hádegis- og kvöldverðar. Þú getur líka slökkt tímabundið á bókunum í heild sinni — gestir munu sjá að netbókanir eru ekki í boði."
+      },
+      {
+        "q": "Get ég sett inn mynd af hverju borði?",
+        "a": "Já. Hvert borð hefur mynd, sætafjölda og svæði (verönd, við gluggann, bar). Gestir sjá nákvæmlega hvaða borð þeir eru að bóka og geta tekið upplýsta ákvörðun."
+      },
+      {
+        "q": "Get ég takmarkað fjölda gesta á hvert borð?",
+        "a": "Já. Hvert borð hefur ákveðinn sætafjölda — kerfið býður gestum aðeins upp á viðeigandi borð og kemur í veg fyrir að sex manna hópur bóki tveggja manna borð."
+      },
+      {
+        "q": "Hversu erfitt er að setja upp borðabókanir?",
+        "a": "Þrjú skref: bættu við borðum með myndum og sætafjölda, kveiktu á bókunum í stillingum og deildu hlekknum eða QR kóðanum. Uppsetning tekur 5–10 mínútur."
+      },
+      {
+        "q": "Get ég stillt sjálfvirka eða handvirka staðfestingu á bókunum?",
+        "a": "Já, þú velur fyrirkomulagið í stillingum. Með sjálfvirkri staðfestingu fær gesturinn staðfestingu um leið og hann sendir inn formið. Með handvirkri staðfestingu birtist beiðnin í stjórnborðinu sem \"bíður staðfestingar\" — vaktstjóri staðfestir eða hafnar henni. Handvirkt fyrirkomulag er hentugt þegar borð eru af skornum skammti."
+      },
+      {
+        "q": "Takið þið gjald fyrir hverja bókun?",
+        "a": "Það eru engin aukagjöld: borðabókanir eru innifaldar í áskriftinni — engin prósenta af gestum, engin gjöld per bókun, engir milliliðir. Ein föst greiðsla og ótakmarkaðar bókanir."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Bókanir á 10 mínútum. ",
+    "headingAccent": "14 daga fullur aðgangur.",
+    "sub": "Ekkert kort þarf, hættu hvenær sem er. {count} veitingastaðir létta álaginu af móttökunni hjá sér með okkur. Það eina sem þú þarft er netfang."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Gestir bóka sjálfir",
+      "sub": "Dagsetning, tími og fjöldi gesta — af QR matseðlinum eða beinum hlekk, hvenær sem er sólarhringsins. Kerfið sýnir aðeins lausa tíma.",
+      "bullets": [
+        {
+          "icon": "CalendarPlus",
+          "title": "Bókanir allan sólarhringinn",
+          "sub": "Gestir bóka á kvöldin eða um helgar — engin símtöl, engin bið eftir svari"
+        },
+        {
+          "icon": "Users",
+          "title": "Borð sem hentar fjölda",
+          "sub": "Kerfið velur sjálft viðeigandi borð miðað við sætafjölda"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Einfalt form",
+          "sub": "Nafn, sími og fjöldi gesta — það tekur hálfa mínútu að fylla út formið"
+        }
+      ]
+    },
+    {
+      "heading": "Dagatal eftir dögum og borðum",
+      "sub": "Allar bókanir í einu dagatali: sjáðu hvað er laust, hvað er staðfest og hverjir eru að koma.",
+      "bullets": [
+        {
+          "icon": "CalendarDays",
+          "title": "Dagur, vika, mánuður",
+          "sub": "Skiptu á milli yfirlita og skipuleggðu borðaskipan fram í tímann"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Sundurliðun eftir borðum",
+          "sub": "Hver, hvenær og fyrir hversu marga gesti — fyrir hvert borð"
+        },
+        {
+          "icon": "Smartphone",
+          "title": "Stjórnaðu úr símanum",
+          "sub": "Færa, hætta við eða staðfesta bókun — með einum smelli"
+        }
+      ]
+    },
+    {
+      "heading": "Dagskrá og fyrirkomulag",
+      "sub": "Stilltu bókanatíma fyrir hvern vikudag, lengd bókana og hvernig staðfestingum er háttað.",
+      "bullets": [
+        {
+          "icon": "Clock",
+          "title": "Dagskrá fyrir hvern dag",
+          "sub": "Aðskildir tímar fyrir hvern vikudag, þar á meðal hlé á milli hádegis- og kvöldverðar"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Lengd bókana",
+          "sub": "Stilltu tímabilið sem hentar þínum stað"
+        },
+        {
+          "icon": "CalendarCheck",
+          "title": "Sjálfvirkt eða handvirkt",
+          "sub": "Staðfestu hverja bókun sjálf(ur) eða kveiktu á sjálfvirkri staðfestingu"
+        }
+      ]
+    },
+    {
+      "heading": "Tilkynningar án handavinnu",
+      "sub": "Kerfið heldur gestinum og starfsfólkinu upplýstu — tölvupóstar og bókanaskjárinn uppfærast samstundis.",
+      "bullets": [
+        {
+          "icon": "Mail",
+          "title": "Tölvupóstur til gestsins",
+          "sub": "Staðfesting á bókun er send sjálfkrafa í tölvupósti"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Tilkynning til veitingastaðarins",
+          "sub": "Eigendur fá tölvupóst um hverja nýja bókun"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Bókanaskjár í móttökunni",
+          "sub": "Spjaldtölva í móttöku sýnir nýjar bókanir í rauntíma"
+        }
+      ]
+    }
+  ]
+}

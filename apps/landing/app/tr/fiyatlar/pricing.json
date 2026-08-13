@@ -1,0 +1,59 @@
+{
+  "breadcrumbLabel": "Fiyatlandırma",
+  "meta": {
+    "title": "Fiyatlandırma — Restoran Paketinizi 9.90 €/ay'dan Başlayan Fiyatlarla Oluşturun | IQ Rest",
+    "description": "Paketinizi modüllerden oluşturun: yapay zeka çevirili QR menü, sipariş alma, masa rezervasyonu, mutfak ekranı. Restoran başına 9.90 €/ay'dan başlayan fiyatlar, çoklu mekan indirimleri. 14 gün ücretsiz, kart yok, istediğiniz zaman iptal edin.",
+    "canonical": "https://iq-rest.com/tr/fiyatlar",
+    "ogLocale": "tr_TR",
+    "ogTitle": "Fiyatlandırma — Restoran Paketinizi Oluşturun",
+    "ogDescription": "9.90 €/ay'dan başlayan modüler paket: QR menü, siparişler, rezervasyonlar, KDS. Çoklu mekan indirimleri, gizli ücret yok. 14 gün ücretsiz."
+  },
+  "faqSub": "Fiyatlandırma ve ödeme hakkında restoranlardan gelen sık sorulan sorular. Kendi sorunuzu bulamadıysanız — bize WhatsApp'tan yazın.",
+  "faqItems": [
+    {
+      "q": "Fiyatlandırma nasıl yapılıyor?",
+      "a": "Paketinizi modüllerden oluşturursunuz. Temel modül, 35 dile yapay zeka çevirisi ve her cihazdan yönetim sunan QR menüdür. Ardından ihtiyacınız olanı eklersiniz: masa rezervasyonları, mutfak ekranı, kendi alan adınız. Fiyatlandırma restoran başınadır ve ikinci restorandan itibaren çoklu mekan indirimleri uygulanır."
+    },
+    {
+      "q": "Siparişlerden komisyon alınıyor mu?",
+      "a": "Hayır. QR menüden ve garsonlardan gelen siparişler doğrudan restorana iletilir. Sadece sabit bir aylık ücret ödersiniz."
+    },
+    {
+      "q": "Deneme süresi nasıl işliyor?",
+      "a": "Kredi kartı gerekmeden tüm özelliklere 14 gün tam erişim. Süre sonunda ödeme ayarlanmazsa hesap duraklatılır: panel sadece görüntüleme modunda açık kalır, misafir menüsü ve sipariş alma kapatılır. Otomatik ücret çekimi yoktur."
+    },
+    {
+      "q": "Hesabım duraklatıldığında verilerime ne olur?",
+      "a": "Her şey saklanır: menü, fotoğraflar, sipariş geçmişi, rezervasyonlar, ayarlar, istatistikler. Ödemeyi altı ay sonra bile yapsanız — her şey tam olarak bıraktığınız gibi geri gelir."
+    },
+    {
+      "q": "QR kodları yeniden yazdırmam gerekecek mi?",
+      "a": "Hayır. Duraklatıldığında kodlar \"geçici olarak kullanılamıyor\" uyarısı gösterir; ödeme ayarlandığında aynı kodlar menüyü tekrar açar."
+    },
+    {
+      "q": "Paketimi değiştirebilir miyim?",
+      "a": "Evet, panel üzerinden istediğiniz zaman. Fiyat farkı, ödenen dönemin kalan günlerine orantılı olarak yansıtılır. Devre dışı bırakılan bir özellik verilerini korur."
+    },
+    {
+      "q": "Kaç restoran bağlayabilirim?",
+      "a": "İstediğiniz kadar, hepsi tek bir panelden yönetilir. 5 ve üzeri restoranda %50'ye varan çoklu mekan indirimleri uygulanır. Büyük zincirler için — WhatsApp üzerinden özel bir paket hazırlıyoruz."
+    },
+    {
+      "q": "Yıllık pakette indirim ne kadar?",
+      "a": "Aylık ödemeye kıyasla yaklaşık %30. Kesin tutar paketinizi oluştururken gösterilir."
+    },
+    {
+      "q": "Aboneliğimi nasıl iptal edebilirim?",
+      "a": "Panelden tek tıkla. Hesap, ödenen dönemin sonuna kadar çalışır, ardından duraklatılır. Verileriniz saklanır."
+    },
+    {
+      "q": "Hangi ödeme yöntemlerini kabul ediyorsunuz?",
+      "a": "Visa, Mastercard, American Express, Apple Pay, Google Pay — Stripe güvencesiyle. Avrupa'da yıllık paket için SEPA Otomatik Ödeme de desteklenmektedir."
+    }
+  ],
+  "finalCta": {
+    "heading": "Tek fiyat. Sıfır risk. ",
+    "headingAccent": "14 gün tam erişim.",
+    "sub": "Kart gerekmez, istediğiniz zaman iptal edin — {count} restoran bize güveniyor. Başlamak için sadece bir e-posta yeterli."
+  }
+}

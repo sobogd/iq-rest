@@ -1,0 +1,261 @@
+{
+  "htmlLang": "es",
+  "htmlDir": "ltr",
+  "meta": {
+    "title": "Menú digital, pantalla de cocina y reservas — IQ Rest",
+    "description": "Gestione su restaurante desde una sola aplicación: menú digital multilingüe, pantalla de cocina y reservas 24/7. En marcha en 5 minutos. 14 días gratis, sin tarjeta.",
+    "canonical": "https://iq-rest.com/es",
+    "ogLocale": "es_ES",
+    "ogTitle": "Menú digital, pantalla de cocina y reservas",
+    "ogDescription": "Gestione su restaurante desde una sola aplicación: menú digital multilingüe, pantalla de cocina y reservas 24/7. En marcha en 5 minutos. 14 días gratis, sin tarjeta."
+  },
+  "jsonLd": {
+    "appName": "IQ Rest — Plataforma de gestión para restaurantes"
+  },
+  "ctaText": "Probar gratis",
+  "homeCtaText": "Probar gratis",
+  "trust": [
+    {
+      "kind": "num",
+      "value": 35,
+      "label": "Idiomas en el menú"
+    },
+    {
+      "kind": "text",
+      "value": "24/7",
+      "label": "Reservas online"
+    },
+    {
+      "kind": "num",
+      "value": 5,
+      "suffix": " min",
+      "label": "Para empezar"
+    },
+    {
+      "kind": "count",
+      "label": "Restaurantes con nosotros"
+    }
+  ],
+  "demoText": "Abrir demo",
+  "microcopy": "14 días gratis · Sin tarjeta bancaria · Cancelación en cualquier momento",
+  "header": {
+    "navFeatures": "Funciones",
+    "navHow": "Cómo funciona",
+    "navPricing": "Precios",
+    "navFaq": "Preguntas",
+    "signIn": "Iniciar sesión",
+    "viewFeatures": "Ver funciones",
+    "cta": "Empezar gratis",
+    "navProducts": "Funciones",
+    "navGuide": "Guía",
+    "navAbout": "Sobre nosotros",
+    "menuFeaturesHeading": "Funciones",
+    "menuInfoHeading": "Información"
+  },
+  "hero": {
+    "verticals": [
+      "Restaurantes",
+      "Cafeterías",
+      "Bares",
+      "Hoteles",
+      "Pizzerías"
+    ],
+    "headline": "Menú digital para restaurantes.\nEn marcha en 5 minutos.",
+    "sub": "El menú digital de su restaurante en 5 minutos. Todo incluido: editor sin programación, reconocimiento del menú impreso con IA, códigos QR para las mesas y toma de pedidos sin comisiones.",
+    "dynamicHeadlines": [
+      "0% de comisiones.",
+      "35 idiomas con IA.",
+      "Pedidos online.",
+      "Reservas 24/7.",
+      "Diseño premium."
+    ],
+    "painBullets": [
+      "0% de comisiones: todos los pedidos llegan directamente al restaurante.",
+      "Traducción a 35 idiomas con IA: los turistas entienden el menú y piden más.",
+      "Reservas 24/7: los comensales reservan mesa por sí mismos, sin llamadas en hora punta.",
+      "Precios flexibles: los cambios en el menú se aplican al instante."
+    ],
+    "rating": "Más de 500 restaurantes en más de 30 países"
+  },
+  "founder": {
+    "eyebrow": "Creado por hosteleros",
+    "quoteStart": "Mi mujer y yo gestionamos nuestra propia cafetería y conocemos bien, desde dentro, cómo es el día a día de un restaurante: la toma de comandas, las reservas, el trabajo de la sala y de la cocina. Queríamos una herramienta única — moderna, fácil de poner en marcha y clara a primera vista —",
+    "quoteAccent": "así nació la idea de la plataforma que hoy desarrollamos para otros hosteleros.",
+    "sign": "Bogdan Sokolov · fundador, antiguo propietario de una cafetería",
+    "photoAlt": "Bogdan Sokolov, fundador de IQ Rest"
+  },
+  "pricing": {
+    "badge": "Sin comisiones · Sin contratos",
+    "heading": "Una sola tarifa.",
+    "headingAccent": "Todo incluido.",
+    "sub": "Menú QR, toma de pedidos, traducción con IA, web del restaurante y reservas. Un único pago mensual transparente.",
+    "monthlyLabel": "Mensual",
+    "yearlyLabel": "Anual",
+    "saveBadge": "Ahorro del 25%",
+    "perMonth": "al mes",
+    "billedAnnually": "Pago anual: {total}",
+    "youSave": "Ahorro de {amount}",
+    "trust": {
+      "secure": "Pago seguro con Stripe",
+      "noCommitment": "Sin permanencia",
+      "quick": "Activación en pocos minutos",
+      "restaurants": "Más de 500 restaurantes"
+    }
+  },
+  "faq": {
+    "eyebrow": "¿Quedan dudas?",
+    "heading": "Preguntas",
+    "headingAccent": "frecuentes",
+    "sub": "Lo que más preguntan los hosteleros antes de darse de alta. Si no encuentra la respuesta, escríbanos por WhatsApp: responden personas, no un bot.",
+    "whatsappCta": "Escribir por WhatsApp",
+    "whatsappPrefill": "Hola, tengo una pregunta sobre IQ Rest",
+    "items": [
+      {
+        "q": "¿Qué incluye el periodo de prueba y qué ocurre después?",
+        "a": "Durante 14 días tiene acceso a todas las funciones de la plataforma, sin introducir ninguna tarjeta bancaria. Si al cabo de los 14 días no hay un método de pago configurado, la cuenta se pausa automáticamente. Nunca cobramos nada sin su consentimiento. Puede añadir el pago más adelante y continuar exactamente donde lo dejó. Cancelar la suscripción se hace en un clic."
+      },
+      {
+        "q": "¿Cobran comisión por los pedidos?",
+        "a": "No, no cobramos ningún porcentaje sobre los pedidos. Todos los pedidos del menú QR llegan directamente al restaurante, sin comisiones de agregadores. Usted paga una cuota mensual fija y nada más."
+      },
+      {
+        "q": "¿Los comensales tienen que instalar una app? ¿Y nosotros necesitamos conocimientos técnicos?",
+        "a": "Los comensales no necesitan ninguna aplicación: basta con apuntar la cámara del móvil al código QR y el menú se abre en el navegador. El restaurante tampoco necesita preparación técnica: el panel de administración funciona directamente en el navegador, en el móvil, la tableta o el portátil. Todo se hace pulsando botones y arrastrando elementos, sin programar."
+      },
+      {
+        "q": "¿Con qué rapidez se aplican los cambios en el menú: precios, platos nuevos?",
+        "a": "Al instante. Los cambios hechos desde el móvil aparecen para los comensales en cuestión de segundos. Añadir un plato nuevo son unos pocos toques: nombre, precio y foto. Sin reimprimir el menú en papel y sin necesidad de un diseñador."
+      },
+      {
+        "q": "¿Cuántos idiomas se admiten?",
+        "a": "Se admiten 35 idiomas con traducción automática basada en inteligencia artificial. Una sola acción y todo el menú queda traducido. La IA tiene en cuenta el contexto gastronómico: los nombres y las descripciones de los platos suenan naturales en cualquier idioma. Los turistas piden con más confianza cuando entienden lo que llevan los platos."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "En marcha en 10 minutos. ",
+    "headingAccent": "14 días de acceso completo.",
+    "sub": "Sin tarjeta y con cancelación en cualquier momento. {count} restaurantes confían en nosotros. Solo hace falta un email."
+  },
+  "featureHighlights": {
+    "heading": "Todo incluido",
+    "sub": "Funciones que convierten a los comensales en pedidos, en todas las tarifas y sin coste adicional."
+  },
+  "scan": {
+    "heading": "¿Tiene el menú en papel o en PDF?",
+    "headingAccent": "La IA lo digitaliza en 60 segundos.",
+    "sub": "Suba una foto o un documento: la IA reconoce categorías, platos y precios automáticamente.",
+    "cta": "Escanear menú →"
+  },
+  "pricingQuiz": {
+    "heading": "Configure el plan ",
+    "sub": "Empiece por el menú; las reservas, la cocina y el dominio se añaden cuando los necesite.",
+    "billingLabel": "Facturación:",
+    "monthly": "Mensual",
+    "yearly": "Anual",
+    "restaurantsLabel": "Restaurantes:",
+    "fewerAria": "Menos restaurantes",
+    "moreAria": "Más restaurantes",
+    "menuTitle": "Menú y sitio web",
+    "menuHint": "Siempre incluido",
+    "reservationsTitle": "Sistema de reservas",
+    "reservationsHint": "Reserva de mesas",
+    "kdsTitle": "Pantalla de cocina",
+    "kdsHint": "Pedidos en la pantalla de cocina",
+    "domainTitle": "Nombre de dominio",
+    "domainHint": "Su propia dirección web",
+    "perMonthSuffix": "/mes",
+    "perYearSuffix": "/año",
+    "perMonthLongSuffix": "/mes",
+    "saveYearlyTemplate": "Ahorre {amount} al año con el pago anual",
+    "volumeDiscountTemplate": "{percent}% de descuento",
+    "saveUpToHint": "Ahorre hasta un 50% con 5+ restaurantes",
+    "billedYearly": "Un solo pago al año",
+    "billedMonthly": "Pago mensual",
+    "enterprisePre": "¿Necesita un plan a medida?",
+    "enterpriseCta": "Escríbanos",
+    "enterprisePost": "y lo ajustamos a su caso.",
+    "enterpriseWa": "¡Hola! Necesito un plan a medida para mis restaurantes.",
+    "headingAccent": "a la medida de su restaurante",
+    "multiplePre": "¿Necesita más restaurantes?",
+    "multipleCta": "Ver opciones",
+    "restaurantOne": "restaurante",
+    "restaurantFew": "restaurantes",
+    "restaurantMany": "restaurantes",
+    "multipleChangePre": "¿Otro número de restaurantes?",
+    "multipleChangeCta": "Cambiar"
+  },
+  "pricingCta": {
+    "heading": "Precios sencillos y flexibles",
+    "sub": "Pague solo por las funciones que necesita: configure su plan en un minuto.",
+    "fromTemplate": "desde {price}/mes",
+    "button": "Calcular el plan"
+  },
+  "footer": {
+    "copyrightTemplate": "© {year} IQ Rest. Todos los derechos reservados.",
+    "featuresHeading": "Funciones",
+    "featureLinks": [
+      {
+        "href": "/ru/tsifrovoe-menyu",
+        "label": "Menú digital"
+      },
+      {
+        "href": "/ru/priem-zakazov-restoran",
+        "label": "Toma de pedidos"
+      },
+      {
+        "href": "/ru/bronirovanie-stolov",
+        "label": "Reservas"
+      },
+      {
+        "href": "/ru/kds-kuhonnyy-displey",
+        "label": "Pantalla de cocina"
+      }
+    ],
+    "infoHeading": "Información",
+    "legalHeading": "Documentos legales",
+    "currencyHeading": "Moneda"
+  },
+  "common": {
+    "close": "Cerrar",
+    "menu": "Menú",
+    "help": "Ayuda"
+  },
+  "auth": {
+    "emailLabel": "Email",
+    "emailPlaceholder": "Introduzca su email",
+    "or": "o",
+    "continueGoogle": "Continuar con Google",
+    "continueApple": "Continuar con Apple",
+    "consent": {
+      "line": "Al continuar, acepta los <terms>Términos de uso</terms>. Cómo tratamos los datos, en la <privacy>Política de privacidad</privacy>."
+    },
+    "signInTitle": "Bienvenido de nuevo",
+    "signInSubtitle": "Introduzca su email y le enviaremos un código de 6 dígitos para iniciar sesión.",
+    "signInButton": "Iniciar sesión",
+    "registerTitle": "Cree su cuenta",
+    "registerSubtitle": "14 días gratis, sin tarjeta. Le enviaremos por correo un código de acceso: sin contraseñas ni formularios.",
+    "registerButton": "Crear cuenta",
+    "switchSignIn": "Iniciar sesión",
+    "switchCreate": "Registrarse",
+    "verifyTitle": "Revise su correo",
+    "verifySubtitle": "Hemos enviado un código de 6 dígitos a {email}.",
+    "verifyCodeLabel": "Código de verificación",
+    "checkSpam": "¿No ve el correo? Revise la carpeta de spam.",
+    "verifyButton": "Continuar",
+    "resendCode": "Reenviar código",
+    "resendSent": "Código enviado",
+    "changeEmail": "Usar otro email",
+    "metaSignIn": "Iniciar sesión",
+    "metaRegister": "Crear cuenta",
+    "errors": {
+      "emailInvalid": "Introduzca un email válido.",
+      "sendFailed": "No se ha podido enviar el código. Inténtelo de nuevo.",
+      "verifyFailed": "No se ha podido verificar el código. Inténtelo de nuevo.",
+      "codeExpired": "El código ha caducado. Solicite uno nuevo.",
+      "noCode": "Código no encontrado o caducado. Solicite uno nuevo.",
+      "invalidCode": "Código incorrecto. Inténtelo de nuevo.",
+      "tooManyAttempts": "Demasiados intentos. Espere e inténtelo de nuevo."
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "header": {
+    "navFeatures": "Features",
+    "navHow": "How it works",
+    "navPricing": "Pricing",
+    "navFaq": "FAQ",
+    "signIn": "Sign in",
+    "cta": "Start for free",
+    "navProducts": "Features",
+    "navGuide": "Guide",
+    "viewFeatures": "View features"
+  },
+  "footer": {
+    "copyrightTemplate": "© {year} IQ Rest. All rights reserved.",
+    "featuresHeading": "Features",
+    "featureLinks": [],
+    "infoHeading": "Information",
+    "legalHeading": "Legal",
+    "currencyHeading": "Currency"
+  },
+  "common": {
+    "close": "Close",
+    "menu": "Menu",
+    "help": "Help"
+  },
+  "auth": {
+    "emailLabel": "Email",
+    "emailPlaceholder": "Enter your email",
+    "or": "or",
+    "continueGoogle": "Continue with Google",
+    "continueApple": "Continue with Apple",
+    "consent": {
+      "line": "By continuing, you accept the <terms>Terms of Service</terms>. See how we handle data in our <privacy>Privacy Policy</privacy>."
+    },
+    "signInTitle": "Welcome back",
+    "signInSubtitle": "Enter your email — we'll send a 6-digit sign-in code.",
+    "signInButton": "Sign in",
+    "registerTitle": "Create your account",
+    "registerSubtitle": "14 days free, no card required. We'll email you a sign-in code — no password, no forms.",
+    "registerButton": "Create account",
+    "switchSignIn": "Sign in",
+    "switchCreate": "Sign up",
+    "verifyTitle": "Check your email",
+    "verifySubtitle": "We sent a 6-digit code to {email}.",
+    "verifyCodeLabel": "Verification code",
+    "checkSpam": "Don't see the email? Check your spam folder.",
+    "verifyButton": "Continue",
+    "resendCode": "Resend code",
+    "resendSent": "Code sent",
+    "changeEmail": "Use a different email",
+    "metaSignIn": "Sign in",
+    "metaRegister": "Create account",
+    "errors": {
+      "emailInvalid": "Enter a valid email.",
+      "sendFailed": "Failed to send the code. Please try again.",
+      "verifyFailed": "Failed to verify the code. Please try again.",
+      "codeExpired": "The code has expired. Request a new one.",
+      "noCode": "Code not found or expired. Request a new one.",
+      "invalidCode": "Invalid code. Please try again.",
+      "tooManyAttempts": "Too many attempts. Please wait and try again."
+    }
+  }
+}

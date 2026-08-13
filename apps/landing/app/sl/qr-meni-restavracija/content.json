@@ -1,0 +1,151 @@
+{
+  "locale": "sl",
+  "slug": "qr-meni-restavracija",
+  "trackPrefix": "l_sl_qr",
+  "featureHeading": {
+    "heading": "Več kot le QR koda",
+    "sub": "Vse, kar eno skeniranje postane za vaše goste in strežbo."
+  },
+  "meta": {
+    "title": "QR meni za restavracije | IQ Rest",
+    "description": "QR meni za restavracije: gosti skenirajo QR kodo na mizi, odprejo meni v brskalniku in naročijo v svojem jeziku. 14 dni brezplačno, brez kartice.",
+    "canonical": "https://iq-rest.com/sl/qr-meni-restavracija",
+    "ogLocale": "sl_SI",
+    "ogTitle": "QR meni za restavracije",
+    "ogDescription": "QR na mizi, meni na telefonu — fotografije, alergeni, 35 jezikov in posodobitve v realnem času.",
+    "brandLine": "IQ Rest — QR meni za restavracije"
+  },
+  "hero": {
+    "headline": "QR meni:\nskeniraj in naroči",
+    "cta": "Ustvari QR meni",
+    "sub": "Gosti skenirajo QR na mizi, brskajo po fotografijah in alergenih v 35 jezikih ter naročijo — brez aplikacij."
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restavracije"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kavarne"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bari"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hoteli"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Picerije"
+    }
+  ],
+  "scan": {
+    "heading": "Že imate papirnati meni ali PDF?",
+    "headingAccent": "AI ga spremeni v QR meni v 60 sekundah.",
+    "sub": "Naložite fotografijo menija ali PDF — AI prepozna kategorije, jedi in cene ter jih neposredno poveže z vašim QR menijem.",
+    "cta": "Ustvari QR meni"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "En QR, 35 jezikov",
+      "heading": "Ena QR koda, meni v 35 jezikih.",
+      "body": "Gosti skenirajo QR in izberejo svoj jezik: prevod opravi AI z občutkom za kulinariko, ne generični prevajalnik. Nič več ločenih turističnih menijev ali razmetanih listov po mizi.",
+      "bullets": [
+        "En natisnjen QR pokriva 35 jezikov, vključenih v naročnino.",
+        "AI govori jezik hrane — imena jedi zvenijo naravno v vsakem jeziku.",
+        "Gosti preklapljajo jezike znotraj menija, brez ponovnega skeniranja QR kode."
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Dva gosta skenirata isto QR kodo z mize in bereta meni v različnih jezikih"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Alergeni v QR",
+      "heading": "Alergeni in prehranske oznake znotraj QR menija.",
+      "body": "Vsaka jed v meniju za QR kodo ima lahko oznake: gluten, laktoza, oreščki, morski sadeži, veganske in brezglutenske možnosti. Gosti filtrirajo jedi glede na svoje omejitve na telefonu, ne da bi spraševali osebje.",
+      "bullets": [
+        "14 kategorij alergenov na ravni jedi.",
+        "Veganske, vegetarijanske in brezglutenske oznake z enim klikom v plošči.",
+        "Gosti filtrirajo QR meni po lastnih omejitvah."
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Gost na telefonu filtrira QR meni po alergenih, medtem ko lastnik ureja seznam na tablici"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Več kot le QR",
+      "heading": "QR meni v stilu spletne strani restavracije.",
+      "body": "Po skeniranju kode gosti ne pristanejo na suhoparnem PDF-ju: vidijo začetni zaslon z videom ali privlačno fotografijo, opis lokala in kontaktno stran z zemljevidom, telefonskimi številkami in povezavami do družbenih omrežij. QR postane spletna vstopna točka vaše restavracije.",
+      "bullets": [
+        "Video ozadje ali privlačna fotografija na začetnem zaslonu QR menija.",
+        "Prostor za zgodbo vašega lokala in vsake kategorije.",
+        "Vgrajena kontaktna stran: zemljevid, telefon, Instagram, WhatsApp."
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Dva telefona na mizi: začetni zaslon QR menija z video ozadjem in kontaktna stran z zemljevidom"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Naročilo iz QR · opcijsko",
+      "heading": "Prek QR kode lahko gosti tudi naročijo.",
+      "body": "Poleg brskanja po meniju lahko QR meni postane kanal za naročanje: gosti dodajo jedi v košarico in pošljejo zahtevek. Naročilo doseže natakarja v strežbi, vaš WhatsApp ali kuhinjski zaslon. Funkcijo lahko v nastavitvah vklopite in izklopite, kadarkoli jo potrebujete.",
+      "bullets": [
+        "Košarica, opombe in oddaja naročila neposredno iz skeniranega QR-ja.",
+        "Naročilo takoj doseže strežbo, WhatsApp ali kuhinjski zaslon.",
+        "Vklopite funkcijo po urah, nadstropjih ali za posamezne restavracije."
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Dva telefona na mizi: košarica, ustvarjena iz QR menija, in potrditev oddanega naročila"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Kaj gostince najpogosteje zanima o QR meniju IQ Rest. Ne najdete svojega vprašanja? Pišite nam na WhatsApp.",
+    "items": [
+      {
+        "q": "Kako deluje QR meni IQ Rest?",
+        "a": "Vsaka miza ima natisnjeno QR kodo. Gosti jo skenirajo s kamero na telefonu in v brskalniku se odpre meni restavracije — fotografije, opisi, alergeni in aktualne cene. Gostom in osebju ni treba prenašati nobene aplikacije."
+      },
+      {
+        "q": "Ali potrebujem tehnično znanje za ustvarjanje QR menija?",
+        "a": "Ne. Plošča deluje s kliki in premikanjem elementov, brez kode ali zapletenih nastavitev. Dodajanje jedi vzame nekaj sekund: ime, cena, fotografija. Začetna nastavitev običajno traja od 30 minut do ene ure; če že imate PDF meni, ga AI pretvori samodejno."
+      },
+      {
+        "q": "Ali morajo gosti namestiti aplikacijo za branje QR kode?",
+        "a": "Ne. Vgrajena kamera na iPhonu in Androidu prepozna QR kodo v nekaj sekundah in odpre meni neposredno v brskalniku. Tudi nadzorna plošča deluje v vsakem sodobnem brskalniku — na telefonu, tablici ali prenosniku."
+      },
+      {
+        "q": "Kako se natisnejo QR kode za mize?",
+        "a": "QR kode se samodejno ustvarijo v plošči (ena na mizo ali ena za celoten lokal) in se prenesejo kot PDF, pripravljen za tisk. Pisarniški tiskalnik in stojalo sta vse, kar potrebujete: držalo, nalepka ali podstavek."
+      },
+      {
+        "q": "Ali lahko uporabim lastno domeno za QR meni?",
+        "a": "Da. Podpiramo domeno vaše restavracije z SSL certifikatom (na primer meni.vasarestavracija.si): ko gosti skenirajo QR, vidijo naslov vaše restavracije, ne generične poddomene. Nastavitev DNS traja 5–10 minut in vas vodimo skozi postopek."
+      },
+      {
+        "q": "Ali lahko upravljam QR kode za več restavracij iz enega računa?",
+        "a": "Da, na zahtevo. En račun lahko združuje več lokalov, vsak s svojimi QR kodami, menijem, dizajnom in analitiko. Pišite nam na WhatsApp in vklopili bomo način za več restavracij."
+      },
+      {
+        "q": "Je težko zagnati QR meni od začetka?",
+        "a": "Trije koraki: (1) ustvarite kategorije; (2) dodajte jedi z imenom, ceno in fotografijo; (3) natisnite QR kode in jih postavite na mize. Če že imate papirnati meni ali PDF, ga naložite — AI prepozna kategorije in cene ter izpolni kartice. Osnovni meni je lahko na spletu v 5 minutah."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "QR meni v 10 minutah. ",
+    "headingAccent": "14 dni polnega dostopa.",
+    "sub": "Brez kreditne kartice, prekličite kadarkoli. Zaupa nam {count} restavracij. Samo e-pošta — in brez aplikacij za vaše goste."
+  }
+}

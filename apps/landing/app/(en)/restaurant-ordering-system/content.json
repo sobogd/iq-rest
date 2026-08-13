@@ -1,0 +1,236 @@
+{
+  "locale": "en",
+  "slug": "restaurant-ordering-system",
+  "trackPrefix": "l_orders",
+  "meta": {
+    "title": "Restaurant Order Taking — Guest and Waiter | IQ Rest",
+    "description": "Restaurant order taking from a phone or tablet: floor map, bill splitting, statuses, options and comments. Guests order from the table, waiters take orders on their own device. 14 days free.",
+    "canonical": "https://iq-rest.com/restaurant-ordering-system",
+    "ogLocale": "en_US",
+    "ogTitle": "Restaurant Order Taking — Guest and Waiter",
+    "ogDescription": "A guest at the table or a waiter on a phone — the order hits the kitchen instantly. Floor map, bill splitting, statuses, options and comments.",
+    "brandLine": "IQ Rest — Restaurant Order Taking"
+  },
+  "hero": {
+    "headline": "Orders from the table —",
+    "cta": "Set up online ordering",
+    "sub": "Guests order at the table or waiters from any device — straight to the kitchen. Floor plan, bill splitting.",
+    "headlineAccent": "straight to the kitchen",
+    "demoLabel": "Demo: orders screen",
+    "tablet": {
+      "src": "/landing/feature-orders-modal.webp",
+      "alt": "Tablet with an open order: dish list and order actions — change table, split order, add discount"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurants"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafés"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bars"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotels"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerias"
+    }
+  ],
+  "scan": {
+    "heading": "Set up your order-taking system",
+    "headingAccent": "in 5 minutes.",
+    "sub": "Scan a paper menu or a PDF — AI recognizes dishes, prices and categories. Connect a tablet on the floor and start taking orders from the tables.",
+    "cta": "Scan menu"
+  },
+  "subFeatures": [
+    {
+      "icon": "Map",
+      "eyebrow": "List and floor map",
+      "heading": "An order list next to the floor map.",
+      "body": "All active orders are shown on the right: status, total, time placed and item count. On the left is the floor map: tables are color-coded by status — empty, occupied, needs attention. Tapping a table opens its order, tapping a card opens the detailed view. No switching between screens.",
+      "bullets": [
+        "Floor map: tables color-coded by order status.",
+        "Order list alongside — total, time and item count.",
+        "Tapping a table opens the order or creates a new one."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-map.webp",
+        "alt": "Tablet at a waiter station: an order list and a floor map with color-coded tables"
+      }
+    },
+    {
+      "icon": "ClipboardList",
+      "eyebrow": "Order card",
+      "heading": "The order card: statuses, duplicating and removing — with one tap.",
+      "body": "Every item has its own status (Pending / Cooking / Ready / Served) — the kitchen and the waiter see the same picture in real time. Tapping the dot opens an action menu: change status, duplicate the item with the same modifiers and options, or remove it. Everything happens right inside the order card.",
+      "bullets": [
+        "Per-item status: Pending / Cooking / Ready / Served.",
+        "Duplicate an item with one tap — same options included.",
+        "Remove an item right from the order card."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-detail.webp",
+        "alt": "Tablet with a detailed order card: dish statuses, duplicating and removing items"
+      }
+    },
+    {
+      "icon": "Receipt",
+      "eyebrow": "Bill splitting",
+      "heading": "Bill splitting for when guests pay separately.",
+      "body": "Guests decide to pay separately — check the items that go to the new bill; the rest stay on the current one. The system shows both totals immediately. One tap on \"Split order\" — and you have two independent orders with correct totals, both staying on their tables.",
+      "bullets": [
+        "Select items to split using checkboxes.",
+        "The new and remaining bill totals appear instantly.",
+        "One tap — and the order is split with no manual math."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-split.webp",
+        "alt": "Tablet on a restaurant table: splitting the bill between guests"
+      }
+    },
+    {
+      "icon": "Smartphone",
+      "eyebrow": "Mobile order entry",
+      "heading": "Adding items from a phone — in three steps.",
+      "body": "Waiters aren't tied to a single device: they open the order-taking screen on their own phone and add an item in three steps — pick a category, pick a dish, pick options (size, doneness, extra sauces and ingredients). The price recalculates automatically. A kitchen comment is added at the last step.",
+      "bullets": [
+        "Three steps: category → dish → options.",
+        "Options (size, add-ons, ingredients) with pricing in one tap.",
+        "A comment field at the final step."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-mobile.webp",
+        "alt": "Four phones showing the steps of adding an item to an order: category, dish, size, comment"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "What restaurateurs ask about order taking in IQ Rest. If your question isn't listed — message us on WhatsApp.",
+    "items": [
+      {
+        "q": "Can several waiters work simultaneously from different devices?",
+        "a": "Yes. Each waiter connects their own device and sees the same tables, orders and statuses in real time. A change made by one appears instantly for the others — no conflicts or locking."
+      },
+      {
+        "q": "Can waiters use their personal devices?",
+        "a": "Yes. The orders screen runs in the browser — nothing to install. A phone or tablet connects with a six-digit code from the dashboard, and access is revoked with one tap at the end of the shift."
+      },
+      {
+        "q": "Can I add required options to dishes (size, doneness)?",
+        "a": "Yes. A dish can have any number of option groups — required (\"Size\": Small / Medium / Big) and optional (\"Doneness\": rare / medium / well done). Options affect the price. With a required group, the system asks for a choice — eliminating mistakes."
+      },
+      {
+        "q": "Can I add comments and extra items to a dish?",
+        "a": "Yes. The last step has a comment field (\"no onions\", \"nut allergy\"). Extras are set up as priced options (\"+ BBQ sauce\", \"+ Bread\"). Comments appear on the kitchen display, highlighted in color."
+      },
+      {
+        "q": "Is there order statistics?",
+        "a": "Yes. The analytics section shows revenue by day, average ticket and best-selling dishes. This data helps you plan shifts and purchasing."
+      },
+      {
+        "q": "Can orders be split?",
+        "a": "Yes. Check the items that go to a new bill — both totals recalculate automatically, no manual math and no jumping between sections."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Orders in 10 minutes. ",
+    "headingAccent": "14 days of full access.",
+    "sub": "No card needed, cancel anytime. {count} restaurants take kitchen orders with us. All you need is an email."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Floor map and order list",
+      "sub": "Active orders next to the floor map: tables are color-coded by status, and a tap opens an order or creates a new one.",
+      "bullets": [
+        {
+          "icon": "Map",
+          "title": "Tables by status",
+          "sub": "Empty, occupied, needs attention — visible at a glance"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Active order list",
+          "sub": "Total, time placed and item count for every order"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "New order from the map",
+          "sub": "Tapping a free table opens order entry right away"
+        }
+      ]
+    },
+    {
+      "heading": "A status for every item",
+      "sub": "The kitchen and the waiter see the same picture: every dish carries its own status — from placed to served.",
+      "bullets": [
+        {
+          "icon": "Timer",
+          "title": "Per-dish statuses",
+          "sub": "Pending, Cooking, Ready, Served — per item, not per order"
+        },
+        {
+          "icon": "Receipt",
+          "title": "Item duplication",
+          "sub": "Repeat a dish with the same options in one tap"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Edits in place",
+          "sub": "Remove an item right from the order card"
+        }
+      ]
+    },
+    {
+      "heading": "Bill splitting",
+      "sub": "Guests pay separately — check the items and they move to a new bill. Totals recalculate instantly.",
+      "bullets": [
+        {
+          "icon": "Receipt",
+          "title": "Per-item checkboxes",
+          "sub": "Pick the dishes for the new bill; the rest stay on the current one"
+        },
+        {
+          "icon": "ChartColumn",
+          "title": "Totals shown immediately",
+          "sub": "The new and remaining bills are calculated automatically"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "One tap",
+          "sub": "The order is split without manual math or a calculator"
+        }
+      ]
+    },
+    {
+      "heading": "Order entry from the waiter's phone",
+      "sub": "Waiters take an order on their own device in three steps: category, dish, options.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Any device",
+          "sub": "A phone or tablet with a browser — no installation required"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Priced options",
+          "sub": "Size, add-ons and dish variants with pricing in one tap"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Dish comments",
+          "sub": "Guest requests are added at the final step — the kitchen sees them right away"
+        }
+      ]
+    }
+  ]
+}

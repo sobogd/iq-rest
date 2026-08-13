@@ -1,0 +1,59 @@
+{
+  "breadcrumbLabel": "Verðskrá",
+  "meta": {
+    "title": "Verðskrá — Settu saman þína áskrift frá 9.90 €/mán | IQ Rest",
+    "description": "Settu saman áskrift úr einingum: QR matseðill með gervigreindarþýðingum, móttaka pantana, borðabókanir, eldhússkjár. Frá 9.90 €/mán á veitingastað, magnafsláttur. 14 dagar frítt, ekkert kort, hættu hvenær sem er.",
+    "canonical": "https://iq-rest.com/is/verd",
+    "ogLocale": "is_IS",
+    "ogTitle": "Verðskrá — Settu saman þína áskrift",
+    "ogDescription": "Sveigjanleg áskrift frá 9.90 €/mán: QR matseðill, pantanir, bókanir, KDS. Magnafsláttur, engin falin gjöld. 14 dagar frítt."
+  },
+  "faqSub": "Algengar spurningar frá veitingastöðum um verðskrá og greiðslur. Finnurðu ekki þína — sendu okkur skilaboð á WhatsApp.",
+  "faqItems": [
+    {
+      "q": "Hvernig er verðið byggt upp?",
+      "a": "Þú setur saman áskriftina þína úr einingum. Grunnurinn er QR matseðill með gervigreindarþýðingum á 35 tungumál og stjórnun úr hvaða tæki sem er. Bættu svo við því sem þú þarft: borðabókanir, eldhússkjár, þitt eigið lén. Verðið er per veitingastað, með magnafslætti sem byrjar frá öðrum stað."
+    },
+    {
+      "q": "Er tekin þóknun af pöntunum?",
+      "a": "Nei. Pantanir af QR matseðlinum og frá þjónum fara beint til veitingastaðarins. Þú greiðir aðeins fast mánaðarverð."
+    },
+    {
+      "q": "Hvernig virkar prufutímabilið?",
+      "a": "14 daga fullur aðgangur að öllum eiginleikum, ekkert greiðslukort nauðsynlegt. Ef greiðsla er ekki sett upp að því loknu, er aðganginum fryst: stjórnborðið er áfram aðgengilegt til skoðunar, en slökkt er á matseðli gesta og móttöku pantana. Það eru engar sjálfvirkar gjaldfærslur."
+    },
+    {
+      "q": "Hvað verður um gögnin mín á meðan aðgangurinn er frystur?",
+      "a": "Allt er geymt: matseðill, myndir, pöntunarsaga, bókanir, stillingar, tölfræði. Settu upp greiðslu jafnvel sex mánuðum síðar — allt kemur aftur nákvæmlega eins og það var."
+    },
+    {
+      "q": "Þarf ég að prenta QR kóðana aftur?",
+      "a": "Nei. Á meðan aðgangurinn er frystur sýna kóðarnir tilkynningu um að matseðillinn sé \"tímabundið óaðgengilegur\"; um leið og greiðsla er sett upp opna sömu kóðar matseðilinn aftur."
+    },
+    {
+      "q": "Get ég breytt áskriftinni minni?",
+      "a": "Já, hvenær sem er úr stjórnborðinu. Mismunurinn er hlutfallslega reiknaður yfir þá daga sem eftir eru af greidda tímabilinu. Óvirkur eiginleiki heldur gögnunum sínum."
+    },
+    {
+      "q": "Hversu marga veitingastaði get ég tengt?",
+      "a": "Eins marga og þú vilt, öllum stjórnað úr einu stjórnborði. Magnafsláttur upp að 50% með 5+ veitingastöðum. Fyrir stórar keðjur — sérsniðin áskrift í gegnum WhatsApp."
+    },
+    {
+      "q": "Hver er afslátturinn á ársáskriftinni?",
+      "a": "Um 30% miðað við mánaðarlega gjaldfærslu. Nákvæm upphæð er sýnd þegar þú setur saman áskriftina þína."
+    },
+    {
+      "q": "Hvernig segi ég upp áskriftinni minni?",
+      "a": "Með einum smelli úr stjórnborðinu. Aðgangurinn virkar til loka greidda tímabilsins, síðan er honum fryst. Gögnin þín eru geymd."
+    },
+    {
+      "q": "Hvaða greiðslumáta samþykkið þið?",
+      "a": "Visa, Mastercard, American Express, Apple Pay, Google Pay — í gegnum Stripe. Í Evrópu styður ársáskriftin einnig SEPA beingreiðslur."
+    }
+  ],
+  "finalCta": {
+    "heading": "Eitt verð. Engin áhætta. ",
+    "headingAccent": "14 daga fullur aðgangur.",
+    "sub": "Ekkert kort þarf, hættu hvenær sem er — {count} veitingastaðir treysta okkur. Það eina sem þarf til að byrja er netfang."
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "About IQ Rest — Who We Are, Contacts and Legal Details",
+    "description": "Who is behind IQ Rest, how to reach us and the service operator's details: email, WhatsApp, legal information.",
+    "canonical": "https://iq-rest.com/about",
+    "ogLocale": "en_US",
+    "ogTitle": "About IQ Rest",
+    "ogDescription": "Who is behind IQ Rest, support contacts and the service operator's legal details."
+  },
+  "heading": "From our own café",
+  "headingAccent": "to a platform for restaurants",
+  "story": {
+    "photo": {
+      "src": "/contacts.webp"
+    },
+    "paragraphs": [
+      "Today the platform runs every day in {count} venues — from five-table coffee shops to chains across several cities. Data is stored on servers in Germany, and support questions are answered personally."
+    ],
+    "sign": "Bogdan Sokolov"
+  },
+  "facts": [
+    {
+      "value": "2022",
+      "label": "year the platform was founded"
+    },
+    {
+      "value": "{count}",
+      "label": "venues run on IQ Rest"
+    },
+    {
+      "value": "15",
+      "label": "countries where our clients are"
+    }
+  ],
+  "waPrefill": "Hello, I have a question about IQ Rest",
+  "contacts": [
+    {
+      "icon": "Mail",
+      "title": "Email",
+      "value": "support@iq-rest.com",
+      "href": "mailto:support@iq-rest.com",
+      "note": "Invoices, documents, data questions."
+    },
+    {
+      "icon": "MessageCircle",
+      "title": "WhatsApp",
+      "value": "+998 94 866 37 43",
+      "wa": true,
+      "note": "We'll show you a demo and help with setup."
+    },
+    {
+      "icon": "Clock",
+      "title": "Response time",
+      "value": "Mon–Sun, 9:00–21:00 CET",
+      "note": "We reply within a few hours."
+    }
+  ],
+  "legal": {
+    "rows": [
+      {
+        "label": "Service operator",
+        "value": "Bogdan Sokolov"
+      },
+      {
+        "label": "Legal form",
+        "value": "Autónomo (España)"
+      },
+      {
+        "label": "Tax ID (NIF)",
+        "value": "ESZ1894474S"
+      },
+      {
+        "label": "Address",
+        "value": "Calle Boca del Río 2, 33010 Oviedo, Asturias, España"
+      },
+      {
+        "label": "Domain",
+        "value": "https://iq-rest.com"
+      },
+      {
+        "label": "Data hosting",
+        "value": "Hetzner Online GmbH, Nuremberg, Germany"
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "You've heard our story. ",
+    "headingAccent": "Start writing yours — 14 days free.",
+    "sub": "No card needed, cancel anytime. Like {count} restaurants, you can count on us. All you need is an email."
+  }
+}

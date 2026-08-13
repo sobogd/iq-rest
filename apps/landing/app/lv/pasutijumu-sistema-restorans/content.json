@@ -1,0 +1,236 @@
+{
+  "locale": "lv",
+  "slug": "pasutijumu-sistema-restorans",
+  "trackPrefix": "l_orders",
+  "meta": {
+    "title": "Pasūtījumu pieņemšana restorānā — Viesis un Viesmīlis | IQ Rest",
+    "description": "Restorāna pasūtījumu pieņemšana no tālruņa vai planšetdatora: zāles plāns, rēķina sadalīšana, statusi, piedevas un komentāri. Viesi pasūta no galdiņa, viesmīļi pieņem pasūtījumus savā ierīcē. 14 dienas bez maksas.",
+    "canonical": "https://iq-rest.com/lv/pasutijumu-sistema-restorans",
+    "ogLocale": "lv_LV",
+    "ogTitle": "Pasūtījumu pieņemšana restorānā — Viesis un Viesmīlis",
+    "ogDescription": "Viesis pie galdiņa vai viesmīlis tālrunī — pasūtījums uzreiz nonāk virtuvē. Zāles plāns, rēķina sadalīšana, statusi, piedevas un komentāri.",
+    "brandLine": "IQ Rest — Pasūtījumu pieņemšana restorānā"
+  },
+  "hero": {
+    "headline": "Pasūtījumi no galdiņa —",
+    "cta": "Iestatīt tiešsaistes pasūtījumus",
+    "sub": "Viesi pasūta pie galdiņa vai viesmīļi no jebkuras ierīces — tieši uz virtuvi. Zāles plāns, rēķina sadalīšana.",
+    "headlineAccent": "tieši uz virtuvi",
+    "demoLabel": "Demo: pasūtījumu ekrāns",
+    "tablet": {
+      "src": "/landing/feature-orders-modal.webp",
+      "alt": "Planšetdators ar atvērtu pasūtījumu: ēdienu saraksts un darbības — mainīt galdiņu, dalīt rēķinu, pievienot atlaidi"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restorāniem"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kafejnīcām"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bāriem"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Viesnīcām"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Picērijām"
+    }
+  ],
+  "scan": {
+    "heading": "Iestatiet pasūtījumu pieņemšanas sistēmu",
+    "headingAccent": "5 minūtēs.",
+    "sub": "Skenējiet papīra ēdienkarti vai PDF — AI atpazīst ēdienus, cenas un kategorijas. Pieslēdziet planšetdatoru zālē un sāciet pieņemt pasūtījumus no galdiņiem.",
+    "cta": "Skenēt ēdienkarti"
+  },
+  "subFeatures": [
+    {
+      "icon": "Map",
+      "eyebrow": "Saraksts un zāles plāns",
+      "heading": "Pasūtījumu saraksts blakus zāles plānam.",
+      "body": "Visi aktīvie pasūtījumi ir redzami labajā pusē: statuss, summa, pasūtīšanas laiks un vienumu skaits. Kreisajā pusē ir zāles plāns: galdiņi ir iekrāsoti pēc statusa — brīvs, aizņemts, nepieciešama uzmanība. Pieskaroties galdiņam, atveras tā pasūtījums, pieskaroties kartītei — detalizēts skats. Nav jāpārslēdzas starp ekrāniem.",
+      "bullets": [
+        "Zāles plāns: galdiņi iekrāsoti pēc pasūtījuma statusa.",
+        "Pasūtījumu saraksts blakus — summa, laiks un vienumu skaits.",
+        "Pieskaroties galdiņam, atveras pasūtījums vai tiek izveidots jauns."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-map.webp",
+        "alt": "Planšetdators viesmīļa stacijā: pasūtījumu saraksts un zāles plāns ar iekrāsotiem galdiņiem"
+      }
+    },
+    {
+      "icon": "ClipboardList",
+      "eyebrow": "Pasūtījuma kartīte",
+      "heading": "Pasūtījuma kartīte: statusi, dublēšana un dzēšana — ar vienu pieskārienu.",
+      "body": "Katram vienumam ir savs statuss (Gaida / Gatavo / Gatavs / Pasniegts) — virtuve un viesmīlis redz vienu un to pašu ainu reāllaikā. Pieskaroties punktam, atveras darbību izvēlne: mainīt statusu, dublēt vienumu ar tām pašām piedevām un variācijām vai dzēst to. Viss notiek tieši pasūtījuma kartītē.",
+      "bullets": [
+        "Statuss katram vienumam: Gaida / Gatavo / Gatavs / Pasniegts.",
+        "Dublējiet vienumu ar vienu pieskārienu — ieskaitot tās pašas piedevas.",
+        "Dzēsiet vienumu tieši no pasūtījuma kartītes."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-detail.webp",
+        "alt": "Planšetdators ar detalizētu pasūtījuma kartīti: ēdienu statusi, vienumu dublēšana un dzēšana"
+      }
+    },
+    {
+      "icon": "Receipt",
+      "eyebrow": "Rēķina sadalīšana",
+      "heading": "Rēķina sadalīšana, ja viesi maksā atsevišķi.",
+      "body": "Viesi nolemj maksāt atsevišķi — atzīmējiet vienumus, kas pāriet uz jauno rēķinu; pārējie paliek pašreizējā. Sistēma uzreiz parāda abas summas. Viens pieskāriens \"Sadalīt pasūtījumu\" — un jums ir divi neatkarīgi pasūtījumi ar pareizām summām, kas abi paliek pie sava galdiņa.",
+      "bullets": [
+        "Izvēlieties vienumus sadalīšanai, izmantojot izvēles rūtiņas.",
+        "Jaunā un atlikušā rēķina summas parādās uzreiz.",
+        "Viens pieskāriens — un pasūtījums ir sadalīts bez manuālas rēķināšanas."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-split.webp",
+        "alt": "Planšetdators uz restorāna galdiņa: rēķina sadalīšana starp viesiem"
+      }
+    },
+    {
+      "icon": "Smartphone",
+      "eyebrow": "Mobilā pasūtījumu ievade",
+      "heading": "Vienumu pievienošana no tālruņa — trīs soļos.",
+      "body": "Viesmīļi nav piesaistīti vienai ierīcei: viņi atver pasūtījumu pieņemšanas ekrānu savā tālrunī un pievieno vienumu trīs soļos — izvēlas kategoriju, izvēlas ēdienu, izvēlas variācijas (izmērs, cepamības pakāpe, papildu mērces un sastāvdaļas). Cena tiek pārrēķināta automātiski. Pēdējā solī tiek pievienots komentārs virtuvei.",
+      "bullets": [
+        "Trīs soļi: kategorija → ēdiens → piedevas.",
+        "Piedevas (izmērs, papildinājumi, sastāvdaļas) ar cenām vienā pieskārienā.",
+        "Komentāra lauks pēdējā solī."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-mobile.webp",
+        "alt": "Četri tālruņi, kas rāda vienuma pievienošanas soļus pasūtījumam: kategorija, ēdiens, izmērs, komentārs"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Ko restorānu īpašnieki jautā par pasūtījumu pieņemšanu IQ Rest. Ja jūsu jautājuma nav sarakstā — rakstiet mums WhatsApp.",
+    "items": [
+      {
+        "q": "Vai vairāki viesmīļi var strādāt vienlaicīgi no dažādām ierīcēm?",
+        "a": "Jā. Katrs viesmīlis pieslēdz savu ierīci un redz vienus un tos pašus galdiņus, pasūtījumus un statusus reāllaikā. Viena viesmīļa veiktās izmaiņas uzreiz parādās pārējiem — nekādu konfliktu vai bloķēšanas."
+      },
+      {
+        "q": "Vai viesmīļi var izmantot savas personīgās ierīces?",
+        "a": "Jā. Pasūtījumu ekrāns darbojas pārlūkprogrammā — nekas nav jāinstalē. Tālrunis vai planšetdators tiek pieslēgts ar sešu ciparu kodu no vadības paneļa, un piekļuvi var atsaukt ar vienu pieskārienu maiņas beigās."
+      },
+      {
+        "q": "Vai varu pievienot ēdieniem obligātās variācijas (izmērs, cepamības pakāpe)?",
+        "a": "Jā. Ēdienam var būt jebkāds skaits variāciju grupu — obligātās (\"Izmērs\": Mazs / Vidējs / Liels) un neobligātās (\"Cepamības pakāpe\": rare / medium / well done). Variācijas ietekmē cenu. Ja grupa ir obligāta, sistēma prasa veikt izvēli — novēršot kļūdas."
+      },
+      {
+        "q": "Vai varu pievienot komentārus un papildinājumus ēdienam?",
+        "a": "Jā. Pēdējā solī ir komentāra lauks (\"bez sīpoliem\", \"alerģija pret riekstiem\"). Papildinājumi tiek iestatīti kā variācijas ar cenu (\"+ BBQ mērce\", \"+ Maize\"). Komentāri parādās virtuves ekrānā, izcelti krāsā."
+      },
+      {
+        "q": "Vai ir pieejama pasūtījumu statistika?",
+        "a": "Jā. Analītikas sadaļā ir redzami ieņēmumi pa dienām, vidējais čeks un pirktākie ēdieni. Šie dati palīdz plānot maiņas un iepirkumus."
+      },
+      {
+        "q": "Vai pasūtījumus var sadalīt?",
+        "a": "Jā. Atzīmējiet vienumus, kas pāriet uz jaunu rēķinu — abas summas tiek pārrēķinātas automātiski, nekādas manuālas rēķināšanas un lēkāšanas starp sadaļām."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Pasūtījumi 10 minūtēs. ",
+    "headingAccent": "14 dienas pilna pieeja.",
+    "sub": "Karte nav nepieciešama, atceliet jebkurā laikā. {count} restorāni pieņem pasūtījumus virtuvei kopā ar mums. Viss, kas vajadzīgs, ir e-pasts."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Zāles plāns un pasūtījumu saraksts",
+      "sub": "Aktīvie pasūtījumi blakus zāles plānam: galdiņi ir iekrāsoti pēc statusa, un pieskāriens atver pasūtījumu vai izveido jaunu.",
+      "bullets": [
+        {
+          "icon": "Map",
+          "title": "Galdiņi pēc statusa",
+          "sub": "Brīvs, aizņemts, nepieciešama uzmanība — redzams vienā mirklī"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Aktīvo pasūtījumu saraksts",
+          "sub": "Summa, pasūtīšanas laiks un vienumu skaits katram pasūtījumam"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Jauns pasūtījums no plāna",
+          "sub": "Pieskaroties brīvam galdiņam, uzreiz atveras pasūtījuma ievade"
+        }
+      ]
+    },
+    {
+      "heading": "Statuss katram vienumam",
+      "sub": "Virtuve un viesmīlis redz vienu un to pašu ainu: katram ēdienam ir savs statuss — no pasūtīta līdz pasniegtam.",
+      "bullets": [
+        {
+          "icon": "Timer",
+          "title": "Statusi katram ēdienam",
+          "sub": "Gaida, Gatavo, Gatavs, Pasniegts — katram vienumam, nevis pasūtījumam"
+        },
+        {
+          "icon": "Receipt",
+          "title": "Vienuma dublēšana",
+          "sub": "Atkārtojiet ēdienu ar tām pašām piedevām ar vienu pieskārienu"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Labojumi uz vietas",
+          "sub": "Dzēsiet vienumu tieši no pasūtījuma kartītes"
+        }
+      ]
+    },
+    {
+      "heading": "Rēķina sadalīšana",
+      "sub": "Viesi maksā atsevišķi — atzīmējiet vienumus, un tie pāriet uz jaunu rēķinu. Summas tiek pārrēķinātas uzreiz.",
+      "bullets": [
+        {
+          "icon": "Receipt",
+          "title": "Izvēles rūtiņas katram vienumam",
+          "sub": "Izvēlieties ēdienus jaunajam rēķinam; pārējie paliek pašreizējā"
+        },
+        {
+          "icon": "ChartColumn",
+          "title": "Summas redzamas uzreiz",
+          "sub": "Jaunais un atlikušais rēķins tiek aprēķināti automātiski"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Viens pieskāriens",
+          "sub": "Pasūtījums tiek sadalīts bez manuālas rēķināšanas vai kalkulatora"
+        }
+      ]
+    },
+    {
+      "heading": "Pasūtījuma ievade no viesmīļa tālruņa",
+      "sub": "Viesmīļi pieņem pasūtījumu savā ierīcē trīs soļos: kategorija, ēdiens, piedevas.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Jebkura ierīce",
+          "sub": "Tālrunis vai planšetdators ar pārlūkprogrammu — instalēšana nav nepieciešama"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Piedevas ar cenām",
+          "sub": "Izmērs, papildinājumi un ēdienu variācijas ar cenām vienā pieskārienā"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Komentāri ēdienam",
+          "sub": "Viesu vēlmes tiek pievienotas pēdējā solī — virtuve tās redz uzreiz"
+        }
+      ]
+    }
+  ]
+}

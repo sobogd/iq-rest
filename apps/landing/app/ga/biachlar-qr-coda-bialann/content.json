@@ -1,0 +1,151 @@
+{
+  "locale": "ga",
+  "slug": "biachlar-qr-coda-bialann",
+  "trackPrefix": "l_ga_qr",
+  "featureHeading": {
+    "heading": "Ní hamháin cód QR",
+    "sub": "Gach rud a thagann as scanadh amháin do d'aíonna agus do d'fhoireann."
+  },
+  "meta": {
+    "title": "Biachlár QR do Bhialanna | IQ Rest",
+    "description": "Biachlár QR do bhialanna: scanann aíonna an cód QR ar an mbord, osclaíonn siad an biachlár ina mbrabhsálaí agus ordaíonn siad ina dteanga féin. 14 lá saor in aisce, ní gá cárta.",
+    "canonical": "https://iq-rest.com/ga/biachlar-qr-coda-bialann",
+    "ogLocale": "ga_IE",
+    "ogTitle": "Biachlár QR do Bhialanna",
+    "ogDescription": "QR ar an mbord, an biachlár ar an bhfón — grianghraif, ailléirginí, 35 teanga agus nuashonruithe fíor-ama.",
+    "brandLine": "IQ Rest — Biachlár QR do Bhialanna"
+  },
+  "hero": {
+    "headline": "Biachlár QR:\nscan agus ordaigh",
+    "cta": "Cruthaigh biachlár QR",
+    "sub": "Scanann aíonna an QR ar an mbord, brabhsálann siad grianghraif agus ailléirginí i 35 teanga agus ordaíonn siad — níl aon aipeanna ag teastáil."
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Bialanna"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Caiféanna"
+    },
+    {
+      "icon": "Martini",
+      "label": "Beáir"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Óstáin"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerias"
+    }
+  ],
+  "scan": {
+    "heading": "An bhfuil biachlár páipéir nó PDF agat cheana féin?",
+    "headingAccent": "Déanann AI biachlár QR de in 60 soicind.",
+    "sub": "Uaslódáil grianghraf den bhiachlár nó PDF — aithníonn AI catagóirí, miasa agus praghsanna agus nascann sé iad díreach le do bhiachlár QR.",
+    "cta": "Cruthaigh biachlár QR"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "QR amháin, 35 teanga",
+      "heading": "Cód QR amháin, biachlár i 35 teanga.",
+      "body": "Scanann aíonna an QR agus roghnaíonn siad a dteanga: déanann AI an t-aistriúchán le híogaireacht chócaireachta, ní aistritheoir ginearálta. Níl aon bhiachláir turasóireachta ar leith ná bileoga scaipthe ar an mbord níos mó.",
+      "bullets": [
+        "Clúdaíonn QR clóite amháin 35 teanga, san áireamh sa síntiús.",
+        "Labhraíonn an AI teanga an bhia — bíonn ainmneacha miasa nádúrtha i ngach teanga.",
+        "Athraíonn aíonna teangacha taobh istigh den bhiachlár, gan an QR a athscanadh."
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Scanann dhá aoi an cód QR céanna ón mbord agus léann siad an biachlár i dteangacha éagsúla"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Ailléirginí sa QR",
+      "heading": "Ailléirginí agus lipéid aiste bia taobh istigh den bhiachlár QR.",
+      "body": "Is féidir lipéid a bheith ag gach mias sa bhiachlár taobh thiar den QR: glútan, lachtós, cnónna, bia mara, roghanna veigeánacha agus saor ó ghlútan. Scagann aíonna miasa dá srianta óna bhfón, gan ceist a chur ar an bhfoireann.",
+      "bullets": [
+        "14 chatagóir ailléirginí ag leibhéal na miasa.",
+        "Lipéid veigeánacha, feoilséantacha agus saor ó ghlútan le cliceáil amháin sa phainéal.",
+        "Scagann aíonna an biachlár QR de réir a srianta féin."
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Scagann aoi an biachlár QR de réir ailléirginí ar fhón agus déanann an t-úinéir eagarthóireacht ar an liosta ar tháibléad"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Níos mó ná QR amháin",
+      "heading": "Biachlár QR stílithe mar shuíomh gréasáin bialainne.",
+      "body": "Tar éis an cód a scanadh, ní thuirlingíonn aíonna ar PDF cothrom: feiceann siad scáileán fáilte le físeán nó grianghraf suntasach, tuairisc ar an ionad agus leathanach teagmhála le léarscáil, uimhreacha gutháin agus naisc shóisialta. Déantar doras tosaigh do bhialainne ar líne den QR.",
+      "bullets": [
+        "Físeán cúlra nó grianghraf suntasach ar scáileán tosaigh an bhiachláir QR.",
+        "Spás chun scéal d'ionaid agus gach catagóir a insint.",
+        "Leathanach teagmhála ionsuite: léarscáil, fón, Instagram, WhatsApp."
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Dhá fhón ar bhord: scáileán tosaigh an bhiachláir QR le físeán cúlra agus leathanach teagmhála le léarscáil"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Ordaigh ón QR · roghnach",
+      "heading": "Ón gcód QR, is féidir le haíonna ordú freisin.",
+      "body": "Seachas an biachlár a bhrabhsáil, is féidir leis an mbiachlár QR a bheith ina chainéal orduithe: cuireann aíonna miasa leis an gcairt agus seolann siad an t-iarratas. Sroicheann an t-ordú freastalaí ar an urlár, do WhatsApp nó scáileán na cistine. Is féidir an ghné a chasadh air agus as i socruithe aon uair is gá.",
+      "bullets": [
+        "Cairt, tuairimí agus cur isteach orduithe díreach ó scanadh an QR.",
+        "Sroicheann an t-ordú an t-urlár, WhatsApp nó scáileán na cistine láithreach.",
+        "Cumasaigh an ghné de réir uaireanta, urlár nó bialanna ar leith."
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Dhá fhón ar bhord: cairt cruthaithe ón mbiachlár QR agus deimhniú ar ordú curtha isteach"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Na rudaí a fhiafraíonn úinéirí bialainne faoi bhiachlár QR IQ Rest. Ní bhfaigheann tú do cheist? Seol teachtaireacht chugainn ar WhatsApp.",
+    "items": [
+      {
+        "q": "Conas a oibríonn biachlár QR IQ Rest?",
+        "a": "Tá cód QR clóite ag gach bord. Scanann aíonna é le ceamara a bhfóin, agus osclaíonn an brabhsálaí biachlár na bialainne — grianghraif, tuairiscí, ailléirginí agus praghsanna cothrom le dáta. Níl aon aip le híoslódáil d'aíonna ná don fhoireann."
+      },
+      {
+        "q": "An dteastaíonn scileanna teicniúla uaim chun biachlár QR a chruthú?",
+        "a": "Ní theastaíonn. Oibríonn an painéal le cliceálacha agus tarraingt-agus-scaoil, gan aon chód nó cumraíocht chasta. Tógann sé soicindí chun mias a chur leis: ainm, praghas, grianghraf. De ghnáth tógann socrú tosaigh 30 nóiméad go uair an chloig; má tá biachlár PDF agat cheana féin, déanann AI é a thiontú go huathoibríoch."
+      },
+      {
+        "q": "An gá d'aíonna aip a shuiteáil chun an QR a léamh?",
+        "a": "Ní gá. Aithníonn ceamara ionsuite iPhone agus Android an cód QR i soicindí agus osclaíonn sé an biachlár díreach sa bhrabhsálaí. Oibríonn an painéal riaracháin in aon bhrabhsálaí nua-aimseartha freisin — fón, táibléad nó ríomhaire glúine."
+      },
+      {
+        "q": "Conas a phriontáiltear na cóid QR boird?",
+        "a": "Gintear cóid QR go huathoibríoch sa phainéal (ceann in aghaidh an bhoird nó ceann amháin don ionad ar fad) agus íoslódáiltear iad mar PDF réidh le priontáil. Níl uait ach priontálaí oifige agus seastán: sealbhóir, greamán nó mata dí."
+      },
+      {
+        "q": "An féidir liom m'fhearann féin a úsáid don bhiachlár QR?",
+        "a": "Is féidir. Tacaímid le fearann do bhialainne le teastas SSL (mar shampla menu.dobhialann.com): nuair a scanann aíonna an QR, feiceann siad seoladh do bhialainne, ní fofhearann ginearálta. Tógann socrú DNS 5–10 nóiméad agus treoraímid tú tríd."
+      },
+      {
+        "q": "An féidir liom cóid QR a bhainistiú do roinnt bialanna ó chuntas amháin?",
+        "a": "Is féidir, ar iarratas. Is féidir le cuntas amháin roinnt ionad a thabhairt le chéile, gach ceann lena chóid QR, biachlár, dearadh agus anailísíocht féin. Seol teachtaireacht chugainn ar WhatsApp agus cumasóimid modh il-bhialainne."
+      },
+      {
+        "q": "An bhfuil sé deacair biachlár QR a sheoladh ón tús?",
+        "a": "Trí chéim: (1) cruthaigh catagóirí; (2) cuir miasa le hainm, praghas agus grianghraf leo; (3) priontáil na cóid QR agus cuir ar na boird iad. Má tá biachlár páipéir nó PDF agat cheana féin, uaslódáil é — aithníonn AI catagóirí agus praghsanna agus líonann sé na cártaí. Is féidir le bun-bhiachlár a bheith ar líne in 5 nóiméad."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Biachlár QR in 10 nóiméad. ",
+    "headingAccent": "14 lá de rochtain iomlán.",
+    "sub": "Ní gá cárta, cealaigh am ar bith. Iontaofa ag {count} bialann. Níl uait ach ríomhphost — agus níl aon aipeanna do d'aíonna."
+  }
+}

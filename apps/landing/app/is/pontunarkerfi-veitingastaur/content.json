@@ -1,0 +1,236 @@
+{
+  "locale": "is",
+  "slug": "pontunarkerfi-veitingastaur",
+  "trackPrefix": "l_orders",
+  "meta": {
+    "title": "Móttaka pantana — Gestur og þjónn | IQ Rest",
+    "description": "Móttaka pantana úr síma eða spjaldtölvu: salarteikning, skipting reiknings, staða, valmöguleikar og athugasemdir. Gestir panta frá borðinu, þjónar taka við pöntunum í sínu eigin tæki. 14 dagar frítt.",
+    "canonical": "https://iq-rest.com/is/pontunarkerfi-veitingastaur",
+    "ogLocale": "is_IS",
+    "ogTitle": "Móttaka pantana — Gestur og þjónn",
+    "ogDescription": "Gestur við borðið eða þjónn í síma — pöntunin fer beint í eldhúsið. Salarteikning, skipting reiknings, staða, valmöguleikar og athugasemdir.",
+    "brandLine": "IQ Rest — Móttaka pantana"
+  },
+  "hero": {
+    "headline": "Pantanir frá borðinu —",
+    "cta": "Setja upp pantanakerfi",
+    "sub": "Gestir panta við borðið eða þjónar úr hvaða tæki sem er — beint í eldhúsið. Salarteikning, skipting reiknings.",
+    "headlineAccent": "beint í eldhúsið",
+    "demoLabel": "Prufa: pantanaskjár",
+    "tablet": {
+      "src": "/landing/feature-orders-modal.webp",
+      "alt": "Spjaldtölva með opinni pöntun: listi yfir rétti og aðgerðir — breyta um borð, skipta pöntun, bæta við afslætti"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Veitingastaðir"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kaffihús"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barir"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hótel"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pítsustaðir"
+    }
+  ],
+  "scan": {
+    "heading": "Settu upp pantanakerfið",
+    "headingAccent": "á 5 mínútum.",
+    "sub": "Skannaðu prentaðan matseðil eða PDF — gervigreindin greinir rétti, verð og flokka. Tengdu spjaldtölvu í salnum og byrjaðu að taka við pöntunum frá borðum.",
+    "cta": "Skanna matseðil"
+  },
+  "subFeatures": [
+    {
+      "icon": "Map",
+      "eyebrow": "Listi og salarteikning",
+      "heading": "Pöntunarlisti við hlið salarteikningar.",
+      "body": "Allar virkar pantanir eru sýndar hægra megin: staða, samtals, tími pöntunar og fjöldi rétta. Vinstra megin er salarteikningin: borð eru litamerkt eftir stöðu — laust, frátekið, þarfnast athygli. Ef smellt er á borð opnast pöntunin, ef smellt er á spjald opnast nánari upplýsingar. Engin þörf á að skipta á milli skjáa.",
+      "bullets": [
+        "Salarteikning: borð litamerkt eftir stöðu pöntunar.",
+        "Pöntunarlisti við hliðina — samtals, tími og fjöldi rétta.",
+        "Smelltu á borð til að opna pöntunina eða búa til nýja."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-map.webp",
+        "alt": "Spjaldtölva á þjónastöð: pöntunarlisti og salarteikning með litamerktum borðum"
+      }
+    },
+    {
+      "icon": "ClipboardList",
+      "eyebrow": "Pöntunarspjald",
+      "heading": "Pöntunarspjaldið: staða, afritun og eyðing — með einum smelli.",
+      "body": "Hver réttur hefur sína eigin stöðu (Bíður / Í vinnslu / Tilbúið / Afgreitt) — eldhúsið og þjónninn sjá sömu mynd í rauntíma. Ef smellt er á punktinn opnast aðgerðavalmynd: breyta stöðu, afrita réttinn með sömu valmöguleikum, eða eyða honum. Allt gerist beint inni í pöntunarspjaldinu.",
+      "bullets": [
+        "Staða per rétt: Bíður / Í vinnslu / Tilbúið / Afgreitt.",
+        "Afritaðu rétt með einum smelli — sömu valmöguleikar fylgja með.",
+        "Eyða rétti beint af pöntunarspjaldinu."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-detail.webp",
+        "alt": "Spjaldtölva með ítarlegu pöntunarspjaldi: staða rétta, afritun og eyðing"
+      }
+    },
+    {
+      "icon": "Receipt",
+      "eyebrow": "Reikningi skipt",
+      "heading": "Reikningi skipt þegar gestir borga sitt í hvoru lagi.",
+      "body": "Gestir ákveða að borga sitt í hvoru lagi — hakaðu við réttina sem fara á nýja reikninginn; hinir verða eftir á þeim gamla. Kerfið sýnir báðar upphæðir strax. Einn smellur á \"Skipta pöntun\" — og þú ert með tvær sjálfstæðar pantanir með réttum upphæðum, sem báðar haldast á sínu borði.",
+      "bullets": [
+        "Veldu rétti til að skipta með því að haka við þá.",
+        "Nýja og eftirstandandi upphæðin birtist samstundis.",
+        "Einn smellur — og pöntuninni er skipt án handvirkra útreikninga."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-split.webp",
+        "alt": "Spjaldtölva á veitingahúsaborði: reikningi skipt á milli gesta"
+      }
+    },
+    {
+      "icon": "Smartphone",
+      "eyebrow": "Pantanir úr síma",
+      "heading": "Bæta við réttum úr síma — í þremur skrefum.",
+      "body": "Þjónar eru ekki bundnir við eitt tæki: þeir opna pantanaskjáinn í sínum eigin síma og bæta við rétti í þremur skrefum — velja flokk, velja rétt, velja valmöguleika (stærð, steikingarstig, auka sósur og hráefni). Verðið endurreiknast sjálfkrafa. Athugasemd fyrir eldhúsið er bætt við í síðasta skrefinu.",
+      "bullets": [
+        "Þrjú skref: flokkur → réttur → valmöguleikar.",
+        "Valmöguleikar (stærð, viðbætur, hráefni) með verðlagningu í einum smelli.",
+        "Reitur fyrir athugasemdir í síðasta skrefinu."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-mobile.webp",
+        "alt": "Fjórir símar sem sýna skrefin við að bæta rétti við pöntun: flokkur, réttur, stærð, athugasemd"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Það sem veitingamenn spyrja um móttöku pantana í IQ Rest. Ef spurningin þín er ekki á listanum — sendu okkur skilaboð á WhatsApp.",
+    "items": [
+      {
+        "q": "Geta nokkrir þjónar unnið samtímis í mismunandi tækjum?",
+        "a": "Já. Hver þjónn tengir sitt eigið tæki og sér sömu borð, pantanir og stöðu í rauntíma. Breyting sem einn gerir birtist samstundis hjá hinum — engir árekstrar eða læsingar."
+      },
+      {
+        "q": "Geta þjónar notað sín eigin tæki?",
+        "a": "Já. Pantanaskjárinn keyrir í vafranum — ekkert að setja upp. Sími eða spjaldtölva tengist með sex stafa kóða úr stjórnborðinu, og aðgangur er afturkallaður með einum smelli í lok vaktar."
+      },
+      {
+        "q": "Get ég bætt skylduvalmöguleikum við rétti (stærð, steikingarstig)?",
+        "a": "Já. Réttur getur haft hvaða fjölda af valmöguleikum sem er — skylduval (\"Stærð\": Lítill / Miðlungs / Stór) og valfrjálst (\"Steikingarstig\": rare / medium / well done). Valmöguleikar hafa áhrif á verðið. Ef um skylduval er að ræða biður kerfið um val — sem kemur í veg fyrir mistök."
+      },
+      {
+        "q": "Get ég bætt athugasemdum og auka réttum við pöntun?",
+        "a": "Já. Í síðasta skrefinu er reitur fyrir athugasemdir (\"enginn laukur\", \"hnetuofnæmi\"). Viðbætur eru settar upp sem verðlagðir valmöguleikar (\"+ BBQ sósa\", \"+ Brauð\"). Athugasemdir birtast á eldhússkjánum, litamerktar."
+      },
+      {
+        "q": "Er hægt að sjá tölfræði um pantanir?",
+        "a": "Já. Tölfræðihlutinn sýnir tekjur eftir dögum, meðalupphæð pöntunar og mest seldu réttina. Þessi gögn hjálpa þér að skipuleggja vaktir og innkaup."
+      },
+      {
+        "q": "Er hægt að skipta pöntunum?",
+        "a": "Já. Hakaðu við réttina sem fara á nýjan reikning — báðar upphæðir endurreiknast sjálfkrafa, engir handvirkir útreikningar og ekkert flakk á milli skjáa."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Pantanir á 10 mínútum. ",
+    "headingAccent": "14 daga fullur aðgangur.",
+    "sub": "Ekkert kort þarf, hættu hvenær sem er. {count} veitingastaðir taka við pöntunum með okkur. Það eina sem þú þarft er netfang."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Salarteikning og pöntunarlisti",
+      "sub": "Virkar pantanir við hlið salarteikningar: borð eru litamerkt eftir stöðu, og smellur opnar pöntun eða býr til nýja.",
+      "bullets": [
+        {
+          "icon": "Map",
+          "title": "Borð eftir stöðu",
+          "sub": "Laust, frátekið, þarfnast athygli — sýnilegt í fljótu bragði"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Listi yfir virkar pantanir",
+          "sub": "Samtals, tími pöntunar og fjöldi rétta fyrir hverja pöntun"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Ný pöntun af teikningu",
+          "sub": "Ef smellt er á laust borð opnast pantanaskjárinn strax"
+        }
+      ]
+    },
+    {
+      "heading": "Staða fyrir hvern rétt",
+      "sub": "Eldhúsið og þjónninn sjá sömu mynd: hver réttur hefur sína eigin stöðu — frá pöntun til afgreiðslu.",
+      "bullets": [
+        {
+          "icon": "Timer",
+          "title": "Staða per rétt",
+          "sub": "Bíður, Í vinnslu, Tilbúið, Afgreitt — fyrir hvern rétt, ekki pöntunina í heild"
+        },
+        {
+          "icon": "Receipt",
+          "title": "Afritun rétta",
+          "sub": "Endurtaktu rétt með sömu valmöguleikum með einum smelli"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Breytingar á staðnum",
+          "sub": "Eyða rétti beint af pöntunarspjaldinu"
+        }
+      ]
+    },
+    {
+      "heading": "Reikningi skipt",
+      "sub": "Gestir borga sitt í hvoru lagi — hakaðu við réttina og þeir færast á nýjan reikning. Upphæðir endurreiknast samstundis.",
+      "bullets": [
+        {
+          "icon": "Receipt",
+          "title": "Hakað við hvern rétt",
+          "sub": "Veldu réttina fyrir nýja reikninginn; hinir verða eftir á þeim gamla"
+        },
+        {
+          "icon": "ChartColumn",
+          "title": "Upphæðir sýndar strax",
+          "sub": "Nýi og eftirstandandi reikningurinn eru reiknaðir sjálfkrafa"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Einn smellur",
+          "sub": "Pöntuninni er skipt án handvirkra útreikninga eða reiknivélar"
+        }
+      ]
+    },
+    {
+      "heading": "Pantanir úr síma þjónsins",
+      "sub": "Þjónar taka við pöntun í sínu eigin tæki í þremur skrefum: flokkur, réttur, valmöguleikar.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Hvaða tæki sem er",
+          "sub": "Sími eða spjaldtölva með vafra — engin uppsetning nauðsynleg"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Verðlagðir valmöguleikar",
+          "sub": "Stærð, viðbætur og útgáfur af réttum með verðlagningu í einum smelli"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Athugasemdir við rétti",
+          "sub": "Séróskum gesta er bætt við í síðasta skrefinu — eldhúsið sér þær strax"
+        }
+      ]
+    }
+  ]
+}

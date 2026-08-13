@@ -1,0 +1,59 @@
+{
+  "breadcrumbLabel": "Prețuri",
+  "meta": {
+    "title": "Prețuri — Configurează-ți abonamentul de la 9.90 €/lună | IQ Rest",
+    "description": "Configurează-ți abonamentul din module: meniu QR cu traducere AI, preluare comenzi, rezervări mese, ecran pentru bucătărie. De la 9.90 €/lună pe restaurant, reduceri de volum. 14 zile gratuit, fără card, anulezi oricând.",
+    "canonical": "https://iq-rest.com/ro/preturi",
+    "ogLocale": "ro_RO",
+    "ogTitle": "Prețuri — Configurează-ți abonamentul pentru restaurant",
+    "ogDescription": "Un abonament modular de la 9.90 €/lună: meniu QR, comenzi, rezervări, KDS. Reduceri de volum, fără taxe ascunse. 14 zile gratuit."
+  },
+  "faqSub": "Întrebări frecvente de la restaurante despre prețuri și plată. Dacă nu o găsești pe a ta — scrie-ne pe WhatsApp.",
+  "faqItems": [
+    {
+      "q": "Cum este structurat prețul?",
+      "a": "Îți configurezi abonamentul din module. Baza este un meniu QR cu traducere AI în 35 de limbi și gestionare de pe orice dispozitiv. Apoi adaugi ce ai nevoie: rezervări mese, ecranul pentru bucătărie, domeniul propriu. Prețul este per restaurant, cu reduceri de volum începând de la al doilea."
+    },
+    {
+      "q": "Există un comision pe comenzi?",
+      "a": "Nu. Comenzile din meniul QR și de la ospătari merg direct la restaurant. Plătești doar un preț lunar fix."
+    },
+    {
+      "q": "Cum funcționează perioada de probă?",
+      "a": "14 zile de acces complet la toate funcționalitățile, fără card bancar. Dacă plata nu este configurată până la final, contul este pus pe pauză: panoul rămâne disponibil în mod doar-citire, în timp ce meniul pentru oaspeți și preluarea comenzilor sunt dezactivate. Nu există taxe automate."
+    },
+    {
+      "q": "Ce se întâmplă cu datele mele cât timp este pe pauză?",
+      "a": "Totul este păstrat: meniu, fotografii, istoricul comenzilor, rezervări, setări, statistici. Configurează plata chiar și după șase luni — totul revine exact cum era."
+    },
+    {
+      "q": "Va trebui să retipăresc codurile QR?",
+      "a": "Nu. Cât timp este pe pauză, codurile afișează un mesaj „temporar indisponibil”; odată ce plata este configurată, aceleași coduri deschid din nou meniul."
+    },
+    {
+      "q": "Îmi pot schimba abonamentul?",
+      "a": "Da, oricând din panou. Diferența este calculată proporțional pentru zilele rămase din perioada plătită. O funcționalitate dezactivată își păstrează datele."
+    },
+    {
+      "q": "Câte restaurante pot conecta?",
+      "a": "Oricâte dorești, toate gestionate dintr-un singur panou. Reduceri de volum de până la 50% pentru 5+ restaurante. Pentru lanțuri mari — un plan personalizat via WhatsApp."
+    },
+    {
+      "q": "Care este reducerea la abonamentul anual?",
+      "a": "Aproximativ 30% comparativ cu facturarea lunară. Suma exactă este afișată în timp ce îți configurezi abonamentul."
+    },
+    {
+      "q": "Cum îmi anulez abonamentul?",
+      "a": "Cu un singur click din panou. Contul funcționează până la sfârșitul perioadei plătite, apoi este pus pe pauză. Datele tale sunt păstrate."
+    },
+    {
+      "q": "Ce metode de plată acceptați?",
+      "a": "Visa, Mastercard, American Express, Apple Pay, Google Pay — prin Stripe. În Europa, abonamentul anual suportă și SEPA Direct Debit."
+    }
+  ],
+  "finalCta": {
+    "heading": "Un singur preț. Zero riscuri. ",
+    "headingAccent": "14 zile de acces complet.",
+    "sub": "Fără card, anulezi oricând — folosit de {count} restaurante. Tot ce îți trebuie pentru a începe este un email."
+  }
+}

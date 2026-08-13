@@ -1,0 +1,261 @@
+{
+  "htmlLang": "cs",
+  "htmlDir": "ltr",
+  "meta": {
+    "title": "Digitální menu, KDS a rezervace — IQ Rest",
+    "description": "Řiďte svůj podnik z jedné aplikace: vícejazyčné digitální menu, kuchyňský displej a rezervace 24/7. Spuštění do 5 minut. 14 dní zdarma, bez karty.",
+    "canonical": "https://iq-rest.com/cs",
+    "ogLocale": "cs_CZ",
+    "ogTitle": "Digitální menu, KDS a rezervace",
+    "ogDescription": "Řiďte svůj podnik z jedné aplikace: vícejazyčné digitální menu, kuchyňský displej a rezervace 24/7. Spuštění do 5 minut. 14 dní zdarma, bez karty."
+  },
+  "jsonLd": {
+    "appName": "IQ Rest — Platforma pro řízení restaurací"
+  },
+  "ctaText": "Vyzkoušet zdarma",
+  "homeCtaText": "Vyzkoušet zdarma",
+  "trust": [
+    {
+      "kind": "num",
+      "value": 35,
+      "label": "Jazyků menu"
+    },
+    {
+      "kind": "text",
+      "value": "24/7",
+      "label": "Online rezervace"
+    },
+    {
+      "kind": "num",
+      "value": 5,
+      "suffix": " min",
+      "label": "Do spuštění"
+    },
+    {
+      "kind": "count",
+      "label": "Podniků s námi"
+    }
+  ],
+  "demoText": "Otevřít demo",
+  "microcopy": "14 dní zdarma · Bez platební karty · Zrušení kdykoliv",
+  "header": {
+    "navFeatures": "Funkce",
+    "navHow": "Jak to funguje",
+    "navPricing": "Ceník",
+    "navFaq": "Časté dotazy",
+    "signIn": "Přihlásit se",
+    "viewFeatures": "Zobrazit funkce",
+    "cta": "Začít zdarma",
+    "navProducts": "Funkce",
+    "navGuide": "Návod",
+    "navAbout": "O nás",
+    "menuFeaturesHeading": "Funkce",
+    "menuInfoHeading": "Informace"
+  },
+  "hero": {
+    "verticals": [
+      "Restaurace",
+      "Kavárny",
+      "Bary",
+      "Hotely",
+      "Pizzerie"
+    ],
+    "headline": "Digitální menu pro vaši restauraci.\nHotovo za 5 minut.",
+    "sub": "Digitální menu pro váš podnik za 5 minut. Vše v ceně: editor bez kódování, AI rozpoznání tištěného menu, QR kódy na stoly a objednávky bez provize.",
+    "dynamicHeadlines": [
+      "0% provize.",
+      "35 jazyků díky AI.",
+      "Online objednávky.",
+      "Rezervace 24/7.",
+      "Prémiový design."
+    ],
+    "painBullets": [
+      "0% provize: každá objednávka jde přímo podniku.",
+      "AI překlad do 35 jazyků — turisté rozumí menu a objednají si víc.",
+      "Rezervace 24/7: hosté si stůl rezervují sami, žádné telefony během špičky.",
+      "Flexibilní ceník: změny v menu se projeví okamžitě."
+    ],
+    "rating": "Více než 500 podniků ve 30+ zemích"
+  },
+  "founder": {
+    "eyebrow": "Vytvořeno lidmi z gastra",
+    "quoteStart": "S manželkou jsme vedli vlastní kavárnu a známe běžný den v gastru zevnitř: přijímání objednávek, rezervace, provoz na place i v kuchyni. Chtěli jsme jeden nástroj — moderní, se snadným nastavením a přehledný na první pohled —",
+    "quoteAccent": "tak vznikl nápad na platformu, kterou teď budujeme pro další majitele podniků.",
+    "sign": "Bogdan Sokolov · zakladatel, bývalý majitel kavárny",
+    "photoAlt": "Bogdan Sokolov, zakladatel IQ Rest"
+  },
+  "pricing": {
+    "badge": "Bez provizí · Bez závazků",
+    "heading": "Jeden tarif.",
+    "headingAccent": "Vše v ceně.",
+    "sub": "QR menu, příjem objednávek, AI překlady, web podniku a rezervace. Jedna transparentní měsíční platba.",
+    "monthlyLabel": "Měsíčně",
+    "yearlyLabel": "Ročně",
+    "saveBadge": "Ušetříte 25 %",
+    "perMonth": "měsíčně",
+    "billedAnnually": "Účtováno ročně: {total}",
+    "youSave": "Ušetříte {amount}",
+    "trust": {
+      "secure": "Bezpečná platba přes Stripe",
+      "noCommitment": "Bez závazků",
+      "quick": "Aktivace během pár minut",
+      "restaurants": "Více než 500 podniků"
+    }
+  },
+  "faq": {
+    "eyebrow": "Máte další dotazy?",
+    "heading": "Časté",
+    "headingAccent": "dotazy",
+    "sub": "Na co se majitelé podniků ptají nejčastěji před registrací. Nenašli jste odpověď — napište nám na WhatsApp, odpovídají skuteční lidé, ne bot.",
+    "whatsappCta": "Napsat na WhatsApp",
+    "whatsappPrefill": "Dobrý den, mám dotaz ohledně IQ Rest",
+    "items": [
+      {
+        "q": "Co obsahuje zkušební verze a co se stane po jejím skončení?",
+        "a": "Na 14 dní získáte přístup ke všem funkcím platformy, bez nutnosti zadávat platební kartu. Pokud po 14 dnech nepřidáte platební metodu, účet se automaticky pozastaví. Nikdy vám nic neúčtujeme bez vašeho souhlasu. Kartu můžete přidat později a pokračovat přesně tam, kde jste skončili. Zrušení předplatného je otázkou jednoho kliknutí."
+      },
+      {
+        "q": "Berete si provizi z objednávek?",
+        "a": "Ne, nebereme si žádná procenta z objednávek. Všechny objednávky z QR menu jdou přímo podniku, bez poplatků agregátorům. Platíte jen fixní měsíční částku — a nic víc."
+      },
+      {
+        "q": "Musí si hosté stahovat aplikaci a potřebujeme technické znalosti?",
+        "a": "Hosté nepotřebují aplikaci: stačí namířit foťák v mobilu na QR kód a menu se otevře v prohlížeči. Podnik také nepotřebuje žádné technické znalosti — administrace běží přímo v prohlížeči na telefonu, tabletu nebo notebooku. Všechno se ovládá klikáním a přetahováním, bez kódování."
+      },
+      {
+        "q": "Jak rychle se projeví změny v menu — ceny, nová jídla?",
+        "a": "Okamžitě. Změny provedené na telefonu se hostům zobrazí během pár vteřin. Přidání nového jídla zabere pár kliknutí: název, cena, fotka. Žádné přetiskování papírových menu a nepotřebujete grafika."
+      },
+      {
+        "q": "Kolik jazyků podporujete?",
+        "a": "Podporujeme 35 jazyků s automatickým překladem pomocí AI. Jedno kliknutí — a celé menu je přeložené. AI chápe kulinářský kontext, takže názvy jídel a popisy zní přirozeně v každém jazyce. Turisté objednávají s větší jistotou, když přesně ví, co jídlo obsahuje."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Spuštěno za 10 minut. ",
+    "headingAccent": "14 dní plného přístupu.",
+    "sub": "Bez karty, zrušení kdykoliv. Důvěřuje nám {count} podniků. Stačí vám jen e-mail."
+  },
+  "featureHighlights": {
+    "heading": "Vše v ceně",
+    "sub": "Funkce, které mění hosty v objednávky — v každém tarifu, bez příplatků."
+  },
+  "scan": {
+    "heading": "Máte papírové menu nebo PDF?",
+    "headingAccent": "AI ho zdigitalizuje za 60 vteřin.",
+    "sub": "Nahrajte fotku nebo dokument — AI automaticky rozpozná kategorie, jídla a ceny.",
+    "cta": "Naskenovat menu →"
+  },
+  "pricingQuiz": {
+    "heading": "Sestavte si tarif ",
+    "sub": "Začněte s menu — rezervace, KDS a vlastní doménu přidejte, až je budete potřebovat.",
+    "billingLabel": "Fakturace:",
+    "monthly": "Měsíčně",
+    "yearly": "Ročně",
+    "restaurantsLabel": "Podniky:",
+    "fewerAria": "Méně podniků",
+    "moreAria": "Více podniků",
+    "menuTitle": "Menu a web",
+    "menuHint": "Vždy v ceně",
+    "reservationsTitle": "Rezervační systém",
+    "reservationsHint": "Rezervace stolů",
+    "kdsTitle": "Kuchyňský displej",
+    "kdsHint": "Objednávky na obrazovce v kuchyni",
+    "domainTitle": "Vlastní doména",
+    "domainHint": "Vaše vlastní webová adresa",
+    "perMonthSuffix": "/měs",
+    "perYearSuffix": "/rok",
+    "perMonthLongSuffix": "/měsíc",
+    "saveYearlyTemplate": "Při roční platbě ušetříte {amount} za rok",
+    "volumeDiscountTemplate": "Sleva {percent} %",
+    "saveUpToHint": "Ušetřete až 50 % při 5 a více podnicích",
+    "billedYearly": "Účtováno jednou ročně",
+    "billedMonthly": "Účtováno měsíčně",
+    "enterprisePre": "Potřebujete tarif na míru?",
+    "enterpriseCta": "Napište nám",
+    "enterprisePost": "a my vám ho připravíme.",
+    "enterpriseWa": "Dobrý den! Potřebuji tarif na míru pro své podniky.",
+    "headingAccent": "pro váš podnik",
+    "multiplePre": "Máte více poboček?",
+    "multipleCta": "Zobrazit možnosti",
+    "restaurantOne": "podnik",
+    "restaurantFew": "podniky",
+    "restaurantMany": "podniků",
+    "multipleChangePre": "Jiný počet podniků?",
+    "multipleChangeCta": "Změnit"
+  },
+  "pricingCta": {
+    "heading": "Jednoduchý a flexibilní ceník",
+    "sub": "Plaťte jen za funkce, které opravdu využijete — sestavte si tarif za minutu.",
+    "fromTemplate": "od {price}/měs",
+    "button": "Sestavit tarif"
+  },
+  "footer": {
+    "copyrightTemplate": "© {year} IQ Rest. Všechna práva vyhrazena.",
+    "featuresHeading": "Funkce",
+    "featureLinks": [
+      {
+        "href": "/ru/tsifrovoe-menyu",
+        "label": "Digitální menu"
+      },
+      {
+        "href": "/ru/priem-zakazov-restoran",
+        "label": "Příjem objednávek"
+      },
+      {
+        "href": "/ru/bronirovanie-stolov",
+        "label": "Rezervace"
+      },
+      {
+        "href": "/ru/kds-kuhonnyy-displey",
+        "label": "Kuchyňský displej"
+      }
+    ],
+    "infoHeading": "Informace",
+    "legalHeading": "Právní informace",
+    "currencyHeading": "Měna"
+  },
+  "common": {
+    "close": "Zavřít",
+    "menu": "Menu",
+    "help": "Nápověda"
+  },
+  "auth": {
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "Zadejte svůj e-mail",
+    "or": "nebo",
+    "continueGoogle": "Pokračovat přes Google",
+    "continueApple": "Pokračovat přes Apple",
+    "consent": {
+      "line": "Pokračováním souhlasíte s <terms>Podmínkami služby</terms>. Způsob zpracování dat najdete v <privacy>Zásadách ochrany osobních údajů</privacy>."
+    },
+    "signInTitle": "Vítejte zpět",
+    "signInSubtitle": "Zadejte svůj e-mail — pošleme vám 6místný přihlašovací kód.",
+    "signInButton": "Přihlásit se",
+    "registerTitle": "Vytvořit účet",
+    "registerSubtitle": "14 dní zdarma, bez karty. Pošleme vám přihlašovací kód na e-mail — žádná hesla, žádné formuláře.",
+    "registerButton": "Vytvořit účet",
+    "switchSignIn": "Přihlásit se",
+    "switchCreate": "Zaregistrovat se",
+    "verifyTitle": "Zkontrolujte si e-mail",
+    "verifySubtitle": "Na {email} jsme poslali 6místný kód.",
+    "verifyCodeLabel": "Ověřovací kód",
+    "checkSpam": "Nevidíte e-mail? Zkontrolujte složku spam.",
+    "verifyButton": "Pokračovat",
+    "resendCode": "Poslat kód znovu",
+    "resendSent": "Kód odeslán",
+    "changeEmail": "Použít jiný e-mail",
+    "metaSignIn": "Přihlásit se",
+    "metaRegister": "Vytvořit účet",
+    "errors": {
+      "emailInvalid": "Zadejte platný e-mail.",
+      "sendFailed": "Kód se nepodařilo odeslat. Zkuste to prosím znovu.",
+      "verifyFailed": "Kód se nepodařilo ověřit. Zkuste to prosím znovu.",
+      "codeExpired": "Platnost kódu vypršela. Vyžádejte si nový.",
+      "noCode": "Kód nebyl nalezen nebo vypršel. Vyžádejte si nový.",
+      "invalidCode": "Neplatný kód. Zkuste to prosím znovu.",
+      "tooManyAttempts": "Příliš mnoho pokusů. Počkejte chvíli a zkuste to znovu."
+    }
+  }
+}

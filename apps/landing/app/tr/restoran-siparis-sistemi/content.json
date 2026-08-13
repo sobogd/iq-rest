@@ -1,0 +1,236 @@
+{
+  "locale": "tr",
+  "slug": "restoran-siparis-sistemi",
+  "trackPrefix": "l_orders",
+  "meta": {
+    "title": "Restoran Sipariş Alma Sistemi — Misafir ve Garson | IQ Rest",
+    "description": "Telefon veya tabletten restoran siparişi alma: masa planı, hesap bölme, durumlar, seçenekler ve notlar. Misafirler masadan sipariş verir, garsonlar kendi cihazlarından sipariş alır. 14 gün ücretsiz.",
+    "canonical": "https://iq-rest.com/tr/restoran-siparis-sistemi",
+    "ogLocale": "tr_TR",
+    "ogTitle": "Restoran Sipariş Alma Sistemi — Misafir ve Garson",
+    "ogDescription": "Masadaki misafir veya telefondaki garson — sipariş anında mutfağa ulaşır. Masa planı, hesap bölme, durumlar, seçenekler ve notlar.",
+    "brandLine": "IQ Rest — Restoran Sipariş Alma"
+  },
+  "hero": {
+    "headline": "Masadan siparişler —",
+    "cta": "Online siparişi kur",
+    "sub": "Misafirler masadan veya garsonlar herhangi bir cihazdan sipariş girer — doğrudan mutfağa. Masa planı, hesap bölme.",
+    "headlineAccent": "doğrudan mutfağa",
+    "demoLabel": "Demo: sipariş ekranı",
+    "tablet": {
+      "src": "/landing/feature-orders-modal.webp",
+      "alt": "Açık bir siparişin olduğu tablet: yemek listesi ve masa değiştirme, hesap bölme, indirim ekleme gibi işlemler"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restoranlar"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kafeler"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barlar"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Oteller"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzacılar"
+    }
+  ],
+  "scan": {
+    "heading": "Sipariş alma sisteminizi",
+    "headingAccent": "5 dakikada kurun.",
+    "sub": "Kağıt veya PDF menüyü taratın — yapay zeka yemekleri, fiyatları ve kategorileri tanısın. Salonda bir tablet bağlayın ve masalardan sipariş almaya başlayın.",
+    "cta": "Menüyü tara"
+  },
+  "subFeatures": [
+    {
+      "icon": "Map",
+      "eyebrow": "Liste ve masa planı",
+      "heading": "Masa planının yanında sipariş listesi.",
+      "body": "Tüm aktif siparişler sağda gösterilir: durum, toplam tutar, sipariş zamanı ve ürün sayısı. Solda ise masa planı yer alır: masalar durumlarına göre (boş, dolu, ilgilenilmesi gerekiyor) renklendirilir. Bir masaya dokunmak siparişi açar, karta dokunmak ise detaylı görünümü açar. Ekranlar arası geçiş yapmaya gerek kalmaz.",
+      "bullets": [
+        "Masa planı: masalar sipariş durumuna göre renklendirilir.",
+        "Yanında sipariş listesi — toplam, zaman ve ürün sayısı.",
+        "Bir masaya dokunmak siparişi açar veya yeni bir tane oluşturur."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-map.webp",
+        "alt": "Garson istasyonunda tablet: sipariş listesi ve renk kodlu masalarla salon planı"
+      }
+    },
+    {
+      "icon": "ClipboardList",
+      "eyebrow": "Sipariş kartı",
+      "heading": "Sipariş kartı: durumlar, kopyalama ve silme — tek dokunuşla.",
+      "body": "Her ürünün kendi durumu vardır (Bekliyor / Hazırlanıyor / Hazır / Servis Edildi) — mutfak ve garson aynı tabloyu gerçek zamanlı görür. Noktaya dokunmak işlem menüsünü açar: durumu değiştir, aynı ekstralar ve seçeneklerle ürünü kopyala veya sil. Her şey doğrudan sipariş kartının içinde gerçekleşir.",
+      "bullets": [
+        "Ürün bazlı durum: Bekliyor / Hazırlanıyor / Hazır / Servis Edildi.",
+        "Tek dokunuşla ürünü kopyala — aynı seçenekler dahil.",
+        "Ürünü doğrudan sipariş kartından silin."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-detail.webp",
+        "alt": "Detaylı sipariş kartı açık tablet: yemek durumları, ürün kopyalama ve silme"
+      }
+    },
+    {
+      "icon": "Receipt",
+      "eyebrow": "Hesap bölme",
+      "heading": "Misafirler ayrı ödemek istediğinde hesap bölme.",
+      "body": "Misafirler ayrı ödemeye karar verdi — yeni hesaba gidecek ürünleri işaretleyin; geri kalanlar mevcut hesapta kalır. Sistem her iki toplamı da anında gösterir. \"Hesabı böl\" butonuna tek dokunuş — ve doğru toplamlarla, her ikisi de kendi masasında kalan iki bağımsız siparişiniz olur.",
+      "bullets": [
+        "Onay kutularını kullanarak bölünecek ürünleri seçin.",
+        "Yeni ve kalan hesap toplamları anında görünür.",
+        "Tek dokunuş — sipariş manuel hesaplama olmadan bölünür."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-split.webp",
+        "alt": "Restoran masasında tablet: misafirler arasında hesap bölme işlemi"
+      }
+    },
+    {
+      "icon": "Smartphone",
+      "eyebrow": "Mobil sipariş girişi",
+      "heading": "Telefondan ürün ekleme — üç adımda.",
+      "body": "Garsonlar tek bir cihaza bağlı kalmaz: kendi telefonlarından sipariş alma ekranını açar ve üç adımda ürün eklerler — kategori seç, yemek seç, seçenekleri (porsiyon, pişme derecesi, ekstra soslar ve malzemeler) seç. Fiyat otomatik olarak yeniden hesaplanır. Son adımda mutfak notu eklenir.",
+      "bullets": [
+        "Üç adım: kategori → yemek → seçenekler.",
+        "Tek dokunuşla fiyatlandırılmış seçenekler (porsiyon, ekstralar, malzemeler).",
+        "Son adımda bir not alanı."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-mobile.webp",
+        "alt": "Siparişe ürün ekleme adımlarını gösteren dört telefon: kategori, yemek, porsiyon, not"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Restorancıların IQ Rest'te sipariş alma hakkında sordukları. Sorunuz listede yoksa — bize WhatsApp'tan yazın.",
+    "items": [
+      {
+        "q": "Birden fazla garson farklı cihazlardan aynı anda çalışabilir mi?",
+        "a": "Evet. Her garson kendi cihazını bağlar ve aynı masaları, siparişleri ve durumları gerçek zamanlı olarak görür. Birinin yaptığı değişiklik diğerlerinde anında belirir — çakışma veya kilitlenme olmaz."
+      },
+      {
+        "q": "Garsonlar kendi kişisel cihazlarını kullanabilir mi?",
+        "a": "Evet. Sipariş ekranı tarayıcıda çalışır — kurulacak bir şey yoktur. Bir telefon veya tablet, panelden alınan altı haneli bir kodla bağlanır ve vardiya sonunda erişim tek tıkla iptal edilir."
+      },
+      {
+        "q": "Yemeklere zorunlu seçenekler (porsiyon, pişme derecesi) ekleyebilir miyim?",
+        "a": "Evet. Bir yemeğin istenilen sayıda seçenek grubu olabilir — zorunlu (\"Porsiyon\": Küçük / Orta / Büyük) ve isteğe bağlı (\"Pişme Derecesi\": az / orta / iyi pişmiş). Seçenekler fiyatı etkiler. Zorunlu bir grupta sistem bir seçim yapılmasını ister — böylece hatalar ortadan kalkar."
+      },
+      {
+        "q": "Bir yemeğe not ve ekstra ürün ekleyebilir miyim?",
+        "a": "Evet. Son adımda bir not alanı bulunur (\"soğansız\", \"fıstık alerjisi\"). Ekstralar fiyatlandırılmış seçenekler olarak ayarlanır (\"+ Barbekü sos\", \"+ Ekmek\"). Notlar mutfak ekranında renkli olarak vurgulanır."
+      },
+      {
+        "q": "Sipariş istatistikleri var mı?",
+        "a": "Evet. Analiz bölümü gün bazında ciro, ortalama sepet tutarı ve en çok satan yemekleri gösterir. Bu veriler vardiyaları ve satın almayı planlamanıza yardımcı olur."
+      },
+      {
+        "q": "Siparişler bölünebilir mi?",
+        "a": "Evet. Yeni bir hesaba gidecek ürünleri işaretleyin — her iki toplam da otomatik olarak yeniden hesaplanır, manuel hesaplama veya bölümler arası geçiş yapmaya gerek kalmaz."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Siparişler 10 dakikada hazır. ",
+    "headingAccent": "14 gün tam erişim.",
+    "sub": "Kart gerekmez, istediğiniz zaman iptal edin. {count} restoran mutfak siparişlerini bizimle alıyor. Başlamak için sadece e-posta adresiniz yeterli."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Masa planı ve sipariş listesi",
+      "sub": "Masa planının yanında aktif siparişler: masalar durumlarına göre renklendirilir ve bir dokunuşla sipariş açılır veya yeni bir tane oluşturulur.",
+      "bullets": [
+        {
+          "icon": "Map",
+          "title": "Duruma göre masalar",
+          "sub": "Boş, dolu, ilgilenilmesi gerekiyor — bir bakışta görünür"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Aktif sipariş listesi",
+          "sub": "Her sipariş için toplam tutar, sipariş zamanı ve ürün sayısı"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Haritadan yeni sipariş",
+          "sub": "Boş bir masaya dokunmak anında sipariş girişini açar"
+        }
+      ]
+    },
+    {
+      "heading": "Her ürün için bir durum",
+      "sub": "Mutfak ve garson aynı tabloyu görür: her yemek kendi durumunu taşır — sipariş verildikten servis edilene kadar.",
+      "bullets": [
+        {
+          "icon": "Timer",
+          "title": "Ürün bazlı durumlar",
+          "sub": "Bekliyor, Hazırlanıyor, Hazır, Servis Edildi — sipariş bazında değil, ürün bazında"
+        },
+        {
+          "icon": "Receipt",
+          "title": "Ürün kopyalama",
+          "sub": "Aynı seçeneklere sahip bir yemeği tek dokunuşla tekrarlayın"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Yerinde düzenleme",
+          "sub": "Bir ürünü doğrudan sipariş kartından silin"
+        }
+      ]
+    },
+    {
+      "heading": "Hesap bölme",
+      "sub": "Misafirler ayrı öder — ürünleri işaretleyin ve yeni bir hesaba taşınsınlar. Toplamlar anında yeniden hesaplanır.",
+      "bullets": [
+        {
+          "icon": "Receipt",
+          "title": "Ürün bazlı onay kutuları",
+          "sub": "Yeni hesap için yemekleri seçin; geri kalanlar mevcut hesapta kalsın"
+        },
+        {
+          "icon": "ChartColumn",
+          "title": "Toplamlar anında gösterilir",
+          "sub": "Yeni ve kalan hesaplar otomatik olarak hesaplanır"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Tek dokunuş",
+          "sub": "Sipariş, manuel hesaplama veya hesap makinesi olmadan bölünür"
+        }
+      ]
+    },
+    {
+      "heading": "Garsonun telefonundan sipariş girişi",
+      "sub": "Garsonlar kendi cihazlarında üç adımda sipariş alır: kategori, yemek, seçenekler.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Her cihaz",
+          "sub": "Tarayıcısı olan bir telefon veya tablet — kurulum gerekmez"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Fiyatlandırılmış seçenekler",
+          "sub": "Tek dokunuşla porsiyon, ekstralar ve fiyatlandırılmış yemek varyasyonları"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Yemek notları",
+          "sub": "Misafir talepleri son adımda eklenir — mutfak bunları anında görür"
+        }
+      ]
+    }
+  ]
+}

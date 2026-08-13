@@ -1,0 +1,59 @@
+{
+  "breadcrumbLabel": "Pricing",
+  "meta": {
+    "title": "Pricing — Build Your Restaurant Plan from 9.90 €/mo | IQ Rest",
+    "description": "Build your plan from modules: QR menu with AI translation, order taking, table reservations, kitchen display. From 9.90 €/mo per restaurant, volume discounts. 14 days free, no card, cancel anytime.",
+    "canonical": "https://iq-rest.com/pricing",
+    "ogLocale": "en_US",
+    "ogTitle": "Pricing — Build Your Restaurant Plan",
+    "ogDescription": "A modular plan from 9.90 €/mo: QR menu, orders, reservations, KDS. Volume discounts, no hidden fees. 14 days free."
+  },
+  "faqSub": "Common questions from restaurants about pricing and payment. Can't find yours — message us on WhatsApp.",
+  "faqItems": [
+    {
+      "q": "How is the price structured?",
+      "a": "You build your plan from modules. The base is a QR menu with AI translation into 35 languages and management from any device. Then add what you need: table reservations, the kitchen display, your own domain. Pricing is per restaurant, with volume discounts starting from the second one."
+    },
+    {
+      "q": "Is there a commission on orders?",
+      "a": "No. Orders from the QR menu and from waiters go directly to the restaurant. You pay only a fixed monthly price."
+    },
+    {
+      "q": "How does the trial work?",
+      "a": "14 days of full access to every feature, no credit card needed. If payment isn't set up by the end, the account is paused: the panel stays available in view-only mode, while the guest menu and order taking are switched off. There are no automatic charges."
+    },
+    {
+      "q": "What happens to my data while paused?",
+      "a": "Everything is kept: menu, photos, order history, bookings, settings, statistics. Set up payment even six months later — everything comes back exactly as it was."
+    },
+    {
+      "q": "Will I have to reprint the QR codes?",
+      "a": "No. While paused, the codes show a \"temporarily unavailable\" notice; once payment is set up, the same codes open the menu again."
+    },
+    {
+      "q": "Can I change my plan?",
+      "a": "Yes, at any time from the panel. The difference is prorated over the remaining days of the paid period. A disabled feature keeps its data."
+    },
+    {
+      "q": "How many restaurants can I connect?",
+      "a": "As many as you like, all managed from one panel. Volume discounts up to 50% with 5+ restaurants. For large chains — a custom plan via WhatsApp."
+    },
+    {
+      "q": "What's the discount on the annual plan?",
+      "a": "About 30% compared to monthly billing. The exact amount is shown while building your plan."
+    },
+    {
+      "q": "How do I cancel my subscription?",
+      "a": "In one click from the panel. The account works until the end of the paid period, then it's paused. Your data is kept."
+    },
+    {
+      "q": "What payment methods do you accept?",
+      "a": "Visa, Mastercard, American Express, Apple Pay, Google Pay — via Stripe. In Europe, the annual plan also supports SEPA Direct Debit."
+    }
+  ],
+  "finalCta": {
+    "heading": "One price. Zero risk. ",
+    "headingAccent": "14 days of full access.",
+    "sub": "No card needed, cancel anytime — trusted by {count} restaurants. All it takes to start is an email."
+  }
+}

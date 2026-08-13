@@ -1,0 +1,261 @@
+{
+  "htmlLang": "en",
+  "htmlDir": "ltr",
+  "meta": {
+    "title": "Digital Menu, Kitchen Display and Reservations — IQ Rest",
+    "description": "Run your restaurant from one app: multilingual digital menu, kitchen display and 24/7 reservations. Launch in 5 minutes. 14 days free, no card required.",
+    "canonical": "https://iq-rest.com",
+    "ogLocale": "en_US",
+    "ogTitle": "Digital Menu, Kitchen Display and Reservations",
+    "ogDescription": "Run your restaurant from one app: multilingual digital menu, kitchen display and 24/7 reservations. Launch in 5 minutes. 14 days free, no card required."
+  },
+  "jsonLd": {
+    "appName": "IQ Rest — Restaurant Management Platform"
+  },
+  "ctaText": "Try for free",
+  "homeCtaText": "Try for free",
+  "trust": [
+    {
+      "kind": "num",
+      "value": 35,
+      "label": "Menu languages"
+    },
+    {
+      "kind": "text",
+      "value": "24/7",
+      "label": "Online reservations"
+    },
+    {
+      "kind": "num",
+      "value": 5,
+      "suffix": " min",
+      "label": "To launch"
+    },
+    {
+      "kind": "count",
+      "label": "Restaurants with us"
+    }
+  ],
+  "demoText": "Open demo",
+  "microcopy": "14 days free · No credit card · Cancel anytime",
+  "header": {
+    "navFeatures": "Features",
+    "navHow": "How it works",
+    "navPricing": "Pricing",
+    "navFaq": "FAQ",
+    "signIn": "Sign in",
+    "viewFeatures": "View features",
+    "cta": "Start for free",
+    "navProducts": "Features",
+    "navGuide": "Guide",
+    "navAbout": "About us",
+    "menuFeaturesHeading": "Features",
+    "menuInfoHeading": "Information"
+  },
+  "hero": {
+    "verticals": [
+      "Restaurants",
+      "Cafés",
+      "Bars",
+      "Hotels",
+      "Pizzerias"
+    ],
+    "headline": "Digital menu for your restaurant.\nLive in 5 minutes.",
+    "sub": "A digital menu for your restaurant in 5 minutes. Everything included: no-code editor, AI recognition of printed menus, table QR codes and commission-free ordering.",
+    "dynamicHeadlines": [
+      "0% commission.",
+      "35 languages with AI.",
+      "Online ordering.",
+      "24/7 reservations.",
+      "Premium design."
+    ],
+    "painBullets": [
+      "0% commission: every order goes straight to the restaurant.",
+      "AI translation into 35 languages — tourists understand the menu and order more.",
+      "24/7 reservations: guests book tables themselves, no calls during peak hours.",
+      "Flexible pricing: menu changes take effect instantly."
+    ],
+    "rating": "Over 500 restaurants in 30+ countries"
+  },
+  "founder": {
+    "eyebrow": "Built by restaurateurs",
+    "quoteStart": "My wife and I ran our own café and know the restaurant day from the inside: taking orders, reservations, front-of-house and kitchen operations. We wanted a single tool — modern, easy to set up and clear at first glance —",
+    "quoteAccent": "that's how the idea for the platform we now build for other restaurateurs was born.",
+    "sign": "Bogdan Sokolov · founder, former café owner",
+    "photoAlt": "Bogdan Sokolov, founder of IQ Rest"
+  },
+  "pricing": {
+    "badge": "No commissions · No contracts",
+    "heading": "One plan.",
+    "headingAccent": "Everything included.",
+    "sub": "QR menu, order taking, AI translation, restaurant website and reservations. One transparent monthly payment.",
+    "monthlyLabel": "Monthly",
+    "yearlyLabel": "Yearly",
+    "saveBadge": "Save 25%",
+    "perMonth": "per month",
+    "billedAnnually": "Billed annually: {total}",
+    "youSave": "You save {amount}",
+    "trust": {
+      "secure": "Secure payment via Stripe",
+      "noCommitment": "No commitment",
+      "quick": "Activation in minutes",
+      "restaurants": "Over 500 restaurants"
+    }
+  },
+  "faq": {
+    "eyebrow": "Still have questions?",
+    "heading": "Frequently asked",
+    "headingAccent": "questions",
+    "sub": "What restaurateurs ask most often before signing up. Can't find your answer — message us on WhatsApp, real staff reply, not a bot.",
+    "whatsappCta": "Message us on WhatsApp",
+    "whatsappPrefill": "Hello, I have a question about IQ Rest",
+    "items": [
+      {
+        "q": "What does the trial include and what happens after it ends?",
+        "a": "For 14 days you get access to every feature of the platform, with no credit card required. If no payment method is added after 14 days, the account is automatically paused. We never charge you without your consent. You can add payment later and continue right where you left off. Cancelling a subscription takes one click."
+      },
+      {
+        "q": "Do you take a commission on orders?",
+        "a": "No, we don't take a percentage of orders. All orders from the QR menu go directly to the restaurant, with no aggregator fees. You pay a fixed monthly fee — and nothing else."
+      },
+      {
+        "q": "Do guests need to install an app, and do we need technical skills?",
+        "a": "Guests don't need an app: they simply point their phone camera at the QR code and the menu opens in the browser. The restaurant doesn't need technical expertise either — the admin panel runs right in the browser on a phone, tablet or laptop. Everything is done with taps and drag-and-drop, no coding."
+      },
+      {
+        "q": "How quickly do menu changes take effect — prices, new dishes?",
+        "a": "Instantly. Changes made from your phone appear for guests within seconds. Adding a new dish takes a few taps: name, price, photo. No reprinting paper menus and no designer required."
+      },
+      {
+        "q": "How many languages are supported?",
+        "a": "35 languages are supported with AI-powered automatic translation. One action — and the entire menu is translated. The AI understands culinary context, so dish names and descriptions sound natural in every language. Tourists order with more confidence when they understand what's in a dish."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Live in 10 minutes. ",
+    "headingAccent": "14 days of full access.",
+    "sub": "No card needed, cancel anytime. Trusted by {count} restaurants. All you need is an email."
+  },
+  "featureHighlights": {
+    "heading": "Everything included",
+    "sub": "Features that turn guests into orders — in every plan, at no extra cost."
+  },
+  "scan": {
+    "heading": "Have a paper menu or a PDF?",
+    "headingAccent": "AI digitizes it in 60 seconds.",
+    "sub": "Upload a photo or document — AI recognizes categories, dishes and prices automatically.",
+    "cta": "Scan menu →"
+  },
+  "pricingQuiz": {
+    "heading": "Build a plan ",
+    "sub": "Start with the menu — add reservations, the kitchen display and a domain whenever you need them.",
+    "billingLabel": "Billing:",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "restaurantsLabel": "Restaurants:",
+    "fewerAria": "Fewer restaurants",
+    "moreAria": "More restaurants",
+    "menuTitle": "Menu and website",
+    "menuHint": "Always included",
+    "reservationsTitle": "Reservation system",
+    "reservationsHint": "Table bookings",
+    "kdsTitle": "Kitchen display",
+    "kdsHint": "Orders on the kitchen screen",
+    "domainTitle": "Domain name",
+    "domainHint": "Your own web address",
+    "perMonthSuffix": "/mo",
+    "perYearSuffix": "/yr",
+    "perMonthLongSuffix": "/month",
+    "saveYearlyTemplate": "Save {amount} per year with annual billing",
+    "volumeDiscountTemplate": "{percent}% off",
+    "saveUpToHint": "Save up to 50% with 5+ restaurants",
+    "billedYearly": "Billed once a year",
+    "billedMonthly": "Billed monthly",
+    "enterprisePre": "Need a custom plan?",
+    "enterpriseCta": "Message us",
+    "enterprisePost": "and we'll tailor one for you.",
+    "enterpriseWa": "Hello! I need a custom plan for my restaurants.",
+    "headingAccent": "for your restaurant",
+    "multiplePre": "Need more restaurants?",
+    "multipleCta": "Show options",
+    "restaurantOne": "restaurant",
+    "restaurantFew": "restaurants",
+    "restaurantMany": "restaurants",
+    "multipleChangePre": "Different number of restaurants?",
+    "multipleChangeCta": "Change"
+  },
+  "pricingCta": {
+    "heading": "Simple, flexible pricing",
+    "sub": "Pay only for the features you need — build your plan in a minute.",
+    "fromTemplate": "from {price}/mo",
+    "button": "Build my plan"
+  },
+  "footer": {
+    "copyrightTemplate": "© {year} IQ Rest. All rights reserved.",
+    "featuresHeading": "Features",
+    "featureLinks": [
+      {
+        "href": "/ru/tsifrovoe-menyu",
+        "label": "Digital menu"
+      },
+      {
+        "href": "/ru/priem-zakazov-restoran",
+        "label": "Order taking"
+      },
+      {
+        "href": "/ru/bronirovanie-stolov",
+        "label": "Reservations"
+      },
+      {
+        "href": "/ru/kds-kuhonnyy-displey",
+        "label": "Kitchen display"
+      }
+    ],
+    "infoHeading": "Information",
+    "legalHeading": "Legal",
+    "currencyHeading": "Currency"
+  },
+  "common": {
+    "close": "Close",
+    "menu": "Menu",
+    "help": "Help"
+  },
+  "auth": {
+    "emailLabel": "Email",
+    "emailPlaceholder": "Enter your email",
+    "or": "or",
+    "continueGoogle": "Continue with Google",
+    "continueApple": "Continue with Apple",
+    "consent": {
+      "line": "By continuing, you accept the <terms>Terms of Service</terms>. See how we handle data in our <privacy>Privacy Policy</privacy>."
+    },
+    "signInTitle": "Welcome back",
+    "signInSubtitle": "Enter your email — we'll send a 6-digit sign-in code.",
+    "signInButton": "Sign in",
+    "registerTitle": "Create your account",
+    "registerSubtitle": "14 days free, no card required. We'll email you a sign-in code — no password, no forms.",
+    "registerButton": "Create account",
+    "switchSignIn": "Sign in",
+    "switchCreate": "Sign up",
+    "verifyTitle": "Check your email",
+    "verifySubtitle": "We sent a 6-digit code to {email}.",
+    "verifyCodeLabel": "Verification code",
+    "checkSpam": "Don't see the email? Check your spam folder.",
+    "verifyButton": "Continue",
+    "resendCode": "Resend code",
+    "resendSent": "Code sent",
+    "changeEmail": "Use a different email",
+    "metaSignIn": "Sign in",
+    "metaRegister": "Create account",
+    "errors": {
+      "emailInvalid": "Enter a valid email.",
+      "sendFailed": "Failed to send the code. Please try again.",
+      "verifyFailed": "Failed to verify the code. Please try again.",
+      "codeExpired": "The code has expired. Request a new one.",
+      "noCode": "Code not found or expired. Request a new one.",
+      "invalidCode": "Invalid code. Please try again.",
+      "tooManyAttempts": "Too many attempts. Please wait and try again."
+    }
+  }
+}

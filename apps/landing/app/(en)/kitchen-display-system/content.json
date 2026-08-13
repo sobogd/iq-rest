@@ -1,0 +1,206 @@
+{
+  "locale": "en",
+  "slug": "kitchen-display-system",
+  "trackPrefix": "l_kds",
+  "meta": {
+    "title": "Kitchen Display System (KDS) for Restaurants — Orders on the Cook's Screen | IQ Rest",
+    "description": "A KDS kitchen display for restaurants: orders from the floor and the QR menu go straight to the cook's screen. Columns by table, Pending / Cooking / Ready / Served statuses, station filters. Runs on a tablet or phone.",
+    "canonical": "https://iq-rest.com/kitchen-display-system",
+    "ogLocale": "en_US",
+    "ogTitle": "Kitchen Display System (KDS) — Orders Straight to the Cook's Screen",
+    "ogDescription": "Orders from the floor on the cook's screen. Columns by table, statuses and a timer. One tap changes the status.",
+    "brandLine": "IQ Rest — Kitchen Display for Restaurants"
+  },
+  "hero": {
+    "headline": "Kitchen Display System (KDS):",
+    "cta": "Set up the kitchen display",
+    "sub": "Orders reach the kitchen screen instantly: notes, allergens and a timer. Status changes with one tap.",
+    "headlineAccent": "orders straight to the cook",
+    "demoLabel": "Demo: kitchen screen",
+    "tablet": {
+      "src": "/landing/hero-card-kds.webp",
+      "alt": "Tablet with a kitchen display: orders by table in columns with statuses"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurants"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafés"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bars"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotels"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerias"
+    }
+  ],
+  "scan": {
+    "heading": "Set up the kitchen display",
+    "headingAccent": "in 5 minutes.",
+    "sub": "Scan a paper menu or a PDF — AI recognizes dishes, categories and allergens. Connect a tablet in the kitchen and start receiving orders.",
+    "cta": "Scan menu"
+  },
+  "subFeatures": [
+    {
+      "icon": "LayoutGrid",
+      "eyebrow": "Control and filters",
+      "heading": "Multiple screens by station: kitchen and bar.",
+      "body": "Set up separate tablets for the hot line, the bar or the pastry station — each screen shows only the dishes that belong to it. Filters by status (Pending / Cooking / Ready / Served) and by category clear the clutter: cooks work only with what belongs to their station.",
+      "bullets": [
+        "Multiple KDS screens with dish-category filters.",
+        "Status filter: only cooking and ready.",
+        "Each station sees only its own order flow."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-filters.webp",
+        "alt": "Tablet on a brass stand at a restaurant kitchen pass — a KDS filtered by dish status"
+      }
+    },
+    {
+      "icon": "Timer",
+      "eyebrow": "Cards and timer",
+      "heading": "One tap changes the status. Comments and allergens are highlighted in color.",
+      "body": "A dish card shows the selected options (no onions, well done), guest comments, allergens and a timer running since the order was placed. Tapping the card advances the status: Pending → Cooking → Ready → Served. The list sorts itself automatically by time priority.",
+      "bullets": [
+        "Tap a card — the status advances instantly.",
+        "Options, comments and allergens highlighted in color.",
+        "Sorted by priority: the longest-waiting dishes rise to the top."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-cards.webp",
+        "alt": "Tablet on a brass stand on a restaurant bar counter — a KDS with order cards by table"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "What restaurateurs ask about the kitchen display in IQ Rest. If your question isn't listed — message us on WhatsApp.",
+    "items": [
+      {
+        "q": "What statuses do kitchen items have?",
+        "a": "Four statuses: Pending — the order is placed and waiting; Cooking — the dish is being prepared; Ready — ready for pickup; Served — delivered to the guest. Tapping the card advances to the next status, with no menus or confirmations."
+      },
+      {
+        "q": "Can I set up several KDS screens in different kitchen stations?",
+        "a": "Yes. One tablet on the hot line, another at the bar, a third at the pastry station — each with its own dish-category filter. All screens stay in sync: a status changed on one updates on the rest."
+      },
+      {
+        "q": "What do I run the KDS on — do I need a special tablet?",
+        "a": "The KDS runs in any modern browser. A tablet on a stand at the pass suits a large kitchen; a smartphone works for a small venue. No special hardware or installation required: the device connects with a six-digit code from the dashboard."
+      },
+      {
+        "q": "Where do orders on the kitchen screen come from?",
+        "a": "From every source: a guest placing an order through the table QR menu, or a waiter taking it on their own device. Orders reach the KDS automatically, with the table number. No manual re-entry from a POS."
+      },
+      {
+        "q": "What does an order card show?",
+        "a": "The dish name, selected options (no onions, well done), the guest's comment, allergens, the status and a timer running since the order was placed. Cards sort by priority: the longer a dish waits, the higher it sits in the column."
+      },
+      {
+        "q": "Can cards on the screen be filtered?",
+        "a": "Yes. Two filters: by status (for example, only Pending and Cooking) and by category (drinks to the bar, hot dishes to the kitchen). Settings are saved per device, so each station works with its own set."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "A paperless kitchen in 10 minutes. ",
+    "headingAccent": "14 days of full access.",
+    "sub": "No card needed, cancel anytime. Trusted by {count} restaurants. All you need is an email — and orders land straight on the kitchen screen."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Screens by station",
+      "sub": "Separate tablets for the hot line, bar and pastry station — each screen shows only its own dishes.",
+      "bullets": [
+        {
+          "icon": "LayoutGrid",
+          "title": "Category filter",
+          "sub": "Assign each screen its own menu categories"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "A flow per station",
+          "sub": "Kitchen and bar work in parallel without getting in each other's way"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Status filter",
+          "sub": "Show only what's cooking or ready for pickup"
+        }
+      ]
+    },
+    {
+      "heading": "One-tap statuses",
+      "sub": "A tap on a card moves the dish to the next status. The kitchen and the waiter see the same picture.",
+      "bullets": [
+        {
+          "icon": "ClipboardList",
+          "title": "A status per item",
+          "sub": "Cooking, ready, served — per dish, not per order"
+        },
+        {
+          "icon": "Timer",
+          "title": "A timer from the moment of order",
+          "sub": "See how long a dish has been waiting — the longest-waiting rise to the top"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "Allergens and comments",
+          "sub": "Options, guest notes and allergens highlighted in color"
+        }
+      ]
+    },
+    {
+      "heading": "Orders land instantly",
+      "sub": "A guest's order from the QR menu or from a waiter appears on the screen the moment it's placed, with no page refresh.",
+      "bullets": [
+        {
+          "icon": "Rocket",
+          "title": "On screen instantly",
+          "sub": "A persistent connection — the card appears the second the order is placed"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "All sources in one stream",
+          "sub": "Guest and waiter orders arrive on one screen with the table number"
+        },
+        {
+          "icon": "Map",
+          "title": "Table number on the card",
+          "sub": "The kitchen sees where the dish goes; the waiter sees where it's expected"
+        }
+      ]
+    },
+    {
+      "heading": "Connected in minutes",
+      "sub": "The kitchen screen runs in the browser on any tablet or phone — connected with a six-digit code.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Tablet or phone",
+          "sub": "A browser is enough — no special hardware to buy"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Pairing code",
+          "sub": "Enter the six-digit code from the dashboard — the device is linked to the kitchen"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Access revocation",
+          "sub": "Tablet lost or replaced — disconnect it from the dashboard with one tap"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "breadcrumbLabel": "Hinnakiri",
+  "meta": {
+    "title": "Hinnakiri — Pane oma restorani pakett kokku alates 9.90 €/kuu | IQ Rest",
+    "description": "Pane oma pakett kokku moodulitest: QR-menüü tehisintellektiga tõlkega, tellimuste vastuvõtmine, laua broneerimine, köögiekraan. Alates 9.90 €/kuu restorani kohta, soodustused mitmele asukohale. 14 päeva tasuta, kaarti pole vaja, tühista igal ajal.",
+    "canonical": "https://iq-rest.com/et/hinnad",
+    "ogLocale": "et_EE",
+    "ogTitle": "Hinnakiri — Pane oma restorani pakett kokku",
+    "ogDescription": "Moodulitest koosnev pakett alates 9.90 €/kuu: QR-menüü, tellimused, broneeringud, KDS. Soodustused mitmele asukohale, ei mingeid varjatud tasusid. 14 päeva tasuta."
+  },
+  "faqSub": "Restoranide korduma kippuvad küsimused hindade ja maksmise kohta. Kui sa ei leia oma küsimust — kirjuta meile WhatsAppi.",
+  "faqItems": [
+    {
+      "q": "Kuidas hind kujuneb?",
+      "a": "Sa paned oma paketi kokku moodulitest. Baasiks on QR-menüü tehisintellektiga tõlkega 35 keelde ja haldamine igast seadmest. Seejärel lisa, mida vajad: laua broneerimine, köögiekraan, sinu enda domeen. Hinnastamine on restorani kohta, soodustused algavad teisest asukohast."
+    },
+    {
+      "q": "Kas tellimustel on vahendustasu?",
+      "a": "Ei. QR-menüüst ja teenindajatelt tulevad tellimused lähevad otse restoranile. Maksad ainult fikseeritud kuutasu."
+    },
+    {
+      "q": "Kuidas prooviperiood töötab?",
+      "a": "14 päeva täisligipääsu kõigile funktsioonidele, krediitkaarti pole vaja. Kui selle aja lõpuks makseviisi ei seadistata, peatatakse konto: paneel jääb vaatamisrežiimis kättesaadavaks, samas kui külaliste menüü ja tellimuste vastuvõtmine lülitatakse välja. Automaatseid tasusid ei võeta."
+    },
+    {
+      "q": "Mis saab minu andmetest, kui konto on peatatud?",
+      "a": "Kõik säilib: menüü, fotod, tellimuste ajalugu, broneeringud, seaded, statistika. Seadista makse kasvõi kuus kuud hiljem — kõik taastub täpselt nii, nagu see oli."
+    },
+    {
+      "q": "Kas ma pean QR-koodid uuesti printima?",
+      "a": "Ei. Kui konto on peatatud, näitavad koodid teadet \"ajutiselt pole saadaval\"; kui makse on seadistatud, avavad samad koodid taas menüü."
+    },
+    {
+      "q": "Kas ma saan oma paketti muuta?",
+      "a": "Jah, igal ajal paneelist. Hinnavahe arvestatakse proportsionaalselt makstud perioodi järelejäänud päevadele. Välja lülitatud funktsioon säilitab oma andmed."
+    },
+    {
+      "q": "Mitu restorani ma saan ühendada?",
+      "a": "Nii palju kui soovid, kõiki hallatakse ühest paneelist. Kuni 50% soodustust 5+ restorani puhul. Suurtele kettidele — erilahendus WhatsAppi kaudu."
+    },
+    {
+      "q": "Kui suur on soodustus aastase paketi puhul?",
+      "a": "Umbes 30% võrreldes igakuise arveldusega. Täpne summa on näha paketi kokkupanemisel."
+    },
+    {
+      "q": "Kuidas ma saan oma tellimuse tühistada?",
+      "a": "Ühe klõpsuga paneelist. Konto töötab kuni makstud perioodi lõpuni, seejärel see peatatakse. Sinu andmed säilivad."
+    },
+    {
+      "q": "Milliseid makseviise te aktsepteerite?",
+      "a": "Visa, Mastercard, American Express, Apple Pay, Google Pay — Stripe'i kaudu. Euroopas toetab aastane pakett ka SEPA otsekorraldust."
+    }
+  ],
+  "finalCta": {
+    "heading": "Üks hind. Null riski. ",
+    "headingAccent": "14 päeva täisligipääsu.",
+    "sub": "Kaarti pole vaja, tühista igal ajal — meid usaldab {count} restorani. Alustamiseks on vaja vaid e-posti aadressi."
+  }
+}

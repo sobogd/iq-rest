@@ -1,0 +1,59 @@
+{
+  "breadcrumbLabel": "Cene",
+  "meta": {
+    "title": "Cene — Sastavite paket za restoran od 9.90 €/mes | IQ Rest",
+    "description": "Sastavite paket od modula: QR meni sa AI prevodom, prijem porudžbina, rezervacije stolova, kuhinjski ekran. Od 9.90 €/mes po restoranu, popusti na količinu. 14 dana besplatno, bez kartice, otkažite bilo kada.",
+    "canonical": "https://iq-rest.com/sr/cene",
+    "ogLocale": "sr_RS",
+    "ogTitle": "Cene — Sastavite paket za vaš restoran",
+    "ogDescription": "Modularni paket od 9.90 €/mes: QR meni, porudžbine, rezervacije, KDS. Popusti na količinu, bez skrivenih troškova. 14 dana besplatno."
+  },
+  "faqSub": "Česta pitanja restorana o cenama i plaćanju. Ne nalazite svoje — pišite nam na WhatsApp.",
+  "faqItems": [
+    {
+      "q": "Kako je formirana cena?",
+      "a": "Sami sastavljate paket od modula. Osnova je QR meni sa AI prevodom na 35 jezika i upravljanjem sa bilo kog uređaja. Zatim dodajete ono što vam treba: rezervacije stolova, kuhinjski ekran, sopstveni domen. Cena je po restoranu, uz popuste na količinu počevši od drugog."
+    },
+    {
+      "q": "Da li postoji provizija na porudžbine?",
+      "a": "Ne. Porudžbine sa QR menija i od konobara idu direktno restoranu. Plaćate samo fiksnu mesečnu cenu."
+    },
+    {
+      "q": "Kako funkcioniše probni period?",
+      "a": "14 dana punog pristupa svakoj opciji, bez kreditne kartice. Ako do kraja ne podesite plaćanje, nalog se pauzira: panel ostaje dostupan samo za pregled, dok se meni za goste i prijem porudžbina isključuju. Nema automatskih naplata."
+    },
+    {
+      "q": "Šta se dešava sa mojim podacima dok je nalog pauziran?",
+      "a": "Sve je sačuvano: meni, slike, istorija porudžbina, rezervacije, podešavanja, statistika. Podesite plaćanje čak i šest meseci kasnije — sve se vraća tačno onako kako je bilo."
+    },
+    {
+      "q": "Da li ću morati ponovo da štampam QR kodove?",
+      "a": "Ne. Dok je pauzirano, kodovi prikazuju obaveštenje 'privremeno nedostupno'; kada se plaćanje podesi, isti kodovi ponovo otvaraju meni."
+    },
+    {
+      "q": "Mogu li da promenim paket?",
+      "a": "Da, u bilo kom trenutku iz panela. Razlika se srazmerno računa za preostale dane plaćenog perioda. Isključena opcija zadržava svoje podatke."
+    },
+    {
+      "q": "Koliko restorana mogu da povežem?",
+      "a": "Koliko god želite, svima se upravlja iz jednog panela. Popusti na količinu idu do 50% za 5+ restorana. Za velike lance — prilagođen paket preko WhatsApp-a."
+    },
+    {
+      "q": "Koliki je popust na godišnjem paketu?",
+      "a": "Oko 30% u poređenju sa mesečnim plaćanjem. Tačan iznos se prikazuje dok sastavljate paket."
+    },
+    {
+      "q": "Kako da otkažem pretplatu?",
+      "a": "Jednim klikom iz panela. Nalog radi do kraja plaćenog perioda, a zatim se pauzira. Vaši podaci ostaju sačuvani."
+    },
+    {
+      "q": "Koje načine plaćanja prihvatate?",
+      "a": "Visa, Mastercard, American Express, Apple Pay, Google Pay — preko Stripe-a. U Evropi, godišnji paket podržava i SEPA Direct Debit."
+    }
+  ],
+  "finalCta": {
+    "heading": "Jedna cena. Nula rizika. ",
+    "headingAccent": "14 dana punog pristupa.",
+    "sub": "Bez kartice, otkažite bilo kada — veruje nam {count} restorana. Sve što vam treba za početak je email."
+  }
+}

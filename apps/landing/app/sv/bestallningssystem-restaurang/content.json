@@ -1,0 +1,236 @@
+{
+  "locale": "sv",
+  "slug": "bestallningssystem-restaurang",
+  "trackPrefix": "l_orders",
+  "meta": {
+    "title": "Beställningshantering för restaurang — Gäst och Servitör | IQ Rest",
+    "description": "Beställningshantering från mobil eller surfplatta: bordskarta, dela notan, status, tillval och kommentarer. Gästerna beställer från bordet, servitörerna tar emot beställningar på sin egen enhet. 14 dagar gratis.",
+    "canonical": "https://iq-rest.com/sv/bestallningssystem-restaurang",
+    "ogLocale": "sv_SE",
+    "ogTitle": "Beställningshantering för restaurang — Gäst och Servitör",
+    "ogDescription": "En gäst vid bordet eller en servitör med mobilen — beställningen når köket direkt. Bordskarta, dela notan, status, tillval och kommentarer.",
+    "brandLine": "IQ Rest — Beställningshantering för restaurang"
+  },
+  "hero": {
+    "headline": "Beställningar från bordet —",
+    "cta": "Aktivera beställningar online",
+    "sub": "Gästerna beställer vid bordet eller servitörerna från valfri enhet — direkt till köket. Bordskarta, dela notan.",
+    "headlineAccent": "direkt till köket",
+    "demoLabel": "Demo: beställningsskärm",
+    "tablet": {
+      "src": "/landing/feature-orders-modal.webp",
+      "alt": "Surfplatta med en öppen beställning: lista över rätter och åtgärder — byt bord, dela notan, lägg till rabatt"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restauranger"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Caféer"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barer"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotell"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerior"
+    }
+  ],
+  "scan": {
+    "heading": "Ställ in ditt beställningssystem",
+    "headingAccent": "på 5 minuter.",
+    "sub": "Läs in en pappersmeny eller PDF — AI känner igen rätter, priser och kategorier. Koppla en surfplatta i matsalen och börja ta emot beställningar från borden.",
+    "cta": "Läs in meny"
+  },
+  "subFeatures": [
+    {
+      "icon": "Map",
+      "eyebrow": "Lista och bordskarta",
+      "heading": "En beställningslista bredvid bordskartan.",
+      "body": "Alla aktiva beställningar visas till höger: status, totalsumma, tid och antal rätter. Till vänster finns bordskartan: borden är färgkodade efter status — ledigt, upptaget, kräver uppmärksamhet. Ett tryck på ett bord öppnar dess beställning, ett tryck på ett kort öppnar detaljvyn. Inget hoppande mellan skärmar.",
+      "bullets": [
+        "Bordskarta: borden färgkodas efter beställningens status.",
+        "Beställningslista bredvid — totalsumma, tid och antal rätter.",
+        "Ett tryck på ett bord öppnar beställningen eller skapar en ny."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-map.webp",
+        "alt": "Surfplatta hos servitören: en beställningslista och en bordskarta med färgkodade bord"
+      }
+    },
+    {
+      "icon": "ClipboardList",
+      "eyebrow": "Beställningskort",
+      "heading": "Beställningskortet: status, duplicera och ta bort — med ett tryck.",
+      "body": "Varje rätt har sin egen status (Väntar / Tillagas / Klar / Serverad) — köket och servitören ser samma bild i realtid. Ett tryck på pricken öppnar en åtgärdsmeny: ändra status, duplicera rätten med samma tillval, eller ta bort den. Allt sker direkt i beställningskortet.",
+      "bullets": [
+        "Status per rätt: Väntar / Tillagas / Klar / Serverad.",
+        "Duplicera en rätt med ett tryck — samma tillval följer med.",
+        "Ta bort en rätt direkt från beställningskortet."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-detail.webp",
+        "alt": "Surfplatta med ett detaljerat beställningskort: status för rätter, duplicera och ta bort"
+      }
+    },
+    {
+      "icon": "Receipt",
+      "eyebrow": "Dela notan",
+      "heading": "Dela notan när gästerna betalar var för sig.",
+      "body": "Gästerna bestämmer sig för att betala var för sig — bocka för rätterna som ska till den nya notan; resten stannar på den nuvarande. Systemet visar båda totalsummorna direkt. Ett tryck på \"Dela beställning\" — och du har två oberoende beställningar med rätt summor, båda knutna till sina bord.",
+      "bullets": [
+        "Välj rätter som ska delas med kryssrutor.",
+        "Den nya och den kvarvarande notans summa visas direkt.",
+        "Ett tryck — och beställningen delas utan manuell huvudräkning."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-split.webp",
+        "alt": "Surfplatta på ett restaurangbord: dela notan mellan gästerna"
+      }
+    },
+    {
+      "icon": "Smartphone",
+      "eyebrow": "Beställning via mobilen",
+      "heading": "Lägg till rätter från mobilen — i tre steg.",
+      "body": "Servitörerna är inte bundna till en enda enhet: de öppnar beställningsskärmen i sin egen mobil och lägger till en rätt i tre steg — välj kategori, välj rätt, välj tillval (storlek, stekgrad, extra såser och ingredienser). Priset räknas om automatiskt. En kommentar till köket läggs till i sista steget.",
+      "bullets": [
+        "Tre steg: kategori → rätt → tillval.",
+        "Tillval (storlek, tillbehör, ingredienser) med priser via ett tryck.",
+        "Ett kommentarsfält i sista steget."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-mobile.webp",
+        "alt": "Fyra mobiler visar stegen för att lägga till en rätt i en beställning: kategori, rätt, storlek, kommentar"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Vad krögare frågar om beställningshantering i IQ Rest. Om din fråga inte finns med — skicka ett meddelande på WhatsApp.",
+    "items": [
+      {
+        "q": "Kan flera servitörer arbeta samtidigt från olika enheter?",
+        "a": "Ja. Varje servitör kopplar sin egen enhet och ser samma bord, beställningar och status i realtid. En ändring som görs av en syns direkt för de andra — inga konflikter eller låsta skärmar."
+      },
+      {
+        "q": "Kan servitörerna använda sina egna mobiler?",
+        "a": "Ja. Beställningsskärmen körs i webbläsaren — inget att installera. En mobil eller surfplatta kopplas med en sexsiffrig kod från adminpanelen, och åtkomsten dras tillbaka med ett tryck vid passets slut."
+      },
+      {
+        "q": "Kan jag lägga till obligatoriska tillval för rätter (storlek, stekgrad)?",
+        "a": "Ja. En rätt kan ha valfritt antal grupper av tillval — obligatoriska (\"Storlek\": Liten / Mellan / Stor) och frivilliga (\"Stekgrad\": rare / medium / well done). Tillvalen påverkar priset. Med en obligatorisk grupp kräver systemet ett val — vilket eliminerar misstag."
+      },
+      {
+        "q": "Kan jag lägga till kommentarer och extra tillbehör till en rätt?",
+        "a": "Ja. Sista steget har ett kommentarsfält (\"ingen lök\", \"nötallergi\"). Extra tillbehör ställs in som prissatta tillval (\"+ BBQ-sås\", \"+ Bröd\"). Kommentarerna syns på köksskärmen, färgmarkerade."
+      },
+      {
+        "q": "Finns det beställningsstatistik?",
+        "a": "Ja. Statistiksektionen visar intäkter per dag, snittnota och de bäst säljande rätterna. Denna data hjälper dig att planera personal och inköp."
+      },
+      {
+        "q": "Kan beställningar delas upp?",
+        "a": "Ja. Bocka för rätterna som ska till en ny nota — båda summorna räknas om automatiskt, ingen manuell huvudräkning och inget hoppande mellan olika sektioner."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Beställningar på 10 minuter. ",
+    "headingAccent": "14 dagar med full tillgång.",
+    "sub": "Inget kort krävs, avsluta när du vill. {count} restauranger tar emot beställningar med oss. Allt du behöver är en e-postadress."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Bordskarta och beställningslista",
+      "sub": "Aktiva beställningar bredvid bordskartan: borden färgkodas efter status, och ett tryck öppnar en beställning eller skapar en ny.",
+      "bullets": [
+        {
+          "icon": "Map",
+          "title": "Bord efter status",
+          "sub": "Ledigt, upptaget, kräver uppmärksamhet — synligt direkt"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Aktiv beställningslista",
+          "sub": "Totalsumma, tid och antal rätter för varje beställning"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Ny beställning från kartan",
+          "sub": "Ett tryck på ett ledigt bord öppnar beställningsskärmen direkt"
+        }
+      ]
+    },
+    {
+      "heading": "En status för varje rätt",
+      "sub": "Köket och servitören ser samma bild: varje rätt har sin egen status — från mottagen till serverad.",
+      "bullets": [
+        {
+          "icon": "Timer",
+          "title": "Status per rätt",
+          "sub": "Väntar, Tillagas, Klar, Serverad — per rätt, inte per beställning"
+        },
+        {
+          "icon": "Receipt",
+          "title": "Duplicera rätt",
+          "sub": "Upprepa en rätt med samma tillval med ett tryck"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Ändra på plats",
+          "sub": "Ta bort en rätt direkt från beställningskortet"
+        }
+      ]
+    },
+    {
+      "heading": "Dela notan",
+      "sub": "Gästerna betalar var för sig — bocka för rätterna så flyttas de till en ny nota. Summorna räknas om direkt.",
+      "bullets": [
+        {
+          "icon": "Receipt",
+          "title": "Kryssrutor per rätt",
+          "sub": "Välj rätterna för den nya notan; resten stannar på den nuvarande"
+        },
+        {
+          "icon": "ChartColumn",
+          "title": "Summorna visas direkt",
+          "sub": "Den nya och den kvarvarande notan räknas ut automatiskt"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Ett tryck",
+          "sub": "Beställningen delas utan manuell huvudräkning eller miniräknare"
+        }
+      ]
+    },
+    {
+      "heading": "Beställning från servitörens mobil",
+      "sub": "Servitörerna tar emot en beställning på sin egen enhet i tre steg: kategori, rätt, tillval.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Valfri enhet",
+          "sub": "En mobil eller surfplatta med webbläsare — ingen installation krävs"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Prissatta tillval",
+          "sub": "Storlek, tillbehör och varianter med priser via ett tryck"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Kommentarer till rätten",
+          "sub": "Gästens önskemål läggs till i sista steget — köket ser dem direkt"
+        }
+      ]
+    }
+  ]
+}

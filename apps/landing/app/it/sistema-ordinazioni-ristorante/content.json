@@ -1,0 +1,236 @@
+{
+  "locale": "it",
+  "slug": "sistema-ordinazioni-ristorante",
+  "trackPrefix": "l_orders",
+  "meta": {
+    "title": "Ricezione degli ordini al ristorante — Ospite e cameriere | IQ Rest",
+    "description": "Ricezione degli ordini al ristorante da telefono o tablet: mappa della sala, divisione del conto, stati, opzioni e commenti. L'ospite ordina dal tavolo, il cameriere riceve dal proprio dispositivo. 14 giorni gratis.",
+    "canonical": "https://iq-rest.com/it/sistema-ordinazioni-ristorante",
+    "ogLocale": "it_IT",
+    "ogTitle": "Ricezione degli ordini al ristorante — Ospite e cameriere",
+    "ogDescription": "L'ospite dal tavolo o il cameriere dal telefono — l'ordine arriva subito in cucina. Mappa della sala, divisione del conto, stati, opzioni e commenti.",
+    "brandLine": "IQ Rest — Ricezione degli ordini al ristorante"
+  },
+  "hero": {
+    "headline": "Ordini dal tavolo —",
+    "cta": "Configura gli ordini online",
+    "sub": "L'ospite ordina al tavolo o il cameriere da qualsiasi dispositivo — dritto in cucina. Piantina della sala, divisione del conto.",
+    "headlineAccent": "dritti in cucina",
+    "demoLabel": "Demo: schermata degli ordini",
+    "tablet": {
+      "src": "/landing/feature-orders-modal.webp",
+      "alt": "Tablet con un ordine aperto: elenco dei piatti e azioni — cambio tavolo, divisione dell'ordine, sconto"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Ristoranti"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Caffè"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bar"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotel"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerie"
+    }
+  ],
+  "scan": {
+    "heading": "Installa il sistema di ricezione degli ordini",
+    "headingAccent": "in 5 minuti.",
+    "sub": "Scansiona il menù cartaceo o il PDF — l'AI riconosce piatti, prezzi e categorie. Collega un tablet in sala e inizia a ricevere gli ordini dai tavoli.",
+    "cta": "Scansiona il menù"
+  },
+  "subFeatures": [
+    {
+      "icon": "Map",
+      "eyebrow": "Elenco e mappa della sala",
+      "heading": "L'elenco degli ordini accanto alla mappa della sala.",
+      "body": "Tutti gli ordini attivi sono visualizzati a destra: stato, importo, ora di invio e numero di voci. A sinistra la mappa della sala: i tavoli sono colorati in base allo stato — libero, occupato, richiede attenzione. Un tocco sul tavolo apre l'ordine, un tocco sulla scheda apre la vista di dettaglio. Senza passare da una schermata all'altra.",
+      "bullets": [
+        "Mappa della sala: tavoli colorati in base allo stato dell'ordine.",
+        "Elenco degli ordini a fianco — importo, ora, numero di voci.",
+        "Un tocco sul tavolo apre l'ordine o ne crea uno nuovo."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-map.webp",
+        "alt": "Tablet alla postazione del cameriere: elenco degli ordini e mappa della sala con i tavoli colorati"
+      }
+    },
+    {
+      "icon": "ClipboardList",
+      "eyebrow": "Scheda dell'ordine",
+      "heading": "Scheda dell'ordine: stati, duplicazione ed eliminazione con un solo tocco.",
+      "body": "Ogni voce ha un proprio stato (Pending / Cooking / Ready / Served) — cucina e cameriere vedono la stessa situazione in tempo reale. Un tocco sul punto apre il menù delle azioni: cambio di stato, duplicazione della voce con gli stessi modificatori e opzioni, eliminazione. Tutte le azioni si eseguono direttamente nella scheda dell'ordine.",
+      "bullets": [
+        "Stato di ogni voce: Pending / Cooking / Ready / Served.",
+        "Duplicazione della voce con un tocco — con le stesse opzioni.",
+        "Eliminazione della voce direttamente dalla scheda dell'ordine."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-detail.webp",
+        "alt": "Tablet con la scheda di dettaglio dell'ordine: stati dei piatti, duplicazione ed eliminazione delle voci"
+      }
+    },
+    {
+      "icon": "Receipt",
+      "eyebrow": "Divisione del conto",
+      "heading": "Divisione del conto quando gli ospiti pagano separatamente.",
+      "body": "Gli ospiti hanno deciso di pagare separatamente — seleziona con le spunte le voci che passano al nuovo conto, le altre restano in quello corrente. Il sistema mostra subito entrambi gli importi. Un tocco su «Split order» — e hai due ordini indipendenti con totali corretti, entrambi restano sui rispettivi tavoli.",
+      "bullets": [
+        "Selezione delle voci da dividere tramite caselle di spunta.",
+        "L'importo del nuovo conto e di quello restante è visualizzato all'istante.",
+        "Un solo tocco — e l'ordine è diviso senza ricalcoli manuali."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-split.webp",
+        "alt": "Tablet sul tavolo di un ristorante: divisione del conto tra gli ospiti"
+      }
+    },
+    {
+      "icon": "Smartphone",
+      "eyebrow": "Aggiunta da mobile",
+      "heading": "Aggiunta delle voci dal telefono — in tre passaggi.",
+      "body": "Il cameriere non è legato a un solo dispositivo: apre la sezione di ricezione degli ordini sul proprio telefono e aggiunge una voce in tre passaggi — scelta della categoria, scelta del piatto, scelta delle opzioni (formato, cottura, salse e ingredienti extra). Il prezzo si ricalcola automaticamente. Il commento per la cucina si aggiunge nell'ultimo passaggio.",
+      "bullets": [
+        "Tre passaggi: categoria → piatto → opzioni.",
+        "Opzioni (formato, extra, ingredienti) con prezzo in un clic.",
+        "Campo per il commento nel passaggio finale."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-mobile.webp",
+        "alt": "Quattro telefoni con i passaggi di aggiunta di una voce all'ordine: categoria, piatto, formato, commento"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Le domande dei ristoratori sulla ricezione degli ordini in IQ Rest. Se la tua domanda non è nell'elenco, scrivici su WhatsApp.",
+    "items": [
+      {
+        "q": "Più camerieri possono lavorare contemporaneamente da dispositivi diversi?",
+        "a": "Sì. Ogni cameriere collega il proprio dispositivo e vede gli stessi tavoli, ordini e stati in tempo reale. Una modifica fatta da uno compare subito agli altri — senza conflitti né blocchi."
+      },
+      {
+        "q": "I camerieri possono lavorare dai propri dispositivi personali?",
+        "a": "Sì. La schermata degli ordini funziona nel browser — non serve installare nulla. Il telefono o il tablet si collega con un codice a sei cifre dal pannello; a fine turno l'accesso si revoca con un tocco."
+      },
+      {
+        "q": "Si possono aggiungere opzioni obbligatorie ai piatti (formato, cottura)?",
+        "a": "Sì. Per ogni piatto si configura un numero qualsiasi di gruppi di opzioni — obbligatori («Formato»: Small / Medium / Big) e facoltativi («Cottura»: rare / medium / well done). Le opzioni incidono sul prezzo. Con un gruppo obbligatorio il sistema chiede di scegliere una variante — questo elimina gli errori."
+      },
+      {
+        "q": "Si possono indicare commenti e voci aggiuntive per un piatto?",
+        "a": "Sì. Nell'ultimo passaggio è disponibile un campo per il commento («senza cipolla», «allergia alla frutta a guscio»). Gli extra si gestiscono come opzioni con supplemento («+ Salsa barbecue», «+ Pane»). I commenti sono visibili sul display cucina ed evidenziati a colori."
+      },
+      {
+        "q": "Ci sono statistiche sugli ordini?",
+        "a": "Sì. Nella sezione analisi trovi ricavi per giorno, scontrino medio e piatti più richiesti. Questi dati aiutano a pianificare turni e acquisti."
+      },
+      {
+        "q": "Si possono dividere gli ordini?",
+        "a": "Sì. Seleziona le voci che passano al nuovo conto — gli importi di entrambi i conti si ricalcolano automaticamente, senza ricalcoli manuali né passaggi tra sezioni."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Ordini in 10 minuti. ",
+    "headingAccent": "14 giorni di accesso completo.",
+    "sub": "Nessuna carta richiesta, disdici quando vuoi. {count} ristoranti ricevono così gli ordini in cucina. Serve solo l'email."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Mappa della sala ed elenco degli ordini",
+      "sub": "Gli ordini attivi accanto alla mappa della sala: i tavoli sono colorati in base allo stato, un tocco apre l'ordine o ne crea uno nuovo.",
+      "bullets": [
+        {
+          "icon": "Map",
+          "title": "Tavoli per stato",
+          "sub": "Libero, occupato, richiede attenzione — si vede a colpo d'occhio"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Elenco degli ordini attivi",
+          "sub": "Importo, ora di invio e numero di voci per ogni ordine"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Nuovo ordine dalla mappa",
+          "sub": "Un tocco su un tavolo libero apre subito la ricezione dell'ordine"
+        }
+      ]
+    },
+    {
+      "heading": "Stato di ogni voce",
+      "sub": "Cucina e cameriere vedono la stessa situazione: ogni piatto con il proprio stato — dal ricevuto al servito.",
+      "bullets": [
+        {
+          "icon": "Timer",
+          "title": "Stati per piatto",
+          "sub": "Pending, Cooking, Ready, Served — per singola voce, non per l'intero ordine"
+        },
+        {
+          "icon": "Receipt",
+          "title": "Duplicazione della voce",
+          "sub": "Ripeti il piatto con le stesse opzioni con un solo tocco"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Modifiche sul posto",
+          "sub": "Eliminazione della voce direttamente dalla scheda dell'ordine"
+        }
+      ]
+    },
+    {
+      "heading": "Divisione del conto",
+      "sub": "Gli ospiti pagano separatamente — seleziona le voci con le spunte e passano al nuovo conto. Gli importi si ricalcolano all'istante.",
+      "bullets": [
+        {
+          "icon": "Receipt",
+          "title": "Spunte per voce",
+          "sub": "Scegli i piatti per il nuovo conto, gli altri restano in quello corrente"
+        },
+        {
+          "icon": "ChartColumn",
+          "title": "Importi subito visibili",
+          "sub": "Il nuovo conto e quello restante si calcolano automaticamente"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Un solo tocco",
+          "sub": "L'ordine è diviso senza ricalcoli manuali né calcolatrice"
+        }
+      ]
+    },
+    {
+      "heading": "Ricezione dal telefono del cameriere",
+      "sub": "Il cameriere riceve l'ordine dal proprio dispositivo in tre passaggi: categoria, piatto, opzioni.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Qualsiasi dispositivo",
+          "sub": "Telefono o tablet con browser — non serve alcuna installazione"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Opzioni con supplemento",
+          "sub": "Formato, extra e varianti del piatto con prezzo in un clic"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Commento al piatto",
+          "sub": "Le richieste dell'ospite si aggiungono nel passaggio finale — la cucina le vede subito"
+        }
+      ]
+    }
+  ]
+}

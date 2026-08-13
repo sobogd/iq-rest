@@ -1,0 +1,206 @@
+{
+  "locale": "ga",
+  "slug": "curfha-bord",
+  "trackPrefix": "l_bookings",
+  "meta": {
+    "title": "Áirithintí Boird 24/7 do Bhialanna | IQ Rest",
+    "description": "Áirithintí boird 24/7 do do bhialann: cuireann aíonna boird in áirithe iad féin tríd an mbiachlár QR nó suíomh gréasáin. Féilire de réir boird, deimhnithe uathoibríocha agus meabhrúcháin. Gan aon ghlaonna gutháin, gan aon aíonna caillte. 14 lá saor in aisce.",
+    "canonical": "https://iq-rest.com/ga/curfha-bord",
+    "ogLocale": "ga_IE",
+    "ogTitle": "Áirithintí Boird 24/7 — Cuireann Aíonna in Áirithe Iad Féin",
+    "ogDescription": "Cuireann aíonna boird in áirithe tríd an mbiachlár QR nó suíomh gréasáin. Féilire, deimhnithe uathoibríocha, meabhrúcháin. Ní chailleann tú aoi amháin.",
+    "brandLine": "IQ Rest — Áirithintí Boird Bialainne"
+  },
+  "hero": {
+    "headline": "Áirithintí boird 24/7,",
+    "cta": "Socraigh áirithintí boird",
+    "sub": "Cuireann aíonna in áirithe 24/7 tríd an mbiachlár QR nó nasc. Féilire de réir boird, uath-dheimhnithe agus meabhrúcháin.",
+    "headlineAccent": "gan aon ghlaonna gutháin",
+    "demoLabel": "Taispeántas: féilire áirithinte",
+    "tablet": {
+      "src": "/landing/hero-card-reservation.webp",
+      "alt": "Táibléad le féilire áirithinte: amharc míosa agus liosta áirithintí ag feitheamh le deimhniú"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Bialanna"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Caiféanna"
+    },
+    {
+      "icon": "Martini",
+      "label": "Beáir"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Óstáin"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerias"
+    }
+  ],
+  "scan": {
+    "heading": "Seol áirithintí boird",
+    "headingAccent": "in 5 nóiméad.",
+    "sub": "Nasc an féilire, cuir boird le grianghraif agus toilleadh suíochán leis — tosaíonn aíonna ag cur in áirithe an lá céanna.",
+    "cta": "Cumasaigh áirithintí"
+  },
+  "subFeatures": [
+    {
+      "icon": "CalendarPlus",
+      "eyebrow": "Foirm áirithinte",
+      "heading": "Cuireann aíonna in áirithe iad féin — de réir dáta, ama agus méid an ghrúpa.",
+      "body": "Osclaíonn an t-aoi an biachlár QR nó nasc díreach, roghnaíonn sé dáta, am agus líon na ndaoine — agus feiceann sé láithreach na boird atá ar fáil: le grianghraf, tuairisc (ardán, in aice leis an bhfuinneog, tolg ag an mbeár) agus toilleadh. Seoltar deimhniú go huathoibríoch trí ríomhphost agus WhatsApp.",
+      "bullets": [
+        "Roghnú boird de réir grianghraif, tuairisce agus toillte.",
+        "Deimhniú uathoibríoch agus meabhrúchán uair an chloig roimh an gcuairt.",
+        "Foirm íosta: ainm, fón, méid an ghrúpa."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-form.webp",
+        "alt": "Cuireann aoi bord bialainne in áirithe ó fhón: ag roghnú an dáta, an ama, méid an ghrúpa agus an bhoird"
+      }
+    },
+    {
+      "icon": "CalendarDays",
+      "eyebrow": "Féilire áirithinte",
+      "heading": "Féilire de réir lae agus boird — gach rud le feiceáil i soicind.",
+      "body": "Tá féilire áirithinte sa phainéal riaracháin atá miondealaithe de réir boird, lae, seachtaine agus míosa. Feictear sliotáin saor in aisce, boird áitithe, áirithintí deimhnithe agus áirithintí ar feitheamh ar scáileán amháin. Oibríonn sé ar tháibléad ar an urlár agus ar ríomhaire glúine san oifig.",
+      "bullets": [
+        "Amhairc lae, seachtaine agus míosa.",
+        "Miondealú de réir boird: cé, cathain, cé mhéad aoi.",
+        "Ath-sceidealú, cealú nó deimhniú áirithinte — le tapáil amháin ó do fhón."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-calendar.webp",
+        "alt": "An féilire áirithinte i bpainéal riaracháin IQ Rest ar dhá tháibléad: eangach laethúil de réir boird agus féilire míosúil"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Na rudaí a fhiafraíonn úinéirí bialainne faoi áirithintí boird in IQ Rest. Mura bhfuil do cheist liostaithe — seol teachtaireacht chugainn ar WhatsApp.",
+    "items": [
+      {
+        "q": "An féidir liom na laethanta agus na hamanna a bhfuil áirithint ar fáil a roghnú?",
+        "a": "Is féidir. Ligeann an painéal riaracháin duit sceideal a shocrú in aghaidh an lae den tseachtain: uaireanta áirithinte agus briseadh idir lón agus dinnéar. Is féidir leat áirithintí a mhúchadh go hiomlán go sealadach freisin — feicfidh aíonna nach bhfuil áirithint ar líne ar fáil."
+      },
+      {
+        "q": "An féidir liom grianghraf de gach bord a uaslódáil?",
+        "a": "Is féidir. Tá grianghraf, toilleadh agus crios (ardán, in aice leis an bhfuinneog, beár) ag gach bord. Feiceann aíonna go díreach cén bord atá á chur in áirithe acu agus déanann siad rogha eolasach."
+      },
+      {
+        "q": "An féidir liom líon na n-aíonna in aghaidh an bhoird a theorannú?",
+        "a": "Is féidir. Tá toilleadh socraithe ag gach bord — ní thairgeann an córas d'aíonna ach boird oiriúnacha agus cuireann sé bac ar ghrúpa seisear bord do bheirt a chur in áirithe."
+      },
+      {
+        "q": "Cé chomh deacair is atá sé áirithintí a shocrú?",
+        "a": "Trí chéim: cuir boird le grianghraif agus toilleadh leo, cumasaigh an modh áirithinte i socruithe, agus roinn an nasc nó an cód QR. Tógann seoladh 5–10 nóiméad."
+      },
+      {
+        "q": "An féidir liom deimhniú áirithinte uathoibríoch nó láimhe a shocrú?",
+        "a": "Is féidir, roghnaítear an modh i socruithe. Le deimhniú uathoibríoch deimhnítear an t-aoi díreach tar éis an fhoirm a chur isteach. Le deimhniú láimhe, feictear an t-iarratas sa phainéal mar \"ag feitheamh le deimhniú\" — deimhníonn nó diúltaíonn bainisteoir é. Tá modh láimhe áisiúil nuair atá boird teoranta."
+      },
+      {
+        "q": "An ngearrann sibh táille in aghaidh na háirithinte?",
+        "a": "Níl aon táillí ann: tá áirithintí san áireamh sa síntiús — gan aon chéatadán ó aíonna, gan aon mhuirir in aghaidh an tsliotáin, gan aon idirghabhálaithe. Íocaíocht sheasta agus áirithintí neamhtheoranta."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Áirithintí in 10 nóiméad. ",
+    "headingAccent": "14 lá de rochtain iomlán.",
+    "sub": "Ní gá cárta, cealaigh am ar bith. Baineann {count} bialann an t-ualach dá ndeasc tosaigh linn. Níl uait ach ríomhphost."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Cuireann aíonna in áirithe iad féin",
+      "sub": "Dáta, am agus méid an ghrúpa — ón mbiachlár QR nó nasc díreach, ag am ar bith den lá. Ní thaispeánann an córas ach sliotáin atá ar fáil.",
+      "bullets": [
+        {
+          "icon": "CalendarPlus",
+          "title": "Áirithint 24/7",
+          "sub": "Cuireann aíonna in áirithe san oíche nó ar an deireadh seachtaine — gan aon ghlaonna, gan aon feitheamh le freagra"
+        },
+        {
+          "icon": "Users",
+          "title": "Bord meaitseáilte le méid an ghrúpa",
+          "sub": "Roghnaíonn an córas bord oiriúnach de réir toillte as féin"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Foirm íosta",
+          "sub": "Ainm, fón agus méid an ghrúpa — tógann an fhoirm leath nóiméad"
+        }
+      ]
+    },
+    {
+      "heading": "Féilire de réir lae agus boird",
+      "sub": "Gach áirithint in aon fhéilire amháin: feic cad atá saor, cad atá deimhnithe agus cé atá ag teacht.",
+      "bullets": [
+        {
+          "icon": "CalendarDays",
+          "title": "Lá, seachtain, mí",
+          "sub": "Athraigh amhairc agus pleanáil suíocháin roimh ré"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Miondealú de réir boird",
+          "sub": "Cé, cathain agus do mhéad aoi — do gach bord"
+        },
+        {
+          "icon": "Smartphone",
+          "title": "Bainistigh ó do fhón",
+          "sub": "Ath-sceidealú, cealú nó deimhniú áirithinte — le tapáil amháin"
+        }
+      ]
+    },
+    {
+      "heading": "Sceideal agus modhanna",
+      "sub": "Socraigh an sceideal áirithinte in aghaidh an lae den tseachtain, fad an tsliotáin agus an modh deimhnithe.",
+      "bullets": [
+        {
+          "icon": "Clock",
+          "title": "Sceideal in aghaidh an lae",
+          "sub": "Uaireanta ar leith do gach lá den tseachtain, lena n-áirítear briseadh idir lón agus dinnéar"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Fad an tsliotáin",
+          "sub": "Socraigh an t-eatramh áirithinte chun freastal ar fhormáid d'ionaid"
+        },
+        {
+          "icon": "CalendarCheck",
+          "title": "Uathoibríoch nó láimhe",
+          "sub": "Deimhnigh gach áirithint tú féin nó cas air uath-dheimhniú"
+        }
+      ]
+    },
+    {
+      "heading": "Fógraí gan obair láimhe",
+      "sub": "Coinníonn an córas an t-aoi agus d'fhoireann ar an eolas — nuashonraítear ríomhphost agus an scáileán áirithinte láithreach.",
+      "bullets": [
+        {
+          "icon": "Mail",
+          "title": "Ríomhphost chuig an aoi",
+          "sub": "Seoltar deimhniú áirithinte trí ríomhphost go huathoibríoch"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Fógra chuig an mbialann",
+          "sub": "Faigheann úinéirí ríomhphost faoi gach áirithint nua"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Scáileán áirithinte ag an mbealach isteach",
+          "sub": "Taispeánann táibléad an óstaigh áirithintí nua i bhfíor-am"
+        }
+      ]
+    }
+  ]
+}

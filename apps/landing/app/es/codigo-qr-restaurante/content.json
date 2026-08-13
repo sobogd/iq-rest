@@ -1,0 +1,151 @@
+{
+  "locale": "es",
+  "slug": "codigo-qr-restaurante",
+  "trackPrefix": "l_es_qr",
+  "featureHeading": {
+    "heading": "No es solo un código QR",
+    "sub": "Todo en lo que se convierte un solo escaneo para los comensales y la sala."
+  },
+  "meta": {
+    "title": "Menú QR para restaurantes | IQ Rest",
+    "description": "Menú QR para restaurantes: el comensal escanea el código QR de la mesa, abre el menú en el navegador y pide en su idioma. 14 días gratis, sin tarjeta.",
+    "canonical": "https://iq-rest.com/es/codigo-qr-restaurante",
+    "ogLocale": "es_ES",
+    "ogTitle": "Menú QR para restaurantes",
+    "ogDescription": "El QR en la mesa y el menú en el móvil: fotos, alérgenos, 35 idiomas y actualizaciones en tiempo real.",
+    "brandLine": "IQ Rest — Menú QR para restaurantes"
+  },
+  "hero": {
+    "headline": "Menú QR:\nescanear y pedir",
+    "cta": "Crear menú QR",
+    "sub": "El comensal escanea el QR de la mesa, ve las fotos y los alérgenos en 35 idiomas y pide, sin aplicaciones."
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurantes"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafeterías"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bares"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hoteles"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerías"
+    }
+  ],
+  "scan": {
+    "heading": "¿Ya tiene el menú en papel o en PDF?",
+    "headingAccent": "La IA lo convierte en un menú QR en 60 segundos.",
+    "sub": "Suba una foto del menú o el PDF: la IA reconoce categorías, platos y precios y los conecta directamente al menú QR.",
+    "cta": "Crear menú QR"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "Un QR, 35 idiomas",
+      "heading": "Un solo código QR, el menú en 35 idiomas.",
+      "body": "El comensal escanea el QR y elige su idioma: la traducción la hace una IA con criterio gastronómico, no un traductor corriente. Se acabaron los menús aparte para turistas y las hojas sueltas sobre la mesa.",
+      "bullets": [
+        "Una sola impresión del QR cubre 35 idiomas, incluidos en la suscripción.",
+        "La IA entiende el lenguaje gastronómico: los nombres de los platos suenan naturales en cada idioma.",
+        "El comensal cambia de idioma dentro del menú, sin volver a escanear el QR."
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Dos comensales escanean el mismo código QR de la mesa y leen el menú en idiomas distintos"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Alérgenos en el QR",
+      "heading": "Alérgenos y etiquetas dietéticas dentro del menú QR.",
+      "body": "Cada plato del menú conectado al QR puede llevar etiquetas: gluten, lactosa, frutos secos, marisco, opciones veganas y sin gluten. El comensal filtra desde el móvil los platos según sus restricciones, sin preguntar al personal.",
+      "bullets": [
+        "14 categorías de alérgenos a nivel de plato.",
+        "Etiquetas vegano, vegetariano y sin gluten con un clic en el panel.",
+        "El comensal filtra el menú QR según sus restricciones."
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Un comensal filtra el menú QR por alérgenos en el teléfono mientras el propietario edita la lista en una tableta"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Más que un simple QR",
+      "heading": "Un menú QR con aspecto de web de restaurante.",
+      "body": "Tras escanear el código, el comensal no se topa con un PDF plano: ve una pantalla de bienvenida con vídeo o una foto llamativa, la descripción del establecimiento y una página de contacto con mapa, teléfonos y redes sociales. El QR se convierte en la puerta de entrada online del restaurante.",
+      "bullets": [
+        "Vídeo de fondo o foto llamativa en la pantalla inicial del menú QR.",
+        "Espacio para contar el concepto del establecimiento y de cada categoría.",
+        "Página de contacto integrada: mapa, teléfono, Instagram, WhatsApp."
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Dos teléfonos sobre la mesa: pantalla inicial del menú QR con vídeo de fondo y página de contacto con mapa"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Pedido desde el QR · opcional",
+      "heading": "Desde el código QR el comensal también puede pedir.",
+      "body": "Además de consultar el menú, el menú QR puede convertirse en un canal de pedidos: el comensal añade platos a la cesta y envía la solicitud. El pedido llega al camarero en la sala, a WhatsApp o a la pantalla de cocina. La función se activa y se desactiva en los ajustes según convenga.",
+      "bullets": [
+        "Cesta, comentarios y envío del pedido directamente desde el escaneo del QR.",
+        "El pedido llega al instante a la sala, a WhatsApp o a la pantalla de cocina.",
+        "La función puede activarse por horas, por salas o por restaurantes concretos."
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Dos teléfonos sobre la mesa: la cesta creada desde el menú QR y la confirmación del pedido enviado"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Lo que preguntan los hosteleros sobre el menú QR de IQ Rest. ¿No encuentra su pregunta? Escríbanos por WhatsApp.",
+    "items": [
+      {
+        "q": "¿Cómo funciona el menú QR de IQ Rest?",
+        "a": "En cada mesa hay un código QR impreso. El comensal lo escanea con la cámara del teléfono y el navegador abre el menú del restaurante: fotos, descripciones, alérgenos y precios actualizados. Ni el comensal ni el personal tienen que descargar ninguna aplicación."
+      },
+      {
+        "q": "¿Se necesitan conocimientos técnicos para crear un menú QR?",
+        "a": "No. El panel funciona con clics y arrastres, sin código ni configuraciones complicadas. Añadir un plato lleva unos segundos: nombre, precio y foto. La configuración inicial suele llevar de 30 minutos a una hora; si ya tiene el menú en PDF, la IA lo convierte automáticamente."
+      },
+      {
+        "q": "¿Los comensales tienen que instalar una app para leer el QR?",
+        "a": "No. La cámara integrada del iPhone y de Android reconoce el código QR en segundos y abre el menú directamente en el navegador. El panel de administración también funciona en cualquier navegador moderno: teléfono, tableta o portátil."
+      },
+      {
+        "q": "¿Cómo se imprimen los códigos QR para las mesas?",
+        "a": "Los códigos QR se generan automáticamente en el panel (uno por mesa o uno para todo el establecimiento) y se descargan en un PDF listo para imprimir. Basta con una impresora de oficina y un soporte: un expositor, una pegatina o un posavasos."
+      },
+      {
+        "q": "¿Se puede usar un dominio propio para el menú QR?",
+        "a": "Sí. Admitimos el dominio del restaurante con certificado SSL (por ejemplo menu.surestaurante.com): cuando el comensal escanea el QR, ve la dirección de su restaurante, no un subdominio genérico. La configuración del DNS lleva 5–10 minutos y le acompañamos en el proceso."
+      },
+      {
+        "q": "¿Puedo gestionar los códigos QR de varios restaurantes desde una misma cuenta?",
+        "a": "Sí, bajo petición. Una cuenta puede agrupar varios establecimientos, cada uno con sus propios códigos QR, menú, diseño y analítica. Escríbanos por WhatsApp y activaremos el modo multirrestaurante."
+      },
+      {
+        "q": "¿Es complicado lanzar un menú QR desde cero?",
+        "a": "Tres pasos: (1) cree las categorías; (2) añada los platos con nombre, precio y foto; (3) imprima los QR y colóquelos en las mesas. Si ya tiene un menú en papel o en PDF, súbalo: la IA reconoce las categorías y los precios y rellena las fichas. Un menú básico puede estar online en 5 minutos."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Menú QR en 10 minutos. ",
+    "headingAccent": "14 días de acceso completo.",
+    "sub": "Sin tarjeta y con cancelación en cualquier momento. {count} restaurantes confían en nosotros. Solo un email, y ninguna app para los comensales."
+  }
+}

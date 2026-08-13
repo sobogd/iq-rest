@@ -1,0 +1,206 @@
+{
+  "locale": "ga",
+  "slug": "scailean-cistine",
+  "trackPrefix": "l_kds",
+  "meta": {
+    "title": "Scáileán Cistine (KDS) do Bhialanna — Orduithe ar Scáileán an Chócaire | IQ Rest",
+    "description": "Scáileán cistine KDS do bhialanna: téann orduithe ón urlár agus ón mbiachlár QR díreach chuig scáileán an chócaire. Colúin de réir boird, stádais Ag feitheamh / Ag cócaireacht / Réidh / Seirbheáilte, scagairí stáisiúin. Ritheann sé ar tháibléad nó fón.",
+    "canonical": "https://iq-rest.com/ga/scailean-cistine",
+    "ogLocale": "ga_IE",
+    "ogTitle": "Scáileán Cistine (KDS) — Orduithe Díreach chuig Scáileán an Chócaire",
+    "ogDescription": "Orduithe ón urlár ar scáileán an chócaire. Colúin de réir boird, stádais agus lasc-amadóir. Athraíonn tapáil amháin an stádas.",
+    "brandLine": "IQ Rest — Scáileán Cistine do Bhialanna"
+  },
+  "hero": {
+    "headline": "Scáileán Cistine (KDS):",
+    "cta": "Socraigh an scáileán cistine",
+    "sub": "Sroicheann orduithe scáileán na cistine láithreach: nótaí, ailléirginí agus lasc-amadóir. Athraíonn stádas le tapáil amháin.",
+    "headlineAccent": "orduithe díreach chuig an gcócaire",
+    "demoLabel": "Taispeántas: scáileán cistine",
+    "tablet": {
+      "src": "/landing/hero-card-kds.webp",
+      "alt": "Táibléad le scáileán cistine: orduithe de réir boird i gcolúin le stádais"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Bialanna"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Caiféanna"
+    },
+    {
+      "icon": "Martini",
+      "label": "Beáir"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Óstáin"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerias"
+    }
+  ],
+  "scan": {
+    "heading": "Socraigh an scáileán cistine",
+    "headingAccent": "in 5 nóiméad.",
+    "sub": "Scan biachlár páipéir nó PDF — aithníonn AI miasa, catagóirí agus ailléirginí. Nasc táibléad sa chistin agus tosaigh ag fáil orduithe.",
+    "cta": "Scan an biachlár"
+  },
+  "subFeatures": [
+    {
+      "icon": "LayoutGrid",
+      "eyebrow": "Rialú agus scagairí",
+      "heading": "Scáileáin iomadúla de réir stáisiúin: cistin agus beár.",
+      "body": "Socraigh táibléid ar leith don líne the, don bheár nó don stáisiún taosráin — ní thaispeánann gach scáileán ach na miasa a bhaineann leis. Glanann scagairí de réir stádais (Ag feitheamh / Ag cócaireacht / Réidh / Seirbheáilte) agus de réir catagóire an tranglam: ní oibríonn cócairí ach leis an méid a bhaineann lena stáisiún.",
+      "bullets": [
+        "Scáileáin KDS iomadúla le scagairí catagóirí miasa.",
+        "Scagaire stádais: ach amháin ag cócaireacht agus réidh.",
+        "Ní fheiceann gach stáisiún ach a shreabhadh orduithe féin."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-filters.webp",
+        "alt": "Táibléad ar sheastán práis ag pas cistine bialainne — KDS scagtha de réir stádas miasa"
+      }
+    },
+    {
+      "icon": "Timer",
+      "eyebrow": "Cártaí agus lasc-amadóir",
+      "heading": "Athraíonn tapáil amháin an stádas. Aibhsítear tuairimí agus ailléirginí i ndath.",
+      "body": "Taispeánann cárta miasa na roghanna roghnaithe (gan oinniúin, dea-chócaráilte), tuairimí aíonna, ailléirginí agus lasc-amadóir ag rith ón am a cuireadh an t-ordú. Cuireann tapáil ar an gcárta an stádas ar aghaidh: Ag feitheamh → Ag cócaireacht → Réidh → Seirbheáilte. Sórtálann an liosta é féin go huathoibríoch de réir tosaíochta ama.",
+      "bullets": [
+        "Tapáil cárta — téann an stádas ar aghaidh láithreach.",
+        "Roghanna, tuairimí agus ailléirginí aibhsithe i ndath.",
+        "Sórtáilte de réir tosaíochta: éiríonn na miasa is faide ag feitheamh go dtí an barr."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-cards.webp",
+        "alt": "Táibléad ar sheastán práis ar chuntar beáir bialainne — KDS le cártaí orduithe de réir boird"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Na rudaí a fhiafraíonn úinéirí bialainne faoin scáileán cistine in IQ Rest. Mura bhfuil do cheist liostaithe — seol teachtaireacht chugainn ar WhatsApp.",
+    "items": [
+      {
+        "q": "Cad iad na stádais atá ag míreanna cistine?",
+        "a": "Ceithre stádas: Ag feitheamh — tá an t-ordú curtha agus ag feitheamh; Ag cócaireacht — tá an mhias á hullmhú; Réidh — réidh le bailiú; Seirbheáilte — seachadta chuig an aoi. Cuireann tapáil ar an gcárta ar aghaidh chuig an gcéad stádas eile é, gan aon bhiachláir ná deimhnithe."
+      },
+      {
+        "q": "An féidir liom roinnt scáileán KDS a shocrú i stáisiúin chistine éagsúla?",
+        "a": "Is féidir. Táibléad amháin ar an líne the, ceann eile ag an mbeár, an tríú ceann ag an stáisiún taosráin — gach ceann lena scagaire catagóirí miasa féin. Fanann gach scáileán ar aon dul: déantar stádas a athraítear ar cheann amháin a nuashonrú ar an gcuid eile."
+      },
+      {
+        "q": "Cad air a ritheann mé an KDS — an dteastaíonn táibléad speisialta uaim?",
+        "a": "Ritheann an KDS in aon bhrabhsálaí nua-aimseartha. Oireann táibléad ar sheastán ag an bpas do chistin mhór; oibríonn fón cliste d'ionad beag. Níl aon chrua-earraí ná suiteáil speisialta ag teastáil: nascann an gléas le cód sé dhigit ón bpainéal."
+      },
+      {
+        "q": "Cá as a dtagann orduithe ar scáileán na cistine?",
+        "a": "Ó gach foinse: aoi ag cur ordaithe tríd an mbiachlár QR boird, nó freastalaí á ghlacadh ar a ghléas féin. Sroicheann orduithe an KDS go huathoibríoch, le huimhir an bhoird. Gan aon athiontráil láimhe ó POS."
+      },
+      {
+        "q": "Cad a thaispeánann cárta ordaithe?",
+        "a": "Ainm na miasa, roghanna roghnaithe (gan oinniúin, dea-chócaráilte), tuairim an aoi, ailléirginí, an stádas agus lasc-amadóir ag rith ón am a cuireadh an t-ordú. Sórtálann cártaí de réir tosaíochta: dá fhaide a fhanann mias, is airde a shuíonn sé sa cholún."
+      },
+      {
+        "q": "An féidir cártaí ar an scáileán a scagadh?",
+        "a": "Is féidir. Dhá scagaire: de réir stádais (mar shampla, ach amháin Ag feitheamh agus Ag cócaireacht) agus de réir catagóire (deochanna chuig an mbeár, miasa te chuig an gcistin). Sábháltar socruithe in aghaidh an ghléis, agus mar sin oibríonn gach stáisiún lena shraith féin."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Cistin gan pháipéar in 10 nóiméad. ",
+    "headingAccent": "14 lá de rochtain iomlán.",
+    "sub": "Ní gá cárta, cealaigh am ar bith. Iontaofa ag {count} bialann. Níl uait ach ríomhphost — agus tuirlingíonn orduithe díreach ar scáileán na cistine."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Scáileáin de réir stáisiúin",
+      "sub": "Táibléid ar leith don líne the, don bheár agus don stáisiún taosráin — ní thaispeánann gach scáileán ach a mhiasa féin.",
+      "bullets": [
+        {
+          "icon": "LayoutGrid",
+          "title": "Scagaire catagóire",
+          "sub": "Sann a chatagóirí biachláir féin do gach scáileán"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Sreabhadh in aghaidh an stáisiúin",
+          "sub": "Oibríonn cistin agus beár i gcomhthreofar gan cur isteach ar a chéile"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Scagaire stádais",
+          "sub": "Taispeáin ach an méid atá ag cócaireacht nó réidh le bailiú"
+        }
+      ]
+    },
+    {
+      "heading": "Stádais tapála amháin",
+      "sub": "Bogann tapáil ar chárta an mhias chuig an gcéad stádas eile. Feiceann an chistin agus an freastalaí an pictiúr céanna.",
+      "bullets": [
+        {
+          "icon": "ClipboardList",
+          "title": "Stádas in aghaidh na míre",
+          "sub": "Ag cócaireacht, réidh, seirbheáilte — in aghaidh na miasa, ní in aghaidh an ordaithe"
+        },
+        {
+          "icon": "Timer",
+          "title": "Lasc-amadóir ó nóiméad an ordaithe",
+          "sub": "Feic cé chomh fada is atá mias ag feitheamh — éiríonn na cinn is faide ag feitheamh go dtí an barr"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "Ailléirginí agus tuairimí",
+          "sub": "Roghanna, nótaí aíonna agus ailléirginí aibhsithe i ndath"
+        }
+      ]
+    },
+    {
+      "heading": "Tuirlingíonn orduithe láithreach",
+      "sub": "Feictear ordú aoi ón mbiachlár QR nó ó fhreastalaí ar an scáileán an nóiméad a chuirtear é, gan aon athnuachan leathanaigh.",
+      "bullets": [
+        {
+          "icon": "Rocket",
+          "title": "Ar an scáileán láithreach",
+          "sub": "Nasc leanúnach — feictear an cárta an soicind a chuirtear an t-ordú"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Gach foinse in aon sruth amháin",
+          "sub": "Sroicheann orduithe aoi agus freastalaí ar scáileán amháin le huimhir an bhoird"
+        },
+        {
+          "icon": "Map",
+          "title": "Uimhir an bhoird ar an gcárta",
+          "sub": "Feiceann an chistin cá dtéann an mhias; feiceann an freastalaí cá bhfuiltear ag súil leis"
+        }
+      ]
+    },
+    {
+      "heading": "Ceangailte i nóiméid",
+      "sub": "Ritheann scáileán na cistine sa bhrabhsálaí ar aon táibléad nó fón — ceangailte le cód sé dhigit.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Táibléad nó fón",
+          "sub": "Is leor brabhsálaí — níl aon chrua-earraí speisialta le ceannach"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Cód péireála",
+          "sub": "Cuir isteach an cód sé dhigit ón bpainéal — tá an gléas nasctha leis an gcistin"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Cúlghairm rochtana",
+          "sub": "Táibléad caillte nó athsholáthraithe — dínasc é ón bpainéal le tapáil amháin"
+        }
+      ]
+    }
+  ]
+}

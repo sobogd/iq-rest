@@ -1,0 +1,59 @@
+{
+  "breadcrumbLabel": "Preços",
+  "meta": {
+    "title": "Preços — plano modular para restaurante desde 9.90 €/mês | IQ Rest",
+    "description": "Monte o plano a partir de módulos: ementa QR com tradução por IA, receção de pedidos, reserva de mesas, ecrã de cozinha. Preço por restaurante desde 9.90 €/mês, descontos por volume. 14 dias grátis, sem cartão, cancele a qualquer momento.",
+    "canonical": "https://iq-rest.com/pt/precos",
+    "ogLocale": "pt_PT",
+    "ogTitle": "Preços — plano modular para restaurante",
+    "ogDescription": "Plano por módulos desde 9.90 €/mês: ementa QR, pedidos, reservas, KDS. Descontos por volume, sem custos ocultos. 14 dias grátis."
+  },
+  "faqSub": "Perguntas frequentes dos restaurantes sobre preços e pagamento. Não encontrou a sua — escreva no WhatsApp.",
+  "faqItems": [
+    {
+      "q": "Como funciona o preço?",
+      "a": "O plano monta-se a partir de módulos. A base é a ementa QR com tradução por IA para 35 idiomas e gestão a partir de qualquer dispositivo. Depois adiciona o que precisar: reserva de mesas, ecrã de cozinha, domínio próprio. O preço calcula-se por restaurante; a partir do segundo aplicam-se descontos por volume."
+    },
+    {
+      "q": "Há comissão sobre os pedidos?",
+      "a": "Não. Os pedidos da ementa QR e dos empregados vão diretamente para o restaurante. Paga apenas um preço mensal fixo."
+    },
+    {
+      "q": "Como funciona o período experimental?",
+      "a": "14 dias de acesso total a todas as funcionalidades, sem necessidade de cartão bancário. Se no final não tiver um pagamento configurado, a conta é colocada em pausa: o painel continua acessível em modo de consulta, mas a ementa dos clientes e a receção de pedidos são desativadas. Não há débitos automáticos."
+    },
+    {
+      "q": "O que acontece aos dados durante a pausa?",
+      "a": "Tudo fica guardado: ementa, fotos, histórico de pedidos, reservas, definições, estatísticas. Configure o pagamento mesmo passado meio ano — tudo volta a estar como estava."
+    },
+    {
+      "q": "Vou ter de reimprimir os códigos QR?",
+      "a": "Não. Durante a pausa, os códigos mostram uma página «temporariamente indisponível»; depois de configurar o pagamento, os mesmos códigos voltam a abrir a ementa."
+    },
+    {
+      "q": "É possível mudar de plano?",
+      "a": "Sim, a qualquer momento a partir do painel. A diferença é recalculada proporcionalmente aos dias restantes do período pago. Uma funcionalidade desativada mantém os seus dados."
+    },
+    {
+      "q": "Quantos restaurantes posso ligar?",
+      "a": "Os que quiser, com gestão num único painel. Descontos por volume até 50% com 5 ou mais restaurantes. Para grandes cadeias — plano à medida através do WhatsApp."
+    },
+    {
+      "q": "Qual é o desconto do plano anual?",
+      "a": "Cerca de 30% em comparação com o pagamento mensal. O valor exato aparece ao montar o plano."
+    },
+    {
+      "q": "Como cancelo a subscrição?",
+      "a": "Num clique, a partir do painel. A conta funciona até ao fim do período pago e depois é colocada em pausa. Os dados ficam guardados."
+    },
+    {
+      "q": "Que métodos de pagamento existem?",
+      "a": "Visa, Mastercard, American Express, Apple Pay, Google Pay — através da Stripe. Na Europa, no plano anual, também SEPA Direct Debit."
+    }
+  ],
+  "finalCta": {
+    "heading": "Um preço. Zero risco. ",
+    "headingAccent": "14 dias de acesso total.",
+    "sub": "Não precisa de cartão, cancele a qualquer momento — {count} restaurantes confiam em nós. Para começar, só precisa de um email."
+  }
+}

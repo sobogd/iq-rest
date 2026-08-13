@@ -1,7 +1,4 @@
 import type { NextConfig } from "next";
-import createNextIntlPlugin from "next-intl/plugin";
-
-const withNextIntl = createNextIntlPlugin();
 
 // S3 host for next/image remotePatterns. Read from env so the secret host
 // never gets hardcoded in the repo. Menu images live at
@@ -192,10 +189,10 @@ const nextConfig: NextConfig = {
       // the subdomain. Locale routing happens on the public-menu service.
       { source: "/m/:slug", destination: "https://:slug.iq-rest.com", permanent: true },
       { source: "/:locale/m/:slug", destination: "https://:slug.iq-rest.com", permanent: true },
-      // Auth migrated to dashboard.iq-rest.com — keep link equity on any
-      // login/signup URLs that might still be indexed.
-      { source: "/:locale/login", destination: "https://dashboard.iq-rest.com/:locale/login", permanent: true },
-      { source: "/:locale/signup", destination: "https://dashboard.iq-rest.com/:locale/login?create=true", permanent: true },
+      // /:locale/login and /:locale/signup used to 301 to a dashboard login
+      // page that no longer exists — both are real first-party pages again
+      // (app/[locale]/login, app/[locale]/register), so those redirects were
+      // removed instead of kept (they would otherwise hijack the new routes).
       { source: "/:locale/otp", destination: "https://dashboard.iq-rest.com/:locale/login", permanent: true },
       { source: "/:locale/logout", destination: "https://dashboard.iq-rest.com/:locale/logout", permanent: true },
 
@@ -206,12 +203,14 @@ const nextConfig: NextConfig = {
       { source: "/:locale/dashboard", destination: "https://dashboard.iq-rest.com/:locale/dashboard", permanent: true },
       { source: "/:locale/dashboard/:path*", destination: "https://dashboard.iq-rest.com/:locale/dashboard/:path*", permanent: true },
       // Drop the legacy in-landing API surface (the old dashboard's backend)
-      // — none of these routes exist anymore. Crawlers / cached bookmarks 301
+      // — none of those routes exist anymore. Crawlers / cached bookmarks 301
       // to the public landing root (the API is not callable by humans).
-      { source: "/api/:path*", destination: "/", permanent: true },
+      // Excludes /api/currency: a real, current route (app/api/currency/route.ts)
+      // — this blanket rule was silently 404-ing every request to it.
+      { source: "/api/:path((?!currency).*)", destination: "/", permanent: true },
     ];
   },
 
 };
 
-export default withNextIntl(nextConfig);
+export default nextConfig;

@@ -1,0 +1,151 @@
+{
+  "locale": "de",
+  "slug": "qr-code-speisekarte-restaurant",
+  "trackPrefix": "l_de_qr",
+  "featureHeading": {
+    "heading": "Nicht nur ein QR-Code",
+    "sub": "Alles, was ein einziger Scan für Ihre Gäste und Ihren Service bedeutet."
+  },
+  "meta": {
+    "title": "QR-Speisekarte für Restaurants | IQ Rest",
+    "description": "QR-Speisekarte für Restaurants: Gäste scannen den QR-Code am Tisch, öffnen die Speisekarte im Browser und bestellen in ihrer eigenen Sprache. 14 Tage kostenlos, keine Kreditkarte nötig.",
+    "canonical": "https://iq-rest.com/de/qr-code-speisekarte-restaurant",
+    "ogLocale": "de_DE",
+    "ogTitle": "QR-Speisekarte für Restaurants",
+    "ogDescription": "Ein QR-Code auf dem Tisch, die Speisekarte auf dem Handy — Fotos, Allergene, 35 Sprachen und Echtzeit-Updates.",
+    "brandLine": "IQ Rest — QR-Speisekarte für Restaurants"
+  },
+  "hero": {
+    "headline": "QR-Speisekarte:\nscannen und bestellen",
+    "cta": "QR-Speisekarte erstellen",
+    "sub": "Gäste scannen den QR-Code am Tisch, sehen Fotos und Allergene in 35 Sprachen und bestellen — ganz ohne Apps."
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurants"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafés"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bars"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotels"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerien"
+    }
+  ],
+  "scan": {
+    "heading": "Haben Sie schon eine Papierkarte oder ein PDF?",
+    "headingAccent": "Die KI macht daraus in 60 Sekunden eine QR-Speisekarte.",
+    "sub": "Laden Sie ein Foto der Speisekarte oder ein PDF hoch — die KI erkennt Kategorien, Gerichte und Preise und verknüpft sie direkt mit Ihrer QR-Speisekarte.",
+    "cta": "QR-Speisekarte erstellen"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "Ein QR-Code, 35 Sprachen",
+      "heading": "Ein QR-Code, eine Speisekarte in 35 Sprachen.",
+      "body": "Gäste scannen den QR-Code und wählen ihre Sprache: Die Übersetzung erfolgt durch KI mit kulinarischem Gespür, nicht durch einen Standard-Übersetzer. Keine separaten Touristenkarten oder verstreute Zettel mehr auf dem Tisch.",
+      "bullets": [
+        "Ein gedruckter QR-Code deckt 35 Sprachen ab, im Abo enthalten.",
+        "Die KI spricht die Sprache des Essens — Gerichte klingen in jeder Sprache natürlich.",
+        "Gäste wechseln die Sprache in der Speisekarte, ohne den QR-Code neu zu scannen."
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Zwei Gäste scannen denselben QR-Code vom Tisch und lesen die Speisekarte in verschiedenen Sprachen"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Allergene im QR-Code",
+      "heading": "Allergene und Ernährungs-Labels in der QR-Speisekarte.",
+      "body": "Jedes Gericht in der Speisekarte hinter dem QR-Code kann Labels tragen: Gluten, Laktose, Nüsse, Meeresfrüchte, vegane und glutenfreie Optionen. Gäste filtern Gerichte nach ihren Bedürfnissen auf dem Handy, ohne das Personal zu fragen.",
+      "bullets": [
+        "14 Allergen-Kategorien auf Gerichtebene.",
+        "Vegan, vegetarisch und glutenfrei mit einem Klick im Dashboard markieren.",
+        "Gäste filtern die QR-Speisekarte nach ihren eigenen Einschränkungen."
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Ein Gast filtert die QR-Speisekarte nach Allergenen auf dem Handy, während der Inhaber die Liste auf einem Tablet bearbeitet"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Mehr als nur ein QR-Code",
+      "heading": "Eine QR-Speisekarte im Stil einer Restaurant-Website.",
+      "body": "Nach dem Scannen des Codes landen Gäste nicht auf einem einfachen PDF: Sie sehen eine Startseite mit einem Video oder einem starken Foto, einer Beschreibung des Betriebs und einer Kontaktseite mit Karte, Telefonnummern und Social-Media-Links. Der QR-Code wird zur digitalen Eingangstür Ihres Restaurants.",
+      "bullets": [
+        "Ein Hintergrundvideo oder starkes Foto auf der Startseite der QR-Speisekarte.",
+        "Platz, um die Geschichte Ihres Betriebs und jeder Kategorie zu erzählen.",
+        "Eine integrierte Kontaktseite: Karte, Telefon, Instagram, WhatsApp."
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Zwei Handys auf einem Tisch: die Startseite der QR-Speisekarte mit einem Hintergrundvideo und eine Kontaktseite mit Karte"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Bestellen über den QR-Code · optional",
+      "heading": "Über den QR-Code können Gäste auch bestellen.",
+      "body": "Neben dem Durchstöbern der Speisekarte kann die QR-Speisekarte zum Bestellkanal werden: Gäste legen Gerichte in den Warenkorb und senden die Anfrage ab. Die Bestellung erreicht eine Servicekraft, Ihr WhatsApp oder den Küchenbildschirm. Die Funktion kann in den Einstellungen jederzeit ein- und ausgeschaltet werden.",
+      "bullets": [
+        "Warenkorb, Kommentare und Bestellabschluss direkt aus dem QR-Scan.",
+        "Die Bestellung erreicht sofort den Service, WhatsApp oder den Küchenbildschirm.",
+        "Aktivieren Sie die Funktion nach Zeiten, Bereichen oder bestimmten Restaurants."
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Zwei Handys auf einem Tisch: ein Warenkorb aus der QR-Speisekarte und eine Bestätigung der abgesendeten Bestellung"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Was Gastronomen zur IQ Rest QR-Speisekarte fragen. Wenn Sie Ihre Frage nicht finden — schreiben Sie uns auf WhatsApp.",
+    "items": [
+      {
+        "q": "Wie funktioniert die QR-Speisekarte von IQ Rest?",
+        "a": "Jeder Tisch hat einen gedruckten QR-Code. Gäste scannen ihn mit ihrer Handykamera, und der Browser öffnet die Speisekarte des Restaurants — Fotos, Beschreibungen, Allergene und aktuelle Preise. Weder Gäste noch Personal müssen eine App herunterladen."
+      },
+      {
+        "q": "Brauche ich technisches Wissen, um eine QR-Speisekarte zu erstellen?",
+        "a": "Nein. Das Dashboard funktioniert mit Klicks und Drag-and-Drop, kein Code oder komplexe Konfiguration. Ein Gericht hinzuzufügen dauert Sekunden: Name, Preis, Foto. Die Ersteinrichtung dauert meist 30 Minuten bis eine Stunde; wenn Sie bereits eine PDF-Speisekarte haben, wandelt die KI diese automatisch um."
+      },
+      {
+        "q": "Müssen Gäste eine App installieren, um den QR-Code zu lesen?",
+        "a": "Nein. Die integrierte Kamera von iPhone und Android erkennt den QR-Code in Sekunden und öffnet die Speisekarte direkt im Browser. Auch das Dashboard funktioniert in jedem modernen Browser — Handy, Tablet oder Laptop."
+      },
+      {
+        "q": "Wie werden die QR-Codes für die Tische gedruckt?",
+        "a": "QR-Codes werden im Dashboard automatisch generiert (einer pro Tisch oder einer für den gesamten Betrieb) und als druckfertiges PDF heruntergeladen. Ein Bürodrucker und ein Aufsteller reichen aus: ein Halter, ein Aufkleber oder ein Untersetzer."
+      },
+      {
+        "q": "Kann ich meine eigene Domain für die QR-Speisekarte nutzen?",
+        "a": "Ja. Wir unterstützen die Domain Ihres Restaurants mit einem SSL-Zertifikat (zum Beispiel menu.ihrrestaurant.de): Wenn Gäste den QR-Code scannen, sehen sie die Adresse Ihres Restaurants, keine generische Subdomain. Die DNS-Einrichtung dauert 5–10 Minuten und wir leiten Sie dabei an."
+      },
+      {
+        "q": "Kann ich QR-Codes für mehrere Restaurants über ein Konto verwalten?",
+        "a": "Ja, auf Anfrage. Ein Konto kann mehrere Betriebe bündeln, jeder mit eigenen QR-Codes, Speisekarte, Design und Analysen. Schreiben Sie uns auf WhatsApp und wir aktivieren den Multi-Restaurant-Modus."
+      },
+      {
+        "q": "Ist es schwer, eine QR-Speisekarte von Grund auf neu zu starten?",
+        "a": "Drei Schritte: (1) Kategorien erstellen; (2) Gerichte mit Name, Preis und Foto hinzufügen; (3) QR-Codes ausdrucken und auf den Tischen platzieren. Wenn Sie bereits eine Papierkarte oder ein PDF haben, laden Sie es hoch — die KI erkennt Kategorien und Preise und füllt die Karten aus. Eine einfache Speisekarte kann in 5 Minuten online sein."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Eine QR-Speisekarte in 10 Minuten. ",
+    "headingAccent": "14 Tage voller Zugriff.",
+    "sub": "Keine Kreditkarte nötig, jederzeit kündbar. {count} Restaurants vertrauen uns. Nur eine E-Mail-Adresse — und keine Apps für Ihre Gäste."
+  }
+}

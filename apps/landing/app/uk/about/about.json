@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "Про IQ Rest — Хто ми, контакти та юридичні дані",
+    "description": "Хто стоїть за IQ Rest, як з нами зв'язатися та реквізити оператора сервісу: email, WhatsApp, юридична інформація.",
+    "canonical": "https://iq-rest.com/uk/about",
+    "ogLocale": "uk_UA",
+    "ogTitle": "Про IQ Rest",
+    "ogDescription": "Хто стоїть за IQ Rest, контакти підтримки та юридичні реквізити оператора сервісу."
+  },
+  "heading": "Від власного кафе",
+  "headingAccent": "до платформи для ресторанів",
+  "story": {
+    "photo": {
+      "src": "/contacts.webp"
+    },
+    "paragraphs": [
+      "Сьогодні платформа щодня працює у {count} закладах — від кав'ярень на п'ять столиків до мереж у кількох містах. Дані зберігаються на серверах у Німеччині, а на запитання підтримки ми відповідаємо особисто."
+    ],
+    "sign": "Богдан Соколов"
+  },
+  "facts": [
+    {
+      "value": "2022",
+      "label": "рік заснування платформи"
+    },
+    {
+      "value": "{count}",
+      "label": "закладів працюють на IQ Rest"
+    },
+    {
+      "value": "15",
+      "label": "країн, де є наші клієнти"
+    }
+  ],
+  "waPrefill": "Вітаю, маю запитання щодо IQ Rest",
+  "contacts": [
+    {
+      "icon": "Mail",
+      "title": "Email",
+      "value": "support@iq-rest.com",
+      "href": "mailto:support@iq-rest.com",
+      "note": "Рахунки, документи, питання щодо даних."
+    },
+    {
+      "icon": "MessageCircle",
+      "title": "WhatsApp",
+      "value": "+998 94 866 37 43",
+      "wa": true,
+      "note": "Покажемо демо та допоможемо з налаштуванням."
+    },
+    {
+      "icon": "Clock",
+      "title": "Час відповіді",
+      "value": "Пн–Нд, 9:00–21:00 CET",
+      "note": "Відповідаємо протягом кількох годин."
+    }
+  ],
+  "legal": {
+    "rows": [
+      {
+        "label": "Оператор сервісу",
+        "value": "Богдан Соколов"
+      },
+      {
+        "label": "Організаційно-правова форма",
+        "value": "Autónomo (Іспанія)"
+      },
+      {
+        "label": "Податковий номер (NIF)",
+        "value": "ESZ1894474S"
+      },
+      {
+        "label": "Адреса",
+        "value": "Calle Boca del Río 2, 33010 Oviedo, Asturias, España"
+      },
+      {
+        "label": "Домен",
+        "value": "https://iq-rest.com"
+      },
+      {
+        "label": "Хостинг даних",
+        "value": "Hetzner Online GmbH, Nuremberg, Germany"
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Ви почули нашу історію. ",
+    "headingAccent": "Почніть писати свою — 14 днів безкоштовно.",
+    "sub": "Без картки, скасування будь-коли. Як і {count} закладів, ви можете на нас покластися. Потрібен лише email."
+  }
+}

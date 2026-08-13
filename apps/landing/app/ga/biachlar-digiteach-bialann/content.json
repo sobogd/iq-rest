@@ -1,0 +1,332 @@
+{
+  "locale": "ga",
+  "slug": "biachlar-digiteach-bialann",
+  "trackPrefix": "l_digital",
+  "meta": {
+    "title": "Biachlár Digiteach do Bhialanna | IQ Rest",
+    "description": "Biachlár digiteach do do bhialann: biachlár ar líne le grianghraif, ailléirginí, aistriúchán AI agus nuashonruithe praghsanna fíor-ama. 14 lá saor in aisce, ní gá cárta creidmheasa.",
+    "canonical": "https://iq-rest.com/ga/biachlar-digiteach-bialann",
+    "ogLocale": "ga_IE",
+    "ogTitle": "Biachlár Digiteach do Bhialanna",
+    "ogDescription": "Leagan ar líne de do bhiachlár páipéir le grianghraif, ailléirginí agus aistriúchán AI. Nuashonraítear praghsanna i bhfíor-am.",
+    "brandLine": "IQ Rest — Biachlár Digiteach do Bhialanna"
+  },
+  "hero": {
+    "headline": "Biachlár digiteach agus suíomh gréasáin",
+    "headlineAccent": "do do bhialann",
+    "cta": "Cruthaigh biachlár digiteach",
+    "demoLabel": "Taispeántas: an biachlár mar a fheiceann aíonna é",
+    "sub": "Seol in 10 nóiméad: glac orduithe ón mbord, nuashonraigh praghsanna láithreach agus faigh áirithintí go díreach gan aon choimisiún.",
+    "phones": [
+      {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Fón le leathanach baile suíomh gréasáin bialainne: grianghraif, áirithintí agus rochtain ar an mbiachlár ar líne"
+      },
+      {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Fón le cárta miasa: grianghraf, praghas agus lipéid ailléirginí"
+      }
+    ]
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Bialanna"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Caiféanna"
+    },
+    {
+      "icon": "Martini",
+      "label": "Beáir"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Óstáin"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerias"
+    }
+  ],
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Biachlár in 10 nóiméad",
+      "sub": "Gan forbróirí agus gan aon socrú fada ann"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Tacaíocht thapa",
+      "sub": "Cabhraímid leat do bhiachlár a shocrú sa chomhrá laistigh de chúpla uair an chloig"
+    },
+    {
+      "icon": "Globe",
+      "title": "Roghnaithe ag {count} ionad",
+      "sub": "Biachláir dhigiteacha agus suíomhanna gréasáin do bhialanna i 15+ tír"
+    },
+    {
+      "icon": "Palette",
+      "title": "D'fhearann agus do bhranda féin",
+      "sub": "Biachlár ag do sheoladh féin, ní ar thógálaí suímh chomhroinnte"
+    }
+  ],
+  "scan": {
+    "heading": "An bhfuil biachlár páipéir nó PDF agat?",
+    "headingAccent": "Déanann AI é a dhigitiú in 60 soicind.",
+    "sub": "Uaslódáil grianghraf nó cáipéis — aithníonn AI catagóirí, miasa agus praghsanna go huathoibríoch.",
+    "cta": "Scan an biachlár"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "Aistriúchán AI",
+      "heading": "Biachlár i 35 teanga",
+      "body": "QR amháin — 35 teanga. Déanann an AI aistriúchán le comhthéacs cócaireachta san áireamh, ionas go mbíonn miasa nádúrtha. Ordaíonn turasóirí le níos mó muiníne.",
+      "bullets": [
+        "35 teanga san áireamh sa síntiús",
+        "AI cócaireachta in ionad Google",
+        "Athraigh teangacha le tapáil amháin"
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Dhá aoi ag léamh an bhiachláir dhigitigh chéanna i dteangacha éagsúla ar a bhfóin féin"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Ailléirginí",
+      "heading": "Ailléirginí agus aistí bia ar gach mias",
+      "body": "Lipéadaigh glútan, lachtós, cnónna, veigeánach agus saor ó ghlútan. Déanann aíonna an biachlár a scagadh dá gcuid riachtanas agus ordaíonn siad le suaimhneas intinne.",
+      "bullets": [
+        "14 chatagóir ailléirginí",
+        "Lipéid veigeánacha agus saor ó ghlútan",
+        "Scagaire biachláir de réir srianta aiste bia"
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Scagann aoi an biachlár de réir ailléirginí ar fhón agus déanann úinéir bialainne eagarthóireacht ar an liosta ailléirginí ar tháibléad"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Dearadh agus branda",
+      "heading": "Biachlár den scoth ar d'fhearann féin",
+      "body": "Cúlra físeáin ar an scáileán fáilte, do dhearadh féin agus leathanach teagmhála le léarscáil agus naisc shóisialta — ar d'fhearann féin, ní PDF.",
+      "bullets": [
+        "Cúlra físeáin agus dearadh den scoth",
+        "D'fhearann féin le SSL",
+        "Teagmhálacha, léarscáil, naisc shóisialta"
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Dhá fhón ar bhord caifé: scáileán baile an bhiachláir le cúlra físeáin agus leathanach teagmhála le léarscáil"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Orduithe",
+      "heading": "Orduithe ar líne gan aon choimisiún",
+      "body": "Ordaíonn aíonna ón mbiachlár nó go díreach in WhatsApp — téann an t-ordú chuig an urlár nó chuig an gcistin, 0% de d'ioncam.",
+      "bullets": [
+        "Ón mbiachlár nó trí WhatsApp",
+        "Chuig an urlár nó an chistin, 0%",
+        "Cumasaithe i socruithe"
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Dhá fhón ar bhord: cart le hordú agus deimhniú ordaithe rathúil"
+      }
+    },
+    {
+      "icon": "CalendarCheck",
+      "eyebrow": "Áirithintí",
+      "heading": "Áirithintí boird 24/7",
+      "body": "Cuireann aíonna bord in áirithe iad féin tríd an mbiachlár nó nasc, feiceann tú féilire de réir boird agus deimhníonn tú go huathoibríoch nó de láimh.",
+      "bullets": [
+        "Cuireann aíonna in áirithe iad féin",
+        "Féilire thar gach bord",
+        "Deimhniú uathoibríoch nó láimhe"
+      ]
+    },
+    {
+      "icon": "MonitorSmartphone",
+      "eyebrow": "Bainistíocht",
+      "heading": "Bainistigh ó áit ar bith",
+      "body": "Ritheann an painéal riaracháin sa bhrabhsálaí — fón, táibléad nó ríomhaire. Níl aon rud le suiteáil, ar bun i nóiméid.",
+      "bullets": [
+        "Aon ghléas, aon bhrabhsálaí",
+        "Níl aon rud le suiteáil",
+        "Beo i nóiméid"
+      ]
+    }
+  ],
+  "faq": {
+    "sub": "Na rudaí a fhiafraíonn úinéirí bialainne faoin mbiachlár digiteach in IQ Rest. Mura bhfuil do cheist liostaithe — seol teachtaireacht chugainn ar WhatsApp.",
+    "items": [
+      {
+        "q": "An dteastaíonn scileanna teicniúla nó taithí CMS uaim?",
+        "a": "Níl aon scileanna speisialta ag teastáil. Tógann gach rud sa phainéal riaracháin cúpla tapáil — gan aon chódú, gan aon obair le comhaid fhoinse. Tógann sé soicindí chun mias a chur leis: ainm, praghas, grianghraf. De ghnáth tógann socrú iomlán biachláir 30–60 nóiméad."
+      },
+      {
+        "q": "Cad is biachlár digiteach IQ Rest ann?",
+        "a": "Is leagan ar líne de do bhiachlár é atá ar fáil d'aíonna trí chód QR nó nasc díreach: grianghraif miasa, praghsanna, ailléirginí, aistriúchán AI go 35 teanga agus nuashonruithe fíor-ama. Ritheann an biachlár ar ár bhfreastalaithe — níl aon bhogearraí le suiteáil ná le cothabháil, níl uait ach brabhsálaí."
+      },
+      {
+        "q": "An gá d'aíonna aip nó trealamh speisialta a bheith acu?",
+        "a": "Díríonn aoi ceamara a fhóin ar an gcód QR — osclaítear an biachlár sa bhrabhsálaí, gan aon suiteáil. Oibríonn an painéal riaracháin in aon bhrabhsálaí nua-aimseartha freisin: fón, táibléad nó ríomhaire glúine. Priontálann cóid QR ar ghnáthphriontálaí oifige."
+      },
+      {
+        "q": "An féidir liom an biachlár a óstáil ar m'fhearann féin?",
+        "a": "Is féidir. Nascann an biachlár le d'fhearann le teastas SSL — feiceann aíonna seoladh do bhialainne, mar shampla menu.dobhialann.com. Déanann ár dtacaíocht an fearann agus an teastas a shocrú; níl le déanamh agat ach taifead DNS a sholáthar."
+      },
+      {
+        "q": "An féidir liom bialanna iomadúla a bhainistiú ó chuntas amháin?",
+        "a": "Is féidir. Cuir ionaid le cuntas amháin: tá a bhiachlár, a dhearadh, a chóid QR agus a anailísíocht féin ag gach ceann acu, agus tógann sé cliceáil amháin aistriú eatarthu. Braitheann líon na n-ionad ar do shíntiús."
+      },
+      {
+        "q": "Cé chomh deacair is atá sé biachlár a shocrú ón tús?",
+        "a": "Trí chéim: cruthaigh catagóirí, cuir miasa le praghsanna agus grianghraif leo, priontáil cóid QR do na boird. Má tá biachlár páipéir nó PDF agat, uaslódáil é — aithníonn AI catagóirí, ainmneacha agus praghsanna agus líonann sé na cártaí go huathoibríoch. Seoltar bun-bhiachlár in 5 nóiméad; braitheann socrú iomlán ar líon na míreanna."
+      },
+      {
+        "q": "Cén tacaíocht a chuireann sibh ar fáil?",
+        "a": "Freagraímid ar WhatsApp agus trí ríomhphost le linn uaireanta oibre. Cabhraímid le socrú tosaigh, nascadh d'fhearainn agus dearadh an bhiachláir. Má theastaíonn taispeántas nó treoir uait — seol teachtaireacht chugainn."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Do bhiachlár ar líne in 10 nóiméad. ",
+    "headingAccent": "14 lá de rochtain iomlán.",
+    "sub": "Ní gá cárta, cealaigh am ar bith. Cuireann {count} bialann a muinín ionainn lena mbiachláir agus a suíomhanna gréasáin. Níl uait ach ríomhphost."
+  },
+  "spotlights": [
+    {
+      "heading": "Biachlár i 35 teanga",
+      "sub": "Osclaíonn aíonna an biachlár ina dteanga dhúchais. Aistríonn AI ainmneacha miasa, tuairiscí, catagóirí agus roghanna le comhthéacs cócaireachta san áireamh.",
+      "bullets": [
+        {
+          "icon": "Globe",
+          "title": "35 teanga sa síntiús",
+          "sub": "Teangacha Eorpacha agus hÁise san áireamh — gan aon mhuirear breise in aghaidh na teanga"
+        },
+        {
+          "icon": "Timer",
+          "title": "Aistrithe ar shábháil",
+          "sub": "Cuir mias leis nó cuir in eagar é — bíonn aistriúcháin i ngach teanga biachláir réidh láithreach"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Cosnaítear eagarthóireacht láimhe",
+          "sub": "Cuirtear glas ar aistriúchán a cheartaíonn tú de láimh, agus ní scríobhann an AI thairis riamh"
+        }
+      ]
+    },
+    {
+      "heading": "Ailléirginí agus aistí bia ar gach mias",
+      "sub": "Cuir lipéid ailléirginí agus aiste bia le cárta miasa — feiceann aíonna iad sa bhiachlár agus scagann siad miasa dá srianta.",
+      "bullets": [
+        {
+          "icon": "WheatOff",
+          "title": "14 chatagóir ailléirginí",
+          "sub": "Liosta iomlán rialachán an AE: glútan, cnónna, lachtós, bia mara agus tuilleadh"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "13 lipéad aiste bia",
+          "sub": "Veigeánach, feoilséantach, saor ó ghlútan, halal, kosher, spíosrach agus clibeanna aiste bia eile"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Scagaire tapála amháin",
+          "sub": "Roghnaíonn aíonna a srianta — ní thaispeánann an biachlár ach miasa oiriúnacha"
+        }
+      ]
+    },
+    {
+      "heading": "Biachlár den scoth ar d'fhearann féin",
+      "sub": "Cúlra grianghraf nó físeáin ar an scáileán fáilte, do dhath branda agus do lógó — tá cuma suíomh gréasáin ar an mbiachlár, ní PDF, agus ritheann sé ar d'fhearann.",
+      "bullets": [
+        {
+          "icon": "Palette",
+          "title": "Dearadh ar bhranda",
+          "sub": "Físeán nó grianghraf ar an scáileán baile, dath aibhsithe agus lógó — socraigh gan dearthóir"
+        },
+        {
+          "icon": "Globe",
+          "title": "D'fhearann féin le SSL",
+          "sub": "Osclaítear an biachlár ag do sheoladh thar nasc slán"
+        },
+        {
+          "icon": "Map",
+          "title": "Teagmhálacha agus léarscáil",
+          "sub": "Leathanach le do sheoladh, uaireanta oscailte, léarscáil agus naisc shóisialta — suíomh gréasáin bialainne iomlán"
+        }
+      ]
+    },
+    {
+      "heading": "Orduithe ar líne gan aon choimisiún",
+      "sub": "Cuireann aoi ordú isteach ón mbord — feictear é láithreach sa phainéal agus ar scáileán na cistine. Tógann an t-ardán 0% de d'ioncam.",
+      "bullets": [
+        {
+          "icon": "ShoppingCart",
+          "title": "Ón mbiachlár nó trí WhatsApp",
+          "sub": "Ordú in-chórais nó teachtaireacht chuig do WhatsApp — roghnaigh an modh i socruithe"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Díreach chuig an gcistin",
+          "sub": "Feictear ordú nua ar scáileán na cistine agus ar ghléas an fhreastalaí gan mhoill"
+        },
+        {
+          "icon": "Receipt",
+          "title": "Coimisiún 0%",
+          "sub": "Fanann an íocaíocht idir tú féin agus an t-aoi — ní choinníonn an t-ardán aon rud ó d'orduithe"
+        }
+      ]
+    },
+    {
+      "heading": "Áirithintí boird 24/7",
+      "sub": "Cuireann aíonna bord in áirithe díreach ón mbiachlár ag am ar bith. Seiceálann an córas an t-iarratas in aghaidh do sceidil agus na mboird atá ar fáil.",
+      "bullets": [
+        {
+          "icon": "CalendarCheck",
+          "title": "Féilire de réir boird",
+          "sub": "Meaitseálann an córas bord le méid an ghrúpa agus taispeánann sé áirithintí de réir lae agus boird"
+        },
+        {
+          "icon": "CalendarDays",
+          "title": "Uathoibríoch nó láimhe",
+          "sub": "Deimhnigh gach áirithint tú féin nó cas air uath-dheimhniú"
+        },
+        {
+          "icon": "Mail",
+          "title": "Ríomhphoist chuig an aoi agus chugat",
+          "sub": "Faigheann an t-aoi deimhniú ríomhphoist, faigheann úinéirí fógra áirithinte nua"
+        }
+      ]
+    },
+    {
+      "heading": "Bainistigh ó áit ar bith",
+      "sub": "Ritheann an painéal sa bhrabhsálaí ar fhón, táibléad nó ríomhaire. Feictear athruithe d'aíonna láithreach.",
+      "bullets": [
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Aon ghléas",
+          "sub": "Fón, táibléad nó ríomhaire — is leor brabhsálaí, níl aon suiteáil ag teastáil"
+        },
+        {
+          "icon": "Timer",
+          "title": "Eagarthóireacht láithreach",
+          "sub": "Cuirtear athrú praghais, liosta stoptha nó mias i bhfolach i bhfeidhm láithreach, gan aon fhoilsiú nó feitheamh"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Roghanna miasa",
+          "sub": "Méideanna, breiseáin agus leaganacha praghsáilte — tógann aíonna a mias iad féin"
+        }
+      ]
+    }
+  ],
+  "hideFeatureHeading": true
+}

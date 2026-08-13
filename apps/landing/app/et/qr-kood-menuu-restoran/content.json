@@ -1,0 +1,151 @@
+{
+  "locale": "et",
+  "slug": "qr-kood-menuu-restoran",
+  "trackPrefix": "l_et_qr",
+  "featureHeading": {
+    "heading": "Mitte lihtsalt QR-kood",
+    "sub": "Kõik, milleks üks skannimine sinu külaliste ja saali jaoks muutub."
+  },
+  "meta": {
+    "title": "QR-menüü restoranidele | IQ Rest",
+    "description": "QR-menüü restoranidele: külalised skannivad laual oleva QR-koodi, avavad menüü oma brauseris ja tellivad oma emakeeles. 14 päeva tasuta, kaarti pole vaja.",
+    "canonical": "https://iq-rest.com/et/qr-kood-menuu-restoran",
+    "ogLocale": "et_EE",
+    "ogTitle": "QR-menüü restoranidele",
+    "ogDescription": "QR laual, menüü telefonis — fotod, allergeenid, 35 keelt ja reaalajas uuendused.",
+    "brandLine": "IQ Rest — QR-menüü restoranidele"
+  },
+  "hero": {
+    "headline": "QR-menüü:\nskanni ja telli",
+    "cta": "Loo QR-menüü",
+    "sub": "Külalised skannivad laual oleva QR-i, sirvivad fotosid ja allergeene 35 keeles ning tellivad — rakendusi pole vaja."
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restoranidele"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kohvikutele"
+    },
+    {
+      "icon": "Martini",
+      "label": "Baaridele"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotellidele"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pitseriatele"
+    }
+  ],
+  "scan": {
+    "heading": "Sul on juba paberist menüü või PDF?",
+    "headingAccent": "Tehisintellekt muudab selle QR-menüüks 60 sekundiga.",
+    "sub": "Laadi üles foto menüüst või PDF — tehisintellekt tuvastab kategooriad, toidud ja hinnad ning ühendab need otse sinu QR-menüüga.",
+    "cta": "Loo QR-menüü"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "Üks QR, 35 keelt",
+      "heading": "Üks QR-kood, menüü 35 keeles.",
+      "body": "Külalised skannivad QR-i ja valivad oma keele: tõlke teeb tehisintellekt, arvestades kulinaarset tunnetust, mitte tavaline tõlkeprogramm. Enam pole vaja eraldi turistimenüüsid ega laiali pillutud lehti laual.",
+      "bullets": [
+        "Üks prinditud QR katab 35 keelt, mis on hinna sees.",
+        "Tehisintellekt räägib toidu keeles — toitude nimed kõlavad loomulikult igas keeles.",
+        "Külalised vahetavad keelt menüü sees, ilma QR-i uuesti skannimata."
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Kaks külalist skannivad laualt sama QR-koodi ja loevad menüüd erinevates keeltes"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Allergeenid QR-is",
+      "heading": "Allergeenid ja toitumiseelistused QR-menüüs.",
+      "body": "Iga toit QR-i taga olevas menüüs võib kanda märgiseid: gluteen, laktoos, pähklid, mereannid, vegan ja gluteenivabad valikud. Külalised filtreerivad toite vastavalt oma piirangutele oma telefonist, ilma teenindajalt küsimata.",
+      "bullets": [
+        "14 allergeenide kategooriat toidu tasemel.",
+        "Vegan, taimetoitlane ja gluteenivaba märgised ühe klõpsuga paneelis.",
+        "Külalised filtreerivad QR-menüüd oma piirangute järgi."
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Külaline filtreerib QR-menüüd allergeenide järgi telefonis, samal ajal kui omanik muudab nimekirja tahvelarvutis"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Rohkem kui lihtsalt QR",
+      "heading": "QR-menüü, mis näeb välja nagu restorani veebileht.",
+      "body": "Pärast koodi skannimist ei satu külalised lamedale PDF-ile: nad näevad avalehte video või silmapaistva fotoga, koha kirjeldust ja kontaktide lehte koos kaardi, telefoninumbrite ja sotsiaalmeedia linkidega. QR-ist saab sinu restorani esindus veebis.",
+      "bullets": [
+        "Taustavideo või silmapaistev foto QR-menüü avalehel.",
+        "Ruumi oma koha ja iga kategooria loo rääkimiseks.",
+        "Sisseehitatud kontaktide leht: kaart, telefon, Instagram, WhatsApp."
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Kaks telefoni laual: QR-menüü avaleht taustavideoga ja kontaktide leht koos kaardiga"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Telli QR-ist · valikuline",
+      "heading": "QR-koodist saavad külalised ka tellida.",
+      "body": "Lisaks menüü sirvimisele võib QR-menüü muutuda tellimiskanaliks: külalised lisavad toidud ostukorvi ja saadavad soovi teele. Tellimus jõuab saalis oleva teenindajani, sinu WhatsAppi või köögiekraanile. Funktsiooni saab seadetest sisse ja välja lülitada alati, kui vaja.",
+      "bullets": [
+        "Ostukorv, kommentaarid ja tellimuse esitamine otse QR-i skannimisest.",
+        "Tellimus jõuab koheselt saali, WhatsAppi või köögiekraanile.",
+        "Lülita funktsioon sisse kellaaegade, korruste või konkreetsete restoranide kaupa."
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Kaks telefoni laual: QR-menüüst loodud ostukorv ja esitatud tellimuse kinnitus"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Mida restoranipidajad IQ Resti QR-menüü kohta küsivad. Ei leia oma küsimust? Kirjuta meile WhatsAppi.",
+    "items": [
+      {
+        "q": "Kuidas IQ Resti QR-menüü töötab?",
+        "a": "Igal laual on prinditud QR-kood. Külalised skannivad seda oma telefonikaameraga ja brauseris avaneb restorani menüü — fotod, kirjeldused, allergeenid ja ajakohased hinnad. Külalistel ega personalil pole vaja rakendust alla laadida."
+      },
+      {
+        "q": "Kas mul on vaja tehnilisi oskusi QR-menüü loomiseks?",
+        "a": "Ei. Paneel töötab klõpsude ja lohistamisega, koodi või keerulist seadistamist pole vaja. Toidu lisamine võtab sekundeid: nimi, hind, foto. Esmane seadistamine võtab tavaliselt 30 minutit kuni tund; kui sul on juba PDF-menüü, teisendab tehisintellekt selle automaatselt."
+      },
+      {
+        "q": "Kas külalised peavad QR-i lugemiseks rakenduse paigaldama?",
+        "a": "Ei. Sisseehitatud iPhone'i ja Androidi kaamera tuvastab QR-koodi sekunditega ja avab menüü otse brauseris. Halduspaneel töötab samuti igas kaasaegses brauseris — telefonis, tahvelarvutis või sülearvutis."
+      },
+      {
+        "q": "Kuidas laudade QR-koodid prinditakse?",
+        "a": "QR-koodid genereeritakse paneelis automaatselt (üks laua kohta või üks kogu koha jaoks) ja laaditakse alla printimisvalmis PDF-ina. Kontoriprinterist ja alusest piisab: hoidik, kleebis või klaasialus."
+      },
+      {
+        "q": "Kas ma saan QR-menüü jaoks kasutada oma domeeni?",
+        "a": "Jah. Toetame sinu restorani domeeni koos SSL-sertifikaadiga (näiteks menu.sinurestoran.ee): kui külalised skannivad QR-i, näevad nad sinu restorani aadressi, mitte suvalist alamdomeeni. DNS-i seadistamine võtab 5–10 minutit ja me juhendame sind selles."
+      },
+      {
+        "q": "Kas ma saan ühel kontol hallata mitme restorani QR-koode?",
+        "a": "Jah, soovi korral. Üks konto võib koondada mitu asukohta, igal on oma QR-koodid, menüü, disain ja analüütika. Kirjuta meile WhatsAppi ja me lülitame mitme restorani režiimi sisse."
+      },
+      {
+        "q": "Kas QR-menüü nullist käivitamine on keeruline?",
+        "a": "Kolm sammu: (1) loo kategooriad; (2) lisa toidud koos nime, hinna ja fotoga; (3) prindi QR-koodid ja aseta need laudadele. Kui sul on juba paberist menüü või PDF, laadi see üles — tehisintellekt tuvastab kategooriad ja hinnad ning täidab kaardid. Baasmenüü saab veebi 5 minutiga."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "QR-menüü 10 minutiga. ",
+    "headingAccent": "14 päeva täisligipääsu.",
+    "sub": "Kaarti pole vaja, tühista igal ajal. Meid usaldab {count} restorani. Vaid e-kiri — ja sinu külalistele pole rakendusi vaja."
+  }
+}

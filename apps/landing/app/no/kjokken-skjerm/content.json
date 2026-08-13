@@ -1,0 +1,206 @@
+{
+  "locale": "no",
+  "slug": "kjokken-skjerm",
+  "trackPrefix": "l_kds",
+  "meta": {
+    "title": "Kjøkkenskjerm (KDS) for restauranter — Bestillinger på kokkens skjerm | IQ Rest",
+    "description": "En KDS-kjøkkenskjerm for restauranter: bestillinger fra gulvet og QR-menyen går rett til kokkens skjerm. Kolonner per bord, statuser for Venter / Tilberedes / Klar / Servert, stasjonsfiltre. Kjører på nettbrett eller mobil.",
+    "canonical": "https://iq-rest.com/no/kjokken-skjerm",
+    "ogLocale": "nb_NO",
+    "ogTitle": "Kjøkkenskjerm (KDS) — Bestillinger rett til kokkens skjerm",
+    "ogDescription": "Bestillinger fra gulvet på kokkens skjerm. Kolonner per bord, statuser og tidtaker. Ett trykk endrer status.",
+    "brandLine": "IQ Rest — Kjøkkenskjerm for restauranter"
+  },
+  "hero": {
+    "headline": "Kjøkkenskjerm (KDS):",
+    "cta": "Sett opp kjøkkenskjermen",
+    "sub": "Bestillinger når kjøkkenskjermen umiddelbart: notater, allergener og tidtaker. Status endres med ett trykk.",
+    "headlineAccent": "bestillinger rett til kokken",
+    "demoLabel": "Demo: kjøkkenskjerm",
+    "tablet": {
+      "src": "/landing/hero-card-kds.webp",
+      "alt": "Nettbrett med kjøkkenskjerm: bestillinger per bord i kolonner med statuser"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restauranter"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kafeer"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barer"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hoteller"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzeriaer"
+    }
+  ],
+  "scan": {
+    "heading": "Sett opp kjøkkenskjermen",
+    "headingAccent": "på 5 minutter.",
+    "sub": "Skann en papirmeny eller PDF — AI gjenkjenner retter, kategorier og allergener. Koble til et nettbrett på kjøkkenet og begynn å motta bestillinger.",
+    "cta": "Skann meny"
+  },
+  "subFeatures": [
+    {
+      "icon": "LayoutGrid",
+      "eyebrow": "Kontroll og filtre",
+      "heading": "Flere skjermer etter stasjon: kjøkken og bar.",
+      "body": "Sett opp egne nettbrett for varmtkjøkkenet, baren eller dessertstasjonen — hver skjerm viser bare de rettene som hører til der. Filtre for status (Venter / Tilberedes / Klar / Servert) og kategori rydder opp: kokkene jobber bare med det som tilhører deres stasjon.",
+      "bullets": [
+        "Flere KDS-skjermer med filtre for rettekategorier.",
+        "Statusfilter: bare det som tilberedes og er klart.",
+        "Hver stasjon ser bare sin egen flyt av bestillinger."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-filters.webp",
+        "alt": "Nettbrett på et stativ i kjøkkenluka — en KDS filtrert etter rettens status"
+      }
+    },
+    {
+      "icon": "Timer",
+      "eyebrow": "Kort og tidtaker",
+      "heading": "Ett trykk endrer status. Kommentarer og allergener er uthevet med farger.",
+      "body": "Et bestillingskort viser valgte alternativer (ingen løk, godt stekt), gjestens kommentarer, allergener og en tidtaker som går fra bestillingen ble lagt inn. Trykk på kortet for å gå til neste status: Venter → Tilberedes → Klar → Servert. Listen sorterer seg automatisk etter tidsprioritet.",
+      "bullets": [
+        "Trykk på et kort — statusen endres umiddelbart.",
+        "Tilvalg, kommentarer og allergener uthevet med farger.",
+        "Sortert etter prioritet: rettene som har ventet lengst rykker opp."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-cards.webp",
+        "alt": "Nettbrett på et stativ på en bardisk — en KDS med bestillingskort per bord"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Det restaurantdrivere spør om når det gjelder kjøkkenskjermen i IQ Rest. Finner du ikke spørsmålet ditt — send oss en melding på WhatsApp.",
+    "items": [
+      {
+        "q": "Hvilke statuser har rettene på kjøkkenet?",
+        "a": "Fire statuser: Venter — bestillingen er lagt inn og venter; Tilberedes — retten lages; Klar — klar for henting; Servert — levert til gjesten. Trykk på kortet for å gå til neste status, uten menyer eller bekreftelser."
+      },
+      {
+        "q": "Kan jeg sette opp flere KDS-skjermer på forskjellige kjøkkenstasjoner?",
+        "a": "Ja. Ett nettbrett på varmtkjøkkenet, et annet i baren, et tredje på dessertstasjonen — hver med sitt eget filter for rettekategorier. Alle skjermer holdes synkronisert: en status endret på én oppdateres på de andre."
+      },
+      {
+        "q": "Hva kjører jeg KDS-en på — trenger jeg et spesielt nettbrett?",
+        "a": "KDS-en kjører i alle moderne nettlesere. Et nettbrett på et stativ i luka passer for et stort kjøkken; en smarttelefon fungerer for et lite sted. Ingen spesiell maskinvare eller installasjon kreves: enheten kobles til med en sekssifret kode fra kontrollpanelet."
+      },
+      {
+        "q": "Hvor kommer bestillingene på kjøkkenskjermen fra?",
+        "a": "Fra alle kilder: en gjest som bestiller via QR-menyen på bordet, eller en servitør som tar den på sin egen enhet. Bestillinger når KDS-en automatisk, med bordnummeret. Ingen manuell inntasting fra kassa."
+      },
+      {
+        "q": "Hva viser et bestillingskort?",
+        "a": "Rettens navn, valgte alternativer (ingen løk, godt stekt), gjestens kommentar, allergener, status og en tidtaker som går fra bestillingen ble lagt inn. Kortene sorteres etter prioritet: jo lenger en rett venter, jo høyere opp i kolonnen ligger den."
+      },
+      {
+        "q": "Kan kortene på skjermen filtreres?",
+        "a": "Ja. To filtre: etter status (for eksempel bare Venter og Tilberedes) og etter kategori (drikke til baren, varme retter til kjøkkenet). Innstillingene lagres per enhet, slik at hver stasjon jobber med sitt eget oppsett."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Et papirløst kjøkken på 10 minutter. ",
+    "headingAccent": "14 dager med full tilgang.",
+    "sub": "Krever ikke kort, avbryt når som helst. {count} restauranter bruker oss. Alt du trenger er en e-postadresse — og bestillingene lander rett på kjøkkenskjermen."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Skjermer etter stasjon",
+      "sub": "Egne nettbrett for varmtkjøkken, bar og dessertstasjon — hver skjerm viser bare sine egne retter.",
+      "bullets": [
+        {
+          "icon": "LayoutGrid",
+          "title": "Kategorifilter",
+          "sub": "Gi hver skjerm sine egne menykategorier"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "En flyt per stasjon",
+          "sub": "Kjøkken og bar jobber parallelt uten å gå i veien for hverandre"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Statusfilter",
+          "sub": "Vis bare det som tilberedes eller er klart for henting"
+        }
+      ]
+    },
+    {
+      "heading": "Statuser med ett trykk",
+      "sub": "Et trykk på et kort flytter retten til neste status. Kjøkkenet og servitøren ser det samme bildet.",
+      "bullets": [
+        {
+          "icon": "ClipboardList",
+          "title": "En status per vare",
+          "sub": "Tilberedes, klar, servert — per rett, ikke per bestilling"
+        },
+        {
+          "icon": "Timer",
+          "title": "En tidtaker fra bestillingstidspunktet",
+          "sub": "Se hvor lenge en rett har ventet — de som har ventet lengst rykker opp"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "Allergener og kommentarer",
+          "sub": "Tilvalg, notater fra gjesten og allergener uthevet med farger"
+        }
+      ]
+    },
+    {
+      "heading": "Bestillinger lander umiddelbart",
+      "sub": "En gjests bestilling fra QR-menyen eller fra en servitør dukker opp på skjermen i det øyeblikket den legges inn, uten at siden må oppdateres.",
+      "bullets": [
+        {
+          "icon": "Rocket",
+          "title": "På skjermen umiddelbart",
+          "sub": "En fast tilkobling — kortet dukker opp i det sekundet bestillingen legges inn"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Alle kilder i én strøm",
+          "sub": "Bestillinger fra gjest og servitør ankommer én skjerm med bordnummeret"
+        },
+        {
+          "icon": "Map",
+          "title": "Bordnummer på kortet",
+          "sub": "Kjøkkenet ser hvor retten skal; servitøren ser hvor den forventes"
+        }
+      ]
+    },
+    {
+      "heading": "Tilkoblet på minutter",
+      "sub": "Kjøkkenskjermen kjører i nettleseren på et hvilket som helst nettbrett eller mobil — kobles til med en sekssifret kode.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Nettbrett eller mobil",
+          "sub": "En nettleser er nok — ingen spesiell maskinvare å kjøpe"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Tilkoblingskode",
+          "sub": "Skriv inn den sekssifrede koden fra kontrollpanelet — enheten er koblet til kjøkkenet"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Fjern tilgang",
+          "sub": "Mistet eller byttet nettbrett — koble det fra kontrollpanelet med ett trykk"
+        }
+      ]
+    }
+  ]
+}

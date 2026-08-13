@@ -1,0 +1,289 @@
+{
+  "heroV2": {
+    "verticals": [
+      {
+        "icon": "restaurant",
+        "label": "Ristoranti"
+      },
+      {
+        "icon": "cafe",
+        "label": "Caffè"
+      },
+      {
+        "icon": "bar",
+        "label": "Bar"
+      },
+      {
+        "icon": "hotel",
+        "label": "Hotel"
+      },
+      {
+        "icon": "pizza",
+        "label": "Pizzerie"
+      }
+    ],
+    "title": "Tutto ciò che serve",
+    "titleAccent": "al tuo ristorante!",
+    "sub": "Organizza i processi in 10 minuti: lancia il menù online, ottimizza il lavoro della cucina e la gestione dei tavoli.",
+    "primaryLabel": "Inizia gratis",
+    "demoLabel": "Guarda il menù demo",
+    "mockups": {
+      "kds": {
+        "src": "/landing/hero-card-kds.webp",
+        "alt": "Tablet con il display cucina: ordini per tavolo in colonne con gli stati"
+      },
+      "reservations": {
+        "src": "/landing/hero-card-reservation.webp",
+        "alt": "Tablet con il calendario delle prenotazioni: vista mensile ed elenco delle prenotazioni in attesa di conferma"
+      },
+      "phone1": {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Telefono con la home page del sito del ristorante: foto, prenotazioni e accesso al menù online"
+      },
+      "phone2": {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Telefono con la scheda di un piatto: foto, prezzo ed etichette degli allergeni"
+      }
+    }
+  },
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Attivo in 10 minuti",
+      "sub": "Senza acquistare hardware costoso né lunghe configurazioni"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Assistenza rapida",
+      "sub": "Rispondiamo in chat entro poche ore"
+    },
+    {
+      "icon": "Globe",
+      "title": "La scelta di {count} locali",
+      "sub": "Ristoranti e caffetterie in più di 15 paesi si fidano di noi"
+    },
+    {
+      "icon": "Palette",
+      "title": "100% con il tuo brand",
+      "sub": "Adattiamo design e interfaccia allo stile del tuo locale"
+    }
+  ],
+  "menu": {
+    "heading": "Sito web e menù digitale",
+    "sub": {
+      "link": "Più di un menù QR!",
+      "rest": " Ottieni un sito completo con design esclusivo, contatti e prenotazione dei tavoli."
+    },
+    "moreLabel": "Scopri di più sul menù",
+    "demoLabel": "Demo: il menù visto dall'ospite",
+    "mockupAlt": "Telefono con la home page del sito del ristorante e telefono con la pagina di un piatto",
+    "bullets": [
+      {
+        "icon": "Languages",
+        "title": "Traduzione automatica in 35 lingue",
+        "sub": "Servi gli ospiti stranieri senza barriere linguistiche — la traduzione automatica fa tutto da sola"
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "Ordini direttamente dai tavoli",
+        "sub": "Semplifica il lavoro del locale: ricevi gli ordini dai tavoli in modo rapido e senza l'intervento del cameriere"
+      },
+      {
+        "icon": "WheatOff",
+        "title": "Allergeni e diete",
+        "sub": "Indica allergeni e preferenze alimentari (vegano, piccante) per rendere la scelta degli ospiti più semplice e sicura"
+      }
+    ]
+  },
+  "reservations": {
+    "heading": "Prenotazione dei tavoli",
+    "sub": {
+      "link": "Prenotazione intelligente dei tavoli!",
+      "rest": " Un sistema di prenotazione automatico che tiene sotto controllo da solo i tavoli liberi e i tuoi orari."
+    },
+    "moreLabel": "Scopri di più sulle prenotazioni",
+    "demoLabel": "Demo: calendario delle prenotazioni",
+    "mockupAlt": "Tablet con il calendario delle prenotazioni: tavoli per giorno e fasce orarie",
+    "bullets": [
+      {
+        "icon": "CalendarCheck",
+        "title": "Mappa delle prenotazioni intuitiva",
+        "sub": "Una vista chiara per giorni e tavoli: si vede subito dove e a che ora ci sono posti liberi"
+      },
+      {
+        "icon": "SlidersHorizontal",
+        "title": "Configurazione flessibile delle prenotazioni",
+        "sub": "Imposta orari di apertura, durata degli slot, foto dei tavoli e raccogli le richieste degli ospiti"
+      },
+      {
+        "icon": "Users",
+        "title": "Gestione del flusso di ospiti",
+        "sub": "Scegli la modalità di gestione delle prenotazioni più comoda e controlla completamente il flusso di ospiti"
+      }
+    ]
+  },
+  "orders": {
+    "heading": "Ricezione degli ordini dai tavoli",
+    "sub": {
+      "link": "Ordini dritti in cucina!",
+      "rest": " L'ordine dal tavolo o dal cameriere arriva istantaneamente sul display cucina — senza comande cartacee e senza attese."
+    },
+    "moreLabel": "Scopri di più sugli ordini",
+    "demoLabel": "Demo: schermata degli ordini",
+    "mockupSrc": "/landing/feature-orders-modal.webp",
+    "mockupAlt": "Tablet con un ordine aperto: elenco dei piatti e azioni — cambio tavolo, divisione dell'ordine, sconto",
+    "bullets": [
+      {
+        "icon": "ShoppingCart",
+        "title": "Ospite o cameriere",
+        "sub": "L'ospite ordina dal tavolo tramite codice QR, il cameriere dal proprio telefono o tablet"
+      },
+      {
+        "icon": "Map",
+        "title": "Mappa della sala con gli stati",
+        "sub": "I tavoli sulla mappa sono colorati in base allo stato: si vede subito dove attendono l'ordine e dove è ora di passare"
+      },
+      {
+        "icon": "Receipt",
+        "title": "Divisione del conto",
+        "sub": "Dividi l'ordine tra gli ospiti e chiudi i tavoli senza confusione nei pagamenti"
+      }
+    ]
+  },
+  "kds": {
+    "heading": "Display cucina (KDS)",
+    "sub": {
+      "link": "La cucina a un ritmo unico!",
+      "rest": " Gli ordini dalla sala e dal menù QR compaiono istantaneamente sullo schermo del cuoco — con note, allergeni e timer."
+    },
+    "moreLabel": "Scopri di più sul KDS",
+    "demoLabel": "Demo: schermata della cucina",
+    "mockupAlt": "Tablet con il display cucina: ordini per tavolo in colonne con gli stati",
+    "bullets": [
+      {
+        "icon": "LayoutGrid",
+        "title": "Schermi per zone",
+        "sub": "Tablet separati per la cucina calda, il bar e la pasticceria: ognuno vede solo i propri piatti"
+      },
+      {
+        "icon": "Timer",
+        "title": "Stati e timer",
+        "sub": "Colonne «in preparazione, pronto, servito» e il tempo per ogni ordine — lo stato cambia con un solo tocco"
+      },
+      {
+        "icon": "ShieldAlert",
+        "title": "Allergeni e commenti",
+        "sub": "Le indicazioni degli allergeni e le note dell'ospite sono evidenziate: il cuoco non si perde nulla di importante"
+      }
+    ]
+  },
+  "bundle": {
+    "heading": "Tutto ciò su cui si regge il tuo ristorante.",
+    "headingAccent": "In un'unica app.",
+    "sub": "Menù, cucina e prenotazioni in un unico posto — moderno, veloce e pensato per come lavorano davvero i ristoranti. Senza costi extra né pagamenti per singola funzione."
+  },
+  "benefits": [
+    {
+      "icon": "Languages",
+      "tag": "Menù digitale",
+      "title": "Un menù che vende.",
+      "bullets": [
+        "35 lingue con l'AI",
+        "Design premium",
+        "Prezzi aggiornati all'istante"
+      ],
+      "image": "/landing/feature-design.webp",
+      "imageAlt": "Due telefoni sul tavolo di un caffè: schermata di benvenuto del menù digitale e pagina dei contatti con la mappa"
+    },
+    {
+      "icon": "ChefHat",
+      "tag": "Display cucina",
+      "title": "Cucina più veloce, senza perdere nulla.",
+      "bullets": [
+        "Subito sullo schermo",
+        "Note e allergeni",
+        "Tablet o telefono"
+      ],
+      "image": "/landing/feature-kds-cards.webp",
+      "imageAlt": "Un tablet sul bancone del bar mostra il display cucina con gli ordini per tavolo"
+    },
+    {
+      "icon": "CalendarCheck",
+      "tag": "Prenotazioni",
+      "title": "Prenotazioni con il pilota automatico.",
+      "bullets": [
+        "Prenotare senza telefonate",
+        "Conferma automatica",
+        "Calendario per tavoli"
+      ],
+      "image": "/landing/feature-booking-calendar.webp",
+      "imageAlt": "Due tablet mostrano il calendario delle prenotazioni: vista giornaliera per tavoli e vista mensile"
+    },
+    {
+      "icon": "Receipt",
+      "tag": "Ordini al tavolo",
+      "title": "Ordini dritti in cucina.",
+      "bullets": [
+        "Ospite o cameriere",
+        "Dritto in cucina",
+        "Attivalo quando vuoi"
+      ],
+      "image": "/landing/feature-orders-map.webp",
+      "imageAlt": "Tablet con la schermata degli ordini: elenco degli ordini e mappa della sala con i tavoli colorati."
+    }
+  ],
+  "seeDetails": "Scopri di più",
+  "platform": {
+    "hardwareTitle": "Lavora con i tuoi dispositivi",
+    "hardwareSub": "Non ti obblighiamo a comprare hardware da noi. Usa i telefoni, i tablet e i computer che hai già.",
+    "anywhereTitle": "Funziona ovunque",
+    "anywhereSub": "Telefono, tablet, laptop, PC. Android, iOS, Windows, Mac, Linux. In qualsiasi browser moderno, senza installazione."
+  },
+  "activities": {
+    "heading": "Un solo sistema —",
+    "headingAccent": "tutto il ristorante.",
+    "sub": "Servizio più rapido, cucina più serena, costi più bassi e un ospite che torna — tutto in un'unica piattaforma.",
+    "groups": [
+      {
+        "icon": "Smartphone",
+        "tag": "Al tavolo — l'ospite",
+        "bullets": [
+          "Menù QR in 35 lingue",
+          "Ordine senza aspettare il cameriere",
+          "Chiamata del cameriere o richiesta del conto",
+          "Prenotazione del tavolo 24/7",
+          "Codice QR unico per ogni tavolo",
+          "All'ospite non serve un'app: si apre nel browser",
+          "Etichette di allergeni e diete per filtrare"
+        ]
+      },
+      {
+        "icon": "ChefHat",
+        "tag": "In cucina",
+        "bullets": [
+          "Ordini istantaneamente sullo schermo",
+          "Colonne in preparazione / pronto / servito",
+          "Allergeni e commenti evidenziati",
+          "Tablet o telefono — senza comande cartacee"
+        ]
+      },
+      {
+        "icon": "ChartColumn",
+        "tag": "Gestione",
+        "bullets": [
+          "Modifiche a menù e prezzi — istantanee",
+          "Traduzione AI con un clic",
+          "Analisi delle vendite e report",
+          "Più ristoranti in un unico account",
+          "L'AI digitalizza il menù cartaceo in 60 secondi",
+          "Dominio personalizzato con SSL"
+        ]
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Tutta la piattaforma in 10 minuti. ",
+    "headingAccent": "14 giorni di accesso completo.",
+    "sub": "Menù, ordini, prenotazioni e cucina — senza carta, con disdetta in qualsiasi momento; {count} ristoranti si fidano di noi, serve solo l'email."
+  }
+}

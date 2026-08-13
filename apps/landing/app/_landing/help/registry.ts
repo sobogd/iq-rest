@@ -1,4 +1,5 @@
 import type { HelpDoc } from "./types";
+import { localizedHref } from "@/lib/locale-slug-overrides";
 import { ru } from "./content/ru";
 import { en } from "./content/en";
 import { it } from "./content/it";
@@ -46,21 +47,7 @@ export function getHelpDoc(locale: string): HelpDoc | null {
   return DOCS[locale] ?? null;
 }
 
-// en lives at /help (root locale), others at /<locale>/help.
+// Localized help slug per locale (e.g. /it/guida, /fr/aide); en at /help.
 export function helpHref(locale: string): string {
-  return locale === "en" ? "/help" : `/${locale}/help`;
-}
-
-export interface HelpBanner {
-  title: string;
-  sub: string;
-  cta: string;
-  href: string;
-}
-
-// Banner copy + link for a locale, or null if the guide isn't translated yet.
-export function getHelpBanner(locale: string): HelpBanner | null {
-  const doc = DOCS[locale];
-  if (!doc) return null;
-  return { ...doc.banner, href: helpHref(locale) };
+  return localizedHref("/help", locale);
 }

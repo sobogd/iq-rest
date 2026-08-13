@@ -1,0 +1,261 @@
+{
+  "htmlLang": "sv",
+  "htmlDir": "ltr",
+  "meta": {
+    "title": "Digital meny, köksskärm och bordsbokning — IQ Rest",
+    "description": "Driv din restaurang från en app: flerspråkig digital meny, köksskärm och bordsbokning dygnet runt. Kom igång på 5 minuter. 14 dagar gratis, inget kort krävs.",
+    "canonical": "https://iq-rest.com/sv",
+    "ogLocale": "sv_SE",
+    "ogTitle": "Digital meny, köksskärm och bordsbokning",
+    "ogDescription": "Driv din restaurang från en app: flerspråkig digital meny, köksskärm och bordsbokning dygnet runt. Kom igång på 5 minuter. 14 dagar gratis, inget kort krävs."
+  },
+  "jsonLd": {
+    "appName": "IQ Rest — Plattform för restaurangdrift"
+  },
+  "ctaText": "Prova gratis",
+  "homeCtaText": "Prova gratis",
+  "trust": [
+    {
+      "kind": "num",
+      "value": 35,
+      "label": "Menyspråk"
+    },
+    {
+      "kind": "text",
+      "value": "24/7",
+      "label": "Bordsbokning online"
+    },
+    {
+      "kind": "num",
+      "value": 5,
+      "suffix": " min",
+      "label": "För att komma igång"
+    },
+    {
+      "kind": "count",
+      "label": "Restauranger hos oss"
+    }
+  ],
+  "demoText": "Öppna demo",
+  "microcopy": "14 dagar gratis · Inget kreditkort · Avsluta när du vill",
+  "header": {
+    "navFeatures": "Funktioner",
+    "navHow": "Så fungerar det",
+    "navPricing": "Priser",
+    "navFaq": "Vanliga frågor",
+    "signIn": "Logga in",
+    "viewFeatures": "Visa funktioner",
+    "cta": "Börja gratis",
+    "navProducts": "Funktioner",
+    "navGuide": "Guide",
+    "navAbout": "Om oss",
+    "menuFeaturesHeading": "Funktioner",
+    "menuInfoHeading": "Information"
+  },
+  "hero": {
+    "verticals": [
+      "Restauranger",
+      "Caféer",
+      "Barer",
+      "Hotell",
+      "Pizzerior"
+    ],
+    "headline": "Digital meny för din restaurang.\nIgång på 5 minuter.",
+    "sub": "En digital meny för din restaurang på 5 minuter. Allt ingår: enkel redigering, AI-inläsning av tryckta menyer, QR-koder för borden och provisionsfria beställningar.",
+    "dynamicHeadlines": [
+      "0 kr i provision.",
+      "35 språk med AI.",
+      "Beställning online.",
+      "Bordsbokning dygnet runt.",
+      "Snygg design."
+    ],
+    "painBullets": [
+      "0 kr i provision: varje beställning går direkt till restaurangen.",
+      "AI-översättning till 35 språk — turister förstår menyn och beställer mer.",
+      "Bordsbokning dygnet runt: gästerna bokar själva, inga samtal under rusningstid.",
+      "Flexibel prissättning: menyändringar slår igenom direkt."
+    ],
+    "rating": "Över 500 restauranger i 30+ länder"
+  },
+  "founder": {
+    "eyebrow": "Skapat av krögare",
+    "quoteStart": "Min fru och jag drev ett eget café och känner till restaurangvardagen inifrån: ta emot beställningar, bordsbokningar, servering och köksdrift. Vi ville ha ett enda verktyg — modernt, enkelt att komma igång med och tydligt vid första anblicken —",
+    "quoteAccent": "så föddes idén till plattformen vi nu bygger för andra krögare.",
+    "sign": "Bogdan Sokolov · grundare, tidigare caféägare",
+    "photoAlt": "Bogdan Sokolov, grundare av IQ Rest"
+  },
+  "pricing": {
+    "badge": "Ingen provision · Ingen bindningstid",
+    "heading": "Ett paket.",
+    "headingAccent": "Allt ingår.",
+    "sub": "QR-meny, beställningshantering, AI-översättning, hemsida och bordsbokning. En fast månadskostnad.",
+    "monthlyLabel": "Månadsvis",
+    "yearlyLabel": "Årligen",
+    "saveBadge": "Spara 25 %",
+    "perMonth": "per månad",
+    "billedAnnually": "Faktureras årligen: {total}",
+    "youSave": "Du sparar {amount}",
+    "trust": {
+      "secure": "Säker betalning via Stripe",
+      "noCommitment": "Ingen bindningstid",
+      "quick": "Igång på några minuter",
+      "restaurants": "Över 500 restauranger"
+    }
+  },
+  "faq": {
+    "eyebrow": "Har du fler frågor?",
+    "heading": "Vanliga",
+    "headingAccent": "frågor",
+    "sub": "Vad krögare oftast frågar innan de skapar ett konto. Hittar du inte svaret — skicka ett meddelande på WhatsApp. Riktig personal svarar, inte en bot.",
+    "whatsappCta": "Skicka meddelande på WhatsApp",
+    "whatsappPrefill": "Hej, jag har en fråga om IQ Rest",
+    "items": [
+      {
+        "q": "Vad ingår i provperioden och vad händer när den tar slut?",
+        "a": "Under 14 dagar får du tillgång till plattformens alla funktioner, utan krav på kreditkort. Om ingen betalningsmetod läggs till efter 14 dagar pausas kontot automatiskt. Vi drar aldrig pengar utan ditt godkännande. Du kan lägga till betalning senare och fortsätta precis där du slutade. Att avsluta prenumerationen kräver bara ett klick."
+      },
+      {
+        "q": "Tar ni någon provision på beställningarna?",
+        "a": "Nej, vi tar ingen procent på beställningarna. Alla beställningar från QR-menyn går direkt till restaurangen, utan avgifter till mellanhänder. Du betalar en fast månadskostnad — och inget annat."
+      },
+      {
+        "q": "Behöver gästerna installera en app, och krävs det tekniska kunskaper av oss?",
+        "a": "Gästerna behöver ingen app: de riktar bara mobilkameran mot QR-koden så öppnas menyn i webbläsaren. Restaurangen behöver inte heller någon teknisk kunskap — adminpanelen körs direkt i webbläsaren på en mobil, surfplatta eller dator. Allt görs med klick och dra-och-släpp, ingen kodning krävs."
+      },
+      {
+        "q": "Hur snabbt slår menyändringar igenom — priser, nya rätter?",
+        "a": "Direkt. Ändringar du gör i mobilen syns för gästerna inom några sekunder. Att lägga till en ny rätt tar några klick: namn, pris, bild. Du slipper trycka nya pappersmenyer och behöver ingen designer."
+      },
+      {
+        "q": "Hur många språk stöds?",
+        "a": "35 språk stöds med automatisk AI-översättning. Ett klick — och hela menyn är översatt. AI:n förstår matlagningstermer, så rätternas namn och beskrivningar låter naturliga på alla språk. Turister beställer mer när de förstår vad rätten innehåller."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Igång på 10 minuter. ",
+    "headingAccent": "14 dagar med full tillgång.",
+    "sub": "Inget kort krävs, avsluta när du vill. Används av {count} restauranger. Allt du behöver är en e-postadress."
+  },
+  "featureHighlights": {
+    "heading": "Allt ingår",
+    "sub": "Funktioner som gör gäster till beställningar — i alla paket, utan extra kostnad."
+  },
+  "scan": {
+    "heading": "Har du en pappersmeny eller PDF?",
+    "headingAccent": "AI digitaliserar den på 60 sekunder.",
+    "sub": "Ladda upp ett foto eller dokument — AI känner automatiskt igen kategorier, rätter och priser.",
+    "cta": "Läs in meny →"
+  },
+  "pricingQuiz": {
+    "heading": "Bygg ditt paket ",
+    "sub": "Börja med menyn — lägg till bordsbokning, köksskärm och domän när du behöver det.",
+    "billingLabel": "Fakturering:",
+    "monthly": "Månadsvis",
+    "yearly": "Årligen",
+    "restaurantsLabel": "Restauranger:",
+    "fewerAria": "Färre restauranger",
+    "moreAria": "Fler restauranger",
+    "menuTitle": "Meny och hemsida",
+    "menuHint": "Ingår alltid",
+    "reservationsTitle": "Bokningssystem",
+    "reservationsHint": "Bordsbokning",
+    "kdsTitle": "Köksskärm",
+    "kdsHint": "Beställningar på skärm i köket",
+    "domainTitle": "Domännamn",
+    "domainHint": "Din egen webbadress",
+    "perMonthSuffix": "/mån",
+    "perYearSuffix": "/år",
+    "perMonthLongSuffix": "/månad",
+    "saveYearlyTemplate": "Spara {amount} per år med årlig fakturering",
+    "volumeDiscountTemplate": "{percent} % rabatt",
+    "saveUpToHint": "Spara upp till 50 % med 5+ restauranger",
+    "billedYearly": "Faktureras en gång per år",
+    "billedMonthly": "Faktureras månadsvis",
+    "enterprisePre": "Behöver du ett anpassat paket?",
+    "enterpriseCta": "Kontakta oss",
+    "enterprisePost": "så skräddarsyr vi ett åt dig.",
+    "enterpriseWa": "Hej! Jag behöver ett anpassat paket för mina restauranger.",
+    "headingAccent": "för din restaurang",
+    "multiplePre": "Behöver du fler restauranger?",
+    "multipleCta": "Visa alternativ",
+    "restaurantOne": "restaurang",
+    "restaurantFew": "restauranger",
+    "restaurantMany": "restauranger",
+    "multipleChangePre": "Annat antal restauranger?",
+    "multipleChangeCta": "Ändra"
+  },
+  "pricingCta": {
+    "heading": "Enkel och flexibel prissättning",
+    "sub": "Betala bara för funktionerna du behöver — bygg ditt paket på en minut.",
+    "fromTemplate": "från {price}/mån",
+    "button": "Bygg mitt paket"
+  },
+  "footer": {
+    "copyrightTemplate": "© {year} IQ Rest. Alla rättigheter förbehållna.",
+    "featuresHeading": "Funktioner",
+    "featureLinks": [
+      {
+        "href": "/sv/digital-meny",
+        "label": "Digital meny"
+      },
+      {
+        "href": "/sv/bestallningshantering",
+        "label": "Beställningshantering"
+      },
+      {
+        "href": "/sv/bordsbokning",
+        "label": "Bordsbokning"
+      },
+      {
+        "href": "/sv/koksskarm",
+        "label": "Köksskärm"
+      }
+    ],
+    "infoHeading": "Information",
+    "legalHeading": "Juridiskt",
+    "currencyHeading": "Valuta"
+  },
+  "common": {
+    "close": "Stäng",
+    "menu": "Meny",
+    "help": "Hjälp"
+  },
+  "auth": {
+    "emailLabel": "E-post",
+    "emailPlaceholder": "Ange din e-postadress",
+    "or": "eller",
+    "continueGoogle": "Fortsätt med Google",
+    "continueApple": "Fortsätt med Apple",
+    "consent": {
+      "line": "Genom att fortsätta godkänner du våra <terms>Användarvillkor</terms>. Läs hur vi hanterar data i vår <privacy>Integritetspolicy</privacy>."
+    },
+    "signInTitle": "Välkommen tillbaka",
+    "signInSubtitle": "Ange din e-postadress — vi skickar en 6-siffrig inloggningskod.",
+    "signInButton": "Logga in",
+    "registerTitle": "Skapa konto",
+    "registerSubtitle": "14 dagar gratis, inget kort krävs. Vi mejlar en inloggningskod — inga lösenord, inga formulär.",
+    "registerButton": "Skapa konto",
+    "switchSignIn": "Logga in",
+    "switchCreate": "Registrera dig",
+    "verifyTitle": "Kolla din e-post",
+    "verifySubtitle": "Vi har skickat en 6-siffrig kod till {email}.",
+    "verifyCodeLabel": "Verifieringskod",
+    "checkSpam": "Ser du inte mejlet? Kolla skräpposten.",
+    "verifyButton": "Fortsätt",
+    "resendCode": "Skicka ny kod",
+    "resendSent": "Koden är skickad",
+    "changeEmail": "Använd en annan e-postadress",
+    "metaSignIn": "Logga in",
+    "metaRegister": "Skapa konto",
+    "errors": {
+      "emailInvalid": "Ange en giltig e-postadress.",
+      "sendFailed": "Kunde inte skicka koden. Försök igen.",
+      "verifyFailed": "Kunde inte verifiera koden. Försök igen.",
+      "codeExpired": "Koden har gått ut. Begär en ny.",
+      "noCode": "Koden hittades inte eller har gått ut. Begär en ny.",
+      "invalidCode": "Ogiltig kod. Försök igen.",
+      "tooManyAttempts": "För många försök. Vänta och försök igen."
+    }
+  }
+}

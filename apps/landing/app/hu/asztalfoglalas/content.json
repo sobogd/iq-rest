@@ -1,0 +1,206 @@
+{
+  "locale": "hu",
+  "slug": "asztalfoglalas",
+  "trackPrefix": "l_bookings",
+  "meta": {
+    "title": "0-24 Asztalfoglalás Éttermeknek | IQ Rest",
+    "description": "0-24 asztalfoglalás az éttermednek: a vendégek maguk foglalnak asztalt a QR étlapon vagy a weboldalon keresztül. Naptár asztalonként, automatikus megerősítések és emlékeztetők. Nincsenek telefonhívások, nincs elvesztett vendég. 14 nap ingyen.",
+    "canonical": "https://iq-rest.com/hu/asztalfoglalas",
+    "ogLocale": "hu_HU",
+    "ogTitle": "0-24 Asztalfoglalás — A Vendégek Maguk Foglalnak",
+    "ogDescription": "A vendégek a QR étlapon vagy a weboldalon keresztül foglalnak asztalt. Naptár, automatikus megerősítések, emlékeztetők. Egyetlen vendéget sem veszítesz el.",
+    "brandLine": "IQ Rest — Éttermi asztalfoglalás"
+  },
+  "hero": {
+    "headline": "0-24 asztalfoglalás,",
+    "cta": "Asztalfoglalás beállítása",
+    "sub": "A vendégek 0-24 foglalnak a QR étlapon vagy egy linken keresztül. Naptár asztalonként, automatikus megerősítések és emlékeztetők.",
+    "headlineAccent": "telefonhívások nélkül",
+    "demoLabel": "Demó: asztalfoglalási naptár",
+    "tablet": {
+      "src": "/landing/hero-card-reservation.webp",
+      "alt": "Tablet asztalfoglalási naptárral: havi nézet és a megerősítésre váró foglalások listája"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Éttermek"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kávézók"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bárok"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Szállodák"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzériák"
+    }
+  ],
+  "scan": {
+    "heading": "Indítsd el az asztalfoglalást",
+    "headingAccent": "5 perc alatt.",
+    "sub": "Csatlakoztasd a naptárat, add hozzá az asztalokat fotókkal és férőhellyel — a vendégek még aznap elkezdhetnek foglalni.",
+    "cta": "Asztalfoglalás bekapcsolása"
+  },
+  "subFeatures": [
+    {
+      "icon": "CalendarPlus",
+      "eyebrow": "Foglalási űrlap",
+      "heading": "A vendégek maguk foglalnak — dátum, idő és létszám alapján.",
+      "body": "A vendég megnyitja a QR étlapot vagy egy közvetlen linket, kiválasztja a dátumot, az időpontot és a személyek számát — és azonnal látja a szabad asztalokat: fotóval, leírással (terasz, ablak mellett, kanapé a bárnál) és férőhellyel. A megerősítést a rendszer automatikusan elküldi e-mailben és WhatsAppon.",
+      "bullets": [
+        "Asztalválasztás fotó, leírás és férőhely alapján.",
+        "Automatikus megerősítés és emlékeztető egy órával a látogatás előtt.",
+        "Minimális űrlap: név, telefon, létszám."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-form.webp",
+        "alt": "Egy vendég éttermi asztalt foglal telefonról: kiválasztja a dátumot, az időpontot, a létszámot és az asztalt"
+      }
+    },
+    {
+      "icon": "CalendarDays",
+      "eyebrow": "Foglalási naptár",
+      "heading": "Naptár napok és asztalok szerint — minden egy másodperc alatt átlátható.",
+      "body": "Az admin felületen található egy asztalfoglalási naptár, ami asztalokra, napokra, hetekre és hónapokra van bontva. A szabad helyek, a foglalt asztalok, a megerősített és a függőben lévő foglalások mind egy képernyőn jelennek meg. Működik a pályán lévő tableten és az irodai laptopon is.",
+      "bullets": [
+        "Napi, heti és havi nézetek.",
+        "Bontás asztalonként: ki, mikor, hány vendéggel.",
+        "Foglalás áthelyezése, törlése vagy megerősítése — egy érintéssel a telefonodról."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-calendar.webp",
+        "alt": "Az asztalfoglalási naptár az IQ Rest admin felületén két tableten: egy napi rács asztalonként és egy havi naptár"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Amit a vendéglátósok az asztalfoglalásról kérdeznek az IQ Restben. Ha nem találod a kérdésed — írj nekünk WhatsAppon.",
+    "items": [
+      {
+        "q": "Kiválaszthatom, hogy mely napokon és mikor lehessen foglalni?",
+        "a": "Igen. Az admin felületen beállíthatsz egy beosztást a hét minden napjára: foglalási órák és szünet az ebéd és a vacsora között. Ideiglenesen teljesen ki is kapcsolhatod a foglalásokat — a vendégek azt fogják látni, hogy az online foglalás nem elérhető."
+      },
+      {
+        "q": "Feltölthetek fotót minden asztalról?",
+        "a": "Igen. Minden asztalnak van fotója, férőhelye és zónája (terasz, ablak mellett, bár). A vendégek pontosan látják, hogy melyik asztalt foglalják le, és tudatosan választanak."
+      },
+      {
+        "q": "Korlátozhatom a vendégek számát asztalonként?",
+        "a": "Igen. Minden asztalnak van egy beállított férőhelye — a rendszer csak a megfelelő asztalokat ajánlja fel a vendégeknek, és megakadályozza, hogy egy kétszemélyes asztalt egy hatfős társaság foglaljon le."
+      },
+      {
+        "q": "Milyen nehéz beállítani az asztalfoglalást?",
+        "a": "Három lépés: add hozzá az asztalokat fotókkal és férőhellyel, kapcsold be a foglalási módot a beállításokban, és oszd meg a linket vagy a QR-kódot. Az indulás 5–10 percet vesz igénybe."
+      },
+      {
+        "q": "Beállíthatok automatikus vagy kézi foglalás megerősítést?",
+        "a": "Igen, a módot a beállításokban választhatod ki. Automatikus megerősítés esetén a vendég az űrlap elküldése után azonnal visszaigazolást kap. Kézi módnál a kérés \"megerősítésre vár\" státuszban jelenik meg a felületen — egy menedzser hagyja jóvá vagy utasítja el. A kézi mód akkor hasznos, ha korlátozott számú asztalod van."
+      },
+      {
+        "q": "Felszámoltok díjat foglalásonként?",
+        "a": "Nincsenek díjak: az asztalfoglalás benne van az előfizetésben — nincs százalék a vendégek után, nincsenek idősávonkénti díjak, nincsenek közvetítők. Egy fix fizetés és korlátlan foglalás."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Asztalfoglalás 10 perc alatt. ",
+    "headingAccent": "14 nap teljes hozzáférés.",
+    "sub": "Nincs szükség bankkártyára, bármikor lemondható. {count} étterem veszi le a terhet a recepciójáról velünk. Csak egy e-mail cím kell hozzá."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "A vendégek maguk foglalnak",
+      "sub": "Dátum, idő és létszám — a QR étlapról vagy egy közvetlen linkről, a nap bármely szakában. A rendszer csak a szabad időpontokat mutatja.",
+      "bullets": [
+        {
+          "icon": "CalendarPlus",
+          "title": "Foglalás 0-24",
+          "sub": "A vendégek éjszaka vagy hétvégén is foglalnak — nincsenek hívások, nincs várakozás a válaszra"
+        },
+        {
+          "icon": "Users",
+          "title": "A társaság méretéhez igazított asztal",
+          "sub": "A rendszer magától kiválasztja a megfelelő asztalt a férőhely alapján"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Minimális űrlap",
+          "sub": "Név, telefon és létszám — az űrlap kitöltése fél percet vesz igénybe"
+        }
+      ]
+    },
+    {
+      "heading": "Naptár napok és asztalok szerint",
+      "sub": "Minden foglalás egy naptárban: lásd, mi szabad, mi van megerősítve, és ki érkezik.",
+      "bullets": [
+        {
+          "icon": "CalendarDays",
+          "title": "Nap, hét, hónap",
+          "sub": "Válts a nézetek között, és tervezd meg az ültetést előre"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Bontás asztalonként",
+          "sub": "Ki, mikor és hány vendéggel — minden asztalra vonatkozóan"
+        },
+        {
+          "icon": "Smartphone",
+          "title": "Kezeld a telefonodról",
+          "sub": "Foglalás áthelyezése, törlése vagy megerősítése — egy érintéssel"
+        }
+      ]
+    },
+    {
+      "heading": "Beosztás és módok",
+      "sub": "Állítsd be a foglalási beosztást a hét minden napjára, az idősávok hosszát és a megerősítési módot.",
+      "bullets": [
+        {
+          "icon": "Clock",
+          "title": "Napi beosztás",
+          "sub": "Külön órák a hét minden napjára, beleértve a szünetet az ebéd és a vacsora között"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Idősáv hossza",
+          "sub": "Állítsd be a foglalási intervallumot a vendéglátóhelyed formátumához"
+        },
+        {
+          "icon": "CalendarCheck",
+          "title": "Automatikus vagy kézi",
+          "sub": "Hagyd jóvá minden foglalást magad, vagy kapcsold be az automatikus megerősítést"
+        }
+      ]
+    },
+    {
+      "heading": "Értesítések manuális munka nélkül",
+      "sub": "A rendszer tájékoztatja a vendéget és a csapatodat — az e-mail és a foglalási képernyő azonnal frissül.",
+      "bullets": [
+        {
+          "icon": "Mail",
+          "title": "E-mail a vendégnek",
+          "sub": "A foglalás megerősítését a rendszer automatikusan elküldi e-mailben"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Értesítés az étteremnek",
+          "sub": "A tulajdonosok e-mailt kapnak minden új foglalásról"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Foglalási képernyő a bejáratnál",
+          "sub": "A host tablet valós időben mutatja az új foglalásokat"
+        }
+      ]
+    }
+  ]
+}

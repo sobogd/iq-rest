@@ -1,0 +1,151 @@
+{
+  "locale": "da",
+  "slug": "qr-kode-menukort-restaurant",
+  "trackPrefix": "l_da_qr",
+  "featureHeading": {
+    "heading": "Ikke bare en QR-kode",
+    "sub": "Alt hvad en enkelt scanning bliver til for dine gæster og dit gulv."
+  },
+  "meta": {
+    "title": "QR-menu til restauranter | IQ Rest",
+    "description": "QR-menu til restauranter: gæsterne scanner QR-koden på bordet, åbner menuen i deres browser og bestiller på deres eget sprog. 14 dage gratis, intet kort kræves.",
+    "canonical": "https://iq-rest.com/da/qr-kode-menukort-restaurant",
+    "ogLocale": "da_DK",
+    "ogTitle": "QR-menu til restauranter",
+    "ogDescription": "En QR på bordet, menuen på telefonen — fotos, allergener, 35 sprog og opdateringer i realtid.",
+    "brandLine": "IQ Rest — QR-menu til restauranter"
+  },
+  "hero": {
+    "headline": "QR-menu:\nscan og bestil",
+    "cta": "Opret en QR-menu",
+    "sub": "Gæsterne scanner QR-koden på bordet, gennemser fotos og allergener på 35 sprog og bestiller — ingen apps nødvendige."
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restauranter"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Caféer"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barer"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hoteller"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzeriaer"
+    }
+  ],
+  "scan": {
+    "heading": "Har du allerede en papirmenu eller en PDF?",
+    "headingAccent": "AI forvandler den til en QR-menu på 60 sekunder.",
+    "sub": "Upload et foto af menuen eller en PDF — AI genkender kategorier, retter og priser og forbinder dem direkte til din QR-menu.",
+    "cta": "Opret en QR-menu"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "Én QR, 35 sprog",
+      "heading": "Én QR-kode, en menu på 35 sprog.",
+      "body": "Gæsterne scanner QR-koden og vælger deres sprog: oversættelsen udføres af AI med kulinarisk forståelse, ikke en generisk oversætter. Slut med separate turistmenuer eller spredte ark på bordet.",
+      "bullets": [
+        "Én printet QR dækker 35 sprog, inkluderet i abonnementet.",
+        "AI'en taler madens sprog — retternes navne lyder naturlige på alle sprog.",
+        "Gæsterne skifter sprog inde i menuen, uden at scanne QR-koden igen."
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "To gæster scanner den samme QR-kode fra bordet og læser menuen på forskellige sprog"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Allergener i QR'en",
+      "heading": "Allergener og diætmærkater inde i QR-menuen.",
+      "body": "Hver ret i menuen bag QR-koden kan have mærkater: gluten, laktose, nødder, fisk og skaldyr, veganske og glutenfri muligheder. Gæsterne filtrerer retterne efter deres behov fra deres telefon, uden at spørge personalet.",
+      "bullets": [
+        "14 allergenkategorier på ret-niveau.",
+        "Veganske, vegetariske og glutenfri mærkater med ét klik i panelet.",
+        "Gæsterne filtrerer QR-menuen efter deres egne behov."
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "En gæst filtrerer QR-menuen efter allergener på en telefon, mens ejeren redigerer listen på en tablet"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Mere end bare en QR",
+      "heading": "En QR-menu designet som en restaurant-hjemmeside.",
+      "body": "Efter at have scannet koden lander gæsterne ikke på en flad PDF: de ser en velkomstskærm med en video eller et slående foto, en beskrivelse af stedet og en kontaktside med et kort, telefonnumre og sociale links. QR-koden bliver din restaurants hoveddør online.",
+      "bullets": [
+        "En baggrundsvideo eller et slående foto på QR-menuens startskærm.",
+        "Plads til at fortælle historien om dit sted og hver kategori.",
+        "En indbygget kontaktside: kort, telefon, Instagram, WhatsApp."
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "To telefoner på et bord: QR-menuens startskærm med en baggrundsvideo og en kontaktside med et kort"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Bestil fra QR'en · valgfrit",
+      "heading": "Fra QR-koden kan gæsterne også bestille.",
+      "body": "Udover at gennemse menuen kan QR-menuen blive en bestillingskanal: gæsterne tilføjer retter til kurven og sender anmodningen. Ordren når en tjener på gulvet, din WhatsApp eller køkkenskærmen. Funktionen kan slås til og fra i indstillingerne, når der er brug for det.",
+      "bullets": [
+        "En indkøbskurv, kommentarer og ordreafgivelse direkte fra QR-scanningen.",
+        "Ordren når med det samme gulvet, WhatsApp eller køkkenskærmen.",
+        "Aktivér funktionen efter timer, etager eller specifikke restauranter."
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "To telefoner på et bord: en indkøbskurv oprettet fra QR-menuen og en bekræftelse på en afsendt ordre"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Hvad restauratører spørger om vedrørende IQ Rest QR-menuen. Kan du ikke finde dit spørgsmål? Skriv til os på WhatsApp.",
+    "items": [
+      {
+        "q": "Hvordan fungerer IQ Rest QR-menuen?",
+        "a": "Hvert bord har en printet QR-kode. Gæsterne scanner den med deres telefonkamera, og browseren åbner restaurantens menu — fotos, beskrivelser, allergener og opdaterede priser. Ingen app at downloade for gæster eller personale."
+      },
+      {
+        "q": "Kræver det tekniske færdigheder at oprette en QR-menu?",
+        "a": "Nej. Panelet fungerer med klik og træk-og-slip, ingen kode eller kompleks konfiguration. Det tager sekunder at tilføje en ret: navn, pris, foto. Den indledende opsætning tager normalt 30 minutter til en time; hvis du allerede har en PDF-menu, konverterer AI'en den automatisk."
+      },
+      {
+        "q": "Skal gæsterne installere en app for at læse QR-koden?",
+        "a": "Nej. Det indbyggede iPhone- og Android-kamera genkender QR-koden på sekunder og åbner menuen direkte i browseren. Kontrolpanelet fungerer også i enhver moderne browser — telefon, tablet eller bærbar."
+      },
+      {
+        "q": "Hvordan printes QR-koderne til bordene?",
+        "a": "QR-koder genereres automatisk i panelet (én pr. bord eller én for hele stedet) og downloades som en printklar PDF. En kontorprinter og en holder er alt, hvad du behøver: en stander, et klistermærke eller en bordskåner."
+      },
+      {
+        "q": "Kan jeg bruge mit eget domæne til QR-menuen?",
+        "a": "Ja. Vi understøtter din restaurants domæne med et SSL-certifikat (for eksempel menu.dinrestaurant.dk): når gæsterne scanner QR-koden, ser de din restaurants adresse, ikke et generisk underdomæne. DNS-opsætningen tager 5–10 minutter, og vi guider dig igennem det."
+      },
+      {
+        "q": "Kan jeg administrere QR-koder for flere restauranter fra én konto?",
+        "a": "Ja, på anmodning. Én konto kan samle flere steder, hver med sine egne QR-koder, menu, design og statistik. Skriv til os på WhatsApp, så aktiverer vi multi-restaurant-tilstand."
+      },
+      {
+        "q": "Er det svært at lancere en QR-menu fra bunden?",
+        "a": "Tre trin: (1) opret kategorier; (2) tilføj retter med navn, pris og foto; (3) print QR-koderne og placer dem på bordene. Hvis du allerede har en papirmenu eller en PDF, uploader du den bare — AI genkender kategorier og priser og udfylder kortene. En basis-menu kan være online på 5 minutter."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "En QR-menu på 10 minutter. ",
+    "headingAccent": "14 dages fuld adgang.",
+    "sub": "Intet kort kræves, opsig når som helst. {count} restauranter bruger os allerede. Bare en e-mail — og ingen apps til dine gæster."
+  }
+}

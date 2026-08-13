@@ -1,0 +1,332 @@
+{
+  "locale": "lt",
+  "slug": "skaitmeninis-meniu-restoranas",
+  "trackPrefix": "l_digital",
+  "meta": {
+    "title": "Skaitmeninis meniu restoranams | IQ Rest",
+    "description": "Skaitmeninis meniu jūsų restoranui: meniu internete su nuotraukomis, alergenais, AI vertimu ir kainų atnaujinimu realiu laiku. 14 dienų nemokamai, nereikia banko kortelės.",
+    "canonical": "https://iq-rest.com/lt/skaitmeninis-meniu-restoranas",
+    "ogLocale": "lt_LT",
+    "ogTitle": "Skaitmeninis meniu restoranams",
+    "ogDescription": "Jūsų popierinio meniu versija internete su nuotraukomis, alergenais ir AI vertimu. Kainos atsinaujina realiu laiku.",
+    "brandLine": "IQ Rest — Skaitmeninis meniu restoranams"
+  },
+  "hero": {
+    "headline": "Skaitmeninis meniu ir svetainė",
+    "headlineAccent": "jūsų restoranui",
+    "cta": "Sukurti skaitmeninį meniu",
+    "demoLabel": "Demo: meniu, kokį jį mato svečiai",
+    "sub": "Paleiskite per 10 minučių: priimkite užsakymus nuo staliuko, keiskite kainas realiu laiku ir gaukite rezervacijas tiesiogiai be jokių komisinių.",
+    "phones": [
+      {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Telefonas su restorano svetainės pagrindiniu puslapiu: nuotraukos, rezervacijos ir prieiga prie meniu internete"
+      },
+      {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Telefonas su patiekalo kortele: nuotrauka, kaina ir alergenų žymos"
+      }
+    ]
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restoranai"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kavinės"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barai"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Viešbučiai"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Picerijos"
+    }
+  ],
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Meniu per 10 minučių",
+      "sub": "Jokių programuotojų ir ilgo konfigūravimo"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Greitas palaikymas",
+      "sub": "Padėsime paruošti meniu per pokalbį vos per kelias valandas"
+    },
+    {
+      "icon": "Globe",
+      "title": "Pasirinko {count} vietų",
+      "sub": "Skaitmeniniai meniu ir svetainės restoranams 15+ šalių"
+    },
+    {
+      "icon": "Palette",
+      "title": "Jūsų nuosavas domenas ir prekės ženklas",
+      "sub": "Meniu jūsų adresu, o ne bendroje svetainių kūrimo platformoje"
+    }
+  ],
+  "scan": {
+    "heading": "Turite popierinį meniu ar PDF?",
+    "headingAccent": "AI jį suskaitmenins per 60 sekundžių.",
+    "sub": "Įkelkite nuotrauką ar dokumentą – AI automatiškai atpažins kategorijas, patiekalus ir kainas.",
+    "cta": "Skenuoti meniu"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "AI vertimas",
+      "heading": "Meniu 35 kalbomis",
+      "body": "Vienas QR – 35 kalbos. AI verčia atsižvelgdamas į kulinarinį kontekstą, todėl patiekalai skamba natūraliai. Turistai užsisako drąsiau.",
+      "bullets": [
+        "35 kalbos įskaičiuotos į prenumeratą",
+        "Kulinarinis AI vietoje Google",
+        "Kalbos keitimas vienu paspaudimu"
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Du svečiai skaito tą patį skaitmeninį meniu skirtingomis kalbomis savo telefonuose"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Alergenai",
+      "heading": "Alergenai ir mitybos žymos kiekvienam patiekalui",
+      "body": "Pažymėkite gliuteną, laktozę, riešutus, veganiškus ir begliutenius pasirinkimus. Svečiai filtruoja meniu pagal savo poreikius ir užsisako ramiai.",
+      "bullets": [
+        "14 alergenų kategorijų",
+        "Veganiškos ir begliutenės žymos",
+        "Meniu filtras pagal mitybos apribojimus"
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Svečias filtruoja meniu pagal alergenus telefone, kol savininkas redaguoja alergenų sąrašą planšetėje"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Dizainas ir prekės ženklas",
+      "heading": "Premium meniu jūsų nuosavame domene",
+      "body": "Vaizdo įrašas pasisveikinimo ekrano fone, jūsų dizainas ir kontaktų puslapis su žemėlapiu bei socialiniais tinklais – jūsų domene, o ne PDF faile.",
+      "bullets": [
+        "Vaizdo įrašo fonas ir premium dizainas",
+        "Jūsų nuosavas domenas su SSL",
+        "Kontaktai, žemėlapis, socialiniai tinklai"
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Du telefonai ant kavinės staliuko: meniu pradžios ekranas su vaizdo įrašo fonu ir kontaktų puslapis su žemėlapiu"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Užsakymai",
+      "heading": "Užsakymai internetu be komisinių",
+      "body": "Svečiai užsisako iš meniu arba tiesiai į WhatsApp – užsakymas keliauja į salę arba virtuvę, 0 % nuo jūsų pajamų.",
+      "bullets": [
+        "Iš meniu arba per WhatsApp",
+        "Į salę arba virtuvę, 0 %",
+        "Įjungiama nustatymuose"
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Du telefonai ant stalo: krepšelis su užsakymu ir sėkmingo užsakymo patvirtinimas"
+      }
+    },
+    {
+      "icon": "CalendarCheck",
+      "eyebrow": "Rezervacijos",
+      "heading": "Staliukų rezervacijos 24/7",
+      "body": "Svečiai patys rezervuoja staliuką per meniu arba nuorodą, jūs matote kalendorių pagal staliukus ir patvirtinate automatiškai arba rankiniu būdu.",
+      "bullets": [
+        "Svečiai rezervuoja patys",
+        "Kalendorius visiems staliukams",
+        "Automatinis arba rankinis patvirtinimas"
+      ]
+    },
+    {
+      "icon": "MonitorSmartphone",
+      "eyebrow": "Valdymas",
+      "heading": "Valdykite iš bet kur",
+      "body": "Valdymo skydelis veikia naršyklėje – telefone, planšetėje ar kompiuteryje. Nereikia nieko diegti, paruošiama per kelias minutes.",
+      "bullets": [
+        "Bet koks įrenginys, bet kokia naršyklė",
+        "Nereikia nieko diegti",
+        "Veikia po kelių minučių"
+      ]
+    }
+  ],
+  "faq": {
+    "sub": "Ko restoranų savininkai klausia apie skaitmeninį meniu IQ Rest. Jei jūsų klausimo nėra – parašykite mums WhatsApp.",
+    "items": [
+      {
+        "q": "Ar man reikia techninių žinių arba patirties su TVS?",
+        "a": "Jokių specialių žinių nereikia. Viskas valdymo skydelyje atliekama keliais paspaudimais – jokio programavimo ar darbo su išeities failais. Patiekalo pridėjimas trunka kelias sekundes: pavadinimas, kaina, nuotrauka. Pilnas meniu paruošimas paprastai užtrunka 30–60 minučių."
+      },
+      {
+        "q": "Kas yra IQ Rest skaitmeninis meniu?",
+        "a": "Tai jūsų meniu versija internete, prieinama svečiams per QR kodą arba tiesioginę nuorodą: patiekalų nuotraukos, kainos, alergenai, AI vertimas į 35 kalbas ir atnaujinimai realiu laiku. Meniu veikia mūsų serveriuose – nereikia diegti ar prižiūrėti jokios programinės įrangos, užtenka naršyklės."
+      },
+      {
+        "q": "Ar svečiams reikia programėlės ar specialios įrangos?",
+        "a": "Svečias nukreipia telefono kamerą į QR kodą – meniu atsidaro naršyklėje, jokio diegimo. Valdymo skydelis taip pat veikia bet kurioje modernioje naršyklėje: telefone, planšetėje ar kompiuteryje. QR kodus galima atspausdinti paprastu biuro spausdintuvu."
+      },
+      {
+        "q": "Ar galiu talpinti meniu savo domene?",
+        "a": "Taip. Meniu prijungiamas prie jūsų domeno su SSL sertifikatu – svečiai mato jūsų restorano adresą, pavyzdžiui, meniu.jusu-restoranas.lt. Mūsų palaikymo komanda pasirūpina domeno ir sertifikato nustatymu; jums tereikia pateikti DNS įrašą."
+      },
+      {
+        "q": "Ar galiu valdyti kelis restoranus iš vienos paskyros?",
+        "a": "Taip. Pridėkite vietas į vieną paskyrą: kiekviena turi savo meniu, dizainą, QR kodus ir analitiką, o perjungimas tarp jų užtrunka vieną paspaudimą. Vietų skaičius priklauso nuo jūsų prenumeratos."
+      },
+      {
+        "q": "Ar sunku sukurti meniu nuo nulio?",
+        "a": "Trys žingsniai: sukurkite kategorijas, pridėkite patiekalus su kainomis ir nuotraukomis, atspausdinkite QR kodus staliukams. Jei turite popierinį meniu ar PDF, įkelkite jį – AI atpažins kategorijas, pavadinimus bei kainas ir automatiškai užpildys korteles. Paprastas meniu paleidžiamas per 5 minutes; pilnas nustatymas priklauso nuo patiekalų skaičiaus."
+      },
+      {
+        "q": "Kokį palaikymą teikiate?",
+        "a": "Atsakome per WhatsApp ir el. paštu darbo valandomis. Padėsime su pradiniais nustatymais, domeno prijungimu ir meniu dizainu. Jei reikia demonstracijos ar pagalbos pradedant – parašykite mums."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Jūsų meniu internete per 10 minučių. ",
+    "headingAccent": "14 dienų pilnos prieigos.",
+    "sub": "Kortelės nereikia, atšaukite bet kada. {count} restoranų patikėjo mums savo meniu ir svetaines. Viskas, ko reikia, tai el. paštas."
+  },
+  "spotlights": [
+    {
+      "heading": "Meniu 35 kalbomis",
+      "sub": "Svečiai atidaro meniu savo gimtaja kalba. AI išverčia patiekalų pavadinimus, aprašymus, kategorijas ir pasirinkimus atsižvelgdamas į kulinarinį kontekstą.",
+      "bullets": [
+        {
+          "icon": "Globe",
+          "title": "35 kalbos įskaičiuotos į prenumeratą",
+          "sub": "Įtrauktos Europos ir Azijos kalbos – jokių papildomų mokesčių už kalbą"
+        },
+        {
+          "icon": "Timer",
+          "title": "Išverčiama išsaugant",
+          "sub": "Pridėkite ar redaguokite patiekalą – vertimai į visas meniu kalbas paruošiami akimirksniu"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Rankiniai pakeitimai yra apsaugoti",
+          "sub": "Jūsų ranka pataisytas vertimas užrakinamas, ir AI jo niekada neperrašo"
+        }
+      ]
+    },
+    {
+      "heading": "Alergenai ir mitybos žymos kiekvienam patiekalui",
+      "sub": "Pridėkite alergenų ir mitybos žymas į patiekalo kortelę – svečiai jas mato meniu ir filtruoja patiekalus pagal savo apribojimus.",
+      "bullets": [
+        {
+          "icon": "WheatOff",
+          "title": "14 alergenų kategorijų",
+          "sub": "Pilnas ES reglamentuojamas sąrašas: gliutenas, riešutai, laktozė, jūros gėrybės ir kita"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "13 mitybos žymų",
+          "sub": "Veganiška, vegetariška, be gliuteno, halal, košerinė, aštru ir kitos mitybos žymos"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Filtras vienu paspaudimu",
+          "sub": "Svečiai pasirenka savo apribojimus – meniu rodo tik tinkamus patiekalus"
+        }
+      ]
+    },
+    {
+      "heading": "Premium meniu jūsų nuosavame domene",
+      "sub": "Nuotrauka ar vaizdo įrašas pasisveikinimo ekrano fone, jūsų prekės ženklo spalva ir logotipas – meniu atrodo kaip jūsų svetainė, o ne PDF, ir veikia jūsų domene.",
+      "bullets": [
+        {
+          "icon": "Palette",
+          "title": "Prekės ženklo dizainas",
+          "sub": "Vaizdo įrašas ar nuotrauka pagrindiniame ekrane, akcentinė spalva ir logotipas – nustatoma be dizainerio"
+        },
+        {
+          "icon": "Globe",
+          "title": "Jūsų nuosavas domenas su SSL",
+          "sub": "Meniu atsidaro jūsų adresu per saugų ryšį"
+        },
+        {
+          "icon": "Map",
+          "title": "Kontaktai ir žemėlapis",
+          "sub": "Puslapis su jūsų adresu, darbo valandomis, žemėlapiu ir socialiniais tinklais – pilna restorano svetainė"
+        }
+      ]
+    },
+    {
+      "heading": "Užsakymai internetu be komisinių",
+      "sub": "Svečias pateikia užsakymą nuo staliuko – jis akimirksniu atsiranda valdymo skydelyje ir virtuvės ekrane. Platforma neima jokio procento nuo jūsų pajamų.",
+      "bullets": [
+        {
+          "icon": "ShoppingCart",
+          "title": "Iš meniu arba per WhatsApp",
+          "sub": "Užsakymas sistemoje arba žinutė į jūsų WhatsApp – pasirinkite režimą nustatymuose"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Tiesiai į virtuvę",
+          "sub": "Naujas užsakymas atsiranda virtuvės ekrane ir padavėjo įrenginyje be jokio vėlavimo"
+        },
+        {
+          "icon": "Receipt",
+          "title": "0 % komisinių",
+          "sub": "Mokėjimas lieka tarp jūsų ir svečio – platforma nepasilieka nieko nuo jūsų užsakymų"
+        }
+      ]
+    },
+    {
+      "heading": "Staliukų rezervacijos 24/7",
+      "sub": "Svečiai rezervuoja staliuką tiesiai iš meniu bet kuriuo metu. Sistema patikrina užklausą pagal jūsų tvarkaraštį ir laisvus staliukus.",
+      "bullets": [
+        {
+          "icon": "CalendarCheck",
+          "title": "Kalendorius pagal staliukus",
+          "sub": "Sistema parenka staliuką pagal žmonių skaičių ir rodo rezervacijas pagal dienas ir staliukus"
+        },
+        {
+          "icon": "CalendarDays",
+          "title": "Automatinis arba rankinis",
+          "sub": "Patvirtinkite kiekvieną rezervaciją patys arba įjunkite automatinį patvirtinimą"
+        },
+        {
+          "icon": "Mail",
+          "title": "El. laiškai svečiui ir jums",
+          "sub": "Svečias gauna patvirtinimą el. paštu, savininkai gauna pranešimą apie naują rezervaciją"
+        }
+      ]
+    },
+    {
+      "heading": "Valdykite iš bet kur",
+      "sub": "Valdymo skydelis veikia naršyklėje telefone, planšetėje ar kompiuteryje. Pakeitimai svečiams matomi akimirksniu.",
+      "bullets": [
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Bet koks įrenginys",
+          "sub": "Telefonas, planšetė ar kompiuteris – užtenka naršyklės, nereikia nieko diegti"
+        },
+        {
+          "icon": "Timer",
+          "title": "Pakeitimai realiu laiku",
+          "sub": "Kainos pakeitimas, „stop“ lapas ar paslėptas patiekalas pritaikomi akimirksniu, be jokio publikavimo ar laukimo"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Patiekalų pasirinkimai",
+          "sub": "Dydžiai, priedai ir apmokestinami variantai – svečiai patys susikomplektuoja savo patiekalą"
+        }
+      ]
+    }
+  ],
+  "hideFeatureHeading": true
+}

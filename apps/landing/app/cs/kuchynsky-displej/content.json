@@ -1,0 +1,206 @@
+{
+  "locale": "cs",
+  "slug": "kuchynsky-displej",
+  "trackPrefix": "l_kds",
+  "meta": {
+    "title": "Kuchyňský displej (KDS) pro restaurace — Objednávky na obrazovce kuchaře | IQ Rest",
+    "description": "KDS kuchyňský displej pro restaurace: objednávky z placu a QR menu jdou rovnou na obrazovku kuchaře. Sloupce podle stolů, stavy Čeká / Připravuje se / Hotovo / Vydáno, filtry podle sekcí. Běží na tabletu nebo telefonu.",
+    "canonical": "https://iq-rest.com/cs/kuchynsky-displej",
+    "ogLocale": "cs_CZ",
+    "ogTitle": "Kuchyňský displej (KDS) — Objednávky rovnou na obrazovku kuchaře",
+    "ogDescription": "Objednávky z placu na obrazovce kuchaře. Sloupce podle stolů, stavy a časovač. Změna stavu jedním kliknutím.",
+    "brandLine": "IQ Rest — Kuchyňský displej pro restaurace"
+  },
+  "hero": {
+    "headline": "Kuchyňský displej (KDS):",
+    "cta": "Nastavit kuchyňský displej",
+    "sub": "Objednávky se na obrazovce v kuchyni objeví okamžitě: poznámky, alergeny a časovač. Změna stavu jedním kliknutím.",
+    "headlineAccent": "objednávky rovnou ke kuchaři",
+    "demoLabel": "Demo: obrazovka do kuchyně",
+    "tablet": {
+      "src": "/landing/hero-card-kds.webp",
+      "alt": "Tablet s kuchyňským displejem: objednávky podle stolů ve sloupcích se stavy"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurace"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kavárny"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bary"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotely"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerie"
+    }
+  ],
+  "scan": {
+    "heading": "Nastavte si kuchyňský displej",
+    "headingAccent": "za 5 minut.",
+    "sub": "Naskenujte papírové menu nebo PDF — AI rozpozná jídla, kategorie a alergeny. Připojte tablet v kuchyni a začněte přijímat objednávky.",
+    "cta": "Naskenovat menu"
+  },
+  "subFeatures": [
+    {
+      "icon": "LayoutGrid",
+      "eyebrow": "Kontrola a filtry",
+      "heading": "Více obrazovek podle sekcí: kuchyně a bar.",
+      "body": "Nastavte si samostatné tablety pro teplou kuchyni, bar nebo cukrárnu — každá obrazovka ukazuje jen jídla, která k ní patří. Filtry podle stavu (Čeká / Připravuje se / Hotovo / Vydáno) a podle kategorií udělají pořádek: kuchaři pracují jen s tím, co patří na jejich sekci.",
+      "bullets": [
+        "Více KDS obrazovek s filtry podle kategorií jídel.",
+        "Filtr stavů: jen to, co se připravuje a je hotové.",
+        "Každá sekce vidí jen svůj vlastní tok objednávek."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-filters.webp",
+        "alt": "Tablet na mosazném stojanu na výdeji v restauraci — KDS filtrované podle stavu jídel"
+      }
+    },
+    {
+      "icon": "Timer",
+      "eyebrow": "Karty a časovač",
+      "heading": "Jedno kliknutí změní stav. Poznámky a alergeny jsou barevně zvýrazněné.",
+      "body": "Karta jídla ukazuje vybrané možnosti (bez cibule, propečené), poznámky hostů, alergeny a časovač běžící od zadání objednávky. Kliknutím na kartu se stav posune: Čeká → Připravuje se → Hotovo → Vydáno. Seznam se automaticky řadí podle priority času.",
+      "bullets": [
+        "Klikněte na kartu — stav se okamžitě posune.",
+        "Možnosti, poznámky a alergeny barevně zvýrazněné.",
+        "Řazení podle priority: nejdéle čekající jídla se posouvají nahoru."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-cards.webp",
+        "alt": "Tablet na mosazném stojanu na barovém pultu — KDS s kartami objednávek podle stolů"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Na co se majitelé podniků ptají ohledně kuchyňského displeje v IQ Rest. Nenašli jste svůj dotaz — napište nám na WhatsApp.",
+    "items": [
+      {
+        "q": "Jaké stavy mají položky v kuchyni?",
+        "a": "Čtyři stavy: Čeká — objednávka je zadaná a čeká; Připravuje se — jídlo se vaří; Hotovo — připraveno k vyzvednutí; Vydáno — doručeno hostovi. Kliknutím na kartu se posunete na další stav, bez menu nebo potvrzování."
+      },
+      {
+        "q": "Můžu si nastavit několik KDS obrazovek na různých sekcích v kuchyni?",
+        "a": "Ano. Jeden tablet na teplé kuchyni, druhý na baru, třetí v cukrárně — každý s vlastním filtrem kategorií jídel. Všechny obrazovky zůstávají synchronizované: stav změněný na jedné se aktualizuje i na ostatních."
+      },
+      {
+        "q": "Na čem KDS běží — potřebuji speciální tablet?",
+        "a": "KDS běží v jakémkoliv moderním prohlížeči. Tablet na stojanu na výdeji se hodí do velké kuchyně; pro malý podnik stačí i chytrý telefon. Není potřeba žádný speciální hardware ani instalace: zařízení se připojí pomocí šestimístného kódu z administrace."
+      },
+      {
+        "q": "Odkud se berou objednávky na obrazovce v kuchyni?",
+        "a": "Ze všech zdrojů: od hosta, který si objedná přes QR menu na stole, nebo od číšníka, který ji zadá na svém zařízení. Objednávky se na KDS dostanou automaticky, s číslem stolu. Žádné ruční přepisování z pokladny."
+      },
+      {
+        "q": "Co ukazuje karta objednávky?",
+        "a": "Název jídla, vybrané možnosti (bez cibule, propečené), poznámku hosta, alergeny, stav a časovač běžící od zadání objednávky. Karty se řadí podle priority: čím déle jídlo čeká, tím výše je ve sloupci."
+      },
+      {
+        "q": "Dají se karty na obrazovce filtrovat?",
+        "a": "Ano. Dva filtry: podle stavu (například jen Čeká a Připravuje se) a podle kategorie (nápoje na bar, teplá jídla do kuchyně). Nastavení se ukládá pro každé zařízení zvlášť, takže každá sekce pracuje se svým vlastním výběrem."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Kuchyně bez papírů za 10 minut. ",
+    "headingAccent": "14 dní plného přístupu.",
+    "sub": "Bez karty, zrušení kdykoliv. Důvěřuje nám {count} podniků. Stačí vám jen e-mail — a objednávky přistanou rovnou na obrazovce v kuchyni."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Obrazovky podle sekcí",
+      "sub": "Samostatné tablety pro teplou kuchyni, bar a cukrárnu — každá obrazovka ukazuje jen svá jídla.",
+      "bullets": [
+        {
+          "icon": "LayoutGrid",
+          "title": "Filtr kategorií",
+          "sub": "Přiřaďte každé obrazovce vlastní kategorie menu"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Tok pro každou sekci",
+          "sub": "Kuchyně a bar pracují paralelně, aniž by si překážely"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Filtr stavů",
+          "sub": "Zobrazte si jen to, co se připravuje nebo je hotové k vyzvednutí"
+        }
+      ]
+    },
+    {
+      "heading": "Stavy na jedno kliknutí",
+      "sub": "Kliknutím na kartu se jídlo posune do dalšího stavu. Kuchyně i číšník vidí stejný obrázek.",
+      "bullets": [
+        {
+          "icon": "ClipboardList",
+          "title": "Stav pro každou položku",
+          "sub": "Připravuje se, hotovo, vydáno — pro každé jídlo, ne pro celou objednávku"
+        },
+        {
+          "icon": "Timer",
+          "title": "Časovač od zadání objednávky",
+          "sub": "Podívejte se, jak dlouho jídlo čeká — ta nejdéle čekající se posouvají nahoru"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "Alergeny a poznámky",
+          "sub": "Možnosti, poznámky hostů a alergeny barevně zvýrazněné"
+        }
+      ]
+    },
+    {
+      "heading": "Objednávky přistanou okamžitě",
+      "sub": "Objednávka hosta z QR menu nebo od číšníka se na obrazovce objeví v momentě zadání, bez načítání stránky.",
+      "bullets": [
+        {
+          "icon": "Rocket",
+          "title": "Na obrazovce okamžitě",
+          "sub": "Trvalé připojení — karta se objeví ve vteřině zadání objednávky"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Všechny zdroje v jednom toku",
+          "sub": "Objednávky od hostů i číšníků dorazí na jednu obrazovku s číslem stolu"
+        },
+        {
+          "icon": "Map",
+          "title": "Číslo stolu na kartě",
+          "sub": "Kuchyně vidí, kam jídlo jde; číšník vidí, kde se očekává"
+        }
+      ]
+    },
+    {
+      "heading": "Připojeno za pár minut",
+      "sub": "Obrazovka do kuchyně běží v prohlížeči na jakémkoliv tabletu nebo telefonu — připojí se pomocí šestimístného kódu.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Tablet nebo telefon",
+          "sub": "Prohlížeč stačí — žádný speciální hardware ke koupi"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Párovací kód",
+          "sub": "Zadejte šestimístný kód z administrace — zařízení se propojí s kuchyní"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Zrušení přístupu",
+          "sub": "Ztracený nebo vyměněný tablet — odpojte ho z administrace jedním kliknutím"
+        }
+      ]
+    }
+  ]
+}

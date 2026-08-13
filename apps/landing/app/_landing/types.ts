@@ -3,6 +3,56 @@ export type FaqItem = {
   a: string;
 };
 
+/** Tiny shared UI strings (aria-labels for close/menu/help buttons) that used
+ *  to live in messages/<locale>.json under `common`. Served to client
+ *  components via the LandingStringsProvider context (see
+ *  lib/landing-strings.tsx), sourced from the locale's texts.json. */
+export type CommonTexts = {
+  close: string;
+  menu: string;
+  help: string;
+};
+
+/** Auth page / OTP form copy — used to live in messages/<locale>.json under
+ *  `auth`. Same provider mechanism as CommonTexts. `consent.line` keeps the
+ *  `<terms>…</terms>` / `<privacy>…</privacy>` tags; `verifySubtitle` keeps
+ *  the `{email}` placeholder. */
+export type AuthTexts = {
+  emailLabel: string;
+  emailPlaceholder: string;
+  or: string;
+  continueGoogle: string;
+  continueApple: string;
+  consent: { line: string };
+  signInTitle: string;
+  signInSubtitle: string;
+  signInButton: string;
+  registerTitle: string;
+  registerSubtitle: string;
+  registerButton: string;
+  switchSignIn: string;
+  switchCreate: string;
+  verifyTitle: string;
+  verifySubtitle: string;
+  verifyCodeLabel: string;
+  checkSpam: string;
+  verifyButton: string;
+  resendCode: string;
+  resendSent: string;
+  changeEmail: string;
+  metaSignIn: string;
+  metaRegister: string;
+  errors: {
+    emailInvalid: string;
+    sendFailed: string;
+    verifyFailed: string;
+    codeExpired: string;
+    noCode: string;
+    invalidCode: string;
+    tooManyAttempts: string;
+  };
+};
+
 export type FooterLink = {
   href: string;
   label: string;
@@ -60,6 +110,9 @@ export type FeatureTexts = {
     heading: string;
     headingAccent: string;
     sub: string;
+    /** Own trust line under the CTA (e.g. "Only email needed.") — replaces
+     *  the generic shared `microcopy` prop for this card specifically. */
+    microcopy?: string;
   };
 };
 
@@ -68,6 +121,9 @@ export type FeatureTexts = {
  *  the per-locale rollout — locales without it fall back to English. */
 export type PricingQuizTexts = {
   heading: string;
+  /** Accent part of the heading, rendered with the brand gradient (like the
+   *  home hero's titleAccent) — the phrase worth highlighting. */
+  headingAccent?: string;
   sub: string;
   billingLabel: string;
   monthly: string;
@@ -90,9 +146,16 @@ export type PricingQuizTexts = {
   perMonthLongSuffix: string;
   /** "Save {amount} a year with yearly billing" — keep the {amount} placeholder. */
   saveYearlyTemplate: string;
-  /** "{percent}% volume discount · {count} restaurants" — keep both placeholders. */
+  /** "Discount {percent}%" — keep the {percent} placeholder. */
   volumeDiscountTemplate: string;
   saveUpToHint: string;
+  /** Plural forms for the count overlay's "{n} restaurant(s)" row label —
+   *  classic Slavic one/few/many split (safe for English too: set few/many
+   *  to the same plural string). Only ever applied to n ≤ 20 (the overlay's
+   *  list length), so English's "21 restaurants" edge case never comes up. */
+  restaurantOne: string;
+  restaurantFew: string;
+  restaurantMany: string;
   billedYearly: string;
   billedMonthly: string;
   /** Enterprise line under the quiz: "{pre} {cta link} {post}". */
@@ -101,6 +164,14 @@ export type PricingQuizTexts = {
   enterprisePost: string;
   /** WhatsApp prefill message for the enterprise link. */
   enterpriseWa: string;
+  /** "Need more restaurants? {cta}" — shown while count === 1; {cta} opens
+   *  the restaurant-count overlay. */
+  multiplePre: string;
+  multipleCta: string;
+  /** "Different restaurant count? {cta}" — shown once count > 1, replacing
+   *  the pair above (same overlay, just re-opening it to change the pick). */
+  multipleChangePre: string;
+  multipleChangeCta: string;
 };
 
 /** billing-features-constructor — the compact pricing CTA block that replaced
@@ -127,10 +198,19 @@ export type LandingTexts = {
     ogDescription: string;
   };
 
+  /** Home JSON-LD SoftwareApplication name — locale copy so the page.tsx
+   *  carries no hardcoded strings. */
+  jsonLd?: { appName: string };
+
   ctaText: string;
   /** Primary CTA label on the homepage hero — generic across all features
    *  (the feature pages use the feature-specific `ctaText`). */
   homeCtaText: string;
+
+  /** See CommonTexts / AuthTexts — page-local replacement for the old
+   *  messages/<locale>.json `common` + `auth` namespaces. */
+  common: CommonTexts;
+  auth: AuthTexts;
 
   /** Product-level trust strip shown under the hero on feature pages (same
    *  four stats as the homepage). Optional during the per-locale migration —
@@ -155,6 +235,10 @@ export type LandingTexts = {
     /** Label of the about-page link. Rendered only when the template passes an
      *  `aboutHref`, so locales without the page never show it. */
     navAbout?: string;
+    /** Muted group headings of the grouped burger panel (features / info).
+     *  Live in the header texts so every page shows the identical menu. */
+    menuFeaturesHeading?: string;
+    menuInfoHeading?: string;
     /** Secondary hero CTA — scrolls to the features section ("View features"). */
     viewFeatures: string;
   };
@@ -220,6 +304,9 @@ export type LandingTexts = {
     heading: string;
     headingAccent: string;
     sub: string;
+    /** Own trust line under the CTA (e.g. "Only email needed.") — replaces
+     *  the generic shared `microcopy` prop for this card specifically. */
+    microcopy?: string;
   };
 
   /** Heading + sub shown above the feature-card carousel on feature pages.
@@ -244,10 +331,16 @@ export type LandingTexts = {
   pricingCta?: PricingCtaTexts;
 
   footer: {
-    featureLinks: FooterLink[];
-    navLinks: FooterLink[];
     copyrightTemplate: string;
-    keywordLinks?: FooterLink[];
-    keywordLinksHeading?: string;
+    /** Column headings for the 4-column desktop footer (features / info /
+     *  legal docs — the 4th "general" column reuses cookie-texts' own
+     *  languageSwitcher label, no separate field needed). */
+    featuresHeading: string;
+    featureLinks: FooterLink[];
+    infoHeading: string;
+    legalHeading: string;
+    /** Heading above the full currency list (mirrors the language row —
+     *  see footer.tsx / app/api/currency for the no-JS link mechanism). */
+    currencyHeading: string;
   };
 };

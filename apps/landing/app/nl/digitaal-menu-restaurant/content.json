@@ -1,0 +1,332 @@
+{
+  "locale": "nl",
+  "slug": "digitaal-menu-restaurant",
+  "trackPrefix": "l_digital",
+  "meta": {
+    "title": "Digitaal menu voor restaurants | IQ Rest",
+    "description": "Digitaal menu voor je restaurant: een online menu met foto's, allergenen, AI-vertaling en realtime prijsupdates. 14 dagen gratis, geen creditcard nodig.",
+    "canonical": "https://iq-rest.com/nl/digitaal-menu-restaurant",
+    "ogLocale": "nl_NL",
+    "ogTitle": "Digitaal menu voor restaurants",
+    "ogDescription": "Een online versie van je papieren menu met foto's, allergenen en AI-vertaling. Prijzen worden in realtime bijgewerkt.",
+    "brandLine": "IQ Rest — Digitaal menu voor restaurants"
+  },
+  "hero": {
+    "headline": "Digitaal menu en website",
+    "headlineAccent": "voor je restaurant",
+    "cta": "Maak een digitaal menu",
+    "demoLabel": "Demo: het menu zoals gasten het zien",
+    "sub": "Live in 10 minuten: neem bestellingen op aan tafel, pas prijzen direct aan en ontvang reserveringen zonder commissie.",
+    "phones": [
+      {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Telefoon met de homepage van een restaurantwebsite: foto's, reserveringen en toegang tot het online menu"
+      },
+      {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Telefoon met een gerecht: foto, prijs en allergenen"
+      }
+    ]
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurants"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafés"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bars"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotels"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzeria's"
+    }
+  ],
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Een menu in 10 minuten",
+      "sub": "Geen developers en geen lange installatie"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Snelle support",
+      "sub": "We helpen je via de chat binnen een paar uur met het instellen van je menu"
+    },
+    {
+      "icon": "Globe",
+      "title": "Gekozen door {count} zaken",
+      "sub": "Digitale menu's en websites voor restaurants in 15+ landen"
+    },
+    {
+      "icon": "Palette",
+      "title": "Je eigen domein en merk",
+      "sub": "Een menu op je eigen adres, niet op een algemene websitebouwer"
+    }
+  ],
+  "scan": {
+    "heading": "Heb je een papieren menu of een PDF?",
+    "headingAccent": "AI digitaliseert het in 60 seconden.",
+    "sub": "Upload een foto of document — AI herkent automatisch categorieën, gerechten en prijzen.",
+    "cta": "Menu scannen"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "AI-vertaling",
+      "heading": "Een menu in 35 talen",
+      "body": "Eén QR — 35 talen. De AI vertaalt met culinaire context, zodat gerechten natuurlijk klinken. Toeristen bestellen met meer vertrouwen.",
+      "bullets": [
+        "35 talen inbegrepen in het abonnement",
+        "Culinaire AI in plaats van Google",
+        "Wissel van taal met één tik"
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Twee gasten lezen hetzelfde digitale menu in verschillende talen op hun eigen telefoon"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Allergenen",
+      "heading": "Allergenen en dieetwensen bij elk gerecht",
+      "body": "Geef gluten, lactose, noten, vegan en glutenvrij aan. Gasten filteren het menu op hun behoeften en bestellen met een gerust hart.",
+      "bullets": [
+        "14 allergenencategorieën",
+        "Vegan en glutenvrij labels",
+        "Menufilter voor dieetwensen"
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Een gast filtert het menu op allergenen op een telefoon, terwijl een restauranthouder de allergenenlijst bewerkt op een tablet"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Design en merk",
+      "heading": "Een premium menu op je eigen domein",
+      "body": "Een video-achtergrond op het startscherm, je eigen design en een contactpagina met plattegrond en social links — op je eigen domein, niet als PDF.",
+      "bullets": [
+        "Video-achtergrond en premium design",
+        "Je eigen domein met SSL",
+        "Contactgegevens, plattegrond, social links"
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Twee telefoons op een tafeltje in een café: het startscherm van het menu met een video-achtergrond en een contactpagina met plattegrond"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Bestellingen",
+      "heading": "Online bestellingen zonder commissie",
+      "body": "Gasten bestellen via het menu of direct via WhatsApp — de bestelling gaat naar de bediening of de keuken, 0% van je omzet.",
+      "bullets": [
+        "Via het menu of via WhatsApp",
+        "Naar de bediening of de keuken, 0%",
+        "In te schakelen in de instellingen"
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Twee telefoons op tafel: een winkelmandje met een bestelling en een succesvolle orderbevestiging"
+      }
+    },
+    {
+      "icon": "CalendarCheck",
+      "eyebrow": "Reserveringen",
+      "heading": "Tafelreserveringen 24/7",
+      "body": "Gasten reserveren zelf een tafel via het menu of een link, jij ziet een kalender per tafel en bevestigt automatisch of handmatig.",
+      "bullets": [
+        "Gasten reserveren zelf",
+        "Kalender voor alle tafels",
+        "Automatische of handmatige bevestiging"
+      ]
+    },
+    {
+      "icon": "MonitorSmartphone",
+      "eyebrow": "Management",
+      "heading": "Beheer vanaf elke locatie",
+      "body": "Het dashboard werkt in de browser — telefoon, tablet of pc. Niets om te installeren, binnen enkele minuten online.",
+      "bullets": [
+        "Elk apparaat, elke browser",
+        "Niets om te installeren",
+        "Live in minuten"
+      ]
+    }
+  ],
+  "faq": {
+    "sub": "Wat restauranthouders vragen over het digitale menu van IQ Rest. Staat je vraag er niet tussen — stuur ons een bericht via WhatsApp.",
+    "items": [
+      {
+        "q": "Heb ik technische kennis of ervaring met een CMS nodig?",
+        "a": "Geen speciale vaardigheden nodig. Alles in het dashboard kost maar een paar tikken — geen code, geen gedoe met bronbestanden. Een gerecht toevoegen duurt seconden: naam, prijs, foto. Een compleet menu instellen lukt meestal binnen 30–60 minuten."
+      },
+      {
+        "q": "Wat is het digitale menu van IQ Rest?",
+        "a": "Het is een online versie van je menu die voor gasten beschikbaar is via een QR-code of een directe link: foto's van gerechten, prijzen, allergenen, AI-vertaling in 35 talen en realtime updates. Het menu draait op onze servers — je hoeft geen software te installeren of te onderhouden, een browser is alles wat je nodig hebt."
+      },
+      {
+        "q": "Hebben gasten een app of speciale apparatuur nodig?",
+        "a": "Een gast scant de QR-code met de camera van zijn telefoon — het menu opent in de browser, geen installatie nodig. Het dashboard werkt ook in elke moderne browser: telefoon, tablet of laptop. QR-codes print je gewoon op een kantoorprinter."
+      },
+      {
+        "q": "Kan ik het menu op mijn eigen domein hosten?",
+        "a": "Ja. Het menu wordt gekoppeld aan jouw domein met een SSL-certificaat — gasten zien het adres van jouw restaurant, bijvoorbeeld menu.jouwrestaurant.nl. Onze support helpt bij het instellen van het domein en certificaat; je hoeft alleen een DNS-record door te geven."
+      },
+      {
+        "q": "Kan ik meerdere restaurants beheren vanuit één account?",
+        "a": "Ja. Voeg meerdere zaken toe aan één account: elke zaak heeft zijn eigen menu, design, QR-codes en statistieken, en je wisselt met één klik tussen de zaken. Het aantal zaken hangt af van je abonnement."
+      },
+      {
+        "q": "Hoe moeilijk is het om een menu vanaf nul op te zetten?",
+        "a": "Drie stappen: maak categorieën aan, voeg gerechten toe met prijzen en foto's, print QR-codes voor op de tafels. Als je een papieren menu of een PDF hebt, upload deze dan — AI herkent categorieën, namen en prijzen en vult de kaarten automatisch in. Een basis-menu staat in 5 minuten online; een complete setup hangt af van het aantal items."
+      },
+      {
+        "q": "Welke support bieden jullie?",
+        "a": "We reageren tijdens kantooruren via WhatsApp en e-mail. We helpen bij de eerste instellingen, het koppelen van je domein en het design van het menu. Heb je een demo of hulp bij de onboarding nodig — stuur ons een bericht."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Je menu online in 10 minuten. ",
+    "headingAccent": "14 dagen volledige toegang.",
+    "sub": "Geen creditcard nodig, altijd opzegbaar. {count} restaurants vertrouwen ons hun menu's en websites toe. Je hebt alleen een e-mailadres nodig."
+  },
+  "spotlights": [
+    {
+      "heading": "Een menu in 35 talen",
+      "sub": "Gasten openen het menu in hun moedertaal. AI vertaalt namen van gerechten, beschrijvingen, categorieën en opties met culinaire context.",
+      "bullets": [
+        {
+          "icon": "Globe",
+          "title": "35 talen in het abonnement",
+          "sub": "Europese en Aziatische talen inbegrepen — geen extra kosten per taal"
+        },
+        {
+          "icon": "Timer",
+          "title": "Vertaald bij het opslaan",
+          "sub": "Voeg een gerecht toe of pas het aan — vertalingen in elke menutaal zijn direct klaar"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Handmatige aanpassingen zijn beschermd",
+          "sub": "Een vertaling die je handmatig aanpast wordt vergrendeld, en de AI overschrijft deze nooit meer"
+        }
+      ]
+    },
+    {
+      "heading": "Allergenen en dieetwensen bij elk gerecht",
+      "sub": "Voeg allergenen en dieetlabels toe aan een gerecht — gasten zien ze in het menu en filteren gerechten op hun dieetwensen.",
+      "bullets": [
+        {
+          "icon": "WheatOff",
+          "title": "14 allergenencategorieën",
+          "sub": "De volledige lijst volgens EU-regelgeving: gluten, noten, lactose, zeevruchten en meer"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "13 dieetlabels",
+          "sub": "Vegan, vegetarisch, glutenvrij, halal, koosjer, pittig en andere dieetlabels"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Filteren met één tik",
+          "sub": "Gasten selecteren hun dieetwensen — het menu toont alleen geschikte gerechten"
+        }
+      ]
+    },
+    {
+      "heading": "Een premium menu op je eigen domein",
+      "sub": "Een foto- of video-achtergrond op het startscherm, je merkkleur en logo — het menu ziet eruit als je website, niet als een PDF, en draait op je eigen domein.",
+      "bullets": [
+        {
+          "icon": "Palette",
+          "title": "Design in jouw huisstijl",
+          "sub": "Video of foto op het startscherm, een accentkleur en logo — in te stellen zonder ontwerper"
+        },
+        {
+          "icon": "Globe",
+          "title": "Je eigen domein met SSL",
+          "sub": "Het menu opent op jouw adres via een beveiligde verbinding"
+        },
+        {
+          "icon": "Map",
+          "title": "Contactgegevens en plattegrond",
+          "sub": "Een pagina met je adres, openingstijden, plattegrond en social links — een complete restaurantwebsite"
+        }
+      ]
+    },
+    {
+      "heading": "Online bestellingen zonder commissie",
+      "sub": "Een gast plaatst een bestelling aan tafel — deze verschijnt direct in het dashboard en op het keukenscherm. Het platform houdt 0% van je omzet in.",
+      "bullets": [
+        {
+          "icon": "ShoppingCart",
+          "title": "Via het menu of via WhatsApp",
+          "sub": "Een bestelling in het systeem of een berichtje naar je WhatsApp — kies de methode in de instellingen"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Direct naar de keuken",
+          "sub": "Een nieuwe bestelling verschijnt zonder vertraging op het keukenscherm en op het apparaat van de bediening"
+        },
+        {
+          "icon": "Receipt",
+          "title": "0% commissie",
+          "sub": "De betaling blijft tussen jou en de gast — het platform houdt niets in van je bestellingen"
+        }
+      ]
+    },
+    {
+      "heading": "Tafelreserveringen 24/7",
+      "sub": "Gasten reserveren op elk moment zelf een tafel, direct via het menu. Het systeem controleert de aanvraag met je planning en de beschikbare tafels.",
+      "bullets": [
+        {
+          "icon": "CalendarCheck",
+          "title": "Kalender per tafel",
+          "sub": "Het systeem koppelt een tafel aan het aantal personen en toont reserveringen per dag en per tafel"
+        },
+        {
+          "icon": "CalendarDays",
+          "title": "Automatisch of handmatig",
+          "sub": "Bevestig elke reservering zelf of zet automatische bevestiging aan"
+        },
+        {
+          "icon": "Mail",
+          "title": "E-mails naar de gast en naar jou",
+          "sub": "De gast krijgt een bevestiging per e-mail, eigenaren krijgen een melding van een nieuwe reservering"
+        }
+      ]
+    },
+    {
+      "heading": "Beheer vanaf elke locatie",
+      "sub": "Het dashboard werkt in de browser op een telefoon, tablet of computer. Aanpassingen zijn direct zichtbaar voor gasten.",
+      "bullets": [
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Elk apparaat",
+          "sub": "Telefoon, tablet of pc — een browser is genoeg, geen installatie nodig"
+        },
+        {
+          "icon": "Timer",
+          "title": "Aanpassingen direct live",
+          "sub": "Een prijswijziging, uitverkocht gerecht of verborgen gerecht is direct actief, zonder te hoeven publiceren of wachten"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Gerechtopties",
+          "sub": "Formaten, extra's en varianten met een meerprijs — gasten stellen hun gerecht zelf samen"
+        }
+      ]
+    }
+  ],
+  "hideFeatureHeading": true
+}

@@ -1,0 +1,59 @@
+{
+  "breadcrumbLabel": "Preise",
+  "meta": {
+    "title": "Preise — Stellen Sie Ihren Restaurant-Tarif ab 9,90 €/Monat zusammen | IQ Rest",
+    "description": "Stellen Sie Ihren Tarif aus Modulen zusammen: QR-Speisekarte mit KI-Übersetzung, Bestellannahme, Tischreservierungen, Küchenmonitor. Ab 9,90 €/Monat pro Restaurant, Mengenrabatte. 14 Tage kostenlos, keine Kreditkarte, jederzeit kündbar.",
+    "canonical": "https://iq-rest.com/de/preise",
+    "ogLocale": "de_DE",
+    "ogTitle": "Preise — Stellen Sie Ihren Restaurant-Tarif zusammen",
+    "ogDescription": "Ein modularer Tarif ab 9,90 €/Monat: QR-Speisekarte, Bestellungen, Reservierungen, KDS. Mengenrabatte, keine versteckten Gebühren. 14 Tage kostenlos."
+  },
+  "faqSub": "Häufige Fragen von Restaurants zu Preisen und Zahlung. Wenn Sie Ihre Frage nicht finden — schreiben Sie uns auf WhatsApp.",
+  "faqItems": [
+    {
+      "q": "Wie setzt sich der Preis zusammen?",
+      "a": "Sie stellen Ihren Tarif aus Modulen zusammen. Die Basis ist eine QR-Speisekarte mit KI-Übersetzung in 35 Sprachen und Verwaltung von jedem Gerät aus. Dann fügen Sie hinzu, was Sie brauchen: Tischreservierungen, den Küchenmonitor, Ihre eigene Domain. Die Preise gelten pro Restaurant, mit Mengenrabatten ab dem zweiten Betrieb."
+    },
+    {
+      "q": "Gibt es eine Provision auf Bestellungen?",
+      "a": "Nein. Bestellungen über die QR-Speisekarte und vom Service gehen direkt ans Restaurant. Sie zahlen nur einen festen monatlichen Preis."
+    },
+    {
+      "q": "Wie funktioniert die Testphase?",
+      "a": "14 Tage voller Zugriff auf alle Funktionen, keine Kreditkarte nötig. Wenn bis zum Ende keine Zahlung eingerichtet ist, wird das Konto pausiert: Das Dashboard bleibt im Nur-Lese-Modus verfügbar, während die Speisekarte für Gäste und die Bestellannahme abgeschaltet werden. Es gibt keine automatischen Abbuchungen."
+    },
+    {
+      "q": "Was passiert mit meinen Daten, während das Konto pausiert ist?",
+      "a": "Alles bleibt erhalten: Speisekarte, Fotos, Bestellhistorie, Buchungen, Einstellungen, Statistiken. Richten Sie die Zahlung auch sechs Monate später ein — alles ist wieder genau so, wie es war."
+    },
+    {
+      "q": "Muss ich die QR-Codes neu drucken?",
+      "a": "Nein. Während der Pause zeigen die Codes einen Hinweis \"Vorübergehend nicht verfügbar\"; sobald die Zahlung eingerichtet ist, öffnen dieselben Codes wieder die Speisekarte."
+    },
+    {
+      "q": "Kann ich meinen Tarif ändern?",
+      "a": "Ja, jederzeit über das Dashboard. Die Differenz wird anteilig für die verbleibenden Tage des bezahlten Zeitraums berechnet. Eine deaktivierte Funktion behält ihre Daten."
+    },
+    {
+      "q": "Wie viele Restaurants kann ich verbinden?",
+      "a": "So viele Sie möchten, alle verwaltet über ein Dashboard. Mengenrabatte bis zu 50 % ab 5 Restaurants. Für große Ketten — ein individueller Tarif via WhatsApp."
+    },
+    {
+      "q": "Wie hoch ist der Rabatt beim Jahrestarif?",
+      "a": "Etwa 30 % im Vergleich zur monatlichen Abrechnung. Der genaue Betrag wird angezeigt, während Sie Ihren Tarif zusammenstellen."
+    },
+    {
+      "q": "Wie kündige ich mein Abo?",
+      "a": "Mit einem Klick im Dashboard. Das Konto funktioniert bis zum Ende des bezahlten Zeitraums, dann wird es pausiert. Ihre Daten bleiben erhalten."
+    },
+    {
+      "q": "Welche Zahlungsmethoden akzeptieren Sie?",
+      "a": "Visa, Mastercard, American Express, Apple Pay, Google Pay — über Stripe. In Europa unterstützt der Jahrestarif auch das SEPA-Lastschriftverfahren."
+    }
+  ],
+  "finalCta": {
+    "heading": "Ein Preis. Null Risiko. ",
+    "headingAccent": "14 Tage voller Zugriff.",
+    "sub": "Keine Kreditkarte nötig, jederzeit kündbar — {count} Restaurants vertrauen uns. Für den Start reicht eine E-Mail-Adresse."
+  }
+}

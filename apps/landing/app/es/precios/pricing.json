@@ -1,0 +1,59 @@
+{
+  "breadcrumbLabel": "Precios",
+  "meta": {
+    "title": "Precios — configure la tarifa de su restaurante desde 9.90 €/mes | IQ Rest",
+    "description": "Configure su tarifa por módulos: menú QR con traducción con IA, toma de pedidos, reserva de mesas y pantalla de cocina. Precio por restaurante desde 9.90 €/mes, con descuentos por volumen. 14 días gratis, sin tarjeta y con cancelación en cualquier momento.",
+    "canonical": "https://iq-rest.com/es/precios",
+    "ogLocale": "es_ES",
+    "ogTitle": "Precios — configure la tarifa de su restaurante",
+    "ogDescription": "Tarifa por módulos desde 9.90 €/mes: menú QR, pedidos, reservas, KDS. Descuentos por volumen y sin pagos ocultos. 14 días gratis."
+  },
+  "faqSub": "Preguntas frecuentes de los restaurantes sobre precios y pagos. ¿No encuentra la suya? Escríbanos por WhatsApp.",
+  "faqItems": [
+    {
+      "q": "¿Cómo se compone el precio?",
+      "a": "El plan se monta por módulos. La base es el menú QR con traducción con IA a 35 idiomas y gestión desde cualquier dispositivo. A partir de ahí añade lo que necesite: reserva de mesas, pantalla de cocina o dominio propio. El precio se calcula por restaurante y, desde el segundo, se aplican descuentos por volumen."
+    },
+    {
+      "q": "¿Hay comisión sobre los pedidos?",
+      "a": "No. Los pedidos del menú QR y de los camareros llegan directamente al restaurante. Usted solo paga la cuota mensual fija."
+    },
+    {
+      "q": "¿Cómo funciona el periodo de prueba?",
+      "a": "14 días de acceso completo a todas las funciones, sin necesidad de tarjeta bancaria. Si al terminar no hay un pago configurado, la cuenta se pausa: el panel sigue accesible en modo de solo lectura y el menú para comensales y la toma de pedidos se desactivan. No hay cobros automáticos."
+    },
+    {
+      "q": "¿Qué pasa con los datos durante la pausa?",
+      "a": "Se conserva todo: el menú, las fotos, el historial de pedidos, las reservas, los ajustes y las estadísticas. Aunque active el pago medio año después, todo volverá a estar como estaba."
+    },
+    {
+      "q": "¿Habrá que reimprimir los códigos QR?",
+      "a": "No. Durante la pausa los códigos muestran un aviso de «temporalmente no disponible»; al activar el pago, los mismos códigos vuelven a abrir el menú."
+    },
+    {
+      "q": "¿Se puede cambiar de plan?",
+      "a": "Sí, en cualquier momento desde el panel. La diferencia se recalcula de forma proporcional a los días restantes del periodo pagado. La función desactivada conserva sus datos."
+    },
+    {
+      "q": "¿Cuántos restaurantes se pueden conectar?",
+      "a": "Los que quiera, con gestión desde un único panel. Descuentos por volumen de hasta el 50% a partir de 5 restaurantes. Para grandes cadenas, plan a medida a través de WhatsApp."
+    },
+    {
+      "q": "¿Qué descuento tiene el plan anual?",
+      "a": "Alrededor de un 30% respecto al pago mensual. El importe exacto se ve al configurar el plan."
+    },
+    {
+      "q": "¿Cómo se cancela la suscripción?",
+      "a": "Con un clic desde el panel. La cuenta funciona hasta el final del periodo pagado y después se pausa. Los datos se conservan."
+    },
+    {
+      "q": "¿Qué métodos de pago se aceptan?",
+      "a": "Visa, Mastercard, American Express, Apple Pay y Google Pay, a través de Stripe. En Europa, en el plan anual también SEPA Direct Debit."
+    }
+  ],
+  "finalCta": {
+    "heading": "Un solo precio. Cero riesgo. ",
+    "headingAccent": "14 días de acceso completo.",
+    "sub": "Sin tarjeta y con cancelación en cualquier momento: {count} restaurantes confían en nosotros. Para empezar solo hace falta un email."
+  }
+}

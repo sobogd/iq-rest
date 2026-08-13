@@ -1,0 +1,59 @@
+{
+  "breadcrumbLabel": "Hinnasto",
+  "meta": {
+    "title": "Hinnasto — Kokoa ravintolasi paketti alkaen 9,90 €/kk | IQ Rest",
+    "description": "Kokoa pakettisi moduuleista: QR-ruokalista tekoälykäännöksellä, tilausten vastaanotto, pöytävaraukset, keittiönäyttö. Alkaen 9,90 €/kk per ravintola, määräalennukset. 14 päivää ilmaiseksi, ei korttia, peruuta milloin tahansa.",
+    "canonical": "https://iq-rest.com/fi/hinnat",
+    "ogLocale": "fi_FI",
+    "ogTitle": "Hinnasto — Kokoa ravintolasi paketti",
+    "ogDescription": "Modulaarinen paketti alkaen 9,90 €/kk: QR-ruokalista, tilaukset, varaukset, KDS. Määräalennukset, ei piilokuluja. 14 päivää ilmaiseksi."
+  },
+  "faqSub": "Yleisiä kysymyksiä ravintoloilta hinnoittelusta ja maksamisesta. Jos et löydä omaasi — laita viestiä WhatsAppissa.",
+  "faqItems": [
+    {
+      "q": "Miten hinta muodostuu?",
+      "a": "Kokoat pakettisi moduuleista. Pohjana on QR-ruokalista tekoälykäännöksellä 35 kielelle ja hallinta miltä tahansa laitteelta. Lisää sitten mitä tarvitset: pöytävaraukset, keittiönäyttö, oma verkkotunnus. Hinnoittelu on ravintolakohtainen, ja määräalennukset alkavat toisesta ravintolasta."
+    },
+    {
+      "q": "Onko tilauksissa välityspalkkiota?",
+      "a": "Ei. QR-ruokalistalta ja tarjoilijoilta tulevat tilaukset menevät suoraan ravintolalle. Maksat vain kiinteän kuukausihinnan."
+    },
+    {
+      "q": "Miten kokeilujakso toimii?",
+      "a": "14 päivän täysi käyttöoikeus kaikkiin ominaisuuksiin, ei luottokorttia. Jos maksua ei ole asetettu jakson loppuun mennessä, tili menee tauolle: paneeli pysyy saatavilla katselutilassa, kun taas asiakkaiden ruokalista ja tilausten vastaanotto kytkeytyvät pois päältä. Automaattisia veloituksia ei ole."
+    },
+    {
+      "q": "Mitä tiedoilleni tapahtuu tauon aikana?",
+      "a": "Kaikki säilytetään: ruokalista, kuvat, tilaushistoria, varaukset, asetukset, tilastot. Aseta maksu kuntoon vaikka puoli vuotta myöhemmin — kaikki palaa täsmälleen ennalleen."
+    },
+    {
+      "q": "Täytyykö minun tulostaa QR-koodit uudelleen?",
+      "a": "Ei. Tauon aikana koodit näyttävät \"tilapäisesti poissa käytöstä\" -ilmoituksen; kun maksu on kunnossa, samat koodit avaavat ruokalistan jälleen."
+    },
+    {
+      "q": "Voinko muuttaa pakettiani?",
+      "a": "Kyllä, milloin tahansa paneelista. Hintaero hyvitetään suhteessa maksetun jakson jäljellä oleviin päiviin. Käytöstä poistettu ominaisuus säilyttää tietonsa."
+    },
+    {
+      "q": "Kuinka monta ravintolaa voin yhdistää?",
+      "a": "Niin monta kuin haluat, kaikkia hallitaan yhdestä paneelista. Määräalennukset jopa 50 % yli 5 ravintolalla. Isoille ketjuille — räätälöity paketti WhatsAppin kautta."
+    },
+    {
+      "q": "Mikä on alennus vuositilauksessa?",
+      "a": "Noin 30 % verrattuna kuukausilaskutukseen. Tarkka summa näkyy pakettia kootessasi."
+    },
+    {
+      "q": "Miten perun tilaukseni?",
+      "a": "Yhdellä klikkauksella paneelista. Tili toimii maksetun jakson loppuun asti, minkä jälkeen se menee tauolle. Tietosi säilytetään."
+    },
+    {
+      "q": "Mitä maksutapoja hyväksytte?",
+      "a": "Visa, Mastercard, American Express, Apple Pay, Google Pay — Stripen kautta. Euroopassa vuositilaus tukee myös SEPA-suoraveloitusta."
+    }
+  ],
+  "finalCta": {
+    "heading": "Yksi hinta. Nolla riskiä. ",
+    "headingAccent": "14 päivän täysi käyttöoikeus.",
+    "sub": "Ei luottokorttia, peruuta milloin tahansa — {count} ravintolan luottama. Aloittamiseen tarvitaan vain sähköpostiosoite."
+  }
+}

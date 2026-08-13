@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "Um IQ Rest — Hver við erum, tengiliðir og lagalegar upplýsingar",
+    "description": "Hverjir standa á bak við IQ Rest, hvernig á að ná í okkur og upplýsingar um rekstraraðila þjónustunnar: tölvupóstur, WhatsApp, lagalegar upplýsingar.",
+    "canonical": "https://iq-rest.com/is/about",
+    "ogLocale": "is_IS",
+    "ogTitle": "Um IQ Rest",
+    "ogDescription": "Hverjir standa á bak við IQ Rest, tengiliðir þjónustuvers og lagalegar upplýsingar um rekstraraðila þjónustunnar."
+  },
+  "heading": "Frá eigin kaffihúsi",
+  "headingAccent": "að kerfi fyrir veitingastaði",
+  "story": {
+    "photo": {
+      "src": "/contacts.webp"
+    },
+    "paragraphs": [
+      "Í dag keyrir kerfið á hverjum degi á {count} stöðum — frá fimm borða kaffihúsum til keðja í mörgum borgum. Gögn eru geymd á netþjónum í Þýskalandi, og þjónustuspurningum er svarað persónulega."
+    ],
+    "sign": "Bogdan Sokolov"
+  },
+  "facts": [
+    {
+      "value": "2022",
+      "label": "árið sem kerfið var stofnað"
+    },
+    {
+      "value": "{count}",
+      "label": "staðir keyra á IQ Rest"
+    },
+    {
+      "value": "15",
+      "label": "lönd þar sem viðskiptavinir okkar eru"
+    }
+  ],
+  "waPrefill": "Hæ, ég er með spurningu um IQ Rest",
+  "contacts": [
+    {
+      "icon": "Mail",
+      "title": "Tölvupóstur",
+      "value": "support@iq-rest.com",
+      "href": "mailto:support@iq-rest.com",
+      "note": "Reikningar, skjöl, spurningar um gögn."
+    },
+    {
+      "icon": "MessageCircle",
+      "title": "WhatsApp",
+      "value": "+998 94 866 37 43",
+      "wa": true,
+      "note": "Við sýnum þér kerfið og hjálpum til við uppsetningu."
+    },
+    {
+      "icon": "Clock",
+      "title": "Svartími",
+      "value": "Mán–Sun, 9:00–21:00 CET",
+      "note": "Við svörum innan fárra klukkustunda."
+    }
+  ],
+  "legal": {
+    "rows": [
+      {
+        "label": "Rekstraraðili þjónustu",
+        "value": "Bogdan Sokolov"
+      },
+      {
+        "label": "Lagaform",
+        "value": "Autónomo (España)"
+      },
+      {
+        "label": "Skattnúmer (NIF)",
+        "value": "ESZ1894474S"
+      },
+      {
+        "label": "Heimilisfang",
+        "value": "Calle Boca del Río 2, 33010 Oviedo, Asturias, España"
+      },
+      {
+        "label": "Lén",
+        "value": "https://iq-rest.com"
+      },
+      {
+        "label": "Gagnahýsing",
+        "value": "Hetzner Online GmbH, Nuremberg, Germany"
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Þú hefur heyrt okkar sögu. ",
+    "headingAccent": "Byrjaðu að skrifa þína — 14 dagar frítt.",
+    "sub": "Ekkert kort þarf, hættu hvenær sem er. Eins og {count} veitingastaðir, geturðu treyst á okkur. Það eina sem þú þarft er netfang."
+  }
+}

@@ -1,8 +1,0 @@
-{
-  "crons": [
-    {
-      "path": "/api/cron/merge-sessions",
-      "schedule": "0 * * * *"
-    }
-  ]
-}

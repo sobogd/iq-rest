@@ -1,0 +1,261 @@
+{
+  "htmlLang": "de",
+  "htmlDir": "ltr",
+  "meta": {
+    "title": "Digitale Speisekarte, Küchenmonitor und Reservierungen — IQ Rest",
+    "description": "Führen Sie Ihr Restaurant mit einer App: mehrsprachige digitale Speisekarte, Küchenmonitor und 24/7-Reservierungen. Startklar in 5 Minuten. 14 Tage kostenlos, keine Kreditkarte nötig.",
+    "canonical": "https://iq-rest.com/de",
+    "ogLocale": "de_DE",
+    "ogTitle": "Digitale Speisekarte, Küchenmonitor und Reservierungen",
+    "ogDescription": "Führen Sie Ihr Restaurant mit einer App: mehrsprachige digitale Speisekarte, Küchenmonitor und 24/7-Reservierungen. Startklar in 5 Minuten. 14 Tage kostenlos, keine Kreditkarte nötig."
+  },
+  "jsonLd": {
+    "appName": "IQ Rest — Plattform für Restaurant-Management"
+  },
+  "ctaText": "Kostenlos testen",
+  "homeCtaText": "Kostenlos testen",
+  "trust": [
+    {
+      "kind": "num",
+      "value": 35,
+      "label": "Sprachen für die Speisekarte"
+    },
+    {
+      "kind": "text",
+      "value": "24/7",
+      "label": "Online-Reservierungen"
+    },
+    {
+      "kind": "num",
+      "value": 5,
+      "suffix": " Min.",
+      "label": "bis zum Start"
+    },
+    {
+      "kind": "count",
+      "label": "Restaurants vertrauen uns"
+    }
+  ],
+  "demoText": "Demo ansehen",
+  "microcopy": "14 Tage kostenlos · Keine Kreditkarte · Jederzeit kündbar",
+  "header": {
+    "navFeatures": "Funktionen",
+    "navHow": "So funktioniert's",
+    "navPricing": "Preise",
+    "navFaq": "FAQ",
+    "signIn": "Anmelden",
+    "viewFeatures": "Funktionen ansehen",
+    "cta": "Kostenlos starten",
+    "navProducts": "Funktionen",
+    "navGuide": "Anleitung",
+    "navAbout": "Über uns",
+    "menuFeaturesHeading": "Funktionen",
+    "menuInfoHeading": "Informationen"
+  },
+  "hero": {
+    "verticals": [
+      "Restaurants",
+      "Cafés",
+      "Bars",
+      "Hotels",
+      "Pizzerien"
+    ],
+    "headline": "Die digitale Speisekarte für Ihr Restaurant.\nStartklar in 5 Minuten.",
+    "sub": "Eine digitale Speisekarte für Ihr Restaurant in 5 Minuten. Alles inklusive: einfacher Editor, KI-Erkennung gedruckter Karten, QR-Codes für Tische und provisionsfreie Bestellungen.",
+    "dynamicHeadlines": [
+      "0 % Provision.",
+      "35 Sprachen mit KI.",
+      "Online-Bestellungen.",
+      "24/7-Reservierungen.",
+      "Premium-Design."
+    ],
+    "painBullets": [
+      "0 % Provision: Jede Bestellung geht direkt ans Restaurant.",
+      "KI-Übersetzung in 35 Sprachen — Touristen verstehen die Karte und bestellen mehr.",
+      "24/7-Reservierungen: Gäste buchen selbst, keine Anrufe zu Stoßzeiten.",
+      "Flexible Preise: Änderungen an der Speisekarte sind sofort online."
+    ],
+    "rating": "Über 500 Restaurants in 30+ Ländern"
+  },
+  "founder": {
+    "eyebrow": "Von Gastronomen entwickelt",
+    "quoteStart": "Meine Frau und ich hatten unser eigenes Café und kennen den Gastro-Alltag von innen: Bestellungen aufnehmen, Reservierungen, Service und Küche. Wir wollten ein einziges Tool — modern, einfach einzurichten und auf den ersten Blick verständlich —",
+    "quoteAccent": "so entstand die Idee für die Plattform, die wir heute für andere Gastronomen bauen.",
+    "sign": "Bogdan Sokolov · Gründer, ehemaliger Café-Besitzer",
+    "photoAlt": "Bogdan Sokolov, Gründer von IQ Rest"
+  },
+  "pricing": {
+    "badge": "Keine Provisionen · Keine Verträge",
+    "heading": "Ein Tarif.",
+    "headingAccent": "Alles inklusive.",
+    "sub": "QR-Speisekarte, Bestellannahme, KI-Übersetzung, Restaurant-Website und Reservierungen. Ein transparenter monatlicher Festpreis.",
+    "monthlyLabel": "Monatlich",
+    "yearlyLabel": "Jährlich",
+    "saveBadge": "25 % sparen",
+    "perMonth": "pro Monat",
+    "billedAnnually": "Jährlich abgerechnet: {total}",
+    "youSave": "Sie sparen {amount}",
+    "trust": {
+      "secure": "Sichere Zahlung via Stripe",
+      "noCommitment": "Keine Bindung",
+      "quick": "Aktivierung in Minuten",
+      "restaurants": "Über 500 Restaurants"
+    }
+  },
+  "faq": {
+    "eyebrow": "Noch Fragen?",
+    "heading": "Häufig gestellte",
+    "headingAccent": "Fragen",
+    "sub": "Was Gastronomen vor der Anmeldung am häufigsten fragen. Wenn Sie Ihre Antwort nicht finden — schreiben Sie uns auf WhatsApp. Es antworten echte Mitarbeiter, kein Bot.",
+    "whatsappCta": "Schreiben Sie uns auf WhatsApp",
+    "whatsappPrefill": "Hallo, ich habe eine Frage zu IQ Rest",
+    "items": [
+      {
+        "q": "Was beinhaltet die Testphase und was passiert danach?",
+        "a": "14 Tage lang haben Sie Zugriff auf alle Funktionen der Plattform, ohne dass eine Kreditkarte erforderlich ist. Wenn nach 14 Tagen keine Zahlungsmethode hinterlegt wird, pausiert das Konto automatisch. Wir buchen niemals ohne Ihre Zustimmung ab. Sie können die Zahlung später hinzufügen und genau dort weitermachen, wo Sie aufgehört haben. Die Kündigung eines Abos erfordert nur einen Klick."
+      },
+      {
+        "q": "Nehmen Sie eine Provision auf Bestellungen?",
+        "a": "Nein, wir nehmen keine prozentuale Beteiligung an Bestellungen. Alle Bestellungen über die QR-Speisekarte gehen direkt ans Restaurant, ohne Lieferdienst-Gebühren. Sie zahlen einen festen monatlichen Betrag — und sonst nichts."
+      },
+      {
+        "q": "Müssen Gäste eine App installieren und brauchen wir technisches Wissen?",
+        "a": "Gäste brauchen keine App: Sie richten einfach ihre Handykamera auf den QR-Code und die Speisekarte öffnet sich im Browser. Auch das Restaurant braucht kein technisches Fachwissen — das Dashboard läuft direkt im Browser auf dem Handy, Tablet oder Laptop. Alles funktioniert per Fingertipp, ganz ohne Programmieren."
+      },
+      {
+        "q": "Wie schnell werden Änderungen an der Speisekarte sichtbar — Preise, neue Gerichte?",
+        "a": "Sofort. Änderungen, die Sie auf dem Handy machen, sind für Gäste in Sekunden sichtbar. Ein neues Gericht ist mit wenigen Klicks hinzugefügt: Name, Preis, Foto. Kein Neudrucken von Papierkarten und kein Designer nötig."
+      },
+      {
+        "q": "Wie viele Sprachen werden unterstützt?",
+        "a": "35 Sprachen werden mit automatischer KI-Übersetzung unterstützt. Ein Klick — und die gesamte Speisekarte ist übersetzt. Die KI versteht den kulinarischen Kontext, sodass Gerichte und Beschreibungen in jeder Sprache natürlich klingen. Touristen bestellen selbstbewusster, wenn sie verstehen, was in einem Gericht steckt."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Startklar in 10 Minuten. ",
+    "headingAccent": "14 Tage voller Zugriff.",
+    "sub": "Keine Kreditkarte nötig, jederzeit kündbar. {count} Restaurants vertrauen uns. Sie brauchen nur eine E-Mail-Adresse."
+  },
+  "featureHighlights": {
+    "heading": "Alles inklusive",
+    "sub": "Funktionen, die Gäste zu Bestellungen machen — in jedem Tarif, ohne Aufpreis."
+  },
+  "scan": {
+    "heading": "Haben Sie eine Papierkarte oder ein PDF?",
+    "headingAccent": "Die KI digitalisiert sie in 60 Sekunden.",
+    "sub": "Laden Sie ein Foto oder Dokument hoch — die KI erkennt Kategorien, Gerichte und Preise automatisch.",
+    "cta": "Speisekarte scannen →"
+  },
+  "pricingQuiz": {
+    "heading": "Tarif zusammenstellen ",
+    "sub": "Starten Sie mit der Speisekarte — fügen Sie Reservierungen, den Küchenmonitor und eine Domain hinzu, wann immer Sie sie brauchen.",
+    "billingLabel": "Abrechnung:",
+    "monthly": "Monatlich",
+    "yearly": "Jährlich",
+    "restaurantsLabel": "Restaurants:",
+    "fewerAria": "Weniger Restaurants",
+    "moreAria": "Mehr Restaurants",
+    "menuTitle": "Speisekarte und Website",
+    "menuHint": "Immer inklusive",
+    "reservationsTitle": "Reservierungssystem",
+    "reservationsHint": "Tischreservierungen",
+    "kdsTitle": "Küchenmonitor",
+    "kdsHint": "Bestellungen auf dem Küchenbildschirm",
+    "domainTitle": "Domainname",
+    "domainHint": "Ihre eigene Webadresse",
+    "perMonthSuffix": "/Monat",
+    "perYearSuffix": "/Jahr",
+    "perMonthLongSuffix": "/Monat",
+    "saveYearlyTemplate": "Sparen Sie {amount} pro Jahr bei jährlicher Abrechnung",
+    "volumeDiscountTemplate": "{percent} % Rabatt",
+    "saveUpToHint": "Sparen Sie bis zu 50 % ab 5 Restaurants",
+    "billedYearly": "Einmal jährlich abgerechnet",
+    "billedMonthly": "Monatlich abgerechnet",
+    "enterprisePre": "Brauchen Sie einen individuellen Tarif?",
+    "enterpriseCta": "Schreiben Sie uns",
+    "enterprisePost": "und wir stellen einen für Sie zusammen.",
+    "enterpriseWa": "Hallo! Ich brauche einen individuellen Tarif für meine Restaurants.",
+    "headingAccent": "für Ihr Restaurant",
+    "multiplePre": "Mehrere Restaurants?",
+    "multipleCta": "Optionen anzeigen",
+    "restaurantOne": "Restaurant",
+    "restaurantFew": "Restaurants",
+    "restaurantMany": "Restaurants",
+    "multipleChangePre": "Andere Anzahl an Restaurants?",
+    "multipleChangeCta": "Ändern"
+  },
+  "pricingCta": {
+    "heading": "Einfache, flexible Preise",
+    "sub": "Zahlen Sie nur für die Funktionen, die Sie brauchen — stellen Sie Ihren Tarif in einer Minute zusammen.",
+    "fromTemplate": "ab {price}/Monat",
+    "button": "Tarif zusammenstellen"
+  },
+  "footer": {
+    "copyrightTemplate": "© {year} IQ Rest. Alle Rechte vorbehalten.",
+    "featuresHeading": "Funktionen",
+    "featureLinks": [
+      {
+        "href": "/ru/tsifrovoe-menyu",
+        "label": "Digitale Speisekarte"
+      },
+      {
+        "href": "/ru/priem-zakazov-restoran",
+        "label": "Bestellannahme"
+      },
+      {
+        "href": "/ru/bronirovanie-stolov",
+        "label": "Reservierungen"
+      },
+      {
+        "href": "/ru/kds-kuhonnyy-displey",
+        "label": "Küchenmonitor"
+      }
+    ],
+    "infoHeading": "Informationen",
+    "legalHeading": "Rechtliches",
+    "currencyHeading": "Währung"
+  },
+  "common": {
+    "close": "Schließen",
+    "menu": "Menü",
+    "help": "Hilfe"
+  },
+  "auth": {
+    "emailLabel": "E-Mail",
+    "emailPlaceholder": "E-Mail-Adresse eingeben",
+    "or": "oder",
+    "continueGoogle": "Weiter mit Google",
+    "continueApple": "Weiter mit Apple",
+    "consent": {
+      "line": "Indem Sie fortfahren, akzeptieren Sie die <terms>Nutzungsbedingungen</terms>. Erfahren Sie in unserer <privacy>Datenschutzerklärung</privacy>, wie wir mit Daten umgehen."
+    },
+    "signInTitle": "Willkommen zurück",
+    "signInSubtitle": "Geben Sie Ihre E-Mail-Adresse ein — wir senden Ihnen einen 6-stelligen Anmeldecode.",
+    "signInButton": "Anmelden",
+    "registerTitle": "Konto erstellen",
+    "registerSubtitle": "14 Tage kostenlos, keine Kreditkarte nötig. Wir senden Ihnen einen Anmeldecode per E-Mail — keine Passwörter, keine Formulare.",
+    "registerButton": "Konto erstellen",
+    "switchSignIn": "Anmelden",
+    "switchCreate": "Registrieren",
+    "verifyTitle": "Überprüfen Sie Ihre E-Mails",
+    "verifySubtitle": "Wir haben einen 6-stelligen Code an {email} gesendet.",
+    "verifyCodeLabel": "Bestätigungscode",
+    "checkSpam": "E-Mail nicht gefunden? Prüfen Sie Ihren Spam-Ordner.",
+    "verifyButton": "Weiter",
+    "resendCode": "Code erneut senden",
+    "resendSent": "Code gesendet",
+    "changeEmail": "Andere E-Mail-Adresse verwenden",
+    "metaSignIn": "Anmelden",
+    "metaRegister": "Konto erstellen",
+    "errors": {
+      "emailInvalid": "Geben Sie eine gültige E-Mail-Adresse ein.",
+      "sendFailed": "Fehler beim Senden des Codes. Bitte versuchen Sie es erneut.",
+      "verifyFailed": "Fehler beim Überprüfen des Codes. Bitte versuchen Sie es erneut.",
+      "codeExpired": "Der Code ist abgelaufen. Fordern Sie einen neuen an.",
+      "noCode": "Code nicht gefunden oder abgelaufen. Fordern Sie einen neuen an.",
+      "invalidCode": "Ungültiger Code. Bitte versuchen Sie es erneut.",
+      "tooManyAttempts": "Zu viele Versuche. Bitte warten Sie und versuchen Sie es erneut."
+    }
+  }
+}

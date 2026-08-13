@@ -1,0 +1,206 @@
+{
+  "locale": "lt",
+  "slug": "staliuku-rezervacija",
+  "trackPrefix": "l_bookings",
+  "meta": {
+    "title": "Staliukų rezervacijos restoranams 24/7 | IQ Rest",
+    "description": "Staliukų rezervacijos jūsų restoranui 24/7: svečiai patys rezervuoja staliukus per QR meniu arba svetainę. Kalendorius pagal staliukus, automatiniai patvirtinimai ir priminimai. Jokių skambučių, jokių prarastų svečių. 14 dienų nemokamai.",
+    "canonical": "https://iq-rest.com/lt/staliuku-rezervacija",
+    "ogLocale": "lt_LT",
+    "ogTitle": "Staliukų rezervacijos 24/7 — Svečiai rezervuoja patys",
+    "ogDescription": "Svečiai rezervuoja staliukus per QR meniu arba svetainę. Kalendorius, automatiniai patvirtinimai, priminimai. Nė vieno prarasto svečio.",
+    "brandLine": "IQ Rest — Staliukų rezervacijos restoranams"
+  },
+  "hero": {
+    "headline": "Staliukų rezervacijos 24/7,",
+    "cta": "Nustatyti staliukų rezervacijas",
+    "sub": "Svečiai rezervuoja 24/7 per QR meniu arba nuorodą. Kalendorius pagal staliukus, automatiniai patvirtinimai ir priminimai.",
+    "headlineAccent": "jokių skambučių",
+    "demoLabel": "Demo: rezervacijų kalendorius",
+    "tablet": {
+      "src": "/landing/hero-card-reservation.webp",
+      "alt": "Planšetė su rezervacijų kalendoriumi: mėnesio rodinys ir laukiančių patvirtinimo rezervacijų sąrašas"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restoranai"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kavinės"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barai"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Viešbučiai"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Picerijos"
+    }
+  ],
+  "scan": {
+    "heading": "Paleiskite staliukų rezervacijas",
+    "headingAccent": "per 5 minutes.",
+    "sub": "Prijunkite kalendorių, pridėkite staliukus su nuotraukomis ir vietų skaičiumi – svečiai pradės rezervuoti tą pačią dieną.",
+    "cta": "Įjungti rezervacijas"
+  },
+  "subFeatures": [
+    {
+      "icon": "CalendarPlus",
+      "eyebrow": "Rezervacijos forma",
+      "heading": "Svečiai rezervuoja patys – pagal datą, laiką ir žmonių skaičių.",
+      "body": "Svečias atidaro QR meniu arba tiesioginę nuorodą, pasirenka datą, laiką ir žmonių skaičių – ir iškart mato laisvus staliukus: su nuotrauka, aprašymu (terasa, prie lango, sofa prie baro) ir vietų skaičiumi. Patvirtinimas išsiunčiamas automatiškai el. paštu ir WhatsApp.",
+      "bullets": [
+        "Staliuko pasirinkimas pagal nuotrauką, aprašymą ir vietų skaičių.",
+        "Automatinis patvirtinimas ir priminimas likus valandai iki vizito.",
+        "Minimali forma: vardas, telefonas, žmonių skaičius."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-form.webp",
+        "alt": "Svečias rezervuoja restorano staliuką iš telefono: pasirenka datą, laiką, žmonių skaičių ir staliuką"
+      }
+    },
+    {
+      "icon": "CalendarDays",
+      "eyebrow": "Rezervacijų kalendorius",
+      "heading": "Kalendorius pagal dienas ir staliukus – viskas matoma per sekundę.",
+      "body": "Valdymo skydelyje yra rezervacijų kalendorius, suskirstytas pagal staliukus, dienas, savaites ir mėnesius. Laisvi laikai, užimti staliukai, patvirtintos ir laukiančios rezervacijos rodomos viename ekrane. Veikia planšetėje salėje ir nešiojamame kompiuteryje biure.",
+      "bullets": [
+        "Dienos, savaitės ir mėnesio rodiniai.",
+        "Suskirstymas pagal staliukus: kas, kada, kiek svečių.",
+        "Perkelkite, atšaukite arba patvirtinkite rezervaciją – vienu paspaudimu iš telefono."
+      ],
+      "image": {
+        "src": "/landing/feature-booking-calendar.webp",
+        "alt": "Rezervacijų kalendorius IQ Rest valdymo skydelyje dviejose planšetėse: dienos tinklelis pagal staliukus ir mėnesio kalendorius"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Ko restoranų savininkai klausia apie staliukų rezervacijas IQ Rest. Jei jūsų klausimo nėra – parašykite mums WhatsApp.",
+    "items": [
+      {
+        "q": "Ar galiu pasirinkti dienas ir laikus, kada galima rezervuoti?",
+        "a": "Taip. Valdymo skydelyje galite nustatyti tvarkaraštį kiekvienai savaitės dienai: rezervacijų valandas ir pertrauką tarp pietų ir vakarienės. Taip pat galite laikinai visiškai išjungti rezervacijas – svečiai matys, kad rezervacija internetu negalima."
+      },
+      {
+        "q": "Ar galiu įkelti kiekvieno staliuko nuotrauką?",
+        "a": "Taip. Kiekvienas staliukas turi nuotrauką, vietų skaičių ir zoną (terasa, prie lango, baras). Svečiai tiksliai mato, kurį staliuką rezervuoja, ir priima informuotą sprendimą."
+      },
+      {
+        "q": "Ar galiu apriboti svečių skaičių prie staliuko?",
+        "a": "Taip. Kiekvienas staliukas turi nustatytą vietų skaičių – sistema siūlo svečiams tik tinkamus staliukus ir neleidžia šešių asmenų grupei rezervuoti dviviečio staliuko."
+      },
+      {
+        "q": "Ar sunku nustatyti rezervacijas?",
+        "a": "Trys žingsniai: pridėkite staliukus su nuotraukomis ir vietų skaičiumi, įjunkite rezervacijų režimą nustatymuose ir pasidalinkite nuoroda arba QR kodu. Paleidimas užtrunka 5–10 minučių."
+      },
+      {
+        "q": "Ar galiu nustatyti automatinį arba rankinį rezervacijų patvirtinimą?",
+        "a": "Taip, režimas pasirenkamas nustatymuose. Su automatiniu patvirtinimu svečias patvirtinamas iškart po formos pateikimo. Su rankiniu, užklausa skydelyje atsiranda kaip „laukianti patvirtinimo“ – administratorius ją patvirtina arba atmeta. Rankinis režimas patogus, kai staliukų skaičius ribotas."
+      },
+      {
+        "q": "Ar imamas mokestis už kiekvieną rezervaciją?",
+        "a": "Jokių mokesčių nėra: rezervacijos įskaičiuotos į prenumeratą – jokio procento nuo svečių, jokių mokesčių už rezervaciją, jokių tarpininkų. Fiksuotas mokėjimas ir neribotos rezervacijos."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Rezervacijos per 10 minučių. ",
+    "headingAccent": "14 dienų pilnos prieigos.",
+    "sub": "Kortelės nereikia, atšaukite bet kada. {count} restoranų su mumis sumažino krūvį savo administratoriams. Viskas, ko reikia, tai el. paštas."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Svečiai rezervuoja patys",
+      "sub": "Data, laikas ir žmonių skaičius – iš QR meniu arba tiesioginės nuorodos, bet kuriuo paros metu. Sistema rodo tik laisvus laikus.",
+      "bullets": [
+        {
+          "icon": "CalendarPlus",
+          "title": "Rezervacijos 24/7",
+          "sub": "Svečiai rezervuoja naktį ar savaitgalį – jokių skambučių, jokio laukimo atsakymo"
+        },
+        {
+          "icon": "Users",
+          "title": "Staliukas pritaikytas pagal žmonių skaičių",
+          "sub": "Sistema pati parenka tinkamą staliuką pagal vietų skaičių"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Minimali forma",
+          "sub": "Vardas, telefonas ir žmonių skaičius – forma užpildoma per pusę minutės"
+        }
+      ]
+    },
+    {
+      "heading": "Kalendorius pagal dienas ir staliukus",
+      "sub": "Visos rezervacijos viename kalendoriuje: matykite, kas laisva, kas patvirtinta ir kas ateina.",
+      "bullets": [
+        {
+          "icon": "CalendarDays",
+          "title": "Diena, savaitė, mėnuo",
+          "sub": "Keiskite rodinius ir planuokite susodinimą iš anksto"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Suskirstymas pagal staliukus",
+          "sub": "Kas, kada ir kiek svečių – kiekvienam staliukui"
+        },
+        {
+          "icon": "Smartphone",
+          "title": "Valdykite iš telefono",
+          "sub": "Perkelkite, atšaukite arba patvirtinkite rezervaciją – vienu paspaudimu"
+        }
+      ]
+    },
+    {
+      "heading": "Tvarkaraštis ir režimai",
+      "sub": "Nustatykite rezervacijų tvarkaraštį kiekvienai savaitės dienai, vizito trukmę ir patvirtinimo režimą.",
+      "bullets": [
+        {
+          "icon": "Clock",
+          "title": "Dienos tvarkaraštis",
+          "sub": "Atskiros valandos kiekvienai savaitės dienai, įskaitant pertrauką tarp pietų ir vakarienės"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Vizito trukmė",
+          "sub": "Nustatykite rezervacijos intervalą, atitinkantį jūsų vietos formatą"
+        },
+        {
+          "icon": "CalendarCheck",
+          "title": "Automatinis arba rankinis",
+          "sub": "Patvirtinkite kiekvieną rezervaciją patys arba įjunkite automatinį patvirtinimą"
+        }
+      ]
+    },
+    {
+      "heading": "Pranešimai be rankinio darbo",
+      "sub": "Sistema informuoja svečią ir jūsų komandą – el. paštas ir rezervacijų ekranas atsinaujina akimirksniu.",
+      "bullets": [
+        {
+          "icon": "Mail",
+          "title": "El. laiškas svečiui",
+          "sub": "Rezervacijos patvirtinimas išsiunčiamas el. paštu automatiškai"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Pranešimas restoranui",
+          "sub": "Savininkai gauna el. laišką apie kiekvieną naują rezervaciją"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Rezervacijų ekranas prie įėjimo",
+          "sub": "Administratoriaus planšetė rodo naujas rezervacijas realiu laiku"
+        }
+      ]
+    }
+  ]
+}

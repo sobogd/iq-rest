@@ -1,0 +1,332 @@
+{
+  "locale": "sk",
+  "slug": "digitalne-menu-restauracia",
+  "trackPrefix": "l_digital",
+  "meta": {
+    "title": "Digitálne menu pre reštaurácie | IQ Rest",
+    "description": "Digitálne menu pre váš podnik: online menu s fotkami, alergénmi, AI prekladom a aktualizáciou cien v reálnom čase. 14 dní zadarmo, bez karty.",
+    "canonical": "https://iq-rest.com/sk/digitalne-menu-restauracia",
+    "ogLocale": "sk_SK",
+    "ogTitle": "Digitálne menu pre reštaurácie",
+    "ogDescription": "Online verzia vášho papierového menu s fotkami, alergénmi a AI prekladom. Ceny sa aktualizujú v reálnom čase.",
+    "brandLine": "IQ Rest — Digitálne menu pre reštaurácie"
+  },
+  "hero": {
+    "headline": "Digitálne menu a web",
+    "headlineAccent": "pre váš podnik",
+    "cta": "Vytvoriť digitálne menu",
+    "demoLabel": "Demo: menu z pohľadu hosťa",
+    "sub": "Spustite za 10 minút: prijímajte objednávky od stola, meňte ceny za chodu a získavajte rezervácie priamo bez provízií.",
+    "phones": [
+      {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Telefón s domovskou stránkou webu reštaurácie: fotky, rezervácie a prístup k online menu"
+      },
+      {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Telefón s kartou jedla: fotka, cena a označenie alergénov"
+      }
+    ]
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Reštaurácie"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kaviarne"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bary"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotely"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerie"
+    }
+  ],
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Menu za 10 minút",
+      "sub": "Žiadni programátori ani zdĺhavé nastavovanie"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Rýchla podpora",
+      "sub": "S nastavením menu vám pomôžeme na chate do niekoľkých hodín"
+    },
+    {
+      "icon": "Globe",
+      "title": "Vybralo si nás {count} podnikov",
+      "sub": "Digitálne menu a weby pre reštaurácie vo viac ako 15 krajinách"
+    },
+    {
+      "icon": "Palette",
+      "title": "Vlastná doména a značka",
+      "sub": "Menu na vašej vlastnej adrese, nie na zdieľanom webe"
+    }
+  ],
+  "scan": {
+    "heading": "Máte papierové menu alebo PDF?",
+    "headingAccent": "AI ho zdigitalizuje za 60 sekúnd.",
+    "sub": "Nahrajte fotku alebo dokument — AI automaticky rozpozná kategórie, jedlá a ceny.",
+    "cta": "Naskenovať menu"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "AI preklad",
+      "heading": "Menu v 35 jazykoch",
+      "body": "Jeden QR kód — 35 jazykov. AI prekladá s ohľadom na kulinársky kontext, takže jedlá znejú prirodzene. Turisti si objednajú s väčšou istotou.",
+      "bullets": [
+        "35 jazykov zahrnutých v predplatnom",
+        "Kulinárska AI namiesto bežného prekladača",
+        "Prepínanie jazykov jedným dotykom"
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Dvaja hostia čítajú rovnaké digitálne menu v rôznych jazykoch na svojich telefónoch"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Alergény",
+      "heading": "Alergény a diéty pri každom jedle",
+      "body": "Označte lepok, laktózu, orechy, vegánske a bezlepkové jedlá. Hostia si vyfiltrujú menu podľa svojich potrieb a objednajú si bez obáv.",
+      "bullets": [
+        "14 kategórií alergénov",
+        "Označenie vegánskych a bezlepkových jedál",
+        "Filter menu podľa diétnych obmedzení"
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Hosť filtruje menu podľa alergénov na telefóne, zatiaľ čo majiteľ upravuje zoznam alergénov na tablete"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Dizajn a značka",
+      "heading": "Prémiové menu na vlastnej doméne",
+      "body": "Video v pozadí na úvodnej obrazovke, váš vlastný dizajn a stránka s kontaktmi, mapou a sociálnymi sieťami — na vašej doméne, nie ako PDF.",
+      "bullets": [
+        "Video v pozadí a prémiový dizajn",
+        "Vlastná doména s SSL",
+        "Kontakty, mapa, sociálne siete"
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Dva telefóny na stole v kaviarni: úvodná obrazovka menu s videom v pozadí a stránka kontaktov s mapou"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Objednávky",
+      "heading": "Online objednávky bez provízií",
+      "body": "Hostia si objednajú z menu alebo priamo cez WhatsApp — objednávka ide obsluhe alebo do kuchyne, 0 % z vašich tržieb.",
+      "bullets": [
+        "Z menu alebo cez WhatsApp",
+        "Obsluhe alebo do kuchyne, 0 %",
+        "Zapína sa v nastaveniach"
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Dva telefóny na stole: košík s objednávkou a potvrdenie úspešnej objednávky"
+      }
+    },
+    {
+      "icon": "CalendarCheck",
+      "eyebrow": "Rezervácie",
+      "heading": "Rezervácie stolov 24/7",
+      "body": "Hostia si stôl rezervujú sami cez menu alebo odkaz, vy vidíte kalendár podľa stolov a potvrdzujete automaticky alebo manuálne.",
+      "bullets": [
+        "Hostia sa rezervujú sami",
+        "Kalendár pre všetky stoly",
+        "Automatické alebo manuálne potvrdzovanie"
+      ]
+    },
+    {
+      "icon": "MonitorSmartphone",
+      "eyebrow": "Manažment",
+      "heading": "Spravujte odkiaľkoľvek",
+      "body": "Administrácia beží v prehliadači — telefón, tablet alebo PC. Nič netreba inštalovať, spustené za pár minút.",
+      "bullets": [
+        "Akékoľvek zariadenie, akýkoľvek prehliadač",
+        "Nič netreba inštalovať",
+        "Hotové za pár minút"
+      ]
+    }
+  ],
+  "faq": {
+    "sub": "Na čo sa majitelia podnikov pýtajú ohľadom digitálneho menu v IQ Rest. Ak nenájdete svoju otázku — napíšte nám na WhatsApp.",
+    "items": [
+      {
+        "q": "Potrebujem technické znalosti alebo skúsenosti s CMS?",
+        "a": "Žiadne špeciálne znalosti nie sú potrebné. Všetko v administrácii zvládnete pár kliknutiami — žiadne kódovanie ani práca so zdrojovými súbormi. Pridanie jedla trvá sekundy: názov, cena, fotka. Kompletné nastavenie menu zvyčajne zaberie 30–60 minút."
+      },
+      {
+        "q": "Čo je digitálne menu IQ Rest?",
+        "a": "Je to online verzia vášho menu dostupná hosťom cez QR kód alebo priamy odkaz: fotky jedál, ceny, alergény, AI preklad do 35 jazykov a aktualizácie v reálnom čase. Menu beží na našich serveroch — nemusíte nič inštalovať ani udržiavať, stačí vám prehliadač."
+      },
+      {
+        "q": "Potrebujú hostia aplikáciu alebo špeciálne vybavenie?",
+        "a": "Hosť namieri fotoaparát v telefóne na QR kód — menu sa otvorí v prehliadači, bez inštalácie. Administrácia tiež funguje v každom modernom prehliadači: na telefóne, tablete alebo notebooku. QR kódy si vytlačíte na bežnej tlačiarni."
+      },
+      {
+        "q": "Môžem mať menu na vlastnej doméne?",
+        "a": "Áno. Menu prepojíme s vašou doménou pomocou SSL certifikátu — hostia uvidia adresu vašej reštaurácie, napríklad menu.vasarestaracia.sk. Naša podpora sa postará o nastavenie domény a certifikátu; stačí, ak nám poskytnete DNS záznam."
+      },
+      {
+        "q": "Môžem spravovať viacero reštaurácií z jedného účtu?",
+        "a": "Áno. Do jedného účtu môžete pridať viacero podnikov: každý má svoje vlastné menu, dizajn, QR kódy a analytiku, a prepínanie medzi nimi je otázkou jedného kliknutia. Počet podnikov závisí od vášho predplatného."
+      },
+      {
+        "q": "Aké ťažké je nastaviť menu od nuly?",
+        "a": "Tri kroky: vytvorte kategórie, pridajte jedlá s cenami a fotkami, vytlačte QR kódy na stoly. Ak máte papierové menu alebo PDF, nahrajte ho — AI rozpozná kategórie, názvy a ceny a automaticky vyplní karty. Základné menu spustíte za 5 minút; kompletné nastavenie závisí od počtu položiek."
+      },
+      {
+        "q": "Akú podporu poskytujete?",
+        "a": "Odpovedáme na WhatsApp a e-mailom počas pracovných hodín. Pomôžeme s počiatočným nastavením, pripojením domény a dizajnom menu. Ak potrebujete demo alebo pomoc s nastavením — napíšte nám."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Vaše menu online za 10 minút. ",
+    "headingAccent": "14 dní plného prístupu.",
+    "sub": "Bez karty, zrušenie kedykoľvek. Svoje menu a weby nám zverilo {count} podnikov. Stačí vám len e-mail."
+  },
+  "spotlights": [
+    {
+      "heading": "Menu v 35 jazykoch",
+      "sub": "Hostia si otvoria menu vo svojom rodnom jazyku. AI prekladá názvy jedál, popisy, kategórie a možnosti s ohľadom na kulinársky kontext.",
+      "bullets": [
+        {
+          "icon": "Globe",
+          "title": "35 jazykov v predplatnom",
+          "sub": "Európske aj ázijské jazyky sú zahrnuté — žiadne príplatky za jazyk"
+        },
+        {
+          "icon": "Timer",
+          "title": "Preložené pri uložení",
+          "sub": "Pridajte alebo upravte jedlo — preklady do všetkých jazykov menu sú okamžite hotové"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Manuálne úpravy sú chránené",
+          "sub": "Preklad, ktorý upravíte ručne, sa uzamkne a AI ho už nikdy neprepíše"
+        }
+      ]
+    },
+    {
+      "heading": "Alergény a diéty pri každom jedle",
+      "sub": "Pridajte k jedlu označenie alergénov a diét — hostia ich uvidia v menu a vyfiltrujú si jedlá podľa svojich obmedzení.",
+      "bullets": [
+        {
+          "icon": "WheatOff",
+          "title": "14 kategórií alergénov",
+          "sub": "Kompletný zoznam podľa predpisov EÚ: lepok, orechy, laktóza, morské plody a ďalšie"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "13 diétnych označení",
+          "sub": "Vegánske, vegetariánske, bezlepkové, halal, kóšer, pikantné a ďalšie štítky"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Filter jedným dotykom",
+          "sub": "Hostia si vyberú svoje obmedzenia — menu im ukáže len vhodné jedlá"
+        }
+      ]
+    },
+    {
+      "heading": "Prémiové menu na vlastnej doméne",
+      "sub": "Fotka alebo video v pozadí na úvodnej obrazovke, farba vašej značky a logo — menu vyzerá ako váš web, nie ako PDF, a beží na vašej doméne.",
+      "bullets": [
+        {
+          "icon": "Palette",
+          "title": "Dizajn vo vašom štýle",
+          "sub": "Video alebo fotka na úvodnej obrazovke, farba a logo — nastavíte si to aj bez grafika"
+        },
+        {
+          "icon": "Globe",
+          "title": "Vlastná doména s SSL",
+          "sub": "Menu sa otvorí na vašej adrese cez zabezpečené pripojenie"
+        },
+        {
+          "icon": "Map",
+          "title": "Kontakty a mapa",
+          "sub": "Stránka s vašou adresou, otváracími hodinami, mapou a sociálnymi sieťami — plnohodnotný web reštaurácie"
+        }
+      ]
+    },
+    {
+      "heading": "Online objednávky bez provízií",
+      "sub": "Hosť zadá objednávku od stola — okamžite sa zobrazí v administrácii a na obrazovke v kuchyni. Platforma si neberie 0 % z vašich tržieb.",
+      "bullets": [
+        {
+          "icon": "ShoppingCart",
+          "title": "Z menu alebo cez WhatsApp",
+          "sub": "Objednávka v systéme alebo správa na váš WhatsApp — režim si vyberiete v nastaveniach"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Priamo do kuchyne",
+          "sub": "Nová objednávka sa bez meškania zobrazí na kuchynskom displeji a u čašníka"
+        },
+        {
+          "icon": "Receipt",
+          "title": "0 % provízií",
+          "sub": "Platba prebieha medzi vami a hosťom — platforma si z vašich objednávok nenecháva nič"
+        }
+      ]
+    },
+    {
+      "heading": "Rezervácie stolov 24/7",
+      "sub": "Hostia si rezervujú stôl priamo z menu kedykoľvek počas dňa. Systém skontroluje požiadavku s vaším harmonogramom a voľnými stolmi.",
+      "bullets": [
+        {
+          "icon": "CalendarCheck",
+          "title": "Kalendár podľa stolov",
+          "sub": "Systém priradí stôl podľa počtu osôb a zobrazí rezervácie podľa dní a stolov"
+        },
+        {
+          "icon": "CalendarDays",
+          "title": "Automaticky alebo manuálne",
+          "sub": "Potvrdzujte každú rezerváciu sami alebo si zapnite automatické potvrdzovanie"
+        },
+        {
+          "icon": "Mail",
+          "title": "E-maily hosťovi aj vám",
+          "sub": "Hosť dostane potvrdenie e-mailom, majitelia dostanú upozornenie na novú rezerváciu"
+        }
+      ]
+    },
+    {
+      "heading": "Spravujte odkiaľkoľvek",
+      "sub": "Administrácia beží v prehliadači na telefóne, tablete alebo počítači. Zmeny sa hosťom zobrazia okamžite.",
+      "bullets": [
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Akékoľvek zariadenie",
+          "sub": "Telefón, tablet alebo PC — stačí vám prehliadač, žiadna inštalácia"
+        },
+        {
+          "icon": "Timer",
+          "title": "Úpravy za chodu",
+          "sub": "Zmena ceny, stop-list alebo skryté jedlo sa aplikuje okamžite, bez čakania"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Varianty jedál",
+          "sub": "Veľkosti, prílohy a varianty s cenou — hostia si vyskladajú jedlo sami"
+        }
+      ]
+    }
+  ],
+  "hideFeatureHeading": true
+}

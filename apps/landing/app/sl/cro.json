@@ -1,0 +1,289 @@
+{
+  "heroV2": {
+    "verticals": [
+      {
+        "icon": "restaurant",
+        "label": "Restavracije"
+      },
+      {
+        "icon": "cafe",
+        "label": "Kavarne"
+      },
+      {
+        "icon": "bar",
+        "label": "Bari"
+      },
+      {
+        "icon": "hotel",
+        "label": "Hoteli"
+      },
+      {
+        "icon": "pizza",
+        "label": "Picerije"
+      }
+    ],
+    "title": "Vse, kar vaša restavracija",
+    "titleAccent": "potrebuje!",
+    "sub": "Vzpostavite poslovanje v 10 minutah: zaženite spletni meni, poenostavite delo v kuhinji in upravljajte zasedenost miz.",
+    "primaryLabel": "Začnite brezplačno",
+    "demoLabel": "Poglej demo meni",
+    "mockups": {
+      "kds": {
+        "src": "/landing/hero-card-kds.webp",
+        "alt": "Tablica s kuhinjskim zaslonom: naročila po mizah v stolpcih s statusi"
+      },
+      "reservations": {
+        "src": "/landing/hero-card-reservation.webp",
+        "alt": "Tablica s koledarjem rezervacij: mesečni pogled in seznam rezervacij, ki čakajo na potrditev"
+      },
+      "phone1": {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Telefon z domačo stranjo restavracije: fotografije, rezervacije in dostop do spletnega menija"
+      },
+      "phone2": {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Telefon s kartico jedi: fotografija, cena in oznake alergenov"
+      }
+    }
+  },
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Na spletu v 10 minutah",
+      "sub": "Brez nakupa drage opreme in dolgotrajnih nastavitev"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Hitra podpora",
+      "sub": "V klepetu odgovorimo v nekaj urah"
+    },
+    {
+      "icon": "Globe",
+      "title": "Izbralo nas je {count} lokalov",
+      "sub": "Zaupajo nam restavracije in kavarne v 15+ državah"
+    },
+    {
+      "icon": "Palette",
+      "title": "100 % v vašem stilu",
+      "sub": "Dizajn in vmesnik prilagodimo podobi vašega lokala"
+    }
+  ],
+  "menu": {
+    "heading": "Spletna stran in digitalni meni",
+    "sub": {
+      "link": "Več kot le QR meni!",
+      "rest": " Dobite celotno spletno stran z unikatnim dizajnom, kontaktnimi podatki in rezervacijami miz."
+    },
+    "moreLabel": "Več o meniju",
+    "demoLabel": "Demo: meni, kot ga vidijo gosti",
+    "mockupAlt": "Telefon z domačo stranjo restavracije in telefon s stranjo jedi",
+    "bullets": [
+      {
+        "icon": "Languages",
+        "title": "Samodejni prevod v 35 jezikov",
+        "sub": "Ustrežba tujim gostom brez jezikovnih ovir — samodejni prevod poskrbi za vse"
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "Naročila neposredno z mize",
+        "sub": "Poenostavite poslovanje — hitro sprejemajte naročila z miz, brez natakarja"
+      },
+      {
+        "icon": "WheatOff",
+        "title": "Alergeni in diete",
+        "sub": "Označite alergene in prehranske preference (vegansko, pekoče), da gosti lažje in varneje izberejo hrano"
+      }
+    ]
+  },
+  "reservations": {
+    "heading": "Rezervacije miz",
+    "sub": {
+      "link": "Pametne rezervacije miz!",
+      "rest": " Avtomatiziran sistem rezervacij, ki sam spremlja proste mize in vaš urnik."
+    },
+    "moreLabel": "Več o rezervacijah",
+    "demoLabel": "Demo: koledar rezervacij",
+    "mockupAlt": "Tablica s koledarjem rezervacij: mize po dnevih in terminih",
+    "bullets": [
+      {
+        "icon": "CalendarCheck",
+        "title": "Pregleden tloris rezervacij",
+        "sub": "Vizualni urnik po dnevih in mizah — takoj vidite, kje in kdaj so prosta mesta"
+      },
+      {
+        "icon": "SlidersHorizontal",
+        "title": "Prilagodljive nastavitve rezervacij",
+        "sub": "Nastavite delovni čas, dolžino termina in fotografije miz ter zbirajte želje gostov"
+      },
+      {
+        "icon": "Users",
+        "title": "Upravljanje pretoka gostov",
+        "sub": "Izberite način rezervacij, ki vam ustreza, in obdržite popoln nadzor nad pretokom gostov"
+      }
+    ]
+  },
+  "orders": {
+    "heading": "Sprejemanje naročil pri mizi",
+    "sub": {
+      "link": "Naročila naravnost v kuhinjo!",
+      "rest": " Naročilo z mize ali od natakarja se takoj prikaže na kuhinjskem zaslonu — brez papirnatih listkov in čakanja."
+    },
+    "moreLabel": "Več o naročilih",
+    "demoLabel": "Demo: zaslon z naročili",
+    "mockupSrc": "/landing/feature-orders-modal.webp",
+    "mockupAlt": "Tablica z odprtim naročilom: seznam jedi in dejanja — sprememba mize, delitev naročila, dodajanje popusta",
+    "bullets": [
+      {
+        "icon": "ShoppingCart",
+        "title": "Gost ali natakar",
+        "sub": "Gosti naročajo z mize prek QR kode, natakarji pa s svojega telefona ali tablice"
+      },
+      {
+        "icon": "Map",
+        "title": "Tloris s statusi",
+        "sub": "Mize na tlorisu so barvno označene po statusu — takoj vidite, kdo čaka na naročilo in kam naprej"
+      },
+      {
+        "icon": "Receipt",
+        "title": "Delitev računa",
+        "sub": "Razdelite naročilo med goste in zaključite mize brez zmede pri plačilu"
+      }
+    ]
+  },
+  "kds": {
+    "heading": "Kuhinjski zaslon (KDS)",
+    "sub": {
+      "link": "Kuhinja v ritmu!",
+      "rest": " Naročila iz strežbe in QR menija se takoj prikažejo na zaslonu kuharja — z opombami, alergeni in štoparico."
+    },
+    "moreLabel": "Več o KDS",
+    "demoLabel": "Demo: kuhinjski zaslon",
+    "mockupAlt": "Tablica s kuhinjskim zaslonom: naročila po mizah v stolpcih s statusi",
+    "bullets": [
+      {
+        "icon": "LayoutGrid",
+        "title": "Zasloni po postajah",
+        "sub": "Ločene tablice za toplo kuhinjo, šank in slaščičarno — vsak vidi samo svoje jedi"
+      },
+      {
+        "icon": "Timer",
+        "title": "Statusi in štoparica",
+        "sub": "Stolpci v pripravi / pripravljeno / postreženo in pretečeni čas na naročilo — sprememba statusa z enim dotikom"
+      },
+      {
+        "icon": "ShieldAlert",
+        "title": "Alergeni in opombe",
+        "sub": "Oznake alergenov in opombe gostov so izpostavljene — kuhar ne bo spregledal ničesar pomembnega"
+      }
+    ]
+  },
+  "bundle": {
+    "heading": "Vse, kar poganja vašo restavracijo.",
+    "headingAccent": "V eni aplikaciji.",
+    "sub": "Meni, kuhinja in rezervacije na enem mestu — sodobno, hitro in narejeno za dejanski način dela v restavracijah. Brez doplačil ali cen po posameznih funkcijah."
+  },
+  "benefits": [
+    {
+      "icon": "Languages",
+      "tag": "Digitalni meni",
+      "title": "Meni, ki prodaja.",
+      "bullets": [
+        "35 jezikov z AI",
+        "Vrhunski dizajn",
+        "Cene se posodobijo takoj"
+      ],
+      "image": "/landing/feature-design.webp",
+      "imageAlt": "Dva telefona na mizi v kavarni: začetni zaslon digitalnega menija in kontaktna stran z zemljevidom"
+    },
+    {
+      "icon": "ChefHat",
+      "tag": "Kuhinjski zaslon",
+      "title": "Kuhajte hitreje, ne da bi karkoli spregledali.",
+      "bullets": [
+        "Naravnost na zaslon",
+        "Opombe in alergeni",
+        "Tablica ali telefon"
+      ],
+      "image": "/landing/feature-kds-cards.webp",
+      "imageAlt": "Tablica na šanku prikazuje kuhinjski zaslon z naročili po mizah"
+    },
+    {
+      "icon": "CalendarCheck",
+      "tag": "Rezervacije",
+      "title": "Rezervacije na avtopilotu.",
+      "bullets": [
+        "Rezervacije brez klicev",
+        "Samodejna potrditev",
+        "Koledar po mizah"
+      ],
+      "image": "/landing/feature-booking-calendar.webp",
+      "imageAlt": "Dve tablici s koledarjem rezervacij: dnevni pogled po mizah in mesečni pogled"
+    },
+    {
+      "icon": "Receipt",
+      "tag": "Naročila pri mizi",
+      "title": "Naročila naravnost v kuhinjo.",
+      "bullets": [
+        "Gost ali natakar",
+        "Naravnost v kuhinjo",
+        "Vklopite, ko želite"
+      ],
+      "image": "/landing/feature-orders-map.webp",
+      "imageAlt": "Tablica z zaslonom za naročila: seznam naročil in barvno označen tloris miz."
+    }
+  ],
+  "seeDetails": "Več o tem",
+  "platform": {
+    "hardwareTitle": "Uporabite lastno opremo",
+    "hardwareSub": "Ne silimo vas v nakup naše opreme. Uporabite telefone, tablice in računalnike, ki jih že imate.",
+    "anywhereTitle": "Deluje kjerkoli",
+    "anywhereSub": "Telefon, tablica, prenosnik, PC. Android, iOS, Windows, Mac, Linux. V vsakem sodobnem brskalniku, brez namestitve."
+  },
+  "activities": {
+    "heading": "En sistem —",
+    "headingAccent": "vaša celotna restavracija.",
+    "sub": "Hitrejša postrežba, mirnejša kuhinja, nižji stroški in gosti, ki se vračajo — vse v eni platformi.",
+    "groups": [
+      {
+        "icon": "Smartphone",
+        "tag": "Pri mizi — gost",
+        "bullets": [
+          "QR meni v 35 jezikih",
+          "Naročilo brez čakanja na natakarja",
+          "Klic natakarja ali zahteva za račun",
+          "Rezervacija mize 24/7",
+          "Unikatna QR koda za vsako mizo",
+          "Brez aplikacije — odpre se v brskalniku",
+          "Oznake alergenov in diet za filtriranje"
+        ]
+      },
+      {
+        "icon": "ChefHat",
+        "tag": "V kuhinji",
+        "bullets": [
+          "Naročila na zaslonu takoj",
+          "Stolpci v pripravi / pripravljeno / postreženo",
+          "Alergeni in opombe so izpostavljeni",
+          "Tablica ali telefon — brez papirnatih listkov"
+        ]
+      },
+      {
+        "icon": "ChartColumn",
+        "tag": "Upravljanje",
+        "bullets": [
+          "Urejanje menija in cen — takoj",
+          "AI prevod z enim klikom",
+          "Analitika prodaje in poročila",
+          "Več restavracij v enem računu",
+          "AI digitalizira papirnati meni v 60 sekundah",
+          "Vaša lastna domena z SSL"
+        ]
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Celotna platforma v 10 minutah. ",
+    "headingAccent": "14 dni polnega dostopa.",
+    "sub": "Meni, naročila, rezervacije in kuhinja — brez kartice, prekličite kadarkoli; zaupa nam {count} restavracij, potrebujete le e-pošto."
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "locale": "tr",
+  "slug": "mutfak-ekrani",
+  "trackPrefix": "l_kds",
+  "meta": {
+    "title": "Restoranlar İçin Mutfak Ekranı Sistemi (KDS) — Siparişler Aşçının Ekranında | IQ Rest",
+    "description": "Restoranlar için KDS mutfak ekranı: salondan ve QR menüden gelen siparişler doğrudan aşçının ekranına düşer. Masaya göre sütunlar, Bekliyor / Hazırlanıyor / Hazır / Servis Edildi durumları, istasyon filtreleri. Tablet veya telefonda çalışır.",
+    "canonical": "https://iq-rest.com/tr/mutfak-ekrani",
+    "ogLocale": "tr_TR",
+    "ogTitle": "Mutfak Ekranı Sistemi (KDS) — Siparişler Doğrudan Aşçının Ekranında",
+    "ogDescription": "Salondan gelen siparişler aşçının ekranında. Masaya göre sütunlar, durumlar ve zamanlayıcı. Tek dokunuşla durum değişir.",
+    "brandLine": "IQ Rest — Restoranlar İçin Mutfak Ekranı"
+  },
+  "hero": {
+    "headline": "Mutfak Ekranı Sistemi (KDS):",
+    "cta": "Mutfak ekranını kur",
+    "sub": "Siparişler mutfak ekranına anında ulaşır: notlar, alerjenler ve zamanlayıcı. Durum tek dokunuşla değişir.",
+    "headlineAccent": "siparişler doğrudan aşçıya",
+    "demoLabel": "Demo: mutfak ekranı",
+    "tablet": {
+      "src": "/landing/hero-card-kds.webp",
+      "alt": "Mutfak ekranı açık tablet: masalara göre sütunlar ve durum bildirimleri"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restoranlar"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kafeler"
+    },
+    {
+      "icon": "Martini",
+      "label": "Barlar"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Oteller"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzacılar"
+    }
+  ],
+  "scan": {
+    "heading": "Mutfak ekranını",
+    "headingAccent": "5 dakikada kurun.",
+    "sub": "Kağıt veya PDF menüyü taratın — yapay zeka yemekleri, kategorileri ve alerjenleri tanısın. Mutfakta bir tablet bağlayın ve siparişleri almaya başlayın.",
+    "cta": "Menüyü tara"
+  },
+  "subFeatures": [
+    {
+      "icon": "LayoutGrid",
+      "eyebrow": "Kontrol ve filtreler",
+      "heading": "İstasyonlara göre çoklu ekran: mutfak ve bar.",
+      "body": "Sıcak mutfak, bar veya pastane için ayrı tabletler kurun — her ekran sadece kendine ait yemekleri gösterir. Duruma (Bekliyor / Hazırlanıyor / Hazır / Servis Edildi) ve kategoriye göre filtreler karmaşayı önler: aşçılar sadece kendi istasyonlarına ait olanlarla çalışır.",
+      "bullets": [
+        "Yemek kategorisi filtreli çoklu KDS ekranları.",
+        "Durum filtresi: sadece hazırlananlar ve hazır olanlar.",
+        "Her istasyon sadece kendi sipariş akışını görür."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-filters.webp",
+        "alt": "Restoran mutfak bankosunda pirinç stant üzerinde tablet — yemek durumuna göre filtrelenmiş KDS"
+      }
+    },
+    {
+      "icon": "Timer",
+      "eyebrow": "Kartlar ve zamanlayıcı",
+      "heading": "Tek dokunuşla durum değişir. Notlar ve alerjenler renkli vurgulanır.",
+      "body": "Bir yemek kartı seçilen seçenekleri (soğansız, iyi pişmiş), misafir notlarını, alerjenleri ve sipariş verildiğinden beri işleyen bir zamanlayıcıyı gösterir. Karta dokunmak durumu ilerletir: Bekliyor → Hazırlanıyor → Hazır → Servis Edildi. Liste, zaman önceliğine göre kendini otomatik sıralar.",
+      "bullets": [
+        "Karta dokunun — durum anında ilerler.",
+        "Seçenekler, notlar ve alerjenler renkli vurgulanır.",
+        "Önceliğe göre sıralanır: en çok bekleyen yemekler en üste çıkar."
+      ],
+      "image": {
+        "src": "/landing/feature-kds-cards.webp",
+        "alt": "Restoran bar bankosunda pirinç stant üzerinde tablet — masalara göre sipariş kartlarıyla KDS"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Restorancıların IQ Rest mutfak ekranı hakkında sordukları. Sorunuz listede yoksa — bize WhatsApp'tan yazın.",
+    "items": [
+      {
+        "q": "Mutfaktaki ürünlerin hangi durumları vardır?",
+        "a": "Dört durum: Bekliyor — sipariş verildi ve bekliyor; Hazırlanıyor — yemek yapım aşamasında; Hazır — teslim alınmaya hazır; Servis Edildi — misafire ulaştırıldı. Karta dokunmak, menü veya onay gerektirmeden bir sonraki duruma geçirir."
+      },
+      {
+        "q": "Farklı mutfak istasyonlarında birkaç KDS ekranı kurabilir miyim?",
+        "a": "Evet. Biri sıcak mutfakta, diğeri barda, üçüncüsü pastanede — her biri kendi yemek kategorisi filtresine sahip tabletler. Tüm ekranlar senkronize kalır: birinde değişen durum diğerlerinde de güncellenir."
+      },
+      {
+        "q": "KDS'yi ne üzerinde çalıştıracağım — özel bir tablete ihtiyacım var mı?",
+        "a": "KDS herhangi bir modern tarayıcıda çalışır. Bankodaki bir stantta duran tablet büyük bir mutfak için uygundur; küçük bir mekan için akıllı telefon da iş görür. Özel bir donanım veya kurulum gerekmez: cihaz, panelden alınan altı haneli bir kodla bağlanır."
+      },
+      {
+        "q": "Mutfak ekranındaki siparişler nereden geliyor?",
+        "a": "Her kaynaktan: masadaki QR menü üzerinden sipariş veren bir misafir veya kendi cihazından sipariş alan bir garson. Siparişler masa numarasıyla birlikte KDS'ye otomatik olarak ulaşır. POS'tan manuel olarak tekrar girmeye gerek kalmaz."
+      },
+      {
+        "q": "Sipariş kartında neler görünür?",
+        "a": "Yemek adı, seçilen seçenekler (soğansız, iyi pişmiş), misafirin notu, alerjenler, durum ve sipariş verildiğinden beri işleyen bir zamanlayıcı. Kartlar önceliğe göre sıralanır: bir yemek ne kadar uzun süre beklerse, sütunda o kadar yukarı çıkar."
+      },
+      {
+        "q": "Ekrandaki kartlar filtrelenebilir mi?",
+        "a": "Evet. İki filtre: duruma göre (örneğin, sadece Bekliyor ve Hazırlanıyor) ve kategoriye göre (içecekler bara, sıcak yemekler mutfağa). Ayarlar cihaza özel kaydedilir, böylece her istasyon kendi setiyle çalışır."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "10 dakikada kağıtsız bir mutfak. ",
+    "headingAccent": "14 gün tam erişim.",
+    "sub": "Kart gerekmez, istediğiniz zaman iptal edin. {count} restoran bize güveniyor. Başlamak için sadece e-posta adresiniz yeterli — ve siparişler doğrudan mutfak ekranına düşer."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "İstasyonlara göre ekranlar",
+      "sub": "Sıcak mutfak, bar ve pastane için ayrı tabletler — her ekran sadece kendi yemeklerini gösterir.",
+      "bullets": [
+        {
+          "icon": "LayoutGrid",
+          "title": "Kategori filtresi",
+          "sub": "Her ekrana kendi menü kategorilerini atayın"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "İstasyon başına bir akış",
+          "sub": "Mutfak ve bar birbirinin işine karışmadan paralel çalışır"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Durum filtresi",
+          "sub": "Sadece hazırlananları veya teslim alınmaya hazır olanları gösterin"
+        }
+      ]
+    },
+    {
+      "heading": "Tek dokunuşla durumlar",
+      "sub": "Karta bir dokunuş yemeği bir sonraki duruma taşır. Mutfak ve garson aynı tabloyu görür.",
+      "bullets": [
+        {
+          "icon": "ClipboardList",
+          "title": "Her ürün için bir durum",
+          "sub": "Hazırlanıyor, hazır, servis edildi — sipariş bazında değil, yemek bazında"
+        },
+        {
+          "icon": "Timer",
+          "title": "Sipariş anından itibaren zamanlayıcı",
+          "sub": "Bir yemeğin ne kadar süredir beklediğini görün — en çok bekleyenler en üste çıkar"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "Alerjenler ve notlar",
+          "sub": "Seçenekler, misafir notları ve alerjenler renkli vurgulanır"
+        }
+      ]
+    },
+    {
+      "heading": "Siparişler anında düşer",
+      "sub": "QR menüden veya garsondan gelen bir misafir siparişi, verildiği an sayfayı yenilemeye gerek kalmadan ekranda belirir.",
+      "bullets": [
+        {
+          "icon": "Rocket",
+          "title": "Anında ekranda",
+          "sub": "Kalıcı bağlantı — kart, sipariş verildiği saniye görünür"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Tüm kaynaklar tek akışta",
+          "sub": "Misafir ve garson siparişleri masa numarasıyla birlikte tek ekrana gelir"
+        },
+        {
+          "icon": "Map",
+          "title": "Kartta masa numarası",
+          "sub": "Mutfak yemeğin nereye gideceğini görür; garson nerede beklendiğini bilir"
+        }
+      ]
+    },
+    {
+      "heading": "Dakikalar içinde bağlanır",
+      "sub": "Mutfak ekranı herhangi bir tablet veya telefonda tarayıcı üzerinden çalışır — altı haneli bir kodla bağlanır.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Tablet veya telefon",
+          "sub": "Bir tarayıcı yeterlidir — satın alınacak özel bir donanım yok"
+        },
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Eşleştirme kodu",
+          "sub": "Panelden altı haneli kodu girin — cihaz mutfağa bağlanır"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Erişim iptali",
+          "sub": "Tablet kayboldu veya değiştirildi — panelden tek dokunuşla bağlantısını kesin"
+        }
+      ]
+    }
+  ]
+}

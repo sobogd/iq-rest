@@ -1,0 +1,289 @@
+{
+  "heroV2": {
+    "verticals": [
+      {
+        "icon": "restaurant",
+        "label": "Restoranidele"
+      },
+      {
+        "icon": "cafe",
+        "label": "Kohvikutele"
+      },
+      {
+        "icon": "bar",
+        "label": "Baaridele"
+      },
+      {
+        "icon": "hotel",
+        "label": "Hotellidele"
+      },
+      {
+        "icon": "pizza",
+        "label": "Pitseriatele"
+      }
+    ],
+    "title": "Kõik, mida sinu restoran",
+    "titleAccent": "vajab.",
+    "sub": "Seadista oma tööprotsessid 10 minutiga: ava veebimenüü, korralda köögitöö ja halda laudu.",
+    "primaryLabel": "Alusta tasuta",
+    "demoLabel": "Vaata demo menüüd",
+    "mockups": {
+      "kds": {
+        "src": "/landing/hero-card-kds.webp",
+        "alt": "Tahvelarvuti köögiekraaniga: tellimused laudade kaupa veergudes koos staatustega"
+      },
+      "reservations": {
+        "src": "/landing/hero-card-reservation.webp",
+        "alt": "Tahvelarvuti broneerimiskalendriga: kuu vaade ja kinnitamist ootavate broneeringute nimekiri"
+      },
+      "phone1": {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Telefon restorani veebilehe avalehega: fotod, broneeringud ja ligipääs veebimenüüle"
+      },
+      "phone2": {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Telefon toidukaardiga: foto, hind ja allergeenide märgised"
+      }
+    }
+  },
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Valmis 10 minutiga",
+      "sub": "Pole vaja osta kalleid seadmeid ega kulutada aega seadistamisele"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Kiire klienditugi",
+      "sub": "Vastame vestlusaknas paari tunni jooksul"
+    },
+    {
+      "icon": "Globe",
+      "title": "Valitud {count} koha poolt",
+      "sub": "Meid usaldavad restoranid ja kohvikud rohkem kui 15 riigis"
+    },
+    {
+      "icon": "Palette",
+      "title": "100% sinu bränd",
+      "sub": "Kohandame disaini ja liidese sinu restorani stiiliga"
+    }
+  ],
+  "menu": {
+    "heading": "Veebileht ja digimenüü",
+    "sub": {
+      "link": "Rohkem kui QR-menüü.",
+      "rest": " Saa täisväärtuslik veebileht unikaalse disaini, kontaktandmete ja laua broneerimisega."
+    },
+    "moreLabel": "Rohkem menüü kohta",
+    "demoLabel": "Demo: menüü nii, nagu külalised seda näevad",
+    "mockupAlt": "Telefon restorani veebilehe avalehega ja telefon toidulehega",
+    "bullets": [
+      {
+        "icon": "Languages",
+        "title": "Automaattõlge 35 keelde",
+        "sub": "Teeninda väliskülalisi ilma keelebarjäärita — automaattõlge teeb kogu töö"
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "Tellimused otse lauast",
+        "sub": "Tee töö lihtsamaks — võta tellimusi laudadest kiiresti, teenindajat pole vaja"
+      },
+      {
+        "icon": "WheatOff",
+        "title": "Allergeenid ja toitumiseelistused",
+        "sub": "Märgi allergeenid ja toitumiseelistused (vegan, vürtsikas), et külalised saaksid toitu valida lihtsamalt ja turvalisemalt"
+      }
+    ]
+  },
+  "reservations": {
+    "heading": "Laua broneerimine",
+    "sub": {
+      "link": "Nutikas laua broneerimine.",
+      "rest": " Automaatne broneerimissüsteem, mis jälgib ise vabu laudu ja sinu graafikut."
+    },
+    "moreLabel": "Rohkem broneeringute kohta",
+    "demoLabel": "Demo: broneerimiskalender",
+    "mockupAlt": "Tahvelarvuti broneerimiskalendriga: lauad päevade ja kellaaegade kaupa",
+    "bullets": [
+      {
+        "icon": "CalendarCheck",
+        "title": "Selge broneeringute plaan",
+        "sub": "Visuaalne graafik päevade ja laudade kaupa — näed kohe, kus ja millal on vabu kohti"
+      },
+      {
+        "icon": "SlidersHorizontal",
+        "title": "Paindlik seadistamine",
+        "sub": "Määra lahtiolekuajad, broneeringu kestus ja laudade fotod ning kogu külaliste erisoove"
+      },
+      {
+        "icon": "Users",
+        "title": "Külaliste voo haldamine",
+        "sub": "Vali endale sobiv broneerimisrežiim ja hoia külaliste voog kontrolli all"
+      }
+    ]
+  },
+  "orders": {
+    "heading": "Tellimuste vastuvõtmine lauas",
+    "sub": {
+      "link": "Tellimused otse kööki.",
+      "rest": " Lauast või teenindajalt tulnud tellimus jõuab kohe köögiekraanile — ei mingeid pabertšekke ega ootamist."
+    },
+    "moreLabel": "Rohkem tellimuste kohta",
+    "demoLabel": "Demo: tellimuste ekraan",
+    "mockupSrc": "/landing/feature-orders-modal.webp",
+    "mockupAlt": "Tahvelarvuti avatud tellimusega: toitude nimekiri ja tellimuse toimingud — muuda lauda, jaga arve, lisa soodustus",
+    "bullets": [
+      {
+        "icon": "ShoppingCart",
+        "title": "Külaline või teenindaja",
+        "sub": "Külalised tellivad lauast QR-koodi kaudu, teenindajad oma telefonist või tahvelarvutist"
+      },
+      {
+        "icon": "Map",
+        "title": "Saaliplaan staatustega",
+        "sub": "Lauad plaanil on värvitud vastavalt staatusele — näed kohe, kes ootab tellimust ja kuhu järgmisena minna"
+      },
+      {
+        "icon": "Receipt",
+        "title": "Arve jagamine",
+        "sub": "Jaga arve külaliste vahel ja sulge lauad ilma maksesegadusteta"
+      }
+    ]
+  },
+  "kds": {
+    "heading": "Köögiekraan (KDS)",
+    "sub": {
+      "link": "Köök töötab sünkroonis.",
+      "rest": " Saalist ja QR-menüüst tulnud tellimused ilmuvad koka ekraanile koheselt — koos märkuste, allergeenide ja taimeriga."
+    },
+    "moreLabel": "Rohkem KDS-i kohta",
+    "demoLabel": "Demo: köögiekraan",
+    "mockupAlt": "Tahvelarvuti köögiekraaniga: tellimused laudade kaupa veergudes koos staatustega",
+    "bullets": [
+      {
+        "icon": "LayoutGrid",
+        "title": "Ekraanid tööjaamade kaupa",
+        "sub": "Eraldi tahvelarvutid kuuma köögi, baari ja kondiitri jaoks — igaüks näeb ainult oma toite"
+      },
+      {
+        "icon": "Timer",
+        "title": "Staatused ja taimer",
+        "sub": "Ootel / töös / valmis veerud ja tellimuse esitamisest kulunud aeg — staatus muutub ühe nupuvajutusega"
+      },
+      {
+        "icon": "ShieldAlert",
+        "title": "Allergeenid ja kommentaarid",
+        "sub": "Allergeenide märgised ja külaliste märkused on esile tõstetud — kokal ei jää midagi olulist märkamata"
+      }
+    ]
+  },
+  "bundle": {
+    "heading": "Kõik, millel sinu restoran töötab.",
+    "headingAccent": "Ühes rakenduses.",
+    "sub": "Menüü, köök ja broneeringud ühes kohas — kaasaegne, kiire ja loodud selleks, kuidas restoranid päriselt töötavad. Ei mingeid lisatasusid ega eraldi hinnastatud funktsioone."
+  },
+  "benefits": [
+    {
+      "icon": "Languages",
+      "tag": "Digimenüü",
+      "title": "Menüü, mis müüb.",
+      "bullets": [
+        "35 keelt tehisintellektiga",
+        "Esinduslik disain",
+        "Hinnad uuenevad koheselt"
+      ],
+      "image": "/landing/feature-design.webp",
+      "imageAlt": "Kaks telefoni kohviku laual: digimenüü avaleht ja kontaktide leht koos kaardiga"
+    },
+    {
+      "icon": "ChefHat",
+      "tag": "Köögiekraan",
+      "title": "Tee süüa kiiremini, ilma et midagi ununeks.",
+      "bullets": [
+        "Otse ekraanile",
+        "Märkused ja allergeenid",
+        "Tahvelarvuti või telefon"
+      ],
+      "image": "/landing/feature-kds-cards.webp",
+      "imageAlt": "Tahvelarvuti baariletil näitab köögiekraani tellimustega laudade kaupa"
+    },
+    {
+      "icon": "CalendarCheck",
+      "tag": "Broneeringud",
+      "title": "Broneeringud autopiloodil.",
+      "bullets": [
+        "Broneerimine ilma telefonikõnedeta",
+        "Automaatne kinnitamine",
+        "Kalender laudade kaupa"
+      ],
+      "image": "/landing/feature-booking-calendar.webp",
+      "imageAlt": "Kaks tahvelarvutit broneerimiskalendriga: päevavaade laudade kaupa ja kuuvaade"
+    },
+    {
+      "icon": "Receipt",
+      "tag": "Tellimused lauast",
+      "title": "Tellimused otse kööki.",
+      "bullets": [
+        "Külaline või teenindaja",
+        "Otse kööki",
+        "Lülita sisse siis, kui soovid"
+      ],
+      "image": "/landing/feature-orders-map.webp",
+      "imageAlt": "Tahvelarvuti tellimuste ekraaniga: tellimuste nimekiri ja värvikoodidega saaliplaan laudade kaupa."
+    }
+  ],
+  "seeDetails": "Loe lähemalt",
+  "platform": {
+    "hardwareTitle": "Kasuta oma seadmeid",
+    "hardwareSub": "Me ei sunni sind meilt riistvara ostma. Kasuta telefone, tahvelarvuteid ja arvuteid, mis sul juba olemas on.",
+    "anywhereTitle": "Töötab igal pool",
+    "anywhereSub": "Telefon, tahvelarvuti, sülearvuti, lauaarvuti. Android, iOS, Windows, Mac, Linux. Igas kaasaegses brauseris, paigaldada pole vaja."
+  },
+  "activities": {
+    "heading": "Üks süsteem —",
+    "headingAccent": "kogu sinu restoran.",
+    "sub": "Kiirem teenindus, rahulikum köök, madalamad kulud ja külalised, kes tulevad tagasi — kõik ühel platvormil.",
+    "groups": [
+      {
+        "icon": "Smartphone",
+        "tag": "Lauas — külaline",
+        "bullets": [
+          "QR-menüü 35 keeles",
+          "Telli ilma teenindajat ootamata",
+          "Kutsu teenindaja või küsi arvet",
+          "Laua broneerimine 24/7",
+          "Unikaalne QR-kood igale lauale",
+          "Rakendust pole vaja — avaneb brauseris",
+          "Allergeenide ja toitumiseelistuste filtrid"
+        ]
+      },
+      {
+        "icon": "ChefHat",
+        "tag": "Köögis",
+        "bullets": [
+          "Tellimused koheselt ekraanil",
+          "Ootel / töös / valmis veerud",
+          "Allergeenid ja kommentaarid esile tõstetud",
+          "Tahvelarvuti või telefon — ei mingeid pabertšekke"
+        ]
+      },
+      {
+        "icon": "ChartColumn",
+        "tag": "Juhtimine",
+        "bullets": [
+          "Menüü ja hindade muutmine — kohene",
+          "Tehisintellektiga tõlge ühe klõpsuga",
+          "Müügianalüütika ja aruanded",
+          "Mitu restorani ühel kontol",
+          "Tehisintellekt digitaliseerib paberist menüü 60 sekundiga",
+          "Sinu enda domeen koos SSL-iga"
+        ]
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Kogu platvorm 10 minutiga. ",
+    "headingAccent": "14 päeva täisligipääsu.",
+    "sub": "Menüü, tellimused, broneeringud ja köök — kaarti pole vaja, tühista igal ajal; meid usaldab {count} restorani, alustamiseks on vaja vaid e-posti aadressi."
+  }
+}

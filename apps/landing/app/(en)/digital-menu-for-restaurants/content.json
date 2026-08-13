@@ -1,0 +1,332 @@
+{
+  "locale": "en",
+  "slug": "digital-menu-for-restaurants",
+  "trackPrefix": "l_digital",
+  "meta": {
+    "title": "Digital Menu for Restaurants | IQ Rest",
+    "description": "Digital menu for your restaurant: an online menu with photos, allergens, AI translation and real-time price updates. 14 days free, no credit card required.",
+    "canonical": "https://iq-rest.com/digital-menu-for-restaurants",
+    "ogLocale": "en_US",
+    "ogTitle": "Digital Menu for Restaurants",
+    "ogDescription": "An online version of your paper menu with photos, allergens and AI translation. Prices update in real time.",
+    "brandLine": "IQ Rest — Digital Menu for Restaurants"
+  },
+  "hero": {
+    "headline": "Digital menu and website",
+    "headlineAccent": "for your restaurant",
+    "cta": "Create a digital menu",
+    "demoLabel": "Demo: the menu as guests see it",
+    "sub": "Launch in 10 minutes: take orders from the table, update prices on the fly and receive bookings directly with no commissions.",
+    "phones": [
+      {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Phone with a restaurant website homepage: photos, reservations and access to the online menu"
+      },
+      {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Phone with a dish card: photo, price and allergen labels"
+      }
+    ]
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurants"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafés"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bars"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotels"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerias"
+    }
+  ],
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "A menu in 10 minutes",
+      "sub": "No developers and no lengthy setup"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Fast support",
+      "sub": "We help you set up your menu in chat within a couple of hours"
+    },
+    {
+      "icon": "Globe",
+      "title": "Chosen by {count} venues",
+      "sub": "Digital menus and websites for restaurants in 15+ countries"
+    },
+    {
+      "icon": "Palette",
+      "title": "Your own domain and brand",
+      "sub": "A menu at your own address, not on a shared site builder"
+    }
+  ],
+  "scan": {
+    "heading": "Have a paper menu or a PDF?",
+    "headingAccent": "AI digitizes it in 60 seconds.",
+    "sub": "Upload a photo or document — AI recognizes categories, dishes and prices automatically.",
+    "cta": "Scan menu"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "AI translation",
+      "heading": "A menu in 35 languages",
+      "body": "One QR — 35 languages. The AI translates with culinary context in mind, so dishes sound natural. Tourists order with more confidence.",
+      "bullets": [
+        "35 languages included in the subscription",
+        "Culinary AI instead of Google",
+        "Switch languages with one tap"
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Two guests reading the same digital menu in different languages on their own phones"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Allergens",
+      "heading": "Allergens and diets on every dish",
+      "body": "Label gluten, lactose, nuts, vegan and gluten-free. Guests filter the menu to their needs and order with peace of mind.",
+      "bullets": [
+        "14 allergen categories",
+        "Vegan and gluten-free labels",
+        "Menu filter by dietary restrictions"
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "A guest filters the menu by allergens on a phone while a restaurateur edits the allergen list on a tablet"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Design and brand",
+      "heading": "A premium menu on your own domain",
+      "body": "A video background on the welcome screen, your own design and a contact page with a map and social links — on your domain, not a PDF.",
+      "bullets": [
+        "Video background and premium design",
+        "Your own domain with SSL",
+        "Contacts, map, social links"
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Two phones on a café table: the menu home screen with a video background and a contact page with a map"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Orders",
+      "heading": "Online orders with no commissions",
+      "body": "Guests order from the menu or straight in WhatsApp — the order goes to the floor or the kitchen, 0% of your revenue.",
+      "bullets": [
+        "From the menu or via WhatsApp",
+        "To the floor or the kitchen, 0%",
+        "Enabled in settings"
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Two phones on a table: a cart with an order and a successful order confirmation"
+      }
+    },
+    {
+      "icon": "CalendarCheck",
+      "eyebrow": "Reservations",
+      "heading": "Table bookings 24/7",
+      "body": "Guests book a table themselves via the menu or a link, you see a calendar by table and confirm automatically or manually.",
+      "bullets": [
+        "Guests book on their own",
+        "Calendar across all tables",
+        "Auto or manual confirmation"
+      ]
+    },
+    {
+      "icon": "MonitorSmartphone",
+      "eyebrow": "Management",
+      "heading": "Manage from anywhere",
+      "body": "The admin panel runs in the browser — phone, tablet or PC. Nothing to install, up and running in minutes.",
+      "bullets": [
+        "Any device, any browser",
+        "Nothing to install",
+        "Live in minutes"
+      ]
+    }
+  ],
+  "faq": {
+    "sub": "What restaurateurs ask about the digital menu in IQ Rest. If your question isn't listed — message us on WhatsApp.",
+    "items": [
+      {
+        "q": "Do I need technical skills or CMS experience?",
+        "a": "No special skills required. Everything in the admin panel takes a couple of taps — no coding, no working with source files. Adding a dish takes seconds: name, price, photo. A full menu setup usually fits within 30–60 minutes."
+      },
+      {
+        "q": "What is the IQ Rest digital menu?",
+        "a": "It's an online version of your menu available to guests via QR code or a direct link: dish photos, prices, allergens, AI translation into 35 languages and real-time updates. The menu runs on our servers — there's no software to install or maintain, a browser is all you need."
+      },
+      {
+        "q": "Do guests need an app or special equipment?",
+        "a": "A guest points their phone camera at the QR code — the menu opens in the browser, no installation. The admin panel also works in any modern browser: phone, tablet or laptop. QR codes print on a regular office printer."
+      },
+      {
+        "q": "Can I host the menu on my own domain?",
+        "a": "Yes. The menu connects to your domain with an SSL certificate — guests see your restaurant's address, for example menu.yourrestaurant.com. Our support handles the domain and certificate setup; all you need to provide is a DNS record."
+      },
+      {
+        "q": "Can I manage multiple restaurants from one account?",
+        "a": "Yes. Add venues to a single account: each has its own menu, design, QR codes and analytics, and switching between them takes one click. The number of venues depends on your subscription."
+      },
+      {
+        "q": "How hard is it to set up a menu from scratch?",
+        "a": "Three steps: create categories, add dishes with prices and photos, print QR codes for the tables. If you have a paper menu or a PDF, upload it — AI recognizes categories, names and prices and fills in the cards automatically. A basic menu launches in 5 minutes; full setup depends on the number of items."
+      },
+      {
+        "q": "What support do you provide?",
+        "a": "We reply on WhatsApp and by email during working hours. We help with initial setup, connecting your domain and menu design. Need a demo or guided onboarding — message us."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Your menu online in 10 minutes. ",
+    "headingAccent": "14 days of full access.",
+    "sub": "No card needed, cancel anytime. {count} restaurants trust us with their menus and websites. All you need is an email."
+  },
+  "spotlights": [
+    {
+      "heading": "A menu in 35 languages",
+      "sub": "Guests open the menu in their native language. AI translates dish names, descriptions, categories and options with culinary context in mind.",
+      "bullets": [
+        {
+          "icon": "Globe",
+          "title": "35 languages in the subscription",
+          "sub": "European and Asian languages included — no extra charge per language"
+        },
+        {
+          "icon": "Timer",
+          "title": "Translated on save",
+          "sub": "Add or edit a dish — translations into every menu language are ready immediately"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Manual edits are protected",
+          "sub": "A translation you correct by hand is locked, and the AI never overwrites it"
+        }
+      ]
+    },
+    {
+      "heading": "Allergens and diets on every dish",
+      "sub": "Add allergen and dietary labels to a dish card — guests see them in the menu and filter dishes to their restrictions.",
+      "bullets": [
+        {
+          "icon": "WheatOff",
+          "title": "14 allergen categories",
+          "sub": "The full EU-regulation list: gluten, nuts, lactose, seafood and more"
+        },
+        {
+          "icon": "ShieldAlert",
+          "title": "13 dietary labels",
+          "sub": "Vegan, vegetarian, gluten-free, halal, kosher, spicy and other dietary tags"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "One-tap filter",
+          "sub": "Guests select their restrictions — the menu shows only suitable dishes"
+        }
+      ]
+    },
+    {
+      "heading": "A premium menu on your own domain",
+      "sub": "A photo or video background on the welcome screen, your brand color and logo — the menu looks like your website, not a PDF, and runs on your domain.",
+      "bullets": [
+        {
+          "icon": "Palette",
+          "title": "On-brand design",
+          "sub": "Video or photo on the home screen, an accent color and logo — set up without a designer"
+        },
+        {
+          "icon": "Globe",
+          "title": "Your own domain with SSL",
+          "sub": "The menu opens at your address over a secure connection"
+        },
+        {
+          "icon": "Map",
+          "title": "Contacts and map",
+          "sub": "A page with your address, opening hours, map and social links — a full restaurant website"
+        }
+      ]
+    },
+    {
+      "heading": "Online orders with no commissions",
+      "sub": "A guest places an order from the table — it appears instantly in the dashboard and on the kitchen screen. The platform takes 0% of your revenue.",
+      "bullets": [
+        {
+          "icon": "ShoppingCart",
+          "title": "From the menu or via WhatsApp",
+          "sub": "An in-system order or a message to your WhatsApp — choose the mode in settings"
+        },
+        {
+          "icon": "ChefHat",
+          "title": "Straight to the kitchen",
+          "sub": "A new order appears on the kitchen screen and the waiter's device without delay"
+        },
+        {
+          "icon": "Receipt",
+          "title": "0% commission",
+          "sub": "Payment stays between you and the guest — the platform keeps nothing from your orders"
+        }
+      ]
+    },
+    {
+      "heading": "Table bookings 24/7",
+      "sub": "Guests book a table right from the menu at any time. The system checks the request against your schedule and available tables.",
+      "bullets": [
+        {
+          "icon": "CalendarCheck",
+          "title": "Calendar by table",
+          "sub": "The system matches a table to the party size and shows bookings by day and table"
+        },
+        {
+          "icon": "CalendarDays",
+          "title": "Auto or manual",
+          "sub": "Confirm each booking yourself or turn on auto-confirmation"
+        },
+        {
+          "icon": "Mail",
+          "title": "Emails to the guest and to you",
+          "sub": "The guest gets an email confirmation, owners get a new-booking notification"
+        }
+      ]
+    },
+    {
+      "heading": "Manage from anywhere",
+      "sub": "The dashboard runs in the browser on a phone, tablet or computer. Changes appear for guests instantly.",
+      "bullets": [
+        {
+          "icon": "MonitorSmartphone",
+          "title": "Any device",
+          "sub": "Phone, tablet or PC — a browser is all it takes, no installation required"
+        },
+        {
+          "icon": "Timer",
+          "title": "Edits on the fly",
+          "sub": "A price change, stop-list or hidden dish applies instantly, with no publishing or waiting"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Dish options",
+          "sub": "Sizes, add-ons and priced variants — guests build their dish themselves"
+        }
+      ]
+    }
+  ],
+  "hideFeatureHeading": true
+}

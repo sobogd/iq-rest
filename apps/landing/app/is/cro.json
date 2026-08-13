@@ -1,0 +1,289 @@
+{
+  "heroV2": {
+    "verticals": [
+      {
+        "icon": "restaurant",
+        "label": "Veitingastaðir"
+      },
+      {
+        "icon": "cafe",
+        "label": "Kaffihús"
+      },
+      {
+        "icon": "bar",
+        "label": "Barir"
+      },
+      {
+        "icon": "hotel",
+        "label": "Hótel"
+      },
+      {
+        "icon": "pizza",
+        "label": "Pítsustaðir"
+      }
+    ],
+    "title": "Allt sem veitingastaðurinn",
+    "titleAccent": "þarfnast!",
+    "sub": "Settu upp reksturinn á 10 mínútum: opnaðu matseðil á netinu, komdu skipulagi á eldhúsið og stýrðu borðabókunum.",
+    "primaryLabel": "Byrjaðu frítt",
+    "demoLabel": "Skoða prufumatseðil",
+    "mockups": {
+      "kds": {
+        "src": "/landing/hero-card-kds.webp",
+        "alt": "Spjaldtölva með eldhússkjá: pantanir eftir borðum í dálkum með stöðu"
+      },
+      "reservations": {
+        "src": "/landing/hero-card-reservation.webp",
+        "alt": "Spjaldtölva með bókanadagatali: mánaðaryfirlit og listi yfir bókanir sem bíða staðfestingar"
+      },
+      "phone1": {
+        "src": "/landing/hero-card-menu.webp",
+        "alt": "Sími með forsíðu vefsíðu veitingastaðar: myndir, borðabókanir og aðgangur að matseðli á netinu"
+      },
+      "phone2": {
+        "src": "/landing/hero-card-dish.webp",
+        "alt": "Sími með réttaspjaldi: mynd, verð og merkingar ofnæmisvalda"
+      }
+    }
+  },
+  "heroCards": [
+    {
+      "icon": "Rocket",
+      "title": "Tilbúið á 10 mínútum",
+      "sub": "Enginn dýr vélbúnaður og engin flókin uppsetning"
+    },
+    {
+      "icon": "MessagesSquare",
+      "title": "Hröð þjónusta",
+      "sub": "Við svörum í netspjalli innan fárra klukkustunda"
+    },
+    {
+      "icon": "Globe",
+      "title": "Valið af {count} stöðum",
+      "sub": "Veitingastaðir og kaffihús í 15+ löndum treysta okkur"
+    },
+    {
+      "icon": "Palette",
+      "title": "100% í þínum stíl",
+      "sub": "Við aðlögum hönnun og viðmót að útliti staðarins þíns"
+    }
+  ],
+  "menu": {
+    "heading": "Vefsíða og stafrænn matseðill",
+    "sub": {
+      "link": "Meira en QR matseðill!",
+      "rest": " Fáðu fullbúna vefsíðu með sérsniðinni hönnun, tengiliðaupplýsingum og borðabókunum."
+    },
+    "moreLabel": "Meira um matseðilinn",
+    "demoLabel": "Prufa: matseðillinn eins og gestir sjá hann",
+    "mockupAlt": "Sími með forsíðu vefsíðu veitingastaðar og sími með upplýsingum um rétt",
+    "bullets": [
+      {
+        "icon": "Languages",
+        "title": "Sjálfvirkar þýðingar á 35 tungumál",
+        "sub": "Afgreiddu erlenda gesti án tungumálaörðugleika — sjálfvirkar þýðingar sjá um allt"
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "Pantanir beint af borðinu",
+        "sub": "Einfaldaðu reksturinn — taktu við pöntunum frá borðum fljótt og örugglega, án þjóns"
+      },
+      {
+        "icon": "WheatOff",
+        "title": "Ofnæmisvaldar og mataræði",
+        "sub": "Merktu ofnæmisvalda og mataræði (vegan, sterkt) svo gestir geti valið mat á auðveldari og öruggari hátt"
+      }
+    ]
+  },
+  "reservations": {
+    "heading": "Borðabókanir",
+    "sub": {
+      "link": "Snjallar borðabókanir!",
+      "rest": " Sjálfvirkt bókanakerfi sem heldur utan um laus borð og dagskrána þína."
+    },
+    "moreLabel": "Meira um bókanir",
+    "demoLabel": "Prufa: bókanadagatal",
+    "mockupAlt": "Spjaldtölva með bókanadagatali: borð eftir dögum og tímum",
+    "bullets": [
+      {
+        "icon": "CalendarCheck",
+        "title": "Skýrt yfirlit yfir bókanir",
+        "sub": "Sjónrænt yfirlit eftir dögum og borðum — sjáðu strax hvar og hvenær er laust"
+      },
+      {
+        "icon": "SlidersHorizontal",
+        "title": "Sveigjanleg uppsetning bókana",
+        "sub": "Stilltu opnunartíma, lengd bókana og myndir af borðum, og taktu við séróskum gesta"
+      },
+      {
+        "icon": "Users",
+        "title": "Stýring á flæði gesta",
+        "sub": "Veldu það bókanafyrirkomulag sem hentar þér og haltu fullri stjórn á flæði gesta"
+      }
+    ]
+  },
+  "orders": {
+    "heading": "Móttaka pantana við borð",
+    "sub": {
+      "link": "Pantanir beint í eldhúsið!",
+      "rest": " Pöntun frá borði eða þjóni birtist samstundis á eldhússkjánum — engir pappírsmiðar, engin bið."
+    },
+    "moreLabel": "Meira um pantanir",
+    "demoLabel": "Prufa: pantanaskjár",
+    "mockupSrc": "/landing/feature-orders-modal.webp",
+    "mockupAlt": "Spjaldtölva með opinni pöntun: listi yfir rétti og aðgerðir — breyta um borð, skipta pöntun, bæta við afslætti",
+    "bullets": [
+      {
+        "icon": "ShoppingCart",
+        "title": "Gestur eða þjónn",
+        "sub": "Gestir panta frá borðinu gegnum QR kóða, þjónar úr síma eða spjaldtölvu"
+      },
+      {
+        "icon": "Map",
+        "title": "Salarteikning með stöðu",
+        "sub": "Borð á teikningunni eru litamerkt eftir stöðu — sjáðu í fljótu bragði hver bíður eftir pöntun og hvert á að fara næst"
+      },
+      {
+        "icon": "Receipt",
+        "title": "Reikningi skipt",
+        "sub": "Skiptu pöntun á milli gesta og lokaðu borðum án ruglings við greiðslu"
+      }
+    ]
+  },
+  "kds": {
+    "heading": "Eldhússkjár (KDS)",
+    "sub": {
+      "link": "Eldhús í takt!",
+      "rest": " Pantanir úr sal og af QR matseðli birtast samstundis á skjá kokksins — með athugasemdum, ofnæmisvöldum og tímamæli."
+    },
+    "moreLabel": "Meira um KDS",
+    "demoLabel": "Prufa: eldhússkjár",
+    "mockupAlt": "Spjaldtölva með eldhússkjá: pantanir eftir borðum í dálkum með stöðu",
+    "bullets": [
+      {
+        "icon": "LayoutGrid",
+        "title": "Skjáir eftir vinnustöðvum",
+        "sub": "Aðskildar spjaldtölvur fyrir heita matinn, barinn og eftirréttina — hver stöð sér aðeins sína rétti"
+      },
+      {
+        "icon": "Timer",
+        "title": "Staða og tímamælir",
+        "sub": "Dálkar fyrir í vinnslu / tilbúið / afgreitt og tími á hverja pöntun — staðan breytist með einum smelli"
+      },
+      {
+        "icon": "ShieldAlert",
+        "title": "Ofnæmisvaldar og athugasemdir",
+        "sub": "Ofnæmisvaldar og séróskir gesta eru litamerktar — kokkurinn missir ekki af neinu mikilvægu"
+      }
+    ]
+  },
+  "bundle": {
+    "heading": "Allt sem knýr veitingastaðinn þinn.",
+    "headingAccent": "Í einu smáforriti.",
+    "sub": "Matseðill, eldhús og bókanir á einum stað — nútímalegt, hratt og hannað fyrir raunverulegan rekstur veitingastaða. Engin aukagjöld eða verðlagning per eiginleika."
+  },
+  "benefits": [
+    {
+      "icon": "Languages",
+      "tag": "Stafrænn matseðill",
+      "title": "Matseðill sem selur.",
+      "bullets": [
+        "35 tungumál með gervigreind",
+        "Hágæða hönnun",
+        "Verð uppfærist samstundis"
+      ],
+      "image": "/landing/feature-design.webp",
+      "imageAlt": "Tveir símar á kaffihúsaborði: upphafsskjár stafræns matseðils og tengiliðasíða með korti"
+    },
+    {
+      "icon": "ChefHat",
+      "tag": "Eldhússkjár",
+      "title": "Eldaðu hraðar án þess að missa af neinu.",
+      "bullets": [
+        "Beint á skjáinn",
+        "Athugasemdir og ofnæmisvaldar",
+        "Spjaldtölva eða sími"
+      ],
+      "image": "/landing/feature-kds-cards.webp",
+      "imageAlt": "Spjaldtölva á barborði sýnir eldhússkjá með pöntunum eftir borðum"
+    },
+    {
+      "icon": "CalendarCheck",
+      "tag": "Borðabókanir",
+      "title": "Borðabókanir á sjálfstýringu.",
+      "bullets": [
+        "Bókanir án símtala",
+        "Sjálfvirk staðfesting",
+        "Dagatal eftir borðum"
+      ],
+      "image": "/landing/feature-booking-calendar.webp",
+      "imageAlt": "Tvær spjaldtölvur sýna bókanadagatalið: daglegt yfirlit eftir borðum og mánaðarlegt yfirlit"
+    },
+    {
+      "icon": "Receipt",
+      "tag": "Pantanir við borð",
+      "title": "Pantanir beint í eldhúsið.",
+      "bullets": [
+        "Gestur eða þjónn",
+        "Beint í eldhúsið",
+        "Kveiktu á þessu þegar þér hentar"
+      ],
+      "image": "/landing/feature-orders-map.webp",
+      "imageAlt": "Spjaldtölva með pantanaskjá: listi yfir pantanir og litamerkt salarteikning með borðum."
+    }
+  ],
+  "seeDetails": "Nánar",
+  "platform": {
+    "hardwareTitle": "Notaðu þinn eigin vélbúnað",
+    "hardwareSub": "Við neyðum þig ekki til að kaupa vélbúnað af okkur. Notaðu símana, spjaldtölvurnar og tölvurnar sem þú átt nú þegar.",
+    "anywhereTitle": "Virkar alls staðar",
+    "anywhereSub": "Sími, spjaldtölva, fartölva, borðtölva. Android, iOS, Windows, Mac, Linux. Í öllum nútímavöfrum, engin uppsetning."
+  },
+  "activities": {
+    "heading": "Eitt kerfi —",
+    "headingAccent": "allur veitingastaðurinn.",
+    "sub": "Hraðari þjónusta, rólegra eldhús, lægri kostnaður og gestir sem koma aftur — allt í einu kerfi.",
+    "groups": [
+      {
+        "icon": "Smartphone",
+        "tag": "Við borðið — gestur",
+        "bullets": [
+          "QR matseðill á 35 tungumálum",
+          "Pantaðu án þess að bíða eftir þjóni",
+          "Kallaðu á þjón eða biddu um reikninginn",
+          "Borðabókanir allan sólarhringinn",
+          "Sérstakur QR kóði fyrir hvert borð",
+          "Ekkert smáforrit þarf — opnast í vafranum",
+          "Merkingar fyrir ofnæmisvalda og mataræði til að sía"
+        ]
+      },
+      {
+        "icon": "ChefHat",
+        "tag": "Í eldhúsinu",
+        "bullets": [
+          "Pantanir á skjá samstundis",
+          "Dálkar fyrir í vinnslu / tilbúið / afgreitt",
+          "Ofnæmisvaldar og athugasemdir litamerktar",
+          "Spjaldtölva eða sími — engir pappírsmiðar"
+        ]
+      },
+      {
+        "icon": "ChartColumn",
+        "tag": "Stjórnun",
+        "bullets": [
+          "Breytingar á matseðli og verði — samstundis",
+          "Gervigreindarþýðingar með einum smelli",
+          "Sölugreiningar og skýrslur",
+          "Margir veitingastaðir í einum aðgangi",
+          "Gervigreind gerir prentaðan matseðil stafrænan á 60 sekúndum",
+          "Þitt eigið lén með SSL"
+        ]
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Allt kerfið á 10 mínútum. ",
+    "headingAccent": "14 daga fullur aðgangur.",
+    "sub": "Matseðill, pantanir, bókanir og eldhús — ekkert kort, hættu hvenær sem er; {count} veitingastaðir treysta okkur, það eina sem þú þarft er netfang."
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "locale": "fi",
+  "slug": "tilausjarjestelma-ravintola",
+  "trackPrefix": "l_orders",
+  "meta": {
+    "title": "Ravintolan tilausjärjestelmä — Asiakas ja tarjoilija | IQ Rest",
+    "description": "Ravintolan tilausten vastaanotto puhelimella tai tabletilla: salikartta, laskun jakaminen, tilat, valinnat ja kommentit. Asiakkaat tilaavat pöydästä, tarjoilijat omalta laitteeltaan. 14 päivää ilmaiseksi.",
+    "canonical": "https://iq-rest.com/fi/tilausjarjestelma-ravintola",
+    "ogLocale": "fi_FI",
+    "ogTitle": "Ravintolan tilausjärjestelmä — Asiakas ja tarjoilija",
+    "ogDescription": "Asiakas pöydässä tai tarjoilija puhelimella — tilaus menee keittiöön välittömästi. Salikartta, laskun jakaminen, tilat, valinnat ja kommentit.",
+    "brandLine": "IQ Rest — Ravintolan tilausjärjestelmä"
+  },
+  "hero": {
+    "headline": "Tilaukset pöydästä —",
+    "cta": "Ota tilausjärjestelmä käyttöön",
+    "sub": "Asiakkaat tilaavat pöydästä tai tarjoilijat miltä tahansa laitteelta — suoraan keittiöön. Salikartta, laskun jakaminen.",
+    "headlineAccent": "suoraan keittiöön",
+    "demoLabel": "Demo: tilausnäkymä",
+    "tablet": {
+      "src": "/landing/feature-orders-modal.webp",
+      "alt": "Tabletti ja avoin tilaus: annoslista ja toiminnot — vaihda pöytää, jaa tilaus, lisää alennus"
+    }
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Ravintolat"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Kahvilat"
+    },
+    {
+      "icon": "Martini",
+      "label": "Baarit"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hotellit"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzeriat"
+    }
+  ],
+  "scan": {
+    "heading": "Laita tilausjärjestelmä kuntoon",
+    "headingAccent": "5 minuutissa.",
+    "sub": "Skannaa paperinen ruokalista tai PDF — tekoäly tunnistaa annokset, hinnat ja kategoriat. Yhdistä tabletti salissa ja aloita tilausten vastaanotto pöydistä.",
+    "cta": "Skannaa ruokalista"
+  },
+  "subFeatures": [
+    {
+      "icon": "Map",
+      "eyebrow": "Tilauslista ja salikartta",
+      "heading": "Tilauslista salikartan vieressä.",
+      "body": "Kaikki aktiiviset tilaukset näkyvät oikealla: tila, loppusumma, tilausaika ja tuotteiden määrä. Vasemmalla on salikartta: pöydät on värikoodattu tilan mukaan — tyhjä, varattu, vaatii huomiota. Pöydän napauttaminen avaa sen tilauksen, kortin napauttaminen avaa tarkemman näkymän. Ei hyppimistä ruutujen välillä.",
+      "bullets": [
+        "Salikartta: pöydät värikoodattu tilauksen tilan mukaan.",
+        "Tilauslista vieressä — loppusumma, aika ja tuotteiden määrä.",
+        "Pöydän napauttaminen avaa tilauksen tai luo uuden."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-map.webp",
+        "alt": "Tabletti tarjoilijan pisteellä: tilauslista ja salikartta värikoodatuilla pöydillä"
+      }
+    },
+    {
+      "icon": "ClipboardList",
+      "eyebrow": "Tilauskortti",
+      "heading": "Tilauskortti: tilat, kopiointi ja poisto — yhdellä napautuksella.",
+      "body": "Jokaisella tuotteella on oma tilansa (Odottaa / Valmistuksessa / Valmis / Tarjoiltu) — keittiö ja tarjoilija näkevät saman tilanteen reaaliajassa. Pisteen napauttaminen avaa toimintovalikon: vaihda tilaa, kopioi tuote samoilla valinnoilla tai poista se. Kaikki tapahtuu suoraan tilauskortin sisällä.",
+      "bullets": [
+        "Tuotekohtainen tila: Odottaa / Valmistuksessa / Valmis / Tarjoiltu.",
+        "Kopioi tuote yhdellä napautuksella — samat valinnat mukana.",
+        "Poista tuote suoraan tilauskortilta."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-detail.webp",
+        "alt": "Tabletti ja tarkka tilauskortti: annosten tilat, tuotteiden kopiointi ja poisto"
+      }
+    },
+    {
+      "icon": "Receipt",
+      "eyebrow": "Laskun jakaminen",
+      "heading": "Laskun jakaminen, kun asiakkaat maksavat erikseen.",
+      "body": "Asiakkaat haluavat maksaa erikseen — valitse tuotteet, jotka siirtyvät uudelle laskulle; loput jäävät nykyiselle. Järjestelmä näyttää molemmat loppusummat välittömästi. Yksi napautus \"Jaa tilaus\" -painikkeesta — ja sinulla on kaksi erillistä tilausta oikeilla summilla, molemmat samassa pöydässä.",
+      "bullets": [
+        "Valitse jaettavat tuotteet valintaruuduilla.",
+        "Uuden ja jäljelle jäävän laskun summat näkyvät heti.",
+        "Yksi napautus — ja tilaus on jaettu ilman manuaalista laskemista."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-split.webp",
+        "alt": "Tabletti ravintolan pöydässä: laskun jakaminen asiakkaiden kesken"
+      }
+    },
+    {
+      "icon": "Smartphone",
+      "eyebrow": "Tilausten kirjaus puhelimella",
+      "heading": "Tuotteiden lisääminen puhelimella — kolmessa vaiheessa.",
+      "body": "Tarjoilijat eivät ole sidottuja yhteen laitteeseen: he avaavat tilausnäkymän omalla puhelimellaan ja lisäävät tuotteen kolmessa vaiheessa — valitse kategoria, valitse annos, valitse lisukkeet (koko, kypsyysaste, lisäkastikkeet ja ainesosat). Hinta lasketaan uudelleen automaattisesti. Keittiökommentti lisätään viimeisessä vaiheessa.",
+      "bullets": [
+        "Kolme vaihetta: kategoria → annos → valinnat.",
+        "Lisävalinnat (koko, lisukkeet, ainesosat) hintoineen yhdellä napautuksella.",
+        "Kommenttikenttä viimeisessä vaiheessa."
+      ],
+      "image": {
+        "src": "/landing/feature-orders-mobile.webp",
+        "alt": "Neljä puhelinta näyttää tuotteen lisäämisen vaiheet: kategoria, annos, koko, kommentti"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Mitä ravintoloitsijat kysyvät IQ Restin tilausjärjestelmästä. Jos kysymystäsi ei löydy — laita viestiä WhatsAppissa.",
+    "items": [
+      {
+        "q": "Voiko useampi tarjoilija työskennellä samanaikaisesti eri laitteilla?",
+        "a": "Kyllä. Jokainen tarjoilija yhdistää oman laitteensa ja näkee samat pöydät, tilaukset ja tilat reaaliajassa. Yhden tekemä muutos näkyy heti muille — ei ristiriitoja tai lukittuja ruutuja."
+      },
+      {
+        "q": "Voivatko tarjoilijat käyttää omia laitteitaan?",
+        "a": "Kyllä. Tilausnäkymä toimii selaimessa — mitään ei tarvitse asentaa. Puhelin tai tabletti yhdistetään 6-numeroisella koodilla hallintapaneelista, ja pääsy perutaan yhdellä napautuksella vuoron päätteeksi."
+      },
+      {
+        "q": "Voinko lisätä annoksiin pakollisia valintoja (koko, kypsyysaste)?",
+        "a": "Kyllä. Annoksella voi olla mikä tahansa määrä valintaryhmiä — pakollisia (\"Koko\": Pieni / Keskikokoinen / Iso) ja valinnaisia (\"Kypsyysaste\": rare / medium / well done). Valinnat vaikuttavat hintaan. Pakollisen ryhmän kohdalla järjestelmä vaatii valinnan — mikä poistaa virheet."
+      },
+      {
+        "q": "Voinko lisätä annokseen kommentteja ja lisätuotteita?",
+        "a": "Kyllä. Viimeisessä vaiheessa on kommenttikenttä (\"ei sipulia\", \"pähkinäallergia\"). Lisätuotteet määritetään maksullisina valintoina (\"+ BBQ-kastike\", \"+ Leipä\"). Kommentit näkyvät keittiönäytöllä värikorostettuina."
+      },
+      {
+        "q": "Onko tilauksista saatavilla tilastoja?",
+        "a": "Kyllä. Analytiikkaosio näyttää myynnin päiväkohtaisesti, keskiostoksen ja myydyimmät annokset. Nämä tiedot auttavat vuorojen ja sisäänostojen suunnittelussa."
+      },
+      {
+        "q": "Voiko tilauksia jakaa?",
+        "a": "Kyllä. Valitse tuotteet, jotka menevät uudelle laskulle — molemmat loppusummat lasketaan automaattisesti uudelleen, ilman manuaalista laskemista tai hyppimistä osioiden välillä."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Tilaukset kuntoon 10 minuutissa. ",
+    "headingAccent": "14 päivän täysi käyttöoikeus.",
+    "sub": "Ei luottokorttia, peruuta milloin tahansa. {count} ravintolaa ottaa tilaukset vastaan meidän kauttamme. Tarvitset vain sähköpostiosoitteen."
+  },
+  "hideFeatureHeading": true,
+  "spotlights": [
+    {
+      "heading": "Salikartta ja tilauslista",
+      "sub": "Aktiiviset tilaukset salikartan vieressä: pöydät on värikoodattu tilan mukaan, ja napautus avaa tilauksen tai luo uuden.",
+      "bullets": [
+        {
+          "icon": "Map",
+          "title": "Pöydät tilan mukaan",
+          "sub": "Tyhjä, varattu, vaatii huomiota — näet tilanteen yhdellä vilkaisulla"
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Aktiivinen tilauslista",
+          "sub": "Loppusumma, tilausaika ja tuotteiden määrä jokaiselle tilaukselle"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Uusi tilaus kartalta",
+          "sub": "Vapaan pöydän napauttaminen avaa tilausnäkymän heti"
+        }
+      ]
+    },
+    {
+      "heading": "Tila jokaiselle tuotteelle",
+      "sub": "Keittiö ja tarjoilija näkevät saman tilanteen: jokaisella annoksella on oma tilansa — tilatusta tarjoiltuun.",
+      "bullets": [
+        {
+          "icon": "Timer",
+          "title": "Annoskohtaiset tilat",
+          "sub": "Odottaa, Valmistuksessa, Valmis, Tarjoiltu — tuotekohtaisesti, ei tilauskohtaisesti"
+        },
+        {
+          "icon": "Receipt",
+          "title": "Tuotteen kopiointi",
+          "sub": "Toista annos samoilla valinnoilla yhdellä napautuksella"
+        },
+        {
+          "icon": "SlidersHorizontal",
+          "title": "Muokkaukset paikallaan",
+          "sub": "Poista tuote suoraan tilauskortilta"
+        }
+      ]
+    },
+    {
+      "heading": "Laskun jakaminen",
+      "sub": "Asiakkaat maksavat erikseen — valitse tuotteet, ja ne siirtyvät uudelle laskulle. Loppusummat lasketaan heti uudelleen.",
+      "bullets": [
+        {
+          "icon": "Receipt",
+          "title": "Tuotekohtaiset valintaruudut",
+          "sub": "Valitse annokset uudelle laskulle; loput jäävät nykyiselle"
+        },
+        {
+          "icon": "ChartColumn",
+          "title": "Summat näkyvät heti",
+          "sub": "Uusi ja jäljelle jäävä lasku lasketaan automaattisesti"
+        },
+        {
+          "icon": "ShoppingCart",
+          "title": "Yksi napautus",
+          "sub": "Tilaus jaetaan ilman manuaalista laskemista tai laskinta"
+        }
+      ]
+    },
+    {
+      "heading": "Tilausten kirjaus tarjoilijan puhelimelta",
+      "sub": "Tarjoilijat ottavat tilauksen vastaan omalla laitteellaan kolmessa vaiheessa: kategoria, annos, valinnat.",
+      "bullets": [
+        {
+          "icon": "Smartphone",
+          "title": "Mikä tahansa laite",
+          "sub": "Puhelin tai tabletti selaimella — ei vaadi asennusta"
+        },
+        {
+          "icon": "LayoutGrid",
+          "title": "Maksulliset valinnat",
+          "sub": "Koko, lisukkeet ja annosvaihtoehdot hintoineen yhdellä napautuksella"
+        },
+        {
+          "icon": "MessageCircle",
+          "title": "Annoskommentit",
+          "sub": "Asiakkaan toiveet lisätään viimeisessä vaiheessa — keittiö näkee ne heti"
+        }
+      ]
+    }
+  ]
+}

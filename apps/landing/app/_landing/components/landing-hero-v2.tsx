@@ -5,6 +5,7 @@ import {
   Clock,
   Coffee,
   CreditCard,
+  Hotel,
   Martini,
   Pizza,
   UtensilsCrossed,
@@ -36,6 +37,7 @@ const HERO_ICONS = {
   restaurant: UtensilsCrossed,
   cafe: Coffee,
   bar: Martini,
+  hotel: Hotel,
   pizza: Pizza,
   card: CreditCard,
   clock: Clock,
@@ -89,12 +91,12 @@ export function LandingHeroV2({ locale, copy }: { locale: string; copy: HeroV2Co
   const m = copy.mockups;
 
   return (
-    <section data-section="hero" className="w-full">
+    <section data-section="hero">
       {/* One big card, same construction as the feature cards below: copy on
           the left, a tinted panel with the devices on the right. */}
-      <div className="max-w-[1000px] mx-auto overflow-hidden rounded-2xl border border-border grid grid-cols-1 lg:grid-cols-[11fr_9fr]">
-        <div className="order-2 lg:order-1 flex flex-col items-center text-center lg:items-start lg:text-start gap-6 p-5 sm:p-6">
-          <span className="flex flex-wrap items-center justify-center lg:justify-start gap-x-4 gap-y-1 text-sm text-muted-foreground/80">
+      <div className="overflow-hidden rounded-2xl border border-border grid grid-cols-1 lg:grid-cols-[11fr_9fr]">
+        <div className="order-2 lg:order-1 min-w-0 flex flex-col items-start text-start gap-6 p-6 sm:p-8">
+          <span className="flex flex-wrap items-center justify-start gap-x-4 gap-y-1 text-sm text-muted-foreground/80">
             {copy.verticals.map((v) => (
               <IconLabel key={v.label} item={v} />
             ))}
@@ -102,12 +104,13 @@ export function LandingHeroV2({ locale, copy }: { locale: string; copy: HeroV2Co
 
           {/* my-auto centres the headline block between the pinned verticals
               above and the pinned CTAs below. */}
-          <div className="my-auto flex flex-col gap-4">
-            {/* whitespace-nowrap: the accent is the payoff of the headline — it
-                must never break across two lines. */}
+          <div className="my-auto min-w-0 flex flex-col gap-4">
+            {/* sm:whitespace-nowrap: the accent is the payoff of the headline —
+                kept on one line once there's room, but free to wrap on
+                narrow mobile widths where forcing it caused overflow. */}
             <h1 className="text-4xl sm:text-[2.5rem] font-medium tracking-tight leading-[1.1]">
               {copy.title}{" "}
-              <span className="whitespace-nowrap bg-gradient-to-br from-primary to-amber-400 bg-clip-text text-transparent">
+              <span className="sm:whitespace-nowrap bg-gradient-to-br from-primary to-amber-400 bg-clip-text text-transparent">
                 {copy.titleAccent}
                 {copy.titleAfter}
               </span>
@@ -122,7 +125,7 @@ export function LandingHeroV2({ locale, copy }: { locale: string; copy: HeroV2Co
               the artwork panel next to them. */}
           {/* Same pair as the feature cards below: a brand-gradient primary and
               a quiet outline next to it, both in the header's button box. */}
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-3">
             <button
               type="button"
               onClick={() => cta.onClick("Hero CTA")}
@@ -158,7 +161,7 @@ export function LandingHeroV2({ locale, copy }: { locale: string; copy: HeroV2Co
           <div className="absolute left-[36%] bottom-0 w-[30%] z-30">
             <Phone cropBottom ratio="720 / 1278" image={m.phone2} sizes="(max-width: 1024px) 28vw, 170px" />
           </div>
-        </div>
+      </div>
       </div>
     </section>
   );

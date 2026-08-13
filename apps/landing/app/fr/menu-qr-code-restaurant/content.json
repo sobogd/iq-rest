@@ -1,0 +1,151 @@
+{
+  "locale": "fr",
+  "slug": "menu-qr-code-restaurant",
+  "trackPrefix": "l_fr_qr",
+  "featureHeading": {
+    "heading": "Bien plus qu'un QR code",
+    "sub": "Tout ce qu'un simple scan devient pour vos clients et votre salle."
+  },
+  "meta": {
+    "title": "Menu QR pour restaurants | IQ Rest",
+    "description": "Menu QR pour restaurants : le client scanne le QR code sur la table, ouvre le menu dans son navigateur et commande dans sa langue. 14 jours gratuits, sans carte bancaire.",
+    "canonical": "https://iq-rest.com/fr/menu-qr-code-restaurant",
+    "ogLocale": "fr_FR",
+    "ogTitle": "Menu QR pour restaurants",
+    "ogDescription": "Un QR sur la table, le menu dans le téléphone — photos, allergènes, 35 langues et mises à jour en temps réel.",
+    "brandLine": "IQ Rest — Menu QR pour restaurants"
+  },
+  "hero": {
+    "headline": "Menu QR :\nscannez et commandez",
+    "cta": "Créer un menu QR",
+    "sub": "Le client scanne le QR sur la table, consulte photos et allergènes en 35 langues et commande — sans application."
+  },
+  "heroVerticals": [
+    {
+      "icon": "UtensilsCrossed",
+      "label": "Restaurants"
+    },
+    {
+      "icon": "Coffee",
+      "label": "Cafés"
+    },
+    {
+      "icon": "Martini",
+      "label": "Bars"
+    },
+    {
+      "icon": "Hotel",
+      "label": "Hôtels"
+    },
+    {
+      "icon": "Pizza",
+      "label": "Pizzerias"
+    }
+  ],
+  "scan": {
+    "heading": "Vous avez déjà un menu papier ou un PDF ?",
+    "headingAccent": "L'IA le transforme en menu QR en 60 secondes.",
+    "sub": "Téléchargez une photo du menu ou un PDF — l'IA reconnaît les catégories, les plats et les prix et les connecte aussitôt au menu QR.",
+    "cta": "Créer un menu QR"
+  },
+  "subFeatures": [
+    {
+      "icon": "Languages",
+      "eyebrow": "Un QR, 35 langues",
+      "heading": "Un seul QR code, un menu en 35 langues.",
+      "body": "Le client scanne le QR et choisit sa langue : la traduction est faite par une IA au flair culinaire, pas par un traducteur ordinaire. Fini les menus séparés pour touristes et les feuillets éparpillés sur la table.",
+      "bullets": [
+        "Une seule impression de QR couvre 35 langues, incluse dans l'abonnement.",
+        "L'IA comprend le langage culinaire — les noms des plats sonnent naturellement dans chaque langue.",
+        "Le client change de langue dans le menu, sans rescanner le QR."
+      ],
+      "image": {
+        "src": "/landing/feature-multilang.webp",
+        "alt": "Deux clients scannent le même QR code sur la table et lisent le menu dans des langues différentes"
+      }
+    },
+    {
+      "icon": "ShieldAlert",
+      "eyebrow": "Allergènes dans le QR",
+      "heading": "Allergènes et étiquettes alimentaires dans le menu QR.",
+      "body": "Chaque plat du menu relié au QR peut porter des étiquettes : gluten, lactose, fruits à coque, fruits de mer, options véganes et sans gluten. Le client filtre depuis son téléphone les plats selon ses restrictions, sans interroger le personnel.",
+      "bullets": [
+        "14 catégories d'allergènes au niveau du plat.",
+        "Étiquettes végan, végétarien et sans gluten en un clic dans le panneau.",
+        "Le client filtre le menu QR selon ses restrictions."
+      ],
+      "image": {
+        "src": "/landing/feature-allergens.webp",
+        "alt": "Un client filtre le menu QR par allergènes sur son téléphone pendant que le propriétaire modifie la liste sur une tablette"
+      }
+    },
+    {
+      "icon": "Palette",
+      "eyebrow": "Bien plus qu'un simple QR",
+      "heading": "Un menu QR présenté comme le site du restaurant.",
+      "body": "Après le scan du code, le client ne tombe pas sur un PDF plat : il découvre un écran d'accueil avec vidéo ou photo percutante, la présentation de l'établissement et une page de contacts avec carte, téléphones et réseaux sociaux. Le QR devient la porte d'entrée en ligne de votre restaurant.",
+      "bullets": [
+        "Vidéo de fond ou photo percutante sur l'écran d'accueil du menu QR.",
+        "De l'espace pour présenter le concept de l'établissement et de chaque catégorie.",
+        "Page de contacts intégrée : carte, téléphone, Instagram, WhatsApp."
+      ],
+      "image": {
+        "src": "/landing/feature-design.webp",
+        "alt": "Deux téléphones sur une table : écran d'accueil du menu QR avec vidéo de fond et page de contacts avec carte"
+      }
+    },
+    {
+      "icon": "ShoppingCart",
+      "eyebrow": "Commande via le QR · en option",
+      "heading": "Depuis le QR code, le client peut aussi commander.",
+      "body": "Au-delà de la consultation, le menu QR peut devenir un canal de commandes : le client ajoute des plats au panier et envoie sa demande. La commande arrive au serveur en salle, sur WhatsApp ou sur l'écran de cuisine. La fonction s'active et se désactive dans les réglages selon vos besoins.",
+      "bullets": [
+        "Panier, commentaires et envoi de la commande directement après le scan du QR.",
+        "La commande arrive instantanément en salle, sur WhatsApp ou sur l'écran de cuisine.",
+        "La fonction peut s'activer par horaires, par salles ou par restaurant."
+      ],
+      "image": {
+        "src": "/landing/feature-ordering.webp",
+        "alt": "Deux téléphones sur une table : panier créé depuis le menu QR et confirmation de la commande envoyée"
+      }
+    }
+  ],
+  "faq": {
+    "sub": "Ce que les restaurateurs demandent sur le menu QR d'IQ Rest. Vous ne trouvez pas votre question ? Écrivez-nous sur WhatsApp.",
+    "items": [
+      {
+        "q": "Comment fonctionne le menu QR d'IQ Rest ?",
+        "a": "Sur chaque table, un QR code imprimé. Le client le scanne avec l'appareil photo de son téléphone, et le navigateur ouvre le menu du restaurant — photos, descriptions, allergènes et prix à jour. Ni le client ni le personnel n'ont d'application à télécharger."
+      },
+      {
+        "q": "Faut-il des compétences techniques pour créer un menu QR ?",
+        "a": "Non. Le panneau fonctionne par clics et glisser-déposer, sans code ni configuration compliquée. Ajouter un plat prend quelques secondes : nom, prix, photo. La configuration initiale prend généralement entre 30 minutes et une heure ; si vous avez déjà un menu en PDF, l'IA le convertit automatiquement."
+      },
+      {
+        "q": "Les clients doivent-ils installer une application pour lire le QR ?",
+        "a": "Non. L'appareil photo intégré des iPhone et Android reconnaît le QR code en quelques secondes et ouvre le menu directement dans le navigateur. Le panneau d'administration fonctionne lui aussi dans tout navigateur moderne — téléphone, tablette ou ordinateur portable."
+      },
+      {
+        "q": "Comment imprime-t-on les QR codes pour les tables ?",
+        "a": "Les QR codes sont générés automatiquement dans le panneau (un par table ou un pour tout l'établissement) et se téléchargent en PDF prêt à imprimer. Une imprimante de bureau et un support suffisent : chevalet, autocollant ou dessous de verre."
+      },
+      {
+        "q": "Peut-on utiliser son propre domaine pour le menu QR ?",
+        "a": "Oui. Nous prenons en charge le domaine du restaurant avec certificat SSL (par exemple menu.vashrestoran.ru) : quand le client scanne le QR, il voit l'adresse de votre restaurant, pas un sous-domaine générique. La configuration DNS prend 5 à 10 minutes, et nous vous accompagnons."
+      },
+      {
+        "q": "Puis-je gérer les QR codes de plusieurs restaurants depuis un seul compte ?",
+        "a": "Oui, sur demande. Un même compte peut regrouper plusieurs établissements, chacun avec ses QR codes, son menu, son design et ses statistiques. Écrivez-nous sur WhatsApp et nous activerons le mode multi-restaurants."
+      },
+      {
+        "q": "Est-il compliqué de lancer un menu QR de zéro ?",
+        "a": "Trois étapes : (1) créez les catégories ; (2) ajoutez les plats avec nom, prix et photo ; (3) imprimez les QR et placez-les sur les tables. Si vous avez déjà un menu papier ou un PDF, chargez-le — l'IA reconnaît les catégories et les prix et remplit les fiches. Un menu de base peut être en ligne en 5 minutes."
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Un menu QR en 10 minutes. ",
+    "headingAccent": "14 jours d'accès complet.",
+    "sub": "Sans carte bancaire, annulation à tout moment. {count} restaurants nous font confiance. Juste un email — et aucune application pour vos clients."
+  }
+}
