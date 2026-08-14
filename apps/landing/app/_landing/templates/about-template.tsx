@@ -69,12 +69,11 @@ export function AboutTemplate({
   locale: string;
   texts: LandingTexts;
   copy: AboutCopy;
-  /** Live restaurant count, substituted for "{count}". */
-  count: number;
+  /** Restaurant-count label ("500+"), substituted for "{count}". */
+  count: string;
   page?: string;
 }) {
-  const countLabel = count.toLocaleString(locale);
-  const withCount = (s: string) => s.replace("{count}", countLabel);
+  const withCount = (s: string) => s.replace("{count}", count);
   const wa = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(copy.waPrefill)}`;
 
   return (

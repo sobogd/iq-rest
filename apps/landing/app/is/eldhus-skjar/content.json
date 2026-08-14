@@ -3,8 +3,8 @@
   "slug": "eldhus-skjar",
   "trackPrefix": "l_kds",
   "meta": {
-    "title": "Eldhússkjár (KDS) fyrir veitingastaði — Pantanir á skjá kokksins | IQ Rest",
-    "description": "KDS eldhússkjár fyrir veitingastaði: pantanir úr sal og af QR matseðli fara beint á skjá kokksins. Dálkar eftir borðum, staða (Bíður / Í vinnslu / Tilbúið / Afgreitt), síur eftir vinnustöðvum. Keyrir á spjaldtölvu eða síma.",
+    "title": "Eldhússkjár (KDS) fyrir veitingastaði | IQ Rest",
+    "description": "KDS eldhússkjár fyrir veitingastaði: pantanir úr sal og af QR matseðli fara beint á skjá kokksins. Dálkar eftir borðum, staða og síur. Keyrir á spjaldtölvu eða síma.",
     "canonical": "https://iq-rest.com/is/eldhus-skjar",
     "ogLocale": "is_IS",
     "ogTitle": "Eldhússkjár (KDS) — Pantanir beint á skjá kokksins",

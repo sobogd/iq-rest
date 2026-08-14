@@ -162,6 +162,55 @@
       ]
     }
   ],
+  "comparison": {
+    "heading": "Zakaj restavracije izberejo nas,",
+    "headingAccent": "ne drugih sistemov",
+    "sub": "Večina orodij za menije se konča pri QR kodi. Spodaj je tisto, kar se pri vsakodnevnem delu zares razlikuje. Brez imen — sami primerjajte s katerim koli sistemom.",
+    "usLabel": "IQ Rest",
+    "othersLabel": "Drugi sistemi",
+    "rows": [
+      {
+        "title": "Rezervacije miz",
+        "us": "Vgrajeno: gosti rezervirajo prek spleta 24/7, osebje vidi rezervacije na tablici.",
+        "others": "Ločena plačljiva storitev, če sploh obstaja."
+      },
+      {
+        "title": "Alergeni in diete",
+        "us": "Označeni pri vsaki jedi in prikazani gostu v njegovem jeziku.",
+        "others": "V najboljšem primeru vrstica besedila v opisu."
+      },
+      {
+        "title": "Jedi, kategorije, fotografije",
+        "us": "Brez omejitev v vsaki konfiguraciji.",
+        "others": "Omejitve jedi in fotografij, ki rastejo s paketom."
+      },
+      {
+        "title": "Provizija od naročil",
+        "us": "0% — vsako naročilo gre neposredno v restavracijo.",
+        "others": "Pogosto odstotek od vsakega naročila."
+      },
+      {
+        "title": "Spletna stran menija",
+        "us": "Prava spletna stran, po želji na lastni domeni — ne le QR stran.",
+        "others": "Samo stran za QR kodo."
+      },
+      {
+        "title": "Besedila in oblikovanje",
+        "us": "Urejate lahko vsa besedila, barve in elemente oblikovanja.",
+        "others": "Običajno barva znamke in logotip."
+      },
+      {
+        "title": "Teme in postavitve",
+        "us": "Na izbiro več tem in postavitev menija.",
+        "others": "En standarden videz."
+      },
+      {
+        "title": "Video ozadje",
+        "us": "Video v glavi menija, ne le fotografije.",
+        "others": "Samo fotografije."
+      }
+    ]
+  },
   "faq": {
     "sub": "Kaj gostince najpogosteje zanima o digitalnem meniju v IQ Rest. Če vašega vprašanja ni na seznamu — pišite nam na WhatsApp.",
     "items": [

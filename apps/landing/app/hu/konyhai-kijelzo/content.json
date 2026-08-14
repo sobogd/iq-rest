@@ -3,8 +3,8 @@
   "slug": "konyhai-kijelzo",
   "trackPrefix": "l_kds",
   "meta": {
-    "title": "Konyhai Kijelző (KDS) Éttermeknek — Rendelések a Szakács Képernyőjén | IQ Rest",
-    "description": "KDS konyhai kijelző éttermeknek: a pályáról és a QR étlapról érkező rendelések egyenesen a szakács képernyőjére mennek. Oszlopok asztalonként, Függőben / Készül / Kész / Felszolgálva státuszok, pályarész szűrők. Tableten vagy telefonon fut.",
+    "title": "Konyhai kijelző (KDS) éttermeknek | IQ Rest",
+    "description": "KDS konyhai kijelző éttermeknek: a teremből és a QR étlapról érkező rendelések a szakács képernyőjére futnak be. Státuszok, szűrők, tableten vagy telefonon fut.",
     "canonical": "https://iq-rest.com/hu/konyhai-kijelzo",
     "ogLocale": "hu_HU",
     "ogTitle": "Konyhai Kijelző (KDS) — Rendelések Egyenesen a Szakács Képernyőjére",

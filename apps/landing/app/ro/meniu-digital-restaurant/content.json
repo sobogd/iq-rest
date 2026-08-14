@@ -162,6 +162,55 @@
       ]
     }
   ],
+  "comparison": {
+    "heading": "De ce restaurantele ne aleg pe noi,",
+    "headingAccent": "nu alte sisteme",
+    "sub": "Majoritatea instrumentelor de meniu se opresc la codul QR. Mai jos e ceea ce diferă cu adevărat în munca de zi cu zi. Fără nume — comparați singuri cu orice sistem.",
+    "usLabel": "IQ Rest",
+    "othersLabel": "Alte sisteme",
+    "rows": [
+      {
+        "title": "Rezervări de mese",
+        "us": "Integrat: oaspeții rezervă online 24/7, personalul vede rezervările pe tabletă.",
+        "others": "Un serviciu separat, cu plată, dacă există."
+      },
+      {
+        "title": "Alergeni și diete",
+        "us": "Marcați la fiecare preparat și afișați oaspetelui în limba lui.",
+        "others": "În cel mai bun caz, un rând de text în descriere."
+      },
+      {
+        "title": "Preparate, categorii, fotografii",
+        "us": "Fără limite în orice configurație.",
+        "others": "Limite de produse și fotografii care cresc odată cu abonamentul."
+      },
+      {
+        "title": "Comision pe comenzi",
+        "us": "0% — fiecare comandă ajunge direct la restaurant.",
+        "others": "Adesea un procent din fiecare comandă."
+      },
+      {
+        "title": "Site-ul meniului",
+        "us": "Un site complet, opțional pe domeniul propriu — nu doar o pagină QR.",
+        "others": "Doar o pagină în spatele unui cod QR."
+      },
+      {
+        "title": "Texte și design",
+        "us": "Toate textele, culorile și elementele de design pot fi editate.",
+        "others": "De obicei o culoare de brand și un logo."
+      },
+      {
+        "title": "Teme și layouturi",
+        "us": "Mai multe teme și așezări de meniu din care puteți alege.",
+        "others": "Un singur aspect standard."
+      },
+      {
+        "title": "Fundal video",
+        "us": "Video în antetul meniului, nu doar fotografii.",
+        "others": "Doar fotografii."
+      }
+    ]
+  },
   "faq": {
     "sub": "Ce întreabă proprietarii de restaurante despre meniul digital IQ Rest. Dacă nu găsești întrebarea ta — scrie-ne pe WhatsApp.",
     "items": [

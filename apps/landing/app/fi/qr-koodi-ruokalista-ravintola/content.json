@@ -8,7 +8,7 @@
   },
   "meta": {
     "title": "QR-ruokalista ravintoloille | IQ Rest",
-    "description": "QR-ruokalista ravintoloille: asiakkaat skannaavat pöydässä olevan QR-koodin, avaavat ruokalistan selaimessaan ja tilaavat omalla kielellään. 14 päivää ilmaiseksi, ei luottokorttia.",
+    "description": "QR-ruokalista ravintoloille: asiakkaat skannaavat QR-koodin pöydässä, avaavat ruokalistan selaimessa ja tilaavat omalla kielellään. 14 päivää ilmaiseksi.",
     "canonical": "https://iq-rest.com/fi/qr-koodi-ruokalista-ravintola",
     "ogLocale": "fi_FI",
     "ogTitle": "QR-ruokalista ravintoloille",

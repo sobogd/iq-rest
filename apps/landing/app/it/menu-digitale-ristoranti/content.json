@@ -162,6 +162,55 @@
       ]
     }
   ],
+  "comparison": {
+    "heading": "Perché i ristoranti scelgono noi",
+    "headingAccent": "e non altri sistemi",
+    "sub": "La maggior parte degli strumenti per il menù si ferma al codice QR. Le righe qui sotto mostrano cosa cambia davvero nel lavoro quotidiano. Nessun nome: confrontatele con qualsiasi sistema.",
+    "usLabel": "IQ Rest",
+    "othersLabel": "Altri sistemi",
+    "rows": [
+      {
+        "title": "Prenotazione dei tavoli",
+        "us": "Integrata: gli ospiti prenotano online 24/7 e il personale vede le prenotazioni sul tablet.",
+        "others": "Un servizio a pagamento a parte, quando esiste."
+      },
+      {
+        "title": "Allergeni e diete",
+        "us": "Indicati su ogni piatto e mostrati all'ospite nella sua lingua.",
+        "others": "Nel migliore dei casi, una riga di testo nella descrizione."
+      },
+      {
+        "title": "Piatti, categorie e foto",
+        "us": "Senza limiti in qualsiasi configurazione.",
+        "others": "Limiti di piatti e foto che crescono con il piano."
+      },
+      {
+        "title": "Commissione sugli ordini",
+        "us": "0%: ogni ordine va direttamente al ristorante.",
+        "others": "Spesso una percentuale su ogni ordine."
+      },
+      {
+        "title": "Sito del menù",
+        "us": "Un sito completo, anche con dominio proprio — non solo una pagina dietro il QR.",
+        "others": "Solo una pagina dietro il codice QR."
+      },
+      {
+        "title": "Testi e design",
+        "us": "Tutti i testi, i colori e gli elementi di stile sono modificabili.",
+        "others": "Di solito un colore aziendale e un logo."
+      },
+      {
+        "title": "Temi e layout",
+        "us": "Diversi temi e layout del menù tra cui scegliere.",
+        "others": "Un unico aspetto standard."
+      },
+      {
+        "title": "Sfondo video",
+        "us": "Video nell'intestazione del menù, non solo foto.",
+        "others": "Solo foto."
+      }
+    ]
+  },
   "faq": {
     "sub": "Le domande dei ristoratori sul menù digitale di IQ Rest. Se la tua domanda non è nell'elenco, scrivici su WhatsApp.",
     "items": [

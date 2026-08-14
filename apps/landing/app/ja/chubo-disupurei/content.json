@@ -3,8 +3,8 @@
   "slug": "chubo-disupurei",
   "trackPrefix": "l_kds",
   "meta": {
-    "title": "飲食店向けKDS（キッチンディスプレイ） — 注文を直接厨房モニターへ | IQ Rest",
-    "description": "飲食店向けKDS（キッチンディスプレイ）：ホールやQRメニューからの注文が直接厨房モニターに届きます。テーブル別の列表示、待機中/調理中/完成/提供済みのステータス管理、ポジション別フィルター。タブレットやスマホで動作します。",
+    "title": "飲食店向けキッチンディスプレイ（KDS） | IQ Rest",
+    "description": "飲食店向けKDS（キッチンディスプレイ）：ホールやQRメニューの注文が直接厨房モニターに届きます。テーブル別の列表示、調理ステータス管理、ポジション別フィルター。タブレットやスマホで動作。",
     "canonical": "https://iq-rest.com/ja/chubo-disupurei",
     "ogLocale": "ja_JP",
     "ogTitle": "KDS（キッチンディスプレイ） — 注文が直接厨房モニターへ",

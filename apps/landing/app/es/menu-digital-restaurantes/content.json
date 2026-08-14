@@ -162,6 +162,55 @@
       ]
     }
   ],
+  "comparison": {
+    "heading": "Por qué los restaurantes nos eligen",
+    "headingAccent": "frente a otros sistemas",
+    "sub": "La mayoría de las herramientas de menú se quedan en el código QR. Las filas de abajo muestran lo que de verdad cambia en el día a día. Sin nombres: compare cualquier sistema con ellas.",
+    "usLabel": "IQ Rest",
+    "othersLabel": "Otros sistemas",
+    "rows": [
+      {
+        "title": "Reserva de mesas",
+        "us": "Integrada: los comensales reservan online 24/7 y el personal ve las reservas en la tableta.",
+        "others": "Un servicio de pago aparte, si es que existe."
+      },
+      {
+        "title": "Alérgenos y dietas",
+        "us": "Se marcan en cada plato y se muestran al comensal en su idioma.",
+        "others": "Como mucho, una línea de texto en la descripción."
+      },
+      {
+        "title": "Platos, categorías y fotos",
+        "us": "Sin límites en cualquier configuración.",
+        "others": "Límites de platos y fotos que crecen con la tarifa."
+      },
+      {
+        "title": "Comisión por pedidos",
+        "us": "0%: cada pedido llega directamente al restaurante.",
+        "others": "A menudo, un porcentaje de cada pedido."
+      },
+      {
+        "title": "Web del menú",
+        "us": "Un sitio web completo, con dominio propio si lo desea; no solo una página tras el QR.",
+        "others": "Solo una página detrás del código QR."
+      },
+      {
+        "title": "Textos y diseño",
+        "us": "Todos los textos, colores y elementos de estilo son editables.",
+        "others": "Normalmente, un color corporativo y un logotipo."
+      },
+      {
+        "title": "Temas y disposiciones",
+        "us": "Varios temas y disposiciones del menú para elegir.",
+        "others": "Un único aspecto estándar."
+      },
+      {
+        "title": "Fondo de vídeo",
+        "us": "Vídeo en la cabecera del menú, no solo fotos.",
+        "others": "Solo fotos."
+      }
+    ]
+  },
   "faq": {
     "sub": "Lo que preguntan los hosteleros sobre el menú digital de IQ Rest. Si su pregunta no está en la lista, escríbanos por WhatsApp.",
     "items": [

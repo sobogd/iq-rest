@@ -3,8 +3,8 @@
   "slug": "sistema-ordinazioni-ristorante",
   "trackPrefix": "l_orders",
   "meta": {
-    "title": "Ricezione degli ordini al ristorante — Ospite e cameriere | IQ Rest",
-    "description": "Ricezione degli ordini al ristorante da telefono o tablet: mappa della sala, divisione del conto, stati, opzioni e commenti. L'ospite ordina dal tavolo, il cameriere riceve dal proprio dispositivo. 14 giorni gratis.",
+    "title": "Ricezione degli ordini al ristorante | IQ Rest",
+    "description": "Ricezione degli ordini al ristorante da telefono o tablet: mappa della sala, divisione del conto, stati e opzioni. L'ospite ordina dal tavolo. 14 giorni gratis.",
     "canonical": "https://iq-rest.com/it/sistema-ordinazioni-ristorante",
     "ogLocale": "it_IT",
     "ogTitle": "Ricezione degli ordini al ristorante — Ospite e cameriere",

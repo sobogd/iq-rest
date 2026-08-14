@@ -15,7 +15,7 @@ const BRAND_JSON_LD = JSON.stringify({
         width: 512,
         height: 512,
       },
-      sameAs: [],
+      sameAs: ["https://www.facebook.com/people/IQ-Rest/100066874241445/"],
     },
     {
       "@type": "WebSite",

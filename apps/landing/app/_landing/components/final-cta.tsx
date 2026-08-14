@@ -11,14 +11,14 @@ interface FinalCtaProps {
   microcopy: string;
   locale: string;
   demoVariant?: DemoVariant;
-  /** Live restaurant count, substituted for "{count}" in `texts.sub`. */
-  count?: number;
+  /** Restaurant-count label ("500+"), substituted for "{count}" in `texts.sub`. */
+  count?: string;
   /** Stack and center everything instead of the default heading-left / CTA-right row. */
   centered?: boolean;
 }
 
 export function FinalCta({ texts, ctaText, demoText, microcopy, locale, demoVariant = "phone", count, centered = false }: FinalCtaProps) {
-  const sub = count !== undefined ? texts.sub.replace("{count}", count.toLocaleString(locale)) : texts.sub;
+  const sub = count !== undefined ? texts.sub.replace("{count}", count) : texts.sub;
   if (centered) {
     return (
       <div className="flex flex-col items-center text-center gap-6 w-full max-w-3xl mx-auto">

@@ -162,6 +162,55 @@
       ]
     }
   ],
+  "comparison": {
+    "heading": "Proč si restaurace vybírají nás,",
+    "headingAccent": "a ne jiné systémy",
+    "sub": "Většina nástrojů na menu končí u QR kódu. Níže je to, co se v každodenním provozu skutečně liší. Bez jmen — porovnejte s libovolným systémem.",
+    "usLabel": "IQ Rest",
+    "othersLabel": "Jiné systémy",
+    "rows": [
+      {
+        "title": "Rezervace stolů",
+        "us": "Vestavěné: hosté rezervují online 24/7, personál vidí rezervace na tabletu.",
+        "others": "Samostatná placená služba, pokud vůbec existuje."
+      },
+      {
+        "title": "Alergeny a diety",
+        "us": "Označené u každého jídla a zobrazené hostovi v jeho jazyce.",
+        "others": "V lepším případě řádek textu v popisu."
+      },
+      {
+        "title": "Jídla, kategorie, fotky",
+        "us": "Bez omezení v každé konfiguraci.",
+        "others": "Limity položek a fotek rostoucí s tarifem."
+      },
+      {
+        "title": "Provize z objednávek",
+        "us": "0 % — každá objednávka jde přímo do restaurace.",
+        "others": "Často procento z každé objednávky."
+      },
+      {
+        "title": "Web s menu",
+        "us": "Plnohodnotný web, volitelně na vlastní doméně — ne jen stránka za QR kódem.",
+        "others": "Pouze stránka za QR kódem."
+      },
+      {
+        "title": "Texty a design",
+        "us": "Upravit lze všechny texty, barvy i prvky vzhledu.",
+        "others": "Obvykle jen firemní barva a logo."
+      },
+      {
+        "title": "Motivy a rozložení",
+        "us": "Několik motivů a rozložení menu na výběr.",
+        "others": "Jeden standardní vzhled."
+      },
+      {
+        "title": "Video na pozadí",
+        "us": "Video v záhlaví menu, ne jen fotky.",
+        "others": "Pouze fotky."
+      }
+    ]
+  },
   "faq": {
     "sub": "Na co se majitelé podniků ptají ohledně digitálního menu v IQ Rest. Nenašli jste svůj dotaz — napište nám na WhatsApp.",
     "items": [

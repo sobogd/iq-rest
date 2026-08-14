@@ -162,6 +162,55 @@
       ]
     }
   ],
+  "comparison": {
+    "heading": "Zašto restorani biraju nas,",
+    "headingAccent": "a ne druge sisteme",
+    "sub": "Većina alata za meni staje kod QR koda. Ispod je ono što se zaista razlikuje u svakodnevnom radu. Bez imena — uporedite sa bilo kojim sistemom.",
+    "usLabel": "IQ Rest",
+    "othersLabel": "Drugi sistemi",
+    "rows": [
+      {
+        "title": "Rezervacije stolova",
+        "us": "Ugrađeno: gosti rezervišu onlajn 24/7, osoblje vidi rezervacije na tabletu.",
+        "others": "Posebna plaćena usluga, ako uopšte postoji."
+      },
+      {
+        "title": "Alergeni i dijete",
+        "us": "Označeni na svakom jelu i prikazani gostu na njegovom jeziku.",
+        "others": "U najboljem slučaju red teksta u opisu."
+      },
+      {
+        "title": "Jela, kategorije, fotografije",
+        "us": "Bez ograničenja u svakoj konfiguraciji.",
+        "others": "Limiti za stavke i fotografije koji rastu sa paketom."
+      },
+      {
+        "title": "Provizija na porudžbine",
+        "us": "0% — svaka porudžbina ide direktno restoranu.",
+        "others": "Često procenat od svake porudžbine."
+      },
+      {
+        "title": "Sajt sa menijem",
+        "us": "Pravi sajt, po želji na sopstvenom domenu — ne samo QR stranica.",
+        "others": "Samo stranica iza QR koda."
+      },
+      {
+        "title": "Tekstovi i dizajn",
+        "us": "Mogu se menjati svi tekstovi, boje i elementi izgleda.",
+        "others": "Obično boja brenda i logo."
+      },
+      {
+        "title": "Teme i rasporedi",
+        "us": "Nekoliko tema i rasporeda menija po izboru.",
+        "others": "Jedan standardni izgled."
+      },
+      {
+        "title": "Video pozadina",
+        "us": "Video u zaglavlju menija, ne samo fotografije.",
+        "others": "Samo fotografije."
+      }
+    ]
+  },
   "faq": {
     "sub": "Šta ugostitelji pitaju o digitalnom meniju u IQ Rest-u. Ako vaše pitanje nije na listi — pišite nam na WhatsApp.",
     "items": [

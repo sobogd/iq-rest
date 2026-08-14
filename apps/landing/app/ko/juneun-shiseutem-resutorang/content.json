@@ -4,7 +4,7 @@
   "trackPrefix": "l_orders",
   "meta": {
     "title": "레스토랑 주문 접수 — 고객 및 직원용 | IQ Rest",
-    "description": "스마트폰이나 태블릿으로 접수하는 테이블 주문: 테이블 배치도, 분할 결제, 조리 상태, 옵션 및 요청 사항. 고객은 테이블에서 직접 주문하고, 직원은 자신의 기기로 주문을 받습니다. 14일 무료 체험.",
+    "description": "스마트폰이나 태블릿으로 받는 테이블 주문: 테이블 배치도, 분할 결제, 조리 상태, 옵션과 요청 사항. 고객은 테이블에서 직접 주문하고 직원은 자기 기기로 접수합니다. 14일 무료 체험.",
     "canonical": "https://iq-rest.com/ko/juneun-shiseutem-resutorang",
     "ogLocale": "ko_KR",
     "ogTitle": "레스토랑 주문 접수 — 고객 및 직원용",

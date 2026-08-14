@@ -3,8 +3,8 @@
   "slug": "mutfak-ekrani",
   "trackPrefix": "l_kds",
   "meta": {
-    "title": "Restoranlar İçin Mutfak Ekranı Sistemi (KDS) — Siparişler Aşçının Ekranında | IQ Rest",
-    "description": "Restoranlar için KDS mutfak ekranı: salondan ve QR menüden gelen siparişler doğrudan aşçının ekranına düşer. Masaya göre sütunlar, Bekliyor / Hazırlanıyor / Hazır / Servis Edildi durumları, istasyon filtreleri. Tablet veya telefonda çalışır.",
+    "title": "Restoranlar İçin Mutfak Ekranı Sistemi (KDS) | IQ Rest",
+    "description": "Restoranlar için KDS mutfak ekranı: salondan ve QR menüden gelen siparişler doğrudan aşçıya düşer. Durumlar, istasyon filtreleri; tablet veya telefonda çalışır.",
     "canonical": "https://iq-rest.com/tr/mutfak-ekrani",
     "ogLocale": "tr_TR",
     "ogTitle": "Mutfak Ekranı Sistemi (KDS) — Siparişler Doğrudan Aşçının Ekranında",

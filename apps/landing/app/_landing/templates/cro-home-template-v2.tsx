@@ -194,13 +194,12 @@ export function CroHomeTemplateV2({
   locale: string;
   texts: LandingTexts;
   cro: CroCopyV2;
-  /** Live restaurant count; substituted for "{count}" in the bullet copy. */
-  count: number;
+  /** Restaurant-count label ("500+"); substituted for "{count}" in the bullet copy. */
+  count: string;
   page?: string;
 }) {
   const featureLinks = localizedFeatureLinks(locale, texts.footer.featureLinks);
-  const countLabel = count.toLocaleString(locale);
-  const withCount = (s: string) => s.replace("{count}", countLabel);
+  const withCount = (s: string) => s.replace("{count}", count);
   // One gap everywhere on the page — the same step that separates two cards.
   return (
     <main className={PAGE}>

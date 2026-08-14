@@ -162,6 +162,55 @@
       ]
     }
   ],
+  "comparison": {
+    "heading": "Dlaczego restauracje wybierają nas,",
+    "headingAccent": "a nie inne systemy",
+    "sub": "Większość narzędzi do menu kończy się na kodzie QR. Poniżej to, co naprawdę różni się w codziennej pracy. Bez nazw — porównaj z dowolnym systemem.",
+    "usLabel": "IQ Rest",
+    "othersLabel": "Inne systemy",
+    "rows": [
+      {
+        "title": "Rezerwacje stolików",
+        "us": "Wbudowane: goście rezerwują online 24/7, obsługa widzi rezerwacje na tablecie.",
+        "others": "Osobna płatna usługa, o ile w ogóle istnieje."
+      },
+      {
+        "title": "Alergeny i diety",
+        "us": "Oznaczane przy każdym daniu i pokazywane gościowi w jego języku.",
+        "others": "W najlepszym razie linijka tekstu w opisie."
+      },
+      {
+        "title": "Dania, kategorie, zdjęcia",
+        "us": "Bez limitów w każdej konfiguracji.",
+        "others": "Limity pozycji i zdjęć rosnące z planem."
+      },
+      {
+        "title": "Prowizja od zamówień",
+        "us": "0% — każde zamówienie trafia bezpośrednio do restauracji.",
+        "others": "Często procent od każdego zamówienia."
+      },
+      {
+        "title": "Strona z menu",
+        "us": "Pełnoprawna strona, opcjonalnie na własnej domenie — nie tylko landing z QR.",
+        "others": "Wyłącznie strona za kodem QR."
+      },
+      {
+        "title": "Teksty i wygląd",
+        "us": "Można edytować wszystkie teksty, kolory i elementy wyglądu.",
+        "others": "Zwykle tylko kolor marki i logo."
+      },
+      {
+        "title": "Motywy i układy",
+        "us": "Kilka motywów i układów menu do wyboru.",
+        "others": "Jeden standardowy wygląd."
+      },
+      {
+        "title": "Tło wideo",
+        "us": "Wideo w nagłówku menu, nie tylko zdjęcia.",
+        "others": "Tylko zdjęcia."
+      }
+    ]
+  },
   "faq": {
     "sub": "O co pytają restauratorzy w związku z cyfrowym menu IQ Rest. Jeśli nie ma tu Twojego pytania — napisz do nas na WhatsApp.",
     "items": [

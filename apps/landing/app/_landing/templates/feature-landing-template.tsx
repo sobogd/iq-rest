@@ -5,6 +5,7 @@ import { FeatureCard } from "../components/feature-card";
 import { FeatureSpotlights } from "../components/feature-spotlights";
 import { PageTracker } from "../components/page-tracker";
 import { ScanSection } from "../components/scan-section";
+import { FeatureComparison } from "../components/feature-comparison";
 import { FinalCta } from "../components/final-cta";
 import { Faq } from "../components/faq";
 import { PAGE, Band, Content } from "../components/shell";
@@ -22,7 +23,7 @@ interface FeatureLandingTemplateProps {
   chrome: LandingTexts;
   /** Live restaurant count, for `{count}` in `content.heroCards`. Only needed
    *  when the page sets `heroCards`. */
-  count?: number;
+  count?: string;
 }
 
 // Single render for the standard feature landing page, in the same shell as
@@ -43,7 +44,7 @@ export function FeatureLandingTemplate({ content, chrome, count }: FeatureLandin
     heroVerticals,
   } = content;
   const featureIntro = featureHeading ?? chrome.featureHighlights;
-  const countLabel = (count ?? 0).toLocaleString(locale);
+  const countLabel = count ?? "";
   const withCount = (s: string) => s.replace("{count}", countLabel);
   // Locale-stable prefix/page so every language version fires the same events.
   const prefix = stablePrefix(trackPrefix);
@@ -129,6 +130,12 @@ export function FeatureLandingTemplate({ content, chrome, count }: FeatureLandin
             </div>
           )}
         </Band>
+
+        {content.comparison ? (
+          <Band section="comparison" id="comparison">
+            <FeatureComparison data={content.comparison} />
+          </Band>
+        ) : null}
 
         <Band section="scan">
           <ScanSection texts={scan} locale={locale} />

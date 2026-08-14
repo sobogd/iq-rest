@@ -162,6 +162,55 @@
       ]
     }
   ],
+  "comparison": {
+    "heading": "Per què els restaurants ens trien",
+    "headingAccent": "i no altres sistemes",
+    "sub": "La majoria d'eines de carta es queden en el codi QR. Les files de sota mostren el que realment canvia en el dia a dia. Sense noms: compara-hi el sistema que vulguis.",
+    "usLabel": "IQ Rest",
+    "othersLabel": "Altres sistemes",
+    "rows": [
+      {
+        "title": "Reserva de taules",
+        "us": "Integrada: els clients reserven en línia 24/7 i el personal veu les reserves a la tauleta.",
+        "others": "Un servei de pagament a part, si és que existeix."
+      },
+      {
+        "title": "Al·lèrgens i dietes",
+        "us": "Es marquen a cada plat i es mostren al client en la seva llengua.",
+        "others": "Com a molt, una línia de text a la descripció."
+      },
+      {
+        "title": "Plats, categories i fotos",
+        "us": "Sense límits en qualsevol configuració.",
+        "others": "Límits de plats i fotos que creixen amb la tarifa."
+      },
+      {
+        "title": "Comissió per comandes",
+        "us": "0%: cada comanda arriba directament al restaurant.",
+        "others": "Sovint, un percentatge de cada comanda."
+      },
+      {
+        "title": "Web de la carta",
+        "us": "Un web complet, amb domini propi si vols — no només una pàgina darrere del QR.",
+        "others": "Només una pàgina darrere del codi QR."
+      },
+      {
+        "title": "Textos i disseny",
+        "us": "Tots els textos, colors i elements d'estil es poden editar.",
+        "others": "Normalment, un color corporatiu i un logotip."
+      },
+      {
+        "title": "Temes i disposicions",
+        "us": "Diversos temes i disposicions de la carta per triar.",
+        "others": "Un únic aspecte estàndard."
+      },
+      {
+        "title": "Fons de vídeo",
+        "us": "Vídeo a la capçalera de la carta, no només fotos.",
+        "others": "Només fotos."
+      }
+    ]
+  },
   "faq": {
     "sub": "El que pregunten els restauradors sobre la carta digital d'IQ Rest. Si no trobes la teva pregunta, escriu-nos per WhatsApp.",
     "items": [

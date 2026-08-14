@@ -4,7 +4,7 @@
   "trackPrefix": "l_bookings",
   "meta": {
     "title": "Borðabókanir allan sólarhringinn | IQ Rest",
-    "description": "Borðabókanir allan sólarhringinn fyrir veitingastaðinn: gestir bóka borð sjálfir í gegnum QR matseðilinn eða vefsíðuna. Dagatal eftir borðum, sjálfvirkar staðfestingar og áminningar. Engin símtöl, engir misstir gestir. 14 dagar frítt.",
+    "description": "Borðabókanir allan sólarhringinn: gestir bóka borð sjálfir í gegnum QR matseðilinn eða vefsíðuna. Sjálfvirkar staðfestingar og áminningar. 14 dagar frítt.",
     "canonical": "https://iq-rest.com/is/bord-bokun",
     "ogLocale": "is_IS",
     "ogTitle": "Borðabókanir allan sólarhringinn — Gestir bóka sjálfir",

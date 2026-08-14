@@ -162,6 +162,55 @@
       ]
     }
   ],
+  "comparison": {
+    "heading": "Waarom restaurants voor ons kiezen",
+    "headingAccent": "en niet voor andere systemen",
+    "sub": "De meeste menutools stoppen bij een QR-code. De rijen hieronder laten zien wat er in de dagelijkse praktijk echt verschilt. Zonder namen — vergelijk zelf met elk ander systeem.",
+    "usLabel": "IQ Rest",
+    "othersLabel": "Andere systemen",
+    "rows": [
+      {
+        "title": "Tafelreserveringen",
+        "us": "Ingebouwd: gasten reserveren 24/7 online, het personeel ziet reserveringen op een tablet.",
+        "others": "Een aparte betaalde dienst, als die er al is."
+      },
+      {
+        "title": "Allergenen en diëten",
+        "us": "Per gerecht gemarkeerd en aan de gast getoond in zijn eigen taal.",
+        "others": "Hooguit een regel tekst in de omschrijving."
+      },
+      {
+        "title": "Gerechten, categorieën, foto's",
+        "us": "Onbeperkt in elke configuratie.",
+        "others": "Limieten voor items en foto's die meegroeien met het pakket."
+      },
+      {
+        "title": "Commissie op bestellingen",
+        "us": "0% — elke bestelling gaat rechtstreeks naar het restaurant.",
+        "others": "Vaak een percentage per bestelling."
+      },
+      {
+        "title": "Menuwebsite",
+        "us": "Een volwaardige website, desgewenst op je eigen domein — niet alleen een QR-pagina.",
+        "others": "Alleen een pagina achter een QR-code."
+      },
+      {
+        "title": "Teksten en design",
+        "us": "Alle teksten, kleuren en stijlelementen zijn aan te passen.",
+        "others": "Meestal alleen een huisstijlkleur en een logo."
+      },
+      {
+        "title": "Thema's en lay-outs",
+        "us": "Meerdere thema's en menu-indelingen om uit te kiezen.",
+        "others": "Eén standaarduiterlijk."
+      },
+      {
+        "title": "Video-achtergrond",
+        "us": "Video in de menuheader, niet alleen foto's.",
+        "others": "Alleen foto's."
+      }
+    ]
+  },
   "faq": {
     "sub": "Wat restauranthouders vragen over het digitale menu van IQ Rest. Staat je vraag er niet tussen — stuur ons een bericht via WhatsApp.",
     "items": [

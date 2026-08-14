@@ -162,6 +162,55 @@
       ]
     }
   ],
+  "comparison": {
+    "heading": "Derfor vælger restauranter os",
+    "headingAccent": "frem for andre systemer",
+    "sub": "De fleste menuværktøjer stopper ved en QR-kode. Rækkerne herunder viser, hvad der reelt gør en forskel i hverdagen. Ingen navne — sammenlign selv med et hvilket som helst system.",
+    "usLabel": "IQ Rest",
+    "othersLabel": "Andre systemer",
+    "rows": [
+      {
+        "title": "Bordreservationer",
+        "us": "Indbygget: gæsterne booker online døgnet rundt, personalet ser reservationerne på en tablet.",
+        "others": "En separat betalt tjeneste, hvis den overhovedet findes."
+      },
+      {
+        "title": "Allergener og diæter",
+        "us": "Markeres pr. ret og vises til gæsten på gæstens eget sprog.",
+        "others": "I bedste fald en tekstlinje i beskrivelsen."
+      },
+      {
+        "title": "Retter, kategorier, fotos",
+        "us": "Ubegrænset i alle konfigurationer.",
+        "others": "Grænser for retter og fotos, der vokser med pakken."
+      },
+      {
+        "title": "Kommission på ordrer",
+        "us": "0 % — hver ordre går direkte til restauranten.",
+        "others": "Ofte en procentdel af hver ordre."
+      },
+      {
+        "title": "Menu-hjemmeside",
+        "us": "En fuld hjemmeside, eventuelt på dit eget domæne — ikke kun en QR-side.",
+        "others": "Kun en side bag en QR-kode."
+      },
+      {
+        "title": "Tekster og design",
+        "us": "Alle tekster, farver og designelementer kan tilpasses.",
+        "others": "Som regel kun en brandfarve og et logo."
+      },
+      {
+        "title": "Temaer og layouts",
+        "us": "Flere temaer og menulayouts at vælge imellem.",
+        "others": "Ét standardudseende."
+      },
+      {
+        "title": "Videobaggrund",
+        "us": "Video i menuens header, ikke kun fotos.",
+        "others": "Kun fotos."
+      }
+    ]
+  },
   "faq": {
     "sub": "Hvad restauratører spørger om vedrørende den digitale menu i IQ Rest. Hvis dit spørgsmål ikke er på listen — skriv til os på WhatsApp.",
     "items": [

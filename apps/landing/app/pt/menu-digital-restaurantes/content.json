@@ -162,6 +162,55 @@
       ]
     }
   ],
+  "comparison": {
+    "heading": "Porque é que os restaurantes nos escolhem",
+    "headingAccent": "em vez de outros sistemas",
+    "sub": "A maioria das ferramentas de ementa fica-se pelo código QR. As linhas abaixo mostram o que muda de facto no dia a dia. Sem nomes: compare qualquer sistema com elas.",
+    "usLabel": "IQ Rest",
+    "othersLabel": "Outros sistemas",
+    "rows": [
+      {
+        "title": "Reserva de mesas",
+        "us": "Integrada: os clientes reservam online 24/7 e a equipa vê as reservas no tablet.",
+        "others": "Um serviço pago à parte, quando existe."
+      },
+      {
+        "title": "Alergénios e dietas",
+        "us": "Assinalados em cada prato e mostrados ao cliente na língua dele.",
+        "others": "Na melhor das hipóteses, uma linha de texto na descrição."
+      },
+      {
+        "title": "Pratos, categorias e fotos",
+        "us": "Sem limites em qualquer configuração.",
+        "others": "Limites de pratos e fotos que crescem com o plano."
+      },
+      {
+        "title": "Comissão sobre pedidos",
+        "us": "0%: cada pedido vai diretamente para o restaurante.",
+        "others": "Muitas vezes, uma percentagem de cada pedido."
+      },
+      {
+        "title": "Site da ementa",
+        "us": "Um site completo, com domínio próprio se quiser — não apenas uma página atrás do QR.",
+        "others": "Apenas uma página atrás do código QR."
+      },
+      {
+        "title": "Textos e design",
+        "us": "Todos os textos, cores e elementos de estilo são editáveis.",
+        "others": "Normalmente, uma cor da marca e um logótipo."
+      },
+      {
+        "title": "Temas e disposições",
+        "us": "Vários temas e disposições da ementa à escolha.",
+        "others": "Um único aspeto padrão."
+      },
+      {
+        "title": "Fundo de vídeo",
+        "us": "Vídeo no cabeçalho da ementa, não apenas fotos.",
+        "others": "Apenas fotos."
+      }
+    ]
+  },
   "faq": {
     "sub": "O que os restauradores perguntam sobre a ementa digital da IQ Rest. Se a sua pergunta não está na lista, escreva-nos no WhatsApp.",
     "items": [

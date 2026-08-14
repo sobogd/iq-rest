@@ -4,7 +4,7 @@
   "trackPrefix": "l_bookings",
   "meta": {
     "title": "레스토랑 24시간 테이블 예약 | IQ Rest",
-    "description": "매장을 위한 24시간 테이블 예약 시스템: 고객이 QR 메뉴나 웹사이트를 통해 직접 테이블을 예약합니다. 테이블별 캘린더, 자동 확정 및 알림 기능. 전화 응대 없이 모든 예약을 놓치지 마세요. 14일 무료 체험.",
+    "description": "매장을 위한 24시간 테이블 예약: 고객이 QR 메뉴나 웹사이트에서 직접 예약합니다. 테이블별 캘린더, 자동 확정과 알림. 전화 응대 없이 예약을 놓치지 마세요. 14일 무료 체험.",
     "canonical": "https://iq-rest.com/ko/tebeul-yeyak",
     "ogLocale": "ko_KR",
     "ogTitle": "24시간 테이블 예약 — 고객이 직접 예약합니다",

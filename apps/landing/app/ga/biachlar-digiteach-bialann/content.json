@@ -4,7 +4,7 @@
   "trackPrefix": "l_digital",
   "meta": {
     "title": "Biachlár Digiteach do Bhialanna | IQ Rest",
-    "description": "Biachlár digiteach do do bhialann: biachlár ar líne le grianghraif, ailléirginí, aistriúchán AI agus nuashonruithe praghsanna fíor-ama. 14 lá saor in aisce, ní gá cárta creidmheasa.",
+    "description": "Biachlár digiteach do do bhialann: biachlár ar líne le grianghraif, ailléirginí agus aistriúchán AI. Nuashonruithe praghsanna fíor-ama. 14 lá saor in aisce.",
     "canonical": "https://iq-rest.com/ga/biachlar-digiteach-bialann",
     "ogLocale": "ga_IE",
     "ogTitle": "Biachlár Digiteach do Bhialanna",
@@ -162,6 +162,55 @@
       ]
     }
   ],
+  "comparison": {
+    "heading": "Cén fáth a roghnaíonn bialanna sinne",
+    "headingAccent": "thar chórais eile",
+    "sub": "Stopann formhór na n-uirlisí biachláir ag an gcód QR. Thíos atá na nithe a bhíonn éagsúil i ndáiríre ó lá go lá. Gan ainmneacha — déan comparáid le córas ar bith tú féin.",
+    "usLabel": "IQ Rest",
+    "othersLabel": "Córais eile",
+    "rows": [
+      {
+        "title": "Áirithintí boird",
+        "us": "Ionsuite: cuireann aíonna in áirithe ar líne 24/7 agus feiceann an fhoireann na háirithintí ar tháibléad.",
+        "others": "Seirbhís íoctha ar leith, más ann di ar chor ar bith."
+      },
+      {
+        "title": "Ailléirginí agus aistí bia",
+        "us": "Marcáilte ar gach mias agus taispeántar don aoi iad ina theanga féin.",
+        "others": "Líne téacs sa chur síos ar a mhéad."
+      },
+      {
+        "title": "Miasa, catagóirí, grianghraif",
+        "us": "Gan teorainn i ngach cumraíocht.",
+        "others": "Teorainneacha ar mhiasa agus ar ghrianghraif a mhéadaíonn leis an bplean."
+      },
+      {
+        "title": "Coimisiún ar orduithe",
+        "us": "0% — téann gach ordú díreach chuig an mbialann.",
+        "others": "Céatadán de gach ordú go minic."
+      },
+      {
+        "title": "Suíomh gréasáin an bhiachláir",
+        "us": "Suíomh gréasáin iomlán, ar d'fhearann féin más mian leat — ní leathanach QR amháin.",
+        "others": "Leathanach taobh thiar de chód QR amháin."
+      },
+      {
+        "title": "Téacsanna agus dearadh",
+        "us": "Is féidir gach téacs, dath agus eilimint stíle a chur in eagar.",
+        "others": "De ghnáth dath branda agus lógó amháin."
+      },
+      {
+        "title": "Téamaí agus leaganacha amach",
+        "us": "Roinnt téamaí agus leaganacha amach biachláir le roghnú astu.",
+        "others": "Cuma chaighdeánach amháin."
+      },
+      {
+        "title": "Cúlra físe",
+        "us": "Físeán i gceanntásc an bhiachláir, ní grianghraif amháin.",
+        "others": "Grianghraif amháin."
+      }
+    ]
+  },
   "faq": {
     "sub": "Na rudaí a fhiafraíonn úinéirí bialainne faoin mbiachlár digiteach in IQ Rest. Mura bhfuil do cheist liostaithe — seol teachtaireacht chugainn ar WhatsApp.",
     "items": [

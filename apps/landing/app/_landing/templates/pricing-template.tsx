@@ -21,8 +21,8 @@ export function PricingTemplate({
   texts: LandingTexts;
   faq: LandingTexts["faq"];
   jsonLd: string;
-  /** Live restaurant count, for "{count}" in the final CTA's sub line. */
-  count?: number;
+  /** Restaurant-count label ("500+"), for "{count}" in the final CTA's sub line. */
+  count?: string;
 }) {
   const quiz = texts.pricingQuiz ?? EN_PRICING_QUIZ;
   return (

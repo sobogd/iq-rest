@@ -162,6 +162,55 @@
       ]
     }
   ],
+  "comparison": {
+    "heading": "Pourquoi les restaurants nous choisissent",
+    "headingAccent": "plutôt que d'autres systèmes",
+    "sub": "La plupart des outils de menu s'arrêtent au code QR. Les lignes ci-dessous montrent ce qui change vraiment au quotidien. Sans citer de noms : comparez-les au système de votre choix.",
+    "usLabel": "IQ Rest",
+    "othersLabel": "Autres systèmes",
+    "rows": [
+      {
+        "title": "Réservation de tables",
+        "us": "Intégrée : les clients réservent en ligne 24h/24 et l'équipe voit les réservations sur tablette.",
+        "others": "Un service payant à part, quand il existe."
+      },
+      {
+        "title": "Allergènes et régimes",
+        "us": "Indiqués sur chaque plat et affichés au client dans sa langue.",
+        "others": "Au mieux, une ligne de texte dans la description."
+      },
+      {
+        "title": "Plats, catégories et photos",
+        "us": "Sans limite, quelle que soit la configuration.",
+        "others": "Des limites de plats et de photos qui augmentent avec la formule."
+      },
+      {
+        "title": "Commission sur les commandes",
+        "us": "0 % : chaque commande va directement au restaurant.",
+        "others": "Souvent un pourcentage sur chaque commande."
+      },
+      {
+        "title": "Site du menu",
+        "us": "Un vrai site web, avec votre propre domaine si vous le souhaitez — pas seulement une page derrière un QR.",
+        "others": "Une simple page derrière le code QR."
+      },
+      {
+        "title": "Textes et design",
+        "us": "Tous les textes, couleurs et éléments de style sont modifiables.",
+        "others": "En général, une couleur de marque et un logo."
+      },
+      {
+        "title": "Thèmes et mises en page",
+        "us": "Plusieurs thèmes et mises en page de menu au choix.",
+        "others": "Une seule présentation standard."
+      },
+      {
+        "title": "Fond vidéo",
+        "us": "Une vidéo en en-tête du menu, pas seulement des photos.",
+        "others": "Photos uniquement."
+      }
+    ]
+  },
   "faq": {
     "sub": "Ce que les restaurateurs demandent sur le menu digital d'IQ Rest. Votre question n'est pas dans la liste ? Écrivez-nous sur WhatsApp.",
     "items": [

@@ -162,6 +162,55 @@
       ]
     }
   ],
+  "comparison": {
+    "heading": "Derfor velger restauranter oss",
+    "headingAccent": "fremfor andre systemer",
+    "sub": "De fleste menyverktøy stopper ved en QR-kode. Radene under viser hva som faktisk utgjør en forskjell i hverdagen. Ingen navn — sammenlign selv med hvilket som helst system.",
+    "usLabel": "IQ Rest",
+    "othersLabel": "Andre systemer",
+    "rows": [
+      {
+        "title": "Bordreservasjoner",
+        "us": "Innebygd: gjestene booker online døgnet rundt, personalet ser reservasjonene på et nettbrett.",
+        "others": "En egen betalt tjeneste, hvis den finnes i det hele tatt."
+      },
+      {
+        "title": "Allergener og dietter",
+        "us": "Merkes per rett og vises til gjesten på gjestens eget språk.",
+        "others": "I beste fall en tekstlinje i beskrivelsen."
+      },
+      {
+        "title": "Retter, kategorier, bilder",
+        "us": "Ubegrenset i alle konfigurasjoner.",
+        "others": "Grenser for retter og bilder som vokser med planen."
+      },
+      {
+        "title": "Kommisjon på bestillinger",
+        "us": "0 % — hver bestilling går direkte til restauranten.",
+        "others": "Ofte en prosentandel av hver bestilling."
+      },
+      {
+        "title": "Meny-nettside",
+        "us": "En fullverdig nettside, gjerne på eget domene — ikke bare en QR-side.",
+        "others": "Kun en side bak en QR-kode."
+      },
+      {
+        "title": "Tekster og design",
+        "us": "Alle tekster, farger og designelementer kan tilpasses.",
+        "others": "Som regel bare en profilfarge og en logo."
+      },
+      {
+        "title": "Temaer og oppsett",
+        "us": "Flere temaer og menyoppsett å velge mellom.",
+        "others": "Ett standardutseende."
+      },
+      {
+        "title": "Videobakgrunn",
+        "us": "Video i menyens topp, ikke bare bilder.",
+        "others": "Kun bilder."
+      }
+    ]
+  },
   "faq": {
     "sub": "Det restaurantdrivere spør om når det gjelder den digitale menyen i IQ Rest. Finner du ikke spørsmålet ditt — send oss en melding på WhatsApp.",
     "items": [

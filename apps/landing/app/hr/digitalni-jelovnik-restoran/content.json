@@ -4,7 +4,7 @@
   "trackPrefix": "l_digital",
   "meta": {
     "title": "Digitalni jelovnik za restorane | IQ Rest",
-    "description": "Digitalni jelovnik za vaš restoran: online jelovnik s fotografijama, alergenima, AI prijevodom i ažuriranjem cijena u stvarnom vremenu. 14 dana besplatno, bez kreditne kartice.",
+    "description": "Digitalni jelovnik za vaš restoran: fotografije, alergeni, AI prijevod i cijene ažurirane u stvarnom vremenu. 14 dana besplatno, bez kreditne kartice.",
     "canonical": "https://iq-rest.com/hr/digitalni-jelovnik-restoran",
     "ogLocale": "hr_HR",
     "ogTitle": "Digitalni jelovnik za restorane",
@@ -162,6 +162,55 @@
       ]
     }
   ],
+  "comparison": {
+    "heading": "Zašto restorani biraju nas,",
+    "headingAccent": "a ne druge sustave",
+    "sub": "Većina alata za jelovnike staje na QR kodu. U nastavku je ono što se u svakodnevnom radu stvarno razlikuje. Bez imena — usporedite sami s bilo kojim sustavom.",
+    "usLabel": "IQ Rest",
+    "othersLabel": "Drugi sustavi",
+    "rows": [
+      {
+        "title": "Rezervacije stolova",
+        "us": "Ugrađeno: gosti rezerviraju online 0-24, osoblje vidi rezervacije na tabletu.",
+        "others": "Zasebna plaćena usluga, ako uopće postoji."
+      },
+      {
+        "title": "Alergeni i prehrana",
+        "us": "Označeni na svakom jelu i prikazani gostu na njegovu jeziku.",
+        "others": "U najboljem slučaju redak teksta u opisu."
+      },
+      {
+        "title": "Jela, kategorije, fotografije",
+        "us": "Bez ograničenja u svakoj konfiguraciji.",
+        "others": "Limiti stavki i fotografija koji rastu s paketom."
+      },
+      {
+        "title": "Provizija na narudžbe",
+        "us": "0% — svaka narudžba ide izravno u restoran.",
+        "others": "Često postotak od svake narudžbe."
+      },
+      {
+        "title": "Web stranica jelovnika",
+        "us": "Prava web stranica, po želji na vlastitoj domeni — ne samo QR stranica.",
+        "others": "Samo stranica iza QR koda."
+      },
+      {
+        "title": "Tekstovi i dizajn",
+        "us": "Svi tekstovi, boje i elementi oblikovanja mogu se uređivati.",
+        "others": "Obično boja brenda i logotip."
+      },
+      {
+        "title": "Teme i rasporedi",
+        "us": "Nekoliko tema i rasporeda jelovnika na izbor.",
+        "others": "Jedan standardni izgled."
+      },
+      {
+        "title": "Video pozadina",
+        "us": "Video u zaglavlju jelovnika, ne samo fotografije.",
+        "others": "Samo fotografije."
+      }
+    ]
+  },
   "faq": {
     "sub": "Što ugostitelji pitaju o digitalnom jelovniku u IQ Restu. Ako vašeg pitanja nema na popisu — pošaljite nam poruku na WhatsApp.",
     "items": [

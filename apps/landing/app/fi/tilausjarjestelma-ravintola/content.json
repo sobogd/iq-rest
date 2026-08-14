@@ -4,7 +4,7 @@
   "trackPrefix": "l_orders",
   "meta": {
     "title": "Ravintolan tilausjärjestelmä — Asiakas ja tarjoilija | IQ Rest",
-    "description": "Ravintolan tilausten vastaanotto puhelimella tai tabletilla: salikartta, laskun jakaminen, tilat, valinnat ja kommentit. Asiakkaat tilaavat pöydästä, tarjoilijat omalta laitteeltaan. 14 päivää ilmaiseksi.",
+    "description": "Ravintolan tilausten vastaanotto puhelimella tai tabletilla: salikartta, laskun jakaminen, tilat ja kommentit. Asiakkaat tilaavat pöydästä. 14 päivää ilmaiseksi.",
     "canonical": "https://iq-rest.com/fi/tilausjarjestelma-ravintola",
     "ogLocale": "fi_FI",
     "ogTitle": "Ravintolan tilausjärjestelmä — Asiakas ja tarjoilija",

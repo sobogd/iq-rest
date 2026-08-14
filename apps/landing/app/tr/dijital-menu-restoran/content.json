@@ -162,6 +162,55 @@
       ]
     }
   ],
+  "comparison": {
+    "heading": "Restoranlar diğer sistemler yerine",
+    "headingAccent": "neden bizi tercih ediyor",
+    "sub": "Çoğu menü aracı QR kodda kalır. Aşağıdaki satırlar günlük işleyişte gerçekten fark yaratan noktalar. İsim vermeden — istediğiniz sistemle kendiniz karşılaştırın.",
+    "usLabel": "IQ Rest",
+    "othersLabel": "Diğer sistemler",
+    "rows": [
+      {
+        "title": "Masa rezervasyonu",
+        "us": "Yerleşik: misafirler 7/24 online rezervasyon yapar, ekip rezervasyonları tablette görür.",
+        "others": "Ayrı ve ücretli bir hizmet, o da varsa."
+      },
+      {
+        "title": "Alerjenler ve diyetler",
+        "us": "Her yemekte işaretlenir, misafire kendi dilinde gösterilir.",
+        "others": "En iyi ihtimalle açıklamada bir satır metin."
+      },
+      {
+        "title": "Yemekler, kategoriler, fotoğraflar",
+        "us": "Her yapılandırmada sınırsız.",
+        "others": "Paketle birlikte artan ürün ve fotoğraf limitleri."
+      },
+      {
+        "title": "Sipariş komisyonu",
+        "us": "%0 — her sipariş doğrudan restorana gider.",
+        "others": "Çoğu zaman her siparişten yüzde alınır."
+      },
+      {
+        "title": "Menü web sitesi",
+        "us": "Tam bir web sitesi, isterseniz kendi alan adınızda — yalnızca bir QR sayfası değil.",
+        "others": "Yalnızca QR kodun arkasındaki bir sayfa."
+      },
+      {
+        "title": "Metinler ve tasarım",
+        "us": "Tüm metinler, renkler ve tasarım öğeleri düzenlenebilir.",
+        "others": "Genellikle bir marka rengi ve logo."
+      },
+      {
+        "title": "Temalar ve düzenler",
+        "us": "Seçebileceğiniz birden fazla tema ve menü düzeni.",
+        "others": "Tek bir standart görünüm."
+      },
+      {
+        "title": "Video arka plan",
+        "us": "Menü başlığında video, yalnızca fotoğraf değil.",
+        "others": "Yalnızca fotoğraf."
+      }
+    ]
+  },
   "faq": {
     "sub": "Restorancıların IQ Rest dijital menüsü hakkında sordukları. Sorunuz listede yoksa — bize WhatsApp'tan yazın.",
     "items": [

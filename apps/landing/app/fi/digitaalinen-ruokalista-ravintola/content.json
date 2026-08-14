@@ -4,7 +4,7 @@
   "trackPrefix": "l_digital",
   "meta": {
     "title": "Digitaalinen ruokalista ravintoloille | IQ Rest",
-    "description": "Digitaalinen ruokalista ravintolaasi: verkkoruokalista kuvilla, allergeeneilla, tekoälykäännöksillä ja reaaliaikaisilla hintapäivityksillä. 14 päivää ilmaiseksi, ei luottokorttia.",
+    "description": "Digitaalinen ruokalista ravintolaasi: verkkoruokalista kuvilla, allergeeneilla ja tekoälykäännöksillä. Hinnat päivittyvät reaaliajassa. 14 päivää ilmaiseksi.",
     "canonical": "https://iq-rest.com/fi/digitaalinen-ruokalista-ravintola",
     "ogLocale": "fi_FI",
     "ogTitle": "Digitaalinen ruokalista ravintoloille",
@@ -162,6 +162,55 @@
       ]
     }
   ],
+  "comparison": {
+    "heading": "Miksi ravintolat valitsevat meidät",
+    "headingAccent": "muiden järjestelmien sijaan",
+    "sub": "Useimmat ruokalistatyökalut jäävät QR-koodiin. Alla on se, mikä arjessa oikeasti eroaa. Ei nimiä — vertaa itse mihin tahansa järjestelmään.",
+    "usLabel": "IQ Rest",
+    "othersLabel": "Muut järjestelmät",
+    "rows": [
+      {
+        "title": "Pöytävaraukset",
+        "us": "Sisäänrakennettu: asiakkaat varaavat verkossa 24/7, henkilökunta näkee varaukset tabletilta.",
+        "others": "Erillinen maksullinen palvelu, jos sitä on lainkaan."
+      },
+      {
+        "title": "Allergeenit ja ruokavaliot",
+        "us": "Merkitään jokaiseen annokseen ja näytetään asiakkaalle hänen kielellään.",
+        "others": "Parhaimmillaan rivi tekstiä kuvauksessa."
+      },
+      {
+        "title": "Annokset, kategoriat, kuvat",
+        "us": "Ei rajoituksia missään kokoonpanossa.",
+        "others": "Annos- ja kuvarajat, jotka kasvavat hinnan mukana."
+      },
+      {
+        "title": "Tilausprovisio",
+        "us": "0 % — jokainen tilaus menee suoraan ravintolalle.",
+        "others": "Usein prosentti jokaisesta tilauksesta."
+      },
+      {
+        "title": "Ruokalistasivusto",
+        "us": "Täysi verkkosivusto, halutessasi omalla verkkotunnuksella — ei pelkkä QR-sivu.",
+        "others": "Vain QR-koodin takana oleva sivu."
+      },
+      {
+        "title": "Tekstit ja ulkoasu",
+        "us": "Kaikki tekstit, värit ja tyylielementit ovat muokattavissa.",
+        "others": "Yleensä vain brändiväri ja logo."
+      },
+      {
+        "title": "Teemat ja asettelut",
+        "us": "Useita teemoja ja ruokalistan asetteluja valittavana.",
+        "others": "Yksi vakioulkoasu."
+      },
+      {
+        "title": "Videotausta",
+        "us": "Video ruokalistan yläosassa, ei vain kuvia.",
+        "others": "Vain kuvat."
+      }
+    ]
+  },
   "faq": {
     "sub": "Mitä ravintoloitsijat kysyvät IQ Restin digitaalisesta ruokalistasta. Jos kysymystäsi ei löydy — laita viestiä WhatsAppissa.",
     "items": [

@@ -84,6 +84,29 @@ export interface FeatureFaqItem {
   a: string;
 }
 
+/** One row of the "us vs other systems" comparison band. */
+export interface FeatureComparisonRow {
+  /** Capability being compared (e.g. "Table reservations"). */
+  title: string;
+  /** How it works here. */
+  us: string;
+  /** What competitors typically offer. Anonymous by design — no brand names. */
+  others: string;
+}
+
+/** "Why choose us over other systems" comparison band. Rendered only when a
+ *  page's content.json carries the key (currently the digital-menu pages). */
+export interface FeatureComparison {
+  heading: string;
+  headingAccent?: string;
+  sub?: string;
+  /** Left column label (the product name). */
+  usLabel: string;
+  /** Right column label ("Other systems"). */
+  othersLabel: string;
+  rows: readonly FeatureComparisonRow[];
+}
+
 export interface FeatureContent {
   /** Locale segment (e.g. `ru`, `en`). Drives header anchors and canonical. */
   locale: string;
@@ -107,6 +130,8 @@ export interface FeatureContent {
   /** Icon verticals for the hero, same treatment as the home hero. Overrides
    *  the plain-text `chrome.hero.verticals` when present. */
   heroVerticals?: readonly { icon: IconKey; label: string }[];
+  /** "Us vs other systems" band, rendered between subFeatures and scan. */
+  comparison?: FeatureComparison;
   faq: {
     sub: string;
     items: readonly FeatureFaqItem[];

@@ -162,6 +162,55 @@
       ]
     }
   ],
+  "comparison": {
+    "heading": "Why restaurants pick us",
+    "headingAccent": "over other systems",
+    "sub": "Most menu tools stop at a QR code. The rows below are what actually differs day to day. No brand call-outs — compare any system you like against them.",
+    "usLabel": "IQ Rest",
+    "othersLabel": "Other systems",
+    "rows": [
+      {
+        "title": "Table reservations",
+        "us": "Built in: guests book online 24/7, staff see bookings on a tablet.",
+        "others": "A separate paid service, if it exists at all."
+      },
+      {
+        "title": "Allergens and diets",
+        "us": "Marked per dish and shown to the guest in their language.",
+        "others": "At best a line of text in the description."
+      },
+      {
+        "title": "Dishes, categories, photos",
+        "us": "Unlimited on every configuration.",
+        "others": "Item and photo limits that grow with the plan."
+      },
+      {
+        "title": "Commission on orders",
+        "us": "0% — every order goes directly to the restaurant.",
+        "others": "Often a percentage of each order."
+      },
+      {
+        "title": "Menu website",
+        "us": "A full website, optionally on your own domain — not just a QR landing.",
+        "others": "A page behind a QR code only."
+      },
+      {
+        "title": "Texts and design",
+        "us": "Every text, color and style element is editable.",
+        "others": "Usually a brand color and a logo."
+      },
+      {
+        "title": "Themes and layouts",
+        "us": "Several themes and menu layouts to choose from.",
+        "others": "One standard look."
+      },
+      {
+        "title": "Video background",
+        "us": "Video header in the menu, not only photos.",
+        "others": "Photos only."
+      }
+    ]
+  },
   "faq": {
     "sub": "What restaurateurs ask about the digital menu in IQ Rest. If your question isn't listed — message us on WhatsApp.",
     "items": [

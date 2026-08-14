@@ -3,8 +3,8 @@
   "slug": "kok-skarm",
   "trackPrefix": "l_kds",
   "meta": {
-    "title": "Köksskärm (KDS) för restauranger — Beställningar på kockens skärm | IQ Rest",
-    "description": "En KDS-köksskärm för restauranger: beställningar från matsalen och QR-menyn går direkt till kockens skärm. Kolumner per bord, status för Väntar / Tillagas / Klar / Serverad, stationsfilter. Körs på en surfplatta eller mobil.",
+    "title": "Köksskärm (KDS) för restauranger | IQ Rest",
+    "description": "En KDS-köksskärm för restauranger: beställningar från matsalen och QR-menyn går direkt till kockens skärm. Kolumner per bord. Körs på surfplatta eller mobil.",
     "canonical": "https://iq-rest.com/sv/kok-skarm",
     "ogLocale": "sv_SE",
     "ogTitle": "Köksskärm (KDS) — Beställningar direkt till kockens skärm",

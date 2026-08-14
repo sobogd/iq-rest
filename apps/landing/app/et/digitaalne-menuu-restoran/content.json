@@ -162,6 +162,55 @@
       ]
     }
   ],
+  "comparison": {
+    "heading": "Miks restoranid valivad meid",
+    "headingAccent": "teiste süsteemide asemel",
+    "sub": "Enamik menüütööriistu piirdub QR-koodiga. Allpool on see, mis igapäevatöös tegelikult erineb. Nimesid ei nimeta — võrdle ise mis tahes süsteemiga.",
+    "usLabel": "IQ Rest",
+    "othersLabel": "Teised süsteemid",
+    "rows": [
+      {
+        "title": "Laudade broneerimine",
+        "us": "Sisseehitatud: külalised broneerivad veebis 24/7, personal näeb broneeringuid tahvelarvutis.",
+        "others": "Eraldi tasuline teenus, kui sedagi."
+      },
+      {
+        "title": "Allergeenid ja dieedid",
+        "us": "Märgitakse igal roal ja kuvatakse külalisele tema keeles.",
+        "others": "Parimal juhul rida teksti kirjelduses."
+      },
+      {
+        "title": "Road, kategooriad, fotod",
+        "us": "Piiranguteta igas konfiguratsioonis.",
+        "others": "Roogade ja fotode limiidid, mis kasvavad koos paketiga."
+      },
+      {
+        "title": "Komisjonitasu tellimustelt",
+        "us": "0% — iga tellimus läheb otse restoranile.",
+        "others": "Sageli protsent igalt tellimuselt."
+      },
+      {
+        "title": "Menüü veebileht",
+        "us": "Täisväärtuslik veebileht, soovi korral oma domeenil — mitte ainult QR-leht.",
+        "others": "Ainult QR-koodi taga olev leht."
+      },
+      {
+        "title": "Tekstid ja kujundus",
+        "us": "Kõik tekstid, värvid ja kujunduselemendid on muudetavad.",
+        "others": "Tavaliselt vaid brändivärv ja logo."
+      },
+      {
+        "title": "Teemad ja paigutused",
+        "us": "Mitu teemat ja menüüpaigutust valikus.",
+        "others": "Üks standardne välimus."
+      },
+      {
+        "title": "Videotaust",
+        "us": "Video menüü päises, mitte ainult fotod.",
+        "others": "Ainult fotod."
+      }
+    ]
+  },
   "faq": {
     "sub": "Mida restoranipidajad IQ Resti digimenüü kohta küsivad. Kui sinu küsimust pole nimekirjas — kirjuta meile WhatsAppi.",
     "items": [

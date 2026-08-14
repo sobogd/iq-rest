@@ -4,7 +4,7 @@
   "trackPrefix": "l_digital",
   "meta": {
     "title": "Digitālā ēdienkarte restorāniem | IQ Rest",
-    "description": "Digitālā ēdienkarte jūsu restorānam: tiešsaistes ēdienkarte ar fotoattēliem, alergēniem, AI tulkojumu un cenu atjauninājumiem reāllaikā. 14 dienas bez maksas, kredītkarte nav nepieciešama.",
+    "description": "Digitālā ēdienkarte jūsu restorānam: tiešsaistes ēdienkarte ar fotoattēliem, alergēniem un AI tulkojumu. Cenas atjaunojas reāllaikā. 14 dienas bez maksas.",
     "canonical": "https://iq-rest.com/lv/digitala-edienkarte-restorans",
     "ogLocale": "lv_LV",
     "ogTitle": "Digitālā ēdienkarte restorāniem",
@@ -162,6 +162,55 @@
       ]
     }
   ],
+  "comparison": {
+    "heading": "Kāpēc restorāni izvēlas mūs,",
+    "headingAccent": "nevis citas sistēmas",
+    "sub": "Lielākā daļa ēdienkartes rīku beidzas ar QR kodu. Zemāk ir tas, kas ikdienas darbā patiešām atšķiras. Bez nosaukumiem — salīdziniet paši ar jebkuru sistēmu.",
+    "usLabel": "IQ Rest",
+    "othersLabel": "Citas sistēmas",
+    "rows": [
+      {
+        "title": "Galdiņu rezervācija",
+        "us": "Iebūvēta: viesi rezervē tiešsaistē 24/7, personāls redz rezervācijas planšetē.",
+        "others": "Atsevišķs maksas pakalpojums, ja vispār ir."
+      },
+      {
+        "title": "Alergēni un diētas",
+        "us": "Atzīmēti katram ēdienam un rādīti viesim viņa valodā.",
+        "others": "Labākajā gadījumā teksta rinda aprakstā."
+      },
+      {
+        "title": "Ēdieni, kategorijas, foto",
+        "us": "Bez ierobežojumiem jebkurā konfigurācijā.",
+        "others": "Pozīciju un foto limiti, kas aug līdz ar plānu."
+      },
+      {
+        "title": "Komisija no pasūtījumiem",
+        "us": "0% — katrs pasūtījums nonāk tieši restorānā.",
+        "others": "Bieži procents no katra pasūtījuma."
+      },
+      {
+        "title": "Ēdienkartes mājaslapa",
+        "us": "Pilnvērtīga mājaslapa, pēc vēlēšanās savā domēnā — ne tikai QR lapa.",
+        "others": "Tikai lapa aiz QR koda."
+      },
+      {
+        "title": "Teksti un dizains",
+        "us": "Rediģējami visi teksti, krāsas un noformējuma elementi.",
+        "others": "Parasti tikai zīmola krāsa un logotips."
+      },
+      {
+        "title": "Tēmas un izkārtojumi",
+        "us": "Vairākas tēmas un ēdienkartes izkārtojumi pēc izvēles.",
+        "others": "Viens standarta izskats."
+      },
+      {
+        "title": "Video fons",
+        "us": "Video ēdienkartes galvenē, ne tikai foto.",
+        "others": "Tikai foto."
+      }
+    ]
+  },
   "faq": {
     "sub": "Ko restorānu īpašnieki jautā par IQ Rest digitālo ēdienkarti. Ja jūsu jautājuma nav sarakstā — rakstiet mums WhatsApp.",
     "items": [

@@ -4,7 +4,7 @@
   "trackPrefix": "l_digital",
   "meta": {
     "title": "Skaitmeninis meniu restoranams | IQ Rest",
-    "description": "Skaitmeninis meniu jūsų restoranui: meniu internete su nuotraukomis, alergenais, AI vertimu ir kainų atnaujinimu realiu laiku. 14 dienų nemokamai, nereikia banko kortelės.",
+    "description": "Skaitmeninis meniu jūsų restoranui: meniu internete su nuotraukomis, alergenais, AI vertimu ir kainų atnaujinimu realiu laiku. 14 dienų nemokamai.",
     "canonical": "https://iq-rest.com/lt/skaitmeninis-meniu-restoranas",
     "ogLocale": "lt_LT",
     "ogTitle": "Skaitmeninis meniu restoranams",
@@ -162,6 +162,55 @@
       ]
     }
   ],
+  "comparison": {
+    "heading": "Kodėl restoranai renkasi mus,",
+    "headingAccent": "o ne kitas sistemas",
+    "sub": "Dauguma meniu įrankių baigiasi QR kodu. Žemiau — tai, kas kasdieniame darbe iš tikrųjų skiriasi. Be pavadinimų — palyginkite patys su bet kuria sistema.",
+    "usLabel": "IQ Rest",
+    "othersLabel": "Kitos sistemos",
+    "rows": [
+      {
+        "title": "Staliukų rezervacijos",
+        "us": "Integruota: svečiai rezervuoja internetu 24/7, personalas mato rezervacijas planšetėje.",
+        "others": "Atskira mokama paslauga, jei iš viso yra."
+      },
+      {
+        "title": "Alergenai ir dietos",
+        "us": "Pažymimi prie kiekvieno patiekalo ir rodomi svečiui jo kalba.",
+        "others": "Geriausiu atveju teksto eilutė aprašyme."
+      },
+      {
+        "title": "Patiekalai, kategorijos, nuotraukos",
+        "us": "Be apribojimų bet kurioje konfigūracijoje.",
+        "others": "Pozicijų ir nuotraukų limitai, augantys su planu."
+      },
+      {
+        "title": "Komisinis nuo užsakymų",
+        "us": "0 % — kiekvienas užsakymas keliauja tiesiai restoranui.",
+        "others": "Dažnai procentas nuo kiekvieno užsakymo."
+      },
+      {
+        "title": "Meniu svetainė",
+        "us": "Pilnavertė svetainė, jei norite — su savo domenu, ne tik QR puslapis.",
+        "others": "Tik puslapis už QR kodo."
+      },
+      {
+        "title": "Tekstai ir dizainas",
+        "us": "Redaguojami visi tekstai, spalvos ir dizaino elementai.",
+        "others": "Paprastai tik firminė spalva ir logotipas."
+      },
+      {
+        "title": "Temos ir išdėstymai",
+        "us": "Kelios temos ir meniu išdėstymai pasirinktinai.",
+        "others": "Vienas standartinis vaizdas."
+      },
+      {
+        "title": "Vaizdo fonas",
+        "us": "Vaizdo įrašas meniu antraštėje, ne tik nuotraukos.",
+        "others": "Tik nuotraukos."
+      }
+    ]
+  },
   "faq": {
     "sub": "Ko restoranų savininkai klausia apie skaitmeninį meniu IQ Rest. Jei jūsų klausimo nėra – parašykite mums WhatsApp.",
     "items": [

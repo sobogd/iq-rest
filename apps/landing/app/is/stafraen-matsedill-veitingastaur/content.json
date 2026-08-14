@@ -4,7 +4,7 @@
   "trackPrefix": "l_digital",
   "meta": {
     "title": "Stafrænn matseðill fyrir veitingastaði | IQ Rest",
-    "description": "Stafrænn matseðill fyrir veitingastaðinn: matseðill á netinu með myndum, ofnæmisvöldum, gervigreindarþýðingum og verðuppfærslum í rauntíma. 14 dagar frítt, engin kortakrafa.",
+    "description": "Stafrænn matseðill fyrir veitingastaðinn: matseðill á netinu með myndum, ofnæmisvöldum og gervigreindarþýðingum. Verð uppfærast í rauntíma. 14 dagar frítt.",
     "canonical": "https://iq-rest.com/is/stafraen-matsedill-veitingastaur",
     "ogLocale": "is_IS",
     "ogTitle": "Stafrænn matseðill fyrir veitingastaði",
@@ -162,6 +162,55 @@
       ]
     }
   ],
+  "comparison": {
+    "heading": "Af hverju veitingastaðir velja okkur",
+    "headingAccent": "fram yfir önnur kerfi",
+    "sub": "Flest matseðilsverkfæri enda á QR-kóða. Hér að neðan er það sem raunverulega skiptir máli í daglegum rekstri. Engin nöfn nefnd — berðu saman við hvaða kerfi sem er.",
+    "usLabel": "IQ Rest",
+    "othersLabel": "Önnur kerfi",
+    "rows": [
+      {
+        "title": "Borðabókanir",
+        "us": "Innbyggt: gestir bóka á netinu allan sólarhringinn og starfsfólk sér bókanir á spjaldtölvu.",
+        "others": "Sérstök greidd þjónusta, ef hún er yfirhöfuð til."
+      },
+      {
+        "title": "Ofnæmisvaldar og mataræði",
+        "us": "Merktir við hvern rétt og birtir gestinum á hans tungumáli.",
+        "others": "Í besta falli textalína í lýsingunni."
+      },
+      {
+        "title": "Réttir, flokkar, myndir",
+        "us": "Engin takmörk í neinni útfærslu.",
+        "others": "Takmörk á réttum og myndum sem hækka með áskriftinni."
+      },
+      {
+        "title": "Þóknun af pöntunum",
+        "us": "0% — hver pöntun fer beint til veitingastaðarins.",
+        "others": "Oft hlutfall af hverri pöntun."
+      },
+      {
+        "title": "Vefsíða matseðilsins",
+        "us": "Fullgild vefsíða, að ósk á eigin léni — ekki bara QR-síða.",
+        "others": "Aðeins síða á bak við QR-kóða."
+      },
+      {
+        "title": "Textar og hönnun",
+        "us": "Allir textar, litir og útlitsþættir eru breytanlegir.",
+        "others": "Yfirleitt aðeins vörumerkislitur og lógó."
+      },
+      {
+        "title": "Þemu og uppsetningar",
+        "us": "Nokkur þemu og matseðilsuppsetningar í boði.",
+        "others": "Eitt staðlað útlit."
+      },
+      {
+        "title": "Myndbandsbakgrunnur",
+        "us": "Myndband í haus matseðilsins, ekki bara myndir.",
+        "others": "Aðeins myndir."
+      }
+    ]
+  },
   "faq": {
     "sub": "Það sem veitingamenn spyrja um stafræna matseðilinn í IQ Rest. Ef spurningin þín er ekki á listanum — sendu okkur skilaboð á WhatsApp.",
     "items": [

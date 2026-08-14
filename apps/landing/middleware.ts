@@ -265,10 +265,18 @@ export default function middleware(request: NextRequest) {
   // itself, then cleans the URL (history.replaceState). Middleware interception
   // dropped the event for fast/SPA navigations.
 
+  // Legal documents have a real root-level English copy in `app/(en)`
+  // (privacy/terms/cookies) that every /<locale>/ variant canonicalises to.
+  // They are NOT in EN_ROOT_SLUGS (localizedHref keeps linking the prefixed
+  // variants), but the canonical URL itself must answer 200 for every
+  // visitor — a geo-302 on a canonical target confuses crawlers that fetch
+  // from non-US IPs.
+  const LEGAL_ROOT_SLUGS = new Set(["/privacy", "/terms", "/cookies"]);
+
   // `/` and English root slugs (pricing, digital-menu-for-restaurants, ...)
   // resolve to the `app/(en)` route group. Set Last-Modified and skip the
   // "no-locale-prefix" geo redirect below.
-  if (pathname === "/" || EN_ROOT_SLUGS.has(pathname)) {
+  if (pathname === "/" || EN_ROOT_SLUGS.has(pathname) || LEGAL_ROOT_SLUGS.has(pathname)) {
     const response = NextResponse.next();
     const lm = pathname === "/" ? HOME_META.lastModified : lastModifiedFor(
       // Resolve root slug → shared route key for lookup in FEATURE_PAGES

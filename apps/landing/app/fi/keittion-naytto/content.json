@@ -3,8 +3,8 @@
   "slug": "keittion-naytto",
   "trackPrefix": "l_kds",
   "meta": {
-    "title": "KDS-keittiönäyttö ravintoloille — Tilaukset kokin ruudulla | IQ Rest",
-    "description": "KDS-keittiönäyttö ravintoloille: tilaukset salista ja QR-ruokalistalta menevät suoraan kokin ruudulle. Sarakkeet pöydittäin, Odottaa / Valmistuksessa / Valmis / Tarjoiltu -tilat, suodattimet työpisteittäin. Toimii tabletilla tai puhelimella.",
+    "title": "KDS-keittiönäyttö ravintoloille | IQ Rest",
+    "description": "KDS-keittiönäyttö ravintoloille: tilaukset salista ja QR-ruokalistalta suoraan kokin ruudulle. Sarakkeet pöydittäin, tilat ja suodattimet. Toimii tabletilla.",
     "canonical": "https://iq-rest.com/fi/keittion-naytto",
     "ogLocale": "fi_FI",
     "ogTitle": "KDS-keittiönäyttö — Tilaukset suoraan kokin ruudulle",

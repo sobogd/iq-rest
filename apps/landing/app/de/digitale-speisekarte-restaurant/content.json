@@ -4,7 +4,7 @@
   "trackPrefix": "l_digital",
   "meta": {
     "title": "Digitale Speisekarte für Restaurants | IQ Rest",
-    "description": "Digitale Speisekarte für Ihr Restaurant: eine Online-Speisekarte mit Fotos, Allergenen, KI-Übersetzung und Preis-Updates in Echtzeit. 14 Tage kostenlos, keine Kreditkarte nötig.",
+    "description": "Digitale Speisekarte für Ihr Restaurant: Online-Menü mit Fotos, Allergenen und KI-Übersetzung. 14 Tage kostenlos, keine Kreditkarte nötig.",
     "canonical": "https://iq-rest.com/de/digitale-speisekarte-restaurant",
     "ogLocale": "de_DE",
     "ogTitle": "Digitale Speisekarte für Restaurants",
@@ -162,6 +162,55 @@
       ]
     }
   ],
+  "comparison": {
+    "heading": "Warum Restaurants uns wählen",
+    "headingAccent": "und nicht andere Systeme",
+    "sub": "Die meisten Menü-Tools enden beim QR-Code. Die Zeilen unten zeigen, was sich im Alltag wirklich unterscheidet. Ohne Namen — vergleichen Sie selbst mit jedem beliebigen System.",
+    "usLabel": "IQ Rest",
+    "othersLabel": "Andere Systeme",
+    "rows": [
+      {
+        "title": "Tischreservierungen",
+        "us": "Integriert: Gäste buchen online rund um die Uhr, das Team sieht Reservierungen auf dem Tablet.",
+        "others": "Ein separater kostenpflichtiger Dienst, falls überhaupt vorhanden."
+      },
+      {
+        "title": "Allergene und Diäten",
+        "us": "Pro Gericht markiert und dem Gast in seiner Sprache angezeigt.",
+        "others": "Bestenfalls eine Textzeile in der Beschreibung."
+      },
+      {
+        "title": "Gerichte, Kategorien, Fotos",
+        "us": "Unbegrenzt in jeder Konfiguration.",
+        "others": "Limits für Positionen und Fotos, die mit dem Tarif wachsen."
+      },
+      {
+        "title": "Provision auf Bestellungen",
+        "us": "0 % — jede Bestellung geht direkt an das Restaurant.",
+        "others": "Oft ein Prozentsatz pro Bestellung."
+      },
+      {
+        "title": "Menü-Website",
+        "us": "Eine vollwertige Website, auf Wunsch mit eigener Domain — nicht nur eine QR-Seite.",
+        "others": "Nur eine Seite hinter dem QR-Code."
+      },
+      {
+        "title": "Texte und Design",
+        "us": "Alle Texte, Farben und Gestaltungselemente lassen sich anpassen.",
+        "others": "Meist nur Markenfarbe und Logo."
+      },
+      {
+        "title": "Themes und Layouts",
+        "us": "Mehrere Themes und Menü-Layouts zur Auswahl.",
+        "others": "Ein Standard-Look."
+      },
+      {
+        "title": "Video-Hintergrund",
+        "us": "Video im Menü-Header, nicht nur Fotos.",
+        "others": "Nur Fotos."
+      }
+    ]
+  },
   "faq": {
     "sub": "Was Gastronomen zur digitalen Speisekarte in IQ Rest fragen. Wenn Ihre Frage nicht dabei ist — schreiben Sie uns auf WhatsApp.",
     "items": [

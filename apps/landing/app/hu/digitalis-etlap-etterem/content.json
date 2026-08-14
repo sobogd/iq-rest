@@ -162,6 +162,55 @@
       ]
     }
   ],
+  "comparison": {
+    "heading": "Miért minket választanak az éttermek,",
+    "headingAccent": "nem más rendszereket",
+    "sub": "A legtöbb étlapkezelő eszköz a QR-kódnál megáll. Alább az áll, ami a mindennapi munkában tényleg különbözik. Nevek nélkül — hasonlítsd össze bármelyik rendszerrel.",
+    "usLabel": "IQ Rest",
+    "othersLabel": "Más rendszerek",
+    "rows": [
+      {
+        "title": "Asztalfoglalás",
+        "us": "Beépítve: a vendégek 0-24 online foglalnak, a személyzet tableten látja a foglalásokat.",
+        "others": "Külön fizetős szolgáltatás, ha egyáltalán létezik."
+      },
+      {
+        "title": "Allergének és étrendek",
+        "us": "Ételenként jelölve, a vendég a saját nyelvén látja.",
+        "others": "Legjobb esetben egy sor szöveg a leírásban."
+      },
+      {
+        "title": "Ételek, kategóriák, fotók",
+        "us": "Korlátlan minden konfigurációban.",
+        "others": "Tétel- és fotólimitek, amelyek a csomaggal nőnek."
+      },
+      {
+        "title": "Jutalék a rendelések után",
+        "us": "0% — minden rendelés közvetlenül az étteremhez fut be.",
+        "others": "Gyakran százalék minden rendelés után."
+      },
+      {
+        "title": "Étlap-weboldal",
+        "us": "Teljes értékű weboldal, akár saját domainen — nem csak egy QR-oldal.",
+        "others": "Csak egy QR-kód mögötti oldal."
+      },
+      {
+        "title": "Szövegek és dizájn",
+        "us": "Minden szöveg, szín és megjelenési elem szerkeszthető.",
+        "others": "Általában egy márkaszín és egy logó."
+      },
+      {
+        "title": "Témák és elrendezések",
+        "us": "Több téma és étlap-elrendezés közül választhatsz.",
+        "others": "Egyetlen szabvány megjelenés."
+      },
+      {
+        "title": "Videó háttér",
+        "us": "Videó az étlap fejlécében, nem csak fotók.",
+        "others": "Csak fotók."
+      }
+    ]
+  },
   "faq": {
     "sub": "Amit a vendéglátósok az IQ Rest digitális étlapról kérdeznek. Ha nem találod a kérdésed — írj nekünk WhatsAppon.",
     "items": [

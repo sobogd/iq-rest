@@ -162,6 +162,55 @@
       ]
     }
   ],
+  "comparison": {
+    "heading": "Därför väljer restauranger oss",
+    "headingAccent": "framför andra system",
+    "sub": "De flesta menyverktyg stannar vid en QR-kod. Raderna nedan visar vad som faktiskt skiljer sig i det dagliga arbetet. Inga namn — jämför själv med vilket system som helst.",
+    "usLabel": "IQ Rest",
+    "othersLabel": "Andra system",
+    "rows": [
+      {
+        "title": "Bordsbokningar",
+        "us": "Inbyggt: gästerna bokar online dygnet runt, personalen ser bokningarna på en surfplatta.",
+        "others": "En separat betaltjänst, om den alls finns."
+      },
+      {
+        "title": "Allergener och dieter",
+        "us": "Markeras per rätt och visas för gästen på gästens eget språk.",
+        "others": "I bästa fall en textrad i beskrivningen."
+      },
+      {
+        "title": "Rätter, kategorier, foton",
+        "us": "Obegränsat i alla konfigurationer.",
+        "others": "Gränser för rätter och foton som växer med paketet."
+      },
+      {
+        "title": "Provision på beställningar",
+        "us": "0 % — varje beställning går direkt till restaurangen.",
+        "others": "Ofta en procentandel av varje beställning."
+      },
+      {
+        "title": "Menywebbplats",
+        "us": "En fullständig webbplats, om du vill på egen domän — inte bara en QR-sida.",
+        "others": "Bara en sida bakom en QR-kod."
+      },
+      {
+        "title": "Texter och design",
+        "us": "Alla texter, färger och designelement går att anpassa.",
+        "others": "Oftast bara en profilfärg och en logotyp."
+      },
+      {
+        "title": "Teman och layouter",
+        "us": "Flera teman och menylayouter att välja mellan.",
+        "others": "Ett standardutseende."
+      },
+      {
+        "title": "Videobakgrund",
+        "us": "Video i menyns sidhuvud, inte bara foton.",
+        "others": "Bara foton."
+      }
+    ]
+  },
   "faq": {
     "sub": "Vad krögare frågar om den digitala menyn i IQ Rest. Om din fråga inte finns med — skicka ett meddelande på WhatsApp.",
     "items": [
