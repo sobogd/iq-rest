@@ -4,13 +4,14 @@ import TEXTS_JSON from "../texts.json";
 import { HelpView } from "@/app/_landing/help/help-view";
 import { ru as doc } from "@/app/_landing/help/content/ru";
 import { faqJsonLd } from "@/app/_landing/help/faq-json-ld";
+import { featureAlternates } from "@/lib/hreflang";
 
 const TEXTS = TEXTS_JSON as unknown as LandingTexts;
 
 export const metadata: Metadata = {
   title: doc.metaTitle,
   description: doc.metaDescription,
-  alternates: { canonical: `${TEXTS.meta.canonical}/help` },
+  alternates: { canonical: `${TEXTS.meta.canonical}/help`, languages: featureAlternates("/help") },
 };
 
 // FAQPage structured data, derived from the guide's "faq" section (h3 =

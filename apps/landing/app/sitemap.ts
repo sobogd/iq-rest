@@ -92,7 +92,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     HELP_LOCALES.forEach((loc) => {
       languages[loc] = `${baseUrl}${localizedHref('/help', loc)}`
     })
-    languages['x-default'] = languages[HELP_LOCALES[0]]
+    // x-default must be the English guide (`/help`), not whatever locale
+    // happens to be first in the registry (ru).
+    languages['x-default'] = `${baseUrl}${localizedHref('/help', 'en')}`
     HELP_LOCALES.forEach((loc) => {
       sitemapEntries.push({
         url: `${baseUrl}${localizedHref('/help', loc)}`,

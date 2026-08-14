@@ -11,7 +11,7 @@ export type PageMeta = {
 // Last content-review date, published as `dateModified` in the marketing
 // JSON-LD (freshness signal for AI answer engines / search). Bump when the
 // on-page copy or offer is materially revised.
-export const SCHEMA_DATE_MODIFIED = "2026-07-03";
+export const SCHEMA_DATE_MODIFIED = "2026-08-14";
 
 // Home page meta (per-locale `/`).
 export const HOME_META: PageMeta = {
@@ -28,7 +28,8 @@ export const FEATURE_PAGES: Record<string, PageMeta> = {
   "/bookings": { lastModified: "2026-05-20", changeFrequency: "monthly", priority: 0.8 },
   "/kitchen-display": { lastModified: "2026-05-20", changeFrequency: "monthly", priority: 0.8 },
   "/menu-qr-code": { lastModified: "2026-05-24", changeFrequency: "monthly", priority: 0.8 },
-  "/pricing": { lastModified: "2026-05-20", changeFrequency: "monthly", priority: 0.9 },
+  "/pricing": { lastModified: "2026-08-14", changeFrequency: "monthly", priority: 0.9 },
+  "/about": { lastModified: "2026-08-14", changeFrequency: "monthly", priority: 0.6 },
 };
 
 // Partial-coverage pages — only exist on a subset of locales (typically

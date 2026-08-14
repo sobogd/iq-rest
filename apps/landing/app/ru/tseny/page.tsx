@@ -3,8 +3,13 @@ import { PricingTemplate } from "@/app/_landing/templates/pricing-template";
 import type { LandingTexts } from "@/app/_landing/types";
 import DEFAULT_JSON from "../texts.json";
 import PRICING_JSON from "./pricing.json";
-import { SCHEMA_PRICE_MENU_EUR } from "@/lib/pricing";
-import { SCHEMA_DATE_MODIFIED } from "@/lib/page-meta";
+import {
+  SCHEMA_PRICE_MENU_EUR,
+  SCHEMA_PRICE_RESERVATIONS_EUR,
+  SCHEMA_PRICE_ORDERS_KDS_EUR,
+  SCHEMA_PRICE_DOMAIN_EUR,
+} from "@/lib/pricing";
+import { featureAlternates } from "@/lib/hreflang";
 import { restaurantCount } from "@/lib/restaurant-count";
 
 export const dynamic = "force-static";
@@ -29,7 +34,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: TEXTS.meta.title,
   description: TEXTS.meta.description,
-  alternates: { canonical: TEXTS.meta.canonical },
+  alternates: { canonical: TEXTS.meta.canonical, languages: featureAlternates("/pricing") },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   openGraph: {
     title: TEXTS.meta.ogTitle,
@@ -68,10 +73,12 @@ const JSON_LD = JSON.stringify({
       "@type": "Product",
       name: "IQ Rest",
       description: TEXTS.meta.description,
-      dateModified: SCHEMA_DATE_MODIFIED,
       brand: { "@type": "Brand", name: "IQ Rest" },
       offers: [
-        { "@type": "Offer", name: "Digital menu", price: SCHEMA_PRICE_MENU_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
+        { "@type": "Offer", name: "Digital menu (base)", price: SCHEMA_PRICE_MENU_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
+        { "@type": "Offer", name: "Table reservations (add-on)", price: SCHEMA_PRICE_RESERVATIONS_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
+        { "@type": "Offer", name: "Order taking + kitchen display (add-on)", price: SCHEMA_PRICE_ORDERS_KDS_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
+        { "@type": "Offer", name: "Custom menu domain (add-on)", price: SCHEMA_PRICE_DOMAIN_EUR, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: TEXTS.meta.canonical },
       ],
     },
   ],

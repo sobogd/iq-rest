@@ -4,6 +4,7 @@ import TEXTS_JSON from "../texts.json";
 import { HelpView } from "@/app/_landing/help/help-view";
 import { uk as doc } from "@/app/_landing/help/content/uk";
 import { faqJsonLd } from "@/app/_landing/help/faq-json-ld";
+import { featureAlternates } from "@/lib/hreflang";
 import { localizedHref } from "@/lib/locale-slug-overrides";
 
 const TEXTS = TEXTS_JSON as unknown as LandingTexts;
@@ -12,7 +13,7 @@ const SITE = "https://iq-rest.com";
 export const metadata: Metadata = {
   title: doc.metaTitle,
   description: doc.metaDescription,
-  alternates: { canonical: `${SITE}${localizedHref("/help", "uk")}` },
+  alternates: { canonical: `${SITE}${localizedHref("/help", "uk")}`, languages: featureAlternates("/help") },
 };
 
 const JSON_LD = faqJsonLd(doc);

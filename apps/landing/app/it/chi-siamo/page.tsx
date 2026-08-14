@@ -5,6 +5,7 @@ import TEXTS_JSON from "../texts.json";
 import ABOUT_JSON from "./about.json";
 import { restaurantCount } from "@/lib/restaurant-count";
 import { SCHEMA_DATE_MODIFIED } from "@/lib/page-meta";
+import { featureAlternates } from "@/lib/hreflang";
 import { WHATSAPP_E164 } from "@/lib/contact";
 
 export const dynamic = "force-static";
@@ -68,7 +69,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: ABOUT.meta.title,
   description: ABOUT.meta.description,
-  alternates: { canonical: PAGE_URL },
+  alternates: { canonical: PAGE_URL, languages: featureAlternates("/about") },
   robots: { index: true, follow: true },
   openGraph: {
     title: ABOUT.meta.ogTitle,

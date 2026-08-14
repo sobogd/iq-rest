@@ -44,25 +44,12 @@ function goneResponse(pathname: string): NextResponse {
 const localePattern = locales.join("|");
 const localeRegex = new RegExp(`^/(${localePattern})(/|$)`);
 
-// Replaces next-intl's `createMiddleware` `Link` response header (hreflang
-// alternates, https://developers.google.com/search/docs/specialty/international/localized-versions)
-// for every request that reaches this point — by then `pathname` always
-// carries a valid locale prefix (bare `/`, unprefixed paths and the EN root
-// are all handled earlier). `localePrefix: "always"` in the old config meant
-// every locale — including `en` — got a `/<locale>` alternate entry, even
-// though EN itself is actually served unprefixed at `/`; kept byte-identical
-// here rather than "fixed", since that's the SEO signal already indexed.
-function alternateLinksHeader(request: NextRequest, pathname: string): string {
-  const host = request.headers.get("x-forwarded-host") ?? request.headers.get("host");
-  const protocol = request.headers.get("x-forwarded-proto") ?? request.nextUrl.protocol.replace(":", "");
-  const normalizedPathname = pathname.replace(localeRegex, "/").replace(/(.)\/$/, "$1");
-  const links = locales.map((locale) => {
-    const path = normalizedPathname === "/" ? `/${locale}` : `/${locale}${normalizedPathname}`;
-    const url = `${protocol}://${host}${path}`;
-    return `<${url}>; rel="alternate"; hreflang="${locale}"`;
-  });
-  return links.join(", ");
-}
+// NOTE: the `Link` response header with hreflang alternates (inherited from
+// next-intl's middleware) was removed 2026-08-14. It naively substituted
+// `/{locale}{path}` without translating per-locale slugs, so on localized
+// feature/about/help URLs every alternate pointed at a 301 and contradicted
+// the correct head-level hreflang (build-feature-metadata.ts) and the sitemap.
+// Head + sitemap remain the two (agreeing) hreflang sources.
 
 const GEO_COUNTRY_COOKIE = "geo_country";
 const GEO_LOCALE_COOKIE = "geo_locale";
@@ -319,10 +306,8 @@ export default function middleware(request: NextRequest) {
   }
 
   // By this point pathname is always locale-prefixed with a known locale
-  // (see the redirect-without-prefix block above) — plain passthrough plus
-  // the hreflang alternates next-intl's middleware used to set.
+  // (see the redirect-without-prefix block above) — plain passthrough.
   const response = NextResponse.next();
-  response.headers.set("Link", alternateLinksHeader(request, pathname));
 
   // Add pathname to headers for SSR components
   response.headers.set("x-pathname", request.nextUrl.pathname);

@@ -4,7 +4,7 @@
 
 ## Positioning
 
-IQ Rest replaces separate tools (printed menu, phone bookings, kitchen tickets, ordering apps) with one system built for how restaurants actually work. The hero pitch is the digital menu, the kitchen display and reservations — never "0% commission" as the lead, and the product is never framed against food-delivery apps. Pricing is flat: no add-ons, no per-feature charges.
+IQ Rest replaces separate tools (printed menu, phone bookings, kitchen tickets, ordering apps) with one system built for how restaurants actually work. The hero pitch is the digital menu, the kitchen display and reservations — never "0% commission" as the lead, and the product is never framed against food-delivery apps. Pricing is modular: a restaurant pays for the base digital menu and only the add-ons it enables.
 
 ## Products
 
@@ -22,15 +22,17 @@ Guests order through the table QR code, or a waiter takes the order on a phone. 
 
 ## Pricing
 
-Prices are localised by country and currency. EUR reference:
+Modular ("build your plan") pricing, per restaurant. The digital menu is the base module; reservations, order taking + kitchen display, and a custom menu domain are optional add-ons. Prices are localised by country and currency (21 currencies). EUR reference, per month:
 
-- Free plan: €0.
-- Basic: €9.90 / month, or €6.90 / month when billed yearly (€82.80 / year).
-- Pro: €31.90 / month, or €24.90 / month when billed yearly (€298.80 / year).
+- Digital menu (base): €14.90 monthly, or €9.90 / month when billed yearly.
+- Table reservations (add-on): €9 monthly, or €7 / month when billed yearly.
+- Order taking + kitchen display (add-on): €13 monthly, or €11 / month when billed yearly.
+- Custom menu domain (add-on): €5 monthly, or €4 / month when billed yearly.
+- Volume discounts when one account runs several restaurants: 2–4 restaurants — 15% off monthly / 25% off yearly; 5 or more — 25% off monthly / 50% off yearly.
 - 14-day free trial, no credit card required, cancel anytime.
-- 0% commission on all orders regardless of plan.
+- 0% commission on all orders regardless of configuration.
 
-Basic vs Pro differ by advanced capabilities (e.g. multi-restaurant management on Pro). See https://iq-rest.com/pricing for the current plan comparison and FAQ.
+A restaurant's total = base + selected add-ons, times the volume discount across the account. See https://iq-rest.com/pricing for the interactive plan builder and FAQ.
 
 ## Common questions
 

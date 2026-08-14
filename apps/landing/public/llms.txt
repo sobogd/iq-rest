@@ -9,12 +9,16 @@
 - **Table reservations**: guests book tables themselves 24/7 without phone calls; the restaurant manages availability from the dashboard.
 - **Order taking** (secondary): guests order via the table QR code, or a waiter takes the order from a phone; tickets go straight to the kitchen or WhatsApp. 0% commission — every order goes directly to the restaurant.
 
-## Pricing
+## Pricing (modular, per restaurant)
 
-- **Free plan**: available.
-- **Basic**: €9.90 / month, or €6.90 / month billed yearly.
-- **Pro**: €31.90 / month, or €24.90 / month billed yearly.
-- **Trial**: 14 days free, no credit card required. Cancel anytime. Prices are localised per country/currency; EUR shown here.
+Build-your-plan model: the digital menu is the base module, everything else is an add-on. EUR reference prices per month (monthly billing / cheaper rate when billed yearly):
+
+- **Digital menu (base)**: €14.90 / month, or €9.90 / month billed yearly.
+- **Table reservations (add-on)**: €9 / month, or €7 / month billed yearly.
+- **Order taking + kitchen display (add-on)**: €13 / month, or €11 / month billed yearly.
+- **Custom menu domain (add-on)**: €5 / month, or €4 / month billed yearly.
+- **Volume discounts** for multiple restaurants on one account: 2–4 restaurants — 15% off monthly / 25% off yearly; 5+ — 25% off monthly / 50% off yearly.
+- **Trial**: 14 days free, no credit card required. Cancel anytime. Prices are localised per country/currency; EUR shown here. See https://iq-rest.com/pricing for the interactive plan builder.
 
 ## Key pages
 

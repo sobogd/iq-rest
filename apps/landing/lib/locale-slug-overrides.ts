@@ -248,8 +248,11 @@ export const LOCALE_SLUG_OVERRIDES: Record<string, Record<string, string>> = {
     is: "/verd",
   },
 
-  // About / company page — localized slug per language (SEO). Only the locales
-  // that ship a built page are listed; others fall back to the route key.
+  // About / company page — exists on ALL 35 locales. Localized slug where the
+  // page ships one; every other locale serves the plain `/about` directory.
+  // Listing every locale explicitly (instead of relying on the route-key
+  // fallback) keeps swapLocale() on the about page when switching language —
+  // a missing entry used to drop the visitor on the target locale's home.
   "/about": {
     ru: "/o-kompanii",
     en: "/about",
@@ -257,9 +260,15 @@ export const LOCALE_SLUG_OVERRIDES: Record<string, Record<string, string>> = {
     fr: "/a-propos",
     it: "/chi-siamo",
     pt: "/sobre-nos",
+    de: "/about", nl: "/about", pl: "/about", tr: "/about", uk: "/about",
+    ja: "/about", ko: "/about", zh: "/about", ar: "/about", fa: "/about",
+    cs: "/about", sk: "/about", hu: "/about", ro: "/about", el: "/about",
+    bg: "/about", hr: "/about", sr: "/about", sl: "/about", ca: "/about",
+    da: "/about", no: "/about", sv: "/about", fi: "/about", et: "/about",
+    lt: "/about", lv: "/about", ga: "/about", is: "/about",
   },
 
-  // Help guide — localized slug per language (SEO). Same rollout rule as above.
+  // Help guide — exists on ALL 35 locales; same explicit-listing rule as /about.
   "/help": {
     ru: "/help",
     en: "/help",
@@ -267,6 +276,12 @@ export const LOCALE_SLUG_OVERRIDES: Record<string, Record<string, string>> = {
     fr: "/aide",
     it: "/guida",
     pt: "/ajuda",
+    de: "/help", nl: "/help", pl: "/help", tr: "/help", uk: "/help",
+    ja: "/help", ko: "/help", zh: "/help", ar: "/help", fa: "/help",
+    cs: "/help", sk: "/help", hu: "/help", ro: "/help", el: "/help",
+    bg: "/help", hr: "/help", sr: "/help", sl: "/help", ca: "/help",
+    da: "/help", no: "/help", sv: "/help", fi: "/help", et: "/help",
+    lt: "/help", lv: "/help", ga: "/help", is: "/help",
   },
 };
 
