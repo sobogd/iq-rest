@@ -14,6 +14,7 @@ export interface TrafficSession {
   region: string;
   city: string;
   lang: string | null;
+  theme: string | null;
   from: string | null;
   ref: string | null;
   /** Raw paid click id — nulled 7 days after the visit; `atype` outlives it. */

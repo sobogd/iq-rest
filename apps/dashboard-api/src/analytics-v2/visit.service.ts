@@ -26,6 +26,7 @@ export type { VisitSeed } from "./request-facts";
 export interface VisitAttribution {
   from: string | null;
   ref: string | null;
+  theme: string | null;
   aid: { aid: string; atype: "F" | "G"; aidField: string } | null;
 }
 
@@ -143,6 +144,7 @@ export class VisitService {
           // Attribution the anonymous half carried and the signed-in row lacks.
           ...(target.from === null && anon.from !== null ? { from: anon.from } : {}),
           ...(target.ref === null && anon.ref !== null ? { ref: anon.ref } : {}),
+          ...(target.theme === null && anon.theme !== null ? { theme: anon.theme } : {}),
           ...(target.aid === null && anon.aid !== null
             ? { aid: anon.aid, atype: anon.atype, aidField: anon.aidField, clickAt: anon.clickAt }
             : {}),
@@ -186,6 +188,12 @@ export class VisitService {
       await this.prisma.sessionNew.updateMany({
         where: { id: session.id, ref: null },
         data: { ref: attr.ref },
+      });
+    }
+    if (attr.theme && !session.theme) {
+      await this.prisma.sessionNew.updateMany({
+        where: { id: session.id, theme: null },
+        data: { theme: attr.theme },
       });
     }
   }

@@ -158,6 +158,7 @@ function SessionCard({ data }: { data: TrafficSessionDetail }) {
           <Row label="Last seen" value={hmsDate(s.lastAt)} />
           <Row label="Device" value={deviceShort(s.device, s.os)} />
           <Row label="Language" value={s.lang} />
+          <Row label="Theme" value={s.theme} />
           <Row label="Events" value={`${s.eventCount} across ${s.pageCount} page(s)`} />
           <Row label="Landed on" value={s.firstPage} />
         </div>

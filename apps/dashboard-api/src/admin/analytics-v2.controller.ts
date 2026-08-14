@@ -45,6 +45,7 @@ interface SessionListRow {
   region: string;
   city: string;
   lang: string | null;
+  theme: string | null;
   from: string | null;
   ref: string | null;
   aid: string | null;
@@ -100,7 +101,7 @@ export class AnalyticsV2AdminController {
     const rows = await this.prisma.$queryRaw<SessionListRow[]>(Prisma.sql`
       SELECT
         s.id, s."firstAt", s."lastAt", s.device, s.os, s.country, s.region, s.city,
-        s.lang, s."from", s.ref, s.aid, s.atype, s."aidField", s."clickAt",
+        s.lang, s.theme, s."from", s.ref, s.aid, s.atype, s."aidField", s."clickAt",
         s."userId", s."mergeCount",
         ev.event_count,
         ev.page_count,
@@ -187,6 +188,7 @@ export class AnalyticsV2AdminController {
         region: r.region,
         city: r.city,
         lang: r.lang,
+        theme: r.theme,
         from: r.from,
         ref: r.ref,
         aid: r.aid,

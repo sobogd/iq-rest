@@ -402,6 +402,7 @@ function SessionItem({
           {deviceShort(s.device, s.os)}
         </span>
         {s.lang ? <span className={`${chip} hidden md:inline`}>{s.lang}</span> : null}
+        {s.theme ? <span className={`${chip} hidden md:inline`}>{s.theme === "dark" ? "🌙" : "☀️"}</span> : null}
         {s.restaurants?.length ? (
           <span
             className={`${chip} hidden lg:inline truncate min-w-0`}

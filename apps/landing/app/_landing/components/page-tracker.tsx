@@ -53,6 +53,9 @@ function collectCtxAndCleanUrl(): TrackCtx | undefined {
   if (from && FROM_REGEX.test(from)) ctx.from = from;
   const ref = searchReferrerHost();
   if (ref) ctx.ref = ref;
+  if (window.matchMedia) {
+    ctx.theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  }
 
   if ([...sp.keys()].length > 0) {
     // Preserve the existing state object. Passing a fresh {} overwrites the App

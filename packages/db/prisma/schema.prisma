@@ -658,6 +658,7 @@ model SessionNew {
   region  String   @default("")
   city    String   @default("")
   lang    String? // full Accept-Language primary tag, e.g. "es-ES"
+  theme   String? // 'dark' | 'light' — client's prefers-color-scheme, first-write-wins
   from    String? // ?from= campaign tag, first-write-wins
   ref     String? // first-touch referrer host (search-engine detection)
   // Paid click id. aid holds the raw click id; atype ('F' | 'G') drives source

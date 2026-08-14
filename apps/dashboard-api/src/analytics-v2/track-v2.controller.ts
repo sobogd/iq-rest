@@ -22,6 +22,8 @@ const FBCLID_REGEX = /^[A-Za-z0-9_.-]{1,512}$/;
 const GCLID_REGEX = /^[A-Za-z0-9_-]{1,256}$/;
 const FROM_REGEX = /^[A-Za-z0-9_.-]{1,64}$/;
 const HOST_REGEX = /^[a-z0-9.-]{1,253}$/i;
+// Client's prefers-color-scheme. Fixed set, not free text.
+const THEME_REGEX = /^(dark|light)$/;
 // Rendered locale of the page the event happened on. Landing locales are plain
 // two-letter codes; the bound is generous so a regional variant would still
 // pass rather than silently drop the whole event's locale.
@@ -53,6 +55,7 @@ interface TrackCtx {
   wbraid?: unknown;
   from?: unknown;
   ref?: unknown;
+  theme?: unknown;
 }
 
 interface RawEvent {
@@ -231,6 +234,7 @@ export class TrackV2Controller {
     await this.visits.enrich(session, {
       from: typeof ctx.from === "string" && FROM_REGEX.test(ctx.from) ? ctx.from : null,
       ref: typeof ctx.ref === "string" && HOST_REGEX.test(ctx.ref) ? ctx.ref.toLowerCase() : null,
+      theme: typeof ctx.theme === "string" && THEME_REGEX.test(ctx.theme) ? ctx.theme : null,
       aid,
     }, now);
 

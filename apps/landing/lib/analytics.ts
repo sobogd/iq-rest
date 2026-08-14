@@ -35,6 +35,7 @@ export interface TrackCtx {
   wbraid?: string;
   from?: string;
   ref?: string;
+  theme?: string;
 }
 
 // Current page label, set by PageTracker on mount so deep components (header,
