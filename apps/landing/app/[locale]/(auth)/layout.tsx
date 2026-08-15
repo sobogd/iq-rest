@@ -3,6 +3,7 @@ import { LandingHeader } from "@/app/_landing/components/header";
 import { LandingFooter } from "@/app/_landing/components/footer";
 import { PageTracker } from "@/app/_landing/components/page-tracker";
 import { AuthHero } from "@/app/_landing/components/onboarding/auth-hero";
+import { IosInputZoomLock } from "@/app/_landing/components/onboarding/ios-input-zoom-lock";
 import { PAGE, Content } from "@/app/_landing/components/shell";
 import { routeKeyFromPath } from "@/lib/locale-slug-overrides";
 // Single source of chrome (header/footer nav copy) for every non-marketing
@@ -31,6 +32,7 @@ export default async function AuthLayout({
   return (
     <main className={`${PAGE} min-h-dvh bg-background text-foreground antialiased tracking-tight`}>
       <PageTracker page="auth" />
+      <IosInputZoomLock />
       <LandingHeader
         texts={chrome.header}
         locale={locale}
