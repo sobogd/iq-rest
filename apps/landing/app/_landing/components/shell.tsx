@@ -57,18 +57,22 @@ export const DEMO_BTN =
   "!h-10 !min-h-0 !py-0 !px-4 !text-sm !font-semibold !rounded-lg whitespace-nowrap";
 
 /** A page section — lives inside `Content`, so it carries no width styling
- *  of its own, just the id/tracking hook. */
+ *  of its own, just the id/tracking hook. `className` lets a band that is a
+ *  single layout box (a grid/flex row) carry that layout itself instead of
+ *  nesting one more wrapper div inside. */
 export function Band({
   section,
   id,
+  className,
   children,
 }: {
   section: string;
   id?: string;
+  className?: string;
   children: React.ReactNode;
 }) {
   return (
-    <section id={id} data-section={section}>
+    <section id={id} data-section={section} className={className}>
       {children}
     </section>
   );

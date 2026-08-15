@@ -123,8 +123,10 @@ export function AuthHero({ locale }: { locale: string }) {
   }, [auth.authenticated, auth.legacyDashboard, locale]);
 
   return (
-    <section data-section="auth-hero">
-      <div className="overflow-hidden rounded-2xl border border-border grid grid-cols-1 lg:grid-cols-[minmax(0,11fr)_minmax(0,9fr)]">
+    <section
+      data-section="auth-hero"
+      className="overflow-hidden rounded-2xl border border-border grid grid-cols-1 lg:grid-cols-[minmax(0,11fr)_minmax(0,9fr)]"
+    >
         {/* Copy column: first in the grid, so on mobile the card simply
             stacks — switcher + heading on top, form below. Fixed height on
             mobile (`h-56 sm:h-64`) keeps the card from jumping when the
@@ -157,7 +159,6 @@ export function AuthHero({ locale }: { locale: string }) {
         <div className="relative flex flex-col gap-6 p-5 sm:p-6 bg-[hsl(32_44%_92%)] dark:bg-[hsl(32_14%_14%)]">
           <AuthStep signupContext={null} mode={mode} onStepChange={setStep} />
         </div>
-      </div>
     </section>
   );
 }

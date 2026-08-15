@@ -90,22 +90,20 @@ export function FeatureLandingTemplate({ content, chrome, count }: FeatureLandin
         </Band>
 
         {heroCards && heroCards.length > 0 ? (
-          <Band section="hero_cards">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-              {heroCards.map((c) => {
-                const Icon = getIcon(c.icon);
-                return (
-                  <div
-                    key={c.title}
-                    className="flex flex-col gap-1.5 rounded-2xl border border-border p-5 sm:p-6"
-                  >
-                    <Icon className={`h-7 w-7 mb-1 ${c.iconClass ?? "text-primary"}`} strokeWidth={1.75} />
-                    <p className="font-semibold text-base">{withCount(c.title)}</p>
-                    <p className="text-sm text-muted-foreground/80 leading-relaxed">{withCount(c.sub)}</p>
-                  </div>
-                );
-              })}
-            </div>
+          <Band section="hero_cards" className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            {heroCards.map((c) => {
+              const Icon = getIcon(c.icon);
+              return (
+                <div
+                  key={c.title}
+                  className="flex flex-col gap-1.5 rounded-2xl border border-border p-5 sm:p-6"
+                >
+                  <Icon className={`h-7 w-7 mb-1 ${c.iconClass ?? "text-primary"}`} strokeWidth={1.75} />
+                  <p className="font-semibold text-base">{withCount(c.title)}</p>
+                  <p className="text-sm text-muted-foreground/80 leading-relaxed">{withCount(c.sub)}</p>
+                </div>
+              );
+            })}
           </Band>
         ) : null}
 

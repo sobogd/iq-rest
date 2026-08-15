@@ -216,33 +216,29 @@ export function CroHomeTemplateV2({
       <Content>
         <LandingHeroV2 locale={locale} copy={cro.heroV2} />
 
-        {/* Four benefit bullets, straight under the hero. */}
-        <Band section="hero_cards">
-          {/* Cards with an outline only — no fill, so the band stays as light as
-              the rest of the page. */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {cro.heroCards.map((c) => {
-              const Icon = getIcon(c.icon);
-              return (
-                <div
-                  key={c.title}
-                  className="flex flex-col gap-1.5 rounded-2xl border border-border p-5 sm:p-6"
-                >
-                  <Icon className={`h-7 w-7 mb-1 ${c.iconClass ?? "text-primary"}`} strokeWidth={1.75} />
-                  {/* Not a heading: the band sits between the h1 and the first h2,
-                      so an h3 here would skip a level in the outline. */}
-                  <p className="font-semibold text-base">{withCount(c.title)}</p>
-                  <p className="text-sm text-muted-foreground/80 leading-relaxed">{withCount(c.sub)}</p>
-                </div>
-              );
-            })}
-          </div>
+        {/* Four benefit bullets, straight under the hero. Cards with an outline
+            only — no fill, so the band stays as light as the rest of the page. */}
+        <Band section="hero_cards" className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          {cro.heroCards.map((c) => {
+            const Icon = getIcon(c.icon);
+            return (
+              <div
+                key={c.title}
+                className="flex flex-col gap-1.5 rounded-2xl border border-border p-5 sm:p-6"
+              >
+                <Icon className={`h-7 w-7 mb-1 ${c.iconClass ?? "text-primary"}`} strokeWidth={1.75} />
+                {/* Not a heading: the band sits between the h1 and the first h2,
+                    so an h3 here would skip a level in the outline. */}
+                <p className="font-semibold text-base">{withCount(c.title)}</p>
+                <p className="text-sm text-muted-foreground/80 leading-relaxed">{withCount(c.sub)}</p>
+              </div>
+            );
+          })}
         </Band>
 
         {/* The two features people come for, as cards: artwork on a warm tint,
             then the copy. Two per row on desktop, one on mobile. */}
-        <Band section="cro_features">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <Band section="cro_features" className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <FeatureCard
               section="cro_menu"
               copy={cro.menu}
@@ -355,7 +351,6 @@ export function CroHomeTemplateV2({
                 </div>
               }
             />
-          </div>
         </Band>
 
         <Band section="final_cta">

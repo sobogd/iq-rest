@@ -91,10 +91,12 @@ export function LandingHeroV2({ locale, copy }: { locale: string; copy: HeroV2Co
   const m = copy.mockups;
 
   return (
-    <section data-section="hero">
-      {/* One big card, same construction as the feature cards below: copy on
-          the left, a tinted panel with the devices on the right. */}
-      <div className="overflow-hidden rounded-2xl border border-border grid grid-cols-1 lg:grid-cols-[11fr_9fr]">
+    // One big card, same construction as the feature cards below: copy on the
+    // left, a tinted panel with the devices on the right.
+    <section
+      data-section="hero"
+      className="overflow-hidden rounded-2xl border border-border grid grid-cols-1 lg:grid-cols-[11fr_9fr]"
+    >
         <div className="order-2 lg:order-1 min-w-0 flex flex-col items-start text-start gap-6 p-6 sm:p-8">
           <span className="flex flex-wrap items-center justify-start gap-x-4 gap-y-1 text-sm text-muted-foreground/80">
             {copy.verticals.map((v) => (
@@ -161,8 +163,7 @@ export function LandingHeroV2({ locale, copy }: { locale: string; copy: HeroV2Co
           <div className="absolute left-[36%] bottom-0 w-[30%] z-30">
             <Phone cropBottom ratio="720 / 1278" image={m.phone2} sizes="(max-width: 1024px) 28vw, 170px" />
           </div>
-      </div>
-      </div>
+        </div>
     </section>
   );
 }

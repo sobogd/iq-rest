@@ -91,8 +91,7 @@ export function AboutTemplate({
       {/* Same card as the home hero: copy on the left, the warm tinted panel on
           the right — only there it carries device mockups and here the numbers
           that answer "how real is this company". */}
-      <section data-section="about_intro">
-        <div className="overflow-hidden rounded-2xl border border-border grid grid-cols-1 lg:grid-cols-[11fr_9fr]">
+      <section data-section="about_intro" className="overflow-hidden rounded-2xl border border-border grid grid-cols-1 lg:grid-cols-[11fr_9fr]">
           <div className="order-2 lg:order-1 flex flex-col justify-center gap-4 p-5 sm:p-6">
             <h1 className="text-[2rem] sm:text-[2.5rem] font-medium tracking-tight leading-[1.05]">
               {copy.heading}{" "}
@@ -151,11 +150,9 @@ export function AboutTemplate({
               </div>
             ))}
           </div>
-        </div>
       </section>
 
-      <section data-section="about_contacts">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+      <section data-section="about_contacts" className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {copy.contacts.map((c) => {
             const href = c.wa ? wa : c.href;
             const Icon = getIcon(c.icon);
@@ -185,11 +182,9 @@ export function AboutTemplate({
               </div>
             );
           })}
-        </div>
       </section>
 
-      <section data-section="about_legal">
-        <div className="rounded-2xl border border-border p-5 sm:p-6">
+      <section data-section="about_legal" className="rounded-2xl border border-border p-5 sm:p-6">
           <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
             {copy.legal.rows.map((r) => (
               <div key={r.label} className="flex flex-col">
@@ -205,7 +200,6 @@ export function AboutTemplate({
               {copy.legal.note}
             </p>
           ) : null}
-        </div>
       </section>
 
       <Band section="final_cta">
