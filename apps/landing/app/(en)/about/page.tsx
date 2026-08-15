@@ -7,6 +7,7 @@ import { restaurantCount } from "@/lib/restaurant-count";
 import { SCHEMA_DATE_MODIFIED } from "@/lib/page-meta";
 import { featureAlternates } from "@/lib/hreflang";
 import { WHATSAPP_E164 } from "@/lib/contact";
+import { ogAlternateLocales } from "@/lib/og-locales";
 
 export const dynamic = "force-static";
 export const revalidate = false;
@@ -77,6 +78,7 @@ export const metadata: Metadata = {
     url: PAGE_URL,
     siteName: "IQ Rest",
     locale: ABOUT.meta.ogLocale,
+    alternateLocale: ogAlternateLocales(ABOUT.meta.ogLocale),
     type: "website",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "IQ Rest" }],
   },

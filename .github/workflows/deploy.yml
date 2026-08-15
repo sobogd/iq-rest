@@ -249,8 +249,8 @@ jobs:
         env:
           NEXT_PUBLIC_MAPS_API_KEY: ${{ secrets.NEXT_PUBLIC_MAPS_API_KEY }}
           NEXT_PUBLIC_APP_URL: ${{ secrets.NEXT_PUBLIC_APP_URL }}
-        run: pnpm --filter soqrmenuweb build
-      - run: pnpm --filter soqrmenuweb deploy --prod --legacy ./out-landing
+        run: pnpm --filter iq-rest-landing build
+      - run: pnpm --filter iq-rest-landing deploy --prod --legacy ./out-landing
       - name: Pack bundle (embed hardlinks, avoid scp tar perm issues)
         run: |
           chmod -R u+rwX out-landing

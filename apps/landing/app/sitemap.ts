@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 import { locales } from '@/lib/locales'
-import { FEATURE_PAGES, HOME_META, PARTIAL_FEATURE_PAGES, type PageMeta } from '@/lib/page-meta'
+import { FEATURE_PAGES, HELP_META, HOME_META, PARTIAL_FEATURE_PAGES, type PageMeta } from '@/lib/page-meta'
 import { LOCALE_SLUG_OVERRIDES, localizedHref } from '@/lib/locale-slug-overrides'
 import { localeHome, localePath } from '@/lib/locale-paths'
 import { HELP_LOCALES } from '@/app/_landing/help/registry'
@@ -98,9 +98,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     HELP_LOCALES.forEach((loc) => {
       sitemapEntries.push({
         url: `${baseUrl}${localizedHref('/help', loc)}`,
-        lastModified: new Date(),
-        changeFrequency: 'monthly',
-        priority: 0.5,
+        lastModified: new Date(HELP_META.lastModified),
+        changeFrequency: HELP_META.changeFrequency,
+        priority: HELP_META.priority,
         alternates: { languages },
       })
     })

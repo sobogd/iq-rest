@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { FeatureContent } from "./types";
 import { featureAlternates, routeKeyFromCanonical } from "@/lib/hreflang";
+import { ogAlternateLocales } from "@/lib/og-locales";
 
 const SITE = "https://iq-rest.com";
 
@@ -31,6 +32,7 @@ export function buildFeatureMetadata(content: FeatureContent): Metadata {
       url: content.meta.canonical,
       siteName: "IQ Rest",
       locale: content.meta.ogLocale,
+      alternateLocale: ogAlternateLocales(content.meta.ogLocale),
       type: "website",
       images: [{ url: ogImage, width: 1200, height: 630, alt }],
     },

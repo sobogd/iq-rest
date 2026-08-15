@@ -7,6 +7,7 @@ import { restaurantCount } from "@/lib/restaurant-count";
 import { homeAlternates } from "@/lib/hreflang";
 import { SCHEMA_PRICE_MENU_EUR } from "@/lib/pricing";
 import { SCHEMA_DATE_MODIFIED } from "@/lib/page-meta";
+import { ogAlternateLocales } from "@/lib/og-locales";
 
 const TEXTS = TEXTS_JSON as unknown as LandingTexts;
 const CRO = CRO_JSON as unknown as CroCopyV2;
@@ -56,6 +57,7 @@ export const metadata: Metadata = {
     url: TEXTS.meta.canonical,
     siteName: "IQ Rest",
     locale: TEXTS.meta.ogLocale,
+    alternateLocale: ogAlternateLocales(TEXTS.meta.ogLocale),
     type: "website",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "IQ Rest" }],
   },

@@ -11,6 +11,7 @@ import {
 } from "@/lib/pricing";
 import { featureAlternates } from "@/lib/hreflang";
 import { restaurantCount } from "@/lib/restaurant-count";
+import { ogAlternateLocales } from "@/lib/og-locales";
 
 export const dynamic = "force-static";
 export const revalidate = false;
@@ -42,6 +43,7 @@ export const metadata: Metadata = {
     url: TEXTS.meta.canonical,
     siteName: "IQ Rest",
     locale: TEXTS.meta.ogLocale,
+    alternateLocale: ogAlternateLocales(TEXTS.meta.ogLocale),
     type: "website",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: `IQ Rest — ${PRICING_JSON.breadcrumbLabel}` }],
   },

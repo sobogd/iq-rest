@@ -7,7 +7,6 @@ const BRAND_JSON_LD = JSON.stringify({
       "@type": "Organization",
       "@id": `${SITE}/#organization`,
       name: "IQ Rest",
-      alternateName: "SoqrMenu",
       url: SITE,
       logo: {
         "@type": "ImageObject",
@@ -21,7 +20,6 @@ const BRAND_JSON_LD = JSON.stringify({
       "@type": "WebSite",
       "@id": `${SITE}/#website`,
       name: "IQ Rest",
-      alternateName: "SoqrMenu",
       url: SITE,
       publisher: { "@id": `${SITE}/#organization` },
     },

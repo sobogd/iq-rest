@@ -15,19 +15,28 @@ export const SCHEMA_DATE_MODIFIED = "2026-08-14";
 
 // Home page meta (per-locale `/`).
 export const HOME_META: PageMeta = {
-  lastModified: "2026-05-20",
+  lastModified: "2026-08-14",
   changeFrequency: "weekly",
   priority: 1.0,
+};
+
+// Help guide meta. Static date on purpose: sitemap <lastmod> must reflect the
+// last content revision, not the build time (`new Date()` re-stamped every
+// deploy, which reads as fake freshness). Bump when the guide content changes.
+export const HELP_META: PageMeta = {
+  lastModified: "2026-08-14",
+  changeFrequency: "monthly",
+  priority: 0.5,
 };
 
 // Per-feature pages — path is the SHARED route under `/[locale]`, translated
 // into a per-locale slug by `LOCALE_SLUG_OVERRIDES` for sitemap/redirects.
 export const FEATURE_PAGES: Record<string, PageMeta> = {
-  "/digital-menu": { lastModified: "2026-05-20", changeFrequency: "monthly", priority: 0.8 },
-  "/order-taking": { lastModified: "2026-05-20", changeFrequency: "monthly", priority: 0.8 },
-  "/bookings": { lastModified: "2026-05-20", changeFrequency: "monthly", priority: 0.8 },
-  "/kitchen-display": { lastModified: "2026-05-20", changeFrequency: "monthly", priority: 0.8 },
-  "/menu-qr-code": { lastModified: "2026-05-24", changeFrequency: "monthly", priority: 0.8 },
+  "/digital-menu": { lastModified: "2026-08-14", changeFrequency: "monthly", priority: 0.8 },
+  "/order-taking": { lastModified: "2026-08-14", changeFrequency: "monthly", priority: 0.8 },
+  "/bookings": { lastModified: "2026-08-14", changeFrequency: "monthly", priority: 0.8 },
+  "/kitchen-display": { lastModified: "2026-08-14", changeFrequency: "monthly", priority: 0.8 },
+  "/menu-qr-code": { lastModified: "2026-08-14", changeFrequency: "monthly", priority: 0.8 },
   "/pricing": { lastModified: "2026-08-14", changeFrequency: "monthly", priority: 0.9 },
   "/about": { lastModified: "2026-08-14", changeFrequency: "monthly", priority: 0.6 },
 };
