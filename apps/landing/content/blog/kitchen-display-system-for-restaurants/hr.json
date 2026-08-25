@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "title": "Kuhinjski zaslon: treba li vam KDS? | IQ Rest",
+    "description": "Što KDS radi, koliko oprema stvarno košta, kako ga pokrenuti na tabletu koji već imate i kojim je kuhinjama bolje s papirnatim narudžbenicama."
+  },
+  "card": {
+    "title": "Kuhinjski zasloni: što rješavaju, koliko koštaju i kada je papir i dalje bolji",
+    "excerpt": "KDS zaslon može koštati 800 € ili ništa, ovisno o tome kupujete li opremu ili koristite tablet iz ladice u uredu. Evo kako procijeniti što vam treba."
+  },
+  "h1": "Kuhinjski zaslon: što KDS zaista mijenja",
+  "intro": "Sustav kuhinjskog zaslona zamjenjuje pisač koji izbacuje narudžbenice zaslonom koji prikazuje narudžbe. Zvuči kozmetički i uglavnom nije: razlika je u tome što zaslon zna kada je narudžbenica stigla, koja je stanica drži i je li je itko dirao. Isplati li se za to zaslon u vašoj kuhinji, ovisi o stvarima o kojima se isplati govoriti konkretno.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Što papirnata narudžbenica ne može"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Ne zna da kasni.** Narudžbenica koja stoji 22 minute izgleda posve isto kao ona od prije 90 sekundi. KDS je oboji.",
+        "**Ne može biti na dva mjesta.** Stolu koji naručuje predjela i desert narudžbenica treba na hladnoj stanici i na pasu. Papir se trga ili kopira.",
+        "**Nestane.** Narudžbenice padnu iza linije, zamaste se, zalijepe se za nešto. Narudžbe jednostavno nema.",
+        "**Poslije vam ništa ne govori.** Na pitanje „koliko nam je trebalo u subotu između 21 i 22 sata” ne možete odgovoriti gledajući u šiljak s papirićima.",
+        "**Treba pisač koji radi.** Termalni se zaglave, ostanu bez papira i crknu u najgorem trenutku."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Što vam KDS zaista daje"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Papirnate narudžbenice",
+        "KDS"
+      ],
+      "rows": [
+        [
+          "Starost narudžbe",
+          "Odokativno",
+          "Mjerač na svakoj narudžbenici"
+        ],
+        [
+          "Usmjeravanje na stanice",
+          "Jedan pisač, jedna kopija",
+          "Ista narudžba na svakom relevantnom zaslonu"
+        ],
+        [
+          "Izmjene",
+          "Prepisane rukom",
+          "Označene na stavci"
+        ],
+        [
+          "Izgubljene narudžbe",
+          "Događa se",
+          "Nema se što izgubiti"
+        ],
+        [
+          "Vremena narudžbenica",
+          "Nemjerljiva",
+          "Bilježe se po narudžbi"
+        ],
+        [
+          "Potrošni materijal",
+          "Role papira",
+          "Nema ga"
+        ],
+        [
+          "Trošak pokretanja",
+          "Pisač + role",
+          "0 € na tabletu koji već imate"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Mjerenje je podcijenjeni dio. Čim svaka narudžbenica ima vrijeme dolaska i zatvaranja, vidite da je petkom prosjek u redu, ali da val u 21:15 traje jedanaest minuta duže — a to je već kadrovska odluka koju stvarno možete donijeti."
+    },
+    {
+      "type": "h2",
+      "text": "Pitanje opreme"
+    },
+    {
+      "type": "p",
+      "text": "Namjenske KDS jedinice — brtvljeni zasloni s bump letvicom, građeni za vrućinu i masnoću — izvrsni su i skupi. Kuhinja s velikim obrtajem i friteza dva metra dalje ima razuman argument da uzme jednu."
+    },
+    {
+      "type": "p",
+      "text": "Većini kuhinja to ne treba. IQ Restov [kuhinjski zaslon](route:/kitchen-display) radi u pregledniku, pa oprema može biti tablet koji već imate, jeftin Android tablet ili stari laptop s monitorom. Stavite ga u kućište otporno na prskanje, montirajte izvan linije pare i granični je trošak zidni nosač."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Postava",
+        "Okvirni trošak",
+        "Kome odgovara"
+      ],
+      "rows": [
+        [
+          "Tablet koji već imate + nosač",
+          "15-40 €",
+          "Većini malih kuhinja"
+        ],
+        [
+          "Novi jeftini tablet + vodootporno kućište",
+          "120-250 €",
+          "Drugoj stanici"
+        ],
+        [
+          "Stari laptop + vanjski monitor",
+          "0-150 €",
+          "Kuhinjama s prostorom na pultu"
+        ],
+        [
+          "Namjenski KDS s bump letvicom",
+          "Od nekoliko stotina naviše",
+          "Velikom obrtaju, teškim uvjetima"
+        ]
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Zaslon je važniji od procesora. U osvijetljenoj kuhinji želite velik i svijetao zaslon; kuhar ga čita s dva metra mokrim rukama. Kupujte dijagonalu prije brzine."
+    },
+    {
+      "type": "h2",
+      "text": "Kada ne biste trebali uzeti KDS"
+    },
+    {
+      "type": "p",
+      "text": "Budite iskreni oko toga. Kuhinja s dvoje ljudi, gdje se onaj tko prima narudžbu može okrenuti i izgovoriti je naglas, ne treba zaslon — dodali biste korak. Isto vrijedi za lokal s 20 gostiju navečer i kratkim, nepromjenjivim jelovnikom."
+    },
+    {
+      "type": "p",
+      "text": "Prag je otprilike ondje gdje jedna osoba više ne drži stanje pasa u glavi: više stanica, narudžbe koje stižu iz više od jednog kanala (sala, [narudžba putem QR-a](route:/order-taking), za van) ili više od nekih 40 gostiju po smjeni."
+    },
+    {
+      "type": "h2",
+      "text": "Kako ga uvesti bez rušenja smjene"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Neka tjedan dana radi usporedo s pisačem. Izlaze oba, nitko ne panici, a osoblje uči zaslon bez rizika.",
+        "Počnite s jednim zaslonom na pasu. Usmjeravanje po stanicama problem je drugog tjedna.",
+        "Dogovorite što znači „zatvaranje” prije nego što krenete: složeno na tanjur ili predano u salu? Polovica zbrke prvog mjeseca dolazi odavde.",
+        "Montirajte ga ondje gdje ga kuhar mokrih ruku dohvaća i gdje se para ne zadržava.",
+        "Isključite pisač kad prođe cijeli tjedan, a nitko za njim nije posegnuo."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Ostavite pisač uključen u struju, ali ugašen, mjesec dana nakon prelaska. Ne košta ništa i uklanja cijelu raspravu o tome što ako zaslon otkaže usred smjene."
+    },
+    {
+      "type": "h2",
+      "text": "Što gledati kad jednom radi"
+    },
+    {
+      "type": "p",
+      "text": "Tri broja zarađuju svoje. Medijan vremena narudžbenice govori vam što je normalno. 90. percentil govori koliko su loše vaše loše narudžbenice, a upravo to gosti pamte. Vrijeme narudžbenice po satu govori kada dodati osobu. Ako je medijan stabilan, a 90. percentil dvostruk, problem je obično jedno jelo ili jedna stanica, a ne cijela kuhinja."
+    },
+    {
+      "type": "cta",
+      "heading": "KDS koji radi na tabletu iz vaše uredske ladice",
+      "text": "Narudžbe iz sale i s QR kodova stižu na jedan zaslon, uz mjerač na svakoj narudžbenici. Nema opreme za kupiti. 14 dana besplatno, bez kartice.",
+      "buttonLabel": "Pogledajte kuhinjski zaslon",
+      "routeKey": "/kitchen-display"
+    },
+    {
+      "type": "faq",
+      "heading": "Česta pitanja",
+      "items": [
+        {
+          "q": "Što znači KDS?",
+          "a": "Kitchen display system, sustav kuhinjskog zaslona — zaslon u kuhinji koji prikazuje pristigle narudžbe umjesto ispisanih narudžbenica."
+        },
+        {
+          "q": "Koliko košta sustav kuhinjskog zaslona?",
+          "a": "Softver je obično dio vašeg sustava narudžbi. Oprema ide od otprilike 15 € za nosač, ako koristite tablet koji već imate, do nekoliko stotina za namjensku jedinicu s bump letvicom."
+        },
+        {
+          "q": "Mogu li pokrenuti KDS na običnom tabletu?",
+          "a": "Da. IQ Restov kuhinjski zaslon radi u pregledniku, pa odgovara bilo koji tablet ili laptop iz zadnjih pet godina. Koristite kućište otporno na prskanje."
+        },
+        {
+          "q": "Treba li KDS internet?",
+          "a": "Treba mu veza da primi narudžbe. Držite kuhinju na pouzdanoj pristupnoj točki umjesto na gostinskom wi-fiju i prvi mjesec zadržite pisač kao rezervu."
+        },
+        {
+          "q": "Radi li s narudžbama preko QR koda?",
+          "a": "To je najjači razlog da ga imate. Narudžbe zadane za stolom stižu na isti zaslon kao i one koje primi osoblje, pa kuhinja ima jedan red umjesto dva."
+        }
+      ]
+    }
+  ]
+}

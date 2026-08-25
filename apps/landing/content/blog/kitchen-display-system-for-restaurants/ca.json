@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "title": "Pantalla de cuina: necessites un KDS? | IQ Rest",
+    "description": "Què fa un KDS, quant costa de debò el maquinari, com muntar-lo en una tauleta que ja tens i quines cuines estan millor amb comandes de paper."
+  },
+  "card": {
+    "title": "Pantalles de cuina: què arreglen, què costen i quan el paper continua sent millor",
+    "excerpt": "Una pantalla de KDS pot costar 800 € o res, segons si compres el maquinari o fas servir una tauleta del calaix de l'oficina. Aquí tens com saber quina et cal."
+  },
+  "h1": "Pantalla de cuina: què canvia de debò un KDS",
+  "intro": "Un sistema de pantalla de cuina substitueix la impressora que escup comandes per una pantalla que mostra les comandes. Sona a canvi cosmètic i en gran part no ho és: la diferència és que una pantalla sap a quina hora va arribar la comanda, quina partida la té i si algú l'ha tocada. Si això compensa una pantalla a la teva cuina depèn de coses que val la pena concretar.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "El que una comanda de paper no pot fer"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**No sap que va tard.** Una comanda aturada 22 minuts es veu exactament igual que una de fa 90 segons. Un KDS la pinta.",
+        "**No pot ser a dos llocs.** Una taula que demana entrants i unes postres necessita la comanda a la partida freda i al pas. El paper s'estripa o es fotocopia.",
+        "**Desapareix.** Les comandes cauen darrere la línia, s'engreixen, s'enganxen a alguna cosa. La comanda simplement ja no hi és.",
+        "**No t'explica res després.** No pots respondre «quant vam trigar dissabte entre les 21:00 i les 22:00» mirant un punxó de papers.",
+        "**Necessita una impressora que funcioni.** Les tèrmiques s'encallen, es queden sense paper i moren en el pitjor moment."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "El que un KDS et dona de debò"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Comandes de paper",
+        "KDS"
+      ],
+      "rows": [
+        [
+          "Antiguitat de la comanda",
+          "A ull",
+          "Un cronòmetre a cada comanda"
+        ],
+        [
+          "Repartiment per partides",
+          "Una impressora, una còpia",
+          "La mateixa comanda a cada pantalla implicada"
+        ],
+        [
+          "Modificacions",
+          "Reescrites a mà",
+          "Marcades sobre el plat"
+        ],
+        [
+          "Comandes perdudes",
+          "Passa",
+          "No hi ha res a perdre"
+        ],
+        [
+          "Temps de comanda",
+          "No mesurables",
+          "Registrats per comanda"
+        ],
+        [
+          "Consumibles",
+          "Rotlles de paper",
+          "Cap"
+        ],
+        [
+          "Cost d'arrencada",
+          "Impressora + rotlles",
+          "0 € en una tauleta que ja tens"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "El mesurament és la part infravalorada. Quan cada comanda té hora d'entrada i hora de sortida, pots veure que la mitjana del divendres està bé però que l'onada de les 21:15 triga onze minuts més, i això sí que és una decisió de personal que pots prendre."
+    },
+    {
+      "type": "h2",
+      "text": "La qüestió del maquinari"
+    },
+    {
+      "type": "p",
+      "text": "Les unitats KDS de fàbrica —pantalles segellades amb barra de bump, aptes per a calor i greix— són excel·lents i cares. Una cuina d'alt volum amb una fregidora a dos metres té un argument raonable per comprar-ne una."
+    },
+    {
+      "type": "p",
+      "text": "La majoria de cuines no ho necessiten. La [pantalla de cuina](route:/kitchen-display) d'IQ Rest funciona al navegador, així que el maquinari pot ser una tauleta que ja tinguis, una tauleta Android barata o un portàtil vell amb un monitor. Fica-la en una funda antiesquitxades, munta-la fora de la línia de vapor i el cost marginal és un suport de paret."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Muntatge",
+        "Cost aproximat",
+        "A qui li va bé"
+      ],
+      "rows": [
+        [
+          "Tauleta que ja tens + suport",
+          "15-40 €",
+          "La majoria de cuines petites"
+        ],
+        [
+          "Tauleta nova barata + funda impermeable",
+          "120-250 €",
+          "Una segona partida"
+        ],
+        [
+          "Portàtil vell + monitor extern",
+          "0-150 €",
+          "Cuines amb espai de taulell"
+        ],
+        [
+          "KDS de fàbrica amb barra de bump",
+          "Diversos centenars amunt",
+          "Alt volum, entorns durs"
+        ]
+      ]
+    },
+    {
+      "type": "note",
+      "text": "La pantalla importa més que el processador. En una cuina il·luminada vols una pantalla gran i lluminosa; un cuiner la llegeix a dos metres i amb les mans mullades. Compra mida de pantalla abans que velocitat."
+    },
+    {
+      "type": "h2",
+      "text": "Quan no hauries de posar un KDS"
+    },
+    {
+      "type": "p",
+      "text": "Sigues honest amb això. Una cuina de dues persones on qui pren la comanda pot girar-se i dir-la en veu alta no necessita una pantalla: hi afegiries un pas. El mateix val per a un local de 20 cobertes per nit amb una carta curta i fixa."
+    },
+    {
+      "type": "p",
+      "text": "El llindar és més o menys on una sola persona ja no pot mantenir l'estat del pas al cap: diverses partides, comandes que arriben per més d'un canal (sala, [comanda per QR](route:/order-taking), per emportar) o més d'unes 40 cobertes per servei."
+    },
+    {
+      "type": "h2",
+      "text": "Com muntar-lo sense trencar el servei"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Deixa'l funcionant al costat de la impressora una setmana. Surten tots dos, ningú s'angoixa i el personal aprèn la pantalla sense risc.",
+        "Comença amb una pantalla al pas. El repartiment per partides és un problema de la segona setmana.",
+        "Acordeu què vol dir «bump» abans de començar: emplatat o lliurat a la sala? La meitat de la confusió del primer mes ve d'aquí.",
+        "Munta-la on un cuiner amb les mans mullades hi arribi i on el vapor no s'hi diposita.",
+        "Apaga la impressora quan hagi passat una setmana sencera sense que ningú la busqui."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Deixa la impressora endollada i apagada un mes després del canvi. No costa res i elimina tot el debat sobre què passa si la pantalla falla en ple servei."
+    },
+    {
+      "type": "h2",
+      "text": "Què mirar un cop estigui en marxa"
+    },
+    {
+      "type": "p",
+      "text": "Tres números es guanyen el sou. La mediana del temps de comanda et diu què és normal. El percentil 90 et diu com de dolentes són les teves comandes dolentes, que és el que els clients recorden. El temps de comanda per hora et diu quan afegir una persona. Si la mediana és estable però el percentil 90 la dobla, el problema sol ser un plat o una partida, no tota la cuina."
+    },
+    {
+      "type": "cta",
+      "heading": "Un KDS que funciona a la tauleta del calaix de la teva oficina",
+      "text": "Les comandes de la sala i les dels codis QR arriben a una sola pantalla, amb un cronòmetre a cada comanda. Sense maquinari per comprar. 14 dies gratis, sense targeta.",
+      "buttonLabel": "Veure la pantalla de cuina",
+      "routeKey": "/kitchen-display"
+    },
+    {
+      "type": "faq",
+      "heading": "Preguntes freqüents",
+      "items": [
+        {
+          "q": "Què vol dir KDS?",
+          "a": "Kitchen display system, sistema de pantalla de cuina: la pantalla que mostra les comandes entrants en lloc de les comandes impreses."
+        },
+        {
+          "q": "Quant costa un sistema de pantalla de cuina?",
+          "a": "El programari sol formar part del teu sistema de comandes. El maquinari va des d'uns 15 € per un suport, si fas servir una tauleta que ja tens, fins a diversos centenars per una unitat de fàbrica amb barra de bump."
+        },
+        {
+          "q": "Puc fer servir un KDS en una tauleta normal?",
+          "a": "Sí. La pantalla de cuina d'IQ Rest funciona al navegador, així que serveix qualsevol tauleta o portàtil dels últims cinc anys. Fes servir una funda antiesquitxades."
+        },
+        {
+          "q": "El KDS necessita internet?",
+          "a": "Necessita connexió per rebre les comandes. Té la cuina en un punt d'accés fiable i no al wifi de clients, i conserva la impressora com a reserva el primer mes."
+        },
+        {
+          "q": "Funciona amb les comandes per codi QR?",
+          "a": "És el millor motiu per tenir-lo. Les comandes fetes des de la taula arriben a la mateixa pantalla que les que pren el personal, així que la cuina té una cua en lloc de dues."
+        }
+      ]
+    }
+  ]
+}

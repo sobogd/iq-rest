@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "title": "Monitor di cucina: ti serve un KDS? | IQ Rest",
+    "description": "Cosa fa un KDS, quanto costa davvero l'hardware, come farlo girare su un tablet che hai già e quali cucine stanno meglio con le comande di carta."
+  },
+  "card": {
+    "title": "Monitor di cucina: cosa risolvono, quanto costano e quando la carta resta migliore",
+    "excerpt": "Uno schermo KDS può costare 800 € o niente, a seconda che tu compri l'hardware o usi un tablet dal cassetto dell'ufficio. Ecco come capire quale ti serve."
+  },
+  "h1": "Monitor di cucina: cosa cambia davvero un KDS",
+  "intro": "Un sistema di monitor di cucina sostituisce la stampante che sputa comande con uno schermo che mostra gli ordini. Sembra un cambiamento estetico e in gran parte non lo è: la differenza è che uno schermo sa a che ora è arrivata la comanda, quale partita la tiene e se qualcuno l'ha toccata. Se questo valga uno schermo nella tua cucina dipende da cose che conviene mettere nero su bianco.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Cosa non può fare una comanda di carta"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Non sa di essere in ritardo.** Una comanda ferma da 22 minuti sembra identica a una di 90 secondi fa. Un KDS la colora.",
+        "**Non può stare in due posti.** Un tavolo che ordina antipasti e un dolce ha bisogno della comanda alla partita fredda e al passe. La carta si strappa o si fotocopia.",
+        "**Sparisce.** Le comande cadono dietro la linea, si ungono, si attaccano a qualcosa. L'ordine semplicemente non c'è più.",
+        "**Non ti dice nulla dopo.** Non puoi rispondere a «quanto ci abbiamo messo sabato tra le 21 e le 22» guardando uno spiedo di scontrini.",
+        "**Ha bisogno di una stampante che funzioni.** Le termiche si inceppano, finiscono la carta e muoiono nel momento peggiore."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Cosa ti dà davvero un KDS"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Comande di carta",
+        "KDS"
+      ],
+      "rows": [
+        [
+          "Età dell'ordine",
+          "A occhio",
+          "Un timer su ogni comanda"
+        ],
+        [
+          "Smistamento per partite",
+          "Una stampante, una copia",
+          "Lo stesso ordine su ogni schermo interessato"
+        ],
+        [
+          "Modifiche",
+          "Riscritte a mano",
+          "Segnate sul piatto"
+        ],
+        [
+          "Ordini persi",
+          "Capita",
+          "Non c'è nulla da perdere"
+        ],
+        [
+          "Tempi di comanda",
+          "Non misurabili",
+          "Registrati per ordine"
+        ],
+        [
+          "Materiali di consumo",
+          "Rotoli di carta",
+          "Nessuno"
+        ],
+        [
+          "Costo di avvio",
+          "Stampante + rotoli",
+          "0 € su un tablet che hai già"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "La misurazione è la parte sottovalutata. Quando ogni comanda ha un orario di partenza e uno di chiusura, puoi vedere che la media del venerdì va bene ma che l'ondata delle 21:15 impiega undici minuti in più — e quella è una decisione sul personale che puoi davvero prendere."
+    },
+    {
+      "type": "h2",
+      "text": "La questione hardware"
+    },
+    {
+      "type": "p",
+      "text": "Le unità KDS dedicate — schermi sigillati con bump bar, progettati per calore e grasso — sono eccellenti e costose. Una cucina ad alto volume con una friggitrice a due metri ha un argomento ragionevole per prenderne una."
+    },
+    {
+      "type": "p",
+      "text": "La maggior parte delle cucine non ne ha bisogno. Il [monitor di cucina](route:/kitchen-display) di IQ Rest gira nel browser, quindi l'hardware può essere un tablet che hai già, un tablet Android economico o un vecchio portatile con un monitor. Mettilo in una custodia antischizzo, montalo fuori dalla linea del vapore e il costo marginale è una staffa a muro."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Soluzione",
+        "Costo indicativo",
+        "A chi va bene"
+      ],
+      "rows": [
+        [
+          "Tablet che hai già + staffa",
+          "15-40 €",
+          "Alla maggior parte delle cucine piccole"
+        ],
+        [
+          "Tablet nuovo economico + custodia impermeabile",
+          "120-250 €",
+          "A una seconda partita"
+        ],
+        [
+          "Vecchio portatile + monitor esterno",
+          "0-150 €",
+          "Alle cucine con spazio d'appoggio"
+        ],
+        [
+          "KDS dedicato con bump bar",
+          "Diverse centinaia in su",
+          "Ad alto volume e ambienti duri"
+        ]
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Lo schermo conta più del processore. In una cucina illuminata vuoi un display grande e luminoso; un cuoco lo legge da due metri con le mani bagnate. Compra dimensione dello schermo prima della velocità."
+    },
+    {
+      "type": "h2",
+      "text": "Quando non dovresti prendere un KDS"
+    },
+    {
+      "type": "p",
+      "text": "Sii onesto su questo. Una cucina con due persone, dove chi prende l'ordine può girarsi e dirlo ad alta voce, non ha bisogno di uno schermo: aggiungeresti un passaggio. Lo stesso vale per un locale da 20 coperti a sera con un menu corto e fisso."
+    },
+    {
+      "type": "p",
+      "text": "La soglia è più o meno dove una sola persona non riesce più a tenere in testa lo stato del passe: più partite, ordini che arrivano da più di un canale (sala, [ordine da QR](route:/order-taking), asporto) o più di una quarantina di coperti per servizio."
+    },
+    {
+      "type": "h2",
+      "text": "Come metterlo in funzione senza rompere il servizio"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Tienilo acceso insieme alla stampante per una settimana. Escono entrambi, nessuno va nel panico e lo staff impara lo schermo senza rischi.",
+        "Parti con un solo schermo al passe. Lo smistamento partita per partita è un problema della seconda settimana.",
+        "Mettetevi d'accordo su cosa significa «bump» prima di iniziare: impiattato o consegnato in sala? Metà della confusione del primo mese nasce da qui.",
+        "Montalo dove un cuoco con le mani bagnate lo raggiunge e dove il vapore non gli si posa sopra.",
+        "Spegni la stampante quando è passata una settimana intera senza che nessuno l'abbia cercata."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Lascia la stampante collegata e spenta per un mese dopo il passaggio. Non costa nulla e chiude in anticipo tutta la discussione su cosa succede se lo schermo si pianta in pieno servizio."
+    },
+    {
+      "type": "h2",
+      "text": "Cosa guardare una volta avviato"
+    },
+    {
+      "type": "p",
+      "text": "Tre numeri si guadagnano lo stipendio. La mediana del tempo di comanda ti dice qual è la normalità. Il novantesimo percentile ti dice quanto sono brutte le tue comande brutte, ed è quello che i clienti ricordano. Il tempo di comanda per fascia oraria ti dice quando aggiungere una persona. Se la mediana è stabile ma il novantesimo percentile è il doppio, il problema di solito è un piatto o una partita, non l'intera cucina."
+    },
+    {
+      "type": "cta",
+      "heading": "Un KDS che gira sul tablet nel cassetto del tuo ufficio",
+      "text": "Gli ordini dalla sala e quelli dai QR code arrivano su un solo schermo, con un timer su ogni comanda. Nessun hardware da comprare. 14 giorni gratis, senza carta.",
+      "buttonLabel": "Guarda il monitor di cucina",
+      "routeKey": "/kitchen-display"
+    },
+    {
+      "type": "faq",
+      "heading": "Domande frequenti",
+      "items": [
+        {
+          "q": "Cosa significa KDS?",
+          "a": "Kitchen display system, sistema di monitor di cucina: lo schermo che mostra gli ordini in arrivo al posto delle comande stampate."
+        },
+        {
+          "q": "Quanto costa un sistema di monitor di cucina?",
+          "a": "Il software di solito fa parte del tuo sistema di ordini. L'hardware va da circa 15 € per una staffa, se usi un tablet che hai già, fino a diverse centinaia per un'unità dedicata con bump bar."
+        },
+        {
+          "q": "Posso far girare un KDS su un tablet normale?",
+          "a": "Sì. Il monitor di cucina di IQ Rest gira nel browser, quindi va bene qualsiasi tablet o portatile degli ultimi cinque anni. Usa una custodia antischizzo."
+        },
+        {
+          "q": "Il KDS ha bisogno di internet?",
+          "a": "Ha bisogno di una connessione per ricevere gli ordini. Tieni la cucina su un access point affidabile invece che sul wi-fi dei clienti, e conserva la stampante come riserva per il primo mese."
+        },
+        {
+          "q": "Funziona con gli ordini via QR code?",
+          "a": "È il motivo più forte per averlo. Gli ordini fatti dal tavolo arrivano sullo stesso schermo di quelli presi dal personale, quindi la cucina ha una coda sola invece di due."
+        }
+      ]
+    }
+  ]
+}

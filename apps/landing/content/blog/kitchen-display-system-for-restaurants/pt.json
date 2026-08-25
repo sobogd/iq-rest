@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "title": "Ecrã de cozinha: precisa de um KDS? | IQ Rest",
+    "description": "O que faz um KDS, quanto custa mesmo o equipamento, como pô-lo a correr num tablet que já tem e que cozinhas ficam melhor com comandas em papel."
+  },
+  "card": {
+    "title": "Ecrãs de cozinha: o que resolvem, quanto custam e quando o papel continua melhor",
+    "excerpt": "Um ecrã KDS pode custar 800 € ou nada, consoante compre o equipamento ou use um tablet da gaveta do escritório. Eis como perceber de qual precisa."
+  },
+  "h1": "Ecrã de cozinha: o que um KDS muda mesmo",
+  "intro": "Um sistema de ecrã de cozinha substitui a impressora que cospe comandas por um ecrã que mostra os pedidos. Parece uma mudança cosmética e na maior parte não é: a diferença é que um ecrã sabe a que horas a comanda chegou, que praça a tem e se alguém lhe tocou. Se isso justifica um ecrã na sua cozinha depende de coisas que vale a pena concretizar.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "O que uma comanda em papel não consegue fazer"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Não sabe que está atrasada.** Uma comanda parada há 22 minutos parece exatamente igual a uma de há 90 segundos. Um KDS pinta-a.",
+        "**Não pode estar em dois sítios.** Uma mesa que pede entradas e uma sobremesa precisa da comanda na praça fria e no passe. O papel é rasgado ou fotocopiado.",
+        "**Desaparece.** As comandas caem atrás da linha, ficam gordurosas, colam-se a alguma coisa. O pedido simplesmente desapareceu.",
+        "**Não lhe diz nada depois.** Não consegue responder a «quanto tempo demorámos no sábado entre as 21:00 e as 22:00» olhando para um espeto de comandas.",
+        "**Precisa de uma impressora que funcione.** As térmicas encravam, ficam sem papel e morrem no pior momento."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "O que um KDS lhe dá de facto"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Comandas em papel",
+        "KDS"
+      ],
+      "rows": [
+        [
+          "Idade do pedido",
+          "A olho",
+          "Um cronómetro em cada comanda"
+        ],
+        [
+          "Encaminhamento por praças",
+          "Uma impressora, uma cópia",
+          "O mesmo pedido em cada ecrã relevante"
+        ],
+        [
+          "Alterações",
+          "Reescritas à mão",
+          "Marcadas no prato"
+        ],
+        [
+          "Pedidos perdidos",
+          "Acontece",
+          "Não há nada para perder"
+        ],
+        [
+          "Tempos de comanda",
+          "Não mensuráveis",
+          "Registados por pedido"
+        ],
+        [
+          "Consumíveis",
+          "Rolos de papel",
+          "Nenhum"
+        ],
+        [
+          "Custo para arrancar",
+          "Impressora + rolos",
+          "0 € num tablet que já tem"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "A medição é a parte subestimada. Assim que cada comanda tem hora de entrada e hora de fecho, consegue ver que a média de sexta está bem mas que a vaga das 21:15 demora mais onze minutos — e essa é uma decisão de pessoal que consegue mesmo tomar."
+    },
+    {
+      "type": "h2",
+      "text": "A questão do equipamento"
+    },
+    {
+      "type": "p",
+      "text": "As unidades KDS de fábrica — ecrãs selados com barra de bump, preparados para calor e gordura — são excelentes e caras. Uma cozinha de grande volume com uma fritadeira a dois metros tem um argumento razoável para comprar uma."
+    },
+    {
+      "type": "p",
+      "text": "A maioria das cozinhas não precisa disso. O [ecrã de cozinha](route:/kitchen-display) do IQ Rest corre no navegador, por isso o equipamento pode ser um tablet que já tem, um tablet Android barato ou um portátil velho com um monitor. Meta-o numa capa à prova de salpicos, monte-o fora da linha do vapor e o custo marginal é um suporte de parede."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Solução",
+        "Custo aproximado",
+        "A quem serve"
+      ],
+      "rows": [
+        [
+          "Tablet que já tem + suporte",
+          "15-40 €",
+          "À maioria das cozinhas pequenas"
+        ],
+        [
+          "Tablet novo barato + capa impermeável",
+          "120-250 €",
+          "A uma segunda praça"
+        ],
+        [
+          "Portátil velho + monitor externo",
+          "0-150 €",
+          "A cozinhas com bancada livre"
+        ],
+        [
+          "KDS de fábrica com barra de bump",
+          "Várias centenas para cima",
+          "A grande volume, ambientes duros"
+        ]
+      ]
+    },
+    {
+      "type": "note",
+      "text": "O ecrã conta mais do que o processador. Numa cozinha iluminada quer um ecrã grande e com brilho; um cozinheiro lê-o a dois metros e com as mãos molhadas. Compre tamanho de ecrã antes de comprar velocidade."
+    },
+    {
+      "type": "h2",
+      "text": "Quando não deve comprar um KDS"
+    },
+    {
+      "type": "p",
+      "text": "Seja honesto quanto a isto. Uma cozinha com duas pessoas onde quem tira o pedido se pode virar e dizê-lo em voz alta não precisa de um ecrã — estaria a acrescentar um passo. O mesmo vale para um espaço com 20 refeições por noite e um menu curto e fixo."
+    },
+    {
+      "type": "p",
+      "text": "O limiar fica mais ou menos onde uma só pessoa deixa de conseguir manter na cabeça o estado do passe: várias praças, pedidos a chegar por mais do que um canal (sala, [pedido por QR](route:/order-taking), take-away) ou mais de umas 40 refeições por serviço."
+    },
+    {
+      "type": "h2",
+      "text": "Como o pôr a funcionar sem perturbar o serviço"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Deixe-o a funcionar ao lado da impressora durante uma semana. Saem os dois, ninguém entra em pânico e a equipa aprende o ecrã sem risco.",
+        "Comece com um ecrã no passe. O encaminhamento praça a praça é um problema da segunda semana.",
+        "Acordem o que significa «bump» antes de começar: empratado, ou entregue à sala? Metade da confusão do primeiro mês vem daqui.",
+        "Monte-o onde um cozinheiro de mãos molhadas lhe chegue e onde o vapor não se deposite.",
+        "Desligue a impressora quando passar uma semana inteira sem que ninguém a tenha procurado."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Deixe a impressora ligada à corrente, desligada, durante um mês após a mudança. Não custa nada e elimina toda a discussão sobre o que acontece se o ecrã falhar em pleno serviço."
+    },
+    {
+      "type": "h2",
+      "text": "O que olhar quando já estiver a funcionar"
+    },
+    {
+      "type": "p",
+      "text": "Três números ganham o seu lugar. A mediana do tempo de comanda diz-lhe qual é o normal. O percentil 90 diz-lhe quão más são as suas comandas más, e é disso que os clientes se lembram. O tempo de comanda por hora diz-lhe quando acrescentar uma pessoa. Se a mediana está estável mas o percentil 90 é o dobro, o problema costuma ser um prato ou uma praça, não a cozinha toda."
+    },
+    {
+      "type": "cta",
+      "heading": "Um KDS que corre no tablet da gaveta do seu escritório",
+      "text": "Os pedidos da sala e os dos códigos QR chegam a um único ecrã, com um cronómetro em cada comanda. Sem equipamento para comprar. 14 dias grátis, sem cartão.",
+      "buttonLabel": "Ver o ecrã de cozinha",
+      "routeKey": "/kitchen-display"
+    },
+    {
+      "type": "faq",
+      "heading": "Perguntas frequentes",
+      "items": [
+        {
+          "q": "O que significa KDS?",
+          "a": "Kitchen display system, sistema de ecrã de cozinha: o ecrã que mostra os pedidos que entram em vez das comandas impressas."
+        },
+        {
+          "q": "Quanto custa um sistema de ecrã de cozinha?",
+          "a": "O software costuma fazer parte do seu sistema de pedidos. O equipamento vai de cerca de 15 € por um suporte, se usar um tablet que já tem, até várias centenas por uma unidade de fábrica com barra de bump."
+        },
+        {
+          "q": "Posso pôr um KDS a correr num tablet normal?",
+          "a": "Sim. O ecrã de cozinha do IQ Rest corre no navegador, por isso serve qualquer tablet ou portátil dos últimos cinco anos. Use uma capa à prova de salpicos."
+        },
+        {
+          "q": "O KDS precisa de internet?",
+          "a": "Precisa de ligação para receber os pedidos. Ponha a cozinha num ponto de acesso fiável em vez do wi-fi dos clientes e mantenha a impressora como reserva no primeiro mês."
+        },
+        {
+          "q": "Funciona com pedidos por código QR?",
+          "a": "É a razão mais forte para o ter. Os pedidos feitos à mesa chegam ao mesmo ecrã que os tirados pela equipa, por isso a cozinha tem uma fila em vez de duas."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "title": "Virtuvės ekranas: ar jums reikia KDS? | IQ Rest",
+    "description": "Ką daro KDS, kiek iš tikrųjų kainuoja įranga, kaip jį paleisti planšetėje, kurią jau turite, ir kurioms virtuvėms geriau su popieriniais lapeliais."
+  },
+  "card": {
+    "title": "Virtuvės ekranai: ką jie išsprendžia, kiek kainuoja ir kada popierius vis dar geresnis",
+    "excerpt": "KDS ekranas gali kainuoti 800 € arba nieko, priklausomai nuo to, ar perkate įrangą, ar naudojate planšetę iš biuro stalčiaus. Štai kaip suprasti, ko jums reikia."
+  },
+  "h1": "Virtuvės ekranas: ką KDS iš tikrųjų keičia",
+  "intro": "Virtuvės ekrano sistema pakeičia spausdintuvą, spjaudantį lapelius, ekranu, kuris rodo užsakymus. Skamba kaip kosmetinis pakeitimas ir daugiausia nėra: skirtumas tas, kad ekranas žino, kada lapelis atėjo, kuri stotis jį turi ir ar kas nors prie jo lietė. Ar tai verta ekrano jūsų virtuvėje, priklauso nuo dalykų, apie kuriuos verta kalbėti konkrečiai.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Ko negali popierinis lapelis"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Jis nežino, kad vėluoja.** 22 minutes gulėjęs lapelis atrodo lygiai taip pat kaip 90 sekundžių senumo. KDS jį nuspalvina.",
+        "**Jis negali būti dviejose vietose.** Staliukui, užsisakiusiam užkandžių ir deserto, lapelio reikia šaltoje stotyje ir prie išdavimo. Popierius plėšomas arba kopijuojamas.",
+        "**Jis dingsta.** Lapeliai krenta už linijos, riebaluojasi, prilimpa prie ko nors. Užsakymo tiesiog nėra.",
+        "**Vėliau jis jums nieko nepasako.** Į klausimą „kiek mums užtruko šeštadienį tarp 21 ir 22 valandos“ nuo lapelių smeigtuko neatsakysite.",
+        "**Jam reikia veikiančio spausdintuvo.** Terminiai užstringa, jiems baigiasi popierius, ir jie miršta blogiausiu momentu."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Ką KDS jums iš tikrųjų duoda"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Popieriniai lapeliai",
+        "KDS"
+      ],
+      "rows": [
+        [
+          "Užsakymo amžius",
+          "Iš akies",
+          "Laikmatis ant kiekvieno lapelio"
+        ],
+        [
+          "Paskirstymas stotims",
+          "Vienas spausdintuvas, viena kopija",
+          "Tas pats užsakymas kiekviename susijusiame ekrane"
+        ],
+        [
+          "Pakeitimai",
+          "Perrašomi ranka",
+          "Pažymėti prie patiekalo"
+        ],
+        [
+          "Pamesti užsakymai",
+          "Pasitaiko",
+          "Nėra ko pamesti"
+        ],
+        [
+          "Lapelių laikai",
+          "Neišmatuojami",
+          "Fiksuojami kiekvienam užsakymui"
+        ],
+        [
+          "Eksploatacinės medžiagos",
+          "Popieriaus ritinėliai",
+          "Nėra"
+        ],
+        [
+          "Starto kaina",
+          "Spausdintuvas + ritinėliai",
+          "0 € planšetėje, kurią jau turite"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Matavimas yra nuvertinta dalis. Kai tik kiekvienas lapelis turi atėjimo ir uždarymo laiką, matote, kad penktadienio vidurkis tvarkingas, bet 21:15 banga trunka vienuolika minučių ilgiau — o tai jau personalo sprendimas, kurį tikrai galite priimti."
+    },
+    {
+      "type": "h2",
+      "text": "Įrangos klausimas"
+    },
+    {
+      "type": "p",
+      "text": "Specialiai sukurti KDS įrenginiai — sandarūs ekranai su bump juosta, pritaikyti karščiui ir riebalams — yra puikūs ir brangūs. Didelės apyvartos virtuvė su gruzdintuve už dviejų metrų turi protingą argumentą tokį pirkti."
+    },
+    {
+      "type": "p",
+      "text": "Daugumai virtuvių to nereikia. IQ Rest [virtuvės ekranas](route:/kitchen-display) veikia naršyklėje, tad įranga gali būti planšetė, kurią jau turite, pigi Android planšetė arba senas nešiojamasis su monitoriumi. Įdėkite į nuo purslų apsaugotą dėklą, pritvirtinkite už garų linijos, ir ribinės išlaidos — sieninis laikiklis."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Sprendimas",
+        "Apytikslė kaina",
+        "Kam tinka"
+      ],
+      "rows": [
+        [
+          "Planšetė, kurią jau turite, + laikiklis",
+          "15-40 €",
+          "Daugumai mažų virtuvių"
+        ],
+        [
+          "Nauja pigi planšetė + vandeniui atsparus dėklas",
+          "120-250 €",
+          "Antrai stočiai"
+        ],
+        [
+          "Senas nešiojamasis + išorinis monitorius",
+          "0-150 €",
+          "Virtuvėms, kur yra vietos ant stalviršio"
+        ],
+        [
+          "Specialus KDS su bump juosta",
+          "Nuo kelių šimtų ir daugiau",
+          "Didelei apyvartai, atšiaurioms sąlygoms"
+        ]
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Ekranas svarbesnis už procesorių. Šviesioje virtuvėje norite didelio ir ryškaus ekrano; virėjas jį skaito iš dviejų metrų šlapiomis rankomis. Pirkite įstrižainę anksčiau nei greitį."
+    },
+    {
+      "type": "h2",
+      "text": "Kada KDS pirkti nereikėtų"
+    },
+    {
+      "type": "p",
+      "text": "Būkite čia sąžiningi. Dviejų žmonių virtuvei, kur užsakymą priimantis gali apsisukti ir pasakyti jį garsiai, ekrano nereikia — pridėtumėte žingsnį. Tas pats galioja įstaigai su 20 svečių per vakarą ir trumpu, nekintančiu meniu."
+    },
+    {
+      "type": "p",
+      "text": "Riba maždaug ten, kur vienas žmogus nebeišlaiko išdavimo būklės galvoje: kelios stotys, užsakymai iš daugiau nei vieno kanalo (salė, [užsakymas per QR](route:/order-taking), išsinešti) arba daugiau nei apie 40 svečių per pamainą."
+    },
+    {
+      "type": "h2",
+      "text": "Kaip įdiegti nesugriaunant pamainos"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Leiskite jam savaitę veikti šalia spausdintuvo. Spausdina abu, niekas nepanikuoja, o personalas išmoksta ekraną be rizikos.",
+        "Pradėkite nuo vieno ekrano prie išdavimo. Paskirstymas po stotis — antros savaitės rūpestis.",
+        "Susitarkite, ką reiškia „uždaryti“, prieš pradėdami: sudėta į lėkštę ar perduota į salę? Pusė pirmojo mėnesio painiavos kyla iš čia.",
+        "Pritvirtinkite ten, kur šlapiomis rankomis virėjas pasiekia ir kur nesėda garai.",
+        "Išjunkite spausdintuvą, kai praeis visa savaitė ir niekas prie jo nesitiesė."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Palikite spausdintuvą mėnesį po perėjimo įjungtą į rozetę, bet išjungtą. Tai nieko nekainuoja ir panaikina visą ginčą, kas bus, jei ekranas nulūš vidury pamainos."
+    },
+    {
+      "type": "h2",
+      "text": "Į ką žiūrėti, kai jau veikia"
+    },
+    {
+      "type": "p",
+      "text": "Trys skaičiai atsiperka. Lapelio laiko mediana pasako, kas yra normalu. 90-asis procentilis pasako, kokie blogi jūsų blogi lapeliai, o būtent juos svečiai prisimena. Lapelio laikas pagal valandas pasako, kada pridėti žmogų. Jei mediana stabili, o 90-asis procentilis dvigubas, problema paprastai yra viename patiekale arba vienoje stotyje, o ne visoje virtuvėje."
+    },
+    {
+      "type": "cta",
+      "heading": "KDS, kuris veikia planšetėje iš jūsų biuro stalčiaus",
+      "text": "Užsakymai iš salės ir iš QR kodų patenka į vieną ekraną, su laikmačiu ant kiekvieno lapelio. Nieko pirkti nereikia. 14 dienų nemokamai, be kortelės.",
+      "buttonLabel": "Žiūrėti virtuvės ekraną",
+      "routeKey": "/kitchen-display"
+    },
+    {
+      "type": "faq",
+      "heading": "Dažnai užduodami klausimai",
+      "items": [
+        {
+          "q": "Ką reiškia KDS?",
+          "a": "Kitchen display system, virtuvės ekrano sistema — ekranas virtuvėje, rodantis gaunamus užsakymus vietoj spausdintų lapelių."
+        },
+        {
+          "q": "Kiek kainuoja virtuvės ekrano sistema?",
+          "a": "Programinė įranga paprastai įeina į jūsų užsakymų sistemą. Techninė svyruoja nuo maždaug 15 € už laikiklį, jei naudojate jau turimą planšetę, iki kelių šimtų už specialų įrenginį su bump juosta."
+        },
+        {
+          "q": "Ar galiu paleisti KDS paprastoje planšetėje?",
+          "a": "Taip. IQ Rest virtuvės ekranas veikia naršyklėje, tad tinka bet kuri pastarųjų penkerių metų planšetė ar nešiojamasis. Naudokite nuo purslų apsaugotą dėklą."
+        },
+        {
+          "q": "Ar KDS reikia interneto?",
+          "a": "Reikia ryšio, kad gautų užsakymus. Laikykite virtuvę prie patikimo prieigos taško, o ne prie svečių wi-fi, ir pirmą mėnesį pasilikite spausdintuvą kaip atsargą."
+        },
+        {
+          "q": "Ar jis veikia su QR kodo užsakymais?",
+          "a": "Tai stipriausias argumentas jį turėti. Prie staliuko pateikti užsakymai patenka į tą patį ekraną kaip ir personalo priimti, tad virtuvė turi vieną eilę vietoj dviejų."
+        }
+      ]
+    }
+  ]
+}

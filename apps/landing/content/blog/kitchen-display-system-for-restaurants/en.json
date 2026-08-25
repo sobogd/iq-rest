@@ -1,0 +1,128 @@
+{
+  "meta": {
+    "title": "Kitchen Display System: Do You Need a KDS? | IQ Rest",
+    "description": "What a KDS does, what the hardware really costs, how to run one on a tablet you already own, and the kitchens that are better off with paper tickets."
+  },
+  "card": {
+    "title": "Kitchen display systems: what they fix, what they cost, and when paper is still better",
+    "excerpt": "A KDS screen can cost €800 or nothing, depending on whether you buy the hardware or use a tablet from the office drawer. Here's how to tell which you need."
+  },
+  "h1": "Kitchen display system: what a KDS actually changes",
+  "intro": "A kitchen display system replaces the printer spitting tickets with a screen showing orders. That sounds like a cosmetic change and mostly isn't — the difference is that a screen knows what time the ticket arrived, which station owns it, and whether anyone has touched it. Whether that's worth a screen in your kitchen depends on things worth being specific about.",
+  "blocks": [
+    { "type": "h2", "text": "What a paper ticket can't do" },
+    {
+      "type": "list",
+      "items": [
+        "**It doesn't know it's late.** A ticket sitting for 22 minutes looks exactly like one from 90 seconds ago. A KDS colours it.",
+        "**It can't be in two places.** A table ordering starters and a dessert needs the ticket at the cold station and the pass. Paper gets torn or copied.",
+        "**It disappears.** Tickets fall behind the line, get greasy, get stuck to something. The order is simply gone.",
+        "**It doesn't tell you anything afterwards.** You cannot answer \"how long did we take on Saturday between 21:00 and 22:00\" from a spike of paper.",
+        "**It needs a printer that works.** Thermal printers jam, run out and die at the worst moment."
+      ]
+    },
+    { "type": "h2", "text": "What a KDS actually gives you" },
+    {
+      "type": "table",
+      "headers": ["", "Paper tickets", "KDS"],
+      "rows": [
+        ["Order age", "Guesswork", "A timer on every ticket"],
+        ["Routing to stations", "One printer, one copy", "Same order on each relevant screen"],
+        ["Modifications", "Rewritten by hand", "Marked on the item"],
+        ["Lost orders", "Happens", "Nothing to lose"],
+        ["Ticket times", "Not measurable", "Recorded per order"],
+        ["Consumables", "Paper rolls", "None"],
+        ["Cost to start", "Printer + rolls", "€0 on a tablet you own"]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "The measurement is the underrated part. Once every ticket has a start and a bump time, you can see that Friday's average is fine but that the 21:15 wave takes eleven minutes longer — and that's a staffing decision you can actually make."
+    },
+    { "type": "h2", "text": "The hardware question" },
+    {
+      "type": "p",
+      "text": "Purpose-built KDS units — sealed screens with a bump bar, rated for heat and grease — are excellent and expensive. A high-volume kitchen with a fryer two metres away has a reasonable case for one."
+    },
+    {
+      "type": "p",
+      "text": "Most kitchens don't need that. IQ Rest's [kitchen display](route:/kitchen-display) runs in a browser, so the hardware can be a tablet you already have, a cheap Android tablet, or an old laptop with a monitor. Put it in a splash-proof case, mount it out of the steam line, and the marginal cost is a wall bracket."
+    },
+    {
+      "type": "table",
+      "headers": ["Setup", "Rough cost", "Suits"],
+      "rows": [
+        ["Tablet you already own + bracket", "€15–€40", "Most small kitchens"],
+        ["New budget tablet + waterproof case", "€120–€250", "A second station"],
+        ["Old laptop + external monitor", "€0–€150", "Kitchens with desk space"],
+        ["Purpose-built KDS with bump bar", "Several hundred and up", "High-volume, harsh environments"]
+      ]
+    },
+    {
+      "type": "note",
+      "text": "The screen matters more than the processor. In a bright kitchen you want a big, high-brightness display; a chef reads it from two metres away with wet hands. Buy screen size before you buy speed."
+    },
+    { "type": "h2", "text": "When you should not get a KDS" },
+    {
+      "type": "p",
+      "text": "Be honest about this. A kitchen with two people where the person taking the order can turn around and say it out loud does not need a screen — you'd be adding a step. The same goes for a venue doing 20 covers a night with a fixed short menu."
+    },
+    {
+      "type": "p",
+      "text": "The threshold is roughly where a single person can no longer hold the state of the pass in their head: multiple stations, orders arriving from more than one channel (floor, [QR ordering](route:/order-taking), takeaway), or more than about 40 covers a service."
+    },
+    { "type": "h2", "text": "Setting one up without disrupting service" },
+    {
+      "type": "steps",
+      "items": [
+        "Run it alongside the printer for a week. Both fire, nobody panics, staff learn the screen without risk.",
+        "Start with one screen at the pass. Station-by-station routing is a second-week problem.",
+        "Agree what \"bump\" means before you start — plated, or handed to the floor? Half the confusion in the first month comes from this.",
+        "Mount it where a chef with wet hands can reach it and where steam won't sit on it.",
+        "Turn the printer off once a full week has passed without anyone reaching for it."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Keep the printer plugged in, powered off, for a month after you switch. It costs nothing and it removes the whole argument about what happens if the screen fails during service."
+    },
+    { "type": "h2", "text": "What to look at once it's running" },
+    {
+      "type": "p",
+      "text": "Three numbers earn their keep. Median ticket time tells you the normal. The 90th percentile tells you how bad your bad tickets are, which is what guests actually remember. Ticket time by hour tells you when to add a person. If your median is steady but the 90th percentile is double it, the problem is usually one dish or one station, not the whole kitchen."
+    },
+    {
+      "type": "cta",
+      "heading": "A KDS that runs on the tablet in your office drawer",
+      "text": "Orders from the floor and from QR codes land on one screen, with a timer on every ticket. No hardware to buy. 14 days free, no card required.",
+      "buttonLabel": "See the kitchen display",
+      "routeKey": "/kitchen-display"
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently asked questions",
+      "items": [
+        {
+          "q": "What does KDS stand for?",
+          "a": "Kitchen display system — the screen in the kitchen that shows incoming orders in place of printed tickets."
+        },
+        {
+          "q": "How much does a kitchen display system cost?",
+          "a": "The software is usually part of your ordering system. Hardware ranges from about €15 for a bracket, if you use a tablet you already own, to several hundred for a purpose-built unit with a bump bar."
+        },
+        {
+          "q": "Can I run a KDS on an ordinary tablet?",
+          "a": "Yes. IQ Rest's kitchen display runs in a browser, so any tablet or laptop from roughly the last five years works. Use a splash-proof case."
+        },
+        {
+          "q": "Does a KDS need internet?",
+          "a": "It needs a connection to receive orders. Keep the kitchen on a reliable access point rather than the guest Wi-Fi, and keep the printer as a fallback for the first month."
+        },
+        {
+          "q": "Does it work with QR code orders?",
+          "a": "That's the strongest reason to have one. Orders placed from the table arrive on the same screen as orders taken by staff, so the kitchen has one queue instead of two."
+        }
+      ]
+    }
+  ]
+}

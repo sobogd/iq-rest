@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "title": "Ekran kuchenny: czy potrzebujesz KDS? | IQ Rest",
+    "description": "Co robi KDS, ile naprawdę kosztuje sprzęt, jak uruchomić go na tablecie, który już masz, i które kuchnie lepiej wychodzą na papierowych bonach."
+  },
+  "card": {
+    "title": "Ekrany kuchenne: co naprawiają, ile kosztują i kiedy papier nadal jest lepszy",
+    "excerpt": "Ekran KDS może kosztować 800 € albo nic, zależnie od tego, czy kupujesz sprzęt, czy używasz tabletu z szuflady w biurze. Oto jak rozpoznać, czego potrzebujesz."
+  },
+  "h1": "Ekran kuchenny: co naprawdę zmienia KDS",
+  "intro": "System ekranu kuchennego zastępuje drukarkę wypluwającą bony ekranem, który pokazuje zamówienia. Brzmi to jak zmiana kosmetyczna i w większości nią nie jest: różnica polega na tym, że ekran wie, o której bon przyszedł, która stacja go ma i czy ktoś go dotknął. Czy to warte ekranu w twojej kuchni, zależy od rzeczy, które warto nazwać wprost.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Czego papierowy bon nie potrafi"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Nie wie, że jest spóźniony.** Bon leżący 22 minuty wygląda dokładnie tak samo jak ten sprzed 90 sekund. KDS zabarwia go.",
+        "**Nie może być w dwóch miejscach.** Stolik zamawiający przystawki i deser potrzebuje bonu na zimnej stacji i na wydawce. Papier się drze albo kopiuje.",
+        "**Znika.** Bony spadają za linię, tłuszczeją, przyklejają się do czegoś. Zamówienia po prostu nie ma.",
+        "**Nic ci potem nie mówi.** Nie odpowiesz na pytanie „ile schodziło nam w sobotę między 21:00 a 22:00”, patrząc na szpikulec z bonami.",
+        "**Potrzebuje działającej drukarki.** Termiczne się zacinają, kończy im się papier i umierają w najgorszym momencie."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Co KDS naprawdę ci daje"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Papierowe bony",
+        "KDS"
+      ],
+      "rows": [
+        [
+          "Wiek zamówienia",
+          "Na oko",
+          "Licznik na każdym bonie"
+        ],
+        [
+          "Rozdzielanie na stacje",
+          "Jedna drukarka, jedna kopia",
+          "To samo zamówienie na każdym właściwym ekranie"
+        ],
+        [
+          "Modyfikacje",
+          "Dopisywane ręcznie",
+          "Zaznaczone przy pozycji"
+        ],
+        [
+          "Zgubione zamówienia",
+          "Zdarza się",
+          "Nie ma czego zgubić"
+        ],
+        [
+          "Czasy bonów",
+          "Niemierzalne",
+          "Zapisywane przy każdym zamówieniu"
+        ],
+        [
+          "Materiały eksploatacyjne",
+          "Rolki papieru",
+          "Brak"
+        ],
+        [
+          "Koszt startu",
+          "Drukarka + rolki",
+          "0 € na tablecie, który już masz"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Pomiar to najbardziej niedoceniana część. Kiedy każdy bon ma godzinę wejścia i zbicia, widzisz, że piątkowa średnia jest w porządku, ale fala o 21:15 zajmuje jedenaście minut dłużej — a to już decyzja kadrowa, którą naprawdę możesz podjąć."
+    },
+    {
+      "type": "h2",
+      "text": "Kwestia sprzętu"
+    },
+    {
+      "type": "p",
+      "text": "Dedykowane urządzenia KDS — uszczelnione ekrany z listwą bump, przystosowane do gorąca i tłuszczu — są znakomite i drogie. Kuchnia o dużym wolumenie z frytownicą dwa metry dalej ma rozsądny argument, żeby taki kupić."
+    },
+    {
+      "type": "p",
+      "text": "Większość kuchni tego nie potrzebuje. [Ekran kuchenny](route:/kitchen-display) IQ Rest działa w przeglądarce, więc sprzętem może być tablet, który już masz, tani tablet z Androidem albo stary laptop z monitorem. Włóż go w bryzgoszczelne etui, zamontuj poza linią pary, a koszt krańcowy to uchwyt ścienny."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Zestaw",
+        "Orientacyjny koszt",
+        "Dla kogo"
+      ],
+      "rows": [
+        [
+          "Tablet, który już masz + uchwyt",
+          "15-40 €",
+          "Większości małych kuchni"
+        ],
+        [
+          "Nowy tani tablet + wodoodporne etui",
+          "120-250 €",
+          "Drugiej stacji"
+        ],
+        [
+          "Stary laptop + monitor zewnętrzny",
+          "0-150 €",
+          "Kuchniom z wolnym blatem"
+        ],
+        [
+          "Dedykowany KDS z listwą bump",
+          "Od kilkuset w górę",
+          "Dużym wolumenom, trudnym warunkom"
+        ]
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Ekran liczy się bardziej niż procesor. W jasnej kuchni chcesz duży, jasny wyświetlacz; kucharz czyta go z dwóch metrów mokrymi rękami. Kupuj przekątną, zanim kupisz szybkość."
+    },
+    {
+      "type": "h2",
+      "text": "Kiedy nie powinieneś brać KDS"
+    },
+    {
+      "type": "p",
+      "text": "Bądź tu szczery. Kuchnia dwuosobowa, w której osoba przyjmująca zamówienie może się odwrócić i powiedzieć je na głos, nie potrzebuje ekranu — dokładałbyś krok. To samo dotyczy lokalu na 20 kuwertów wieczorem z krótką, stałą kartą."
+    },
+    {
+      "type": "p",
+      "text": "Próg leży mniej więcej tam, gdzie jedna osoba nie utrzymuje już stanu wydawki w głowie: kilka stacji, zamówienia z więcej niż jednego kanału (sala, [zamówienie przez QR](route:/order-taking), na wynos) albo więcej niż jakieś 40 kuwertów na serwis."
+    },
+    {
+      "type": "h2",
+      "text": "Jak go wdrożyć bez rozwalania serwisu"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Puść go równolegle z drukarką przez tydzień. Wychodzą oba, nikt nie panikuje, a załoga uczy się ekranu bez ryzyka.",
+        "Zacznij od jednego ekranu na wydawce. Rozdzielanie po stacjach to problem drugiego tygodnia.",
+        "Ustalcie, co znaczy „zbicie”, zanim zaczniecie: wyłożone na talerz czy przekazane na salę? Połowa zamieszania pierwszego miesiąca bierze się stąd.",
+        "Zamontuj go tam, gdzie kucharz z mokrymi rękami sięgnie i gdzie nie osiada para.",
+        "Wyłącz drukarkę, gdy minie cały tydzień, w którym nikt po nią nie sięgnął."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Zostaw drukarkę podłączoną, ale wyłączoną, przez miesiąc po zmianie. Nic to nie kosztuje i zamyka całą dyskusję o tym, co będzie, jeśli ekran padnie w środku serwisu."
+    },
+    {
+      "type": "h2",
+      "text": "Na co patrzeć, gdy już działa"
+    },
+    {
+      "type": "p",
+      "text": "Trzy liczby zarabiają na siebie. Mediana czasu bonu mówi ci, co jest normą. Percentyl 90 mówi, jak złe są twoje złe bony, a to właśnie zapamiętują goście. Czas bonu w podziale na godziny mówi, kiedy dołożyć osobę. Jeśli mediana jest stabilna, a percentyl 90 jest jej dwukrotnością, problemem zwykle jest jedno danie albo jedna stacja, a nie cała kuchnia."
+    },
+    {
+      "type": "cta",
+      "heading": "KDS, który działa na tablecie z szuflady w twoim biurze",
+      "text": "Zamówienia z sali i z kodów QR trafiają na jeden ekran, z licznikiem na każdym bonie. Nic do kupienia. 14 dni za darmo, bez karty.",
+      "buttonLabel": "Zobacz ekran kuchenny",
+      "routeKey": "/kitchen-display"
+    },
+    {
+      "type": "faq",
+      "heading": "Najczęstsze pytania",
+      "items": [
+        {
+          "q": "Co oznacza KDS?",
+          "a": "Kitchen display system, system ekranu kuchennego — ekran, który pokazuje przychodzące zamówienia zamiast drukowanych bonów."
+        },
+        {
+          "q": "Ile kosztuje system ekranu kuchennego?",
+          "a": "Oprogramowanie zwykle wchodzi w skład twojego systemu zamówień. Sprzęt to od około 15 € za uchwyt, jeśli używasz tabletu, który już masz, do kilkuset za dedykowane urządzenie z listwą bump."
+        },
+        {
+          "q": "Czy mogę uruchomić KDS na zwykłym tablecie?",
+          "a": "Tak. Ekran kuchenny IQ Rest działa w przeglądarce, więc nada się każdy tablet lub laptop z ostatnich pięciu lat. Użyj bryzgoszczelnego etui."
+        },
+        {
+          "q": "Czy KDS potrzebuje internetu?",
+          "a": "Potrzebuje połączenia, żeby odbierać zamówienia. Podłącz kuchnię do pewnego punktu dostępowego zamiast do wi-fi dla gości i przez pierwszy miesiąc zostaw drukarkę jako zapas."
+        },
+        {
+          "q": "Czy działa z zamówieniami przez kod QR?",
+          "a": "To najmocniejszy powód, żeby go mieć. Zamówienia złożone przy stoliku trafiają na ten sam ekran co te przyjęte przez obsługę, więc kuchnia ma jedną kolejkę zamiast dwóch."
+        }
+      ]
+    }
+  ]
+}

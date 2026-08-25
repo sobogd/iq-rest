@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "title": "Mutfak ekranı: KDS'ye ihtiyacınız var mı? | IQ Rest",
+    "description": "KDS ne yapar, donanım gerçekte ne kadar tutar, halihazırda sahip olduğunuz tablette nasıl çalıştırılır ve hangi mutfaklar kâğıt fişle daha iyi durumda."
+  },
+  "card": {
+    "title": "Mutfak ekranları: neyi çözer, ne tutar ve kâğıdın hâlâ daha iyi olduğu durumlar",
+    "excerpt": "Bir KDS ekranı 800 € da tutabilir, hiç de tutmayabilir; donanım mı alıyorsunuz yoksa ofis çekmecesindeki tableti mi kullanıyorsunuz, ona bağlı. Hangisine ihtiyacınız olduğunu şöyle anlarsınız."
+  },
+  "h1": "Mutfak ekranı: bir KDS gerçekte neyi değiştirir",
+  "intro": "Mutfak ekranı sistemi, fiş kusan yazıcıyı siparişleri gösteren bir ekranla değiştirir. Kulağa kozmetik geliyor ama büyük ölçüde değil: fark, ekranın fişin kaçta geldiğini, hangi istasyonda olduğunu ve birinin ona dokunup dokunmadığını bilmesidir. Bunun mutfağınızda bir ekrana değip değmediği, açıkça konuşulmayı hak eden şeylere bağlı.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Kâğıt fişin yapamadıkları"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Geciktiğini bilmez.** 22 dakikadır duran bir fiş, 90 saniyelik bir fişle birebir aynı görünür. KDS onu renklendirir.",
+        "**Aynı anda iki yerde olamaz.** Başlangıç ve tatlı söyleyen bir masanın fişine hem soğuk istasyonda hem pasta ihtiyaç vardır. Kâğıt yırtılır ya da fotokopilenir.",
+        "**Kaybolur.** Fişler hattın arkasına düşer, yağlanır, bir yere yapışır. Sipariş kısaca ortada yoktur.",
+        "**Sonrasında size hiçbir şey anlatmaz.** \"Cumartesi 21.00-22.00 arasında ne kadar sürdük\" sorusunu bir fiş şişinden yanıtlayamazsınız.",
+        "**Çalışan bir yazıcı ister.** Termal yazıcılar sıkışır, kâğıdı biter ve en kötü anda ölür."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "KDS'nin size gerçekten verdikleri"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Kâğıt fişler",
+        "KDS"
+      ],
+      "rows": [
+        [
+          "Siparişin yaşı",
+          "Tahmin",
+          "Her fişte bir sayaç"
+        ],
+        [
+          "İstasyonlara yönlendirme",
+          "Tek yazıcı, tek kopya",
+          "Aynı sipariş ilgili her ekranda"
+        ],
+        [
+          "Değişiklikler",
+          "Elle yeniden yazılır",
+          "Ürünün üzerinde işaretlenir"
+        ],
+        [
+          "Kaybolan siparişler",
+          "Olur",
+          "Kaybolacak bir şey yok"
+        ],
+        [
+          "Fiş süreleri",
+          "Ölçülemez",
+          "Sipariş başına kaydedilir"
+        ],
+        [
+          "Sarf malzemesi",
+          "Kâğıt ruloları",
+          "Yok"
+        ],
+        [
+          "Başlangıç maliyeti",
+          "Yazıcı + rulolar",
+          "Sahip olduğunuz tablette 0 €"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Ölçüm, hafife alınan kısımdır. Her fişin bir başlangıç ve bir kapanış saati olduğunda, cuma ortalamasının iyi olduğunu ama 21.15 dalgasının on bir dakika daha uzun sürdüğünü görürsünüz — ve bu, gerçekten alabileceğiniz bir personel kararıdır."
+    },
+    {
+      "type": "h2",
+      "text": "Donanım meselesi"
+    },
+    {
+      "type": "p",
+      "text": "Amaca özel KDS üniteleri — bump barlı, sızdırmaz, sıcağa ve yağa dayanıklı ekranlar — mükemmeldir ve pahalıdır. İki metre ötesinde fritözü olan yüksek hacimli bir mutfak, böyle bir cihaz için makul bir gerekçeye sahiptir."
+    },
+    {
+      "type": "p",
+      "text": "Çoğu mutfağın buna ihtiyacı yok. IQ Rest'in [mutfak ekranı](route:/kitchen-display) tarayıcıda çalışır; yani donanım halihazırda sahip olduğunuz bir tablet, ucuz bir Android tablet ya da monitörlü eski bir dizüstü olabilir. Sıçramaya dayanıklı bir kılıfa koyun, buhar hattının dışına monte edin; marjinal maliyet bir duvar aparatıdır."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Kurulum",
+        "Yaklaşık maliyet",
+        "Kime uyar"
+      ],
+      "rows": [
+        [
+          "Sahip olduğunuz tablet + aparat",
+          "15-40 €",
+          "Çoğu küçük mutfağa"
+        ],
+        [
+          "Yeni ucuz tablet + su geçirmez kılıf",
+          "120-250 €",
+          "İkinci bir istasyona"
+        ],
+        [
+          "Eski dizüstü + harici monitör",
+          "0-150 €",
+          "Tezgâhta yeri olan mutfaklara"
+        ],
+        [
+          "Bump barlı amaca özel KDS",
+          "Birkaç yüz ve üzeri",
+          "Yüksek hacme, zorlu ortamlara"
+        ]
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Ekran, işlemciden daha önemlidir. Aydınlık bir mutfakta büyük ve parlak bir ekran istersiniz; aşçı onu iki metreden, ıslak ellerle okur. Hızdan önce ekran boyutu alın."
+    },
+    {
+      "type": "h2",
+      "text": "Ne zaman KDS almamalısınız"
+    },
+    {
+      "type": "p",
+      "text": "Burada dürüst olun. Siparişi alan kişinin dönüp yüksek sesle söyleyebildiği iki kişilik bir mutfağın ekrana ihtiyacı yoktur — bir adım eklemiş olursunuz. Aynısı, akşam 20 kuver yapan ve kısa, sabit menüsü olan bir mekân için de geçerlidir."
+    },
+    {
+      "type": "p",
+      "text": "Eşik kabaca, tek bir kişinin pasanın durumunu artık kafasında tutamadığı yerdedir: birden fazla istasyon, birden fazla kanaldan gelen siparişler (salon, [QR ile sipariş](route:/order-taking), paket) ya da servis başına yaklaşık 40 kuverin üzeri."
+    },
+    {
+      "type": "h2",
+      "text": "Servisi bozmadan nasıl kurulur"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Bir hafta yazıcıyla paralel çalıştırın. İkisi de basar, kimse panikler, personel ekranı risksiz öğrenir.",
+        "Pasada tek ekranla başlayın. İstasyon istasyon yönlendirme ikinci haftanın meselesidir.",
+        "Başlamadan önce \"kapatmak\"ın ne demek olduğunda anlaşın: tabağa konmuş mu, salona teslim edilmiş mi? İlk aydaki kafa karışıklığının yarısı buradan çıkar.",
+        "Islak elli bir aşçının uzanabileceği ve buharın üzerine oturmayacağı yere monte edin.",
+        "Kimse ona uzanmadan tam bir hafta geçtiğinde yazıcıyı kapatın."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Geçişten sonra bir ay boyunca yazıcıyı fişte ama kapalı bırakın. Hiçbir şeye mal olmaz ve \"servis ortasında ekran giderse ne olacak\" tartışmasını tamamen ortadan kaldırır."
+    },
+    {
+      "type": "h2",
+      "text": "Çalışmaya başladıktan sonra neye bakılır"
+    },
+    {
+      "type": "p",
+      "text": "Üç sayı ekmeğini çıkarır. Medyan fiş süresi size normalin ne olduğunu söyler. 90. yüzdelik, kötü fişlerinizin ne kadar kötü olduğunu söyler ve misafirlerin hatırladığı budur. Saate göre fiş süresi, ne zaman bir kişi eklemeniz gerektiğini söyler. Medyanınız sabitken 90. yüzdelik onun iki katıysa, sorun genellikle tek bir yemekte ya da tek bir istasyondadır, mutfağın tamamında değil."
+    },
+    {
+      "type": "cta",
+      "heading": "Ofis çekmecenizdeki tablette çalışan bir KDS",
+      "text": "Salondan ve QR kodlardan gelen siparişler tek bir ekrana düşer, her fişte bir sayaçla. Alınacak donanım yok. 14 gün ücretsiz, kartsız.",
+      "buttonLabel": "Mutfak ekranını görün",
+      "routeKey": "/kitchen-display"
+    },
+    {
+      "type": "faq",
+      "heading": "Sık sorulan sorular",
+      "items": [
+        {
+          "q": "KDS ne demek?",
+          "a": "Kitchen display system, mutfak ekranı sistemi — mutfakta gelen siparişleri basılı fiş yerine gösteren ekran."
+        },
+        {
+          "q": "Mutfak ekranı sistemi ne kadar tutar?",
+          "a": "Yazılım genellikle sipariş sisteminizin parçasıdır. Donanım, halihazırda sahip olduğunuz bir tableti kullanıyorsanız yaklaşık 15 €'luk bir aparattan, bump barlı amaca özel bir üniteye kadar birkaç yüz euroya çıkar."
+        },
+        {
+          "q": "KDS'yi sıradan bir tablette çalıştırabilir miyim?",
+          "a": "Evet. IQ Rest'in mutfak ekranı tarayıcıda çalışır, dolayısıyla son beş yılın herhangi bir tableti ya da dizüstü bilgisayarı iş görür. Sıçramaya dayanıklı bir kılıf kullanın."
+        },
+        {
+          "q": "KDS internet ister mi?",
+          "a": "Sipariş alabilmek için bağlantı ister. Mutfağı misafir wi-fi'ı yerine güvenilir bir erişim noktasında tutun ve ilk ay yazıcıyı yedek olarak saklayın."
+        },
+        {
+          "q": "QR kod siparişleriyle çalışır mı?",
+          "a": "Sahip olmak için en güçlü sebep budur. Masadan verilen siparişler, personelin aldığı siparişlerle aynı ekrana düşer; böylece mutfağın iki değil tek bir kuyruğu olur."
+        }
+      ]
+    }
+  ]
+}

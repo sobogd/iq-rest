@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "title": "Köksdisplay: behöver du ett KDS? | IQ Rest",
+    "description": "Vad ett KDS gör, vad hårdvaran faktiskt kostar, hur du kör det på en surfplatta du redan har, och vilka kök som har det bättre med papperslappar."
+  },
+  "card": {
+    "title": "Köksdisplayer: vad de löser, vad de kostar och när papper fortfarande är bättre",
+    "excerpt": "En KDS-skärm kan kosta 800 € eller ingenting, beroende på om du köper hårdvaran eller använder en surfplatta ur kontorslådan. Så avgör du vilket du behöver."
+  },
+  "h1": "Köksdisplay: vad ett KDS faktiskt förändrar",
+  "intro": "Ett köksdisplaysystem ersätter skrivaren som spottar ut notor med en skärm som visar beställningar. Det låter kosmetiskt och är det mestadels inte: skillnaden är att en skärm vet när notan kom in, vilken station som har den och om någon rört den. Om det är värt en skärm i ditt kök beror på saker som är värda att vara konkret om.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Vad en pappersnota inte klarar"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Den vet inte att den är sen.** En nota som legat i 22 minuter ser exakt likadan ut som en från 90 sekunder sedan. Ett KDS färgar den.",
+        "**Den kan inte vara på två ställen.** Ett bord som beställer förrätter och en dessert behöver notan både på kalla stationen och vid utlämningen. Papper rivs eller kopieras.",
+        "**Den försvinner.** Notor hamnar bakom linjen, blir feta, fastnar i något. Beställningen är helt enkelt borta.",
+        "**Den berättar inget efteråt.** Du kan inte svara på \"hur lång tid tog vi på lördag mellan 21 och 22\" utifrån en notaspets.",
+        "**Den kräver en skrivare som fungerar.** Termoskrivare fastnar, får slut på papper och lägger av vid sämsta tänkbara tillfälle."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Vad ett KDS faktiskt ger dig"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Pappersnotor",
+        "KDS"
+      ],
+      "rows": [
+        [
+          "Beställningens ålder",
+          "Gissning",
+          "En timer på varje nota"
+        ],
+        [
+          "Fördelning till stationer",
+          "En skrivare, en kopia",
+          "Samma beställning på varje berörd skärm"
+        ],
+        [
+          "Ändringar",
+          "Skrivs om för hand",
+          "Markerade på rätten"
+        ],
+        [
+          "Tappade beställningar",
+          "Händer",
+          "Inget att tappa"
+        ],
+        [
+          "Notatider",
+          "Går inte att mäta",
+          "Registreras per beställning"
+        ],
+        [
+          "Förbrukningsmaterial",
+          "Pappersrullar",
+          "Inga"
+        ],
+        [
+          "Startkostnad",
+          "Skrivare + rullar",
+          "0 € på en surfplatta du redan har"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Mätningen är den underskattade delen. När varje nota har en start- och en bumptid ser du att fredagssnittet är fint men att vågen 21.15 tar elva minuter längre – och det är ett bemanningsbeslut du faktiskt kan fatta."
+    },
+    {
+      "type": "h2",
+      "text": "Hårdvarufrågan"
+    },
+    {
+      "type": "p",
+      "text": "Ändamålsbyggda KDS-enheter – förseglade skärmar med bumpbar, tåliga mot värme och fett – är utmärkta och dyra. Ett kök med hög volym och en fritös två meter bort har ett rimligt argument för en sådan."
+    },
+    {
+      "type": "p",
+      "text": "De flesta kök behöver inte det. IQ Rests [köksdisplay](route:/kitchen-display) körs i webbläsaren, så hårdvaran kan vara en platta du redan har, en billig Android-platta eller en gammal laptop med en skärm. Stoppa den i ett stänkskyddat fodral, montera den utanför ångstråket, så är marginalkostnaden ett väggfäste."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Uppsättning",
+        "Ungefärlig kostnad",
+        "Passar"
+      ],
+      "rows": [
+        [
+          "Platta du redan har + fäste",
+          "15–40 €",
+          "De flesta små kök"
+        ],
+        [
+          "Ny billig platta + vattentätt fodral",
+          "120–250 €",
+          "En andra station"
+        ],
+        [
+          "Gammal laptop + extern skärm",
+          "0–150 €",
+          "Kök med bänkyta"
+        ],
+        [
+          "Ändamålsbyggt KDS med bumpbar",
+          "Flera hundra och uppåt",
+          "Hög volym, tuffa miljöer"
+        ]
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Skärmen betyder mer än processorn. I ett upplyst kök vill du ha en stor skärm med hög ljusstyrka; en kock läser den på två meters håll med blöta händer. Köp skärmstorlek före hastighet."
+    },
+    {
+      "type": "h2",
+      "text": "När du inte ska skaffa ett KDS"
+    },
+    {
+      "type": "p",
+      "text": "Var ärlig här. Ett kök med två personer där den som tar beställningen kan vända sig om och säga den högt behöver ingen skärm – du skulle lägga till ett steg. Detsamma gäller ett ställe med 20 gäster per kväll och en kort, fast meny."
+    },
+    {
+      "type": "p",
+      "text": "Tröskeln går ungefär där en enda person inte längre kan hålla utlämningens läge i huvudet: flera stationer, beställningar som kommer via mer än en kanal (salen, [QR-beställning](route:/order-taking), avhämtning), eller mer än ungefär 40 gäster per pass."
+    },
+    {
+      "type": "h2",
+      "text": "Så inför du det utan att störa servicen"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Låt det gå parallellt med skrivaren i en vecka. Båda skriver ut, ingen får panik, och personalen lär sig skärmen utan risk.",
+        "Börja med en skärm vid utlämningen. Fördelning station för station är ett problem för vecka två.",
+        "Kom överens om vad \"bumpa\" betyder innan ni börjar: upplagt, eller överlämnat till salen? Hälften av förvirringen första månaden kommer härifrån.",
+        "Montera den där en kock med blöta händer når den och där ånga inte lägger sig på den.",
+        "Stäng av skrivaren när en hel vecka gått utan att någon sträckt sig efter den."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Låt skrivaren sitta inkopplad men avstängd en månad efter bytet. Det kostar ingenting och tar bort hela diskussionen om vad som händer om skärmen lägger av mitt i passet."
+    },
+    {
+      "type": "h2",
+      "text": "Vad du tittar på när det väl rullar"
+    },
+    {
+      "type": "p",
+      "text": "Tre siffror förtjänar sin plats. Mediannotatiden säger vad som är normalt. 90:e percentilen säger hur dåliga dina dåliga notor är, och det är det gästerna minns. Notatid per timme säger när du behöver sätta in någon. Om medianen är stabil men 90:e percentilen är dubbelt så hög sitter problemet oftast i en rätt eller en station, inte i hela köket."
+    },
+    {
+      "type": "cta",
+      "heading": "Ett KDS som kör på surfplattan i din kontorslåda",
+      "text": "Beställningar från salen och från QR-koder landar på en skärm, med en timer på varje nota. Ingen hårdvara att köpa. 14 dagar gratis, utan kort.",
+      "buttonLabel": "Se köksdisplayen",
+      "routeKey": "/kitchen-display"
+    },
+    {
+      "type": "faq",
+      "heading": "Vanliga frågor",
+      "items": [
+        {
+          "q": "Vad står KDS för?",
+          "a": "Kitchen display system, köksdisplaysystem – skärmen i köket som visar inkommande beställningar i stället för utskrivna notor."
+        },
+        {
+          "q": "Vad kostar ett köksdisplaysystem?",
+          "a": "Mjukvaran ingår oftast i ditt beställningssystem. Hårdvaran sträcker sig från cirka 15 € för ett fäste, om du använder en platta du redan har, till flera hundra för en ändamålsbyggd enhet med bumpbar."
+        },
+        {
+          "q": "Kan jag köra ett KDS på en vanlig surfplatta?",
+          "a": "Ja. IQ Rests köksdisplay körs i webbläsaren, så vilken platta eller laptop som helst från de senaste fem åren fungerar. Använd ett stänkskyddat fodral."
+        },
+        {
+          "q": "Behöver ett KDS internet?",
+          "a": "Det behöver en uppkoppling för att ta emot beställningar. Håll köket på en pålitlig accesspunkt i stället för gäst-wifit, och behåll skrivaren som reserv första månaden."
+        },
+        {
+          "q": "Fungerar det med QR-beställningar?",
+          "a": "Det är det starkaste skälet att ha ett. Beställningar som görs från bordet hamnar på samma skärm som de personalen tar, så köket har en kö i stället för två."
+        }
+      ]
+    }
+  ]
+}

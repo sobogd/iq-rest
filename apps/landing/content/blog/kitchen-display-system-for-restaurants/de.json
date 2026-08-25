@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "title": "Küchendisplay: Brauchen Sie ein KDS? | IQ Rest",
+    "description": "Was ein KDS leistet, was die Hardware wirklich kostet, wie Sie es auf einem vorhandenen Tablet betreiben und welche Küchen mit Papierbons besser fahren."
+  },
+  "card": {
+    "title": "Küchendisplays: was sie lösen, was sie kosten und wann Papier weiterhin besser ist",
+    "excerpt": "Ein KDS-Bildschirm kann 800 € kosten oder nichts — je nachdem, ob Sie Hardware kaufen oder ein Tablet aus der Bürolade nehmen. So erkennen Sie, was Sie brauchen."
+  },
+  "h1": "Küchendisplay: was ein KDS wirklich verändert",
+  "intro": "Ein Küchendisplay-System ersetzt den Drucker, der Bons ausspuckt, durch einen Bildschirm, der Bestellungen zeigt. Das klingt nach Kosmetik und ist es größtenteils nicht: Der Unterschied ist, dass ein Bildschirm weiß, wann der Bon eingegangen ist, welcher Posten ihn hat und ob ihn jemand angefasst hat. Ob sich dafür ein Bildschirm in Ihrer Küche lohnt, hängt von Dingen ab, die man konkret benennen sollte.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Was ein Papierbon nicht kann"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Er weiß nicht, dass er spät ist.** Ein Bon, der 22 Minuten liegt, sieht genauso aus wie einer von vor 90 Sekunden. Ein KDS färbt ihn ein.",
+        "**Er kann nicht an zwei Orten sein.** Ein Tisch mit Vorspeisen und Dessert braucht den Bon am kalten Posten und am Pass. Papier wird zerrissen oder kopiert.",
+        "**Er verschwindet.** Bons fallen hinter die Linie, werden fettig, kleben an irgendetwas. Die Bestellung ist schlicht weg.",
+        "**Er sagt Ihnen hinterher nichts.** Aus einem Bonspieß können Sie nicht beantworten, wie lange Sie samstags zwischen 21:00 und 22:00 Uhr gebraucht haben.",
+        "**Er braucht einen funktionierenden Drucker.** Thermodrucker verklemmen, laufen leer und sterben im ungünstigsten Moment."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Was ein KDS Ihnen tatsächlich gibt"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Papierbons",
+        "KDS"
+      ],
+      "rows": [
+        [
+          "Alter der Bestellung",
+          "Schätzung",
+          "Ein Timer auf jedem Bon"
+        ],
+        [
+          "Verteilung auf Posten",
+          "Ein Drucker, eine Kopie",
+          "Dieselbe Bestellung auf jedem relevanten Bildschirm"
+        ],
+        [
+          "Änderungen",
+          "Von Hand überschrieben",
+          "Am Artikel markiert"
+        ],
+        [
+          "Verlorene Bestellungen",
+          "Kommt vor",
+          "Nichts, was verloren gehen kann"
+        ],
+        [
+          "Bonzeiten",
+          "Nicht messbar",
+          "Pro Bestellung erfasst"
+        ],
+        [
+          "Verbrauchsmaterial",
+          "Papierrollen",
+          "Keins"
+        ],
+        [
+          "Startkosten",
+          "Drucker + Rollen",
+          "0 € auf einem vorhandenen Tablet"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Die Messung ist der unterschätzte Teil. Sobald jeder Bon eine Start- und eine Bump-Zeit hat, sehen Sie, dass der Freitagsschnitt in Ordnung ist, die Welle um 21:15 Uhr aber elf Minuten länger braucht — und das ist eine Personalentscheidung, die Sie tatsächlich treffen können."
+    },
+    {
+      "type": "h2",
+      "text": "Die Hardwarefrage"
+    },
+    {
+      "type": "p",
+      "text": "Speziell gebaute KDS-Geräte — versiegelte Bildschirme mit Bump-Bar, ausgelegt für Hitze und Fett — sind hervorragend und teuer. Eine Küche mit hohem Volumen und einer Fritteuse in zwei Metern Entfernung hat ein vernünftiges Argument dafür."
+    },
+    {
+      "type": "p",
+      "text": "Die meisten Küchen brauchen das nicht. Die [Küchenanzeige](route:/kitchen-display) von IQ Rest läuft im Browser, die Hardware kann also ein Tablet sein, das Sie schon haben, ein günstiges Android-Tablet oder ein alter Laptop mit Monitor. Stecken Sie es in eine spritzwassergeschützte Hülle, montieren Sie es außerhalb der Dampfzone, und die Grenzkosten sind eine Wandhalterung."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Aufbau",
+        "Ungefähre Kosten",
+        "Passt zu"
+      ],
+      "rows": [
+        [
+          "Vorhandenes Tablet + Halterung",
+          "15–40 €",
+          "Den meisten kleinen Küchen"
+        ],
+        [
+          "Neues günstiges Tablet + wasserfeste Hülle",
+          "120–250 €",
+          "Einem zweiten Posten"
+        ],
+        [
+          "Alter Laptop + externer Monitor",
+          "0–150 €",
+          "Küchen mit Stellfläche"
+        ],
+        [
+          "Speziell gebautes KDS mit Bump-Bar",
+          "Mehrere Hundert und aufwärts",
+          "Hohem Volumen, harten Umgebungen"
+        ]
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Der Bildschirm zählt mehr als der Prozessor. In einer hellen Küche wollen Sie ein großes, helles Display; ein Koch liest es aus zwei Metern mit nassen Händen. Kaufen Sie Bildschirmgröße vor Rechenleistung."
+    },
+    {
+      "type": "h2",
+      "text": "Wann Sie kein KDS anschaffen sollten"
+    },
+    {
+      "type": "p",
+      "text": "Seien Sie hier ehrlich. Eine Küche mit zwei Leuten, in der die Person, die die Bestellung aufnimmt, sich umdrehen und sie laut sagen kann, braucht keinen Bildschirm — Sie würden einen Schritt hinzufügen. Dasselbe gilt für einen Betrieb mit 20 Gedecken am Abend und kurzer, fester Karte."
+    },
+    {
+      "type": "p",
+      "text": "Die Schwelle liegt ungefähr dort, wo eine einzelne Person den Zustand des Passes nicht mehr im Kopf halten kann: mehrere Posten, Bestellungen aus mehr als einem Kanal (Service, [QR-Bestellung](route:/order-taking), Abholung) oder mehr als etwa 40 Gedecke pro Service."
+    },
+    {
+      "type": "h2",
+      "text": "Einrichten, ohne den Service zu stören"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Lassen Sie es eine Woche parallel zum Drucker laufen. Beides feuert, niemand gerät in Panik, und das Team lernt den Bildschirm ohne Risiko.",
+        "Beginnen Sie mit einem Bildschirm am Pass. Die Verteilung auf einzelne Posten ist ein Problem der zweiten Woche.",
+        "Klären Sie vorher, was \"bumpen\" heißt: angerichtet oder an den Service übergeben? Die Hälfte der Verwirrung im ersten Monat kommt daher.",
+        "Montieren Sie ihn dort, wo ein Koch mit nassen Händen ihn erreicht und wo sich kein Dampf darauf setzt.",
+        "Schalten Sie den Drucker aus, wenn eine volle Woche vergangen ist, ohne dass jemand danach gegriffen hat."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Lassen Sie den Drucker nach der Umstellung noch einen Monat angeschlossen, aber ausgeschaltet. Das kostet nichts und beendet die ganze Diskussion darüber, was passiert, wenn der Bildschirm mitten im Service ausfällt."
+    },
+    {
+      "type": "h2",
+      "text": "Worauf Sie schauen, wenn es läuft"
+    },
+    {
+      "type": "p",
+      "text": "Drei Zahlen verdienen ihr Geld. Die mediane Bonzeit sagt Ihnen, was normal ist. Das 90. Perzentil sagt Ihnen, wie schlimm Ihre schlechten Bons sind — und genau das bleibt Gästen in Erinnerung. Die Bonzeit nach Stunde sagt Ihnen, wann Sie eine Person mehr brauchen. Ist der Median stabil, das 90. Perzentil aber doppelt so hoch, liegt das Problem meist an einem Gericht oder einem Posten, nicht an der ganzen Küche."
+    },
+    {
+      "type": "cta",
+      "heading": "Ein KDS, das auf dem Tablet aus Ihrer Bürolade läuft",
+      "text": "Bestellungen aus dem Service und von QR-Codes landen auf einem Bildschirm, mit einem Timer auf jedem Bon. Keine Hardware zu kaufen. 14 Tage kostenlos, ohne Karte.",
+      "buttonLabel": "Küchenanzeige ansehen",
+      "routeKey": "/kitchen-display"
+    },
+    {
+      "type": "faq",
+      "heading": "Häufige Fragen",
+      "items": [
+        {
+          "q": "Wofür steht KDS?",
+          "a": "Kitchen Display System — der Bildschirm in der Küche, der eingehende Bestellungen anstelle gedruckter Bons anzeigt."
+        },
+        {
+          "q": "Was kostet ein Küchendisplay-System?",
+          "a": "Die Software gehört meist zu Ihrem Bestellsystem. Die Hardware reicht von etwa 15 € für eine Halterung, wenn Sie ein vorhandenes Tablet nutzen, bis zu mehreren Hundert für ein speziell gebautes Gerät mit Bump-Bar."
+        },
+        {
+          "q": "Kann ich ein KDS auf einem gewöhnlichen Tablet betreiben?",
+          "a": "Ja. Die Küchenanzeige von IQ Rest läuft im Browser, also funktioniert jedes Tablet oder Notebook der letzten fünf Jahre. Nutzen Sie eine spritzwassergeschützte Hülle."
+        },
+        {
+          "q": "Braucht ein KDS Internet?",
+          "a": "Es braucht eine Verbindung, um Bestellungen zu empfangen. Hängen Sie die Küche an einen zuverlässigen Access Point statt ans Gäste-WLAN und behalten Sie den Drucker im ersten Monat als Rückfallebene."
+        },
+        {
+          "q": "Funktioniert es mit QR-Bestellungen?",
+          "a": "Das ist das stärkste Argument dafür. Vom Tisch aufgegebene Bestellungen erscheinen auf demselben Bildschirm wie die vom Service aufgenommenen, die Küche hat also eine Warteschlange statt zwei."
+        }
+      ]
+    }
+  ]
+}

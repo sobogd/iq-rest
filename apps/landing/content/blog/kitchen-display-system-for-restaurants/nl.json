@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "title": "Keukenscherm: heb je een KDS nodig? | IQ Rest",
+    "description": "Wat een KDS doet, wat de hardware echt kost, hoe je het draait op een tablet die je al hebt, en welke keukens beter af zijn met papieren bonnen."
+  },
+  "card": {
+    "title": "Keukenschermen: wat ze oplossen, wat ze kosten en wanneer papier nog steeds beter is",
+    "excerpt": "Een KDS-scherm kan € 800 kosten of niets, afhankelijk van of je hardware koopt of een tablet uit de kantoorlade gebruikt. Zo bepaal je wat je nodig hebt."
+  },
+  "h1": "Keukenscherm: wat een KDS echt verandert",
+  "intro": "Een keukenschermsysteem vervangt de printer die bonnen uitspuugt door een scherm dat bestellingen toont. Dat klinkt als een cosmetische verandering en is het grotendeels niet: het verschil is dat een scherm weet hoe laat de bon binnenkwam, welke post hem heeft en of iemand hem heeft aangeraakt. Of dat een scherm in jouw keuken waard is, hangt af van dingen die het waard zijn om concreet te maken.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Wat een papieren bon niet kan"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Hij weet niet dat hij te laat is.** Een bon die 22 minuten ligt ziet er precies zo uit als een van 90 seconden geleden. Een KDS kleurt hem.",
+        "**Hij kan niet op twee plekken zijn.** Een tafel die voorgerechten en een dessert bestelt heeft de bon nodig bij de koude post én bij de pass. Papier wordt gescheurd of gekopieerd.",
+        "**Hij verdwijnt.** Bonnen vallen achter de lijn, worden vettig, plakken ergens aan. De bestelling is simpelweg weg.",
+        "**Hij vertelt je achteraf niets.** Je kunt \"hoe lang deden we er zaterdag tussen 21.00 en 22.00 over\" niet beantwoorden vanaf een bonnenprikker.",
+        "**Hij heeft een werkende printer nodig.** Thermische printers lopen vast, raken leeg en begeven het op het slechtste moment."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Wat een KDS je werkelijk oplevert"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Papieren bonnen",
+        "KDS"
+      ],
+      "rows": [
+        [
+          "Leeftijd van de bestelling",
+          "Gokwerk",
+          "Een timer op elke bon"
+        ],
+        [
+          "Verdeling over posten",
+          "Eén printer, één kopie",
+          "Dezelfde bestelling op elk relevant scherm"
+        ],
+        [
+          "Wijzigingen",
+          "Met de hand overgeschreven",
+          "Op het gerecht gemarkeerd"
+        ],
+        [
+          "Verloren bestellingen",
+          "Gebeurt",
+          "Er valt niets te verliezen"
+        ],
+        [
+          "Bontijden",
+          "Niet meetbaar",
+          "Per bestelling vastgelegd"
+        ],
+        [
+          "Verbruiksartikelen",
+          "Papierrollen",
+          "Geen"
+        ],
+        [
+          "Startkosten",
+          "Printer + rollen",
+          "€ 0 op een tablet die je al hebt"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Het meten is het onderschatte deel. Zodra elke bon een start- en een bumptijd heeft, zie je dat het vrijdaggemiddelde prima is maar dat de golf van 21.15 uur elf minuten langer duurt — en dat is een personeelsbeslissing die je echt kunt nemen."
+    },
+    {
+      "type": "h2",
+      "text": "De hardwarevraag"
+    },
+    {
+      "type": "p",
+      "text": "Speciaal gebouwde KDS-units — verzegelde schermen met bumpbar, bestand tegen hitte en vet — zijn uitstekend en duur. Een keuken met hoog volume en een friteuse op twee meter heeft een redelijk argument voor zo'n apparaat."
+    },
+    {
+      "type": "p",
+      "text": "De meeste keukens hebben dat niet nodig. Het [keukenscherm](route:/kitchen-display) van IQ Rest draait in de browser, dus de hardware kan een tablet zijn die je al hebt, een goedkope Android-tablet of een oude laptop met een monitor. Stop hem in een spatbestendige hoes, hang hem buiten de stoomlijn, en de marginale kosten zijn een wandbeugel."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Opstelling",
+        "Kosten bij benadering",
+        "Voor wie"
+      ],
+      "rows": [
+        [
+          "Tablet die je al hebt + beugel",
+          "€ 15-40",
+          "De meeste kleine keukens"
+        ],
+        [
+          "Nieuwe goedkope tablet + waterdichte hoes",
+          "€ 120-250",
+          "Een tweede post"
+        ],
+        [
+          "Oude laptop + externe monitor",
+          "€ 0-150",
+          "Keukens met werkbladruimte"
+        ],
+        [
+          "Speciaal gebouwde KDS met bumpbar",
+          "Enkele honderden en hoger",
+          "Hoog volume, zware omgevingen"
+        ]
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Het scherm telt zwaarder dan de processor. In een verlichte keuken wil je een groot, helder scherm; een kok leest het van twee meter met natte handen. Koop schermgrootte voordat je snelheid koopt."
+    },
+    {
+      "type": "h2",
+      "text": "Wanneer je geen KDS moet nemen"
+    },
+    {
+      "type": "p",
+      "text": "Wees hier eerlijk over. Een keuken met twee mensen waar degene die de bestelling aanneemt zich kan omdraaien en hem hardop kan zeggen, heeft geen scherm nodig — je voegt een stap toe. Hetzelfde geldt voor een zaak met 20 couverts per avond en een korte, vaste kaart."
+    },
+    {
+      "type": "p",
+      "text": "De drempel ligt ongeveer daar waar één persoon de stand van de pass niet meer in het hoofd kan houden: meerdere posten, bestellingen die via meer dan één kanaal binnenkomen (bediening, [QR-bestellen](route:/order-taking), afhalen), of meer dan ongeveer 40 couverts per dienst."
+    },
+    {
+      "type": "h2",
+      "text": "Opzetten zonder de dienst te verstoren"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Laat hem een week naast de printer draaien. Beide vuren, niemand raakt in paniek, en het team leert het scherm zonder risico.",
+        "Begin met één scherm bij de pass. Verdeling per post is een probleem voor week twee.",
+        "Spreek af wat \"bumpen\" betekent voordat je begint: opgemaakt, of aan de bediening overhandigd? De helft van de verwarring in de eerste maand komt hiervandaan.",
+        "Hang hem waar een kok met natte handen erbij kan en waar geen stoom op blijft staan.",
+        "Zet de printer uit zodra een volle week voorbij is zonder dat iemand ernaar greep."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Laat de printer een maand na de omschakeling aangesloten maar uitgeschakeld staan. Het kost niets en haalt de hele discussie weg over wat er gebeurt als het scherm midden in de dienst uitvalt."
+    },
+    {
+      "type": "h2",
+      "text": "Waar je naar kijkt als het draait"
+    },
+    {
+      "type": "p",
+      "text": "Drie cijfers verdienen hun plek. De mediane bontijd vertelt je wat normaal is. Het 90e percentiel vertelt je hoe erg je slechte bonnen zijn, en dat is wat gasten onthouden. Bontijd per uur vertelt je wanneer je iemand moet bijzetten. Als je mediaan stabiel is maar het 90e percentiel het dubbele, zit het probleem meestal in één gerecht of één post, niet in de hele keuken."
+    },
+    {
+      "type": "cta",
+      "heading": "Een KDS die draait op de tablet in je kantoorlade",
+      "text": "Bestellingen van de bediening en van QR-codes komen op één scherm binnen, met een timer op elke bon. Geen hardware te kopen. 14 dagen gratis, zonder creditcard.",
+      "buttonLabel": "Bekijk het keukenscherm",
+      "routeKey": "/kitchen-display"
+    },
+    {
+      "type": "faq",
+      "heading": "Veelgestelde vragen",
+      "items": [
+        {
+          "q": "Waar staat KDS voor?",
+          "a": "Kitchen display system, keukenschermsysteem: het scherm in de keuken dat binnenkomende bestellingen toont in plaats van geprinte bonnen."
+        },
+        {
+          "q": "Wat kost een keukenschermsysteem?",
+          "a": "De software hoort meestal bij je bestelsysteem. Hardware varieert van ongeveer € 15 voor een beugel, als je een tablet gebruikt die je al hebt, tot enkele honderden voor een speciaal gebouwde unit met bumpbar."
+        },
+        {
+          "q": "Kan ik een KDS op een gewone tablet draaien?",
+          "a": "Ja. Het keukenscherm van IQ Rest draait in de browser, dus elke tablet of laptop van de afgelopen vijf jaar volstaat. Gebruik een spatbestendige hoes."
+        },
+        {
+          "q": "Heeft een KDS internet nodig?",
+          "a": "Hij heeft een verbinding nodig om bestellingen te ontvangen. Hang de keuken aan een betrouwbaar accesspoint in plaats van aan de gasten-wifi, en houd de printer de eerste maand als terugval."
+        },
+        {
+          "q": "Werkt het met QR-bestellingen?",
+          "a": "Dat is de sterkste reden om er een te hebben. Bestellingen die aan tafel worden geplaatst komen op hetzelfde scherm als die van de bediening, dus de keuken heeft één wachtrij in plaats van twee."
+        }
+      ]
+    }
+  ]
+}

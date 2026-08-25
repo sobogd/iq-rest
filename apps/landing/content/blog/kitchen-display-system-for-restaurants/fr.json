@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "title": "Écran de cuisine : avez-vous besoin d'un KDS ? | IQ Rest",
+    "description": "Ce que fait un KDS, ce que coûte vraiment le matériel, comment le faire tourner sur une tablette que vous avez déjà, et les cuisines qui vivent mieux avec des bons papier."
+  },
+  "card": {
+    "title": "Écrans de cuisine : ce qu'ils règlent, ce qu'ils coûtent et quand le papier reste meilleur",
+    "excerpt": "Un écran KDS peut coûter 800 € ou rien, selon que vous achetez le matériel ou utilisez une tablette du tiroir du bureau. Voici comment savoir ce qu'il vous faut."
+  },
+  "h1": "Écran de cuisine : ce qu'un KDS change vraiment",
+  "intro": "Un système d'écran de cuisine remplace l'imprimante qui crache des bons par un écran qui affiche les commandes. Cela semble cosmétique et ne l'est pas vraiment : la différence, c'est qu'un écran sait à quelle heure le bon est arrivé, quel poste le détient et si quelqu'un y a touché. Que cela vaille un écran dans votre cuisine dépend de choses qu'il vaut la peine de préciser.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Ce qu'un bon papier ne sait pas faire"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Il ne sait pas qu'il est en retard.** Un bon posé depuis 22 minutes ressemble exactement à un bon de 90 secondes. Un KDS le colore.",
+        "**Il ne peut pas être à deux endroits.** Une table qui commande des entrées et un dessert a besoin du bon au poste froid et au pass. Le papier est déchiré ou photocopié.",
+        "**Il disparaît.** Les bons tombent derrière la ligne, deviennent gras, collent à quelque chose. La commande a tout simplement disparu.",
+        "**Il ne vous apprend rien après coup.** Vous ne pouvez pas répondre à « combien de temps avons-nous mis samedi entre 21 h et 22 h » à partir d'un pique à bons.",
+        "**Il a besoin d'une imprimante qui marche.** Les imprimantes thermiques se bloquent, tombent en panne de papier et rendent l'âme au pire moment."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Ce qu'un KDS vous apporte réellement"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Bons papier",
+        "KDS"
+      ],
+      "rows": [
+        [
+          "Ancienneté de la commande",
+          "Au jugé",
+          "Un chrono sur chaque bon"
+        ],
+        [
+          "Répartition par postes",
+          "Une imprimante, une copie",
+          "La même commande sur chaque écran concerné"
+        ],
+        [
+          "Modifications",
+          "Réécrites à la main",
+          "Signalées sur le plat"
+        ],
+        [
+          "Commandes perdues",
+          "Ça arrive",
+          "Rien à perdre"
+        ],
+        [
+          "Temps de bon",
+          "Non mesurables",
+          "Enregistrés par commande"
+        ],
+        [
+          "Consommables",
+          "Rouleaux de papier",
+          "Aucun"
+        ],
+        [
+          "Coût de démarrage",
+          "Imprimante + rouleaux",
+          "0 € sur une tablette que vous avez déjà"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "La mesure est la partie sous-estimée. Dès que chaque bon a une heure de départ et une heure de bump, vous voyez que la moyenne du vendredi est correcte mais que la vague de 21 h 15 prend onze minutes de plus — et c'est une décision de personnel que vous pouvez réellement prendre."
+    },
+    {
+      "type": "h2",
+      "text": "La question du matériel"
+    },
+    {
+      "type": "p",
+      "text": "Les unités KDS dédiées — écrans scellés avec barre de bump, prévus pour la chaleur et la graisse — sont excellentes et chères. Une cuisine à fort volume avec une friteuse à deux mètres a un argument raisonnable pour en prendre une."
+    },
+    {
+      "type": "p",
+      "text": "La plupart des cuisines n'en ont pas besoin. L'[écran de cuisine](route:/kitchen-display) d'IQ Rest fonctionne dans le navigateur, le matériel peut donc être une tablette que vous possédez déjà, une tablette Android bon marché ou un vieux portable avec un moniteur. Mettez-la dans une coque anti-projections, fixez-la hors de la ligne de vapeur, et le coût marginal est un support mural."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Configuration",
+        "Coût approximatif",
+        "Pour qui"
+      ],
+      "rows": [
+        [
+          "Tablette déjà possédée + support",
+          "15-40 €",
+          "La plupart des petites cuisines"
+        ],
+        [
+          "Tablette neuve bon marché + coque étanche",
+          "120-250 €",
+          "Un second poste"
+        ],
+        [
+          "Vieux portable + écran externe",
+          "0-150 €",
+          "Cuisines avec de la place"
+        ],
+        [
+          "KDS dédié avec barre de bump",
+          "Plusieurs centaines et plus",
+          "Fort volume, environnements durs"
+        ]
+      ]
+    },
+    {
+      "type": "note",
+      "text": "L'écran compte plus que le processeur. Dans une cuisine éclairée, vous voulez un grand écran très lumineux ; un cuisinier le lit à deux mètres avec les mains mouillées. Achetez de la taille d'écran avant d'acheter de la vitesse."
+    },
+    {
+      "type": "h2",
+      "text": "Quand vous ne devriez pas prendre de KDS"
+    },
+    {
+      "type": "p",
+      "text": "Soyez honnête là-dessus. Une cuisine à deux personnes où celui qui prend la commande peut se retourner et la dire à voix haute n'a pas besoin d'un écran : vous ajouteriez une étape. Idem pour un établissement à 20 couverts par soir avec une carte courte et fixe."
+    },
+    {
+      "type": "p",
+      "text": "Le seuil se situe à peu près là où une seule personne ne peut plus garder l'état du pass en tête : plusieurs postes, des commandes arrivant par plus d'un canal (salle, [commande par QR](route:/order-taking), à emporter), ou plus de 40 couverts par service environ."
+    },
+    {
+      "type": "h2",
+      "text": "L'installer sans perturber le service"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Faites-le tourner en parallèle de l'imprimante pendant une semaine. Les deux impriment, personne ne panique, et l'équipe apprend l'écran sans risque.",
+        "Commencez avec un seul écran au pass. La répartition poste par poste est un problème de deuxième semaine.",
+        "Mettez-vous d'accord sur ce que « bumper » veut dire avant de commencer : dressé, ou remis à la salle ? La moitié de la confusion du premier mois vient de là.",
+        "Fixez-le là où un cuisinier aux mains mouillées peut l'atteindre et où la vapeur ne se déposera pas.",
+        "Éteignez l'imprimante une fois qu'une semaine entière est passée sans que personne ne la cherche."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Laissez l'imprimante branchée, hors tension, pendant un mois après la bascule. Cela ne coûte rien et supprime tout le débat sur ce qui se passe si l'écran lâche en plein service."
+    },
+    {
+      "type": "h2",
+      "text": "Que regarder une fois en fonctionnement"
+    },
+    {
+      "type": "p",
+      "text": "Trois chiffres méritent leur place. Le temps médian de bon vous dit ce qui est normal. Le 90e centile vous dit à quel point vos mauvais bons sont mauvais, et c'est ce dont les clients se souviennent. Le temps de bon par heure vous dit quand ajouter quelqu'un. Si votre médiane est stable mais que le 90e centile en fait le double, le problème vient généralement d'un plat ou d'un poste, pas de toute la cuisine."
+    },
+    {
+      "type": "cta",
+      "heading": "Un KDS qui tourne sur la tablette du tiroir de votre bureau",
+      "text": "Les commandes de la salle et celles des QR codes arrivent sur un seul écran, avec un chrono sur chaque bon. Aucun matériel à acheter. 14 jours gratuits, sans carte bancaire.",
+      "buttonLabel": "Voir l'écran de cuisine",
+      "routeKey": "/kitchen-display"
+    },
+    {
+      "type": "faq",
+      "heading": "Questions fréquentes",
+      "items": [
+        {
+          "q": "Que signifie KDS ?",
+          "a": "Kitchen display system, système d'écran de cuisine : l'écran qui affiche les commandes entrantes à la place des bons imprimés."
+        },
+        {
+          "q": "Combien coûte un système d'écran de cuisine ?",
+          "a": "Le logiciel fait généralement partie de votre système de commande. Le matériel va d'environ 15 € pour un support, si vous utilisez une tablette que vous avez déjà, à plusieurs centaines pour une unité dédiée avec barre de bump."
+        },
+        {
+          "q": "Puis-je faire tourner un KDS sur une tablette ordinaire ?",
+          "a": "Oui. L'écran de cuisine d'IQ Rest fonctionne dans le navigateur, donc toute tablette ou tout portable des cinq dernières années convient. Utilisez une coque anti-projections."
+        },
+        {
+          "q": "Un KDS a-t-il besoin d'internet ?",
+          "a": "Il a besoin d'une connexion pour recevoir les commandes. Branchez la cuisine sur un point d'accès fiable plutôt que sur le wifi des clients, et gardez l'imprimante en secours le premier mois."
+        },
+        {
+          "q": "Fonctionne-t-il avec les commandes par QR code ?",
+          "a": "C'est la meilleure raison d'en avoir un. Les commandes passées depuis la table arrivent sur le même écran que celles prises par la salle, la cuisine a donc une file au lieu de deux."
+        }
+      ]
+    }
+  ]
+}

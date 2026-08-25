@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "title": "Køkkenskærm: har du brug for et KDS? | IQ Rest",
+    "description": "Hvad et KDS gør, hvad hardwaren reelt koster, hvordan du kører det på en tablet, du allerede har, og hvilke køkkener der har det bedre med papirsedler."
+  },
+  "card": {
+    "title": "Køkkenskærme: hvad de løser, hvad de koster, og hvornår papir stadig er bedre",
+    "excerpt": "En KDS-skærm kan koste 800 € eller ingenting, alt efter om du køber hardwaren eller bruger en tablet fra kontorskuffen. Sådan finder du ud af, hvad du har brug for."
+  },
+  "h1": "Køkkenskærm: hvad et KDS faktisk ændrer",
+  "intro": "Et køkkenskærmsystem erstatter printeren, der spytter sedler ud, med en skærm, der viser ordrer. Det lyder kosmetisk og er det for det meste ikke: forskellen er, at en skærm ved, hvornår sedlen kom ind, hvilken station der har den, og om nogen har rørt den. Om det er en skærm værd i dit køkken, afhænger af ting, det er værd at være konkret om.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Hvad en papirseddel ikke kan"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Den ved ikke, at den er sent på den.** En seddel, der har ligget i 22 minutter, ser præcis ud som en fra 90 sekunder siden. Et KDS farver den.",
+        "**Den kan ikke være to steder.** Et bord, der bestiller forretter og en dessert, har brug for sedlen både på den kolde station og ved udleveringen. Papir bliver revet eller kopieret.",
+        "**Den forsvinder.** Sedler falder ned bag linjen, bliver fedtede, klistrer til noget. Ordren er simpelthen væk.",
+        "**Den fortæller dig intet bagefter.** Du kan ikke svare på \"hvor lang tid brugte vi lørdag mellem 21 og 22\" ud fra en sedelspyd.",
+        "**Den kræver en printer, der virker.** Termoprintere sætter sig fast, løber tør og dør på det værst tænkelige tidspunkt."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Hvad et KDS reelt giver dig"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Papirsedler",
+        "KDS"
+      ],
+      "rows": [
+        [
+          "Ordrens alder",
+          "Gætværk",
+          "En timer på hver seddel"
+        ],
+        [
+          "Fordeling til stationer",
+          "Én printer, én kopi",
+          "Samme ordre på hver relevant skærm"
+        ],
+        [
+          "Ændringer",
+          "Skrevet om i hånden",
+          "Markeret på retten"
+        ],
+        [
+          "Tabte ordrer",
+          "Sker",
+          "Der er intet at tabe"
+        ],
+        [
+          "Sedeltider",
+          "Kan ikke måles",
+          "Registreres pr. ordre"
+        ],
+        [
+          "Forbrugsvarer",
+          "Papirruller",
+          "Ingen"
+        ],
+        [
+          "Startomkostning",
+          "Printer + ruller",
+          "0 € på en tablet, du allerede har"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Målingen er den undervurderede del. Så snart hver seddel har et start- og et bumptidspunkt, kan du se, at fredagsgennemsnittet er fint, men at bølgen kl. 21.15 tager elleve minutter længere – og det er en bemandingsbeslutning, du faktisk kan træffe."
+    },
+    {
+      "type": "h2",
+      "text": "Hardwarespørgsmålet"
+    },
+    {
+      "type": "p",
+      "text": "Formålsbyggede KDS-enheder – forseglede skærme med bumpbar, bygget til varme og fedt – er fremragende og dyre. Et køkken med stor volumen og en frituregryde to meter væk har et rimeligt argument for en sådan."
+    },
+    {
+      "type": "p",
+      "text": "De fleste køkkener har ikke brug for det. IQ Rests [køkkendisplay](route:/kitchen-display) kører i browseren, så hardwaren kan være en tablet, du allerede har, en billig Android-tablet eller en gammel bærbar med en skærm. Læg den i et stænktæt cover, monter den uden for damplinjen, og marginalomkostningen er et vægbeslag."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Opsætning",
+        "Cirkapris",
+        "Passer til"
+      ],
+      "rows": [
+        [
+          "Tablet du allerede har + beslag",
+          "15-40 €",
+          "De fleste små køkkener"
+        ],
+        [
+          "Ny billig tablet + vandtæt cover",
+          "120-250 €",
+          "En station nummer to"
+        ],
+        [
+          "Gammel bærbar + ekstern skærm",
+          "0-150 €",
+          "Køkkener med bordplads"
+        ],
+        [
+          "Formålsbygget KDS med bumpbar",
+          "Flere hundrede og opefter",
+          "Stor volumen, barske miljøer"
+        ]
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Skærmen betyder mere end processoren. I et oplyst køkken vil du have en stor skærm med høj lysstyrke; en kok læser den på to meters afstand med våde hænder. Køb skærmstørrelse før hastighed."
+    },
+    {
+      "type": "h2",
+      "text": "Hvornår du ikke skal skaffe et KDS"
+    },
+    {
+      "type": "p",
+      "text": "Vær ærlig omkring det her. Et køkken med to personer, hvor den, der tager ordren, kan vende sig om og sige den højt, har ikke brug for en skærm – du ville tilføje et trin. Det samme gælder et sted med 20 couverts om aftenen og et kort, fast menukort."
+    },
+    {
+      "type": "p",
+      "text": "Grænsen ligger nogenlunde der, hvor én person ikke længere kan holde udleveringens tilstand i hovedet: flere stationer, ordrer der kommer via mere end én kanal (salen, [QR-bestilling](route:/order-taking), take-away), eller mere end omkring 40 couverts pr. vagt."
+    },
+    {
+      "type": "h2",
+      "text": "Sådan sætter du det op uden at forstyrre servicen"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Lad det køre parallelt med printeren i en uge. Begge printer, ingen går i panik, og personalet lærer skærmen uden risiko.",
+        "Start med én skærm ved udleveringen. Fordeling station for station er et problem for uge to.",
+        "Bliv enige om, hvad \"bump\" betyder, før I går i gang: anrettet, eller afleveret til salen? Halvdelen af forvirringen i den første måned kommer herfra.",
+        "Monter den, hvor en kok med våde hænder kan nå den, og hvor damp ikke lægger sig på den.",
+        "Sluk printeren, når en hel uge er gået, uden at nogen har rakt ud efter den."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Lad printeren blive stående tilsluttet, men slukket, en måned efter skiftet. Det koster ingenting og fjerner hele diskussionen om, hvad der sker, hvis skærmen svigter midt i servicen."
+    },
+    {
+      "type": "h2",
+      "text": "Hvad du kigger på, når det først kører"
+    },
+    {
+      "type": "p",
+      "text": "Tre tal tjener deres plads. Mediansedeltiden fortæller dig, hvad der er normalt. 90-percentilen fortæller, hvor slemme dine dårlige sedler er, og det er det, gæsterne husker. Sedeltid pr. time fortæller, hvornår du skal sætte en person ind. Hvis medianen er stabil, men 90-percentilen er dobbelt så høj, ligger problemet som regel i én ret eller én station, ikke i hele køkkenet."
+    },
+    {
+      "type": "cta",
+      "heading": "Et KDS, der kører på tabletten i din kontorskuffe",
+      "text": "Ordrer fra salen og fra QR-koder lander på én skærm, med en timer på hver seddel. Ingen hardware at købe. 14 dage gratis, uden kort.",
+      "buttonLabel": "Se køkkendisplayet",
+      "routeKey": "/kitchen-display"
+    },
+    {
+      "type": "faq",
+      "heading": "Ofte stillede spørgsmål",
+      "items": [
+        {
+          "q": "Hvad står KDS for?",
+          "a": "Kitchen display system, køkkenskærmsystem – skærmen i køkkenet, der viser indkomne ordrer i stedet for printede sedler."
+        },
+        {
+          "q": "Hvad koster et køkkenskærmsystem?",
+          "a": "Softwaren er som regel en del af dit ordresystem. Hardware spænder fra cirka 15 € for et beslag, hvis du bruger en tablet, du allerede har, til flere hundrede for en formålsbygget enhed med bumpbar."
+        },
+        {
+          "q": "Kan jeg køre et KDS på en almindelig tablet?",
+          "a": "Ja. IQ Rests køkkendisplay kører i browseren, så enhver tablet eller bærbar fra de seneste fem år virker. Brug et stænktæt cover."
+        },
+        {
+          "q": "Kræver et KDS internet?",
+          "a": "Det kræver en forbindelse for at modtage ordrer. Hold køkkenet på et pålideligt accesspunkt frem for gæste-wifi, og behold printeren som reserve den første måned."
+        },
+        {
+          "q": "Virker det med QR-bestillinger?",
+          "a": "Det er det stærkeste argument for at have et. Ordrer afgivet ved bordet lander på samme skærm som dem, personalet tager, så køkkenet har én kø i stedet for to."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "title": "Ecran de bucătărie: ai nevoie de KDS? | IQ Rest",
+    "description": "Ce face un KDS, cât costă de fapt echipamentul, cum îl pornești pe o tabletă pe care o ai deja și ce bucătării o duc mai bine cu bonuri pe hârtie."
+  },
+  "card": {
+    "title": "Ecrane de bucătărie: ce rezolvă, cât costă și când hârtia rămâne mai bună",
+    "excerpt": "Un ecran KDS poate costa 800 € sau nimic, după cum cumperi echipamentul sau folosești o tabletă din sertarul biroului. Iată cum îți dai seama de care ai nevoie."
+  },
+  "h1": "Ecran de bucătărie: ce schimbă cu adevărat un KDS",
+  "intro": "Un sistem de ecran de bucătărie înlocuiește imprimanta care scuipă bonuri cu un ecran care afișează comenzile. Sună a schimbare cosmetică și în mare parte nu e: diferența e că un ecran știe la ce oră a intrat bonul, ce post îl are și dacă l-a atins cineva. Dacă merită un ecran în bucătăria ta depinde de lucruri despre care merită să fii concret.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Ce nu poate face un bon pe hârtie"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Nu știe că a întârziat.** Un bon care stă de 22 de minute arată exact ca unul de acum 90 de secunde. Un KDS îl colorează.",
+        "**Nu poate fi în două locuri.** O masă care comandă aperitive și un desert are nevoie de bon la postul rece și la pas. Hârtia se rupe sau se fotocopiază.",
+        "**Dispare.** Bonurile cad în spatele liniei, se îmbibă de grăsime, se lipesc de ceva. Comanda pur și simplu nu mai e.",
+        "**Nu-ți spune nimic după.** Nu poți răspunde la „cât am scos sâmbătă între 21:00 și 22:00” uitându-te la un țep cu bonuri.",
+        "**Are nevoie de o imprimantă care merge.** Cele termice se blochează, rămân fără hârtie și mor în cel mai prost moment."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Ce îți dă de fapt un KDS"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Bonuri pe hârtie",
+        "KDS"
+      ],
+      "rows": [
+        [
+          "Vechimea comenzii",
+          "Din ochi",
+          "Un cronometru pe fiecare bon"
+        ],
+        [
+          "Distribuire pe posturi",
+          "O imprimantă, o copie",
+          "Aceeași comandă pe fiecare ecran implicat"
+        ],
+        [
+          "Modificări",
+          "Rescrise de mână",
+          "Marcate pe preparat"
+        ],
+        [
+          "Comenzi pierdute",
+          "Se întâmplă",
+          "Nu e nimic de pierdut"
+        ],
+        [
+          "Timpi de bon",
+          "Nu se pot măsura",
+          "Înregistrați pe fiecare comandă"
+        ],
+        [
+          "Consumabile",
+          "Role de hârtie",
+          "Niciunul"
+        ],
+        [
+          "Cost de pornire",
+          "Imprimantă + role",
+          "0 € pe o tabletă pe care o ai deja"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Măsurarea e partea subestimată. De îndată ce fiecare bon are o oră de intrare și una de închidere, vezi că media de vineri e în regulă, dar valul de la 21:15 durează cu unsprezece minute mai mult — iar asta e o decizie de personal pe care chiar o poți lua."
+    },
+    {
+      "type": "h2",
+      "text": "Chestiunea echipamentului"
+    },
+    {
+      "type": "p",
+      "text": "Unitățile KDS făcute special — ecrane etanșe cu bară de bump, gândite pentru căldură și grăsime — sunt excelente și scumpe. O bucătărie cu volum mare și o friteuză la doi metri are un argument rezonabil pentru așa ceva."
+    },
+    {
+      "type": "p",
+      "text": "Majoritatea bucătăriilor nu au nevoie de asta. [Ecranul de bucătărie](route:/kitchen-display) IQ Rest rulează în browser, deci echipamentul poate fi o tabletă pe care o ai deja, o tabletă Android ieftină sau un laptop vechi cu un monitor. Bag-o într-o husă rezistentă la stropi, montează-o în afara traseului aburului, iar costul marginal e un suport de perete."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Configurație",
+        "Cost aproximativ",
+        "Cui i se potrivește"
+      ],
+      "rows": [
+        [
+          "Tabletă pe care o ai deja + suport",
+          "15-40 €",
+          "Majorității bucătăriilor mici"
+        ],
+        [
+          "Tabletă nouă ieftină + husă impermeabilă",
+          "120-250 €",
+          "Unui al doilea post"
+        ],
+        [
+          "Laptop vechi + monitor extern",
+          "0-150 €",
+          "Bucătăriilor cu spațiu pe blat"
+        ],
+        [
+          "KDS dedicat cu bară de bump",
+          "Câteva sute în sus",
+          "Volumului mare, mediilor dure"
+        ]
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Ecranul contează mai mult decât procesorul. Într-o bucătărie luminată vrei un ecran mare și luminos; un bucătar îl citește de la doi metri, cu mâinile ude. Cumpără diagonală înainte să cumperi viteză."
+    },
+    {
+      "type": "h2",
+      "text": "Când nu ar trebui să iei un KDS"
+    },
+    {
+      "type": "p",
+      "text": "Fii cinstit aici. O bucătărie cu doi oameni, unde cel care ia comanda se poate întoarce și o poate spune cu voce tare, nu are nevoie de ecran — ai adăuga un pas. La fel pentru un local cu 20 de couverturi pe seară și un meniu scurt și fix."
+    },
+    {
+      "type": "p",
+      "text": "Pragul e cam acolo unde o singură persoană nu mai ține în cap starea pasului: mai multe posturi, comenzi care vin pe mai mult de un canal (sală, [comandă prin QR](route:/order-taking), la pachet) sau peste vreo 40 de couverturi pe serviciu."
+    },
+    {
+      "type": "h2",
+      "text": "Cum îl pui în funcțiune fără să strici serviciul"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Lasă-l să meargă în paralel cu imprimanta o săptămână. Ies amândouă, nimeni nu intră în panică, iar echipa învață ecranul fără risc.",
+        "Începe cu un singur ecran la pas. Distribuirea post cu post e o problemă de săptămâna a doua.",
+        "Stabiliți ce înseamnă „a închide” înainte să porniți: pus în farfurie sau predat la sală? Jumătate din confuzia primei luni de acolo vine.",
+        "Montează-l unde ajunge un bucătar cu mâinile ude și unde nu se așază aburul.",
+        "Oprește imprimanta când a trecut o săptămână întreagă fără ca cineva să întindă mâna după ea."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Lasă imprimanta în priză, oprită, o lună după schimbare. Nu costă nimic și elimină toată discuția despre ce se întâmplă dacă pică ecranul în plin serviciu."
+    },
+    {
+      "type": "h2",
+      "text": "La ce te uiți odată ce merge"
+    },
+    {
+      "type": "p",
+      "text": "Trei cifre își merită locul. Timpul median de bon îți spune care e normalul. Percentila 90 îți spune cât de proaste sunt bonurile tale proaste, iar asta rețin clienții. Timpul de bon pe oră îți spune când să mai pui un om. Dacă mediana e stabilă, dar percentila 90 e dublă, problema e de obicei un preparat sau un post, nu toată bucătăria."
+    },
+    {
+      "type": "cta",
+      "heading": "Un KDS care rulează pe tableta din sertarul biroului tău",
+      "text": "Comenzile din sală și cele de la codurile QR ajung pe un singur ecran, cu un cronometru pe fiecare bon. Fără echipamente de cumpărat. 14 zile gratuit, fără card.",
+      "buttonLabel": "Vezi ecranul de bucătărie",
+      "routeKey": "/kitchen-display"
+    },
+    {
+      "type": "faq",
+      "heading": "Întrebări frecvente",
+      "items": [
+        {
+          "q": "Ce înseamnă KDS?",
+          "a": "Kitchen display system, sistem de ecran de bucătărie — ecranul din bucătărie care afișează comenzile care intră, în locul bonurilor tipărite."
+        },
+        {
+          "q": "Cât costă un sistem de ecran de bucătărie?",
+          "a": "Software-ul face de obicei parte din sistemul tău de comenzi. Echipamentul pornește de la vreo 15 € pentru un suport, dacă folosești o tabletă pe care o ai deja, și ajunge la câteva sute pentru o unitate dedicată cu bară de bump."
+        },
+        {
+          "q": "Pot rula un KDS pe o tabletă obișnuită?",
+          "a": "Da. Ecranul de bucătărie IQ Rest rulează în browser, așa că merge orice tabletă sau laptop din ultimii cinci ani. Folosește o husă rezistentă la stropi."
+        },
+        {
+          "q": "KDS-ul are nevoie de internet?",
+          "a": "Are nevoie de conexiune ca să primească comenzile. Ține bucătăria pe un punct de acces sigur, nu pe wi-fi-ul clienților, și păstrează imprimanta ca rezervă în prima lună."
+        },
+        {
+          "q": "Funcționează cu comenzile prin cod QR?",
+          "a": "E cel mai puternic motiv să ai unul. Comenzile date de la masă ajung pe același ecran cu cele luate de personal, așa că bucătăria are o singură coadă în loc de două."
+        }
+      ]
+    }
+  ]
+}

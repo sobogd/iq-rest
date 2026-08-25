@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "title": "Köögiekraan: kas vajad KDS-i? | IQ Rest",
+    "description": "Mida KDS teeb, mis riistvara tegelikult maksab, kuidas seda käivitada tahvelarvutil, mis sul juba on, ja millistel köökidel on parem paberitšekkidega."
+  },
+  "card": {
+    "title": "Köögiekraanid: mida need lahendavad, mis need maksavad ja millal paber on ikka parem",
+    "excerpt": "KDS-ekraan võib maksta 800 € või mitte midagi, olenevalt sellest, kas ostad riistvara või kasutad kontorisahtlist leitud tahvelarvutit. Nii saad aru, kumba vajad."
+  },
+  "h1": "Köögiekraan: mida KDS tegelikult muudab",
+  "intro": "Köögiekraani süsteem asendab tšekke sülgava printeri ekraaniga, mis näitab tellimusi. See kõlab kosmeetilise muudatusena ja enamasti ei ole: erinevus on selles, et ekraan teab, mis kell tšekk saabus, milline post seda hoiab ja kas keegi on seda puutunud. Kas see väärib ekraani sinu köögis, oleneb asjadest, mida tasub konkreetselt välja öelda.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Mida paberitšekk ei suuda"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Ta ei tea, et on hiljaks jäänud.** 22 minutit seisnud tšekk näeb välja täpselt nagu 90 sekundi tagune. KDS värvib selle ära.",
+        "**Ta ei saa olla kahes kohas.** Laud, mis tellib eelroad ja magustoidu, vajab tšekki külmas postis ja väljastuses. Paber rebitakse või paljundatakse.",
+        "**Ta kaob.** Tšekid kukuvad liini taha, lähevad rasvaseks, kleepuvad millegi külge. Tellimust lihtsalt pole.",
+        "**Ta ei räägi sulle hiljem midagi.** Küsimusele „kui kaua meil laupäeval kella 21 ja 22 vahel läks“ ei vasta tšekivarda pealt.",
+        "**Ta vajab töötavat printerit.** Termoprinterid kiiluvad kinni, saavad paberi otsa ja surevad kõige halvemal hetkel."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Mida KDS sulle tegelikult annab"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Paberitšekid",
+        "KDS"
+      ],
+      "rows": [
+        [
+          "Tellimuse vanus",
+          "Oletamine",
+          "Taimer igal tšekil"
+        ],
+        [
+          "Suunamine postidele",
+          "Üks printer, üks koopia",
+          "Sama tellimus igal asjakohasel ekraanil"
+        ],
+        [
+          "Muudatused",
+          "Käsitsi üle kirjutatud",
+          "Roa juures märgitud"
+        ],
+        [
+          "Kaotatud tellimused",
+          "Juhtub",
+          "Pole midagi kaotada"
+        ],
+        [
+          "Tšekiajad",
+          "Ei ole mõõdetavad",
+          "Salvestatakse tellimuse kaupa"
+        ],
+        [
+          "Kulumaterjal",
+          "Paberirullid",
+          "Puudub"
+        ],
+        [
+          "Alustamiskulu",
+          "Printer + rullid",
+          "0 € tahvelarvutil, mis sul juba on"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Mõõtmine on alahinnatud osa. Niipea kui igal tšekil on saabumis- ja sulgemisaeg, näed, et reede keskmine on korras, aga kell 21.15 tulev laine võtab üksteist minutit kauem — ja see on juba tööjõuotsus, mille saab päriselt teha."
+    },
+    {
+      "type": "h2",
+      "text": "Riistvaraküsimus"
+    },
+    {
+      "type": "p",
+      "text": "Sihtotstarbelised KDS-seadmed — tihendatud ekraanid bump-ribaga, tehtud kuumuse ja rasva jaoks — on suurepärased ja kallid. Suure mahuga köögil, kus friikatel on kahe meetri kaugusel, on mõistlik põhjus üks osta."
+    },
+    {
+      "type": "p",
+      "text": "Enamik kööke seda ei vaja. IQ Resti [köögiekraan](route:/kitchen-display) töötab brauseris, seega riistvaraks võib olla tahvelarvuti, mis sul juba on, odav Android-tahvel või vana sülearvuti monitoriga. Pane see pritsmekindlasse ümbrisesse, kinnita väljapoole aurujoont, ja piirkulu on seinakinnitus."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Lahendus",
+        "Ligikaudne kulu",
+        "Kellele sobib"
+      ],
+      "rows": [
+        [
+          "Olemasolev tahvelarvuti + kinnitus",
+          "15-40 €",
+          "Enamikule väikestest köökidest"
+        ],
+        [
+          "Uus odav tahvel + veekindel ümbris",
+          "120-250 €",
+          "Teisele postile"
+        ],
+        [
+          "Vana sülearvuti + väline monitor",
+          "0-150 €",
+          "Köökidele, kus on lauapinda"
+        ],
+        [
+          "Sihtotstarbeline KDS bump-ribaga",
+          "Mitusada ja rohkem",
+          "Suurele mahule, karmidele oludele"
+        ]
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Ekraan loeb rohkem kui protsessor. Valges köögis tahad suurt ja heledat ekraani; kokk loeb seda kahe meetri kauguselt märgade kätega. Osta ekraani suurust enne kiirust."
+    },
+    {
+      "type": "h2",
+      "text": "Millal KDS-i mitte võtta"
+    },
+    {
+      "type": "p",
+      "text": "Ole selles aus. Kaheinimeseline köök, kus tellimuse vastuvõtja saab ümber pöörata ja selle valjusti öelda, ei vaja ekraani — lisaksid sammu. Sama kehtib koha kohta, kus on 20 katet õhtus ja lühike, muutumatu menüü."
+    },
+    {
+      "type": "p",
+      "text": "Lävi on umbes seal, kus üks inimene ei suuda enam väljastuse seisu peas hoida: mitu posti, tellimused rohkem kui ühest kanalist (saal, [QR-tellimus](route:/order-taking), kaasa) või rohkem kui umbes 40 katet vahetuses."
+    },
+    {
+      "type": "h2",
+      "text": "Kuidas see üles seada ilma vahetust segamata"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Lase sel nädal aega printeri kõrval käia. Mõlemad väljastavad, keegi ei satu paanikasse ja personal õpib ekraani ilma riskita.",
+        "Alusta ühe ekraaniga väljastuses. Postide kaupa suunamine on teise nädala mure.",
+        "Leppige enne algust kokku, mida tähendab „sulgemine“: taldrikule pandud või saali antud? Pool esimese kuu segadusest tuleb sellest.",
+        "Kinnita see sinna, kuhu märgade kätega kokk ulatub ja kuhu aur peale ei settu.",
+        "Lülita printer välja siis, kui on möödunud terve nädal ilma et keegi selle poole oleks sirutanud."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Jäta printer kuuks ajaks pärast üleminekut vooluvõrku, aga välja lülitatuna. See ei maksa midagi ja lõpetab kogu vaidluse selle üle, mis juhtub, kui ekraan keset vahetust alt veab."
+    },
+    {
+      "type": "h2",
+      "text": "Mida vaadata, kui see juba töötab"
+    },
+    {
+      "type": "p",
+      "text": "Kolm numbrit teenivad end ära. Tšekiaja mediaan ütleb, mis on normaalne. 90. protsentiil ütleb, kui halvad on sinu halvad tšekid, ja just neid külalised mäletavad. Tšekiaeg tunni kaupa ütleb, millal lisada inimene. Kui mediaan on stabiilne, aga 90. protsentiil on selle kahekordne, on probleem tavaliselt ühes roas või ühes postis, mitte kogu köögis."
+    },
+    {
+      "type": "cta",
+      "heading": "KDS, mis töötab su kontorisahtlis olevas tahvelarvutis",
+      "text": "Saalist ja QR-koodidest tulevad tellimused maanduvad ühel ekraanil, taimeriga igal tšekil. Riistvara pole vaja osta. 14 päeva tasuta, ilma kaardita.",
+      "buttonLabel": "Vaata köögiekraani",
+      "routeKey": "/kitchen-display"
+    },
+    {
+      "type": "faq",
+      "heading": "Korduma kippuvad küsimused",
+      "items": [
+        {
+          "q": "Mida KDS tähendab?",
+          "a": "Kitchen display system, köögiekraani süsteem — köögis olev ekraan, mis näitab sissetulevaid tellimusi trükitud tšekkide asemel."
+        },
+        {
+          "q": "Kui palju maksab köögiekraani süsteem?",
+          "a": "Tarkvara kuulub tavaliselt su tellimissüsteemi juurde. Riistvara ulatub umbes 15 eurost kinnituse eest, kui kasutad olemasolevat tahvelarvutit, kuni mitmesaja euroni sihtotstarbelise bump-ribaga seadme eest."
+        },
+        {
+          "q": "Kas ma saan KDS-i käivitada tavalisel tahvelarvutil?",
+          "a": "Jah. IQ Resti köögiekraan töötab brauseris, seega sobib iga viimase viie aasta tahvelarvuti või sülearvuti. Kasuta pritsmekindlat ümbrist."
+        },
+        {
+          "q": "Kas KDS vajab internetti?",
+          "a": "Ta vajab ühendust tellimuste vastuvõtmiseks. Hoia kööki usaldusväärsel pääsupunktil, mitte külaliste WiFi-l, ja jäta printer esimeseks kuuks varuvariandiks."
+        },
+        {
+          "q": "Kas see töötab QR-koodi tellimustega?",
+          "a": "See ongi kõige tugevam põhjus seda omada. Lauast tehtud tellimused jõuavad samale ekraanile kui personali vastu võetud, nii et köögil on üks järjekord kahe asemel."
+        }
+      ]
+    }
+  ]
+}

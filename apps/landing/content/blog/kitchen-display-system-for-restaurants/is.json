@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "title": "Eldhússkjár: þarftu KDS? | IQ Rest",
+    "description": "Hvað KDS gerir, hvað vélbúnaðurinn kostar í raun, hvernig þú keyrir hann á spjaldtölvu sem þú átt nú þegar, og hvaða eldhús hafa það betra með pappírsmiðum."
+  },
+  "card": {
+    "title": "Eldhússkjáir: hvað þeir leysa, hvað þeir kosta og hvenær pappír er enn betri",
+    "excerpt": "KDS-skjár getur kostað 800 € eða ekkert, eftir því hvort þú kaupir vélbúnað eða notar spjaldtölvu úr skrifstofuskúffunni. Svona finnur þú út hvort þú þarft."
+  },
+  "h1": "Eldhússkjár: hverju KDS breytir í raun",
+  "intro": "Eldhússkjákerfi kemur í stað prentarans sem spýtir út miðum með skjá sem sýnir pantanir. Það hljómar sem útlitsbreyting og er það að mestu ekki: munurinn er sá að skjár veit hvenær miðinn kom inn, hvaða stöð hefur hann og hvort einhver hafi snert hann. Hvort það borgi sig að hafa skjá í þínu eldhúsi ræðst af atriðum sem borgar sig að vera nákvæmur um.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Það sem pappírsmiði getur ekki"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Hann veit ekki að hann er seinn.** Miði sem hefur legið í 22 mínútur lítur nákvæmlega eins út og einn frá því fyrir 90 sekúndum. KDS litar hann.",
+        "**Hann getur ekki verið á tveimur stöðum.** Borð sem pantar forrétti og eftirrétt þarf miðann bæði á köldu stöðinni og við afgreiðsluna. Pappír er rifinn eða ljósritaður.",
+        "**Hann hverfur.** Miðar detta bak við línuna, verða feitir, festast við eitthvað. Pöntunin er einfaldlega horfin.",
+        "**Hann segir þér ekkert eftir á.** Þú getur ekki svarað „hvað tókum við langan tíma á laugardaginn milli 21 og 22\" út frá miðaspjóti.",
+        "**Hann þarf prentara sem virkar.** Varmaprentarar festast, verða pappírslausir og gefa upp öndina á versta tíma."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Hvað KDS gefur þér í raun"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Pappírsmiðar",
+        "KDS"
+      ],
+      "rows": [
+        [
+          "Aldur pöntunar",
+          "Ágiskun",
+          "Klukka á hverjum miða"
+        ],
+        [
+          "Beining á stöðvar",
+          "Einn prentari, eitt eintak",
+          "Sama pöntun á hverjum viðeigandi skjá"
+        ],
+        [
+          "Breytingar",
+          "Endurskrifaðar í höndunum",
+          "Merktar á réttinum"
+        ],
+        [
+          "Týndar pantanir",
+          "Gerist",
+          "Ekkert til að týna"
+        ],
+        [
+          "Miðatímar",
+          "Ekki mælanlegir",
+          "Skráðir fyrir hverja pöntun"
+        ],
+        [
+          "Rekstrarvörur",
+          "Pappírsrúllur",
+          "Engar"
+        ],
+        [
+          "Upphafskostnaður",
+          "Prentari + rúllur",
+          "0 € á spjaldtölvu sem þú átt"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Mælingin er vanmetni hlutinn. Um leið og hver miði hefur upphafstíma og lokatíma sérðu að meðaltal föstudagsins er í lagi en að holskeflan klukkan 21.15 tekur ellefu mínútum lengri tíma — og það er mönnunarákvörðun sem þú getur raunverulega tekið."
+    },
+    {
+      "type": "h2",
+      "text": "Vélbúnaðarspurningin"
+    },
+    {
+      "type": "p",
+      "text": "Sérsmíðaðar KDS-einingar — þéttir skjáir með bump-stiku, gerðir fyrir hita og fitu — eru frábærar og dýrar. Eldhús með mikið magn og djúpsteikingarpott í tveggja metra fjarlægð hefur skynsamleg rök fyrir slíkri."
+    },
+    {
+      "type": "p",
+      "text": "Flest eldhús þurfa það ekki. [Eldhússkjár](route:/kitchen-display) IQ Rest keyrir í vafra, svo vélbúnaðurinn getur verið spjaldtölva sem þú átt, ódýr Android-spjaldtölva eða gömul fartölva með skjá. Settu hana í slettuhelt hulstur, festu utan gufulínunnar, og jaðarkostnaðurinn er veggfesting."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Uppsetning",
+        "Áætlaður kostnaður",
+        "Hentar"
+      ],
+      "rows": [
+        [
+          "Spjaldtölva sem þú átt + festing",
+          "15-40 €",
+          "Flestum litlum eldhúsum"
+        ],
+        [
+          "Ný ódýr spjaldtölva + vatnshelt hulstur",
+          "120-250 €",
+          "Annarri stöð"
+        ],
+        [
+          "Gömul fartölva + ytri skjár",
+          "0-150 €",
+          "Eldhúsum með borðpláss"
+        ],
+        [
+          "Sérsmíðað KDS með bump-stiku",
+          "Nokkur hundruð og upp úr",
+          "Miklu magni, hörðum aðstæðum"
+        ]
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Skjárinn skiptir meira máli en örgjörvinn. Í upplýstu eldhúsi viltu stóran og bjartan skjá; kokkur les hann úr tveggja metra fjarlægð með blautar hendur. Kauptu skjástærð á undan hraða."
+    },
+    {
+      "type": "h2",
+      "text": "Hvenær þú ættir ekki að fá þér KDS"
+    },
+    {
+      "type": "p",
+      "text": "Vertu heiðarlegur með þetta. Eldhús með tveimur manneskjum, þar sem sá sem tekur pöntunina getur snúið sér við og sagt hana upphátt, þarf engan skjá — þú værir að bæta við skrefi. Sama gildir um stað með 20 gesti á kvöldi og stuttan, fastan matseðil."
+    },
+    {
+      "type": "p",
+      "text": "Þröskuldurinn liggur um það bil þar sem ein manneskja getur ekki lengur haldið stöðunni við afgreiðsluna í hausnum: margar stöðvar, pantanir sem berast um fleiri en eina leið (salinn, [QR-pöntun](route:/order-taking), take away), eða fleiri en um 40 gestir á vakt."
+    },
+    {
+      "type": "h2",
+      "text": "Hvernig þú setur það upp án þess að trufla þjónustuna"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Láttu það keyra samhliða prentaranum í viku. Bæði prenta, enginn fer á taugum, og starfsfólkið lærir skjáinn án áhættu.",
+        "Byrjaðu með einum skjá við afgreiðsluna. Beining stöð fyrir stöð er verkefni annarrar viku.",
+        "Komið ykkur saman um hvað „að loka\" þýðir áður en þið byrjið: sett á disk, eða afhent í salinn? Helmingur ruglingsins fyrsta mánuðinn kemur þaðan.",
+        "Festu hann þar sem kokkur með blautar hendur nær til og þar sem gufa sest ekki á hann.",
+        "Slökktu á prentaranum þegar heil vika er liðin án þess að nokkur hafi teygt sig í hann."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Skildu prentarann eftir í sambandi, en slökktan, í mánuð eftir skiptin. Það kostar ekkert og eyðir allri umræðunni um hvað gerist ef skjárinn bregst á miðri vakt."
+    },
+    {
+      "type": "h2",
+      "text": "Hvað þú skoðar þegar það er komið í gang"
+    },
+    {
+      "type": "p",
+      "text": "Þrjár tölur vinna fyrir sér. Miðgildi miðatíma segir þér hvað er eðlilegt. 90. hundraðshlutamarkið segir hversu slæmir slæmu miðarnir þínir eru, og það er það sem gestir muna. Miðatími eftir klukkustundum segir hvenær þú þarft að bæta við manneskju. Ef miðgildið er stöðugt en 90. markið tvöfalt hærra er vandinn yfirleitt einn réttur eða ein stöð, ekki allt eldhúsið."
+    },
+    {
+      "type": "cta",
+      "heading": "KDS sem keyrir á spjaldtölvunni í skrifstofuskúffunni þinni",
+      "text": "Pantanir úr salnum og frá QR-kóðum lenda á einum skjá, með klukku á hverjum miða. Enginn vélbúnaður til að kaupa. 14 dagar frítt, án korts.",
+      "buttonLabel": "Sjá eldhússkjáinn",
+      "routeKey": "/kitchen-display"
+    },
+    {
+      "type": "faq",
+      "heading": "Algengar spurningar",
+      "items": [
+        {
+          "q": "Fyrir hvað stendur KDS?",
+          "a": "Kitchen display system, eldhússkjákerfi — skjárinn í eldhúsinu sem sýnir innkomnar pantanir í stað prentaðra miða."
+        },
+        {
+          "q": "Hvað kostar eldhússkjákerfi?",
+          "a": "Hugbúnaðurinn er yfirleitt hluti af pöntunarkerfinu þínu. Vélbúnaður spannar allt frá um 15 € fyrir festingu, ef þú notar spjaldtölvu sem þú átt, upp í nokkur hundruð fyrir sérsmíðaða einingu með bump-stiku."
+        },
+        {
+          "q": "Get ég keyrt KDS á venjulegri spjaldtölvu?",
+          "a": "Já. Eldhússkjár IQ Rest keyrir í vafra, svo hvaða spjaldtölva eða fartölva sem er frá síðustu fimm árum dugar. Notaðu slettuhelt hulstur."
+        },
+        {
+          "q": "Þarf KDS internet?",
+          "a": "Það þarf tengingu til að taka við pöntunum. Hafðu eldhúsið á áreiðanlegum aðgangspunkti frekar en gestaneti, og haltu prentaranum til vara fyrsta mánuðinn."
+        },
+        {
+          "q": "Virkar það með QR-pöntunum?",
+          "a": "Það er sterkasta ástæðan til að hafa það. Pantanir sem lagðar eru inn frá borðinu lenda á sama skjá og þær sem starfsfólkið tekur, svo eldhúsið hefur eina röð í stað tveggja."
+        }
+      ]
+    }
+  ]
+}

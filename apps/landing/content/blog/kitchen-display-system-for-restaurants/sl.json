@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "title": "Kuhinjski zaslon: potrebujete KDS? | IQ Rest",
+    "description": "Kaj počne KDS, koliko strojna oprema res stane, kako ga poganjate na tablici, ki jo že imate, in katerim kuhinjam je bolje s papirnatimi listki."
+  },
+  "card": {
+    "title": "Kuhinjski zasloni: kaj rešujejo, koliko stanejo in kdaj je papir še vedno boljši",
+    "excerpt": "Zaslon KDS lahko stane 800 € ali nič, odvisno od tega, ali kupite strojno opremo ali uporabite tablico iz pisarniškega predala. Takole ugotovite, kaj potrebujete."
+  },
+  "h1": "Kuhinjski zaslon: kaj KDS zares spremeni",
+  "intro": "Sistem kuhinjskega zaslona nadomesti tiskalnik, ki bruha listke, z zaslonom, ki prikazuje naročila. Sliši se kozmetično in večinoma ni: razlika je v tem, da zaslon ve, kdaj je listek prišel, kateri pult ga ima in ali se ga je kdo dotaknil. Ali se za to splača zaslon v vaši kuhinji, je odvisno od stvari, o katerih se splača govoriti konkretno.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Česa papirnat listek ne zmore"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Ne ve, da zamuja.** Listek, ki leži 22 minut, izgleda povsem enako kot tisti izpred 90 sekund. KDS ga obarva.",
+        "**Ne more biti na dveh mestih.** Miza, ki naroči predjedi in sladico, potrebuje listek na hladnem pultu in na izdaji. Papir se strga ali fotokopira.",
+        "**Izgine.** Listki padejo za linijo, se zamastijo, se nekam prilepijo. Naročila preprosto ni.",
+        "**Pozneje vam ne pove ničesar.** Na vprašanje »koliko časa smo rabili v soboto med 21. in 22. uro« s špičke z listki ne odgovorite.",
+        "**Potrebuje delujoč tiskalnik.** Termični se zataknejo, zmanjka jim papirja in odpovejo v najslabšem trenutku."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kaj vam KDS zares da"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Papirnati listki",
+        "KDS"
+      ],
+      "rows": [
+        [
+          "Starost naročila",
+          "Na oko",
+          "Števec na vsakem listku"
+        ],
+        [
+          "Razvrščanje po pultih",
+          "En tiskalnik, ena kopija",
+          "Isto naročilo na vsakem ustreznem zaslonu"
+        ],
+        [
+          "Spremembe",
+          "Prepisane na roko",
+          "Označene pri postavki"
+        ],
+        [
+          "Izgubljena naročila",
+          "Se zgodi",
+          "Ni kaj izgubiti"
+        ],
+        [
+          "Časi listkov",
+          "Nemerljivi",
+          "Zabeleženi pri vsakem naročilu"
+        ],
+        [
+          "Potrošni material",
+          "Zvitki papirja",
+          "Nič"
+        ],
+        [
+          "Strošek zagona",
+          "Tiskalnik + zvitki",
+          "0 € na tablici, ki jo že imate"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Merjenje je podcenjeni del. Ko ima vsak listek čas prihoda in čas zaključka, vidite, da je petkovo povprečje v redu, val ob 21.15 pa traja enajst minut dlje — in to je kadrovska odločitev, ki jo res lahko sprejmete."
+    },
+    {
+      "type": "h2",
+      "text": "Vprašanje strojne opreme"
+    },
+    {
+      "type": "p",
+      "text": "Namenske enote KDS — tesnjeni zasloni z bump letvijo, narejeni za vročino in maščobo — so odlične in drage. Kuhinja z velikim obsegom in cvrtnikom dva metra stran ima razumen argument, da eno kupi."
+    },
+    {
+      "type": "p",
+      "text": "Večina kuhinj tega ne potrebuje. IQ Restov [kuhinjski zaslon](route:/kitchen-display) teče v brskalniku, zato je strojna oprema lahko tablica, ki jo že imate, poceni tablica z Androidom ali star prenosnik z monitorjem. Dajte jo v ohišje, odporno na škropljenje, namestite izven linije pare, in mejni strošek je stenski nosilec."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Postavitev",
+        "Okvirni strošek",
+        "Komu ustreza"
+      ],
+      "rows": [
+        [
+          "Tablica, ki jo že imate, + nosilec",
+          "15-40 €",
+          "Večini majhnih kuhinj"
+        ],
+        [
+          "Nova poceni tablica + vodoodporno ohišje",
+          "120-250 €",
+          "Drugemu pultu"
+        ],
+        [
+          "Star prenosnik + zunanji monitor",
+          "0-150 €",
+          "Kuhinjam s prostorom na pultu"
+        ],
+        [
+          "Namenski KDS z bump letvijo",
+          "Od nekaj sto navzgor",
+          "Velikemu obsegu, zahtevnim okoljem"
+        ]
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Zaslon šteje bolj kot procesor. V osvetljeni kuhinji hočete velik in svetel zaslon; kuhar ga bere z dveh metrov z mokrimi rokami. Kupujte diagonalo, preden kupujete hitrost."
+    },
+    {
+      "type": "h2",
+      "text": "Kdaj KDS ne bi smeli kupiti"
+    },
+    {
+      "type": "p",
+      "text": "Bodite pri tem odkriti. Kuhinja z dvema človekoma, kjer se tisti, ki sprejme naročilo, lahko obrne in ga pove naglas, zaslona ne potrebuje — dodali bi korak. Enako velja za lokal z 20 gosti na večer in kratkim, nespremenljivim jedilnikom."
+    },
+    {
+      "type": "p",
+      "text": "Prag je približno tam, kjer ena oseba ne drži več stanja izdaje v glavi: več pultov, naročila iz več kot enega kanala (strežba, [naročilo prek QR](route:/order-taking), za s seboj) ali več kot kakšnih 40 gostov na izmeno."
+    },
+    {
+      "type": "h2",
+      "text": "Kako ga uvesti brez razsula v izmeni"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Naj teden dni teče vzporedno s tiskalnikom. Izpisujeta oba, nihče ne panici, osebje pa se zaslona nauči brez tveganja.",
+        "Začnite z enim zaslonom na izdaji. Razvrščanje po pultih je težava drugega tedna.",
+        "Dogovorite se, kaj pomeni »zaključiti«, preden začnete: zloženo na krožnik ali predano v strežbo? Polovica zmede prvega meseca izvira od tod.",
+        "Namestite ga tja, kamor seže kuhar z mokrimi rokami in kamor se ne useda para.",
+        "Tiskalnik ugasnite, ko mine cel teden, ne da bi kdo segel po njem."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Pustite tiskalnik priklopljen, a izklopljen, še mesec dni po prehodu. Ne stane nič in odpravi celotno razpravo o tem, kaj bo, če zaslon odpove sredi izmene."
+    },
+    {
+      "type": "h2",
+      "text": "Kaj gledati, ko enkrat teče"
+    },
+    {
+      "type": "p",
+      "text": "Tri številke se izplačajo. Mediana časa listka pove, kaj je normalno. 90. percentil pove, kako slabi so vaši slabi listki, in prav teh se gostje spomnijo. Čas listka po urah pove, kdaj dodati človeka. Če je mediana stabilna, 90. percentil pa dvakrat večji, je težava običajno pri eni jedi ali enem pultu, ne pri celi kuhinji."
+    },
+    {
+      "type": "cta",
+      "heading": "KDS, ki teče na tablici iz vašega pisarniškega predala",
+      "text": "Naročila iz strežbe in s QR kod pristanejo na enem zaslonu, s števcem na vsakem listku. Nič strojne opreme za kupiti. 14 dni brezplačno, brez kartice.",
+      "buttonLabel": "Poglejte kuhinjski zaslon",
+      "routeKey": "/kitchen-display"
+    },
+    {
+      "type": "faq",
+      "heading": "Pogosta vprašanja",
+      "items": [
+        {
+          "q": "Kaj pomeni KDS?",
+          "a": "Kitchen display system, sistem kuhinjskega zaslona — zaslon v kuhinji, ki prikazuje prispela naročila namesto natisnjenih listkov."
+        },
+        {
+          "q": "Koliko stane sistem kuhinjskega zaslona?",
+          "a": "Programska oprema je običajno del vašega sistema naročil. Strojna sega od približno 15 € za nosilec, če uporabite tablico, ki jo že imate, do nekaj sto za namensko enoto z bump letvijo."
+        },
+        {
+          "q": "Ali lahko KDS poganjam na navadni tablici?",
+          "a": "Da. IQ Restov kuhinjski zaslon teče v brskalniku, zato ustreza katera koli tablica ali prenosnik iz zadnjih petih let. Uporabite ohišje, odporno na škropljenje."
+        },
+        {
+          "q": "Ali KDS potrebuje internet?",
+          "a": "Potrebuje povezavo za sprejem naročil. Kuhinjo držite na zanesljivi dostopni točki namesto na gostujočem wi-fiju in prvi mesec obdržite tiskalnik kot rezervo."
+        },
+        {
+          "q": "Ali deluje z naročili prek QR kode?",
+          "a": "To je najmočnejši razlog, da ga imate. Naročila, oddana pri mizi, pristanejo na istem zaslonu kot tista, ki jih sprejme osebje, zato ima kuhinja eno vrsto namesto dveh."
+        }
+      ]
+    }
+  ]
+}

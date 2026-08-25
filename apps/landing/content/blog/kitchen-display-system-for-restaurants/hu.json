@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "title": "Konyhai kijelző: kell neked KDS? | IQ Rest",
+    "description": "Mit csinál egy KDS, mennyibe kerül valójában a hardver, hogyan futtatod egy meglévő tableten, és mely konyháknak jobb a papírbon."
+  },
+  "card": {
+    "title": "Konyhai kijelzők: mit oldanak meg, mibe kerülnek és mikor jobb még mindig a papír",
+    "excerpt": "Egy KDS-képernyő kerülhet 800 euróba vagy semmibe, attól függően, hogy hardvert veszel vagy az irodai fiókból előhúzott tabletet használod. Így döntheted el, melyik kell."
+  },
+  "h1": "Konyhai kijelző: mit változtat meg valójában egy KDS",
+  "intro": "A konyhai kijelzőrendszer a bonokat kiköpő nyomtatót cseréli le egy képernyőre, ami a rendeléseket mutatja. Kozmetikai változásnak hangzik, és nagyrészt nem az: a különbség az, hogy a képernyő tudja, mikor érkezett a bon, melyik poszté és hozzányúlt-e valaki. Hogy ez megér-e egy képernyőt a te konyhádban, olyan dolgokon múlik, amiket érdemes konkrétan kimondani.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Amit egy papírbon nem tud"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Nem tudja, hogy késik.** Egy 22 perce ott heverő bon pontosan ugyanúgy néz ki, mint egy 90 másodperces. A KDS beszínezi.",
+        "**Nem lehet két helyen.** Egy asztal, ami előételt és desszertet kér, a hideg poszton és a passzon is igényli a bont. A papírt széttépik vagy lemásolják.",
+        "**Eltűnik.** A bonok a vonal mögé esnek, zsírosak lesznek, ráragadnak valamire. A rendelés egyszerűen nincs meg.",
+        "**Utólag semmit nem mond.** Egy bonnyársról nem tudod megválaszolni, hogy szombaton 21 és 22 óra között mennyi ideig adtatok ki.",
+        "**Működő nyomtatót igényel.** A hőnyomtatók beragadnak, kifogy belőlük a papír, és a legrosszabb pillanatban adják fel."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Amit egy KDS valóban ad"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Papírbonok",
+        "KDS"
+      ],
+      "rows": [
+        [
+          "A rendelés kora",
+          "Találgatás",
+          "Időzítő minden bonon"
+        ],
+        [
+          "Posztokra irányítás",
+          "Egy nyomtató, egy példány",
+          "Ugyanaz a rendelés minden érintett képernyőn"
+        ],
+        [
+          "Módosítások",
+          "Kézzel átírva",
+          "A tételre jelölve"
+        ],
+        [
+          "Elveszett rendelések",
+          "Előfordul",
+          "Nincs mit elveszíteni"
+        ],
+        [
+          "Bonidők",
+          "Nem mérhetők",
+          "Rendelésenként rögzítve"
+        ],
+        [
+          "Fogyóeszközök",
+          "Papírtekercsek",
+          "Nincs"
+        ],
+        [
+          "Indulási költség",
+          "Nyomtató + tekercsek",
+          "0 € egy tableten, ami már megvan"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "A mérés az alábecsült rész. Amint minden bonnak van érkezési és lezárási ideje, látod, hogy a pénteki átlag rendben van, de a 21:15-ös hullám tizenegy perccel tovább tart — és ez már olyan létszámdöntés, amit tényleg meg tudsz hozni."
+    },
+    {
+      "type": "h2",
+      "text": "A hardverkérdés"
+    },
+    {
+      "type": "p",
+      "text": "A célra épített KDS-egységek — tömített, bump barral szerelt képernyők, hőre és zsírra tervezve — kiválóak és drágák. Egy nagy forgalmú konyhának, ahol két méterre van az olajsütő, van értelmes érve mellettük."
+    },
+    {
+      "type": "p",
+      "text": "A legtöbb konyhának erre nincs szüksége. Az IQ Rest [konyhai kijelzője](route:/kitchen-display) böngészőben fut, így a hardver lehet egy tablet, ami már megvan, egy olcsó Android tablet vagy egy régi laptop monitorral. Tedd fröccsenésálló tokba, szereld a gőzvonalon kívülre, és a határköltség egy fali tartó."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Összeállítás",
+        "Nagyságrendi költség",
+        "Kinek való"
+      ],
+      "rows": [
+        [
+          "Meglévő tablet + tartó",
+          "15-40 €",
+          "A legtöbb kis konyhának"
+        ],
+        [
+          "Új olcsó tablet + vízálló tok",
+          "120-250 €",
+          "Egy második posztnak"
+        ],
+        [
+          "Régi laptop + külső monitor",
+          "0-150 €",
+          "Olyan konyháknak, ahol van pulthely"
+        ],
+        [
+          "Célra épített KDS bump barral",
+          "Több száztól felfelé",
+          "Nagy forgalomnak, kemény környezetnek"
+        ]
+      ]
+    },
+    {
+      "type": "note",
+      "text": "A képernyő többet számít, mint a processzor. Világos konyhában nagy, fényes kijelzőt akarsz; a szakács két méterről, vizes kézzel olvassa. Előbb vegyél képernyőméretet, csak aztán sebességet."
+    },
+    {
+      "type": "h2",
+      "text": "Mikor ne szerezz be KDS-t"
+    },
+    {
+      "type": "p",
+      "text": "Legyél ezzel őszinte. Egy kétfős konyhának, ahol a rendelést felvevő megfordulhat és hangosan kimondhatja, nem kell képernyő — egy lépést adnál hozzá. Ugyanez igaz egy esténként 20 vendéget kiszolgáló helyre rövid, állandó étlappal."
+    },
+    {
+      "type": "p",
+      "text": "A küszöb nagyjából ott van, ahol egyetlen ember már nem tartja fejben a passz állapotát: több poszt, egynél több csatornáról érkező rendelések (felszolgálás, [QR-rendelés](route:/order-taking), elvitel), vagy nagyjából 40 vendégnél több műszakonként."
+    },
+    {
+      "type": "h2",
+      "text": "Hogyan állítsd be úgy, hogy ne borítsa fel a műszakot"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Egy hétig futtasd a nyomtató mellett. Mindkettő kiadja, senki nem esik pánikba, és a személyzet kockázat nélkül tanulja meg a képernyőt.",
+        "Kezdd egy képernyővel a passznál. A posztonkénti irányítás a második hét gondja.",
+        "Beszéljétek meg, mit jelent a „lezárás”, mielőtt belekezdenétek: tálalva vagy átadva a felszolgálásnak? Az első hónap zűrzavarának fele innen ered.",
+        "Oda szereld, ahol egy vizes kezű szakács eléri, és ahová nem ül le a gőz.",
+        "Kapcsold ki a nyomtatót, ha eltelt egy teljes hét úgy, hogy senki nem nyúlt utána."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Hagyd a nyomtatót a váltás után egy hónapig bedugva, kikapcsolva. Semmibe nem kerül, és elveszi az egész vitát arról, mi lesz, ha a képernyő a műszak közepén elszáll."
+    },
+    {
+      "type": "h2",
+      "text": "Mit nézz, ha már működik"
+    },
+    {
+      "type": "p",
+      "text": "Három szám termeli ki magát. A bonidő mediánja megmondja, mi a normális. A 90. percentilis megmondja, mennyire rosszak a rossz bonjaid, és a vendégek épp ezekre emlékeznek. Az óránkénti bonidő megmondja, mikor kell egy ember. Ha a medián stabil, de a 90. percentilis a duplája, a gond általában egy ételnél vagy egy posztnál van, nem az egész konyhában."
+    },
+    {
+      "type": "cta",
+      "heading": "KDS, ami az irodai fiókodban lévő tableten fut",
+      "text": "A felszolgálásból és a QR-kódokból érkező rendelések egyetlen képernyőre futnak be, minden bonon időzítővel. Nincs mit venni. 14 nap ingyen, kártya nélkül.",
+      "buttonLabel": "Nézd meg a konyhai kijelzőt",
+      "routeKey": "/kitchen-display"
+    },
+    {
+      "type": "faq",
+      "heading": "Gyakori kérdések",
+      "items": [
+        {
+          "q": "Mit jelent a KDS?",
+          "a": "Kitchen display system, konyhai kijelzőrendszer — a konyhai képernyő, ami a beérkező rendeléseket mutatja a nyomtatott bonok helyett."
+        },
+        {
+          "q": "Mennyibe kerül egy konyhai kijelzőrendszer?",
+          "a": "A szoftver általában a rendelési rendszered része. A hardver nagyjából 15 eurótól — egy tartó, ha meglévő tabletet használsz — több százig terjed egy célra épített, bump barral szerelt egységért."
+        },
+        {
+          "q": "Futtathatok KDS-t hétköznapi tableten?",
+          "a": "Igen. Az IQ Rest konyhai kijelzője böngészőben fut, így bármelyik elmúlt öt évből származó tablet vagy laptop megfelel. Használj fröccsenésálló tokot."
+        },
+        {
+          "q": "Kell a KDS-hez internet?",
+          "a": "Kapcsolat kell hozzá, hogy megkapja a rendeléseket. A konyhát megbízható hozzáférési ponton tartsd, ne a vendég wifin, és az első hónapban hagyd meg a nyomtatót tartaléknak."
+        },
+        {
+          "q": "Működik a QR-kódos rendelésekkel?",
+          "a": "Ez a legerősebb érv amellett, hogy legyen. Az asztalnál leadott rendelések ugyanarra a képernyőre érkeznek, mint a felszolgálók által felvettek, így a konyhának egy sora van kettő helyett."
+        }
+      ]
+    }
+  ]
+}

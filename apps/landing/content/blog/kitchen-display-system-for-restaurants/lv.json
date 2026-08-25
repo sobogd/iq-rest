@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "title": "Virtuves ekrāns: vai tev vajag KDS? | IQ Rest",
+    "description": "Ko dara KDS, cik patiesībā maksā aparatūra, kā to palaist uz planšetes, kas tev jau ir, un kurām virtuvēm labāk klājas ar papīra pasūtījumu lapiņām."
+  },
+  "card": {
+    "title": "Virtuves ekrāni: ko tie atrisina, cik maksā un kad papīrs joprojām ir labāks",
+    "excerpt": "KDS ekrāns var maksāt 800 € vai neko, atkarībā no tā, vai pērc aparatūru vai izmanto planšeti no biroja atvilktnes. Lūk, kā saprast, kurš variants tev vajadzīgs."
+  },
+  "h1": "Virtuves ekrāns: ko KDS patiesībā maina",
+  "intro": "Virtuves ekrāna sistēma aizstāj printeri, kas izspļauj lapiņas, ar ekrānu, kas rāda pasūtījumus. Tas izklausās kā kosmētiska maiņa un lielākoties nav: atšķirība ir tā, ka ekrāns zina, cikos lapiņa pienāca, kurš postenis to tur un vai kāds tai ir pieskāries. Vai tas ir ekrāna vērts tavā virtuvē, atkarīgs no lietām, par kurām ir vērts runāt konkrēti.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Ko papīra lapiņa nespēj"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Tā nezina, ka kavējas.** Lapiņa, kas nostāvējusi 22 minūtes, izskatās tieši tāpat kā tā no pirms 90 sekundēm. KDS to iekrāso.",
+        "**Tā nevar būt divās vietās.** Galdam, kas pasūta uzkodas un desertu, lapiņa vajadzīga aukstajā postenī un uz izsniegšanas. Papīru plēš vai kopē.",
+        "**Tā pazūd.** Lapiņas nokrīt aiz līnijas, notaukojas, pielīp kaut kam. Pasūtījuma vienkārši nav.",
+        "**Pēc tam tā tev neko nepasaka.** Uz jautājumu “cik ilgi mums gāja sestdien no 21:00 līdz 22:00” no lapiņu iesma neatbildēsi.",
+        "**Tai vajag strādājošu printeri.** Termoprinteri iestrēgst, tiem beidzas papīrs, un tie nomirst visnepiemērotākajā brīdī."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Ko KDS tev tiešām dod"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Papīra lapiņas",
+        "KDS"
+      ],
+      "rows": [
+        [
+          "Pasūtījuma vecums",
+          "Uz aci",
+          "Taimeris uz katras lapiņas"
+        ],
+        [
+          "Sadale pa posteņiem",
+          "Viens printeris, viena kopija",
+          "Tas pats pasūtījums uz katra attiecīgā ekrāna"
+        ],
+        [
+          "Izmaiņas",
+          "Pārrakstītas ar roku",
+          "Atzīmētas pie pozīcijas"
+        ],
+        [
+          "Pazaudēti pasūtījumi",
+          "Gadās",
+          "Nav ko zaudēt"
+        ],
+        [
+          "Lapiņu laiki",
+          "Nav izmērāmi",
+          "Fiksēti katram pasūtījumam"
+        ],
+        [
+          "Patēriņa materiāli",
+          "Papīra ruļļi",
+          "Nav"
+        ],
+        [
+          "Sākuma izmaksas",
+          "Printeris + ruļļi",
+          "0 € uz planšetes, kas tev jau ir"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Mērīšana ir novērtētā daļa par zemu. Tiklīdz katrai lapiņai ir pienākšanas un noslēgšanas laiks, redzi, ka piektdienas vidējais ir kārtībā, bet vilnis 21:15 aizņem par vienpadsmit minūtēm ilgāk — un tas jau ir personāla lēmums, ko tiešām vari pieņemt."
+    },
+    {
+      "type": "h2",
+      "text": "Aparatūras jautājums"
+    },
+    {
+      "type": "p",
+      "text": "Speciāli būvētas KDS iekārtas — hermētiski ekrāni ar bump joslu, veidoti karstumam un taukiem — ir izcilas un dārgas. Liela apjoma virtuvei ar fritēzi divu metru attālumā ir saprātīgs arguments tādu pirkt."
+    },
+    {
+      "type": "p",
+      "text": "Lielākajai daļai virtuvju tas nav vajadzīgs. IQ Rest [virtuves ekrāns](route:/kitchen-display) darbojas pārlūkā, tāpēc aparatūra var būt planšete, kas tev jau ir, lēta Android planšete vai vecs klēpjdators ar monitoru. Ieliec to pret šļakatām izturīgā apvalkā, uzstādi ārpus tvaika līnijas, un robežizmaksas ir sienas stiprinājums."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Risinājums",
+        "Aptuvenās izmaksas",
+        "Kam der"
+      ],
+      "rows": [
+        [
+          "Planšete, kas tev jau ir, + stiprinājums",
+          "15-40 €",
+          "Lielākajai daļai mazo virtuvju"
+        ],
+        [
+          "Jauna lēta planšete + ūdensizturīgs apvalks",
+          "120-250 €",
+          "Otram postenim"
+        ],
+        [
+          "Vecs klēpjdators + ārējais monitors",
+          "0-150 €",
+          "Virtuvēm, kur ir vieta uz letes"
+        ],
+        [
+          "Speciāls KDS ar bump joslu",
+          "No vairākiem simtiem uz augšu",
+          "Lielam apjomam, skarbai videi"
+        ]
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Ekrāns nozīmē vairāk nekā procesors. Apgaismotā virtuvē gribi lielu un spilgtu displeju; pavārs to lasa no diviem metriem ar slapjām rokām. Pērc ekrāna izmēru, pirms pērc ātrumu."
+    },
+    {
+      "type": "h2",
+      "text": "Kad KDS nav jāpērk"
+    },
+    {
+      "type": "p",
+      "text": "Esi šeit godīgs. Divu cilvēku virtuvei, kur pasūtījuma saņēmējs var pagriezties un pateikt to skaļi, ekrāns nav vajadzīgs — pieliktu vienu soli. Tas pats attiecas uz vietu ar 20 apmeklētājiem vakarā un īsu, nemainīgu ēdienkarti."
+    },
+    {
+      "type": "p",
+      "text": "Slieksnis ir aptuveni tur, kur viens cilvēks vairs nespēj noturēt izsniegšanas stāvokli galvā: vairāki posteņi, pasūtījumi no vairāk nekā viena kanāla (zāle, [pasūtījums caur QR](route:/order-taking), līdzņemšanai) vai vairāk nekā kādi 40 apmeklētāji maiņā."
+    },
+    {
+      "type": "h2",
+      "text": "Kā to ieviest, nesagraujot maiņu"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Ļauj tam nedēļu strādāt līdzās printerim. Izdrukā abi, neviens nekrīt panikā, un personāls apgūst ekrānu bez riska.",
+        "Sāc ar vienu ekrānu uz izsniegšanas. Sadale pa posteņiem ir otrās nedēļas problēma.",
+        "Vienojieties, ko nozīmē “noslēgt”, pirms sākat: izlikts uz šķīvja vai nodots zālei? Puse pirmā mēneša neskaidrību nāk no šejienes.",
+        "Uzstādi to tur, kur pavārs ar slapjām rokām aizsniedz un kur tvaiks neuzsēžas.",
+        "Izslēdz printeri, kad pagājusi vesela nedēļa un neviens pēc tā nav sniedzies."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Atstāj printeri mēnesi pēc pārejas pieslēgtu, bet izslēgtu. Tas nemaksā neko un noņem visu diskusiju par to, kas notiks, ja ekrāns nomirs maiņas vidū."
+    },
+    {
+      "type": "h2",
+      "text": "Ko skatīties, kad tas jau strādā"
+    },
+    {
+      "type": "p",
+      "text": "Trīs skaitļi nopelna sev vietu. Lapiņu laika mediāna pasaka, kas ir normāli. 90. procentile pasaka, cik sliktas ir tavas sliktās lapiņas, un tieši tās viesi atceras. Lapiņu laiks pa stundām pasaka, kad pielikt cilvēku. Ja mediāna ir stabila, bet 90. procentile ir divreiz lielāka, problēma parasti ir vienā ēdienā vai vienā postenī, nevis visā virtuvē."
+    },
+    {
+      "type": "cta",
+      "heading": "KDS, kas darbojas uz planšetes no tava biroja atvilktnes",
+      "text": "Pasūtījumi no zāles un no QR kodiem nonāk uz viena ekrāna, ar taimeri uz katras lapiņas. Nav jāpērk nekāda aparatūra. 14 dienas bez maksas, bez kartes.",
+      "buttonLabel": "Skatīt virtuves ekrānu",
+      "routeKey": "/kitchen-display"
+    },
+    {
+      "type": "faq",
+      "heading": "Biežāk uzdotie jautājumi",
+      "items": [
+        {
+          "q": "Ko nozīmē KDS?",
+          "a": "Kitchen display system, virtuves ekrāna sistēma — ekrāns virtuvē, kas rāda ienākošos pasūtījumus izdrukātu lapiņu vietā."
+        },
+        {
+          "q": "Cik maksā virtuves ekrāna sistēma?",
+          "a": "Programmatūra parasti ir daļa no tavas pasūtījumu sistēmas. Aparatūra svārstās no aptuveni 15 € par stiprinājumu, ja izmanto planšeti, kas tev jau ir, līdz vairākiem simtiem par speciālu iekārtu ar bump joslu."
+        },
+        {
+          "q": "Vai KDS var darbināt uz parastas planšetes?",
+          "a": "Jā. IQ Rest virtuves ekrāns darbojas pārlūkā, tāpēc der jebkura pēdējo piecu gadu planšete vai klēpjdators. Izmanto pret šļakatām izturīgu apvalku."
+        },
+        {
+          "q": "Vai KDS vajag internetu?",
+          "a": "Vajag savienojumu, lai saņemtu pasūtījumus. Turi virtuvi uz uzticama piekļuves punkta, nevis viesu wi-fi, un pirmo mēnesi paturi printeri kā rezervi."
+        },
+        {
+          "q": "Vai tas strādā ar QR koda pasūtījumiem?",
+          "a": "Tas ir spēcīgākais arguments par labu tam. Pie galda veiktie pasūtījumi nonāk uz tā paša ekrāna, kur personāla pieņemtie, tāpēc virtuvei ir viena rinda divu vietā."
+        }
+      ]
+    }
+  ]
+}

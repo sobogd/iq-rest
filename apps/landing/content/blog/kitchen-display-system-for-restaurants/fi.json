@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "title": "Keittiönäyttö: tarvitsetko KDS:n? | IQ Rest",
+    "description": "Mitä KDS tekee, paljonko laitteisto oikeasti maksaa, miten ajat sen tabletilla joka sinulla jo on, ja mitkä keittiöt pärjäävät paremmin paperitilauslapuilla."
+  },
+  "card": {
+    "title": "Keittiönäytöt: mitä ne korjaavat, mitä ne maksavat ja milloin paperi on yhä parempi",
+    "excerpt": "KDS-näyttö voi maksaa 800 € tai ei mitään sen mukaan, ostatko laitteiston vai käytätkö toimiston laatikossa lojuvaa tablettia. Näin päättelet kumpi sinulle sopii."
+  },
+  "h1": "Keittiönäyttö: mitä KDS oikeasti muuttaa",
+  "intro": "Keittiönäyttöjärjestelmä korvaa tilauslappuja sylkevän tulostimen näytöllä, joka näyttää tilaukset. Se kuulostaa kosmeettiselta eikä enimmäkseen ole: ero on siinä, että näyttö tietää mihin aikaan lappu saapui, mikä piste sen omistaa ja onko kukaan koskenut siihen. Kannattaako se näyttöä sinun keittiöösi, riippuu asioista joista on syytä puhua täsmällisesti.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Mitä paperilappu ei osaa"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Se ei tiedä olevansa myöhässä.** 22 minuuttia maannut lappu näyttää täsmälleen samalta kuin 90 sekunnin ikäinen. KDS värjää sen.",
+        "**Se ei voi olla kahdessa paikassa.** Pöytä, joka tilaa alkuruoat ja jälkiruoan, tarvitsee lapun sekä kylmälle pisteelle että linjastolle. Paperi revitään tai kopioidaan.",
+        "**Se katoaa.** Laput putoavat linjan taakse, rasvoittuvat, tarttuvat johonkin. Tilausta ei yksinkertaisesti ole.",
+        "**Se ei kerro sinulle jälkeenpäin mitään.** Et voi vastata kysymykseen \"kauanko meillä meni lauantaina 21–22 välillä\" katsomalla lappupiikkiä.",
+        "**Se tarvitsee toimivan tulostimen.** Lämpötulostimet jumittuvat, paperi loppuu ja ne kuolevat pahimmalla mahdollisella hetkellä."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Mitä KDS oikeasti antaa"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Paperilaput",
+        "KDS"
+      ],
+      "rows": [
+        [
+          "Tilauksen ikä",
+          "Arvailua",
+          "Ajastin jokaisessa lapussa"
+        ],
+        [
+          "Jako pisteille",
+          "Yksi tulostin, yksi kopio",
+          "Sama tilaus jokaisella asiaankuuluvalla näytöllä"
+        ],
+        [
+          "Muutokset",
+          "Kirjoitetaan käsin uusiksi",
+          "Merkitty annokseen"
+        ],
+        [
+          "Kadonneet tilaukset",
+          "Sattuu",
+          "Ei ole mitään kadotettavaa"
+        ],
+        [
+          "Lappuajat",
+          "Ei mitattavissa",
+          "Kirjataan tilauskohtaisesti"
+        ],
+        [
+          "Kulutustarvikkeet",
+          "Paperirullat",
+          "Ei mitään"
+        ],
+        [
+          "Aloituskustannus",
+          "Tulostin + rullat",
+          "0 € tabletilla joka sinulla jo on"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Mittaaminen on aliarvostettu osa. Kun jokaisella lapulla on tulo- ja kuittausaika, näet että perjantain keskiarvo on kunnossa mutta 21.15 aalto vie yksitoista minuuttia pidempään — ja se on henkilöstöpäätös, jonka voit oikeasti tehdä."
+    },
+    {
+      "type": "h2",
+      "text": "Laitteistokysymys"
+    },
+    {
+      "type": "p",
+      "text": "Varta vasten rakennetut KDS-yksiköt — tiivistetyt näytöt bump-palkilla, kestävät kuumuutta ja rasvaa — ovat erinomaisia ja kalliita. Suuren volyymin keittiöllä, jossa friteerauskeitin on kahden metrin päässä, on järkevä peruste ostaa sellainen."
+    },
+    {
+      "type": "p",
+      "text": "Useimmat keittiöt eivät tarvitse sitä. IQ Restin [keittiönäyttö](route:/kitchen-display) toimii selaimessa, joten laitteisto voi olla tabletti joka sinulla jo on, halpa Android-tabletti tai vanha kannettava näytön kanssa. Laita se roiskesuojattuun koteloon, kiinnitä höyrylinjan ulkopuolelle, ja rajakustannus on seinäteline."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Kokoonpano",
+        "Karkea hinta",
+        "Kenelle sopii"
+      ],
+      "rows": [
+        [
+          "Tabletti joka sinulla jo on + teline",
+          "15–40 €",
+          "Useimmille pienille keittiöille"
+        ],
+        [
+          "Uusi halpa tabletti + vesitiivis kotelo",
+          "120–250 €",
+          "Toiselle pisteelle"
+        ],
+        [
+          "Vanha kannettava + ulkoinen näyttö",
+          "0–150 €",
+          "Keittiöille joissa on pöytätilaa"
+        ],
+        [
+          "Varta vasten rakennettu KDS bump-palkilla",
+          "Useita satoja ja ylöspäin",
+          "Suurelle volyymille, koville olosuhteille"
+        ]
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Näyttö merkitsee enemmän kuin suoritin. Valoisassa keittiössä haluat ison ja kirkkaan näytön; kokki lukee sitä kahden metrin päästä märillä käsillä. Osta näytön kokoa ennen kuin ostat nopeutta."
+    },
+    {
+      "type": "h2",
+      "text": "Milloin KDS:ää ei kannata hankkia"
+    },
+    {
+      "type": "p",
+      "text": "Ole tässä rehellinen. Kahden ihmisen keittiö, jossa tilauksen ottava voi kääntyä ja sanoa sen ääneen, ei tarvitse näyttöä — lisäisit yhden vaiheen. Sama koskee paikkaa, jossa on 20 kattausta illassa ja lyhyt, muuttumaton lista."
+    },
+    {
+      "type": "p",
+      "text": "Kynnys kulkee suunnilleen siinä, missä yksi ihminen ei enää pidä linjaston tilaa päässään: useita pisteitä, tilauksia useammasta kuin yhdestä kanavasta (sali, [QR-tilaus](route:/order-taking), mukaan otettavat) tai yli neljäkymmentä kattausta vuorossa."
+    },
+    {
+      "type": "h2",
+      "text": "Näin otat sen käyttöön ilman että vuoro kärsii"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Anna sen käydä tulostimen rinnalla viikon. Molemmat tulostavat, kukaan ei panikoi ja henkilökunta oppii näytön riskittä.",
+        "Aloita yhdellä näytöllä linjastolla. Jako pisteittäin on toisen viikon ongelma.",
+        "Sopikaa etukäteen mitä \"kuittaus\" tarkoittaa: annosteltu vai luovutettu saliin? Puolet ensimmäisen kuukauden sekaannuksista syntyy tästä.",
+        "Kiinnitä se paikkaan, johon märkäkätinen kokki ylettyy ja johon höyry ei laskeudu.",
+        "Sammuta tulostin, kun kokonainen viikko on kulunut eikä kukaan ole kurottanut sitä kohti."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Jätä tulostin kytketyksi mutta sammutetuksi kuukaudeksi vaihdon jälkeen. Se ei maksa mitään ja poistaa koko väittelyn siitä, mitä tapahtuu jos näyttö pettää kesken vuoron."
+    },
+    {
+      "type": "h2",
+      "text": "Mitä katsoa, kun se on käynnissä"
+    },
+    {
+      "type": "p",
+      "text": "Kolme lukua ansaitsee paikkansa. Mediaanilappuaika kertoo mikä on normaalia. 90. persentiili kertoo kuinka huonoja huonot lappusi ovat, ja juuri sen asiakkaat muistavat. Lappuaika tunneittain kertoo milloin lisätä ihminen. Jos mediaani on vakaa mutta 90. persentiili on sen kaksinkertainen, ongelma on yleensä yhdessä annoksessa tai yhdessä pisteessä, ei koko keittiössä."
+    },
+    {
+      "type": "cta",
+      "heading": "KDS joka pyörii toimistolaatikossasi olevalla tabletilla",
+      "text": "Salin ja QR-koodien tilaukset päätyvät yhdelle näytölle, ajastin jokaisessa lapussa. Ei laitteistoa ostettavaksi. 14 päivää ilmaiseksi, ilman korttia.",
+      "buttonLabel": "Katso keittiönäyttö",
+      "routeKey": "/kitchen-display"
+    },
+    {
+      "type": "faq",
+      "heading": "Usein kysytyt kysymykset",
+      "items": [
+        {
+          "q": "Mitä KDS tarkoittaa?",
+          "a": "Kitchen display system, keittiönäyttöjärjestelmä — keittiön näyttö, joka näyttää saapuvat tilaukset painettujen lappujen sijaan."
+        },
+        {
+          "q": "Paljonko keittiönäyttöjärjestelmä maksaa?",
+          "a": "Ohjelmisto kuuluu yleensä tilausjärjestelmääsi. Laitteisto vaihtelee noin 15 eurosta telineeseen, jos käytät jo omistamaasi tablettia, useisiin satoihin varta vasten rakennetusta yksiköstä bump-palkilla."
+        },
+        {
+          "q": "Voinko ajaa KDS:ää tavallisella tabletilla?",
+          "a": "Kyllä. IQ Restin keittiönäyttö toimii selaimessa, joten mikä tahansa viimeisen viiden vuoden tabletti tai kannettava käy. Käytä roiskesuojattua koteloa."
+        },
+        {
+          "q": "Tarvitseeko KDS internetiä?",
+          "a": "Se tarvitsee yhteyden tilausten vastaanottamiseen. Pidä keittiö luotettavassa tukiasemassa asiakkaiden wifin sijaan, ja säilytä tulostin varalla ensimmäisen kuukauden."
+        },
+        {
+          "q": "Toimiiko se QR-koodilla tehtyjen tilausten kanssa?",
+          "a": "Se on vahvin syy hankkia sellainen. Pöydästä tehdyt tilaukset saapuvat samalle näytölle kuin henkilökunnan ottamat, joten keittiöllä on yksi jono kahden sijaan."
+        }
+      ]
+    }
+  ]
+}

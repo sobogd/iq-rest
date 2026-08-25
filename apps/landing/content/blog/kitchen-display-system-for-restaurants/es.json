@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "title": "Pantalla de cocina: ¿necesitas un KDS? | IQ Rest",
+    "description": "Qué hace un KDS, cuánto cuesta de verdad el hardware, cómo montarlo en una tablet que ya tienes y qué cocinas están mejor con comandas de papel."
+  },
+  "card": {
+    "title": "Pantallas de cocina: qué arreglan, qué cuestan y cuándo el papel sigue siendo mejor",
+    "excerpt": "Una pantalla de KDS puede costar 800 € o nada, según compres el hardware o uses una tablet del cajón de la oficina. Aquí va cómo saber cuál te hace falta."
+  },
+  "h1": "Pantalla de cocina: qué cambia de verdad un KDS",
+  "intro": "Un sistema de pantalla de cocina sustituye la impresora que escupe comandas por una pantalla que muestra los pedidos. Suena a cambio cosmético y en su mayor parte no lo es: la diferencia es que una pantalla sabe a qué hora llegó la comanda, qué partida la tiene y si alguien la ha tocado. Si eso compensa una pantalla en tu cocina depende de cosas que conviene concretar.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Lo que una comanda de papel no puede hacer"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**No sabe que va tarde.** Una comanda parada 22 minutos se ve exactamente igual que una de hace 90 segundos. Un KDS la colorea.",
+        "**No puede estar en dos sitios.** Una mesa que pide entrantes y un postre necesita la comanda en la partida fría y en el pase. El papel se rompe o se fotocopia.",
+        "**Desaparece.** Las comandas se caen detrás de la línea, se manchan de grasa, se pegan a algo. El pedido simplemente ya no está.",
+        "**No te cuenta nada después.** No puedes responder a «cuánto tardamos el sábado entre las 21:00 y las 22:00» mirando un pincho de papeles.",
+        "**Necesita una impresora que funcione.** Las térmicas se atascan, se quedan sin papel y mueren en el peor momento."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Lo que un KDS te da de verdad"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Comandas de papel",
+        "KDS"
+      ],
+      "rows": [
+        [
+          "Antigüedad del pedido",
+          "A ojo",
+          "Un cronómetro en cada comanda"
+        ],
+        [
+          "Reparto por partidas",
+          "Una impresora, una copia",
+          "El mismo pedido en cada pantalla implicada"
+        ],
+        [
+          "Modificaciones",
+          "Reescritas a mano",
+          "Marcadas sobre el plato"
+        ],
+        [
+          "Pedidos perdidos",
+          "Pasa",
+          "No hay nada que perder"
+        ],
+        [
+          "Tiempos de comanda",
+          "No medibles",
+          "Registrados por pedido"
+        ],
+        [
+          "Consumibles",
+          "Rollos de papel",
+          "Ninguno"
+        ],
+        [
+          "Coste de arranque",
+          "Impresora + rollos",
+          "0 € en una tablet que ya tienes"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "La medición es la parte infravalorada. Cuando cada comanda tiene hora de entrada y hora de salida, puedes ver que la media del viernes está bien pero que la oleada de las 21:15 tarda once minutos más, y esa sí es una decisión de personal que puedes tomar."
+    },
+    {
+      "type": "h2",
+      "text": "La cuestión del hardware"
+    },
+    {
+      "type": "p",
+      "text": "Las unidades KDS de fábrica —pantallas selladas con barra de bump, aptas para calor y grasa— son excelentes y caras. Una cocina de alto volumen con una freidora a dos metros tiene un argumento razonable para comprar una."
+    },
+    {
+      "type": "p",
+      "text": "La mayoría de cocinas no lo necesita. La [pantalla de cocina](route:/kitchen-display) de IQ Rest funciona en el navegador, así que el hardware puede ser una tablet que ya tengas, una tablet Android barata o un portátil viejo con un monitor. Métela en una funda antisalpicaduras, móntala fuera de la línea de vapor y el coste marginal es un soporte de pared."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Montaje",
+        "Coste aproximado",
+        "A quién le encaja"
+      ],
+      "rows": [
+        [
+          "Tablet que ya tienes + soporte",
+          "15-40 €",
+          "La mayoría de cocinas pequeñas"
+        ],
+        [
+          "Tablet nueva barata + funda impermeable",
+          "120-250 €",
+          "Una segunda partida"
+        ],
+        [
+          "Portátil viejo + monitor externo",
+          "0-150 €",
+          "Cocinas con sitio de sobra"
+        ],
+        [
+          "KDS de fábrica con barra de bump",
+          "Varios cientos en adelante",
+          "Alto volumen, entornos duros"
+        ]
+      ]
+    },
+    {
+      "type": "note",
+      "text": "La pantalla importa más que el procesador. En una cocina iluminada quieres una pantalla grande y con brillo; un cocinero la lee a dos metros y con las manos mojadas. Compra tamaño de pantalla antes que velocidad."
+    },
+    {
+      "type": "h2",
+      "text": "Cuándo no deberías poner un KDS"
+    },
+    {
+      "type": "p",
+      "text": "Sé honesto con esto. Una cocina de dos personas donde quien toma el pedido puede girarse y decirlo en voz alta no necesita una pantalla: estarías añadiendo un paso. Lo mismo vale para un local de 20 comensales por noche con una carta corta y fija."
+    },
+    {
+      "type": "p",
+      "text": "El umbral está más o menos donde una sola persona ya no puede mantener el estado del pase en la cabeza: varias partidas, pedidos que llegan por más de un canal (sala, [pedido por QR](route:/order-taking), para llevar) o más de unos 40 comensales por servicio."
+    },
+    {
+      "type": "h2",
+      "text": "Cómo montarlo sin romper el servicio"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Déjalo funcionando junto a la impresora una semana. Salen los dos, nadie se agobia y el personal aprende la pantalla sin riesgo.",
+        "Empieza con una pantalla en el pase. El reparto por partidas es un problema de la segunda semana.",
+        "Acordad qué significa «bump» antes de empezar: ¿emplatado o entregado a la sala? La mitad de la confusión del primer mes viene de aquí.",
+        "Móntala donde un cocinero con las manos mojadas pueda alcanzarla y donde el vapor no se le pose.",
+        "Apaga la impresora cuando haya pasado una semana entera sin que nadie la busque."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Deja la impresora enchufada y apagada un mes después del cambio. No cuesta nada y elimina toda la discusión sobre qué pasa si la pantalla falla en pleno servicio."
+    },
+    {
+      "type": "h2",
+      "text": "Qué mirar una vez esté en marcha"
+    },
+    {
+      "type": "p",
+      "text": "Tres números se ganan el sueldo. La mediana del tiempo de comanda te dice lo normal. El percentil 90 te dice cómo de malas son tus comandas malas, que es lo que los clientes recuerdan. El tiempo de comanda por hora te dice cuándo añadir una persona. Si tu mediana es estable pero el percentil 90 la dobla, el problema suele ser un plato o una partida, no la cocina entera."
+    },
+    {
+      "type": "cta",
+      "heading": "Un KDS que funciona en la tablet del cajón de tu oficina",
+      "text": "Los pedidos de la sala y los de los códigos QR llegan a una sola pantalla, con un cronómetro en cada comanda. Sin hardware que comprar. 14 días gratis, sin tarjeta.",
+      "buttonLabel": "Ver la pantalla de cocina",
+      "routeKey": "/kitchen-display"
+    },
+    {
+      "type": "faq",
+      "heading": "Preguntas frecuentes",
+      "items": [
+        {
+          "q": "¿Qué significa KDS?",
+          "a": "Kitchen display system, sistema de pantalla de cocina: la pantalla que muestra los pedidos entrantes en lugar de las comandas impresas."
+        },
+        {
+          "q": "¿Cuánto cuesta un sistema de pantalla de cocina?",
+          "a": "El software suele formar parte de tu sistema de pedidos. El hardware va desde unos 15 € por un soporte, si usas una tablet que ya tienes, hasta varios cientos por una unidad de fábrica con barra de bump."
+        },
+        {
+          "q": "¿Puedo usar un KDS en una tablet normal?",
+          "a": "Sí. La pantalla de cocina de IQ Rest funciona en el navegador, así que sirve cualquier tablet o portátil de los últimos cinco años. Usa una funda antisalpicaduras."
+        },
+        {
+          "q": "¿El KDS necesita internet?",
+          "a": "Necesita conexión para recibir los pedidos. Ten la cocina en un punto de acceso fiable y no en el wifi de clientes, y conserva la impresora como respaldo el primer mes."
+        },
+        {
+          "q": "¿Funciona con los pedidos por código QR?",
+          "a": "Es el mejor motivo para tenerlo. Los pedidos hechos desde la mesa llegan a la misma pantalla que los que toma el personal, así que la cocina tiene una cola en lugar de dos."
+        }
+      ]
+    }
+  ]
+}

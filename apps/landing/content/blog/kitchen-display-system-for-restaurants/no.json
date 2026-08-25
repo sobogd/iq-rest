@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "title": "Kjøkkenskjerm: trenger du et KDS? | IQ Rest",
+    "description": "Hva et KDS gjør, hva maskinvaren faktisk koster, hvordan du kjører det på et nettbrett du allerede har, og hvilke kjøkken som har det bedre med papirlapper."
+  },
+  "card": {
+    "title": "Kjøkkenskjermer: hva de løser, hva de koster og når papir fortsatt er bedre",
+    "excerpt": "En KDS-skjerm kan koste 800 € eller ingenting, avhengig av om du kjøper maskinvaren eller bruker et nettbrett fra kontorskuffen. Slik finner du ut hva du trenger."
+  },
+  "h1": "Kjøkkenskjerm: hva et KDS faktisk endrer",
+  "intro": "Et kjøkkenskjermsystem erstatter skriveren som spytter ut lapper med en skjerm som viser bestillinger. Det høres kosmetisk ut og er det stort sett ikke: forskjellen er at en skjerm vet når lappen kom inn, hvilken stasjon som har den, og om noen har rørt den. Om det er verdt en skjerm på ditt kjøkken, avhenger av ting det er verdt å være konkret om.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Hva en papirlapp ikke får til"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Den vet ikke at den er sen.** En lapp som har ligget i 22 minutter, ser nøyaktig ut som en fra 90 sekunder siden. Et KDS farger den.",
+        "**Den kan ikke være to steder.** Et bord som bestiller forretter og en dessert, trenger lappen både på den kalde stasjonen og ved utleveringen. Papir blir revet eller kopiert.",
+        "**Den forsvinner.** Lapper faller bak linjen, blir fete, kleber seg til noe. Bestillingen er rett og slett borte.",
+        "**Den forteller deg ingenting etterpå.** Du kan ikke svare på \"hvor lang tid brukte vi lørdag mellom 21 og 22\" ut fra en lappespyd.",
+        "**Den krever en skriver som virker.** Termoskrivere kjører seg fast, går tom og legger inn årene på verst tenkelige tidspunkt."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Hva et KDS faktisk gir deg"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Papirlapper",
+        "KDS"
+      ],
+      "rows": [
+        [
+          "Bestillingens alder",
+          "Gjetning",
+          "En timer på hver lapp"
+        ],
+        [
+          "Fordeling til stasjoner",
+          "Én skriver, én kopi",
+          "Samme bestilling på hver relevant skjerm"
+        ],
+        [
+          "Endringer",
+          "Skrevet om for hånd",
+          "Merket på retten"
+        ],
+        [
+          "Tapte bestillinger",
+          "Skjer",
+          "Ingenting å miste"
+        ],
+        [
+          "Lappetider",
+          "Kan ikke måles",
+          "Registreres per bestilling"
+        ],
+        [
+          "Forbruksmateriell",
+          "Papirruller",
+          "Ingen"
+        ],
+        [
+          "Oppstartskostnad",
+          "Skriver + ruller",
+          "0 € på et nettbrett du allerede har"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Målingen er den undervurderte delen. Så snart hver lapp har et start- og et bumptidspunkt, ser du at fredagsgjennomsnittet er greit, men at bølgen 21.15 tar elleve minutter lenger – og det er en bemanningsbeslutning du faktisk kan ta."
+    },
+    {
+      "type": "h2",
+      "text": "Maskinvarespørsmålet"
+    },
+    {
+      "type": "p",
+      "text": "Formålsbygde KDS-enheter – forseglede skjermer med bumpbar, laget for varme og fett – er utmerkede og dyre. Et kjøkken med høyt volum og en frityr to meter unna har et fornuftig argument for en slik."
+    },
+    {
+      "type": "p",
+      "text": "De fleste kjøkken trenger ikke det. IQ Rests [kjøkkendisplay](route:/kitchen-display) kjører i nettleseren, så maskinvaren kan være et nettbrett du allerede har, et billig Android-nettbrett eller en gammel laptop med skjerm. Legg det i et sprutsikkert deksel, monter det utenfor damplinjen, og marginalkostnaden er en veggbrakett."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Oppsett",
+        "Omtrentlig kostnad",
+        "Passer for"
+      ],
+      "rows": [
+        [
+          "Nettbrett du allerede har + brakett",
+          "15–40 €",
+          "De fleste små kjøkken"
+        ],
+        [
+          "Nytt billig nettbrett + vanntett deksel",
+          "120–250 €",
+          "En stasjon nummer to"
+        ],
+        [
+          "Gammel laptop + ekstern skjerm",
+          "0–150 €",
+          "Kjøkken med benkeplass"
+        ],
+        [
+          "Formålsbygd KDS med bumpbar",
+          "Flere hundre og oppover",
+          "Høyt volum, tøffe miljøer"
+        ]
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Skjermen betyr mer enn prosessoren. På et opplyst kjøkken vil du ha en stor skjerm med høy lysstyrke; en kokk leser den på to meters hold med våte hender. Kjøp skjermstørrelse før hastighet."
+    },
+    {
+      "type": "h2",
+      "text": "Når du ikke bør skaffe et KDS"
+    },
+    {
+      "type": "p",
+      "text": "Vær ærlig her. Et kjøkken med to personer der den som tar bestillingen kan snu seg og si den høyt, trenger ingen skjerm – du ville lagt til et trinn. Det samme gjelder et sted med 20 gjester per kveld og en kort, fast meny."
+    },
+    {
+      "type": "p",
+      "text": "Terskelen ligger omtrent der én person ikke lenger klarer å holde utleveringens tilstand i hodet: flere stasjoner, bestillinger som kommer via mer enn én kanal (salen, [QR-bestilling](route:/order-taking), take away), eller mer enn rundt 40 gjester per vakt."
+    },
+    {
+      "type": "h2",
+      "text": "Slik setter du det opp uten å forstyrre servicen"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "La det gå parallelt med skriveren i en uke. Begge skriver ut, ingen får panikk, og staben lærer skjermen uten risiko.",
+        "Start med én skjerm ved utleveringen. Fordeling stasjon for stasjon er et problem for uke to.",
+        "Bli enige om hva \"bumping\" betyr før dere starter: anrettet, eller overlevert til salen? Halvparten av forvirringen den første måneden kommer herfra.",
+        "Monter den der en kokk med våte hender når den, og der damp ikke legger seg på den.",
+        "Slå av skriveren når en hel uke har gått uten at noen har strukket seg etter den."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "La skriveren stå tilkoblet, men avslått, en måned etter byttet. Det koster ingenting og fjerner hele diskusjonen om hva som skjer hvis skjermen svikter midt i vakten."
+    },
+    {
+      "type": "h2",
+      "text": "Hva du ser på når det først går"
+    },
+    {
+      "type": "p",
+      "text": "Tre tall gjør nytte for seg. Median lappetid forteller hva som er normalt. 90-persentilen forteller hvor ille de dårlige lappene dine er, og det er det gjestene husker. Lappetid per time forteller når du bør sette inn en person. Hvis medianen er stabil, men 90-persentilen er dobbelt så høy, ligger problemet som regel i én rett eller én stasjon, ikke i hele kjøkkenet."
+    },
+    {
+      "type": "cta",
+      "heading": "Et KDS som kjører på nettbrettet i kontorskuffen din",
+      "text": "Bestillinger fra salen og fra QR-koder havner på én skjerm, med en timer på hver lapp. Ingen maskinvare å kjøpe. 14 dager gratis, uten kort.",
+      "buttonLabel": "Se kjøkkendisplayet",
+      "routeKey": "/kitchen-display"
+    },
+    {
+      "type": "faq",
+      "heading": "Vanlige spørsmål",
+      "items": [
+        {
+          "q": "Hva står KDS for?",
+          "a": "Kitchen display system, kjøkkenskjermsystem – skjermen på kjøkkenet som viser innkommende bestillinger i stedet for utskrevne lapper."
+        },
+        {
+          "q": "Hva koster et kjøkkenskjermsystem?",
+          "a": "Programvaren er som regel en del av bestillingssystemet ditt. Maskinvaren spenner fra rundt 15 € for en brakett, hvis du bruker et nettbrett du allerede har, til flere hundre for en formålsbygd enhet med bumpbar."
+        },
+        {
+          "q": "Kan jeg kjøre et KDS på et vanlig nettbrett?",
+          "a": "Ja. IQ Rests kjøkkendisplay kjører i nettleseren, så et hvilket som helst nettbrett eller en laptop fra de siste fem årene fungerer. Bruk et sprutsikkert deksel."
+        },
+        {
+          "q": "Trenger et KDS internett?",
+          "a": "Det trenger en forbindelse for å motta bestillinger. Hold kjøkkenet på et pålitelig aksesspunkt fremfor gjeste-wifien, og behold skriveren som reserve den første måneden."
+        },
+        {
+          "q": "Fungerer det med QR-bestillinger?",
+          "a": "Det er det sterkeste argumentet for å ha et. Bestillinger som gjøres fra bordet, havner på samme skjerm som dem personalet tar, så kjøkkenet har én kø i stedet for to."
+        }
+      ]
+    }
+  ]
+}

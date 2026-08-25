@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "title": "Taispeáint chistine: an bhfuil KDS uait? | IQ Rest",
+    "description": "Cad a dhéanann KDS, cad a chosnaíonn na crua-earraí i ndáiríre, conas é a rith ar tháibléad atá agat cheana, agus na cistiní ar fearr dóibh duillíní páipéir."
+  },
+  "card": {
+    "title": "Taispeántais chistine: cad a réitíonn siad, cad a chosnaíonn siad, agus cathain is fearr páipéar fós",
+    "excerpt": "Féadann scáileán KDS €800 a chosnamh nó faic, ag brath ar cheannaíonn tú na crua-earraí nó ar úsáideann tú táibléad as tarraiceán na hoifige. Seo conas a aithint cé acu atá uait."
+  },
+  "h1": "Taispeáint chistine: cad a athraíonn KDS i ndáiríre",
+  "intro": "Cuireann córas taispeána cistine scáileán a thaispeánann orduithe in ionad an phrintéara a chaitheann amach duillíní. Fuaimníonn sé cosmaideach agus níl sé sin fíor den chuid is mó: is é an difríocht go bhfuil a fhios ag scáileán cén t-am ar tháinig an duillín, cén stáisiún a bhfuil sé aige, agus ar bhain duine ar bith leis. Cé acu is fiú scáileán i do chistin, braitheann sé ar rudaí ar fiú a bheith sonrach fúthu.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Cad nach féidir le duillín páipéir a dhéanamh"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Níl a fhios aige go bhfuil sé déanach.** Tá cuma dhíreach mar an gcéanna ar dhuillín atá ina luí 22 nóiméad agus ar cheann ó 90 soicind ó shin. Cuireann KDS dath air.",
+        "**Ní féidir leis a bheith in dhá áit.** Bord a ordaíonn cúrsaí tosaigh agus milseog, teastaíonn an duillín ag an stáisiún fuar agus ag an bpas. Stróictear nó cóipeáiltear an páipéar.",
+        "**Imíonn sé.** Titeann duillíní taobh thiar den líne, éiríonn siad gréisceach, greamaíonn siad de rud éigin. Níl an t-ordú ann a thuilleadh, sin é.",
+        "**Ní insíonn sé aon rud duit ina dhiaidh.** Ní féidir leat freagra a thabhairt ar \"cé chomh fada a thóg sé orainn Dé Sathairn idir 21:00 agus 22:00\" ó bhior duillíní.",
+        "**Teastaíonn printéir atá ag obair uaidh.** Téann printéirí teirmeacha i bhfostú, ritheann siad as páipéar, agus faigheann siad bás ag an nóiméad is measa."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Cad a thugann KDS duit i ndáiríre"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Duillíní páipéir",
+        "KDS"
+      ],
+      "rows": [
+        [
+          "Aois an ordaithe",
+          "Buille faoi thuairim",
+          "Uaineadóir ar gach duillín"
+        ],
+        [
+          "Ródú chuig stáisiúin",
+          "Printéir amháin, cóip amháin",
+          "An t-ordú céanna ar gach scáileán ábhartha"
+        ],
+        [
+          "Athruithe",
+          "Athscríofa de láimh",
+          "Marcáilte ar an mír"
+        ],
+        [
+          "Orduithe caillte",
+          "Tarlaíonn sé",
+          "Níl aon rud le cailleadh"
+        ],
+        [
+          "Amanna duillíní",
+          "Neamh-inmheasta",
+          "Taifeadta in aghaidh an ordaithe"
+        ],
+        [
+          "Ábhair chaite",
+          "Rollaí páipéir",
+          "Ceann ar bith"
+        ],
+        [
+          "Costas tosaigh",
+          "Printéir + rollaí",
+          "€0 ar tháibléad atá agat cheana"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Is é an tomhas an chuid a ndéantar neamhaird de. Chomh luath is a bhíonn am tosaithe agus am dúnta ag gach duillín, feiceann tú go bhfuil meán na hAoine ceart go leor ach go dtógann an tonn ag 21:15 aon nóiméad déag níos faide — agus is cinneadh foirne é sin is féidir leat a dhéanamh i ndáiríre."
+    },
+    {
+      "type": "h2",
+      "text": "Ceist na gcrua-earraí"
+    },
+    {
+      "type": "p",
+      "text": "Tá aonaid KDS shainthógtha — scáileáin séalaithe le barra bump, déanta don teas agus don ghréisc — ar fheabhas agus daor. Tá argóint réasúnta ag cistin ard-mhéide a bhfuil friochtán dhá mhéadar uaidh ceann acu a fháil."
+    },
+    {
+      "type": "p",
+      "text": "Ní theastaíonn sé sin ó fhormhór na gcistiní. Ritheann [taispeáint chistine](route:/kitchen-display) IQ Rest sa bhrabhsálaí, mar sin is féidir leis na crua-earraí a bheith ina dtáibléad atá agat cheana, táibléad Android saor, nó ríomhaire glúine sean le monatóir. Cuir i gcás sceite-dhíonach é, feistigh lasmuigh de líne na gaile, agus is é an costas breise ná lúbán balla."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Socrú",
+        "Costas garbh",
+        "Cé dó a oireann"
+      ],
+      "rows": [
+        [
+          "Táibléad atá agat cheana + lúbán",
+          "€15-40",
+          "Formhór na gcistiní beaga"
+        ],
+        [
+          "Táibléad nua saor + cás uiscedhíonach",
+          "€120-250",
+          "Dara stáisiún"
+        ],
+        [
+          "Ríomhaire glúine sean + monatóir seachtrach",
+          "€0-150",
+          "Cistiní a bhfuil spás cuntair acu"
+        ],
+        [
+          "KDS sainthógtha le barra bump",
+          "Na céadta agus suas",
+          "Ard-mhéid, timpeallachtaí garbha"
+        ]
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Is tábhachtaí an scáileán ná an próiseálaí. I gcistin gheal teastaíonn taispeáint mhór le gile ard uait; léann cócaire é ó dhá mhéadar le lámha fliucha. Ceannaigh méid an scáileáin sula gceannaíonn tú luas."
+    },
+    {
+      "type": "h2",
+      "text": "Cathain nár chóir duit KDS a fháil"
+    },
+    {
+      "type": "p",
+      "text": "Bí macánta faoi seo. Níl scáileán ag teastáil ó chistin le beirt, áit ar féidir leis an duine a ghlacann an t-ordú casadh timpeall agus é a rá os ard — bheifeá ag cur céime leis. Is amhlaidh d'áit a dhéanann 20 cuairteoir san oíche le biachlár gearr seasta."
+    },
+    {
+      "type": "p",
+      "text": "Tá an tairseach thart ar an áit nach féidir le duine amháin staid an phas a choinneáil ina cheann a thuilleadh: roinnt stáisiún, orduithe ag teacht ó níos mó ná cainéal amháin (an t-urlár, [ordú QR](route:/order-taking), amach), nó níos mó ná thart ar 40 cuairteoir in aghaidh an tseal."
+    },
+    {
+      "type": "h2",
+      "text": "Conas é a chur ar bun gan cur isteach ar an tseirbhís"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Rith é taobh leis an bprintéir ar feadh seachtaine. Scaoileann an dá cheann, ní théann aon duine i scaoll, agus foghlaimíonn an fhoireann an scáileán gan riosca.",
+        "Tosaigh le scáileán amháin ag an bpas. Is fadhb don dara seachtain é ródú stáisiún ar stáisiún.",
+        "Socraígí cad is brí le \"bumpáil\" sula dtosaíonn sibh: leagtha ar phláta, nó tugtha don urlár? Tagann leath den mhearbhall sa chéad mhí as sin.",
+        "Feistigh é san áit a sroicheann cócaire lámha fliucha é agus nach suíonn gal air.",
+        "Múch an printéir nuair a bheidh seachtain iomlán caite gan aon duine ag síneadh chuige."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Fág an printéir plugáilte isteach, múchta, ar feadh míosa i ndiaidh an aistrithe. Ní chosnaíonn sé faic agus baineann sé an díospóireacht iomlán faoi cad a tharlódh dá dteipfeadh an scáileán i lár na seirbhíse."
+    },
+    {
+      "type": "h2",
+      "text": "Cad ar a mbreathnóidh tú nuair atá sé ag rith"
+    },
+    {
+      "type": "p",
+      "text": "Tuilleann trí uimhir a n-áit. Insíonn meánam duillín cad is gnáth ann. Insíonn an 90ú peircintíl cé chomh dona is atá do dhrochdhuillíní, agus sin an rud a chuimhníonn aíonna air. Insíonn am duillín in aghaidh na huaire cathain a chuirfidh tú duine leis. Má tá do mheánam seasmhach ach an 90ú peircintíl dhá oiread níos airde, is gnách gurb é mias amháin nó stáisiún amháin an fhadhb, ní an chistin ar fad."
+    },
+    {
+      "type": "cta",
+      "heading": "KDS a ritheann ar an táibléad i dtarraiceán d'oifige",
+      "text": "Tagann orduithe ón urlár agus ó chóid QR ar aon scáileán amháin, le huaineadóir ar gach duillín. Gan chrua-earraí le ceannach. 14 lá saor in aisce, gan chárta.",
+      "buttonLabel": "Féach ar an taispeáint chistine",
+      "routeKey": "/kitchen-display"
+    },
+    {
+      "type": "faq",
+      "heading": "Ceisteanna coitianta",
+      "items": [
+        {
+          "q": "Cad is brí le KDS?",
+          "a": "Kitchen display system, córas taispeána cistine — an scáileán sa chistin a thaispeánann orduithe isteach in ionad duillíní clóite."
+        },
+        {
+          "q": "Cé mhéad a chosnaíonn córas taispeána cistine?",
+          "a": "De ghnáth is cuid de do chóras orduithe an bogearra. Téann na crua-earraí ó thart ar €15 do lúbán, má úsáideann tú táibléad atá agat cheana, go dtí na céadta d'aonad sainthógtha le barra bump."
+        },
+        {
+          "q": "An féidir liom KDS a rith ar ghnáth-tháibléad?",
+          "a": "Is féidir. Ritheann taispeáint chistine IQ Rest sa bhrabhsálaí, mar sin oibríonn aon táibléad nó ríomhaire glúine ó na cúig bliana anuas. Bain úsáid as cás sceite-dhíonach."
+        },
+        {
+          "q": "An dteastaíonn idirlíon ó KDS?",
+          "a": "Teastaíonn nasc uaidh chun orduithe a fháil. Coinnigh an chistin ar phointe rochtana iontaofa seachas ar Wi-Fi na n-aíonna, agus coinnigh an printéir mar chúltaca don chéad mhí."
+        },
+        {
+          "q": "An oibríonn sé le horduithe cód QR?",
+          "a": "Sin an chúis is láidre ceann a bheith agat. Tagann orduithe a chuirtear ón mbord ar an scáileán céanna leis na cinn a ghlacann an fhoireann, mar sin bíonn scuaine amháin ag an gcistin in ionad dhá cheann."
+        }
+      ]
+    }
+  ]
+}

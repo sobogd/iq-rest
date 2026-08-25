@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "title": "Kuchyňský displej: potřebujete KDS? | IQ Rest",
+    "description": "Co KDS dělá, kolik hardware skutečně stojí, jak ho provozovat na tabletu, který už máte, a kterým kuchyním je lépe s papírovými bony."
+  },
+  "card": {
+    "title": "Kuchyňské displeje: co řeší, kolik stojí a kdy je papír pořád lepší",
+    "excerpt": "Obrazovka KDS může stát 800 € nebo nic, podle toho, jestli koupíte hardware, nebo použijete tablet ze šuplíku v kanceláři. Tady je, jak poznat, co potřebujete."
+  },
+  "h1": "Kuchyňský displej: co KDS doopravdy mění",
+  "intro": "Systém kuchyňského displeje nahrazuje tiskárnu chrlící bony obrazovkou, která ukazuje objednávky. Zní to kosmeticky a většinou to tak není: rozdíl je v tom, že obrazovka ví, kdy bon dorazil, který post ho má a jestli se ho někdo dotkl. Jestli to stojí za obrazovku ve vaší kuchyni, závisí na věcech, u kterých se vyplatí být konkrétní.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Co papírový bon neumí"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Neví, že je pozdě.** Bon ležící 22 minut vypadá přesně jako ten před 90 sekundami. KDS ho obarví.",
+        "**Nemůže být na dvou místech.** Stůl, který si dá předkrmy a dezert, potřebuje bon na studeném postu i na výdeji. Papír se trhá nebo kopíruje.",
+        "**Zmizí.** Bony padají za linku, zamastí se, přilepí se k něčemu. Objednávka prostě není.",
+        "**Nic vám potom neřekne.** Z napichovátka s bony neodpovíte na otázku, jak dlouho jste vydávali v sobotu mezi 21:00 a 22:00.",
+        "**Potřebuje funkční tiskárnu.** Termotiskárny se zasekávají, dojde jim papír a umírají v nejhorší chvíli."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Co vám KDS doopravdy dá"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Papírové bony",
+        "KDS"
+      ],
+      "rows": [
+        [
+          "Stáří objednávky",
+          "Odhadem",
+          "Časovač na každém bonu"
+        ],
+        [
+          "Rozdělení na posty",
+          "Jedna tiskárna, jedna kopie",
+          "Stejná objednávka na každé příslušné obrazovce"
+        ],
+        [
+          "Úpravy",
+          "Přepisované rukou",
+          "Označené u položky"
+        ],
+        [
+          "Ztracené objednávky",
+          "Stává se",
+          "Není co ztratit"
+        ],
+        [
+          "Časy bonů",
+          "Neměřitelné",
+          "Zaznamenané u každé objednávky"
+        ],
+        [
+          "Spotřební materiál",
+          "Role papíru",
+          "Žádný"
+        ],
+        [
+          "Náklad na start",
+          "Tiskárna + role",
+          "0 € na tabletu, který už máte"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Měření je ta podceňovaná část. Jakmile má každý bon čas příchodu a odbavení, uvidíte, že páteční průměr je v pořádku, ale vlna v 21:15 trvá o jedenáct minut déle — a to už je personální rozhodnutí, které opravdu můžete udělat."
+    },
+    {
+      "type": "h2",
+      "text": "Otázka hardwaru"
+    },
+    {
+      "type": "p",
+      "text": "Účelově stavěné KDS jednotky — utěsněné obrazovky s bump barem, dělané na horko a mastnotu — jsou výborné a drahé. Kuchyně s velkým objemem a fritézou dva metry vedle má rozumný argument jednu pořídit."
+    },
+    {
+      "type": "p",
+      "text": "Většina kuchyní to nepotřebuje. [Kuchyňský displej](route:/kitchen-display) IQ Rest běží v prohlížeči, takže hardwarem může být tablet, který už máte, levný Android tablet nebo starý notebook s monitorem. Dejte ho do pouzdra odolného proti stříkání, pověste mimo linii páry, a mezní náklad je nástěnný držák."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Sestava",
+        "Přibližná cena",
+        "Komu sedne"
+      ],
+      "rows": [
+        [
+          "Tablet, který už máte, + držák",
+          "15-40 €",
+          "Většině malých kuchyní"
+        ],
+        [
+          "Nový levný tablet + vodotěsné pouzdro",
+          "120-250 €",
+          "Druhému postu"
+        ],
+        [
+          "Starý notebook + externí monitor",
+          "0-150 €",
+          "Kuchyním s místem na lince"
+        ],
+        [
+          "Účelový KDS s bump barem",
+          "Několik stovek a výš",
+          "Velkému objemu a drsnému prostředí"
+        ]
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Obrazovka je důležitější než procesor. V osvětlené kuchyni chcete velký displej s vysokým jasem; kuchař ho čte ze dvou metrů mokrýma rukama. Kupujte úhlopříčku dřív než výkon."
+    },
+    {
+      "type": "h2",
+      "text": "Kdy si KDS pořizovat nemáte"
+    },
+    {
+      "type": "p",
+      "text": "Buďte v tomhle upřímní. Kuchyně o dvou lidech, kde se ten, kdo přijímá objednávku, může otočit a říct ji nahlas, obrazovku nepotřebuje — přidali byste krok. Totéž platí pro podnik s 20 kuverty za večer a krátkým, neměnným lístkem."
+    },
+    {
+      "type": "p",
+      "text": "Práh leží zhruba tam, kde jeden člověk už neudrží stav výdeje v hlavě: víc postů, objednávky přicházející z víc než jednoho kanálu (obsluha, [objednávka přes QR](route:/order-taking), s sebou) nebo víc než zhruba 40 kuvertů na směnu."
+    },
+    {
+      "type": "h2",
+      "text": "Jak ho nasadit bez rozvrácení směny"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Nechte ho týden běžet vedle tiskárny. Vyjíždí obojí, nikdo nepanikaří a personál se obrazovku naučí bez rizika.",
+        "Začněte s jednou obrazovkou na výdeji. Rozdělení post po postu je problém druhého týdne.",
+        "Domluvte se, co znamená „odbavit\", než začnete: naservírováno, nebo předáno obsluze? Polovina zmatku prvního měsíce pochází odsud.",
+        "Pověste ho tam, kam kuchař s mokrýma rukama dosáhne a kam nesedá pára.",
+        "Vypněte tiskárnu, až uplyne celý týden, aniž by po ní někdo sáhl."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Nechte tiskárnu měsíc po přechodu zapojenou, ale vypnutou. Nestojí to nic a odstraní to celou debatu o tom, co bude, když obrazovka uprostřed směny odejde."
+    },
+    {
+      "type": "h2",
+      "text": "Na co se dívat, když to běží"
+    },
+    {
+      "type": "p",
+      "text": "Tři čísla si na sebe vydělají. Medián času bonu vám řekne, co je normál. 90. percentil vám řekne, jak špatné jsou vaše špatné bony, a právě ty si hosté pamatují. Čas bonu po hodinách vám řekne, kdy přidat člověka. Pokud je medián stabilní, ale 90. percentil dvojnásobný, problém bývá v jednom jídle nebo jednom postu, ne v celé kuchyni."
+    },
+    {
+      "type": "cta",
+      "heading": "KDS, který běží na tabletu ze šuplíku ve vaší kanceláři",
+      "text": "Objednávky z obsluhy i z QR kódů přistávají na jedné obrazovce, s časovačem na každém bonu. Žádný hardware k nákupu. 14 dní zdarma, bez karty.",
+      "buttonLabel": "Prohlédnout kuchyňský displej",
+      "routeKey": "/kitchen-display"
+    },
+    {
+      "type": "faq",
+      "heading": "Časté dotazy",
+      "items": [
+        {
+          "q": "Co znamená KDS?",
+          "a": "Kitchen display system, systém kuchyňského displeje — obrazovka v kuchyni, která ukazuje příchozí objednávky místo tištěných bonů."
+        },
+        {
+          "q": "Kolik stojí systém kuchyňského displeje?",
+          "a": "Software bývá součástí vašeho objednávkového systému. Hardware se pohybuje od zhruba 15 € za držák, pokud použijete tablet, který už máte, po několik stovek za účelovou jednotku s bump barem."
+        },
+        {
+          "q": "Můžu KDS provozovat na běžném tabletu?",
+          "a": "Ano. Kuchyňský displej IQ Rest běží v prohlížeči, takže stačí jakýkoli tablet nebo notebook z posledních pěti let. Použijte pouzdro odolné proti stříkání."
+        },
+        {
+          "q": "Potřebuje KDS internet?",
+          "a": "Potřebuje připojení, aby přijímal objednávky. Držte kuchyni na spolehlivém přístupovém bodu místo na hostovské wi-fi a první měsíc si nechte tiskárnu jako zálohu."
+        },
+        {
+          "q": "Funguje to s objednávkami přes QR kód?",
+          "a": "To je nejsilnější důvod ho mít. Objednávky zadané od stolu přistávají na stejné obrazovce jako ty, které přijme obsluha, takže kuchyně má jednu frontu místo dvou."
+        }
+      ]
+    }
+  ]
+}
