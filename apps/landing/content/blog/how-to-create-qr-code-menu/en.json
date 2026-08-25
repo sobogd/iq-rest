@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "title": "How to Create a QR Code Menu: 3 Ways Compared | IQ Rest",
+    "description": "Three ways to make a QR code menu for your restaurant — free generator + PDF, a menu builder, or a full system. What each costs and what breaks."
+  },
+  "card": {
+    "title": "How to create a QR code menu (and which of the three ways survives a price change)",
+    "excerpt": "A free QR generator takes two minutes. Then your prices change. We walk through the three real options, what each one costs, and where each one falls apart."
+  },
+  "h1": "How to create a QR code menu for your restaurant",
+  "intro": "Making a QR code is the easy part — a free generator does it in two minutes. The hard part is what the QR code points at, because that decides whether you ever touch it again. Here are the three ways restaurants actually do this, in order of effort, with the failure mode of each.",
+  "blocks": [
+    { "type": "h2", "text": "Option 1: free QR generator pointing at a PDF" },
+    {
+      "type": "p",
+      "text": "Export your menu to PDF, upload it somewhere public (Google Drive, your website, a file host), paste that link into any free QR generator, print the code. Total cost: €0. Total time: about 15 minutes."
+    },
+    {
+      "type": "p",
+      "text": "What breaks: a PDF on a phone screen is a pinch-and-zoom exercise. Guests read a 300-page-wide document through a 6-inch window, and most give up and ask the waiter. Worse, most free generators create a **dynamic** code that routes through their domain — if you stop paying or they shut down, every printed code in your dining room goes dead. If you use a static code pointing straight at your file, the code is permanent but the file link must never change, which means you can't re-upload a corrected version without reprinting."
+    },
+    {
+      "type": "note",
+      "text": "If you go this route, use a **static** QR code pointing at a URL you control (your own domain), not at a Drive share link. That way you can swap the file behind the URL without reprinting."
+    },
+    { "type": "h2", "text": "Option 2: a menu builder page" },
+    {
+      "type": "p",
+      "text": "A step up: a tool that hosts a mobile page with your items, prices and photos, and hands you a QR code for it. You retype your menu once, and after that you edit prices in a form instead of in InDesign. Typical pricing runs from free with the vendor's branding to €10–€30 a month."
+    },
+    {
+      "type": "p",
+      "text": "What breaks: the menu is a brochure. It shows dishes and it stops there. Guests still flag down a waiter to order, the kitchen still gets handwritten tickets, and you still have no idea which dish gets viewed 400 times a month and ordered twice. For a bar with 12 items that's fine. For a restaurant doing 60 covers a night it leaves the actual bottleneck untouched."
+    },
+    { "type": "h2", "text": "Option 3: a menu that also takes the order" },
+    {
+      "type": "p",
+      "text": "The same QR code, but the page behind it can accept the order and send it to the kitchen. That changes what the QR code is for: it's no longer a way to display a menu, it's a way to shorten the time between a guest deciding and the kitchen starting."
+    },
+    {
+      "type": "p",
+      "text": "What breaks: it needs a decision from you about service style. QR ordering works beautifully in high-turnover rooms, terraces and busy bars, and feels wrong in a fine-dining room where the waiter is part of the product. Most venues run it as a view-only [digital menu](route:/digital-menu) first and switch [ordering](route:/order-taking) on later, once staff are comfortable."
+    },
+    { "type": "h2", "text": "The three side by side" },
+    {
+      "type": "table",
+      "headers": ["", "PDF + free QR", "Menu builder", "Menu + ordering"],
+      "rows": [
+        ["Setup time", "~15 min", "1–2 hours retyping", "~5 min with menu scan"],
+        ["Cost", "€0", "€0–€30/mo", "From €9.90/mo"],
+        ["Price change", "Re-export, re-upload", "Edit a field", "Edit a field"],
+        ["Readable on a phone", "Pinch and zoom", "Yes", "Yes"],
+        ["Languages", "One PDF per language", "Sometimes", "Automatic"],
+        ["Sold-out items", "No", "Usually", "One tap"],
+        ["Guest can order", "No", "No", "Yes"],
+        ["You see what sells", "No", "Rarely", "Yes"]
+      ]
+    },
+    { "type": "h2", "text": "How to actually do it, whichever option you pick" },
+    {
+      "type": "steps",
+      "items": [
+        "Get the menu into digital form. Retyping 80 items is the single biggest time sink — IQ Rest reads a photo of your paper menu and builds the items and prices for you, which takes the job from an evening to about five minutes.",
+        "Fix the structure before the design. Group items the way guests order (starters, mains, drinks), not the way your kitchen is organised. Long single lists kill scrolling.",
+        "Add photos where they change the decision. Every dish photographed is worse than five good ones on the items you want to sell.",
+        "Mark allergens now, not later. If you serve in the EU you need this anyway, and retrofitting it across 80 items is miserable.",
+        "Generate one QR code per table, not one for the whole room. Same menu, but the table number travels with the scan, which is what makes ordering and analytics possible later.",
+        "Print it so it survives service. Table tent or laminated sticker, code at least 3 cm wide, high contrast, away from the candle."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Print a short URL under the QR code (for example iqrest.com/m/yourvenue). Roughly one guest in twenty has a camera that won't scan, and a typed address saves the interaction."
+    },
+    { "type": "h2", "text": "Mistakes that cost the most" },
+    {
+      "type": "list",
+      "items": [
+        "**A code that expires.** Free generators with a trial period produce codes that stop resolving. You find out from a guest, mid-service.",
+        "**One code for the whole restaurant.** Cheap now, but it blocks table ordering and any per-table data forever.",
+        "**A code printed too small.** Under about 2.5 cm, older phone cameras struggle in low restaurant light.",
+        "**Linking to your homepage.** The guest lands on a marketing site and has to find the menu. Link straight to the menu.",
+        "**Forgetting the QR code exists.** A menu nobody updates is worse than paper, because at least paper looks obviously out of date."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Skip the retyping",
+      "text": "Upload a photo of your current paper menu and get a working QR menu in about five minutes. 14 days free, no card required.",
+      "buttonLabel": "See how the QR menu works",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently asked questions",
+      "items": [
+        {
+          "q": "Can I create a QR code menu for free?",
+          "a": "Yes — a free generator plus a PDF costs nothing. The catch is that free generators often issue codes that expire or route through a domain you don't control, and a PDF is hard to read on a phone. See our breakdown of [what free QR menus actually cost](blog:free-qr-code-menu)."
+        },
+        {
+          "q": "Do guests need an app to scan it?",
+          "a": "No. Every phone made in the last several years scans QR codes with the built-in camera, and the menu opens in the browser. Nothing to install, no sign-up."
+        },
+        {
+          "q": "How big should the QR code be printed?",
+          "a": "At least 3 cm across for a table tent. The rule of thumb is that scanning distance is about ten times the code's width, so a 3 cm code reads comfortably from 30 cm."
+        },
+        {
+          "q": "Can I change the menu without reprinting the QR codes?",
+          "a": "With a hosted menu, yes — the code points at a fixed address and the content behind it changes. With a QR code pointing directly at a PDF file, you need to keep the file at the exact same URL."
+        },
+        {
+          "q": "Should the QR code go on the table or on the paper menu?",
+          "a": "On the table, if you want guests to use it. A code printed on the paper menu only gets scanned after someone has already handed over the paper menu, which defeats most of the point."
+        }
+      ]
+    }
+  ]
+}

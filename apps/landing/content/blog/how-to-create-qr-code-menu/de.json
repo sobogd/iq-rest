@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "QR-Code-Speisekarte erstellen: 3 Wege | IQ Rest",
+    "description": "Drei Wege zur QR-Speisekarte: kostenloser Generator mit PDF, Menü-Baukasten oder komplettes System. Was jeder kostet und woran jeder scheitert."
+  },
+  "card": {
+    "title": "QR-Code-Speisekarte erstellen (und welcher der drei Wege eine Preisänderung übersteht)",
+    "excerpt": "Ein kostenloser QR-Generator braucht zwei Minuten. Dann ändern sich die Preise. Wir gehen die drei realen Optionen durch, was sie kosten und wo sie brechen."
+  },
+  "h1": "So erstellen Sie eine QR-Code-Speisekarte für Ihr Restaurant",
+  "intro": "Den QR-Code zu erzeugen ist der einfache Teil – jeder kostenlose Generator schafft das in zwei Minuten. Schwierig ist, worauf der Code zeigt, denn das entscheidet, ob Sie ihn je wieder anfassen. Hier sind die drei Wege, die Restaurants tatsächlich gehen, nach Aufwand sortiert, mit dem typischen Fehlerfall jedes einzelnen.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Variante 1: kostenloser QR-Generator mit PDF"
+    },
+    {
+      "type": "p",
+      "text": "Speisekarte als PDF exportieren, irgendwo öffentlich hochladen (Google Drive, eigene Website, ein Filehoster), den Link in einen kostenlosen QR-Generator einfügen, Code ausdrucken. Gesamtkosten: 0 €. Gesamtzeit: etwa 15 Minuten."
+    },
+    {
+      "type": "p",
+      "text": "Was bricht: Ein PDF auf dem Handybildschirm ist eine Zoom-Übung. Gäste lesen ein 300 mm breites Dokument durch ein 15-cm-Fenster, und die meisten geben auf und fragen den Kellner. Schlimmer noch: Die meisten kostenlosen Generatoren erzeugen einen **dynamischen** Code, der über deren Domain läuft – zahlen Sie nicht mehr oder wird der Dienst eingestellt, sind alle gedruckten Codes im Gastraum tot. Nutzen Sie einen statischen Code direkt auf die Datei, ist der Code dauerhaft, aber der Dateilink darf sich nie ändern, das heißt: keine korrigierte Fassung ohne Neudruck."
+    },
+    {
+      "type": "note",
+      "text": "Wenn Sie diesen Weg gehen, nutzen Sie einen **statischen** QR-Code auf eine URL, die Ihnen gehört (eigene Domain), nicht auf einen Drive-Link. Dann können Sie die Datei dahinter austauschen, ohne neu zu drucken."
+    },
+    {
+      "type": "h2",
+      "text": "Variante 2: eine Seite aus einem Menü-Baukasten"
+    },
+    {
+      "type": "p",
+      "text": "Eine Stufe höher: ein Werkzeug, das eine mobile Seite mit Ihren Gerichten, Preisen und Fotos hostet und Ihnen einen QR-Code dafür gibt. Sie tippen die Karte einmal ab und ändern Preise danach in einem Formular statt in InDesign. Üblich sind kostenlos mit Anbieter-Branding bis 10–30 € pro Monat."
+    },
+    {
+      "type": "p",
+      "text": "Was bricht: Die Karte ist eine Broschüre. Sie zeigt Gerichte, mehr nicht. Gäste winken weiterhin einem Kellner, die Küche bekommt weiterhin handgeschriebene Bons, und Sie wissen weiterhin nicht, welches Gericht 400-mal im Monat angesehen und zweimal bestellt wird. Für eine Bar mit 12 Positionen reicht das. Für ein Restaurant mit 60 Gedecken am Abend bleibt der eigentliche Engpass unangetastet."
+    },
+    {
+      "type": "h2",
+      "text": "Variante 3: eine Karte, die auch bestellt"
+    },
+    {
+      "type": "p",
+      "text": "Derselbe QR-Code, aber die Seite dahinter kann die Bestellung annehmen und an die Küche schicken. Das ändert den Zweck des Codes: Er zeigt nicht mehr eine Karte an, er verkürzt die Zeit zwischen der Entscheidung des Gastes und dem Start in der Küche."
+    },
+    {
+      "type": "p",
+      "text": "Was bricht: Sie müssen sich über Ihren Servicestil klarwerden. QR-Bestellung funktioniert hervorragend bei hoher Fluktuation, auf Terrassen und in vollen Bars und wirkt fehl am Platz im Fine Dining, wo der Kellner Teil des Produkts ist. Die meisten Betriebe starten mit einer reinen Anzeige-[Speisekarte](route:/digital-menu) und schalten das [Bestellen](route:/order-taking) später frei, wenn das Team sich sicher fühlt."
+    },
+    {
+      "type": "h2",
+      "text": "Die drei im Vergleich"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "PDF + Gratis-QR",
+        "Menü-Baukasten",
+        "Karte + Bestellung"
+      ],
+      "rows": [
+        [
+          "Einrichtungszeit",
+          "~15 Min.",
+          "1–2 Stunden Abtippen",
+          "~5 Min. per Karten-Scan"
+        ],
+        [
+          "Kosten",
+          "0 €",
+          "0–30 €/Monat",
+          "Ab 9,90 €/Monat"
+        ],
+        [
+          "Preisänderung",
+          "Neu exportieren, neu hochladen",
+          "Ein Feld ändern",
+          "Ein Feld ändern"
+        ],
+        [
+          "Auf dem Handy lesbar",
+          "Zoomen und schieben",
+          "Ja",
+          "Ja"
+        ],
+        [
+          "Sprachen",
+          "Ein PDF je Sprache",
+          "Manchmal",
+          "Automatisch"
+        ],
+        [
+          "Ausverkaufte Gerichte",
+          "Nein",
+          "Meistens",
+          "Ein Tipp"
+        ],
+        [
+          "Gast kann bestellen",
+          "Nein",
+          "Nein",
+          "Ja"
+        ],
+        [
+          "Sie sehen, was sich verkauft",
+          "Nein",
+          "Selten",
+          "Ja"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Wie Sie es konkret angehen, egal welche Variante"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Bringen Sie die Karte in digitale Form. 80 Positionen abzutippen ist der größte Zeitfresser – IQ Rest liest ein Foto Ihrer Papierkarte und legt Gerichte und Preise selbst an, aus einem Abend werden etwa fünf Minuten.",
+        "Struktur vor Design. Gruppieren Sie so, wie Gäste bestellen (Vorspeisen, Hauptgerichte, Getränke), nicht so, wie Ihre Küche organisiert ist. Lange Einzellisten ruinieren das Scrollen.",
+        "Fotos dorthin, wo sie die Entscheidung ändern. Jedes Gericht zu fotografieren ist schlechter als fünf gute Bilder bei den Gerichten, die Sie verkaufen wollen.",
+        "Allergene jetzt kennzeichnen, nicht später. In der EU brauchen Sie sie ohnehin, und sie nachträglich über 80 Positionen zu ziehen ist eine Qual.",
+        "Erzeugen Sie einen QR-Code pro Tisch, nicht einen für den ganzen Raum. Gleiche Karte, aber die Tischnummer reist mit dem Scan mit – genau das macht Bestellung und Auswertung später möglich.",
+        "Drucken Sie so, dass es den Service übersteht. Tischaufsteller oder laminierter Aufkleber, Code mindestens 3 cm breit, kontraststark, weg von der Kerze."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Drucken Sie eine kurze Webadresse unter den Code (zum Beispiel iqrest.com/m/ihrlokal). Etwa jeder zwanzigste Gast hat eine Kamera, die nicht scannt, und eine tippbare Adresse rettet die Situation."
+    },
+    {
+      "type": "h2",
+      "text": "Die teuersten Fehler"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Ein Code, der abläuft.** Gratis-Generatoren mit Testphase erzeugen Codes, die irgendwann ins Leere laufen. Sie erfahren es von einem Gast, mitten im Service.",
+        "**Ein Code für das ganze Restaurant.** Jetzt billig, blockiert aber für immer Tischbestellung und jede tischbezogene Auswertung.",
+        "**Zu klein gedruckt.** Unter etwa 2,5 cm tun sich ältere Handykameras im gedämpften Licht schwer.",
+        "**Link auf die Startseite.** Der Gast landet auf einer Marketingseite und muss die Karte suchen. Verlinken Sie direkt die Karte.",
+        "**Vergessen, dass der Code existiert.** Eine Karte, die niemand pflegt, ist schlechter als Papier – Papier sieht wenigstens sichtbar veraltet aus."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Sparen Sie sich das Abtippen",
+      "text": "Laden Sie ein Foto Ihrer Papierkarte hoch und haben Sie in etwa fünf Minuten eine funktionierende QR-Karte. 14 Tage kostenlos, ohne Karte.",
+      "buttonLabel": "So funktioniert die QR-Karte",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Häufige Fragen",
+      "items": [
+        {
+          "q": "Kann ich eine QR-Code-Speisekarte kostenlos erstellen?",
+          "a": "Ja – ein kostenloser Generator plus PDF kostet nichts. Der Haken: Gratis-Generatoren vergeben oft Codes, die ablaufen oder über eine fremde Domain laufen, und ein PDF ist auf dem Handy schwer lesbar. Details in [was kostenlose QR-Karten wirklich kosten](blog:free-qr-code-menu)."
+        },
+        {
+          "q": "Brauchen Gäste eine App zum Scannen?",
+          "a": "Nein. Jedes Handy der letzten Jahre scannt QR-Codes mit der eingebauten Kamera, und die Karte öffnet sich im Browser. Nichts installieren, keine Anmeldung."
+        },
+        {
+          "q": "Wie groß muss der QR-Code gedruckt werden?",
+          "a": "Mindestens 3 cm für einen Tischaufsteller. Faustregel: Die Scan-Entfernung beträgt etwa das Zehnfache der Codebreite, ein 3-cm-Code liest sich also bequem aus 30 cm."
+        },
+        {
+          "q": "Kann ich die Karte ändern, ohne die QR-Codes neu zu drucken?",
+          "a": "Bei einer gehosteten Karte ja – der Code zeigt auf eine feste Adresse, der Inhalt dahinter ändert sich. Bei einem QR-Code direkt auf eine PDF-Datei muss die Datei exakt unter derselben URL bleiben."
+        },
+        {
+          "q": "Gehört der QR-Code auf den Tisch oder auf die Papierkarte?",
+          "a": "Auf den Tisch, wenn Gäste ihn nutzen sollen. Ein Code auf der Papierkarte wird erst gescannt, nachdem jemand die Papierkarte gebracht hat – womit der Sinn weitgehend entfällt."
+        }
+      ]
+    }
+  ]
+}

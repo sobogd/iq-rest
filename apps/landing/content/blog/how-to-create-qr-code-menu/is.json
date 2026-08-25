@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "Hvernig á að búa til QR-matseðil: 3 leiðir | IQ Rest",
+    "description": "Þrjár leiðir til að búa til QR-matseðil fyrir veitingastaðinn: ókeypis kóðagerð með PDF, matseðlasmiður eða heilt kerfi. Hvað kostar og hvað bilar."
+  },
+  "card": {
+    "title": "Hvernig á að búa til matseðil með QR-kóða (og hver þriggja leiða lifir af verðbreytingu)",
+    "excerpt": "Ókeypis QR-kóðagerð tekur tvær mínútur. Svo breytast verðin. Við förum yfir raunverulegu kostina þrjá, hvað þeir kosta og hvar hver þeirra hrynur."
+  },
+  "h1": "Hvernig á að búa til matseðil með QR-kóða fyrir veitingastaðinn þinn",
+  "intro": "Að búa til QR-kóðann er auðveldi hlutinn – hvaða ókeypis þjónusta sem er gerir það á tveimur mínútum. Erfiða spurningin er hvert kóðinn vísar, því það ræður því hvort þú snertir hann nokkru sinni aftur. Hér eru leiðirnar þrjár sem veitingastaðir nota í raun, raðað eftir vinnu, með dæmigerðri bilun hverrar.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Leið 1: ókeypis QR-kóðagerð sem vísar á PDF"
+    },
+    {
+      "type": "p",
+      "text": "Fluttu matseðilinn út í PDF, settu hann einhvers staðar opinberlega (Google Drive, eigin vefur, skráaþjónusta), límdu hlekkinn inn í hvaða ókeypis QR-kóðagerð sem er og prentaðu kóðann. Heildarkostnaður: 0 €. Heildartími: um 15 mínútur."
+    },
+    {
+      "type": "p",
+      "text": "Hvað bilar: PDF á símaskjá er æfing í aðdrætti. Gesturinn les 300 mm breitt skjal í gegnum 15 cm glugga og flestir gefast upp og spyrja þjóninn. Verra er að flestar ókeypis lausnir búa til **breytilegan** kóða sem fer í gegnum þeirra eigið lén – hættir þú að borga eða loki þjónustan er hver einasti prentaði kóði í salnum dauður. Notirðu fastan kóða beint á skrána er kóðinn varanlegur, en hlekkurinn á skrána má aldrei breytast, sem þýðir að þú getur ekki hlaðið upp leiðréttri útgáfu án þess að prenta aftur."
+    },
+    {
+      "type": "note",
+      "text": "Ef þú ferð þessa leið, notaðu **fastan** QR-kóða sem vísar á vistfang sem þú stýrir sjálf/ur (eigið lén), ekki á Drive-hlekk. Þá getur þú skipt út skránni á bak við vistfangið án þess að prenta aftur."
+    },
+    {
+      "type": "h2",
+      "text": "Leið 2: síða úr matseðlasmið"
+    },
+    {
+      "type": "p",
+      "text": "Þrepi ofar: verkfæri sem hýsir símasíðu með réttunum þínum, verðum og myndum og gefur þér QR-kóða á hana. Þú slærð matseðilinn inn einu sinni og breytir svo verðum í eyðublaði í stað InDesign. Algeng verð eru frá ókeypis með merki þjónustunnar upp í 10-30 € á mánuði."
+    },
+    {
+      "type": "p",
+      "text": "Hvað bilar: matseðillinn er bæklingur. Hann sýnir rétti og þar við situr. Gesturinn veifar áfram þjóni til að panta, eldhúsið fær áfram handskrifaða miða, og þú veist áfram ekki hvaða réttur er skoðaður 400 sinnum í mánuði og pantaður tvisvar. Fyrir bar með 12 línur er þetta fínt. Fyrir veitingastað með 60 gesti á kvöldi stendur raunverulegi flöskuhálsinn ósnertur."
+    },
+    {
+      "type": "h2",
+      "text": "Leið 3: matseðill sem tekur líka við pöntuninni"
+    },
+    {
+      "type": "p",
+      "text": "Sami QR-kóði, en síðan á bak við getur tekið við pöntuninni og sent hana í eldhúsið. Það breytir tilgangi kóðans: hann sýnir ekki lengur matseðil, hann styttir tímann frá því gesturinn ákveður sig þar til eldhúsið byrjar."
+    },
+    {
+      "type": "p",
+      "text": "Hvað bilar: það krefst ákvörðunar frá þér um þjónustustíl. QR-pöntun virkar frábærlega þar sem velta er mikil, á veröndum og á fjölmennum börum, og hljómar rangt á fínum veitingastað þar sem þjónninn er hluti af vörunni. Flestir byrja með [stafrænan matseðil](route:/digital-menu) sem aðeins er hægt að lesa og kveikja á [pöntun](route:/order-taking) síðar, þegar starfsfólkið er öruggt."
+    },
+    {
+      "type": "h2",
+      "text": "Leiðirnar þrjár hlið við hlið"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "PDF + ókeypis QR",
+        "Matseðlasmiður",
+        "Matseðill + pantanir"
+      ],
+      "rows": [
+        [
+          "Uppsetningartími",
+          "~15 mín",
+          "1-2 klst. innsláttur",
+          "~5 mín með skönnun matseðils"
+        ],
+        [
+          "Kostnaður",
+          "0 €",
+          "0-30 €/mán.",
+          "Frá 9,90 €/mán."
+        ],
+        [
+          "Verðbreyting",
+          "Flytja út og hlaða upp aftur",
+          "Breyta einum reit",
+          "Breyta einum reit"
+        ],
+        [
+          "Læsilegt í síma",
+          "Aðdráttur og dráttur",
+          "Já",
+          "Já"
+        ],
+        [
+          "Tungumál",
+          "Ein PDF fyrir hvert tungumál",
+          "Stundum",
+          "Sjálfkrafa"
+        ],
+        [
+          "Uppseldir réttir",
+          "Nei",
+          "Yfirleitt já",
+          "Eitt bank"
+        ],
+        [
+          "Gestur getur pantað",
+          "Nei",
+          "Nei",
+          "Já"
+        ],
+        [
+          "Þú sérð hvað selst",
+          "Nei",
+          "Sjaldan",
+          "Já"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Hvernig þú gerir þetta í raun, sama hvaða leið þú velur"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Komdu matseðlinum á stafrænt form. Að slá inn 80 línur er langstærsti tímaþjófurinn – IQ Rest les mynd af pappírsmatseðlinum þínum og býr til réttina og verðin fyrir þig, sem breytir heilu kvöldi í um fimm mínútur.",
+        "Lagaðu uppbygginguna á undan útlitinu. Flokkaðu eins og gestir panta (forréttir, aðalréttir, drykkir), ekki eins og eldhúsið þitt er skipulagt. Langir flatir listar drepa skrunið.",
+        "Settu myndir þar sem þær breyta ákvörðuninni. Að mynda hvern einasta rétt er verra en fimm góðar myndir við réttina sem þú vilt selja.",
+        "Merktu ofnæmisvalda núna, ekki síðar. Innan ESB þarftu þá hvort eð er, og að bæta þeim við 80 línur eftir á er kvöl.",
+        "Búðu til einn QR-kóða á hvert borð, ekki einn fyrir allan salinn. Sami matseðill, en borðnúmerið ferðast með skönnuninni, og það er einmitt það sem gerir pantanir og tölfræði mögulegar síðar.",
+        "Prentaðu hann þannig að hann lifi af vakt. Borðstandur eða plastaður límmiði, kóði minnst 3 cm breiður, mikil birtuskil, fjarri kertinu."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Prentaðu stutt vefslóð undir kóðanum (til dæmis iqrest.com/m/stadurinnthinn). Um það bil einn af hverjum tuttugu gestum er með myndavél sem skannar ekki, og vefslóð sem hægt er að slá inn bjargar augnablikinu."
+    },
+    {
+      "type": "h2",
+      "text": "Mistökin sem kosta mest"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Kóði sem rennur út.** Ókeypis lausnir með prufutímabili búa til kóða sem einn daginn leiða ekki neitt. Þú frétti það frá gesti, í miðri vakt.",
+        "**Einn kóði fyrir allan staðinn.** Ódýrt núna, en lokar að eilífu á borðpöntun og öll gögn eftir borðum.",
+        "**Kóði prentaður of lítill.** Undir um 2,5 cm eiga eldri símamyndavélar erfitt í dempaðri birtu salarins.",
+        "**Hlekkur á forsíðuna.** Gesturinn lendir á markaðsvef og þarf að leita að matseðlinum. Tengdu beint á matseðilinn.",
+        "**Að gleyma því að kóðinn sé til.** Matseðill sem enginn uppfærir er verri en pappír, því pappírinn lítur að minnsta kosti sýnilega út fyrir að vera úreltur."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Slepptu innslættinum",
+      "text": "Hlaðið upp mynd af núverandi pappírsmatseðli og fáðu virkan QR-matseðil á um fimm mínútum. 14 dagar frítt, án korts.",
+      "buttonLabel": "Sjáðu hvernig QR-matseðillinn virkar",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Algengar spurningar",
+      "items": [
+        {
+          "q": "Get ég búið til matseðil með QR-kóða ókeypis?",
+          "a": "Já – ókeypis kóðagerð auk PDF kostar ekkert. Gallinn er að ókeypis lausnir gefa oft út kóða sem renna út eða fara í gegnum lén sem þú stýrir ekki, og að PDF er erfitt að lesa í síma. Við fórum yfir það í [hvað ókeypis QR-matseðlar kosta í raun](blog:free-qr-code-menu)."
+        },
+        {
+          "q": "Þurfa gestir app til að skanna?",
+          "a": "Nei. Sérhver sími síðustu ára skannar QR-kóða með innbyggðu myndavélinni og matseðillinn opnast í vafranum. Ekkert að setja upp, engin skráning."
+        },
+        {
+          "q": "Hversu stóran á að prenta QR-kóðann?",
+          "a": "Að minnsta kosti 3 cm breiðan fyrir borðstand. Þumalputtareglan er að skönnunarfjarlægð sé um tífalt breidd kóðans, svo 3 cm lesast þægilega úr 30 cm."
+        },
+        {
+          "q": "Get ég breytt matseðlinum án þess að prenta QR-kóðana aftur?",
+          "a": "Með hýstum matseðli, já – kóðinn vísar á fast vistfang og innihaldið á bak við það breytist. Með QR-kóða beint á PDF-skrá verður skráin að liggja á nákvæmlega sama vistfangi."
+        },
+        {
+          "q": "Á QR-kóðinn að vera á borðinu eða á pappírsmatseðlinum?",
+          "a": "Á borðinu, ef þú vilt að hann sé notaður. Kóði prentaður á pappírsmatseðilinn er ekki skannaður fyrr en einhver hefur þegar rétt fram pappírsmatseðilinn, og þá er megnið af tilganginum farið."
+        }
+      ]
+    }
+  ]
+}

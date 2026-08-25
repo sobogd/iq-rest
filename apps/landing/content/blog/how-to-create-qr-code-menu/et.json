@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "Kuidas teha QR-menüü: 3 võimalust | IQ Rest",
+    "description": "Kolm viisi restorani QR-menüü tegemiseks: tasuta generaator ja PDF, menüükoostaja või täislahendus. Mida need maksavad ja kus need katki lähevad."
+  },
+  "card": {
+    "title": "Kuidas teha QR-koodiga menüü (ja milline kolmest viisist elab hinnamuutuse üle)",
+    "excerpt": "Tasuta QR-generaator võtab kaks minutit. Siis muutuvad hinnad. Käime läbi kolm tegelikku valikut, nende hinna ja selle, kus kumbki kokku kukub."
+  },
+  "h1": "Kuidas teha oma restoranile QR-koodiga menüü",
+  "intro": "QR-koodi tegemine on lihtne osa – iga tasuta generaator saab sellega hakkama kahe minutiga. Raske on see, kuhu kood viitab, sest just see otsustab, kas sa seda kunagi veel puudutad. Siin on kolm viisi, mida restoranid tegelikult kasutavad, vaeva järjekorras, koos igaühe tüüpilise rikkega.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Valik 1: tasuta QR-generaator, mis viitab PDF-ile"
+    },
+    {
+      "type": "p",
+      "text": "Ekspordi menüü PDF-iks, lae see kuhugi avalikku kohta (Google Drive, oma veebileht, failiteenus), kleebi link ükskõik millisesse tasuta QR-generaatorisse ja trüki kood välja. Kogumaksumus: 0 €. Koguaeg: umbes 15 minutit."
+    },
+    {
+      "type": "p",
+      "text": "Mis katki läheb: PDF telefoniekraanil on suurendamisharjutus. Külaline loeb 300 mm laiust dokumenti 15 sentimeetri suuruse akna kaudu ja enamik annab alla ja küsib ettekandjalt. Hullem veel: enamik tasuta generaatoreid teeb **dünaamilise** koodi, mis käib läbi nende domeeni – kui lõpetad maksmise või teenus suletakse, on iga saali trükitud kood surnud. Kui kasutad staatilist koodi otse failile, on kood püsiv, aga faili link ei tohi kunagi muutuda, mis tähendab, et parandatud versiooni ei saa üles laadida ilma uuesti trükkimata."
+    },
+    {
+      "type": "note",
+      "text": "Kui lähed seda teed, kasuta **staatilist** QR-koodi, mis viitab sinu enda kontrollitavale aadressile (oma domeen), mitte Drive'i lingile. Siis saad aadressi taga oleva faili välja vahetada ilma uuesti trükkimata."
+    },
+    {
+      "type": "h2",
+      "text": "Valik 2: menüükoostajaga tehtud leht"
+    },
+    {
+      "type": "p",
+      "text": "Aste kõrgemal: tööriist, mis majutab mobiililehte sinu roogade, hindade ja fotodega ning annab selle jaoks QR-koodi. Trükid menüü korra sisse ja muudad edaspidi hindu vormis, mitte InDesignis. Tavahinnad ulatuvad tasuta variandist teenusepakkuja logoga kuni 10-30 euroni kuus."
+    },
+    {
+      "type": "p",
+      "text": "Mis katki läheb: menüü on voldik. Näitab roogasid ja sinna see jääb. Külaline viipab endiselt ettekandjale, et tellida, köök saab endiselt käsitsi kirjutatud tellimuslehti ja sina ei tea endiselt, millist rooga vaadatakse 400 korda kuus ja tellitakse kaks. Kaheteistkümne reaga baarile piisab. Restoranile, kus on õhtus 60 külalist, jääb tegelik pudelikael puutumata."
+    },
+    {
+      "type": "h2",
+      "text": "Valik 3: menüü, mis võtab ka tellimuse vastu"
+    },
+    {
+      "type": "p",
+      "text": "Sama QR-kood, aga selle taga olev leht suudab tellimuse vastu võtta ja kööki saata. See muudab koodi mõtet: see ei näita enam menüüd, vaid lühendab aega külalise otsuse ja köögi alustamise vahel."
+    },
+    {
+      "type": "p",
+      "text": "Mis katki läheb: see nõuab sinult otsust teenindusstiili kohta. QR-tellimine töötab suurepäraselt kiire käibega saalides, terrassidel ja tihedates baarides ning mõjub valena tipprestoranis, kus ettekandja on osa tootest. Enamik alustab ainult loetava [digitaalse menüüga](route:/digital-menu) ja lülitab [tellimise](route:/order-taking) sisse hiljem, kui meeskond on harjunud."
+    },
+    {
+      "type": "h2",
+      "text": "Kolm kõrvuti"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "PDF + tasuta QR",
+        "Menüükoostaja",
+        "Menüü + tellimused"
+      ],
+      "rows": [
+        [
+          "Käivitusaeg",
+          "~15 min",
+          "1-2 tundi tippimist",
+          "~5 min menüü skaneerimisega"
+        ],
+        [
+          "Maksumus",
+          "0 €",
+          "0-30 €/kuus",
+          "Alates 9,90 €/kuus"
+        ],
+        [
+          "Hinnamuudatus",
+          "Uuesti eksportida ja laadida",
+          "Muuda üht välja",
+          "Muuda üht välja"
+        ],
+        [
+          "Loetav telefonis",
+          "Suurendamine ja lohistamine",
+          "Jah",
+          "Jah"
+        ],
+        [
+          "Keeled",
+          "Üks PDF keele kohta",
+          "Mõnikord",
+          "Automaatselt"
+        ],
+        [
+          "Otsa saanud road",
+          "Ei",
+          "Enamasti jah",
+          "Üks puude"
+        ],
+        [
+          "Külaline saab tellida",
+          "Ei",
+          "Ei",
+          "Jah"
+        ],
+        [
+          "Näed, mis müüb",
+          "Ei",
+          "Harva",
+          "Jah"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kuidas seda päriselt teha, ükskõik millise valiku teed"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Vii menüü digitaalsesse vormi. 80 rea sisestamine on suurim ajaraiskaja – IQ Rest loeb sinu paberimenüü fotot ja loob road ja hinnad sinu eest, mis muudab terve õhtu umbes viieks minutiks.",
+        "Korrasta struktuur enne kujundust. Rühmita nii, nagu külalised tellivad (eelroad, pearoad, joogid), mitte nii, nagu su köök on korraldatud. Pikad lamedad nimekirjad tapavad kerimise.",
+        "Pane fotod sinna, kus need otsust muudavad. Iga roa pildistamine on halvem kui viis head pilti nende roogade juures, mida tahad müüa.",
+        "Märgi allergeenid kohe, mitte hiljem. EL-is on neid niikuinii vaja ja nende tagantjärele lisamine 80 reale on piin.",
+        "Loo üks QR-kood laua kohta, mitte üks kogu saali peale. Sama menüü, aga lauanumber liigub skaneerimisega kaasa, ja just see teeb hiljem võimalikuks tellimused ja statistika.",
+        "Trüki see nii, et see elaks vahetuse üle. Lauaalus või lamineeritud kleebis, kood vähemalt 3 cm lai, tugev kontrast, küünlast eemal."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Trüki koodi alla lühike veebiaadress (näiteks iqrest.com/m/sinukoht). Umbes ühel külalisel kahekümnest on kaamera, mis ei skaneeri, ja sisestatav aadress päästab olukorra."
+    },
+    {
+      "type": "h2",
+      "text": "Kõige kallimad vead"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Kood, mis aegub.** Prooviperioodiga tasuta generaatorid toodavad koode, mis ühel päeval enam kuhugi ei vii. Saad teada külaliselt, keset vahetust.",
+        "**Üks kood kogu restoranile.** Praegu odav, aga blokeerib jäädavalt lauast tellimise ja igasuguse lauapõhise info.",
+        "**Liiga väikeselt trükitud kood.** Alla umbes 2,5 sentimeetri on vanematel telefonikaameratel saali hämaras valguses raske.",
+        "**Link avalehele.** Külaline maandub turunduslehel ja peab menüüd otsima. Lingi otse menüüle.",
+        "**Unustada, et kood olemas on.** Menüü, mida keegi ei uuenda, on halvem kui paber, sest paber vähemalt näeb nähtavalt vananenud välja."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Jäta tippimine vahele",
+      "text": "Lae üles foto oma praegusest paberimenüüst ja saa toimiv QR-menüü umbes viie minutiga. 14 päeva tasuta, ilma kaardita.",
+      "buttonLabel": "Vaata, kuidas QR-menüü töötab",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Korduma kippuvad küsimused",
+      "items": [
+        {
+          "q": "Kas ma saan QR-koodiga menüü tasuta teha?",
+          "a": "Jah – tasuta generaator pluss PDF ei maksa midagi. Konks on selles, et tasuta generaatorid annavad sageli koode, mis aeguvad või käivad läbi domeeni, mida sa ei kontrolli, ja et PDF-i on telefonis raske lugeda. Võtsime selle lahti artiklis [mida tasuta QR-menüüd tegelikult maksavad](blog:free-qr-code-menu)."
+        },
+        {
+          "q": "Kas külalised vajavad skaneerimiseks rakendust?",
+          "a": "Ei. Iga viimaste aastate telefon skaneerib QR-koode sisseehitatud kaameraga ja menüü avaneb brauseris. Midagi pole vaja paigaldada, registreerimist pole."
+        },
+        {
+          "q": "Kui suurelt tuleks QR-kood trükkida?",
+          "a": "Lauaaluse jaoks vähemalt 3 cm laiuselt. Rusikareegel on, et skaneerimiskaugus on umbes kümme korda koodi laius, seega 3 cm loetakse mugavalt 30 cm kauguselt."
+        },
+        {
+          "q": "Kas ma saan menüüd muuta ilma QR-koode uuesti trükkimata?",
+          "a": "Majutatud menüü puhul jah – kood viitab püsivale aadressile ja selle taga olev sisu muutub. Otse PDF-failile viitava QR-koodi puhul peab fail jääma täpselt samale aadressile."
+        },
+        {
+          "q": "Kas QR-kood käib lauale või paberimenüüle?",
+          "a": "Lauale, kui tahad, et seda kasutataks. Paberimenüüle trükitud koodi skaneeritakse alles pärast seda, kui keegi on paberimenüü juba ulatanud, ja siis on suurem osa mõttest kadunud."
+        }
+      ]
+    }
+  ]
+}

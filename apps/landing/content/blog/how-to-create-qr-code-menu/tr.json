@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "QR kodlu menü nasıl yapılır: 3 yol | IQ Rest",
+    "description": "Restoranınız için QR menü yapmanın üç yolu: ücretsiz üretici ve PDF, menü düzenleyici ya da tam sistem. Her birinin maliyeti ve nerede tıkandığı."
+  },
+  "card": {
+    "title": "QR kodlu menü nasıl yapılır (ve üç yoldan hangisi bir fiyat değişikliğinden sağ çıkar)",
+    "excerpt": "Ücretsiz bir QR üreticisi iki dakika sürer. Sonra fiyatlarınız değişir. Üç gerçek seçeneği, maliyetlerini ve her birinin nerede dağıldığını ele alıyoruz."
+  },
+  "h1": "Restoranınız için QR kodlu menü nasıl yapılır",
+  "intro": "QR kodu üretmek işin kolay kısmı; herhangi bir ücretsiz araç bunu iki dakikada yapar. Zor olan, kodun nereyi gösterdiği, çünkü ona bir daha hiç dokunup dokunmayacağınızı bu belirler. İşte restoranların gerçekten kullandığı üç yol, emek sırasına göre ve her birinin tipik arıza noktasıyla.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Seçenek 1: PDF'e giden ücretsiz QR üreticisi"
+    },
+    {
+      "type": "p",
+      "text": "Menüyü PDF olarak dışa aktarın, herkese açık bir yere yükleyin (Google Drive, kendi siteniz, bir dosya servisi), bağlantıyı herhangi bir ücretsiz QR üreticisine yapıştırın ve kodu yazdırın. Toplam maliyet: 0 €. Toplam süre: yaklaşık 15 dakika."
+    },
+    {
+      "type": "p",
+      "text": "Nerede tıkanır: telefon ekranındaki PDF bir yakınlaştırma egzersizidir. Misafir 300 mm genişliğindeki bir belgeyi 15 santimlik bir pencereden okur ve çoğu vazgeçip garsona sorar. Daha kötüsü, ücretsiz üreticilerin çoğu kendi alan adları üzerinden geçen **dinamik** kod üretir; ödemeyi keserseniz ya da servis kapanırsa salondaki her basılı kod ölür. Doğrudan dosyayı gösteren statik bir kod kullanırsanız kod kalıcıdır, ama dosya bağlantısı asla değişmemelidir; yani düzeltilmiş bir sürümü yeniden basmadan yükleyemezsiniz."
+    },
+    {
+      "type": "note",
+      "text": "Bu yolu seçerseniz, Drive bağlantısına değil, kendi kontrolünüzdeki bir adrese (kendi alan adınız) giden **statik** bir QR kod kullanın. Böylece adresin arkasındaki dosyayı yeniden basmadan değiştirebilirsiniz."
+    },
+    {
+      "type": "h2",
+      "text": "Seçenek 2: menü düzenleyiciyle yapılmış bir sayfa"
+    },
+    {
+      "type": "p",
+      "text": "Bir üst basamak: yemeklerinizi, fiyatlarınızı ve fotoğraflarınızı barındıran bir mobil sayfa sunan ve size onun QR kodunu veren bir araç. Menüyü bir kez yazarsınız, sonrasında fiyatları InDesign yerine bir formda düzenlersiniz. Tipik fiyatlar, sağlayıcının logosuyla ücretsizden ayda 10-30 €'ya kadar gider."
+    },
+    {
+      "type": "p",
+      "text": "Nerede tıkanır: menü bir broşürdür. Yemekleri gösterir ve orada biter. Misafir sipariş vermek için hâlâ garsona el sallar, mutfak hâlâ elle yazılmış fişler alır ve siz hâlâ hangi yemeğin ayda 400 kez görüntülenip iki kez sipariş edildiğini bilmezsiniz. On iki kalemli bir bar için bu yeterli. Akşam 60 kuver yapan bir restoran için asıl darboğaz hiç ellenmemiş kalır."
+    },
+    {
+      "type": "h2",
+      "text": "Seçenek 3: siparişi de alan bir menü"
+    },
+    {
+      "type": "p",
+      "text": "Aynı QR kod, ama arkasındaki sayfa siparişi alıp mutfağa gönderebiliyor. Bu, kodun amacını değiştirir: artık menü göstermenin değil, misafirin karar vermesiyle mutfağın başlaması arasındaki süreyi kısaltmanın yoludur."
+    },
+    {
+      "type": "p",
+      "text": "Nerede tıkanır: sizden servis tarzıyla ilgili bir karar ister. QR ile sipariş, devir hızı yüksek salonlarda, teraslarda ve kalabalık barlarda çok iyi çalışır; garsonun ürünün parçası olduğu fine dining salonunda yanlış durur. Çoğu işletme önce yalnızca okunan bir [dijital menü](route:/digital-menu) ile başlar ve ekip alıştıktan sonra [sipariş](route:/order-taking) özelliğini açar."
+    },
+    {
+      "type": "h2",
+      "text": "Üçü yan yana"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "PDF + ücretsiz QR",
+        "Menü düzenleyici",
+        "Menü + sipariş"
+      ],
+      "rows": [
+        [
+          "Kurulum süresi",
+          "~15 dk",
+          "1-2 saat yazma",
+          "Menü taramasıyla ~5 dk"
+        ],
+        [
+          "Maliyet",
+          "0 €",
+          "0-30 €/ay",
+          "9,90 €/aydan başlayan"
+        ],
+        [
+          "Fiyat değişikliği",
+          "Yeniden dışa aktar ve yükle",
+          "Bir alanı düzenle",
+          "Bir alanı düzenle"
+        ],
+        [
+          "Telefonda okunaklı",
+          "Yakınlaştır ve kaydır",
+          "Evet",
+          "Evet"
+        ],
+        [
+          "Diller",
+          "Her dil için ayrı PDF",
+          "Bazen",
+          "Otomatik"
+        ],
+        [
+          "Tükenen yemekler",
+          "Hayır",
+          "Genelde evet",
+          "Tek dokunuş"
+        ],
+        [
+          "Misafir sipariş verebilir",
+          "Hayır",
+          "Hayır",
+          "Evet"
+        ],
+        [
+          "Neyin sattığını görürsünüz",
+          "Hayır",
+          "Nadiren",
+          "Evet"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Hangi seçeneği seçerseniz seçin, pratikte nasıl yapılır"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Menüyü dijital hale getirin. 80 kalemi yazmak en büyük zaman kaybıdır; IQ Rest kâğıt menünüzün fotoğrafını okuyup yemekleri ve fiyatları sizin yerinize oluşturur, böylece bir akşamlık iş yaklaşık beş dakikaya iner.",
+        "Tasarımdan önce yapıyı düzeltin. Mutfağınızın düzenine göre değil, misafirlerin sipariş verdiği gibi gruplayın (başlangıçlar, ana yemekler, içecekler). Uzun ve düz listeler kaydırmayı öldürür.",
+        "Fotoğrafları kararı değiştirdikleri yere koyun. Her yemeği fotoğraflamak, satmak istediğiniz yemeklerde beş iyi fotoğraf olmasından daha kötüdür.",
+        "Alerjenleri sonra değil şimdi işaretleyin. AB'de zaten gerekiyor ve sonradan 80 kaleme eklemek eziyet.",
+        "Tüm salon için değil, her masa için bir QR kod üretin. Menü aynı, ama masa numarası taramayla birlikte gider ve ileride siparişi ve analizi mümkün kılan tam olarak budur.",
+        "Servisi atlatacak şekilde basın. Masa standı ya da lamine etiket, kod en az 3 cm genişliğinde, yüksek kontrastlı ve mumdan uzakta."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Kodun altına kısa bir adres yazdırın (örneğin iqrest.com/m/mekaniniz). Yaklaşık her yirmi misafirden birinin kamerası taramaz ve yazılabilir bir adres o anı kurtarır."
+    },
+    {
+      "type": "h2",
+      "text": "En pahalıya patlayan hatalar"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Süresi dolan kod.** Deneme süreli ücretsiz üreticiler bir gün hiçbir yere gitmeyen kodlar üretir. Bunu servisin ortasında bir misafirden öğrenirsiniz.",
+        "**Tüm restoran için tek kod.** Şimdi ucuz, ama masadan siparişi ve masa bazlı her türlü veriyi kalıcı olarak engeller.",
+        "**Çok küçük basılmış kod.** Yaklaşık 2,5 cm'nin altında, eski telefon kameraları salonun loş ışığında zorlanır.",
+        "**Ana sayfaya bağlantı.** Misafir bir tanıtım sitesine düşer ve menüyü aramak zorunda kalır. Doğrudan menüye bağlantı verin.",
+        "**Kodun varlığını unutmak.** Kimsenin güncellemediği bir menü kâğıttan kötüdür, çünkü kâğıt en azından gözle görülür biçimde eski görünür."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Yazma işini atlayın",
+      "text": "Mevcut kâğıt menünüzün fotoğrafını yükleyin, yaklaşık beş dakikada çalışan bir QR menünüz olsun. 14 gün ücretsiz, kart gerekmez.",
+      "buttonLabel": "QR menünün nasıl çalıştığını görün",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Sık sorulan sorular",
+      "items": [
+        {
+          "q": "QR kodlu menüyü ücretsiz yapabilir miyim?",
+          "a": "Evet; ücretsiz bir üretici ve bir PDF hiçbir şeye mal olmaz. İşin püf noktası, ücretsiz üreticilerin sıklıkla süresi dolan veya sizin kontrol etmediğiniz bir alan adı üzerinden geçen kodlar vermesi ve PDF'in telefonda zor okunmasıdır. Bunu [ücretsiz QR menüler gerçekte neye mal olur](blog:free-qr-code-menu) yazısında ayrıntılandırdık."
+        },
+        {
+          "q": "Misafirlerin taramak için uygulamaya ihtiyacı var mı?",
+          "a": "Hayır. Son yılların her telefonu QR kodları yerleşik kamerayla tarar ve menü tarayıcıda açılır. Kurulacak bir şey yok, kayıt yok."
+        },
+        {
+          "q": "QR kod ne kadar büyük basılmalı?",
+          "a": "Masa standı için en az 3 cm genişliğinde. Genel kural, tarama mesafesinin kod genişliğinin yaklaşık on katı olduğudur; yani 3 cm'lik bir kod 30 cm'den rahatça okunur."
+        },
+        {
+          "q": "QR kodları yeniden basmadan menüyü değiştirebilir miyim?",
+          "a": "Barındırılan bir menüde evet; kod sabit bir adresi gösterir ve arkasındaki içerik değişir. Doğrudan bir PDF dosyasını gösteren QR kodda, dosyayı tam olarak aynı adreste tutmanız gerekir."
+        },
+        {
+          "q": "QR kod masaya mı yoksa kâğıt menüye mi konur?",
+          "a": "Kullanılmasını istiyorsanız masaya. Kâğıt menüye basılan kod ancak biri kâğıt menüyü uzattıktan sonra taranır, bu da amacın büyük kısmını ortadan kaldırır."
+        }
+      ]
+    }
+  ]
+}

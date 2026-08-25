@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "Cómo crear una carta con código QR | IQ Rest",
+    "description": "Tres formas de crear una carta QR para tu restaurante: generador gratis con PDF, editor de cartas o sistema completo. Qué cuesta cada una y qué se rompe."
+  },
+  "card": {
+    "title": "Cómo crear una carta con código QR (y cuál de los tres métodos sobrevive a un cambio de precio)",
+    "excerpt": "Un generador de QR gratis tarda dos minutos. Luego cambian los precios. Repasamos las tres opciones reales, lo que cuesta cada una y por dónde se rompe."
+  },
+  "h1": "Cómo crear una carta con código QR para tu restaurante",
+  "intro": "Generar el código QR es lo fácil: cualquier generador gratuito lo hace en dos minutos. Lo difícil es a dónde apunta ese código, porque eso decide si vuelves a tocarlo alguna vez. Estas son las tres formas en que los restaurantes lo hacen de verdad, ordenadas por esfuerzo, con el fallo típico de cada una.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Opción 1: generador de QR gratis apuntando a un PDF"
+    },
+    {
+      "type": "p",
+      "text": "Exporta la carta a PDF, súbela a algún sitio público (Google Drive, tu web, un alojamiento de archivos), pega ese enlace en cualquier generador de QR gratuito e imprime el código. Coste total: 0 €. Tiempo total: unos 15 minutos."
+    },
+    {
+      "type": "p",
+      "text": "Qué se rompe: un PDF en la pantalla del móvil es un ejercicio de pellizcar y ampliar. El cliente lee un documento de 300 mm de ancho por una ventana de 15 cm, y la mayoría se rinde y pregunta al camarero. Peor aún: casi todos los generadores gratuitos crean un código **dinámico** que pasa por su dominio; si dejas de pagar o cierran, todos los códigos impresos de tu sala se quedan muertos. Si usas un código estático que apunta directamente al archivo, el código es permanente pero el enlace no puede cambiar nunca, así que no puedes volver a subir una versión corregida sin reimprimir."
+    },
+    {
+      "type": "note",
+      "text": "Si eliges este camino, usa un código QR **estático** que apunte a una URL que controles tú (tu propio dominio), no a un enlace de Drive. Así puedes cambiar el archivo que hay detrás sin reimprimir nada."
+    },
+    {
+      "type": "h2",
+      "text": "Opción 2: una página creada con un editor de cartas"
+    },
+    {
+      "type": "p",
+      "text": "Un paso más: una herramienta que aloja una página móvil con tus platos, precios y fotos, y te entrega un código QR. Escribes la carta una vez y, a partir de ahí, editas los precios en un formulario en lugar de en InDesign. Los precios habituales van desde gratis con la marca del proveedor hasta 10-30 € al mes."
+    },
+    {
+      "type": "p",
+      "text": "Qué se rompe: la carta es un folleto. Muestra los platos y ahí se acaba. El cliente sigue llamando al camarero para pedir, la cocina sigue recibiendo comandas escritas a mano y sigues sin saber qué plato se ve 400 veces al mes y se pide dos. Para un bar con 12 referencias está bien. Para un restaurante de 60 comensales por noche deja intacto el cuello de botella real."
+    },
+    {
+      "type": "h2",
+      "text": "Opción 3: una carta que además toma el pedido"
+    },
+    {
+      "type": "p",
+      "text": "El mismo código QR, pero la página que hay detrás puede aceptar el pedido y enviarlo a cocina. Eso cambia para qué sirve el código: ya no es una forma de mostrar la carta, es una forma de acortar el tiempo entre que el cliente decide y la cocina empieza."
+    },
+    {
+      "type": "p",
+      "text": "Qué se rompe: exige que decidas algo sobre tu estilo de servicio. El pedido por QR funciona de maravilla en salas de mucha rotación, terrazas y bares con volumen, y desentona en un restaurante de alta cocina donde el camarero forma parte del producto. La mayoría empieza con una [carta digital](route:/digital-menu) solo de consulta y activa el [pedido](route:/order-taking) más adelante, cuando la sala está cómoda."
+    },
+    {
+      "type": "h2",
+      "text": "Las tres, una al lado de la otra"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "PDF + QR gratis",
+        "Editor de cartas",
+        "Carta + pedidos"
+      ],
+      "rows": [
+        [
+          "Tiempo de puesta en marcha",
+          "~15 min",
+          "1-2 horas escribiendo",
+          "~5 min escaneando la carta"
+        ],
+        [
+          "Coste",
+          "0 €",
+          "0-30 €/mes",
+          "Desde 9,90 €/mes"
+        ],
+        [
+          "Cambio de precio",
+          "Reexportar y volver a subir",
+          "Editar un campo",
+          "Editar un campo"
+        ],
+        [
+          "Legible en el móvil",
+          "Pellizcar y ampliar",
+          "Sí",
+          "Sí"
+        ],
+        [
+          "Idiomas",
+          "Un PDF por idioma",
+          "A veces",
+          "Automáticos"
+        ],
+        [
+          "Platos agotados",
+          "No",
+          "Normalmente sí",
+          "Un toque"
+        ],
+        [
+          "El cliente puede pedir",
+          "No",
+          "No",
+          "Sí"
+        ],
+        [
+          "Ves qué se vende",
+          "No",
+          "Rara vez",
+          "Sí"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Cómo hacerlo de verdad, elijas lo que elijas"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Pasa la carta a formato digital. Teclear 80 platos es el mayor sumidero de tiempo: IQ Rest lee una foto de tu carta en papel y crea los platos y los precios por ti, lo que convierte una tarde entera en unos cinco minutos.",
+        "Arregla la estructura antes que el diseño. Agrupa los platos como pide la gente (entrantes, principales, bebidas), no como está organizada tu cocina. Las listas largas y planas matan el scroll.",
+        "Pon fotos donde cambien la decisión. Fotografiar todos los platos es peor que tener cinco buenas fotos de los platos que quieres vender.",
+        "Marca los alérgenos ahora, no después. Si sirves en la UE los necesitas igualmente, y añadirlos luego a 80 platos es una tortura.",
+        "Genera un código QR por mesa, no uno para toda la sala. Es la misma carta, pero el número de mesa viaja con el escaneo, y eso es lo que después hace posible el pedido y la analítica.",
+        "Imprímelo para que aguante el servicio. Caballete o pegatina plastificada, código de al menos 3 cm de ancho, buen contraste y lejos de la vela."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Imprime una dirección web corta debajo del código (por ejemplo iqrest.com/m/tulocal). Aproximadamente un cliente de cada veinte tiene una cámara que no escanea, y una dirección escrita salva la situación."
+    },
+    {
+      "type": "h2",
+      "text": "Los errores que más caros salen"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Un código que caduca.** Los generadores gratuitos con periodo de prueba producen códigos que dejan de resolver. Te enteras por un cliente, en pleno servicio.",
+        "**Un solo código para todo el restaurante.** Barato ahora, pero bloquea para siempre el pedido en mesa y cualquier dato por mesa.",
+        "**Un código impreso demasiado pequeño.** Por debajo de unos 2,5 cm, las cámaras de móviles antiguos sufren con la luz baja de un comedor.",
+        "**Enlazar a tu página de inicio.** El cliente aterriza en una web de marketing y tiene que buscar la carta. Enlaza directo a la carta.",
+        "**Olvidarte de que el código existe.** Una carta que nadie actualiza es peor que el papel, porque al menos el papel se ve claramente desfasado."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Olvídate de teclear la carta",
+      "text": "Sube una foto de tu carta en papel actual y ten una carta QR funcionando en unos cinco minutos. 14 días gratis, sin tarjeta.",
+      "buttonLabel": "Ver cómo funciona la carta QR",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Preguntas frecuentes",
+      "items": [
+        {
+          "q": "¿Puedo crear una carta con código QR gratis?",
+          "a": "Sí: un generador gratuito más un PDF no cuesta nada. El problema es que los generadores gratuitos suelen emitir códigos que caducan o que pasan por un dominio que no controlas, y que un PDF es difícil de leer en el móvil. Lo desglosamos en [lo que cuestan de verdad las cartas QR gratis](blog:free-qr-code-menu)."
+        },
+        {
+          "q": "¿Necesitan una app los clientes para escanearlo?",
+          "a": "No. Cualquier móvil de los últimos años escanea códigos QR con la cámara de serie, y la carta se abre en el navegador. Nada que instalar ni registrarse."
+        },
+        {
+          "q": "¿De qué tamaño hay que imprimir el código QR?",
+          "a": "Al menos 3 cm de lado para un caballete de mesa. La regla práctica es que la distancia de escaneo es unas diez veces el ancho del código, así que uno de 3 cm se lee cómodamente a 30 cm."
+        },
+        {
+          "q": "¿Puedo cambiar la carta sin reimprimir los códigos QR?",
+          "a": "Con una carta alojada, sí: el código apunta a una dirección fija y el contenido de detrás cambia. Con un código QR que apunta directamente a un PDF, tienes que mantener el archivo exactamente en la misma URL."
+        },
+        {
+          "q": "¿El código QR va en la mesa o en la carta de papel?",
+          "a": "En la mesa, si quieres que se use. Un código impreso en la carta de papel solo se escanea después de que alguien haya entregado la carta de papel, lo que anula casi todo el sentido."
+        }
+      ]
+    }
+  ]
+}

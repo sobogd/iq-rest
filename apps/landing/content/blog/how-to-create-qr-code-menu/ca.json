@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "Com crear una carta amb codi QR: 3 vies | IQ Rest",
+    "description": "Tres maneres de crear una carta QR per al restaurant: generador gratuït amb PDF, editor de cartes o sistema complet. Què costa i què falla en cadascuna."
+  },
+  "card": {
+    "title": "Com crear una carta amb codi QR (i quina de les tres vies sobreviu a un canvi de preus)",
+    "excerpt": "Un generador de QR gratuït triga dos minuts. Després canvien els preus. Repassem les tres opcions reals, què costen i on s'esfondra cadascuna."
+  },
+  "h1": "Com crear una carta amb codi QR per al teu restaurant",
+  "intro": "Generar el codi QR és la part fàcil: qualsevol generador gratuït ho fa en dos minuts. El difícil és cap a on apunta aquest codi, perquè això decideix si el tornaràs a tocar mai. Aquestes són les tres maneres com ho fan realment els restaurants, ordenades per esforç, amb la fallada típica de cadascuna.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Opció 1: generador de QR gratuït que apunta a un PDF"
+    },
+    {
+      "type": "p",
+      "text": "Exporta la carta a PDF, puja-la a algun lloc públic (Google Drive, el teu web, un allotjament de fitxers), enganxa aquest enllaç a qualsevol generador de QR gratuït i imprimeix el codi. Cost total: 0 €. Temps total: uns 15 minuts."
+    },
+    {
+      "type": "p",
+      "text": "Què falla: un PDF a la pantalla del mòbil és un exercici de pessigar i ampliar. El client llegeix un document de 300 mm d'ample per una finestra de 15 cm, i la majoria es rendeix i pregunta al cambrer. Pitjor encara: gairebé tots els generadors gratuïts creen un codi **dinàmic** que passa pel seu domini; si deixes de pagar o tanquen, tots els codis impresos de la sala queden morts. Si fas servir un codi estàtic que apunta directament al fitxer, el codi és permanent però l'enllaç no pot canviar mai, o sigui que no pots tornar a pujar una versió corregida sense reimprimir."
+    },
+    {
+      "type": "note",
+      "text": "Si tries aquest camí, fes servir un codi QR **estàtic** que apunti a una adreça que controlis tu (el teu domini), no a un enllaç de Drive. Així pots canviar el fitxer que hi ha darrere sense reimprimir res."
+    },
+    {
+      "type": "h2",
+      "text": "Opció 2: una pàgina feta amb un editor de cartes"
+    },
+    {
+      "type": "p",
+      "text": "Un graó més amunt: una eina que allotja una pàgina mòbil amb els teus plats, preus i fotos, i et dona un codi QR. Escrius la carta un cop i, a partir d'aquí, edites els preus en un formulari en comptes de l'InDesign. Els preus habituals van des de gratuït amb la marca del proveïdor fins a 10-30 € al mes."
+    },
+    {
+      "type": "p",
+      "text": "Què falla: la carta és un fullet. Mostra plats i s'acaba aquí. El client continua cridant el cambrer per demanar, la cuina continua rebent comandes escrites a mà i continues sense saber quin plat es mira 400 vegades al mes i se'n demanen dos. Per a un bar amb 12 referències ja va bé. Per a un restaurant de 60 cobertes per nit deixa intacte el coll d'ampolla real."
+    },
+    {
+      "type": "h2",
+      "text": "Opció 3: una carta que també pren la comanda"
+    },
+    {
+      "type": "p",
+      "text": "El mateix codi QR, però la pàgina de darrere pot acceptar la comanda i enviar-la a la cuina. Això canvia per a què serveix el codi: ja no és una manera de mostrar una carta, és una manera d'escurçar el temps entre que el client decideix i la cuina comença."
+    },
+    {
+      "type": "p",
+      "text": "Què falla: exigeix una decisió teva sobre l'estil de servei. La comanda per QR funciona molt bé en sales de molta rotació, terrasses i bars plens, i desentona en un restaurant d'alta cuina on el cambrer forma part del producte. La majoria comencen amb una [carta digital](route:/digital-menu) només de consulta i activen la [comanda](route:/order-taking) més endavant, quan l'equip està còmode."
+    },
+    {
+      "type": "h2",
+      "text": "Les tres, una al costat de l'altra"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "PDF + QR gratuït",
+        "Editor de cartes",
+        "Carta + comandes"
+      ],
+      "rows": [
+        [
+          "Temps de posada en marxa",
+          "~15 min",
+          "1-2 hores escrivint",
+          "~5 min escanejant la carta"
+        ],
+        [
+          "Cost",
+          "0 €",
+          "0-30 €/mes",
+          "Des de 9,90 €/mes"
+        ],
+        [
+          "Canvi de preu",
+          "Reexportar i tornar a pujar",
+          "Editar un camp",
+          "Editar un camp"
+        ],
+        [
+          "Llegible al mòbil",
+          "Pessigar i ampliar",
+          "Sí",
+          "Sí"
+        ],
+        [
+          "Idiomes",
+          "Un PDF per idioma",
+          "De vegades",
+          "Automàtics"
+        ],
+        [
+          "Plats esgotats",
+          "No",
+          "Normalment sí",
+          "Un toc"
+        ],
+        [
+          "El client pot demanar",
+          "No",
+          "No",
+          "Sí"
+        ],
+        [
+          "Veus què es ven",
+          "No",
+          "Poques vegades",
+          "Sí"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Com fer-ho de debò, triïs el que triïs"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Passa la carta a format digital. Teclejar 80 plats és el gran forat de temps: IQ Rest llegeix una foto de la teva carta en paper i crea els plats i els preus per tu, cosa que converteix una tarda sencera en uns cinc minuts.",
+        "Arregla l'estructura abans que el disseny. Agrupa els plats com demana la gent (entrants, principals, begudes), no com està organitzada la teva cuina. Les llistes llargues i planes maten el desplaçament.",
+        "Posa fotos on canviïn la decisió. Fotografiar tots els plats és pitjor que tenir cinc bones fotos als plats que vols vendre.",
+        "Marca els al·lèrgens ara, no després. Si serveixes a la UE els necessites igualment, i afegir-los més tard a 80 plats és una tortura.",
+        "Genera un codi QR per taula, no un per a tota la sala. És la mateixa carta, però el número de taula viatja amb l'escaneig, i això és el que després fa possible la comanda i l'analítica.",
+        "Imprimeix-lo perquè aguanti el servei. Cavallet o adhesiu plastificat, codi de com a mínim 3 cm d'ample, bon contrast i lluny de l'espelma."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Imprimeix una adreça web curta sota el codi (per exemple iqrest.com/m/elteulocal). Aproximadament un client de cada vint té una càmera que no escaneja, i una adreça escrita salva el moment."
+    },
+    {
+      "type": "h2",
+      "text": "Els errors que surten més cars"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Un codi que caduca.** Els generadors gratuïts amb període de prova produeixen codis que deixen de funcionar. Te n'assabentes per un client, en ple servei.",
+        "**Un sol codi per a tot el restaurant.** Barat ara, però bloqueja per sempre la comanda a taula i qualsevol dada per taula.",
+        "**Un codi imprès massa petit.** Per sota d'uns 2,5 cm, les càmeres de mòbils antics pateixen amb la llum baixa d'un menjador.",
+        "**Enllaçar a la pàgina d'inici.** El client aterra en un web de màrqueting i ha de buscar la carta. Enllaça directament a la carta.",
+        "**Oblidar que el codi existeix.** Una carta que ningú actualitza és pitjor que el paper, perquè almenys el paper es veu clarament desfasat."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Oblida't de teclejar la carta",
+      "text": "Puja una foto de la teva carta en paper actual i tingues una carta QR funcionant en uns cinc minuts. 14 dies gratis, sense targeta.",
+      "buttonLabel": "Mira com funciona la carta QR",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Preguntes freqüents",
+      "items": [
+        {
+          "q": "Puc crear una carta amb codi QR gratis?",
+          "a": "Sí: un generador gratuït més un PDF no costen res. El problema és que els generadors gratuïts sovint emeten codis que caduquen o que passen per un domini que no controles, i que un PDF és difícil de llegir al mòbil. Ho vam desglossar a [què costen realment les cartes QR gratuïtes](blog:free-qr-code-menu)."
+        },
+        {
+          "q": "Els clients necessiten una aplicació per escanejar-lo?",
+          "a": "No. Qualsevol mòbil dels darrers anys escaneja codis QR amb la càmera de sèrie, i la carta s'obre al navegador. Res per instal·lar ni cap registre."
+        },
+        {
+          "q": "De quina mida s'ha d'imprimir el codi QR?",
+          "a": "Com a mínim 3 cm de costat per a un cavallet de taula. La regla pràctica és que la distància d'escaneig és unes deu vegades l'amplada del codi, així que un de 3 cm es llegeix còmodament a 30 cm."
+        },
+        {
+          "q": "Puc canviar la carta sense reimprimir els codis QR?",
+          "a": "Amb una carta allotjada, sí: el codi apunta a una adreça fixa i el contingut de darrere canvia. Amb un codi QR que apunta directament a un PDF, has de mantenir el fitxer exactament a la mateixa URL."
+        },
+        {
+          "q": "El codi QR va a la taula o a la carta de paper?",
+          "a": "A la taula, si vols que s'utilitzi. Un codi imprès a la carta de paper només s'escaneja després que algú hagi lliurat la carta de paper, cosa que anul·la gairebé tot el sentit."
+        }
+      ]
+    }
+  ]
+}

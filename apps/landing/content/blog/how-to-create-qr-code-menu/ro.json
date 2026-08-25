@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "Cum faci un meniu cu cod QR: 3 metode | IQ Rest",
+    "description": "Trei moduri de a face un meniu QR pentru restaurant: generator gratuit cu PDF, editor de meniu sau sistem complet. Cât costă și unde se strică fiecare."
+  },
+  "card": {
+    "title": "Cum faci un meniu cu cod QR (și care dintre cele trei metode supraviețuiește unei schimbări de prețuri)",
+    "excerpt": "Un generator QR gratuit durează două minute. Apoi se schimbă prețurile. Trecem prin cele trei opțiuni reale, cât costă și unde se prăbușește fiecare."
+  },
+  "h1": "Cum faci un meniu cu cod QR pentru restaurantul tău",
+  "intro": "Generarea codului QR e partea ușoară – orice generator gratuit o face în două minute. Greu e unde duce codul, pentru că asta decide dacă îl mai atingi vreodată. Iată cele trei metode pe care restaurantele le folosesc cu adevărat, în ordinea efortului, cu defectul tipic al fiecăreia.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Varianta 1: generator QR gratuit care duce la un PDF"
+    },
+    {
+      "type": "p",
+      "text": "Exportă meniul în PDF, urcă-l undeva public (Google Drive, site-ul tău, un serviciu de fișiere), lipește linkul într-un generator QR gratuit și tipărește codul. Cost total: 0 €. Timp total: aproximativ 15 minute."
+    },
+    {
+      "type": "p",
+      "text": "Ce se strică: un PDF pe ecranul telefonului e un exercițiu de mărire. Clientul citește un document lat de 300 mm printr-o fereastră de 15 cm, iar cei mai mulți renunță și întreabă ospătarul. Mai rău, majoritatea generatoarelor gratuite creează un cod **dinamic** care trece prin domeniul lor – dacă nu mai plătești sau serviciul se închide, fiecare cod tipărit din sală e mort. Dacă folosești un cod static care duce direct la fișier, codul e permanent, dar linkul fișierului nu trebuie să se schimbe niciodată, deci nu poți urca o versiune corectată fără să retipărești."
+    },
+    {
+      "type": "note",
+      "text": "Dacă mergi pe varianta asta, folosește un cod QR **static** care duce la o adresă pe care o controlezi tu (domeniul tău), nu la un link de Drive. Așa poți schimba fișierul din spatele adresei fără să retipărești."
+    },
+    {
+      "type": "h2",
+      "text": "Varianta 2: o pagină făcută cu un editor de meniu"
+    },
+    {
+      "type": "p",
+      "text": "O treaptă mai sus: un instrument care găzduiește o pagină de mobil cu preparatele, prețurile și pozele tale și îți dă un cod QR. Scrii meniul o dată și apoi modifici prețurile într-un formular, nu în InDesign. Prețurile obișnuite pornesc de la gratuit cu sigla furnizorului și ajung la 10-30 € pe lună."
+    },
+    {
+      "type": "p",
+      "text": "Ce se strică: meniul e un pliant. Arată preparate și atât. Clientul tot cheamă ospătarul ca să comande, bucătăria tot primește bonuri scrise de mână, iar tu tot nu știi ce preparat e văzut de 400 de ori pe lună și comandat de două. Pentru un bar cu 12 poziții e suficient. Pentru un restaurant cu 60 de couverturi pe seară, adevăratul blocaj rămâne neatins."
+    },
+    {
+      "type": "h2",
+      "text": "Varianta 3: un meniu care preia și comanda"
+    },
+    {
+      "type": "p",
+      "text": "Același cod QR, dar pagina din spate poate accepta comanda și o poate trimite la bucătărie. Asta schimbă rostul codului: nu mai afișează un meniu, ci scurtează timpul dintre decizia clientului și startul din bucătărie."
+    },
+    {
+      "type": "p",
+      "text": "Ce se strică: cere o decizie din partea ta privind stilul de servire. Comanda prin QR merge excelent la rotație mare, pe terase și în baruri aglomerate, și sună fals într-un restaurant de fine dining unde ospătarul face parte din produs. Majoritatea localurilor pornesc cu un [meniu digital](route:/digital-menu) doar de citit și activează [comanda](route:/order-taking) mai târziu, când echipa se obișnuiește."
+    },
+    {
+      "type": "h2",
+      "text": "Cele trei, una lângă alta"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "PDF + QR gratuit",
+        "Editor de meniu",
+        "Meniu + comenzi"
+      ],
+      "rows": [
+        [
+          "Timp de pornire",
+          "~15 min",
+          "1-2 ore de tastat",
+          "~5 min cu scanarea meniului"
+        ],
+        [
+          "Cost",
+          "0 €",
+          "0-30 €/lună",
+          "De la 9,90 €/lună"
+        ],
+        [
+          "Schimbare de preț",
+          "Reexport și reîncărcare",
+          "Editezi un câmp",
+          "Editezi un câmp"
+        ],
+        [
+          "Lizibil pe telefon",
+          "Mărire și tras",
+          "Da",
+          "Da"
+        ],
+        [
+          "Limbi",
+          "Câte un PDF per limbă",
+          "Uneori",
+          "Automat"
+        ],
+        [
+          "Preparate epuizate",
+          "Nu",
+          "De obicei da",
+          "O atingere"
+        ],
+        [
+          "Clientul poate comanda",
+          "Nu",
+          "Nu",
+          "Da"
+        ],
+        [
+          "Vezi ce se vinde",
+          "Nu",
+          "Rar",
+          "Da"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Cum faci concret, indiferent de variantă"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Adu meniul în formă digitală. Tastarea a 80 de poziții e cea mai mare pierdere de timp – IQ Rest citește o fotografie a meniului tău tipărit și creează preparatele și prețurile în locul tău, ceea ce transformă o seară întreagă în vreo cinci minute.",
+        "Rezolvă structura înainte de design. Grupează așa cum comandă clienții (aperitive, feluri principale, băuturi), nu cum e organizată bucătăria ta. Listele lungi și plate ucid derularea.",
+        "Pune poze acolo unde schimbă decizia. Să fotografiezi fiecare preparat e mai slab decât cinci poze bune la preparatele pe care vrei să le vinzi.",
+        "Marchează alergenii acum, nu mai târziu. În UE îți trebuie oricum, iar adăugarea lor ulterioară la 80 de poziții e un chin.",
+        "Generează un cod QR pe masă, nu unul pentru toată sala. Același meniu, dar numărul mesei călătorește cu scanarea, și tocmai asta face posibile mai târziu comenzile și statisticile.",
+        "Tipărește-l ca să reziste unui serviciu. Suport de masă sau autocolant laminat, cod de cel puțin 3 cm lățime, contrast mare, departe de lumânare."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Tipărește o adresă scurtă sub cod (de exemplu iqrest.com/m/localultau). Cam un client din douăzeci are o cameră care nu scanează, iar o adresă de tastat salvează momentul."
+    },
+    {
+      "type": "h2",
+      "text": "Greșelile care costă cel mai mult"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Un cod care expiră.** Generatoarele gratuite cu perioadă de probă produc coduri care într-o zi nu mai duc nicăieri. Afli de la un client, în plin serviciu.",
+        "**Un singur cod pentru tot restaurantul.** Ieftin acum, dar blochează definitiv comanda de la masă și orice date pe masă.",
+        "**Un cod tipărit prea mic.** Sub aproximativ 2,5 cm, camerele telefoanelor mai vechi se chinuie în lumina slabă a sălii.",
+        "**Link către pagina principală.** Clientul ajunge pe un site de prezentare și trebuie să caute meniul. Trimite direct la meniu.",
+        "**Să uiți că există codul.** Un meniu pe care nu-l actualizează nimeni e mai rău decât hârtia, pentru că hârtia măcar arată vizibil învechită."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Sari peste tastare",
+      "text": "Încarcă o fotografie a meniului tău tipărit și ai un meniu QR funcțional în vreo cinci minute. 14 zile gratuit, fără card.",
+      "buttonLabel": "Vezi cum funcționează meniul QR",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Întrebări frecvente",
+      "items": [
+        {
+          "q": "Pot face gratuit un meniu cu cod QR?",
+          "a": "Da – un generator gratuit plus un PDF nu costă nimic. Problema e că generatoarele gratuite dau adesea coduri care expiră sau trec printr-un domeniu pe care nu-l controlezi, iar un PDF se citește greu pe telefon. Am detaliat în [cât costă de fapt meniurile QR gratuite](blog:free-qr-code-menu)."
+        },
+        {
+          "q": "Clienții au nevoie de o aplicație ca să scaneze?",
+          "a": "Nu. Orice telefon din ultimii ani scanează coduri QR cu camera integrată, iar meniul se deschide în browser. Nimic de instalat, fără înregistrare."
+        },
+        {
+          "q": "Cât de mare trebuie tipărit codul QR?",
+          "a": "Cel puțin 3 cm lățime pentru un suport de masă. Regula practică: distanța de scanare e cam de zece ori lățimea codului, deci 3 cm se citesc comod de la 30 cm."
+        },
+        {
+          "q": "Pot schimba meniul fără să retipăresc codurile QR?",
+          "a": "Cu un meniu găzduit, da – codul duce la o adresă fixă, iar conținutul din spate se schimbă. Cu un cod QR care duce direct la un fișier PDF, trebuie să ții fișierul exact la aceeași adresă."
+        },
+        {
+          "q": "Codul QR se pune pe masă sau pe meniul tipărit?",
+          "a": "Pe masă, dacă vrei să fie folosit. Un cod tipărit pe meniul de hârtie e scanat abia după ce cineva a adus deja meniul de hârtie, ceea ce anulează aproape tot rostul."
+        }
+      ]
+    }
+  ]
+}

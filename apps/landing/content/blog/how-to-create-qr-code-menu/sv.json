@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "Skapa en QR-meny: 3 sätt jämförda | IQ Rest",
+    "description": "Tre sätt att skapa en QR-meny för restaurangen: gratis generator med pdf, menybyggare eller ett komplett system. Vad de kostar och var de går sönder."
+  },
+  "card": {
+    "title": "Skapa en QR-meny (och vilket av de tre sätten som överlever en prisändring)",
+    "excerpt": "En gratis QR-generator tar två minuter. Sedan ändras priserna. Vi går igenom de tre verkliga alternativen, vad de kostar och var de faller isär."
+  },
+  "h1": "Så skapar du en QR-meny för din restaurang",
+  "intro": "Att göra QR-koden är den enkla delen – vilken gratisgenerator som helst klarar det på två minuter. Det svåra är vad koden pekar på, för det avgör om du någonsin rör den igen. Här är de tre sätt restauranger faktiskt gör det på, sorterade efter arbetsinsats, med det typiska haveriet för vart och ett.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Alternativ 1: gratis QR-generator som pekar på en pdf"
+    },
+    {
+      "type": "p",
+      "text": "Exportera menyn till pdf, lägg upp den någonstans offentligt (Google Drive, din webbplats, en filtjänst), klistra in länken i valfri gratis QR-generator och skriv ut koden. Total kostnad: 0 €. Total tid: ungefär 15 minuter."
+    },
+    {
+      "type": "p",
+      "text": "Vad som går sönder: en pdf på en mobilskärm är en zoomövning. Gästen läser ett 300 mm brett dokument genom ett 15 cm stort fönster, och de flesta ger upp och frågar servitören. Värre: de flesta gratisgeneratorer skapar en **dynamisk** kod som går via deras domän – slutar du betala eller lägger de ner är varje utskriven kod i lokalen död. Använder du en statisk kod rakt mot filen är koden permanent, men fillänken får aldrig ändras, vilket betyder att du inte kan ladda upp en rättad version utan att trycka om."
+    },
+    {
+      "type": "note",
+      "text": "Väljer du den här vägen, använd en **statisk** QR-kod som pekar på en adress du själv styr (din egen domän), inte på en Drive-länk. Då kan du byta ut filen bakom adressen utan att trycka om."
+    },
+    {
+      "type": "h2",
+      "text": "Alternativ 2: en sida från en menybyggare"
+    },
+    {
+      "type": "p",
+      "text": "Ett steg upp: ett verktyg som lägger upp en mobilsida med dina rätter, priser och bilder och ger dig en QR-kod till den. Du skriver in menyn en gång och ändrar sedan priser i ett formulär i stället för i InDesign. Vanliga priser går från gratis med leverantörens logotyp till 10-30 € i månaden."
+    },
+    {
+      "type": "p",
+      "text": "Vad som går sönder: menyn är en broschyr. Den visar rätter och sedan tar det slut. Gästen vinkar fortfarande in en servitör för att beställa, köket får fortfarande handskrivna notor, och du vet fortfarande inte vilken rätt som visas 400 gånger i månaden och beställs två. För en bar med 12 rader räcker det. För en restaurang med 60 gäster per kväll lämnas den verkliga flaskhalsen orörd."
+    },
+    {
+      "type": "h2",
+      "text": "Alternativ 3: en meny som också tar beställningen"
+    },
+    {
+      "type": "p",
+      "text": "Samma QR-kod, men sidan bakom kan ta emot beställningen och skicka den till köket. Det ändrar vad koden är till för: den visar inte längre en meny, den kortar tiden mellan att gästen bestämmer sig och att köket börjar."
+    },
+    {
+      "type": "p",
+      "text": "Vad som går sönder: det kräver ett beslut från dig om servicestil. QR-beställning fungerar utmärkt vid hög omsättning, på uteserveringar och i fulla barer, och känns fel i en finrestaurang där servitören är en del av produkten. De flesta ställen kör först en [digital meny](route:/digital-menu) som bara går att läsa och slår på [beställning](route:/order-taking) senare, när personalen är trygg."
+    },
+    {
+      "type": "h2",
+      "text": "De tre sida vid sida"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Pdf + gratis QR",
+        "Menybyggare",
+        "Meny + beställning"
+      ],
+      "rows": [
+        [
+          "Tid att komma igång",
+          "~15 min",
+          "1-2 timmars inknappning",
+          "~5 min med menyskanning"
+        ],
+        [
+          "Kostnad",
+          "0 €",
+          "0-30 €/mån",
+          "Från 9,90 €/mån"
+        ],
+        [
+          "Prisändring",
+          "Exportera och ladda upp igen",
+          "Ändra ett fält",
+          "Ändra ett fält"
+        ],
+        [
+          "Läsbar i mobilen",
+          "Zooma och dra",
+          "Ja",
+          "Ja"
+        ],
+        [
+          "Språk",
+          "En pdf per språk",
+          "Ibland",
+          "Automatiskt"
+        ],
+        [
+          "Slutsålda rätter",
+          "Nej",
+          "Oftast ja",
+          "En knapptryckning"
+        ],
+        [
+          "Gästen kan beställa",
+          "Nej",
+          "Nej",
+          "Ja"
+        ],
+        [
+          "Du ser vad som säljer",
+          "Nej",
+          "Sällan",
+          "Ja"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Så gör du i praktiken, oavsett alternativ"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Få in menyn i digital form. Att knappa in 80 rader är den överlägset största tidstjuven – IQ Rest läser ett foto av din pappersmeny och skapar rätter och priser åt dig, vilket gör en hel kväll till ungefär fem minuter.",
+        "Fixa strukturen före designen. Gruppera som gäster beställer (förrätter, varmrätter, dryck), inte som ditt kök är organiserat. Långa platta listor dödar scrollandet.",
+        "Lägg bilder där de ändrar beslutet. Att fotografera varje rätt är sämre än fem bra bilder på de rätter du vill sälja.",
+        "Märk allergener nu, inte sedan. Inom EU behöver du dem ändå, och att efterhandsmärka 80 rader är plågsamt.",
+        "Skapa en QR-kod per bord, inte en för hela lokalen. Samma meny, men bordsnumret följer med skanningen, och det är det som gör beställning och statistik möjlig senare.",
+        "Tryck den så att den överlever ett pass. Bordsryttare eller laminerat klistermärke, kod minst 3 cm bred, hög kontrast, långt från ljuset."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Tryck en kort webbadress under koden (till exempel iqrest.com/m/dittstalle). Ungefär en gäst av tjugo har en kamera som inte skannar, och en adress att knappa in räddar situationen."
+    },
+    {
+      "type": "h2",
+      "text": "Misstagen som kostar mest"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**En kod som slutar gälla.** Gratisgeneratorer med provperiod skapar koder som en dag inte leder någonstans. Du får veta det av en gäst, mitt i passet.",
+        "**En kod för hela restaurangen.** Billigt nu, men det blockerar för alltid bordsbeställning och all statistik per bord.",
+        "**En kod tryckt för liten.** Under ungefär 2,5 cm har äldre mobilkameror svårt i restaurangens dämpade ljus.",
+        "**Länka till startsidan.** Gästen landar på en marknadsföringssida och måste leta rätt på menyn. Länka direkt till menyn.",
+        "**Glömma bort att koden finns.** En meny ingen uppdaterar är sämre än papper, för papper ser åtminstone tydligt gammalt ut."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Slipp knappa in menyn",
+      "text": "Ladda upp ett foto av din nuvarande pappersmeny och få en fungerande QR-meny på ungefär fem minuter. 14 dagar gratis, utan kort.",
+      "buttonLabel": "Se hur QR-menyn fungerar",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Vanliga frågor",
+      "items": [
+        {
+          "q": "Kan jag skapa en QR-meny gratis?",
+          "a": "Ja – en gratisgenerator plus en pdf kostar ingenting. Haken är att gratisgeneratorer ofta ger koder som slutar gälla eller går via en domän du inte styr, och att en pdf är svår att läsa i mobilen. Vi bröt ner det i [vad gratis QR-menyer faktiskt kostar](blog:free-qr-code-menu)."
+        },
+        {
+          "q": "Behöver gästerna en app för att skanna?",
+          "a": "Nej. Varje mobil från de senaste åren skannar QR-koder med den inbyggda kameran, och menyn öppnas i webbläsaren. Inget att installera, ingen registrering."
+        },
+        {
+          "q": "Hur stor ska QR-koden tryckas?",
+          "a": "Minst 3 cm bred för en bordsryttare. Tumregeln är att läsavståndet är ungefär tio gånger kodens bredd, så 3 cm läses bekvämt på 30 cm."
+        },
+        {
+          "q": "Kan jag ändra menyn utan att trycka om QR-koderna?",
+          "a": "Med en hostad meny, ja – koden pekar på en fast adress och innehållet bakom ändras. Med en QR-kod rakt mot en pdf-fil måste filen ligga kvar på exakt samma adress."
+        },
+        {
+          "q": "Ska QR-koden sitta på bordet eller på pappersmenyn?",
+          "a": "På bordet, om du vill att den ska användas. En kod tryckt på pappersmenyn skannas först efter att någon redan lämnat fram pappersmenyn, vilket tar bort det mesta av poängen."
+        }
+      ]
+    }
+  ]
+}

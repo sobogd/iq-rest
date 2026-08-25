@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "QR-menu maken: 3 manieren vergeleken | IQ Rest",
+    "description": "Drie manieren om een QR-menu te maken: gratis generator met pdf, menubouwer of een compleet systeem. Wat elk kost en waar het misgaat."
+  },
+  "card": {
+    "title": "Een QR-menu maken (en welke van de drie manieren een prijswijziging overleeft)",
+    "excerpt": "Een gratis QR-generator kost twee minuten. Daarna veranderen je prijzen. We nemen de drie echte opties door, wat ze kosten en waar ze stukgaan."
+  },
+  "h1": "Hoe je een QR-menu maakt voor je restaurant",
+  "intro": "De QR-code maken is het makkelijke deel: elke gratis generator doet dat in twee minuten. Het lastige is waar die code naartoe wijst, want dat bepaalt of je hem ooit nog aanraakt. Dit zijn de drie manieren waarop restaurants het echt doen, op volgorde van moeite, met de zwakke plek van elk.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Optie 1: gratis QR-generator die naar een pdf wijst"
+    },
+    {
+      "type": "p",
+      "text": "Exporteer je kaart naar pdf, zet die ergens openbaar (Google Drive, je website, een filehoster), plak die link in een gratis QR-generator en druk de code af. Totale kosten: € 0. Totale tijd: ongeveer 15 minuten."
+    },
+    {
+      "type": "p",
+      "text": "Wat er misgaat: een pdf op een telefoonscherm is een zoomoefening. Gasten lezen een document van 300 mm breed door een venster van 15 cm, en de meesten geven het op en vragen het de bediening. Erger nog: de meeste gratis generatoren maken een **dynamische** code die via hun domein loopt. Stop je met betalen of gaan ze dicht, dan zijn alle afgedrukte codes in je zaak dood. Gebruik je een statische code die rechtstreeks naar het bestand wijst, dan is de code permanent, maar de bestandslink mag nooit veranderen, dus je kunt geen gecorrigeerde versie uploaden zonder opnieuw te drukken."
+    },
+    {
+      "type": "note",
+      "text": "Kies je hiervoor, gebruik dan een **statische** QR-code die naar een URL wijst die jij beheert (je eigen domein), niet naar een Drive-link. Dan kun je het bestand erachter vervangen zonder opnieuw te drukken."
+    },
+    {
+      "type": "h2",
+      "text": "Optie 2: een pagina uit een menubouwer"
+    },
+    {
+      "type": "p",
+      "text": "Een stap hoger: een tool die een mobiele pagina host met je gerechten, prijzen en foto's, en je er een QR-code bij geeft. Je typt de kaart één keer over en wijzigt prijzen daarna in een formulier in plaats van in InDesign. Gebruikelijke prijzen lopen van gratis met het logo van de leverancier tot € 10-30 per maand."
+    },
+    {
+      "type": "p",
+      "text": "Wat er misgaat: de kaart is een folder. Hij toont gerechten en daar houdt het op. Gasten roepen nog steeds een medewerker om te bestellen, de keuken krijgt nog steeds handgeschreven bonnen, en je weet nog steeds niet welk gerecht 400 keer per maand wordt bekeken en twee keer besteld. Voor een bar met 12 items is dat prima. Voor een restaurant met 60 couverts per avond blijft het echte knelpunt onaangeroerd."
+    },
+    {
+      "type": "h2",
+      "text": "Optie 3: een kaart die ook de bestelling opneemt"
+    },
+    {
+      "type": "p",
+      "text": "Dezelfde QR-code, maar de pagina erachter kan de bestelling aannemen en naar de keuken sturen. Daarmee verandert waar de code voor dient: hij toont geen kaart meer, hij verkort de tijd tussen het besluit van de gast en de start in de keuken."
+    },
+    {
+      "type": "p",
+      "text": "Wat er misgaat: het vraagt een keuze van jou over je bedieningsstijl. Bestellen via QR werkt uitstekend bij hoge omloop, op terrassen en in drukke bars, en voelt verkeerd in fine dining waar de gastheer deel van het product is. De meeste zaken beginnen met een [digitaal menu](route:/digital-menu) om alleen te bekijken en zetten [bestellen](route:/order-taking) later aan, als het team eraan gewend is."
+    },
+    {
+      "type": "h2",
+      "text": "De drie naast elkaar"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Pdf + gratis QR",
+        "Menubouwer",
+        "Kaart + bestellen"
+      ],
+      "rows": [
+        [
+          "Opzettijd",
+          "~15 min",
+          "1-2 uur overtypen",
+          "~5 min met menuscan"
+        ],
+        [
+          "Kosten",
+          "€ 0",
+          "€ 0-30/maand",
+          "Vanaf € 9,90/maand"
+        ],
+        [
+          "Prijswijziging",
+          "Opnieuw exporteren en uploaden",
+          "Eén veld aanpassen",
+          "Eén veld aanpassen"
+        ],
+        [
+          "Leesbaar op de telefoon",
+          "Zoomen en schuiven",
+          "Ja",
+          "Ja"
+        ],
+        [
+          "Talen",
+          "Eén pdf per taal",
+          "Soms",
+          "Automatisch"
+        ],
+        [
+          "Uitverkochte gerechten",
+          "Nee",
+          "Meestal wel",
+          "Eén tik"
+        ],
+        [
+          "Gast kan bestellen",
+          "Nee",
+          "Nee",
+          "Ja"
+        ],
+        [
+          "Je ziet wat er verkoopt",
+          "Nee",
+          "Zelden",
+          "Ja"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Hoe je het echt aanpakt, welke optie je ook kiest"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Zet de kaart om naar digitale vorm. 80 gerechten overtypen is verreweg de grootste tijdvreter: IQ Rest leest een foto van je papieren kaart en maakt de gerechten en prijzen voor je aan, waardoor een avond werk ongeveer vijf minuten wordt.",
+        "Regel de structuur voordat je aan vormgeving denkt. Groepeer zoals gasten bestellen (voorgerechten, hoofdgerechten, dranken), niet zoals je keuken is ingedeeld. Lange, platte lijsten maken scrollen onmogelijk.",
+        "Zet foto's waar ze de keuze veranderen. Elk gerecht fotograferen is slechter dan vijf goede foto's bij de gerechten die je wilt verkopen.",
+        "Markeer allergenen nu, niet later. In de EU heb je ze toch nodig, en ze achteraf over 80 items uitrollen is een marteling.",
+        "Maak één QR-code per tafel, niet één voor de hele zaak. Dezelfde kaart, maar het tafelnummer reist mee met de scan, en dat is wat bestellen en cijfers later mogelijk maakt.",
+        "Druk het af zodat het de dienst overleeft. Tafelstandaard of gelamineerde sticker, code minstens 3 cm breed, veel contrast, uit de buurt van de kaars."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Druk een kort webadres onder de code (bijvoorbeeld iqrest.com/m/jouwzaak). Ongeveer één op de twintig gasten heeft een camera die niet scant, en een getypt adres redt het moment."
+    },
+    {
+      "type": "h2",
+      "text": "De duurste fouten"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Een code die verloopt.** Gratis generatoren met proefperiode maken codes die op een dag niets meer opleveren. Je hoort het van een gast, midden in de dienst.",
+        "**Eén code voor de hele zaak.** Nu goedkoop, maar het blokkeert voorgoed bestellen aan tafel en alle cijfers per tafel.",
+        "**Een code te klein afgedrukt.** Onder ongeveer 2,5 cm hebben oudere telefooncamera's moeite met het gedempte licht in een zaak.",
+        "**Linken naar je homepage.** De gast belandt op een marketingsite en moet de kaart zoeken. Link rechtstreeks naar de kaart.",
+        "**Vergeten dat de code bestaat.** Een kaart die niemand bijwerkt is slechter dan papier, want papier ziet er tenminste zichtbaar verouderd uit."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Sla het overtypen over",
+      "text": "Upload een foto van je huidige papieren kaart en heb binnen ongeveer vijf minuten een werkend QR-menu. 14 dagen gratis, zonder creditcard.",
+      "buttonLabel": "Bekijk hoe het QR-menu werkt",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Veelgestelde vragen",
+      "items": [
+        {
+          "q": "Kan ik gratis een QR-menu maken?",
+          "a": "Ja, een gratis generator plus een pdf kost niets. De adder onder het gras: gratis generatoren geven vaak codes uit die verlopen of via een domein lopen dat jij niet beheert, en een pdf leest slecht op een telefoon. We hebben het uitgesplitst in [wat gratis QR-menu's echt kosten](blog:free-qr-code-menu)."
+        },
+        {
+          "q": "Hebben gasten een app nodig om te scannen?",
+          "a": "Nee. Elke telefoon van de afgelopen jaren scant QR-codes met de ingebouwde camera, en de kaart opent in de browser. Niets te installeren, geen account."
+        },
+        {
+          "q": "Hoe groot moet de QR-code worden afgedrukt?",
+          "a": "Minstens 3 cm breed voor een tafelstandaard. Vuistregel: de leesafstand is ongeveer tien keer de breedte van de code, dus 3 cm leest comfortabel op 30 cm."
+        },
+        {
+          "q": "Kan ik de kaart wijzigen zonder de QR-codes opnieuw te drukken?",
+          "a": "Bij een gehost menu wel: de code wijst naar een vast adres en de inhoud erachter verandert. Bij een QR-code die rechtstreeks naar een pdf wijst, moet dat bestand precies op dezelfde URL blijven staan."
+        },
+        {
+          "q": "Hoort de QR-code op de tafel of op de papieren kaart?",
+          "a": "Op de tafel, als je wilt dat gasten hem gebruiken. Een code op de papieren kaart wordt pas gescand nadat iemand die kaart al heeft gebracht, en daarmee vervalt het grootste deel van het nut."
+        }
+      ]
+    }
+  ]
+}

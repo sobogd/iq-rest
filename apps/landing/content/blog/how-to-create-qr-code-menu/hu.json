@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "QR kódos étlap készítése: 3 módszer | IQ Rest",
+    "description": "Három módszer QR étlap készítésére: ingyenes generátor PDF-fel, étlapszerkesztő vagy teljes rendszer. Mennyibe kerül és hol romlik el mindegyik."
+  },
+  "card": {
+    "title": "Hogyan készíts QR kódos étlapot (és a három módszer közül melyik éli túl az áremelést)",
+    "excerpt": "Egy ingyenes QR generátor két perc. Aztán megváltoznak az árak. Végigvesszük a három valós lehetőséget, az árukat és azt, hol omlik össze mindegyik."
+  },
+  "h1": "Hogyan készíts QR kódos étlapot az éttermedhez",
+  "intro": "A QR kód elkészítése a könnyű rész – bármelyik ingyenes generátor megcsinálja két perc alatt. A nehéz az, hogy hová mutat a kód, mert ez dönti el, hozzányúlsz-e még valaha. Íme a három módszer, amit az éttermek ténylegesen használnak, ráfordítás szerint, mindegyik jellemző hibájával.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "1. lehetőség: ingyenes QR generátor, ami PDF-re mutat"
+    },
+    {
+      "type": "p",
+      "text": "Exportáld az étlapot PDF-be, töltsd fel valahová nyilvánosan (Google Drive, saját weboldal, fájltárhely), illeszd be a linket bármelyik ingyenes QR generátorba, és nyomtasd ki a kódot. Teljes költség: 0 €. Teljes idő: körülbelül 15 perc."
+    },
+    {
+      "type": "p",
+      "text": "Ami elromlik: egy PDF a telefon képernyőjén nagyítási gyakorlat. A vendég egy 300 mm széles dokumentumot olvas egy 15 centis ablakon keresztül, és a többség feladja és megkérdezi a pincért. Rosszabb: a legtöbb ingyenes generátor **dinamikus** kódot csinál, ami az ő domainjükön megy át – ha nem fizetsz tovább vagy bezárnak, minden kinyomtatott kód a teremben halott. Ha statikus kódot használsz közvetlenül a fájlra, a kód örök, de a fájl linkje soha nem változhat, vagyis javított verziót nem tudsz feltölteni újranyomtatás nélkül."
+    },
+    {
+      "type": "note",
+      "text": "Ha ezt az utat választod, használj **statikus** QR kódot, ami az általad felügyelt címre mutat (saját domain), ne Drive-linkre. Így a cím mögötti fájlt kicserélheted újranyomtatás nélkül."
+    },
+    {
+      "type": "h2",
+      "text": "2. lehetőség: étlapszerkesztővel készült oldal"
+    },
+    {
+      "type": "p",
+      "text": "Egy fokkal feljebb: egy eszköz, ami mobilra szabott oldalt üzemeltet az ételeiddel, áraiddal és fotóiddal, és ad hozzá QR kódot. Az étlapot egyszer begépeled, utána az árakat űrlapon módosítod, nem InDesignban. A szokásos árak az ingyenestől (a szolgáltató logójával) havi 10-30 euróig terjednek."
+    },
+    {
+      "type": "p",
+      "text": "Ami elromlik: az étlap egy szórólap. Megmutatja az ételeket, és ennyi. A vendég továbbra is pincért int a rendeléshez, a konyha továbbra is kézzel írt bonokat kap, te pedig továbbra sem tudod, melyik ételt nézik meg havi 400-szor és rendelik kétszer. Egy 12 tételes bárnak ez elég. Egy esténként 60 vendéget kiszolgáló étteremnél a valódi szűk keresztmetszet érintetlen marad."
+    },
+    {
+      "type": "h2",
+      "text": "3. lehetőség: étlap, ami a rendelést is felveszi"
+    },
+    {
+      "type": "p",
+      "text": "Ugyanaz a QR kód, de a mögötte lévő oldal fel tudja venni a rendelést és el tudja küldeni a konyhára. Ez megváltoztatja a kód szerepét: már nem étlapot mutat, hanem lerövidíti az időt a vendég döntése és a konyhai kezdés között."
+    },
+    {
+      "type": "p",
+      "text": "Ami elromlik: döntést kíván tőled a kiszolgálás stílusáról. A QR-es rendelés remekül működik nagy forgású termekben, teraszokon és zsúfolt bárokban, és hamisan hat egy fine dining étteremben, ahol a pincér a termék része. A legtöbb hely olvasható [digitális étlappal](route:/digital-menu) kezd, és a [rendelést](route:/order-taking) később kapcsolja be, amikor a csapat már otthonosan mozog."
+    },
+    {
+      "type": "h2",
+      "text": "A három egymás mellett"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "PDF + ingyenes QR",
+        "Étlapszerkesztő",
+        "Étlap + rendelés"
+      ],
+      "rows": [
+        [
+          "Beüzemelési idő",
+          "~15 perc",
+          "1-2 óra gépelés",
+          "~5 perc étlapszkenneléssel"
+        ],
+        [
+          "Költség",
+          "0 €",
+          "0-30 €/hó",
+          "9,90 €/hótól"
+        ],
+        [
+          "Árváltozás",
+          "Újraexportálás és feltöltés",
+          "Egy mező átírása",
+          "Egy mező átírása"
+        ],
+        [
+          "Telefonon olvasható",
+          "Nagyítás és húzogatás",
+          "Igen",
+          "Igen"
+        ],
+        [
+          "Nyelvek",
+          "Nyelvenként egy PDF",
+          "Néha",
+          "Automatikus"
+        ],
+        [
+          "Elfogyott ételek",
+          "Nem",
+          "Általában igen",
+          "Egy koppintás"
+        ],
+        [
+          "A vendég tud rendelni",
+          "Nem",
+          "Nem",
+          "Igen"
+        ],
+        [
+          "Látod, mi fogy",
+          "Nem",
+          "Ritkán",
+          "Igen"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Hogyan csináld a gyakorlatban, bármelyik utat választod"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Vidd át az étlapot digitális formába. 80 tétel begépelése a legnagyobb időrabló – az IQ Rest beolvassa a papíralapú étlapod fotóját, és helyetted hozza létre az ételeket és az árakat, így egy egész estéből körülbelül öt perc lesz.",
+        "A szerkezetet rendezd a design előtt. Úgy csoportosíts, ahogy a vendégek rendelnek (előételek, főételek, italok), nem úgy, ahogy a konyhád szervezve van. A hosszú, lapos listák megölik a görgetést.",
+        "Fotót oda tegyél, ahol megváltoztatja a döntést. Minden ételt lefotózni rosszabb, mint öt jó képet tenni azokhoz az ételekhez, amiket el akarsz adni.",
+        "Az allergéneket most jelöld, ne később. Az EU-ban amúgy is kellenek, és utólag 80 tételhez hozzáírni kínszenvedés.",
+        "Asztalonként készíts QR kódot, ne egyet az egész teremre. Ugyanaz az étlap, de az asztalszám a beolvasással együtt utazik, és később éppen ez teszi lehetővé a rendelést és a statisztikát.",
+        "Úgy nyomtasd, hogy kibírjon egy műszakot. Asztali tartó vagy lamináltmatrica, a kód legalább 3 cm széles, erős kontraszt, távol a gyertyától."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Nyomtass rövid webcímet a kód alá (például iqrest.com/m/ahelyed). Nagyjából minden huszadik vendég kamerája nem olvas be, és egy begépelhető cím megmenti a helyzetet."
+    },
+    {
+      "type": "h2",
+      "text": "A legdrágább hibák"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Lejáró kód.** A próbaidős ingyenes generátorok olyan kódokat gyártanak, amelyek egy nap már nem vezetnek sehová. Egy vendégtől tudod meg, műszak közben.",
+        "**Egyetlen kód az egész étteremre.** Most olcsó, de örökre kizárja az asztali rendelést és minden asztalonkénti adatot.",
+        "**Túl kicsire nyomtatott kód.** Nagyjából 2,5 cm alatt a régebbi telefonkamerák nehezen boldogulnak a terem tompa fényében.",
+        "**Link a főoldalra.** A vendég egy marketingoldalon köt ki, és keresnie kell az étlapot. Linkelj egyenesen az étlapra.",
+        "**Elfelejteni, hogy a kód létezik.** Az étlap, amit senki nem frissít, rosszabb a papírnál, mert a papír legalább láthatóan elavultnak néz ki."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Hagyd ki a gépelést",
+      "text": "Tölts fel egy fotót a mostani papíralapú étlapodról, és öt perc alatt működő QR étlapod lesz. 14 nap ingyen, kártya nélkül.",
+      "buttonLabel": "Nézd meg, hogyan működik a QR étlap",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Gyakori kérdések",
+      "items": [
+        {
+          "q": "Készíthetek QR kódos étlapot ingyen?",
+          "a": "Igen – egy ingyenes generátor plusz egy PDF nem kerül semmibe. A bökkenő, hogy az ingyenes generátorok gyakran lejáró kódokat adnak, vagy olyan domainen mennek át, amit nem te felügyelsz, és hogy a PDF-et rosszul lehet olvasni telefonon. Ezt kibontottuk itt: [mibe kerülnek valójában az ingyenes QR étlapok](blog:free-qr-code-menu)."
+        },
+        {
+          "q": "Kell a vendégeknek alkalmazás a beolvasáshoz?",
+          "a": "Nem. Az elmúlt évek bármelyik telefonja beolvassa a QR kódokat a beépített kamerával, és az étlap a böngészőben nyílik meg. Nincs telepítés, nincs regisztráció."
+        },
+        {
+          "q": "Mekkorára kell nyomtatni a QR kódot?",
+          "a": "Asztali tartóhoz legalább 3 cm szélesre. Az ökölszabály szerint a beolvasási távolság a kód szélességének nagyjából tízszerese, tehát 3 cm kényelmesen olvasható 30 centiről."
+        },
+        {
+          "q": "Módosíthatom az étlapot a QR kódok újranyomtatása nélkül?",
+          "a": "Üzemeltetett étlapnál igen – a kód fix címre mutat, a mögötte lévő tartalom pedig változik. Közvetlenül PDF-fájlra mutató QR kódnál a fájlnak pontosan ugyanazon a címen kell maradnia."
+        },
+        {
+          "q": "A QR kód az asztalra kerüljön vagy a papíralapú étlapra?",
+          "a": "Az asztalra, ha azt akarod, hogy használják. A papíralapú étlapra nyomtatott kódot csak azután olvassák be, hogy valaki már odaadta a papíralapú étlapot, ami a lényeg nagy részét kiüti."
+        }
+      ]
+    }
+  ]
+}

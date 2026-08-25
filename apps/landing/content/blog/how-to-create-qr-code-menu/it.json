@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "Creare un menu con QR code: 3 metodi | IQ Rest",
+    "description": "Tre modi per creare un menu QR per il tuo ristorante: generatore gratuito con PDF, editor di menu o sistema completo. Quanto costano e dove si rompono."
+  },
+  "card": {
+    "title": "Come creare un menu con QR code (e quale dei tre metodi sopravvive a un cambio di prezzo)",
+    "excerpt": "Un generatore di QR gratuito richiede due minuti. Poi cambiano i prezzi. Vediamo le tre opzioni reali, quanto costano e dove ciascuna crolla."
+  },
+  "h1": "Come creare un menu con QR code per il tuo ristorante",
+  "intro": "Generare il QR code è la parte facile: qualsiasi generatore gratuito lo fa in due minuti. La parte difficile è dove punta quel codice, perché è questo a decidere se lo toccherai mai più. Ecco i tre modi in cui i ristoranti lo fanno davvero, in ordine di fatica, con il punto di rottura di ciascuno.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Opzione 1: generatore QR gratuito che punta a un PDF"
+    },
+    {
+      "type": "p",
+      "text": "Esporta il menu in PDF, caricalo in un posto pubblico (Google Drive, il tuo sito, un file hosting), incolla il link in un generatore di QR gratuito, stampa il codice. Costo totale: 0 €. Tempo totale: circa 15 minuti."
+    },
+    {
+      "type": "p",
+      "text": "Cosa si rompe: un PDF sullo schermo di un telefono è un esercizio di zoom. Il cliente legge un documento largo 300 mm attraverso una finestra di 15 cm, e la maggior parte rinuncia e chiede al cameriere. Peggio ancora, quasi tutti i generatori gratuiti creano un codice **dinamico** che passa dal loro dominio: se smetti di pagare o chiudono, tutti i codici stampati in sala muoiono. Con un codice statico che punta direttamente al file, il codice è permanente ma il link non può mai cambiare, quindi non puoi ricaricare una versione corretta senza ristampare."
+    },
+    {
+      "type": "note",
+      "text": "Se scegli questa strada, usa un QR code **statico** che punta a un URL che controlli tu (il tuo dominio), non a un link di Drive. Così puoi sostituire il file dietro l'indirizzo senza ristampare nulla."
+    },
+    {
+      "type": "h2",
+      "text": "Opzione 2: una pagina creata con un editor di menu"
+    },
+    {
+      "type": "p",
+      "text": "Un gradino più su: uno strumento che ospita una pagina mobile con i tuoi piatti, prezzi e foto e ti consegna un QR code. Digiti il menu una volta e poi modifichi i prezzi in un modulo invece che in InDesign. I prezzi tipici vanno da gratis con il marchio del fornitore a 10-30 € al mese."
+    },
+    {
+      "type": "p",
+      "text": "Cosa si rompe: il menu è una brochure. Mostra i piatti e finisce lì. Il cliente continua a chiamare il cameriere per ordinare, la cucina continua a ricevere comande scritte a mano e tu continui a non sapere quale piatto viene visto 400 volte al mese e ordinato due. Per un bar con 12 voci va bene. Per un ristorante da 60 coperti a sera lascia intatto il vero collo di bottiglia."
+    },
+    {
+      "type": "h2",
+      "text": "Opzione 3: un menu che prende anche l'ordine"
+    },
+    {
+      "type": "p",
+      "text": "Lo stesso QR code, ma la pagina dietro può accettare l'ordine e mandarlo in cucina. Questo cambia a cosa serve il codice: non è più un modo per mostrare un menu, è un modo per accorciare il tempo tra la decisione del cliente e l'inizio del lavoro in cucina."
+    },
+    {
+      "type": "p",
+      "text": "Cosa si rompe: richiede una tua decisione sullo stile di servizio. L'ordine da QR funziona benissimo in sale ad alta rotazione, dehors e bar affollati, e stona in un ristorante gastronomico dove il cameriere è parte del prodotto. La maggior parte dei locali parte con un [menu digitale](route:/digital-menu) di sola consultazione e attiva l'[ordine](route:/order-taking) più avanti, quando la squadra si sente sicura."
+    },
+    {
+      "type": "h2",
+      "text": "I tre a confronto"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "PDF + QR gratuito",
+        "Editor di menu",
+        "Menu + ordini"
+      ],
+      "rows": [
+        [
+          "Tempo di avvio",
+          "~15 min",
+          "1-2 ore di digitazione",
+          "~5 min con la scansione del menu"
+        ],
+        [
+          "Costo",
+          "0 €",
+          "0-30 €/mese",
+          "Da 9,90 €/mese"
+        ],
+        [
+          "Cambio di prezzo",
+          "Riesportare e ricaricare",
+          "Modificare un campo",
+          "Modificare un campo"
+        ],
+        [
+          "Leggibile al telefono",
+          "Zoom e trascinamento",
+          "Sì",
+          "Sì"
+        ],
+        [
+          "Lingue",
+          "Un PDF per lingua",
+          "A volte",
+          "Automatiche"
+        ],
+        [
+          "Piatti esauriti",
+          "No",
+          "Di solito sì",
+          "Un tocco"
+        ],
+        [
+          "Il cliente può ordinare",
+          "No",
+          "No",
+          "Sì"
+        ],
+        [
+          "Vedi cosa vende",
+          "No",
+          "Raramente",
+          "Sì"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Come farlo davvero, qualunque opzione scegli"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Porta il menu in formato digitale. Digitare 80 voci è il maggiore spreco di tempo: IQ Rest legge una foto del tuo menu cartaceo e crea piatti e prezzi al posto tuo, il che trasforma una serata in circa cinque minuti.",
+        "Sistema la struttura prima della grafica. Raggruppa i piatti come ordinano i clienti (antipasti, secondi, bevande), non come è organizzata la tua cucina. Le liste lunghe e piatte uccidono lo scorrimento.",
+        "Metti le foto dove cambiano la decisione. Fotografare ogni piatto vale meno di cinque buone foto sui piatti che vuoi vendere.",
+        "Segna gli allergeni adesso, non dopo. Se servi nell'UE ti servono comunque, e aggiungerli in un secondo momento su 80 voci è un supplizio.",
+        "Genera un QR code per tavolo, non uno per tutta la sala. Stesso menu, ma il numero del tavolo viaggia con la scansione, ed è questo a rendere possibili ordini e statistiche più avanti.",
+        "Stampalo in modo che regga il servizio. Cavalierino o adesivo plastificato, codice largo almeno 3 cm, buon contrasto, lontano dalla candela."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Stampa un indirizzo web breve sotto il codice (per esempio iqrest.com/m/tuolocale). Circa un cliente su venti ha una fotocamera che non scansiona, e un indirizzo da digitare salva la situazione."
+    },
+    {
+      "type": "h2",
+      "text": "Gli errori che costano di più"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Un codice che scade.** I generatori gratuiti con periodo di prova producono codici che smettono di funzionare. Lo scopri da un cliente, in pieno servizio.",
+        "**Un solo codice per tutto il ristorante.** Conveniente oggi, ma blocca per sempre l'ordine al tavolo e qualsiasi dato per tavolo.",
+        "**Un codice stampato troppo piccolo.** Sotto i 2,5 cm circa, le fotocamere dei telefoni più vecchi faticano con la luce bassa di una sala.",
+        "**Collegare alla home page.** Il cliente atterra su un sito vetrina e deve cercare il menu. Collega direttamente al menu.",
+        "**Dimenticarsi che il codice esiste.** Un menu che nessuno aggiorna è peggio della carta, perché almeno la carta si vede che è vecchia."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Salta la digitazione",
+      "text": "Carica una foto del tuo menu cartaceo e ottieni un menu QR funzionante in circa cinque minuti. 14 giorni gratis, senza carta.",
+      "buttonLabel": "Guarda come funziona il menu QR",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Domande frequenti",
+      "items": [
+        {
+          "q": "Posso creare un menu con QR code gratis?",
+          "a": "Sì: un generatore gratuito più un PDF non costano nulla. Il problema è che i generatori gratuiti spesso rilasciano codici che scadono o passano da un dominio che non controlli, e che un PDF è difficile da leggere al telefono. Lo abbiamo analizzato in [quanto costano davvero i menu QR gratuiti](blog:free-qr-code-menu)."
+        },
+        {
+          "q": "I clienti hanno bisogno di un'app per scansionare?",
+          "a": "No. Qualsiasi telefono degli ultimi anni legge i QR code con la fotocamera di sistema, e il menu si apre nel browser. Niente da installare, nessuna registrazione."
+        },
+        {
+          "q": "Quanto grande va stampato il QR code?",
+          "a": "Almeno 3 cm di lato per un cavalierino da tavolo. La regola pratica è che la distanza di lettura è circa dieci volte la larghezza del codice, quindi 3 cm si leggono comodamente a 30 cm."
+        },
+        {
+          "q": "Posso cambiare il menu senza ristampare i QR code?",
+          "a": "Con un menu ospitato sì: il codice punta a un indirizzo fisso e il contenuto dietro cambia. Con un QR code che punta direttamente a un file PDF devi tenere il file esattamente allo stesso URL."
+        },
+        {
+          "q": "Il QR code va sul tavolo o sul menu di carta?",
+          "a": "Sul tavolo, se vuoi che venga usato. Un codice stampato sul menu di carta viene scansionato solo dopo che qualcuno ha già portato il menu di carta, il che annulla quasi tutto il senso."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "Conas biachlár QR a chruthú: 3 bhealach | IQ Rest",
+    "description": "Trí bhealach chun biachlár QR a dhéanamh do bhialann: gineadóir saor in aisce le PDF, uirlis bhiachláir nó córas iomlán. An costas agus an fhadhb i ngach ceann."
+  },
+  "card": {
+    "title": "Conas biachlár le cód QR a chruthú (agus cé acu de na trí bhealach a mhaireann athrú praghsanna)",
+    "excerpt": "Tógann gineadóir QR saor in aisce dhá nóiméad. Ansin athraíonn na praghsanna. Téimid trí na trí rogha fhírinneacha, an costas, agus an áit a dtiteann gach ceann as a chéile."
+  },
+  "h1": "Conas biachlár le cód QR a chruthú do do bhialann",
+  "intro": "Is é an cód QR a ghiniúint an chuid éasca – déanann aon ghineadóir saor in aisce é i gceann dhá nóiméad. Is í an cheist chrua cá bhfuil an cód ag díriú, mar sin a shocraíonn an leagfaidh tú lámh air arís riamh. Seo na trí bhealach a úsáideann bialanna i ndáiríre, in ord oibre, le gnáthlocht gach cinn.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Rogha 1: gineadóir QR saor in aisce ag díriú ar PDF"
+    },
+    {
+      "type": "p",
+      "text": "Easpórtáil an biachlár go PDF, cuir suas áit éigin phoiblí é (Google Drive, do shuíomh féin, óstáil comhad), greamaigh an nasc in aon ghineadóir QR saor in aisce, agus priontáil an cód. Costas iomlán: €0. Am iomlán: thart ar 15 nóiméad."
+    },
+    {
+      "type": "p",
+      "text": "An fhadhb: is cleachtadh súmála é PDF ar scáileán fóin. Léann an t-aoi doiciméad 300 mm ar leithead trí fhuinneog 15 cm, agus éiríonn a bhformhór as agus fiafraíonn den fhreastalaí. Níos measa fós, cruthaíonn formhór na ngineadóirí saor in aisce cód **dinimiciúil** a théann trína bhfearann féin – má stopann tú ag íoc nó má dhúnann siad, tá gach cód priontáilte sa seomra marbh. Má úsáideann tú cód statach díreach chuig an gcomhad, tá an cód buan, ach ní féidir nasc an chomhaid a athrú riamh, rud a chiallaíonn nach féidir leagan ceartaithe a uaslódáil gan athphriontáil."
+    },
+    {
+      "type": "note",
+      "text": "Má théann tú an bealach sin, úsáid cód QR **statach** atá dírithe ar sheoladh atá faoi do smacht féin (do fhearann féin), ní ar nasc Drive. Ansin is féidir leat an comhad taobh thiar den seoladh a mhalartú gan athphriontáil."
+    },
+    {
+      "type": "h2",
+      "text": "Rogha 2: leathanach ó uirlis bhiachláir"
+    },
+    {
+      "type": "p",
+      "text": "Céim níos airde: uirlis a óstálann leathanach fóin le do mhiasa, do phraghsanna agus do ghrianghraif, agus a thugann cód QR duit. Clóscríobhann tú an biachlár uair amháin, agus ina dhiaidh sin athraíonn tú praghsanna i bhfoirm in ionad in InDesign. Téann na gnáthphraghsanna ó shaor in aisce le branda an tsoláthraí go dtí €10-30 sa mhí."
+    },
+    {
+      "type": "p",
+      "text": "An fhadhb: bileog atá sa bhiachlár. Taispeánann sé miasa agus stopann sé ansin. Fós caitheann an t-aoi comhartha a dhéanamh le freastalaí chun ordú a chur, fós faigheann an chistin duillíní scríofa de láimh, agus fós níl a fhios agat cén mhias a bhreathnaítear uirthi 400 uair sa mhí agus a ordaítear faoi dhó. Do bheár le 12 mhír tá sé sin ceart go leor. Do bhialann le 60 cuairteoir san oíche fágtar an fíorscrogall gan bhaint leis."
+    },
+    {
+      "type": "h2",
+      "text": "Rogha 3: biachlár a ghlacann an t-ordú freisin"
+    },
+    {
+      "type": "p",
+      "text": "An cód QR céanna, ach is féidir leis an leathanach taobh thiar an t-ordú a ghlacadh agus a sheoladh chuig an gcistin. Athraíonn sé sin cuspóir an chóid: ní biachlár a thaispeáint atá i gceist a thuilleadh, ach an t-am idir cinneadh an aoi agus tús na cistine a ghiorrú."
+    },
+    {
+      "type": "p",
+      "text": "An fhadhb: teastaíonn cinneadh uait faoi stíl an fhreastail. Oibríonn ordú QR go hiontach i seomraí le láimhdeachas ard, ar theirsí agus i mbeáir ghnóthacha, agus mothaíonn sé mícheart i mbialann ardchócaireachta ina bhfuil an freastalaí mar chuid den táirge. Tosaíonn formhór na n-áiteanna le [biachlár digiteach](route:/digital-menu) atá le léamh amháin agus casann siad an [t-ordú](route:/order-taking) air níos déanaí, nuair atá an fhoireann compordach."
+    },
+    {
+      "type": "h2",
+      "text": "An trí cinn taobh le taobh"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "PDF + QR saor",
+        "Uirlis bhiachláir",
+        "Biachlár + orduithe"
+      ],
+      "rows": [
+        [
+          "Am socraithe",
+          "~15 nóim",
+          "1-2 uair ag clóscríobh",
+          "~5 nóim le scanadh biachláir"
+        ],
+        [
+          "Costas",
+          "€0",
+          "€0-30/mí",
+          "Ó €9.90/mí"
+        ],
+        [
+          "Athrú praghais",
+          "Easpórtáil agus uaslódáil arís",
+          "Athraigh réimse amháin",
+          "Athraigh réimse amháin"
+        ],
+        [
+          "Inléite ar an bhfón",
+          "Súmáil agus tarraingt",
+          "Tá",
+          "Tá"
+        ],
+        [
+          "Teangacha",
+          "PDF amháin in aghaidh na teanga",
+          "Uaireanta",
+          "Go huathoibríoch"
+        ],
+        [
+          "Miasa díolta amach",
+          "Níl",
+          "De ghnáth tá",
+          "Tapú amháin"
+        ],
+        [
+          "Is féidir leis an aoi ordú",
+          "Níl",
+          "Níl",
+          "Tá"
+        ],
+        [
+          "Feiceann tú cad a dhíolann",
+          "Níl",
+          "Is annamh",
+          "Tá"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Conas é a dhéanamh i ndáiríre, is cuma cén rogha"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Cuir an biachlár i bhfoirm dhigiteach. Is é clóscríobh 80 mír an caillteanas ama is mó – léann IQ Rest grianghraf de do bhiachlár páipéir agus cruthaíonn sé na miasa agus na praghsanna duit, rud a dhéanann cúig nóiméad as tráthnóna iomlán.",
+        "Socraigh an struchtúr roimh an dearadh. Grúpáil mar a ordaíonn aíonna (cúrsaí tosaigh, príomhchúrsaí, deochanna), ní mar atá do chistin eagraithe. Maraíonn liostaí fada réidhe an scrollú.",
+        "Cuir grianghraif san áit a n-athraíonn siad an cinneadh. Is measa gach mias a ghrianghrafadh ná cúig phictiúr mhaithe ar na miasa is mian leat a dhíol.",
+        "Marcáil na hailléirginí anois, ní níos déanaí. San AE teastaíonn siad ar aon nós, agus is céasadh iad a chur le 80 mír ina dhiaidh sin.",
+        "Cruthaigh cód QR do gach bord, ní ceann amháin don seomra iomlán. An biachlár céanna, ach taistealaíonn uimhir an bhoird leis an scanadh, agus sin a fhágann orduithe agus staitisticí indéanta níos déanaí.",
+        "Priontáil é ionas go mairfidh sé seal oibre. Seastán boird nó greamán lannaithe, cód 3 cm ar leithead ar a laghad, codarsnacht ard, i bhfad ón gcoinneal."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Priontáil seoladh gearr faoin gcód (mar shampla iqrest.com/m/doáit). Tá ceamara nach scanann ag duine as fiche aoi thart, agus sábhálann seoladh inchlóscríofa an nóiméad."
+    },
+    {
+      "type": "h2",
+      "text": "Na botúin is costasaí"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Cód a théann in éag.** Cruthaíonn gineadóirí saor in aisce le tréimhse trialach cóid a stopann ag obair. Cloiseann tú faoi ó aoi, i lár an tseal.",
+        "**Cód amháin don bhialann iomlán.** Saor anois, ach cuireann sé bac go deo ar ordú ón mbord agus ar aon sonraí de réir boird.",
+        "**Cód priontáilte róbheag.** Faoi bhun thart ar 2.5 cm bíonn deacracht ag ceamaraí fón níos sine i solas íseal an tseomra.",
+        "**Nasc chuig do leathanach baile.** Tuirlingíonn an t-aoi ar shuíomh margaíochta agus caithfidh sé an biachlár a aimsiú. Nasc go díreach leis an mbiachlár.",
+        "**Dearmad a dhéanamh go bhfuil an cód ann.** Tá biachlár nach nuashonraíonn éinne níos measa ná páipéar, mar go bhfeictear ar a laghad go bhfuil an páipéar as dáta."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Fág an clóscríobh ar leataobh",
+      "text": "Uaslódáil grianghraf de do bhiachlár páipéir reatha agus bíodh biachlár QR ag obair agat i gceann tuairim is cúig nóiméad. 14 lá saor in aisce, gan chárta.",
+      "buttonLabel": "Féach conas a oibríonn an biachlár QR",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Ceisteanna coitianta",
+      "items": [
+        {
+          "q": "An féidir liom biachlár le cód QR a dhéanamh saor in aisce?",
+          "a": "Is féidir – ní chosnaíonn gineadóir saor in aisce móide PDF pingin. Is í an fhadhb go n-eisíonn gineadóirí saor in aisce cóid go minic a théann in éag nó a théann trí fhearann nach bhfuil faoi do smacht, agus go bhfuil PDF deacair a léamh ar fhón. Rinneamar mionanailís air in [an méid a chosnaíonn biachláir QR saor in aisce i ndáiríre](blog:free-qr-code-menu)."
+        },
+        {
+          "q": "An gá aip a bheith ag aíonna chun é a scanadh?",
+          "a": "Ní gá. Scanann aon fhón ó na blianta beaga anuas cóid QR leis an gceamara ionsuite, agus osclaítear an biachlár sa bhrabhsálaí. Níl aon rud le suiteáil, gan chlárú."
+        },
+        {
+          "q": "Cé chomh mór ar cheart an cód QR a phriontáil?",
+          "a": "Ar a laghad 3 cm ar leithead do sheastán boird. Deirtear go bhfuil an fad scanta thart ar dheich n-oiread leithead an chóid, mar sin léitear cód 3 cm go compordach ó 30 cm."
+        },
+        {
+          "q": "An féidir liom an biachlár a athrú gan na cóid QR a athphriontáil?",
+          "a": "Le biachlár óstáilte, is féidir – díríonn an cód ar sheoladh seasta agus athraíonn an t-ábhar taobh thiar de. Le cód QR díreach chuig comhad PDF, caithfidh an comhad fanacht ag an seoladh céanna go beacht."
+        },
+        {
+          "q": "An dtéann an cód QR ar an mbord nó ar an mbiachlár páipéir?",
+          "a": "Ar an mbord, más mian leat go n-úsáidfí é. Ní scanaítear cód atá priontáilte ar an mbiachlár páipéir go dtí go bhfuil an biachlár páipéir tugtha amach cheana, rud a chuireann an chuid is mó den chuspóir ar ceal."
+        }
+      ]
+    }
+  ]
+}

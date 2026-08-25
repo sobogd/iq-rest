@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "Jak vytvořit QR menu: 3 způsoby | IQ Rest",
+    "description": "Tři způsoby, jak vytvořit QR menu pro restauraci: bezplatný generátor s PDF, editor menu nebo kompletní systém. Kolik stojí a kde se každý rozbije."
+  },
+  "card": {
+    "title": "Jak vytvořit QR menu (a který ze tří způsobů přežije změnu cen)",
+    "excerpt": "Bezplatný generátor QR zabere dvě minuty. Pak se změní ceny. Procházíme tři reálné možnosti, kolik stojí a kde se každá hroutí."
+  },
+  "h1": "Jak vytvořit QR menu pro vaši restauraci",
+  "intro": "Vygenerovat QR kód je ta snadná část – zvládne to jakýkoli bezplatný generátor za dvě minuty. Těžké je to, kam kód míří, protože právě to rozhoduje, jestli se ho ještě někdy dotknete. Tady jsou tři způsoby, které restaurace opravdu používají, seřazené podle pracnosti, s typickou poruchou u každého.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Možnost 1: bezplatný generátor QR mířící na PDF"
+    },
+    {
+      "type": "p",
+      "text": "Exportujte jídelní lístek do PDF, nahrajte ho někam veřejně (Disk Google, vlastní web, souborové úložiště), vložte odkaz do libovolného bezplatného generátoru QR a kód vytiskněte. Celkové náklady: 0 €. Celkový čas: asi 15 minut."
+    },
+    {
+      "type": "p",
+      "text": "Co se rozbije: PDF na displeji telefonu je cvičení v přibližování. Host čte dokument široký 300 mm okénkem o velikosti 15 cm a většina to vzdá a zeptá se číšníka. Horší je, že většina bezplatných generátorů vytvoří **dynamický** kód, který vede přes jejich doménu – jakmile přestanete platit nebo služba skončí, každý vytištěný kód v sále je mrtvý. Pokud použijete statický kód mířící přímo na soubor, kód je trvalý, ale odkaz na soubor se nikdy nesmí změnit, takže opravenou verzi nenahrajete bez nového tisku."
+    },
+    {
+      "type": "note",
+      "text": "Pokud jdete touto cestou, použijte **statický** QR kód mířící na adresu, kterou ovládáte (vlastní doména), ne na odkaz z Disku. Pak můžete soubor za adresou vyměnit bez nového tisku."
+    },
+    {
+      "type": "h2",
+      "text": "Možnost 2: stránka z editoru menu"
+    },
+    {
+      "type": "p",
+      "text": "O stupeň výš: nástroj, který hostuje mobilní stránku s vašimi jídly, cenami a fotkami a dá vám k ní QR kód. Lístek přepíšete jednou a dál upravujete ceny ve formuláři místo v InDesignu. Obvyklé ceny jdou od zdarma s logem dodavatele po 10-30 € měsíčně."
+    },
+    {
+      "type": "p",
+      "text": "Co se rozbije: takové menu je leták. Ukáže jídla a tím to končí. Host pořád mává na číšníka, aby si objednal, kuchyně pořád dostává ručně psané bony a vy pořád nevíte, které jídlo si 400krát měsíčně prohlédnou a dvakrát objednají. Baru s dvanácti položkami to stačí. Restauraci se 60 hosty za večer to skutečné úzké hrdlo nechá nedotčené."
+    },
+    {
+      "type": "h2",
+      "text": "Možnost 3: menu, které přijme i objednávku"
+    },
+    {
+      "type": "p",
+      "text": "Stejný QR kód, ale stránka za ním umí přijmout objednávku a poslat ji do kuchyně. To mění účel kódu: už neslouží k zobrazení lístku, ale ke zkrácení času mezi rozhodnutím hosta a začátkem práce v kuchyni."
+    },
+    {
+      "type": "p",
+      "text": "Co se rozbije: vyžaduje to vaše rozhodnutí o stylu obsluhy. Objednávání přes QR skvěle funguje při vysoké obrátce, na zahrádkách a v plných barech a působí falešně v gastronomické restauraci, kde je číšník součástí produktu. Většina podniků začíná [digitálním menu](route:/digital-menu) jen ke čtení a [objednávání](route:/order-taking) zapne později, až si tým zvykne."
+    },
+    {
+      "type": "h2",
+      "text": "Tři možnosti vedle sebe"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "PDF + bezplatný QR",
+        "Editor menu",
+        "Menu + objednávky"
+      ],
+      "rows": [
+        [
+          "Doba nasazení",
+          "~15 min",
+          "1-2 hodiny přepisování",
+          "~5 min se skenem lístku"
+        ],
+        [
+          "Cena",
+          "0 €",
+          "0-30 €/měs.",
+          "Od 9,90 €/měs."
+        ],
+        [
+          "Změna ceny",
+          "Znovu exportovat a nahrát",
+          "Upravit jedno pole",
+          "Upravit jedno pole"
+        ],
+        [
+          "Čitelné na telefonu",
+          "Přibližování a posouvání",
+          "Ano",
+          "Ano"
+        ],
+        [
+          "Jazyky",
+          "Jedno PDF na jazyk",
+          "Občas",
+          "Automaticky"
+        ],
+        [
+          "Vyprodaná jídla",
+          "Ne",
+          "Obvykle ano",
+          "Jedno klepnutí"
+        ],
+        [
+          "Host může objednat",
+          "Ne",
+          "Ne",
+          "Ano"
+        ],
+        [
+          "Vidíte, co se prodává",
+          "Ne",
+          "Zřídka",
+          "Ano"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Jak na to prakticky, ať zvolíte cokoli"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Převeďte lístek do digitální podoby. Přepsat 80 položek je největší žrout času – IQ Rest přečte fotku vašeho papírového lístku a jídla i ceny vytvoří za vás, takže z celého večera je asi pět minut.",
+        "Vyřešte strukturu dřív než design. Seskupujte tak, jak hosté objednávají (předkrmy, hlavní jídla, nápoje), ne tak, jak je uspořádaná vaše kuchyně. Dlouhé ploché seznamy zabíjejí rolování.",
+        "Fotky dejte tam, kde mění rozhodnutí. Vyfotit každé jídlo je horší než pět dobrých fotek u jídel, která chcete prodat.",
+        "Označte alergeny hned, ne později. V EU je stejně potřebujete a doplňovat je zpětně u 80 položek je utrpení.",
+        "Vytvořte jeden QR kód na stůl, ne jeden pro celý sál. Stejné menu, ale číslo stolu cestuje se skenem, a právě to později umožní objednávky a statistiky.",
+        "Vytiskněte to tak, aby to přežilo směnu. Stojánek nebo laminovaná samolepka, kód alespoň 3 cm široký, vysoký kontrast, dál od svíčky."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Vytiskněte pod kód krátkou webovou adresu (například iqrest.com/m/vaspodnik). Zhruba jeden host z dvaceti má fotoaparát, který nenačte kód, a napsaná adresa situaci zachrání."
+    },
+    {
+      "type": "h2",
+      "text": "Chyby, které stojí nejvíc"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Kód, kterému vyprší platnost.** Bezplatné generátory se zkušební dobou vytvářejí kódy, které přestanou fungovat. Dozvíte se to od hosta, uprostřed směny.",
+        "**Jeden kód pro celou restauraci.** Teď levné, ale navždy to zablokuje objednávání od stolu a jakákoli data podle stolů.",
+        "**Příliš malý tisk.** Pod zhruba 2,5 cm si starší fotoaparáty v tlumeném světle sálu neporadí.",
+        "**Odkaz na hlavní stránku.** Host přistane na marketingovém webu a musí lístek hledat. Odkazujte přímo na lístek.",
+        "**Zapomenout, že kód existuje.** Menu, které nikdo neaktualizuje, je horší než papír, protože papír aspoň viditelně vypadá zastarale."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Vynechte přepisování",
+      "text": "Nahrajte fotku svého současného papírového lístku a mějte fungující QR menu asi za pět minut. 14 dní zdarma, bez karty.",
+      "buttonLabel": "Podívejte se, jak QR menu funguje",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Časté dotazy",
+      "items": [
+        {
+          "q": "Můžu vytvořit QR menu zdarma?",
+          "a": "Ano – bezplatný generátor plus PDF nestojí nic. Háček je v tom, že bezplatné generátory často vydávají kódy, kterým vyprší platnost nebo vedou přes doménu, kterou neovládáte, a že PDF se na telefonu čte špatně. Rozebrali jsme to v textu [kolik doopravdy stojí bezplatné QR menu](blog:free-qr-code-menu)."
+        },
+        {
+          "q": "Potřebují hosté aplikaci, aby kód načetli?",
+          "a": "Ne. Každý telefon z posledních let načte QR kódy vestavěným fotoaparátem a menu se otevře v prohlížeči. Nic se neinstaluje, žádná registrace."
+        },
+        {
+          "q": "Jak velký má být vytištěný QR kód?",
+          "a": "Alespoň 3 cm na šířku pro stolní stojánek. Pravidlo zní, že čtecí vzdálenost je zhruba desetinásobek šířky kódu, takže 3 cm se pohodlně načtou z 30 cm."
+        },
+        {
+          "q": "Můžu měnit menu bez opětovného tisku QR kódů?",
+          "a": "U hostovaného menu ano – kód míří na pevnou adresu a obsah za ní se mění. U QR kódu mířícího přímo na soubor PDF musíte soubor nechat na naprosto stejné adrese."
+        },
+        {
+          "q": "Patří QR kód na stůl, nebo na papírový lístek?",
+          "a": "Na stůl, pokud chcete, aby se používal. Kód vytištěný na papírovém lístku se naskenuje až poté, co někdo papírový lístek přinesl, čímž se většina smyslu ztrácí."
+        }
+      ]
+    }
+  ]
+}

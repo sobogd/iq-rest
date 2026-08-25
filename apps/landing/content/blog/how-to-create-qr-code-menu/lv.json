@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "Kā izveidot QR ēdienkarti: 3 veidi | IQ Rest",
+    "description": "Trīs veidi, kā izveidot QR ēdienkarti restorānam: bezmaksas ģenerators ar PDF, ēdienkartes veidotājs vai pilna sistēma. Cik maksā un kur katrs salūzt."
+  },
+  "card": {
+    "title": "Kā izveidot ēdienkarti ar QR kodu (un kurš no trim veidiem pārdzīvo cenu maiņu)",
+    "excerpt": "Bezmaksas QR ģenerators aizņem divas minūtes. Tad mainās cenas. Izskatām trīs reālās iespējas, cik tās maksā un kur katra sabrūk."
+  },
+  "h1": "Kā izveidot ēdienkarti ar QR kodu savam restorānam",
+  "intro": "QR koda izveide ir vieglā daļa – jebkurš bezmaksas ģenerators to paveic divās minūtēs. Grūtākais ir tas, uz ko kods norāda, jo tieši tas izšķir, vai tu tam vēl kādreiz pieskarsies. Lūk, trīs veidi, ko restorāni patiešām izmanto, sakārtoti pēc darba apjoma, ar katra tipisko kļūmi.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "1. variants: bezmaksas QR ģenerators, kas norāda uz PDF"
+    },
+    {
+      "type": "p",
+      "text": "Eksportē ēdienkarti PDF formātā, augšupielādē to kaut kur publiski (Google disks, sava mājaslapa, failu serviss), ielīmē saiti jebkurā bezmaksas QR ģeneratorā un izdrukā kodu. Kopējās izmaksas: 0 €. Kopējais laiks: apmēram 15 minūtes."
+    },
+    {
+      "type": "p",
+      "text": "Kas salūzt: PDF telefona ekrānā ir tālummaiņas vingrinājums. Viesis lasa 300 mm platu dokumentu caur 15 centimetru lielu lodziņu, un lielākā daļa padodas un jautā viesmīlim. Vēl sliktāk – vairums bezmaksas ģeneratoru izveido **dinamisku** kodu, kas iet caur viņu domēnu: ja pārstāj maksāt vai pakalpojums beidzas, katrs izdrukātais kods zālē ir miris. Ja izmanto statisku kodu tieši uz failu, kods ir mūžīgs, taču faila saite nekad nedrīkst mainīties, tātad labotu versiju nevar augšupielādēt bez atkārtotas drukas."
+    },
+    {
+      "type": "note",
+      "text": "Ja izvēlies šo ceļu, izmanto **statisku** QR kodu, kas norāda uz adresi, kuru kontrolē tu pats (paša domēns), nevis uz Google diska saiti. Tad vari nomainīt failu aiz adreses bez atkārtotas drukas."
+    },
+    {
+      "type": "h2",
+      "text": "2. variants: lapa no ēdienkartes veidotāja"
+    },
+    {
+      "type": "p",
+      "text": "Pakāpi augstāk: rīks, kas uztur mobilo lapu ar taviem ēdieniem, cenām un fotogrāfijām un iedod tai QR kodu. Ēdienkarti ievadi vienreiz, pēc tam cenas labo veidlapā, nevis InDesign programmā. Ierastās cenas ir no bezmaksas ar pakalpojuma sniedzēja logotipu līdz 10-30 € mēnesī."
+    },
+    {
+      "type": "p",
+      "text": "Kas salūzt: šāda ēdienkarte ir buklets. Parāda ēdienus, un ar to viss beidzas. Viesis joprojām māj viesmīlim, lai pasūtītu, virtuve joprojām saņem ar roku rakstītas pasūtījumu lapas, un tu joprojām nezini, kuru ēdienu apskata 400 reižu mēnesī un pasūta divas. Bāram ar 12 pozīcijām ar to pietiek. Restorānam ar 60 viesiem vakarā īstā šaurā vieta paliek neaiztikta."
+    },
+    {
+      "type": "h2",
+      "text": "3. variants: ēdienkarte, kas pieņem arī pasūtījumu"
+    },
+    {
+      "type": "p",
+      "text": "Tas pats QR kods, bet lapa aiz tā spēj pieņemt pasūtījumu un nosūtīt to uz virtuvi. Tas maina koda jēgu: tas vairs nerāda ēdienkarti, bet saīsina laiku starp viesa lēmumu un virtuves sākumu."
+    },
+    {
+      "type": "p",
+      "text": "Kas salūzt: tas prasa tavu lēmumu par apkalpošanas stilu. Pasūtīšana ar QR lieliski darbojas ātras aprites zālēs, terasēs un pilnos bāros un skan mākslīgi augstākās klases restorānā, kur viesmīlis ir daļa no produkta. Vairums vietu sāk ar tikai lasāmu [digitālo ēdienkarti](route:/digital-menu) un [pasūtīšanu](route:/order-taking) ieslēdz vēlāk, kad komanda jūtas droši."
+    },
+    {
+      "type": "h2",
+      "text": "Visi trīs blakus"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "PDF + bezmaksas QR",
+        "Ēdienkartes veidotājs",
+        "Ēdienkarte + pasūtījumi"
+      ],
+      "rows": [
+        [
+          "Ieviešanas laiks",
+          "~15 min",
+          "1-2 stundas rakstīšanas",
+          "~5 min ar ēdienkartes skenēšanu"
+        ],
+        [
+          "Izmaksas",
+          "0 €",
+          "0-30 €/mēn.",
+          "No 9,90 €/mēn."
+        ],
+        [
+          "Cenas maiņa",
+          "Atkārtots eksports un augšupielāde",
+          "Labo vienu lauku",
+          "Labo vienu lauku"
+        ],
+        [
+          "Salasāms telefonā",
+          "Tālummaiņa un vilkšana",
+          "Jā",
+          "Jā"
+        ],
+        [
+          "Valodas",
+          "Viens PDF katrai valodai",
+          "Dažreiz",
+          "Automātiski"
+        ],
+        [
+          "Beigušies ēdieni",
+          "Nē",
+          "Parasti jā",
+          "Viens pieskāriens"
+        ],
+        [
+          "Viesis var pasūtīt",
+          "Nē",
+          "Nē",
+          "Jā"
+        ],
+        [
+          "Redzi, kas pārdodas",
+          "Nē",
+          "Reti",
+          "Jā"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kā to izdarīt praksē, lai kuru variantu izvēlies"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Pārnes ēdienkarti digitālā formā. 80 pozīciju ievadīšana ir lielākais laika patērētājs – IQ Rest nolasa tavas papīra ēdienkartes fotogrāfiju un izveido ēdienus un cenas tavā vietā, tā vesels vakars pārvēršas apmēram piecās minūtēs.",
+        "Sakārto struktūru pirms dizaina. Grupē tā, kā viesi pasūta (uzkodas, pamatēdieni, dzērieni), nevis tā, kā organizēta tava virtuve. Garas plakanas listes nogalina ritināšanu.",
+        "Liec fotogrāfijas tur, kur tās maina lēmumu. Nofotografēt katru ēdienu ir sliktāk nekā piecas labas bildes pie tiem ēdieniem, kurus gribi pārdot.",
+        "Atzīmē alergēnus tagad, ne vēlāk. ES tie tāpat ir vajadzīgi, un pievienot tos vēlāk 80 pozīcijām ir mocība.",
+        "Izveido vienu QR kodu katram galdam, nevis vienu visai zālei. Tā pati ēdienkarte, bet galda numurs ceļo kopā ar skenēšanu, un tieši tas vēlāk padara iespējamus pasūtījumus un statistiku.",
+        "Izdrukā to tā, lai izturētu maiņu. Galda statīvs vai laminēta uzlīme, kods vismaz 3 cm plats, augsts kontrasts, tālāk no sveces."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Zem koda izdrukā īsu adresi (piemēram, iqrest.com/m/tavavieta). Aptuveni vienam no divdesmit viesiem ir kamera, kas neskenē, un adrese, ko var ierakstīt, izglābj brīdi."
+    },
+    {
+      "type": "h2",
+      "text": "Kļūdas, kas maksā visdārgāk"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Kods, kuram beidzas termiņš.** Bezmaksas ģeneratori ar izmēģinājuma periodu rada kodus, kas kādu dienu vairs nekur neved. Uzzini no viesa, maiņas vidū.",
+        "**Viens kods visam restorānam.** Tagad lēti, bet uz visiem laikiem bloķē pasūtīšanu pie galda un jebkādus datus pa galdiem.",
+        "**Pārāk mazs izdrukas izmērs.** Zem aptuveni 2,5 cm vecāku telefonu kameras zāles blāvajā gaismā netiek galā.",
+        "**Saite uz sākumlapu.** Viesis nonāk mārketinga lapā un ēdienkarte jāmeklē. Saiti liec tieši uz ēdienkarti.",
+        "**Aizmirst, ka kods vispār ir.** Ēdienkarte, ko neviens neatjauno, ir sliktāka par papīru, jo papīrs vismaz redzami izskatās novecojis."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Izlaid ievadīšanu",
+      "text": "Augšupielādē savas pašreizējās papīra ēdienkartes fotogrāfiju un iegūsti strādājošu QR ēdienkarti apmēram piecās minūtēs. 14 dienas bez maksas, bez kartes.",
+      "buttonLabel": "Skaties, kā darbojas QR ēdienkarte",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Biežāk uzdotie jautājumi",
+      "items": [
+        {
+          "q": "Vai varu izveidot ēdienkarti ar QR kodu bez maksas?",
+          "a": "Jā – bezmaksas ģenerators plus PDF neko nemaksā. Āķis ir tajā, ka bezmaksas ģeneratori bieži izsniedz kodus, kuriem beidzas termiņš vai kuri iet caur domēnu, ko tu nekontrolē, un ka PDF telefonā ir grūti lasāms. To izklāstījām rakstā [cik patiesībā maksā bezmaksas QR ēdienkartes](blog:free-qr-code-menu)."
+        },
+        {
+          "q": "Vai viesiem skenēšanai vajadzīga lietotne?",
+          "a": "Nē. Jebkurš pēdējo gadu telefons skenē QR kodus ar iebūvēto kameru, un ēdienkarte atveras pārlūkā. Nekas nav jāinstalē, nav jāreģistrējas."
+        },
+        {
+          "q": "Cik lielu drukāt QR kodu?",
+          "a": "Vismaz 3 cm platu galda statīvam. Īkšķa likums: skenēšanas attālums ir apmēram desmit reižu lielāks par koda platumu, tātad 3 cm ērti nolasās no 30 cm."
+        },
+        {
+          "q": "Vai varu mainīt ēdienkarti, neizdrukājot QR kodus no jauna?",
+          "a": "Ar mitinātu ēdienkarti jā – kods norāda uz pastāvīgu adresi, bet saturs aiz tās mainās. Ar QR kodu tieši uz PDF failu fails jāatstāj tieši tajā pašā adresē."
+        },
+        {
+          "q": "QR kods jāliek uz galda vai uz papīra ēdienkartes?",
+          "a": "Uz galda, ja gribi, lai to izmanto. Uz papīra ēdienkartes uzdrukātu kodu noskenē tikai pēc tam, kad kāds papīra ēdienkarti jau ir pasniedzis, un tas iznīcina gandrīz visu jēgu."
+        }
+      ]
+    }
+  ]
+}

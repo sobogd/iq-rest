@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "Kaip sukurti QR meniu: 3 būdai | IQ Rest",
+    "description": "Trys būdai sukurti restorano QR meniu: nemokamas generatorius su PDF, meniu kūrimo įrankis arba visa sistema. Kiek kainuoja ir kur kiekvienas lūžta."
+  },
+  "card": {
+    "title": "Kaip sukurti meniu su QR kodu (ir kuris iš trijų būdų atlaiko kainų pakeitimą)",
+    "excerpt": "Nemokamas QR generatorius užtrunka dvi minutes. Paskui pasikeičia kainos. Apžvelgiame tris realias galimybes, kiek jos kainuoja ir kur kiekviena griūva."
+  },
+  "h1": "Kaip sukurti meniu su QR kodu savo restoranui",
+  "intro": "Sugeneruoti QR kodą – lengvoji dalis: bet kuris nemokamas generatorius tai padaro per dvi minutes. Sunku yra tai, kur kodas veda, nes būtent tai lemia, ar dar kada nors prie jo grįšite. Štai trys būdai, kuriuos restoranai iš tikrųjų naudoja, pagal reikalingas pastangas, su kiekvieno tipiniu gedimu.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "1 variantas: nemokamas QR generatorius, vedantis į PDF"
+    },
+    {
+      "type": "p",
+      "text": "Eksportuokite meniu į PDF, įkelkite jį kur nors viešai (Google diskas, jūsų svetainė, failų saugykla), įklijuokite nuorodą į bet kurį nemokamą QR generatorių ir atspausdinkite kodą. Bendra kaina: 0 €. Bendras laikas: apie 15 minučių."
+    },
+    {
+      "type": "p",
+      "text": "Kas lūžta: PDF telefono ekrane – tai didinimo pratimas. Svečias skaito 300 mm pločio dokumentą pro 15 centimetrų langelį, ir dauguma pasiduoda ir klausia padavėjo. Dar blogiau: dauguma nemokamų generatorių sukuria **dinaminį** kodą, einantį per jų domeną – nustojus mokėti arba paslaugai užsidarius, kiekvienas atspausdintas kodas salėje miręs. Jei naudosite statinį kodą tiesiai į failą, kodas bus amžinas, bet failo nuoroda niekada negalės keistis, vadinasi, pataisytos versijos neįkelsite be pakartotinio spausdinimo."
+    },
+    {
+      "type": "note",
+      "text": "Jei renkatės šį kelią, naudokite **statinį** QR kodą, vedantį į jūsų pačių valdomą adresą (savas domenas), o ne į Disko nuorodą. Tada failą už adreso galėsite pakeisti be pakartotinio spausdinimo."
+    },
+    {
+      "type": "h2",
+      "text": "2 variantas: puslapis iš meniu kūrimo įrankio"
+    },
+    {
+      "type": "p",
+      "text": "Laipteliu aukščiau: įrankis, kuris talpina mobilųjį puslapį su jūsų patiekalais, kainomis ir nuotraukomis ir duoda jam QR kodą. Meniu suvedate vieną kartą, o vėliau kainas taisote formoje, o ne InDesign programoje. Įprastos kainos svyruoja nuo nemokamo su tiekėjo logotipu iki 10-30 € per mėnesį."
+    },
+    {
+      "type": "p",
+      "text": "Kas lūžta: toks meniu – lankstinukas. Parodo patiekalus ir tuo baigiasi. Svečias vis tiek moja padavėjui, kad užsakytų, virtuvė vis tiek gauna ranka rašytus lapelius, o jūs vis tiek nežinote, kurį patiekalą peržiūri 400 kartų per mėnesį ir užsako du. Barui su 12 pozicijų to pakanka. Restoranui, aptarnaujančiam 60 svečių per vakarą, tikroji siaura vieta lieka nepaliesta."
+    },
+    {
+      "type": "h2",
+      "text": "3 variantas: meniu, kuris priima ir užsakymą"
+    },
+    {
+      "type": "p",
+      "text": "Tas pats QR kodas, bet puslapis už jo gali priimti užsakymą ir nusiųsti jį į virtuvę. Tai pakeičia kodo paskirtį: jis nebėra būdas parodyti meniu, jis trumpina laiką tarp svečio sprendimo ir virtuvės starto."
+    },
+    {
+      "type": "p",
+      "text": "Kas lūžta: reikia jūsų sprendimo dėl aptarnavimo stiliaus. Užsakymas per QR puikiai veikia didelės apyvartos salėse, terasose ir pilnuose baruose, o aukštos virtuvės restorane, kur padavėjas yra produkto dalis, skamba netikrai. Dauguma įstaigų pradeda nuo tik skaitomo [skaitmeninio meniu](route:/digital-menu) ir [užsakymą](route:/order-taking) įjungia vėliau, kai komanda apsipranta."
+    },
+    {
+      "type": "h2",
+      "text": "Visi trys greta"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "PDF + nemokamas QR",
+        "Meniu kūrimo įrankis",
+        "Meniu + užsakymai"
+      ],
+      "rows": [
+        [
+          "Paleidimo laikas",
+          "~15 min",
+          "1-2 val. rinkimo",
+          "~5 min su meniu nuskaitymu"
+        ],
+        [
+          "Kaina",
+          "0 €",
+          "0-30 €/mėn.",
+          "Nuo 9,90 €/mėn."
+        ],
+        [
+          "Kainos keitimas",
+          "Iš naujo eksportuoti ir įkelti",
+          "Pakeisti vieną lauką",
+          "Pakeisti vieną lauką"
+        ],
+        [
+          "Įskaitoma telefone",
+          "Didinimas ir tampymas",
+          "Taip",
+          "Taip"
+        ],
+        [
+          "Kalbos",
+          "Po vieną PDF kiekvienai kalbai",
+          "Kartais",
+          "Automatiškai"
+        ],
+        [
+          "Pasibaigę patiekalai",
+          "Ne",
+          "Paprastai taip",
+          "Vienas palietimas"
+        ],
+        [
+          "Svečias gali užsakyti",
+          "Ne",
+          "Ne",
+          "Taip"
+        ],
+        [
+          "Matote, kas parduodama",
+          "Ne",
+          "Retai",
+          "Taip"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kaip tai padaryti iš tikrųjų, kad ir kurį variantą pasirinktumėte"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Perkelkite meniu į skaitmeninį pavidalą. 80 pozicijų suvedimas – didžiausias laiko ėdikas: IQ Rest perskaito jūsų popierinio meniu nuotrauką ir pats sukuria patiekalus bei kainas, todėl visas vakaras virsta maždaug penkiomis minutėmis.",
+        "Sutvarkykite struktūrą prieš dizainą. Grupuokite taip, kaip užsako svečiai (užkandžiai, pagrindiniai patiekalai, gėrimai), o ne taip, kaip sutvarkyta jūsų virtuvė. Ilgi vientisi sąrašai žudo slinkimą.",
+        "Nuotraukas dėkite ten, kur jos keičia sprendimą. Nufotografuoti kiekvieną patiekalą blogiau nei penkios geros nuotraukos prie tų patiekalų, kuriuos norite parduoti.",
+        "Alergenus pažymėkite dabar, o ne vėliau. ES jų vis tiek reikia, o pridėti juos atgaline data prie 80 pozicijų yra kančia.",
+        "Sukurkite po vieną QR kodą kiekvienam staliukui, o ne vieną visai salei. Meniu tas pats, bet staliuko numeris keliauja kartu su nuskaitymu, ir būtent tai vėliau leidžia užsakymus ir statistiką.",
+        "Atspausdinkite taip, kad atlaikytų pamainą. Stalo stovelis arba laminuotas lipdukas, kodas bent 3 cm pločio, ryškus kontrastas, toliau nuo žvakės."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Po kodu atspausdinkite trumpą interneto adresą (pavyzdžiui, iqrest.com/m/jusuvieta). Maždaug vienas iš dvidešimties svečių turi kamerą, kuri nenuskaito, ir įvedamas adresas išgelbsti akimirką."
+    },
+    {
+      "type": "h2",
+      "text": "Brangiausiai kainuojančios klaidos"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Kodas, kurio galiojimas baigiasi.** Nemokami generatoriai su bandomuoju laikotarpiu sukuria kodus, kurie vieną dieną nebeveda niekur. Sužinote iš svečio, pačiame pamainos įkarštyje.",
+        "**Vienas kodas visam restoranui.** Dabar pigu, bet visam laikui užkerta kelią užsakymui prie staliuko ir bet kokiems duomenims pagal staliukus.",
+        "**Per mažai atspausdintas kodas.** Mažiau nei apie 2,5 cm senesnių telefonų kameroms prigesintoje salės šviesoje sunku.",
+        "**Nuoroda į pagrindinį puslapį.** Svečias patenka į rinkodaros svetainę ir turi ieškoti meniu. Nukreipkite tiesiai į meniu.",
+        "**Pamiršti, kad kodas egzistuoja.** Meniu, kurio niekas neatnaujina, blogesnis už popierių, nes popierius bent jau akivaizdžiai atrodo pasenęs."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Praleiskite rinkimą",
+      "text": "Įkelkite dabartinio popierinio meniu nuotrauką ir per maždaug penkias minutes turėkite veikiantį QR meniu. 14 dienų nemokamai, be kortelės.",
+      "buttonLabel": "Pažiūrėkite, kaip veikia QR meniu",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Dažnai užduodami klausimai",
+      "items": [
+        {
+          "q": "Ar galiu sukurti meniu su QR kodu nemokamai?",
+          "a": "Taip – nemokamas generatorius ir PDF nekainuoja nieko. Kliūtis ta, kad nemokami generatoriai dažnai išduoda kodus, kurių galiojimas baigiasi arba kurie eina per jūsų nevaldomą domeną, ir kad PDF telefone sunkiai skaitomas. Tai išnagrinėjome tekste [kiek iš tikrųjų kainuoja nemokami QR meniu](blog:free-qr-code-menu)."
+        },
+        {
+          "q": "Ar svečiams reikia programėlės nuskaityti?",
+          "a": "Ne. Bet kuris pastarųjų metų telefonas nuskaito QR kodus įmontuota kamera, o meniu atsidaro naršyklėje. Nieko diegti nereikia, registracijos nėra."
+        },
+        {
+          "q": "Kokio dydžio spausdinti QR kodą?",
+          "a": "Bent 3 cm pločio stalo stoveliui. Nykščio taisyklė: nuskaitymo atstumas yra maždaug dešimt kartų didesnis už kodo plotį, taigi 3 cm patogiai perskaitomi iš 30 cm."
+        },
+        {
+          "q": "Ar galiu keisti meniu neperspausdindamas QR kodų?",
+          "a": "Su talpinamu meniu taip – kodas veda į pastovų adresą, o turinys už jo keičiasi. Su QR kodu tiesiai į PDF failą failas turi likti lygiai tuo pačiu adresu."
+        },
+        {
+          "q": "QR kodas turi būti ant staliuko ar ant popierinio meniu?",
+          "a": "Ant staliuko, jei norite, kad juo naudotųsi. Ant popierinio meniu atspausdintas kodas nuskaitomas tik po to, kai kas nors popierinį meniu jau padavė, o tai sunaikina beveik visą prasmę."
+        }
+      ]
+    }
+  ]
+}

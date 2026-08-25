@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "Kako napraviti QR meni: 3 načina | IQ Rest",
+    "description": "Tri načina za izradu QR menija za restoran: besplatni generator s PDF-om, alat za izradu jelovnika ili cjelovit sustav. Koliko koštaju i gdje pucaju."
+  },
+  "card": {
+    "title": "Kako napraviti jelovnik s QR kodom (i koji od tri načina preživi promjenu cijena)",
+    "excerpt": "Besplatni QR generator traje dvije minute. Onda se promijene cijene. Prolazimo kroz tri stvarne opcije, koliko koštaju i gdje se svaka raspada."
+  },
+  "h1": "Kako napraviti jelovnik s QR kodom za svoj restoran",
+  "intro": "Izraditi QR kod lakši je dio – bilo koji besplatni generator to napravi u dvije minute. Teško je ono na što kod vodi, jer to određuje hoćete li ga ikad više dirati. Evo tri načina koja restorani stvarno koriste, poredana po trudu, sa svojstvenim kvarom svakoga od njih.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Opcija 1: besplatni QR generator koji vodi na PDF"
+    },
+    {
+      "type": "p",
+      "text": "Izvezite jelovnik u PDF, postavite ga negdje javno (Google Drive, vlastita stranica, servis za datoteke), zalijepite poveznicu u bilo koji besplatni QR generator i ispišite kod. Ukupan trošak: 0 €. Ukupno vrijeme: oko 15 minuta."
+    },
+    {
+      "type": "p",
+      "text": "Što puca: PDF na zaslonu mobitela vježba je zumiranja. Gost čita dokument širine 300 mm kroz prozorčić od 15 cm i većina odustane i pita konobara. Gore od toga, većina besplatnih generatora radi **dinamički** kod koji ide preko njihove domene – prestanete li plaćati ili se servis ugasi, svaki ispisani kod u sali je mrtav. Upotrijebite li statični kod izravno na datoteku, kod je trajan, ali poveznica na datoteku nikad se ne smije promijeniti, što znači da ispravljenu verziju ne možete postaviti bez novog ispisa."
+    },
+    {
+      "type": "note",
+      "text": "Ako idete tim putem, upotrijebite **statični** QR kod koji vodi na adresu koju kontrolirate vi (vlastita domena), a ne na Drive poveznicu. Tada možete zamijeniti datoteku iza adrese bez ponovnog ispisa."
+    },
+    {
+      "type": "h2",
+      "text": "Opcija 2: stranica iz alata za izradu jelovnika"
+    },
+    {
+      "type": "p",
+      "text": "Stepenicu više: alat koji hostira mobilnu stranicu s vašim jelima, cijenama i fotografijama i daje vam QR kod za nju. Jelovnik utipkate jednom, a nakon toga cijene mijenjate u obrascu umjesto u InDesignu. Uobičajene cijene idu od besplatno uz logotip pružatelja do 10-30 € mjesečno."
+    },
+    {
+      "type": "p",
+      "text": "Što puca: takav jelovnik je letak. Prikaže jela i tu staje. Gost i dalje maše konobaru da naruči, kuhinja i dalje dobiva rukom pisane narudžbenice, a vi i dalje ne znate koje se jelo pogleda 400 puta mjesečno i naruči dvaput. Baru s 12 stavki to je dovoljno. Restoranu sa 60 gostiju navečer pravo usko grlo ostaje netaknuto."
+    },
+    {
+      "type": "h2",
+      "text": "Opcija 3: jelovnik koji prima i narudžbu"
+    },
+    {
+      "type": "p",
+      "text": "Isti QR kod, ali stranica iza njega može primiti narudžbu i poslati je u kuhinju. To mijenja čemu kod služi: više ne prikazuje jelovnik, nego skraćuje vrijeme između gostove odluke i početka rada u kuhinji."
+    },
+    {
+      "type": "p",
+      "text": "Što puca: traži vašu odluku o stilu usluge. Naručivanje putem QR-a odlično radi pri velikom obrtaju, na terasama i u punim barovima, a zvuči neprirodno u fine dining restoranu gdje je konobar dio proizvoda. Većina lokala kreće s [digitalnim jelovnikom](route:/digital-menu) samo za čitanje i [naručivanje](route:/order-taking) uključi kasnije, kad se osoblje opusti."
+    },
+    {
+      "type": "h2",
+      "text": "Sve tri jedna uz drugu"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "PDF + besplatni QR",
+        "Alat za jelovnik",
+        "Jelovnik + narudžbe"
+      ],
+      "rows": [
+        [
+          "Vrijeme postavljanja",
+          "~15 min",
+          "1-2 sata utipkavanja",
+          "~5 min uz skeniranje jelovnika"
+        ],
+        [
+          "Trošak",
+          "0 €",
+          "0-30 €/mj.",
+          "Od 9,90 €/mj."
+        ],
+        [
+          "Promjena cijene",
+          "Ponovni izvoz i postavljanje",
+          "Uređivanje jednog polja",
+          "Uređivanje jednog polja"
+        ],
+        [
+          "Čitljivo na mobitelu",
+          "Zumiranje i povlačenje",
+          "Da",
+          "Da"
+        ],
+        [
+          "Jezici",
+          "Po jedan PDF za svaki jezik",
+          "Ponekad",
+          "Automatski"
+        ],
+        [
+          "Rasprodana jela",
+          "Ne",
+          "Obično da",
+          "Jedan dodir"
+        ],
+        [
+          "Gost može naručiti",
+          "Ne",
+          "Ne",
+          "Da"
+        ],
+        [
+          "Vidite što se prodaje",
+          "Ne",
+          "Rijetko",
+          "Da"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kako to zapravo napraviti, koju god opciju izabrali"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Prebacite jelovnik u digitalni oblik. Utipkavanje 80 stavki najveći je gubitak vremena – IQ Rest pročita fotografiju vašeg papirnatog jelovnika i sam stvori jela i cijene, čime cijela večer postaje otprilike pet minuta.",
+        "Riješite strukturu prije dizajna. Grupirajte kako gosti naručuju (predjela, glavna jela, pića), a ne kako je organizirana vaša kuhinja. Duge ravne liste ubijaju listanje.",
+        "Fotografije stavite tamo gdje mijenjaju odluku. Fotografirati svako jelo lošije je od pet dobrih fotografija na jelima koja želite prodati.",
+        "Označite alergene sada, ne poslije. U EU ih ionako trebate, a naknadno ih dodavati na 80 stavki prava je muka.",
+        "Napravite jedan QR kod po stolu, ne jedan za cijelu salu. Isti jelovnik, ali broj stola putuje sa skeniranjem, i upravo to kasnije omogućuje narudžbe i statistiku.",
+        "Ispišite ga tako da preživi smjenu. Stolni stalak ili laminirana naljepnica, kod širok najmanje 3 cm, jak kontrast, dalje od svijeće."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Ispišite kratku web adresu ispod koda (na primjer iqrest.com/m/vaslokal). Otprilike jedan od dvadeset gostiju ima kameru koja ne skenira, a adresa koju se može utipkati spašava trenutak."
+    },
+    {
+      "type": "h2",
+      "text": "Pogreške koje najviše koštaju"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Kod koji istekne.** Besplatni generatori s probnim razdobljem stvaraju kodove koji jednog dana ne vode nikamo. Doznat ćete od gosta, usred smjene.",
+        "**Jedan kod za cijeli restoran.** Sada jeftino, ali zauvijek blokira naručivanje za stolom i bilo kakve podatke po stolovima.",
+        "**Premalen ispis koda.** Ispod otprilike 2,5 cm starije kamere mobitela muče se pri prigušenom svjetlu u sali.",
+        "**Poveznica na naslovnicu.** Gost završi na marketinškoj stranici i mora tražiti jelovnik. Vodite izravno na jelovnik.",
+        "**Zaboraviti da kod postoji.** Jelovnik koji nitko ne ažurira gori je od papira, jer papir barem vidljivo izgleda zastarjelo."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Preskočite utipkavanje",
+      "text": "Postavite fotografiju svog trenutnog papirnatog jelovnika i dobijte QR jelovnik koji radi za otprilike pet minuta. 14 dana besplatno, bez kartice.",
+      "buttonLabel": "Pogledajte kako radi QR jelovnik",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Česta pitanja",
+      "items": [
+        {
+          "q": "Mogu li besplatno napraviti jelovnik s QR kodom?",
+          "a": "Da – besplatni generator plus PDF ne koštaju ništa. Kvaka je u tome što besplatni generatori često izdaju kodove koji isteknu ili idu preko domene koju ne kontrolirate, i što se PDF teško čita na mobitelu. Razložili smo to u tekstu [koliko zapravo koštaju besplatni QR jelovnici](blog:free-qr-code-menu)."
+        },
+        {
+          "q": "Trebaju li gosti aplikaciju za skeniranje?",
+          "a": "Ne. Svaki mobitel iz posljednjih godina skenira QR kodove ugrađenom kamerom, a jelovnik se otvara u pregledniku. Ništa se ne instalira, nema registracije."
+        },
+        {
+          "q": "Koliko velik treba biti ispisani QR kod?",
+          "a": "Najmanje 3 cm širine za stolni stalak. Pravilo je da je udaljenost skeniranja otprilike deset puta veća od širine koda, pa se 3 cm ugodno čita s 30 cm."
+        },
+        {
+          "q": "Mogu li mijenjati jelovnik bez ponovnog ispisa QR kodova?",
+          "a": "Uz hostirani jelovnik da – kod vodi na stalnu adresu, a sadržaj iza nje se mijenja. Uz QR kod izravno na PDF datoteku, datoteka mora ostati na potpuno istoj adresi."
+        },
+        {
+          "q": "Ide li QR kod na stol ili na papirnati jelovnik?",
+          "a": "Na stol, ako želite da se koristi. Kod otisnut na papirnatom jelovniku skenira se tek nakon što je netko već donio papirnati jelovnik, čime nestaje većina smisla."
+        }
+      ]
+    }
+  ]
+}

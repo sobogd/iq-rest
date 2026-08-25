@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "Kako ustvariti QR meni: 3 načini | IQ Rest",
+    "description": "Trije načini za izdelavo QR menija za restavracijo: brezplačni generator s PDF, urejevalnik jedilnika ali celovit sistem. Koliko stanejo in kje odpovejo."
+  },
+  "card": {
+    "title": "Kako ustvariti jedilnik s QR kodo (in kateri od treh načinov preživi spremembo cen)",
+    "excerpt": "Brezplačni generator QR vzame dve minuti. Nato se spremenijo cene. Preletimo tri resnične možnosti, koliko stanejo in kje se vsaka sesuje."
+  },
+  "h1": "Kako ustvariti jedilnik s QR kodo za svojo restavracijo",
+  "intro": "Izdelava QR kode je lahek del – vsak brezplačni generator to opravi v dveh minutah. Težko je, kam koda kaže, saj prav to odloči, ali se je boste še kdaj dotaknili. Tu so trije načini, ki jih restavracije res uporabljajo, urejeni po vloženem trudu, z značilno okvaro vsakega.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Možnost 1: brezplačni generator QR, ki kaže na PDF"
+    },
+    {
+      "type": "p",
+      "text": "Izvozite jedilnik v PDF, naložite ga nekam javno (Google Drive, lastna stran, storitev za datoteke), prilepite povezavo v poljuben brezplačni generator QR in natisnite kodo. Skupni strošek: 0 €. Skupni čas: približno 15 minut."
+    },
+    {
+      "type": "p",
+      "text": "Kaj odpove: PDF na zaslonu telefona je vaja iz približevanja. Gost bere 300 mm širok dokument skozi okence velikosti 15 cm in večina obupa ter vpraša natakarja. Še huje, večina brezplačnih generatorjev naredi **dinamično** kodo, ki teče prek njihove domene – če nehate plačevati ali storitev ugasne, je vsaka natisnjena koda v lokalu mrtva. Če uporabite statično kodo naravnost na datoteko, je koda trajna, a povezava do datoteke se ne sme nikoli spremeniti, torej popravljene različice ne morete naložiti brez novega tiska."
+    },
+    {
+      "type": "note",
+      "text": "Če greste po tej poti, uporabite **statično** QR kodo, ki kaže na naslov, ki ga nadzorujete sami (lastna domena), ne na povezavo z Drive. Tako lahko datoteko za naslovom zamenjate brez ponovnega tiskanja."
+    },
+    {
+      "type": "h2",
+      "text": "Možnost 2: stran iz urejevalnika jedilnika"
+    },
+    {
+      "type": "p",
+      "text": "Stopnjo višje: orodje, ki gosti mobilno stran z vašimi jedmi, cenami in fotografijami ter vam da QR kodo zanjo. Jedilnik vtipkate enkrat, nato pa cene urejate v obrazcu namesto v InDesignu. Običajne cene segajo od brezplačno z logotipom ponudnika do 10-30 € na mesec."
+    },
+    {
+      "type": "p",
+      "text": "Kaj odpove: tak jedilnik je zloženka. Pokaže jedi in tu se konča. Gost še vedno pomaha natakarju, da naroči, kuhinja še vedno dobiva ročno napisane listke, vi pa še vedno ne veste, katero jed si ogledajo 400-krat na mesec in naročijo dvakrat. Baru z dvanajstimi postavkami to zadošča. Restavraciji s 60 gosti na večer pravo ozko grlo ostane nedotaknjeno."
+    },
+    {
+      "type": "h2",
+      "text": "Možnost 3: jedilnik, ki sprejme tudi naročilo"
+    },
+    {
+      "type": "p",
+      "text": "Ista QR koda, a stran za njo lahko sprejme naročilo in ga pošlje v kuhinjo. To spremeni namen kode: ne prikazuje več jedilnika, temveč skrajšuje čas med gostovo odločitvijo in začetkom dela v kuhinji."
+    },
+    {
+      "type": "p",
+      "text": "Kaj odpove: od vas zahteva odločitev o slogu strežbe. Naročanje prek QR odlično deluje pri visokem obratu, na terasah in v polnih barih, v vrhunski restavraciji, kjer je natakar del izdelka, pa zveni napačno. Večina lokalov začne z [digitalnim jedilnikom](route:/digital-menu) samo za branje in [naročanje](route:/order-taking) vklopi pozneje, ko se ekipa privadi."
+    },
+    {
+      "type": "h2",
+      "text": "Vse tri druga ob drugi"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "PDF + brezplačni QR",
+        "Urejevalnik jedilnika",
+        "Jedilnik + naročila"
+      ],
+      "rows": [
+        [
+          "Čas vzpostavitve",
+          "~15 min",
+          "1-2 uri tipkanja",
+          "~5 min s skeniranjem jedilnika"
+        ],
+        [
+          "Strošek",
+          "0 €",
+          "0-30 €/mes.",
+          "Od 9,90 €/mes."
+        ],
+        [
+          "Sprememba cene",
+          "Ponovni izvoz in nalaganje",
+          "Urejanje enega polja",
+          "Urejanje enega polja"
+        ],
+        [
+          "Berljivo na telefonu",
+          "Približevanje in vlečenje",
+          "Da",
+          "Da"
+        ],
+        [
+          "Jeziki",
+          "En PDF na jezik",
+          "Včasih",
+          "Samodejno"
+        ],
+        [
+          "Razprodane jedi",
+          "Ne",
+          "Običajno da",
+          "En dotik"
+        ],
+        [
+          "Gost lahko naroči",
+          "Ne",
+          "Ne",
+          "Da"
+        ],
+        [
+          "Vidite, kaj se prodaja",
+          "Ne",
+          "Redko",
+          "Da"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kako to res narediti, ne glede na izbrano možnost"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Prenesite jedilnik v digitalno obliko. Vtipkati 80 postavk je največji požiralec časa – IQ Rest prebere fotografijo vašega papirnatega jedilnika in jedi ter cene ustvari namesto vas, s čimer se cel večer skrči na približno pet minut.",
+        "Uredite strukturo pred oblikovanjem. Združujte tako, kot gostje naročajo (predjedi, glavne jedi, pijača), ne tako, kot je organizirana vaša kuhinja. Dolgi ravni seznami ubijejo drsenje.",
+        "Fotografije dajte tja, kjer spremenijo odločitev. Fotografirati vsako jed je slabše kot pet dobrih fotografij pri jedeh, ki jih želite prodati.",
+        "Alergene označite zdaj, ne pozneje. V EU jih tako ali tako potrebujete, naknadno dodajanje k 80 postavkam pa je muka.",
+        "Ustvarite eno QR kodo na mizo, ne ene za ves lokal. Isti jedilnik, a številka mize potuje skupaj s skeniranjem, in prav to pozneje omogoči naročila in statistiko.",
+        "Natisnite jo tako, da preživi izmeno. Namizno stojalo ali plastificirana nalepka, koda široka vsaj 3 cm, močan kontrast, stran od sveče."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Pod kodo natisnite kratek spletni naslov (na primer iqrest.com/m/vaslokal). Približno vsak dvajseti gost ima kamero, ki ne skenira, in naslov, ki ga je mogoče vtipkati, reši trenutek."
+    },
+    {
+      "type": "h2",
+      "text": "Napake, ki stanejo največ"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Koda, ki poteče.** Brezplačni generatorji s poskusnim obdobjem ustvarijo kode, ki nekega dne ne vodijo nikamor. Izveste od gosta, sredi izmene.",
+        "**Ena koda za vso restavracijo.** Zdaj poceni, a za vedno onemogoči naročanje za mizo in vsakršne podatke po mizah.",
+        "**Premajhen natis kode.** Pod približno 2,5 cm se starejše telefonske kamere v pridušeni svetlobi lokala mučijo.",
+        "**Povezava na domačo stran.** Gost pristane na trženjski strani in mora iskati jedilnik. Povežite naravnost na jedilnik.",
+        "**Pozabiti, da koda obstaja.** Jedilnik, ki ga nihče ne posodablja, je slabši od papirja, saj papir vsaj vidno izgleda zastarel."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Preskočite tipkanje",
+      "text": "Naložite fotografijo svojega zdajšnjega papirnatega jedilnika in v približno petih minutah dobite delujoč QR jedilnik. 14 dni brezplačno, brez kartice.",
+      "buttonLabel": "Poglejte, kako deluje QR jedilnik",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Pogosta vprašanja",
+      "items": [
+        {
+          "q": "Ali lahko jedilnik s QR kodo naredim brezplačno?",
+          "a": "Da – brezplačni generator in PDF ne staneta nič. Zanka je v tem, da brezplačni generatorji pogosto izdajo kode, ki potečejo ali tečejo prek domene, ki je ne nadzorujete, in da se PDF na telefonu slabo bere. Razčlenili smo to v [koliko v resnici stanejo brezplačni QR jedilniki](blog:free-qr-code-menu)."
+        },
+        {
+          "q": "Ali gostje potrebujejo aplikacijo za skeniranje?",
+          "a": "Ne. Vsak telefon zadnjih let skenira QR kode z vgrajeno kamero, jedilnik pa se odpre v brskalniku. Nič ni treba namestiti, brez registracije."
+        },
+        {
+          "q": "Kako velika naj bo natisnjena QR koda?",
+          "a": "Vsaj 3 cm široka za namizno stojalo. Pravilo pravi, da je razdalja skeniranja približno desetkratnik širine kode, torej se 3 cm udobno prebere s 30 cm."
+        },
+        {
+          "q": "Ali lahko spremenim jedilnik brez ponovnega tiskanja QR kod?",
+          "a": "Pri gostovanem jedilniku da – koda kaže na stalen naslov, vsebina za njim pa se spreminja. Pri QR kodi, ki kaže naravnost na datoteko PDF, mora datoteka ostati na povsem enakem naslovu."
+        },
+        {
+          "q": "Ali QR koda sodi na mizo ali na papirnati jedilnik?",
+          "a": "Na mizo, če želite, da se uporablja. Koda, natisnjena na papirnatem jedilniku, se skenira šele potem, ko je nekdo papirnati jedilnik že prinesel, s čimer izgubi večino smisla."
+        }
+      ]
+    }
+  ]
+}

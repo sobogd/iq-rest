@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "Jak zrobić menu z kodem QR: 3 sposoby | IQ Rest",
+    "description": "Trzy sposoby na menu QR dla restauracji: darmowy generator z PDF-em, kreator menu albo pełny system. Ile kosztuje każdy i co się w nim psuje."
+  },
+  "card": {
+    "title": "Jak zrobić menu z kodem QR (i który z trzech sposobów przetrwa zmianę cen)",
+    "excerpt": "Darmowy generator QR zajmuje dwie minuty. Potem zmieniają się ceny. Omawiamy trzy realne opcje, ile kosztują i w którym miejscu się sypią."
+  },
+  "h1": "Jak zrobić menu z kodem QR dla restauracji",
+  "intro": "Wygenerowanie kodu QR to łatwa część – każdy darmowy generator zrobi to w dwie minuty. Trudne jest to, dokąd ten kod prowadzi, bo to decyduje, czy jeszcze kiedykolwiek go tkniesz. Oto trzy sposoby, z których restauracje faktycznie korzystają, według rosnącego nakładu pracy, wraz z typową awarią każdego z nich.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Opcja 1: darmowy generator QR prowadzący do PDF-a"
+    },
+    {
+      "type": "p",
+      "text": "Wyeksportuj kartę do PDF-a, wrzuć ją w jakieś publiczne miejsce (Dysk Google, własna strona, hosting plików), wklej ten link do dowolnego darmowego generatora QR i wydrukuj kod. Koszt: 0 zł. Czas: około 15 minut."
+    },
+    {
+      "type": "p",
+      "text": "Co się psuje: PDF na ekranie telefonu to ćwiczenie z powiększania. Gość czyta dokument o szerokości 300 mm przez okienko wielkości 15 cm i w większości przypadków rezygnuje i pyta kelnera. Gorzej: większość darmowych generatorów tworzy kod **dynamiczny**, który prowadzi przez ich domenę – jeśli przestaniesz płacić albo firma zniknie, wszystkie wydrukowane kody na sali są martwe. Jeśli użyjesz kodu statycznego prowadzącego wprost do pliku, kod jest wieczny, ale link do pliku nie może się nigdy zmienić, czyli nie wgrasz poprawionej wersji bez ponownego druku."
+    },
+    {
+      "type": "note",
+      "text": "Jeśli wybierasz tę drogę, użyj kodu **statycznego** prowadzącego pod adres, który kontrolujesz (własna domena), a nie do linku z Dysku. Wtedy podmienisz plik pod tym adresem bez ponownego druku."
+    },
+    {
+      "type": "h2",
+      "text": "Opcja 2: strona z kreatora menu"
+    },
+    {
+      "type": "p",
+      "text": "Poziom wyżej: narzędzie, które hostuje mobilną stronę z twoimi daniami, cenami i zdjęciami i daje ci kod QR. Kartę przepisujesz raz, a potem zmieniasz ceny w formularzu zamiast w InDesignie. Typowe ceny: od darmowego z logo dostawcy do 10-30 € miesięcznie."
+    },
+    {
+      "type": "p",
+      "text": "Co się psuje: takie menu to ulotka. Pokazuje dania i na tym koniec. Gość nadal łapie kelnera, żeby zamówić, kuchnia nadal dostaje ręcznie pisane bony, a ty nadal nie wiesz, które danie jest oglądane 400 razy w miesiącu i zamawiane dwa. Dla baru z 12 pozycjami to wystarczy. Dla restauracji z 60 kuwertami wieczorem prawdziwe wąskie gardło zostaje nietknięte."
+    },
+    {
+      "type": "h2",
+      "text": "Opcja 3: menu, które przyjmuje też zamówienie"
+    },
+    {
+      "type": "p",
+      "text": "Ten sam kod QR, ale strona pod nim potrafi przyjąć zamówienie i wysłać je do kuchni. To zmienia sens kodu: nie służy już do pokazania karty, tylko do skrócenia czasu między decyzją gościa a startem w kuchni."
+    },
+    {
+      "type": "p",
+      "text": "Co się psuje: wymaga twojej decyzji o stylu obsługi. Zamawianie przez QR świetnie działa przy dużej rotacji, na ogródkach i w zatłoczonych barach, a razi w restauracji fine dining, gdzie kelner jest częścią produktu. Większość lokali zaczyna od [menu cyfrowego](route:/digital-menu) tylko do przeglądania, a [zamawianie](route:/order-taking) włącza później, gdy zespół się oswoi."
+    },
+    {
+      "type": "h2",
+      "text": "Trzy opcje obok siebie"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "PDF + darmowy QR",
+        "Kreator menu",
+        "Menu + zamówienia"
+      ],
+      "rows": [
+        [
+          "Czas wdrożenia",
+          "~15 min",
+          "1-2 godziny przepisywania",
+          "~5 min ze skanem karty"
+        ],
+        [
+          "Koszt",
+          "0 €",
+          "0-30 €/mies.",
+          "Od 9,90 €/mies."
+        ],
+        [
+          "Zmiana ceny",
+          "Eksport i ponowne wgranie",
+          "Edycja jednego pola",
+          "Edycja jednego pola"
+        ],
+        [
+          "Czytelne na telefonie",
+          "Powiększanie i przesuwanie",
+          "Tak",
+          "Tak"
+        ],
+        [
+          "Języki",
+          "Osobny PDF na język",
+          "Czasem",
+          "Automatyczne"
+        ],
+        [
+          "Dania niedostępne",
+          "Nie",
+          "Zwykle tak",
+          "Jedno dotknięcie"
+        ],
+        [
+          "Gość może zamówić",
+          "Nie",
+          "Nie",
+          "Tak"
+        ],
+        [
+          "Widzisz, co się sprzedaje",
+          "Nie",
+          "Rzadko",
+          "Tak"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Jak to zrobić naprawdę, niezależnie od opcji"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Przenieś kartę do postaci cyfrowej. Przepisanie 80 pozycji to największy pożeracz czasu – IQ Rest czyta zdjęcie papierowej karty i sam tworzy dania oraz ceny, co zamienia cały wieczór w jakieś pięć minut.",
+        "Napraw strukturę, zanim zajmiesz się wyglądem. Grupuj dania tak, jak zamawiają goście (przystawki, dania główne, napoje), a nie tak, jak zorganizowana jest kuchnia. Długie płaskie listy zabijają przewijanie.",
+        "Dodaj zdjęcia tam, gdzie zmieniają decyzję. Sfotografowanie każdego dania jest gorsze niż pięć dobrych zdjęć przy daniach, które chcesz sprzedawać.",
+        "Oznacz alergeny od razu, nie później. W UE i tak są wymagane, a dorabianie ich później do 80 pozycji to udręka.",
+        "Wygeneruj kod QR na każdy stolik, a nie jeden na całą salę. To samo menu, ale numer stolika podróżuje razem ze skanem – i to właśnie umożliwia później zamawianie i statystyki.",
+        "Wydrukuj tak, żeby przetrwało serwis. Stojak lub laminowana naklejka, kod szeroki na co najmniej 3 cm, wysoki kontrast, z dala od świeczki."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Wydrukuj pod kodem krótki adres (na przykład iqrest.com/m/twojlokal). Mniej więcej co dwudziesty gość ma aparat, który nie skanuje, a wpisany adres ratuje sytuację."
+    },
+    {
+      "type": "h2",
+      "text": "Błędy, które kosztują najwięcej"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Kod, który wygasa.** Darmowe generatory z okresem próbnym tworzą kody, które przestają działać. Dowiadujesz się od gościa, w środku serwisu.",
+        "**Jeden kod na całą restaurację.** Teraz taniej, ale na zawsze blokuje zamawianie przy stoliku i jakiekolwiek dane per stolik.",
+        "**Kod wydrukowany za mały.** Poniżej mniej więcej 2,5 cm starsze aparaty w telefonach nie radzą sobie przy przyciemnionym świetle sali.",
+        "**Link do strony głównej.** Gość ląduje na stronie marketingowej i musi szukać karty. Linkuj wprost do karty.",
+        "**Zapomnienie, że kod istnieje.** Menu, którego nikt nie aktualizuje, jest gorsze od papieru, bo papier przynajmniej wygląda na wyraźnie nieaktualny."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Pomiń przepisywanie",
+      "text": "Wgraj zdjęcie obecnej papierowej karty i miej działające menu QR w jakieś pięć minut. 14 dni za darmo, bez karty.",
+      "buttonLabel": "Zobacz, jak działa menu QR",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Najczęstsze pytania",
+      "items": [
+        {
+          "q": "Czy mogę zrobić menu z kodem QR za darmo?",
+          "a": "Tak – darmowy generator plus PDF nic nie kosztuje. Haczyk polega na tym, że darmowe generatory często wydają kody, które wygasają albo prowadzą przez cudzą domenę, a PDF źle się czyta na telefonie. Rozłożyliśmy to na części w tekście [ile naprawdę kosztują darmowe menu QR](blog:free-qr-code-menu)."
+        },
+        {
+          "q": "Czy goście potrzebują aplikacji, żeby zeskanować kod?",
+          "a": "Nie. Każdy telefon z ostatnich lat skanuje kody QR wbudowanym aparatem, a menu otwiera się w przeglądarce. Nic do instalowania, żadnej rejestracji."
+        },
+        {
+          "q": "Jak duży powinien być wydrukowany kod QR?",
+          "a": "Co najmniej 3 cm boku przy stojaku na stolik. Zasada jest taka, że odległość skanowania to około dziesięciokrotność szerokości kodu, więc 3 cm czyta się wygodnie z 30 cm."
+        },
+        {
+          "q": "Czy mogę zmienić menu bez ponownego drukowania kodów QR?",
+          "a": "Przy menu hostowanym tak – kod prowadzi pod stały adres, a treść pod nim się zmienia. Przy kodzie QR prowadzącym wprost do pliku PDF musisz trzymać plik dokładnie pod tym samym adresem."
+        },
+        {
+          "q": "Kod QR ma być na stoliku czy na papierowej karcie?",
+          "a": "Na stoliku, jeśli chcesz, żeby był używany. Kod na papierowej karcie zostanie zeskanowany dopiero po tym, jak ktoś tę kartę przyniesie, co niweczy większość sensu."
+        }
+      ]
+    }
+  ]
+}

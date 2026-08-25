@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "QR-ruokalistan tekeminen: 3 tapaa | IQ Rest",
+    "description": "Kolme tapaa tehdä QR-ruokalista ravintolalle: ilmainen generaattori ja pdf, listanrakennin tai kokonainen järjestelmä. Mitä ne maksavat ja missä ne pettävät."
+  },
+  "card": {
+    "title": "Miten QR-ruokalista tehdään (ja mikä kolmesta tavasta kestää hinnanmuutoksen)",
+    "excerpt": "Ilmainen QR-generaattori vie kaksi minuuttia. Sitten hinnat muuttuvat. Käymme läpi kolme todellista vaihtoehtoa, niiden hinnan ja sen, missä kukin hajoaa."
+  },
+  "h1": "Näin teet QR-ruokalistan ravintolallesi",
+  "intro": "QR-koodin tekeminen on helppo osa – mikä tahansa ilmainen generaattori hoitaa sen kahdessa minuutissa. Vaikeaa on se, mihin koodi osoittaa, sillä se ratkaisee, kosketko siihen enää koskaan. Tässä kolme tapaa, joilla ravintolat oikeasti tekevät tämän, työmäärän mukaan järjestettynä, kunkin tyypillinen vikatila mukana.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Vaihtoehto 1: ilmainen QR-generaattori ja pdf"
+    },
+    {
+      "type": "p",
+      "text": "Vie lista pdf-tiedostoksi, lataa se johonkin julkiseen paikkaan (Google Drive, omat sivut, tiedostopalvelu), liitä linkki ilmaiseen QR-generaattoriin ja tulosta koodi. Kokonaishinta: 0 €. Kokonaisaika: noin 15 minuuttia."
+    },
+    {
+      "type": "p",
+      "text": "Mikä pettää: pdf puhelimen näytöllä on zoomausharjoitus. Asiakas lukee 300 mm leveää asiakirjaa 15 senttimetrin ikkunan läpi, ja useimmat luovuttavat ja kysyvät tarjoilijalta. Pahempaa: useimmat ilmaiset generaattorit luovat **dynaamisen** koodin, joka kulkee niiden oman verkkotunnuksen kautta – jos lopetat maksamisen tai palvelu suljetaan, jokainen salissa oleva tulostettu koodi on kuollut. Jos käytät staattista koodia suoraan tiedostoon, koodi on pysyvä, mutta tiedostolinkki ei saa koskaan muuttua, joten korjattua versiota ei voi ladata ilman uutta tulostusta."
+    },
+    {
+      "type": "note",
+      "text": "Jos valitset tämän tien, käytä **staattista** QR-koodia, joka osoittaa hallitsemaasi osoitteeseen (oma verkkotunnus), ei Drive-linkkiin. Silloin voit vaihtaa osoitteen takana olevan tiedoston tulostamatta uudelleen."
+    },
+    {
+      "type": "h2",
+      "text": "Vaihtoehto 2: listanrakentimella tehty sivu"
+    },
+    {
+      "type": "p",
+      "text": "Askel ylöspäin: työkalu, joka ylläpitää mobiilisivua annoksistasi, hinnoistasi ja kuvistasi ja antaa siihen QR-koodin. Näppäilet listan kerran ja muutat sen jälkeen hintoja lomakkeella InDesignin sijaan. Tyypilliset hinnat vaihtelevat ilmaisesta toimittajan logolla 10-30 euroon kuukaudessa."
+    },
+    {
+      "type": "p",
+      "text": "Mikä pettää: lista on esite. Se näyttää annokset ja siihen se loppuu. Asiakas viittoo yhä tarjoilijaa tilatakseen, keittiö saa yhä käsin kirjoitetut tilausliput, etkä yhä tiedä, mitä annosta katsotaan 400 kertaa kuussa ja tilataan kaksi. Baarille, jolla on 12 riviä, tämä riittää. Ravintolalle, joka tekee 60 kattausta illassa, varsinainen pullonkaula jää koskematta."
+    },
+    {
+      "type": "h2",
+      "text": "Vaihtoehto 3: lista, joka ottaa myös tilauksen"
+    },
+    {
+      "type": "p",
+      "text": "Sama QR-koodi, mutta sen takana oleva sivu voi ottaa tilauksen vastaan ja lähettää sen keittiöön. Se muuttaa koodin tarkoituksen: se ei enää näytä listaa, vaan lyhentää aikaa asiakkaan päätöksestä keittiön aloitukseen."
+    },
+    {
+      "type": "p",
+      "text": "Mikä pettää: se vaatii sinulta päätöksen palvelutyylistä. QR-tilaus toimii erinomaisesti nopean kierron saleissa, terasseilla ja vilkkaissa baareissa, ja tuntuu väärältä fine dining -ravintolassa, jossa tarjoilija on osa tuotetta. Useimmat aloittavat pelkällä luettavalla [digitaalisella listalla](route:/digital-menu) ja kytkevät [tilaamisen](route:/order-taking) päälle myöhemmin, kun henkilökunta on tottunut."
+    },
+    {
+      "type": "h2",
+      "text": "Kolme rinnakkain"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Pdf + ilmainen QR",
+        "Listanrakennin",
+        "Lista + tilaukset"
+      ],
+      "rows": [
+        [
+          "Käyttöönottoaika",
+          "~15 min",
+          "1-2 tuntia näppäilyä",
+          "~5 min listan skannauksella"
+        ],
+        [
+          "Hinta",
+          "0 €",
+          "0-30 €/kk",
+          "Alkaen 9,90 €/kk"
+        ],
+        [
+          "Hinnanmuutos",
+          "Vie ja lataa uudelleen",
+          "Muokkaa yhtä kenttää",
+          "Muokkaa yhtä kenttää"
+        ],
+        [
+          "Luettava puhelimella",
+          "Zoomausta ja raahausta",
+          "Kyllä",
+          "Kyllä"
+        ],
+        [
+          "Kielet",
+          "Yksi pdf kieltä kohti",
+          "Joskus",
+          "Automaattisesti"
+        ],
+        [
+          "Loppuneet annokset",
+          "Ei",
+          "Yleensä kyllä",
+          "Yksi napautus"
+        ],
+        [
+          "Asiakas voi tilata",
+          "Ei",
+          "Ei",
+          "Kyllä"
+        ],
+        [
+          "Näet mikä myy",
+          "Ei",
+          "Harvoin",
+          "Kyllä"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Näin teet sen käytännössä, vaihtoehdosta riippumatta"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Siirrä lista digitaaliseen muotoon. 80 rivin näppäily on ylivoimaisesti suurin ajanviejä – IQ Rest lukee valokuvan paperilistastasi ja luo annokset ja hinnat puolestasi, jolloin koko ilta kutistuu noin viideksi minuutiksi.",
+        "Korjaa rakenne ennen ulkoasua. Ryhmittele niin kuin asiakkaat tilaavat (alkuruoat, pääruoat, juomat), ei niin kuin keittiösi on järjestetty. Pitkät tasaiset listat tappavat vierityksen.",
+        "Laita kuvat sinne, missä ne muuttavat päätöksen. Jokaisen annoksen kuvaaminen on huonompi kuin viisi hyvää kuvaa niistä annoksista, joita haluat myydä.",
+        "Merkitse allergeenit nyt, ei myöhemmin. EU:ssa tarvitset ne joka tapauksessa, ja niiden lisääminen jälkikäteen 80 riville on tuskaa.",
+        "Tee yksi QR-koodi pöytää kohden, ei yhtä koko saliin. Sama lista, mutta pöytänumero kulkee skannauksen mukana, ja juuri se tekee tilaamisen ja tilastot myöhemmin mahdollisiksi.",
+        "Tulosta niin, että se kestää vuoron. Pöytäteline tai laminoitu tarra, koodi vähintään 3 cm leveä, hyvä kontrasti, kaukana kynttilästä."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Tulosta koodin alle lyhyt verkko-osoite (esimerkiksi iqrest.com/m/paikkasi). Noin joka kahdennellakymmenennellä asiakkaalla on kamera, joka ei skannaa, ja näppäiltävä osoite pelastaa tilanteen."
+    },
+    {
+      "type": "h2",
+      "text": "Kalleimmat virheet"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Koodi, joka vanhenee.** Kokeilujaksolliset ilmaisgeneraattorit tuottavat koodeja, jotka lakkaavat toimimasta. Kuulet siitä asiakkaalta, keskellä vuoroa.",
+        "**Yksi koodi koko ravintolalle.** Halpaa nyt, mutta se estää lopullisesti pöytätilauksen ja kaiken pöytäkohtaisen datan.",
+        "**Liian pieneksi tulostettu koodi.** Alle noin 2,5 senttimetrissä vanhemmat puhelinkamerat kärsivät salin himmeässä valossa.",
+        "**Linkki etusivulle.** Asiakas päätyy markkinointisivustolle ja joutuu etsimään listan. Linkitä suoraan listaan.",
+        "**Koodin olemassaolon unohtaminen.** Lista, jota kukaan ei päivitä, on huonompi kuin paperi, sillä paperi näyttää edes selvästi vanhentuneelta."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Jätä näppäily väliin",
+      "text": "Lataa valokuva nykyisestä paperilistastasi ja saat toimivan QR-listan noin viidessä minuutissa. 14 päivää ilmaiseksi, ilman korttia.",
+      "buttonLabel": "Katso miten QR-lista toimii",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Usein kysytyt kysymykset",
+      "items": [
+        {
+          "q": "Voinko tehdä QR-ruokalistan ilmaiseksi?",
+          "a": "Kyllä – ilmainen generaattori ja pdf eivät maksa mitään. Koukku on siinä, että ilmaiset generaattorit antavat usein koodeja, jotka vanhenevat tai kulkevat verkkotunnuksen kautta, jota et hallitse, ja että pdf on vaikea lukea puhelimella. Purimme tämän auki artikkelissa [mitä ilmaiset QR-listat oikeasti maksavat](blog:free-qr-code-menu)."
+        },
+        {
+          "q": "Tarvitsevatko asiakkaat sovelluksen skannaamiseen?",
+          "a": "Eivät. Jokainen viime vuosien puhelin lukee QR-koodit sisäänrakennetulla kameralla, ja lista avautuu selaimessa. Ei asennettavaa, ei rekisteröitymistä."
+        },
+        {
+          "q": "Minkä kokoisena QR-koodi pitää tulostaa?",
+          "a": "Vähintään 3 cm leveänä pöytätelineeseen. Nyrkkisääntö: lukuetäisyys on noin kymmenen kertaa koodin leveys, joten 3 cm luetaan mukavasti 30 cm:n päästä."
+        },
+        {
+          "q": "Voinko muuttaa listaa tulostamatta QR-koodeja uudelleen?",
+          "a": "Ylläpidetyllä listalla kyllä – koodi osoittaa kiinteään osoitteeseen ja sen takana oleva sisältö muuttuu. Suoraan pdf-tiedostoon osoittavalla QR-koodilla tiedoston on pysyttävä täsmälleen samassa osoitteessa."
+        },
+        {
+          "q": "Kuuluuko QR-koodi pöytään vai paperilistaan?",
+          "a": "Pöytään, jos haluat että sitä käytetään. Paperilistaan painettu koodi skannataan vasta sen jälkeen, kun joku on jo ojentanut paperilistan, ja silloin suurin osa hyödystä on mennyt."
+        }
+      ]
+    }
+  ]
+}
