@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "Alergeni na jelovniku: 14 tvari prema EU | IQ Rest",
+    "description": "14 alergena koje restorani u EU moraju navesti, što Uredba 1169/2011 stvarno traži za nepretpakiranu hranu i kako držati popis točnim."
+  },
+  "card": {
+    "title": "Alergeni na jelovniku: njih četrnaest, zakon i kako prestati voditi to ručno",
+    "excerpt": "Što Uredba (EU) 1169/2011 traži od restorana, 14 alergena jednostavnim jezikom i zašto je registrator s alergenima iza šanka onaj dio koji zakaže."
+  },
+  "h1": "Alergeni na jelovniku restorana: 14 tvari i što od vas traži zakon",
+  "intro": "Svaki restoran u EU mora moći reći gostu sadrži li jelo neki od 14 alergena. Samo pravilo je kratko. Teško je zadržati odgovor istinitim nakon što kuhar promijeni dobavljača, promijeni temeljac ili improvizira jelo dana — upravo tu se papirnati registrator raspada.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Četrnaest alergena"
+    },
+    {
+      "type": "p",
+      "text": "Uredba (EU) br. 1169/2011 navodi ih u Prilogu II. Isti su u cijeloj EU, a u Ujedinjenom Kraljevstvu odgovarajući popis je istovjetan."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Žitarice koje sadrže gluten** — pšenica, raž, ječam, zob, pir, kamut i njihovi hibridi",
+        "**Rakovi** — kozice, rak, jastog, škamp",
+        "**Jaja**",
+        "**Riba**",
+        "**Kikiriki**",
+        "**Soja**",
+        "**Mlijeko**, uključujući laktozu",
+        "**Orašasti plodovi** — badem, lješnjak, orah, indijski oraščić, pekan, brazilski orah, pistacija, makadamija",
+        "**Celer**, uključujući korijen celera i celerovu sol",
+        "**Gorušica**, uključujući sjemenke i prah",
+        "**Sjemenke sezama**",
+        "**Sumporov dioksid i sulfiti** iznad 10 mg/kg ili 10 mg/litra",
+        "**Lupina**",
+        "**Mekušci** — dagnje, kunjke, lignje, hobotnica, puževi"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Ovaj tekst je praktičan sažetak, ne pravni savjet. Nacionalna pravila prema članku 44. razlikuju se u tome kako informacija mora biti dana, a nadzor provodi vaše lokalno tijelo. Provjerite smjernice svoje zemlje."
+    },
+    {
+      "type": "h2",
+      "text": "Što uredba zapravo traži u restoranu"
+    },
+    {
+      "type": "p",
+      "text": "Hrana koju prodajete nepretpakiranu — jelo na tanjuru — potpada pod članak 44. Ukratko: informacija o alergenima mora biti dostupna gostu, a točan način određuje svaka država članica. Neke zemlje traže je pisano na jelovniku. Druge dopuštaju usmeno, uz uvjet da postoji jasno vidljiva pisana obavijest koja poziva gosta da pita i da osoba koju pita zaista zna odgovoriti."
+    },
+    {
+      "type": "p",
+      "text": "Praktično čitanje: samo „pitajte konobara” nije dovoljno. Mora postojati natpis, a iza natpisa pouzdan izvor istine koji devetnaestogodišnjak u drugoj smjeni pročita u deset sekundi."
+    },
+    {
+      "type": "h2",
+      "text": "Gdje informacija o alergenima stvarno zakaže"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Kvar",
+        "Kako se događa",
+        "Kako to izgleda u sali"
+      ],
+      "rows": [
+        [
+          "Recept se promijenio, registrator nije",
+          "Kuhar prelazi na kocku temeljca s celerom",
+          "Registrator kaže bez celera. Nije točno."
+        ],
+        [
+          "Jela dana nisu unutra",
+          "Večerašnja riba nikad ne dobije stavku",
+          "Konobar nagađa"
+        ],
+        [
+          "Postoje dvije verzije",
+          "Jedna kopija na šanku, druga u kuhinji",
+          "Proturječe si i nitko ne zna koja je novija"
+        ],
+        [
+          "Odstupanje u prijevodima",
+          "Engleski jelovnik navodi orašaste plodove, njemački ne",
+          "Samo na jednom jeziku"
+        ],
+        [
+          "Nitko ga ne nalazi",
+          "Registrator je ispod knjige rezervacija",
+          "Gost čeka odgovor četiri minute"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Zašto digitalni jelovnik to rješava bolje"
+    },
+    {
+      "type": "p",
+      "text": "Ne zato što je digitalan, nego zato što je podatak o alergenu vezan uz stavku, a ne uz dokument. Promijenite stavku jednom i svako mjesto na kojem se pojavljuje je točno: gostov mobitel, tiskani QR jelovnik, svi jezici, jela dana i svaki popis koji kuhinja ispiše. Postoji točno jedna verzija, i to ona trenutna."
+    },
+    {
+      "type": "p",
+      "text": "Također omogućuje gostu da se snađe sam. Osoba s teškom alergijom na orašaste plodove može sama filtrirati [digitalni jelovnik](route:/digital-menu) umjesto da pregovara razgovor u bučnoj sali na svom drugom jeziku — i sigurnije i znatno manje stresno za nju."
+    },
+    {
+      "type": "h2",
+      "text": "Kako dovršiti alergene na jelovniku bez gubitka tjedna"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Krenite od recepta, ne od naziva jela. „Caesar salata” skriva jaje, ribu (inćun), mlijeko i gluten.",
+        "Prvo napravite umake i temeljce. Oni su najveći izvor skrivenog celera, gorušice, mlijeka i glutena i pojavljuju se u desecima jela.",
+        "Označite svaku stavku u samom sustavu jelovnika, ne u zasebnom dokumentu. Jedan izvor, nikakvo odstupanje.",
+        "Dodajte jela dana u isti sustav čim se napišu na ploču, ne na kraju smjene.",
+        "Provjerite ponovno svaki put kad se promijeni dobavljač. Druga marka istog proizvoda znači drugi sastav.",
+        "Osposobite salu gdje gledati, a ne da pamte odgovore. Pamćenje je točka loma."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Napišite „može sadržavati tragove” samo ondje gdje je to doista istina. Paušalno preventivno označavanje po cijelom jelovniku čini informaciju beskorisnom, a gosti sa stvarnim alergijama nauče je ignorirati — što je gore nego ne reći ništa."
+    },
+    {
+      "type": "h2",
+      "text": "Križna kontaminacija je zaseban problem"
+    },
+    {
+      "type": "p",
+      "text": "Ispravno navesti alergene i spriječiti kontakt u maloj kuhinji dva su različita posla. Ista friteza, ista hvataljka, ista daska prenose alergene među jelima. Budite izravni s gostima o tome što vaša kuhinja može, a što ne može jamčiti — jasno „ne možemo jamčiti okruženje bez orašastih plodova” vrijedi mnogo više od obećanja koje ne možete održati."
+    },
+    {
+      "type": "cta",
+      "heading": "Jedan jelovnik, jedan popis alergena, svi jezici",
+      "text": "Označite alergene jednom i ostaju točni za svakim stolom, na svakom jeziku, uključujući današnja jela dana. 14 dana besplatno, bez kartice.",
+      "buttonLabel": "Pogledajte digitalni jelovnik",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Česta pitanja",
+      "items": [
+        {
+          "q": "Moram li alergene tiskati na samom jelovniku?",
+          "a": "Ovisi o vašoj zemlji. Uredba 1169/2011 traži da informacija bude dostupna za nepretpakiranu hranu, a članak 44. prepušta način svakoj državi članici — neke nalažu pisani oblik, druge dopuštaju usmeni uz vidljivu pisanu obavijest. Provjerite nacionalne smjernice."
+        },
+        {
+          "q": "Koliko alergena treba navesti?",
+          "a": "Četrnaest, navedenih u Prilogu II. Uredbe (EU) br. 1169/2011. Popis je isti u svim zemljama EU."
+        },
+        {
+          "q": "Je li dovoljno „pitajte konobara”?",
+          "a": "Samo u zemljama koje dopuštaju usmenu informaciju, i samo uz jasno vidljivu pisanu obavijest te osoblje koje doista može dati točan odgovor. Samo po sebi nikad nije dovoljno."
+        },
+        {
+          "q": "A jela dana?",
+          "a": "Pokriva ih isto pravilo. To je najčešća rupa, jer jela dana rijetko uđu u registrator s alergenima prije početka smjene."
+        },
+        {
+          "q": "Treba li alergene prevoditi za turiste?",
+          "a": "Gost mora moći razumjeti informaciju. Digitalni jelovnik prevodi stavku i sa sobom nosi oznake alergena, pa njemačka verzija ne može tiho izgubiti upozorenje na orašaste plodove."
+        }
+      ]
+    }
+  ]
+}

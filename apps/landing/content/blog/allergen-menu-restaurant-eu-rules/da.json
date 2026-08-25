@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "Allergener på menuen: EU's 14 stoffer | IQ Rest",
+    "description": "De 14 allergener, EU-restauranter skal oplyse, hvad forordning 1169/2011 faktisk kræver for uindpakket mad, og hvordan du holder listen sand."
+  },
+  "card": {
+    "title": "Allergener på menukortet: de fjorten, loven og hvordan du slipper for at føre det i hånden",
+    "excerpt": "Hvad forordning (EU) 1169/2011 kræver af restauranter, de 14 allergener i klart sprog, og hvorfor allergenmappen bag baren er den del, der svigter."
+  },
+  "h1": "Allergener på restaurantens menu: de 14 stoffer og hvad loven beder dig om",
+  "intro": "Enhver restaurant i EU skal kunne fortælle en gæst, om en ret indeholder et af 14 allergener. Selve reglen er kort. Det svære er at holde svaret sandt, efter at kokken har skiftet leverandør, skiftet fond eller improviseret en dagens ret – præcis dér, hvor papirmappen falder fra hinanden.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "De fjorten allergener"
+    },
+    {
+      "type": "p",
+      "text": "Forordning (EU) nr. 1169/2011 opregner dem i bilag II. De er de samme i hele EU, og i Storbritannien er den tilsvarende liste identisk."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Glutenholdige kornsorter** – hvede, rug, byg, havre, spelt, kamut og deres hybrider",
+        "**Krebsdyr** – rejer, krabbe, hummer, jomfruhummer",
+        "**Æg**",
+        "**Fisk**",
+        "**Jordnødder**",
+        "**Sojabønner**",
+        "**Mælk**, inklusive laktose",
+        "**Nødder** – mandel, hasselnød, valnød, cashew, pekannød, paranød, pistacie, macadamia",
+        "**Selleri**, inklusive knoldselleri og sellerisalt",
+        "**Sennep**, inklusive sennepsfrø og sennepspulver",
+        "**Sesamfrø**",
+        "**Svovldioxid og sulfitter** over 10 mg/kg eller 10 mg/liter",
+        "**Lupin**",
+        "**Bløddyr** – muslinger, hjertemuslinger, blæksprutte, octopus, snegle"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Denne artikel er et praktisk resumé, ikke juridisk rådgivning. Nationale regler efter artikel 44 er forskellige med hensyn til, hvordan oplysningen skal gives, og kontrollen ligger hos din lokale myndighed. Tjek dit lands vejledning."
+    },
+    {
+      "type": "h2",
+      "text": "Hvad forordningen faktisk kræver på en restaurant"
+    },
+    {
+      "type": "p",
+      "text": "Mad, du sælger uindpakket – en anrettet tallerken – falder ind under artikel 44. Kort sagt: allergenoplysningerne skal være tilgængelige for gæsten, og hver medlemsstat bestemmer den præcise form. Nogle lande kræver det skriftligt på menuen. Andre tillader det mundtligt, forudsat at der er en tydeligt synlig skriftlig oplysning om at spørge, og at den, der bliver spurgt, faktisk kan svare."
+    },
+    {
+      "type": "p",
+      "text": "Den praktiske læsning: \"spørg tjeneren\" er ikke nok i sig selv. Der skal være et skilt, og bag skiltet en pålidelig kilde, som en 19-årig på sin anden vagt kan læse på ti sekunder."
+    },
+    {
+      "type": "h2",
+      "text": "Hvor allergenoplysninger reelt går galt"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Fejl",
+        "Hvordan det sker",
+        "Hvordan det ser ud i salen"
+      ],
+      "rows": [
+        [
+          "Opskriften ændret, mappen ikke",
+          "Kokken skifter til en bouillonterning med selleri",
+          "Mappen siger ingen selleri. Den tager fejl."
+        ],
+        [
+          "Dagens retter står der ikke",
+          "Aftenens fisk får aldrig en linje",
+          "Tjeneren gætter"
+        ],
+        [
+          "Der findes to versioner",
+          "En kopi i baren, en i køkkenet",
+          "De modsiger hinanden, og ingen ved, hvilken der er nyest"
+        ],
+        [
+          "Skred i oversættelserne",
+          "Den engelske menu nævner nødder, den tyske ikke",
+          "Kun på ét sprog"
+        ],
+        [
+          "Ingen kan finde den",
+          "Mappen ligger under reservationsbogen",
+          "Gæsten venter fire minutter på et svar"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Hvorfor en digital menu klarer det bedre"
+    },
+    {
+      "type": "p",
+      "text": "Ikke fordi den er digital, men fordi allergenoplysningen hænger på retten i stedet for i et dokument. Du ændrer retten én gang, og hvert sted den optræder, er korrekt: gæstens telefon, den trykte QR-menu, alle sprog, dagens retter og enhver liste, køkkenet printer. Der findes præcis én version, og det er den aktuelle."
+    },
+    {
+      "type": "p",
+      "text": "Det lader også gæsten klare sig selv. En med svær nøddeallergi kan filtrere den [digitale menu](route:/digital-menu) selv i stedet for at forhandle en samtale i et larmende lokale på sit andetsprog – både sikrere og betydeligt mindre belastende."
+    },
+    {
+      "type": "h2",
+      "text": "Sådan får du menuen allergenkomplet uden at miste en uge"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Start ved opskriften, ikke ved rettens navn. En \"caesarsalat\" skjuler æg, fisk (ansjos), mælk og gluten.",
+        "Tag saucer og fonde først. De er den største kilde til skjult selleri, sennep, mælk og gluten, og de går igen i snesevis af retter.",
+        "Mærk hver ret i selve menusystemet i stedet for i et separat dokument. Én kilde, intet skred.",
+        "Læg dagens retter ind i samme system, så snart de skrives på tavlen, ikke efter vagten.",
+        "Tjek igen, hver gang en leverandør skifter. Et andet mærke af samme vare er en anden ingrediensliste.",
+        "Træn personalet i, hvor de skal kigge, ikke i at huske svarene. Hukommelsen er fejlpunktet."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Skriv kun \"kan indeholde spor\" der, hvor det faktisk passer. Bred forsigtighedsmærkning på hele menuen gør oplysningen ubrugelig, og gæster med rigtige allergier lærer at ignorere den – hvilket er værre end ingenting."
+    },
+    {
+      "type": "h2",
+      "text": "Krydskontaminering er et selvstændigt problem"
+    },
+    {
+      "type": "p",
+      "text": "At deklarere allergener korrekt og at forhindre kontakt i et lille køkken er to forskellige opgaver. Samme frituregryde, samme tang, samme skærebræt flytter allergener mellem retter. Vær ligefrem over for gæsterne om, hvad dit køkken kan og ikke kan garantere – et klart \"vi kan ikke garantere et nøddefrit miljø\" er langt bedre end et løfte, du ikke kan holde."
+    },
+    {
+      "type": "cta",
+      "heading": "Én menu, én allergenliste, alle sprog",
+      "text": "Mærk allergenerne én gang, og de bliver ved med at være korrekte på hvert bord, på hvert sprog, inklusive aftenens dagens retter. 14 dage gratis, uden kort.",
+      "buttonLabel": "Se den digitale menu",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Ofte stillede spørgsmål",
+      "items": [
+        {
+          "q": "Skal jeg trykke allergenerne på selve menuen?",
+          "a": "Det afhænger af dit land. Forordning 1169/2011 kræver, at oplysningen er tilgængelig for uindpakket mad, og artikel 44 overlader formen til hver medlemsstat – nogle kræver skriftligt, andre tillader mundtligt med en synlig skriftlig oplysning. Tjek din nationale vejledning."
+        },
+        {
+          "q": "Hvor mange allergener skal oplyses?",
+          "a": "Fjorten, opregnet i bilag II til forordning (EU) nr. 1169/2011. Listen er den samme i alle EU-lande."
+        },
+        {
+          "q": "Er \"spørg din tjener\" nok?",
+          "a": "Kun i lande, der tillader mundtlig oplysning, og kun med en tydeligt synlig skriftlig oplysning samt personale, der faktisk kan give et korrekt svar. Alene er det aldrig nok."
+        },
+        {
+          "q": "Og dagens retter?",
+          "a": "De er omfattet af samme regel. Det er det mest almindelige hul, fordi dagens retter sjældent når ind i allergenmappen, før vagten begynder."
+        },
+        {
+          "q": "Skal allergener oversættes til turister?",
+          "a": "Gæsten skal kunne forstå oplysningen. En digital menu oversætter retten og tager allergenmærkerne med, så den tyske udgave ikke stille og roligt kan tabe nøddeadvarslen."
+        }
+      ]
+    }
+  ]
+}

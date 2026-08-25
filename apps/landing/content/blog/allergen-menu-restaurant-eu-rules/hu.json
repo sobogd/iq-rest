@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "Allergének az étlapon: az EU 14 anyaga | IQ Rest",
+    "description": "A 14 allergén, amit az uniós éttermeknek fel kell tüntetniük, mit követel valójában az 1169/2011 rendelet a nem előrecsomagolt ételre, és hogyan marad a lista igaz."
+  },
+  "card": {
+    "title": "Allergének az étlapon: a tizennégy, a jog és hogyan hagyd abba a kézi vezetést",
+    "excerpt": "Mit vár az (EU) 1169/2011 rendelet az éttermektől, a 14 allergén közérthetően, és miért épp a pult mögötti allergénmappa az a rész, ami elromlik."
+  },
+  "h1": "Allergének az étterem étlapján: a 14 anyag és mit kér tőled a jog",
+  "intro": "Az EU-ban minden étteremnek meg kell tudnia mondani a vendégnek, hogy egy étel tartalmazza-e a 14 allergén valamelyikét. Maga a szabály rövid. A nehéz az, hogy a válasz igaz maradjon azután, hogy a szakács beszállítót váltott, alaplevet cserélt vagy rögtönzött egy napi ajánlatot — pontosan ott hasad szét a papírmappa.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "A tizennégy allergén"
+    },
+    {
+      "type": "p",
+      "text": "Az (EU) 1169/2011 rendelet a II. mellékletben sorolja fel őket. Az EU egészében ugyanazok, az Egyesült Királyságban pedig a megfelelő lista azonos."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Gluténtartalmú gabonafélék** — búza, rozs, árpa, zab, tönköly, kamut és hibridjeik",
+        "**Rákfélék** — garnéla, rák, homár, languszta",
+        "**Tojás**",
+        "**Hal**",
+        "**Földimogyoró**",
+        "**Szója**",
+        "**Tej**, beleértve a laktózt",
+        "**Diófélék** — mandula, mogyoró, dió, kesudió, pekándió, brazil dió, pisztácia, makadámia",
+        "**Zeller**, beleértve a gumós zellert és a zellersót",
+        "**Mustár**, beleértve a mustármagot és -port",
+        "**Szezámmag**",
+        "**Kén-dioxid és szulfitok** 10 mg/kg vagy 10 mg/liter felett",
+        "**Csillagfürt (lupin)**",
+        "**Puhatestűek** — kagyló, szívkagyló, tintahal, polip, csiga"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Ez a cikk gyakorlati összefoglaló, nem jogi tanácsadás. A 44. cikk szerinti nemzeti szabályok eltérnek abban, milyen formában kell megadni az információt, az ellenőrzés pedig a helyi hatóságodé. Nézd meg az országod útmutatóját."
+    },
+    {
+      "type": "h2",
+      "text": "Mit követel a rendelet valójában egy étteremben"
+    },
+    {
+      "type": "p",
+      "text": "A csomagolás nélkül árusított étel — a tányérra tett fogás — a 44. cikk alá esik. Röviden: az allergéninformációnak elérhetőnek kell lennie a vendég számára, a pontos módot pedig minden tagállam maga dönti el. Egyes országok írásban követelik meg az étlapon. Mások megengedik a szóbeli tájékoztatást, feltéve hogy jól látható írásos tájékoztatás kéri a vendéget a kérdezésre, és hogy a megkérdezett munkatárs tényleg tud válaszolni."
+    },
+    {
+      "type": "p",
+      "text": "A gyakorlati olvasat: a „kérdezze a pincért” önmagában nem elég. Kell egy tábla, és a tábla mögött megbízható igazságforrás, amit egy 19 éves a második műszakjában tíz másodperc alatt elolvas."
+    },
+    {
+      "type": "h2",
+      "text": "Hol romlik el ténylegesen az allergéninformáció"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Hiba",
+        "Hogyan történik",
+        "Hogy néz ki a placcon"
+      ],
+      "rows": [
+        [
+          "Változott a recept, a mappa nem",
+          "A szakács zellert tartalmazó leveskockára vált",
+          "A mappa szerint nincs zeller. Téved."
+        ],
+        [
+          "A napi ajánlat nincs benne",
+          "A mai hal soha nem kap bejegyzést",
+          "A pincér tippel"
+        ],
+        [
+          "Két változat létezik",
+          "Egy másolat a pultnál, egy a konyhában",
+          "Ellentmondanak, és senki nem tudja, melyik az újabb"
+        ],
+        [
+          "Fordítási elcsúszás",
+          "Az angol étlap említi a dióféléket, a német nem",
+          "Csak egy nyelven"
+        ],
+        [
+          "Senki nem találja",
+          "A mappa a foglalási könyv alatt van",
+          "A vendég négy percet vár a válaszra"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Miért kezeli ezt jobban egy digitális étlap"
+    },
+    {
+      "type": "p",
+      "text": "Nem azért, mert digitális, hanem mert az allergénadat a tételhez tapad, nem egy dokumentumhoz. Egyszer módosítod a tételt, és minden hely, ahol megjelenik, helyes lesz: a vendég telefonja, a nyomtatott QR étlap, minden nyelv, a napi ajánlatok és bármilyen lista, amit a konyha kinyomtat. Pontosan egy változat van, és az az aktuális."
+    },
+    {
+      "type": "p",
+      "text": "Emellett a vendég maga is boldogul. Súlyos dióallergiás valaki maga szűrheti a [digitális étlapot](route:/digital-menu), ahelyett hogy egy zajos teremben, a második nyelvén kellene beszélgetést kialkudnia — biztonságosabb és számára jóval kevésbé megterhelő."
+    },
+    {
+      "type": "h2",
+      "text": "Hogyan lesz teljes az étlap allergének szempontjából egy hét elvesztése nélkül"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "A recepttel kezdd, ne az étel nevével. Egy „Cézár saláta” tojást, halat (szardella), tejet és glutént rejt.",
+        "Először a mártásokat és alapleveket vedd. Ezek a rejtett zeller, mustár, tej és glutén legnagyobb forrásai, és több tucat ételben visszaköszönnek.",
+        "Minden tételt magában az étlaprendszerben jelölj, ne külön dokumentumban. Egy forrás, semmi elcsúszás.",
+        "A napi ajánlatot ugyanabba a rendszerbe vidd fel abban a pillanatban, ahogy felkerül a táblára, ne a műszak végén.",
+        "Ellenőrizd újra minden beszállítóváltásnál. Ugyanannak a terméknek egy másik márkája más összetevőlista.",
+        "A felszolgálókat arra tanítsd, hol nézzenek utána, ne arra, hogy fejből tudják. A memória a hibapont."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "A „nyomokban tartalmazhat” jelölést csak oda írd, ahol tényleg igaz. Az egész étlapra kiterjedő elővigyázatossági jelölés használhatatlanná teszi az információt, és a valóban allergiás vendégek megtanulják figyelmen kívül hagyni — ez rosszabb, mintha semmit sem mondanál."
+    },
+    {
+      "type": "h2",
+      "text": "A keresztszennyeződés külön probléma"
+    },
+    {
+      "type": "p",
+      "text": "Az allergének helyes feltüntetése és a kis konyhában az érintkezés megakadályozása két különböző munka. Ugyanaz az olajsütő, ugyanaz a fogó, ugyanaz a vágódeszka allergéneket visz át az ételek között. Legyél egyenes a vendégekkel arról, mit tud és mit nem tud garantálni a konyhád — egy világos „nem tudunk diómentes környezetet garantálni” sokkal többet ér egy betarthatatlan ígéretnél."
+    },
+    {
+      "type": "cta",
+      "heading": "Egy étlap, egy allergénlista, minden nyelv",
+      "text": "Jelöld meg egyszer az allergéneket, és minden asztalnál, minden nyelven helyesek maradnak, a mai napi ajánlatokkal együtt. 14 nap ingyen, kártya nélkül.",
+      "buttonLabel": "Nézd meg a digitális étlapot",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Gyakori kérdések",
+      "items": [
+        {
+          "q": "Rá kell nyomtatnom az allergéneket magára az étlapra?",
+          "a": "Országfüggő. Az 1169/2011 rendelet előírja, hogy a nem előrecsomagolt ételnél az információ elérhető legyen, a 44. cikk pedig a módot a tagállamokra hagyja — van, ahol kötelező az írásbeli forma, máshol elég a szóbeli, jól látható írásos tájékoztatás mellett. Nézd meg a nemzeti útmutatót."
+        },
+        {
+          "q": "Hány allergént kell feltüntetni?",
+          "a": "Tizennégyet, az (EU) 1169/2011 rendelet II. mellékletében felsorolva. A lista minden uniós országban ugyanaz."
+        },
+        {
+          "q": "Elég a „kérdezze a pincért”?",
+          "a": "Csak azokban az országokban, ahol megengedett a szóbeli tájékoztatás, és csak jól látható írásos tájékoztatással, illetve olyan személyzettel, amely tényleg helyesen tud válaszolni. Önmagában soha nem elég."
+        },
+        {
+          "q": "És a napi ajánlatok?",
+          "a": "Ugyanaz a szabály vonatkozik rájuk. Ez a leggyakoribb rés, mert a napi ajánlatok ritkán kerülnek be az allergénmappába a műszak kezdete előtt."
+        },
+        {
+          "q": "Le kell fordítani az allergéneket a turistáknak?",
+          "a": "A vendégnek meg kell tudnia érteni az információt. A digitális étlap lefordítja a tételt, és viszi magával az allergénjelöléseket, így a német változat nem veszítheti el csendben a diófigyelmeztetést."
+        }
+      ]
+    }
+  ]
+}

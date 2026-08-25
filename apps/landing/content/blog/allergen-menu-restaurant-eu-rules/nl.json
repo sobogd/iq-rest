@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "Allergenen op de kaart: de 14 EU-stoffen | IQ Rest",
+    "description": "De 14 allergenen die EU-restaurants moeten vermelden, wat Verordening 1169/2011 echt eist voor niet-voorverpakt eten en hoe je de lijst kloppend houdt."
+  },
+  "card": {
+    "title": "Allergenen op de menukaart: de 14, de wet en hoe je het niet meer met de hand bijhoudt",
+    "excerpt": "Wat Verordening (EU) 1169/2011 van restaurants vraagt, de 14 allergenen in gewone taal, en waarom de allergenenmap achter de bar het onderdeel is dat faalt."
+  },
+  "h1": "Allergenen op de menukaart: de 14 stoffen en wat de wet van je vraagt",
+  "intro": "Elk restaurant in de EU moet een gast kunnen vertellen of een gerecht een van 14 allergenen bevat. De regel zelf is kort. Het lastige is de antwoorden waar te houden nadat de kok van leverancier wisselt, een andere fond gebruikt of een special improviseert — precies waar de papieren allergenenmap het begeeft.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "De 14 allergenen"
+    },
+    {
+      "type": "p",
+      "text": "Verordening (EU) nr. 1169/2011 somt ze op in bijlage II. Ze zijn in de hele EU hetzelfde, en in het Verenigd Koninkrijk is de overeenkomstige lijst identiek."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Glutenbevattende granen** — tarwe, rogge, gerst, haver, spelt, kamut en hun hybriden",
+        "**Schaaldieren** — garnalen, krab, kreeft, langoustine",
+        "**Eieren**",
+        "**Vis**",
+        "**Pinda's**",
+        "**Soja**",
+        "**Melk**, inclusief lactose",
+        "**Noten** — amandel, hazelnoot, walnoot, cashew, pecan, paranoot, pistache, macadamia",
+        "**Selderij**, inclusief knolselderij en selderijzout",
+        "**Mosterd**, inclusief mosterdzaad en -poeder",
+        "**Sesamzaad**",
+        "**Zwaveldioxide en sulfieten** boven 10 mg/kg of 10 mg/liter",
+        "**Lupine**",
+        "**Weekdieren** — mosselen, kokkels, inktvis, octopus, slakken"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Dit artikel is een praktische samenvatting, geen juridisch advies. Nationale regels op grond van artikel 44 verschillen in hoe de informatie moet worden gegeven, en handhaving ligt bij je lokale autoriteit. Raadpleeg de richtlijnen van je land."
+    },
+    {
+      "type": "h2",
+      "text": "Wat de verordening in een restaurant echt eist"
+    },
+    {
+      "type": "p",
+      "text": "Eten dat je onverpakt verkoopt — een opgemaakt bord — valt onder artikel 44. Kort gezegd: de allergeneninformatie moet voor de gast beschikbaar zijn, en elke lidstaat bepaalt het precieze middel. Sommige landen eisen het schriftelijk op de kaart. Andere staan mondeling toe, mits er een duidelijk zichtbare schriftelijke melding hangt die gasten vraagt ernaar te vragen, en mits de aangesproken medewerker het ook echt kan beantwoorden."
+    },
+    {
+      "type": "p",
+      "text": "De praktische lezing: \"vraag het de bediening\" alleen is niet genoeg. Er moet een bordje hangen, en achter dat bordje een betrouwbare bron die een negentienjarige in zijn tweede dienst binnen tien seconden kan lezen."
+    },
+    {
+      "type": "h2",
+      "text": "Waar allergeneninformatie echt misgaat"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Fout",
+        "Hoe het gebeurt",
+        "Hoe het er in de zaal uitziet"
+      ],
+      "rows": [
+        [
+          "Recept gewijzigd, map niet",
+          "De kok stapt over op een bouillonblokje met selderij",
+          "De map zegt geen selderij. Dat klopt niet."
+        ],
+        [
+          "Specials staan er niet in",
+          "De vis van vanavond krijgt nooit een vermelding",
+          "De bediening gokt"
+        ],
+        [
+          "Er bestaan twee versies",
+          "Een kopie aan de bar, een in de keuken",
+          "Ze spreken elkaar tegen en niemand weet welke nieuwer is"
+        ],
+        [
+          "Vertaalafwijking",
+          "De Engelse kaart noemt noten, de Duitse niet",
+          "Slechts in één taal"
+        ],
+        [
+          "Niemand kan hem vinden",
+          "De map ligt onder het reserveringsboek",
+          "De gast wacht vier minuten op een antwoord"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Waarom een digitaal menu hier beter mee omgaat"
+    },
+    {
+      "type": "p",
+      "text": "Niet omdat het digitaal is, maar omdat de allergeneninformatie aan het gerecht hangt in plaats van aan een document. Je wijzigt het gerecht één keer en overal waar het voorkomt klopt het: de telefoon van de gast, de gedrukte QR-kaart, alle talen, de specials en elke lijst die de keuken uitprint. Er is precies één versie, en dat is de actuele."
+    },
+    {
+      "type": "p",
+      "text": "Het laat gasten het ook zelf oplossen. Iemand met een ernstige notenallergie kan het [digitale menu](route:/digital-menu) zelf filteren in plaats van in een luidruchtige zaal in zijn tweede taal een gesprek te moeten voeren — veiliger en aanzienlijk minder stressvol."
+    },
+    {
+      "type": "h2",
+      "text": "Je kaart allergeencompleet krijgen zonder er een week aan kwijt te zijn"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Begin bij het recept, niet bij de gerechtnaam. Een \"caesarsalade\" verbergt ei, vis (ansjovis), melk en gluten.",
+        "Doe eerst de sauzen en fonds. Dat is de grootste bron van verborgen selderij, mosterd, melk en gluten, en ze komen in tientallen gerechten terug.",
+        "Markeer elk gerecht in het menusysteem zelf, niet in een apart document. Eén bron, geen afwijking.",
+        "Voeg specials toe aan hetzelfde systeem zodra ze op het bord staan, niet na afloop van de dienst.",
+        "Controleer opnieuw zodra een leverancier wisselt. Een ander merk van hetzelfde product is een andere ingrediëntenlijst.",
+        "Train de bediening op waar ze moeten kijken, niet op het uit het hoofd leren van antwoorden. Geheugen is het faalpunt."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Schrijf \"kan sporen bevatten\" alleen waar het echt waar is. Voorzorgsvermelding over de hele kaart maakt de informatie waardeloos, en gasten met echte allergieën leren die te negeren — erger dan niets zeggen."
+    },
+    {
+      "type": "h2",
+      "text": "Kruisbesmetting is een apart probleem"
+    },
+    {
+      "type": "p",
+      "text": "Allergenen correct vermelden en contact voorkomen in een kleine keuken zijn twee verschillende taken. Dezelfde friteuse, dezelfde tang, dezelfde snijplank verplaatsen allergenen tussen gerechten. Wees eerlijk tegen gasten over wat je keuken wel en niet kan garanderen — een duidelijk \"we kunnen geen notenvrije omgeving garanderen\" is veel beter dan een belofte die je niet waarmaakt."
+    },
+    {
+      "type": "cta",
+      "heading": "Eén kaart, één allergenenlijst, elke taal",
+      "text": "Markeer allergenen één keer en ze blijven kloppen op elke tafel, in elke taal, inclusief de specials van vandaag. 14 dagen gratis, zonder creditcard.",
+      "buttonLabel": "Bekijk het digitale menu",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Veelgestelde vragen",
+      "items": [
+        {
+          "q": "Moet ik allergenen op de kaart zelf drukken?",
+          "a": "Dat hangt van je land af. Verordening 1169/2011 vereist dat de informatie beschikbaar is voor niet-voorverpakte producten, en artikel 44 laat het middel aan elke lidstaat — sommige verplichten schriftelijk, andere staan mondeling toe met een zichtbare schriftelijke melding. Raadpleeg je nationale richtlijnen."
+        },
+        {
+          "q": "Hoeveel allergenen moeten worden vermeld?",
+          "a": "Veertien, opgesomd in bijlage II van Verordening (EU) nr. 1169/2011. De lijst is in elk EU-land hetzelfde."
+        },
+        {
+          "q": "Is \"vraag het de bediening\" genoeg?",
+          "a": "Alleen in landen die mondelinge informatie toestaan, en alleen met een duidelijk zichtbare schriftelijke melding plus personeel dat werkelijk een juist antwoord kan geven. Op zichzelf is het nooit genoeg."
+        },
+        {
+          "q": "En de dagspecials?",
+          "a": "Die vallen onder dezelfde regel. Dit is het meest voorkomende gat, omdat specials zelden vóór de dienst in de allergenenmap belanden."
+        },
+        {
+          "q": "Moeten allergenen voor toeristen worden vertaald?",
+          "a": "Gasten moeten de informatie kunnen begrijpen. Een digitaal menu vertaalt het gerecht en neemt de allergeenmarkeringen mee, zodat de Duitse versie de notenwaarschuwing niet stilletjes kan verliezen."
+        }
+      ]
+    }
+  ]
+}

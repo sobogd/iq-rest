@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "Alergeny w karcie: 14 substancji według UE | IQ Rest",
+    "description": "14 alergenów, które restauracje w UE muszą deklarować, czego naprawdę wymaga rozporządzenie 1169/2011 przy żywności nieopakowanej i jak utrzymać listę w zgodzie z prawdą."
+  },
+  "card": {
+    "title": "Alergeny w karcie restauracji: czternaście, przepisy i jak przestać prowadzić to ręcznie",
+    "excerpt": "Czego rozporządzenie (UE) 1169/2011 wymaga od restauracji, 14 alergenów prostym językiem i dlaczego to segregator z alergenami za barem jest elementem, który zawodzi."
+  },
+  "h1": "Alergeny w karcie restauracji: 14 substancji i czego wymaga od ciebie prawo",
+  "intro": "Każda restauracja w UE musi umieć powiedzieć gościowi, czy danie zawiera któryś z 14 alergenów. Sam przepis jest krótki. Trudne jest utrzymanie prawdziwej odpowiedzi po tym, jak kucharz zmieni dostawcę, zmieni bulion albo zaimprowizuje danie dnia — czyli dokładnie tam, gdzie papierowy segregator się sypie.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Czternaście alergenów"
+    },
+    {
+      "type": "p",
+      "text": "Rozporządzenie (UE) nr 1169/2011 wymienia je w załączniku II. Są takie same w całej UE, a w Wielkiej Brytanii odpowiednia lista jest identyczna."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Zboża zawierające gluten** — pszenica, żyto, jęczmień, owies, orkisz, kamut i ich odmiany hybrydowe",
+        "**Skorupiaki** — krewetki, kraby, homary, langustynki",
+        "**Jaja**",
+        "**Ryby**",
+        "**Orzeszki ziemne**",
+        "**Soja**",
+        "**Mleko**, w tym laktoza",
+        "**Orzechy** — migdał, laskowy, włoski, nerkowca, pekan, brazylijski, pistacja, makadamia",
+        "**Seler**, w tym selera korzeniowego i soli selerowej",
+        "**Gorczyca**, w tym nasiona i gorczyca w proszku",
+        "**Nasiona sezamu**",
+        "**Dwutlenek siarki i siarczyny** powyżej 10 mg/kg lub 10 mg/litr",
+        "**Łubin**",
+        "**Mięczaki** — małże, sercówki, kalmary, ośmiornica, ślimaki"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Ten tekst to praktyczne streszczenie, nie porada prawna. Krajowe przepisy wydane na podstawie art. 44 różnią się co do formy przekazania informacji, a kontrolę prowadzi twój lokalny organ. Sprawdź wytyczne swojego kraju."
+    },
+    {
+      "type": "h2",
+      "text": "Czego rozporządzenie faktycznie wymaga w restauracji"
+    },
+    {
+      "type": "p",
+      "text": "Żywność sprzedawana bez opakowania — danie na talerzu — podlega art. 44. W skrócie: informacja o alergenach musi być dostępna dla gościa, a każde państwo członkowskie decyduje o dokładnej formie. Niektóre kraje wymagają jej na piśmie w karcie. Inne dopuszczają przekaz ustny, pod warunkiem że w widocznym miejscu jest pisemna informacja, by pytać, i że zapytana osoba potrafi odpowiedzieć."
+    },
+    {
+      "type": "p",
+      "text": "Praktyczny wniosek: samo „proszę zapytać kelnera” nie wystarczy. Musi być tabliczka, a za tabliczką wiarygodne źródło prawdy, które dziewiętnastolatek na drugiej zmianie przeczyta w dziesięć sekund."
+    },
+    {
+      "type": "h2",
+      "text": "Gdzie informacja o alergenach naprawdę zawodzi"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Awaria",
+        "Jak do niej dochodzi",
+        "Jak to wygląda na sali"
+      ],
+      "rows": [
+        [
+          "Receptura się zmieniła, segregator nie",
+          "Kucharz przechodzi na kostkę bulionową z selerem",
+          "Segregator mówi: bez selera. Jest nieprawdziwy."
+        ],
+        [
+          "Dań dnia w nim nie ma",
+          "Dzisiejsza ryba nigdy nie dostaje wpisu",
+          "Kelner zgaduje"
+        ],
+        [
+          "Istnieją dwie wersje",
+          "Jedna kopia przy barze, druga w kuchni",
+          "Sprzeczne, i nikt nie wie, która nowsza"
+        ],
+        [
+          "Rozjazd w tłumaczeniach",
+          "Angielska karta wymienia orzechy, niemiecka nie",
+          "Tylko w jednym języku"
+        ],
+        [
+          "Nikt go nie znajduje",
+          "Segregator leży pod księgą rezerwacji",
+          "Gość czeka cztery minuty na odpowiedź"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Dlaczego cyfrowe menu radzi sobie z tym lepiej"
+    },
+    {
+      "type": "p",
+      "text": "Nie dlatego, że jest cyfrowe, ale dlatego, że dane o alergenach są przypięte do pozycji, a nie do dokumentu. Zmieniasz pozycję raz i każde miejsce, w którym się pojawia, jest poprawne: telefon gościa, wydrukowane menu QR, wszystkie języki, dania dnia i każda lista, którą wydrukuje kuchnia. Istnieje dokładnie jedna wersja i jest aktualna."
+    },
+    {
+      "type": "p",
+      "text": "Pozwala też gościowi poradzić sobie samemu. Osoba z ciężką alergią na orzechy może sama przefiltrować [cyfrowe menu](route:/digital-menu), zamiast negocjować rozmowę w hałaśliwej sali w swoim drugim języku, co jest zarówno bezpieczniejsze, jak i znacznie mniej stresujące."
+    },
+    {
+      "type": "h2",
+      "text": "Jak uzupełnić alergeny w karcie, nie tracąc tygodnia"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Zacznij od receptury, nie od nazwy dania. „Sałatka cezar” ukrywa jajko, rybę (anchois), mleko i gluten.",
+        "Najpierw sosy i wywary. To największe źródło ukrytego selera, gorczycy, mleka i glutenu, a występują w dziesiątkach dań.",
+        "Oznaczaj każdą pozycję w samym systemie karty, a nie w osobnym dokumencie. Jedno źródło, żadnych rozjazdów.",
+        "Dodawaj dania dnia do tego samego systemu w chwili, gdy trafiają na tablicę, a nie po zakończeniu serwisu.",
+        "Sprawdzaj ponownie przy każdej zmianie dostawcy. Inna marka tego samego produktu to inny skład.",
+        "Ucz salę, gdzie szukać, a nie jak zapamiętać odpowiedzi. Pamięć jest punktem awarii."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Pisz „może zawierać śladowe ilości” tylko tam, gdzie to naprawdę prawda. Zbiorcze ostrzeżenia na całej karcie czynią informację bezużyteczną, a goście z prawdziwymi alergiami uczą się je ignorować — a to gorsze niż nic."
+    },
+    {
+      "type": "h2",
+      "text": "Zanieczyszczenie krzyżowe to osobny problem"
+    },
+    {
+      "type": "p",
+      "text": "Poprawne deklarowanie alergenów i zapobieganie kontaktowi w małej kuchni to dwie różne prace. Ta sama frytownica, te same szczypce, ta sama deska przenoszą alergeny między daniami. Mów gościom wprost, co twoja kuchnia może, a czego nie zagwarantuje — jasne „nie możemy zagwarantować środowiska wolnego od orzechów” jest znacznie lepsze niż obietnica nie do dotrzymania."
+    },
+    {
+      "type": "cta",
+      "heading": "Jedna karta, jedna lista alergenów, każdy język",
+      "text": "Oznacz alergeny raz, a pozostaną poprawne przy każdym stoliku, w każdym języku, łącznie z dzisiejszymi daniami dnia. 14 dni za darmo, bez karty.",
+      "buttonLabel": "Zobacz cyfrowe menu",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Najczęstsze pytania",
+      "items": [
+        {
+          "q": "Czy muszę drukować alergeny w samej karcie?",
+          "a": "To zależy od kraju. Rozporządzenie 1169/2011 wymaga, by informacja była dostępna przy żywności nieopakowanej, a art. 44 zostawia formę państwom członkowskim — jedne wymagają pisemnie, inne dopuszczają ustnie przy widocznej informacji pisemnej. Sprawdź krajowe wytyczne."
+        },
+        {
+          "q": "Ile alergenów trzeba deklarować?",
+          "a": "Czternaście, wymienionych w załączniku II do rozporządzenia (UE) nr 1169/2011. Lista jest taka sama w każdym kraju UE."
+        },
+        {
+          "q": "Czy „proszę zapytać kelnera” wystarczy?",
+          "a": "Tylko w krajach dopuszczających informację ustną i wyłącznie przy dobrze widocznej informacji pisemnej oraz personelu, który faktycznie potrafi udzielić poprawnej odpowiedzi. Samo w sobie nigdy nie wystarcza."
+        },
+        {
+          "q": "A dania dnia?",
+          "a": "Podlegają tej samej zasadzie. To najczęstsza luka, bo dania dnia rzadko trafiają do segregatora z alergenami przed rozpoczęciem serwisu."
+        },
+        {
+          "q": "Czy alergeny trzeba tłumaczyć dla turystów?",
+          "a": "Gość musi być w stanie zrozumieć informację. Cyfrowe menu tłumaczy pozycję i zabiera ze sobą oznaczenia alergenów, więc niemiecka wersja nie zgubi po cichu ostrzeżenia o orzechach."
+        }
+      ]
+    }
+  ]
+}

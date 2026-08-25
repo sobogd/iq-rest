@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "Allergènes à la carte : les 14 substances UE | IQ Rest",
+    "description": "Les 14 allergènes que les restaurants de l'UE doivent déclarer, ce qu'exige vraiment le règlement 1169/2011 pour les denrées non préemballées, et comment tenir la liste à jour."
+  },
+  "card": {
+    "title": "Allergènes sur la carte : les 14, la loi, et comment arrêter de tenir ça à la main",
+    "excerpt": "Ce que le règlement (UE) 1169/2011 exige des restaurants, les 14 allergènes en langage clair, et pourquoi le classeur allergènes derrière le bar est la pièce qui casse."
+  },
+  "h1": "Allergènes sur la carte d'un restaurant : les 14 substances et ce que la loi vous demande",
+  "intro": "Tout restaurant de l'UE doit pouvoir dire à un client si un plat contient l'un des 14 allergènes. La règle est courte. Le difficile, c'est de garder la réponse vraie après que le chef a changé de fournisseur, changé de fond ou improvisé une suggestion — précisément là où le classeur papier s'effondre.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Les 14 allergènes"
+    },
+    {
+      "type": "p",
+      "text": "Le règlement (UE) n° 1169/2011 les liste à l'annexe II. Ils sont identiques dans toute l'UE, et au Royaume-Uni la liste équivalente est la même."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Céréales contenant du gluten** — blé, seigle, orge, avoine, épeautre, kamut et leurs hybrides",
+        "**Crustacés** — crevettes, crabe, homard, langoustine",
+        "**Œufs**",
+        "**Poissons**",
+        "**Arachides**",
+        "**Soja**",
+        "**Lait**, y compris le lactose",
+        "**Fruits à coque** — amande, noisette, noix, noix de cajou, pécan, noix du Brésil, pistache, macadamia",
+        "**Céleri**, y compris le céleri-rave et le sel de céleri",
+        "**Moutarde**, y compris les graines et la poudre",
+        "**Graines de sésame**",
+        "**Anhydride sulfureux et sulfites** au-delà de 10 mg/kg ou 10 mg/litre",
+        "**Lupin**",
+        "**Mollusques** — moules, palourdes, calmar, poulpe, escargots"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Cet article est un résumé pratique, pas un avis juridique. Les règles nationales prises au titre de l'article 44 diffèrent sur la forme que doit prendre l'information, et le contrôle relève de votre autorité locale. Consultez les consignes de votre pays."
+    },
+    {
+      "type": "h2",
+      "text": "Ce que le règlement exige réellement en restaurant"
+    },
+    {
+      "type": "p",
+      "text": "Les denrées vendues non préemballées — une assiette dressée — relèvent de l'article 44. En résumé : l'information sur les allergènes doit être disponible pour le client, et chaque État membre décide du moyen exact. Certains pays imposent l'écrit sur la carte. D'autres autorisent l'oral, à condition qu'un avis écrit clairement visible invite le client à demander, et que la personne interrogée sache réellement répondre."
+    },
+    {
+      "type": "p",
+      "text": "En pratique : « demandez au serveur » ne suffit pas seul. Il faut un panneau, et derrière le panneau une source fiable qu'un jeune de 19 ans à son deuxième service puisse lire en dix secondes."
+    },
+    {
+      "type": "h2",
+      "text": "Où l'information allergènes déraille vraiment"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Défaillance",
+        "Comment ça arrive",
+        "Ce que ça donne en salle"
+      ],
+      "rows": [
+        [
+          "Recette modifiée, classeur non",
+          "Le chef passe à un bouillon cube contenant du céleri",
+          "Le classeur dit sans céleri. Il a tort."
+        ],
+        [
+          "Les suggestions n'y sont pas",
+          "Le poisson du soir n'a jamais sa fiche",
+          "Le serveur devine"
+        ],
+        [
+          "Deux versions coexistent",
+          "Une copie au bar, une en cuisine",
+          "Elles se contredisent et personne ne sait laquelle est la plus récente"
+        ],
+        [
+          "Dérive des traductions",
+          "La carte anglaise indique les fruits à coque, l'allemande non",
+          "Dans une seule langue"
+        ],
+        [
+          "Personne ne le trouve",
+          "Le classeur est sous le cahier de réservations",
+          "Le client attend quatre minutes une réponse"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Pourquoi un menu digital gère mieux cela"
+    },
+    {
+      "type": "p",
+      "text": "Non parce qu'il est digital, mais parce que la donnée allergène est attachée au plat plutôt qu'à un document. Vous modifiez le plat une fois et tous les endroits où il apparaît sont corrects : le téléphone du client, le menu QR imprimé, toutes les langues, les suggestions et toute liste imprimée par la cuisine. Il existe exactement une version, et c'est la bonne."
+    },
+    {
+      "type": "p",
+      "text": "Cela permet aussi au client de se débrouiller seul. Une personne gravement allergique aux fruits à coque peut filtrer le [menu digital](route:/digital-menu) elle-même plutôt que de négocier une conversation dans une salle bruyante et dans sa deuxième langue, ce qui est à la fois plus sûr et nettement moins pénible pour elle."
+    },
+    {
+      "type": "h2",
+      "text": "Rendre votre carte complète en allergènes sans y perdre une semaine"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Partez de la recette, pas du nom du plat. Une « salade César » cache œuf, poisson (anchois), lait et gluten.",
+        "Faites d'abord les sauces et les fonds. Ce sont la première source de céleri, moutarde, lait et gluten cachés, et ils reviennent dans des dizaines de plats.",
+        "Étiquetez chaque plat dans le système du menu plutôt que dans un document à part. Une seule source, aucune dérive.",
+        "Ajoutez les suggestions au même système dès qu'elles sont écrites sur l'ardoise, pas en fin de service.",
+        "Revérifiez à chaque changement de fournisseur. Une autre marque du même produit, c'est une autre liste d'ingrédients.",
+        "Formez la salle à savoir où regarder, pas à mémoriser les réponses. La mémoire est le point de rupture."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "N'écrivez « peut contenir des traces » que là où c'est vraiment le cas. Un étiquetage de précaution appliqué à toute la carte rend l'information inutile, et les clients réellement allergiques apprennent à l'ignorer — pire que de ne rien dire."
+    },
+    {
+      "type": "h2",
+      "text": "La contamination croisée est un autre sujet"
+    },
+    {
+      "type": "p",
+      "text": "Déclarer correctement les allergènes et empêcher le contact dans une petite cuisine sont deux métiers différents. La même friteuse, la même pince, la même planche déplacent les allergènes d'un plat à l'autre. Soyez direct avec les clients sur ce que votre cuisine peut ou ne peut pas garantir : un « nous ne pouvons pas garantir un environnement sans fruits à coque » vaut bien mieux qu'une promesse intenable."
+    },
+    {
+      "type": "cta",
+      "heading": "Un menu, une liste d'allergènes, toutes les langues",
+      "text": "Étiquetez les allergènes une fois et ils restent justes sur chaque table, dans chaque langue, suggestions du jour comprises. 14 jours gratuits, sans carte bancaire.",
+      "buttonLabel": "Voir le menu digital",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Questions fréquentes",
+      "items": [
+        {
+          "q": "Dois-je imprimer les allergènes sur la carte elle-même ?",
+          "a": "Cela dépend de votre pays. Le règlement 1169/2011 exige que l'information soit disponible pour les denrées non préemballées, et l'article 44 laisse le moyen à chaque État membre : certains imposent l'écrit, d'autres permettent l'oral avec un avis écrit visible. Consultez vos consignes nationales."
+        },
+        {
+          "q": "Combien d'allergènes faut-il déclarer ?",
+          "a": "Quatorze, listés à l'annexe II du règlement (UE) n° 1169/2011. La liste est la même dans tous les pays de l'UE."
+        },
+        {
+          "q": "« Demandez à votre serveur » suffit-il ?",
+          "a": "Uniquement dans les pays qui autorisent l'information orale, et seulement avec un avis écrit bien visible et un personnel capable de répondre correctement. Ce n'est jamais suffisant à soi seul."
+        },
+        {
+          "q": "Et les suggestions du jour ?",
+          "a": "Elles relèvent de la même règle. C'est le trou le plus fréquent, car les suggestions arrivent rarement dans le classeur allergènes avant le début du service."
+        },
+        {
+          "q": "Faut-il traduire les allergènes pour les touristes ?",
+          "a": "Le client doit pouvoir comprendre l'information. Un menu digital traduit le plat et emporte avec lui les étiquettes d'allergènes, si bien que la version allemande ne peut pas perdre discrètement l'avertissement sur les fruits à coque."
+        }
+      ]
+    }
+  ]
+}

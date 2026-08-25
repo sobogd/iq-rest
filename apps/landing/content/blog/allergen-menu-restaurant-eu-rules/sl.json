@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "Alergeni na jedilniku: 14 snovi po EU | IQ Rest",
+    "description": "14 alergenov, ki jih morajo restavracije v EU navesti, kaj Uredba 1169/2011 zares zahteva pri nepredpakirani hrani in kako ohraniti seznam resničen."
+  },
+  "card": {
+    "title": "Alergeni na jedilniku: štirinajst, zakon in kako nehati voditi to ročno",
+    "excerpt": "Kaj Uredba (EU) 1169/2011 zahteva od restavracij, 14 alergenov v preprostem jeziku in zakaj je prav mapa z alergeni za šankom tisti del, ki odpove."
+  },
+  "h1": "Alergeni na jedilniku restavracije: 14 snovi in kaj od vas zahteva zakon",
+  "intro": "Vsaka restavracija v EU mora gostu znati povedati, ali jed vsebuje katerega od 14 alergenov. Samo pravilo je kratko. Težko je odgovor ohraniti resničen, potem ko kuhar zamenja dobavitelja, zamenja osnovo ali improvizira jed dneva — točno tam papirnata mapa razpade.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Štirinajst alergenov"
+    },
+    {
+      "type": "p",
+      "text": "Uredba (EU) št. 1169/2011 jih navaja v Prilogi II. Enaki so v vsej EU, v Združenem kraljestvu pa je ustrezni seznam enak."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Žita, ki vsebujejo gluten** — pšenica, rž, ječmen, oves, pira, kamut in njihovi križanci",
+        "**Raki** — kozice, rakovica, jastog, škamp",
+        "**Jajca**",
+        "**Ribe**",
+        "**Arašidi**",
+        "**Soja**",
+        "**Mleko**, vključno z laktozo",
+        "**Oreški** — mandelj, lešnik, oreh, indijski oreški, pekan, brazilski oreh, pistacija, makadamija",
+        "**Zelena**, vključno z gomoljno zeleno in zelenino soljo",
+        "**Gorčica**, vključno s semeni in prahom",
+        "**Sezamovo seme**",
+        "**Žveplov dioksid in sulfiti** nad 10 mg/kg ali 10 mg/liter",
+        "**Volčji bob (lupina)**",
+        "**Mehkužci** — klapavice, ladinke, lignji, hobotnica, polži"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Ta članek je praktičen povzetek, ne pravni nasvet. Nacionalna pravila po 44. členu se razlikujejo v tem, kako mora biti informacija podana, nadzor pa izvaja vaš lokalni organ. Preverite navodila svoje države."
+    },
+    {
+      "type": "h2",
+      "text": "Kaj uredba v restavraciji zares zahteva"
+    },
+    {
+      "type": "p",
+      "text": "Hrana, ki jo prodajate nepakirano — jed na krožniku — sodi pod 44. člen. Na kratko: informacija o alergenih mora biti gostu na voljo, natančen način pa določi vsaka država članica. Nekatere države jo zahtevajo pisno na jedilniku. Druge dopuščajo ustno, če obstaja jasno vidno pisno obvestilo, ki gosta vabi, naj vpraša, in če vprašani zares zna odgovoriti."
+    },
+    {
+      "type": "p",
+      "text": "Praktično branje: samo »vprašajte natakarja« ne zadošča. Potreben je napis, za napisom pa zanesljiv vir resnice, ki ga devetnajstletnik v drugi izmeni prebere v desetih sekundah."
+    },
+    {
+      "type": "h2",
+      "text": "Kje informacija o alergenih zares zataji"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Odpoved",
+        "Kako se zgodi",
+        "Kako izgleda v sali"
+      ],
+      "rows": [
+        [
+          "Recept se je spremenil, mapa ne",
+          "Kuhar preide na jušno kocko z zeleno",
+          "Mapa pravi brez zelene. Moti se."
+        ],
+        [
+          "Jedi dneva ni notri",
+          "Nocojšnja riba nikoli ne dobi vnosa",
+          "Natakar ugiba"
+        ],
+        [
+          "Obstajata dve različici",
+          "Ena kopija na šanku, druga v kuhinji",
+          "Nasprotujeta si in nihče ne ve, katera je novejša"
+        ],
+        [
+          "Razhajanje v prevodih",
+          "Angleški jedilnik navaja oreške, nemški ne",
+          "Samo v enem jeziku"
+        ],
+        [
+          "Nihče je ne najde",
+          "Mapa leži pod knjigo rezervacij",
+          "Gost čaka na odgovor štiri minute"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Zakaj digitalni jedilnik to obvlada bolje"
+    },
+    {
+      "type": "p",
+      "text": "Ne zato, ker je digitalen, ampak ker je podatek o alergenu pripet na postavko in ne na dokument. Postavko spremenite enkrat in vsako mesto, kjer se pojavi, je pravilno: gostov telefon, natisnjen QR jedilnik, vsi jeziki, jedi dneva in vsak seznam, ki ga kuhinja natisne. Obstaja natanko ena različica, in to je aktualna."
+    },
+    {
+      "type": "p",
+      "text": "Poleg tega gostu omogoči, da si pomaga sam. Nekdo s hudo alergijo na oreške lahko [digitalni jedilnik](route:/digital-menu) filtrira sam, namesto da se v hrupni sali v svojem drugem jeziku pogaja za pogovor — varneje in zanj precej manj obremenjujoče."
+    },
+    {
+      "type": "h2",
+      "text": "Kako dokončati alergene na jedilniku brez izgubljenega tedna"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Začnite pri receptu, ne pri imenu jedi. »Cezarjeva solata« skriva jajce, ribo (sardon), mleko in gluten.",
+        "Najprej naredite omake in osnove. So največji vir skrite zelene, gorčice, mleka in glutena in se pojavijo v več desetih jedeh.",
+        "Postavke označujte v samem sistemu jedilnika, ne v ločenem dokumentu. En vir, brez razhajanj.",
+        "Jedi dneva vnesite v isti sistem v trenutku, ko so napisane na tablo, ne ob koncu izmene.",
+        "Ob vsaki menjavi dobavitelja preverite znova. Druga znamka istega izdelka je drugačna sestava.",
+        "Osebje učite, kje naj pogleda, ne kako naj si odgovore zapomni. Spomin je točka odpovedi."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "»Lahko vsebuje sledi« napišite samo tam, kjer to res drži. Pavšalno previdnostno označevanje po vsem jedilniku naredi informacijo neuporabno, gostje z resničnimi alergijami pa se je naučijo prezreti — kar je slabše, kot če ne bi rekli nič."
+    },
+    {
+      "type": "h2",
+      "text": "Navzkrižna kontaminacija je ločen problem"
+    },
+    {
+      "type": "p",
+      "text": "Pravilno navesti alergene in preprečiti stik v majhni kuhinji sta dve različni delovni nalogi. Isti cvrtnik, iste klešče, ista deska prenašajo alergene med jedmi. Bodite z gosti odkriti glede tega, kaj vaša kuhinja lahko in česa ne more zagotoviti — jasno »ne moremo zagotoviti okolja brez oreškov« je veliko več vredno od obljube, ki je ne morete držati."
+    },
+    {
+      "type": "cta",
+      "heading": "En jedilnik, en seznam alergenov, vsi jeziki",
+      "text": "Alergene označite enkrat in ostanejo pravilni za vsako mizo, v vsakem jeziku, vključno z današnjimi jedmi dneva. 14 dni brezplačno, brez kartice.",
+      "buttonLabel": "Poglejte digitalni jedilnik",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Pogosta vprašanja",
+      "items": [
+        {
+          "q": "Ali moram alergene natisniti na sam jedilnik?",
+          "a": "Odvisno od vaše države. Uredba 1169/2011 zahteva, da je informacija na voljo pri nepakirani hrani, 44. člen pa način prepušča vsaki državi članici — nekatere zahtevajo pisno obliko, druge dopuščajo ustno ob vidnem pisnem obvestilu. Preverite nacionalna navodila."
+        },
+        {
+          "q": "Koliko alergenov je treba navesti?",
+          "a": "Štirinajst, navedenih v Prilogi II k Uredbi (EU) št. 1169/2011. Seznam je enak v vseh državah EU."
+        },
+        {
+          "q": "Ali zadošča »vprašajte natakarja«?",
+          "a": "Samo v državah, ki dopuščajo ustno informacijo, in samo z jasno vidnim pisnim obvestilom ter osebjem, ki zna dati pravilen odgovor. Samo po sebi nikoli ne zadošča."
+        },
+        {
+          "q": "Kaj pa jedi dneva?",
+          "a": "Zanje velja isto pravilo. To je najpogostejša vrzel, saj jedi dneva redko pridejo v mapo z alergeni pred začetkom izmene."
+        },
+        {
+          "q": "Ali je treba alergene prevesti za turiste?",
+          "a": "Gost mora informacijo razumeti. Digitalni jedilnik prevede postavko in s seboj vzame oznake alergenov, tako da nemška različica ne more tiho izgubiti opozorila o oreških."
+        }
+      ]
+    }
+  ]
+}

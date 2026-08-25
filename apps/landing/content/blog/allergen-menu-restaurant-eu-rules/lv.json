@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "Alergēni ēdienkartē: ES 14 vielas | IQ Rest",
+    "description": "14 alergēni, kas ES restorāniem jānorāda, ko regula 1169/2011 patiesībā prasa nefasētam ēdienam un kā uzturēt sarakstu patiesu."
+  },
+  "card": {
+    "title": "Alergēni ēdienkartē: četrpadsmit, likums un kā beigt to kārtot ar roku",
+    "excerpt": "Ko regula (ES) 1169/2011 prasa no restorāniem, 14 alergēni vienkāršā valodā un kāpēc tieši alergēnu mape aiz bāra letes ir tā daļa, kas pieviļ."
+  },
+  "h1": "Alergēni restorāna ēdienkartē: 14 vielas un ko no tevis prasa likums",
+  "intro": "Katram restorānam ES jāspēj pateikt viesim, vai ēdiens satur kādu no 14 alergēniem. Pats noteikums ir īss. Grūti ir noturēt atbildi patiesu pēc tam, kad pavārs nomainījis piegādātāju, nomainījis buljonu vai improvizējis dienas ēdienu — tieši tur papīra mape arī sabrūk.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Četrpadsmit alergēni"
+    },
+    {
+      "type": "p",
+      "text": "Regula (ES) Nr. 1169/2011 tos uzskaita II pielikumā. Tie ir vienādi visā ES, un Apvienotajā Karalistē attiecīgais saraksts ir identisks."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Lipekli saturoši graudaugi** — kvieši, rudzi, mieži, auzas, plēkšņu kvieši, kamut un to hibrīdi",
+        "**Vēžveidīgie** — garneles, krabji, omāri, Norvēģijas omāri",
+        "**Olas**",
+        "**Zivis**",
+        "**Zemesrieksti**",
+        "**Sojas pupas**",
+        "**Piens**, tostarp laktoze",
+        "**Rieksti** — mandeles, lazdu rieksti, valrieksti, Indijas rieksti, pekanrieksti, Brazīlijas rieksti, pistācijas, makadāmijas",
+        "**Selerijas**, tostarp sakņu selerijas un selerijas sāls",
+        "**Sinepes**, tostarp sēklas un sinepju pulveris",
+        "**Sezama sēklas**",
+        "**Sēra dioksīds un sulfīti** virs 10 mg/kg vai 10 mg/litrā",
+        "**Lupīna**",
+        "**Gliemji** — mīdijas, sirsniņgliemenes, kalmāri, astoņkājis, gliemeži"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Šis raksts ir praktisks kopsavilkums, nevis juridiska konsultācija. Nacionālie noteikumi saskaņā ar 44. pantu atšķiras attiecībā uz to, kādā veidā informācija jāsniedz, un uzraudzību veic tava vietējā iestāde. Pārbaudi savas valsts vadlīnijas."
+    },
+    {
+      "type": "h2",
+      "text": "Ko regula restorānā patiešām prasa"
+    },
+    {
+      "type": "p",
+      "text": "Ēdiens, ko pārdod nefasētu — šķīvī pasniegts ēdiens — ietilpst 44. pantā. Īsi: informācijai par alergēniem jābūt viesim pieejamai, un precīzo veidu nosaka katra dalībvalsts. Dažas valstis prasa to rakstiski ēdienkartē. Citas pieļauj mutisku, ja ir skaidri redzams rakstisks paziņojums, kas aicina viesi jautāt, un ja jautātais darbinieks tiešām spēj atbildēt."
+    },
+    {
+      "type": "p",
+      "text": "Praktiskais lasījums: “pajautājiet viesmīlim” vien nepietiek. Vajag zīmi, un aiz zīmes uzticamu patiesības avotu, ko deviņpadsmitgadīgs darbinieks otrajā maiņā izlasa desmit sekundēs."
+    },
+    {
+      "type": "h2",
+      "text": "Kur informācija par alergēniem patiešām aiziet greizi"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Kļūme",
+        "Kā tā notiek",
+        "Kā tas izskatās zālē"
+      ],
+      "rows": [
+        [
+          "Recepte mainījās, mape nē",
+          "Pavārs pāriet uz buljona kubiņu ar seleriju",
+          "Mape saka: bez selerijas. Tā melo."
+        ],
+        [
+          "Dienas ēdienu tur nav",
+          "Šodienas zivij nekad neizveido ierakstu",
+          "Viesmīlis mēģina uzminēt"
+        ],
+        [
+          "Pastāv divas versijas",
+          "Viena kopija pie bāra, otra virtuvē",
+          "Tās ir pretrunā, un neviens nezina, kura ir jaunāka"
+        ],
+        [
+          "Novirze tulkojumos",
+          "Angļu ēdienkarte min riekstus, vācu nē",
+          "Tikai vienā valodā"
+        ],
+        [
+          "Neviens to neatrod",
+          "Mape ir zem rezervāciju grāmatas",
+          "Viesis gaida atbildi četras minūtes"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kāpēc digitāla ēdienkarte ar to tiek galā labāk"
+    },
+    {
+      "type": "p",
+      "text": "Nevis tāpēc, ka tā ir digitāla, bet tāpēc, ka dati par alergēnu ir piesaistīti pozīcijai, nevis dokumentam. Maini pozīciju vienreiz, un katra vieta, kur tā parādās, ir pareiza: viesa telefons, izdrukātā QR ēdienkarte, visas valodas, dienas ēdieni un jebkurš saraksts, ko izdrukā virtuve. Pastāv tieši viena versija, un tā ir pašreizējā."
+    },
+    {
+      "type": "p",
+      "text": "Turklāt tas ļauj viesim tikt galā pašam. Cilvēks ar smagu riekstu alerģiju var pats filtrēt [digitālo ēdienkarti](route:/digital-menu), nevis risināt sarunu trokšņainā zālē savā otrajā valodā — gan drošāk, gan viņam ievērojami mazāk saspringti."
+    },
+    {
+      "type": "h2",
+      "text": "Kā pabeigt alergēnus ēdienkartē, nezaudējot nedēļu"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Sāc no receptes, nevis no ēdiena nosaukuma. “Cēzara salāti” slēpj olu, zivi (anšovu), pienu un lipekli.",
+        "Vispirms izdari mērces un buljonus. Tie ir lielākais slēptās selerijas, sinepju, piena un lipekļa avots un parādās desmitos ēdienu.",
+        "Atzīmē katru pozīciju pašā ēdienkartes sistēmā, nevis atsevišķā dokumentā. Viens avots, nekādu noviržu.",
+        "Pievieno dienas ēdienus tai pašai sistēmai brīdī, kad tie tiek uzrakstīti uz tāfeles, nevis maiņas beigās.",
+        "Pārbaudi no jauna ikreiz, kad mainās piegādātājs. Cita tā paša produkta zīmola sastāvs ir citāds.",
+        "Māci zāli, kur skatīties, nevis kā atbildes iegaumēt. Atmiņa ir tā vieta, kur viss salūzt."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Raksti “var saturēt pēdas” tikai tur, kur tas patiesi atbilst īstenībai. Vispārēja piesardzības marķēšana visā ēdienkartē padara informāciju bezjēdzīgu, un viesi ar īstām alerģijām iemācās to ignorēt — tas ir sliktāk nekā nepateikt neko."
+    },
+    {
+      "type": "h2",
+      "text": "Krusteniskā piesārņošana ir atsevišķa problēma"
+    },
+    {
+      "type": "p",
+      "text": "Pareizi norādīt alergēnus un novērst saskari mazā virtuvē ir divi dažādi darbi. Tā pati fritēzes katls, tās pašas knaibles, tas pats dēlītis pārnes alergēnus starp ēdieniem. Runā ar viesiem tieši par to, ko tava virtuve var un ko nevar garantēt: skaidrs “mēs nevaram garantēt vidi bez riekstiem” ir daudz vērtīgāks par solījumu, ko nevari izpildīt."
+    },
+    {
+      "type": "cta",
+      "heading": "Viena ēdienkarte, viens alergēnu saraksts, visas valodas",
+      "text": "Atzīmē alergēnus vienreiz, un tie paliek pareizi pie katra galda, katrā valodā, arī šodienas dienas ēdienos. 14 dienas bez maksas, bez kartes.",
+      "buttonLabel": "Skatīt digitālo ēdienkarti",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Biežāk uzdotie jautājumi",
+      "items": [
+        {
+          "q": "Vai alergēni jādrukā pašā ēdienkartē?",
+          "a": "Tas atkarīgs no valsts. Regula 1169/2011 prasa, lai informācija būtu pieejama nefasētam ēdienam, un 44. pants veidu atstāj katras dalībvalsts ziņā — dažviet obligāta ir rakstiska forma, citur pieļaujama mutiska ar redzamu rakstisku paziņojumu. Pārbaudi nacionālās vadlīnijas."
+        },
+        {
+          "q": "Cik alergēni jānorāda?",
+          "a": "Četrpadsmit, uzskaitīti regulas (ES) Nr. 1169/2011 II pielikumā. Saraksts ir vienāds visās ES valstīs."
+        },
+        {
+          "q": "Vai pietiek ar “pajautājiet viesmīlim”?",
+          "a": "Tikai valstīs, kas pieļauj mutisku informāciju, un tikai ar skaidri redzamu rakstisku paziņojumu un personālu, kas tiešām spēj sniegt pareizu atbildi. Pati par sevi šī frāze nekad nav pietiekama."
+        },
+        {
+          "q": "Un dienas ēdieni?",
+          "a": "Uz tiem attiecas tas pats noteikums. Šī ir visbiežākā nepilnība, jo dienas ēdieni reti nonāk alergēnu mapē pirms maiņas sākuma."
+        },
+        {
+          "q": "Vai alergēni jātulko tūristiem?",
+          "a": "Viesim jāspēj informāciju saprast. Digitāla ēdienkarte pārtulko pozīciju un paņem līdzi alergēnu atzīmes, tāpēc vācu versija nevar klusi pazaudēt brīdinājumu par riekstiem."
+        }
+      ]
+    }
+  ]
+}

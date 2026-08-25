@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "Ailléirginí ar an mbiachlár: 14 shubstaint an AE | IQ Rest",
+    "description": "Na 14 ailléirgin nach mór do bhialanna an AE a dhearbhú, a bhfuil á éileamh i ndáiríre ag Rialachán 1169/2011 do bhia neamhphacáistithe, agus conas an liosta a choinneáil fíor."
+  },
+  "card": {
+    "title": "Ailléirginí ar bhiachlár bialainne: an ceithre cinn déag, an dlí, agus conas éirí as a choinneáil de láimh",
+    "excerpt": "Cad a éilíonn Rialachán (AE) 1169/2011 ar bhialanna, na 14 ailléirgin i dteanga shimplí, agus cén fáth gurb é an fillteán ailléirginí taobh thiar den bheár an chuid a theipeann."
+  },
+  "h1": "Ailléirginí ar bhiachlár bialainne: na 14 shubstaint agus a n-iarrann an dlí ort",
+  "intro": "Ní mór do gach bialann san AE a bheith in ann a rá le haoi an bhfuil ceann de 14 ailléirgin i mias. Tá an riail féin gearr. Is é an rud deacair an freagra a choinneáil fíor tar éis don chócaire soláthraí a athrú, stoc a athrú, nó speisialtacht a chumadh — díreach san áit a dtiteann an fillteán páipéir as a chéile.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Na ceithre ailléirgin déag"
+    },
+    {
+      "type": "p",
+      "text": "Liostaíonn Rialachán (AE) Uimh. 1169/2011 in Iarscríbhinn II iad. Tá siad mar an gcéanna ar fud an AE, agus sa Ríocht Aontaithe tá an liosta comhionann."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Gránaigh ina bhfuil glútan** — cruithneacht, seagal, eorna, coirce, speilt, kamut agus a gcuid hibridí",
+        "**Crústaigh** — cloicheáin, portán, gliomach, cloicheán Bhá Bhaile Átha Cliath",
+        "**Uibheacha**",
+        "**Iasc**",
+        "**Piseanna talún**",
+        "**Pónairí soighe**",
+        "**Bainne**, lena n-áirítear lachtós",
+        "**Cnónna** — almóinn, cnó coill, gallchnó, cnó caisiú, cnó peacáin, cnó Brasaíleach, pistáis, macadaimia",
+        "**Soilire**, lena n-áirítear meacan soilire agus salann soilire",
+        "**Mustard**, lena n-áirítear síolta agus púdar",
+        "**Síolta seasamain**",
+        "**Dé-ocsaíd sulfair agus suilfítí** os cionn 10 mg/kg nó 10 mg/lítear",
+        "**Lúipín**",
+        "**Moileasc** — diúilicíní, ruacain, scuid, ochtapas, seilidí"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Is achoimre phraiticiúil é an t-alt seo, ní comhairle dlí. Athraíonn rialacha náisiúnta faoi Airteagal 44 maidir leis an gcaoi a gcaithfear an t-eolas a thabhairt, agus is é d'údarás áitiúil a dhéanann an cigireacht. Seiceáil treoir do thíre."
+    },
+    {
+      "type": "h2",
+      "text": "Cad a éilíonn an rialachán i ndáiríre i mbialann"
+    },
+    {
+      "type": "p",
+      "text": "Titeann bia a dhíolann tú neamhphacáistithe — mias ar phláta — faoi Airteagal 44. Go hachomair: caithfidh an t-eolas ailléirgine a bheith ar fáil don aoi, agus socraíonn gach ballstát an modh cruinn. Éilíonn roinnt tíortha i scríbhinn ar an mbiachlár é. Ceadaíonn tíortha eile ó bhéal é, ar choinníoll go bhfuil fógra scríofa soiléir ann a iarrann ar an aoi ceist a chur, agus go bhfuil an duine a gcuirtear ceist air in ann freagra a thabhairt."
+    },
+    {
+      "type": "p",
+      "text": "An léamh praiticiúil: ní leor \"fiafraigh den fhreastalaí\" leis féin. Caithfidh comhartha a bheith ann, agus taobh thiar den chomhartha foinse iontaofa fírinne is féidir le duine 19 mbliana d'aois ar a dhara seal a léamh i ndeich soicind."
+    },
+    {
+      "type": "h2",
+      "text": "Cá dtéann eolas ailléirgine amú i ndáiríre"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Teip",
+        "Conas a tharlaíonn sé",
+        "Cén chuma atá air san urlár"
+      ],
+      "rows": [
+        [
+          "Athraíodh an t-oideas, níor athraíodh an fillteán",
+          "Aistríonn an cócaire go ciúb stoic ina bhfuil soilire",
+          "Deir an fillteán nach bhfuil soilire ann. Tá sé mícheart."
+        ],
+        [
+          "Níl na speisialtachtaí ann",
+          "Ní fhaigheann iasc na hoíche iontráil riamh",
+          "Buaileann an freastalaí buille faoi thuairim"
+        ],
+        [
+          "Tá dhá leagan ann",
+          "Cóip amháin ag an mbeár, ceann eile sa chistin",
+          "Tá siad in aghaidh a chéile agus níl a fhios ag éinne cé acu is nuaí"
+        ],
+        [
+          "Sleamhnú san aistriúchán",
+          "Luann an biachlár Béarla cnónna, ní luann an ceann Gearmáinise",
+          "In aon teanga amháin"
+        ],
+        [
+          "Ní aimsíonn éinne é",
+          "Tá an fillteán faoin leabhar áirithintí",
+          "Fanann an t-aoi ceithre nóiméad ar fhreagra"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Cén fáth a láimhseálann biachlár digiteach é seo níos fearr"
+    },
+    {
+      "type": "p",
+      "text": "Ní toisc go bhfuil sé digiteach, ach toisc go bhfuil na sonraí ailléirgine ceangailte den mhír seachas de dhoiciméad. Athraíonn tú an mhír uair amháin agus bíonn gach áit a bhfeictear í ceart: fón an aoi, an biachlár QR clóite, gach teanga, na speisialtachtaí, agus aon liosta a phriontálann an chistin. Tá leagan amháin go díreach ann, agus is é an ceann reatha é."
+    },
+    {
+      "type": "p",
+      "text": "Ligeann sé freisin don aoi é a réiteach dó féin. Is féidir le duine a bhfuil ailléirge throm cnónna air an [biachlár digiteach](route:/digital-menu) a scagadh é féin seachas comhrá a idirbheartú i seomra torannach ina dhara teanga — níos sábháilte agus i bhfad níos lú struis dó."
+    },
+    {
+      "type": "h2",
+      "text": "Conas an biachlár a chur i gcrích ó thaobh ailléirginí gan seachtain a chailleadh"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Tosaigh leis an oideas, ní le hainm na méise. Folaíonn \"sailéad Caesar\" ubh, iasc (ainseabhaí), bainne agus glútan.",
+        "Déan na hanlainn agus na stoic ar dtús. Is iad an fhoinse is mó de shoilire, mustard, bainne agus glútan i bhfolach, agus tagann siad chun cinn i ndosaen mias.",
+        "Lipéadaigh gach mír i gcóras an bhiachláir féin seachas i ndoiciméad ar leith. Foinse amháin, gan sleamhnú.",
+        "Cuir speisialtachtaí isteach sa chóras céanna a luaithe a scríobhtar ar an gclár iad, ní ag deireadh an tseal.",
+        "Athsheiceáil gach uair a athraíonn soláthraí. Is liosta comhábhar difriúil é branda difriúil den táirge céanna.",
+        "Traenáil an fhoireann ar cá háit le breathnú, ní ar na freagraí a mheabhrú. Is í an chuimhne an pointe teipe."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Scríobh \"féadfaidh rian a bheith ann\" san áit a bhfuil sé fíor amháin. Déanann lipéadú réamhchúraim ar fud an bhiachláir an t-eolas gan mhaith, agus foghlaimíonn aíonna a bhfuil fíorailléirgí orthu neamhaird a dhéanamh air — rud is measa ná gan aon rud a rá."
+    },
+    {
+      "type": "h2",
+      "text": "Fadhb ar leith is ea an tras-éilliú"
+    },
+    {
+      "type": "p",
+      "text": "Is dhá phost dhifriúla iad ailléirginí a dhearbhú i gceart agus teagmháil a chosc i gcistin bheag. Bogann an friochtán céanna, na teanchairí céanna, an clár céanna ailléirginí idir miasa. Bí díreach le haíonna faoi cad is féidir agus nach féidir le do chistin a ráthú — is fearr go mór \"ní féidir linn timpeallacht saor ó chnónna a ráthú\" ná gealltanas nach féidir leat a chomhlíonadh."
+    },
+    {
+      "type": "cta",
+      "heading": "Biachlár amháin, liosta ailléirgine amháin, gach teanga",
+      "text": "Lipéadaigh na hailléirginí uair amháin agus fanann siad ceart ag gach bord, i ngach teanga, speisialtachtaí an lae san áireamh. 14 lá saor in aisce, gan chárta.",
+      "buttonLabel": "Féach ar an mbiachlár digiteach",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Ceisteanna coitianta",
+      "items": [
+        {
+          "q": "An gcaithfidh mé ailléirginí a phriontáil ar an mbiachlár féin?",
+          "a": "Braitheann sé ar do thír. Éilíonn Rialachán 1169/2011 go mbeadh an t-eolas ar fáil do bhia neamhphacáistithe, agus fágann Airteagal 44 an modh faoi gach ballstát — éilíonn cuid acu scríbhinn, ceadaíonn cinn eile ó bhéal é le fógra scríofa infheicthe. Seiceáil an treoir náisiúnta."
+        },
+        {
+          "q": "Cé mhéad ailléirgin nach mór a dhearbhú?",
+          "a": "Ceithre cinn déag, liostaithe in Iarscríbhinn II de Rialachán (AE) Uimh. 1169/2011. Tá an liosta mar an gcéanna i ngach tír san AE."
+        },
+        {
+          "q": "An leor \"fiafraigh den fhreastalaí\"?",
+          "a": "I dtíortha a cheadaíonn eolas ó bhéal amháin, agus ansin féin le fógra scríofa soiléir agus foireann atá in ann freagra ceart a thabhairt. Ní leor riamh é leis féin."
+        },
+        {
+          "q": "Cad faoi na speisialtachtaí laethúla?",
+          "a": "Tá siad faoin riail chéanna. Sin an bhearna is coitianta, mar is annamh a shroicheann speisialtachtaí an fillteán ailléirginí sula dtosaíonn an seal."
+        },
+        {
+          "q": "An gá ailléirginí a aistriú do thurasóirí?",
+          "a": "Caithfidh aíonna a bheith in ann an t-eolas a thuiscint. Aistríonn biachlár digiteach an mhír agus tugann sé na lipéid ailléirgine leis, mar sin ní féidir leis an leagan Gearmáinise an rabhadh cnónna a chailleadh gan fhios."
+        }
+      ]
+    }
+  ]
+}

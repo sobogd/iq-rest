@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "Alergenai meniu: 14 ES medžiagų | IQ Rest",
+    "description": "14 alergenų, kuriuos ES restoranai privalo nurodyti, ko iš tiesų reikalauja Reglamentas 1169/2011 nefasuotam maistui ir kaip išlaikyti sąrašą teisingą."
+  },
+  "card": {
+    "title": "Alergenai meniu: keturiolika, įstatymas ir kaip nustoti tvarkyti tai ranka",
+    "excerpt": "Ko Reglamentas (ES) 1169/2011 reikalauja iš restoranų, 14 alergenų paprasta kalba ir kodėl būtent alergenų segtuvas už baro yra ta dalis, kuri sugenda."
+  },
+  "h1": "Alergenai restorano meniu: 14 medžiagų ir ko iš jūsų reikalauja įstatymas",
+  "intro": "Kiekvienas restoranas ES turi gebėti pasakyti svečiui, ar patiekale yra kuris nors iš 14 alergenų. Pati taisyklė trumpa. Sunku išlaikyti atsakymą teisingą po to, kai virėjas pakeitė tiekėją, pakeitė sultinį arba improvizavo dienos patiekalą — būtent ten popierinis segtuvas ir subyra.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Keturiolika alergenų"
+    },
+    {
+      "type": "p",
+      "text": "Reglamentas (ES) Nr. 1169/2011 juos išvardija II priede. Jie tokie patys visoje ES, o Jungtinėje Karalystėje atitinkamas sąrašas identiškas."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Glitimo turintys grūdai** — kviečiai, rugiai, miežiai, avižos, speltos, kamut ir jų hibridai",
+        "**Vėžiagyviai** — krevetės, krabai, omarai, norveginiai omarai",
+        "**Kiaušiniai**",
+        "**Žuvis**",
+        "**Žemės riešutai**",
+        "**Sojos pupelės**",
+        "**Pienas**, įskaitant laktozę",
+        "**Riešutai** — migdolas, lazdynas, graikinis, anakardis, pekanas, Brazilijos riešutas, pistacija, makadamija",
+        "**Salierai**, įskaitant gumbinį salierą ir salierų druską",
+        "**Garstyčios**, įskaitant sėklas ir miltelius",
+        "**Sezamo sėklos**",
+        "**Sieros dioksidas ir sulfitai** daugiau kaip 10 mg/kg arba 10 mg/litre",
+        "**Lubinai**",
+        "**Moliuskai** — midijos, širdinės, kalmarai, aštuonkojis, sraigės"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Šis tekstas yra praktinė santrauka, o ne teisinė konsultacija. Nacionalinės taisyklės pagal 44 straipsnį skiriasi tuo, kokia forma informacija turi būti pateikta, o kontrolę vykdo jūsų vietos institucija. Pasitikrinkite savo šalies gaires."
+    },
+    {
+      "type": "h2",
+      "text": "Ko reglamentas restorane iš tikrųjų reikalauja"
+    },
+    {
+      "type": "p",
+      "text": "Maistas, parduodamas nefasuotas — patiekalas lėkštėje — patenka į 44 straipsnį. Trumpai: informacija apie alergenus turi būti prieinama svečiui, o tikslų būdą nustato kiekviena valstybė narė. Vienos šalys reikalauja jos raštu meniu. Kitos leidžia žodinę, jei yra aiškiai matomas rašytinis pranešimas, kviečiantis svečią paklausti, ir jei paklaustas darbuotojas iš tikrųjų moka atsakyti."
+    },
+    {
+      "type": "p",
+      "text": "Praktinis skaitymas: vien „paklauskite padavėjo“ nepakanka. Turi būti ženklas, o už ženklo — patikimas tiesos šaltinis, kurį devyniolikmetis per antrą pamainą perskaito per dešimt sekundžių."
+    },
+    {
+      "type": "h2",
+      "text": "Kur informacija apie alergenus iš tikrųjų sugenda"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Gedimas",
+        "Kaip tai nutinka",
+        "Kaip tai atrodo salėje"
+      ],
+      "rows": [
+        [
+          "Receptas pasikeitė, segtuvas ne",
+          "Virėjas pereina prie sultinio kubelio su salierais",
+          "Segtuve parašyta be salierų. Jis klysta."
+        ],
+        [
+          "Dienos patiekalų jame nėra",
+          "Šiandienos žuvis taip ir negauna įrašo",
+          "Padavėjas spėlioja"
+        ],
+        [
+          "Egzistuoja dvi versijos",
+          "Viena kopija prie baro, kita virtuvėje",
+          "Jos prieštarauja viena kitai ir niekas nežino, kuri naujesnė"
+        ],
+        [
+          "Vertimų neatitikimas",
+          "Angliškame meniu nurodyti riešutai, vokiškame ne",
+          "Tik viena kalba"
+        ],
+        [
+          "Niekas jo neranda",
+          "Segtuvas guli po rezervacijų knyga",
+          "Svečias atsakymo laukia keturias minutes"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kodėl skaitmeninis meniu su tuo susitvarko geriau"
+    },
+    {
+      "type": "p",
+      "text": "Ne todėl, kad jis skaitmeninis, o todėl, kad alergeno duomenys prisegti prie pozicijos, o ne prie dokumento. Pakeičiate poziciją vieną kartą ir kiekviena vieta, kur ji rodoma, tampa teisinga: svečio telefonas, atspausdintas QR meniu, visos kalbos, dienos patiekalai ir bet koks sąrašas, kurį atspausdina virtuvė. Egzistuoja lygiai viena versija, ir ji yra dabartinė."
+    },
+    {
+      "type": "p",
+      "text": "Be to, tai leidžia svečiui susitvarkyti pačiam. Sunkia riešutų alergija sergantis žmogus gali pats filtruoti [skaitmeninį meniu](route:/digital-menu), užuot derėjęsis dėl pokalbio triukšmingoje salėje savo antrąja kalba — ir saugiau, ir jam gerokai mažiau varginanti."
+    },
+    {
+      "type": "h2",
+      "text": "Kaip užbaigti alergenus meniu neprarandant savaitės"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Pradėkite nuo recepto, o ne nuo patiekalo pavadinimo. „Cezario salotos“ slepia kiaušinį, žuvį (ančiuvį), pieną ir glitimą.",
+        "Pirmiausia padarykite padažus ir sultinius. Jie yra didžiausias paslėptų salierų, garstyčių, pieno ir glitimo šaltinis ir pasitaiko dešimtyse patiekalų.",
+        "Žymėkite kiekvieną poziciją pačioje meniu sistemoje, o ne atskirame dokumente. Vienas šaltinis, jokių neatitikimų.",
+        "Dienos patiekalus įrašykite į tą pačią sistemą tą akimirką, kai jie užrašomi ant lentos, o ne pamainos pabaigoje.",
+        "Pertikrinkite kaskart, kai keičiasi tiekėjas. Kitas to paties produkto prekės ženklas — kita sudėtis.",
+        "Mokykite salę, kur žiūrėti, o ne kaip įsiminti atsakymus. Atmintis ir yra gedimo vieta."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Rašykite „gali būti pėdsakų“ tik ten, kur tai iš tikrųjų tiesa. Ištisinis atsargumo ženklinimas per visą meniu paverčia informaciją bevertė, o tikrą alergiją turintys svečiai išmoksta jos nepaisyti — o tai blogiau nei nesakyti nieko."
+    },
+    {
+      "type": "h2",
+      "text": "Kryžminė tarša yra atskira problema"
+    },
+    {
+      "type": "p",
+      "text": "Teisingai nurodyti alergenus ir užkirsti kelią sąlyčiui mažoje virtuvėje — du skirtingi darbai. Ta pati gruzdintuvė, tos pačios žnyplės, ta pati pjaustymo lentelė perneša alergenus tarp patiekalų. Kalbėkite su svečiais tiesiai apie tai, ką jūsų virtuvė gali ir ko negali garantuoti: aiškus „negalime garantuoti aplinkos be riešutų“ vertas kur kas daugiau nei pažadas, kurio neištesėsite."
+    },
+    {
+      "type": "cta",
+      "heading": "Vienas meniu, vienas alergenų sąrašas, visos kalbos",
+      "text": "Pažymėkite alergenus vieną kartą ir jie liks teisingi prie kiekvieno staliuko, kiekviena kalba, įskaitant šiandienos dienos patiekalus. 14 dienų nemokamai, be kortelės.",
+      "buttonLabel": "Žiūrėti skaitmeninį meniu",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Dažnai užduodami klausimai",
+      "items": [
+        {
+          "q": "Ar privalau alergenus spausdinti pačiame meniu?",
+          "a": "Priklauso nuo šalies. Reglamentas 1169/2011 reikalauja, kad informacija būtų prieinama nefasuotam maistui, o 44 straipsnis būdą palieka kiekvienai valstybei narei — kai kur privaloma rašytinė forma, kitur leidžiama žodinė su matomu rašytiniu pranešimu. Pasitikrinkite nacionalines gaires."
+        },
+        {
+          "q": "Kiek alergenų reikia nurodyti?",
+          "a": "Keturiolika, išvardytų Reglamento (ES) Nr. 1169/2011 II priede. Sąrašas vienodas visose ES šalyse."
+        },
+        {
+          "q": "Ar pakanka „paklauskite padavėjo“?",
+          "a": "Tik šalyse, kuriose leidžiama žodinė informacija, ir tik esant aiškiai matomam rašytiniam pranešimui bei personalui, kuris iš tiesų gali pateikti teisingą atsakymą. Vien to niekada nepakanka."
+        },
+        {
+          "q": "O dienos patiekalai?",
+          "a": "Jiems taikoma ta pati taisyklė. Tai dažniausia spraga, nes dienos patiekalai retai patenka į alergenų segtuvą prieš pamainos pradžią."
+        },
+        {
+          "q": "Ar alergenus reikia versti turistams?",
+          "a": "Svečias turi gebėti informaciją suprasti. Skaitmeninis meniu išverčia poziciją ir pasiima kartu alergenų žymes, tad vokiška versija negali tyliai prarasti įspėjimo apie riešutus."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "Menüde alerjenler: AB'nin 14 maddesi | IQ Rest",
+    "description": "AB'deki restoranların bildirmek zorunda olduğu 14 alerjen, 1169/2011 sayılı tüzüğün ambalajsız gıdada gerçekte ne istediği ve listeyi doğru tutmanın yolu."
+  },
+  "card": {
+    "title": "Menüde alerjenler: on dördü, mevzuat ve bunu elle tutmayı bırakmanın yolu",
+    "excerpt": "(AB) 1169/2011 sayılı tüzüğün restoranlardan istediği şey, 14 alerjen sade bir dille ve bar arkasındaki alerjen klasörünün neden arızalanan parça olduğu."
+  },
+  "h1": "Restoran menüsünde alerjenler: 14 madde ve mevzuatın sizden istediği",
+  "intro": "AB'deki her restoran, bir yemeğin 14 alerjenden herhangi birini içerip içermediğini misafirine söyleyebilmek zorundadır. Kuralın kendisi kısadır. Zor olan, şef tedarikçi değiştirdikten, et suyunu değiştirdikten ya da bir günün yemeğini doğaçladıktan sonra cevabı doğru tutmaktır — kâğıt klasörün tam da dağıldığı yer burasıdır.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "On dört alerjen"
+    },
+    {
+      "type": "p",
+      "text": "(AB) 1169/2011 sayılı tüzük bunları Ek II'de sıralar. AB genelinde aynıdır ve Birleşik Krallık'ta karşılık gelen liste birebir aynıdır."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Gluten içeren tahıllar** — buğday, çavdar, arpa, yulaf, siyez, kamut ve melezleri",
+        "**Kabuklular** — karides, yengeç, ıstakoz, kerevit",
+        "**Yumurta**",
+        "**Balık**",
+        "**Yer fıstığı**",
+        "**Soya**",
+        "**Süt**, laktoz dâhil",
+        "**Sert kabuklu yemişler** — badem, fındık, ceviz, kaju, pekan, Brezilya cevizi, antep fıstığı, makademya",
+        "**Kereviz**, kök kereviz ve kereviz tuzu dâhil",
+        "**Hardal**, hardal tohumu ve tozu dâhil",
+        "**Susam tohumu**",
+        "**Kükürt dioksit ve sülfitler**, 10 mg/kg veya 10 mg/litre üzerinde",
+        "**Acı bakla (lupin)**",
+        "**Yumuşakçalar** — midye, akivades, kalamar, ahtapot, salyangoz"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Bu yazı pratik bir özettir, hukuki tavsiye değildir. 44. madde uyarınca ulusal kurallar bilginin nasıl verileceği konusunda farklılaşır ve denetim yerel otoritenizdedir. Ülkenizin kılavuzuna bakın."
+    },
+    {
+      "type": "h2",
+      "text": "Tüzük bir restoranda gerçekte ne istiyor"
+    },
+    {
+      "type": "p",
+      "text": "Ambalajsız sattığınız gıda — tabakta sunulan bir yemek — 44. madde kapsamındadır. Kısaca: alerjen bilgisi misafir için erişilebilir olmalıdır ve tam yöntemi her üye devlet belirler. Bazı ülkeler menüde yazılı olmasını ister. Bazıları sözlü verilmesine izin verir; yeter ki misafire sormasını söyleyen açıkça görünür yazılı bir uyarı bulunsun ve sorulan çalışan gerçekten yanıt verebilsin."
+    },
+    {
+      "type": "p",
+      "text": "Pratik okuma: tek başına \"garsona sorun\" yetmez. Bir tabela olmalı ve tabelanın arkasında, ikinci vardiyasındaki 19 yaşındaki bir çalışanın on saniyede okuyabileceği güvenilir bir doğru kaynağı bulunmalı."
+    },
+    {
+      "type": "h2",
+      "text": "Alerjen bilgisi gerçekte nerede bozuluyor"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Arıza",
+        "Nasıl oluyor",
+        "Salonda nasıl görünüyor"
+      ],
+      "rows": [
+        [
+          "Tarif değişti, klasör değişmedi",
+          "Şef kereviz içeren bir bulyona geçiyor",
+          "Klasör kereviz yok diyor. Yanlış."
+        ],
+        [
+          "Günün yemekleri içinde yok",
+          "Bu akşamki balık hiç kaydedilmiyor",
+          "Garson tahmin ediyor"
+        ],
+        [
+          "İki sürüm birden var",
+          "Bir kopya barda, bir kopya mutfakta",
+          "Birbiriyle çelişiyor ve hangisinin yeni olduğunu kimse bilmiyor"
+        ],
+        [
+          "Çeviri kayması",
+          "İngilizce menüde sert kabuklular yazıyor, Almancada yazmıyor",
+          "Yalnızca tek dilde"
+        ],
+        [
+          "Kimse bulamıyor",
+          "Klasör rezervasyon defterinin altında",
+          "Misafir bir yanıt için dört dakika bekliyor"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Dijital menü bunu neden daha iyi yönetiyor"
+    },
+    {
+      "type": "p",
+      "text": "Dijital olduğu için değil, alerjen verisi bir belgeye değil ürüne bağlı olduğu için. Ürünü bir kez değiştirirsiniz ve göründüğü her yer doğru olur: misafirin telefonu, basılı QR menü, tüm diller, günün yemekleri ve mutfağın bastığı her liste. Tam olarak tek bir sürüm vardır ve o da güncel olanıdır."
+    },
+    {
+      "type": "p",
+      "text": "Ayrıca misafirin kendi başına halletmesini sağlar. Ağır fındık alerjisi olan biri, gürültülü bir salonda ikinci dilinde konuşma pazarlığı yapmak yerine [dijital menüyü](route:/digital-menu) kendisi filtreleyebilir; hem daha güvenli hem de onun için çok daha az yıpratıcı."
+    },
+    {
+      "type": "h2",
+      "text": "Bir hafta kaybetmeden menüyü alerjen açısından tamamlamak"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Yemeğin adından değil, tariften başlayın. \"Sezar salata\" yumurtayı, balığı (hamsi), sütü ve gluteni gizler.",
+        "Önce sosları ve et sularını yapın. Gizli kereviz, hardal, süt ve glutenin en büyük kaynağıdır ve onlarca yemekte tekrar eder.",
+        "Her ürünü ayrı bir belgede değil, menü sisteminin kendisinde etiketleyin. Tek kaynak, kayma yok.",
+        "Günün yemeklerini tahtaya yazıldığı anda aynı sisteme ekleyin, servis sonunda değil.",
+        "Tedarikçi her değiştiğinde yeniden kontrol edin. Aynı ürünün farklı markası farklı bir içerik listesidir.",
+        "Salonu cevapları ezberlemeye değil, nereye bakacağına göre eğitin. Hafıza, arızanın çıktığı yerdir."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "\"Eser miktarda içerebilir\" ifadesini yalnızca gerçekten doğru olduğu yerde yazın. Tüm menüye yayılan ihtiyati etiketleme bilgiyi işe yaramaz kılar ve gerçek alerjisi olan misafirler bunu görmezden gelmeyi öğrenir; bu da hiçbir şey söylememekten kötüdür."
+    },
+    {
+      "type": "h2",
+      "text": "Çapraz bulaşma ayrı bir sorundur"
+    },
+    {
+      "type": "p",
+      "text": "Alerjenleri doğru bildirmek ile küçük bir mutfakta teması engellemek iki ayrı iştir. Aynı fritöz, aynı maşa, aynı kesme tahtası alerjenleri yemekler arasında taşır. Mutfağınızın neyi garanti edip edemediği konusunda misafirlere açık olun: net bir \"fındıksız bir ortam garanti edemeyiz\", tutamayacağınız bir sözden çok daha iyidir."
+    },
+    {
+      "type": "cta",
+      "heading": "Tek menü, tek alerjen listesi, her dil",
+      "text": "Alerjenleri bir kez etiketleyin; her masada, her dilde, bugünün günün yemekleri dâhil doğru kalsınlar. 14 gün ücretsiz, kartsız.",
+      "buttonLabel": "Dijital menüyü görün",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Sık sorulan sorular",
+      "items": [
+        {
+          "q": "Alerjenleri menünün üzerine basmak zorunda mıyım?",
+          "a": "Ülkenize bağlı. 1169/2011 sayılı tüzük ambalajsız gıdada bilginin erişilebilir olmasını ister ve 44. madde yöntemi üye devletlere bırakır — kimi yazılı zorunlu tutar, kimi görünür yazılı uyarıyla sözlü bilgiye izin verir. Ulusal kılavuzunuza bakın."
+        },
+        {
+          "q": "Kaç alerjen bildirilmeli?",
+          "a": "On dört; (AB) 1169/2011 sayılı tüzüğün Ek II'sinde sıralanır. Liste tüm AB ülkelerinde aynıdır."
+        },
+        {
+          "q": "\"Garsonunuza sorun\" yeterli mi?",
+          "a": "Yalnızca sözlü bilgiye izin veren ülkelerde ve yalnızca açıkça görünür yazılı bir uyarıyla ve doğru yanıtı gerçekten verebilecek personelle. Tek başına asla yeterli değildir."
+        },
+        {
+          "q": "Peki günün yemekleri?",
+          "a": "Aynı kural kapsamındadır. En sık rastlanan boşluk budur, çünkü günün yemekleri servis başlamadan önce nadiren alerjen klasörüne girer."
+        },
+        {
+          "q": "Alerjenlerin turistler için çevrilmesi gerekir mi?",
+          "a": "Misafirin bilgiyi anlayabilmesi gerekir. Dijital menü ürünü çevirir ve alerjen etiketlerini de beraberinde taşır; böylece Almanca sürüm fındık uyarısını sessizce kaybedemez."
+        }
+      ]
+    }
+  ]
+}

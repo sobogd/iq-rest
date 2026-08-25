@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "title": "Allergens on the Menu: The 14 EU Rules Explained | IQ Rest",
+    "description": "The 14 allergens EU restaurants must declare, what Regulation 1169/2011 actually requires for non-prepacked food, and how to keep the list accurate."
+  },
+  "card": {
+    "title": "Allergens on a restaurant menu: the 14, the law, and how to stop maintaining it by hand",
+    "excerpt": "What EU Regulation 1169/2011 requires of restaurants, the 14 allergens in plain language, and why the allergen folder behind the bar is the part that fails."
+  },
+  "h1": "Allergens on a restaurant menu: the 14 substances and what the law asks of you",
+  "intro": "Every restaurant in the EU has to be able to tell a guest whether a dish contains any of 14 allergens. The rule itself is short. What makes it hard is keeping the answer true after the chef swaps a supplier, changes a stock, or improvises a special — which is exactly where the paper allergen folder falls apart.",
+  "blocks": [
+    { "type": "h2", "text": "The 14 allergens" },
+    {
+      "type": "p",
+      "text": "Regulation (EU) No 1169/2011 lists them in Annex II. They are the same across the EU, and in the UK the equivalent list is identical."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Cereals containing gluten** — wheat, rye, barley, oats, spelt, kamut and their hybrids",
+        "**Crustaceans** — prawns, crab, lobster, langoustine",
+        "**Eggs**",
+        "**Fish**",
+        "**Peanuts**",
+        "**Soybeans**",
+        "**Milk**, including lactose",
+        "**Nuts** — almond, hazelnut, walnut, cashew, pecan, Brazil, pistachio, macadamia",
+        "**Celery**, including celeriac and celery salt",
+        "**Mustard**, including mustard seed and powder",
+        "**Sesame seeds**",
+        "**Sulphur dioxide and sulphites** above 10 mg/kg or 10 mg/litre",
+        "**Lupin**",
+        "**Molluscs** — mussels, clams, squid, octopus, snails"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "This article is a practical summary, not legal advice. National rules under Article 44 differ on how the information must be given, and enforcement is handled by your local authority. Check your country's guidance."
+    },
+    { "type": "h2", "text": "What the regulation actually requires in a restaurant" },
+    {
+      "type": "p",
+      "text": "Food you sell unpackaged — a plated dish — falls under Article 44. In short: the allergen information must be available to the guest, and each member state decides the exact means. Some countries require it in writing on the menu. Others allow it to be given verbally, provided there's a clearly visible written notice telling guests to ask, and provided the staff member asked can actually answer."
+    },
+    {
+      "type": "p",
+      "text": "The practical reading: \"ask the waiter\" alone is not enough. There has to be a signpost, and behind the signpost there has to be a reliable source of truth that a 19-year-old on their second shift can read in ten seconds."
+    },
+    { "type": "h2", "text": "Where allergen information actually goes wrong" },
+    {
+      "type": "table",
+      "headers": ["Failure", "How it happens", "What it looks like on the floor"],
+      "rows": [
+        ["Recipe changed, folder didn't", "Chef switches to a stock cube containing celery", "The folder says no celery. It's wrong."],
+        ["Specials aren't in it", "Tonight's fish dish never gets an entry", "Waiter guesses"],
+        ["Two versions exist", "A copy at the bar, a copy in the kitchen", "They disagree and nobody knows which is newer"],
+        ["Translation drift", "The English menu says nuts, the German one doesn't", "Only in one language"],
+        ["Nobody can find it", "Folder is under the reservation book", "Guest waits four minutes for an answer"]
+      ]
+    },
+    { "type": "h2", "text": "Why a digital menu handles this better" },
+    {
+      "type": "p",
+      "text": "Not because it's digital, but because the allergen data is attached to the item instead of to a document. Change the item once and every place it appears is correct: the guest's phone, the printed QR menu, all languages, the specials, and any list the kitchen prints. There is exactly one version, and it's the current one."
+    },
+    {
+      "type": "p",
+      "text": "It also lets the guest self-serve. Someone with a severe nut allergy can filter the [digital menu](route:/digital-menu) themselves rather than negotiate a conversation across a noisy room in their second language — which is both safer and considerably less stressful for them."
+    },
+    { "type": "h2", "text": "Getting your menu allergen-complete without losing a week" },
+    {
+      "type": "steps",
+      "items": [
+        "Start from the recipe, not the dish name. \"Caesar salad\" hides eggs, fish (anchovy), milk and gluten.",
+        "Do the sauces and stocks first. They're the biggest source of hidden celery, mustard, milk and gluten, and they appear in dozens of dishes.",
+        "Tag every item in the menu system rather than in a separate document. One source, no drift.",
+        "Add specials to the same system the moment they're written on the board, not at the end of service.",
+        "Re-check whenever a supplier changes. A different brand of the same product is a different ingredient list.",
+        "Train the floor on where to look, not on memorising the answers. Memory is the failure point."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Write \"may contain traces\" only where it's genuinely true. Blanket precautionary labelling across the whole menu makes the information useless, and guests with real allergies learn to ignore it — which is worse than saying nothing."
+    },
+    { "type": "h2", "text": "Cross-contamination is a separate problem" },
+    {
+      "type": "p",
+      "text": "Declaring allergens correctly and preventing contact in a small kitchen are two different jobs. The same fryer, the same tongs, the same chopping board all move allergens between dishes. Be straight with guests about what your kitchen can and can't guarantee — a clear \"we can't guarantee a nut-free environment\" is far better than a promise you can't keep."
+    },
+    {
+      "type": "cta",
+      "heading": "One menu, one allergen list, every language",
+      "text": "Tag allergens once and they stay correct on every table, in every language, including tonight's specials. 14 days free, no card required.",
+      "buttonLabel": "See the digital menu",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently asked questions",
+      "items": [
+        {
+          "q": "Do I have to print allergens on the menu itself?",
+          "a": "It depends on your country. Regulation 1169/2011 requires the information to be available for non-prepacked food, and Article 44 leaves the means to each member state — some mandate writing, others allow it verbally with a visible written notice. Check your national guidance."
+        },
+        {
+          "q": "How many allergens must be declared?",
+          "a": "Fourteen, listed in Annex II of Regulation (EU) No 1169/2011. The list is the same in every EU country."
+        },
+        {
+          "q": "Is \"ask your waiter\" enough?",
+          "a": "Only in countries that permit verbal information, and only with a clearly visible written notice plus staff who can actually give a correct answer. It is never enough on its own."
+        },
+        {
+          "q": "What about daily specials?",
+          "a": "They're covered by the same rule. This is the most common gap, because specials rarely make it into the allergen folder before service starts."
+        },
+        {
+          "q": "Do allergens need translating for tourists?",
+          "a": "Guests need to be able to understand the information. A digital menu translates the item and carries the allergen tags with it, so the German version can't quietly lose the nut warning."
+        }
+      ]
+    }
+  ]
+}

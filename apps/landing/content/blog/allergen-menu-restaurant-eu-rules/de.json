@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "Allergene auf der Karte: die 14 EU-Stoffe | IQ Rest",
+    "description": "Die 14 Allergene, die EU-Gastronomen deklarieren müssen, was die LMIV 1169/2011 für lose Ware wirklich verlangt und wie die Liste korrekt bleibt."
+  },
+  "card": {
+    "title": "Allergene auf der Speisekarte: die 14, das Gesetz und wie Sie es nicht mehr von Hand pflegen",
+    "excerpt": "Was die Verordnung (EU) 1169/2011 von Restaurants verlangt, die 14 Allergene in klarer Sprache — und warum der Allergenordner hinter der Theke der Teil ist, der versagt."
+  },
+  "h1": "Allergene auf der Speisekarte: die 14 Stoffe und was das Gesetz von Ihnen verlangt",
+  "intro": "Jedes Restaurant in der EU muss einem Gast sagen können, ob ein Gericht eines von 14 Allergenen enthält. Die Regel selbst ist kurz. Schwierig ist, die Antwort wahr zu halten, nachdem der Koch den Lieferanten gewechselt, den Fond getauscht oder ein Tagesgericht improvisiert hat — genau daran scheitert der Papierordner.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Die 14 Allergene"
+    },
+    {
+      "type": "p",
+      "text": "Die Verordnung (EU) Nr. 1169/2011 listet sie in Anhang II. Sie sind EU-weit identisch, und im Vereinigten Königreich ist die entsprechende Liste dieselbe."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Glutenhaltiges Getreide** — Weizen, Roggen, Gerste, Hafer, Dinkel, Kamut und deren Hybridstämme",
+        "**Krebstiere** — Garnelen, Krabben, Hummer, Kaisergranat",
+        "**Eier**",
+        "**Fisch**",
+        "**Erdnüsse**",
+        "**Sojabohnen**",
+        "**Milch**, einschließlich Laktose",
+        "**Schalenfrüchte** — Mandel, Haselnuss, Walnuss, Cashew, Pekannuss, Paranuss, Pistazie, Macadamia",
+        "**Sellerie**, einschließlich Knollensellerie und Selleriesalz",
+        "**Senf**, einschließlich Senfkörner und Senfpulver",
+        "**Sesamsamen**",
+        "**Schwefeldioxid und Sulfite** über 10 mg/kg oder 10 mg/Liter",
+        "**Lupinen**",
+        "**Weichtiere** — Muscheln, Venusmuscheln, Tintenfisch, Oktopus, Schnecken"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Dieser Artikel ist eine praktische Zusammenfassung, keine Rechtsberatung. Die nationalen Regeln nach Artikel 44 unterscheiden sich darin, wie die Information gegeben werden muss, und die Kontrolle liegt bei Ihrer örtlichen Behörde. Prüfen Sie die Vorgaben Ihres Landes."
+    },
+    {
+      "type": "h2",
+      "text": "Was die Verordnung im Restaurant tatsächlich verlangt"
+    },
+    {
+      "type": "p",
+      "text": "Unverpackt verkaufte Speisen — ein angerichteter Teller — fallen unter Artikel 44. Kurz gesagt: Die Allergeninformation muss für den Gast verfügbar sein, und jeder Mitgliedstaat legt das genaue Mittel fest. Manche Länder verlangen die schriftliche Angabe auf der Karte. Andere erlauben die mündliche Auskunft, sofern ein deutlich sichtbarer schriftlicher Hinweis auf die Nachfragemöglichkeit besteht und die gefragte Person tatsächlich antworten kann."
+    },
+    {
+      "type": "p",
+      "text": "Praktisch gelesen: \"Fragen Sie das Personal\" allein reicht nicht. Es braucht einen Hinweis, und hinter dem Hinweis eine verlässliche Quelle, die eine 19-jährige Aushilfe in der zweiten Schicht in zehn Sekunden lesen kann."
+    },
+    {
+      "type": "h2",
+      "text": "Wo Allergeninformationen wirklich schiefgehen"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Fehler",
+        "Wie es passiert",
+        "Wie es im Service aussieht"
+      ],
+      "rows": [
+        [
+          "Rezept geändert, Ordner nicht",
+          "Der Koch wechselt zu einem Brühwürfel mit Sellerie",
+          "Im Ordner steht kein Sellerie. Er ist falsch."
+        ],
+        [
+          "Tagesgerichte fehlen",
+          "Der heutige Fisch bekommt nie einen Eintrag",
+          "Der Kellner rät"
+        ],
+        [
+          "Es gibt zwei Fassungen",
+          "Eine Kopie an der Theke, eine in der Küche",
+          "Sie widersprechen sich, und keiner weiß, welche neuer ist"
+        ],
+        [
+          "Übersetzungsdrift",
+          "Die englische Karte nennt Nüsse, die deutsche nicht",
+          "Nur in einer Sprache"
+        ],
+        [
+          "Niemand findet ihn",
+          "Der Ordner liegt unter dem Reservierungsbuch",
+          "Der Gast wartet vier Minuten auf eine Antwort"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Warum eine digitale Karte das besser löst"
+    },
+    {
+      "type": "p",
+      "text": "Nicht weil sie digital ist, sondern weil die Allergendaten am Artikel hängen statt an einem Dokument. Sie ändern den Artikel einmal, und jede Stelle, an der er erscheint, stimmt: das Handy des Gastes, die gedruckte QR-Karte, alle Sprachen, die Tagesgerichte und jede Liste, die die Küche ausdruckt. Es gibt genau eine Version, und das ist die aktuelle."
+    },
+    {
+      "type": "p",
+      "text": "Außerdem können Gäste sich selbst behelfen. Jemand mit schwerer Nussallergie kann die [digitale Speisekarte](route:/digital-menu) selbst filtern, statt in einem lauten Raum in seiner Zweitsprache ein Gespräch auszuhandeln — sicherer und deutlich weniger belastend."
+    },
+    {
+      "type": "h2",
+      "text": "So bekommen Sie Ihre Karte allergenvollständig, ohne eine Woche zu verlieren"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Beginnen Sie beim Rezept, nicht beim Gerichtsnamen. \"Caesar Salad\" versteckt Ei, Fisch (Sardelle), Milch und Gluten.",
+        "Machen Sie zuerst Saucen und Fonds. Sie sind die größte Quelle für verstecktes Sellerie, Senf, Milch und Gluten und tauchen in Dutzenden Gerichten auf.",
+        "Markieren Sie jeden Artikel im Kartensystem, nicht in einem separaten Dokument. Eine Quelle, kein Auseinanderlaufen.",
+        "Tragen Sie Tagesgerichte in dasselbe System ein, sobald sie auf der Tafel stehen, nicht nach Serviceschluss.",
+        "Prüfen Sie erneut, wenn ein Lieferant wechselt. Eine andere Marke desselben Produkts ist eine andere Zutatenliste.",
+        "Schulen Sie das Personal darauf, wo es nachschaut, nicht darauf, Antworten auswendig zu können. Das Gedächtnis ist die Fehlerstelle."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Schreiben Sie \"kann Spuren enthalten\" nur dort, wo es wirklich stimmt. Pauschale Vorsorgekennzeichnung über die ganze Karte macht die Information nutzlos, und Gäste mit echten Allergien lernen, sie zu ignorieren — schlimmer, als gar nichts zu sagen."
+    },
+    {
+      "type": "h2",
+      "text": "Kreuzkontamination ist ein eigenes Problem"
+    },
+    {
+      "type": "p",
+      "text": "Allergene korrekt zu deklarieren und Kontakt in einer kleinen Küche zu verhindern sind zwei verschiedene Aufgaben. Dieselbe Fritteuse, dieselbe Zange, dasselbe Brett tragen Allergene von Gericht zu Gericht. Sagen Sie Gästen klar, was Ihre Küche garantieren kann und was nicht — ein deutliches \"wir können keine nussfreie Umgebung garantieren\" ist weit besser als ein Versprechen, das Sie nicht halten können."
+    },
+    {
+      "type": "cta",
+      "heading": "Eine Karte, eine Allergenliste, jede Sprache",
+      "text": "Allergene einmal markieren, und sie bleiben an jedem Tisch, in jeder Sprache und auch bei den heutigen Tagesgerichten korrekt. 14 Tage kostenlos, ohne Karte.",
+      "buttonLabel": "Digitale Speisekarte ansehen",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Häufige Fragen",
+      "items": [
+        {
+          "q": "Muss ich Allergene auf die Karte drucken?",
+          "a": "Das hängt von Ihrem Land ab. Die Verordnung 1169/2011 verlangt für lose Ware, dass die Information verfügbar ist, und Artikel 44 überlässt das Mittel den Mitgliedstaaten — manche schreiben Schriftform vor, andere lassen mündliche Auskunft mit sichtbarem schriftlichem Hinweis zu. Prüfen Sie Ihre nationalen Vorgaben."
+        },
+        {
+          "q": "Wie viele Allergene müssen deklariert werden?",
+          "a": "Vierzehn, aufgeführt in Anhang II der Verordnung (EU) Nr. 1169/2011. Die Liste ist in jedem EU-Land identisch."
+        },
+        {
+          "q": "Reicht \"fragen Sie Ihre Bedienung\"?",
+          "a": "Nur in Ländern, die mündliche Auskunft erlauben, und nur mit deutlich sichtbarem schriftlichem Hinweis sowie Personal, das wirklich richtig antworten kann. Allein reicht es nie."
+        },
+        {
+          "q": "Und die Tagesgerichte?",
+          "a": "Für sie gilt dieselbe Regel. Das ist die häufigste Lücke, weil Tagesgerichte selten vor Servicebeginn in den Allergenordner gelangen."
+        },
+        {
+          "q": "Müssen Allergene für Touristen übersetzt werden?",
+          "a": "Gäste müssen die Information verstehen können. Eine digitale Karte übersetzt den Artikel und nimmt die Allergenkennzeichnung mit, sodass die deutsche Fassung den Nusshinweis nicht stillschweigend verlieren kann."
+        }
+      ]
+    }
+  ]
+}

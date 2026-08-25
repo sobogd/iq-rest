@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "Allergeenit listalla: EU:n 14 ainetta | IQ Rest",
+    "description": "Ne 14 allergeenia, jotka EU-ravintoloiden on ilmoitettava, mitä asetus 1169/2011 oikeasti vaatii pakkaamattomalta ruoalta ja miten pidät listan totena."
+  },
+  "card": {
+    "title": "Allergeenit ruokalistalla: ne neljätoista, laki ja miten lopetat käsin ylläpidon",
+    "excerpt": "Mitä asetus (EU) 1169/2011 vaatii ravintoloilta, 14 allergeenia selkokielellä ja miksi juuri baaritiskin takana oleva allergeenikansio on se osa, joka pettää."
+  },
+  "h1": "Allergeenit ravintolan ruokalistalla: 14 ainetta ja mitä laki sinulta pyytää",
+  "intro": "Jokaisen EU-ravintolan on pystyttävä kertomaan asiakkaalle, sisältääkö annos jonkin 14 allergeenista. Sääntö itsessään on lyhyt. Vaikeaa on pitää vastaus totena sen jälkeen, kun kokki vaihtaa toimittajaa, vaihtaa lientä tai improvisoi päivän annoksen – juuri siinä paperikansio hajoaa.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Ne neljätoista allergeenia"
+    },
+    {
+      "type": "p",
+      "text": "Asetus (EU) N:o 1169/2011 luettelee ne liitteessä II. Ne ovat samat koko EU:ssa, ja Britanniassa vastaava luettelo on identtinen."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Gluteenia sisältävät viljat** – vehnä, ruis, ohra, kaura, spelt, kamut ja niiden risteytykset",
+        "**Äyriäiset** – katkaravut, taskurapu, hummeri, keisarihummeri",
+        "**Kananmunat**",
+        "**Kala**",
+        "**Maapähkinät**",
+        "**Soijapavut**",
+        "**Maito**, mukaan lukien laktoosi",
+        "**Pähkinät** – manteli, hasselpähkinä, saksanpähkinä, cashew, pekaani, parapähkinä, pistaasi, macadamia",
+        "**Selleri**, mukaan lukien mukulaselleri ja sellerisuola",
+        "**Sinappi**, mukaan lukien siemenet ja sinappijauhe",
+        "**Seesaminsiemenet**",
+        "**Rikkidioksidi ja sulfiitit** yli 10 mg/kg tai 10 mg/litra",
+        "**Lupiini**",
+        "**Nilviäiset** – simpukat, sydänsimpukat, kalmari, meritursas, etanat"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Tämä artikkeli on käytännön tiivistelmä, ei oikeudellinen neuvo. Kansalliset säännöt 44 artiklan nojalla eroavat siinä, miten tieto on annettava, ja valvonta kuuluu paikalliselle viranomaisellesi. Tarkista oman maasi ohjeistus."
+    },
+    {
+      "type": "h2",
+      "text": "Mitä asetus tosiasiassa vaatii ravintolassa"
+    },
+    {
+      "type": "p",
+      "text": "Pakkaamattomana myyty ruoka – lautaselle annosteltu annos – kuuluu 44 artiklan piiriin. Lyhyesti: allergeenitiedon on oltava asiakkaan saatavilla, ja kukin jäsenvaltio päättää tarkan tavan. Jotkin maat vaativat sen kirjallisena listalla. Toiset sallivat suullisen tiedon, kunhan näkyvillä on kirjallinen ilmoitus, joka kehottaa kysymään, ja kunhan kysytty henkilö osaa oikeasti vastata."
+    },
+    {
+      "type": "p",
+      "text": "Käytännön tulkinta: pelkkä \"kysy tarjoilijalta\" ei riitä. Tarvitaan kyltti, ja kyltin takana luotettava tietolähde, jonka 19-vuotias toisessa vuorossaan lukee kymmenessä sekunnissa."
+    },
+    {
+      "type": "h2",
+      "text": "Missä allergeenitieto oikeasti menee pieleen"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Vika",
+        "Miten se syntyy",
+        "Miltä se näyttää salissa"
+      ],
+      "rows": [
+        [
+          "Resepti vaihtui, kansio ei",
+          "Kokki siirtyy liemikuutioon, jossa on selleriä",
+          "Kansio sanoo ei selleriä. Se on väärässä."
+        ],
+        [
+          "Päivän annokset puuttuvat",
+          "Illan kala ei koskaan päädy riviksi",
+          "Tarjoilija arvaa"
+        ],
+        [
+          "Versioita on kaksi",
+          "Yksi kopio baarissa, toinen keittiössä",
+          "Ne ovat ristiriidassa eikä kukaan tiedä kumpi on uudempi"
+        ],
+        [
+          "Käännösten eriytyminen",
+          "Englanninkielinen lista mainitsee pähkinät, saksankielinen ei",
+          "Vain yhdellä kielellä"
+        ],
+        [
+          "Kukaan ei löydä sitä",
+          "Kansio on varauskirjan alla",
+          "Asiakas odottaa vastausta neljä minuuttia"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Miksi digitaalinen lista hoitaa tämän paremmin"
+    },
+    {
+      "type": "p",
+      "text": "Ei siksi että se on digitaalinen, vaan siksi että allergeenitieto on kiinni annoksessa eikä dokumentissa. Muutat annosta kerran ja jokainen paikka, jossa se näkyy, on oikein: asiakkaan puhelin, painettu QR-lista, kaikki kielet, päivän annokset ja mikä tahansa keittiön tulostama lista. Versioita on tasan yksi, ja se on nykyinen."
+    },
+    {
+      "type": "p",
+      "text": "Se antaa asiakkaan myös hoitaa asian itse. Vakavasti pähkinäallergisen ei tarvitse neuvotella keskustelua meluisassa salissa toisella kielellään, vaan hän voi suodattaa [digitaalisen listan](route:/digital-menu) itse – turvallisempaa ja huomattavasti vähemmän kuormittavaa."
+    },
+    {
+      "type": "h2",
+      "text": "Näin saat listan allergeenien osalta valmiiksi menettämättä viikkoa"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Aloita reseptistä, älä annoksen nimestä. \"Caesarsalaatti\" kätkee kananmunan, kalan (anjovis), maidon ja gluteenin.",
+        "Tee kastikkeet ja liemet ensin. Ne ovat suurin piilevän sellerin, sinapin, maidon ja gluteenin lähde ja toistuvat kymmenissä annoksissa.",
+        "Merkitse jokainen rivi listajärjestelmään itseensä, ei erilliseen dokumenttiin. Yksi lähde, ei eriytymistä.",
+        "Lisää päivän annokset samaan järjestelmään heti kun ne kirjoitetaan taululle, ei vuoron päätteeksi.",
+        "Tarkista uudelleen aina kun toimittaja vaihtuu. Saman tuotteen eri merkki on eri ainesosaluettelo.",
+        "Kouluta sali siihen, mistä katsotaan, ei siihen miten vastaukset muistetaan. Muisti on vikakohta."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Kirjoita \"voi sisältää jäämiä\" vain siihen, missä se aidosti pitää paikkansa. Koko listan kattava varotoimimerkintä tekee tiedosta hyödytöntä, ja aidosti allergiset asiakkaat oppivat sivuuttamaan sen – mikä on huonompaa kuin olla sanomatta mitään."
+    },
+    {
+      "type": "h2",
+      "text": "Ristikontaminaatio on oma ongelmansa"
+    },
+    {
+      "type": "p",
+      "text": "Allergeenien oikea ilmoittaminen ja kosketuksen estäminen pienessä keittiössä ovat kaksi eri työtä. Sama friteerauskeitin, samat pihdit, sama leikkuulauta siirtävät allergeeneja annoksesta toiseen. Ole asiakkaille suora siitä, mitä keittiösi voi ja ei voi taata: selkeä \"emme voi taata pähkinätöntä ympäristöä\" on paljon parempi kuin lupaus, jota et pysty pitämään."
+    },
+    {
+      "type": "cta",
+      "heading": "Yksi lista, yksi allergeeniluettelo, kaikki kielet",
+      "text": "Merkitse allergeenit kerran, ja ne pysyvät oikein jokaisessa pöydässä, jokaisella kielellä, myös tämän illan päivän annoksissa. 14 päivää ilmaiseksi, ilman korttia.",
+      "buttonLabel": "Katso digitaalinen ruokalista",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Usein kysytyt kysymykset",
+      "items": [
+        {
+          "q": "Pitääkö allergeenit painaa itse listalle?",
+          "a": "Se riippuu maastasi. Asetus 1169/2011 vaatii, että tieto on saatavilla pakkaamattomasta ruoasta, ja 44 artikla jättää tavan kullekin jäsenvaltiolle – osa vaatii kirjallisen, osa sallii suullisen näkyvän kirjallisen ilmoituksen kanssa. Tarkista kansallinen ohjeistus."
+        },
+        {
+          "q": "Kuinka monta allergeenia on ilmoitettava?",
+          "a": "Neljätoista, lueteltuna asetuksen (EU) N:o 1169/2011 liitteessä II. Luettelo on sama jokaisessa EU-maassa."
+        },
+        {
+          "q": "Riittääkö \"kysy tarjoilijalta\"?",
+          "a": "Vain maissa, jotka sallivat suullisen tiedon, ja vain näkyvän kirjallisen ilmoituksen sekä sellaisen henkilökunnan kanssa, joka osaa oikeasti antaa oikean vastauksen. Yksinään se ei riitä koskaan."
+        },
+        {
+          "q": "Entä päivän annokset?",
+          "a": "Niitä koskee sama sääntö. Tämä on yleisin aukko, koska päivän annokset päätyvät harvoin allergeenikansioon ennen vuoron alkua."
+        },
+        {
+          "q": "Pitääkö allergeenit kääntää turisteille?",
+          "a": "Asiakkaan on pystyttävä ymmärtämään tieto. Digitaalinen lista kääntää annoksen ja vie allergeenimerkinnät mukanaan, joten saksankielinen versio ei voi hiljaisesti kadottaa pähkinävaroitusta."
+        }
+      ]
+    }
+  ]
+}

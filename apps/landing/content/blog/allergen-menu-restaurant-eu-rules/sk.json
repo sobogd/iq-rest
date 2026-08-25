@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "Alergény v menu: 14 látok podľa EÚ | IQ Rest",
+    "description": "14 alergénov, ktoré musia reštaurácie v EÚ uvádzať, čo nariadenie 1169/2011 skutočne vyžaduje pri nebalených pokrmoch a ako udržať zoznam pravdivý."
+  },
+  "card": {
+    "title": "Alergény v jedálnom lístku: štrnásť, zákon a ako to prestať viesť ručne",
+    "excerpt": "Čo nariadenie (EÚ) 1169/2011 vyžaduje od reštaurácií, 14 alergénov zrozumiteľne a prečo je práve šanón s alergénmi za barom tou časťou, ktorá zlyháva."
+  },
+  "h1": "Alergény v jedálnom lístku reštaurácie: 14 látok a čo od vás chce zákon",
+  "intro": "Každá reštaurácia v EÚ musí vedieť hosťovi povedať, či pokrm obsahuje niektorý zo 14 alergénov. Samotné pravidlo je krátke. Ťažké je udržať odpoveď pravdivou potom, ako kuchár vymení dodávateľa, vymení vývar alebo improvizuje dennú ponuku — presne tam sa papierový šanón rozpadá.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Štrnásť alergénov"
+    },
+    {
+      "type": "p",
+      "text": "Nariadenie (EÚ) č. 1169/2011 ich vymenúva v prílohe II. Sú rovnaké v celej EÚ a v Spojenom kráľovstve je zodpovedajúci zoznam totožný."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Obilniny obsahujúce lepok** — pšenica, raž, jačmeň, ovos, špalda, kamut a ich hybridy",
+        "**Kôrovce** — krevety, krab, homár, langustína",
+        "**Vajcia**",
+        "**Ryby**",
+        "**Arašidy**",
+        "**Sója**",
+        "**Mlieko**, vrátane laktózy",
+        "**Orechy** — mandľa, lieskový orech, vlašský orech, kešu, pekan, para orech, pistácia, makadamia",
+        "**Zeler**, vrátane hľuzy a zelerovej soli",
+        "**Horčica**, vrátane semien a horčičného prášku",
+        "**Sezamové semená**",
+        "**Oxid siričitý a siričitany** nad 10 mg/kg alebo 10 mg/liter",
+        "**Vlčí bôb (lupina)**",
+        "**Mäkkýše** — slávky, mušle, kalmár, chobotnica, slimáky"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Tento článok je praktické zhrnutie, nie právne poradenstvo. Národné pravidlá podľa článku 44 sa líšia v tom, akou formou má byť informácia poskytnutá, a kontrolu vykonáva váš miestny úrad. Overte si pokyny svojej krajiny."
+    },
+    {
+      "type": "h2",
+      "text": "Čo nariadenie v reštaurácii skutočne vyžaduje"
+    },
+    {
+      "type": "p",
+      "text": "Jedlo predávané nebalené — pokrm na tanieri — spadá pod článok 44. Stručne: informácia o alergénoch musí byť hosťovi dostupná a každý členský štát určuje konkrétny spôsob. Niektoré krajiny ju vyžadujú písomne v lístku. Iné pripúšťajú ústne podanie, ak je dobre viditeľné písomné upozornenie, aby sa hosť spýtal, a ak oslovený personál vie odpovedať."
+    },
+    {
+      "type": "p",
+      "text": "Praktické čítanie: samotné „opýtajte sa obsluhy“ nestačí. Musí byť tabuľa a za tabuľou spoľahlivý zdroj pravdy, ktorý devätnásťročná brigádnička na druhej zmene prečíta za desať sekúnd."
+    },
+    {
+      "type": "h2",
+      "text": "Kde informácia o alergénoch naozaj zlyháva"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Zlyhanie",
+        "Ako k nemu dôjde",
+        "Ako to vyzerá na place"
+      ],
+      "rows": [
+        [
+          "Zmenil sa recept, šanón nie",
+          "Kuchár prejde na bujónovú kocku so zelerom",
+          "Šanón hovorí bez zeleru. Klame."
+        ],
+        [
+          "Denná ponuka v ňom nie je",
+          "Dnešná ryba nikdy nedostane záznam",
+          "Čašník háda"
+        ],
+        [
+          "Existujú dve verzie",
+          "Jedna kópia na bare, druhá v kuchyni",
+          "Odporujú si a nikto nevie, ktorá je novšia"
+        ],
+        [
+          "Rozchod v prekladoch",
+          "Anglický lístok uvádza orechy, nemecký nie",
+          "Len v jednom jazyku"
+        ],
+        [
+          "Nikto ho nenájde",
+          "Šanón leží pod knihou rezervácií",
+          "Hosť čaká na odpoveď štyri minúty"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Prečo to digitálne menu zvláda lepšie"
+    },
+    {
+      "type": "p",
+      "text": "Nie preto, že je digitálne, ale preto, že údaj o alergéne visí na položke, nie na dokumente. Zmeníte položku raz a všade, kde sa objaví, to sedí: telefón hosťa, tlačené QR menu, všetky jazyky, denná ponuka aj akýkoľvek zoznam, ktorý kuchyňa vytlačí. Existuje presne jedna verzia, a je to tá aktuálna."
+    },
+    {
+      "type": "p",
+      "text": "Zároveň to hosťovi umožní poradiť si sám. Niekto s ťažkou alergiou na orechy si môže [digitálne menu](route:/digital-menu) vyfiltrovať sám, namiesto toho, aby vyjednával rozhovor v hlučnej sále vo svojom druhom jazyku — bezpečnejšie a podstatne menej stresujúce."
+    },
+    {
+      "type": "h2",
+      "text": "Ako dostať alergény do celého lístka bez straty týždňa"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Vychádzajte z receptu, nie z názvu pokrmu. „Caesar šalát“ skrýva vajce, ryby (ančovičku), mlieko aj lepok.",
+        "Urobte najprv omáčky a vývary. Sú najväčším zdrojom skrytého zeleru, horčice, mlieka a lepku a objavujú sa v desiatkach pokrmov.",
+        "Označujte každú položku priamo v systéme lístka, nie v samostatnom dokumente. Jeden zdroj, žiadne rozchádzanie.",
+        "Pridávajte dennú ponuku do rovnakého systému vo chvíli, keď sa píše na tabuľu, nie po skončení zmeny.",
+        "Znova overte pri každej zmene dodávateľa. Iná značka toho istého produktu je iné zloženie.",
+        "Naučte obsluhu, kam sa pozerať, nie ako si odpovede zapamätať. Pamäť je miesto, kde to zlyhá."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Píšte „môže obsahovať stopy“ len tam, kde to naozaj platí. Plošné preventívne značenie naprieč lístkom robí informáciu bezcennou a hostia so skutočnou alergiou sa ju naučia ignorovať — čo je horšie než nepovedať nič."
+    },
+    {
+      "type": "h2",
+      "text": "Krížová kontaminácia je samostatný problém"
+    },
+    {
+      "type": "p",
+      "text": "Správne uviesť alergény a zabrániť kontaktu v malej kuchyni sú dve rôzne práce. Tá istá fritéza, tie isté kliešte, tá istá doska prenášajú alergény medzi pokrmami. Buďte k hosťom priami v tom, čo vaša kuchyňa zaručiť môže a čo nie — jasné „nemôžeme zaručiť prostredie bez orechov“ je oveľa lepšie než sľub, ktorý nedodržíte."
+    },
+    {
+      "type": "cta",
+      "heading": "Jedno menu, jeden zoznam alergénov, každý jazyk",
+      "text": "Označte alergény raz a zostanú správne na každom stole, v každom jazyku, vrátane dnešnej dennej ponuky. 14 dní zadarmo, bez karty.",
+      "buttonLabel": "Pozrieť digitálne menu",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Časté otázky",
+      "items": [
+        {
+          "q": "Musím alergény tlačiť priamo v lístku?",
+          "a": "Závisí od vašej krajiny. Nariadenie 1169/2011 vyžaduje, aby informácia bola pri nebalených pokrmoch dostupná, a článok 44 ponecháva spôsob členským štátom — niekde je povinná písomná forma, inde stačí ústna s viditeľným písomným upozornením. Overte si národné pokyny."
+        },
+        {
+          "q": "Koľko alergénov sa musí uvádzať?",
+          "a": "Štrnásť, uvedených v prílohe II nariadenia (EÚ) č. 1169/2011. Zoznam je rovnaký vo všetkých krajinách EÚ."
+        },
+        {
+          "q": "Stačí „opýtajte sa obsluhy“?",
+          "a": "Len v krajinách, ktoré ústnu informáciu pripúšťajú, a len s dobre viditeľným písomným upozornením a personálom, ktorý vie odpovedať správne. Samo osebe to nestačí nikdy."
+        },
+        {
+          "q": "A čo denná ponuka?",
+          "a": "Vzťahuje sa na ňu rovnaké pravidlo. Je to najčastejšia diera, lebo denná ponuka sa do šanónu s alergénmi málokedy dostane pred začiatkom zmeny."
+        },
+        {
+          "q": "Musia sa alergény prekladať pre turistov?",
+          "a": "Hosť musí byť schopný informáciu pochopiť. Digitálne menu preloží položku a vezme si so sebou aj označenie alergénov, takže nemecká verzia nemôže potichu stratiť upozornenie na orechy."
+        }
+      ]
+    }
+  ]
+}

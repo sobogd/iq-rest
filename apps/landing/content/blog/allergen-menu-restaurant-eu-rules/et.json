@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "Allergeenid menüüs: ELi 14 ainet | IQ Rest",
+    "description": "14 allergeeni, mida ELi restoranid peavad märkima, mida määrus 1169/2011 pakendamata toidult tegelikult nõuab ja kuidas hoida nimekiri tõene."
+  },
+  "card": {
+    "title": "Allergeenid menüüs: neliteist, seadus ja kuidas lõpetada käsitsi pidamine",
+    "excerpt": "Mida määrus (EL) 1169/2011 restoranidelt nõuab, 14 allergeeni lihtsas keeles ja miks just baarileti taga olev allergeenimapp on see osa, mis alt veab."
+  },
+  "h1": "Allergeenid restorani menüüs: 14 ainet ja mida seadus sinult ootab",
+  "intro": "Iga restoran ELis peab suutma külalisele öelda, kas roog sisaldab mõnda 14 allergeenist. Reegel ise on lühike. Raske on hoida vastus tõesena pärast seda, kui kokk vahetab tarnijat, vahetab puljongit või improviseerib päevapakkumise — täpselt seal paberimapp lagunebki.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Neliteist allergeeni"
+    },
+    {
+      "type": "p",
+      "text": "Määrus (EL) nr 1169/2011 loetleb need II lisas. Need on kogu ELis samad ja Ühendkuningriigis on vastav nimekiri identne."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Gluteeni sisaldav teravili** — nisu, rukis, oder, kaer, speltanisu, kamut ja nende hübriidid",
+        "**Koorikloomad** — krevetid, krabi, homaar, norra salehomaar",
+        "**Munad**",
+        "**Kala**",
+        "**Maapähklid**",
+        "**Sojaoad**",
+        "**Piim**, sealhulgas laktoos",
+        "**Pähklid** — mandel, sarapuupähkel, kreeka pähkel, india pähkel, pekanipähkel, brasiilia pähkel, pistaatsia, makadaamia",
+        "**Seller**, sealhulgas juurseller ja sellerisool",
+        "**Sinep**, sealhulgas seemned ja sinepipulber",
+        "**Seesamiseemned**",
+        "**Vääveldioksiid ja sulfitid** üle 10 mg/kg või 10 mg/liitri",
+        "**Lupiin**",
+        "**Limused** — rannakarbid, südakarbid, kalmaar, kaheksajalg, teod"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "See artikkel on praktiline kokkuvõte, mitte õigusnõu. Artikli 44 alusel kehtestatud riiklikud reeglid erinevad selles, kuidas teave tuleb anda, ja järelevalvet teeb sinu kohalik asutus. Kontrolli oma riigi juhiseid."
+    },
+    {
+      "type": "h2",
+      "text": "Mida määrus restoranis tegelikult nõuab"
+    },
+    {
+      "type": "p",
+      "text": "Pakendamata müüdav toit — taldrikule pandud roog — kuulub artikli 44 alla. Lühidalt: allergeeniteave peab olema külalisele kättesaadav ja täpse viisi otsustab iga liikmesriik. Mõned riigid nõuavad seda menüüs kirjalikult. Teised lubavad suulist, tingimusel et on selgelt nähtav kirjalik teade, mis kutsub külalist küsima, ja et küsitud töötaja oskab tegelikult vastata."
+    },
+    {
+      "type": "p",
+      "text": "Praktiline lugemine: pelgalt „küsi ettekandjalt“ ei piisa. Peab olema silt ja sildi taga usaldusväärne tõeallikas, mille 19-aastane oma teisel vahetusel kümne sekundiga läbi loeb."
+    },
+    {
+      "type": "h2",
+      "text": "Kus allergeeniteave tegelikult untsu läheb"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Rike",
+        "Kuidas see juhtub",
+        "Kuidas see saalis välja näeb"
+      ],
+      "rows": [
+        [
+          "Retsept muutus, mapp mitte",
+          "Kokk läheb üle sellerit sisaldavale puljongikuubikule",
+          "Mapp ütleb, et sellerit pole. See eksib."
+        ],
+        [
+          "Päevapakkumisi seal pole",
+          "Tänane kala ei jõua kunagi kirja",
+          "Ettekandja pakub õnne peale"
+        ],
+        [
+          "Eksisteerib kaks versiooni",
+          "Üks koopia baaris, teine köögis",
+          "Nad räägivad üksteisele vastu ja keegi ei tea, kumb on uuem"
+        ],
+        [
+          "Tõlgete lahknemine",
+          "Ingliskeelses menüüs on pähklid kirjas, saksakeelses mitte",
+          "Ainult ühes keeles"
+        ],
+        [
+          "Keegi ei leia seda",
+          "Mapp on broneerimisraamatu all",
+          "Külaline ootab vastust neli minutit"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Miks digimenüü sellega paremini toime tuleb"
+    },
+    {
+      "type": "p",
+      "text": "Mitte sellepärast, et see on digitaalne, vaid sellepärast, et allergeeniandmed on kinnitatud roa, mitte dokumendi külge. Muudad rooga korra ja iga koht, kus see esineb, on õige: külalise telefon, trükitud QR-menüü, kõik keeled, päevapakkumised ja iga nimekiri, mille köök välja prindib. Versioone on täpselt üks ja see on praegune."
+    },
+    {
+      "type": "p",
+      "text": "Lisaks laseb see külalisel ise hakkama saada. Raske pähkliallergiaga inimene saab [digitaalset menüüd](route:/digital-menu) ise filtreerida, selle asemel et pidada läbirääkimisi vestluse üle mürarikkas saalis oma teises keeles — nii turvalisem kui ka tema jaoks tunduvalt vähem kurnav."
+    },
+    {
+      "type": "h2",
+      "text": "Kuidas saada menüü allergeenide osas valmis ilma nädalat kaotamata"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Alusta retseptist, mitte roa nimest. „Caesari salat“ peidab muna, kala (anšoovis), piima ja gluteeni.",
+        "Tee esmalt kastmed ja puljongid. Need on suurim peidetud selleri, sinepi, piima ja gluteeni allikas ning esinevad kümnetes roogades.",
+        "Märgista iga rida menüüsüsteemis endas, mitte eraldi dokumendis. Üks allikas, mingit lahknemist.",
+        "Lisa päevapakkumised samasse süsteemi hetkel, kui need tahvlile kirjutatakse, mitte vahetuse lõpus.",
+        "Kontrolli uuesti iga kord, kui tarnija vahetub. Sama toote teine bränd tähendab teistsugust koostisosade loetelu.",
+        "Õpeta saali, kust vaadata, mitte vastuseid pähe õppima. Mälu on see koht, kus asi katki läheb."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Kirjuta „võib sisaldada jälgi“ ainult sinna, kus see tõesti kehtib. Üle kogu menüü laiali määritud ettevaatusmärgistus muudab teabe kasutuks ja päris allergiaga külalised õpivad seda eirama — see on halvem kui mitte midagi öelda."
+    },
+    {
+      "type": "h2",
+      "text": "Ristsaastumine on eraldi probleem"
+    },
+    {
+      "type": "p",
+      "text": "Allergeenide õige märkimine ja kokkupuute vältimine väikeses köögis on kaks eri tööd. Sama fritüür, samad tangid, sama lõikelaud kannavad allergeene roogade vahel. Ütle külalistele otse, mida su köök suudab ja mida ei suuda tagada: selge „me ei saa tagada pähklivaba keskkonda“ on palju parem kui lubadus, mida sa ei suuda pidada."
+    },
+    {
+      "type": "cta",
+      "heading": "Üks menüü, üks allergeeninimekiri, kõik keeled",
+      "text": "Märgista allergeenid korra ja need jäävad õigeks igas lauas, igas keeles, sealhulgas tänastes päevapakkumistes. 14 päeva tasuta, ilma kaardita.",
+      "buttonLabel": "Vaata digitaalset menüüd",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Korduma kippuvad küsimused",
+      "items": [
+        {
+          "q": "Kas ma pean allergeenid menüüle endale trükkima?",
+          "a": "See sõltub sinu riigist. Määrus 1169/2011 nõuab, et teave oleks pakendamata toidu puhul kättesaadav, ja artikkel 44 jätab viisi iga liikmesriigi otsustada — mõned nõuavad kirjalikku vormi, teised lubavad suulist koos nähtava kirjaliku teatega. Kontrolli riiklikke juhiseid."
+        },
+        {
+          "q": "Mitu allergeeni tuleb märkida?",
+          "a": "Neliteist, loetletud määruse (EL) nr 1169/2011 II lisas. Nimekiri on kõigis ELi riikides sama."
+        },
+        {
+          "q": "Kas „küsi ettekandjalt“ on piisav?",
+          "a": "Ainult riikides, kus suuline teave on lubatud, ja ainult koos selgelt nähtava kirjaliku teatega ning personaliga, kes oskab tegelikult õige vastuse anda. Üksinda ei piisa sellest kunagi."
+        },
+        {
+          "q": "Aga päevapakkumised?",
+          "a": "Neile kehtib sama reegel. See on kõige levinum auk, sest päevapakkumised jõuavad allergeenimappi harva enne vahetuse algust."
+        },
+        {
+          "q": "Kas allergeenid tuleb turistidele tõlkida?",
+          "a": "Külaline peab teavet mõista suutma. Digitaalne menüü tõlgib roa ja võtab allergeenimärgised kaasa, nii et saksakeelne versioon ei saa vaikselt pähklihoiatust kaotada."
+        }
+      ]
+    }
+  ]
+}

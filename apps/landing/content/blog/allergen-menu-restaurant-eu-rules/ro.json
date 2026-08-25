@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "Alergeni în meniu: cele 14 substanțe din UE | IQ Rest",
+    "description": "Cei 14 alergeni pe care restaurantele din UE trebuie să-i declare, ce cere de fapt Regulamentul 1169/2011 pentru alimente neambalate și cum ții lista corectă."
+  },
+  "card": {
+    "title": "Alergeni în meniul restaurantului: cei paisprezece, legea și cum să nu-i mai ții de mână",
+    "excerpt": "Ce cere Regulamentul (UE) 1169/2011 restaurantelor, cei 14 alergeni pe înțelesul tuturor și de ce tocmai biblioraftul cu alergeni de la bar este piesa care cedează."
+  },
+  "h1": "Alergeni în meniul restaurantului: cele 14 substanțe și ce îți cere legea",
+  "intro": "Orice restaurant din UE trebuie să-i poată spune unui client dacă un preparat conține vreunul dintre cei 14 alergeni. Regula în sine e scurtă. Greu e să ții răspunsul adevărat după ce bucătarul schimbă furnizorul, schimbă supa de bază sau improvizează un preparat al zilei — exact acolo se destramă biblioraftul de hârtie.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Cei paisprezece alergeni"
+    },
+    {
+      "type": "p",
+      "text": "Regulamentul (UE) nr. 1169/2011 îi enumeră în anexa II. Sunt aceiași în toată UE, iar în Regatul Unit lista echivalentă este identică."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Cereale care conțin gluten** — grâu, secară, orz, ovăz, alac, kamut și hibrizii lor",
+        "**Crustacee** — creveți, crab, homar, langustină",
+        "**Ouă**",
+        "**Pește**",
+        "**Arahide**",
+        "**Soia**",
+        "**Lapte**, inclusiv lactoză",
+        "**Fructe cu coajă** — migdală, alună, nucă, caju, pecan, nucă de Brazilia, fistic, macadamia",
+        "**Țelină**, inclusiv rădăcina și sarea de țelină",
+        "**Muștar**, inclusiv semințe și pudră",
+        "**Semințe de susan**",
+        "**Dioxid de sulf și sulfiți** peste 10 mg/kg sau 10 mg/litru",
+        "**Lupin**",
+        "**Moluște** — midii, scoici, calmar, caracatiță, melci"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Articolul e un rezumat practic, nu consultanță juridică. Regulile naționale adoptate în temeiul articolului 44 diferă în privința formei în care trebuie dată informația, iar controlul revine autorității tale locale. Verifică ghidul din țara ta."
+    },
+    {
+      "type": "h2",
+      "text": "Ce cere de fapt regulamentul într-un restaurant"
+    },
+    {
+      "type": "p",
+      "text": "Mâncarea vândută neambalată — un preparat pus în farfurie — intră sub articolul 44. Pe scurt: informația despre alergeni trebuie să fie disponibilă clientului, iar fiecare stat membru decide mijlocul exact. Unele țări o cer în scris în meniu. Altele permit varianta verbală, cu condiția să existe un anunț scris vizibil care îl invită pe client să întrebe și ca persoana întrebată să știe efectiv să răspundă."
+    },
+    {
+      "type": "p",
+      "text": "Citirea practică: „întrebați ospătarul” nu ajunge singur. Trebuie să existe un anunț, iar în spatele anunțului o sursă de adevăr pe care un tânăr de 19 ani, la a doua tură, o citește în zece secunde."
+    },
+    {
+      "type": "h2",
+      "text": "Unde o ia razna informația despre alergeni"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Defecțiune",
+        "Cum se întâmplă",
+        "Cum arată în sală"
+      ],
+      "rows": [
+        [
+          "Rețeta s-a schimbat, biblioraftul nu",
+          "Bucătarul trece la un cub de supă cu țelină",
+          "Biblioraftul spune fără țelină. Greșește."
+        ],
+        [
+          "Preparatele zilei nu sunt acolo",
+          "Peștele de azi nu ajunge niciodată să aibă fișă",
+          "Ospătarul ghicește"
+        ],
+        [
+          "Există două versiuni",
+          "O copie la bar, una în bucătărie",
+          "Se contrazic și nimeni nu știe care e mai nouă"
+        ],
+        [
+          "Derivă în traduceri",
+          "Meniul în engleză spune fructe cu coajă, cel german nu",
+          "Doar într-o limbă"
+        ],
+        [
+          "Nu-l găsește nimeni",
+          "Biblioraftul e sub agenda de rezervări",
+          "Clientul așteaptă patru minute un răspuns"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "De ce un meniu digital se descurcă mai bine"
+    },
+    {
+      "type": "p",
+      "text": "Nu pentru că e digital, ci pentru că datele despre alergeni sunt legate de preparat, nu de un document. Modifici preparatul o dată și fiecare loc unde apare e corect: telefonul clientului, meniul QR tipărit, toate limbile, preparatele zilei și orice listă tipărită de bucătărie. Există exact o versiune, și e cea curentă."
+    },
+    {
+      "type": "p",
+      "text": "Îi permite și clientului să se descurce singur. Cineva cu alergie severă la fructe cu coajă poate filtra singur [meniul digital](route:/digital-menu) în loc să negocieze o conversație într-o sală zgomotoasă, în a doua lui limbă — și mai sigur, și considerabil mai puțin stresant pentru el."
+    },
+    {
+      "type": "h2",
+      "text": "Cum completezi alergenii din meniu fără să pierzi o săptămână"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Pornește de la rețetă, nu de la numele preparatului. O „salată Caesar” ascunde ou, pește (hamsie), lapte și gluten.",
+        "Fă întâi sosurile și supele de bază. Sunt cea mai mare sursă de țelină, muștar, lapte și gluten ascunse și apar în zeci de preparate.",
+        "Marchează fiecare poziție chiar în sistemul meniului, nu într-un document separat. O singură sursă, fără derivă.",
+        "Adaugă preparatele zilei în același sistem în clipa în care sunt scrise pe tablă, nu la finalul serviciului.",
+        "Verifică din nou de fiecare dată când se schimbă un furnizor. O altă marcă a aceluiași produs înseamnă altă listă de ingrediente.",
+        "Instruiește sala unde să se uite, nu să memoreze răspunsurile. Memoria e punctul de cedare."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Scrie „poate conține urme” doar acolo unde chiar e adevărat. Etichetarea preventivă pe tot meniul face informația inutilă, iar clienții cu alergii reale învață s-o ignore — ceea ce e mai rău decât să nu spui nimic."
+    },
+    {
+      "type": "h2",
+      "text": "Contaminarea încrucișată e o problemă separată"
+    },
+    {
+      "type": "p",
+      "text": "A declara corect alergenii și a preveni contactul într-o bucătărie mică sunt două treburi diferite. Aceeași friteuză, același clește, același tocător mută alergeni între preparate. Fii direct cu clienții despre ce poate și ce nu poate garanta bucătăria ta — un limpede „nu putem garanta un mediu fără fructe cu coajă” valorează mult mai mult decât o promisiune pe care n-o poți ține."
+    },
+    {
+      "type": "cta",
+      "heading": "Un meniu, o listă de alergeni, toate limbile",
+      "text": "Marchează alergenii o dată și rămân corecți la fiecare masă, în fiecare limbă, inclusiv la preparatele de azi. 14 zile gratuit, fără card.",
+      "buttonLabel": "Vezi meniul digital",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Întrebări frecvente",
+      "items": [
+        {
+          "q": "Trebuie să tipăresc alergenii chiar pe meniu?",
+          "a": "Depinde de țara ta. Regulamentul 1169/2011 cere ca informația să fie disponibilă pentru alimentele neambalate, iar articolul 44 lasă mijlocul la latitudinea fiecărui stat membru — unele impun forma scrisă, altele permit varianta verbală cu anunț scris vizibil. Verifică ghidul național."
+        },
+        {
+          "q": "Câți alergeni trebuie declarați?",
+          "a": "Paisprezece, enumerați în anexa II a Regulamentului (UE) nr. 1169/2011. Lista e aceeași în toate țările UE."
+        },
+        {
+          "q": "E de-ajuns „întrebați ospătarul”?",
+          "a": "Doar în țările care permit informația verbală și numai cu un anunț scris bine vizibil plus personal care chiar poate da un răspuns corect. Singur nu e niciodată suficient."
+        },
+        {
+          "q": "Dar preparatele zilei?",
+          "a": "Intră sub aceeași regulă. E cea mai frecventă gaură, pentru că preparatele zilei ajung rar în biblioraftul cu alergeni înainte de începerea serviciului."
+        },
+        {
+          "q": "Trebuie traduși alergenii pentru turiști?",
+          "a": "Clientul trebuie să poată înțelege informația. Un meniu digital traduce preparatul și duce cu el marcajele de alergeni, așa că versiunea germană nu poate pierde discret avertismentul despre fructele cu coajă."
+        }
+      ]
+    }
+  ]
+}

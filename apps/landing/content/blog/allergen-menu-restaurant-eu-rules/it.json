@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "Allergeni nel menu: le 14 sostanze UE | IQ Rest",
+    "description": "I 14 allergeni che i ristoranti UE devono dichiarare, cosa chiede davvero il Regolamento 1169/2011 per gli alimenti sfusi e come tenere la lista aggiornata."
+  },
+  "card": {
+    "title": "Allergeni nel menu del ristorante: i 14, la legge e come smettere di gestirli a mano",
+    "excerpt": "Cosa chiede il Regolamento (UE) 1169/2011 ai ristoranti, i 14 allergeni in parole semplici e perché il raccoglitore degli allergeni dietro al bancone è la parte che cede."
+  },
+  "h1": "Allergeni nel menu del ristorante: le 14 sostanze e cosa ti chiede la legge",
+  "intro": "Ogni ristorante nell'UE deve poter dire a un cliente se un piatto contiene uno dei 14 allergeni. La norma in sé è breve. Il difficile è mantenere vera la risposta dopo che lo chef ha cambiato fornitore, cambiato brodo o improvvisato un fuori menu: esattamente il punto in cui il raccoglitore cartaceo crolla.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "I 14 allergeni"
+    },
+    {
+      "type": "p",
+      "text": "Il Regolamento (UE) n. 1169/2011 li elenca nell'allegato II. Sono gli stessi in tutta l'UE, e nel Regno Unito l'elenco corrispondente è identico."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Cereali contenenti glutine** — frumento, segale, orzo, avena, farro, kamut e loro ibridi",
+        "**Crostacei** — gamberi, granchio, astice, scampi",
+        "**Uova**",
+        "**Pesce**",
+        "**Arachidi**",
+        "**Soia**",
+        "**Latte**, compreso il lattosio",
+        "**Frutta a guscio** — mandorla, nocciola, noce, anacardo, noce pecan, noce del Brasile, pistacchio, macadamia",
+        "**Sedano**, compresi sedano rapa e sale al sedano",
+        "**Senape**, compresi semi e senape in polvere",
+        "**Semi di sesamo**",
+        "**Anidride solforosa e solfiti** oltre 10 mg/kg o 10 mg/litro",
+        "**Lupini**",
+        "**Molluschi** — cozze, vongole, calamari, polpo, lumache"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Questo articolo è una sintesi pratica, non una consulenza legale. Le norme nazionali adottate ai sensi dell'articolo 44 differiscono su come vada fornita l'informazione, e i controlli spettano all'autorità locale. Verifica le indicazioni del tuo paese."
+    },
+    {
+      "type": "h2",
+      "text": "Cosa chiede davvero il regolamento in un ristorante"
+    },
+    {
+      "type": "p",
+      "text": "Gli alimenti venduti sfusi — un piatto servito al tavolo — rientrano nell'articolo 44. In sintesi: l'informazione sugli allergeni deve essere disponibile per il cliente, e ogni stato membro decide il mezzo esatto. Alcuni paesi la richiedono per iscritto sul menu. Altri consentono di darla a voce, purché ci sia un avviso scritto ben visibile che inviti a chiedere e purché la persona interpellata sappia davvero rispondere."
+    },
+    {
+      "type": "p",
+      "text": "La lettura pratica: «chieda al cameriere» da solo non basta. Serve un cartello, e dietro il cartello una fonte affidabile che un diciannovenne al secondo turno possa leggere in dieci secondi."
+    },
+    {
+      "type": "h2",
+      "text": "Dove le informazioni sugli allergeni sbagliano davvero"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Guasto",
+        "Come succede",
+        "Cosa si vede in sala"
+      ],
+      "rows": [
+        [
+          "Ricetta cambiata, raccoglitore no",
+          "Lo chef passa a un dado contenente sedano",
+          "Il raccoglitore dice niente sedano. È sbagliato."
+        ],
+        [
+          "I fuori menu non ci sono",
+          "Il pesce di stasera non viene mai inserito",
+          "Il cameriere tira a indovinare"
+        ],
+        [
+          "Esistono due versioni",
+          "Una copia al bancone, una in cucina",
+          "Si contraddicono e nessuno sa quale sia la più recente"
+        ],
+        [
+          "Deriva delle traduzioni",
+          "Il menu in inglese dice frutta a guscio, quello tedesco no",
+          "Solo in una lingua"
+        ],
+        [
+          "Nessuno lo trova",
+          "Il raccoglitore è sotto il registro delle prenotazioni",
+          "Il cliente aspetta quattro minuti per una risposta"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Perché un menu digitale gestisce meglio la cosa"
+    },
+    {
+      "type": "p",
+      "text": "Non perché sia digitale, ma perché il dato sull'allergene è attaccato al piatto invece che a un documento. Modifichi il piatto una volta e ogni posto in cui compare è corretto: il telefono del cliente, il menu QR stampato, tutte le lingue, i fuori menu e qualsiasi lista che la cucina stampi. Esiste esattamente una versione, ed è quella attuale."
+    },
+    {
+      "type": "p",
+      "text": "Permette anche al cliente di farsi da sé. Chi ha un'allergia grave alla frutta a guscio può filtrare da solo il [menu digitale](route:/digital-menu) invece di negoziare una conversazione in una sala rumorosa e nella sua seconda lingua, il che è più sicuro e decisamente meno stressante per lui."
+    },
+    {
+      "type": "h2",
+      "text": "Come completare gli allergeni del menu senza perderci una settimana"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Parti dalla ricetta, non dal nome del piatto. Una «Caesar salad» nasconde uova, pesce (acciuga), latte e glutine.",
+        "Fai prima salse e fondi. Sono la maggiore fonte di sedano, senape, latte e glutine nascosti, e compaiono in decine di piatti.",
+        "Etichetta ogni voce nel sistema del menu, non in un documento separato. Una sola fonte, nessuna deriva.",
+        "Aggiungi i fuori menu allo stesso sistema appena vengono scritti sulla lavagna, non a fine servizio.",
+        "Ricontrolla ogni volta che cambia un fornitore. Una marca diversa dello stesso prodotto è un elenco ingredienti diverso.",
+        "Forma la sala su dove guardare, non su come memorizzare le risposte. La memoria è il punto di rottura."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Scrivi «può contenere tracce» solo dove è davvero vero. L'etichettatura precauzionale a tappeto rende l'informazione inutile, e i clienti con allergie reali imparano a ignorarla, il che è peggio che non dire nulla."
+    },
+    {
+      "type": "h2",
+      "text": "La contaminazione crociata è un problema a parte"
+    },
+    {
+      "type": "p",
+      "text": "Dichiarare correttamente gli allergeni e impedire il contatto in una cucina piccola sono due lavori diversi. La stessa friggitrice, le stesse pinze, lo stesso tagliere spostano allergeni tra i piatti. Sii onesto con i clienti su cosa la tua cucina può e non può garantire: un chiaro «non possiamo garantire un ambiente privo di frutta a guscio» vale molto più di una promessa che non puoi mantenere."
+    },
+    {
+      "type": "cta",
+      "heading": "Un menu, una lista allergeni, tutte le lingue",
+      "text": "Etichetta gli allergeni una volta e restano corretti su ogni tavolo, in ogni lingua, fuori menu di oggi compresi. 14 giorni gratis, senza carta.",
+      "buttonLabel": "Guarda il menu digitale",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Domande frequenti",
+      "items": [
+        {
+          "q": "Devo stampare gli allergeni sul menu stesso?",
+          "a": "Dipende dal tuo paese. Il Regolamento 1169/2011 chiede che l'informazione sia disponibile per gli alimenti sfusi, e l'articolo 44 lascia il mezzo a ciascuno stato membro: alcuni impongono lo scritto, altri consentono il verbale con un avviso scritto ben visibile. Verifica le indicazioni nazionali."
+        },
+        {
+          "q": "Quanti allergeni vanno dichiarati?",
+          "a": "Quattordici, elencati nell'allegato II del Regolamento (UE) n. 1169/2011. L'elenco è lo stesso in ogni paese dell'UE."
+        },
+        {
+          "q": "Basta «chieda al cameriere»?",
+          "a": "Solo nei paesi che ammettono l'informazione verbale, e solo con un avviso scritto ben visibile e personale in grado di dare una risposta corretta. Da solo non basta mai."
+        },
+        {
+          "q": "E i piatti del giorno?",
+          "a": "Rientrano nella stessa regola. È la lacuna più comune, perché i fuori menu raramente entrano nel raccoglitore degli allergeni prima dell'inizio del servizio."
+        },
+        {
+          "q": "Gli allergeni vanno tradotti per i turisti?",
+          "a": "Il cliente deve poter capire l'informazione. Un menu digitale traduce il piatto e porta con sé le etichette degli allergeni, così la versione tedesca non può perdere per strada l'avviso sulla frutta a guscio."
+        }
+      ]
+    }
+  ]
+}

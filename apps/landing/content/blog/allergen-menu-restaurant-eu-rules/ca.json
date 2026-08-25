@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "Al·lèrgens a la carta: les 14 substàncies de la UE | IQ Rest",
+    "description": "Els 14 al·lèrgens que els restaurants de la UE han de declarar, què exigeix realment el Reglament 1169/2011 per al menjar no envasat i com mantenir la llista al dia."
+  },
+  "card": {
+    "title": "Al·lèrgens a la carta d'un restaurant: els 14, la llei i com deixar de mantenir-ho a mà",
+    "excerpt": "Què exigeix el Reglament (UE) 1169/2011 als restaurants, els 14 al·lèrgens en llenguatge planer i per què la carpeta d'al·lèrgens darrere la barra és la peça que falla."
+  },
+  "h1": "Al·lèrgens a la carta d'un restaurant: les 14 substàncies i què et demana la llei",
+  "intro": "Tot restaurant de la UE ha de poder dir a un client si un plat conté algun dels 14 al·lèrgens. La norma en si és curta. El difícil és mantenir la resposta certa després que el cuiner canviï de proveïdor, canviï de brou o improvisi una suggerència del dia: justament on la carpeta d'al·lèrgens en paper s'ensorra.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Els 14 al·lèrgens"
+    },
+    {
+      "type": "p",
+      "text": "El Reglament (UE) núm. 1169/2011 els enumera a l'annex II. Són els mateixos a tota la UE i, al Regne Unit, la llista equivalent és idèntica."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Cereals amb gluten**: blat, sègol, ordi, civada, espelta, kamut i els seus híbrids",
+        "**Crustacis**: gambes, cranc, llagosta, escamarlà",
+        "**Ous**",
+        "**Peix**",
+        "**Cacauets**",
+        "**Soja**",
+        "**Llet**, inclosa la lactosa",
+        "**Fruits de closca**: ametlla, avellana, nou, anacard, pacana, nou del Brasil, pistatxo, macadàmia",
+        "**Api**, inclosos l'api-rave i la sal d'api",
+        "**Mostassa**, incloses la llavor i la mostassa en pols",
+        "**Grans de sèsam**",
+        "**Diòxid de sofre i sulfits** per sobre de 10 mg/kg o 10 mg/litre",
+        "**Tramussos**",
+        "**Mol·luscos**: musclos, cloïsses, calamar, pop, cargols"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Aquest article és un resum pràctic, no assessorament jurídic. Les normes nacionals a l'empara de l'article 44 difereixen en com s'ha de donar la informació, i la inspecció correspon a la teva autoritat local. Consulta la guia del teu país."
+    },
+    {
+      "type": "h2",
+      "text": "Què exigeix realment el reglament en un restaurant"
+    },
+    {
+      "type": "p",
+      "text": "El menjar que venes sense envasar —un plat emplatat— entra a l'article 44. En resum: la informació sobre al·lèrgens ha d'estar disponible per al client, i cada estat membre decideix el mitjà exacte. Alguns països l'exigeixen per escrit a la carta. D'altres permeten donar-la verbalment, sempre que hi hagi un avís escrit ben visible que indiqui al client que pregunti i que la persona a qui pregunti sàpiga respondre."
+    },
+    {
+      "type": "p",
+      "text": "La lectura pràctica: «pregunti al cambrer» tot sol no n'hi ha prou. Hi ha d'haver un cartell, i darrere el cartell una font de veritat fiable que un noi de 19 anys al seu segon torn pugui llegir en deu segons."
+    },
+    {
+      "type": "h2",
+      "text": "On falla de debò la informació d'al·lèrgens"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Errada",
+        "Com passa",
+        "Què es veu a la sala"
+      ],
+      "rows": [
+        [
+          "Va canviar la recepta, la carpeta no",
+          "El cuiner passa a una pastilla de brou amb api",
+          "La carpeta diu que no en porta. S'equivoca."
+        ],
+        [
+          "Les suggerències no hi són",
+          "El peix d'avui no arriba mai a tenir fitxa",
+          "El cambrer endevina"
+        ],
+        [
+          "Hi ha dues versions",
+          "Una còpia a la barra, una altra a cuina",
+          "Es contradiuen i ningú no sap quina és la nova"
+        ],
+        [
+          "Deriva a les traduccions",
+          "La carta en anglès diu fruits secs, l'alemanya no",
+          "Només en un idioma"
+        ],
+        [
+          "Ningú no la troba",
+          "La carpeta és sota el llibre de reserves",
+          "El client espera quatre minuts per una resposta"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Per què una carta digital ho gestiona millor"
+    },
+    {
+      "type": "p",
+      "text": "No perquè sigui digital, sinó perquè la dada d'al·lèrgens va unida al plat en comptes d'a un document. Canvies el plat una vegada i tot lloc on apareix queda correcte: el mòbil del client, la carta QR impresa, tots els idiomes, les suggerències del dia i qualsevol llista que imprimeixi la cuina. Hi ha exactament una versió, i és l'actual."
+    },
+    {
+      "type": "p",
+      "text": "També permet al client resoldre-ho sol. Algú amb al·lèrgia greu als fruits secs pot filtrar la [carta digital](route:/digital-menu) pel seu compte en comptes de negociar una conversa en una sala sorollosa i en la seva segona llengua, cosa que és més segura i força menys estressant per a ell."
+    },
+    {
+      "type": "h2",
+      "text": "Com completar els al·lèrgens de la carta sense perdre una setmana"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Comença per la recepta, no pel nom del plat. Una «amanida Cèsar» amaga ou, peix (anxova), llet i gluten.",
+        "Fes primer les salses i els fons. Són la font més gran d'api, mostassa, llet i gluten amagats, i apareixen en desenes de plats.",
+        "Etiqueta cada plat en el mateix sistema de la carta, no en un document a part. Una sola font, sense desfasaments.",
+        "Afegeix les suggerències al mateix sistema en el moment que s'escriuen a la pissarra, no en acabar el servei.",
+        "Revisa-ho cada vegada que canviï un proveïdor. Una marca diferent del mateix producte és una llista d'ingredients diferent.",
+        "Forma la sala en on mirar, no en memoritzar respostes. La memòria és el punt de fallada."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Escriu «pot contenir traces» només on sigui realment cert. L'etiquetatge preventiu a tota la carta fa inútil la informació, i els clients amb al·lèrgies reals aprenen a ignorar-la, cosa pitjor que no dir res."
+    },
+    {
+      "type": "h2",
+      "text": "La contaminació creuada és un altre problema"
+    },
+    {
+      "type": "p",
+      "text": "Declarar bé els al·lèrgens i evitar el contacte en una cuina petita són dues feines diferents. La mateixa fregidora, les mateixes pinces, la mateixa fusta mouen al·lèrgens entre plats. Sigues clar amb els clients sobre què pot i què no pot garantir la teva cuina: un «no podem garantir un entorn sense fruits secs» honest val molt més que una promesa que no pots complir."
+    },
+    {
+      "type": "cta",
+      "heading": "Una carta, una llista d'al·lèrgens, tots els idiomes",
+      "text": "Etiqueta els al·lèrgens una vegada i seguiran correctes a cada taula, en cada idioma, incloses les suggerències d'avui. 14 dies gratis, sense targeta.",
+      "buttonLabel": "Veure la carta digital",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Preguntes freqüents",
+      "items": [
+        {
+          "q": "He d'imprimir els al·lèrgens a la carta mateixa?",
+          "a": "Depèn del teu país. El Reglament 1169/2011 exigeix que la informació estigui disponible per al menjar no envasat, i l'article 44 deixa el mitjà a cada estat membre: uns obliguen a fer-ho per escrit, d'altres permeten fer-ho verbalment amb un avís escrit visible. Consulta la guia nacional."
+        },
+        {
+          "q": "Quants al·lèrgens s'han de declarar?",
+          "a": "Catorze, recollits a l'annex II del Reglament (UE) núm. 1169/2011. La llista és la mateixa a tots els països de la UE."
+        },
+        {
+          "q": "N'hi ha prou amb «pregunti al cambrer»?",
+          "a": "Només a països que permeten la informació verbal, i únicament amb un avís escrit ben visible i personal capaç de donar una resposta correcta. Tot sol no n'hi ha prou mai."
+        },
+        {
+          "q": "I les suggerències del dia?",
+          "a": "Estan subjectes a la mateixa norma. És el buit més freqüent, perquè les suggerències poques vegades arriben a la carpeta d'al·lèrgens abans de començar el servei."
+        },
+        {
+          "q": "Cal traduir els al·lèrgens per als turistes?",
+          "a": "El client ha de poder entendre la informació. Una carta digital tradueix el plat i s'emporta les etiquetes d'al·lèrgens, així que la versió alemanya no pot perdre pel camí l'avís de fruits secs."
+        }
+      ]
+    }
+  ]
+}

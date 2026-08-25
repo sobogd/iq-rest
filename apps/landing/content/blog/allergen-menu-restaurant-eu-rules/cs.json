@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "Alergeny v menu: 14 látek podle EU | IQ Rest",
+    "description": "14 alergenů, které musí restaurace v EU uvádět, co nařízení 1169/2011 skutečně vyžaduje u nebalených pokrmů a jak udržet seznam pravdivý."
+  },
+  "card": {
+    "title": "Alergeny v jídelním lístku: čtrnáct, zákon a jak to přestat vést ručně",
+    "excerpt": "Co nařízení (EU) 1169/2011 vyžaduje po restauracích, 14 alergenů srozumitelně a proč je právě šanon s alergeny za barem tím dílem, který selhává."
+  },
+  "h1": "Alergeny v jídelním lístku restaurace: 14 látek a co po vás chce zákon",
+  "intro": "Každá restaurace v EU musí umět hostovi říct, jestli pokrm obsahuje některý ze 14 alergenů. Samotné pravidlo je krátké. Těžké je udržet odpověď pravdivou poté, co kuchař vymění dodavatele, vymění vývar nebo improvizuje denní nabídku — přesně tam se papírový šanon rozpadá.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Čtrnáct alergenů"
+    },
+    {
+      "type": "p",
+      "text": "Nařízení (EU) č. 1169/2011 je vyjmenovává v příloze II. Jsou stejné v celé EU a ve Spojeném království je odpovídající seznam totožný."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Obiloviny obsahující lepek** — pšenice, žito, ječmen, oves, špalda, kamut a jejich hybridy",
+        "**Korýši** — krevety, krab, humr, langustina",
+        "**Vejce**",
+        "**Ryby**",
+        "**Arašídy**",
+        "**Sója**",
+        "**Mléko**, včetně laktózy",
+        "**Skořápkové plody** — mandle, lískový ořech, vlašský ořech, kešu, pekan, para ořech, pistácie, makadamie",
+        "**Celer**, včetně bulvy a celerové soli",
+        "**Hořčice**, včetně semen a hořčičného prášku",
+        "**Sezamová semena**",
+        "**Oxid siřičitý a siřičitany** nad 10 mg/kg nebo 10 mg/litr",
+        "**Vlčí bob (lupina)**",
+        "**Měkkýši** — slávky, škeble, oliheň, chobotnice, hlemýždi"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Tento článek je praktické shrnutí, ne právní poradenství. Národní pravidla podle článku 44 se liší v tom, jakou formou má být informace poskytnuta, a kontrolu provádí váš místní úřad. Ověřte si pokyny své země."
+    },
+    {
+      "type": "h2",
+      "text": "Co nařízení v restauraci skutečně vyžaduje"
+    },
+    {
+      "type": "p",
+      "text": "Jídlo prodávané nebalené — pokrm na talíři — spadá pod článek 44. Stručně: informace o alergenech musí být hostovi dostupná a každý členský stát určuje konkrétní způsob. Některé země ji vyžadují písemně v lístku. Jiné připouštějí ústní podání, pokud je dobře viditelné písemné upozornění, aby se host zeptal, a pokud oslovený personál umí odpovědět."
+    },
+    {
+      "type": "p",
+      "text": "Praktické čtení: samotné „zeptejte se obsluhy“ nestačí. Musí být cedule a za cedulí spolehlivý zdroj pravdy, který devatenáctiletá brigádnice na druhé směně přečte za deset sekund."
+    },
+    {
+      "type": "h2",
+      "text": "Kde informace o alergenech opravdu selhává"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Selhání",
+        "Jak k němu dojde",
+        "Jak to vypadá na place"
+      ],
+      "rows": [
+        [
+          "Změnil se recept, šanon ne",
+          "Kuchař přejde na bujonovou kostku s celerem",
+          "Šanon říká bez celeru. Lže."
+        ],
+        [
+          "Denní nabídka v něm není",
+          "Dnešní ryba nikdy nedostane záznam",
+          "Číšník hádá"
+        ],
+        [
+          "Existují dvě verze",
+          "Jedna kopie na baru, druhá v kuchyni",
+          "Odporují si a nikdo neví, která je novější"
+        ],
+        [
+          "Rozjezd v překladech",
+          "Anglický lístek uvádí ořechy, německý ne",
+          "Jen v jednom jazyce"
+        ],
+        [
+          "Nikdo ho nenajde",
+          "Šanon leží pod knihou rezervací",
+          "Host čeká na odpověď čtyři minuty"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Proč to digitální menu zvládá lépe"
+    },
+    {
+      "type": "p",
+      "text": "Ne proto, že je digitální, ale proto, že údaj o alergenu visí na položce, ne na dokumentu. Změníte položku jednou a všude, kde se objeví, to sedí: telefon hosta, tištěné QR menu, všechny jazyky, denní nabídka i jakýkoli seznam, který kuchyně vytiskne. Existuje přesně jedna verze, a je ta aktuální."
+    },
+    {
+      "type": "p",
+      "text": "Zároveň to hostovi umožní si poradit sám. Někdo s těžkou alergií na ořechy si může [digitální menu](route:/digital-menu) vyfiltrovat sám, místo aby vyjednával rozhovor v hlučném sále ve svém druhém jazyce — bezpečnější a podstatně méně stresující."
+    },
+    {
+      "type": "h2",
+      "text": "Jak dostat alergeny do celého lístku, aniž byste přišli o týden"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Vyjděte z receptu, ne z názvu pokrmu. „Caesar salát“ skrývá vejce, ryby (ančovičku), mléko i lepek.",
+        "Udělejte nejdřív omáčky a vývary. Jsou největším zdrojem skrytého celeru, hořčice, mléka a lepku a objevují se v desítkách pokrmů.",
+        "Označujte každou položku přímo v systému lístku, ne v samostatném dokumentu. Jeden zdroj, žádné rozjíždění.",
+        "Přidávejte denní nabídku do stejného systému ve chvíli, kdy se píše na tabuli, ne po skončení směny.",
+        "Znovu ověřte při každé změně dodavatele. Jiná značka téhož produktu je jiné složení.",
+        "Naučte obsluhu, kam se dívat, ne jak si odpovědi pamatovat. Paměť je to místo, kde to selže."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Pište „může obsahovat stopy“ jen tam, kde to opravdu platí. Plošné preventivní značení napříč lístkem činí informaci bezcennou a hosté se skutečnou alergií se naučí ji ignorovat — což je horší než neříct nic."
+    },
+    {
+      "type": "h2",
+      "text": "Křížová kontaminace je samostatný problém"
+    },
+    {
+      "type": "p",
+      "text": "Správně uvést alergeny a zabránit kontaktu v malé kuchyni jsou dvě různé práce. Stejná fritéza, stejné kleště, stejné prkénko přenášejí alergeny mezi pokrmy. Buďte k hostům přímí v tom, co vaše kuchyně zaručit může a co ne — jasné „nemůžeme zaručit prostředí bez ořechů“ je mnohem lepší než slib, který nedodržíte."
+    },
+    {
+      "type": "cta",
+      "heading": "Jedno menu, jeden seznam alergenů, každý jazyk",
+      "text": "Označte alergeny jednou a zůstanou správné na každém stole, v každém jazyce, včetně dnešní denní nabídky. 14 dní zdarma, bez karty.",
+      "buttonLabel": "Prohlédnout digitální menu",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Časté dotazy",
+      "items": [
+        {
+          "q": "Musím alergeny tisknout přímo v lístku?",
+          "a": "Záleží na vaší zemi. Nařízení 1169/2011 vyžaduje, aby informace byla u nebalených pokrmů dostupná, a článek 44 ponechává způsob členským státům — někde je povinná písemná forma, jinde stačí ústní s viditelným písemným upozorněním. Ověřte si národní pokyny."
+        },
+        {
+          "q": "Kolik alergenů se musí uvádět?",
+          "a": "Čtrnáct, uvedených v příloze II nařízení (EU) č. 1169/2011. Seznam je stejný ve všech zemích EU."
+        },
+        {
+          "q": "Stačí „zeptejte se obsluhy“?",
+          "a": "Jen v zemích, které ústní informaci připouštějí, a jen s dobře viditelným písemným upozorněním a personálem, který umí odpovědět správně. Samo o sobě to nestačí nikdy."
+        },
+        {
+          "q": "A co denní nabídka?",
+          "a": "Vztahuje se na ni stejné pravidlo. Je to nejčastější díra, protože denní nabídka se do šanonu s alergeny málokdy dostane před začátkem směny."
+        },
+        {
+          "q": "Musí se alergeny překládat pro turisty?",
+          "a": "Host musí být schopen informaci pochopit. Digitální menu přeloží položku a vezme si s sebou i označení alergenů, takže německá verze nemůže tiše ztratit upozornění na ořechy."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "Ofnæmisvaldar á matseðli: 14 efni ESB | IQ Rest",
+    "description": "Ofnæmisvaldarnir 14 sem veitingastaðir í ESB verða að tilgreina, hvað reglugerð 1169/2011 raunverulega krefst fyrir óinnpakkaðan mat og hvernig listinn helst réttur."
+  },
+  "card": {
+    "title": "Ofnæmisvaldar á matseðli: þeir fjórtán, lögin og hvernig þú hættir að halda þessu í höndunum",
+    "excerpt": "Hvað reglugerð (ESB) 1169/2011 krefst af veitingastöðum, ofnæmisvaldarnir 14 á mannamáli og hvers vegna ofnæmismappan bak við barinn er hlutinn sem bregst."
+  },
+  "h1": "Ofnæmisvaldar á matseðli veitingastaðar: efnin 14 og hvað lögin biðja um",
+  "intro": "Hver veitingastaður í ESB verður að geta sagt gesti hvort réttur innihaldi einhvern af 14 ofnæmisvöldum. Reglan sjálf er stutt. Það sem er erfitt er að halda svarinu sönnu eftir að kokkurinn skiptir um birgja, skiptir um soð eða spinnur rétt dagsins — nákvæmlega þar sem pappírsmappan gefur sig.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Ofnæmisvaldarnir fjórtán"
+    },
+    {
+      "type": "p",
+      "text": "Reglugerð (ESB) nr. 1169/2011 telur þá upp í II. viðauka. Þeir eru þeir sömu í öllu ESB og í Bretlandi er samsvarandi listi eins."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Kornvörur sem innihalda glúten** – hveiti, rúgur, bygg, hafrar, spelt, kamut og blendingar þeirra",
+        "**Krabbadýr** – rækjur, krabbi, humar, leturhumar",
+        "**Egg**",
+        "**Fiskur**",
+        "**Jarðhnetur**",
+        "**Sojabaunir**",
+        "**Mjólk**, þar með talinn laktósi",
+        "**Hnetur** – mandla, heslihneta, valhneta, kasjúhneta, pekanhneta, parahneta, pistasía, makadamía",
+        "**Sellerí**, þar með talið rótarsellerí og sellerísalt",
+        "**Sinnep**, þar með talin fræ og duft",
+        "**Sesamfræ**",
+        "**Brennisteinsdíoxíð og súlfít** yfir 10 mg/kg eða 10 mg/lítra",
+        "**Lúpína**",
+        "**Lindýr** – kræklingur, hjartaskel, smokkfiskur, kolkrabbi, sniglar"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Þessi grein er hagnýt samantekt, ekki lögfræðiráðgjöf. Innlendar reglur samkvæmt 44. gr. eru ólíkar hvað varðar það hvernig upplýsingarnar skulu veittar, og eftirlitið er í höndum þíns staðaryfirvalds. Athugaðu leiðbeiningar þíns lands."
+    },
+    {
+      "type": "h2",
+      "text": "Hvers reglugerðin krefst raunverulega á veitingastað"
+    },
+    {
+      "type": "p",
+      "text": "Matur sem þú selur óinnpakkaðan – réttur á diski – fellur undir 44. gr. Í stuttu máli: upplýsingar um ofnæmisvalda verða að vera aðgengilegar gestinum og hvert aðildarríki ákveður nákvæma leið. Sum lönd krefjast þess skriflega á matseðli. Önnur leyfa að þær séu veittar munnlega, að því gefnu að vel sýnileg skrifleg tilkynning bjóði gestinum að spyrja og að sá sem spurður er geti raunverulega svarað."
+    },
+    {
+      "type": "p",
+      "text": "Hagnýti lesturinn: \"spyrjið þjóninn\" dugar ekki eitt og sér. Það þarf skilti og á bak við skiltið áreiðanlega sannleiksuppsprettu sem nítján ára starfsmaður á annarri vakt les á tíu sekúndum."
+    },
+    {
+      "type": "h2",
+      "text": "Hvar upplýsingar um ofnæmisvalda fara raunverulega úrskeiðis"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Bilun",
+        "Hvernig hún verður",
+        "Hvernig hún lítur út í salnum"
+      ],
+      "rows": [
+        [
+          "Uppskrift breyttist, mappan ekki",
+          "Kokkurinn skiptir yfir í soðtening sem inniheldur sellerí",
+          "Mappan segir ekkert sellerí. Hún hefur rangt fyrir sér."
+        ],
+        [
+          "Réttir dagsins eru ekki þar",
+          "Fiskur kvöldsins fær aldrei færslu",
+          "Þjónninn giskar"
+        ],
+        [
+          "Til eru tvær útgáfur",
+          "Eitt eintak á barnum, annað í eldhúsinu",
+          "Þau stangast á og enginn veit hvort er nýrra"
+        ],
+        [
+          "Rek í þýðingum",
+          "Enski matseðillinn nefnir hnetur, sá þýski ekki",
+          "Aðeins á einu tungumáli"
+        ],
+        [
+          "Enginn finnur hana",
+          "Mappan er undir bókunarbókinni",
+          "Gesturinn bíður í fjórar mínútur eftir svari"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Hvers vegna stafrænn matseðill ræður betur við þetta"
+    },
+    {
+      "type": "p",
+      "text": "Ekki af því að hann sé stafrænn, heldur af því að ofnæmisupplýsingarnar hanga á réttinum en ekki í skjali. Þú breytir réttinum einu sinni og hver staður þar sem hann birtist verður réttur: sími gestsins, prentaði QR-matseðillinn, öll tungumálin, réttir dagsins og hver listi sem eldhúsið prentar. Það er nákvæmlega ein útgáfa og hún er sú núgildandi."
+    },
+    {
+      "type": "p",
+      "text": "Það gerir gestinum líka kleift að bjarga sér sjálfur. Sá sem er með alvarlegt hnetuofnæmi getur síað [stafræna matseðilinn](route:/digital-menu) sjálfur í stað þess að semja um samtal í hávaðasömum sal á sínu öðru tungumáli – bæði öruggara og umtalsvert minna álag fyrir hann."
+    },
+    {
+      "type": "h2",
+      "text": "Hvernig þú klárar ofnæmisvalda á matseðlinum án þess að tapa viku"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Byrjaðu á uppskriftinni, ekki á heiti réttarins. \"Caesarsalat\" felur egg, fisk (ansjósu), mjólk og glúten.",
+        "Taktu sósur og soð fyrst. Þau eru stærsta uppspretta falins sellerís, sinneps, mjólkur og glútens og koma fyrir í tugum rétta.",
+        "Merktu hverja línu í matseðlakerfinu sjálfu, ekki í sérstöku skjali. Ein uppspretta, ekkert rek.",
+        "Settu rétti dagsins inn í sama kerfi um leið og þeir eru skrifaðir á töfluna, ekki eftir vaktina.",
+        "Athugaðu aftur í hvert sinn sem birgir breytist. Annað vörumerki sömu vöru er annar innihaldslisti.",
+        "Þjálfaðu salinn í hvar á að fletta upp, ekki í að leggja svörin á minnið. Minnið er bilunarpunkturinn."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Skrifaðu \"getur innihaldið snefil\" aðeins þar sem það á raunverulega við. Almenn varúðarmerking yfir allan matseðilinn gerir upplýsingarnar gagnslausar og gestir með raunverulegt ofnæmi læra að hunsa þær – sem er verra en að segja ekkert."
+    },
+    {
+      "type": "h2",
+      "text": "Krossmengun er sérstakt vandamál"
+    },
+    {
+      "type": "p",
+      "text": "Að tilgreina ofnæmisvalda rétt og að koma í veg fyrir snertingu í litlu eldhúsi eru tvö ólík verk. Sama djúpsteikingarpanna, sömu tangir, sama bretti flytja ofnæmisvalda milli rétta. Vertu hreinskilinn við gesti um hvað eldhúsið þitt getur og getur ekki ábyrgst – skýrt \"við getum ekki ábyrgst hnetulaust umhverfi\" er miklu betra en loforð sem þú getur ekki staðið við."
+    },
+    {
+      "type": "cta",
+      "heading": "Einn matseðill, einn ofnæmislisti, öll tungumál",
+      "text": "Merktu ofnæmisvaldana einu sinni og þeir haldast réttir á hverju borði, á hverju tungumáli, réttir dagsins meðtaldir. 14 dagar frítt, án korts.",
+      "buttonLabel": "Sjá stafræna matseðilinn",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Algengar spurningar",
+      "items": [
+        {
+          "q": "Þarf ég að prenta ofnæmisvalda á matseðilinn sjálfan?",
+          "a": "Það fer eftir landi. Reglugerð 1169/2011 krefst þess að upplýsingarnar séu aðgengilegar fyrir óinnpakkaðan mat og 44. gr. lætur leiðina eftir hverju aðildarríki – sum krefjast skriflegs forms, önnur leyfa munnlegt með sýnilegri skriflegri tilkynningu. Athugaðu innlendar leiðbeiningar."
+        },
+        {
+          "q": "Hversu marga ofnæmisvalda þarf að tilgreina?",
+          "a": "Fjórtán, talda upp í II. viðauka reglugerðar (ESB) nr. 1169/2011. Listinn er sá sami í öllum ESB-löndum."
+        },
+        {
+          "q": "Dugar \"spyrjið þjóninn\"?",
+          "a": "Aðeins í löndum sem leyfa munnlegar upplýsingar, og aðeins með vel sýnilegri skriflegri tilkynningu auk starfsfólks sem getur raunverulega gefið rétt svar. Eitt og sér dugar það aldrei."
+        },
+        {
+          "q": "En réttir dagsins?",
+          "a": "Sama regla gildir um þá. Þetta er algengasta gatið, því réttir dagsins komast sjaldan í ofnæmismöppuna áður en vaktin hefst."
+        },
+        {
+          "q": "Þarf að þýða ofnæmisvalda fyrir ferðamenn?",
+          "a": "Gesturinn verður að geta skilið upplýsingarnar. Stafrænn matseðill þýðir réttinn og tekur ofnæmismerkingarnar með sér, svo þýska útgáfan getur ekki hljóðlega tapað hnetuviðvöruninni."
+        }
+      ]
+    }
+  ]
+}

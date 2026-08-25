@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "Alergénios no menu: as 14 substâncias da UE | IQ Rest",
+    "description": "Os 14 alergénios que os restaurantes da UE têm de declarar, o que exige mesmo o Regulamento 1169/2011 para alimentos não pré-embalados e como manter a lista certa."
+  },
+  "card": {
+    "title": "Alergénios no menu do restaurante: os 14, a lei e como deixar de os gerir à mão",
+    "excerpt": "O que o Regulamento (UE) 1169/2011 exige dos restaurantes, os 14 alergénios em linguagem simples e porque é o dossiê de alergénios atrás do balcão a peça que falha."
+  },
+  "h1": "Alergénios no menu do restaurante: as 14 substâncias e o que a lei lhe pede",
+  "intro": "Todos os restaurantes da UE têm de conseguir dizer a um cliente se um prato contém algum de 14 alergénios. A regra em si é curta. Difícil é manter a resposta verdadeira depois de o chefe mudar de fornecedor, mudar de caldo ou improvisar uma sugestão do dia — precisamente onde o dossiê em papel se desfaz.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Os 14 alergénios"
+    },
+    {
+      "type": "p",
+      "text": "O Regulamento (UE) n.º 1169/2011 enumera-os no anexo II. São os mesmos em toda a UE e, no Reino Unido, a lista equivalente é idêntica."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Cereais com glúten** — trigo, centeio, cevada, aveia, espelta, kamut e seus híbridos",
+        "**Crustáceos** — camarão, caranguejo, lavagante, lagostim",
+        "**Ovos**",
+        "**Peixe**",
+        "**Amendoins**",
+        "**Soja**",
+        "**Leite**, incluindo lactose",
+        "**Frutos de casca rija** — amêndoa, avelã, noz, caju, noz-pecã, castanha-do-brasil, pistácio, macadâmia",
+        "**Aipo**, incluindo aipo-rábano e sal de aipo",
+        "**Mostarda**, incluindo semente e mostarda em pó",
+        "**Sementes de sésamo**",
+        "**Dióxido de enxofre e sulfitos** acima de 10 mg/kg ou 10 mg/litro",
+        "**Tremoço**",
+        "**Moluscos** — mexilhão, amêijoa, lula, polvo, caracóis"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Este artigo é um resumo prático, não aconselhamento jurídico. As regras nacionais ao abrigo do artigo 44.º diferem quanto à forma de prestar a informação, e a fiscalização cabe à sua autoridade local. Consulte as orientações do seu país."
+    },
+    {
+      "type": "h2",
+      "text": "O que o regulamento exige mesmo num restaurante"
+    },
+    {
+      "type": "p",
+      "text": "A comida vendida não embalada — um prato empratado — cai no artigo 44.º. Em resumo: a informação sobre alergénios tem de estar disponível para o cliente, e cada Estado-Membro decide o meio exato. Alguns países exigem-na por escrito no menu. Outros permitem que seja dada verbalmente, desde que exista um aviso escrito bem visível a dizer ao cliente que pergunte e desde que quem for perguntado saiba mesmo responder."
+    },
+    {
+      "type": "p",
+      "text": "A leitura prática: «pergunte ao empregado» sozinho não chega. Tem de haver um aviso e, por trás do aviso, uma fonte fiável que um jovem de 19 anos no segundo turno consiga ler em dez segundos."
+    },
+    {
+      "type": "h2",
+      "text": "Onde a informação de alergénios corre mesmo mal"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Falha",
+        "Como acontece",
+        "O que se vê na sala"
+      ],
+      "rows": [
+        [
+          "Receita mudou, dossiê não",
+          "O chefe passa a um caldo em cubo com aipo",
+          "O dossiê diz que não leva aipo. Está errado."
+        ],
+        [
+          "As sugestões não estão lá",
+          "O peixe de hoje nunca chega a ter registo",
+          "O empregado adivinha"
+        ],
+        [
+          "Existem duas versões",
+          "Uma cópia no balcão, outra na cozinha",
+          "Contradizem-se e ninguém sabe qual é a mais recente"
+        ],
+        [
+          "Desvio nas traduções",
+          "O menu inglês diz frutos de casca rija, o alemão não",
+          "Só num idioma"
+        ],
+        [
+          "Ninguém o encontra",
+          "O dossiê está debaixo do livro de reservas",
+          "O cliente espera quatro minutos por uma resposta"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Porque um menu digital lida melhor com isto"
+    },
+    {
+      "type": "p",
+      "text": "Não por ser digital, mas porque o dado do alergénio fica ligado ao prato e não a um documento. Altera o prato uma vez e todos os sítios onde ele aparece ficam certos: o telemóvel do cliente, o menu QR impresso, todos os idiomas, as sugestões do dia e qualquer lista que a cozinha imprima. Existe exatamente uma versão, e é a atual."
+    },
+    {
+      "type": "p",
+      "text": "Também deixa o cliente resolver sozinho. Alguém com alergia grave a frutos de casca rija pode filtrar o [menu digital](route:/digital-menu) por si em vez de negociar uma conversa numa sala barulhenta e na sua segunda língua, o que é mais seguro e bastante menos stressante para essa pessoa."
+    },
+    {
+      "type": "h2",
+      "text": "Como completar os alergénios do menu sem perder uma semana"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Comece pela receita, não pelo nome do prato. Uma «salada César» esconde ovo, peixe (anchova), leite e glúten.",
+        "Faça primeiro os molhos e os caldos. São a maior fonte de aipo, mostarda, leite e glúten escondidos, e aparecem em dezenas de pratos.",
+        "Marque cada artigo no próprio sistema do menu, não num documento à parte. Uma fonte, sem desvios.",
+        "Acrescente as sugestões ao mesmo sistema assim que forem escritas no quadro, não no fim do serviço.",
+        "Volte a verificar sempre que mudar um fornecedor. Uma marca diferente do mesmo produto é uma lista de ingredientes diferente.",
+        "Forme a sala em onde procurar, não em decorar as respostas. A memória é o ponto de falha."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Escreva «pode conter vestígios» apenas onde for genuinamente verdade. A rotulagem preventiva em todo o menu torna a informação inútil, e os clientes com alergias reais aprendem a ignorá-la — o que é pior do que não dizer nada."
+    },
+    {
+      "type": "h2",
+      "text": "A contaminação cruzada é outro problema"
+    },
+    {
+      "type": "p",
+      "text": "Declarar bem os alergénios e evitar o contacto numa cozinha pequena são dois trabalhos diferentes. A mesma fritadeira, a mesma pinça, a mesma tábua movem alergénios entre pratos. Seja direto com os clientes sobre o que a sua cozinha consegue e não consegue garantir — um claro «não conseguimos garantir um ambiente sem frutos de casca rija» vale muito mais do que uma promessa que não pode cumprir."
+    },
+    {
+      "type": "cta",
+      "heading": "Um menu, uma lista de alergénios, todos os idiomas",
+      "text": "Marque os alergénios uma vez e ficam certos em todas as mesas, em todos os idiomas, incluindo as sugestões de hoje. 14 dias grátis, sem cartão.",
+      "buttonLabel": "Ver o menu digital",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Perguntas frequentes",
+      "items": [
+        {
+          "q": "Tenho de imprimir os alergénios no próprio menu?",
+          "a": "Depende do seu país. O Regulamento 1169/2011 exige que a informação esteja disponível para alimentos não embalados, e o artigo 44.º deixa o meio a cada Estado-Membro — uns obrigam a escrito, outros permitem verbal com aviso escrito visível. Consulte as orientações nacionais."
+        },
+        {
+          "q": "Quantos alergénios têm de ser declarados?",
+          "a": "Catorze, listados no anexo II do Regulamento (UE) n.º 1169/2011. A lista é a mesma em todos os países da UE."
+        },
+        {
+          "q": "«Pergunte ao empregado» chega?",
+          "a": "Só em países que permitem informação verbal, e apenas com um aviso escrito bem visível e pessoal capaz de dar uma resposta correta. Nunca chega por si só."
+        },
+        {
+          "q": "E as sugestões do dia?",
+          "a": "Estão abrangidas pela mesma regra. É a falha mais comum, porque as sugestões raramente entram no dossiê de alergénios antes de o serviço começar."
+        },
+        {
+          "q": "É preciso traduzir os alergénios para turistas?",
+          "a": "O cliente tem de conseguir compreender a informação. Um menu digital traduz o artigo e leva consigo as marcações de alergénios, por isso a versão alemã não pode perder discretamente o aviso dos frutos de casca rija."
+        }
+      ]
+    }
+  ]
+}

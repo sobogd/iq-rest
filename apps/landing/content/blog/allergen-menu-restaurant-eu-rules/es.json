@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "Alérgenos en la carta: las 14 sustancias en la UE | IQ Rest",
+    "description": "Los 14 alérgenos que los restaurantes de la UE deben declarar, qué exige realmente el Reglamento 1169/2011 para comida no envasada y cómo mantener la lista al día."
+  },
+  "card": {
+    "title": "Alérgenos en la carta de un restaurante: los 14, la ley y cómo dejar de mantenerlo a mano",
+    "excerpt": "Qué exige el Reglamento (UE) 1169/2011 a los restaurantes, los 14 alérgenos en lenguaje llano y por qué la carpeta de alérgenos detrás de la barra es la parte que falla."
+  },
+  "h1": "Alérgenos en la carta de un restaurante: las 14 sustancias y qué te pide la ley",
+  "intro": "Todo restaurante de la UE tiene que poder decirle a un cliente si un plato contiene alguno de 14 alérgenos. La norma en sí es corta. Lo difícil es mantener la respuesta verdadera después de que el cocinero cambie de proveedor, cambie de caldo o improvise una sugerencia del día: justo donde la carpeta de alérgenos en papel se desmorona.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Los 14 alérgenos"
+    },
+    {
+      "type": "p",
+      "text": "El Reglamento (UE) n.º 1169/2011 los enumera en su anexo II. Son los mismos en toda la UE, y en el Reino Unido la lista equivalente es idéntica."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Cereales con gluten**: trigo, centeno, cebada, avena, espelta, kamut y sus híbridos",
+        "**Crustáceos**: gambas, cangrejo, bogavante, cigala",
+        "**Huevos**",
+        "**Pescado**",
+        "**Cacahuetes**",
+        "**Soja**",
+        "**Leche**, incluida la lactosa",
+        "**Frutos de cáscara**: almendra, avellana, nuez, anacardo, pacana, nuez de Brasil, pistacho, macadamia",
+        "**Apio**, incluidos el apionabo y la sal de apio",
+        "**Mostaza**, incluidas la semilla y la mostaza en polvo",
+        "**Granos de sésamo**",
+        "**Dióxido de azufre y sulfitos** por encima de 10 mg/kg o 10 mg/litro",
+        "**Altramuces**",
+        "**Moluscos**: mejillones, almejas, calamar, pulpo, caracoles"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Este artículo es un resumen práctico, no asesoramiento jurídico. Las normas nacionales al amparo del artículo 44 difieren en cómo debe darse la información, y la inspección corre a cargo de tu autoridad local. Consulta la guía de tu país."
+    },
+    {
+      "type": "h2",
+      "text": "Qué exige realmente el reglamento en un restaurante"
+    },
+    {
+      "type": "p",
+      "text": "La comida que vendes sin envasar —un plato emplatado— entra en el artículo 44. En resumen: la información sobre alérgenos debe estar disponible para el cliente, y cada estado miembro decide el medio exacto. Algunos países exigen que conste por escrito en la carta. Otros permiten darla de forma verbal, siempre que haya un aviso escrito bien visible que indique al cliente que pregunte y que la persona a la que pregunte sepa responder."
+    },
+    {
+      "type": "p",
+      "text": "La lectura práctica: «pregunte al camarero» por sí solo no basta. Tiene que haber un cartel, y detrás del cartel una fuente de verdad fiable que un chaval de 19 años en su segundo turno pueda leer en diez segundos."
+    },
+    {
+      "type": "h2",
+      "text": "Dónde falla de verdad la información de alérgenos"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Fallo",
+        "Cómo ocurre",
+        "Qué se ve en sala"
+      ],
+      "rows": [
+        [
+          "Cambió la receta, no la carpeta",
+          "El cocinero pasa a una pastilla de caldo con apio",
+          "La carpeta dice que no lleva apio. Está equivocada."
+        ],
+        [
+          "Las sugerencias no están",
+          "El pescado de hoy nunca llega a tener ficha",
+          "El camarero adivina"
+        ],
+        [
+          "Existen dos versiones",
+          "Una copia en la barra, otra en cocina",
+          "Se contradicen y nadie sabe cuál es la nueva"
+        ],
+        [
+          "Deriva en las traducciones",
+          "La carta en inglés dice frutos secos, la alemana no",
+          "Solo en un idioma"
+        ],
+        [
+          "Nadie la encuentra",
+          "La carpeta está bajo el libro de reservas",
+          "El cliente espera cuatro minutos por una respuesta"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Por qué una carta digital gestiona mejor esto"
+    },
+    {
+      "type": "p",
+      "text": "No porque sea digital, sino porque el dato de alérgenos va unido al plato en lugar de a un documento. Cambias el plato una vez y todo lugar donde aparece queda correcto: el móvil del cliente, la carta QR impresa, todos los idiomas, las sugerencias del día y cualquier lista que imprima la cocina. Hay exactamente una versión, y es la actual."
+    },
+    {
+      "type": "p",
+      "text": "También permite al cliente resolverlo solo. Alguien con alergia grave a los frutos secos puede filtrar la [carta digital](route:/digital-menu) por su cuenta en lugar de negociar una conversación en una sala ruidosa y en su segundo idioma, lo cual es más seguro y bastante menos estresante para él."
+    },
+    {
+      "type": "h2",
+      "text": "Cómo completar los alérgenos de tu carta sin perder una semana"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Empieza por la receta, no por el nombre del plato. Una «ensalada César» esconde huevo, pescado (anchoa), leche y gluten.",
+        "Haz primero las salsas y los fondos. Son la mayor fuente de apio, mostaza, leche y gluten ocultos, y aparecen en decenas de platos.",
+        "Etiqueta cada plato en el propio sistema de la carta, no en un documento aparte. Una sola fuente, sin desfases.",
+        "Añade las sugerencias al mismo sistema en cuanto se escriben en la pizarra, no al acabar el servicio.",
+        "Revísalo cada vez que cambie un proveedor. Una marca distinta del mismo producto es una lista de ingredientes distinta.",
+        "Forma a la sala en dónde mirar, no en memorizar respuestas. La memoria es el punto de fallo."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Escribe «puede contener trazas» solo donde sea cierto de verdad. El etiquetado preventivo en toda la carta hace inútil la información, y los clientes con alergias reales aprenden a ignorarla, lo que es peor que no decir nada."
+    },
+    {
+      "type": "h2",
+      "text": "La contaminación cruzada es otro problema"
+    },
+    {
+      "type": "p",
+      "text": "Declarar bien los alérgenos y evitar el contacto en una cocina pequeña son dos trabajos distintos. La misma freidora, las mismas pinzas, la misma tabla mueven alérgenos entre platos. Sé claro con los clientes sobre lo que tu cocina puede y no puede garantizar: un «no podemos garantizar un entorno libre de frutos secos» honesto vale mucho más que una promesa que no puedes cumplir."
+    },
+    {
+      "type": "cta",
+      "heading": "Una carta, una lista de alérgenos, todos los idiomas",
+      "text": "Etiqueta los alérgenos una vez y seguirán correctos en cada mesa, en cada idioma, incluidas las sugerencias de hoy. 14 días gratis, sin tarjeta.",
+      "buttonLabel": "Ver la carta digital",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Preguntas frecuentes",
+      "items": [
+        {
+          "q": "¿Tengo que imprimir los alérgenos en la propia carta?",
+          "a": "Depende de tu país. El Reglamento 1169/2011 exige que la información esté disponible para la comida no envasada, y el artículo 44 deja el medio a cada estado miembro: algunos obligan a que conste por escrito, otros permiten hacerlo verbalmente con un aviso escrito visible. Consulta la guía nacional."
+        },
+        {
+          "q": "¿Cuántos alérgenos hay que declarar?",
+          "a": "Catorce, recogidos en el anexo II del Reglamento (UE) n.º 1169/2011. La lista es la misma en todos los países de la UE."
+        },
+        {
+          "q": "¿Basta con «pregunte a su camarero»?",
+          "a": "Solo en países que permiten la información verbal, y únicamente con un aviso escrito bien visible y personal capaz de dar una respuesta correcta. Nunca basta por sí solo."
+        },
+        {
+          "q": "¿Y las sugerencias del día?",
+          "a": "Están sujetas a la misma norma. Es el hueco más frecuente, porque las sugerencias rara vez llegan a la carpeta de alérgenos antes de empezar el servicio."
+        },
+        {
+          "q": "¿Hay que traducir los alérgenos para los turistas?",
+          "a": "El cliente tiene que poder entender la información. Una carta digital traduce el plato y arrastra consigo las etiquetas de alérgenos, así que la versión alemana no puede perder el aviso de frutos secos por el camino."
+        }
+      ]
+    }
+  ]
+}
