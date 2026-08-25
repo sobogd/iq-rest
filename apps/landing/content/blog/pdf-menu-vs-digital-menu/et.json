@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "QR PDF-ile ei ole digitaalne menüü | IQ Rest",
+    "description": "PDF-ile viitav QR-kood on kõige levinum ja kõige halvem digimenüü lahendus. Mida see maksab loetavuses, uuendustes, allergeenides ja tellimustes."
+  },
+  "card": {
+    "title": "PDF-il olev QR-kood ei ole digitaalne menüü",
+    "excerpt": "See on lahendus, milleni jõuab esimesena peaaegu igaüks, sest see on tasuta ja võtab veerand tundi. Siin on, mida see sulle vaikselt maksab — ja kaks juhtu, mil see on tõesti õige valik."
+  },
+  "h1": "Miks PDF-ile viitav QR-kood ei ole digitaalne menüü",
+  "intro": "Skaneeri kood enamikus restoranides ja saad PDF-i. See on tasuta, keegi kulutas sellele veerand tundi ja tehniliselt see toimib. Aga PDF on trükitud lehekülg, mis juhtumisi asub ekraanil, ja peaaegu midagi sellest, mida digitaalne menüü peaks tegema, ta ei suuda. Siin on aus arvepidamine.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Probleem 1: keegi ei suuda seda lugeda"
+    },
+    {
+      "type": "p",
+      "text": "Menüü on küljendatud A4 või A3 jaoks. Telefoniekraan on umbes 7 cm lai. PDF avaneb väljasuumituna, kiri on kolm pikslit kõrge ja külaline hakkab suurendama. Kolmanda veeru lugemiseks kerib ta külgsuunas, kaotab koha ära ja suumib uuesti välja, et see üles leida."
+    },
+    {
+      "type": "p",
+      "text": "See ei ole väike tüütus. Just seetõttu küsitakse su personalilt endiselt, mis on risotos: külaline andis PDF-iga alla ja läks tagasi inimeselt küsima. Sa lisasid QR-koodi ja säilitasid kogu senise töökoormuse."
+    },
+    {
+      "type": "h2",
+      "text": "Probleem 2: muutmine on endiselt kujundustöö"
+    },
+    {
+      "type": "p",
+      "text": "Ühe roa hinna tõstmine tähendab lähtefaili avamist, muutmist, PDF-i uuesti eksportimist, samale aadressile üleslaadimist ja kontrollimist, kas kood ikka töötab. Kui kujundusfail on vabakutselise käes, on see e-kiri ja ootamine. Nii lükatakse hinnamuudatus järgmise juurde ja ülejärgmise juurde ning menüü seisab kolm kuud aegunult — täpselt see probleem, mis paberil oli."
+    },
+    {
+      "type": "h2",
+      "text": "Probleem 3: see ei näita, mis täna õhtul toimub"
+    },
+    {
+      "type": "p",
+      "text": "Meriahven sai otsa kell 20.30. PDF ei saa seda teada. Külalised tellivad seda, teenindaja vabandab, külaline otsustab surve all uuesti ja võtab tavaliselt midagi odavamat. Majutatud menüü peidab roa ühe puutega ja keegi ei koge seda auku."
+    },
+    {
+      "type": "h2",
+      "text": "Probleem 4: allergeenid ja keeled korrutavad failid"
+    },
+    {
+      "type": "p",
+      "text": "Turismipiirkonnas on vaja kolme või nelja keelt. See on kolm või neli PDF-i, kolm või neli QR-koodi või valikuks vahelehekülg, ja kolm või neli faili, mida iga hinnamuutuse korral uuesti eksportida. Lisa allergeenide veerg ja iga fail läheb laiemaks, mis teeb telefoniprobleemi hullemaks. Majutatud menüü tõlgib korra ja hoiab [allergeeniandmed](blog:allergen-menu-restaurant-eu-rules) roa küljes, mitte küljenduse küljes."
+    },
+    {
+      "type": "h2",
+      "text": "Probleem 5: Google'i jaoks on see nähtamatu"
+    },
+    {
+      "type": "p",
+      "text": "Inimesed otsivad „paellat pakkuv restoran [sinu linn]“ ja Google vastab indekseeritud tekstist. QR-koodi taga olev PDF pole tavaliselt ei sinu veebilehelt lingitud ega kasulikult roomatav, nii et su roogade nimed ei ilmu kunagi. Majutatud menüüleht on tavaline HTML ja indekseeritakse nagu iga teine leht — paljudel väikestel kohtadel saab sellest teine kõige külastatavam leht, mis neil on."
+    },
+    {
+      "type": "h2",
+      "text": "Probleem 6: see on ummiktee"
+    },
+    {
+      "type": "p",
+      "text": "PDF ei saa tellimust vastu võtta, ei saa sulle öelda, et 40 inimest vaatas degusteerimismenüüd ja keegi ei tellinud seda, ega saa midagi kööki saata. Iga hilisem parandus algab selle asendamisest."
+    },
+    {
+      "type": "h2",
+      "text": "Kõrvuti"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "QR → PDF",
+        "Majutatud digimenüü"
+      ],
+      "rows": [
+        [
+          "Lugemine telefonis",
+          "Suumimine ja lohistamine",
+          "Ehitatud ekraani jaoks"
+        ],
+        [
+          "Hinnamuutus",
+          "Muuda, ekspordi, laadi uuesti",
+          "Muuda üht välja, kohe eetris"
+        ],
+        [
+          "Otsa saanud roog",
+          "Ei ole võimalik",
+          "Peidetud ühe puutega"
+        ],
+        [
+          "Keeled",
+          "Üks fail keele kohta",
+          "Automaatselt"
+        ],
+        [
+          "Allergeeniandmed",
+          "Laiendavad küljendust",
+          "Roa küljes"
+        ],
+        [
+          "Leitav Google'ist",
+          "Praktikas ei",
+          "Jah, indekseeritav leht"
+        ],
+        [
+          "Fotod",
+          "Paisutavad failimahtu",
+          "Laetakse vajaduse järgi"
+        ],
+        [
+          "Saab tellimusi vastu võtta",
+          "Ei",
+          "Jah"
+        ],
+        [
+          "Maksumus",
+          "0 €",
+          "Alates 9,90 €/kuus"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Millal PDF on tõesti õige vastus"
+    },
+    {
+      "type": "p",
+      "text": "Kaks juhtu. Esiteks dokument, mille külaline peab välja printima: banketipakkumine, grupi fikseeritud menüü, toitlustuse hinnakiri. See on dokument ja PDF on dokumentide jaoks õige vorming. Teiseks koht, mille menüü ei muutu kunagi ega kavatsegi: kuue reaga rannabaar kahekuulisel hooajal ei vaja süsteemi."
+    },
+    {
+      "type": "note",
+      "text": "Kui jääd praegu PDF-i juurde, majuta fail vähemalt oma domeenil püsival aadressil, hoia see üheveeruline ja kasuta staatilist QR-koodi. See parandab kaks halvimat viga: loetamatu küljenduse ja koodi, mis sureb koos võõra teenusega."
+    },
+    {
+      "type": "h2",
+      "text": "Kuidas PDF-ist lahkuda ilma menüüd uuesti tippimata"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Tee paberimenüüst foto või lae üles PDF ise.",
+        "IQ Rest loeb selle ja loob kategooriad, road ja hinnad — umbes viis minutit terve õhtu asemel.",
+        "Kontrolli hindu ja paranda see, mille lugemine valesti tõlgendas.",
+        "Suuna olemasolevad QR-koodid uuele menüüle või trüki uued laua kaupa."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Tee PDF-ist päris menüü",
+      "text": "Lae üles oma praegune menüü ja saa telefonis loetav digitaalne versioon umbes viie minutiga. 14 päeva tasuta, ilma kaardita.",
+      "buttonLabel": "Vaata digitaalset menüüd",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Korduma kippuvad küsimused",
+      "items": [
+        {
+          "q": "Kas saan PDF-menüü jaoks tasuta QR-koodi teha?",
+          "a": "Jah, ja see võtab umbes veerand tundi. Kasuta staatilist koodi, mis viitab oma domeeni aadressile, et saaksid faili hiljem ilma uuesti trükkimata välja vahetada."
+        },
+        {
+          "q": "Kas Google indekseerib PDF-menüü?",
+          "a": "Google oskab PDF-faile üldiselt indekseerida, aga menüü-PDF, milleni pääseb ainult trükitud QR-koodi kaudu, ei oma tavaliselt ühtki linki, nii et praktikas ei kuva see roa- ega köögiotsingutes."
+        },
+        {
+          "q": "Aga kui teen PDF-i lihtsalt telefoniformaadis?",
+          "a": "See aitab loetavust ja tasub ära teha. See ei lahenda uuendusi, otsa saanud roogi, keeli, allergeene ega tellimist — lugemisprobleem on alles esimene kuuest."
+        },
+        {
+          "q": "Kas saan majutatud menüüle üle minnes oma kujunduse säilitada?",
+          "a": "Värvid, logo ja roogade nimed tulevad kaasa. Lehe küljendus mitte, sest see ehitatakse telefoniekraani jaoks uuesti — ja just selles ülemineku mõte seisnebki."
+        },
+        {
+          "q": "Kas pean QR-koodid uuesti trükkima?",
+          "a": "Ei, kui su praegune kood viitab aadressile, mida sa ise kontrollid — suunad selle aadressi uuele menüüle. Kui see viitab generaatori domeenile või Drive'i lingile, on uusi koode vaja."
+        }
+      ]
+    }
+  ]
+}

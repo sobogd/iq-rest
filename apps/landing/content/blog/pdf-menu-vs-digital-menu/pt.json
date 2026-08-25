@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "Um QR para um PDF não é um menu digital | IQ Rest",
+    "description": "Um código QR que aponta para um PDF é a montagem mais comum e a pior. O que custa em leitura, atualizações, alergénios e pedidos."
+  },
+  "card": {
+    "title": "Um código QR sobre um PDF não é um menu digital",
+    "excerpt": "É a solução a que quase toda a gente chega primeiro, porque é grátis e demora quinze minutos. Eis o que lhe custa em silêncio — e os dois casos em que é mesmo a escolha certa."
+  },
+  "h1": "Porque um código QR que aponta para um PDF não é um menu digital",
+  "intro": "Leia o código na maioria dos restaurantes e obtém um PDF. É grátis, alguém demorou quinze minutos e tecnicamente funciona. Mas um PDF é uma página impressa que calha estar num ecrã, e quase tudo o que um menu digital deveria fazer, ele não consegue. Aqui fica a conta honesta.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Problema 1: ninguém consegue ler"
+    },
+    {
+      "type": "p",
+      "text": "Um menu é paginado para A4 ou A3. Um ecrã de telemóvel tem cerca de 7 cm de largura. O PDF abre afastado, o tipo de letra tem três pixels de altura e o cliente começa a ampliar. Para ler a terceira coluna desloca-se para o lado, perde o sítio e volta a afastar para o encontrar."
+    },
+    {
+      "type": "p",
+      "text": "Não é um incómodo pequeno. É a razão pela qual continuam a perguntar ao seu pessoal o que leva o risoto: o cliente desistiu do PDF e voltou a perguntar a uma pessoa. Acrescentou um código QR e manteve toda a carga de trabalho anterior."
+    },
+    {
+      "type": "h2",
+      "text": "Problema 2: alterá-lo continua a ser trabalho de design"
+    },
+    {
+      "type": "p",
+      "text": "Subir o preço de um prato significa abrir o ficheiro original, editar, reexportar o PDF, voltar a carregá-lo no mesmo endereço e verificar se o código ainda resolve. Se o ficheiro de design está com um freelancer, é um email e uma espera. Por isso a alteração de preço é agrupada com a seguinte, e com a seguinte, e o seu menu passa três meses desatualizado — exatamente o problema que o papel tinha."
+    },
+    {
+      "type": "h2",
+      "text": "Problema 3: não consegue mostrar o que se passa esta noite"
+    },
+    {
+      "type": "p",
+      "text": "O robalo acabou às 20:30. Um PDF não pode saber isso. Os clientes pedem-no, o empregado pede desculpa, o cliente volta a decidir sob pressão e normalmente escolhe algo mais barato. Um menu alojado esconde o prato num toque e ninguém chega a sentir a falha."
+    },
+    {
+      "type": "h2",
+      "text": "Problema 4: alergénios e idiomas multiplicam os ficheiros"
+    },
+    {
+      "type": "p",
+      "text": "Numa zona turística precisa de três ou quatro idiomas. São três ou quatro PDF, três ou quatro códigos QR ou uma página intermédia para escolher, e três ou quatro ficheiros para reexportar sempre que um preço muda. Junte uma coluna de alergénios e cada ficheiro fica mais largo, o que agrava o problema do telemóvel. Um menu alojado traduz uma vez e mantém a [informação de alergénios](blog:allergen-menu-restaurant-eu-rules) colada ao prato, não a uma paginação."
+    },
+    {
+      "type": "h2",
+      "text": "Problema 5: é invisível para o Google"
+    },
+    {
+      "type": "p",
+      "text": "As pessoas procuram \"restaurante com paelha em [a sua cidade]\" e o Google responde a partir de texto indexado. Um PDF atrás de um código QR normalmente não está ligado a partir do seu site nem é rastreável de forma útil, por isso os nomes dos seus pratos nunca aparecem. Uma página de menu alojada é HTML comum e é indexada como qualquer outra página — para muitos espaços pequenos torna-se a segunda página mais visitada que possuem."
+    },
+    {
+      "type": "h2",
+      "text": "Problema 6: é um beco sem saída"
+    },
+    {
+      "type": "p",
+      "text": "Um PDF não pode aceitar um pedido, não pode dizer-lhe que 40 pessoas viram o menu de degustação e nenhuma o pediu, e não pode enviar nada para a cozinha. Qualquer melhoria que queira depois começa por substituí-lo."
+    },
+    {
+      "type": "h2",
+      "text": "Lado a lado"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "QR → PDF",
+        "Menu digital alojado"
+      ],
+      "rows": [
+        [
+          "Leitura no telemóvel",
+          "Ampliar e arrastar",
+          "Feito para o ecrã"
+        ],
+        [
+          "Mudança de preço",
+          "Editar, exportar, voltar a carregar",
+          "Editar um campo, no ar de imediato"
+        ],
+        [
+          "Prato esgotado",
+          "Não é possível",
+          "Escondido num toque"
+        ],
+        [
+          "Idiomas",
+          "Um ficheiro por idioma",
+          "Automáticos"
+        ],
+        [
+          "Informação de alergénios",
+          "Alarga a paginação",
+          "Colada ao prato"
+        ],
+        [
+          "Encontrável no Google",
+          "Na prática não",
+          "Sim, página indexável"
+        ],
+        [
+          "Fotografias",
+          "Aumentam o tamanho do ficheiro",
+          "Carregadas conforme necessário"
+        ],
+        [
+          "Pode aceitar pedidos",
+          "Não",
+          "Sim"
+        ],
+        [
+          "Custo",
+          "0 €",
+          "A partir de 9,90 €/mês"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Quando o PDF é mesmo a resposta certa"
+    },
+    {
+      "type": "p",
+      "text": "Dois casos. Primeiro, um documento pensado para o cliente imprimir: uma proposta de banquete, um menu fechado de grupo, uma lista de preços de catering. Isso é um documento, e o PDF é o formato correto para documentos. Segundo, um espaço com um menu que nunca muda e sem intenção de mudar: um bar de praia com oito pratos numa época de dois meses não precisa de um sistema."
+    },
+    {
+      "type": "note",
+      "text": "Se por agora fica pelo PDF, aloje ao menos o ficheiro no seu próprio domínio num endereço fixo, mantenha-o a uma só coluna e use um código QR estático. Isso corrige as duas piores falhas: paginação ilegível e um código que morre com um serviço alheio."
+    },
+    {
+      "type": "h2",
+      "text": "Sair do PDF sem voltar a escrever o menu"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Tire uma fotografia ao menu em papel, ou carregue o próprio PDF.",
+        "O IQ Rest lê-o e cria as categorias, os pratos e os preços — cerca de cinco minutos em vez de uma noite.",
+        "Confirme os preços e corrija o que a leitura tenha interpretado mal.",
+        "Aponte os seus códigos QR atuais para o novo menu, ou imprima novos por mesa."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Transforme o seu PDF num menu a sério",
+      "text": "Carregue o seu menu atual e tenha uma versão digital legível no telemóvel em cerca de cinco minutos. 14 dias grátis, sem cartão.",
+      "buttonLabel": "Ver o menu digital",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Perguntas frequentes",
+      "items": [
+        {
+          "q": "Posso criar de graça um código QR para um menu em PDF?",
+          "a": "Sim, e demora cerca de quinze minutos. Use um código estático a apontar para um endereço do seu próprio domínio, para poder substituir o ficheiro mais tarde sem reimprimir."
+        },
+        {
+          "q": "O Google indexa um menu em PDF?",
+          "a": "O Google consegue indexar ficheiros PDF em geral, mas um PDF de menu acessível apenas por um código QR impresso normalmente não tem nada que o ligue, por isso na prática não aparece em pesquisas de pratos ou de cozinha."
+        },
+        {
+          "q": "E se eu simplesmente fizer o PDF em formato de telemóvel?",
+          "a": "Ajuda na legibilidade e vale a pena. Não resolve atualizações, pratos esgotados, idiomas, alergénios nem pedidos — o problema de leitura é apenas o primeiro de seis."
+        },
+        {
+          "q": "Posso manter o meu design ao passar para um menu alojado?",
+          "a": "As cores, o logótipo e os nomes dos pratos mantêm-se. A paginação da página não, porque é reconstruída para um ecrã de telemóvel — que é precisamente o objetivo da mudança."
+        },
+        {
+          "q": "Tenho de reimprimir os códigos QR?",
+          "a": "Não, se o seu código atual apontar para um endereço que controla: redireciona esse endereço para o novo menu. Se apontar para o domínio de um gerador ou para um link do Drive, vai precisar de códigos novos."
+        }
+      ]
+    }
+  ]
+}

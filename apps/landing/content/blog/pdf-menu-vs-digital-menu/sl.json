@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "QR na PDF ni digitalni jedilnik | IQ Rest",
+    "description": "QR koda, ki kaže na PDF, je najpogostejša in najslabša različica digitalnega jedilnika. Koliko vas stane pri branju, posodobitvah, alergenih in naročilih."
+  },
+  "card": {
+    "title": "QR koda na PDF ni digitalni jedilnik",
+    "excerpt": "To je rešitev, do katere najprej pride skoraj vsak, ker je brezplačna in vzame četrt ure. Tu je, kaj vas potiho stane — in dva primera, ko je res prava izbira."
+  },
+  "h1": "Zakaj QR koda, ki kaže na PDF, ni digitalni jedilnik",
+  "intro": "Skenirajte kodo v večini restavracij in dobili boste PDF. Brezplačen je, nekdo je zanj porabil četrt ure in tehnično deluje. A PDF je natisnjena stran, ki se je po naključju znašla na zaslonu, in skoraj ničesar od tega, kar naj bi digitalni jedilnik počel, ne zmore. Tu je poštena bilanca.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Težava 1: nihče ga ne more prebrati"
+    },
+    {
+      "type": "p",
+      "text": "Jedilnik je prelomljen za A4 ali A3. Zaslon telefona je širok približno 7 cm. PDF se naloži pomanjšan, črke so visoke tri slikovne pike, gost pa začne povečevati. Da bi prebral tretji stolpec, drsi vstran, izgubi mesto in spet pomanjša, da ga najde."
+    },
+    {
+      "type": "p",
+      "text": "To ni majhna nevšečnost. To je razlog, da vaše osebje še vedno sprašujejo, kaj je v rižoti: gost je pri PDF-ju obupal in se vrnil k temu, da vpraša človeka. Dodali ste QR kodo in ohranili celotno dosedanjo obremenitev."
+    },
+    {
+      "type": "h2",
+      "text": "Težava 2: spreminjanje ostaja oblikovalsko delo"
+    },
+    {
+      "type": "p",
+      "text": "Dvigniti ceno ene jedi pomeni odpreti izvorno datoteko, urediti, znova izvoziti PDF, ga naložiti na isti naslov in preveriti, ali koda še deluje. Če je oblikovna datoteka pri zunanjem sodelavcu, sta to elektronsko sporočilo in čakanje. Zato se sprememba cene zbere z naslednjo, in še naslednjo, in vaš jedilnik tri mesece visi zastarel — natanko težava, ki jo je imel papir."
+    },
+    {
+      "type": "h2",
+      "text": "Težava 3: ne more pokazati, kaj je nocoj"
+    },
+    {
+      "type": "p",
+      "text": "Brancin je pošel ob 20.30. PDF tega ne more vedeti. Gostje ga naročajo, natakar se opraviči, gost se pod pritiskom odloči znova in običajno vzame nekaj cenejšega. Gostovani jedilnik postavko z enim dotikom skrije in nihče te vrzeli ne doživi."
+    },
+    {
+      "type": "h2",
+      "text": "Težava 4: alergeni in jeziki množijo datoteke"
+    },
+    {
+      "type": "p",
+      "text": "V turističnem kraju potrebujete tri ali štiri jezike. To so trije ali štirje PDF-ji, tri ali štiri QR kode ali vmesna stran za izbiro, in tri ali štiri datoteke za ponovni izvoz ob vsaki spremembi cene. Dodajte stolpec alergenov in vsaka datoteka se razširi, kar poslabša težavo s telefonom. Gostovani jedilnik prevede enkrat in [podatke o alergenih](blog:allergen-menu-restaurant-eu-rules) drži pri postavki, ne pri prelomu."
+    },
+    {
+      "type": "h2",
+      "text": "Težava 5: za Google je neviden"
+    },
+    {
+      "type": "p",
+      "text": "Ljudje iščejo »restavracija s paello v [vaše mesto]« in Google odgovarja iz indeksiranega besedila. PDF za QR kodo običajno ni niti povezan z vaše strani niti uporabno pregledan, zato se imena vaših jedi nikoli ne pojavijo. Gostovana stran jedilnika je navaden HTML in se indeksira kot vsaka druga stran — pri mnogih majhnih lokalih postane druga najbolj obiskana stran, ki jo imajo."
+    },
+    {
+      "type": "h2",
+      "text": "Težava 6: to je slepa ulica"
+    },
+    {
+      "type": "p",
+      "text": "PDF ne more sprejeti naročila, ne more vam povedati, da si je 40 ljudi ogledalo degustacijski meni in ga nihče ni naročil, in ne more ničesar poslati v kuhinjo. Vsaka poznejša izboljšava se začne z njegovo zamenjavo."
+    },
+    {
+      "type": "h2",
+      "text": "Drug ob drugem"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "QR → PDF",
+        "Gostovani digitalni jedilnik"
+      ],
+      "rows": [
+        [
+          "Branje na telefonu",
+          "Povečevanje in vlečenje",
+          "Narejen za zaslon"
+        ],
+        [
+          "Sprememba cene",
+          "Uredi, izvozi, znova naloži",
+          "Uredi eno polje, takoj v živo"
+        ],
+        [
+          "Razprodana jed",
+          "Ni mogoče",
+          "Skrita z enim dotikom"
+        ],
+        [
+          "Jeziki",
+          "Ena datoteka na jezik",
+          "Samodejno"
+        ],
+        [
+          "Podatki o alergenih",
+          "Širijo prelom",
+          "Vezani na postavko"
+        ],
+        [
+          "Najdljivo na Googlu",
+          "V praksi ne",
+          "Da, stran, ki se indeksira"
+        ],
+        [
+          "Fotografije",
+          "Napihujejo velikost datoteke",
+          "Nalagajo se po potrebi"
+        ],
+        [
+          "Lahko sprejme naročila",
+          "Ne",
+          "Da"
+        ],
+        [
+          "Strošek",
+          "0 €",
+          "Od 9,90 €/mes."
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kdaj je PDF res pravi odgovor"
+    },
+    {
+      "type": "p",
+      "text": "Dva primera. Prvič, dokument, ki naj ga gost natisne: ponudba za banket, fiksni meni za skupine, cenik cateringa. To je dokument, in PDF je zanj pravi format. Drugič, lokal z jedilnikom, ki se nikoli ne spremeni in tega niti ne namerava: plažni bar s šestimi postavkami v dvomesečni sezoni ne potrebuje sistema."
+    },
+    {
+      "type": "note",
+      "text": "Če zaenkrat ostajate pri PDF-ju, datoteko vsaj gostujte na lastni domeni na stalnem naslovu, obdržite jo v enem stolpcu in uporabite statično QR kodo. To odpravi dve najhujši napaki: neberljiv prelom in kodo, ki umre skupaj s tujo storitvijo."
+    },
+    {
+      "type": "h2",
+      "text": "Kako z PDF-ja brez ponovnega tipkanja jedilnika"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Fotografirajte papirnati jedilnik ali naložite kar PDF.",
+        "IQ Rest ga prebere in ustvari kategorije, postavke in cene — približno pet minut namesto celega večera.",
+        "Preverite cene in popravite tisto, kar je prepoznavanje prebralo napačno.",
+        "Obstoječe QR kode usmerite na novi jedilnik ali natisnite nove, po eno na mizo."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Iz PDF-ja naredite pravi jedilnik",
+      "text": "Naložite svoj sedanji jedilnik in v približno petih minutah dobite digitalno različico, berljivo na telefonu. 14 dni brezplačno, brez kartice.",
+      "buttonLabel": "Poglejte digitalni jedilnik",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Pogosta vprašanja",
+      "items": [
+        {
+          "q": "Ali lahko brezplačno naredim QR kodo za jedilnik v PDF-ju?",
+          "a": "Da, in vzame približno četrt ure. Uporabite statično kodo, ki kaže na naslov na vaši domeni, da boste datoteko pozneje lahko zamenjali brez ponovnega tiskanja."
+        },
+        {
+          "q": "Ali Google indeksira jedilnik v PDF-ju?",
+          "a": "Google na splošno zna indeksirati datoteke PDF, a PDF jedilnika, dosegljiv samo prek natisnjene QR kode, običajno nima nobene povezave nase, zato se v praksi ne uvršča pri iskanju jedi ali kuhinje."
+        },
+        {
+          "q": "Kaj pa če PDF preprosto naredim v telefonskem formatu?",
+          "a": "To pomaga berljivosti in se splača. Ne reši pa posodobitev, razprodanih jedi, jezikov, alergenov ali naročanja — težava z branjem je šele prva od šestih."
+        },
+        {
+          "q": "Ali lahko ob prehodu na gostovani jedilnik obdržim svoje oblikovanje?",
+          "a": "Barve, logotip in imena jedi ostanejo. Prelom strani ne, ker se znova zgradi za zaslon telefona — in prav v tem je smisel prehoda."
+        },
+        {
+          "q": "Ali moram QR kode znova natisniti?",
+          "a": "Ne, če vaša sedanja koda kaže na naslov, ki ga nadzorujete: ta naslov preusmerite na novi jedilnik. Če kaže na domeno generatorja ali na povezavo Drive, boste potrebovali nove kode."
+        }
+      ]
+    }
+  ]
+}

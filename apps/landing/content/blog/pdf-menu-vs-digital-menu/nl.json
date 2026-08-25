@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "Een QR naar een pdf is geen digitaal menu | IQ Rest",
+    "description": "Een QR-code die naar een pdf wijst is de meest gebruikte digitale menu-opzet en de slechtste. Wat het kost aan leesbaarheid, updates, allergenen en bestellingen."
+  },
+  "card": {
+    "title": "Een QR-code op een pdf is geen digitaal menu",
+    "excerpt": "Het is de opzet waar bijna iedereen eerst bij uitkomt, want hij is gratis en kost een kwartier. Dit is wat hij je stilletjes kost — en de twee gevallen waarin hij echt de juiste keuze is."
+  },
+  "h1": "Waarom een QR-code naar een pdf geen digitaal menu is",
+  "intro": "Scan de code in de meeste restaurants en je krijgt een pdf. Het is gratis, iemand deed er een kwartier over, en technisch werkt het. Maar een pdf is een gedrukte pagina die toevallig op een scherm staat, en bijna alles wat een digitaal menu hoort te doen, kan hij niet. Hier is de eerlijke rekening.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Probleem 1: niemand kan het lezen"
+    },
+    {
+      "type": "p",
+      "text": "Een kaart is opgemaakt voor A4 of A3. Een telefoonscherm is ongeveer 7 cm breed. De pdf laadt uitgezoomd, de letters zijn drie pixels hoog, en de gast begint te knijpen. Voor de derde kolom scrollt hij zijwaarts, raakt zijn plek kwijt en zoomt weer uit om die terug te vinden."
+    },
+    {
+      "type": "p",
+      "text": "Dat is geen kleine ergernis. Het is de reden dat je personeel nog steeds gevraagd wordt wat er in de risotto zit: de gast gaf het op met de pdf en vroeg het weer aan een mens. Je hebt een QR-code toegevoegd en al het oude werk behouden."
+    },
+    {
+      "type": "h2",
+      "text": "Probleem 2: aanpassen blijft een ontwerpklus"
+    },
+    {
+      "type": "p",
+      "text": "De prijs van één gerecht verhogen betekent: bronbestand openen, aanpassen, pdf opnieuw exporteren, opnieuw uploaden naar dezelfde URL en controleren of de code nog werkt. Ligt het ontwerpbestand bij een freelancer, dan is het een mail en wachten. Dus wordt de prijswijziging gebundeld met de volgende, en de volgende, en staat je kaart drie maanden verouderd online — precies het probleem dat papier had."
+    },
+    {
+      "type": "h2",
+      "text": "Probleem 3: hij kan niet laten zien wat er vanavond speelt"
+    },
+    {
+      "type": "p",
+      "text": "De zeebaars was om 20.30 uur op. Een pdf kan dat niet weten. Gasten bestellen hem, de bediening biedt excuses aan, de gast kiest onder druk opnieuw en pakt meestal iets goedkopers. Een gehost menu verbergt het gerecht met één tik en niemand merkt het gat."
+    },
+    {
+      "type": "h2",
+      "text": "Probleem 4: allergenen en talen vermenigvuldigen de bestanden"
+    },
+    {
+      "type": "p",
+      "text": "In een toeristische omgeving heb je drie of vier talen nodig. Dat zijn drie of vier pdf's, drie of vier QR-codes of een tussenpagina om te kiezen, en drie of vier bestanden die je opnieuw exporteert bij elke prijswijziging. Voeg een allergenenkolom toe en elk bestand wordt breder, wat het telefoonprobleem verergert. Een gehost menu vertaalt één keer en houdt de [allergeneninformatie](blog:allergen-menu-restaurant-eu-rules) aan het gerecht gekoppeld, niet aan een opmaak."
+    },
+    {
+      "type": "h2",
+      "text": "Probleem 5: hij is onzichtbaar voor Google"
+    },
+    {
+      "type": "p",
+      "text": "Mensen zoeken op \"restaurant met paella in [jouw stad]\" en Google antwoordt met geïndexeerde tekst. Een pdf achter een QR-code is meestal noch vanaf je site gelinkt, noch bruikbaar te crawlen, dus je gerechtnamen komen nergens voor. Een gehoste menupagina is gewone HTML en wordt geïndexeerd als elke andere pagina — voor veel kleine zaken wordt het de op één na best bezochte pagina die ze hebben."
+    },
+    {
+      "type": "h2",
+      "text": "Probleem 6: het is een doodlopende weg"
+    },
+    {
+      "type": "p",
+      "text": "Een pdf kan geen bestelling aannemen, kan je niet vertellen dat 40 mensen het proefmenu bekeken en niemand het bestelde, en kan niets naar de keuken sturen. Elke verbetering die je later wilt, begint met hem vervangen."
+    },
+    {
+      "type": "h2",
+      "text": "Naast elkaar"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "QR → pdf",
+        "Gehost digitaal menu"
+      ],
+      "rows": [
+        [
+          "Lezen op de telefoon",
+          "Knijpen en zoomen",
+          "Gemaakt voor het scherm"
+        ],
+        [
+          "Prijswijziging",
+          "Aanpassen, exporteren, uploaden",
+          "Eén veld aanpassen, direct live"
+        ],
+        [
+          "Uitverkocht gerecht",
+          "Niet mogelijk",
+          "Verborgen met één tik"
+        ],
+        [
+          "Talen",
+          "Eén bestand per taal",
+          "Automatisch"
+        ],
+        [
+          "Allergeneninformatie",
+          "Maakt de opmaak breder",
+          "Gekoppeld aan het gerecht"
+        ],
+        [
+          "Vindbaar via Google",
+          "In de praktijk niet",
+          "Ja, indexeerbare pagina"
+        ],
+        [
+          "Foto's",
+          "Blazen het bestand op",
+          "Geladen wanneer nodig"
+        ],
+        [
+          "Kan bestellingen aannemen",
+          "Nee",
+          "Ja"
+        ],
+        [
+          "Kosten",
+          "€ 0",
+          "Vanaf € 9,90/maand"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Wanneer een pdf echt het juiste antwoord is"
+    },
+    {
+      "type": "p",
+      "text": "Twee gevallen. Ten eerste een document dat de gast moet uitprinten: een banketvoorstel, een groepsmenu, een cateringprijslijst. Dat is een document, en pdf is het juiste formaat voor documenten. Ten tweede een zaak met een kaart die nooit verandert en dat ook niet van plan is: een strandtent met zes gerechten in een seizoen van twee maanden heeft geen systeem nodig."
+    },
+    {
+      "type": "note",
+      "text": "Blijf je voorlopig bij de pdf, host het bestand dan in elk geval op je eigen domein op een vast adres, houd het één kolom breed en gebruik een statische QR-code. Dat lost de twee ergste problemen op: onleesbare opmaak en een code die sterft met een dienst van een ander."
+    },
+    {
+      "type": "h2",
+      "text": "Van de pdf af zonder de kaart over te typen"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Maak een foto van de papieren kaart, of upload de pdf zelf.",
+        "IQ Rest leest hem en maakt de categorieën, gerechten en prijzen aan — ongeveer vijf minuten in plaats van een hele avond.",
+        "Controleer de prijzen en corrigeer wat de scan verkeerd las.",
+        "Laat je bestaande QR-codes naar het nieuwe menu wijzen, of druk nieuwe per tafel."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Maak van je pdf een echt menu",
+      "text": "Upload je huidige kaart en krijg binnen ongeveer vijf minuten een digitale versie die op een telefoon leesbaar is. 14 dagen gratis, zonder creditcard.",
+      "buttonLabel": "Bekijk het digitale menu",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Veelgestelde vragen",
+      "items": [
+        {
+          "q": "Kan ik gratis een QR-code voor een pdf-menu maken?",
+          "a": "Ja, en het kost ongeveer een kwartier. Gebruik een statische code die naar een URL op je eigen domein wijst, zodat je het bestand later kunt vervangen zonder opnieuw te drukken."
+        },
+        {
+          "q": "Indexeert Google een pdf-menu?",
+          "a": "Google kan pdf-bestanden in het algemeen indexeren, maar een menu-pdf die alleen via een gedrukte QR-code bereikbaar is, heeft meestal geen enkele link ernaartoe, dus in de praktijk scoort hij niet op gerecht- of keukenzoekopdrachten."
+        },
+        {
+          "q": "En als ik de pdf gewoon in telefoonformaat maak?",
+          "a": "Dat helpt voor de leesbaarheid en is de moeite waard. Het lost updates, uitverkochte gerechten, talen, allergenen en bestellen niet op — het leesprobleem is pas het eerste van zes."
+        },
+        {
+          "q": "Kan ik mijn ontwerp behouden bij een gehost menu?",
+          "a": "Kleuren, logo en gerechtnamen gaan mee. De pagina-opmaak niet, want die wordt opnieuw gebouwd voor een telefoonscherm — en dat is precies het punt van de overstap."
+        },
+        {
+          "q": "Moet ik mijn QR-codes opnieuw drukken?",
+          "a": "Niet als je huidige code naar een URL wijst die jij beheert — dan stuur je dat adres door naar het nieuwe menu. Wijst hij naar het domein van een generator of naar een Drive-link, dan heb je nieuwe codes nodig."
+        }
+      ]
+    }
+  ]
+}

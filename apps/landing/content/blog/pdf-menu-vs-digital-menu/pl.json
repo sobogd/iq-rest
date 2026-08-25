@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "QR do PDF-a to nie jest cyfrowe menu | IQ Rest",
+    "description": "Kod QR prowadzący do PDF-a to najczęstsze i najgorsze rozwiązanie. Ile kosztuje cię w czytelności, aktualizacjach, alergenach i zamówieniach."
+  },
+  "card": {
+    "title": "Kod QR na PDF-ie to nie jest cyfrowe menu",
+    "excerpt": "To rozwiązanie, na które najpierw trafia niemal każdy, bo jest darmowe i zajmuje kwadrans. Oto, ile cię po cichu kosztuje — i dwa przypadki, w których naprawdę jest właściwe."
+  },
+  "h1": "Dlaczego kod QR prowadzący do PDF-a nie jest cyfrowym menu",
+  "intro": "Zeskanuj kod w większości restauracji, a dostaniesz PDF. Jest za darmo, ktoś poświęcił na to kwadrans i technicznie działa. Ale PDF to wydrukowana kartka, która akurat znalazła się na ekranie, i prawie wszystkiego, co cyfrowe menu powinno robić, nie potrafi. Oto uczciwe podsumowanie.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Problem 1: nikt nie może tego przeczytać"
+    },
+    {
+      "type": "p",
+      "text": "Karta jest łamana pod A4 albo A3. Ekran telefonu ma około 7 cm szerokości. PDF ładuje się oddalony, litery mają trzy piksele wysokości, a gość zaczyna rozsuwać palce. Żeby przeczytać trzecią kolumnę, przewija w bok, gubi miejsce i znów oddala widok, żeby je znaleźć."
+    },
+    {
+      "type": "p",
+      "text": "To nie jest drobna niedogodność. To powód, dla którego twoi ludzie wciąż słyszą pytanie, co jest w risotto: gość poddał się przy PDF-ie i wrócił do pytania człowieka. Dodałeś kod QR i zachowałeś całą dotychczasową robotę."
+    },
+    {
+      "type": "h2",
+      "text": "Problem 2: zmiana wciąż jest zadaniem dla grafika"
+    },
+    {
+      "type": "p",
+      "text": "Podniesienie ceny jednego dania oznacza otwarcie pliku źródłowego, edycję, ponowny eksport PDF-a, wgranie go pod ten sam adres i sprawdzenie, czy kod nadal działa. Jeśli plik graficzny ma freelancer, to mail i czekanie. Więc zmiana ceny czeka na następną, i jeszcze następną, a twoja karta przez trzy miesiące jest nieaktualna — dokładnie ten sam problem, który miał papier."
+    },
+    {
+      "type": "h2",
+      "text": "Problem 3: nie pokaże, co dzieje się dziś wieczorem"
+    },
+    {
+      "type": "p",
+      "text": "Labraks skończył się o 20:30. PDF nie może o tym wiedzieć. Goście go zamawiają, kelner przeprasza, gość pod presją wybiera od nowa i zwykle bierze coś tańszego. Hostowane menu chowa pozycję jednym dotknięciem i nikt tej luki nie doświadcza."
+    },
+    {
+      "type": "h2",
+      "text": "Problem 4: alergeny i języki mnożą pliki"
+    },
+    {
+      "type": "p",
+      "text": "W miejscu turystycznym potrzebujesz trzech albo czterech języków. To trzy albo cztery PDF-y, trzy albo cztery kody QR lub strona pośrednia do wyboru, i trzy albo cztery pliki do ponownego eksportu przy każdej zmianie ceny. Dodaj kolumnę alergenów, a każdy plik robi się szerszy, co pogłębia problem z telefonem. Hostowane menu tłumaczy raz i trzyma [informacje o alergenach](blog:allergen-menu-restaurant-eu-rules) przy pozycji, a nie przy układzie graficznym."
+    },
+    {
+      "type": "h2",
+      "text": "Problem 5: jest niewidoczny dla Google"
+    },
+    {
+      "type": "p",
+      "text": "Ludzie szukają \"restauracja z paellą w [twoje miasto]\", a Google odpowiada z zaindeksowanego tekstu. PDF za kodem QR zwykle nie jest ani podlinkowany z twojej strony, ani sensownie indeksowalny, więc nazwy twoich dań nigdy się nie pojawiają. Hostowana strona menu to zwykły HTML i jest indeksowana jak każda inna strona — dla wielu małych lokali staje się drugą najczęściej odwiedzaną stroną, jaką mają."
+    },
+    {
+      "type": "h2",
+      "text": "Problem 6: to ślepa uliczka"
+    },
+    {
+      "type": "p",
+      "text": "PDF nie przyjmie zamówienia, nie powie ci, że 40 osób obejrzało menu degustacyjne i nikt go nie zamówił, i nie wyśle niczego do kuchni. Każde późniejsze ulepszenie zaczyna się od jego wymiany."
+    },
+    {
+      "type": "h2",
+      "text": "Zestawienie"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "QR → PDF",
+        "Hostowane cyfrowe menu"
+      ],
+      "rows": [
+        [
+          "Czytanie na telefonie",
+          "Rozsuwanie i przesuwanie",
+          "Zrobione pod ekran"
+        ],
+        [
+          "Zmiana ceny",
+          "Edycja, eksport, wgranie",
+          "Edycja pola, od razu na żywo"
+        ],
+        [
+          "Danie niedostępne",
+          "Niemożliwe",
+          "Ukryte jednym dotknięciem"
+        ],
+        [
+          "Języki",
+          "Osobny plik na język",
+          "Automatyczne"
+        ],
+        [
+          "Informacja o alergenach",
+          "Poszerza układ",
+          "Przypięta do pozycji"
+        ],
+        [
+          "Znajdowalne w Google",
+          "W praktyce nie",
+          "Tak, strona do zaindeksowania"
+        ],
+        [
+          "Zdjęcia",
+          "Rozdmuchują rozmiar pliku",
+          "Ładowane w miarę potrzeby"
+        ],
+        [
+          "Może przyjmować zamówienia",
+          "Nie",
+          "Tak"
+        ],
+        [
+          "Koszt",
+          "0 €",
+          "Od 9,90 €/mies."
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kiedy PDF naprawdę jest właściwą odpowiedzią"
+    },
+    {
+      "type": "p",
+      "text": "Dwa przypadki. Po pierwsze, dokument przeznaczony do wydrukowania przez gościa: oferta bankietowa, menu grupowe, cennik cateringowy. To jest dokument, a PDF to właściwy format dla dokumentów. Po drugie, lokal z kartą, która nigdy się nie zmienia i nie ma zamiaru się zmieniać: bar plażowy z sześcioma pozycjami w dwumiesięcznym sezonie nie potrzebuje systemu."
+    },
+    {
+      "type": "note",
+      "text": "Jeśli na razie zostajesz przy PDF-ie, przynajmniej trzymaj plik na własnej domenie pod stałym adresem, zrób go jednokolumnowy i użyj statycznego kodu QR. To naprawia dwa najgorsze błędy: nieczytelny układ i kod, który umiera razem z cudzą usługą."
+    },
+    {
+      "type": "h2",
+      "text": "Jak zejść z PDF-a bez przepisywania karty"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Zrób zdjęcie papierowej karty albo wgraj sam PDF.",
+        "IQ Rest odczyta go i utworzy kategorie, pozycje i ceny — około pięciu minut zamiast całego wieczoru.",
+        "Sprawdź ceny i popraw to, co odczyt źle zinterpretował.",
+        "Skieruj istniejące kody QR na nowe menu albo wydrukuj nowe, po jednym na stolik."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Zamień PDF w prawdziwe menu",
+      "text": "Wgraj obecną kartę i miej czytelną na telefonie wersję cyfrową w jakieś pięć minut. 14 dni za darmo, bez karty.",
+      "buttonLabel": "Zobacz cyfrowe menu",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Najczęstsze pytania",
+      "items": [
+        {
+          "q": "Czy mogę za darmo zrobić kod QR do menu w PDF?",
+          "a": "Tak, i zajmuje to jakieś piętnaście minut. Użyj statycznego kodu prowadzącego pod adres we własnej domenie, żeby móc później wymienić plik bez przedruku."
+        },
+        {
+          "q": "Czy Google indeksuje menu w PDF?",
+          "a": "Google potrafi indeksować pliki PDF w ogóle, ale PDF z kartą dostępny wyłącznie przez wydrukowany kod QR zwykle nie ma żadnych linków, więc w praktyce nie pojawia się w wynikach na dania czy kuchnię."
+        },
+        {
+          "q": "A jeśli po prostu zrobię PDF w formacie telefonu?",
+          "a": "To pomaga w czytelności i warto to zrobić. Nie rozwiązuje aktualizacji, dań niedostępnych, języków, alergenów ani zamawiania — problem czytania to dopiero pierwszy z sześciu."
+        },
+        {
+          "q": "Czy zachowam swój projekt graficzny przy przejściu na menu hostowane?",
+          "a": "Kolory, logo i nazwy dań zostają. Układ strony nie, bo jest budowany od nowa pod ekran telefonu — i o to właśnie w tej zmianie chodzi."
+        },
+        {
+          "q": "Czy muszę przedrukować kody QR?",
+          "a": "Nie, jeśli obecny kod prowadzi pod adres, który kontrolujesz — przekierowujesz ten adres na nowe menu. Jeśli prowadzi na domenę generatora albo do linku z Dysku, będziesz potrzebować nowych kodów."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "Un QR a un PDF no és una carta digital | IQ Rest",
+    "description": "Un codi QR que apunta a un PDF és el muntatge més comú i el pitjor. Què et costa en lectura, actualitzacions, al·lèrgens i comandes."
+  },
+  "card": {
+    "title": "Un codi QR sobre un PDF no és una carta digital",
+    "excerpt": "És el muntatge al qual arriba primer gairebé tothom, perquè és gratis i triga quinze minuts. Això és el que et costa en silenci, i els dos casos en què és la decisió correcta."
+  },
+  "h1": "Per què un codi QR que apunta a un PDF no és una carta digital",
+  "intro": "Escaneja el codi a la majoria de restaurants i et surt un PDF. És gratis, algú hi va dedicar quinze minuts i tècnicament funciona. Però un PDF és una pàgina impresa que resulta que és en una pantalla, i gairebé tot el que se suposa que fa una carta digital, no ho pot fer. Aquí va el balanç honest.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Problema 1: ningú no el pot llegir"
+    },
+    {
+      "type": "p",
+      "text": "Una carta està maquetada per a A4 o A3. Una pantalla de mòbil fa uns 7 cm d'ample. El PDF carrega allunyat, la tipografia fa tres píxels d'alt i el client comença a pessigar. Per llegir la tercera columna es desplaça de costat, perd el lloc i torna a allunyar la vista per trobar-lo."
+    },
+    {
+      "type": "p",
+      "text": "No és una molèstia petita. És la raó per la qual al teu personal encara li pregunten què porta el risotto: el client es va rendir amb el PDF i va tornar a preguntar a una persona. Has afegit un codi QR i has conservat tota la càrrega de feina anterior."
+    },
+    {
+      "type": "h2",
+      "text": "Problema 2: canviar-lo continua sent una feina de disseny"
+    },
+    {
+      "type": "p",
+      "text": "Apujar el preu d'un plat vol dir obrir el fitxer original, editar, reexportar el PDF, tornar-lo a pujar a la mateixa adreça i comprovar que el codi encara funciona. Si el fitxer de disseny el té un autònom, això és un correu i una espera. Així que el canvi de preu s'agrupa amb el següent, i el següent, i la teva carta passa tres mesos desfasada: exactament el problema que tenia el paper."
+    },
+    {
+      "type": "h2",
+      "text": "Problema 3: no pot mostrar què passa aquesta nit"
+    },
+    {
+      "type": "p",
+      "text": "El llobarro es va acabar a les 20:30. Un PDF no ho pot saber. Els clients el demanen, el cambrer es disculpa, el client torna a decidir sota pressió i normalment tria alguna cosa més barata. Una carta allotjada amaga el plat amb un toc i ningú no arriba a notar el buit."
+    },
+    {
+      "type": "h2",
+      "text": "Problema 4: al·lèrgens i idiomes multipliquen els fitxers"
+    },
+    {
+      "type": "p",
+      "text": "En zona turística necessites tres o quatre idiomes. Això són tres o quatre PDF, tres o quatre codis QR o una pàgina intermèdia per triar, i tres o quatre fitxers per reexportar cada vegada que es mou un preu. Afegeix una columna d'al·lèrgens i cada fitxer s'eixampla, cosa que empitjora el problema del mòbil. Una carta allotjada tradueix una vegada i manté la [informació d'al·lèrgens](blog:allergen-menu-restaurant-eu-rules) enganxada al plat, no a una maquetació."
+    },
+    {
+      "type": "h2",
+      "text": "Problema 5: és invisible per a Google"
+    },
+    {
+      "type": "p",
+      "text": "La gent cerca \"restaurant amb paella a [la teva ciutat]\" i Google respon amb text indexat. Un PDF darrere d'un codi QR normalment ni està enllaçat des del teu web ni és rastrejable de manera útil, així que els noms dels teus plats no apareixen mai. Una carta allotjada és HTML corrent i s'indexa com qualsevol altra pàgina: per a molts locals petits acaba sent la segona pàgina més visitada que tenen."
+    },
+    {
+      "type": "h2",
+      "text": "Problema 6: és un carreró sense sortida"
+    },
+    {
+      "type": "p",
+      "text": "Un PDF no pot prendre una comanda, no et pot dir que 40 persones van mirar el menú de degustació i cap el va demanar, i no pot enviar res a cuina. Qualsevol millora que vulguis després comença per substituir-lo."
+    },
+    {
+      "type": "h2",
+      "text": "Comparació directa"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "QR → PDF",
+        "Carta digital allotjada"
+      ],
+      "rows": [
+        [
+          "Lectura al mòbil",
+          "Pessigar i ampliar",
+          "Pensada per a la pantalla"
+        ],
+        [
+          "Canvi de preu",
+          "Editar, exportar, tornar a pujar",
+          "Editar un camp, en directe a l'instant"
+        ],
+        [
+          "Plat esgotat",
+          "No és possible",
+          "S'amaga amb un toc"
+        ],
+        [
+          "Idiomes",
+          "Un fitxer per idioma",
+          "Automàtics"
+        ],
+        [
+          "Informació d'al·lèrgens",
+          "Eixampla la maquetació",
+          "Va enganxada al plat"
+        ],
+        [
+          "Trobable a Google",
+          "A la pràctica, no",
+          "Sí, pàgina indexable"
+        ],
+        [
+          "Fotos",
+          "Infla la mida del fitxer",
+          "Es carreguen quan cal"
+        ],
+        [
+          "Pot prendre comandes",
+          "No",
+          "Sí"
+        ],
+        [
+          "Cost",
+          "0 €",
+          "Des de 9,90 €/mes"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Quan el PDF sí que és la resposta correcta"
+    },
+    {
+      "type": "p",
+      "text": "Dos casos. Primer, un document pensat perquè el client l'imprimeixi: una proposta de banquet, un menú tancat de grup, una llista de preus de càtering. Això és un document, i el PDF és el format correcte per a documents. Segon, un local amb una carta que no canvia mai i sense intenció de canviar-la: un xiringuito de vuit plats en una temporada de dos mesos no necessita cap sistema."
+    },
+    {
+      "type": "note",
+      "text": "Si de moment et quedes amb el PDF, allotja com a mínim el fitxer al teu propi domini en una adreça fixa, mantén-lo a una sola columna i fes servir un codi QR estàtic. Això arregla els dos pitjors errors: maquetació il·legible i un codi que mor amb un servei aliè."
+    },
+    {
+      "type": "h2",
+      "text": "Sortir del PDF sense tornar a teclejar la carta"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Fes una foto de la carta en paper, o puja el mateix PDF.",
+        "IQ Rest el llegeix i crea les categories, els plats i els preus: uns cinc minuts en lloc d'una tarda sencera.",
+        "Revisa els preus i corregeix el que l'escaneig hagi llegit malament.",
+        "Apunta els teus codis QR actuals a la nova carta, o imprimeix-ne de nous per taula."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Converteix el teu PDF en una carta de debò",
+      "text": "Puja la teva carta actual i tingues una versió digital llegible al mòbil en uns cinc minuts. 14 dies gratis, sense targeta.",
+      "buttonLabel": "Veure la carta digital",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Preguntes freqüents",
+      "items": [
+        {
+          "q": "Puc fer gratis un codi QR per a una carta en PDF?",
+          "a": "Sí, i triga uns quinze minuts. Fes servir un codi estàtic que apunti a una adreça del teu propi domini, per poder substituir el fitxer més endavant sense reimprimir."
+        },
+        {
+          "q": "Google indexa una carta en PDF?",
+          "a": "Google pot indexar fitxers PDF en general, però un PDF de carta al qual només s'arriba per un codi QR imprès normalment no té res que l'enllaci, així que a la pràctica no es posiciona per cerques de plats o de cuina."
+        },
+        {
+          "q": "I si simplement faig el PDF amb format de mòbil?",
+          "a": "Ajuda amb la llegibilitat i val la pena fer-ho. No arregla les actualitzacions, els plats esgotats, els idiomes, els al·lèrgens ni les comandes: el problema de lectura només és el primer de sis."
+        },
+        {
+          "q": "Puc conservar el meu disseny si passo a una carta allotjada?",
+          "a": "Els colors, el logotip i els noms dels plats es mantenen. La maquetació de la pàgina no, perquè es reconstrueix per a una pantalla de mòbil, que és justament el motiu del canvi."
+        },
+        {
+          "q": "He de reimprimir els codis QR?",
+          "a": "No, si el teu codi actual apunta a una adreça que controles: redirigeixes aquesta adreça a la nova carta. Si apunta al domini d'un generador o a un enllaç de Drive, necessitaràs codis nous."
+        }
+      ]
+    }
+  ]
+}

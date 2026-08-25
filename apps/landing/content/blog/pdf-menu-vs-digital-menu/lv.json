@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "QR uz PDF nav digitāla ēdienkarte | IQ Rest",
+    "description": "QR kods, kas norāda uz PDF, ir visizplatītākais un vissliktākais digitālās ēdienkartes risinājums. Cik tas maksā lasāmībā, atjauninājumos, alergēnos un pasūtījumos."
+  },
+  "card": {
+    "title": "QR kods uz PDF nav digitāla ēdienkarte",
+    "excerpt": "Šis ir risinājums, pie kura vispirms nonāk gandrīz visi, jo tas ir bez maksas un aizņem ceturtdaļstundu. Lūk, cik tas tev klusi maksā — un divi gadījumi, kad tā tiešām ir pareizā izvēle."
+  },
+  "h1": "Kāpēc QR kods, kas norāda uz PDF, nav digitāla ēdienkarte",
+  "intro": "Noskenē kodu lielākajā daļā restorānu, un tu saņem PDF. Tas ir bez maksas, kāds tam veltīja ceturtdaļstundu, un tehniski tas darbojas. Bet PDF ir izdrukāta lapa, kas nejauši atrodas uz ekrāna, un gandrīz nekas no tā, kas digitālai ēdienkartei būtu jādara, tai neizdodas. Lūk, godīgs aprēķins.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "1. problēma: neviens to nespēj izlasīt"
+    },
+    {
+      "type": "p",
+      "text": "Ēdienkarte ir salikta A4 vai A3 formātam. Telefona ekrāns ir aptuveni 7 cm plats. PDF ielādējas attālināts, burti ir trīs pikseļus augsti, un viesis sāk tuvināt. Lai izlasītu trešo sleju, viņš ritina uz sāniem, pazaudē vietu un atkal attālina, lai to atrastu."
+    },
+    {
+      "type": "p",
+      "text": "Tas nav sīkums. Tieši tāpēc tavam personālam joprojām jautā, kas ir risoto: viesis padevās PDF priekšā un atgriezās pie tā, ka jautā cilvēkam. Tu pievienoji QR kodu un saglabāji visu iepriekšējo slodzi."
+    },
+    {
+      "type": "h2",
+      "text": "2. problēma: mainīšana joprojām ir dizainera darbs"
+    },
+    {
+      "type": "p",
+      "text": "Pacelt viena ēdiena cenu nozīmē atvērt sākotnējo failu, labot, no jauna eksportēt PDF, augšupielādēt to tajā pašā adresē un pārbaudīt, vai kods vēl darbojas. Ja dizaina fails ir pie ārštata darbinieka, tas ir e-pasts un gaidīšana. Tāpēc cenas maiņa gaida nākamo, un vēl nākamo, un tava ēdienkarte trīs mēnešus stāv novecojusi — tieši tā problēma, kāda bija papīram."
+    },
+    {
+      "type": "h2",
+      "text": "3. problēma: tā nevar parādīt, kas notiek šovakar"
+    },
+    {
+      "type": "p",
+      "text": "Jūras asaris beidzās plkst. 20.30. PDF to nevar zināt. Viesi to pasūta, viesmīlis atvainojas, viesis zem spiediena izvēlas no jauna un parasti paņem ko lētāku. Mitināta ēdienkarte paslēpj pozīciju ar vienu pieskārienu, un neviens to robu nepiedzīvo."
+    },
+    {
+      "type": "h2",
+      "text": "4. problēma: alergēni un valodas pavairo failus"
+    },
+    {
+      "type": "p",
+      "text": "Tūristu vietā tev vajag trīs vai četras valodas. Tie ir trīs vai četri PDF, trīs vai četri QR kodi vai starplapa izvēlei, un trīs vai četri faili, kas jāeksportē no jauna ik reizi, kad mainās cena. Pievieno alergēnu kolonnu, un katrs fails kļūst platāks, kas pasliktina telefona problēmu. Mitināta ēdienkarte iztulko vienreiz un tur [alergēnu datus](blog:allergen-menu-restaurant-eu-rules) piesaistītus pozīcijai, nevis izkārtojumam."
+    },
+    {
+      "type": "h2",
+      "text": "5. problēma: Google to neredz"
+    },
+    {
+      "type": "p",
+      "text": "Cilvēki meklē “restorāns ar paelju [tava pilsēta]”, un Google atbild no indeksēta teksta. PDF aiz QR koda parasti nav ne saistīts no tavas vietnes, ne lietderīgi apstaigājams, tāpēc tavu ēdienu nosaukumi nekad neparādās. Mitināta ēdienkartes lapa ir parasts HTML, un to indeksē kā jebkuru citu lapu — daudziem maziem uzņēmumiem tā kļūst par otro apmeklētāko lapu, kas tiem ir."
+    },
+    {
+      "type": "h2",
+      "text": "6. problēma: tas ir strupceļš"
+    },
+    {
+      "type": "p",
+      "text": "PDF nevar pieņemt pasūtījumu, nevar pateikt, ka 40 cilvēki apskatīja degustācijas ēdienkarti un neviens to nepasūtīja, un nevar neko nosūtīt uz virtuvi. Jebkurš vēlāks uzlabojums sākas ar tā nomaiņu."
+    },
+    {
+      "type": "h2",
+      "text": "Blakus"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "QR → PDF",
+        "Mitināta digitāla ēdienkarte"
+      ],
+      "rows": [
+        [
+          "Lasīšana telefonā",
+          "Tuvināšana un vilkšana",
+          "Veidota ekrānam"
+        ],
+        [
+          "Cenas maiņa",
+          "Labo, eksportē, augšupielādē",
+          "Labo vienu lauku, uzreiz tiešraidē"
+        ],
+        [
+          "Beidzies ēdiens",
+          "Nav iespējams",
+          "Paslēpts ar vienu pieskārienu"
+        ],
+        [
+          "Valodas",
+          "Viens fails katrai valodai",
+          "Automātiski"
+        ],
+        [
+          "Alergēnu informācija",
+          "Paplašina izkārtojumu",
+          "Piesaistīta pozīcijai"
+        ],
+        [
+          "Atrodama Google",
+          "Praksē nē",
+          "Jā, indeksējama lapa"
+        ],
+        [
+          "Fotogrāfijas",
+          "Uzpūš faila izmēru",
+          "Ielādējas pēc vajadzības"
+        ],
+        [
+          "Var pieņemt pasūtījumus",
+          "Nē",
+          "Jā"
+        ],
+        [
+          "Izmaksas",
+          "0 €",
+          "No 9,90 €/mēn."
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kad PDF tiešām ir pareizā atbilde"
+    },
+    {
+      "type": "p",
+      "text": "Divi gadījumi. Pirmkārt, dokuments, kas domāts, lai viesis to izdrukātu: banketa piedāvājums, fiksēta grupas ēdienkarte, ketringa cenrādis. Tas ir dokuments, un PDF ir pareizais formāts dokumentiem. Otrkārt, vieta ar ēdienkarti, kas nekad nemainās un negrasās mainīties: pludmales bārs ar sešām pozīcijām divu mēnešu sezonā sistēmu nevajag."
+    },
+    {
+      "type": "note",
+      "text": "Ja pagaidām paliec pie PDF, vismaz mitini failu savā domēnā pastāvīgā adresē, turi to vienā kolonnā un izmanto statisku QR kodu. Tas salabo divus sliktākos bojājumus: nelasāmu izkārtojumu un kodu, kas mirst kopā ar svešu pakalpojumu."
+    },
+    {
+      "type": "h2",
+      "text": "Kā aiziet no PDF, no jauna nerakstot ēdienkarti"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Nofotografē papīra ēdienkarti vai augšupielādē pašu PDF.",
+        "IQ Rest to nolasa un izveido kategorijas, pozīcijas un cenas — apmēram piecas minūtes visa vakara vietā.",
+        "Pārbaudi cenas un izlabo to, ko nolasīšana saprata nepareizi.",
+        "Novirzi esošos QR kodus uz jauno ēdienkarti vai izdrukā jaunus katram galdam."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Pārvērt savu PDF par īstu ēdienkarti",
+      "text": "Augšupielādē savu pašreizējo ēdienkarti un iegūsti telefonā lasāmu digitālu versiju apmēram piecās minūtēs. 14 dienas bez maksas, bez kartes.",
+      "buttonLabel": "Skatīt digitālo ēdienkarti",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Biežāk uzdotie jautājumi",
+      "items": [
+        {
+          "q": "Vai varu bez maksas izveidot QR kodu PDF ēdienkartei?",
+          "a": "Jā, un tas aizņem apmēram ceturtdaļstundu. Izmanto statisku kodu, kas norāda uz adresi tavā domēnā, lai vēlāk varētu nomainīt failu bez atkārtotas drukas."
+        },
+        {
+          "q": "Vai Google indeksē PDF ēdienkarti?",
+          "a": "Google kopumā spēj indeksēt PDF failus, taču ēdienkartes PDF, kas sasniedzams tikai caur izdrukātu QR kodu, parasti nav nevienas saites uz to, tāpēc praksē tas neparādās meklējumos par ēdieniem vai virtuvi."
+        },
+        {
+          "q": "Ko darīt, ja vienkārši izveidoju PDF telefona formātā?",
+          "a": "Tas palīdz lasāmībai un ir vērts izdarīt. Tas neatrisina atjauninājumus, beigušos ēdienus, valodas, alergēnus vai pasūtīšanu — lasīšanas problēma ir tikai pirmā no sešām."
+        },
+        {
+          "q": "Vai varu saglabāt savu dizainu, pārejot uz mitinātu ēdienkarti?",
+          "a": "Krāsas, logotips un ēdienu nosaukumi pāriet līdzi. Lapas izkārtojums nē, jo to būvē no jauna telefona ekrānam — un tieši tāpēc šī pāreja notiek."
+        },
+        {
+          "q": "Vai man būs jāizdrukā QR kodi no jauna?",
+          "a": "Nē, ja tavs pašreizējais kods norāda uz adresi, ko tu kontrolē: šo adresi pāradresē uz jauno ēdienkarti. Ja tas norāda uz ģeneratora domēnu vai Drive saiti, būs vajadzīgi jauni kodi."
+        }
+      ]
+    }
+  ]
+}

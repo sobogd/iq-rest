@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "QR á PDF er ekki stafrænn matseðill | IQ Rest",
+    "description": "QR-kóði sem vísar á PDF er algengasta og versta lausnin. Hvað hún kostar í læsileika, uppfærslum, ofnæmisvöldum og pöntunum."
+  },
+  "card": {
+    "title": "QR-kóði á PDF er ekki stafrænn matseðill",
+    "excerpt": "Þetta er lausnin sem næstum allir lenda á fyrst, því hún er ókeypis og tekur korter. Hér er það sem hún kostar þig hljóðlega — og tvö tilvikin þar sem hún er í raun rétta valið."
+  },
+  "h1": "Hvers vegna QR-kóði sem vísar á PDF er ekki stafrænn matseðill",
+  "intro": "Skannaðu kóðann á flestum veitingastöðum og þú færð PDF. Hann er ókeypis, einhver eyddi korteri í hann og tæknilega virkar hann. En PDF er prentuð síða sem er tilviljunarkennt stödd á skjá, og næstum ekkert af því sem stafrænn matseðill á að gera getur hann. Hér er heiðarlegt uppgjör.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Vandamál 1: enginn getur lesið hann"
+    },
+    {
+      "type": "p",
+      "text": "Matseðill er brotinn um fyrir A4 eða A3. Símaskjár er um 7 cm breiður. PDF-inn opnast útaðdreginn, letrið er þrír punktar á hæð og gesturinn byrjar að klípa. Til að lesa þriðja dálkinn skrunar hann til hliðar, týnir staðnum og dregur aftur út til að finna hann."
+    },
+    {
+      "type": "p",
+      "text": "Þetta er ekki lítið óþægindi. Þetta er ástæðan fyrir því að starfsfólkið þitt er enn spurt hvað sé í risottóinu — gesturinn gafst upp á PDF-inum og fór aftur að spyrja manneskju. Þú bættir við QR-kóða og hélst allri gömlu vinnunni."
+    },
+    {
+      "type": "h2",
+      "text": "Vandamál 2: að breyta honum er enn hönnunarvinna"
+    },
+    {
+      "type": "p",
+      "text": "Að hækka verð á einum rétti þýðir að opna frumskrána, breyta, flytja PDF-inn út aftur, hlaða honum upp á sama vistfang og athuga hvort kóðinn virki enn. Sé útlitsskráin hjá verktaka er þetta tölvupóstur og bið. Þannig að verðbreytingin bíður eftir þeirri næstu, og þarnæstu, og matseðillinn þinn stendur þrjá mánuði úreltur — nákvæmlega vandamálið sem pappírinn hafði."
+    },
+    {
+      "type": "h2",
+      "text": "Vandamál 3: hann getur ekki sýnt hvað er í boði í kvöld"
+    },
+    {
+      "type": "p",
+      "text": "Sjóbirtingurinn kláraðist klukkan 20.30. PDF getur ekki vitað það. Gestir panta hann, þjónninn biðst afsökunar, gesturinn velur upp á nýtt undir þrýstingi og tekur yfirleitt eitthvað ódýrara. Hýstur matseðill felur réttinn með einu banki og enginn upplifir gatið."
+    },
+    {
+      "type": "h2",
+      "text": "Vandamál 4: ofnæmisvaldar og tungumál margfalda skrárnar"
+    },
+    {
+      "type": "p",
+      "text": "Á ferðamannastað þarftu þrjú eða fjögur tungumál. Það eru þrír eða fjórir PDF-ar, þrír eða fjórir QR-kóðar eða millisíða til að velja á, og þrjár eða fjórar skrár sem þarf að flytja út aftur í hvert sinn sem verð breytist. Bættu við ofnæmisdálki og hver skrá verður breiðari, sem gerir símavandann verri. Hýstur matseðill þýðir einu sinni og heldur [ofnæmisupplýsingum](blog:allergen-menu-restaurant-eu-rules) tengdum við réttinn, ekki við umbrotið."
+    },
+    {
+      "type": "h2",
+      "text": "Vandamál 5: hann er ósýnilegur Google"
+    },
+    {
+      "type": "p",
+      "text": "Fólk leitar að „veitingastaður með paella í [bænum þínum]“ og Google svarar út frá lesnum texta. PDF á bak við QR-kóða er yfirleitt hvorki tengdur frá vefnum þínum né gagnlega skriðanlegur, svo nöfn réttanna þinna birtast aldrei. Hýst matseðilssíða er venjulegt HTML og er skráð eins og hver önnur síða — hjá mörgum litlum stöðum verður hún næstmest sótta síðan sem þeir eiga."
+    },
+    {
+      "type": "h2",
+      "text": "Vandamál 6: þetta er blindgata"
+    },
+    {
+      "type": "p",
+      "text": "PDF getur ekki tekið við pöntun, getur ekki sagt þér að 40 manns hafi skoðað smakkseðilinn og enginn pantað hann, og getur ekkert sent í eldhúsið. Sérhver umbót sem þig langar í síðar byrjar á því að skipta honum út."
+    },
+    {
+      "type": "h2",
+      "text": "Hlið við hlið"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "QR → PDF",
+        "Hýstur stafrænn matseðill"
+      ],
+      "rows": [
+        [
+          "Lestur í síma",
+          "Aðdráttur og dráttur",
+          "Byggður fyrir skjáinn"
+        ],
+        [
+          "Verðbreyting",
+          "Breyta, flytja út, hlaða upp",
+          "Breyta einum reit, strax í loftinu"
+        ],
+        [
+          "Uppseldur réttur",
+          "Ekki mögulegt",
+          "Falinn með einu banki"
+        ],
+        [
+          "Tungumál",
+          "Ein skrá á hvert tungumál",
+          "Sjálfkrafa"
+        ],
+        [
+          "Ofnæmisupplýsingar",
+          "Breikka umbrotið",
+          "Tengdar við réttinn"
+        ],
+        [
+          "Finnst á Google",
+          "Í reynd nei",
+          "Já, síða sem er skráð"
+        ],
+        [
+          "Myndir",
+          "Blása út skráarstærðina",
+          "Sóttar eftir þörfum"
+        ],
+        [
+          "Getur tekið pantanir",
+          "Nei",
+          "Já"
+        ],
+        [
+          "Kostnaður",
+          "0 €",
+          "Frá 9,90 €/mán."
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Hvenær PDF er í raun rétta svarið"
+    },
+    {
+      "type": "p",
+      "text": "Tvö tilvik. Í fyrsta lagi skjal sem gesturinn á að prenta: veislutilboð, fastur hópmatseðill, verðlisti fyrir veisluþjónustu. Það er skjal, og PDF er rétta sniðið fyrir skjöl. Í öðru lagi staður með matseðil sem breytist aldrei og ætlar sér það ekki: strandbar með sex línum á tveggja mánaða vertíð þarf ekkert kerfi."
+    },
+    {
+      "type": "note",
+      "text": "Ef þú heldur þig við PDF-inn í bili, hýstu að minnsta kosti skrána á þínu eigin léni á föstu vistfangi, hafðu hana í einum dálki og notaðu fastan QR-kóða. Það lagar tvær verstu bilanirnar: ólæsilegt umbrot og kóða sem deyr með þjónustu annarra."
+    },
+    {
+      "type": "h2",
+      "text": "Að losna við PDF-inn án þess að slá matseðilinn inn aftur"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Taktu mynd af pappírsmatseðlinum, eða hlaðið upp PDF-inum sjálfum.",
+        "IQ Rest les hann og býr til flokka, rétti og verð — um fimm mínútur í stað heils kvölds.",
+        "Farðu yfir verðin og lagaðu það sem innlesturinn las vitlaust.",
+        "Láttu núverandi QR-kóða vísa á nýja matseðilinn, eða prentaðu nýja fyrir hvert borð."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Breyttu PDF-inum í alvöru matseðil",
+      "text": "Hlaðið upp núverandi matseðli og fáðu stafræna útgáfu sem er læsileg í síma á um fimm mínútum. 14 dagar frítt, án korts.",
+      "buttonLabel": "Sjá stafræna matseðilinn",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Algengar spurningar",
+      "items": [
+        {
+          "q": "Get ég búið til QR-kóða á PDF-matseðil ókeypis?",
+          "a": "Já, og það tekur um korter. Notaðu fastan kóða sem vísar á vistfang á þínu eigin léni, svo þú getir skipt út skránni síðar án þess að prenta aftur."
+        },
+        {
+          "q": "Skráir Google PDF-matseðil?",
+          "a": "Google getur almennt skráð PDF-skrár, en matseðils-PDF sem aðeins næst í gegnum prentaðan QR-kóða hefur yfirleitt ekkert sem tengir í hann, svo í reynd raðast hann ekki fyrir leit að réttum eða eldhúsi."
+        },
+        {
+          "q": "En ef ég geri PDF-inn einfaldlega í símasniði?",
+          "a": "Það hjálpar læsileikanum og er þess virði. Það lagar ekki uppfærslur, uppselda rétti, tungumál, ofnæmisvalda eða pantanir — lestrarvandinn er aðeins sá fyrsti af sex."
+        },
+        {
+          "q": "Get ég haldið hönnuninni minni ef ég fer yfir í hýstan matseðil?",
+          "a": "Litirnir, merkið og nöfn réttanna fylgja með. Umbrot síðunnar ekki, því það er byggt upp á nýtt fyrir símaskjá — sem er einmitt tilgangurinn með skiptunum."
+        },
+        {
+          "q": "Þarf ég að prenta QR-kóðana aftur?",
+          "a": "Ekki ef núverandi kóði vísar á vistfang sem þú stýrir — þá beinir þú því vistfangi á nýja matseðilinn. Vísi hann á lén kóðaþjónustu eða Drive-hlekk þarftu nýja kóða."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "Un QR su un PDF non è un menu digitale | IQ Rest",
+    "description": "Un QR code che punta a un PDF è la soluzione più diffusa e la peggiore. Quanto ti costa in leggibilità, aggiornamenti, allergeni e ordini."
+  },
+  "card": {
+    "title": "Un QR code su un PDF non è un menu digitale",
+    "excerpt": "È la soluzione a cui quasi tutti arrivano per primi, perché è gratis e richiede quindici minuti. Ecco cosa ti costa in silenzio, e i due casi in cui è davvero la scelta giusta."
+  },
+  "h1": "Perché un QR code che punta a un PDF non è un menu digitale",
+  "intro": "Scansiona il codice nella maggior parte dei ristoranti e ottieni un PDF. È gratis, qualcuno ci ha messo quindici minuti e tecnicamente funziona. Ma un PDF è una pagina stampata che per caso si trova su uno schermo, e quasi tutto ciò che un menu digitale dovrebbe fare, non riesce a farlo. Ecco il bilancio onesto.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Problema 1: nessuno riesce a leggerlo"
+    },
+    {
+      "type": "p",
+      "text": "Un menu è impaginato per A4 o A3. Uno schermo di telefono è largo circa 7 cm. Il PDF si apre rimpicciolito, i caratteri sono alti tre pixel e il cliente inizia a pizzicare lo schermo. Per leggere la terza colonna scorre di lato, perde il punto e rimpicciolisce di nuovo per ritrovarlo."
+    },
+    {
+      "type": "p",
+      "text": "Non è un fastidio da poco. È il motivo per cui al tuo personale continuano a chiedere cosa c'è nel risotto: il cliente ha rinunciato al PDF ed è tornato a chiedere a una persona. Hai aggiunto un QR code e hai conservato tutto il carico di lavoro di prima."
+    },
+    {
+      "type": "h2",
+      "text": "Problema 2: modificarlo resta un lavoro di grafica"
+    },
+    {
+      "type": "p",
+      "text": "Alzare il prezzo di un piatto significa aprire il file sorgente, modificare, riesportare il PDF, ricaricarlo allo stesso indirizzo e controllare che il codice funzioni ancora. Se il file di impaginazione è in mano a un freelance, sono una mail e un'attesa. Così il cambio di prezzo viene accorpato al successivo, e a quello dopo, e il tuo menu resta tre mesi fuori tempo: esattamente il problema della carta."
+    },
+    {
+      "type": "h2",
+      "text": "Problema 3: non può dire cosa succede stasera"
+    },
+    {
+      "type": "p",
+      "text": "La spigola è finita alle 20:30. Un PDF non può saperlo. I clienti la ordinano, il cameriere si scusa, il cliente ridecide sotto pressione e di solito sceglie qualcosa di più economico. Un menu ospitato nasconde il piatto con un tocco e nessuno vive quel vuoto."
+    },
+    {
+      "type": "h2",
+      "text": "Problema 4: allergeni e lingue moltiplicano i file"
+    },
+    {
+      "type": "p",
+      "text": "In zona turistica servono tre o quattro lingue. Sono tre o quattro PDF, tre o quattro QR code o una pagina intermedia per scegliere, e tre o quattro file da riesportare a ogni variazione di prezzo. Aggiungi una colonna allergeni e ogni file si allarga, il che peggiora il problema del telefono. Un menu ospitato traduce una volta e tiene le [informazioni sugli allergeni](blog:allergen-menu-restaurant-eu-rules) attaccate al piatto, non all'impaginazione."
+    },
+    {
+      "type": "h2",
+      "text": "Problema 5: è invisibile a Google"
+    },
+    {
+      "type": "p",
+      "text": "Le persone cercano \"ristorante con paella a [la tua città]\" e Google risponde con testo indicizzato. Un PDF dietro un QR code di solito non è né collegato dal tuo sito né scansionabile in modo utile, quindi i nomi dei tuoi piatti non compaiono mai. Una pagina di menu ospitata è normale HTML e viene indicizzata come qualsiasi altra pagina: per molti piccoli locali diventa la seconda pagina più visitata che possiedono."
+    },
+    {
+      "type": "h2",
+      "text": "Problema 6: è un vicolo cieco"
+    },
+    {
+      "type": "p",
+      "text": "Un PDF non può prendere un ordine, non può dirti che 40 persone hanno guardato il menu degustazione e nessuna l'ha ordinato, e non può mandare nulla in cucina. Qualsiasi miglioramento tu voglia dopo comincia col sostituirlo."
+    },
+    {
+      "type": "h2",
+      "text": "A confronto"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "QR → PDF",
+        "Menu digitale ospitato"
+      ],
+      "rows": [
+        [
+          "Lettura al telefono",
+          "Zoom e trascinamento",
+          "Pensato per lo schermo"
+        ],
+        [
+          "Cambio di prezzo",
+          "Modifica, esporta, ricarica",
+          "Modifica un campo, online subito"
+        ],
+        [
+          "Piatto esaurito",
+          "Non è possibile",
+          "Nascosto con un tocco"
+        ],
+        [
+          "Lingue",
+          "Un file per lingua",
+          "Automatiche"
+        ],
+        [
+          "Informazioni allergeni",
+          "Allargano l'impaginazione",
+          "Attaccate al piatto"
+        ],
+        [
+          "Trovabile su Google",
+          "In pratica no",
+          "Sì, pagina indicizzabile"
+        ],
+        [
+          "Foto",
+          "Gonfiano il file",
+          "Caricate al bisogno"
+        ],
+        [
+          "Può prendere ordini",
+          "No",
+          "Sì"
+        ],
+        [
+          "Costo",
+          "0 €",
+          "Da 9,90 €/mese"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Quando il PDF è davvero la risposta giusta"
+    },
+    {
+      "type": "p",
+      "text": "Due casi. Primo, un documento pensato per essere stampato dal cliente: una proposta per un banchetto, un menu fisso per gruppi, un listino per il catering. Quello è un documento, e il PDF è il formato giusto per i documenti. Secondo, un locale con un menu che non cambia mai e non ha intenzione di cambiare: un chiosco sulla spiaggia con sei voci in una stagione di due mesi non ha bisogno di un sistema."
+    },
+    {
+      "type": "note",
+      "text": "Se per ora resti sul PDF, ospita almeno il file sul tuo dominio a un indirizzo fisso, tienilo su una sola colonna e usa un QR code statico. Questo risolve i due difetti peggiori: impaginazione illeggibile e un codice che muore insieme a un servizio altrui."
+    },
+    {
+      "type": "h2",
+      "text": "Uscire dal PDF senza ridigitare il menu"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Scatta una foto del menu cartaceo, oppure carica direttamente il PDF.",
+        "IQ Rest lo legge e crea categorie, piatti e prezzi: circa cinque minuti invece di una serata.",
+        "Controlla i prezzi e correggi ciò che la scansione ha letto male.",
+        "Fai puntare i QR code esistenti al nuovo menu, oppure stampane di nuovi per ogni tavolo."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Trasforma il tuo PDF in un vero menu",
+      "text": "Carica il menu attuale e ottieni una versione digitale leggibile al telefono in circa cinque minuti. 14 giorni gratis, senza carta.",
+      "buttonLabel": "Guarda il menu digitale",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Domande frequenti",
+      "items": [
+        {
+          "q": "Posso creare gratis un QR code per un menu in PDF?",
+          "a": "Sì, e ci vogliono circa quindici minuti. Usa un codice statico che punta a un indirizzo sul tuo dominio, così potrai sostituire il file più avanti senza ristampare."
+        },
+        {
+          "q": "Google indicizza un menu in PDF?",
+          "a": "Google può indicizzare i file PDF in generale, ma un PDF di menu raggiungibile solo tramite un QR code stampato di solito non ha nulla che lo colleghi, quindi in pratica non si posiziona per ricerche di piatti o di cucina."
+        },
+        {
+          "q": "E se facessi il PDF in formato verticale da telefono?",
+          "a": "Aiuta la leggibilità e vale la pena farlo. Non risolve aggiornamenti, piatti esauriti, lingue, allergeni o ordini: il problema di lettura è solo il primo di sei."
+        },
+        {
+          "q": "Posso mantenere la mia grafica passando a un menu ospitato?",
+          "a": "Colori, logo e nomi dei piatti restano. L'impaginazione della pagina no, perché viene ricostruita per uno schermo di telefono, che è poi il senso del passaggio."
+        },
+        {
+          "q": "Devo ristampare i QR code?",
+          "a": "Non se il codice attuale punta a un indirizzo che controlli tu: reindirizzi quell'indirizzo al nuovo menu. Se punta al dominio di un generatore o a un link di Drive, serviranno codici nuovi."
+        }
+      ]
+    }
+  ]
+}

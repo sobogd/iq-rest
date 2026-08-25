@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "QR na PDF není digitální menu | IQ Rest",
+    "description": "QR kód mířící na PDF je nejčastější a nejhorší podoba digitálního menu. Co vás stojí v čitelnosti, aktualizacích, alergenech a objednávkách."
+  },
+  "card": {
+    "title": "QR kód na PDF není digitální menu",
+    "excerpt": "Je to řešení, ke kterému se nejdřív dostane skoro každý, protože je zadarmo a zabere čtvrt hodiny. Tady je, co vás potichu stojí – a dva případy, kdy je opravdu správné."
+  },
+  "h1": "Proč QR kód mířící na PDF není digitální menu",
+  "intro": "Naskenujte kód ve většině restaurací a dostanete PDF. Je zdarma, někdo tomu věnoval čtvrt hodiny a technicky to funguje. Jenže PDF je tištěná stránka, která shodou okolností leží na displeji, a skoro nic z toho, co má digitální menu umět, nezvládne. Tady je poctivé vyúčtování.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Problém 1: nikdo to nepřečte"
+    },
+    {
+      "type": "p",
+      "text": "Jídelní lístek je vysázený na A4 nebo A3. Displej telefonu je asi 7 cm široký. PDF se načte oddálené, písmo má tři pixely na výšku a host začne roztahovat prsty. Aby přečetl třetí sloupec, posouvá se do strany, ztratí místo a zase oddálí, aby ho našel."
+    },
+    {
+      "type": "p",
+      "text": "Není to drobná nepříjemnost. Je to důvod, proč se vašich lidí pořád ptají, co je v rizotu: host to s PDF vzdal a vrátil se k tomu, že se zeptá člověka. Přidali jste QR kód a zachovali celou dosavadní zátěž."
+    },
+    {
+      "type": "h2",
+      "text": "Problém 2: změna je pořád práce pro grafika"
+    },
+    {
+      "type": "p",
+      "text": "Zvýšit cenu jednoho jídla znamená otevřít zdrojový soubor, upravit, znovu vyexportovat PDF, nahrát ho na stejnou adresu a ověřit, že kód pořád funguje. Pokud má grafický soubor externista, je to e-mail a čekání. Takže se změna ceny odloží k další, a k další, a lístek je tři měsíce neaktuální – přesně ten problém, který měl papír."
+    },
+    {
+      "type": "h2",
+      "text": "Problém 3: neukáže, co se děje dnes večer"
+    },
+    {
+      "type": "p",
+      "text": "Mořský vlk došel ve 20:30. PDF to nemůže vědět. Hosté si ho objednají, číšník se omluví, host se pod tlakem rozhoduje znovu a obvykle vezme něco levnějšího. Hostované menu položku jedním klepnutím schová a nikdo tu mezeru nezažije."
+    },
+    {
+      "type": "h2",
+      "text": "Problém 4: alergeny a jazyky násobí soubory"
+    },
+    {
+      "type": "p",
+      "text": "V turistické lokalitě potřebujete tři nebo čtyři jazyky. To jsou tři nebo čtyři PDF, tři nebo čtyři QR kódy nebo mezistránka na výběr a tři nebo čtyři soubory k opětovnému exportu při každé změně ceny. Přidejte sloupec alergenů a každý soubor se rozšíří, což zhorší problém s telefonem. Hostované menu přeloží jednou a drží [informace o alergenech](blog:allergen-menu-restaurant-eu-rules) u položky, ne u sazby."
+    },
+    {
+      "type": "h2",
+      "text": "Problém 5: pro Google je neviditelné"
+    },
+    {
+      "type": "p",
+      "text": "Lidé hledají \"restaurace s paellou v [vaše město]\" a Google odpovídá z indexovaného textu. PDF za QR kódem obvykle není ani odkazované z vašeho webu, ani užitečně procházené, takže názvy vašich jídel se nikde neobjeví. Hostovaná stránka s menu je běžné HTML a indexuje se jako kterákoli jiná stránka – u mnoha malých podniků se stane druhou nejnavštěvovanější stránkou, kterou mají."
+    },
+    {
+      "type": "h2",
+      "text": "Problém 6: je to slepá ulička"
+    },
+    {
+      "type": "p",
+      "text": "PDF nepřijme objednávku, neřekne vám, že 40 lidí si prohlédlo degustační menu a nikdo si ho neobjednal, a nic nepošle do kuchyně. Každé pozdější vylepšení začíná jeho výměnou."
+    },
+    {
+      "type": "h2",
+      "text": "Vedle sebe"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "QR → PDF",
+        "Hostované digitální menu"
+      ],
+      "rows": [
+        [
+          "Čtení na telefonu",
+          "Přibližování a posouvání",
+          "Postavené pro displej"
+        ],
+        [
+          "Změna ceny",
+          "Upravit, exportovat, nahrát",
+          "Upravit pole, hned naživo"
+        ],
+        [
+          "Vyprodané jídlo",
+          "Není možné",
+          "Skryté jedním klepnutím"
+        ],
+        [
+          "Jazyky",
+          "Jeden soubor na jazyk",
+          "Automaticky"
+        ],
+        [
+          "Informace o alergenech",
+          "Rozšiřují sazbu",
+          "Připojené k položce"
+        ],
+        [
+          "K nalezení na Googlu",
+          "Prakticky ne",
+          "Ano, indexovatelná stránka"
+        ],
+        [
+          "Fotky",
+          "Nafukují velikost souboru",
+          "Načítají se podle potřeby"
+        ],
+        [
+          "Umí přijmout objednávku",
+          "Ne",
+          "Ano"
+        ],
+        [
+          "Cena",
+          "0 €",
+          "Od 9,90 €/měs."
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kdy je PDF opravdu správná odpověď"
+    },
+    {
+      "type": "p",
+      "text": "Dva případy. Zaprvé dokument, který si má host vytisknout: nabídka na banket, skupinové menu, ceník cateringu. To je dokument a PDF je pro dokumenty správný formát. Zadruhé podnik s lístkem, který se nikdy nemění a ani to nemá v plánu: plážový bar se šesti položkami ve dvouměsíční sezoně systém nepotřebuje."
+    },
+    {
+      "type": "note",
+      "text": "Pokud u PDF zatím zůstáváte, alespoň hostujte soubor na vlastní doméně na pevné adrese, udržte ho jednosloupcový a použijte statický QR kód. To vyřeší dvě nejhorší poruchy: nečitelnou sazbu a kód, který umře společně s cizí službou."
+    },
+    {
+      "type": "h2",
+      "text": "Jak odejít od PDF bez přepisování lístku"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Vyfoťte papírový lístek nebo nahrajte samotné PDF.",
+        "IQ Rest ho přečte a vytvoří kategorie, položky a ceny – zhruba pět minut místo celého večera.",
+        "Zkontrolujte ceny a opravte, co načtení přečetlo špatně.",
+        "Nasměrujte stávající QR kódy na nové menu, nebo vytiskněte nové pro každý stůl."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Udělejte z PDF skutečné menu",
+      "text": "Nahrajte svůj současný lístek a mějte digitální verzi čitelnou na telefonu zhruba za pět minut. 14 dní zdarma, bez karty.",
+      "buttonLabel": "Prohlédnout digitální menu",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Časté dotazy",
+      "items": [
+        {
+          "q": "Můžu udělat QR kód na PDF lístek zdarma?",
+          "a": "Ano, a zabere to asi čtvrt hodiny. Použijte statický kód mířící na adresu na vlastní doméně, abyste mohli soubor později vyměnit bez nového tisku."
+        },
+        {
+          "q": "Indexuje Google PDF lístek?",
+          "a": "Google umí indexovat PDF soubory obecně, ale PDF s lístkem dostupné jen přes vytištěný QR kód na sebe obvykle nemá žádné odkazy, takže se v praxi neumísťuje na dotazy po jídlech ani kuchyni."
+        },
+        {
+          "q": "Co když prostě udělám PDF ve formátu telefonu?",
+          "a": "Pomůže to čitelnosti a stojí to za to. Neřeší to aktualizace, vyprodaná jídla, jazyky, alergeny ani objednávání – problém čtení je jen první ze šesti."
+        },
+        {
+          "q": "Můžu si při přechodu na hostované menu nechat svůj design?",
+          "a": "Barvy, logo i názvy jídel zůstanou. Sazba stránky ne, protože se staví znovu pro displej telefonu – a právě o to při přechodu jde."
+        },
+        {
+          "q": "Musím QR kódy tisknout znovu?",
+          "a": "Ne, pokud váš současný kód míří na adresu, kterou ovládáte – tu adresu přesměrujete na nové menu. Pokud míří na doménu generátoru nebo na odkaz z Disku, budete potřebovat nové kódy."
+        }
+      ]
+    }
+  ]
+}

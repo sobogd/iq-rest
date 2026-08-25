@@ -1,4 +1,14 @@
 [
-  { "id": "digital-menu-vs-paper-menu", "date": "2026-08-25" },
-  { "id": "how-to-create-qr-code-menu", "date": "2026-08-25" }
+  {
+    "id": "digital-menu-vs-paper-menu",
+    "date": "2026-08-25"
+  },
+  {
+    "id": "how-to-create-qr-code-menu",
+    "date": "2026-08-25"
+  },
+  {
+    "id": "pdf-menu-vs-digital-menu",
+    "date": "2026-08-25"
+  }
 ]

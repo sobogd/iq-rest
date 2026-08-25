@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "A PDF-re mutató QR nem digitális étlap | IQ Rest",
+    "description": "A PDF-re mutató QR kód a leggyakoribb és a legrosszabb digitális étlap. Mibe kerül olvashatóságban, frissítésben, allergénekben és rendelésben."
+  },
+  "card": {
+    "title": "Egy PDF-en lévő QR kód nem digitális étlap",
+    "excerpt": "Ez az a megoldás, amihez szinte mindenki először eljut, mert ingyenes és negyed óra. Íme, mibe kerül csendben — és az a két eset, amikor tényleg ez a helyes választás."
+  },
+  "h1": "Miért nem digitális étlap egy PDF-re mutató QR kód",
+  "intro": "Olvasd be a kódot a legtöbb étteremben, és PDF-et kapsz. Ingyen van, valaki negyed órát szánt rá, és technikailag működik. De a PDF egy nyomtatott oldal, ami történetesen egy képernyőn van, és szinte semmit nem tud abból, amit egy digitális étlapnak tudnia kellene. Íme az őszinte elszámolás.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "1. probléma: senki nem tudja elolvasni"
+    },
+    {
+      "type": "p",
+      "text": "Az étlap A4-re vagy A3-ra van tördelve. A telefon képernyője nagyjából 7 cm széles. A PDF kicsinyítve nyílik meg, a betű három pixel magas, a vendég pedig nagyítani kezd. A harmadik hasábhoz oldalra görget, elveszti a helyét, majd újra kicsinyít, hogy megtalálja."
+    },
+    {
+      "type": "p",
+      "text": "Ez nem apró kellemetlenség. Ezért kérdezik a személyzetedtől ma is, hogy mi van a rizottóban: a vendég feladta a PDF-fel, és visszatért ahhoz, hogy embertől kérdezze. Hozzáadtál egy QR kódot, és megtartottad a teljes korábbi munkaterhet."
+    },
+    {
+      "type": "h2",
+      "text": "2. probléma: a módosítás továbbra is tördelési munka"
+    },
+    {
+      "type": "p",
+      "text": "Egyetlen étel árát emelni annyit tesz: megnyitni a forrásfájlt, szerkeszteni, újraexportálni a PDF-et, feltölteni ugyanarra a címre, és ellenőrizni, hogy a kód még működik-e. Ha a tördelt fájl egy szabadúszónál van, az egy e-mail és egy várakozás. Így az árváltozás megvárja a következőt, meg az azutánit, az étlapod pedig három hónapig elavultan áll — pontosan az a probléma, ami a papírral volt."
+    },
+    {
+      "type": "h2",
+      "text": "3. probléma: nem tudja megmutatni, mi van ma este"
+    },
+    {
+      "type": "p",
+      "text": "A tengeri sügér 20:30-kor elfogyott. A PDF ezt nem tudhatja. A vendégek megrendelik, a pincér elnézést kér, a vendég nyomás alatt újra dönt, és általában valami olcsóbbat választ. Egy üzemeltetett étlap egy koppintással elrejti a tételt, és senki nem éli meg a hiányt."
+    },
+    {
+      "type": "h2",
+      "text": "4. probléma: az allergének és a nyelvek megsokszorozzák a fájlokat"
+    },
+    {
+      "type": "p",
+      "text": "Turistaövezetben három-négy nyelvre van szükséged. Az három-négy PDF, három-négy QR kód vagy egy köztes választóoldal, és három-négy fájl, amit minden áremeléskor újra kell exportálni. Tegyél hozzá egy allergénoszlopot, és minden fájl szélesebb lesz, ami rontja a telefonos gondot. Az üzemeltetett étlap egyszer fordít, és az [allergénadatokat](blog:allergen-menu-restaurant-eu-rules) a tételhez köti, nem a tördeléshez."
+    },
+    {
+      "type": "h2",
+      "text": "5. probléma: a Google számára láthatatlan"
+    },
+    {
+      "type": "p",
+      "text": "Az emberek arra keresnek, hogy „paellát adó étterem [a városod]”, és a Google indexelt szövegből válaszol. A QR kód mögötti PDF-re általában sem a webhelyedről nem mutat link, sem hasznosan nem bejárható, így az ételneveid soha nem jelennek meg. Az üzemeltetett étlapoldal közönséges HTML, és úgy indexelődik, mint bármely más oldal — sok kis helynek ez lesz a második leglátogatottabb oldala."
+    },
+    {
+      "type": "h2",
+      "text": "6. probléma: zsákutca"
+    },
+    {
+      "type": "p",
+      "text": "A PDF nem tud rendelést felvenni, nem tudja megmondani, hogy 40-en nézték meg a kóstolómenüt és senki nem rendelte, és semmit nem tud a konyhára küldeni. Minden későbbi fejlesztés azzal kezdődik, hogy lecseréled."
+    },
+    {
+      "type": "h2",
+      "text": "Egymás mellett"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "QR → PDF",
+        "Üzemeltetett digitális étlap"
+      ],
+      "rows": [
+        [
+          "Olvasás telefonon",
+          "Nagyítás és húzogatás",
+          "Képernyőre készült"
+        ],
+        [
+          "Árváltozás",
+          "Szerkeszt, exportál, feltölt",
+          "Egy mező átírása, azonnal élesben"
+        ],
+        [
+          "Elfogyott étel",
+          "Nem lehetséges",
+          "Egy koppintással elrejtve"
+        ],
+        [
+          "Nyelvek",
+          "Nyelvenként egy fájl",
+          "Automatikus"
+        ],
+        [
+          "Allergéninformáció",
+          "Szélesíti a tördelést",
+          "A tételhez kötve"
+        ],
+        [
+          "Megtalálható a Google-ben",
+          "Gyakorlatilag nem",
+          "Igen, indexelhető oldal"
+        ],
+        [
+          "Fotók",
+          "Felfújják a fájlméretet",
+          "Igény szerint töltődnek"
+        ],
+        [
+          "Tud rendelést felvenni",
+          "Nem",
+          "Igen"
+        ],
+        [
+          "Költség",
+          "0 €",
+          "9,90 €/hótól"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Mikor tényleg a PDF a helyes válasz"
+    },
+    {
+      "type": "p",
+      "text": "Két esetben. Először, ha a dokumentumot a vendégnek kell kinyomtatnia: bankettajánlat, csoportos fix menü, catering árlista. Az dokumentum, és a PDF a dokumentumok helyes formátuma. Másodszor, ha a helynek olyan étlapja van, ami sosem változik, és nem is akar: egy hatsoros strandbárnak egy kéthónapos szezonban nincs szüksége rendszerre."
+    },
+    {
+      "type": "note",
+      "text": "Ha egyelőre maradsz a PDF-nél, legalább a saját domainedon, fix címen tárold a fájlt, tartsd egyhasábosan, és használj statikus QR kódot. Ez a két legrosszabb hibát javítja: az olvashatatlan tördelést és a kódot, ami egy idegen szolgáltatással együtt hal meg."
+    },
+    {
+      "type": "h2",
+      "text": "Hogyan hagyd ott a PDF-et anélkül, hogy újragépelnéd az étlapot"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Fényképezd le a papíralapú étlapot, vagy töltsd fel magát a PDF-et.",
+        "Az IQ Rest beolvassa, és létrehozza a kategóriákat, tételeket és árakat — nagyjából öt perc egy egész este helyett.",
+        "Ellenőrizd az árakat, és javítsd, amit a beolvasás félreolvasott.",
+        "Irányítsd a meglévő QR kódokat az új étlapra, vagy nyomtass újakat asztalonként."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Csinálj a PDF-edből igazi étlapot",
+      "text": "Töltsd fel a mostani étlapodat, és öt perc alatt kapsz egy telefonon olvasható digitális változatot. 14 nap ingyen, kártya nélkül.",
+      "buttonLabel": "Nézd meg a digitális étlapot",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Gyakori kérdések",
+      "items": [
+        {
+          "q": "Készíthetek ingyen QR kódot PDF étlaphoz?",
+          "a": "Igen, és nagyjából negyed óra. Használj statikus kódot, ami a saját domainedon lévő címre mutat, hogy később kicserélhesd a fájlt újranyomtatás nélkül."
+        },
+        {
+          "q": "Indexeli a Google a PDF étlapot?",
+          "a": "A Google általánosságban indexeli a PDF-fájlokat, de egy csak nyomtatott QR kóddal elérhető étlap-PDF-re rendszerint semmi nem hivatkozik, így a gyakorlatban nem jelenik meg étel- vagy konyhakeresésekre."
+        },
+        {
+          "q": "Mi van, ha egyszerűen telefonos formátumban készítem el a PDF-et?",
+          "a": "Az olvashatóságon segít, és érdemes megcsinálni. Nem oldja meg a frissítéseket, az elfogyott ételeket, a nyelveket, az allergéneket vagy a rendelést — az olvasás gondja csak az első a hatból."
+        },
+        {
+          "q": "Megtarthatom a designomat, ha üzemeltetett étlapra váltok?",
+          "a": "A színek, a logó és az ételnevek átjönnek. Az oldal tördelése nem, mert telefonképernyőre épül újra — és pontosan ez a váltás lényege."
+        },
+        {
+          "q": "Újra kell nyomtatnom a QR kódokat?",
+          "a": "Nem, ha a mostani kódod olyan címre mutat, amit te felügyelsz: azt a címet átirányítod az új étlapra. Ha egy generátor domainjére vagy egy Drive-linkre mutat, új kódok kellenek."
+        }
+      ]
+    }
+  ]
+}

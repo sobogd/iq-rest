@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "Un QR a un PDF no es una carta digital | IQ Rest",
+    "description": "Un código QR que apunta a un PDF es el montaje más común y el peor. Lo que te cuesta en lectura, actualizaciones, alérgenos y pedidos."
+  },
+  "card": {
+    "title": "Un código QR sobre un PDF no es una carta digital",
+    "excerpt": "Es el montaje al que llega casi todo el mundo primero, porque es gratis y lleva quince minutos. Esto es lo que te cuesta en silencio, y los dos casos en los que es la decisión correcta."
+  },
+  "h1": "Por qué un código QR que apunta a un PDF no es una carta digital",
+  "intro": "Escanea el código en la mayoría de los restaurantes y te sale un PDF. Es gratis, alguien tardó quince minutos y técnicamente funciona. Pero un PDF es una página impresa que resulta estar en una pantalla, y casi todo lo que se supone que hace una carta digital, no puede hacerlo. Aquí va el balance honesto.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Problema 1: nadie puede leerlo"
+    },
+    {
+      "type": "p",
+      "text": "Una carta está maquetada para A4 o A3. Una pantalla de móvil mide unos 7 cm de ancho. El PDF carga alejado, la tipografía tiene tres píxeles de alto y el cliente empieza a pellizcar. Para leer la tercera columna se desplaza de lado, pierde el sitio y vuelve a alejar la vista para encontrarlo."
+    },
+    {
+      "type": "p",
+      "text": "No es una molestia pequeña. Es la razón por la que a tu personal le siguen preguntando \"¿qué lleva el risotto?\": el cliente se rindió con el PDF y volvió a preguntar a una persona. Has añadido un código QR y has conservado toda la carga de trabajo anterior."
+    },
+    {
+      "type": "h2",
+      "text": "Problema 2: cambiarlo sigue siendo un trabajo de diseño"
+    },
+    {
+      "type": "p",
+      "text": "Subir el precio de un plato significa abrir el archivo original, editar, reexportar el PDF, volver a subirlo a la misma URL y comprobar que el código sigue resolviendo. Si el archivo de diseño lo tiene un autónomo, eso es un correo y una espera. Así que el cambio de precio se agrupa con el siguiente, y con el siguiente, y tu carta pasa tres meses desfasada: exactamente el problema que tenía el papel."
+    },
+    {
+      "type": "h2",
+      "text": "Problema 3: no puede mostrar lo que pasa esta noche"
+    },
+    {
+      "type": "p",
+      "text": "La lubina se acabó a las 20:30. Un PDF no puede saberlo. Los clientes la piden, el camarero se disculpa, el cliente vuelve a decidir bajo presión y normalmente elige algo más barato. Una carta alojada oculta el plato con un toque y nadie llega a notar el hueco."
+    },
+    {
+      "type": "h2",
+      "text": "Problema 4: alérgenos e idiomas multiplican los archivos"
+    },
+    {
+      "type": "p",
+      "text": "Si sirves en zona turística necesitas tres o cuatro idiomas. Eso son tres o cuatro PDF, tres o cuatro códigos QR o una página intermedia para elegir, y tres o cuatro archivos que reexportar cada vez que se mueve un precio. Añade una columna de alérgenos y cada archivo se ensancha, lo que empeora el problema del móvil. Una carta alojada traduce una vez y mantiene la [información de alérgenos](blog:allergen-menu-restaurant-eu-rules) pegada al plato, no a una maquetación."
+    },
+    {
+      "type": "h2",
+      "text": "Problema 5: es invisible para Google"
+    },
+    {
+      "type": "p",
+      "text": "La gente busca \"restaurante con paella en [tu ciudad]\" y Google responde con texto indexado. Un PDF detrás de un código QR normalmente ni está enlazado desde tu web ni es rastreable de forma útil, así que los nombres de tus platos no aparecen nunca. Una carta alojada es HTML corriente y se indexa como cualquier otra página: para muchos locales pequeños acaba siendo la segunda página más visitada que tienen."
+    },
+    {
+      "type": "h2",
+      "text": "Problema 6: es un callejón sin salida"
+    },
+    {
+      "type": "p",
+      "text": "Un PDF no puede tomar un pedido, no puede decirte que 40 personas miraron el menú degustación y ninguna lo pidió, y no puede enviar nada a cocina. Cualquier mejora que quieras después empieza por sustituirlo."
+    },
+    {
+      "type": "h2",
+      "text": "Comparación directa"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "QR → PDF",
+        "Carta digital alojada"
+      ],
+      "rows": [
+        [
+          "Lectura en el móvil",
+          "Pellizcar y ampliar",
+          "Pensada para la pantalla"
+        ],
+        [
+          "Cambio de precio",
+          "Editar, exportar, volver a subir",
+          "Editar un campo, en directo al instante"
+        ],
+        [
+          "Plato agotado",
+          "No es posible",
+          "Se oculta con un toque"
+        ],
+        [
+          "Idiomas",
+          "Un archivo por idioma",
+          "Automáticos"
+        ],
+        [
+          "Información de alérgenos",
+          "Ensancha la maquetación",
+          "Va pegada al plato"
+        ],
+        [
+          "Encontrable en Google",
+          "En la práctica, no",
+          "Sí, página indexable"
+        ],
+        [
+          "Fotos",
+          "Infla el tamaño del archivo",
+          "Se cargan según hace falta"
+        ],
+        [
+          "Puede tomar pedidos",
+          "No",
+          "Sí"
+        ],
+        [
+          "Coste",
+          "0 €",
+          "Desde 9,90 €/mes"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Cuándo el PDF sí es la respuesta correcta"
+    },
+    {
+      "type": "p",
+      "text": "Dos casos. Primero, un documento pensado para que el cliente lo imprima: una propuesta de banquete, un menú cerrado de grupo, una lista de precios de catering. Eso es un documento, y el PDF es el formato correcto para documentos. Segundo, un local con una carta que no cambia nunca y sin intención de cambiarla: un chiringuito de ocho platos en una temporada de dos meses no necesita un sistema."
+    },
+    {
+      "type": "note",
+      "text": "Si de momento te quedas con el PDF, aloja al menos el archivo en tu propio dominio en una dirección fija, mantenlo a una sola columna y usa un código QR estático. Eso arregla los dos peores fallos: maquetación ilegible y un código que muere con un servicio ajeno."
+    },
+    {
+      "type": "h2",
+      "text": "Salir del PDF sin volver a teclear la carta"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Haz una foto de la carta en papel, o sube el propio PDF.",
+        "IQ Rest lo lee y crea las categorías, los platos y los precios: unos cinco minutos en lugar de una tarde entera.",
+        "Revisa los precios y corrige lo que el escaneo haya leído mal.",
+        "Apunta tus códigos QR actuales a la nueva carta, o imprime otros nuevos por mesa."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Convierte tu PDF en una carta de verdad",
+      "text": "Sube tu carta actual y ten una versión digital legible en el móvil en unos cinco minutos. 14 días gratis, sin tarjeta.",
+      "buttonLabel": "Ver la carta digital",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Preguntas frecuentes",
+      "items": [
+        {
+          "q": "¿Puedo hacer gratis un código QR para una carta en PDF?",
+          "a": "Sí, y lleva unos quince minutos. Usa un código estático que apunte a una URL de tu propio dominio, para poder sustituir el archivo más adelante sin reimprimir."
+        },
+        {
+          "q": "¿Google indexa una carta en PDF?",
+          "a": "Google puede indexar archivos PDF en general, pero un PDF de carta al que solo se llega por un código QR impreso normalmente no tiene nada que lo enlace, así que en la práctica no posiciona para búsquedas de platos o de cocina."
+        },
+        {
+          "q": "¿Y si simplemente hago el PDF con formato de móvil?",
+          "a": "Ayuda con la legibilidad y merece la pena hacerlo. No arregla las actualizaciones, los platos agotados, los idiomas, los alérgenos ni los pedidos: el problema de lectura es solo el primero de seis."
+        },
+        {
+          "q": "¿Puedo conservar mi diseño si paso a una carta alojada?",
+          "a": "Los colores, el logotipo y los nombres de los platos se mantienen. La maquetación de la página no, porque se reconstruye para una pantalla de móvil, que es justamente el motivo del cambio."
+        },
+        {
+          "q": "¿Tengo que reimprimir los códigos QR?",
+          "a": "No, si tu código actual apunta a una URL que controlas: rediriges esa dirección a la nueva carta. Si apunta al dominio de un generador o a un enlace de Drive, necesitarás códigos nuevos."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "QR pdf-tiedostoon ei ole digitaalinen ruokalista | IQ Rest",
+    "description": "Pdf-tiedostoon osoittava QR-koodi on yleisin ja huonoin digilistaratkaisu. Mitä se maksaa luettavuudessa, päivityksissä, allergeeneissa ja tilauksissa."
+  },
+  "card": {
+    "title": "Pdf-tiedoston päällä oleva QR-koodi ei ole digitaalinen ruokalista",
+    "excerpt": "Tähän ratkaisuun päätyy ensimmäisenä lähes jokainen, koska se on ilmainen ja vie vartin. Tässä on se, mitä se hiljaa maksaa sinulle – ja kaksi tapausta, joissa se on aidosti oikea valinta."
+  },
+  "h1": "Miksi pdf-tiedostoon osoittava QR-koodi ei ole digitaalinen ruokalista",
+  "intro": "Skannaa koodi useimmissa ravintoloissa ja saat pdf-tiedoston. Se on ilmainen, joku käytti siihen vartin, ja teknisesti se toimii. Mutta pdf on painettu sivu, joka sattuu olemaan näytöllä, eikä se pysty juuri mihinkään siitä, mitä digitaalisen ruokalistan pitäisi tehdä. Tässä rehellinen laskelma.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Ongelma 1: kukaan ei pysty lukemaan sitä"
+    },
+    {
+      "type": "p",
+      "text": "Ruokalista on taitettu A4- tai A3-kokoon. Puhelimen näyttö on noin 7 senttiä leveä. Pdf avautuu loitonnettuna, teksti on kolme pikseliä korkea, ja asiakas alkaa nipistää. Kolmannen palstan lukemiseksi hän vierittää sivusuunnassa, kadottaa kohdan ja loitontaa taas löytääkseen sen."
+    },
+    {
+      "type": "p",
+      "text": "Tämä ei ole pieni harmi. Se on syy siihen, että henkilökunnaltasi kysytään yhä, mitä risotossa on: asiakas luovutti pdf:n kanssa ja palasi kysymään ihmiseltä. Olet lisännyt QR-koodin ja säilyttänyt koko vanhan työtaakan."
+    },
+    {
+      "type": "h2",
+      "text": "Ongelma 2: muuttaminen on yhä taittotyötä"
+    },
+    {
+      "type": "p",
+      "text": "Yhden annoksen hinnan nostaminen tarkoittaa lähdetiedoston avaamista, muokkaamista, pdf:n uudelleenvientiä, lataamista samaan osoitteeseen ja sen tarkistamista, että koodi yhä toimii. Jos taittotiedosto on freelancerilla, siihen menee sähköposti ja odotus. Niinpä hinnanmuutos niputetaan seuraavan kanssa, ja sitä seuraavan, ja lista on kolme kuukautta vanhentunut – juuri se ongelma, joka paperilla oli."
+    },
+    {
+      "type": "h2",
+      "text": "Ongelma 3: se ei voi kertoa, mitä tänä iltana on"
+    },
+    {
+      "type": "p",
+      "text": "Meribassi loppui kello 20.30. Pdf ei voi tietää sitä. Asiakkaat tilaavat sitä, tarjoilija pahoittelee, asiakas päättää uudelleen paineen alla ja valitsee yleensä jotain halvempaa. Ylläpidetty lista piilottaa annoksen yhdellä napautuksella, eikä kukaan koe aukkoa."
+    },
+    {
+      "type": "h2",
+      "text": "Ongelma 4: allergeenit ja kielet moninkertaistavat tiedostot"
+    },
+    {
+      "type": "p",
+      "text": "Turistialueella tarvitset kolme tai neljä kieltä. Se on kolme tai neljä pdf:ää, kolme tai neljä QR-koodia tai välisivu valintaa varten, ja kolme tai neljä tiedostoa vietäväksi uudelleen aina hinnan muuttuessa. Lisää allergeenisarake, ja jokainen tiedosto levenee, mikä pahentaa puhelinongelmaa. Ylläpidetty lista kääntää kerran ja pitää [allergeenitiedot](blog:allergen-menu-restaurant-eu-rules) kiinni annoksessa, ei taitossa."
+    },
+    {
+      "type": "h2",
+      "text": "Ongelma 5: se on Googlelle näkymätön"
+    },
+    {
+      "type": "p",
+      "text": "Ihmiset hakevat \"paellaa tarjoava ravintola [kaupunkisi]\" ja Google vastaa indeksoidusta tekstistä. QR-koodin takana oleva pdf ei yleensä ole linkitetty sivustoltasi eikä hyödyllisesti indeksoitavissa, joten annostesi nimet eivät koskaan näy. Ylläpidetty listasivu on tavallista HTML:ää ja indeksoituu kuten mikä tahansa sivu – monille pienille paikoille siitä tulee toiseksi vierailluin sivu, joka niillä on."
+    },
+    {
+      "type": "h2",
+      "text": "Ongelma 6: se on umpikuja"
+    },
+    {
+      "type": "p",
+      "text": "Pdf ei voi ottaa tilausta, ei voi kertoa, että 40 ihmistä katsoi maistelumenua eikä kukaan tilannut sitä, eikä voi lähettää mitään keittiöön. Jokainen myöhempi parannus alkaa sen korvaamisesta."
+    },
+    {
+      "type": "h2",
+      "text": "Rinnakkain"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "QR → pdf",
+        "Ylläpidetty digilista"
+      ],
+      "rows": [
+        [
+          "Lukeminen puhelimella",
+          "Nipistys ja raahaus",
+          "Rakennettu näytölle"
+        ],
+        [
+          "Hinnanmuutos",
+          "Muokkaa, vie, lataa uudelleen",
+          "Muokkaa kenttää, heti julki"
+        ],
+        [
+          "Loppunut annos",
+          "Ei onnistu",
+          "Piilotettu yhdellä napautuksella"
+        ],
+        [
+          "Kielet",
+          "Yksi tiedosto kieltä kohti",
+          "Automaattisesti"
+        ],
+        [
+          "Allergeenitiedot",
+          "Leventävät taittoa",
+          "Kiinni annoksessa"
+        ],
+        [
+          "Löytyy Googlesta",
+          "Käytännössä ei",
+          "Kyllä, indeksoituva sivu"
+        ],
+        [
+          "Kuvat",
+          "Kasvattavat tiedostokokoa",
+          "Ladataan tarvittaessa"
+        ],
+        [
+          "Voi ottaa tilauksia",
+          "Ei",
+          "Kyllä"
+        ],
+        [
+          "Hinta",
+          "0 €",
+          "Alkaen 9,90 €/kk"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Milloin pdf on aidosti oikea vastaus"
+    },
+    {
+      "type": "p",
+      "text": "Kaksi tapausta. Ensinnäkin asiakirja, jonka asiakas tulostaa: banketti-ehdotus, ryhmien kiinteä menu, pitopalvelun hinnasto. Se on asiakirja, ja pdf on oikea muoto asiakirjoille. Toiseksi paikka, jonka lista ei koskaan muutu eikä ole aikeissa muuttua: kuuden rivin rantabaari kahden kuukauden kaudella ei tarvitse järjestelmää."
+    },
+    {
+      "type": "note",
+      "text": "Jos jäät toistaiseksi pdf:ään, isännöi tiedosto ainakin omalla verkkotunnuksellasi kiinteässä osoitteessa, pidä se yksipalstaisena ja käytä staattista QR-koodia. Se korjaa kaksi pahinta vikaa: lukukelvottoman taiton ja koodin, joka kuolee toisen palvelun mukana."
+    },
+    {
+      "type": "h2",
+      "text": "Pois pdf:stä ilman listan uudelleennäppäilyä"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Ota valokuva paperilistasta tai lataa itse pdf.",
+        "IQ Rest lukee sen ja luo kategoriat, annokset ja hinnat – noin viisi minuuttia koko illan sijaan.",
+        "Tarkista hinnat ja korjaa se, minkä lukeminen tulkitsi väärin.",
+        "Ohjaa nykyiset QR-koodit uuteen listaan tai tulosta uudet pöytäkohtaisesti."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Tee pdf:stä oikea ruokalista",
+      "text": "Lataa nykyinen listasi ja saat puhelimella luettavan digitaalisen version noin viidessä minuutissa. 14 päivää ilmaiseksi, ilman korttia.",
+      "buttonLabel": "Katso digitaalinen ruokalista",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Usein kysytyt kysymykset",
+      "items": [
+        {
+          "q": "Voinko tehdä QR-koodin pdf-listaan ilmaiseksi?",
+          "a": "Kyllä, ja siihen menee noin vartti. Käytä staattista koodia, joka osoittaa oman verkkotunnuksesi osoitteeseen, jotta voit vaihtaa tiedoston myöhemmin ilman uutta tulostusta."
+        },
+        {
+          "q": "Indeksoiko Google pdf-ruokalistan?",
+          "a": "Google osaa yleisesti indeksoida pdf-tiedostoja, mutta listan pdf, johon pääsee vain painetun QR-koodin kautta, ei yleensä ole minkään linkin päässä, joten käytännössä se ei sijoitu annos- tai keittiöhakuihin."
+        },
+        {
+          "q": "Entä jos vain teen pdf:n puhelimen muotoon?",
+          "a": "Se auttaa luettavuutta ja kannattaa tehdä. Se ei ratkaise päivityksiä, loppuneita annoksia, kieliä, allergeeneja eikä tilaamista – lukuongelma on vasta ensimmäinen kuudesta."
+        },
+        {
+          "q": "Voinko säilyttää ulkoasuni siirtyessäni ylläpidettyyn listaan?",
+          "a": "Värit, logo ja annosten nimet siirtyvät. Sivun taitto ei, koska se rakennetaan uudelleen puhelimen näytölle – mikä on koko siirtymän tarkoitus."
+        },
+        {
+          "q": "Pitääkö QR-koodit tulostaa uudelleen?",
+          "a": "Ei, jos nykyinen koodisi osoittaa hallitsemaasi osoitteeseen: ohjaat sen osoitteen uuteen listaan. Jos se osoittaa generaattorin verkkotunnukseen tai Drive-linkkiin, tarvitset uudet koodit."
+        }
+      ]
+    }
+  ]
+}

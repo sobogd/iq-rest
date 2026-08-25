@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "En QR till en pdf är ingen digital meny | IQ Rest",
+    "description": "En QR-kod som pekar på en pdf är den vanligaste digitala menylösningen och den sämsta. Vad den kostar i läsbarhet, uppdateringar, allergener och beställningar."
+  },
+  "card": {
+    "title": "En QR-kod på en pdf är ingen digital meny",
+    "excerpt": "Det är lösningen de flesta hamnar i först, för den är gratis och tar en kvart. Här är vad den tyst kostar dig – och de två fall där den faktiskt är rätt val."
+  },
+  "h1": "Varför en QR-kod som pekar på en pdf inte är en digital meny",
+  "intro": "Skanna koden på de flesta restauranger och du får en pdf. Den är gratis, någon lade en kvart på den, och rent tekniskt fungerar den. Men en pdf är en tryckt sida som råkar ligga på en skärm, och nästan allt en digital meny ska göra klarar den inte. Här är den ärliga räkningen.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Problem 1: ingen kan läsa den"
+    },
+    {
+      "type": "p",
+      "text": "En meny är satt för A4 eller A3. En mobilskärm är ungefär 7 cm bred. Pdf:en laddas utzoomad, texten är tre pixlar hög, och gästen börjar nypa. För att läsa tredje kolumnen scrollar hen i sidled, tappar bort sig och zoomar ut igen för att hitta tillbaka."
+    },
+    {
+      "type": "p",
+      "text": "Det här är ingen liten irritation. Det är därför din personal fortfarande får frågan vad som finns i risotton – gästen gav upp med pdf:en och gick tillbaka till att fråga en människa. Du har lagt till en QR-kod och behållit hela den gamla arbetsbördan."
+    },
+    {
+      "type": "h2",
+      "text": "Problem 2: att ändra den är fortfarande ett layoutjobb"
+    },
+    {
+      "type": "p",
+      "text": "Att höja priset på en rätt betyder: öppna källfilen, ändra, exportera om pdf:en, ladda upp den på samma adress och kontrollera att koden fortfarande fungerar. Ligger layoutfilen hos en frilansare är det ett mejl och en väntan. Alltså buntas prisändringen ihop med nästa, och nästa, och menyn står tre månader inaktuell – exakt problemet papper hade."
+    },
+    {
+      "type": "h2",
+      "text": "Problem 3: den kan inte visa vad som gäller i kväll"
+    },
+    {
+      "type": "p",
+      "text": "Havsabborren tog slut 20.30. En pdf kan inte veta det. Gästerna beställer den, servitören ber om ursäkt, gästen väljer om under press och tar oftast något billigare. En hostad meny gömmer rätten med en knapptryckning och ingen upplever glappet."
+    },
+    {
+      "type": "h2",
+      "text": "Problem 4: allergener och språk mångdubblar filerna"
+    },
+    {
+      "type": "p",
+      "text": "I ett turiststråk behöver du tre eller fyra språk. Det blir tre eller fyra pdf:er, tre eller fyra QR-koder eller en mellansida att välja på, och tre eller fyra filer att exportera om varje gång ett pris ändras. Lägg till en allergenkolumn och varje fil blir bredare, vilket förvärrar mobilproblemet. En hostad meny översätter en gång och håller [allergendata](blog:allergen-menu-restaurant-eu-rules) kopplad till rätten, inte till en layout."
+    },
+    {
+      "type": "h2",
+      "text": "Problem 5: den är osynlig för Google"
+    },
+    {
+      "type": "p",
+      "text": "Folk söker på \"restaurang med paella i [din stad]\" och Google svarar utifrån indexerad text. En pdf bakom en QR-kod är oftast varken länkad från din webbplats eller användbart crawlbar, så dina rättnamn dyker aldrig upp. En hostad menysida är vanlig HTML och indexeras som vilken sida som helst – för många små ställen blir den den näst mest besökta sidan de äger."
+    },
+    {
+      "type": "h2",
+      "text": "Problem 6: det är en återvändsgränd"
+    },
+    {
+      "type": "p",
+      "text": "En pdf kan inte ta emot en beställning, kan inte berätta att 40 personer tittade på avsmakningsmenyn och ingen beställde den, och kan inte skicka något till köket. Varje förbättring du vill göra senare börjar med att byta ut den."
+    },
+    {
+      "type": "h2",
+      "text": "Sida vid sida"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "QR → pdf",
+        "Hostad digital meny"
+      ],
+      "rows": [
+        [
+          "Läsa i mobilen",
+          "Nypa och zooma",
+          "Byggd för skärmen"
+        ],
+        [
+          "Prisändring",
+          "Ändra, exportera, ladda upp",
+          "Ändra ett fält, live direkt"
+        ],
+        [
+          "Slutsåld rätt",
+          "Inte möjligt",
+          "Gömd med en knapptryckning"
+        ],
+        [
+          "Språk",
+          "En fil per språk",
+          "Automatiskt"
+        ],
+        [
+          "Allergeninformation",
+          "Breddar layouten",
+          "Kopplad till rätten"
+        ],
+        [
+          "Hittas på Google",
+          "I praktiken nej",
+          "Ja, indexerbar sida"
+        ],
+        [
+          "Bilder",
+          "Sväller filstorleken",
+          "Laddas vid behov"
+        ],
+        [
+          "Kan ta beställningar",
+          "Nej",
+          "Ja"
+        ],
+        [
+          "Kostnad",
+          "0 €",
+          "Från 9,90 €/mån"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "När en pdf faktiskt är rätt svar"
+    },
+    {
+      "type": "p",
+      "text": "Två fall. För det första ett dokument som gästen ska skriva ut – ett bankettförslag, en gruppmeny, en cateringprislista. Det är ett dokument, och pdf är rätt format för dokument. För det andra ett ställe med en meny som aldrig ändras och inte har några ambitioner att ändras: en strandbar med sex rader under en tvåmånaderssäsong behöver inget system."
+    },
+    {
+      "type": "note",
+      "text": "Stannar du kvar vid pdf:en tills vidare, hosta åtminstone filen på din egen domän på en fast adress, håll den i en kolumn och använd en statisk QR-kod. Det åtgärdar de två värsta felen: oläslig layout och en kod som dör med någon annans tjänst."
+    },
+    {
+      "type": "h2",
+      "text": "Lämna pdf:en utan att knappa in menyn igen"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Ta ett foto av pappersmenyn, eller ladda upp pdf:en i sig.",
+        "IQ Rest läser den och skapar kategorier, rätter och priser – ungefär fem minuter i stället för en hel kväll.",
+        "Kontrollera priserna och rätta det som inläsningen tolkade fel.",
+        "Peka dina befintliga QR-koder mot den nya menyn, eller tryck nya per bord."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Gör om din pdf till en riktig meny",
+      "text": "Ladda upp din nuvarande meny och få en mobilläsbar digital version på ungefär fem minuter. 14 dagar gratis, utan kort.",
+      "buttonLabel": "Se den digitala menyn",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Vanliga frågor",
+      "items": [
+        {
+          "q": "Kan jag göra en QR-kod till en pdf-meny gratis?",
+          "a": "Ja, och det tar ungefär en kvart. Använd en statisk kod som pekar på en adress på din egen domän, så kan du byta ut filen senare utan att trycka om."
+        },
+        {
+          "q": "Indexerar Google en pdf-meny?",
+          "a": "Google kan indexera pdf-filer i allmänhet, men en meny-pdf som bara nås via en tryckt QR-kod har oftast ingenting som länkar till den, så i praktiken rankar den inte på rätt- eller kökssökningar."
+        },
+        {
+          "q": "Tänk om jag bara gör pdf:en i mobilformat?",
+          "a": "Det hjälper läsbarheten och är värt att göra. Det löser inte uppdateringar, slutsålda rätter, språk, allergener eller beställning – läsproblemet är bara det första av sex."
+        },
+        {
+          "q": "Kan jag behålla min design om jag går över till en hostad meny?",
+          "a": "Färger, logotyp och rättnamn följer med. Sidlayouten gör det inte, för den byggs om för en mobilskärm – vilket är hela poängen med bytet."
+        },
+        {
+          "q": "Måste jag trycka om mina QR-koder?",
+          "a": "Inte om din nuvarande kod pekar på en adress du styr – då dirigerar du om den adressen till den nya menyn. Pekar den på en generators domän eller en Drive-länk behöver du nya koder."
+        }
+      ]
+    }
+  ]
+}

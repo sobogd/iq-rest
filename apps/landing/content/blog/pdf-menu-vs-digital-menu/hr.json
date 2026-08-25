@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "QR na PDF nije digitalni jelovnik | IQ Rest",
+    "description": "QR kod koji vodi na PDF najčešće je i najlošije rješenje digitalnog jelovnika. Koliko vas stoji u čitljivosti, ažuriranjima, alergenima i narudžbama."
+  },
+  "card": {
+    "title": "QR kod na PDF-u nije digitalni jelovnik",
+    "excerpt": "To je rješenje do kojega prvo dođu gotovo svi, jer je besplatno i traje petnaest minuta. Evo što vas tiho stoji — i dva slučaja u kojima je stvarno pravi izbor."
+  },
+  "h1": "Zašto QR kod koji vodi na PDF nije digitalni jelovnik",
+  "intro": "Skenirajte kod u većini restorana i dobit ćete PDF. Besplatan je, netko je na njega potrošio petnaest minuta i tehnički radi. Ali PDF je tiskana stranica koja se slučajno našla na zaslonu, i gotovo ništa od onoga što bi digitalni jelovnik trebao raditi, on ne može. Evo poštenog obračuna.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Problem 1: nitko ga ne može pročitati"
+    },
+    {
+      "type": "p",
+      "text": "Jelovnik je prelomljen za A4 ili A3. Zaslon mobitela širok je otprilike 7 cm. PDF se učita odzumiran, slova su visoka tri piksela, a gost počinje širiti prste. Da bi pročitao treći stupac, pomiče se u stranu, izgubi mjesto i opet odzumira da ga nađe."
+    },
+    {
+      "type": "p",
+      "text": "To nije mala neugodnost. To je razlog zašto vaše osoblje i dalje pitaju što ima u rižotu: gost je odustao od PDF-a i vratio se pitati čovjeka. Dodali ste QR kod i zadržali cijelo dosadašnje opterećenje."
+    },
+    {
+      "type": "h2",
+      "text": "Problem 2: mijenjanje je i dalje grafički posao"
+    },
+    {
+      "type": "p",
+      "text": "Podignuti cijenu jednog jela znači otvoriti izvornu datoteku, urediti, ponovno izvesti PDF, postaviti ga na istu adresu i provjeriti radi li kod još uvijek. Ako je grafička datoteka kod vanjskog suradnika, to je mail i čekanje. Pa se promjena cijene odgađa do sljedeće, i još jedne, a vaš jelovnik tri mjeseca stoji zastario — točno problem koji je imao papir."
+    },
+    {
+      "type": "h2",
+      "text": "Problem 3: ne može pokazati što je večeras"
+    },
+    {
+      "type": "p",
+      "text": "Brancin je nestao u 20:30. PDF to ne može znati. Gosti ga naručuju, konobar se ispričava, gost pod pritiskom bira ponovno i obično uzme nešto jeftinije. Hostirani jelovnik sakrije stavku jednim dodirom i nitko ne doživi tu prazninu."
+    },
+    {
+      "type": "h2",
+      "text": "Problem 4: alergeni i jezici množe datoteke"
+    },
+    {
+      "type": "p",
+      "text": "U turističkom kraju trebaju vam tri ili četiri jezika. To su tri ili četiri PDF-a, tri ili četiri QR koda ili međustranica za odabir, i tri ili četiri datoteke za ponovni izvoz pri svakoj promjeni cijene. Dodajte stupac alergena i svaka datoteka postane šira, što pogoršava problem s mobitelom. Hostirani jelovnik prevede jednom i drži [podatke o alergenima](blog:allergen-menu-restaurant-eu-rules) vezane uz stavku, a ne uz prijelom."
+    },
+    {
+      "type": "h2",
+      "text": "Problem 5: nevidljiv je Googleu"
+    },
+    {
+      "type": "p",
+      "text": "Ljudi traže „restoran s paellom u [vaš grad]” i Google odgovara iz indeksiranog teksta. PDF iza QR koda obično nije ni povezan s vaše stranice ni korisno pretraživ, pa se imena vaših jela nikad ne pojavljuju. Hostirana stranica jelovnika običan je HTML i indeksira se kao svaka druga stranica — mnogim malim lokalima postane druga najposjećenija stranica koju imaju."
+    },
+    {
+      "type": "h2",
+      "text": "Problem 6: to je slijepa ulica"
+    },
+    {
+      "type": "p",
+      "text": "PDF ne može primiti narudžbu, ne može vam reći da je 40 ljudi pogledalo degustacijski meni i nitko ga nije naručio, i ne može ništa poslati u kuhinju. Svako kasnije poboljšanje počinje njegovom zamjenom."
+    },
+    {
+      "type": "h2",
+      "text": "Jedno uz drugo"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "QR → PDF",
+        "Hostirani digitalni jelovnik"
+      ],
+      "rows": [
+        [
+          "Čitanje na mobitelu",
+          "Zumiranje i povlačenje",
+          "Napravljen za zaslon"
+        ],
+        [
+          "Promjena cijene",
+          "Uredi, izvezi, ponovno postavi",
+          "Uredi polje, odmah uživo"
+        ],
+        [
+          "Rasprodano jelo",
+          "Nije moguće",
+          "Sakriveno jednim dodirom"
+        ],
+        [
+          "Jezici",
+          "Po jedna datoteka za jezik",
+          "Automatski"
+        ],
+        [
+          "Podaci o alergenima",
+          "Šire prijelom",
+          "Vezani uz stavku"
+        ],
+        [
+          "Nalazi se na Googleu",
+          "U praksi ne",
+          "Da, stranica koja se indeksira"
+        ],
+        [
+          "Fotografije",
+          "Napuhuju veličinu datoteke",
+          "Učitavaju se po potrebi"
+        ],
+        [
+          "Može primati narudžbe",
+          "Ne",
+          "Da"
+        ],
+        [
+          "Trošak",
+          "0 €",
+          "Od 9,90 €/mj."
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kada je PDF stvarno pravi odgovor"
+    },
+    {
+      "type": "p",
+      "text": "Dva slučaja. Prvo, dokument koji gost treba ispisati: ponuda za banket, fiksni meni za grupe, cjenik cateringa. To je dokument, a PDF je pravi format za dokumente. Drugo, lokal s jelovnikom koji se nikad ne mijenja i nema namjeru: plažni bar sa šest stavki u dvomjesečnoj sezoni ne treba sustav."
+    },
+    {
+      "type": "note",
+      "text": "Ako zasad ostajete na PDF-u, barem hostirajte datoteku na vlastitoj domeni na stalnoj adresi, držite je u jednom stupcu i koristite statični QR kod. To rješava dva najgora kvara: nečitljiv prijelom i kod koji umire zajedno s tuđom uslugom."
+    },
+    {
+      "type": "h2",
+      "text": "Kako otići s PDF-a bez ponovnog utipkavanja jelovnika"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Fotografirajte papirnati jelovnik ili postavite sam PDF.",
+        "IQ Rest ga pročita i stvori kategorije, stavke i cijene — otprilike pet minuta umjesto cijele večeri.",
+        "Provjerite cijene i ispravite ono što je očitanje krivo pročitalo.",
+        "Usmjerite postojeće QR kodove na novi jelovnik ili ispišite nove, po jedan za svaki stol."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Pretvorite PDF u pravi jelovnik",
+      "text": "Postavite svoj sadašnji jelovnik i dobijte digitalnu verziju čitljivu na mobitelu za otprilike pet minuta. 14 dana besplatno, bez kartice.",
+      "buttonLabel": "Pogledajte digitalni jelovnik",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Česta pitanja",
+      "items": [
+        {
+          "q": "Mogu li besplatno napraviti QR kod za jelovnik u PDF-u?",
+          "a": "Da, i traje otprilike petnaest minuta. Koristite statični kod koji vodi na adresu na vlastitoj domeni, kako biste kasnije mogli zamijeniti datoteku bez novog ispisa."
+        },
+        {
+          "q": "Indeksira li Google jelovnik u PDF-u?",
+          "a": "Google općenito može indeksirati PDF datoteke, ali PDF jelovnika do kojeg se dolazi samo preko ispisanog QR koda obično nema nijednu poveznicu prema sebi, pa se u praksi ne pojavljuje na pretragama za jela ili kuhinju."
+        },
+        {
+          "q": "Što ako jednostavno napravim PDF u formatu za mobitel?",
+          "a": "Pomaže čitljivosti i vrijedi to učiniti. Ne rješava ažuriranja, rasprodana jela, jezike, alergene ni naručivanje — problem čitanja tek je prvi od šest."
+        },
+        {
+          "q": "Mogu li zadržati svoj dizajn ako prijeđem na hostirani jelovnik?",
+          "a": "Boje, logotip i nazivi jela ostaju. Prijelom stranice ne, jer se iznova gradi za zaslon mobitela — a to je i smisao prelaska."
+        },
+        {
+          "q": "Moram li ponovno ispisati QR kodove?",
+          "a": "Ne ako vaš sadašnji kod vodi na adresu koju kontrolirate: tu adresu preusmjerite na novi jelovnik. Ako vodi na domenu generatora ili na Drive poveznicu, trebat će vam novi kodovi."
+        }
+      ]
+    }
+  ]
+}

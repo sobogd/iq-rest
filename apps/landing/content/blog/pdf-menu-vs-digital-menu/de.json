@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "QR-Code auf ein PDF: warum das nicht reicht | IQ Rest",
+    "description": "Ein QR-Code, der auf ein PDF zeigt, ist die häufigste digitale Speisekarte und die schlechteste. Was sie Sie bei Lesbarkeit, Updates, Allergenen und Bestellungen kostet."
+  },
+  "card": {
+    "title": "Ein QR-Code auf ein PDF ist keine digitale Speisekarte",
+    "excerpt": "Es ist die Lösung, bei der die meisten zuerst landen, weil sie gratis ist und fünfzehn Minuten dauert. Was sie Sie im Stillen kostet – und die zwei Fälle, in denen sie wirklich richtig ist."
+  },
+  "h1": "Warum ein QR-Code, der auf ein PDF zeigt, keine digitale Speisekarte ist",
+  "intro": "Scannen Sie den Code in den meisten Restaurants, und Sie bekommen ein PDF. Es ist gratis, jemand hat fünfzehn Minuten gebraucht, und technisch funktioniert es. Aber ein PDF ist eine gedruckte Seite, die zufällig auf einem Bildschirm liegt, und fast alles, was eine digitale Speisekarte leisten soll, kann sie nicht. Hier die ehrliche Rechnung.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Problem 1: niemand kann es lesen"
+    },
+    {
+      "type": "p",
+      "text": "Eine Speisekarte ist für A4 oder A3 gesetzt. Ein Handybildschirm ist etwa 7 cm breit. Das PDF lädt herausgezoomt, die Schrift ist drei Pixel hoch, und der Gast beginnt zu zoomen. Für die dritte Spalte scrollt er seitwärts, verliert die Stelle und zoomt wieder heraus, um sie zu finden."
+    },
+    {
+      "type": "p",
+      "text": "Das ist kein kleines Ärgernis. Es ist der Grund, warum Ihr Personal weiterhin gefragt wird, was im Risotto ist – der Gast hat beim PDF aufgegeben und fragt wieder einen Menschen. Sie haben einen QR-Code hinzugefügt und die gesamte alte Arbeitslast behalten."
+    },
+    {
+      "type": "h2",
+      "text": "Problem 2: Ändern bleibt eine Layout-Aufgabe"
+    },
+    {
+      "type": "p",
+      "text": "Ein Preis hoch heißt: Quelldatei öffnen, bearbeiten, PDF neu exportieren, unter derselben URL hochladen und prüfen, ob der Code noch auflöst. Liegt die Layoutdatei bei einer freien Grafikerin, ist das eine Mail und eine Wartezeit. Also wird die Preisänderung mit der nächsten gebündelt, und der übernächsten, und Ihre Karte ist drei Monate veraltet – genau das Problem, das Papier hatte."
+    },
+    {
+      "type": "h2",
+      "text": "Problem 3: es kann nicht zeigen, was heute Abend los ist"
+    },
+    {
+      "type": "p",
+      "text": "Der Wolfsbarsch war um 20:30 Uhr aus. Ein PDF kann das nicht wissen. Gäste bestellen ihn, der Kellner entschuldigt sich, der Gast entscheidet unter Druck neu und nimmt meist etwas Günstigeres. Eine gehostete Karte blendet den Artikel mit einem Tipp aus, und niemand erlebt die Lücke."
+    },
+    {
+      "type": "h2",
+      "text": "Problem 4: Allergene und Sprachen vervielfachen die Dateien"
+    },
+    {
+      "type": "p",
+      "text": "In einer Touristenlage brauchen Sie drei oder vier Sprachen. Das sind drei oder vier PDFs, drei oder vier QR-Codes oder eine Zwischenseite zur Auswahl, und drei oder vier Dateien, die bei jeder Preisänderung neu exportiert werden. Nehmen Sie eine Allergenspalte dazu, wird jede Datei breiter, was das Handyproblem verschärft. Eine gehostete Karte übersetzt einmal und hält die [Allergendaten](blog:allergen-menu-restaurant-eu-rules) am Artikel fest, nicht am Layout."
+    },
+    {
+      "type": "h2",
+      "text": "Problem 5: für Google ist es unsichtbar"
+    },
+    {
+      "type": "p",
+      "text": "Leute suchen \"Restaurant mit Paella in [Ihre Stadt]\", und Google antwortet aus indexiertem Text. Ein PDF hinter einem QR-Code ist meist weder von Ihrer Website verlinkt noch sinnvoll crawlbar, also tauchen Ihre Gerichtsnamen nie auf. Eine gehostete Kartenseite ist normales HTML und wird wie jede andere Seite indexiert – für viele kleine Betriebe wird sie zur zweitmeistbesuchten Seite, die sie besitzen."
+    },
+    {
+      "type": "h2",
+      "text": "Problem 6: es ist eine Sackgasse"
+    },
+    {
+      "type": "p",
+      "text": "Ein PDF kann keine Bestellung annehmen, kann Ihnen nicht sagen, dass 40 Leute das Degustationsmenü angesehen und niemand es bestellt hat, und kann nichts an die Küche schicken. Jede spätere Verbesserung beginnt damit, es zu ersetzen."
+    },
+    {
+      "type": "h2",
+      "text": "Direkt verglichen"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "QR → PDF",
+        "Gehostete digitale Karte"
+      ],
+      "rows": [
+        [
+          "Lesen auf dem Handy",
+          "Zoomen und schieben",
+          "Für den Bildschirm gebaut"
+        ],
+        [
+          "Preisänderung",
+          "Bearbeiten, exportieren, hochladen",
+          "Ein Feld ändern, sofort live"
+        ],
+        [
+          "Ausverkauftes Gericht",
+          "Nicht möglich",
+          "Mit einem Tipp ausgeblendet"
+        ],
+        [
+          "Sprachen",
+          "Je eine Datei",
+          "Automatisch"
+        ],
+        [
+          "Allergenangaben",
+          "Verbreitern das Layout",
+          "Hängen am Artikel"
+        ],
+        [
+          "Bei Google auffindbar",
+          "Praktisch nein",
+          "Ja, indexierbare Seite"
+        ],
+        [
+          "Fotos",
+          "Blähen die Datei auf",
+          "Werden bei Bedarf geladen"
+        ],
+        [
+          "Kann Bestellungen annehmen",
+          "Nein",
+          "Ja"
+        ],
+        [
+          "Kosten",
+          "0 €",
+          "Ab 9,90 €/Monat"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Wann ein PDF wirklich richtig ist"
+    },
+    {
+      "type": "p",
+      "text": "Zwei Fälle. Erstens ein Dokument, das der Gast ausdrucken soll – ein Bankettangebot, ein Gruppenmenü, eine Catering-Preisliste. Das ist ein Dokument, und PDF ist das richtige Format für Dokumente. Zweitens ein Betrieb mit einer Karte, die sich nie ändert und das auch nicht vorhat: eine Strandbar mit sechs Positionen in einer Zweimonatssaison braucht kein System."
+    },
+    {
+      "type": "note",
+      "text": "Wenn Sie vorerst beim PDF bleiben, hosten Sie die Datei wenigstens auf Ihrer eigenen Domain unter einer festen Adresse, halten Sie sie einspaltig und nutzen Sie einen statischen QR-Code. Das behebt die zwei schlimmsten Fehler: unlesbares Layout und ein Code, der mit einem fremden Dienst stirbt."
+    },
+    {
+      "type": "h2",
+      "text": "Weg vom PDF, ohne die Karte neu zu tippen"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Fotografieren Sie die Papierkarte, oder laden Sie das PDF selbst hoch.",
+        "IQ Rest liest es und legt Kategorien, Artikel und Preise an – etwa fünf Minuten statt eines ganzen Abends.",
+        "Prüfen Sie die Preise und korrigieren Sie, was der Scan falsch gelesen hat.",
+        "Lassen Sie Ihre vorhandenen QR-Codes auf die neue Karte zeigen, oder drucken Sie neue pro Tisch."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Machen Sie aus dem PDF eine echte Karte",
+      "text": "Laden Sie Ihre aktuelle Karte hoch und erhalten Sie in etwa fünf Minuten eine handylesbare digitale Fassung. 14 Tage kostenlos, ohne Karte.",
+      "buttonLabel": "Digitale Speisekarte ansehen",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Häufige Fragen",
+      "items": [
+        {
+          "q": "Kann ich einen QR-Code für eine PDF-Karte kostenlos erstellen?",
+          "a": "Ja, und es dauert etwa fünfzehn Minuten. Nutzen Sie einen statischen Code auf eine URL Ihrer eigenen Domain, damit Sie die Datei später ohne Neudruck austauschen können."
+        },
+        {
+          "q": "Indexiert Google eine PDF-Speisekarte?",
+          "a": "Google kann PDF-Dateien grundsätzlich indexieren, aber ein Karten-PDF, das nur über einen gedruckten QR-Code erreichbar ist, hat meist keinerlei Verlinkung – in der Praxis rankt es also nicht für Gerichts- oder Küchensuchen."
+        },
+        {
+          "q": "Und wenn ich das PDF einfach im Handyformat anlege?",
+          "a": "Das hilft bei der Lesbarkeit und lohnt sich. Es löst weder Updates noch ausverkaufte Gerichte, Sprachen, Allergene oder Bestellungen – das Leseproblem ist nur das erste von sechs."
+        },
+        {
+          "q": "Kann ich mein Design behalten, wenn ich auf eine gehostete Karte wechsle?",
+          "a": "Farben, Logo und Artikelnamen bleiben. Das Seitenlayout nicht, weil es für einen Handybildschirm neu gebaut wird – und genau darum geht es beim Wechsel."
+        },
+        {
+          "q": "Muss ich meine QR-Codes neu drucken?",
+          "a": "Nicht, wenn Ihr aktueller Code auf eine URL zeigt, die Ihnen gehört – dann leiten Sie diese Adresse auf die neue Karte um. Zeigt er auf die Domain eines Generators oder auf einen Drive-Link, brauchen Sie neue Codes."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "QR į PDF nėra skaitmeninis meniu | IQ Rest",
+    "description": "QR kodas, vedantis į PDF, yra dažniausias ir blogiausias skaitmeninio meniu variantas. Kiek jis kainuoja skaitomumu, atnaujinimais, alergenais ir užsakymais."
+  },
+  "card": {
+    "title": "QR kodas ant PDF nėra skaitmeninis meniu",
+    "excerpt": "Tai sprendimas, prie kurio pirmiausia prieina beveik visi, nes jis nemokamas ir užtrunka penkiolika minučių. Štai kiek jis tyliai jums kainuoja — ir du atvejai, kai jis tikrai yra teisingas pasirinkimas."
+  },
+  "h1": "Kodėl QR kodas, vedantis į PDF, nėra skaitmeninis meniu",
+  "intro": "Nuskaitykite kodą daugumoje restoranų ir gausite PDF. Nemokamai, kažkas jam skyrė penkiolika minučių, ir techniškai jis veikia. Bet PDF yra atspausdintas puslapis, kuris atsitiktinai atsidūrė ekrane, ir beveik nieko iš to, ką skaitmeninis meniu turėtų daryti, jis nesugeba. Štai sąžininga sąskaita.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "1 problema: niekas negali jo perskaityti"
+    },
+    {
+      "type": "p",
+      "text": "Meniu maketuojamas A4 arba A3 formatui. Telefono ekranas yra apie 7 cm pločio. PDF atsidaro nutolintas, raidės trijų pikselių aukščio, ir svečias pradeda didinti. Kad perskaitytų trečią skiltį, jis slenka į šoną, pameta vietą ir vėl nutolina, kad ją rastų."
+    },
+    {
+      "type": "p",
+      "text": "Tai nėra menkas nepatogumas. Būtent todėl jūsų darbuotojų vis dar klausia, kas yra rizote: svečias pasidavė su PDF ir grįžo klausti žmogaus. Pridėjote QR kodą ir išlaikėte visą ankstesnį krūvį."
+    },
+    {
+      "type": "h2",
+      "text": "2 problema: pakeitimas vis dar yra dizainerio darbas"
+    },
+    {
+      "type": "p",
+      "text": "Pakelti vieno patiekalo kainą reiškia atidaryti šaltinio failą, redaguoti, iš naujo eksportuoti PDF, įkelti jį tuo pačiu adresu ir patikrinti, ar kodas vis dar veikia. Jei maketo failas pas laisvai samdomą dizainerį, tai laiškas ir laukimas. Todėl kainos pakeitimas laukia kito, ir dar kito, o jūsų meniu tris mėnesius kabo pasenęs — būtent ta problema, kurią turėjo popierius."
+    },
+    {
+      "type": "h2",
+      "text": "3 problema: jis negali parodyti, kas vyksta šįvakar"
+    },
+    {
+      "type": "p",
+      "text": "Jūrinis ešerys baigėsi 20.30. PDF to žinoti negali. Svečiai jį užsako, padavėjas atsiprašo, svečias spaudžiamas renkasi iš naujo ir dažniausiai ima ką nors pigesnio. Talpinamas meniu paslepia poziciją vienu palietimu ir tos spragos niekas nepatiria."
+    },
+    {
+      "type": "h2",
+      "text": "4 problema: alergenai ir kalbos daugina failus"
+    },
+    {
+      "type": "p",
+      "text": "Turistinėje vietoje reikia trijų ar keturių kalbų. Tai trys ar keturi PDF, trys ar keturi QR kodai arba tarpinis puslapis pasirinkimui, ir trys ar keturi failai, kuriuos reikia iš naujo eksportuoti kaskart pasikeitus kainai. Pridėkite alergenų stulpelį, ir kiekvienas failas taps platesnis, o tai pablogina telefono problemą. Talpinamas meniu išverčia vieną kartą ir laiko [alergenų duomenis](blog:allergen-menu-restaurant-eu-rules) prisegtus prie pozicijos, o ne prie maketo."
+    },
+    {
+      "type": "h2",
+      "text": "5 problema: jis nematomas Google"
+    },
+    {
+      "type": "p",
+      "text": "Žmonės ieško „restoranas su paelija [jūsų mieste]“, ir Google atsako iš indeksuoto teksto. PDF už QR kodo paprastai nėra nei susietas iš jūsų svetainės, nei naudingai nuskaitomas, todėl jūsų patiekalų pavadinimai niekada nepasirodo. Talpinamas meniu puslapis yra įprastas HTML ir indeksuojamas kaip bet kuris kitas puslapis — daugeliui mažų įstaigų jis tampa antru pagal lankomumą puslapiu, kurį jos turi."
+    },
+    {
+      "type": "h2",
+      "text": "6 problema: tai aklavietė"
+    },
+    {
+      "type": "p",
+      "text": "PDF negali priimti užsakymo, negali pasakyti, kad 40 žmonių peržiūrėjo degustacinį meniu ir niekas jo neužsisakė, ir negali nieko nusiųsti į virtuvę. Bet koks vėlesnis patobulinimas prasideda nuo jo pakeitimo."
+    },
+    {
+      "type": "h2",
+      "text": "Greta"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "QR → PDF",
+        "Talpinamas skaitmeninis meniu"
+      ],
+      "rows": [
+        [
+          "Skaitymas telefone",
+          "Didinimas ir tampymas",
+          "Sukurta ekranui"
+        ],
+        [
+          "Kainos pakeitimas",
+          "Redaguoti, eksportuoti, įkelti",
+          "Pakeisti lauką, iškart gyvai"
+        ],
+        [
+          "Pasibaigęs patiekalas",
+          "Neįmanoma",
+          "Paslepiama vienu palietimu"
+        ],
+        [
+          "Kalbos",
+          "Po failą kiekvienai kalbai",
+          "Automatiškai"
+        ],
+        [
+          "Alergenų informacija",
+          "Platina maketą",
+          "Prisegta prie pozicijos"
+        ],
+        [
+          "Randama Google",
+          "Praktiškai ne",
+          "Taip, indeksuojamas puslapis"
+        ],
+        [
+          "Nuotraukos",
+          "Išpučia failo dydį",
+          "Įkeliamos pagal poreikį"
+        ],
+        [
+          "Gali priimti užsakymus",
+          "Ne",
+          "Taip"
+        ],
+        [
+          "Kaina",
+          "0 €",
+          "Nuo 9,90 €/mėn."
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kada PDF tikrai yra teisingas atsakymas"
+    },
+    {
+      "type": "p",
+      "text": "Du atvejai. Pirma, dokumentas, skirtas svečiui atsispausdinti: banketo pasiūlymas, fiksuotas meniu grupei, maitinimo kainoraštis. Tai dokumentas, o PDF yra tinkamas formatas dokumentams. Antra, įstaiga, kurios meniu niekada nesikeičia ir neketina keistis: paplūdimio baras su šešiomis pozicijomis dviejų mėnesių sezone sistemos nereikalauja."
+    },
+    {
+      "type": "note",
+      "text": "Jei kol kas liekate prie PDF, bent jau talpinkite failą savo domene pastoviu adresu, laikykite jį vieno stulpelio ir naudokite statinį QR kodą. Tai ištaiso du blogiausius gedimus: neįskaitomą maketą ir kodą, kuris miršta kartu su svetima paslauga."
+    },
+    {
+      "type": "h2",
+      "text": "Kaip pasitraukti nuo PDF neperrašant meniu"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Nufotografuokite popierinį meniu arba įkelkite patį PDF.",
+        "IQ Rest jį perskaito ir sukuria kategorijas, pozicijas ir kainas — apie penkias minutes vietoj viso vakaro.",
+        "Patikrinkite kainas ir pataisykite tai, ką nuskaitymas suprato klaidingai.",
+        "Nukreipkite esamus QR kodus į naują meniu arba atspausdinkite naujus kiekvienam staliukui."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Paverskite PDF tikru meniu",
+      "text": "Įkelkite dabartinį meniu ir maždaug per penkias minutes gaukite telefone skaitomą skaitmeninę versiją. 14 dienų nemokamai, be kortelės.",
+      "buttonLabel": "Pažiūrėkite skaitmeninį meniu",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Dažnai užduodami klausimai",
+      "items": [
+        {
+          "q": "Ar galiu nemokamai padaryti QR kodą PDF meniu?",
+          "a": "Taip, ir tai užtrunka apie penkiolika minučių. Naudokite statinį kodą, vedantį į adresą savo domene, kad vėliau galėtumėte pakeisti failą neperspausdindami."
+        },
+        {
+          "q": "Ar Google indeksuoja PDF meniu?",
+          "a": "Google apskritai geba indeksuoti PDF failus, bet meniu PDF, pasiekiamą tik per atspausdintą QR kodą, paprastai niekas nenurodo, todėl praktiškai jis nerodomas paieškose apie patiekalus ar virtuvę."
+        },
+        {
+          "q": "O jei tiesiog padarysiu PDF telefono formatu?",
+          "a": "Tai padeda skaitomumui ir verta padaryti. Tai neišsprendžia atnaujinimų, pasibaigusių patiekalų, kalbų, alergenų ar užsakymo — skaitymo problema tėra pirmoji iš šešių."
+        },
+        {
+          "q": "Ar galiu išlaikyti savo dizainą pereidamas prie talpinamo meniu?",
+          "a": "Spalvos, logotipas ir patiekalų pavadinimai persikelia. Puslapio maketas ne, nes jis kuriamas iš naujo telefono ekranui — o būtent dėl to ir pereinama."
+        },
+        {
+          "q": "Ar reikės perspausdinti QR kodus?",
+          "a": "Ne, jei dabartinis kodas veda į adresą, kurį kontroliuojate: tą adresą peradresuojate į naują meniu. Jei jis veda į generatoriaus domeną arba į Drive nuorodą, prireiks naujų kodų."
+        }
+      ]
+    }
+  ]
+}

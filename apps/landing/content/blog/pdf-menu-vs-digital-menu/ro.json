@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "Un QR către un PDF nu e meniu digital | IQ Rest",
+    "description": "Un cod QR care duce la un PDF e cea mai răspândită și cea mai proastă variantă. Cât te costă la citire, actualizări, alergeni și comenzi."
+  },
+  "card": {
+    "title": "Un cod QR pe un PDF nu este un meniu digital",
+    "excerpt": "E soluția la care ajunge mai întâi aproape toată lumea, pentru că e gratuită și durează un sfert de oră. Iată ce te costă pe tăcute — și cele două cazuri în care chiar e alegerea corectă."
+  },
+  "h1": "De ce un cod QR care duce la un PDF nu e un meniu digital",
+  "intro": "Scanează codul în majoritatea restaurantelor și primești un PDF. E gratis, cineva a pierdut un sfert de oră cu el și tehnic funcționează. Dar un PDF e o pagină tipărită care se întâmplă să stea pe un ecran, și aproape nimic din ce ar trebui să facă un meniu digital nu poate face. Iată socoteala cinstită.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Problema 1: nimeni nu poate să-l citească"
+    },
+    {
+      "type": "p",
+      "text": "Un meniu e paginat pentru A4 sau A3. Un ecran de telefon are vreo 7 cm lățime. PDF-ul se încarcă depărtat, literele au trei pixeli înălțime, iar clientul începe să mărească. Ca să citească a treia coloană derulează lateral, pierde locul și micșorează iar ca să-l găsească."
+    },
+    {
+      "type": "p",
+      "text": "Nu e un neajuns mic. E motivul pentru care oamenii tăi sunt întrebați în continuare ce e în risotto: clientul a renunțat la PDF și s-a întors să întrebe un om. Ai adăugat un cod QR și ai păstrat tot volumul de muncă de dinainte."
+    },
+    {
+      "type": "h2",
+      "text": "Problema 2: modificarea rămâne o treabă de grafician"
+    },
+    {
+      "type": "p",
+      "text": "Să crești prețul unui fel înseamnă să deschizi fișierul sursă, să editezi, să reexporți PDF-ul, să-l reîncarci la aceeași adresă și să verifici că mai merge codul. Dacă fișierul de layout e la un colaborator, e un e-mail și o așteptare. Așa că modificarea de preț se adună cu următoarea, și cu următoarea, iar meniul tău stă trei luni depășit — exact problema pe care o avea hârtia."
+    },
+    {
+      "type": "h2",
+      "text": "Problema 3: nu poate arăta ce se întâmplă diseară"
+    },
+    {
+      "type": "p",
+      "text": "Lupul de mare s-a terminat la 20:30. Un PDF nu are cum să știe. Clienții îl comandă, ospătarul își cere scuze, clientul alege din nou sub presiune și de obicei ia ceva mai ieftin. Un meniu găzduit ascunde preparatul dintr-o atingere și nimeni nu trăiește golul."
+    },
+    {
+      "type": "h2",
+      "text": "Problema 4: alergenii și limbile înmulțesc fișierele"
+    },
+    {
+      "type": "p",
+      "text": "Într-o zonă turistică ai nevoie de trei sau patru limbi. Adică trei sau patru PDF-uri, trei sau patru coduri QR ori o pagină intermediară de ales, și trei sau patru fișiere de reexportat la fiecare schimbare de preț. Adaugă o coloană de alergeni și fiecare fișier se lățește, ceea ce înrăutățește problema telefonului. Un meniu găzduit traduce o dată și ține [datele despre alergeni](blog:allergen-menu-restaurant-eu-rules) legate de preparat, nu de o paginare."
+    },
+    {
+      "type": "h2",
+      "text": "Problema 5: e invizibil pentru Google"
+    },
+    {
+      "type": "p",
+      "text": "Lumea caută „restaurant cu paella în [orașul tău]” iar Google răspunde din text indexat. Un PDF în spatele unui cod QR de obicei nu e nici legat de pe site-ul tău, nici crawlabil util, așa că numele preparatelor tale nu apar niciodată. O pagină de meniu găzduită e HTML obișnuit și se indexează ca orice altă pagină — pentru multe localuri mici ajunge a doua cea mai vizitată pagină pe care o au."
+    },
+    {
+      "type": "h2",
+      "text": "Problema 6: e o fundătură"
+    },
+    {
+      "type": "p",
+      "text": "Un PDF nu poate prelua o comandă, nu-ți poate spune că 40 de oameni s-au uitat la meniul degustare și niciunul nu l-a comandat, și nu poate trimite nimic la bucătărie. Orice îmbunătățire pe care o vrei mai târziu începe cu înlocuirea lui."
+    },
+    {
+      "type": "h2",
+      "text": "Comparație directă"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "QR → PDF",
+        "Meniu digital găzduit"
+      ],
+      "rows": [
+        [
+          "Citit pe telefon",
+          "Mărire și tras",
+          "Făcut pentru ecran"
+        ],
+        [
+          "Schimbare de preț",
+          "Editezi, exporți, reîncarci",
+          "Editezi un câmp, live imediat"
+        ],
+        [
+          "Preparat epuizat",
+          "Nu se poate",
+          "Ascuns dintr-o atingere"
+        ],
+        [
+          "Limbi",
+          "Câte un fișier per limbă",
+          "Automat"
+        ],
+        [
+          "Informații despre alergeni",
+          "Lățesc paginarea",
+          "Legate de preparat"
+        ],
+        [
+          "Găsibil pe Google",
+          "În practică nu",
+          "Da, pagină indexabilă"
+        ],
+        [
+          "Fotografii",
+          "Umflă dimensiunea fișierului",
+          "Încărcate la nevoie"
+        ],
+        [
+          "Poate prelua comenzi",
+          "Nu",
+          "Da"
+        ],
+        [
+          "Cost",
+          "0 €",
+          "De la 9,90 €/lună"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Când PDF-ul chiar e răspunsul corect"
+    },
+    {
+      "type": "p",
+      "text": "Două cazuri. Primul, un document menit să fie tipărit de client: o ofertă de banchet, un meniu fix de grup, o listă de prețuri pentru catering. Acela e un document, iar PDF e formatul potrivit pentru documente. Al doilea, un local cu un meniu care nu se schimbă niciodată și nici nu are de gând: un bar de plajă cu șase poziții într-un sezon de două luni nu are nevoie de un sistem."
+    },
+    {
+      "type": "note",
+      "text": "Dacă rămâi deocamdată la PDF, măcar găzduiește fișierul pe domeniul tău la o adresă fixă, ține-l pe o singură coloană și folosește un cod QR static. Asta repară cele mai grave două defecte: paginarea ilizibilă și un cod care moare odată cu serviciul altcuiva."
+    },
+    {
+      "type": "h2",
+      "text": "Cum ieși din PDF fără să rescrii meniul"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Fă o fotografie meniului tipărit sau încarcă direct PDF-ul.",
+        "IQ Rest îl citește și creează categoriile, preparatele și prețurile — vreo cinci minute în loc de o seară.",
+        "Verifică prețurile și corectează ce a citit greșit scanarea.",
+        "Îndreaptă codurile QR existente către noul meniu sau tipărește altele noi, câte unul pe masă."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Transformă-ți PDF-ul într-un meniu adevărat",
+      "text": "Încarcă meniul actual și ai o versiune digitală lizibilă pe telefon în vreo cinci minute. 14 zile gratuit, fără card.",
+      "buttonLabel": "Vezi meniul digital",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Întrebări frecvente",
+      "items": [
+        {
+          "q": "Pot face gratuit un cod QR pentru un meniu PDF?",
+          "a": "Da, și durează vreo cincisprezece minute. Folosește un cod static care duce la o adresă de pe domeniul tău, ca să poți înlocui fișierul mai târziu fără să retipărești."
+        },
+        {
+          "q": "Indexează Google un meniu PDF?",
+          "a": "Google poate indexa fișiere PDF în general, dar un PDF de meniu accesibil doar printr-un cod QR tipărit de obicei nu are nimic care să trimită spre el, deci în practică nu apare la căutări de preparate sau bucătărie."
+        },
+        {
+          "q": "Ce-ar fi să fac pur și simplu PDF-ul în format de telefon?",
+          "a": "Ajută la lizibilitate și merită făcut. Nu rezolvă actualizările, preparatele epuizate, limbile, alergenii sau comanda — problema cititului e doar prima din șase."
+        },
+        {
+          "q": "Îmi pot păstra designul dacă trec la un meniu găzduit?",
+          "a": "Culorile, sigla și numele preparatelor se păstrează. Paginarea nu, pentru că se reconstruiește pentru un ecran de telefon — și tocmai ăsta e rostul mutării."
+        },
+        {
+          "q": "Trebuie să retipăresc codurile QR?",
+          "a": "Nu, dacă actualul cod duce la o adresă pe care o controlezi: redirecționezi acea adresă către noul meniu. Dacă duce la domeniul unui generator sau la un link de Drive, îți vor trebui coduri noi."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "Ní biachlár digiteach é QR chuig PDF | IQ Rest",
+    "description": "Is é cód QR a dhíríonn ar PDF an socrú is coitianta agus an ceann is measa. An costas i léitheoireacht, nuashonruithe, ailléirginí agus orduithe."
+  },
+  "card": {
+    "title": "Ní biachlár digiteach é cód QR ar PDF",
+    "excerpt": "Seo an socrú a mbaineann beagnach gach duine leis ar dtús, mar tá sé saor in aisce agus tógann sé cúig nóiméad déag. Seo an méid a chosnaíonn sé ort go ciúin — agus an dá chás inar rogha cheart é i ndáiríre."
+  },
+  "h1": "Cén fáth nach biachlár digiteach é cód QR a dhíríonn ar PDF",
+  "intro": "Scan an cód i bhformhór na mbialann agus gheobhaidh tú PDF. Tá sé saor in aisce, chaith duine éigin cúig nóiméad déag air, agus go teicniúil oibríonn sé. Ach is leathanach clóite é PDF a tharlaíonn a bheith ar scáileán, agus beagnach gach rud atá ceaptha do bhiachlár digiteach a dhéanamh, ní féidir leis. Seo an cuntas macánta.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Fadhb 1: ní féidir le duine ar bith é a léamh"
+    },
+    {
+      "type": "p",
+      "text": "Leagtar amach biachlár do A4 nó A3. Tá scáileán fóin thart ar 7 cm ar leithead. Lódálann an PDF súmáilte amach, tá an cló trí phicteilín ar airde, agus tosaíonn an t-aoi ag súmáil. Chun an tríú colún a léamh scrollálann sé ar leataobh, cailleann sé a áit, agus súmálann sé amach arís chun teacht uirthi."
+    },
+    {
+      "type": "p",
+      "text": "Ní mionchrá é seo. Seo an fáth go bhfiafraítear fós de d'fhoireann cad atá sa risotto — thug an t-aoi suas ar an PDF agus chuaigh sé ar ais chuig duine daonna. Chuir tú cód QR leis agus choinnigh tú an t-ualach oibre iomlán a bhí ann."
+    },
+    {
+      "type": "h2",
+      "text": "Fadhb 2: is obair dearaidh fós é é a athrú"
+    },
+    {
+      "type": "p",
+      "text": "Praghas mias amháin a ardú, ciallaíonn sé an bunchomhad a oscailt, eagarthóireacht a dhéanamh, an PDF a easpórtáil arís, é a uaslódáil chuig an URL céanna, agus a sheiceáil go n-oibríonn an cód fós. Má tá an comhad dearaidh ag saorálaí, is ríomhphost agus fanacht atá ann. Mar sin cuirtear an t-athrú praghais leis an gcéad cheann eile, agus an chéad cheann eile, agus fanann do bhiachlár trí mhí as dáta — go díreach an fhadhb a bhí ag an bpáipéar."
+    },
+    {
+      "type": "h2",
+      "text": "Fadhb 3: ní féidir leis a thaispeáint cad atá ar siúl anocht"
+    },
+    {
+      "type": "p",
+      "text": "Rith an bhas mara amach ag 20.30. Ní féidir le PDF é sin a fhios. Ordaíonn aíonna é, gabhann an freastalaí leithscéal, athdhéanann an t-aoi a chinneadh faoi bhrú agus roghnaíonn sé rud éigin níos saoire de ghnáth. Cuireann biachlár óstáilte an mhias i bhfolach le tapú amháin agus ní bhraitheann duine ar bith an bhearna."
+    },
+    {
+      "type": "h2",
+      "text": "Fadhb 4: méadaíonn ailléirginí agus teangacha na comhaid"
+    },
+    {
+      "type": "p",
+      "text": "I gceantar turasóireachta teastaíonn trí nó ceithre theanga uait. Sin trí nó ceithre PDF, trí nó ceithre chód QR nó leathanach roghnúcháin, agus trí nó ceithre chomhad le heaspórtáil arís gach uair a athraíonn praghas. Cuir colún ailléirginí leis agus leathnaíonn gach comhad, rud a dhéanann fadhb an fhóin níos measa. Aistríonn biachlár óstáilte uair amháin agus coinníonn sé [sonraí ailléirgine](blog:allergen-menu-restaurant-eu-rules) ceangailte den mhias, ní den leagan amach."
+    },
+    {
+      "type": "h2",
+      "text": "Fadhb 5: tá sé dofheicthe do Google"
+    },
+    {
+      "type": "p",
+      "text": "Cuardaíonn daoine \"bialann le paella i [do bhaile]\" agus freagraíonn Google ó théacs innéacsaithe. De ghnáth níl PDF taobh thiar de chód QR nasctha ó do shuíomh ná inchrúbáilte ar bhealach úsáideach, mar sin ní thagann ainmneacha do mhiasa chun cinn riamh. Is gnáth-HTML é leathanach biachláir óstáilte agus innéacsaítear é mar aon leathanach eile — do go leor áiteanna beaga is é an dara leathanach is mó cuairte atá acu."
+    },
+    {
+      "type": "h2",
+      "text": "Fadhb 6: is ceann scríbe marbh é"
+    },
+    {
+      "type": "p",
+      "text": "Ní féidir le PDF ordú a ghlacadh, ní féidir leis a insint duit gur bhreathnaigh 40 duine ar an mbiachlár blaiste agus nár ordaigh duine ar bith é, agus ní féidir leis aon rud a sheoladh chuig an gcistin. Tosaíonn gach feabhsú a d'fhéadfá a bheith uait níos déanaí lena athsholáthar."
+    },
+    {
+      "type": "h2",
+      "text": "Taobh le taobh"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "QR → PDF",
+        "Biachlár digiteach óstáilte"
+      ],
+      "rows": [
+        [
+          "Léamh ar an bhfón",
+          "Súmáil agus tarraingt",
+          "Tógtha don scáileán"
+        ],
+        [
+          "Athrú praghais",
+          "Eagarthóireacht, easpórtáil, uaslódáil",
+          "Athraigh réimse, beo láithreach"
+        ],
+        [
+          "Mias díolta amach",
+          "Ní féidir",
+          "I bhfolach le tapú amháin"
+        ],
+        [
+          "Teangacha",
+          "Comhad amháin an teanga",
+          "Go huathoibríoch"
+        ],
+        [
+          "Eolas ailléirgine",
+          "Leathnaíonn an leagan amach",
+          "Ceangailte den mhias"
+        ],
+        [
+          "Le fáil ar Google",
+          "Go praiticiúil níl",
+          "Tá, leathanach ininnéacsaithe"
+        ],
+        [
+          "Grianghraif",
+          "Méadaíonn siad méid an chomhaid",
+          "Lódáilte de réir mar is gá"
+        ],
+        [
+          "Is féidir orduithe a ghlacadh",
+          "Níl",
+          "Tá"
+        ],
+        [
+          "Costas",
+          "€0",
+          "Ó €9.90/mí"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Cathain is í an PDF an freagra ceart i ndáiríre"
+    },
+    {
+      "type": "p",
+      "text": "Dhá chás. Ar dtús, doiciméad atá le priontáil ag an aoi — moladh bainise, biachlár socraithe grúpa, liosta praghsanna lónadóireachta. Is doiciméad é sin, agus is é PDF an fhormáid cheart do dhoiciméid. Ar an dara dul síos, áit a bhfuil biachlár nach n-athraíonn riamh agus nach bhfuil aon fhonn air athrú: níl córas ag teastáil ó bheár trá le sé mhír i séasúr dhá mhí."
+    },
+    {
+      "type": "note",
+      "text": "Má fhanann tú leis an PDF faoi láthair, óstáil an comhad ar a laghad ar do fhearann féin ag seoladh seasta, coinnigh in aon cholún amháin é, agus úsáid cód QR statach. Réitíonn sin an dá theip is measa: leagan amach doléite agus cód a fhaigheann bás le seirbhís duine eile."
+    },
+    {
+      "type": "h2",
+      "text": "Éirí as an PDF gan an biachlár a chlóscríobh arís"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Tóg grianghraf den bhiachlár páipéir, nó uaslódáil an PDF féin.",
+        "Léann IQ Rest é agus cruthaíonn sé na catagóirí, na míreanna agus na praghsanna — thart ar chúig nóiméad seachas tráthnóna iomlán.",
+        "Seiceáil na praghsanna agus ceartaigh aon rud a léigh an scanadh mícheart.",
+        "Dírigh do chóid QR reatha ar an mbiachlár nua, nó priontáil cinn nua in aghaidh an bhoird."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Déan fíorbhiachlár as do PDF",
+      "text": "Uaslódáil do bhiachlár reatha agus faigh leagan digiteach inléite ar fhón i gceann tuairim is cúig nóiméad. 14 lá saor in aisce, gan chárta.",
+      "buttonLabel": "Féach ar an mbiachlár digiteach",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Ceisteanna coitianta",
+      "items": [
+        {
+          "q": "An féidir liom cód QR do bhiachlár PDF a dhéanamh saor in aisce?",
+          "a": "Is féidir, agus tógann sé thart ar chúig nóiméad déag. Bain úsáid as cód statach a dhíríonn ar URL ar d'fhearann féin, ionas gur féidir leat an comhad a athsholáthar níos déanaí gan athphriontáil."
+        },
+        {
+          "q": "An innéacsaíonn Google biachlár PDF?",
+          "a": "Is féidir le Google comhaid PDF a innéacsú go ginearálta, ach de ghnáth níl aon rud ag nascadh le PDF biachláir nach féidir teacht air ach trí chód QR clóite, mar sin i bhfírinne ní rangaítear é do chuardach miasa ná cistine."
+        },
+        {
+          "q": "Cad faoi dá ndéanfainn an PDF i gcruth fóin?",
+          "a": "Cuidíonn sé leis an inléiteacht agus is fiú é a dhéanamh. Ní réitíonn sé nuashonruithe, miasa díolta amach, teangacha, ailléirginí ná ordú — níl san fhadhb léitheoireachta ach an chéad cheann as sé."
+        },
+        {
+          "q": "An féidir liom mo dhearadh a choinneáil má aistrím chuig biachlár óstáilte?",
+          "a": "Aistrítear na dathanna, an lógó agus ainmneacha na míreanna. Ní aistrítear leagan amach an leathanaigh, mar atógtar é do scáileán fóin — agus sin an pointe leis an aistriú."
+        },
+        {
+          "q": "An gá dom na cóid QR a athphriontáil?",
+          "a": "Ní gá má dhíríonn do chód reatha ar URL atá faoi do smacht — atreoraíonn tú an seoladh sin chuig an mbiachlár nua. Má dhíríonn sé ar fhearann gineadóra nó ar nasc Drive, beidh cóid nua uait."
+        }
+      ]
+    }
+  ]
+}

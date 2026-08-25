@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "PDF'e giden QR dijital menü değildir | IQ Rest",
+    "description": "PDF'e işaret eden bir QR kod en yaygın ve en kötü dijital menü kurulumudur. Okunabilirlik, güncelleme, alerjen ve siparişte size neye mal olur."
+  },
+  "card": {
+    "title": "PDF üzerindeki bir QR kod dijital menü değildir",
+    "excerpt": "Neredeyse herkesin önce bulduğu kurulum budur; bedava ve on beş dakika sürüyor. İşte size sessizce neye mal olduğu ve gerçekten doğru olduğu iki durum."
+  },
+  "h1": "PDF'e işaret eden bir QR kod neden dijital menü değildir",
+  "intro": "Çoğu restoranda kodu okuttuğunuzda bir PDF gelir. Bedavadır, biri on beş dakika harcamıştır ve teknik olarak çalışır. Ama PDF, tesadüfen bir ekranda duran basılı bir sayfadır ve dijital bir menünün yapması gereken şeylerin neredeyse hiçbirini yapamaz. İşte dürüst hesap.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Sorun 1: kimse okuyamıyor"
+    },
+    {
+      "type": "p",
+      "text": "Menü A4 ya da A3 için tasarlanır. Telefon ekranı yaklaşık 7 cm genişliğindedir. PDF uzaklaştırılmış açılır, yazı üç piksel yüksekliğindedir ve misafir parmaklarıyla büyütmeye başlar. Üçüncü sütunu okumak için yana kaydırır, yerini kaybeder ve bulmak için tekrar uzaklaştırır."
+    },
+    {
+      "type": "p",
+      "text": "Bu küçük bir rahatsızlık değil. Personelinize hâlâ \"risottoda ne var?\" diye sorulmasının nedeni budur: misafir PDF'te pes etti ve yeniden bir insana sordu. Bir QR kod eklediniz ve eski iş yükünün tamamını korudunuz."
+    },
+    {
+      "type": "h2",
+      "text": "Sorun 2: değiştirmek hâlâ bir tasarım işi"
+    },
+    {
+      "type": "p",
+      "text": "Bir yemeğin fiyatını artırmak, kaynak dosyayı açmak, düzenlemek, PDF'i yeniden dışa aktarmak, aynı adrese yüklemek ve kodun hâlâ çalıştığını kontrol etmek demektir. Tasarım dosyası bir serbest çalışandaysa bu bir e-posta ve bir bekleyiştir. Böylece fiyat değişikliği bir sonrakine, o da bir sonrakine eklenir ve menünüz üç ay güncelliğini yitirmiş durur; kâğıdın sorununun aynısı."
+    },
+    {
+      "type": "h2",
+      "text": "Sorun 3: bu akşam ne olduğunu gösteremez"
+    },
+    {
+      "type": "p",
+      "text": "Levrek saat 20.30'da bitti. Bir PDF bunu bilemez. Misafirler onu ister, garson özür diler, misafir baskı altında yeniden karar verir ve genelde daha ucuz bir şey seçer. Barındırılan bir menü ürünü tek dokunuşla gizler ve kimse o boşluğu yaşamaz."
+    },
+    {
+      "type": "h2",
+      "text": "Sorun 4: alerjenler ve diller dosyaları çoğaltır"
+    },
+    {
+      "type": "p",
+      "text": "Turistik bir bölgede üç ya da dört dile ihtiyacınız olur. Bu üç ya da dört PDF, üç ya da dört QR kod veya seçim için bir ara sayfa ve her fiyat değişiminde yeniden dışa aktarılacak üç ya da dört dosya demektir. Bir de alerjen sütunu ekleyin, her dosya genişler ve telefon sorunu daha da büyür. Barındırılan bir menü bir kez çevirir ve [alerjen bilgisini](blog:allergen-menu-restaurant-eu-rules) sayfa düzenine değil ürüne bağlı tutar."
+    },
+    {
+      "type": "h2",
+      "text": "Sorun 5: Google için görünmezdir"
+    },
+    {
+      "type": "p",
+      "text": "İnsanlar \"[şehriniz] paella yapan restoran\" diye arar ve Google dizine alınmış metinden yanıt verir. Basılı bir QR kodun arkasındaki PDF genelde ne sitenizden bağlanmıştır ne de işe yarar biçimde taranabilir; dolayısıyla yemek adlarınız hiç görünmez. Barındırılan bir menü sayfası sıradan HTML'dir ve başka herhangi bir sayfa gibi dizine alınır; birçok küçük işletme için sahip oldukları en çok ziyaret edilen ikinci sayfa hâline gelir."
+    },
+    {
+      "type": "h2",
+      "text": "Sorun 6: çıkmaz sokaktır"
+    },
+    {
+      "type": "p",
+      "text": "Bir PDF sipariş alamaz, tadım menüsüne 40 kişinin baktığını ve hiçbirinin sipariş etmediğini size söyleyemez ve mutfağa hiçbir şey gönderemez. Sonradan isteyeceğiniz her iyileştirme, onu değiştirmekle başlar."
+    },
+    {
+      "type": "h2",
+      "text": "Yan yana"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "QR → PDF",
+        "Barındırılan dijital menü"
+      ],
+      "rows": [
+        [
+          "Telefonda okuma",
+          "Yakınlaştır ve kaydır",
+          "Ekran için yapılmış"
+        ],
+        [
+          "Fiyat değişikliği",
+          "Düzenle, dışa aktar, yeniden yükle",
+          "Bir alanı düzenle, anında yayında"
+        ],
+        [
+          "Tükenen yemek",
+          "Mümkün değil",
+          "Tek dokunuşla gizlenir"
+        ],
+        [
+          "Diller",
+          "Her dile bir dosya",
+          "Otomatik"
+        ],
+        [
+          "Alerjen bilgisi",
+          "Sayfa düzenini genişletir",
+          "Ürüne bağlı"
+        ],
+        [
+          "Google'da bulunur",
+          "Pratikte hayır",
+          "Evet, dizine alınabilir sayfa"
+        ],
+        [
+          "Fotoğraflar",
+          "Dosya boyutunu şişirir",
+          "Gerektikçe yüklenir"
+        ],
+        [
+          "Sipariş alabilir",
+          "Hayır",
+          "Evet"
+        ],
+        [
+          "Maliyet",
+          "0 €",
+          "9,90 €/aydan başlayan"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "PDF gerçekten ne zaman doğru cevaptır"
+    },
+    {
+      "type": "p",
+      "text": "İki durumda. Birincisi, misafirin yazdırması için hazırlanan bir belge: ziyafet teklifi, grup için sabit menü, catering fiyat listesi. Bu bir belgedir ve belgeler için doğru biçim PDF'tir. İkincisi, menüsü hiç değişmeyen ve değiştirme niyeti de olmayan bir mekân: iki aylık sezonda altı kalemlik bir plaj barının sisteme ihtiyacı yoktur."
+    },
+    {
+      "type": "note",
+      "text": "Şimdilik PDF'te kalıyorsanız, en azından dosyayı kendi alan adınızda sabit bir adreste barındırın, tek sütun tutun ve statik bir QR kod kullanın. Bu, en kötü iki arızayı düzeltir: okunmayan sayfa düzeni ve başkasının servisiyle birlikte ölen bir kod."
+    },
+    {
+      "type": "h2",
+      "text": "Menüyü yeniden yazmadan PDF'ten çıkmak"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Kâğıt menünün fotoğrafını çekin ya da doğrudan PDF'i yükleyin.",
+        "IQ Rest onu okur ve kategorileri, ürünleri ve fiyatları oluşturur; bir akşam yerine yaklaşık beş dakika.",
+        "Fiyatları kontrol edin ve okumanın yanlış anladığı yerleri düzeltin.",
+        "Mevcut QR kodlarınızı yeni menüye yönlendirin ya da masa başına yenilerini basın."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "PDF'inizi gerçek bir menüye dönüştürün",
+      "text": "Mevcut menünüzü yükleyin, yaklaşık beş dakikada telefonda okunabilir dijital bir sürüm alın. 14 gün ücretsiz, kart gerekmez.",
+      "buttonLabel": "Dijital menüyü görün",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Sık sorulan sorular",
+      "items": [
+        {
+          "q": "PDF menü için ücretsiz QR kod yapabilir miyim?",
+          "a": "Evet, yaklaşık on beş dakika sürer. Kendi alan adınızdaki bir adrese işaret eden statik bir kod kullanın; böylece dosyayı sonradan yeniden basmadan değiştirebilirsiniz."
+        },
+        {
+          "q": "Google PDF menüyü dizine alır mı?",
+          "a": "Google genel olarak PDF dosyalarını dizine alabilir, ancak yalnızca basılı bir QR kod üzerinden ulaşılan menü PDF'ine genelde hiçbir bağlantı verilmez; bu yüzden pratikte yemek veya mutfak aramalarında görünmez."
+        },
+        {
+          "q": "Ya PDF'i telefon boyutunda hazırlarsam?",
+          "a": "Okunabilirliğe yardımcı olur ve yapmaya değer. Güncellemeleri, tükenen ürünleri, dilleri, alerjenleri veya sipariş almayı çözmez; okuma sorunu altı sorundan yalnızca ilkidir."
+        },
+        {
+          "q": "Barındırılan menüye geçersem tasarımımı koruyabilir miyim?",
+          "a": "Renkler, logo ve ürün adları taşınır. Sayfa düzeni taşınmaz, çünkü telefon ekranı için yeniden kurulur; geçişin amacı da tam olarak budur."
+        },
+        {
+          "q": "QR kodlarımı yeniden basmam gerekir mi?",
+          "a": "Mevcut kodunuz sizin kontrolünüzdeki bir adrese işaret ediyorsa gerekmez; o adresi yeni menüye yönlendirirsiniz. Bir üreticinin alan adına ya da bir Drive bağlantısına işaret ediyorsa yeni kodlar gerekir."
+        }
+      ]
+    }
+  ]
+}

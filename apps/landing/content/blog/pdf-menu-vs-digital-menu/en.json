@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "title": "QR Code to a PDF Menu: Why It Doesn't Work | IQ Rest",
+    "description": "A QR code pointing at a PDF is the most common digital menu setup and the worst one. What it costs you in reading, updates, allergens and orders."
+  },
+  "card": {
+    "title": "A QR code on a PDF is not a digital menu",
+    "excerpt": "It's the setup most restaurants land on first, because it's free and takes fifteen minutes. Here is what it quietly costs you — and the two cases where it's genuinely the right call."
+  },
+  "h1": "Why a QR code pointing at a PDF isn't a digital menu",
+  "intro": "Scan the code in most restaurants and you get a PDF. It's free, it took someone fifteen minutes, and it technically works. But a PDF is a printed page that happens to be on a screen, and almost everything a digital menu is supposed to do, it can't. Here's the honest accounting.",
+  "blocks": [
+    { "type": "h2", "text": "Problem 1: nobody can read it" },
+    {
+      "type": "p",
+      "text": "A menu is laid out for A4 or A3 paper. A phone screen is about 7 cm wide. The PDF loads zoomed out, the type is 3 pixels tall, and the guest starts pinching. To read the third column they scroll sideways, lose their place, and zoom back out to find it."
+    },
+    {
+      "type": "p",
+      "text": "This isn't a small annoyance. It's the reason your staff still get asked \"what's in the risotto?\" — the guest gave up on the PDF and went back to asking a human. You've added a QR code and kept every bit of the old workload."
+    },
+    { "type": "h2", "text": "Problem 2: changing it is still a design job" },
+    {
+      "type": "p",
+      "text": "Raising the price of one dish means opening the source file, editing, re-exporting the PDF, re-uploading it to the same URL, and checking the code still resolves. If the person who owns the design file is a freelancer, that's an email and a wait. So the price change gets batched with the next one, and the next, and your menu spends three months out of date — the exact problem paper had."
+    },
+    { "type": "h2", "text": "Problem 3: it can't show what's happening tonight" },
+    {
+      "type": "p",
+      "text": "The sea bass ran out at 20:30. A PDF can't know that. Guests order it, the waiter apologises, the guest re-decides under pressure and usually picks something cheaper. A hosted menu hides the item in one tap and nobody experiences the gap."
+    },
+    { "type": "h2", "text": "Problem 4: allergens and languages multiply the files" },
+    {
+      "type": "p",
+      "text": "Serve a tourist area and you need three or four languages. That's three or four PDFs, three or four QR codes or a landing page to pick between them, and three or four files to re-export every time a price moves. Add an allergen column and each file gets wider, which makes the phone problem worse. A hosted menu translates once and keeps [allergen data](blog:allergen-menu-restaurant-eu-rules) attached to the item, not to a layout."
+    },
+    { "type": "h2", "text": "Problem 5: it's invisible to Google" },
+    {
+      "type": "p",
+      "text": "People search \"[your town] restaurant with paella\" and Google answers from indexed text. A PDF behind a QR code is usually neither linked from your site nor crawlable in a useful way, so your dish names never appear. A hosted menu page is ordinary HTML and gets indexed like any other page — for many small venues it becomes the second most visited page they own."
+    },
+    { "type": "h2", "text": "Problem 6: it's a dead end" },
+    {
+      "type": "p",
+      "text": "A PDF can't take an order, can't tell you that 40 people looked at the tasting menu and nobody ordered it, and can't send anything to the kitchen. Every improvement you might want later starts with replacing it."
+    },
+    { "type": "h2", "text": "Side by side" },
+    {
+      "type": "table",
+      "headers": ["", "QR → PDF", "Hosted digital menu"],
+      "rows": [
+        ["Reading on a phone", "Pinch and zoom", "Built for the screen"],
+        ["Price change", "Edit, export, re-upload", "Edit a field, live instantly"],
+        ["Sold-out dish", "Not possible", "Hidden in one tap"],
+        ["Languages", "One file each", "Automatic"],
+        ["Allergen info", "Widens the layout", "Attached to the item"],
+        ["Found on Google", "Effectively no", "Yes, indexable page"],
+        ["Photos", "Bloats the file size", "Loaded as needed"],
+        ["Can take orders", "No", "Yes"],
+        ["Cost", "€0", "From €9.90/month"]
+      ]
+    },
+    { "type": "h2", "text": "When a PDF is genuinely the right answer" },
+    {
+      "type": "p",
+      "text": "Two cases. First, a document meant to be printed by the guest — a banquet proposal, a group set menu, a catering price list. That's a document, and PDF is the correct format for documents. Second, a venue with a menu that never changes and no ambition to change it: a six-item beach bar in a two-month season doesn't need a system."
+    },
+    {
+      "type": "note",
+      "text": "If you're staying with the PDF for now, at least host it on your own domain at a fixed address, keep it one column wide, and use a static QR code. That fixes the two worst failure modes — unreadable layout and a code that dies with a third-party service."
+    },
+    { "type": "h2", "text": "Moving off the PDF without retyping the menu" },
+    {
+      "type": "steps",
+      "items": [
+        "Take a photo of the paper menu, or upload the PDF itself.",
+        "IQ Rest reads it and creates the categories, items and prices — about five minutes rather than an evening.",
+        "Check the prices and fix anything the scan misread.",
+        "Point your existing QR codes at the new menu, or print new ones per table."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Turn your PDF into a real menu",
+      "text": "Upload your current menu and get a phone-readable digital version in about five minutes. 14 days free, no card required.",
+      "buttonLabel": "See the digital menu",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently asked questions",
+      "items": [
+        {
+          "q": "Can I make a QR code for a PDF menu for free?",
+          "a": "Yes, and it takes about fifteen minutes. Just use a static code pointing at a URL on your own domain, so you can replace the file later without reprinting."
+        },
+        {
+          "q": "Does Google index a PDF menu?",
+          "a": "Google can index PDF files in general, but a menu PDF reachable only through a printed QR code usually has nothing linking to it, so in practice it doesn't rank for dish or cuisine searches."
+        },
+        {
+          "q": "What if I just make the PDF mobile-shaped?",
+          "a": "It helps with readability and is worth doing. It doesn't fix updates, sold-out items, languages, allergens or ordering — the reading problem is only the first of six."
+        },
+        {
+          "q": "Can I keep my design if I move to a hosted menu?",
+          "a": "The colours, logo and item names carry over. The page layout doesn't, because it's rebuilt for a phone screen — which is the point of moving."
+        },
+        {
+          "q": "Do I have to reprint my QR codes?",
+          "a": "Not if your current code points at a URL you control — you redirect that address to the new menu. If it points at a generator's domain or a Drive link, you'll need new codes."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "En QR til en pdf er ikke en digital meny | IQ Rest",
+    "description": "En QR-kode som peker på en pdf er den vanligste digitale menyløsningen og den dårligste. Hva den koster i lesbarhet, oppdateringer, allergener og bestillinger."
+  },
+  "card": {
+    "title": "En QR-kode på en pdf er ikke en digital meny",
+    "excerpt": "Det er løsningen de fleste havner på først, for den er gratis og tar et kvarter. Her er hva den stille og rolig koster deg – og de to tilfellene der den faktisk er riktig valg."
+  },
+  "h1": "Hvorfor en QR-kode som peker på en pdf ikke er en digital meny",
+  "intro": "Skann koden på de fleste restauranter, og du får en pdf. Den er gratis, noen brukte et kvarter på den, og teknisk sett virker den. Men en pdf er en trykt side som tilfeldigvis ligger på en skjerm, og nesten alt en digital meny skal kunne, klarer den ikke. Her er det ærlige regnestykket.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Problem 1: ingen klarer å lese den"
+    },
+    {
+      "type": "p",
+      "text": "En meny er satt opp for A4 eller A3. En telefonskjerm er omtrent 7 cm bred. Pdf-en åpnes utzoomet, skriften er tre piksler høy, og gjesten begynner å zoome. For å lese tredje kolonne scroller hen sidelengs, mister plassen og zoomer ut igjen for å finne den."
+    },
+    {
+      "type": "p",
+      "text": "Dette er ingen liten irritasjon. Det er grunnen til at personalet ditt fortsatt får spørsmål om hva som er i risottoen – gjesten ga opp pdf-en og gikk tilbake til å spørre et menneske. Du har lagt til en QR-kode og beholdt hele den gamle arbeidsmengden."
+    },
+    {
+      "type": "h2",
+      "text": "Problem 2: å endre den er fortsatt en layoutjobb"
+    },
+    {
+      "type": "p",
+      "text": "Å heve prisen på én rett betyr: åpne kildefilen, redigere, eksportere pdf-en på nytt, laste den opp til samme adresse og sjekke at koden fortsatt virker. Ligger layoutfilen hos en frilanser, er det en e-post og en ventetid. Så blir prisendringen slått sammen med den neste, og den neste, og menyen står tre måneder utdatert – akkurat problemet papir hadde."
+    },
+    {
+      "type": "h2",
+      "text": "Problem 3: den kan ikke vise hva som skjer i kveld"
+    },
+    {
+      "type": "p",
+      "text": "Havabboren gikk tom klokka 20.30. En pdf kan ikke vite det. Gjestene bestiller den, servitøren beklager, gjesten velger på nytt under press og tar som regel noe billigere. En hostet meny skjuler retten med ett trykk, og ingen opplever hullet."
+    },
+    {
+      "type": "h2",
+      "text": "Problem 4: allergener og språk mangedobler filene"
+    },
+    {
+      "type": "p",
+      "text": "I et turistområde trenger du tre eller fire språk. Det blir tre eller fire pdf-er, tre eller fire QR-koder eller en mellomside å velge på, og tre eller fire filer å eksportere på nytt hver gang en pris endres. Legg til en allergenkolonne, og hver fil blir bredere, noe som forverrer telefonproblemet. En hostet meny oversetter én gang og holder [allergendata](blog:allergen-menu-restaurant-eu-rules) knyttet til retten, ikke til en layout."
+    },
+    {
+      "type": "h2",
+      "text": "Problem 5: den er usynlig for Google"
+    },
+    {
+      "type": "p",
+      "text": "Folk søker på \"restaurant med paella i [byen din]\", og Google svarer ut fra indeksert tekst. En pdf bak en QR-kode er som regel verken lenket fra nettstedet ditt eller nyttig å crawle, så navnene på rettene dine dukker aldri opp. En hostet menyside er vanlig HTML og indekseres som enhver annen side – for mange små steder blir den den nest mest besøkte siden de har."
+    },
+    {
+      "type": "h2",
+      "text": "Problem 6: det er en blindvei"
+    },
+    {
+      "type": "p",
+      "text": "En pdf kan ikke ta imot en bestilling, kan ikke fortelle deg at 40 personer så på smaksmenyen og ingen bestilte den, og kan ikke sende noe til kjøkkenet. Enhver forbedring du senere ønsker, begynner med å bytte den ut."
+    },
+    {
+      "type": "h2",
+      "text": "Side om side"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "QR → pdf",
+        "Hostet digital meny"
+      ],
+      "rows": [
+        [
+          "Lese på telefonen",
+          "Zoome og dra",
+          "Bygget for skjermen"
+        ],
+        [
+          "Prisendring",
+          "Redigere, eksportere, laste opp",
+          "Endre ett felt, live med en gang"
+        ],
+        [
+          "Utsolgt rett",
+          "Ikke mulig",
+          "Skjult med ett trykk"
+        ],
+        [
+          "Språk",
+          "Én fil per språk",
+          "Automatisk"
+        ],
+        [
+          "Allergenopplysninger",
+          "Gjør layouten bredere",
+          "Knyttet til retten"
+        ],
+        [
+          "Finnes på Google",
+          "I praksis nei",
+          "Ja, indekserbar side"
+        ],
+        [
+          "Bilder",
+          "Blåser opp filstørrelsen",
+          "Lastes ved behov"
+        ],
+        [
+          "Kan ta bestillinger",
+          "Nei",
+          "Ja"
+        ],
+        [
+          "Kostnad",
+          "0 €",
+          "Fra 9,90 €/mnd."
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Når en pdf faktisk er riktig svar"
+    },
+    {
+      "type": "p",
+      "text": "To tilfeller. For det første et dokument gjesten skal skrive ut – et bankettforslag, en gruppemeny, en cateringprisliste. Det er et dokument, og pdf er riktig format for dokumenter. For det andre et sted med en meny som aldri endres og ikke har ambisjoner om det: en strandbar med seks retter i en tomånederssesong trenger ikke et system."
+    },
+    {
+      "type": "note",
+      "text": "Blir du ved pdf-en foreløpig, så host i det minste filen på ditt eget domene på en fast adresse, hold den i én spalte, og bruk en statisk QR-kode. Det retter de to verste feilene: uleselig layout og en kode som dør med en annens tjeneste."
+    },
+    {
+      "type": "h2",
+      "text": "Bort fra pdf-en uten å taste inn menyen på nytt"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Ta et bilde av papirmenyen, eller last opp pdf-en selv.",
+        "IQ Rest leser den og oppretter kategorier, retter og priser – rundt fem minutter i stedet for en hel kveld.",
+        "Sjekk prisene, og rett det innlesingen leste feil.",
+        "Pek de eksisterende QR-kodene mot den nye menyen, eller trykk nye per bord."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Gjør pdf-en om til en ekte meny",
+      "text": "Last opp dagens meny og få en digital versjon som er lesbar på telefon, på rundt fem minutter. 14 dager gratis, uten kort.",
+      "buttonLabel": "Se den digitale menyen",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Vanlige spørsmål",
+      "items": [
+        {
+          "q": "Kan jeg lage en QR-kode til en pdf-meny gratis?",
+          "a": "Ja, og det tar rundt et kvarter. Bruk en statisk kode som peker på en adresse på ditt eget domene, så kan du bytte ut filen senere uten å trykke på nytt."
+        },
+        {
+          "q": "Indekserer Google en pdf-meny?",
+          "a": "Google kan indeksere pdf-filer generelt, men en meny-pdf som bare nås via en trykt QR-kode, har som regel ingen lenker til seg, så i praksis rangerer den ikke på rett- eller kjøkkensøk."
+        },
+        {
+          "q": "Hva om jeg bare lager pdf-en i telefonformat?",
+          "a": "Det hjelper på lesbarheten og er verdt å gjøre. Det løser ikke oppdateringer, utsolgte retter, språk, allergener eller bestilling – leseproblemet er bare det første av seks."
+        },
+        {
+          "q": "Kan jeg beholde designet mitt hvis jeg går over til en hostet meny?",
+          "a": "Farger, logo og navn på retter følger med. Sidelayouten gjør det ikke, fordi den bygges om for en telefonskjerm – som er hele poenget med byttet."
+        },
+        {
+          "q": "Må jeg trykke QR-kodene på nytt?",
+          "a": "Ikke hvis dagens kode peker på en adresse du styrer – da omdirigerer du den adressen til den nye menyen. Peker den på domenet til en generator eller en Disk-lenke, trenger du nye koder."
+        }
+      ]
+    }
+  ]
+}
