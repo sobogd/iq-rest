@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Správa stolů: obracet stoly rychleji | IQ Rest",
+    "description": "Jak se obrátkovost stolů promítá do peněz, co software na správu stolů opravdu dělá a jaké návyky v sále přidají jednu směnu bez nových stolů."
+  },
+  "card": {
+    "title": "Správa stolů: aritmetika jedné směny navíc za večer",
+    "excerpt": "Uvolnit stůl o dvacet minut dřív má větší cenu než většina marketingu. Tady je, jak měřit obrátkovost, kde se schovávají minuty a s čím software skutečně pomůže."
+  },
+  "h1": "Správa stolů v restauraci: jak z téhož sálu dostat druhou směnu",
+  "intro": "Do sálu stoly nepřidáte, ale u těch stávajících můžete obsloužit víc lidí. Většina podniků ztrácí obrátkovost na třech místech: čekání před objednávkou, čekání na účet a deset minut, kdy stůl stojí špinavý. Nic z toho nepotřebuje nové vybavení. Potřebuje to vědět, kam se minuty ztrácejí.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Začněte číslem"
+    },
+    {
+      "type": "p",
+      "text": "Obrátkovost stolu je počet obsloužených kuvertů dělený počtem míst dostupných za směnu. Máte-li 40 míst a v pátek večer obsloužíte 60 kuvertů, vaše obrátkovost je 1,5."
+    },
+    {
+      "type": "p",
+      "text": "Proč na tom záleží: při průměrné útratě 28 € znamená posun z 1,5 na 1,8 v pátek 12 kuvertů navíc, tedy 336 €. Udělejte to v pátek a v sobotu a máte kolem 2 900 € měsíčně – z téhož sálu, téhož lístku a téhož personálu."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Obrátkovost",
+        "Kuverty na 40 místech",
+        "Tržba při 28 €"
+      ],
+      "rows": [
+        [
+          "1,2",
+          "48",
+          "1 344 €"
+        ],
+        [
+          "1,5",
+          "60",
+          "1 680 €"
+        ],
+        [
+          "1,8",
+          "72",
+          "2 016 €"
+        ],
+        [
+          "2,0",
+          "80",
+          "2 240 €"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kam se minuty opravdu ztrácejí"
+    },
+    {
+      "type": "p",
+      "text": "Změřte pár stolů od začátku do konce a rozložení je pozoruhodně podobné napříč podniky:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Fáze",
+        "Obvykle",
+        "Realisticky nejlepší"
+      ],
+      "rows": [
+        [
+          "Posazeni → objednávka přijata",
+          "8-14 min",
+          "2-4 min"
+        ],
+        [
+          "Objednávka → jídlo",
+          "12-25 min",
+          "Záleží na kuchyni"
+        ],
+        [
+          "Jedení",
+          "35-55 min",
+          "Nechte být"
+        ],
+        [
+          "Dojedli → požádali o účet",
+          "5-12 min",
+          "1-2 min"
+        ],
+        [
+          "Požádali o účet → zaplaceno",
+          "6-15 min",
+          "1-3 min"
+        ],
+        [
+          "Zaplaceno → stůl uklizen",
+          "5-15 min",
+          "3 min"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Záleží na dvou sloupcích. Čas jídla vám nepatří ke zkracování: mačkat ho je nejrychlejší cesta ke špatné recenzi. Dvě čekání kolem něj jsou čistý mrtvý čas a dohromady běžně dělají 20 až 30 minut na stůl. Tam je vaše směna navíc, na očích."
+    },
+    {
+      "type": "h2",
+      "text": "Čtyři nápravy podle návratnosti"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Nechte hosty objednat, až budou připravení.** Čekání na volného číšníka je největší zátka a je nejhorší přesně tehdy, když je plno. [Objednávání od stolu](route:/order-taking) ho odstraní úplně tam, kde styl sedí.",
+        "**Nechte je zaplatit, až budou připravení.** Tanec s účtem stojí 10 až 25 minut. Platba u stolu ho stlačí zhruba na jednu.",
+        "**Uklízejte rychleji.** Špinavý stůl se nedá prodat. Přiřaďte úklid výslovně místo doufání; pět ušetřených minut na stůl je za večer celá směna.",
+        "**Přestaňte sázet dva stoly na jednoho číšníka naráz.** Dva stoly usazené zároveň čekají oba. Rozestupte usazení o pět minut a oba budou obslouženy rychleji."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Co dělá software na správu stolů"
+    },
+    {
+      "type": "p",
+      "text": "Užitečná verze je živý plán sálu: které stoly jsou volné, obsazené, po objednávce, čekají na účet nebo se uklízejí – viditelné všem naráz místo v hlavě toho, kdo stojí u dveří."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Stav na první pohled**, aby procházející číšník věděl, že stůl 12 čeká od 20:40.",
+        "**Návrhy usazení** – čtyřka z ulice jde ke stolu, který se uvolní nejdřív, ne k prvnímu, na který si někdo vzpomene.",
+        "**Stůl propojený s objednávkou**, aby se účet, QR objednávka i kuchyňský bon shodly na tom, kdo kde sedí.",
+        "**Historie**, abyste viděli, že vaše druhá sobotní směna má systematicky 25 minut zpoždění, a mohli odstranit příčinu.",
+        "**Rezervace na stejné mapě** jako hosté z ulice – odtud pochází většina dvojích obsazení."
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Software stoly neobrací. Odstraňuje dohady, kvůli kterým je obracení pomalé. Pokud má váš sál 12 stolů a jeden člověk to zvládá dobře, tabule opravdu stačí; argument sílí kolem 20 stolů, při více číšnících nebo při míchání rezervací a hostů z ulice."
+    },
+    {
+      "type": "h2",
+      "text": "Obrátkovost, kterou nemáte honit"
+    },
+    {
+      "type": "p",
+      "text": "Restaurace s degustačním menu, která prodá jednu směnu za večer, nespravuje stoly špatně – ta směna je produkt. Sousedský bar, kde lidé sedí tři hodiny nad dvěma pivy, zpeněžuje něco jiného než talíř. Zatlačte na obrátkovost v jednom nebo druhém a rozbijete byznys, který máte."
+    },
+    {
+      "type": "h2",
+      "text": "Dvoutýdenní měření, které opravdu zvládnete"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Vyberte čtyři stoly. Týden zapisujte čas usazení, objednávky, žádosti o účet a dokončení úklidu na kartičku přilepenou pod stolem.",
+        "Zprůměrujte každou mezeru. Najdete jednu, která je dvakrát větší, než jste čekali.",
+        "Změňte jedinou věc, na následující týden.",
+        "Porovnejte. Změnu si nechte, pokud se mezera zmenšila a nikdo si nestěžoval.",
+        "Přejděte k další největší mezeře."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Než začnete měřit, zeptejte se číšníků, kam se čas ztrácí. Skoro vždycky to vědí a obvykle mají pravdu – měření hlavně rozhodne spor o to, který ze dvou známých problémů je větší."
+    },
+    {
+      "type": "cta",
+      "heading": "Uvidíte celý sál na jednom místě",
+      "text": "Živý stav stolů, objednávky svázané se stoly a rezervace na stejné mapě. 14 dní zdarma, bez karty.",
+      "buttonLabel": "Zobrazit správu stolů",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Časté dotazy",
+      "items": [
+        {
+          "q": "Jaká obrátkovost stolů je dobrá?",
+          "a": "Záleží zcela na formátu. Fast casual jede na 3 a víc, bistro 1,5-2 za směnu, fine dining často 1. Porovnávejte se s vlastním minulým měsícem, ne s cizím formátem."
+        },
+        {
+          "q": "Jak spočítám obrátkovost stolů?",
+          "a": "Kuverty obsloužené za směnu dělené počtem míst. 60 kuvertů na 40 místech je 1,5."
+        },
+        {
+          "q": "Potřebuji software na 12 stolů?",
+          "a": "Kvůli samotnému plánu sálu asi ne. Začne se vyplácet při více číšnících, při míchání hostů z ulice a rezervací, nebo když objednávky chodí z víc než jednoho kanálu."
+        },
+        {
+          "q": "Zrychluje objednávání přes QR opravdu obrátkovost?",
+          "a": "Odstraňuje čekání mezi rozhodnutím a objednávkou, typicky 8-14 minut, a nejhorší je ve špičce. Jestli to sedí k vašemu stylu obsluhy, je samostatná otázka, na kterou stojí za to odpovědět poctivě."
+        },
+        {
+          "q": "Jaká je nejrychlejší změna, kterou můžu udělat zítra?",
+          "a": "Přidělte úklid stolů konkrétnímu člověku pro danou směnu. Nic to nestojí, vejde se do jedné věty na poradě před směnou a obvykle to vrátí pět minut na stůl."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Borðstjórnun: hraðari veltu borða | IQ Rest",
+    "description": "Hvernig velta borða verður að peningum, hvað hugbúnaður fyrir borðstjórnun gerir í raun og hvaða venjur í salnum bæta við einni vakt án nýrra borða."
+  },
+  "card": {
+    "title": "Borðstjórnun: reikningurinn á bak við eina auka vakt á kvöldi",
+    "excerpt": "Að losa borð tuttugu mínútum fyrr er verðmætara en flest markaðsstarf. Svona mælir þú veltuna, hér hverfa mínúturnar og hér hjálpar hugbúnaður í raun."
+  },
+  "h1": "Borðstjórnun á veitingastað: hvernig þú nærð annarri vakt út úr sama sal",
+  "intro": "Þú getur ekki bætt borðum í salinn, en þú getur þjónað fleirum við þau sem fyrir eru. Flestir staðir tapa veltu á þremur stöðum: biðinni fyrir pöntun, biðinni eftir reikningnum og þessum tíu mínútum sem borðið stendur óhreint. Ekkert af þessu þarf nýjan búnað. Það þarf að vita hvert mínúturnar fara.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Byrjaðu á tölunni"
+    },
+    {
+      "type": "p",
+      "text": "Velta borða er fjöldi gesta sem þjónað er deilt með þeim sætum sem eru í boði á vakt. Með 40 sætum og 60 gestum á föstudagskvöldi er veltan þín 1,5."
+    },
+    {
+      "type": "p",
+      "text": "Af hverju skiptir það máli: með 28 € meðaleyðslu þýðir að færa föstudaginn úr 1,5 í 1,8 tólf gesti í viðbót, sem eru 336 €. Gerðu það á föstudegi og laugardegi og það eru um 2.900 € á mánuði — úr sama sal, sama matseðli og með sama fólki."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Velta",
+        "Gestir við 40 sæti",
+        "Tekjur við 28 €"
+      ],
+      "rows": [
+        [
+          "1,2",
+          "48",
+          "1.344 €"
+        ],
+        [
+          "1,5",
+          "60",
+          "1.680 €"
+        ],
+        [
+          "1,8",
+          "72",
+          "2.016 €"
+        ],
+        [
+          "2,0",
+          "80",
+          "2.240 €"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Hvert mínúturnar fara í raun"
+    },
+    {
+      "type": "p",
+      "text": "Taktu tímann á nokkrum borðum frá upphafi til enda og dreifingin er furðulega lík milli staða:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Þrep",
+        "Yfirleitt",
+        "Raunhæft best"
+      ],
+      "rows": [
+        [
+          "Sest → pöntun tekin",
+          "8-14 mín",
+          "2-4 mín"
+        ],
+        [
+          "Pöntun → matur",
+          "12-25 mín",
+          "Fer eftir eldhúsi"
+        ],
+        [
+          "Máltíðin",
+          "35-55 mín",
+          "Láttu hana í friði"
+        ],
+        [
+          "Búin → báðu um reikning",
+          "5-12 mín",
+          "1-2 mín"
+        ],
+        [
+          "Báðu um reikning → greitt",
+          "6-15 mín",
+          "1-3 mín"
+        ],
+        [
+          "Greitt → borð tilbúið",
+          "5-15 mín",
+          "3 mín"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Tveir dálkar skipta máli. Máltíðartíminn er ekki þinn til að þjappa — að þrýsta á hann er fljótlegasta leiðin að slæmri umsögn. Biðirnar tvær í kringum hana eru hreinn dauðatími og saman eru þær oftast 20 til 30 mínútur á borð. Þarna er auka vaktin þín, fyrir allra augum."
+    },
+    {
+      "type": "h2",
+      "text": "Fjórar lagfæringar, eftir ávöxtun"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Leyfðu gestum að panta þegar þeir eru tilbúnir.** Bið eftir lausum þjóni er stærsta flöskuhálsinn og hann er verstur einmitt þegar fullt er út úr dyrum. [Pöntun frá borðinu](route:/order-taking) fjarlægir hana alveg þar sem stíllinn passar.",
+        "**Leyfðu þeim að borga þegar þeir eru tilbúnir.** Reikningsdansinn kostar 10 til 25 mínútur. Greiðsla við borðið þjappar honum niður í um eina.",
+        "**Taktu hraðar af.** Óhreint borð selst ekki. Úthlutaðu afgreiðslu borða skýrt í stað þess að vona; fimm mínútur sem sparast á borð eru heil vakt yfir kvöldið.",
+        "**Hættu að setja tvö borð á sama þjón samtímis.** Tvö borð sem sest er við á sama tíma bíða bæði. Dreifðu setningunni um fimm mínútur og bæði fá hraðari þjónustu."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Hvað gerir hugbúnaður fyrir borðstjórnun"
+    },
+    {
+      "type": "p",
+      "text": "Gagnlega útgáfan er lifandi salarplan: hvaða borð eru laus, upptekin, búin að panta, bíða eftir reikningi eða verið að taka af — sýnilegt öllum í einu í stað þess að vera í höfðinu á þeim sem stendur við dyrnar."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Staða í einni svipan**, svo þjónn sem gengur hjá viti að borð 12 hefur beðið síðan 20:40.",
+        "**Tillögur um setningu** — fjögurra manna hópur án borðapöntunar fer að borðinu sem losnar fyrst, ekki því fyrsta sem einhverjum dettur í hug.",
+        "**Borð tengt pöntuninni**, svo reikningurinn, QR-pöntunin og eldhússeðillinn séu sammála um hver situr hvar.",
+        "**Saga**, svo þú sjáir að önnur laugardagsvaktin þín er kerfisbundið 25 mínútum á eftir og getir lagað orsökina.",
+        "**Borðapantanir á sama plani** og gestir án pöntunar — þaðan koma flestar tvíbókanir."
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Hugbúnaður snýr ekki borðum. Hann fjarlægir ágiskanirnar sem hægja á snúningnum. Ef salurinn þinn er með 12 borð og einn maður ræður vel við það dugar tafla í alvöru; rökin styrkjast í kringum 20 borð, með fleiri þjónum eða þegar þú blandar saman pöntunum og gestum af götunni."
+    },
+    {
+      "type": "h2",
+      "text": "Velta sem þú átt ekki að elta"
+    },
+    {
+      "type": "p",
+      "text": "Veitingastaður með smakkmatseðil sem selur eina vakt á kvöldi er ekki að stjórna borðum illa — sú vakt er varan. Hverfisbar þar sem fólk situr í þrjá tíma með tvo bjóra græðir á einhverju öðru en disknum. Ýttu á veltuna á hvorugum staðnum og þú brýtur reksturinn sem þú átt."
+    },
+    {
+      "type": "h2",
+      "text": "Tveggja vikna mæling sem þú kemst í raun í gegnum"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Veldu fjögur borð. Í viku skrifar þú tíma setningar, pöntunar, reikningsbeiðni og loka afgreiðslu á spjald límt undir borðið.",
+        "Reiknaðu meðaltal hvers bils. Þú finnur eitt sem er tvöfalt lengra en þig grunaði.",
+        "Breyttu einu einasta atriði fyrir næstu viku.",
+        "Berðu saman. Haltu breytingunni ef bilið minnkaði og enginn kvartaði.",
+        "Farðu í næststærsta bilið."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Spyrðu þjónana hvert tíminn fer áður en þú mælir. Þeir vita það nánast alltaf og hafa yfirleitt rétt fyrir sér — mælingin sker aðallega úr um hvort þekktu vandamálanna tveggja sé stærra."
+    },
+    {
+      "type": "cta",
+      "heading": "Sjáðu allan salinn á einum stað",
+      "text": "Lifandi staða borða, pantanir tengdar borðum og borðapantanir á sama plani. 14 dagar frítt, ekkert kort.",
+      "buttonLabel": "Skoða borðstjórnunina",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Algengar spurningar",
+      "items": [
+        {
+          "q": "Hvað telst góð velta borða?",
+          "a": "Það fer algjörlega eftir forminu. Fast casual keyrir á 3 og yfir, bistró 1,5-2 á vakt, fínni staðir oft 1. Berðu þig saman við þinn eigin síðasta mánuð, ekki við form einhvers annars."
+        },
+        {
+          "q": "Hvernig reikna ég veltu borða?",
+          "a": "Gestir sem þjónað er á vakt deilt með fjölda sæta. 60 gestir við 40 sæti eru 1,5."
+        },
+        {
+          "q": "Þarf ég hugbúnað fyrir 12 borð?",
+          "a": "Líklega ekki bara vegna salarplansins. Hann fer að borga sig með fleiri þjónum, með blöndu af gestum af götunni og borðapöntunum, eða þegar pantanir koma úr fleiri en einni rás."
+        },
+        {
+          "q": "Flýtir QR-pöntun raunverulega veltunni?",
+          "a": "Hún fjarlægir biðina milli ákvörðunar og pöntunar, yfirleitt 8-14 mínútur, og hún er verst á álagstíma. Hvort hún passar þínum þjónustustíl er önnur spurning og á skilið heiðarlegt svar."
+        },
+        {
+          "q": "Hver er fljótlegasta breytingin sem ég get gert á morgun?",
+          "a": "Fáðu ákveðinni manneskju það hlutverk að taka af borðum þessa vakt. Það kostar ekkert, kemst fyrir í einni setningu á fundinum fyrir vakt og skilar yfirleitt fimm mínútum á borð."
+        }
+      ]
+    }
+  ]
+}

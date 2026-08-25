@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "title": "Restaurant Table Management: Turn Tables Faster | IQ Rest",
+    "description": "How table turnover translates into money, what table management software actually does, and the floor habits that add a second seating without new tables."
+  },
+  "card": {
+    "title": "Table management: the arithmetic of one extra seating a night",
+    "excerpt": "Turning a table twenty minutes faster is worth more than most marketing. Here's how to measure turnover, where the minutes hide, and what software genuinely helps with."
+  },
+  "h1": "Restaurant table management: getting a second seating out of the same room",
+  "intro": "You can't add tables to a dining room, but you can serve more people at the ones you have. Most venues lose their turnover in three places — the wait before the order, the wait for the bill, and the ten minutes a table sits dirty. None of that needs new equipment. It needs knowing where the minutes go.",
+  "blocks": [
+    { "type": "h2", "text": "Start with the number" },
+    {
+      "type": "p",
+      "text": "Table turnover is covers served divided by seats available in a service. If you have 40 seats and serve 60 covers on a Friday night, your turnover is 1.5."
+    },
+    {
+      "type": "p",
+      "text": "The reason to care: at an average spend of €28, moving Friday from 1.5 to 1.8 is 12 extra covers, or €336. Do that on Friday and Saturday and it's about €2,900 a month — from the same room, the same menu and the same staff."
+    },
+    {
+      "type": "table",
+      "headers": ["Turnover", "Covers on 40 seats", "Revenue at €28"],
+      "rows": [
+        ["1.2", "48", "€1,344"],
+        ["1.5", "60", "€1,680"],
+        ["1.8", "72", "€2,016"],
+        ["2.0", "80", "€2,240"]
+      ]
+    },
+    { "type": "h2", "text": "Where the minutes actually go" },
+    {
+      "type": "p",
+      "text": "Time a few tables end to end and the distribution is remarkably consistent across venues:"
+    },
+    {
+      "type": "table",
+      "headers": ["Stage", "Typical", "Realistic best"],
+      "rows": [
+        ["Seated → order taken", "8–14 min", "2–4 min"],
+        ["Order → food", "12–25 min", "Kitchen-dependent"],
+        ["Eating", "35–55 min", "Leave it alone"],
+        ["Finished → bill requested", "5–12 min", "1–2 min"],
+        ["Bill requested → paid", "6–15 min", "1–3 min"],
+        ["Paid → table reset", "5–15 min", "3 min"]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Two columns matter. The eating time is not yours to compress — squeezing it is how you get a bad review. The two waits around it are pure dead time, and together they routinely run 20 to 30 minutes per table. That's your extra seating, sitting in plain sight."
+    },
+    { "type": "h2", "text": "The four fixes, in order of payback" },
+    {
+      "type": "list",
+      "items": [
+        "**Let guests order when they're ready.** The wait for a waiter to become free is the single biggest block, and it's worst exactly when you're busiest. [Ordering from the table](route:/order-taking) removes it entirely for the venues where the style fits.",
+        "**Let guests pay when they're ready.** The bill dance costs 10 to 25 minutes. Pay-at-table collapses it to about one.",
+        "**Reset faster.** A dirty table is unsellable. Assign clearing explicitly rather than hoping; five minutes saved per table is a seating over a night.",
+        "**Stop double-seating the same server.** Two tables that sit down together both wait. Stagger seating by five minutes and both get served faster."
+      ]
+    },
+    { "type": "h2", "text": "What table management software does" },
+    {
+      "type": "p",
+      "text": "The useful version is a live floor plan: which tables are free, occupied, ordered, waiting for the bill or being reset — visible to everyone at once instead of held in the head of whoever is on the door."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Status at a glance**, so a server walking past knows table 12 has been waiting since 20:40.",
+        "**Seating suggestions** — a walk-in four goes to the table that frees soonest, not the first one someone remembers.",
+        "**Table linked to the order**, so the bill, the QR order and the kitchen ticket all agree about who is sitting where.",
+        "**History**, so you can see that your Saturday second seating is consistently 25 minutes late and fix the cause.",
+        "**Reservations on the same map** as walk-ins, which is where most double-booking comes from."
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Software doesn't turn tables. It removes the guessing that makes turning them slow. If your floor is 12 tables and one person runs it well, a whiteboard is genuinely fine — the case gets strong at around 20 tables, multiple servers, or a mix of bookings and walk-ins."
+    },
+    { "type": "h2", "text": "Turnover you should not chase" },
+    {
+      "type": "p",
+      "text": "A tasting-menu restaurant selling one seating a night is not doing table management wrong; the seating is the product. A neighbourhood bar where people sit for three hours over two beers is monetising something other than the plate. Push turnover in either and you break the business you have."
+    },
+    { "type": "h2", "text": "A two-week measurement you can actually run" },
+    {
+      "type": "steps",
+      "items": [
+        "Pick four tables. For one week, note seating time, order time, bill request and reset-complete on a card taped under the table.",
+        "Average each gap. You'll find one that's twice what you assumed.",
+        "Change one thing only, for the following week.",
+        "Compare. Keep the change if the gap shrank and nobody complained.",
+        "Move to the next-biggest gap."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Ask the servers where the time goes before you measure. They almost always know, and they're usually right — measurement mostly settles the argument about which of the two known problems is bigger."
+    },
+    {
+      "type": "cta",
+      "heading": "See your whole floor in one place",
+      "text": "Live table status, orders tied to tables and reservations on the same map. 14 days free, no card required.",
+      "buttonLabel": "See table management",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently asked questions",
+      "items": [
+        {
+          "q": "What is a good table turnover rate?",
+          "a": "It depends entirely on format. Fast casual runs 3 or higher, a bistro around 1.5–2 per service, fine dining often 1. Compare yourself to your own last month, not to someone else's format."
+        },
+        {
+          "q": "How do I calculate table turnover?",
+          "a": "Covers served in a service divided by the number of seats. 60 covers on 40 seats is 1.5."
+        },
+        {
+          "q": "Do I need software for 12 tables?",
+          "a": "Probably not for the floor plan alone. It starts paying off with multiple servers, a mix of walk-ins and reservations, or when orders arrive from more than one channel."
+        },
+        {
+          "q": "Does QR ordering really speed up turnover?",
+          "a": "It removes the wait between deciding and ordering, which is typically 8–14 minutes and worst at peak. Whether that suits your service style is a separate question worth answering honestly."
+        },
+        {
+          "q": "What's the fastest change I can make tomorrow?",
+          "a": "Assign table resets explicitly to a named person for the service. It's free, it takes one sentence at the pre-shift briefing, and it usually recovers five minutes per table."
+        }
+      ]
+    }
+  ]
+}

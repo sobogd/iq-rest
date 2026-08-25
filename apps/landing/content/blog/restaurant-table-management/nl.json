@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Tafelbeheer: tafels sneller draaien | IQ Rest",
+    "description": "Hoe tafelomloop zich vertaalt in geld, wat software voor tafelbeheer echt doet, en de zaalgewoonten die een extra ronde opleveren zonder nieuwe tafels."
+  },
+  "card": {
+    "title": "Tafelbeheer: de rekensom achter één extra ronde per avond",
+    "excerpt": "Een tafel twintig minuten sneller draaien is meer waard dan de meeste marketing. Hier lees je hoe je omloop meet, waar de minuten zich verstoppen en waar software echt bij helpt."
+  },
+  "h1": "Tafelbeheer in een restaurant: een tweede ronde uit dezelfde zaal halen",
+  "intro": "Je kunt geen tafels toevoegen aan een zaal, maar je kunt wel meer mensen bedienen aan de tafels die je hebt. De meeste zaken verliezen hun omloop op drie plekken: het wachten vóór de bestelling, het wachten op de rekening en de tien minuten dat de tafel vuil staat. Daar is geen nieuwe apparatuur voor nodig. Wel weten waar de minuten blijven.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Begin bij het getal"
+    },
+    {
+      "type": "p",
+      "text": "Tafelomloop is het aantal geserveerde couverts gedeeld door het aantal beschikbare plaatsen in een dienst. Heb je 40 plaatsen en serveer je 60 couverts op een vrijdagavond, dan is je omloop 1,5."
+    },
+    {
+      "type": "p",
+      "text": "Waarom dat telt: bij een gemiddelde besteding van € 28 betekent vrijdag van 1,5 naar 1,8 twaalf couverts extra, ofwel € 336. Doe dat op vrijdag én zaterdag en dat is zo'n € 2.900 per maand — uit dezelfde zaal, dezelfde kaart en hetzelfde team."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Omloop",
+        "Couverts op 40 plaatsen",
+        "Omzet bij € 28"
+      ],
+      "rows": [
+        [
+          "1,2",
+          "48",
+          "€ 1.344"
+        ],
+        [
+          "1,5",
+          "60",
+          "€ 1.680"
+        ],
+        [
+          "1,8",
+          "72",
+          "€ 2.016"
+        ],
+        [
+          "2,0",
+          "80",
+          "€ 2.240"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Waar de minuten werkelijk blijven"
+    },
+    {
+      "type": "p",
+      "text": "Klok een paar tafels van begin tot eind en de verdeling is opvallend gelijk in vrijwel elke zaak:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Fase",
+        "Gebruikelijk",
+        "Realistisch best"
+      ],
+      "rows": [
+        [
+          "Gezeten → bestelling opgenomen",
+          "8-14 min",
+          "2-4 min"
+        ],
+        [
+          "Bestelling → eten",
+          "12-25 min",
+          "Afhankelijk van de keuken"
+        ],
+        [
+          "Eten",
+          "35-55 min",
+          "Blijf ervan af"
+        ],
+        [
+          "Klaar → rekening gevraagd",
+          "5-12 min",
+          "1-2 min"
+        ],
+        [
+          "Rekening gevraagd → betaald",
+          "6-15 min",
+          "1-3 min"
+        ],
+        [
+          "Betaald → tafel afgeruimd",
+          "5-15 min",
+          "3 min"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Twee kolommen doen ertoe. De eettijd is niet van jou om in te korten — daar knijpen levert precies die slechte recensie op. De twee wachttijden eromheen zijn pure dode tijd, en samen lopen ze routineus op tot 20 à 30 minuten per tafel. Daar staat je extra ronde, in het volle zicht."
+    },
+    {
+      "type": "h2",
+      "text": "De vier oplossingen, op volgorde van rendement"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Laat gasten bestellen wanneer ze eraan toe zijn.** Wachten tot iemand van de bediening vrij is, is de grootste blokkade, en die is het ergst juist als het druk is. [Bestellen vanaf de tafel](route:/order-taking) haalt hem helemaal weg bij zaken waar de stijl past.",
+        "**Laat ze betalen wanneer ze eraan toe zijn.** De rekeningdans kost 10 tot 25 minuten. Betalen aan tafel brengt dat terug naar ongeveer één.",
+        "**Ruim sneller af.** Een vuile tafel is onverkoopbaar. Wijs het afruimen expliciet toe in plaats van te hopen; vijf minuten winst per tafel is over een avond een hele ronde.",
+        "**Zet niet twee tafels tegelijk bij dezelfde medewerker.** Twee tafels die samen gaan zitten, wachten allebei. Verschuif het zetten vijf minuten en beide worden sneller geholpen."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Wat software voor tafelbeheer doet"
+    },
+    {
+      "type": "p",
+      "text": "De nuttige versie is een live plattegrond: welke tafels vrij zijn, bezet, besteld, wachtend op de rekening of in de afruim — zichtbaar voor iedereen tegelijk in plaats van in het hoofd van degene bij de deur."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Status in één oogopslag**, zodat een langslopende medewerker ziet dat tafel 12 al sinds 20.40 uur wacht.",
+        "**Plaatsingsvoorstellen** — vier walk-ins gaan naar de tafel die het eerst vrijkomt, niet naar de eerste die iemand toevallig noemt.",
+        "**Tafel gekoppeld aan de bestelling**, zodat rekening, QR-bestelling en keukenbon het eens zijn over wie waar zit.",
+        "**Historie**, zodat je ziet dat je tweede ronde op zaterdag structureel 25 minuten te laat is en de oorzaak aanpakt.",
+        "**Reserveringen op dezelfde plattegrond** als walk-ins — daar komt het gros van de dubbelboekingen vandaan."
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Software draait geen tafels. Het haalt het giswerk weg dat ze traag laat draaien. Heeft je zaal 12 tafels en één iemand houdt dat prima bij, dan is een whiteboard echt genoeg; het argument wordt sterk rond de 20 tafels, bij meerdere medewerkers, of bij een mix van reserveringen en walk-ins."
+    },
+    {
+      "type": "h2",
+      "text": "Omloop die je niet moet najagen"
+    },
+    {
+      "type": "p",
+      "text": "Een restaurant met een proefmenu dat één ronde per avond verkoopt, doet niets fout: die ronde ís het product. Een buurtcafé waar mensen drie uur over twee bier doen, verdient aan iets anders dan het bord. Duw daar de omloop op en je sloopt de zaak die je hebt."
+    },
+    {
+      "type": "h2",
+      "text": "Een meting van twee weken die je echt volhoudt"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Kies vier tafels. Noteer een week lang de tijd van zetten, bestellen, rekening vragen en klaar met afruimen op een kaartje onder de tafel.",
+        "Middel elk gat uit. Je vindt er één dat twee keer zo groot is als je dacht.",
+        "Verander de week erna precies één ding.",
+        "Vergelijk. Houd de verandering als het gat kleiner werd en niemand klaagde.",
+        "Ga door naar het op één na grootste gat."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Vraag de bediening waar de tijd blijft voordat je gaat meten. Ze weten het bijna altijd en hebben meestal gelijk — de meting beslecht vooral welk van de twee bekende problemen het grootste is."
+    },
+    {
+      "type": "cta",
+      "heading": "Zie je hele zaal op één plek",
+      "text": "Live tafelstatus, bestellingen gekoppeld aan tafels en reserveringen op dezelfde plattegrond. 14 dagen gratis, zonder creditcard.",
+      "buttonLabel": "Bekijk het tafelbeheer",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Veelgestelde vragen",
+      "items": [
+        {
+          "q": "Wat is een goede tafelomloop?",
+          "a": "Dat hangt volledig van het format af. Fast casual draait 3 of hoger, een bistro 1,5-2 per dienst, fine dining vaak 1. Vergelijk jezelf met je eigen vorige maand, niet met andermans format."
+        },
+        {
+          "q": "Hoe bereken ik de tafelomloop?",
+          "a": "Geserveerde couverts in een dienst gedeeld door het aantal plaatsen. 60 couverts op 40 plaatsen is 1,5."
+        },
+        {
+          "q": "Heb ik software nodig voor 12 tafels?",
+          "a": "Voor alleen de plattegrond waarschijnlijk niet. Het gaat lonen bij meerdere medewerkers, een mix van walk-ins en reserveringen, of zodra bestellingen via meer dan één kanaal binnenkomen."
+        },
+        {
+          "q": "Versnelt QR-bestellen de omloop echt?",
+          "a": "Het haalt de wachttijd weg tussen beslissen en bestellen, doorgaans 8 tot 14 minuten en het ergst op de piek. Of dat bij je bedieningsstijl past, is een aparte vraag die je eerlijk moet beantwoorden."
+        },
+        {
+          "q": "Wat is de snelste verandering die ik morgen kan doorvoeren?",
+          "a": "Wijs het afruimen voor die dienst toe aan iemand met naam en toenaam. Het kost niets, past in één zin bij de briefing en levert meestal vijf minuten per tafel op."
+        }
+      ]
+    }
+  ]
+}

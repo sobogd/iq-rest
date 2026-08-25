@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Gestion des tables : tourner plus vite | IQ Rest",
+    "description": "Comment la rotation des tables se traduit en argent, ce que fait vraiment un logiciel de gestion de salle et les habitudes qui ajoutent un service sans ajouter de tables."
+  },
+  "card": {
+    "title": "Gestion des tables : l'arithmétique d'un service supplémentaire par soir",
+    "excerpt": "Tourner une table vingt minutes plus tôt vaut plus que la plupart des actions marketing. Voici comment mesurer la rotation, où se cachent les minutes et ce à quoi le logiciel sert vraiment."
+  },
+  "h1": "Gestion des tables en restaurant : sortir un deuxième service de la même salle",
+  "intro": "On n'ajoute pas de tables à une salle, mais on peut y servir plus de monde. La plupart des établissements perdent leur rotation à trois endroits : l'attente avant la commande, l'attente de l'addition et les dix minutes pendant lesquelles la table reste sale. Rien de tout cela ne demande du matériel. Cela demande de savoir où passent les minutes.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Commencez par le chiffre"
+    },
+    {
+      "type": "p",
+      "text": "La rotation des tables, c'est le nombre de couverts servis divisé par le nombre de places disponibles sur un service. Avec 40 places et 60 couverts un vendredi soir, votre rotation est de 1,5."
+    },
+    {
+      "type": "p",
+      "text": "Pourquoi s'en soucier : à 28 € de ticket moyen, passer le vendredi de 1,5 à 1,8 représente 12 couverts de plus, soit 336 €. Faites-le vendredi et samedi, et cela fait environ 2 900 € par mois — même salle, même carte, même équipe."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Rotation",
+        "Couverts sur 40 places",
+        "Chiffre d'affaires à 28 €"
+      ],
+      "rows": [
+        [
+          "1,2",
+          "48",
+          "1 344 €"
+        ],
+        [
+          "1,5",
+          "60",
+          "1 680 €"
+        ],
+        [
+          "1,8",
+          "72",
+          "2 016 €"
+        ],
+        [
+          "2,0",
+          "80",
+          "2 240 €"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Où passent réellement les minutes"
+    },
+    {
+      "type": "p",
+      "text": "Chronométrez quelques tables de bout en bout et la répartition est remarquablement constante d'un établissement à l'autre :"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Étape",
+        "Habituel",
+        "Meilleur réaliste"
+      ],
+      "rows": [
+        [
+          "Installés → commande prise",
+          "8-14 min",
+          "2-4 min"
+        ],
+        [
+          "Commande → plat",
+          "12-25 min",
+          "Dépend de la cuisine"
+        ],
+        [
+          "Repas",
+          "35-55 min",
+          "N'y touchez pas"
+        ],
+        [
+          "Terminé → addition demandée",
+          "5-12 min",
+          "1-2 min"
+        ],
+        [
+          "Addition demandée → payée",
+          "6-15 min",
+          "1-3 min"
+        ],
+        [
+          "Payée → table débarrassée",
+          "5-15 min",
+          "3 min"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Deux colonnes comptent. Le temps de repas ne vous appartient pas : le comprimer, c'est la meilleure façon de récolter un mauvais avis. Les deux attentes qui l'encadrent sont du temps mort pur, et ensemble elles font couramment 20 à 30 minutes par table. Votre service supplémentaire est là, à la vue de tous."
+    },
+    {
+      "type": "h2",
+      "text": "Les quatre correctifs, par ordre de rendement"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Laissez les clients commander quand ils sont prêts.** L'attente d'un serveur disponible est le premier blocage, et il est pire précisément quand vous êtes plein. La [commande à table](route:/order-taking) le supprime entièrement là où le style le permet.",
+        "**Laissez-les payer quand ils sont prêts.** La danse de l'addition coûte 10 à 25 minutes. Le paiement à table la ramène à une environ.",
+        "**Débarrassez plus vite.** Une table sale est invendable. Attribuez le débarrassage explicitement plutôt que d'espérer ; cinq minutes gagnées par table font un service sur une soirée.",
+        "**Cessez d'installer deux tables au même serveur en même temps.** Deux tables installées ensemble attendent toutes les deux. Décalez de cinq minutes, et les deux sont servies plus vite."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Ce que fait un logiciel de gestion de salle"
+    },
+    {
+      "type": "p",
+      "text": "La version utile, c'est un plan de salle en direct : quelles tables sont libres, occupées, ayant commandé, en attente d'addition ou en cours de nettoyage, visible par tous en même temps plutôt que dans la tête de la personne à l'accueil."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Statut d'un coup d'œil**, pour qu'un serveur qui passe sache que la table 12 attend depuis 20 h 40.",
+        "**Suggestions de placement** — un walk-in de quatre va à la table qui se libère le plus tôt, pas à la première dont quelqu'un se souvient.",
+        "**Table liée à la commande**, pour que l'addition, la commande par QR et le bon de cuisine s'accordent sur qui est assis où.",
+        "**Historique**, pour voir que votre deuxième service du samedi accuse systématiquement 25 minutes de retard et en corriger la cause.",
+        "**Réservations sur le même plan** que les walk-ins : c'est de là que vient l'essentiel des doubles réservations."
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Le logiciel ne fait pas tourner les tables. Il supprime les approximations qui les rendent lentes à tourner. Si votre salle fait 12 tables et qu'une personne la tient bien, un tableau blanc suffit vraiment ; l'argument devient fort vers 20 tables, avec plusieurs serveurs, ou avec un mélange de réservations et de walk-ins."
+    },
+    {
+      "type": "h2",
+      "text": "La rotation qu'il ne faut pas poursuivre"
+    },
+    {
+      "type": "p",
+      "text": "Un restaurant gastronomique qui vend un service par soir ne gère pas mal ses tables : le service est le produit. Un bar de quartier où les gens restent trois heures autour de deux bières monétise autre chose que l'assiette. Poussez la rotation dans l'un ou l'autre et vous cassez le commerce que vous avez."
+    },
+    {
+      "type": "h2",
+      "text": "Une mesure sur deux semaines que vous pouvez vraiment tenir"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Choisissez quatre tables. Pendant une semaine, notez l'heure d'installation, de commande, de demande d'addition et de fin de débarrassage sur une fiche scotchée sous la table.",
+        "Faites la moyenne de chaque écart. Vous en trouverez un qui vaut le double de ce que vous imaginiez.",
+        "Changez une seule chose, la semaine suivante.",
+        "Comparez. Gardez le changement si l'écart a diminué et que personne ne s'est plaint.",
+        "Passez à l'écart suivant par ordre de taille."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Demandez aux serveurs où passe le temps avant de mesurer. Ils le savent presque toujours et ont généralement raison — la mesure sert surtout à trancher lequel des deux problèmes connus est le plus gros."
+    },
+    {
+      "type": "cta",
+      "heading": "Voyez toute votre salle au même endroit",
+      "text": "Statut des tables en direct, commandes liées aux tables et réservations sur le même plan. 14 jours gratuits, sans carte bancaire.",
+      "buttonLabel": "Voir la gestion des tables",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Questions fréquentes",
+      "items": [
+        {
+          "q": "Quel est un bon taux de rotation des tables ?",
+          "a": "Cela dépend entièrement du format. Le fast casual tourne à 3 ou plus, un bistrot à 1,5-2 par service, la gastronomie souvent à 1. Comparez-vous à votre propre mois précédent, pas au format de quelqu'un d'autre."
+        },
+        {
+          "q": "Comment calculer la rotation des tables ?",
+          "a": "Couverts servis sur un service divisés par le nombre de places. 60 couverts sur 40 places font 1,5."
+        },
+        {
+          "q": "Ai-je besoin d'un logiciel pour 12 tables ?",
+          "a": "Sans doute pas pour le seul plan de salle. Cela devient rentable avec plusieurs serveurs, un mélange de walk-ins et de réservations, ou quand les commandes arrivent par plus d'un canal."
+        },
+        {
+          "q": "La commande par QR accélère-t-elle vraiment la rotation ?",
+          "a": "Elle supprime l'attente entre la décision et la commande, généralement 8 à 14 minutes, et pire au coup de feu. Savoir si cela convient à votre style de service est une autre question, à trancher honnêtement."
+        },
+        {
+          "q": "Quel est le changement le plus rapide à faire dès demain ?",
+          "a": "Attribuer le débarrassage des tables à une personne nommée pour le service. C'est gratuit, cela tient en une phrase au briefing, et cela récupère généralement cinq minutes par table."
+        }
+      ]
+    }
+  ]
+}

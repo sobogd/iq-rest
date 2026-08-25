@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Gestão de mesas: rodar mesas mais depressa | IQ Rest",
+    "description": "Como a rotação de mesas se traduz em dinheiro, o que faz mesmo um software de gestão de sala e os hábitos que acrescentam um turno sem acrescentar mesas."
+  },
+  "card": {
+    "title": "Gestão de mesas: a aritmética de um turno extra por noite",
+    "excerpt": "Rodar uma mesa vinte minutos mais cedo vale mais do que quase qualquer campanha. Eis como medir a rotação, onde se escondem os minutos e para que serve mesmo o software."
+  },
+  "h1": "Gestão de mesas num restaurante: tirar um segundo turno da mesma sala",
+  "intro": "Não dá para acrescentar mesas a uma sala, mas dá para servir mais gente nas que já tem. A maioria dos espaços perde rotação em três sítios: a espera antes do pedido, a espera pela conta e os dez minutos em que a mesa fica suja. Nada disso precisa de equipamento novo. Precisa de saber para onde vão os minutos.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Comece pelo número"
+    },
+    {
+      "type": "p",
+      "text": "A rotação de mesas é o número de refeições servidas a dividir pelos lugares disponíveis num serviço. Com 40 lugares e 60 refeições numa sexta à noite, a sua rotação é 1,5."
+    },
+    {
+      "type": "p",
+      "text": "A razão para se importar: com um ticket médio de 28 €, passar a sexta de 1,5 para 1,8 são 12 refeições a mais, ou seja 336 €. Faça isso à sexta e ao sábado e são cerca de 2.900 € por mês — mesma sala, mesmo menu, mesma equipa."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Rotação",
+        "Refeições com 40 lugares",
+        "Receita a 28 €"
+      ],
+      "rows": [
+        [
+          "1,2",
+          "48",
+          "1.344 €"
+        ],
+        [
+          "1,5",
+          "60",
+          "1.680 €"
+        ],
+        [
+          "1,8",
+          "72",
+          "2.016 €"
+        ],
+        [
+          "2,0",
+          "80",
+          "2.240 €"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Para onde vão realmente os minutos"
+    },
+    {
+      "type": "p",
+      "text": "Cronometre algumas mesas do princípio ao fim e a distribuição é notavelmente parecida em todos os espaços:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Fase",
+        "Habitual",
+        "Melhor realista"
+      ],
+      "rows": [
+        [
+          "Sentados → pedido tirado",
+          "8-14 min",
+          "2-4 min"
+        ],
+        [
+          "Pedido → comida",
+          "12-25 min",
+          "Depende da cozinha"
+        ],
+        [
+          "A comer",
+          "35-55 min",
+          "Deixe estar"
+        ],
+        [
+          "Acabaram → pedem a conta",
+          "5-12 min",
+          "1-2 min"
+        ],
+        [
+          "Pedem a conta → paga",
+          "6-15 min",
+          "1-3 min"
+        ],
+        [
+          "Paga → mesa levantada",
+          "5-15 min",
+          "3 min"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Duas colunas importam. O tempo a comer não é seu para comprimir — apertá-lo é a forma de arranjar uma má crítica. As duas esperas à volta são tempo morto puro e, juntas, dão habitualmente 20 a 30 minutos por mesa. O seu turno extra está ali, à vista."
+    },
+    {
+      "type": "h2",
+      "text": "As quatro correções, por ordem de retorno"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Deixe os clientes pedir quando estiverem prontos.** A espera por um empregado livre é o maior bloqueio, e é pior justamente quando está cheio. [Pedir à mesa](route:/order-taking) elimina-a por completo nos espaços em que o estilo encaixa.",
+        "**Deixe-os pagar quando estiverem prontos.** A dança da conta custa 10 a 25 minutos. O pagamento à mesa reduz isso a cerca de um.",
+        "**Levante mais depressa.** Uma mesa suja não se vende. Atribua o levantamento explicitamente em vez de esperar que aconteça; cinco minutos poupados por mesa dão um turno ao longo de uma noite.",
+        "**Deixe de sentar duas mesas ao mesmo empregado.** Duas mesas que se sentam juntas esperam as duas. Desencontre a sentada em cinco minutos e ambas são servidas mais depressa."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "O que faz um software de gestão de mesas"
+    },
+    {
+      "type": "p",
+      "text": "A versão útil é uma planta de sala ao vivo: que mesas estão livres, ocupadas, com pedido feito, à espera da conta ou a ser levantadas, visível para todos ao mesmo tempo em vez de guardada na cabeça de quem está à porta."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Estado num relance**, para que um empregado que passa saiba que a mesa 12 espera desde as 20:40.",
+        "**Sugestões de colocação** — um grupo de quatro sem reserva vai para a mesa que fica livre mais cedo, não para a primeira de que alguém se lembra.",
+        "**Mesa ligada ao pedido**, para que conta, pedido por QR e comanda de cozinha concordem sobre quem está sentado onde.",
+        "**Histórico**, para ver que o seu segundo turno de sábado está sistematicamente 25 minutos atrasado e corrigir a causa.",
+        "**Reservas na mesma planta** dos clientes sem reserva — é daí que vem a maior parte das duplas marcações."
+      ]
+    },
+    {
+      "type": "note",
+      "text": "O software não roda mesas. Tira as adivinhações que tornam lento rodá-las. Se a sua sala tem 12 mesas e uma pessoa a domina bem, um quadro branco chega perfeitamente; o argumento fica forte por volta das 20 mesas, com vários empregados, ou com mistura de reservas e clientes sem reserva."
+    },
+    {
+      "type": "h2",
+      "text": "Rotação que não deve perseguir"
+    },
+    {
+      "type": "p",
+      "text": "Um restaurante de menu de degustação que vende um turno por noite não está a gerir mal as mesas: o turno é o produto. Um bar de bairro onde as pessoas ficam três horas com duas cervejas está a monetizar outra coisa que não o prato. Force a rotação em qualquer um deles e parte o negócio que tem."
+    },
+    {
+      "type": "h2",
+      "text": "Uma medição de duas semanas que consegue mesmo fazer"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Escolha quatro mesas. Durante uma semana, anote a hora de sentar, a do pedido, o pedido da conta e o fim do levantamento num cartão colado por baixo da mesa.",
+        "Faça a média de cada intervalo. Vai encontrar um que é o dobro do que supunha.",
+        "Mude uma só coisa, na semana seguinte.",
+        "Compare. Fique com a mudança se o intervalo encolheu e ninguém se queixou.",
+        "Passe ao intervalo seguinte por tamanho."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Pergunte aos empregados para onde vai o tempo antes de medir. Quase sempre sabem, e costumam ter razão — a medição serve sobretudo para decidir qual dos dois problemas conhecidos é maior."
+    },
+    {
+      "type": "cta",
+      "heading": "Veja a sua sala inteira num só sítio",
+      "text": "Estado das mesas ao vivo, pedidos ligados a mesas e reservas na mesma planta. 14 dias grátis, sem cartão.",
+      "buttonLabel": "Ver a gestão de mesas",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Perguntas frequentes",
+      "items": [
+        {
+          "q": "Qual é uma boa taxa de rotação de mesas?",
+          "a": "Depende inteiramente do formato. O fast casual anda em 3 ou mais, um bistrô em 1,5-2 por serviço, a alta cozinha muitas vezes em 1. Compare-se com o seu próprio mês anterior, não com o formato dos outros."
+        },
+        {
+          "q": "Como calculo a rotação de mesas?",
+          "a": "Refeições servidas num serviço a dividir pelo número de lugares. 60 refeições em 40 lugares são 1,5."
+        },
+        {
+          "q": "Preciso de software para 12 mesas?",
+          "a": "Provavelmente não só pela planta de sala. Começa a compensar com vários empregados, com mistura de reservas e clientes sem reserva, ou quando os pedidos chegam por mais do que um canal."
+        },
+        {
+          "q": "O pedido por QR acelera mesmo a rotação?",
+          "a": "Elimina a espera entre decidir e pedir, normalmente 8 a 14 minutos e pior na hora de ponta. Se isso encaixa no seu estilo de serviço é outra questão, que vale a pena responder com honestidade."
+        },
+        {
+          "q": "Qual é a mudança mais rápida que posso fazer amanhã?",
+          "a": "Atribuir o levantamento das mesas a uma pessoa concreta para aquele serviço. É grátis, cabe numa frase do briefing e costuma recuperar cinco minutos por mesa."
+        }
+      ]
+    }
+  ]
+}

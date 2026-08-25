@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Lauahaldus: kiirem laudade käive | IQ Rest",
+    "description": "Kuidas laudade käive rahaks muutub, mida lauahalduse tarkvara tegelikult teeb ja millised saali harjumused lisavad ühe vahetuse ilma uute laudadeta."
+  },
+  "card": {
+    "title": "Lauahaldus: ühe lisavahetuse aritmeetika õhtu kohta",
+    "excerpt": "Laua kakskümmend minutit varem vabastamine on väärt rohkem kui enamik turundust. Nii mõõdad käivet, siin kaovad minutid ja siin tarkvara tõesti aitab."
+  },
+  "h1": "Lauahaldus restoranis: kuidas samast saalist teine vahetus välja võtta",
+  "intro": "Saali laudu juurde ei pane, aga olemasolevatega saab teenindada rohkem inimesi. Enamik kohti kaotab käivet kolmes kohas: ootamine enne tellimust, arve ootamine ja need kümme minutit, mil laud seisab must. Ükski neist ei vaja uut tehnikat. Vajab teadmist, kuhu minutid lähevad.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Alusta numbrist"
+    },
+    {
+      "type": "p",
+      "text": "Laudade käive on vahetuses teenindatud külaliste arv jagatud saadaolevate istekohtadega. 40 kohaga ja 60 külalisega reede õhtul on su käive 1,5."
+    },
+    {
+      "type": "p",
+      "text": "Miks see loeb: keskmise 28 € kuluga tähendab reede nihe 1,5-lt 1,8-le 12 külalist rohkem ehk 336 €. Tee seda reedel ja laupäeval ja see on umbes 2900 € kuus — samast saalist, samast menüüst ja sama meeskonnaga."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Käive",
+        "Külalisi 40 kohal",
+        "Käive 28 € juures"
+      ],
+      "rows": [
+        [
+          "1,2",
+          "48",
+          "1344 €"
+        ],
+        [
+          "1,5",
+          "60",
+          "1680 €"
+        ],
+        [
+          "1,8",
+          "72",
+          "2016 €"
+        ],
+        [
+          "2,0",
+          "80",
+          "2240 €"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kuhu minutid tegelikult lähevad"
+    },
+    {
+      "type": "p",
+      "text": "Mõõda paar lauda algusest lõpuni ja jaotus on kohtade lõikes hämmastavalt sarnane:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Etapp",
+        "Tavaliselt",
+        "Realistlik parim"
+      ],
+      "rows": [
+        [
+          "Istus → tellimus võetud",
+          "8-14 min",
+          "2-4 min"
+        ],
+        [
+          "Tellimus → toit",
+          "12-25 min",
+          "Sõltub köögist"
+        ],
+        [
+          "Söömine",
+          "35-55 min",
+          "Ära puutu"
+        ],
+        [
+          "Lõpetas → küsis arvet",
+          "5-12 min",
+          "1-2 min"
+        ],
+        [
+          "Küsis arvet → maksis",
+          "6-15 min",
+          "1-3 min"
+        ],
+        [
+          "Makstud → laud koristatud",
+          "5-15 min",
+          "3 min"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Kaks veergu loevad. Söögiaeg pole sinu kokku suruda — selle pigistamine on kiireim tee halva arvustuseni. Kaks ootamist selle ümber on puhas surnud aeg ja koos teevad tavaliselt 20-30 minutit laua kohta. Seal on su lisavahetus, otse silme all."
+    },
+    {
+      "type": "h2",
+      "text": "Neli parandust tootluse järjekorras"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Lase külalistel tellida siis, kui nad on valmis.** Vaba ettekandja ootamine on suurim ummistus ja on kõige hullem just siis, kui maja on täis. [Lauast tellimine](route:/order-taking) kaotab selle täielikult seal, kus stiil sobib.",
+        "**Lase neil maksta siis, kui nad on valmis.** Arvetants maksab 10-25 minutit. Lauas maksmine surub selle umbes ühele.",
+        "**Korista kiiremini.** Musta lauda ei saa müüa. Määra koristamine sõnaselgelt, ära looda; laua kohta võidetud viis minutit teeb õhtu jooksul terve vahetuse.",
+        "**Lõpeta kahe laua korraga sama ettekandja juurde istutamine.** Kaks korraga istutatud lauda ootavad mõlemad. Nihuta istutamist viie minuti võrra ja mõlemat teenindatakse kiiremini."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Mida lauahalduse tarkvara teeb"
+    },
+    {
+      "type": "p",
+      "text": "Kasulik versioon on elav saaliplaan: millised lauad on vabad, hõivatud, tellinud, arvet ootavad või koristamisel — kõigile korraga nähtav, mitte ukse juures seisja peas."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Olek ühe pilguga**, et mööduv ettekandja teaks: laud 12 ootab kell 20.40 saadik.",
+        "**Istutamissoovitused** — sissekõndinud neljane läheb lauda, mis vabaneb esimesena, mitte esimesse, mis kellelegi meenub.",
+        "**Lauaga seotud tellimus**, et arve, QR-tellimus ja köögitšekk oleksid ühel meelel, kes kus istub.",
+        "**Ajalugu**, et näeksid, kuidas su laupäevane teine vahetus hilineb süstemaatiliselt 25 minutit, ja saaksid põhjuse kõrvaldada.",
+        "**Broneeringud samal plaanil** sissekõndijatega — sealt tuleb enamik topeltistutamisi."
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Tarkvara ei keera laudu. See kaotab oletamise, mis keeramist aeglustab. Kui saalis on 12 lauda ja üks inimene saab hästi hakkama, piisab tõesti tahvlist; argument tugevneb umbes 20 laua juures, mitme ettekandjaga või kui segad broneeringud ja sissekõndijad."
+    },
+    {
+      "type": "h2",
+      "text": "Käive, mida ei tasu taga ajada"
+    },
+    {
+      "type": "p",
+      "text": "Degusteerimismenüüga restoran, mis müüb õhtus ühe vahetuse, ei halda laudu halvasti — see vahetus ongi toode. Naabruskonna baar, kus inimesed istuvad kolm tundi kahe õllega, teenib millegi muu kui taldrikuga. Suru käivet kummalgi ja lõhud äri, mis sul on."
+    },
+    {
+      "type": "h2",
+      "text": "Kahenädalane mõõtmine, mille päriselt ära teed"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Vali neli lauda. Nädala jooksul kirjuta laua alla kleebitud kaardile istumise, tellimuse, arve küsimise ja koristamise lõpu kellaajad.",
+        "Leia iga vahe keskmine. Leiad ühe, mis on kaks korda suurem kui arvasid.",
+        "Muuda järgmiseks nädalaks ühte ainsat asja.",
+        "Võrdle. Jäta muudatus alles, kui vahe vähenes ja keegi ei kurtnud.",
+        "Liigu järgmise suurima vahe juurde."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Enne mõõtmist küsi ettekandjatelt, kuhu aeg läheb. Peaaegu alati nad teavad ja tavaliselt on neil õigus — mõõtmine lahendab peamiselt vaidluse, kumb kahest teadaolevast probleemist on suurem."
+    },
+    {
+      "type": "cta",
+      "heading": "Näed kogu saali ühes kohas",
+      "text": "Laudade elav olek, laudadega seotud tellimused ja broneeringud samal plaanil. 14 päeva tasuta, kaarti pole vaja.",
+      "buttonLabel": "Vaata lauahaldust",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Korduma kippuvad küsimused",
+      "items": [
+        {
+          "q": "Milline laudade käive on hea?",
+          "a": "Sõltub täielikult formaadist. Fast casual käib 3 ja rohkem, bistroo 1,5-2 vahetuse kohta, tipprestoran sageli 1. Võrdle end oma eelmise kuuga, mitte kellegi teise formaadiga."
+        },
+        {
+          "q": "Kuidas laudade käivet arvutada?",
+          "a": "Vahetuses teenindatud külalised jagatud istekohtade arvuga. 60 külalist 40 kohal on 1,5."
+        },
+        {
+          "q": "Kas mul on 12 laua jaoks tarkvara vaja?",
+          "a": "Ainult saaliplaani pärast tõenäoliselt mitte. Tasuvaks muutub mitme ettekandjaga, sissekõndijate ja broneeringute segus või kui tellimused tulevad rohkem kui ühest kanalist."
+        },
+        {
+          "q": "Kas QR-tellimine tõesti kiirendab käivet?",
+          "a": "See kaotab ootamise otsuse ja tellimuse vahel, tavaliselt 8-14 minutit, ja tipptunnil on see kõige hullem. Kas see sobib su teenindusstiiliga, on eraldi küsimus, mis väärib ausat vastust."
+        },
+        {
+          "q": "Mis on kiireim muudatus, mille homme teha saan?",
+          "a": "Määra laudade koristamine selleks vahetuseks konkreetsele inimesele. See ei maksa midagi, mahub vahetuse-eelsel koosolekul ühte lausesse ja toob tavaliselt tagasi viis minutit laua kohta."
+        }
+      ]
+    }
+  ]
+}

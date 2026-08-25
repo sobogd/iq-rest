@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Bordshantering: vänd borden snabbare | IQ Rest",
+    "description": "Hur bordsomsättning blir pengar, vad ett bordshanteringssystem faktiskt gör, och vilka salsvanor som ger en extra sittning utan nya bord."
+  },
+  "card": {
+    "title": "Bordshantering: räknestycket bakom en extra sittning per kväll",
+    "excerpt": "Att vända ett bord tjugo minuter tidigare är värt mer än det mesta i marknadsföring. Så mäter du omsättningen, så hittar du de förlorade minuterna, och så här hjälper mjukvara på riktigt."
+  },
+  "h1": "Bordshantering på restaurang: att få ut en andra sittning ur samma sal",
+  "intro": "Du kan inte lägga till bord i en matsal, men du kan servera fler gäster vid dem du har. De flesta ställen tappar sin omsättning på tre ställen: väntan innan beställningen, väntan på notan, och de tio minuter bordet står smutsigt. Inget av det kräver ny utrustning. Det kräver att du vet vart minuterna tar vägen.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Börja med siffran"
+    },
+    {
+      "type": "p",
+      "text": "Bordsomsättning är antalet serverade gäster delat med antalet platser under ett pass. Har du 40 platser och serverar 60 gäster en fredagskväll är din omsättning 1,5."
+    },
+    {
+      "type": "p",
+      "text": "Varför det spelar roll: med ett snittköp på 28 € betyder ett hopp från 1,5 till 1,8 på fredagen 12 extra gäster, alltså 336 €. Gör det fredag och lördag så är det runt 2 900 € i månaden – ur samma sal, samma meny och samma personal."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Omsättning",
+        "Gäster på 40 platser",
+        "Intäkt vid 28 €"
+      ],
+      "rows": [
+        [
+          "1,2",
+          "48",
+          "1 344 €"
+        ],
+        [
+          "1,5",
+          "60",
+          "1 680 €"
+        ],
+        [
+          "1,8",
+          "72",
+          "2 016 €"
+        ],
+        [
+          "2,0",
+          "80",
+          "2 240 €"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Vart minuterna faktiskt tar vägen"
+    },
+    {
+      "type": "p",
+      "text": "Ta tid på några bord från början till slut, så är fördelningen slående lika mellan olika ställen:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Steg",
+        "Vanligt",
+        "Realistiskt bäst"
+      ],
+      "rows": [
+        [
+          "Satta → beställning tagen",
+          "8–14 min",
+          "2–4 min"
+        ],
+        [
+          "Beställning → mat",
+          "12–25 min",
+          "Beror på köket"
+        ],
+        [
+          "Måltiden",
+          "35–55 min",
+          "Låt den vara"
+        ],
+        [
+          "Färdiga → ber om notan",
+          "5–12 min",
+          "1–2 min"
+        ],
+        [
+          "Ber om notan → betalt",
+          "6–15 min",
+          "1–3 min"
+        ],
+        [
+          "Betalt → bordet dukat om",
+          "5–15 min",
+          "3 min"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Två kolumner spelar roll. Måltiden är inte din att korta – att pressa den är precis så man får ett dåligt omdöme. De två väntetiderna runt omkring är ren dödtid, och tillsammans blir de rutinmässigt 20 till 30 minuter per bord. Där står din extra sittning, mitt framför näsan."
+    },
+    {
+      "type": "h2",
+      "text": "De fyra åtgärderna, sorterade efter avkastning"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Låt gästerna beställa när de är redo.** Väntan på att någon i servisen blir ledig är den största proppen, och den är värst just när det är fullt. [Beställning vid bordet](route:/order-taking) tar bort den helt där stilen passar.",
+        "**Låt dem betala när de är redo.** Notdansen kostar 10 till 25 minuter. Betalning vid bordet kortar den till ungefär en.",
+        "**Duka om snabbare.** Ett smutsigt bord går inte att sälja. Fördela avdukningen uttryckligen i stället för att hoppas; fem sparade minuter per bord blir en hel sittning över en kväll.",
+        "**Sluta sätta två bord samtidigt hos samma servitör.** Två bord som sätts ihop väntar båda. Förskjut sättningen fem minuter så blir båda snabbare omhändertagna."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Vad ett bordshanteringssystem gör"
+    },
+    {
+      "type": "p",
+      "text": "Den användbara varianten är en levande planlösning: vilka bord som är lediga, upptagna, har beställt, väntar på notan eller håller på att dukas om – synligt för alla samtidigt i stället för i huvudet på den som står i dörren."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Status i ett ögonkast**, så att en servitör som går förbi ser att bord 12 väntat sedan 20.40.",
+        "**Placeringsförslag** – ett drop-in-sällskap på fyra får bordet som blir ledigt först, inte det första någon råkar minnas.",
+        "**Bordet kopplat till beställningen**, så att notan, QR-beställningen och köksbongen är eniga om vem som sitter var.",
+        "**Historik**, så att du ser att din andra sittning på lördagar konsekvent ligger 25 minuter efter och kan åtgärda orsaken.",
+        "**Bokningar på samma karta** som drop-in – därifrån kommer merparten av alla dubbelbokningar."
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Mjukvara vänder inga bord. Den tar bort gissandet som gör dem långsamma att vända. Är din sal 12 bord och en person håller ordning på det, räcker en whiteboard alldeles utmärkt – argumentet blir starkt runt 20 bord, med flera i servisen, eller med en blandning av bokningar och drop-in."
+    },
+    {
+      "type": "h2",
+      "text": "Omsättning du inte ska jaga"
+    },
+    {
+      "type": "p",
+      "text": "En restaurang med avsmakningsmeny som säljer en sittning per kväll sköter inte sina bord dåligt – sittningen är produkten. En kvartersbar där folk sitter tre timmar på två öl tjänar pengar på något annat än tallriken. Pressa omsättningen i något av fallen och du förstör den affär du har."
+    },
+    {
+      "type": "h2",
+      "text": "En tvåveckorsmätning du faktiskt orkar med"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Välj fyra bord. Notera i en vecka tiden för sättning, beställning, begärd nota och färdig avdukning på ett kort tejpat under bordet.",
+        "Räkna ut snittet för varje glapp. Du hittar ett som är dubbelt så stort som du trodde.",
+        "Ändra en enda sak, veckan därpå.",
+        "Jämför. Behåll ändringen om glappet krympte och ingen klagade.",
+        "Gå vidare till det näst största glappet."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Fråga servisen vart tiden tar vägen innan du mäter. De vet nästan alltid, och de har oftast rätt – mätningen avgör mest vilket av de två kända problemen som är störst."
+    },
+    {
+      "type": "cta",
+      "heading": "Se hela salen på ett ställe",
+      "text": "Bordsstatus i realtid, beställningar kopplade till bord och bokningar på samma karta. 14 dagar gratis, utan kort.",
+      "buttonLabel": "Se bordshanteringen",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Vanliga frågor",
+      "items": [
+        {
+          "q": "Vad är en bra bordsomsättning?",
+          "a": "Det beror helt på format. Fast casual ligger på 3 eller högre, en bistro på 1,5–2 per pass, finkrog ofta på 1. Jämför dig med din egen förra månad, inte med någon annans format."
+        },
+        {
+          "q": "Hur räknar jag ut bordsomsättningen?",
+          "a": "Serverade gäster under ett pass delat med antalet platser. 60 gäster på 40 platser blir 1,5."
+        },
+        {
+          "q": "Behöver jag mjukvara för 12 bord?",
+          "a": "Förmodligen inte för enbart planlösningen. Det börjar löna sig med flera i servisen, med en blandning av drop-in och bokningar, eller när beställningar kommer via mer än en kanal."
+        },
+        {
+          "q": "Snabbar QR-beställning verkligen upp omsättningen?",
+          "a": "Den tar bort väntan mellan beslut och beställning, vanligtvis 8–14 minuter och värst i rusningen. Om det passar din servicestil är en separat fråga som är värd ett ärligt svar."
+        },
+        {
+          "q": "Vilken är den snabbaste ändringen jag kan göra i morgon?",
+          "a": "Ge avdukningen till en namngiven person för passet. Det kostar ingenting, ryms i en mening på förmötet och brukar ge tillbaka fem minuter per bord."
+        }
+      ]
+    }
+  ]
+}

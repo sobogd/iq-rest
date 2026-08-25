@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Asztalkezelés: gyorsabb asztalforgás | IQ Rest",
+    "description": "Hogyan lesz az asztalforgásból pénz, mit csinál valójában egy asztalkezelő szoftver, és milyen szokások adnak egy plusz szervizt új asztalok nélkül."
+  },
+  "card": {
+    "title": "Asztalkezelés: egy plusz szerviz aritmetikája esténként",
+    "excerpt": "Húsz perccel korábban felszabadítani egy asztalt többet ér a legtöbb marketingnél. Így méred a forgást, itt tűnnek el a percek, és ebben segít tényleg a szoftver."
+  },
+  "h1": "Asztalkezelés az étteremben: hogyan hozz ki második szervizt ugyanabból a térből",
+  "intro": "Asztalt nem tudsz hozzátenni a térhez, de a meglévőkön több embert ki tudsz szolgálni. A legtöbb hely három ponton veszít forgást: a rendelés előtti várakozáson, a számlára várakozáson, és azon a tíz percen, amíg az asztal piszkosan áll. Egyikhez sem kell új eszköz. Ahhoz kell, hogy tudd, hová mennek a percek.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Kezdd a számmal"
+    },
+    {
+      "type": "p",
+      "text": "Az asztalforgás az egy szervizben kiszolgált vendégek száma osztva az elérhető ülőhelyekkel. 40 hellyel és 60 vendéggel egy péntek este a forgásod 1,5."
+    },
+    {
+      "type": "p",
+      "text": "Miért számít: 28 eurós átlagköltésnél a pénteki 1,5-ről 1,8-ra lépés 12 vendéggel több, azaz 336 euró. Csináld meg pénteken és szombaton, és ez havi 2900 euró körül van — ugyanabból a térből, ugyanabból az étlapból, ugyanazzal a csapattal."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Forgás",
+        "Vendég 40 helyen",
+        "Bevétel 28 eurónál"
+      ],
+      "rows": [
+        [
+          "1,2",
+          "48",
+          "1344 €"
+        ],
+        [
+          "1,5",
+          "60",
+          "1680 €"
+        ],
+        [
+          "1,8",
+          "72",
+          "2016 €"
+        ],
+        [
+          "2,0",
+          "80",
+          "2240 €"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Hová mennek valójában a percek"
+    },
+    {
+      "type": "p",
+      "text": "Mérj végig néhány asztalt az elejétől a végéig, és az eloszlás feltűnően hasonló helyről helyre:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Szakasz",
+        "Általában",
+        "Reálisan legjobb"
+      ],
+      "rows": [
+        [
+          "Leültetés → rendelés felvéve",
+          "8-14 perc",
+          "2-4 perc"
+        ],
+        [
+          "Rendelés → étel",
+          "12-25 perc",
+          "Konyhafüggő"
+        ],
+        [
+          "Étkezés",
+          "35-55 perc",
+          "Hagyd békén"
+        ],
+        [
+          "Befejezte → számlát kért",
+          "5-12 perc",
+          "1-2 perc"
+        ],
+        [
+          "Számlát kért → fizetett",
+          "6-15 perc",
+          "1-3 perc"
+        ],
+        [
+          "Fizetett → asztal megterítve",
+          "5-15 perc",
+          "3 perc"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Két oszlop számít. Az étkezés idejét nem a te dolgod összenyomni — a szorongatása a leggyorsabb út egy rossz értékeléshez. A körülötte lévő két várakozás tiszta holtidő, és együtt jellemzően 20-30 percet tesznek ki asztalonként. Ott van a plusz szervized, teljesen szem előtt."
+    },
+    {
+      "type": "h2",
+      "text": "A négy javítás, hozam szerint"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Hadd rendeljenek a vendégek, amikor készen állnak.** A szabad pincérre várás a legnagyobb dugó, és pont akkor a legrosszabb, amikor tele vagy. Az [asztaltól rendelés](route:/order-taking) teljesen megszünteti ott, ahol a stílushoz illik.",
+        "**Hadd fizessenek, amikor készen állnak.** A számlatánc 10-25 percbe kerül. Az asztalnál fizetés nagyjából egyre szorítja.",
+        "**Szedj le gyorsabban.** Piszkos asztalt nem lehet eladni. Oszd ki a leszedést kifejezetten ahelyett, hogy reménykednél; asztalonként megnyert öt perc egy este alatt egy szerviz.",
+        "**Ne ültess két asztalt ugyanahhoz a pincérhez egyszerre.** Két egyszerre leültetett asztal mindkettő vár. Told el az ültetést öt perccel, és mindkettőt gyorsabban szolgálják ki."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Mit csinál egy asztalkezelő szoftver"
+    },
+    {
+      "type": "p",
+      "text": "A hasznos változata egy élő térkép: melyik asztal szabad, foglalt, rendelt, számlára vár vagy éppen leszedés alatt — mindenki számára egyszerre látható, nem az ajtóban álló fejében."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Állapot egy pillantásra**, hogy az arra menő pincér tudja: a 12-es 20:40 óta vár.",
+        "**Ültetési javaslatok** — egy beeső négyfős ahhoz az asztalhoz megy, amelyik elsőként szabadul fel, nem ahhoz, ami elsőként eszébe jut valakinek.",
+        "**Asztalhoz kötött rendelés**, hogy a számla, a QR-rendelés és a konyhai bon egyetértsen abban, ki hol ül.",
+        "**Előzmény**, hogy lásd: a szombati második szerviz rendszeresen 25 percet csúszik, és megjavítsd az okát.",
+        "**Foglalások ugyanazon a térképen**, mint a beesők — a dupla ültetések többsége innen jön."
+      ]
+    },
+    {
+      "type": "note",
+      "text": "A szoftver nem forgatja az asztalokat. A találgatást szünteti meg, ami lassítja a forgást. Ha a tered 12 asztalos, és egy ember jól kézben tartja, egy tábla tényleg elég; az érv 20 asztal körül erősödik meg, több pincérrel, vagy ha foglalást és beesőt keversz."
+    },
+    {
+      "type": "h2",
+      "text": "Forgás, amit ne kergess"
+    },
+    {
+      "type": "p",
+      "text": "Egy kóstolómenüs étterem, amely esténként egy szervizt ad el, nem rosszul kezeli az asztalait — az a szerviz maga a termék. Egy környékbeli bár, ahol három órát ülnek két sör mellett, nem a tányérból keresi a pénzt. Nyomd bármelyiken a forgást, és tönkreteszed azt az üzletet, amid van."
+    },
+    {
+      "type": "h2",
+      "text": "Egy kéthetes mérés, amit tényleg végig tudsz csinálni"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Válassz négy asztalt. Egy héten át írd fel az ültetés, a rendelés, a számlakérés és a leszedés végének idejét egy kártyára, amit az asztal alá ragasztasz.",
+        "Átlagold mindegyik rést. Találsz egyet, amelyik a duplája annak, amire számítottál.",
+        "Változtass egyetlen dolgon a következő hétre.",
+        "Hasonlítsd össze. Tartsd meg a változtatást, ha a rés csökkent és senki sem panaszkodott.",
+        "Lépj tovább a következő legnagyobb résre."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Kérdezd meg a pincéreket, hová megy az idő, mielőtt mérnél. Szinte mindig tudják, és általában igazuk van — a mérés főleg azt a vitát dönti el, hogy a két ismert probléma közül melyik a nagyobb."
+    },
+    {
+      "type": "cta",
+      "heading": "Lásd az egész teret egy helyen",
+      "text": "Élő asztalállapot, asztalhoz kötött rendelések és foglalások ugyanazon a térképen. 14 nap ingyen, kártya nélkül.",
+      "buttonLabel": "Nézd meg az asztalkezelést",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Gyakori kérdések",
+      "items": [
+        {
+          "q": "Mi számít jó asztalforgásnak?",
+          "a": "Teljesen a formátumtól függ. A fast casual 3 felett megy, egy bisztró szervizenként 1,5-2, a fine dining gyakran 1. A saját előző hónapodhoz mérd magad, ne más formátumához."
+        },
+        {
+          "q": "Hogyan számolom ki az asztalforgást?",
+          "a": "Egy szervizben kiszolgált vendégek száma osztva az ülőhelyekkel. 60 vendég 40 helyen az 1,5."
+        },
+        {
+          "q": "Kell szoftver 12 asztalhoz?",
+          "a": "Pusztán a térképért valószínűleg nem. Akkor kezd megtérülni, ha több pincér van, ha beesőket és foglalásokat keversz, vagy ha a rendelések egynél több csatornáról jönnek."
+        },
+        {
+          "q": "Tényleg gyorsítja a QR-rendelés a forgást?",
+          "a": "Megszünteti a döntés és a rendelés közti várakozást, ami jellemzően 8-14 perc, és csúcsidőben a legrosszabb. Hogy illik-e a kiszolgálási stílusodhoz, az külön kérdés, és megérdemel egy őszinte választ."
+        },
+        {
+          "q": "Mi a leggyorsabb változtatás, amit holnap meg tudok tenni?",
+          "a": "Bízd az asztalok leszedését egy konkrét emberre az adott szervizre. Semmibe nem kerül, elfér egy mondatban a szerviz előtti eligazításon, és általában öt percet hoz vissza asztalonként."
+        }
+      ]
+    }
+  ]
+}

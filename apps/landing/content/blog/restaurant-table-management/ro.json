@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Managementul meselor: rotație mai rapidă | IQ Rest",
+    "description": "Cum se traduce rotația meselor în bani, ce face de fapt un software de management al meselor și ce obiceiuri din sală adaugă o tură fără mese noi."
+  },
+  "card": {
+    "title": "Managementul meselor: aritmetica unei ture în plus pe seară",
+    "excerpt": "Eliberarea unei mese cu douăzeci de minute mai devreme valorează mai mult decât majoritatea marketingului. Iată cum măsori rotația, unde se pierd minutele și unde ajută cu adevărat software-ul."
+  },
+  "h1": "Managementul meselor în restaurant: cum scoți a doua tură din aceeași sală",
+  "intro": "Nu poți adăuga mese într-o sală, dar poți servi mai mulți oameni la cele existente. Majoritatea localurilor pierd rotație în trei locuri: așteptarea dinaintea comenzii, așteptarea notei și cele zece minute în care masa stă murdară. Niciunul nu cere echipament nou. Cere să știi unde se duc minutele.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Începe cu cifra"
+    },
+    {
+      "type": "p",
+      "text": "Rotația meselor înseamnă numărul de persoane servite împărțit la locurile disponibile într-o tură. Cu 40 de locuri și 60 de persoane într-o seară de vineri, rotația ta e 1,5."
+    },
+    {
+      "type": "p",
+      "text": "De ce contează: la o notă medie de 28 €, trecerea de vineri de la 1,5 la 1,8 înseamnă 12 persoane în plus, adică 336 €. Fă asta vineri și sâmbătă și ies aproximativ 2.900 € pe lună — din aceeași sală, același meniu, aceeași echipă."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Rotație",
+        "Persoane la 40 de locuri",
+        "Încasări la 28 €"
+      ],
+      "rows": [
+        [
+          "1,2",
+          "48",
+          "1.344 €"
+        ],
+        [
+          "1,5",
+          "60",
+          "1.680 €"
+        ],
+        [
+          "1,8",
+          "72",
+          "2.016 €"
+        ],
+        [
+          "2,0",
+          "80",
+          "2.240 €"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Unde se duc de fapt minutele"
+    },
+    {
+      "type": "p",
+      "text": "Cronometrează câteva mese de la cap la coadă și distribuția e izbitor de asemănătoare de la un local la altul:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Etapă",
+        "De obicei",
+        "Realist cel mai bine"
+      ],
+      "rows": [
+        [
+          "Așezat → comandă luată",
+          "8-14 min",
+          "2-4 min"
+        ],
+        [
+          "Comandă → mâncare",
+          "12-25 min",
+          "Depinde de bucătărie"
+        ],
+        [
+          "Masa propriu-zisă",
+          "35-55 min",
+          "Nu o atinge"
+        ],
+        [
+          "Au terminat → au cerut nota",
+          "5-12 min",
+          "1-2 min"
+        ],
+        [
+          "Au cerut nota → au plătit",
+          "6-15 min",
+          "1-3 min"
+        ],
+        [
+          "Plătit → masa pregătită",
+          "5-15 min",
+          "3 min"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Contează două coloane. Timpul mesei nu e al tău ca să-l comprimi — să-l strângi e cea mai rapidă cale spre o recenzie proastă. Cele două așteptări din jurul lui sunt timp mort curat și, împreună, fac de obicei 20-30 de minute per masă. Acolo e tura ta în plus, la vedere."
+    },
+    {
+      "type": "h2",
+      "text": "Cele patru remedii, în ordinea randamentului"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Lasă oaspeții să comande când sunt pregătiți.** Așteptarea unui ospătar liber e cel mai mare blocaj și e cea mai rea exact când ai sala plină. [Comanda de la masă](route:/order-taking) o elimină complet acolo unde stilul se potrivește.",
+        "**Lasă-i să plătească atunci când sunt gata.** Dansul notei costă 10-25 de minute. Plata la masă îl reduce la aproximativ un minut.",
+        "**Debarasează mai repede.** O masă murdară nu se vinde. Atribuie debarasarea explicit, nu spera; cinci minute câștigate per masă înseamnă o tură într-o seară.",
+        "**Nu mai așeza două mese la același ospătar deodată.** Două mese așezate simultan așteaptă amândouă. Decalează așezarea cu cinci minute și ambele sunt servite mai repede."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Ce face un software de management al meselor"
+    },
+    {
+      "type": "p",
+      "text": "Versiunea utilă e un plan de sală în timp real: ce mese sunt libere, ocupate, au comandat, așteaptă nota sau se debarasează — vizibil pentru toți simultan, nu în capul celui care stă la intrare."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Starea dintr-o privire**, ca un ospătar care trece să știe că masa 12 așteaptă de la 20:40.",
+        "**Sugestii de așezare** — un grup de patru fără rezervare merge la masa care se eliberează prima, nu la prima de care își amintește cineva.",
+        "**Masa legată de comandă**, ca nota, comanda prin QR și bonul de bucătărie să fie de acord cine unde stă.",
+        "**Istoric**, ca să vezi că a doua tură de sâmbătă întârzie constant 25 de minute și să repari cauza.",
+        "**Rezervări pe același plan** cu clienții fără rezervare — de aici vin majoritatea suprapunerilor."
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Software-ul nu rotește mese. Elimină ghicitul care încetinește rotația. Dacă sala are 12 mese și un om se descurcă bine, o tablă chiar e suficientă; argumentul se întărește pe la 20 de mese, cu mai mulți ospătari sau când amesteci rezervări cu clienți intrați spontan."
+    },
+    {
+      "type": "h2",
+      "text": "Rotația pe care nu trebuie s-o urmărești"
+    },
+    {
+      "type": "p",
+      "text": "Un restaurant cu meniu degustare care vinde o singură tură pe seară nu-și gestionează prost mesele — tura aceea e produsul. Un bar de cartier unde lumea stă trei ore la două beri monetizează altceva decât farfuria. Forțează rotația în oricare dintre ele și strici afacerea pe care o ai."
+    },
+    {
+      "type": "h2",
+      "text": "O măsurătoare de două săptămâni pe care chiar o poți face"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Alege patru mese. Timp de o săptămână notează ora așezării, ora comenzii, cererea notei și finalizarea debarasării pe o fișă lipită sub masă.",
+        "Fă media fiecărui interval. Vei găsi unul dublu față de cât credeai.",
+        "Schimbă un singur lucru, pentru săptămâna următoare.",
+        "Compară. Păstrează schimbarea dacă intervalul s-a micșorat și nu s-a plâns nimeni.",
+        "Treci la următorul cel mai mare interval."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Întreabă ospătarii unde se duce timpul înainte să măsori. Aproape întotdeauna știu și de obicei au dreptate — măsurătoarea rezolvă mai ales disputa despre care dintre cele două probleme cunoscute e mai mare."
+    },
+    {
+      "type": "cta",
+      "heading": "Vezi toată sala într-un singur loc",
+      "text": "Starea meselor în timp real, comenzi legate de mese și rezervări pe același plan. 14 zile gratuit, fără card.",
+      "buttonLabel": "Vezi managementul meselor",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Întrebări frecvente",
+      "items": [
+        {
+          "q": "Ce înseamnă o rotație bună a meselor?",
+          "a": "Depinde complet de format. Fast casual merge la 3 și peste, un bistro la 1,5-2 pe tură, fine dining adesea la 1. Compară-te cu luna ta trecută, nu cu formatul altcuiva."
+        },
+        {
+          "q": "Cum calculez rotația meselor?",
+          "a": "Persoane servite într-o tură împărțit la numărul de locuri. 60 de persoane la 40 de locuri fac 1,5."
+        },
+        {
+          "q": "Am nevoie de software pentru 12 mese?",
+          "a": "Probabil nu doar pentru planul de sală. Începe să se merite cu mai mulți ospătari, cu amestec de clienți spontani și rezervări sau când comenzile vin din mai multe canale."
+        },
+        {
+          "q": "Comanda prin QR chiar accelerează rotația?",
+          "a": "Elimină așteptarea dintre decizie și comandă, de obicei 8-14 minute, cea mai gravă la oră de vârf. Dacă se potrivește stilului tău de servire e o întrebare separată, care merită un răspuns onest."
+        },
+        {
+          "q": "Care e cea mai rapidă schimbare pe care o pot face mâine?",
+          "a": "Atribuie debarasarea unei persoane anume pentru tura respectivă. Nu costă nimic, încape într-o frază la ședința de dinaintea serviciului și de obicei recuperează cinci minute per masă."
+        }
+      ]
+    }
+  ]
+}

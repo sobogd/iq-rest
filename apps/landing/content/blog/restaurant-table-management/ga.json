@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Bainistiú boird: iompú boird níos tapúla | IQ Rest",
+    "description": "Conas a iompaítear ráta iompaithe boird ina airgead, cad a dhéanann bogearraí bainistithe boird i ndáiríre, agus na nósanna urláir a chuireann seirbhís bhreise leis gan boird nua."
+  },
+  "card": {
+    "title": "Bainistiú boird: uimhríocht seirbhíse breise gach oíche",
+    "excerpt": "Is fiú níos mó bord a shaoradh fiche nóiméad níos luaithe ná formhór na margaíochta. Seo mar a thomhaiseann tú an t-iompú, cá dtéann na nóiméid, agus cá gcabhraíonn bogearraí i ndáiríre."
+  },
+  "h1": "Bainistiú boird i mbialann: conas dara seirbhís a bhaint as an urlár céanna",
+  "intro": "Ní féidir boird a chur le hurlár, ach is féidir níos mó daoine a fhreastal ar na cinn atá agat. Cailleann formhór na n-áiteanna iompú i dtrí áit: an fanacht roimh ordú, an fanacht ar an mbille, agus na deich nóiméad a bhíonn an bord ina shuí salach. Ní theastaíonn trealamh nua ó cheann ar bith acu. Teastaíonn a fhios cá dtéann na nóiméid.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Tosaigh leis an uimhir"
+    },
+    {
+      "type": "p",
+      "text": "Is é ráta iompaithe boird na custaiméirí a fhreastalaítear roinnte ar na suíocháin atá ar fáil i seirbhís. Le 40 suíochán agus 60 custaiméir oíche Aoine, is é 1,5 do ráta."
+    },
+    {
+      "type": "p",
+      "text": "Cén fáth a bhfuil sé tábhachtach: le meánchaiteachas €28, ciallaíonn Aoine a bhogadh ó 1,5 go 1,8 12 chustaiméir sa bhreis, is é sin €336. Déan é Dé hAoine agus Dé Sathairn agus is thart ar €2,900 sa mhí é — ón urlár céanna, ón mbiachlár céanna agus leis an bhfoireann chéanna."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Iompú",
+        "Custaiméirí ag 40 suíochán",
+        "Ioncam ag €28"
+      ],
+      "rows": [
+        [
+          "1,2",
+          "48",
+          "€1,344"
+        ],
+        [
+          "1,5",
+          "60",
+          "€1,680"
+        ],
+        [
+          "1,8",
+          "72",
+          "€2,016"
+        ],
+        [
+          "2,0",
+          "80",
+          "€2,240"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Cá dtéann na nóiméid i ndáiríre"
+    },
+    {
+      "type": "p",
+      "text": "Cuir clog ar chúpla bord ó thús deireadh agus tá an dáileadh iontach cosúil ó áit go háit:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Céim",
+        "De ghnáth",
+        "An chuid is fearr go réalaíoch"
+      ],
+      "rows": [
+        [
+          "Suite → ordú tógtha",
+          "8-14 nóim",
+          "2-4 nóim"
+        ],
+        [
+          "Ordú → bia",
+          "12-25 nóim",
+          "Ag brath ar an gcistin"
+        ],
+        [
+          "Béile",
+          "35-55 nóim",
+          "Fág mar atá"
+        ],
+        [
+          "Críochnaithe → bille iarrtha",
+          "5-12 nóim",
+          "1-2 nóim"
+        ],
+        [
+          "Bille iarrtha → íoctha",
+          "6-15 nóim",
+          "1-3 nóim"
+        ],
+        [
+          "Íoctha → bord glanta",
+          "5-15 nóim",
+          "3 nóim"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Tá dhá cholún tábhachtach. Ní leatsa am an bhéile chun é a bhrú — is é a bhrú an bealach is tapúla chuig droch-léirmheas. Is marbhaimsir ghlan an dá fhanacht timpeall air agus le chéile is gnách gur 20 go 30 nóiméad an bhoird iad. Sin do sheirbhís bhreise, os comhair do shúl."
+    },
+    {
+      "type": "h2",
+      "text": "Na ceithre leigheas, de réir toraidh"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Lig do chustaiméirí ordú nuair atá siad réidh.** Is é fanacht ar fhreastalaí saor an scrogall is mó, agus is measa é go díreach nuair atá tú lán. Baineann [ordú ón mbord](route:/order-taking) ar fad é san áit a n-oireann an stíl.",
+        "**Lig dóibh íoc nuair atá siad réidh.** Cosnaíonn rince an bhille 10 go 25 nóiméad. Laghdaíonn íocaíocht ag an mbord go nóiméad amháin é, a bheag nó a mhór.",
+        "**Glan níos tapúla.** Ní féidir bord salach a dhíol. Sann an glanadh go sonrach in ionad a bheith ag súil leis; is seirbhís iomlán thar oíche cúig nóiméad a shábháiltear ar an mbord.",
+        "**Stop de bheith ag suíomh dhá bhord leis an bhfreastalaí céanna ag an am céanna.** Fanann an dá bhord a shuítear le chéile. Scar an suíomh cúig nóiméad agus freastalófar níos tapúla ar an dá cheann."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Cad a dhéanann bogearraí bainistithe boird"
+    },
+    {
+      "type": "p",
+      "text": "Is é an leagan úsáideach plean urláir beo: cé na boird atá saor, gafa, tar éis ordú, ag fanacht ar bhille nó á nglanadh — le feiceáil ag gach duine ag an am céanna in ionad a bheith i gceann an duine atá ag an doras."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Stádas le sracfhéachaint**, ionas go mbeadh a fhios ag freastalaí atá ag dul thart go bhfuil bord 12 ag fanacht ó 20:40.",
+        "**Moltaí suímh** — téann ceathrar gan áirithint chuig an mbord a shaorfar ar dtús, ní chuig an gcéad cheann a chuimhníonn duine air.",
+        "**Bord ceangailte leis an ordú**, sa chaoi go n-aontaíonn an bille, an t-ordú QR agus duillín na cistine cé atá ina shuí cá háit.",
+        "**Stair**, ionas go bhfeicfeá go bhfuil do dhara seirbhís Shathairn 25 nóiméad déanach go seasta agus go bhféadfá an chúis a réiteach.",
+        "**Áirithintí ar an bplean céanna** leis na daoine a shiúlann isteach — is as sin a thagann formhór na ndúbailtí."
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Ní iompaíonn bogearraí boird. Baineann siad an tomhas a mhoillíonn an t-iompú. Má tá 12 bhord ar d'urlár agus duine amháin á láimhseáil go maith, is leor clár i ndáiríre; neartaíonn an argóint timpeall 20 bord, le roinnt freastalaithe nó nuair a mheascann tú áirithintí agus daoine a shiúlann isteach."
+    },
+    {
+      "type": "h2",
+      "text": "Iompú nár cheart duit dul sa tóir air"
+    },
+    {
+      "type": "p",
+      "text": "Bialann le biachlár blaiste a dhíolann seirbhís amháin san oíche, níl droch-bhainistiú boird ar bun aici — is é an tseirbhís sin an táirge. Baineann beár comharsanachta ina suíonn daoine trí huaire le dhá phionta airgead as rud éigin seachas an pláta. Brúigh an t-iompú i gceachtar acu agus brisfidh tú an gnó atá agat."
+    },
+    {
+      "type": "h2",
+      "text": "Tomhas coicíse is féidir leat a dhéanamh i ndáiríre"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Roghnaigh ceithre bhord. Ar feadh seachtaine scríobh am an tsuímh, an ordaithe, iarratas an bhille agus deireadh an ghlanta ar chárta greamaithe faoin mbord.",
+        "Faigh meán gach bearna. Gheobhaidh tú ceann atá dhá oiread níos mó ná a shíl tú.",
+        "Athraigh aon rud amháin don tseachtain dár gcionn.",
+        "Déan comparáid. Coinnigh an t-athrú má laghdaigh an bhearna agus mura ndearna aon duine gearán.",
+        "Bog ar aghaidh chuig an gcéad bhearna eile is mó."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Fiafraigh de na freastalaithe cá dtéann an t-am sula dtomhaiseann tú. Bíonn a fhios acu beagnach i gcónaí agus bíonn an ceart acu de ghnáth — socraíonn an tomhas an t-aighneas faoi cé acu den dá fhadhb aitheanta is mó."
+    },
+    {
+      "type": "cta",
+      "heading": "Feic an t-urlár ar fad in aon áit amháin",
+      "text": "Stádas bord beo, orduithe ceangailte le boird agus áirithintí ar an bplean céanna. 14 lá saor in aisce, gan chárta.",
+      "buttonLabel": "Féach ar an mbainistiú boird",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Ceisteanna coitianta",
+      "items": [
+        {
+          "q": "Cad is ráta maith iompaithe boird ann?",
+          "a": "Braitheann sé go hiomlán ar an bhformáid. Ritheann fast casual ag 3 agus os a chionn, bistro ag 1,5-2 sa seirbhís, ardbhialanna go minic ag 1. Déan comparáid le do mhí féin roimhe seo, ní le formáid duine eile."
+        },
+        {
+          "q": "Conas a ríomhaim ráta iompaithe boird?",
+          "a": "Custaiméirí a fhreastalaítear i seirbhís roinnte ar líon na suíochán. Is é 1,5 60 custaiméir ag 40 suíochán."
+        },
+        {
+          "q": "An dteastaíonn bogearraí uaim do 12 bhord?",
+          "a": "Ní dócha go dteastaíonn ar son an phlean urláir amháin. Tosaíonn sé ag íoc as féin le roinnt freastalaithe, le meascán de dhaoine gan áirithint agus áirithintí, nó nuair a thagann orduithe ó níos mó ná cainéal amháin."
+        },
+        {
+          "q": "An gcuireann ordú QR dlús leis an iompú i ndáiríre?",
+          "a": "Baineann sé an fanacht idir cinneadh agus ordú, 8-14 nóiméad de ghnáth, agus is measa é ag buaicuair. Ceist ar leith is ea an oireann sé do do stíl seirbhíse, agus is fiú freagra macánta uirthi."
+        },
+        {
+          "q": "Cad é an t-athrú is tapúla is féidir liom a dhéanamh amárach?",
+          "a": "Sann glanadh na mbord do dhuine ar leith don seirbhís sin. Ní chosnaíonn sé faic, luíonn sé in aon abairt amháin ag an gcruinniú roimh sheirbhís, agus tugann sé cúig nóiméad an bhoird ar ais de ghnáth."
+        }
+      ]
+    }
+  ]
+}

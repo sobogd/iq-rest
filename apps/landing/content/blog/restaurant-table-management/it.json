@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Gestione tavoli: far girare i tavoli prima | IQ Rest",
+    "description": "Come la rotazione dei tavoli si traduce in soldi, cosa fa davvero un software di gestione sala e le abitudini che aggiungono un turno senza aggiungere tavoli."
+  },
+  "card": {
+    "title": "Gestione dei tavoli: l'aritmetica di un turno in più a sera",
+    "excerpt": "Far girare un tavolo venti minuti prima vale più di quasi qualsiasi campagna. Ecco come misurare la rotazione, dove si nascondono i minuti e a cosa serve davvero il software."
+  },
+  "h1": "Gestione dei tavoli al ristorante: ricavare un secondo turno dalla stessa sala",
+  "intro": "Non puoi aggiungere tavoli a una sala, ma puoi servire più persone su quelli che hai. La maggior parte dei locali perde rotazione in tre punti: l'attesa prima dell'ordine, l'attesa del conto e i dieci minuti in cui il tavolo resta sporco. Nulla di tutto ciò richiede attrezzature nuove. Richiede di sapere dove finiscono i minuti.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Parti dal numero"
+    },
+    {
+      "type": "p",
+      "text": "La rotazione dei tavoli è il numero di coperti serviti diviso i posti disponibili in un servizio. Con 40 posti e 60 coperti un venerdì sera, la tua rotazione è 1,5."
+    },
+    {
+      "type": "p",
+      "text": "Il motivo per cui conta: con uno scontrino medio di 28 €, passare il venerdì da 1,5 a 1,8 significa 12 coperti in più, cioè 336 €. Fallo venerdì e sabato e sono circa 2.900 € al mese, dalla stessa sala, dallo stesso menu e dallo stesso personale."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Rotazione",
+        "Coperti su 40 posti",
+        "Ricavi a 28 €"
+      ],
+      "rows": [
+        [
+          "1,2",
+          "48",
+          "1.344 €"
+        ],
+        [
+          "1,5",
+          "60",
+          "1.680 €"
+        ],
+        [
+          "1,8",
+          "72",
+          "2.016 €"
+        ],
+        [
+          "2,0",
+          "80",
+          "2.240 €"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Dove finiscono davvero i minuti"
+    },
+    {
+      "type": "p",
+      "text": "Cronometra qualche tavolo dall'inizio alla fine e la distribuzione è sorprendentemente simile in tutti i locali:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Fase",
+        "Tipico",
+        "Miglior caso realistico"
+      ],
+      "rows": [
+        [
+          "Seduti → ordine preso",
+          "8-14 min",
+          "2-4 min"
+        ],
+        [
+          "Ordine → piatto",
+          "12-25 min",
+          "Dipende dalla cucina"
+        ],
+        [
+          "Pasto",
+          "35-55 min",
+          "Lascialo stare"
+        ],
+        [
+          "Finito → conto richiesto",
+          "5-12 min",
+          "1-2 min"
+        ],
+        [
+          "Conto richiesto → pagato",
+          "6-15 min",
+          "1-3 min"
+        ],
+        [
+          "Pagato → tavolo rifatto",
+          "5-15 min",
+          "3 min"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Contano due colonne. Il tempo del pasto non è tuo da comprimere: stringerlo è il modo per farsi una brutta recensione. Le due attese che lo circondano sono tempo morto puro e insieme fanno regolarmente 20-30 minuti per tavolo. Il tuo turno in più è lì, in bella vista."
+    },
+    {
+      "type": "h2",
+      "text": "I quattro interventi, in ordine di resa"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Lascia ordinare i clienti quando sono pronti.** L'attesa che un cameriere si liberi è il blocco più grosso, ed è peggiore proprio quando sei pieno. [Ordinare dal tavolo](route:/order-taking) lo elimina del tutto nei locali dove lo stile lo consente.",
+        "**Lascia pagare quando sono pronti.** La danza del conto costa dai 10 ai 25 minuti. Il pagamento al tavolo la riduce a circa uno.",
+        "**Rifai il tavolo più in fretta.** Un tavolo sporco non è vendibile. Assegna lo sbarazzo invece di sperare; cinque minuti guadagnati per tavolo, su una serata, valgono un turno.",
+        "**Smetti di far sedere due tavoli sullo stesso cameriere insieme.** Due tavoli che si siedono nello stesso momento aspettano entrambi. Sfasa di cinque minuti e vengono serviti prima tutti e due."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Cosa fa un software di gestione tavoli"
+    },
+    {
+      "type": "p",
+      "text": "La versione utile è una piantina della sala in tempo reale: quali tavoli sono liberi, occupati, con ordine inviato, in attesa del conto o in fase di riassetto, visibile a tutti insieme invece che nella testa di chi sta all'ingresso."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Stato a colpo d'occhio**, così un cameriere di passaggio sa che il tavolo 12 aspetta dalle 20:40.",
+        "**Suggerimenti di assegnazione**: un walk-in da quattro va al tavolo che si libera prima, non al primo che qualcuno ricorda.",
+        "**Tavolo collegato all'ordine**, così conto, ordine da QR e comanda di cucina concordano su chi è seduto dove.",
+        "**Storico**, per vedere che il tuo secondo turno del sabato è sistematicamente in ritardo di 25 minuti e correggerne la causa.",
+        "**Prenotazioni sulla stessa mappa** dei walk-in: è da lì che nasce la maggior parte dei doppi."
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Il software non fa girare i tavoli. Toglie le supposizioni che rendono lento farli girare. Se la tua sala ha 12 tavoli e una persona la gestisce bene, una lavagna va benissimo; l'argomento diventa forte intorno ai 20 tavoli, con più camerieri o con un misto di prenotazioni e walk-in."
+    },
+    {
+      "type": "h2",
+      "text": "La rotazione che non devi inseguire"
+    },
+    {
+      "type": "p",
+      "text": "Un ristorante con menu degustazione che vende un turno a sera non sta gestendo male i tavoli: il turno è il prodotto. Un bar di quartiere dove la gente sta tre ore con due birre monetizza qualcosa di diverso dal piatto. Spingi la rotazione in entrambi e rompi l'attività che hai."
+    },
+    {
+      "type": "h2",
+      "text": "Una misurazione di due settimane che puoi davvero fare"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Scegli quattro tavoli. Per una settimana, annota ora della seduta, ora dell'ordine, richiesta del conto e fine riassetto su un cartoncino attaccato sotto al tavolo.",
+        "Fai la media di ogni intervallo. Ne troverai uno che è il doppio di quanto pensavi.",
+        "Cambia una cosa sola, per la settimana successiva.",
+        "Confronta. Tieni la modifica se l'intervallo si è ridotto e nessuno si è lamentato.",
+        "Passa all'intervallo più grande successivo."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Chiedi ai camerieri dove va il tempo prima di misurare. Lo sanno quasi sempre e di solito hanno ragione: la misurazione serve soprattutto a decidere quale dei due problemi noti sia il più grande."
+    },
+    {
+      "type": "cta",
+      "heading": "Vedi tutta la tua sala in un solo posto",
+      "text": "Stato dei tavoli in tempo reale, ordini legati ai tavoli e prenotazioni sulla stessa mappa. 14 giorni gratis, senza carta.",
+      "buttonLabel": "Vedi la gestione tavoli",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Domande frequenti",
+      "items": [
+        {
+          "q": "Qual è un buon indice di rotazione dei tavoli?",
+          "a": "Dipende interamente dal formato. Il fast casual va a 3 o più, un bistrot a 1,5-2 per servizio, l'alta cucina spesso a 1. Confrontati con il tuo mese scorso, non con il formato di qualcun altro."
+        },
+        {
+          "q": "Come calcolo la rotazione dei tavoli?",
+          "a": "Coperti serviti in un servizio diviso il numero di posti. 60 coperti su 40 posti fanno 1,5."
+        },
+        {
+          "q": "Mi serve un software per 12 tavoli?",
+          "a": "Probabilmente no per la sola piantina. Inizia a ripagarsi con più camerieri, con un misto di walk-in e prenotazioni, o quando gli ordini arrivano da più di un canale."
+        },
+        {
+          "q": "L'ordine da QR accelera davvero la rotazione?",
+          "a": "Elimina l'attesa tra il decidere e l'ordinare, tipicamente 8-14 minuti e peggiore nei picchi. Se questo si adatti al tuo stile di servizio è un'altra domanda, da affrontare con onestà."
+        },
+        {
+          "q": "Qual è la modifica più rapida che posso fare domani?",
+          "a": "Assegnare il riassetto dei tavoli a una persona precisa per il servizio. È gratis, sta in una frase del briefing pre-turno e di solito recupera cinque minuti per tavolo."
+        }
+      ]
+    }
+  ]
+}

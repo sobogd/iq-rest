@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Zarządzanie stolikami: szybsza rotacja | IQ Rest",
+    "description": "Jak rotacja stolików przekłada się na pieniądze, co naprawdę robi oprogramowanie do zarządzania salą i jakie nawyki dokładają jedną turę bez nowych stolików."
+  },
+  "card": {
+    "title": "Zarządzanie stolikami: arytmetyka jednej dodatkowej tury na wieczór",
+    "excerpt": "Zwolnienie stolika dwadzieścia minut wcześniej jest warte więcej niż większość marketingu. Oto jak mierzyć rotację, gdzie chowają się minuty i w czym naprawdę pomaga oprogramowanie."
+  },
+  "h1": "Zarządzanie stolikami w restauracji: wyciągnąć drugą turę z tej samej sali",
+  "intro": "Nie dołożysz stolików do sali, ale możesz obsłużyć więcej ludzi przy tych, które masz. Większość lokali traci rotację w trzech miejscach: czekanie przed złożeniem zamówienia, czekanie na rachunek i dziesięć minut, przez które stolik stoi brudny. Żadne z tego nie wymaga nowego sprzętu. Wymaga wiedzy, gdzie uciekają minuty.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Zacznij od liczby"
+    },
+    {
+      "type": "p",
+      "text": "Rotacja stolików to liczba obsłużonych kuwertów podzielona przez liczbę miejsc dostępnych w serwisie. Przy 40 miejscach i 60 kuwertach w piątkowy wieczór twoja rotacja wynosi 1,5."
+    },
+    {
+      "type": "p",
+      "text": "Dlaczego to ma znaczenie: przy średnim rachunku 28 € przejście w piątek z 1,5 na 1,8 to 12 kuwertów więcej, czyli 336 €. Zrób tak w piątek i sobotę, a wychodzi około 2900 € miesięcznie — z tej samej sali, tej samej karty i tej samej załogi."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Rotacja",
+        "Kuwerty przy 40 miejscach",
+        "Przychód przy 28 €"
+      ],
+      "rows": [
+        [
+          "1,2",
+          "48",
+          "1344 €"
+        ],
+        [
+          "1,5",
+          "60",
+          "1680 €"
+        ],
+        [
+          "1,8",
+          "72",
+          "2016 €"
+        ],
+        [
+          "2,0",
+          "80",
+          "2240 €"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Gdzie naprawdę uciekają minuty"
+    },
+    {
+      "type": "p",
+      "text": "Zmierz kilka stolików od początku do końca, a rozkład okaże się zaskakująco podobny we wszystkich lokalach:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Etap",
+        "Typowo",
+        "Realny najlepszy wynik"
+      ],
+      "rows": [
+        [
+          "Usiedli → zamówienie przyjęte",
+          "8-14 min",
+          "2-4 min"
+        ],
+        [
+          "Zamówienie → jedzenie",
+          "12-25 min",
+          "Zależy od kuchni"
+        ],
+        [
+          "Jedzenie",
+          "35-55 min",
+          "Nie ruszaj"
+        ],
+        [
+          "Skończyli → poprosili o rachunek",
+          "5-12 min",
+          "1-2 min"
+        ],
+        [
+          "Poprosili o rachunek → zapłacone",
+          "6-15 min",
+          "1-3 min"
+        ],
+        [
+          "Zapłacone → stolik posprzątany",
+          "5-15 min",
+          "3 min"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Liczą się dwie kolumny. Czasu jedzenia nie masz prawa skracać — ściskanie go to najprostsza droga do złej opinii. Dwa czekania wokół niego to czysty czas martwy, a razem regularnie dają 20-30 minut na stolik. Twoja dodatkowa tura leży tam, na widoku."
+    },
+    {
+      "type": "h2",
+      "text": "Cztery poprawki, w kolejności zwrotu"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Pozwól gościom zamawiać, kiedy są gotowi.** Czekanie, aż kelner się zwolni, to największy korek, i jest najgorsze dokładnie wtedy, gdy masz pełno. [Zamawianie przy stoliku](route:/order-taking) usuwa je całkowicie tam, gdzie styl na to pozwala.",
+        "**Pozwól płacić, kiedy są gotowi.** Taniec z rachunkiem kosztuje 10-25 minut. Płatność przy stoliku skraca go do jednej.",
+        "**Sprzątaj szybciej.** Brudnego stolika nie sprzedasz. Przydziel sprzątanie zamiast liczyć na to, że ktoś się ruszy; pięć minut zysku na stolik daje w ciągu wieczoru całą turę.",
+        "**Przestań sadzać dwa stoliki naraz do tego samego kelnera.** Dwa stoliki, które siadają razem, oba czekają. Rozsuń sadzanie o pięć minut, a oba zostaną obsłużone szybciej."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Co robi oprogramowanie do zarządzania stolikami"
+    },
+    {
+      "type": "p",
+      "text": "Wersja użyteczna to żywy plan sali: które stoliki są wolne, zajęte, po złożeniu zamówienia, czekają na rachunek albo są sprzątane — widoczne dla wszystkich naraz, a nie trzymane w głowie osoby przy drzwiach."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Status na jedno spojrzenie**, żeby przechodzący kelner wiedział, że stolik 12 czeka od 20:40.",
+        "**Podpowiedzi sadzania** — czwórka z ulicy idzie do stolika, który zwolni się najszybciej, a nie do pierwszego, który komuś przyjdzie do głowy.",
+        "**Stolik powiązany z zamówieniem**, żeby rachunek, zamówienie przez QR i bon kuchenny zgadzały się co do tego, kto gdzie siedzi.",
+        "**Historia**, żebyś zobaczył, że twoja druga tura w sobotę konsekwentnie spóźnia się 25 minut, i naprawił przyczynę.",
+        "**Rezerwacje na tym samym planie** co goście z ulicy — stąd bierze się większość podwójnych rezerwacji."
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Oprogramowanie nie obraca stolikami. Usuwa zgadywanie, które sprawia, że obracanie jest wolne. Jeśli twoja sala to 12 stolików i jedna osoba dobrze nad tym panuje, tablica naprawdę wystarczy; argument staje się mocny przy jakichś 20 stolikach, przy kilku kelnerach albo przy miksie rezerwacji i wejść z ulicy."
+    },
+    {
+      "type": "h2",
+      "text": "Rotacja, której nie warto gonić"
+    },
+    {
+      "type": "p",
+      "text": "Restauracja z menu degustacyjnym sprzedająca jedną turę na wieczór nie zarządza stolikami źle — ta tura to jest produkt. Osiedlowy bar, gdzie ludzie siedzą trzy godziny przy dwóch piwach, zarabia na czymś innym niż talerz. Wymuś rotację w którymkolwiek z nich, a zepsujesz biznes, który masz."
+    },
+    {
+      "type": "h2",
+      "text": "Dwutygodniowy pomiar, który naprawdę da się zrobić"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Wybierz cztery stoliki. Przez tydzień zapisuj godzinę posadzenia, złożenia zamówienia, prośby o rachunek i zakończenia sprzątania na karteczce przyklejonej pod blatem.",
+        "Uśrednij każdą przerwę. Znajdziesz jedną, która jest dwa razy większa, niż zakładałeś.",
+        "Zmień jedną rzecz, na kolejny tydzień.",
+        "Porównaj. Zostaw zmianę, jeśli przerwa się skróciła i nikt nie narzekał.",
+        "Przejdź do następnej największej przerwy."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Zanim zaczniesz mierzyć, spytaj kelnerów, gdzie ucieka czas. Prawie zawsze wiedzą i zwykle mają rację — pomiar głównie rozstrzyga, który z dwóch znanych problemów jest większy."
+    },
+    {
+      "type": "cta",
+      "heading": "Zobacz całą salę w jednym miejscu",
+      "text": "Status stolików na żywo, zamówienia powiązane ze stolikami i rezerwacje na tym samym planie. 14 dni za darmo, bez karty.",
+      "buttonLabel": "Zobacz zarządzanie stolikami",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Najczęstsze pytania",
+      "items": [
+        {
+          "q": "Jaka rotacja stolików jest dobra?",
+          "a": "To zależy całkowicie od formatu. Fast casual robi 3 i więcej, bistro 1,5-2 na serwis, fine dining często 1. Porównuj się do własnego poprzedniego miesiąca, nie do cudzego formatu."
+        },
+        {
+          "q": "Jak liczyć rotację stolików?",
+          "a": "Kuwerty obsłużone w serwisie podzielone przez liczbę miejsc. 60 kuwertów na 40 miejscach to 1,5."
+        },
+        {
+          "q": "Czy potrzebuję oprogramowania przy 12 stolikach?",
+          "a": "Do samego planu sali raczej nie. Zaczyna się opłacać przy kilku kelnerach, przy miksie wejść z ulicy i rezerwacji albo gdy zamówienia przychodzą z więcej niż jednego kanału."
+        },
+        {
+          "q": "Czy zamawianie przez QR naprawdę przyspiesza rotację?",
+          "a": "Usuwa czekanie między decyzją a zamówieniem, zwykle 8-14 minut, i najgorsze w szczycie. Czy pasuje do twojego stylu obsługi, to osobne pytanie, na które warto odpowiedzieć uczciwie."
+        },
+        {
+          "q": "Jaka jest najszybsza zmiana, którą mogę wprowadzić jutro?",
+          "a": "Przypisz sprzątanie stolików konkretnej osobie na dany serwis. Nic nie kosztuje, mieści się w jednym zdaniu na odprawie i zwykle odzyskuje pięć minut na stolik."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Tischmanagement: Tische schneller drehen | IQ Rest",
+    "description": "Wie sich Tischumschlag in Geld übersetzt, was eine Tischverwaltung wirklich leistet und welche Servicegewohnheiten eine zusätzliche Belegung bringen, ohne neue Tische."
+  },
+  "card": {
+    "title": "Tischmanagement: die Rechnung hinter einer zusätzlichen Belegung pro Abend",
+    "excerpt": "Einen Tisch zwanzig Minuten früher zu drehen ist mehr wert als die meisten Werbemaßnahmen. So messen Sie den Umschlag, so finden Sie die verlorenen Minuten und dabei hilft Software wirklich."
+  },
+  "h1": "Tischmanagement im Restaurant: eine zweite Belegung aus demselben Raum holen",
+  "intro": "Sie können einem Gastraum keine Tische hinzufügen, aber Sie können an den vorhandenen mehr Gäste bewirten. Die meisten Betriebe verlieren ihren Umschlag an drei Stellen: das Warten vor der Bestellung, das Warten auf die Rechnung und die zehn Minuten, in denen der Tisch schmutzig steht. Nichts davon braucht neue Ausstattung. Es braucht das Wissen, wohin die Minuten gehen.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Fangen Sie bei der Zahl an"
+    },
+    {
+      "type": "p",
+      "text": "Tischumschlag ist die Zahl der bewirteten Gäste geteilt durch die verfügbaren Plätze in einem Service. Bei 40 Plätzen und 60 Gästen an einem Freitagabend liegt Ihr Umschlag bei 1,5."
+    },
+    {
+      "type": "p",
+      "text": "Warum das zählt: Bei einem Durchschnittsbon von 28 € bedeutet ein Sprung von 1,5 auf 1,8 am Freitag 12 zusätzliche Gäste, also 336 €. Machen Sie das freitags und samstags, sind das rund 2.900 € im Monat — aus demselben Raum, derselben Karte und demselben Team."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Umschlag",
+        "Gäste bei 40 Plätzen",
+        "Umsatz bei 28 €"
+      ],
+      "rows": [
+        [
+          "1,2",
+          "48",
+          "1.344 €"
+        ],
+        [
+          "1,5",
+          "60",
+          "1.680 €"
+        ],
+        [
+          "1,8",
+          "72",
+          "2.016 €"
+        ],
+        [
+          "2,0",
+          "80",
+          "2.240 €"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Wohin die Minuten tatsächlich gehen"
+    },
+    {
+      "type": "p",
+      "text": "Stoppen Sie ein paar Tische von Anfang bis Ende, und die Verteilung sieht in praktisch jedem Betrieb ähnlich aus:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Phase",
+        "Üblich",
+        "Realistisch bestenfalls"
+      ],
+      "rows": [
+        [
+          "Gesetzt → Bestellung aufgenommen",
+          "8–14 Min.",
+          "2–4 Min."
+        ],
+        [
+          "Bestellung → Essen",
+          "12–25 Min.",
+          "Abhängig von der Küche"
+        ],
+        [
+          "Essen",
+          "35–55 Min.",
+          "Lassen Sie es in Ruhe"
+        ],
+        [
+          "Fertig → Rechnung erbeten",
+          "5–12 Min.",
+          "1–2 Min."
+        ],
+        [
+          "Rechnung erbeten → bezahlt",
+          "6–15 Min.",
+          "1–3 Min."
+        ],
+        [
+          "Bezahlt → Tisch abgeräumt",
+          "5–15 Min.",
+          "3 Min."
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Zwei Spalten zählen. Die Essenszeit gehört nicht Ihnen — sie zu drücken ist der Weg zur schlechten Bewertung. Die beiden Wartezeiten davor und danach sind reine Totzeit und summieren sich regelmäßig auf 20 bis 30 Minuten pro Tisch. Da liegt Ihre zusätzliche Belegung, offen sichtbar."
+    },
+    {
+      "type": "h2",
+      "text": "Die vier Hebel, nach Rendite sortiert"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Lassen Sie Gäste bestellen, wenn sie so weit sind.** Das Warten darauf, dass jemand frei wird, ist der größte Block — und am schlimmsten genau dann, wenn es voll ist. [Bestellen vom Tisch](route:/order-taking) beseitigt das komplett, wo der Stil passt.",
+        "**Lassen Sie sie zahlen, wenn sie so weit sind.** Der Rechnungstanz kostet 10 bis 25 Minuten. Zahlen am Tisch drückt das auf etwa eine.",
+        "**Räumen Sie schneller ab.** Ein schmutziger Tisch ist unverkäuflich. Weisen Sie das Abräumen ausdrücklich zu, statt zu hoffen; fünf gesparte Minuten pro Tisch sind über einen Abend eine ganze Belegung.",
+        "**Setzen Sie nicht zwei Tische gleichzeitig auf dieselbe Station.** Zwei Tische, die zusammen Platz nehmen, warten beide. Versetzen Sie das Setzen um fünf Minuten, und beide werden schneller bedient."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Was eine Tischverwaltung leistet"
+    },
+    {
+      "type": "p",
+      "text": "Die nützliche Variante ist ein Live-Raumplan: welche Tische frei, besetzt, bestellt, auf die Rechnung wartend oder in der Reinigung sind — für alle gleichzeitig sichtbar, statt im Kopf der Person am Empfang."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Status auf einen Blick**, damit ein vorbeigehender Kellner sieht, dass Tisch 12 seit 20:40 Uhr wartet.",
+        "**Platzierungsvorschläge** — ein Walk-in zu viert bekommt den Tisch, der am ehesten frei wird, nicht den ersten, an den sich jemand erinnert.",
+        "**Tisch mit der Bestellung verknüpft**, damit Rechnung, QR-Bestellung und Küchenbon sich einig sind, wer wo sitzt.",
+        "**Historie**, damit Sie sehen, dass Ihre zweite Belegung am Samstag konstant 25 Minuten zu spät ist, und die Ursache beheben.",
+        "**Reservierungen auf demselben Plan** wie Walk-ins — daher stammt der Großteil aller Doppelbelegungen."
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Software dreht keine Tische. Sie beseitigt das Raten, das ihr Drehen langsam macht. Bei 12 Tischen, die eine Person gut im Griff hat, reicht ein Whiteboard wirklich — stark wird das Argument bei etwa 20 Tischen, mehreren Servicekräften oder einem Mix aus Reservierungen und Walk-ins."
+    },
+    {
+      "type": "h2",
+      "text": "Umschlag, den Sie nicht jagen sollten"
+    },
+    {
+      "type": "p",
+      "text": "Ein Restaurant mit Degustationsmenü und einer Belegung pro Abend macht kein schlechtes Tischmanagement — die Belegung ist das Produkt. Eine Nachbarschaftsbar, in der Leute drei Stunden bei zwei Bier sitzen, monetarisiert etwas anderes als den Teller. Treiben Sie dort den Umschlag, zerstören Sie das Geschäft, das Sie haben."
+    },
+    {
+      "type": "h2",
+      "text": "Eine Zwei-Wochen-Messung, die Sie wirklich durchziehen können"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Wählen Sie vier Tische. Notieren Sie eine Woche lang Setzzeit, Bestellzeit, Rechnungswunsch und Abräumende auf einer Karte, die unter dem Tisch klebt.",
+        "Bilden Sie den Mittelwert je Lücke. Eine davon ist doppelt so groß, wie Sie dachten.",
+        "Ändern Sie in der Folgewoche genau eine Sache.",
+        "Vergleichen Sie. Behalten Sie die Änderung, wenn die Lücke kleiner wurde und niemand sich beschwert hat.",
+        "Gehen Sie zur nächstgrößten Lücke über."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Fragen Sie das Team vor dem Messen, wo die Zeit hingeht. Sie wissen es fast immer, und sie liegen meist richtig — die Messung entscheidet vor allem den Streit darüber, welches der zwei bekannten Probleme größer ist."
+    },
+    {
+      "type": "cta",
+      "heading": "Sehen Sie Ihren ganzen Raum an einer Stelle",
+      "text": "Live-Tischstatus, mit Tischen verknüpfte Bestellungen und Reservierungen auf demselben Plan. 14 Tage kostenlos, ohne Karte.",
+      "buttonLabel": "Tischverwaltung ansehen",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Häufige Fragen",
+      "items": [
+        {
+          "q": "Was ist eine gute Tischumschlagsrate?",
+          "a": "Das hängt vollständig vom Format ab. Fast Casual liegt bei 3 oder höher, ein Bistro bei 1,5–2 pro Service, Fine Dining oft bei 1. Vergleichen Sie sich mit Ihrem eigenen Vormonat, nicht mit fremden Formaten."
+        },
+        {
+          "q": "Wie berechne ich den Tischumschlag?",
+          "a": "Bewirtete Gäste in einem Service geteilt durch die Anzahl der Plätze. 60 Gäste auf 40 Plätzen ergeben 1,5."
+        },
+        {
+          "q": "Brauche ich Software für 12 Tische?",
+          "a": "Für den Raumplan allein wahrscheinlich nicht. Es lohnt sich ab mehreren Servicekräften, einem Mix aus Walk-ins und Reservierungen oder sobald Bestellungen über mehr als einen Kanal hereinkommen."
+        },
+        {
+          "q": "Beschleunigt QR-Bestellung den Umschlag wirklich?",
+          "a": "Sie beseitigt die Wartezeit zwischen Entscheidung und Bestellung, typischerweise 8–14 Minuten und am schlimmsten zur Stoßzeit. Ob das zu Ihrem Servicestil passt, ist eine eigene Frage, die man ehrlich beantworten sollte."
+        },
+        {
+          "q": "Was ist die schnellste Änderung für morgen?",
+          "a": "Weisen Sie das Abräumen für den Service einer namentlich genannten Person zu. Es kostet nichts, passt in einen Satz beim Pre-Shift und bringt meist fünf Minuten pro Tisch zurück."
+        }
+      ]
+    }
+  ]
+}

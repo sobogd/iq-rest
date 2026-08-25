@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Stalų valdymas: greitesnė stalų apyvarta | IQ Rest",
+    "description": "Kaip stalų apyvarta virsta pinigais, ką stalų valdymo programa iš tikrųjų daro ir kokie salės įpročiai prideda vieną pamainą be naujų stalų."
+  },
+  "card": {
+    "title": "Stalų valdymas: vienos papildomos pamainos aritmetika per vakarą",
+    "excerpt": "Atlaisvinti stalą dvidešimt minučių anksčiau vertingiau nei dauguma rinkodaros. Štai kaip matuoti apyvartą, kur dingsta minutės ir kur programa iš tiesų padeda."
+  },
+  "h1": "Stalų valdymas restorane: kaip iš tos pačios salės išspausti antrą pamainą",
+  "intro": "Stalų į salę nepridėsite, bet prie esamų galite aptarnauti daugiau žmonių. Dauguma vietų praranda apyvartą trijose vietose: laukiant prieš užsakymą, laukiant sąskaitos ir tas dešimt minučių, kai stalas stovi nešvarus. Nė vienam iš jų nereikia naujos įrangos. Reikia žinoti, kur išeina minutės.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Pradėkite nuo skaičiaus"
+    },
+    {
+      "type": "p",
+      "text": "Stalų apyvarta yra per pamainą aptarnautų svečių skaičius, padalytas iš turimų vietų. Turint 40 vietų ir 60 svečių penktadienio vakarą, jūsų apyvarta yra 1,5."
+    },
+    {
+      "type": "p",
+      "text": "Kodėl svarbu: esant vidutinei 28 € sąskaitai, penktadienio poslinkis nuo 1,5 iki 1,8 reiškia 12 svečių daugiau, tai yra 336 €. Padarykite tai penktadienį ir šeštadienį ir išeina apie 2900 € per mėnesį — iš tos pačios salės, to paties meniu ir tos pačios komandos."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Apyvarta",
+        "Svečiai prie 40 vietų",
+        "Pajamos prie 28 €"
+      ],
+      "rows": [
+        [
+          "1,2",
+          "48",
+          "1344 €"
+        ],
+        [
+          "1,5",
+          "60",
+          "1680 €"
+        ],
+        [
+          "1,8",
+          "72",
+          "2016 €"
+        ],
+        [
+          "2,0",
+          "80",
+          "2240 €"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kur minutės iš tikrųjų dingsta"
+    },
+    {
+      "type": "p",
+      "text": "Išmatuokite kelis stalus nuo pradžios iki pabaigos ir pasiskirstymas stebėtinai panašus įvairiose vietose:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Etapas",
+        "Paprastai",
+        "Realiai geriausia"
+      ],
+      "rows": [
+        [
+          "Pasodinta → užsakymas priimtas",
+          "8-14 min",
+          "2-4 min"
+        ],
+        [
+          "Užsakymas → maistas",
+          "12-25 min",
+          "Priklauso nuo virtuvės"
+        ],
+        [
+          "Valgymas",
+          "35-55 min",
+          "Nelieskite"
+        ],
+        [
+          "Baigė → paprašė sąskaitos",
+          "5-12 min",
+          "1-2 min"
+        ],
+        [
+          "Paprašė sąskaitos → sumokėjo",
+          "6-15 min",
+          "1-3 min"
+        ],
+        [
+          "Sumokėta → stalas paruoštas",
+          "5-15 min",
+          "3 min"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Svarbūs du stulpeliai. Valgymo laikas ne jums spausti — jo spaudimas yra greičiausias kelias į blogą atsiliepimą. Du laukimai aplink jį yra grynas negyvas laikas ir kartu paprastai sudaro 20-30 minučių stalui. Ten ir yra jūsų papildoma pamaina, visų akyse."
+    },
+    {
+      "type": "h2",
+      "text": "Keturi taisymai pagal grąžą"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Leiskite svečiams užsisakyti, kai jie pasiruošę.** Laisvo padavėjo laukimas yra didžiausias kamštis ir blogiausias būtent tada, kai pilna. [Užsakymas nuo stalo](route:/order-taking) jį visiškai pašalina ten, kur stilius tinka.",
+        "**Leiskite sumokėti, kai jie pasiruošę.** Sąskaitos šokis kainuoja 10-25 minutes. Mokėjimas prie stalo suspaudžia jį maždaug iki vienos.",
+        "**Tvarkykite greičiau.** Nešvaraus stalo neparduosi. Priskirkite tvarkymą aiškiai, o ne vildamiesi; penkios sutaupytos minutės stalui per vakarą yra visa pamaina.",
+        "**Nustokite sodinti du stalus tam pačiam padavėjui vienu metu.** Du vienu metu pasodinti stalai laukia abu. Paslinkite sodinimą penkiomis minutėmis ir abu bus aptarnauti greičiau."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Ką daro stalų valdymo programa"
+    },
+    {
+      "type": "p",
+      "text": "Naudinga versija yra gyvas salės planas: kurie stalai laisvi, užimti, užsisakę, laukia sąskaitos ar tvarkomi — matoma visiems iš karto, o ne prie durų stovinčio žmogaus galvoje."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Būsena vienu žvilgsniu**, kad pro šalį einantis padavėjas žinotų, jog 12 stalas laukia nuo 20.40.",
+        "**Sodinimo pasiūlymai** — keturi užėję be rezervacijos eina prie stalo, kuris atsilaisvins pirmas, o ne prie to, kurį kas nors pirmiausia prisimena.",
+        "**Su stalu susietas užsakymas**, kad sąskaita, QR užsakymas ir virtuvės čekis sutartų, kas kur sėdi.",
+        "**Istorija**, kad matytumėte, jog jūsų šeštadienio antra pamaina nuolat vėluoja 25 minutes, ir pašalintumėte priežastį.",
+        "**Rezervacijos tame pačiame plane** kaip ir be rezervacijos užėję svečiai — iš čia kyla dauguma dvigubų sodinimų."
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Programa stalų nesuka. Ji pašalina spėliojimą, kuris sukimą lėtina. Jei salėje 12 stalų ir vienas žmogus juos gerai suvaldo, lentos tikrai užtenka; argumentas sustiprėja apie 20 stalų, esant keliems padavėjams arba maišant rezervacijas ir užėjusius."
+    },
+    {
+      "type": "h2",
+      "text": "Apyvarta, kurios nereikia vytis"
+    },
+    {
+      "type": "p",
+      "text": "Restoranas su degustaciniu meniu, parduodantis vieną pamainą per vakarą, stalų nevaldo blogai — ta pamaina ir yra produktas. Kvartalo baras, kur žmonės sėdi tris valandas prie dviejų alų, uždirba iš kažko kito, ne iš lėkštės. Paspauskite apyvartą bet kuriame iš jų ir sugadinsite verslą, kurį turite."
+    },
+    {
+      "type": "h2",
+      "text": "Dviejų savaičių matavimas, kurį iš tiesų atliksite"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Pasirinkite keturis stalus. Savaitę žymėkite pasodinimo, užsakymo, sąskaitos prašymo ir tvarkymo pabaigos laikus kortelėje, priklijuotoje po stalu.",
+        "Suskaičiuokite kiekvieno tarpo vidurkį. Rasite vieną, kuris dvigubai didesnis, nei manėte.",
+        "Kitai savaitei pakeiskite vieną vienintelį dalyką.",
+        "Palyginkite. Pakeitimą palikite, jei tarpas sumažėjo ir niekas nesiskundė.",
+        "Pereikite prie kito didžiausio tarpo."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Prieš matuodami paklauskite padavėjų, kur išeina laikas. Beveik visada jie žino ir paprastai yra teisūs — matavimas daugiausia išsprendžia ginčą, kuri iš dviejų žinomų problemų didesnė."
+    },
+    {
+      "type": "cta",
+      "heading": "Matykite visą salę vienoje vietoje",
+      "text": "Gyva stalų būsena, su stalais susieti užsakymai ir rezervacijos tame pačiame plane. 14 dienų nemokamai, be kortelės.",
+      "buttonLabel": "Pažiūrėti stalų valdymą",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Dažnai užduodami klausimai",
+      "items": [
+        {
+          "q": "Kokia stalų apyvarta yra gera?",
+          "a": "Visiškai priklauso nuo formato. Fast casual sukasi ties 3 ir daugiau, bistro 1,5-2 per pamainą, aukštoji virtuvė dažnai 1. Lyginkite save su savo praėjusiu mėnesiu, o ne su kažkieno formatu."
+        },
+        {
+          "q": "Kaip apskaičiuoti stalų apyvartą?",
+          "a": "Per pamainą aptarnauti svečiai, padalyti iš vietų skaičiaus. 60 svečių prie 40 vietų yra 1,5."
+        },
+        {
+          "q": "Ar man reikia programos 12 stalų?",
+          "a": "Vien dėl salės plano tikriausiai ne. Ji pradeda atsipirkti esant keliems padavėjams, maišant užėjusius ir rezervacijas arba kai užsakymai ateina iš daugiau nei vieno kanalo."
+        },
+        {
+          "q": "Ar QR užsakymas iš tikrųjų greitina apyvartą?",
+          "a": "Jis pašalina laukimą tarp sprendimo ir užsakymo, paprastai 8-14 minučių, o piko metu blogiausia. Ar tai tinka jūsų aptarnavimo stiliui — atskiras klausimas, vertas sąžiningo atsakymo."
+        },
+        {
+          "q": "Koks greičiausias pakeitimas, kurį galiu padaryti rytoj?",
+          "a": "Priskirkite stalų tvarkymą konkrečiam žmogui tai pamainai. Nieko nekainuoja, telpa į vieną sakinį per susirinkimą prieš pamainą ir paprastai grąžina penkias minutes stalui."
+        }
+      ]
+    }
+  ]
+}

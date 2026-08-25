@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Galdu pārvaldība: ātrāka galdu maiņa | IQ Rest",
+    "description": "Kā galdu apgrozība pārvēršas naudā, ko galdu pārvaldības programma patiesībā dara un kuri zāles ieradumi pievieno vienu maiņu bez jauniem galdiem."
+  },
+  "card": {
+    "title": "Galdu pārvaldība: vienas papildu maiņas aritmētika vakarā",
+    "excerpt": "Atbrīvot galdu divdesmit minūtes ātrāk ir vērtīgāk par lielāko daļu mārketinga. Lūk, kā mērīt apgrozību, kur pazūd minūtes un kur programma tiešām palīdz."
+  },
+  "h1": "Galdu pārvaldība restorānā: kā no tās pašas zāles izspiest otro maiņu",
+  "intro": "Zālē galdus nevar pielikt klāt, taču pie esošajiem var apkalpot vairāk cilvēku. Vairums vietu zaudē apgrozību trīs vietās: gaidīšanā pirms pasūtījuma, gaidīšanā uz rēķinu un tajās desmit minūtēs, kad galds stāv netīrs. Nevienam no tiem nevajag jaunu tehniku. Vajag zināt, kur aizplūst minūtes.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Sāciet ar skaitli"
+    },
+    {
+      "type": "p",
+      "text": "Galdu apgrozība ir maiņā apkalpoto viesu skaits, dalīts ar pieejamajām vietām. Ar 40 vietām un 60 viesiem piektdienas vakarā jūsu apgrozība ir 1,5."
+    },
+    {
+      "type": "p",
+      "text": "Kāpēc tas svarīgi: ar vidējo čeku 28 € piektdienas pāreja no 1,5 uz 1,8 nozīmē 12 viesus vairāk, tas ir 336 €. Izdariet to piektdien un sestdien, un tie ir aptuveni 2900 € mēnesī — no tās pašas zāles, tās pašas ēdienkartes un tās pašas komandas."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Apgrozība",
+        "Viesi pie 40 vietām",
+        "Ieņēmumi pie 28 €"
+      ],
+      "rows": [
+        [
+          "1,2",
+          "48",
+          "1344 €"
+        ],
+        [
+          "1,5",
+          "60",
+          "1680 €"
+        ],
+        [
+          "1,8",
+          "72",
+          "2016 €"
+        ],
+        [
+          "2,0",
+          "80",
+          "2240 €"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kur minūtes patiesībā aizplūst"
+    },
+    {
+      "type": "p",
+      "text": "Nomēriet dažus galdus no sākuma līdz beigām, un sadalījums dažādās vietās ir pārsteidzoši līdzīgs:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Posms",
+        "Parasti",
+        "Reāli labākais"
+      ],
+      "rows": [
+        [
+          "Apsēdās → pasūtījums pieņemts",
+          "8-14 min",
+          "2-4 min"
+        ],
+        [
+          "Pasūtījums → ēdiens",
+          "12-25 min",
+          "Atkarīgs no virtuves"
+        ],
+        [
+          "Ēšana",
+          "35-55 min",
+          "Neaiztieciet"
+        ],
+        [
+          "Pabeidza → palūdza rēķinu",
+          "5-12 min",
+          "1-2 min"
+        ],
+        [
+          "Palūdza rēķinu → samaksāja",
+          "6-15 min",
+          "1-3 min"
+        ],
+        [
+          "Samaksāts → galds nokopts",
+          "5-15 min",
+          "3 min"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Svarīgas ir divas kolonnas. Ēšanas laiks nav jūsu, lai to saspiestu — spiediens uz to ir ātrākais ceļš uz sliktu atsauksmi. Abas gaidīšanas ap to ir tīrs miris laiks un kopā parasti veido 20 līdz 30 minūtes uz galdu. Tur ir jūsu papildu maiņa, visiem redzama."
+    },
+    {
+      "type": "h2",
+      "text": "Četri labojumi pēc atdeves"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Ļaujiet viesiem pasūtīt, kad viņi ir gatavi.** Brīva viesmīļa gaidīšana ir lielākais sastrēgums un tas ir vissliktākais tieši tad, kad ir pilns. [Pasūtīšana no galda](route:/order-taking) to pilnībā novērš tur, kur stils atbilst.",
+        "**Ļaujiet samaksāt, kad viņi ir gatavi.** Rēķina dejošana maksā 10 līdz 25 minūtes. Maksāšana pie galda saspiež to aptuveni uz vienu.",
+        "**Nokopiet ātrāk.** Netīru galdu nevar pārdot. Uzticiet nokopšanu skaidri, nevis cerot; piecas ietaupītas minūtes uz galdu vakara laikā ir vesela maiņa.",
+        "**Beidziet sēdināt divus galdus pie viena viesmīļa vienlaikus.** Divi vienlaikus apsēdināti galdi abi gaida. Pārbīdiet sēdināšanu par piecām minūtēm, un abus apkalpos ātrāk."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Ko dara galdu pārvaldības programma"
+    },
+    {
+      "type": "p",
+      "text": "Noderīgā versija ir dzīvs zāles plāns: kuri galdi ir brīvi, aizņemti, pasūtījuši, gaida rēķinu vai tiek kopti — redzams visiem uzreiz, nevis tā cilvēka galvā, kurš stāv pie durvīm."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Statuss ar vienu skatienu**, lai garāmejošs viesmīlis zinātu, ka 12. galds gaida kopš 20.40.",
+        "**Sēdināšanas ieteikumi** — četri ienācēji bez rezervācijas dodas pie galda, kas atbrīvosies pirmais, nevis pie tā, kurš kādam pirmais ienāk prātā.",
+        "**Galds, sasaistīts ar pasūtījumu**, lai rēķins, QR pasūtījums un virtuves čeks būtu vienisprātis, kurš kur sēž.",
+        "**Vēsture**, lai redzētu, ka jūsu sestdienas otrā maiņa sistemātiski kavējas 25 minūtes, un novērstu cēloni.",
+        "**Rezervācijas tajā pašā plānā** ar ienācējiem bez rezervācijas — no turienes nāk vairums dubulto sēdināšanu."
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Programma negriež galdus. Tā novērš minēšanu, kas griešanos palēnina. Ja zālē ir 12 galdu un viens cilvēks tos labi pārvalda, tāfele tiešām pietiek; arguments kļūst stiprāks ap 20 galdiem, ar vairākiem viesmīļiem vai jaucot rezervācijas un ienācējus."
+    },
+    {
+      "type": "h2",
+      "text": "Apgrozība, kurai nevajag dzīties pakaļ"
+    },
+    {
+      "type": "p",
+      "text": "Restorāns ar degustācijas ēdienkarti, kas pārdod vienu maiņu vakarā, savus galdus nepārvalda slikti — šī maiņa ir pats produkts. Kaimiņu bārs, kur cilvēki sēž trīs stundas pie diviem alus, pelna no kaut kā cita, ne no šķīvja. Uzspiediet apgrozību jebkurā no tiem, un salauzīsiet biznesu, kas jums ir."
+    },
+    {
+      "type": "h2",
+      "text": "Divu nedēļu mērījums, ko tiešām izdarīsiet"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Izvēlieties četrus galdus. Nedēļu pierakstiet apsēdināšanas, pasūtījuma, rēķina pieprasījuma un nokopšanas beigu laikus uz kartītes, kas pielīmēta zem galda.",
+        "Aprēķiniet katras atstarpes vidējo. Atradīsiet vienu, kas ir divreiz lielāka, nekā domājāt.",
+        "Nākamajai nedēļai mainiet vienu vienīgu lietu.",
+        "Salīdziniet. Paturiet izmaiņu, ja atstarpe samazinājās un neviens nesūdzējās.",
+        "Pārejiet pie nākamās lielākās atstarpes."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Pirms mērāt, pajautājiet viesmīļiem, kur aiziet laiks. Gandrīz vienmēr viņi zina un parasti viņiem ir taisnība — mērījums galvenokārt atrisina strīdu, kura no divām zināmām problēmām ir lielāka."
+    },
+    {
+      "type": "cta",
+      "heading": "Redziet visu zāli vienā vietā",
+      "text": "Dzīvs galdu statuss, ar galdiem sasaistīti pasūtījumi un rezervācijas tajā pašā plānā. 14 dienas bez maksas, bez kartes.",
+      "buttonLabel": "Apskatīt galdu pārvaldību",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Biežāk uzdotie jautājumi",
+      "items": [
+        {
+          "q": "Kāda ir laba galdu apgrozība?",
+          "a": "Tas pilnībā atkarīgs no formāta. Fast casual iet uz 3 un vairāk, bistro 1,5-2 maiņā, augstās virtuves restorāns bieži 1. Salīdziniet sevi ar savu iepriekšējo mēnesi, nevis ar kāda cita formātu."
+        },
+        {
+          "q": "Kā aprēķināt galdu apgrozību?",
+          "a": "Maiņā apkalpotie viesi, dalīti ar vietu skaitu. 60 viesi uz 40 vietām ir 1,5."
+        },
+        {
+          "q": "Vai man 12 galdiem vajag programmu?",
+          "a": "Tikai zāles plāna dēļ, visticamāk, nē. Tā sāk atmaksāties ar vairākiem viesmīļiem, jaucot ienācējus un rezervācijas vai kad pasūtījumi nāk no vairāk nekā viena kanāla."
+        },
+        {
+          "q": "Vai QR pasūtīšana tiešām paātrina apgrozību?",
+          "a": "Tā novērš gaidīšanu starp lēmumu un pasūtījumu, parasti 8-14 minūtes, un vissliktāk ir pīķa stundā. Vai tas atbilst jūsu apkalpošanas stilam, ir atsevišķs jautājums, kas pelna godīgu atbildi."
+        },
+        {
+          "q": "Kāda ir ātrākā izmaiņa, ko varu izdarīt rīt?",
+          "a": "Uzticiet galdu nokopšanu konkrētam cilvēkam attiecīgajā maiņā. Tas neko nemaksā, ietilpst vienā teikumā pirmsmaiņas sanāksmē un parasti atdod piecas minūtes uz galdu."
+        }
+      ]
+    }
+  ]
+}

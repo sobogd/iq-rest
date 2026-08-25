@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Masa yönetimi: masaları daha hızlı çevirin | IQ Rest",
+    "description": "Masa devir hızının paraya nasıl çevrildiği, masa yönetimi yazılımının gerçekte ne yaptığı ve yeni masa eklemeden bir servis kazandıran salon alışkanlıkları."
+  },
+  "card": {
+    "title": "Masa yönetimi: akşam başına bir ek servisin aritmetiği",
+    "excerpt": "Bir masayı yirmi dakika erken boşaltmak çoğu pazarlamadan daha değerli. Devir hızını nasıl ölçersiniz, dakikalar nerede kaybolur ve yazılım gerçekten nerede yardımcı olur."
+  },
+  "h1": "Restoranda masa yönetimi: aynı salondan ikinci servisi nasıl çıkarırsınız",
+  "intro": "Salona masa ekleyemezsiniz ama var olanlarda daha çok kişiye hizmet edebilirsiniz. Çoğu mekân devir hızını üç yerde kaybeder: sipariş öncesi bekleme, hesap beklemesi ve masanın kirli durduğu on dakika. Hiçbiri yeni ekipman gerektirmez. Dakikaların nereye gittiğini bilmeyi gerektirir.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Sayıyla başlayın"
+    },
+    {
+      "type": "p",
+      "text": "Masa devir hızı, bir serviste ağırladığınız kişi sayısının mevcut koltuk sayısına bölümüdür. 40 koltuk ve cuma akşamı 60 kişiyle devir hızınız 1,5'tir."
+    },
+    {
+      "type": "p",
+      "text": "Neden önemli: ortalama 28 € harcamayla cumayı 1,5'ten 1,8'e taşımak 12 kişi fazladan, yani 336 € demek. Cuma ve cumartesi yapın, ayda yaklaşık 2.900 € eder — aynı salon, aynı menü, aynı ekip."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Devir",
+        "40 koltukta kişi",
+        "28 €'da ciro"
+      ],
+      "rows": [
+        [
+          "1,2",
+          "48",
+          "1.344 €"
+        ],
+        [
+          "1,5",
+          "60",
+          "1.680 €"
+        ],
+        [
+          "1,8",
+          "72",
+          "2.016 €"
+        ],
+        [
+          "2,0",
+          "80",
+          "2.240 €"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Dakikalar gerçekte nereye gidiyor"
+    },
+    {
+      "type": "p",
+      "text": "Birkaç masayı baştan sona kronometreyle izleyin; dağılım mekândan mekâna şaşırtıcı biçimde benzer:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Aşama",
+        "Genelde",
+        "Gerçekçi en iyi"
+      ],
+      "rows": [
+        [
+          "Oturdu → sipariş alındı",
+          "8-14 dk",
+          "2-4 dk"
+        ],
+        [
+          "Sipariş → yemek",
+          "12-25 dk",
+          "Mutfağa bağlı"
+        ],
+        [
+          "Yemek",
+          "35-55 dk",
+          "Dokunmayın"
+        ],
+        [
+          "Bitirdi → hesap istedi",
+          "5-12 dk",
+          "1-2 dk"
+        ],
+        [
+          "Hesap istedi → ödendi",
+          "6-15 dk",
+          "1-3 dk"
+        ],
+        [
+          "Ödendi → masa hazır",
+          "5-15 dk",
+          "3 dk"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "İki sütun önemli. Yemek süresi sizin sıkıştıracağınız bir şey değil — onu kısmak kötü yorum almanın en hızlı yolu. Etrafındaki iki bekleme ise saf ölü zaman ve toplamda masa başına genelde 20-30 dakika eder. Ek servisiniz orada, göz önünde duruyor."
+    },
+    {
+      "type": "h2",
+      "text": "Dört düzeltme, getiri sırasıyla"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Misafirler hazır olduğunda sipariş versin.** Boş garson beklemek en büyük tıkanma ve tam da doluyken en kötü hâlini alır. [Masadan sipariş](route:/order-taking) tarzınıza uyduğu yerde bunu tamamen ortadan kaldırır.",
+        "**Hazır olduklarında ödesinler.** Hesap dansı 10-25 dakikaya mal olur. Masada ödeme bunu bire indirir.",
+        "**Daha hızlı toplayın.** Kirli masa satılmaz. Toplamayı ummak yerine açıkça birine verin; masa başına kazanılan beş dakika bir akşamda bir servis eder.",
+        "**Aynı garsona iki masayı birden oturtmayı bırakın.** Aynı anda oturan iki masa ikisi de bekler. Oturtmayı beş dakika kaydırın, ikisi de daha hızlı hizmet alır."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Masa yönetimi yazılımı ne yapar"
+    },
+    {
+      "type": "p",
+      "text": "İşe yarayan hâli canlı bir salon planıdır: hangi masalar boş, dolu, sipariş verdi, hesap bekliyor ya da toplanıyor — kapıdaki kişinin kafası yerine herkese aynı anda görünür."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Tek bakışta durum**, böylece geçen garson 12 numaranın 20.40'tan beri beklediğini bilir.",
+        "**Oturtma önerileri** — rezervasyonsuz dört kişi, ilk akla gelen masaya değil, ilk boşalacak masaya gider.",
+        "**Masaya bağlı sipariş**, böylece hesap, QR siparişi ve mutfak fişi kimin nerede oturduğunda hemfikir olur.",
+        "**Geçmiş**, böylece cumartesi ikinci servisinizin sürekli 25 dakika geciktiğini görüp nedenini düzeltirsiniz.",
+        "**Rezervasyonlar aynı planda**, rezervasyonsuz misafirlerle birlikte — çifte oturtmaların çoğu buradan çıkar."
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Yazılım masaları çevirmez. Çevirmeyi yavaşlatan tahminleri ortadan kaldırır. Salonunuzda 12 masa varsa ve tek kişi rahatça yönetiyorsa, bir pano gerçekten yeter; argüman 20 masa civarında, birden çok garsonla veya rezervasyonla walk-in karışınca güçlenir."
+    },
+    {
+      "type": "h2",
+      "text": "Peşine düşmemeniz gereken devir"
+    },
+    {
+      "type": "p",
+      "text": "Akşamda tek servis satan tadım menülü bir restoran masalarını kötü yönetmiyor — o servis ürünün kendisi. İnsanların iki birayla üç saat oturduğu bir mahalle barı tabaktan başka bir şeyi paraya çeviriyor. İkisinde de devir hızını zorlarsanız elinizdeki işi bozarsınız."
+    },
+    {
+      "type": "h2",
+      "text": "Gerçekten yapabileceğiniz iki haftalık bir ölçüm"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Dört masa seçin. Bir hafta boyunca oturma, sipariş, hesap isteme ve toplamanın bitiş saatlerini masanın altına yapıştırdığınız karta yazın.",
+        "Her aralığın ortalamasını alın. Sandığınızın iki katı olan birini bulacaksınız.",
+        "Sonraki hafta tek bir şeyi değiştirin.",
+        "Karşılaştırın. Aralık küçüldüyse ve kimse şikâyet etmediyse değişikliği koruyun.",
+        "Sıradaki en büyük aralığa geçin."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Ölçmeden önce garsonlara zamanın nereye gittiğini sorun. Neredeyse her zaman bilirler ve genelde haklıdırlar — ölçüm çoğunlukla bilinen iki sorundan hangisinin büyük olduğu tartışmasını çözer."
+    },
+    {
+      "type": "cta",
+      "heading": "Tüm salonu tek yerde görün",
+      "text": "Canlı masa durumu, masalara bağlı siparişler ve aynı plandaki rezervasyonlar. 14 gün ücretsiz, kart gerekmez.",
+      "buttonLabel": "Masa yönetimine bakın",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Sık sorulan sorular",
+      "items": [
+        {
+          "q": "İyi bir masa devir hızı nedir?",
+          "a": "Tamamen formata bağlı. Fast casual 3 ve üzeri çalışır, bir bistro serviste 1,5-2, fine dining sıklıkla 1. Kendi geçen ayınızla kıyaslayın, başkasının formatıyla değil."
+        },
+        {
+          "q": "Masa devir hızını nasıl hesaplarım?",
+          "a": "Bir serviste ağırlanan kişi sayısı bölü koltuk sayısı. 40 koltukta 60 kişi 1,5 eder."
+        },
+        {
+          "q": "12 masa için yazılıma ihtiyacım var mı?",
+          "a": "Sırf salon planı için muhtemelen hayır. Birden çok garson, walk-in ve rezervasyon karışımı ya da siparişlerin birden fazla kanaldan gelmesiyle karşılığını vermeye başlar."
+        },
+        {
+          "q": "QR ile sipariş devir hızını gerçekten artırır mı?",
+          "a": "Karar ile sipariş arasındaki beklemeyi kaldırır; bu tipik olarak 8-14 dakikadır ve yoğun saatte en kötüdür. Servis tarzınıza uyup uymadığı ayrı bir soru ve dürüstçe cevaplanmayı hak ediyor."
+        },
+        {
+          "q": "Yarın yapabileceğim en hızlı değişiklik nedir?",
+          "a": "Masa toplamayı o servis için belirli birine verin. Bedava, servis öncesi toplantıda tek cümleye sığar ve genelde masa başına beş dakika kazandırır."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Gestió de taules: rotació més ràpida | IQ Rest",
+    "description": "Com es tradueix la rotació de taules en diners, què fa realment un programari de gestió de taules i quins hàbits de sala afegeixen un servei sense taules noves."
+  },
+  "card": {
+    "title": "Gestió de taules: l'aritmètica d'un servei extra per nit",
+    "excerpt": "Alliberar una taula vint minuts abans val més que la majoria del màrqueting. Així es mesura la rotació, aquí es perden els minuts i aquí ajuda de debò el programari."
+  },
+  "h1": "Gestió de taules al restaurant: com treure un segon servei de la mateixa sala",
+  "intro": "No pots afegir taules a una sala, però pots servir més gent a les que ja tens. La majoria de locals perden rotació en tres punts: l'espera abans de la comanda, l'espera del compte i els deu minuts que la taula està bruta. Cap dels tres necessita equipament nou. Necessita saber on van els minuts.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Comença pel número"
+    },
+    {
+      "type": "p",
+      "text": "La rotació de taules són els comensals servits dividits pels seients disponibles en un servei. Amb 40 seients i 60 comensals un divendres a la nit, la teva rotació és 1,5."
+    },
+    {
+      "type": "p",
+      "text": "Per què importa: amb una despesa mitjana de 28 €, passar el divendres d'1,5 a 1,8 són 12 comensals més, és a dir 336 €. Fes-ho divendres i dissabte i són uns 2.900 € al mes — de la mateixa sala, la mateixa carta i el mateix equip."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Rotació",
+        "Comensals amb 40 seients",
+        "Ingressos a 28 €"
+      ],
+      "rows": [
+        [
+          "1,2",
+          "48",
+          "1.344 €"
+        ],
+        [
+          "1,5",
+          "60",
+          "1.680 €"
+        ],
+        [
+          "1,8",
+          "72",
+          "2.016 €"
+        ],
+        [
+          "2,0",
+          "80",
+          "2.240 €"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "On van realment els minuts"
+    },
+    {
+      "type": "p",
+      "text": "Cronometra unes quantes taules de principi a fi i la distribució és sorprenentment semblant d'un local a l'altre:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Fase",
+        "Habitualment",
+        "Millor realista"
+      ],
+      "rows": [
+        [
+          "Asseguts → comanda presa",
+          "8-14 min",
+          "2-4 min"
+        ],
+        [
+          "Comanda → menjar",
+          "12-25 min",
+          "Depèn de la cuina"
+        ],
+        [
+          "Àpat",
+          "35-55 min",
+          "No hi toquis"
+        ],
+        [
+          "Han acabat → demanen el compte",
+          "5-12 min",
+          "1-2 min"
+        ],
+        [
+          "Demanen el compte → paguen",
+          "6-15 min",
+          "1-3 min"
+        ],
+        [
+          "Pagat → taula parada",
+          "5-15 min",
+          "3 min"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Dues columnes compten. El temps de l'àpat no és teu per comprimir-lo: estrènyer-lo és el camí més ràpid cap a una mala ressenya. Les dues esperes que l'envolten són temps mort pur i juntes solen sumar de 20 a 30 minuts per taula. Aquí tens el servei extra, a la vista."
+    },
+    {
+      "type": "h2",
+      "text": "Les quatre solucions, per rendiment"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Deixa que els clients demanin quan estiguin llestos.** Esperar un cambrer lliure és el coll d'ampolla més gran i és pitjor justament quan estàs ple. La [comanda des de la taula](route:/order-taking) l'elimina del tot allà on l'estil hi encaixa.",
+        "**Deixa que paguin quan estiguin llestos.** El ball del compte costa de 10 a 25 minuts. Pagar a taula el redueix a un aproximadament.",
+        "**Desparra més ràpid.** Una taula bruta no es ven. Assigna el desparament explícitament en comptes d'esperar que passi; cinc minuts guanyats per taula són un servei sencer al llarg d'una nit.",
+        "**Deixa d'asseure dues taules al mateix cambrer alhora.** Dues taules assegudes alhora esperen totes dues. Separa l'assignació cinc minuts i les dues seran ateses més de pressa."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Què fa un programari de gestió de taules"
+    },
+    {
+      "type": "p",
+      "text": "La versió útil és un plànol de sala en viu: quines taules estan lliures, ocupades, han demanat, esperen el compte o s'estan desparant — visible per a tothom alhora en comptes d'estar al cap de qui és a la porta."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Estat d'un cop d'ull**, perquè un cambrer que passa sàpiga que la taula 12 espera des de les 20.40.",
+        "**Suggeriments d'assignació** — un grup de quatre sense reserva va a la taula que s'alliberarà primer, no a la primera que algú recordi.",
+        "**Taula lligada a la comanda**, perquè el compte, la comanda per QR i la comanda de cuina coincideixin en qui seu on.",
+        "**Historial**, perquè vegis que el teu segon servei de dissabte va sistemàticament 25 minuts tard i en puguis corregir la causa.",
+        "**Reserves al mateix plànol** que els clients sense reserva — d'aquí surten la majoria de dobles assignacions."
+      ]
+    },
+    {
+      "type": "note",
+      "text": "El programari no fa rotar taules. Elimina les endevinalles que fan la rotació lenta. Si la teva sala té 12 taules i una persona ho porta bé, una pissarra ja n'hi ha prou; l'argument es reforça cap a les 20 taules, amb diversos cambrers o quan barreges reserves i gent sense reserva."
+    },
+    {
+      "type": "h2",
+      "text": "Rotació que no has de perseguir"
+    },
+    {
+      "type": "p",
+      "text": "Un restaurant amb menú degustació que ven un servei per nit no gestiona malament les taules: aquell servei és el producte. Un bar de barri on la gent seu tres hores amb dues cerveses monetitza una altra cosa que el plat. Força la rotació en qualsevol dels dos i trencaràs el negoci que tens."
+    },
+    {
+      "type": "h2",
+      "text": "Un mesurament de dues setmanes que sí que faràs"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Tria quatre taules. Durant una setmana anota l'hora d'asseure, de la comanda, de demanar el compte i de final del desparament en una fitxa enganxada sota la taula.",
+        "Fes la mitjana de cada interval. En trobaràs un que és el doble del que et pensaves.",
+        "Canvia una sola cosa, per a la setmana següent.",
+        "Compara. Queda't el canvi si l'interval s'ha reduït i ningú s'ha queixat.",
+        "Passa al següent interval més gran."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Pregunta als cambrers on va el temps abans de mesurar. Gairebé sempre ho saben i solen tenir raó — el mesurament sobretot resol la discussió sobre quin dels dos problemes coneguts és més gros."
+    },
+    {
+      "type": "cta",
+      "heading": "Veu tota la sala en un sol lloc",
+      "text": "Estat de taules en viu, comandes lligades a taules i reserves al mateix plànol. 14 dies gratis, sense targeta.",
+      "buttonLabel": "Veure la gestió de taules",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Preguntes freqüents",
+      "items": [
+        {
+          "q": "Què és una bona rotació de taules?",
+          "a": "Depèn completament del format. El fast casual va a 3 o més, un bistrot 1,5-2 per servei, l'alta cuina sovint 1. Compara't amb el teu mes anterior, no amb el format d'un altre."
+        },
+        {
+          "q": "Com calculo la rotació de taules?",
+          "a": "Comensals servits en un servei dividits pel nombre de seients. 60 comensals amb 40 seients són 1,5."
+        },
+        {
+          "q": "Necessito programari per a 12 taules?",
+          "a": "Només pel plànol de sala, probablement no. Comença a compensar amb diversos cambrers, barrejant clients sense reserva i reserves, o quan les comandes arriben de més d'un canal."
+        },
+        {
+          "q": "La comanda per QR accelera de debò la rotació?",
+          "a": "Elimina l'espera entre decidir i demanar, típicament de 8 a 14 minuts, i és pitjor en hora punta. Si encaixa amb el teu estil de servei és una altra pregunta i mereix una resposta honesta."
+        },
+        {
+          "q": "Quin és el canvi més ràpid que puc fer demà?",
+          "a": "Assigna el desparament de taules a una persona concreta per a aquell servei. No costa res, cap en una frase a la reunió prèvia al servei i sol recuperar cinc minuts per taula."
+        }
+      ]
+    }
+  ]
+}

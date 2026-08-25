@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Pöytien hallinta: kierrätä pöydät nopeammin | IQ Rest",
+    "description": "Miten pöytien kiertonopeus muuttuu rahaksi, mitä pöytienhallintaohjelmisto oikeasti tekee ja mitkä salin tavat tuovat yhden lisäkattauksen ilman uusia pöytiä."
+  },
+  "card": {
+    "title": "Pöytien hallinta: yhden lisäkattauksen laskuoppi",
+    "excerpt": "Pöydän vapauttaminen kaksikymmentä minuuttia aiemmin on arvokkaampaa kuin useimmat markkinointitoimet. Näin mittaat kiertonopeuden, näin löydät kadonneet minuutit ja tässä ohjelmisto oikeasti auttaa."
+  },
+  "h1": "Ravintolan pöytien hallinta: toinen kattaus samasta salista",
+  "intro": "Saliin ei voi lisätä pöytiä, mutta niissä voi palvella enemmän ihmisiä. Useimmat paikat menettävät kiertonopeutensa kolmessa kohdassa: odotus ennen tilausta, odotus laskusta ja ne kymmenen minuuttia, jotka pöytä seisoo likaisena. Mihinkään näistä ei tarvita uusia laitteita. Tarvitaan tieto siitä, minne minuutit menevät.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Aloita luvusta"
+    },
+    {
+      "type": "p",
+      "text": "Pöytien kiertonopeus on palveltujen kattausten määrä jaettuna vuoron käytettävissä olevilla paikoilla. Jos sinulla on 40 paikkaa ja palvelet perjantai-iltana 60 kattausta, kiertonopeutesi on 1,5."
+    },
+    {
+      "type": "p",
+      "text": "Miksi tämä merkitsee: 28 euron keskiostoksella perjantain nousu 1,5:stä 1,8:aan tarkoittaa 12 kattausta lisää eli 336 €. Tee se perjantaina ja lauantaina, ja se on noin 2 900 € kuussa – samasta salista, samalla listalla ja samalla henkilökunnalla."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Kiertonopeus",
+        "Kattauksia 40 paikalla",
+        "Tuotto 28 eurolla"
+      ],
+      "rows": [
+        [
+          "1,2",
+          "48",
+          "1 344 €"
+        ],
+        [
+          "1,5",
+          "60",
+          "1 680 €"
+        ],
+        [
+          "1,8",
+          "72",
+          "2 016 €"
+        ],
+        [
+          "2,0",
+          "80",
+          "2 240 €"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Minne minuutit oikeasti menevät"
+    },
+    {
+      "type": "p",
+      "text": "Ota aikaa muutamasta pöydästä alusta loppuun, ja jakauma on hämmästyttävän samanlainen paikasta toiseen:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Vaihe",
+        "Tyypillisesti",
+        "Realistinen paras"
+      ],
+      "rows": [
+        [
+          "Istuutuminen → tilaus otettu",
+          "8–14 min",
+          "2–4 min"
+        ],
+        [
+          "Tilaus → ruoka",
+          "12–25 min",
+          "Riippuu keittiöstä"
+        ],
+        [
+          "Syöminen",
+          "35–55 min",
+          "Jätä rauhaan"
+        ],
+        [
+          "Valmis → laskua pyydetty",
+          "5–12 min",
+          "1–2 min"
+        ],
+        [
+          "Laskua pyydetty → maksettu",
+          "6–15 min",
+          "1–3 min"
+        ],
+        [
+          "Maksettu → pöytä katettu uudelleen",
+          "5–15 min",
+          "3 min"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Kaksi saraketta merkitsee. Syömisaika ei ole sinun tiivistettäväksesi: sen puristaminen on suora tie huonoon arvosteluun. Sen ympärillä olevat kaksi odotusta ovat puhdasta kuollutta aikaa, ja yhdessä ne ovat rutiininomaisesti 20–30 minuuttia pöytää kohti. Siinä on lisäkattauksesi, aivan näkyvillä."
+    },
+    {
+      "type": "h2",
+      "text": "Neljä korjausta tuoton mukaan"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Anna asiakkaiden tilata, kun he ovat valmiita.** Odotus siitä, että tarjoilija vapautuu, on suurin tulppa, ja se on pahin juuri silloin kun on täyttä. [Pöydästä tilaaminen](route:/order-taking) poistaa sen kokonaan niissä paikoissa, joihin tyyli sopii.",
+        "**Anna heidän maksaa, kun he ovat valmiita.** Laskutanssi maksaa 10–25 minuuttia. Pöytämaksu kutistaa sen noin yhteen.",
+        "**Kata nopeammin.** Likaista pöytää ei voi myydä. Määrää korjaaminen nimenomaisesti sen sijaan että toivot; viisi säästettyä minuuttia pöytää kohti on illan mittaan kokonainen kattaus.",
+        "**Lopeta kahden pöydän istuttaminen samalle tarjoilijalle yhtä aikaa.** Kaksi yhtä aikaa istuutuvaa pöytää odottavat molemmat. Porrasta istutus viidellä minuutilla, niin molemmat palvellaan nopeammin."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Mitä pöytienhallintaohjelmisto tekee"
+    },
+    {
+      "type": "p",
+      "text": "Hyödyllinen versio on elävä salikartta: mitkä pöydät ovat vapaita, varattuja, tilanneita, laskua odottavia tai korjattavana – näkyvissä kaikille yhtä aikaa sen sijaan että tieto on ovella seisovan päässä."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Tila yhdellä silmäyksellä**, jotta ohi kävelevä tarjoilija tietää, että pöytä 12 on odottanut klo 20.40 asti.",
+        "**Istutusehdotukset** – neljän hengen kävelijäseurue saa pöydän, joka vapautuu ensimmäisenä, ei ensimmäistä jonka joku sattuu muistamaan.",
+        "**Pöytä kytketty tilaukseen**, jolloin lasku, QR-tilaus ja keittiön lappu ovat yhtä mieltä siitä, kuka istuu missä.",
+        "**Historia**, jotta näet että lauantain toinen kattaus on johdonmukaisesti 25 minuuttia myöhässä, ja voit korjata syyn.",
+        "**Varaukset samalla kartalla** kuin kävelijät – sieltä tulee valtaosa päällekkäisvarauksista."
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Ohjelmisto ei kierrätä pöytiä. Se poistaa arvailun, joka tekee kierrättämisestä hidasta. Jos salissasi on 12 pöytää ja yksi ihminen hoitaa sen hyvin, valkotaulu riittää oikeasti; peruste vahvistuu noin 20 pöydässä, useamman tarjoilijan kanssa tai kun varaukset ja kävelijät sekoittuvat."
+    },
+    {
+      "type": "h2",
+      "text": "Kiertonopeus, jota ei kannata jahdata"
+    },
+    {
+      "type": "p",
+      "text": "Maistelumenua tarjoava ravintola, joka myy yhden kattauksen illassa, ei hoida pöytiään huonosti – kattaus on tuote. Kulmabaari, jossa istutaan kolme tuntia kahden oluen ääressä, rahastaa jotain muuta kuin lautasta. Purista kiertonopeutta kummassa tahansa, ja rikot sen liiketoiminnan joka sinulla on."
+    },
+    {
+      "type": "h2",
+      "text": "Kahden viikon mittaus, jonka oikeasti jaksat tehdä"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Valitse neljä pöytää. Kirjaa viikon ajan istutusaika, tilausaika, laskun pyyntö ja korjauksen valmistuminen pöydän alle teipattuun korttiin.",
+        "Laske jokaisen välin keskiarvo. Löydät yhden, joka on kaksi kertaa niin suuri kuin oletit.",
+        "Muuta yhtä ainoaa asiaa seuraavan viikon ajaksi.",
+        "Vertaa. Pidä muutos, jos väli kutistui eikä kukaan valittanut.",
+        "Siirry seuraavaksi suurimpaan väliin."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Kysy tarjoilijoilta ennen mittaamista, minne aika menee. He tietävät sen melkein aina ja ovat yleensä oikeassa – mittaus lähinnä ratkaisee kiistan siitä, kumpi kahdesta tunnetusta ongelmasta on suurempi."
+    },
+    {
+      "type": "cta",
+      "heading": "Näe koko salisi yhdessä paikassa",
+      "text": "Pöytien tila reaaliajassa, tilaukset kytkettynä pöytiin ja varaukset samalla kartalla. 14 päivää ilmaiseksi, ilman korttia.",
+      "buttonLabel": "Katso pöytien hallinta",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Usein kysytyt kysymykset",
+      "items": [
+        {
+          "q": "Mikä on hyvä pöytien kiertonopeus?",
+          "a": "Se riippuu täysin formaatista. Fast casual pyörii 3:ssa tai yli, bistro 1,5–2:ssa vuoroa kohti, fine dining usein 1:ssä. Vertaa itseäsi omaan viime kuukauteesi, älä jonkun toisen formaattiin."
+        },
+        {
+          "q": "Miten lasken pöytien kiertonopeuden?",
+          "a": "Vuorossa palvellut kattaukset jaettuna paikkojen määrällä. 60 kattausta 40 paikalla on 1,5."
+        },
+        {
+          "q": "Tarvitsenko ohjelmiston 12 pöydälle?",
+          "a": "Pelkän salikartan takia luultavasti en. Se alkaa maksaa itsensä takaisin useamman tarjoilijan kanssa, kun kävelijät ja varaukset sekoittuvat tai kun tilauksia tulee useammasta kuin yhdestä kanavasta."
+        },
+        {
+          "q": "Nopeuttaako QR-tilaus todella kiertonopeutta?",
+          "a": "Se poistaa odotuksen päätöksen ja tilauksen väliltä, tyypillisesti 8–14 minuuttia ja pahimmillaan ruuhkassa. Sopiiko se palvelutyyliisi on erillinen kysymys, johon kannattaa vastata rehellisesti."
+        },
+        {
+          "q": "Mikä on nopein muutos, jonka voin tehdä huomenna?",
+          "a": "Anna pöytien korjaaminen nimetylle henkilölle koko vuoron ajaksi. Se on ilmaista, mahtuu yhteen lauseeseen vuoron alkupalaverissa ja tuo yleensä takaisin viisi minuuttia pöytää kohti."
+        }
+      ]
+    }
+  ]
+}

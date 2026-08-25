@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Upravljanje stolovima: brži obrtaj | IQ Rest",
+    "description": "Kako se obrtaj stolova pretvara u novac, što softver za upravljanje stolovima zapravo radi i koje navike u sali donose jednu smjenu bez novih stolova."
+  },
+  "card": {
+    "title": "Upravljanje stolovima: aritmetika jedne dodatne smjene po večeri",
+    "excerpt": "Osloboditi stol dvadeset minuta ranije vrijedi više od većine marketinga. Evo kako se mjeri obrtaj, gdje se gube minute i gdje softver stvarno pomaže."
+  },
+  "h1": "Upravljanje stolovima u restoranu: kako izvući drugu smjenu iz iste sale",
+  "intro": "U salu ne možete dodati stolove, ali na postojećima možete uslužiti više ljudi. Većina lokala gubi obrtaj na tri mjesta: čekanje prije narudžbe, čekanje računa i deset minuta dok stol stoji prljav. Ništa od toga ne traži novu opremu. Traži da znate kamo odlaze minute.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Počnite od broja"
+    },
+    {
+      "type": "p",
+      "text": "Obrtaj stolova je broj gostiju usluženih po smjeni podijeljen s dostupnim mjestima. Uz 40 mjesta i 60 gostiju u petak navečer, vaš obrtaj je 1,5."
+    },
+    {
+      "type": "p",
+      "text": "Zašto je važno: uz prosječnu potrošnju od 28 €, pomak petka s 1,5 na 1,8 znači 12 gostiju više, dakle 336 €. Napravite to u petak i subotu i to je oko 2.900 € mjesečno — iz iste sale, istog jelovnika i iste ekipe."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Obrtaj",
+        "Gosti na 40 mjesta",
+        "Prihod pri 28 €"
+      ],
+      "rows": [
+        [
+          "1,2",
+          "48",
+          "1.344 €"
+        ],
+        [
+          "1,5",
+          "60",
+          "1.680 €"
+        ],
+        [
+          "1,8",
+          "72",
+          "2.016 €"
+        ],
+        [
+          "2,0",
+          "80",
+          "2.240 €"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kamo minute zapravo odlaze"
+    },
+    {
+      "type": "p",
+      "text": "Izmjerite nekoliko stolova od početka do kraja i raspodjela je zapanjujuće slična od lokala do lokala:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Faza",
+        "Obično",
+        "Realno najbolje"
+      ],
+      "rows": [
+        [
+          "Sjeli → narudžba primljena",
+          "8-14 min",
+          "2-4 min"
+        ],
+        [
+          "Narudžba → hrana",
+          "12-25 min",
+          "Ovisi o kuhinji"
+        ],
+        [
+          "Objed",
+          "35-55 min",
+          "Ne dirajte"
+        ],
+        [
+          "Završili → tražili račun",
+          "5-12 min",
+          "1-2 min"
+        ],
+        [
+          "Tražili račun → platili",
+          "6-15 min",
+          "1-3 min"
+        ],
+        [
+          "Plaćeno → stol pospremljen",
+          "5-15 min",
+          "3 min"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Bitna su dva stupca. Vrijeme objeda nije vaše da ga stišćete — stiskanje je najbrži put do loše recenzije. Dva čekanja oko njega su čisto mrtvo vrijeme i zajedno obično čine 20 do 30 minuta po stolu. Tu je vaša dodatna smjena, na očigled."
+    },
+    {
+      "type": "h2",
+      "text": "Četiri popravka, po povratu"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Neka gosti naruče kad su spremni.** Čekanje slobodnog konobara najveće je usko grlo i najgore je baš kad je puno. [Narudžba sa stola](route:/order-taking) ga potpuno uklanja ondje gdje stil odgovara.",
+        "**Neka plate kad su spremni.** Ples s računom košta 10 do 25 minuta. Plaćanje za stolom svede ga na otprilike jednu.",
+        "**Pospremajte brže.** Prljav stol se ne prodaje. Dodijelite raspremanje izričito umjesto da se nadate; pet minuta dobiveno po stolu je cijela smjena kroz večer.",
+        "**Prestanite posjedati dva stola istom konobaru odjednom.** Dva stola posjednuta istovremeno oba čekaju. Razmaknite posjedanje za pet minuta i oba će biti brže uslužena."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Što radi softver za upravljanje stolovima"
+    },
+    {
+      "type": "p",
+      "text": "Korisna verzija je živa karta sale: koji su stolovi slobodni, zauzeti, naručili, čekaju račun ili se raspremaju — vidljivo svima odjednom umjesto u glavi onoga tko stoji na vratima."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Status na prvi pogled**, da konobar u prolazu zna da stol 12 čeka od 20:40.",
+        "**Prijedlozi posjedanja** — četvorka bez rezervacije ide na stol koji se prvi oslobađa, ne na prvi kojeg se netko sjeti.",
+        "**Stol povezan s narudžbom**, da se račun, QR narudžba i kuhinjski nalog slažu tko gdje sjedi.",
+        "**Povijest**, da vidite kako vaša druga subotnja smjena stalno kasni 25 minuta i uklonite uzrok.",
+        "**Rezervacije na istoj karti** s gostima bez rezervacije — odatle dolazi većina dvostrukih posjedanja."
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Softver ne okreće stolove. Uklanja nagađanje koje usporava okretanje. Ako vam sala ima 12 stolova i jedan čovjek to dobro drži, ploča je stvarno dovoljna; argument jača oko 20 stolova, uz više konobara ili kad miješate rezervacije i goste s ulice."
+    },
+    {
+      "type": "h2",
+      "text": "Obrtaj koji ne treba juriti"
+    },
+    {
+      "type": "p",
+      "text": "Restoran s degustacijskim menijem koji prodaje jednu smjenu po večeri ne upravlja loše stolovima — ta je smjena proizvod. Kvartovski bar u kojem ljudi sjede tri sata uz dva piva zarađuje na nečem drugom, ne na tanjuru. Pritisnite obrtaj u bilo kojem od njih i razbit ćete posao koji imate."
+    },
+    {
+      "type": "h2",
+      "text": "Dvotjedno mjerenje koje stvarno možete provesti"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Odaberite četiri stola. Tjedan dana bilježite vrijeme posjedanja, narudžbe, traženja računa i kraja raspremanja na kartici zalijepljenoj ispod stola.",
+        "Izračunajte prosjek svakog razmaka. Naći ćete jedan koji je dvostruko veći nego što ste mislili.",
+        "Promijenite jednu jedinu stvar za sljedeći tjedan.",
+        "Usporedite. Zadržite promjenu ako se razmak smanjio i nitko se nije žalio.",
+        "Prijeđite na sljedeći najveći razmak."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Pitajte konobare kamo odlazi vrijeme prije nego što mjerite. Gotovo uvijek znaju i obično su u pravu — mjerenje uglavnom rješava spor koji je od dva poznata problema veći."
+    },
+    {
+      "type": "cta",
+      "heading": "Vidite cijelu salu na jednom mjestu",
+      "text": "Živi status stolova, narudžbe vezane uz stolove i rezervacije na istoj karti. 14 dana besplatno, bez kartice.",
+      "buttonLabel": "Pogledajte upravljanje stolovima",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Česta pitanja",
+      "items": [
+        {
+          "q": "Koji je dobar obrtaj stolova?",
+          "a": "Ovisi isključivo o formatu. Fast casual ide na 3 i više, bistro 1,5-2 po smjeni, fine dining često 1. Uspoređujte se s vlastitim prošlim mjesecom, ne s tuđim formatom."
+        },
+        {
+          "q": "Kako izračunati obrtaj stolova?",
+          "a": "Gosti usluženi u smjeni podijeljeni s brojem mjesta. 60 gostiju na 40 mjesta je 1,5."
+        },
+        {
+          "q": "Trebam li softver za 12 stolova?",
+          "a": "Samo zbog karte sale vjerojatno ne. Počinje se isplaćivati uz više konobara, uz mješavinu gostiju s ulice i rezervacija ili kad narudžbe stižu s više od jednog kanala."
+        },
+        {
+          "q": "Ubrzava li QR narudžba stvarno obrtaj?",
+          "a": "Uklanja čekanje između odluke i narudžbe, obično 8-14 minuta, a najgore je u špici. Odgovara li vašem stilu usluge zasebno je pitanje koje zaslužuje pošten odgovor."
+        },
+        {
+          "q": "Koja je najbrža promjena koju mogu napraviti sutra?",
+          "a": "Dodijelite raspremanje stolova konkretnoj osobi za tu smjenu. Ne košta ništa, stane u jednu rečenicu na briefingu prije smjene i obično vrati pet minuta po stolu."
+        }
+      ]
+    }
+  ]
+}

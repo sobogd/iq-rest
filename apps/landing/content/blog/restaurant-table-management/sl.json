@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Upravljanje miz: hitrejši obrat | IQ Rest",
+    "description": "Kako se obrat miz prevede v denar, kaj programska oprema za upravljanje miz res počne in katere navade v sali prinesejo eno izmeno brez novih miz."
+  },
+  "card": {
+    "title": "Upravljanje miz: aritmetika ene dodatne izmene na večer",
+    "excerpt": "Sprostiti mizo dvajset minut prej je vredno več kot večina marketinga. Takole merite obrat, tu se izgubljajo minute in tu programska oprema res pomaga."
+  },
+  "h1": "Upravljanje miz v restavraciji: kako iz iste sale iztisniti drugo izmeno",
+  "intro": "Miz v salo ne morete dodati, lahko pa na obstoječih postrežete več ljudi. Večina lokalov izgublja obrat na treh mestih: čakanje pred naročilom, čakanje na račun in deset minut, ko miza stoji umazana. Nič od tega ne zahteva nove opreme. Zahteva, da veste, kam gredo minute.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Začnite s številko"
+    },
+    {
+      "type": "p",
+      "text": "Obrat mize je število postreženih gostov, deljeno z razpoložljivimi sedeži v izmeni. Pri 40 sedežih in 60 gostih v petek zvečer je vaš obrat 1,5."
+    },
+    {
+      "type": "p",
+      "text": "Zakaj je pomembno: pri povprečni porabi 28 € premik petka z 1,5 na 1,8 pomeni 12 gostov več, torej 336 €. Naredite to v petek in soboto in to je okoli 2.900 € na mesec — iz iste sale, istega jedilnika in iste ekipe."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Obrat",
+        "Gostje pri 40 sedežih",
+        "Prihodek pri 28 €"
+      ],
+      "rows": [
+        [
+          "1,2",
+          "48",
+          "1.344 €"
+        ],
+        [
+          "1,5",
+          "60",
+          "1.680 €"
+        ],
+        [
+          "1,8",
+          "72",
+          "2.016 €"
+        ],
+        [
+          "2,0",
+          "80",
+          "2.240 €"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kam minute v resnici gredo"
+    },
+    {
+      "type": "p",
+      "text": "Izmerite nekaj miz od začetka do konca in porazdelitev je presenetljivo podobna med lokali:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Faza",
+        "Običajno",
+        "Realno najboljše"
+      ],
+      "rows": [
+        [
+          "Sedli → naročilo sprejeto",
+          "8-14 min",
+          "2-4 min"
+        ],
+        [
+          "Naročilo → hrana",
+          "12-25 min",
+          "Odvisno od kuhinje"
+        ],
+        [
+          "Obed",
+          "35-55 min",
+          "Ne dotikajte se"
+        ],
+        [
+          "Končali → zaprosili za račun",
+          "5-12 min",
+          "1-2 min"
+        ],
+        [
+          "Zaprosili za račun → plačano",
+          "6-15 min",
+          "1-3 min"
+        ],
+        [
+          "Plačano → miza pripravljena",
+          "5-15 min",
+          "3 min"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Pomembna sta dva stolpca. Časa obeda ni na vas, da ga stiskate — stiskanje je najhitrejša pot do slabe ocene. Dve čakanji okoli njega sta čist mrtev čas in skupaj običajno naneseta 20 do 30 minut na mizo. Tam je vaša dodatna izmena, na očeh."
+    },
+    {
+      "type": "h2",
+      "text": "Štirje popravki po donosu"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Naj gostje naročijo, ko so pripravljeni.** Čakanje na prostega natakarja je največje ozko grlo in je najhujše ravno takrat, ko je polno. [Naročanje z mize](route:/order-taking) ga povsem odpravi tam, kjer slog ustreza.",
+        "**Naj plačajo, ko so pripravljeni.** Ples z računom stane 10 do 25 minut. Plačilo za mizo ga stisne na približno eno.",
+        "**Pospravljajte hitreje.** Umazane mize ni mogoče prodati. Pospravljanje izrecno dodelite, namesto da upate; pet pridobljenih minut na mizo je čez večer cela izmena.",
+        "**Nehajte hkrati posedati dve mizi k istemu natakarju.** Dve hkrati posedeni mizi obe čakata. Zamaknite posedanje za pet minut in obe bosta postreženi hitreje."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kaj počne programska oprema za upravljanje miz"
+    },
+    {
+      "type": "p",
+      "text": "Uporabna različica je živ tloris sale: katere mize so proste, zasedene, so naročile, čakajo na račun ali se pospravljajo — vidno vsem hkrati namesto v glavi tistega, ki stoji pri vratih."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Status na prvi pogled**, da mimoidoči natakar ve, da miza 12 čaka od 20.40.",
+        "**Predlogi posedanja** — četverica brez rezervacije gre k mizi, ki se sprosti prva, ne k prvi, ki se je nekdo spomni.",
+        "**Miza, povezana z naročilom**, da se račun, QR naročilo in kuhinjski listek strinjajo, kdo kje sedi.",
+        "**Zgodovina**, da vidite, kako vaša druga sobotna izmena redno zamuja 25 minut, in odpravite vzrok.",
+        "**Rezervacije na istem tlorisu** kot gostje brez rezervacije — od tod pride večina dvojnih zasedb."
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Programska oprema miz ne obrača. Odpravi ugibanje, ki obračanje upočasnjuje. Če ima vaša sala 12 miz in en človek to dobro obvlada, tabla res zadošča; argument se okrepi pri okoli 20 mizah, pri več natakarjih ali ko mešate rezervacije in goste z ulice."
+    },
+    {
+      "type": "h2",
+      "text": "Obrat, ki ga ne kaže loviti"
+    },
+    {
+      "type": "p",
+      "text": "Restavracija z degustacijskim menijem, ki proda eno izmeno na večer, miz ne upravlja slabo — ta izmena je izdelek. Soseski bar, kjer ljudje sedijo tri ure ob dveh pivih, služi z nečim drugim kot s krožnikom. Pritisnite na obrat pri enem ali drugem in razbili boste posel, ki ga imate."
+    },
+    {
+      "type": "h2",
+      "text": "Dvotedensko merjenje, ki ga res zmorete"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Izberite štiri mize. Teden dni zapisujte čas posedanja, naročila, prošnje za račun in konca pospravljanja na kartico, prilepljeno pod mizo.",
+        "Povprečite vsak razmik. Našli boste enega, ki je dvakrat večji, kot ste pričakovali.",
+        "Za naslednji teden spremenite eno samo stvar.",
+        "Primerjajte. Spremembo obdržite, če se je razmik zmanjšal in se nihče ni pritožil.",
+        "Pojdite na naslednji največji razmik."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Preden merite, vprašajte natakarje, kam gre čas. Skoraj vedno vedo in običajno imajo prav — merjenje predvsem razreši spor, kateri od dveh znanih problemov je večji."
+    },
+    {
+      "type": "cta",
+      "heading": "Vso salo vidite na enem mestu",
+      "text": "Živ status miz, naročila, vezana na mize, in rezervacije na istem tlorisu. 14 dni brezplačno, brez kartice.",
+      "buttonLabel": "Poglejte upravljanje miz",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Pogosta vprašanja",
+      "items": [
+        {
+          "q": "Kakšen obrat miz je dober?",
+          "a": "Popolnoma je odvisen od formata. Fast casual teče pri 3 in več, bistro 1,5-2 na izmeno, vrhunska restavracija pogosto 1. Primerjajte se s svojim prejšnjim mesecem, ne s tujim formatom."
+        },
+        {
+          "q": "Kako izračunam obrat miz?",
+          "a": "Gostje, postreženi v izmeni, deljeno s številom sedežev. 60 gostov pri 40 sedežih je 1,5."
+        },
+        {
+          "q": "Ali potrebujem programsko opremo za 12 miz?",
+          "a": "Zgolj zaradi tlorisa verjetno ne. Začne se splačati pri več natakarjih, pri mešanici gostov z ulice in rezervacij ali ko naročila prihajajo z več kot enega kanala."
+        },
+        {
+          "q": "Ali naročanje prek QR res pospeši obrat?",
+          "a": "Odpravi čakanje med odločitvijo in naročilom, običajno 8-14 minut, najhujše v konici. Ali ustreza vašemu slogu strežbe, je ločeno vprašanje, ki si zasluži pošten odgovor."
+        },
+        {
+          "q": "Katera je najhitrejša sprememba, ki jo lahko naredim jutri?",
+          "a": "Pospravljanje miz za to izmeno dodelite konkretni osebi. Nič ne stane, gre v en stavek na sestanku pred izmeno in običajno vrne pet minut na mizo."
+        }
+      ]
+    }
+  ]
+}

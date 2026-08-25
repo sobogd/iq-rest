@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Bordstyring: snu bordene raskere | IQ Rest",
+    "description": "Hvordan bordomsetning blir til penger, hva et bordstyringssystem faktisk gjør, og hvilke salsvaner som gir en ekstra setting uten nye bord."
+  },
+  "card": {
+    "title": "Bordstyring: regnestykket bak én ekstra setting per kveld",
+    "excerpt": "Å snu et bord tjue minutter raskere er verdt mer enn det meste av markedsføring. Slik måler du omsetningen, slik finner du de tapte minuttene, og slik hjelper programvare faktisk."
+  },
+  "h1": "Bordstyring på restaurant: å få en andre setting ut av samme sal",
+  "intro": "Du kan ikke legge til bord i en spisesal, men du kan servere flere gjester ved dem du har. De fleste steder taper omsetningen tre steder: ventetiden før bestillingen, ventetiden på regningen, og de ti minuttene bordet står skittent. Ingenting av dette krever nytt utstyr. Det krever å vite hvor minuttene blir av.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Start med tallet"
+    },
+    {
+      "type": "p",
+      "text": "Bordomsetning er antall serverte gjester delt på antall plasser i en vakt. Har du 40 plasser og serverer 60 gjester en fredag kveld, er omsetningen din 1,5."
+    },
+    {
+      "type": "p",
+      "text": "Derfor betyr det noe: med et snittkjøp på 28 € gir et hopp fra 1,5 til 1,8 på fredag 12 ekstra gjester, altså 336 €. Gjør det fredag og lørdag, og det blir rundt 2 900 € i måneden – fra samme sal, samme meny og samme stab."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Omsetning",
+        "Gjester på 40 plasser",
+        "Inntekt ved 28 €"
+      ],
+      "rows": [
+        [
+          "1,2",
+          "48",
+          "1 344 €"
+        ],
+        [
+          "1,5",
+          "60",
+          "1 680 €"
+        ],
+        [
+          "1,8",
+          "72",
+          "2 016 €"
+        ],
+        [
+          "2,0",
+          "80",
+          "2 240 €"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Hvor minuttene faktisk blir av"
+    },
+    {
+      "type": "p",
+      "text": "Ta tiden på noen bord fra start til slutt, og fordelingen er slående lik fra sted til sted:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Trinn",
+        "Typisk",
+        "Realistisk best"
+      ],
+      "rows": [
+        [
+          "Satt → bestilling tatt",
+          "8–14 min",
+          "2–4 min"
+        ],
+        [
+          "Bestilling → mat",
+          "12–25 min",
+          "Avhenger av kjøkkenet"
+        ],
+        [
+          "Måltidet",
+          "35–55 min",
+          "La det være"
+        ],
+        [
+          "Ferdige → ber om regningen",
+          "5–12 min",
+          "1–2 min"
+        ],
+        [
+          "Ber om regningen → betalt",
+          "6–15 min",
+          "1–3 min"
+        ],
+        [
+          "Betalt → bordet ryddet",
+          "5–15 min",
+          "3 min"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "To kolonner betyr noe. Måltidet er ikke ditt å korte ned – å presse det er nettopp slik man får en dårlig anmeldelse. De to ventetidene rundt er ren dødtid, og til sammen blir de rutinemessig 20 til 30 minutter per bord. Der står den ekstra settingen din, i fullt dagslys."
+    },
+    {
+      "type": "h2",
+      "text": "De fire grepene, sortert etter avkastning"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**La gjestene bestille når de er klare.** Ventingen på at en servitør blir ledig er den største proppen, og den er verst nettopp når det er fullt. [Bestilling ved bordet](route:/order-taking) fjerner den helt der stilen passer.",
+        "**La dem betale når de er klare.** Regningsdansen koster 10 til 25 minutter. Betaling ved bordet kutter den til omtrent ett.",
+        "**Rydd raskere.** Et skittent bord kan ikke selges. Fordel ryddingen uttrykkelig i stedet for å håpe; fem sparte minutter per bord blir en hel setting over en kveld.",
+        "**Slutt å sette to bord samtidig hos samme servitør.** To bord som settes sammen, venter begge. Forskyv settingen fem minutter, så blir begge betjent raskere."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Hva et bordstyringssystem gjør"
+    },
+    {
+      "type": "p",
+      "text": "Den nyttige varianten er en levende salplan: hvilke bord som er ledige, opptatte, har bestilt, venter på regningen eller er under rydding – synlig for alle samtidig i stedet for i hodet på den som står i døren."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Status på ett blikk**, så en servitør som går forbi ser at bord 12 har ventet siden 20.40.",
+        "**Plasseringsforslag** – fire drop-in-gjester får bordet som blir ledig først, ikke det første noen tilfeldigvis husker.",
+        "**Bordet knyttet til bestillingen**, slik at regningen, QR-bestillingen og kjøkkenbongen er enige om hvem som sitter hvor.",
+        "**Historikk**, så du ser at den andre settingen på lørdager konsekvent ligger 25 minutter etter, og kan rette årsaken.",
+        "**Reservasjoner på samme kart** som drop-in – derfra kommer mesteparten av alle dobbeltbookinger."
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Programvare snur ikke bord. Den fjerner gjettingen som gjør dem trege å snu. Er salen din 12 bord og én person holder styr på det, holder en tavle helt fint; argumentet blir sterkt rundt 20 bord, med flere servitører, eller med en blanding av reservasjoner og drop-in."
+    },
+    {
+      "type": "h2",
+      "text": "Omsetning du ikke bør jage"
+    },
+    {
+      "type": "p",
+      "text": "En restaurant med smaksmeny som selger én setting per kveld styrer ikke bordene sine dårlig – settingen er produktet. En nabolagsbar der folk sitter tre timer på to øl, tjener penger på noe annet enn tallerkenen. Press omsetningen i noen av tilfellene, og du ødelegger den forretningen du har."
+    },
+    {
+      "type": "h2",
+      "text": "En to ukers måling du faktisk klarer å gjennomføre"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Velg fire bord. Noter i en uke tidspunktet for setting, bestilling, forespurt regning og ferdig rydding på et kort teipet under bordet.",
+        "Regn ut snittet for hvert gap. Du finner ett som er dobbelt så stort som du trodde.",
+        "Endre én eneste ting, uken etter.",
+        "Sammenlign. Behold endringen hvis gapet krympet og ingen klaget.",
+        "Gå videre til det nest største gapet."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Spør servitørene hvor tiden blir av før du måler. De vet det nesten alltid, og de har som regel rett – målingen avgjør stort sett hvilket av de to kjente problemene som er størst."
+    },
+    {
+      "type": "cta",
+      "heading": "Se hele salen på ett sted",
+      "text": "Bordstatus i sanntid, bestillinger knyttet til bord og reservasjoner på samme kart. 14 dager gratis, uten kort.",
+      "buttonLabel": "Se bordstyringen",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Vanlige spørsmål",
+      "items": [
+        {
+          "q": "Hva er en god bordomsetning?",
+          "a": "Det avhenger helt av formatet. Fast casual ligger på 3 eller høyere, en bistro på 1,5–2 per vakt, finrestauranter ofte på 1. Sammenlign deg med din egen forrige måned, ikke med andres format."
+        },
+        {
+          "q": "Hvordan regner jeg ut bordomsetningen?",
+          "a": "Serverte gjester i en vakt delt på antall plasser. 60 gjester på 40 plasser blir 1,5."
+        },
+        {
+          "q": "Trenger jeg programvare til 12 bord?",
+          "a": "Sannsynligvis ikke for salplanen alene. Det begynner å lønne seg med flere servitører, en blanding av drop-in og reservasjoner, eller når bestillinger kommer via mer enn én kanal."
+        },
+        {
+          "q": "Gjør QR-bestilling virkelig omsetningen raskere?",
+          "a": "Den fjerner ventingen mellom beslutning og bestilling, typisk 8–14 minutter og verst i rushet. Om det passer servicestilen din er et eget spørsmål som fortjener et ærlig svar."
+        },
+        {
+          "q": "Hva er den raskeste endringen jeg kan gjøre i morgen?",
+          "a": "Gi ryddingen til en navngitt person for vakten. Det koster ingenting, får plass i én setning på formøtet og henter som regel inn fem minutter per bord."
+        }
+      ]
+    }
+  ]
+}
