@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "title": "Menüü tõlkimine: mida tõlkida ja mida mitte | IQ Rest",
+    "description": "Miks roanimede masintõlge untsu läheb, millised menüü osad jäävad algkeelde ja kuidas pidada nelja keelt ilma nelja menüüta."
+  },
+  "card": {
+    "title": "Restorani menüü tõlkimine: mida tõlgid ja mida jätad rahule",
+    "excerpt": "„Pulpo a la gallega“ ei ole „Galicia kaheksajalg“. Praktiline juhend menüü tõlkimiseks nii, et road jäävad isuäratavaks ja külalised informeerituks."
+  },
+  "h1": "Restorani menüü tõlkimine: mida tõlgid ja mida jätad rahule",
+  "intro": "Aja menüü läbi üldise tõlkija ja saad laused, mis on tehniliselt õiged ja ärilises mõttes kasutud. Roanimed on pooleldi keel ja pooleldi kaubamärk, ning need osad, mida külaline tõlgituna vajab, ei ole need, millele tõlkija keskendub. Nii saad neli keelt, mis päriselt müüvad.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Reegel: tõlgi selgitus, säilita nimi"
+    },
+    {
+      "type": "p",
+      "text": "Roa nimi on sageli pärisnimi. **Pulpo a la gallega** ei muutu „Galicia kaheksajalaks“, samamoodi nagu **Wiener Schnitzel** ei muutu saksakeelses menüüs „Viini karbonaadiks“. Külaline, kes rooga tunneb, otsib algset nime; see, kes ei tunne, vajab selle alla kirjeldust."
+    },
+    {
+      "type": "p",
+      "text": "Toimiv muster on seega: **nimi algkeeles, kirjeldus külalise keeles.**"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Originaal",
+        "Masina väljund",
+        "See, mis toimib"
+      ],
+      "rows": [
+        [
+          "Pulpo a la gallega",
+          "Galicia kaheksajalg",
+          "Pulpo a la gallega — kaheksajalg paprikapulbri, oliiviõli ja kartuliga"
+        ],
+        [
+          "Tortilla española",
+          "Hispaania omlett",
+          "Tortilla española — paks kartuli- ja sibulaomlett"
+        ],
+        [
+          "Vitello tonnato",
+          "Vasikas tuunikala",
+          "Vitello tonnato — külm vasikaliha tuunikala- ja kapparikastmes"
+        ],
+        [
+          "Pierogi ruskie",
+          "Vene pelmeenid",
+          "Pierogi ruskie — Poola pelmeenid kartuli ja kohupiimaga"
+        ],
+        [
+          "Pa amb tomàquet",
+          "Leib tomatiga",
+          "Pa amb tomàquet — röstitud leib, hõõrutud tomati ja õliga"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "„Vasikas tuunikala“ on tõeline masintõlge vitello tonnatost ja paneb roa kõlama nagu eksitus. „Vene pelmeenid“ on halvem kui vale: roog on poola oma ja nimi viitab Ruteeniale, mitte Venemaale, ning selline asi sünnitab pigem kaebuse kui tellimuse."
+    },
+    {
+      "type": "h2",
+      "text": "Menüü neli osa ja kuidas igaühega toimida"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Osa",
+        "Lähenemine"
+      ],
+      "rows": [
+        [
+          "Roa nimi",
+          "Säilita originaal; mittaladina kirjade puhul transkribeeri"
+        ],
+        [
+          "Kirjeldus",
+          "Tõlgi täielikult — siin toimub müük"
+        ],
+        [
+          "Koostisosad ja allergeenid",
+          "Tõlgi täpselt; täpsus lööb elegantsi"
+        ],
+        [
+          "Kategooriapealkirjad",
+          "Tõlgi (Eelroad, Pearoad, Magustoidud)"
+        ],
+        [
+          "Hinnad ja ühikud",
+          "Ära kunagi puuduta numbrit; kohanda vormingut (1,50 € vs €1.50)"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Vead, mis maksavad sulle tellimusi"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Mõõtsõnade sõnasõnaline tõlkimine.** Hispaania *ración* ei ole „ratsioon“. Kasuta sõna portsjon või selgita suurust.",
+        "**Valmistusviisi kaotamine.** *A la plancha*, *al horno* ja *frito* muutuvad lohaka tõlke käigus kõik „valmistatuks“ ja külaline ei erista roogi enam.",
+        "**Deminutiivid kõlavad lapsikult.** *Bocadillito* on hispaania keeles armas, eesti keeles imelik. Tõlgi tähendus, mitte liide.",
+        "**Allergeeni kaotamine.** Kui kirjelduses on anšoovis ja tõlkes „maitsekas kaste“, oled eemaldanud ohutusteabe.",
+        "**Lihatükkide vale tõlge.** Lihuniku terminid ei kandu riigist riiki üks ühele. *Entrecot*, *solomillo*, *presa* ja *secreto* vajavad lühikest kirjeldust, mitte ühesõnalist vastet.",
+        "**Oma restorani nime tõlkimine.** See on kaubamärk. Jäta see rahule."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Millised keeled on väärt võtmist"
+    },
+    {
+      "type": "p",
+      "text": "Ära arva — vaata, kust su külalised tulevad. Seda ütlevad su broneerimissüsteem, makseterminali kaartide väljastamisriik ja nende telefonikeel, kes su QR-koodi skaneerivad. Enamikus Euroopa turismipiirkondades on aus vastus inglise keel pluss kaks, ja need kaks on tavaliselt saksa, prantsuse või nende keel, kellel on otselend."
+    },
+    {
+      "type": "note",
+      "text": "Halvasti tõlgitud keelel on tõeline hind. Saksa külaline, kes loeb kohmakat saksakeelset menüüd, teeb sellest järelduse köögi kohta. Kui sul pole kellelgi keelt üle vaadata lasta, on inglise keel turvalisem kui halb versioon tema omast."
+    },
+    {
+      "type": "h2",
+      "text": "Miks see paberil on kallis ja digitaalselt mitte"
+    },
+    {
+      "type": "p",
+      "text": "Paberil tähendab neli keelt nelja tiraaži, nelja hoiustatavat komplekti ja neljakordset kordustrükikulu iga hinnamuutuse korral. Praktikas trükivad kohad kaks keelt, lasevad ülejäänutel vananeda ja ulatavad turistidele vabandades ingliskeelse."
+    },
+    {
+      "type": "p",
+      "text": "[Digitaalne menüü](route:/digital-menu) pöörab selle ümber. Külalise telefon teatab oma keele niikuinii, seega avaneb menüü õiges keeles, ilma et keegi valiks. IQ Rest tõlgib menüü automaatselt, ja kuna tõlked on roa küljes, muudab üks hinnamuutus kõik keeled. Viienda keele lisamine ei maksa midagi ega nõua kordustrükki."
+    },
+    {
+      "type": "h2",
+      "text": "Toimiv protsess"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Kirjuta esmalt lähtemenüü korralikult. Ähmane lähtetekst annab ähmased tõlked kõigis keeltes korraga.",
+        "Anna igale roale üherealine kirjeldus, ka algkeeles. Ka kohalikud külalised tahavad seda.",
+        "Lase süsteemil kõik ära tõlkida ja lase siis emakeelekõnelejal lugeda 20 enimmüüdud rida. Kakskümmend rida on kellegi ühe kohvi jagu aega ja püüab kinni peaaegu kõik piinlikud väljundid.",
+        "Lukusta roanimed, et neid järgmise muudatuse ajal uuesti ei tõlgitaks.",
+        "Kontrolli allergeenide sõnastust igas keeles eraldi — see on ainus koht, kus kohmakas lause on ohutus-, mitte stiiliküsimus."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Palu meeskonnaliikmel, kes seda keelt räägib, lugeda menüü valjusti ette. Valjusti lugemine tabab ebaloomulikud sõnastused palju kiiremini kui vaikne lugemine."
+    },
+    {
+      "type": "cta",
+      "heading": "Üks menüü, kõik keeled",
+      "text": "IQ Rest tõlgib su menüü automaatselt ja avab selle külalise keeles. Muudad hinda korra ja kõik keeled uuenevad. 14 päeva tasuta.",
+      "buttonLabel": "Vaata automaatset tõlget",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Korduma kippuvad küsimused",
+      "items": [
+        {
+          "q": "Kas ma peaksin roanimed tõlkima?",
+          "a": "Üldjuhul mitte. Säilita algne nimi ja lisa alla tõlgitud kirjeldus. Külaline, kes rooga otsib, tunneb seda tema päris nime järgi."
+        },
+        {
+          "q": "Kas masintõlge on menüü jaoks piisav?",
+          "a": "Kirjelduste ja kategooriapealkirjade puhul enamasti jah. Roanimed, lihatükid ja allergeenisõnastus lase emakeelekõnelejal üle vaadata — tavalise menüü puhul on see umbes kakskümmend minutit."
+        },
+        {
+          "q": "Mitu keelt peaks menüüs olema?",
+          "a": "Inglise keel pluss need kaks rahvust, keda sa tegelikult kõige rohkem näed. Vaata broneerimisandmeid arvamise asemel; digitaalne menüü ei maksa lisakeele kohta midagi, seega piir on see, mitut sa jõuad üle vaadata."
+        },
+        {
+          "q": "Kuidas külaline saab õige keele?",
+          "a": "Digitaalne menüü loeb telefoni keeleseadet ja avaneb selles, koos valikuga neile, kes soovivad teist. Kellelgi pole vaja ingliskeelset menüüd küsida."
+        },
+        {
+          "q": "Aga mittaladina kirjad, näiteks jaapani või araabia?",
+          "a": "Sama reegel pluss transkriptsioon: säilita algne nimi, transkribeeri see, et külaline saaks selle tellimisel välja öelda, ja kirjelda seda siis tema keeles."
+        }
+      ]
+    }
+  ]
+}

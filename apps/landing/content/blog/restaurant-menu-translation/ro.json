@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "title": "Traducerea meniului: ce traduci și ce nu | IQ Rest",
+    "description": "De ce traducerea automată a numelor preparatelor iese prost, ce părți din meniu rămân în limba originală și cum ții patru limbi fără patru meniuri."
+  },
+  "card": {
+    "title": "Traducerea meniului: ce traduci și ce lași în pace",
+    "excerpt": "„Pulpo a la gallega” nu e „caracatiță galiciană”. Ghid practic de traducere a meniului care ține preparatele apetisante și clienții informați."
+  },
+  "h1": "Traducerea meniului de restaurant: ce traduci și ce lași în pace",
+  "intro": "Treci meniul printr-un traducător generic și obții fraze corecte tehnic și inutile comercial. Numele preparatelor sunt jumătate limbă, jumătate brand, iar părțile de care clientul are nevoie traduse nu sunt cele pe care se concentrează un traducător. Iată cum obții patru limbi care chiar vând.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Regula: tradu explicația, păstrează numele"
+    },
+    {
+      "type": "p",
+      "text": "Numele unui preparat e adesea nume propriu. **Pulpo a la gallega** nu devine „caracatiță galiciană”, la fel cum **Wiener Schnitzel** nu devine „șnițel vienez” pe un meniu german. Clientul care știe preparatul caută numele original; cel care nu-l știe are nevoie de o descriere dedesubt."
+    },
+    {
+      "type": "p",
+      "text": "Așadar tiparul care funcționează e: **nume în limba originală, descriere în limba clientului.**"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Original",
+        "Ieșire automată",
+        "Ce funcționează"
+      ],
+      "rows": [
+        [
+          "Pulpo a la gallega",
+          "Caracatiță galiciană",
+          "Pulpo a la gallega — caracatiță cu boia, ulei de măsline și cartof"
+        ],
+        [
+          "Tortilla española",
+          "Omletă spaniolă",
+          "Tortilla española — omletă groasă cu cartofi și ceapă"
+        ],
+        [
+          "Vitello tonnato",
+          "Vițel ton",
+          "Vitello tonnato — vițel rece cu sos de ton și capere"
+        ],
+        [
+          "Pierogi ruskie",
+          "Colțunași rusești",
+          "Pierogi ruskie — colțunași polonezi cu cartofi și brânză proaspătă"
+        ],
+        [
+          "Pa amb tomàquet",
+          "Pâine cu roșie",
+          "Pa amb tomàquet — pâine prăjită frecată cu roșie și ulei"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "„Vițel ton” e o traducere automată reală a lui vitello tonnato și face preparatul să sune a greșeală. „Colțunași rusești” e mai rău decât greșit: preparatul e polonez, iar numele trimite la Rutenia, nu la Rusia, iar asta produce o reclamație înainte de o comandă."
+    },
+    {
+      "type": "h2",
+      "text": "Cele patru părți ale unui meniu și cum se tratează fiecare"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Parte",
+        "Abordare"
+      ],
+      "rows": [
+        [
+          "Numele preparatului",
+          "Păstrează originalul; transliterează la alfabete nelatine"
+        ],
+        [
+          "Descriere",
+          "Tradu integral — aici se vinde"
+        ],
+        [
+          "Ingrediente și alergeni",
+          "Tradu precis; exactitatea bate eleganța"
+        ],
+        [
+          "Titluri de categorie",
+          "Tradu (Aperitive, Feluri principale, Deserturi)"
+        ],
+        [
+          "Prețuri și unități",
+          "Nu atinge niciodată cifra; adaptează formatul (1,50 € față de €1.50)"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Greșeli care te costă comenzi"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Traducerea literală a unităților.** O *ración* spaniolă nu e o „rație”. Folosește porție sau explică mărimea.",
+        "**Pierderea metodei de gătit.** *A la plancha*, *al horno* și *frito* devin toate „gătit” într-o traducere neglijentă, iar clientul nu mai distinge preparatele.",
+        "**Diminutivele sună copilăresc.** *Bocadillito* e simpatic în spaniolă și ciudat în română. Tradu sensul, nu sufixul.",
+        "**Pierderea alergenului.** Dacă descrierea menționează anșoa iar traducerea spune „sos savuros”, ai eliminat o informație de siguranță.",
+        "**Traducerea greșită a tranșelor de carne.** Termenii de măcelărie nu se transferă între țări. *Entrecot*, *solomillo*, *presa* și *secreto* cer o descriere scurtă, nu un echivalent dintr-un cuvânt.",
+        "**Traducerea numelui propriului restaurant.** E un brand. Lasă-l."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Ce limbi merită"
+    },
+    {
+      "type": "p",
+      "text": "Nu ghici — uită-te de unde vin clienții tăi. Îți spun sistemul de rezervări, țara emitentă a cardurilor de pe terminal și limba telefonului celor care scanează codul tău QR. În majoritatea zonelor turistice europene răspunsul cinstit e engleza plus două, iar acele două sunt de obicei germana, franceza sau limba celor cu zbor direct."
+    },
+    {
+      "type": "note",
+      "text": "O limbă prost tradusă are un cost real. Un client german care citește un meniu german stângaci trage o concluzie despre bucătărie. Dacă nu poți verifica o limbă, engleza e mai sigură decât o versiune proastă a limbii lui."
+    },
+    {
+      "type": "h2",
+      "text": "De ce pe hârtie asta e scump, iar digital nu"
+    },
+    {
+      "type": "p",
+      "text": "Pe hârtie, patru limbi înseamnă patru tiraje, patru seturi de depozitat și de patru ori costul retipăririi la fiecare schimbare de preț. În practică localurile tipăresc două limbi, le lasă pe celelalte să se învechească și le întind turiștilor varianta engleză cerându-și scuze."
+    },
+    {
+      "type": "p",
+      "text": "Un [meniu digital](route:/digital-menu) inversează asta. Telefonul clientului își anunță deja limba, așa că meniul se deschide în cea corectă fără ca cineva să aleagă. IQ Rest traduce meniul automat și, pentru că traducerile sunt legate de preparat, o singură schimbare de preț îl schimbă în toate limbile. Adăugarea unei a cincea limbi nu costă nimic și nu cere retipărire."
+    },
+    {
+      "type": "h2",
+      "text": "Un proces care ține"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Scrie întâi meniul sursă ca lumea. Un text sursă vag produce traduceri vagi în toate limbile deodată.",
+        "Dă fiecărui preparat o descriere de un rând, chiar și în limba originală. O vor și clienții locali.",
+        "Lasă sistemul să traducă tot, apoi pune un vorbitor nativ să citească primele 20 de preparate ca vânzări. Douăzeci de poziții sunt cât o cafea din timpul cuiva și prind aproape toate ieșirile jenante.",
+        "Blochează numele preparatelor ca să nu fie retraduse la următoarea modificare.",
+        "Verifică separat formularea alergenilor în fiecare limbă — e singurul loc unde o frază stângace e o problemă de siguranță, nu de stil."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Roagă pe cineva din echipă care vorbește limba să citească meniul cu voce tare. Cititul cu voce tare prinde formulările nefirești mult mai repede decât cititul în gând."
+    },
+    {
+      "type": "cta",
+      "heading": "Un meniu, toate limbile",
+      "text": "IQ Rest îți traduce meniul automat și îl deschide în limba clientului. Schimbi un preț o dată și se actualizează toate limbile. 14 zile gratuit.",
+      "buttonLabel": "Vezi traducerea automată",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Întrebări frecvente",
+      "items": [
+        {
+          "q": "Trebuie să traduc numele preparatelor?",
+          "a": "De regulă nu. Păstrează numele original și adaugă dedesubt o descriere tradusă. Clientul care caută preparatul îl știe după numele lui adevărat."
+        },
+        {
+          "q": "E de-ajuns traducerea automată pentru un meniu?",
+          "a": "Pentru descrieri și titluri de categorie, de obicei da. Pentru numele preparatelor, tranșele de carne și formularea alergenilor pune un vorbitor nativ să verifice — pe un meniu tipic sunt vreo douăzeci de minute."
+        },
+        {
+          "q": "Câte limbi ar trebui să aibă un meniu?",
+          "a": "Engleza plus cele două naționalități pe care chiar le vezi cel mai des. Uită-te la datele de rezervări în loc să ghicești; un meniu digital nu costă nimic per limbă suplimentară, deci limita e câte apuci să verifici."
+        },
+        {
+          "q": "Cum primește clientul limba potrivită?",
+          "a": "Un meniu digital citește setarea de limbă a telefonului și se deschide în ea, cu un selector pentru cine vrea alta. Nimeni nu trebuie să ceară meniul în engleză."
+        },
+        {
+          "q": "Dar alfabetele nelatine, precum japoneza sau araba?",
+          "a": "Aceeași regulă plus transliterare: păstrează numele original, transliterează-l ca să-l poată pronunța clientul când comandă, apoi descrie-l în limba lui."
+        }
+      ]
+    }
+  ]
+}

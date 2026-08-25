@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "title": "Meniu vertimas: ką versti ir ko ne | IQ Rest",
+    "description": "Kodėl mašininis patiekalų pavadinimų vertimas nepavyksta, kurios meniu dalys lieka originalo kalba ir kaip išlaikyti keturias kalbas be keturių meniu."
+  },
+  "card": {
+    "title": "Restorano meniu vertimas: ką verčiate, o ko nejudinate",
+    "excerpt": "„Pulpo a la gallega“ nėra „Galisijos aštuonkojis“. Praktinis vadovas meniu vertimui, kuris patiekalus išlaiko apetitiškus, o svečius informuotus."
+  },
+  "h1": "Restorano meniu vertimas: ką verčiate, o ko nejudinate",
+  "intro": "Praleiskite meniu per bendrinį vertėją ir gausite sakinius, techniškai teisingus ir komerciškai bevertes. Patiekalų pavadinimai yra pusiau kalba, pusiau prekės ženklas, o tos dalys, kurias svečiui reikia matyti išverstas, nėra tos, į kurias vertėjas taikosi. Štai kaip gauti keturias kalbas, kurios tikrai parduoda.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Taisyklė: verskite paaiškinimą, palikite pavadinimą"
+    },
+    {
+      "type": "p",
+      "text": "Patiekalo pavadinimas dažnai yra tikrinis daiktavardis. **Pulpo a la gallega** netampa „Galisijos aštuonkoju“, kaip ir **Wiener Schnitzel** vokiškame meniu netampa „Vienos kotletu“. Svečias, kuris patiekalą pažįsta, ieško originalaus pavadinimo; tas, kuris nepažįsta, po juo reikalauja aprašymo."
+    },
+    {
+      "type": "p",
+      "text": "Taigi veikianti schema yra: **pavadinimas originalo kalba, aprašymas svečio kalba.**"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Originalas",
+        "Mašinos išvestis",
+        "Tai, kas veikia"
+      ],
+      "rows": [
+        [
+          "Pulpo a la gallega",
+          "Galisijos aštuonkojis",
+          "Pulpo a la gallega — aštuonkojis su paprika, alyvuogių aliejumi ir bulvėmis"
+        ],
+        [
+          "Tortilla española",
+          "Ispaniškas omletas",
+          "Tortilla española — storas bulvių ir svogūnų omletas"
+        ],
+        [
+          "Vitello tonnato",
+          "Veršiena tunas",
+          "Vitello tonnato — šalta veršiena tuno ir kaparėlių padaže"
+        ],
+        [
+          "Pierogi ruskie",
+          "Rusiški koldūnai",
+          "Pierogi ruskie — lenkiški koldūnai su bulvėmis ir varške"
+        ],
+        [
+          "Pa amb tomàquet",
+          "Duona su pomidoru",
+          "Pa amb tomàquet — skrudinta duona, patrinta pomidoru ir aliejumi"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "„Veršiena tunas“ — tikras vitello tonnato mašininis vertimas, dėl kurio patiekalas skamba kaip klaida. „Rusiški koldūnai“ blogiau nei neteisinga: patiekalas lenkiškas, o pavadinimas nurodo Rusiną, ne Rusiją, ir toks dalykas greičiau pagimdo skundą nei užsakymą."
+    },
+    {
+      "type": "h2",
+      "text": "Keturios meniu dalys ir kaip su kiekviena elgtis"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Dalis",
+        "Požiūris"
+      ],
+      "rows": [
+        [
+          "Patiekalo pavadinimas",
+          "Palikite originalą; nelotyniškuose raštuose transliteruokite"
+        ],
+        [
+          "Aprašymas",
+          "Verskite visą — būtent čia parduodama"
+        ],
+        [
+          "Sudedamosios dalys ir alergenai",
+          "Verskite tiksliai; tikslumas nugali eleganciją"
+        ],
+        [
+          "Kategorijų antraštės",
+          "Verskite (Užkandžiai, Pagrindiniai patiekalai, Desertai)"
+        ],
+        [
+          "Kainos ir vienetai",
+          "Skaičiaus niekada nelieskite; pritaikykite formatą (1,50 € prieš €1.50)"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Klaidos, kainuojančios jums užsakymų"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Pažodinis matų vertimas.** Ispaniška *ración* nėra „davinys“. Naudokite porciją arba paaiškinkite dydį.",
+        "**Gaminimo būdo praradimas.** *A la plancha*, *al horno* ir *frito* nerūpestingame vertime visi virsta „pagaminta“, ir svečias patiekalų nebeskiria.",
+        "**Mažybinės formos skamba vaikiškai.** *Bocadillito* ispaniškai žavu, lietuviškai keista. Verskite prasmę, ne priesagą.",
+        "**Alergeno praradimas.** Jei apraše minimas ančiuvis, o vertime rašoma „skanus padažas“, jūs pašalinote saugos informaciją.",
+        "**Neteisingas mėsos dalių vertimas.** Mėsininkų terminai nepersikelia iš šalies į šalį vienas prie vieno. *Entrecot*, *solomillo*, *presa* ir *secreto* reikalauja trumpo aprašymo, o ne vieno žodžio atitikmens.",
+        "**Savo restorano pavadinimo vertimas.** Tai prekės ženklas. Palikite jį."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kurios kalbos vertos"
+    },
+    {
+      "type": "p",
+      "text": "Nespėliokite — pažiūrėkite, iš kur atvyksta jūsų svečiai. Tai pasakys rezervacijų sistema, kortelių išdavimo šalis terminale ir tų, kurie nuskaito jūsų QR kodą, telefono kalba. Daugumoje Europos turistinių vietų sąžiningas atsakymas yra anglų plius dvi, ir tos dvi paprastai yra vokiečių, prancūzų arba tų, kurie turi tiesioginį skrydį."
+    },
+    {
+      "type": "note",
+      "text": "Blogai išversta kalba turi realią kainą. Vokiečių svečias, skaitantis nerangų vokišką meniu, iš to daro išvadą apie virtuvę. Jei kalbos nėra kam patikrinti, anglų kalba saugesnė nei bloga jo paties kalbos versija."
+    },
+    {
+      "type": "h2",
+      "text": "Kodėl popieriuje tai brangu, o skaitmenoje ne"
+    },
+    {
+      "type": "p",
+      "text": "Popieriuje keturios kalbos reiškia keturis tiražus, keturis komplektus saugojimui ir keturis kartus didesnes perspausdinimo išlaidas kaskart pasikeitus kainai. Praktiškai įstaigos spausdina dvi kalbas, likusias palieka pasenti, o turistams atsiprašydamos paduoda anglišką."
+    },
+    {
+      "type": "p",
+      "text": "[Skaitmeninis meniu](route:/digital-menu) tai apverčia. Svečio telefonas savo kalbą ir taip praneša, tad meniu atsidaro teisinga, niekam nesirenkant. IQ Rest meniu verčia automatiškai, o kadangi vertimai prisegti prie pozicijos, vienas kainos pakeitimas pakeičia ją visose kalbose. Penktos kalbos pridėjimas nekainuoja nieko ir nereikalauja perspausdinimo."
+    },
+    {
+      "type": "h2",
+      "text": "Procesas, kuris veikia"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Pirmiausia tvarkingai parašykite pirminį meniu. Miglotas šaltinio tekstas duoda miglotus vertimus visose kalbose iš karto.",
+        "Kiekvienam patiekalui duokite vienos eilutės aprašymą, net ir originalo kalba. Jo nori ir vietiniai svečiai.",
+        "Leiskite sistemai viską išversti, o paskui paprašykite gimtakalbio perskaityti 20 perkamiausių pozicijų. Dvidešimt pozicijų — vieno kavos puodelio laikas, o pagauna beveik visus gėdingus atvejus.",
+        "Užrakinkite patiekalų pavadinimus, kad kitą kartą redaguojant jie nebūtų verčiami iš naujo.",
+        "Alergenų formuluotes patikrinkite atskirai kiekviena kalba — tai vienintelė vieta, kur nerangus sakinys yra saugos, o ne stiliaus problema."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Paprašykite komandos nario, kalbančio ta kalba, perskaityti meniu balsu. Skaitymas balsu pagauna nenatūralias formuluotes daug greičiau nei tylus skaitymas."
+    },
+    {
+      "type": "cta",
+      "heading": "Vienas meniu, visos kalbos",
+      "text": "IQ Rest jūsų meniu išverčia automatiškai ir atidaro svečio kalba. Pakeičiate kainą vieną kartą — atsinaujina visos kalbos. 14 dienų nemokamai.",
+      "buttonLabel": "Žiūrėti automatinį vertimą",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Dažnai užduodami klausimai",
+      "items": [
+        {
+          "q": "Ar reikia versti patiekalų pavadinimus?",
+          "a": "Paprastai ne. Palikite originalų pavadinimą ir po juo pridėkite išverstą aprašymą. Svečias, ieškantis patiekalo, žino jį tikruoju vardu."
+        },
+        {
+          "q": "Ar mašininio vertimo užtenka meniu?",
+          "a": "Aprašymams ir kategorijų antraštėms paprastai taip. Patiekalų pavadinimus, mėsos dalis ir alergenų formuluotes teduoda patikrinti gimtakalbis — tipiniame meniu tai apie dvidešimt minučių."
+        },
+        {
+          "q": "Kiek kalbų turėtų būti meniu?",
+          "a": "Anglų plius tos dvi tautybės, kurias iš tikrųjų matote dažniausiai. Žiūrėkite rezervacijų duomenis, o ne spėliokite; skaitmeninis meniu už papildomą kalbą nekainuoja nieko, tad riba — kiek jų spėsite peržiūrėti."
+        },
+        {
+          "q": "Kaip svečias gauna tinkamą kalbą?",
+          "a": "Skaitmeninis meniu perskaito telefono kalbos nustatymą ir ja atsidaro, o norintiems kitos yra perjungiklis. Niekam nereikia prašyti meniu angliškai."
+        },
+        {
+          "q": "O nelotyniški raštai, tokie kaip japonų ar arabų?",
+          "a": "Ta pati taisyklė plius transliteracija: palikite originalų pavadinimą, transliteruokite jį, kad svečias galėtų ištarti užsakydamas, o tada aprašykite jo kalba."
+        }
+      ]
+    }
+  ]
+}

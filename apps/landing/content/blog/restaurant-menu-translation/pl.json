@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "title": "Tłumaczenie karty: co tłumaczyć, a czego nie | IQ Rest",
+    "description": "Dlaczego maszynowe tłumaczenie nazw dań wychodzi źle, które części karty powinny zostać w oryginale i jak prowadzić cztery języki bez czterech kart."
+  },
+  "card": {
+    "title": "Tłumaczenie karty restauracji: co się tłumaczy, a czego się nie rusza",
+    "excerpt": "„Pulpo a la gallega” to nie „ośmiornica galicyjska”. Praktyczny przewodnik po tłumaczeniu karty, które utrzymuje dania apetyczne, a gości poinformowanych."
+  },
+  "h1": "Tłumaczenie karty restauracji: co się tłumaczy, a czego się nie rusza",
+  "intro": "Przepuść kartę przez zwykły translator, a dostaniesz zdania technicznie poprawne i handlowo bezużyteczne. Nazwy dań to w połowie język, w połowie marka, a te fragmenty, które gość naprawdę potrzebuje mieć przetłumaczone, nie są tymi, na których skupia się translator. Oto jak zdobyć cztery języki, które faktycznie sprzedają.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Zasada: tłumacz wyjaśnienie, zachowaj nazwę"
+    },
+    {
+      "type": "p",
+      "text": "Nazwa dania to często nazwa własna. **Pulpo a la gallega** nie zamienia się w „ośmiornicę galicyjską”, tak jak **Wiener Schnitzel** nie zamienia się w „kotlet wiedeński” na niemieckiej karcie. Gość, który zna danie, szuka oryginalnej nazwy; ten, który go nie zna, potrzebuje opisu poniżej."
+    },
+    {
+      "type": "p",
+      "text": "Działający schemat brzmi więc: **nazwa w oryginale, opis w języku gościa.**"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Oryginał",
+        "Wyjście maszynowe",
+        "To, co działa"
+      ],
+      "rows": [
+        [
+          "Pulpo a la gallega",
+          "Ośmiornica galicyjska",
+          "Pulpo a la gallega — ośmiornica z papryką, oliwą i ziemniakami"
+        ],
+        [
+          "Tortilla española",
+          "Omlet hiszpański",
+          "Tortilla española — gruby omlet ziemniaczano-cebulowy"
+        ],
+        [
+          "Vitello tonnato",
+          "Cielęcina tuńczyk",
+          "Vitello tonnato — zimna cielęcina w sosie z tuńczyka i kaparów"
+        ],
+        [
+          "Pierogi ruskie",
+          "Russian dumplings",
+          "Pierogi ruskie — pierogi z ziemniakami i twarogiem"
+        ],
+        [
+          "Pa amb tomàquet",
+          "Chleb z pomidorem",
+          "Pa amb tomàquet — pieczywo natarte pomidorem i oliwą"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "„Cielęcina tuńczyk” to prawdziwe tłumaczenie maszynowe vitello tonnato i sprawia, że danie brzmi jak pomyłka. „Russian dumplings” jest gorsze niż błędne: danie jest polskie, a nazwa odsyła do Rusi Czerwonej, nie do Rosji — i to generuje reklamację, zanim wygeneruje zamówienie."
+    },
+    {
+      "type": "h2",
+      "text": "Cztery części karty i jak potraktować każdą"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Część",
+        "Podejście"
+      ],
+      "rows": [
+        [
+          "Nazwa dania",
+          "Zachowaj oryginał; przy alfabetach niełacińskich transliteruj"
+        ],
+        [
+          "Opis",
+          "Tłumacz w całości — to tu się sprzedaje"
+        ],
+        [
+          "Składniki i alergeny",
+          "Tłumacz precyzyjnie; dokładność bije elegancję"
+        ],
+        [
+          "Nagłówki kategorii",
+          "Tłumacz (Przystawki, Dania główne, Desery)"
+        ],
+        [
+          "Ceny i jednostki",
+          "Nigdy nie ruszaj liczby; dostosuj format (1,50 € wobec €1.50)"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Błędy, które kosztują cię zamówienia"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Dosłowne tłumaczenie miar.** Hiszpańska *ración* to nie „racja”. Użyj porcji albo wyjaśnij wielkość.",
+        "**Zgubienie sposobu przyrządzenia.** *A la plancha*, *al horno* i *frito* w niechlujnym tłumaczeniu stają się po prostu „przygotowane”, a gość przestaje odróżniać dania.",
+        "**Zdrobnienia brzmiące dziecinnie.** *Bocadillito* jest urocze po hiszpańsku, dziwne po polsku. Tłumacz sens, nie przyrostek.",
+        "**Zgubienie alergenu.** Jeśli opis wspomina anchois, a tłumaczenie mówi „aromatyczny sos”, usunąłeś informację bezpieczeństwa.",
+        "**Złe tłumaczenie kawałków mięsa.** Terminy rzeźnicze nie przechodzą jeden do jednego między krajami. *Entrecot*, *solomillo*, *presa* i *secreto* wymagają krótkiego opisu, a nie jednowyrazowego odpowiednika.",
+        "**Tłumaczenie nazwy własnej restauracji.** To marka. Zostaw ją."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Które języki naprawdę się opłacają"
+    },
+    {
+      "type": "p",
+      "text": "Nie zgaduj — sprawdź, skąd przyjeżdżają twoi goście. Powie ci to system rezerwacji, kraj wydania kart na terminalu i język telefonu tych, którzy skanują twój kod QR. W większości europejskich miejsc turystycznych uczciwa odpowiedź to angielski plus dwa, a te dwa to zwykle niemiecki, francuski albo język tych, którzy mają bezpośredni lot."
+    },
+    {
+      "type": "note",
+      "text": "Źle przetłumaczony język ma realny koszt. Niemiecki gość czytający koślawą niemiecką kartę wyciąga z tego wniosek o kuchni. Jeśli nie możesz sprawdzić danego języka, angielski jest bezpieczniejszy niż kiepska wersja jego własnego."
+    },
+    {
+      "type": "h2",
+      "text": "Dlaczego na papierze to drogo, a cyfrowo nie"
+    },
+    {
+      "type": "p",
+      "text": "Na papierze cztery języki to cztery nakłady, cztery komplety do przechowania i czterokrotny koszt przedruku przy każdej zmianie ceny. W praktyce lokale drukują dwa języki, resztę zostawiają nieaktualną, a turystom podają angielską wersję z przeprosinami."
+    },
+    {
+      "type": "p",
+      "text": "[Cyfrowe menu](route:/digital-menu) odwraca sytuację. Telefon gościa i tak ogłasza swój język, więc karta otwiera się we właściwym bez niczyjego wyboru. IQ Rest tłumaczy kartę automatycznie, a ponieważ tłumaczenia są przypięte do pozycji, jedna zmiana ceny zmienia ją we wszystkich językach. Dodanie piątego języka nic nie kosztuje i nie wymaga przedruku."
+    },
+    {
+      "type": "h2",
+      "text": "Proces, który się broni"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Najpierw napisz porządnie kartę źródłową. Mętny tekst źródłowy daje mętne tłumaczenia we wszystkich językach naraz.",
+        "Daj każdemu daniu jednolinijkowy opis, także w oryginale. Miejscowi goście też go chcą.",
+        "Pozwól systemowi przetłumaczyć wszystko, a potem poproś native speakera o przeczytanie 20 najlepiej sprzedających się pozycji. Dwadzieścia pozycji to czyjaś kawa czasu, a wyłapuje niemal wszystkie żenujące wpadki.",
+        "Zablokuj nazwy dań, żeby nie były tłumaczone ponownie przy kolejnej edycji.",
+        "Osobno sprawdź brzmienie alergenów w każdym języku — to jedyne miejsce, gdzie niezgrabne zdanie jest problemem bezpieczeństwa, a nie stylu."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Poproś kogoś ze swojego zespołu, kto zna ten język, żeby przeczytał kartę na głos. Czytanie na głos wyłapuje nienaturalne sformułowania znacznie szybciej niż czytanie po cichu."
+    },
+    {
+      "type": "cta",
+      "heading": "Jedna karta, wszystkie języki",
+      "text": "IQ Rest tłumaczy twoją kartę automatycznie i otwiera ją w języku gościa. Zmień cenę raz, a zaktualizują się wszystkie języki. 14 dni za darmo.",
+      "buttonLabel": "Zobacz tłumaczenie automatyczne",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Najczęstsze pytania",
+      "items": [
+        {
+          "q": "Czy tłumaczyć nazwy dań?",
+          "a": "Co do zasady nie. Zachowaj oryginalną nazwę i dodaj pod nią przetłumaczony opis. Gość szukający dania zna je pod prawdziwą nazwą."
+        },
+        {
+          "q": "Czy tłumaczenie maszynowe wystarczy do karty?",
+          "a": "Do opisów i nagłówków kategorii zwykle tak. Nazwy dań, kawałki mięsa i brzmienie alergenów niech sprawdzi native speaker — przy typowej karcie to jakieś dwadzieścia minut."
+        },
+        {
+          "q": "Ile języków powinna mieć karta?",
+          "a": "Angielski plus dwie narodowości, które naprawdę widzisz najczęściej. Sprawdź dane rezerwacyjne zamiast zgadywać; cyfrowe menu nie kosztuje nic za dodatkowy język, więc granicą jest to, ile jesteś w stanie sprawdzić."
+        },
+        {
+          "q": "Skąd gość dostaje właściwy język?",
+          "a": "Cyfrowe menu odczytuje ustawienie języka telefonu i w nim się otwiera, z przełącznikiem dla tych, którzy chcą inny. Nikt nie musi prosić o kartę po angielsku."
+        },
+        {
+          "q": "A alfabety niełacińskie, jak japoński albo arabski?",
+          "a": "Ta sama zasada plus transliteracja: zachowaj oryginalną nazwę, transliteruj ją, żeby gość mógł ją wymówić przy zamawianiu, a potem opisz w jego języku."
+        }
+      ]
+    }
+  ]
+}

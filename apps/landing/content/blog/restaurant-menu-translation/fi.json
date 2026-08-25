@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "title": "Ruokalistan käännös: mitä kääntää ja mitä ei | IQ Rest",
+    "description": "Miksi konekäännetyt annosnimet menevät pieleen, mitkä listan osat jäävät alkukielelle ja miten pyörität neljää kieltä ilman neljää listaa."
+  },
+  "card": {
+    "title": "Ravintolan ruokalistan kääntäminen: mitä käännetään ja mitä jätetään rauhaan",
+    "excerpt": "\"Pulpo a la gallega\" ei ole \"galicialainen mustekala\". Käytännön opas listan kääntämiseen niin, että annokset pysyvät houkuttelevina ja asiakkaat tietoisina."
+  },
+  "h1": "Ravintolan ruokalistan kääntäminen: mitä käännetään ja mitä jätetään rauhaan",
+  "intro": "Aja lista yleiskääntäjän läpi ja saat lauseita, jotka ovat teknisesti oikein ja kaupallisesti hyödyttömiä. Annosnimet ovat puoliksi kieltä ja puoliksi brändiä, eivätkä ne osat, jotka asiakas tarvitsee käännettynä, ole niitä joihin kääntäjä keskittyy. Näin saat neljä kieltä, jotka oikeasti myyvät.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Sääntö: käännä selitys, säilytä nimi"
+    },
+    {
+      "type": "p",
+      "text": "Annoksen nimi on usein erisnimi. **Pulpo a la gallega** ei muutu \"galicialaiseksi mustekalaksi\" sen paremmin kuin **Wiener Schnitzel** muuttuu \"wieniläiseksi leikkeeksi\" saksankielisellä listalla. Annoksen tunteva asiakas etsii alkuperäistä nimeä; se joka ei tunne, tarvitsee kuvauksen sen alle."
+    },
+    {
+      "type": "p",
+      "text": "Toimiva kaava on siis: **nimi alkukielellä, kuvaus asiakkaan kielellä.**"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Alkuperäinen",
+        "Koneen tuotos",
+        "Se mikä toimii"
+      ],
+      "rows": [
+        [
+          "Pulpo a la gallega",
+          "Galicialainen mustekala",
+          "Pulpo a la gallega — mustekalaa paprikajauheella, oliiviöljyllä ja perunalla"
+        ],
+        [
+          "Tortilla española",
+          "Espanjalainen munakas",
+          "Tortilla española — paksu peruna-sipulimunakas"
+        ],
+        [
+          "Vitello tonnato",
+          "Vasikka tonnikala",
+          "Vitello tonnato — kylmää vasikkaa tonnikala-kapriskastikkeessa"
+        ],
+        [
+          "Pierogi ruskie",
+          "Venäläiset nyytit",
+          "Pierogi ruskie — puolalaiset peruna-rahkanyytit"
+        ],
+        [
+          "Pa amb tomàquet",
+          "Leipää tomaatilla",
+          "Pa amb tomàquet — paahdettua leipää tomaatilla ja öljyllä hierottuna"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "\"Vasikka tonnikala\" on todellinen konekäännös vitello tonnatosta ja saa annoksen kuulostamaan virheeltä. \"Venäläiset nyytit\" on pahempaa kuin väärin: annos on puolalainen ja nimi viittaa Ruteniaan, ei Venäjään, ja tuollainen synnyttää valituksen ennemmin kuin tilauksen."
+    },
+    {
+      "type": "h2",
+      "text": "Listan neljä osaa ja miten kutakin käsitellään"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Osa",
+        "Lähestymistapa"
+      ],
+      "rows": [
+        [
+          "Annoksen nimi",
+          "Säilytä alkuperäinen; ei-latinalaisissa kirjaimistoissa translitteroi"
+        ],
+        [
+          "Kuvaus",
+          "Käännä kokonaan – tässä myydään"
+        ],
+        [
+          "Ainesosat ja allergeenit",
+          "Käännä täsmällisesti; tarkkuus voittaa tyylikkyyden"
+        ],
+        [
+          "Kategoriaotsikot",
+          "Käännä (Alkuruoat, Pääruoat, Jälkiruoat)"
+        ],
+        [
+          "Hinnat ja yksiköt",
+          "Älä koskaan koske lukuun; muotoilu sopeutetaan (1,50 € vs. €1.50)"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Virheet, jotka maksavat sinulle tilauksia"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Mittasanojen kääntäminen kirjaimellisesti.** Espanjalainen *ración* ei ole \"annos ruokaa sotilaalle\". Käytä sanaa annos tai selitä koko.",
+        "**Kypsennystavan katoaminen.** *A la plancha*, *al horno* ja *frito* muuttuvat huolimattomassa käännöksessä kaikki \"kypsennetyksi\", eikä asiakas enää erota annoksia toisistaan.",
+        "**Deminutiivit kuulostavat lapsellisilta.** *Bocadillito* on espanjaksi hauska ja suomeksi outo. Käännä merkitys, älä pääte.",
+        "**Allergeenin katoaminen.** Jos kuvauksessa mainitaan anjovis ja käännöksessä lukee \"maukas kastike\", olet poistanut turvallisuustiedon.",
+        "**Lihanleikkuutermien väärä käännös.** Leikkuutermit eivät siirry maasta toiseen. *Entrecot*, *solomillo*, *presa* ja *secreto* vaativat lyhyen kuvauksen, eivät yhden sanan vastinetta.",
+        "**Oman ravintolan nimen kääntäminen.** Se on brändi. Jätä se."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Mitkä kielet kannattaa ottaa"
+    },
+    {
+      "type": "p",
+      "text": "Älä arvaa – katso, mistä asiakkaasi tulevat. Varausjärjestelmäsi, maksupäätteen korttien myöntäjämaa ja QR-koodisi skannaajien puhelimen kieli kertovat sen. Useimmissa Euroopan turistikohteissa rehellinen vastaus on englanti plus kaksi, ja ne kaksi ovat yleensä saksa, ranska tai sen maan kieli, josta on suora lento."
+    },
+    {
+      "type": "note",
+      "text": "Huonosti käännetyllä kielellä on todellinen hinta. Saksalainen asiakas, joka lukee kömpelöä saksankielistä listaa, tekee siitä johtopäätöksen keittiöstä. Jos et voi tarkistuttaa jotain kieltä, englanti on turvallisempi kuin huono versio hänen omastaan."
+    },
+    {
+      "type": "h2",
+      "text": "Miksi paperilla tämä on kallista ja digitaalisesti ei"
+    },
+    {
+      "type": "p",
+      "text": "Paperilla neljä kieltä tarkoittaa neljää painosta, neljää säilytettävää sarjaa ja nelinkertaista uusintapainoa aina kun hinta muuttuu. Käytännössä paikat painavat kaksi kieltä, antavat muiden vanhentua ja ojentavat turisteille anteeksipyydellen englanninkielisen."
+    },
+    {
+      "type": "p",
+      "text": "[Digitaalinen lista](route:/digital-menu) kääntää asetelman. Asiakkaan puhelin ilmoittaa jo kielensä, joten lista avautuu oikealla ilman että kukaan valitsee. IQ Rest kääntää listan automaattisesti, ja koska käännökset on kiinnitetty annokseen, yksi hinnanmuutos muuttaa sen kaikilla kielillä. Viidennen kielen lisääminen ei maksa mitään eikä vaadi uusintapainoa."
+    },
+    {
+      "type": "h2",
+      "text": "Toimiva prosessi"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Kirjoita ensin lähtölista kunnolla. Epämääräinen lähtöteksti tuottaa epämääräisiä käännöksiä kaikilla kielillä yhtä aikaa.",
+        "Anna jokaiselle annokselle yhden rivin kuvaus, myös alkukielellä. Vakioasiakkaatkin haluavat sen.",
+        "Anna järjestelmän kääntää kaikki ja pyydä sitten äidinkielistä lukemaan 20 myydyintä. Kaksikymmentä riviä on yhden kahvin verran jonkun aikaa ja nappaa lähes kaikki nolot kohdat.",
+        "Lukitse annosnimet, jotta niitä ei käännetä uudelleen seuraavassa muokkauksessa.",
+        "Tarkista allergeenien sanamuoto erikseen jokaisella kielellä – se on ainoa kohta, jossa kömpelö lause on turvallisuus- eikä tyylikysymys."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Pyydä kielen osaavaa työntekijää lukemaan lista ääneen. Ääneen lukeminen paljastaa luonnottomat muotoilut paljon nopeammin kuin hiljaa lukeminen."
+    },
+    {
+      "type": "cta",
+      "heading": "Yksi lista, kaikki kielet",
+      "text": "IQ Rest kääntää listasi automaattisesti ja avaa sen asiakkaan omalla kielellä. Muuta hintaa kerran, ja kaikki kielet päivittyvät. 14 päivää ilmaiseksi.",
+      "buttonLabel": "Katso automaattinen käännös",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Usein kysytyt kysymykset",
+      "items": [
+        {
+          "q": "Pitääkö annosten nimet kääntää?",
+          "a": "Pääsääntöisesti ei. Säilytä alkuperäinen nimi ja lisää käännetty kuvaus sen alle. Annosta etsivä asiakas tuntee sen oikealla nimellään."
+        },
+        {
+          "q": "Riittääkö konekäännös ruokalistalle?",
+          "a": "Kuvauksiin ja kategoriaotsikoihin yleensä kyllä. Annosnimet, lihanleikkuutermit ja allergeenien sanamuodot kannattaa tarkistuttaa äidinkielisellä – tyypillisellä listalla se on parikymmentä minuuttia."
+        },
+        {
+          "q": "Montako kieltä ruokalistalla pitäisi olla?",
+          "a": "Englanti plus ne kaksi kansallisuutta, joita oikeasti näet eniten. Katso varaustietoja arvailun sijaan; digitaalinen lista ei maksa mitään lisäkieltä kohti, joten raja on se, montako ehdit tarkistuttaa."
+        },
+        {
+          "q": "Miten asiakas saa oikean kielen?",
+          "a": "Digitaalinen lista lukee puhelimen kieliasetuksen ja avautuu sillä, ja valitsin on niille jotka haluavat toisen. Kenenkään ei tarvitse pyytää englanninkielistä listaa."
+        },
+        {
+          "q": "Entä ei-latinalaiset kirjaimistot, kuten japani tai arabia?",
+          "a": "Sama sääntö plus translitterointi: säilytä alkuperäinen nimi, translitteroi se jotta asiakas osaa lausua sen tilatessaan, ja kuvaile sitten hänen kielellään."
+        }
+      ]
+    }
+  ]
+}

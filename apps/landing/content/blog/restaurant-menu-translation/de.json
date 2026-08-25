@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "title": "Speisekarte übersetzen: was übersetzen, was nicht | IQ Rest",
+    "description": "Warum maschinell übersetzte Gerichtsnamen schiefgehen, welche Teile der Karte in der Originalsprache bleiben und wie Sie vier Sprachen ohne vier Karten führen."
+  },
+  "card": {
+    "title": "Speisekarte übersetzen: was übersetzt gehört und was Sie in Ruhe lassen",
+    "excerpt": "\"Pulpo a la gallega\" ist nicht \"galicischer Oktopus\". Ein praktischer Leitfaden für Kartenübersetzungen, die Gerichte appetitlich und Gäste informiert halten."
+  },
+  "h1": "Speisekarte übersetzen: was übersetzt gehört und was Sie in Ruhe lassen",
+  "intro": "Jagen Sie die Karte durch einen allgemeinen Übersetzer, und Sie bekommen Sätze, die formal korrekt und wirtschaftlich wertlos sind. Gerichtsnamen sind halb Sprache, halb Marke, und die Teile, die der Gast übersetzt braucht, sind nicht die, auf die ein Übersetzer zielt. So bekommen Sie vier Sprachen, die tatsächlich verkaufen.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Die Regel: Erklärung übersetzen, Namen behalten"
+    },
+    {
+      "type": "p",
+      "text": "Ein Gerichtsname ist oft ein Eigenname. **Pulpo a la gallega** wird nicht zu \"galicischer Oktopus\", genauso wenig wie **Wiener Schnitzel** auf einer englischen Karte zu \"Viennese cutlet\" wird. Der Gast, der das Gericht kennt, sucht den Originalnamen; wer es nicht kennt, braucht eine Beschreibung darunter."
+    },
+    {
+      "type": "p",
+      "text": "Das funktionierende Muster lautet also: **Name in der Originalsprache, Beschreibung in der Sprache des Gastes.**"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Original",
+        "Maschinenausgabe",
+        "Was funktioniert"
+      ],
+      "rows": [
+        [
+          "Pulpo a la gallega",
+          "Galicischer Oktopus",
+          "Pulpo a la gallega — Oktopus mit Paprikapulver, Olivenöl und Kartoffel"
+        ],
+        [
+          "Tortilla española",
+          "Spanisches Omelett",
+          "Tortilla española — dickes Kartoffel-Zwiebel-Omelett"
+        ],
+        [
+          "Vitello tonnato",
+          "Kalb Thunfisch",
+          "Vitello tonnato — kaltes Kalbfleisch mit Thunfisch-Kapern-Sauce"
+        ],
+        [
+          "Pierogi ruskie",
+          "Russische Teigtaschen",
+          "Pierogi ruskie — polnische Teigtaschen mit Kartoffel und Quark"
+        ],
+        [
+          "Pa amb tomàquet",
+          "Brot mit Tomate",
+          "Pa amb tomàquet — geröstetes Brot, mit Tomate und Öl eingerieben"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "\"Kalb Thunfisch\" ist eine echte Maschinenübersetzung von Vitello tonnato und lässt das Gericht wie einen Fehler klingen. \"Russische Teigtaschen\" ist schlimmer als falsch: Das Gericht ist polnisch, und der Name verweist auf Ruthenien, nicht auf Russland — so etwas erzeugt eher eine Beschwerde als eine Bestellung."
+    },
+    {
+      "type": "h2",
+      "text": "Die vier Teile einer Karte und wie man sie behandelt"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Teil",
+        "Vorgehen"
+      ],
+      "rows": [
+        [
+          "Gerichtsname",
+          "Original behalten; bei nichtlateinischen Schriften transkribieren"
+        ],
+        [
+          "Beschreibung",
+          "Vollständig übersetzen — hier wird verkauft"
+        ],
+        [
+          "Zutaten und Allergene",
+          "Präzise übersetzen; Genauigkeit schlägt Eleganz"
+        ],
+        [
+          "Kategorieüberschriften",
+          "Übersetzen (Vorspeisen, Hauptgerichte, Desserts)"
+        ],
+        [
+          "Preise und Einheiten",
+          "Zahl nie anfassen; Format anpassen (1,50 € statt €1.50)"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Fehler, die Sie Bestellungen kosten"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Mengenangaben wörtlich übersetzen.** Eine spanische *ración* ist keine \"Ration\". Nehmen Sie Portion, oder erklären Sie die Größe.",
+        "**Die Garmethode verlieren.** *A la plancha*, *al horno* und *frito* werden bei nachlässiger Übersetzung alle zu \"gegart\", und der Gast kann die Gerichte nicht mehr unterscheiden.",
+        "**Verkleinerungsformen wirken kindlich.** *Bocadillito* ist auf Spanisch charmant, auf Deutsch seltsam. Übersetzen Sie den Sinn, nicht die Endung.",
+        "**Das Allergen streichen.** Wenn die Beschreibung Sardelle nennt und die Übersetzung \"herzhafte Sauce\" sagt, haben Sie Sicherheitsinformation entfernt.",
+        "**Fleischteile falsch übersetzen.** Zerlegungsbegriffe passen von Land zu Land nicht zusammen. *Entrecot*, *solomillo*, *presa* und *secreto* brauchen eine kurze Beschreibung, kein Ein-Wort-Äquivalent.",
+        "**Den eigenen Restaurantnamen übersetzen.** Der ist eine Marke. Lassen Sie ihn."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Welche Sprachen sich lohnen"
+    },
+    {
+      "type": "p",
+      "text": "Raten Sie nicht — schauen Sie, woher Ihre Gäste kommen. Ihr Reservierungssystem, das Ausgabeland der Karten an Ihrem Terminal und die Handysprache derer, die Ihren QR-Code scannen, sagen es Ihnen. In den meisten europäischen Tourismuslagen lautet die ehrliche Antwort Englisch plus zwei, und diese zwei sind meist Deutsch, Französisch oder die Sprache derer, die den Direktflug haben."
+    },
+    {
+      "type": "note",
+      "text": "Eine schlecht übersetzte Sprache kostet echtes Geld. Ein deutscher Gast, der eine holprige deutsche Karte liest, zieht daraus Schlüsse über die Küche. Wenn Sie eine Sprache nicht prüfen können, ist Englisch sicherer als eine schlechte Fassung seiner eigenen."
+    },
+    {
+      "type": "h2",
+      "text": "Warum das auf Papier teuer ist und digital nicht"
+    },
+    {
+      "type": "p",
+      "text": "Auf Papier heißen vier Sprachen vier Druckauflagen, vier Sätze zum Lagern und den vierfachen Nachdruck bei jeder Preisänderung. In der Praxis drucken Betriebe zwei Sprachen, lassen die anderen veralten und reichen Touristen entschuldigend die englische."
+    },
+    {
+      "type": "p",
+      "text": "Eine [digitale Speisekarte](route:/digital-menu) dreht das um. Das Handy des Gastes gibt seine Sprache ohnehin an, also öffnet sich die Karte in der richtigen, ohne dass jemand wählen muss. IQ Rest übersetzt die Karte automatisch, und weil die Übersetzungen am Artikel hängen, ändert eine einzige Preisänderung alle Sprachen. Eine fünfte Sprache kostet nichts und braucht keinen Neudruck."
+    },
+    {
+      "type": "h2",
+      "text": "Ein praktikabler Ablauf"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Schreiben Sie zuerst die Ausgangskarte ordentlich. Vager Ausgangstext erzeugt vage Übersetzungen in allen Sprachen gleichzeitig.",
+        "Geben Sie jedem Gericht eine einzeilige Beschreibung, auch in der Originalsprache. Auch Ihre Stammgäste wollen sie.",
+        "Lassen Sie das System alles übersetzen und dann eine Muttersprachlerin die 20 meistverkauften Positionen lesen. Zwanzig Positionen sind eine Kaffeepause und fangen fast alle peinlichen Ausrutscher ab.",
+        "Sperren Sie die Gerichtsnamen, damit sie bei der nächsten Bearbeitung nicht erneut übersetzt werden.",
+        "Prüfen Sie die Allergenformulierung in jeder Sprache separat — das ist die einzige Stelle, an der eine holprige Formulierung ein Sicherheits- und kein Stilproblem ist."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Bitten Sie eine Person aus Ihrem Team, die die Sprache spricht, die Karte laut vorzulesen. Lautes Lesen entlarvt unnatürliche Formulierungen viel schneller als stilles Lesen."
+    },
+    {
+      "type": "cta",
+      "heading": "Eine Karte, alle Sprachen",
+      "text": "IQ Rest übersetzt Ihre Karte automatisch und öffnet sie in der Sprache des Gastes. Einen Preis einmal ändern, und alle Sprachen sind aktuell. 14 Tage kostenlos.",
+      "buttonLabel": "Automatische Übersetzung ansehen",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Häufige Fragen",
+      "items": [
+        {
+          "q": "Soll ich Gerichtsnamen übersetzen?",
+          "a": "In der Regel nicht. Behalten Sie den Originalnamen und setzen Sie eine übersetzte Beschreibung darunter. Gäste, die nach dem Gericht suchen, kennen es unter seinem echten Namen."
+        },
+        {
+          "q": "Reicht maschinelle Übersetzung für eine Speisekarte?",
+          "a": "Für Beschreibungen und Kategorieüberschriften meist ja. Bei Gerichtsnamen, Fleischteilen und Allergenformulierungen lassen Sie eine Muttersprachlerin gegenlesen — bei einer typischen Karte etwa zwanzig Minuten Aufwand."
+        },
+        {
+          "q": "Wie viele Sprachen sollte eine Karte haben?",
+          "a": "Englisch plus die zwei Nationalitäten, die Sie tatsächlich am häufigsten sehen. Prüfen Sie Ihre Buchungsdaten statt zu raten; eine digitale Karte kostet pro zusätzlicher Sprache nichts, die Grenze ist also, wie viele Sie prüfen können."
+        },
+        {
+          "q": "Wie bekommt der Gast die richtige Sprache?",
+          "a": "Eine digitale Karte liest die Spracheinstellung des Handys und öffnet sich darin, mit Umschalter für alle, die eine andere wollen. Niemand muss nach der englischen Karte fragen."
+        },
+        {
+          "q": "Und nichtlateinische Schriften wie Japanisch oder Arabisch?",
+          "a": "Dieselbe Regel plus Transkription: Originalnamen behalten, transkribieren, damit der Gast ihn beim Bestellen aussprechen kann, und dann in seiner Sprache beschreiben."
+        }
+      ]
+    }
+  ]
+}

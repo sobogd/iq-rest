@@ -1,0 +1,128 @@
+{
+  "meta": {
+    "title": "Restaurant Menu Translation: What to Translate | IQ Rest",
+    "description": "Why machine-translating dish names goes wrong, which parts of a menu should stay in the original language, and how to run four languages without four menus."
+  },
+  "card": {
+    "title": "Translating a restaurant menu: what to translate, what to leave alone",
+    "excerpt": "\"Pulpo a la gallega\" is not \"Galician octopus\". A practical guide to menu translation that keeps dishes appetising and guests informed."
+  },
+  "h1": "Restaurant menu translation: what to translate and what to leave alone",
+  "intro": "Run a menu through a general translator and you get sentences that are technically correct and commercially useless. Dish names are half language and half brand, and the parts a guest needs translated aren't the parts a translator focuses on. Here's how to get four languages that actually sell.",
+  "blocks": [
+    { "type": "h2", "text": "The rule: translate the explanation, keep the name" },
+    {
+      "type": "p",
+      "text": "A dish name is often a proper noun. **Pulpo a la gallega** doesn't become \"Galician octopus\" any more than **Wiener Schnitzel** becomes \"Viennese cutlet\" on a German menu. The guest who knows the dish is looking for the original name; the guest who doesn't needs a description underneath."
+    },
+    {
+      "type": "p",
+      "text": "So the working pattern is: **name in the original language, description in the guest's language.**"
+    },
+    {
+      "type": "table",
+      "headers": ["Original", "Machine output", "What works"],
+      "rows": [
+        ["Pulpo a la gallega", "Galician octopus", "Pulpo a la gallega — octopus, paprika, olive oil, potato"],
+        ["Tortilla española", "Spanish omelette", "Tortilla española — thick potato and onion omelette"],
+        ["Vitello tonnato", "Veal tuna", "Vitello tonnato — cold veal, tuna and caper sauce"],
+        ["Pierogi ruskie", "Russian dumplings", "Pierogi ruskie — dumplings with potato and curd cheese"],
+        ["Pa amb tomàquet", "Bread with tomato", "Pa amb tomàquet — toasted bread rubbed with tomato and oil"]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "\"Veal tuna\" is a real machine translation of vitello tonnato and it makes the dish sound like a mistake. \"Russian dumplings\" is worse than wrong — the dish is Polish and the name refers to Ruthenia, not Russia, which is the kind of thing that generates a complaint rather than an order."
+    },
+    { "type": "h2", "text": "The four parts of a menu, and how each should be handled" },
+    {
+      "type": "table",
+      "headers": ["Part", "Approach"],
+      "rows": [
+        ["Dish name", "Keep the original; transliterate for non-Latin scripts"],
+        ["Description", "Translate fully — this is where the selling happens"],
+        ["Ingredients and allergens", "Translate precisely; accuracy beats elegance"],
+        ["Category headings", "Translate (Starters, Mains, Desserts)"],
+        ["Prices and units", "Never touch the number; adapt the format (1,50 € vs €1.50)"]
+      ]
+    },
+    { "type": "h2", "text": "Mistakes that cost you orders" },
+    {
+      "type": "list",
+      "items": [
+        "**Translating measure words literally.** A Spanish *ración* is not a \"ration\". Use portion, or explain the size.",
+        "**Losing cooking method.** *A la plancha*, *al horno* and *frito* all become \"cooked\" in careless translation, and the guest can no longer tell the dishes apart.",
+        "**Diminutives read as childish.** *Bocadillito* charming in Spanish, odd in English. Translate the meaning, not the suffix.",
+        "**Dropping the allergen.** If the description mentions anchovy and the translation says \"savoury sauce\", you've removed safety information.",
+        "**Mistranslating cuts of meat.** Butchery terms don't map country to country. *Entrecot*, *solomillo*, *presa* and *secreto* need a short description, not a one-word equivalent.",
+        "**Translating your own restaurant's name.** It's a brand. Leave it."
+      ]
+    },
+    { "type": "h2", "text": "Which languages are worth having" },
+    {
+      "type": "p",
+      "text": "Don't guess — look at where your guests come from. Your booking system, your card terminal's issuing-country data and the phone language of people scanning your QR code all tell you. In most European tourist areas the honest answer is English plus two, and the second two are usually German, French or the language of whoever has the direct flight."
+    },
+    {
+      "type": "note",
+      "text": "There is a real cost to a language you translate badly. A German guest reading an awkward German menu concludes something about the kitchen. If you can't check a language, English is safer than a bad version of their own."
+    },
+    { "type": "h2", "text": "Why paper makes this expensive and digital doesn't" },
+    {
+      "type": "p",
+      "text": "On paper, four languages means four print runs, four sets to store, and four times the reprint cost every time a price changes. In practice venues print two languages, keep the others out of date, and hand tourists the English one apologetically."
+    },
+    {
+      "type": "p",
+      "text": "A [digital menu](route:/digital-menu) inverts that. The guest's phone already announces its language, so the menu opens in the right one without anybody choosing. IQ Rest translates the menu automatically, and because translations are attached to the item, changing a price once changes it in every language. Adding a fifth language costs nothing and takes no reprint."
+    },
+    { "type": "h2", "text": "A workable process" },
+    {
+      "type": "steps",
+      "items": [
+        "Write the source menu properly first. Vague source text produces vague translations in every language at once.",
+        "Give each dish a one-line description, even in the original language. Guests want it too.",
+        "Let the system translate everything, then have a native speaker read the top 20 sellers. Twenty items is one coffee's worth of someone's time and catches nearly all the embarrassing output.",
+        "Lock dish names so they aren't re-translated on the next edit.",
+        "Check the allergen wording separately in each language — it's the one place where a clumsy phrase is a safety issue, not a style issue."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Ask a member of your own staff who speaks the language to read the menu out loud in it. Reading aloud catches unnatural phrasing much faster than reading silently."
+    },
+    {
+      "type": "cta",
+      "heading": "One menu, every language",
+      "text": "IQ Rest translates your menu automatically and opens it in the guest's own language. Change a price once and every language updates. 14 days free.",
+      "buttonLabel": "See automatic translation",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently asked questions",
+      "items": [
+        {
+          "q": "Should I translate dish names?",
+          "a": "Generally no. Keep the original name and add a translated description underneath. Guests searching for the dish know it by its real name."
+        },
+        {
+          "q": "Is machine translation good enough for a menu?",
+          "a": "For descriptions and category headings, usually yes. For dish names, cuts of meat and allergen wording, have a native speaker check it — that's about twenty minutes of review for a typical menu."
+        },
+        {
+          "q": "How many languages should a menu have?",
+          "a": "English plus the two nationalities you actually see most. Check your booking data rather than guessing; a digital menu costs nothing per extra language, so the limit is how many you can review."
+        },
+        {
+          "q": "How do guests get the right language?",
+          "a": "A digital menu reads the phone's language setting and opens in it, with a switcher for anyone who wants a different one. Nobody has to ask for the English menu."
+        },
+        {
+          "q": "What about non-Latin scripts like Japanese or Arabic?",
+          "a": "Same rule, with transliteration added — keep the original name, transliterate it so the guest can pronounce it when ordering, then describe it in their language."
+        }
+      ]
+    }
+  ]
+}

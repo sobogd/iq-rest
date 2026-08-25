@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "title": "Traducir la carta: qué traducir y qué no | IQ Rest",
+    "description": "Por qué traducir automáticamente los nombres de los platos sale mal, qué partes de la carta deben quedarse en el idioma original y cómo llevar cuatro idiomas sin cuatro cartas."
+  },
+  "card": {
+    "title": "Traducir la carta de un restaurante: qué traducir y qué dejar en paz",
+    "excerpt": "«Pulpo a la gallega» no es «Galician octopus». Guía práctica para traducir la carta manteniendo los platos apetecibles y a los clientes informados."
+  },
+  "h1": "Traducir la carta de un restaurante: qué traducir y qué dejar en paz",
+  "intro": "Pasa la carta por un traductor genérico y obtendrás frases técnicamente correctas y comercialmente inútiles. Los nombres de los platos son mitad idioma y mitad marca, y las partes que el cliente necesita traducidas no son las que el traductor prioriza. Así se consiguen cuatro idiomas que de verdad venden.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "La regla: traduce la explicación, conserva el nombre"
+    },
+    {
+      "type": "p",
+      "text": "El nombre de un plato suele ser un nombre propio. **Pulpo a la gallega** no se convierte en «Galician octopus», igual que **Wiener Schnitzel** no se convierte en «chuleta vienesa» en una carta alemana. El cliente que conoce el plato busca el nombre original; el que no lo conoce necesita una descripción debajo."
+    },
+    {
+      "type": "p",
+      "text": "Así que el patrón que funciona es: **nombre en el idioma original, descripción en el idioma del cliente.**"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Original",
+        "Salida automática",
+        "Lo que funciona"
+      ],
+      "rows": [
+        [
+          "Pulpo a la gallega",
+          "Galician octopus",
+          "Pulpo a la gallega — octopus with paprika, olive oil and potato"
+        ],
+        [
+          "Tortilla española",
+          "Spanish omelette",
+          "Tortilla española — thick potato and onion omelette"
+        ],
+        [
+          "Vitello tonnato",
+          "Ternera atún",
+          "Vitello tonnato — ternera fría con salsa de atún y alcaparras"
+        ],
+        [
+          "Pierogi ruskie",
+          "Empanadillas rusas",
+          "Pierogi ruskie — empanadillas polacas de patata y requesón"
+        ],
+        [
+          "Pa amb tomàquet",
+          "Pan con tomate",
+          "Pa amb tomàquet — pan tostado frotado con tomate y aceite"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "«Ternera atún» es una traducción automática real de vitello tonnato y hace que el plato suene a error. «Empanadillas rusas» es peor que incorrecto: el plato es polaco y el nombre alude a Rutenia, no a Rusia, y eso genera una queja antes que un pedido."
+    },
+    {
+      "type": "h2",
+      "text": "Las cuatro partes de una carta y cómo tratar cada una"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Parte",
+        "Enfoque"
+      ],
+      "rows": [
+        [
+          "Nombre del plato",
+          "Conserva el original; translitera en alfabetos no latinos"
+        ],
+        [
+          "Descripción",
+          "Tradúcela entera: aquí es donde se vende"
+        ],
+        [
+          "Ingredientes y alérgenos",
+          "Traduce con precisión; la exactitud manda sobre la elegancia"
+        ],
+        [
+          "Encabezados de categoría",
+          "Tradúcelos (Entrantes, Principales, Postres)"
+        ],
+        [
+          "Precios y unidades",
+          "Nunca toques la cifra; adapta el formato (1,50 € frente a €1.50)"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Errores que te cuestan pedidos"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Traducir las medidas al pie de la letra.** Una *ración* española no es una «ration» inglesa. Usa portion, o explica el tamaño.",
+        "**Perder el método de cocción.** *A la plancha*, *al horno* y *frito* acaban todos como «cooked» en una traducción descuidada, y el cliente ya no distingue los platos.",
+        "**Diminutivos que suenan infantiles.** *Bocadillito* es simpático en español y raro en inglés. Traduce el sentido, no el sufijo.",
+        "**Perder el alérgeno.** Si la descripción menciona anchoa y la traducción dice «savoury sauce», has eliminado información de seguridad.",
+        "**Traducir mal los cortes de carne.** Los términos de despiece no viajan entre países. *Entrecot*, *solomillo*, *presa* y *secreto* necesitan una descripción corta, no un equivalente de una palabra.",
+        "**Traducir el nombre de tu propio restaurante.** Es una marca. Déjalo."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Qué idiomas merece la pena tener"
+    },
+    {
+      "type": "p",
+      "text": "No adivines: mira de dónde viene tu clientela. Tu sistema de reservas, el país emisor de las tarjetas de tu datáfono y el idioma del móvil de quien escanea tu código QR te lo dicen. En la mayoría de zonas turísticas europeas la respuesta honesta es inglés más dos, y esos dos suelen ser alemán, francés o el idioma de quien tenga vuelo directo."
+    },
+    {
+      "type": "note",
+      "text": "Un idioma mal traducido tiene un coste real. Un cliente alemán que lee una carta alemana torpe saca conclusiones sobre la cocina. Si no puedes revisar un idioma, el inglés es más seguro que una mala versión del suyo."
+    },
+    {
+      "type": "h2",
+      "text": "Por qué en papel esto sale caro y en digital no"
+    },
+    {
+      "type": "p",
+      "text": "En papel, cuatro idiomas son cuatro tiradas, cuatro juegos que almacenar y cuatro veces el coste de reimprimir cada vez que cambia un precio. En la práctica los locales imprimen dos idiomas, dejan los otros desfasados y entregan a los turistas el inglés pidiendo disculpas."
+    },
+    {
+      "type": "p",
+      "text": "Una [carta digital](route:/digital-menu) le da la vuelta a eso. El móvil del cliente ya anuncia su idioma, así que la carta se abre en el correcto sin que nadie elija. IQ Rest traduce la carta automáticamente y, como las traducciones van unidas al plato, cambiar un precio una vez lo cambia en todos los idiomas. Añadir un quinto idioma no cuesta nada ni obliga a reimprimir."
+    },
+    {
+      "type": "h2",
+      "text": "Un proceso que funciona"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Escribe bien la carta original primero. Un texto de origen vago produce traducciones vagas en todos los idiomas a la vez.",
+        "Dale a cada plato una descripción de una línea, incluso en el idioma original. Los clientes locales también la quieren.",
+        "Deja que el sistema lo traduzca todo y que después un nativo lea los 20 platos más vendidos. Veinte platos son un café del tiempo de alguien y atrapan casi todas las salidas embarazosas.",
+        "Bloquea los nombres de los platos para que no se vuelvan a traducir en la siguiente edición.",
+        "Revisa aparte el texto de alérgenos en cada idioma: es el único sitio donde una frase torpe es un problema de seguridad, no de estilo."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Pide a alguien de tu equipo que hable ese idioma que lea la carta en voz alta. Leer en voz alta detecta lo antinatural mucho más rápido que leer en silencio."
+    },
+    {
+      "type": "cta",
+      "heading": "Una carta, todos los idiomas",
+      "text": "IQ Rest traduce tu carta automáticamente y la abre en el idioma del cliente. Cambia un precio una vez y se actualizan todos los idiomas. 14 días gratis.",
+      "buttonLabel": "Ver la traducción automática",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Preguntas frecuentes",
+      "items": [
+        {
+          "q": "¿Hay que traducir los nombres de los platos?",
+          "a": "Por norma general, no. Conserva el nombre original y añade una descripción traducida debajo. El cliente que busca el plato lo conoce por su nombre real."
+        },
+        {
+          "q": "¿Basta la traducción automática para una carta?",
+          "a": "Para las descripciones y los encabezados de categoría, normalmente sí. Para nombres de platos, cortes de carne y texto de alérgenos, que lo revise un nativo: son unos veinte minutos de revisión en una carta típica."
+        },
+        {
+          "q": "¿Cuántos idiomas debe tener una carta?",
+          "a": "Inglés más las dos nacionalidades que más ves de verdad. Mira tus datos de reservas en lugar de adivinar; una carta digital no cuesta nada por idioma extra, así que el límite es cuántos puedes revisar."
+        },
+        {
+          "q": "¿Cómo obtiene el cliente el idioma correcto?",
+          "a": "Una carta digital lee el idioma del móvil y se abre en él, con un selector para quien quiera otro. Nadie tiene que pedir la carta en inglés."
+        },
+        {
+          "q": "¿Y los alfabetos no latinos, como el japonés o el árabe?",
+          "a": "La misma regla más transliteración: conserva el nombre original, transliteralo para que el cliente pueda pronunciarlo al pedir y luego descríbelo en su idioma."
+        }
+      ]
+    }
+  ]
+}

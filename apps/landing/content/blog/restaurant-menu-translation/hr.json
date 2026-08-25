@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "title": "Prijevod jelovnika: što prevoditi, a što ne | IQ Rest",
+    "description": "Zašto strojni prijevod naziva jela ispada loše, koji dijelovi jelovnika ostaju na izvornom jeziku i kako voditi četiri jezika bez četiri jelovnika."
+  },
+  "card": {
+    "title": "Prijevod jelovnika restorana: što se prevodi, a što se ne dira",
+    "excerpt": "„Pulpo a la gallega” nije „galicijska hobotnica”. Praktični vodič za prijevod jelovnika koji jela drži primamljivima, a goste informiranima."
+  },
+  "h1": "Prijevod jelovnika restorana: što se prevodi, a što se ne dira",
+  "intro": "Provucite jelovnik kroz opći prevoditelj i dobit ćete rečenice tehnički točne i poslovno beskorisne. Nazivi jela napola su jezik, napola marka, a dijelovi koje gost treba prevedene nisu oni na koje se prevoditelj usredotočuje. Evo kako dobiti četiri jezika koja stvarno prodaju.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Pravilo: prevedite objašnjenje, zadržite naziv"
+    },
+    {
+      "type": "p",
+      "text": "Naziv jela često je vlastito ime. **Pulpo a la gallega** ne postaje „galicijska hobotnica”, kao što ni **Wiener Schnitzel** ne postaje „bečki odrezak” na njemačkom jelovniku. Gost koji zna jelo traži izvorni naziv; onaj koji ga ne zna treba opis ispod."
+    },
+    {
+      "type": "p",
+      "text": "Obrazac koji radi glasi dakle: **naziv na izvornom jeziku, opis na jeziku gosta.**"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Izvornik",
+        "Strojni izlaz",
+        "Ono što radi"
+      ],
+      "rows": [
+        [
+          "Pulpo a la gallega",
+          "Galicijska hobotnica",
+          "Pulpo a la gallega — hobotnica s paprikom, maslinovim uljem i krumpirom"
+        ],
+        [
+          "Tortilla española",
+          "Španjolski omlet",
+          "Tortilla española — gusti omlet s krumpirom i lukom"
+        ],
+        [
+          "Vitello tonnato",
+          "Teletina tuna",
+          "Vitello tonnato — hladna teletina s umakom od tune i kapara"
+        ],
+        [
+          "Pierogi ruskie",
+          "Ruski okruglice",
+          "Pierogi ruskie — poljske okruglice s krumpirom i svježim sirom"
+        ],
+        [
+          "Pa amb tomàquet",
+          "Kruh s rajčicom",
+          "Pa amb tomàquet — tostirani kruh natrljan rajčicom i uljem"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "„Teletina tuna” pravi je strojni prijevod vitello tonnata i čini da jelo zvuči kao pogreška. „Ruski okruglice” gore je od netočnog: jelo je poljsko, a naziv upućuje na Rutensku, ne na Rusiju, i takvo što rađa pritužbu prije narudžbe."
+    },
+    {
+      "type": "h2",
+      "text": "Četiri dijela jelovnika i kako s njima postupati"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Dio",
+        "Pristup"
+      ],
+      "rows": [
+        [
+          "Naziv jela",
+          "Zadržite izvornik; kod nelatiničnih pisama transliterirajte"
+        ],
+        [
+          "Opis",
+          "Prevedite u cijelosti — ovdje se prodaje"
+        ],
+        [
+          "Sastojci i alergeni",
+          "Prevedite precizno; točnost je važnija od elegancije"
+        ],
+        [
+          "Naslovi kategorija",
+          "Prevedite (Predjela, Glavna jela, Deserti)"
+        ],
+        [
+          "Cijene i mjere",
+          "Broj nikad ne dirajte; format prilagodite (1,50 € nasuprot €1.50)"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Pogreške koje vas koštaju narudžbi"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Doslovno prevođenje mjernih riječi.** Španjolska *ración* nije „obrok sljedovanja”. Upotrijebite porciju ili objasnite veličinu.",
+        "**Gubitak načina pripreme.** *A la plancha*, *al horno* i *frito* u nemarnom prijevodu svi postanu „pripremljeno” i gost više ne razlikuje jela.",
+        "**Umanjenice zvuče djetinjasto.** *Bocadillito* je na španjolskom šarmantno, na hrvatskom čudno. Prevedite značenje, ne sufiks.",
+        "**Gubitak alergena.** Ako opis spominje inćun, a prijevod kaže „ukusan umak”, uklonili ste sigurnosnu informaciju.",
+        "**Krivo prevođenje odrezaka.** Mesarski termini ne prelaze jedan na jedan iz zemlje u zemlju. *Entrecot*, *solomillo*, *presa* i *secreto* traže kratak opis, ne jednorječni ekvivalent.",
+        "**Prevođenje imena vlastitog restorana.** To je marka. Pustite ga."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Koji se jezici isplate"
+    },
+    {
+      "type": "p",
+      "text": "Ne nagađajte — pogledajte odakle vam dolaze gosti. Reći će vam to sustav rezervacija, zemlja izdanja kartica na terminalu i jezik telefona onih koji skeniraju vaš QR kod. U većini europskih turističkih mjesta pošten je odgovor engleski plus dva, a ta dva obično su njemački, francuski ili jezik onih koji imaju izravan let."
+    },
+    {
+      "type": "note",
+      "text": "Loše preveden jezik ima stvarnu cijenu. Njemački gost koji čita nespretan njemački jelovnik izvlači zaključak o kuhinji. Ako nemate tko provjeriti neki jezik, engleski je sigurniji od loše verzije njegova vlastitog."
+    },
+    {
+      "type": "h2",
+      "text": "Zašto je to na papiru skupo, a digitalno nije"
+    },
+    {
+      "type": "p",
+      "text": "Na papiru četiri jezika znače četiri naklade, četiri kompleta za pohranu i četverostruki trošak ponovnog ispisa pri svakoj promjeni cijene. U praksi lokali tiskaju dva jezika, ostale puste da zastare, a turistima ispričavajući se pružaju engleski."
+    },
+    {
+      "type": "p",
+      "text": "[Digitalni jelovnik](route:/digital-menu) to preokreće. Gostov telefon ionako objavljuje svoj jezik, pa se jelovnik otvara na ispravnom bez ičijeg odabira. IQ Rest prevodi jelovnik automatski, a budući da su prijevodi vezani uz stavku, jedna promjena cijene mijenja je na svim jezicima. Dodavanje petog jezika ne košta ništa i ne traži ponovni ispis."
+    },
+    {
+      "type": "h2",
+      "text": "Postupak koji drži"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Prvo dobro napišite izvorni jelovnik. Nejasan izvorni tekst proizvodi nejasne prijevode na svim jezicima odjednom.",
+        "Dajte svakom jelu opis u jednom retku, i na izvornom jeziku. Žele ga i domaći gosti.",
+        "Pustite sustav da sve prevede, a onda neka izvorni govornik pročita 20 najprodavanijih stavki. Dvadeset stavki je nečija kava vremena i hvata gotovo sve neugodne ispade.",
+        "Zaključajte nazive jela da se pri sljedećoj izmjeni ne prevedu ponovno.",
+        "Formulaciju o alergenima provjerite posebno na svakom jeziku — to je jedino mjesto gdje je nespretna rečenica sigurnosni, a ne stilski problem."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Zamolite nekoga iz tima tko govori taj jezik da jelovnik pročita naglas. Čitanje naglas hvata neprirodne formulacije mnogo brže od tihog čitanja."
+    },
+    {
+      "type": "cta",
+      "heading": "Jedan jelovnik, svi jezici",
+      "text": "IQ Rest prevodi vaš jelovnik automatski i otvara ga na jeziku gosta. Promijenite cijenu jednom i ažuriraju se svi jezici. 14 dana besplatno.",
+      "buttonLabel": "Pogledajte automatski prijevod",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Česta pitanja",
+      "items": [
+        {
+          "q": "Trebam li prevoditi nazive jela?",
+          "a": "U pravilu ne. Zadržite izvorni naziv i ispod dodajte prevedeni opis. Gost koji traži jelo zna ga po pravom imenu."
+        },
+        {
+          "q": "Je li strojni prijevod dovoljan za jelovnik?",
+          "a": "Za opise i naslove kategorija obično jest. Nazive jela, odreske i formulacije o alergenima neka provjeri izvorni govornik — na tipičnom jelovniku to je dvadesetak minuta."
+        },
+        {
+          "q": "Koliko jezika treba imati jelovnik?",
+          "a": "Engleski plus dvije nacionalnosti koje stvarno najčešće viđate. Pogledajte podatke o rezervacijama umjesto da nagađate; digitalni jelovnik ne košta ništa po dodatnom jeziku, pa je granica koliko ih stignete pregledati."
+        },
+        {
+          "q": "Kako gost dobiva ispravan jezik?",
+          "a": "Digitalni jelovnik čita jezičnu postavku telefona i otvara se na njoj, uz preklopnik za onoga tko želi drugi. Nitko ne mora tražiti jelovnik na engleskom."
+        },
+        {
+          "q": "A nelatinična pisma, poput japanskog ili arapskog?",
+          "a": "Isto pravilo plus transliteracija: zadržite izvorni naziv, transliterirajte ga da ga gost može izgovoriti pri narudžbi, a zatim ga opišite na njegovu jeziku."
+        }
+      ]
+    }
+  ]
+}

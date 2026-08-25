@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "title": "Étlapfordítás: mit fordíts és mit ne | IQ Rest",
+    "description": "Miért sül el rosszul az ételnevek gépi fordítása, az étlap mely részei maradjanak az eredeti nyelven, és hogyan viszel négy nyelvet négy étlap nélkül."
+  },
+  "card": {
+    "title": "Étterem étlapjának fordítása: mit fordítasz és mit hagysz békén",
+    "excerpt": "A „Pulpo a la gallega” nem „galiciai polip”. Gyakorlati útmutató az étlapfordításhoz, amitől az ételek étvágygerjesztők, a vendégek pedig tájékozottak maradnak."
+  },
+  "h1": "Étterem étlapjának fordítása: mit fordítasz és mit hagysz békén",
+  "intro": "Futtasd át az étlapot egy általános fordítón, és technikailag helyes, üzletileg használhatatlan mondatokat kapsz. Az ételnevek félig nyelv, félig márka, és amit a vendég lefordítva szeretne, nem az, amire a fordító koncentrál. Így kapsz négy nyelvet, ami tényleg elad.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "A szabály: a magyarázatot fordítsd, a nevet tartsd meg"
+    },
+    {
+      "type": "p",
+      "text": "Egy étel neve gyakran tulajdonnév. A **Pulpo a la gallega** nem lesz „galiciai polip”, ahogy a **Wiener Schnitzel** sem lesz „bécsi szelet” egy német étlapon. Az a vendég, aki ismeri az ételt, az eredeti nevet keresi; aki nem, annak leírás kell alá."
+    },
+    {
+      "type": "p",
+      "text": "A működő minta tehát: **név az eredeti nyelven, leírás a vendég nyelvén.**"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Eredeti",
+        "Gépi kimenet",
+        "Ami működik"
+      ],
+      "rows": [
+        [
+          "Pulpo a la gallega",
+          "Galiciai polip",
+          "Pulpo a la gallega — polip pirospaprikával, olívaolajjal és burgonyával"
+        ],
+        [
+          "Tortilla española",
+          "Spanyol omlett",
+          "Tortilla española — vastag burgonyás-hagymás omlett"
+        ],
+        [
+          "Vitello tonnato",
+          "Borjú tonhal",
+          "Vitello tonnato — hideg borjúhús tonhalas-kapribogyós mártásban"
+        ],
+        [
+          "Pierogi ruskie",
+          "Orosz derelye",
+          "Pierogi ruskie — lengyel derelye burgonyával és túróval"
+        ],
+        [
+          "Pa amb tomàquet",
+          "Kenyér paradicsommal",
+          "Pa amb tomàquet — pirított kenyér paradicsommal és olajjal bedörzsölve"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "A „Borjú tonhal” a vitello tonnato valódi gépi fordítása, és az ételt tévedésnek hangzik. Az „Orosz derelye” rosszabb, mint hibás: az étel lengyel, a név pedig Rutheniára utal, nem Oroszországra, és az ilyesmi hamarabb szül panaszt, mint rendelést."
+    },
+    {
+      "type": "h2",
+      "text": "Az étlap négy része és mit kezdj velük"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Rész",
+        "Megközelítés"
+      ],
+      "rows": [
+        [
+          "Az étel neve",
+          "Tartsd meg az eredetit; nem latin írásnál írd át"
+        ],
+        [
+          "Leírás",
+          "Fordítsd le teljesen — itt történik az eladás"
+        ],
+        [
+          "Összetevők és allergének",
+          "Fordítsd pontosan; a pontosság előbbre való az eleganciánál"
+        ],
+        [
+          "Kategóriacímek",
+          "Fordítsd (Előételek, Főételek, Desszertek)"
+        ],
+        [
+          "Árak és mértékegységek",
+          "A számhoz soha ne nyúlj; a formátumot igazítsd (1,50 € vs. €1.50)"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Hibák, amik rendeléseket visznek el"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**A mértékszavak szó szerinti fordítása.** A spanyol *ración* nem „fejadag”. Használj adagot, vagy magyarázd el a méretet.",
+        "**Az elkészítési mód elvesztése.** Az *a la plancha*, *al horno* és *frito* egy hanyag fordításban mind „elkészítve” lesz, és a vendég már nem tudja megkülönböztetni az ételeket.",
+        "**A kicsinyítő képzők gyerekesnek hatnak.** A *bocadillito* spanyolul kedves, magyarul furcsa. A jelentést fordítsd, ne a képzőt.",
+        "**Az allergén elhagyása.** Ha a leírás szardellát említ, a fordítás pedig „ízletes mártást” mond, biztonsági információt töröltél.",
+        "**A húsrészek rossz fordítása.** A hentesszakmai kifejezések nem vihetők át országról országra. Az *entrecot*, *solomillo*, *presa* és *secreto* rövid leírást kíván, nem egyszavas megfelelőt.",
+        "**A saját éttermed nevének fordítása.** Az márka. Hagyd békén."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Mely nyelveket érdemes vinni"
+    },
+    {
+      "type": "p",
+      "text": "Ne találgass — nézd meg, honnan érkeznek a vendégeid. Elárulja a foglalási rendszered, a terminálodon a kártyák kibocsátó országa és azok telefonnyelve, akik beolvassák a QR kódodat. A legtöbb európai turistahelyen a becsületes válasz az angol plusz kettő, és az a kettő általában a német, a francia vagy azoké, akiknek közvetlen járatuk van."
+    },
+    {
+      "type": "note",
+      "text": "A rosszul fordított nyelvnek valódi ára van. Egy német vendég, aki döcögős német étlapot olvas, következtetést von le a konyháról. Ha egy nyelvet nincs kivel ellenőriztetned, az angol biztonságosabb, mint a saját nyelvének rossz változata."
+    },
+    {
+      "type": "h2",
+      "text": "Miért drága ez papíron, és miért nem digitálisan"
+    },
+    {
+      "type": "p",
+      "text": "Papíron a négy nyelv négy nyomtatást, négy tárolandó készletet és négyszeres újranyomtatási költséget jelent minden áremelésnél. A gyakorlatban a helyek két nyelvet nyomtatnak, a többit hagyják elavulni, a turistáknak pedig bocsánatkérően nyújtják az angolt."
+    },
+    {
+      "type": "p",
+      "text": "Egy [digitális étlap](route:/digital-menu) ezt megfordítja. A vendég telefonja amúgy is bejelenti a nyelvét, így az étlap a megfelelőn nyílik meg, anélkül hogy bárki választana. Az IQ Rest automatikusan fordítja az étlapot, és mivel a fordítások a tételhez tapadnak, egyetlen áremelés minden nyelvben átvezet. Egy ötödik nyelv hozzáadása nem kerül semmibe, és nem igényel újranyomtatást."
+    },
+    {
+      "type": "h2",
+      "text": "Egy működőképes folyamat"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Előbb írd meg rendesen a forrásétlapot. A homályos forrásszöveg egyszerre minden nyelven homályos fordítást ad.",
+        "Adj minden ételnek egysoros leírást, még az eredeti nyelven is. A helyi vendégek is szeretnék.",
+        "Hagyd, hogy a rendszer mindent lefordítson, aztán olvassa el egy anyanyelvi beszélő a 20 legkelendőbb tételt. Húsz tétel valakinek egy kávényi ideje, és szinte minden kínos kimenetet elkap.",
+        "Zárold az ételneveket, hogy a következő szerkesztésnél ne fordítsák le újra.",
+        "Az allergénszöveget nyelvenként külön ellenőrizd — ez az egyetlen hely, ahol egy esetlen mondat biztonsági és nem stílusprobléma."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Kérd meg a csapatod egyik tagját, aki beszéli a nyelvet, hogy olvassa fel hangosan az étlapot. A hangos felolvasás sokkal gyorsabban kiszűri a természetellenes megfogalmazást, mint a néma olvasás."
+    },
+    {
+      "type": "cta",
+      "heading": "Egy étlap, minden nyelv",
+      "text": "Az IQ Rest automatikusan lefordítja az étlapodat, és a vendég nyelvén nyitja meg. Egyszer módosítasz egy árat, és minden nyelv frissül. 14 nap ingyen.",
+      "buttonLabel": "Nézd meg az automatikus fordítást",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Gyakori kérdések",
+      "items": [
+        {
+          "q": "Fordítsam le az ételneveket?",
+          "a": "Általában ne. Tartsd meg az eredeti nevet, és tegyél alá lefordított leírást. Az a vendég, aki az ételt keresi, a valódi nevén ismeri."
+        },
+        {
+          "q": "Elég a gépi fordítás egy étlaphoz?",
+          "a": "Leírásokhoz és kategóriacímekhez általában igen. Az ételneveket, húsrészeket és allergénszövegeket nézesd át anyanyelvi beszélővel — egy tipikus étlapon ez körülbelül húsz perc."
+        },
+        {
+          "q": "Hány nyelv legyen egy étlapon?",
+          "a": "Angol plusz az a két nemzetiség, amelyet valóban a leggyakrabban látsz. Nézd a foglalási adataidat találgatás helyett; a digitális étlap nyelvenként nem kerül semmibe, tehát a határ az, hányat tudsz átnézetni."
+        },
+        {
+          "q": "Hogyan kapja meg a vendég a megfelelő nyelvet?",
+          "a": "A digitális étlap kiolvassa a telefon nyelvbeállítását, és azon nyílik meg, váltóval azoknak, akik mást szeretnének. Senkinek nem kell angol étlapot kérnie."
+        },
+        {
+          "q": "És a nem latin írásrendszerek, például a japán vagy az arab?",
+          "a": "Ugyanaz a szabály plusz átírás: tartsd meg az eredeti nevet, írd át, hogy a vendég ki tudja mondani rendeléskor, majd írd le az ő nyelvén."
+        }
+      ]
+    }
+  ]
+}

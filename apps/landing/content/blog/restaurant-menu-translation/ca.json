@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "title": "Traduir la carta: què traduir i què no | IQ Rest",
+    "description": "Per què traduir automàticament els noms dels plats surt malament, quines parts de la carta han de quedar-se en l'idioma original i com portar quatre idiomes sense quatre cartes."
+  },
+  "card": {
+    "title": "Traduir la carta d'un restaurant: què es tradueix i què es deixa estar",
+    "excerpt": "«Pulpo a la gallega» no és «pop gallec». Guia pràctica per a una traducció de carta que manté els plats apetitosos i els clients informats."
+  },
+  "h1": "Traduir la carta d'un restaurant: què es tradueix i què es deixa estar",
+  "intro": "Passa la carta per un traductor genèric i obtindràs frases tècnicament correctes i comercialment inútils. Els noms dels plats són mig idioma i mig marca, i les parts que el client necessita traduïdes no són aquelles en què es fixa un traductor. Així aconsegueixes quatre idiomes que realment venen.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "La regla: tradueix l'explicació, conserva el nom"
+    },
+    {
+      "type": "p",
+      "text": "El nom d'un plat sovint és un nom propi. **Pulpo a la gallega** no es converteix en «pop gallec», igual que **Wiener Schnitzel** no es converteix en «costella vienesa» en una carta alemanya. El client que coneix el plat busca el nom original; qui no el coneix necessita una descripció a sota."
+    },
+    {
+      "type": "p",
+      "text": "Així que el patró que funciona és: **nom en l'idioma original, descripció en l'idioma del client.**"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Original",
+        "Sortida automàtica",
+        "El que funciona"
+      ],
+      "rows": [
+        [
+          "Pulpo a la gallega",
+          "Pop gallec",
+          "Pulpo a la gallega — pop amb pebre vermell, oli d'oliva i patata"
+        ],
+        [
+          "Tortilla española",
+          "Truita espanyola",
+          "Tortilla española — truita gruixuda de patata i ceba"
+        ],
+        [
+          "Vitello tonnato",
+          "Vedella tonyina",
+          "Vitello tonnato — vedella freda amb salsa de tonyina i tàperes"
+        ],
+        [
+          "Pierogi ruskie",
+          "Farcellets russos",
+          "Pierogi ruskie — farcellets polonesos de patata i mató"
+        ],
+        [
+          "Pa amb tomàquet",
+          "Pa amb tomàquet",
+          "Pa amb tomàquet — pa torrat fregat amb tomàquet i oli"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "«Vedella tonyina» és una traducció automàtica real de vitello tonnato i fa que el plat soni a error. «Farcellets russos» és pitjor que incorrecte: el plat és polonès i el nom al·ludeix a Rutènia, no a Rússia, i això genera una queixa abans que una comanda."
+    },
+    {
+      "type": "h2",
+      "text": "Les quatre parts d'una carta i com tractar-les"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Part",
+        "Enfocament"
+      ],
+      "rows": [
+        [
+          "Nom del plat",
+          "Conserva l'original; translitera en alfabets no llatins"
+        ],
+        [
+          "Descripció",
+          "Tradueix-la sencera — aquí és on es ven"
+        ],
+        [
+          "Ingredients i al·lèrgens",
+          "Tradueix amb precisió; l'exactitud passa per davant de l'elegància"
+        ],
+        [
+          "Encapçalaments de categoria",
+          "Tradueix-los (Entrants, Principals, Postres)"
+        ],
+        [
+          "Preus i unitats",
+          "No toquis mai la xifra; adapta el format (1,50 € davant de €1.50)"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Errors que et costen comandes"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Traduir les mesures literalment.** Una *ración* espanyola no és una «ració militar». Fes servir porció, o explica la mida.",
+        "**Perdre el mètode de cocció.** *A la plancha*, *al horno* i *frito* acaben tots com a «cuit» en una traducció descurada, i el client ja no distingeix els plats.",
+        "**Diminutius que sonen infantils.** *Bocadillito* és simpàtic en castellà i estrany en català. Tradueix el sentit, no el sufix.",
+        "**Perdre l'al·lergen.** Si la descripció esmenta anxova i la traducció diu «salsa saborosa», has eliminat informació de seguretat.",
+        "**Traduir malament els talls de carn.** Els termes de carnisseria no viatgen entre països. *Entrecot*, *solomillo*, *presa* i *secreto* necessiten una descripció curta, no un equivalent d'una paraula.",
+        "**Traduir el nom del teu propi restaurant.** És una marca. Deixa'l."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Quins idiomes val la pena tenir"
+    },
+    {
+      "type": "p",
+      "text": "No ho endevinis: mira d'on ve la teva clientela. El teu sistema de reserves, el país emissor de les targetes del datàfon i l'idioma del mòbil de qui escaneja el teu codi QR t'ho diuen. A la majoria de zones turístiques europees la resposta honesta és anglès més dos, i aquests dos solen ser alemany, francès o l'idioma de qui té vol directe."
+    },
+    {
+      "type": "note",
+      "text": "Un idioma mal traduït té un cost real. Un client alemany que llegeix una carta alemanya maldestra en treu una conclusió sobre la cuina. Si no pots revisar un idioma, l'anglès és més segur que una mala versió del seu."
+    },
+    {
+      "type": "h2",
+      "text": "Per què en paper això surt car i en digital no"
+    },
+    {
+      "type": "p",
+      "text": "En paper, quatre idiomes són quatre tirades, quatre jocs per emmagatzemar i quatre vegades el cost de reimprimir cada cop que canvia un preu. A la pràctica els locals imprimeixen dos idiomes, deixen els altres desfasats i donen als turistes l'anglès demanant disculpes."
+    },
+    {
+      "type": "p",
+      "text": "Una [carta digital](route:/digital-menu) capgira això. El mòbil del client ja anuncia el seu idioma, així que la carta s'obre en el correcte sense que ningú triï. IQ Rest tradueix la carta automàticament i, com que les traduccions van unides al plat, canviar un preu una vegada el canvia en tots els idiomes. Afegir un cinquè idioma no costa res ni obliga a reimprimir."
+    },
+    {
+      "type": "h2",
+      "text": "Un procés que funciona"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Escriu bé la carta original primer. Un text de partida vague produeix traduccions vagues en tots els idiomes alhora.",
+        "Dona a cada plat una descripció d'una línia, fins i tot en l'idioma original. Els clients de casa també la volen.",
+        "Deixa que el sistema ho tradueixi tot i després que un natiu llegeixi els 20 plats més venuts. Vint plats són un cafè del temps d'algú i atrapen gairebé totes les sortides vergonyoses.",
+        "Bloqueja els noms dels plats perquè no es tornin a traduir a la següent edició.",
+        "Revisa a part el text d'al·lèrgens en cada idioma: és l'únic lloc on una frase maldestra és un problema de seguretat, no d'estil."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Demana a algú del teu equip que parli l'idioma que llegeixi la carta en veu alta. Llegir en veu alta detecta el que sona artificial molt més ràpid que llegir en silenci."
+    },
+    {
+      "type": "cta",
+      "heading": "Una carta, tots els idiomes",
+      "text": "IQ Rest tradueix la teva carta automàticament i l'obre en l'idioma del client. Canvia un preu una vegada i s'actualitzen tots els idiomes. 14 dies gratis.",
+      "buttonLabel": "Veure la traducció automàtica",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Preguntes freqüents",
+      "items": [
+        {
+          "q": "Cal traduir els noms dels plats?",
+          "a": "Com a norma general, no. Conserva el nom original i afegeix una descripció traduïda a sota. El client que busca el plat el coneix pel seu nom real."
+        },
+        {
+          "q": "N'hi ha prou amb la traducció automàtica per a una carta?",
+          "a": "Per a descripcions i encapçalaments de categoria, normalment sí. Per a noms de plats, talls de carn i text d'al·lèrgens, que ho revisi un natiu: són uns vint minuts en una carta típica."
+        },
+        {
+          "q": "Quants idiomes ha de tenir una carta?",
+          "a": "Anglès més les dues nacionalitats que realment veus més. Mira les teves dades de reserves en lloc d'endevinar; una carta digital no costa res per idioma extra, així que el límit és quants pots revisar."
+        },
+        {
+          "q": "Com obté el client l'idioma correcte?",
+          "a": "Una carta digital llegeix l'idioma del mòbil i s'hi obre, amb un selector per a qui en vulgui un altre. Ningú ha de demanar la carta en anglès."
+        },
+        {
+          "q": "I els alfabets no llatins, com el japonès o l'àrab?",
+          "a": "La mateixa regla més transliteració: conserva el nom original, translitera'l perquè el client el pugui pronunciar en demanar i després descriu-lo en el seu idioma."
+        }
+      ]
+    }
+  ]
+}

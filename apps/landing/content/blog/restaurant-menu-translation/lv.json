@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "title": "Ēdienkartes tulkošana: ko tulkot un ko ne | IQ Rest",
+    "description": "Kāpēc ēdienu nosaukumu mašīntulkojums iznāk slikti, kuras ēdienkartes daļas paliek oriģinālvalodā un kā uzturēt četras valodas bez četrām ēdienkartēm."
+  },
+  "card": {
+    "title": "Restorāna ēdienkartes tulkošana: ko tulko un ko atstāj mierā",
+    "excerpt": "“Pulpo a la gallega” nav “Galisijas astoņkājis”. Praktisks ceļvedis ēdienkartes tulkošanai, kas ēdienus notur apetītlīgus, bet viesus informētus."
+  },
+  "h1": "Restorāna ēdienkartes tulkošana: ko tulko un ko atstāj mierā",
+  "intro": "Izlaid ēdienkarti caur vispārīgu tulkotāju, un dabūsi teikumus, kas ir tehniski pareizi un komerciāli bezjēdzīgi. Ēdienu nosaukumi ir pa pusei valoda un pa pusei zīmols, un tās daļas, kuras viesim vajag tulkotas, nav tās, uz kurām tulkotājs tēmē. Lūk, kā iegūt četras valodas, kas tiešām pārdod.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Noteikums: tulko skaidrojumu, saglabā nosaukumu"
+    },
+    {
+      "type": "p",
+      "text": "Ēdiena nosaukums bieži ir īpašvārds. **Pulpo a la gallega** nekļūst par “Galisijas astoņkāji”, tāpat kā **Wiener Schnitzel** vācu ēdienkartē nekļūst par “Vīnes karbonādi”. Viesis, kurš ēdienu pazīst, meklē oriģinālo nosaukumu; tas, kurš nepazīst, vajag aprakstu zem tā."
+    },
+    {
+      "type": "p",
+      "text": "Tātad strādājošā shēma ir: **nosaukums oriģinālvalodā, apraksts viesa valodā.**"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Oriģināls",
+        "Mašīnas izvade",
+        "Tas, kas strādā"
+      ],
+      "rows": [
+        [
+          "Pulpo a la gallega",
+          "Galisijas astoņkājis",
+          "Pulpo a la gallega — astoņkājis ar papriku, olīveļļu un kartupeļiem"
+        ],
+        [
+          "Tortilla española",
+          "Spāņu omlete",
+          "Tortilla española — bieza kartupeļu un sīpolu omlete"
+        ],
+        [
+          "Vitello tonnato",
+          "Teļa gaļa tuncis",
+          "Vitello tonnato — auksta teļa gaļa tunča un kaperu mērcē"
+        ],
+        [
+          "Pierogi ruskie",
+          "Krievu pelmeņi",
+          "Pierogi ruskie — poļu pīrādziņi ar kartupeļiem un biezpienu"
+        ],
+        [
+          "Pa amb tomàquet",
+          "Maize ar tomātu",
+          "Pa amb tomàquet — grauzdēta maize, ierīvēta ar tomātu un eļļu"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "“Teļa gaļa tuncis” ir īsts vitello tonnato mašīntulkojums, un ēdiens izklausās pēc kļūdas. “Krievu pelmeņi” ir sliktāk nekā nepareizi: ēdiens ir poļu, bet nosaukums atsaucas uz Rutēniju, nevis Krieviju, un tāds gadījums drīzāk rada sūdzību nekā pasūtījumu."
+    },
+    {
+      "type": "h2",
+      "text": "Ēdienkartes četras daļas un kā ar katru rīkoties"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Daļa",
+        "Pieeja"
+      ],
+      "rows": [
+        [
+          "Ēdiena nosaukums",
+          "Saglabā oriģinālu; ne latīņu rakstībā transliterē"
+        ],
+        [
+          "Apraksts",
+          "Tulko pilnībā — tieši te notiek pārdošana"
+        ],
+        [
+          "Sastāvdaļas un alergēni",
+          "Tulko precīzi; precizitāte ir svarīgāka par eleganci"
+        ],
+        [
+          "Kategoriju virsraksti",
+          "Tulko (Uzkodas, Pamatēdieni, Deserti)"
+        ],
+        [
+          "Cenas un mērvienības",
+          "Skaitli nekad neaiztiec; pielāgo formātu (1,50 € pretstatā €1.50)"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kļūdas, kas tev maksā pasūtījumus"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Mērvārdu burtiska tulkošana.** Spāņu *ración* nav “deva”. Lieto vārdu porcija vai paskaidro lielumu.",
+        "**Gatavošanas veida zaudēšana.** *A la plancha*, *al horno* un *frito* pavirša tulkojumā visi kļūst par “pagatavots”, un viesis ēdienus vairs neatšķir.",
+        "**Deminutīvi izklausās bērnišķīgi.** *Bocadillito* spāniski ir mīļš, latviski dīvains. Tulko jēgu, nevis piedēkli.",
+        "**Alergēna pazaudēšana.** Ja aprakstā minēts anšovs, bet tulkojumā rakstīts “garšīga mērce”, tu esi izņēmis drošības informāciju.",
+        "**Nepareizs gaļas izcirtņu tulkojums.** Miesnieku termini nepārceļas no valsts uz valsti viens pret vienu. *Entrecot*, *solomillo*, *presa* un *secreto* prasa īsu aprakstu, nevis viena vārda ekvivalentu.",
+        "**Sava restorāna nosaukuma tulkošana.** Tas ir zīmols. Atstāj to."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kuras valodas ir vērts"
+    },
+    {
+      "type": "p",
+      "text": "Nemini — paskaties, no kurienes nāk tavi viesi. To pasaka rezervāciju sistēma, karšu izdevējvalsts terminālī un to cilvēku telefona valoda, kuri skenē tavu QR kodu. Lielākajā daļā Eiropas tūrisma vietu godīgā atbilde ir angļu plus divas, un tās divas parasti ir vācu, franču vai to valoda, kam ir tiešais lidojums."
+    },
+    {
+      "type": "note",
+      "text": "Slikti pārtulkotai valodai ir reāla cena. Vācu viesis, kas lasa neveiklu vācu ēdienkarti, izdara secinājumu par virtuvi. Ja valodu nav kam pārbaudīt, angļu ir drošāka nekā slikta viņa paša valodas versija."
+    },
+    {
+      "type": "h2",
+      "text": "Kāpēc uz papīra tas ir dārgi, bet digitāli nav"
+    },
+    {
+      "type": "p",
+      "text": "Uz papīra četras valodas nozīmē četras tirāžas, četrus komplektus glabāšanai un četrkārtīgas atkārtotas drukas izmaksas katrā cenu maiņā. Praksē vietas izdrukā divas valodas, pārējām ļauj novecot un tūristiem atvainojoties pasniedz angļu."
+    },
+    {
+      "type": "p",
+      "text": "[Digitāla ēdienkarte](route:/digital-menu) to apgriež otrādi. Viesa telefons savu valodu tāpat paziņo, tāpēc ēdienkarte atveras pareizajā, nevienam neizvēloties. IQ Rest ēdienkarti pārtulko automātiski, un, tā kā tulkojumi ir piesaistīti pozīcijai, viena cenas maiņa maina to visās valodās. Piektās valodas pievienošana nemaksā neko un neprasa atkārtotu druku."
+    },
+    {
+      "type": "h2",
+      "text": "Process, kas strādā"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Vispirms kārtīgi uzraksti pirmavota ēdienkarti. Neskaidrs sākotnējais teksts rada neskaidrus tulkojumus visās valodās vienlaikus.",
+        "Katram ēdienam dod vienas rindas aprakstu, arī oriģinālvalodā. To grib arī vietējie viesi.",
+        "Ļauj sistēmai visu pārtulkot, tad lūdz dzimtās valodas runātāju izlasīt 20 pārdotākās pozīcijas. Divdesmit pozīcijas ir kāda cilvēka vienas kafijas laiks un noķer gandrīz visus neveiklos gadījumus.",
+        "Nofiksē ēdienu nosaukumus, lai nākamajā rediģēšanā tie netiktu tulkoti no jauna.",
+        "Alergēnu formulējumu pārbaudi atsevišķi katrā valodā — tā ir vienīgā vieta, kur neveikls teikums ir drošības, nevis stila jautājums."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Palūdz kādam no komandas, kas runā šo valodu, izlasīt ēdienkarti skaļi. Skaļa lasīšana atklāj nedabiskus formulējumus daudz ātrāk nekā klusa lasīšana."
+    },
+    {
+      "type": "cta",
+      "heading": "Viena ēdienkarte, visas valodas",
+      "text": "IQ Rest tavu ēdienkarti pārtulko automātiski un atver viesa valodā. Nomaini cenu vienreiz, un atjaunojas visas valodas. 14 dienas bez maksas.",
+      "buttonLabel": "Skatīt automātisko tulkojumu",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Biežāk uzdotie jautājumi",
+      "items": [
+        {
+          "q": "Vai ēdienu nosaukumi jātulko?",
+          "a": "Parasti nē. Saglabā oriģinālo nosaukumu un zem tā pievieno tulkotu aprakstu. Viesis, kurš ēdienu meklē, pazīst to pēc īstā vārda."
+        },
+        {
+          "q": "Vai mašīntulkojums ēdienkartei ir pietiekams?",
+          "a": "Aprakstiem un kategoriju virsrakstiem parasti jā. Ēdienu nosaukumus, gaļas izcirtņus un alergēnu formulējumus liec pārbaudīt dzimtās valodas runātājam — tipiskā ēdienkartē tās ir kādas divdesmit minūtes."
+        },
+        {
+          "q": "Cik valodu vajadzētu ēdienkartei?",
+          "a": "Angļu plus tās divas tautības, ko tiešām redzi visbiežāk. Skaties rezervāciju datus, nevis mini; digitāla ēdienkarte par papildu valodu nemaksā neko, tāpēc robeža ir tas, cik daudz vari pārbaudīt."
+        },
+        {
+          "q": "Kā viesis saņem pareizo valodu?",
+          "a": "Digitāla ēdienkarte nolasa telefona valodas iestatījumu un atveras tajā, ar pārslēgu tiem, kas vēlas citu. Nevienam nav jālūdz ēdienkarte angliski."
+        },
+        {
+          "q": "Un ne latīņu rakstības, piemēram, japāņu vai arābu?",
+          "a": "Tas pats noteikums plus transliterācija: saglabā oriģinālo nosaukumu, transliterē to, lai viesis to varētu izrunāt, pasūtot, un tad apraksti viņa valodā."
+        }
+      ]
+    }
+  ]
+}

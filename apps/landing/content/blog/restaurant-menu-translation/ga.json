@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "title": "Aistriú an bhiachláir: cad a aistrítear | IQ Rest",
+    "description": "Cén fáth a dtéann meaisínaistriú ainmneacha na miasa amú, cé na codanna den bhiachlár a fhanann sa bhunteanga, agus conas ceithre theanga a rith gan ceithre bhiachlár."
+  },
+  "card": {
+    "title": "Biachlár bialainne a aistriú: cad a aistríonn tú agus cad a fhágann tú",
+    "excerpt": "Ní \"ochtapas Gailíseach\" é \"Pulpo a la gallega\". Treoir phraiticiúil d'aistriú biachláir a choinníonn na miasa mealltach agus na haíonna eolach."
+  },
+  "h1": "Biachlár bialainne a aistriú: cad a aistríonn tú agus cad a fhágann tú",
+  "intro": "Cuir an biachlár trí ghnáth-aistritheoir agus gheobhaidh tú abairtí atá ceart go teicniúil agus gan mhaith ó thaobh díolacháin. Is leathteanga agus leathbhranda iad ainmneacha miasa, agus ní hiad na codanna a theastaíonn ón aoi aistrithe na codanna a ndíríonn aistritheoir orthu. Seo mar a gheobhaidh tú ceithre theanga a dhíolann i ndáiríre.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "An riail: aistrigh an míniú, coinnigh an t-ainm"
+    },
+    {
+      "type": "p",
+      "text": "Is minic gur ainm dílis é ainm méise. Ní éiríonn **Pulpo a la gallega** ina \"ochtapas Gailíseach\", ná ní éiríonn **Wiener Schnitzel** ina \"gearrthóg Víneach\" ar bhiachlár Gearmáinise. An t-aoi a bhfuil aithne aige ar an mias, tá sé ag lorg an bhunainm; an té nach bhfuil, teastaíonn cur síos faoi."
+    },
+    {
+      "type": "p",
+      "text": "Mar sin is é an patrún a oibríonn: **ainm sa bhunteanga, cur síos i dteanga an aoi.**"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Bunleagan",
+        "Aschur meaisín",
+        "An rud a oibríonn"
+      ],
+      "rows": [
+        [
+          "Pulpo a la gallega",
+          "Ochtapas Gailíseach",
+          "Pulpo a la gallega — ochtapas le paiprice, ola olóige agus práta"
+        ],
+        [
+          "Tortilla española",
+          "Uibheagán Spáinneach",
+          "Tortilla española — uibheagán tiubh prátaí agus oinniún"
+        ],
+        [
+          "Vitello tonnato",
+          "Laofheoil tuinnín",
+          "Vitello tonnato — laofheoil fhuar le hanlann tuinnín agus caprais"
+        ],
+        [
+          "Pierogi ruskie",
+          "Dumplings Rúiseacha",
+          "Pierogi ruskie — dumplings Polannacha le práta agus gruth"
+        ],
+        [
+          "Pa amb tomàquet",
+          "Arán le trátaí",
+          "Pa amb tomàquet — arán tósta cuimilte le trátaí agus ola"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Is fíor-mheaisínaistriúchán ar vitello tonnato é \"laofheoil tuinnín\" agus fágann sé go gcloistear an mhias mar bhotún. Tá \"dumplings Rúiseacha\" níos measa ná mícheart: is mias Pholannach í agus tagraíonn an t-ainm don Rúitéin, ní don Rúis, rud a chothaíonn gearán seachas ordú."
+    },
+    {
+      "type": "h2",
+      "text": "Ceithre chuid an bhiachláir agus conas déileáil le gach ceann"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Cuid",
+        "Cur chuige"
+      ],
+      "rows": [
+        [
+          "Ainm na méise",
+          "Coinnigh an bunleagan; traslitrigh i gcás scripteanna neamh-Laidine"
+        ],
+        [
+          "Cur síos",
+          "Aistrigh go hiomlán — is anseo a dhéantar an díol"
+        ],
+        [
+          "Comhábhair agus ailléirginí",
+          "Aistrigh go beacht; buann cruinneas ar chruth"
+        ],
+        [
+          "Ceannteidil chatagóirí",
+          "Aistrigh (Cúrsaí tosaigh, Príomhchúrsaí, Milseoga)"
+        ],
+        [
+          "Praghsanna agus aonaid",
+          "Ná bain leis an bhfigiúr riamh; oiriúnaigh an fhormáid (€1.50 in aghaidh 1,50 €)"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Botúin a chosnaíonn orduithe ort"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Focail tomhais a aistriú go litriúil.** Ní \"ciondáil\" é *ración* na Spáinne. Bain úsáid as cuid, nó mínigh an méid.",
+        "**An modh cócaireachta a chailleadh.** Éiríonn *a la plancha*, *al horno* agus *frito* uile ina \"cócaráilte\" in aistriúchán míchúramach, agus ní féidir leis an aoi na miasa a idirdhealú a thuilleadh.",
+        "**Fuaimníonn díspeagthaí páistiúil.** Tá *bocadillito* gleoite sa Spáinnis, aisteach sa Ghaeilge. Aistrigh an chiall, ní an iarmhír.",
+        "**An ailléirgin a chailleadh.** Má luann an cur síos ainseabhaí agus má deir an t-aistriúchán \"anlann blasta\", bhain tú eolas sábháilteachta amach.",
+        "**Gearrthacha feola a aistriú mícheart.** Ní aistríonn téarmaí búistéireachta ó thír go tír. Teastaíonn cur síos gearr ó *entrecot*, *solomillo*, *presa* agus *secreto*, ní coibhéis aonfhocail.",
+        "**Ainm do bhialainne féin a aistriú.** Branda atá ann. Fág é."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Cé na teangacha is fiú a bheith agat"
+    },
+    {
+      "type": "p",
+      "text": "Ná déan buille faoi thuairim — féach cad as a dtagann do chuid aíonna. Insíonn do chóras áirithintí, tír eisiúna na gcártaí ar do theirminéal, agus teanga fóin na ndaoine a scanann do chód QR duit é. I bhformhór na gceantar turasóireachta san Eoraip is é an freagra macánta Béarla móide dhá cheann, agus is gnách gurb iad sin Gearmáinis, Fraincis nó teanga na ndaoine a bhfuil an eitilt dhíreach acu."
+    },
+    {
+      "type": "note",
+      "text": "Tá fíorchostas ag baint le teanga a aistrítear go dona. Baineann aoi Gearmánach a léann biachlár Gearmáinise ciotach conclúid as faoin gcistin. Mura féidir leat teanga a sheiceáil, tá an Béarla níos sábháilte ná droch-leagan dá theanga féin."
+    },
+    {
+      "type": "h2",
+      "text": "Cén fáth a bhfuil sé seo costasach ar pháipéar agus nach bhfuil go digiteach"
+    },
+    {
+      "type": "p",
+      "text": "Ar pháipéar ciallaíonn ceithre theanga ceithre rith priontála, ceithre shraith le stóráil, agus ceithre oiread costais athphriontála gach uair a athraíonn praghas. Go praiticiúil priontálann áiteanna dhá theanga, ligeann siad do na cinn eile dul as dáta, agus síneann siad an ceann Béarla chuig turasóirí agus leithscéal á ghabháil."
+    },
+    {
+      "type": "p",
+      "text": "Athraíonn [biachlár digiteach](route:/digital-menu) an scéal. Fógraíonn fón an aoi a theanga cheana féin, mar sin osclaíonn an biachlár sa cheann ceart gan aon duine a roghnú. Aistríonn IQ Rest an biachlár go huathoibríoch, agus toisc go bhfuil na haistriúcháin ceangailte den mhír, athraíonn athrú praghais amháin gach teanga. Ní chosnaíonn cúigiú teanga faic agus ní éilíonn sí athphriontáil."
+    },
+    {
+      "type": "h2",
+      "text": "Próiseas atá inoibrithe"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Scríobh an biachlár foinseach i gceart ar dtús. Cruthaíonn téacs foinseach doiléir aistriúcháin dhoiléire i ngach teanga in éineacht.",
+        "Tabhair cur síos aonlíne do gach mias, fiú sa bhunteanga. Tá sé uaidh ó na haíonna áitiúla freisin.",
+        "Lig don chóras gach rud a aistriú, agus ansin cuir cainteoir dúchais ag léamh na 20 mír is mó díolachán. Is fiú caife amháin d'am duine é fiche mír agus beireann sé ar bheagnach gach aschur náireach.",
+        "Glasáil ainmneacha na miasa ionas nach n-aistreofar arís iad ag an gcéad athrú eile.",
+        "Seiceáil foclaíocht na n-ailléirginí ar leithligh i ngach teanga — is é an t-aon áit ina bhfuil frása ciotach ina fhadhb sábháilteachta seachas stíle."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Iarr ar dhuine den fhoireann a labhraíonn an teanga an biachlár a léamh os ard. Beireann léamh os ard ar fhoclaíocht mhínádúrtha i bhfad níos tapúla ná léamh ciúin."
+    },
+    {
+      "type": "cta",
+      "heading": "Biachlár amháin, gach teanga",
+      "text": "Aistríonn IQ Rest do bhiachlár go huathoibríoch agus osclaíonn sé i dteanga an aoi é. Athraigh praghas uair amháin agus nuashonraítear gach teanga. 14 lá saor in aisce.",
+      "buttonLabel": "Féach ar an aistriúchán uathoibríoch",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Ceisteanna coitianta",
+      "items": [
+        {
+          "q": "Ar cheart dom ainmneacha na miasa a aistriú?",
+          "a": "De ghnáth níor cheart. Coinnigh an bunainm agus cuir cur síos aistrithe faoi. Tá aithne ag an aoi a lorgaíonn an mhias uirthi faoina fíorainm."
+        },
+        {
+          "q": "An leor meaisínaistriúchán do bhiachlár?",
+          "a": "Do chur síos agus do cheannteidil chatagóirí, is leor de ghnáth. Cuir cainteoir dúchais ag seiceáil ainmneacha miasa, gearrthacha feola agus foclaíocht ailléirgine — thart ar fiche nóiméad athbhreithnithe é sin ar ghnáthbhiachlár."
+        },
+        {
+          "q": "Cé mhéad teanga ba chóir a bheith ar bhiachlár?",
+          "a": "Béarla móide an dá náisiúntacht is mó a fheiceann tú i ndáiríre. Féach ar do shonraí áirithintí seachas buille faoi thuairim a thabhairt; ní chosnaíonn biachlár digiteach faic in aghaidh na teanga breise, mar sin is é an teorainn cé mhéad is féidir leat a athbhreithniú."
+        },
+        {
+          "q": "Conas a fhaigheann an t-aoi an teanga cheart?",
+          "a": "Léann biachlár digiteach socrú teanga an fhóin agus osclaíonn sé inti, le roghnóir dóibh siúd ar mian leo ceann eile. Ní gá d'aon duine an biachlár Béarla a iarraidh."
+        },
+        {
+          "q": "Cad faoi scripteanna neamh-Laidine, cosúil le Seapáinis nó Araibis?",
+          "a": "An riail chéanna móide traslitriú: coinnigh an bunainm, traslitrigh é ionas gur féidir leis an aoi é a fhuaimniú agus é ag ordú, agus ansin déan cur síos air ina theanga féin."
+        }
+      ]
+    }
+  ]
+}

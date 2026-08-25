@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "title": "Traduzir o menu: o que traduzir e o que não | IQ Rest",
+    "description": "Porque traduzir automaticamente os nomes dos pratos corre mal, que partes do menu devem ficar no idioma original e como ter quatro idiomas sem quatro menus."
+  },
+  "card": {
+    "title": "Traduzir o menu de um restaurante: o que se traduz e o que se deixa em paz",
+    "excerpt": "«Pulpo a la gallega» não é «polvo galego». Guia prático para uma tradução de menu que mantém os pratos apetecíveis e os clientes informados."
+  },
+  "h1": "Traduzir o menu de um restaurante: o que se traduz e o que se deixa em paz",
+  "intro": "Passe o menu por um tradutor genérico e vai obter frases tecnicamente corretas e comercialmente inúteis. Os nomes dos pratos são metade idioma e metade marca, e as partes que o cliente precisa de ver traduzidas não são aquelas em que um tradutor se foca. Eis como conseguir quatro idiomas que realmente vendem.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "A regra: traduza a explicação, mantenha o nome"
+    },
+    {
+      "type": "p",
+      "text": "O nome de um prato é muitas vezes um nome próprio. **Pulpo a la gallega** não se torna «polvo galego», tal como **Wiener Schnitzel** não se torna «escalope vienense» num menu alemão. O cliente que conhece o prato procura o nome original; quem não o conhece precisa de uma descrição por baixo."
+    },
+    {
+      "type": "p",
+      "text": "O padrão que funciona é portanto: **nome no idioma original, descrição no idioma do cliente.**"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Original",
+        "Saída automática",
+        "O que funciona"
+      ],
+      "rows": [
+        [
+          "Pulpo a la gallega",
+          "Polvo galego",
+          "Pulpo a la gallega — polvo com colorau, azeite e batata"
+        ],
+        [
+          "Tortilla española",
+          "Omelete espanhola",
+          "Tortilla española — omelete grossa de batata e cebola"
+        ],
+        [
+          "Vitello tonnato",
+          "Vitela atum",
+          "Vitello tonnato — vitela fria com molho de atum e alcaparras"
+        ],
+        [
+          "Pierogi ruskie",
+          "Rissóis russos",
+          "Pierogi ruskie — pastéis polacos de batata e requeijão"
+        ],
+        [
+          "Pa amb tomàquet",
+          "Pão com tomate",
+          "Pa amb tomàquet — pão torrado esfregado com tomate e azeite"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "«Vitela atum» é uma tradução automática real de vitello tonnato e faz o prato soar a engano. «Rissóis russos» é pior do que errado: o prato é polaco e o nome remete para a Rutênia, não para a Rússia, e isso gera uma reclamação antes de um pedido."
+    },
+    {
+      "type": "h2",
+      "text": "As quatro partes de um menu e como tratar cada uma"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Parte",
+        "Abordagem"
+      ],
+      "rows": [
+        [
+          "Nome do prato",
+          "Mantenha o original; translitere em alfabetos não latinos"
+        ],
+        [
+          "Descrição",
+          "Traduza por inteiro — é aqui que se vende"
+        ],
+        [
+          "Ingredientes e alergénios",
+          "Traduza com precisão; a exatidão vale mais do que a elegância"
+        ],
+        [
+          "Títulos de categoria",
+          "Traduza (Entradas, Pratos principais, Sobremesas)"
+        ],
+        [
+          "Preços e unidades",
+          "Nunca mexa no número; adapte o formato (1,50 € em vez de €1.50)"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Erros que lhe custam pedidos"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Traduzir as medidas à letra.** Uma *ración* espanhola não é uma «ração». Use dose, ou explique o tamanho.",
+        "**Perder o método de cozinha.** *A la plancha*, *al horno* e *frito* tornam-se todos «cozinhado» numa tradução descuidada, e o cliente deixa de distinguir os pratos.",
+        "**Diminutivos que soam infantis.** *Bocadillito* é simpático em espanhol e estranho em português. Traduza o sentido, não o sufixo.",
+        "**Perder o alergénio.** Se a descrição menciona anchova e a tradução diz «molho saboroso», eliminou informação de segurança.",
+        "**Traduzir mal os cortes de carne.** Os termos de talho não passam de país para país. *Entrecot*, *solomillo*, *presa* e *secreto* precisam de uma descrição curta, não de um equivalente numa palavra.",
+        "**Traduzir o nome do seu restaurante.** É uma marca. Deixe-o."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Que idiomas valem a pena"
+    },
+    {
+      "type": "p",
+      "text": "Não adivinhe: veja de onde vêm os seus clientes. O seu sistema de reservas, o país emissor dos cartões no seu terminal e o idioma do telemóvel de quem lê o seu código QR dizem-lhe. Na maioria das zonas turísticas europeias a resposta honesta é inglês mais dois, e esses dois costumam ser alemão, francês ou o idioma de quem tem o voo direto."
+    },
+    {
+      "type": "note",
+      "text": "Um idioma mal traduzido tem um custo real. Um cliente alemão que lê um menu alemão desajeitado tira daí uma conclusão sobre a cozinha. Se não conseguir rever um idioma, o inglês é mais seguro do que uma má versão do dele."
+    },
+    {
+      "type": "h2",
+      "text": "Porque em papel isto sai caro e em digital não"
+    },
+    {
+      "type": "p",
+      "text": "Em papel, quatro idiomas são quatro tiragens, quatro conjuntos para guardar e quatro vezes o custo de reimpressão sempre que um preço muda. Na prática os espaços imprimem dois idiomas, deixam os outros desatualizados e entregam o inglês aos turistas a pedir desculpa."
+    },
+    {
+      "type": "p",
+      "text": "Um [menu digital](route:/digital-menu) inverte isso. O telemóvel do cliente já anuncia o idioma, portanto o menu abre no correto sem ninguém escolher. O IQ Rest traduz o menu automaticamente e, como as traduções estão ligadas ao prato, mudar um preço uma vez muda-o em todos os idiomas. Acrescentar um quinto idioma não custa nada nem obriga a reimprimir."
+    },
+    {
+      "type": "h2",
+      "text": "Um processo que resulta"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Escreva primeiro bem o menu de origem. Um texto de partida vago produz traduções vagas em todos os idiomas ao mesmo tempo.",
+        "Dê a cada prato uma descrição de uma linha, mesmo no idioma original. Os clientes locais também a querem.",
+        "Deixe o sistema traduzir tudo e depois peça a um falante nativo que leia os 20 mais vendidos. Vinte pratos são um café do tempo de alguém e apanham quase todas as saídas embaraçosas.",
+        "Bloqueie os nomes dos pratos para não voltarem a ser traduzidos na edição seguinte.",
+        "Verifique à parte o texto dos alergénios em cada idioma: é o único sítio onde uma frase desajeitada é um problema de segurança e não de estilo."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Peça a alguém da sua equipa que fale o idioma para ler o menu em voz alta. Ler em voz alta apanha frases artificiais muito mais depressa do que ler em silêncio."
+    },
+    {
+      "type": "cta",
+      "heading": "Um menu, todos os idiomas",
+      "text": "O IQ Rest traduz o seu menu automaticamente e abre-o no idioma do cliente. Muda um preço uma vez e todos os idiomas ficam atualizados. 14 dias grátis.",
+      "buttonLabel": "Ver a tradução automática",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Perguntas frequentes",
+      "items": [
+        {
+          "q": "Devo traduzir os nomes dos pratos?",
+          "a": "Regra geral, não. Mantenha o nome original e acrescente uma descrição traduzida por baixo. O cliente que procura o prato conhece-o pelo nome verdadeiro."
+        },
+        {
+          "q": "A tradução automática chega para um menu?",
+          "a": "Para descrições e títulos de categoria, normalmente sim. Para nomes de pratos, cortes de carne e texto de alergénios, peça revisão a um nativo — num menu típico são cerca de vinte minutos."
+        },
+        {
+          "q": "Quantos idiomas deve ter um menu?",
+          "a": "Inglês mais as duas nacionalidades que mais vê realmente. Veja os dados de reservas em vez de adivinhar; um menu digital não custa nada por idioma extra, portanto o limite é quantos consegue rever."
+        },
+        {
+          "q": "Como é que o cliente recebe o idioma certo?",
+          "a": "Um menu digital lê a definição de idioma do telemóvel e abre nesse idioma, com um seletor para quem quiser outro. Ninguém tem de pedir o menu em inglês."
+        },
+        {
+          "q": "E os alfabetos não latinos, como japonês ou árabe?",
+          "a": "A mesma regra, mais transliteração: mantenha o nome original, translitere-o para o cliente o conseguir pronunciar ao pedir e depois descreva-o no idioma dele."
+        }
+      ]
+    }
+  ]
+}

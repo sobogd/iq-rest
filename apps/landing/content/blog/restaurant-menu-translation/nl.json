@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "title": "Menukaart vertalen: wat wel en wat niet | IQ Rest",
+    "description": "Waarom machinaal vertaalde gerechtnamen misgaan, welke delen van de kaart in de oorspronkelijke taal blijven, en hoe je vier talen draait zonder vier kaarten."
+  },
+  "card": {
+    "title": "Een menukaart vertalen: wat je vertaalt en wat je met rust laat",
+    "excerpt": "\"Pulpo a la gallega\" is geen \"Galicische octopus\". Praktische gids voor menuvertalingen die gerechten smakelijk en gasten geïnformeerd houden."
+  },
+  "h1": "Een menukaart vertalen: wat je vertaalt en wat je met rust laat",
+  "intro": "Haal de kaart door een algemene vertaler en je krijgt zinnen die technisch kloppen en commercieel waardeloos zijn. Gerechtnamen zijn half taal, half merk, en de delen die de gast vertaald nodig heeft, zijn niet de delen waar een vertaler op mikt. Zo krijg je vier talen die echt verkopen.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "De regel: vertaal de uitleg, houd de naam"
+    },
+    {
+      "type": "p",
+      "text": "Een gerechtnaam is vaak een eigennaam. **Pulpo a la gallega** wordt geen \"Galicische octopus\", net zomin als **Wiener Schnitzel** op een Duitse kaart \"Weense kotelet\" wordt. De gast die het gerecht kent, zoekt de oorspronkelijke naam; wie het niet kent, heeft een omschrijving eronder nodig."
+    },
+    {
+      "type": "p",
+      "text": "Het werkende patroon is dus: **naam in de oorspronkelijke taal, omschrijving in de taal van de gast.**"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Origineel",
+        "Machine-uitvoer",
+        "Wat wel werkt"
+      ],
+      "rows": [
+        [
+          "Pulpo a la gallega",
+          "Galicische octopus",
+          "Pulpo a la gallega — octopus met paprikapoeder, olijfolie en aardappel"
+        ],
+        [
+          "Tortilla española",
+          "Spaanse omelet",
+          "Tortilla española — dikke omelet van aardappel en ui"
+        ],
+        [
+          "Vitello tonnato",
+          "Kalf tonijn",
+          "Vitello tonnato — koud kalfsvlees met tonijn-kappertjessaus"
+        ],
+        [
+          "Pierogi ruskie",
+          "Russische deegpakketjes",
+          "Pierogi ruskie — Poolse deegpakketjes met aardappel en kwark"
+        ],
+        [
+          "Pa amb tomàquet",
+          "Brood met tomaat",
+          "Pa amb tomàquet — geroosterd brood ingewreven met tomaat en olie"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "\"Kalf tonijn\" is een echte machinevertaling van vitello tonnato en laat het gerecht als een vergissing klinken. \"Russische deegpakketjes\" is erger dan fout: het gerecht is Pools en de naam verwijst naar Roethenië, niet naar Rusland, en dat levert eerder een klacht op dan een bestelling."
+    },
+    {
+      "type": "h2",
+      "text": "De vier delen van een kaart en hoe je ze aanpakt"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Onderdeel",
+        "Aanpak"
+      ],
+      "rows": [
+        [
+          "Gerechtnaam",
+          "Origineel houden; translitereren bij niet-Latijns schrift"
+        ],
+        [
+          "Omschrijving",
+          "Volledig vertalen — hier wordt verkocht"
+        ],
+        [
+          "Ingrediënten en allergenen",
+          "Nauwkeurig vertalen; juistheid gaat boven elegantie"
+        ],
+        [
+          "Categoriekoppen",
+          "Vertalen (Voorgerechten, Hoofdgerechten, Desserts)"
+        ],
+        [
+          "Prijzen en eenheden",
+          "Nooit aan het getal komen; wel de notatie aanpassen (€ 1,50 tegenover €1.50)"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Fouten die je bestellingen kosten"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Maatwoorden letterlijk vertalen.** Een Spaanse *ración* is geen \"rantsoen\". Gebruik portie, of leg de omvang uit.",
+        "**De bereidingswijze verliezen.** *A la plancha*, *al horno* en *frito* worden bij een slordige vertaling allemaal \"bereid\", en de gast kan de gerechten niet meer onderscheiden.",
+        "**Verkleinwoorden klinken kinderachtig.** *Bocadillito* is charmant in het Spaans, raar in het Nederlands. Vertaal de betekenis, niet het achtervoegsel.",
+        "**Het allergeen laten vallen.** Als de omschrijving ansjovis noemt en de vertaling \"hartige saus\" zegt, heb je veiligheidsinformatie verwijderd.",
+        "**Vleesdelen verkeerd vertalen.** Slagerstermen lopen niet één op één over landsgrenzen. *Entrecot*, *solomillo*, *presa* en *secreto* hebben een korte omschrijving nodig, geen equivalent van één woord.",
+        "**De naam van je eigen restaurant vertalen.** Dat is een merk. Laat staan."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Welke talen de moeite waard zijn"
+    },
+    {
+      "type": "p",
+      "text": "Niet gokken: kijk waar je gasten vandaan komen. Je reserveringssysteem, het uitgifteland van de kaarten op je pinautomaat en de telefoontaal van wie je QR-code scant vertellen het je. In de meeste Europese toeristengebieden is het eerlijke antwoord Engels plus twee, en die twee zijn meestal Duits, Frans of de taal van wie de directe vlucht heeft."
+    },
+    {
+      "type": "note",
+      "text": "Een slecht vertaalde taal kost echt geld. Een Duitse gast die een houterige Duitse kaart leest, trekt daar een conclusie uit over de keuken. Kun je een taal niet laten nakijken, dan is Engels veiliger dan een slechte versie van de zijne."
+    },
+    {
+      "type": "h2",
+      "text": "Waarom papier dit duur maakt en digitaal niet"
+    },
+    {
+      "type": "p",
+      "text": "Op papier betekenen vier talen vier oplagen, vier sets om op te bergen en vier keer de herdrukkosten bij elke prijswijziging. In de praktijk drukken zaken twee talen, laten ze de andere verouderen en geven ze toeristen verontschuldigend de Engelse."
+    },
+    {
+      "type": "p",
+      "text": "Een [digitaal menu](route:/digital-menu) keert dat om. De telefoon van de gast meldt zijn taal al, dus opent de kaart in de juiste zonder dat iemand kiest. IQ Rest vertaalt de kaart automatisch en omdat vertalingen aan het gerecht hangen, verandert één prijswijziging alle talen. Een vijfde taal toevoegen kost niets en vraagt geen herdruk."
+    },
+    {
+      "type": "h2",
+      "text": "Een werkbaar proces"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Schrijf eerst de brontekst goed. Vage brontekst levert vage vertalingen op in alle talen tegelijk.",
+        "Geef elk gerecht een omschrijving van één regel, ook in de oorspronkelijke taal. Je vaste gasten willen die ook.",
+        "Laat het systeem alles vertalen en laat daarna een moedertaalspreker de twintig bestsellers lezen. Twintig gerechten kosten iemand één koffie aan tijd en vangen bijna alle gênante uitschieters op.",
+        "Zet gerechtnamen op slot zodat ze bij de volgende wijziging niet opnieuw vertaald worden.",
+        "Controleer de allergenenformulering apart in elke taal: dat is de enige plek waar een houterige zin een veiligheidsprobleem is en geen stijlprobleem."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Vraag iemand uit je team die de taal spreekt de kaart hardop voor te lezen. Hardop lezen vindt onnatuurlijke formuleringen veel sneller dan stil lezen."
+    },
+    {
+      "type": "cta",
+      "heading": "Eén kaart, alle talen",
+      "text": "IQ Rest vertaalt je kaart automatisch en opent hem in de taal van de gast. Wijzig één keer een prijs en alle talen zijn bij. 14 dagen gratis.",
+      "buttonLabel": "Bekijk de automatische vertaling",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Veelgestelde vragen",
+      "items": [
+        {
+          "q": "Moet ik gerechtnamen vertalen?",
+          "a": "Meestal niet. Houd de oorspronkelijke naam en zet er een vertaalde omschrijving onder. Gasten die het gerecht zoeken, kennen het onder zijn echte naam."
+        },
+        {
+          "q": "Is machinevertaling goed genoeg voor een kaart?",
+          "a": "Voor omschrijvingen en categoriekoppen doorgaans wel. Laat gerechtnamen, vleesdelen en allergenenformuleringen door een moedertaalspreker nakijken — bij een gemiddelde kaart is dat zo'n twintig minuten."
+        },
+        {
+          "q": "Hoeveel talen moet een kaart hebben?",
+          "a": "Engels plus de twee nationaliteiten die je werkelijk het vaakst ziet. Kijk naar je reserveringsdata in plaats van te gokken; een digitaal menu kost niets per extra taal, dus de grens is hoeveel je kunt nakijken."
+        },
+        {
+          "q": "Hoe krijgt een gast de juiste taal?",
+          "a": "Een digitaal menu leest de taalinstelling van de telefoon en opent daarin, met een keuzeschakelaar voor wie een andere wil. Niemand hoeft om de Engelse kaart te vragen."
+        },
+        {
+          "q": "En niet-Latijnse schriften, zoals Japans of Arabisch?",
+          "a": "Dezelfde regel plus transliteratie: houd de oorspronkelijke naam, translitereer hem zodat de gast hem kan uitspreken bij het bestellen, en beschrijf hem daarna in zijn taal."
+        }
+      ]
+    }
+  ]
+}

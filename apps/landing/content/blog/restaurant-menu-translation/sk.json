@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "title": "Preklad jedálneho lístka: čo prekladať a čo nie | IQ Rest",
+    "description": "Prečo strojový preklad názvov jedál dopadá zle, ktoré časti lístka majú zostať v pôvodnom jazyku a ako viesť štyri jazyky bez štyroch lístkov."
+  },
+  "card": {
+    "title": "Preklad jedálneho lístka: čo sa prekladá a čo sa nechá tak",
+    "excerpt": "„Pulpo a la gallega“ nie je „galícijská chobotnica“. Praktický návod na preklad lístka, pri ktorom jedlá zostanú lákavé a hostia informovaní."
+  },
+  "h1": "Preklad jedálneho lístka: čo sa prekladá a čo sa nechá tak",
+  "intro": "Prežeňte lístok všeobecným prekladačom a dostanete vety technicky správne a obchodne nepoužiteľné. Názvy jedál sú napoly jazyk a napoly značka, a tie časti, ktoré hosť potrebuje preložiť, nie sú tie, na ktoré prekladač mieri. Takto získate štyri jazyky, ktoré naozaj predávajú.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Pravidlo: preložte vysvetlenie, názov nechajte"
+    },
+    {
+      "type": "p",
+      "text": "Názov jedla býva vlastné meno. **Pulpo a la gallega** sa nemení na „galícijskú chobotnicu“, rovnako ako sa **Wiener Schnitzel** na nemeckom lístku nemení na „viedenský rezeň“. Hosť, ktorý jedlo pozná, hľadá pôvodný názov; ten, kto ho nepozná, potrebuje popis pod ním."
+    },
+    {
+      "type": "p",
+      "text": "Fungujúci vzorec teda znie: **názov v pôvodnom jazyku, popis v jazyku hosťa.**"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Originál",
+        "Strojový výstup",
+        "Čo funguje"
+      ],
+      "rows": [
+        [
+          "Pulpo a la gallega",
+          "Galícijská chobotnica",
+          "Pulpo a la gallega — chobotnica s paprikou, olivovým olejom a zemiakom"
+        ],
+        [
+          "Tortilla española",
+          "Španielska omeleta",
+          "Tortilla española — hustá zemiakovo-cibuľová omeleta"
+        ],
+        [
+          "Vitello tonnato",
+          "Teľacie tuniak",
+          "Vitello tonnato — studené teľacie v omáčke z tuniaka a kaparov"
+        ],
+        [
+          "Pierogi ruskie",
+          "Ruské pirohy",
+          "Pierogi ruskie — poľské pirohy so zemiakmi a tvarohom"
+        ],
+        [
+          "Pa amb tomàquet",
+          "Chlieb s paradajkou",
+          "Pa amb tomàquet — opečený chlieb natretý paradajkou a olejom"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "„Teľacie tuniak“ je skutočný strojový preklad vitello tonnato a robí z jedla omyl. „Ruské pirohy“ sú horšie než chybné: jedlo je poľské a názov odkazuje na Rus, nie na Rusko, a takéto veci plodia skôr sťažnosť než objednávku."
+    },
+    {
+      "type": "h2",
+      "text": "Štyri časti lístka a ako s každou naložiť"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Časť",
+        "Prístup"
+      ],
+      "rows": [
+        [
+          "Názov jedla",
+          "Nechajte originál; pri nelatinských písmach prepisujte"
+        ],
+        [
+          "Popis",
+          "Preložte celý — tu sa predáva"
+        ],
+        [
+          "Suroviny a alergény",
+          "Prekladajte presne; presnosť víťazí nad eleganciou"
+        ],
+        [
+          "Nadpisy kategórií",
+          "Preložte (Predjedlá, Hlavné jedlá, Dezerty)"
+        ],
+        [
+          "Ceny a jednotky",
+          "Číslo nikdy nemeňte; prispôsobte formát (1,50 € oproti €1.50)"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Chyby, ktoré vás stoja objednávky"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Doslovný preklad mier.** Španielska *ración* nie je „dávka“. Použite porciu alebo veľkosť popíšte.",
+        "**Strata spôsobu prípravy.** *A la plancha*, *al horno* aj *frito* sa v nedbalom preklade zmenia na „pripravené“ a hosť už jedlá nerozlíši.",
+        "**Zdrobneniny znejú detinsky.** *Bocadillito* je po španielsky milé, po slovensky čudné. Prekladajte zmysel, nie príponu.",
+        "**Vypadnutý alergén.** Ak popis spomína ančovičku a preklad hovorí „pikantná omáčka“, odstránili ste bezpečnostnú informáciu.",
+        "**Zlý preklad mäsových výrezov.** Mäsiarske termíny sa medzi krajinami neprenášajú jeden k jednému. *Entrecot*, *solomillo*, *presa* a *secreto* potrebujú krátky popis, nie jednoslovný ekvivalent.",
+        "**Prekladanie názvu vlastnej reštaurácie.** To je značka. Nechajte ju."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Ktoré jazyky sa oplatia"
+    },
+    {
+      "type": "p",
+      "text": "Nehádajte — pozrite sa, odkiaľ vaši hostia prichádzajú. Povie vám to rezervačný systém, krajina vydania kariet na termináli aj jazyk telefónu tých, čo skenujú váš QR kód. Vo väčšine európskych turistických lokalít je poctivá odpoveď angličtina plus dva, a tie dva bývajú nemčina, francúzština alebo jazyk tých, čo majú priamy let."
+    },
+    {
+      "type": "note",
+      "text": "Zle preložený jazyk má reálnu cenu. Nemecký hosť, ktorý číta kostrbatý nemecký lístok, si z toho urobí záver o kuchyni. Ak nemáte kto jazyk skontrolovať, angličtina je bezpečnejšia než zlá verzia jeho vlastného."
+    },
+    {
+      "type": "h2",
+      "text": "Prečo je to na papieri drahé a digitálne nie"
+    },
+    {
+      "type": "p",
+      "text": "Na papieri znamenajú štyri jazyky štyri náklady, štyri sady na uskladnenie a štvornásobnú dotlač pri každej zmene ceny. V praxi podniky tlačia dva jazyky, ostatné nechajú zastarať a turistom podávajú anglický s ospravedlnením."
+    },
+    {
+      "type": "p",
+      "text": "[Digitálne menu](route:/digital-menu) to obracia. Telefón hosťa svoj jazyk aj tak hlási, takže sa lístok otvorí v správnom bez toho, aby ktokoľvek vyberal. IQ Rest prekladá lístok automaticky, a keďže preklady visia na položke, jediná zmena ceny ju zmení vo všetkých jazykoch. Pridať piaty jazyk nestojí nič a nevyžaduje dotlač."
+    },
+    {
+      "type": "h2",
+      "text": "Postup, ktorý drží"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Najprv poriadne napíšte zdrojový lístok. Hmlistý zdrojový text vyrobí hmlisté preklady vo všetkých jazykoch naraz.",
+        "Dajte každému jedlu jednoriadkový popis, aj v pôvodnom jazyku. Chcú ho aj domáci hostia.",
+        "Nechajte systém preložiť všetko a potom nech rodený hovorca prečíta 20 najpredávanejších položiek. Dvadsať položiek je jedna niečia káva času a odchytí takmer všetky trápne výstupy.",
+        "Zamknite názvy jedál, aby sa pri ďalšej úprave znova nepreložili.",
+        "Formulácie o alergénoch skontrolujte v každom jazyku zvlášť — je to jediné miesto, kde je kostrbatá veta bezpečnostný, a nie štylistický problém."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Požiadajte niekoho z tímu, kto ten jazyk vie, nech lístok prečíta nahlas. Čítanie nahlas odhalí neprirodzené formulácie oveľa rýchlejšie než čítanie potichu."
+    },
+    {
+      "type": "cta",
+      "heading": "Jedno menu, všetky jazyky",
+      "text": "IQ Rest preloží váš lístok automaticky a otvorí ho v jazyku hosťa. Zmeníte cenu raz a aktualizujú sa všetky jazyky. 14 dní zadarmo.",
+      "buttonLabel": "Pozrieť automatický preklad",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Časté otázky",
+      "items": [
+        {
+          "q": "Mám prekladať názvy jedál?",
+          "a": "Spravidla nie. Nechajte pôvodný názov a pod neho dajte preložený popis. Hosť, ktorý jedlo hľadá, ho pozná pod skutočným menom."
+        },
+        {
+          "q": "Stačí na lístok strojový preklad?",
+          "a": "Na popisy a nadpisy kategórií zvyčajne áno. Názvy jedál, výrezy mäsa a formulácie o alergénoch nechajte skontrolovať rodenému hovorcovi — pri typickom lístku je to dvadsať minút."
+        },
+        {
+          "q": "Koľko jazykov má mať lístok?",
+          "a": "Angličtinu plus dve národnosti, ktoré naozaj vídate najčastejšie. Pozrite sa do rezervačných dát namiesto hádania; digitálne menu nestojí za ďalší jazyk nič, takže limit je, koľko ich stihnete skontrolovať."
+        },
+        {
+          "q": "Ako hosť dostane správny jazyk?",
+          "a": "Digitálne menu prečíta jazykové nastavenie telefónu a otvorí sa v ňom, s prepínačom pre toho, kto chce iný. Nikto nemusí prosiť o anglický lístok."
+        },
+        {
+          "q": "A nelatinské písma, napríklad japončina alebo arabčina?",
+          "a": "Rovnaké pravidlo plus prepis: nechajte pôvodný názov, prepíšte ho, aby ho hosť pri objednávke vedel vysloviť, a potom ho popíšte v jeho jazyku."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "title": "Menü çevirisi: neyi çevirmeli, neyi çevirmemeli | IQ Rest",
+    "description": "Yemek adlarını makineyle çevirmek neden ters teper, menünün hangi bölümleri özgün dilinde kalmalı ve dört menü olmadan dört dil nasıl yürütülür."
+  },
+  "card": {
+    "title": "Restoran menüsünü çevirmek: neyi çevirirsiniz, neye dokunmazsınız",
+    "excerpt": "\"Pulpo a la gallega\" \"Galiçya ahtapotu\" değildir. Yemekleri iştah açıcı, misafirleri bilgili tutan bir menü çevirisi için pratik rehber."
+  },
+  "h1": "Restoran menüsünü çevirmek: neyi çevirirsiniz, neye dokunmazsınız",
+  "intro": "Menüyü genel bir çeviriciden geçirin; teknik olarak doğru ama ticari olarak işe yaramaz cümleler alırsınız. Yemek adları yarı dil yarı markadır ve misafirin çeviri isteyen kısımları, çevirinin odaklandığı kısımlar değildir. İşte gerçekten satan dört dile böyle ulaşırsınız.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Kural: açıklamayı çevirin, adı bırakın"
+    },
+    {
+      "type": "p",
+      "text": "Bir yemeğin adı çoğu zaman özel isimdir. **Pulpo a la gallega** \"Galiçya ahtapotu\" olmaz; tıpkı **Wiener Schnitzel**'in Almanca bir menüde \"Viyana pirzolası\" olmaması gibi. Yemeği bilen misafir özgün adı arar; bilmeyenin altında bir açıklamaya ihtiyacı vardır."
+    },
+    {
+      "type": "p",
+      "text": "Yani işleyen kalıp şudur: **ad özgün dilde, açıklama misafirin dilinde.**"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Özgün",
+        "Makine çıktısı",
+        "İşe yarayan"
+      ],
+      "rows": [
+        [
+          "Pulpo a la gallega",
+          "Galiçya ahtapotu",
+          "Pulpo a la gallega — kırmızı biberli, zeytinyağlı ahtapot ve patates"
+        ],
+        [
+          "Tortilla española",
+          "İspanyol omleti",
+          "Tortilla española — kalın patates ve soğan omleti"
+        ],
+        [
+          "Vitello tonnato",
+          "Dana ton balığı",
+          "Vitello tonnato — soğuk dana, ton balığı ve kapari soslu"
+        ],
+        [
+          "Pierogi ruskie",
+          "Rus mantısı",
+          "Pierogi ruskie — patates ve lorlu Polonya mantısı"
+        ],
+        [
+          "Pa amb tomàquet",
+          "Domatesli ekmek",
+          "Pa amb tomàquet — domates ve zeytinyağıyla ovulmuş kızarmış ekmek"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "\"Dana ton balığı\", vitello tonnato'nun gerçek bir makine çevirisidir ve yemeği bir yanlışlık gibi gösterir. \"Rus mantısı\" yanlıştan da kötüdür: yemek Polonyalıdır ve ad Rusya'ya değil Rutenya'ya gönderme yapar; bu da siparişten önce şikâyet üretir."
+    },
+    {
+      "type": "h2",
+      "text": "Bir menünün dört parçası ve her birinin ele alınışı"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Parça",
+        "Yaklaşım"
+      ],
+      "rows": [
+        [
+          "Yemek adı",
+          "Özgününü koruyun; Latin dışı alfabelerde çeviri yazı kullanın"
+        ],
+        [
+          "Açıklama",
+          "Tamamen çevirin — satış burada olur"
+        ],
+        [
+          "İçindekiler ve alerjenler",
+          "Kesin çevirin; doğruluk zarafeti yener"
+        ],
+        [
+          "Kategori başlıkları",
+          "Çevirin (Başlangıçlar, Ana yemekler, Tatlılar)"
+        ],
+        [
+          "Fiyat ve birimler",
+          "Sayıya asla dokunmayın; biçimi uyarlayın (1,50 € ile €1.50 arasında)"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Size sipariş kaybettiren hatalar"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Ölçü sözcüklerini birebir çevirmek.** İspanyolca *ración* bir \"tayın\" değildir. Porsiyon deyin ya da miktarı açıklayın.",
+        "**Pişirme yöntemini kaybetmek.** *A la plancha*, *al horno* ve *frito* özensiz bir çeviride hep \"pişmiş\" olur ve misafir yemekleri artık ayırt edemez.",
+        "**Küçültme ekleri çocuksu durur.** *Bocadillito* İspanyolcada sevimli, Türkçede tuhaftır. Anlamı çevirin, eki değil.",
+        "**Alerjeni düşürmek.** Açıklamada hamsi geçiyorsa ve çeviri \"lezzetli sos\" diyorsa, güvenlik bilgisini silmişsinizdir.",
+        "**Et parçalarını yanlış çevirmek.** Kasap terimleri ülkeden ülkeye birebir geçmez. *Entrecot*, *solomillo*, *presa* ve *secreto* tek sözcüklük karşılık değil, kısa bir açıklama ister.",
+        "**Kendi restoranınızın adını çevirmek.** O bir markadır. Bırakın."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Hangi diller gerçekten değer"
+    },
+    {
+      "type": "p",
+      "text": "Tahmin etmeyin — misafirlerinizin nereden geldiğine bakın. Rezervasyon sisteminiz, POS'unuzdaki kartların veriliş ülkesi ve QR kodunuzu okutanların telefon dili bunu söyler. Avrupa'daki çoğu turistik bölgede dürüst yanıt İngilizce artı iki dildir; o iki dil genelde Almanca, Fransızca ya da direkt uçuşu olanların dilidir."
+    },
+    {
+      "type": "note",
+      "text": "Kötü çevrilmiş bir dilin gerçek bir bedeli vardır. Beceriksiz bir Almanca menü okuyan Alman misafir, mutfak hakkında bir sonuca varır. Bir dili kontrol ettiremiyorsanız, İngilizce onun dilinin kötü bir sürümünden daha güvenlidir."
+    },
+    {
+      "type": "h2",
+      "text": "Bu neden kâğıtta pahalı, dijitalde değil"
+    },
+    {
+      "type": "p",
+      "text": "Kâğıtta dört dil demek dört baskı, saklanacak dört takım ve her fiyat değişiminde dört katı yeniden basım demektir. Pratikte mekânlar iki dil basar, diğerlerini eskimeye bırakır ve turistlere özür dileyerek İngilizcesini uzatır."
+    },
+    {
+      "type": "p",
+      "text": "[Dijital menü](route:/digital-menu) bunu tersine çevirir. Misafirin telefonu dilini zaten bildirir, dolayısıyla menü kimse seçim yapmadan doğru dilde açılır. IQ Rest menüyü otomatik çevirir ve çeviriler ürüne bağlı olduğu için tek bir fiyat değişikliği bütün dilleri değiştirir. Beşinci dili eklemek hiçbir şeye mal olmaz ve yeniden basım gerektirmez."
+    },
+    {
+      "type": "h2",
+      "text": "İşleyen bir süreç"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Önce kaynak menüyü düzgün yazın. Belirsiz kaynak metin, bütün dillerde aynı anda belirsiz çeviri üretir.",
+        "Her yemeğe tek satırlık bir açıklama verin, özgün dilde bile. Yerel misafirler de bunu ister.",
+        "Sistemin hepsini çevirmesine izin verin, sonra en çok satan 20 ürünü ana dili konuşan biri okusun. Yirmi ürün birinin bir kahvelik zamanıdır ve utandırıcı çıktıların neredeyse tamamını yakalar.",
+        "Yemek adlarını kilitleyin ki bir sonraki düzenlemede yeniden çevrilmesinler.",
+        "Alerjen ifadelerini her dilde ayrıca kontrol edin — beceriksiz bir cümlenin üslup değil güvenlik sorunu olduğu tek yer burasıdır."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Ekibinizde o dili konuşan birinden menüyü yüksek sesle okumasını isteyin. Yüksek sesle okumak, yapay ifadeleri sessiz okumaktan çok daha hızlı yakalar."
+    },
+    {
+      "type": "cta",
+      "heading": "Tek menü, bütün diller",
+      "text": "IQ Rest menünüzü otomatik çevirir ve misafirin kendi dilinde açar. Fiyatı bir kez değiştirin, bütün diller güncellensin. 14 gün ücretsiz.",
+      "buttonLabel": "Otomatik çeviriyi görün",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Sık sorulan sorular",
+      "items": [
+        {
+          "q": "Yemek adlarını çevirmeli miyim?",
+          "a": "Genelde hayır. Özgün adı koruyun ve altına çevrilmiş bir açıklama ekleyin. Yemeği arayan misafir onu gerçek adıyla bilir."
+        },
+        {
+          "q": "Bir menü için makine çevirisi yeterli mi?",
+          "a": "Açıklamalar ve kategori başlıkları için genelde evet. Yemek adlarını, et parçalarını ve alerjen ifadelerini ana dili konuşan biri kontrol etsin — tipik bir menüde bu yaklaşık yirmi dakikalık iştir."
+        },
+        {
+          "q": "Bir menüde kaç dil olmalı?",
+          "a": "İngilizce artı gerçekten en çok gördüğünüz iki milliyet. Tahmin yerine rezervasyon verilerinize bakın; dijital menüde ek dil hiçbir şeye mal olmaz, dolayısıyla sınır kaç dili gözden geçirebildiğinizdir."
+        },
+        {
+          "q": "Misafir doğru dili nasıl alır?",
+          "a": "Dijital menü telefonun dil ayarını okur ve o dilde açılır; başka dil isteyen için bir seçici vardır. Kimsenin İngilizce menü istemesine gerek kalmaz."
+        },
+        {
+          "q": "Japonca ya da Arapça gibi Latin dışı alfabeler ne olacak?",
+          "a": "Aynı kural artı çeviri yazı: özgün adı koruyun, misafir sipariş verirken telaffuz edebilsin diye çeviri yazısını ekleyin, sonra kendi dilinde tarif edin."
+        }
+      ]
+    }
+  ]
+}

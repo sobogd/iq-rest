@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "title": "Oversette menyen: hva skal oversettes | IQ Rest",
+    "description": "Hvorfor maskinoversatte rettnavn går galt, hvilke deler av menyen som skal bli på originalspråket, og hvordan du kjører fire språk uten fire menyer."
+  },
+  "card": {
+    "title": "Å oversette en restaurantmeny: hva du oversetter og hva du lar være",
+    "excerpt": "\"Pulpo a la gallega\" er ikke \"galisisk blekksprut\". Praktisk guide til menyoversettelse som holder rettene fristende og gjestene informert."
+  },
+  "h1": "Å oversette en restaurantmeny: hva du oversetter og hva du lar være",
+  "intro": "Kjør menyen gjennom en vanlig oversetter, og du får setninger som er teknisk korrekte og kommersielt ubrukelige. Rettnavn er halvt språk og halvt varemerke, og de delene gjesten trenger oversatt, er ikke de delene en oversetter sikter mot. Slik får du fire språk som faktisk selger.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Regelen: oversett forklaringen, behold navnet"
+    },
+    {
+      "type": "p",
+      "text": "Et rettnavn er ofte et egennavn. **Pulpo a la gallega** blir ikke \"galisisk blekksprut\", like lite som **Wiener Schnitzel** blir \"wienerkotelett\" på en tysk meny. Gjesten som kjenner retten, leter etter originalnavnet; den som ikke gjør det, trenger en beskrivelse under."
+    },
+    {
+      "type": "p",
+      "text": "Mønsteret som virker er altså: **navn på originalspråket, beskrivelse på gjestens språk.**"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Original",
+        "Maskinens utdata",
+        "Det som virker"
+      ],
+      "rows": [
+        [
+          "Pulpo a la gallega",
+          "Galisisk blekksprut",
+          "Pulpo a la gallega — blekksprut med paprikapulver, olivenolje og potet"
+        ],
+        [
+          "Tortilla española",
+          "Spansk omelett",
+          "Tortilla española — tykk omelett med potet og løk"
+        ],
+        [
+          "Vitello tonnato",
+          "Kalv tunfisk",
+          "Vitello tonnato — kald kalv med tunfisk- og kaperssaus"
+        ],
+        [
+          "Pierogi ruskie",
+          "Russiske dumplings",
+          "Pierogi ruskie — polske dumplings med potet og kvarg"
+        ],
+        [
+          "Pa amb tomàquet",
+          "Brød med tomat",
+          "Pa amb tomàquet — ristet brød gnidd med tomat og olje"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "\"Kalv tunfisk\" er en ekte maskinoversettelse av vitello tonnato og får retten til å høres ut som en feil. \"Russiske dumplings\" er verre enn feil: retten er polsk, og navnet viser til Rutenia, ikke Russland, noe som gir en klage snarere enn en bestilling."
+    },
+    {
+      "type": "h2",
+      "text": "Menyens fire deler og hvordan hver av dem håndteres"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Del",
+        "Fremgangsmåte"
+      ],
+      "rows": [
+        [
+          "Rettnavn",
+          "Behold originalen; translitterer ved ikke-latinsk skrift"
+        ],
+        [
+          "Beskrivelse",
+          "Oversett fullt ut – det er her salget skjer"
+        ],
+        [
+          "Ingredienser og allergener",
+          "Oversett presist; nøyaktighet slår eleganse"
+        ],
+        [
+          "Kategorioverskrifter",
+          "Oversett (Forretter, Hovedretter, Desserter)"
+        ],
+        [
+          "Priser og enheter",
+          "Rør aldri tallet; tilpass formatet (1,50 € mot €1.50)"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Feil som koster deg bestillinger"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Å oversette mengdeord bokstavelig.** En spansk *ración* er ingen \"rasjon\". Bruk porsjon, eller forklar størrelsen.",
+        "**Å miste tilberedningsmåten.** *A la plancha*, *al horno* og *frito* blir alle til \"tilberedt\" i en slurvete oversettelse, og gjesten klarer ikke lenger å skille rettene.",
+        "**Diminutiver høres barnslige ut.** *Bocadillito* er sjarmerende på spansk, rart på norsk. Oversett meningen, ikke endelsen.",
+        "**Å miste allergenet.** Om beskrivelsen nevner ansjos og oversettelsen sier \"smakrik saus\", har du fjernet sikkerhetsinformasjon.",
+        "**Å oversette kjøttstykker feil.** Slaktetermer flytter seg ikke direkte mellom land. *Entrecot*, *solomillo*, *presa* og *secreto* trenger en kort beskrivelse, ikke en ettordsekvivalent.",
+        "**Å oversette din egen restaurants navn.** Det er et varemerke. La det stå."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Hvilke språk som er verdt å ha"
+    },
+    {
+      "type": "p",
+      "text": "Ikke gjett – se hvor gjestene dine kommer fra. Bookingsystemet, kortenes utstederland i terminalen og telefonspråket hos dem som skanner QR-koden din, forteller det. I de fleste europeiske turistområder er det ærlige svaret engelsk pluss to, og de to er som regel tysk, fransk eller språket til dem med direktefly."
+    },
+    {
+      "type": "note",
+      "text": "Et dårlig oversatt språk koster ekte penger. En tysk gjest som leser en klosset tysk meny, trekker en slutning om kjøkkenet. Kan du ikke få et språk lest gjennom, er engelsk tryggere enn en dårlig versjon av gjestens eget."
+    },
+    {
+      "type": "h2",
+      "text": "Hvorfor papir gjør dette dyrt, og digitalt ikke"
+    },
+    {
+      "type": "p",
+      "text": "På papir betyr fire språk fire opplag, fire sett å oppbevare og firedobbelt opptrykk hver gang en pris endres. I praksis trykker steder to språk, lar de andre bli utdaterte og rekker turistene den engelske med en unnskyldning."
+    },
+    {
+      "type": "p",
+      "text": "En [digital meny](route:/digital-menu) snur dette. Gjestens telefon oppgir allerede språket sitt, så menyen åpnes på riktig språk uten at noen velger. IQ Rest oversetter menyen automatisk, og siden oversettelsene henger på retten, endrer én prisendring alle språk. Å legge til et femte språk koster ingenting og krever ingen opptrykk."
+    },
+    {
+      "type": "h2",
+      "text": "En prosess som holder"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Skriv kildemenyen ordentlig først. Vag kildetekst gir vage oversettelser på alle språk samtidig.",
+        "Gi hver rett en beskrivelse på én linje, også på originalspråket. Stamgjestene vil også ha den.",
+        "La systemet oversette alt, og la deretter en morsmålsbruker lese de 20 mest solgte. Tjue linjer er en kaffes tid av noens dag og fanger nesten alle pinlige utslag.",
+        "Lås rettnavnene så de ikke oversettes på nytt ved neste endring.",
+        "Sjekk allergenformuleringen separat på hvert språk – det er det eneste stedet der en klosset frase er et sikkerhetsproblem og ikke et stilproblem."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Be noen i staben som snakker språket lese menyen høyt. Høytlesing fanger unaturlige formuleringer mye raskere enn stillelesing."
+    },
+    {
+      "type": "cta",
+      "heading": "Én meny, alle språk",
+      "text": "IQ Rest oversetter menyen din automatisk og åpner den på gjestens språk. Endre en pris én gang, og alle språk oppdateres. 14 dager gratis.",
+      "buttonLabel": "Se den automatiske oversettelsen",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Vanlige spørsmål",
+      "items": [
+        {
+          "q": "Skal jeg oversette rettnavn?",
+          "a": "Som regel ikke. Behold originalnavnet og legg en oversatt beskrivelse under. Gjester som leter etter retten, kjenner den ved dens ekte navn."
+        },
+        {
+          "q": "Er maskinoversettelse godt nok for en meny?",
+          "a": "For beskrivelser og kategorioverskrifter som regel ja. La en morsmålsbruker sjekke rettnavn, kjøttstykker og allergenformuleringer – det er rundt tjue minutters gjennomgang for en typisk meny."
+        },
+        {
+          "q": "Hvor mange språk bør en meny ha?",
+          "a": "Engelsk pluss de to nasjonalitetene du faktisk ser mest. Se på bookingdataene i stedet for å gjette; en digital meny koster ingenting per ekstra språk, så grensen er hvor mange du rekker å gå gjennom."
+        },
+        {
+          "q": "Hvordan får gjesten riktig språk?",
+          "a": "En digital meny leser telefonens språkinnstilling og åpnes på det, med en velger for dem som vil ha et annet. Ingen trenger å be om den engelske menyen."
+        },
+        {
+          "q": "Og ikke-latinske skriftspråk som japansk eller arabisk?",
+          "a": "Samme regel pluss translitterering: behold originalnavnet, translitterer det så gjesten kan uttale det når hen bestiller, og beskriv det deretter på gjestens språk."
+        }
+      ]
+    }
+  ]
+}
