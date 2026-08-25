@@ -214,7 +214,8 @@
     ],
     "infoHeading": "Eolas",
     "legalHeading": "Dlíthiúil",
-    "currencyHeading": "Airgeadra"
+    "currencyHeading": "Airgeadra",
+    "blogLabel": "Blag"
   },
   "common": {
     "close": "Dún",
@@ -257,5 +258,14 @@
       "invalidCode": "Cód neamhbhailí. Bain triail eile as le do thoil.",
       "tooManyAttempts": "An iomarca iarrachtaí. Fan go fóill agus bain triail eile as."
     }
+  },
+  "blog": {
+    "metaTitle": "Blag faoi theicneolaíocht bialainne — IQ Rest",
+    "metaDescription": "Treoracha agus comparáidí faoi bhiachláir dhigiteacha, orduithe QR, scáileáin chistine agus áirithintí — léitheoireacht phraiticiúil d'úinéirí bialainne.",
+    "title": "Blag",
+    "intro": "Treoracha agus comparáidí faoi bhiachláir dhigiteacha, orduithe QR, scáileáin chistine agus reáchtáil bialainne.",
+    "readMore": "Léigh an t-alt",
+    "relatedHeading": "Tuilleadh ón mblag",
+    "backToBlog": "Gach alt"
   }
 }

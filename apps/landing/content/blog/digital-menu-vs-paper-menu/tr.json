@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Dijital menü mü kağıt menü mü? Gerçek maliyetler | IQ Rest",
+    "description": "Kağıt menünün restorana gerçek maliyeti QR dijital menüyle karşılaştırıldı: baskı, güncellemeler, çeviriler, sipariş hızı. Rakamlarla yan yana kıyaslama."
+  },
+  "card": {
+    "title": "Dijital menü mü kağıt menü mü: her biri restorana gerçekte ne kadara mal olur",
+    "excerpt": "Baskı, maliyetin yalnızca görünen kısmı. Kağıt ve dijital menünün tam maliyetini — güncellemeler, çeviriler, hatalar ve kaçan siparişler — gerçek rakamlarla karşılaştırıyoruz."
+  },
+  "h1": "Dijital menü mü kağıt menü mü: her biri restorana gerçekte ne kadara mal olur",
+  "intro": "Her restoran kağıt menüyle başlar — ve çoğu, anlamını yitirdikten çok sonra bile onun için ödeme yapmaya devam eder. Bu karşılaştırma, yeniden baskılar, çeviriler ve yavaşlayan servis hesaba katıldığında kağıdın gerçekte neye mal olduğunu ve [QR dijital menünün](route:/digital-menu) nerede kazanıp nerede kaybettiğini ortaya koyuyor.",
+  "blocks": [
+    { "type": "h2", "text": "Görünen maliyet: baskı" },
+    {
+      "type": "p",
+      "text": "Orta boy bir menü (8–12 sayfa, laminasyonlu, 30 kopya) her baskıda **€150–€400** tutar. Çoğu mekan yılda 3–6 kez yeniden baskı yapar: sezonluk yemekler, fiyat değişiklikleri, yıpranmış sayfalar. Bu, sadece kağıdı güncel tutmak için yılda €450–€2,400 demek — ve \"daha yeni bastırdık\" diye ertelediğiniz her fiyat değişikliği, sessizce kaybettiğiniz kâr marjıdır."
+    },
+    {
+      "type": "p",
+      "text": "Dijital menüde baskı yoktur. Fiyatı değiştirirsiniz ve saniyeler içinde, tüm masalarda aynı anda yayında olur."
+    },
+    { "type": "h2", "text": "Gizli maliyetler: kağıdın asıl kaybettiği yerler" },
+    {
+      "type": "list",
+      "items": [
+        "**Güncelliğini yitirmiş fiyatlar.** Kağıtta tedarikçi zammı bir sonraki baskıyı haftalarca bekler. Dijitalde aynı gün güncellenir.",
+        "**Çeviriler.** Turistik bölgelerde 2–5 dil gerekir. Kağıtta bu, sayfa sayısını ve baskı maliyetini katlar; dijital menü her ürünü otomatik çevirir.",
+        "**Biten ürünler.** Kağıt, bir yemeğin bittiğini gösteremez — misafir sipariş eder, personel özür diler. Dijitalde tükenen ürünler tek dokunuşla gizlenir.",
+        "**Fotoğraflar.** Menü fotoğrafları satar, ama fotoğraf ağırlıklı kağıt menüleri kaliteli bastırmak pahalıdır. Dijital, her yemeğin fotoğrafını ücretsiz gösterir.",
+        "**Hijyen ve yıpranma.** Laminasyonlu menüler yapış yapış olur ve çizilir; misafirler bunu fark eder."
+      ]
+    },
+    { "type": "h2", "text": "Yan yana karşılaştırma" },
+    {
+      "type": "table",
+      "headers": ["", "Kağıt menü", "Dijital QR menü"],
+      "rows": [
+        ["Güncelleme maliyeti", "€150–€400 baskı", "€0, anında"],
+        ["Fiyat değiştirme süresi", "Günler, hatta haftalar", "Bir dakikadan az"],
+        ["Diller", "Basılı takım başına bir dil", "Tüm yaygın diller, otomatik"],
+        ["Yemek fotoğrafları", "Basması pahalı", "Her yemek için, ücretsiz"],
+        ["Tükenen ürünler", "Sipariş edilir, geri çevrilir", "Tek dokunuşla gizlenir"],
+        ["Sipariş alma", "Misafir garsonu bekler", "Misafir [masadan sipariş verebilir](route:/order-taking)"],
+        ["Başlangıç maliyeti", "İlk baskı", "€9.90/ay'dan itibaren"]
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Tercih eden misafirler için 2–3 kağıt kopya bulundurun. Amaç sıfır kağıt değil — kağıdın artık sürekli uğraştığınız şey olmaktan çıkması."
+    },
+    { "type": "h2", "text": "Kağıdın hâlâ kazandığı yerler" },
+    {
+      "type": "p",
+      "text": "Burada dürüst olmak gerek: ayda bir değişen tek sayfalık tadım menüsü, telefonların yersiz durduğu bir fine dining salonu ya da altı ürünlü, müdavimlere çalışan bir bar — buralarda kağıt gayet iyidir. Menünüz uzunsa, sık değişiyorsa, dil veya fotoğraf gerektiriyorsa ya da misafirler salon ekibinizin yetişebileceğinden hızlı sipariş veriyorsa denge tersine döner."
+    },
+    { "type": "h2", "text": "Geçiş nasıl görünür" },
+    {
+      "type": "steps",
+      "items": [
+        "Kağıt menünüzü tarayın — IQ Rest onu okur ve dijital menüyü otomatik oluşturur.",
+        "Fiyatları kontrol edin, önemli yerlere fotoğraf ekleyin.",
+        "Her masa için bir QR kod bastırın.",
+        "Her şeyi, istediğiniz an, telefonunuzdan güncelleyin."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Dijital menüyü kendi menünüzde deneyin",
+      "text": "Mevcut menünüzün fotoğrafını yükleyin, yaklaşık 5 dakikada çalışan bir QR menüye sahip olun. 14 gün ücretsiz, kart gerekmez.",
+      "buttonLabel": "Dijital menüyü inceleyin",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Sıkça sorulan sorular",
+      "items": [
+        {
+          "q": "Misafirlerin uygulama yüklemesi gerekiyor mu?",
+          "a": "Hayır. QR kod menüyü telefonun tarayıcısında açar — yükleme yok, kayıt yok."
+        },
+        {
+          "q": "Misafirin akıllı telefonu yoksa ne olur?",
+          "a": "Karşılama bankosunda birkaç kağıt kopya bulundurun. Pratikte misafirlerin %5'inden azı kağıt menü ister."
+        },
+        {
+          "q": "Dijital menü sipariş de alabilir mi?",
+          "a": "Evet — misafirler masadan sipariş verip ödeme yapabilir, siparişler doğrudan [mutfak ekranına](route:/kitchen-display) düşer. İsterseniz önce yalnızca görüntülenen bir menü olarak da kullanabilirsiniz."
+        },
+        {
+          "q": "Kurulum ne kadar sürer?",
+          "a": "Yaklaşık 5 dakika: kağıt menünüzü tarayın, ürünleri gözden geçirin, QR kodları bastırın."
+        }
+      ]
+    }
+  ]
+}

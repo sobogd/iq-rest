@@ -214,7 +214,8 @@
     ],
     "infoHeading": "Informácie",
     "legalHeading": "Právne informácie",
-    "currencyHeading": "Mena"
+    "currencyHeading": "Mena",
+    "blogLabel": "Blog"
   },
   "common": {
     "close": "Zavrieť",
@@ -257,5 +258,14 @@
       "invalidCode": "Neplatný kód. Skúste to znova.",
       "tooManyAttempts": "Príliš veľa pokusov. Počkajte a skúste to znova."
     }
+  },
+  "blog": {
+    "metaTitle": "Blog o technológiách pre reštaurácie — IQ Rest",
+    "metaDescription": "Návody a porovnania: digitálne menu, QR objednávky, kuchynské displeje a rezervácie — praktické čítanie pre reštaurátorov.",
+    "title": "Blog",
+    "intro": "Návody a porovnania o digitálnom menu, QR objednávkach, kuchynských displejoch a chode reštaurácie.",
+    "readMore": "Čítať článok",
+    "relatedHeading": "Viac z blogu",
+    "backToBlog": "Všetky články"
   }
 }

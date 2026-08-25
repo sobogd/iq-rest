@@ -214,7 +214,8 @@
     ],
     "infoHeading": "Informazioni",
     "legalHeading": "Documenti",
-    "currencyHeading": "Valuta"
+    "currencyHeading": "Valuta",
+    "blogLabel": "Blog"
   },
   "common": {
     "close": "Chiudi",
@@ -257,5 +258,14 @@
       "invalidCode": "Codice non valido. Riprova.",
       "tooManyAttempts": "Troppi tentativi. Attendi e riprova."
     }
+  },
+  "blog": {
+    "metaTitle": "Blog di tecnologia per ristoranti — IQ Rest",
+    "metaDescription": "Guide e confronti su menù digitali, ordini via QR, display cucina e prenotazioni — letture pratiche per ristoratori.",
+    "title": "Blog",
+    "intro": "Guide e confronti su menù digitali, ordini via QR, display cucina e gestione del ristorante.",
+    "readMore": "Leggi l'articolo",
+    "relatedHeading": "Altro dal blog",
+    "backToBlog": "Tutti gli articoli"
   }
 }

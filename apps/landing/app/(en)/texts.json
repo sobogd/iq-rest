@@ -214,7 +214,8 @@
     ],
     "infoHeading": "Information",
     "legalHeading": "Legal",
-    "currencyHeading": "Currency"
+    "currencyHeading": "Currency",
+    "blogLabel": "Blog"
   },
   "common": {
     "close": "Close",
@@ -257,5 +258,14 @@
       "invalidCode": "Invalid code. Please try again.",
       "tooManyAttempts": "Too many attempts. Please wait and try again."
     }
+  },
+  "blog": {
+    "metaTitle": "Restaurant Tech Blog — IQ Rest",
+    "metaDescription": "Guides and comparisons on digital menus, QR ordering, kitchen displays and reservations — practical reading for restaurant owners.",
+    "title": "Blog",
+    "intro": "Guides and comparisons on digital menus, QR ordering, kitchen displays and running a smoother restaurant.",
+    "readMore": "Read article",
+    "relatedHeading": "More from the blog",
+    "backToBlog": "All articles"
   }
 }

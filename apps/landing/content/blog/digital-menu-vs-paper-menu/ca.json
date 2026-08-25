@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Carta digital vs carta en paper: costos reals | IQ Rest",
+    "description": "El que costa de debò una carta en paper davant d'una carta digital QR: impressió, canvis, traduccions i rapidesa de servei. Comparativa amb xifres reals."
+  },
+  "card": {
+    "title": "Carta digital vs carta en paper: què costa de debò cadascuna a un restaurant",
+    "excerpt": "La impressió només és la part visible. Comparem el cost total de la carta en paper i la digital — canvis, traduccions, errors i comandes perdudes — amb xifres reals."
+  },
+  "h1": "Carta digital vs carta en paper: què costa de debò cadascuna a un restaurant",
+  "intro": "Tots els restaurants comencen amb una carta en paper — i la majoria continuen pagant-la molt després que deixi de tenir sentit. Aquesta comparativa desglossa el que el paper costa realment quan hi sumes reimpressions, traduccions i un servei més lent, i on guanya o perd una [carta digital QR](route:/digital-menu).",
+  "blocks": [
+    { "type": "h2", "text": "El cost visible: la impressió" },
+    {
+      "type": "p",
+      "text": "Una carta de mida mitjana (8–12 pàgines, plastificada, 30 còpies) costa **€150–€400** per tirada. La majoria de locals reimprimeixen 3–6 vegades l'any: plats de temporada, canvis de preus, pàgines gastades. Són €450–€2,400 l'any només per mantenir el paper al dia — i cada canvi de preu que ajornes perquè «acabem d'imprimir» és marge que perds sense adonar-te'n."
+    },
+    {
+      "type": "p",
+      "text": "Una carta digital no té tirades. Canvies un preu i és en línia en segons, a totes les taules alhora."
+    },
+    { "type": "h2", "text": "Els costos ocults: on perd de debò el paper" },
+    {
+      "type": "list",
+      "items": [
+        "**Preus desfasats.** Amb paper, una pujada del proveïdor espera setmanes fins a la propera reimpressió. En digital s'actualitza el mateix dia.",
+        "**Traduccions.** Les zones turístiques necessiten 2–5 idiomes. En paper això multiplica pàgines i costos d'impressió; una carta digital tradueix cada plat automàticament.",
+        "**Plats esgotats.** El paper no pot avisar que un plat s'ha acabat — el client el demana i el personal es disculpa. En digital s'amaga amb un toc.",
+        "**Fotos.** Les fotos venen, però una carta en paper plena de fotos surt cara d'imprimir bé. La digital mostra una foto de cada plat gratis.",
+        "**Higiene i desgast.** Les cartes plastificades acaben enganxoses i ratllades; els clients ho noten."
+      ]
+    },
+    { "type": "h2", "text": "Cara a cara" },
+    {
+      "type": "table",
+      "headers": ["", "Carta en paper", "Carta digital QR"],
+      "rows": [
+        ["Cost per canvi", "Tirada de €150–€400", "€0, a l'instant"],
+        ["Temps per canviar un preu", "De dies a setmanes", "Menys d'un minut"],
+        ["Idiomes", "Un per joc imprès", "Tots els idiomes principals, automàtic"],
+        ["Fotos dels plats", "Cares d'imprimir", "Tots els plats, gratis"],
+        ["Plats esgotats", "Es demanen i es refusen", "Amagats amb un toc"],
+        ["Comandes", "El client espera el cambrer", "El client pot [demanar des de la taula](route:/order-taking)"],
+        ["Cost inicial", "La primera tirada", "Des de €9.90/mes"]
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Guarda 2–3 còpies en paper per als clients que les prefereixen. La qüestió no és zero paper — és que el paper deixi de ser allò que has de mantenir."
+    },
+    { "type": "h2", "text": "On encara guanya el paper" },
+    {
+      "type": "p",
+      "text": "Aquí val la pena ser honestos: un menú degustació d'una pàgina que canvia cada mes, un restaurant d'alta cuina on els mòbils desentonen o un bar d'habituals amb sis referències — allà el paper funciona. La balança s'inverteix quan la carta és llarga, canvia sovint, necessita idiomes o fotos, o quan els clients demanen més ràpid del que la sala pot caminar."
+    },
+    { "type": "h2", "text": "Com és el canvi" },
+    {
+      "type": "steps",
+      "items": [
+        "Escaneja la teva carta en paper — IQ Rest la llegeix i crea la carta digital automàticament.",
+        "Revisa els preus i afegeix fotos on importen.",
+        "Imprimeix un codi QR per taula.",
+        "Canvia el que vulguis, quan vulguis, des del mòbil."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Prova una carta digital amb la teva pròpia carta",
+      "text": "Puja una foto de la teva carta actual i tingues una carta QR funcionant en uns 5 minuts. 14 dies gratis, sense targeta.",
+      "buttonLabel": "Veure la carta digital",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Preguntes freqüents",
+      "items": [
+        {
+          "q": "Els clients han d'instal·lar cap app?",
+          "a": "No. El codi QR obre la carta al navegador del mòbil — res a instal·lar, sense registre."
+        },
+        {
+          "q": "I si un client no té smartphone?",
+          "a": "Tingues unes quantes còpies en paper a l'entrada. A la pràctica, menys del 5% dels clients en demanen una."
+        },
+        {
+          "q": "Una carta digital també pot prendre comandes?",
+          "a": "Sí — els clients poden demanar i pagar des de la taula, i les comandes van directes a la [pantalla de cuina](route:/kitchen-display). També pots començar fent-la servir només com a carta de consulta."
+        },
+        {
+          "q": "Quant triga la posada en marxa?",
+          "a": "Uns 5 minuts: escaneja la carta en paper, revisa els plats i imprimeix els codis QR."
+        }
+      ]
+    }
+  ]
+}

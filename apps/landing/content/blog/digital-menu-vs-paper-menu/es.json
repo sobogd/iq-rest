@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Carta digital vs carta en papel: costes reales | IQ Rest",
+    "description": "Lo que de verdad cuesta una carta en papel frente a una carta digital QR: impresión, cambios, traducciones y velocidad de servicio. Comparativa con cifras."
+  },
+  "card": {
+    "title": "Carta digital vs carta en papel: lo que cada una le cuesta de verdad a un restaurante",
+    "excerpt": "La impresión es solo la parte visible. Comparamos el coste total de la carta en papel y la digital — cambios, traducciones, errores y pedidos perdidos — con cifras reales."
+  },
+  "h1": "Carta digital vs carta en papel: lo que cada una le cuesta de verdad a un restaurante",
+  "intro": "Todo restaurante empieza con una carta en papel — y la mayoría sigue pagándola mucho después de que deje de tener sentido. Esta comparativa desglosa lo que el papel cuesta realmente cuando sumas reimpresiones, traducciones y un servicio más lento, y dónde gana o pierde una [carta digital QR](route:/digital-menu).",
+  "blocks": [
+    { "type": "h2", "text": "El coste visible: la impresión" },
+    {
+      "type": "p",
+      "text": "Una carta de tamaño medio (8–12 páginas, plastificada, 30 copias) cuesta **€150–€400** por tirada. La mayoría de los locales reimprime 3–6 veces al año: platos de temporada, cambios de precios, páginas desgastadas. Eso son €450–€2,400 al año solo para mantener el papel al día — y cada cambio de precio que aplazas porque «acabamos de imprimir» es margen que pierdes sin darte cuenta."
+    },
+    {
+      "type": "p",
+      "text": "Una carta digital no tiene tiradas. Cambias un precio y está publicado en segundos, en todas las mesas a la vez."
+    },
+    { "type": "h2", "text": "Los costes ocultos: dónde pierde de verdad el papel" },
+    {
+      "type": "list",
+      "items": [
+        "**Precios desfasados.** Con papel, una subida del proveedor espera semanas hasta la próxima reimpresión. En digital se actualiza el mismo día.",
+        "**Traducciones.** Las zonas turísticas necesitan 2–5 idiomas. En papel eso multiplica páginas y costes de impresión; una carta digital traduce cada plato automáticamente.",
+        "**Platos agotados.** El papel no puede avisar de que un plato se ha acabado — el cliente lo pide y el personal se disculpa. En digital se oculta con un toque.",
+        "**Fotos.** Las fotos venden, pero una carta en papel llena de fotos sale cara de imprimir bien. La digital muestra una foto de cada plato gratis.",
+        "**Higiene y desgaste.** Las cartas plastificadas acaban pegajosas y rayadas; los clientes lo notan."
+      ]
+    },
+    { "type": "h2", "text": "Cara a cara" },
+    {
+      "type": "table",
+      "headers": ["", "Carta en papel", "Carta digital QR"],
+      "rows": [
+        ["Coste por cambio", "Tirada de €150–€400", "€0, al instante"],
+        ["Tiempo para cambiar un precio", "De días a semanas", "Menos de un minuto"],
+        ["Idiomas", "Uno por juego impreso", "Todos los idiomas principales, automático"],
+        ["Fotos de los platos", "Caras de imprimir", "Todos los platos, gratis"],
+        ["Platos agotados", "Se piden y se rechazan", "Ocultos con un toque"],
+        ["Pedidos", "El cliente espera al camarero", "El cliente puede [pedir desde la mesa](route:/order-taking)"],
+        ["Coste inicial", "La primera tirada", "Desde €9.90/mes"]
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Guarda 2–3 copias en papel para los clientes que las prefieran. La idea no es cero papel — es que el papel deje de ser lo que tienes que mantener."
+    },
+    { "type": "h2", "text": "Dónde sigue ganando el papel" },
+    {
+      "type": "p",
+      "text": "Aquí conviene ser honestos: un menú degustación de una página que cambia cada mes, un restaurante de alta cocina donde los móviles desentonan o un bar de habituales con seis referencias — ahí el papel funciona. La balanza se invierte cuando la carta es larga, cambia a menudo, necesita idiomas o fotos, o cuando los clientes piden más rápido de lo que tu sala puede caminar."
+    },
+    { "type": "h2", "text": "Cómo es el cambio" },
+    {
+      "type": "steps",
+      "items": [
+        "Escanea tu carta en papel — IQ Rest la lee y crea la carta digital automáticamente.",
+        "Revisa los precios y añade fotos donde importan.",
+        "Imprime un código QR por mesa.",
+        "Cambia lo que quieras, cuando quieras, desde el móvil."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Prueba una carta digital con tu propia carta",
+      "text": "Sube una foto de tu carta actual y consigue una carta QR funcionando en unos 5 minutos. 14 días gratis, sin tarjeta.",
+      "buttonLabel": "Ver la carta digital",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Preguntas frecuentes",
+      "items": [
+        {
+          "q": "¿Los clientes tienen que instalar una app?",
+          "a": "No. El código QR abre la carta en el navegador del móvil — nada que instalar, sin registro."
+        },
+        {
+          "q": "¿Y si un cliente no tiene smartphone?",
+          "a": "Ten unas cuantas copias en papel en la entrada. En la práctica, menos del 5% de los clientes pide una."
+        },
+        {
+          "q": "¿Una carta digital también puede tomar pedidos?",
+          "a": "Sí — los clientes pueden pedir y pagar desde la mesa, y los pedidos van directos a la [pantalla de cocina](route:/kitchen-display). También puedes usarla primero solo como carta de consulta."
+        },
+        {
+          "q": "¿Cuánto tarda la puesta en marcha?",
+          "a": "Unos 5 minutos: escanea tu carta en papel, revisa los platos e imprime los códigos QR."
+        }
+      ]
+    }
+  ]
+}

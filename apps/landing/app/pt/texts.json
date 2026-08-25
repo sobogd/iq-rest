@@ -214,7 +214,8 @@
     ],
     "infoHeading": "Informação",
     "legalHeading": "Documentos",
-    "currencyHeading": "Moeda"
+    "currencyHeading": "Moeda",
+    "blogLabel": "Blog"
   },
   "common": {
     "close": "Fechar",
@@ -257,5 +258,14 @@
       "invalidCode": "Código incorreto. Tente novamente.",
       "tooManyAttempts": "Demasiadas tentativas. Aguarde e tente novamente."
     }
+  },
+  "blog": {
+    "metaTitle": "Blog de tecnologia para restaurantes — IQ Rest",
+    "metaDescription": "Guias e comparações sobre ementas digitais, pedidos por QR, ecrãs de cozinha e reservas — leitura prática para restauradores.",
+    "title": "Blog",
+    "intro": "Guias e comparações sobre ementas digitais, pedidos por QR, ecrãs de cozinha e a gestão do restaurante.",
+    "readMore": "Ler artigo",
+    "relatedHeading": "Mais do blog",
+    "backToBlog": "Todos os artigos"
   }
 }

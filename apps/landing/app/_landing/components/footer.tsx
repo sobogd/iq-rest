@@ -60,6 +60,11 @@ export function LandingFooter({ texts, headerTexts, locale, routeKey }: FooterPr
     ...(headerTexts.navAbout
       ? [{ href: localizedHref("/about", locale), label: headerTexts.navAbout }]
       : []),
+    // Blog is footer-only by design (no header nav slot). Shared /blog slug
+    // across locales; label rolls out with the texts.json `footer.blogLabel`.
+    ...(texts.blogLabel
+      ? [{ href: localizedHref("/blog", locale), label: texts.blogLabel }]
+      : []),
   ];
 
   const legalLinks: FooterLink[] = [

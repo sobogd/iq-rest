@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Digitale Speisekarte vs. Papierkarte: Kostenvergleich | IQ Rest",
+    "description": "Was eine Papierkarte ein Restaurant wirklich kostet vs. eine digitale QR-Speisekarte: Druck, Updates, Übersetzungen, Bestelltempo. Vergleich mit echten Zahlen."
+  },
+  "card": {
+    "title": "Digitale Speisekarte vs. Papierkarte: was beide ein Restaurant wirklich kosten",
+    "excerpt": "Der Druck ist nur der sichtbare Teil. Wir vergleichen die vollen Kosten von Papierkarte und digitaler Speisekarte — Updates, Übersetzungen, Fehler und verlorene Bestellungen — mit echten Zahlen."
+  },
+  "h1": "Digitale Speisekarte vs. Papierkarte: was beide ein Restaurant wirklich kosten",
+  "intro": "Jedes Restaurant startet mit einer Papierkarte — und die meisten zahlen noch lange dafür, wenn sie längst keinen Sinn mehr ergibt. Dieser Vergleich zeigt, was Papier wirklich kostet, sobald man Nachdrucke, Übersetzungen und langsameren Service mitrechnet — und wo eine [digitale QR-Speisekarte](route:/digital-menu) gewinnt oder verliert.",
+  "blocks": [
+    { "type": "h2", "text": "Die sichtbaren Kosten: der Druck" },
+    {
+      "type": "p",
+      "text": "Eine mittelgroße Speisekarte (8–12 Seiten, laminiert, 30 Exemplare) kostet **€150–€400** pro Druckauflage. Die meisten Betriebe drucken 3–6 Mal im Jahr nach: Saisongerichte, Preisänderungen, abgenutzte Seiten. Das sind €450–€2,400 im Jahr, nur um das Papier aktuell zu halten — und jede Preisänderung, die Sie aufschieben, weil \"wir gerade erst gedruckt haben\", ist Marge, die still verloren geht."
+    },
+    {
+      "type": "p",
+      "text": "Eine digitale Speisekarte hat keine Druckauflage. Sie ändern einen Preis, und er ist in Sekunden live — auf jedem Tisch gleichzeitig."
+    },
+    { "type": "h2", "text": "Die versteckten Kosten: wo Papier wirklich verliert" },
+    {
+      "type": "list",
+      "items": [
+        "**Veraltete Preise.** Auf Papier wartet eine Preiserhöhung des Lieferanten wochenlang auf den nächsten Nachdruck. Digital ist sie noch am selben Tag aktualisiert.",
+        "**Übersetzungen.** Touristische Lagen brauchen 2–5 Sprachen. Auf Papier vervielfacht das Seiten und Druckkosten; eine digitale Speisekarte übersetzt jedes Gericht automatisch.",
+        "**Ausverkaufte Gerichte.** Papier kann nicht zeigen, dass ein Gericht aus ist — Gäste bestellen es, das Team entschuldigt sich. Digital blenden Sie ausverkaufte Positionen mit einem Tipp aus.",
+        "**Fotos.** Fotos auf der Karte verkaufen, aber fotolastige Papierkarten sind in guter Qualität teuer zu drucken. Digital gibt es zu jedem Gericht ein Foto — kostenlos.",
+        "**Hygiene und Verschleiß.** Laminierte Karten werden klebrig und zerkratzt; Gäste merken das."
+      ]
+    },
+    { "type": "h2", "text": "Im direkten Vergleich" },
+    {
+      "type": "table",
+      "headers": ["", "Papierkarte", "Digitale QR-Speisekarte"],
+      "rows": [
+        ["Kosten pro Aktualisierung", "€150–€400 pro Auflage", "€0, sofort"],
+        ["Zeit für eine Preisänderung", "Tage bis Wochen", "Unter einer Minute"],
+        ["Sprachen", "Eine pro gedrucktem Satz", "Alle wichtigen Sprachen, automatisch"],
+        ["Fotos der Gerichte", "Teuer im Druck", "Jedes Gericht, kostenlos"],
+        ["Ausverkaufte Gerichte", "Werden bestellt und abgesagt", "Mit einem Tipp ausgeblendet"],
+        ["Bestellen", "Gast wartet auf den Kellner", "Gast kann [direkt am Tisch bestellen](route:/order-taking)"],
+        ["Anfangskosten", "Erste Druckauflage", "Ab €9.90/Monat"]
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Behalten Sie 2–3 Papierexemplare für Gäste, die sie bevorzugen. Es geht nicht um null Papier — sondern darum, dass Papier nicht mehr das ist, was Sie pflegen müssen."
+    },
+    { "type": "h2", "text": "Wo Papier noch gewinnt" },
+    {
+      "type": "p",
+      "text": "Ehrlichkeit hilft hier: ein einseitiges Degustationsmenü, das monatlich wechselt, ein Fine-Dining-Raum, in dem Handys fehl am Platz wirken, oder eine Stammgäste-Bar mit sechs Positionen — dort ist Papier völlig in Ordnung. Die Rechnung kippt, wenn Ihre Karte lang ist, sich oft ändert, Sprachen oder Fotos braucht — oder wenn Gäste schneller bestellen, als Ihr Service laufen kann."
+    },
+    { "type": "h2", "text": "So sieht der Umstieg aus" },
+    {
+      "type": "steps",
+      "items": [
+        "Scannen Sie Ihre Papierkarte — IQ Rest liest sie ein und erstellt die digitale Speisekarte automatisch.",
+        "Prüfen Sie die Preise, ergänzen Sie Fotos, wo sie zählen.",
+        "Drucken Sie einen QR-Code pro Tisch.",
+        "Ändern Sie alles jederzeit vom Handy aus."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Testen Sie die digitale Speisekarte mit Ihrer eigenen Karte",
+      "text": "Laden Sie ein Foto Ihrer aktuellen Speisekarte hoch und erhalten Sie in etwa 5 Minuten eine funktionierende QR-Speisekarte. 14 Tage kostenlos, keine Kreditkarte erforderlich.",
+      "buttonLabel": "Digitale Speisekarte ansehen",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Häufig gestellte Fragen",
+      "items": [
+        {
+          "q": "Müssen Gäste eine App installieren?",
+          "a": "Nein. Der QR-Code öffnet die Speisekarte im Browser des Handys — nichts zu installieren, keine Registrierung."
+        },
+        {
+          "q": "Was, wenn ein Gast kein Smartphone hat?",
+          "a": "Halten Sie ein paar Papierexemplare am Empfang bereit. In der Praxis fragen weniger als 5% der Gäste danach."
+        },
+        {
+          "q": "Kann eine digitale Speisekarte auch Bestellungen aufnehmen?",
+          "a": "Ja — Gäste können am Tisch bestellen und bezahlen, und Bestellungen gehen direkt an das [Küchendisplay](route:/kitchen-display). Sie können sie zunächst auch nur zum Ansehen nutzen, ohne Bestellfunktion."
+        },
+        {
+          "q": "Wie lange dauert die Einrichtung?",
+          "a": "Etwa 5 Minuten: Papierkarte scannen, Gerichte prüfen, QR-Codes drucken."
+        }
+      ]
+    }
+  ]
+}

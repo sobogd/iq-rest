@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Digitální menu vs papírové: srovnání nákladů | IQ Rest",
+    "description": "Kolik restauraci skutečně stojí papírové menu oproti digitálnímu QR menu: tisk, aktualizace, překlady, rychlost objednávek. Srovnání s konkrétními čísly."
+  },
+  "card": {
+    "title": "Digitální menu vs papírové: kolik restauraci skutečně stojí",
+    "excerpt": "Tisk je jen viditelná část. Srovnáváme plné náklady papírového a digitálního menu — aktualizace, překlady, chyby a ztracené objednávky — s reálnými čísly."
+  },
+  "h1": "Digitální menu vs papírové: kolik restauraci skutečně stojí",
+  "intro": "Každá restaurace začíná s papírovým menu — a většina za něj platí ještě dlouho poté, co přestalo dávat smysl. V tomto srovnání rozebíráme, kolik papír ve skutečnosti stojí, když započtete dotisky, překlady a pomalejší obsluhu, a kde [digitální QR menu](route:/digital-menu) vítězí a kde prohrává.",
+  "blocks": [
+    { "type": "h2", "text": "Viditelný náklad: tisk" },
+    {
+      "type": "p",
+      "text": "Středně velké menu (8–12 stran, laminované, 30 kusů) stojí **€150–€400** za jeden tisk. Většina podniků tiskne znovu 3–6krát ročně: sezonní jídla, změny cen, opotřebené stránky. To je €450–€2,400 ročně jen za to, aby papír zůstal aktuální — a každé zdražení, které odkládáte, protože „zrovna jsme tiskli“, je marže, o kterou potichu přicházíte."
+    },
+    {
+      "type": "p",
+      "text": "Digitální menu žádný tisk nemá. Změníte cenu a během pár sekund platí na každém stole najednou."
+    },
+    { "type": "h2", "text": "Skryté náklady: kde papír opravdu prohrává" },
+    {
+      "type": "list",
+      "items": [
+        "**Zastaralé ceny.** U papíru čeká zdražení od dodavatele týdny na další dotisk. Digitální menu aktualizujete tentýž den.",
+        "**Překlady.** Turistické oblasti potřebují 2–5 jazyků. Na papíře to násobí stránky i náklady na tisk; digitální menu přeloží každou položku automaticky.",
+        "**Vyprodaná jídla.** Papír neukáže, že jídlo došlo — hosté si ho objednají, personál se omlouvá. V digitálním menu je skryjete jedním klepnutím.",
+        "**Fotografie.** Fotky v menu prodávají, ale menu plné fotek se na papíře tiskne draze. Digitální ukáže fotku u každého jídla zdarma.",
+        "**Hygiena a opotřebení.** Laminovaná menu se lepí a škrábou — hosté si toho všimnou."
+      ]
+    },
+    { "type": "h2", "text": "Srovnání vedle sebe" },
+    {
+      "type": "table",
+      "headers": ["", "Papírové menu", "Digitální QR menu"],
+      "rows": [
+        ["Cena aktualizace", "Tisk za €150–€400", "€0, okamžitě"],
+        ["Čas na změnu ceny", "Dny až týdny", "Do minuty"],
+        ["Jazyky", "Jeden na každou tištěnou sadu", "Všechny hlavní jazyky, automaticky"],
+        ["Fotky jídel", "Drahé na tisk", "Každé jídlo, zdarma"],
+        ["Vyprodané položky", "Objednané a odmítnuté", "Skryté jedním klepnutím"],
+        ["Objednávání", "Host čeká na číšníka", "Host může [objednat od stolu](route:/order-taking)"],
+        ["Vstupní náklady", "První tisk", "Od €9.90/měsíc"]
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Nechte si 2–3 papírové výtisky pro hosty, kteří jim dávají přednost. Nejde o nulu papíru — jde o to, aby papír přestal být tím, co musíte udržovat."
+    },
+    { "type": "h2", "text": "Kde papír stále vítězí" },
+    {
+      "type": "p",
+      "text": "Tady pomůže upřímnost: jednostránkové degustační menu, které se mění jednou měsíčně, fine dining, kde telefony působí nepatřičně, nebo bar pro štamgasty se šesti položkami — tam papír stačí. Ekonomika se obrací, když je menu dlouhé, často se mění, potřebuje jazyky nebo fotky, nebo když hosté objednávají rychleji, než obsluha stíhá chodit ke stolům."
+    },
+    { "type": "h2", "text": "Jak vypadá přechod" },
+    {
+      "type": "steps",
+      "items": [
+        "Naskenujte papírové menu — IQ Rest ho přečte a digitální menu sestaví automaticky.",
+        "Zkontrolujte ceny, doplňte fotky tam, kde na nich záleží.",
+        "Vytiskněte jeden QR kód na každý stůl.",
+        "Cokoli kdykoli upravte přímo z telefonu."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Vyzkoušejte digitální menu na vlastním menu",
+      "text": "Nahrajte fotku svého současného menu a asi za 5 minut máte funkční QR menu. 14 dní zdarma, bez platební karty.",
+      "buttonLabel": "Prohlédnout digitální menu",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Časté dotazy",
+      "items": [
+        {
+          "q": "Musí si hosté instalovat aplikaci?",
+          "a": "Ne. QR kód otevře menu v prohlížeči telefonu — nic se neinstaluje, žádná registrace."
+        },
+        {
+          "q": "Co když host nemá chytrý telefon?",
+          "a": "Mějte pár papírových výtisků u vstupu. V praxi si o ně řekne méně než 5 % hostů."
+        },
+        {
+          "q": "Umí digitální menu i přijímat objednávky?",
+          "a": "Ano — hosté mohou objednat a zaplatit od stolu a objednávky jdou rovnou na [kuchyňský displej](route:/kitchen-display). Můžete ale začít i s menu jen k prohlížení."
+        },
+        {
+          "q": "Jak dlouho trvá nastavení?",
+          "a": "Asi 5 minut: naskenujte papírové menu, zkontrolujte položky, vytiskněte QR kódy."
+        }
+      ]
+    }
+  ]
+}

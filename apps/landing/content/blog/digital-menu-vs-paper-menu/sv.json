@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Digital meny vs pappersmeny: verkliga kostnader | IQ Rest",
+    "description": "Vad en pappersmeny egentligen kostar jämfört med en digital QR-meny: tryck, uppdateringar, översättningar, beställningstempo. Jämförelse med riktiga siffror."
+  },
+  "card": {
+    "title": "Digital meny vs pappersmeny: vad de egentligen kostar en restaurang",
+    "excerpt": "Trycket är bara den synliga delen. Vi jämför den fulla kostnaden för pappersmeny och digital meny — uppdateringar, översättningar, misstag och förlorade beställningar — med riktiga siffror."
+  },
+  "h1": "Digital meny vs pappersmeny: vad de egentligen kostar en restaurang",
+  "intro": "Varje restaurang börjar med en pappersmeny — och de flesta fortsätter betala för den långt efter att den slutat vara vettig. Den här jämförelsen visar vad papper faktiskt kostar när man räknar med omtryck, översättningar och långsammare service, och var en [digital QR-meny](route:/digital-menu) vinner eller förlorar.",
+  "blocks": [
+    { "type": "h2", "text": "Den synliga kostnaden: trycket" },
+    {
+      "type": "p",
+      "text": "En mellanstor meny (8–12 sidor, laminerad, 30 exemplar) kostar **€150–€400** per tryckomgång. De flesta ställen trycker om 3–6 gånger per år: säsongsrätter, prisändringar, slitna sidor. Det blir €450–€2,400 om året bara för att hålla papperet aktuellt — och varje prisändring du skjuter upp för att \"vi har ju precis tryckt\" är marginal som tyst går förlorad."
+    },
+    {
+      "type": "p",
+      "text": "En digital meny har ingen tryckomgång. Du ändrar ett pris och det är live på några sekunder, på alla bord samtidigt."
+    },
+    { "type": "h2", "text": "De dolda kostnaderna: där papper verkligen förlorar" },
+    {
+      "type": "list",
+      "items": [
+        "**Inaktuella priser.** Med papper får en prishöjning från leverantören vänta i veckor på nästa omtryck. Digitalt uppdateras den samma dag.",
+        "**Översättningar.** Turistområden behöver 2–5 språk. På papper mångdubblar det sidor och tryckkostnader; en digital meny översätter varje rätt automatiskt.",
+        "**Slutsålda rätter.** Papper kan inte visa att en rätt tagit slut — gästerna beställer den, personalen får be om ursäkt. Digitalt döljer du slutsålda rätter med ett tryck.",
+        "**Foton.** Menyfoton säljer, men fotorika pappersmenyer är dyra att trycka snyggt. Digitalt visar du gratis ett foto för varje rätt.",
+        "**Hygien och slitage.** Laminerade menyer blir kladdiga och repiga; gästerna märker det."
+      ]
+    },
+    { "type": "h2", "text": "Sida vid sida" },
+    {
+      "type": "table",
+      "headers": ["", "Pappersmeny", "Digital QR-meny"],
+      "rows": [
+        ["Kostnad per uppdatering", "€150–€400 per tryckomgång", "€0, direkt"],
+        ["Tid att ändra ett pris", "Dagar till veckor", "Under en minut"],
+        ["Språk", "Ett per tryckt uppsättning", "Alla större språk, automatiskt"],
+        ["Foton på rätter", "Dyrt att trycka", "Varje rätt, gratis"],
+        ["Slutsålda rätter", "Beställs och nekas", "Döljs med ett tryck"],
+        ["Beställning", "Gästen väntar på servitören", "Gästen kan [beställa från bordet](route:/order-taking)"],
+        ["Startkostnad", "Första tryckomgången", "Från €9.90/månad"]
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Behåll 2–3 pappersexemplar för gäster som föredrar dem. Poängen är inte noll papper — utan att papperet slutar vara det du måste underhålla."
+    },
+    { "type": "h2", "text": "Där papper fortfarande vinner" },
+    {
+      "type": "p",
+      "text": "Här hjälper ärlighet: en ensidig avsmakningsmeny som byts varje månad, en fine dining-matsal där mobiler känns malplacerade, eller en stammisbar med sex rätter — där fungerar papper utmärkt. Kalkylen vänder när menyn är lång, ändras ofta, behöver språk eller foton, eller när gästerna beställer snabbare än serveringen hinner gå."
+    },
+    { "type": "h2", "text": "Så ser bytet ut" },
+    {
+      "type": "steps",
+      "items": [
+        "Skanna din pappersmeny — IQ Rest läser den och bygger den digitala menyn automatiskt.",
+        "Kontrollera priserna, lägg till foton där de gör skillnad.",
+        "Skriv ut en QR-kod per bord.",
+        "Uppdatera vad som helst, när som helst, från mobilen."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Prova en digital meny med din egen meny",
+      "text": "Ladda upp ett foto av din nuvarande meny och få en fungerande QR-meny på ungefär 5 minuter. 14 dagar gratis, inget kort krävs.",
+      "buttonLabel": "Se den digitala menyn",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Vanliga frågor",
+      "items": [
+        {
+          "q": "Behöver gästerna installera en app?",
+          "a": "Nej. QR-koden öppnar menyn i mobilens webbläsare — inget att installera, ingen registrering."
+        },
+        {
+          "q": "Vad händer om en gäst inte har någon smartphone?",
+          "a": "Ha några pappersexemplar vid entrén. I praktiken är det färre än 5% av gästerna som frågar efter en."
+        },
+        {
+          "q": "Kan en digital meny också ta emot beställningar?",
+          "a": "Ja — gästerna kan beställa och betala från bordet, och beställningarna går direkt till [köksskärmen](route:/kitchen-display). Du kan också börja med en meny som bara visas."
+        },
+        {
+          "q": "Hur lång tid tar det att komma igång?",
+          "a": "Ungefär 5 minuter: skanna pappersmenyn, gå igenom rätterna, skriv ut QR-koderna."
+        }
+      ]
+    }
+  ]
+}

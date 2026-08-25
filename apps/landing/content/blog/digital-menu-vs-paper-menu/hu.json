@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Digitális étlap vagy papír étlap: valós költségek | IQ Rest",
+    "description": "Mennyibe kerül valójában a papír étlap a QR-os digitális étlaphoz képest: nyomtatás, frissítés, fordítás, rendelési sebesség. Összehasonlítás számokkal."
+  },
+  "card": {
+    "title": "Digitális étlap vagy papír étlap: mennyibe kerül valójában",
+    "excerpt": "A nyomtatás csak a látható rész. Összevetjük a papír és a digitális étlap teljes költségét — frissítések, fordítások, hibák és elveszett rendelések — valós számokkal."
+  },
+  "h1": "Digitális étlap vagy papír étlap: mennyibe kerül valójában",
+  "intro": "Minden étterem papír étlappal indul — és a legtöbb még akkor is fizet érte, amikor már rég nincs értelme. Ez az összehasonlítás megmutatja, mennyibe kerül valójában a papír, ha az újranyomtatásokat, a fordításokat és a lassabb kiszolgálást is beszámoljuk, és hol nyer vagy veszít a [QR-kódos digitális étlap](route:/digital-menu).",
+  "blocks": [
+    { "type": "h2", "text": "A látható költség: a nyomtatás" },
+    {
+      "type": "p",
+      "text": "Egy közepes étlap (8–12 oldal, laminálva, 30 példány) nyomásonként **€150–€400**-ba kerül. A legtöbb hely évente 3–6 alkalommal nyomtat újra: szezonális ételek, árváltozások, elhasználódott oldalak. Ez évi €450–€2,400 csak azért, hogy a papír naprakész maradjon — és minden árváltozás, amit azért halogatsz, mert \"most nyomtattunk\", csendben elvesző árrés."
+    },
+    {
+      "type": "p",
+      "text": "A digitális étlapnál nincs nyomtatás. Átírod az árat, és pár másodperc múlva él, minden asztalnál egyszerre."
+    },
+    { "type": "h2", "text": "A rejtett költségek: hol veszít igazán a papír" },
+    {
+      "type": "list",
+      "items": [
+        "**Elavult árak.** Papíron a beszállítói áremelés hetekig vár a következő nyomtatásra. A digitális még aznap frissül.",
+        "**Fordítások.** A turistás helyeken 2–5 nyelv kell. Papíron ez megsokszorozza az oldalakat és a nyomdaköltséget; a digitális étlap minden tételt automatikusan lefordít.",
+        "**Elfogyott ételek.** A papír nem tudja jelezni, hogy egy étel elfogyott — a vendég megrendeli, a személyzet szabadkozik. A digitális egy érintéssel elrejti az elfogyott tételeket.",
+        "**Fotók.** Az ételfotó elad, de a fotókkal teli papír étlapot drága jó minőségben kinyomtatni. A digitális minden ételhez ingyen mutat fotót.",
+        "**Higiénia és kopás.** A laminált étlap ragacsos és karcos lesz; a vendégek észreveszik."
+      ]
+    },
+    { "type": "h2", "text": "Egymás mellett" },
+    {
+      "type": "table",
+      "headers": ["", "Papír étlap", "Digitális QR-étlap"],
+      "rows": [
+        ["Egy frissítés költsége", "€150–€400 nyomtatásonként", "€0, azonnal"],
+        ["Árváltoztatás ideje", "Napok vagy hetek", "Kevesebb mint egy perc"],
+        ["Nyelvek", "Készletenként egy", "Minden fontos nyelv, automatikusan"],
+        ["Ételfotók", "Drága kinyomtatni", "Minden ételhez, ingyen"],
+        ["Elfogyott tételek", "Megrendelik, majd visszamondják", "Egy érintéssel elrejtve"],
+        ["Rendelés", "A vendég a pincérre vár", "A vendég [az asztaltól rendelhet](route:/order-taking)"],
+        ["Kezdeti költség", "Az első nyomtatás", "Havi €9.90-től"]
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Tarts meg 2–3 papírpéldányt azoknak a vendégeknek, akik ragaszkodnak hozzá. Nem a nulla papír a cél — hanem az, hogy ne a papír legyen az, amit karban kell tartani."
+    },
+    { "type": "h2", "text": "Hol nyer még mindig a papír" },
+    {
+      "type": "p",
+      "text": "Legyünk őszinték: egy havonta változó, egyoldalas kóstolómenü, egy fine dining étterem, ahol a telefon kirívó, vagy egy törzsvendégekre épülő bár hat tétellel — ott a papír tökéletesen megfelel. A számítás akkor fordul meg, ha az étlap hosszú, gyakran változik, nyelvek vagy fotók kellenek, vagy ha a vendégek gyorsabban rendelnének, mint ahogy a felszolgálók az asztalokhoz érnek."
+    },
+    { "type": "h2", "text": "Így néz ki az átállás" },
+    {
+      "type": "steps",
+      "items": [
+        "Szkenneld be a papír étlapot — az IQ Rest beolvassa, és automatikusan felépíti a digitális étlapot.",
+        "Ellenőrizd az árakat, tegyél fotót oda, ahol számít.",
+        "Nyomtass asztalonként egy QR-kódot.",
+        "Bármit módosíthatsz, bármikor, a telefonodról."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Próbáld ki a digitális étlapot a saját étlapodon",
+      "text": "Tölts fel egy fotót a jelenlegi étlapodról, és nagyjából 5 perc alatt működő QR-étlapot kapsz. 14 nap ingyen, bankkártya nélkül.",
+      "buttonLabel": "Nézd meg a digitális étlapot",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Gyakori kérdések",
+      "items": [
+        {
+          "q": "Kell a vendégeknek alkalmazást telepíteniük?",
+          "a": "Nem. A QR-kód a telefon böngészőjében nyitja meg az étlapot — nincs telepítés, nincs regisztráció."
+        },
+        {
+          "q": "Mi van, ha egy vendégnek nincs okostelefonja?",
+          "a": "Tarts néhány papírpéldányt a pultnál. A gyakorlatban a vendégek kevesebb mint 5%-a kér ilyet."
+        },
+        {
+          "q": "Tud a digitális étlap rendelést is felvenni?",
+          "a": "Igen — a vendégek az asztaltól rendelhetnek és fizethetnek, a rendelések pedig egyenesen a [konyhai kijelzőre](route:/kitchen-display) futnak be. Először akár csak megtekinthető étlapként is használhatod."
+        },
+        {
+          "q": "Mennyi ideig tart a beállítás?",
+          "a": "Nagyjából 5 perc: beszkenneled a papír étlapot, átnézed a tételeket, kinyomtatod a QR-kódokat."
+        }
+      ]
+    }
+  ]
+}

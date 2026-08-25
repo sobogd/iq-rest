@@ -214,7 +214,8 @@
     ],
     "infoHeading": "Bilgi",
     "legalHeading": "Yasal",
-    "currencyHeading": "Para Birimi"
+    "currencyHeading": "Para Birimi",
+    "blogLabel": "Blog"
   },
   "common": {
     "close": "Kapat",
@@ -257,5 +258,14 @@
       "invalidCode": "Geçersiz kod. Lütfen tekrar deneyin.",
       "tooManyAttempts": "Çok fazla deneme yaptınız. Lütfen bekleyip tekrar deneyin."
     }
+  },
+  "blog": {
+    "metaTitle": "Restoran teknolojisi blogu — IQ Rest",
+    "metaDescription": "Dijital menü, QR sipariş, mutfak ekranları ve rezervasyonlar üzerine rehberler ve karşılaştırmalar — restoran sahipleri için pratik içerikler.",
+    "title": "Blog",
+    "intro": "Dijital menü, QR sipariş, mutfak ekranları ve restoran yönetimi üzerine rehberler ve karşılaştırmalar.",
+    "readMore": "Makaleyi oku",
+    "relatedHeading": "Blogdan daha fazlası",
+    "backToBlog": "Tüm makaleler"
   }
 }

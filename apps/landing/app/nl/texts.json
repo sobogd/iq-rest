@@ -214,7 +214,8 @@
     ],
     "infoHeading": "Informatie",
     "legalHeading": "Juridisch",
-    "currencyHeading": "Valuta"
+    "currencyHeading": "Valuta",
+    "blogLabel": "Blog"
   },
   "common": {
     "close": "Sluiten",
@@ -257,5 +258,14 @@
       "invalidCode": "Ongeldige code. Probeer het opnieuw.",
       "tooManyAttempts": "Te veel pogingen. Wacht even en probeer het opnieuw."
     }
+  },
+  "blog": {
+    "metaTitle": "Blog over restauranttechnologie — IQ Rest",
+    "metaDescription": "Gidsen en vergelijkingen over digitale menu's, QR-bestellen, keukenschermen en reserveringen — praktisch voor horecaondernemers.",
+    "title": "Blog",
+    "intro": "Gidsen en vergelijkingen over digitale menu's, QR-bestellen, keukenschermen en de dagelijkse horecapraktijk.",
+    "readMore": "Artikel lezen",
+    "relatedHeading": "Meer uit het blog",
+    "backToBlog": "Alle artikelen"
   }
 }

@@ -214,7 +214,8 @@
     ],
     "infoHeading": "Informació",
     "legalHeading": "Legal",
-    "currencyHeading": "Moneda"
+    "currencyHeading": "Moneda",
+    "blogLabel": "Blog"
   },
   "common": {
     "close": "Tancar",
@@ -257,5 +258,14 @@
       "invalidCode": "Codi incorrecte. Torna-ho a provar.",
       "tooManyAttempts": "Massa intents. Espera uns minuts i torna-ho a provar."
     }
+  },
+  "blog": {
+    "metaTitle": "Blog de tecnologia per a restaurants — IQ Rest",
+    "metaDescription": "Guies i comparatives sobre cartes digitals, comandes per QR, pantalles de cuina i reserves — lectura pràctica per a restauradors.",
+    "title": "Blog",
+    "intro": "Guies i comparatives sobre cartes digitals, comandes per QR, pantalles de cuina i la gestió del restaurant.",
+    "readMore": "Llegir l'article",
+    "relatedHeading": "Més del blog",
+    "backToBlog": "Tots els articles"
   }
 }

@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Digital Menu vs Paper Menu: Real Costs Compared | IQ Rest",
+    "description": "What a paper menu really costs a restaurant vs a QR digital menu: printing, updates, translations, ordering speed. Side-by-side comparison with numbers."
+  },
+  "card": {
+    "title": "Digital menu vs paper menu: what each really costs a restaurant",
+    "excerpt": "Printing is only the visible part. We compare the full cost of paper and digital menus — updates, translations, mistakes and lost orders — with real numbers."
+  },
+  "h1": "Digital menu vs paper menu: what each really costs a restaurant",
+  "intro": "Every restaurant starts with a paper menu — and most keep paying for it long after it stops making sense. This comparison breaks down what paper actually costs once you count reprints, translations and slower service, and where a [QR digital menu](route:/digital-menu) wins or loses.",
+  "blocks": [
+    { "type": "h2", "text": "The visible cost: printing" },
+    {
+      "type": "p",
+      "text": "A mid-size menu (8–12 pages, laminated, 30 copies) costs **€150–€400** per print run. Most venues reprint 3–6 times a year: seasonal dishes, price changes, worn-out pages. That is €450–€2,400 a year just to keep paper current — and every price change you postpone because \"we just printed\" is margin you quietly lose."
+    },
+    {
+      "type": "p",
+      "text": "A digital menu has no print run. You change a price and it is live in seconds, on every table at once."
+    },
+    { "type": "h2", "text": "The hidden costs: where paper really loses" },
+    {
+      "type": "list",
+      "items": [
+        "**Stale prices.** With paper, a supplier price hike waits weeks for the next reprint. Digital updates the same day.",
+        "**Translations.** Tourist areas need 2–5 languages. On paper that multiplies pages and print costs; a digital menu translates every item automatically.",
+        "**86'd items.** Paper can't show that a dish ran out — guests order it, staff apologise. Digital hides sold-out items in one tap.",
+        "**Photos.** Menu photos sell, but photo-heavy paper menus are expensive to print well. Digital shows a photo for every dish for free.",
+        "**Hygiene and wear.** Laminated menus get sticky and scratched; guests notice."
+      ]
+    },
+    { "type": "h2", "text": "Side by side" },
+    {
+      "type": "table",
+      "headers": ["", "Paper menu", "Digital QR menu"],
+      "rows": [
+        ["Cost per update", "€150–€400 print run", "€0, instant"],
+        ["Time to change a price", "Days to weeks", "Under a minute"],
+        ["Languages", "One per printed set", "All major languages, automatic"],
+        ["Photos of dishes", "Expensive to print", "Every dish, free"],
+        ["Sold-out items", "Ordered and refused", "Hidden in one tap"],
+        ["Ordering", "Guest waits for a waiter", "Guest can [order from the table](route:/order-taking)"],
+        ["Upfront cost", "First print run", "From €9.90/month"]
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Keep 2–3 paper copies for guests who prefer them. The point isn't zero paper — it's that paper stops being the thing you maintain."
+    },
+    { "type": "h2", "text": "Where paper still wins" },
+    {
+      "type": "p",
+      "text": "Honesty helps here: a one-page tasting menu that changes monthly, a fine-dining room where phones feel out of place, or a regulars-only bar with six items — paper is fine there. The economics flip when your menu is long, changes often, needs languages or photos, or when guests order faster than your floor staff can walk."
+    },
+    { "type": "h2", "text": "What switching looks like" },
+    {
+      "type": "steps",
+      "items": [
+        "Scan your paper menu — IQ Rest reads it and builds the digital menu automatically.",
+        "Check prices, add photos where they matter.",
+        "Print one QR code per table.",
+        "Update anything, any time, from your phone."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Try a digital menu on your own menu",
+      "text": "Upload a photo of your current menu and get a working QR menu in about 5 minutes. 14 days free, no card required.",
+      "buttonLabel": "See the digital menu",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently asked questions",
+      "items": [
+        {
+          "q": "Do guests need to install an app?",
+          "a": "No. The QR code opens the menu in the phone's browser — nothing to install, no sign-up."
+        },
+        {
+          "q": "What happens if a guest doesn't have a smartphone?",
+          "a": "Keep a few paper copies at the host stand. In practice fewer than 5% of guests ask for one."
+        },
+        {
+          "q": "Can a digital menu take orders too?",
+          "a": "Yes — guests can order and pay from the table, and orders go straight to the [kitchen display](route:/kitchen-display). You can also run it as a view-only menu first."
+        },
+        {
+          "q": "How long does the setup take?",
+          "a": "About 5 minutes: scan your paper menu, review the items, print the QR codes."
+        }
+      ]
+    }
+  ]
+}

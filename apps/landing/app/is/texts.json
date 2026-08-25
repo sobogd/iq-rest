@@ -214,7 +214,8 @@
     ],
     "infoHeading": "Upplýsingar",
     "legalHeading": "Lagalegt",
-    "currencyHeading": "Gjaldmiðill"
+    "currencyHeading": "Gjaldmiðill",
+    "blogLabel": "Blogg"
   },
   "common": {
     "close": "Loka",
@@ -257,5 +258,14 @@
       "invalidCode": "Ógildur kóði. Vinsamlegast reyndu aftur.",
       "tooManyAttempts": "Of margar tilraunir. Vinsamlegast hinkraðu og reyndu aftur."
     }
+  },
+  "blog": {
+    "metaTitle": "Blogg um veitingatækni — IQ Rest",
+    "metaDescription": "Leiðbeiningar og samanburður um stafræna matseðla, QR-pantanir, eldhússkjái og borðabókanir — hagnýtt lesefni fyrir veitingamenn.",
+    "title": "Blogg",
+    "intro": "Leiðbeiningar og samanburður um stafræna matseðla, QR-pantanir, eldhússkjái og rekstur veitingastaða.",
+    "readMore": "Lesa greinina",
+    "relatedHeading": "Meira af blogginu",
+    "backToBlog": "Allar greinar"
   }
 }

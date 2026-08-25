@@ -214,7 +214,8 @@
     ],
     "infoHeading": "信息",
     "legalHeading": "法律信息",
-    "currencyHeading": "货币"
+    "currencyHeading": "货币",
+    "blogLabel": "博客"
   },
   "common": {
     "close": "关闭",
@@ -257,5 +258,14 @@
       "invalidCode": "验证码无效。请重试。",
       "tooManyAttempts": "尝试次数过多。请稍后再试。"
     }
+  },
+  "blog": {
+    "metaTitle": "餐厅科技博客 — IQ Rest",
+    "metaDescription": "关于电子菜单、扫码点餐、厨房显示屏和预订的指南与对比——为餐厅经营者提供实用内容。",
+    "title": "博客",
+    "intro": "关于电子菜单、扫码点餐、厨房显示屏和餐厅运营的指南与对比。",
+    "readMore": "阅读文章",
+    "relatedHeading": "更多博客文章",
+    "backToBlog": "全部文章"
   }
 }

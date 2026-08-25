@@ -214,7 +214,8 @@
     ],
     "infoHeading": "안내",
     "legalHeading": "법적 고지",
-    "currencyHeading": "통화"
+    "currencyHeading": "통화",
+    "blogLabel": "블로그"
   },
   "common": {
     "close": "닫기",
@@ -257,5 +258,14 @@
       "invalidCode": "잘못된 코드입니다. 다시 시도해 주세요.",
       "tooManyAttempts": "시도 횟수를 초과했습니다. 잠시 후 다시 시도해 주세요."
     }
+  },
+  "blog": {
+    "metaTitle": "레스토랑 테크 블로그 — IQ Rest",
+    "metaDescription": "디지털 메뉴, QR 주문, 주방 디스플레이, 예약에 관한 가이드와 비교 — 레스토랑 운영자를 위한 실용 정보.",
+    "title": "블로그",
+    "intro": "디지털 메뉴, QR 주문, 주방 디스플레이, 레스토랑 운영에 관한 가이드와 비교.",
+    "readMore": "기사 읽기",
+    "relatedHeading": "블로그 더 보기",
+    "backToBlog": "전체 글"
   }
 }

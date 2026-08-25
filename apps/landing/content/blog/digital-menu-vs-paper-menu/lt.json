@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Skaitmeninis meniu ar popierinis: tikrosios kainos | IQ Rest",
+    "description": "Kiek popierinis meniu iš tiesų kainuoja restoranui, palyginti su QR meniu: spausdinimas, atnaujinimai, vertimai, užsakymų greitis. Palyginimas skaičiais."
+  },
+  "card": {
+    "title": "Skaitmeninis meniu ar popierinis: kiek kiekvienas iš tiesų kainuoja restoranui",
+    "excerpt": "Spausdinimas — tik matoma dalis. Palyginame visą popierinio ir skaitmeninio meniu kainą — atnaujinimus, vertimus, klaidas ir prarastus užsakymus — su tikrais skaičiais."
+  },
+  "h1": "Skaitmeninis meniu ar popierinis: kiek kiekvienas iš tiesų kainuoja restoranui",
+  "intro": "Kiekvienas restoranas pradeda nuo popierinio meniu — ir dauguma už jį moka dar ilgai po to, kai tai nustoja būti prasminga. Šiame palyginime suskaičiuojame, kiek popierius iš tiesų kainuoja, kai įtraukiami pakartotiniai spausdinimai, vertimai ir lėtesnis aptarnavimas, ir kur [QR skaitmeninis meniu](route:/digital-menu) laimi arba pralaimi.",
+  "blocks": [
+    { "type": "h2", "text": "Matoma kaina: spausdinimas" },
+    {
+      "type": "p",
+      "text": "Vidutinio dydžio meniu (8–12 puslapių, laminuotas, 30 egzempliorių) kainuoja **€150–€400** už vieną tiražą. Dauguma vietų spausdina iš naujo 3–6 kartus per metus: sezoniniai patiekalai, kainų pokyčiai, nusidėvėję puslapiai. Tai €450–€2,400 per metus vien tam, kad popierius liktų aktualus — o kiekvienas kainos pakeitimas, kurį atidedi, nes \"ką tik atspausdinome\", yra marža, kurią tyliai prarandi."
+    },
+    {
+      "type": "p",
+      "text": "Skaitmeninis meniu tiražo neturi. Pakeiti kainą — ir ji matoma per kelias sekundes, iš karto ant visų stalų."
+    },
+    { "type": "h2", "text": "Paslėptos išlaidos: kur popierius iš tiesų pralaimi" },
+    {
+      "type": "list",
+      "items": [
+        "**Pasenusios kainos.** Popieriuje tiekėjo kainų šuolis laukia savaites iki kito tiražo. Skaitmeniniame atsinaujina tą pačią dieną.",
+        "**Vertimai.** Turistinėse vietose reikia 2–5 kalbų. Popieriuje tai padaugina puslapius ir spausdinimo išlaidas; skaitmeninis meniu kiekvieną patiekalą išverčia automatiškai.",
+        "**Pasibaigę patiekalai.** Popierius negali parodyti, kad patiekalo nebeliko — svečiai jį užsako, personalas atsiprašinėja. Skaitmeniniame išparduoti patiekalai paslepiami vienu palietimu.",
+        "**Nuotraukos.** Patiekalų nuotraukos parduoda, bet meniu su daug nuotraukų kokybiškai atspausdinti brangu. Skaitmeninis rodo kiekvieno patiekalo nuotrauką nemokamai.",
+        "**Higiena ir nusidėvėjimas.** Laminuoti meniu tampa lipnūs ir subraižyti; svečiai tai pastebi."
+      ]
+    },
+    { "type": "h2", "text": "Palyginimas greta" },
+    {
+      "type": "table",
+      "headers": ["", "Popierinis meniu", "Skaitmeninis QR meniu"],
+      "rows": [
+        ["Atnaujinimo kaina", "€150–€400 tiražas", "€0, iš karto"],
+        ["Laikas pakeisti kainą", "Nuo dienų iki savaičių", "Mažiau nei minutė"],
+        ["Kalbos", "Viena vienam spausdintam komplektui", "Visos pagrindinės kalbos, automatiškai"],
+        ["Patiekalų nuotraukos", "Brangu spausdinti", "Kiekvienam patiekalui, nemokamai"],
+        ["Išparduoti patiekalai", "Užsakomi ir atsakomi", "Paslepiami vienu palietimu"],
+        ["Užsakymas", "Svečias laukia padavėjo", "Svečias gali [užsisakyti nuo stalo](route:/order-taking)"],
+        ["Pradinė kaina", "Pirmasis tiražas", "Nuo €9.90/mėn."]
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Pasilik 2–3 popierinius egzempliorius svečiams, kurie juos mėgsta. Tikslas — ne nulis popieriaus, o tai, kad popierius nustotų būti tuo, ką nuolat prižiūri."
+    },
+    { "type": "h2", "text": "Kur popierius vis dar laimi" },
+    {
+      "type": "p",
+      "text": "Čia padeda sąžiningumas: vieno puslapio degustacinis meniu, kuris keičiasi kas mėnesį, fine dining salė, kurioje telefonai atrodo ne vietoje, arba nuolatinių lankytojų baras su šešiais patiekalais — ten popierius puikiai tinka. Ekonomika apsiverčia, kai meniu ilgas, dažnai keičiasi, reikia kalbų ar nuotraukų — arba kai svečiai užsako greičiau, nei salės personalas spėja prieiti."
+    },
+    { "type": "h2", "text": "Kaip atrodo perėjimas" },
+    {
+      "type": "steps",
+      "items": [
+        "Nuskenuok savo popierinį meniu — IQ Rest jį perskaito ir automatiškai sukuria skaitmeninį meniu.",
+        "Patikrink kainas, pridėk nuotraukas ten, kur jos svarbios.",
+        "Atspausdink po vieną QR kodą kiekvienam stalui.",
+        "Atnaujink bet ką, bet kada, tiesiai iš telefono."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Išbandyk skaitmeninį meniu su savo meniu",
+      "text": "Įkelk savo dabartinio meniu nuotrauką ir gauk veikiantį QR meniu maždaug per 5 minutes. 14 dienų nemokamai, kortelės nereikia.",
+      "buttonLabel": "Peržiūrėk skaitmeninį meniu",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Dažniausiai užduodami klausimai",
+      "items": [
+        {
+          "q": "Ar svečiams reikia įsidiegti programėlę?",
+          "a": "Ne. QR kodas atidaro meniu telefono naršyklėje — nieko nereikia diegti, nereikia registruotis."
+        },
+        {
+          "q": "Kas, jei svečias neturi išmaniojo telefono?",
+          "a": "Pasilik kelis popierinius egzempliorius prie administratoriaus. Praktiškai jų paprašo mažiau nei 5% svečių."
+        },
+        {
+          "q": "Ar per skaitmeninį meniu galima ir užsisakyti?",
+          "a": "Taip — svečiai gali užsisakyti ir susimokėti nuo stalo, o užsakymai keliauja tiesiai į [virtuvės ekraną](route:/kitchen-display). Iš pradžių jį galima naudoti ir tik kaip peržiūrimą meniu."
+        },
+        {
+          "q": "Kiek trunka diegimas?",
+          "a": "Apie 5 minutes: nuskenuok popierinį meniu, peržiūrėk patiekalus, atspausdink QR kodus."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Digitalni jelovnik ili papirnati: stvarni troškovi | IQ Rest",
+    "description": "Što papirnati jelovnik stvarno košta restoran u usporedbi s digitalnim QR jelovnikom: tisak, izmjene, prijevodi, brzina naručivanja. Usporedba s brojkama."
+  },
+  "card": {
+    "title": "Digitalni ili papirnati jelovnik: što svaki stvarno košta restoran",
+    "excerpt": "Tisak je samo vidljivi dio. Uspoređujemo pune troškove papirnatog i digitalnog jelovnika — izmjene, prijevode, greške i izgubljene narudžbe — sa stvarnim brojkama."
+  },
+  "h1": "Digitalni ili papirnati jelovnik: što svaki stvarno košta restoran",
+  "intro": "Svaki restoran počinje s papirnatim jelovnikom — i većina ga plaća još dugo nakon što prestane imati smisla. Ova usporedba pokazuje koliko papir zapravo košta kad zbrojite ponovljeni tisak, prijevode i sporiju uslugu, te gdje [digitalni QR jelovnik](route:/digital-menu) pobjeđuje, a gdje gubi.",
+  "blocks": [
+    { "type": "h2", "text": "Vidljivi trošak: tisak" },
+    {
+      "type": "p",
+      "text": "Jelovnik srednje veličine (8–12 stranica, plastificiran, 30 primjeraka) košta **€150–€400** po tiskanju. Većina lokala tiska ponovno 3–6 puta godišnje: sezonska jela, promjene cijena, istrošene stranice. To je €450–€2,400 godišnje samo da papir ostane ažuran — a svaka promjena cijene koju odgodite jer \"tek smo tiskali\" marža je koju tiho gubite."
+    },
+    {
+      "type": "p",
+      "text": "Digitalni jelovnik nema tiskanje. Promijenite cijenu i u nekoliko je sekundi vidljiva, na svim stolovima odjednom."
+    },
+    { "type": "h2", "text": "Skriveni troškovi: gdje papir stvarno gubi" },
+    {
+      "type": "list",
+      "items": [
+        "**Zastarjele cijene.** S papirom poskupljenje dobavljača tjednima čeka sljedeći tisak. Digitalni se ažurira isti dan.",
+        "**Prijevodi.** Turistička mjesta trebaju 2–5 jezika. Na papiru to množi stranice i troškove tiska; digitalni jelovnik automatski prevodi svaku stavku.",
+        "**Rasprodana jela.** Papir ne može pokazati da je jelo nestalo — gosti ga naruče, osoblje se ispričava. Digitalni skriva rasprodane stavke jednim dodirom.",
+        "**Fotografije.** Fotografije jela prodaju, ali jelovnike pune fotografija skupo je kvalitetno tiskati. Digitalni besplatno prikazuje fotografiju uz svako jelo.",
+        "**Higijena i trošenje.** Plastificirani jelovnici postanu ljepljivi i izgrebani; gosti to primijete."
+      ]
+    },
+    { "type": "h2", "text": "Usporedba" },
+    {
+      "type": "table",
+      "headers": ["", "Papirnati jelovnik", "Digitalni QR jelovnik"],
+      "rows": [
+        ["Trošak po izmjeni", "€150–€400 za tisak", "€0, odmah"],
+        ["Vrijeme za promjenu cijene", "Dani do tjedni", "Manje od minute"],
+        ["Jezici", "Jedan po tiskanom kompletu", "Svi glavni jezici, automatski"],
+        ["Fotografije jela", "Skupe za tisak", "Svako jelo, besplatno"],
+        ["Rasprodane stavke", "Naručene pa odbijene", "Skrivene jednim dodirom"],
+        ["Naručivanje", "Gost čeka konobara", "Gost može [naručiti sa stola](route:/order-taking)"],
+        ["Početni trošak", "Prvi tisak", "Od €9.90/mjesečno"]
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Zadržite 2–3 papirnata primjerka za goste koji ih više vole. Poanta nije nula papira — nego da papir prestane biti ono što stalno održavate."
+    },
+    { "type": "h2", "text": "Gdje papir i dalje pobjeđuje" },
+    {
+      "type": "p",
+      "text": "Budimo iskreni: degustacijski jelovnik na jednoj stranici koji se mijenja mjesečno, fine-dining sala u kojoj mobiteli djeluju neumjesno ili kvartovski bar sa šest stavki — tamo je papir sasvim u redu. Ekonomija se okreće kad je jelovnik dug, često se mijenja, treba jezike ili fotografije, ili kad gosti naručuju brže nego što osoblje stigne obići stolove."
+    },
+    { "type": "h2", "text": "Kako izgleda prelazak" },
+    {
+      "type": "steps",
+      "items": [
+        "Skenirajte papirnati jelovnik — IQ Rest ga pročita i automatski izradi digitalni jelovnik.",
+        "Provjerite cijene, dodajte fotografije gdje su važne.",
+        "Ispišite po jedan QR kod za svaki stol.",
+        "Mijenjajte što god želite, bilo kada, s mobitela."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Isprobajte digitalni jelovnik na vlastitom jelovniku",
+      "text": "Učitajte fotografiju svog trenutnog jelovnika i dobijte funkcionalan QR jelovnik za otprilike 5 minuta. 14 dana besplatno, bez kartice.",
+      "buttonLabel": "Pogledajte digitalni jelovnik",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Česta pitanja",
+      "items": [
+        {
+          "q": "Moraju li gosti instalirati aplikaciju?",
+          "a": "Ne. QR kod otvara jelovnik u pregledniku mobitela — ništa se ne instalira, nema registracije."
+        },
+        {
+          "q": "Što ako gost nema pametni telefon?",
+          "a": "Držite nekoliko papirnatih primjeraka na ulazu. U praksi ih zatraži manje od 5% gostiju."
+        },
+        {
+          "q": "Može li digitalni jelovnik i zaprimati narudžbe?",
+          "a": "Da — gosti mogu naručiti i platiti sa stola, a narudžbe idu izravno na [kuhinjski ekran](route:/kitchen-display). Možete ga najprije koristiti i samo za pregled."
+        },
+        {
+          "q": "Koliko traje postavljanje?",
+          "a": "Oko 5 minuta: skenirajte papirnati jelovnik, provjerite stavke, ispišite QR kodove."
+        }
+      ]
+    }
+  ]
+}

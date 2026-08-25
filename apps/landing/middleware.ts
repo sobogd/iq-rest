@@ -214,7 +214,9 @@ export default function middleware(request: NextRequest) {
   }
   if (pathname.startsWith("/en/")) {
     const sub = pathname.slice(3);
-    if (EN_ROOT_SLUGS.has(sub)) {
+    // Blog article slugs are dynamic (any /blog/<slug>), so they can't live in
+    // the static EN_ROOT_SLUGS set — match the prefix explicitly.
+    if (EN_ROOT_SLUGS.has(sub) || sub.startsWith("/blog/")) {
       const target = new URL(sub, request.url);
       target.search = request.nextUrl.search;
       const response = NextResponse.redirect(target, 301);
@@ -276,7 +278,14 @@ export default function middleware(request: NextRequest) {
   // `/` and English root slugs (pricing, digital-menu-for-restaurants, ...)
   // resolve to the `app/(en)` route group. Set Last-Modified and skip the
   // "no-locale-prefix" geo redirect below.
-  if (pathname === "/" || EN_ROOT_SLUGS.has(pathname) || LEGAL_ROOT_SLUGS.has(pathname)) {
+  // Blog article pages (/blog/<slug>) are EN-root-served like /blog itself,
+  // but their slugs are dynamic — prefix match instead of the static set.
+  if (
+    pathname === "/" ||
+    EN_ROOT_SLUGS.has(pathname) ||
+    LEGAL_ROOT_SLUGS.has(pathname) ||
+    pathname.startsWith("/blog/")
+  ) {
     const response = NextResponse.next();
     const lm = pathname === "/" ? HOME_META.lastModified : lastModifiedFor(
       // Resolve root slug → shared route key for lookup in FEATURE_PAGES

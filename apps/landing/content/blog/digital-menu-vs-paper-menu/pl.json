@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Menu cyfrowe czy papierowe: porównanie kosztów | IQ Rest",
+    "description": "Ile naprawdę kosztuje papierowe menu w restauracji w porównaniu z cyfrowym menu QR: druk, aktualizacje, tłumaczenia, tempo zamówień. Porównanie z liczbami."
+  },
+  "card": {
+    "title": "Menu cyfrowe czy papierowe: ile naprawdę płaci restauracja",
+    "excerpt": "Druk to tylko widoczna część. Porównujemy pełny koszt menu papierowego i cyfrowego — aktualizacje, tłumaczenia, pomyłki i utracone zamówienia — na konkretnych liczbach."
+  },
+  "h1": "Menu cyfrowe czy papierowe: ile naprawdę płaci restauracja",
+  "intro": "Każda restauracja zaczyna od papierowego menu — i większość płaci za nie jeszcze długo po tym, jak przestało mieć sens. W tym porównaniu rozkładamy na czynniki, ile papier naprawdę kosztuje, gdy doliczyć dodruki, tłumaczenia i wolniejszą obsługę, oraz gdzie [cyfrowe menu QR](route:/digital-menu) wygrywa, a gdzie przegrywa.",
+  "blocks": [
+    { "type": "h2", "text": "Koszt widoczny: druk" },
+    {
+      "type": "p",
+      "text": "Menu średniej wielkości (8–12 stron, laminowane, 30 egzemplarzy) kosztuje **€150–€400** za nakład. Większość lokali drukuje je od nowa 3–6 razy w roku: dania sezonowe, zmiany cen, zniszczone strony. To €450–€2,400 rocznie tylko po to, żeby papier był aktualny — a każda podwyżka cen odkładana, bo „dopiero co drukowaliśmy”, to marża, którą po cichu tracisz."
+    },
+    {
+      "type": "p",
+      "text": "Cyfrowe menu nie ma nakładu. Zmieniasz cenę i po kilku sekundach widzi ją każdy stolik jednocześnie."
+    },
+    { "type": "h2", "text": "Koszty ukryte: gdzie papier naprawdę przegrywa" },
+    {
+      "type": "list",
+      "items": [
+        "**Nieaktualne ceny.** Przy papierze podwyżka u dostawcy czeka tygodniami na kolejny dodruk. Cyfrowe menu aktualizujesz tego samego dnia.",
+        "**Tłumaczenia.** W miejscach turystycznych potrzeba 2–5 języków. Na papierze to mnoży strony i koszty druku; cyfrowe menu tłumaczy każdą pozycję automatycznie.",
+        "**Dania wyprzedane.** Papier nie pokaże, że danie się skończyło — goście je zamawiają, obsługa przeprasza. W cyfrowym menu ukrywasz je jednym dotknięciem.",
+        "**Zdjęcia.** Zdjęcia w menu sprzedają, ale menu papierowe pełne zdjęć jest drogie w dobrym druku. Cyfrowe pokazuje zdjęcie każdego dania za darmo.",
+        "**Higiena i zużycie.** Laminowane karty robią się lepkie i porysowane — goście to widzą."
+      ]
+    },
+    { "type": "h2", "text": "Porównanie obok siebie" },
+    {
+      "type": "table",
+      "headers": ["", "Menu papierowe", "Cyfrowe menu QR"],
+      "rows": [
+        ["Koszt aktualizacji", "Nakład za €150–€400", "€0, natychmiast"],
+        ["Czas zmiany ceny", "Od dni do tygodni", "Poniżej minuty"],
+        ["Języki", "Jeden na każdy drukowany zestaw", "Wszystkie główne języki, automatycznie"],
+        ["Zdjęcia dań", "Drogie w druku", "Każde danie, za darmo"],
+        ["Pozycje wyprzedane", "Zamawiane i odmawiane", "Ukryte jednym dotknięciem"],
+        ["Zamawianie", "Gość czeka na kelnera", "Gość może [zamówić od stolika](route:/order-taking)"],
+        ["Koszt startowy", "Pierwszy nakład", "Od €9.90/mies."]
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Zostaw 2–3 papierowe egzemplarze dla gości, którzy je wolą. Nie chodzi o zero papieru — chodzi o to, żeby papier przestał być czymś, co trzeba utrzymywać."
+    },
+    { "type": "h2", "text": "Gdzie papier wciąż wygrywa" },
+    {
+      "type": "p",
+      "text": "Tu przyda się szczerość: jednostronicowe menu degustacyjne zmieniane co miesiąc, sala fine dining, gdzie telefony wyglądają nie na miejscu, albo bar dla stałych gości z sześcioma pozycjami — tam papier się sprawdza. Rachunek się odwraca, gdy menu jest długie, często się zmienia, wymaga języków lub zdjęć, albo gdy goście zamawiają szybciej, niż obsługa nadąża podchodzić do stolików."
+    },
+    { "type": "h2", "text": "Jak wygląda przejście" },
+    {
+      "type": "steps",
+      "items": [
+        "Zeskanuj papierowe menu — IQ Rest je odczyta i automatycznie zbuduje menu cyfrowe.",
+        "Sprawdź ceny, dodaj zdjęcia tam, gdzie mają znaczenie.",
+        "Wydrukuj po jednym kodzie QR na stolik.",
+        "Zmieniaj cokolwiek, w każdej chwili, z telefonu."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Wypróbuj cyfrowe menu na własnej karcie",
+      "text": "Prześlij zdjęcie obecnego menu i otrzymaj działające menu QR w około 5 minut. 14 dni za darmo, bez karty płatniczej.",
+      "buttonLabel": "Zobacz cyfrowe menu",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Najczęściej zadawane pytania",
+      "items": [
+        {
+          "q": "Czy goście muszą instalować aplikację?",
+          "a": "Nie. Kod QR otwiera menu w przeglądarce telefonu — nic nie trzeba instalować ani zakładać konta."
+        },
+        {
+          "q": "Co jeśli gość nie ma smartfona?",
+          "a": "Trzymaj kilka papierowych egzemplarzy przy wejściu. W praktyce prosi o nie mniej niż 5% gości."
+        },
+        {
+          "q": "Czy cyfrowe menu przyjmuje też zamówienia?",
+          "a": "Tak — goście mogą zamawiać i płacić przy stoliku, a zamówienia trafiają prosto na [ekran kuchenny](route:/kitchen-display). Możesz też zacząć od menu tylko do przeglądania."
+        },
+        {
+          "q": "Ile trwa konfiguracja?",
+          "a": "Około 5 minut: zeskanuj papierowe menu, sprawdź pozycje, wydrukuj kody QR."
+        }
+      ]
+    }
+  ]
+}

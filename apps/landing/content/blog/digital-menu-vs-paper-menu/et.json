@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Digimenüü vs pabermenüü: tegelikud kulud võrdluses | IQ Rest",
+    "description": "Mida pabermenüü restoranile tegelikult maksab võrreldes QR-digimenüüga: trükkimine, uuendused, tõlked, tellimiskiirus. Võrdlus päris numbritega."
+  },
+  "card": {
+    "title": "Digimenüü vs pabermenüü: mida kumbki restoranile tegelikult maksab",
+    "excerpt": "Trükkimine on vaid nähtav osa. Võrdleme paber- ja digimenüü täielikku kulu — uuendused, tõlked, vead ja kaotatud tellimused — päris numbritega."
+  },
+  "h1": "Digimenüü vs pabermenüü: mida kumbki restoranile tegelikult maksab",
+  "intro": "Iga restoran alustab pabermenüüga — ja enamik maksab selle eest edasi ka siis, kui sel enam mõtet pole. See võrdlus näitab, mida paber tegelikult maksab, kui arvestada kordustrükke, tõlkeid ja aeglasemat teenindust — ning kus [QR-digimenüü](route:/digital-menu) võidab või kaotab.",
+  "blocks": [
+    { "type": "h2", "text": "Nähtav kulu: trükkimine" },
+    {
+      "type": "p",
+      "text": "Keskmise suurusega menüü (8–12 lehekülge, lamineeritud, 30 eksemplari) maksab **€150–€400** trükikorra kohta. Enamik kohti trükib uuesti 3–6 korda aastas: hooajaroad, hinnamuutused, kulunud leheküljed. See teeb €450–€2,400 aastas ainuüksi selleks, et paber püsiks ajakohane — ja iga hinnamuutus, mille edasi lükkad, sest \"just trükkisime\", on marginaal, mille vaikselt kaotad."
+    },
+    {
+      "type": "p",
+      "text": "Digimenüül trükikorda pole. Muudad hinda ja see on sekunditega nähtav — igas lauas korraga."
+    },
+    { "type": "h2", "text": "Peidetud kulud: kus paber tegelikult kaotab" },
+    {
+      "type": "list",
+      "items": [
+        "**Aegunud hinnad.** Paberil ootab tarnija hinnatõus nädalaid järgmise trükini. Digis uueneb see samal päeval.",
+        "**Tõlked.** Turismipiirkondades on vaja 2–5 keelt. Paberil korrutab see lehekülgi ja trükikulusid; digimenüü tõlgib iga roa automaatselt.",
+        "**Otsalõppenud road.** Paber ei näita, et roog on otsas — külalised tellivad, personal vabandab. Digis peidad otsas road ühe puudutusega.",
+        "**Fotod.** Menüüfotod müüvad, aga fotorohket pabermenüüd on kallis kvaliteetselt trükkida. Digimenüü näitab iga roa fotot tasuta.",
+        "**Hügieen ja kulumine.** Lamineeritud menüüd muutuvad kleepuvaks ja kriimuliseks; külalised panevad seda tähele."
+      ]
+    },
+    { "type": "h2", "text": "Kõrvuti" },
+    {
+      "type": "table",
+      "headers": ["", "Pabermenüü", "Digitaalne QR-menüü"],
+      "rows": [
+        ["Uuenduse hind", "€150–€400 trükikord", "€0, kohe"],
+        ["Hinnamuutuse aeg", "Päevadest nädalateni", "Alla minuti"],
+        ["Keeled", "Üks trükitud komplekti kohta", "Kõik levinud keeled, automaatselt"],
+        ["Roogade fotod", "Kallis trükkida", "Iga roog, tasuta"],
+        ["Otsas road", "Tellitakse ja öeldakse ära", "Peidetud ühe puudutusega"],
+        ["Tellimine", "Külaline ootab kelnerit", "Külaline saab [tellida otse lauast](route:/order-taking)"],
+        ["Alustamiskulu", "Esimene trükikord", "Alates €9.90/kuus"]
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Hoia 2–3 paberkoopiat külaliste jaoks, kes neid eelistavad. Eesmärk pole null paberit — vaid see, et paber ei oleks enam asi, mida pidevalt ülal pead."
+    },
+    { "type": "h2", "text": "Kus paber endiselt võidab" },
+    {
+      "type": "p",
+      "text": "Siin tasub aus olla: üheleheline degustatsioonimenüü, mis vahetub kord kuus, fine-dining saal, kus telefonid tunduvad kohatud, või püsiklientide baar kuue tootega — seal sobib paber hästi. Majandus pöördub, kui menüü on pikk, muutub tihti, vajab keeli või fotosid — või kui külalised tellivad kiiremini, kui saalipersonal jõuab käia."
+    },
+    { "type": "h2", "text": "Kuidas üleminek välja näeb" },
+    {
+      "type": "steps",
+      "items": [
+        "Skanni oma pabermenüü — IQ Rest loeb selle ja koostab digimenüü automaatselt.",
+        "Kontrolli hinnad üle ja lisa fotod sinna, kus need loevad.",
+        "Prindi igale lauale üks QR-kood.",
+        "Uuenda mida tahes, millal tahes, otse telefonist."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Proovi digimenüüd oma menüü peal",
+      "text": "Laadi üles foto oma praegusest menüüst ja saad töötava QR-menüü umbes 5 minutiga. 14 päeva tasuta, kaarti pole vaja.",
+      "buttonLabel": "Vaata digimenüüd",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Korduma kippuvad küsimused",
+      "items": [
+        {
+          "q": "Kas külalised peavad äpi alla laadima?",
+          "a": "Ei. QR-kood avab menüü telefoni brauseris — midagi pole vaja paigaldada ega kontot luua."
+        },
+        {
+          "q": "Mis saab, kui külalisel pole nutitelefoni?",
+          "a": "Hoia paar paberkoopiat administraatori laua juures. Praktikas küsib seda alla 5% külalistest."
+        },
+        {
+          "q": "Kas digimenüü kaudu saab ka tellida?",
+          "a": "Jah — külalised saavad lauast tellida ja maksta ning tellimused lähevad otse [köögiekraanile](route:/kitchen-display). Alustada võib ka ainult vaatamiseks mõeldud menüüga."
+        },
+        {
+          "q": "Kui kaua seadistamine kestab?",
+          "a": "Umbes 5 minutit: skanni pabermenüü, vaata road üle, prindi QR-koodid."
+        }
+      ]
+    }
+  ]
+}

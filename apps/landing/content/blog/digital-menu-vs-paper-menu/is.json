@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Stafrænn matseðill vs pappírsmatseðill: kostnaður | IQ Rest",
+    "description": "Hvað pappírsmatseðill kostar veitingastað í raun samanborið við stafrænan QR-matseðil: prentun, uppfærslur, þýðingar, pöntunarhraði. Samanburður með tölum."
+  },
+  "card": {
+    "title": "Stafrænn matseðill vs pappírsmatseðill: hvað hvor um sig kostar veitingastað í raun",
+    "excerpt": "Prentunin er aðeins sýnilegi hlutinn. Við berum saman heildarkostnað pappírs- og stafrænna matseðla — uppfærslur, þýðingar, mistök og tapaðar pantanir — með raunverulegum tölum."
+  },
+  "h1": "Stafrænn matseðill vs pappírsmatseðill: hvað hvor um sig kostar veitingastað í raun",
+  "intro": "Allir veitingastaðir byrja með pappírsmatseðil — og flestir halda áfram að borga fyrir hann löngu eftir að hann hættir að borga sig. Þessi samanburður sýnir hvað pappír kostar í raun þegar endurprentanir, þýðingar og hægari þjónusta eru taldar með, og hvar [stafrænn QR-matseðill](route:/digital-menu) vinnur eða tapar.",
+  "blocks": [
+    { "type": "h2", "text": "Sýnilegi kostnaðurinn: prentunin" },
+    {
+      "type": "p",
+      "text": "Meðalstór matseðill (8–12 síður, plastaður, 30 eintök) kostar **€150–€400** í hverri prentun. Flestir staðir endurprenta 3–6 sinnum á ári: árstíðabundnir réttir, verðbreytingar, slitnar síður. Það gera €450–€2,400 á ári bara til að halda pappírnum réttum — og hver verðbreyting sem þú frestar af því að \"við vorum að prenta\" er framlegð sem tapast hljóðlega."
+    },
+    {
+      "type": "p",
+      "text": "Stafrænn matseðill þarf enga prentun. Þú breytir verði og það birtist á nokkrum sekúndum — á öllum borðum í einu."
+    },
+    { "type": "h2", "text": "Faldi kostnaðurinn: þar sem pappír tapar í raun" },
+    {
+      "type": "list",
+      "items": [
+        "**Úrelt verð.** Á pappír bíður verðhækkun frá birgi vikum saman eftir næstu prentun. Stafrænt er hún uppfærð samdægurs.",
+        "**Þýðingar.** Ferðamannasvæði þurfa 2–5 tungumál. Á pappír margfaldar það síður og prentkostnað; stafrænn matseðill þýðir hvern rétt sjálfkrafa.",
+        "**Uppseldir réttir.** Pappír getur ekki sýnt að réttur sé búinn — gestir panta hann og starfsfólkið biðst afsökunar. Stafrænt felur þú uppselda rétti með einni snertingu.",
+        "**Myndir.** Matarmyndir selja, en myndríkir pappírsmatseðlar eru dýrir í góðri prentun. Stafrænt sýnir þú mynd af hverjum rétti ókeypis.",
+        "**Hreinlæti og slit.** Plastaðir matseðlar verða klístraðir og rispaðir; gestir taka eftir því."
+      ]
+    },
+    { "type": "h2", "text": "Hlið við hlið" },
+    {
+      "type": "table",
+      "headers": ["", "Pappírsmatseðill", "Stafrænn QR-matseðill"],
+      "rows": [
+        ["Kostnaður við hverja uppfærslu", "€150–€400 í prentun", "€0, samstundis"],
+        ["Tími til að breyta verði", "Dagar til vikur", "Innan við mínúta"],
+        ["Tungumál", "Eitt á hvert prentað sett", "Öll helstu tungumál, sjálfkrafa"],
+        ["Myndir af réttum", "Dýrt í prentun", "Hver réttur, ókeypis"],
+        ["Uppseldir réttir", "Pantaðir og hafnað", "Faldir með einni snertingu"],
+        ["Pantanir", "Gesturinn bíður eftir þjóni", "Gesturinn getur [pantað frá borðinu](route:/order-taking)"],
+        ["Upphafskostnaður", "Fyrsta prentun", "Frá €9.90/mánuði"]
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Haltu 2–3 pappírseintökum fyrir gesti sem kjósa þau. Málið er ekki að hafa engan pappír — heldur að pappírinn hætti að vera það sem þú þarft að viðhalda."
+    },
+    { "type": "h2", "text": "Þar sem pappír vinnur enn" },
+    {
+      "type": "p",
+      "text": "Hér borgar sig að vera hreinskilinn: einnar síðu smökkunarmatseðill sem breytist mánaðarlega, fínn veitingastaður þar sem símar eiga ekki heima, eða bar fastagesta með sex rétti — þar dugar pappír vel. Dæmið snýst við þegar matseðillinn er langur, breytist oft, þarf tungumál eða myndir, eða þegar gestir panta hraðar en þjónarnir komast yfir."
+    },
+    { "type": "h2", "text": "Svona fara skiptin fram" },
+    {
+      "type": "steps",
+      "items": [
+        "Skannaðu pappírsmatseðilinn — IQ Rest les hann og býr stafræna matseðilinn til sjálfkrafa.",
+        "Farðu yfir verðin og bættu við myndum þar sem þær skipta máli.",
+        "Prentaðu einn QR-kóða á hvert borð.",
+        "Uppfærðu hvað sem er, hvenær sem er, úr símanum."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Prófaðu stafrænan matseðil með þínum eigin matseðli",
+      "text": "Hladdu upp mynd af núverandi matseðli og fáðu virkan QR-matseðil á um það bil 5 mínútum. 14 dagar ókeypis, ekkert kort nauðsynlegt.",
+      "buttonLabel": "Skoða stafræna matseðilinn",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Algengar spurningar",
+      "items": [
+        {
+          "q": "Þurfa gestir að setja upp app?",
+          "a": "Nei. QR-kóðinn opnar matseðilinn í vafra símans — ekkert til að setja upp, engin skráning."
+        },
+        {
+          "q": "Hvað ef gestur er ekki með snjallsíma?",
+          "a": "Hafðu nokkur pappírseintök við innganginn. Í reynd biðja færri en 5% gesta um þau."
+        },
+        {
+          "q": "Getur stafrænn matseðill líka tekið við pöntunum?",
+          "a": "Já — gestir geta pantað og borgað frá borðinu og pantanirnar fara beint á [eldhússkjáinn](route:/kitchen-display). Þú getur líka byrjað með matseðilinn eingöngu til skoðunar."
+        },
+        {
+          "q": "Hversu langan tíma tekur uppsetningin?",
+          "a": "Um það bil 5 mínútur: skannaðu pappírsmatseðilinn, farðu yfir réttina og prentaðu QR-kóðana."
+        }
+      ]
+    }
+  ]
+}

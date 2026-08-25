@@ -16,7 +16,8 @@
     "featureLinks": [],
     "infoHeading": "Information",
     "legalHeading": "Legal",
-    "currencyHeading": "Currency"
+    "currencyHeading": "Currency",
+    "blogLabel": "Blog"
   },
   "common": {
     "close": "Close",
@@ -59,5 +60,22 @@
       "invalidCode": "Invalid code. Please try again.",
       "tooManyAttempts": "Too many attempts. Please wait and try again."
     }
+  },
+  "finalCta": {
+    "heading": "Live in 10 minutes. ",
+    "headingAccent": "14 days of full access.",
+    "sub": "No card needed, cancel anytime. Trusted by {count} restaurants. All you need is an email."
+  },
+  "ctaText": "Try for free",
+  "demoText": "Open demo",
+  "microcopy": "14 days free · No credit card · Cancel anytime",
+  "blog": {
+    "metaTitle": "Restaurant Tech Blog — IQ Rest",
+    "metaDescription": "Guides and comparisons on digital menus, QR ordering, kitchen displays and reservations — practical reading for restaurant owners.",
+    "title": "Blog",
+    "intro": "Guides and comparisons on digital menus, QR ordering, kitchen displays and running a smoother restaurant.",
+    "readMore": "Read article",
+    "relatedHeading": "More from the blog",
+    "backToBlog": "All articles"
   }
 }

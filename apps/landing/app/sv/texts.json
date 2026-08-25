@@ -214,7 +214,8 @@
     ],
     "infoHeading": "Information",
     "legalHeading": "Juridiskt",
-    "currencyHeading": "Valuta"
+    "currencyHeading": "Valuta",
+    "blogLabel": "Blogg"
   },
   "common": {
     "close": "Stäng",
@@ -257,5 +258,14 @@
       "invalidCode": "Ogiltig kod. Försök igen.",
       "tooManyAttempts": "För många försök. Vänta och försök igen."
     }
+  },
+  "blog": {
+    "metaTitle": "Blogg om restaurangteknik — IQ Rest",
+    "metaDescription": "Guider och jämförelser om digitala menyer, QR-beställning, köksskärmar och bokningar — praktisk läsning för krögare.",
+    "title": "Blogg",
+    "intro": "Guider och jämförelser om digitala menyer, QR-beställning, köksskärmar och restaurangdrift.",
+    "readMore": "Läs artikeln",
+    "relatedHeading": "Mer från bloggen",
+    "backToBlog": "Alla artiklar"
   }
 }

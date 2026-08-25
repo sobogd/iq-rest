@@ -214,7 +214,8 @@
     ],
     "infoHeading": "Információ",
     "legalHeading": "Jogi információk",
-    "currencyHeading": "Pénznem"
+    "currencyHeading": "Pénznem",
+    "blogLabel": "Blog"
   },
   "common": {
     "close": "Bezárás",
@@ -257,5 +258,14 @@
       "invalidCode": "Érvénytelen kód. Kérjük, próbáld újra.",
       "tooManyAttempts": "Túl sok próbálkozás. Kérjük, várj egy kicsit, majd próbáld újra."
     }
+  },
+  "blog": {
+    "metaTitle": "Éttermi technológiai blog — IQ Rest",
+    "metaDescription": "Útmutatók és összehasonlítások digitális étlapokról, QR-rendelésről, konyhai kijelzőkről és foglalásokról — gyakorlati olvasnivaló vendéglátósoknak.",
+    "title": "Blog",
+    "intro": "Útmutatók és összehasonlítások digitális étlapokról, QR-rendelésről, konyhai kijelzőkről és az étterem működtetéséről.",
+    "readMore": "Cikk elolvasása",
+    "relatedHeading": "További cikkek a blogról",
+    "backToBlog": "Összes cikk"
   }
 }

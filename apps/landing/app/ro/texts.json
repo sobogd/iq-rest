@@ -214,7 +214,8 @@
     ],
     "infoHeading": "Informații",
     "legalHeading": "Legal",
-    "currencyHeading": "Monedă"
+    "currencyHeading": "Monedă",
+    "blogLabel": "Blog"
   },
   "common": {
     "close": "Închide",
@@ -257,5 +258,14 @@
       "invalidCode": "Cod invalid. Te rugăm să încerci din nou.",
       "tooManyAttempts": "Prea multe încercări. Așteaptă puțin și încearcă din nou."
     }
+  },
+  "blog": {
+    "metaTitle": "Blog despre tehnologie pentru restaurante — IQ Rest",
+    "metaDescription": "Ghiduri și comparații despre meniuri digitale, comenzi prin QR, ecrane de bucătărie și rezervări — lectură practică pentru restauratori.",
+    "title": "Blog",
+    "intro": "Ghiduri și comparații despre meniuri digitale, comenzi prin QR, ecrane de bucătărie și administrarea restaurantului.",
+    "readMore": "Citește articolul",
+    "relatedHeading": "Mai multe de pe blog",
+    "backToBlog": "Toate articolele"
   }
 }

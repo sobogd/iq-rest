@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Digital menu vs papirmenu: de reelle omkostninger | IQ Rest",
+    "description": "Hvad en papirmenu reelt koster en restaurant vs en digital QR-menu: tryk, opdateringer, oversættelser og bestillingstempo. Sammenligning med rigtige tal."
+  },
+  "card": {
+    "title": "Digital menu vs papirmenu: hvad de egentlig koster en restaurant",
+    "excerpt": "Trykket er kun den synlige del. Vi sammenligner de fulde omkostninger ved papirmenu og digital menu — opdateringer, oversættelser, fejl og tabte bestillinger — med rigtige tal."
+  },
+  "h1": "Digital menu vs papirmenu: hvad de egentlig koster en restaurant",
+  "intro": "Alle restauranter starter med en papirmenu — og de fleste bliver ved med at betale for den, længe efter den er holdt op med at give mening. Denne sammenligning viser, hvad papir egentlig koster, når man tæller genoptryk, oversættelser og langsommere service med, og hvor en [digital QR-menu](route:/digital-menu) vinder eller taber.",
+  "blocks": [
+    { "type": "h2", "text": "Den synlige omkostning: trykket" },
+    {
+      "type": "p",
+      "text": "En mellemstor menu (8–12 sider, lamineret, 30 eksemplarer) koster **€150–€400** pr. oplag. De fleste steder genoptrykker 3–6 gange om året: sæsonretter, prisændringer, slidte sider. Det er €450–€2,400 om året alene for at holde papiret opdateret — og hver prisændring, du udskyder, fordi \"vi har lige trykt\", er avance, der stille forsvinder."
+    },
+    {
+      "type": "p",
+      "text": "En digital menu har intet oplag. Du ændrer en pris, og den er live på få sekunder — på alle borde på én gang."
+    },
+    { "type": "h2", "text": "De skjulte omkostninger: her taber papir for alvor" },
+    {
+      "type": "list",
+      "items": [
+        "**Forældede priser.** Med papir venter en prisstigning fra leverandøren i ugevis på næste genoptryk. Digitalt er den opdateret samme dag.",
+        "**Oversættelser.** Turistområder kræver 2–5 sprog. På papir mangedobler det sider og trykomkostninger; en digital menu oversætter hver ret automatisk.",
+        "**Udsolgte retter.** Papir kan ikke vise, at en ret er udsolgt — gæsterne bestiller den, personalet må undskylde. Digitalt skjuler du udsolgte retter med ét tryk.",
+        "**Fotos.** Menufotos sælger, men fototunge papirmenuer er dyre at trykke ordentligt. Digitalt viser du gratis et foto af hver ret.",
+        "**Hygiejne og slid.** Laminerede menuer bliver klistrede og ridsede; gæsterne lægger mærke til det."
+      ]
+    },
+    { "type": "h2", "text": "Side om side" },
+    {
+      "type": "table",
+      "headers": ["", "Papirmenu", "Digital QR-menu"],
+      "rows": [
+        ["Omkostning pr. opdatering", "€150–€400 pr. oplag", "€0, med det samme"],
+        ["Tid til at ændre en pris", "Dage til uger", "Under et minut"],
+        ["Sprog", "Ét pr. trykt sæt", "Alle større sprog, automatisk"],
+        ["Fotos af retter", "Dyre at trykke", "Hver ret, gratis"],
+        ["Udsolgte retter", "Bestilles og afvises", "Skjules med ét tryk"],
+        ["Bestilling", "Gæsten venter på tjeneren", "Gæsten kan [bestille fra bordet](route:/order-taking)"],
+        ["Startomkostning", "Første oplag", "Fra €9.90/måned"]
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Behold 2–3 papireksemplarer til de gæster, der foretrækker dem. Pointen er ikke nul papir — men at papiret holder op med at være det, du skal vedligeholde."
+    },
+    { "type": "h2", "text": "Hvor papir stadig vinder" },
+    {
+      "type": "p",
+      "text": "Ærlighed hjælper her: en etsides smagsmenu, der skifter månedligt, en fine dining-restaurant, hvor telefoner virker malplacerede, eller en stamgæstebar med seks retter — dér er papir helt fint. Regnestykket vender, når menuen er lang, ændrer sig ofte, kræver sprog eller fotos, eller når gæsterne bestiller hurtigere, end personalet kan nå rundt."
+    },
+    { "type": "h2", "text": "Sådan ser skiftet ud" },
+    {
+      "type": "steps",
+      "items": [
+        "Scan din papirmenu — IQ Rest læser den og bygger automatisk den digitale menu.",
+        "Tjek priserne, tilføj fotos, hvor de gør en forskel.",
+        "Print én QR-kode pr. bord.",
+        "Opdater hvad som helst, når som helst, fra din telefon."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Prøv en digital menu med din egen menu",
+      "text": "Upload et foto af din nuværende menu, og få en fungerende QR-menu på cirka 5 minutter. 14 dage gratis, intet kort påkrævet.",
+      "buttonLabel": "Se den digitale menu",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Ofte stillede spørgsmål",
+      "items": [
+        {
+          "q": "Skal gæsterne installere en app?",
+          "a": "Nej. QR-koden åbner menuen i telefonens browser — intet at installere, ingen tilmelding."
+        },
+        {
+          "q": "Hvad hvis en gæst ikke har en smartphone?",
+          "a": "Hav et par papireksemplarer liggende ved indgangen. I praksis er det under 5% af gæsterne, der beder om en."
+        },
+        {
+          "q": "Kan en digital menu også tage imod bestillinger?",
+          "a": "Ja — gæsterne kan bestille og betale fra bordet, og bestillingerne går direkte til [køkkenskærmen](route:/kitchen-display). Du kan også starte med menuen som ren visning."
+        },
+        {
+          "q": "Hvor lang tid tager opsætningen?",
+          "a": "Cirka 5 minutter: scan papirmenuen, gennemgå retterne, print QR-koderne."
+        }
+      ]
+    }
+  ]
+}

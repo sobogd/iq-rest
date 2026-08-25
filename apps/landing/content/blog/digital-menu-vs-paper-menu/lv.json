@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Digitālā ēdienkarte pret papīra: patiesās izmaksas | IQ Rest",
+    "description": "Ko papīra ēdienkarte restorānam patiesībā maksā salīdzinājumā ar QR digitālo: druka, atjauninājumi, tulkojumi, pasūtīšanas ātrums. Salīdzinājums skaitļos."
+  },
+  "card": {
+    "title": "Digitālā ēdienkarte pret papīra: ko katra restorānam patiesībā maksā",
+    "excerpt": "Druka ir tikai redzamā daļa. Salīdzinām papīra un digitālās ēdienkartes pilnās izmaksas — atjauninājumus, tulkojumus, kļūdas un zaudētos pasūtījumus — ar reāliem skaitļiem."
+  },
+  "h1": "Digitālā ēdienkarte pret papīra: ko katra restorānam patiesībā maksā",
+  "intro": "Katrs restorāns sāk ar papīra ēdienkarti — un lielākā daļa par to turpina maksāt vēl ilgi pēc tam, kad tam vairs nav jēgas. Šajā salīdzinājumā izrēķinām, ko papīrs patiesībā maksā, ja ieskaita atkārtotu drukāšanu, tulkojumus un lēnāku apkalpošanu, un kur [QR digitālā ēdienkarte](route:/digital-menu) uzvar vai zaudē.",
+  "blocks": [
+    { "type": "h2", "text": "Redzamās izmaksas: druka" },
+    {
+      "type": "p",
+      "text": "Vidēja izmēra ēdienkarte (8–12 lappuses, laminēta, 30 eksemplāri) maksā **€150–€400** par vienu tirāžu. Lielākā daļa vietu drukā no jauna 3–6 reizes gadā: sezonas ēdieni, cenu izmaiņas, nodilušas lappuses. Tas ir €450–€2,400 gadā tikai tāpēc, lai papīrs būtu aktuāls — un katra cenas maiņa, ko atliec, jo \"tikko izdrukājām\", ir peļņa, ko klusi zaudē."
+    },
+    {
+      "type": "p",
+      "text": "Digitālajai ēdienkartei tirāžas nav. Nomaini cenu, un tā ir redzama dažās sekundēs — uz visiem galdiem uzreiz."
+    },
+    { "type": "h2", "text": "Slēptās izmaksas: kur papīrs patiesībā zaudē" },
+    {
+      "type": "list",
+      "items": [
+        "**Novecojušas cenas.** Uz papīra piegādātāja cenu kāpums gaida nedēļām līdz nākamajai drukai. Digitālā atjaunojas tajā pašā dienā.",
+        "**Tulkojumi.** Tūristu rajonos vajag 2–5 valodas. Uz papīra tas pavairo lappuses un drukas izmaksas; digitālā ēdienkarte iztulko katru ēdienu automātiski.",
+        "**Ēdieni, kas beigušies.** Papīrs nevar parādīt, ka ēdiens ir beidzies — viesi to pasūta, personāls atvainojas. Digitālajā izpārdotos ēdienus paslēpj ar vienu pieskārienu.",
+        "**Fotogrāfijas.** Ēdienu foto pārdod, bet ēdienkarti ar daudz attēliem ir dārgi kvalitatīvi nodrukāt. Digitālā rāda foto katram ēdienam bez maksas.",
+        "**Higiēna un nolietojums.** Laminētas ēdienkartes kļūst lipīgas un saskrāpētas; viesi to pamana."
+      ]
+    },
+    { "type": "h2", "text": "Salīdzinājums blakus" },
+    {
+      "type": "table",
+      "headers": ["", "Papīra ēdienkarte", "Digitālā QR ēdienkarte"],
+      "rows": [
+        ["Atjauninājuma izmaksas", "€150–€400 tirāža", "€0, uzreiz"],
+        ["Laiks cenas maiņai", "No dienām līdz nedēļām", "Mazāk par minūti"],
+        ["Valodas", "Viena katram drukātajam komplektam", "Visas galvenās valodas, automātiski"],
+        ["Ēdienu foto", "Dārgi drukāt", "Katram ēdienam, bez maksas"],
+        ["Izpārdotie ēdieni", "Pasūta un atsaka", "Paslēpti ar vienu pieskārienu"],
+        ["Pasūtīšana", "Viesis gaida viesmīli", "Viesis var [pasūtīt no galda](route:/order-taking)"],
+        ["Sākuma izmaksas", "Pirmā tirāža", "No €9.90/mēnesī"]
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Paturi 2–3 papīra eksemplārus viesiem, kuri tos labāk izvēlas. Mērķis nav nulle papīra — bet gan tas, lai papīrs vairs nebūtu tas, kas pastāvīgi jāuztur."
+    },
+    { "type": "h2", "text": "Kur papīrs joprojām uzvar" },
+    {
+      "type": "p",
+      "text": "Šeit palīdz godīgums: vienas lapas degustāciju ēdienkarte, kas mainās reizi mēnesī, fine dining zāle, kur telefoni šķiet nevietā, vai pastāvīgo viesu bārs ar sešiem ēdieniem — tur papīrs der lieliski. Ekonomika apgriežas, kad ēdienkarte ir gara, mainās bieži, prasa valodas vai foto — vai kad viesi pasūta ātrāk, nekā zāles personāls paspēj pieiet."
+    },
+    { "type": "h2", "text": "Kā izskatās pāreja" },
+    {
+      "type": "steps",
+      "items": [
+        "Noskenē savu papīra ēdienkarti — IQ Rest to nolasa un automātiski izveido digitālo ēdienkarti.",
+        "Pārbaudi cenas, pievieno foto tur, kur tie ir svarīgi.",
+        "Izdrukā vienu QR kodu katram galdam.",
+        "Atjaunini jebko, jebkurā laikā, no sava telefona."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Izmēģini digitālo ēdienkarti ar savu ēdienkarti",
+      "text": "Augšupielādē savas pašreizējās ēdienkartes foto un saņem strādājošu QR ēdienkarti aptuveni 5 minūtēs. 14 dienas bez maksas, karte nav vajadzīga.",
+      "buttonLabel": "Apskati digitālo ēdienkarti",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Biežāk uzdotie jautājumi",
+      "items": [
+        {
+          "q": "Vai viesiem jāinstalē lietotne?",
+          "a": "Nē. QR kods atver ēdienkarti telefona pārlūkā — nekas nav jāinstalē, nav jāreģistrējas."
+        },
+        {
+          "q": "Kas notiek, ja viesim nav viedtālruņa?",
+          "a": "Paturi dažus papīra eksemplārus pie administratora. Praksē to lūdz mazāk nekā 5% viesu."
+        },
+        {
+          "q": "Vai digitālā ēdienkarte var pieņemt arī pasūtījumus?",
+          "a": "Jā — viesi var pasūtīt un samaksāt no galda, un pasūtījumi nonāk tieši uz [virtuves ekrāna](route:/kitchen-display). Sākumā to var izmantot arī tikai kā apskatāmu ēdienkarti."
+        },
+        {
+          "q": "Cik ilgi aizņem iestatīšana?",
+          "a": "Aptuveni 5 minūtes: noskenē papīra ēdienkarti, pārskati ēdienus, izdrukā QR kodus."
+        }
+      ]
+    }
+  ]
+}

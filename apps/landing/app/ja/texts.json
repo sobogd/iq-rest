@@ -214,7 +214,8 @@
     ],
     "infoHeading": "インフォメーション",
     "legalHeading": "法的情報",
-    "currencyHeading": "通貨"
+    "currencyHeading": "通貨",
+    "blogLabel": "ブログ"
   },
   "common": {
     "close": "閉じる",
@@ -257,5 +258,14 @@
       "invalidCode": "無効なコードです。もう一度お試しください。",
       "tooManyAttempts": "試行回数が多すぎます。しばらくしてからもう一度お試しください。"
     }
+  },
+  "blog": {
+    "metaTitle": "レストランテックブログ — IQ Rest",
+    "metaDescription": "デジタルメニュー、QR注文、キッチンディスプレイ、予約管理に関するガイドと比較記事。飲食店オーナー向けの実践的な情報。",
+    "title": "ブログ",
+    "intro": "デジタルメニュー、QR注文、キッチンディスプレイ、店舗運営に関するガイドと比較記事。",
+    "readMore": "記事を読む",
+    "relatedHeading": "ブログの他の記事",
+    "backToBlog": "記事一覧"
   }
 }

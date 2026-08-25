@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Digitale menukaart vs. papieren menukaart: kosten | IQ Rest",
+    "description": "Wat een papieren menukaart een restaurant echt kost vs. een digitale QR-menukaart: drukwerk, updates, vertalingen, bestelsnelheid. Vergelijking met cijfers."
+  },
+  "card": {
+    "title": "Digitale menukaart vs. papieren menukaart: de echte kosten voor een restaurant",
+    "excerpt": "Drukwerk is alleen het zichtbare deel. We vergelijken de volledige kosten van een papieren en een digitale menukaart — updates, vertalingen, fouten en gemiste bestellingen — met echte cijfers."
+  },
+  "h1": "Digitale menukaart vs. papieren menukaart: de echte kosten voor een restaurant",
+  "intro": "Elk restaurant begint met een papieren menukaart — en de meeste blijven ervoor betalen lang nadat dat nog ergens op slaat. Deze vergelijking laat zien wat papier werkelijk kost als je herdrukken, vertalingen en tragere service meetelt, en waar een [digitale QR-menukaart](route:/digital-menu) wint of verliest.",
+  "blocks": [
+    { "type": "h2", "text": "De zichtbare kosten: drukwerk" },
+    {
+      "type": "p",
+      "text": "Een middelgrote menukaart (8–12 pagina's, gelamineerd, 30 exemplaren) kost **€150–€400** per drukgang. De meeste zaken drukken 3–6 keer per jaar opnieuw: seizoensgerechten, prijswijzigingen, versleten pagina's. Dat is €450–€2,400 per jaar, alleen om het papier actueel te houden — en elke prijswijziging die je uitstelt omdat \"we net hebben gedrukt\", is marge die je stilletjes verliest."
+    },
+    {
+      "type": "p",
+      "text": "Een digitale menukaart kent geen drukgang. Je wijzigt een prijs en die staat binnen seconden live, op elke tafel tegelijk."
+    },
+    { "type": "h2", "text": "De verborgen kosten: waar papier echt verliest" },
+    {
+      "type": "list",
+      "items": [
+        "**Verouderde prijzen.** Op papier wacht een prijsverhoging van je leverancier weken op de volgende herdruk. Digitaal is hij dezelfde dag bijgewerkt.",
+        "**Vertalingen.** Toeristische gebieden hebben 2–5 talen nodig. Op papier vermenigvuldigt dat pagina's en drukkosten; een digitale menukaart vertaalt elk gerecht automatisch.",
+        "**Uitverkochte gerechten.** Papier kan niet laten zien dat een gerecht op is — gasten bestellen het, het personeel biedt excuses aan. Digitaal verberg je uitverkochte items met één tik.",
+        "**Foto's.** Menufoto's verkopen, maar fotorijke papieren kaarten zijn duur om goed te drukken. Digitaal toon je gratis een foto bij elk gerecht.",
+        "**Hygiëne en slijtage.** Gelamineerde kaarten worden plakkerig en bekrast; gasten zien dat."
+      ]
+    },
+    { "type": "h2", "text": "Naast elkaar" },
+    {
+      "type": "table",
+      "headers": ["", "Papieren menukaart", "Digitale QR-menukaart"],
+      "rows": [
+        ["Kosten per update", "€150–€400 per drukgang", "€0, direct"],
+        ["Tijd om een prijs te wijzigen", "Dagen tot weken", "Minder dan een minuut"],
+        ["Talen", "Eén per gedrukte set", "Alle grote talen, automatisch"],
+        ["Foto's van gerechten", "Duur om te drukken", "Elk gerecht, gratis"],
+        ["Uitverkochte items", "Besteld en geweigerd", "Verborgen met één tik"],
+        ["Bestellen", "Gast wacht op de ober", "Gast kan [vanaf tafel bestellen](route:/order-taking)"],
+        ["Kosten vooraf", "Eerste drukgang", "Vanaf €9.90/maand"]
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Houd 2–3 papieren exemplaren achter de hand voor gasten die daar de voorkeur aan geven. Het gaat niet om nul papier — het gaat erom dat papier niet langer is wat je moet onderhouden."
+    },
+    { "type": "h2", "text": "Waar papier nog wint" },
+    {
+      "type": "p",
+      "text": "Eerlijk is eerlijk: een degustatiemenu van één pagina dat maandelijks wisselt, een fine-diningzaal waar telefoons misstaan, of een stamgastenbar met zes items — daar voldoet papier prima. De rekensom kantelt zodra je kaart lang is, vaak verandert, talen of foto's nodig heeft, of wanneer gasten sneller bestellen dan je bediening kan lopen."
+    },
+    { "type": "h2", "text": "Hoe de overstap eruitziet" },
+    {
+      "type": "steps",
+      "items": [
+        "Scan je papieren menukaart — IQ Rest leest hem in en bouwt automatisch de digitale menukaart.",
+        "Controleer de prijzen, voeg foto's toe waar ze ertoe doen.",
+        "Druk één QR-code per tafel af.",
+        "Werk alles op elk moment bij vanaf je telefoon."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Probeer een digitale menukaart met je eigen kaart",
+      "text": "Upload een foto van je huidige menukaart en krijg in ongeveer 5 minuten een werkende QR-menukaart. 14 dagen gratis, geen creditcard nodig.",
+      "buttonLabel": "Bekijk de digitale menukaart",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Veelgestelde vragen",
+      "items": [
+        {
+          "q": "Moeten gasten een app installeren?",
+          "a": "Nee. De QR-code opent de menukaart in de browser van de telefoon — niets te installeren, geen registratie."
+        },
+        {
+          "q": "Wat als een gast geen smartphone heeft?",
+          "a": "Houd een paar papieren exemplaren bij de ingang. In de praktijk vraagt minder dan 5% van de gasten erom."
+        },
+        {
+          "q": "Kan een digitale menukaart ook bestellingen aannemen?",
+          "a": "Ja — gasten kunnen vanaf tafel bestellen en betalen, en bestellingen gaan rechtstreeks naar het [keukenscherm](route:/kitchen-display). Je kunt hem ook eerst alleen als kijkmenu gebruiken."
+        },
+        {
+          "q": "Hoe lang duurt het instellen?",
+          "a": "Ongeveer 5 minuten: scan je papieren kaart, controleer de gerechten, druk de QR-codes af."
+        }
+      ]
+    }
+  ]
+}

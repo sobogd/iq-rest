@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Biachlár digiteach vs biachlár páipéir: costais | IQ Rest",
+    "description": "Fíorchostas biachláir pháipéir vs biachlár digiteach QR: priontáil, nuashonruithe, aistriúcháin agus luas seirbhíse. Comparáid taobh le taobh le figiúirí."
+  },
+  "card": {
+    "title": "Biachlár digiteach vs biachlár páipéir: cad a chosnaíonn gach ceann i ndáiríre ar bhialann",
+    "excerpt": "Níl sa phriontáil ach an chuid infheicthe. Déanaimid comparáid idir costas iomlán an bhiachláir pháipéir agus an bhiachláir dhigitigh — nuashonruithe, aistriúcháin, botúin agus orduithe caillte — le fíorfhigiúirí."
+  },
+  "h1": "Biachlár digiteach vs biachlár páipéir: cad a chosnaíonn gach ceann i ndáiríre ar bhialann",
+  "intro": "Tosaíonn gach bialann le biachlár páipéir — agus leanann a bhformhór ag íoc as i bhfad tar éis dó ciall a chailleadh. Sa chomparáid seo, féachaimid ar an gcostas iarbhír a bhaineann leis an bpáipéar nuair a chuirtear athphriontáil, aistriúcháin agus seirbhís níos moille san áireamh, agus cá mbuann nó cá gcailleann [biachlár digiteach QR](route:/digital-menu).",
+  "blocks": [
+    { "type": "h2", "text": "An costas infheicthe: an phriontáil" },
+    {
+      "type": "p",
+      "text": "Cosnaíonn biachlár meánmhéide (8–12 leathanach, lannaithe, 30 cóip) **€150–€400** in aghaidh an phriontála. Athphriontálann formhór na n-áiteanna 3–6 huaire sa bhliain: miasa séasúracha, athruithe praghsanna, leathanaigh chaite. Sin €450–€2,400 sa bhliain díreach chun an páipéar a choinneáil cothrom le dáta — agus gach athrú praghais a chuireann tú ar athló toisc \"gur phriontálamar díreach\", is corrlach é a chailleann tú i ngan fhios duit."
+    },
+    {
+      "type": "p",
+      "text": "Níl aon phriontáil ag baint le biachlár digiteach. Athraíonn tú praghas agus tá sé beo laistigh de shoicindí, ar gach bord ag an am céanna."
+    },
+    { "type": "h2", "text": "Na costais fholaithe: an áit a gcailleann an páipéar i ndáiríre" },
+    {
+      "type": "list",
+      "items": [
+        "**Praghsanna as dáta.** Le páipéar, fanann ardú praghais ó sholáthraí seachtainí go dtí an chéad athphriontáil eile. Nuashonraítear an leagan digiteach an lá céanna.",
+        "**Aistriúcháin.** Teastaíonn 2–5 theanga ó cheantair thurasóireachta. Ar pháipéar, méadaíonn sé sin leathanaigh agus costais phriontála; aistríonn biachlár digiteach gach mias go huathoibríoch.",
+        "**Miasa rite amach.** Ní féidir le páipéar a thaispeáint go bhfuil mias rite amach — ordaíonn aíonna í, gabhann an fhoireann leithscéal. Folaíonn an leagan digiteach miasa rite amach le tapáil amháin.",
+        "**Grianghraif.** Díolann grianghraif bhiachláir, ach tá sé costasach biachlár páipéir lán de ghrianghraif a phriontáil go maith. Taispeánann an leagan digiteach grianghraf do gach mias saor in aisce.",
+        "**Sláinteachas agus caitheamh.** Éiríonn biachláir lannaithe greamaitheach agus scríobtha; tugann aíonna é sin faoi deara."
+      ]
+    },
+    { "type": "h2", "text": "Taobh le taobh" },
+    {
+      "type": "table",
+      "headers": ["", "Biachlár páipéir", "Biachlár digiteach QR"],
+      "rows": [
+        ["Costas gach nuashonraithe", "Priontáil €150–€400", "€0, láithreach"],
+        ["Am chun praghas a athrú", "Laethanta go seachtainí", "Faoi bhun nóiméid"],
+        ["Teangacha", "Ceann amháin in aghaidh an tacair phriontáilte", "Gach mórtheanga, go huathoibríoch"],
+        ["Grianghraif de mhiasa", "Costasach le priontáil", "Gach mias, saor in aisce"],
+        ["Miasa rite amach", "Ordaithe agus diúltaithe", "Folaithe le tapáil amháin"],
+        ["Ordú", "Fanann an t-aoi le freastalaí", "Is féidir leis an aoi [ordú ón mbord](route:/order-taking)"],
+        ["Costas tosaigh", "An chéad phriontáil", "Ó €9.90/mí"]
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Coinnigh 2–3 chóip pháipéir do na haíonna arbh fhearr leo iad. Ní hé an sprioc gan aon pháipéar a bheith ann — is é go stopfaidh an páipéar de bheith ina rud a chaithfidh tú a chothabháil."
+    },
+    { "type": "h2", "text": "An áit a mbuann an páipéar fós" },
+    {
+      "type": "p",
+      "text": "Bímis ionraic anseo: biachlár blaiste aonleathanaigh a athraíonn go míosúil, seomra fine dining nach n-oireann fóin dó, nó beár do ghnáthchustaiméirí le sé mhias — tá an páipéar breá ansin. Iompaíonn an scéal nuair atá do bhiachlár fada, nuair a athraíonn sé go minic, nuair a theastaíonn teangacha nó grianghraif uaidh, nó nuair a ordaíonn aíonna níos tapúla ná mar is féidir le d'fhoireann urláir siúl."
+    },
+    { "type": "h2", "text": "Cad é mar a bhíonn an t-aistriú" },
+    {
+      "type": "steps",
+      "items": [
+        "Scan do bhiachlár páipéir — léann IQ Rest é agus tógann sé an biachlár digiteach go huathoibríoch.",
+        "Seiceáil na praghsanna, cuir grianghraif leis an áit a bhfuil tábhacht leo.",
+        "Priontáil cód QR amháin in aghaidh an bhoird.",
+        "Nuashonraigh rud ar bith, am ar bith, ó do ghuthán."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Bain triail as biachlár digiteach ar do bhiachlár féin",
+      "text": "Uaslódáil grianghraf de do bhiachlár reatha agus faigh biachlár QR atá ag obair laistigh de thart ar 5 nóiméad. 14 lá saor in aisce, ní theastaíonn cárta.",
+      "buttonLabel": "Féach ar an mbiachlár digiteach",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Ceisteanna coitianta",
+      "items": [
+        {
+          "q": "An gcaithfidh aíonna aip a shuiteáil?",
+          "a": "Ní chaithfidh. Osclaíonn an cód QR an biachlár i mbrabhsálaí an ghutháin — níl aon rud le suiteáil, gan chlárú."
+        },
+        {
+          "q": "Cad a tharlaíonn mura bhfuil fón cliste ag aoi?",
+          "a": "Coinnigh cúpla cóip pháipéir ag an deasc fáilte. Go praiticiúil, iarrann níos lú ná 5% d'aíonna ceann."
+        },
+        {
+          "q": "An féidir le biachlár digiteach orduithe a ghlacadh freisin?",
+          "a": "Is féidir — is féidir le haíonna ordú agus íoc ón mbord, agus téann na horduithe díreach chuig an [taispeáint chistine](route:/kitchen-display). Is féidir leat é a rith mar bhiachlár amhairc amháin ar dtús freisin."
+        },
+        {
+          "q": "Cá fhad a thógann an socrú?",
+          "a": "Thart ar 5 nóiméad: scan do bhiachlár páipéir, athbhreithnigh na miasa, priontáil na cóid QR."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Digitalni meni ili papirni: stvarni troškovi | IQ Rest",
+    "description": "Koliko papirni meni zaista košta restoran u poređenju sa digitalnim QR menijem: štampa, izmene, prevodi, brzina poručivanja. Poređenje sa brojkama."
+  },
+  "card": {
+    "title": "Digitalni ili papirni meni: koliko svaki zaista košta restoran",
+    "excerpt": "Štampa je samo vidljivi deo. Poredimo pune troškove papirnog i digitalnog menija — izmene, prevode, greške i izgubljene porudžbine — sa stvarnim brojkama."
+  },
+  "h1": "Digitalni ili papirni meni: koliko svaki zaista košta restoran",
+  "intro": "Svaki restoran počinje sa papirnim menijem — i većina ga plaća još dugo pošto prestane da ima smisla. Ovo poređenje pokazuje koliko papir zapravo košta kada saberete doštampavanja, prevode i sporiju uslugu, i gde [digitalni QR meni](route:/digital-menu) pobeđuje, a gde gubi.",
+  "blocks": [
+    { "type": "h2", "text": "Vidljivi trošak: štampa" },
+    {
+      "type": "p",
+      "text": "Meni srednje veličine (8–12 strana, plastificiran, 30 primeraka) košta **€150–€400** po štampanju. Većina lokala štampa ponovo 3–6 puta godišnje: sezonska jela, promene cena, pohabane strane. To je €450–€2,400 godišnje samo da papir ostane ažuran — a svaka promena cene koju odložite jer \"tek smo štampali\" jeste marža koju tiho gubite."
+    },
+    {
+      "type": "p",
+      "text": "Digitalni meni nema štampanje. Promenite cenu i za nekoliko sekundi je vidljiva, na svim stolovima odjednom."
+    },
+    { "type": "h2", "text": "Skriveni troškovi: gde papir zaista gubi" },
+    {
+      "type": "list",
+      "items": [
+        "**Zastarele cene.** Sa papirom, poskupljenje dobavljača nedeljama čeka sledeće štampanje. Digitalni se ažurira istog dana.",
+        "**Prevodi.** Turistička mesta traže 2–5 jezika. Na papiru to množi strane i troškove štampe; digitalni meni automatski prevodi svaku stavku.",
+        "**Rasprodata jela.** Papir ne može da pokaže da je jelo nestalo — gosti ga poruče, osoblje se izvinjava. Digitalni sakriva rasprodate stavke jednim dodirom.",
+        "**Fotografije.** Fotografije jela prodaju, ali menije pune fotografija skupo je kvalitetno odštampati. Digitalni besplatno prikazuje fotografiju uz svako jelo.",
+        "**Higijena i habanje.** Plastificirani meniji postanu lepljivi i izgrebani; gosti to primete."
+      ]
+    },
+    { "type": "h2", "text": "Uporedni pregled" },
+    {
+      "type": "table",
+      "headers": ["", "Papirni meni", "Digitalni QR meni"],
+      "rows": [
+        ["Trošak po izmeni", "€150–€400 za štampu", "€0, odmah"],
+        ["Vreme za promenu cene", "Dani do nedelja", "Manje od minuta"],
+        ["Jezici", "Jedan po štampanom kompletu", "Svi glavni jezici, automatski"],
+        ["Fotografije jela", "Skupe za štampu", "Svako jelo, besplatno"],
+        ["Rasprodate stavke", "Poručene pa odbijene", "Sakrivene jednim dodirom"],
+        ["Poručivanje", "Gost čeka konobara", "Gost može da [poruči sa stola](route:/order-taking)"],
+        ["Početni trošak", "Prva štampa", "Od €9.90/mesečno"]
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Zadržite 2–3 papirna primerka za goste koji ih više vole. Poenta nije nula papira — nego da papir prestane da bude ono što stalno održavate."
+    },
+    { "type": "h2", "text": "Gde papir i dalje pobeđuje" },
+    {
+      "type": "p",
+      "text": "Budimo iskreni: degustacioni meni na jednoj strani koji se menja mesečno, fine-dining sala u kojoj telefoni deluju neumesno ili kvartovski bar sa šest stavki — tu je papir sasvim u redu. Ekonomija se okreće kada je meni dugačak, često se menja, traži jezike ili fotografije, ili kada gosti poručuju brže nego što osoblje stigne da obiđe stolove."
+    },
+    { "type": "h2", "text": "Kako izgleda prelazak" },
+    {
+      "type": "steps",
+      "items": [
+        "Skenirajte papirni meni — IQ Rest ga pročita i automatski napravi digitalni meni.",
+        "Proverite cene, dodajte fotografije tamo gde su bitne.",
+        "Odštampajte po jedan QR kod za svaki sto.",
+        "Menjajte šta god želite, bilo kada, sa telefona."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Isprobajte digitalni meni na sopstvenom meniju",
+      "text": "Otpremite fotografiju svog trenutnog menija i dobijte funkcionalan QR meni za oko 5 minuta. 14 dana besplatno, bez kartice.",
+      "buttonLabel": "Pogledajte digitalni meni",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Česta pitanja",
+      "items": [
+        {
+          "q": "Da li gosti moraju da instaliraju aplikaciju?",
+          "a": "Ne. QR kod otvara meni u pregledaču telefona — ništa se ne instalira, nema registracije."
+        },
+        {
+          "q": "Šta ako gost nema pametni telefon?",
+          "a": "Držite nekoliko papirnih primeraka na ulazu. U praksi ih zatraži manje od 5% gostiju."
+        },
+        {
+          "q": "Može li digitalni meni i da prima porudžbine?",
+          "a": "Da — gosti mogu da poruče i plate sa stola, a porudžbine idu pravo na [kuhinjski ekran](route:/kitchen-display). Možete ga najpre koristiti i samo za pregled."
+        },
+        {
+          "q": "Koliko traje podešavanje?",
+          "a": "Oko 5 minuta: skenirajte papirni meni, pregledajte stavke, odštampajte QR kodove."
+        }
+      ]
+    }
+  ]
+}

@@ -214,7 +214,8 @@
     ],
     "infoHeading": "Tietoa",
     "legalHeading": "Lakitiedot",
-    "currencyHeading": "Valuutta"
+    "currencyHeading": "Valuutta",
+    "blogLabel": "Blogi"
   },
   "common": {
     "close": "Sulje",
@@ -257,5 +258,14 @@
       "invalidCode": "Virheellinen koodi. Yritä uudelleen.",
       "tooManyAttempts": "Liian monta yritystä. Odota hetki ja yritä uudelleen."
     }
+  },
+  "blog": {
+    "metaTitle": "Ravintolateknologian blogi — IQ Rest",
+    "metaDescription": "Oppaita ja vertailuja digitaalisista ruokalistoista, QR-tilauksista, keittiönäytöistä ja varauksista — käytännönläheistä luettavaa ravintoloitsijoille.",
+    "title": "Blogi",
+    "intro": "Oppaita ja vertailuja digitaalisista ruokalistoista, QR-tilauksista, keittiönäytöistä ja ravintolan arjesta.",
+    "readMore": "Lue artikkeli",
+    "relatedHeading": "Lisää blogista",
+    "backToBlog": "Kaikki artikkelit"
   }
 }

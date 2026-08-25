@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Ementa digital vs ementa em papel: custos reais | IQ Rest",
+    "description": "Quanto custa realmente uma ementa em papel face a uma ementa digital QR: impressão, atualizações, traduções e rapidez de serviço. Comparação com números."
+  },
+  "card": {
+    "title": "Ementa digital vs ementa em papel: quanto custa realmente cada uma a um restaurante",
+    "excerpt": "A impressão é só a parte visível. Comparamos o custo total da ementa em papel e da digital — atualizações, traduções, erros e pedidos perdidos — com números reais."
+  },
+  "h1": "Ementa digital vs ementa em papel: quanto custa realmente cada uma a um restaurante",
+  "intro": "Todos os restaurantes começam com uma ementa em papel — e a maioria continua a pagá-la muito depois de ela deixar de fazer sentido. Esta comparação mostra quanto o papel custa realmente quando somamos reimpressões, traduções e um serviço mais lento, e onde uma [ementa digital QR](route:/digital-menu) ganha ou perde.",
+  "blocks": [
+    { "type": "h2", "text": "O custo visível: a impressão" },
+    {
+      "type": "p",
+      "text": "Uma ementa de tamanho médio (8–12 páginas, plastificada, 30 cópias) custa **€150–€400** por tiragem. A maioria dos estabelecimentos reimprime 3–6 vezes por ano: pratos de época, alterações de preços, páginas gastas. São €450–€2,400 por ano só para manter o papel atualizado — e cada alteração de preço que adia porque «acabámos de imprimir» é margem que perde sem dar por isso."
+    },
+    {
+      "type": "p",
+      "text": "Uma ementa digital não tem tiragens. Altera um preço e fica publicado em segundos, em todas as mesas ao mesmo tempo."
+    },
+    { "type": "h2", "text": "Os custos escondidos: onde o papel perde mesmo" },
+    {
+      "type": "list",
+      "items": [
+        "**Preços desatualizados.** No papel, um aumento do fornecedor espera semanas pela próxima reimpressão. No digital, atualiza no próprio dia.",
+        "**Traduções.** As zonas turísticas precisam de 2–5 idiomas. No papel, isso multiplica páginas e custos de impressão; uma ementa digital traduz cada prato automaticamente.",
+        "**Pratos esgotados.** O papel não mostra que um prato acabou — o cliente pede, a equipa desculpa-se. No digital, esconde-se um prato esgotado com um toque.",
+        "**Fotografias.** As fotografias vendem, mas uma ementa em papel cheia de fotografias fica cara de imprimir bem. O digital mostra uma fotografia de cada prato, gratuitamente.",
+        "**Higiene e desgaste.** As ementas plastificadas ficam pegajosas e riscadas; os clientes reparam."
+      ]
+    },
+    { "type": "h2", "text": "Lado a lado" },
+    {
+      "type": "table",
+      "headers": ["", "Ementa em papel", "Ementa digital QR"],
+      "rows": [
+        ["Custo por atualização", "Tiragem de €150–€400", "€0, imediato"],
+        ["Tempo para alterar um preço", "De dias a semanas", "Menos de um minuto"],
+        ["Idiomas", "Um por conjunto impresso", "Todos os principais idiomas, automático"],
+        ["Fotografias dos pratos", "Caras de imprimir", "Todos os pratos, grátis"],
+        ["Pratos esgotados", "Pedidos e recusados", "Escondidos com um toque"],
+        ["Pedidos", "O cliente espera pelo empregado", "O cliente pode [pedir a partir da mesa](route:/order-taking)"],
+        ["Custo inicial", "A primeira tiragem", "Desde €9.90/mês"]
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Guarde 2–3 cópias em papel para os clientes que as preferem. O objetivo não é zero papel — é o papel deixar de ser aquilo que tem de manter."
+    },
+    { "type": "h2", "text": "Onde o papel ainda ganha" },
+    {
+      "type": "p",
+      "text": "Aqui convém ser honesto: um menu de degustação de uma página que muda todos os meses, uma sala de fine dining onde os telemóveis destoam, ou um bar de habitués com seis referências — aí o papel serve perfeitamente. As contas invertem-se quando a ementa é longa, muda com frequência, precisa de idiomas ou fotografias, ou quando os clientes pedem mais depressa do que a equipa de sala consegue circular."
+    },
+    { "type": "h2", "text": "Como é a mudança" },
+    {
+      "type": "steps",
+      "items": [
+        "Digitalize a sua ementa em papel — o IQ Rest lê-a e cria a ementa digital automaticamente.",
+        "Confira os preços e acrescente fotografias onde fazem diferença.",
+        "Imprima um código QR por mesa.",
+        "Altere o que quiser, quando quiser, a partir do telemóvel."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Experimente uma ementa digital com a sua própria ementa",
+      "text": "Carregue uma fotografia da sua ementa atual e tenha uma ementa QR a funcionar em cerca de 5 minutos. 14 dias grátis, sem cartão.",
+      "buttonLabel": "Ver a ementa digital",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Perguntas frequentes",
+      "items": [
+        {
+          "q": "Os clientes precisam de instalar uma app?",
+          "a": "Não. O código QR abre a ementa no browser do telemóvel — nada para instalar, sem registo."
+        },
+        {
+          "q": "E se um cliente não tiver smartphone?",
+          "a": "Guarde algumas cópias em papel na entrada. Na prática, menos de 5% dos clientes pedem uma."
+        },
+        {
+          "q": "Uma ementa digital também recebe pedidos?",
+          "a": "Sim — os clientes podem pedir e pagar a partir da mesa, e os pedidos vão diretamente para o [ecrã de cozinha](route:/kitchen-display). Também pode começar por usá-la apenas como ementa de consulta."
+        },
+        {
+          "q": "Quanto tempo demora a configuração?",
+          "a": "Cerca de 5 minutos: digitalize a ementa em papel, reveja os pratos e imprima os códigos QR."
+        }
+      ]
+    }
+  ]
+}

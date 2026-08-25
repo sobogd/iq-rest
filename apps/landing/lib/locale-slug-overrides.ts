@@ -295,6 +295,16 @@ for (const route of ["/login", "/register", "/privacy", "/terms", "/cookies"]) {
   );
 }
 
+// Blog index: a MARKETING route (EN at the root /blog, others /<locale>/blog)
+// with ONE shared slug — article slugs are English everywhere too, by design
+// (bulk-generated content; per-locale slugs would bloat this map per article).
+// Registering "/blog" puts it in EN_ROOT_SLUGS (middleware serves /blog from
+// the (en) group) and gives the footer/sitemap localizedHref support. Article
+// URLs (/blog/<id>) rely on slugForRoute's identity fallback.
+LOCALE_SLUG_OVERRIDES["/blog"] = Object.fromEntries(
+  (locales as readonly string[]).map((l) => [l, "/blog"]),
+);
+
 /**
  * Translate a path from one locale to another, honouring per-locale slug
  * overrides. Falls back to a simple first-segment swap if the rest of the

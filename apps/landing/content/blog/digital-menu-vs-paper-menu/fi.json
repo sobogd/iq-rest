@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Digitaalinen menu vs paperinen menu: kustannukset | IQ Rest",
+    "description": "Mitä paperinen ruokalista todella maksaa ravintolalle verrattuna QR-menuun: painatus, päivitykset, käännökset, tilausnopeus. Vertailu oikeilla luvuilla."
+  },
+  "card": {
+    "title": "Digitaalinen menu vs paperinen menu: mitä kumpikin todella maksaa ravintolalle",
+    "excerpt": "Painatus on vain näkyvä osa. Vertaamme paperisen ja digitaalisen menun todelliset kustannukset — päivitykset, käännökset, virheet ja menetetyt tilaukset — oikeilla luvuilla."
+  },
+  "h1": "Digitaalinen menu vs paperinen menu: mitä kumpikin todella maksaa ravintolalle",
+  "intro": "Jokainen ravintola aloittaa paperisella ruokalistalla — ja useimmat maksavat siitä vielä pitkään sen jälkeen, kun se on lakannut olemasta järkevää. Tässä vertailussa käymme läpi, mitä paperi todella maksaa, kun mukaan lasketaan uusintapainatukset, käännökset ja hitaampi palvelu — ja missä [QR-pohjainen digitaalinen menu](route:/digital-menu) voittaa tai häviää.",
+  "blocks": [
+    { "type": "h2", "text": "Näkyvä kustannus: painatus" },
+    {
+      "type": "p",
+      "text": "Keskikokoinen ruokalista (8–12 sivua, laminoituna, 30 kappaletta) maksaa **€150–€400** per painoerä. Useimmat ravintolat painattavat uudelleen 3–6 kertaa vuodessa: sesonkiannokset, hintamuutokset, kuluneet sivut. Se tarkoittaa €450–€2,400 vuodessa pelkästään paperin pitämiseen ajan tasalla — ja jokainen hinnankorotus, jota lykkäät koska \"juuri painatettiin\", on katetta, jonka menetät huomaamatta."
+    },
+    {
+      "type": "p",
+      "text": "Digitaalisella menulla ei ole painoeriä. Muutat hinnan, ja se on näkyvissä sekunneissa — jokaisessa pöydässä samanaikaisesti."
+    },
+    { "type": "h2", "text": "Piilokustannukset: missä paperi todella häviää" },
+    {
+      "type": "list",
+      "items": [
+        "**Vanhentuneet hinnat.** Paperilla tavarantoimittajan hinnankorotus odottaa viikkoja seuraavaan painatukseen. Digitaalinen päivittyy samana päivänä.",
+        "**Käännökset.** Turistialueilla tarvitaan 2–5 kieltä. Paperilla se moninkertaistaa sivut ja painokustannukset; digitaalinen menu kääntää jokaisen annoksen automaattisesti.",
+        "**Loppuneet annokset.** Paperi ei voi kertoa, että annos on loppu — asiakkaat tilaavat sitä, henkilökunta pahoittelee. Digitaalisessa loppuunmyydyt annokset piilotetaan yhdellä napautuksella.",
+        "**Valokuvat.** Ruokakuvat myyvät, mutta kuvapainotteiset paperiset ruokalistat on kallista painaa laadukkaasti. Digitaalinen näyttää kuvan jokaisesta annoksesta ilmaiseksi.",
+        "**Hygienia ja kuluminen.** Laminoidut ruokalistat muuttuvat tahmeiksi ja naarmuisiksi — asiakkaat huomaavat sen."
+      ]
+    },
+    { "type": "h2", "text": "Rinnakkain" },
+    {
+      "type": "table",
+      "headers": ["", "Paperinen menu", "Digitaalinen QR-menu"],
+      "rows": [
+        ["Päivityksen hinta", "€150–€400 per painoerä", "€0, heti"],
+        ["Hinnanmuutoksen kesto", "Päivistä viikkoihin", "Alle minuutin"],
+        ["Kielet", "Yksi per painettu sarja", "Kaikki yleiset kielet, automaattisesti"],
+        ["Annoskuvat", "Kallista painaa", "Jokaisesta annoksesta, ilmaiseksi"],
+        ["Loppuneet annokset", "Tilataan ja perutaan", "Piilotetaan yhdellä napautuksella"],
+        ["Tilaaminen", "Asiakas odottaa tarjoilijaa", "Asiakas voi [tilata suoraan pöydästä](route:/order-taking)"],
+        ["Aloituskustannus", "Ensimmäinen painoerä", "Alkaen €9.90/kk"]
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Pidä 2–3 paperista kappaletta niitä asiakkaita varten, jotka pitävät niistä. Tavoite ei ole nolla paperia — vaan se, että paperi lakkaa olemasta asia, jota jatkuvasti ylläpidät."
+    },
+    { "type": "h2", "text": "Missä paperi yhä voittaa" },
+    {
+      "type": "p",
+      "text": "Rehellisyys auttaa tässä: yksisivuinen maistelumenu, joka vaihtuu kuukausittain, fine dining -sali, jossa puhelimet tuntuvat sopimattomilta, tai kanta-asiakkaiden baari kuudella tuotteella — niissä paperi toimii hyvin. Talous kääntyy toisin päin, kun ruokalistasi on pitkä, muuttuu usein, tarvitsee kieliä tai kuvia — tai kun asiakkaat tilaavat nopeammin kuin salihenkilökuntasi ehtii kävellä."
+    },
+    { "type": "h2", "text": "Miltä vaihto näyttää" },
+    {
+      "type": "steps",
+      "items": [
+        "Skannaa paperinen ruokalistasi — IQ Rest lukee sen ja rakentaa digitaalisen menun automaattisesti.",
+        "Tarkista hinnat ja lisää kuvat sinne, missä niillä on merkitystä.",
+        "Tulosta yksi QR-koodi per pöytä.",
+        "Päivitä mitä tahansa, milloin tahansa, suoraan puhelimestasi."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Kokeile digitaalista menua omalla ruokalistallasi",
+      "text": "Lataa kuva nykyisestä ruokalistastasi, niin saat toimivan QR-menun noin 5 minuutissa. 14 päivää ilmaiseksi, korttia ei tarvita.",
+      "buttonLabel": "Tutustu digitaaliseen menuun",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Usein kysytyt kysymykset",
+      "items": [
+        {
+          "q": "Tarvitseeko asiakkaan asentaa sovellus?",
+          "a": "Ei. QR-koodi avaa menun puhelimen selaimessa — ei asennuksia, ei rekisteröitymistä."
+        },
+        {
+          "q": "Entä jos asiakkaalla ei ole älypuhelinta?",
+          "a": "Pidä muutama paperinen kappale vastaanotossa. Käytännössä alle 5 % asiakkaista pyytää sellaista."
+        },
+        {
+          "q": "Voiko digitaalinen menu ottaa vastaan myös tilauksia?",
+          "a": "Kyllä — asiakkaat voivat tilata ja maksaa suoraan pöydästä, ja tilaukset menevät suoraan [keittiönäytölle](route:/kitchen-display). Voit aloittaa myös pelkkänä selattavana menuna."
+        },
+        {
+          "q": "Kauanko käyttöönotto kestää?",
+          "a": "Noin 5 minuuttia: skannaa paperinen ruokalista, tarkista annokset, tulosta QR-koodit."
+        }
+      ]
+    }
+  ]
+}

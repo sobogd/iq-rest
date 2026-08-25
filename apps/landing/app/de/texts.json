@@ -214,7 +214,8 @@
     ],
     "infoHeading": "Informationen",
     "legalHeading": "Rechtliches",
-    "currencyHeading": "Währung"
+    "currencyHeading": "Währung",
+    "blogLabel": "Blog"
   },
   "common": {
     "close": "Schließen",
@@ -257,5 +258,14 @@
       "invalidCode": "Ungültiger Code. Bitte versuchen Sie es erneut.",
       "tooManyAttempts": "Zu viele Versuche. Bitte warten Sie und versuchen Sie es erneut."
     }
+  },
+  "blog": {
+    "metaTitle": "Blog: Restaurant-Technik — IQ Rest",
+    "metaDescription": "Ratgeber und Vergleiche zu digitalen Speisekarten, QR-Bestellung, Küchendisplays und Reservierungen — praxisnah für Gastronomen.",
+    "title": "Blog",
+    "intro": "Ratgeber und Vergleiche zu digitalen Speisekarten, QR-Bestellung, Küchendisplays und dem Restaurantalltag.",
+    "readMore": "Artikel lesen",
+    "relatedHeading": "Mehr aus dem Blog",
+    "backToBlog": "Alle Artikel"
   }
 }

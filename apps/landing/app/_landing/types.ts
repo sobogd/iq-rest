@@ -185,6 +185,21 @@ export type PricingCtaTexts = {
   button: string;
 };
 
+/** Blog UI chrome (index heading, card labels). Article copy itself lives in
+ *  content/blog/<id>/<locale>.json — see app/_landing/blog/types.ts. */
+export type BlogTexts = {
+  /** Blog index <title> (≤60 chars). */
+  metaTitle: string;
+  /** Blog index meta description (≤155 chars). */
+  metaDescription: string;
+  /** H1 of the index page; also the breadcrumb label for the blog. */
+  title: string;
+  intro: string;
+  readMore: string;
+  relatedHeading: string;
+  backToBlog: string;
+};
+
 export type LandingTexts = {
   htmlLang: string;
   htmlDir: "ltr" | "rtl";
@@ -330,6 +345,10 @@ export type LandingTexts = {
   /** billing-features-constructor: pricing CTA block (home + feature pages). */
   pricingCta?: PricingCtaTexts;
 
+  /** Optional while the namespace rolls out across locales — pages fall back
+   *  to the EN copy via resolveBlogTexts(). */
+  blog?: BlogTexts;
+
   footer: {
     copyrightTemplate: string;
     /** Column headings for the 4-column desktop footer (features / info /
@@ -342,5 +361,8 @@ export type LandingTexts = {
     /** Heading above the full currency list (mirrors the language row —
      *  see footer.tsx / app/api/currency for the no-JS link mechanism). */
     currencyHeading: string;
+    /** Label of the blog link in the info column. Optional — locales without
+     *  it just don't show the link. */
+    blogLabel?: string;
   };
 };

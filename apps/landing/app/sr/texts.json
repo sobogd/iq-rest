@@ -214,7 +214,8 @@
     ],
     "infoHeading": "Informacije",
     "legalHeading": "Pravne informacije",
-    "currencyHeading": "Valuta"
+    "currencyHeading": "Valuta",
+    "blogLabel": "Blog"
   },
   "common": {
     "close": "Zatvori",
@@ -257,5 +258,14 @@
       "invalidCode": "Neispravan kod. Pokušajte ponovo.",
       "tooManyAttempts": "Previše pokušaja. Sačekajte i pokušajte ponovo."
     }
+  },
+  "blog": {
+    "metaTitle": "Blog o tehnologiji za restorane — IQ Rest",
+    "metaDescription": "Vodiči i poređenja o digitalnim menijima, QR porudžbinama, kuhinjskim ekranima i rezervacijama — praktično štivo za ugostitelje.",
+    "title": "Blog",
+    "intro": "Vodiči i poređenja o digitalnim menijima, QR porudžbinama, kuhinjskim ekranima i vođenju restorana.",
+    "readMore": "Pročitaj članak",
+    "relatedHeading": "Više sa bloga",
+    "backToBlog": "Svi članci"
   }
 }

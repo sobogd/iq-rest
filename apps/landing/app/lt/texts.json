@@ -214,7 +214,8 @@
     ],
     "infoHeading": "Informacija",
     "legalHeading": "Teisinė informacija",
-    "currencyHeading": "Valiuta"
+    "currencyHeading": "Valiuta",
+    "blogLabel": "Tinklaraštis"
   },
   "common": {
     "close": "Uždaryti",
@@ -257,5 +258,14 @@
       "invalidCode": "Neteisingas kodas. Bandykite dar kartą.",
       "tooManyAttempts": "Per daug bandymų. Palaukite ir bandykite dar kartą."
     }
+  },
+  "blog": {
+    "metaTitle": "Restoranų technologijų tinklaraštis — IQ Rest",
+    "metaDescription": "Gidai ir palyginimai apie skaitmeninius meniu, QR užsakymus, virtuvės ekranus ir rezervacijas — praktiška medžiaga restoranų savininkams.",
+    "title": "Tinklaraštis",
+    "intro": "Gidai ir palyginimai apie skaitmeninius meniu, QR užsakymus, virtuvės ekranus ir restorano valdymą.",
+    "readMore": "Skaityti straipsnį",
+    "relatedHeading": "Daugiau iš tinklaraščio",
+    "backToBlog": "Visi straipsniai"
   }
 }

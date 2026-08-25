@@ -214,7 +214,8 @@
     ],
     "infoHeading": "Informacje",
     "legalHeading": "Kwestie prawne",
-    "currencyHeading": "Waluta"
+    "currencyHeading": "Waluta",
+    "blogLabel": "Blog"
   },
   "common": {
     "close": "Zamknij",
@@ -257,5 +258,14 @@
       "invalidCode": "Nieprawidłowy kod. Spróbuj ponownie.",
       "tooManyAttempts": "Zbyt wiele prób. Odczekaj chwilę i spróbuj ponownie."
     }
+  },
+  "blog": {
+    "metaTitle": "Blog o technologii dla restauracji — IQ Rest",
+    "metaDescription": "Poradniki i porównania: cyfrowe menu, zamówienia QR, ekrany kuchenne i rezerwacje — praktycznie dla restauratorów.",
+    "title": "Blog",
+    "intro": "Poradniki i porównania o cyfrowym menu, zamówieniach QR, ekranach kuchennych i prowadzeniu restauracji.",
+    "readMore": "Czytaj artykuł",
+    "relatedHeading": "Więcej z bloga",
+    "backToBlog": "Wszystkie artykuły"
   }
 }

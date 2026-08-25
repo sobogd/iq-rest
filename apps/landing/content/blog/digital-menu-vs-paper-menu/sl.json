@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Digitalni meni ali papirnati: primerjava stroškov | IQ Rest",
+    "description": "Koliko papirnati meni v resnici stane restavracijo v primerjavi z digitalnim QR menijem: tisk, spremembe, prevodi, hitrost naročanja. Primerjava s številkami."
+  },
+  "card": {
+    "title": "Digitalni ali papirnati meni: koliko vsak v resnici stane restavracijo",
+    "excerpt": "Tisk je le vidni del. Primerjamo celotne stroške papirnatega in digitalnega menija — spremembe, prevode, napake in izgubljena naročila — s konkretnimi številkami."
+  },
+  "h1": "Digitalni ali papirnati meni: koliko vsak v resnici stane restavracijo",
+  "intro": "Vsaka restavracija začne s papirnatim menijem — in večina ga plačuje še dolgo po tem, ko neha imeti smisel. Ta primerjava pokaže, koliko papir dejansko stane, ko seštejete ponatise, prevode in počasnejšo strežbo, ter kje [digitalni QR meni](route:/digital-menu) zmaga in kje izgubi.",
+  "blocks": [
+    { "type": "h2", "text": "Vidni strošek: tisk" },
+    {
+      "type": "p",
+      "text": "Srednje velik meni (8–12 strani, plastificiran, 30 izvodov) stane **€150–€400** na ponatis. Večina lokalov tiska znova 3–6-krat na leto: sezonske jedi, spremembe cen, obrabljene strani. To je €450–€2,400 na leto samo zato, da papir ostane ažuren — vsaka podražitev, ki jo odložite, ker \"smo ravnokar tiskali\", pa je marža, ki jo tiho izgubljate."
+    },
+    {
+      "type": "p",
+      "text": "Digitalni meni nima tiska. Ceno spremenite in v nekaj sekundah je vidna na vseh mizah hkrati."
+    },
+    { "type": "h2", "text": "Skriti stroški: kje papir zares izgublja" },
+    {
+      "type": "list",
+      "items": [
+        "**Zastarele cene.** Pri papirju podražitev dobavitelja tedne čaka na naslednji ponatis. Digitalni meni se posodobi še isti dan.",
+        "**Prevodi.** Turistični kraji potrebujejo 2–5 jezikov. Na papirju to pomnoži strani in stroške tiska; digitalni meni vsako jed prevede samodejno.",
+        "**Razprodane jedi.** Papir ne more pokazati, da je jedi zmanjkalo — gostje jo naročijo, osebje se opravičuje. Digitalni meni razprodane jedi skrije z enim dotikom.",
+        "**Fotografije.** Fotografije jedi prodajajo, a menije, polne fotografij, je drago kakovostno natisniti. Digitalni meni brezplačno pokaže fotografijo pri vsaki jedi.",
+        "**Higiena in obraba.** Plastificirani meniji postanejo lepljivi in opraskani; gostje to opazijo."
+      ]
+    },
+    { "type": "h2", "text": "Primerjava" },
+    {
+      "type": "table",
+      "headers": ["", "Papirnati meni", "Digitalni QR meni"],
+      "rows": [
+        ["Strošek posodobitve", "€150–€400 za ponatis", "€0, takoj"],
+        ["Čas za spremembo cene", "Dnevi do tedni", "Manj kot minuta"],
+        ["Jeziki", "En na natisnjen komplet", "Vsi glavni jeziki, samodejno"],
+        ["Fotografije jedi", "Drage za tisk", "Vsaka jed, brezplačno"],
+        ["Razprodane jedi", "Naročene in zavrnjene", "Skrite z enim dotikom"],
+        ["Naročanje", "Gost čaka natakarja", "Gost lahko [naroči kar z mize](route:/order-taking)"],
+        ["Začetni strošek", "Prvi tisk", "Od €9.90/mesec"]
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Obdržite 2–3 papirnate izvode za goste, ki jih imajo raje. Bistvo ni nič papirja — ampak da papir ni več tisto, kar vzdržujete."
+    },
+    { "type": "h2", "text": "Kje papir še vedno zmaga" },
+    {
+      "type": "p",
+      "text": "Bodimo pošteni: enostranski degustacijski meni, ki se menja mesečno, fine-dining restavracija, kjer telefoni delujejo neprimerno, ali bar s šestimi jedmi za stalne goste — tam je papir povsem v redu. Ekonomika se obrne, ko je meni dolg, se pogosto spreminja, potrebuje jezike ali fotografije, ali ko gostje naročajo hitreje, kot osebje obide mize."
+    },
+    { "type": "h2", "text": "Kako poteka prehod" },
+    {
+      "type": "steps",
+      "items": [
+        "Skenirajte papirnati meni — IQ Rest ga prebere in samodejno sestavi digitalni meni.",
+        "Preverite cene in dodajte fotografije tam, kjer štejejo.",
+        "Natisnite po eno QR kodo za vsako mizo.",
+        "Karkoli spremenite kadar koli, kar s telefona."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Preizkusite digitalni meni na svojem meniju",
+      "text": "Naložite fotografijo svojega trenutnega menija in v približno 5 minutah dobite delujoč QR meni. 14 dni brezplačno, brez kartice.",
+      "buttonLabel": "Oglejte si digitalni meni",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Pogosta vprašanja",
+      "items": [
+        {
+          "q": "Ali morajo gostje namestiti aplikacijo?",
+          "a": "Ne. QR koda odpre meni v brskalniku telefona — nič ni treba namestiti, brez registracije."
+        },
+        {
+          "q": "Kaj pa, če gost nima pametnega telefona?",
+          "a": "Imejte nekaj papirnatih izvodov pri vhodu. V praksi jih prosi manj kot 5% gostov."
+        },
+        {
+          "q": "Ali lahko digitalni meni sprejema tudi naročila?",
+          "a": "Da — gostje lahko naročijo in plačajo kar z mize, naročila pa gredo naravnost na [kuhinjski zaslon](route:/kitchen-display). Lahko pa ga najprej uporabljate samo za ogled."
+        },
+        {
+          "q": "Koliko časa traja nastavitev?",
+          "a": "Približno 5 minut: skenirajte papirnati meni, preglejte jedi, natisnite QR kode."
+        }
+      ]
+    }
+  ]
+}

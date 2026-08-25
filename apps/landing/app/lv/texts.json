@@ -214,7 +214,8 @@
     ],
     "infoHeading": "Informācija",
     "legalHeading": "Juridiskā informācija",
-    "currencyHeading": "Valūta"
+    "currencyHeading": "Valūta",
+    "blogLabel": "Blogs"
   },
   "common": {
     "close": "Aizvērt",
@@ -257,5 +258,14 @@
       "invalidCode": "Nederīgs kods. Lūdzu, mēģiniet vēlreiz.",
       "tooManyAttempts": "Pārāk daudz mēģinājumu. Lūdzu, uzgaidiet un mēģiniet vēlreiz."
     }
+  },
+  "blog": {
+    "metaTitle": "Blogs par restorānu tehnoloģijām — IQ Rest",
+    "metaDescription": "Ceļveži un salīdzinājumi par digitālajām ēdienkartēm, QR pasūtījumiem, virtuves ekrāniem un rezervācijām — praktiska lasāmviela restorānu īpašniekiem.",
+    "title": "Blogs",
+    "intro": "Ceļveži un salīdzinājumi par digitālajām ēdienkartēm, QR pasūtījumiem, virtuves ekrāniem un restorāna vadību.",
+    "readMore": "Lasīt rakstu",
+    "relatedHeading": "Vairāk no bloga",
+    "backToBlog": "Visi raksti"
   }
 }

@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Meniu digital vs meniu tipărit: costuri reale | IQ Rest",
+    "description": "Cât costă cu adevărat un meniu tipărit față de un meniu digital QR: tipar, actualizări, traduceri, viteza comenzilor. Comparație directă, cu cifre."
+  },
+  "card": {
+    "title": "Meniu digital vs meniu de hârtie: cât costă fiecare un restaurant",
+    "excerpt": "Tiparul e doar partea vizibilă. Comparăm costul complet al meniului de hârtie și al celui digital — actualizări, traduceri, greșeli și comenzi pierdute — cu cifre reale."
+  },
+  "h1": "Meniu digital vs meniu de hârtie: cât costă fiecare un restaurant",
+  "intro": "Orice restaurant începe cu un meniu de hârtie — și cele mai multe continuă să plătească pentru el mult după ce nu mai are sens. Această comparație arată cât costă de fapt hârtia când aduni retipăririle, traducerile și serviciul mai lent, și unde un [meniu digital QR](route:/digital-menu) câștigă sau pierde.",
+  "blocks": [
+    { "type": "h2", "text": "Costul vizibil: tiparul" },
+    {
+      "type": "p",
+      "text": "Un meniu de mărime medie (8–12 pagini, laminat, 30 de exemplare) costă **€150–€400** per tiraj. Majoritatea localurilor retipăresc de 3–6 ori pe an: preparate de sezon, schimbări de prețuri, pagini uzate. Adică €450–€2,400 pe an doar ca hârtia să rămână la zi — iar fiecare schimbare de preț pe care o amâni pentru că \"abia am tipărit\" e marjă pe care o pierzi în tăcere."
+    },
+    {
+      "type": "p",
+      "text": "Un meniu digital nu are tiraj. Schimbi un preț și apare în câteva secunde, pe toate mesele deodată."
+    },
+    { "type": "h2", "text": "Costurile ascunse: unde pierde cu adevărat hârtia" },
+    {
+      "type": "list",
+      "items": [
+        "**Prețuri depășite.** Pe hârtie, o scumpire de la furnizor așteaptă săptămâni până la următoarea retipărire. Digitalul se actualizează în aceeași zi.",
+        "**Traduceri.** Zonele turistice au nevoie de 2–5 limbi. Pe hârtie asta înmulțește paginile și costurile de tipar; un meniu digital traduce automat fiecare preparat.",
+        "**Preparate epuizate.** Hârtia nu poate arăta că un fel s-a terminat — oaspeții îl comandă, personalul își cere scuze. Digitalul ascunde preparatele epuizate dintr-o singură atingere.",
+        "**Fotografii.** Fotografiile preparatelor vând, dar meniurile de hârtie pline de poze sunt scumpe de tipărit bine. Digitalul arată gratuit o fotografie pentru fiecare preparat.",
+        "**Igienă și uzură.** Meniurile laminate devin lipicioase și zgâriate; oaspeții observă."
+      ]
+    },
+    { "type": "h2", "text": "Față în față" },
+    {
+      "type": "table",
+      "headers": ["", "Meniu de hârtie", "Meniu digital QR"],
+      "rows": [
+        ["Cost per actualizare", "€150–€400 per tiraj", "€0, instant"],
+        ["Timp pentru a schimba un preț", "Zile sau săptămâni", "Sub un minut"],
+        ["Limbi", "Una per set tipărit", "Toate limbile importante, automat"],
+        ["Fotografii ale preparatelor", "Scumpe de tipărit", "Fiecare preparat, gratuit"],
+        ["Preparate epuizate", "Comandate și refuzate", "Ascunse dintr-o atingere"],
+        ["Comenzi", "Oaspetele așteaptă ospătarul", "Oaspetele poate [comanda de la masă](route:/order-taking)"],
+        ["Cost inițial", "Primul tiraj", "De la €9.90/lună"]
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Păstrează 2–3 exemplare de hârtie pentru oaspeții care le preferă. Ideea nu e zero hârtie — ci ca hârtia să nu mai fie lucrul pe care îl întreții."
+    },
+    { "type": "h2", "text": "Unde hârtia încă mai câștigă" },
+    {
+      "type": "p",
+      "text": "Să fim sinceri: un meniu de degustare de o pagină care se schimbă lunar, un restaurant fine dining unde telefoanele par nelalocul lor sau un bar cu clienți fideli și șase produse — acolo hârtia e în regulă. Economia se inversează când meniul e lung, se schimbă des, are nevoie de limbi sau fotografii, ori când oaspeții comandă mai repede decât poate ajunge personalul la mese."
+    },
+    { "type": "h2", "text": "Cum arată trecerea" },
+    {
+      "type": "steps",
+      "items": [
+        "Scanează meniul de hârtie — IQ Rest îl citește și construiește automat meniul digital.",
+        "Verifică prețurile, adaugă fotografii unde contează.",
+        "Tipărește câte un cod QR pentru fiecare masă.",
+        "Actualizează orice, oricând, de pe telefon."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Încearcă un meniu digital pe propriul tău meniu",
+      "text": "Încarcă o fotografie a meniului tău actual și primești un meniu QR funcțional în circa 5 minute. 14 zile gratuit, fără card.",
+      "buttonLabel": "Vezi meniul digital",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Întrebări frecvente",
+      "items": [
+        {
+          "q": "Trebuie oaspeții să instaleze o aplicație?",
+          "a": "Nu. Codul QR deschide meniul în browserul telefonului — nimic de instalat, fără cont."
+        },
+        {
+          "q": "Ce se întâmplă dacă un oaspete nu are smartphone?",
+          "a": "Păstrează câteva exemplare de hârtie la intrare. În practică, mai puțin de 5% dintre oaspeți cer unul."
+        },
+        {
+          "q": "Poate un meniu digital să preia și comenzi?",
+          "a": "Da — oaspeții pot comanda și plăti de la masă, iar comenzile ajung direct pe [ecranul din bucătărie](route:/kitchen-display). Îl poți folosi la început și doar ca meniu de consultat."
+        },
+        {
+          "q": "Cât durează configurarea?",
+          "a": "Circa 5 minute: scanezi meniul de hârtie, verifici preparatele, tipărești codurile QR."
+        }
+      ]
+    }
+  ]
+}

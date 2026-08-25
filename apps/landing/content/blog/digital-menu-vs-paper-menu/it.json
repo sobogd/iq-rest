@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Menù digitale vs menù cartaceo: costi reali | IQ Rest",
+    "description": "Quanto costa davvero un menù cartaceo rispetto a un menù digitale QR: stampa, aggiornamenti, traduzioni, velocità di servizio. Confronto con numeri reali."
+  },
+  "card": {
+    "title": "Menù digitale vs menù cartaceo: quanto costa davvero ciascuno a un ristorante",
+    "excerpt": "La stampa è solo la parte visibile. Confrontiamo il costo completo del menù cartaceo e di quello digitale — aggiornamenti, traduzioni, errori e ordini persi — con numeri reali."
+  },
+  "h1": "Menù digitale vs menù cartaceo: quanto costa davvero ciascuno a un ristorante",
+  "intro": "Ogni ristorante parte dal menù cartaceo — e la maggior parte continua a pagarlo molto dopo che ha smesso di avere senso. Questo confronto mostra quanto costa davvero la carta tra ristampe, traduzioni e servizio più lento, e dove un [menù digitale QR](route:/digital-menu) vince o perde.",
+  "blocks": [
+    { "type": "h2", "text": "Il costo visibile: la stampa" },
+    {
+      "type": "p",
+      "text": "Un menù di medie dimensioni (8–12 pagine, plastificato, 30 copie) costa **€150–€400** a tiratura. La maggior parte dei locali ristampa 3–6 volte l'anno: piatti stagionali, cambi di prezzo, pagine rovinate. Sono €450–€2,400 l'anno solo per tenere la carta aggiornata — e ogni ritocco di prezzo rimandato perché «abbiamo appena stampato» è margine che perdi in silenzio."
+    },
+    {
+      "type": "p",
+      "text": "Un menù digitale non ha tirature. Cambi un prezzo ed è online in pochi secondi, su tutti i tavoli contemporaneamente."
+    },
+    { "type": "h2", "text": "I costi nascosti: dove la carta perde davvero" },
+    {
+      "type": "list",
+      "items": [
+        "**Prezzi vecchi.** Con la carta, un rincaro del fornitore aspetta settimane fino alla prossima ristampa. Il digitale si aggiorna in giornata.",
+        "**Traduzioni.** Le zone turistiche richiedono 2–5 lingue. Su carta significa moltiplicare pagine e costi di stampa; un menù digitale traduce ogni piatto automaticamente.",
+        "**Piatti esauriti.** La carta non può dire che un piatto è finito — l'ospite lo ordina, il personale si scusa. Il digitale nasconde i piatti esauriti con un tocco.",
+        "**Foto.** Le foto vendono, ma un menù cartaceo pieno di foto costa caro da stampare bene. Il digitale mostra una foto per ogni piatto, gratis.",
+        "**Igiene e usura.** I menù plastificati diventano appiccicosi e graffiati; gli ospiti se ne accorgono."
+      ]
+    },
+    { "type": "h2", "text": "A confronto" },
+    {
+      "type": "table",
+      "headers": ["", "Menù cartaceo", "Menù digitale QR"],
+      "rows": [
+        ["Costo per aggiornamento", "Tiratura da €150–€400", "€0, immediato"],
+        ["Tempo per cambiare un prezzo", "Da giorni a settimane", "Meno di un minuto"],
+        ["Lingue", "Una per set stampato", "Tutte le lingue principali, in automatico"],
+        ["Foto dei piatti", "Costose da stampare", "Ogni piatto, gratis"],
+        ["Piatti esauriti", "Ordinati e rifiutati", "Nascosti con un tocco"],
+        ["Ordinazioni", "L'ospite aspetta il cameriere", "L'ospite può [ordinare dal tavolo](route:/order-taking)"],
+        ["Costo iniziale", "La prima tiratura", "Da €9.90/mese"]
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Tieni 2–3 copie cartacee per gli ospiti che le preferiscono. L'obiettivo non è zero carta — è che la carta smetta di essere la cosa da mantenere."
+    },
+    { "type": "h2", "text": "Dove la carta vince ancora" },
+    {
+      "type": "p",
+      "text": "Qui serve onestà: un menù degustazione di una pagina che cambia ogni mese, una sala fine dining dove i telefoni stonano, o un bar di habitué con sei referenze — lì la carta va benissimo. I conti si ribaltano quando il menù è lungo, cambia spesso, ha bisogno di lingue o foto, o quando gli ospiti ordinano più in fretta di quanto la sala riesca a girare."
+    },
+    { "type": "h2", "text": "Come funziona il passaggio" },
+    {
+      "type": "steps",
+      "items": [
+        "Scansiona il tuo menù cartaceo — IQ Rest lo legge e crea il menù digitale in automatico.",
+        "Controlla i prezzi, aggiungi le foto dove contano.",
+        "Stampa un codice QR per tavolo.",
+        "Aggiorna qualsiasi cosa, in qualsiasi momento, dal telefono."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Prova un menù digitale sul tuo menù",
+      "text": "Carica una foto del tuo menù attuale e ottieni un menù QR funzionante in circa 5 minuti. 14 giorni gratis, senza carta di credito.",
+      "buttonLabel": "Scopri il menù digitale",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Domande frequenti",
+      "items": [
+        {
+          "q": "Gli ospiti devono installare un'app?",
+          "a": "No. Il codice QR apre il menù nel browser del telefono — niente da installare, nessuna registrazione."
+        },
+        {
+          "q": "E se un ospite non ha lo smartphone?",
+          "a": "Tieni qualche copia cartacea all'ingresso. In pratica meno del 5% degli ospiti ne chiede una."
+        },
+        {
+          "q": "Un menù digitale può anche ricevere ordini?",
+          "a": "Sì — gli ospiti possono ordinare e pagare dal tavolo, e gli ordini arrivano dritti al [display di cucina](route:/kitchen-display). Puoi anche partire con un menù in sola consultazione."
+        },
+        {
+          "q": "Quanto tempo richiede la configurazione?",
+          "a": "Circa 5 minuti: scansiona il menù cartaceo, controlla i piatti, stampa i codici QR."
+        }
+      ]
+    }
+  ]
+}

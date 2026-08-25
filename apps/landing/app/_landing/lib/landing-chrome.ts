@@ -4,7 +4,13 @@ import type { LandingTexts } from "../types";
 // pages are being rebuilt).
 import EN_CHROME_JSON from "@/app/[locale]/(auth)/en-chrome.json";
 
-export type LandingChrome = Pick<LandingTexts, "header" | "footer" | "common" | "auth">;
+// The blog pages under app/[locale]/blog need the shared CTA copy + blog
+// namespace on top of the header/footer chrome — the loaders below return the
+// FULL texts.json at runtime, this type just names the slices pages may use.
+export type LandingChrome = Pick<
+  LandingTexts,
+  "header" | "footer" | "common" | "auth" | "finalCta" | "ctaText" | "demoText" | "microcopy" | "blog"
+>;
 
 const EN_CHROME = EN_CHROME_JSON as unknown as LandingChrome;
 

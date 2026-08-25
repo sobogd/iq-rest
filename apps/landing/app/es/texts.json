@@ -214,7 +214,8 @@
     ],
     "infoHeading": "Información",
     "legalHeading": "Documentos legales",
-    "currencyHeading": "Moneda"
+    "currencyHeading": "Moneda",
+    "blogLabel": "Blog"
   },
   "common": {
     "close": "Cerrar",
@@ -257,5 +258,14 @@
       "invalidCode": "Código incorrecto. Inténtelo de nuevo.",
       "tooManyAttempts": "Demasiados intentos. Espere e inténtelo de nuevo."
     }
+  },
+  "blog": {
+    "metaTitle": "Blog de tecnología para restaurantes — IQ Rest",
+    "metaDescription": "Guías y comparativas sobre cartas digitales, pedidos por QR, pantallas de cocina y reservas — lectura práctica para hosteleros.",
+    "title": "Blog",
+    "intro": "Guías y comparativas sobre cartas digitales, pedidos por QR, pantallas de cocina y la gestión diaria del restaurante.",
+    "readMore": "Leer artículo",
+    "relatedHeading": "Más del blog",
+    "backToBlog": "Todos los artículos"
   }
 }

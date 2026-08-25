@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Menu digital vs menu papier : les vrais coûts | IQ Rest",
+    "description": "Ce que coûte vraiment un menu papier face à un menu digital QR : impression, mises à jour, traductions, rapidité de service. Comparatif chiffré."
+  },
+  "card": {
+    "title": "Menu digital vs menu papier : ce que chacun coûte vraiment à un restaurant",
+    "excerpt": "L'impression n'est que la partie visible. Nous comparons le coût complet du menu papier et du menu digital — mises à jour, traductions, erreurs et commandes perdues — avec de vrais chiffres."
+  },
+  "h1": "Menu digital vs menu papier : ce que chacun coûte vraiment à un restaurant",
+  "intro": "Tout restaurant commence avec un menu papier — et la plupart continuent de le payer bien après qu'il a cessé d'avoir du sens. Ce comparatif détaille ce que le papier coûte réellement une fois comptées les réimpressions, les traductions et un service plus lent, et où un [menu digital QR](route:/digital-menu) gagne ou perd.",
+  "blocks": [
+    { "type": "h2", "text": "Le coût visible : l'impression" },
+    {
+      "type": "p",
+      "text": "Un menu de taille moyenne (8–12 pages, plastifié, 30 exemplaires) coûte **€150–€400** par tirage. La plupart des établissements réimpriment 3–6 fois par an : plats de saison, changements de prix, pages usées. Soit €450–€2,400 par an juste pour garder le papier à jour — et chaque changement de prix repoussé parce qu'« on vient d'imprimer » est de la marge perdue en silence."
+    },
+    {
+      "type": "p",
+      "text": "Un menu digital n'a pas de tirage. Vous changez un prix et il est en ligne en quelques secondes, sur toutes les tables à la fois."
+    },
+    { "type": "h2", "text": "Les coûts cachés : là où le papier perd vraiment" },
+    {
+      "type": "list",
+      "items": [
+        "**Prix dépassés.** Sur papier, une hausse fournisseur attend des semaines la prochaine réimpression. En digital, la mise à jour se fait le jour même.",
+        "**Traductions.** Les zones touristiques exigent 2–5 langues. Sur papier, cela multiplie les pages et les coûts d'impression ; un menu digital traduit chaque plat automatiquement.",
+        "**Plats épuisés.** Le papier ne peut pas signaler qu'un plat est terminé — le client le commande, l'équipe s'excuse. En digital, un plat épuisé se masque en un geste.",
+        "**Photos.** Les photos font vendre, mais un menu papier riche en photos coûte cher à bien imprimer. Le digital affiche une photo pour chaque plat, gratuitement.",
+        "**Hygiène et usure.** Les menus plastifiés deviennent collants et rayés ; les clients le remarquent."
+      ]
+    },
+    { "type": "h2", "text": "Face à face" },
+    {
+      "type": "table",
+      "headers": ["", "Menu papier", "Menu digital QR"],
+      "rows": [
+        ["Coût par mise à jour", "Tirage de €150–€400", "€0, instantané"],
+        ["Délai pour changer un prix", "De quelques jours à plusieurs semaines", "Moins d'une minute"],
+        ["Langues", "Une par jeu imprimé", "Toutes les grandes langues, automatique"],
+        ["Photos des plats", "Chères à imprimer", "Chaque plat, gratuitement"],
+        ["Plats épuisés", "Commandés puis refusés", "Masqués en un geste"],
+        ["Prise de commande", "Le client attend un serveur", "Le client peut [commander depuis la table](route:/order-taking)"],
+        ["Coût de départ", "Le premier tirage", "À partir de €9.90/mois"]
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Gardez 2–3 exemplaires papier pour les clients qui les préfèrent. L'objectif n'est pas le zéro papier — c'est que le papier cesse d'être ce que vous devez entretenir."
+    },
+    { "type": "h2", "text": "Là où le papier gagne encore" },
+    {
+      "type": "p",
+      "text": "Soyons honnêtes : un menu dégustation d'une page qui change chaque mois, une salle gastronomique où les téléphones détonnent, ou un bar d'habitués avec six références — là, le papier convient très bien. L'équation s'inverse quand votre menu est long, change souvent, demande des langues ou des photos, ou quand les clients commandent plus vite que votre salle ne peut circuler."
+    },
+    { "type": "h2", "text": "À quoi ressemble le passage au digital" },
+    {
+      "type": "steps",
+      "items": [
+        "Scannez votre menu papier — IQ Rest le lit et construit le menu digital automatiquement.",
+        "Vérifiez les prix, ajoutez des photos là où elles comptent.",
+        "Imprimez un QR code par table.",
+        "Modifiez ce que vous voulez, quand vous voulez, depuis votre téléphone."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Essayez un menu digital avec votre propre carte",
+      "text": "Envoyez une photo de votre menu actuel et obtenez un menu QR opérationnel en 5 minutes environ. 14 jours gratuits, sans carte bancaire.",
+      "buttonLabel": "Découvrir le menu digital",
+      "routeKey": "/digital-menu"
+    },
+    {
+      "type": "faq",
+      "heading": "Questions fréquentes",
+      "items": [
+        {
+          "q": "Les clients doivent-ils installer une application ?",
+          "a": "Non. Le QR code ouvre le menu dans le navigateur du téléphone — rien à installer, aucune inscription."
+        },
+        {
+          "q": "Que se passe-t-il si un client n'a pas de smartphone ?",
+          "a": "Gardez quelques exemplaires papier à l'accueil. En pratique, moins de 5% des clients en demandent un."
+        },
+        {
+          "q": "Un menu digital peut-il aussi prendre les commandes ?",
+          "a": "Oui — les clients peuvent commander et payer depuis la table, et les commandes partent directement vers l'[écran de cuisine](route:/kitchen-display). Vous pouvez aussi commencer avec un menu en simple consultation."
+        },
+        {
+          "q": "Combien de temps prend la mise en place ?",
+          "a": "Environ 5 minutes : scannez votre menu papier, vérifiez les plats, imprimez les QR codes."
+        }
+      ]
+    }
+  ]
+}

@@ -214,7 +214,8 @@
     ],
     "infoHeading": "Info",
     "legalHeading": "Juriidiline info",
-    "currencyHeading": "Valuuta"
+    "currencyHeading": "Valuuta",
+    "blogLabel": "Blogi"
   },
   "common": {
     "close": "Sulge",
@@ -257,5 +258,14 @@
       "invalidCode": "Vigane kood. Palun proovi uuesti.",
       "tooManyAttempts": "Liiga palju katseid. Palun oota ja proovi uuesti."
     }
+  },
+  "blog": {
+    "metaTitle": "Restoranitehnoloogia blogi — IQ Rest",
+    "metaDescription": "Juhendid ja võrdlused digimenüüdest, QR-tellimustest, köögiekraanidest ja broneeringutest — praktiline lugemine restoranipidajatele.",
+    "title": "Blogi",
+    "intro": "Juhendid ja võrdlused digimenüüdest, QR-tellimustest, köögiekraanidest ja restorani igapäevatööst.",
+    "readMore": "Loe artiklit",
+    "relatedHeading": "Veel blogist",
+    "backToBlog": "Kõik artiklid"
   }
 }

@@ -214,7 +214,8 @@
     ],
     "infoHeading": "Information",
     "legalHeading": "Juridisk",
-    "currencyHeading": "Valuta"
+    "currencyHeading": "Valuta",
+    "blogLabel": "Blog"
   },
   "common": {
     "close": "Luk",
@@ -257,5 +258,14 @@
       "invalidCode": "Ugyldig kode. Prøv igen.",
       "tooManyAttempts": "For mange forsøg. Vent lidt og prøv igen."
     }
+  },
+  "blog": {
+    "metaTitle": "Blog om restaurantteknologi — IQ Rest",
+    "metaDescription": "Guides og sammenligninger om digitale menukort, QR-bestilling, køkkenskærme og reservationer — praktisk læsning for restauratører.",
+    "title": "Blog",
+    "intro": "Guides og sammenligninger om digitale menukort, QR-bestilling, køkkenskærme og restaurantdrift.",
+    "readMore": "Læs artiklen",
+    "relatedHeading": "Mere fra bloggen",
+    "backToBlog": "Alle artikler"
   }
 }
