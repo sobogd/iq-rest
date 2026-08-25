@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "title": "Cuánto cuesta una carta QR de verdad | IQ Rest",
+    "description": "Lo que cuesta realmente una carta con código QR: herramientas gratis, cuotas mensuales, precio por local, comisiones por pedido y el tiempo de montaje."
+  },
+  "card": {
+    "title": "Lo que cuesta de verdad una carta QR (incluidas las partes que nadie te cotiza)",
+    "excerpt": "Las páginas de precios enseñan un número. Tu coste real incluye el tiempo de montaje, el precio por local, las comisiones por pedido y la impresión. Aquí va la cuenta completa."
+  },
+  "h1": "¿Cuánto cuesta una carta con código QR?",
+  "intro": "El número anunciado rara vez es el que pagas. El precio de las cartas digitales se divide en cuatro modelos, y en cuál estás importa más que la cifra del titular: una herramienta de 0 € que cobra comisión por pedido puede salir más cara al mes que una suscripción de 20 €. Así calculas tu cifra real.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Los cuatro modelos de precio"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Modelo",
+        "Precio habitual",
+        "A quién le encaja",
+        "El truco"
+      ],
+      "rows": [
+        [
+          "Generador de QR gratis + PDF",
+          "0 €",
+          "Una carta que no cambia nunca",
+          "Los códigos pueden caducar; el PDF es ilegible en el móvil"
+        ],
+        [
+          "Herramienta gratis con publicidad",
+          "0 €",
+          "Probar la idea",
+          "Marca o anuncios del proveedor mostrados a tus clientes"
+        ],
+        [
+          "Suscripción plana",
+          "10-40 € por local y mes",
+          "La mayoría de los restaurantes",
+          "Comprueba si es por local o por usuario"
+        ],
+        [
+          "Comisión por pedido",
+          "Suele ser un % por pedido",
+          "Volumen muy bajo",
+          "El coste sube justo cuando el negocio crece"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "IQ Rest está en la tercera fila: **desde 9,90 € al mes por local**, sin comisión por pedido, 14 días gratis y sin tarjeta. Cobramos por el local, no por camarero, porque cobrar por usuario penaliza precisamente a los locales con más rotación de personal."
+    },
+    {
+      "type": "h2",
+      "text": "El coste que todos olvidan: meter la carta"
+    },
+    {
+      "type": "p",
+      "text": "Teclear 80 platos con precios, descripciones y categorías lleva de dos a cuatro horas. Al coste real por hora de un encargado son 40-100 € que gastas antes de que la carta exista, y que vuelves a gastar la temporada siguiente si la herramienta hace penosas las ediciones en bloque."
+    },
+    {
+      "type": "p",
+      "text": "Por eso importa más de lo que parece la importación de la carta. IQ Rest lee una foto de tu carta en papel y crea los platos automáticamente, lo que convierte esa media jornada en unos cinco minutos. Cuenta el tiempo de montaje al comparar herramientas: a menudo pesa más que el primer año de suscripción."
+    },
+    {
+      "type": "h2",
+      "text": "Impresión y hardware"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Caballetes o pegatinas:** 1-3 € por mesa, una sola vez. Una sala de 20 mesas sale por menos de 60 €.",
+        "**Reimprimir:** 0 € si el código apunta a una dirección fija que controlas tú. Ese es todo el argumento a favor de una carta alojada.",
+        "**Dispositivos del cliente:** 0 €. Usan su propio móvil y no instalan nada.",
+        "**Pantalla de cocina:** 0 € si usas una tablet que ya tienes. La [pantalla de cocina](route:/kitchen-display) funciona en el navegador, así que una tablet de hace cinco años basta.",
+        "**Wifi:** conviene revisarlo. Si en las mesas del fondo no hay cobertura, la carta no carga, y eso es un problema de infraestructura que ningún software arregla."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Ejemplo con números: un bistró de 20 mesas"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Concepto",
+        "Año 1",
+        "Año 2"
+      ],
+      "rows": [
+        [
+          "Suscripción a 9,90 €/mes",
+          "118,80 €",
+          "118,80 €"
+        ],
+        [
+          "Montaje de la carta (importación por escaneo)",
+          "~5 € de tu tiempo",
+          "0 €"
+        ],
+        [
+          "Caballetes QR, 20 mesas",
+          "40 €",
+          "0 €"
+        ],
+        [
+          "Cambios de carta, 6 al año",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "Traducciones, 4 idiomas",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "**Total**",
+          "**≈164 €**",
+          "**≈119 €**"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Para comparar: una tirada de cartas plastificadas para esa misma sala suele costar entre 150 y 400 €, y la mayoría de los locales hace de tres a seis al año. La carta digital normalmente sale más barata ya el primer año, antes de contar todo lo que hace y el papel no."
+    },
+    {
+      "type": "h2",
+      "text": "Dónde se dispara de verdad el coste"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Precio por local en un grupo.** Cinco locales a 30 € cada uno son 1.800 € al año. Pregunta por tarifas multilocal antes de firmar por uno.",
+        "**Comisión por pedido.** Un 3% sobre 12.000 € de pedidos QR al mes son 360 € mensuales: treinta veces una suscripción plana.",
+        "**Procesamiento de pagos.** Va aparte del proveedor de la carta y es inevitable si cobras con tarjeta en la mesa. Compáralo con lo que ya te cobra tu datáfono.",
+        "**Pantallas digitales de menú.** Las pantallas detrás de la barra son otro producto completamente distinto: hardware, instalación y software de cartelería llevan eso a los miles. Una carta QR en el móvil del cliente lo evita todo."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Antes de comparar precios, apunta tu volumen mensual de pedidos por QR. Si es casi cero, los modelos por comisión salen más baratos. A partir de unos 300-500 € de pedidos al mes, la suscripción plana casi siempre gana."
+    },
+    {
+      "type": "h2",
+      "text": "¿Es suficiente lo gratis alguna vez?"
+    },
+    {
+      "type": "p",
+      "text": "A veces. Un chiringuito de temporada con ocho platos y precios fijos realmente no necesita suscripción. Pero lee qué significa \"gratis\" en cada caso: anuncios mostrados a tus clientes, un código que muere al acabar la prueba o una carta que no puedes exportar son costes reales que simplemente no salen en la factura. Los repasamos uno a uno en [lo que cuesta realmente una carta QR gratis](blog:free-qr-code-menu)."
+    },
+    {
+      "type": "cta",
+      "heading": "Mira el precio completo antes de decidir",
+      "text": "Desde 9,90 € al mes por local, sin comisión por pedido, 14 días gratis y sin tarjeta.",
+      "buttonLabel": "Ver precios",
+      "routeKey": "/pricing"
+    },
+    {
+      "type": "faq",
+      "heading": "Preguntas frecuentes",
+      "items": [
+        {
+          "q": "¿Cuánto cuesta al mes una carta con código QR?",
+          "a": "Las herramientas de suscripción plana suelen ir de 10 a 40 € por local y mes. IQ Rest empieza en 9,90 € sin comisión por pedido."
+        },
+        {
+          "q": "¿Existe alguna carta QR gratis?",
+          "a": "Sí, varias, normalmente financiadas con la marca del proveedor mostrada a los clientes o limitándote a un PDF. Sirven para una carta pequeña y estática, y se vuelven caras por otras vías en cuanto necesitas actualizaciones, idiomas o pedidos."
+        },
+        {
+          "q": "¿Se paga por mesa o por restaurante?",
+          "a": "Con IQ Rest, por restaurante: mesas y códigos QR ilimitados. Compruébalo antes de firmar en cualquier sitio, porque el precio por mesa o por usuario escala fatal."
+        },
+        {
+          "q": "¿Hay cuota de alta?",
+          "a": "No. La importación de la carta está incluida y no hay nada que instalar, ni para ti ni para tus clientes."
+        },
+        {
+          "q": "¿Y cuánto cuesta una pantalla digital de menú?",
+          "a": "Es otra categoría: pantallas, soportes y software de cartelería, normalmente de cientos a miles por pantalla más la instalación. Una carta QR usa el móvil del cliente y no cuesta nada en hardware."
+        }
+      ]
+    }
+  ]
+}

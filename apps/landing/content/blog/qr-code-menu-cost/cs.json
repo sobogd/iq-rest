@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "title": "Kolik doopravdy stojí QR menu | IQ Rest",
+    "description": "Kolik skutečně stojí menu s QR kódem: bezplatné nástroje, měsíční předplatné, cena za provozovnu, provize z objednávek a skrytý čas nasazení."
+  },
+  "card": {
+    "title": "Kolik doopravdy stojí QR menu (včetně položek, které vám nikdo nenaceňuje)",
+    "excerpt": "Ceníky ukazují jedno číslo. Vaše skutečné náklady zahrnují čas na zadání, cenu za provozovnu, provize z objednávek a tisk. Tady je celý výpočet."
+  },
+  "h1": "Kolik stojí menu s QR kódem?",
+  "intro": "Inzerované číslo je málokdy to, které zaplatíte. Ceny digitálních menu se dělí na čtyři modely a to, ve kterém jste, znamená víc než částka v nadpisu: nástroj za 0 € s provizí z objednávek může měsíčně vyjít dráž než předplatné za 20 €. Takhle si spočítáte své skutečné číslo.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Čtyři cenové modely"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Model",
+        "Obvyklá cena",
+        "Komu sedí",
+        "Háček"
+      ],
+      "rows": [
+        [
+          "Bezplatný generátor QR + PDF",
+          "0 €",
+          "Lístek, který se nikdy nemění",
+          "Kódům může vypršet platnost; PDF je na telefonu nečitelné"
+        ],
+        [
+          "Bezplatný nástroj s reklamou",
+          "0 €",
+          "Ověření nápadu",
+          "Značka nebo reklamy dodavatele zobrazené vašim hostům"
+        ],
+        [
+          "Paušální předplatné",
+          "10-40 € za provozovnu měsíčně",
+          "Většině restaurací",
+          "Ověřte, zda je to za provozovnu, nebo za uživatele"
+        ],
+        [
+          "Provize z objednávek",
+          "Často % z objednávky",
+          "Velmi nízkým objemům",
+          "Náklady rostou přesně tehdy, když roste podnik"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "IQ Rest je ve třetím řádku: **od 9,90 € měsíčně za provozovnu**, bez provize z objednávek, 14 dní zdarma a bez karty. Účtujeme provozovnu, ne číšníka, protože účtování za uživatele trestá právě ty podniky, kde se personál mění nejčastěji."
+    },
+    {
+      "type": "h2",
+      "text": "Náklad, na který všichni zapomínají: dostat lístek dovnitř"
+    },
+    {
+      "type": "p",
+      "text": "Naťukat 80 položek s cenami, popisy a kategoriemi zabere dvě až čtyři hodiny. Při plné hodinové sazbě provozního jsou to reálné 40-100 €, které utratíte dřív, než lístek vůbec existuje – a utratíte je znovu příští sezonu, pokud nástroj dělá hromadné úpravy trýznivými."
+    },
+    {
+      "type": "p",
+      "text": "Proto import lístku znamená víc, než jak zní. IQ Rest přečte fotku vašeho papírového lístku a položky vytvoří sám, takže z půl dne je asi pět minut. Při porovnávání nástrojů počítejte i čas nasazení; často váží víc než první rok předplatného."
+    },
+    {
+      "type": "h2",
+      "text": "Tisk a hardware"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Stojánky nebo samolepky:** 1-3 € za stůl, jednorázově. Sál s 20 stoly se vejde pod 60 €.",
+        "**Nový tisk:** 0 €, pokud kód míří na pevnou adresu, kterou ovládáte. To je celý argument pro hostované menu.",
+        "**Zařízení hostů:** 0 €. Hosté používají vlastní telefon a nic neinstalují.",
+        "**Obrazovka v kuchyni:** 0 €, pokud použijete tablet, který už máte. [Kuchyňský displej](route:/kitchen-display) běží v prohlížeči, takže pětiletý tablet stačí.",
+        "**Wi-Fi:** vyplatí se zkontrolovat. Pokud u zadních stolů není signál, menu se nenačte, a to je problém instalace, který žádný software nevyřeší."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Příklad s čísly: bistro s 20 stoly"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Položka",
+        "Rok 1",
+        "Rok 2"
+      ],
+      "rows": [
+        [
+          "Předplatné 9,90 €/měs.",
+          "118,80 €",
+          "118,80 €"
+        ],
+        [
+          "Nasazení lístku (import ze skenu)",
+          "~5 € vašeho času",
+          "0 €"
+        ],
+        [
+          "QR stojánky, 20 stolů",
+          "40 €",
+          "0 €"
+        ],
+        [
+          "Úpravy lístku, 6× ročně",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "Překlady, 4 jazyky",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "**Celkem**",
+          "**≈164 €**",
+          "**≈119 €**"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Pro srovnání: jeden náklad laminovaných papírových lístků pro stejný sál obvykle stojí 150 až 400 € a většina podniků ho dělá třikrát až šestkrát ročně. Digitální menu bývá levnější už v prvním roce, ještě než započítáte cokoli, co papír neumí."
+    },
+    {
+      "type": "h2",
+      "text": "Kde náklady opravdu vystřelí"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Cena za provozovnu ve skupině.** Pět podniků po 30 € je 1 800 € ročně. Ptejte se na sazby pro víc provozoven dřív, než podepíšete za jednu.",
+        "**Provize z objednávek.** 3 % z 12 000 € QR objednávek měsíčně je 360 € měsíčně – třicetinásobek paušálního předplatného.",
+        "**Zpracování plateb.** Je oddělené od dodavatele menu a nevyhnutelné, pokud přijímáte karty u stolu. Porovnejte s tím, co vám už účtuje terminál.",
+        "**Digitální menu tabule.** Obrazovky za pultem jsou úplně jiný produkt – hardware, montáž a signage software to vyženou do tisíců. QR menu na telefonu hosta se tomu celému vyhne."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Než začnete srovnávat ceny, zapište si měsíční objem objednávek přes QR. Je-li blízko nule, provizní modely jsou nejlevnější. Nad zhruba 300-500 € objednávek měsíčně vyhrává paušál téměř vždy."
+    },
+    {
+      "type": "h2",
+      "text": "Stačí někdy zdarma?"
+    },
+    {
+      "type": "p",
+      "text": "Někdy. Sezonní stánek s osmi položkami a pevnými cenami předplatné opravdu nepotřebuje. Přečtěte si ale, co \"zdarma\" v každém případě znamená: reklamy zobrazené vašim hostům, kód, který umře s koncem zkušebního období, nebo menu, které nemůžete exportovat, jsou reálné náklady, které jen nestojí na faktuře. Prošli jsme je jeden po druhém v textu [kolik doopravdy stojí bezplatné QR menu](blog:free-qr-code-menu)."
+    },
+    {
+      "type": "cta",
+      "heading": "Podívejte se na celou cenu, než se rozhodnete",
+      "text": "Od 9,90 € měsíčně za provozovnu, bez provize z objednávek, 14 dní zdarma a bez karty.",
+      "buttonLabel": "Zobrazit ceník",
+      "routeKey": "/pricing"
+    },
+    {
+      "type": "faq",
+      "heading": "Časté dotazy",
+      "items": [
+        {
+          "q": "Kolik stojí menu s QR kódem měsíčně?",
+          "a": "Nástroje s paušálním předplatným se obvykle pohybují mezi 10 a 40 € za provozovnu měsíčně. IQ Rest začíná na 9,90 € bez provize z objednávek."
+        },
+        {
+          "q": "Existuje bezplatné menu s QR kódem?",
+          "a": "Ano, několik – obvykle financované značkou dodavatele zobrazenou hostům nebo tím, že vás omezí na PDF. Pro malý, neměnný lístek fungují a jinými cestami zdraží, jakmile potřebujete aktualizace, jazyky nebo objednávání."
+        },
+        {
+          "q": "Platí se za stůl, nebo za restauraci?",
+          "a": "U IQ Rest za restauraci – stoly i QR kódy jsou bez omezení. Ověřte si to, než někde podepíšete, protože cena za stůl nebo za uživatele škáluje mizerně."
+        },
+        {
+          "q": "Je nějaký zřizovací poplatek?",
+          "a": "Ne. Import lístku je součástí a není co instalovat, ani vám, ani vašim hostům."
+        },
+        {
+          "q": "A kolik stojí digitální menu tabule?",
+          "a": "To je jiná kategorie – obrazovky, držáky a signage software, obvykle stovky až tisíce za obrazovku plus montáž. QR menu využívá telefon hosta a na hardware nestojí nic."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "title": "Wat een QR-menu echt kost | IQ Rest",
+    "description": "Wat een QR-menu werkelijk kost: gratis tools, maandabonnementen, prijs per vestiging, commissie per bestelling en de verborgen opzettijd."
+  },
+  "card": {
+    "title": "Wat een QR-menu echt kost (inclusief de posten die niemand offreert)",
+    "excerpt": "Prijspagina's tonen één getal. Je echte kosten bevatten opzettijd, prijs per vestiging, bestelcommissies en drukwerk. Hier is de volledige rekensom."
+  },
+  "h1": "Wat kost een QR-menu?",
+  "intro": "Het geadverteerde bedrag is zelden wat je betaalt. Prijzen voor digitale menu's vallen uiteen in vier modellen, en in welk model je zit telt zwaarder dan het bedrag op de voorpagina: een tool van € 0 die commissie per bestelling rekent, kan per maand duurder uitpakken dan een abonnement van € 20. Zo bereken je je echte bedrag.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "De vier prijsmodellen"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Model",
+        "Gebruikelijke prijs",
+        "Voor wie",
+        "De adder"
+      ],
+      "rows": [
+        [
+          "Gratis QR-generator + pdf",
+          "€ 0",
+          "Een kaart die nooit verandert",
+          "Codes kunnen verlopen; pdf is onleesbaar op een telefoon"
+        ],
+        [
+          "Gratis tool met advertenties",
+          "€ 0",
+          "Het idee testen",
+          "Merk of advertenties van de leverancier voor je gasten"
+        ],
+        [
+          "Vast abonnement",
+          "€ 10-40 per vestiging per maand",
+          "De meeste restaurants",
+          "Controleer of het per vestiging of per gebruiker is"
+        ],
+        [
+          "Commissie per bestelling",
+          "Vaak een % per bestelling",
+          "Heel lage volumes",
+          "De kosten stijgen precies wanneer je zaak groeit"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "IQ Rest zit op de derde regel: **vanaf € 9,90 per maand per vestiging**, geen commissie op bestellingen, 14 dagen gratis zonder creditcard. We rekenen per zaak, niet per medewerker, want per gebruiker afrekenen straft juist de zaken met het meeste personeelsverloop."
+    },
+    {
+      "type": "h2",
+      "text": "De kostenpost die iedereen vergeet: de kaart erin krijgen"
+    },
+    {
+      "type": "p",
+      "text": "80 gerechten met prijzen, omschrijvingen en categorieën overtypen kost twee tot vier uur. Tegen de volledige uurkosten van een bedrijfsleider is dat een reële € 40-100 die je uitgeeft voordat de kaart überhaupt bestaat — en die je volgend seizoen opnieuw uitgeeft als de tool bulkbewerkingen pijnlijk maakt."
+    },
+    {
+      "type": "p",
+      "text": "Daarom telt menu-import zwaarder dan het klinkt. IQ Rest leest een foto van je papieren kaart en maakt de gerechten automatisch aan, waardoor die halve dag ongeveer vijf minuten wordt. Reken de opzettijd mee als je tools vergelijkt; hij is vaak groter dan het eerste abonnementsjaar."
+    },
+    {
+      "type": "h2",
+      "text": "Drukwerk en hardware"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Tafelstandaards of stickers:** € 1-3 per tafel, eenmalig. Een zaal met 20 tafels blijft onder de € 60.",
+        "**Herdrukken:** € 0 als de code naar een vast adres wijst dat jij beheert. Dat is het hele argument voor een gehost menu.",
+        "**Apparaten van gasten:** € 0. Gasten gebruiken hun eigen telefoon en installeren niets.",
+        "**Keukenscherm:** € 0 als je een tablet gebruikt die je al hebt. Het [keukenscherm](route:/kitchen-display) draait in de browser, dus een tablet van vijf jaar oud volstaat.",
+        "**Wifi:** het controleren waard. Als gasten aan de achterste tafels geen bereik hebben, laadt het menu niet, en dat is een installatieprobleem dat geen software oplost."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Rekenvoorbeeld: een bistro met 20 tafels"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Post",
+        "Jaar 1",
+        "Jaar 2"
+      ],
+      "rows": [
+        [
+          "Abonnement à € 9,90/maand",
+          "€ 118,80",
+          "€ 118,80"
+        ],
+        [
+          "Menu opzetten (import via scan)",
+          "~€ 5 aan je eigen tijd",
+          "€ 0"
+        ],
+        [
+          "QR-tafelstandaards, 20 tafels",
+          "€ 40",
+          "€ 0"
+        ],
+        [
+          "Menuwijzigingen, 6 per jaar",
+          "€ 0",
+          "€ 0"
+        ],
+        [
+          "Vertalingen, 4 talen",
+          "€ 0",
+          "€ 0"
+        ],
+        [
+          "**Totaal**",
+          "**≈ € 164**",
+          "**≈ € 119**"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Ter vergelijking: één oplage gelamineerde papieren kaarten voor dezelfde zaal ligt doorgaans tussen € 150 en € 400, en de meeste zaken doen er drie tot zes per jaar. Het digitale menu is meestal al in jaar één goedkoper, nog voordat je meetelt wat het kan en papier niet."
+    },
+    {
+      "type": "h2",
+      "text": "Waar de kosten echt oplopen"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Prijs per vestiging bij een groep.** Vijf zaken à € 30 is € 1.800 per jaar. Vraag naar tarieven voor meerdere vestigingen voordat je voor één tekent.",
+        "**Bestelcommissie.** 3% over € 12.000 aan QR-bestellingen per maand is € 360 per maand — dertig keer een vast abonnement.",
+        "**Betalingsverwerking.** Staat los van de menuleverancier en is onvermijdelijk als je aan tafel met kaart laat betalen. Zet het naast wat je pinautomaat al rekent.",
+        "**Digitale menuborden.** De schermen achter de toonbank zijn een heel ander product — hardware, montage en signage-software duwen dat naar duizenden euro's. Een QR-menu op de eigen telefoon van de gast vermijdt dat allemaal."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Noteer voordat je prijzen vergelijkt je maandelijkse volume aan QR-bestellingen. Is dat bijna nul, dan zijn commissiemodellen het goedkoopst. Boven ongeveer € 300-500 aan bestellingen per maand wint een vast abonnement vrijwel altijd."
+    },
+    {
+      "type": "h2",
+      "text": "Is gratis ooit genoeg?"
+    },
+    {
+      "type": "p",
+      "text": "Soms. Een seizoenskiosk met acht gerechten en vaste prijzen heeft echt geen abonnement nodig. Maar lees wat \"gratis\" in elk geval betekent: advertenties voor je gasten, een code die sterft als de proefperiode eindigt, of een menu dat je niet kunt exporteren zijn reële kosten die alleen niet op de factuur staan. We liepen ze één voor één na in [wat een gratis QR-menu echt kost](blog:free-qr-code-menu)."
+    },
+    {
+      "type": "cta",
+      "heading": "Bekijk de hele prijs voordat je beslist",
+      "text": "Vanaf € 9,90 per maand per vestiging, geen commissie op bestellingen, 14 dagen gratis en zonder creditcard.",
+      "buttonLabel": "Bekijk de prijzen",
+      "routeKey": "/pricing"
+    },
+    {
+      "type": "faq",
+      "heading": "Veelgestelde vragen",
+      "items": [
+        {
+          "q": "Wat kost een QR-menu per maand?",
+          "a": "Tools met een vast abonnement liggen doorgaans op € 10-40 per vestiging per maand. IQ Rest begint bij € 9,90 zonder commissie op bestellingen."
+        },
+        {
+          "q": "Bestaat er een gratis QR-menu?",
+          "a": "Ja, meerdere — meestal gefinancierd met het merk van de leverancier dat je gasten te zien krijgen, of doordat je beperkt bent tot een pdf. Ze werken voor een kleine, statische kaart en worden op andere manieren duur zodra je updates, talen of bestellen nodig hebt."
+        },
+        {
+          "q": "Betaal ik per tafel of per restaurant?",
+          "a": "Bij IQ Rest per restaurant — tafels en QR-codes zijn onbeperkt. Controleer dit voordat je ergens tekent, want prijzen per tafel of per gebruiker schalen slecht."
+        },
+        {
+          "q": "Zijn er opstartkosten?",
+          "a": "Nee. De menu-import zit erbij, en er valt niets te installeren, niet voor jou en niet voor je gasten."
+        },
+        {
+          "q": "En wat kost een digitaal menubord dan?",
+          "a": "Dat is een andere categorie — schermen, beugels en signage-software, doorgaans honderden tot duizenden euro's per scherm plus montage. Een QR-menu gebruikt de telefoon van de gast en kost niets aan hardware."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "title": "Was eine QR-Speisekarte wirklich kostet | IQ Rest",
+    "description": "Was eine QR-Code-Speisekarte tatsächlich kostet: Gratis-Tools, Monatsgebühren, Preise pro Standort, Bestellprovisionen und die versteckte Einrichtungszeit."
+  },
+  "card": {
+    "title": "Was eine QR-Karte wirklich kostet — samt der Posten, die niemand nennt",
+    "excerpt": "Preisseiten zeigen eine Zahl. Ihre echten Kosten enthalten Einrichtungszeit, Gebühren pro Standort, Bestellprovisionen und Druck. Hier die vollständige Rechnung."
+  },
+  "h1": "Was kostet eine QR-Code-Speisekarte?",
+  "intro": "Die beworbene Zahl ist selten die, die Sie zahlen. Digitale Speisekarten gibt es in vier Preismodellen, und in welchem Sie stecken, zählt mehr als der Schlagzeilenpreis: Ein 0-€-Tool mit Bestellprovision kann im Monat teurer sein als ein 20-€-Abo. So ermitteln Sie Ihre echte Zahl.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Die vier Preismodelle"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Modell",
+        "Üblicher Preis",
+        "Passt zu",
+        "Der Haken"
+      ],
+      "rows": [
+        [
+          "Gratis-QR-Generator + PDF",
+          "0 €",
+          "Eine Karte, die sich nie ändert",
+          "Codes können ablaufen; PDF ist auf dem Handy unlesbar"
+        ],
+        [
+          "Gratis-Tool, werbefinanziert",
+          "0 €",
+          "Die Idee testen",
+          "Fremde Marke oder Werbung vor Ihren Gästen"
+        ],
+        [
+          "Pauschales Abo",
+          "10–40 € pro Standort und Monat",
+          "Die meisten Restaurants",
+          "Prüfen Sie, ob pro Standort oder pro Nutzer"
+        ],
+        [
+          "Provision pro Bestellung",
+          "Oft ein % je Bestellung",
+          "Sehr geringes Volumen",
+          "Die Kosten steigen genau dann, wenn Ihr Geschäft wächst"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "IQ Rest steht in der dritten Zeile: **ab 9,90 € pro Monat und Standort**, keine Provision auf Bestellungen, 14 Tage kostenlos ohne Karte. Wir rechnen pro Betrieb ab, nicht pro Kellner, weil eine Abrechnung pro Nutzer genau die Betriebe bestraft, die die höchste Personalfluktuation haben."
+    },
+    {
+      "type": "h2",
+      "text": "Der Posten, den alle vergessen: die Karte einpflegen"
+    },
+    {
+      "type": "p",
+      "text": "80 Positionen mit Preisen, Beschreibungen und Kategorien einzutippen dauert zwei bis vier Stunden. Zum vollen Stundensatz einer Betriebsleitung sind das reale 40–100 €, die Sie ausgeben, bevor die Karte überhaupt existiert — und die Sie in der nächsten Saison erneut ausgeben, wenn das Tool Massenbearbeitung mühsam macht."
+    },
+    {
+      "type": "p",
+      "text": "Deshalb zählt der Kartenimport mehr, als er klingt. IQ Rest liest ein Foto Ihrer Papierkarte und legt die Artikel automatisch an, aus dem halben Tag werden etwa fünf Minuten. Rechnen Sie die Einrichtungszeit beim Vergleich mit ein; sie ist oft größer als das erste Abo-Jahr."
+    },
+    {
+      "type": "h2",
+      "text": "Druck und Hardware"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Tischaufsteller oder Aufkleber:** 1–3 € pro Tisch, einmalig. Ein Raum mit 20 Tischen liegt unter 60 €.",
+        "**Neudruck:** 0 €, wenn der Code auf eine feste Adresse zeigt, die Ihnen gehört. Das ist das ganze Argument für eine gehostete Karte.",
+        "**Geräte der Gäste:** 0 €. Gäste nutzen ihr eigenes Handy und installieren nichts.",
+        "**Küchenbildschirm:** 0 €, wenn Sie ein Tablet nutzen, das Sie schon haben. Die [Küchenanzeige](route:/kitchen-display) läuft im Browser, ein fünf Jahre altes Tablet reicht.",
+        "**WLAN:** lohnt eine Prüfung. Wenn Gäste an den hinteren Tischen kein Signal haben, lädt die Karte nicht — und das ist ein Installationsproblem, das keine Software löst."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Rechenbeispiel: ein Bistro mit 20 Tischen"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Posten",
+        "Jahr 1",
+        "Jahr 2"
+      ],
+      "rows": [
+        [
+          "Abo zu 9,90 €/Monat",
+          "118,80 €",
+          "118,80 €"
+        ],
+        [
+          "Karte einrichten (Scan-Import)",
+          "~5 € Ihrer Zeit",
+          "0 €"
+        ],
+        [
+          "QR-Tischaufsteller, 20 Tische",
+          "40 €",
+          "0 €"
+        ],
+        [
+          "Kartenänderungen, 6 pro Jahr",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "Übersetzungen, 4 Sprachen",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "**Summe**",
+          "**≈164 €**",
+          "**≈119 €**"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Zum Vergleich: Eine Druckauflage laminierter Papierkarten für denselben Raum liegt meist zwischen 150 und 400 €, und die meisten Betriebe drucken drei- bis sechsmal im Jahr. Die digitale Karte ist üblicherweise schon im ersten Jahr günstiger — bevor man irgendetwas mitzählt, was Papier nicht kann."
+    },
+    {
+      "type": "h2",
+      "text": "Wo die Kosten wirklich explodieren"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Preis pro Standort in einer Gruppe.** Fünf Betriebe zu je 30 € sind 1.800 € im Jahr. Fragen Sie nach Mehrstandort-Konditionen, bevor Sie für einen unterschreiben.",
+        "**Bestellprovision.** 3 % auf 12.000 € QR-Bestellungen im Monat sind 360 € monatlich — das Dreißigfache eines Pauschal-Abos.",
+        "**Zahlungsabwicklung.** Getrennt vom Kartenanbieter und unvermeidlich, wenn Sie am Tisch Karte akzeptieren. Vergleichen Sie es mit dem, was Ihr Terminal ohnehin berechnet.",
+        "**Digitale Menüboards.** Die Bildschirme hinter der Theke sind ein völlig anderes Produkt — Hardware, Montage und Signage-Software treiben das in den vierstelligen Bereich. Eine QR-Karte auf dem Handy des Gastes vermeidet das komplett."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Bevor Sie Preise vergleichen, notieren Sie Ihr monatliches QR-Bestellvolumen. Liegt es bei fast null, sind Provisionsmodelle am günstigsten. Ab etwa 300–500 € Bestellwert im Monat gewinnt fast immer das Pauschal-Abo."
+    },
+    {
+      "type": "h2",
+      "text": "Reicht kostenlos jemals aus?"
+    },
+    {
+      "type": "p",
+      "text": "Manchmal. Ein Saisonkiosk mit acht Positionen und festen Preisen braucht wirklich kein Abo. Lesen Sie aber, was \"kostenlos\" jeweils heißt: Werbung vor Ihren Gästen, ein Code, der mit dem Testzeitraum stirbt, oder eine Karte, die Sie nicht exportieren können, sind echte Kosten, die nur nicht auf der Rechnung stehen. Wir sind sie einzeln durchgegangen in [was eine kostenlose QR-Karte wirklich kostet](blog:free-qr-code-menu)."
+    },
+    {
+      "type": "cta",
+      "heading": "Sehen Sie den ganzen Preis, bevor Sie entscheiden",
+      "text": "Ab 9,90 € pro Monat und Standort, keine Provision auf Bestellungen, 14 Tage kostenlos und ohne Karte.",
+      "buttonLabel": "Preise ansehen",
+      "routeKey": "/pricing"
+    },
+    {
+      "type": "faq",
+      "heading": "Häufige Fragen",
+      "items": [
+        {
+          "q": "Was kostet eine QR-Code-Speisekarte pro Monat?",
+          "a": "Pauschal-Tools liegen meist bei 10–40 € pro Standort und Monat. IQ Rest startet bei 9,90 € ohne Provision auf Bestellungen."
+        },
+        {
+          "q": "Gibt es eine kostenlose QR-Code-Speisekarte?",
+          "a": "Ja, mehrere — meist finanziert über Fremdbranding vor Ihren Gästen oder dadurch, dass Sie auf ein PDF beschränkt sind. Für eine kleine, statische Karte funktionieren sie und werden auf anderen Wegen teuer, sobald Sie Updates, Sprachen oder Bestellungen brauchen."
+        },
+        {
+          "q": "Zahle ich pro Tisch oder pro Restaurant?",
+          "a": "Bei IQ Rest pro Restaurant — Tische und QR-Codes sind unbegrenzt. Prüfen Sie das überall vor Vertragsschluss, denn Preise pro Tisch oder pro Nutzer skalieren schlecht."
+        },
+        {
+          "q": "Gibt es eine Einrichtungsgebühr?",
+          "a": "Nein. Der Kartenimport ist enthalten, und es gibt nichts zu installieren, weder für Sie noch für Ihre Gäste."
+        },
+        {
+          "q": "Was kostet stattdessen ein digitales Menüboard?",
+          "a": "Das ist eine andere Kategorie — Bildschirme, Halterungen und Signage-Software, üblicherweise Hunderte bis Tausende je Bildschirm plus Montage. Eine QR-Karte nutzt das Handy des Gastes und kostet an Hardware nichts."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "title": "Hvað QR-matseðill kostar í raun | IQ Rest",
+    "description": "Hvað matseðill með QR-kóða kostar raunverulega: ókeypis verkfæri, mánaðargjöld, verð á hvern stað, þóknanir af pöntunum og falinn uppsetningartími."
+  },
+  "card": {
+    "title": "Hvað QR-matseðill kostar í raun (líka liðirnir sem enginn verðleggur)",
+    "excerpt": "Verðsíður sýna eina tölu. Raunkostnaður þinn felur í sér innsláttartíma, verð á hvern stað, þóknanir af pöntunum og prentun. Hér er allur reikningurinn."
+  },
+  "h1": "Hvað kostar matseðill með QR-kóða?",
+  "intro": "Auglýsta talan er sjaldnast sú sem þú greiðir. Verðlagning stafrænna matseðla skiptist í fjórar gerðir, og í hvaða gerð þú lendir skiptir meira máli en talan í fyrirsögninni: verkfæri á 0 € sem tekur þóknun af hverri pöntun getur kostað meira á mánuði en áskrift á 20 €. Svona finnur þú þína raunverulegu tölu.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Verðgerðirnar fjórar"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Gerð",
+        "Algengt verð",
+        "Hentar",
+        "Gallinn"
+      ],
+      "rows": [
+        [
+          "Ókeypis QR-kóðagerð + PDF",
+          "0 €",
+          "Matseðli sem breytist aldrei",
+          "Kóðar geta runnið út; PDF er ólæsilegt í síma"
+        ],
+        [
+          "Ókeypis verkfæri með auglýsingum",
+          "0 €",
+          "Að prófa hugmyndina",
+          "Vörumerki eða auglýsingar þjónustunnar birtast gestum þínum"
+        ],
+        [
+          "Föst áskrift",
+          "10-40 € á hvern stað á mánuði",
+          "Flestum veitingastöðum",
+          "Athugaðu hvort það er á stað eða á notanda"
+        ],
+        [
+          "Þóknun af pöntunum",
+          "Oft % af pöntun",
+          "Mjög litlu umfangi",
+          "Kostnaðurinn hækkar einmitt þegar reksturinn stækkar"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "IQ Rest er í þriðju línu: **frá 9,90 € á mánuði á hvern stað**, engin þóknun af pöntunum, 14 dagar frítt án korts. Við rukkum staðinn, ekki þjóninn, því gjaldtaka á notanda refsar einmitt þeim stöðum þar sem starfsmannavelta er mest."
+    },
+    {
+      "type": "h2",
+      "text": "Kostnaðurinn sem allir gleyma: að koma matseðlinum inn"
+    },
+    {
+      "type": "p",
+      "text": "Að slá inn 80 línur með verðum, lýsingum og flokkum tekur tvo til fjóra tíma. Á fullum tímakostnaði rekstrarstjóra eru það raunveruleg 40-100 € sem þú eyðir áður en matseðillinn er yfirhöfuð til — og eyðir aftur næstu vertíð ef verkfærið gerir fjöldabreytingar kvalafullar."
+    },
+    {
+      "type": "p",
+      "text": "Þess vegna skiptir innflutningur matseðils meira máli en hann hljómar. IQ Rest les mynd af pappírsmatseðlinum þínum og býr línurnar til sjálfkrafa, sem gerir hálfan daginn að um fimm mínútum. Reiknaðu uppsetningartímann með þegar þú berð verkfæri saman; hann vegur oft þyngra en fyrsta áskriftarárið."
+    },
+    {
+      "type": "h2",
+      "text": "Prentun og búnaður"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Borðstandar eða límmiðar:** 1-3 € á borð, í eitt skipti. Salur með 20 borðum endar undir 60 €.",
+        "**Endurprentun:** 0 € ef kóðinn vísar á fast vistfang sem þú stýrir. Í því felst allur rökstuðningurinn fyrir hýstum matseðli.",
+        "**Tæki gesta:** 0 €. Gestir nota eigin síma og setja ekkert upp.",
+        "**Eldhússkjár:** 0 € ef þú notar spjaldtölvu sem þú átt. [Eldhússkjárinn](route:/kitchen-display) keyrir í vafra, svo fimm ára gömul spjaldtölva dugar.",
+        "**Wi-Fi:** vert að athuga. Ef gestir ná ekki sambandi við öftustu borðin hleðst matseðillinn ekki, og það er lagnavandi sem enginn hugbúnaður leysir."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Reiknidæmi: bistró með 20 borðum"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Liður",
+        "Ár 1",
+        "Ár 2"
+      ],
+      "rows": [
+        [
+          "Áskrift á 9,90 €/mán.",
+          "118,80 €",
+          "118,80 €"
+        ],
+        [
+          "Uppsetning matseðils (innlestur með skönnun)",
+          "~5 € af þínum tíma",
+          "0 €"
+        ],
+        [
+          "QR-borðstandar, 20 borð",
+          "40 €",
+          "0 €"
+        ],
+        [
+          "Breytingar á matseðli, 6 á ári",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "Þýðingar, 4 tungumál",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "**Samtals**",
+          "**≈164 €**",
+          "**≈119 €**"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Til samanburðar kostar ein umferð af plöstuðum pappírsmatseðlum fyrir sama sal yfirleitt á bilinu 150 til 400 €, og flestir staðir gera þrjár til sex á ári. Stafræni matseðillinn er venjulega ódýrari strax á fyrsta ári, áður en nokkuð er talið með af því sem pappír getur ekki."
+    },
+    {
+      "type": "h2",
+      "text": "Hvar kostnaðurinn hleypur raunverulega upp"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Verð á hvern stað í keðju.** Fimm staðir á 30 € hver eru 1.800 € á ári. Spurðu um verð fyrir marga staði áður en þú skrifar undir fyrir einn.",
+        "**Pöntunarþóknun.** 3% af 12.000 € í QR-pöntunum á mánuði eru 360 € á mánuði — þrjátíufalt föst áskrift.",
+        "**Kortavinnsla.** Hún er aðskilin frá matseðilsþjónustunni og óhjákvæmileg ef þú tekur kort við borðið. Berðu hana saman við það sem posinn þinn tekur nú þegar.",
+        "**Stafrænar matseðilstöflur.** Skjáirnir bak við afgreiðsluna eru allt önnur vara — búnaður, uppsetning og skiltahugbúnaður ýta því upp í þúsundir. QR-matseðill í síma gestsins sneiðir hjá öllu því."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Áður en þú berð saman verð skaltu skrifa niður mánaðarlegt umfang QR-pantana. Sé það nálægt núlli eru þóknanaleiðir ódýrastar. Yfir um 300-500 € í pöntunum á mánuði vinnur föst áskrift nánast alltaf."
+    },
+    {
+      "type": "h2",
+      "text": "Dugar ókeypis einhvern tímann?"
+    },
+    {
+      "type": "p",
+      "text": "Stundum. Árstíðabundinn söluskúr með átta línum og föstum verðum þarf sannarlega enga áskrift. En lestu hvað \"ókeypis\" þýðir í hverju tilviki: auglýsingar sem gestir þínir sjá, kóði sem deyr þegar prufan rennur út, eða matseðill sem þú getur ekki flutt út eru raunkostnaður sem einfaldlega birtist ekki á reikningnum. Við fórum yfir þá einn af öðrum í [hvað ókeypis QR-matseðill kostar í raun](blog:free-qr-code-menu)."
+    },
+    {
+      "type": "cta",
+      "heading": "Sjáðu allt verðið áður en þú ákveður þig",
+      "text": "Frá 9,90 € á mánuði á hvern stað, engin þóknun af pöntunum, 14 dagar frítt og án korts.",
+      "buttonLabel": "Sjá verð",
+      "routeKey": "/pricing"
+    },
+    {
+      "type": "faq",
+      "heading": "Algengar spurningar",
+      "items": [
+        {
+          "q": "Hvað kostar matseðill með QR-kóða á mánuði?",
+          "a": "Verkfæri með fastri áskrift liggja yfirleitt á 10-40 € á hvern stað á mánuði. IQ Rest byrjar í 9,90 € án þóknunar af pöntunum."
+        },
+        {
+          "q": "Er til ókeypis matseðill með QR-kóða?",
+          "a": "Já, nokkrir — yfirleitt fjármagnaðir með vörumerki þjónustunnar gagnvart gestum þínum eða með því að takmarka þig við PDF. Þeir duga fyrir lítinn, óbreytanlegan matseðil og verða dýrir á annan hátt um leið og þú þarft uppfærslur, tungumál eða pantanir."
+        },
+        {
+          "q": "Borga ég á borð eða á veitingastað?",
+          "a": "Hjá IQ Rest á veitingastað — borð og QR-kóðar eru ótakmarkaðir. Athugaðu þetta áður en þú skrifar undir annars staðar, því verð á borð eða á notanda skalar illa."
+        },
+        {
+          "q": "Er stofngjald?",
+          "a": "Nei. Innflutningur matseðils fylgir með, og það er ekkert að setja upp, hvorki fyrir þig né gesti þína."
+        },
+        {
+          "q": "Hvað kostar þá stafræn matseðilstafla?",
+          "a": "Það er annar flokkur — skjáir, festingar og skiltahugbúnaður, yfirleitt hundruð upp í þúsundir á hvern skjá auk uppsetningar. QR-matseðill notar síma gestsins og kostar ekkert í búnaði."
+        }
+      ]
+    }
+  ]
+}

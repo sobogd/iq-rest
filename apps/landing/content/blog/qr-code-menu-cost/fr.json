@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "title": "Combien coûte vraiment un menu QR | IQ Rest",
+    "description": "Ce que coûte réellement un menu QR code : outils gratuits, abonnements, tarif par établissement, commissions sur commandes et le temps de mise en place."
+  },
+  "card": {
+    "title": "Ce que coûte vraiment un menu QR (y compris ce que personne ne vous chiffre)",
+    "excerpt": "Les pages de tarifs affichent un chiffre. Votre coût réel comprend le temps de saisie, le prix par établissement, les commissions et l'impression. Voici le calcul complet."
+  },
+  "h1": "Combien coûte un menu QR code ?",
+  "intro": "Le chiffre annoncé est rarement celui que vous payez. Les tarifs des menus digitaux se répartissent en quatre modèles, et savoir dans lequel vous êtes compte plus que le prix affiché : un outil à 0 € qui prélève une commission par commande peut coûter plus cher par mois qu'un abonnement à 20 €. Voici comment établir votre vrai chiffre.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Les quatre modèles tarifaires"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Modèle",
+        "Prix courant",
+        "Pour qui",
+        "Le piège"
+      ],
+      "rows": [
+        [
+          "Générateur QR gratuit + PDF",
+          "0 €",
+          "Une carte qui ne change jamais",
+          "Les codes peuvent expirer ; le PDF est illisible sur téléphone"
+        ],
+        [
+          "Outil gratuit financé par la pub",
+          "0 €",
+          "Tester l'idée",
+          "Marque ou publicités du prestataire montrées à vos clients"
+        ],
+        [
+          "Abonnement forfaitaire",
+          "10-40 € par établissement et par mois",
+          "La plupart des restaurants",
+          "Vérifiez si c'est par établissement ou par utilisateur"
+        ],
+        [
+          "Commission sur commandes",
+          "Souvent un % par commande",
+          "Très faible volume",
+          "Le coût monte exactement quand votre activité grandit"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "IQ Rest est sur la troisième ligne : **à partir de 9,90 € par mois et par établissement**, sans commission sur les commandes, 14 jours gratuits sans carte bancaire. Nous facturons l'établissement, pas le serveur, parce que facturer par utilisateur pénalise justement les établissements où le personnel tourne le plus."
+    },
+    {
+      "type": "h2",
+      "text": "Le coût que tout le monde oublie : saisir la carte"
+    },
+    {
+      "type": "p",
+      "text": "Taper 80 plats avec prix, descriptions et catégories prend deux à quatre heures. Au coût horaire complet d'un responsable, ce sont 40 à 100 € bien réels dépensés avant même que la carte existe, et redépensés la saison suivante si l'outil rend les modifications en masse pénibles."
+    },
+    {
+      "type": "p",
+      "text": "C'est pourquoi l'import de la carte compte plus qu'il n'y paraît. IQ Rest lit une photo de votre carte papier et crée les plats automatiquement, ce qui transforme cette demi-journée en cinq minutes environ. Comptez le temps de mise en place quand vous comparez les outils ; il pèse souvent plus que la première année d'abonnement."
+    },
+    {
+      "type": "h2",
+      "text": "Impression et matériel"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Chevalets ou autocollants :** 1-3 € par table, une seule fois. Une salle de 20 tables revient à moins de 60 €.",
+        "**Réimpression :** 0 € si le code pointe vers une adresse fixe que vous contrôlez. C'est tout l'argument en faveur d'un menu hébergé.",
+        "**Appareils des clients :** 0 €. Ils utilisent leur propre téléphone et n'installent rien.",
+        "**Écran de cuisine :** 0 € si vous utilisez une tablette que vous avez déjà. L'[écran de cuisine](route:/kitchen-display) fonctionne dans le navigateur, une tablette de cinq ans suffit.",
+        "**Wi-Fi :** à vérifier. Si les clients n'ont pas de réseau aux tables du fond, le menu ne charge pas, et c'est un problème d'installation qu'aucun logiciel ne règle."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Exemple chiffré : un bistrot de 20 tables"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Poste",
+        "Année 1",
+        "Année 2"
+      ],
+      "rows": [
+        [
+          "Abonnement à 9,90 €/mois",
+          "118,80 €",
+          "118,80 €"
+        ],
+        [
+          "Mise en place du menu (import par scan)",
+          "~5 € de votre temps",
+          "0 €"
+        ],
+        [
+          "Chevalets QR, 20 tables",
+          "40 €",
+          "0 €"
+        ],
+        [
+          "Mises à jour du menu, 6 par an",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "Traductions, 4 langues",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "**Total**",
+          "**≈164 €**",
+          "**≈119 €**"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "À titre de comparaison, un tirage de cartes papier plastifiées pour la même salle se situe généralement entre 150 et 400 €, et la plupart des établissements en font trois à six par an. Le menu digital revient d'ordinaire moins cher dès la première année, avant même de compter tout ce que le papier ne sait pas faire."
+    },
+    {
+      "type": "h2",
+      "text": "Où les coûts s'envolent vraiment"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Tarif par établissement dans un groupe.** Cinq établissements à 30 € chacun font 1 800 € par an. Demandez un tarif multi-sites avant de signer pour un seul.",
+        "**Commission sur commande.** 3 % sur 12 000 € de commandes QR par mois font 360 € par mois : trente fois un abonnement forfaitaire.",
+        "**Traitement des paiements.** Distinct du prestataire du menu et inévitable si vous encaissez par carte à table. Comparez-le à ce que votre terminal facture déjà.",
+        "**Écrans de menu numériques.** Les écrans derrière le comptoir sont un tout autre produit — matériel, fixation et logiciel d'affichage font vite grimper à plusieurs milliers. Un menu QR sur le téléphone du client évite tout cela."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Avant de comparer les prix, notez votre volume mensuel de commandes par QR. S'il est proche de zéro, les modèles à commission sont les moins chers. Au-delà d'environ 300-500 € de commandes par mois, l'abonnement forfaitaire l'emporte presque toujours."
+    },
+    {
+      "type": "h2",
+      "text": "Le gratuit suffit-il parfois ?"
+    },
+    {
+      "type": "p",
+      "text": "Parfois. Un kiosque saisonnier avec huit plats et des prix fixes n'a vraiment pas besoin d'un abonnement. Mais lisez ce que « gratuit » veut dire dans chaque cas : de la publicité montrée à vos clients, un code qui meurt à la fin de l'essai ou un menu que vous ne pouvez pas exporter sont des coûts réels qui ne figurent simplement pas sur la facture. Nous les avons passés en revue dans [ce que coûte vraiment un menu QR gratuit](blog:free-qr-code-menu)."
+    },
+    {
+      "type": "cta",
+      "heading": "Voyez le prix complet avant de décider",
+      "text": "À partir de 9,90 € par mois et par établissement, sans commission sur les commandes, 14 jours gratuits et sans carte bancaire.",
+      "buttonLabel": "Voir les tarifs",
+      "routeKey": "/pricing"
+    },
+    {
+      "type": "faq",
+      "heading": "Questions fréquentes",
+      "items": [
+        {
+          "q": "Combien coûte un menu QR code par mois ?",
+          "a": "Les outils à abonnement forfaitaire vont généralement de 10 à 40 € par établissement et par mois. IQ Rest démarre à 9,90 € sans commission sur les commandes."
+        },
+        {
+          "q": "Existe-t-il un menu QR code gratuit ?",
+          "a": "Oui, plusieurs — généralement financés par la marque du prestataire montrée aux clients ou en vous limitant à un PDF. Ils conviennent à une petite carte figée et deviennent coûteux autrement dès que vous avez besoin de mises à jour, de langues ou de commandes."
+        },
+        {
+          "q": "Je paie par table ou par restaurant ?",
+          "a": "Avec IQ Rest, par restaurant : tables et QR codes illimités. Vérifiez-le avant de signer ailleurs, car la tarification par table ou par utilisateur passe mal à l'échelle."
+        },
+        {
+          "q": "Y a-t-il des frais de mise en service ?",
+          "a": "Non. L'import du menu est inclus, et il n'y a rien à installer, ni pour vous ni pour vos clients."
+        },
+        {
+          "q": "Et combien coûte un écran de menu numérique ?",
+          "a": "C'est une autre catégorie : écrans, supports et logiciel d'affichage, généralement de quelques centaines à quelques milliers d'euros par écran plus l'installation. Un menu QR utilise le téléphone du client et ne coûte rien en matériel."
+        }
+      ]
+    }
+  ]
+}

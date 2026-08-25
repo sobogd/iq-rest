@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "title": "QR Code Menu Cost: What Restaurants Actually Pay | IQ Rest",
+    "description": "What a QR code menu really costs — free tools, monthly subscriptions, per-location pricing, order commissions and the hidden setup time. With numbers."
+  },
+  "card": {
+    "title": "What a QR code menu actually costs (including the parts nobody quotes)",
+    "excerpt": "Pricing pages show one number. Your real cost includes setup time, per-location fees, order commissions and printing. Here's the full arithmetic."
+  },
+  "h1": "How much does a QR code menu cost?",
+  "intro": "The advertised number is rarely the number you pay. Digital menu pricing splits into four models, and which one you're on matters more than the headline price — a €0 tool that charges commission on orders can cost more per month than a €20 subscription. Here's how to work out your real figure.",
+  "blocks": [
+    { "type": "h2", "text": "The four pricing models" },
+    {
+      "type": "table",
+      "headers": ["Model", "Typical price", "Who it suits", "The catch"],
+      "rows": [
+        ["Free QR generator + PDF", "€0", "A menu that never changes", "Codes can expire; PDF is unreadable on a phone"],
+        ["Free menu tool, ad-supported", "€0", "Testing the idea", "Vendor branding or ads shown to your guests"],
+        ["Flat subscription", "€10–€40 per venue/month", "Most restaurants", "Check whether it's per venue or per user"],
+        ["Commission on orders", "Often a % per order", "Very low volume", "Cost rises exactly as your business grows"]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "IQ Rest sits in the third row: **from €9.90 a month per venue**, no commission on orders, 14 days free without a card. We charge for the venue, not per waiter, because charging per user penalises exactly the venues with the most staff turnover."
+    },
+    { "type": "h2", "text": "The cost everyone forgets: getting the menu in" },
+    {
+      "type": "p",
+      "text": "Typing 80 items with prices, descriptions and categories takes two to four hours. At a manager's fully loaded hourly cost, that's a real €40–€100 you spend before the menu exists — and you spend it again next season if the tool makes bulk edits painful."
+    },
+    {
+      "type": "p",
+      "text": "This is why menu import matters more than it sounds. IQ Rest reads a photo of your paper menu and builds the items automatically, which turns that half-day into roughly five minutes. Budget the setup time when you compare tools; it's often larger than the first year of subscription."
+    },
+    { "type": "h2", "text": "Printing and hardware" },
+    {
+      "type": "list",
+      "items": [
+        "**Table tents or stickers:** €1–€3 per table, one-off. A 20-table room is under €60.",
+        "**Reprinting:** €0 if the code points at a fixed address you control. This is the whole argument for a hosted menu.",
+        "**Guest devices:** €0. Guests use their own phones and install nothing.",
+        "**Kitchen screen:** €0 if you use a tablet you already have. A [kitchen display](route:/kitchen-display) runs in a browser, so a five-year-old tablet is enough.",
+        "**Wi-Fi:** worth checking. If guests can't get signal at the far tables, the menu doesn't load, and that's a plumbing problem no software fixes."
+      ]
+    },
+    { "type": "h2", "text": "Worked example: a 20-table bistro" },
+    {
+      "type": "table",
+      "headers": ["Item", "Year 1", "Year 2"],
+      "rows": [
+        ["Subscription at €9.90/mo", "€118.80", "€118.80"],
+        ["Menu setup (scan import)", "~€5 of your time", "€0"],
+        ["QR table tents, 20 tables", "€40", "€0"],
+        ["Menu updates, 6 per year", "€0", "€0"],
+        ["Translations, 4 languages", "€0", "€0"],
+        ["**Total**", "**≈€164**", "**≈€119**"]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "For comparison, one print run of laminated paper menus for the same room typically lands between €150 and €400, and most venues do three to six a year. The digital menu is usually cheaper in year one, before you count anything it does that paper can't."
+    },
+    { "type": "h2", "text": "Where costs actually escalate" },
+    {
+      "type": "list",
+      "items": [
+        "**Per-location pricing across a group.** Five venues at €30 each is €1,800 a year. Ask about multi-venue rates before you sign for one.",
+        "**Order commission.** A 3% fee on €12,000 of monthly QR orders is €360 a month — thirty times a flat subscription.",
+        "**Payment processing.** Separate from the menu vendor and unavoidable if you take card payments at the table. Compare it against what your terminal already charges.",
+        "**Digital menu boards.** The screens behind the counter are a different product entirely — hardware, mounting and signage software push that into the thousands. A QR menu on the guest's own phone avoids all of it."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Before comparing prices, write down your monthly QR order volume. If it's near zero, commission models are cheapest. Past roughly €300–€500 of monthly orders, a flat subscription almost always wins."
+    },
+    { "type": "h2", "text": "Is free ever enough?" },
+    {
+      "type": "p",
+      "text": "Sometimes. A seasonal kiosk with eight items and fixed prices genuinely doesn't need a subscription. But read what \"free\" means in each case — ads shown to your guests, a code that dies when the trial ends, or a menu you can't export are all real costs that simply aren't on the invoice. We went through them one by one in [what a free QR menu really costs](blog:free-qr-code-menu)."
+    },
+    {
+      "type": "cta",
+      "heading": "See the whole price before you decide",
+      "text": "From €9.90 a month per venue, no commission on orders, 14 days free and no card required.",
+      "buttonLabel": "View pricing",
+      "routeKey": "/pricing"
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently asked questions",
+      "items": [
+        {
+          "q": "How much does a QR code menu cost per month?",
+          "a": "Flat-subscription tools generally run €10–€40 per venue per month. IQ Rest starts at €9.90 with no commission on orders."
+        },
+        {
+          "q": "Is there a free QR code menu?",
+          "a": "Yes, several — usually funded by vendor branding shown to guests or by limiting you to a PDF. They work for a small, static menu and become expensive in other ways once you need updates, languages or ordering."
+        },
+        {
+          "q": "Do I pay per table or per restaurant?",
+          "a": "With IQ Rest, per restaurant — tables and QR codes are unlimited. Check this before signing anywhere, because per-table and per-user pricing scales badly."
+        },
+        {
+          "q": "Is there a setup fee?",
+          "a": "No. The menu import is included, and there is nothing to install for you or your guests."
+        },
+        {
+          "q": "What does a digital menu board cost instead?",
+          "a": "That's a different category — screens, mounts and signage software, typically hundreds to thousands per screen plus installation. A QR menu uses the guest's phone and costs nothing in hardware."
+        }
+      ]
+    }
+  ]
+}

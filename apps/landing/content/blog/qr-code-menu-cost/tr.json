@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "title": "QR menü gerçekte ne kadara mal olur | IQ Rest",
+    "description": "QR kodlu menünün gerçek maliyeti: ücretsiz araçlar, aylık abonelikler, şube başına fiyat, sipariş komisyonları ve gizli kurulum süresi."
+  },
+  "card": {
+    "title": "QR menü gerçekte ne kadara mal olur (kimsenin fiyatlandırmadığı kalemler dahil)",
+    "excerpt": "Fiyat sayfaları tek bir rakam gösterir. Gerçek maliyetiniz kurulum süresini, şube başına fiyatı, sipariş komisyonlarını ve baskıyı da içerir. İşte tam hesap."
+  },
+  "h1": "QR kodlu menü ne kadara mal olur?",
+  "intro": "İlan edilen rakam nadiren ödediğiniz rakamdır. Dijital menü fiyatlandırması dört modele ayrılır ve hangisinde olduğunuz, manşetteki tutardan daha önemlidir: siparişten komisyon alan 0 €'luk bir araç, aylık 20 €'luk bir abonelikten pahalıya gelebilir. Kendi gerçek rakamınızı şöyle bulursunuz.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Dört fiyatlandırma modeli"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Model",
+        "Tipik fiyat",
+        "Kime uyar",
+        "İşin püf noktası"
+      ],
+      "rows": [
+        [
+          "Ücretsiz QR üreticisi + PDF",
+          "0 €",
+          "Hiç değişmeyen bir menü",
+          "Kodların süresi dolabilir; PDF telefonda okunmaz"
+        ],
+        [
+          "Reklam destekli ücretsiz araç",
+          "0 €",
+          "Fikri denemek",
+          "Sağlayıcının markası ya da reklamları misafirlerinize gösterilir"
+        ],
+        [
+          "Sabit abonelik",
+          "Şube başına ayda 10-40 €",
+          "Çoğu restoran",
+          "Şube başına mı, kullanıcı başına mı olduğunu kontrol edin"
+        ],
+        [
+          "Sipariş komisyonu",
+          "Genelde sipariş başına %",
+          "Çok düşük hacim",
+          "Maliyet tam da işiniz büyürken artar"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "IQ Rest üçüncü satırda: **şube başına ayda 9,90 €'dan başlar**, siparişlerden komisyon yok, kartsız 14 gün ücretsiz. Garson başına değil işletme başına ücretlendiriyoruz, çünkü kullanıcı başına ücretlendirme tam da personel devri en yüksek işletmeleri cezalandırır."
+    },
+    {
+      "type": "h2",
+      "text": "Herkesin unuttuğu maliyet: menüyü içeri almak"
+    },
+    {
+      "type": "p",
+      "text": "Fiyatları, açıklamaları ve kategorileriyle 80 kalemi yazmak iki ila dört saat sürer. Bir müdürün tam saatlik maliyetiyle bu, menü daha ortada yokken harcadığınız gerçek 40-100 €'dur ve araç toplu düzenlemeyi zorlaştırıyorsa gelecek sezon yeniden harcarsınız."
+    },
+    {
+      "type": "p",
+      "text": "Menü içe aktarımının kulağa geldiğinden önemli olmasının sebebi budur. IQ Rest kâğıt menünüzün fotoğrafını okuyup kalemleri otomatik oluşturur, böylece o yarım gün yaklaşık beş dakikaya iner. Araçları karşılaştırırken kurulum süresini de hesaba katın; çoğu zaman ilk yılın abonelik bedelinden ağır basar."
+    },
+    {
+      "type": "h2",
+      "text": "Baskı ve donanım"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Masa standı ya da etiketler:** masa başına 1-3 €, tek seferlik. 20 masalık bir salon 60 €'nun altında kalır.",
+        "**Yeniden basım:** kod sizin kontrolünüzdeki sabit bir adrese işaret ediyorsa 0 €. Barındırılan menünün tüm gerekçesi budur.",
+        "**Misafirlerin cihazları:** 0 €. Kendi telefonlarını kullanır, hiçbir şey kurmazlar.",
+        "**Mutfak ekranı:** halihazırda sahip olduğunuz bir tableti kullanırsanız 0 €. [Mutfak ekranı](route:/kitchen-display) tarayıcıda çalışır, beş yıllık bir tablet yeter.",
+        "**Wi-Fi:** kontrol etmeye değer. Arka masalarda sinyal yoksa menü yüklenmez, bu da hiçbir yazılımın çözemeyeceği bir altyapı sorunudur."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Sayısal örnek: 20 masalık bir bistro"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Kalem",
+        "1. yıl",
+        "2. yıl"
+      ],
+      "rows": [
+        [
+          "Abonelik, 9,90 €/ay",
+          "118,80 €",
+          "118,80 €"
+        ],
+        [
+          "Menü kurulumu (tarama ile içe aktarma)",
+          "Zamanınızdan ~5 €",
+          "0 €"
+        ],
+        [
+          "QR masa standı, 20 masa",
+          "40 €",
+          "0 €"
+        ],
+        [
+          "Menü güncellemeleri, yılda 6",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "Çeviriler, 4 dil",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "**Toplam**",
+          "**≈164 €**",
+          "**≈119 €**"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Karşılaştırma için: aynı salona laminasyonlu kâğıt menülerin tek baskısı genelde 150 ile 400 € arasındadır ve çoğu mekân bunu yılda üç ila altı kez yapar. Dijital menü genellikle daha ilk yılda ucuza gelir; üstelik kâğıdın yapamadığı hiçbir şeyi henüz saymadan."
+    },
+    {
+      "type": "h2",
+      "text": "Maliyetin gerçekten fırladığı yerler"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Zincirde şube başına fiyat.** Beş şube, her biri 30 €, yılda 1.800 € eder. Tek şube için imzalamadan önce çok şubeli fiyatları sorun.",
+        "**Sipariş komisyonu.** Ayda 12.000 €'luk QR siparişinde %3, ayda 360 € demektir — sabit aboneliğin otuz katı.",
+        "**Ödeme işleme.** Menü sağlayıcısından ayrıdır ve masada kart alıyorsanız kaçınılmazdır. POS cihazınızın zaten kestiği tutarla karşılaştırın.",
+        "**Dijital menü ekranları.** Tezgâhın arkasındaki ekranlar tamamen başka bir üründür — donanım, montaj ve dijital tabela yazılımı bunu binlere taşır. Misafirin kendi telefonundaki bir QR menü bunların hepsinden kaçınır."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Fiyatları karşılaştırmadan önce aylık QR sipariş hacminizi yazın. Sıfıra yakınsa komisyonlu modeller en ucuzudur. Ayda yaklaşık 300-500 €'luk siparişin üzerinde sabit abonelik neredeyse her zaman kazanır."
+    },
+    {
+      "type": "h2",
+      "text": "Ücretsiz hiç yeterli olur mu?"
+    },
+    {
+      "type": "p",
+      "text": "Bazen. Sekiz kalemi ve sabit fiyatları olan mevsimlik bir büfenin gerçekten aboneliğe ihtiyacı yoktur. Ama her durumda \"ücretsiz\"in ne demek olduğunu okuyun: misafirlerinize gösterilen reklamlar, deneme bitince ölen bir kod ya da dışa aktaramadığınız bir menü, sadece faturada görünmeyen gerçek maliyetlerdir. Bunları tek tek [ücretsiz bir QR menü gerçekte neye mal olur](blog:free-qr-code-menu) yazısında ele aldık."
+    },
+    {
+      "type": "cta",
+      "heading": "Karar vermeden önce fiyatın tamamını görün",
+      "text": "Şube başına ayda 9,90 €'dan başlar, siparişlerden komisyon yok, 14 gün ücretsiz ve kartsız.",
+      "buttonLabel": "Fiyatları görün",
+      "routeKey": "/pricing"
+    },
+    {
+      "type": "faq",
+      "heading": "Sık sorulan sorular",
+      "items": [
+        {
+          "q": "QR kodlu menü ayda ne kadar tutar?",
+          "a": "Sabit abonelikli araçlar genelde şube başına ayda 10-40 € arasındadır. IQ Rest, siparişlerden komisyon almadan 9,90 €'dan başlar."
+        },
+        {
+          "q": "Ücretsiz QR kodlu menü var mı?",
+          "a": "Evet, birkaç tane — genelde misafirlerinize gösterilen sağlayıcı markasıyla ya da sizi bir PDF'e sıkıştırarak finanse edilir. Küçük ve değişmeyen bir menü için işe yarar; güncelleme, dil veya sipariş gerektiğinde başka yollardan pahalıya döner."
+        },
+        {
+          "q": "Masa başına mı restoran başına mı ödeme yapılır?",
+          "a": "IQ Rest'te restoran başına — masa ve QR kod sınırı yok. Herhangi bir yerde imzalamadan önce bunu kontrol edin, çünkü masa ya da kullanıcı başına fiyatlandırma çok kötü ölçeklenir."
+        },
+        {
+          "q": "Kurulum ücreti var mı?",
+          "a": "Hayır. Menü içe aktarımı dahildir ve ne sizin ne de misafirlerinizin kuracağı bir şey vardır."
+        },
+        {
+          "q": "Peki dijital menü ekranı ne kadar tutar?",
+          "a": "O ayrı bir kategori — ekranlar, askı aparatları ve dijital tabela yazılımı, genelde ekran başına yüzlerce ila binlerce euro artı montaj. QR menü misafirin telefonunu kullanır ve donanımda hiçbir şeye mal olmaz."
+        }
+      ]
+    }
+  ]
+}

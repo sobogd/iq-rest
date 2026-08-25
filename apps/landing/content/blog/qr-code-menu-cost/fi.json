@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "title": "Mitä QR-ruokalista oikeasti maksaa | IQ Rest",
+    "description": "Mitä QR-ruokalista todella maksaa: ilmaiset työkalut, kuukausimaksut, hinta toimipaikkaa kohti, tilausprovisiot ja piilotettu käyttöönottoaika."
+  },
+  "card": {
+    "title": "Mitä QR-ruokalista oikeasti maksaa (myös ne erät, joita kukaan ei hinnoittele)",
+    "excerpt": "Hinnastosivut näyttävät yhden luvun. Todellinen kustannuksesi sisältää käyttöönottoajan, toimipaikkakohtaisen hinnan, tilausprovisiot ja painatuksen. Tässä koko lasku."
+  },
+  "h1": "Paljonko QR-ruokalista maksaa?",
+  "intro": "Mainostettu luku on harvoin se, jonka maksat. Digilistojen hinnoittelu jakautuu neljään malliin, ja se, missä mallissa olet, merkitsee enemmän kuin otsikkohinta: 0 euron työkalu, joka ottaa provision tilauksista, voi maksaa kuukaudessa enemmän kuin 20 euron tilaus. Näin lasket oman todellisen lukusi.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Neljä hinnoittelumallia"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Malli",
+        "Tyypillinen hinta",
+        "Kenelle sopii",
+        "Koukku"
+      ],
+      "rows": [
+        [
+          "Ilmainen QR-generaattori + pdf",
+          "0 €",
+          "Lista, joka ei koskaan muutu",
+          "Koodit voivat vanhentua; pdf on lukukelvoton puhelimessa"
+        ],
+        [
+          "Ilmainen työkalu mainoksilla",
+          "0 €",
+          "Idean testaamiseen",
+          "Toimittajan brändi tai mainokset näkyvät asiakkaillesi"
+        ],
+        [
+          "Kiinteä tilaus",
+          "10–40 € toimipaikkaa kohti kuussa",
+          "Useimmille ravintoloille",
+          "Tarkista, onko hinta toimipaikkaa vai käyttäjää kohti"
+        ],
+        [
+          "Provisio tilauksista",
+          "Usein % per tilaus",
+          "Hyvin pienille määrille",
+          "Kustannus nousee juuri kun liiketoiminta kasvaa"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "IQ Rest on kolmannella rivillä: **alkaen 9,90 € kuussa toimipaikkaa kohti**, ei provisiota tilauksista, 14 päivää ilmaiseksi ilman korttia. Laskutamme toimipaikasta, emme tarjoilijasta, koska käyttäjäkohtainen laskutus rankaisee juuri niitä paikkoja, joissa henkilöstön vaihtuvuus on suurinta."
+    },
+    {
+      "type": "h2",
+      "text": "Kustannus, jonka kaikki unohtavat: listan syöttäminen"
+    },
+    {
+      "type": "p",
+      "text": "80 rivin näppäily hintoineen, kuvauksineen ja kategorioineen vie kahdesta neljään tuntia. Esihenkilön täydellä tuntikustannuksella se on todellinen 40–100 €, jonka käytät ennen kuin listaa on edes olemassa – ja käytät uudelleen seuraavalla kaudella, jos työkalu tekee massamuokkauksesta tuskaa."
+    },
+    {
+      "type": "p",
+      "text": "Siksi listan tuonti merkitsee enemmän kuin miltä kuulostaa. IQ Rest lukee valokuvan paperilistastasi ja luo rivit automaattisesti, jolloin puolikas päivä kutistuu noin viideksi minuutiksi. Laske käyttöönottoaika mukaan, kun vertailet työkaluja; se painaa usein enemmän kuin ensimmäinen tilausvuosi."
+    },
+    {
+      "type": "h2",
+      "text": "Painatus ja laitteet"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Pöytätelineet tai tarrat:** 1–3 € pöytää kohti, kertaluonteisesti. 20 pöydän sali jää alle 60 euron.",
+        "**Uudelleenpainatus:** 0 €, jos koodi osoittaa hallitsemaasi kiinteään osoitteeseen. Tässä on koko ylläpidetyn listan perustelu.",
+        "**Asiakkaiden laitteet:** 0 €. Asiakkaat käyttävät omaa puhelintaan eivätkä asenna mitään.",
+        "**Keittiönäyttö:** 0 €, jos käytät jo omistamaasi tablettia. [Keittiönäyttö](route:/kitchen-display) toimii selaimessa, joten viisi vuotta vanha tabletti riittää.",
+        "**Wi-Fi:** kannattaa tarkistaa. Jos takapöydissä ei ole kuuluvuutta, lista ei lataudu, ja se on asennusongelma, jota mikään ohjelmisto ei korjaa."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Laskuesimerkki: 20 pöydän bistro"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Erä",
+        "Vuosi 1",
+        "Vuosi 2"
+      ],
+      "rows": [
+        [
+          "Tilaus 9,90 €/kk",
+          "118,80 €",
+          "118,80 €"
+        ],
+        [
+          "Listan käyttöönotto (skannaustuonti)",
+          "~5 € omaa aikaasi",
+          "0 €"
+        ],
+        [
+          "QR-pöytätelineet, 20 pöytää",
+          "40 €",
+          "0 €"
+        ],
+        [
+          "Listan muutokset, 6 kertaa vuodessa",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "Käännökset, 4 kieltä",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "**Yhteensä**",
+          "**≈164 €**",
+          "**≈119 €**"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Vertailun vuoksi: yksi laminoitujen paperilistojen painos samaan saliin maksaa yleensä 150–400 €, ja useimmat paikat teettävät niitä kolmesta kuuteen kertaa vuodessa. Digilista on tavallisesti halvempi jo ensimmäisenä vuonna, ennen kuin lasketaan mitään siitä, mihin paperi ei pysty."
+    },
+    {
+      "type": "h2",
+      "text": "Missä kustannukset todella karkaavat"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Toimipaikkakohtainen hinta ketjussa.** Viisi paikkaa à 30 € on 1 800 € vuodessa. Kysy monitoimipaikkahinnoista ennen kuin sitoudut yhdellä.",
+        "**Tilausprovisio.** 3 % 12 000 euron kuukausittaisista QR-tilauksista on 360 € kuussa – kolmekymmenkertaisesti kiinteä tilaus.",
+        "**Maksunvälitys.** Erillinen listatoimittajasta ja väistämätön, jos otat kortin vastaan pöydässä. Vertaa siihen, mitä maksupäätteesi jo veloittaa.",
+        "**Digitaaliset ruokalistanäytöt.** Tiskin takana olevat näytöt ovat aivan eri tuote – laitteet, asennus ja opastusohjelmisto vievät sen tuhansiin. Asiakkaan omassa puhelimessa toimiva QR-lista välttää kaiken tämän."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Kirjaa ennen hintavertailua kuukausittainen QR-tilausvolyymisi. Jos se on lähellä nollaa, provisiomallit ovat halvimpia. Noin 300–500 euron kuukausitilausten jälkeen kiinteä tilaus voittaa lähes aina."
+    },
+    {
+      "type": "h2",
+      "text": "Riittääkö ilmainen koskaan?"
+    },
+    {
+      "type": "p",
+      "text": "Joskus. Kausikioski, jolla on kahdeksan riviä ja kiinteät hinnat, ei todella tarvitse tilausta. Mutta lue, mitä \"ilmainen\" kussakin tapauksessa tarkoittaa: asiakkaillesi näytettävät mainokset, koodi joka kuolee kokeilujakson päättyessä tai lista jota et voi viedä ulos ovat todellisia kustannuksia, jotka eivät vain näy laskulla. Kävimme ne läpi yksitellen artikkelissa [mitä ilmainen QR-lista oikeasti maksaa](blog:free-qr-code-menu)."
+    },
+    {
+      "type": "cta",
+      "heading": "Katso koko hinta ennen päätöstä",
+      "text": "Alkaen 9,90 € kuussa toimipaikkaa kohti, ei provisiota tilauksista, 14 päivää ilmaiseksi ja ilman korttia.",
+      "buttonLabel": "Katso hinnat",
+      "routeKey": "/pricing"
+    },
+    {
+      "type": "faq",
+      "heading": "Usein kysytyt kysymykset",
+      "items": [
+        {
+          "q": "Paljonko QR-ruokalista maksaa kuukaudessa?",
+          "a": "Kiinteän tilauksen työkalut liikkuvat yleensä 10–40 eurossa toimipaikkaa kohti kuussa. IQ Rest alkaa 9,90 eurosta ilman provisiota tilauksista."
+        },
+        {
+          "q": "Onko olemassa ilmaista QR-ruokalistaa?",
+          "a": "Kyllä, useita – yleensä rahoitettuna toimittajan brändillä, joka näkyy asiakkaillesi, tai rajaamalla sinut pdf-tiedostoon. Ne toimivat pienelle, muuttumattomalle listalle ja käyvät kalliiksi muilla tavoin heti kun tarvitset päivityksiä, kieliä tai tilaamista."
+        },
+        {
+          "q": "Maksanko pöydästä vai ravintolasta?",
+          "a": "IQ Restissä ravintolasta – pöydät ja QR-koodit ovat rajattomia. Tarkista tämä ennen kuin allekirjoitat missään, sillä pöytä- tai käyttäjäkohtainen hinnoittelu skaalautuu huonosti."
+        },
+        {
+          "q": "Onko käyttöönottomaksua?",
+          "a": "Ei. Listan tuonti sisältyy hintaan, eikä mitään tarvitse asentaa, ei sinun eikä asiakkaidesi."
+        },
+        {
+          "q": "Entä paljonko digitaalinen ruokalistanäyttö maksaa?",
+          "a": "Se on eri kategoria – näytöt, kiinnikkeet ja opastusohjelmisto, tyypillisesti satoja tai tuhansia per näyttö plus asennus. QR-lista käyttää asiakkaan puhelinta eikä maksa laitteissa mitään."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "title": "Cât costă de fapt un meniu QR | IQ Rest",
+    "description": "Cât costă cu adevărat un meniu cu cod QR: unelte gratuite, abonamente lunare, preț per locație, comisioane pe comenzi și timpul ascuns de implementare."
+  },
+  "card": {
+    "title": "Cât costă de fapt un meniu QR (inclusiv părțile pe care nu ți le cotează nimeni)",
+    "excerpt": "Paginile de prețuri arată un număr. Costul tău real include timpul de introducere, prețul per locație, comisioanele pe comenzi și tipărirea. Iată socoteala completă."
+  },
+  "h1": "Cât costă un meniu cu cod QR?",
+  "intro": "Numărul afișat e rareori cel pe care îl plătești. Prețurile meniurilor digitale se împart în patru modele, iar în care te afli contează mai mult decât cifra de pe prima pagină: o unealtă de 0 € care ia comision pe comandă poate costa lunar mai mult decât un abonament de 20 €. Iată cum îți afli numărul real.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Cele patru modele de preț"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Model",
+        "Preț uzual",
+        "Cui i se potrivește",
+        "Chichița"
+      ],
+      "rows": [
+        [
+          "Generator QR gratuit + PDF",
+          "0 €",
+          "Un meniu care nu se schimbă niciodată",
+          "Codurile pot expira; PDF-ul e ilizibil pe telefon"
+        ],
+        [
+          "Unealtă gratuită cu reclame",
+          "0 €",
+          "Testarea ideii",
+          "Marca sau reclamele furnizorului arătate clienților tăi"
+        ],
+        [
+          "Abonament fix",
+          "10-40 € per locație pe lună",
+          "Majorității restaurantelor",
+          "Verifică dacă e per locație sau per utilizator"
+        ],
+        [
+          "Comision pe comenzi",
+          "Adesea un % per comandă",
+          "Volumelor foarte mici",
+          "Costul crește exact când crește afacerea"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "IQ Rest e pe rândul trei: **de la 9,90 € pe lună per locație**, fără comision pe comenzi, 14 zile gratuit fără card. Taxăm locația, nu ospătarul, pentru că taxarea per utilizator pedepsește tocmai localurile cu cea mai mare fluctuație de personal."
+    },
+    {
+      "type": "h2",
+      "text": "Costul de care uită toată lumea: introducerea meniului"
+    },
+    {
+      "type": "p",
+      "text": "Tastarea a 80 de poziții cu prețuri, descrieri și categorii ia două până la patru ore. La costul orar complet al unui manager, sunt 40-100 € reali cheltuiți înainte ca meniul să existe — și îi cheltui din nou sezonul viitor dacă unealta face chinuitoare editările în masă."
+    },
+    {
+      "type": "p",
+      "text": "De aceea importul meniului contează mai mult decât pare. IQ Rest citește o fotografie a meniului tău tipărit și creează pozițiile automat, transformând acea jumătate de zi în vreo cinci minute. Pune la socoteală timpul de implementare când compari uneltele; adesea cântărește mai mult decât primul an de abonament."
+    },
+    {
+      "type": "h2",
+      "text": "Tipar și echipamente"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Suporturi de masă sau autocolante:** 1-3 € per masă, o singură dată. O sală de 20 de mese rămâne sub 60 €.",
+        "**Retipărire:** 0 € dacă codul duce la o adresă fixă pe care o controlezi. Ăsta e tot argumentul pentru un meniu găzduit.",
+        "**Dispozitivele clienților:** 0 €. Folosesc telefonul propriu și nu instalează nimic.",
+        "**Ecran de bucătărie:** 0 € dacă folosești o tabletă pe care o ai deja. [Ecranul de bucătărie](route:/kitchen-display) rulează în browser, așa că o tabletă de cinci ani ajunge.",
+        "**Wi-Fi:** merită verificat. Dacă la mesele din spate nu e semnal, meniul nu se încarcă, iar asta e o problemă de instalație pe care niciun software n-o rezolvă."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Exemplu cu cifre: un bistro cu 20 de mese"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Poziție",
+        "Anul 1",
+        "Anul 2"
+      ],
+      "rows": [
+        [
+          "Abonament la 9,90 €/lună",
+          "118,80 €",
+          "118,80 €"
+        ],
+        [
+          "Implementarea meniului (import prin scanare)",
+          "~5 € din timpul tău",
+          "0 €"
+        ],
+        [
+          "Suporturi QR, 20 de mese",
+          "40 €",
+          "0 €"
+        ],
+        [
+          "Modificări de meniu, 6 pe an",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "Traduceri, 4 limbi",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "**Total**",
+          "**≈164 €**",
+          "**≈119 €**"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Pentru comparație, un tiraj de meniuri tipărite plastifiate pentru aceeași sală costă de obicei între 150 și 400 €, iar majoritatea localurilor fac trei până la șase pe an. Meniul digital iese de regulă mai ieftin chiar din primul an, înainte să pui la socoteală ceva din ce hârtia nu poate face."
+    },
+    {
+      "type": "h2",
+      "text": "Unde costurile chiar explodează"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Preț per locație într-un grup.** Cinci localuri câte 30 € fac 1.800 € pe an. Întreabă de tarife multi-locație înainte să semnezi pentru unul.",
+        "**Comision pe comandă.** 3% din 12.000 € comenzi QR pe lună înseamnă 360 € lunar — de treizeci de ori un abonament fix.",
+        "**Procesarea plăților.** E separată de furnizorul meniului și inevitabilă dacă accepți card la masă. Compar-o cu ce îți ia deja terminalul.",
+        "**Ecrane digitale de meniu.** Ecranele din spatele barului sunt un produs complet diferit — echipamente, montaj și software de semnalistică urcă totul la mii. Un meniu QR pe telefonul clientului evită tot."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Înainte să compari prețuri, notează-ți volumul lunar de comenzi prin QR. Dacă e aproape de zero, modelele cu comision sunt cele mai ieftine. Peste vreo 300-500 € comenzi pe lună, abonamentul fix câștigă aproape întotdeauna."
+    },
+    {
+      "type": "h2",
+      "text": "E vreodată de-ajuns varianta gratuită?"
+    },
+    {
+      "type": "p",
+      "text": "Uneori. Un chioșc sezonier cu opt poziții și prețuri fixe chiar nu are nevoie de abonament. Dar citește ce înseamnă „gratuit” în fiecare caz: reclame arătate clienților tăi, un cod care moare când se termină perioada de probă sau un meniu pe care nu-l poți exporta sunt costuri reale care pur și simplu nu apar pe factură. Le-am luat pe rând în [cât costă de fapt un meniu QR gratuit](blog:free-qr-code-menu)."
+    },
+    {
+      "type": "cta",
+      "heading": "Vezi prețul întreg înainte să decizi",
+      "text": "De la 9,90 € pe lună per locație, fără comision pe comenzi, 14 zile gratuit și fără card.",
+      "buttonLabel": "Vezi prețurile",
+      "routeKey": "/pricing"
+    },
+    {
+      "type": "faq",
+      "heading": "Întrebări frecvente",
+      "items": [
+        {
+          "q": "Cât costă lunar un meniu cu cod QR?",
+          "a": "Uneltele cu abonament fix se învârt în general între 10 și 40 € per locație pe lună. IQ Rest începe de la 9,90 € fără comision pe comenzi."
+        },
+        {
+          "q": "Există meniu cu cod QR gratuit?",
+          "a": "Da, mai multe — de regulă finanțate prin marca furnizorului arătată clienților sau prin limitarea ta la un PDF. Merg pentru un meniu mic și fix și devin scumpe pe alte căi imediat ce ai nevoie de actualizări, limbi sau comenzi."
+        },
+        {
+          "q": "Se plătește per masă sau per restaurant?",
+          "a": "La IQ Rest, per restaurant — mese și coduri QR nelimitate. Verifică asta înainte să semnezi oriunde, pentru că prețul per masă sau per utilizator scalează prost."
+        },
+        {
+          "q": "Există taxă de instalare?",
+          "a": "Nu. Importul meniului e inclus și nu ai nimic de instalat, nici tu, nici clienții tăi."
+        },
+        {
+          "q": "Și cât costă un ecran digital de meniu?",
+          "a": "E altă categorie — ecrane, suporturi și software de semnalistică, de regulă sute până la mii per ecran plus montaj. Un meniu QR folosește telefonul clientului și nu costă nimic în echipamente."
+        }
+      ]
+    }
+  ]
+}

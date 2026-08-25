@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "title": "Koliko v resnici stane QR jedilnik | IQ Rest",
+    "description": "Koliko zares stane jedilnik s QR kodo: brezplačna orodja, mesečne naročnine, cena na lokal, provizije od naročil in skriti čas vzpostavitve."
+  },
+  "card": {
+    "title": "Koliko v resnici stane QR jedilnik (vključno s postavkami, ki vam jih nihče ne ovrednoti)",
+    "excerpt": "Cenovne strani pokažejo eno številko. Vaš resnični strošek vključuje čas vnosa, ceno na lokal, provizije od naročil in tisk. Tu je celoten račun."
+  },
+  "h1": "Koliko stane jedilnik s QR kodo?",
+  "intro": "Oglaševana številka je redko tista, ki jo plačate. Cene digitalnih jedilnikov se delijo na štiri modele in v katerem ste, šteje bolj kot znesek v naslovu: orodje za 0 €, ki jemlje provizijo od naročila, lahko mesečno stane več kot naročnina za 20 €. Takole izračunate svojo pravo številko.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Štirje cenovni modeli"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Model",
+        "Običajna cena",
+        "Komu ustreza",
+        "Zanka"
+      ],
+      "rows": [
+        [
+          "Brezplačni generator QR + PDF",
+          "0 €",
+          "Jedilnik, ki se nikoli ne spremeni",
+          "Kode lahko potečejo; PDF je na telefonu neberljiv"
+        ],
+        [
+          "Brezplačno orodje z oglasi",
+          "0 €",
+          "Preizkus ideje",
+          "Znamka ali oglasi ponudnika, prikazani vašim gostom"
+        ],
+        [
+          "Fiksna naročnina",
+          "10-40 € na lokal mesečno",
+          "Večini restavracij",
+          "Preverite, ali je na lokal ali na uporabnika"
+        ],
+        [
+          "Provizija od naročil",
+          "Pogosto % na naročilo",
+          "Zelo majhnim količinam",
+          "Strošek raste točno takrat, ko raste posel"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "IQ Rest je v tretji vrstici: **od 9,90 € na mesec na lokal**, brez provizije od naročil, 14 dni brezplačno brez kartice. Zaračunavamo lokal, ne natakarja, ker obračun na uporabnika kaznuje prav tiste lokale z največjo fluktuacijo osebja."
+    },
+    {
+      "type": "h2",
+      "text": "Strošek, ki ga vsi pozabijo: vnesti jedilnik"
+    },
+    {
+      "type": "p",
+      "text": "Vtipkati 80 postavk s cenami, opisi in kategorijami vzame dve do štiri ure. Ob polnem urnem strošku vodje so to resnični 40-100 €, ki jih porabite, preden jedilnik sploh obstaja — in jih porabite znova naslednjo sezono, če orodje otežuje množično urejanje."
+    },
+    {
+      "type": "p",
+      "text": "Zato uvoz jedilnika šteje več, kot se sliši. IQ Rest prebere fotografijo vašega papirnatega jedilnika in postavke ustvari sam, kar tisti pol dneva spremeni v približno pet minut. Pri primerjavi orodij vštejte čas vzpostavitve; pogosto tehta več kot prvo leto naročnine."
+    },
+    {
+      "type": "h2",
+      "text": "Tisk in oprema"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Namizna stojala ali nalepke:** 1-3 € na mizo, enkratno. Sala z 20 mizami ostane pod 60 €.",
+        "**Ponovni tisk:** 0 €, če koda kaže na stalen naslov, ki ga nadzorujete. V tem je ves argument za gostovani jedilnik.",
+        "**Naprave gostov:** 0 €. Gostje uporabljajo svoj telefon in ničesar ne nameščajo.",
+        "**Zaslon v kuhinji:** 0 €, če uporabite tablico, ki jo že imate. [Kuhinjski zaslon](route:/kitchen-display) teče v brskalniku, zato zadošča petletna tablica.",
+        "**Wi-Fi:** vredno preveriti. Če pri zadnjih mizah ni signala, se jedilnik ne naloži, in to je infrastrukturna težava, ki je nobena programska oprema ne reši."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Računski primer: bistro z 20 mizami"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Postavka",
+        "1. leto",
+        "2. leto"
+      ],
+      "rows": [
+        [
+          "Naročnina po 9,90 €/mes.",
+          "118,80 €",
+          "118,80 €"
+        ],
+        [
+          "Vzpostavitev jedilnika (uvoz s skeniranjem)",
+          "~5 € vašega časa",
+          "0 €"
+        ],
+        [
+          "QR namizna stojala, 20 miz",
+          "40 €",
+          "0 €"
+        ],
+        [
+          "Spremembe jedilnika, 6 na leto",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "Prevodi, 4 jeziki",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "**Skupaj**",
+          "**≈164 €**",
+          "**≈119 €**"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Za primerjavo: ena naklada plastificiranih papirnatih jedilnikov za isto salo stane običajno med 150 in 400 €, večina lokalov pa jih naredi tri do šest na leto. Digitalni jedilnik je navadno cenejši že v prvem letu, še preden karkoli prištejete od tega, česar papir ne zmore."
+    },
+    {
+      "type": "h2",
+      "text": "Kje stroški res poletijo"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Cena na lokal v skupini.** Pet lokalov po 30 € je 1.800 € na leto. Vprašajte za cene za več lokacij, preden podpišete za enega.",
+        "**Provizija od naročil.** 3 % od 12.000 € QR naročil na mesec je 360 € mesečno — tridesetkratnik fiksne naročnine.",
+        "**Obdelava plačil.** Je ločena od ponudnika jedilnika in neizogibna, če pri mizi sprejemate kartice. Primerjajte s tem, kar vam terminal že zaračuna.",
+        "**Digitalne table z jedilnikom.** Zasloni za šankom so povsem drug izdelek — strojna oprema, montaža in signage programska oprema to potisnejo v tisočake. QR jedilnik na gostovem telefonu se vsemu temu izogne."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Preden primerjate cene, si zapišite mesečni obseg naročil prek QR. Če je blizu nič, so provizijski modeli najcenejši. Nad približno 300-500 € naročil na mesec fiksna naročnina skoraj vedno zmaga."
+    },
+    {
+      "type": "h2",
+      "text": "Je brezplačno kdaj dovolj?"
+    },
+    {
+      "type": "p",
+      "text": "Včasih. Sezonski kiosk z osmimi postavkami in stalnimi cenami res ne potrebuje naročnine. A preberite, kaj v posameznem primeru pomeni »brezplačno«: oglasi, prikazani vašim gostom, koda, ki umre s koncem preizkusnega obdobja, ali jedilnik, ki ga ne morete izvoziti, so resnični stroški, ki le ne pridejo na račun. Pregledali smo jih enega za drugim v [koliko v resnici stane brezplačen QR jedilnik](blog:free-qr-code-menu)."
+    },
+    {
+      "type": "cta",
+      "heading": "Poglejte celotno ceno, preden se odločite",
+      "text": "Od 9,90 € na mesec na lokal, brez provizije od naročil, 14 dni brezplačno in brez kartice.",
+      "buttonLabel": "Poglejte cene",
+      "routeKey": "/pricing"
+    },
+    {
+      "type": "faq",
+      "heading": "Pogosta vprašanja",
+      "items": [
+        {
+          "q": "Koliko stane jedilnik s QR kodo na mesec?",
+          "a": "Orodja s fiksno naročnino se navadno gibljejo med 10 in 40 € na lokal mesečno. IQ Rest se začne pri 9,90 € brez provizije od naročil."
+        },
+        {
+          "q": "Ali obstaja brezplačen jedilnik s QR kodo?",
+          "a": "Da, več jih je — običajno financirani z znamko ponudnika, ki jo vidijo vaši gostje, ali z omejitvijo na PDF. Za majhen, nespremenljiv jedilnik delujejo, po drugih poteh pa podražijo, takoj ko potrebujete posodobitve, jezike ali naročanje."
+        },
+        {
+          "q": "Se plača na mizo ali na restavracijo?",
+          "a": "Pri IQ Restu na restavracijo — mize in QR kode so neomejene. Preverite to, preden kjerkoli podpišete, saj se cena na mizo ali na uporabnika slabo skalira."
+        },
+        {
+          "q": "Ali obstaja pristopnina?",
+          "a": "Ne. Uvoz jedilnika je vključen in ni ničesar za namestiti, ne vam ne vašim gostom."
+        },
+        {
+          "q": "Koliko pa potem stane digitalna tabla z jedilnikom?",
+          "a": "To je druga kategorija — zasloni, nosilci in signage programska oprema, običajno stotine do tisoče na zaslon plus montaža. QR jedilnik uporablja gostov telefon in v strojni opremi ne stane nič."
+        }
+      ]
+    }
+  ]
+}

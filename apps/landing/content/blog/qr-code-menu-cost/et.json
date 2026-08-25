@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "title": "Kui palju QR-menüü tegelikult maksab | IQ Rest",
+    "description": "Kui palju QR-koodiga menüü päriselt maksab: tasuta tööriistad, kuutasud, hind asukoha kohta, tellimustasud ja peidetud käivitusaeg."
+  },
+  "card": {
+    "title": "Kui palju QR-menüü tegelikult maksab (koos kirjetega, mida keegi sulle ei hinnasta)",
+    "excerpt": "Hinnalehed näitavad üht numbrit. Sinu tegelik kulu sisaldab sisestusaega, hinda asukoha kohta, tellimustasusid ja trükki. Siin on kogu arve."
+  },
+  "h1": "Kui palju maksab QR-koodiga menüü?",
+  "intro": "Reklaamitud number on harva see, mida maksad. Digimenüüde hinnastamine jaguneb nelja mudelisse ja see, millises sa oled, loeb rohkem kui pealkirjas olev summa: 0-eurone tööriist, mis võtab tellimuselt vahendustasu, võib kuus maksta rohkem kui 20-eurone tellimus. Nii arvutad välja oma tegeliku numbri.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Neli hinnamudelit"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Mudel",
+        "Tavaline hind",
+        "Kellele sobib",
+        "Konks"
+      ],
+      "rows": [
+        [
+          "Tasuta QR-generaator + PDF",
+          "0 €",
+          "Menüü, mis kunagi ei muutu",
+          "Koodid võivad aeguda; PDF on telefonis loetamatu"
+        ],
+        [
+          "Reklaamipõhine tasuta tööriist",
+          "0 €",
+          "Idee katsetamine",
+          "Teenusepakkuja bränd või reklaamid sinu külalistele"
+        ],
+        [
+          "Fikseeritud tellimus",
+          "10-40 € asukoha kohta kuus",
+          "Enamikule restoranidele",
+          "Kontrolli, kas hind on asukoha või kasutaja kohta"
+        ],
+        [
+          "Vahendustasu tellimustelt",
+          "Sageli % tellimuselt",
+          "Väga väikestele mahtudele",
+          "Kulu kasvab just siis, kui äri kasvab"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "IQ Rest on kolmandal real: **alates 9,90 € kuus asukoha kohta**, ilma tellimustasudeta, 14 päeva tasuta ilma kaardita. Me võtame tasu koha eest, mitte ettekandja eest, sest kasutajapõhine arveldus karistab just neid kohti, kus personali voolavus on suurim."
+    },
+    {
+      "type": "h2",
+      "text": "Kulu, mille kõik unustavad: menüü sisse saada"
+    },
+    {
+      "type": "p",
+      "text": "80 rea sisestamine hindade, kirjelduste ja kategooriatega võtab kaks kuni neli tundi. Juhataja täieliku tunnihinna juures on see reaalne 40-100 €, mille kulutad enne, kui menüü üldse olemas on — ja kulutad uuesti järgmisel hooajal, kui tööriist teeb hulgimuutmise piinaks."
+    },
+    {
+      "type": "p",
+      "text": "Seepärast loeb menüü importimine rohkem, kui see kõlab. IQ Rest loeb foto sinu paberimenüüst ja loob read automaatselt, mis muudab selle poole päeva umbes viieks minutiks. Arvesta tööriistu võrreldes ka käivitusajaga; see kaalub sageli rohkem kui esimene tellimusaasta."
+    },
+    {
+      "type": "h2",
+      "text": "Trükk ja riistvara"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Lauaalused või kleebised:** 1-3 € laua kohta, ühekordselt. 20 lauaga saal jääb alla 60 euro.",
+        "**Uuesti trükkimine:** 0 €, kui kood viitab püsivale aadressile, mida sa kontrollid. Selles seisnebki kogu majutatud menüü argument.",
+        "**Külaliste seadmed:** 0 €. Külalised kasutavad oma telefoni ega paigalda midagi.",
+        "**Köögiekraan:** 0 €, kui kasutad tahvelarvutit, mis sul juba on. [Köögiekraan](route:/kitchen-display) töötab brauseris, nii et viieaastane tahvel sobib.",
+        "**WiFi:** tasub kontrollida. Kui tagumiste laudade juures pole levi, menüü ei lae, ja see on paigaldusprobleem, mida ükski tarkvara ei lahenda."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Arvutusnäide: 20 lauaga bistroo"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Kirje",
+        "1. aasta",
+        "2. aasta"
+      ],
+      "rows": [
+        [
+          "Tellimus 9,90 €/kuus",
+          "118,80 €",
+          "118,80 €"
+        ],
+        [
+          "Menüü käivitamine (import skaneerimisest)",
+          "~5 € sinu ajast",
+          "0 €"
+        ],
+        [
+          "QR-lauaalused, 20 lauda",
+          "40 €",
+          "0 €"
+        ],
+        [
+          "Menüümuudatused, 6 korda aastas",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "Tõlked, 4 keelt",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "**Kokku**",
+          "**≈164 €**",
+          "**≈119 €**"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Võrdluseks: üks tiraaž lamineeritud paberimenüüsid samale saalile maksab tavaliselt 150 kuni 400 € ja enamik kohti teeb neid kolm kuni kuus korda aastas. Digimenüü tuleb üldjuhul odavam juba esimesel aastal, enne kui üldse arvestada midagi, mida paber ei suuda."
+    },
+    {
+      "type": "h2",
+      "text": "Kus kulud tegelikult plahvatavad"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Hind asukoha kohta ketis.** Viis kohta à 30 € on 1800 € aastas. Küsi mitme asukoha hindu enne, kui ühe eest alla kirjutad.",
+        "**Tellimustasu.** 3% 12 000 euro QR-tellimustelt kuus on 360 € kuus — kolmkümmend korda rohkem kui fikseeritud tellimus.",
+        "**Maksete töötlemine.** See on menüüpakkujast eraldi ja vältimatu, kui võtad lauas kaarti vastu. Võrdle sellega, mida su makseterminal juba võtab.",
+        "**Digitaalsed menüütahvlid.** Leti taga olevad ekraanid on täiesti teine toode — riistvara, paigaldus ja signage-tarkvara viivad selle tuhandetesse. QR-menüü külalise enda telefonis väldib seda kõike."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Enne hindade võrdlemist kirjuta üles oma kuu QR-tellimuste maht. Kui see on nulli lähedal, on vahendustasu mudelid odavaimad. Üle umbes 300-500 euro tellimusi kuus võidab fikseeritud tellimus peaaegu alati."
+    },
+    {
+      "type": "h2",
+      "text": "Kas tasuta on kunagi piisav?"
+    },
+    {
+      "type": "p",
+      "text": "Vahel. Hooajalisel kioskil kaheksa reaga ja fikseeritud hindadega tõesti pole tellimust vaja. Aga loe, mida \"tasuta\" igal juhul tähendab: sinu külalistele näidatavad reklaamid, kood mis sureb prooviperioodi lõpuga, või menüü mida sa ei saa eksportida, on reaalsed kulud, mis lihtsalt ei jõua arvele. Käisime need ükshaaval läbi artiklis [mida tasuta QR-menüü tegelikult maksab](blog:free-qr-code-menu)."
+    },
+    {
+      "type": "cta",
+      "heading": "Vaata kogu hinda enne otsustamist",
+      "text": "Alates 9,90 € kuus asukoha kohta, ilma tellimustasudeta, 14 päeva tasuta ja ilma kaardita.",
+      "buttonLabel": "Vaata hindu",
+      "routeKey": "/pricing"
+    },
+    {
+      "type": "faq",
+      "heading": "Korduma kippuvad küsimused",
+      "items": [
+        {
+          "q": "Kui palju maksab QR-koodiga menüü kuus?",
+          "a": "Fikseeritud tellimusega tööriistad jäävad üldiselt 10-40 euro juurde asukoha kohta kuus. IQ Rest algab 9,90 eurost ilma tellimustasudeta."
+        },
+        {
+          "q": "Kas on olemas tasuta QR-koodiga menüü?",
+          "a": "Jah, mitu — tavaliselt rahastatuna teenusepakkuja brändiga, mida su külalised näevad, või piirates sind PDF-iga. Väikese, muutumatu menüü jaoks toimivad ja lähevad muul viisil kalliks kohe, kui vajad uuendusi, keeli või tellimist."
+        },
+        {
+          "q": "Kas maksan laua või restorani kohta?",
+          "a": "IQ Restis restorani kohta — lauad ja QR-koodid on piiramatud. Kontrolli seda enne kuskil allakirjutamist, sest laua- või kasutajapõhine hind skaleerub halvasti."
+        },
+        {
+          "q": "Kas on liitumistasu?",
+          "a": "Ei. Menüü import on hinnas ja midagi pole vaja paigaldada, ei sinul ega su külalistel."
+        },
+        {
+          "q": "Aga kui palju maksab digitaalne menüütahvel?",
+          "a": "See on teine kategooria — ekraanid, kinnitused ja signage-tarkvara, tavaliselt sadu kuni tuhandeid ekraani kohta pluss paigaldus. QR-menüü kasutab külalise telefoni ega maksa riistvaras midagi."
+        }
+      ]
+    }
+  ]
+}

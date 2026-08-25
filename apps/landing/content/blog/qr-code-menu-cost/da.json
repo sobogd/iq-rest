@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "title": "Hvad en QR-menu reelt koster | IQ Rest",
+    "description": "Hvad en QR-menu faktisk koster: gratis værktøjer, månedsabonnementer, pris pr. sted, ordreprovision og den skjulte opsætningstid."
+  },
+  "card": {
+    "title": "Hvad en QR-menu reelt koster (inklusive de poster, ingen giver dig pris på)",
+    "excerpt": "Prissider viser ét tal. Din reelle udgift rummer opsætningstid, pris pr. sted, ordreprovision og tryk. Her er hele regnestykket."
+  },
+  "h1": "Hvad koster en QR-menu?",
+  "intro": "Det annoncerede tal er sjældent det, du betaler. Priser på digitale menuer falder i fire modeller, og hvilken du er havnet i betyder mere end forsidetallet: et værktøj til 0 € med provision pr. ordre kan koste mere om måneden end et abonnement til 20 €. Sådan finder du dit reelle tal.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "De fire prismodeller"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Model",
+        "Typisk pris",
+        "Passer til",
+        "Hagen"
+      ],
+      "rows": [
+        [
+          "Gratis QR-generator + pdf",
+          "0 €",
+          "En menu, der aldrig ændres",
+          "Koder kan udløbe; pdf er ulæselig på telefonen"
+        ],
+        [
+          "Gratis værktøj med reklamer",
+          "0 €",
+          "At teste idéen",
+          "Leverandørens brand eller reklamer vises for dine gæster"
+        ],
+        [
+          "Fast abonnement",
+          "10-40 € pr. sted pr. måned",
+          "De fleste restauranter",
+          "Tjek, om det er pr. sted eller pr. bruger"
+        ],
+        [
+          "Provision pr. ordre",
+          "Ofte en % pr. ordre",
+          "Meget lave mængder",
+          "Udgiften stiger præcis, når forretningen vokser"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "IQ Rest ligger på tredje række: **fra 9,90 € pr. måned pr. sted**, ingen provision på ordrer, 14 dage gratis uden kort. Vi tager betaling for stedet, ikke pr. tjener, fordi betaling pr. bruger straffer netop de steder, der har størst udskiftning i personalet."
+    },
+    {
+      "type": "h2",
+      "text": "Udgiften alle glemmer: at få menuen ind"
+    },
+    {
+      "type": "p",
+      "text": "At taste 80 varer ind med priser, beskrivelser og kategorier tager to til fire timer. Til en leders fulde timeomkostning er det reelle 40-100 €, du bruger, før menuen overhovedet findes – og bruger igen næste sæson, hvis værktøjet gør masseredigering besværlig."
+    },
+    {
+      "type": "p",
+      "text": "Derfor betyder menuimport mere, end det lyder. IQ Rest læser et foto af din papirmenu og opretter varerne automatisk, hvilket gør den halve dag til cirka fem minutter. Regn opsætningstiden med, når du sammenligner værktøjer; den vejer ofte tungere end det første abonnementsår."
+    },
+    {
+      "type": "h2",
+      "text": "Tryk og hardware"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Bordstandere eller klistermærker:** 1-3 € pr. bord, én gang. En sal med 20 borde lander under 60 €.",
+        "**Genoptryk:** 0 €, hvis koden peger på en fast adresse, du styrer. Det er hele argumentet for en hostet menu.",
+        "**Gæsternes enheder:** 0 €. Gæsterne bruger deres egen telefon og installerer intet.",
+        "**Køkkenskærm:** 0 €, hvis du bruger en tablet, du allerede har. [Køkkendisplayet](route:/kitchen-display) kører i browseren, så en fem år gammel tablet er nok.",
+        "**Wi-Fi:** værd at tjekke. Hvis gæsterne ikke har signal ved de bageste borde, loader menuen ikke, og det er et installationsproblem, ingen software løser."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Regneeksempel: en bistro med 20 borde"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Post",
+        "År 1",
+        "År 2"
+      ],
+      "rows": [
+        [
+          "Abonnement à 9,90 €/md.",
+          "118,80 €",
+          "118,80 €"
+        ],
+        [
+          "Opsætning af menuen (import via scanning)",
+          "~5 € af din tid",
+          "0 €"
+        ],
+        [
+          "QR-bordstandere, 20 borde",
+          "40 €",
+          "0 €"
+        ],
+        [
+          "Menuændringer, 6 om året",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "Oversættelser, 4 sprog",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "**I alt**",
+          "**≈164 €**",
+          "**≈119 €**"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Til sammenligning koster én omgang laminerede papirmenuer til samme sal normalt mellem 150 og 400 €, og de fleste steder gør det tre til seks gange om året. Den digitale menu er som regel billigere allerede i år ét, før man tæller noget af det, papir ikke kan."
+    },
+    {
+      "type": "h2",
+      "text": "Hvor udgifterne virkelig løber løbsk"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Pris pr. sted i en gruppe.** Fem steder à 30 € er 1.800 € om året. Spørg til priser for flere adresser, før du skriver under for ét.",
+        "**Ordreprovision.** 3 % af 12.000 € i QR-ordrer om måneden er 360 € om måneden – tredive gange et fast abonnement.",
+        "**Kortindløsning.** Ligger uden for menuleverandøren og er uundgåelig, hvis du tager kort ved bordet. Sammenlign med det, din terminal allerede tager.",
+        "**Digitale menutavler.** Skærmene bag disken er et helt andet produkt – hardware, montering og signage-software skubber det op i tusinder. En QR-menu på gæstens egen telefon undgår det hele."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Skriv dit månedlige antal QR-ordrer ned, før du sammenligner priser. Er det tæt på nul, er provisionsmodeller billigst. Over cirka 300-500 € i ordrer om måneden vinder et fast abonnement næsten altid."
+    },
+    {
+      "type": "h2",
+      "text": "Er gratis nogensinde nok?"
+    },
+    {
+      "type": "p",
+      "text": "Nogle gange. En sæsonkiosk med otte varer og faste priser har virkelig ikke brug for et abonnement. Men læs, hvad \"gratis\" betyder i hvert tilfælde: reklamer vist for dine gæster, en kode der dør, når prøveperioden slutter, eller en menu du ikke kan eksportere er reelle udgifter, der bare ikke står på fakturaen. Vi gennemgik dem én for én i [hvad en gratis QR-menu reelt koster](blog:free-qr-code-menu)."
+    },
+    {
+      "type": "cta",
+      "heading": "Se hele prisen, før du beslutter dig",
+      "text": "Fra 9,90 € pr. måned pr. sted, ingen provision på ordrer, 14 dage gratis og uden kort.",
+      "buttonLabel": "Se priser",
+      "routeKey": "/pricing"
+    },
+    {
+      "type": "faq",
+      "heading": "Ofte stillede spørgsmål",
+      "items": [
+        {
+          "q": "Hvad koster en QR-menu om måneden?",
+          "a": "Værktøjer med fast abonnement ligger typisk på 10-40 € pr. sted pr. måned. IQ Rest starter ved 9,90 € uden provision på ordrer."
+        },
+        {
+          "q": "Findes der en gratis QR-menu?",
+          "a": "Ja, flere – som regel finansieret med leverandørens brand over for dine gæster eller ved at begrænse dig til en pdf. De virker til en lille, statisk menu og bliver dyre på andre måder, så snart du skal bruge opdateringer, sprog eller bestilling."
+        },
+        {
+          "q": "Betaler jeg pr. bord eller pr. restaurant?",
+          "a": "Med IQ Rest pr. restaurant – borde og QR-koder er ubegrænsede. Tjek det, før du skriver under andre steder, for pris pr. bord eller pr. bruger skalerer dårligt."
+        },
+        {
+          "q": "Er der et oprettelsesgebyr?",
+          "a": "Nej. Menuimporten er med, og der er intet at installere, hverken for dig eller dine gæster."
+        },
+        {
+          "q": "Hvad koster en digital menutavle så?",
+          "a": "Det er en anden kategori – skærme, beslag og signage-software, typisk hundreder til tusinder pr. skærm plus montering. En QR-menu bruger gæstens telefon og koster ingenting i hardware."
+        }
+      ]
+    }
+  ]
+}

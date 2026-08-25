@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "title": "Ile naprawdę kosztuje menu QR | IQ Rest",
+    "description": "Ile naprawdę kosztuje menu z kodem QR: darmowe narzędzia, abonamenty, cena za lokal, prowizje od zamówień i ukryty czas wdrożenia."
+  },
+  "card": {
+    "title": "Ile naprawdę kosztuje menu QR (razem z pozycjami, których nikt ci nie wycenia)",
+    "excerpt": "Strony cenowe pokazują jedną liczbę. Twój realny koszt to także czas wpisywania, cena za lokal, prowizje od zamówień i druk. Oto pełne wyliczenie."
+  },
+  "h1": "Ile kosztuje menu z kodem QR?",
+  "intro": "Reklamowana liczba rzadko jest tą, którą płacisz. Ceny cyfrowych menu dzielą się na cztery modele, a to, w którym jesteś, znaczy więcej niż kwota z nagłówka: narzędzie za 0 € pobierające prowizję od zamówień może wychodzić drożej miesięcznie niż abonament za 20 €. Oto jak policzyć swoją realną liczbę.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Cztery modele cenowe"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Model",
+        "Typowa cena",
+        "Dla kogo",
+        "Haczyk"
+      ],
+      "rows": [
+        [
+          "Darmowy generator QR + PDF",
+          "0 €",
+          "Menu, które nigdy się nie zmienia",
+          "Kody mogą wygasnąć; PDF jest nieczytelny na telefonie"
+        ],
+        [
+          "Darmowe narzędzie z reklamami",
+          "0 €",
+          "Przetestowanie pomysłu",
+          "Marka lub reklamy dostawcy pokazywane twoim gościom"
+        ],
+        [
+          "Stały abonament",
+          "10-40 € za lokal miesięcznie",
+          "Większość restauracji",
+          "Sprawdź, czy to za lokal, czy za użytkownika"
+        ],
+        [
+          "Prowizja od zamówień",
+          "Zwykle % od zamówienia",
+          "Bardzo małe obroty",
+          "Koszt rośnie dokładnie wtedy, gdy rośnie biznes"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "IQ Rest jest w trzecim wierszu: **od 9,90 € miesięcznie za lokal**, bez prowizji od zamówień, 14 dni za darmo bez karty. Rozliczamy lokal, a nie kelnera, bo płatność za użytkownika karze właśnie te lokale, w których najczęściej zmienia się załoga."
+    },
+    {
+      "type": "h2",
+      "text": "Koszt, o którym wszyscy zapominają: wprowadzenie karty"
+    },
+    {
+      "type": "p",
+      "text": "Wpisanie 80 pozycji z cenami, opisami i kategoriami zajmuje od dwóch do czterech godzin. Przy pełnym koszcie godziny menedżera to realne 40-100 €, które wydajesz, zanim karta w ogóle istnieje — i wydajesz je znowu w kolejnym sezonie, jeśli narzędzie utrudnia edycję masową."
+    },
+    {
+      "type": "p",
+      "text": "Dlatego import karty znaczy więcej, niż brzmi. IQ Rest czyta zdjęcie twojej papierowej karty i tworzy pozycje automatycznie, przez co pół dnia pracy zamienia się w jakieś pięć minut. Wliczaj czas wdrożenia przy porównywaniu narzędzi; często waży więcej niż pierwszy rok abonamentu."
+    },
+    {
+      "type": "h2",
+      "text": "Druk i sprzęt"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Stojaki lub naklejki:** 1-3 € za stolik, jednorazowo. Sala na 20 stolików to poniżej 60 €.",
+        "**Przedruk:** 0 €, jeśli kod prowadzi pod stały adres, który kontrolujesz. To cały argument za menu hostowanym.",
+        "**Urządzenia gości:** 0 €. Goście używają własnych telefonów i niczego nie instalują.",
+        "**Ekran w kuchni:** 0 €, jeśli użyjesz tabletu, który już masz. [Ekran kuchenny](route:/kitchen-display) działa w przeglądarce, więc wystarczy pięcioletni tablet.",
+        "**Wi-Fi:** warto sprawdzić. Jeśli przy stolikach w głębi nie ma zasięgu, menu się nie ładuje, a to problem instalacyjny, którego żadne oprogramowanie nie naprawi."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Przykład z liczbami: bistro na 20 stolików"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Pozycja",
+        "Rok 1",
+        "Rok 2"
+      ],
+      "rows": [
+        [
+          "Abonament po 9,90 €/mies.",
+          "118,80 €",
+          "118,80 €"
+        ],
+        [
+          "Wdrożenie karty (import ze skanu)",
+          "~5 € twojego czasu",
+          "0 €"
+        ],
+        [
+          "Stojaki QR, 20 stolików",
+          "40 €",
+          "0 €"
+        ],
+        [
+          "Zmiany w karcie, 6 razy w roku",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "Tłumaczenia, 4 języki",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "**Razem**",
+          "**≈164 €**",
+          "**≈119 €**"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Dla porównania: jeden nakład laminowanych kart papierowych dla tej samej sali kosztuje zwykle od 150 do 400 €, a większość lokali robi ich od trzech do sześciu rocznie. Cyfrowe menu zwykle wychodzi taniej już w pierwszym roku, zanim policzysz cokolwiek, czego papier nie potrafi."
+    },
+    {
+      "type": "h2",
+      "text": "Gdzie koszty naprawdę wystrzeliwują"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Cena za lokal w grupie.** Pięć lokali po 30 € to 1800 € rocznie. Zapytaj o stawki wielolokalowe, zanim podpiszesz umowę na jeden.",
+        "**Prowizja od zamówień.** 3% od 12 000 € zamówień QR miesięcznie to 360 € — trzydzieści razy więcej niż stały abonament.",
+        "**Obsługa płatności.** Jest osobna od dostawcy menu i nieunikniona, jeśli przyjmujesz karty przy stoliku. Porównaj to z tym, co już bierze twój terminal.",
+        "**Cyfrowe tablice menu.** Ekrany za barem to zupełnie inny produkt — sprzęt, montaż i oprogramowanie do digital signage wpychają to w tysiące. Menu QR na telefonie gościa omija to wszystko."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Zanim zaczniesz porównywać ceny, zapisz swój miesięczny wolumen zamówień przez QR. Jeśli jest bliski zeru, modele prowizyjne są najtańsze. Powyżej mniej więcej 300-500 € zamówień miesięcznie stały abonament wygrywa niemal zawsze."
+    },
+    {
+      "type": "h2",
+      "text": "Czy darmowe kiedykolwiek wystarcza?"
+    },
+    {
+      "type": "p",
+      "text": "Czasem. Sezonowy kiosk z ośmioma pozycjami i stałymi cenami naprawdę nie potrzebuje abonamentu. Ale czytaj, co w danym przypadku znaczy „za darmo”: reklamy pokazywane twoim gościom, kod, który umiera po okresie próbnym, albo menu, którego nie da się wyeksportować, to realne koszty, które po prostu nie trafiają na fakturę. Rozebraliśmy je po kolei w tekście [ile naprawdę kosztuje darmowe menu QR](blog:free-qr-code-menu)."
+    },
+    {
+      "type": "cta",
+      "heading": "Zobacz pełną cenę, zanim zdecydujesz",
+      "text": "Od 9,90 € miesięcznie za lokal, bez prowizji od zamówień, 14 dni za darmo i bez karty.",
+      "buttonLabel": "Zobacz cennik",
+      "routeKey": "/pricing"
+    },
+    {
+      "type": "faq",
+      "heading": "Najczęstsze pytania",
+      "items": [
+        {
+          "q": "Ile kosztuje menu z kodem QR miesięcznie?",
+          "a": "Narzędzia ze stałym abonamentem chodzą zwykle po 10-40 € za lokal miesięcznie. IQ Rest zaczyna się od 9,90 € bez prowizji od zamówień."
+        },
+        {
+          "q": "Czy istnieje darmowe menu z kodem QR?",
+          "a": "Tak, kilka — zwykle finansowanych marką dostawcy pokazywaną gościom albo ograniczeniem cię do PDF-a. Sprawdzają się przy małej, niezmiennej karcie i robią się drogie innymi kanałami, gdy tylko potrzebujesz aktualizacji, języków albo zamówień."
+        },
+        {
+          "q": "Płaci się za stolik czy za restaurację?",
+          "a": "W IQ Rest za restaurację — stoliki i kody QR bez limitu. Sprawdź to przed podpisaniem czegokolwiek, bo cena za stolik lub za użytkownika skaluje się fatalnie."
+        },
+        {
+          "q": "Czy jest opłata wdrożeniowa?",
+          "a": "Nie. Import karty jest wliczony i nie ma czego instalować — ani tobie, ani twoim gościom."
+        },
+        {
+          "q": "A ile kosztuje cyfrowa tablica menu?",
+          "a": "To inna kategoria — ekrany, uchwyty i oprogramowanie do digital signage, zwykle setki do tysięcy euro za ekran plus montaż. Menu QR korzysta z telefonu gościa i nie kosztuje nic w sprzęcie."
+        }
+      ]
+    }
+  ]
+}

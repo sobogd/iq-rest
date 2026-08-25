@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "title": "Koliko stvarno košta QR jelovnik | IQ Rest",
+    "description": "Koliko doista košta jelovnik s QR kodom: besplatni alati, mjesečne pretplate, cijena po lokalu, provizije na narudžbe i skriveno vrijeme uvođenja."
+  },
+  "card": {
+    "title": "Koliko stvarno košta QR jelovnik (uključujući stavke koje vam nitko ne izračuna)",
+    "excerpt": "Stranice s cijenama pokazuju jedan broj. Vaš stvarni trošak uključuje vrijeme unosa, cijenu po lokalu, provizije na narudžbe i tisak. Evo cijelog računa."
+  },
+  "h1": "Koliko košta jelovnik s QR kodom?",
+  "intro": "Oglašeni broj rijetko je onaj koji plaćate. Cijene digitalnih jelovnika dijele se na četiri modela, a u kojem ste važnije je od iznosa u naslovu: alat od 0 € koji uzima proviziju po narudžbi može mjesečno ispasti skuplji od pretplate od 20 €. Evo kako izračunati svoj stvarni broj.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Četiri modela cijena"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Model",
+        "Uobičajena cijena",
+        "Kome odgovara",
+        "Kvaka"
+      ],
+      "rows": [
+        [
+          "Besplatni QR generator + PDF",
+          "0 €",
+          "Jelovnik koji se nikad ne mijenja",
+          "Kodovi mogu isteći; PDF je nečitljiv na mobitelu"
+        ],
+        [
+          "Besplatan alat s oglasima",
+          "0 €",
+          "Isprobavanje ideje",
+          "Marka ili oglasi pružatelja prikazani vašim gostima"
+        ],
+        [
+          "Fiksna pretplata",
+          "10-40 € po lokalu mjesečno",
+          "Većini restorana",
+          "Provjerite je li po lokalu ili po korisniku"
+        ],
+        [
+          "Provizija na narudžbe",
+          "Često % po narudžbi",
+          "Vrlo malim količinama",
+          "Trošak raste točno kad posao raste"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "IQ Rest je u trećem retku: **od 9,90 € mjesečno po lokalu**, bez provizije na narudžbe, 14 dana besplatno bez kartice. Naplaćujemo lokal, a ne konobara, jer naplata po korisniku kažnjava upravo one lokale s najvećom fluktuacijom osoblja."
+    },
+    {
+      "type": "h2",
+      "text": "Trošak kojeg se svi zaborave: unijeti jelovnik"
+    },
+    {
+      "type": "p",
+      "text": "Utipkati 80 stavki s cijenama, opisima i kategorijama traje dva do četiri sata. Uz puni satni trošak voditelja to su stvarnih 40-100 € koje potrošite prije nego što jelovnik uopće postoji — i potrošite ih ponovno iduće sezone ako alat otežava skupno uređivanje."
+    },
+    {
+      "type": "p",
+      "text": "Zato uvoz jelovnika znači više nego što zvuči. IQ Rest pročita fotografiju vašeg papirnatog jelovnika i sam stvori stavke, pa se to pola dana pretvara u otprilike pet minuta. Uračunajte vrijeme uvođenja kad uspoređujete alate; često teži više od prve godine pretplate."
+    },
+    {
+      "type": "h2",
+      "text": "Tisak i oprema"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Stolni stalci ili naljepnice:** 1-3 € po stolu, jednokratno. Sala s 20 stolova ostaje ispod 60 €.",
+        "**Ponovni ispis:** 0 € ako kod vodi na stalnu adresu koju kontrolirate. U tome je cijeli argument za hostirani jelovnik.",
+        "**Uređaji gostiju:** 0 €. Gosti koriste vlastiti mobitel i ništa ne instaliraju.",
+        "**Zaslon u kuhinji:** 0 € ako iskoristite tablet koji već imate. [Kuhinjski zaslon](route:/kitchen-display) radi u pregledniku, pa je dovoljan i petogodišnji tablet.",
+        "**Wi-Fi:** vrijedi provjeriti. Ako na stražnjim stolovima nema signala, jelovnik se ne učita, a to je infrastrukturni problem koji nijedan softver ne rješava."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Primjer s brojkama: bistro s 20 stolova"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Stavka",
+        "1. godina",
+        "2. godina"
+      ],
+      "rows": [
+        [
+          "Pretplata po 9,90 €/mj.",
+          "118,80 €",
+          "118,80 €"
+        ],
+        [
+          "Uvođenje jelovnika (uvoz skeniranjem)",
+          "~5 € vašeg vremena",
+          "0 €"
+        ],
+        [
+          "QR stolni stalci, 20 stolova",
+          "40 €",
+          "0 €"
+        ],
+        [
+          "Izmjene jelovnika, 6 godišnje",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "Prijevodi, 4 jezika",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "**Ukupno**",
+          "**≈164 €**",
+          "**≈119 €**"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Za usporedbu, jedna naklada plastificiranih papirnatih jelovnika za istu salu obično stoji između 150 i 400 €, a većina lokala napravi ih tri do šest godišnje. Digitalni jelovnik obično ispadne jeftiniji već prve godine, prije nego što uopće uračunate išta što papir ne može."
+    },
+    {
+      "type": "h2",
+      "text": "Gdje troškovi stvarno pobjegnu"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Cijena po lokalu u grupi.** Pet lokala po 30 € je 1.800 € godišnje. Pitajte za cijene za više lokacija prije nego što potpišete za jedan.",
+        "**Provizija na narudžbe.** 3% na 12.000 € QR narudžbi mjesečno je 360 € mjesečno — trideset puta više od fiksne pretplate.",
+        "**Obrada plaćanja.** Odvojena je od dobavljača jelovnika i neizbježna ako primate kartice za stolom. Usporedite s onim što vam već naplaćuje terminal.",
+        "**Digitalne ploče s jelovnikom.** Zasloni iza šanka posve su drugi proizvod — oprema, montaža i signage softver guraju to u tisuće. QR jelovnik na gostovu mobitelu sve to izbjegava."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Prije usporedbe cijena zapišite svoj mjesečni obujam narudžbi putem QR-a. Ako je blizu nule, modeli s provizijom najjeftiniji su. Iznad otprilike 300-500 € narudžbi mjesečno fiksna pretplata gotovo uvijek pobjeđuje."
+    },
+    {
+      "type": "h2",
+      "text": "Je li besplatno ikad dovoljno?"
+    },
+    {
+      "type": "p",
+      "text": "Ponekad. Sezonski kiosk s osam stavki i fiksnim cijenama doista ne treba pretplatu. Ali pročitajte što \"besplatno\" znači u svakom slučaju: oglasi prikazani vašim gostima, kod koji umre s krajem probnog razdoblja ili jelovnik koji ne možete izvesti stvarni su troškovi koji jednostavno nisu na računu. Prošli smo ih jedan po jedan u tekstu [koliko zapravo košta besplatan QR jelovnik](blog:free-qr-code-menu)."
+    },
+    {
+      "type": "cta",
+      "heading": "Pogledajte cijelu cijenu prije odluke",
+      "text": "Od 9,90 € mjesečno po lokalu, bez provizije na narudžbe, 14 dana besplatno i bez kartice.",
+      "buttonLabel": "Pogledajte cijene",
+      "routeKey": "/pricing"
+    },
+    {
+      "type": "faq",
+      "heading": "Česta pitanja",
+      "items": [
+        {
+          "q": "Koliko mjesečno košta jelovnik s QR kodom?",
+          "a": "Alati s fiksnom pretplatom obično idu 10-40 € po lokalu mjesečno. IQ Rest kreće od 9,90 € bez provizije na narudžbe."
+        },
+        {
+          "q": "Postoji li besplatan jelovnik s QR kodom?",
+          "a": "Da, nekoliko njih — obično financiranih markom pružatelja koju vide vaši gosti ili ograničavanjem na PDF. Rade za mali, nepromjenjivi jelovnik i poskupe na druge načine čim vam zatrebaju izmjene, jezici ili naručivanje."
+        },
+        {
+          "q": "Plaća li se po stolu ili po restoranu?",
+          "a": "Kod IQ Resta po restoranu — stolovi i QR kodovi su neograničeni. Provjerite to prije nego što bilo gdje potpišete, jer cijena po stolu ili po korisniku loše skalira."
+        },
+        {
+          "q": "Postoji li naknada za uspostavu?",
+          "a": "Ne. Uvoz jelovnika je uključen i nema se što instalirati, ni vama ni vašim gostima."
+        },
+        {
+          "q": "A koliko onda košta digitalna ploča s jelovnikom?",
+          "a": "To je druga kategorija — zasloni, nosači i signage softver, obično stotine do tisuće po zaslonu plus montaža. QR jelovnik koristi gostov mobitel i ne košta ništa u opremi."
+        }
+      ]
+    }
+  ]
+}

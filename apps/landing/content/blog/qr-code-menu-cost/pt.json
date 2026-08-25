@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "title": "Quanto custa mesmo um menu QR | IQ Rest",
+    "description": "Quanto custa realmente um menu com código QR: ferramentas grátis, mensalidades, preço por espaço, comissões por pedido e o tempo de arranque escondido."
+  },
+  "card": {
+    "title": "Quanto custa mesmo um menu QR (incluindo as parcelas que ninguém orça)",
+    "excerpt": "As páginas de preços mostram um número. O seu custo real inclui tempo de introdução, preço por espaço, comissões por pedido e impressão. Aqui fica a conta completa."
+  },
+  "h1": "Quanto custa um menu com código QR?",
+  "intro": "O número anunciado raramente é o que paga. Os preços dos menus digitais dividem-se em quatro modelos, e saber em qual está importa mais do que o valor do título: uma ferramenta de 0 € que cobra comissão por pedido pode sair mais cara ao mês do que uma subscrição de 20 €. Eis como calcular o seu número real.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Os quatro modelos de preço"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Modelo",
+        "Preço habitual",
+        "A quem serve",
+        "O senão"
+      ],
+      "rows": [
+        [
+          "Gerador de QR grátis + PDF",
+          "0 €",
+          "Um menu que nunca muda",
+          "Os códigos podem expirar; o PDF é ilegível no telemóvel"
+        ],
+        [
+          "Ferramenta grátis com publicidade",
+          "0 €",
+          "Testar a ideia",
+          "Marca ou anúncios do fornecedor mostrados aos seus clientes"
+        ],
+        [
+          "Subscrição fixa",
+          "10-40 € por espaço e por mês",
+          "A maioria dos restaurantes",
+          "Confirme se é por espaço ou por utilizador"
+        ],
+        [
+          "Comissão por pedido",
+          "Muitas vezes uma % por pedido",
+          "Volume muito baixo",
+          "O custo sobe exatamente quando o negócio cresce"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "O IQ Rest está na terceira linha: **desde 9,90 € por mês e por espaço**, sem comissão por pedido, 14 dias grátis e sem cartão. Cobramos pelo espaço, não por empregado, porque cobrar por utilizador penaliza precisamente os espaços com mais rotatividade de pessoal."
+    },
+    {
+      "type": "h2",
+      "text": "O custo de que toda a gente se esquece: meter o menu"
+    },
+    {
+      "type": "p",
+      "text": "Escrever 80 artigos com preços, descrições e categorias leva duas a quatro horas. Ao custo horário real de um responsável, são 40-100 € gastos antes de o menu sequer existir — e gasta-os outra vez na época seguinte se a ferramenta tornar penosas as edições em massa."
+    },
+    {
+      "type": "p",
+      "text": "Por isso a importação do menu conta mais do que parece. O IQ Rest lê uma fotografia do seu menu em papel e cria os artigos automaticamente, o que transforma essa meia jornada em cerca de cinco minutos. Conte o tempo de arranque ao comparar ferramentas; é muitas vezes maior do que o primeiro ano de subscrição."
+    },
+    {
+      "type": "h2",
+      "text": "Impressão e equipamento"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Cavaletes ou autocolantes:** 1-3 € por mesa, uma única vez. Uma sala de 20 mesas fica abaixo dos 60 €.",
+        "**Reimprimir:** 0 € se o código apontar para um endereço fixo que controla. É esse todo o argumento a favor de um menu alojado.",
+        "**Dispositivos dos clientes:** 0 €. Usam o próprio telemóvel e não instalam nada.",
+        "**Ecrã de cozinha:** 0 € se usar um tablet que já tem. O [ecrã de cozinha](route:/kitchen-display) corre no navegador, por isso um tablet de há cinco anos chega.",
+        "**Wi-Fi:** vale a pena verificar. Se nas mesas do fundo não houver sinal, o menu não carrega, e isso é um problema de instalação que nenhum software resolve."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Exemplo com números: um bistrô de 20 mesas"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Rubrica",
+        "Ano 1",
+        "Ano 2"
+      ],
+      "rows": [
+        [
+          "Subscrição a 9,90 €/mês",
+          "118,80 €",
+          "118,80 €"
+        ],
+        [
+          "Arranque do menu (importação por digitalização)",
+          "~5 € do seu tempo",
+          "0 €"
+        ],
+        [
+          "Cavaletes QR, 20 mesas",
+          "40 €",
+          "0 €"
+        ],
+        [
+          "Alterações ao menu, 6 por ano",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "Traduções, 4 idiomas",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "**Total**",
+          "**≈164 €**",
+          "**≈119 €**"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Para comparar, uma tiragem de menus em papel plastificado para a mesma sala fica normalmente entre 150 e 400 €, e a maioria dos espaços faz três a seis por ano. O menu digital sai geralmente mais barato logo no primeiro ano, antes de contar tudo o que o papel não faz."
+    },
+    {
+      "type": "h2",
+      "text": "Onde os custos disparam de facto"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Preço por espaço num grupo.** Cinco espaços a 30 € cada são 1.800 € por ano. Pergunte por tarifas multiespaço antes de assinar por um.",
+        "**Comissão por pedido.** 3% sobre 12.000 € de pedidos QR por mês são 360 € mensais — trinta vezes uma subscrição fixa.",
+        "**Processamento de pagamentos.** É separado do fornecedor do menu e inevitável se cobrar com cartão à mesa. Compare com o que o seu terminal já cobra.",
+        "**Ecrãs digitais de menu.** Os ecrãs atrás do balcão são um produto completamente diferente — equipamento, montagem e software de sinalética empurram isso para os milhares. Um menu QR no telemóvel do cliente evita tudo isso."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Antes de comparar preços, aponte o seu volume mensal de pedidos por QR. Se estiver perto de zero, os modelos por comissão são os mais baratos. Acima de uns 300-500 € de pedidos por mês, a subscrição fixa ganha quase sempre."
+    },
+    {
+      "type": "h2",
+      "text": "O grátis alguma vez chega?"
+    },
+    {
+      "type": "p",
+      "text": "Às vezes. Uma banca sazonal com oito pratos e preços fixos não precisa mesmo de subscrição. Mas leia o que \"grátis\" significa em cada caso: publicidade mostrada aos seus clientes, um código que morre no fim do período experimental ou um menu que não pode exportar são custos reais que apenas não aparecem na fatura. Passámo-los um a um em [quanto custa realmente um menu QR grátis](blog:free-qr-code-menu)."
+    },
+    {
+      "type": "cta",
+      "heading": "Veja o preço todo antes de decidir",
+      "text": "Desde 9,90 € por mês e por espaço, sem comissão por pedido, 14 dias grátis e sem cartão.",
+      "buttonLabel": "Ver preços",
+      "routeKey": "/pricing"
+    },
+    {
+      "type": "faq",
+      "heading": "Perguntas frequentes",
+      "items": [
+        {
+          "q": "Quanto custa por mês um menu com código QR?",
+          "a": "As ferramentas de subscrição fixa andam geralmente entre 10 e 40 € por espaço e por mês. O IQ Rest começa em 9,90 € sem comissão por pedido."
+        },
+        {
+          "q": "Existe algum menu com código QR grátis?",
+          "a": "Sim, vários — normalmente financiados pela marca do fornecedor mostrada aos clientes ou limitando-o a um PDF. Servem para um menu pequeno e estático e tornam-se caros por outras vias assim que precisa de atualizações, idiomas ou pedidos."
+        },
+        {
+          "q": "Paga-se por mesa ou por restaurante?",
+          "a": "Com o IQ Rest, por restaurante — mesas e códigos QR ilimitados. Confirme isto antes de assinar em qualquer lado, porque o preço por mesa ou por utilizador escala muito mal."
+        },
+        {
+          "q": "Há taxa de adesão?",
+          "a": "Não. A importação do menu está incluída e não há nada para instalar, nem para si nem para os seus clientes."
+        },
+        {
+          "q": "E quanto custa um ecrã digital de menu?",
+          "a": "É outra categoria — ecrãs, suportes e software de sinalética, normalmente de centenas a milhares por ecrã mais instalação. Um menu QR usa o telemóvel do cliente e não custa nada em equipamento."
+        }
+      ]
+    }
+  ]
+}

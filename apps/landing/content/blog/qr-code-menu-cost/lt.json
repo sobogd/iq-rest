@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "title": "Kiek iš tikrųjų kainuoja QR meniu | IQ Rest",
+    "description": "Kiek iš tiesų kainuoja meniu su QR kodu: nemokami įrankiai, mėnesinės prenumeratos, kaina už vietą, komisiniai nuo užsakymų ir paslėptas įdiegimo laikas."
+  },
+  "card": {
+    "title": "Kiek iš tikrųjų kainuoja QR meniu (įskaitant tai, ko niekas jums neįkainoja)",
+    "excerpt": "Kainų puslapiai rodo vieną skaičių. Jūsų tikrosios išlaidos apima suvedimo laiką, kainą už vietą, komisinius nuo užsakymų ir spaudą. Štai visa sąskaita."
+  },
+  "h1": "Kiek kainuoja meniu su QR kodu?",
+  "intro": "Reklamuojamas skaičius retai yra tas, kurį mokate. Skaitmeninių meniu kainodara skyla į keturis modelius, ir tai, kuriame esate, svarbiau už antraštėje esančią sumą: 0 € įrankis, imantis komisinius nuo užsakymo, per mėnesį gali kainuoti brangiau nei 20 € prenumerata. Štai kaip apskaičiuoti savo tikrąjį skaičių.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Keturi kainodaros modeliai"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Modelis",
+        "Įprasta kaina",
+        "Kam tinka",
+        "Kabliukas"
+      ],
+      "rows": [
+        [
+          "Nemokamas QR generatorius + PDF",
+          "0 €",
+          "Meniu, kuris niekada nesikeičia",
+          "Kodų galiojimas gali baigtis; PDF telefone neįskaitomas"
+        ],
+        [
+          "Nemokamas įrankis su reklama",
+          "0 €",
+          "Idėjai išbandyti",
+          "Tiekėjo ženklas ar reklamos, rodomos jūsų svečiams"
+        ],
+        [
+          "Fiksuota prenumerata",
+          "10-40 € už vietą per mėnesį",
+          "Daugumai restoranų",
+          "Patikrinkite, ar tai už vietą, ar už naudotoją"
+        ],
+        [
+          "Komisiniai nuo užsakymų",
+          "Dažnai % nuo užsakymo",
+          "Labai mažiems kiekiams",
+          "Išlaidos auga kaip tik tada, kai auga verslas"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "IQ Rest yra trečioje eilutėje: **nuo 9,90 € per mėnesį už vietą**, be komisinių nuo užsakymų, 14 dienų nemokamai be kortelės. Imame mokestį už įstaigą, o ne už padavėją, nes mokestis už naudotoją baudžia būtent tas įstaigas, kuriose personalo kaita didžiausia."
+    },
+    {
+      "type": "h2",
+      "text": "Išlaidos, kurias visi pamiršta: suvesti meniu"
+    },
+    {
+      "type": "p",
+      "text": "Surinkti 80 pozicijų su kainomis, aprašymais ir kategorijomis užtrunka nuo dviejų iki keturių valandų. Prie visos vadovo valandos kainos tai realūs 40-100 €, kuriuos išleidžiate dar prieš meniu atsirandant — ir išleidžiate vėl kitą sezoną, jei įrankis daro masinį redagavimą kančia."
+    },
+    {
+      "type": "p",
+      "text": "Todėl meniu importas reiškia daugiau, nei skamba. IQ Rest perskaito jūsų popierinio meniu nuotrauką ir sukuria pozicijas automatiškai, todėl ta pusė dienos virsta maždaug penkiomis minutėmis. Skaičiuokite įdiegimo laiką, kai lyginate įrankius; jis dažnai sveria daugiau nei pirmieji prenumeratos metai."
+    },
+    {
+      "type": "h2",
+      "text": "Spauda ir įranga"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Stalo stoveliai ar lipdukai:** 1-3 € už staliuką, vienkartinai. Salė su 20 staliukų telpa į mažiau nei 60 €.",
+        "**Perspausdinimas:** 0 €, jei kodas veda į pastovų adresą, kurį kontroliuojate. Būtent tame ir slypi visas argumentas už talpinamą meniu.",
+        "**Svečių įrenginiai:** 0 €. Svečiai naudoja savo telefonus ir nieko nediegia.",
+        "**Ekranas virtuvėje:** 0 €, jei panaudosite planšetę, kurią jau turite. [Virtuvės ekranas](route:/kitchen-display) veikia naršyklėje, tad penkerių metų planšetės pakanka.",
+        "**Wi-Fi:** verta patikrinti. Jei prie tolimiausių staliukų nėra ryšio, meniu neįsikelia, o tai infrastruktūros problema, kurios neišsprendžia jokia programinė įranga."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Skaičiavimo pavyzdys: bistro su 20 staliukų"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Straipsnis",
+        "1 metai",
+        "2 metai"
+      ],
+      "rows": [
+        [
+          "Prenumerata po 9,90 €/mėn.",
+          "118,80 €",
+          "118,80 €"
+        ],
+        [
+          "Meniu įdiegimas (importas nuskaitant)",
+          "~5 € jūsų laiko",
+          "0 €"
+        ],
+        [
+          "QR stalo stoveliai, 20 staliukų",
+          "40 €",
+          "0 €"
+        ],
+        [
+          "Meniu pakeitimai, 6 per metus",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "Vertimai, 4 kalbos",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "**Iš viso**",
+          "**≈164 €**",
+          "**≈119 €**"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Palyginimui: vienas laminuotų popierinių meniu tiražas tai pačiai salei paprastai kainuoja nuo 150 iki 400 €, o dauguma įstaigų jį daro tris–šešis kartus per metus. Skaitmeninis meniu paprastai pigesnis jau pirmaisiais metais, dar neįskaičiavus nieko, ko popierius nemoka."
+    },
+    {
+      "type": "h2",
+      "text": "Kur išlaidos iš tikrųjų šauna aukštyn"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Kaina už vietą tinkle.** Penkios įstaigos po 30 € – tai 1800 € per metus. Pasiteiraukite kelių vietų tarifų prieš pasirašydami už vieną.",
+        "**Komisiniai nuo užsakymų.** 3% nuo 12 000 € QR užsakymų per mėnesį yra 360 € per mėnesį — trisdešimt kartų daugiau nei fiksuota prenumerata.",
+        "**Mokėjimų apdorojimas.** Jis atskiras nuo meniu tiekėjo ir neišvengiamas, jei prie staliuko priimate korteles. Palyginkite su tuo, ką jau ima jūsų terminalas.",
+        "**Skaitmeninės meniu lentos.** Ekranai už baro yra visiškai kitas produktas — įranga, montavimas ir signage programinė įranga nustumia tai į tūkstančius. QR meniu svečio telefone viso to išvengia."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Prieš lygindami kainas užsirašykite mėnesinį užsakymų per QR kiekį. Jei jis artimas nuliui, komisiniai modeliai pigiausi. Virš maždaug 300-500 € užsakymų per mėnesį fiksuota prenumerata beveik visada laimi."
+    },
+    {
+      "type": "h2",
+      "text": "Ar nemokamo kada nors pakanka?"
+    },
+    {
+      "type": "p",
+      "text": "Kartais. Sezoniniam kioskui su aštuoniomis pozicijomis ir fiksuotomis kainomis prenumeratos tikrai nereikia. Bet perskaitykite, ką kiekvienu atveju reiškia „nemokamai“: reklamos, rodomos jūsų svečiams, kodas, mirštantis pasibaigus bandomajam laikotarpiui, ar meniu, kurio negalite eksportuoti, yra realios išlaidos, tiesiog nepatenkančios į sąskaitą. Perėjome jas po vieną tekste [kiek iš tikrųjų kainuoja nemokamas QR meniu](blog:free-qr-code-menu)."
+    },
+    {
+      "type": "cta",
+      "heading": "Pamatykite visą kainą prieš spręsdami",
+      "text": "Nuo 9,90 € per mėnesį už vietą, be komisinių nuo užsakymų, 14 dienų nemokamai ir be kortelės.",
+      "buttonLabel": "Žiūrėti kainas",
+      "routeKey": "/pricing"
+    },
+    {
+      "type": "faq",
+      "heading": "Dažnai užduodami klausimai",
+      "items": [
+        {
+          "q": "Kiek per mėnesį kainuoja meniu su QR kodu?",
+          "a": "Fiksuotos prenumeratos įrankiai paprastai kainuoja 10-40 € už vietą per mėnesį. IQ Rest prasideda nuo 9,90 € be komisinių nuo užsakymų."
+        },
+        {
+          "q": "Ar yra nemokamas meniu su QR kodu?",
+          "a": "Taip, keli — paprastai finansuojami tiekėjo ženklu, kurį mato jūsų svečiai, arba apribojant jus PDF failu. Mažam, nekintančiam meniu jie tinka ir pabrangsta kitais būdais, vos prireikia atnaujinimų, kalbų ar užsakymų."
+        },
+        {
+          "q": "Mokama už staliuką ar už restoraną?",
+          "a": "IQ Rest atveju už restoraną — staliukai ir QR kodai neriboti. Patikrinkite tai prieš bet kur pasirašydami, nes kaina už staliuką ar naudotoją skaliuojasi labai prastai."
+        },
+        {
+          "q": "Ar yra prijungimo mokestis?",
+          "a": "Ne. Meniu importas įskaičiuotas, ir nieko diegti nereikia nei jums, nei jūsų svečiams."
+        },
+        {
+          "q": "O kiek kainuoja skaitmeninė meniu lenta?",
+          "a": "Tai kita kategorija — ekranai, laikikliai ir signage programinė įranga, paprastai šimtai ar tūkstančiai už ekraną plius montavimas. QR meniu naudoja svečio telefoną ir įrangai nekainuoja nieko."
+        }
+      ]
+    }
+  ]
+}

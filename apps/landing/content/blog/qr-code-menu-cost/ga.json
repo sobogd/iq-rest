@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "title": "Cad a chosnaíonn biachlár QR i ndáiríre | IQ Rest",
+    "description": "An costas fírinneach ar bhiachlár le cód QR: uirlisí saor in aisce, síntiúis mhíosúla, praghas in aghaidh an ionaid, coimisiúin ar orduithe agus an t-am socraithe."
+  },
+  "card": {
+    "title": "Cad a chosnaíonn biachlár QR i ndáiríre (na míreanna nach luaitear san áireamh)",
+    "excerpt": "Taispeánann leathanaigh praghsanna figiúr amháin. Áirítear i do chostas fíor an t-am iontrála, an praghas in aghaidh an ionaid, coimisiúin ar orduithe agus priontáil. Seo an cuntas iomlán."
+  },
+  "h1": "Cé mhéad a chosnaíonn biachlár le cód QR?",
+  "intro": "Is annamh gurb é an figiúr fógraithe an ceann a íocann tú. Roinneann praghsáil biachlár digiteach ina ceithre mhúnla, agus is tábhachtaí cén ceann ina bhfuil tú ná an figiúr sa cheannteideal: uirlis €0 a thógann coimisiún in aghaidh an ordaithe, féadann sí níos mó a chosnamh sa mhí ná síntiús €20. Seo mar a oibríonn tú amach do fhigiúr féin.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Na ceithre mhúnla praghsála"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Múnla",
+        "Gnáthphraghas",
+        "Cé dó a oireann",
+        "An cleas"
+      ],
+      "rows": [
+        [
+          "Gineadóir QR saor + PDF",
+          "€0",
+          "Biachlár nach n-athraíonn riamh",
+          "Féadann cóid dul in éag; tá PDF doléite ar fhón"
+        ],
+        [
+          "Uirlis saor le fógraíocht",
+          "€0",
+          "An smaoineamh a thástáil",
+          "Branda nó fógraí an tsoláthraí os comhair do chuid aíonna"
+        ],
+        [
+          "Síntiús cothrom",
+          "€10-40 in aghaidh an ionaid sa mhí",
+          "Formhór na mbialann",
+          "Seiceáil an in aghaidh an ionaid nó an úsáideora atá sé"
+        ],
+        [
+          "Coimisiún ar orduithe",
+          "Céatadán in aghaidh an ordaithe go minic",
+          "Toirt an-íseal",
+          "Ardaíonn an costas díreach agus an gnó ag fás"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Tá IQ Rest sa tríú ró: **ó €9.90 sa mhí in aghaidh an ionaid**, gan choimisiún ar orduithe, 14 lá saor in aisce gan chárta. Gearraimid ar an ionad, ní ar an bhfreastalaí, mar cuireann muirearú in aghaidh an úsáideora pionós ar na hionaid a bhfuil an t-athrú foirne is mó iontu."
+    },
+    {
+      "type": "h2",
+      "text": "An costas a dhéanann gach duine dearmad air: an biachlár a chur isteach"
+    },
+    {
+      "type": "p",
+      "text": "Tógann sé dhá go ceithre huaire an chloig 80 mír a chlóscríobh le praghsanna, cur síos agus catagóirí. Ar chostas iomlán uaire bainisteora, sin €40-100 fírinneach a chaitheann tú sula bhfuil an biachlár ann ar chor ar bith — agus a chaitheann tú arís an séasúr seo chugainn má dhéanann an uirlis eagarthóireacht mhórchóir pianmhar."
+    },
+    {
+      "type": "p",
+      "text": "Sin an fáth go bhfuil iompórtáil an bhiachláir níos tábhachtaí ná mar a chloiseann sé. Léann IQ Rest grianghraf de do bhiachlár páipéir agus cruthaíonn sé na míreanna go huathoibríoch, rud a dhéanann cúig nóiméad as leathlá. Cuir an t-am socraithe san áireamh agus tú ag cur uirlisí i gcomparáid; is minic gur troime é ná an chéad bhliain síntiúis."
+    },
+    {
+      "type": "h2",
+      "text": "Priontáil agus crua-earraí"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Seastáin boird nó greamáin:** €1-3 in aghaidh an bhoird, uair amháin. Fanann seomra le 20 bord faoi bhun €60.",
+        "**Athphriontáil:** €0 má dhíríonn an cód ar sheoladh seasta atá faoi do smacht. Sin an argóint iomlán ar son biachláir óstáilte.",
+        "**Gléasanna na n-aíonna:** €0. Úsáideann siad a bhfón féin agus ní shuiteálann siad rud ar bith.",
+        "**Scáileán cistine:** €0 má úsáideann tú táibléad atá agat cheana. Ritheann an [taispeáint chistine](route:/kitchen-display) sa bhrabhsálaí, mar sin is leor táibléad cúig bliana d'aois.",
+        "**Wi-Fi:** is fiú é a sheiceáil. Mura bhfuil comhartha ag na boird chúil, ní lódálann an biachlár, agus is fadhb suiteála é sin nach réitíonn bogearra ar bith."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Sampla le figiúirí: bistro le 20 bord"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Mír",
+        "Bliain 1",
+        "Bliain 2"
+      ],
+      "rows": [
+        [
+          "Síntiús ag €9.90/mí",
+          "€118.80",
+          "€118.80"
+        ],
+        [
+          "Socrú an bhiachláir (iompórtáil trí scanadh)",
+          "~€5 de do chuid ama",
+          "€0"
+        ],
+        [
+          "Seastáin QR, 20 bord",
+          "€40",
+          "€0"
+        ],
+        [
+          "Athruithe biachláir, 6 sa bhliain",
+          "€0",
+          "€0"
+        ],
+        [
+          "Aistriúcháin, 4 theanga",
+          "€0",
+          "€0"
+        ],
+        [
+          "**Iomlán**",
+          "**≈€164**",
+          "**≈€119**"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Mar chomparáid, cosnaíonn rith priontála amháin de bhiachláir pháipéir lannaithe don seomra céanna €150 go €400 de ghnáth, agus déanann formhór na n-áiteanna trí cinn go sé cinn sa bhliain. Bíonn an biachlár digiteach níos saoire de ghnáth sa chéad bhliain féin, sula gcuirtear aon rud nach féidir le páipéar a dhéanamh san áireamh."
+    },
+    {
+      "type": "h2",
+      "text": "Cá n-ardaíonn na costais i ndáiríre"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Praghas in aghaidh an ionaid i ngrúpa.** Cúig ionad ar €30 an ceann, sin €1,800 sa bhliain. Fiafraigh faoi rátaí il-ionaid sula síníonn tú do cheann amháin.",
+        "**Coimisiún ar orduithe.** 3% ar €12,000 d'orduithe QR sa mhí, sin €360 sa mhí — tríocha uair síntiús cothrom.",
+        "**Próiseáil íocaíochtaí.** Tá sé scartha ó sholáthraí an bhiachláir agus dosheachanta má ghlacann tú cárta ag an mbord. Cuir i gcomparáid é leis an méid a ghearrann do theirminéal cheana.",
+        "**Cláir bhiachláir dhigiteacha.** Táirge go hiomlán difriúil is ea na scáileáin taobh thiar den chuntar — crua-earraí, feistiú agus bogearraí comharthaíochta, rud a bhrúnn sin isteach sna mílte. Seachnaíonn biachlár QR ar fhón an aoi é sin ar fad."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Sula gcuireann tú praghsanna i gcomparáid, scríobh síos do thoirt míosúil orduithe QR. Má tá sí gar do náid, is iad na múnlaí coimisiúin is saoire. Os cionn thart ar €300-500 d'orduithe sa mhí, buann síntiús cothrom beagnach i gcónaí."
+    },
+    {
+      "type": "h2",
+      "text": "An leor saor in aisce riamh?"
+    },
+    {
+      "type": "p",
+      "text": "Uaireanta. Níl síntiús ag teastáil i ndáiríre ó chaifé séasúrach le hocht mír agus praghsanna seasta. Ach léigh cad is brí le \"saor in aisce\" i ngach cás: fógraí os comhair do chuid aíonna, cód a fhaigheann bás nuair a chríochnaíonn an tréimhse trialach, nó biachlár nach féidir leat a easpórtáil — is fíorchostais iad sin nach mbíonn ar an sonrasc. Chuamar tríothu ceann ar cheann in [an méid a chosnaíonn biachlár QR saor in aisce i ndáiríre](blog:free-qr-code-menu)."
+    },
+    {
+      "type": "cta",
+      "heading": "Féach ar an bpraghas iomlán sula gcinneann tú",
+      "text": "Ó €9.90 sa mhí in aghaidh an ionaid, gan choimisiún ar orduithe, 14 lá saor in aisce agus gan chárta.",
+      "buttonLabel": "Féach ar na praghsanna",
+      "routeKey": "/pricing"
+    },
+    {
+      "type": "faq",
+      "heading": "Ceisteanna coitianta",
+      "items": [
+        {
+          "q": "Cé mhéad a chosnaíonn biachlár le cód QR sa mhí?",
+          "a": "De ghnáth bíonn uirlisí síntiúis chothroim idir €10 agus €40 in aghaidh an ionaid sa mhí. Tosaíonn IQ Rest ag €9.90 gan choimisiún ar orduithe."
+        },
+        {
+          "q": "An bhfuil biachlár QR saor in aisce ann?",
+          "a": "Tá, roinnt mhaith — maoinithe de ghnáth le branda an tsoláthraí os comhair na n-aíonna nó trí thú a theorannú do PDF. Oibríonn siad do bhiachlár beag seasta agus éiríonn siad costasach ar bhealaí eile chomh luath is a bhíonn nuashonruithe, teangacha nó orduithe uait."
+        },
+        {
+          "q": "An íocaim in aghaidh an bhoird nó in aghaidh na bialainne?",
+          "a": "Le IQ Rest, in aghaidh na bialainne — tá boird agus cóid QR gan teorainn. Seiceáil é sin sula síníonn tú áit ar bith, mar scálaíonn praghsáil in aghaidh boird nó úsáideora go dona."
+        },
+        {
+          "q": "An bhfuil táille socraithe ann?",
+          "a": "Níl. Tá iompórtáil an bhiachláir san áireamh, agus níl aon rud le suiteáil, duitse ná do do chuid aíonna."
+        },
+        {
+          "q": "Cé mhéad a chosnaíonn clár biachláir digiteach ina ionad sin?",
+          "a": "Catagóir eile atá ann — scáileáin, feistis agus bogearraí comharthaíochta, na céadta go na mílte in aghaidh an scáileáin de ghnáth móide feistiú. Úsáideann biachlár QR fón an aoi agus ní chosnaíonn sé faic i gcrua-earraí."
+        }
+      ]
+    }
+  ]
+}

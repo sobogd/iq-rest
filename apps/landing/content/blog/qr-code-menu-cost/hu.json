@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "title": "Mennyibe kerül valójában a QR étlap | IQ Rest",
+    "description": "Mennyibe kerül tényleg egy QR kódos étlap: ingyenes eszközök, havidíjak, egységenkénti ár, rendelési jutalékok és a rejtett beüzemelési idő."
+  },
+  "card": {
+    "title": "Mennyibe kerül valójában egy QR étlap (azokkal a tételekkel együtt, amiket senki nem áraz meg)",
+    "excerpt": "Az árazási oldalak egy számot mutatnak. A valós költséged tartalmazza a beviteli időt, az egységenkénti árat, a rendelési jutalékot és a nyomdát. Íme a teljes számla."
+  },
+  "h1": "Mennyibe kerül egy QR kódos étlap?",
+  "intro": "A hirdetett szám ritkán az, amit fizetsz. A digitális étlapok árazása négy modellre bomlik, és az számít jobban, hogy melyikben vagy, nem a főcímben szereplő összeg: egy 0 eurós eszköz, ami rendelésenként jutalékot von le, havonta drágább lehet egy 20 eurós előfizetésnél. Így számold ki a saját valós számodat.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "A négy árazási modell"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Modell",
+        "Szokásos ár",
+        "Kinek való",
+        "A bökkenő"
+      ],
+      "rows": [
+        [
+          "Ingyenes QR generátor + PDF",
+          "0 €",
+          "Étlap, ami sosem változik",
+          "A kódok lejárhatnak; a PDF telefonon olvashatatlan"
+        ],
+        [
+          "Ingyenes, hirdetéssel támogatott eszköz",
+          "0 €",
+          "Az ötlet tesztelése",
+          "A szolgáltató márkája vagy hirdetései a vendégeid előtt"
+        ],
+        [
+          "Fix előfizetés",
+          "Egységenként 10-40 € havonta",
+          "A legtöbb étteremnek",
+          "Nézd meg, egységenként vagy felhasználónként számol-e"
+        ],
+        [
+          "Jutalék a rendelésekből",
+          "Gyakran % rendelésenként",
+          "Nagyon kis forgalomnak",
+          "A költség épp akkor nő, amikor az üzlet"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Az IQ Rest a harmadik sorban van: **egységenként havi 9,90 eurótól**, rendelési jutalék nélkül, 14 nap ingyen, kártya nélkül. A helyet számlázzuk, nem a pincért, mert a felhasználónkénti számlázás pont azokat a helyeket bünteti, ahol a legnagyobb a fluktuáció."
+    },
+    {
+      "type": "h2",
+      "text": "A költség, amit mindenki elfelejt: bevinni az étlapot"
+    },
+    {
+      "type": "p",
+      "text": "80 tételt begépelni árral, leírással és kategóriával két–négy óra. Egy üzletvezető teljes órabérén ez valós 40-100 €, amit még azelőtt költesz el, hogy az étlap létezne — és jövő szezonban újra elköltöd, ha az eszköz kínszenvedéssé teszi a tömeges szerkesztést."
+    },
+    {
+      "type": "p",
+      "text": "Ezért számít az étlapimport többet, mint amennyire hangzik. Az IQ Rest beolvassa a papíralapú étlapod fotóját, és automatikusan létrehozza a tételeket, amitől az a fél nap körülbelül öt perc lesz. Az eszközök összehasonlításakor számold bele a beüzemelési időt; gyakran többet nyom, mint az első előfizetői év."
+    },
+    {
+      "type": "h2",
+      "text": "Nyomda és hardver"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Asztali tartók vagy matricák:** asztalonként 1-3 €, egyszeri. Egy 20 asztalos terem 60 euró alatt marad.",
+        "**Újranyomtatás:** 0 €, ha a kód egy általad felügyelt fix címre mutat. Ez a teljes érv az üzemeltetett étlap mellett.",
+        "**A vendégek eszközei:** 0 €. A saját telefonjukat használják, és nem telepítenek semmit.",
+        "**Konyhai képernyő:** 0 €, ha olyan táblagépet használsz, ami már megvan. A [konyhai kijelző](route:/kitchen-display) böngészőben fut, így egy ötéves tablet is elég.",
+        "**Wi-Fi:** érdemes ellenőrizni. Ha a hátsó asztaloknál nincs térerő, az étlap nem tölt be, és ez olyan infrastrukturális gond, amit semmilyen szoftver nem old meg."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Számpélda: egy 20 asztalos bisztró"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Tétel",
+        "1. év",
+        "2. év"
+      ],
+      "rows": [
+        [
+          "Előfizetés 9,90 €/hó",
+          "118,80 €",
+          "118,80 €"
+        ],
+        [
+          "Étlap beüzemelése (beolvasásos import)",
+          "~5 € a saját idődből",
+          "0 €"
+        ],
+        [
+          "QR asztali tartók, 20 asztal",
+          "40 €",
+          "0 €"
+        ],
+        [
+          "Étlapmódosítások, évi 6",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "Fordítások, 4 nyelv",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "**Összesen**",
+          "**≈164 €**",
+          "**≈119 €**"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Összehasonlításul: ugyanennek a teremnek egy adag laminált papíralapú étlap általában 150 és 400 € közé esik, és a legtöbb hely évi három–hat nyomtatást csinál. A digitális étlap rendszerint már az első évben olcsóbb, még mielőtt bármit beszámítanánk abból, amit a papír nem tud."
+    },
+    {
+      "type": "h2",
+      "text": "Hol szalad el igazán a költség"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Egységenkénti ár egy csoportnál.** Öt hely egyenként 30 euróval évi 1800 €. Kérdezz rá a több egységre vonatkozó díjra, mielőtt egyre aláírsz.",
+        "**Rendelési jutalék.** 3% havi 12 000 € QR-rendelésen havi 360 € — harmincszorosa egy fix előfizetésnek.",
+        "**Kártyaelfogadás.** Az étlapszolgáltatótól független és elkerülhetetlen, ha asztalnál kártyát fogadsz el. Vesd össze azzal, amit a terminálod már felszámol.",
+        "**Digitális menütáblák.** A pult mögötti kijelzők teljesen más termék — hardver, szerelés és digital signage szoftver ezres nagyságrendbe tolják. A vendég saját telefonján futó QR étlap mindezt elkerüli."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Mielőtt árakat hasonlítasz össze, írd fel a havi QR-rendelési forgalmadat. Ha nulla közeli, a jutalékos modellek a legolcsóbbak. Nagyjából havi 300-500 € rendelés fölött a fix előfizetés szinte mindig nyer."
+    },
+    {
+      "type": "h2",
+      "text": "Elég valaha az ingyenes?"
+    },
+    {
+      "type": "p",
+      "text": "Néha. Egy szezonális bódénak nyolc tétellel és fix árakkal tényleg nincs szüksége előfizetésre. De olvasd el, mit jelent az „ingyenes” az adott esetben: a vendégeidnek mutatott hirdetések, a próbaidő végén elhaló kód vagy az exportálhatatlan étlap valós költségek, amik csak nem szerepelnek a számlán. Egyesével átvettük őket itt: [mibe kerül valójában egy ingyenes QR étlap](blog:free-qr-code-menu)."
+    },
+    {
+      "type": "cta",
+      "heading": "Nézd meg a teljes árat, mielőtt döntesz",
+      "text": "Egységenként havi 9,90 eurótól, rendelési jutalék nélkül, 14 nap ingyen és kártya nélkül.",
+      "buttonLabel": "Árak megtekintése",
+      "routeKey": "/pricing"
+    },
+    {
+      "type": "faq",
+      "heading": "Gyakori kérdések",
+      "items": [
+        {
+          "q": "Mennyibe kerül havonta egy QR kódos étlap?",
+          "a": "A fix előfizetéses eszközök jellemzően egységenként havi 10-40 € között mozognak. Az IQ Rest 9,90 eurótól indul, rendelési jutalék nélkül."
+        },
+        {
+          "q": "Van ingyenes QR kódos étlap?",
+          "a": "Igen, több is — általában a vendégeknek mutatott szolgáltatói márkából finanszírozva, vagy úgy, hogy PDF-re korlátoznak. Kis, változatlan étlaphoz működnek, és más módon válnak drágává, amint frissítés, nyelvek vagy rendelés kell."
+        },
+        {
+          "q": "Asztalonként vagy éttermenként fizetek?",
+          "a": "Az IQ Restnél éttermenként — az asztalok és a QR kódok korlátlanok. Ezt bárhol ellenőrizd aláírás előtt, mert az asztalonkénti vagy felhasználónkénti árazás rosszul skálázódik."
+        },
+        {
+          "q": "Van beüzemelési díj?",
+          "a": "Nincs. Az étlapimport benne van, és nincs mit telepíteni, sem neked, sem a vendégeidnek."
+        },
+        {
+          "q": "És mennyibe kerül helyette egy digitális menütábla?",
+          "a": "Az másik kategória — kijelzők, tartók és digital signage szoftver, jellemzően több száz vagy több ezer euró kijelzőnként, plusz a szerelés. A QR étlap a vendég telefonját használja, és hardverben semmibe nem kerül."
+        }
+      ]
+    }
+  ]
+}

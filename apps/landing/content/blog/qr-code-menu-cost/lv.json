@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "title": "Cik patiesībā maksā QR ēdienkarte | IQ Rest",
+    "description": "Cik patiešām maksā ēdienkarte ar QR kodu: bezmaksas rīki, ikmēneša abonementi, cena par vietu, komisijas no pasūtījumiem un slēptais ieviešanas laiks."
+  },
+  "card": {
+    "title": "Cik patiesībā maksā QR ēdienkarte (ieskaitot pozīcijas, ko neviens tev neaprēķina)",
+    "excerpt": "Cenu lapas rāda vienu skaitli. Tavas patiesās izmaksas ietver ievades laiku, cenu par vietu, komisijas no pasūtījumiem un druku. Lūk, pilns rēķins."
+  },
+  "h1": "Cik maksā ēdienkarte ar QR kodu?",
+  "intro": "Reklamētais skaitlis reti ir tas, ko maksā. Digitālo ēdienkaršu cenas dalās četros modeļos, un tas, kurā esi, nozīmē vairāk nekā virsraksta summa: rīks par 0 €, kas ņem komisiju no pasūtījuma, mēnesī var izmaksāt dārgāk nekā abonements par 20 €. Lūk, kā aprēķināt savu īsto skaitli.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Četri cenu modeļi"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Modelis",
+        "Ierastā cena",
+        "Kam der",
+        "Āķis"
+      ],
+      "rows": [
+        [
+          "Bezmaksas QR ģenerators + PDF",
+          "0 €",
+          "Ēdienkarte, kas nekad nemainās",
+          "Kodiem var beigties termiņš; PDF telefonā nav salasāms"
+        ],
+        [
+          "Bezmaksas rīks ar reklāmām",
+          "0 €",
+          "Idejas pārbaudei",
+          "Pakalpojuma sniedzēja zīmols vai reklāmas, ko redz tavi viesi"
+        ],
+        [
+          "Fiksēts abonements",
+          "10-40 € par vietu mēnesī",
+          "Lielākajai daļai restorānu",
+          "Pārbaudi, vai tas ir par vietu vai par lietotāju"
+        ],
+        [
+          "Komisija no pasūtījumiem",
+          "Bieži % no pasūtījuma",
+          "Ļoti maziem apjomiem",
+          "Izmaksas aug tieši tad, kad aug bizness"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "IQ Rest ir trešajā rindā: **no 9,90 € mēnesī par vietu**, bez komisijas no pasūtījumiem, 14 dienas bez maksas un bez kartes. Mēs rēķinām par vietu, nevis par viesmīli, jo maksa par lietotāju soda tieši tās vietas, kur personāla mainība ir vislielākā."
+    },
+    {
+      "type": "h2",
+      "text": "Izmaksas, ko visi aizmirst: ievadīt ēdienkarti"
+    },
+    {
+      "type": "p",
+      "text": "Ierakstīt 80 pozīcijas ar cenām, aprakstiem un kategorijām aizņem divas līdz četras stundas. Pie pilnas vadītāja stundas likmes tie ir reāli 40-100 €, ko iztērē pirms ēdienkarte vispār pastāv — un iztērē vēlreiz nākamajā sezonā, ja rīks padara masveida labošanu mokošu."
+    },
+    {
+      "type": "p",
+      "text": "Tāpēc ēdienkartes imports nozīmē vairāk, nekā izklausās. IQ Rest nolasa tavas papīra ēdienkartes fotogrāfiju un izveido pozīcijas automātiski, tā šī pusdiena kļūst par aptuveni piecām minūtēm. Rēķini ieviešanas laiku, kad salīdzini rīkus; tas bieži sver vairāk nekā pirmais abonementa gads."
+    },
+    {
+      "type": "h2",
+      "text": "Druka un aprīkojums"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Galda statīvi vai uzlīmes:** 1-3 € par galdu, vienreiz. Zāle ar 20 galdiem paliek zem 60 €.",
+        "**Atkārtota druka:** 0 €, ja kods norāda uz pastāvīgu adresi, ko tu kontrolē. Tajā arī slēpjas viss arguments par mitinātu ēdienkarti.",
+        "**Viesu ierīces:** 0 €. Viesi izmanto savu telefonu un neko neinstalē.",
+        "**Ekrāns virtuvē:** 0 €, ja izmanto planšeti, kas jau ir. [Virtuves ekrāns](route:/kitchen-display) darbojas pārlūkā, tāpēc pietiek ar piecus gadus vecu planšeti.",
+        "**Wi-Fi:** vērts pārbaudīt. Ja pie tālākajiem galdiem nav signāla, ēdienkarte neielādējas, un tā ir infrastruktūras problēma, ko neviena programmatūra neatrisina."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Aprēķina piemērs: bistro ar 20 galdiem"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Pozīcija",
+        "1. gads",
+        "2. gads"
+      ],
+      "rows": [
+        [
+          "Abonements 9,90 €/mēn.",
+          "118,80 €",
+          "118,80 €"
+        ],
+        [
+          "Ēdienkartes ieviešana (imports no skenēšanas)",
+          "~5 € no tava laika",
+          "0 €"
+        ],
+        [
+          "QR galda statīvi, 20 galdi",
+          "40 €",
+          "0 €"
+        ],
+        [
+          "Ēdienkartes izmaiņas, 6 gadā",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "Tulkojumi, 4 valodas",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "**Kopā**",
+          "**≈164 €**",
+          "**≈119 €**"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Salīdzinājumam: viena laminētu papīra ēdienkaršu tirāža tai pašai zālei parasti maksā no 150 līdz 400 €, un lielākā daļa vietu to dara trīs līdz sešas reizes gadā. Digitālā ēdienkarte parasti izmaksā mazāk jau pirmajā gadā, vēl pirms esi ieskaitījis kaut ko no tā, ko papīrs nespēj."
+    },
+    {
+      "type": "h2",
+      "text": "Kur izmaksas patiešām uzšaujas"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Cena par vietu tīklā.** Piecas vietas pa 30 € ir 1800 € gadā. Pajautā par vairāku vietu tarifiem, pirms paraksti par vienu.",
+        "**Komisija no pasūtījumiem.** 3% no 12 000 € QR pasūtījumu mēnesī ir 360 € mēnesī — trīsdesmit reizes vairāk nekā fiksēts abonements.",
+        "**Maksājumu apstrāde.** Tā ir atsevišķi no ēdienkartes pakalpojuma un nenovēršama, ja pie galda pieņem kartes. Salīdzini ar to, ko jau ņem tavs terminālis.",
+        "**Digitālie ēdienkartes ekrāni.** Ekrāni aiz letes ir pavisam cits produkts — aparatūra, montāža un signage programmatūra to aizstumj tūkstošos. QR ēdienkarte viesa telefonā no tā visa izvairās."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Pirms salīdzini cenas, pieraksti savu mēneša QR pasūtījumu apjomu. Ja tas ir tuvu nullei, komisijas modeļi ir vislētākie. Virs aptuveni 300-500 € pasūtījumu mēnesī fiksēts abonements gandrīz vienmēr uzvar."
+    },
+    {
+      "type": "h2",
+      "text": "Vai bez maksas kādreiz pietiek?"
+    },
+    {
+      "type": "p",
+      "text": "Reizēm. Sezonas kioskam ar astoņām pozīcijām un fiksētām cenām abonements tiešām nav vajadzīgs. Bet izlasi, ko katrā gadījumā nozīmē “bez maksas”: reklāmas, ko redz tavi viesi, kods, kas mirst līdz ar izmēģinājuma beigām, vai ēdienkarte, ko nevari eksportēt, ir reālas izmaksas, kas vienkārši neparādās rēķinā. Tās pa vienai izskatījām rakstā [cik patiesībā maksā bezmaksas QR ēdienkarte](blog:free-qr-code-menu)."
+    },
+    {
+      "type": "cta",
+      "heading": "Apskati visu cenu, pirms izlem",
+      "text": "No 9,90 € mēnesī par vietu, bez komisijas no pasūtījumiem, 14 dienas bez maksas un bez kartes.",
+      "buttonLabel": "Skatīt cenas",
+      "routeKey": "/pricing"
+    },
+    {
+      "type": "faq",
+      "heading": "Biežāk uzdotie jautājumi",
+      "items": [
+        {
+          "q": "Cik mēnesī maksā ēdienkarte ar QR kodu?",
+          "a": "Rīki ar fiksētu abonementu parasti ir 10-40 € par vietu mēnesī. IQ Rest sākas no 9,90 € bez komisijas no pasūtījumiem."
+        },
+        {
+          "q": "Vai ir bezmaksas ēdienkarte ar QR kodu?",
+          "a": "Jā, vairākas — parasti finansētas ar pakalpojuma sniedzēja zīmolu, ko redz viesi, vai ierobežojot tevi līdz PDF. Mazai, nemainīgai ēdienkartei tās der un kļūst dārgas citos veidos, tiklīdz vajag atjauninājumus, valodas vai pasūtīšanu."
+        },
+        {
+          "q": "Maksā par galdu vai par restorānu?",
+          "a": "IQ Rest gadījumā par restorānu — galdi un QR kodi ir neierobežoti. Pārbaudi to, pirms jebkur paraksti, jo cena par galdu vai par lietotāju mērogojas ļoti slikti."
+        },
+        {
+          "q": "Vai ir uzsākšanas maksa?",
+          "a": "Nav. Ēdienkartes imports ir iekļauts, un nekas nav jāinstalē ne tev, ne taviem viesiem."
+        },
+        {
+          "q": "Un cik maksā digitālais ēdienkartes ekrāns?",
+          "a": "Tā ir cita kategorija — ekrāni, stiprinājumi un signage programmatūra, parasti simti līdz tūkstoši par ekrānu plus montāža. QR ēdienkarte izmanto viesa telefonu un aparatūrā nemaksā neko."
+        }
+      ]
+    }
+  ]
+}

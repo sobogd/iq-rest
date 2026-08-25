@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "title": "Vad en QR-meny faktiskt kostar | IQ Rest",
+    "description": "Vad en QR-meny verkligen kostar: gratisverktyg, månadsavgifter, pris per verksamhet, orderprovisioner och den dolda uppstartstiden."
+  },
+  "card": {
+    "title": "Vad en QR-meny faktiskt kostar (inklusive posterna ingen offererar)",
+    "excerpt": "Prissidor visar en siffra. Din verkliga kostnad rymmer uppstartstid, pris per verksamhet, orderprovisioner och tryck. Här är hela räkningen."
+  },
+  "h1": "Vad kostar en QR-meny?",
+  "intro": "Den annonserade siffran är sällan den du betalar. Priser för digitala menyer delar sig i fyra modeller, och vilken du hamnat i betyder mer än rubrikpriset: ett verktyg för 0 € som tar provision på beställningar kan kosta mer per månad än en prenumeration på 20 €. Så räknar du fram din verkliga siffra.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "De fyra prismodellerna"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Modell",
+        "Vanligt pris",
+        "Passar",
+        "Haken"
+      ],
+      "rows": [
+        [
+          "Gratis QR-generator + pdf",
+          "0 €",
+          "En meny som aldrig ändras",
+          "Koder kan sluta gälla; pdf är oläslig i mobilen"
+        ],
+        [
+          "Gratisverktyg med reklam",
+          "0 €",
+          "Att testa idén",
+          "Leverantörens varumärke eller annonser visas för dina gäster"
+        ],
+        [
+          "Fast prenumeration",
+          "10–40 € per verksamhet och månad",
+          "De flesta restauranger",
+          "Kolla om det är per verksamhet eller per användare"
+        ],
+        [
+          "Provision på beställningar",
+          "Ofta en % per order",
+          "Mycket låga volymer",
+          "Kostnaden stiger precis när verksamheten växer"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "IQ Rest ligger på tredje raden: **från 9,90 € per månad och verksamhet**, ingen provision på beställningar, 14 dagar gratis utan kort. Vi tar betalt för stället, inte per servitör, eftersom betalning per användare straffar just de ställen som har störst personalomsättning."
+    },
+    {
+      "type": "h2",
+      "text": "Kostnaden alla glömmer: att få in menyn"
+    },
+    {
+      "type": "p",
+      "text": "Att knappa in 80 rader med priser, beskrivningar och kategorier tar två till fyra timmar. Till en platschefs fulla timkostnad är det reella 40–100 € som du lägger innan menyn ens finns – och lägger igen nästa säsong om verktyget gör massredigering plågsam."
+    },
+    {
+      "type": "p",
+      "text": "Därför betyder menyimport mer än det låter. IQ Rest läser ett foto av din pappersmeny och skapar raderna automatiskt, vilket gör den halvdagen till ungefär fem minuter. Räkna med uppstartstiden när du jämför verktyg; den väger ofta tyngre än första prenumerationsåret."
+    },
+    {
+      "type": "h2",
+      "text": "Tryck och hårdvara"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Bordsryttare eller dekaler:** 1–3 € per bord, en gång. En sal med 20 bord landar under 60 €.",
+        "**Trycka om:** 0 € om koden pekar på en fast adress du styr. Det är hela argumentet för en hostad meny.",
+        "**Gästernas enheter:** 0 €. Gästerna använder sin egen mobil och installerar inget.",
+        "**Köksskärm:** 0 € om du använder en surfplatta du redan har. [Köksdisplayen](route:/kitchen-display) körs i webbläsaren, så en fem år gammal platta räcker.",
+        "**Wifi:** värt att kolla. Om gästerna inte har täckning vid de bortre borden laddar inte menyn, och det är ett installationsproblem som ingen mjukvara löser."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Räkneexempel: en bistro med 20 bord"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Post",
+        "År 1",
+        "År 2"
+      ],
+      "rows": [
+        [
+          "Prenumeration à 9,90 €/mån",
+          "118,80 €",
+          "118,80 €"
+        ],
+        [
+          "Sätta upp menyn (import via skanning)",
+          "~5 € av din tid",
+          "0 €"
+        ],
+        [
+          "QR-bordsryttare, 20 bord",
+          "40 €",
+          "0 €"
+        ],
+        [
+          "Menyändringar, 6 per år",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "Översättningar, 4 språk",
+          "0 €",
+          "0 €"
+        ],
+        [
+          "**Totalt**",
+          "**≈164 €**",
+          "**≈119 €**"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Som jämförelse kostar en tryckomgång laminerade pappersmenyer för samma sal normalt mellan 150 och 400 €, och de flesta ställen gör tre till sex per år. Den digitala menyn är oftast billigare redan år ett, innan man räknat med något av det papper inte klarar."
+    },
+    {
+      "type": "h2",
+      "text": "Var kostnaderna verkligen drar iväg"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Pris per verksamhet i en grupp.** Fem ställen à 30 € blir 1 800 € om året. Fråga om flerställespriser innan du skriver på för ett.",
+        "**Orderprovision.** 3 % på 12 000 € i QR-beställningar per månad är 360 € i månaden – trettio gånger en fast prenumeration.",
+        "**Kortinlösen.** Separat från menyleverantören och oundviklig om du tar kort vid bordet. Jämför med vad din terminal redan tar.",
+        "**Digitala menytavlor.** Skärmarna bakom disken är en helt annan produkt – hårdvara, montage och signage-mjukvara drar upp det i tusentals euro. En QR-meny i gästens egen mobil undviker allt det."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Innan du jämför priser: skriv ner din månatliga volym QR-beställningar. Är den nära noll är provisionsmodeller billigast. Över ungefär 300–500 € i beställningar per månad vinner en fast prenumeration nästan alltid."
+    },
+    {
+      "type": "h2",
+      "text": "Räcker gratis någonsin?"
+    },
+    {
+      "type": "p",
+      "text": "Ibland. En säsongskiosk med åtta rader och fasta priser behöver verkligen ingen prenumeration. Men läs vad \"gratis\" betyder i varje fall: reklam som visas för dina gäster, en kod som dör när provperioden tar slut, eller en meny du inte kan exportera är verkliga kostnader som bara inte står på fakturan. Vi gick igenom dem en och en i [vad en gratis QR-meny faktiskt kostar](blog:free-qr-code-menu)."
+    },
+    {
+      "type": "cta",
+      "heading": "Se hela priset innan du bestämmer dig",
+      "text": "Från 9,90 € per månad och verksamhet, ingen provision på beställningar, 14 dagar gratis och utan kort.",
+      "buttonLabel": "Se priser",
+      "routeKey": "/pricing"
+    },
+    {
+      "type": "faq",
+      "heading": "Vanliga frågor",
+      "items": [
+        {
+          "q": "Vad kostar en QR-meny per månad?",
+          "a": "Verktyg med fast prenumeration ligger vanligen på 10–40 € per verksamhet och månad. IQ Rest börjar på 9,90 € utan provision på beställningar."
+        },
+        {
+          "q": "Finns det gratis QR-menyer?",
+          "a": "Ja, flera – oftast finansierade med leverantörens varumärke inför dina gäster eller genom att du begränsas till en pdf. De fungerar för en liten, statisk meny och blir dyra på andra sätt så fort du behöver uppdateringar, språk eller beställning."
+        },
+        {
+          "q": "Betalar jag per bord eller per restaurang?",
+          "a": "Med IQ Rest per restaurang – bord och QR-koder är obegränsade. Kontrollera det innan du skriver på någon annanstans, för pris per bord eller per användare skalar dåligt."
+        },
+        {
+          "q": "Finns det någon startavgift?",
+          "a": "Nej. Menyimporten ingår, och det finns inget att installera, varken för dig eller dina gäster."
+        },
+        {
+          "q": "Vad kostar en digital menytavla i stället?",
+          "a": "Det är en annan kategori – skärmar, fästen och signage-mjukvara, normalt hundratals till tusentals euro per skärm plus montage. En QR-meny använder gästens mobil och kostar ingenting i hårdvara."
+        }
+      ]
+    }
+  ]
+}
