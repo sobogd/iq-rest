@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "title": "Gratis QR-meny: vad är faktiskt gratis | IQ Rest",
+    "description": "Gratis QR-menyer finns och vissa duger. Hur de tjänar pengar, vilken gräns du slår i först och när gratis faktiskt är rätt val."
+  },
+  "card": {
+    "title": "Gratis QR-menyer: vad som faktiskt är gratis och vad du betalar för sedan",
+    "excerpt": "Ingen hostar din meny för ingenting. Här är de fem sätten gratis QR-menyverktyg tjänar pengar, vilka gränser du slår i först, och fallen där gratis faktiskt räcker."
+  },
+  "h1": "Gratis QR-meny: vad du får och vad det kostar sedan",
+  "intro": "Sök på gratis QR-meny och du hittar dussintals verktyg. Vissa är fullt användbara. Men hosting, bandbredd och support kostar leverantören pengar varje månad, så frågan är inte om du betalar utan hur. Här är de fem affärsmodellerna bakom ordet \"gratis\" – och den du troligen sitter i.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "1. Gratis kod, sedan slutar koden gälla"
+    },
+    {
+      "type": "p",
+      "text": "Den vanligaste fällan. QR-generatorer erbjuder **dynamiska** koder: koden pekar på deras domän, som skickar vidare till din meny. Den vidarebefordringen är den betalda produkten. När provperioden tar slut går koden inte sönder högljutt; den börjar visa en uppgraderingssida för dina gäster, eller leder ingenstans."
+    },
+    {
+      "type": "p",
+      "text": "Du får veta det av en gäst, mitt i passet, med 20 tryckta bordsryttare i salen. Att trycka om är den billiga delen; den dyra är veckan av gäster som skannade och inte fick något."
+    },
+    {
+      "type": "note",
+      "text": "En **statisk** QR-kod bär din adress i sig och kan aldrig sluta gälla, eftersom inget ligger emellan. Priset är att adressen är fast för alltid. Erbjuder verktyget bara dynamiska koder är det signalen."
+    },
+    {
+      "type": "h2",
+      "text": "2. Gratis för dig, reklam för dina gäster"
+    },
+    {
+      "type": "p",
+      "text": "Vissa verktyg finansierar gratisnivån med sitt eget varumärke, en uppgraderingsbanner eller en \"skapa din egen meny\"-knapp under din dessertlista. Din gäst skannar en kod på ditt bord och det första hen ser är någon annans marknadsföring. Inte livsfarligt, men du hyr ut måltidens mest uppmärksamma ögonblick till en tredje part."
+    },
+    {
+      "type": "h2",
+      "text": "3. Gratis meny, betalt för allt annat"
+    },
+    {
+      "type": "p",
+      "text": "Menyn visas gratis och varje sak du behöver därefter är en betald nivå: mer än 30 rader, ett andra språk, att ta bort varumärket, bilder, mer än en QR-kod. Listan är byggd så att en riktig restaurang passerar minst en gräns första månaden. Kolla rad- och språkgränserna innan du lägger två timmar på att knappa in menyn."
+    },
+    {
+      "type": "h2",
+      "text": "4. Gratis meny, provision på beställningar"
+    },
+    {
+      "type": "p",
+      "text": "Ärligt och ibland en bra affär: menyn kostar ingenting och leverantören tar en andel av beställningarna som går via den. Vid 300 € i QR-beställningar per månad är 3 % nio euro – helt okej. Vid 12 000 € i månaden blir det 360 €, långt mer än någon fast prenumeration. Modellen blir dyrare precis när den lyckas."
+    },
+    {
+      "type": "h2",
+      "text": "5. Gratis för att det är övergivet"
+    },
+    {
+      "type": "p",
+      "text": "Ett helgprojekt från 2021, fortfarande online, ingen support, inga uppdateringar. Det fungerar tills det inte gör det. Innan du trycker något: kolla om verktygets blogg, ändringslogg eller supportkanal har visat livstecken i år."
+    },
+    {
+      "type": "h2",
+      "text": "Vad gratisnivåer brukar begränsa"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Typisk gratisnivå",
+        "IQ Rest"
+      ],
+      "rows": [
+        [
+          "Rader i menyn",
+          "Ofta 20–50",
+          "Obegränsat"
+        ],
+        [
+          "QR-koder",
+          "Ofta en",
+          "En per bord, obegränsat"
+        ],
+        [
+          "Språk",
+          "Ett",
+          "Automatisk översättning"
+        ],
+        [
+          "Leverantörens varumärke",
+          "Syns för gästerna",
+          "Inget"
+        ],
+        [
+          "Bilder",
+          "Begränsade eller betalda",
+          "På varje rätt"
+        ],
+        [
+          "Slutsåld-knapp",
+          "Sällan",
+          "En knapptryckning"
+        ],
+        [
+          "Beställning",
+          "Nej, eller med provision",
+          "Ingår"
+        ],
+        [
+          "Kodens giltighet",
+          "Beror på planen",
+          "Aldrig – din egen adress"
+        ],
+        [
+          "Pris",
+          "0 €",
+          "Från 9,90 €/mån, 14 dagar gratis"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "När gratis är rätt svar"
+    },
+    {
+      "type": "p",
+      "text": "Det finns riktiga fall. En foodtruck med nio rader och stabila priser. En strandbar öppen tio veckor. En pop-up som testar om någon alls kommer. Om menyn inte ändras, du inte behöver språk och inte tar beställningar via den, är ett gratisverktyg med statisk kod en fullt vettig lösning – och det säger vi hellre än låtsas något annat."
+    },
+    {
+      "type": "p",
+      "text": "Kalkylen vänder i samma stund du har en lång meny, säsongsbyten, turister eller något intresse av [beställning vid bordet](route:/order-taking). Då kostar gratisverktyget dig personaltid och missade beställningar, och de står inte på någon faktura."
+    },
+    {
+      "type": "h2",
+      "text": "Fem frågor innan du trycker"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Är QR-koden statisk eller dynamisk? Om dynamisk: vad händer med den när jag slutar betala?",
+        "Vems varumärke ser min gäst?",
+        "Vad är radgränsen, och vad händer vid rad 51?",
+        "Kan jag exportera min menydata om jag lämnar?",
+        "Finns det ett nummer eller en inkorg där en människa svarar under servicetid?"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Vad du än väljer: tryck en kort webbadress under koden. Det kostar ingenting och är skillnaden mellan en misslyckad skanning och en gäst som ändå får menyn."
+    },
+    {
+      "type": "cta",
+      "heading": "Testa den betalda gratis först",
+      "text": "14 dagar, alla funktioner, utan kort. Skanna din pappersmeny och se helheten fungera innan du bestämmer dig.",
+      "buttonLabel": "Starta gratisperioden",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Vanliga frågor",
+      "items": [
+        {
+          "q": "Kan jag göra en QR-meny gratis?",
+          "a": "Ja. En statisk QR-kod som pekar på en pdf på din egen domän kostar ingenting och slutar aldrig gälla. Det är bara det att en pdf läser sig dåligt i mobilen – varför står i [en QR till en pdf är ingen digital meny](blog:pdf-menu-vs-digital-menu)."
+        },
+        {
+          "q": "Slutar gratis QR-koder gälla?",
+          "a": "Statiska kan inte det, eftersom adressen ligger i själva koden. Dynamiska kan det, eftersom de går via leverantörens domän, och det är just den vidarebefordringen du slutar betala för."
+        },
+        {
+          "q": "Är en gratis provperiod samma sak som en gratisplan?",
+          "a": "Nej. En provperiod är hela produkten under begränsad tid; en gratisplan är en begränsad produkt för alltid. IQ Rest ger 14 dagars prov med allt påslaget, utan kort."
+        },
+        {
+          "q": "Vilken är den billigaste betalda QR-menyn?",
+          "a": "Fasta planer börjar oftast runt 10 € per månad och verksamhet. IQ Rest startar på 9,90 € – hela uppdelningen finns i [vad en QR-meny kostar](blog:qr-code-menu-cost)."
+        },
+        {
+          "q": "Kan jag flytta min meny från ett gratisverktyg till ett betalt?",
+          "a": "Oftast ja, och du behöver sällan knappa in den igen: IQ Rest kan läsa ett foto eller en pdf av den befintliga menyn och bygga upp raderna på ungefär fem minuter."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "title": "Bezplatné QR menu: čo je zadarmo naozaj | IQ Rest",
+    "description": "Bezplatné QR menu existujú a niektoré sú v poriadku. Ako zarábajú, ktorý limit vás zastaví prvý a kedy je zadarmo naozaj správna voľba."
+  },
+  "card": {
+    "title": "Bezplatné QR menu: čo je zadarmo naozaj a za čo zaplatíte neskôr",
+    "excerpt": "Nikto vám menu nehostuje za nič. Tu je päť spôsobov, ako bezplatné nástroje na QR menu zarábajú, na ktoré limity narazíte prvé a prípady, keď zadarmo naozaj stačí."
+  },
+  "h1": "Bezplatné QR menu: čo dostanete a čo to stojí neskôr",
+  "intro": "Vyhľadajte bezplatné QR menu a nájdete desiatky nástrojov. Niektoré sú naozaj použiteľné. Lenže hosting, prenosy a podpora stoja dodávateľa peniaze každý mesiac, takže otázka neznie, či platíte, ale čím. Tu je päť obchodných modelov za slovom \"zadarmo\" – a ten, v ktorom pravdepodobne ste.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "1. Kód zadarmo, a potom kódu vyprší platnosť"
+    },
+    {
+      "type": "p",
+      "text": "Najčastejšia pasca. Generátory QR ponúkajú **dynamické** kódy: kód smeruje na ich doménu, ktorá presmeruje na vaše menu. Práve to presmerovanie je platený produkt. Keď skúšobné obdobie skončí, kód sa nerozbije hlasno; začne vašim hosťom ukazovať stránku s ponukou, alebo nevedie nikam."
+    },
+    {
+      "type": "p",
+      "text": "Dozviete sa to od hosťa, uprostred zmeny, s 20 vytlačenými stojančekmi v sále. Nová tlač je tá lacná časť; drahý je týždeň hostí, ktorí naskenovali a nedostali nič."
+    },
+    {
+      "type": "note",
+      "text": "**Statický** QR kód nesie vašu adresu vnútri a nemôže vypršať, lebo medzi tým nič nie je. Cenou je, že adresa je navždy daná. Ak nástroj ponúka len dynamické kódy, je to ten signál."
+    },
+    {
+      "type": "h2",
+      "text": "2. Zadarmo pre vás, reklama pre vašich hostí"
+    },
+    {
+      "type": "p",
+      "text": "Niektoré nástroje financujú bezplatnú úroveň vlastnou značkou, upsell bannerom alebo tlačidlom \"vytvor si vlastné menu\" pod vaším zoznamom dezertov. Váš hosť naskenuje kód na vašom stole a prvé, čo uvidí, je cudzí marketing. Nie je to fatálne, ale prenajímate najpozornejší okamih jedla tretej strane."
+    },
+    {
+      "type": "h2",
+      "text": "3. Menu zadarmo, všetko ostatné platené"
+    },
+    {
+      "type": "p",
+      "text": "Menu sa zobrazuje zadarmo a každá ďalšia vec, ktorú potrebujete, je platená úroveň: viac než 30 položiek, druhý jazyk, odstránenie značky, fotky, viac než jeden QR kód. Zoznam je navrhnutý tak, aby skutočná reštaurácia prekročila aspoň jednu hranicu v prvom mesiaci. Overte limity položiek a jazykov skôr, než strávite dve hodiny prepisovaním lístka."
+    },
+    {
+      "type": "h2",
+      "text": "4. Menu zadarmo, provízia z objednávok"
+    },
+    {
+      "type": "p",
+      "text": "Poctivé a niekedy výhodné: menu nestojí nič a dodávateľ berie percento z objednávok, ktoré cezeň prejdú. Keď máte 300 € QR objednávok mesačne, 3 % je deväť eur – v pohode. Pri 12 000 € mesačne je to 360 €, oveľa viac než akékoľvek paušálne predplatné. Tento model zdražuje presne vtedy, keď funguje."
+    },
+    {
+      "type": "h2",
+      "text": "5. Zadarmo, lebo je to opustené"
+    },
+    {
+      "type": "p",
+      "text": "Víkendový projekt z roku 2021, stále online, bez podpory a aktualizácií. Funguje, kým neprestane. Skôr než čokoľvek vytlačíte, overte, či blog, changelog alebo podpora nástroja tento rok prejavili známky života."
+    },
+    {
+      "type": "h2",
+      "text": "Čo bezplatné úrovne zvyčajne obmedzujú"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Typická bezplatná úroveň",
+        "IQ Rest"
+      ],
+      "rows": [
+        [
+          "Položiek v menu",
+          "Často 20-50",
+          "Bez obmedzenia"
+        ],
+        [
+          "QR kódy",
+          "Často jeden",
+          "Jeden na stôl, bez obmedzenia"
+        ],
+        [
+          "Jazyky",
+          "Jeden",
+          "Automatický preklad"
+        ],
+        [
+          "Značka dodávateľa",
+          "Viditeľná hosťom",
+          "Žiadna"
+        ],
+        [
+          "Fotky",
+          "Obmedzené alebo platené",
+          "Pri každom jedle"
+        ],
+        [
+          "Prepínač vypredané",
+          "Zriedka",
+          "Jedno ťuknutie"
+        ],
+        [
+          "Objednávanie",
+          "Nie, alebo s províziou",
+          "V cene"
+        ],
+        [
+          "Vypršanie kódu",
+          "Podľa tarifu",
+          "Nikdy – vaša vlastná adresa"
+        ],
+        [
+          "Cena",
+          "0 €",
+          "Od 9,90 €/mes., 14 dní zadarmo"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kedy je zadarmo správna odpoveď"
+    },
+    {
+      "type": "p",
+      "text": "Reálne prípady existujú. Food truck s deviatimi položkami a stabilnými cenami. Plážový bar otvorený desať týždňov. Pop-up, ktorý skúša, či vôbec niekto príde. Ak sa lístok nemení, jazyky nepotrebujete a objednávky cezeň neberiete, bezplatný nástroj so statickým kódom je úplne rozumné riešenie – a radšej to povieme, než by sme predstierali opak."
+    },
+    {
+      "type": "p",
+      "text": "Rovnica sa otočí vo chvíli, keď máte dlhý lístok, sezónne zmeny, turistov alebo akýkoľvek záujem o [objednávanie od stola](route:/order-taking). Od tej chvíle vás bezplatný nástroj stojí čas personálu a stratené objednávky, a tie nie sú na žiadnej faktúre."
+    },
+    {
+      "type": "h2",
+      "text": "Päť otázok pred tlačou"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Je QR kód statický, alebo dynamický? Ak dynamický, čo sa s ním stane, keď prestanem platiť?",
+        "Čiu značku vidí môj hosť?",
+        "Aký je limit položiek a čo sa stane pri položke 51?",
+        "Môžem si dáta svojho menu vyexportovať, keď odídem?",
+        "Existuje telefón alebo schránka, kde v prevádzkovom čase odpovedá človek?"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Nech si vyberiete čokoľvek, vytlačte pod kód krátku adresu. Nestojí to nič a je to rozdiel medzi neúspešným naskenovaním a hosťom, ktorý sa k menu aj tak dostane."
+    },
+    {
+      "type": "cta",
+      "heading": "Najprv vyskúšajte platené zadarmo",
+      "text": "14 dní, plná funkčnosť, bez karty. Naskenujte svoj papierový lístok a pozrite sa, ako celok funguje, než sa rozhodnete.",
+      "buttonLabel": "Spustiť skúšobné obdobie",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Časté otázky",
+      "items": [
+        {
+          "q": "Môžem vytvoriť menu s QR kódom zadarmo?",
+          "a": "Áno. Statický QR kód smerujúci na PDF na vlastnej doméne nestojí nič a nikdy nevyprší. Len sa PDF na telefóne číta zle – prečo, to je v texte [QR na PDF nie je digitálne menu](blog:pdf-menu-vs-digital-menu)."
+        },
+        {
+          "q": "Vypršia bezplatné QR kódy?",
+          "a": "Statické nemôžu, lebo adresa je vnútri kódu. Dynamické áno, lebo presmerúvajú cez doménu dodávateľa, a práve za to presmerovanie prestanete platiť."
+        },
+        {
+          "q": "Je bezplatná skúšobná verzia to isté ako bezplatný tarif?",
+          "a": "Nie. Skúšobné obdobie je celý produkt na obmedzený čas; bezplatný tarif je obmedzený produkt navždy. IQ Rest ponúka 14 dní skúšky so všetkým zapnutým a bez karty."
+        },
+        {
+          "q": "Aké je najlacnejšie platené QR menu?",
+          "a": "Paušálne tarify obvykle začínajú okolo 10 € mesačne za prevádzku. IQ Rest štartuje na 9,90 € – celý rozpad je v texte [koľko stojí menu s QR kódom](blog:qr-code-menu-cost)."
+        },
+        {
+          "q": "Môžem svoje menu presunúť z bezplatného nástroja do plateného?",
+          "a": "Zvyčajne áno a málokedy ho musíte prepisovať: IQ Rest vie prečítať fotku alebo PDF súčasného lístka a položky znova vytvoriť asi za päť minút."
+        }
+      ]
+    }
+  ]
+}

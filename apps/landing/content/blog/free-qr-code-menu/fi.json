@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "title": "Ilmainen QR-lista: mikä on oikeasti ilmaista | IQ Rest",
+    "description": "Ilmaisia QR-listoja on olemassa ja osa niistä kelpaa. Miten ne tekevät rahaa, mikä raja tulee ensin vastaan ja milloin ilmainen on oikea valinta."
+  },
+  "card": {
+    "title": "Ilmaiset QR-listat: mikä on oikeasti ilmaista ja mistä maksat myöhemmin",
+    "excerpt": "Kukaan ei ylläpidä listaasi ilmaiseksi. Tässä ovat ne viisi tapaa, joilla ilmaiset QR-listatyökalut tekevät rahaa, mitkä rajat tulevat ensin vastaan ja tapaukset joissa ilmainen todella riittää."
+  },
+  "h1": "Ilmainen QR-lista: mitä saat ja mitä se maksaa myöhemmin",
+  "intro": "Hae ilmaista QR-listaa, ja löydät kymmeniä työkaluja. Osa on aidosti käyttökelpoisia. Mutta palvelintila, siirtokapasiteetti ja tuki maksavat toimittajalle rahaa joka kuukausi, joten kysymys ei ole maksatko vaan miten. Tässä ovat ne viisi liiketoimintamallia sanan \"ilmainen\" takana – ja se, jossa todennäköisesti olet.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "1. Ilmainen koodi, sitten koodi vanhenee"
+    },
+    {
+      "type": "p",
+      "text": "Yleisin ansa. QR-generaattorit tarjoavat **dynaamisia** koodeja: koodi osoittaa heidän verkkotunnukseensa, joka ohjaa listaasi. Juuri se ohjaus on maksullinen tuote. Kun kokeilu päättyy, koodi ei hajoa äänekkäästi; se alkaa näyttää asiakkaillesi tilaussivua tai ei johda enää minnekään."
+    },
+    {
+      "type": "p",
+      "text": "Kuulet siitä asiakkaalta, keskellä vuoroa, kun salissa on jo 20 painettua pöytätelinettä. Uudelleenpainatus on halpa osa; kallis on se viikko asiakkaita, jotka skannasivat eivätkä saaneet mitään."
+    },
+    {
+      "type": "note",
+      "text": "**Staattinen** QR-koodi kantaa osoitteesi sisällään eikä voi vanhentua, koska välissä ei ole mitään. Vastineeksi osoite on lukittu ikuisesti. Jos työkalu tarjoaa vain dynaamisia koodeja, se on se merkki."
+    },
+    {
+      "type": "h2",
+      "text": "2. Ilmaista sinulle, mainoksia asiakkaillesi"
+    },
+    {
+      "type": "p",
+      "text": "Osa työkaluista rahoittaa ilmaistason omalla brändillään, lisämyyntibannerilla tai \"luo oma listasi\" -painikkeella jälkiruokalistan alla. Asiakkaasi skannaa koodin sinun pöydässäsi, ja ensimmäinen asia jonka hän näkee on jonkun toisen markkinointia. Ei kohtalokasta, mutta vuokraat aterian tarkkaavaisimman hetken ulkopuoliselle."
+    },
+    {
+      "type": "h2",
+      "text": "3. Lista ilmainen, kaikki muu maksullista"
+    },
+    {
+      "type": "p",
+      "text": "Lista näkyy ilmaiseksi, ja jokainen seuraava tarvitsemasi asia on maksullinen taso: yli 30 riviä, toinen kieli, brändin poistaminen, kuvat, useampi kuin yksi QR-koodi. Lista on rakennettu niin, että oikea ravintola ylittää ainakin yhden rajan ensimmäisen kuukauden aikana. Tarkista rivi- ja kielirajat ennen kuin käytät kaksi tuntia listan näppäilyyn."
+    },
+    {
+      "type": "h2",
+      "text": "4. Lista ilmainen, provisio tilauksista"
+    },
+    {
+      "type": "p",
+      "text": "Rehellinen ja joskus hyvä diili: lista ei maksa mitään, ja toimittaja ottaa prosenttiosuuden sen kautta tehdyistä tilauksista. Jos QR-tilauksia on 300 € kuussa, 3 % on yhdeksän euroa – ihan hyvä. Kun kuukaudessa on 12 000 €, se on 360 €, paljon enemmän kuin mikään kiinteä tilaus. Tämä malli kallistuu juuri silloin kun se onnistuu."
+    },
+    {
+      "type": "h2",
+      "text": "5. Ilmainen, koska se on hylätty"
+    },
+    {
+      "type": "p",
+      "text": "Viikonloppuprojekti vuodelta 2021, yhä verkossa, ei tukea eikä päivityksiä. Toimii kunnes ei toimi. Ennen kuin painat mitään, tarkista onko työkalun blogi, muutosloki tai tukikanava antanut elonmerkkejä tänä vuonna."
+    },
+    {
+      "type": "h2",
+      "text": "Mitä ilmaistasot yleensä rajoittavat"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Tyypillinen ilmaistaso",
+        "IQ Rest"
+      ],
+      "rows": [
+        [
+          "Rivejä listalla",
+          "Usein 20–50",
+          "Rajattomasti"
+        ],
+        [
+          "QR-koodeja",
+          "Usein yksi",
+          "Yksi pöytää kohti, rajattomasti"
+        ],
+        [
+          "Kielet",
+          "Yksi",
+          "Automaattinen käännös"
+        ],
+        [
+          "Toimittajan brändi",
+          "Näkyy asiakkaille",
+          "Ei lainkaan"
+        ],
+        [
+          "Kuvat",
+          "Rajoitettu tai maksullinen",
+          "Jokaisessa annoksessa"
+        ],
+        [
+          "Loppunut-kytkin",
+          "Harvinainen",
+          "Yksi napautus"
+        ],
+        [
+          "Tilaaminen",
+          "Ei, tai provisiolla",
+          "Sisältyy"
+        ],
+        [
+          "Koodin vanheneminen",
+          "Riippuu tilauksesta",
+          "Ei koskaan – oma osoitteesi"
+        ],
+        [
+          "Hinta",
+          "0 €",
+          "Alkaen 9,90 €/kk, 14 päivää ilmaiseksi"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Milloin ilmainen on oikea vastaus"
+    },
+    {
+      "type": "p",
+      "text": "Aitoja tapauksia on. Ruoka-auto, jolla on yhdeksän riviä ja vakaat hinnat. Kymmenen viikkoa auki oleva rantabaari. Pop-up, joka testaa tuleeko kukaan. Jos listasi ei muutu, kieliä ei tarvita eikä tilauksia oteta sen kautta, ilmainen työkalu staattisella koodilla on täysin järkevä ratkaisu – ja sanomme sen mieluummin kuin teeskentelemme muuta."
+    },
+    {
+      "type": "p",
+      "text": "Laskelma kääntyy sillä hetkellä kun sinulla on pitkä lista, kausivaihdoksia, turisteja tai mitä tahansa kiinnostusta [pöydästä tilaamiseen](route:/order-taking). Siitä eteenpäin ilmainen työkalu maksaa sinulle henkilökunnan aikaa ja menetettyjä tilauksia, eivätkä ne näy millään laskulla."
+    },
+    {
+      "type": "h2",
+      "text": "Viisi kysymystä ennen painamista"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Onko QR-koodi staattinen vai dynaaminen? Jos dynaaminen, mitä sille tapahtuu kun lopetan maksamisen?",
+        "Kenen brändin asiakkaani näkee?",
+        "Mikä on riviraja, ja mitä tapahtuu rivillä 51?",
+        "Voinko viedä listani tiedot ulos jos lähden?",
+        "Onko olemassa numeroa tai postilaatikkoa, jossa ihminen vastaa aukioloaikoina?"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Valitsitpa minkä tahansa, tulosta koodin alle lyhyt verkko-osoite. Se ei maksa mitään ja se on ero epäonnistuneen skannauksen ja sen välillä, että asiakas saa listan silti."
+    },
+    {
+      "type": "cta",
+      "heading": "Kokeile ensin maksullista ilmaiseksi",
+      "text": "14 päivää, kaikki toiminnot, ilman korttia. Skannaa paperilistasi ja katso kokonaisuus toiminnassa ennen kuin päätät.",
+      "buttonLabel": "Aloita ilmainen kokeilu",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Usein kysytyt kysymykset",
+      "items": [
+        {
+          "q": "Voinko tehdä QR-ruokalistan ilmaiseksi?",
+          "a": "Kyllä. Staattinen QR-koodi, joka osoittaa omalla verkkotunnuksellasi olevaan pdf-tiedostoon, ei maksa mitään eikä vanhene koskaan. Pdf vain luetaan huonosti puhelimella – miksi, siitä artikkelissa [QR pdf-tiedostoon ei ole digitaalinen ruokalista](blog:pdf-menu-vs-digital-menu)."
+        },
+        {
+          "q": "Vanhenevatko ilmaiset QR-koodit?",
+          "a": "Staattiset eivät voi, koska osoite on itse koodin sisällä. Dynaamiset voivat, koska ne ohjaavat toimittajan verkkotunnuksen kautta, ja juuri siitä ohjauksesta lakkaat maksamasta."
+        },
+        {
+          "q": "Onko ilmainen kokeilu sama asia kuin ilmainen taso?",
+          "a": "Ei. Kokeilu on koko tuote rajoitetun ajan; ilmainen taso on rajoitettu tuote ikuisesti. IQ Rest tarjoaa 14 päivän kokeilun kaikki päällä ja ilman korttia."
+        },
+        {
+          "q": "Mikä on halvin maksullinen QR-lista?",
+          "a": "Kiinteät tasot alkavat yleensä noin 10 eurosta kuussa toimipaikkaa kohti. IQ Rest alkaa 9,90 eurosta – koko erittely on artikkelissa [mitä QR-ruokalista maksaa](blog:qr-code-menu-cost)."
+        },
+        {
+          "q": "Voinko siirtää listani ilmaisesta työkalusta maksulliseen?",
+          "a": "Yleensä kyllä, eikä sitä tarvitse juuri koskaan näppäillä uudelleen: IQ Rest osaa lukea valokuvan tai pdf:n olemassa olevasta listasta ja rakentaa rivit uudelleen noin viidessä minuutissa."
+        }
+      ]
+    }
+  ]
+}

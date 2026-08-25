@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "title": "Meniu QR gratuit: ce e gratis cu adevărat | IQ Rest",
+    "description": "Meniurile QR gratuite există și unele sunt în regulă. Cum fac bani, ce limită te oprește prima și când gratuitul chiar e alegerea potrivită."
+  },
+  "card": {
+    "title": "Meniuri QR gratuite: ce e gratis cu adevărat și pentru ce plătești mai târziu",
+    "excerpt": "Nimeni nu-ți găzduiește meniul degeaba. Iată cele cinci feluri în care fac bani uneltele de meniu QR gratuite, ce limite atingi primele și cazurile în care gratuitul chiar ajunge."
+  },
+  "h1": "Meniu QR gratuit: ce primești și cât costă mai târziu",
+  "intro": "Caută un meniu QR gratuit și vei găsi zeci de unelte. Unele sunt chiar utilizabile. Dar găzduirea, traficul și suportul îl costă bani pe furnizor în fiecare lună, deci întrebarea nu e dacă plătești, ci cu ce. Iată cele cinci modele de afaceri din spatele cuvântului „gratuit” — și acela în care te afli, probabil.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "1. Cod gratuit, apoi codul expiră"
+    },
+    {
+      "type": "p",
+      "text": "Cea mai comună capcană. Generatoarele QR oferă coduri **dinamice**: codul duce la domeniul lor, care redirecționează spre meniul tău. Redirecționarea aceea e produsul cu plată. Când se termină perioada de probă, codul nu se rupe zgomotos; începe să le arate clienților tăi o pagină de upgrade, sau nu mai duce nicăieri."
+    },
+    {
+      "type": "p",
+      "text": "Afli de la un client, în plin serviciu, cu 20 de suporturi deja tipărite în sală. Retipărirea e partea ieftină; cea scumpă e săptămâna de clienți care au scanat și n-au primit nimic."
+    },
+    {
+      "type": "note",
+      "text": "Un cod QR **static** îți poartă adresa în interior și nu poate expira, pentru că nu se interpune nimic. Prețul e că adresa rămâne fixă pentru totdeauna. Dacă unealta oferă doar coduri dinamice, ăsta e semnalul."
+    },
+    {
+      "type": "h2",
+      "text": "2. Gratuit pentru tine, publicitate pentru clienții tăi"
+    },
+    {
+      "type": "p",
+      "text": "Unele unelte finanțează nivelul gratuit cu propria marcă, un banner de upgrade sau un buton „creează-ți meniul” sub lista de deserturi. Clientul tău scanează un cod de pe masa ta și primul lucru pe care îl vede e marketingul altcuiva. Nu e fatal, dar închiriezi unui terț cel mai atent moment al mesei."
+    },
+    {
+      "type": "h2",
+      "text": "3. Meniu gratuit, restul cu plată"
+    },
+    {
+      "type": "p",
+      "text": "Meniul se afișează gratuit și fiecare lucru de care ai nevoie după aceea e un nivel cu plată: peste 30 de poziții, o a doua limbă, scoaterea mărcii, fotografii, mai mult de un cod QR. Lista e gândită ca un restaurant adevărat să treacă de cel puțin o limită în prima lună. Verifică limitele de poziții și limbi înainte să pierzi două ore tastându-ți meniul."
+    },
+    {
+      "type": "h2",
+      "text": "4. Meniu gratuit, comision pe comenzi"
+    },
+    {
+      "type": "p",
+      "text": "Cinstit și uneori o afacere bună: meniul nu costă nimic, iar furnizorul ia un procent din comenzile trecute prin el. La 300 € comenzi QR pe lună, 3% înseamnă nouă euro — în regulă. La 12.000 € pe lună înseamnă 360 €, cu mult peste orice abonament fix. Modelul ăsta se scumpește exact când are succes."
+    },
+    {
+      "type": "h2",
+      "text": "5. Gratuit pentru că e abandonat"
+    },
+    {
+      "type": "p",
+      "text": "Un proiect de weekend din 2021, încă online, fără suport, fără actualizări. Merge până când nu mai merge. Înainte să tipărești ceva, verifică dacă blogul, jurnalul de modificări sau canalul de suport al uneltei a dat semne de viață anul acesta."
+    },
+    {
+      "type": "h2",
+      "text": "Ce limitează de obicei nivelurile gratuite"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Nivel gratuit tipic",
+        "IQ Rest"
+      ],
+      "rows": [
+        [
+          "Poziții în meniu",
+          "Adesea 20-50",
+          "Nelimitate"
+        ],
+        [
+          "Coduri QR",
+          "Adesea unul",
+          "Unul pe masă, nelimitate"
+        ],
+        [
+          "Limbi",
+          "Una",
+          "Traducere automată"
+        ],
+        [
+          "Marca furnizorului",
+          "Vizibilă clienților",
+          "Niciuna"
+        ],
+        [
+          "Fotografii",
+          "Limitate sau cu plată",
+          "La fiecare preparat"
+        ],
+        [
+          "Buton de epuizat",
+          "Rar",
+          "O atingere"
+        ],
+        [
+          "Comenzi",
+          "Nu, sau cu comision",
+          "Incluse"
+        ],
+        [
+          "Expirarea codului",
+          "Depinde de plan",
+          "Niciodată — adresa ta"
+        ],
+        [
+          "Preț",
+          "0 €",
+          "De la 9,90 €/lună, 14 zile gratuit"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Când gratuitul e răspunsul corect"
+    },
+    {
+      "type": "p",
+      "text": "Există cazuri reale. O rulotă cu nouă poziții și prețuri stabile. Un bar de plajă deschis zece săptămâni. Un pop-up care testează dacă vine cineva. Dacă meniul nu se schimbă, nu ai nevoie de limbi și nu iei comenzi prin el, o unealtă gratuită cu un cod static e o soluție perfect rezonabilă, și preferăm s-o spunem decât să pretindem altceva."
+    },
+    {
+      "type": "p",
+      "text": "Socoteala se întoarce în clipa în care ai un meniu lung, schimbări de sezon, turiști sau orice interes pentru [comanda de la masă](route:/order-taking). Din punctul ăla, unealta gratuită te costă timp de personal și comenzi pierdute, care nu apar pe nicio factură."
+    },
+    {
+      "type": "h2",
+      "text": "Cinci întrebări înainte să tipărești"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Codul QR e static sau dinamic? Dacă e dinamic, ce se întâmplă cu el când nu mai plătesc?",
+        "A cui marcă o vede clientul meu?",
+        "Care e limita de poziții și ce se întâmplă la poziția 51?",
+        "Îmi pot exporta datele meniului dacă plec?",
+        "Există un număr sau o adresă unde răspunde un om în timpul serviciului?"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Orice ai alege, tipărește o adresă scurtă sub cod. Nu costă nimic și e diferența dintre o scanare eșuată și un client care tot ajunge la meniu."
+    },
+    {
+      "type": "cta",
+      "heading": "Încearcă întâi gratuit varianta cu plată",
+      "text": "14 zile, toate funcțiile, fără card. Scanează-ți meniul tipărit și vezi ansamblul funcționând înainte să decizi.",
+      "buttonLabel": "Începe perioada gratuită",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Întrebări frecvente",
+      "items": [
+        {
+          "q": "Pot face gratuit un meniu cu cod QR?",
+          "a": "Da. Un cod QR static care duce la un PDF pe propriul tău domeniu nu costă nimic și nu expiră niciodată. Doar că un PDF se citește prost pe telefon — de ce, în [un QR către un PDF nu e meniu digital](blog:pdf-menu-vs-digital-menu)."
+        },
+        {
+          "q": "Expiră codurile QR gratuite?",
+          "a": "Cele statice nu pot, pentru că adresa e în interiorul codului. Cele dinamice da, pentru că redirecționează prin domeniul furnizorului, și exact acea redirecționare încetezi s-o plătești."
+        },
+        {
+          "q": "O perioadă gratuită e același lucru cu un plan gratuit?",
+          "a": "Nu. Perioada de probă e produsul complet pe timp limitat; planul gratuit e un produs limitat pentru totdeauna. IQ Rest oferă 14 zile de probă cu tot pornit și fără card."
+        },
+        {
+          "q": "Care e cel mai ieftin meniu QR cu plată?",
+          "a": "Planurile fixe pornesc în general de la vreo 10 € pe lună per locație. IQ Rest începe la 9,90 € — detalierea completă e în [cât costă un meniu cu cod QR](blog:qr-code-menu-cost)."
+        },
+        {
+          "q": "Pot muta meniul de la o unealtă gratuită la una cu plată?",
+          "a": "De regulă da, și rareori trebuie să-l retastezi: IQ Rest poate citi o fotografie sau un PDF al meniului existent și reface pozițiile în vreo cinci minute."
+        }
+      ]
+    }
+  ]
+}

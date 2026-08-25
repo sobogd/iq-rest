@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "title": "Brezplačen QR jedilnik: kaj je res brezplačno | IQ Rest",
+    "description": "Brezplačni QR jedilniki obstajajo in nekateri so v redu. Kako služijo denar, katera omejitev vas ustavi prva in kdaj je brezplačno res prava izbira."
+  },
+  "card": {
+    "title": "Brezplačni QR jedilniki: kaj je res brezplačno in kaj plačate pozneje",
+    "excerpt": "Nihče vam jedilnika ne gostuje zastonj. Tu je pet načinov, kako brezplačna orodja za QR jedilnik služijo denar, na katere omejitve naletite prve in primeri, ko brezplačno res zadošča."
+  },
+  "h1": "Brezplačen QR jedilnik: kaj dobite in kaj stane pozneje",
+  "intro": "Poiščite brezplačen QR jedilnik in našli boste na desetine orodij. Nekatera so res uporabna. A gostovanje, promet in podpora ponudnika vsak mesec stanejo denar, zato vprašanje ni, ali plačate, ampak s čim. Tu je pet poslovnih modelov za besedo »brezplačno« — in tisti, v katerem ste najverjetneje vi.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "1. Brezplačna koda, nato koda poteče"
+    },
+    {
+      "type": "p",
+      "text": "Najpogostejša past. Generatorji QR ponujajo **dinamične** kode: koda kaže na njihovo domeno, ta pa preusmeri na vaš jedilnik. Prav ta preusmeritev je plačljivi izdelek. Ko se preizkusno obdobje izteče, koda ne poči glasno; vašim gostom začne kazati stran za nadgradnjo ali ne vodi nikamor."
+    },
+    {
+      "type": "p",
+      "text": "Izveste od gosta, sredi izmene, z 20 natisnjenimi stojali v sali. Ponovni tisk je poceni del; drag je teden gostov, ki so skenirali in niso dobili ničesar."
+    },
+    {
+      "type": "note",
+      "text": "**Statična** QR koda nosi vaš naslov v sebi in ne more poteči, ker vmes ni ničesar. Cena je, da je naslov za vedno določen. Če orodje ponuja samo dinamične kode, je to tisti znak."
+    },
+    {
+      "type": "h2",
+      "text": "2. Brezplačno za vas, oglas za vaše goste"
+    },
+    {
+      "type": "p",
+      "text": "Nekatera orodja brezplačno raven financirajo z lastno znamko, pasico za nadgradnjo ali gumbom »ustvari svoj jedilnik« pod vašim seznamom sladic. Vaš gost skenira kodo na vaši mizi in prvo, kar vidi, je tuje trženje. Ni usodno, a najbolj pozoren trenutek obroka oddajate tretji strani."
+    },
+    {
+      "type": "h2",
+      "text": "3. Jedilnik brezplačen, vse drugo plačljivo"
+    },
+    {
+      "type": "p",
+      "text": "Jedilnik se prikaže brezplačno, vsaka naslednja stvar, ki jo potrebujete, pa je plačljiva raven: več kot 30 postavk, drugi jezik, odstranitev znamke, fotografije, več kot ena QR koda. Seznam je zasnovan tako, da prava restavracija v prvem mesecu prestopi vsaj eno mejo. Preverite omejitve postavk in jezikov, preden porabite dve uri za vnos jedilnika."
+    },
+    {
+      "type": "h2",
+      "text": "4. Jedilnik brezplačen, provizija od naročil"
+    },
+    {
+      "type": "p",
+      "text": "Pošteno in včasih dober posel: jedilnik ne stane nič, ponudnik pa vzame odstotek od naročil, ki gredo skozenj. Pri 300 € QR naročil na mesec je 3 % devet evrov — povsem v redu. Pri 12.000 € na mesec je to 360 €, daleč več od katere koli fiksne naročnine. Ta model podraži prav takrat, ko uspe."
+    },
+    {
+      "type": "h2",
+      "text": "5. Brezplačno, ker je zapuščeno"
+    },
+    {
+      "type": "p",
+      "text": "Vikend projekt iz leta 2021, še vedno na spletu, brez podpore in posodobitev. Deluje, dokler ne preneha. Preden karkoli natisnete, preverite, ali je blog, dnevnik sprememb ali kanal podpore tega orodja letos pokazal znak življenja."
+    },
+    {
+      "type": "h2",
+      "text": "Kaj brezplačne ravni običajno omejujejo"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Tipična brezplačna raven",
+        "IQ Rest"
+      ],
+      "rows": [
+        [
+          "Postavke jedilnika",
+          "Pogosto 20-50",
+          "Neomejeno"
+        ],
+        [
+          "QR kode",
+          "Pogosto ena",
+          "Ena na mizo, neomejeno"
+        ],
+        [
+          "Jeziki",
+          "En",
+          "Samodejni prevod"
+        ],
+        [
+          "Znamka ponudnika",
+          "Vidna gostom",
+          "Ni je"
+        ],
+        [
+          "Fotografije",
+          "Omejene ali plačljive",
+          "Pri vsaki jedi"
+        ],
+        [
+          "Stikalo razprodano",
+          "Redko",
+          "En dotik"
+        ],
+        [
+          "Naročanje",
+          "Ne, ali s provizijo",
+          "Vključeno"
+        ],
+        [
+          "Potek kode",
+          "Odvisno od paketa",
+          "Nikoli — vaš naslov"
+        ],
+        [
+          "Cena",
+          "0 €",
+          "Od 9,90 €/mes., 14 dni brezplačno"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kdaj je brezplačno pravi odgovor"
+    },
+    {
+      "type": "p",
+      "text": "Resnični primeri obstajajo. Food truck z devetimi postavkami in stalnimi cenami. Plažni bar, odprt deset tednov. Pop-up, ki preverja, ali sploh kdo pride. Če se jedilnik ne spreminja, jezikov ne potrebujete in prek njega ne sprejemate naročil, je brezplačno orodje s statično kodo povsem smiselna rešitev — in to raje povemo, kot da se pretvarjamo."
+    },
+    {
+      "type": "p",
+      "text": "Račun se obrne v trenutku, ko imate dolg jedilnik, sezonske spremembe, turiste ali kakršno koli zanimanje za [naročanje pri mizi](route:/order-taking). Od te točke naprej vas brezplačno orodje stane časa osebja in izgubljenih naročil, ta pa niso na nobenem računu."
+    },
+    {
+      "type": "h2",
+      "text": "Pet vprašanj pred tiskom"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Je QR koda statična ali dinamična? Če je dinamična, kaj se z njo zgodi, ko neham plačevati?",
+        "Čigavo znamko vidi moj gost?",
+        "Kakšna je omejitev postavk in kaj se zgodi pri postavki 51?",
+        "Ali lahko izvozim podatke svojega jedilnika, če odidem?",
+        "Ali obstaja številka ali predal, kjer v času obratovanja odgovarja človek?"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Karkoli izberete, pod kodo natisnite kratek naslov. Ne stane nič in je razlika med neuspelim skeniranjem in gostom, ki jedilnik vseeno dobi."
+    },
+    {
+      "type": "cta",
+      "heading": "Najprej brezplačno preizkusite plačljivo",
+      "text": "14 dni, vse funkcije, brez kartice. Skenirajte svoj papirnati jedilnik in poglejte celoto v delovanju, preden se odločite.",
+      "buttonLabel": "Začni brezplačno obdobje",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Pogosta vprašanja",
+      "items": [
+        {
+          "q": "Ali lahko jedilnik s QR kodo naredim brezplačno?",
+          "a": "Da. Statična QR koda, ki kaže na PDF na vaši domeni, ne stane nič in nikoli ne poteče. Le PDF se na telefonu slabo bere — zakaj, smo napisali v [QR na PDF ni digitalni jedilnik](blog:pdf-menu-vs-digital-menu)."
+        },
+        {
+          "q": "Ali brezplačne QR kode potečejo?",
+          "a": "Statične ne morejo, ker je naslov v sami kodi. Dinamične lahko, ker preusmerjajo prek ponudnikove domene, in prav to preusmeritev nehate plačevati."
+        },
+        {
+          "q": "Je brezplačno preizkusno obdobje isto kot brezplačen paket?",
+          "a": "Ne. Preizkusno obdobje je celoten izdelek za omejen čas; brezplačen paket je omejen izdelek za vedno. IQ Rest daje 14 dni preizkusa z vsem vklopljenim in brez kartice."
+        },
+        {
+          "q": "Kateri je najcenejši plačljiv QR jedilnik?",
+          "a": "Fiksni paketi se navadno začnejo okoli 10 € na mesec na lokal. IQ Rest se začne pri 9,90 € — celotna razčlenitev je v [koliko stane jedilnik s QR kodo](blog:qr-code-menu-cost)."
+        },
+        {
+          "q": "Ali lahko jedilnik preselim z brezplačnega orodja na plačljivo?",
+          "a": "Običajno da in le redko ga morate znova vnašati: IQ Rest zna prebrati fotografijo ali PDF obstoječega jedilnika in postavke znova sestaviti v približno petih minutah."
+        }
+      ]
+    }
+  ]
+}

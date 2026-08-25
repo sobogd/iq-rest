@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "title": "Carta QR gratuïta: què és gratis de debò | IQ Rest",
+    "description": "Les cartes QR gratuïtes existeixen i algunes van bé. Com guanyen diners, quin límit et frena primer i quan el gratuït és l'opció correcta."
+  },
+  "card": {
+    "title": "Cartes QR gratuïtes: què és gratis de debò i què pagues després",
+    "excerpt": "Ningú no allotja la teva carta per res. Aquestes són les cinc maneres com guanyen diners les eines de carta QR gratuïtes, quins límits toques abans i els casos en què gratis n'hi ha prou de debò."
+  },
+  "h1": "Carta QR gratuïta: què t'emportes i què costa després",
+  "intro": "Busca una carta QR gratuïta i trobaràs desenes d'eines. Algunes es fan servir perfectament. Però l'allotjament, l'amplada de banda i el suport li costen diners al proveïdor cada mes, així que la pregunta no és si pagues, sinó com. Aquests són els cinc models de negoci darrere de \"gratis\", i aquell en què probablement ets.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "1. Codi gratis, i després el codi caduca"
+    },
+    {
+      "type": "p",
+      "text": "El parany més comú. Els generadors de QR ofereixen codis **dinàmics**: el codi apunta al seu domini, que redirigeix a la teva carta. Aquesta redirecció és el producte de pagament. Quan s'acaba la prova, el codi no es trenca de manera sorollosa; comença a mostrar una pàgina d'upgrade als teus clients, o no resol enlloc."
+    },
+    {
+      "type": "p",
+      "text": "T'assabentes per un client, en ple servei, amb 20 cavallets ja impresos a la sala. Reimprimir és la part barata; la cara és la setmana de clients que van escanejar i no van obtenir res."
+    },
+    {
+      "type": "note",
+      "text": "Un codi QR **estàtic** duu la teva adreça a dins i no pot caducar mai, perquè no hi ha res al mig. La contrapartida és que aquesta adreça queda fixada per sempre. Si l'eina només ofereix codis dinàmics, aquest és el senyal."
+    },
+    {
+      "type": "h2",
+      "text": "2. Gratis per a tu, publicitat per als teus clients"
+    },
+    {
+      "type": "p",
+      "text": "Algunes eines financen el pla gratuït amb la seva pròpia marca, un bàner d'upsell o un botó de \"crea la teva carta\" sota la teva llista de postres. El teu client escaneja un codi de la teva taula i el primer que veu és el màrqueting d'un altre. No és fatal, però estàs llogant el moment més atent de l'àpat a un tercer."
+    },
+    {
+      "type": "h2",
+      "text": "3. Carta gratis, tota la resta de pagament"
+    },
+    {
+      "type": "p",
+      "text": "La carta es mostra gratis i cada cosa que necessites després és un pla de pagament: més de 30 plats, un segon idioma, treure la marca, fotos, més d'un codi QR. La llista està dissenyada perquè un restaurant de debò creui almenys una línia el primer mes. Comprova els límits de plats i idiomes abans de dedicar dues hores a teclejar la carta."
+    },
+    {
+      "type": "h2",
+      "text": "4. Carta gratis, comissió sobre les comandes"
+    },
+    {
+      "type": "p",
+      "text": "Honest i de vegades bon tracte: la carta no costa res i el proveïdor s'emporta un percentatge de les comandes fetes a través seu. Si fas 300 € de comandes QR al mes, un 3% són 9 €; perfecte. A 12.000 € al mes són 360 €, molt més que qualsevol subscripció plana. Aquest model s'encareix precisament quan funciona."
+    },
+    {
+      "type": "h2",
+      "text": "5. Gratis perquè està abandonat"
+    },
+    {
+      "type": "p",
+      "text": "Un projecte de cap de setmana del 2021, encara en línia, sense suport ni actualitzacions. Funciona fins que deixa de funcionar. Abans d'imprimir res, comprova si el blog, el registre de canvis o el canal de suport de l'eina ha donat senyals de vida enguany."
+    },
+    {
+      "type": "h2",
+      "text": "Què solen limitar els plans gratuïts"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Pla gratuït típic",
+        "IQ Rest"
+      ],
+      "rows": [
+        [
+          "Plats",
+          "Sovint 20-50",
+          "Il·limitats"
+        ],
+        [
+          "Codis QR",
+          "Sovint un",
+          "Un per taula, il·limitats"
+        ],
+        [
+          "Idiomes",
+          "Un",
+          "Traducció automàtica"
+        ],
+        [
+          "Marca del proveïdor",
+          "Visible per als clients",
+          "Cap"
+        ],
+        [
+          "Fotos",
+          "Limitades o de pagament",
+          "A cada plat"
+        ],
+        [
+          "Botó d'esgotat",
+          "Poc freqüent",
+          "Un toc"
+        ],
+        [
+          "Comandes",
+          "No, o amb comissió",
+          "Incloses"
+        ],
+        [
+          "Caducitat del codi",
+          "Depèn del pla",
+          "Mai: la teva pròpia adreça"
+        ],
+        [
+          "Preu",
+          "0 €",
+          "Des de 9,90 €/mes, 14 dies gratis"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Quan el gratuït és la resposta correcta"
+    },
+    {
+      "type": "p",
+      "text": "Hi ha casos reals. Un food truck amb nou plats i preus estables. Una guingueta de temporada oberta deu setmanes. Un pop-up comprovant si ve algú. Si la teva carta no canvia, no necessites idiomes i no prendràs comandes per allà, una eina gratuïta amb un codi estàtic és un muntatge perfectament assenyat, i preferim dir-ho a fer veure el contrari."
+    },
+    {
+      "type": "p",
+      "text": "L'economia gira en el moment que tens una carta llarga, canvis de temporada, turistes o qualsevol interès a [prendre comandes des de la taula](route:/order-taking). En aquest punt l'eina gratuïta et costa temps de personal i comandes perdudes, que no apareixen a cap factura."
+    },
+    {
+      "type": "h2",
+      "text": "Cinc preguntes abans d'imprimir"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "El codi QR és estàtic o dinàmic? Si és dinàmic, què li passa quan deixo de pagar?",
+        "La marca de qui veu el meu client?",
+        "Quin és el límit de plats, i què passa al plat 51?",
+        "Puc exportar les dades de la meva carta si me'n vaig?",
+        "Hi ha un telèfon o una bústia on respongui una persona en horari de servei?"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Triïs el que triïs, imprimeix una adreça curta sota el codi. No costa res i és la diferència entre un escaneig trencat i un client que tot i així arriba a la carta."
+    },
+    {
+      "type": "cta",
+      "heading": "Prova primer la de pagament, gratis",
+      "text": "14 dies, totes les funcions, sense targeta. Escaneja la teva carta en paper i mira el conjunt funcionant abans de decidir.",
+      "buttonLabel": "Comença la prova gratuïta",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Preguntes freqüents",
+      "items": [
+        {
+          "q": "Puc fer una carta amb codi QR gratis?",
+          "a": "Sí. Un codi QR estàtic que apunti a un PDF al teu propi domini no costa res i no caduca mai. El que passa és que un PDF es llegeix malament al mòbil: ho vam explicar a [un QR a un PDF no és una carta digital](blog:pdf-menu-vs-digital-menu)."
+        },
+        {
+          "q": "Caduquen els codis QR gratuïts?",
+          "a": "Els estàtics no poden, perquè l'adreça va dins del codi. Els dinàmics sí, perquè redirigeixen pel domini del proveïdor, i és justament aquesta redirecció el que deixes de pagar."
+        },
+        {
+          "q": "Una prova gratuïta és el mateix que un pla gratuït?",
+          "a": "No. Una prova és el producte complet durant un temps limitat; un pla gratuït és un producte limitat per sempre. IQ Rest ofereix 14 dies de prova amb tot activat i sense targeta."
+        },
+        {
+          "q": "Quina és la carta QR de pagament més barata?",
+          "a": "Els plans plans solen començar al voltant de 10 € al mes per local. IQ Rest arrenca a 9,90 €: el desglossament complet és a [què costa una carta amb codi QR](blog:qr-code-menu-cost)."
+        },
+        {
+          "q": "Puc moure la meva carta d'una eina gratuïta a una de pagament?",
+          "a": "Normalment sí, i poques vegades l'has de tornar a teclejar: IQ Rest pot llegir una foto o un PDF de la carta existent i reconstruir els plats en uns cinc minuts."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "title": "Ingyenes QR étlap: mi ingyenes valójában | IQ Rest",
+    "description": "Ingyenes QR étlapok léteznek, és van köztük használható. Hogyan keresnek pénzt, melyik korlát fog először, és mikor jó választás tényleg az ingyenes."
+  },
+  "card": {
+    "title": "Ingyenes QR étlapok: mi ingyenes valójában, és miért fizetsz később",
+    "excerpt": "Senki nem tárolja ingyen az étlapodat. Íme az öt mód, ahogy az ingyenes QR étlap eszközök pénzt keresnek, mely korlátokba ütközöl először, és azok az esetek, amikor az ingyenes tényleg elég."
+  },
+  "h1": "Ingyenes QR étlap: mit kapsz, és mibe kerül később",
+  "intro": "Keress rá az ingyenes QR étlapra, és tucatnyi eszközt találsz. Néhány valóban használható. De a tárhely, a sávszélesség és a támogatás minden hónapban pénzbe kerül a szolgáltatónak, tehát a kérdés nem az, hogy fizetsz-e, hanem hogy mivel. Íme az öt üzleti modell az „ingyenes” szó mögött — és az, amelyikben valószínűleg vagy.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "1. Ingyenes kód, aztán a kód lejár"
+    },
+    {
+      "type": "p",
+      "text": "A leggyakoribb csapda. A QR generátorok **dinamikus** kódot kínálnak: a kód az ő domainjükre mutat, onnan irányít át az étlapodra. Ez az átirányítás maga a fizetős termék. Amikor a próbaidő lejár, a kód nem hangosan törik el; elkezd a vendégeidnek egy előfizetési oldalt mutatni, vagy már sehová nem vezet."
+    },
+    {
+      "type": "p",
+      "text": "Egy vendégtől tudod meg, műszak közben, húsz kinyomtatott asztali tartóval a teremben. Az újranyomtatás az olcsó rész; a drága az a hét vendégekkel, akik beolvasták és nem kaptak semmit."
+    },
+    {
+      "type": "note",
+      "text": "A **statikus** QR kód magában hordozza a címedet, és soha nem járhat le, mert semmi nincs közte. Az ára az, hogy a cím örökre rögzül. Ha egy eszköz csak dinamikus kódot ad, ez az árulkodó jel."
+    },
+    {
+      "type": "h2",
+      "text": "2. Neked ingyen, a vendégeidnek reklám"
+    },
+    {
+      "type": "p",
+      "text": "Egyes eszközök a saját márkájukkal, egy előfizetési szalaggal vagy a desszertlistád alatti „készítsd el a saját étlapodat” gombbal finanszírozzák az ingyenes szintet. A vendéged beolvassa a kódot a te asztalodon, és az első, amit lát, valaki más marketingje. Nem végzetes, de az étkezés legfigyelmesebb pillanatát adod bérbe egy harmadik félnek."
+    },
+    {
+      "type": "h2",
+      "text": "3. Étlap ingyen, minden más fizetős"
+    },
+    {
+      "type": "p",
+      "text": "Az étlap ingyen jelenik meg, és minden további dolog fizetős szint: 30-nál több tétel, egy második nyelv, a márka eltüntetése, fotók, egynél több QR kód. A lista úgy van megtervezve, hogy egy valódi étterem az első hónapban átlépjen legalább egy határt. Nézd meg a tétel- és nyelvkorlátokat, mielőtt két órát töltesz az étlap begépelésével."
+    },
+    {
+      "type": "h2",
+      "text": "4. Étlap ingyen, jutalék a rendelésekből"
+    },
+    {
+      "type": "p",
+      "text": "Őszinte, és néha jó üzlet: az étlap nem kerül semmibe, a szolgáltató pedig százalékot kap az azon keresztül leadott rendelésekből. Ha havi 300 € QR-rendelésed van, a 3% kilenc euró — rendben van. Havi 12 000 € esetén 360 €, jóval több bármelyik fix előfizetésnél. Ez a modell épp akkor drágul, amikor működik."
+    },
+    {
+      "type": "h2",
+      "text": "5. Ingyenes, mert elhagyatott"
+    },
+    {
+      "type": "p",
+      "text": "Egy 2021-es hétvégi projekt, még mindig online, támogatás és frissítés nélkül. Működik, amíg nem. Mielőtt bármit kinyomtatnál, nézd meg, adott-e az eszköz blogja, változásnaplója vagy támogatási csatornája életjelet idén."
+    },
+    {
+      "type": "h2",
+      "text": "Mit szoktak korlátozni az ingyenes szintek"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Tipikus ingyenes szint",
+        "IQ Rest"
+      ],
+      "rows": [
+        [
+          "Étlaptételek",
+          "Gyakran 20-50",
+          "Korlátlan"
+        ],
+        [
+          "QR kódok",
+          "Gyakran egy",
+          "Asztalonként egy, korlátlan"
+        ],
+        [
+          "Nyelvek",
+          "Egy",
+          "Automatikus fordítás"
+        ],
+        [
+          "Szolgáltatói márka",
+          "Látszik a vendégeknek",
+          "Nincs"
+        ],
+        [
+          "Fotók",
+          "Korlátozott vagy fizetős",
+          "Minden ételnél"
+        ],
+        [
+          "Elfogyott kapcsoló",
+          "Ritka",
+          "Egy koppintás"
+        ],
+        [
+          "Rendelés",
+          "Nincs, vagy jutalékkal",
+          "Benne van"
+        ],
+        [
+          "A kód lejárata",
+          "Csomagtól függ",
+          "Soha — a saját címed"
+        ],
+        [
+          "Ár",
+          "0 €",
+          "9,90 €/hótól, 14 nap ingyen"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Mikor az ingyenes a helyes válasz"
+    },
+    {
+      "type": "p",
+      "text": "Vannak valódi esetek. Egy food truck kilenc tétellel és stabil árakkal. Egy tíz hétig nyitva tartó strandbár. Egy pop-up, ami azt teszteli, jön-e egyáltalán valaki. Ha az étlapod nem változik, nem kell nyelv, és nem veszel fel rajta rendelést, egy ingyenes eszköz statikus kóddal teljesen ésszerű megoldás — és ezt inkább kimondjuk, mint hogy mást állítsunk."
+    },
+    {
+      "type": "p",
+      "text": "A számítás abban a pillanatban fordul meg, amikor hosszú étlapod, szezonális változásaid, turistáid vannak, vagy bármi érdekel az [asztali rendelésből](route:/order-taking). Onnantól az ingyenes eszköz személyzeti időbe és elveszett rendelésekbe kerül, és ezek egyik számlán sem jelennek meg."
+    },
+    {
+      "type": "h2",
+      "text": "Öt kérdés, mielőtt nyomtatsz"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "A QR kód statikus vagy dinamikus? Ha dinamikus, mi lesz vele, ha nem fizetek tovább?",
+        "Kinek a márkáját látja a vendégem?",
+        "Mennyi a tételkorlát, és mi történik az 51. tételnél?",
+        "Exportálhatom az étlapadataimat, ha távozom?",
+        "Van telefonszám vagy postafiók, ahol nyitvatartási időben ember válaszol?"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Bármit is választasz, nyomtass egy rövid webcímet a kód alá. Semmibe nem kerül, és ez a különbség egy sikertelen beolvasás és egy vendég között, aki így is megkapja az étlapot."
+    },
+    {
+      "type": "cta",
+      "heading": "Először próbáld ki ingyen a fizetőset",
+      "text": "14 nap, minden funkció, kártya nélkül. Olvasd be a papíralapú étlapodat, és lásd az egészet működés közben, mielőtt döntesz.",
+      "buttonLabel": "Ingyenes próba indítása",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Gyakori kérdések",
+      "items": [
+        {
+          "q": "Készíthetek ingyen QR kódos étlapot?",
+          "a": "Igen. Egy statikus QR kód, ami a saját domainedon lévő PDF-re mutat, nem kerül semmibe, és soha nem jár le. Csak épp a PDF rosszul olvasható telefonon — hogy miért, azt itt írtuk meg: [a PDF-re mutató QR nem digitális étlap](blog:pdf-menu-vs-digital-menu)."
+        },
+        {
+          "q": "Lejárnak az ingyenes QR kódok?",
+          "a": "A statikusok nem tudnak, mert a cím magában a kódban van. A dinamikusak igen, mert a szolgáltató domainjén át irányítanak, és épp ezért az átirányításért hagyod abba a fizetést."
+        },
+        {
+          "q": "Az ingyenes próba ugyanaz, mint az ingyenes csomag?",
+          "a": "Nem. A próba a teljes termék korlátozott ideig; az ingyenes csomag korlátozott termék örökre. Az IQ Rest 14 napos próbát ad mindennel bekapcsolva, kártya nélkül."
+        },
+        {
+          "q": "Melyik a legolcsóbb fizetős QR étlap?",
+          "a": "A fix csomagok általában havi 10 euró körül indulnak egységenként. Az IQ Rest 9,90 eurótól — a teljes bontás itt van: [mennyibe kerül egy QR kódos étlap](blog:qr-code-menu-cost)."
+        },
+        {
+          "q": "Átvihetem az étlapomat ingyenes eszközből fizetősbe?",
+          "a": "Általában igen, és ritkán kell újragépelni: az IQ Rest be tudja olvasni a meglévő étlap fotóját vagy PDF-jét, és a tételeket öt perc alatt újraépíti."
+        }
+      ]
+    }
+  ]
+}

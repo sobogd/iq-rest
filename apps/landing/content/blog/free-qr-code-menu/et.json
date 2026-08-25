@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "title": "Tasuta QR-menüü: mis on tegelikult tasuta | IQ Rest",
+    "description": "Tasuta QR-menüüd on olemas ja mõned on korralikud. Kuidas nad raha teenivad, milline piirang tabab esimesena ja millal tasuta on tõesti õige valik."
+  },
+  "card": {
+    "title": "Tasuta QR-menüüd: mis on tegelikult tasuta ja mille eest maksad hiljem",
+    "excerpt": "Keegi ei majuta su menüüd niisama. Siin on viis viisi, kuidas tasuta QR-menüü tööriistad raha teenivad, millised piirangud tabavad esimesena ja juhud, kus tasuta tõesti piisab."
+  },
+  "h1": "Tasuta QR-menüü: mida saad ja mis maksab hiljem",
+  "intro": "Otsi tasuta QR-menüüd ja leiad kümneid tööriistu. Osa neist on tõesti kasutatavad. Aga majutus, andmemaht ja tugi maksavad teenusepakkujale iga kuu raha, nii et küsimus pole, kas maksad, vaid millega. Siin on need viis ärimudelit sõna „tasuta“ taga — ja see, milles sa tõenäoliselt oled.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "1. Tasuta kood, siis kood aegub"
+    },
+    {
+      "type": "p",
+      "text": "Kõige levinum lõks. QR-generaatorid pakuvad **dünaamilisi** koode: kood viitab nende domeenile, mis suunab su menüüle. Just see ümbersuunamine ongi tasuline toode. Kui prooviperiood lõpeb, ei lähe kood valjult katki; ta hakkab su külalistele näitama uuendamislehte või ei vii enam kuhugi."
+    },
+    {
+      "type": "p",
+      "text": "Saad teada külaliselt, keset vahetust, kui saalis on juba 20 trükitud lauaalust. Uuesti trükkimine on odav osa; kallis on nädal külalisi, kes skaneerisid ja ei saanud midagi."
+    },
+    {
+      "type": "note",
+      "text": "**Staatiline** QR-kood kannab su aadressi endas ega saa kunagi aeguda, sest vahel pole midagi. Hinnaks on see, et aadress on jäädavalt paigas. Kui tööriist pakub ainult dünaamilisi koode, ongi see märk."
+    },
+    {
+      "type": "h2",
+      "text": "2. Sulle tasuta, su külalistele reklaam"
+    },
+    {
+      "type": "p",
+      "text": "Mõned tööriistad rahastavad tasuta taset oma brändiga, uuendusribaga või nupuga „loo oma menüü“ su magustoitude nimekirja all. Su külaline skaneerib koodi sinu laual ja esimene asi, mida ta näeb, on kellegi teise turundus. Pole surmav, aga sa üürid söögikorra kõige tähelepanelikuma hetke kolmandale osapoolele."
+    },
+    {
+      "type": "h2",
+      "text": "3. Menüü tasuta, kõik muu tasuline"
+    },
+    {
+      "type": "p",
+      "text": "Menüü kuvatakse tasuta ja iga järgmine vajaminev asi on tasuline tase: üle 30 rea, teine keel, brändi eemaldamine, fotod, rohkem kui üks QR-kood. Nimekiri on koostatud nii, et päris restoran ületab esimesel kuul vähemalt ühe piiri. Kontrolli rea- ja keelepiiranguid enne, kui kulutad kaks tundi menüü sisestamisele."
+    },
+    {
+      "type": "h2",
+      "text": "4. Menüü tasuta, vahendustasu tellimustelt"
+    },
+    {
+      "type": "p",
+      "text": "Aus ja vahel hea tehing: menüü ei maksa midagi ja teenusepakkuja võtab protsendi selle kaudu tehtud tellimustest. Kui QR-tellimusi on 300 € kuus, on 3% üheksa eurot — täiesti korras. 12 000 € kuus tähendab 360 €, palju rohkem kui ükski fikseeritud tellimus. See mudel läheb kallimaks just siis, kui ta õnnestub."
+    },
+    {
+      "type": "h2",
+      "text": "5. Tasuta, sest see on hüljatud"
+    },
+    {
+      "type": "p",
+      "text": "Nädalavahetuse projekt aastast 2021, endiselt võrgus, ilma toe ja uuendusteta. Töötab, kuni ei tööta. Enne millegi trükkimist kontrolli, kas tööriista blogi, muudatuste logi või toekanal on sel aastal elumärke andnud."
+    },
+    {
+      "type": "h2",
+      "text": "Mida tasuta tasemed tavaliselt piiravad"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Tüüpiline tasuta tase",
+        "IQ Rest"
+      ],
+      "rows": [
+        [
+          "Menüüread",
+          "Sageli 20-50",
+          "Piiramatu"
+        ],
+        [
+          "QR-koodid",
+          "Sageli üks",
+          "Üks laua kohta, piiramatu"
+        ],
+        [
+          "Keeled",
+          "Üks",
+          "Automaatne tõlge"
+        ],
+        [
+          "Teenusepakkuja bränd",
+          "Külalistele nähtav",
+          "Puudub"
+        ],
+        [
+          "Fotod",
+          "Piiratud või tasuline",
+          "Iga roa juures"
+        ],
+        [
+          "Otsas-lüliti",
+          "Harv",
+          "Üks puude"
+        ],
+        [
+          "Tellimine",
+          "Ei, või vahendustasuga",
+          "Sisaldub"
+        ],
+        [
+          "Koodi aegumine",
+          "Oleneb paketist",
+          "Mitte kunagi — sinu enda aadress"
+        ],
+        [
+          "Hind",
+          "0 €",
+          "Alates 9,90 €/kuus, 14 päeva tasuta"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Millal tasuta on õige vastus"
+    },
+    {
+      "type": "p",
+      "text": "Päris juhtumeid on. Toiduauto üheksa rea ja stabiilsete hindadega. Kümme nädalat avatud rannabaar. Pop-up, mis kontrollib, kas keegi üldse tuleb. Kui su menüü ei muutu, keeli pole vaja ja tellimusi selle kaudu ei võta, on tasuta tööriist staatilise koodiga täiesti mõistlik lahendus — ja ütleme seda pigem välja, kui teeskleme muud."
+    },
+    {
+      "type": "p",
+      "text": "Arvestus pöördub hetkel, kui sul on pikk menüü, hooajalised muudatused, turistid või vähimgi huvi [lauast tellimise](route:/order-taking) vastu. Sellest hetkest maksab tasuta tööriist sulle personali aega ja kaotatud tellimusi, ja need ei jõua ühelegi arvele."
+    },
+    {
+      "type": "h2",
+      "text": "Viis küsimust enne trükkimist"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Kas QR-kood on staatiline või dünaamiline? Kui dünaamiline, mis sellest saab, kui ma maksmise lõpetan?",
+        "Kelle brändi mu külaline näeb?",
+        "Mis on reapiirang ja mis juhtub real 51?",
+        "Kas ma saan lahkudes oma menüü andmed välja eksportida?",
+        "Kas on olemas number või postkast, kus töö ajal vastab inimene?"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Mida iganes valid, trüki koodi alla lühike aadress. See ei maksa midagi ja on vahe ebaõnnestunud skaneerimise ja külalise vahel, kes menüü siiski kätte saab."
+    },
+    {
+      "type": "cta",
+      "heading": "Proovi kõigepealt tasulist tasuta",
+      "text": "14 päeva, kõik funktsioonid, ilma kaardita. Skaneeri oma paberimenüü ja vaata tervikut töös enne otsustamist.",
+      "buttonLabel": "Alusta tasuta prooviperioodi",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Korduma kippuvad küsimused",
+      "items": [
+        {
+          "q": "Kas ma saan QR-koodiga menüü tasuta teha?",
+          "a": "Jah. Staatiline QR-kood, mis viitab su enda domeenil olevale PDF-ile, ei maksa midagi ega aegu kunagi. Lihtsalt PDF-i on telefonis halb lugeda — miks, kirjutasime artiklis [QR PDF-ile ei ole digitaalne menüü](blog:pdf-menu-vs-digital-menu)."
+        },
+        {
+          "q": "Kas tasuta QR-koodid aeguvad?",
+          "a": "Staatilised ei saa, sest aadress on koodi sees. Dünaamilised saavad, sest need suunavad ümber teenusepakkuja domeeni kaudu, ja just selle ümbersuunamise eest sa maksmise lõpetad."
+        },
+        {
+          "q": "Kas tasuta prooviperiood on sama mis tasuta pakett?",
+          "a": "Ei. Prooviperiood on kogu toode piiratud ajaks; tasuta pakett on piiratud toode igaveseks. IQ Rest annab 14 päeva proovi kõigega sisse lülitatuna ja ilma kaardita."
+        },
+        {
+          "q": "Milline on odavaim tasuline QR-menüü?",
+          "a": "Fikseeritud paketid algavad tavaliselt umbes 10 eurost kuus asukoha kohta. IQ Rest algab 9,90 eurost — kogu jaotus on artiklis [kui palju maksab QR-koodiga menüü](blog:qr-code-menu-cost)."
+        },
+        {
+          "q": "Kas ma saan menüü tasuta tööriistast tasulisse kolida?",
+          "a": "Tavaliselt jah ja harva pead selle uuesti sisestama: IQ Rest oskab lugeda olemasoleva menüü fotot või PDF-i ja read umbes viie minutiga uuesti üles ehitada."
+        }
+      ]
+    }
+  ]
+}

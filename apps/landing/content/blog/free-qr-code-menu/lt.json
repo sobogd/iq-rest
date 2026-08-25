@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "title": "Nemokamas QR meniu: kas iš tikrųjų nemokama | IQ Rest",
+    "description": "Nemokami QR meniu egzistuoja ir kai kurie yra geri. Kaip jie uždirba, kuris limitas sustabdys pirmas ir kada nemokamas iš tikrųjų yra teisingas pasirinkimas."
+  },
+  "card": {
+    "title": "Nemokami QR meniu: kas iš tikrųjų nemokama ir už ką sumokate vėliau",
+    "excerpt": "Niekas netalpina jūsų meniu už dyką. Štai penki būdai, kaip nemokami QR meniu įrankiai uždirba, kuriuos limitus pasieksite pirmiausia ir atvejai, kai nemokamo tikrai pakanka."
+  },
+  "h1": "Nemokamas QR meniu: ką gaunate ir kiek tai kainuoja vėliau",
+  "intro": "Paieškokite nemokamo QR meniu ir rasite dešimtis įrankių. Kai kurie tikrai tinkami naudoti. Bet talpinimas, srautas ir palaikymas tiekėjui kainuoja pinigus kiekvieną mėnesį, tad klausimas ne ar mokate, o kuo. Štai penki verslo modeliai už žodžio „nemokamai“ — ir tas, kuriame greičiausiai esate.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "1. Kodas nemokamas, o paskui kodo galiojimas baigiasi"
+    },
+    {
+      "type": "p",
+      "text": "Dažniausi spąstai. QR generatoriai siūlo **dinaminius** kodus: kodas veda į jų domeną, kuris nukreipia į jūsų meniu. Būtent tas nukreipimas ir yra mokamas produktas. Kai bandomasis laikotarpis baigiasi, kodas nesulūžta garsiai; jis ima svečiams rodyti atnaujinimo puslapį arba nebeveda niekur."
+    },
+    {
+      "type": "p",
+      "text": "Sužinote iš svečio, pamainos įkarštyje, kai salėje jau stovi 20 atspausdintų stovelių. Perspausdinimas — pigioji dalis; brangioji — savaitė svečių, kurie nuskaitė ir negavo nieko."
+    },
+    {
+      "type": "note",
+      "text": "**Statinis** QR kodas neša jūsų adresą savyje ir niekada negali baigti galioti, nes tarp nieko nėra. Kaina ta, kad adresas užfiksuotas amžiams. Jei įrankis siūlo tik dinaminius kodus, tai ir yra tas ženklas."
+    },
+    {
+      "type": "h2",
+      "text": "2. Nemokamai jums, reklama jūsų svečiams"
+    },
+    {
+      "type": "p",
+      "text": "Kai kurie įrankiai nemokamą lygį finansuoja savo prekės ženklu, atnaujinimo juosta arba mygtuku „susikurk savo meniu“ po jūsų desertų sąrašu. Jūsų svečias nuskaito kodą prie jūsų staliuko ir pirmas dalykas, kurį pamato, yra kažkieno kito rinkodara. Tai ne mirtina, bet atidžiausią valgymo akimirką išnuomojate trečiajai šaliai."
+    },
+    {
+      "type": "h2",
+      "text": "3. Meniu nemokamas, visa kita už pinigus"
+    },
+    {
+      "type": "p",
+      "text": "Meniu rodomas nemokamai, o kiekvienas kitas reikalingas dalykas yra mokamas lygis: daugiau nei 30 pozicijų, antra kalba, ženklo pašalinimas, nuotraukos, daugiau nei vienas QR kodas. Sąrašas sudarytas taip, kad tikras restoranas pirmą mėnesį peržengtų bent vieną ribą. Patikrinkite pozicijų ir kalbų limitus prieš skirdami dvi valandas meniu suvedimui."
+    },
+    {
+      "type": "h2",
+      "text": "4. Meniu nemokamas, komisiniai nuo užsakymų"
+    },
+    {
+      "type": "p",
+      "text": "Sąžininga ir kartais naudinga: meniu nekainuoja nieko, o tiekėjas paima procentą nuo pro jį praėjusių užsakymų. Jei QR užsakymų yra 300 € per mėnesį, 3% — devyni eurai, viskas gerai. Prie 12 000 € per mėnesį tai 360 €, kur kas daugiau nei bet kuri fiksuota prenumerata. Šis modelis brangsta būtent tada, kai pavyksta."
+    },
+    {
+      "type": "h2",
+      "text": "5. Nemokamas, nes apleistas"
+    },
+    {
+      "type": "p",
+      "text": "Savaitgalio projektas iš 2021-ųjų, vis dar internete, be palaikymo ir atnaujinimų. Veikia, kol nustoja. Prieš ką nors spausdindami patikrinkite, ar įrankio tinklaraštis, pakeitimų sąrašas arba palaikymo kanalas šiemet parodė gyvybės ženklų."
+    },
+    {
+      "type": "h2",
+      "text": "Ką nemokami lygiai paprastai riboja"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Tipinis nemokamas lygis",
+        "IQ Rest"
+      ],
+      "rows": [
+        [
+          "Meniu pozicijos",
+          "Dažnai 20-50",
+          "Neriboti"
+        ],
+        [
+          "QR kodai",
+          "Dažnai vienas",
+          "Po vieną staliukui, neriboti"
+        ],
+        [
+          "Kalbos",
+          "Viena",
+          "Automatinis vertimas"
+        ],
+        [
+          "Tiekėjo ženklas",
+          "Matomas svečiams",
+          "Nėra"
+        ],
+        [
+          "Nuotraukos",
+          "Ribotos arba mokamos",
+          "Prie kiekvieno patiekalo"
+        ],
+        [
+          "Jungiklis „baigėsi“",
+          "Retai",
+          "Vienas palietimas"
+        ],
+        [
+          "Užsakymai",
+          "Ne, arba su komisiniais",
+          "Įskaičiuoti"
+        ],
+        [
+          "Kodo galiojimas",
+          "Priklauso nuo plano",
+          "Niekada — jūsų pačių adresas"
+        ],
+        [
+          "Kaina",
+          "0 €",
+          "Nuo 9,90 €/mėn., 14 dienų nemokamai"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kada nemokamas yra teisingas atsakymas"
+    },
+    {
+      "type": "p",
+      "text": "Realių atvejų yra. Maisto furgonas su devyniomis pozicijomis ir stabiliomis kainomis. Dešimt savaičių dirbantis paplūdimio baras. Pop-up, tikrinantis, ar apskritai kas nors ateis. Jei meniu nesikeičia, kalbų nereikia ir užsakymų per jį nepriimate, nemokamas įrankis su statiniu kodu yra visiškai protingas sprendimas — ir mes verčiau tai pasakome, nei apsimetame kitaip."
+    },
+    {
+      "type": "p",
+      "text": "Skaičiavimas apsiverčia tą akimirką, kai turite ilgą meniu, sezoninius pokyčius, turistų arba bent kiek domitės [užsakymu prie staliuko](route:/order-taking). Nuo to momento nemokamas įrankis kainuoja jums personalo laiką ir prarastus užsakymus, o jie nepatenka į jokią sąskaitą."
+    },
+    {
+      "type": "h2",
+      "text": "Penki klausimai prieš spausdinant"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Ar QR kodas statinis, ar dinaminis? Jei dinaminis, kas jam nutiks, kai nustosiu mokėti?",
+        "Kieno ženklą mato mano svečias?",
+        "Koks pozicijų limitas ir kas nutinka ties 51 pozicija?",
+        "Ar galiu eksportuoti savo meniu duomenis, jei išeisiu?",
+        "Ar yra numeris arba dėžutė, kur darbo metu atsako žmogus?"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Ką bepasirinktumėte, po kodu atspausdinkite trumpą adresą. Tai nieko nekainuoja ir yra skirtumas tarp nepavykusio nuskaitymo ir svečio, kuris meniu vis tiek gauna."
+    },
+    {
+      "type": "cta",
+      "heading": "Pirma nemokamai išbandykite mokamą",
+      "text": "14 dienų, visos funkcijos, be kortelės. Nuskaitykite popierinį meniu ir pamatykite visumą veikiant prieš spręsdami.",
+      "buttonLabel": "Pradėti nemokamą laikotarpį",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Dažnai užduodami klausimai",
+      "items": [
+        {
+          "q": "Ar galiu sukurti meniu su QR kodu nemokamai?",
+          "a": "Taip. Statinis QR kodas, vedantis į PDF jūsų pačių domene, nekainuoja nieko ir niekada nebaigia galioti. Tik PDF telefone prastai skaitomas — kodėl, rašėme tekste [QR į PDF nėra skaitmeninis meniu](blog:pdf-menu-vs-digital-menu)."
+        },
+        {
+          "q": "Ar nemokami QR kodai nustoja galioti?",
+          "a": "Statiniai negali, nes adresas yra pačiame kode. Dinaminiai gali, nes nukreipia per tiekėjo domeną, ir būtent už tą nukreipimą nustojate mokėti."
+        },
+        {
+          "q": "Ar nemokamas bandomasis laikotarpis yra tas pat, kas nemokamas planas?",
+          "a": "Ne. Bandomasis laikotarpis — visas produktas ribotam laikui; nemokamas planas — ribotas produktas visam laikui. IQ Rest duoda 14 dienų bandymą su viskuo įjungtu ir be kortelės."
+        },
+        {
+          "q": "Koks pigiausias mokamas QR meniu?",
+          "a": "Fiksuoti planai paprastai prasideda nuo maždaug 10 € per mėnesį už vietą. IQ Rest prasideda nuo 9,90 € — visas išskaidymas yra tekste [kiek kainuoja meniu su QR kodu](blog:qr-code-menu-cost)."
+        },
+        {
+          "q": "Ar galiu perkelti meniu iš nemokamo įrankio į mokamą?",
+          "a": "Paprastai taip ir retai reikia jį perrašinėti: IQ Rest gali perskaityti esamo meniu nuotrauką arba PDF ir atkurti pozicijas maždaug per penkias minutes."
+        }
+      ]
+    }
+  ]
+}

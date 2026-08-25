@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "title": "Ücretsiz QR menü: gerçekte ne bedava | IQ Rest",
+    "description": "Ücretsiz QR menüler var ve bazıları iş görür. Nasıl para kazandıkları, önce hangi sınıra takılacağınız ve ücretsizin gerçekten doğru olduğu durumlar."
+  },
+  "card": {
+    "title": "Ücretsiz QR menüler: gerçekte ne bedava, sonra neyi ödüyorsunuz",
+    "excerpt": "Kimse menünüzü karşılıksız barındırmaz. İşte ücretsiz QR menü araçlarının para kazandığı beş yol, önce hangi sınırlara takılacağınız ve ücretsizin gerçekten yettiği durumlar."
+  },
+  "h1": "Ücretsiz QR menü: ne alıyorsunuz, sonradan neye mal oluyor",
+  "intro": "Ücretsiz QR menü aratın, düzinelerce araç bulursunuz. Bazıları gerçekten kullanılabilir. Ama barındırma, bant genişliği ve destek sağlayıcıya her ay para götürür; dolayısıyla soru ödeyip ödemediğiniz değil, neyle ödediğinizdir. \"Ücretsiz\" kelimesinin arkasındaki beş iş modeli ve muhtemelen içinde bulunduğunuz model şöyle.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "1. Ücretsiz kod, sonra kodun süresi doluyor"
+    },
+    {
+      "type": "p",
+      "text": "En yaygın tuzak. QR üreticileri **dinamik** kod sunar: kod kendi alan adlarını gösterir, oradan menünüze yönlendirilir. O yönlendirme, ücretli ürünün ta kendisidir. Deneme bitince kod gürültüyle bozulmaz; misafirlerinize bir yükseltme sayfası göstermeye başlar ya da hiçbir yere çözümlenmez."
+    },
+    {
+      "type": "p",
+      "text": "Bunu servisin ortasında, salonda 20 basılı masa standı dururken bir misafirden öğrenirsiniz. Yeniden basmak ucuz kısmıdır; pahalı olan, okutup hiçbir şey alamayan misafirlerle geçen bir haftadır."
+    },
+    {
+      "type": "note",
+      "text": "**Statik** bir QR kod adresinizi içinde taşır ve asla süresi dolmaz, çünkü arada hiçbir şey yoktur. Karşılığında o adres sonsuza dek sabittir. Bir araç yalnızca dinamik kod veriyorsa, işaret budur."
+    },
+    {
+      "type": "h2",
+      "text": "2. Size ücretsiz, misafirlerinize reklam"
+    },
+    {
+      "type": "p",
+      "text": "Bazı araçlar ücretsiz katmanı kendi markasıyla, bir yükseltme afişiyle ya da tatlı listenizin altındaki \"kendi menünü oluştur\" düğmesiyle finanse eder. Misafiriniz sizin masanızdaki kodu okutur ve gördüğü ilk şey başkasının pazarlaması olur. Ölümcül değil, ama yemeğin en dikkatli anını üçüncü bir tarafa kiralıyorsunuz."
+    },
+    {
+      "type": "h2",
+      "text": "3. Menü ücretsiz, gerisi paralı"
+    },
+    {
+      "type": "p",
+      "text": "Menü ücretsiz görüntülenir, sonra ihtiyacınız olan her şey ücretli katmandır: 30'dan fazla kalem, ikinci dil, markayı kaldırmak, fotoğraflar, birden fazla QR kod. Liste, gerçek bir restoranın ilk ay en az bir sınırı aşacağı şekilde tasarlanmıştır. Menünüzü yazmaya iki saat harcamadan önce kalem ve dil sınırlarını kontrol edin."
+    },
+    {
+      "type": "h2",
+      "text": "4. Menü ücretsiz, siparişten komisyon"
+    },
+    {
+      "type": "p",
+      "text": "Dürüst ve bazen iyi bir anlaşma: menü hiçbir şeye mal olmaz, sağlayıcı üzerinden geçen siparişlerden bir yüzde alır. Ayda 300 € QR siparişi varsa %3, dokuz euro eder — gayet iyi. Ayda 12.000 € olduğunda 360 € eder ve bu, herhangi bir sabit abonelikten kat kat fazladır. Bu model tam da işe yaradığında pahalılaşır."
+    },
+    {
+      "type": "h2",
+      "text": "5. Ücretsiz, çünkü terk edilmiş"
+    },
+    {
+      "type": "p",
+      "text": "2021'den kalma bir hafta sonu projesi, hâlâ ayakta, destek yok, güncelleme yok. Bozulana kadar çalışır. Herhangi bir şey basmadan önce aracın blogu, sürüm notları veya destek kanalı bu yıl yaşam belirtisi göstermiş mi bakın."
+    },
+    {
+      "type": "h2",
+      "text": "Ücretsiz katmanların genelde sınırladıkları"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Tipik ücretsiz katman",
+        "IQ Rest"
+      ],
+      "rows": [
+        [
+          "Menü kalemleri",
+          "Genelde 20-50",
+          "Sınırsız"
+        ],
+        [
+          "QR kodlar",
+          "Genelde bir",
+          "Masa başına bir, sınırsız"
+        ],
+        [
+          "Diller",
+          "Bir",
+          "Otomatik çeviri"
+        ],
+        [
+          "Sağlayıcı markası",
+          "Misafirlere görünür",
+          "Yok"
+        ],
+        [
+          "Fotoğraflar",
+          "Sınırlı ya da ücretli",
+          "Her yemekte"
+        ],
+        [
+          "Tükendi anahtarı",
+          "Nadir",
+          "Tek dokunuş"
+        ],
+        [
+          "Sipariş",
+          "Hayır ya da komisyonlu",
+          "Dahil"
+        ],
+        [
+          "Kodun süresi",
+          "Pakete bağlı",
+          "Asla — kendi adresiniz"
+        ],
+        [
+          "Fiyat",
+          "0 €",
+          "9,90 €/aydan, 14 gün ücretsiz"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Ücretsizin doğru cevap olduğu durumlar"
+    },
+    {
+      "type": "p",
+      "text": "Gerçek örnekler var. Dokuz kalemi ve sabit fiyatları olan bir yemek kamyonu. On hafta açık bir plaj barı. Gelen olacak mı diye deneyen bir pop-up. Menünüz değişmiyor, dile ihtiyacınız yok ve üzerinden sipariş almıyorsanız, statik kodlu ücretsiz bir araç gayet mantıklı bir kurulumdur; bunu söylemeyi aksini gibi göstermeye tercih ederiz."
+    },
+    {
+      "type": "p",
+      "text": "Denklem, uzun bir menünüz, mevsimlik değişiklikleriniz, turistleriniz ya da [masadan sipariş](route:/order-taking) alma niyetiniz olduğu anda tersine döner. O noktadan sonra ücretsiz araç size personel zamanı ve kaçan sipariş olarak pahalıya patlar; ikisi de hiçbir faturada görünmez."
+    },
+    {
+      "type": "h2",
+      "text": "Basmadan önce beş soru"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "QR kod statik mi dinamik mi? Dinamikse, ödemeyi kestiğimde ona ne olacak?",
+        "Misafirim kimin markasını görüyor?",
+        "Kalem sınırı nedir ve 51. kalemde ne olur?",
+        "Ayrılırsam menü verilerimi dışa aktarabilir miyim?",
+        "Servis saatlerinde bir insanın yanıt verdiği bir telefon ya da kutu var mı?"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Ne seçerseniz seçin, kodun altına kısa bir adres basın. Hiçbir şeye mal olmaz ve başarısız bir okutmayla menüye yine de ulaşan bir misafir arasındaki farktır."
+    },
+    {
+      "type": "cta",
+      "heading": "Önce ücretlisini ücretsiz deneyin",
+      "text": "14 gün, tüm özellikler, kartsız. Kâğıt menünüzü tarayın ve karar vermeden önce bütünü çalışırken görün.",
+      "buttonLabel": "Ücretsiz denemeyi başlat",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Sık sorulan sorular",
+      "items": [
+        {
+          "q": "QR kodlu menüyü ücretsiz yapabilir miyim?",
+          "a": "Evet. Kendi alan adınızdaki bir PDF'e işaret eden statik bir QR kod hiçbir şeye mal olmaz ve asla süresi dolmaz. Sadece PDF telefonda zor okunur — nedenini [PDF'e giden QR dijital menü değildir](blog:pdf-menu-vs-digital-menu) yazısında anlattık."
+        },
+        {
+          "q": "Ücretsiz QR kodların süresi doluyor mu?",
+          "a": "Statiklerin dolamaz, çünkü adres kodun içindedir. Dinamiklerinki dolar, çünkü sağlayıcının alan adı üzerinden yönlendirirler ve ödemeyi kestiğiniz şey tam olarak o yönlendirmedir."
+        },
+        {
+          "q": "Ücretsiz deneme ile ücretsiz plan aynı şey mi?",
+          "a": "Hayır. Deneme, sınırlı süreyle ürünün tamamıdır; ücretsiz plan ise sonsuza dek sınırlı bir üründür. IQ Rest her şeyi açık şekilde 14 günlük deneme sunar, kart istemez."
+        },
+        {
+          "q": "En ucuz ücretli QR menü hangisi?",
+          "a": "Sabit planlar genelde şube başına ayda 10 € civarında başlar. IQ Rest 9,90 €'dan başlar — tam dökümü [QR kodlu menü ne kadara mal olur](blog:qr-code-menu-cost) yazısında."
+        },
+        {
+          "q": "Menümü ücretsiz bir araçtan ücretliye taşıyabilir miyim?",
+          "a": "Genelde evet ve nadiren yeniden yazmanız gerekir: IQ Rest mevcut menünün fotoğrafını ya da PDF'ini okuyup kalemleri yaklaşık beş dakikada yeniden oluşturabilir."
+        }
+      ]
+    }
+  ]
+}

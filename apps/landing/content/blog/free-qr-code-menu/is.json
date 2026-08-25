@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "title": "Ókeypis QR-matseðill: hvað er raunverulega frítt | IQ Rest",
+    "description": "Ókeypis QR-matseðlar eru til og sumir duga. Hvernig þeir afla tekna, hvaða takmörkun stoppar þig fyrst og hvenær ókeypis er í raun rétta valið."
+  },
+  "card": {
+    "title": "Ókeypis QR-matseðlar: hvað er raunverulega frítt og hvað borgar þú síðar",
+    "excerpt": "Enginn hýsir matseðilinn þinn fyrir ekkert. Hér eru fimm leiðirnar sem ókeypis QR-matseðlaverkfæri afla tekna, hvaða takmarkanir þú rekst á fyrst og tilvikin þar sem ókeypis dugar raunverulega."
+  },
+  "h1": "Ókeypis QR-matseðill: hvað þú færð og hvað það kostar síðar",
+  "intro": "Leitaðu að ókeypis QR-matseðli og þú finnur tugi verkfæra. Sum eru raunverulega nothæf. En hýsing, bandvídd og þjónusta kosta þjónustuaðilann peninga í hverjum mánuði, svo spurningin er ekki hvort þú borgar heldur hvernig. Hér eru fimm viðskiptamódelin á bak við orðið \"ókeypis\" — og það sem þú ert líklega í.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "1. Ókeypis kóði, svo rennur kóðinn út"
+    },
+    {
+      "type": "p",
+      "text": "Algengasta gildran. QR-kóðaþjónustur bjóða **breytilega** kóða: kóðinn vísar á þeirra lén, sem áframsendir á matseðilinn þinn. Sú áframsending er greidda varan. Þegar prufan rennur út brotnar kóðinn ekki með hávaða; hann fer að sýna gestum þínum uppfærslusíðu, eða vísar ekki neitt."
+    },
+    {
+      "type": "p",
+      "text": "Þú frétt það frá gesti, í miðri vakt, með 20 prentaða borðstanda í salnum. Endurprentunin er ódýri hlutinn; sá dýri er vikan af gestum sem skönnuðu og fengu ekkert."
+    },
+    {
+      "type": "note",
+      "text": "**Fastur** QR-kóði ber vistfangið þitt innan í sér og getur aldrei runnið út, því ekkert er þar á milli. Verðið er að vistfangið er fast að eilífu. Bjóði verkfæri aðeins breytilega kóða er það merkið."
+    },
+    {
+      "type": "h2",
+      "text": "2. Ókeypis fyrir þig, auglýsingar fyrir gestina þína"
+    },
+    {
+      "type": "p",
+      "text": "Sum verkfæri fjármagna ókeypis þrepið með eigin vörumerki, uppfærsluborða eða hnappi með \"búðu til þinn eigin matseðil\" undir eftirréttalistanum. Gesturinn þinn skannar kóða á þínu borði og það fyrsta sem hann sér er markaðssetning einhvers annars. Ekki banvænt, en þú leigir eftirtektarverðasta augnablik máltíðarinnar til þriðja aðila."
+    },
+    {
+      "type": "h2",
+      "text": "3. Matseðill ókeypis, allt annað greitt"
+    },
+    {
+      "type": "p",
+      "text": "Matseðillinn birtist ókeypis og hvert atriði sem þú þarft eftir það er greitt þrep: fleiri en 30 línur, annað tungumál, að fjarlægja vörumerkið, myndir, fleiri en einn QR-kóði. Listinn er hannaður þannig að alvöru veitingastaður fari yfir að minnsta kosti eina mörk í fyrsta mánuði. Athugaðu línu- og tungumálamörkin áður en þú eyðir tveimur tímum í að slá inn matseðilinn."
+    },
+    {
+      "type": "h2",
+      "text": "4. Matseðill ókeypis, þóknun af pöntunum"
+    },
+    {
+      "type": "p",
+      "text": "Heiðarlegt og stundum góður díll: matseðillinn kostar ekkert og þjónustan tekur hlutfall af pöntunum sem fara í gegnum hann. Við 300 € í QR-pöntunum á mánuði eru 3% níu evrur — allt í lagi. Við 12.000 € á mánuði eru það 360 €, langt umfram nokkra fasta áskrift. Þetta módel verður dýrara einmitt þegar það gengur vel."
+    },
+    {
+      "type": "h2",
+      "text": "5. Ókeypis því það er yfirgefið"
+    },
+    {
+      "type": "p",
+      "text": "Helgarverkefni frá 2021, enn á netinu, engin þjónusta, engar uppfærslur. Það virkar þar til það virkar ekki. Áður en þú prentar nokkuð, athugaðu hvort blogg, breytingaskrá eða þjónustuleið verkfærisins hafi sýnt lífsmark á þessu ári."
+    },
+    {
+      "type": "h2",
+      "text": "Hvað ókeypis þrep takmarka yfirleitt"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Dæmigert ókeypis þrep",
+        "IQ Rest"
+      ],
+      "rows": [
+        [
+          "Línur á matseðli",
+          "Oft 20-50",
+          "Ótakmarkað"
+        ],
+        [
+          "QR-kóðar",
+          "Oft einn",
+          "Einn á hvert borð, ótakmarkað"
+        ],
+        [
+          "Tungumál",
+          "Eitt",
+          "Sjálfvirk þýðing"
+        ],
+        [
+          "Vörumerki þjónustunnar",
+          "Sýnilegt gestum",
+          "Ekkert"
+        ],
+        [
+          "Myndir",
+          "Takmarkaðar eða greiddar",
+          "Á hverjum rétti"
+        ],
+        [
+          "Uppselt-rofi",
+          "Sjaldgæfur",
+          "Eitt bank"
+        ],
+        [
+          "Pantanir",
+          "Nei, eða með þóknun",
+          "Innifaldar"
+        ],
+        [
+          "Gildistími kóðans",
+          "Fer eftir áskrift",
+          "Aldrei — þitt eigið vistfang"
+        ],
+        [
+          "Verð",
+          "0 €",
+          "Frá 9,90 €/mán., 14 dagar fríir"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Hvenær ókeypis er rétta svarið"
+    },
+    {
+      "type": "p",
+      "text": "Raunveruleg tilvik eru til. Matarvagn með níu línur og stöðug verð. Strandbar opinn í tíu vikur. Pop-up sem prófar hvort einhver mæti yfirhöfuð. Ef matseðillinn þinn breytist ekki, þú þarft ekki tungumál og tekur ekki pantanir í gegnum hann, er ókeypis verkfæri með föstum kóða fullkomlega skynsamleg lausn — og við segjum það frekar en að þykjast annað."
+    },
+    {
+      "type": "p",
+      "text": "Dæmið snýst við um leið og þú ert með langan matseðil, árstíðabreytingar, ferðamenn eða minnsta áhuga á [pöntun við borðið](route:/order-taking). Frá þeim punkti kostar ókeypis verkfærið þig starfsmannatíma og glataðar pantanir, og hvorugt birtist á reikningi."
+    },
+    {
+      "type": "h2",
+      "text": "Fimm spurningar áður en þú prentar"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Er QR-kóðinn fastur eða breytilegur? Ef breytilegur: hvað verður um hann þegar ég hætti að borga?",
+        "Hvers vörumerki sér gesturinn minn?",
+        "Hver eru línumörkin og hvað gerist við línu 51?",
+        "Get ég flutt út gögn matseðilsins ef ég hætti?",
+        "Er til númer eða pósthólf þar sem manneskja svarar á opnunartíma?"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Hvað sem þú velur, prentaðu stutt vefslóð undir kóðann. Það kostar ekkert og er munurinn á misheppnaðri skönnun og gesti sem fær matseðilinn samt."
+    },
+    {
+      "type": "cta",
+      "heading": "Prófaðu greidda kostinn frítt fyrst",
+      "text": "14 dagar, allir eiginleikar, án korts. Skannaðu pappírsmatseðilinn þinn og sjáðu heildina virka áður en þú ákveður þig.",
+      "buttonLabel": "Byrja fría prufu",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Algengar spurningar",
+      "items": [
+        {
+          "q": "Get ég búið til matseðil með QR-kóða ókeypis?",
+          "a": "Já. Fastur QR-kóði sem vísar á PDF á þínu eigin léni kostar ekkert og rennur aldrei út. Það er bara að PDF er erfitt að lesa í síma — hvers vegna, í [QR á PDF er ekki stafrænn matseðill](blog:pdf-menu-vs-digital-menu)."
+        },
+        {
+          "q": "Renna ókeypis QR-kóðar út?",
+          "a": "Fastir geta það ekki, því vistfangið er inni í kóðanum sjálfum. Breytilegir geta það, því þeir áframsenda um lén þjónustunnar, og það er einmitt sú áframsending sem þú hættir að greiða fyrir."
+        },
+        {
+          "q": "Er ókeypis prufa það sama og ókeypis áskrift?",
+          "a": "Nei. Prufa er öll varan í takmarkaðan tíma; ókeypis áskrift er takmörkuð vara að eilífu. IQ Rest býður 14 daga prufu með allt kveikt og án korts."
+        },
+        {
+          "q": "Hver er ódýrasti greiddi QR-matseðillinn?",
+          "a": "Fastar áskriftir byrja yfirleitt í kringum 10 € á mánuði á hvern stað. IQ Rest byrjar í 9,90 € — öll sundurliðunin er í [hvað matseðill með QR-kóða kostar](blog:qr-code-menu-cost)."
+        },
+        {
+          "q": "Get ég flutt matseðilinn minn frá ókeypis verkfæri yfir í greitt?",
+          "a": "Yfirleitt já, og þú þarft sjaldan að slá hann inn aftur: IQ Rest getur lesið mynd eða PDF af núverandi matseðli og endurbyggt línurnar á um fimm mínútum."
+        }
+      ]
+    }
+  ]
+}

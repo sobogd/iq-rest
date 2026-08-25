@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "title": "Besplatan QR jelovnik: što je stvarno besplatno | IQ Rest",
+    "description": "Besplatni QR jelovnici postoje i neki su u redu. Kako zarađuju, koje ograničenje udara prvo i kada je besplatno doista pravi izbor."
+  },
+  "card": {
+    "title": "Besplatni QR jelovnici: što je stvarno besplatno, a što plaćate poslije",
+    "excerpt": "Nitko vam ne hostira jelovnik za ništa. Evo pet načina na koje besplatni alati za QR jelovnik zarađuju, koja ograničenja pogađate prva i slučajeve u kojima besplatno doista dostaje."
+  },
+  "h1": "Besplatan QR jelovnik: što dobivate i što košta poslije",
+  "intro": "Potražite besplatan QR jelovnik i naći ćete desetke alata. Neki su doista upotrebljivi. Ali hosting, promet i podrška pružatelja koštaju novca svaki mjesec, pa pitanje nije plaćate li, nego čime. Evo pet poslovnih modela iza riječi \"besplatno\" — i onaj u kojem ste najvjerojatnije vi.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "1. Besplatan kod, a onda kod istekne"
+    },
+    {
+      "type": "p",
+      "text": "Najčešća zamka. Generatori QR-a nude **dinamičke** kodove: kod vodi na njihovu domenu, koja preusmjerava na vaš jelovnik. To preusmjeravanje i jest plaćeni proizvod. Kad probno razdoblje završi, kod se ne lomi bučno; počinje vašim gostima prikazivati stranicu za nadogradnju ili više ne vodi nikamo."
+    },
+    {
+      "type": "p",
+      "text": "Doznat ćete od gosta, usred smjene, s 20 otisnutih stalaka u sali. Ponovni ispis jeftini je dio; skupi je tjedan gostiju koji su skenirali i nisu dobili ništa."
+    },
+    {
+      "type": "note",
+      "text": "**Statični** QR kod nosi vašu adresu u sebi i nikada ne može isteći, jer između nema ničega. Cijena je što je ta adresa zauvijek fiksna. Ako alat nudi samo dinamičke kodove, to je taj znak."
+    },
+    {
+      "type": "h2",
+      "text": "2. Besplatno za vas, oglas za vaše goste"
+    },
+    {
+      "type": "p",
+      "text": "Neki alati financiraju besplatnu razinu vlastitom markom, banerom za nadogradnju ili gumbom \"napravi svoj jelovnik\" ispod vašeg popisa deserta. Vaš gost skenira kod na vašem stolu i prvo što vidi je tuđi marketing. Nije kobno, ali najpažljiviji trenutak obroka iznajmljujete trećoj strani."
+    },
+    {
+      "type": "h2",
+      "text": "3. Jelovnik besplatan, sve ostalo plaćeno"
+    },
+    {
+      "type": "p",
+      "text": "Jelovnik se prikazuje besplatno, a svaka sljedeća stvar koja vam treba je plaćena razina: više od 30 stavki, drugi jezik, uklanjanje marke, fotografije, više od jednog QR koda. Popis je složen tako da pravi restoran prijeđe barem jednu granicu u prvom mjesecu. Provjerite ograničenja stavki i jezika prije nego što potrošite dva sata na utipkavanje jelovnika."
+    },
+    {
+      "type": "h2",
+      "text": "4. Jelovnik besplatan, provizija na narudžbe"
+    },
+    {
+      "type": "p",
+      "text": "Pošteno i katkad dobar posao: jelovnik ne košta ništa, a pružatelj uzima postotak od narudžbi koje prođu kroz njega. Uz 300 € QR narudžbi mjesečno, 3% je devet eura — u redu. Uz 12.000 € mjesečno to je 360 €, daleko više od bilo koje fiksne pretplate. Taj model poskupljuje upravo kad uspije."
+    },
+    {
+      "type": "h2",
+      "text": "5. Besplatno jer je napušteno"
+    },
+    {
+      "type": "p",
+      "text": "Vikend projekt iz 2021., još online, bez podrške i ažuriranja. Radi dok ne prestane. Prije nego što išta otisnete, provjerite je li blog, popis promjena ili kanal podrške tog alata pokazao znak života ove godine."
+    },
+    {
+      "type": "h2",
+      "text": "Što besplatne razine obično ograničavaju"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Tipična besplatna razina",
+        "IQ Rest"
+      ],
+      "rows": [
+        [
+          "Stavke jelovnika",
+          "Često 20-50",
+          "Neograničeno"
+        ],
+        [
+          "QR kodovi",
+          "Često jedan",
+          "Jedan po stolu, neograničeno"
+        ],
+        [
+          "Jezici",
+          "Jedan",
+          "Automatski prijevod"
+        ],
+        [
+          "Marka pružatelja",
+          "Vidljiva gostima",
+          "Nema je"
+        ],
+        [
+          "Fotografije",
+          "Ograničene ili plaćene",
+          "Uz svako jelo"
+        ],
+        [
+          "Prekidač rasprodano",
+          "Rijetko",
+          "Jedan dodir"
+        ],
+        [
+          "Naručivanje",
+          "Ne, ili uz proviziju",
+          "Uključeno"
+        ],
+        [
+          "Istek koda",
+          "Ovisi o paketu",
+          "Nikad — vaša adresa"
+        ],
+        [
+          "Cijena",
+          "0 €",
+          "Od 9,90 €/mj., 14 dana besplatno"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kada je besplatno pravi odgovor"
+    },
+    {
+      "type": "p",
+      "text": "Postoje stvarni slučajevi. Food truck s devet stavki i stabilnim cijenama. Plažni bar otvoren deset tjedana. Pop-up koji provjerava dolazi li itko. Ako vam se jelovnik ne mijenja, ne trebaju vam jezici i ne primate narudžbe preko njega, besplatan alat sa statičnim kodom sasvim je razumno rješenje — i radije ćemo to reći nego se pretvarati."
+    },
+    {
+      "type": "p",
+      "text": "Račun se okreće u trenutku kad imate dugačak jelovnik, sezonske promjene, turiste ili bilo kakav interes za [naručivanje za stolom](route:/order-taking). Od te točke besplatan alat košta vas vremena osoblja i izgubljenih narudžbi, a to ne stoji ni na jednom računu."
+    },
+    {
+      "type": "h2",
+      "text": "Pet pitanja prije ispisa"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Je li QR kod statičan ili dinamičan? Ako je dinamičan, što se s njim događa kad prestanem plaćati?",
+        "Čiju marku vidi moj gost?",
+        "Koje je ograničenje stavki i što se događa na stavci 51?",
+        "Mogu li izvesti podatke svog jelovnika ako odem?",
+        "Postoji li broj ili sandučić gdje čovjek odgovara u radno vrijeme?"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Što god odabrali, ispišite kratku adresu ispod koda. Ne košta ništa i razlika je između neuspjelog skeniranja i gosta koji ipak dobije jelovnik."
+    },
+    {
+      "type": "cta",
+      "heading": "Prvo besplatno isprobajte plaćeno",
+      "text": "14 dana, sve funkcije, bez kartice. Skenirajte svoj papirnati jelovnik i vidite cjelinu kako radi prije nego što odlučite.",
+      "buttonLabel": "Pokreni besplatno razdoblje",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Česta pitanja",
+      "items": [
+        {
+          "q": "Mogu li besplatno napraviti jelovnik s QR kodom?",
+          "a": "Da. Statični QR kod koji vodi na PDF na vašoj domeni ne košta ništa i nikada ne istječe. Samo se PDF loše čita na mobitelu — zašto, pisali smo u [QR na PDF nije digitalni jelovnik](blog:pdf-menu-vs-digital-menu)."
+        },
+        {
+          "q": "Istječu li besplatni QR kodovi?",
+          "a": "Statični ne mogu, jer je adresa unutar samog koda. Dinamični mogu, jer preusmjeravaju preko domene pružatelja, a upravo to preusmjeravanje prestajete plaćati."
+        },
+        {
+          "q": "Je li besplatno probno razdoblje isto što i besplatan paket?",
+          "a": "Nije. Probno razdoblje je cijeli proizvod na ograničeno vrijeme; besplatan paket je ograničen proizvod zauvijek. IQ Rest daje 14 dana probe sa svime uključenim i bez kartice."
+        },
+        {
+          "q": "Koji je najjeftiniji plaćeni QR jelovnik?",
+          "a": "Fiksni paketi obično kreću oko 10 € mjesečno po lokalu. IQ Rest počinje na 9,90 € — cijela raščlamba je u [koliko košta jelovnik s QR kodom](blog:qr-code-menu-cost)."
+        },
+        {
+          "q": "Mogu li premjestiti jelovnik s besplatnog alata na plaćeni?",
+          "a": "Obično da i rijetko ga morate ponovno utipkavati: IQ Rest može pročitati fotografiju ili PDF postojećeg jelovnika i ponovno složiti stavke za otprilike pet minuta."
+        }
+      ]
+    }
+  ]
+}

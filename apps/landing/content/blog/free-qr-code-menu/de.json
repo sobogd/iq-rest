@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "title": "Kostenlose QR-Karte: was wirklich gratis ist | IQ Rest",
+    "description": "Kostenlose QR-Karten gibt es, und manche taugen. Wie sie Geld verdienen, welche Grenze zuerst greift und wann kostenlos wirklich die richtige Wahl ist."
+  },
+  "card": {
+    "title": "Kostenlose QR-Karten: was wirklich gratis ist und was Sie später zahlen",
+    "excerpt": "Niemand hostet Ihre Karte umsonst. Hier sind die fünf Wege, wie kostenlose QR-Karten-Tools Geld verdienen, welche Grenzen zuerst greifen und wann kostenlos wirklich reicht."
+  },
+  "h1": "Kostenlose QR-Karte: was Sie bekommen und was es später kostet",
+  "intro": "Suchen Sie nach einer kostenlosen QR-Karte, finden Sie Dutzende Tools. Manche sind wirklich brauchbar. Aber Hosting, Bandbreite und Support kosten den Anbieter jeden Monat Geld, also lautet die Frage nicht, ob Sie zahlen, sondern wie. Hier die fünf Geschäftsmodelle hinter \"kostenlos\" — und in welchem Sie vermutlich stecken.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "1. Kostenloser Code, dann läuft der Code ab"
+    },
+    {
+      "type": "p",
+      "text": "Die häufigste Falle. QR-Generatoren bieten **dynamische** Codes an: Der Code zeigt auf ihre Domain, die zu Ihrer Karte weiterleitet. Diese Weiterleitung ist das kostenpflichtige Produkt. Endet die Testphase, bricht der Code nicht laut zusammen — er zeigt Ihren Gästen eine Upgrade-Seite oder löst ins Leere auf."
+    },
+    {
+      "type": "p",
+      "text": "Sie erfahren es von einem Gast, mitten im Service, mit 20 gedruckten Tischaufstellern im Raum. Der Neudruck ist der billige Teil; teuer ist die Woche voller Gäste, die gescannt und nichts bekommen haben."
+    },
+    {
+      "type": "note",
+      "text": "Ein **statischer** QR-Code enthält Ihre Adresse direkt und kann nie ablaufen, weil nichts dazwischenliegt. Der Preis: Die Adresse steht für immer fest. Bietet ein Tool nur dynamische Codes an, ist das das verräterische Zeichen."
+    },
+    {
+      "type": "h2",
+      "text": "2. Kostenlos für Sie, Werbung für Ihre Gäste"
+    },
+    {
+      "type": "p",
+      "text": "Manche Tools finanzieren die Gratisstufe mit eigenem Branding, einem Upsell-Banner oder einem \"Erstelle deine eigene Karte\"-Button unter Ihrer Dessertliste. Ihr Gast scannt einen Code auf Ihrem Tisch, und das Erste, was er sieht, ist fremdes Marketing. Nicht tödlich, aber Sie vermieten den aufmerksamsten Moment des Essens an einen Dritten."
+    },
+    {
+      "type": "h2",
+      "text": "3. Karte kostenlos, alles andere kostenpflichtig"
+    },
+    {
+      "type": "p",
+      "text": "Die Karte wird gratis angezeigt, und jede weitere Sache ist eine kostenpflichtige Stufe: mehr als 30 Positionen, eine zweite Sprache, das Entfernen des Brandings, Fotos, mehr als ein QR-Code. Die Liste ist so gebaut, dass ein echtes Restaurant im ersten Monat mindestens eine Grenze reißt. Prüfen Sie Artikel- und Sprachlimits, bevor Sie zwei Stunden ins Abtippen stecken."
+    },
+    {
+      "type": "h2",
+      "text": "4. Karte kostenlos, Provision auf Bestellungen"
+    },
+    {
+      "type": "p",
+      "text": "Ehrlich und manchmal ein gutes Geschäft: Die Karte kostet nichts, und der Anbieter nimmt einen Prozentsatz der darüber laufenden Bestellungen. Bei 300 € QR-Bestellungen im Monat sind 3 % neun Euro — in Ordnung. Bei 12.000 € im Monat sind es 360 €, weit mehr als jedes Pauschal-Abo. Dieses Modell wird genau dann teurer, wenn es erfolgreich ist."
+    },
+    {
+      "type": "h2",
+      "text": "5. Kostenlos, weil aufgegeben"
+    },
+    {
+      "type": "p",
+      "text": "Ein Wochenendprojekt von 2021, noch online, kein Support, keine Updates. Es funktioniert, bis es nicht mehr funktioniert. Prüfen Sie vor dem Drucken, ob Blog, Changelog oder Support-Kanal des Tools dieses Jahr ein Lebenszeichen gezeigt haben."
+    },
+    {
+      "type": "h2",
+      "text": "Was Gratisstufen üblicherweise begrenzen"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Typische Gratisstufe",
+        "IQ Rest"
+      ],
+      "rows": [
+        [
+          "Gerichte",
+          "Oft 20–50",
+          "Unbegrenzt"
+        ],
+        [
+          "QR-Codes",
+          "Oft einer",
+          "Einer pro Tisch, unbegrenzt"
+        ],
+        [
+          "Sprachen",
+          "Eine",
+          "Automatische Übersetzung"
+        ],
+        [
+          "Anbieter-Branding",
+          "Für Gäste sichtbar",
+          "Keines"
+        ],
+        [
+          "Fotos",
+          "Begrenzt oder kostenpflichtig",
+          "Für jedes Gericht"
+        ],
+        [
+          "Ausverkauft-Schalter",
+          "Selten",
+          "Ein Tipp"
+        ],
+        [
+          "Bestellungen",
+          "Nein oder mit Provision",
+          "Enthalten"
+        ],
+        [
+          "Ablauf des Codes",
+          "Je nach Tarif",
+          "Nie — Ihre eigene Adresse"
+        ],
+        [
+          "Preis",
+          "0 €",
+          "Ab 9,90 €/Monat, 14 Tage gratis"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Wann kostenlos die richtige Antwort ist"
+    },
+    {
+      "type": "p",
+      "text": "Es gibt echte Fälle. Ein Foodtruck mit neun Positionen und stabilen Preisen. Eine Strandbar in einer Zehn-Wochen-Saison. Ein Pop-up, das testet, ob überhaupt jemand kommt. Ändert sich Ihre Karte nicht, brauchen Sie keine Sprachen und nehmen darüber keine Bestellungen an, ist ein kostenloses Tool mit statischem Code völlig vernünftig — und das sagen wir lieber, als so zu tun, als wäre es anders."
+    },
+    {
+      "type": "p",
+      "text": "Die Rechnung dreht sich, sobald Sie eine lange Karte, saisonale Wechsel, Touristen oder irgendein Interesse an [Bestellungen vom Tisch](route:/order-taking) haben. Dann kostet Sie das Gratis-Tool Personalzeit und entgangene Bestellungen — beides taucht auf keiner Rechnung auf."
+    },
+    {
+      "type": "h2",
+      "text": "Fünf Fragen, bevor Sie drucken"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Ist der QR-Code statisch oder dynamisch? Falls dynamisch: Was passiert damit, wenn ich nicht mehr zahle?",
+        "Wessen Branding sieht mein Gast?",
+        "Wie hoch ist das Artikellimit, und was passiert bei Artikel 51?",
+        "Kann ich meine Kartendaten exportieren, wenn ich gehe?",
+        "Gibt es eine Telefonnummer oder ein Postfach, wo während der Servicezeiten ein Mensch antwortet?"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Was immer Sie wählen: Drucken Sie eine kurze Textadresse unter den Code. Das kostet nichts und ist der Unterschied zwischen einem gescheiterten Scan und einem Gast, der die Karte trotzdem bekommt."
+    },
+    {
+      "type": "cta",
+      "heading": "Probieren Sie zuerst die kostenpflichtige gratis",
+      "text": "14 Tage, voller Funktionsumfang, ohne Karte. Scannen Sie Ihre Papierkarte und sehen Sie das Ganze in Betrieb, bevor Sie entscheiden.",
+      "buttonLabel": "Kostenlose Testphase starten",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Häufige Fragen",
+      "items": [
+        {
+          "q": "Kann ich eine QR-Code-Speisekarte kostenlos erstellen?",
+          "a": "Ja. Ein statischer QR-Code auf ein PDF auf Ihrer eigenen Domain kostet nichts und läuft nie ab. Nur liest sich ein PDF auf dem Handy schlecht — warum, steht in [ein QR-Code auf ein PDF ist keine digitale Speisekarte](blog:pdf-menu-vs-digital-menu)."
+        },
+        {
+          "q": "Laufen kostenlose QR-Codes ab?",
+          "a": "Statische können das nicht, weil die Adresse im Code steckt. Dynamische schon, weil sie über die Domain des Anbieters umleiten — und genau diese Weiterleitung zahlen Sie irgendwann nicht mehr."
+        },
+        {
+          "q": "Ist eine kostenlose Testphase dasselbe wie ein Gratistarif?",
+          "a": "Nein. Eine Testphase ist das volle Produkt für begrenzte Zeit; ein Gratistarif ist ein begrenztes Produkt für immer. IQ Rest bietet 14 Tage Test mit allem eingeschaltet, ohne Karte."
+        },
+        {
+          "q": "Was ist die günstigste kostenpflichtige QR-Karte?",
+          "a": "Pauschaltarife beginnen meist um 10 € pro Monat und Standort. IQ Rest startet bei 9,90 € — die vollständige Aufschlüsselung steht in [was eine QR-Code-Speisekarte kostet](blog:qr-code-menu-cost)."
+        },
+        {
+          "q": "Kann ich meine Karte von einem kostenlosen zu einem kostenpflichtigen Tool umziehen?",
+          "a": "Meist ja, und Sie müssen sie selten neu tippen: IQ Rest kann ein Foto oder ein PDF der bestehenden Karte lesen und die Artikel in etwa fünf Minuten neu anlegen."
+        }
+      ]
+    }
+  ]
+}

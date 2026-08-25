@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "title": "Free QR Code Menu: What's Actually Free | IQ Rest",
+    "description": "Free QR menu tools exist and some are fine. Here's how they make money, which limits bite first, and when free is genuinely the right choice."
+  },
+  "card": {
+    "title": "Free QR code menus: what's actually free and what you pay for later",
+    "excerpt": "Nobody hosts your menu for nothing. Here are the five ways free QR menu tools make money, which limits you hit first, and the cases where free really is enough."
+  },
+  "h1": "Free QR code menu: what you get and what it costs later",
+  "intro": "Search for a free QR menu and you'll find dozens of tools. Some are genuinely usable. But hosting, bandwidth and support cost the vendor money every month, so the question isn't whether you pay — it's how. Here are the five business models behind \"free\", and which one you're likely on.",
+  "blocks": [
+    { "type": "h2", "text": "1. Free code, then the code expires" },
+    {
+      "type": "p",
+      "text": "The most common trap. QR generators offer \"dynamic\" codes — the code points at their domain, which redirects to your menu. That redirect is the paid product. When the trial ends, the code doesn't break loudly; it starts showing an upgrade page to your guests, or resolves to nothing."
+    },
+    {
+      "type": "p",
+      "text": "You find out from a customer, during service, with 20 printed table tents already on the floor. Reprinting is the cheap part — the expensive part is the week of guests who scanned and got nothing."
+    },
+    {
+      "type": "note",
+      "text": "A **static** QR code encodes your URL directly and can never expire, because nothing sits in the middle. The trade-off is that the URL is fixed forever. If the tool only offers dynamic codes, that's the tell."
+    },
+    { "type": "h2", "text": "2. Free for you, advertising for your guests" },
+    {
+      "type": "p",
+      "text": "Some tools fund the free tier with the vendor's own branding, an upsell banner, or a \"create your own menu\" button under your dessert list. Your guest scans a code on your table and the first thing they see is someone else's marketing. It's not fatal, but you're renting the most attentive moment of the meal to a third party."
+    },
+    { "type": "h2", "text": "3. Free menu, paid everything else" },
+    {
+      "type": "p",
+      "text": "The menu displays for free and each thing you need next is a paid tier: more than 30 items, a second language, removing branding, photos, more than one QR code. The list is designed so that a real restaurant crosses at least one line in the first month. Check the item and language limits before you spend two hours typing your menu in."
+    },
+    { "type": "h2", "text": "4. Free menu, commission on orders" },
+    {
+      "type": "p",
+      "text": "Honest and sometimes a good deal: the menu costs nothing and the vendor takes a percentage of orders placed through it. If you take €300 of QR orders a month, a 3% fee is €9 — fine. At €12,000 a month it's €360, which is far more than any flat subscription. This model gets more expensive precisely as it succeeds."
+    },
+    { "type": "h2", "text": "5. Free because it's abandoned" },
+    {
+      "type": "p",
+      "text": "A weekend project from 2021, still online, no support, no updates. It works until it doesn't. Before printing anything, check whether the tool's own blog, changelog or support channel has shown a sign of life this year."
+    },
+    { "type": "h2", "text": "What the free tiers usually cap" },
+    {
+      "type": "table",
+      "headers": ["", "Typical free tier", "IQ Rest"],
+      "rows": [
+        ["Menu items", "Often 20–50", "Unlimited"],
+        ["QR codes", "Often one", "One per table, unlimited"],
+        ["Languages", "One", "Automatic translation"],
+        ["Vendor branding", "Shown to guests", "None"],
+        ["Photos", "Limited or paid", "Every dish"],
+        ["Sold-out toggle", "Rare", "One tap"],
+        ["Ordering", "No, or commission", "Included"],
+        ["Code expiry", "Depends on the plan", "Never — your own address"],
+        ["Price", "€0", "From €9.90/mo, 14 days free"]
+      ]
+    },
+    { "type": "h2", "text": "When free is the right answer" },
+    {
+      "type": "p",
+      "text": "There are real cases. A food truck with nine items and stable prices. A seasonal beach bar open ten weeks. A pop-up testing whether anyone comes. If your menu doesn't change, you don't need languages, and you're not taking orders through it, a free tool plus a static code is a perfectly sensible setup and we'd rather say so than pretend otherwise."
+    },
+    {
+      "type": "p",
+      "text": "The economics flip the moment you have a long menu, seasonal changes, tourists, or any interest in [taking orders from the table](route:/order-taking). At that point the free tool costs you in staff time and lost orders, which don't show up on any invoice."
+    },
+    { "type": "h2", "text": "Five questions to ask before you print" },
+    {
+      "type": "steps",
+      "items": [
+        "Is the QR code static or dynamic? If dynamic, what happens to it when I stop paying?",
+        "Whose branding does my guest see?",
+        "What's the item limit, and what happens at item 51?",
+        "Can I export my menu data if I leave?",
+        "Is there a phone number or inbox where a human answers during service hours?"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Whatever you choose, print a short text URL under the code. It costs nothing, and it's the difference between a broken scan and a guest who still gets the menu."
+    },
+    {
+      "type": "cta",
+      "heading": "Try the paid one for free first",
+      "text": "14 days, full features, no card required. Scan your paper menu and see the whole thing working before you decide.",
+      "buttonLabel": "Start the free trial",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently asked questions",
+      "items": [
+        {
+          "q": "Can I make a QR code menu for free?",
+          "a": "Yes. A static QR code pointing at a PDF on your own domain costs nothing and never expires. It's just hard to read on a phone — we covered why in [QR code to a PDF menu](blog:pdf-menu-vs-digital-menu)."
+        },
+        {
+          "q": "Do free QR codes expire?",
+          "a": "Static ones can't — the URL is inside the code. Dynamic ones can, because they redirect through the vendor's domain, and that redirect is what you stop paying for."
+        },
+        {
+          "q": "Is a free trial the same as a free plan?",
+          "a": "No. A trial is the full product for a limited time; a free plan is a limited product forever. IQ Rest offers a 14-day trial with everything switched on, no card required."
+        },
+        {
+          "q": "What's the cheapest paid QR menu?",
+          "a": "Flat plans generally start around €10 a month per venue. IQ Rest starts at €9.90 with unlimited items, tables and languages — the full breakdown is in [what a QR code menu costs](blog:qr-code-menu-cost)."
+        },
+        {
+          "q": "Can I move my menu from a free tool to a paid one?",
+          "a": "Usually yes, and you rarely have to retype it — IQ Rest can read a photo or a PDF of the existing menu and rebuild the items in about five minutes."
+        }
+      ]
+    }
+  ]
+}

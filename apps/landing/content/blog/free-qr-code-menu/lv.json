@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "title": "Bezmaksas QR ēdienkarte: kas patiesi ir bez maksas | IQ Rest",
+    "description": "Bezmaksas QR ēdienkartes pastāv, un dažas ir labas. Kā tās pelna, kurš ierobežojums apturēs pirmais un kad bezmaksas patiešām ir pareizā izvēle."
+  },
+  "card": {
+    "title": "Bezmaksas QR ēdienkartes: kas patiesi ir bez maksas un par ko maksā vēlāk",
+    "excerpt": "Neviens nemitina tavu ēdienkarti par velti. Lūk, pieci veidi, kā bezmaksas QR ēdienkaršu rīki pelna, kurus ierobežojumus sasniegsi pirmos un gadījumi, kad bezmaksas tiešām pietiek."
+  },
+  "h1": "Bezmaksas QR ēdienkarte: ko iegūsti un ko tas maksā vēlāk",
+  "intro": "Meklē bezmaksas QR ēdienkarti un atradīsi desmitiem rīku. Daži ir tiešām lietojami. Bet mitināšana, datu plūsma un atbalsts pakalpojuma sniedzējam katru mēnesi maksā naudu, tāpēc jautājums nav, vai maksā, bet ar ko. Lūk, pieci biznesa modeļi aiz vārda “bez maksas” — un tas, kurā, visticamāk, esi tu.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "1. Kods bez maksas, un tad kodam beidzas termiņš"
+    },
+    {
+      "type": "p",
+      "text": "Visizplatītākais slazds. QR ģeneratori piedāvā **dinamiskus** kodus: kods norāda uz viņu domēnu, kas pāradresē uz tavu ēdienkarti. Tieši šī pāradresācija arī ir maksas produkts. Kad izmēģinājums beidzas, kods nesalūzt skaļi; tas sāk taviem viesiem rādīt uzlabošanas lapu vai vairs neved nekur."
+    },
+    {
+      "type": "p",
+      "text": "Uzzini no viesa, maiņas vidū, kad zālē jau stāv 20 izdrukāti galda statīvi. Atkārtota druka ir lētā daļa; dārgā ir nedēļa ar viesiem, kuri noskenēja un nedabūja neko."
+    },
+    {
+      "type": "note",
+      "text": "**Statisks** QR kods nes tavu adresi sevī un nekad nevar beigties, jo pa vidu nav nekā. Cena ir tā, ka adrese ir fiksēta uz visiem laikiem. Ja rīks piedāvā tikai dinamiskus kodus, tā arī ir tā zīme."
+    },
+    {
+      "type": "h2",
+      "text": "2. Bez maksas tev, reklāma taviem viesiem"
+    },
+    {
+      "type": "p",
+      "text": "Daži rīki finansē bezmaksas līmeni ar savu zīmolu, uzlabošanas baneri vai pogu “izveido savu ēdienkarti” zem tava desertu saraksta. Tavs viesis noskenē kodu pie tava galda, un pirmais, ko viņš redz, ir kāda cita mārketings. Tas nav liktenīgi, bet tu iznomā maltītes uzmanīgāko mirkli trešajai pusei."
+    },
+    {
+      "type": "h2",
+      "text": "3. Ēdienkarte bez maksas, viss pārējais par maksu"
+    },
+    {
+      "type": "p",
+      "text": "Ēdienkarte tiek rādīta bez maksas, un katra nākamā vajadzīgā lieta ir maksas līmenis: vairāk nekā 30 pozīcijas, otra valoda, zīmola noņemšana, fotogrāfijas, vairāk nekā viens QR kods. Saraksts ir veidots tā, lai īsts restorāns pirmajā mēnesī pārkāptu vismaz vienu robežu. Pārbaudi pozīciju un valodu ierobežojumus, pirms pavadi divas stundas, ievadot ēdienkarti."
+    },
+    {
+      "type": "h2",
+      "text": "4. Ēdienkarte bez maksas, komisija no pasūtījumiem"
+    },
+    {
+      "type": "p",
+      "text": "Godīgi un dažreiz izdevīgi: ēdienkarte nemaksā neko, bet pakalpojuma sniedzējs ņem procentu no pasūtījumiem, kas iet caur to. Ja QR pasūtījumu ir 300 € mēnesī, 3% ir deviņi eiro — pilnīgi normāli. Pie 12 000 € mēnesī tie ir 360 €, daudz vairāk nekā jebkurš fiksēts abonements. Šis modelis sadārdzinās tieši tad, kad tas darbojas."
+    },
+    {
+      "type": "h2",
+      "text": "5. Bez maksas, jo pamests"
+    },
+    {
+      "type": "p",
+      "text": "Nedēļas nogales projekts no 2021. gada, joprojām tiešsaistē, bez atbalsta un atjauninājumiem. Darbojas, līdz vairs nedarbojas. Pirms ko nu drukā, pārbaudi, vai rīka blogs, izmaiņu žurnāls vai atbalsta kanāls šogad ir devis dzīvības zīmes."
+    },
+    {
+      "type": "h2",
+      "text": "Ko bezmaksas līmeņi parasti ierobežo"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Tipisks bezmaksas līmenis",
+        "IQ Rest"
+      ],
+      "rows": [
+        [
+          "Ēdienkartes pozīcijas",
+          "Bieži 20-50",
+          "Neierobežoti"
+        ],
+        [
+          "QR kodi",
+          "Bieži viens",
+          "Viens uz galdu, neierobežoti"
+        ],
+        [
+          "Valodas",
+          "Viena",
+          "Automātisks tulkojums"
+        ],
+        [
+          "Pakalpojuma zīmols",
+          "Redzams viesiem",
+          "Nav"
+        ],
+        [
+          "Fotogrāfijas",
+          "Ierobežotas vai par maksu",
+          "Pie katra ēdiena"
+        ],
+        [
+          "Slēdzis “beidzies”",
+          "Reti",
+          "Viens pieskāriens"
+        ],
+        [
+          "Pasūtīšana",
+          "Nē, vai ar komisiju",
+          "Iekļauta"
+        ],
+        [
+          "Koda derīgums",
+          "Atkarīgs no plāna",
+          "Nekad — tava paša adrese"
+        ],
+        [
+          "Cena",
+          "0 €",
+          "No 9,90 €/mēn., 14 dienas bez maksas"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kad bezmaksas ir pareizā atbilde"
+    },
+    {
+      "type": "p",
+      "text": "Reāli gadījumi ir. Ēdienu furgons ar deviņām pozīcijām un stabilām cenām. Pludmales bārs, atvērts desmit nedēļas. Pop-up, kas pārbauda, vai vispār kāds atnāks. Ja tava ēdienkarte nemainās, valodas nav vajadzīgas un pasūtījumus caur to nepieņem, bezmaksas rīks ar statisku kodu ir pilnīgi saprātīgs risinājums — un mēs to labāk pasakām, nekā izliekamies par pretējo."
+    },
+    {
+      "type": "p",
+      "text": "Rēķins apgriežas brīdī, kad tev ir gara ēdienkarte, sezonas maiņas, tūristi vai kaut mazākā interese par [pasūtīšanu pie galda](route:/order-taking). No šī brīža bezmaksas rīks tev maksā personāla laiku un zaudētus pasūtījumus, un tie neparādās nevienā rēķinā."
+    },
+    {
+      "type": "h2",
+      "text": "Pieci jautājumi pirms drukas"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Vai QR kods ir statisks vai dinamisks? Ja dinamisks, kas ar to notiks, kad pārstāšu maksāt?",
+        "Kura zīmolu redz mans viesis?",
+        "Kāds ir pozīciju ierobežojums un kas notiek ar 51. pozīciju?",
+        "Vai varu eksportēt savas ēdienkartes datus, ja aizeju?",
+        "Vai ir numurs vai pastkaste, kur darba laikā atbild cilvēks?"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Lai ko izvēlies, zem koda izdrukā īsu adresi. Tas nemaksā neko un ir atšķirība starp neveiksmīgu skenēšanu un viesi, kurš ēdienkarti tomēr saņem."
+    },
+    {
+      "type": "cta",
+      "heading": "Vispirms bez maksas izmēģini maksas versiju",
+      "text": "14 dienas, visas funkcijas, bez kartes. Noskenē savu papīra ēdienkarti un redzi visu darbībā, pirms izlem.",
+      "buttonLabel": "Sākt bezmaksas izmēģinājumu",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Biežāk uzdotie jautājumi",
+      "items": [
+        {
+          "q": "Vai varu izveidot ēdienkarti ar QR kodu bez maksas?",
+          "a": "Jā. Statisks QR kods, kas norāda uz PDF tavā paša domēnā, nemaksā neko un nekad nebeidzas. Vienkārši PDF telefonā slikti lasās — kāpēc, rakstījām tekstā [QR uz PDF nav digitāla ēdienkarte](blog:pdf-menu-vs-digital-menu)."
+        },
+        {
+          "q": "Vai bezmaksas QR kodiem beidzas termiņš?",
+          "a": "Statiskajiem nevar, jo adrese ir paša koda iekšpusē. Dinamiskajiem jā, jo tie pāradresē caur pakalpojuma sniedzēja domēnu, un tieši par šo pāradresāciju tu pārstāj maksāt."
+        },
+        {
+          "q": "Vai bezmaksas izmēģinājums ir tas pats, kas bezmaksas plāns?",
+          "a": "Nē. Izmēģinājums ir viss produkts ierobežotu laiku; bezmaksas plāns ir ierobežots produkts uz visiem laikiem. IQ Rest dod 14 dienu izmēģinājumu ar visu ieslēgtu un bez kartes."
+        },
+        {
+          "q": "Kura ir lētākā maksas QR ēdienkarte?",
+          "a": "Fiksētie plāni parasti sākas ap 10 € mēnesī par vietu. IQ Rest sākas no 9,90 € — pilns sadalījums ir tekstā [cik maksā ēdienkarte ar QR kodu](blog:qr-code-menu-cost)."
+        },
+        {
+          "q": "Vai varu pārcelt ēdienkarti no bezmaksas rīka uz maksas?",
+          "a": "Parasti jā, un reti kad tā jāievada no jauna: IQ Rest var izlasīt esošās ēdienkartes fotogrāfiju vai PDF un atjaunot pozīcijas aptuveni piecās minūtēs."
+        }
+      ]
+    }
+  ]
+}

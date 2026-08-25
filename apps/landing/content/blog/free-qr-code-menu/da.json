@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "title": "Gratis QR-menu: hvad er reelt gratis | IQ Rest",
+    "description": "Gratis QR-menuer findes, og nogle er fine. Hvordan de tjener penge, hvilken grænse der rammer først, og hvornår gratis faktisk er det rigtige valg."
+  },
+  "card": {
+    "title": "Gratis QR-menuer: hvad der reelt er gratis, og hvad du betaler for bagefter",
+    "excerpt": "Ingen hoster din menu for ingenting. Her er de fem måder, gratis QR-menuværktøjer tjener penge på, hvilke grænser du rammer først, og de tilfælde hvor gratis faktisk er nok."
+  },
+  "h1": "Gratis QR-menu: hvad du får, og hvad det koster bagefter",
+  "intro": "Søg på en gratis QR-menu, og du finder snesevis af værktøjer. Nogle er reelt brugbare. Men hosting, båndbredde og support koster leverandøren penge hver måned, så spørgsmålet er ikke, om du betaler, men hvordan. Her er de fem forretningsmodeller bag ordet \"gratis\" – og den, du sandsynligvis sidder i.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "1. Gratis kode, og så udløber koden"
+    },
+    {
+      "type": "p",
+      "text": "Den mest udbredte fælde. QR-generatorer tilbyder **dynamiske** koder: koden peger på deres domæne, som sender videre til din menu. Den viderestilling er det betalte produkt. Når prøveperioden slutter, går koden ikke i stykker med et brag; den begynder at vise dine gæster en opgraderingsside eller fører ingen steder hen."
+    },
+    {
+      "type": "p",
+      "text": "Du hører det fra en gæst, midt i vagten, med 20 trykte bordstandere i salen. Genoptryk er den billige del; den dyre er ugen med gæster, der scannede og fik ingenting."
+    },
+    {
+      "type": "note",
+      "text": "En **statisk** QR-kode bærer din adresse i sig og kan aldrig udløbe, fordi intet ligger imellem. Prisen er, at adressen ligger fast for altid. Tilbyder værktøjet kun dynamiske koder, er det signalet."
+    },
+    {
+      "type": "h2",
+      "text": "2. Gratis for dig, reklame for dine gæster"
+    },
+    {
+      "type": "p",
+      "text": "Nogle værktøjer finansierer gratisniveauet med deres eget brand, et opgraderingsbanner eller en \"lav din egen menu\"-knap under din dessertliste. Din gæst scanner en kode på dit bord, og det første, vedkommende ser, er en andens markedsføring. Ikke fatalt, men du udlejer måltidets mest opmærksomme øjeblik til tredjepart."
+    },
+    {
+      "type": "h2",
+      "text": "3. Gratis menu, betaling for alt andet"
+    },
+    {
+      "type": "p",
+      "text": "Menuen vises gratis, og hver ting du får brug for derefter er et betalt niveau: mere end 30 varer, et sprog mere, at fjerne brandet, billeder, mere end én QR-kode. Listen er bygget, så en rigtig restaurant krydser mindst én grænse i den første måned. Tjek vare- og sproggrænserne, før du bruger to timer på at taste menuen ind."
+    },
+    {
+      "type": "h2",
+      "text": "4. Gratis menu, provision på ordrer"
+    },
+    {
+      "type": "p",
+      "text": "Ærligt og nogle gange en god handel: menuen koster ingenting, og leverandøren tager en andel af de ordrer, der går igennem den. Ved 300 € i QR-ordrer om måneden er 3 % ni euro – helt fint. Ved 12.000 € om måneden er det 360 €, langt mere end nogen fast abonnement. Modellen bliver dyrere netop når den lykkes."
+    },
+    {
+      "type": "h2",
+      "text": "5. Gratis, fordi det er forladt"
+    },
+    {
+      "type": "p",
+      "text": "Et weekendprojekt fra 2021, stadig online, ingen support, ingen opdateringer. Det virker, indtil det ikke gør. Før du printer noget, så tjek om værktøjets blog, ændringslog eller supportkanal har vist livstegn i år."
+    },
+    {
+      "type": "h2",
+      "text": "Hvad gratisniveauer typisk begrænser"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Typisk gratisniveau",
+        "IQ Rest"
+      ],
+      "rows": [
+        [
+          "Varer i menuen",
+          "Ofte 20-50",
+          "Ubegrænset"
+        ],
+        [
+          "QR-koder",
+          "Ofte én",
+          "Én pr. bord, ubegrænset"
+        ],
+        [
+          "Sprog",
+          "Ét",
+          "Automatisk oversættelse"
+        ],
+        [
+          "Leverandørens brand",
+          "Synligt for gæsterne",
+          "Intet"
+        ],
+        [
+          "Billeder",
+          "Begrænsede eller betalte",
+          "På hver ret"
+        ],
+        [
+          "Udsolgt-knap",
+          "Sjældent",
+          "Ét tryk"
+        ],
+        [
+          "Bestilling",
+          "Nej, eller med provision",
+          "Inkluderet"
+        ],
+        [
+          "Kodens udløb",
+          "Afhænger af planen",
+          "Aldrig – din egen adresse"
+        ],
+        [
+          "Pris",
+          "0 €",
+          "Fra 9,90 €/md., 14 dage gratis"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Hvornår gratis er det rigtige svar"
+    },
+    {
+      "type": "p",
+      "text": "Der er reelle tilfælde. En food truck med ni varer og stabile priser. En strandbar åben i ti uger. En pop-up, der tester, om der overhovedet kommer nogen. Hvis din menu ikke ændrer sig, du ikke skal bruge sprog og ikke tager imod ordrer gennem den, er et gratis værktøj med en statisk kode et helt fornuftigt setup – og det siger vi hellere end at lade som om noget andet."
+    },
+    {
+      "type": "p",
+      "text": "Regnestykket vender i samme øjeblik du har en lang menu, sæsonskift, turister eller den mindste interesse for [bestilling ved bordet](route:/order-taking). Fra det punkt koster det gratis værktøj dig personaletid og tabte ordrer, og de står ikke på nogen faktura."
+    },
+    {
+      "type": "h2",
+      "text": "Fem spørgsmål, før du printer"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Er QR-koden statisk eller dynamisk? Hvis dynamisk: hvad sker der med den, når jeg holder op med at betale?",
+        "Hvis brand ser min gæst?",
+        "Hvad er varegrænsen, og hvad sker der ved vare 51?",
+        "Kan jeg eksportere mine menudata, hvis jeg går?",
+        "Findes der et nummer eller en indbakke, hvor et menneske svarer i åbningstiden?"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Uanset hvad du vælger: print en kort webadresse under koden. Det koster ingenting og er forskellen på en mislykket scanning og en gæst, der alligevel får menuen."
+    },
+    {
+      "type": "cta",
+      "heading": "Prøv den betalte gratis først",
+      "text": "14 dage, alle funktioner, uden kort. Scan din papirmenu og se det hele virke, før du beslutter dig.",
+      "buttonLabel": "Start den gratis prøveperiode",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Ofte stillede spørgsmål",
+      "items": [
+        {
+          "q": "Kan jeg lave en QR-menu gratis?",
+          "a": "Ja. En statisk QR-kode, der peger på en pdf på dit eget domæne, koster ingenting og udløber aldrig. Det er bare svært at læse en pdf på en telefon – hvorfor står i [en QR til en pdf er ikke en digital menu](blog:pdf-menu-vs-digital-menu)."
+        },
+        {
+          "q": "Udløber gratis QR-koder?",
+          "a": "Statiske kan ikke, for adressen ligger i selve koden. Dynamiske kan, fordi de viderestiller via leverandørens domæne, og det er netop den viderestilling, du holder op med at betale for."
+        },
+        {
+          "q": "Er en gratis prøveperiode det samme som en gratis plan?",
+          "a": "Nej. En prøveperiode er hele produktet i begrænset tid; en gratis plan er et begrænset produkt for altid. IQ Rest giver 14 dages prøve med alt slået til og uden kort."
+        },
+        {
+          "q": "Hvad er den billigste betalte QR-menu?",
+          "a": "Faste planer starter typisk omkring 10 € om måneden pr. sted. IQ Rest begynder ved 9,90 € – hele opdelingen står i [hvad en QR-menu koster](blog:qr-code-menu-cost)."
+        },
+        {
+          "q": "Kan jeg flytte min menu fra et gratis værktøj til et betalt?",
+          "a": "Som regel ja, og du skal sjældent taste den ind igen: IQ Rest kan læse et foto eller en pdf af den eksisterende menu og bygge varerne op igen på cirka fem minutter."
+        }
+      ]
+    }
+  ]
+}

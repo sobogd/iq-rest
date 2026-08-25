@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "title": "Darmowe menu QR: co jest naprawdę za darmo | IQ Rest",
+    "description": "Darmowe menu QR istnieją i niektóre są w porządku. Jak na tym zarabiają, który limit uderzy pierwszy i kiedy darmowe naprawdę wystarcza."
+  },
+  "card": {
+    "title": "Darmowe menu QR: co jest naprawdę za darmo, a za co zapłacisz później",
+    "excerpt": "Nikt nie hostuje twojego menu za nic. Oto pięć sposobów, w jakie darmowe narzędzia do menu QR zarabiają, które limity uderzą cię pierwsze i przypadki, w których darmowe naprawdę wystarcza."
+  },
+  "h1": "Darmowe menu QR: co dostajesz i co kosztuje później",
+  "intro": "Poszukaj darmowego menu QR, a znajdziesz dziesiątki narzędzi. Niektóre są naprawdę używalne. Ale hosting, transfer i wsparcie kosztują dostawcę pieniądze co miesiąc, więc pytanie brzmi nie czy płacisz, tylko jak. Oto pięć modeli biznesowych stojących za słowem „za darmo” i ten, w którym najpewniej jesteś.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "1. Kod za darmo, a potem kod wygasa"
+    },
+    {
+      "type": "p",
+      "text": "Najczęstsza pułapka. Generatory QR oferują kody **dynamiczne**: kod prowadzi na ich domenę, która przekierowuje do twojego menu. To przekierowanie jest płatnym produktem. Gdy okres próbny się kończy, kod nie psuje się głośno — zaczyna pokazywać twoim gościom stronę z ofertą albo nie prowadzi już nigdzie."
+    },
+    {
+      "type": "p",
+      "text": "Dowiadujesz się od klienta, w środku serwisu, mając 20 wydrukowanych stojaków na sali. Przedruk to tania część; droga jest tydzień gości, którzy zeskanowali i nie dostali nic."
+    },
+    {
+      "type": "note",
+      "text": "Kod **statyczny** ma twój adres w środku i nie może wygasnąć, bo pomiędzy nie ma nic. Ceną jest to, że ten adres zostaje na zawsze. Jeśli narzędzie oferuje wyłącznie kody dynamiczne, to właśnie ten sygnał."
+    },
+    {
+      "type": "h2",
+      "text": "2. Za darmo dla ciebie, reklama dla twoich gości"
+    },
+    {
+      "type": "p",
+      "text": "Niektóre narzędzia finansują darmowy plan własną marką, banerem sprzedażowym albo przyciskiem „stwórz własne menu” pod twoją listą deserów. Gość skanuje kod na twoim stoliku i pierwsze, co widzi, to cudzy marketing. To nie katastrofa, ale wynajmujesz obcemu najbardziej uważny moment posiłku."
+    },
+    {
+      "type": "h2",
+      "text": "3. Menu za darmo, cała reszta płatna"
+    },
+    {
+      "type": "p",
+      "text": "Menu wyświetla się za darmo, a każda kolejna potrzebna rzecz to płatny poziom: więcej niż 30 pozycji, drugi język, usunięcie brandingu, zdjęcia, więcej niż jeden kod QR. Lista jest tak zaprojektowana, żeby prawdziwa restauracja przekroczyła co najmniej jedną granicę w pierwszym miesiącu. Sprawdź limity pozycji i języków, zanim poświęcisz dwie godziny na przepisanie karty."
+    },
+    {
+      "type": "h2",
+      "text": "4. Menu za darmo, prowizja od zamówień"
+    },
+    {
+      "type": "p",
+      "text": "Uczciwe i czasem opłacalne: menu nic nie kosztuje, a dostawca bierze procent od zamówień złożonych przez nie. Przy 300 € zamówień QR miesięcznie 3% to 9 € — w porządku. Przy 12 000 € miesięcznie to 360 €, znacznie więcej niż jakikolwiek stały abonament. Ten model drożeje dokładnie wtedy, gdy odnosi sukces."
+    },
+    {
+      "type": "h2",
+      "text": "5. Za darmo, bo porzucone"
+    },
+    {
+      "type": "p",
+      "text": "Weekendowy projekt z 2021 roku, wciąż online, bez wsparcia i aktualizacji. Działa, dopóki nie przestanie. Zanim cokolwiek wydrukujesz, sprawdź, czy blog, lista zmian albo kanał wsparcia narzędzia dały w tym roku znak życia."
+    },
+    {
+      "type": "h2",
+      "text": "Co zwykle ograniczają darmowe plany"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Typowy darmowy plan",
+        "IQ Rest"
+      ],
+      "rows": [
+        [
+          "Pozycje menu",
+          "Często 20-50",
+          "Bez limitu"
+        ],
+        [
+          "Kody QR",
+          "Często jeden",
+          "Jeden na stolik, bez limitu"
+        ],
+        [
+          "Języki",
+          "Jeden",
+          "Tłumaczenie automatyczne"
+        ],
+        [
+          "Branding dostawcy",
+          "Widoczny dla gości",
+          "Brak"
+        ],
+        [
+          "Zdjęcia",
+          "Ograniczone albo płatne",
+          "Przy każdym daniu"
+        ],
+        [
+          "Przełącznik niedostępności",
+          "Rzadko",
+          "Jedno dotknięcie"
+        ],
+        [
+          "Zamówienia",
+          "Nie, albo z prowizją",
+          "W cenie"
+        ],
+        [
+          "Wygasanie kodu",
+          "Zależy od planu",
+          "Nigdy — to twój adres"
+        ],
+        [
+          "Cena",
+          "0 €",
+          "Od 9,90 €/mies., 14 dni za darmo"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kiedy darmowe jest właściwą odpowiedzią"
+    },
+    {
+      "type": "p",
+      "text": "Są realne przypadki. Food truck z dziewięcioma pozycjami i stabilnymi cenami. Bar plażowy otwarty dziesięć tygodni. Pop-up sprawdzający, czy ktokolwiek przyjdzie. Jeśli twoja karta się nie zmienia, nie potrzebujesz języków i nie przyjmujesz przez nią zamówień, darmowe narzędzie ze statycznym kodem jest zupełnie rozsądnym rozwiązaniem — i wolimy to powiedzieć, niż udawać, że jest inaczej."
+    },
+    {
+      "type": "p",
+      "text": "Rachunek się odwraca, gdy tylko masz długą kartę, zmiany sezonowe, turystów albo jakiekolwiek zainteresowanie [zamawianiem przy stoliku](route:/order-taking). W tym momencie darmowe narzędzie kosztuje cię czas obsługi i utracone zamówienia, których nie widać na żadnej fakturze."
+    },
+    {
+      "type": "h2",
+      "text": "Pięć pytań przed drukiem"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Czy kod QR jest statyczny, czy dynamiczny? Jeśli dynamiczny, co się z nim stanie, gdy przestanę płacić?",
+        "Czyj branding widzi mój gość?",
+        "Jaki jest limit pozycji i co się dzieje przy pozycji 51?",
+        "Czy mogę wyeksportować dane swojego menu, jeśli odejdę?",
+        "Czy jest numer telefonu albo skrzynka, gdzie w godzinach serwisu odpowiada człowiek?"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Cokolwiek wybierzesz, wydrukuj krótki adres pod kodem. Nic nie kosztuje, a stanowi różnicę między nieudanym skanem a gościem, który mimo wszystko dostaje menu."
+    },
+    {
+      "type": "cta",
+      "heading": "Najpierw wypróbuj płatne za darmo",
+      "text": "14 dni, pełna funkcjonalność, bez karty. Zeskanuj papierową kartę i zobacz całość w działaniu, zanim zdecydujesz.",
+      "buttonLabel": "Zacznij darmowy okres próbny",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Najczęstsze pytania",
+      "items": [
+        {
+          "q": "Czy mogę zrobić menu z kodem QR za darmo?",
+          "a": "Tak. Statyczny kod QR prowadzący do PDF-a na twojej własnej domenie nic nie kosztuje i nigdy nie wygasa. Rzecz w tym, że PDF źle się czyta na telefonie — dlaczego, opisaliśmy w tekście [kod QR na PDF-ie to nie jest cyfrowe menu](blog:pdf-menu-vs-digital-menu)."
+        },
+        {
+          "q": "Czy darmowe kody QR wygasają?",
+          "a": "Statyczne nie mogą, bo adres siedzi w samym kodzie. Dynamiczne tak, bo przekierowują przez domenę dostawcy, a to właśnie za to przekierowanie przestajesz płacić."
+        },
+        {
+          "q": "Czy darmowy okres próbny to to samo co darmowy plan?",
+          "a": "Nie. Okres próbny to pełny produkt przez ograniczony czas; darmowy plan to ograniczony produkt na zawsze. IQ Rest daje 14 dni próby ze wszystkim włączonym i bez karty."
+        },
+        {
+          "q": "Jakie jest najtańsze płatne menu QR?",
+          "a": "Stałe plany zaczynają się zwykle od około 10 € miesięcznie za lokal. IQ Rest startuje od 9,90 € — pełne wyliczenie jest w tekście [ile kosztuje menu z kodem QR](blog:qr-code-menu-cost)."
+        },
+        {
+          "q": "Czy mogę przenieść menu z darmowego narzędzia do płatnego?",
+          "a": "Zwykle tak i rzadko trzeba je przepisywać: IQ Rest potrafi odczytać zdjęcie albo PDF istniejącej karty i odtworzyć pozycje w jakieś pięć minut."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "title": "Gratis QR-menu: wat is er echt gratis | IQ Rest",
+    "description": "Gratis QR-menu's bestaan en sommige zijn prima. Hoe ze geld verdienen, welke limiet je het eerst raakt en wanneer gratis echt de juiste keuze is."
+  },
+  "card": {
+    "title": "Gratis QR-menu's: wat er echt gratis is en wat je later betaalt",
+    "excerpt": "Niemand host je menu voor niets. Dit zijn de vijf manieren waarop gratis QR-menutools geld verdienen, welke limieten je het eerst raakt, en de gevallen waarin gratis echt genoeg is."
+  },
+  "h1": "Gratis QR-menu: wat je krijgt en wat het later kost",
+  "intro": "Zoek op een gratis QR-menu en je vindt tientallen tools. Sommige zijn echt bruikbaar. Maar hosting, bandbreedte en support kosten de leverancier elke maand geld, dus de vraag is niet óf je betaalt, maar hoe. Dit zijn de vijf verdienmodellen achter \"gratis\", en in welke jij waarschijnlijk zit.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "1. Gratis code, en dan verloopt de code"
+    },
+    {
+      "type": "p",
+      "text": "De meest voorkomende val. QR-generatoren bieden **dynamische** codes: de code wijst naar hun domein, dat doorstuurt naar jouw menu. Die doorverwijzing is het betaalde product. Als de proefperiode afloopt, breekt de code niet luidruchtig; hij begint je gasten een upgradepagina te tonen, of verwijst nergens meer heen."
+    },
+    {
+      "type": "p",
+      "text": "Je hoort het van een gast, midden in de dienst, met 20 gedrukte tafelstandaards in de zaal. Herdrukken is het goedkope deel; het dure deel is de week vol gasten die scanden en niets kregen."
+    },
+    {
+      "type": "note",
+      "text": "Een **statische** QR-code bevat je adres en kan nooit verlopen, want er zit niets tussen. De keerzijde: dat adres ligt voorgoed vast. Biedt een tool alleen dynamische codes, dan is dat het signaal."
+    },
+    {
+      "type": "h2",
+      "text": "2. Gratis voor jou, reclame voor je gasten"
+    },
+    {
+      "type": "p",
+      "text": "Sommige tools financieren de gratis laag met hun eigen merk, een upsell-banner of een knop \"maak je eigen menu\" onder je dessertlijst. Je gast scant een code op jouw tafel en het eerste wat hij ziet is andermans marketing. Niet fataal, maar je verhuurt het meest aandachtige moment van de maaltijd aan een derde partij."
+    },
+    {
+      "type": "h2",
+      "text": "3. Gratis menu, alle rest betaald"
+    },
+    {
+      "type": "p",
+      "text": "Het menu wordt gratis getoond en alles wat je daarna nodig hebt is een betaalde laag: meer dan 30 gerechten, een tweede taal, het merk weghalen, foto's, meer dan één QR-code. De lijst is zo ontworpen dat een echt restaurant in de eerste maand minstens één grens overschrijdt. Controleer de gerecht- en taallimieten voordat je twee uur besteedt aan het intypen van je kaart."
+    },
+    {
+      "type": "h2",
+      "text": "4. Gratis menu, commissie op bestellingen"
+    },
+    {
+      "type": "p",
+      "text": "Eerlijk en soms een goede deal: het menu kost niets en de leverancier neemt een percentage van de bestellingen die erdoorheen gaan. Bij € 300 aan QR-bestellingen per maand is 3% negen euro — prima. Bij € 12.000 per maand is het € 360, veel meer dan welk vast abonnement ook. Dit model wordt duurder precies wanneer het slaagt."
+    },
+    {
+      "type": "h2",
+      "text": "5. Gratis omdat het verlaten is"
+    },
+    {
+      "type": "p",
+      "text": "Een weekendproject uit 2021, nog online, geen support, geen updates. Het werkt tot het niet meer werkt. Controleer voordat je iets drukt of de blog, changelog of het supportkanaal van de tool dit jaar een teken van leven heeft gegeven."
+    },
+    {
+      "type": "h2",
+      "text": "Wat gratis lagen meestal begrenzen"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Typische gratis laag",
+        "IQ Rest"
+      ],
+      "rows": [
+        [
+          "Gerechten",
+          "Vaak 20-50",
+          "Onbeperkt"
+        ],
+        [
+          "QR-codes",
+          "Vaak één",
+          "Eén per tafel, onbeperkt"
+        ],
+        [
+          "Talen",
+          "Eén",
+          "Automatische vertaling"
+        ],
+        [
+          "Merk van de leverancier",
+          "Zichtbaar voor gasten",
+          "Geen"
+        ],
+        [
+          "Foto's",
+          "Beperkt of betaald",
+          "Bij elk gerecht"
+        ],
+        [
+          "Uitverkocht-schakelaar",
+          "Zelden",
+          "Eén tik"
+        ],
+        [
+          "Bestellen",
+          "Nee, of met commissie",
+          "Inbegrepen"
+        ],
+        [
+          "Vervaldatum van de code",
+          "Hangt van het plan af",
+          "Nooit — je eigen adres"
+        ],
+        [
+          "Prijs",
+          "€ 0",
+          "Vanaf € 9,90/maand, 14 dagen gratis"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Wanneer gratis het juiste antwoord is"
+    },
+    {
+      "type": "p",
+      "text": "Er zijn echte gevallen. Een foodtruck met negen gerechten en stabiele prijzen. Een strandtent die tien weken open is. Een pop-up die test of er überhaupt iemand komt. Verandert je kaart niet, heb je geen talen nodig en neem je er geen bestellingen mee op, dan is een gratis tool met een statische code een volstrekt verstandige opzet, en dat zeggen we liever dan te doen alsof het anders is."
+    },
+    {
+      "type": "p",
+      "text": "De rekensom kantelt zodra je een lange kaart hebt, seizoenswisselingen, toeristen, of enige interesse in [bestellen aan tafel](route:/order-taking). Vanaf dat punt kost de gratis tool je personeelstijd en misgelopen bestellingen, en die staan op geen enkele factuur."
+    },
+    {
+      "type": "h2",
+      "text": "Vijf vragen voordat je drukt"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Is de QR-code statisch of dynamisch? Zo dynamisch: wat gebeurt ermee als ik stop met betalen?",
+        "Wiens merk ziet mijn gast?",
+        "Wat is de gerechtenlimiet, en wat gebeurt er bij gerecht 51?",
+        "Kan ik mijn menugegevens exporteren als ik vertrek?",
+        "Is er een telefoonnummer of mailbox waar tijdens de service een mens antwoordt?"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Wat je ook kiest: druk een kort webadres onder de code. Het kost niets en het is het verschil tussen een mislukte scan en een gast die het menu alsnog krijgt."
+    },
+    {
+      "type": "cta",
+      "heading": "Probeer de betaalde eerst gratis",
+      "text": "14 dagen, alle functies, zonder creditcard. Scan je papieren kaart en zie het geheel werken voordat je beslist.",
+      "buttonLabel": "Start de gratis proefperiode",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Veelgestelde vragen",
+      "items": [
+        {
+          "q": "Kan ik gratis een QR-menu maken?",
+          "a": "Ja. Een statische QR-code die naar een pdf op je eigen domein wijst kost niets en verloopt nooit. Alleen leest een pdf slecht op een telefoon — waarom, staat in [een QR naar een pdf is geen digitaal menu](blog:pdf-menu-vs-digital-menu)."
+        },
+        {
+          "q": "Verlopen gratis QR-codes?",
+          "a": "Statische kunnen dat niet, want het adres zit in de code. Dynamische wel, omdat ze doorsturen via het domein van de leverancier, en juist die doorverwijzing stop je met betalen."
+        },
+        {
+          "q": "Is een gratis proefperiode hetzelfde als een gratis plan?",
+          "a": "Nee. Een proefperiode is het volledige product voor beperkte tijd; een gratis plan is een beperkt product voor altijd. IQ Rest biedt 14 dagen proef met alles aan, zonder creditcard."
+        },
+        {
+          "q": "Wat is het goedkoopste betaalde QR-menu?",
+          "a": "Vaste plannen beginnen doorgaans rond € 10 per maand per vestiging. IQ Rest start bij € 9,90 — de volledige uitsplitsing staat in [wat een QR-menu kost](blog:qr-code-menu-cost)."
+        },
+        {
+          "q": "Kan ik mijn menu van een gratis tool naar een betaalde verhuizen?",
+          "a": "Meestal wel, en je hoeft het zelden over te typen: IQ Rest kan een foto of pdf van het bestaande menu lezen en de gerechten in ongeveer vijf minuten opnieuw opbouwen."
+        }
+      ]
+    }
+  ]
+}

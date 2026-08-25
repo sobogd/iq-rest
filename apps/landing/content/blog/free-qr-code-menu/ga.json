@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "title": "Biachlár QR saor in aisce: cad atá saor i ndáiríre | IQ Rest",
+    "description": "Tá biachláir QR saor in aisce ann agus tá cuid acu ceart go leor. Conas a dhéanann siad airgead, cén teorainn a bhuaileann tú ar dtús, agus cathain a oireann saor."
+  },
+  "card": {
+    "title": "Biachláir QR saor in aisce: cad atá saor i ndáiríre agus cad a íocann tú níos déanaí",
+    "excerpt": "Ní óstálann duine ar bith do bhiachlár saor in aisce. Seo na cúig bhealach a dhéanann uirlisí biachláir QR saor in aisce airgead, na teorainneacha a bhuaileann tú ar dtús, agus na cásanna ina bhfuil saor in aisce go leor i ndáiríre."
+  },
+  "h1": "Biachlár QR saor in aisce: cad a fhaigheann tú agus cad a chosnaíonn sé níos déanaí",
+  "intro": "Cuardaigh biachlár QR saor in aisce agus gheobhaidh tú na mórchuid uirlisí. Tá cuid acu inúsáidte go fírinneach. Ach cosnaíonn óstáil, bandaleithead agus tacaíocht airgead ar an soláthraí gach mí, mar sin ní hé an cheist an íocann tú ach conas. Seo na cúig mhúnla gnó taobh thiar den fhocal \"saor in aisce\" — agus an ceann ina bhfuil tú is dócha.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "1. Cód saor in aisce, agus ansin téann an cód in éag"
+    },
+    {
+      "type": "p",
+      "text": "An gaiste is coitianta. Tairgeann gineadóirí QR cóid **dhinimiciúla**: díríonn an cód ar a bhfearann féin, a atreoraíonn chuig do bhiachlár. Is é an t-atreorú sin an táirge íoctha. Nuair a chríochnaíonn an tréimhse trialach, ní bhriseann an cód go glórach; tosaíonn sé ag taispeáint leathanach uasghrádaithe do do chuid aíonna, nó ní réitíonn sé rud ar bith."
+    },
+    {
+      "type": "p",
+      "text": "Cloiseann tú faoi ó aoi, i lár an tseal, agus 20 seastán priontáilte sa seomra cheana. Is í an athphriontáil an chuid saor; is í an chuid chostasach an tseachtain d'aíonna a rinne scanadh agus nach bhfuair aon rud."
+    },
+    {
+      "type": "note",
+      "text": "Iompraíonn cód QR **statach** do sheoladh istigh ann agus ní féidir leis dul in éag riamh, mar níl aon rud sa lár. Is é an praghas air go bhfuil an seoladh sin socraithe go deo. Mura dtairgeann uirlis ach cóid dhinimiciúla, sin an comhartha."
+    },
+    {
+      "type": "h2",
+      "text": "2. Saor in aisce duitse, fógraíocht do do chuid aíonna"
+    },
+    {
+      "type": "p",
+      "text": "Maoiníonn roinnt uirlisí an leibhéal saor lena mbranda féin, meirge uasghrádaithe, nó cnaipe \"cruthaigh do bhiachlár féin\" faoi do liosta milseog. Scanann d'aoi cód ar do bhord agus is é an chéad rud a fheiceann sé ná margaíocht duine eile. Níl sé marfach, ach tá tú ag ligean an nóiméid is airdeallaí den bhéile ar cíos chuig tríú páirtí."
+    },
+    {
+      "type": "h2",
+      "text": "3. Biachlár saor, gach rud eile íoctha"
+    },
+    {
+      "type": "p",
+      "text": "Taispeántar an biachlár saor in aisce agus is leibhéal íoctha gach rud eile a theastaíonn uait ina dhiaidh: níos mó ná 30 mír, dara teanga, an branda a bhaint, grianghraif, níos mó ná cód QR amháin. Tá an liosta deartha sa chaoi go dtrasnóidh fíorbhialann teorainn amháin ar a laghad sa chéad mhí. Seiceáil na teorainneacha míreanna agus teangacha sula gcaitheann tú dhá uair an chloig ag clóscríobh do bhiachláir."
+    },
+    {
+      "type": "h2",
+      "text": "4. Biachlár saor, coimisiún ar orduithe"
+    },
+    {
+      "type": "p",
+      "text": "Macánta agus uaireanta margadh maith: ní chosnaíonn an biachlár faic agus glacann an soláthraí céatadán de na horduithe a théann tríd. Ag €300 d'orduithe QR sa mhí, is naoi euro é 3% — ceart go leor. Ag €12,000 sa mhí is €360 é, i bhfad níos mó ná aon síntiús cothrom. Éiríonn an múnla seo níos costasaí go díreach nuair a éiríonn leis."
+    },
+    {
+      "type": "h2",
+      "text": "5. Saor in aisce mar go bhfuil sé tréigthe"
+    },
+    {
+      "type": "p",
+      "text": "Tionscadal deireadh seachtaine ó 2021, fós ar líne, gan tacaíocht, gan nuashonruithe. Oibríonn sé go dtí nach n-oibríonn. Sula bpriontálann tú aon rud, seiceáil ar thaispeáin blag, loga athruithe nó cainéal tacaíochta na huirlise comhartha beatha i mbliana."
+    },
+    {
+      "type": "h2",
+      "text": "Cad a theorannaíonn leibhéil saor de ghnáth"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Gnáthleibhéal saor",
+        "IQ Rest"
+      ],
+      "rows": [
+        [
+          "Míreanna biachláir",
+          "Go minic 20-50",
+          "Gan teorainn"
+        ],
+        [
+          "Cóid QR",
+          "Go minic ceann amháin",
+          "Ceann in aghaidh an bhoird, gan teorainn"
+        ],
+        [
+          "Teangacha",
+          "Ceann amháin",
+          "Aistriúchán uathoibríoch"
+        ],
+        [
+          "Branda an tsoláthraí",
+          "Le feiceáil ag aíonna",
+          "Ceann ar bith"
+        ],
+        [
+          "Grianghraif",
+          "Teoranta nó íoctha",
+          "Ar gach mias"
+        ],
+        [
+          "Lasc díolta amach",
+          "Annamh",
+          "Tapú amháin"
+        ],
+        [
+          "Ordú",
+          "Níl, nó le coimisiún",
+          "San áireamh"
+        ],
+        [
+          "Éag an chóid",
+          "Ag brath ar an bplean",
+          "Riamh — do sheoladh féin"
+        ],
+        [
+          "Praghas",
+          "€0",
+          "Ó €9.90/mí, 14 lá saor in aisce"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Cathain is í saor in aisce an freagra ceart"
+    },
+    {
+      "type": "p",
+      "text": "Tá fíorchásanna ann. Trucail bia le naoi mír agus praghsanna seasta. Beár trá oscailte ar feadh deich seachtaine. Pop-up ag tástáil an dtagann duine ar bith. Mura n-athraíonn do bhiachlár, mura dteastaíonn teangacha uait agus mura nglacann tú orduithe tríd, is socrú lánchiallmhar é uirlis saor in aisce le cód statach — agus is fearr linn é sin a rá ná ligean orainn a mhalairt."
+    },
+    {
+      "type": "p",
+      "text": "Casann an eacnamaíocht an nóiméad a bhíonn biachlár fada, athruithe séasúracha, turasóirí nó aon suim agat in [orduithe ón mbord](route:/order-taking). Ag an bpointe sin cosnaíonn an uirlis saor in aisce am foirne agus orduithe caillte ort, agus ní thaispeántar ceachtar acu ar shonrasc."
+    },
+    {
+      "type": "h2",
+      "text": "Cúig cheist sula bpriontálann tú"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "An bhfuil an cód QR statach nó dinimiciúil? Más dinimiciúil, cad a tharlaíonn dó nuair a stopaim ag íoc?",
+        "Cé hé an branda a fheiceann m'aoi?",
+        "Cad é an teorainn míreanna, agus cad a tharlaíonn ag mír 51?",
+        "An féidir liom sonraí mo bhiachláir a easpórtáil má fhágaim?",
+        "An bhfuil uimhir nó bosca ann ina bhfreagraíonn duine daonna le linn uaireanta seirbhíse?"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Cibé rud a roghnaíonn tú, priontáil seoladh gearr faoin gcód. Ní chosnaíonn sé faic agus is é an difríocht idir scanadh briste agus aoi a fhaigheann an biachlár mar sin féin."
+    },
+    {
+      "type": "cta",
+      "heading": "Bain triail as an gceann íoctha saor in aisce ar dtús",
+      "text": "14 lá, gach gné, gan chárta. Scan do bhiachlár páipéir agus féach ar an iomlán ag obair sula gcinneann tú.",
+      "buttonLabel": "Tosaigh an triail saor in aisce",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Ceisteanna coitianta",
+      "items": [
+        {
+          "q": "An féidir liom biachlár le cód QR a dhéanamh saor in aisce?",
+          "a": "Is féidir. Ní chosnaíonn cód QR statach a dhíríonn ar PDF ar d'fhearann féin faic agus ní théann sé in éag riamh. Níl ann ach go bhfuil PDF deacair a léamh ar fhón — cén fáth, in [ní biachlár digiteach é QR chuig PDF](blog:pdf-menu-vs-digital-menu)."
+        },
+        {
+          "q": "An dtéann cóid QR saor in aisce in éag?",
+          "a": "Ní féidir le cinn statacha, mar tá an seoladh laistigh den chód. Is féidir le cinn dhinimiciúla, mar atreoraíonn siad trí fhearann an tsoláthraí, agus is é an t-atreorú sin go díreach a stopann tú ag íoc as."
+        },
+        {
+          "q": "An ionann triail saor in aisce agus plean saor in aisce?",
+          "a": "Ní hionann. Is é an triail an táirge iomlán ar feadh tréimhse teoranta; is táirge teoranta go deo é plean saor in aisce. Tugann IQ Rest 14 lá trialach le gach rud casta air agus gan chárta."
+        },
+        {
+          "q": "Cad é an biachlár QR íoctha is saoire?",
+          "a": "Tosaíonn pleananna cothroma de ghnáth timpeall €10 sa mhí in aghaidh an ionaid. Tosaíonn IQ Rest ag €9.90 — tá an miondealú iomlán in [cad a chosnaíonn biachlár le cód QR](blog:qr-code-menu-cost)."
+        },
+        {
+          "q": "An féidir liom mo bhiachlár a bhogadh ó uirlis saor in aisce go ceann íoctha?",
+          "a": "De ghnáth is féidir, agus is annamh a chaithfidh tú é a chlóscríobh arís: is féidir le IQ Rest grianghraf nó PDF den bhiachlár atá ann a léamh agus na míreanna a atógáil i gceann thart ar chúig nóiméad."
+        }
+      ]
+    }
+  ]
+}

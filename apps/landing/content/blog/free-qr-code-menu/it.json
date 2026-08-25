@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "title": "Menu QR gratis: cosa è davvero gratuito | IQ Rest",
+    "description": "I menu QR gratuiti esistono e alcuni vanno bene. Come guadagnano, quale limite ti blocca per primo e quando il gratis è davvero la scelta giusta."
+  },
+  "card": {
+    "title": "Menu QR gratuiti: cosa è davvero gratis e cosa paghi dopo",
+    "excerpt": "Nessuno ospita il tuo menu per niente. Ecco i cinque modi in cui gli strumenti di menu QR gratuiti fanno soldi, quali limiti tocchi per primi e i casi in cui il gratis basta davvero."
+  },
+  "h1": "Menu QR gratis: cosa ottieni e cosa ti costa dopo",
+  "intro": "Cerca un menu QR gratuito e troverai decine di strumenti. Alcuni sono davvero usabili. Ma hosting, banda e assistenza costano soldi al fornitore ogni mese, quindi la domanda non è se paghi, ma come. Ecco i cinque modelli di business dietro la parola \"gratis\", e in quale probabilmente ti trovi.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "1. Codice gratis, poi il codice scade"
+    },
+    {
+      "type": "p",
+      "text": "La trappola più comune. I generatori di QR offrono codici **dinamici**: il codice punta al loro dominio, che reindirizza al tuo menu. Quel reindirizzamento è il prodotto a pagamento. Quando la prova finisce, il codice non si rompe rumorosamente: inizia a mostrare ai tuoi clienti una pagina di upgrade, oppure non risolve più nulla."
+    },
+    {
+      "type": "p",
+      "text": "Lo scopri da un cliente, in pieno servizio, con 20 cavalierini già stampati in sala. Ristampare è la parte economica; quella cara è la settimana di clienti che hanno scansionato e non hanno ottenuto nulla."
+    },
+    {
+      "type": "note",
+      "text": "Un QR code **statico** contiene il tuo indirizzo e non può scadere, perché in mezzo non c'è nulla. In cambio, quell'indirizzo resta fisso per sempre. Se lo strumento offre solo codici dinamici, è quello il campanello d'allarme."
+    },
+    {
+      "type": "h2",
+      "text": "2. Gratis per te, pubblicità per i tuoi clienti"
+    },
+    {
+      "type": "p",
+      "text": "Alcuni strumenti finanziano il piano gratuito con il proprio marchio, un banner di upsell o un pulsante \"crea il tuo menu\" sotto la lista dei dolci. Il tuo cliente scansiona un codice sul tuo tavolo e la prima cosa che vede è il marketing di qualcun altro. Non è fatale, ma stai affittando a terzi il momento più attento del pasto."
+    },
+    {
+      "type": "h2",
+      "text": "3. Menu gratis, tutto il resto a pagamento"
+    },
+    {
+      "type": "p",
+      "text": "Il menu si vede gratis e ogni cosa che ti serve dopo è un piano a pagamento: più di 30 voci, una seconda lingua, togliere il marchio, le foto, più di un QR code. La lista è pensata perché un ristorante vero superi almeno un limite nel primo mese. Controlla i limiti di voci e lingue prima di passare due ore a digitare il tuo menu."
+    },
+    {
+      "type": "h2",
+      "text": "4. Menu gratis, commissione sugli ordini"
+    },
+    {
+      "type": "p",
+      "text": "Onesto e a volte conveniente: il menu non costa nulla e il fornitore prende una percentuale sugli ordini passati da lì. Se fai 300 € di ordini QR al mese, il 3% sono 9 €, va benissimo. A 12.000 € al mese diventano 360 €, molto più di qualsiasi abbonamento fisso. Questo modello si fa più caro proprio quando funziona."
+    },
+    {
+      "type": "h2",
+      "text": "5. Gratis perché abbandonato"
+    },
+    {
+      "type": "p",
+      "text": "Un progetto del weekend del 2021, ancora online, senza assistenza né aggiornamenti. Funziona finché non funziona più. Prima di stampare qualsiasi cosa, controlla se il blog, il registro delle modifiche o il canale di assistenza dello strumento ha dato segni di vita quest'anno."
+    },
+    {
+      "type": "h2",
+      "text": "Cosa limitano di solito i piani gratuiti"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Piano gratuito tipico",
+        "IQ Rest"
+      ],
+      "rows": [
+        [
+          "Voci di menu",
+          "Spesso 20-50",
+          "Illimitate"
+        ],
+        [
+          "QR code",
+          "Spesso uno",
+          "Uno per tavolo, illimitati"
+        ],
+        [
+          "Lingue",
+          "Una",
+          "Traduzione automatica"
+        ],
+        [
+          "Marchio del fornitore",
+          "Visibile ai clienti",
+          "Nessuno"
+        ],
+        [
+          "Foto",
+          "Limitate o a pagamento",
+          "Per ogni piatto"
+        ],
+        [
+          "Interruttore esaurito",
+          "Raro",
+          "Un tocco"
+        ],
+        [
+          "Ordini",
+          "No, o con commissione",
+          "Inclusi"
+        ],
+        [
+          "Scadenza del codice",
+          "Dipende dal piano",
+          "Mai: è il tuo indirizzo"
+        ],
+        [
+          "Prezzo",
+          "0 €",
+          "Da 9,90 €/mese, 14 giorni gratis"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Quando il gratis è la risposta giusta"
+    },
+    {
+      "type": "p",
+      "text": "Ci sono casi reali. Un food truck con nove voci e prezzi stabili. Un chiosco stagionale aperto dieci settimane. Un pop-up che verifica se arriva qualcuno. Se il tuo menu non cambia, non ti servono lingue e non prendi ordini da lì, uno strumento gratuito con un codice statico è una scelta perfettamente sensata, e preferiamo dirlo piuttosto che fingere il contrario."
+    },
+    {
+      "type": "p",
+      "text": "I conti si ribaltano nel momento in cui hai un menu lungo, cambi stagionali, turisti o un qualsiasi interesse per [gli ordini al tavolo](route:/order-taking). A quel punto lo strumento gratuito ti costa in tempo del personale e in ordini persi, che non compaiono su nessuna fattura."
+    },
+    {
+      "type": "h2",
+      "text": "Cinque domande da fare prima di stampare"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Il QR code è statico o dinamico? Se è dinamico, cosa gli succede quando smetto di pagare?",
+        "Quale marchio vede il mio cliente?",
+        "Qual è il limite di voci e cosa succede alla voce 51?",
+        "Posso esportare i dati del mio menu se me ne vado?",
+        "C'è un numero o una casella dove risponde una persona negli orari di servizio?"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Qualunque cosa tu scelga, stampa un indirizzo breve sotto il codice. Non costa nulla ed è la differenza tra una scansione fallita e un cliente che il menu lo ottiene comunque."
+    },
+    {
+      "type": "cta",
+      "heading": "Prima prova gratis quello a pagamento",
+      "text": "14 giorni, tutte le funzioni, senza carta. Scansiona il tuo menu cartaceo e guarda l'insieme funzionare prima di decidere.",
+      "buttonLabel": "Inizia la prova gratuita",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Domande frequenti",
+      "items": [
+        {
+          "q": "Posso creare un menu con QR code gratis?",
+          "a": "Sì. Un QR code statico che punta a un PDF sul tuo dominio non costa nulla e non scade mai. Solo che un PDF si legge male al telefono: lo spieghiamo in [un QR su un PDF non è un menu digitale](blog:pdf-menu-vs-digital-menu)."
+        },
+        {
+          "q": "I QR code gratuiti scadono?",
+          "a": "Quelli statici non possono, perché l'indirizzo è dentro al codice. Quelli dinamici sì, perché reindirizzano attraverso il dominio del fornitore, ed è proprio quel reindirizzamento che smetti di pagare."
+        },
+        {
+          "q": "Una prova gratuita è la stessa cosa di un piano gratuito?",
+          "a": "No. Una prova è il prodotto completo per un tempo limitato; un piano gratuito è un prodotto limitato per sempre. IQ Rest offre 14 giorni di prova con tutto attivo e senza carta."
+        },
+        {
+          "q": "Qual è il menu QR a pagamento più economico?",
+          "a": "I piani fissi partono di solito intorno ai 10 € al mese per locale. IQ Rest parte da 9,90 €: il dettaglio completo è in [quanto costa un menu con QR code](blog:qr-code-menu-cost)."
+        },
+        {
+          "q": "Posso spostare il mio menu da uno strumento gratuito a uno a pagamento?",
+          "a": "Di solito sì, e raramente devi ridigitarlo: IQ Rest può leggere una foto o un PDF del menu esistente e ricostruire le voci in circa cinque minuti."
+        }
+      ]
+    }
+  ]
+}

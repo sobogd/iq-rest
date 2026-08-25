@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "title": "Carta QR gratis: qué es gratis de verdad | IQ Rest",
+    "description": "Las cartas QR gratuitas existen y algunas están bien. Cómo ganan dinero, qué límite te frena primero y cuándo lo gratis es la opción correcta."
+  },
+  "card": {
+    "title": "Cartas QR gratuitas: qué es gratis de verdad y qué pagas después",
+    "excerpt": "Nadie aloja tu carta por nada. Estas son las cinco maneras en que ganan dinero las herramientas de carta QR gratis, qué límites tocas antes y los casos en que gratis basta de verdad."
+  },
+  "h1": "Carta QR gratis: qué te llevas y qué te cuesta después",
+  "intro": "Busca una carta QR gratis y encontrarás decenas de herramientas. Algunas se usan perfectamente. Pero el alojamiento, el ancho de banda y el soporte le cuestan dinero al proveedor cada mes, así que la pregunta no es si pagas, sino cómo. Estos son los cinco modelos de negocio detrás de \"gratis\", y en cuál estás probablemente.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "1. Código gratis, y luego el código caduca"
+    },
+    {
+      "type": "p",
+      "text": "La trampa más común. Los generadores de QR ofrecen códigos **dinámicos**: el código apunta a su dominio, que redirige a tu carta. Esa redirección es el producto de pago. Cuando acaba la prueba, el código no se rompe de forma ruidosa; empieza a mostrar una página de upgrade a tus clientes, o no resuelve a nada."
+    },
+    {
+      "type": "p",
+      "text": "Te enteras por un cliente, en pleno servicio, con 20 caballetes ya impresos en la sala. Reimprimir es la parte barata; la cara es la semana de clientes que escanearon y no obtuvieron nada."
+    },
+    {
+      "type": "note",
+      "text": "Un código QR **estático** lleva tu dirección dentro y no puede caducar nunca, porque no hay nada en medio. La contrapartida es que esa dirección queda fija para siempre. Si la herramienta solo ofrece códigos dinámicos, esa es la señal."
+    },
+    {
+      "type": "h2",
+      "text": "2. Gratis para ti, publicidad para tus clientes"
+    },
+    {
+      "type": "p",
+      "text": "Algunas herramientas financian el plan gratuito con su propia marca, un banner de upsell o un botón de \"crea tu propia carta\" bajo tu lista de postres. Tu cliente escanea un código de tu mesa y lo primero que ve es el marketing de otro. No es fatal, pero estás alquilando el momento más atento de la comida a un tercero."
+    },
+    {
+      "type": "h2",
+      "text": "3. Carta gratis, todo lo demás de pago"
+    },
+    {
+      "type": "p",
+      "text": "La carta se muestra gratis y cada cosa que necesitas después es un plan de pago: más de 30 platos, un segundo idioma, quitar la marca, fotos, más de un código QR. La lista está diseñada para que un restaurante real cruce al menos una línea el primer mes. Comprueba los límites de platos e idiomas antes de dedicar dos horas a teclear tu carta."
+    },
+    {
+      "type": "h2",
+      "text": "4. Carta gratis, comisión sobre los pedidos"
+    },
+    {
+      "type": "p",
+      "text": "Honesto y a veces buen trato: la carta no cuesta nada y el proveedor se lleva un porcentaje de los pedidos hechos a través de ella. Si haces 300 € de pedidos QR al mes, un 3% son 9 €; perfecto. A 12.000 € al mes son 360 €, muchísimo más que cualquier suscripción plana. Este modelo se encarece precisamente cuando funciona."
+    },
+    {
+      "type": "h2",
+      "text": "5. Gratis porque está abandonado"
+    },
+    {
+      "type": "p",
+      "text": "Un proyecto de fin de semana de 2021, todavía en línea, sin soporte ni actualizaciones. Funciona hasta que deja de funcionar. Antes de imprimir nada, comprueba si el blog, el registro de cambios o el canal de soporte de la herramienta ha dado señales de vida este año."
+    },
+    {
+      "type": "h2",
+      "text": "Qué suelen limitar los planes gratuitos"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "",
+        "Plan gratuito típico",
+        "IQ Rest"
+      ],
+      "rows": [
+        [
+          "Platos",
+          "A menudo 20-50",
+          "Ilimitados"
+        ],
+        [
+          "Códigos QR",
+          "A menudo uno",
+          "Uno por mesa, ilimitados"
+        ],
+        [
+          "Idiomas",
+          "Uno",
+          "Traducción automática"
+        ],
+        [
+          "Marca del proveedor",
+          "Visible para los clientes",
+          "Ninguna"
+        ],
+        [
+          "Fotos",
+          "Limitadas o de pago",
+          "Todos los platos"
+        ],
+        [
+          "Botón de agotado",
+          "Poco frecuente",
+          "Un toque"
+        ],
+        [
+          "Pedidos",
+          "No, o con comisión",
+          "Incluidos"
+        ],
+        [
+          "Caducidad del código",
+          "Depende del plan",
+          "Nunca: tu propia dirección"
+        ],
+        [
+          "Precio",
+          "0 €",
+          "Desde 9,90 €/mes, 14 días gratis"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Cuándo lo gratis es la respuesta correcta"
+    },
+    {
+      "type": "p",
+      "text": "Hay casos reales. Un food truck con nueve platos y precios estables. Un chiringuito de temporada abierto diez semanas. Un pop-up comprobando si viene alguien. Si tu carta no cambia, no necesitas idiomas y no vas a tomar pedidos por ahí, una herramienta gratuita con un código estático es un montaje perfectamente sensato, y preferimos decirlo a fingir lo contrario."
+    },
+    {
+      "type": "p",
+      "text": "La economía se da la vuelta en cuanto tienes una carta larga, cambios de temporada, turistas o cualquier interés en [tomar pedidos desde la mesa](route:/order-taking). En ese punto la herramienta gratuita te cuesta en tiempo de personal y en pedidos perdidos, que no aparecen en ninguna factura."
+    },
+    {
+      "type": "h2",
+      "text": "Cinco preguntas antes de imprimir"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "¿El código QR es estático o dinámico? Si es dinámico, ¿qué le pasa cuando dejo de pagar?",
+        "¿La marca de quién ve mi cliente?",
+        "¿Cuál es el límite de platos y qué pasa con el plato 51?",
+        "¿Puedo exportar los datos de mi carta si me voy?",
+        "¿Hay un teléfono o un buzón donde responda una persona en horario de servicio?"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Elijas lo que elijas, imprime una dirección corta debajo del código. No cuesta nada y marca la diferencia entre un escaneo roto y un cliente que igualmente accede a la carta."
+    },
+    {
+      "type": "cta",
+      "heading": "Prueba primero la de pago, gratis",
+      "text": "14 días con todas las funciones y sin tarjeta. Escanea tu carta en papel y ve el conjunto funcionando antes de decidir.",
+      "buttonLabel": "Empezar la prueba gratuita",
+      "routeKey": "/menu-qr-code"
+    },
+    {
+      "type": "faq",
+      "heading": "Preguntas frecuentes",
+      "items": [
+        {
+          "q": "¿Puedo hacer una carta con código QR gratis?",
+          "a": "Sí. Un código QR estático que apunte a un PDF en tu propio dominio no cuesta nada y no caduca nunca. Lo que pasa es que un PDF se lee mal en el móvil: lo contamos en [un QR a un PDF no es una carta digital](blog:pdf-menu-vs-digital-menu)."
+        },
+        {
+          "q": "¿Caducan los códigos QR gratuitos?",
+          "a": "Los estáticos no pueden, porque la dirección va dentro del código. Los dinámicos sí, porque redirigen a través del dominio del proveedor, y esa redirección es justo lo que dejas de pagar."
+        },
+        {
+          "q": "¿Es lo mismo una prueba gratuita que un plan gratuito?",
+          "a": "No. Una prueba es el producto completo durante un tiempo limitado; un plan gratuito es un producto limitado para siempre. IQ Rest ofrece 14 días de prueba con todo activado y sin tarjeta."
+        },
+        {
+          "q": "¿Cuál es la carta QR de pago más barata?",
+          "a": "Los planes planos suelen empezar en torno a 10 € al mes por local. IQ Rest arranca en 9,90 €: el desglose completo está en [lo que cuesta una carta con código QR](blog:qr-code-menu-cost)."
+        },
+        {
+          "q": "¿Puedo mover mi carta de una herramienta gratuita a una de pago?",
+          "a": "Normalmente sí, y rara vez tienes que volver a teclearla: IQ Rest puede leer una foto o un PDF de la carta existente y reconstruir los platos en unos cinco minutos."
+        }
+      ]
+    }
+  ]
+}
