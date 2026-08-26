@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "title": "Saját rendelés vs ételkiszállító appok: a valós számok | IQ Rest",
+    "description": "Mennyibe kerül a platform jutaléka rendelésenként, hány rendelés kell a saját csatornán a nullszaldóhoz, és miért érdemes a legtöbb étteremnek mindkettőt használnia."
+  },
+  "card": {
+    "title": "Saját rendelőoldal vs kiszállító appok: hová megy valójában a jutalék",
+    "excerpt": "A platformok olyan vendégeket hoznak, akiket sosem érnél el, és mindegyikből részt vesznek el. Itt a nullszaldó számtana és egy reális módszer az ismétlődő rendelések átterelésére."
+  },
+  "h1": "Saját online rendelés a kiszállító platformokkal szemben",
+  "intro": "A megszokott keret — az appok élősködők, a saját csatorna a szabadság — túl egyszerű. A platformok tényleg hoznak olyan vendégeket, akikhez soha nem jutottál volna el, és ennek a megtalálhatóságnak ára van. A kérdés nem az, használd-e őket, hanem hogy melyik rendelés melyik csatornába való — ezt a számolást tíz perc alatt elvégzed.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Mi is valójában a jutalék"
+    },
+    {
+      "type": "p",
+      "text": "A platformok kulcsai országonként, szerződésenként és aszerint térnek el, hogy a platform szállít-e vagy te. A csak elvitelre szóló megállapodások a legolcsóbbak; a teljes kiszállítás kiemelt megjelenéssel a legdrágább, és a hangoztatott százalék jellemzően húsz vagy harminc egynéhány. Vedd elő a saját szerződésedet, és keresd meg a valódi számot, mert minden alábbi ettől függ."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Egy 25 eurós rendelésnél",
+        "Nálad marad",
+        "A platform elviszi"
+      ],
+      "rows": [
+        [
+          "15% jutaléknál",
+          "21,25 €",
+          "3,75 €"
+        ],
+        [
+          "25% jutaléknál",
+          "18,75 €",
+          "6,25 €"
+        ],
+        [
+          "30% jutaléknál",
+          "17,50 €",
+          "7,50 €"
+        ],
+        [
+          "A saját oldalad",
+          "25 € mínusz kártyaköltség (nagyjából 0,50 €)",
+          "0 € jutalék"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Nagyjából 30%-os alapanyagköltség mellett a 30%-os jutalék nem csökkenti a fedezetedet — szinte az egészet elviszi. Sok hely rájön, hogy a platformos rendelései jó esetben nullszaldós forgalom, ami elfoglalja a konyhát."
+    },
+    {
+      "type": "h2",
+      "text": "A nullszaldó kiszámítása"
+    },
+    {
+      "type": "p",
+      "text": "A saját oldalon futó rendelési rendszer fix havidíjba kerül. Számold ki, hány rendelésnek kell átjönnie, mire kitermeli magát:"
+    },
+    {
+      "type": "p",
+      "text": "**Szükséges rendelés = havi előfizetés ÷ (átlagos rendelés × jutalékkulcs)**"
+    },
+    {
+      "type": "p",
+      "text": "Havi 9,90 €, 25 eurós átlagrendelés és 25% jutalék mellett ez 9,90 ÷ 6,25 = **havi 1,6 rendelés**. A saját oldalon felvett két rendelés fedezi a működtetés teljes költségét. Minden azon felüli fedezet, amit korábban átadtál."
+    },
+    {
+      "type": "note",
+      "text": "Ez az a rész, ami meglepi az embereket. A nullszaldó nem 50 vagy 200 rendelésnél van, hanem néhány darabnál, mert egyetlen rendelés jutaléka egy hónapnyi szoftverrel ér fel."
+    },
+    {
+      "type": "h2",
+      "text": "Amit a platform ad, a saját oldalad pedig nem"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Megtalálás.** Az emberek úgy görgetik az appot, hogy nincs fejükben konkrét étterem. A saját oldalad csak azokhoz jut el, akik már tudják, hogy létezel.",
+        "**Futárflotta**, ha nem akarsz futárokat alkalmazni és irányítani.",
+        "**Fizetés, visszatérítés és ügyfélszolgálat** megoldva, beleértve a hideg pizzáról szóló vitát is.",
+        "**Bizalom az első rendelésnél.** Egy idegen hamarabb rendel egy ismerős appból, mint egy soha nem látott weboldalról."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Ez valódi termék, és megéri fizetni érte. Az nem éri meg, hogy ugyanazért a törzsvendégért újra és újra fizess, aki már ismeri a konyhádat, és közvetlenül rendelne, ha adnál rá módot."
+    },
+    {
+      "type": "h2",
+      "text": "Amit a saját csatorna ad"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**A teljes számla**, mínusz a kártyaköltség.",
+        "**A vendégkapcsolat.** Egy platformon a vendég a platformé — gyakran soha többé nem tudod megkeresni.",
+        "**A saját áraid.** Semmi nyomás, hogy platformszintű akciókat finanszírozz.",
+        "**Nincs étlapplafon.** Add el a 48 eurós megosztható tálat, ami egy platformlistán sosem élne meg.",
+        "**Egy konyhai sor.** A saját oldaladról érkező rendelések ugyanarra a [konyhai kijelzőre](route:/kitchen-display) futhatnak be, mint minden más, nem egy második tabletre a pulton."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "A működő stratégia: mindkettő, tudatosan"
+    },
+    {
+      "type": "p",
+      "text": "Kezeld a platformot fizetett vendégszerzésként, a saját oldalt pedig megtartásként. Jutalékot azért fizetsz, hogy megismerj valakit; nem fizeted tovább a következő húsz látogatásra."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Rendelés típusa",
+        "Legjobb csatorna",
+        "Miért"
+      ],
+      "rows": [
+        [
+          "Új vendég, kiszállítás",
+          "Platform",
+          "Soha nem érted volna el"
+        ],
+        [
+          "Visszatérő vendég",
+          "Saját oldal",
+          "Nincs jutalék olyanért, aki már ismer"
+        ],
+        [
+          "Elvitel",
+          "Saját oldal",
+          "Olyan kiszállításért fizetsz, amit nem használsz"
+        ],
+        [
+          "Nagy csoportos rendelés",
+          "Saját oldal",
+          "150 euró jutaléka fáj"
+        ],
+        [
+          "Iroda és catering",
+          "Saját oldal",
+          "Ismétlődő, magas értékű, nem kell megtalálás"
+        ],
+        [
+          "Helyben fogyasztás",
+          "[QR-rendelés](route:/order-taking)",
+          "A vendég már bent ül"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Hogyan tereld át az ismétlődő rendeléseket"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Tegyél minden kiszállítási zacskóba egy kártyát a közvetlen rendelési címeddel és egy világos indokkal, miért használja. Egy ingyen kávé vagy kis kedvezmény többet ér egy homályos üzenetnél.",
+        "Tedd a közvetlen árat egy kicsit jobbá, ahol a platformszerződésed engedi. Nézd meg a feltételeket — némelyik tiltja az alákínálást.",
+        "Szerezd meg a találatot. Ha valaki az étterem nevére plusz a „rendelés\" szóra keres, a te oldaladnak kell elsőnek lennie, nem a platform listájának.",
+        "Tedd ki a rendelési linket mindenhová, ahol már ott vagy: Google cégprofil, Instagram-bio, a weboldalad lábléce, az asztali QR-kód.",
+        "Adj okot az elviteles vendégeknek, hogy kihagyják az appot. Szolgáltatási díjat fizetnek olyan szolgáltatásért, amit nem vesznek igénybe.",
+        "Tartsd tényleg egyszerűnek. Ha a közvetlen rendelés több koppintás, mint az app, senki nem vált."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Kövess havonta egy számot: a közvetlenül érkezett rendelések arányát. A legtöbb figyelmes hely egy év alatt viszi a nulla közeliből 20-40%-ra, és 30% jutaléknál minden egyes pont valódi pénz."
+    },
+    {
+      "type": "h2",
+      "text": "Mikor maradj csak a platformon"
+    },
+    {
+      "type": "p",
+      "text": "Egy dark kitchen üzlethelyiség, utcai forgalom és márkaismertség nélkül megtalálást vásárol és semmi mást — a platform maga az üzleti modell. Ugyanígy: ha havi 15 kiszállítást adsz el, a második csatorna vesződsége nem éri meg a megspórolt 40 eurót. Légy őszinte, melyik eset vagy."
+    },
+    {
+      "type": "cta",
+      "heading": "Vegyél fel rendelést jutalék nélkül",
+      "text": "Saját rendelőoldal, QR-rendelés az asztalnál és kiszállítás egyetlen konyhai sorban. Havi 9,90 eurótól, rendelésenkénti jutalék nélkül. 14 nap ingyen.",
+      "buttonLabel": "Nézd meg az online rendelést",
+      "routeKey": "/order-taking"
+    },
+    {
+      "type": "faq",
+      "heading": "Gyakori kérdések",
+      "items": [
+        {
+          "q": "Mekkora jutalékot kérnek a kiszállító appok?",
+          "a": "Országonként, szerződésenként és aszerint változik, hogy a platform szállít-e. A csak elvitelre szóló megállapodások a legolcsóbbak; a promóciós teljes kiszállítás a legdrágább, és a hangoztatott kulcsokat jellemzően húsz vagy harminc egynéhány százalékban említik. Nézd meg a saját szerződésedet."
+        },
+        {
+          "q": "Hány közvetlen rendelés kell a nullszaldóhoz?",
+          "a": "Az előfizetés osztva ezzel: (átlagos rendelés × jutalékkulcs). Havi 9,90 €, 25 eurós rendelés és 25% jutalék mellett ez havi két rendelésnél kevesebb."
+        },
+        {
+          "q": "Teljesen kilépjek a kiszállító appokból?",
+          "a": "Általában nem. Olyan első vendégeket hoznak, akiket máshogy nem érsz el. A nyereség az, ha az ismétlődő és az elviteles rendeléseket a saját csatornádra tereled, nem az, hogy egyik napról a másikra kiszállsz."
+        },
+        {
+          "q": "Kérhetek kevesebbet a saját oldalamon?",
+          "a": "Néha — több platform a feltételeiben korlátozza az alákínálást. Olvasd el a szerződést, és ha árparitást várnak el, inkább egy ingyenes tétellel vagy hűségelőnnyel versenyezz."
+        },
+        {
+          "q": "Kell weboldal a közvetlen rendelésekhez?",
+          "a": "Nem. Az IQ Rest ad egy saját címmel rendelkező rendelőoldalt, amire linkelhetsz a Google-ból, az Instagramról vagy egy asztali QR-kódról."
+        }
+      ]
+    }
+  ]
+}

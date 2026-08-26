@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "title": "Savi užsakymai prieš pristatymo programėles: tikri skaičiai | IQ Rest",
+    "description": "Kiek kainuoja platformos komisinis nuo užsakymo, kiek užsakymų savame kanale padengia prenumeratą ir kodėl daugumai restoranų reikia abiejų kanalų."
+  },
+  "card": {
+    "title": "Jūsų užsakymų puslapis prieš pristatymo programėles: kur komisinis iš tikrųjų nukeliauja",
+    "excerpt": "Platformos atveda svečius, kurių niekada nepasiektumėte, ir nuo kiekvieno pasiima dalį. Štai nulinio taško aritmetika ir realus būdas perkelti pasikartojančius užsakymus."
+  },
+  "h1": "Jūsų pačių užsakymai internetu prieš pristatymo platformas",
+  "intro": "Įprastas rėmas — programėlės yra parazitai, savas kanalas yra laisvė — pernelyg paprastas. Platformos iš tiesų atveda svečius, kurių niekada nebūtumėte pasiekę, ir tas atradimas turi kainą. Klausimas ne ar jomis naudotis, o kurie užsakymai kuriam kanalui priklauso, ir tą skaičiavimą atliksite per dešimt minučių.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Kas iš tiesų yra komisinis"
+    },
+    {
+      "type": "p",
+      "text": "Platformų tarifai skiriasi pagal šalį, sutartį ir pagal tai, ar pristato platforma, ar jūs. Tik atsiėmimo susitarimai yra pigiausi; pilnas pristatymas su reklamuojama pozicija yra brangiausias, o skelbiamas procentas paprastai minimas dvidešimties ar trisdešimties su trupučiu ribose. Išsitraukite savo sutartį ir raskite tikrąjį skaičių, nes visa, kas žemiau, nuo jo priklauso."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "25 € užsakyme",
+        "Jums lieka",
+        "Platforma paima"
+      ],
+      "rows": [
+        [
+          "Esant 15% komisiniam",
+          "21,25 €",
+          "3,75 €"
+        ],
+        [
+          "Esant 25% komisiniam",
+          "18,75 €",
+          "6,25 €"
+        ],
+        [
+          "Esant 30% komisiniam",
+          "17,50 €",
+          "7,50 €"
+        ],
+        [
+          "Jūsų puslapis",
+          "25 € minus kortelės mokesčiai (apie 0,50 €)",
+          "0 € komisinio"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Kai žaliavų savikaina apie 30%, 30% komisinis nemažina jūsų maržos — jis atima beveik visą. Daugelis vietų atranda, kad jų užsakymai iš platformos geriausiu atveju yra apyvarta į nulį, kuri užima virtuvę."
+    },
+    {
+      "type": "h2",
+      "text": "Nulinio taško skaičiavimas"
+    },
+    {
+      "type": "p",
+      "text": "Užsakymų sistema savame tinklalapyje kainuoja fiksuotą mėnesio mokestį. Suskaičiuokite, kiek užsakymų turi persikelti, kad ji atsipirktų:"
+    },
+    {
+      "type": "p",
+      "text": "**Reikalingi užsakymai = mėnesio prenumerata ÷ (vidutinis užsakymas × komisinio tarifas)**"
+    },
+    {
+      "type": "p",
+      "text": "Esant 9,90 € per mėnesį, vidutiniam 25 € užsakymui ir 25% komisiniam gaunasi 9,90 ÷ 6,25 = **1,6 užsakymo per mėnesį**. Du savo puslapyje priimti užsakymai padengia visą jo išlaikymo kainą. Visa kita – marža, kurią anksčiau atiduodavote."
+    },
+    {
+      "type": "note",
+      "text": "Būtent ši dalis žmones nustebina. Nulinis taškas nėra 50 ar 200 užsakymų – tai keli vienetai, nes vieno užsakymo komisinis prilygsta mėnesiui programinės įrangos."
+    },
+    {
+      "type": "h2",
+      "text": "Ką duoda platforma, ko neduoda jūsų puslapis"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Atradimą.** Žmonės naršo programėlę neturėdami galvoje konkretaus restorano. Jūsų puslapis pasiekia tik tuos, kurie jau žino, kad esate.",
+        "**Kurjerių tinklą**, jei nenorite samdyti ar valdyti vairuotojų.",
+        "**Mokėjimus, grąžinimus ir pagalbą** išspręstus, įskaitant ginčą dėl šaltos picos.",
+        "**Pasitikėjimą per pirmą užsakymą.** Nepažįstamasis greičiau užsisakys iš pažįstamos programėlės nei iš svetainės, kurios niekada nematė."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Tai tikras produktas ir vertas mokėti. Ko neverta – mokėti už tai kartotinai už tą patį nuolatinį svečią, kuris jūsų maistą jau žino ir užsisakytų tiesiogiai, jei duotumėte būdą."
+    },
+    {
+      "type": "h2",
+      "text": "Ką duoda savas kanalas"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Visą sąskaitą**, atėmus kortelės mokestį.",
+        "**Santykį su svečiu.** Platformoje svečias priklauso jai – dažnai su juo daugiau nebesusisieksite.",
+        "**Savo kainas.** Jokio spaudimo finansuoti visos platformos nuolaidas.",
+        "**Jokių meniu lubų.** Parduokite 48 € dalijimosi lėkštę, kuri platformos sąraše niekada neišgyventų.",
+        "**Vieną eilę virtuvėje.** Užsakymai iš jūsų puslapio gali ateiti į tą patį [virtuvės ekraną](route:/kitchen-display) kaip ir visa kita, o ne į antrą planšetę ant baro."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Veikianti strategija: abu kanalai, sąmoningai"
+    },
+    {
+      "type": "p",
+      "text": "Traktuokite platformą kaip mokamą klientų pritraukimą, o savo puslapį – kaip išlaikymą. Komisinį mokate, kad su kuo nors susipažintumėte; nemokate jo toliau už kitus dvidešimt apsilankymų."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Užsakymo tipas",
+        "Geriausias kanalas",
+        "Kodėl"
+      ],
+      "rows": [
+        [
+          "Naujas klientas, pristatymas",
+          "Platforma",
+          "Jo niekada nebūtumėte pasiekę"
+        ],
+        [
+          "Nuolatinis klientas",
+          "Jūsų puslapis",
+          "Jokio komisinio už tą, kuris jus jau pažįsta"
+        ],
+        [
+          "Atsiėmimas / išsinešimui",
+          "Jūsų puslapis",
+          "Mokate už pristatymą, kurio nenaudojate"
+        ],
+        [
+          "Dideli grupiniai užsakymai",
+          "Jūsų puslapis",
+          "Komisinis nuo 150 € skauda"
+        ],
+        [
+          "Biurai ir maitinimas",
+          "Jūsų puslapis",
+          "Pasikartojantis, didelės vertės, atradimo nereikia"
+        ],
+        [
+          "Valgymas vietoje",
+          "[Užsakymas per QR](route:/order-taking)",
+          "Svečias jau salėje"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kaip perkelti pasikartojančius užsakymus"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Į kiekvieną pristatymo maišelį įdėkite kortelę su tiesioginio užsakymo adresu ir viena aiškia priežastimi juo pasinaudoti. Nemokama kava ar maža nuolaida nugali miglotą žinutę.",
+        "Padarykite tiesioginę kainą truputį geresnę ten, kur sutartis su platforma tai leidžia. Patikrinkite sąlygas – kai kurios draudžia mažesnę kainą.",
+        "Pasiimkite paieškos rezultatą. Kai kas nors ieško jūsų restorano pavadinimo plius „užsisakyti\", pirmas turi būti jūsų puslapis, o ne platformos įrašas.",
+        "Užsakymo nuorodą įdėkite visur, kur jau esate: Google įmonės profilis, Instagram bio, svetainės poraštė, QR kodas ant stalo.",
+        "Duokite atsiimantiems priežastį apeiti programėlę. Jie moka aptarnavimo mokestį už paslaugą, kuria nesinaudoja.",
+        "Padarykite iš tiesų paprasta. Jei tiesioginis užsakymas reikalauja daugiau paspaudimų nei programėlė, niekas nepersikels."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Sekite vieną skaičių per mėnesį: tiesiogiai atėjusių užsakymų dalį. Dauguma dėmesingų vietų per metus pakelia ją nuo beveik nulio iki 20-40%, o esant 30% komisiniam kiekvienas punktas – tikri pinigai."
+    },
+    {
+      "type": "h2",
+      "text": "Kada likti tik platformoje"
+    },
+    {
+      "type": "p",
+      "text": "Tamsi virtuvė be patalpų, be gatvės srauto ir be atpažįstamo prekės ženklo perka atradimą ir nieko daugiau – platforma ir yra verslo modelis. Taip pat: jei per mėnesį parduodate 15 pristatymų, vargas su antru kanalu nevertas sutaupytų 40 €. Būkite sąžiningi, kuris iš dviejų esate."
+    },
+    {
+      "type": "cta",
+      "heading": "Priimkite užsakymus be komisinio",
+      "text": "Savas užsakymų puslapis, užsakymas per QR prie stalo ir pristatymai vienoje virtuvės eilėje. Nuo 9,90 € per mėnesį, be komisinio nuo užsakymo. 14 dienų nemokamai.",
+      "buttonLabel": "Peržiūrėti užsakymus internetu",
+      "routeKey": "/order-taking"
+    },
+    {
+      "type": "faq",
+      "heading": "Dažnai užduodami klausimai",
+      "items": [
+        {
+          "q": "Kokį komisinį ima pristatymo programėlės?",
+          "a": "Priklauso nuo šalies, sutarties ir nuo to, ar pristato platforma. Tik atsiėmimo susitarimai pigiausi; pilnas pristatymas su reklama brangiausias, o skelbiami tarifai paprastai minimi dvidešimties ar trisdešimties su trupučiu procentų ribose. Patikrinkite savo sutartį."
+        },
+        {
+          "q": "Kiek tiesioginių užsakymų reikia, kad išeitų į nulį?",
+          "a": "Prenumerata padalyta iš (vidutinis užsakymas × komisinio tarifas). Esant 9,90 € per mėnesį, 25 € užsakymui ir 25% komisiniam tai mažiau nei du užsakymai per mėnesį."
+        },
+        {
+          "q": "Ar reikėtų visai palikti pristatymo programėles?",
+          "a": "Paprastai ne. Jos atveda pirmą kartą užsisakančius klientus, kurių kitaip nepasieksite. Laimėjimas – perkelti pasikartojančius ir atsiėmimo užsakymus į savo kanalą, o ne nukirsti viską iš karto."
+        },
+        {
+          "q": "Ar galiu savo svetainėje imti mažiau?",
+          "a": "Kartais – kelios platformos sąlygose riboja mažesnes kainas kitur. Perskaitykite sutartį, o jei reikalaujama kainų pariteto, konkuruokite nemokamu produktu ar lojalumo privalumu."
+        },
+        {
+          "q": "Ar man reikia svetainės tiesioginiams užsakymams?",
+          "a": "Ne. IQ Rest duoda paruoštą užsakymų puslapį su savo adresu, į kurį galite vesti iš Google, Instagram ar QR kodo ant stalo."
+        }
+      ]
+    }
+  ]
+}

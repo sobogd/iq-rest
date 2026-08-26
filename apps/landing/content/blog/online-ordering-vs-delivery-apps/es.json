@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "title": "Pedidos propios vs apps de reparto: los números | IQ Rest",
+    "description": "Cuánto cuesta la comisión del marketplace por pedido, cuántos pedidos necesitas en tu canal propio para cubrir gastos y por qué casi todos deberían usar ambos."
+  },
+  "card": {
+    "title": "Tu página de pedidos vs las apps de reparto: dónde acaba la comisión",
+    "excerpt": "Los marketplaces traen clientes que nunca alcanzarías y se llevan una parte de cada uno. Aquí está la aritmética del punto de equilibrio y una forma realista de mover los pedidos recurrentes."
+  },
+  "h1": "Tus pedidos online frente a los marketplaces de reparto",
+  "intro": "El planteamiento habitual —las apps son parásitos, el canal propio es libertad— es demasiado simple. Los marketplaces te traen de verdad clientes que nunca habrías alcanzado, y ese descubrimiento tiene un precio. La pregunta no es si usarlos, sino qué pedidos pertenecen a qué canal, y ese cálculo lo puedes hacer en diez minutos.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Qué es realmente la comisión"
+    },
+    {
+      "type": "p",
+      "text": "Las tarifas de los marketplaces varían según el país, el contrato y si reparte la plataforma o repartes tú. Los acuerdos solo para recogida son los más baratos; el reparto completo con posición destacada es el más caro, y el porcentaje que se anuncia suele situarse en el veinte y pico o el treinta y pico. Saca tu contrato y busca el número real, porque todo lo que sigue depende de él."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "En un pedido de 25 €",
+        "Te quedas",
+        "Se lleva la plataforma"
+      ],
+      "rows": [
+        [
+          "Con 15% de comisión",
+          "21,25 €",
+          "3,75 €"
+        ],
+        [
+          "Con 25% de comisión",
+          "18,75 €",
+          "6,25 €"
+        ],
+        [
+          "Con 30% de comisión",
+          "17,50 €",
+          "7,50 €"
+        ],
+        [
+          "Tu propia página",
+          "25 € menos comisiones de tarjeta (unos 0,50 €)",
+          "0 € de comisión"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Frente a un coste de materia prima en torno al 30%, una comisión del 30% no reduce tu margen: se lo lleva casi entero. Muchos locales descubren que sus pedidos de marketplace son, como mucho, volumen a coste cero que mantiene la cocina ocupada."
+    },
+    {
+      "type": "h2",
+      "text": "El cálculo del punto de equilibrio"
+    },
+    {
+      "type": "p",
+      "text": "Un sistema de pedidos en tu propia web cuesta una cuota mensual fija. Calcula cuántos pedidos tienen que pasarse antes de que se pague solo:"
+    },
+    {
+      "type": "p",
+      "text": "**Pedidos necesarios = cuota mensual ÷ (pedido medio × comisión)**"
+    },
+    {
+      "type": "p",
+      "text": "Con 9,90 € al mes, un pedido medio de 25 € y un 25% de comisión, sale 9,90 ÷ 6,25 = **1,6 pedidos al mes**. Dos pedidos tomados en tu propia página cubren todo el coste de tenerla. Todo lo demás es margen que antes regalabas."
+    },
+    {
+      "type": "note",
+      "text": "Esta es la parte que sorprende. El punto de equilibrio no son 50 pedidos ni 200: son un puñado, porque la comisión de un solo pedido es comparable a un mes de software."
+    },
+    {
+      "type": "h2",
+      "text": "Lo que el marketplace te da y tu página no"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Descubrimiento.** La gente navega por la app sin tener un restaurante en mente. Tu página solo llega a quien ya sabe que existes.",
+        "**Una flota de reparto**, si no quieres contratar repartidores ni gestionarlos.",
+        "**Pagos, devoluciones y soporte** resueltos, incluida la discusión por una pizza fría.",
+        "**Confianza en el primer pedido.** Un desconocido pedirá antes en una app familiar que en una web que no ha visto nunca."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Eso es un producto real y merece pagarse. Lo que no merece la pena es pagarlo una y otra vez por el mismo cliente habitual, que ya conoce tu comida y pediría directo si le dieras la manera."
+    },
+    {
+      "type": "h2",
+      "text": "Lo que te da tu canal propio"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**El ticket completo**, menos la comisión de la tarjeta.",
+        "**La relación con el cliente.** En un marketplace el cliente es de la plataforma: a menudo no puedes volver a contactarlo.",
+        "**Tus precios.** Sin presión para financiar descuentos de toda la plataforma.",
+        "**Sin techo de carta.** Vende la tabla para compartir de 48 € que nunca sobreviviría en un listado de marketplace.",
+        "**Una sola cola de cocina.** Los pedidos de tu página pueden llegar a la misma [pantalla de cocina](route:/kitchen-display) que el resto, en vez de a una segunda tablet en el mostrador."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "La estrategia que funciona: los dos, a propósito"
+    },
+    {
+      "type": "p",
+      "text": "Trata el marketplace como captación de clientes de pago y tu propia página como fidelización. Pagas una comisión por conocer a alguien; no sigues pagándola durante las siguientes veinte visitas."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Tipo de pedido",
+        "Mejor canal",
+        "Por qué"
+      ],
+      "rows": [
+        [
+          "Cliente nuevo, a domicilio",
+          "Marketplace",
+          "Nunca habrías llegado a él"
+        ],
+        [
+          "Cliente recurrente",
+          "Tu propia página",
+          "Sin comisión por alguien que ya te conoce"
+        ],
+        [
+          "Recogida / para llevar",
+          "Tu propia página",
+          "Estás pagando un reparto que no usas"
+        ],
+        [
+          "Pedidos de grupo grandes",
+          "Tu propia página",
+          "La comisión sobre 150 € duele"
+        ],
+        [
+          "Oficinas y catering",
+          "Tu propia página",
+          "Recurrente, alto valor, sin necesidad de descubrimiento"
+        ],
+        [
+          "Consumo en sala",
+          "[Pedido por QR](route:/order-taking)",
+          "El cliente ya está en la sala"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Cómo mover los pedidos recurrentes"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Mete una tarjeta en cada bolsa de reparto con tu dirección de pedido directo y un motivo claro para usarla. Un café gratis o un pequeño descuento gana a un mensaje vago.",
+        "Haz que el precio directo sea algo mejor, si tu contrato con el marketplace lo permite. Revisa las condiciones: algunos prohíben bajar el precio.",
+        "Adueñate del resultado de búsqueda. Cuando alguien busque el nombre de tu restaurante más «pedir», tu página debe ser el primer resultado, no la ficha del marketplace.",
+        "Pon el enlace de pedidos en todos los sitios donde ya estás: perfil de Google Business, biografía de Instagram, pie de tu web, el código QR de la mesa.",
+        "Da a los clientes de recogida un motivo para saltarse la app. Están pagando una tarifa de servicio por un servicio que no usan.",
+        "Que sea genuinamente sencillo. Si pedir directo lleva más toques que la app, no se mueve nadie."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Sigue un número al mes: el porcentaje de pedidos que llegaron directos. La mayoría de locales que le prestan atención lo llevan de casi cero a algún punto entre el 20% y el 40% en un año, y con un 30% de comisión cada punto es dinero real."
+    },
+    {
+      "type": "h2",
+      "text": "Cuándo quedarse solo en el marketplace"
+    },
+    {
+      "type": "p",
+      "text": "Una dark kitchen sin local, sin paso de gente y sin marca reconocida está comprando descubrimiento y nada más: el marketplace es el modelo de negocio. Igual, si vendes 15 pedidos a domicilio al mes, el esfuerzo de llevar un segundo canal no compensa los 40 € que ahorrarías. Sé honesto sobre cuál de los dos eres."
+    },
+    {
+      "type": "cta",
+      "heading": "Acepta pedidos sin la comisión",
+      "text": "Tu propia página de pedidos, pedidos por QR en la mesa y pedidos a domicilio en una sola cola de cocina. Desde 9,90 € al mes, sin comisión por pedido. 14 días gratis.",
+      "buttonLabel": "Ver pedidos online",
+      "routeKey": "/order-taking"
+    },
+    {
+      "type": "faq",
+      "heading": "Preguntas frecuentes",
+      "items": [
+        {
+          "q": "¿Qué comisión cobran las apps de reparto?",
+          "a": "Varía según el país, el contrato y si reparte la plataforma. Los acuerdos solo de recogida son los más baratos; el reparto completo con promoción es el más caro, y las tarifas anunciadas suelen citarse en el veinte y pico o el treinta y pico. Consulta tu propio contrato."
+        },
+        {
+          "q": "¿Cuántos pedidos directos necesito para cubrir gastos?",
+          "a": "La cuota dividida entre (pedido medio × comisión). Con 9,90 € al mes, un pedido de 25 € y un 25% de comisión, son menos de dos pedidos al mes."
+        },
+        {
+          "q": "¿Debería dejar del todo las apps de reparto?",
+          "a": "Normalmente no. Traen clientes nuevos que no puedes alcanzar de otra forma. La victoria está en mover los pedidos recurrentes y de recogida a tu canal, no en cortar de golpe."
+        },
+        {
+          "q": "¿Puedo cobrar menos en mi propia web?",
+          "a": "A veces: varias plataformas restringen en sus condiciones vender más barato fuera. Lee el contrato y, si te exigen paridad de precios, compite con un producto gratis o una ventaja de fidelidad."
+        },
+        {
+          "q": "¿Necesito una web para recibir pedidos directos?",
+          "a": "No. IQ Rest te da una página de pedidos alojada con su propia dirección, que puedes enlazar desde Google, Instagram o un código QR en la mesa."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "title": "Comandes pròpies vs apps de repartiment: els números | IQ Rest",
+    "description": "Què costa la comissió del marketplace per comanda, quantes comandes calen al teu canal propi per cobrir despeses i per què gairebé tots els restaurants haurien de fer servir tots dos."
+  },
+  "card": {
+    "title": "La teva pàgina de comandes vs les apps de repartiment: on va a parar la comissió",
+    "excerpt": "Els marketplaces porten clients que mai arribaries a tenir i es queden una part de cadascun. Aquí tens l'aritmètica del punt d'equilibri i una manera realista de moure les comandes recurrents."
+  },
+  "h1": "Les teves comandes en línia davant els marketplaces de repartiment",
+  "intro": "El plantejament habitual —les apps són paràsits, el canal propi és llibertat— és massa simple. Els marketplaces et porten de debò clients que mai hauries arribat a tenir, i aquest descobriment té un preu. La pregunta no és si els fas servir, sinó quines comandes pertoquen a cada canal, i aquest càlcul el fas en deu minuts.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Què és realment la comissió"
+    },
+    {
+      "type": "p",
+      "text": "Les tarifes varien segons el país, el contracte i si reparteix la plataforma o tu. Els acords només de recollida són els més barats; el repartiment complet amb posició destacada és el més car, i el percentatge que s'anuncia sol situar-se en la vintena o la trentena. Treu el teu contracte i busca el número real, perquè tot el que ve a continuació en depèn."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "En una comanda de 25 €",
+        "Et quedes",
+        "S'emporta la plataforma"
+      ],
+      "rows": [
+        [
+          "Amb 15% de comissió",
+          "21,25 €",
+          "3,75 €"
+        ],
+        [
+          "Amb 25% de comissió",
+          "18,75 €",
+          "6,25 €"
+        ],
+        [
+          "Amb 30% de comissió",
+          "17,50 €",
+          "7,50 €"
+        ],
+        [
+          "La teva pàgina",
+          "25 € menys comissions de targeta (uns 0,50 €)",
+          "0 € de comissió"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Davant un cost de matèria primera al voltant del 30%, una comissió del 30% no et redueix el marge: se l'emporta gairebé tot. Molts locals descobreixen que les seves comandes de marketplace són, com a molt, volum a cost zero que manté la cuina ocupada."
+    },
+    {
+      "type": "h2",
+      "text": "El càlcul del punt d'equilibri"
+    },
+    {
+      "type": "p",
+      "text": "Un sistema de comandes al teu web costa una quota mensual fixa. Calcula quantes comandes s'han de moure abans que es pagui sol:"
+    },
+    {
+      "type": "p",
+      "text": "**Comandes necessàries = quota mensual ÷ (comanda mitjana × comissió)**"
+    },
+    {
+      "type": "p",
+      "text": "Amb 9,90 € al mes, una comanda mitjana de 25 € i un 25% de comissió, surt 9,90 ÷ 6,25 = **1,6 comandes al mes**. Dues comandes preses a la teva pàgina cobreixen tot el cost de tenir-la. Tota la resta és marge que abans regalaves."
+    },
+    {
+      "type": "note",
+      "text": "Aquesta és la part que sorprèn. El punt d'equilibri no són 50 comandes ni 200: són un grapat, perquè la comissió d'una sola comanda equival a un mes de programari."
+    },
+    {
+      "type": "h2",
+      "text": "El que et dona el marketplace i la teva pàgina no"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Descobriment.** La gent navega per l'app sense tenir cap restaurant al cap. La teva pàgina només arriba a qui ja sap que existeixes.",
+        "**Una flota de repartidors**, si no vols contractar-los ni gestionar-los.",
+        "**Pagaments, devolucions i suport** resolts, inclosa la discussió per una pizza freda.",
+        "**Confiança a la primera comanda.** Un desconegut demanarà abans en una app familiar que en un web que no ha vist mai."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Això és un producte real i val la pena pagar-lo. El que no val la pena és pagar-lo un cop i un altre pel mateix client habitual, que ja coneix el teu menjar i demanaria directe si li donessis la manera."
+    },
+    {
+      "type": "h2",
+      "text": "El que et dona el canal propi"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**El tiquet sencer**, menys la comissió de targeta.",
+        "**La relació amb el client.** En un marketplace el client és de la plataforma: sovint no el pots tornar a contactar.",
+        "**Els teus preus.** Sense pressió per finançar descomptes de tota la plataforma.",
+        "**Sense sostre de carta.** Ven la taula per compartir de 48 € que mai sobreviuria en una fitxa de marketplace.",
+        "**Una sola cua de cuina.** Les comandes de la teva pàgina poden arribar a la mateixa [pantalla de cuina](route:/kitchen-display) que la resta, en comptes d'una segona tauleta al taulell."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "L'estratègia que funciona: tots dos, a consciència"
+    },
+    {
+      "type": "p",
+      "text": "Tracta el marketplace com a captació de pagament i la teva pàgina com a fidelització. Pagues una comissió per conèixer algú; no la continues pagant les vint visites següents."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Tipus de comanda",
+        "Millor canal",
+        "Per què"
+      ],
+      "rows": [
+        [
+          "Client nou, repartiment",
+          "Marketplace",
+          "Mai hi hauries arribat"
+        ],
+        [
+          "Client recurrent",
+          "La teva pàgina",
+          "Cap comissió per algú que ja et coneix"
+        ],
+        [
+          "Recollida / per emportar",
+          "La teva pàgina",
+          "Pagues un repartiment que no fas servir"
+        ],
+        [
+          "Comandes de grup grans",
+          "La teva pàgina",
+          "La comissió sobre 150 € fa mal"
+        ],
+        [
+          "Oficines i càtering",
+          "La teva pàgina",
+          "Recurrent, valor alt, sense necessitat de descobriment"
+        ],
+        [
+          "Consum a la sala",
+          "[Comanda per QR](route:/order-taking)",
+          "El client ja és a la sala"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Com moure les comandes recurrents"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Posa una targeta a cada bossa de repartiment amb la teva adreça de comanda directa i un motiu clar per fer-la servir. Un cafè gratis o un petit descompte guanya a un missatge vague.",
+        "Fes que el preu directe sigui una mica millor, allà on el contracte t'ho permeti. Revisa les condicions: algunes prohibeixen abaixar el preu.",
+        "Fes-te teu el resultat de cerca. Quan algú busqui el nom del teu restaurant més «demanar», la teva pàgina ha de sortir primera, no la fitxa del marketplace.",
+        "Posa l'enllaç de comandes a tot arreu on ja ets: perfil de Google, biografia d'Instagram, peu del teu web, el codi QR de la taula.",
+        "Dona als clients de recollida un motiu per saltar-se l'app. Estan pagant una tarifa de servei per un servei que no fan servir.",
+        "Fes-ho realment senzill. Si demanar directe demana més tocs que l'app, no es mou ningú."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Segueix un número al mes: el percentatge de comandes que han arribat directes. La majoria de locals que hi paren atenció el porten de gairebé zero a entre el 20% i el 40% en un any, i amb un 30% de comissió cada punt són diners reals."
+    },
+    {
+      "type": "h2",
+      "text": "Quan quedar-se només al marketplace"
+    },
+    {
+      "type": "p",
+      "text": "Una dark kitchen sense local, sense pas de gent i sense marca reconeguda està comprant descobriment i res més: el marketplace és el model de negoci. Igualment, si fas 15 comandes a domicili al mes, l'esforç d'un segon canal no compensa els 40 € que estalviaries. Sigues honest sobre quin dels dos ets."
+    },
+    {
+      "type": "cta",
+      "heading": "Accepta comandes sense la comissió",
+      "text": "La teva pàgina de comandes, comanda per QR a taula i repartiment en una sola cua de cuina. Des de 9,90 € al mes, sense comissió per comanda. 14 dies gratis.",
+      "buttonLabel": "Veure les comandes en línia",
+      "routeKey": "/order-taking"
+    },
+    {
+      "type": "faq",
+      "heading": "Preguntes freqüents",
+      "items": [
+        {
+          "q": "Quina comissió cobren les apps de repartiment?",
+          "a": "Varia segons el país, el contracte i si reparteix la plataforma. Els acords només de recollida són els més barats; el repartiment complet amb promoció és el més car, i les tarifes anunciades se solen citar en la vintena o la trentena. Consulta el teu contracte."
+        },
+        {
+          "q": "Quantes comandes directes necessito per cobrir despeses?",
+          "a": "La quota dividida per (comanda mitjana × comissió). Amb 9,90 € al mes, una comanda de 25 € i un 25% de comissió, són menys de dues comandes al mes."
+        },
+        {
+          "q": "Hauria de deixar del tot les apps de repartiment?",
+          "a": "Normalment no. Porten clients nous que no pots atènyer d'una altra manera. La victòria és moure les comandes recurrents i de recollida al teu canal, no tallar de cop."
+        },
+        {
+          "q": "Puc cobrar menys al meu web?",
+          "a": "De vegades: diverses plataformes restringeixen als seus termes vendre més barat fora. Llegeix el contracte i, si exigeixen paritat de preus, competeix amb un producte gratis o un avantatge de fidelitat."
+        },
+        {
+          "q": "Necessito un web per rebre comandes directes?",
+          "a": "No. IQ Rest et dona una pàgina de comandes allotjada amb adreça pròpia, que pots enllaçar des de Google, Instagram o un codi QR a taula."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "title": "Egen beställningssida vs matleveransappar: siffrorna | IQ Rest",
+    "description": "Vad marknadsplatsens provision kostar per order, hur många ordrar du behöver i egen kanal för att gå jämnt ut, och varför de flesta restauranger bör köra båda."
+  },
+  "card": {
+    "title": "Din egen beställningssida vs leveransapparna: var provisionen faktiskt hamnar",
+    "excerpt": "Marknadsplatser hämtar gäster du aldrig hade nått och tar en andel av varje. Här är break even-räkningen och ett realistiskt sätt att flytta återkommande ordrar."
+  },
+  "h1": "Din egen onlinebeställning mot leveransmarknadsplatserna",
+  "intro": "Den vanliga bilden — apparna är parasiter, egen kanal är frihet — är för enkel. Marknadsplatser hämtar faktiskt gäster du aldrig hade nått, och den upptäckten har ett pris. Frågan är inte om du ska använda dem utan vilka ordrar som hör hemma i vilken kanal, och den räkningen gör du på tio minuter.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Vad provisionen faktiskt är"
+    },
+    {
+      "type": "p",
+      "text": "Marknadsplatsernas nivåer varierar med land, avtal och om plattformen levererar eller du. Avhämtningsavtal är billigast; full leverans med framskjuten placering är dyrast, och den angivna procenten brukar nämnas i tjugo- eller trettiotalet. Ta fram ditt eget avtal och leta upp den riktiga siffran, för allt nedan hänger på den."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "På en order om 25 €",
+        "Du behåller",
+        "Plattformen tar"
+      ],
+      "rows": [
+        [
+          "Vid 15% provision",
+          "21,25 €",
+          "3,75 €"
+        ],
+        [
+          "Vid 25% provision",
+          "18,75 €",
+          "6,25 €"
+        ],
+        [
+          "Vid 30% provision",
+          "17,50 €",
+          "7,50 €"
+        ],
+        [
+          "Din egen sida",
+          "25 € minus kortavgifter (ungefär 0,50 €)",
+          "0 € provision"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Mot en råvarukostnad kring 30% minskar 30% provision inte din marginal — den tar nästan hela. Många ställen upptäcker att deras marknadsplatsordrar i bästa fall är nollresultat som håller köket sysselsatt."
+    },
+    {
+      "type": "h2",
+      "text": "Break even-beräkningen"
+    },
+    {
+      "type": "p",
+      "text": "Ett beställningssystem på din egen sajt kostar en fast månadsavgift. Räkna ut hur många ordrar som måste flyttas innan det betalar sig:"
+    },
+    {
+      "type": "p",
+      "text": "**Ordrar som krävs = månadsabonnemang ÷ (snittorder × provisionssats)**"
+    },
+    {
+      "type": "p",
+      "text": "Vid 9,90 € i månaden, en snittorder på 25 € och 25% provision blir det 9,90 ÷ 6,25 = **1,6 order i månaden**. Två ordrar tagna på din egen sida täcker hela kostnaden. Allt därefter är marginal du tidigare lämnade ifrån dig."
+    },
+    {
+      "type": "note",
+      "text": "Det är den här delen som förvånar. Break even ligger inte vid 50 eller 200 ordrar — det är ett par stycken, eftersom provisionen på en enda order motsvarar en månad mjukvara."
+    },
+    {
+      "type": "h2",
+      "text": "Vad marknadsplatsen ger som din sida inte gör"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Upptäckt.** Folk bläddrar i appen utan en restaurang i tankarna. Din egen sida når bara dem som redan vet att du finns.",
+        "**En budflotta**, om du inte vill anställa eller styra förare.",
+        "**Betalning, återbetalning och support** hanterade, inklusive diskussionen om en kall pizza.",
+        "**Förtroende vid första ordern.** En främling beställer hellre i en välkänd app än på en sajt hen aldrig sett."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Det är en riktig produkt och den är värd att betala för. Det som inte är värt det är att betala om och om igen för samma stamgäst, som redan känner din mat och skulle beställa direkt om du gav hen ett sätt."
+    },
+    {
+      "type": "h2",
+      "text": "Vad din egen kanal ger dig"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Hela notan**, minus kortavgiften.",
+        "**Kundrelationen.** På en marknadsplats tillhör kunden plattformen — ofta kan du aldrig kontakta hen igen.",
+        "**Dina priser.** Ingen press att vara med och betala plattformsbreda rabatter.",
+        "**Inget menytak.** Sälj delningsbrickan för 48 € som aldrig skulle överleva en marknadsplatslistning.",
+        "**En kökskö.** Ordrar från din sida kan hamna på samma [köksskärm](route:/kitchen-display) som allt annat, i stället för på en andra platta vid disken."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Strategin som fungerar: båda, medvetet"
+    },
+    {
+      "type": "p",
+      "text": "Behandla marknadsplatsen som betald kundanskaffning och din egen sida som lojalitet. Du betalar provision för att träffa någon; du fortsätter inte betala den de tjugo följande besöken."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Ordertyp",
+        "Bästa kanal",
+        "Varför"
+      ],
+      "rows": [
+        [
+          "Ny kund, leverans",
+          "Marknadsplats",
+          "Du hade aldrig nått hen"
+        ],
+        [
+          "Återkommande kund",
+          "Din egen sida",
+          "Ingen provision på någon som redan känner dig"
+        ],
+        [
+          "Avhämtning / take away",
+          "Din egen sida",
+          "Du betalar för en leverans du inte använder"
+        ],
+        [
+          "Stora gruppordrar",
+          "Din egen sida",
+          "Provisionen på 150 € svider"
+        ],
+        [
+          "Kontor och catering",
+          "Din egen sida",
+          "Återkommande, högt värde, ingen upptäckt behövs"
+        ],
+        [
+          "Servering i lokalen",
+          "[QR-beställning](route:/order-taking)",
+          "Gästen sitter redan i lokalen"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Så flyttar du återkommande ordrar"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Lägg ett kort i varje leveranspåse med din direkta beställningsadress och ett tydligt skäl att använda den. En gratis kaffe eller liten rabatt slår ett vagt budskap.",
+        "Gör direktpriset något bättre, där ditt marknadsplatsavtal tillåter det. Läs villkoren — vissa förbjuder underprissättning.",
+        "Ta sökresultatet. När någon söker på ditt restaurangnamn plus \"beställ\" ska din sida ligga först, inte marknadsplatsens listning.",
+        "Lägg beställningslänken överallt där du redan finns: Google-företagsprofil, Instagram-bio, sidfoten på din sajt, QR-koden på bordet.",
+        "Ge avhämtningskunderna ett skäl att hoppa över appen. De betalar en serviceavgift för en tjänst de inte använder.",
+        "Håll det verkligt enkelt. Om direktbeställning kräver fler tryck än appen flyttar sig ingen."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Följ en siffra varje månad: andelen ordrar som kom direkt. De flesta ställen som är uppmärksamma flyttar den från nära noll till mellan 20% och 40% på ett år, och vid 30% provision är varje punkt riktiga pengar."
+    },
+    {
+      "type": "h2",
+      "text": "När du ska stanna kvar bara på marknadsplatsen"
+    },
+    {
+      "type": "p",
+      "text": "Ett dark kitchen utan lokal, utan gatuflöde och utan varumärkeskännedom köper upptäckt och inget annat — marknadsplatsen är affärsmodellen. Likaså: säljer du 15 leveransordrar i månaden är besväret med en andra kanal inte värt de 40 € du skulle spara. Var ärlig om vilken av dem du är."
+    },
+    {
+      "type": "cta",
+      "heading": "Ta emot ordrar utan provisionen",
+      "text": "Din egen beställningssida, QR-beställning vid bordet och leveransordrar i en och samma kökskö. Från 9,90 € i månaden, ingen provision per order. 14 dagar gratis.",
+      "buttonLabel": "Se onlinebeställning",
+      "routeKey": "/order-taking"
+    },
+    {
+      "type": "faq",
+      "heading": "Vanliga frågor",
+      "items": [
+        {
+          "q": "Hur mycket provision tar leveransapparna?",
+          "a": "Det varierar med land, avtal och om plattformen levererar. Avhämtningsavtal är billigast; full leverans med marknadsföring är dyrast, och angivna nivåer brukar nämnas i tjugo- eller trettiotalet. Kolla ditt eget avtal."
+        },
+        {
+          "q": "Hur många direktordrar behöver jag för att gå jämnt ut?",
+          "a": "Abonnemanget delat med (snittorder × provisionssats). Vid 9,90 € i månaden, en order på 25 € och 25% provision är det under två ordrar i månaden."
+        },
+        {
+          "q": "Ska jag lämna leveransapparna helt?",
+          "a": "Oftast inte. De hämtar förstagångskunder du inte når på annat sätt. Vinsten ligger i att flytta återkommande ordrar och avhämtning till din egen kanal, inte i att sluta tvärt."
+        },
+        {
+          "q": "Får jag ta mindre betalt på min egen sajt?",
+          "a": "Ibland — flera plattformar begränsar underprissättning i sina villkor. Läs avtalet, och om prisparitet krävs, konkurrera med en gratisvara eller en lojalitetsförmån i stället."
+        },
+        {
+          "q": "Behöver jag en webbplats för att ta direktordrar?",
+          "a": "Nej. IQ Rest ger dig en beställningssida med egen adress, som du kan länka från Google, Instagram eller en QR-kod på bordet."
+        }
+      ]
+    }
+  ]
+}

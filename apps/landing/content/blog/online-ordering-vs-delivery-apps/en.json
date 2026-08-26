@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "title": "Own Ordering vs Delivery Apps: The Real Numbers | IQ Rest",
+    "description": "What marketplace commission costs per order, how many orders you need on your own channel to break even, and why most restaurants should run both."
+  },
+  "card": {
+    "title": "Your own ordering page vs delivery apps: where the commission actually lands",
+    "excerpt": "Marketplaces bring customers you'd never reach and take a cut of every one. Here's the break-even arithmetic and a realistic way to shift the repeat orders."
+  },
+  "h1": "Your own online ordering vs delivery marketplaces",
+  "intro": "The usual framing — apps are parasites, own channel is freedom — is too simple. Marketplaces genuinely bring you customers you would never have reached, and that discovery has a price. The question is not whether to use them but which orders belong on which channel, and that's a calculation you can do in ten minutes.",
+  "blocks": [
+    { "type": "h2", "text": "What the commission actually is" },
+    {
+      "type": "p",
+      "text": "Marketplace rates vary by country, contract and whether the platform delivers or you do. Collection-only deals are the cheapest; full delivery with promoted placement is the most expensive, and the headline percentage is commonly quoted in the twenties or thirties. Dig your own contract out and find the real number, because everything below depends on it."
+    },
+    {
+      "type": "table",
+      "headers": ["On a €25 order", "You keep", "Platform takes"],
+      "rows": [
+        ["At 15% commission", "€21.25", "€3.75"],
+        ["At 25% commission", "€18.75", "€6.25"],
+        ["At 30% commission", "€17.50", "€7.50"],
+        ["Your own page", "€25 minus card fees (roughly €0.50)", "€0 commission"]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Against a food cost of around 30%, a 30% commission doesn't reduce your margin — it removes most of it. Plenty of venues discover that their marketplace orders are, at best, break-even volume that keeps the kitchen busy."
+    },
+    { "type": "h2", "text": "The break-even calculation" },
+    {
+      "type": "p",
+      "text": "An ordering system on your own site costs a flat monthly fee. Work out how many orders have to move across before it pays for itself:"
+    },
+    {
+      "type": "p",
+      "text": "**Orders needed = monthly subscription ÷ (average order × commission rate)**"
+    },
+    {
+      "type": "p",
+      "text": "At €9.90 a month, a €25 average order and 25% commission, that's 9.90 ÷ 6.25 = **1.6 orders a month**. Two orders taken on your own page cover the entire cost of running it. Everything after that is margin you were previously handing over."
+    },
+    {
+      "type": "note",
+      "text": "This is the part that surprises people. The break-even isn't 50 orders or 200 — it's low single digits, because the commission on a single order is comparable to a month of software."
+    },
+    { "type": "h2", "text": "What the marketplace gives you that your page doesn't" },
+    {
+      "type": "list",
+      "items": [
+        "**Discovery.** People browse the app without a restaurant in mind. Your own page only reaches people who already know you exist.",
+        "**A delivery fleet**, if you don't want to employ drivers or manage them.",
+        "**Payment, refunds and support** handled, including the argument about a cold pizza.",
+        "**Trust at the first order.** A stranger will order from a familiar app before a website they've never seen."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "That's a real product and it's worth paying for. What it isn't worth is paying it repeatedly on the same regular customer, who already knows your food and would order direct if you gave them a way."
+    },
+    { "type": "h2", "text": "What your own channel gives you" },
+    {
+      "type": "list",
+      "items": [
+        "**The whole ticket**, minus card processing.",
+        "**The customer relationship.** On a marketplace, the customer belongs to the platform — you often can't contact them again.",
+        "**Your prices.** No pressure to fund platform-wide discounts.",
+        "**No menu ceiling.** Sell the €48 sharing platter that would never survive a marketplace listing.",
+        "**One kitchen queue.** Orders from your page can arrive on the same [kitchen display](route:/kitchen-display) as everything else, instead of on a second tablet on the counter."
+      ]
+    },
+    { "type": "h2", "text": "The strategy that works: both, deliberately" },
+    {
+      "type": "p",
+      "text": "Treat the marketplace as paid customer acquisition and your own page as retention. You pay a commission to meet someone; you don't keep paying it for the next twenty visits."
+    },
+    {
+      "type": "table",
+      "headers": ["Order type", "Best channel", "Why"],
+      "rows": [
+        ["First-time customer, delivery", "Marketplace", "You'd never have reached them"],
+        ["Repeat customer", "Your own page", "No commission on someone who already knows you"],
+        ["Collection / takeaway", "Your own page", "You're paying for a delivery you don't use"],
+        ["Large group orders", "Your own page", "The commission on €150 is painful"],
+        ["Office and catering", "Your own page", "Recurring, high value, no discovery needed"],
+        ["In-house dining", "[QR ordering](route:/order-taking)", "The guest is already in the room"]
+      ]
+    },
+    { "type": "h2", "text": "How to move repeat orders across" },
+    {
+      "type": "steps",
+      "items": [
+        "Put a card in every delivery bag with your direct ordering address and one clear reason to use it. A free coffee or a small discount beats a vague message.",
+        "Make the direct price slightly better, where your marketplace contract allows it. Check the terms — some prohibit undercutting.",
+        "Own the search result. When someone searches your restaurant name plus \"order\", your page should be the first hit, not the marketplace listing.",
+        "Put the ordering link everywhere you already are: Google Business Profile, Instagram bio, the footer of your site, the QR code on the table.",
+        "Give collection customers a reason to skip the app. They're paying a service fee for a service they aren't using.",
+        "Keep it genuinely simple. If ordering direct takes more taps than the app, nobody moves."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Track one number monthly: the share of orders that came direct. Most venues that pay attention move it from near zero to somewhere between 20% and 40% within a year, and at 30% commission each point is real money."
+    },
+    { "type": "h2", "text": "When to stay on the marketplace only" },
+    {
+      "type": "p",
+      "text": "A dark kitchen with no premises, no footfall and no brand recognition is buying discovery and nothing else — the marketplace is the business model. Likewise, if you sell 15 delivery orders a month, the effort of running a second channel isn't worth the €40 you'd save. Be honest about which one you are."
+    },
+    {
+      "type": "cta",
+      "heading": "Take orders without the commission",
+      "text": "Your own ordering page, QR ordering at the table and delivery orders in one kitchen queue. From €9.90 a month, no commission per order. 14 days free.",
+      "buttonLabel": "See online ordering",
+      "routeKey": "/order-taking"
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently asked questions",
+      "items": [
+        {
+          "q": "How much commission do delivery apps charge?",
+          "a": "It varies by country, contract and whether the platform delivers. Collection-only deals are cheapest; full delivery with promotion is the most expensive, and headline rates are commonly quoted in the twenties or thirties. Check your own contract."
+        },
+        {
+          "q": "How many direct orders do I need to break even?",
+          "a": "Subscription divided by (average order × commission rate). At €9.90 a month, a €25 order and 25% commission, it's under two orders a month."
+        },
+        {
+          "q": "Should I leave the delivery apps entirely?",
+          "a": "Usually not. They bring first-time customers you can't reach otherwise. The win is moving repeat and collection orders to your own channel, not going cold turkey."
+        },
+        {
+          "q": "Can I charge less on my own site?",
+          "a": "Sometimes — several platforms restrict undercutting in their terms. Read the contract, and if price parity is required, compete on a free item or a loyalty perk instead."
+        },
+        {
+          "q": "Do I need a website to take direct orders?",
+          "a": "No. IQ Rest gives you a hosted ordering page with its own address, which you can link from Google, Instagram or a QR code on the table."
+        }
+      ]
+    }
+  ]
+}

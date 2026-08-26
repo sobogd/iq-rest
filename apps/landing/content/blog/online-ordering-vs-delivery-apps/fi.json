@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "title": "Oma tilaussivu vs ruokalähettisovellukset: luvut | IQ Rest",
+    "description": "Mitä alustan komissio maksaa tilaukselta, montako tilausta omassa kanavassa kattaa kulut ja miksi useimpien ravintoloiden kannattaa käyttää molempia."
+  },
+  "card": {
+    "title": "Oma tilaussivu vs lähettisovellukset: minne komissio oikeasti menee",
+    "excerpt": "Alustat tuovat asiakkaita, joita et koskaan tavoittaisi, ja ottavat osuuden jokaisesta. Tässä on kannattavuusrajan laskutoimitus ja realistinen tapa siirtää toistuvat tilaukset."
+  },
+  "h1": "Oma verkkotilaus vastaan ruokalähettialustat",
+  "intro": "Tavallinen asetelma — sovellukset ovat loisia, oma kanava on vapautta — on liian yksinkertainen. Alustat todella tuovat asiakkaita, joita et olisi koskaan tavoittanut, ja tuolla löydettävyydellä on hinta. Kysymys ei ole siitä, käytätkö niitä, vaan mitkä tilaukset kuuluvat mihinkin kanavaan — ja tuon laskun teet kymmenessä minuutissa.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Mitä komissio oikeasti on"
+    },
+    {
+      "type": "p",
+      "text": "Alustojen prosentit vaihtelevat maan, sopimuksen ja sen mukaan, kuljettaako alusta vai sinä. Pelkän noudon sopimukset ovat halvimpia; täysi kuljetus näkyvällä sijoituksella on kallein, ja mainittu prosentti liikkuu tavallisesti kahdessakymmenessä tai kolmessakymmenessä jotain. Kaiva oma sopimuksesi esiin ja etsi todellinen luku, koska kaikki alla oleva riippuu siitä."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "25 euron tilauksessa",
+        "Sinulle jää",
+        "Alusta ottaa"
+      ],
+      "rows": [
+        [
+          "15% komissiolla",
+          "21,25 €",
+          "3,75 €"
+        ],
+        [
+          "25% komissiolla",
+          "18,75 €",
+          "6,25 €"
+        ],
+        [
+          "30% komissiolla",
+          "17,50 €",
+          "7,50 €"
+        ],
+        [
+          "Oma sivusi",
+          "25 € miinus korttikulut (noin 0,50 €)",
+          "0 € komissiota"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Kun raaka-ainekustannus on noin 30%, 30% komissio ei pienennä katetta — se vie siitä lähes kaiken. Moni paikka huomaa, että alustatilaukset ovat parhaimmillaan nollatulosta, joka pitää keittiön kiireisenä."
+    },
+    {
+      "type": "h2",
+      "text": "Kannattavuusrajan laskenta"
+    },
+    {
+      "type": "p",
+      "text": "Tilausjärjestelmä omalla sivulla maksaa kiinteän kuukausimaksun. Laske, montako tilausta pitää siirtyä ennen kuin se maksaa itsensä:"
+    },
+    {
+      "type": "p",
+      "text": "**Tarvittavat tilaukset = kuukausimaksu ÷ (keskitilaus × komissioprosentti)**"
+    },
+    {
+      "type": "p",
+      "text": "9,90 € kuussa, 25 € keskitilaus ja 25% komissio: 9,90 ÷ 6,25 = **1,6 tilausta kuukaudessa**. Kaksi omalla sivulla otettua tilausta kattaa koko käyttökustannuksen. Kaikki sen jälkeen on katetta, jonka aiemmin luovutit."
+    },
+    {
+      "type": "note",
+      "text": "Tämä osa yllättää ihmiset. Kannattavuusraja ei ole 50 eikä 200 tilausta — se on pari kappaletta, koska yhden tilauksen komissio vastaa kuukautta ohjelmistoa."
+    },
+    {
+      "type": "h2",
+      "text": "Mitä alusta antaa ja oma sivusi ei"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Löydettävyys.** Ihmiset selaavat sovellusta ilman tiettyä ravintolaa mielessään. Oma sivusi tavoittaa vain ne, jotka jo tietävät sinusta.",
+        "**Kuljettajaverkoston**, jos et halua palkata lähettejä tai johtaa heitä.",
+        "**Maksut, hyvitykset ja tuen** hoidettuna, mukaan lukien kiista kylmästä pizzasta.",
+        "**Luottamuksen ensimmäisellä tilauksella.** Tuntematon tilaa mieluummin tutusta sovelluksesta kuin sivustolta, jota ei ole koskaan nähnyt."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Se on aito tuote ja siitä kannattaa maksaa. Mistä ei kannata maksaa, on toistuvasti sama vakioasiakas, joka jo tuntee ruokasi ja tilaisi suoraan, jos antaisit siihen tavan."
+    },
+    {
+      "type": "h2",
+      "text": "Mitä oma kanava antaa"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Koko kuitin**, miinus korttikulut.",
+        "**Asiakassuhteen.** Alustalla asiakas kuuluu alustalle — usein et voi ottaa häneen enää yhteyttä.",
+        "**Omat hintasi.** Ei painetta rahoittaa koko alustan kampanja-alennuksia.",
+        "**Ei menun kattoa.** Myy 48 euron jakolautanen, joka ei koskaan selviäisi alustan listauksessa.",
+        "**Yhden keittiöjonon.** Oman sivun tilaukset voivat tulla samalle [keittiönäytölle](route:/kitchen-display) kuin kaikki muukin, eikä toiselle tabletille tiskin päälle."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Toimiva strategia: molemmat, tietoisesti"
+    },
+    {
+      "type": "p",
+      "text": "Kohtele alustaa maksettuna asiakashankintana ja omaa sivuasi pitona. Maksat komission tavataksesi jonkun; et jatka sen maksamista seuraavat kaksikymmentä käyntiä."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Tilaustyyppi",
+        "Paras kanava",
+        "Miksi"
+      ],
+      "rows": [
+        [
+          "Uusi asiakas, kuljetus",
+          "Alusta",
+          "Et olisi tavoittanut häntä koskaan"
+        ],
+        [
+          "Vakioasiakas",
+          "Oma sivu",
+          "Ei komissiota jostakusta, joka jo tuntee sinut"
+        ],
+        [
+          "Nouto",
+          "Oma sivu",
+          "Maksat kuljetuksesta, jota et käytä"
+        ],
+        [
+          "Isot ryhmätilaukset",
+          "Oma sivu",
+          "Komissio 150 eurosta koskee"
+        ],
+        [
+          "Toimistot ja catering",
+          "Oma sivu",
+          "Toistuvaa, arvokasta, löydettävyyttä ei tarvita"
+        ],
+        [
+          "Ruokailu paikan päällä",
+          "[QR-tilaus](route:/order-taking)",
+          "Asiakas on jo salissa"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Näin siirrät toistuvat tilaukset"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Laita jokaiseen kuljetuspussiin kortti, jossa on suoran tilauksen osoite ja yksi selvä syy käyttää sitä. Ilmainen kahvi tai pieni alennus voittaa epämääräisen viestin.",
+        "Tee suorasta hinnasta hieman parempi, jos alustasopimus sen sallii. Tarkista ehdot — osa kieltää alihinnoittelun.",
+        "Ota hakutulos itsellesi. Kun joku hakee ravintolasi nimeä ja sanaa \"tilaa\", oman sivusi pitää olla ensimmäisenä, ei alustan listauksen.",
+        "Laita tilauslinkki kaikkialle, missä jo olet: Google-yritysprofiili, Instagramin bio, sivustosi alatunniste, pöydän QR-koodi.",
+        "Anna noutoasiakkaille syy ohittaa sovellus. He maksavat palvelumaksun palvelusta, jota eivät käytä.",
+        "Pidä se aidosti yksinkertaisena. Jos suora tilaaminen vaatii enemmän napautuksia kuin sovellus, kukaan ei siirry."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Seuraa yhtä lukua kuukaudessa: suoraan tulleiden tilausten osuutta. Useimmat tarkkaavaiset paikat nostavat sen lähes nollasta 20-40 prosenttiin vuodessa, ja 30% komissiolla jokainen prosenttiyksikkö on oikeaa rahaa."
+    },
+    {
+      "type": "h2",
+      "text": "Milloin kannattaa pysyä pelkällä alustalla"
+    },
+    {
+      "type": "p",
+      "text": "Pimeä keittiö ilman toimitilaa, ohikulkijoita ja tunnettua brändiä ostaa löydettävyyttä eikä mitään muuta — alusta on koko liiketoimintamalli. Samoin: jos myyt 15 kuljetustilausta kuussa, toisen kanavan vaiva ei ole säästämiesi 40 euron arvoinen. Ole rehellinen siitä, kumpi olet."
+    },
+    {
+      "type": "cta",
+      "heading": "Ota tilauksia ilman komissiota",
+      "text": "Oma tilaussivu, QR-tilaus pöydässä ja kuljetustilaukset yhdessä keittiöjonossa. Alkaen 9,90 € kuussa, ei komissiota tilauksesta. 14 päivää ilmaiseksi.",
+      "buttonLabel": "Katso verkkotilaus",
+      "routeKey": "/order-taking"
+    },
+    {
+      "type": "faq",
+      "heading": "Usein kysyttyä",
+      "items": [
+        {
+          "q": "Paljonko lähettisovellukset ottavat komissiota?",
+          "a": "Se riippuu maasta, sopimuksesta ja siitä, kuljettaako alusta. Pelkän noudon sopimukset ovat halvimpia; täysi kuljetus mainostuksella on kallein, ja mainitut prosentit liikkuvat tavallisesti kahdessakymmenessä tai kolmessakymmenessä jotain. Tarkista oma sopimuksesi."
+        },
+        {
+          "q": "Montako suoraa tilausta tarvitsen nollille pääsyyn?",
+          "a": "Kuukausimaksu jaettuna (keskitilaus × komissioprosentti). 9,90 € kuussa, 25 € tilaus ja 25% komissio: alle kaksi tilausta kuussa."
+        },
+        {
+          "q": "Pitäisikö minun jättää lähettisovellukset kokonaan?",
+          "a": "Yleensä ei. Ne tuovat ensikertalaisia, joita et muuten tavoita. Voitto on siinä, että siirrät toistuvat tilaukset ja noudot omaan kanavaan, ei siinä että lopetat kertarysäyksellä."
+        },
+        {
+          "q": "Voinko veloittaa vähemmän omalla sivullani?",
+          "a": "Joskus — useat alustat rajoittavat alihinnoittelua ehdoissaan. Lue sopimus, ja jos hintapariteetti vaaditaan, kilpaile mieluummin ilmaisella tuotteella tai kanta-asiakasedulla."
+        },
+        {
+          "q": "Tarvitsenko verkkosivut suoriin tilauksiin?",
+          "a": "Et. IQ Rest antaa sinulle valmiin tilaussivun omalla osoitteella, johon voit linkittää Googlesta, Instagramista tai pöydän QR-koodista."
+        }
+      ]
+    }
+  ]
+}

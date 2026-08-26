@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "title": "Kendi sipariş sayfan vs teslimat uygulamaları: gerçek rakamlar | IQ Rest",
+    "description": "Platform komisyonunun sipariş başına maliyeti, kendi kanalında başa baş için kaç sipariş gerektiği ve çoğu restoranın neden ikisini birden kullanması gerektiği."
+  },
+  "card": {
+    "title": "Kendi sipariş sayfan vs teslimat uygulamaları: komisyon aslında nereye gidiyor",
+    "excerpt": "Platformlar asla ulaşamayacağın müşterileri getirir ve her birinden pay alır. İşte başa baş noktasının aritmetiği ve tekrar eden siparişleri taşımanın gerçekçi yolu."
+  },
+  "h1": "Kendi online siparişin teslimat platformlarına karşı",
+  "intro": "Alışıldık kurgu — uygulamalar asalak, kendi kanalın özgürlük — fazla basit. Platformlar gerçekten de asla ulaşamayacağın müşterileri getiriyor ve bu keşfin bir bedeli var. Soru onları kullanıp kullanmamak değil, hangi siparişin hangi kanala ait olduğu; o hesabı da on dakikada yaparsın.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Komisyon aslında nedir"
+    },
+    {
+      "type": "p",
+      "text": "Platform oranları ülkeye, sözleşmeye ve teslimatı platformun mu yoksa senin mi yaptığına göre değişir. Sadece gel-al anlaşmaları en ucuzu; öne çıkarılmış konumla tam teslimat en pahalısı ve telaffuz edilen yüzde genelde yirmili ya da otuzlu rakamlarla anılır. Kendi sözleşmeni çıkar ve gerçek rakamı bul, çünkü aşağıdaki her şey ona bağlı."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "25 €'luk bir siparişte",
+        "Sende kalan",
+        "Platformun aldığı"
+      ],
+      "rows": [
+        [
+          "%15 komisyonda",
+          "21,25 €",
+          "3,75 €"
+        ],
+        [
+          "%25 komisyonda",
+          "18,75 €",
+          "6,25 €"
+        ],
+        [
+          "%30 komisyonda",
+          "17,50 €",
+          "7,50 €"
+        ],
+        [
+          "Kendi sayfan",
+          "25 € eksi kart komisyonu (kabaca 0,50 €)",
+          "0 € komisyon"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Yaklaşık %30 maliyet oranına karşı %30 komisyon marjını azaltmaz — neredeyse tamamını alır. Pek çok işletme, platform siparişlerinin en iyi ihtimalle mutfağı meşgul tutan başa baş bir hacim olduğunu fark eder."
+    },
+    {
+      "type": "h2",
+      "text": "Başa baş hesabı"
+    },
+    {
+      "type": "p",
+      "text": "Kendi sitendeki sipariş sistemi sabit bir aylık ücrete mal olur. Kendini amorti etmesi için kaç siparişin taşınması gerektiğini hesapla:"
+    },
+    {
+      "type": "p",
+      "text": "**Gereken sipariş = aylık abonelik ÷ (ortalama sipariş × komisyon oranı)**"
+    },
+    {
+      "type": "p",
+      "text": "Ayda 9,90 €, ortalama sipariş 25 € ve %25 komisyonla: 9,90 ÷ 6,25 = **ayda 1,6 sipariş**. Kendi sayfanda alınan iki sipariş, onu çalıştırmanın tüm maliyetini karşılar. Sonrası, daha önce devrettiğin marjdır."
+    },
+    {
+      "type": "note",
+      "text": "İnsanları şaşırtan kısım burası. Başa baş noktası 50 ya da 200 sipariş değil — tek haneli, çünkü tek bir siparişin komisyonu bir aylık yazılıma denk."
+    },
+    {
+      "type": "h2",
+      "text": "Platformun verdiği, senin sayfanın vermediği"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Keşif.** İnsanlar aklında bir restoran olmadan uygulamayı karıştırır. Kendi sayfan yalnızca var olduğunu zaten bilenlere ulaşır.",
+        "**Kurye filosu**, kurye çalıştırmak ya da yönetmek istemiyorsan.",
+        "**Ödeme, iade ve destek** halledilmiş halde, soğuk pizza tartışması dahil.",
+        "**İlk siparişte güven.** Bir yabancı, hiç görmediği bir siteden önce tanıdık bir uygulamadan sipariş verir."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Bu gerçek bir ürün ve parasını hak ediyor. Hak etmeyen şey, yemeğini zaten bilen ve yol gösterirsen doğrudan sipariş verecek olan aynı düzenli müşteri için bunu tekrar tekrar ödemek."
+    },
+    {
+      "type": "h2",
+      "text": "Kendi kanalının sana verdiği"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Adisyonun tamamı**, kart komisyonu düşülerek.",
+        "**Müşteri ilişkisi.** Platformda müşteri platformundur — çoğu zaman ona bir daha ulaşamazsın.",
+        "**Kendi fiyatların.** Platform geneli indirimleri finanse etme baskısı yok.",
+        "**Menü tavanı yok.** Platform listesinde asla tutmayacak 48 €'luk paylaşım tabağını sat.",
+        "**Tek mutfak kuyruğu.** Sayfandan gelen siparişler, tezgâhtaki ikinci bir tablet yerine diğer her şeyle aynı [mutfak ekranına](route:/kitchen-display) düşebilir."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "İşe yarayan strateji: ikisi de, bilinçli olarak"
+    },
+    {
+      "type": "p",
+      "text": "Platformu ücretli müşteri kazanımı, kendi sayfanı ise elde tutma olarak gör. Biriyle tanışmak için komisyon ödersin; sonraki yirmi ziyaret için ödemeye devam etmezsin."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Sipariş tipi",
+        "En iyi kanal",
+        "Neden"
+      ],
+      "rows": [
+        [
+          "İlk kez gelen müşteri, teslimat",
+          "Platform",
+          "Ona asla ulaşamazdın"
+        ],
+        [
+          "Düzenli müşteri",
+          "Kendi sayfan",
+          "Seni zaten tanıyan biri için komisyon yok"
+        ],
+        [
+          "Gel-al / paket",
+          "Kendi sayfan",
+          "Kullanmadığın bir teslimat için ödüyorsun"
+        ],
+        [
+          "Büyük grup siparişleri",
+          "Kendi sayfan",
+          "150 €'nun komisyonu acıtır"
+        ],
+        [
+          "Ofis ve catering",
+          "Kendi sayfan",
+          "Tekrarlayan, yüksek tutarlı, keşfe gerek yok"
+        ],
+        [
+          "Salonda servis",
+          "[QR ile sipariş](route:/order-taking)",
+          "Misafir zaten salonda"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Tekrar eden siparişleri nasıl taşırsın"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Her teslimat poşetine, doğrudan sipariş adresini ve onu kullanmak için tek net bir sebebi taşıyan bir kart koy. Ücretsiz kahve ya da küçük bir indirim, muğlak bir mesajı yener.",
+        "Sözleşmen izin veriyorsa doğrudan fiyatı biraz daha iyi yap. Şartları kontrol et — bazıları fiyat kırmayı yasaklar.",
+        "Arama sonucunu sahiplen. Biri restoran adın artı \"sipariş\" arattığında ilk çıkan platform kaydı değil, senin sayfan olmalı.",
+        "Sipariş bağlantısını zaten bulunduğun her yere koy: Google işletme profili, Instagram bio, sitenin alt bilgisi, masadaki QR kod.",
+        "Gel-al müşterilerine uygulamayı atlamak için sebep ver. Kullanmadıkları bir hizmet için servis ücreti ödüyorlar.",
+        "Gerçekten basit tut. Doğrudan sipariş uygulamadan daha çok dokunuş istiyorsa kimse taşınmaz."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Ayda tek bir sayıyı izle: doğrudan gelen siparişlerin payı. Bunu takip eden işletmelerin çoğu bir yılda sıfıra yakın seviyeden %20-40 aralığına taşır ve %30 komisyonda her puan gerçek paradır."
+    },
+    {
+      "type": "h2",
+      "text": "Ne zaman sadece platformda kalmalı"
+    },
+    {
+      "type": "p",
+      "text": "Dükkânı, sokak trafiği ve marka bilinirliği olmayan bir dark kitchen yalnızca keşif satın alır — platform işin ta kendisidir. Aynı şekilde, ayda 15 teslimat siparişi veriyorsan ikinci bir kanalı işletmenin zahmeti kazanacağın 40 €'ya değmez. Hangisi olduğun konusunda dürüst ol."
+    },
+    {
+      "type": "cta",
+      "heading": "Komisyonsuz sipariş al",
+      "text": "Kendi sipariş sayfan, masada QR ile sipariş ve teslimat siparişleri tek bir mutfak kuyruğunda. Ayda 9,90 €'dan başlar, sipariş başına komisyon yok. 14 gün ücretsiz.",
+      "buttonLabel": "Online siparişe bak",
+      "routeKey": "/order-taking"
+    },
+    {
+      "type": "faq",
+      "heading": "Sık sorulan sorular",
+      "items": [
+        {
+          "q": "Teslimat uygulamaları ne kadar komisyon alıyor?",
+          "a": "Ülkeye, sözleşmeye ve teslimatı platformun yapıp yapmadığına göre değişir. Sadece gel-al anlaşmaları en ucuzu; tanıtımlı tam teslimat en pahalısı ve telaffuz edilen oranlar genelde yirmili ya da otuzlu rakamlarla anılır. Kendi sözleşmene bak."
+        },
+        {
+          "q": "Başa baş için kaç doğrudan sipariş gerekiyor?",
+          "a": "Abonelik bölü (ortalama sipariş × komisyon oranı). Ayda 9,90 €, 25 €'luk sipariş ve %25 komisyonla ayda iki siparişten az."
+        },
+        {
+          "q": "Teslimat uygulamalarından tamamen çıkmalı mıyım?",
+          "a": "Genelde hayır. Başka türlü ulaşamayacağın ilk kez gelen müşterileri getiriyorlar. Kazanç, tekrar eden ve gel-al siparişleri kendi kanalına taşımakta; her şeyi bir anda kesmekte değil."
+        },
+        {
+          "q": "Kendi siteme daha düşük fiyat koyabilir miyim?",
+          "a": "Bazen — birkaç platform şartlarında düşük fiyat vermeyi kısıtlar. Sözleşmeyi oku; fiyat eşitliği zorunluysa bunun yerine ücretsiz bir ürün veya sadakat avantajıyla rekabet et."
+        },
+        {
+          "q": "Doğrudan sipariş almak için web siteme ihtiyacım var mı?",
+          "a": "Hayır. IQ Rest sana kendi adresi olan barındırılmış bir sipariş sayfası verir; ona Google'dan, Instagram'dan ya da masadaki QR koddan bağlantı verebilirsin."
+        }
+      ]
+    }
+  ]
+}

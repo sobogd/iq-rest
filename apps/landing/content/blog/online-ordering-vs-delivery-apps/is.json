@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "title": "Eigin pöntunarsíða vs sendingarforrit: raunverulegu tölurnar | IQ Rest",
+    "description": "Hvað þóknun markaðstorgsins kostar á hverja pöntun, hversu margar pantanir þarf í eigin rás til að standa á sléttu og hvers vegna flestir veitingastaðir ættu að nota bæði."
+  },
+  "card": {
+    "title": "Þín eigin pöntunarsíða vs sendingarforritin: hvert þóknunin fer í raun",
+    "excerpt": "Markaðstorg færa þér viðskiptavini sem þú hefðir aldrei náð til og taka hlut af hverjum og einum. Hér er núllpunktsreikningurinn og raunhæf leið til að færa endurteknar pantanir."
+  },
+  "h1": "Þín eigin netpöntun á móti sendingarmarkaðstorgunum",
+  "intro": "Venjulega framsetningin — forritin eru sníkjudýr, eigin rás er frelsi — er of einföld. Markaðstorg færa þér í alvöru viðskiptavini sem þú hefðir aldrei náð til, og sú uppgötvun kostar. Spurningin er ekki hvort þú notir þau heldur hvaða pantanir eiga heima í hvorri rás, og þann reikning gerirðu á tíu mínútum.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Hvað þóknunin er í raun"
+    },
+    {
+      "type": "p",
+      "text": "Hlutföll markaðstorga eru breytileg eftir landi, samningi og því hvort vettvangurinn sendir eða þú. Samningar með sókn eingöngu eru ódýrastir; full sending með auglýstri staðsetningu er dýrust, og uppgefna prósentan er oftast nefnd í tuttugu eða þrjátíu og eitthvað. Dragðu fram þinn eigin samning og finndu raunverulegu töluna, því allt hér að neðan veltur á henni."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Á 25 € pöntun",
+        "Þú heldur",
+        "Vettvangurinn tekur"
+      ],
+      "rows": [
+        [
+          "Við 15% þóknun",
+          "21,25 €",
+          "3,75 €"
+        ],
+        [
+          "Við 25% þóknun",
+          "18,75 €",
+          "6,25 €"
+        ],
+        [
+          "Við 30% þóknun",
+          "17,50 €",
+          "7,50 €"
+        ],
+        [
+          "Þín eigin síða",
+          "25 € að frádregnum kortagjöldum (um 0,50 €)",
+          "0 € þóknun"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Á móti hráefniskostnaði í kringum 30% lækkar 30% þóknun ekki framlegðina — hún tekur nánast alla. Margir staðir uppgötva að pantanir þeirra af markaðstorgi eru í besta falli velta á núlli sem heldur eldhúsinu uppteknu."
+    },
+    {
+      "type": "h2",
+      "text": "Núllpunktsútreikningurinn"
+    },
+    {
+      "type": "p",
+      "text": "Pöntunarkerfi á þinni eigin síðu kostar fast mánaðargjald. Reiknaðu hversu margar pantanir þurfa að færast áður en það borgar sig sjálft:"
+    },
+    {
+      "type": "p",
+      "text": "**Pantanir sem þarf = mánaðaráskrift ÷ (meðalpöntun × þóknunarhlutfall)**"
+    },
+    {
+      "type": "p",
+      "text": "Við 9,90 € á mánuði, 25 € meðalpöntun og 25% þóknun er það 9,90 ÷ 6,25 = **1,6 pöntun á mánuði**. Tvær pantanir teknar á þinni eigin síðu standa undir öllum rekstrarkostnaði hennar. Allt eftir það er framlegð sem þú lést áður af hendi."
+    },
+    {
+      "type": "note",
+      "text": "Þetta er hlutinn sem kemur fólki á óvart. Núllpunkturinn er ekki 50 eða 200 pantanir — hann er örfáar, því þóknunin af einni pöntun jafngildir mánuði af hugbúnaði."
+    },
+    {
+      "type": "h2",
+      "text": "Hvað markaðstorgið gefur sem þín síða gerir ekki"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Uppgötvun.** Fólk flettir forritinu án þess að hafa veitingastað í huga. Þín eigin síða nær aðeins til þeirra sem vita nú þegar að þú ert til.",
+        "**Sendlaflota**, ef þú vilt ekki ráða eða stýra bílstjórum.",
+        "**Greiðslur, endurgreiðslur og þjónustu** afgreiddar, þar á meðal deiluna um kalda pizzu.",
+        "**Traust við fyrstu pöntun.** Ókunnugur pantar frekar úr kunnuglegu forriti en af vefsíðu sem hann hefur aldrei séð."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Þetta er raunveruleg vara og hún er peninganna virði. Það sem er ekki þess virði er að borga fyrir hana aftur og aftur á sama fastagestinn, sem þekkir matinn þinn nú þegar og myndi panta beint ef þú gæfir honum leið."
+    },
+    {
+      "type": "h2",
+      "text": "Hvað þín eigin rás gefur þér"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Allan reikninginn**, að frádregnu kortagjaldi.",
+        "**Viðskiptasambandið.** Á markaðstorgi tilheyrir viðskiptavinurinn vettvangnum — oft nærðu aldrei sambandi við hann aftur.",
+        "**Þín verð.** Enginn þrýstingur um að fjármagna afslætti á öllum vettvangnum.",
+        "**Ekkert matseðilsþak.** Seldu 48 € deilifatið sem myndi aldrei lifa af á markaðstorgsskráningu.",
+        "**Eina eldhúsröð.** Pantanir af síðunni þinni geta komið á sama [eldhússkjá](route:/kitchen-display) og allt annað, í stað annarrar spjaldtölvu á afgreiðsluborðinu."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Stefnan sem virkar: bæði, meðvitað"
+    },
+    {
+      "type": "p",
+      "text": "Líttu á markaðstorgið sem greidda viðskiptavinaöflun og á þína síðu sem tryggð. Þú borgar þóknun til að hitta einhvern; þú heldur ekki áfram að borga hana næstu tuttugu heimsóknir."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Tegund pöntunar",
+        "Besta rásin",
+        "Af hverju"
+      ],
+      "rows": [
+        [
+          "Nýr viðskiptavinur, sending",
+          "Markaðstorg",
+          "Þú hefðir aldrei náð til hans"
+        ],
+        [
+          "Fastagestur",
+          "Þín eigin síða",
+          "Engin þóknun á þann sem þekkir þig nú þegar"
+        ],
+        [
+          "Sókn / take away",
+          "Þín eigin síða",
+          "Þú borgar fyrir sendingu sem þú notar ekki"
+        ],
+        [
+          "Stórar hóppantanir",
+          "Þín eigin síða",
+          "Þóknunin af 150 € sviður"
+        ],
+        [
+          "Skrifstofur og veislur",
+          "Þín eigin síða",
+          "Endurtekið, hátt verðmæti, engin uppgötvun nauðsynleg"
+        ],
+        [
+          "Neysla á staðnum",
+          "[QR-pöntun](route:/order-taking)",
+          "Gesturinn er þegar í salnum"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Hvernig þú færir endurteknar pantanir"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Settu spjald í hvern sendingarpoka með beina pöntunarslóðina þína og eina skýra ástæðu til að nota hana. Ókeypis kaffi eða lítill afsláttur slær út óljós skilaboð.",
+        "Hafðu beina verðið örlítið betra þar sem samningurinn leyfir. Skoðaðu skilmálana — sumir banna undirboð.",
+        "Eignaðu þér leitarniðurstöðuna. Þegar einhver leitar að nafni staðarins þíns plús \"panta\" á þín síða að vera efst, ekki skráningin á markaðstorginu.",
+        "Settu pöntunarhlekkinn alls staðar þar sem þú ert þegar: Google-fyrirtækjasnið, Instagram-lýsing, fótur vefsíðunnar, QR-kóðinn á borðinu.",
+        "Gefðu þeim sem sækja ástæðu til að sleppa forritinu. Þeir borga þjónustugjald fyrir þjónustu sem þeir nota ekki.",
+        "Hafðu það raunverulega einfalt. Ef bein pöntun krefst fleiri smella en forritið færir sig enginn."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Fylgstu með einni tölu í mánuði: hlutfalli pantana sem komu beint. Flestir staðir sem fylgjast með færa það úr nánast núlli í 20 til 40 prósent á einu ári, og við 30% þóknun er hvert prósentustig raunverulegir peningar."
+    },
+    {
+      "type": "h2",
+      "text": "Hvenær er rétt að vera bara á markaðstorginu"
+    },
+    {
+      "type": "p",
+      "text": "Dökkt eldhús án húsnæðis, án gangandi umferðar og án þekkts vörumerkis er að kaupa uppgötvun og ekkert annað — markaðstorgið er viðskiptamódelið. Sömuleiðis: seljirðu 15 sendingarpantanir á mánuði er fyrirhöfnin við aðra rás ekki þau 40 € virði sem þú myndir spara. Vertu heiðarlegur um hvor þú ert."
+    },
+    {
+      "type": "cta",
+      "heading": "Taktu við pöntunum án þóknunarinnar",
+      "text": "Þín eigin pöntunarsíða, QR-pöntun við borðið og sendingarpantanir í einni eldhúsröð. Frá 9,90 € á mánuði, engin þóknun á pöntun. 14 dagar frítt.",
+      "buttonLabel": "Skoða netpöntun",
+      "routeKey": "/order-taking"
+    },
+    {
+      "type": "faq",
+      "heading": "Algengar spurningar",
+      "items": [
+        {
+          "q": "Hve háa þóknun taka sendingarforritin?",
+          "a": "Það fer eftir landi, samningi og því hvort vettvangurinn sendir. Samningar með sókn eingöngu eru ódýrastir; full sending með kynningu er dýrust, og uppgefin hlutföll eru oftast nefnd í tuttugu eða þrjátíu og eitthvað. Skoðaðu þinn eigin samning."
+        },
+        {
+          "q": "Hversu margar beinar pantanir þarf ég til að standa á sléttu?",
+          "a": "Áskriftin deilt með (meðalpöntun × þóknunarhlutfall). Við 9,90 € á mánuði, 25 € pöntun og 25% þóknun eru það innan við tvær pantanir á mánuði."
+        },
+        {
+          "q": "Á ég að hætta alveg á sendingarforritunum?",
+          "a": "Yfirleitt ekki. Þau færa þér fyrstu viðskiptavini sem þú nærð ekki til á annan hátt. Sigurinn felst í að færa endurteknar pantanir og sóknir yfir í þína eigin rás, ekki að hætta öllu í einu."
+        },
+        {
+          "q": "Má ég taka minna á minni eigin síðu?",
+          "a": "Stundum — nokkrir vettvangar takmarka undirboð í skilmálum sínum. Lestu samninginn, og ef verðjöfnuðar er krafist, kepptu þá frekar með ókeypis vöru eða tryggðarfríðindum."
+        },
+        {
+          "q": "Þarf ég vefsíðu til að taka við beinum pöntunum?",
+          "a": "Nei. IQ Rest gefur þér hýsta pöntunarsíðu með eigin slóð, sem þú getur tengt frá Google, Instagram eða QR-kóða á borðinu."
+        }
+      ]
+    }
+  ]
+}

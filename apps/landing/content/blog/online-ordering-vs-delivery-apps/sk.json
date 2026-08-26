@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "title": "Vlastné objednávky vs rozvozové aplikácie: čísla | IQ Rest",
+    "description": "Koľko stojí provízia platformy z objednávky, koľko objednávok vo vlastnom kanáli pokryje predplatné a prečo väčšina reštaurácií potrebuje oba kanály."
+  },
+  "card": {
+    "title": "Vlastná objednávková stránka vs rozvozové aplikácie: kde provízia naozaj skončí",
+    "excerpt": "Platformy privedú hostí, na ktorých by ste nikdy nedosiahli, a z každého si vezmú podiel. Tu je aritmetika návratnosti a realistický spôsob, ako presunúť opakované objednávky."
+  },
+  "h1": "Vlastné online objednávky proti rozvozovým platformám",
+  "intro": "Zvyčajný rámec — aplikácie sú paraziti, vlastný kanál je sloboda — je príliš jednoduchý. Platformy vám naozaj privádzajú hostí, na ktorých by ste nikdy nedosiahli, a toto objavenie má cenu. Otázka neznie, či ich používať, ale ktoré objednávky patria do ktorého kanála — a ten výpočet zvládnete za desať minút.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Čo je provízia naozaj"
+    },
+    {
+      "type": "p",
+      "text": "Sadzby platforiem sa líšia podľa krajiny, zmluvy a podľa toho, či rozváža platforma alebo vy. Najlacnejšie sú dohody len na vyzdvihnutie; najdrahší je plný rozvoz s propagovanou pozíciou a uvádzané percento sa bežne pohybuje v dvadsiatich alebo tridsiatich a niečo. Vytiahnite si vlastnú zmluvu a nájdite skutočné číslo, lebo od neho závisí všetko nižšie."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Pri objednávke za 25 €",
+        "Zostane vám",
+        "Vezme si platforma"
+      ],
+      "rows": [
+        [
+          "Pri provízii 15%",
+          "21,25 €",
+          "3,75 €"
+        ],
+        [
+          "Pri provízii 25%",
+          "18,75 €",
+          "6,25 €"
+        ],
+        [
+          "Pri provízii 30%",
+          "17,50 €",
+          "7,50 €"
+        ],
+        [
+          "Vaša vlastná stránka",
+          "25 € mínus poplatky za kartu (zhruba 0,50 €)",
+          "0 € provízie"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Proti nákladom na suroviny okolo 30% provízia 30% maržu neznižuje — berie si ju takmer celú. Množstvo podnikov zistí, že ich objednávky z platformy sú v najlepšom prípade obrat na nulu, ktorý zamestná kuchyňu."
+    },
+    {
+      "type": "h2",
+      "text": "Výpočet návratnosti"
+    },
+    {
+      "type": "p",
+      "text": "Objednávkový systém na vlastnom webe stojí pevný mesačný poplatok. Spočítajte, koľko objednávok sa musí presunúť, kým sa zaplatí:"
+    },
+    {
+      "type": "p",
+      "text": "**Potrebné objednávky = mesačné predplatné ÷ (priemerná objednávka × sadzba provízie)**"
+    },
+    {
+      "type": "p",
+      "text": "Pri 9,90 € mesačne, priemernej objednávke 25 € a provízii 25% vychádza 9,90 ÷ 6,25 = **1,6 objednávky mesačne**. Dve objednávky prijaté na vlastnej stránke pokryjú celý náklad na jej prevádzku. Všetko ďalšie je marža, ktorú ste predtým odovzdávali."
+    },
+    {
+      "type": "note",
+      "text": "Toto ľudí prekvapuje. Bod zlomu nie je 50 ani 200 objednávok — sú to jednotky, lebo provízia z jedinej objednávky zodpovedá mesiacu softvéru."
+    },
+    {
+      "type": "h2",
+      "text": "Čo dá platforma a vaša stránka nie"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Objavenie.** Ľudia prechádzajú aplikáciu bez konkrétnej reštaurácie v hlave. Vaša stránka osloví len tých, čo už vedia, že existujete.",
+        "**Rozvozovú flotilu**, ak nechcete zamestnávať kuriérov ani ich riadiť.",
+        "**Platby, vratky a podporu** vyriešené, vrátane hádky o studenú pizzu.",
+        "**Dôveru pri prvej objednávke.** Cudzí človek si objedná skôr v známej aplikácii než na webe, ktorý nikdy nevidel."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "To je reálny produkt a stojí za zaplatenie. Nestojí za to platiť ho opakovane pri tom istom stálom hosťovi, ktorý vaše jedlo už pozná a objednal by priamo, keby ste mu na to dali cestu."
+    },
+    {
+      "type": "h2",
+      "text": "Čo vám dá vlastný kanál"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Celý účet**, mínus poplatok za kartu.",
+        "**Vzťah s hosťom.** Na platforme patrí hosť jej — často ho už nemôžete znova osloviť.",
+        "**Vaše ceny.** Žiadny tlak spolufinancovať celoplatformové zľavy.",
+        "**Žiadny strop menu.** Predajte dosku na zdieľanie za 48 €, ktorá by vo výpise platformy nikdy neprežila.",
+        "**Jeden rad v kuchyni.** Objednávky z vašej stránky môžu chodiť na ten istý [kuchynský displej](route:/kitchen-display) ako všetko ostatné, nie na druhý tablet na pulte."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Stratégia, ktorá funguje: oboje, ale zámerne"
+    },
+    {
+      "type": "p",
+      "text": "Berte platformu ako platené získavanie zákazníkov a vlastnú stránku ako udržanie. Províziu platíte za zoznámenie; neplatíte ju ďalej dvadsať návštev."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Typ objednávky",
+        "Najlepší kanál",
+        "Prečo"
+      ],
+      "rows": [
+        [
+          "Nový zákazník, rozvoz",
+          "Platforma",
+          "Nikdy by ste sa k nemu nedostali"
+        ],
+        [
+          "Vracajúci sa zákazník",
+          "Vlastná stránka",
+          "Žiadna provízia za niekoho, kto vás už pozná"
+        ],
+        [
+          "Vyzdvihnutie / so sebou",
+          "Vlastná stránka",
+          "Platíte za rozvoz, ktorý nevyužívate"
+        ],
+        [
+          "Veľké skupinové objednávky",
+          "Vlastná stránka",
+          "Provízia zo 150 € bolí"
+        ],
+        [
+          "Kancelárie a catering",
+          "Vlastná stránka",
+          "Opakované, vysoká hodnota, objavenie netreba"
+        ],
+        [
+          "Konzumácia na mieste",
+          "[Objednávka cez QR](route:/order-taking)",
+          "Hosť už sedí v podniku"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Ako presunúť opakované objednávky"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Do každej rozvozovej tašky dajte kartičku s adresou priamych objednávok a jedným jasným dôvodom, prečo ju použiť. Káva zadarmo alebo malá zľava porazí hmlistú správu.",
+        "Urobte priamu cenu o kúsok lepšiu, ak to zmluva s platformou dovoľuje. Skontrolujte podmienky — niektoré podliezanie ceny zakazujú.",
+        "Obsaďte výsledok vyhľadávania. Keď niekto hľadá názov vašej reštaurácie plus „objednať\", prvá má byť vaša stránka, nie výpis platformy.",
+        "Dajte odkaz na objednávky všade, kde už ste: profil Google, bio na Instagrame, pätička webu, QR kód na stole.",
+        "Dajte ľuďom, čo si vyzdvihujú, dôvod aplikáciu obísť. Platia servisný poplatok za službu, ktorú nevyužijú.",
+        "Držte to naozaj jednoduché. Keď priama objednávka vyžaduje viac klepnutí než aplikácia, nikto sa nepresunie."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Sledujte jedno číslo mesačne: podiel objednávok, ktoré prišli priamo. Väčšina podnikov, ktoré si to strážia, ho za rok posunie z takmer nuly na 20 až 40 %, a pri provízii 30% je každý bod skutočné peniaze."
+    },
+    {
+      "type": "h2",
+      "text": "Kedy zostať len na platforme"
+    },
+    {
+      "type": "p",
+      "text": "Dark kitchen bez prevádzky, bez pouličného pohybu a bez známej značky kupuje objavenie a nič iné — platforma je celý biznis model. Rovnako: ak predáte 15 rozvozov mesačne, námaha s druhým kanálom nestojí za ušetrených 40 €. Buďte úprimní, ktorý z tých prípadov ste."
+    },
+    {
+      "type": "cta",
+      "heading": "Prijímajte objednávky bez provízie",
+      "text": "Vlastná objednávková stránka, objednávka cez QR pri stole a rozvoz v jednom kuchynskom rade. Od 9,90 € mesačne, bez provízie z objednávky. 14 dní zadarmo.",
+      "buttonLabel": "Zobraziť online objednávky",
+      "routeKey": "/order-taking"
+    },
+    {
+      "type": "faq",
+      "heading": "Časté otázky",
+      "items": [
+        {
+          "q": "Koľko si berú rozvozové aplikácie na provízii?",
+          "a": "Líši sa to podľa krajiny, zmluvy a podľa toho, či rozváža platforma. Dohody len na vyzdvihnutie sú najlacnejšie; plný rozvoz s propagáciou najdrahší a uvádzané sadzby sa bežne pohybujú v dvadsiatich alebo tridsiatich a niečo. Skontrolujte vlastnú zmluvu."
+        },
+        {
+          "q": "Koľko priamych objednávok potrebujem na nulu?",
+          "a": "Predplatné delené (priemerná objednávka × sadzba provízie). Pri 9,90 € mesačne, objednávke 25 € a provízii 25% sú to necelé dve objednávky mesačne."
+        },
+        {
+          "q": "Mám z rozvozových aplikácií odísť úplne?",
+          "a": "Väčšinou nie. Privádzajú zákazníkov na prvú objednávku, na ktorých inak nedosiahnete. Výhra je v presune opakovaných objednávok a vyzdvihnutí do vlastného kanála, nie v useknutí zo dňa na deň."
+        },
+        {
+          "q": "Môžem na vlastnom webe účtovať menej?",
+          "a": "Niekedy — niekoľko platforiem podliezanie ceny vo svojich podmienkach obmedzuje. Prečítajte si zmluvu, a ak je vyžadovaná cenová parita, súťažte radšej darčekom alebo vernostnou výhodou."
+        },
+        {
+          "q": "Potrebujem web, aby som prijímal priame objednávky?",
+          "a": "Nie. IQ Rest vám dá hostovanú objednávkovú stránku s vlastnou adresou, na ktorú môžete odkazovať z Googlu, Instagramu alebo QR kódu na stole."
+        }
+      ]
+    }
+  ]
+}

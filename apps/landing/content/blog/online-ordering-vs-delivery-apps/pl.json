@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "title": "Własne zamówienia vs aplikacje dostawcze: liczby | IQ Rest",
+    "description": "Ile kosztuje prowizja platformy od zamówienia, ile zamówień we własnym kanale pokrywa koszt i dlaczego większość restauracji powinna korzystać z obu."
+  },
+  "card": {
+    "title": "Twoja strona zamówień vs aplikacje dostawcze: gdzie naprawdę ląduje prowizja",
+    "excerpt": "Platformy przyprowadzają klientów, do których nigdy byś nie dotarł, i biorą część od każdego. Oto arytmetyka progu opłacalności i realny sposób przeniesienia zamówień powracających."
+  },
+  "h1": "Twoje własne zamówienia online kontra platformy dostawcze",
+  "intro": "Zwykłe ujęcie — aplikacje to pasożyty, własny kanał to wolność — jest zbyt proste. Platformy naprawdę przyprowadzają klientów, do których nigdy byś nie dotarł, a to odkrycie ma swoją cenę. Pytanie nie brzmi, czy z nich korzystać, tylko które zamówienia należą do którego kanału — a to wyliczysz w dziesięć minut.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Czym naprawdę jest prowizja"
+    },
+    {
+      "type": "p",
+      "text": "Stawki platform różnią się w zależności od kraju, umowy i tego, czy dostarcza platforma czy ty. Umowy tylko na odbiór są najtańsze; pełna dostawa z promowaną pozycją najdroższa, a podawany procent zwykle mieści się w przedziale dwudziestu lub trzydziestu kilku. Wyciągnij własną umowę i znajdź prawdziwą liczbę, bo wszystko poniżej od niej zależy."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Przy zamówieniu za 25 €",
+        "Zostaje ci",
+        "Platforma bierze"
+      ],
+      "rows": [
+        [
+          "Przy 15% prowizji",
+          "21,25 €",
+          "3,75 €"
+        ],
+        [
+          "Przy 25% prowizji",
+          "18,75 €",
+          "6,25 €"
+        ],
+        [
+          "Przy 30% prowizji",
+          "17,50 €",
+          "7,50 €"
+        ],
+        [
+          "Twoja własna strona",
+          "25 € minus opłaty kartowe (około 0,50 €)",
+          "0 € prowizji"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Przy food coście około 30% prowizja 30% nie zmniejsza marży — zabiera jej większość. Wiele lokali odkrywa, że ich zamówienia z platformy to w najlepszym razie obrót na zero, który zajmuje kuchnię."
+    },
+    {
+      "type": "h2",
+      "text": "Wyliczenie progu opłacalności"
+    },
+    {
+      "type": "p",
+      "text": "System zamówień na własnej stronie kosztuje stałą opłatę miesięczną. Policz, ile zamówień musi się przenieść, zanim się zwróci:"
+    },
+    {
+      "type": "p",
+      "text": "**Potrzebne zamówienia = abonament miesięczny ÷ (średnie zamówienie × stawka prowizji)**"
+    },
+    {
+      "type": "p",
+      "text": "Przy 9,90 € miesięcznie, średnim zamówieniu 25 € i 25% prowizji wychodzi 9,90 ÷ 6,25 = **1,6 zamówienia miesięcznie**. Dwa zamówienia przyjęte na własnej stronie pokrywają cały koszt jej prowadzenia. Wszystko dalej to marża, którą wcześniej oddawałeś."
+    },
+    {
+      "type": "note",
+      "text": "To ta część, która zaskakuje. Próg nie wynosi 50 ani 200 zamówień — to kilka sztuk, bo prowizja od jednego zamówienia odpowiada miesiącowi oprogramowania."
+    },
+    {
+      "type": "h2",
+      "text": "Co daje platforma, czego nie da twoja strona"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Odkrycie.** Ludzie przeglądają aplikację, nie mając na myśli konkretnej restauracji. Twoja strona dociera tylko do tych, którzy już wiedzą, że istniejesz.",
+        "**Flota dostawcza**, jeśli nie chcesz zatrudniać kurierów ani nimi zarządzać.",
+        "**Płatności, zwroty i obsługa** załatwione, łącznie z kłótnią o zimną pizzę.",
+        "**Zaufanie przy pierwszym zamówieniu.** Obcy zamówi prędzej w znanej aplikacji niż na stronie, której nigdy nie widział."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "To realny produkt i wart swojej ceny. Niewart jest płacenia za niego wielokrotnie za tego samego stałego klienta, który już zna twoje jedzenie i zamówiłby bezpośrednio, gdybyś dał mu sposób."
+    },
+    {
+      "type": "h2",
+      "text": "Co daje własny kanał"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Cały rachunek**, minus prowizja od karty.",
+        "**Relację z klientem.** Na platformie klient należy do niej — często nie możesz się z nim więcej skontaktować.",
+        "**Twoje ceny.** Żadnej presji, by finansować ogólnoplatformowe rabaty.",
+        "**Brak sufitu menu.** Sprzedaj deskę do dzielenia za 48 €, która na platformie nigdy by się nie obroniła.",
+        "**Jedną kolejkę w kuchni.** Zamówienia z twojej strony mogą trafiać na ten sam [ekran kuchenny](route:/kitchen-display) co reszta, zamiast na drugi tablet przy ladzie."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Strategia, która działa: oba kanały, świadomie"
+    },
+    {
+      "type": "p",
+      "text": "Traktuj platformę jak płatne pozyskiwanie klientów, a własną stronę jak utrzymanie. Płacisz prowizję, żeby kogoś poznać; nie płacisz jej dalej przez kolejnych dwadzieścia wizyt."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Typ zamówienia",
+        "Najlepszy kanał",
+        "Dlaczego"
+      ],
+      "rows": [
+        [
+          "Nowy klient, dostawa",
+          "Platforma",
+          "Nigdy byś do niego nie dotarł"
+        ],
+        [
+          "Klient powracający",
+          "Twoja strona",
+          "Żadnej prowizji od kogoś, kto już cię zna"
+        ],
+        [
+          "Odbiór osobisty / na wynos",
+          "Twoja strona",
+          "Płacisz za dostawę, z której nie korzystasz"
+        ],
+        [
+          "Duże zamówienia grupowe",
+          "Twoja strona",
+          "Prowizja od 150 € boli"
+        ],
+        [
+          "Biura i catering",
+          "Twoja strona",
+          "Powtarzalne, wysoka wartość, odkrycie niepotrzebne"
+        ],
+        [
+          "Konsumpcja na miejscu",
+          "[Zamawianie przez QR](route:/order-taking)",
+          "Gość już siedzi na sali"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Jak przenieść zamówienia powracające"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Do każdej torby z dostawą włóż kartę z adresem zamówień bezpośrednich i jednym jasnym powodem, żeby z niego skorzystać. Darmowa kawa albo mały rabat biją niejasny komunikat.",
+        "Zrób cenę bezpośrednią odrobinę lepszą, jeśli umowa z platformą na to pozwala. Sprawdź warunki — niektóre zabraniają zaniżania.",
+        "Zajmij wynik wyszukiwania. Kiedy ktoś wpisze nazwę twojej restauracji plus „zamów”, twoja strona ma być pierwsza, a nie wizytówka platformy.",
+        "Umieść link do zamówień wszędzie, gdzie już jesteś: profil Google, bio na Instagramie, stopka strony, kod QR na stole.",
+        "Daj klientom odbierającym powód, by ominąć aplikację. Płacą opłatę serwisową za usługę, z której nie korzystają.",
+        "Niech to będzie naprawdę proste. Jeśli zamówienie bezpośrednie wymaga więcej kliknięć niż aplikacja, nikt się nie przeniesie."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Śledź jedną liczbę miesięcznie: udział zamówień bezpośrednich. Większość lokali, które na to patrzą, podnosi go z okolic zera do 20-40% w rok, a przy 30% prowizji każdy punkt to realne pieniądze."
+    },
+    {
+      "type": "h2",
+      "text": "Kiedy zostać tylko na platformie"
+    },
+    {
+      "type": "p",
+      "text": "Dark kitchen bez lokalu, bez ruchu z ulicy i bez rozpoznawalnej marki kupuje wyłącznie odkrycie — platforma jest modelem biznesowym. Podobnie: jeśli sprzedajesz 15 dostaw miesięcznie, wysiłek prowadzenia drugiego kanału nie jest wart zaoszczędzonych 40 €. Bądź szczery, którym z nich jesteś."
+    },
+    {
+      "type": "cta",
+      "heading": "Przyjmuj zamówienia bez prowizji",
+      "text": "Własna strona zamówień, zamawianie przez QR przy stole i dostawy w jednej kolejce kuchennej. Od 9,90 € miesięcznie, bez prowizji od zamówienia. 14 dni za darmo.",
+      "buttonLabel": "Zobacz zamówienia online",
+      "routeKey": "/order-taking"
+    },
+    {
+      "type": "faq",
+      "heading": "Najczęstsze pytania",
+      "items": [
+        {
+          "q": "Jaką prowizję biorą aplikacje dostawcze?",
+          "a": "Zależy od kraju, umowy i tego, czy dostarcza platforma. Umowy tylko na odbiór są najtańsze; pełna dostawa z promocją najdroższa, a podawane stawki zwykle mieszczą się w przedziale dwudziestu lub trzydziestu kilku procent. Sprawdź własną umowę."
+        },
+        {
+          "q": "Ile zamówień bezpośrednich potrzebuję, żeby wyjść na zero?",
+          "a": "Abonament podzielony przez (średnie zamówienie × stawka prowizji). Przy 9,90 € miesięcznie, zamówieniu 25 € i 25% prowizji to mniej niż dwa zamówienia miesięcznie."
+        },
+        {
+          "q": "Czy powinienem całkiem zrezygnować z aplikacji dostawczych?",
+          "a": "Zwykle nie. Przyprowadzają klientów pierwszy raz, do których inaczej nie dotrzesz. Wygraną jest przeniesienie zamówień powracających i odbiorów do własnego kanału, a nie odcięcie się z dnia na dzień."
+        },
+        {
+          "q": "Czy mogę brać mniej na własnej stronie?",
+          "a": "Czasem — kilka platform ogranicza w warunkach sprzedaż taniej poza nimi. Przeczytaj umowę, a jeśli wymagana jest parytetowa cena, konkuruj darmowym dodatkiem albo korzyścią lojalnościową."
+        },
+        {
+          "q": "Czy potrzebuję strony internetowej, żeby przyjmować zamówienia bezpośrednie?",
+          "a": "Nie. IQ Rest daje hostowaną stronę zamówień z własnym adresem, do której podlinkujesz z Google, Instagrama albo kodu QR na stole."
+        }
+      ]
+    }
+  ]
+}

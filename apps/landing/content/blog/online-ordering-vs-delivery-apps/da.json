@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "title": "Egen bestillingsside vs leveringsapps: de reelle tal | IQ Rest",
+    "description": "Hvad markedspladsens kommission koster per ordre, hvor mange ordrer du skal have i egen kanal for at gå i nul, og hvorfor de fleste restauranter bør køre begge."
+  },
+  "card": {
+    "title": "Din egen bestillingsside vs leveringsapps: hvor kommissionen faktisk lander",
+    "excerpt": "Markedspladser bringer kunder, du aldrig ville nå, og tager en bid af hver eneste. Her er break even-regnestykket og en realistisk måde at flytte gentagne ordrer på."
+  },
+  "h1": "Din egen onlinebestilling over for leveringsmarkedspladserne",
+  "intro": "Den sædvanlige fortælling — apps er parasitter, egen kanal er frihed — er for enkel. Markedspladser bringer dig faktisk kunder, du aldrig ville have nået, og den synlighed har en pris. Spørgsmålet er ikke, om du skal bruge dem, men hvilke ordrer der hører til i hvilken kanal, og det regnestykke tager ti minutter.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Hvad kommissionen faktisk er"
+    },
+    {
+      "type": "p",
+      "text": "Satserne varierer efter land, kontrakt og om platformen leverer eller du gør. Afhentningsaftaler er billigst; fuld levering med fremhævet placering er dyrest, og den nævnte procent ligger typisk i tyverne eller trediverne. Find din egen kontrakt frem og find det rigtige tal, for alt herunder afhænger af det."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "På en ordre på 25 €",
+        "Du beholder",
+        "Platformen tager"
+      ],
+      "rows": [
+        [
+          "Ved 15% kommission",
+          "21,25 €",
+          "3,75 €"
+        ],
+        [
+          "Ved 25% kommission",
+          "18,75 €",
+          "6,25 €"
+        ],
+        [
+          "Ved 30% kommission",
+          "17,50 €",
+          "7,50 €"
+        ],
+        [
+          "Din egen side",
+          "25 € minus kortgebyrer (cirka 0,50 €)",
+          "0 € kommission"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Mod en råvarepris omkring 30% reducerer 30% kommission ikke din margin — den fjerner det meste af den. Mange steder opdager, at deres markedspladsordrer i bedste fald er nulvolumen, der holder køkkenet beskæftiget."
+    },
+    {
+      "type": "h2",
+      "text": "Break even-beregningen"
+    },
+    {
+      "type": "p",
+      "text": "Et bestillingssystem på din egen side koster et fast månedsbeløb. Regn ud, hvor mange ordrer der skal flyttes, før det betaler sig selv:"
+    },
+    {
+      "type": "p",
+      "text": "**Nødvendige ordrer = månedsabonnement ÷ (gennemsnitsordre × kommissionssats)**"
+    },
+    {
+      "type": "p",
+      "text": "Ved 9,90 € om måneden, en gennemsnitsordre på 25 € og 25% kommission bliver det 9,90 ÷ 6,25 = **1,6 ordre om måneden**. To ordrer taget på din egen side dækker hele omkostningen. Alt derefter er margin, du før forærede væk."
+    },
+    {
+      "type": "note",
+      "text": "Det er den del, folk bliver overraskede over. Break even ligger ikke ved 50 eller 200 ordrer — det er få stykker, fordi kommissionen på én ordre svarer til en måneds software."
+    },
+    {
+      "type": "h2",
+      "text": "Hvad markedspladsen giver, som din side ikke gør"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Opdagelse.** Folk browser i appen uden en bestemt restaurant i tankerne. Din egen side når kun dem, der allerede ved, du findes.",
+        "**En budflåde**, hvis du ikke vil ansætte eller styre chauffører.",
+        "**Betaling, refusioner og support** klaret, inklusive diskussionen om en kold pizza.",
+        "**Tillid ved første ordre.** En fremmed bestiller hellere i en kendt app end på en side, vedkommende aldrig har set."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Det er et rigtigt produkt, og det er pengene værd. Det, der ikke er det, er at betale for det igen og igen på den samme stamkunde, som allerede kender din mad og ville bestille direkte, hvis du gav ham muligheden."
+    },
+    {
+      "type": "h2",
+      "text": "Hvad din egen kanal giver dig"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Hele regningen**, minus kortgebyret.",
+        "**Kunderelationen.** På en markedsplads tilhører kunden platformen — ofte kan du aldrig kontakte vedkommende igen.",
+        "**Dine priser.** Intet pres for at være med til at finansiere platformsdækkende rabatter.",
+        "**Intet menuloft.** Sælg delefadet til 48 €, som aldrig ville overleve en markedspladsvisning.",
+        "**Én køkkenkø.** Ordrer fra din side kan lande på den samme [køkkenskærm](route:/kitchen-display) som alt andet i stedet for på en anden tablet ved disken."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Strategien der virker: begge dele, bevidst"
+    },
+    {
+      "type": "p",
+      "text": "Behandl markedspladsen som betalt kundetilgang og din egen side som fastholdelse. Du betaler kommission for at møde nogen; du bliver ikke ved med at betale den de næste tyve besøg."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Ordretype",
+        "Bedste kanal",
+        "Hvorfor"
+      ],
+      "rows": [
+        [
+          "Førstegangskunde, levering",
+          "Markedsplads",
+          "Du ville aldrig have nået vedkommende"
+        ],
+        [
+          "Fast kunde",
+          "Din egen side",
+          "Ingen kommission på en, der allerede kender dig"
+        ],
+        [
+          "Afhentning / take away",
+          "Din egen side",
+          "Du betaler for en levering, du ikke bruger"
+        ],
+        [
+          "Store gruppeordrer",
+          "Din egen side",
+          "Kommissionen på 150 € gør ondt"
+        ],
+        [
+          "Kontor og catering",
+          "Din egen side",
+          "Tilbagevendende, høj værdi, ingen opdagelse nødvendig"
+        ],
+        [
+          "Spisning i huset",
+          "[QR-bestilling](route:/order-taking)",
+          "Gæsten sidder allerede i lokalet"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Sådan flytter du gentagne ordrer"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Læg et kort i hver leveringspose med din direkte bestillingsadresse og én klar grund til at bruge den. En gratis kaffe eller en lille rabat slår en vag besked.",
+        "Gør den direkte pris en anelse bedre, hvor din kontrakt tillader det. Tjek betingelserne — nogle forbyder underbud.",
+        "Tag søgeresultatet. Når nogen søger på dit restaurantnavn plus \"bestil\", skal din side ligge først, ikke markedspladsens visning.",
+        "Læg bestillingslinket alle de steder, du allerede er: Google-virksomhedsprofil, Instagram-bio, footeren på dit site, QR-koden på bordet.",
+        "Giv afhentningskunder en grund til at springe appen over. De betaler et servicegebyr for en service, de ikke bruger.",
+        "Hold det oprigtigt enkelt. Hvis direkte bestilling kræver flere tryk end appen, flytter ingen sig."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Følg ét tal om måneden: andelen af ordrer, der kom direkte. De fleste steder, der er opmærksomme, flytter den fra næsten nul til mellem 20% og 40% på et år, og ved 30% kommission er hvert point rigtige penge."
+    },
+    {
+      "type": "h2",
+      "text": "Hvornår du bliver på markedspladsen alene"
+    },
+    {
+      "type": "p",
+      "text": "Et dark kitchen uden lokale, uden gadetrafik og uden kendt brand køber opdagelse og intet andet — markedspladsen er forretningsmodellen. Ligeså: sælger du 15 leveringsordrer om måneden, er besværet med en anden kanal ikke de 40 € værd, du ville spare. Vær ærlig om, hvilken af delene du er."
+    },
+    {
+      "type": "cta",
+      "heading": "Tag imod ordrer uden kommissionen",
+      "text": "Din egen bestillingsside, QR-bestilling ved bordet og leveringsordrer i én køkkenkø. Fra 9,90 € om måneden, ingen kommission per ordre. 14 dage gratis.",
+      "buttonLabel": "Se onlinebestilling",
+      "routeKey": "/order-taking"
+    },
+    {
+      "type": "faq",
+      "heading": "Ofte stillede spørgsmål",
+      "items": [
+        {
+          "q": "Hvor meget kommission tager leveringsapps?",
+          "a": "Det afhænger af land, kontrakt og om platformen leverer. Afhentningsaftaler er billigst; fuld levering med promovering er dyrest, og de nævnte satser ligger typisk i tyverne eller trediverne. Tjek din egen kontrakt."
+        },
+        {
+          "q": "Hvor mange direkte ordrer skal jeg have for at gå i nul?",
+          "a": "Abonnementet divideret med (gennemsnitsordre × kommissionssats). Ved 9,90 € om måneden, en ordre på 25 € og 25% kommission er det under to ordrer om måneden."
+        },
+        {
+          "q": "Skal jeg forlade leveringsapps helt?",
+          "a": "Som regel ikke. De bringer førstegangskunder, du ikke kan nå på anden vis. Gevinsten ligger i at flytte gentagne ordrer og afhentning til din egen kanal, ikke i at stoppe brat."
+        },
+        {
+          "q": "Må jeg tage mindre på min egen side?",
+          "a": "Nogle gange — flere platforme begrænser underbud i deres betingelser. Læs kontrakten, og hvis prisparitet kræves, så konkurrér med en gratis vare eller en loyalitetsfordel i stedet."
+        },
+        {
+          "q": "Skal jeg have en hjemmeside for at tage direkte ordrer?",
+          "a": "Nej. IQ Rest giver dig en hostet bestillingsside med sin egen adresse, som du kan linke til fra Google, Instagram eller en QR-kode på bordet."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "title": "Eigen bestelpagina vs bezorgapps: de echte cijfers | IQ Rest",
+    "description": "Wat marktplaatscommissie per bestelling kost, hoeveel bestellingen je in je eigen kanaal nodig hebt om quitte te draaien, en waarom de meeste restaurants allebei moeten doen."
+  },
+  "card": {
+    "title": "Je eigen bestelpagina vs bezorgapps: waar de commissie echt belandt",
+    "excerpt": "Marktplaatsen brengen klanten die je nooit zou bereiken en nemen van elke klant een deel. Hier is de break-evenrekensom en een realistische manier om herhaalbestellingen te verplaatsen."
+  },
+  "h1": "Je eigen online bestellen tegenover bezorgmarktplaatsen",
+  "intro": "Het gebruikelijke verhaal — apps zijn parasieten, je eigen kanaal is vrijheid — is te simpel. Marktplaatsen brengen je echt klanten die je nooit had bereikt, en die vindbaarheid heeft een prijs. De vraag is niet of je ze gebruikt, maar welke bestellingen bij welk kanaal horen, en die rekensom maak je in tien minuten.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Wat de commissie werkelijk is"
+    },
+    {
+      "type": "p",
+      "text": "Tarieven verschillen per land, per contract en of het platform bezorgt of jij. Afhaalregelingen zijn het goedkoopst; volledige bezorging met uitgelichte plaatsing is het duurst, en het genoemde percentage ligt doorgaans in de twintig of dertig. Haal je eigen contract erbij en zoek het echte getal, want alles hieronder hangt daarvan af."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Bij een bestelling van € 25",
+        "Jij houdt",
+        "Platform neemt"
+      ],
+      "rows": [
+        [
+          "Bij 15% commissie",
+          "€ 21,25",
+          "€ 3,75"
+        ],
+        [
+          "Bij 25% commissie",
+          "€ 18,75",
+          "€ 6,25"
+        ],
+        [
+          "Bij 30% commissie",
+          "€ 17,50",
+          "€ 7,50"
+        ],
+        [
+          "Je eigen pagina",
+          "€ 25 min kaartkosten (ruwweg € 0,50)",
+          "€ 0 commissie"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Tegenover een inkoopkost van rond de 30% verlaagt 30% commissie je marge niet — die haalt hem er bijna helemaal uit. Veel zaken ontdekken dat hun marktplaatsbestellingen op zijn best kostendekkend volume zijn dat de keuken bezig houdt."
+    },
+    {
+      "type": "h2",
+      "text": "De break-evenberekening"
+    },
+    {
+      "type": "p",
+      "text": "Een bestelsysteem op je eigen site kost een vast maandbedrag. Reken uit hoeveel bestellingen moeten overstappen voor het zichzelf terugverdient:"
+    },
+    {
+      "type": "p",
+      "text": "**Benodigde bestellingen = maandabonnement ÷ (gemiddelde bestelling × commissiepercentage)**"
+    },
+    {
+      "type": "p",
+      "text": "Bij € 9,90 per maand, een gemiddelde bestelling van € 25 en 25% commissie is dat 9,90 ÷ 6,25 = **1,6 bestelling per maand**. Twee bestellingen via je eigen pagina dekken de volledige kosten. Alles daarna is marge die je eerder weggaf."
+    },
+    {
+      "type": "note",
+      "text": "Dit is het deel dat mensen verrast. Break-even ligt niet bij 50 of 200 bestellingen, maar bij een paar, omdat de commissie op één bestelling vergelijkbaar is met een maand software."
+    },
+    {
+      "type": "h2",
+      "text": "Wat de marktplaats geeft en jouw pagina niet"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Vindbaarheid.** Mensen scrollen door de app zonder restaurant in gedachten. Jouw pagina bereikt alleen wie al weet dat je bestaat.",
+        "**Een bezorgvloot**, als je geen koeriers wilt aannemen of aansturen.",
+        "**Betaling, terugbetalingen en support** geregeld, inclusief de discussie over een koude pizza.",
+        "**Vertrouwen bij de eerste bestelling.** Een onbekende bestelt eerder in een vertrouwde app dan op een site die hij nooit zag."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Dat is een echt product en het is zijn geld waard. Wat het niet waard is, is het telkens opnieuw betalen voor dezelfde vaste klant, die je eten al kent en direct zou bestellen als je hem de weg wees."
+    },
+    {
+      "type": "h2",
+      "text": "Wat je eigen kanaal je geeft"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**De hele bon**, min de kaartkosten.",
+        "**De klantrelatie.** Op een marktplaats is de klant van het platform — vaak kun je hem nooit meer benaderen.",
+        "**Jouw prijzen.** Geen druk om platformbrede kortingen mee te financieren.",
+        "**Geen menuplafond.** Verkoop die deelplank van € 48 die het op een marktplaatspagina nooit zou redden.",
+        "**Eén keukenrij.** Bestellingen van je pagina kunnen op hetzelfde [keukenscherm](route:/kitchen-display) binnenkomen als de rest, in plaats van op een tweede tablet op de toonbank."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "De strategie die werkt: allebei, bewust"
+    },
+    {
+      "type": "p",
+      "text": "Behandel de marktplaats als betaalde klantwerving en je eigen pagina als retentie. Je betaalt commissie om iemand te ontmoeten; je blijft die niet betalen voor de volgende twintig bezoeken."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Type bestelling",
+        "Beste kanaal",
+        "Waarom"
+      ],
+      "rows": [
+        [
+          "Nieuwe klant, bezorging",
+          "Marktplaats",
+          "Je had hem nooit bereikt"
+        ],
+        [
+          "Terugkerende klant",
+          "Je eigen pagina",
+          "Geen commissie op iemand die je al kent"
+        ],
+        [
+          "Afhalen / meenemen",
+          "Je eigen pagina",
+          "Je betaalt voor bezorging die je niet gebruikt"
+        ],
+        [
+          "Grote groepsbestellingen",
+          "Je eigen pagina",
+          "De commissie op € 150 doet pijn"
+        ],
+        [
+          "Kantoor en catering",
+          "Je eigen pagina",
+          "Terugkerend, hoge waarde, geen vindbaarheid nodig"
+        ],
+        [
+          "Ter plekke eten",
+          "[QR-bestellen](route:/order-taking)",
+          "De gast zit al binnen"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Hoe je herhaalbestellingen verplaatst"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Stop in elke bezorgtas een kaartje met je directe besteladres en één duidelijke reden om het te gebruiken. Een gratis koffie of kleine korting wint het van een vage boodschap.",
+        "Maak de directe prijs iets beter, waar je marktplaatscontract dat toelaat. Check de voorwaarden — sommige verbieden onderbieden.",
+        "Claim het zoekresultaat. Zoekt iemand je restaurantnaam plus \"bestellen\", dan hoort jouw pagina bovenaan te staan, niet de marktplaatsvermelding.",
+        "Zet de bestellink overal waar je al bent: Google-bedrijfsprofiel, Instagram-bio, footer van je site, de QR-code op tafel.",
+        "Geef afhaalklanten een reden om de app over te slaan. Ze betalen servicekosten voor een dienst die ze niet gebruiken.",
+        "Houd het echt simpel. Als direct bestellen meer tikken kost dan de app, verschuift er niemand."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Volg maandelijks één getal: het aandeel bestellingen dat direct binnenkwam. De meeste zaken die opletten brengen dat binnen een jaar van bijna nul naar 20 tot 40 procent, en bij 30% commissie is elk punt echt geld."
+    },
+    {
+      "type": "h2",
+      "text": "Wanneer je alleen op de marktplaats blijft"
+    },
+    {
+      "type": "p",
+      "text": "Een dark kitchen zonder pand, zonder loop en zonder merkbekendheid koopt vindbaarheid en verder niets — de marktplaats ís het verdienmodel. Net zo: verkoop je 15 bezorgbestellingen per maand, dan is de moeite van een tweede kanaal die € 40 besparing niet waard. Wees eerlijk over welke van de twee je bent."
+    },
+    {
+      "type": "cta",
+      "heading": "Bestellingen aannemen zonder commissie",
+      "text": "Je eigen bestelpagina, QR-bestellen aan tafel en bezorgbestellingen in één keukenrij. Vanaf € 9,90 per maand, geen commissie per bestelling. 14 dagen gratis.",
+      "buttonLabel": "Bekijk online bestellen",
+      "routeKey": "/order-taking"
+    },
+    {
+      "type": "faq",
+      "heading": "Veelgestelde vragen",
+      "items": [
+        {
+          "q": "Hoeveel commissie rekenen bezorgapps?",
+          "a": "Dat verschilt per land, per contract en of het platform bezorgt. Afhaalregelingen zijn het goedkoopst; volledige bezorging met promotie is het duurst, en genoemde tarieven liggen doorgaans in de twintig of dertig. Kijk in je eigen contract."
+        },
+        {
+          "q": "Hoeveel directe bestellingen heb ik nodig om quitte te draaien?",
+          "a": "Abonnement gedeeld door (gemiddelde bestelling × commissiepercentage). Bij € 9,90 per maand, een bestelling van € 25 en 25% commissie is dat minder dan twee bestellingen per maand."
+        },
+        {
+          "q": "Moet ik helemaal stoppen met de bezorgapps?",
+          "a": "Meestal niet. Ze brengen eerste klanten die je anders niet bereikt. De winst zit in het verplaatsen van herhaal- en afhaalbestellingen naar je eigen kanaal, niet in abrupt stoppen."
+        },
+        {
+          "q": "Mag ik op mijn eigen site minder rekenen?",
+          "a": "Soms — meerdere platforms beperken onderbieden in hun voorwaarden. Lees het contract, en als prijspariteit verplicht is, concurreer dan met een gratis item of een loyaliteitsvoordeel."
+        },
+        {
+          "q": "Heb ik een website nodig voor directe bestellingen?",
+          "a": "Nee. IQ Rest geeft je een gehoste bestelpagina met een eigen adres, die je kunt linken vanaf Google, Instagram of een QR-code op tafel."
+        }
+      ]
+    }
+  ]
+}

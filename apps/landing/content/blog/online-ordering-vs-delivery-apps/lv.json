@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "title": "Savi pasūtījumi pret piegādes lietotnēm: reālie skaitļi | IQ Rest",
+    "description": "Cik maksā platformas komisija par pasūtījumu, cik pasūtījumu savā kanālā sedz abonementu un kāpēc lielākajai daļai restorānu vajag abus kanālus."
+  },
+  "card": {
+    "title": "Jūsu pasūtījumu lapa pret piegādes lietotnēm: kur komisija patiesībā nonāk",
+    "excerpt": "Platformas atved viesus, līdz kuriem jūs nekad nenokļūtu, un no katra paņem daļu. Lūk, atmaksāšanās punkta aritmētika un reāls veids, kā pārcelt atkārtotos pasūtījumus."
+  },
+  "h1": "Jūsu pašu tiešsaistes pasūtījumi pret piegādes platformām",
+  "intro": "Ierastais ietvars — lietotnes ir parazīti, savs kanāls ir brīvība — ir pārāk vienkāršs. Platformas patiešām atved viesus, līdz kuriem jūs nekad nenokļūtu, un šai atrašanai ir cena. Jautājums nav, vai tās izmantot, bet kuri pasūtījumi pieder kuram kanālam, un šo aprēķinu izdarīsiet desmit minūtēs.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Kas komisija patiesībā ir"
+    },
+    {
+      "type": "p",
+      "text": "Platformu likmes atšķiras pēc valsts, līguma un pēc tā, vai piegādā platforma vai jūs. Tikai izņemšanas vienošanās ir lētākās; pilna piegāde ar reklamētu pozīciju ir dārgākā, un minētais procents parasti tiek nosaukts divdesmit vai trīsdesmit ar kaut ko robežās. Izvelciet savu līgumu un atrodiet īsto skaitli, jo viss zemāk redzamais no tā atkarīgs."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "25 € pasūtījumā",
+        "Jums paliek",
+        "Platforma paņem"
+      ],
+      "rows": [
+        [
+          "Ar 15% komisiju",
+          "21,25 €",
+          "3,75 €"
+        ],
+        [
+          "Ar 25% komisiju",
+          "18,75 €",
+          "6,25 €"
+        ],
+        [
+          "Ar 30% komisiju",
+          "17,50 €",
+          "7,50 €"
+        ],
+        [
+          "Jūsu pašu lapa",
+          "25 € mīnus kartes maksas (aptuveni 0,50 €)",
+          "0 € komisijas"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Pret produktu izmaksām ap 30% komisija 30% apmērā nesamazina jūsu maržu — tā paņem gandrīz visu. Daudzas vietas atklāj, ka to platformas pasūtījumi labākajā gadījumā ir apgrozījums uz nulli, kas nodarbina virtuvi."
+    },
+    {
+      "type": "h2",
+      "text": "Atmaksāšanās aprēķins"
+    },
+    {
+      "type": "p",
+      "text": "Pasūtījumu sistēma savā mājaslapā maksā fiksētu ikmēneša maksu. Aprēķiniet, cik pasūtījumiem jāpārceļas, pirms tā sevi atpelna:"
+    },
+    {
+      "type": "p",
+      "text": "**Nepieciešamie pasūtījumi = ikmēneša abonements ÷ (vidējais pasūtījums × komisijas likme)**"
+    },
+    {
+      "type": "p",
+      "text": "Pie 9,90 € mēnesī, vidējā pasūtījuma 25 € un 25% komisijas iznāk 9,90 ÷ 6,25 = **1,6 pasūtījumi mēnesī**. Divi savā lapā pieņemti pasūtījumi sedz visas tās uzturēšanas izmaksas. Viss pēc tam ir marža, ko iepriekš atdevāt."
+    },
+    {
+      "type": "note",
+      "text": "Tieši šī daļa cilvēkus pārsteidz. Atmaksāšanās punkts nav 50 vai 200 pasūtījumu — tie ir daži gabali, jo viena pasūtījuma komisija atbilst mēnesim programmatūras."
+    },
+    {
+      "type": "h2",
+      "text": "Ko platforma dod, ko jūsu lapa ne"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Atrašanu.** Cilvēki pārlūko lietotni bez konkrēta restorāna prātā. Jūsu lapa sasniedz tikai tos, kuri jau zina, ka jūs esat.",
+        "**Kurjeru floti**, ja negribat algot un vadīt kurjerus.",
+        "**Maksājumus, atmaksas un atbalstu** atrisinātus, ieskaitot strīdu par auksto picu.",
+        "**Uzticēšanos pirmajā pasūtījumā.** Svešinieks drīzāk pasūtīs no pazīstamas lietotnes nekā no lapas, ko nekad nav redzējis."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Tas ir reāls produkts, un par to ir vērts maksāt. Nav vērts par to maksāt atkal un atkal par to pašu pastāvīgo viesi, kurš jūsu ēdienu jau pazīst un pasūtītu tieši, ja dotu viņam veidu."
+    },
+    {
+      "type": "h2",
+      "text": "Ko dod savs kanāls"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Visu rēķinu**, mīnus kartes maksa.",
+        "**Attiecības ar viesi.** Platformā viesis pieder tai — bieži jūs vairs nevarat ar viņu sazināties.",
+        "**Savas cenas.** Nekāda spiediena finansēt visas platformas atlaides.",
+        "**Nekādu ēdienkartes griestu.** Pārdodiet 48 € šķīvi dalīšanai, kas platformas sarakstā nekad neizdzīvotu.",
+        "**Vienu rindu virtuvē.** Pasūtījumi no jūsu lapas var nonākt tajā pašā [virtuves ekrānā](route:/kitchen-display) kā viss pārējais, nevis otrā planšetē uz letes."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Stratēģija, kas strādā: abi, bet apzināti"
+    },
+    {
+      "type": "p",
+      "text": "Uztveriet platformu kā maksas klientu piesaisti, bet savu lapu kā noturēšanu. Komisiju maksājat, lai ar kādu iepazītos; jūs neturpināt to maksāt nākamos divdesmit apmeklējumus."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Pasūtījuma veids",
+        "Labākais kanāls",
+        "Kāpēc"
+      ],
+      "rows": [
+        [
+          "Jauns klients, piegāde",
+          "Platforma",
+          "Jūs nekad nebūtu līdz viņam nokļuvuši"
+        ],
+        [
+          "Pastāvīgais klients",
+          "Jūsu lapa",
+          "Nekādas komisijas par to, kurš jūs jau pazīst"
+        ],
+        [
+          "Izņemšana / līdzi",
+          "Jūsu lapa",
+          "Jūs maksājat par piegādi, ko neizmantojat"
+        ],
+        [
+          "Lieli grupu pasūtījumi",
+          "Jūsu lapa",
+          "Komisija no 150 € sāp"
+        ],
+        [
+          "Biroji un ēdināšana",
+          "Jūsu lapa",
+          "Atkārtoti, augsta vērtība, atrašana nav vajadzīga"
+        ],
+        [
+          "Ēšana uz vietas",
+          "[Pasūtīšana ar QR](route:/order-taking)",
+          "Viesis jau ir zālē"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kā pārcelt atkārtotos pasūtījumus"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Ielieciet katrā piegādes maisiņā kartīti ar tiešo pasūtījumu adresi un vienu skaidru iemeslu to izmantot. Bezmaksas kafija vai neliela atlaide pārspēj miglainu vēstījumu.",
+        "Padariet tiešo cenu mazliet labāku tur, kur līgums ar platformu to atļauj. Pārbaudiet noteikumus — daži aizliedz zemāku cenu.",
+        "Paņemiet meklēšanas rezultātu. Kad kāds meklē jūsu restorāna nosaukumu plus «pasūtīt», pirmajai jābūt jūsu lapai, nevis platformas ierakstam.",
+        "Ielieciet pasūtījumu saiti visur, kur jau esat: Google uzņēmuma profils, Instagram bio, mājaslapas kājene, QR kods uz galda.",
+        "Dodiet izņemšanas klientiem iemeslu apiet lietotni. Viņi maksā servisa maksu par pakalpojumu, ko neizmanto.",
+        "Turiet to patiešām vienkāršu. Ja tiešais pasūtījums prasa vairāk pieskārienu nekā lietotne, neviens nepārcelsies."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Sekojiet vienam skaitlim mēnesī: tiešo pasūtījumu īpatsvaram. Vairums uzmanīgo vietu gada laikā to paceļ no gandrīz nulles līdz 20-40%, un pie 30% komisijas katrs punkts ir īsta nauda."
+    },
+    {
+      "type": "h2",
+      "text": "Kad palikt tikai platformā"
+    },
+    {
+      "type": "p",
+      "text": "Tumšā virtuve bez telpām, bez ielas plūsmas un bez atpazīstama zīmola pērk atrašanu un neko citu — platforma ir biznesa modelis. Tāpat: ja pārdodat 15 piegādes mēnesī, otrā kanāla pūles nav vērtas ietaupītajiem 40 €. Esiet godīgi, kurš no abiem esat."
+    },
+    {
+      "type": "cta",
+      "heading": "Pieņemiet pasūtījumus bez komisijas",
+      "text": "Sava pasūtījumu lapa, pasūtīšana ar QR pie galda un piegādes vienā virtuves rindā. No 9,90 € mēnesī, bez komisijas par pasūtījumu. 14 dienas bez maksas.",
+      "buttonLabel": "Skatīt tiešsaistes pasūtījumus",
+      "routeKey": "/order-taking"
+    },
+    {
+      "type": "faq",
+      "heading": "Biežāk uzdotie jautājumi",
+      "items": [
+        {
+          "q": "Cik lielu komisiju ņem piegādes lietotnes?",
+          "a": "Tas atkarīgs no valsts, līguma un no tā, vai piegādā platforma. Tikai izņemšanas vienošanās ir lētākās; pilna piegāde ar reklāmu ir dārgākā, un minētās likmes parasti tiek nosauktas divdesmit vai trīsdesmit ar kaut ko procentu robežās. Pārbaudiet savu līgumu."
+        },
+        {
+          "q": "Cik tiešo pasūtījumu vajag, lai izietu uz nulli?",
+          "a": "Abonements dalīts ar (vidējais pasūtījums × komisijas likme). Pie 9,90 € mēnesī, 25 € pasūtījuma un 25% komisijas tas ir mazāk nekā divi pasūtījumi mēnesī."
+        },
+        {
+          "q": "Vai man pilnībā pamest piegādes lietotnes?",
+          "a": "Parasti nē. Tās atved klientus pirmajam pasūtījumam, līdz kuriem citādi netiktu. Ieguvums ir pārcelt atkārtotos un izņemšanas pasūtījumus uz savu kanālu, nevis nogriezt visu uzreiz."
+        },
+        {
+          "q": "Vai drīkstu savā lapā prasīt mazāk?",
+          "a": "Reizēm — vairākas platformas noteikumos ierobežo zemākas cenas citur. Izlasiet līgumu, un ja tiek prasīta cenu paritāte, konkurējiet labāk ar bezmaksas preci vai lojalitātes bonusu."
+        },
+        {
+          "q": "Vai man vajag mājaslapu, lai pieņemtu tiešos pasūtījumus?",
+          "a": "Nē. IQ Rest dod jums gatavu pasūtījumu lapu ar savu adresi, uz kuru varat vest no Google, Instagram vai QR koda uz galda."
+        }
+      ]
+    }
+  ]
+}

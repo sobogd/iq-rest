@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "title": "Lastno naročanje vs aplikacije za dostavo: številke | IQ Rest",
+    "description": "Koliko stane provizija platforme na naročilo, koliko naročil v lastnem kanalu pokrije naročnino in zakaj večina restavracij potrebuje oba kanala."
+  },
+  "card": {
+    "title": "Vaša stran za naročila vs aplikacije za dostavo: kje provizija dejansko pristane",
+    "excerpt": "Platforme pripeljejo goste, do katerih ne bi nikoli prišli, in vzamejo delež od vsakega. Tu je računica praga donosnosti in realen način, kako preseliti ponovljena naročila."
+  },
+  "h1": "Vaše lastno spletno naročanje proti platformam za dostavo",
+  "intro": "Običajni okvir — aplikacije so zajedavci, lastni kanal je svoboda — je preveč preprost. Platforme vam res pripeljejo goste, do katerih ne bi nikoli prišli, in ta odkritost ima ceno. Vprašanje ni, ali jih uporabljati, ampak katera naročila spadajo v kateri kanal, in ta izračun naredite v desetih minutah.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Kaj provizija v resnici je"
+    },
+    {
+      "type": "p",
+      "text": "Stopnje platform se razlikujejo po državi, pogodbi in po tem, ali dostavlja platforma ali vi. Dogovori samo za prevzem so najcenejši; polna dostava s promoviranim mestom je najdražja, navedeni odstotek pa se običajno omenja v dvajsetih ali tridesetih in nekaj. Vzemite svojo pogodbo in poiščite pravo številko, kajti vse spodnje je odvisno od nje."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Pri naročilu za 25 €",
+        "Vam ostane",
+        "Platforma vzame"
+      ],
+      "rows": [
+        [
+          "Pri 15% proviziji",
+          "21,25 €",
+          "3,75 €"
+        ],
+        [
+          "Pri 25% proviziji",
+          "18,75 €",
+          "6,25 €"
+        ],
+        [
+          "Pri 30% proviziji",
+          "17,50 €",
+          "7,50 €"
+        ],
+        [
+          "Vaša lastna stran",
+          "25 € minus stroški kartice (približno 0,50 €)",
+          "0 € provizije"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Ob stroških živil okoli 30% provizija 30% marže ne zniža — vzame skoraj vso. Marsikateri lokal ugotovi, da so njegova naročila s platforme v najboljšem primeru promet na nič, ki zaposluje kuhinjo."
+    },
+    {
+      "type": "h2",
+      "text": "Izračun praga donosnosti"
+    },
+    {
+      "type": "p",
+      "text": "Sistem naročanja na lastni strani stane fiksno mesečno naročnino. Izračunajte, koliko naročil se mora preseliti, preden se povrne:"
+    },
+    {
+      "type": "p",
+      "text": "**Potrebna naročila = mesečna naročnina ÷ (povprečno naročilo × stopnja provizije)**"
+    },
+    {
+      "type": "p",
+      "text": "Pri 9,90 € na mesec, povprečnem naročilu 25 € in 25% proviziji je to 9,90 ÷ 6,25 = **1,6 naročila na mesec**. Dve naročili, sprejeti na vaši strani, pokrijeta celoten strošek njenega delovanja. Vse naprej je marža, ki ste jo prej oddajali."
+    },
+    {
+      "type": "note",
+      "text": "To je del, ki ljudi preseneti. Prag ni pri 50 ali 200 naročilih — gre za nekaj kosov, ker je provizija enega samega naročila primerljiva z mesecem programske opreme."
+    },
+    {
+      "type": "h2",
+      "text": "Kaj vam da platforma, česar vaša stran ne"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Odkrivanje.** Ljudje brskajo po aplikaciji, ne da bi imeli v mislih določeno restavracijo. Vaša stran doseže le tiste, ki že vedo, da obstajate.",
+        "**Vozni park dostavljavcev**, če ne želite zaposlovati in voditi voznikov.",
+        "**Plačila, vračila in podporo** urejene, vključno s prepirom o hladni pici.",
+        "**Zaupanje pri prvem naročilu.** Neznanec bo prej naročil iz znane aplikacije kot s spletne strani, ki je ni nikoli videl."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "To je resničen izdelek in je vreden plačila. Ni pa vredno tega plačevati znova in znova za istega stalnega gosta, ki vašo hrano že pozna in bi naročil neposredno, če bi mu dali način."
+    },
+    {
+      "type": "h2",
+      "text": "Kaj vam da lastni kanal"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Celoten račun**, minus strošek kartice.",
+        "**Odnos z gostom.** Na platformi gost pripada njej — pogosto ga ne morete več kontaktirati.",
+        "**Vaše cene.** Nobenega pritiska, da sofinancirate popuste na ravni celotne platforme.",
+        "**Brez stropa jedilnika.** Prodajte desko za deljenje za 48 €, ki na seznamu platforme nikoli ne bi preživela.",
+        "**Eno vrsto v kuhinji.** Naročila z vaše strani lahko prihajajo na isti [kuhinjski zaslon](route:/kitchen-display) kot vse drugo, namesto na drugo tablico na pultu."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Strategija, ki deluje: oboje, a namerno"
+    },
+    {
+      "type": "p",
+      "text": "Platformo obravnavajte kot plačano pridobivanje gostov, svojo stran pa kot zadrževanje. Provizijo plačate, da nekoga spoznate; ne plačujete je naslednjih dvajset obiskov."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Vrsta naročila",
+        "Najboljši kanal",
+        "Zakaj"
+      ],
+      "rows": [
+        [
+          "Nov gost, dostava",
+          "Platforma",
+          "Nikoli ne bi prišli do njega"
+        ],
+        [
+          "Stalni gost",
+          "Vaša stran",
+          "Nobene provizije za nekoga, ki vas že pozna"
+        ],
+        [
+          "Prevzem / za s seboj",
+          "Vaša stran",
+          "Plačujete dostavo, ki je ne uporabljate"
+        ],
+        [
+          "Velika skupinska naročila",
+          "Vaša stran",
+          "Provizija od 150 € boli"
+        ],
+        [
+          "Pisarne in catering",
+          "Vaša stran",
+          "Ponavljajoče, visoke vrednosti, odkrivanje ni potrebno"
+        ],
+        [
+          "Strežba v lokalu",
+          "[Naročanje prek QR](route:/order-taking)",
+          "Gost je že v lokalu"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kako preseliti ponovljena naročila"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "V vsako dostavno vrečko dajte kartico z naslovom za neposredno naročanje in enim jasnim razlogom, da ga uporabijo. Brezplačna kava ali majhen popust premagata megleno sporočilo.",
+        "Naredite neposredno ceno malenkost boljšo, kjer vam pogodba s platformo to dopušča. Preverite pogoje — nekateri prepovedujejo nižanje cen.",
+        "Vzemite si rezultat iskanja. Ko nekdo išče ime vaše restavracije plus »naroči«, mora biti prva vaša stran, ne vnos platforme.",
+        "Povezavo za naročanje dajte povsod, kjer že ste: Google profil, Instagram bio, noga spletne strani, QR koda na mizi.",
+        "Gostom, ki prevzemajo, dajte razlog, da preskočijo aplikacijo. Plačujejo stroške storitve za storitev, ki je ne uporabljajo.",
+        "Naj bo res preprosto. Če neposredno naročanje zahteva več dotikov kot aplikacija, se nihče ne preseli."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Spremljajte eno številko na mesec: delež naročil, ki so prišla neposredno. Večina lokalov, ki to spremlja, ga v enem letu dvigne z blizu nič na 20 do 40 odstotkov, in pri 30% proviziji je vsaka točka pravi denar."
+    },
+    {
+      "type": "h2",
+      "text": "Kdaj ostati samo na platformi"
+    },
+    {
+      "type": "p",
+      "text": "Dark kitchen brez lokala, brez ulične frekvence in brez prepoznavne znamke kupuje odkrivanje in nič drugega — platforma je poslovni model. Prav tako: če prodate 15 dostav na mesec, trud z drugim kanalom ni vreden prihranjenih 40 €. Bodite pošteni, kateri od obeh ste."
+    },
+    {
+      "type": "cta",
+      "heading": "Sprejemajte naročila brez provizije",
+      "text": "Lastna stran za naročila, naročanje prek QR pri mizi in dostave v eni kuhinjski vrsti. Od 9,90 € na mesec, brez provizije na naročilo. 14 dni brezplačno.",
+      "buttonLabel": "Poglejte spletno naročanje",
+      "routeKey": "/order-taking"
+    },
+    {
+      "type": "faq",
+      "heading": "Pogosta vprašanja",
+      "items": [
+        {
+          "q": "Koliko provizije vzamejo aplikacije za dostavo?",
+          "a": "Odvisno od države, pogodbe in od tega, ali dostavlja platforma. Dogovori samo za prevzem so najcenejši; polna dostava s promocijo je najdražja, navedene stopnje pa se običajno omenjajo v dvajsetih ali tridesetih in nekaj odstotkih. Preverite svojo pogodbo."
+        },
+        {
+          "q": "Koliko neposrednih naročil potrebujem za pokritje stroška?",
+          "a": "Naročnina, deljena z (povprečno naročilo × stopnja provizije). Pri 9,90 € na mesec, naročilu 25 € in 25% proviziji je to manj kot dve naročili na mesec."
+        },
+        {
+          "q": "Ali naj popolnoma zapustim aplikacije za dostavo?",
+          "a": "Običajno ne. Pripeljejo goste ob prvem naročilu, do katerih drugače ne pridete. Zmaga je v preselitvi ponovljenih naročil in prevzemov v lastni kanal, ne v hipnem rezu."
+        },
+        {
+          "q": "Ali smem na svoji strani zaračunati manj?",
+          "a": "Včasih — več platform v pogojih omejuje nižje cene drugje. Preberite pogodbo, in če se zahteva cenovna pariteta, tekmujte raje z brezplačnim izdelkom ali ugodnostjo za zvestobo."
+        },
+        {
+          "q": "Ali potrebujem spletno stran za neposredna naročila?",
+          "a": "Ne. IQ Rest vam da gostovano stran za naročila z lastnim naslovom, na katero lahko povežete z Googla, Instagrama ali QR kode na mizi."
+        }
+      ]
+    }
+  ]
+}

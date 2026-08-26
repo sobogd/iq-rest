@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "title": "Ordini propri vs app di delivery: i numeri veri | IQ Rest",
+    "description": "Quanto costa la commissione del marketplace per ordine, quanti ordini servono sul canale diretto per ripagarsi e perché quasi tutti i ristoranti dovrebbero usarli entrambi."
+  },
+  "card": {
+    "title": "La tua pagina ordini contro le app di delivery: dove finisce davvero la commissione",
+    "excerpt": "I marketplace portano clienti che non avresti mai raggiunto e trattengono una quota su ognuno. Ecco l'aritmetica del punto di pareggio e un modo realistico per spostare gli ordini ricorrenti."
+  },
+  "h1": "I tuoi ordini online contro i marketplace di consegna",
+  "intro": "L'impostazione consueta — le app sono parassiti, il canale diretto è libertà — è troppo semplice. I marketplace ti portano davvero clienti che non avresti mai raggiunto, e quella scoperta ha un prezzo. La domanda non è se usarli, ma quali ordini appartengono a quale canale, e quel calcolo lo fai in dieci minuti.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Cos'è davvero la commissione"
+    },
+    {
+      "type": "p",
+      "text": "Le percentuali dei marketplace variano per Paese, contratto e a seconda che a consegnare sia la piattaforma o tu. Le formule solo ritiro sono le più economiche; la consegna completa con posizionamento promosso è la più cara, e la percentuale dichiarata si cita di solito sui venti o trenta punti. Tira fuori il tuo contratto e trova il numero reale, perché tutto ciò che segue dipende da quello."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Su un ordine da 25 €",
+        "Tieni",
+        "Prende la piattaforma"
+      ],
+      "rows": [
+        [
+          "Con il 15% di commissione",
+          "21,25 €",
+          "3,75 €"
+        ],
+        [
+          "Con il 25% di commissione",
+          "18,75 €",
+          "6,25 €"
+        ],
+        [
+          "Con il 30% di commissione",
+          "17,50 €",
+          "7,50 €"
+        ],
+        [
+          "La tua pagina",
+          "25 € meno le commissioni carta (circa 0,50 €)",
+          "0 € di commissione"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Contro un food cost intorno al 30%, una commissione del 30% non riduce il margine: se lo porta quasi tutto. Molti locali scoprono che i loro ordini da marketplace sono, nella migliore delle ipotesi, volume a pareggio che tiene occupata la cucina."
+    },
+    {
+      "type": "h2",
+      "text": "Il calcolo del punto di pareggio"
+    },
+    {
+      "type": "p",
+      "text": "Un sistema di ordini sul tuo sito costa un canone mensile fisso. Calcola quanti ordini devono spostarsi prima che si ripaghi:"
+    },
+    {
+      "type": "p",
+      "text": "**Ordini necessari = canone mensile ÷ (ordine medio × percentuale di commissione)**"
+    },
+    {
+      "type": "p",
+      "text": "A 9,90 € al mese, con un ordine medio di 25 € e il 25% di commissione, fa 9,90 ÷ 6,25 = **1,6 ordini al mese**. Due ordini presi sulla tua pagina coprono l'intero costo di tenerla attiva. Tutto il resto è margine che prima consegnavi ad altri."
+    },
+    {
+      "type": "note",
+      "text": "È la parte che sorprende. Il pareggio non è a 50 ordini né a 200: è a poche unità, perché la commissione di un singolo ordine vale quanto un mese di software."
+    },
+    {
+      "type": "h2",
+      "text": "Cosa ti dà il marketplace che la tua pagina non dà"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Scoperta.** La gente sfoglia l'app senza avere in mente un ristorante. La tua pagina raggiunge solo chi sa già che esisti.",
+        "**Una flotta di fattorini**, se non vuoi assumerli né gestirli.",
+        "**Pagamenti, rimborsi e assistenza** gestiti, inclusa la discussione sulla pizza fredda.",
+        "**Fiducia al primo ordine.** Uno sconosciuto ordinerà prima da un'app familiare che da un sito mai visto."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "È un prodotto reale e vale la spesa. Quello che non vale è pagarlo ripetutamente sullo stesso cliente abituale, che conosce già la tua cucina e ordinerebbe diretto se gli dessi il modo."
+    },
+    {
+      "type": "h2",
+      "text": "Cosa ti dà il canale diretto"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Lo scontrino intero**, meno le spese della carta.",
+        "**La relazione con il cliente.** Su un marketplace il cliente è della piattaforma: spesso non puoi più contattarlo.",
+        "**I tuoi prezzi.** Nessuna pressione a finanziare sconti validi su tutta la piattaforma.",
+        "**Nessun tetto di menu.** Vendi il tagliere da condividere da 48 € che su un marketplace non sopravviverebbe mai.",
+        "**Una sola coda in cucina.** Gli ordini della tua pagina possono arrivare sullo stesso [display di cucina](route:/kitchen-display) di tutto il resto, invece che su un secondo tablet sul bancone."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "La strategia che funziona: entrambi, ma con criterio"
+    },
+    {
+      "type": "p",
+      "text": "Tratta il marketplace come acquisizione clienti a pagamento e la tua pagina come fidelizzazione. Paghi una commissione per conoscere qualcuno; non continui a pagarla per le venti visite successive."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Tipo di ordine",
+        "Canale migliore",
+        "Perché"
+      ],
+      "rows": [
+        [
+          "Cliente nuovo, consegna",
+          "Marketplace",
+          "Non l'avresti mai raggiunto"
+        ],
+        [
+          "Cliente abituale",
+          "La tua pagina",
+          "Nessuna commissione su chi ti conosce già"
+        ],
+        [
+          "Ritiro / asporto",
+          "La tua pagina",
+          "Stai pagando una consegna che non usi"
+        ],
+        [
+          "Ordini di gruppo grandi",
+          "La tua pagina",
+          "La commissione su 150 € fa male"
+        ],
+        [
+          "Uffici e catering",
+          "La tua pagina",
+          "Ricorrente, alto valore, nessuna scoperta necessaria"
+        ],
+        [
+          "Consumo in sala",
+          "[Ordine con QR](route:/order-taking)",
+          "Il cliente è già nella sala"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Come spostare gli ordini ricorrenti"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Metti in ogni sacchetto di consegna un cartoncino con l'indirizzo per ordinare diretto e un motivo chiaro per usarlo. Un caffè offerto o un piccolo sconto batte un messaggio generico.",
+        "Rendi il prezzo diretto leggermente migliore, dove il contratto con il marketplace lo consente. Controlla le condizioni: alcune vietano di praticare prezzi più bassi.",
+        "Prenditi il risultato di ricerca. Quando qualcuno cerca il nome del tuo ristorante più «ordina», la tua pagina deve arrivare prima della scheda del marketplace.",
+        "Metti il link per ordinare ovunque tu sia già: profilo Google, bio di Instagram, footer del sito, QR code sul tavolo.",
+        "Dai ai clienti che ritirano un motivo per saltare l'app. Stanno pagando una commissione di servizio per un servizio che non usano.",
+        "Tienilo davvero semplice. Se ordinare diretto richiede più tocchi dell'app, non si sposta nessuno."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Segui un numero al mese: la quota di ordini arrivati diretti. La maggior parte dei locali che ci fa attenzione la porta da quasi zero a un valore tra il 20% e il 40% in un anno, e al 30% di commissione ogni punto è denaro vero."
+    },
+    {
+      "type": "h2",
+      "text": "Quando restare solo sul marketplace"
+    },
+    {
+      "type": "p",
+      "text": "Una dark kitchen senza locale, senza passaggio e senza notorietà sta comprando scoperta e nient'altro: il marketplace è il modello di business. Allo stesso modo, se fai 15 ordini a domicilio al mese, la fatica di gestire un secondo canale non vale i 40 € risparmiati. Sii onesto su quale dei due sei."
+    },
+    {
+      "type": "cta",
+      "heading": "Ricevi ordini senza commissione",
+      "text": "La tua pagina ordini, l'ordine con QR al tavolo e le consegne in un'unica coda di cucina. Da 9,90 € al mese, nessuna commissione per ordine. 14 giorni gratis.",
+      "buttonLabel": "Vedi gli ordini online",
+      "routeKey": "/order-taking"
+    },
+    {
+      "type": "faq",
+      "heading": "Domande frequenti",
+      "items": [
+        {
+          "q": "Quanta commissione prendono le app di delivery?",
+          "a": "Dipende dal Paese, dal contratto e dal fatto che consegni la piattaforma. Le formule solo ritiro sono le più economiche; la consegna completa con promozione è la più cara, e le percentuali dichiarate si citano di solito sui venti o trenta punti. Controlla il tuo contratto."
+        },
+        {
+          "q": "Quanti ordini diretti servono per andare in pari?",
+          "a": "Il canone diviso per (ordine medio × percentuale di commissione). A 9,90 € al mese, un ordine da 25 € e il 25% di commissione, sono meno di due ordini al mese."
+        },
+        {
+          "q": "Devo lasciare del tutto le app di delivery?",
+          "a": "Di solito no. Portano clienti al primo ordine che non puoi raggiungere altrimenti. La vittoria è spostare ordini ricorrenti e ritiri sul tuo canale, non tagliare di netto."
+        },
+        {
+          "q": "Posso far pagare meno sul mio sito?",
+          "a": "A volte: diverse piattaforme limitano nei termini la possibilità di praticare prezzi più bassi. Leggi il contratto e, se è richiesta parità di prezzo, competi con un omaggio o un vantaggio fedeltà."
+        },
+        {
+          "q": "Serve un sito web per prendere ordini diretti?",
+          "a": "No. IQ Rest ti dà una pagina ordini ospitata con un proprio indirizzo, che puoi collegare da Google, Instagram o da un QR code sul tavolo."
+        }
+      ]
+    }
+  ]
+}

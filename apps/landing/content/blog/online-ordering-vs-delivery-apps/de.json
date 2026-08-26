@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "title": "Eigene Bestellseite vs Lieferapps: die Zahlen | IQ Rest",
+    "description": "Was die Marktplatz-Provision pro Bestellung kostet, wie viele Bestellungen im eigenen Kanal die Kosten decken und warum die meisten Restaurants beides fahren sollten."
+  },
+  "card": {
+    "title": "Eigene Bestellseite vs Lieferapps: wo die Provision wirklich landet",
+    "excerpt": "Marktplätze bringen Gäste, die Sie nie erreicht hätten, und nehmen von jedem einen Anteil. Hier ist die Break-even-Rechnung und ein realistischer Weg, die Stammbestellungen zu verlagern."
+  },
+  "h1": "Eigene Online-Bestellung gegen Liefermarktplätze",
+  "intro": "Die übliche Erzählung — Apps sind Parasiten, der eigene Kanal ist Freiheit — ist zu einfach. Marktplätze bringen Ihnen tatsächlich Gäste, die Sie nie erreicht hätten, und diese Sichtbarkeit hat ihren Preis. Die Frage ist nicht, ob Sie sie nutzen, sondern welche Bestellungen in welchen Kanal gehören — und diese Rechnung schaffen Sie in zehn Minuten.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Was die Provision tatsächlich ist"
+    },
+    {
+      "type": "p",
+      "text": "Die Sätze der Marktplätze unterscheiden sich nach Land, Vertrag und danach, ob die Plattform liefert oder Sie selbst. Abholmodelle sind am günstigsten; volle Lieferung mit beworbener Platzierung ist am teuersten, und die genannten Prozentsätze liegen üblicherweise im Zwanziger- oder Dreißigerbereich. Holen Sie Ihren Vertrag heraus und suchen Sie die echte Zahl, denn alles Folgende hängt daran."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Bei einer Bestellung über 25 €",
+        "Sie behalten",
+        "Plattform nimmt"
+      ],
+      "rows": [
+        [
+          "Bei 15% Provision",
+          "21,25 €",
+          "3,75 €"
+        ],
+        [
+          "Bei 25% Provision",
+          "18,75 €",
+          "6,25 €"
+        ],
+        [
+          "Bei 30% Provision",
+          "17,50 €",
+          "7,50 €"
+        ],
+        [
+          "Ihre eigene Seite",
+          "25 € minus Kartengebühren (rund 0,50 €)",
+          "0 € Provision"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Gegen einen Wareneinsatz von etwa 30% senkt eine Provision von 30% nicht Ihre Marge — sie nimmt fast die ganze. Viele Betriebe stellen fest, dass ihre Marktplatzbestellungen bestenfalls kostendeckendes Volumen sind, das die Küche beschäftigt."
+    },
+    {
+      "type": "h2",
+      "text": "Die Break-even-Rechnung"
+    },
+    {
+      "type": "p",
+      "text": "Ein Bestellsystem auf der eigenen Seite kostet eine feste Monatsgebühr. Rechnen Sie aus, wie viele Bestellungen wechseln müssen, bis es sich selbst trägt:"
+    },
+    {
+      "type": "p",
+      "text": "**Benötigte Bestellungen = Monatsgebühr ÷ (durchschnittliche Bestellung × Provisionssatz)**"
+    },
+    {
+      "type": "p",
+      "text": "Bei 9,90 € im Monat, 25 € Durchschnittsbestellung und 25% Provision sind das 9,90 ÷ 6,25 = **1,6 Bestellungen im Monat**. Zwei Bestellungen über die eigene Seite decken die kompletten Kosten. Alles danach ist Marge, die Sie vorher abgegeben haben."
+    },
+    {
+      "type": "note",
+      "text": "Das ist der Teil, der die Leute überrascht. Der Break-even liegt nicht bei 50 oder 200 Bestellungen, sondern im niedrigen einstelligen Bereich, weil die Provision einer einzigen Bestellung einem Monat Software entspricht."
+    },
+    {
+      "type": "h2",
+      "text": "Was der Marktplatz kann und Ihre Seite nicht"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Entdeckung.** Menschen stöbern in der App, ohne ein Restaurant im Kopf zu haben. Ihre eigene Seite erreicht nur, wer schon weiß, dass es Sie gibt.",
+        "**Eine Lieferflotte**, wenn Sie keine Fahrer anstellen oder führen wollen.",
+        "**Zahlung, Erstattungen und Support** erledigt, inklusive der Diskussion über eine kalte Pizza.",
+        "**Vertrauen bei der ersten Bestellung.** Ein Fremder bestellt eher in einer vertrauten App als auf einer Website, die er nie gesehen hat."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Das ist ein echtes Produkt und es ist sein Geld wert. Nicht wert ist es, dafür beim selben Stammgast immer wieder zu zahlen — der Ihr Essen längst kennt und direkt bestellen würde, wenn Sie ihm den Weg zeigen."
+    },
+    {
+      "type": "h2",
+      "text": "Was Ihnen der eigene Kanal gibt"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Den ganzen Bon**, abzüglich Kartengebühr.",
+        "**Die Kundenbeziehung.** Auf einem Marktplatz gehört der Gast der Plattform — oft können Sie ihn nie wieder kontaktieren.",
+        "**Ihre Preise.** Kein Druck, plattformweite Rabatte mitzufinanzieren.",
+        "**Keine Menü-Obergrenze.** Verkaufen Sie die 48-€-Sharing-Platte, die einen Marktplatz-Eintrag nie überleben würde.",
+        "**Eine Küchenschlange.** Bestellungen von Ihrer Seite können auf demselben [Küchendisplay](route:/kitchen-display) landen wie alles andere, statt auf einem zweiten Tablet am Tresen."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Die Strategie, die funktioniert: beides, aber bewusst"
+    },
+    {
+      "type": "p",
+      "text": "Behandeln Sie den Marktplatz als bezahlte Kundengewinnung und Ihre eigene Seite als Bindung. Sie zahlen eine Provision, um jemanden kennenzulernen; Sie zahlen sie nicht für die nächsten zwanzig Besuche weiter."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Bestellart",
+        "Bester Kanal",
+        "Warum"
+      ],
+      "rows": [
+        [
+          "Neukunde, Lieferung",
+          "Marktplatz",
+          "Sie hätten ihn nie erreicht"
+        ],
+        [
+          "Stammkunde",
+          "Eigene Seite",
+          "Keine Provision für jemanden, der Sie schon kennt"
+        ],
+        [
+          "Abholung / Take-away",
+          "Eigene Seite",
+          "Sie zahlen für eine Lieferung, die Sie nicht nutzen"
+        ],
+        [
+          "Große Gruppenbestellungen",
+          "Eigene Seite",
+          "Die Provision auf 150 € tut weh"
+        ],
+        [
+          "Büro und Catering",
+          "Eigene Seite",
+          "Wiederkehrend, hoher Wert, keine Entdeckung nötig"
+        ],
+        [
+          "Verzehr im Haus",
+          "[QR-Bestellung](route:/order-taking)",
+          "Der Gast ist schon im Raum"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "So verlagern Sie Stammbestellungen"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Legen Sie in jede Liefertüte eine Karte mit Ihrer direkten Bestelladresse und einem klaren Grund, sie zu nutzen. Ein Gratis-Kaffee oder ein kleiner Rabatt schlägt eine vage Botschaft.",
+        "Machen Sie den Direktpreis leicht besser, wo Ihr Marktplatzvertrag es erlaubt. Prüfen Sie die Bedingungen — manche verbieten Unterbieten.",
+        "Besetzen Sie das Suchergebnis. Wer Ihren Restaurantnamen plus „bestellen“ sucht, soll zuerst Ihre Seite finden, nicht den Marktplatz-Eintrag.",
+        "Setzen Sie den Bestelllink überall dorthin, wo Sie ohnehin sind: Google-Unternehmensprofil, Instagram-Bio, Fußzeile Ihrer Website, QR-Code am Tisch.",
+        "Geben Sie Abholkunden einen Grund, die App zu überspringen. Sie zahlen eine Servicegebühr für einen Service, den sie nicht nutzen.",
+        "Halten Sie es wirklich einfach. Wenn Direktbestellen mehr Taps braucht als die App, wechselt niemand."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Verfolgen Sie eine Zahl pro Monat: den Anteil direkter Bestellungen. Die meisten Betriebe, die hinschauen, bringen ihn binnen eines Jahres von nahe null auf 20 bis 40 Prozent — und bei 30% Provision ist jeder Punkt echtes Geld."
+    },
+    {
+      "type": "h2",
+      "text": "Wann nur der Marktplatz reicht"
+    },
+    {
+      "type": "p",
+      "text": "Eine Dark Kitchen ohne Lokal, ohne Laufkundschaft und ohne Markenbekanntheit kauft Entdeckung und sonst nichts — der Marktplatz ist das Geschäftsmodell. Ebenso: Wenn Sie 15 Lieferbestellungen im Monat verkaufen, lohnt der Aufwand für einen zweiten Kanal die 40 € Ersparnis nicht. Seien Sie ehrlich, welcher Fall Sie sind."
+    },
+    {
+      "type": "cta",
+      "heading": "Bestellungen annehmen — ohne Provision",
+      "text": "Ihre eigene Bestellseite, QR-Bestellung am Tisch und Lieferbestellungen in einer Küchenschlange. Ab 9,90 € im Monat, keine Provision pro Bestellung. 14 Tage kostenlos.",
+      "buttonLabel": "Online-Bestellung ansehen",
+      "routeKey": "/order-taking"
+    },
+    {
+      "type": "faq",
+      "heading": "Häufige Fragen",
+      "items": [
+        {
+          "q": "Wie viel Provision nehmen Lieferapps?",
+          "a": "Das hängt von Land, Vertrag und davon ab, ob die Plattform liefert. Abholmodelle sind am günstigsten; volle Lieferung mit Bewerbung ist am teuersten, und genannte Sätze liegen üblicherweise im Zwanziger- oder Dreißigerbereich. Prüfen Sie Ihren eigenen Vertrag."
+        },
+        {
+          "q": "Wie viele Direktbestellungen brauche ich zum Break-even?",
+          "a": "Monatsgebühr geteilt durch (durchschnittliche Bestellung × Provisionssatz). Bei 9,90 € im Monat, 25 € Bestellwert und 25% Provision sind es weniger als zwei Bestellungen im Monat."
+        },
+        {
+          "q": "Soll ich die Lieferapps ganz verlassen?",
+          "a": "Meist nicht. Sie bringen Erstbesteller, die Sie anders nicht erreichen. Der Gewinn liegt darin, Stamm- und Abholbestellungen in den eigenen Kanal zu holen, nicht im kalten Entzug."
+        },
+        {
+          "q": "Darf ich auf der eigenen Seite günstiger sein?",
+          "a": "Manchmal — mehrere Plattformen schränken Unterbieten vertraglich ein. Lesen Sie den Vertrag; wenn Preisparität gefordert ist, konkurrieren Sie stattdessen mit einer Gratiszugabe oder einem Treuevorteil."
+        },
+        {
+          "q": "Brauche ich eine Website für Direktbestellungen?",
+          "a": "Nein. IQ Rest gibt Ihnen eine gehostete Bestellseite mit eigener Adresse, die Sie von Google, Instagram oder einem QR-Code am Tisch verlinken können."
+        }
+      ]
+    }
+  ]
+}

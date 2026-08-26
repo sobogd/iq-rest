@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "title": "Egen bestillingsside vs leveringsapper: de reelle tallene | IQ Rest",
+    "description": "Hva markedsplassens provisjon koster per ordre, hvor mange ordrer du trenger i egen kanal for å gå i null, og hvorfor de fleste restauranter bør kjøre begge."
+  },
+  "card": {
+    "title": "Din egen bestillingsside vs leveringsappene: hvor provisjonen faktisk havner",
+    "excerpt": "Markedsplasser henter kunder du aldri ville nådd, og tar en andel av hver eneste. Her er break even-regnestykket og en realistisk måte å flytte gjentakende ordrer på."
+  },
+  "h1": "Din egen nettbestilling mot leveringsmarkedsplassene",
+  "intro": "Den vanlige fortellingen — appene er parasitter, egen kanal er frihet — er for enkel. Markedsplasser henter faktisk kunder du aldri ville nådd, og den synligheten koster. Spørsmålet er ikke om du skal bruke dem, men hvilke ordrer som hører hjemme i hvilken kanal, og det regnestykket tar ti minutter.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Hva provisjonen faktisk er"
+    },
+    {
+      "type": "p",
+      "text": "Satsene varierer med land, avtale og om plattformen leverer eller du gjør det. Henteavtaler er billigst; full levering med fremhevet plassering er dyrest, og den oppgitte prosenten ligger vanligvis i tjue- eller trettiårene. Finn frem din egen avtale og let opp det ekte tallet, for alt under henger på det."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "På en ordre på 25 €",
+        "Du beholder",
+        "Plattformen tar"
+      ],
+      "rows": [
+        [
+          "Ved 15% provisjon",
+          "21,25 €",
+          "3,75 €"
+        ],
+        [
+          "Ved 25% provisjon",
+          "18,75 €",
+          "6,25 €"
+        ],
+        [
+          "Ved 30% provisjon",
+          "17,50 €",
+          "7,50 €"
+        ],
+        [
+          "Din egen side",
+          "25 € minus kortgebyr (rundt 0,50 €)",
+          "0 € provisjon"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Mot en råvarekost rundt 30% reduserer 30% provisjon ikke marginen din — den tar nesten hele. Mange steder oppdager at markedsplassordrene deres i beste fall er nullvolum som holder kjøkkenet i gang."
+    },
+    {
+      "type": "h2",
+      "text": "Break even-beregningen"
+    },
+    {
+      "type": "p",
+      "text": "Et bestillingssystem på din egen side koster en fast månedspris. Regn ut hvor mange ordrer som må flyttes før det betaler for seg selv:"
+    },
+    {
+      "type": "p",
+      "text": "**Nødvendige ordrer = månedsabonnement ÷ (gjennomsnittsordre × provisjonssats)**"
+    },
+    {
+      "type": "p",
+      "text": "Ved 9,90 € i måneden, en gjennomsnittsordre på 25 € og 25% provisjon blir det 9,90 ÷ 6,25 = **1,6 ordre i måneden**. To ordrer tatt på din egen side dekker hele kostnaden. Alt etter det er margin du tidligere ga bort."
+    },
+    {
+      "type": "note",
+      "text": "Det er denne delen som overrasker folk. Break even ligger ikke på 50 eller 200 ordrer — det er et par stykker, fordi provisjonen på én ordre tilsvarer en måned med programvare."
+    },
+    {
+      "type": "h2",
+      "text": "Hva markedsplassen gir som din side ikke gir"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Oppdagelse.** Folk blar i appen uten en restaurant i tankene. Din egen side når bare dem som allerede vet at du finnes.",
+        "**En budflåte**, hvis du ikke vil ansette eller styre sjåfører.",
+        "**Betaling, refusjon og support** ordnet, inkludert diskusjonen om en kald pizza.",
+        "**Tillit ved første ordre.** En fremmed bestiller heller i en kjent app enn på en nettside vedkommende aldri har sett."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Det er et ekte produkt og det er verdt å betale for. Det som ikke er verdt det, er å betale igjen og igjen for den samme stamkunden, som allerede kjenner maten din og ville bestilt direkte om du ga vedkommende muligheten."
+    },
+    {
+      "type": "h2",
+      "text": "Hva din egen kanal gir deg"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Hele regningen**, minus kortgebyret.",
+        "**Kunderelasjonen.** På en markedsplass tilhører kunden plattformen — ofte kan du aldri kontakte vedkommende igjen.",
+        "**Dine priser.** Ingen press om å være med å finansiere rabatter på tvers av plattformen.",
+        "**Ingen menytak.** Selg delefatet til 48 € som aldri ville overlevd en markedsplassoppføring.",
+        "**Én kjøkkenkø.** Ordrer fra siden din kan komme på den samme [kjøkkenskjermen](route:/kitchen-display) som alt annet, i stedet for på et nettbrett nummer to på disken."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Strategien som virker: begge, med hensikt"
+    },
+    {
+      "type": "p",
+      "text": "Behandle markedsplassen som betalt kundeanskaffelse og din egen side som gjenkjøp. Du betaler provisjon for å møte noen; du fortsetter ikke å betale den de neste tjue besøkene."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Ordretype",
+        "Beste kanal",
+        "Hvorfor"
+      ],
+      "rows": [
+        [
+          "Førstegangskunde, levering",
+          "Markedsplass",
+          "Du ville aldri nådd vedkommende"
+        ],
+        [
+          "Fast kunde",
+          "Din egen side",
+          "Ingen provisjon på en som allerede kjenner deg"
+        ],
+        [
+          "Henting / take away",
+          "Din egen side",
+          "Du betaler for en levering du ikke bruker"
+        ],
+        [
+          "Store gruppeordrer",
+          "Din egen side",
+          "Provisjonen på 150 € svir"
+        ],
+        [
+          "Kontor og catering",
+          "Din egen side",
+          "Gjentakende, høy verdi, ingen oppdagelse nødvendig"
+        ],
+        [
+          "Servering i lokalet",
+          "[QR-bestilling](route:/order-taking)",
+          "Gjesten sitter allerede i lokalet"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Slik flytter du gjentakende ordrer"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Legg et kort i hver leveringspose med din direkte bestillingsadresse og én tydelig grunn til å bruke den. En gratis kaffe eller liten rabatt slår et vagt budskap.",
+        "Gjør direkteprisen litt bedre der avtalen din tillater det. Sjekk vilkårene — noen forbyr underbud.",
+        "Ta søkeresultatet. Når noen søker på restaurantnavnet ditt pluss \"bestill\", skal siden din ligge først, ikke markedsplassoppføringen.",
+        "Legg bestillingslenken alle steder du allerede er: Google-bedriftsprofil, Instagram-bio, bunnteksten på siden din, QR-koden på bordet.",
+        "Gi hentekundene en grunn til å hoppe over appen. De betaler et servicegebyr for en tjeneste de ikke bruker.",
+        "Hold det virkelig enkelt. Hvis direktebestilling krever flere trykk enn appen, flytter ingen seg."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Følg ett tall i måneden: andelen ordrer som kom direkte. De fleste steder som følger med, flytter den fra nær null til mellom 20% og 40% på et år, og ved 30% provisjon er hvert poeng ekte penger."
+    },
+    {
+      "type": "h2",
+      "text": "Når du bør bli værende bare på markedsplassen"
+    },
+    {
+      "type": "p",
+      "text": "Et dark kitchen uten lokale, uten gatetrafikk og uten kjent merkenavn kjøper oppdagelse og ingenting annet — markedsplassen er forretningsmodellen. Likeså: selger du 15 leveringsordrer i måneden, er bryet med en ekstra kanal ikke verdt de 40 € du ville spart. Vær ærlig om hvilken av dem du er."
+    },
+    {
+      "type": "cta",
+      "heading": "Ta imot ordrer uten provisjonen",
+      "text": "Din egen bestillingsside, QR-bestilling ved bordet og leveringsordrer i én kjøkkenkø. Fra 9,90 € i måneden, ingen provisjon per ordre. 14 dager gratis.",
+      "buttonLabel": "Se nettbestilling",
+      "routeKey": "/order-taking"
+    },
+    {
+      "type": "faq",
+      "heading": "Ofte stilte spørsmål",
+      "items": [
+        {
+          "q": "Hvor mye provisjon tar leveringsappene?",
+          "a": "Det varierer med land, avtale og om plattformen leverer. Henteavtaler er billigst; full levering med markedsføring er dyrest, og oppgitte satser ligger vanligvis i tjue- eller trettiårene. Sjekk din egen avtale."
+        },
+        {
+          "q": "Hvor mange direkteordrer trenger jeg for å gå i null?",
+          "a": "Abonnementet delt på (gjennomsnittsordre × provisjonssats). Ved 9,90 € i måneden, en ordre på 25 € og 25% provisjon er det under to ordrer i måneden."
+        },
+        {
+          "q": "Bør jeg forlate leveringsappene helt?",
+          "a": "Som regel ikke. De henter førstegangskunder du ikke når på annen måte. Gevinsten ligger i å flytte gjentakende ordrer og henting til din egen kanal, ikke i å kutte alt."
+        },
+        {
+          "q": "Kan jeg ta mindre betalt på min egen side?",
+          "a": "Noen ganger — flere plattformer begrenser underbud i vilkårene. Les avtalen, og hvis prisparitet kreves, konkurrer heller med en gratis vare eller en lojalitetsfordel."
+        },
+        {
+          "q": "Trenger jeg en nettside for å ta direkteordrer?",
+          "a": "Nei. IQ Rest gir deg en hostet bestillingsside med egen adresse, som du kan lenke fra Google, Instagram eller en QR-kode på bordet."
+        }
+      ]
+    }
+  ]
+}

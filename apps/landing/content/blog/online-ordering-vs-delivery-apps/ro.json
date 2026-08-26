@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "title": "Comenzi proprii vs aplicații de livrare: cifrele reale | IQ Rest",
+    "description": "Cât costă comisionul platformei pe comandă, câte comenzi îți trebuie pe canalul propriu ca să iasă pe zero și de ce majoritatea restaurantelor ar trebui să le folosească pe amândouă."
+  },
+  "card": {
+    "title": "Pagina ta de comenzi vs aplicațiile de livrare: unde ajunge de fapt comisionul",
+    "excerpt": "Platformele aduc clienți pe care nu i-ai fi găsit niciodată și rețin o parte din fiecare. Iată aritmetica pragului de rentabilitate și o cale realistă de a muta comenzile repetate."
+  },
+  "h1": "Comenzile tale online față de platformele de livrare",
+  "intro": "Cadrul obișnuit — aplicațiile sunt paraziți, canalul propriu e libertate — e prea simplu. Platformele chiar îți aduc clienți la care nu ai fi ajuns, iar această descoperire are un preț. Întrebarea nu e dacă să le folosești, ci ce comenzi aparțin cărui canal, iar calculul acela îl faci în zece minute.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Ce e de fapt comisionul"
+    },
+    {
+      "type": "p",
+      "text": "Ratele platformelor diferă în funcție de țară, contract și de cine livrează. Înțelegerile doar cu ridicare sunt cele mai ieftine; livrarea completă cu poziție promovată e cea mai scumpă, iar procentul afișat se citează de obicei în jur de douăzeci și ceva sau treizeci și ceva. Scoate-ți contractul și găsește cifra reală, pentru că tot ce urmează depinde de ea."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "La o comandă de 25 €",
+        "Îți rămâne",
+        "Ia platforma"
+      ],
+      "rows": [
+        [
+          "La 15% comision",
+          "21,25 €",
+          "3,75 €"
+        ],
+        [
+          "La 25% comision",
+          "18,75 €",
+          "6,25 €"
+        ],
+        [
+          "La 30% comision",
+          "17,50 €",
+          "7,50 €"
+        ],
+        [
+          "Pagina ta",
+          "25 € minus comisioanele de card (aproximativ 0,50 €)",
+          "0 € comision"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Față de un cost al mărfii de circa 30%, un comision de 30% nu îți reduce marja — o ia aproape toată. Multe localuri descoperă că, în cel mai bun caz, comenzile din platformă sunt volum pe zero care ține bucătăria ocupată."
+    },
+    {
+      "type": "h2",
+      "text": "Calculul pragului de rentabilitate"
+    },
+    {
+      "type": "p",
+      "text": "Un sistem de comenzi pe site-ul tău costă un abonament lunar fix. Calculează câte comenzi trebuie să se mute până se plătește singur:"
+    },
+    {
+      "type": "p",
+      "text": "**Comenzi necesare = abonament lunar ÷ (comandă medie × rata comisionului)**"
+    },
+    {
+      "type": "p",
+      "text": "La 9,90 € pe lună, o comandă medie de 25 € și 25% comision, iese 9,90 ÷ 6,25 = **1,6 comenzi pe lună**. Două comenzi preluate pe pagina ta acoperă tot costul funcționării ei. Tot ce urmează e marjă pe care înainte o dădeai altcuiva."
+    },
+    {
+      "type": "note",
+      "text": "Aceasta e partea care surprinde. Pragul nu e la 50 sau 200 de comenzi — e la câteva, pentru că comisionul unei singure comenzi echivalează cu o lună de software."
+    },
+    {
+      "type": "h2",
+      "text": "Ce îți dă platforma și pagina ta nu"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Descoperire.** Oamenii răsfoiesc aplicația fără un restaurant în minte. Pagina ta ajunge doar la cei care știu deja că exiști.",
+        "**O flotă de curieri**, dacă nu vrei să angajezi sau să coordonezi șoferi.",
+        "**Plăți, rambursări și suport** rezolvate, inclusiv cearta despre pizza rece.",
+        "**Încredere la prima comandă.** Un necunoscut comandă mai degrabă dintr-o aplicație familiară decât de pe un site pe care nu l-a văzut niciodată."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "E un produs real și merită plătit. Ce nu merită e să-l plătești repetat pentru același client fidel, care îți cunoaște deja mâncarea și ar comanda direct dacă i-ai da o cale."
+    },
+    {
+      "type": "h2",
+      "text": "Ce îți dă canalul propriu"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Nota întreagă**, minus comisionul de card.",
+        "**Relația cu clientul.** Pe o platformă, clientul e al platformei — de multe ori nu-l mai poți contacta.",
+        "**Prețurile tale.** Nicio presiune să finanțezi reduceri la nivel de platformă.",
+        "**Fără plafon de meniu.** Vinde platoul de împărțit de 48 € care n-ar supraviețui niciodată într-o listare de platformă.",
+        "**O singură coadă în bucătărie.** Comenzile de pe pagina ta pot ajunge pe același [ecran de bucătărie](route:/kitchen-display) ca restul, nu pe o a doua tabletă de pe tejghea."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Strategia care funcționează: ambele, deliberat"
+    },
+    {
+      "type": "p",
+      "text": "Tratează platforma ca achiziție plătită de clienți și pagina proprie ca fidelizare. Plătești comision ca să cunoști pe cineva; nu continui să-l plătești pentru următoarele douăzeci de vizite."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Tip de comandă",
+        "Cel mai bun canal",
+        "De ce"
+      ],
+      "rows": [
+        [
+          "Client nou, livrare",
+          "Platformă",
+          "Nu ai fi ajuns niciodată la el"
+        ],
+        [
+          "Client fidel",
+          "Pagina ta",
+          "Niciun comision pentru cineva care te știe deja"
+        ],
+        [
+          "Ridicare / la pachet",
+          "Pagina ta",
+          "Plătești pentru o livrare pe care n-o folosești"
+        ],
+        [
+          "Comenzi mari de grup",
+          "Pagina ta",
+          "Comisionul la 150 € doare"
+        ],
+        [
+          "Birouri și catering",
+          "Pagina ta",
+          "Recurent, valoare mare, fără nevoie de descoperire"
+        ],
+        [
+          "Consum în local",
+          "[Comandă prin QR](route:/order-taking)",
+          "Clientul e deja în sală"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Cum muți comenzile repetate"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Pune în fiecare pungă de livrare un cartonaș cu adresa ta de comandă directă și un motiv clar să o folosească. O cafea gratis sau o mică reducere bate un mesaj vag.",
+        "Fă prețul direct puțin mai bun, unde contractul cu platforma îți permite. Verifică termenii — unele interzic subcotarea.",
+        "Ia-ți rezultatul din căutare. Când cineva caută numele restaurantului plus „comandă\", pagina ta trebuie să apară prima, nu listarea platformei.",
+        "Pune linkul de comandă peste tot unde ești deja: profilul Google, bio-ul de Instagram, subsolul site-ului, codul QR de pe masă.",
+        "Dă-le clienților care ridică un motiv să sară peste aplicație. Plătesc un comision de serviciu pentru un serviciu pe care nu-l folosesc.",
+        "Ține-l cu adevărat simplu. Dacă a comanda direct cere mai multe atingeri decât aplicația, nu se mută nimeni."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Urmărește un singur număr lunar: ponderea comenzilor venite direct. Majoritatea localurilor atente o duc de la aproape zero la 20-40% într-un an, iar la 30% comision fiecare punct e bani reali."
+    },
+    {
+      "type": "h2",
+      "text": "Când să rămâi doar pe platformă"
+    },
+    {
+      "type": "p",
+      "text": "O dark kitchen fără spațiu, fără trafic pietonal și fără brand cunoscut cumpără descoperire și nimic altceva — platforma e modelul de business. La fel, dacă faci 15 livrări pe lună, efortul unui al doilea canal nu merită cei 40 € economisiți. Fii sincer cu privire la care dintre cele două ești."
+    },
+    {
+      "type": "cta",
+      "heading": "Preia comenzi fără comision",
+      "text": "Pagina ta de comenzi, comanda prin QR la masă și livrările într-o singură coadă de bucătărie. De la 9,90 € pe lună, fără comision pe comandă. 14 zile gratuit.",
+      "buttonLabel": "Vezi comenzile online",
+      "routeKey": "/order-taking"
+    },
+    {
+      "type": "faq",
+      "heading": "Întrebări frecvente",
+      "items": [
+        {
+          "q": "Cât comision iau aplicațiile de livrare?",
+          "a": "Depinde de țară, de contract și de cine livrează. Înțelegerile doar cu ridicare sunt cele mai ieftine; livrarea completă cu promovare e cea mai scumpă, iar ratele afișate se citează de obicei în jur de douăzeci și ceva sau treizeci și ceva. Verifică-ți contractul."
+        },
+        {
+          "q": "Câte comenzi directe îmi trebuie ca să ies pe zero?",
+          "a": "Abonamentul împărțit la (comandă medie × rata comisionului). La 9,90 € pe lună, o comandă de 25 € și 25% comision, sunt sub două comenzi pe lună."
+        },
+        {
+          "q": "Ar trebui să părăsesc complet aplicațiile de livrare?",
+          "a": "De obicei nu. Aduc clienți la prima comandă, la care altfel nu ajungi. Câștigul e să muți comenzile repetate și ridicările pe canalul tău, nu să tai totul dintr-odată."
+        },
+        {
+          "q": "Pot cere mai puțin pe site-ul meu?",
+          "a": "Uneori — mai multe platforme restricționează prin contract prețurile mai mici în altă parte. Citește contractul și, dacă se cere paritate de preț, concurează cu un produs gratuit sau un beneficiu de fidelitate."
+        },
+        {
+          "q": "Am nevoie de site ca să preiau comenzi directe?",
+          "a": "Nu. IQ Rest îți dă o pagină de comenzi găzduită, cu adresa ei proprie, pe care o poți lega din Google, Instagram sau de la un cod QR de pe masă."
+        }
+      ]
+    }
+  ]
+}

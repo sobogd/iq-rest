@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "title": "Vlastite narudžbe vs aplikacije za dostavu: brojke | IQ Rest",
+    "description": "Koliko košta provizija platforme po narudžbi, koliko narudžbi u vlastitom kanalu pokriva pretplatu i zašto većina restorana treba oba kanala."
+  },
+  "card": {
+    "title": "Vaša stranica za narudžbe vs aplikacije za dostavu: gdje provizija zaista završi",
+    "excerpt": "Platforme dovode goste do kojih nikad ne biste došli i uzimaju dio od svakoga. Evo aritmetike točke pokrića i realnog načina da premjestite ponovljene narudžbe."
+  },
+  "h1": "Vaše online narudžbe naspram platformi za dostavu",
+  "intro": "Uobičajeni okvir — aplikacije su paraziti, vlastiti kanal je sloboda — previše je jednostavan. Platforme vam doista dovode goste do kojih nikad ne biste došli, a to otkrivanje ima cijenu. Pitanje nije treba li ih koristiti, nego koje narudžbe pripadaju kojem kanalu, a taj izračun napravite u deset minuta.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Što je provizija zapravo"
+    },
+    {
+      "type": "p",
+      "text": "Stope platformi razlikuju se po državi, ugovoru i po tome dostavlja li platforma ili vi. Dogovori samo za preuzimanje najjeftiniji su; potpuna dostava s promoviranim mjestom najskuplja je, a istaknuti postotak obično se navodi u dvadeset i nešto ili trideset i nešto. Izvadite vlastiti ugovor i pronađite pravi broj, jer sve niže ovisi o njemu."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Na narudžbi od 25 €",
+        "Vama ostaje",
+        "Platforma uzima"
+      ],
+      "rows": [
+        [
+          "Uz 15% provizije",
+          "21,25 €",
+          "3,75 €"
+        ],
+        [
+          "Uz 25% provizije",
+          "18,75 €",
+          "6,25 €"
+        ],
+        [
+          "Uz 30% provizije",
+          "17,50 €",
+          "7,50 €"
+        ],
+        [
+          "Vaša stranica",
+          "25 € minus naknade za karticu (otprilike 0,50 €)",
+          "0 € provizije"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Naspram troška namirnica oko 30%, provizija od 30% ne smanjuje vašu maržu — uzima gotovo cijelu. Mnogi lokali otkriju da su im narudžbe s platforme u najboljem slučaju promet na nuli koji drži kuhinju zaposlenom."
+    },
+    {
+      "type": "h2",
+      "text": "Izračun točke pokrića"
+    },
+    {
+      "type": "p",
+      "text": "Sustav narudžbi na vlastitoj stranici košta fiksnu mjesečnu naknadu. Izračunajte koliko narudžbi mora prijeći prije nego što se isplati:"
+    },
+    {
+      "type": "p",
+      "text": "**Potrebne narudžbe = mjesečna pretplata ÷ (prosječna narudžba × stopa provizije)**"
+    },
+    {
+      "type": "p",
+      "text": "Uz 9,90 € mjesečno, prosječnu narudžbu od 25 € i 25% provizije, to je 9,90 ÷ 6,25 = **1,6 narudžbi mjesečno**. Dvije narudžbe primljene na vlastitoj stranici pokrivaju cijeli trošak njezina rada. Sve nakon toga marža je koju ste prije predavali."
+    },
+    {
+      "type": "note",
+      "text": "To je dio koji ljude iznenadi. Točka pokrića nije 50 ni 200 narudžbi — riječ je o nekoliko komada, jer provizija na jednu narudžbu odgovara mjesecu softvera."
+    },
+    {
+      "type": "h2",
+      "text": "Što platforma daje, a vaša stranica ne"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Otkrivanje.** Ljudi prelistavaju aplikaciju bez određenog restorana na umu. Vaša stranica doseže samo one koji već znaju da postojite.",
+        "**Flotu dostavljača**, ako ne želite zapošljavati ni voditi vozače.",
+        "**Plaćanja, povrate i podršku** riješene, uključujući raspravu o hladnoj pizzi.",
+        "**Povjerenje kod prve narudžbe.** Stranac će prije naručiti iz poznate aplikacije nego s web-stranice koju nikad nije vidio."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "To je stvaran proizvod i vrijedi ga platiti. Ono što ne vrijedi jest plaćati ga iznova za istog stalnog gosta, koji već zna vašu hranu i naručio bi izravno da mu date način."
+    },
+    {
+      "type": "h2",
+      "text": "Što vam daje vlastiti kanal"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Cijeli račun**, minus naknada za karticu.",
+        "**Odnos s gostom.** Na platformi gost pripada njoj — često ga više ne možete kontaktirati.",
+        "**Vaše cijene.** Nikakav pritisak da financirate popuste na razini cijele platforme.",
+        "**Nema stropa jelovnika.** Prodajte pladanj za dijeljenje od 48 € koja na oglasu platforme nikad ne bi preživjela.",
+        "**Jedan red u kuhinji.** Narudžbe s vaše stranice mogu stizati na isti [kuhinjski zaslon](route:/kitchen-display) kao i sve ostalo, umjesto na drugi tablet na šanku."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Strategija koja radi: oboje, ali namjerno"
+    },
+    {
+      "type": "p",
+      "text": "Tretirajte platformu kao plaćeno privlačenje gostiju, a vlastitu stranicu kao zadržavanje. Proviziju plaćate da nekoga upoznate; ne nastavljate je plaćati sljedećih dvadeset posjeta."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Vrsta narudžbe",
+        "Najbolji kanal",
+        "Zašto"
+      ],
+      "rows": [
+        [
+          "Novi gost, dostava",
+          "Platforma",
+          "Nikad ne biste došli do njega"
+        ],
+        [
+          "Stalni gost",
+          "Vaša stranica",
+          "Nema provizije za nekoga tko vas već zna"
+        ],
+        [
+          "Preuzimanje / za van",
+          "Vaša stranica",
+          "Plaćate dostavu koju ne koristite"
+        ],
+        [
+          "Velike grupne narudžbe",
+          "Vaša stranica",
+          "Provizija na 150 € boli"
+        ],
+        [
+          "Uredi i catering",
+          "Vaša stranica",
+          "Ponavljajuće, visoke vrijednosti, otkrivanje nije potrebno"
+        ],
+        [
+          "Konzumacija u lokalu",
+          "[Narudžba putem QR-a](route:/order-taking)",
+          "Gost je već u lokalu"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kako premjestiti ponovljene narudžbe"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "U svaku dostavnu vrećicu stavite karticu s adresom za izravnu narudžbu i jednim jasnim razlogom da je upotrijebe. Besplatna kava ili mali popust pobjeđuju maglovitu poruku.",
+        "Neka izravna cijena bude malo bolja, gdje vam ugovor s platformom to dopušta. Provjerite uvjete — neki zabranjuju podbijanje.",
+        "Uzmite rezultat pretrage. Kad netko traži ime vašeg restorana plus „naruči\", prva mora biti vaša stranica, a ne oglas platforme.",
+        "Stavite poveznicu za narudžbe svugdje gdje već jeste: Google profil, Instagram bio, podnožje web-stranice, QR kod na stolu.",
+        "Dajte gostima koji preuzimaju razlog da zaobiđu aplikaciju. Plaćaju naknadu za uslugu kojom se ne koriste.",
+        "Neka bude uistinu jednostavno. Ako izravna narudžba traži više dodira od aplikacije, nitko se ne seli."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Pratite jedan broj mjesečno: udio narudžbi koje su stigle izravno. Većina lokala koji na to paze podigne ga s blizu nule na 20 do 40 posto u godinu dana, a uz 30% provizije svaki postotni bod pravi je novac."
+    },
+    {
+      "type": "h2",
+      "text": "Kada ostati samo na platformi"
+    },
+    {
+      "type": "p",
+      "text": "Dark kitchen bez prostora, bez prolaznika i bez prepoznatljivosti kupuje otkrivanje i ništa drugo — platforma je poslovni model. Isto tako, ako prodate 15 dostava mjesečno, trud oko drugog kanala nije vrijedan uštedjenih 40 €. Budite iskreni koji ste od to dvoje."
+    },
+    {
+      "type": "cta",
+      "heading": "Primajte narudžbe bez provizije",
+      "text": "Vlastita stranica za narudžbe, narudžba putem QR-a za stolom i dostave u jednom kuhinjskom redu. Od 9,90 € mjesečno, bez provizije po narudžbi. 14 dana besplatno.",
+      "buttonLabel": "Pogledajte online narudžbe",
+      "routeKey": "/order-taking"
+    },
+    {
+      "type": "faq",
+      "heading": "Česta pitanja",
+      "items": [
+        {
+          "q": "Koliku proviziju uzimaju aplikacije za dostavu?",
+          "a": "Ovisi o državi, ugovoru i o tome dostavlja li platforma. Dogovori samo za preuzimanje najjeftiniji su; potpuna dostava s promocijom najskuplja, a istaknute stope obično se navode u dvadeset i nešto ili trideset i nešto posto. Provjerite vlastiti ugovor."
+        },
+        {
+          "q": "Koliko izravnih narudžbi trebam da pokrijem trošak?",
+          "a": "Pretplata podijeljena s (prosječna narudžba × stopa provizije). Uz 9,90 € mjesečno, narudžbu od 25 € i 25% provizije, to je manje od dvije narudžbe mjesečno."
+        },
+        {
+          "q": "Trebam li potpuno napustiti aplikacije za dostavu?",
+          "a": "Obično ne. Dovode goste koji prvi put naručuju i do kojih inače ne dolazite. Dobitak je premjestiti ponovljene narudžbe i preuzimanja u vlastiti kanal, a ne rezati sve odjednom."
+        },
+        {
+          "q": "Smijem li naplaćivati manje na vlastitoj stranici?",
+          "a": "Ponekad — nekoliko platformi u uvjetima ograničava niže cijene drugdje. Pročitajte ugovor, a ako se traži paritet cijena, natječite se besplatnim artiklom ili pogodnošću za vjernost."
+        },
+        {
+          "q": "Trebam li web-stranicu za izravne narudžbe?",
+          "a": "Ne. IQ Rest vam daje gotovu stranicu za narudžbe s vlastitom adresom, na koju možete voditi s Googlea, Instagrama ili QR koda na stolu."
+        }
+      ]
+    }
+  ]
+}

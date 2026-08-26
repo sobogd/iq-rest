@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "title": "Commande en propre vs applis de livraison : les chiffres | IQ Rest",
+    "description": "Ce que coûte la commission d'une marketplace par commande, combien de commandes il faut sur votre canal direct pour l'amortir, et pourquoi la plupart des restaurants devraient faire les deux."
+  },
+  "card": {
+    "title": "Votre page de commande vs les applis de livraison : où part vraiment la commission",
+    "excerpt": "Les marketplaces amènent des clients que vous n'auriez jamais touchés et prennent une part sur chacun. Voici l'arithmétique du seuil de rentabilité et une façon réaliste de déplacer les commandes récurrentes."
+  },
+  "h1": "Votre commande en ligne face aux marketplaces de livraison",
+  "intro": "Le récit habituel — les applis sont des parasites, le canal direct c'est la liberté — est trop simple. Les marketplaces vous amènent réellement des clients que vous n'auriez jamais atteints, et cette découverte a un prix. La question n'est pas de savoir s'il faut les utiliser, mais quelles commandes appartiennent à quel canal, et ce calcul se fait en dix minutes.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Ce qu'est réellement la commission"
+    },
+    {
+      "type": "p",
+      "text": "Les taux varient selon le pays, le contrat et selon que la plateforme livre ou non. Les formules « à emporter » sont les moins chères ; la livraison complète avec mise en avant est la plus chère, et les pourcentages annoncés se situent couramment dans les vingt ou les trente. Ressortez votre contrat et trouvez le vrai chiffre, car tout ce qui suit en dépend."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Sur une commande de 25 €",
+        "Vous gardez",
+        "La plateforme prend"
+      ],
+      "rows": [
+        [
+          "À 15% de commission",
+          "21,25 €",
+          "3,75 €"
+        ],
+        [
+          "À 25% de commission",
+          "18,75 €",
+          "6,25 €"
+        ],
+        [
+          "À 30% de commission",
+          "17,50 €",
+          "7,50 €"
+        ],
+        [
+          "Votre propre page",
+          "25 € moins les frais de carte (environ 0,50 €)",
+          "0 € de commission"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Face à un coût matière d'environ 30%, une commission de 30% ne réduit pas votre marge : elle l'emporte presque entièrement. Beaucoup d'établissements découvrent que leurs commandes marketplace sont, au mieux, du volume à l'équilibre qui occupe la cuisine."
+    },
+    {
+      "type": "h2",
+      "text": "Le calcul du seuil de rentabilité"
+    },
+    {
+      "type": "p",
+      "text": "Un système de commande sur votre propre site coûte un abonnement mensuel fixe. Calculez combien de commandes doivent basculer avant qu'il se paie tout seul :"
+    },
+    {
+      "type": "p",
+      "text": "**Commandes nécessaires = abonnement mensuel ÷ (commande moyenne × taux de commission)**"
+    },
+    {
+      "type": "p",
+      "text": "À 9,90 € par mois, une commande moyenne de 25 € et 25% de commission, cela donne 9,90 ÷ 6,25 = **1,6 commande par mois**. Deux commandes prises sur votre page couvrent tout le coût de son fonctionnement. Tout le reste est de la marge que vous cédiez auparavant."
+    },
+    {
+      "type": "note",
+      "text": "C'est la partie qui surprend. Le seuil n'est pas à 50 commandes ni à 200 : il est à quelques unités, parce que la commission d'une seule commande équivaut à un mois de logiciel."
+    },
+    {
+      "type": "h2",
+      "text": "Ce que la marketplace apporte et pas votre page"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**La découverte.** Les gens parcourent l'appli sans restaurant en tête. Votre page ne touche que ceux qui savent déjà que vous existez.",
+        "**Une flotte de livreurs**, si vous ne voulez ni les employer ni les gérer.",
+        "**Paiement, remboursements et support** pris en charge, y compris la dispute sur une pizza froide.",
+        "**La confiance à la première commande.** Un inconnu commandera plus volontiers sur une appli familière que sur un site jamais vu."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "C'est un vrai produit et il mérite d'être payé. Ce qui ne le mérite pas, c'est de le payer encore et encore sur le même habitué, qui connaît déjà votre cuisine et commanderait en direct si vous lui en donniez le moyen."
+    },
+    {
+      "type": "h2",
+      "text": "Ce que votre canal direct vous apporte"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Le ticket entier**, moins les frais de carte.",
+        "**La relation client.** Sur une marketplace, le client appartient à la plateforme : souvent, vous ne pouvez plus le recontacter.",
+        "**Vos prix.** Aucune pression pour financer des remises valables sur toute la plateforme.",
+        "**Pas de plafond de carte.** Vendez le plateau à partager à 48 € qui ne survivrait jamais à une fiche marketplace.",
+        "**Une seule file en cuisine.** Les commandes de votre page peuvent arriver sur le même [écran de cuisine](route:/kitchen-display) que le reste, au lieu d'une deuxième tablette sur le comptoir."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "La stratégie qui marche : les deux, délibérément"
+    },
+    {
+      "type": "p",
+      "text": "Traitez la marketplace comme de l'acquisition payante et votre page comme de la fidélisation. Vous payez une commission pour rencontrer quelqu'un ; vous ne continuez pas à la payer sur les vingt visites suivantes."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Type de commande",
+        "Meilleur canal",
+        "Pourquoi"
+      ],
+      "rows": [
+        [
+          "Nouveau client, livraison",
+          "Marketplace",
+          "Vous ne l'auriez jamais touché"
+        ],
+        [
+          "Client fidèle",
+          "Votre page",
+          "Aucune commission sur quelqu'un qui vous connaît déjà"
+        ],
+        [
+          "Retrait / à emporter",
+          "Votre page",
+          "Vous payez une livraison que vous n'utilisez pas"
+        ],
+        [
+          "Grosses commandes de groupe",
+          "Votre page",
+          "La commission sur 150 € fait mal"
+        ],
+        [
+          "Bureaux et traiteur",
+          "Votre page",
+          "Récurrent, valeur élevée, aucune découverte nécessaire"
+        ],
+        [
+          "Consommation sur place",
+          "[Commande par QR](route:/order-taking)",
+          "Le client est déjà dans la salle"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Comment déplacer les commandes récurrentes"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Glissez dans chaque sac de livraison une carte avec votre adresse de commande directe et une raison claire de l'utiliser. Un café offert ou une petite remise vaut mieux qu'un message vague.",
+        "Rendez le prix direct légèrement meilleur, là où votre contrat le permet. Vérifiez les conditions : certaines interdisent de casser les prix.",
+        "Occupez le résultat de recherche. Quand quelqu'un tape le nom de votre restaurant plus « commander », votre page doit arriver en premier, pas la fiche marketplace.",
+        "Mettez le lien de commande partout où vous êtes déjà : fiche Google, bio Instagram, pied de page de votre site, QR code sur la table.",
+        "Donnez aux clients qui viennent chercher une raison de contourner l'appli. Ils paient des frais de service pour un service qu'ils n'utilisent pas.",
+        "Gardez-le vraiment simple. Si commander en direct demande plus de gestes que l'appli, personne ne bouge."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Suivez un chiffre chaque mois : la part des commandes arrivées en direct. La plupart des établissements attentifs la font passer de presque zéro à 20-40% en un an, et à 30% de commission chaque point est de l'argent réel."
+    },
+    {
+      "type": "h2",
+      "text": "Quand rester uniquement sur la marketplace"
+    },
+    {
+      "type": "p",
+      "text": "Une dark kitchen sans local, sans passage et sans notoriété achète de la découverte et rien d'autre : la marketplace est le modèle économique. De même, si vous faites 15 commandes livrées par mois, l'effort d'un second canal ne vaut pas les 40 € économisés. Soyez honnête sur le cas qui est le vôtre."
+    },
+    {
+      "type": "cta",
+      "heading": "Prenez des commandes sans commission",
+      "text": "Votre page de commande, la commande par QR à table et les livraisons dans une seule file de cuisine. À partir de 9,90 € par mois, sans commission par commande. 14 jours gratuits.",
+      "buttonLabel": "Voir la commande en ligne",
+      "routeKey": "/order-taking"
+    },
+    {
+      "type": "faq",
+      "heading": "Questions fréquentes",
+      "items": [
+        {
+          "q": "Quelle commission prennent les applis de livraison ?",
+          "a": "Cela dépend du pays, du contrat et du fait que la plateforme livre ou non. Les formules à emporter sont les moins chères ; la livraison complète avec promotion est la plus chère, et les taux annoncés se situent couramment dans les vingt ou les trente. Vérifiez votre propre contrat."
+        },
+        {
+          "q": "Combien de commandes directes pour être à l'équilibre ?",
+          "a": "L'abonnement divisé par (commande moyenne × taux de commission). À 9,90 € par mois, une commande de 25 € et 25% de commission, c'est moins de deux commandes par mois."
+        },
+        {
+          "q": "Faut-il quitter complètement les applis de livraison ?",
+          "a": "En général non. Elles amènent des primo-clients que vous ne pouvez pas atteindre autrement. Le gain, c'est de déplacer les commandes récurrentes et les retraits vers votre canal, pas de tout couper."
+        },
+        {
+          "q": "Puis-je facturer moins cher sur mon propre site ?",
+          "a": "Parfois : plusieurs plateformes limitent contractuellement le fait de casser les prix. Lisez le contrat et, si la parité tarifaire est exigée, jouez plutôt sur un produit offert ou un avantage fidélité."
+        },
+        {
+          "q": "Faut-il un site web pour prendre des commandes directes ?",
+          "a": "Non. IQ Rest vous fournit une page de commande hébergée avec sa propre adresse, que vous pouvez lier depuis Google, Instagram ou un QR code sur la table."
+        }
+      ]
+    }
+  ]
+}

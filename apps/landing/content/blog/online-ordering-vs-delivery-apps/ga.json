@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "title": "Do leathanach ordaithe féin vs aipeanna seachadta: na fíoruimhreacha | IQ Rest",
+    "description": "Cad a chosnaíonn coimisiún an mhargaidh in aghaidh an ordaithe, cé mhéad ordú a theastaíonn ar do chainéal féin chun é a chlúdach, agus cén fáth ar cheart don chuid is mó de bhialanna an dá cheann a úsáid."
+  },
+  "card": {
+    "title": "Do leathanach ordaithe féin vs na haipeanna seachadta: cá dtéann an coimisiún i ndáiríre",
+    "excerpt": "Tugann margaí custaiméirí chugat nach sroichfeá riamh, agus baineann siad sciar as gach duine acu. Seo uimhríocht na meá agus bealach réalaíoch chun na horduithe rialta a bhogadh."
+  },
+  "h1": "Do chuid ordaithe ar líne féin i gcoinne na margaí seachadta",
+  "intro": "An creat coitianta — is seadáin iad na haipeanna, is saoirse é do chainéal féin — tá sé róshimplí. Tugann margaí custaiméirí chugat i ndáiríre nach sroichfeá riamh, agus tá praghas ar an aimsiú sin. Ní hé an cheist an úsáidfidh tú iad ach cé na horduithe a bhaineann le cén cainéal, agus is féidir leat an ríomh sin a dhéanamh i ndeich nóiméad.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Cad é an coimisiún i ndáiríre"
+    },
+    {
+      "type": "p",
+      "text": "Athraíonn rátaí na margaí de réir tíre, conartha agus de réir cé acu an t-ardán nó tú féin a dhéanann an seachadadh. Is iad na socruithe bailithe amháin is saoire; is é an seachadadh iomlán le suíomh bolscaireachta is daoire, agus is minic a luaitear an céatadán poiblí sna fichidí nó sna tríochaidí. Tóg amach do chonradh féin agus faigh an fíoruimhir, mar braitheann gach rud thíos uirthi."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Ar ordú €25",
+        "Coinníonn tú",
+        "Tógann an t-ardán"
+      ],
+      "rows": [
+        [
+          "Ag coimisiún 15%",
+          "€21.25",
+          "€3.75"
+        ],
+        [
+          "Ag coimisiún 25%",
+          "€18.75",
+          "€6.25"
+        ],
+        [
+          "Ag coimisiún 30%",
+          "€17.50",
+          "€7.50"
+        ],
+        [
+          "Do leathanach féin",
+          "€25 lúide táillí cárta (thart ar €0.50)",
+          "€0 coimisiún"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "In aghaidh costas bia timpeall 30%, ní laghdaíonn coimisiún 30% do lámh — baineann sé beagnach an t-iomlán di. Faigheann go leor áiteanna amach gurb éard atá ina n-orduithe margaidh, ar a mhéad, toirt ar chothrom a choinníonn an chistin gnóthach."
+    },
+    {
+      "type": "h2",
+      "text": "Ríomh na meá"
+    },
+    {
+      "type": "p",
+      "text": "Cosnaíonn córas ordaithe ar do shuíomh féin táille mhíosúil sheasta. Oibrigh amach cé mhéad ordú a chaithfidh bogadh sula n-íocann sé as féin:"
+    },
+    {
+      "type": "p",
+      "text": "**Orduithe riachtanacha = síntiús míosúil ÷ (meánordú × ráta coimisiúin)**"
+    },
+    {
+      "type": "p",
+      "text": "Ag €9.90 sa mhí, meánordú €25 agus coimisiún 25%, sin 9.90 ÷ 6.25 = **1.6 ordú sa mhí**. Clúdaíonn dhá ordú a ghlactar ar do leathanach féin costas iomlán a reáchtála. Is lámh í gach rud ina dhiaidh sin a bhí á tabhairt uait roimhe seo."
+    },
+    {
+      "type": "note",
+      "text": "Sin an chuid a chuireann iontas ar dhaoine. Níl an mheá ag 50 ná 200 ordú — tá sí i bhfigiúirí aonair ísle, mar tá coimisiún aon ordaithe amháin inchomparáide le mí bogearraí."
+    },
+    {
+      "type": "h2",
+      "text": "Cad a thugann an margadh nach dtugann do leathanach"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Aimsiú.** Bíonn daoine ag brabhsáil na haipe gan bialann ar leith ina n-aigne. Ní shroicheann do leathanach féin ach iad siúd a bhfuil a fhios acu cheana go bhfuil tú ann.",
+        "**Flít seachadta**, mura dteastaíonn uait tiománaithe a fhostú ná a bhainistiú.",
+        "**Íocaíocht, aisíocaíochtaí agus tacaíocht** réitithe, an argóint faoi phizza fhuar san áireamh.",
+        "**Muinín ag an gcéad ordú.** Ordóidh strainséir ó aip aithnidiúil sula n-ordóidh sé ó shuíomh nach bhfaca sé riamh."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Is fíortháirge é sin agus is fiú íoc as. Rud nach fiú ná é a íoc arís is arís eile ar an gcustaiméir rialta céanna, a bhfuil aithne aige ar do chuid bia cheana agus a d'ordódh go díreach dá dtabharfá bealach dó."
+    },
+    {
+      "type": "h2",
+      "text": "Cad a thugann do chainéal féin duit"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**An ticéad ar fad**, lúide próiseáil cárta.",
+        "**An caidreamh leis an gcustaiméir.** Ar mhargadh, is leis an ardán an custaiméir — is minic nach féidir leat teagmháil a dhéanamh leis arís.",
+        "**Do phraghsanna.** Gan brú chun lascainí ardáin uile a mhaoiniú.",
+        "**Gan uasteorainn bhiachláir.** Díol an pláta roinnte €48 nach mairfeadh riamh ar liostáil mhargaidh.",
+        "**Scuaine chistine amháin.** Is féidir le horduithe ó do leathanach teacht ar an [scáileán cistine](route:/kitchen-display) céanna le gach rud eile, seachas ar dhara táibléad ar an gcuntar."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "An straitéis a oibríonn: an dá cheann, d'aon ghnó"
+    },
+    {
+      "type": "p",
+      "text": "Caith leis an margadh mar fháil chustaiméirí íoctha agus le do leathanach féin mar choinneáil. Íocann tú coimisiún chun bualadh le duine; ní leanann tú de bheith á íoc don chéad fiche cuairt eile."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Cineál ordaithe",
+        "An cainéal is fearr",
+        "Cén fáth"
+      ],
+      "rows": [
+        [
+          "Custaiméir nua, seachadadh",
+          "Margadh",
+          "Ní shroichfeá riamh é"
+        ],
+        [
+          "Custaiméir rialta",
+          "Do leathanach féin",
+          "Gan coimisiún ar dhuine a bhfuil aithne aige ort cheana"
+        ],
+        [
+          "Bailiú / beir leat",
+          "Do leathanach féin",
+          "Tá tú ag íoc as seachadadh nach n-úsáideann tú"
+        ],
+        [
+          "Orduithe móra grúpa",
+          "Do leathanach féin",
+          "Goilleann an coimisiún ar €150"
+        ],
+        [
+          "Oifigí agus lónadóireacht",
+          "Do leathanach féin",
+          "Athfhillteach, ardluach, gan gá le haimsiú"
+        ],
+        [
+          "Ithe ar an láthair",
+          "[Ordú QR](route:/order-taking)",
+          "Tá an custaiméir sa seomra cheana"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Conas orduithe rialta a bhogadh"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Cuir cárta i ngach mála seachadta le do sheoladh ordaithe dhírigh agus cúis shoiléir amháin é a úsáid. Sáraíonn caife saor in aisce nó lascaine bheag teachtaireacht doiléir.",
+        "Déan an praghas díreach beagán níos fearr, san áit a gceadaíonn do chonradh margaidh é. Seiceáil na téarmaí — cuireann cuid acu cosc ar phraghsanna níos ísle.",
+        "Bíodh an toradh cuardaigh agat. Nuair a chuardaíonn duine ainm do bhialainne móide \"ordú\", ba cheart gurb é do leathanach an chéad toradh, ní liostáil an mhargaidh.",
+        "Cuir an nasc ordaithe gach áit a bhfuil tú cheana: próifíl Google Business, bio Instagram, buntásc do shuímh, an cód QR ar an mbord.",
+        "Tabhair cúis do chustaiméirí bailithe an aip a scipeáil. Tá siad ag íoc táille seirbhíse as seirbhís nach n-úsáideann siad.",
+        "Coinnigh simplí é i ndáiríre. Má thógann ordú díreach níos mó tapálacha ná an aip, ní bhogann aon duine."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Lean uimhir amháin gach mí: sciar na n-orduithe a tháinig go díreach. Bogann formhór na n-áiteanna a thugann aird air ó bheagnach nialas go dtí idir 20% agus 40% laistigh de bhliain, agus ag coimisiún 30% is airgead fíor gach pointe."
+    },
+    {
+      "type": "h2",
+      "text": "Cathain fanacht ar an margadh amháin"
+    },
+    {
+      "type": "p",
+      "text": "Cistin dhorcha gan áitreabh, gan trácht coise agus gan aitheantas branda, tá sí ag ceannach aimsithe agus rud ar bith eile — is é an margadh an tsamhail ghnó. Mar an gcéanna, má dhíolann tú 15 ordú seachadta sa mhí, ní fiú an dua a bhaineann le dara cainéal na €40 a shábhálfá. Bí macánta faoi cé acu ceann tú."
+    },
+    {
+      "type": "cta",
+      "heading": "Glac orduithe gan an coimisiún",
+      "text": "Do leathanach ordaithe féin, ordú QR ag an mbord agus orduithe seachadta in aon scuaine chistine. Ó €9.90 sa mhí, gan choimisiún in aghaidh an ordaithe. 14 lá saor in aisce.",
+      "buttonLabel": "Féach ar ordú ar líne",
+      "routeKey": "/order-taking"
+    },
+    {
+      "type": "faq",
+      "heading": "Ceisteanna coitianta",
+      "items": [
+        {
+          "q": "Cé mhéad coimisiúin a ghearrann na haipeanna seachadta?",
+          "a": "Braitheann sé ar an tír, ar an gconradh agus ar cé acu an t-ardán a sheachadann. Is iad na socruithe bailithe amháin is saoire; is é an seachadadh iomlán le bolscaireacht is daoire, agus is minic a luaitear na rátaí poiblí sna fichidí nó sna tríochaidí. Seiceáil do chonradh féin."
+        },
+        {
+          "q": "Cé mhéad ordú díreach a theastaíonn uaim chun teacht ar an meá?",
+          "a": "An síntiús roinnte ar (meánordú × ráta coimisiúin). Ag €9.90 sa mhí, ordú €25 agus coimisiún 25%, sin faoi bhun dhá ordú sa mhí."
+        },
+        {
+          "q": "Ar cheart dom na haipeanna seachadta a fhágáil ar fad?",
+          "a": "De ghnáth níor cheart. Tugann siad céadchustaiméirí nach féidir leat a shroicheadh ar shlí eile. Is é an bua na horduithe rialta agus bailithe a bhogadh chuig do chainéal féin, ní éirí astu d'aon iarraidh."
+        },
+        {
+          "q": "An féidir liom níos lú a ghearradh ar mo shuíomh féin?",
+          "a": "Uaireanta — cuireann roinnt ardán srian ar phraghsanna níos ísle ina dtéarmaí. Léigh an conradh, agus má tá comhionannas praghais ag teastáil, bíodh iomaíocht agat le mír saor in aisce nó buntáiste dílseachta ina áit."
+        },
+        {
+          "q": "An dteastaíonn suíomh gréasáin uaim chun orduithe díreacha a ghlacadh?",
+          "a": "Ní theastaíonn. Tugann IQ Rest leathanach ordaithe óstáilte duit lena sheoladh féin, ar féidir leat nasc a dhéanamh leis ó Google, ó Instagram nó ó chód QR ar an mbord."
+        }
+      ]
+    }
+  ]
+}

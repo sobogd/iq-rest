@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "title": "Oma tellimisleht vs toidukullerirakendused: päris numbrid | IQ Rest",
+    "description": "Mida platvormi komisjon tellimuse kohta maksab, mitu tellimust oma kanalis katab kulud ja miks enamik restorane peaks kasutama mõlemat."
+  },
+  "card": {
+    "title": "Oma tellimisleht vs kullerirakendused: kuhu komisjon tegelikult läheb",
+    "excerpt": "Platvormid toovad kliente, keda sa iial ei tabaks, ja võtavad igaühelt osa. Siin on tasuvuspunkti arvutus ja realistlik viis korduvad tellimused üle tuua."
+  },
+  "h1": "Sinu oma veebitellimine versus kulleriplatvormid",
+  "intro": "Tavaline raamistus — rakendused on parasiidid, oma kanal on vabadus — on liiga lihtne. Platvormid toovad sulle tõesti kliente, keda sa poleks kunagi tabanud, ja sellel leitavusel on hind. Küsimus pole selles, kas neid kasutada, vaid millised tellimused millisesse kanalisse kuuluvad — ja selle arvutuse teed kümne minutiga.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Mis komisjon tegelikult on"
+    },
+    {
+      "type": "p",
+      "text": "Platvormide määrad erinevad riigiti, lepinguti ja selle järgi, kas kohale toimetab platvorm või sina. Ainult järeletulemise kokkulepped on odavaimad; täielik kohaletoimetamine esiletõstetud kohaga on kalleim ja nimetatud protsent liigub tavaliselt kahekümne või kolmekümne ja millegi kandis. Otsi oma leping välja ja leia päris number, sest kõik allolev sõltub sellest."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "25-eurose tellimuse puhul",
+        "Sulle jääb",
+        "Platvorm võtab"
+      ],
+      "rows": [
+        [
+          "15% komisjoni korral",
+          "21,25 €",
+          "3,75 €"
+        ],
+        [
+          "25% komisjoni korral",
+          "18,75 €",
+          "6,25 €"
+        ],
+        [
+          "30% komisjoni korral",
+          "17,50 €",
+          "7,50 €"
+        ],
+        [
+          "Sinu oma leht",
+          "25 € miinus kaardimaksed (umbes 0,50 €)",
+          "0 € komisjoni"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Umbes 30% toorainekulu vastu ei vähenda 30% komisjon su marginaali — see võtab sellest peaaegu kogu. Paljud kohad avastavad, et nende platvormitellimused on parimal juhul nullkasumiga käive, mis hoiab kööki hõivatud."
+    },
+    {
+      "type": "h2",
+      "text": "Tasuvuspunkti arvutus"
+    },
+    {
+      "type": "p",
+      "text": "Tellimissüsteem oma lehel maksab fikseeritud kuutasu. Arvuta, mitu tellimust peab üle liikuma, enne kui see end ära tasub:"
+    },
+    {
+      "type": "p",
+      "text": "**Vajalikud tellimused = kuutasu ÷ (keskmine tellimus × komisjonimäär)**"
+    },
+    {
+      "type": "p",
+      "text": "9,90 € kuus, keskmine tellimus 25 € ja 25% komisjon: 9,90 ÷ 6,25 = **1,6 tellimust kuus**. Kaks oma lehel võetud tellimust katavad kogu selle ülalpidamiskulu. Kõik pärast seda on marginaal, mille sa varem ära andsid."
+    },
+    {
+      "type": "note",
+      "text": "See osa üllatab inimesi. Tasuvuspunkt pole 50 ega 200 tellimust — see on üksikud tükid, sest ühe tellimuse komisjon vastab kuule tarkvarale."
+    },
+    {
+      "type": "h2",
+      "text": "Mida platvorm annab ja sinu leht ei anna"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Leitavus.** Inimesed sirvivad rakendust ilma kindla restoranita peas. Sinu leht jõuab ainult nendeni, kes juba teavad, et sa olemas oled.",
+        "**Kullerivõrgu**, kui sa ei taha kullereid palgata ega juhtida.",
+        "**Maksed, tagasimaksed ja klienditoe** lahendatuna, kaasa arvatud vaidlus külma pitsa üle.",
+        "**Usalduse esimesel tellimusel.** Võõras tellib pigem tuttavast rakendusest kui saidilt, mida ta pole kunagi näinud."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "See on päris toode ja väärt maksmist. Mida ei tasu, on maksta seda ikka ja jälle sama püsikliendi eest, kes su toitu juba tunneb ja telliks otse, kui sa talle viisi annaksid."
+    },
+    {
+      "type": "h2",
+      "text": "Mida oma kanal sulle annab"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Terve arve**, miinus kaarditasu.",
+        "**Kliendisuhte.** Platvormil kuulub klient platvormile — sageli ei saa sa temaga enam kunagi ühendust võtta.",
+        "**Sinu hinnad.** Mitte mingit survet rahastada platvormiüleseid allahindlusi.",
+        "**Menüül pole lage.** Müü 48-eurost jagamisvaagnat, mis platvormi nimekirjas kunagi ellu ei jääks.",
+        "**Ühe köögijärjekorra.** Sinu lehelt tulevad tellimused võivad jõuda samale [köögiekraanile](route:/kitchen-display) kui kõik muu, mitte teisele tahvelarvutile leti peal."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Strateegia, mis töötab: mõlemad, teadlikult"
+    },
+    {
+      "type": "p",
+      "text": "Kohtle platvormi tasulise kliendihankena ja oma lehte hoidmisena. Sa maksad komisjoni, et kellegagi kohtuda; sa ei jätka selle maksmist järgmise kahekümne külastuse eest."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Tellimuse tüüp",
+        "Parim kanal",
+        "Miks"
+      ],
+      "rows": [
+        [
+          "Esmakordne klient, kohaletoimetamine",
+          "Platvorm",
+          "Sa poleks temani kunagi jõudnud"
+        ],
+        [
+          "Korduv klient",
+          "Sinu oma leht",
+          "Ei mingit komisjoni kellegi eest, kes sind juba teab"
+        ],
+        [
+          "Järeletulemine / kaasa",
+          "Sinu oma leht",
+          "Maksad kohaletoimetamise eest, mida ei kasuta"
+        ],
+        [
+          "Suured grupitellimused",
+          "Sinu oma leht",
+          "150 euro komisjon teeb haiget"
+        ],
+        [
+          "Kontorid ja toitlustus",
+          "Sinu oma leht",
+          "Korduv, kõrge väärtus, leitavust pole vaja"
+        ],
+        [
+          "Kohapeal söömine",
+          "[QR-tellimine](route:/order-taking)",
+          "Klient on juba saalis"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kuidas korduvad tellimused üle tuua"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Pane igasse kohaletoimetamise kotti kaart oma otsetellimise aadressi ja ühe selge põhjusega seda kasutada. Tasuta kohv või väike soodustus võidab ähmase sõnumi.",
+        "Tee otsehind pisut paremaks seal, kus platvormileping seda lubab. Kontrolli tingimusi — mõni keelab alla löömise.",
+        "Võta otsingutulemus endale. Kui keegi otsib su restorani nime pluss \"telli\", peab esimesena olema sinu leht, mitte platvormi kirje.",
+        "Pane tellimislink kõikjale, kus sa juba oled: Google'i ettevõtteprofiil, Instagrami bio, oma saidi jalus, laual olev QR-kood.",
+        "Anna järeletulijatele põhjus rakendus vahele jätta. Nad maksavad teenustasu teenuse eest, mida ei kasuta.",
+        "Hoia see tõeliselt lihtne. Kui otse tellimine nõuab rohkem puudutusi kui rakendus, ei koli keegi."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Jälgi ühte numbrit kuus: otse tulnud tellimuste osakaalu. Enamik tähelepanelikke kohti viib selle aastaga peaaegu nullist 20-40 protsendile, ja 30% komisjoni juures on iga punkt päris raha."
+    },
+    {
+      "type": "h2",
+      "text": "Millal jääda ainult platvormile"
+    },
+    {
+      "type": "p",
+      "text": "Pimeköök ilma ruumi, tänavaliikluse ja tuntud brändita ostab leitavust ja ei midagi muud — platvorm ongi ärimudel. Samuti: kui müüd 15 kullertellimust kuus, ei ole teise kanali vaev seda 40 eurot väärt. Ole aus selles, kumb sa oled."
+    },
+    {
+      "type": "cta",
+      "heading": "Võta tellimusi ilma komisjonita",
+      "text": "Sinu oma tellimisleht, QR-tellimine lauas ja kullertellimused ühes köögijärjekorras. Alates 9,90 € kuus, ilma tellimusepõhise komisjonita. 14 päeva tasuta.",
+      "buttonLabel": "Vaata veebitellimist",
+      "routeKey": "/order-taking"
+    },
+    {
+      "type": "faq",
+      "heading": "Korduma kippuvad küsimused",
+      "items": [
+        {
+          "q": "Kui palju komisjoni kullerirakendused võtavad?",
+          "a": "See sõltub riigist, lepingust ja sellest, kas platvorm toimetab kohale. Ainult järeletulemise kokkulepped on odavaimad; täielik kohaletoimetamine reklaamiga on kalleim ja nimetatud määrad liiguvad tavaliselt kahekümne või kolmekümne ja millegi kandis. Kontrolli oma lepingut."
+        },
+        {
+          "q": "Mitu otsetellimust on nulli jõudmiseks vaja?",
+          "a": "Kuutasu jagatud (keskmine tellimus × komisjonimäär). 9,90 € kuus, 25-eurone tellimus ja 25% komisjon: alla kahe tellimuse kuus."
+        },
+        {
+          "q": "Kas ma peaksin kullerirakendustest täiesti lahkuma?",
+          "a": "Tavaliselt mitte. Nad toovad esmakordseid kliente, keda sa muidu ei tabaks. Võit on korduvate ja järeletulemistellimuste toomine oma kanalisse, mitte järsk lõpetamine."
+        },
+        {
+          "q": "Kas ma tohin oma lehel vähem küsida?",
+          "a": "Vahel — mitu platvormi piirab tingimustes mujal odavamalt müümist. Loe leping läbi ja kui nõutakse hinnapariteeti, konkureeri pigem tasuta tootega või püsikliendisoodustusega."
+        },
+        {
+          "q": "Kas otsetellimuste jaoks on vaja veebilehte?",
+          "a": "Ei. IQ Rest annab sulle majutatud tellimislehe oma aadressiga, millele saad viidata Google'ist, Instagramist või laual olevast QR-koodist."
+        }
+      ]
+    }
+  ]
+}
