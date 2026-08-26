@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "Nedolasci u restoran: koliko koštaju i kako ih smanjiti | IQ Rest",
+    "description": "Izračunajte koliko vas nedolasci koštaju mjesečno i koje mjere ih stvarno smanjuju: potvrde, podsjetnici, pologi i prebukiranje."
+  },
+  "card": {
+    "title": "Nedolasci: aritmetika i ono što ih stvarno smanjuje",
+    "excerpt": "Četiri prazna stola u subotu su mjesečni proračun za softver spaljen u jednoj večeri. Evo kako izmjeriti vlastitu stopu nedolazaka i koje mjere vrijede otpora."
+  },
+  "h1": "Nedolasci u restoran: koliko koštaju i što ih stvarno smanjuje",
+  "intro": "Nedolazak vas košta dvaput: goste koje niste uslužili i one bez rezervacije koje ste odbili da biste držali stol. Većina vlasnika ima osjećaj koliko je loše i nijedan broj. Prvo nabavite broj, jer on odlučuje isplati li se zbog toga gnjaviti goste.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Izračunajte vlastiti broj"
+    },
+    {
+      "type": "p",
+      "text": "Brojite goste koji nisu došli četiri tjedna i pomnožite s prosječnom potrošnjom. Lokal sa 120 rezerviranih mjesta tjedno i 8% nedolazaka gubi oko 10 gostiju tjedno. Po 30 € svaki to je 300 € tjedno, dakle otprilike **1.300 € mjesečno**."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Rezervirano gostiju/tjedan",
+        "Stopa nedolazaka",
+        "Izgubljeno gostiju/mjesec",
+        "Gubitak pri 30 €"
+      ],
+      "rows": [
+        [
+          "80",
+          "5%",
+          "16",
+          "480 €"
+        ],
+        [
+          "120",
+          "8%",
+          "42",
+          "1.260 €"
+        ],
+        [
+          "200",
+          "10%",
+          "87",
+          "2.610 €"
+        ],
+        [
+          "200",
+          "15%",
+          "130",
+          "3.900 €"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Dodajte stolove koje ste držali. Subotnji nedolazak u 20:30 obično znači da ste u 20:15 odbili gosta bez rezervacije, pa je u najjačim večerima stvarni trošak bliži dvostrukom iznosu."
+    },
+    {
+      "type": "h2",
+      "text": "Zašto se ljudi ne pojave"
+    },
+    {
+      "type": "p",
+      "text": "Rijetko iz zlobe. Najčešće je rezervacija postala apstraktna. Netko je rezervirao prije jedanaest dana s mobitela, zaboravio, dogovorio drugo, a sad je otkazivanje neugodno pa ne učini ništa. Svaka mjera koja radi pogađa jednu od te tri točke: učinite rezervaciju konkretnom, olakšajte otkazivanje ili neka nedolazak nešto košta."
+    },
+    {
+      "type": "h2",
+      "text": "Mjere, poredane po povratu u odnosu na otpor"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Mjera",
+        "Učinak",
+        "Otpor za gosta"
+      ],
+      "rows": [
+        [
+          "Potvrda u trenutku rezervacije",
+          "Temelj",
+          "Nikakav"
+        ],
+        [
+          "Podsjetnik dan ranije",
+          "Velik",
+          "Nikakav"
+        ],
+        [
+          "Otkazivanje jednim dodirom u podsjetniku",
+          "Velik",
+          "Nikakav"
+        ],
+        [
+          "Potvrda istog dana za velike grupe",
+          "Umjeren",
+          "Nizak"
+        ],
+        [
+          "Blokirana kartica, naplata samo pri nedolasku",
+          "Velik",
+          "Srednji"
+        ],
+        [
+          "Polog po osobi",
+          "Najveći",
+          "Visok"
+        ],
+        [
+          "Prebukiranje udarnih termina",
+          "Kompenzira",
+          "Rizično ako promašite"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Počnite s dvije besplatne"
+    },
+    {
+      "type": "p",
+      "text": "Podsjetnik dan ranije, s poveznicom za otkazivanje koju gost može dodirnuti bez razgovora, obavi većinu posla. Poveznica za otkazivanje djeluje protuintuitivno — kao da pozivate na otkazivanje — ali stol oslobođen u 18:00 dan ranije je stol koji možete prodati. Nedolazak je ista izgubljena rezervacija, samo bez najave."
+    },
+    {
+      "type": "p",
+      "text": "Šaljite ga 24 sata unaprijed za rezervacije radnim danom, a ujutro za vikend večeri. Neka bude kratak: ime, vrijeme, broj osoba, jedan redak za potvrdu, jedan za otkazivanje."
+    },
+    {
+      "type": "h2",
+      "text": "Kada tražiti karticu"
+    },
+    {
+      "type": "p",
+      "text": "Jamstva karticom rade i koštaju vas rezervacija. Primijeniti ih na svaki stol utorkom je loša trgovina. Primijeniti ih na grupe od šest i više, na subotu 20:00-21:00 i na doček Nove godine obično je dobra: to su termini u kojima se nedolazak ne može nadoknaditi."
+    },
+    {
+      "type": "note",
+      "text": "Ako naplaćujete naknadu za nedolazak, recite to jasnim jezikom u trenutku rezervacije, u potvrdi i u podsjetniku. Prigovor gotovo nikad nije zbog naknade, nego zbog toga što nisu bili obaviješteni. Provjerite nacionalna potrošačka pravila o terećenju kartice za neizvršenu uslugu."
+    },
+    {
+      "type": "h2",
+      "text": "Prebukiranje, oprezno"
+    },
+    {
+      "type": "p",
+      "text": "Ako vam je stopa nedolazaka stabilnih 10%, uzeti 10% više rezervacija u udarnom terminu je aritmetika, ne kockanje. Rizik je raspršenje: one večeri kad dođu svi, ljudi vam stoje na vratima. Prebukirajte samo termin koji možete apsorbirati — gdje postoji šank, gdje sljedeće posjedanje ima zraka — i nikad za velike grupe, jer stol za osam se ne improvizira."
+    },
+    {
+      "type": "h2",
+      "text": "Plan od četiri tjedna"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Tjedan 1: brojite nedolaske kako treba. Jedan list za crtice, svaka smjena. Trebate polaznu vrijednost prije nego što išta mijenjate.",
+        "Tjedan 2: uključite trenutnu potvrdu rezervacije, ako je već nemate.",
+        "Tjedan 3: dodajte podsjetnik s otkazivanjem u jednom dodiru. Izmjerite razliku u odnosu na tjedan 1.",
+        "Tjedan 4: primijenite jamstvo karticom samo na najgori termin — obično subota navečer i grupe od šest i više.",
+        "Zatim ocijenite. Ako je stopa ispod 5%, stanite ovdje; daljnji otpor košta više nego što donosi."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Vodite kratku listu čekanja za udarne termine i javite joj čim se stol oslobodi. Pola vrijednosti lakog otkazivanja je u tome da imate kome dati stol unutar sat vremena."
+    },
+    {
+      "type": "h2",
+      "text": "Što kad ipak dođu, ali kasno"
+    },
+    {
+      "type": "p",
+      "text": "Odredite unaprijed vrijeme čekanja i napišite ga u potvrdu — 15 minuta je standard. Objavljeno pravilo dopušta da se stol oslobodi u 20:45 bez izmišljanja pravila na licu mjesta i ne ostavlja gostu razlog za raspravu."
+    },
+    {
+      "type": "cta",
+      "heading": "Rezervacije koje se same potvrđuju i podsjećaju",
+      "text": "Primajte rezervacije 24 sata dnevno, šaljite potvrde i podsjetnike automatski i pustite goste da otkažu jednim dodirom kako bi se stol ponovno prodao. 14 dana besplatno.",
+      "buttonLabel": "Pogledajte rezervacije stolova",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Česta pitanja",
+      "items": [
+        {
+          "q": "Koja je stopa nedolazaka normalna za restoran?",
+          "a": "Većina lokala koji je mjere završi između 5% i 15%, više kod velikih grupa, vikend udarnih termina i rezervacija napravljenih davno unaprijed. Izmjerite vlastitu kroz četiri tjedna umjesto da nagađate."
+        },
+        {
+          "q": "Smanjuju li podsjetnici stvarno nedolaske?",
+          "a": "To je mjera s najvećim povratom jer je većina nedolazaka zaboravnost, a ne namjera. Spojite podsjetnik s poveznicom za otkazivanje u jednom dodiru kako bi zaboravljena rezervacija postala oslobođen stol."
+        },
+        {
+          "q": "Smijem li naplatiti naknadu za nedolazak?",
+          "a": "U mnogim državama da, pod uvjetom da je gost to jasno prihvatio pri rezervaciji. Pravila se razlikuju po državama, pa provjerite lokalno potrošačko pravo i navedite uvjet u potvrdi."
+        },
+        {
+          "q": "Trebam li tražiti polog?",
+          "a": "Za velike grupe i udarne datume često da. Za obični utorak košta vas više rezervacija nego što spasi gostiju."
+        },
+        {
+          "q": "Je li prebukiranje dobra ideja?",
+          "a": "Samo gdje je vaša stopa nedolazaka stabilna i izmjerena, samo u terminima gdje ljude imate gdje smjestiti i nikad za velike grupe."
+        }
+      ]
+    }
+  ]
+}

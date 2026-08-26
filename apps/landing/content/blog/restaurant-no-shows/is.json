@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "Þegar gestir mæta ekki: kostnaður og lausnir | IQ Rest",
+    "description": "Reiknaðu hvað gestir sem mæta ekki kosta veitingastaðinn á mánuði og hvaða aðgerðir draga raunverulega úr því: staðfestingar, áminningar, staðfestingargjöld og yfirbókun."
+  },
+  "card": {
+    "title": "Gestir sem mæta ekki: reikningurinn og það sem virkar",
+    "excerpt": "Fjögur tóm borð á laugardegi eru mánaðarfjárveiting fyrir hugbúnað brennd upp á einu kvöldi. Svona mælir þú þitt eigið hlutfall og hvaða aðgerðir eru núningsins virði."
+  },
+  "h1": "Gestir sem mæta ekki: hvað það kostar og hvað dregur raunverulega úr því",
+  "intro": "Bókun sem enginn mætir í kostar þig tvisvar: gestina sem þú þjónaðir ekki og þá sem þú vísaðir frá til að halda borðinu. Flestir rekstraraðilar hafa tilfinningu fyrir því hversu slæmt þetta er og enga tölu. Náðu í töluna fyrst, því hún ræður því hvort þetta sé þess virði að ónáða gestina þína.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Reiknaðu þína eigin tölu"
+    },
+    {
+      "type": "p",
+      "text": "Teldu gesti sem mættu ekki í fjórar vikur og margfaldaðu með meðaleyðslu. Staður með 120 bókaða gesti á viku og 8% mætingarbrest tapar um 10 gestum á viku. Á 30 € hvern eru það 300 € á viku, eða um það bil **1.300 € á mánuði**."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Bókaðir gestir/viku",
+        "Hlutfall sem mætir ekki",
+        "Tapaðir gestir/mánuði",
+        "Tap við 30 €"
+      ],
+      "rows": [
+        [
+          "80",
+          "5%",
+          "16",
+          "480 €"
+        ],
+        [
+          "120",
+          "8%",
+          "42",
+          "1.260 €"
+        ],
+        [
+          "200",
+          "10%",
+          "87",
+          "2.610 €"
+        ],
+        [
+          "200",
+          "15%",
+          "130",
+          "3.900 €"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Bættu við borðunum sem þú hélst frátekin. Bókun sem enginn mætir í á laugardegi klukkan 20:30 þýðir yfirleitt að þú vísaðir gesti frá klukkan 20:15, svo raunkostnaðurinn er nær tvöfaldur á fjölmennustu kvöldunum."
+    },
+    {
+      "type": "h2",
+      "text": "Af hverju fólk mætir ekki"
+    },
+    {
+      "type": "p",
+      "text": "Sjaldan af illkvittni. Oftast er bókunin orðin óhlutbundin. Einhver bókaði fyrir ellefu dögum í símanum, gleymdi því, gerði önnur plön, og nú er vandræðalegt að afboða, svo hann gerir ekkert. Sérhver aðgerð sem virkar snertir eitt af þessum þremur atriðum: gerðu bókunina áþreifanlega, gerðu afbókun auðvelda, eða láttu það kosta eitthvað að mæta ekki."
+    },
+    {
+      "type": "h2",
+      "text": "Aðgerðirnar, raðaðar eftir ávinningi á móti núningi"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Aðgerð",
+        "Áhrif",
+        "Núningur fyrir gestinn"
+      ],
+      "rows": [
+        [
+          "Staðfesting um leið og bókað er",
+          "Grunnur",
+          "Enginn"
+        ],
+        [
+          "Áminning daginn áður",
+          "Mikil",
+          "Enginn"
+        ],
+        [
+          "Afbókun með einu ýti í áminningunni",
+          "Mikil",
+          "Enginn"
+        ],
+        [
+          "Staðfesting samdægurs fyrir stóra hópa",
+          "Nokkur",
+          "Lítill"
+        ],
+        [
+          "Kort tekið frá, aðeins skuldfært ef ekki er mætt",
+          "Mikil",
+          "Meðal"
+        ],
+        [
+          "Staðfestingargjald á mann",
+          "Mest",
+          "Hár"
+        ],
+        [
+          "Yfirbókun á álagstímum",
+          "Vegur upp á móti",
+          "Áhættusamt ef þú misreiknar"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Byrjaðu á þeim tveimur sem kosta ekkert"
+    },
+    {
+      "type": "p",
+      "text": "Áminning daginn áður, með afbókunarhlekk sem gesturinn getur ýtt á án samtals, vinnur mest af verkinu. Afbókunarhlekkurinn virðist öfugsnúinn — þú ert að bjóða upp á afbókun — en borð sem losnar klukkan 18:00 daginn áður er borð sem þú getur selt. Að mæta ekki er sama tapaða bókunin, bara án fyrirvara."
+    },
+    {
+      "type": "p",
+      "text": "Sendu hana 24 tímum fyrir bókanir á virkum dögum og að morgni fyrir helgarkvöld. Hafðu hana stutta: nafn, tími, fjöldi, ein lína til að staðfesta og ein til að afboða."
+    },
+    {
+      "type": "h2",
+      "text": "Hvenær á að biðja um kort"
+    },
+    {
+      "type": "p",
+      "text": "Kortatryggingar virka og þær kosta þig bókanir. Að setja hana á hvert borð á þriðjudegi eru slæm skipti. Að setja hana á hópa sex eða fleiri, á laugardag 20:00-21:00 og á gamlárskvöld eru yfirleitt góð skipti: það eru tímarnir þar sem tapið vinnst ekki upp."
+    },
+    {
+      "type": "note",
+      "text": "Ef þú rukkar gjald fyrir að mæta ekki, segðu það á venjulegu máli við bókun, í staðfestingunni og í áminningunni. Kvörtunin snýst nánast aldrei um gjaldið, heldur um að hafa ekki verið sagt frá því. Athugaðu neytendareglur í þínu landi um að skuldfæra kort fyrir þjónustu sem var ekki veitt."
+    },
+    {
+      "type": "h2",
+      "text": "Yfirbókun, varlega"
+    },
+    {
+      "type": "p",
+      "text": "Ef hlutfallið þitt er stöðug 10% er það reikningur en ekki fjárhættuspil að taka 10% fleiri bókanir á álagstímanum. Áhættan er breytileikinn: kvöldið sem allir mæta stendur fólk í dyrunum. Yfirbókaðu aðeins þann tíma sem þú ræður við — þar sem barsvæði er til staðar, þar sem næsta seta hefur svigrúm — og aldrei fyrir stóra hópa, því borð fyrir átta spinnur maður ekki upp."
+    },
+    {
+      "type": "h2",
+      "text": "Fjögurra vikna áætlun"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Vika 1: teldu almennilega. Eitt talningarblað, hver vakt. Þú þarft grunnlínuna áður en þú breytir nokkru.",
+        "Vika 2: kveiktu á tafarlausri bókunarstaðfestingu, ef hún er ekki þegar til.",
+        "Vika 3: bættu við áminningu með afbókun í einu ýti. Mældu muninn frá viku 1.",
+        "Vika 4: settu kortatryggingu aðeins á versta tímann — yfirleitt laugardagskvöld og hópa sex eða fleiri.",
+        "Farðu svo yfir stöðuna. Sé hlutfallið undir 5%, hættu hér; meiri núningur kostar meira en hann sparar."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Haltu stuttum biðlista fyrir álagstímana og sendu skilaboð um leið og borð losnar. Helmingur virðisins af auðveldri afbókun felst í því að eiga einhvern til að gefa borðið innan klukkustundar."
+    },
+    {
+      "type": "h2",
+      "text": "Hvað á að gera þegar þeir mæta — bara of seint"
+    },
+    {
+      "type": "p",
+      "text": "Ákveddu biðtímann fyrir fram og skrifaðu hann í staðfestinguna — 15 mínútur er venjan. Yfirlýst regla leyfir gestgjafa að losa borð klukkan 20:45 án þess að finna upp reglu á staðnum og gefur gestinum enga ástæðu til að þrátta."
+    },
+    {
+      "type": "cta",
+      "heading": "Bókanir sem staðfesta og minna á sig sjálfar",
+      "text": "Taktu við bókunum allan sólarhringinn, sendu staðfestingar og áminningar sjálfvirkt og leyfðu gestum að afboða með einu ýti svo borðið seljist aftur. 14 dagar frítt.",
+      "buttonLabel": "Skoða borðabókanir",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Algengar spurningar",
+      "items": [
+        {
+          "q": "Hvað er eðlilegt hlutfall gesta sem mæta ekki?",
+          "a": "Flestir staðir sem mæla lenda á milli 5% og 15%, hærra hjá stórum hópum, á álagstímum um helgar og í bókunum sem gerðar eru löngu fyrir fram. Mældu þitt eigið í fjórar vikur í stað þess að giska."
+        },
+        {
+          "q": "Draga áminningar raunverulega úr þessu?",
+          "a": "Þær eru aðgerðin með mesta ávinninginn, því flestir sem mæta ekki gleymdu því frekar en að ætla sér það. Paraðu áminninguna við afbókunarhlekk í einu ýti svo gleymda bókunin verði að lausu borði."
+        },
+        {
+          "q": "Má ég rukka gjald ef fólk mætir ekki?",
+          "a": "Í mörgum löndum já, að því gefnu að gesturinn hafi samþykkt það skýrt við bókun. Reglur eru mismunandi eftir löndum, svo athugaðu neytendalög á þínu svæði og tilgreindu skilmálann í staðfestingunni."
+        },
+        {
+          "q": "Á ég að biðja um staðfestingargjald?",
+          "a": "Fyrir stóra hópa og álagsdaga oft já. Á venjulegum þriðjudegi kostar það þig fleiri bókanir en það bjargar gestum."
+        },
+        {
+          "q": "Er yfirbókun góð hugmynd?",
+          "a": "Aðeins þar sem hlutfallið þitt er stöðugt og mælt, aðeins á tímum þar sem þú hefur einhvers staðar að koma fólki fyrir, og aldrei fyrir stóra hópa."
+        }
+      ]
+    }
+  ]
+}

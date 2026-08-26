@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "No-shows al restaurant: què costen i com reduir-los | IQ Rest",
+    "description": "Calcula què et costen els no-shows cada mes i quines mesures els redueixen de debò: confirmacions, recordatoris, dipòsits i overbooking."
+  },
+  "card": {
+    "title": "No-shows: l'aritmètica i el que realment els redueix",
+    "excerpt": "Quatre taules buides un dissabte són un pressupost mensual de programari cremat en una nit. Així mesures la teva taxa de no-show i quines solucions compensen la fricció."
+  },
+  "h1": "No-shows al restaurant: què costen i què els redueix de debò",
+  "intro": "Un no-show et costa dues vegades: els comensals que no vas servir i la gent sense reserva que vas rebutjar per mantenir la taula. La majoria de propietaris té una sensació de com de greu és i cap número. Aconsegueix primer el número, perquè és el que decideix si val la pena molestar els teus clients per això.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Calcula el teu propi número"
+    },
+    {
+      "type": "p",
+      "text": "Compta els comensals que no es presenten durant quatre setmanes i multiplica-ho per la teva despesa mitjana. Un local amb 120 comensals reservats per setmana i un 8% de no-shows perd uns 10 comensals setmanals. A 30 € cadascun són 300 € per setmana, és a dir, aproximadament **1.300 € al mes**."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Comensals reservats/setmana",
+        "Taxa de no-show",
+        "Comensals perduts/mes",
+        "Pèrdua a 30 €"
+      ],
+      "rows": [
+        [
+          "80",
+          "5%",
+          "16",
+          "480 €"
+        ],
+        [
+          "120",
+          "8%",
+          "42",
+          "1.260 €"
+        ],
+        [
+          "200",
+          "10%",
+          "87",
+          "2.610 €"
+        ],
+        [
+          "200",
+          "15%",
+          "130",
+          "3.900 €"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Suma-hi les taules que vas reservar. Un no-show de dissabte a les 20.30 sol voler dir que a les 20.15 vas rebutjar algú sense reserva, així que el cost real s'acosta al doble de la xifra visible en les nits més fortes."
+    },
+    {
+      "type": "h2",
+      "text": "Per què la gent no ve"
+    },
+    {
+      "type": "p",
+      "text": "Poques vegades per mala fe. Gairebé sempre perquè la reserva s'ha tornat abstracta. Algú va reservar fa onze dies des del mòbil, ho va oblidar, va fer altres plans, i ara cancel·lar li fa vergonya, així que no fa res. Tota solució eficaç actua sobre un d'aquests tres punts: fer la reserva concreta, fer fàcil cancel·lar o fer que no venir costi alguna cosa."
+    },
+    {
+      "type": "h2",
+      "text": "Les mesures, ordenades per rendiment davant la fricció"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Mesura",
+        "Efecte",
+        "Fricció per al client"
+      ],
+      "rows": [
+        [
+          "Confirmació en el moment de reservar",
+          "Base",
+          "Cap"
+        ],
+        [
+          "Recordatori el dia abans",
+          "Gran",
+          "Cap"
+        ],
+        [
+          "Cancel·lar amb un toc al recordatori",
+          "Gran",
+          "Cap"
+        ],
+        [
+          "Confirmar el mateix dia per a grups grans",
+          "Moderat",
+          "Baixa"
+        ],
+        [
+          "Targeta retinguda, només es cobra en cas de no-show",
+          "Gran",
+          "Mitjana"
+        ],
+        [
+          "Dipòsit per persona",
+          "El més gran",
+          "Alta"
+        ],
+        [
+          "Overbooking a les franges punta",
+          "Compensa",
+          "Arriscat si t'equivoques"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Comença per les dues gratuïtes"
+    },
+    {
+      "type": "p",
+      "text": "Un recordatori el dia abans, amb un enllaç de cancel·lació que el client pot prémer sense parlar amb ningú, fa la major part de la feina. L'enllaç de cancel·lar sembla contraintuïtiu —convides a cancel·lar— però una taula alliberada a les 18.00 del dia abans és una taula que pots vendre. Un no-show és la mateixa reserva perduda, però sense avís."
+    },
+    {
+      "type": "p",
+      "text": "Envia'l 24 hores abans en reserves entre setmana i el mateix matí per a les nits de cap de setmana. Que sigui curt: nom, hora, nombre de persones, una línia per confirmar i una altra per cancel·lar."
+    },
+    {
+      "type": "h2",
+      "text": "Quan demanar targeta"
+    },
+    {
+      "type": "p",
+      "text": "Les garanties amb targeta funcionen i et costen reserves. Aplicar-la a totes les taules un dimarts és un mal tracte. Aplicar-la a grups de sis o més, al dissabte de 20.00 a 21.00 i a Cap d'Any sol ser un bon tracte: són les franges on un no-show no es recupera."
+    },
+    {
+      "type": "note",
+      "text": "Si cobres una penalització per no presentar-se, digues-ho en llenguatge clar en el moment de reservar, a la confirmació i al recordatori. La queixa gairebé mai és pel càrrec, sinó per no haver estat avisat. Revisa la normativa de consum del teu país sobre cobrar targetes per serveis no prestats."
+    },
+    {
+      "type": "h2",
+      "text": "Overbooking, amb cura"
+    },
+    {
+      "type": "p",
+      "text": "Si la teva taxa de no-show és un 10% estable, acceptar un 10% més de reserves a la franja punta és aritmètica, no aposta. El risc és la variància: la nit que vénen tots, tens gent dreta a la porta. Fes overbooking només a la franja que pots absorbir —on hi ha barra, on el torn següent té marge— i mai amb grups grans, perquè una taula per a vuit no s'improvisa."
+    },
+    {
+      "type": "h2",
+      "text": "Un pla de quatre setmanes"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Setmana 1: compta bé els no-shows. Un full de recompte, a cada servei. Necessites la base abans de canviar res.",
+        "Setmana 2: activa una confirmació instantània de la reserva, si encara no en tens.",
+        "Setmana 3: afegeix un recordatori amb enllaç de cancel·lació en un toc. Mesura la diferència respecte a la setmana 1.",
+        "Setmana 4: aplica garantia amb targeta només a la teva pitjor franja —normalment dissabte al vespre i grups de sis o més.",
+        "Després revisa-ho. Si la taxa està per sota del 5%, para aquí; més fricció costa més del que estalvia."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Mantén una llista d'espera curta per a les franges punta i escriu-hi quan s'alliberi una taula. La meitat del valor d'una cancel·lació fàcil és tenir a qui donar la taula dins de l'hora."
+    },
+    {
+      "type": "h2",
+      "text": "Què fer quan sí que vénen, però tard"
+    },
+    {
+      "type": "p",
+      "text": "Decideix el marge de cortesia per endavant i escriu-lo a la confirmació —15 minuts és l'estàndard. Una política declarada permet alliberar una taula a les 20.45 sense inventar-se una regla sobre la marxa i deixa el client sense motiu per discutir."
+    },
+    {
+      "type": "cta",
+      "heading": "Reserves que es confirmen i es recorden soles",
+      "text": "Accepta reserves 24/7, envia confirmacions i recordatoris automàticament i deixa que els clients cancel·lin amb un toc perquè la taula es torni a vendre. 14 dies gratis.",
+      "buttonLabel": "Veure les reserves de taula",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Preguntes freqüents",
+      "items": [
+        {
+          "q": "Quina és una taxa de no-show normal en un restaurant?",
+          "a": "La majoria de locals que la mesuren se situen entre el 5% i el 15%, més alta en grups grans, franges punta de cap de setmana i reserves fetes amb molta antelació. Mesura la teva durant quatre setmanes en lloc de suposar-la."
+        },
+        {
+          "q": "Els recordatoris redueixen realment els no-shows?",
+          "a": "Són la mesura de més rendiment disponible, perquè la majoria de no-shows són oblit i no intenció. Combina el recordatori amb un enllaç de cancel·lació en un toc perquè la reserva oblidada esdevingui una taula alliberada."
+        },
+        {
+          "q": "Puc cobrar una penalització per no presentar-se?",
+          "a": "En molts països sí, sempre que el client hi hagi accedit clarament en el moment de reservar. Les normes varien per país, així que consulta la llei de consum local i indica la política a la confirmació."
+        },
+        {
+          "q": "Hauria de demanar dipòsit?",
+          "a": "Per a grups grans i dates punta, sovint sí. Un dimarts corrent et costa més reserves de les que salva comensals."
+        },
+        {
+          "q": "És bona idea fer overbooking?",
+          "a": "Només on la teva taxa de no-show sigui estable i mesurada, només a franges on tinguis on col·locar la gent, i mai amb grups grans."
+        }
+      ]
+    }
+  ]
+}

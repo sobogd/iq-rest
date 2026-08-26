@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "No-show v reštaurácii: koľko stojí a ako ho znížiť | IQ Rest",
+    "description": "Vypočítajte, koľko vás no-show stojí mesačne, a spoznajte opatrenia, ktoré ho naozaj znižujú: potvrdenia, pripomienky, zálohy a overbooking."
+  },
+  "card": {
+    "title": "No-show: aritmetika a to, čo ho naozaj znižuje",
+    "excerpt": "Štyri prázdne stoly v sobotu sú mesačný rozpočet na softvér spálený za jeden večer. Takto zmeriate vlastnú mieru no-show a ktoré opatrenia stoja za trenie."
+  },
+  "h1": "No-show v reštaurácii: koľko stojí a čo ho naozaj znižuje",
+  "intro": "No-show vás stojí dvakrát: hostí, ktorých ste neobslúžili, a hostí z ulice, ktorých ste odmietli, aby ste stôl udržali. Väčšina majiteľov má pocit, aké je to zlé, a žiadne číslo. Najprv si to číslo zaobstarajte, lebo práve ono rozhodne, či sa kvôli tomu oplatí hostí obťažovať.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Vypočítajte si vlastné číslo"
+    },
+    {
+      "type": "p",
+      "text": "Štyri týždne počítajte kuverty, ktoré neprišli, a vynásobte priemernou útratou. Podnik so 120 rezervovanými kuvertmi týždenne a 8% no-show stráca zhruba 10 kuvertov týždenne. Po 30 € je to 300 € týždenne, teda asi **1 300 € mesačne**."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Rezervované kuverty/týždeň",
+        "Miera no-show",
+        "Stratené kuverty/mesiac",
+        "Strata pri 30 €"
+      ],
+      "rows": [
+        [
+          "80",
+          "5%",
+          "16",
+          "480 €"
+        ],
+        [
+          "120",
+          "8%",
+          "42",
+          "1 260 €"
+        ],
+        [
+          "200",
+          "10%",
+          "87",
+          "2 610 €"
+        ],
+        [
+          "200",
+          "15%",
+          "130",
+          "3 900 €"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Pripočítajte stoly, ktoré ste držali. Sobotný no-show o 20:30 zvyčajne znamená, že ste o 20:15 odmietli hosťa bez rezervácie, takže v najsilnejšie večery sú skutočné náklady bližšie k dvojnásobku uvedeného čísla."
+    },
+    {
+      "type": "h2",
+      "text": "Prečo ľudia neprídu"
+    },
+    {
+      "type": "p",
+      "text": "Zriedka zo zlej vôle. Väčšinou sa rezervácia stala abstraktnou. Niekto rezervoval pred jedenástimi dňami z mobilu, zabudol, dohodol sa inak, a teraz je rušiť trápne, tak neurobí nič. Každé fungujúce opatrenie mieri na jeden z troch bodov: urobiť rezerváciu konkrétnou, uľahčiť zrušenie, alebo zariadiť, aby nedostavenie sa niečo stálo."
+    },
+    {
+      "type": "h2",
+      "text": "Opatrenia zoradené podľa výnosu voči treniu"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Opatrenie",
+        "Účinok",
+        "Trenie pre hosťa"
+      ],
+      "rows": [
+        [
+          "Potvrdenie v okamihu rezervácie",
+          "Základ",
+          "Žiadne"
+        ],
+        [
+          "Pripomienka deň vopred",
+          "Veľký",
+          "Žiadne"
+        ],
+        [
+          "Zrušenie jedným klepnutím v pripomienke",
+          "Veľký",
+          "Žiadne"
+        ],
+        [
+          "Potvrdenie v deň návštevy pri veľkých skupinách",
+          "Stredný",
+          "Nízke"
+        ],
+        [
+          "Blokácia karty, strhnutie len pri no-show",
+          "Veľký",
+          "Stredné"
+        ],
+        [
+          "Záloha na osobu",
+          "Najväčší",
+          "Vysoké"
+        ],
+        [
+          "Overbooking v špičkových slotoch",
+          "Kompenzuje",
+          "Riskantné pri chybe"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Začnite dvomi bezplatnými"
+    },
+    {
+      "type": "p",
+      "text": "Pripomienka deň vopred s odkazom na zrušenie, na ktorý hosť klepne bez rozhovoru, urobí väčšinu práce. Odkaz na zrušenie pôsobí protiintuitívne — akoby ste pozývali rušiť — ale stôl uvoľnený deň vopred o 18:00 je stôl, ktorý predáte. No-show je tá istá stratená rezervácia, len bez varovania."
+    },
+    {
+      "type": "p",
+      "text": "Posielajte ju 24 hodín vopred pri rezerváciách cez týždeň a ráno v deň návštevy pri víkendových večeroch. Krátko: meno, čas, počet osôb, jeden riadok potvrdiť, jeden zrušiť."
+    },
+    {
+      "type": "h2",
+      "text": "Kedy pýtať kartu"
+    },
+    {
+      "type": "p",
+      "text": "Garancia kartou funguje a stojí vás rezervácie. Uplatniť ju na každý stôl v utorok je zlý obchod. Uplatniť ju na skupiny od šiestich ľudí, na sobotu 20:00-21:00 a na Silvestra býva obchod dobrý — to sú sloty, kde sa no-show nedá dohnať."
+    },
+    {
+      "type": "note",
+      "text": "Ak účtujete poplatok za nedostavenie sa, povedzte to zrozumiteľne v okamihu rezervácie, v potvrdení aj v pripomienke. Sťažnosť sa takmer nikdy netýka poplatku, ale toho, že o ňom hosť nevedel. Overte si národné spotrebiteľské pravidlá o strhávaní z karty za neposkytnutú službu."
+    },
+    {
+      "type": "h2",
+      "text": "Overbooking, opatrne"
+    },
+    {
+      "type": "p",
+      "text": "Ak je vaša miera no-show stabilných 10%, vziať o 10% viac rezervácií do špičkového slotu je aritmetika, nie hazard. Rizikom je rozptyl: v ten večer, keď prídu všetci, vám ľudia stoja vo dverách. Prebookujte len slot, ktorý ustojíte — kde je barový priestor, kde má ďalšie usadenie rezervu — a nikdy pri veľkých skupinách, lebo stôl pre osem sa neimprovizuje."
+    },
+    {
+      "type": "h2",
+      "text": "Štvortýždňový plán"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Týždeň 1: počítajte no-show poriadne. Jeden sčítací hárok, každá zmena. Bez východiskového čísla nemá zmysel čokoľvek meniť.",
+        "Týždeň 2: zapnite okamžité potvrdenie rezervácie, ak ho ešte nemáte.",
+        "Týždeň 3: pridajte pripomienku s odkazom na zrušenie jedným klepnutím. Zmerajte rozdiel oproti týždňu 1.",
+        "Týždeň 4: uplatnite garanciu kartou len na najhorší slot — zvyčajne sobotný večer a skupiny od šiestich ľudí.",
+        "Potom to vyhodnoťte. Ak je miera pod 5%, skončite; ďalšie trenie stojí viac, než ušetrí."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Veďte krátky čakací zoznam na špičkové sloty a napíšte doň, len čo sa stôl uvoľní. Polovica hodnoty ľahkého zrušenia je v tom, že máte komu stôl do hodiny dať."
+    },
+    {
+      "type": "h2",
+      "text": "Čo robiť, keď prídu, ale neskoro"
+    },
+    {
+      "type": "p",
+      "text": "Určte čas čakania vopred a napíšte ho do potvrdenia — 15 minút je štandard. Vyhlásené pravidlo umožní uvoľniť stôl o 20:45 bez vymýšľania pravidla na mieste a nedáva hosťovi dôvod hádať sa."
+    },
+    {
+      "type": "cta",
+      "heading": "Rezervácie, ktoré sa samy potvrdzujú a pripomínajú",
+      "text": "Prijímajte rezervácie nonstop, posielajte potvrdenia a pripomienky automaticky a nechajte hostí rušiť jedným klepnutím, aby sa stôl predal znova. 14 dní zadarmo.",
+      "buttonLabel": "Zobraziť rezervácie stolov",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Časté otázky",
+      "items": [
+        {
+          "q": "Aká miera no-show je pre reštauráciu normálna?",
+          "a": "Väčšina podnikov, ktoré ju merajú, sa pohybuje medzi 5% a 15%, vyššie pri veľkých skupinách, víkendových špičkách a rezerváciách robených dlho dopredu. Zmerajte si vlastnú za štyri týždne namiesto odhadov."
+        },
+        {
+          "q": "Znižujú pripomienky no-show naozaj?",
+          "a": "Je to opatrenie s najvyšším výnosom, lebo väčšina no-show je zábudlivosť, nie úmysel. Spojte pripomienku s odkazom na zrušenie jedným klepnutím, aby sa zabudnutá rezervácia zmenila na uvoľnený stôl."
+        },
+        {
+          "q": "Môžem účtovať poplatok za nedostavenie sa?",
+          "a": "V mnohých krajinách áno, ak s tým hosť pri rezervácii jasne súhlasil. Pravidlá sa líšia podľa krajiny, takže overte miestne spotrebiteľské právo a uveďte podmienku v potvrdení."
+        },
+        {
+          "q": "Mám žiadať zálohu?",
+          "a": "Pri veľkých skupinách a exponovaných termínoch často áno. V bežný utorok vás stojí viac rezervácií, než zachráni kuvertov."
+        },
+        {
+          "q": "Je overbooking dobrý nápad?",
+          "a": "Len tam, kde je vaša miera no-show stabilná a zmeraná, len v slotoch, kde máte ľudí kam usadiť, a nikdy pri veľkých skupinách."
+        }
+      ]
+    }
+  ]
+}

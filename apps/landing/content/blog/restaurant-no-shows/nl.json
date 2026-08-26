@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "No-shows in restaurants: kosten en oplossingen | IQ Rest",
+    "description": "Reken uit wat no-shows je restaurant per maand kosten en welke maatregelen ze echt verminderen: bevestigingen, herinneringen, aanbetalingen en overboeken."
+  },
+  "card": {
+    "title": "No-shows: het rekensommetje en wat ze echt vermindert",
+    "excerpt": "Vier lege tafels op een zaterdag is een maandbudget software dat in één avond verdwijnt. Zo meet je je eigen no-showpercentage en welke maatregelen de wrijving waard zijn."
+  },
+  "h1": "No-shows in restaurants: wat ze kosten en wat ze echt vermindert",
+  "intro": "Een no-show kost je twee keer: de gasten die je niet bediende en de inloopgasten die je weigerde om de tafel vrij te houden. De meeste eigenaren hebben een gevoel bij hoe erg het is en geen getal. Haal eerst het getal, want dat bepaalt of het de moeite waard is je gasten hiermee lastig te vallen.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Reken je eigen cijfer uit"
+    },
+    {
+      "type": "p",
+      "text": "Tel vier weken lang de niet verschenen couverts en vermenigvuldig met je gemiddelde besteding. Een zaak met 120 gereserveerde couverts per week en 8% no-shows verliest ongeveer 10 couverts per week. Bij 30 € per stuk is dat 300 € per week, of ruwweg **1.300 € per maand**."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Gereserveerde couverts/week",
+        "No-showpercentage",
+        "Verloren couverts/maand",
+        "Verlies bij 30 €"
+      ],
+      "rows": [
+        [
+          "80",
+          "5%",
+          "16",
+          "480 €"
+        ],
+        [
+          "120",
+          "8%",
+          "42",
+          "1.260 €"
+        ],
+        [
+          "200",
+          "10%",
+          "87",
+          "2.610 €"
+        ],
+        [
+          "200",
+          "15%",
+          "130",
+          "3.900 €"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Tel de tafels mee die je vrijhield. Een no-show op zaterdag om 20:30 betekent meestal dat je om 20:15 een inloopgast hebt geweigerd, dus op je drukste avonden ligt de echte kostprijs dichter bij het dubbele van het zichtbare getal."
+    },
+    {
+      "type": "h2",
+      "text": "Waarom mensen niet komen opdagen"
+    },
+    {
+      "type": "p",
+      "text": "Zelden uit kwade wil. Meestal is de reservering abstract geworden. Iemand boekte elf dagen geleden op zijn telefoon, vergat het, maakte andere plannen, en annuleren voelt nu ongemakkelijk, dus doet hij niets. Elke werkende oplossing grijpt in op een van die drie punten: de reservering concreet maken, annuleren makkelijk maken, of niet komen iets laten kosten."
+    },
+    {
+      "type": "h2",
+      "text": "De maatregelen, gerangschikt op rendement tegenover wrijving"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Maatregel",
+        "Effect",
+        "Wrijving voor de gast"
+      ],
+      "rows": [
+        [
+          "Bevestiging op het moment van boeken",
+          "Basis",
+          "Geen"
+        ],
+        [
+          "Herinnering de dag ervoor",
+          "Groot",
+          "Geen"
+        ],
+        [
+          "Annuleren met één tik in de herinnering",
+          "Groot",
+          "Geen"
+        ],
+        [
+          "Zelfde dag bevestigen bij grote gezelschappen",
+          "Matig",
+          "Laag"
+        ],
+        [
+          "Kaart vastgehouden, alleen belast bij no-show",
+          "Groot",
+          "Gemiddeld"
+        ],
+        [
+          "Aanbetaling per persoon",
+          "Grootst",
+          "Hoog"
+        ],
+        [
+          "Overboeken in piekmomenten",
+          "Compenseert",
+          "Riskant bij misrekening"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Begin met de twee gratis maatregelen"
+    },
+    {
+      "type": "p",
+      "text": "Een herinnering de dag ervoor, met een annuleerlink waarop de gast kan tikken zonder gesprek, doet het meeste werk. Die annuleerlink voelt tegenstrijdig — je nodigt uit tot annuleren — maar een tafel die de dag ervoor om 18:00 vrijkomt is een tafel die je kunt verkopen. Een no-show is dezelfde verloren boeking, alleen zonder waarschuwing."
+    },
+    {
+      "type": "p",
+      "text": "Stuur hem 24 uur vooruit bij doordeweekse boekingen en in de ochtend bij weekendavonden. Houd hem kort: naam, tijd, aantal personen, één regel om te bevestigen, één om te annuleren."
+    },
+    {
+      "type": "h2",
+      "text": "Wanneer je om een kaart moet vragen"
+    },
+    {
+      "type": "p",
+      "text": "Kaartgaranties werken, en ze kosten je boekingen. Ze op elke tafel op dinsdag toepassen is een slechte ruil. Ze toepassen op gezelschappen van zes of meer, op zaterdag 20:00-21:00 en op oudejaarsavond is meestal een goede: dat zijn de momenten waarop een no-show niet meer goed te maken is."
+    },
+    {
+      "type": "note",
+      "text": "Als je een no-showvergoeding rekent, zeg het dan in gewone taal bij het boeken, in de bevestiging en in de herinnering. De klacht gaat bijna nooit over het bedrag, maar over het niet verteld zijn. Controleer je nationale consumentenregels over het belasten van kaarten voor niet-geleverde diensten."
+    },
+    {
+      "type": "h2",
+      "text": "Overboeken, met beleid"
+    },
+    {
+      "type": "p",
+      "text": "Als je no-showpercentage stabiel op 10% ligt, is 10% meer boekingen aannemen in je piekmoment rekenwerk, geen gok. Het risico is spreiding: op de avond dat iedereen komt, staan er mensen bij de deur. Overboek alleen het moment dat je kunt opvangen — waar een barruimte is, waar de volgende seating speling heeft — en nooit bij grote gezelschappen, want een tafel voor acht improviseer je niet."
+    },
+    {
+      "type": "h2",
+      "text": "Een plan van vier weken"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Week 1: tel no-shows fatsoenlijk. Eén turflijst, elke dienst. Je hebt de nulmeting nodig voordat je iets verandert.",
+        "Week 2: zet een directe boekingsbevestiging aan, als je die nog niet hebt.",
+        "Week 3: voeg een herinnering met annuleerlink in één tik toe. Meet het verschil met week 1.",
+        "Week 4: pas een kaartgarantie alleen toe op je slechtste moment — meestal zaterdagavond en gezelschappen van zes of meer.",
+        "Evalueer daarna. Ligt het percentage onder 5%, stop dan hier; meer wrijving kost meer dan het oplevert."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Houd een korte wachtlijst voor piekmomenten bij en app die zodra een tafel vrijkomt. De helft van de waarde van makkelijk annuleren is dat je binnen het uur iemand hebt om de tafel aan te geven."
+    },
+    {
+      "type": "h2",
+      "text": "Wat te doen als ze wel komen, maar te laat"
+    },
+    {
+      "type": "p",
+      "text": "Bepaal je respijttijd vooraf en zet hem in de bevestiging — 15 minuten is gangbaar. Een uitgesproken beleid laat een gastheer om 20:45 een tafel vrijgeven zonder ter plekke een regel te verzinnen, en geeft de gast geen reden om te discussiëren."
+    },
+    {
+      "type": "cta",
+      "heading": "Reserveringen die zichzelf bevestigen en herinneren",
+      "text": "Neem 24/7 reserveringen aan, verstuur automatisch bevestigingen en herinneringen en laat gasten met één tik annuleren zodat de tafel opnieuw verkocht wordt. 14 dagen gratis.",
+      "buttonLabel": "Bekijk tafelreserveringen",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Veelgestelde vragen",
+      "items": [
+        {
+          "q": "Wat is een normaal no-showpercentage voor een restaurant?",
+          "a": "De meeste zaken die het meten komen tussen 5% en 15% uit, hoger bij grote gezelschappen, weekendpieken en boekingen die ver vooruit zijn gemaakt. Meet vier weken lang je eigen cijfer in plaats van het aan te nemen."
+        },
+        {
+          "q": "Verminderen herinneringen echt no-shows?",
+          "a": "Het is de maatregel met het hoogste rendement, omdat de meeste no-shows vergeetachtigheid zijn en geen opzet. Combineer de herinnering met een annuleerlink in één tik, zodat de vergeten boeking een vrijgekomen tafel wordt."
+        },
+        {
+          "q": "Mag ik een no-showvergoeding rekenen?",
+          "a": "In veel landen wel, mits de gast er bij het boeken duidelijk mee akkoord is gegaan. Regels verschillen per land, dus check je lokale consumentenrecht en vermeld het beleid in de bevestiging."
+        },
+        {
+          "q": "Moet ik een aanbetaling vragen?",
+          "a": "Bij grote gezelschappen en piekdata vaak wel. Op een gewone dinsdag kost het je meer boekingen dan het couverts redt."
+        },
+        {
+          "q": "Is overboeken een goed idee?",
+          "a": "Alleen waar je no-showpercentage stabiel en gemeten is, alleen op momenten waar je mensen ergens kunt zetten, en nooit bij grote gezelschappen."
+        }
+      ]
+    }
+  ]
+}

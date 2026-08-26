@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "No-show al ristorante: quanto costano e come ridurli | IQ Rest",
+    "description": "Calcola quanto ti costano i no-show al mese e le misure che li riducono davvero: conferme, promemoria, caparre e overbooking."
+  },
+  "card": {
+    "title": "No-show: l'aritmetica e ciò che li riduce davvero",
+    "excerpt": "Quattro tavoli vuoti un sabato sono un budget software mensile bruciato in una sera. Ecco come misurare il tuo tasso di no-show e quali rimedi valgono l'attrito."
+  },
+  "h1": "No-show al ristorante: quanto costano e cosa li riduce davvero",
+  "intro": "Un no-show ti costa due volte: i coperti che non hai servito e i clienti senza prenotazione che hai rifiutato per tenere il tavolo. Quasi tutti i titolari hanno una sensazione di quanto sia grave e nessun numero. Procurati prima il numero, perché è lui a decidere se vale la pena infastidire i clienti.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Calcola il tuo numero"
+    },
+    {
+      "type": "p",
+      "text": "Conta i coperti non presentati per quattro settimane e moltiplica per lo scontrino medio. Un locale con 120 coperti prenotati a settimana e un 8% di no-show perde circa 10 coperti a settimana. A 30 € ciascuno fanno 300 € a settimana, ovvero circa **1.300 € al mese**."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Coperti prenotati/settimana",
+        "Tasso di no-show",
+        "Coperti persi/mese",
+        "Perdita a 30 €"
+      ],
+      "rows": [
+        [
+          "80",
+          "5%",
+          "16",
+          "480 €"
+        ],
+        [
+          "120",
+          "8%",
+          "42",
+          "1.260 €"
+        ],
+        [
+          "200",
+          "10%",
+          "87",
+          "2.610 €"
+        ],
+        [
+          "200",
+          "15%",
+          "130",
+          "3.900 €"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Aggiungi i tavoli che hai tenuto. Un no-show del sabato alle 20:30 di solito significa che alle 20:15 hai rifiutato qualcuno senza prenotazione, quindi nelle serate piene il costo reale è vicino al doppio della cifra dichiarata."
+    },
+    {
+      "type": "h2",
+      "text": "Perché la gente non si presenta"
+    },
+    {
+      "type": "p",
+      "text": "Raramente per cattiveria. Quasi sempre perché la prenotazione è diventata astratta. Qualcuno ha prenotato undici giorni fa dal telefono, ha dimenticato, ha fatto altri programmi e ora disdire è imbarazzante, quindi non fa nulla. Ogni rimedio efficace agisce su uno di quei tre punti: rendere concreta la prenotazione, rendere facile la disdetta o far sì che non presentarsi costi qualcosa."
+    },
+    {
+      "type": "h2",
+      "text": "Le misure, ordinate per resa rispetto all'attrito"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Misura",
+        "Effetto",
+        "Attrito per il cliente"
+      ],
+      "rows": [
+        [
+          "Conferma nel momento della prenotazione",
+          "Fondamentale",
+          "Nessuno"
+        ],
+        [
+          "Promemoria il giorno prima",
+          "Grande",
+          "Nessuno"
+        ],
+        [
+          "Disdetta con un tocco nel promemoria",
+          "Grande",
+          "Nessuno"
+        ],
+        [
+          "Conferma in giornata per i gruppi numerosi",
+          "Moderato",
+          "Basso"
+        ],
+        [
+          "Carta bloccata, addebitata solo in caso di no-show",
+          "Grande",
+          "Medio"
+        ],
+        [
+          "Caparra a persona",
+          "Il maggiore",
+          "Alto"
+        ],
+        [
+          "Overbooking nelle fasce di punta",
+          "Compensa",
+          "Rischioso se sbagliato"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Parti dalle due gratuite"
+    },
+    {
+      "type": "p",
+      "text": "Un promemoria il giorno prima, con un link di disdetta che il cliente può toccare senza dover parlare con nessuno, fa quasi tutto il lavoro. Il link di disdetta sembra controintuitivo — stai invitando a disdire — ma un tavolo liberato alle 18:00 del giorno prima è un tavolo che puoi vendere. Un no-show è la stessa prenotazione persa, ma senza preavviso."
+    },
+    {
+      "type": "p",
+      "text": "Invialo 24 ore prima per le prenotazioni infrasettimanali e la mattina stessa per le sere del fine settimana. Tienilo corto: nome, orario, numero di persone, una riga per confermare e una per disdire."
+    },
+    {
+      "type": "h2",
+      "text": "Quando chiedere la carta"
+    },
+    {
+      "type": "p",
+      "text": "Le garanzie con carta funzionano e ti costano prenotazioni. Applicarla a ogni tavolo di martedì è un cattivo affare. Applicarla ai gruppi da sei in su, al sabato 20:00-21:00 e a Capodanno di solito è un buon affare: sono le fasce in cui un no-show non si recupera."
+    },
+    {
+      "type": "note",
+      "text": "Se addebiti una penale per mancata presentazione, dillo in parole chiare al momento della prenotazione, nella conferma e nel promemoria. Il reclamo non riguarda quasi mai la penale, ma il fatto di non essere stati avvisati. Verifica le norme nazionali di tutela del consumatore sull'addebito di carte per servizi non resi."
+    },
+    {
+      "type": "h2",
+      "text": "Overbooking, con prudenza"
+    },
+    {
+      "type": "p",
+      "text": "Se il tuo tasso di no-show è stabile al 10%, accettare il 10% di prenotazioni in più nella fascia di punta è aritmetica, non azzardo. Il rischio è la varianza: la sera in cui vengono tutti hai gente in piedi all'ingresso. Fai overbooking solo nella fascia che puoi assorbire — dove c'è un'area bar, dove il turno successivo ha margine — e mai con i gruppi numerosi, perché un tavolo da otto non si improvvisa."
+    },
+    {
+      "type": "h2",
+      "text": "Un piano di quattro settimane"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Settimana 1: conta i no-show per bene. Un foglio di conteggio a ogni servizio. Ti serve il dato di partenza prima di cambiare qualsiasi cosa.",
+        "Settimana 2: attiva la conferma immediata della prenotazione, se non ce l'hai già.",
+        "Settimana 3: aggiungi un promemoria con link di disdetta in un tocco. Misura la differenza rispetto alla settimana 1.",
+        "Settimana 4: applica la garanzia con carta solo alla fascia peggiore, di solito il sabato sera e i gruppi da sei in su.",
+        "Poi valuta. Se il tasso è sotto il 5%, fermati qui: altro attrito costa più di quanto faccia risparmiare."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Tieni una breve lista d'attesa per le fasce di punta e scrivile appena si libera un tavolo. Metà del valore di una disdetta facile sta nell'avere a chi dare il tavolo entro un'ora."
+    },
+    {
+      "type": "h2",
+      "text": "Cosa fare quando si presentano, ma in ritardo"
+    },
+    {
+      "type": "p",
+      "text": "Decidi in anticipo la tolleranza e scrivila nella conferma: 15 minuti è lo standard. Una regola dichiarata permette di liberare un tavolo alle 20:45 senza inventarsi una regola sul momento e non lascia al cliente motivi per discutere."
+    },
+    {
+      "type": "cta",
+      "heading": "Prenotazioni che si confermano e si ricordano da sole",
+      "text": "Ricevi prenotazioni 24 ore su 24, invia conferme e promemoria in automatico e lascia che i clienti disdicano con un tocco, così il tavolo si rivende. 14 giorni gratis.",
+      "buttonLabel": "Vedi le prenotazioni dei tavoli",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Domande frequenti",
+      "items": [
+        {
+          "q": "Qual è un tasso di no-show normale per un ristorante?",
+          "a": "La maggior parte dei locali che lo misura si colloca tra il 5% e il 15%, più alto per gruppi numerosi, fasce di punta del fine settimana e prenotazioni fatte con molto anticipo. Misura il tuo per quattro settimane invece di darlo per scontato."
+        },
+        {
+          "q": "I promemoria riducono davvero i no-show?",
+          "a": "Sono la misura con la resa più alta a disposizione, perché quasi tutti i no-show sono dimenticanza, non intenzione. Abbina al promemoria un link di disdetta in un tocco, così la prenotazione dimenticata diventa un tavolo libero."
+        },
+        {
+          "q": "Posso addebitare una penale per no-show?",
+          "a": "In molti Paesi sì, purché il cliente l'abbia accettata chiaramente al momento della prenotazione. Le norme variano da Paese a Paese: verifica la legge locale sui consumatori e indica la regola nella conferma."
+        },
+        {
+          "q": "Devo chiedere una caparra?",
+          "a": "Per gruppi numerosi e date di punta, spesso sì. Per un martedì qualunque ti costa più prenotazioni di quanti coperti salvi."
+        },
+        {
+          "q": "L'overbooking è una buona idea?",
+          "a": "Solo dove il tasso di no-show è stabile e misurato, solo nelle fasce in cui hai dove sistemare le persone e mai per i gruppi numerosi."
+        }
+      ]
+    }
+  ]
+}

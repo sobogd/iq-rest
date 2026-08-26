@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "Meg nem jelenés az étteremben: mennyibe kerül | IQ Rest",
+    "description": "Számold ki, mennyibe kerül havonta a meg nem jelenő vendég, és milyen lépések csökkentik valóban: visszaigazolás, emlékeztető, előleg és túlfoglalás."
+  },
+  "card": {
+    "title": "Meg nem jelenés: a számtan és ami tényleg segít",
+    "excerpt": "Négy üres asztal egy szombaton egy havi szoftverkeret, egyetlen este alatt elégetve. Így méred a saját no-show arányodat, és ezek a lépések érik meg a súrlódást."
+  },
+  "h1": "Meg nem jelenő vendégek: mennyibe kerülnek és mi csökkenti őket valóban",
+  "intro": "A meg nem jelenés kétszer kerül pénzbe: a vendégek, akiket nem szolgáltál ki, és azok, akiket elküldtél, hogy az asztal szabad maradjon. A legtöbb tulajdonosnak van érzése arról, mennyire rossz a helyzet, és nincs száma. Előbb szerezd meg a számot, mert az dönti el, megéri-e emiatt zaklatni a vendégeket.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Számold ki a saját számodat"
+    },
+    {
+      "type": "p",
+      "text": "Számold négy héten át a meg nem jelent vendégeket, és szorozd meg az átlagköltéssel. Egy hely, ahol hetente 120 vendéget foglalnak és 8% a no-show, hetente körülbelül 10 vendéget veszít. Fejenként 30 euróval ez heti 300 euró, vagyis nagyjából **1300 euró havonta**."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Foglalt vendég/hét",
+        "No-show arány",
+        "Elveszett vendég/hó",
+        "Veszteség 30 eurónál"
+      ],
+      "rows": [
+        [
+          "80",
+          "5%",
+          "16",
+          "480 €"
+        ],
+        [
+          "120",
+          "8%",
+          "42",
+          "1260 €"
+        ],
+        [
+          "200",
+          "10%",
+          "87",
+          "2610 €"
+        ],
+        [
+          "200",
+          "15%",
+          "130",
+          "3900 €"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Add hozzá az asztalokat, amiket fenntartottál. Egy szombat 20:30-as no-show általában azt jelenti, hogy 20:15-kor elküldtél egy foglalás nélküli vendéget, tehát a legerősebb estéken a valós költség közelebb van a duplájához."
+    },
+    {
+      "type": "h2",
+      "text": "Miért nem jönnek el az emberek"
+    },
+    {
+      "type": "p",
+      "text": "Ritkán rosszindulatból. Többnyire azért, mert a foglalás elvonttá vált. Valaki tizenegy napja foglalt telefonon, elfelejtette, más programot csinált, és most kínos lemondani, úgyhogy nem csinál semmit. Minden működő megoldás e három pont egyikére hat: tedd konkréttá a foglalást, tedd könnyűvé a lemondást, vagy tedd valamibe kerülővé a meg nem jelenést."
+    },
+    {
+      "type": "h2",
+      "text": "A lépések, hozam és súrlódás aránya szerint"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Lépés",
+        "Hatás",
+        "Súrlódás a vendégnek"
+      ],
+      "rows": [
+        [
+          "Visszaigazolás a foglalás pillanatában",
+          "Alap",
+          "Nincs"
+        ],
+        [
+          "Emlékeztető az előző napon",
+          "Nagy",
+          "Nincs"
+        ],
+        [
+          "Lemondás egy koppintással az emlékeztetőben",
+          "Nagy",
+          "Nincs"
+        ],
+        [
+          "Aznapi megerősítés nagy társaságoknál",
+          "Közepes",
+          "Alacsony"
+        ],
+        [
+          "Kártya zárolva, terhelés csak no-show esetén",
+          "Nagy",
+          "Közepes"
+        ],
+        [
+          "Előleg fejenként",
+          "Legnagyobb",
+          "Magas"
+        ],
+        [
+          "Túlfoglalás a csúcsidőszakokban",
+          "Kompenzál",
+          "Kockázatos, ha tévedsz"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Kezdd a két ingyenessel"
+    },
+    {
+      "type": "p",
+      "text": "Egy előző napi emlékeztető, benne egy lemondó linkkel, amit a vendég beszélgetés nélkül megnyomhat, elvégzi a munka nagy részét. A lemondó link ellentmondásosnak tűnik — mintha lemondásra hívnál —, de az előző nap 18:00-kor felszabaduló asztal olyan asztal, amit el tudsz adni. A no-show ugyanaz az elvesztett foglalás, csak előzetes szó nélkül."
+    },
+    {
+      "type": "p",
+      "text": "Küldd 24 órával korábban hétköznapi foglalásoknál, és aznap reggel hétvégi estékre. Legyen rövid: név, időpont, létszám, egy sor a megerősítéshez, egy a lemondáshoz."
+    },
+    {
+      "type": "h2",
+      "text": "Mikor kérj kártyát"
+    },
+    {
+      "type": "p",
+      "text": "A kártyás garancia működik, és foglalásokba kerül. Kedden minden asztalra kirakni rossz üzlet. Hat fő feletti társaságokra, szombat 20:00-21:00-ra és szilveszterre kirakni általában jó üzlet: ezek azok a sávok, ahol egy no-show behozhatatlan."
+    },
+    {
+      "type": "note",
+      "text": "Ha meg nem jelenési díjat számolsz fel, mondd ki érthető nyelven a foglaláskor, a visszaigazolásban és az emlékeztetőben. A panasz szinte soha nem a díjról szól, hanem arról, hogy nem szóltak róla. Nézd meg a hazai fogyasztóvédelmi szabályokat a nem nyújtott szolgáltatás kártyás terheléséről."
+    },
+    {
+      "type": "h2",
+      "text": "Túlfoglalás, óvatosan"
+    },
+    {
+      "type": "p",
+      "text": "Ha a no-show arányod stabil 10%, akkor 10%-kal több foglalást felvenni a csúcssávban számtan, nem szerencsejáték. A kockázat a szórás: azon az estén, amikor mindenki eljön, emberek állnak az ajtóban. Csak azt a sávot foglald túl, amit el tudsz nyelni — ahol van bárrész, ahol a következő ültetésben van tartalék —, és soha nagy társaságoknál, mert nyolcfős asztalt nem lehet rögtönözni."
+    },
+    {
+      "type": "h2",
+      "text": "Négyhetes terv"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "1. hét: számold rendesen a no-show-kat. Egy strigulázó lap, minden műszakban. Kell a kiindulópont, mielőtt bármit változtatsz.",
+        "2. hét: kapcsold be az azonnali foglalás-visszaigazolást, ha még nincs.",
+        "3. hét: tegyél hozzá emlékeztetőt egykoppintásos lemondással. Mérd a különbséget az 1. héthez.",
+        "4. hét: kártyás garanciát csak a legrosszabb sávra tegyél — általában szombat este és hat fő feletti társaságok.",
+        "Aztán értékelj. Ha az arány 5% alatt van, állj meg itt; a további súrlódás többe kerül, mint amennyit megspórol."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Vezess rövid várólistát a csúcssávokra, és írj rá, amint felszabadul egy asztal. A könnyű lemondás értékének fele az, hogy van kinek odaadni az asztalt egy órán belül."
+    },
+    {
+      "type": "h2",
+      "text": "Mi legyen, ha eljönnek, csak későn"
+    },
+    {
+      "type": "p",
+      "text": "Döntsd el előre a türelmi időt, és írd bele a visszaigazolásba — 15 perc a szokásos. A kimondott szabály engedi, hogy 20:45-kor felszabadítsanak egy asztalt anélkül, hogy helyben kellene szabályt kitalálni, és nem ad a vendégnek okot vitatkozni."
+    },
+    {
+      "type": "cta",
+      "heading": "Foglalások, amik maguktól visszaigazolnak és emlékeztetnek",
+      "text": "Fogadj foglalást éjjel-nappal, küldj visszaigazolást és emlékeztetőt automatikusan, és hagyd, hogy a vendég egy koppintással lemondjon, így az asztal újra eladható. 14 nap ingyen.",
+      "buttonLabel": "Nézd meg az asztalfoglalásokat",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Gyakori kérdések",
+      "items": [
+        {
+          "q": "Mennyi a normális no-show arány egy étteremben?",
+          "a": "A mérő helyek többsége 5% és 15% közé esik, nagyobb társaságoknál, hétvégi csúcssávokban és jóval előre tett foglalásoknál magasabbra. Mérd a sajátodat négy hétig, ahelyett hogy feltételeznéd."
+        },
+        {
+          "q": "Tényleg csökkentik az emlékeztetők a no-show-t?",
+          "a": "Ez a legjobb hozamú elérhető lépés, mert a legtöbb no-show feledékenység, nem szándék. Párosítsd az emlékeztetőt egykoppintásos lemondó linkkel, hogy az elfelejtett foglalásból felszabaduló asztal legyen."
+        },
+        {
+          "q": "Felszámíthatok meg nem jelenési díjat?",
+          "a": "Sok országban igen, feltéve hogy a vendég ezt a foglaláskor egyértelműen elfogadta. Országonként eltérnek a szabályok, ezért nézd meg a helyi fogyasztóvédelmi jogot, és írd bele a feltételt a visszaigazolásba."
+        },
+        {
+          "q": "Kérjek előleget?",
+          "a": "Nagy társaságoknál és csúcsnapokon gyakran igen. Egy hétköznapi kedden több foglalásba kerül, mint amennyi vendéget megment."
+        },
+        {
+          "q": "Jó ötlet a túlfoglalás?",
+          "a": "Csak ahol a no-show arányod stabil és mért, csak olyan sávokban, ahol van hová leültetni az embereket, és soha nagy társaságoknál."
+        }
+      ]
+    }
+  ]
+}

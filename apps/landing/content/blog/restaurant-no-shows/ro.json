@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "Neprezentări la restaurant: cât costă și cum le reduci | IQ Rest",
+    "description": "Calculează cât te costă lunar clienții care nu se prezintă și ce măsuri le reduc cu adevărat: confirmări, memento-uri, avansuri și suprarezervare."
+  },
+  "card": {
+    "title": "Neprezentări: aritmetica și ce le reduce cu adevărat",
+    "excerpt": "Patru mese goale într-o sâmbătă înseamnă bugetul lunar de software ars într-o singură seară. Iată cum îți măsori rata de neprezentare și ce soluții merită frecarea."
+  },
+  "h1": "Neprezentări la restaurant: cât costă și ce le reduce cu adevărat",
+  "intro": "O neprezentare te costă de două ori: clienții pe care nu i-ai servit și cei fără rezervare pe care i-ai refuzat ca să ții masa. Majoritatea patronilor au o senzație despre cât de grav e și niciun număr. Ia întâi numărul, pentru că el decide dacă merită să-ți deranjezi clienții pentru asta.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Calculează-ți propriul număr"
+    },
+    {
+      "type": "p",
+      "text": "Numără persoanele care nu s-au prezentat timp de patru săptămâni și înmulțește cu nota medie. Un local cu 120 de locuri rezervate pe săptămână și 8% neprezentări pierde vreo 10 persoane pe săptămână. La 30 € fiecare, sunt 300 € pe săptămână, adică aproximativ **1.300 € pe lună**."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Locuri rezervate/săptămână",
+        "Rată de neprezentare",
+        "Locuri pierdute/lună",
+        "Pierdere la 30 €"
+      ],
+      "rows": [
+        [
+          "80",
+          "5%",
+          "16",
+          "480 €"
+        ],
+        [
+          "120",
+          "8%",
+          "42",
+          "1.260 €"
+        ],
+        [
+          "200",
+          "10%",
+          "87",
+          "2.610 €"
+        ],
+        [
+          "200",
+          "15%",
+          "130",
+          "3.900 €"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Adaugă mesele pe care le-ai ținut. O neprezentare de sâmbătă la 20:30 înseamnă de obicei că la 20:15 ai refuzat pe cineva fără rezervare, așa că în serile pline costul real e aproape dublu față de cifra afișată."
+    },
+    {
+      "type": "h2",
+      "text": "De ce nu vin oamenii"
+    },
+    {
+      "type": "p",
+      "text": "Rar din rea-voință. De cele mai multe ori rezervarea a devenit abstractă. Cineva a rezervat acum unsprezece zile de pe telefon, a uitat, și-a făcut alte planuri, iar acum anularea îi pare jenantă, deci nu face nimic. Orice soluție care funcționează atacă unul dintre aceste trei puncte: fă rezervarea concretă, fă anularea ușoară sau fă ca neprezentarea să coste ceva."
+    },
+    {
+      "type": "h2",
+      "text": "Măsurile, ordonate după randament raportat la frecare"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Măsură",
+        "Efect",
+        "Frecare pentru client"
+      ],
+      "rows": [
+        [
+          "Confirmare în momentul rezervării",
+          "Bază",
+          "Niciuna"
+        ],
+        [
+          "Memento cu o zi înainte",
+          "Mare",
+          "Niciuna"
+        ],
+        [
+          "Anulare dintr-o atingere în memento",
+          "Mare",
+          "Niciuna"
+        ],
+        [
+          "Confirmare în ziua respectivă pentru grupuri mari",
+          "Moderat",
+          "Mică"
+        ],
+        [
+          "Card blocat, debitat doar la neprezentare",
+          "Mare",
+          "Medie"
+        ],
+        [
+          "Avans de persoană",
+          "Cel mai mare",
+          "Ridicată"
+        ],
+        [
+          "Suprarezervare în intervalele de vârf",
+          "Compensează",
+          "Riscant dacă greșești"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Începe cu cele două gratuite"
+    },
+    {
+      "type": "p",
+      "text": "Un memento cu o zi înainte, cu un link de anulare pe care clientul îl poate atinge fără nicio conversație, face cea mai mare parte din treabă. Linkul de anulare pare contraintuitiv — parcă inviți la anulări — dar o masă eliberată la 18:00 cu o zi înainte e o masă pe care o poți vinde. O neprezentare e aceeași rezervare pierdută, doar că fără preaviz."
+    },
+    {
+      "type": "p",
+      "text": "Trimite-l cu 24 de ore înainte la rezervările din timpul săptămânii și dimineața pentru serile de weekend. Ține-l scurt: nume, oră, număr de persoane, un rând pentru confirmare, unul pentru anulare."
+    },
+    {
+      "type": "h2",
+      "text": "Când să ceri card"
+    },
+    {
+      "type": "p",
+      "text": "Garanțiile prin card funcționează și te costă rezervări. Să o aplici la fiecare masă într-o marți e un schimb prost. Să o aplici la grupuri de șase sau mai multe, la sâmbătă între 20:00 și 21:00 și la Revelion e de obicei un schimb bun: acolo o neprezentare nu se mai recuperează."
+    },
+    {
+      "type": "note",
+      "text": "Dacă percepi o taxă de neprezentare, spune-o clar în momentul rezervării, în confirmare și în memento. Reclamația nu e aproape niciodată despre taxă, ci despre faptul că nu i s-a spus. Verifică regulile naționale de protecție a consumatorului privind debitarea cardului pentru servicii neprestate."
+    },
+    {
+      "type": "h2",
+      "text": "Suprarezervarea, cu grijă"
+    },
+    {
+      "type": "p",
+      "text": "Dacă rata ta de neprezentare e un 10% stabil, să iei cu 10% mai multe rezervări în intervalul de vârf e aritmetică, nu pariu. Riscul e variația: în seara în care vin toți, ai oameni în picioare la ușă. Suprarezervă doar intervalul pe care îl poți absorbi — unde există o zonă de bar, unde tura următoare are lejeritate — și niciodată pentru grupuri mari, fiindcă o masă de opt nu se improvizează."
+    },
+    {
+      "type": "h2",
+      "text": "Un plan de patru săptămâni"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Săptămâna 1: numără neprezentările ca lumea. O foaie de bifat, la fiecare serviciu. Ai nevoie de referință înainte să schimbi ceva.",
+        "Săptămâna 2: activează confirmarea instantanee a rezervării, dacă nu o ai deja.",
+        "Săptămâna 3: adaugă un memento cu link de anulare dintr-o atingere. Măsoară diferența față de săptămâna 1.",
+        "Săptămâna 4: aplică garanția prin card doar la cel mai prost interval — de obicei sâmbătă seara și grupurile de șase sau mai multe.",
+        "Apoi evaluează. Dacă rata e sub 5%, oprește-te aici; frecarea suplimentară costă mai mult decât salvează."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Ține o listă scurtă de așteptare pentru intervalele de vârf și scrie-i imediat ce se eliberează o masă. Jumătate din valoarea unei anulări ușoare e să ai cui să dai masa în ora următoare."
+    },
+    {
+      "type": "h2",
+      "text": "Ce faci când chiar vin, dar târziu"
+    },
+    {
+      "type": "p",
+      "text": "Stabilește din timp perioada de toleranță și scrie-o în confirmare — 15 minute e standardul. O regulă anunțată permite eliberarea unei mese la 20:45 fără să inventezi o regulă pe loc și nu-i lasă clientului motiv de ceartă."
+    },
+    {
+      "type": "cta",
+      "heading": "Rezervări care se confirmă și își fac singure memento",
+      "text": "Primește rezervări 24/7, trimite confirmări și memento-uri automat și lasă clienții să anuleze dintr-o atingere, ca masa să fie revândută. 14 zile gratuit.",
+      "buttonLabel": "Vezi rezervările de mese",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Întrebări frecvente",
+      "items": [
+        {
+          "q": "Care e o rată normală de neprezentare pentru un restaurant?",
+          "a": "Majoritatea localurilor care o măsoară se plasează între 5% și 15%, mai mult la grupuri mari, la intervalele de vârf din weekend și la rezervările făcute cu mult timp înainte. Măsoar-o pe a ta patru săptămâni, nu o presupune."
+        },
+        {
+          "q": "Chiar reduc memento-urile neprezentările?",
+          "a": "E măsura cu cel mai mare randament, pentru că majoritatea neprezentărilor sunt uitare, nu intenție. Combină memento-ul cu un link de anulare dintr-o atingere, ca rezervarea uitată să devină masă eliberată."
+        },
+        {
+          "q": "Pot percepe o taxă de neprezentare?",
+          "a": "În multe țări da, cu condiția ca clientul să fi fost clar de acord la rezervare. Regulile diferă de la țară la țară, deci verifică legislația locală de consum și menționează politica în confirmare."
+        },
+        {
+          "q": "Ar trebui să cer avans?",
+          "a": "Pentru grupuri mari și date de vârf, deseori da. Într-o marți obișnuită te costă mai multe rezervări decât locurile pe care le salvează."
+        },
+        {
+          "q": "E suprarezervarea o idee bună?",
+          "a": "Doar acolo unde rata ta de neprezentare e stabilă și măsurată, doar în intervale unde ai unde să pui oamenii și niciodată pentru grupuri mari."
+        }
+      ]
+    }
+  ]
+}

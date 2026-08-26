@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "No-Shows im Restaurant: Kosten und Gegenmittel | IQ Rest",
+    "description": "Rechnen Sie aus, was No-Shows Ihr Restaurant im Monat kosten, und welche Maßnahmen sie wirklich senken: Bestätigungen, Erinnerungen, Anzahlungen, Overbooking."
+  },
+  "card": {
+    "title": "No-Shows: die Rechnung und was sie wirklich senkt",
+    "excerpt": "Vier leere Tische an einem Samstag sind ein Monatsbudget für Software, an einem Abend weg. So messen Sie Ihre eigene No-Show-Quote und welche Maßnahmen die Reibung wert sind."
+  },
+  "h1": "No-Shows im Restaurant: was sie kosten und was sie wirklich senkt",
+  "intro": "Ein No-Show kostet Sie zweimal: die Gäste, die Sie nicht bewirtet haben, und die Laufkundschaft, die Sie abgewiesen haben, um den Tisch freizuhalten. Die meisten Betreiber haben ein Gefühl dafür, wie schlimm es ist, und keine Zahl. Holen Sie sich zuerst die Zahl, denn sie entscheidet, ob es sich lohnt, Ihre Gäste deswegen zu behelligen.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Rechnen Sie Ihre eigene Zahl aus"
+    },
+    {
+      "type": "p",
+      "text": "Zählen Sie vier Wochen lang die nicht erschienenen Gäste und multiplizieren Sie mit Ihrem Durchschnittsbon. Ein Lokal mit 120 reservierten Gästen pro Woche und 8% No-Show-Quote verliert rund 10 Gäste pro Woche. Bei 30 € pro Gast sind das 300 € die Woche oder etwa **1.300 € im Monat**."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Reservierte Gäste/Woche",
+        "No-Show-Quote",
+        "Verlorene Gäste/Monat",
+        "Verlust bei 30 €"
+      ],
+      "rows": [
+        [
+          "80",
+          "5%",
+          "16",
+          "480 €"
+        ],
+        [
+          "120",
+          "8%",
+          "42",
+          "1.260 €"
+        ],
+        [
+          "200",
+          "10%",
+          "87",
+          "2.610 €"
+        ],
+        [
+          "200",
+          "15%",
+          "130",
+          "3.900 €"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Rechnen Sie die freigehaltenen Tische dazu. Ein No-Show am Samstag um 20:30 heißt meist, dass um 20:15 jemand ohne Reservierung abgewiesen wurde — an Ihren starken Abenden liegen die echten Kosten also näher am Doppelten."
+    },
+    {
+      "type": "h2",
+      "text": "Warum Leute nicht auftauchen"
+    },
+    {
+      "type": "p",
+      "text": "Selten Bosheit. Meistens ist die Reservierung abstrakt geworden. Jemand hat vor elf Tagen am Handy gebucht, es vergessen, etwas anderes vorgehabt, und jetzt ist Absagen unangenehm, also passiert nichts. Jede wirksame Maßnahme setzt an einem dieser drei Punkte an: die Reservierung konkret machen, das Absagen leicht machen oder das Nichterscheinen etwas kosten lassen."
+    },
+    {
+      "type": "h2",
+      "text": "Die Maßnahmen, sortiert nach Ertrag pro Reibung"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Maßnahme",
+        "Wirkung",
+        "Reibung für den Gast"
+      ],
+      "rows": [
+        [
+          "Bestätigung direkt bei der Buchung",
+          "Grundlage",
+          "Keine"
+        ],
+        [
+          "Erinnerung am Vortag",
+          "Groß",
+          "Keine"
+        ],
+        [
+          "Absage mit einem Tipp in der Erinnerung",
+          "Groß",
+          "Keine"
+        ],
+        [
+          "Am selben Tag bestätigen bei großen Gruppen",
+          "Mittel",
+          "Gering"
+        ],
+        [
+          "Karte hinterlegt, nur bei No-Show belastet",
+          "Groß",
+          "Mittel"
+        ],
+        [
+          "Anzahlung pro Person",
+          "Am größten",
+          "Hoch"
+        ],
+        [
+          "Overbooking in Stoßzeiten",
+          "Gleicht aus",
+          "Riskant, wenn falsch"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Fangen Sie mit den zwei kostenlosen an"
+    },
+    {
+      "type": "p",
+      "text": "Eine Erinnerung am Vortag mit einem Absage-Link, den der Gast ohne Gespräch antippen kann, erledigt den größten Teil der Arbeit. Der Absage-Link wirkt widersinnig — Sie laden zum Absagen ein — aber ein Tisch, der am Vortag um 18:00 frei wird, ist ein Tisch, den Sie verkaufen können. Ein No-Show ist dieselbe verlorene Buchung, nur ohne Vorwarnung."
+    },
+    {
+      "type": "p",
+      "text": "Schicken Sie sie 24 Stunden vorher bei Buchungen unter der Woche und am Morgen bei Wochenendabenden. Halten Sie sie kurz: Name, Uhrzeit, Personenzahl, eine Zeile zum Bestätigen, eine zum Absagen."
+    },
+    {
+      "type": "h2",
+      "text": "Wann Sie eine Karte verlangen sollten"
+    },
+    {
+      "type": "p",
+      "text": "Kartengarantien wirken — und sie kosten Sie Buchungen. Sie an einem Dienstag auf jeden Tisch anzuwenden ist ein schlechter Tausch. Sie auf Gruppen ab sechs Personen, auf Samstag 20:00-21:00 und auf Silvester anzuwenden ist meist ein guter: Das sind die Slots, in denen ein No-Show nicht mehr aufzuholen ist."
+    },
+    {
+      "type": "note",
+      "text": "Wenn Sie eine No-Show-Gebühr erheben, sagen Sie es in klarer Sprache — bei der Buchung, in der Bestätigung und in der Erinnerung. Die Beschwerde betrifft fast nie die Gebühr, sondern dass niemand Bescheid gesagt hat. Prüfen Sie die nationalen Verbraucherregeln zur Belastung von Karten für nicht erbrachte Leistungen."
+    },
+    {
+      "type": "h2",
+      "text": "Overbooking, aber vorsichtig"
+    },
+    {
+      "type": "p",
+      "text": "Wenn Ihre No-Show-Quote stabil bei 10% liegt, ist 10% mehr Buchungen im Stoßzeit-Slot Arithmetik, kein Glücksspiel. Das Risiko ist die Streuung: An dem Abend, an dem alle kommen, stehen Leute an der Tür. Überbuchen Sie nur den Slot, den Sie auffangen können — wo es einen Barbereich gibt, wo die nächste Sitzung Luft hat — und nie bei großen Gruppen, denn einen Achtertisch improvisiert man nicht."
+    },
+    {
+      "type": "h2",
+      "text": "Ein Vier-Wochen-Plan"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Woche 1: No-Shows sauber zählen. Ein Strichzettel, jeder Service. Sie brauchen die Ausgangslage, bevor Sie etwas ändern.",
+        "Woche 2: eine sofortige Buchungsbestätigung einschalten, falls noch nicht vorhanden.",
+        "Woche 3: eine Erinnerung mit Ein-Tipp-Absage ergänzen. Den Unterschied gegen Woche 1 messen.",
+        "Woche 4: Kartengarantie nur für Ihren schlechtesten Slot — meist Samstagabend und Gruppen ab sechs Personen.",
+        "Dann auswerten. Liegt die Quote unter 5%, hören Sie hier auf; mehr Reibung kostet mehr, als sie spart."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Führen Sie eine kurze Warteliste für Stoßzeiten und schreiben Sie sie an, sobald ein Tisch frei wird. Der halbe Wert einer einfachen Absage liegt darin, den Tisch innerhalb einer Stunde weitergeben zu können."
+    },
+    {
+      "type": "h2",
+      "text": "Was tun, wenn sie doch kommen — nur zu spät"
+    },
+    {
+      "type": "p",
+      "text": "Legen Sie Ihre Karenzzeit vorab fest und schreiben Sie sie in die Bestätigung; 15 Minuten sind üblich. Eine ausgesprochene Regel erlaubt es, einen Tisch um 20:45 freizugeben, ohne spontan eine Regel zu erfinden, und nimmt dem Gast den Anlass zu diskutieren."
+    },
+    {
+      "type": "cta",
+      "heading": "Reservierungen, die sich selbst bestätigen und erinnern",
+      "text": "Nehmen Sie rund um die Uhr Reservierungen an, verschicken Sie Bestätigungen und Erinnerungen automatisch und lassen Sie Gäste mit einem Tipp absagen, damit der Tisch wieder verkauft wird. 14 Tage kostenlos.",
+      "buttonLabel": "Tischreservierungen ansehen",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Häufige Fragen",
+      "items": [
+        {
+          "q": "Was ist eine normale No-Show-Quote für ein Restaurant?",
+          "a": "Die meisten Betriebe, die messen, landen zwischen 5% und 15%, höher bei großen Gruppen, Wochenend-Stoßzeiten und weit im Voraus getätigten Buchungen. Messen Sie vier Wochen lang die eigene Quote, statt zu schätzen."
+        },
+        {
+          "q": "Senken Erinnerungen No-Shows wirklich?",
+          "a": "Sie sind die Maßnahme mit dem höchsten Ertrag, weil die meisten No-Shows Vergesslichkeit sind und keine Absicht. Kombinieren Sie die Erinnerung mit einem Ein-Tipp-Absage-Link, damit aus der vergessenen Buchung ein freier Tisch wird."
+        },
+        {
+          "q": "Darf ich eine No-Show-Gebühr berechnen?",
+          "a": "In vielen Ländern ja, sofern der Gast bei der Buchung klar zugestimmt hat. Die Regeln unterscheiden sich je nach Land — prüfen Sie Ihr lokales Verbraucherrecht und nennen Sie die Regel in der Bestätigung."
+        },
+        {
+          "q": "Sollte ich eine Anzahlung verlangen?",
+          "a": "Bei großen Gruppen und Spitzenterminen oft ja. An einem gewöhnlichen Dienstag kostet sie Sie mehr Buchungen, als sie Gäste rettet."
+        },
+        {
+          "q": "Ist Overbooking eine gute Idee?",
+          "a": "Nur wo Ihre No-Show-Quote stabil und gemessen ist, nur in Slots, in denen Sie Leute unterbringen können, und nie bei großen Gruppen."
+        }
+      ]
+    }
+  ]
+}

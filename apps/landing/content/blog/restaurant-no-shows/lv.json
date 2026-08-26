@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "Neierašanās restorānā: cik maksā un kā to mazināt | IQ Rest",
+    "description": "Aprēķiniet, cik jums mēnesī maksā neieradušies viesi, un kuri pasākumi tos tiešām mazina: apstiprinājumi, atgādinājumi, drošības nauda un pārrezervēšana."
+  },
+  "card": {
+    "title": "Neierašanās: aritmētika un tas, kas tiešām palīdz",
+    "excerpt": "Četri tukši galdi sestdienā ir mēneša programmatūras budžets, sadedzināts vienā vakarā. Lūk, kā izmērīt savu neierašanās rādītāju un kuri pasākumi ir vērti radītās neērtības."
+  },
+  "h1": "Neierašanās restorānā: cik tā maksā un kas to tiešām mazina",
+  "intro": "Neierašanās maksā divreiz: viesi, kurus neapkalpojāt, un tie bez rezervācijas, kurus atteicāt, lai turētu galdu. Vairumam īpašnieku ir sajūta, cik slikti ir, un neviena skaitļa. Vispirms iegūstiet skaitli, jo tieši tas izlemj, vai ir vērts šī dēļ traucēt viesus.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Aprēķiniet savu skaitli"
+    },
+    {
+      "type": "p",
+      "text": "Četras nedēļas skaitiet neieradušos viesus un reiziniet ar vidējo čeku. Vieta ar 120 rezervētām vietām nedēļā un 8% neierašanās zaudē aptuveni 10 viesus nedēļā. Pa 30 € katrs tie ir 300 € nedēļā jeb aptuveni **1300 € mēnesī**."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Rezervēti viesi/nedēļā",
+        "Neierašanās rādītājs",
+        "Zaudēti viesi/mēnesī",
+        "Zaudējums pie 30 €"
+      ],
+      "rows": [
+        [
+          "80",
+          "5%",
+          "16",
+          "480 €"
+        ],
+        [
+          "120",
+          "8%",
+          "42",
+          "1260 €"
+        ],
+        [
+          "200",
+          "10%",
+          "87",
+          "2610 €"
+        ],
+        [
+          "200",
+          "15%",
+          "130",
+          "3900 €"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Pieskaitiet galdus, kurus turējāt. Sestdienas neierašanās plkst. 20.30 parasti nozīmē, ka 20.15 atteicāt viesi bez rezervācijas, tāpēc pilnākajos vakaros reālās izmaksas ir tuvāk dubultam skaitlim."
+    },
+    {
+      "type": "h2",
+      "text": "Kāpēc cilvēki neierodas"
+    },
+    {
+      "type": "p",
+      "text": "Reti ļaunprātības dēļ. Visbiežāk rezervācija kļuvusi abstrakta. Kāds rezervēja pirms vienpadsmit dienām telefonā, aizmirsa, saplānoja citu, un tagad atcelt ir neērti, tāpēc viņš nedara neko. Ikviens strādājošs risinājums trāpa vienā no šiem trim punktiem: padariet rezervāciju konkrētu, padariet atcelšanu vieglu vai panāciet, ka neierašanās kaut ko maksā."
+    },
+    {
+      "type": "h2",
+      "text": "Pasākumi, sakārtoti pēc atdeves attiecībā pret neērtību"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Pasākums",
+        "Efekts",
+        "Neērtība viesim"
+      ],
+      "rows": [
+        [
+          "Apstiprinājums rezervācijas brīdī",
+          "Pamats",
+          "Nav"
+        ],
+        [
+          "Atgādinājums iepriekšējā dienā",
+          "Liels",
+          "Nav"
+        ],
+        [
+          "Atcelšana ar vienu pieskārienu atgādinājumā",
+          "Liels",
+          "Nav"
+        ],
+        [
+          "Apstiprinājums vizītes dienā lielām kompānijām",
+          "Vidējs",
+          "Zema"
+        ],
+        [
+          "Bloķēta karte, norakstīšana tikai pie neierašanās",
+          "Liels",
+          "Vidēja"
+        ],
+        [
+          "Drošības nauda no personas",
+          "Lielākais",
+          "Augsta"
+        ],
+        [
+          "Pārrezervēšana pīķa laikos",
+          "Kompensē",
+          "Riskanti, ja kļūdāties"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Sāciet ar diviem bezmaksas"
+    },
+    {
+      "type": "p",
+      "text": "Atgādinājums iepriekšējā dienā ar atcelšanas saiti, kurai viesis var pieskarties bez sarunas, izdara lielāko daļu darba. Atcelšanas saite šķiet pretrunīga — it kā aicinātu atcelt — bet galds, kas atbrīvojas iepriekšējā dienā plkst. 18.00, ir galds, kuru varat pārdot. Neierašanās ir tā pati zaudētā rezervācija, tikai bez brīdinājuma."
+    },
+    {
+      "type": "p",
+      "text": "Sūtiet to 24 stundas iepriekš darbdienu rezervācijām un vizītes dienas rītā nedēļas nogales vakariem. Īsi: vārds, laiks, cilvēku skaits, viena rinda apstiprināt, viena atcelt."
+    },
+    {
+      "type": "h2",
+      "text": "Kad prasīt karti"
+    },
+    {
+      "type": "p",
+      "text": "Kartes garantijas darbojas un maksā jums rezervācijas. Piemērot to katram galdam otrdienā ir slikts darījums. Piemērot to kompānijām no sešiem cilvēkiem, sestdienai 20.00-21.00 un Vecgada vakaram parasti ir labs: tie ir laiki, kad neierašanos vairs neatgūt."
+    },
+    {
+      "type": "note",
+      "text": "Ja iekasējat maksu par neierašanos, pasakiet to skaidrā valodā rezervācijas brīdī, apstiprinājumā un atgādinājumā. Sūdzība gandrīz nekad nav par maksu, bet par to, ka par to nepateica. Pārbaudiet valsts patērētāju tiesību noteikumus par kartes debetēšanu par nesniegtu pakalpojumu."
+    },
+    {
+      "type": "h2",
+      "text": "Pārrezervēšana, uzmanīgi"
+    },
+    {
+      "type": "p",
+      "text": "Ja jūsu neierašanās rādītājs ir stabili 10%, pieņemt par 10% vairāk rezervāciju pīķa laikā ir aritmētika, nevis azarts. Risks ir izkliede: tajā vakarā, kad ierodas visi, cilvēki stāv pie durvīm. Pārrezervējiet tikai to laiku, kuru varat uzņemt — kur ir bāra zona, kur nākamajai sēdināšanai ir rezerve — un nekad lielām kompānijām, jo galdu astoņiem neimprovizē."
+    },
+    {
+      "type": "h2",
+      "text": "Četru nedēļu plāns"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "1. nedēļa: saskaitiet neierašanās kārtīgi. Viena uzskaites lapa katrā maiņā. Bāzes skaitlis vajadzīgs pirms jebkādām izmaiņām.",
+        "2. nedēļa: ieslēdziet tūlītēju rezervācijas apstiprinājumu, ja tāda vēl nav.",
+        "3. nedēļa: pievienojiet atgādinājumu ar atcelšanu vienā pieskārienā. Izmēriet starpību pret 1. nedēļu.",
+        "4. nedēļa: piemērojiet kartes garantiju tikai sliktākajam laikam — parasti sestdienas vakaram un kompānijām no sešiem cilvēkiem.",
+        "Tad izvērtējiet. Ja rādītājs ir zem 5%, apstājieties šeit; papildu neērtība maksā vairāk, nekā ietaupa."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Uzturiet īsu gaidītāju sarakstu pīķa laikiem un rakstiet tam, tiklīdz galds atbrīvojas. Puse no vieglas atcelšanas vērtības ir tas, ka ir kam atdot galdu stundas laikā."
+    },
+    {
+      "type": "h2",
+      "text": "Ko darīt, kad tomēr ierodas, bet vēlu"
+    },
+    {
+      "type": "p",
+      "text": "Nosakiet gaidīšanas laiku iepriekš un ierakstiet to apstiprinājumā — 15 minūtes ir standarts. Izsludināts noteikums ļauj atbrīvot galdu plkst. 20.45 bez noteikuma izgudrošanas uz vietas un neatstāj viesim iemeslu strīdēties."
+    },
+    {
+      "type": "cta",
+      "heading": "Rezervācijas, kas pašas apstiprinās un atgādina",
+      "text": "Pieņemiet rezervācijas visu diennakti, sūtiet apstiprinājumus un atgādinājumus automātiski un ļaujiet viesiem atcelt ar vienu pieskārienu, lai galds tiktu pārdots atkārtoti. 14 dienas bez maksas.",
+      "buttonLabel": "Skatīt galdu rezervācijas",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Biežāk uzdotie jautājumi",
+      "items": [
+        {
+          "q": "Kāds neierašanās rādītājs restorānam ir normāls?",
+          "a": "Vairums vietu, kas to mēra, nonāk starp 5% un 15%, augstāk lielām kompānijām, nedēļas nogales pīķa laikiem un rezervācijām, kas veiktas ilgi iepriekš. Izmēriet savu četras nedēļas, nevis pieņemiet."
+        },
+        {
+          "q": "Vai atgādinājumi tiešām mazina neierašanos?",
+          "a": "Tas ir pasākums ar augstāko atdevi, jo vairums neierašanos ir aizmāršība, nevis nodoms. Apvienojiet atgādinājumu ar atcelšanas saiti vienā pieskārienā, lai aizmirsta rezervācija kļūtu par atbrīvotu galdu."
+        },
+        {
+          "q": "Vai drīkstu iekasēt maksu par neierašanos?",
+          "a": "Daudzās valstīs jā, ja viesis rezervējot tam skaidri piekrita. Noteikumi valstīs atšķiras, tāpēc pārbaudiet vietējo patērētāju tiesību regulējumu un norādiet nosacījumu apstiprinājumā."
+        },
+        {
+          "q": "Vai man prasīt drošības naudu?",
+          "a": "Lielām kompānijām un pīķa datumiem bieži jā. Parastā otrdienā tā maksā vairāk rezervāciju, nekā izglābj viesu."
+        },
+        {
+          "q": "Vai pārrezervēšana ir laba doma?",
+          "a": "Tikai tur, kur jūsu neierašanās rādītājs ir stabils un izmērīts, tikai laikos, kad cilvēkus ir kur nosēdināt, un nekad lielām kompānijām."
+        }
+      ]
+    }
+  ]
+}

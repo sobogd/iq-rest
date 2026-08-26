@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "Kohaletulemata jätmine restoranis: hind ja lahendused | IQ Rest",
+    "description": "Arvuta, kui palju kohaletulemata broneeringud restoranile kuus maksavad, ja millised meetmed neid tegelikult vähendavad: kinnitused, meeldetuletused, ettemaksud ja ülebroneerimine."
+  },
+  "card": {
+    "title": "Kohaletulemata jätmine: arvutus ja see, mis päriselt aitab",
+    "excerpt": "Neli tühja lauda laupäeval on kuu tarkvaraeelarve, mis põleb ära ühe õhtuga. Nii mõõdad oma no-show määra ja millised meetmed on hõõrdumist väärt."
+  },
+  "h1": "Kohaletulemata jätmine restoranis: kui palju see maksab ja mis seda päriselt vähendab",
+  "intro": "Kohaletulemata broneering maksab kaks korda: külalised, keda sa ei teenindanud, ja broneeringuta külalised, keda sa laua hoidmiseks ära saatsid. Enamikul omanikest on tunne, kui hull olukord on, ja ei ühtki arvu. Hangi kõigepealt arv, sest just see otsustab, kas selle pärast tasub külalisi tülitada.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Arvuta oma number"
+    },
+    {
+      "type": "p",
+      "text": "Loenda neli nädalat kohale tulemata jäänud külalisi ja korruta keskmise kuluga. Koht, kus nädalas on 120 broneeritud kohta ja 8% no-show, kaotab umbes 10 külalist nädalas. 30 € kaupa on see 300 € nädalas ehk umbes **1300 € kuus**."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Broneeritud külalisi/nädal",
+        "No-show määr",
+        "Kaotatud külalisi/kuus",
+        "Kaotus 30 € juures"
+      ],
+      "rows": [
+        [
+          "80",
+          "5%",
+          "16",
+          "480 €"
+        ],
+        [
+          "120",
+          "8%",
+          "42",
+          "1260 €"
+        ],
+        [
+          "200",
+          "10%",
+          "87",
+          "2610 €"
+        ],
+        [
+          "200",
+          "15%",
+          "130",
+          "3900 €"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Lisa juurde lauad, mida sa kinni hoidsid. Laupäevane no-show kell 20.30 tähendab tavaliselt, et kell 20.15 saatsid broneeringuta külalise ära, seega kõige kiiremal õhtul on tegelik kulu kahekordsele lähemal."
+    },
+    {
+      "type": "h2",
+      "text": "Miks inimesed kohale ei tule"
+    },
+    {
+      "type": "p",
+      "text": "Harva pahatahtlikkusest. Enamasti on broneering muutunud abstraktseks. Keegi broneeris üksteist päeva tagasi telefonis, unustas, tegi teised plaanid, ja nüüd on tühistamine ebamugav, seega ta ei tee midagi. Iga toimiv meede tabab üht neist kolmest punktist: tee broneering konkreetseks, tee tühistamine lihtsaks või pane kohaletulemata jätmine midagi maksma."
+    },
+    {
+      "type": "h2",
+      "text": "Meetmed järjestatuna tulu ja hõõrdumise suhtes"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Meede",
+        "Mõju",
+        "Hõõrdumine külalisele"
+      ],
+      "rows": [
+        [
+          "Kinnitus broneerimise hetkel",
+          "Alus",
+          "Puudub"
+        ],
+        [
+          "Meeldetuletus päev varem",
+          "Suur",
+          "Puudub"
+        ],
+        [
+          "Tühistamine ühe puudutusega meeldetuletuses",
+          "Suur",
+          "Puudub"
+        ],
+        [
+          "Samal päeval kinnitamine suurte seltskondade puhul",
+          "Mõõdukas",
+          "Väike"
+        ],
+        [
+          "Kaart broneeritud, debiteeritakse vaid no-show korral",
+          "Suur",
+          "Keskmine"
+        ],
+        [
+          "Ettemaks inimese kohta",
+          "Suurim",
+          "Kõrge"
+        ],
+        [
+          "Ülebroneerimine tipptundidel",
+          "Kompenseerib",
+          "Riskantne, kui eksid"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Alusta kahest tasuta meetmest"
+    },
+    {
+      "type": "p",
+      "text": "Päev varem saadetud meeldetuletus, milles on tühistuslink, mida külaline saab vajutada ilma vestluseta, teeb suurema osa tööst. Tühistuslink tundub vastuoluline — sa justkui kutsud tühistama — kuid laud, mis vabaneb eelmisel päeval kell 18, on laud, mille saad müüa. No-show on sama kaotatud broneering, ainult ilma ette teatamata."
+    },
+    {
+      "type": "p",
+      "text": "Saada see 24 tundi ette argipäevaste broneeringute puhul ja hommikul nädalavahetuse õhtute puhul. Hoia lühike: nimi, kellaaeg, seltskonna suurus, üks rida kinnitamiseks, üks tühistamiseks."
+    },
+    {
+      "type": "h2",
+      "text": "Millal kaarti küsida"
+    },
+    {
+      "type": "p",
+      "text": "Kaardigarantiid toimivad ja maksavad sulle broneeringuid. Selle rakendamine igale lauale teisipäeval on halb vahetus. Selle rakendamine kuue- ja suurematele seltskondadele, laupäevale 20-21 ja vana-aastaõhtule on tavaliselt hea vahetus: need on ajad, mil no-show'd ei anna tagasi teenida."
+    },
+    {
+      "type": "note",
+      "text": "Kui võtad kohaletulemata jätmise eest tasu, ütle seda selges keeles broneerimise hetkel, kinnituses ja meeldetuletuses. Kaebus ei käi peaaegu kunagi tasu kohta, vaid selle kohta, et sellest ei räägitud. Kontrolli oma riigi tarbijakaitse reegleid kaardi debiteerimise kohta osutamata teenuse eest."
+    },
+    {
+      "type": "h2",
+      "text": "Ülebroneerimine, ettevaatlikult"
+    },
+    {
+      "type": "p",
+      "text": "Kui su no-show määr on stabiilselt 10%, on 10% rohkem broneeringuid tipptunnis aritmeetika, mitte hasart. Risk on hajuvus: sel õhtul, kui kõik tulevad, seisavad inimesed uksel. Ülebroneeri ainult seda aega, mille suudad ära neelata — kus on baariala, kus järgmisel istumisel on lõtku — ja mitte kunagi suuri seltskondi, sest kaheksakohalist lauda ei improviseeri."
+    },
+    {
+      "type": "h2",
+      "text": "Neljanädalane plaan"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "1. nädal: loenda no-show'd korralikult. Üks kriipsuleht, iga vahetus. Enne mis tahes muudatust on vaja algtaset.",
+        "2. nädal: lülita sisse kohene broneeringu kinnitus, kui seda veel pole.",
+        "3. nädal: lisa meeldetuletus ühe puudutusega tühistuslingiga. Mõõda erinevust 1. nädalaga.",
+        "4. nädal: rakenda kaardigarantiid ainult kõige halvemale ajale — tavaliselt laupäevaõhtu ja kuue- või suuremad seltskonnad.",
+        "Seejärel vaata üle. Kui määr on alla 5%, jää siia pidama; edasine hõõrdumine maksab rohkem, kui säästab."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Pea tipptundide jaoks lühikest ootenimekirja ja kirjuta sinna, niipea kui laud vabaneb. Pool lihtsa tühistamise väärtusest on selles, et laud on kellelegi tunni jooksul anda."
+    },
+    {
+      "type": "h2",
+      "text": "Mida teha, kui nad siiski tulevad, aga hiljaks"
+    },
+    {
+      "type": "p",
+      "text": "Otsusta ooteaeg ette ja kirjuta see kinnitusse — 15 minutit on tavaline. Väljaöeldud reegel lubab laua kell 20.45 vabastada ilma kohapeal reeglit välja mõtlemata ega jäta külalisele põhjust vaielda."
+    },
+    {
+      "type": "cta",
+      "heading": "Broneeringud, mis kinnitavad ja tuletavad end ise meelde",
+      "text": "Võta broneeringuid vastu ööpäev läbi, saada kinnitused ja meeldetuletused automaatselt ning lase külalistel ühe puudutusega tühistada, et laud uuesti maha müüa. 14 päeva tasuta.",
+      "buttonLabel": "Vaata lauabroneeringuid",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Korduma kippuvad küsimused",
+      "items": [
+        {
+          "q": "Milline no-show määr on restoranile normaalne?",
+          "a": "Enamik mõõtvaid kohti jääb 5% ja 15% vahele, kõrgemale suurte seltskondade, nädalavahetuse tipptundide ja kaua ette tehtud broneeringute puhul. Mõõda oma nelja nädala jooksul, mitte ära oleta."
+        },
+        {
+          "q": "Kas meeldetuletused vähendavad no-show'd tõesti?",
+          "a": "See on kõige suurema tootlusega meede, sest enamik no-show'sid on unustamine, mitte kavatsus. Ühenda meeldetuletus ühe puudutusega tühistuslingiga, et unustatud broneering muutuks vabanenud lauaks."
+        },
+        {
+          "q": "Kas ma tohin võtta no-show tasu?",
+          "a": "Paljudes riikides jah, kui külaline broneerimise ajal sellega selgelt nõustus. Reeglid erinevad riigiti, seega kontrolli kohalikku tarbijaõigust ja märgi tingimus kinnitusse."
+        },
+        {
+          "q": "Kas peaksin küsima ettemaksu?",
+          "a": "Suurte seltskondade ja tipp-kuupäevade puhul sageli jah. Tavalisel teisipäeval maksab see rohkem broneeringuid, kui päästab külalisi."
+        },
+        {
+          "q": "Kas ülebroneerimine on hea mõte?",
+          "a": "Ainult seal, kus su no-show määr on stabiilne ja mõõdetud, ainult aegadel, mil inimesi on kuhugi panna, ja mitte kunagi suurte seltskondade puhul."
+        }
+      ]
+    }
+  ]
+}

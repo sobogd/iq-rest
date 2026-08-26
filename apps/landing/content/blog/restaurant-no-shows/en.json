@@ -1,0 +1,128 @@
+{
+  "meta": {
+    "title": "Restaurant No-Shows: What They Cost and How to Cut Them | IQ Rest",
+    "description": "Work out what no-shows cost your restaurant per month, then the measures that actually reduce them — confirmations, reminders, deposits and overbooking."
+  },
+  "card": {
+    "title": "No-shows: the arithmetic, and what actually reduces them",
+    "excerpt": "Four empty tables on a Saturday is a month's software budget gone in one night. Here's how to measure your own no-show rate and which fixes are worth the friction."
+  },
+  "h1": "Restaurant no-shows: what they cost and what actually reduces them",
+  "intro": "A no-show costs you twice: the covers you didn't serve, and the walk-ins you turned away to hold the table. Most owners have a feeling about how bad it is and no number. Get the number first, because it decides whether this is worth annoying your guests over.",
+  "blocks": [
+    { "type": "h2", "text": "Work out your own figure" },
+    {
+      "type": "p",
+      "text": "Count no-show covers for four weeks and multiply by your average spend. A venue taking 120 booked covers a week with an 8% no-show rate loses about 10 covers a week. At €30 each, that's €300 a week, or roughly **€1,300 a month**."
+    },
+    {
+      "type": "table",
+      "headers": ["Booked covers/week", "No-show rate", "Lost covers/month", "Lost at €30"],
+      "rows": [
+        ["80", "5%", "16", "€480"],
+        ["120", "8%", "42", "€1,260"],
+        ["200", "10%", "87", "€2,610"],
+        ["200", "15%", "130", "€3,900"]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Add the tables you held. A Saturday no-show at 20:30 usually means a walk-in was refused at 20:15, so the real cost is closer to double the headline number on your busiest nights."
+    },
+    { "type": "h2", "text": "Why people don't turn up" },
+    {
+      "type": "p",
+      "text": "Rarely malice. Mostly the booking became abstract. Someone booked eleven days ago on a phone, forgot, made other plans, and now cancelling feels awkward, so they do nothing. Every effective fix works on one of those three points: make the booking concrete, make cancelling easy, or make not showing up cost something."
+    },
+    { "type": "h2", "text": "The measures, ranked by return on friction" },
+    {
+      "type": "table",
+      "headers": ["Measure", "Effect", "Friction for the guest"],
+      "rows": [
+        ["Confirmation the moment they book", "Foundational", "None"],
+        ["Reminder the day before", "Large", "None"],
+        ["One-tap cancel in the reminder", "Large", "None"],
+        ["Confirm same-day for large parties", "Moderate", "Low"],
+        ["Card held, charged only on no-show", "Large", "Medium"],
+        ["Deposit per head", "Largest", "High"],
+        ["Overbooking peak slots", "Compensates", "Risky if wrong"]
+      ]
+    },
+    { "type": "h2", "text": "Start with the two free ones" },
+    {
+      "type": "p",
+      "text": "A reminder the day before, with a cancel link the guest can tap without a conversation, does most of the work. The cancel link feels counterintuitive — you're inviting cancellations — but a table released at 18:00 the day before is a table you can sell. A no-show is the same lost booking with no notice."
+    },
+    {
+      "type": "p",
+      "text": "Send it 24 hours ahead for weekday bookings, and on the morning for weekend evenings. Keep it short: name, time, party size, one line to confirm, one line to cancel."
+    },
+    { "type": "h2", "text": "When to ask for a card" },
+    {
+      "type": "p",
+      "text": "Card guarantees work, and they cost you bookings. Applying one to every table on a Tuesday is a bad trade. Applying it to parties of six or more, to Saturday 20:00–21:00, and to New Year's Eve is usually a good one — those are the slots where a no-show is unrecoverable."
+    },
+    {
+      "type": "note",
+      "text": "If you charge a no-show fee, say so in plain language at the moment of booking, in the confirmation, and in the reminder. The complaint is almost never about the fee — it's about not having been told. Check your national consumer rules on charging cards for services not rendered."
+    },
+    { "type": "h2", "text": "Overbooking, carefully" },
+    {
+      "type": "p",
+      "text": "If your no-show rate is a stable 10%, taking 10% more bookings in your peak slot is arithmetic, not gambling. The risk is variance: on the night everybody turns up you have people standing at the door. Overbook only the slot you can absorb — where a bar area exists, where the following seating has slack — and never for large parties, because you can't improvise a table for eight."
+    },
+    { "type": "h2", "text": "A four-week plan" },
+    {
+      "type": "steps",
+      "items": [
+        "Week 1: count no-shows properly. One tally sheet, every service. You need the baseline before you change anything.",
+        "Week 2: turn on an instant booking confirmation, if you don't already have one.",
+        "Week 3: add a reminder with a one-tap cancel link. Measure the difference against week 1.",
+        "Week 4: apply a card guarantee to your worst slot only — usually Saturday evening and parties of six or more.",
+        "Then review. If the rate is under 5%, stop here; further friction costs more than it saves."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Keep a short waiting list for peak slots and text it when a table releases. Half the value of easy cancellation is having someone to give the table to within the hour."
+    },
+    { "type": "h2", "text": "What to do when they do show up late" },
+    {
+      "type": "p",
+      "text": "Decide your grace period in advance and write it in the confirmation — 15 minutes is standard. A stated policy lets a host release a table at 20:45 without inventing a rule on the spot, and gives the guest no reason to argue."
+    },
+    {
+      "type": "cta",
+      "heading": "Bookings that confirm and remind themselves",
+      "text": "Take reservations 24/7, send confirmations and reminders automatically, and let guests cancel in one tap so the table gets resold. 14 days free.",
+      "buttonLabel": "See table reservations",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently asked questions",
+      "items": [
+        {
+          "q": "What is a normal no-show rate for a restaurant?",
+          "a": "Most venues that measure it land somewhere between 5% and 15%, higher for large parties, peak weekend slots and bookings made far in advance. Measure your own for four weeks rather than assuming."
+        },
+        {
+          "q": "Do reminders really reduce no-shows?",
+          "a": "They're the highest-return measure available, because most no-shows are forgetfulness rather than intent. Pair the reminder with a one-tap cancel link so the forgotten booking becomes a released table."
+        },
+        {
+          "q": "Can I charge a no-show fee?",
+          "a": "In many countries yes, provided the guest agreed to it clearly at the time of booking. Rules differ by country, so check your local consumer law and state the policy in the confirmation."
+        },
+        {
+          "q": "Should I ask for a deposit?",
+          "a": "For large parties and peak dates, often yes. For an ordinary Tuesday it costs you more bookings than it saves covers."
+        },
+        {
+          "q": "Is overbooking a good idea?",
+          "a": "Only where your no-show rate is stable and measured, only in slots where you have somewhere to put people, and never for large parties."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "No-shows au restaurant : coût et solutions | IQ Rest",
+    "description": "Calculez ce que les no-shows coûtent à votre restaurant chaque mois, puis les mesures qui les réduisent vraiment : confirmations, rappels, acomptes, surréservation."
+  },
+  "card": {
+    "title": "No-shows : l'arithmétique, et ce qui les réduit vraiment",
+    "excerpt": "Quatre tables vides un samedi, c'est un budget logiciel mensuel envolé en une soirée. Voici comment mesurer votre taux de no-show et quelles solutions valent la friction."
+  },
+  "h1": "No-shows au restaurant : ce qu'ils coûtent et ce qui les réduit vraiment",
+  "intro": "Un no-show vous coûte deux fois : les couverts que vous n'avez pas servis et les clients sans réservation que vous avez refusés pour garder la table. La plupart des exploitants ont une impression de la gravité et aucun chiffre. Obtenez le chiffre d'abord, car c'est lui qui décide si cela vaut la peine d'embêter vos clients.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Calculez votre propre chiffre"
+    },
+    {
+      "type": "p",
+      "text": "Comptez les couverts non honorés pendant quatre semaines et multipliez par votre ticket moyen. Un établissement à 120 couverts réservés par semaine avec 8% de no-shows perd environ 10 couverts par semaine. À 30 € pièce, cela fait 300 € par semaine, soit environ **1 300 € par mois**."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Couverts réservés/semaine",
+        "Taux de no-show",
+        "Couverts perdus/mois",
+        "Perte à 30 €"
+      ],
+      "rows": [
+        [
+          "80",
+          "5%",
+          "16",
+          "480 €"
+        ],
+        [
+          "120",
+          "8%",
+          "42",
+          "1 260 €"
+        ],
+        [
+          "200",
+          "10%",
+          "87",
+          "2 610 €"
+        ],
+        [
+          "200",
+          "15%",
+          "130",
+          "3 900 €"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Ajoutez les tables que vous avez gardées. Un no-show du samedi à 20h30 signifie généralement qu'un client sans réservation a été refusé à 20h15 : le coût réel approche donc le double du chiffre affiché lors de vos meilleures soirées."
+    },
+    {
+      "type": "h2",
+      "text": "Pourquoi les gens ne viennent pas"
+    },
+    {
+      "type": "p",
+      "text": "Rarement par malveillance. Le plus souvent, la réservation est devenue abstraite. Quelqu'un a réservé il y a onze jours depuis son téléphone, a oublié, a prévu autre chose, et annuler devient gênant : il ne fait donc rien. Toute solution efficace agit sur l'un de ces trois points : rendre la réservation concrète, rendre l'annulation facile, ou faire que ne pas venir coûte quelque chose."
+    },
+    {
+      "type": "h2",
+      "text": "Les mesures, classées par rendement rapporté à la friction"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Mesure",
+        "Effet",
+        "Friction pour le client"
+      ],
+      "rows": [
+        [
+          "Confirmation au moment de la réservation",
+          "Fondamentale",
+          "Aucune"
+        ],
+        [
+          "Rappel la veille",
+          "Fort",
+          "Aucune"
+        ],
+        [
+          "Annulation en un geste dans le rappel",
+          "Fort",
+          "Aucune"
+        ],
+        [
+          "Confirmation le jour même pour les grandes tables",
+          "Modéré",
+          "Faible"
+        ],
+        [
+          "Carte enregistrée, débitée seulement en cas de no-show",
+          "Fort",
+          "Moyenne"
+        ],
+        [
+          "Acompte par personne",
+          "Le plus fort",
+          "Élevée"
+        ],
+        [
+          "Surréservation des créneaux de pointe",
+          "Compense",
+          "Risqué si mal calibré"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Commencez par les deux gratuites"
+    },
+    {
+      "type": "p",
+      "text": "Un rappel la veille, avec un lien d'annulation que le client peut toucher sans avoir à parler à personne, fait l'essentiel du travail. Le lien d'annulation semble contre-intuitif — vous invitez à annuler — mais une table libérée à 18h la veille est une table que vous pouvez vendre. Un no-show, c'est la même réservation perdue, sans préavis."
+    },
+    {
+      "type": "p",
+      "text": "Envoyez-le 24 heures avant pour les réservations en semaine, et le matin même pour les soirées de week-end. Restez court : nom, heure, nombre de personnes, une ligne pour confirmer, une pour annuler."
+    },
+    {
+      "type": "h2",
+      "text": "Quand demander une carte"
+    },
+    {
+      "type": "p",
+      "text": "Les garanties par carte fonctionnent, et elles vous coûtent des réservations. L'appliquer à toutes les tables un mardi est un mauvais échange. L'appliquer aux tables de six et plus, au samedi 20h-21h et au 31 décembre est généralement un bon échange : ce sont les créneaux où un no-show est irrécupérable."
+    },
+    {
+      "type": "note",
+      "text": "Si vous facturez des frais de no-show, dites-le en clair au moment de la réservation, dans la confirmation et dans le rappel. La réclamation ne porte presque jamais sur les frais, mais sur le fait de ne pas avoir été prévenu. Vérifiez les règles de consommation de votre pays sur le débit d'une carte pour un service non rendu."
+    },
+    {
+      "type": "h2",
+      "text": "La surréservation, avec précaution"
+    },
+    {
+      "type": "p",
+      "text": "Si votre taux de no-show est stable à 10%, prendre 10% de réservations en plus sur votre créneau de pointe relève de l'arithmétique, pas du pari. Le risque, c'est la variance : le soir où tout le monde vient, des gens attendent debout à l'entrée. Ne surréservez que le créneau que vous pouvez absorber — là où il y a un bar, là où le service suivant a du mou — et jamais pour les grandes tables, car une table de huit ne s'improvise pas."
+    },
+    {
+      "type": "h2",
+      "text": "Un plan sur quatre semaines"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Semaine 1 : comptez correctement les no-shows. Une feuille de comptage, à chaque service. Il vous faut la base avant de changer quoi que ce soit.",
+        "Semaine 2 : activez une confirmation de réservation instantanée, si ce n'est pas déjà le cas.",
+        "Semaine 3 : ajoutez un rappel avec lien d'annulation en un geste. Mesurez l'écart avec la semaine 1.",
+        "Semaine 4 : appliquez la garantie par carte à votre pire créneau uniquement — en général le samedi soir et les tables de six et plus.",
+        "Puis faites le point. Si le taux est sous 5%, arrêtez-vous là : davantage de friction coûte plus qu'elle ne rapporte."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Tenez une courte liste d'attente pour les créneaux de pointe et écrivez-lui dès qu'une table se libère. La moitié de la valeur d'une annulation facile, c'est d'avoir à qui donner la table dans l'heure."
+    },
+    {
+      "type": "h2",
+      "text": "Que faire quand ils viennent, mais en retard"
+    },
+    {
+      "type": "p",
+      "text": "Décidez votre délai de tolérance à l'avance et inscrivez-le dans la confirmation : 15 minutes est la norme. Une règle annoncée permet de libérer une table à 20h45 sans inventer une règle sur le moment, et ne laisse au client aucune raison de discuter."
+    },
+    {
+      "type": "cta",
+      "heading": "Des réservations qui se confirment et se rappellent toutes seules",
+      "text": "Prenez des réservations 24h/24, envoyez confirmations et rappels automatiquement, et laissez les clients annuler en un geste pour que la table soit revendue. 14 jours gratuits.",
+      "buttonLabel": "Voir les réservations de table",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Questions fréquentes",
+      "items": [
+        {
+          "q": "Quel est un taux de no-show normal pour un restaurant ?",
+          "a": "La plupart des établissements qui le mesurent se situent entre 5% et 15%, davantage pour les grandes tables, les créneaux de pointe du week-end et les réservations prises longtemps à l'avance. Mesurez le vôtre pendant quatre semaines plutôt que de le supposer."
+        },
+        {
+          "q": "Les rappels réduisent-ils vraiment les no-shows ?",
+          "a": "C'est la mesure au meilleur rendement disponible, parce que la plupart des no-shows relèvent de l'oubli, pas de l'intention. Associez le rappel à un lien d'annulation en un geste pour que la réservation oubliée devienne une table libérée."
+        },
+        {
+          "q": "Puis-je facturer des frais de no-show ?",
+          "a": "Dans de nombreux pays oui, à condition que le client l'ait clairement accepté au moment de réserver. Les règles varient selon les pays : vérifiez votre droit de la consommation local et indiquez la règle dans la confirmation."
+        },
+        {
+          "q": "Dois-je demander un acompte ?",
+          "a": "Pour les grandes tables et les dates de forte demande, souvent oui. Pour un mardi ordinaire, cela vous coûte plus de réservations que cela ne sauve de couverts."
+        },
+        {
+          "q": "La surréservation est-elle une bonne idée ?",
+          "a": "Seulement si votre taux de no-show est stable et mesuré, seulement sur les créneaux où vous avez de la place pour installer les gens, et jamais pour les grandes tables."
+        }
+      ]
+    }
+  ]
+}

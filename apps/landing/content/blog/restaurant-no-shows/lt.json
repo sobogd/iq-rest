@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "Neatvykimai į restoraną: kiek kainuoja ir kaip sumažinti | IQ Rest",
+    "description": "Apskaičiuokite, kiek neatvykę svečiai jums kainuoja per mėnesį, ir kurios priemonės juos tikrai sumažina: patvirtinimai, priminimai, užstatai ir perteklinis rezervavimas."
+  },
+  "card": {
+    "title": "Neatvykimai: aritmetika ir tai, kas tikrai padeda",
+    "excerpt": "Keturi tušti staliukai šeštadienį – tai mėnesio programinės įrangos biudžetas, sudegintas per vieną vakarą. Štai kaip išmatuoti savo neatvykimų rodiklį ir kurios priemonės vertos trinties."
+  },
+  "h1": "Neatvykimai į restoraną: kiek jie kainuoja ir kas juos tikrai mažina",
+  "intro": "Neatvykimas kainuoja dukart: svečiai, kurių neaptarnavote, ir tie be rezervacijos, kuriuos atsisakėte priimti, kad išlaikytumėte staliuką. Dauguma savininkų turi nuojautą, kaip blogai, ir jokio skaičiaus. Pirmiausia gaukite skaičių, nes būtent jis nusprendžia, ar verta dėl to varginti svečius.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Apskaičiuokite savo skaičių"
+    },
+    {
+      "type": "p",
+      "text": "Keturias savaites skaičiuokite neatvykusius svečius ir padauginkite iš vidutinės sąskaitos. Vieta su 120 rezervuotų vietų per savaitę ir 8% neatvykimų praranda apie 10 svečių per savaitę. Po 30 € kiekvienas tai yra 300 € per savaitę, tai yra maždaug **1300 € per mėnesį**."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Rezervuota svečių/savaitę",
+        "Neatvykimų rodiklis",
+        "Prarasta svečių/mėnesį",
+        "Nuostolis prie 30 €"
+      ],
+      "rows": [
+        [
+          "80",
+          "5%",
+          "16",
+          "480 €"
+        ],
+        [
+          "120",
+          "8%",
+          "42",
+          "1260 €"
+        ],
+        [
+          "200",
+          "10%",
+          "87",
+          "2610 €"
+        ],
+        [
+          "200",
+          "15%",
+          "130",
+          "3900 €"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Pridėkite staliukus, kuriuos laikėte. Šeštadienio neatvykimas 20.30 dažniausiai reiškia, kad 20.15 atsisakėte svečio be rezervacijos, tad pilniausiais vakarais tikroji kaina artimesnė dvigubam skaičiui."
+    },
+    {
+      "type": "h2",
+      "text": "Kodėl žmonės neateina"
+    },
+    {
+      "type": "p",
+      "text": "Retai iš piktos valios. Dažniausiai rezervacija tapo abstrakti. Kažkas rezervavo prieš vienuolika dienų telefonu, pamiršo, susitarė kitaip, o dabar atšaukti nepatogu, tad nedaro nieko. Kiekviena veikianti priemonė pataiko į vieną iš tų trijų taškų: padaryti rezervaciją konkrečią, palengvinti atšaukimą arba padaryti, kad neatvykimas ko nors kainuotų."
+    },
+    {
+      "type": "h2",
+      "text": "Priemonės, surikiuotos pagal grąžą ir trintį"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Priemonė",
+        "Poveikis",
+        "Trintis svečiui"
+      ],
+      "rows": [
+        [
+          "Patvirtinimas rezervavimo momentu",
+          "Pagrindas",
+          "Jokios"
+        ],
+        [
+          "Priminimas dieną prieš",
+          "Didelis",
+          "Jokios"
+        ],
+        [
+          "Atšaukimas vienu paspaudimu priminime",
+          "Didelis",
+          "Jokios"
+        ],
+        [
+          "Patvirtinimas tą pačią dieną didelėms kompanijoms",
+          "Vidutinis",
+          "Maža"
+        ],
+        [
+          "Blokuota kortelė, nuskaitoma tik neatvykus",
+          "Didelis",
+          "Vidutinė"
+        ],
+        [
+          "Užstatas nuo žmogaus",
+          "Didžiausias",
+          "Didelė"
+        ],
+        [
+          "Perteklinis rezervavimas piko laiku",
+          "Kompensuoja",
+          "Rizikinga suklydus"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Pradėkite nuo dviejų nemokamų"
+    },
+    {
+      "type": "p",
+      "text": "Priminimas dieną prieš su atšaukimo nuoroda, kurią svečias gali paspausti be pokalbio, atlieka didžiąją darbo dalį. Atšaukimo nuoroda atrodo priešinga logikai — tarsi kviestumėte atšaukti — bet staliukas, atsilaisvinęs dieną prieš 18 val., yra staliukas, kurį galite parduoti. Neatvykimas – ta pati prarasta rezervacija, tik be įspėjimo."
+    },
+    {
+      "type": "p",
+      "text": "Siųskite jį prieš 24 valandas darbo dienų rezervacijoms ir tos dienos rytą savaitgalio vakarams. Trumpai: vardas, laikas, žmonių skaičius, viena eilutė patvirtinti, viena atšaukti."
+    },
+    {
+      "type": "h2",
+      "text": "Kada prašyti kortelės"
+    },
+    {
+      "type": "p",
+      "text": "Kortelės garantijos veikia ir kainuoja jums rezervacijų. Taikyti ją kiekvienam staliukui antradienį – blogas mainas. Taikyti ją šešių ir daugiau žmonių kompanijoms, šeštadieniui 20.00-21.00 ir Naujųjų metų nakčiai paprastai geras: tai laikai, kai neatvykimo nebeatsigriebsi."
+    },
+    {
+      "type": "note",
+      "text": "Jei imate mokestį už neatvykimą, pasakykite tai aiškia kalba rezervavimo metu, patvirtinime ir priminime. Skundas beveik niekada nėra dėl mokesčio, o dėl to, kad apie jį nepasakė. Pasitikrinkite savo šalies vartotojų teisių taisykles dėl kortelės nuskaitymo už nesuteiktą paslaugą."
+    },
+    {
+      "type": "h2",
+      "text": "Perteklinis rezervavimas, atsargiai"
+    },
+    {
+      "type": "p",
+      "text": "Jei jūsų neatvykimų rodiklis stabilūs 10%, priimti 10% daugiau rezervacijų piko laiku yra aritmetika, ne azartas. Rizika – sklaida: tą vakarą, kai ateina visi, žmonės stovi prie durų. Perrezervuokite tik tą laiką, kurį pajėgsite sugerti — kur yra baro zona, kur kitas sodinimas turi atsargos — ir niekada didelėms kompanijoms, nes staliuko aštuoniems neimprovizuosi."
+    },
+    {
+      "type": "h2",
+      "text": "Keturių savaičių planas"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "1 savaitė: skaičiuokite neatvykimus kaip pridera. Vienas žymėjimo lapas kiekvienoje pamainoje. Prieš ką nors keisdami turite turėti atskaitos tašką.",
+        "2 savaitė: įjunkite momentinį rezervacijos patvirtinimą, jei jo dar nėra.",
+        "3 savaitė: pridėkite priminimą su atšaukimu vienu paspaudimu. Išmatuokite skirtumą nuo 1 savaitės.",
+        "4 savaitė: kortelės garantiją taikykite tik blogiausiam laikui — dažniausiai šeštadienio vakarui ir šešių bei daugiau žmonių kompanijoms.",
+        "Tada įvertinkite. Jei rodiklis mažesnis nei 5%, sustokite čia; tolesnė trintis kainuoja daugiau, nei sutaupo."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Turėkite trumpą laukiančiųjų sąrašą piko laikams ir parašykite jam, vos tik atsilaisvina staliukas. Pusė lengvo atšaukimo vertės – turėti kam atiduoti staliuką per valandą."
+    },
+    {
+      "type": "h2",
+      "text": "Ką daryti, kai vis dėlto ateina, bet vėluoja"
+    },
+    {
+      "type": "p",
+      "text": "Nuspręskite laukimo laiką iš anksto ir įrašykite jį į patvirtinimą — 15 minučių yra standartas. Paskelbta taisyklė leidžia atlaisvinti staliuką 20.45 nesugalvojant taisyklės vietoje ir nepalieka svečiui pagrindo ginčytis."
+    },
+    {
+      "type": "cta",
+      "heading": "Rezervacijos, kurios pačios patvirtina ir primena",
+      "text": "Priimkite rezervacijas visą parą, siųskite patvirtinimus ir priminimus automatiškai ir leiskite svečiams atšaukti vienu paspaudimu, kad staliukas būtų parduotas iš naujo. 14 dienų nemokamai.",
+      "buttonLabel": "Peržiūrėti staliukų rezervacijas",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Dažnai užduodami klausimai",
+      "items": [
+        {
+          "q": "Koks neatvykimų rodiklis restoranui normalus?",
+          "a": "Dauguma jį matuojančių vietų atsiduria tarp 5% ir 15%, aukščiau – didelėms kompanijoms, savaitgalio piko laikams ir gerokai iš anksto darytoms rezervacijoms. Matuokite savo keturias savaites, o ne spėliokite."
+        },
+        {
+          "q": "Ar priminimai tikrai mažina neatvykimus?",
+          "a": "Tai didžiausią grąžą duodanti priemonė, nes dauguma neatvykimų yra užmaršumas, o ne ketinimas. Sujunkite priminimą su atšaukimo nuoroda vienu paspaudimu, kad pamiršta rezervacija taptų atlaisvintu staliuku."
+        },
+        {
+          "q": "Ar galiu imti mokestį už neatvykimą?",
+          "a": "Daugelyje šalių taip, jei svečias rezervuodamas su tuo aiškiai sutiko. Taisyklės skiriasi pagal šalį, tad pasitikrinkite vietos vartotojų teisę ir nurodykite sąlygą patvirtinime."
+        },
+        {
+          "q": "Ar prašyti užstato?",
+          "a": "Didelėms kompanijoms ir piko datoms dažnai taip. Įprastą antradienį jis kainuoja daugiau rezervacijų, nei išgelbsti svečių."
+        },
+        {
+          "q": "Ar perteklinis rezervavimas gera mintis?",
+          "a": "Tik ten, kur jūsų neatvykimų rodiklis stabilus ir išmatuotas, tik laikais, kai žmones yra kur pasodinti, ir niekada didelėms kompanijoms."
+        }
+      ]
+    }
+  ]
+}

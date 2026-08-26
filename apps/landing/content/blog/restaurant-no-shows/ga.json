@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "Neamhláithreacht i mbialann: an costas agus na leigheasanna | IQ Rest",
+    "description": "Oibrigh amach cad a chosnaíonn neamhláithrithe ar do bhialann in aghaidh na míosa, agus na bearta a laghdaíonn i ndáiríre iad: deimhnithe, meabhrúcháin, éarlaisí agus róáirithint."
+  },
+  "card": {
+    "title": "Neamhláithrithe: an uimhríocht agus an rud a laghdaíonn i ndáiríre iad",
+    "excerpt": "Ceithre bhord fholmha ar an Satharn — sin buiséad míosa bogearraí imithe in aon oíche amháin. Seo mar a thomhaiseann tú do ráta féin agus cé na bearta ar fiú an chuimilt iad."
+  },
+  "h1": "Neamhláithrithe i mbialann: cad a chosnaíonn siad agus cad a laghdaíonn i ndáiríre iad",
+  "intro": "Cosnaíonn neamhláithreacht faoi dhó ort: na custaiméirí nár fhreastail tú orthu, agus na daoine a shiúil isteach agus ar dhiúltaigh tú dóibh chun an bord a choinneáil. Tá tuairim ag formhór na n-úinéirí faoi cé chomh dona is atá sé, agus gan uimhir ar bith acu. Faigh an uimhir ar dtús, mar is í a shocraíonn an fiú cur isteach ar do chustaiméirí dá barr.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Oibrigh amach d'fhigiúr féin"
+    },
+    {
+      "type": "p",
+      "text": "Comhair na custaiméirí nár tháinig ar feadh ceithre seachtaine agus méadaigh faoin meánchaiteachas. Caillfidh áit a bhfuil 120 custaiméir in áirithe sa tseachtain agus ráta 8% timpeall 10 gcustaiméir sa tseachtain. Ar €30 an duine, sin €300 sa tseachtain, nó thart ar **€1,300 sa mhí**."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Custaiméirí in áirithe/seachtain",
+        "Ráta neamhláithreachta",
+        "Custaiméirí caillte/mí",
+        "Caillteanas ag €30"
+      ],
+      "rows": [
+        [
+          "80",
+          "5%",
+          "16",
+          "€480"
+        ],
+        [
+          "120",
+          "8%",
+          "42",
+          "€1,260"
+        ],
+        [
+          "200",
+          "10%",
+          "87",
+          "€2,610"
+        ],
+        [
+          "200",
+          "15%",
+          "130",
+          "€3,900"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Cuir leis na boird a choinnigh tú. Ciallaíonn neamhláithreacht Satharn ag 20:30 de ghnáth gur diúltaíodh do dhuine gan áirithint ag 20:15, mar sin ar na hoícheanta is gnóthaí bíonn an fíorchostas gar don dá oiread."
+    },
+    {
+      "type": "h2",
+      "text": "Cén fáth nach dtagann daoine"
+    },
+    {
+      "type": "p",
+      "text": "Is annamh gur mailís é. De ghnáth tá an áirithint tar éis éirí teibí. Rinne duine áirithint aon lá dhéag ó shin ar an bhfón, rinne dearmad air, shocraigh rud eile, agus anois braitheann sé aisteach cur ar ceal, mar sin ní dhéanann sé faic. Buaileann gach beart a oibríonn ceann de na trí phointe sin: déan an áirithint nithiúil, déan an cealú éasca, nó cuir costas ar gan teacht."
+    },
+    {
+      "type": "h2",
+      "text": "Na bearta, de réir toraidh in aghaidh cuimilte"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Beart",
+        "Éifeacht",
+        "Cuimilt don chustaiméir"
+      ],
+      "rows": [
+        [
+          "Deimhniú ag nóiméad na háirithinte",
+          "Bunúsach",
+          "Ceann ar bith"
+        ],
+        [
+          "Meabhrúchán an lá roimhe",
+          "Mór",
+          "Ceann ar bith"
+        ],
+        [
+          "Cealú le tapáil amháin sa mheabhrúchán",
+          "Mór",
+          "Ceann ar bith"
+        ],
+        [
+          "Deimhniú an lá céanna do ghrúpaí móra",
+          "Measartha",
+          "Íseal"
+        ],
+        [
+          "Cárta coinnithe, muirearaithe ach amháin ag neamhláithreacht",
+          "Mór",
+          "Meánach"
+        ],
+        [
+          "Éarlais an duine",
+          "Is mó",
+          "Ard"
+        ],
+        [
+          "Róáirithint ag buaicamanna",
+          "Cúitíonn",
+          "Contúirteach má bhíonn tú mícheart"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Tosaigh leis an dá cheann saor in aisce"
+    },
+    {
+      "type": "p",
+      "text": "Déanann meabhrúchán an lá roimhe, le nasc cealaithe ar féidir leis an gcustaiméir tapáil air gan comhrá, formhór na hoibre. Braitheann an nasc cealaithe frithintinneach — tá tú ag tabhairt cuiridh cealú a dhéanamh — ach is bord é bord a scaoiltear ag 18:00 an lá roimhe ar féidir leat a dhíol. Is í an áirithint chaillte chéanna í an neamhláithreacht, gan fógra ar bith."
+    },
+    {
+      "type": "p",
+      "text": "Seol 24 uair roimh ré é d'áirithintí lár seachtaine, agus ar maidin d'oícheanta deireadh seachtaine. Coinnigh gearr é: ainm, am, líon daoine, líne amháin le deimhniú, líne amháin le cealú."
+    },
+    {
+      "type": "h2",
+      "text": "Cathain a iarrfá cárta"
+    },
+    {
+      "type": "p",
+      "text": "Oibríonn ráthaíochtaí cárta, agus cosnaíonn siad áirithintí ort. Is drochmhargadh é a chur ar gach bord Dé Máirt. Is margadh maith é de ghnáth é a chur ar ghrúpaí seisir nó níos mó, ar an Satharn 20:00-21:00 agus ar Oíche Chinn Bhliana: sin na sliotáin nach féidir neamhláithreacht a thabhairt ar ais iontu."
+    },
+    {
+      "type": "note",
+      "text": "Má ghearrann tú táille neamhláithreachta, abair é i dteanga shoiléir tráth na háirithinte, sa deimhniú agus sa mheabhrúchán. Is annamh a bhaineann an gearán leis an táille — baineann sé leis gan a bheith inste dó. Seiceáil rialacha tomhaltóirí do thíre maidir le cártaí a mhuirearú as seirbhísí nár soláthraíodh."
+    },
+    {
+      "type": "h2",
+      "text": "Róáirithint, go cúramach"
+    },
+    {
+      "type": "p",
+      "text": "Má tá do ráta neamhláithreachta seasta ag 10%, is uimhríocht seachas cearrbhachas é 10% níos mó áirithintí a ghlacadh sa sliotán buaice. Is í an éagsúlacht an baol: an oíche a thagann gach duine, bíonn daoine ina seasamh ag an doras. Ná déan róáirithint ach ar an sliotán is féidir leat a ionsú — áit a bhfuil beár, áit a bhfuil scóip ag an gcéad suí eile — agus riamh do ghrúpaí móra, mar ní féidir bord d'ochtar a chumadh ar an toirt."
+    },
+    {
+      "type": "h2",
+      "text": "Plean ceithre seachtaine"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Seachtain 1: comhair na neamhláithrithe i gceart. Bileog chomhairimh amháin, gach seirbhís. Teastaíonn an bunlíne uait sula n-athraíonn tú aon rud.",
+        "Seachtain 2: cuir deimhniú áirithinte láithreach ar siúl, mura bhfuil sé agat cheana.",
+        "Seachtain 3: cuir meabhrúchán le cealú aon tapála leis. Tomhais an difríocht i gcomparáid le seachtain 1.",
+        "Seachtain 4: cuir ráthaíocht chárta i bhfeidhm ar do shliotán is measa amháin — an Satharn tráthnóna de ghnáth agus grúpaí seisir nó níos mó.",
+        "Ansin déan athbhreithniú. Má tá an ráta faoi bhun 5%, stop anseo; cosnaíonn tuilleadh cuimilte níos mó ná mar a shábhálann sí."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Coinnigh liosta feithimh gearr do na sliotáin bhuaice agus seol téacs chucu nuair a scaoiltear bord. Is é leath luach an chealaithe éasca go mbíonn duine agat le bord a thabhairt dó laistigh den uair."
+    },
+    {
+      "type": "h2",
+      "text": "Cad a dhéanfá nuair a thagann siad, ach go déanach"
+    },
+    {
+      "type": "p",
+      "text": "Socraigh do thréimhse cairde roimh ré agus scríobh sa deimhniú é — is é 15 nóiméad an gnáthrud. Ligeann polasaí ráite d'óstach bord a scaoileadh ag 20:45 gan riail a chumadh ar an toirt, agus ní fhágann sé cúis ag an gcustaiméir a bheith ag argóint."
+    },
+    {
+      "type": "cta",
+      "heading": "Áirithintí a dheimhníonn agus a mheabhraíonn iad féin",
+      "text": "Glac áirithintí 24/7, seol deimhnithe agus meabhrúcháin go huathoibríoch, agus lig do chustaiméirí cealú le tapáil amháin ionas go ndíolfar an bord arís. 14 lá saor in aisce.",
+      "buttonLabel": "Féach ar áirithintí boird",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Ceisteanna coitianta",
+      "items": [
+        {
+          "q": "Cad é gnáthráta neamhláithreachta do bhialann?",
+          "a": "Tagann formhór na n-áiteanna a thomhaiseann é idir 5% agus 15%, níos airde do ghrúpaí móra, do bhuaicshliotáin deireadh seachtaine agus d'áirithintí a rinneadh i bhfad roimh ré. Tomhais do cheann féin ar feadh ceithre seachtaine seachas a bheith ag glacadh leis."
+        },
+        {
+          "q": "An laghdaíonn meabhrúcháin neamhláithrithe i ndáiríre?",
+          "a": "Is é an beart is mó toradh atá ar fáil, mar is dearmad seachas rún é formhór na neamhláithreachtaí. Cuir nasc cealaithe aon tapála leis an meabhrúchán ionas go n-éiríonn bord scaoilte den áirithint dhearmadta."
+        },
+        {
+          "q": "An féidir liom táille neamhláithreachta a ghearradh?",
+          "a": "I go leor tíortha is féidir, ar choinníoll gur aontaigh an custaiméir léi go soiléir tráth na háirithinte. Bíonn na rialacha éagsúil ó thír go tír, mar sin seiceáil dlí tomhaltóirí áitiúil agus luaigh an polasaí sa deimhniú."
+        },
+        {
+          "q": "Ar cheart dom éarlais a iarraidh?",
+          "a": "Do ghrúpaí móra agus do dhátaí buaice, is minic gur cheart. Ar ghnáth-Mháirt cosnaíonn sí níos mó áirithintí ná mar a shábhálann sí custaiméirí."
+        },
+        {
+          "q": "An smaoineamh maith í an róáirithint?",
+          "a": "Ach amháin nuair atá do ráta neamhláithreachta seasta agus tomhaiste, ach amháin i sliotáin ina bhfuil áit agat do dhaoine, agus riamh do ghrúpaí móra."
+        }
+      ]
+    }
+  ]
+}

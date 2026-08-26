@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "Uteblivna bordsbokningar: kostnad och åtgärder | IQ Rest",
+    "description": "Räkna ut vad uteblivna gäster kostar din restaurang per månad, och vilka åtgärder som verkligen minskar dem: bekräftelser, påminnelser, depositioner och överbokning."
+  },
+  "card": {
+    "title": "Uteblivna gäster: räknestycket och det som faktiskt hjälper",
+    "excerpt": "Fyra tomma bord en lördag är en månads mjukvarubudget borta på en kväll. Så mäter du din egen andel uteblivna och vilka åtgärder som är värda friktionen."
+  },
+  "h1": "Uteblivna gäster i restaurang: vad de kostar och vad som faktiskt minskar dem",
+  "intro": "En utebliven bokning kostar dig två gånger: kuverten du inte serverade och drop-in-gästerna du nekade för att hålla bordet. De flesta krögare har en känsla för hur illa det är och ingen siffra. Skaffa siffran först, för den avgör om det är värt att besvära dina gäster.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Räkna ut din egen siffra"
+    },
+    {
+      "type": "p",
+      "text": "Räkna uteblivna kuvert i fyra veckor och multiplicera med ditt snittköp. En krog med 120 bokade kuvert i veckan och 8% uteblivna förlorar ungefär 10 kuvert i veckan. Vid 30 € styck blir det 300 € i veckan, alltså ungefär **1 300 € i månaden**."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Bokade kuvert/vecka",
+        "Andel uteblivna",
+        "Förlorade kuvert/månad",
+        "Förlust vid 30 €"
+      ],
+      "rows": [
+        [
+          "80",
+          "5%",
+          "16",
+          "480 €"
+        ],
+        [
+          "120",
+          "8%",
+          "42",
+          "1 260 €"
+        ],
+        [
+          "200",
+          "10%",
+          "87",
+          "2 610 €"
+        ],
+        [
+          "200",
+          "15%",
+          "130",
+          "3 900 €"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Lägg till borden du höll. En utebliven bokning lördag 20:30 betyder oftast att en drop-in nekades 20:15, så den verkliga kostnaden ligger närmare det dubbla under dina fullaste kvällar."
+    },
+    {
+      "type": "h2",
+      "text": "Varför folk inte dyker upp"
+    },
+    {
+      "type": "p",
+      "text": "Sällan illvilja. Oftast har bokningen blivit abstrakt. Någon bokade för elva dagar sedan i telefonen, glömde bort det, planerade annat, och nu känns det obekvämt att avboka, så inget händer. Varje åtgärd som fungerar angriper en av de tre punkterna: gör bokningen konkret, gör avbokning enkel, eller låt uteblivandet kosta något."
+    },
+    {
+      "type": "h2",
+      "text": "Åtgärderna, rangordnade efter avkastning mot friktion"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Åtgärd",
+        "Effekt",
+        "Friktion för gästen"
+      ],
+      "rows": [
+        [
+          "Bekräftelse i bokningsögonblicket",
+          "Grund",
+          "Ingen"
+        ],
+        [
+          "Påminnelse dagen innan",
+          "Stor",
+          "Ingen"
+        ],
+        [
+          "Avboka med ett tryck i påminnelsen",
+          "Stor",
+          "Ingen"
+        ],
+        [
+          "Bekräfta samma dag för stora sällskap",
+          "Måttlig",
+          "Låg"
+        ],
+        [
+          "Kort reserverat, dras bara vid utebliven",
+          "Stor",
+          "Medel"
+        ],
+        [
+          "Deposition per person",
+          "Störst",
+          "Hög"
+        ],
+        [
+          "Överbokning i toppslottar",
+          "Kompenserar",
+          "Riskabelt om fel"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Börja med de två gratis"
+    },
+    {
+      "type": "p",
+      "text": "En påminnelse dagen innan, med en avbokningslänk som gästen kan trycka på utan samtal, gör det mesta av jobbet. Avbokningslänken känns bakvänd — du bjuder in till avbokning — men ett bord som frigörs 18:00 dagen innan är ett bord du kan sälja. En utebliven gäst är samma förlorade bokning, fast utan förvarning."
+    },
+    {
+      "type": "p",
+      "text": "Skicka den 24 timmar i förväg för vardagsbokningar och på morgonen för helgkvällar. Håll den kort: namn, tid, antal personer, en rad för att bekräfta, en för att avboka."
+    },
+    {
+      "type": "h2",
+      "text": "När du ska be om kort"
+    },
+    {
+      "type": "p",
+      "text": "Kortgarantier fungerar, och de kostar dig bokningar. Att lägga den på varje bord en tisdag är en dålig affär. Att lägga den på sällskap om sex eller fler, på lördag 20:00-21:00 och på nyårsafton är oftast en bra — det är slottarna där en utebliven bokning inte går att ta igen."
+    },
+    {
+      "type": "note",
+      "text": "Om du tar en avgift för utebliven bokning, säg det med enkla ord vid bokningen, i bekräftelsen och i påminnelsen. Klagomålet handlar nästan aldrig om avgiften, utan om att ingen sa något. Kolla ditt lands konsumentregler för att dra kort för tjänster som inte utförts."
+    },
+    {
+      "type": "h2",
+      "text": "Överbokning, försiktigt"
+    },
+    {
+      "type": "p",
+      "text": "Om din andel uteblivna ligger stabilt på 10% är det aritmetik och inte hasard att ta 10% fler bokningar i toppslotten. Risken är spridningen: kvällen då alla kommer står folk i dörren. Överboka bara den slott du kan absorbera — där det finns en barhörna, där nästa seating har luft — och aldrig för stora sällskap, för ett bord för åtta improviserar man inte fram."
+    },
+    {
+      "type": "h2",
+      "text": "En plan på fyra veckor"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Vecka 1: räkna uteblivna ordentligt. En strecklista, varje service. Du behöver utgångsläget innan du ändrar något.",
+        "Vecka 2: slå på en direkt bokningsbekräftelse, om du inte redan har en.",
+        "Vecka 3: lägg till en påminnelse med avbokning i ett tryck. Mät skillnaden mot vecka 1.",
+        "Vecka 4: lägg kortgaranti bara på din sämsta slott — oftast lördagskväll och sällskap om sex eller fler.",
+        "Utvärdera sedan. Ligger andelen under 5%, sluta här; mer friktion kostar mer än den sparar."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Håll en kort väntelista för toppslottar och sms:a den när ett bord frigörs. Halva värdet av enkel avbokning är att ha någon att ge bordet till inom en timme."
+    },
+    {
+      "type": "h2",
+      "text": "Vad du gör när de faktiskt kommer, fast sent"
+    },
+    {
+      "type": "p",
+      "text": "Bestäm din väntetid i förväg och skriv den i bekräftelsen — 15 minuter är standard. En uttalad regel låter en värd släppa bordet 20:45 utan att hitta på en regel på plats, och ger gästen ingen anledning att diskutera."
+    },
+    {
+      "type": "cta",
+      "heading": "Bokningar som bekräftar och påminner sig själva",
+      "text": "Ta bokningar dygnet runt, skicka bekräftelser och påminnelser automatiskt och låt gäster avboka med ett tryck så att bordet säljs igen. 14 dagar gratis.",
+      "buttonLabel": "Se bordsbokningar",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Vanliga frågor",
+      "items": [
+        {
+          "q": "Vad är en normal andel uteblivna för en restaurang?",
+          "a": "De flesta ställen som mäter hamnar mellan 5% och 15%, högre för stora sällskap, helgens toppslottar och bokningar gjorda långt i förväg. Mät din egen i fyra veckor i stället för att gissa."
+        },
+        {
+          "q": "Minskar påminnelser verkligen uteblivna gäster?",
+          "a": "Det är åtgärden med högst avkastning, eftersom de flesta uteblivna är glömska snarare än avsikt. Kombinera påminnelsen med en avbokningslänk i ett tryck så att den glömda bokningen blir ett frigjort bord."
+        },
+        {
+          "q": "Får jag ta en avgift för utebliven bokning?",
+          "a": "I många länder ja, förutsatt att gästen tydligt godkände det vid bokningen. Reglerna skiljer sig mellan länder, så kolla din lokala konsumentlag och ange villkoret i bekräftelsen."
+        },
+        {
+          "q": "Ska jag be om deposition?",
+          "a": "För stora sällskap och toppdatum ofta ja. En vanlig tisdag kostar den dig fler bokningar än den räddar kuvert."
+        },
+        {
+          "q": "Är överbokning en bra idé?",
+          "a": "Bara där din andel uteblivna är stabil och uppmätt, bara i slottar där du har någonstans att placera folk, och aldrig för stora sällskap."
+        }
+      ]
+    }
+  ]
+}

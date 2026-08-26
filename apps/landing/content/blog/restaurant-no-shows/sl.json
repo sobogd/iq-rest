@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "Nedohodi v restavraciji: koliko stanejo in kako jih zmanjšati | IQ Rest",
+    "description": "Izračunajte, koliko vas nedohodi stanejo na mesec, in kateri ukrepi jih res zmanjšajo: potrditve, opomniki, are in prekomerne rezervacije."
+  },
+  "card": {
+    "title": "Nedohodi: računica in tisto, kar jih res zmanjša",
+    "excerpt": "Štiri prazne mize v soboto so mesečni proračun za programsko opremo, zgorel v enem večeru. Takole izmerite svoj delež nedohodov in kateri ukrepi so vredni trenja."
+  },
+  "h1": "Nedohodi v restavraciji: koliko stanejo in kaj jih res zmanjša",
+  "intro": "Nedohod vas stane dvakrat: goste, ki jih niste postregli, in tiste brez rezervacije, ki ste jih zavrnili, da bi držali mizo. Večina lastnikov ima občutek, kako hudo je, in nobene številke. Najprej si priskrbite številko, saj ta odloči, ali se je zaradi tega vredno vsiljevati gostom.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Izračunajte svojo številko"
+    },
+    {
+      "type": "p",
+      "text": "Štiri tedne štejte goste, ki niso prišli, in pomnožite s povprečno porabo. Lokal s 120 rezerviranimi mesti na teden in 8% nedohodov izgubi približno 10 gostov na teden. Po 30 € vsak je to 300 € na teden oziroma okoli **1.300 € na mesec**."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Rezerviranih gostov/teden",
+        "Delež nedohodov",
+        "Izgubljenih gostov/mesec",
+        "Izguba pri 30 €"
+      ],
+      "rows": [
+        [
+          "80",
+          "5%",
+          "16",
+          "480 €"
+        ],
+        [
+          "120",
+          "8%",
+          "42",
+          "1.260 €"
+        ],
+        [
+          "200",
+          "10%",
+          "87",
+          "2.610 €"
+        ],
+        [
+          "200",
+          "15%",
+          "130",
+          "3.900 €"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Prištejte mize, ki ste jih držali. Sobotni nedohod ob 20.30 običajno pomeni, da ste ob 20.15 zavrnili gosta brez rezervacije, zato je v najbolj polnih večerih resnični strošek bližje dvojni številki."
+    },
+    {
+      "type": "h2",
+      "text": "Zakaj ljudje ne pridejo"
+    },
+    {
+      "type": "p",
+      "text": "Redko iz zlobe. Najpogosteje je rezervacija postala abstraktna. Nekdo je rezerviral pred enajstimi dnevi s telefonom, pozabil, se dogovoril drugače, zdaj pa je odpoved nerodna, zato ne stori nič. Vsak ukrep, ki deluje, zadene eno od teh treh točk: naredite rezervacijo konkretno, olajšajte odpoved ali poskrbite, da nedohod nekaj stane."
+    },
+    {
+      "type": "h2",
+      "text": "Ukrepi, razvrščeni po donosu glede na trenje"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Ukrep",
+        "Učinek",
+        "Trenje za gosta"
+      ],
+      "rows": [
+        [
+          "Potrditev ob trenutku rezervacije",
+          "Osnova",
+          "Nobeno"
+        ],
+        [
+          "Opomnik dan prej",
+          "Velik",
+          "Nobeno"
+        ],
+        [
+          "Odpoved z enim dotikom v opomniku",
+          "Velik",
+          "Nobeno"
+        ],
+        [
+          "Potrditev isti dan za velike družbe",
+          "Zmeren",
+          "Nizko"
+        ],
+        [
+          "Blokirana kartica, bremenitev le ob nedohodu",
+          "Velik",
+          "Srednje"
+        ],
+        [
+          "Ara na osebo",
+          "Največji",
+          "Visoko"
+        ],
+        [
+          "Prekomerne rezervacije v konicah",
+          "Kompenzira",
+          "Tvegano ob napaki"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Začnite z dvema brezplačnima"
+    },
+    {
+      "type": "p",
+      "text": "Opomnik dan prej s povezavo za odpoved, ki jo gost lahko pritisne brez pogovora, opravi večino dela. Povezava za odpoved deluje protislovno — kot bi vabili k odpovedim — a miza, ki se sprosti dan prej ob 18.00, je miza, ki jo lahko prodate. Nedohod je ista izgubljena rezervacija, le brez opozorila."
+    },
+    {
+      "type": "p",
+      "text": "Pošljite ga 24 ur prej za rezervacije med tednom in zjutraj za vikend večere. Naj bo kratek: ime, ura, število oseb, ena vrstica za potrditev, ena za odpoved."
+    },
+    {
+      "type": "h2",
+      "text": "Kdaj zahtevati kartico"
+    },
+    {
+      "type": "p",
+      "text": "Jamstva s kartico delujejo in vas stanejo rezervacije. Uporabiti jih za vsako mizo v torek je slaba menjava. Uporabiti jih za družbe šestih ali več, za soboto 20.00-21.00 in za silvestrovo je običajno dobra: to so termini, v katerih nedohoda ni mogoče nadoknaditi."
+    },
+    {
+      "type": "note",
+      "text": "Če zaračunavate nadomestilo za nedohod, povejte to z razumljivimi besedami ob rezervaciji, v potrditvi in v opomniku. Pritožba skoraj nikoli ni zaradi zneska, temveč zato, ker nihče ni povedal. Preverite nacionalna potrošniška pravila o bremenitvi kartice za neopravljeno storitev."
+    },
+    {
+      "type": "h2",
+      "text": "Prekomerne rezervacije, previdno"
+    },
+    {
+      "type": "p",
+      "text": "Če je vaš delež nedohodov stabilnih 10%, je sprejeti 10% več rezervacij v konici računica in ne igra na srečo. Tveganje je razpršenost: tisti večer, ko pridejo vsi, imate ljudi stati pri vratih. Prekomerno rezervirajte le termin, ki ga zmorete absorbirati — kjer je barski del, kjer ima naslednje posedanje rezervo — in nikoli za velike družbe, saj mize za osem ne improvizirate."
+    },
+    {
+      "type": "h2",
+      "text": "Načrt za štiri tedne"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "1. teden: preštejte nedohode kot je treba. En list za črtice, vsaka izmena. Izhodišče potrebujete, preden karkoli spremenite.",
+        "2. teden: vklopite takojšnjo potrditev rezervacije, če je še nimate.",
+        "3. teden: dodajte opomnik z odpovedjo v enem dotiku. Izmerite razliko glede na 1. teden.",
+        "4. teden: jamstvo s kartico uporabite le za najslabši termin — običajno sobotni večer in družbe šestih ali več.",
+        "Nato ocenite. Če je delež pod 5%, se ustavite tu; dodatno trenje stane več, kot prihrani."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Vodite kratek čakalni seznam za konice in mu pišite, takoj ko se miza sprosti. Polovica vrednosti enostavne odpovedi je v tem, da imate komu dati mizo v naslednji uri."
+    },
+    {
+      "type": "h2",
+      "text": "Kaj storiti, ko pridejo, a pozno"
+    },
+    {
+      "type": "p",
+      "text": "Čas čakanja določite vnaprej in ga zapišite v potrditev — 15 minut je običaj. Objavljeno pravilo omogoča, da se miza sprosti ob 20.45 brez izmišljanja pravila na kraju samem, in gostu ne pusti razloga za prerekanje."
+    },
+    {
+      "type": "cta",
+      "heading": "Rezervacije, ki se same potrjujejo in opominjajo",
+      "text": "Sprejemajte rezervacije 24 ur na dan, samodejno pošiljajte potrditve in opomnike ter pustite gostom, da odpovejo z enim dotikom, da se miza znova proda. 14 dni brezplačno.",
+      "buttonLabel": "Poglejte rezervacije miz",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Pogosta vprašanja",
+      "items": [
+        {
+          "q": "Kakšen delež nedohodov je za restavracijo normalen?",
+          "a": "Večina lokalov, ki ga meri, pristane med 5% in 15%, več pri velikih družbah, vikend konicah in rezervacijah, narejenih daleč vnaprej. Merite svojega štiri tedne, namesto da ga predvidevate."
+        },
+        {
+          "q": "Ali opomniki res zmanjšajo nedohode?",
+          "a": "So ukrep z najvišjim donosom, saj je večina nedohodov pozabljivost in ne namera. Opomnik združite s povezavo za odpoved v enem dotiku, da se pozabljena rezervacija spremeni v sproščeno mizo."
+        },
+        {
+          "q": "Ali smem zaračunati nadomestilo za nedohod?",
+          "a": "V mnogih državah da, če je gost to ob rezervaciji jasno sprejel. Pravila se po državah razlikujejo, zato preverite lokalno potrošniško pravo in pogoj navedite v potrditvi."
+        },
+        {
+          "q": "Naj zahtevam aro?",
+          "a": "Za velike družbe in konične datume pogosto da. Za navaden torek vas stane več rezervacij, kot reši gostov."
+        },
+        {
+          "q": "So prekomerne rezervacije dobra ideja?",
+          "a": "Samo tam, kjer je vaš delež nedohodov stabilen in izmerjen, samo v terminih, kjer imate ljudi kam posesti, in nikoli za velike družbe."
+        }
+      ]
+    }
+  ]
+}

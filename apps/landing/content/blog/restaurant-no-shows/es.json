@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "No-shows en restaurantes: cuánto cuestan y cómo reducirlos | IQ Rest",
+    "description": "Calcula lo que te cuestan los no-shows al mes y las medidas que de verdad los reducen: confirmaciones, recordatorios, depósitos y overbooking."
+  },
+  "card": {
+    "title": "No-shows: la aritmética y lo que de verdad los reduce",
+    "excerpt": "Cuatro mesas vacías un sábado son el presupuesto de software de un mes perdido en una noche. Así mides tu propia tasa de no-shows y qué soluciones compensan la fricción."
+  },
+  "h1": "No-shows en restaurantes: cuánto cuestan y qué los reduce de verdad",
+  "intro": "Un no-show te cuesta dos veces: los comensales que no serviste y los que rechazaste para guardar la mesa. La mayoría de propietarios tiene una sensación de lo grave que es y ningún número. Consigue el número primero, porque decide si merece la pena molestar a tus clientes por esto.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Calcula tu propia cifra"
+    },
+    {
+      "type": "p",
+      "text": "Cuenta los comensales no presentados durante cuatro semanas y multiplícalos por tu gasto medio. Un local con 120 comensales reservados a la semana y un 8% de no-shows pierde unos 10 comensales semanales. A 30 € cada uno son 300 € por semana, o aproximadamente **1.300 € al mes**."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Comensales reservados/semana",
+        "Tasa de no-show",
+        "Comensales perdidos/mes",
+        "Pérdida a 30 €"
+      ],
+      "rows": [
+        [
+          "80",
+          "5%",
+          "16",
+          "480 €"
+        ],
+        [
+          "120",
+          "8%",
+          "42",
+          "1.260 €"
+        ],
+        [
+          "200",
+          "10%",
+          "87",
+          "2.610 €"
+        ],
+        [
+          "200",
+          "15%",
+          "130",
+          "3.900 €"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Suma las mesas que reservaste. Un no-show de sábado a las 20:30 suele significar que rechazaste a alguien sin reserva a las 20:15, así que el coste real se acerca al doble de la cifra visible en tus noches fuertes."
+    },
+    {
+      "type": "h2",
+      "text": "Por qué la gente no aparece"
+    },
+    {
+      "type": "p",
+      "text": "Rara vez por mala fe. Casi siempre porque la reserva se volvió abstracta. Alguien reservó hace once días desde el móvil, se olvidó, hizo otros planes y ahora cancelar le da apuro, así que no hace nada. Toda solución eficaz actúa sobre uno de esos tres puntos: hacer la reserva concreta, hacer fácil cancelar o hacer que no aparecer cueste algo."
+    },
+    {
+      "type": "h2",
+      "text": "Las medidas, ordenadas por retorno frente a fricción"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Medida",
+        "Efecto",
+        "Fricción para el cliente"
+      ],
+      "rows": [
+        [
+          "Confirmación en el momento de reservar",
+          "Básica",
+          "Ninguna"
+        ],
+        [
+          "Recordatorio el día antes",
+          "Grande",
+          "Ninguna"
+        ],
+        [
+          "Cancelar con un toque en el recordatorio",
+          "Grande",
+          "Ninguna"
+        ],
+        [
+          "Confirmar el mismo día para grupos grandes",
+          "Moderado",
+          "Baja"
+        ],
+        [
+          "Tarjeta retenida, cobrada solo si no aparecen",
+          "Grande",
+          "Media"
+        ],
+        [
+          "Depósito por persona",
+          "El mayor",
+          "Alta"
+        ],
+        [
+          "Overbooking en las franjas punta",
+          "Compensa",
+          "Arriesgado si te equivocas"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Empieza por las dos gratuitas"
+    },
+    {
+      "type": "p",
+      "text": "Un recordatorio el día antes, con un enlace de cancelación que el cliente pueda pulsar sin tener que hablar con nadie, hace casi todo el trabajo. El enlace de cancelar parece contraintuitivo —estás invitando a cancelar— pero una mesa liberada a las 18:00 del día anterior es una mesa que puedes vender. Un no-show es esa misma reserva perdida, pero sin aviso."
+    },
+    {
+      "type": "p",
+      "text": "Envíalo 24 horas antes en reservas entre semana y por la mañana para las noches de fin de semana. Que sea corto: nombre, hora, número de personas, una línea para confirmar y otra para cancelar."
+    },
+    {
+      "type": "h2",
+      "text": "Cuándo pedir tarjeta"
+    },
+    {
+      "type": "p",
+      "text": "Las garantías con tarjeta funcionan y te cuestan reservas. Aplicarla a todas las mesas de un martes es un mal trato. Aplicarla a grupos de seis o más, al sábado de 20:00 a 21:00 y a Nochevieja suele ser un buen trato: son las franjas en las que un no-show no se recupera."
+    },
+    {
+      "type": "note",
+      "text": "Si cobras una penalización por no presentarse, dilo en lenguaje claro en el momento de la reserva, en la confirmación y en el recordatorio. La queja casi nunca es por el cargo, sino por no haber sido avisado. Revisa la normativa de consumo de tu país sobre cobrar tarjetas por servicios no prestados."
+    },
+    {
+      "type": "h2",
+      "text": "Overbooking, con cuidado"
+    },
+    {
+      "type": "p",
+      "text": "Si tu tasa de no-shows es un 10% estable, aceptar un 10% más de reservas en tu franja punta es aritmética, no apuesta. El riesgo es la varianza: la noche en que aparecen todos, tienes gente de pie en la puerta. Haz overbooking solo en la franja que puedes absorber —donde hay barra, donde el siguiente turno tiene holgura— y nunca con grupos grandes, porque una mesa para ocho no se improvisa."
+    },
+    {
+      "type": "h2",
+      "text": "Un plan de cuatro semanas"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Semana 1: cuenta bien los no-shows. Una hoja de recuento en cada servicio. Necesitas la base antes de cambiar nada.",
+        "Semana 2: activa una confirmación instantánea de la reserva, si aún no la tienes.",
+        "Semana 3: añade un recordatorio con enlace de cancelación en un toque. Mide la diferencia frente a la semana 1.",
+        "Semana 4: aplica garantía con tarjeta solo a tu peor franja, normalmente el sábado noche y los grupos de seis o más.",
+        "Después revisa. Si la tasa está por debajo del 5%, párate ahí; más fricción cuesta más de lo que ahorra."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Mantén una lista de espera corta para las franjas punta y escríbeles cuando se libere una mesa. La mitad del valor de una cancelación fácil es tener a quién dar la mesa en la hora siguiente."
+    },
+    {
+      "type": "h2",
+      "text": "Qué hacer cuando sí aparecen, pero tarde"
+    },
+    {
+      "type": "p",
+      "text": "Decide tu margen de cortesía por adelantado y escríbelo en la confirmación: 15 minutos es lo habitual. Una política declarada permite liberar una mesa a las 20:45 sin inventarse una regla sobre la marcha, y deja al cliente sin motivo para discutir."
+    },
+    {
+      "type": "cta",
+      "heading": "Reservas que se confirman y se recuerdan solas",
+      "text": "Acepta reservas 24/7, envía confirmaciones y recordatorios automáticos y deja que los clientes cancelen con un toque para revender la mesa. 14 días gratis.",
+      "buttonLabel": "Ver reservas de mesa",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Preguntas frecuentes",
+      "items": [
+        {
+          "q": "¿Cuál es una tasa normal de no-shows en un restaurante?",
+          "a": "La mayoría de locales que la miden se sitúan entre el 5% y el 15%, más alta en grupos grandes, franjas punta del fin de semana y reservas hechas con mucha antelación. Mide la tuya durante cuatro semanas en vez de suponerla."
+        },
+        {
+          "q": "¿Los recordatorios reducen de verdad los no-shows?",
+          "a": "Son la medida con mayor retorno disponible, porque la mayoría de no-shows son olvido y no intención. Combina el recordatorio con un enlace de cancelación en un toque para que la reserva olvidada se convierta en mesa liberada."
+        },
+        {
+          "q": "¿Puedo cobrar por no presentarse?",
+          "a": "En muchos países sí, siempre que el cliente lo haya aceptado con claridad al reservar. Las normas varían por país, así que consulta tu ley de consumo local e indica la política en la confirmación."
+        },
+        {
+          "q": "¿Debería pedir depósito?",
+          "a": "Para grupos grandes y fechas señaladas, a menudo sí. Para un martes normal te cuesta más reservas de las que salva comensales."
+        },
+        {
+          "q": "¿Es buena idea hacer overbooking?",
+          "a": "Solo donde tu tasa de no-shows sea estable y medida, solo en franjas donde tengas dónde acomodar a la gente, y nunca con grupos grandes."
+        }
+      ]
+    }
+  ]
+}

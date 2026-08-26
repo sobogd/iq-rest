@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "No-show i restaurant: hva det koster og hva som hjelper | IQ Rest",
+    "description": "Regn ut hva no-show koster restauranten din per måned, og hvilke tiltak som faktisk reduserer dem: bekreftelser, påminnelser, depositum og overbooking."
+  },
+  "card": {
+    "title": "No-show: regnestykket og det som faktisk reduserer dem",
+    "excerpt": "Fire tomme bord en lørdag er et månedsbudsjett for programvare brukt opp på én kveld. Slik måler du din egen no-show-andel og hvilke tiltak som er friksjonen verdt."
+  },
+  "h1": "No-show i restaurant: hva det koster og hva som faktisk reduserer det",
+  "intro": "En no-show koster deg to ganger: kuvertene du ikke serverte, og drop-in-gjestene du avviste for å holde bordet. De fleste drivere har en følelse av hvor ille det er, og ingen tall. Skaff tallet først, for det avgjør om dette er verdt å plage gjestene med.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Regn ut ditt eget tall"
+    },
+    {
+      "type": "p",
+      "text": "Tell uteblitte kuverter i fire uker og gang med gjennomsnittsforbruket. Et sted med 120 bookede kuverter i uka og 8% no-show taper rundt 10 kuverter i uka. Til 30 € stykket blir det 300 € i uka, altså omtrent **1 300 € i måneden**."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Bookede kuverter/uke",
+        "No-show-andel",
+        "Tapte kuverter/måned",
+        "Tap ved 30 €"
+      ],
+      "rows": [
+        [
+          "80",
+          "5%",
+          "16",
+          "480 €"
+        ],
+        [
+          "120",
+          "8%",
+          "42",
+          "1 260 €"
+        ],
+        [
+          "200",
+          "10%",
+          "87",
+          "2 610 €"
+        ],
+        [
+          "200",
+          "15%",
+          "130",
+          "3 900 €"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Legg til bordene du holdt av. En no-show lørdag 20:30 betyr som regel at en drop-in ble avvist 20:15, så den reelle kostnaden er nærmere det dobbelte på de travleste kveldene."
+    },
+    {
+      "type": "h2",
+      "text": "Hvorfor folk ikke møter opp"
+    },
+    {
+      "type": "p",
+      "text": "Sjelden vondsinnethet. Som oftest har bookingen blitt abstrakt. Noen booket for elleve dager siden på telefonen, glemte det, la andre planer, og nå føles det pinlig å avbestille, så de gjør ingenting. Alle tiltak som virker angriper ett av disse tre punktene: gjør bookingen konkret, gjør avbestilling lett, eller la det koste noe å ikke møte."
+    },
+    {
+      "type": "h2",
+      "text": "Tiltakene, rangert etter avkastning mot friksjon"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Tiltak",
+        "Effekt",
+        "Friksjon for gjesten"
+      ],
+      "rows": [
+        [
+          "Bekreftelse i bookingøyeblikket",
+          "Grunnlag",
+          "Ingen"
+        ],
+        [
+          "Påminnelse dagen før",
+          "Stor",
+          "Ingen"
+        ],
+        [
+          "Avbestill med ett trykk i påminnelsen",
+          "Stor",
+          "Ingen"
+        ],
+        [
+          "Bekreft samme dag for store selskaper",
+          "Moderat",
+          "Lav"
+        ],
+        [
+          "Kort reservert, belastes bare ved no-show",
+          "Stor",
+          "Middels"
+        ],
+        [
+          "Depositum per person",
+          "Størst",
+          "Høy"
+        ],
+        [
+          "Overbooking i topptidene",
+          "Kompenserer",
+          "Risikabelt ved feilvurdering"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Start med de to gratis"
+    },
+    {
+      "type": "p",
+      "text": "En påminnelse dagen før, med en avbestillingslenke gjesten kan trykke på uten en samtale, gjør mesteparten av jobben. Avbestillingslenken føles bakvendt — du inviterer til avbud — men et bord som frigjøres kl. 18:00 dagen før, er et bord du kan selge. En no-show er den samme tapte bookingen, bare uten varsel."
+    },
+    {
+      "type": "p",
+      "text": "Send den 24 timer før for hverdagsbookinger og om morgenen for helgekvelder. Hold den kort: navn, tid, antall personer, én linje for å bekrefte og én for å avbestille."
+    },
+    {
+      "type": "h2",
+      "text": "Når du bør be om kort"
+    },
+    {
+      "type": "p",
+      "text": "Kortgarantier virker, og de koster deg bookinger. Å legge en på hvert bord en tirsdag er en dårlig bytte. Å legge den på selskaper på seks eller flere, på lørdag 20:00-21:00 og på nyttårsaften er som regel et godt bytte: det er tidene der en no-show ikke lar seg hente inn."
+    },
+    {
+      "type": "note",
+      "text": "Hvis du tar et gebyr for uteblivelse, si det med enkle ord ved bookingen, i bekreftelsen og i påminnelsen. Klagen handler nesten aldri om gebyret, men om at ingen sa fra. Sjekk nasjonale forbrukerregler for å belaste kort for tjenester som ikke er levert."
+    },
+    {
+      "type": "h2",
+      "text": "Overbooking, med omtanke"
+    },
+    {
+      "type": "p",
+      "text": "Hvis no-show-andelen din ligger stabilt på 10%, er det aritmetikk og ikke gambling å ta 10% flere bookinger i topptiden. Risikoen er spredningen: kvelden alle møter opp, står folk i døra. Overbook bare den tiden du kan absorbere — der det finnes et barområde, der neste seating har slakk — og aldri for store selskaper, for et bord til åtte improviserer man ikke."
+    },
+    {
+      "type": "h2",
+      "text": "En plan på fire uker"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Uke 1: tell no-show ordentlig. Ett tellark, hver service. Du trenger utgangspunktet før du endrer noe.",
+        "Uke 2: slå på umiddelbar bookingbekreftelse, om du ikke allerede har det.",
+        "Uke 3: legg til en påminnelse med avbestilling i ett trykk. Mål forskjellen mot uke 1.",
+        "Uke 4: legg kortgaranti bare på den verste tiden — som regel lørdag kveld og selskaper på seks eller flere.",
+        "Gjør så opp status. Er andelen under 5%, stopp her; mer friksjon koster mer enn den sparer."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Hold en kort venteliste for topptidene og send melding når et bord frigjøres. Halve verdien av enkel avbestilling er å ha noen å gi bordet til innen en time."
+    },
+    {
+      "type": "h2",
+      "text": "Hva du gjør når de faktisk kommer, bare for sent"
+    },
+    {
+      "type": "p",
+      "text": "Bestem ventetiden på forhånd og skriv den i bekreftelsen — 15 minutter er standard. En uttalt regel lar en vert frigi bordet 20:45 uten å finne på en regel der og da, og gir gjesten ingen grunn til å diskutere."
+    },
+    {
+      "type": "cta",
+      "heading": "Bookinger som bekrefter og minner om seg selv",
+      "text": "Ta bookinger døgnet rundt, send bekreftelser og påminnelser automatisk, og la gjester avbestille med ett trykk så bordet selges på nytt. 14 dager gratis.",
+      "buttonLabel": "Se bordreservasjoner",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Ofte stilte spørsmål",
+      "items": [
+        {
+          "q": "Hva er en normal no-show-andel for en restaurant?",
+          "a": "De fleste stedene som måler, havner mellom 5% og 15%, høyere for store selskaper, helgens topptider og bookinger gjort lenge i forveien. Mål din egen i fire uker i stedet for å anta."
+        },
+        {
+          "q": "Reduserer påminnelser virkelig no-show?",
+          "a": "Det er tiltaket med høyest avkastning, fordi de fleste no-show er glemsomhet og ikke vilje. Kombiner påminnelsen med en avbestillingslenke i ett trykk, så den glemte bookingen blir et frigjort bord."
+        },
+        {
+          "q": "Kan jeg ta et no-show-gebyr?",
+          "a": "I mange land ja, forutsatt at gjesten tydelig godtok det ved bookingen. Reglene varierer fra land til land, så sjekk lokal forbrukerlovgivning og oppgi vilkåret i bekreftelsen."
+        },
+        {
+          "q": "Bør jeg be om depositum?",
+          "a": "For store selskaper og toppdatoer ofte ja. En vanlig tirsdag koster det deg flere bookinger enn det redder kuverter."
+        },
+        {
+          "q": "Er overbooking en god idé?",
+          "a": "Bare der no-show-andelen din er stabil og målt, bare i tider der du har et sted å plassere folk, og aldri for store selskaper."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "Saapumatta jättäminen ravintolassa: hinta ja keinot | IQ Rest",
+    "description": "Laske, mitä saapumatta jääneet varaukset maksavat ravintolallesi kuukaudessa, ja mitkä keinot todella vähentävät niitä: vahvistukset, muistutukset, ennakkomaksut ja ylivaraus."
+  },
+  "card": {
+    "title": "Saapumatta jääneet: laskutoimitus ja se, mikä oikeasti auttaa",
+    "excerpt": "Neljä tyhjää pöytää lauantaina on kuukauden ohjelmistobudjetti poltettuna yhdessä illassa. Näin mittaat oman no-show-osuutesi ja mitkä keinot ovat kitkan arvoisia."
+  },
+  "h1": "Saapumatta jättäminen ravintolassa: mitä se maksaa ja mikä sitä oikeasti vähentää",
+  "intro": "Saapumatta jäänyt varaus maksaa kahdesti: asiakkaat, joita et palvellut, ja walk-in-asiakkaat, jotka käännytit pitääksesi pöydän. Useimmilla yrittäjillä on tuntuma siitä, kuinka paha tilanne on, mutta ei lukua. Hanki luku ensin, koska se ratkaisee, kannattaako tämän takia häiritä asiakkaita.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Laske oma lukusi"
+    },
+    {
+      "type": "p",
+      "text": "Laske saapumatta jääneet asiakaspaikat neljän viikon ajan ja kerro keskiostoksella. Paikka, jolla on 120 varattua asiakaspaikkaa viikossa ja 8% no-show, menettää noin 10 asiakasta viikossa. 30 € kappaleelta se on 300 € viikossa eli noin **1 300 € kuukaudessa**."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Varattuja paikkoja/viikko",
+        "No-show-osuus",
+        "Menetettyjä paikkoja/kk",
+        "Menetys 30 €:lla"
+      ],
+      "rows": [
+        [
+          "80",
+          "5%",
+          "16",
+          "480 €"
+        ],
+        [
+          "120",
+          "8%",
+          "42",
+          "1 260 €"
+        ],
+        [
+          "200",
+          "10%",
+          "87",
+          "2 610 €"
+        ],
+        [
+          "200",
+          "15%",
+          "130",
+          "3 900 €"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Lisää mukaan pöydät, joita pidit varattuna. Lauantain saapumatta jäänti klo 20.30 tarkoittaa yleensä, että klo 20.15 käännytit walk-in-asiakkaan, joten kiireisimpinä iltoina todellinen kustannus on lähempänä kaksinkertaista."
+    },
+    {
+      "type": "h2",
+      "text": "Miksi ihmiset eivät tule"
+    },
+    {
+      "type": "p",
+      "text": "Harvoin ilkeyttään. Useimmiten varauksesta on tullut abstrakti. Joku varasi yksitoista päivää sitten puhelimella, unohti, sopi muuta, ja nyt peruminen tuntuu kiusalliselta, joten hän ei tee mitään. Jokainen toimiva keino iskee yhteen näistä kolmesta: tee varauksesta konkreettinen, tee perumisesta helppoa tai tee tulematta jättämisestä maksullista."
+    },
+    {
+      "type": "h2",
+      "text": "Keinot järjestettynä tuoton ja kitkan suhteen"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Keino",
+        "Vaikutus",
+        "Kitka asiakkaalle"
+      ],
+      "rows": [
+        [
+          "Vahvistus varaushetkellä",
+          "Perusta",
+          "Ei mitään"
+        ],
+        [
+          "Muistutus edellisenä päivänä",
+          "Suuri",
+          "Ei mitään"
+        ],
+        [
+          "Peruminen yhdellä napautuksella muistutuksessa",
+          "Suuri",
+          "Ei mitään"
+        ],
+        [
+          "Vahvistus samana päivänä isoille seurueille",
+          "Kohtalainen",
+          "Vähäinen"
+        ],
+        [
+          "Kortti varattuna, veloitus vain no-show'sta",
+          "Suuri",
+          "Keskitaso"
+        ],
+        [
+          "Ennakkomaksu per henkilö",
+          "Suurin",
+          "Korkea"
+        ],
+        [
+          "Ylivaraus ruuhkavuoroihin",
+          "Kompensoi",
+          "Riskialtis, jos arvio pettää"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Aloita kahdesta ilmaisesta"
+    },
+    {
+      "type": "p",
+      "text": "Muistutus edellisenä päivänä, mukana perumislinkki jota asiakas voi napauttaa ilman keskustelua, hoitaa suurimman osan työstä. Perumislinkki tuntuu nurinkuriselta — kutsut perumaan — mutta pöytä, joka vapautuu edellisenä päivänä klo 18, on pöytä jonka voit myydä. Saapumatta jäänyt varaus on sama menetetty varaus, mutta ilman ennakkoilmoitusta."
+    },
+    {
+      "type": "p",
+      "text": "Lähetä se 24 tuntia ennen arkivarauksia ja aamulla viikonlopun iltoja varten. Pidä lyhyenä: nimi, aika, seurueen koko, yksi rivi vahvistukseen ja yksi perumiseen."
+    },
+    {
+      "type": "h2",
+      "text": "Milloin kannattaa pyytää kortti"
+    },
+    {
+      "type": "p",
+      "text": "Korttitakuut toimivat, ja ne maksavat sinulle varauksia. Sen soveltaminen jokaiseen pöytään tiistaina on huono vaihtokauppa. Sen soveltaminen kuuden hengen ja sitä isompiin seurueisiin, lauantaihin 20-21 ja uudenvuodenaattoon on yleensä hyvä: ne ovat vuorot, joissa saapumatta jääntiä ei voi paikata."
+    },
+    {
+      "type": "note",
+      "text": "Jos peritte maksun saapumatta jäämisestä, kerro se selvällä kielellä varaushetkellä, vahvistuksessa ja muistutuksessa. Valitus ei koske lähes koskaan maksua vaan sitä, ettei siitä kerrottu. Tarkista maasi kuluttajasäännöt kortin veloittamisesta palvelusta, jota ei tuotettu."
+    },
+    {
+      "type": "h2",
+      "text": "Ylivaraus, varovasti"
+    },
+    {
+      "type": "p",
+      "text": "Jos no-show-osuutesi on vakaa 10%, 10% enemmän varauksia ruuhkavuoroon on laskutoimitus eikä uhkapeli. Riski on hajonta: sinä iltana kun kaikki tulevat, ovella seisoo ihmisiä. Ylivaraa vain se vuoro, jonka pystyt sulattamaan — missä on baarialue, missä seuraavassa kattauksessa on väljyyttä — äläkä koskaan isoille seurueille, koska kahdeksan hengen pöytää ei improvisoida."
+    },
+    {
+      "type": "h2",
+      "text": "Neljän viikon suunnitelma"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Viikko 1: laske saapumatta jääneet kunnolla. Yksi tukkimiehen kirjanpito, joka vuorossa. Tarvitset lähtötason ennen kuin muutat mitään.",
+        "Viikko 2: kytke päälle välitön varausvahvistus, jos sitä ei vielä ole.",
+        "Viikko 3: lisää muistutus, jossa on peruminen yhdellä napautuksella. Mittaa ero viikkoon 1.",
+        "Viikko 4: ota korttitakuu käyttöön vain pahimmassa vuorossa — yleensä lauantai-ilta ja vähintään kuuden hengen seurueet.",
+        "Katso sitten tulokset. Jos osuus on alle 5%, lopeta tähän; lisäkitka maksaa enemmän kuin säästää."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Pidä lyhyttä jonotuslistaa ruuhkavuoroihin ja viestitä sinne heti kun pöytä vapautuu. Puolet helpon perumisen arvosta on siinä, että pöydälle löytyy ottaja tunnin sisällä."
+    },
+    {
+      "type": "h2",
+      "text": "Mitä tehdä, kun he tulevatkin — mutta myöhässä"
+    },
+    {
+      "type": "p",
+      "text": "Päätä odotusaika etukäteen ja kirjoita se vahvistukseen: 15 minuuttia on vakio. Julkilausuttu sääntö antaa vahtimestarin vapauttaa pöydän klo 20.45 keksimättä sääntöä paikan päällä eikä anna asiakkaalle syytä väitellä."
+    },
+    {
+      "type": "cta",
+      "heading": "Varauksia, jotka vahvistavat ja muistuttavat itse",
+      "text": "Ota varauksia vastaan ympäri vuorokauden, lähetä vahvistukset ja muistutukset automaattisesti ja anna asiakkaiden perua yhdellä napautuksella, jotta pöytä menee uudelleen myyntiin. 14 päivää ilmaiseksi.",
+      "buttonLabel": "Katso pöytävaraukset",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Usein kysyttyä",
+      "items": [
+        {
+          "q": "Mikä on normaali no-show-osuus ravintolalle?",
+          "a": "Useimmat mittaavat paikat päätyvät 5-15 prosenttiin, korkeammalle isoilla seurueilla, viikonlopun ruuhkavuoroissa ja kauas etukäteen tehdyissä varauksissa. Mittaa oma neljän viikon ajan sen sijaan että oletat."
+        },
+        {
+          "q": "Vähentävätkö muistutukset todella saapumatta jäämistä?",
+          "a": "Ne ovat tuotoltaan paras käytettävissä oleva keino, koska useimmat saapumatta jäännit ovat unohdusta eivätkä aikomusta. Yhdistä muistutukseen perumislinkki yhdellä napautuksella, jotta unohtunut varaus muuttuu vapautuneeksi pöydäksi."
+        },
+        {
+          "q": "Voinko periä maksun saapumatta jäämisestä?",
+          "a": "Monissa maissa voit, kunhan asiakas hyväksyi sen selvästi varatessaan. Säännöt vaihtelevat maittain, joten tarkista paikallinen kuluttajalaki ja mainitse ehto vahvistuksessa."
+        },
+        {
+          "q": "Pitäisikö minun pyytää ennakkomaksu?",
+          "a": "Isoille seurueille ja huippupäiville usein kyllä. Tavallisena tiistaina se maksaa enemmän varauksia kuin pelastaa asiakkaita."
+        },
+        {
+          "q": "Onko ylivaraus hyvä idea?",
+          "a": "Vain siellä missä no-show-osuutesi on vakaa ja mitattu, vain vuoroissa joissa ihmiset saa sijoitettua jonnekin, eikä koskaan isoille seurueille."
+        }
+      ]
+    }
+  ]
+}

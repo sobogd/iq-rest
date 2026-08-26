@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "Restoranda no-show: maliyeti ve çözümü | IQ Rest",
+    "description": "Gelmeyen rezervasyonların restoranınıza aylık maliyetini hesaplayın ve gerçekten azaltan önlemleri görün: onaylar, hatırlatmalar, kapora ve overbooking."
+  },
+  "card": {
+    "title": "No-show: aritmetiği ve gerçekten neyin işe yaradığı",
+    "excerpt": "Cumartesi dört boş masa, bir aylık yazılım bütçesinin tek gecede yanması demek. Kendi no-show oranınızı nasıl ölçersiniz ve hangi önlemler yarattığı sürtünmeye değer."
+  },
+  "h1": "Restoranda no-show: maliyeti ve gerçekten neyin azalttığı",
+  "intro": "No-show size iki kez ödetir: ağırlamadığınız kişiler ve masayı tutmak için geri çevirdiğiniz rezervasyonsuz misafirler. Çoğu işletmecinin durumun ne kadar kötü olduğuna dair bir hissi var, rakamı yok. Önce rakamı bulun; misafirlerinizi bunun için rahatsız etmeye değip değmeyeceğine o karar verir.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Kendi rakamınızı çıkarın"
+    },
+    {
+      "type": "p",
+      "text": "Dört hafta boyunca gelmeyen kişileri sayın ve ortalama harcamayla çarpın. Haftada 120 rezerve kişilik ve %8 no-show oranı olan bir mekân haftada yaklaşık 10 kişi kaybeder. Kişi başı 30 € ile bu haftada 300 €, yani ayda yaklaşık **1.300 €** eder."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Haftalık rezerve kişi",
+        "No-show oranı",
+        "Aylık kaybedilen kişi",
+        "30 €'da kayıp"
+      ],
+      "rows": [
+        [
+          "80",
+          "%5",
+          "16",
+          "480 €"
+        ],
+        [
+          "120",
+          "%8",
+          "42",
+          "1.260 €"
+        ],
+        [
+          "200",
+          "%10",
+          "87",
+          "2.610 €"
+        ],
+        [
+          "200",
+          "%15",
+          "130",
+          "3.900 €"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Tuttuğunuz masaları da ekleyin. Cumartesi 20.30'daki bir no-show genelde 20.15'te rezervasyonsuz bir misafiri geri çevirdiğiniz anlamına gelir; yani en dolu gecelerde gerçek maliyet görünen rakamın iki katına yakındır."
+    },
+    {
+      "type": "h2",
+      "text": "İnsanlar neden gelmiyor"
+    },
+    {
+      "type": "p",
+      "text": "Nadiren kötü niyetten. Çoğunlukla rezervasyon soyutlaştığı için. Biri on bir gün önce telefondan yer ayırttı, unuttu, başka plan yaptı, şimdi iptal etmek de tuhaf geliyor, o yüzden hiçbir şey yapmıyor. İşe yarayan her önlem şu üç noktadan birine dokunur: rezervasyonu somutlaştırmak, iptali kolaylaştırmak ya da gelmemeyi bir bedele bağlamak."
+    },
+    {
+      "type": "h2",
+      "text": "Önlemler, sürtünmeye göre getiri sırasıyla"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Önlem",
+        "Etki",
+        "Misafir için sürtünme"
+      ],
+      "rows": [
+        [
+          "Rezervasyon anında onay",
+          "Temel",
+          "Yok"
+        ],
+        [
+          "Bir gün önce hatırlatma",
+          "Büyük",
+          "Yok"
+        ],
+        [
+          "Hatırlatmada tek dokunuşla iptal",
+          "Büyük",
+          "Yok"
+        ],
+        [
+          "Kalabalık gruplarda aynı gün teyit",
+          "Orta",
+          "Düşük"
+        ],
+        [
+          "Kart bloke, sadece no-show'da çekim",
+          "Büyük",
+          "Orta"
+        ],
+        [
+          "Kişi başı kapora",
+          "En büyük",
+          "Yüksek"
+        ],
+        [
+          "Yoğun saatlerde overbooking",
+          "Telafi eder",
+          "Yanılırsanız riskli"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "İki ücretsizle başlayın"
+    },
+    {
+      "type": "p",
+      "text": "Bir gün önce gönderilen, misafirin kimseyle konuşmadan dokunabileceği iptal bağlantısı içeren bir hatırlatma işin çoğunu görür. İptal bağlantısı ters görünür — iptale davet ediyorsunuz — ama bir gün önce 18.00'de boşalan masa satabileceğiniz bir masadır. No-show ise aynı kaybedilmiş rezervasyondur, üstelik habersiz."
+    },
+    {
+      "type": "p",
+      "text": "Hafta içi rezervasyonlarda 24 saat önce, hafta sonu akşamlarında ise sabahında gönderin. Kısa tutun: isim, saat, kişi sayısı, onay için bir satır, iptal için bir satır."
+    },
+    {
+      "type": "h2",
+      "text": "Ne zaman kart istemeli"
+    },
+    {
+      "type": "p",
+      "text": "Kart garantisi işe yarar ve size rezervasyona mal olur. Salı günü her masaya uygulamak kötü bir takas. Altı ve üzeri gruplara, cumartesi 20.00-21.00 arasına ve yılbaşı gecesine uygulamak genelde iyi bir takas: no-show'un telafisi olmayan saatler bunlar."
+    },
+    {
+      "type": "note",
+      "text": "No-show ücreti alıyorsanız bunu rezervasyon anında, onayda ve hatırlatmada açık bir dille söyleyin. Şikâyet neredeyse hiç ücretle ilgili olmaz, haber verilmemiş olmasıyla ilgilidir. Verilmeyen hizmet için karttan çekim konusunda ülkenizdeki tüketici kurallarına bakın."
+    },
+    {
+      "type": "h2",
+      "text": "Overbooking, dikkatle"
+    },
+    {
+      "type": "p",
+      "text": "No-show oranınız istikrarlı %10 ise, yoğun saatte %10 fazla rezervasyon almak aritmetiktir, kumar değil. Risk sapmada: herkesin geldiği gece kapıda ayakta bekleyen insanlar olur. Yalnızca kaldırabileceğiniz saati fazla satın — bar alanı olan, sonraki oturumda boşluk bulunan — ve kalabalık gruplar için asla, çünkü sekiz kişilik masa doğaçlama olmaz."
+    },
+    {
+      "type": "h2",
+      "text": "Dört haftalık plan"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "1. hafta: no-show'ları düzgün sayın. Her serviste tek bir çetele kâğıdı. Bir şeyi değiştirmeden önce başlangıç değerine ihtiyacınız var.",
+        "2. hafta: anında rezervasyon onayını açın, henüz yoksa.",
+        "3. hafta: tek dokunuşla iptal bağlantılı hatırlatma ekleyin. Farkı 1. haftayla ölçün.",
+        "4. hafta: kart garantisini yalnızca en kötü saatinize uygulayın — genelde cumartesi akşamı ve altı kişi üzeri gruplar.",
+        "Sonra değerlendirin. Oran %5'in altındaysa burada durun; daha fazla sürtünme kazandırdığından fazlasına mal olur."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Yoğun saatler için kısa bir bekleme listesi tutun ve masa boşalınca mesaj atın. Kolay iptalin değerinin yarısı, masayı bir saat içinde verebileceğiniz birinin olmasıdır."
+    },
+    {
+      "type": "h2",
+      "text": "Geldiklerinde, ama geç geldiklerinde ne yapmalı"
+    },
+    {
+      "type": "p",
+      "text": "Bekleme süresini önceden belirleyin ve onaya yazın — 15 dakika standarttır. İlan edilmiş bir kural, host'un 20.45'te masayı serbest bırakmasını oracıkta kural uydurmadan sağlar ve misafire tartışacak bir gerekçe bırakmaz."
+    },
+    {
+      "type": "cta",
+      "heading": "Kendini onaylayan ve hatırlatan rezervasyonlar",
+      "text": "7/24 rezervasyon alın, onay ve hatırlatmaları otomatik gönderin, misafirler tek dokunuşla iptal etsin ki masa yeniden satılsın. 14 gün ücretsiz.",
+      "buttonLabel": "Masa rezervasyonlarını gör",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Sık sorulan sorular",
+      "items": [
+        {
+          "q": "Bir restoran için normal no-show oranı nedir?",
+          "a": "Ölçen mekânların çoğu %5 ile %15 arasında çıkar; kalabalık gruplarda, hafta sonu yoğun saatlerinde ve çok önceden yapılan rezervasyonlarda daha yüksektir. Varsaymak yerine kendi oranınızı dört hafta ölçün."
+        },
+        {
+          "q": "Hatırlatmalar gerçekten no-show'u azaltır mı?",
+          "a": "Getirisi en yüksek önlem odur, çünkü no-show'ların çoğu niyet değil unutkanlıktır. Hatırlatmayı tek dokunuşla iptal bağlantısıyla eşleyin ki unutulan rezervasyon boşalan masaya dönüşsün."
+        },
+        {
+          "q": "No-show ücreti alabilir miyim?",
+          "a": "Birçok ülkede evet, misafir rezervasyon sırasında bunu açıkça kabul ettiyse. Kurallar ülkeye göre değişir; yerel tüketici mevzuatınıza bakın ve koşulu onayda belirtin."
+        },
+        {
+          "q": "Kapora istemeli miyim?",
+          "a": "Kalabalık gruplarda ve yoğun tarihlerde çoğu zaman evet. Sıradan bir salı günü kurtardığı kişiden fazla rezervasyona mal olur."
+        },
+        {
+          "q": "Overbooking iyi bir fikir mi?",
+          "a": "Yalnızca no-show oranınız istikrarlı ve ölçülmüşse, yalnızca insanları oturtacak yeriniz olan saatlerde ve kalabalık gruplar için asla."
+        }
+      ]
+    }
+  ]
+}

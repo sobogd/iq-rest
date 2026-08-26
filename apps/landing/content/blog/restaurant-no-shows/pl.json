@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "No-show w restauracji: ile kosztuje i jak go ograniczyć | IQ Rest",
+    "description": "Policz, ile no-show kosztują twoją restaurację miesięcznie, i poznaj metody, które naprawdę je ograniczają: potwierdzenia, przypomnienia, kaucje i overbooking."
+  },
+  "card": {
+    "title": "No-show: arytmetyka i to, co naprawdę je ogranicza",
+    "excerpt": "Cztery puste stoliki w sobotę to miesięczny budżet na oprogramowanie stracony w jeden wieczór. Oto jak zmierzyć własny wskaźnik no-show i które rozwiązania są warte tarcia."
+  },
+  "h1": "No-show w restauracji: ile kosztuje i co naprawdę go ogranicza",
+  "intro": "No-show kosztuje cię dwa razy: nieobsłużeni goście plus ci z ulicy, których odprawiłeś, żeby trzymać stolik. Większość właścicieli ma przeczucie, jak jest źle, i żadnej liczby. Najpierw zdobądź liczbę, bo to ona decyduje, czy warto z tego powodu uprzykrzać gościom życie.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Policz własną liczbę"
+    },
+    {
+      "type": "p",
+      "text": "Licz nieobsłużone nakrycia przez cztery tygodnie i pomnóż przez średni rachunek. Lokal z 120 zarezerwowanymi nakryciami tygodniowo i 8% no-show traci około 10 nakryć w tygodniu. Po 30 € każde daje to 300 € tygodniowo, czyli mniej więcej **1300 € miesięcznie**."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Zarezerwowane nakrycia/tydzień",
+        "Wskaźnik no-show",
+        "Utracone nakrycia/miesiąc",
+        "Strata przy 30 €"
+      ],
+      "rows": [
+        [
+          "80",
+          "5%",
+          "16",
+          "480 €"
+        ],
+        [
+          "120",
+          "8%",
+          "42",
+          "1260 €"
+        ],
+        [
+          "200",
+          "10%",
+          "87",
+          "2610 €"
+        ],
+        [
+          "200",
+          "15%",
+          "130",
+          "3900 €"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Dolicz stoliki, które trzymałeś. Sobotni no-show o 20:30 zwykle oznacza, że o 20:15 odprawiłeś kogoś bez rezerwacji, więc w najlepsze wieczory realny koszt jest bliższy dwukrotności widocznej liczby."
+    },
+    {
+      "type": "h2",
+      "text": "Dlaczego ludzie się nie pojawiają"
+    },
+    {
+      "type": "p",
+      "text": "Rzadko ze złej woli. Najczęściej rezerwacja stała się abstrakcyjna. Ktoś zarezerwował jedenaście dni temu z telefonu, zapomniał, umówił się gdzie indziej, a teraz odwołanie jest niezręczne, więc nie robi nic. Każde skuteczne rozwiązanie działa na jednym z tych trzech punktów: uczynić rezerwację konkretną, ułatwić odwołanie albo sprawić, żeby niepojawienie się coś kosztowało."
+    },
+    {
+      "type": "h2",
+      "text": "Środki uszeregowane według zwrotu w stosunku do tarcia"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Środek",
+        "Efekt",
+        "Tarcie dla gościa"
+      ],
+      "rows": [
+        [
+          "Potwierdzenie w chwili rezerwacji",
+          "Podstawa",
+          "Brak"
+        ],
+        [
+          "Przypomnienie dzień wcześniej",
+          "Duży",
+          "Brak"
+        ],
+        [
+          "Odwołanie jednym kliknięciem w przypomnieniu",
+          "Duży",
+          "Brak"
+        ],
+        [
+          "Potwierdzenie tego samego dnia dla dużych grup",
+          "Umiarkowany",
+          "Niskie"
+        ],
+        [
+          "Blokada karty, obciążenie tylko przy no-show",
+          "Duży",
+          "Średnie"
+        ],
+        [
+          "Kaucja od osoby",
+          "Największy",
+          "Wysokie"
+        ],
+        [
+          "Overbooking w godzinach szczytu",
+          "Kompensuje",
+          "Ryzykowny przy pomyłce"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Zacznij od dwóch darmowych"
+    },
+    {
+      "type": "p",
+      "text": "Przypomnienie dzień wcześniej, z linkiem do odwołania, który gość może kliknąć bez rozmowy, załatwia większość sprawy. Link do odwołania wydaje się nielogiczny — zapraszasz do odwoływania — ale stolik zwolniony o 18:00 dzień wcześniej to stolik, który sprzedasz. No-show to ta sama utracona rezerwacja, tyle że bez uprzedzenia."
+    },
+    {
+      "type": "p",
+      "text": "Wysyłaj je 24 godziny wcześniej przy rezerwacjach w tygodniu, a rano w dniu wizyty przy weekendowych wieczorach. Krótko: imię, godzina, liczba osób, jedna linia do potwierdzenia, jedna do odwołania."
+    },
+    {
+      "type": "h2",
+      "text": "Kiedy prosić o kartę"
+    },
+    {
+      "type": "p",
+      "text": "Gwarancje kartą działają i kosztują cię rezerwacje. Stosowanie ich do każdego stolika we wtorek to zły interes. Stosowanie ich do grup od sześciu osób, do soboty 20:00-21:00 i do sylwestra to zwykle dobry interes — to terminy, w których no-show jest nie do odrobienia."
+    },
+    {
+      "type": "note",
+      "text": "Jeśli pobierasz opłatę za niepojawienie się, powiedz o tym prostym językiem przy rezerwacji, w potwierdzeniu i w przypomnieniu. Skarga prawie nigdy nie dotyczy opłaty, tylko tego, że nikt nie uprzedził. Sprawdź krajowe przepisy konsumenckie o obciążaniu kart za nieświadczone usługi."
+    },
+    {
+      "type": "h2",
+      "text": "Overbooking, ostrożnie"
+    },
+    {
+      "type": "p",
+      "text": "Jeśli twój wskaźnik no-show wynosi stabilne 10%, przyjęcie 10% więcej rezerwacji w szczycie to arytmetyka, nie hazard. Ryzykiem jest zmienność: w wieczór, gdy przyjdą wszyscy, masz ludzi stojących w drzwiach. Nadrezerwuj tylko ten termin, który wchłoniesz — gdzie jest bar, gdzie następna tura ma luz — i nigdy dla dużych grup, bo stolika na osiem osób nie zaimprowizujesz."
+    },
+    {
+      "type": "h2",
+      "text": "Plan na cztery tygodnie"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Tydzień 1: policz no-show porządnie. Jedna kartka do kreskowania, każdy serwis. Potrzebujesz punktu odniesienia, zanim cokolwiek zmienisz.",
+        "Tydzień 2: włącz natychmiastowe potwierdzenie rezerwacji, jeśli jeszcze go nie masz.",
+        "Tydzień 3: dodaj przypomnienie z linkiem do odwołania jednym kliknięciem. Zmierz różnicę wobec tygodnia 1.",
+        "Tydzień 4: zastosuj gwarancję kartą tylko do najgorszego terminu — zwykle sobotni wieczór i grupy od sześciu osób.",
+        "Potem podsumuj. Jeśli wskaźnik jest poniżej 5%, zatrzymaj się tutaj; dalsze tarcie kosztuje więcej, niż oszczędza."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Prowadź krótką listę oczekujących na godziny szczytu i pisz do nich, gdy stolik się zwolni. Połowa wartości łatwego odwołania polega na tym, że masz komu oddać stolik w ciągu godziny."
+    },
+    {
+      "type": "h2",
+      "text": "Co robić, gdy jednak przyjdą, ale spóźnieni"
+    },
+    {
+      "type": "p",
+      "text": "Ustal czas tolerancji z góry i wpisz go do potwierdzenia — 15 minut to standard. Ogłoszona zasada pozwala zwolnić stolik o 20:45 bez wymyślania reguły na poczekaniu i nie daje gościowi powodu do sporu."
+    },
+    {
+      "type": "cta",
+      "heading": "Rezerwacje, które same się potwierdzają i przypominają",
+      "text": "Przyjmuj rezerwacje całą dobę, wysyłaj potwierdzenia i przypomnienia automatycznie i pozwól gościom odwołać jednym kliknięciem, żeby stolik wrócił do sprzedaży. 14 dni za darmo.",
+      "buttonLabel": "Zobacz rezerwacje stolików",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Najczęstsze pytania",
+      "items": [
+        {
+          "q": "Jaki wskaźnik no-show jest normalny dla restauracji?",
+          "a": "Większość lokali, które go mierzy, mieści się między 5% a 15%, więcej przy dużych grupach, weekendowych szczytach i rezerwacjach robionych z dużym wyprzedzeniem. Zmierz własny przez cztery tygodnie, zamiast zgadywać."
+        },
+        {
+          "q": "Czy przypomnienia naprawdę ograniczają no-show?",
+          "a": "To środek o najwyższym zwrocie, bo większość no-show to zapomnienie, a nie zła wola. Połącz przypomnienie z linkiem do odwołania jednym kliknięciem, żeby zapomniana rezerwacja zamieniła się w zwolniony stolik."
+        },
+        {
+          "q": "Czy mogę pobrać opłatę za no-show?",
+          "a": "W wielu krajach tak, o ile gość wyraźnie się na to zgodził w chwili rezerwacji. Przepisy różnią się krajowo, więc sprawdź lokalne prawo konsumenckie i podaj zasadę w potwierdzeniu."
+        },
+        {
+          "q": "Czy powinienem prosić o kaucję?",
+          "a": "Przy dużych grupach i szczytowych datach często tak. W zwykły wtorek kosztuje cię więcej rezerwacji, niż ratuje nakryć."
+        },
+        {
+          "q": "Czy overbooking to dobry pomysł?",
+          "a": "Tylko tam, gdzie twój wskaźnik no-show jest stabilny i zmierzony, tylko w terminach, w których masz gdzie posadzić ludzi, i nigdy przy dużych grupach."
+        }
+      ]
+    }
+  ]
+}

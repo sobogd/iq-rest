@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "Udeblivelser i restauranten: pris og løsninger | IQ Rest",
+    "description": "Regn ud, hvad udeblivelser koster din restaurant om måneden, og hvilke tiltag der reelt mindsker dem: bekræftelser, påmindelser, depositum og overbooking."
+  },
+  "card": {
+    "title": "Udeblivelser: regnestykket og det, der faktisk hjælper",
+    "excerpt": "Fire tomme borde en lørdag er et månedsbudget til software brændt af på én aften. Sådan måler du din egen udeblivelsesprocent, og hvilke tiltag der er friktionen værd."
+  },
+  "h1": "Udeblivelser i restauranten: hvad de koster, og hvad der reelt mindsker dem",
+  "intro": "En udeblivelse koster dig to gange: de couverts, du ikke serverede, og de walk-ins, du afviste for at holde bordet. De fleste ejere har en fornemmelse af, hvor slemt det er, og intet tal. Skaf tallet først, for det afgør, om det er værd at genere dine gæster over.",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Regn dit eget tal ud"
+    },
+    {
+      "type": "p",
+      "text": "Tæl udeblevne couverts i fire uger og gang med dit gennemsnitlige salg. Et sted med 120 bookede couverts om ugen og 8% udeblivelser mister omkring 10 couverts om ugen. Til 30 € stykket er det 300 € om ugen, altså cirka **1.300 € om måneden**."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Bookede couverts/uge",
+        "Udeblivelsesprocent",
+        "Tabte couverts/måned",
+        "Tab ved 30 €"
+      ],
+      "rows": [
+        [
+          "80",
+          "5%",
+          "16",
+          "480 €"
+        ],
+        [
+          "120",
+          "8%",
+          "42",
+          "1.260 €"
+        ],
+        [
+          "200",
+          "10%",
+          "87",
+          "2.610 €"
+        ],
+        [
+          "200",
+          "15%",
+          "130",
+          "3.900 €"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Læg de borde til, du holdt. En udeblivelse lørdag 20:30 betyder som regel, at en walk-in blev afvist 20:15, så den reelle pris er tættere på det dobbelte på dine travleste aftener."
+    },
+    {
+      "type": "h2",
+      "text": "Hvorfor folk ikke dukker op"
+    },
+    {
+      "type": "p",
+      "text": "Sjældent ondskab. Som regel er reservationen blevet abstrakt. Nogen bookede for elleve dage siden på telefonen, glemte det, lavede andre planer, og nu er det pinligt at afbestille, så de gør ingenting. Alle virksomme tiltag rammer et af de tre punkter: gør reservationen konkret, gør afbestilling let, eller lad det koste noget at blive væk."
+    },
+    {
+      "type": "h2",
+      "text": "Tiltagene, rangeret efter udbytte i forhold til friktion"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Tiltag",
+        "Effekt",
+        "Friktion for gæsten"
+      ],
+      "rows": [
+        [
+          "Bekræftelse i bookingøjeblikket",
+          "Grundlag",
+          "Ingen"
+        ],
+        [
+          "Påmindelse dagen før",
+          "Stor",
+          "Ingen"
+        ],
+        [
+          "Afbestil med ét tryk i påmindelsen",
+          "Stor",
+          "Ingen"
+        ],
+        [
+          "Bekræft samme dag ved store selskaber",
+          "Moderat",
+          "Lav"
+        ],
+        [
+          "Kort reserveret, trækkes kun ved udeblivelse",
+          "Stor",
+          "Middel"
+        ],
+        [
+          "Depositum pr. person",
+          "Størst",
+          "Høj"
+        ],
+        [
+          "Overbooking i spidsbelastning",
+          "Kompenserer",
+          "Risikabelt ved fejlskøn"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Start med de to gratis"
+    },
+    {
+      "type": "p",
+      "text": "En påmindelse dagen før med et afbestillingslink, gæsten kan trykke på uden en samtale, klarer det meste af arbejdet. Afbestillingslinket føles bagvendt — du inviterer til afbud — men et bord, der frigives kl. 18:00 dagen før, er et bord, du kan sælge. En udeblivelse er den samme tabte reservation, bare uden varsel."
+    },
+    {
+      "type": "p",
+      "text": "Send den 24 timer før ved hverdagsreservationer og om morgenen ved weekendaftener. Hold den kort: navn, tid, antal personer, én linje til at bekræfte, én til at afbestille."
+    },
+    {
+      "type": "h2",
+      "text": "Hvornår du skal bede om kort"
+    },
+    {
+      "type": "p",
+      "text": "Kortgarantier virker, og de koster dig reservationer. At lægge en på hvert bord en tirsdag er en dårlig handel. At lægge den på selskaber på seks eller flere, på lørdag 20:00-21:00 og på nytårsaften er som regel en god: det er de tider, hvor en udeblivelse ikke kan indhentes."
+    },
+    {
+      "type": "note",
+      "text": "Hvis du opkræver et gebyr for udeblivelse, så sig det i klart sprog ved bookingen, i bekræftelsen og i påmindelsen. Klagen handler næsten aldrig om gebyret, men om ikke at være blevet informeret. Tjek dit lands forbrugerregler for at trække kort for ydelser, der ikke er leveret."
+    },
+    {
+      "type": "h2",
+      "text": "Overbooking, med omtanke"
+    },
+    {
+      "type": "p",
+      "text": "Hvis din udeblivelsesprocent stabilt er 10%, er det aritmetik og ikke hasard at tage 10% flere reservationer i spidsbelastningen. Risikoen er spredningen: den aften alle møder op, står folk i døren. Overbook kun den tid, du kan absorbere — hvor der er et barområde, hvor næste seating har luft — og aldrig ved store selskaber, for et bord til otte improviserer man ikke."
+    },
+    {
+      "type": "h2",
+      "text": "En plan på fire uger"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Uge 1: tæl udeblivelser ordentligt. Én optællingsseddel, hver service. Du skal have udgangspunktet, før du ændrer noget.",
+        "Uge 2: slå en øjeblikkelig bookingbekræftelse til, hvis du ikke allerede har en.",
+        "Uge 3: tilføj en påmindelse med afbestilling i ét tryk. Mål forskellen i forhold til uge 1.",
+        "Uge 4: læg kortgaranti på din værste tid alene — som regel lørdag aften og selskaber på seks eller flere.",
+        "Gør derefter status. Er procenten under 5, så stop her; mere friktion koster mere, end den sparer."
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Hold en kort venteliste til spidsbelastning og skriv til den, når et bord frigives. Halvdelen af værdien ved let afbestilling er at have nogen at give bordet til inden for en time."
+    },
+    {
+      "type": "h2",
+      "text": "Hvad du gør, når de kommer — bare for sent"
+    },
+    {
+      "type": "p",
+      "text": "Beslut din venteperiode på forhånd og skriv den i bekræftelsen — 15 minutter er standard. En udmeldt regel lader en vært frigive et bord kl. 20:45 uden at opfinde en regel på stedet og giver gæsten ingen grund til at diskutere."
+    },
+    {
+      "type": "cta",
+      "heading": "Reservationer, der bekræfter og påminder sig selv",
+      "text": "Tag reservationer døgnet rundt, send bekræftelser og påmindelser automatisk, og lad gæster afbestille med ét tryk, så bordet sælges igen. 14 dage gratis.",
+      "buttonLabel": "Se bordreservationer",
+      "routeKey": "/bookings"
+    },
+    {
+      "type": "faq",
+      "heading": "Ofte stillede spørgsmål",
+      "items": [
+        {
+          "q": "Hvad er en normal udeblivelsesprocent for en restaurant?",
+          "a": "De fleste steder, der måler, ligger mellem 5% og 15%, højere ved store selskaber, weekendens spidsbelastning og reservationer lavet lang tid i forvejen. Mål din egen i fire uger i stedet for at gætte."
+        },
+        {
+          "q": "Mindsker påmindelser virkelig udeblivelser?",
+          "a": "Det er tiltaget med højest udbytte, fordi de fleste udeblivelser er glemsomhed og ikke hensigt. Kombinér påmindelsen med et afbestillingslink i ét tryk, så den glemte reservation bliver til et frigjort bord."
+        },
+        {
+          "q": "Må jeg opkræve gebyr for udeblivelse?",
+          "a": "I mange lande ja, forudsat at gæsten klart accepterede det ved bookingen. Reglerne er forskellige fra land til land, så tjek din lokale forbrugerlovgivning og skriv politikken i bekræftelsen."
+        },
+        {
+          "q": "Skal jeg bede om depositum?",
+          "a": "Ved store selskaber og spidsdatoer ofte ja. En almindelig tirsdag koster det dig flere reservationer, end det redder couverts."
+        },
+        {
+          "q": "Er overbooking en god idé?",
+          "a": "Kun hvor din udeblivelsesprocent er stabil og målt, kun i tider hvor du har et sted at placere folk, og aldrig ved store selskaber."
+        }
+      ]
+    }
+  ]
+}
