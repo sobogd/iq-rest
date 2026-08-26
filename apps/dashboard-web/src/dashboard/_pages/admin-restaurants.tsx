@@ -20,9 +20,8 @@ interface RestaurantRow {
   subscriptionStatus: string;
   trialEndsAt: string | null;
   scansToday: number;
+  scans30d: number;
   messagesCount: number;
-  emailsSentCount: number;
-  emailTemplatesTotal: number;
   hasAdminComment: boolean;
 }
 
@@ -125,6 +124,10 @@ export function AdminRestaurantsPage({ onBack }: { onBack: () => void }) {
                 r.scansToday > 0
                   ? "bg-emerald-500/10 text-emerald-700 dark:text-emerald-400"
                   : "text-muted-foreground bg-secondary";
+              const scans30dChipColor =
+                r.scans30d > 0
+                  ? "bg-emerald-500/10 text-emerald-700 dark:text-emerald-400"
+                  : "text-muted-foreground bg-secondary";
               return (
                 <button
                   key={r.id}
@@ -166,19 +169,11 @@ export function AdminRestaurantsPage({ onBack }: { onBack: () => void }) {
                       {r.scansToday}
                     </span>
                     <span
-                      className={
-                        "text-[10px] rounded px-1.5 py-0.5 tabular-nums " +
-                        (r.emailsSentCount >= r.emailTemplatesTotal
-                          ? "text-muted-foreground bg-secondary"
-                          : r.emailsSentCount === 0
-                            ? "text-red-700 dark:text-red-400 bg-red-500/10"
-                            : r.emailsSentCount === 1
-                              ? "text-amber-700 dark:text-amber-400 bg-amber-500/10"
-                              : "text-emerald-700 dark:text-emerald-400 bg-emerald-500/10")
-                      }
-                      title="Unique lifecycle emails sent to owner"
+                      className={"inline-flex items-center gap-0.5 text-[10px] rounded px-1.5 py-0.5 tabular-nums " + scans30dChipColor}
+                      title="Scans last 30 days"
                     >
-                      {r.emailsSentCount}/{r.emailTemplatesTotal}
+                      <EyeIcon size={10} />
+                      {r.scans30d}
                     </span>
                   </span>
                 </button>
