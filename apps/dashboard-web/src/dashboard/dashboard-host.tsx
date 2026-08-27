@@ -29,7 +29,7 @@ import type {
   ApiTable,
 } from "./_v2/api";
 import { isAdminEmail } from "@/lib/admin";
-import { trackEvent } from "@/lib/analytics";
+import { queueCtx } from "@/lib/analytics";
 import { useTheme } from "@/components/theme-provider";
 
 interface AuthCheck {
@@ -63,9 +63,13 @@ interface SubData {
   canManageBilling?: boolean;
 }
 
-// Email links land with ?from=email&ec=<campaign>. Consume them once on boot:
-// record the arrival as its own event and strip ONLY these two params — the
-// rest of the query string belongs to SPA routing (?demo= etc).
+// Email/campaign links land with ?from=<source> or ?ec=<campaign> (signed-in
+// ad/landing arrivals also carry ?from= — the landing middleware forwards the
+// query). Consume them once on boot: pass the source as batch ctx, so the
+// server writes it onto the visit row (`SessionNew.from`, first-write-wins)
+// and it shows on the session in the admin sessions list — no event of its
+// own. Strip ONLY these two params — the rest of the query string belongs to
+// SPA routing (?demo= etc).
 const ATTRIBUTION_PARAMS = ["from", "ec"];
 function consumeAttributionParams(): void {
   const sp = new URLSearchParams(window.location.search);
@@ -80,7 +84,7 @@ function consumeAttributionParams(): void {
       .replace(/_+/g, "_")
       .replace(/^_+|_+$/g, "");
     // ?ec= marks a click from a lifecycle email, ?from= any other campaign.
-    if (v) trackEvent("Open", (k === "ec" ? `Email ${v}` : `From ${v}`).slice(0, 100), undefined, { instant: true });
+    if (v) queueCtx({ from: (k === "ec" ? `email_${v}` : v).slice(0, 64) });
   }
   const qs = sp.toString();
   window.history.replaceState(

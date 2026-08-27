@@ -239,10 +239,20 @@ if (typeof window !== "undefined" && !isKioskHost()) {
 }
 
 export interface TrackOptions {
-  /** Skip the 2s buffer and post right now. For page-entry events (the boot
-   *  "Open / From|Email" arrivals): they must not wait out the buffer, and
-   *  their response seeds the visit token every later batch rides on. */
+  /** Skip the 2s buffer and post right now. For events that must not wait out
+   *  the buffer (their response also seeds the visit token every later batch
+   *  rides on). */
   instant?: boolean;
+}
+
+/** Merge visit-attribution ctx (e.g. the `?from=` consumed on SPA boot) into
+ *  the next batch WITHOUT recording an event of its own. The server applies
+ *  ctx onto the visit row first-write-wins (`SessionNew.from`), so it shows on
+ *  the session in the admin sessions list; it just needs to ride along with
+ *  whatever event is sent first. */
+export function queueCtx(ctx: TrackCtx): void {
+  if (typeof window === "undefined" || isKioskHost()) return;
+  pendingCtx = { ...pendingCtx, ...ctx };
 }
 
 /** Record one interaction. `action` is the verb ("Click", "Show", "Focus",
