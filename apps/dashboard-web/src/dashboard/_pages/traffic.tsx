@@ -263,7 +263,10 @@ function TrafficList({
           <div className="text-xs text-muted-foreground py-8 text-center">No sessions</div>
         )
       ) : (
-        <div className="bg-card border border-border rounded-xl overflow-hidden divide-y divide-border">
+        // Mobile: rows keep their full content and scroll horizontally instead
+        // of hiding chips per breakpoint.
+        <div className="bg-card border border-border rounded-xl overflow-x-auto">
+          <div className="w-max min-w-full divide-y divide-border">
           {sessions.map((s) => (
             <SessionItem
               key={s.id}
@@ -278,6 +281,7 @@ function TrafficList({
               }}
             />
           ))}
+          </div>
         </div>
       )}
 
@@ -356,7 +360,7 @@ function SessionItem({
       onPointerCancel={clearTimer}
       onLostPointerCapture={clearTimer}
       onContextMenu={(e) => e.preventDefault()}
-      className="w-full flex items-center gap-2 px-3 py-2 text-xs text-left hover:bg-muted/40 transition-colors"
+      className="w-full flex items-center gap-2 px-3 py-2 text-xs text-left hover:bg-muted/40 transition-colors whitespace-nowrap"
     >
       {selectMode ? (
         <span
@@ -385,7 +389,7 @@ function SessionItem({
         ) : null}
         {s.userEmail ? (
           <span
-            className="text-[10px] bg-pink-500/10 text-pink-700 dark:text-pink-400 rounded px-1.5 py-0.5 truncate min-w-0"
+            className="text-[10px] bg-pink-500/10 text-pink-700 dark:text-pink-400 rounded px-1.5 py-0.5 shrink-0"
             title={
               (s.userVisits ?? 1) > 1
                 ? `${s.userEmail} — ${s.userVisits} visits in total`
@@ -396,16 +400,16 @@ function SessionItem({
             {(s.userVisits ?? 1) > 1 ? ` ×${s.userVisits}` : ""}
           </span>
         ) : place ? (
-          <span className={`${chip} truncate min-w-0`} title={place}>{place}</span>
+          <span className={chip} title={place}>{place}</span>
         ) : null}
-        <span className={`${chip} hidden sm:inline`} title={`${s.device ?? "—"} / ${s.os ?? "—"}`}>
+        <span className={chip} title={`${s.device ?? "—"} / ${s.os ?? "—"}`}>
           {deviceShort(s.device, s.os)}
         </span>
-        {s.lang ? <span className={`${chip} hidden md:inline`}>{s.lang}</span> : null}
-        {s.theme ? <span className={`${chip} hidden md:inline`}>{s.theme === "dark" ? "🌙" : "☀️"}</span> : null}
+        {s.lang ? <span className={chip}>{s.lang}</span> : null}
+        {s.theme ? <span className={chip}>{s.theme === "dark" ? "🌙" : "☀️"}</span> : null}
         {s.restaurants?.length ? (
           <span
-            className={`${chip} hidden lg:inline truncate min-w-0`}
+            className={chip}
             title={(s.restaurants ?? []).map((r) => r.title).join(", ")}
           >
             {s.restaurants[0].title}
@@ -448,12 +452,12 @@ function SessionItem({
           </span>
         ) : null}
         {source ? (
-          <span className={`text-[10px] rounded px-1.5 py-0.5 shrink-0 max-w-[90px] truncate ${sourceClass}`} title={source}>
+          <span className={`text-[10px] rounded px-1.5 py-0.5 shrink-0 ${sourceClass}`} title={source}>
             {source}
           </span>
         ) : null}
         <span className={chip} title={`${s.pageCount} page(s)`}>{s.eventCount}</span>
-        <span className={`${chip} hidden sm:inline tabular-nums`}>{duration(s.firstAt, s.lastAt)}</span>
+        <span className={`${chip} tabular-nums`}>{duration(s.firstAt, s.lastAt)}</span>
         <span className={`${chip} tabular-nums`}>{hmsDate(s.lastAt)}</span>
       </span>
     </button>

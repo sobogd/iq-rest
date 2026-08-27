@@ -7,6 +7,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { Trash2 } from "lucide-react";
 import { apiUrl } from "@/lib/api";
+import { RefreshIcon } from "../_v2/icons";
 import { SubpageStickyBar } from "../_v2/ui";
 import { useDashboardRouter } from "../_spa/router";
 import { invalidateTrafficCache } from "./traffic";
@@ -95,6 +96,15 @@ export function TrafficSessionPage({ id, restaurantId }: { id: string; restauran
       <SubpageStickyBar onBack={back} hideSave>
         <button
           type="button"
+          onClick={() => void load()}
+          disabled={loading}
+          className="h-8 w-8 inline-flex items-center justify-center bg-secondary rounded-md text-muted-foreground hover:text-foreground disabled:opacity-60"
+          title="Refresh"
+        >
+          <RefreshIcon size={14} className={loading ? "animate-spin" : ""} />
+        </button>
+        <button
+          type="button"
           onClick={() => void remove()}
           disabled={deleting || !data}
           className="h-8 w-8 inline-flex items-center justify-center rounded-md bg-red-50 dark:bg-red-950/40 text-red-600 dark:text-red-400 hover:bg-red-100 dark:hover:bg-red-900/40 disabled:opacity-40"
@@ -110,7 +120,9 @@ export function TrafficSessionPage({ id, restaurantId }: { id: string; restauran
             {deleteError}
           </div>
         ) : null}
-        {loading ? (
+        {/* Keep the loaded card visible during a refresh — only the very first
+            load shows the placeholder. */}
+        {loading && !data ? (
           <div className="text-xs text-muted-foreground py-8 text-center">Loading…</div>
         ) : error ? (
           <div className="text-xs text-red-600 dark:text-red-400 py-8 text-center">{error}</div>
@@ -235,9 +247,11 @@ function Timeline({ data }: { data: TrafficSessionDetail }) {
       {data.events.length === 0 ? (
         <div className="px-4 py-6 text-xs text-muted-foreground text-center">No events</div>
       ) : (
-        <div className="divide-y divide-border">
-          {data.events.map((e) => (
-            <div key={e.id} className="flex items-center gap-2 px-4 py-1.5 text-xs">
+        // Newest first; rows keep full content and scroll horizontally on mobile.
+        <div className="overflow-x-auto">
+          <div className="w-max min-w-full divide-y divide-border">
+          {[...data.events].reverse().map((e) => (
+            <div key={e.id} className="flex items-center gap-2 px-4 py-1.5 text-xs whitespace-nowrap">
               <span className="text-muted-foreground tabular-nums shrink-0">{hms(e.at)}</span>
               <span className="text-[10px] text-muted-foreground bg-secondary rounded px-1.5 py-0.5 shrink-0">
                 {e.page}
@@ -254,7 +268,7 @@ function Timeline({ data }: { data: TrafficSessionDetail }) {
               >
                 {e.action}
               </span>
-              <span className="text-foreground min-w-0 truncate">{e.name}</span>
+              <span className="text-foreground">{e.name}</span>
               {e.locale ? (
                 <span className="text-[10px] text-muted-foreground bg-secondary rounded px-1.5 py-0.5 shrink-0 uppercase">
                   {e.locale}
@@ -262,7 +276,7 @@ function Timeline({ data }: { data: TrafficSessionDetail }) {
               ) : null}
               {e.restaurantTitle ? (
                 <span
-                  className="ml-auto shrink-0 text-[10px] text-muted-foreground bg-secondary rounded px-1.5 py-0.5 max-w-[140px] truncate"
+                  className="ml-auto shrink-0 text-[10px] text-muted-foreground bg-secondary rounded px-1.5 py-0.5"
                   title={e.restaurantTitle}
                 >
                   {e.restaurantTitle}
@@ -270,6 +284,7 @@ function Timeline({ data }: { data: TrafficSessionDetail }) {
               ) : null}
             </div>
           ))}
+          </div>
         </div>
       )}
     </div>
