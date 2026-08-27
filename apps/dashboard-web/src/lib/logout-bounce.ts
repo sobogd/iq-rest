@@ -1,27 +1,24 @@
-import { apiUrl } from "./api";
+import { apiUrl } from "./api-base";
 import { landingUrl } from "./landing-url";
 
 let bouncing = false;
 
-/** Clear the session server-side, THEN leave for the marketing landing.
+/** Kill the session, then leave for the marketing landing.
  *
- *  The landing's middleware forwards any visitor who still carries an
- *  `iqr_session` cookie straight back to the dashboard, so the cookie must be
- *  gone before we navigate — the logout call is awaited (bounded at 1.5s).
- *  The target also carries `?loggedout=1` as a belt-and-braces loop breaker
- *  in case the logout call failed and the cookie survived. */
-export async function logoutAndBounceToLanding(locale: string): Promise<void> {
+ *  The landing's middleware forwards any visitor carrying an `iqr_session`
+ *  cookie straight back to the dashboard, so a plain `landingUrl` navigation
+ *  is not enough once the session is (or should be) dead. `?loggedout=1`
+ *  tells the landing middleware to expire the auth cookies itself and strip
+ *  the param — the bounce stays loop-free even when the logout call below
+ *  fails or is cut short by the navigation (`keepalive` normally lets it
+ *  survive and clear the server-side session row too). */
+export function logoutAndBounceToLanding(locale: string): void {
   if (bouncing || typeof window === "undefined") return;
   bouncing = true;
-  try {
-    await Promise.race([
-      fetch(apiUrl("/api/auth/logout"), { method: "POST", credentials: "include" }),
-      new Promise((resolve) => setTimeout(resolve, 1500)),
-    ]);
-  } catch {
-    // Cookie may have survived; ?loggedout=1 still stops the landing redirect.
-  }
-  const url = new URL(landingUrl(locale || "en"));
-  url.searchParams.set("loggedout", "1");
-  window.location.assign(url.toString());
+  fetch(apiUrl("/api/auth/logout"), {
+    method: "POST",
+    credentials: "include",
+    keepalive: true,
+  }).catch(() => undefined);
+  window.location.assign(`${landingUrl(locale || "en")}?loggedout=1`);
 }

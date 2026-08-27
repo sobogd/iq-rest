@@ -41,7 +41,7 @@ import { TrafficSessionPage } from "../_pages/traffic-session";
 import { AdminLeadsPage } from "../_pages/admin-leads";
 import { AdminInboxPage } from "../_pages/admin-inbox";
 import { AdminInboxThreadPage } from "../_pages/admin-inbox-thread";
-import { LandingRedirect } from "../../auth/landing-redirect";
+import { LandingRedirect, LogoutRedirect } from "../../auth/landing-redirect";
 
 import type { Booking, Category, Dish, DishOption, Order, Restaurant, Restaurant as UIRestaurant, TableEntity } from "../_v2/types";
 
@@ -192,7 +192,8 @@ function ShellBody(props: ShellInitialData) {
   // Local setInterval was duplicating that polling — removed.
 
   if (isAuthView) {
-    return <LandingRedirect />;
+    // Logout must clear the session before leaving — see LogoutRedirect.
+    return view.name === "auth.logout" ? <LogoutRedirect /> : <LandingRedirect />;
   }
   if (!restaurant) return null;
 
@@ -328,8 +329,9 @@ function ViewSwitch(p: SwitchProps) {
   switch (view.name) {
     case "auth.login":
     case "auth.otp":
-    case "auth.logout":
       return <LandingRedirect />;
+    case "auth.logout":
+      return <LogoutRedirect />;
     case "menu":
       return (
         <MenuList

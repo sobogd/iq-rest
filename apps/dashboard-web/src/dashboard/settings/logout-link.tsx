@@ -3,30 +3,26 @@
 import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { ChevronRightIcon } from "../_v2/icons";
-import { logout } from "../_v2/api";
 import { track } from "@/lib/dashboard-events";
 import { flushEvents } from "@/lib/analytics";
-import { landingUrl } from "@/lib/landing-url";
+import { logoutAndBounceToLanding } from "@/lib/logout-bounce";
 
 export function LogoutLink() {
  const t = useTranslations("dashboard.settingsHub");
  const locale = useLocale();
  const [busy, setBusy] = useState(false);
 
- async function handle() {
+ function handle() {
  if (busy) return;
  track("Click", "Logout");
  // The server resolves the identity of a batch from the session cookie, so
- // anything still buffered when logout() kills it would be filed as an
+ // anything still buffered when the logout kills it would be filed as an
  // anonymous visit. Ship it while we are still signed in.
  flushEvents();
  setBusy(true);
- try {
- await logout();
- window.location.href = landingUrl(locale);
- } catch {
- setBusy(false);
- }
+ // Loop-safe bounce: fires the logout (keepalive) and navigates with
+ // ?loggedout=1 so the landing clears the cookies even if the call fails.
+ logoutAndBounceToLanding(locale);
  }
 
  return (

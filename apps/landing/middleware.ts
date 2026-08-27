@@ -14,6 +14,7 @@ import {
   EN_ROOT_SLUGS,
   canonicalSlugRedirect,
   deepLinkPath,
+  routeKeyFromPath,
 } from "./lib/locale-slug-overrides";
 
 // Minimal HTML body for HTTP 410. Search engines look at the status code,
@@ -56,15 +57,28 @@ const localeRegex = new RegExp(`^/(${localePattern})(/|$)`);
 // PRESENCE is checked here (no per-request validity call) — see the signed-in
 // redirect block in middleware() for how a dead cookie is kept loop-free.
 const SESSION_COOKIE = "iqr_session";
+// Non-httpOnly hint mirror with the same lifetime (read by the landing header UI).
+const SESSION_HINT_COOKIE = "iqr_email";
 
-// Help-guide paths per locale (/help, /es/ayuda, /fr/aide, ...) — the one
-// landing section that stays reachable while signed in, until the guide moves
-// into the dashboard.
-const HELP_PATHS = new Set(
-  Object.entries(LOCALE_SLUG_OVERRIDES["/help"] ?? {}).map(([l, slug]) =>
-    l === "en" ? slug : `/${l}${slug}`,
-  ),
-);
+// Landing sections that stay reachable with a live session: the help guide
+// (until it moves into the dashboard), the legal documents (no copies exist in
+// the dashboard), and the blog (newsletter/shared links). Route keys resolve
+// via routeKeyFromPath, so every slug shape lands on the same key — the
+// localized slugs (/es/ayuda), the email-footer links (/es/help) and legacy
+// /en/help all map to "/help". Blog ARTICLE slugs are dynamic (not in the slug
+// map), matched by prefix below.
+const SIGNED_IN_ALLOWED_ROUTES = new Set(["/help", "/privacy", "/terms", "/cookies", "/blog"]);
+
+function isSignedInAllowedPath(pathname: string): boolean {
+  const key = routeKeyFromPath(pathname);
+  if (key && SIGNED_IN_ALLOWED_ROUTES.has(key)) return true;
+  const seg = pathname.split("/").filter(Boolean);
+  const rest =
+    seg.length > 0 && (locales as readonly string[]).includes(seg[0])
+      ? `/${seg.slice(1).join("/")}`
+      : `/${seg.join("/")}`;
+  return rest.startsWith("/blog/");
+}
 
 const GEO_COUNTRY_COOKIE = "geo_country";
 const GEO_LOCALE_COOKIE = "geo_locale";
@@ -211,27 +225,56 @@ export default function middleware(request: NextRequest) {
     return response;
   }
 
+  // Pages we removed in the 2026-05-20 landing restructure: serve 410 Gone
+  // so Googlebot can drop them from the index quickly. Lookup is O(1).
+  // Runs BEFORE the signed-in redirect: a removed URL answers 410 for
+  // everyone, cookie or not.
+  if (isGone(pathname)) {
+    return goneResponse(pathname);
+  }
+
+  // Logout bounce from the dashboard (`?loggedout=1`): expire the auth
+  // cookies OURSELVES and 302 to the same URL without the param. This makes
+  // the logout loop-free no matter what happened to the dashboard's own
+  // logout call (5xx, network failure, aborted by navigation) — without this,
+  // a surviving cookie would forward the just-logged-out visitor straight
+  // back into the dashboard below. Also keeps the param out of the URL bar,
+  // so a bookmarked/shared link can't permanently disable the redirect.
+  if (request.nextUrl.searchParams.has("loggedout")) {
+    const target = request.nextUrl.clone();
+    target.searchParams.delete("loggedout");
+    const response = NextResponse.redirect(target, 302);
+    for (const name of [SESSION_COOKIE, SESSION_HINT_COOKIE]) {
+      // Prod cookies live on the apex domain, local-dev cookies are host-only
+      // — emit both deletions; the browser ignores the non-matching one.
+      response.cookies.set(name, "", { path: "/", maxAge: 0 });
+      response.cookies.set(name, "", { path: "/", maxAge: 0, domain: ".iq-rest.com" });
+    }
+    return response;
+  }
+
   // Signed-in visitors are forwarded straight to the dashboard, server-side,
-  // before anything renders (the client-side variant flashed the landing).
-  // Only cookie PRESENCE is known here; a dead cookie costs one hop — the
-  // dashboard clears the session and bounces back with ?loggedout=1, which
-  // suppresses this redirect (dashboard-web awaits the logout before
-  // navigating, so the cookie is gone by the time we run again). Help-guide
-  // pages stay reachable while signed in.
+  // before anything renders (a client-side variant flashed the landing).
+  // Only cookie PRESENCE is known here (no per-request validity call): a dead
+  // cookie costs one hop — the dashboard fails auth, calls its loop-safe
+  // logout bounce and returns with ?loggedout=1, which the block above turns
+  // into an actual cookie wipe. Gated to real document navigations so RSC /
+  // prefetch fetches from the exempted pages aren't wasted on a cross-origin
+  // 302. The original query is preserved for the dashboard's attribution
+  // tracker (fbclid/utm/?from=).
+  const secFetchDest = request.headers.get("sec-fetch-dest");
   if (
     request.cookies.get(SESSION_COOKIE)?.value &&
-    !request.nextUrl.searchParams.has("loggedout") &&
-    !HELP_PATHS.has(pathname.replace(/\/+$/, "") || "/")
+    (!secFetchDest || secFetchDest === "document") &&
+    !request.headers.has("rsc") &&
+    !request.headers.has("next-router-prefetch") &&
+    !isSignedInAllowedPath(pathname)
   ) {
     const seg = pathname.split("/").filter(Boolean)[0];
     const locale = seg && (locales as readonly string[]).includes(seg) ? seg : "en";
-    return NextResponse.redirect(`${dashboardUrl()}/${locale}/dashboard`, 302);
-  }
-
-  // Pages we removed in the 2026-05-20 landing restructure: serve 410 Gone
-  // so Googlebot can drop them from the index quickly. Lookup is O(1).
-  if (isGone(pathname)) {
-    return goneResponse(pathname);
+    const target = new URL(`${dashboardUrl()}/${locale}/dashboard`);
+    target.search = request.nextUrl.search;
+    return NextResponse.redirect(target, 302);
   }
 
   // English is served at the root: `/`, `/pricing`, etc. Old `/en` and known
