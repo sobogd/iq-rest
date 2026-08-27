@@ -1,6 +1,6 @@
 /** Thin fetch wrapper. Sends cookies, prefixes with VITE_API_URL. */
 
-import { landingUrl } from "./landing-url";
+import { logoutAndBounceToLanding } from "./logout-bounce";
 import { observeResponseVersion } from "./version-check";
 import { activeRestaurantHeader } from "./active-restaurant";
 import { isKioskHost } from "./device-mode";
@@ -25,18 +25,14 @@ function currentLocale(): string {
   return /^[a-z]{2}$/i.test(seg || "") ? (seg as string) : "en";
 }
 
-/** Fired on any unexpected 401 from the API. Clears any leftover client state
- *  and bounces the user to the marketing landing — the session cookie is
- *  already gone or invalid, no point pretending we're signed in. */
+/** Fired on any unexpected 401 from the API. Clears the dead session (awaited —
+ *  the landing middleware forwards anyone still carrying the session cookie
+ *  back here, so a fire-and-forget logout raced that redirect into a loop) and
+ *  bounces the user to the marketing landing. */
 function handleUnauthorized(): void {
   if (isLoggingOut) return;
   isLoggingOut = true;
-  // Fire-and-forget logout so the server-side row is cleared too. We don't
-  // await it — the cookie is dead either way and we want the redirect fast.
-  fetch(`${BASE}/auth/logout`, { method: "POST", credentials: "include" }).catch(() => undefined);
-  if (typeof window !== "undefined") {
-    window.location.assign(landingUrl(currentLocale()));
-  }
+  void logoutAndBounceToLanding(currentLocale());
 }
 
 /** Build a full API URL from a path that may start with `/` or `/api/`.

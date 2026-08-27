@@ -70,7 +70,6 @@ export function HelpView({
         featureLinks={texts.footer.featureLinks}
         compact
         navLayout="grouped"
-        autoRedirect={false}
       />
 
       <Content>

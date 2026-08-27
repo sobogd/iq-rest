@@ -40,10 +40,6 @@ interface HeaderProps {
    *  `grouped`: products dropdown + pricing + guide on the left, plain-text
    *  sign-in and the primary CTA on the right (v2 home). */
   navLayout?: "flat" | "grouped";
-  /** Signed-in visitors are auto-forwarded to the dashboard from every page
-   *  that renders this header. The help guide opts out (`false`) so docs stay
-   *  reachable while signed in. */
-  autoRedirect?: boolean;
 }
 
 // One landing header in two skins. `solid` is the opaque sticky bar used across
@@ -61,7 +57,6 @@ export function LandingHeader({
   containerClass = NARROW,
   compact = false,
   navLayout = "flat",
-  autoRedirect = true,
 }: HeaderProps) {
   const grouped = navLayout === "grouped";
   const isHero = variant === "hero";
@@ -82,15 +77,6 @@ export function LandingHeader({
   const dashHref = `${dashboardUrl()}/${locale}/dashboard`;
   const cta = usePrimaryCta(texts.cta);
   const auth = useLandingAuth();
-
-  // Only fires after /api/auth/check confirmed the session, so a stale hint
-  // cookie can't loop with the dashboard's own bounce-to-landing on 401.
-  useEffect(() => {
-    if (!autoRedirect || !auth.authenticated) return;
-    analytics.track("Redirect", "Auto dashboard");
-    analytics.flush();
-    window.location.replace(dashHref);
-  }, [autoRedirect, auth.authenticated, dashHref]);
   const router = useRouter();
   const goToSignIn = () => router.push(`/${locale}/login`);
 

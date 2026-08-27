@@ -9,7 +9,7 @@ import { api, ApiError } from "@/lib/api";
 const retryUnlessForbidden = (count: number, err: unknown) =>
   !(err instanceof ApiError && err.status === 403) && count < 3;
 import { FullPageLoader } from "@/components/full-page-loader";
-import { landingUrl } from "@/lib/landing-url";
+import { logoutAndBounceToLanding } from "@/lib/logout-bounce";
 import { Shell } from "./_spa/shell";
 import { DashboardSpaWrapper } from "./_spa/spa-wrapper";
 import { DashboardChrome } from "./_v2/chrome";
@@ -109,7 +109,9 @@ export function DashboardHost() {
   useEffect(() => {
     if (auth.isLoading || !authData) return;
     if (!authData.authenticated) {
-      window.location.assign(landingUrl(locale || "en"));
+      // Clears the (dead) cookie BEFORE navigating — the landing middleware
+      // forwards cookie-carrying visitors back here, which would loop.
+      void logoutAndBounceToLanding(locale || "en");
       return;
     }
     // The legacyDashboard flag is honoured only on /login (post-sign-in)

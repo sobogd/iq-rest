@@ -8,6 +8,7 @@ import {
 import { getCurrencyByCountry } from "./lib/country-currency-map";
 import { HOME_META, lastModifiedFor } from "./lib/page-meta";
 import { isGone } from "./lib/gone-paths";
+import { dashboardUrl } from "./lib/dashboard-url";
 import {
   LOCALE_SLUG_OVERRIDES,
   EN_ROOT_SLUGS,
@@ -50,6 +51,20 @@ const localeRegex = new RegExp(`^/(${localePattern})(/|$)`);
 // feature/about/help URLs every alternate pointed at a 301 and contradicted
 // the correct head-level hreflang (build-feature-metadata.ts) and the sitemap.
 // Head + sitemap remain the two (agreeing) hreflang sources.
+
+// Session token cookie set by dashboard-api on the apex domain. Only its
+// PRESENCE is checked here (no per-request validity call) — see the signed-in
+// redirect block in middleware() for how a dead cookie is kept loop-free.
+const SESSION_COOKIE = "iqr_session";
+
+// Help-guide paths per locale (/help, /es/ayuda, /fr/aide, ...) — the one
+// landing section that stays reachable while signed in, until the guide moves
+// into the dashboard.
+const HELP_PATHS = new Set(
+  Object.entries(LOCALE_SLUG_OVERRIDES["/help"] ?? {}).map(([l, slug]) =>
+    l === "en" ? slug : `/${l}${slug}`,
+  ),
+);
 
 const GEO_COUNTRY_COOKIE = "geo_country";
 const GEO_LOCALE_COOKIE = "geo_locale";
@@ -194,6 +209,23 @@ export default function middleware(request: NextRequest) {
     const response = NextResponse.redirect(target, 302);
     setGeoCookies(request, response);
     return response;
+  }
+
+  // Signed-in visitors are forwarded straight to the dashboard, server-side,
+  // before anything renders (the client-side variant flashed the landing).
+  // Only cookie PRESENCE is known here; a dead cookie costs one hop — the
+  // dashboard clears the session and bounces back with ?loggedout=1, which
+  // suppresses this redirect (dashboard-web awaits the logout before
+  // navigating, so the cookie is gone by the time we run again). Help-guide
+  // pages stay reachable while signed in.
+  if (
+    request.cookies.get(SESSION_COOKIE)?.value &&
+    !request.nextUrl.searchParams.has("loggedout") &&
+    !HELP_PATHS.has(pathname.replace(/\/+$/, "") || "/")
+  ) {
+    const seg = pathname.split("/").filter(Boolean)[0];
+    const locale = seg && (locales as readonly string[]).includes(seg) ? seg : "en";
+    return NextResponse.redirect(`${dashboardUrl()}/${locale}/dashboard`, 302);
   }
 
   // Pages we removed in the 2026-05-20 landing restructure: serve 410 Gone
