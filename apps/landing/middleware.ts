@@ -59,6 +59,12 @@ const localeRegex = new RegExp(`^/(${localePattern})(/|$)`);
 const SESSION_COOKIE = "iqr_session";
 // Non-httpOnly hint mirror with the same lifetime (read by the landing header UI).
 const SESSION_HINT_COOKIE = "iqr_email";
+// Legacy mirrors of the same pair, still written by dashboard-api for the
+// retired iq-rest.com monolith. Nothing reads them anymore, but they now
+// outlive a failed logout by 400 days (sessions no longer expire on their
+// own), so the logout bounce wipes them here too.
+const LEGACY_SESSION_COOKIE = "session";
+const LEGACY_SESSION_HINT_COOKIE = "user_email";
 
 // Landing sections that stay reachable with a live session: the help guide
 // (until it moves into the dashboard), the legal documents (no copies exist in
@@ -244,7 +250,12 @@ export default function middleware(request: NextRequest) {
     const target = request.nextUrl.clone();
     target.searchParams.delete("loggedout");
     const response = NextResponse.redirect(target, 302);
-    for (const name of [SESSION_COOKIE, SESSION_HINT_COOKIE]) {
+    for (const name of [
+      SESSION_COOKIE,
+      SESSION_HINT_COOKIE,
+      LEGACY_SESSION_COOKIE,
+      LEGACY_SESSION_HINT_COOKIE,
+    ]) {
       // Prod cookies live on the apex domain, local-dev cookies are host-only
       // — emit both deletions; the browser ignores the non-matching one.
       response.cookies.set(name, "", { path: "/", maxAge: 0 });
