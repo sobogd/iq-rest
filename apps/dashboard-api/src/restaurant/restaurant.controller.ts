@@ -29,12 +29,15 @@ import {
   getAccountCapsByRestaurantId,
 } from "../common/entitlements";
 import { getRequestCurrency } from "../common/geo";
+import { AUTH_COOKIE_MAX_AGE_MS } from "../common/session-utils";
 
 const ACTIVE_RESTAURANT_COOKIE = "iqr_active_restaurant_id";
 // 1 year — purely a UI convenience for the browser; AuthGuard validates the
 // value against the user's RestaurantUser attachments on every request, so a
 // stale cookie is harmless (falls back to primary).
-const ACTIVE_COOKIE_MAX_AGE_MS = 365 * 24 * 60 * 60 * 1000;
+// Same lifetime as the auth cookies: a session that outlives this cookie would
+// silently fall back to the primary restaurant.
+const ACTIVE_COOKIE_MAX_AGE_MS = AUTH_COOKIE_MAX_AGE_MS;
 
 @Controller()
 @UseGuards(AuthGuard)

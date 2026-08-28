@@ -65,6 +65,9 @@ const SESSION_HINT_COOKIE = "iqr_email";
 // own), so the logout bounce wipes them here too.
 const LEGACY_SESSION_COOKIE = "session";
 const LEGACY_SESSION_HINT_COOKIE = "user_email";
+// Issue stamp dashboard-api writes next to the pair; it decides when the API
+// rewrites them, so a logout has to take it down with the rest.
+const SESSION_ISSUED_COOKIE = "iqr_session_at";
 
 // Landing sections that stay reachable with a live session: the help guide
 // (until it moves into the dashboard), the legal documents (no copies exist in
@@ -255,6 +258,7 @@ export default function middleware(request: NextRequest) {
       SESSION_HINT_COOKIE,
       LEGACY_SESSION_COOKIE,
       LEGACY_SESSION_HINT_COOKIE,
+      SESSION_ISSUED_COOKIE,
     ]) {
       // Prod cookies live on the apex domain, local-dev cookies are host-only
       // — emit both deletions; the browser ignores the non-matching one.

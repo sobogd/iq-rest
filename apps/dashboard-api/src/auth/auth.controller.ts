@@ -15,9 +15,10 @@ import { ConfigService } from "@nestjs/config";
 import type { Request, Response } from "express";
 import { AuthService } from "./auth.service";
 import { AppleCallbackDto, EmailLoginDto, GoogleAuthDto, HandoffDto, SendOtpDto, VerifyOtpDto } from "./dto";
-import { authCookieOptions, refreshAuthCookies } from "../common/session-utils";
+import { AUTH_COOKIE_ISSUED_COOKIE, issueAuthCookies, refreshAuthCookies } from "../common/session-utils";
 import { getRequestCurrency } from "../common/geo";
 import { ConversionV2Service } from "../analytics-v2/conversion-v2.service";
+import { sessionMeta } from "../common/session-meta";
 
 const SESSION_COOKIE = "iqr_session";
 const EMAIL_COOKIE = "iqr_email";
@@ -61,13 +62,9 @@ export class AuthController {
   @Post("verify-otp")
   @HttpCode(HttpStatus.OK)
   async verifyOtp(@Body() dto: VerifyOtpDto, @Req() req: Request, @Res({ passthrough: true }) res: Response) {
-    const { token, userId, onboardingStep, isNewUser, registered, legacyDashboard } = await this.auth.verifyOtp(dto.email, dto.code);
+    const { token, userId, onboardingStep, isNewUser, registered, legacyDashboard } = await this.auth.verifyOtp(dto.email, dto.code, sessionMeta(req));
     const domain = this.config.get<string>("COOKIE_DOMAIN") || undefined;
-    const opts = authCookieOptions(domain);
-    res.cookie(SESSION_COOKIE, token, opts);
-    res.cookie(EMAIL_COOKIE, dto.email, { ...opts, httpOnly: false });
-    res.cookie(LEGACY_SESSION_COOKIE, token, opts);
-    res.cookie(LEGACY_EMAIL_COOKIE, dto.email, { ...opts, httpOnly: false });
+    issueAuthCookies(res, token, dto.email, domain);
     await this.dropStaleActiveRestaurant(req, res, dto.email);
     // `registered`, NOT `isNewUser`: the latter means "no restaurant yet →
     // needs onboarding", and a genuine signup is seeded during verifyOtp, so it
@@ -95,13 +92,10 @@ export class AuthController {
       body.signupContext,
       currency,
       body.locale || acceptLang || null,
+      sessionMeta(req),
     );
     const domain = this.config.get<string>("COOKIE_DOMAIN") || undefined;
-    const opts = authCookieOptions(domain);
-    res.cookie(SESSION_COOKIE, result.token, opts);
-    res.cookie(EMAIL_COOKIE, result.email, { ...opts, httpOnly: false });
-    res.cookie(LEGACY_SESSION_COOKIE, result.token, opts);
-    res.cookie(LEGACY_EMAIL_COOKIE, result.email, { ...opts, httpOnly: false });
+    issueAuthCookies(res, result.token, result.email, domain);
     await this.dropStaleActiveRestaurant(req, res, result.email);
     if (result.isNewUser) {
       this.conversions.onRegistration(req, result.userId, result.email, "Google");
@@ -161,6 +155,7 @@ export class AuthController {
         parsedState.signupContext,
         currency,
         locale || acceptLang || null,
+        sessionMeta(req),
       );
       if (result.isNewUser) {
         this.conversions.onRegistration(req, result.userId, result.email, "Google");
@@ -240,6 +235,7 @@ export class AuthController {
         parsedState.signupContext,
         currency,
         locale || acceptLang || null,
+        sessionMeta(req),
       );
       if (result.isNewUser) {
         this.conversions.onRegistration(req, result.userId, result.email, "Apple");
@@ -269,11 +265,7 @@ export class AuthController {
     const result = await this.auth.consumeHandoff(dto.ott);
     if (!result) throw new UnauthorizedException();
     const domain = this.config.get<string>("COOKIE_DOMAIN") || undefined;
-    const opts = authCookieOptions(domain);
-    res.cookie(SESSION_COOKIE, result.token, opts);
-    res.cookie(EMAIL_COOKIE, result.email, { ...opts, httpOnly: false });
-    res.cookie(LEGACY_SESSION_COOKIE, result.token, opts);
-    res.cookie(LEGACY_EMAIL_COOKIE, result.email, { ...opts, httpOnly: false });
+    issueAuthCookies(res, result.token, result.email, domain);
     await this.dropStaleActiveRestaurant(req, res, result.email);
     return { ok: true, email: result.email };
   }
@@ -291,11 +283,7 @@ export class AuthController {
     const result = await this.auth.resolveEmailLoginToken(dto.token);
     if (!result) throw new UnauthorizedException();
     const domain = this.config.get<string>("COOKIE_DOMAIN") || undefined;
-    const opts = authCookieOptions(domain);
-    res.cookie(SESSION_COOKIE, result.token, opts);
-    res.cookie(EMAIL_COOKIE, result.email, { ...opts, httpOnly: false });
-    res.cookie(LEGACY_SESSION_COOKIE, result.token, opts);
-    res.cookie(LEGACY_EMAIL_COOKIE, result.email, { ...opts, httpOnly: false });
+    issueAuthCookies(res, result.token, result.email, domain);
     await this.dropStaleActiveRestaurant(req, res, result.email);
     return { ok: true, email: result.email };
   }
@@ -335,6 +323,7 @@ export class AuthController {
     res.clearCookie(EMAIL_COOKIE, baseOpts);
     res.clearCookie(LEGACY_SESSION_COOKIE, baseOpts);
     res.clearCookie(LEGACY_EMAIL_COOKIE, baseOpts);
+    res.clearCookie(AUTH_COOKIE_ISSUED_COOKIE, baseOpts);
     res.clearCookie("iqr_admin_original_session", baseOpts);
     res.clearCookie("iqr_admin_original_email", baseOpts);
     res.clearCookie("iqr_admin_original_user_id", baseOpts);

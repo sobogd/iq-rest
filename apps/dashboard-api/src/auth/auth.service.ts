@@ -23,6 +23,7 @@ import {
   safeCompare,
 } from "../common/session-utils";
 import { validateEmail } from "../common/validate-email";
+import type { SessionMeta } from "../common/session-meta";
 
 export type SignupContext = { cuisine?: string; restaurantName: string };
 
@@ -258,7 +259,7 @@ export class AuthService implements OnModuleDestroy {
     return seeded;
   }
 
-  async verifyOtp(emailRaw: string, code: string): Promise<{ token: string; userId: string; onboardingStep: number; isNewUser: boolean; registered: boolean; legacyDashboard: boolean }> {
+  async verifyOtp(emailRaw: string, code: string, meta?: SessionMeta): Promise<{ token: string; userId: string; onboardingStep: number; isNewUser: boolean; registered: boolean; legacyDashboard: boolean }> {
     const email = validateEmail(emailRaw);
     if (!email || !code) throw new BadRequestException("Email and code required");
 
@@ -322,6 +323,8 @@ export class AuthService implements OnModuleDestroy {
       data: {
         userId: user.id,
         tokenHash,
+        userAgent: meta?.userAgent ?? null,
+        ip: meta?.ip ?? null,
         // No expiry: a login lasts until an explicit logout (this device) or a
         // logout-everywhere. resolveSession treats null as "never expires".
         expiresAt: null,
@@ -589,6 +592,7 @@ export class AuthService implements OnModuleDestroy {
     signupContext?: SignupContext,
     currency?: string,
     locale?: string | null,
+    meta?: SessionMeta,
   ): Promise<{
     token: string;
     userId: string;
@@ -650,6 +654,8 @@ export class AuthService implements OnModuleDestroy {
       data: {
         userId: user.id,
         tokenHash,
+        userAgent: meta?.userAgent ?? null,
+        ip: meta?.ip ?? null,
         // No expiry: a login lasts until an explicit logout (this device) or a
         // logout-everywhere. resolveSession treats null as "never expires".
         expiresAt: null,
@@ -697,6 +703,7 @@ export class AuthService implements OnModuleDestroy {
     signupContext?: SignupContext,
     currency?: string,
     locale?: string | null,
+    meta?: SessionMeta,
   ): Promise<{
     token: string;
     userId: string;
@@ -749,6 +756,8 @@ export class AuthService implements OnModuleDestroy {
       data: {
         userId: user.id,
         tokenHash,
+        userAgent: meta?.userAgent ?? null,
+        ip: meta?.ip ?? null,
         // No expiry: a login lasts until an explicit logout (this device) or a
         // logout-everywhere. resolveSession treats null as "never expires".
         expiresAt: null,
