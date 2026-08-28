@@ -717,6 +717,9 @@
       "logout": "Odjava",
       "loggingOut": "Odjavljivanje...",
       "logoutDesc": "Odjavite se sa ovog naloga.",
+      "logoutAll": "Odjava sa svih uređaja",
+      "logoutAllDesc": "Odjavite se sa ovog naloga na svim uređajima.",
+      "logoutAllConfirm": "Odjaviti se sa ovog naloga na svim uređajima?",
       "exitImpersonation": "Izađi iz oponašanja",
       "exitImpersonationDesc": "Vraćanje na admin nalog ({email}).",
       "rows": {

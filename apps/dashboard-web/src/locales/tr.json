@@ -717,6 +717,9 @@
       "logout": "Çıkış",
       "loggingOut": "Çıkış yapılıyor...",
       "logoutDesc": "Bu hesaptan çıkış yap.",
+      "logoutAll": "Her yerden çıkış yap",
+      "logoutAllDesc": "Bu hesaptan tüm cihazlarda çıkış yap.",
+      "logoutAllConfirm": "Bu hesaptan tüm cihazlarda çıkış yapılsın mı?",
       "exitImpersonation": "Kimliğe bürünmeyi sonlandır",
       "exitImpersonationDesc": "Yönetici hesabınıza ({email}) dön.",
       "rows": {

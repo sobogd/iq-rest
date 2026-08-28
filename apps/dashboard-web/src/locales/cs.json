@@ -717,6 +717,9 @@
       "logout": "Odhlásit",
       "loggingOut": "Odhlašování...",
       "logoutDesc": "Odhlásit se z tohoto účtu.",
+      "logoutAll": "Odhlásit se všude",
+      "logoutAllDesc": "Odhlásit se z tohoto účtu na všech zařízeních.",
+      "logoutAllConfirm": "Odhlásit se z tohoto účtu na všech zařízeních?",
       "exitImpersonation": "Ukončit zastupování",
       "exitImpersonationDesc": "Vrátit se na admin účet ({email}).",
       "rows": {

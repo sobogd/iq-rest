@@ -717,6 +717,9 @@
       "logout": "로그아웃",
       "loggingOut": "로그아웃 중...",
       "logoutDesc": "이 계정에서 로그아웃합니다.",
+      "logoutAll": "모든 기기에서 로그아웃",
+      "logoutAllDesc": "모든 기기에서 이 계정에서 로그아웃합니다.",
+      "logoutAllConfirm": "모든 기기에서 이 계정에서 로그아웃할까요?",
       "exitImpersonation": "사칭 종료",
       "exitImpersonationDesc": "관리자 계정 ({email})으로 돌아갑니다.",
       "rows": {

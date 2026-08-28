@@ -4,14 +4,18 @@ import {
   Injectable,
   UnauthorizedException,
 } from "@nestjs/common";
-import type { Request } from "express";
+import { ConfigService } from "@nestjs/config";
+import type { Request, Response } from "express";
 import { AuthService } from "./auth.service";
 import { PrismaService } from "../prisma/prisma.service";
+import {
+  ADMIN_ORIG_EMAIL_COOKIE,
+  ADMIN_ORIG_SESSION_COOKIE,
+  EMAIL_COOKIE,
+  SESSION_COOKIE,
+  refreshAuthCookies,
+} from "../common/session-utils";
 
-const SESSION_COOKIE = "iqr_session";
-const EMAIL_COOKIE = "iqr_email";
-const ADMIN_ORIG_SESSION_COOKIE = "iqr_admin_original_session";
-const ADMIN_ORIG_EMAIL_COOKIE = "iqr_admin_original_email";
 const ACTIVE_RESTAURANT_COOKIE = "iqr_active_restaurant_id";
 const ACTIVE_RESTAURANT_HEADER = "x-restaurant-id";
 
@@ -41,6 +45,7 @@ export class AuthGuard implements CanActivate {
   constructor(
     private readonly auth: AuthService,
     private readonly prisma: PrismaService,
+    private readonly config: ConfigService,
   ) {}
 
   async canActivate(ctx: ExecutionContext): Promise<boolean> {
@@ -61,6 +66,18 @@ export class AuthGuard implements CanActivate {
       cookies?.[ACTIVE_RESTAURANT_COOKIE];
     const { activeId, primaryId, viaGrant } =
       await this.resolveActiveRestaurant(user.userId, requested);
+
+    // Sliding session: a login lasts until an explicit logout, so every
+    // authenticated request pushes the cookie expiry back out and clears any
+    // leftover expiry on the session row. Doing it here (rather than only at
+    // login) is what upgrades sessions issued under the old 7-day cookie
+    // without asking anyone to sign in again.
+    refreshAuthCookies(
+      ctx.switchToHttp().getResponse<Response>(),
+      cookies,
+      this.config.get<string>("COOKIE_DOMAIN") || undefined,
+    );
+    void this.auth.extendSession(adminOrigSession || session);
 
     (req as AuthedRequest).authUser = {
       userId: user.userId,

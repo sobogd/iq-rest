@@ -717,6 +717,9 @@
       "logout": "Deconectează-te",
       "loggingOut": "Deconectare...",
       "logoutDesc": "Deconectează-te de la acest cont.",
+      "logoutAll": "Deconectare de pe toate dispozitivele",
+      "logoutAllDesc": "Deconectează-te din acest cont pe toate dispozitivele.",
+      "logoutAllConfirm": "Te deconectezi din acest cont pe toate dispozitivele?",
       "exitImpersonation": "Ieși din impersonare",
       "exitImpersonationDesc": "Revino la contul de admin ({email}).",
       "rows": {

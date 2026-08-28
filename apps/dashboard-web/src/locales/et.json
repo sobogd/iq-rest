@@ -717,6 +717,9 @@
       "logout": "Logi välja",
       "loggingOut": "Väljalogimine...",
       "logoutDesc": "Logi sellest kontost välja.",
+      "logoutAll": "Logi välja kõigist seadmetest",
+      "logoutAllDesc": "Logi sellest kontost välja kõigis seadmetes.",
+      "logoutAllConfirm": "Kas logida sellest kontost välja kõigis seadmetes?",
       "exitImpersonation": "Lõpeta esindamine",
       "exitImpersonationDesc": "Naase oma admin-kontole ({email}).",
       "rows": {

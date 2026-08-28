@@ -717,6 +717,9 @@
       "logout": "Logga ut",
       "loggingOut": "Loggar ut...",
       "logoutDesc": "Logga ut från detta konto.",
+      "logoutAll": "Logga ut överallt",
+      "logoutAllDesc": "Logga ut från det här kontot på alla enheter.",
+      "logoutAllConfirm": "Logga ut från det här kontot på alla enheter?",
       "exitImpersonation": "Avsluta personifiering",
       "exitImpersonationDesc": "Återgå till ditt admin-konto ({email}).",
       "rows": {

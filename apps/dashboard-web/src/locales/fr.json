@@ -717,6 +717,9 @@
       "logout": "Déconnexion",
       "loggingOut": "Déconnexion...",
       "logoutDesc": "Se déconnecter de ce compte.",
+      "logoutAll": "Se déconnecter partout",
+      "logoutAllDesc": "Se déconnecter de ce compte sur tous les appareils.",
+      "logoutAllConfirm": "Se déconnecter de ce compte sur tous les appareils ?",
       "exitImpersonation": "Quitter l'impersonation",
       "exitImpersonationDesc": "Revenir à votre compte admin ({email}).",
       "rows": {

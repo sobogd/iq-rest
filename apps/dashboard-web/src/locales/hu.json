@@ -717,6 +717,9 @@
       "logout": "Kijelentkezés",
       "loggingOut": "Kijelentkezés...",
       "logoutDesc": "Kijelentkezés ebből a fiókból.",
+      "logoutAll": "Kijelentkezés minden eszközről",
+      "logoutAllDesc": "Kijelentkezés ebből a fiókból az összes eszközön.",
+      "logoutAllConfirm": "Kijelentkezik ebből a fiókból az összes eszközön?",
       "exitImpersonation": "Megszemélyesítés befejezése",
       "exitImpersonationDesc": "Vissza az admin fiókodhoz ({email}).",
       "rows": {

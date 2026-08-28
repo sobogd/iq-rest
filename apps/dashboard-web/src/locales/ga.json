@@ -717,6 +717,9 @@
       "logout": "Logáil amach",
       "loggingOut": "Á logáil amach...",
       "logoutDesc": "Logáil amach as an gcuntas seo.",
+      "logoutAll": "Logáil amach i ngach áit",
+      "logoutAllDesc": "Logáil amach as an gcuntas seo ar gach gléas.",
+      "logoutAllConfirm": "Logáil amach as an gcuntas seo ar gach gléas?",
       "exitImpersonation": "Fág an pearsanú",
       "exitImpersonationDesc": "Fill ar do chuntas riarthóra ({email}).",
       "rows": {

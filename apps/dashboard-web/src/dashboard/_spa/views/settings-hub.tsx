@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { apiUrl } from "@/lib/api";
 import { ChevronRightIcon } from "../../_v2/icons";
 import { PageHeader } from "../../_v2/ui";
-import { LogoutLink } from "../../settings/logout-link";
+import { LogoutAllLink, LogoutLink } from "../../settings/logout-link";
 import { track } from "@/lib/dashboard-events";
 import { useDashboardRouter } from "../router";
 import type { View } from "../types";
@@ -192,7 +192,10 @@ export function SettingsHubView({
             <ChevronRightIcon size={16} className="text-muted-foreground shrink-0" />
           </button>
         ) : (
-          <LogoutLink />
+          <>
+            <LogoutLink />
+            <LogoutAllLink />
+          </>
         )}
       </div>
     </div>

@@ -717,6 +717,9 @@
       "logout": "Uitloggen",
       "loggingOut": "Uitloggen...",
       "logoutDesc": "Uitloggen uit dit account.",
+      "logoutAll": "Overal uitloggen",
+      "logoutAllDesc": "Uitloggen uit dit account op alle apparaten.",
+      "logoutAllConfirm": "Uitloggen uit dit account op alle apparaten?",
       "exitImpersonation": "Impersonatie verlaten",
       "exitImpersonationDesc": "Terug naar uw admin-account ({email}).",
       "rows": {

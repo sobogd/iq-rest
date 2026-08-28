@@ -717,6 +717,9 @@
       "logout": "Esci",
       "loggingOut": "Uscita...",
       "logoutDesc": "Esci da questo account.",
+      "logoutAll": "Esci da tutti i dispositivi",
+      "logoutAllDesc": "Esci da questo account su tutti i dispositivi.",
+      "logoutAllConfirm": "Uscire da questo account su tutti i dispositivi?",
       "exitImpersonation": "Esci dall'impersonificazione",
       "exitImpersonationDesc": "Torna al tuo account admin ({email}).",
       "rows": {

@@ -954,6 +954,12 @@ export async function logout(): Promise<void> {
         credentials: "include", method: "POST" });
 }
 
+/** Log out on every device this account is signed in on. */
+export async function logoutAll(): Promise<void> {
+ await apiFetch("/api/auth/logout-all", {
+        credentials: "include", method: "POST" });
+}
+
 // ── Order serialization helpers (kitchen + orders pages) ──
 //
 // Server stores Order.items as a JSON array on the row. We extend each item with a

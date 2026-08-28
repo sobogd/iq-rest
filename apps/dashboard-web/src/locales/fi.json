@@ -717,6 +717,9 @@
       "logout": "Kirjaudu ulos",
       "loggingOut": "Kirjaudutaan ulos...",
       "logoutDesc": "Kirjaudu ulos tältä tililtä.",
+      "logoutAll": "Kirjaudu ulos kaikilta laitteilta",
+      "logoutAllDesc": "Kirjaudu ulos tältä tililtä kaikilla laitteilla.",
+      "logoutAllConfirm": "Kirjaudutaanko ulos tältä tililtä kaikilla laitteilla?",
       "exitImpersonation": "Poistu esiintymisestä",
       "exitImpersonationDesc": "Palaa admin-tilillesi ({email}).",
       "rows": {

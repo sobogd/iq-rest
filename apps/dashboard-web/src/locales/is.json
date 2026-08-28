@@ -717,6 +717,9 @@
       "logout": "Skrá út",
       "loggingOut": "Skráir út...",
       "logoutDesc": "Skráðu þig út af þessum reikningi.",
+      "logoutAll": "Skrá út alls staðar",
+      "logoutAllDesc": "Skráðu þig út af þessum reikningi í öllum tækjum.",
+      "logoutAllConfirm": "Skrá þig út af þessum reikningi í öllum tækjum?",
       "exitImpersonation": "Hætta í líkjun",
       "exitImpersonationDesc": "Farðu til baka á stjórnandareikning þinn ({email}).",
       "rows": {

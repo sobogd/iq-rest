@@ -15,7 +15,7 @@ import { ConfigService } from "@nestjs/config";
 import type { Request, Response } from "express";
 import { AuthService } from "./auth.service";
 import { AppleCallbackDto, EmailLoginDto, GoogleAuthDto, HandoffDto, SendOtpDto, VerifyOtpDto } from "./dto";
-import { authCookieOptions } from "../common/session-utils";
+import { authCookieOptions, refreshAuthCookies } from "../common/session-utils";
 import { getRequestCurrency } from "../common/geo";
 import { ConversionV2Service } from "../analytics-v2/conversion-v2.service";
 
@@ -310,6 +310,25 @@ export class AuthController {
     const emailToLogOut = adminOrigEmail || cookies?.[EMAIL_COOKIE];
     const cookieToLogOut = cookies?.["iqr_admin_original_session"] || cookies?.[SESSION_COOKIE];
     await this.auth.logout(emailToLogOut, cookieToLogOut);
+    this.clearAuthCookies(res);
+    return { ok: true };
+  }
+
+  /** Log out on every device. Sessions no longer expire on their own, so this
+   *  is the way to kill a login left behind on a shared or lost device. */
+  @Post("logout-all")
+  @HttpCode(HttpStatus.OK)
+  async logoutAll(@Req() req: Request, @Res({ passthrough: true }) res: Response) {
+    const cookies = req.cookies as Record<string, string | undefined> | undefined;
+    // Inside impersonation the real account is the admin's — never nuke every
+    // session of the user being impersonated.
+    const emailToLogOut = cookies?.["iqr_admin_original_email"] || cookies?.[EMAIL_COOKIE];
+    await this.auth.logoutAll(emailToLogOut);
+    this.clearAuthCookies(res);
+    return { ok: true };
+  }
+
+  private clearAuthCookies(res: Response): void {
     const domain = this.config.get<string>("COOKIE_DOMAIN") || undefined;
     const baseOpts = { path: "/", ...(domain ? { domain } : {}) };
     res.clearCookie(SESSION_COOKIE, baseOpts);
@@ -321,7 +340,6 @@ export class AuthController {
     res.clearCookie("iqr_admin_original_user_id", baseOpts);
     // Host-only (no domain) — must be cleared without the domain attribute.
     res.clearCookie(ACTIVE_RESTAURANT_COOKIE, { path: "/" });
-    return { ok: true };
   }
 
   /** Drop a stale active-restaurant cookie after login. The cookie survives
@@ -340,7 +358,7 @@ export class AuthController {
   }
 
   @Get("check")
-  async check(@Req() req: Request) {
+  async check(@Req() req: Request, @Res({ passthrough: true }) res: Response) {
     const cookies = req.cookies as Record<string, string | undefined> | undefined;
     const session = cookies?.[SESSION_COOKIE];
     const email = cookies?.[EMAIL_COOKIE];
@@ -352,6 +370,10 @@ export class AuthController {
         adminOrigSession,
         adminOrigEmail,
       });
+      // Same sliding-session refresh AuthGuard does — this endpoint bypasses the
+      // guard, and it is the first call the SPA makes on load.
+      refreshAuthCookies(res, cookies, this.config.get<string>("COOKIE_DOMAIN") || undefined);
+      void this.auth.extendSession(adminOrigSession || session);
       return {
         authenticated: true,
         email: user.email,

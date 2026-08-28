@@ -35,6 +35,9 @@ const VERIFY_LIMIT_MAX = 10;
 // real signup is minutes old). Guards the ad-conversion hook — see verifyOtp.
 const SIGNUP_MAX_AGE_MS = 24 * 60 * 60 * 1000;
 
+// Upper bound for the per-process "already de-expired" session cache.
+const EXTENDED_SESSIONS_MAX = 10_000;
+
 // Legacy in-landing dashboard at iq-rest.com/<locale>/dashboard was torn down
 // on 2026-05-28 — the path now 301s to dashboard.iq-rest.com. Keep
 // `legacyDashboard: false` in the response shape for backward compat with any
@@ -50,6 +53,9 @@ const DARK_DEFAULT_SINCE = new Date("2026-06-08T00:00:00Z");
 @Injectable()
 export class AuthService implements OnModuleDestroy {
   private sendAttempts = new Map<string, { count: number; resetAt: number }>();
+  // Session hashes already de-expired by extendSession in this process — keeps
+  // the sliding-session upgrade off the hot path after the first request.
+  private readonly extendedSessions = new Set<string>();
   private verifyAttempts = new Map<string, { count: number; resetAt: number }>();
   // Drop expired rate-limit entries periodically so the Maps don't grow forever
   // under abuse (each unique email leaves a record otherwise).
@@ -316,7 +322,9 @@ export class AuthService implements OnModuleDestroy {
       data: {
         userId: user.id,
         tokenHash,
-        expiresAt: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000),
+        // No expiry: a login lasts until an explicit logout (this device) or a
+        // logout-everywhere. resolveSession treats null as "never expires".
+        expiresAt: null,
       },
     });
 
@@ -478,6 +486,41 @@ export class AuthService implements OnModuleDestroy {
     return { token, email: row.user.email };
   }
 
+  /** Upgrade a still-expiring session row to "lives until logout".
+   *
+   *  Sessions minted before that became the rule carry a 90-day expiry; this
+   *  clears it the first time the session is used, so the switch needs no
+   *  migration and logs nobody out. The in-process set keeps it to one UPDATE
+   *  per session per API process instead of one per request. */
+  async extendSession(cookieValue: string | undefined): Promise<void> {
+    if (!cookieValue) return;
+    const tokenHash = hashSessionToken(cookieValue);
+    if (this.extendedSessions.has(tokenHash)) return;
+    // Cap the set so a long-lived process with churning sessions can't grow it
+    // without bound — dropping entries only costs a redundant no-op UPDATE.
+    if (this.extendedSessions.size >= EXTENDED_SESSIONS_MAX) this.extendedSessions.clear();
+    this.extendedSessions.add(tokenHash);
+    await this.prisma.session
+      .updateMany({ where: { tokenHash, expiresAt: { not: null } }, data: { expiresAt: null } })
+      .catch(() => this.extendedSessions.delete(tokenHash));
+  }
+
+  /** Log the account out on every device: drops all session rows plus the
+   *  legacy single-token column. Used by the "log out everywhere" action and
+   *  as the escape hatch now that sessions no longer expire on their own. */
+  async logoutAll(email: string | undefined): Promise<void> {
+    if (!email) return;
+    const user = await this.prisma.user
+      .findUnique({ where: { email }, select: { id: true } })
+      .catch(() => null);
+    if (!user) return;
+    await this.prisma.session.deleteMany({ where: { userId: user.id } }).catch(() => undefined);
+    await this.prisma.user
+      .updateMany({ where: { id: user.id }, data: { sessionToken: null } })
+      .catch(() => undefined);
+    this.extendedSessions.clear();
+  }
+
   async logout(email: string | undefined, cookieValue?: string): Promise<void> {
     if (!email) return;
     if (cookieValue) {
@@ -607,7 +650,9 @@ export class AuthService implements OnModuleDestroy {
       data: {
         userId: user.id,
         tokenHash,
-        expiresAt: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000),
+        // No expiry: a login lasts until an explicit logout (this device) or a
+        // logout-everywhere. resolveSession treats null as "never expires".
+        expiresAt: null,
       },
     });
 
@@ -704,7 +749,9 @@ export class AuthService implements OnModuleDestroy {
       data: {
         userId: user.id,
         tokenHash,
-        expiresAt: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000),
+        // No expiry: a login lasts until an explicit logout (this device) or a
+        // logout-everywhere. resolveSession treats null as "never expires".
+        expiresAt: null,
       },
     });
 
