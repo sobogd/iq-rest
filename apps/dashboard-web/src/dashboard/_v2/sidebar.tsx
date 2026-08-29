@@ -9,6 +9,7 @@ import {
   useState,
   type ReactNode,
 } from "react";
+import { createPortal } from "react-dom";
 import { useTranslations } from "next-intl";
 import { BarChart3, SlidersHorizontal, Utensils } from "lucide-react";
 import { useIsFetching, useQueryClient } from "@tanstack/react-query";
@@ -184,9 +185,9 @@ function SidebarQuickActions({ restaurant }: { restaurant: Restaurant }) {
   if (!menuUrl) return null;
   const fullUrl = menuUrl.startsWith("http") ? menuUrl : "https://" + menuUrl;
   const btn =
-    "flex-1 min-w-0 h-9 px-2.5 rounded-lg inline-flex items-center justify-center gap-1.5 text-xs font-medium transition-colors";
+    "w-full h-9 px-2.5 rounded-lg inline-flex items-center justify-center gap-1.5 text-xs font-medium transition-colors";
   return (
-    <div className="shrink-0 flex items-center gap-2 px-2 py-2 border-b border-border">
+    <div className="shrink-0 flex flex-col gap-2 px-2 py-2 border-b border-border">
       <button
         type="button"
         onClick={() => {
@@ -209,13 +210,21 @@ function SidebarQuickActions({ restaurant }: { restaurant: Restaurant }) {
         <ShareIcon size={14} />
         <span className="truncate">{tp("share")}</span>
       </button>
-      <MenuPreviewModal menuUrl={fullUrl} open={previewOpen} onOpenChange={setPreviewOpen} />
-      <ShareModal
-        open={shareOpen}
-        onClose={() => setShareOpen(false)}
-        url={menuUrl}
-        restaurantName={restaurant.name}
-      />
+      {/* Portaled to <body>: the sidebar animates with a transform, which
+          would otherwise become the containing block for these fixed
+          overlays and trap them inside the panel. */}
+      {createPortal(
+        <>
+          <MenuPreviewModal menuUrl={fullUrl} open={previewOpen} onOpenChange={setPreviewOpen} />
+          <ShareModal
+            open={shareOpen}
+            onClose={() => setShareOpen(false)}
+            url={menuUrl}
+            restaurantName={restaurant.name}
+          />
+        </>,
+        document.body,
+      )}
     </div>
   );
 }
