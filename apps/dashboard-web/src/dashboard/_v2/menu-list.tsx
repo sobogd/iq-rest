@@ -505,7 +505,7 @@ function GroupBlock({
  onEditTitle?: () => void;
 }) {
  const kidsFlipRef = useFlip<HTMLDivElement>([kids.map((c) => c.id).join(",")]);
- const titleClass = "min-w-0 text-lg font-semibold text-foreground/70 truncate";
+ const titleClass = "min-w-0 text-base font-semibold text-foreground/70 truncate";
  return (
  <div data-flip-id={flipId} className="space-y-3">
  {title !== null ? (
