@@ -231,10 +231,11 @@ export function ReservationsPage({
 
  return (
   <>
-   {/* One self-sufficient header line: the period plus how many bookings
-       fall in it — the count used to live in a subtitle. */}
+   {/* The header states the period and nothing else. How many bookings fall in
+       it is already visible in the board below, and repeating it up here made
+       the title change length every time a booking came in. */}
    <Page
-    title={`${title} · ${subtitle}`}
+    title={title}
     actions={controls}
     onBack={view === "day" ? leaveDay : undefined}
    >
