@@ -724,7 +724,7 @@ function DishRow({
  const tc = useTranslations("dashboard.common");
  const router = useDashboardRouter();
  const rowCls =
- "flex items-center gap-2.5 pl-2 pr-3 py-2 transition-colors cursor-pointer select-none";
+ "flex items-center gap-2.5 pl-3 pr-2 py-2 transition-colors cursor-pointer select-none";
  const dimCls = dish.visible ? "" : "opacity-50";
  const openDish = () => {
  track("Click", "Menu item open");
@@ -744,6 +744,30 @@ function DishRow({
  aria-label={t("editDish")}
  className={rowCls}
  >
+ {/* The row itself opens the dish, so the switch swallows its own click. */}
+ <div
+ className="flex items-center shrink-0"
+ onClick={(e) => e.stopPropagation()}
+ >
+ <ToggleSwitch
+ size="sm"
+ checked={dish.visible}
+ onChange={onToggleVisible}
+ label={dish.visible ? t("hideDish") : t("showDish")}
+ />
+ </div>
+
+ <div className={"flex-1 min-w-0 text-left flex items-center gap-2 " + dimCls}>
+ <div className="min-w-0 flex-1 flex items-center gap-1.5">
+ <span className="text-sm font-medium text-foreground truncate">
+ {getMlWithFallback(dish.name, defaultLang, defaultLang)}
+ </span>
+ </div>
+ {Number(dish.price) > 0 ? (
+ <div className="text-sm text-muted-foreground tabular-nums shrink-0">{currencySymbol + dish.price}</div>
+ ) : null}
+ </div>
+
  <div className="flex items-center gap-0 shrink-0">
  <button
  type="button"
@@ -763,30 +787,6 @@ function DishRow({
  >
  <ArrowDownIcon size={14} />
  </button>
- </div>
-
- <div className={"flex-1 min-w-0 text-left flex items-center gap-2 " + dimCls}>
- <div className="min-w-0 flex-1 flex items-center gap-1.5">
- <span className="text-sm font-medium text-foreground truncate">
- {getMlWithFallback(dish.name, defaultLang, defaultLang)}
- </span>
- </div>
- {Number(dish.price) > 0 ? (
- <div className="text-sm text-muted-foreground tabular-nums shrink-0">{currencySymbol + dish.price}</div>
- ) : null}
- </div>
-
- {/* The row itself opens the dish, so the switch swallows its own click. */}
- <div
- className="flex items-center shrink-0 pl-1"
- onClick={(e) => e.stopPropagation()}
- >
- <ToggleSwitch
- size="sm"
- checked={dish.visible}
- onChange={onToggleVisible}
- label={dish.visible ? t("hideDish") : t("showDish")}
- />
  </div>
  </div>
  );
