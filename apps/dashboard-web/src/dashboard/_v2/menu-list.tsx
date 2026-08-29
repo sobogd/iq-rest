@@ -510,8 +510,9 @@ function GroupBlock({
  <div data-flip-id={flipId} className="space-y-3">
  {title !== null ? (
  /* min-h matches the row a real group gets from its 32px reorder
-    buttons, so a header without them keeps the same rhythm. */
- <div className="flex items-center gap-2 py-1 min-h-10">
+    buttons, so a header without them keeps the same rhythm. No vertical
+    padding on top of that — the buttons already set the height. */
+ <div className="flex items-center gap-2 min-h-8">
  {onEditTitle ? (
  <button
  type="button"
