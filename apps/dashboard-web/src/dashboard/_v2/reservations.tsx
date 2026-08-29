@@ -107,7 +107,8 @@ export function ReservationsPage({
 
  const title = view === "month"
   ? capitalize(focusDate.toLocaleDateString([], { month: "long", year: "numeric" }))
-  : capitalize(focusDate.toLocaleDateString([], { weekday: "long", day: "numeric", month: "long", year: "numeric" }));
+  // No year inside a day: it is reached from a month that already named one.
+  : capitalize(focusDate.toLocaleDateString([], { weekday: "long", day: "numeric", month: "long" }));
 
  const count = view === "month" ? monthBookings.length : dayBookings.length;
  const subtitle = count === 0
