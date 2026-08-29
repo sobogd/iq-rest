@@ -718,9 +718,6 @@
       "logout": "Wyloguj",
       "loggingOut": "Wylogowywanie...",
       "logoutDesc": "Wyloguj się z tego konta.",
-      "logoutAll": "Wyloguj wszędzie",
-      "logoutAllDesc": "Wyloguj się z tego konta na wszystkich urządzeniach.",
-      "logoutAllConfirm": "Wylogować się z tego konta na wszystkich urządzeniach?",
       "exitImpersonation": "Zakończ impersonację",
       "exitImpersonationDesc": "Wróć do konta administratora ({email}).",
       "rows": {

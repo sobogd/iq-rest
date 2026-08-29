@@ -718,9 +718,6 @@
       "logout": "Atsijungti",
       "loggingOut": "Atsijungiama...",
       "logoutDesc": "Atsijungti nuo šios paskyros.",
-      "logoutAll": "Atsijungti visuose įrenginiuose",
-      "logoutAllDesc": "Atsijungti nuo šios paskyros visuose įrenginiuose.",
-      "logoutAllConfirm": "Atsijungti nuo šios paskyros visuose įrenginiuose?",
       "exitImpersonation": "Išeiti iš imitacijos",
       "exitImpersonationDesc": "Grįžti į savo administratoriaus paskyrą ({email}).",
       "rows": {

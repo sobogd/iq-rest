@@ -808,9 +808,6 @@
       "logout": "Log out",
       "loggingOut": "Logging out...",
       "logoutDesc": "Sign out of this account.",
-      "logoutAll": "Log out everywhere",
-      "logoutAllDesc": "Sign out of this account on all devices.",
-      "logoutAllConfirm": "Log out of this account on all devices?",
       "exitImpersonation": "Exit impersonation",
       "exitImpersonationDesc": "Return to your admin account ({email}).",
       "rows": {

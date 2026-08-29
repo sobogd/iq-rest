@@ -17,3 +17,14 @@ export const dangerBtn =
 
 export const iconBtn =
  "w-8 h-8 flex items-center justify-center rounded-md text-muted-foreground transition-colors disabled:text-muted-foreground/50 disabled:cursor-not-allowed";
+
+/** Every clickable line in the sidebar wears this: same height, same inset, so
+ *  icons, labels and hover rectangles line up down the whole rail. */
+export const navRow =
+  "h-9 px-3 rounded-lg flex items-center gap-2.5 text-sm font-medium transition-colors " +
+  "text-muted-foreground hover:bg-secondary hover:text-foreground disabled:opacity-60";
+
+/** Same row, marked as the current destination. */
+export const navRowActive =
+  "h-9 px-3 rounded-lg flex items-center gap-2.5 text-sm font-medium transition-colors " +
+  "bg-foreground text-background";

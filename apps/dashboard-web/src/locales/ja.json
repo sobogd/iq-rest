@@ -718,9 +718,6 @@
       "logout": "ログアウト",
       "loggingOut": "ログアウト中...",
       "logoutDesc": "このアカウントからログアウトします。",
-      "logoutAll": "すべての端末からログアウト",
-      "logoutAllDesc": "すべての端末でこのアカウントからログアウトします。",
-      "logoutAllConfirm": "すべての端末でこのアカウントからログアウトしますか？",
       "exitImpersonation": "なりすましを終了",
       "exitImpersonationDesc": "管理者アカウント ({email}) に戻ります。",
       "rows": {

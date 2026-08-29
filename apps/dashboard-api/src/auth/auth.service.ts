@@ -508,22 +508,6 @@ export class AuthService implements OnModuleDestroy {
       .catch(() => this.extendedSessions.delete(tokenHash));
   }
 
-  /** Log the account out on every device: drops all session rows plus the
-   *  legacy single-token column. Used by the "log out everywhere" action and
-   *  as the escape hatch now that sessions no longer expire on their own. */
-  async logoutAll(email: string | undefined): Promise<void> {
-    if (!email) return;
-    const user = await this.prisma.user
-      .findUnique({ where: { email }, select: { id: true } })
-      .catch(() => null);
-    if (!user) return;
-    await this.prisma.session.deleteMany({ where: { userId: user.id } }).catch(() => undefined);
-    await this.prisma.user
-      .updateMany({ where: { id: user.id }, data: { sessionToken: null } })
-      .catch(() => undefined);
-    this.extendedSessions.clear();
-  }
-
   async logout(email: string | undefined, cookieValue?: string): Promise<void> {
     if (!email) return;
     if (cookieValue) {

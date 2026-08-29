@@ -718,9 +718,6 @@
       "logout": "Tanca sessió",
       "loggingOut": "Tancant sessió...",
       "logoutDesc": "Tanca sessió en aquest compte.",
-      "logoutAll": "Tanca la sessió a tots els dispositius",
-      "logoutAllDesc": "Tanca la sessió d'aquest compte a tots els dispositius.",
-      "logoutAllConfirm": "Vols tancar la sessió d'aquest compte a tots els dispositius?",
       "exitImpersonation": "Surt de la suplantació",
       "exitImpersonationDesc": "Torna al teu compte d'admin ({email}).",
       "rows": {

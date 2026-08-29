@@ -718,9 +718,6 @@
       "logout": "Terminar sessão",
       "loggingOut": "A terminar sessão...",
       "logoutDesc": "Sair desta conta.",
-      "logoutAll": "Sair em todos os dispositivos",
-      "logoutAllDesc": "Sair desta conta em todos os dispositivos.",
-      "logoutAllConfirm": "Sair desta conta em todos os dispositivos?",
       "exitImpersonation": "Sair da impersonação",
       "exitImpersonationDesc": "Voltar à sua conta de admin ({email}).",
       "rows": {

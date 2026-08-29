@@ -718,9 +718,6 @@
       "logout": "Изход",
       "loggingOut": "Излизане...",
       "logoutDesc": "Излез от този акаунт.",
-      "logoutAll": "Изход от всички устройства",
-      "logoutAllDesc": "Излизане от този акаунт на всички устройства.",
-      "logoutAllConfirm": "Изход от този акаунт на всички устройства?",
       "exitImpersonation": "Изход от имитацията",
       "exitImpersonationDesc": "Връщане към админ акаунта ({email}).",
       "rows": {

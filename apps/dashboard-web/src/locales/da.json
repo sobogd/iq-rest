@@ -718,9 +718,6 @@
       "logout": "Log ud",
       "loggingOut": "Logger ud...",
       "logoutDesc": "Log ud af denne konto.",
-      "logoutAll": "Log ud overalt",
-      "logoutAllDesc": "Log ud af denne konto på alle enheder.",
-      "logoutAllConfirm": "Log ud af denne konto på alle enheder?",
       "exitImpersonation": "Afslut imitation",
       "exitImpersonationDesc": "Vend tilbage til din admin-konto ({email}).",
       "rows": {

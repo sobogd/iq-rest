@@ -718,9 +718,6 @@
       "logout": "Abmelden",
       "loggingOut": "Abmelden...",
       "logoutDesc": "Von diesem Konto abmelden.",
-      "logoutAll": "Überall abmelden",
-      "logoutAllDesc": "Von diesem Konto auf allen Geräten abmelden.",
-      "logoutAllConfirm": "Von diesem Konto auf allen Geräten abmelden?",
       "exitImpersonation": "Imitation beenden",
       "exitImpersonationDesc": "Zurück zu Ihrem Admin-Konto ({email}).",
       "rows": {

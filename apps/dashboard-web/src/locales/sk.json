@@ -718,9 +718,6 @@
       "logout": "Odhlásiť",
       "loggingOut": "Odhlasovanie...",
       "logoutDesc": "Odhlásiť sa z tohto účtu.",
-      "logoutAll": "Odhlásiť sa všade",
-      "logoutAllDesc": "Odhlásiť sa z tohto účtu na všetkých zariadeniach.",
-      "logoutAllConfirm": "Odhlásiť sa z tohto účtu na všetkých zariadeniach?",
       "exitImpersonation": "Ukončiť zastupovanie",
       "exitImpersonationDesc": "Návrat na admin účet ({email}).",
       "rows": {

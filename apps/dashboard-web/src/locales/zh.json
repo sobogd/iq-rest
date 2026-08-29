@@ -718,9 +718,6 @@
       "logout": "退出登录",
       "loggingOut": "正在退出...",
       "logoutDesc": "从此账户退出登录。",
-      "logoutAll": "在所有设备上退出登录",
-      "logoutAllDesc": "在所有设备上退出此账户。",
-      "logoutAllConfirm": "要在所有设备上退出此账户吗？",
       "exitImpersonation": "退出冒充",
       "exitImpersonationDesc": "返回您的管理员账户 ({email})。",
       "rows": {

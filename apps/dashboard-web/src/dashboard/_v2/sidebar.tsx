@@ -32,6 +32,7 @@ import {
   SwapIcon,
   UsersIcon,
 } from "./icons";
+import { navRow, navRowActive } from "./tokens";
 import { apiUrl } from "@/lib/api";
 import { track } from "@/lib/dashboard-events";
 import { useOrdersStreamStateStore } from "./orders-sync-state";
@@ -40,7 +41,7 @@ import { useDashboardRouter } from "../_spa/router";
 import type { View } from "../_spa/types";
 import { ShareModal } from "./ui";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
-import { LogoutButton, LogoutAllButton } from "../settings/logout-link";
+import { LogoutButton } from "../settings/logout-link";
 import { useScrollLock } from "./use-scroll-lock";
 import type { Restaurant } from "./types";
 
@@ -135,7 +136,9 @@ export function Sidebar({
       <aside
         className={
           "fixed md:static inset-y-0 left-0 z-50 w-72 md:w-64 shrink-0 flex flex-col " +
-          "bg-nav border-r border-border transition-transform md:transition-none " +
+          // Same surface as the page header: nav colour at 90% over the page
+          // background, blurred — so the two chrome edges read as one material.
+          "bg-nav/90 backdrop-blur-md border-r border-border transition-transform md:transition-none " +
           (open ? "translate-x-0" : "-translate-x-full md:translate-x-0")
         }
       >
@@ -156,20 +159,24 @@ function SidebarHeader({ restaurant }: { restaurant: Restaurant }) {
   const many = (restaurants?.list.length ?? 0) > 1;
 
   return (
-    <div className="shrink-0 flex items-center px-3 h-14 border-b border-border">
-      <button
-        type="button"
-        onClick={() => router.push({ name: "settings.restaurants" })}
-        className="min-w-0 w-full flex items-center gap-2 h-10 px-2 rounded-lg text-left hover:bg-secondary transition-colors"
-        title={many ? th("switcherDescMany", { count: restaurants!.list.length }) : th("switcherDescOne")}
-      >
-        {/* Name truncates first: the live-sync dot and the switch affordance
-            always stay visible, however long the venue name is. */}
-        <span className="min-w-0 flex-1 text-sm font-medium text-foreground truncate">
+    <div className="shrink-0 flex items-center gap-1 h-14 px-2 border-b border-border">
+      {/* Name truncates first so the live-sync dot stays pinned right after it,
+          never drifting to the far edge of the panel. */}
+      <div className="min-w-0 flex-1 flex items-center gap-2 px-3">
+        <span className="min-w-0 text-sm font-medium text-foreground truncate">
           {restaurant.name || t("untitledRestaurant")}
         </span>
         <SyncIndicator />
-        <SwapIcon size={15} className="shrink-0 text-muted-foreground" />
+      </div>
+      {/* Only the icon switches venue — the name itself is not a control. */}
+      <button
+        type="button"
+        onClick={() => router.push({ name: "settings.restaurants" })}
+        aria-label={many ? th("switcherDescMany", { count: restaurants!.list.length }) : th("switcherDescOne")}
+        title={many ? th("switcherDescMany", { count: restaurants!.list.length }) : th("switcherDescOne")}
+        className="shrink-0 h-9 w-9 rounded-lg flex items-center justify-center text-muted-foreground hover:bg-secondary hover:text-foreground transition-colors"
+      >
+        <SwapIcon size={15} />
       </button>
     </div>
   );
@@ -184,20 +191,20 @@ function SidebarQuickActions({ restaurant }: { restaurant: Restaurant }) {
   const menuUrl = restaurant.menuUrl;
   if (!menuUrl) return null;
   const fullUrl = menuUrl.startsWith("http") ? menuUrl : "https://" + menuUrl;
-  const btn =
-    "w-full h-9 px-2.5 rounded-lg inline-flex items-center justify-center gap-1.5 text-xs font-medium transition-colors";
   return (
-    <div className="shrink-0 flex flex-col gap-2 px-2 py-2 border-b border-border">
+    // No divider: these read as ordinary nav rows. The 4px bottom pad plus the
+    // nav's own top pad add up to the same 16px that separates nav groups.
+    <div className="shrink-0 flex flex-col gap-0.5 px-2 pt-2 pb-1">
       <button
         type="button"
         onClick={() => {
           track("Click", "Menu preview open");
           setPreviewOpen(true);
         }}
-        className={btn + " text-primary-foreground bg-primary-gradient"}
+        className={navRow + " text-primary hover:text-primary"}
       >
-        <EyeIcon size={14} />
-        <span className="truncate">{tp("preview")}</span>
+        <EyeIcon size={16} className="shrink-0" />
+        <span className="min-w-0 truncate">{tp("preview")}</span>
       </button>
       <button
         type="button"
@@ -205,10 +212,10 @@ function SidebarQuickActions({ restaurant }: { restaurant: Restaurant }) {
           track("Click", "Share open");
           setShareOpen(true);
         }}
-        className={btn + " text-muted-foreground bg-secondary hover:text-foreground"}
+        className={navRow}
       >
-        <ShareIcon size={14} />
-        <span className="truncate">{tp("share")}</span>
+        <ShareIcon size={16} className="shrink-0" />
+        <span className="min-w-0 truncate">{tp("share")}</span>
       </button>
       {/* Portaled to <body>: the sidebar animates with a transform, which
           would otherwise become the containing block for these fixed
@@ -250,11 +257,9 @@ function SyncIndicator() {
     );
   }
   return (
-    <span
-      onClick={(e) => {
-        e.stopPropagation();
-        void qc.invalidateQueries({ queryKey: ["orders"] });
-      }}
+    <button
+      type="button"
+      onClick={() => void qc.invalidateQueries({ queryKey: ["orders"] })}
       className="w-1.5 h-1.5 rounded-full bg-red-500 shrink-0"
       aria-label="offline"
       title="Click to refresh"
@@ -355,8 +360,9 @@ function NavGroup({
               router.resetTo(item.view);
             }}
             className={
-              "h-9 px-3 rounded-lg flex items-center gap-2.5 text-sm font-medium transition-colors " +
-              (active ? "bg-foreground text-background" : "text-muted-foreground hover:bg-secondary")
+              active
+                ? navRowActive
+                : navRow
             }
           >
             <Icon size={16} className="shrink-0" />
@@ -399,7 +405,7 @@ function ReloadTabletsButton() {
       onClick={reloadAllTablets}
       disabled={reloading}
       title="Reload every paired tablet system-wide"
-      className="h-9 px-3 rounded-lg flex items-center gap-2.5 text-sm font-medium text-muted-foreground hover:bg-secondary transition-colors disabled:opacity-60"
+      className={navRow}
     >
       <RefreshIcon size={16} className="shrink-0" />
       <span className="min-w-0 truncate">{reloading ? "Sending…" : "Reload tablets"}</span>
@@ -437,16 +443,13 @@ function SidebarFooter({ impersonatedBy }: { impersonatedBy: string | null }) {
           onClick={handleExitImpersonation}
           disabled={exiting}
           title={t("exitImpersonationDesc", { email: impersonatedBy })}
-          className="h-9 px-3 rounded-lg flex items-center gap-2.5 text-sm font-medium text-red-600 hover:bg-secondary transition-colors disabled:opacity-60"
+          className={navRow + " text-red-600 hover:text-red-600"}
         >
           <LogoutIcon size={16} className="shrink-0" />
           <span className="min-w-0 truncate">{t("exitImpersonation")}</span>
         </button>
       ) : (
-        <>
-          <LogoutButton />
-          <LogoutAllButton />
-        </>
+        <LogoutButton />
       )}
     </div>
   );

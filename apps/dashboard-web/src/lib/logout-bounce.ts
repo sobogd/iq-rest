@@ -16,13 +16,6 @@ export function logoutAndBounceToLanding(locale: string): void {
   bounce(locale, "/api/auth/logout");
 }
 
-/** Same bounce, but kills the session on every device the account is signed in
- *  on. Sessions live until an explicit logout, so this is the way out of a
- *  login left behind on a shared or lost device. */
-export function logoutEverywhereAndBounceToLanding(locale: string): void {
-  bounce(locale, "/api/auth/logout-all");
-}
-
 function bounce(locale: string, path: string): void {
   if (bouncing || typeof window === "undefined") return;
   bouncing = true;

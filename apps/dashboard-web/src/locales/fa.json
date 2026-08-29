@@ -718,9 +718,6 @@
       "logout": "خروج",
       "loggingOut": "در حال خروج...",
       "logoutDesc": "از این حساب خارج شوید.",
-      "logoutAll": "خروج از همه دستگاه‌ها",
-      "logoutAllDesc": "از این حساب در همه دستگاه‌ها خارج شوید.",
-      "logoutAllConfirm": "از این حساب در همه دستگاه‌ها خارج می‌شوید؟",
       "exitImpersonation": "خروج از جعل هویت",
       "exitImpersonationDesc": "بازگشت به حساب مدیر شما ({email}).",
       "rows": {

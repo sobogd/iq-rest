@@ -718,9 +718,6 @@
       "logout": "Iziet",
       "loggingOut": "Iziet...",
       "logoutDesc": "Iziet no šī konta.",
-      "logoutAll": "Iziet visās ierīcēs",
-      "logoutAllDesc": "Izrakstīties no šī konta visās ierīcēs.",
-      "logoutAllConfirm": "Izrakstīties no šī konta visās ierīcēs?",
       "exitImpersonation": "Iziet no uzdošanās",
       "exitImpersonationDesc": "Atgriezties pie sava admin konta ({email}).",
       "rows": {

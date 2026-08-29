@@ -302,20 +302,6 @@ export class AuthController {
     return { ok: true };
   }
 
-  /** Log out on every device. Sessions no longer expire on their own, so this
-   *  is the way to kill a login left behind on a shared or lost device. */
-  @Post("logout-all")
-  @HttpCode(HttpStatus.OK)
-  async logoutAll(@Req() req: Request, @Res({ passthrough: true }) res: Response) {
-    const cookies = req.cookies as Record<string, string | undefined> | undefined;
-    // Inside impersonation the real account is the admin's — never nuke every
-    // session of the user being impersonated.
-    const emailToLogOut = cookies?.["iqr_admin_original_email"] || cookies?.[EMAIL_COOKIE];
-    await this.auth.logoutAll(emailToLogOut);
-    this.clearAuthCookies(res);
-    return { ok: true };
-  }
-
   private clearAuthCookies(res: Response): void {
     const domain = this.config.get<string>("COOKIE_DOMAIN") || undefined;
     const baseOpts = { path: "/", ...(domain ? { domain } : {}) };

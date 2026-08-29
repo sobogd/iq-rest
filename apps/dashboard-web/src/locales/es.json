@@ -718,9 +718,6 @@
       "logout": "Cerrar sesión",
       "loggingOut": "Cerrando sesión...",
       "logoutDesc": "Cierra sesión en esta cuenta.",
-      "logoutAll": "Cerrar sesión en todos los dispositivos",
-      "logoutAllDesc": "Cierra la sesión de esta cuenta en todos los dispositivos.",
-      "logoutAllConfirm": "¿Cerrar la sesión de esta cuenta en todos los dispositivos?",
       "exitImpersonation": "Salir de la suplantación",
       "exitImpersonationDesc": "Volver a tu cuenta de administrador ({email}).",
       "rows": {
