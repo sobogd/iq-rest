@@ -112,7 +112,10 @@ export function ReservationsPage({
  const title = view === "month"
   ? capitalize(focusDate.toLocaleDateString(locale, { month: "long", year: "numeric" }))
   // No year inside a day: it is reached from a month that already named one.
-  : capitalize(focusDate.toLocaleDateString(locale, { weekday: "long", day: "numeric", month: "long" }));
+  // The weekday is abbreviated because it is context, not the subject — the
+  // date is. Abbreviating is Intl's job, so every locale keeps its own form
+  // ("Sat", "сб", "土").
+  : capitalize(focusDate.toLocaleDateString(locale, { weekday: "short", day: "numeric", month: "long" }));
 
  const count = view === "month" ? monthBookings.length : dayBookings.length;
  const subtitle = count === 0
